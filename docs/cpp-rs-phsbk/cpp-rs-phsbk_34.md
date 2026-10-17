@@ -1,3 +1,4 @@
+
 # 迭代器和范围
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/iterators.html`](https://cel.cs.brown.edu/crp/idioms/iterators.html)
@@ -37,31 +38,20 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     let mut v = vec![1, 2, 3];
 
     // 打印 1, 2, 3
-
     for x in &mut v {
-
         println!("{}", x);
-
         *x = *x + 1;
-
     }
 
     // 打印 2, 3, 4
-
     for x in &v {
-
         println!("{}", x);
-
     }
-
 }
-
 ```
 
 在 C++和 Rust 中，迭代器都可以用于读取、写入或两者兼具。在 Rust 中，迭代器用于写入的使用取决于返回的元素类型。在上面的`Vec<i32>`的例子中，为`&mut Vec<i32>`实现的`IntoIterator`特质产生了一个包含可变引用`&mut i32`的迭代器，这使得可以修改向量中的值.^(1)
@@ -91,23 +81,15 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     let v = (1..)
-
         .filter(|i| i % 2 == 1)
-
         .map(|i| i + 3)
-
         .take(10)
-
         .collect::<Vec<i32>>();
 
     // use v...
-
 }
-
 ```
 
 Rust 的 `collect` 迭代器方法可以将迭代器转换为实现了 `FromIterator` 的任何东西。如果 `v` 的类型可以从其后续使用中推断出来，则不需要在 `collect` 调用中指定类型。
@@ -133,25 +115,15 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     for x in (1..)
-
         .filter(|i| i % 2 == 1)
-
         .map(|i| i + 3)
-
         .take(10)
-
     {
-
         println!("{}", x);
-
     }
-
 }
-
 ```
 
 通过第三方 [itertools crate](https://docs.rs/itertools/latest/itertools/) 提供的迭代器附加有用方法，这些方法通过 扩展特质 实现。
@@ -165,59 +137,38 @@ fn main() {
 在 C++ 中遍历结构体与在 Rust 中对可变引用调用 `into_iter` 最相似。
 
 ```rs
-
 fn main() {
-
     let mut v = vec![
-
         String::from("a"),
-
         String::from("b"),
-
         String::from("c"),
-
     ];
 
     for x in &v {
-
         // x: &String
-
         println!("{}", x);
-
     }
 
     // 由于 v 被借用，而不是移动，因此它在这里仍然可访问。
-
     println!("{:?}", v);
 
     for x in &mut v {
-
         // x: &mut String
-
         x.push('!');
-
     }
 
     // 由于 v 被借用，而不是移动，因此它在这里仍然可访问。
-
     // 然而，v 的内容已被修改
-
     println!("{:?}", v);
 
     for x in v {
-
         // x: String
-
         // 每次迭代结束时释放 x
-
     }
 
     // v 不再可访问，因此这不会编译
-
     // println!("{:?}", v);
-
 }
-
 ```
 
 大多数可迭代类型也会提供专门用于访问引用或可变引用迭代器的方法。传统上，这些方法被称为 `iter` 和 `iter_mut`。在迭代不是立即与 for 循环一起使用，而是与其他迭代器方法一起使用的情况下，它们非常有用，因为引用操作符和方法调用的相对优先级。
@@ -243,29 +194,20 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     let v: Vec<i32> = (1..10).collect();
 
     let b = v
-
         .iter()
-
         .skip(2)
-
         .take(5)
-
         .any(|n| n % 2 == 0);
 
     // or
-
     let b2 = v[3..7].iter().any(|n| n % 2 == 0);
 
     // ...
-
 }
-
 ```
 
 第二种情况是，一些算法操作于切片。例如，Rust 标准库中的 [sort 方法](https://doc.rust-lang.org/std/primitive.slice.html#method.sort) 操作于切片。这类似于在 C++ 中，一个函数操作于 `std::span` 而不是迭代器。`Vec<T>` 上许多可用的方法实际上是在 `&[T]` 上定义的，并通过 [deref coercion](https://doc.rust-lang.org/book/ch15-02-deref.html) 在 `Vec<T>` 上提供。
@@ -293,9 +235,7 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     let mut v: Vec<i32> = (1..10).rev().collect();
 
     println!("{:?}", v);
@@ -303,9 +243,7 @@ fn main() {
     v.sort();
 
     println!("{:?}", v);
-
 }
-
 ```
 
 ## 迭代器失效
@@ -341,21 +279,15 @@ int main() {
 ```
 
 ```rs
-
 fn main() {
-
     let mut v = vec![1, 2, 3];
 
     v.retain(|i| *i != 2);
 
     for x in &v {
-
         println!("{}", x);
-
     }
-
 }
-
 ```
 
 当使用迭代器时，会使用范围和视图部分中描述的方法。
@@ -377,27 +309,17 @@ public:
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { mod tree {
 
     /// 每个节点都有值的二叉树。
-
     /// 不一定是平衡的。
-
     pub struct Tree<V> {
-
         pub value: V,
-
         pub left: Option<Box<Tree<V>>>,
-
         pub right: Option<Box<Tree<V>>>,
-
     }
-
 }
-
 }
-
 ```
 
 就像在 C++中迭代器和常量迭代器是不同的事物一样，在 Rust 中，对于所有者值、引用和可变引用有不同的迭代器。
@@ -414,8 +336,13 @@ public:
 
 实现在提供的接口上有所不同。C++要求定义多个类型和方法，以便类型可以模拟前向迭代器。Rust 只需要定义将要迭代的元素类型和`next`方法。
 
+
+
 ```rs
-#include <memory> #include <vector>   template <typename V>
+#include <memory>
+#include <vector>
+
+template <typename V>
 class Tree {
 public:
   class iterator {
@@ -426,8 +353,7 @@ public:
     using value_type = V;
     using pointer = const V *;
     using reference = const V &;
-    using iterator_category =
-        std::forward_iterator_tag;
+    using iterator_category = std::forward_iterator_tag;
 
     iterator() {}
     iterator(const Tree<V> *start) {
@@ -471,173 +397,214 @@ public:
       return !(*this == other);
     }
   };
-  V value; std::unique_ptr<Tree<V>> left; std::unique_ptr<Tree<V>> right; }; 
+  V value;
+  std::unique_ptr<Tree<V>> left;
+  std::unique_ptr<Tree<V>> right;
+};
 ```
 
 ```rs
+#![allow(unused)]
+fn main() {
+mod tree {
 
-#![allow(unused)] fn main() { mod tree {
+/// 每个节点都有值的二叉树。
+/// 不一定是平衡的。
+pub struct Tree<V> {
+    pub value: V,
+    pub left: Option<Box<Tree<V>>>,
+    pub right: Option<Box<Tree<V>>>,
+}
 
-/// 每个节点都有值的二叉树。 /// 不一定是平衡的。 pub struct Tree<V> { pub value: V, pub left: Option<Box<Tree<V>>>, pub right: Option<Box<Tree<V>>>, }      pub struct IterPreorder<'a, V>(Vec<&'a Tree<V>>);
+pub struct IterPreorder<'a, V>(Vec<&'a Tree<V>>);
 
-    impl<'a, V> Iterator for IterPreorder<'a, V> {
+impl<'a, V> Iterator for IterPreorder<'a, V> {
 
-        type Item = &'a V;
+    type Item = &'a V;
 
-        // 这类似于一个组合
+    // 这类似于一个组合
+    // 运算符++ 和运算符*
+    fn next(&mut self) -> Option<&'a V> {
+        let Tree { value, left, right } = self.0.pop()?;
 
-        // 运算符++ 和运算符*
-
-        fn next(&mut self) -> Option<&'a V> {
-
-            let Tree { value, left, right } = self.0.pop()?;
-
-            if let Some(right) = right {
-
-                self.0.push(right.as_ref());
-
-            }
-
-            if let Some(left) = left {
-
-                self.0.push(left.as_ref());
-
-            }
-
-            Some(value)
-
+        if let Some(right) = right {
+            self.0.push(right.as_ref());
         }
 
+        if let Some(left) = left {
+            self.0.push(left.as_ref());
+        }
+
+        Some(value)
     }
 
 }
 
 }
-
+}
 ```
 
-剩下的步骤是将原始类型变为可迭代的。在 C++ 中，这涉及到定义 `begin` 和 `end` 方法。在 Rust 中，这涉及到实现一个显式产生迭代器的方法，或者实现 `IntoIterator` 特质。
+剩下的步骤是将原始类型变为可迭代的。在 C++ 中，这涉及到定义`begin`和`end`方法。在 Rust 中，这涉及到实现一个显式产生迭代器的方法，或者实现`IntoIterator`特质。
 
-当一个类型有多个可能的迭代方式且都不是规范方式时，省略 `IntoIterator` 特质实现是惯用的做法。省略实现需要用户有意选择要使用的迭代方式。以下提供了实现示例，但未排序的二叉树通常是省略特质实现的情况，这会强制用户在先序、后序和遍历顺序之间进行选择。
+当一个类型有多个可能的迭代方式且都不是规范方式时，省略`IntoIterator`特质实现是惯用的做法。省略实现需要用户有意选择要使用的迭代方式。以下提供了实现示例，但未排序的二叉树通常是省略特质实现的情况，这会强制用户在先序、后序和遍历顺序之间进行选择。
 
-因为实现的迭代器是引用迭代器，所以特质的实现实际上是针对树的引用 `&Tree<V>`，而不是 `Tree<V>` 本身。
+因为实现的迭代器是引用迭代器，所以特质的实现实际上是针对树的引用`&Tree<V>`，而不是`Tree<V>`本身。
 
 ```rs
 #include <iostream>
-#include <memory> #include <vector> 
+#include <memory>
+#include <vector>
+
 template <typename V>
 class Tree {
 public:
- class iterator { std::vector<const Tree<V> *> rest;   public: using difference_type = long; using value_type = V; using pointer = const V *; using reference = const V &; using iterator_category = std::forward_iterator_tag;   iterator() {} iterator(const Tree<V> *start) { rest.push_back(start); }   reference operator*() const { return rest.back()->value; }   iterator &operator++() { const Tree<V> *t = rest.back(); rest.pop_back(); if (t->right) { rest.push_back(t->right.get()); } if (t->left) { rest.push_back(t->left.get()); } return *this; }   iterator operator++(int) { iterator retval = *this; const Tree<V> *t = rest.back(); rest.pop_back(); if (t->right) { rest.push_back(t->right.get()); } if (t->left) { rest.push_back(t->left.get()); } return retval; }   bool operator==(const iterator &other) const { return rest == other.rest; }   bool operator!=(const iterator &other) const { return !(*this == other); } };    iterator begin() const {
-    return iterator(this);
-  }
+ class iterator {
+   std::vector<const Tree<V> *> rest;
 
-  iterator end() const {
-    return iterator();
-  }
-  V value; std::unique_ptr<Tree<V>> left; std::unique_ptr<Tree<V>> right; };
+ public:
+   using difference_type = long;
+   using value_type = V;
+   using pointer = const V *;
+   using reference = const V &;
+   using iterator_category = std::forward_iterator_tag;
+
+   iterator() {}
+   iterator(const Tree<V> *start) { rest.push_back(start); }
+
+   reference operator*() const { return rest.back()->value; }
+
+   iterator &operator++() {
+     const Tree<V> *t = rest.back();
+     rest.pop_back();
+     if (t->right) { rest.push_back(t->right.get()); }
+     if (t->left) { rest.push_back(t->left.get()); }
+     return *this;
+   }
+
+   iterator operator++(int) {
+     iterator retval = *this;
+     const Tree<V> *t = rest.back();
+     rest.pop_back();
+     if (t->right) { rest.push_back(t->right.get()); }
+     if (t->left) { rest.push_back(t->left.get()); }
+     return retval;
+   }
+
+   bool operator==(const iterator &other) const { return rest == other.rest; }
+   bool operator!=(const iterator &other) const { return !(*this == other); }
+ };
+
+ iterator begin() const {
+   return iterator(this);
+ }
+
+ iterator end() const {
+   return iterator();
+ }
+ V value;
+ std::unique_ptr<Tree<V>> left;
+ std::unique_ptr<Tree<V>> right;
+};
 
 int main() {
   Tree<int> t{1,
-              std::make_unique<Tree<int>>(
-                  2, nullptr, nullptr),
-              std::make_unique<Tree<int>>(
-                  3,
-                  std::make_unique<Tree<int>>(
-                      4, nullptr, nullptr),
-                  nullptr)};
+              std::make_unique<Tree<int>>(2, nullptr, nullptr),
+              std::make_unique<Tree<int>>(3,
+                                          std::make_unique<Tree<int>>(4, nullptr, nullptr),
+                                          nullptr)};
 
   for (auto v : t) {
     std::cout << v << std::endl;
   }
-} 
+}
 ```
 
 ```rs
-
 mod tree {
 
-/// 每个节点都有值的二叉树。不一定平衡。 pub struct Tree<V> { pub value: V, pub left: Option<Box<Tree<V>>>, pub right: Option<Box<Tree<V>>>, }   pub struct IterPreorder<'a, V>(Vec<&'a Tree<V>>);   impl<'a, V> Iterator for IterPreorder<'a, V> { type Item = &'a V; fn next(&mut self) -> Option<&'a V> { match self.0.pop() { None => None, Some(t) => { let Tree { value, left, right } = t; if let Some(right) = right { self.0.push(right.as_ref()); } if let Some(left) = left { self.0.push(left.as_ref()); } Some(value) } } } }      impl<V> Tree<V> {
+/// 每个节点都有值的二叉树。不一定平衡。
+pub struct Tree<V> {
+    pub value: V,
+    pub left: Option<Box<Tree<V>>>,
+    pub right: Option<Box<Tree<V>>>,
+}
 
-        pub fn preorder(&self) -> IterPreorder<V> {
+pub struct IterPreorder<'a, V>(Vec<&'a Tree<V>>);
 
-            IterPreorder(vec![self])
+impl<'a, V> Iterator for IterPreorder<'a, V> {
+    type Item = &'a V;
 
+    fn next(&mut self) -> Option<&'a V> {
+        match self.0.pop() {
+            None => None,
+            Some(t) => {
+                let Tree { value, left, right } = t;
+                if let Some(right) = right {
+                    self.0.push(right.as_ref());
+                }
+                if let Some(left) = left {
+                    self.0.push(left.as_ref());
+                }
+                Some(value)
+            }
         }
+    }
+}
 
+impl<V> Tree<V> {
+
+    pub fn preorder(&self) -> IterPreorder<V> {
+        IterPreorder(vec![self])
     }
 
-    impl<'a, V> IntoIterator for &'a Tree<V> {
+}
 
-        type Item = &'a V;
+impl<'a, V> IntoIterator for &'a Tree<V> {
 
-        type IntoIter = IterPreorder<'a, V>;
+    type Item = &'a V;
+    type IntoIter = IterPreorder<'a, V>;
 
-        fn into_iter(self) -> Self::IntoIter {
-
-            self.preorder()
-
-        }
-
+    fn into_iter(self) -> Self::IntoIter {
+        self.preorder()
     }
+
+}
 
 }
 
 use tree::*;
 
 fn main() {
-
     let t = Tree {
-
         value: 1,
-
         left: Some(Box::new(Tree {
-
             value: 2,
-
             left: None,
-
             right: None,
-
         })),
-
         right: Some(Box::new(Tree {
-
             value: 3,
-
             left: Some(Box::new(Tree {
-
                 value: 4,
-
                 left: None,
-
                 right: None,
-
             })),
-
             right: None,
-
         })),
-
     };
 
     for n in t.preorder() {
-
         println!("{}", n);
-
     }
 
     for n in &t {
-
         println!("{}", n);
-
     }
 
 }
-
 ```
 
-对于可变引用和所有权的迭代器实现可以类似地进行。对于这三种情况，都有三个 `IntoIterator` 实现，一个用于 `&Tree<V>`，一个用于 `&mut Tree<V>`，一个用于 `Tree<V>`。
+对于可变引用和所有权的迭代器实现可以类似地进行。对于这三种情况，都有三个`IntoIterator`实现，一个用于`&Tree<V>`，一个用于`&mut Tree<V>`，一个用于`Tree<V>`。
 
 ### 减少代码重复
 
@@ -647,14 +614,13 @@ fn main() {
 
 以下示例实现了上述`Tree<V>`类型的模式，作为上述更简单但更冗余方法的替代方案。
 
-```rs
 
+
+```rs
 mod tree {
 
     /// 每个节点都有值的二叉树。
-
     /// 不一定是平衡的。
-
     pub struct Tree<V> {
 
         pub value: V,
@@ -669,22 +635,50 @@ mod tree {
 
         // ... 静态方法用于构建树 ...
 
-/// 使用两个子树构建一个新的节点。 pub fn node(value: V, left: Tree<V>, right: Tree<V>) -> Tree<V> { Tree { value, left: Some(Box::new(left)), right: Some(Box::new(right)), } }   /// 使用左子树构建一个新的节点。 pub fn left(value: V, left: Tree<V>) -> Tree<V> { Tree { value, left: Some(Box::new(left)), right: None, } }   /// 使用右子树构建一个新的节点。 pub fn right(value: V, right: Tree<V>) -> Tree<V> { Tree { value, left: None, right: Some(Box::new(right)), } }   /// 构建一个新的叶节点。 pub fn leaf(value: V) -> Self { Tree { value, left: None, right: None, } }    }
+        /// 使用两个子树构建一个新的节点。
+        pub fn node(value: V, left: Tree<V>, right: Tree<V>) -> Tree<V> {
+            Tree {
+                value,
+                left: Some(Box::new(left)),
+                right: Some(Box::new(right)),
+            }
+        }
+
+        /// 使用左子树构建一个新的节点。
+        pub fn left(value: V, left: Tree<V>) -> Tree<V> {
+            Tree {
+                value,
+                left: Some(Box::new(left)),
+                right: None,
+            }
+        }
+
+        /// 使用右子树构建一个新的节点。
+        pub fn right(value: V, right: Tree<V>) -> Tree<V> {
+            Tree {
+                value,
+                left: None,
+                right: Some(Box::new(right)),
+            }
+        }
+
+        /// 构建一个新的叶节点。
+        pub fn leaf(value: V) -> Self {
+            Tree {
+                value,
+                left: None,
+                right: None,
+            }
+        }
+    }
 
     /// 用于抽象访问的内部特质
-
     /// 到树组件。
-
     ///
-
     /// 这减少了代码重复。
-
     /// 实现本质上
-
-    /// 对于 Tree<V>，&Tree<V>，以及&mut Tree<V>也是同样的。
-
-    /// 和 Tree<V>，&Tree<V>，以及&mut Tree<V>。
-
+    /// 对于 `Tree<V>`，`&Tree<V>`，以及 `&mut Tree<V>` 也是同样的。
+    /// 和 `Tree<V>`，`&Tree<V>`，以及 `&mut Tree<V>`。
     trait Treeish: Sized {
 
         type Output;
@@ -736,9 +730,7 @@ mod tree {
     }
 
     /// 用于实现 Iterator 的内部结构体
-
-    /// 在 Treeish 的术语中。
-
+    /// 在 `Treeish` 的术语中。
     struct Preorder<T>(Vec<T>);
 
     impl<T> Iterator for Preorder<T>
@@ -762,7 +754,6 @@ mod tree {
                 Some(t) => {
 
                     // 这里使用了辅助特质
-
                     let (left, value, right) = t.get();
 
                     if let Some(right) = right {
@@ -788,25 +779,19 @@ mod tree {
     }
 
     // 用于暴露迭代器的包装器。包装器是必要的
-
-    // 为了保持 Treeish 私有。Treeish::Output 将
-
-    // 否则将暴露出来，因此需要将 Treeish 设置为 public。
+    // 为了保持 `Treeish` 私有。`Treeish::Output` 将
+    // 否则将暴露出来，因此需要将 `Treeish` 设置为 public。
 
     /// 前序迭代器
-
     pub struct IntoIterPreorder<V>(Preorder<Tree<V>>);
 
     /// 前序迭代器
-
     pub struct IterPreorder<'a, V>(Preorder<&'a Tree<V>>);
 
     /// 前序迭代器
-
     pub struct IterMutPreorder<'a, V>(Preorder<&'a mut Tree<V>>);
 
     // 委托给包装的实现。
-
     impl<V> Iterator for IntoIterPreorder<V> {
 
         type Item = V;
@@ -894,7 +879,6 @@ fn main() {
     }
 
 }
-
 ```
 
 ## 双向和随机访问迭代器
@@ -907,8 +891,8 @@ Rust 标准库不包含双向或随机访问迭代器的支持。对于这些迭
 
 * * *
 
-1.  可变引用的安全性由以下事实给出：引用从向量借用，不重叠，并且迭代器不会多次产生。 ↑
+1. 可变引用的安全性由以下事实给出：引用从向量借用，不重叠，并且迭代器不会多次产生。 ↑
 
-1.  拥有的项目本身可能是引用。例如，在`Vec<&str>`上调用`into_iter`不会导致迭代`String`值，即使该向量本身被消费。↑
+1. 拥有的项目本身可能是引用。例如，在`Vec<&str>`上调用`into_iter`不会导致迭代`String`值，即使该向量本身被消费。↑
 
 [在此处点击以给我们关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Iterators and ranges)

@@ -1,8 +1,9 @@
+
 # 函数
 
-# 列出函数的名字
+## 列出函数的名字
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -26,9 +27,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-使用 gdb 调试时，使用“`info functions`”命令可以列出可执行文件的所有函数名称。以上面代码为例：
+使用 gdb 调试时，使用`info functions`命令可以列出可执行文件的所有函数名称。以上面代码为例：
 
 ```cpp
 (gdb) info functions
@@ -63,7 +64,7 @@ Non-debugging symbols:
 
 可以看到会列出函数原型以及不带调试信息的函数。
 
-另外这个命令也支持正则表达式：“`info functions regex`”，这样只会列出符合正则表达式的函数名称，例如：
+另外这个命令也支持正则表达式：`info functions regex`，这样只会列出符合正则表达式的函数名称，例如：
 
 ```cpp
 (gdb) info functions thre*
@@ -76,17 +77,17 @@ Non-debugging symbols:
 0x0805082c  pthread_create@plt 
 ```
 
-可以看到 gdb 只会列出名字里包含“`thre`”的函数。
+可以看到 gdb 只会列出名字里包含`thre`的函数。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Symbols.html)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 是否进入带调试信息的函数
+## 是否进入带调试信息的函数
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -106,9 +107,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-使用 gdb 调试遇到函数时，使用 step 命令（缩写为 s）可以进入函数（函数必须有调试信息）。以上面代码为例：
+使用 gdb 调试遇到函数时，使用`step`命令（缩写为`s`）可以进入函数（函数必须有调试信息）。以上面代码为例：
 
 ```cpp
 (gdb) n
@@ -123,9 +124,9 @@ main () at a.c:13
 13              printf("%d\n", a); 
 ```
 
-可以看到 gdb 进入了 func 函数。
+可以看到 gdb 进入了`func`函数。
 
-可以使用 next 命令（缩写为 n）不进入函数，gdb 会等函数执行完，再显示下一行要执行的程序代码：
+可以使用`next`命令（缩写为`n`）不进入函数，gdb 会等函数执行完，再显示下一行要执行的程序代码：
 
 ```cpp
 (gdb) n
@@ -137,17 +138,17 @@ main () at a.c:13
 14              return 0; 
 ```
 
-可以看到 gdb 没有进入 func 函数。
+可以看到 gdb 没有进入`func`函数。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 进入不带调试信息的函数
+## 进入不带调试信息的函数
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -169,7 +170,7 @@ int main(void) {
 } 
 ```
 
-## 技巧
+### 技巧
 
 默认情况下，gdb 不会进入不带调试信息的函数。以上面代码为例：
 
@@ -181,9 +182,9 @@ int main(void) {
 16              return 0; 
 ```
 
-可以看到由于 printf 函数不带调试信息，所以“s”命令（s 是“step”缩写）无法进入 printf 函数。
+可以看到由于`printf`函数不带调试信息，所以`s`命令（`s`是`step`缩写）无法进入`printf`函数。
 
-可以执行“set step-mode on”命令，这样 gdb 就不会跳过没有调试信息的函数：
+可以执行`set step-mode on`命令，这样 gdb 就不会跳过没有调试信息的函数：
 
 ```cpp
 (gdb) set step-mode on
@@ -195,17 +196,17 @@ int main(void) {
 0x00007ffff7a993b7 in printf () from /lib64/libc.so.6 
 ```
 
-可以看到 gdb 进入了 printf 函数，接下来可以使用调试汇编程序的办法去调试函数。
+可以看到 gdb 进入了`printf`函数，接下来可以使用调试汇编程序的办法去调试函数。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 退出正在调试的函数
+## 退出正在调试的函数
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -230,11 +231,11 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 当单步调试一个函数时，如果不想继续跟踪下去了，可以有两种方式退出。
 
-第一种用“`finish`”命令，这样函数会继续执行完，并且打印返回值，然后等待输入接下来的命令。以上面代码为例：
+第一种用`finish`命令，这样函数会继续执行完，并且打印返回值，然后等待输入接下来的命令。以上面代码为例：
 
 ```cpp
 (gdb) n
@@ -253,11 +254,11 @@ Run till exit from #0  func () at a.c:7
 Value returned is $1 = 20 
 ```
 
-可以看到当不想再继续跟踪`func`函数时，执行完“`finish`”命令，gdb 会打印结果：“`20`”，然后停在那里。
+可以看到当不想再继续跟踪`func`函数时，执行完`finish`命令，gdb 会打印结果：`20`，然后停在那里。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html)
 
-第二种用“`return`”命令，这样函数不会继续执行下面的语句，而是直接返回。也可以用“`return expression`”命令指定函数的返回值。仍以上面代码为例：
+第二种用`return`命令，这样函数不会继续执行下面的语句，而是直接返回。也可以用`return expression`命令指定函数的返回值。仍以上面代码为例：
 
 ```cpp
 (gdb) n
@@ -284,17 +285,17 @@ Make func return now? (y or n) y
 19          return 0; 
 ```
 
-可以看到“`return`”命令退出了函数并且修改了函数的返回值。
+可以看到`return`命令退出了函数并且修改了函数的返回值。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Returning.html#Returning)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 直接执行函数
+## 直接执行函数
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -313,9 +314,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-使用 gdb 调试程序时，可以使用“`call`”或“`print`”命令直接调用函数执行。以上面程序为例：
+使用 gdb 调试程序时，可以使用`call`或`print`命令直接调用函数执行。以上面程序为例：
 
 ```cpp
 (gdb) start
@@ -334,15 +335,16 @@ $2 = 3
 ```
 
 可以看到执行两次`func`函数后，`global`的值变成`3`。
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Calling.html).
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 打印函数堆栈帧信息
+## 打印函数堆栈帧信息
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -359,9 +361,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-使用 gdb 调试程序时，可以使用“`i frame`”命令（`i`是`info`命令缩写）显示函数堆栈帧信息。以上面程序为例：
+使用 gdb 调试程序时，可以使用`i frame`命令（`i`是`info`命令缩写）显示函数堆栈帧信息。以上面程序为例：
 
 ```cpp
 Breakpoint 1, func (a=1, b=2) at a.c:5
@@ -420,12 +422,15 @@ Dump of assembler code for function func:
 End of assembler dump. 
 ```
 
-可以看到执行“`i frame`”命令后，输出了当前函数堆栈帧的地址，指令寄存器的值，局部变量地址及值等信息，可以对照当前寄存器的值和函数的汇编指令看一下。
+可以看到执行`i frame`命令后，输出了当前函数堆栈帧的地址，指令寄存器的值，局部变量地址及值等信息，可以对照当前寄存器的值和函数的汇编指令看一下。
+
+
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Frame-Info.html).
 
-## 贡献者
+`## 贡献者`
 
-nanxiao
+`nanxiao`
 
 # 打印尾调用堆栈帧信息
 
@@ -457,7 +462,7 @@ int main(void)
 
 ## 技巧
 
-当一个函数最后一条指令是调用另外一个函数时，开启优化选项的编译器常常以最后被调用的函数返回值作为调用者的返回值，这称之为“尾调用（Tail call）”。以上面程序为例，编译程序（使用‘-O’）：
+当一个函数最后一条指令是调用另外一个函数时，开启优化选项的编译器常常以最后被调用的函数返回值作为调用者的返回值，这称之为“尾调用（`Tail call`）”。以上面程序为例，编译程序（使用`-O`）：
 
 ```cpp
 gcc -g -O -o test test.c 
@@ -493,7 +498,7 @@ Stack level 0, frame at 0x7fffffffe590:
 
 看不到尾调用的相关信息。
 
-可以设置“`debug entry-values`”选项为非 0 的值，这样除了输出正常的函数堆栈帧信息以外，还可以输出尾调用的相关信息：
+可以设置`debug entry-values`选项为非`0`的值，这样除了输出正常的函数堆栈帧信息以外，还可以输出尾调用的相关信息：
 
 ```cpp
 (gdb) set debug entry-values 1
@@ -516,13 +521,13 @@ Stack level 0, frame at 0x7fffffffe590:
   rip at 0x7fffffffe588 
 ```
 
-可以看到输出了“`tailcall: initial:`”信息。
+可以看到输出了`tailcall: initial:`信息。
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Tail-Call-Frames.html).
 
-## 贡献者
+`## 贡献者`
 
-nanxiao
+`nanxiao`
 
 # 选择函数堆栈帧
 
@@ -559,7 +564,7 @@ int main(void)
 
 ## 技巧
 
-用 gdb 调试程序时，当程序暂停后，可以用“`frame n`”命令选择函数堆栈帧，其中`n`是层数。以上面程序为例：
+用 gdb 调试程序时，当程序暂停后，可以用`frame n`命令选择函数堆栈帧，其中`n`是层数。以上面程序为例：
 
 ```cpp
 (gdb) b test.c:5
@@ -581,7 +586,7 @@ Breakpoint 1, func1 (a=10) at test.c:5
 
 可以看到程序断住后，最内层的函数帧为第`0`帧。执行`frame 2`命令后，当前的堆栈帧变成了`fun3`的函数帧。
 
-也可以用“`frame addr`”命令选择函数堆栈帧，其中`addr`是堆栈地址。仍以上面程序为例：
+也可以用`frame addr`命令选择函数堆栈帧，其中`addr`是堆栈地址。仍以上面程序为例：
 
 ```cpp
 (gdb) frame 2
@@ -601,13 +606,13 @@ Stack level 2, frame at 0x7fffffffe590:
 11              c = 2 * func1(a); 
 ```
 
-使用“`i frame`”命令可以知道`0x7fffffffe568`是`func2`的函数堆栈帧地址，使用“`frame 0x7fffffffe568`”可以切换到`func2`的函数堆栈帧。
+使用`i frame`命令可以知道`0x7fffffffe568`是`func2`的函数堆栈帧地址，使用`frame 0x7fffffffe568`可以切换到`func2`的函数堆栈帧。
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Selection.html#Selection).
 
-## 贡献者
+`## 贡献者`
 
-nanxiao
+`nanxiao`
 
 # 向上或向下切换函数堆栈帧
 
@@ -644,7 +649,7 @@ int main(void)
 
 ## 技巧
 
-用 gdb 调试程序时，当程序暂停后，可以用“`up n`”或“`down n`”命令向上或向下选择函数堆栈帧，其中`n`是层数。以上面程序为例：
+用 gdb 调试程序时，当程序暂停后，可以用`up n`或`down n`命令向上或向下选择函数堆栈帧，其中`n`是层数。以上面程序为例：
 
 ```cpp
 (gdb) b test.c:5
@@ -670,9 +675,9 @@ Breakpoint 1, func1 (a=10) at test.c:5
 11              c = 2 * func1(a); 
 ```
 
-可以看到程序断住后，先执行“`frame 2`”命令，切换到`fun3`函数。接着执行“`up 1`”命令，此时会切换到`main`函数，也就是会往外层的堆栈帧移动一层。反之，当执行“`down 2`”命令后，又会向内层堆栈帧移动二层。如果不指定`n`，则`n`默认为`1`.
+可以看到程序断住后，先执行`frame 2`命令，切换到`fun3`函数。接着执行`up 1`命令，此时会切换到`main`函数，也就是会往外层的堆栈帧移动一层。反之，当执行`down 2`命令后，又会向内层堆栈帧移动二层。如果不指定`n`，则`n`默认为`1`.
 
-还有“`up-silently n`”和“`down-silently n`”这两个命令，与“`up n`”和“`down n`”命令区别在于，切换堆栈帧后，不会打印信息，仍以上面程序为例：
+还有`up-silently n`和`down-silently n`这两个命令，与`up n`和`down n`命令区别在于，切换堆栈帧后，不会打印信息，仍以上面程序为例：
 
 ```cpp
 (gdb) up
@@ -699,6 +704,6 @@ Stack level 3, frame at 0x7fffffffe5a0:
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Selection.html#Selection).
 
-## 贡献者
+`## 贡献者`
 
-nanxiao
+`nanxiao`

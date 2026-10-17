@@ -1,3 +1,4 @@
+
 # 继承和实现重用
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/data_modeling/inheritance_and_reuse.html`](https://cel.cs.brown.edu/crp/idioms/data_modeling/inheritance_and_reuse.html)
@@ -45,72 +46,46 @@ int main() {
 ```
 
 ```rs
-
 trait Device {
-
     fn power_on(&mut self);
-
     fn power_off(&mut self);
 
     fn reset_device(&mut self) {
-
         println!("Resetting device...");
-
         self.power_off();
-
         self.power_on();
-
     }
-
 }
 
 struct Printer {
-
     powered: bool,
-
 }
 
 impl Printer {
-
     fn new() -> Printer {
-
         Printer { powered: false }
-
     }
-
 }
 
 impl Device for Printer {
-
     fn power_on(&mut self) {
-
         self.powered = true;
-
         println!("Printer is powered on");
-
     }
 
     fn power_off(&mut self) {
-
         self.powered = false;
-
         println!("Printer is powered off");
-
     }
-
 }
 
 fn main() {
-
     let mut p = Printer::new();
-
     p.reset_device();
-
 }
-
 ```
 
-在实践中，如果预期不会覆盖 `resetDevice()` 方法，C++ 中的 `Device` 类的 `resetDevice()` 方法可能被设置为非虚拟。为了使其与 Rust 示例保持一致，我们在这里将其设置为虚拟，因为 Rust 特性既可以用于动态分派也可以用于静态分派（在静态分派的情况下没有 vtable 开销）。
+在实践中，如果预期不会覆盖`resetDevice()`方法，C++ 中的`Device`类的`resetDevice()`方法可能被设置为非虚拟。为了使其与 Rust 示例保持一致，我们在这里将其设置为虚拟，因为 Rust 特性既可以用于动态分派也可以用于静态分派（在静态分派的情况下没有 vtable 开销）。
 
 Rust 特性与抽象类在几个方面有所不同。例如，Rust 特性不能定义数据成员，也不能定义私有或受保护的成员方法。这限制了使用特性实现模板方法模式的有效性。
 

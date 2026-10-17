@@ -1,12 +1,13 @@
+
 # 信息显示
 
-# 显示 gdb 版本信息
+## 显示`gdb`版本信息
 
-## 技巧
+### 技巧
 
-使用 gdb 时，如果想查看 gdb 版本信息，可以使用“`show version`”命令:
+使用`gdb`时，如果想查看`gdb`版本信息，可以使用“`show version`”命令：
 
-```cpp
+```
 (gdb) show version
 GNU gdb (GDB) 7.7.1
 Copyright (C) 2014 Free Software Foundation, Inc.
@@ -24,19 +25,19 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word". 
 ```
 
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Help.html#index-GDB-version-number)。
+参见[`gdb`手册](https://sourceware.org/gdb/onlinedocs/gdb/Help.html#index-GDB-version-number)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 显示 gdb 版权相关信息
+## 显示`gdb`版权相关信息
 
-## 技巧
+### 技巧
 
-使用 gdb 时，如果想查看 gdb 版权相关信息，可以使用“`show copying`”命令:
+使用`gdb`时，如果想查看`gdb`版权相关信息，可以使用“`show copying`”命令：
 
-```cpp
+```
 (gdb) show copying
                 GNU GENERAL PUBLIC LICENSE
                    Version 3, 29 June 2007
@@ -60,7 +61,7 @@ software for all its use
 
 或者“`show warranty`”命令：
 
-```cpp
+```
 (gdb) show warranty
   15\. Disclaimer of Warranty.
 
@@ -95,17 +96,17 @@ Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee. 
 ```
 
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Help.html#index-GDB-version-number)。
+参见[`gdb`手册](https://sourceware.org/gdb/onlinedocs/gdb/Help.html#index-GDB-version-number)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 启动时不显示提示信息
+## 启动时不显示提示信息
 
-## 例子
+### 例子
 
-```cpp
+```
 $ gdb
 GNU gdb (GDB) 7.7.50.20140228-cvs
 Copyright (C) 2014 Free Software Foundation, Inc.
@@ -123,38 +124,36 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word". 
 ```
 
-## 技巧
+### 技巧
 
-gdb 在启动时会显示如上类似的提示信息。
+`gdb`在启动时会显示如上类似的提示信息。
 
-如果不想显示这个信息，则可以使用`-q`选项把提示信息关掉:
+如果不想显示这个信息，则可以使用`-q`选项把提示信息关掉：
 
-```cpp
+```
 $ gdb -q
 (gdb) 
 ```
 
-你可以在~/.bashrc 中，为 gdb 设置一个别名：
+你可以在`~/.bashrc`中，为`gdb`设置一个别名：
 
-```cpp
+```
 alias gdb="gdb -q" 
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Invoking-GDB.html#Invoking-GDB)
+详情参见[`gdb`手册](https://sourceware.org/gdb/onlinedocs/gdb/Invoking-GDB.html#Invoking-GDB)
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 退出时不显示提示信息
+## 退出时不显示提示信息
 
-# gdb 退出时不显示提示信息
+### 技巧
 
-## 技巧
+`gdb`在退出时会提示：
 
-gdb 在退出时会提示:
-
-```cpp
+```
 A debugging session is active.
 
     Inferior 1 [process 29686    ] will be killed.
@@ -162,33 +161,34 @@ A debugging session is active.
 Quit anyway? (y or n) n 
 ```
 
-如果不想显示这个信息，则可以在 gdb 中使用如下命令把提示信息关掉:
+如果不想显示这个信息，则可以在`gdb`中使用如下命令把提示信息关掉：
 
-```cpp
+```
 (gdb) set confirm off 
 ```
 
-也可以把这个命令加到.gdbinit 文件里。
+也可以把这个命令加到`.gdbinit`文件里。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 输出信息多时不会暂停输出
+## 输出信息多时不会暂停输出
 
-## 技巧
+### 技巧
 
-有时当 gdb 输出信息较多时，gdb 会暂停输出，并会打印“`---Type <return> to continue, or q <return> to quit---`”这样的提示信息，如下面所示：
+有时当`gdb`输出信息较多时，`gdb`会暂停输出，并会打印“`---Type <return> to continue, or q <return> to quit---`”这样的提示信息，如下面所示：
 
-```cpp
+```
  81 process 2639102      0xff04af84 in __lwp_park () from /usr/lib/libc.so.1
  80 process 2573566      0xff04af84 in __lwp_park () from /usr/lib/libc.so.1
 ---Type <return> to continue, or q <return> to quit---Quit 
 ```
 
-解决办法是使用“`set pagination off`”或者“`set height 0`”命令。这样 gdb 就会全部输出，中间不会暂停。
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Screen-Size.html).
+解决办法是使用“`set pagination off`”或者“`set height 0`”命令。这样`gdb`就会全部输出，中间不会暂停。
 
-## 贡献者
+参见[`gdb`手册](https://sourceware.org/gdb/onlinedocs/gdb/Screen-Size.html)。
 
-nanxiao
+### 贡献者
+
+`nanxiao`

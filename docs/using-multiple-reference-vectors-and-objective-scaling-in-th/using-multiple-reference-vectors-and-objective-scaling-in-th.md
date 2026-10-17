@@ -1,17 +1,5 @@
+
 # 可行性泵中使用多参考向量与目标缩放的使用指南
-
-
-
-
-
-
-
-![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_0.png)
-
-![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_1.png)
-
-
-![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_2.png)
 
 Gioni Mei<sup>a</sup> Timo Berthold<sup>b,*</sup> Domenico Salvagnin<sup>c</sup>
 
@@ -21,17 +9,14 @@ Gioni Mei<sup>a</sup> Timo Berthold<sup>b,*</sup> Domenico Salvagnin<sup>c</sup>
 
 ## 文章摘要
 
-关键词：
-混合整数规划
-原始启发式算法
+关键词：混合整数规划、原始启发式算法
 
-可行性泵（Feasibility Pump, FP）是混合整数规划（MIP）中最为人知的原始启发式算法之一：超过 15 篇论文对其所有步骤提出了各种修改。到为止，还没有变体考虑跨多次迭代的信息，但它们都保持了朝着单一参考点优化的原则。在本文中我们评估了在 FP 算法所有阶段中使用多个参考向量的效果。特别是，我们使用主循环期间获得的 LP 可行向量在进入计算核心之前收紧变量域，我们将该过程称为 mRENS。我们考虑在 mRENS 中引入多个参考向量以进一步探索优化方向，并引入替代性的目标缩放项，以平衡距离函数与原始 MIP 目标之间的贡献。
+可行性泵（Feasibility Pump, FP）是混合整数规划（MIP）中最为人知的原始启发式算法之一：超过 15 篇论文对其所有步骤提出了各种修改。至今为止，还没有变体考虑跨多次迭代的信息，但它们都保持了朝着单一参考点优化的原则。在本文中我们评估了在 FP 算法所有阶段中使用多个参考向量的效果。特别是，我们使用主循环期间获得的 LP 可行向量在进入计算核心之前收紧变量域，我们将该过程称为 mRENS。我们考虑在 mRENS 中引入多个参考向量以进一步探索优化方向，并引入替代性的目标缩放项，以平衡距离函数与原始 MIP 目标之间的贡献。
 
 我们的计算实验表明，新方法可以提高在广义 MIP 测试集上的性能。具体而言，我们的改进在嵌入式设置中提供了 29.3% 的解改进和 4.0% 的运行改进，在大型 MIP 实例集上的迭代次数减少了 16.0%。此外，该方法的成功率在前几次迭代中持续增加。我们还观察到适中的性能，这使得我们版本的 FP 适用于该算法的两个主要用例。
 
 > * 通讯作者。
-邮箱：timoberthold@fico.com (T. Berthold)。
-
+> 邮箱：timoberthold@fico.com (T. Berthold)。
 
 # 1. 引言
 
@@ -57,12 +42,9 @@ Gioni Mei<sup>a</sup> Timo Berthold<sup>b,*</sup> Domenico Salvagnin<sup>c</sup>
 
 $$\Delta(\tilde{x}^k, \hat{x}^k) := \sum_{j \in I} |\tilde{x}^k - \hat{x}^k|$$
 
-在每次迭代中，$\hat{x}^k$ 都通过最小化与序列上上一个点的距离来生成，在两种情况下都使用不同的度量（例如 $\ell_{1}$ 和 $\ell_{2}$ 范数）（注：此处原文公式似乎有缺失，此处根据上下文补全逻辑）。（注：原文此处可能存在排版中断，译文根据逻辑处理）
+在每次迭代中，$\hat{x}^k$ 都通过最小化与序列上上一个点的距离来生成，在两种情况下都使用不同的度量（例如 $\ell_{1}$ 和 $\ell_{2}$ 范数）。
 
-
-
-
-步骤优先考虑质量而非可行性，并逐渐增加可行性相对于解质量的优先级。欧几里得范数 $\|\Delta\|_2$ 和 $\|c\|_2$ 的目的是是将项 $\Delta(x, \tilde{x}^k)$ 和 $c^T x$ 置于同一尺度上。其中 $\|\Delta\|_2$ 是 $\Delta(x, \tilde{x}^k)$ 中目标函数向量的欧几里得范数，等于 $\sqrt{|\mathcal{I}|}$。
+步骤优先考虑质量而非可行性，并逐渐增加可行性相对于解质量的优先级。欧几里得范数 $\|\Delta\|_2$ 和 $\|c\|_2$ 的目的是将项 $\Delta(x, \tilde{x}^k)$ 和 $c^T x$ 置于同一尺度上。其中 $\|\Delta\|_2$ 是 $\Delta(x, \tilde{x}^k)$ 中目标函数向量的欧几里得范数，等于 $\sqrt{|\mathcal{I}|}$。
 
 OFP 在重启机制中引入了调整。重新访问整数向量并不意味着算法停止，因为参数 $\alpha_k$ 是动态调整的。因此，如果当前整数向量 $\tilde{x}^k$ 等于 $\bar{x}$ 且 $r \in \{1, \dots, k-2\}$，作者建议仅当 $\alpha_l - \alpha_k < \delta$ 时才应用重启程序，其中 $\delta \in [0, 1]$ 为固定阈值参数。
 
@@ -127,10 +109,7 @@ $\Delta_{\alpha}(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}}) := (1 - \alp
 
 **证明。** 见附录 A。$\square$
 
-**备注 4.2.** 由于 $\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ 是凸的，因此其最小化集 $S$ 也是凸的。进一步，根据定理 4.1 得 $S$ 是笛卡尔积的
-
-
-具有整数边界的闭区间（其可能包含单个整数值，这是一个重要的特殊情况）。
+**备注 4.2.** 由于 $\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ 是凸的，因此其最小化集 $S$ 也是凸的。进一步，根据定理 4.1 得 $S$ 是笛卡尔积的具有整数边界的闭区间（其可能包含单个整数值，这是一个重要的特殊情况）。
 
 **推论 4.3.** 令 $\mathcal{L}=\{1, \dots, k\}$ 为 $k \in \mathbb{N}$ 个整数向量 $ \tilde{x}^1, \dots, \tilde{x}^k \in \mathbb{Z}^n$ 的索引集。对于所有 $i \in \mathcal{L}$，有 $\lambda_i \ge 0$，且定义 $\Delta(x, X_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ 为 (5)。如果对于任意两个不交的集 $U, V \subseteq \mathcal{L}$ 且 $U \cup V=\mathcal{L}$ 使得
 
@@ -138,7 +117,9 @@ $$\sum_{i \in U} \lambda_i \neq \sum_{i \in V} \lambda_i. (8)$$
 
 则 $\Delta(x, X_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ 在 $\mathbb{R}^n$ 上的最小化集包含整数向量。
 
-推论 4.3 对权重 $\Lambda_{\mathcal{L}}$ 引入了一个条件，该条件确保了 (5) 最小值的整数性。然而，这并不意味着任何满足该条件的权重都是投影步骤 FP 的合适选择。例如，如果任意迭代 $k$ 满足 $\lambda_i = \lambda_j = \dots = \lambda_{k-1} > \lambda_k$，则 (8) 显然成立的。但随着 $k$ 的增大，距离函数的变化会越来越小，导致 FP 算法出现停滞。因此，我们建议仅考虑少数整数向量和 $\Lambda_{\mathcal{L}}$ 以实现上述行为。根据 Melo [10] 的结果，我们在迭代 $k$ 中考虑了三个具有几何属性 (0.5, 0.25, 0.125) 的参考向量。第一个是 $\tilde{x}$，其余两个是获取的在所有约束条件下变异之和最小的整数向量。
+
+
+推论 4.3 对权重 $\Lambda_{\mathcal{L}}$ 引入了一个条件，该条件确保了 (5) 最小值的整数性。然而，这并不意味着任何满足该条件的权重都是投影步骤 FP 的合适选择。例如，如果任意迭代 $k$ 满足 $\lambda_i = \lambda_j = \dots = \lambda_{k-1} > \lambda_k$，则 (8) 显然成立。但随着 $k$ 的增大，距离函数的变化会越来越小，导致 FP 算法出现停滞。因此，我们建议仅考虑少数整数向量和 $\Lambda_{\mathcal{L}}$ 以实现上述行为。根据 Melo [10] 的结果，我们在迭代 $k$ 中考虑了三个具有几何属性 (0.5, 0.25, 0.125) 的参考向量。第一个是 $\tilde{x}$，其余两个是获取的在所有约束条件下变异之和最小的整数向量。
 
 根据设计，在阶段 1 和 阶段 2 中使用多个参考向量会导致投影步骤目标中的距离函数变化较小，这可以看作是在保持接近良好可行解的同时，向收敛迈出更小的“步”。预计这将以迭代次数的略微增加为代价，换取更好的解质量。请注意，在带有严格迭代限制的运行 FP 时，这并不一定是有需要的。
 
@@ -148,7 +129,7 @@ $$\sum_{i \in U} \lambda_i \neq \sum_{i \in V} \lambda_i. (8)$$
 
 在对问题实例 misc07 进行实验后，Pragnac 等人 [11] 观察到对于该实例，固定缩放项 $||\Delta||_2$ 和 $||c||_2$ 在 (2) 中没有为 $\Delta(x, \tilde{x})$ 和 $c^T x$ 提供平衡的贡献。因此，他们建议将 $||c||_2$ 替换为 $|c^T \tilde{x}|$，其中 $\tilde{x}$ 是在上一次迭代投影步骤中获得的 LP 可行向量。这种修改使得该特定问题实例的两个目标项的贡献更加平衡。然而，文中并未提供在大型测试集上的比较。
 
-受这一想法的启发，我们建议在上述建议缩放的基础上，额外引入动态变化的项 $|\Delta(\tilde{x}^{k-1}, x)|$ 来替换缩放项 $||\Delta||_2$。本本工作的精神，这些修改之一是在投影步骤中考虑来自之前迭代的信息。
+受这一想法的启发，我们建议在上述建议缩放的基础上，额外引入动态变化的项 $|\Delta(\tilde{x}^{k-1}, x)|$ 来替换缩放项 $||\Delta||_2$。本工作的精神，这些修改之一是在投影步骤中考虑来自之前迭代的信息。
 
 回想 FP 旨在最小化向量 $\tilde{x}$ 和 $\tilde{x}$ 之间的距离并达到收敛。因此，预计 $\tilde{x}$ 和 $\tilde{x}$ 的组件与 $\tilde{x}^{k-1}$ 和 $\tilde{x}^{k-1}$ 的对应组件差异很大。在投影步骤中，我们也观察到 $\Delta(x, \tilde{x})$ 和 $c^T x$ 分别获得接近 $\Delta(\tilde{x}^{k-1}, \tilde{x})$ 和 $c^T \tilde{x}^{k-1}$ 的值。因此，建议的缩放应该为两个目标提供更平衡的贡献。
 
@@ -158,29 +139,25 @@ $$\Delta_{\alpha_k}(x, \tilde{x}) = (1-\alpha_k)\Delta(x, \tilde{x}) + \alpha_k 
 
 在对问题实例 misc07 进行实验后，Pragnac 等人 [11] 观察到对于该实例，固定缩放项 $||\Delta||_2$ 和 $||c||_2$ 在 (2) 中没有为 $\Delta(x, \tilde{x})$ 和 $c^T x$ 提供平衡的贡献。因此，他们建议将 $||c||_2$ 替换为 $|c^T \tilde{x}|$，其中 $\tilde{x}$ 是在上一次迭代投影步骤中获得的 LP 可行向量。这种修改使得该特定问题实例的两个目标项的贡献更加平衡。然而，文中并未提供在大型测试集上的比较。
 
-
-
-
-
 # 7. 计算结果
 
 为了进行比较，我们使用了所谓的几何平均值 [26]，位移为 1。所有的 FP 变体都使用相同的随机种子扩展到整个集合上。在我们的表格中，我们始终报告 FP 变体通过所有、部分或无种子找到解的实例数量。此外，我们计算了原始对间隙（gap()）、运行时间（time(s)）和迭代次数（iter），它们是对于由至少一个我们比较的 FP 变体求解的所有实例的位移平均值。这里，原始对间隙是一个 0% 到 100% 之间的数值，定义如下：
 
 **定义 7.1.** 设 $\tilde{x}$ 为 MIP 的解，$\tilde{x}_{opt}$ 为该 MIP 的最优（或最佳）解。我们相对于 $\tilde{x}$ 将原始对间隙 $\gamma \in [0, 1]$ 定义为：
 
-```latex
-$$\gamma_{\tilde{x}}(\tilde{x}) := \begin{cases} 0, & \text{if } |c^T\tilde{x}_{opt}| = |c^T\tilde{x}| = 0, \\ 1, & \text{if } c^T\tilde{x}_{opt} \cdot c^T\tilde{x} < 0, \\ \frac{|c^T\tilde{x}_{opt} - c^T\tilde{x}|}{\max\{|c^T\tilde{x}_{opt}|, |c^T\tilde{x}|}}, & \text{otherwise.} \end{cases}$$
+```
+$$\gamma_{\tilde{x}}(\tilde{x}) := \begin{cases} 0, & \text{if } |c^T\tilde{x}_{opt}| = |c^T\tilde{x}| = 0, \\ 1, & \text{if } c^T\tilde{x}_{opt} \cdot c^T\tilde{x} < 0, \\ \frac{|c^T\tilde{x}_{opt} - c^T\tilde{x}|}{\max\{|c^T\tilde{x}_{opt}|, |c^T\tilde{x}|\}}, & \text{otherwise.} \end{cases}$$
 ```
 
 在所有表格中，我们用蓝色和**粗体**突出显示比参考运行（每个表格的第一行）至少好 10% 的值。比参考值至少差 10% 的值则用红色和*斜体*标记。在所有 89 种实例-种子组合中，我们统计了获胜次数，即 FP 变体在原始对间隙、运行时间和迭代次数方面提供至少 10% 改进的实例数量。和之前一样，如果获胜次数超过失败次数超过 10%，则获胜次数用蓝色和**粗体**标记。如果反之，则失败次数用红色和*斜体*标记。
 
-在第 7.1 至 7.3 节中，我们在嵌入式设置下检查不同 FP 变体的性能，并在第 7.4 节中检查独立设置。对于完整结果，请参考我们的在线补充材料 https://github.com/GioniMexi/online-supplement-feaspump3。注意，对于所有变体，我们均使用 OPF2 作为基准，因此设置缩写中的 FP 将始终意味着使用了 OFP2 的变体。我们按照论文大纲的顺序展示结果。
+在第 7.1 至 7.3 节中，我们在嵌入式设置下检查不同 FP 变体的性能，并在第 7.4 节中检查独立设置。对于完整结果，请参考我们的在线补充材料 `https://github.com/GioniMexi/online-supplement-feaspump3`。注意，对于所有变体，我们均使用 OPF2 作为基准，因此设置缩写中的 FP 将始终意味着使用了 OFP2 的变体。我们按照论文大纲的顺序展示结果。
 
-### 7.1. 应用 mRENS
+### 7.1 应用 mRENS
 
 首先，我们说明了在阶段 3 之前使用 (m)RENS 的益处。为此，我们将具有活跃阶段 3 的 FP (FP-s3) 与应用 RENS 或 mRENS 的变体（分别称为 FP-(RENS,s3) 和 FP-(mRENS,s3)）进行比较。在这种设置下，如果 (m)RE 找到一个可行解，我们停止运行。否则，我们在剩余的可用时间内使用原始的阶段 3。我们的实验是在 153 个实例（共 283 个）上进行的，在这些实例中，FP 未在 20 次迭代的限制内找到可行解。
 
-表 1：在阶段 1 和 2 在 20 次迭代后未找到可行解的 153 个实例之后，阶段 3 之前 RENS 和 mRENS 的比较。如果几何平均值表示 10% 的改进，则用蓝色突出；如果表示 10% 的恶化，则用红色斜体标记。最后一列括号中的数字显示在 (m)RENS 和 RENS 中花费的时间。
+**表 1：在阶段 1 和 2 在 20 次迭代后未找到可行解的 153 个实例之后，阶段 3 之前 RENS 和 mRENS 的比较。如果几何平均值表示 10% 的改进，则用蓝色突出；如果表示 10% 的恶化，则用红色斜体标记。最后一列括号中的数字显示在 (m)RENS 和 RENS 中花费的时间。**
 
 | solved(#seeds) | all | some | none | #wins/#losses vs FP gap (%) | gap (%) | time (s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -192,11 +169,11 @@ $$\gamma_{\tilde{x}}(\tilde{x}) := \begin{cases} 0, & \text{if } |c^T\tilde{x}_{
 
 （注：原文中此处存在大量重复段落，已根据指令要求去重处理，仅保留核心逻辑与翻译内容。）
 
-### 7.2. 应用新缩放
+### 7.2 应用新缩放
 
 接下来，我们将 FP 与使用新缩放的配置进行比较。正如 Mexi 的论文所示，新缩放和在阶段 1 和 2 中使用多个参考向量以补充的方式增强了独立实现的性能。特别是，新缩放主要导致运行时间和迭代的改进，而在投影步骤中使用多个参考向量提高了解质量。基于此，在独立设置下比较不同的 FP 变体组合是自然的。
 
-表 2：嵌入式设置中使用替代缩放的变体比较。如果几何平均值表示 10% 的改进，则用蓝色突出。
+**表 2：嵌入式设置中使用替代缩放的变体比较。如果几何平均值表示 10% 的改进，则用蓝色突出。**
 
 | solved(#seeds) | all | some | none | #wins/#losses vs FP gap (%) | gap (%) | time (s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -206,11 +183,11 @@ $$\gamma_{\tilde{x}}(\tilde{x}) := \begin{cases} 0, & \text{if } |c^T\tilde{x}_{
 
 （注：表 2 的值根据文本上下文重建）。
 
-### 7.3. 最终嵌入式设置
+### 7.3 最终嵌入式设置
 
 在 mRENS 和替代缩放提供显著性能改进的嵌入式设置下，我们将两者都纳入 FP 并进行最终比较。我们在离线实验中观察到，在这种情况下多个参考向量并没有益。正如我们在后续节中看到的，多个参考向量倾向于增加迭代次数，这在严格迭代限制的设置中是劣的。
 
-表 3：嵌入式设置中使用替代缩放的 FP 比较。如果几何平均值表示 10% 的改进，则用蓝色突出。
+**表 3：嵌入式设置中使用替代缩放的 FP 比较。如果几何平均值表示 10% 的改进，则用蓝色突出。**
 
 | solved(#seeds) | all | some | none | #wins/#losses vs FP gap (%) | gap (%) | time (s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -220,34 +197,29 @@ $$\gamma_{\tilde{x}}(\tilde{x}) := \begin{cases} 0, & \text{if } |c^T\tilde{x}_{
 
 表 3 的结果显示，两种新变体找到比 FP-(s3) 稍微更多的可行解实例。此外，FP($\Delta$,$\Delta$) 在解质量方面显著优于 FP-(s3)。更具体地说，在由至少一个 FP 变体求解的实例中，其原始对间隙减少了 29.3%，在许多情况下由于求解了两个子-MIP，计算时间略有增加。
 
-### 7.4. 独立结果
+### 7.4 独立结果
 
 正如 Mexi 的论文所示，新缩放和在阶段 1 和 2 中使用多个参考向量以补充的方式增强了独立 FP 实现的性能。特别是，新缩放主要导致运行时间和迭代的改进，而在投影步骤中使用多个参考向量提高了解质量。
 
+**表 4：FP 与独立变体的对比。如果几何平均值表示改进了 10%，则用蓝色粗体显示；如果表示恶化，则用红色斜体显示。**
 
-
-
-
-表 4
-FP 与独立变体的对比。如果几何平均值表示改进了 10%，则用蓝色粗体显示；如果表示恶化，则用红色斜体显示。
-
-| | 求解(#种子) | 全部 某些 无 | #胜/负 vs FP 差距 时间迭代 | 几何平均 差距 时间迭代 |
-|---|---|---|---|---|---|---|------|
-| FP-(s3) | 266 | 9 | | | | | 21.27 | 6.41 | 28.93 |
-| FP-(c,Δ)-(s3) | 266 | 13 | 177/211 | 318/185 | 325/177 | 21.93 | 6.15 | 22.88 |
-| FP-(mrv)-(c,Δ)-(s3) | 266 | 10 | 205/132 | 147/270 | 118/307 | 21.92 | 6.95 | 35.02 |
-| FP-(mrv)-(c,Δ)-(s3) | 266 | 11 | 213/204 | 309/254 | 294/247 | 21.28 | 6.32 | 26.34 |
-| FP-(c,Δ)-(mRENS,s3) | 267 | 9 | | 210/192 | 301/210 | 325/317 | 20.11 | 6.22 | 22.88 |
+| | 求解(#种子) | 全部 | 某些 | 无 | #胜/负 vs FP | 差距 | 时间 | 迭代 | 几何平均 | 差距 | 时间 | 迭代 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| FP-(s3) | 266 | 9 | | | | | | | 21.27 | 6.41 | 28.93 |
+| FP-(c,$\Delta$)-(s3) | 266 | 13 | 177/211 | 318/185 | 325/177 | 21.93 | 6.15 | 22.88 |
+| FP-(mrv)-(c,$\Delta$)-(s3) | 266 | 10 | 205/132 | 147/270 | 118/307 | 21.92 | 6.95 | 35.02 |
+| FP-(mrv)-(c,$\Delta$)-(s3) | 266 | 11 | 213/204 | 309/254 | 294/247 | 21.28 | 6.32 | 26.34 |
+| FP-(c,$\Delta$)-(mRENS,s3) | 267 | 9 | | 210/192 | 301/210 | 325/317 | 20.11 | 6.22 | 22.88 |
 | FP-(mrv)-(mRENS,s3) | 266 | 10 | | 232/123 | 131/276 | 118/307 | 18.98 | 7.0 | 35.02 |
-| FP-(c,Δ)-(mRENS,s3) | 268 | 4 | | 223/202 | 278/231 | 294/247 | 20.94 | 6.19 | 26.34 |
+| FP-(c,$\Delta$)-(mRENS,s3) | 268 | 4 | | 223/202 | 278/231 | 294/247 | 20.94 | 6.19 | 26.34 |
 
-在表 4 的第一部分，我们将 FP 与 FP-(c,Δ)-(mrv)-(s3) 进行了比较，后者在投影步骤中使用了三个整数参考向量；并与 FP-(mrv)-(c,Δ)-(s3) 比较，后者使用了替代缩放和多个参考向量。在这里，即使 FP-(c,Δ)-(s3) 比 FP 更快且所需的迭代次数显著更少，但解质量略差，差距比 FP 获取的差距差了 3.1%。另一方面，使用多个整数参考向量 (FP-(mrv)-(c,Δ)) 虽然增加了运行时间和迭代次数，但导致了 5.4% 的差距改进。结合这两种方法 (FP-(mrv)-(c,Δ)-(s3))，我们在相对于差距方面获得了更多获胜，并且总迭代次数有所减少。通过 mRENS 增强 FP 的之前的版本，差距在 FP-(mRENS,s3) 中得到了改进，改进幅度高达 10.8%。
+在表 4 的第一部分，我们将 FP 与 FP-(c,$\Delta$)-(mrv)-(s3) 进行了比较，后者在投影步骤中使用了三个整数参考向量；并与 FP-(mrv)-(c,$\Delta$)-(s3) 比较，后者使用了替代缩放和多个参考向量。在这里，即使 FP-(c,$\Delta$)-(s3) 比 FP 更快且所需的迭代次数显著更少，但解质量略差，差距比 FP 获取的差距差了 3.1%。另一方面，使用多个整数参考向量 (FP-(mrv)-(c,$\Delta$)) 虽然增加了运行时间和迭代次数，但导致了 5.4% 的差距改进。结合这两种方法 (FP-(mrv)-(c,$\Delta$)-(s3))，我们在相对于差距方面获得了更多获胜，并且总迭代次数有所减少。通过 mRENS 增强 FP 的之前的版本，差距在 FP-(mRENS,s3) 中得到了改进，改进幅度高达 10.8%。
 
 总之，我们的结果表明，在独立情况下，使用新的缩放、在阶段 1 和 2 中使用三个整数参考向量，以及在阶段 3 之前应用 mRENS，可以同时提高质量和运行速度。
 
 # 8. 结论
 
-在本文中，我们提出了一种新版本的目标可行性程序（Objective Feasibility Program）启发式算法，它适用于算法的所有阶段。特别是，我们引入了 RENS 的修改版本，即 mRENS，它使用 FP 主循环中获得的 LP 可行参考向量在计算开销较大的阶段 3 之前收紧边界。我们将该思想扩展到了阶段 1 和 2。这是通过在投影步骤的目标函数中使用距离函数的锥锥组合实现的。此外，我们引入了替代目标缩放，以平衡距离函数与原始 MIP 目标 $c^Tx$ 的贡献。此外，我们还通过 Soplex [21] 为非商业求解器 SCIP 提供了一个求解器接口以求解 LP。据我们所知，这是第一个仅使用开源软件的最先进 FP 实现。我们的最终版本代码免费提供，可以从 https://github.com/GoniMexi/feasump3 下载。
+在本文中，我们提出了一种新版本的目标可行性程序（Objective Feasibility Program）启发式算法，它适用于算法的所有阶段。特别是，我们引入了 RENS 的修改版本，即 mRENS，它使用 FP 主循环中获得的 LP 可行参考向量在计算开销较大的阶段 3 之前收紧边界。我们将该思想扩展到了阶段 1 和 2。这是通过在投影步骤的目标函数中使用距离函数的锥锥组合实现的。此外，我们引入了替代目标缩放，以平衡距离函数与原始 MIP 目标 $c^Tx$ 的贡献。此外，我们还通过 Soplex [21] 为非商业求解器 SCIP 提供了一个求解器接口以求解 LP。据我们所知，这是第一个仅使用开源软件的最先进 FP 实现。我们的最终版本代码免费提供，可以从 `https://github.com/GoniMexi/feasump3` 下载。
 
 我们的计算实验表明，新方法可以提高通用 MIP 测试集上的性能。具体而言，在嵌入设置中，我们的修改在大量 MIP 实例上提供了 29.3% 的解质量改进和 4.0% 的运行时间改进，所需的迭代次数减少了 16.0%。此外，该方法在前几次迭代中的成功率显著增加。在独立设置下，我们还观察到差距、运行时间迭代迭代次数有中等程度的性能改进。
 
@@ -261,21 +233,27 @@ FP 与独立变体的对比。如果几何平均值表示改进了 10%，则用�
 
 $$\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}}) = \sum_{i \in \mathcal{L}} \lambda_i \Delta(x, \tilde{x}^i) = \sum_{i \in \mathcal{L}} \lambda_i \|x - \tilde{x}^i\|_1 = \sum_{i \in \mathcal{L}} \sum_{j \in \mathcal{J}} \lambda_i |x_j - \tilde{x}_i| = f_j(x_j)$$
 
+
+
 因此，$\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ 是 $|\mathcal{J}|$ 项 $f_j(x_j)$ 之和，其中每项仅取决于变量 $x_j$。在这里，最小值集 $S := \arg \min (x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}}) x \in \mathbb{R}^n$ 是 $|\mathcal{J}|$ 个集合 $\arg \min f_j(x_j), j \in \mathcal{J}$ 的笛卡尔积。注意，对于所有 $x_j < \tilde{x}_i^i$, $f_j(x_j) > f_j(\min_{i \in \mathcal{L}} \tilde{x}_j^i)$，且对于所有 $x_j > \tilde{x}_i^i$, $f_j(x_j) > f_j(\max_{i \in \mathcal{L}} \tilde{x}_j^i)$。因此，$f_j$ 在 $[\min_{i \in \mathcal{L}} \tilde{x}_j^i, \max_{i \in \mathcal{L}} \tilde{x}_j^i]$ 中取得最小值。
 
 现在假设 $S$ 中有一个非整数最小值 $x^* \in \mathbb{R}^n$，则存在 $r \in \mathcal{J}$ 使得 $x_r^* \notin \mathbb{Z}$。由于 $x^*$ 是 $f_r$ 的最小值，对于所有 $x_r \in \mathbb{R}$ 有 $f_r(x_r^*) \leq f_r(x_r)$。考虑集合 $L_r, U_r \subseteq \mathcal{L}$，定义为：
+
 $L_r := \{i \in \mathcal{L} : \tilde{x}_i^* < x_r^*, i \in \mathcal{J}\}$, 以及 $U_r := \{i \in \mathcal{L} : \tilde{x}_i^* > x_r^*, i \in \mathcal{J}\}$。
 
 由于 $x_r^* \notin \mathbb{Z}$，有 $L_r \cup U_r = \mathcal{L}$。那么
 
-$$f_r(x_r^*) = \sum_{i \in \mathcal{L}} \lambda_i |x_r^* - \tilde{x}_i^*| = \sum_{i \in L_r} \lambda_i |x_r^* - \tilde{x}_i^*| + \sum_{i \in U_r} \lambda_i |x_r^* - \tilde{x}_i^*| = \sum_{i \in L_r} \lambda_i (x_r^* - \tilde{x}_i^*) + \sum_{i \in U_r} \lambda_i (\tilde{x}_i^* - x_r^*) = \left( \sum_{i \in L_r} \lambda_i - \sum_{i \in U_r} \lambda_i \right) = \Delta L_r x_r^* + \sum_{i \in L_r} \lambda_i \tilde{x}_i^* - \sum_{i \in U_r} \lambda_i \tilde{x}_i^* = \tau_r$$
+$$
+f_r(x_r^*) = \sum_{i \in \mathcal{L}} \lambda_i |x_r^* - \tilde{x}_i^*| = \sum_{i \in L_r} \lambda_i |x_r^* - \tilde{x}_i^*| + \sum_{i \in U_r} \lambda_i |x_r^* - \tilde{x}_i^*| = \sum_{i \in L_r} \lambda_i (x_r^* - \tilde{x}_i^*) + \sum_{i \in U_r} \lambda_i (\tilde{x}_i^* - x_r^*) = \left( \sum_{i \in L_r} \lambda_i - \sum_{i \in U_r} \lambda_i \right) = \Delta L_r x_r^* + \sum_{i \in L_r} \lambda_i \tilde{x}_i^* - \sum_{i \in U_r} \lambda_i \tilde{x}_i^* = \tau_r
+$$
 
 根据 $L_r$ 和 $U_r$ 的选择，对于所有 $x_r \in [[x_r^*], [[x_r^*]]$，$f_r(x_r) = \Delta L_r x_r + \tau_r$。
 
 我们区分以下情况：
+
 - $\Delta L_r < 0$：如果 $x_r^* > 0$，说明 $\Delta L_r = 0$，且 $[x_r^*]$ 是 $f_r$ 的最小值。因此，对于任何 $j \in \mathcal{J}$，存在 $f_j$ 的整数最小值，这表明 $S$ 中存在整数向量。
 
-# 参考文献
+## 参考文献
 
 - [1] Berthold, Heuristic algorithms in global mixed MINLP solvers, Ph.D. thesis, Technische Universität Berlin, 2014, http://www.zibd.de/Berthold2014.pdf.
 - [2] Berthold, Heuristics for mixed integer programs, Masters' thesis, Technische Universität Berlin, 2006, http://nb-resolving.de/urn:nbe:0297-zib-1029.
@@ -292,11 +270,5 @@ $$f_r(x_r^*) = \sum_{i \in \mathcal{L}} \lambda_i |x_r^* - \tilde{x}_i^*| = \sum
 - [13] N. Boland, A new approach to, Math. Program. Comput. 6 (2015) 242–255.
 - [14] M. Savelsbergh, A feasibility pump, https://doi.org/10.1007/s12532.
 - [15] D. Dam, Feasibility-like heuristics, Discrete Appl. Math. 15 (2014) 152–167.
-
-
-
-
-
 - [25] A. Lodi, A. Tramontani, 混合整数规划中的性能波动性，见：Theory Driven by Influential Applications. INFORMS, 2013, pp. 1–12.
 - [26] T. Achterberg, 约束整数规划, 博士论文，柏林工业大学, 2007, http://nbn-resolving.de/urn:nbn:de:0297-zib-11129.
-

@@ -1,14 +1,15 @@
+
 # 模板类、函数和方法
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/data_modeling/templates.html`](https://cel.cs.brown.edu/crp/idioms/data_modeling/templates.html)
 
-C++中模板最常见的用途是定义适用于任何类型（或至少适用于提供某些方法的任何类型）的类、方法或函数。这种用法在 STL 的容器类（如`<vector>`）和算法库（`<algorithm>`）中很常见。
+C++ 中模板最常见的用途是定义适用于任何类型（或至少适用于提供某些方法的任何类型）的类、方法或函数。这种用法在 STL 的容器类（如 `<vector>`）和算法库（`<algorithm>`）中很常见。
 
 以下示例定义了一个模板，用于表示为邻接表形式的定向图，其中图在节点标签的类型上是通用的。尽管示例展示了模板类，但与 Rust 的模板方法和模板函数相同的比较也适用于 Rust。
 
-在上述示例中演示的使用案例中，使用 C++模板定义类和使用 Rust 泛型定义结构体之间的实际差异很少。当在 C++中使用接受`typename`或`class`参数的模板时，可以在 Rust 中相应地使用类型参数。
+在上述示例中演示的使用案例中，使用 C++ 模板定义类和使用 Rust 泛型定义结构体之间的实际差异很少。当在 C++ 中使用接受 `typename` 或 `class` 参数的模板时，可以在 Rust 中相应地使用类型参数。
 
-```rs
+```cpp
 #include <stdexcept>
 #include <vector>
 
@@ -36,103 +37,94 @@ public:
   size_t numNodes() const {
     return adjacencies.size();
   }
-}; 
+};
 ```
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { pub struct DirectedGraph<Label> {
+fn main() {
+    pub struct DirectedGraph<Label> {
+        adjacencies: Vec<Vec<usize>>,
+        node_labels: Vec<Label>,
+    }
 
-    adjacencies: Vec<Vec<usize>>,
-
-    node_labels: Vec<Label>,
-
-}
-
-impl<Label> DirectedGraph<Label> {
-
-    pub fn new() -> Self {
-
-        DirectedGraph {
-
-            adjacencies: Vec::new(),
-
-            node_labels: Vec::new(),
-
+    impl<Label> DirectedGraph<Label> {
+        pub fn new() -> Self {
+            DirectedGraph {
+                adjacencies: Vec::new(),
+                node_labels: Vec::new(),
+            }
         }
 
-    }
-
-    pub fn add_node(
-
-        &mut self,
-
-        label: Label,
-
-    ) -> usize {
-
-        self.adjacencies.push(Vec::new());
-
-        self.node_labels.push(label);
-
-        self.num_nodes() - 1
-
-    }
-
-    pub fn add_edge(
-
-        &mut self,
-
-        from: usize,
-
-        to: usize,
-
-    ) -> Result<(), &str> {
-
-        let num_nodes = self.num_nodes();
-
-        if from >= num_nodes || to >= num_nodes {
-
-            Err("Node index out of range.")
-
-        } else {
-
-            self.adjacencies[from].push(to);
-
-            Ok(())
-
+        pub fn add_node(&mut self, label: Label) -> usize {
+            self.adjacencies.push(Vec::new());
+            self.node_labels.push(label);
+            self.num_nodes() - 1
         }
 
+        pub fn add_edge(
+            &mut self,
+            from: usize,
+            to: usize,
+        ) -> Result<(), &str> {
+            let num_nodes = self.num_nodes();
+
+            if from >= num_nodes || to >= num_nodes {
+                Err("Node index out of range.")
+            } else {
+                self.adjacencies[from].push(to);
+                Ok(())
+            }
+        }
+
+        pub fn num_nodes(&self) -> usize {
+            self.node_labels.len()
+        }
     }
-
-    pub fn num_nodes(&self) -> usize {
-
-        self.node_labels.len()
-
-    }
-
 }
-
-}
-
 ```
 
-在上述示例中演示的使用案例中，使用 C++模板定义类和使用 Rust 泛型定义结构体之间的实际差异很少。当在 C++中使用接受`typename`或`class`参数的模板时，可以在 Rust 中相应地使用类型参数。
+在上述示例中演示的使用案例中，使用 C++ 模板定义类和使用 Rust 泛型定义结构体之间的实际差异很少。当在 C++ 中使用接受 `typename` 或 `class` 参数的模板时，可以在 Rust 中相应地使用类型参数。
 
 ## 参数化类型的操作
 
-当尝试对值执行操作时，差异变得更加明显。以下代码列表向 Rust 和 C++示例中添加了一个获取图中最小节点的方法。
+当尝试对值执行操作时，差异变得更加明显。以下代码列表向 Rust 和 C++ 示例中添加了一个获取图中最小节点的方法。
 
-```rs
+```cpp
 #include <optional>
-#include <stdexcept> #include <vector> 
+#include <stdexcept>
+#include <vector>
+
 template <typename Label>
 class DirectedGraph {
- std::vector<std::vector<size_t>> adjacencies; std::vector<Label> nodeLabels;   public:
- size_t addNode(Label label) { adjacencies.push_back(std::vector<size_t>()); nodeLabels.push_back(std::move(label)); return numNodes() - 1; }   void addEdge(size_t from, size_t to) { size_t numNodes = this->numNodes(); if (from >= numNodes || to >= numNodes) { throw std::invalid_argument( "Node index out of range"); } adjacencies[from].push_back(to); }   size_t numNodes() const { return adjacencies.size(); }    std::optional<size_t> smallestNode() {
+  std::vector<std::vector<size_t>> adjacencies;
+  std::vector<Label> nodeLabels;
+
+public:
+  size_t addNode(Label label) {
+    adjacencies.push_back(std::vector<size_t>());
+    nodeLabels.push_back(std::move(label));
+    return numNodes() - 1;
+  }
+
+  void addEdge(size_t from, size_t to) {
+    size_t numNodes = this->numNodes();
+    if (from >= numNodes || to >= numNodes) {
+      throw std::invalid_argument("Node index out of range");
+    }
+    adjacencies[from].push_back(to);
+  }
+
+  size_t numNodes() const {
+    return adjacencies.size();
+  }
+
+  std::optional<size_t> smallestNode() {
     if (nodeLabels.empty()) {
       return std::nullopt;
     }
+
     Label &least = nodeLabels[0];
     size_t index = 0;
 
@@ -142,61 +134,77 @@ class DirectedGraph {
         index = i;
       }
     }
+
     return std::optional(index);
   }
-}; 
+};
 ```
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { pub struct DirectedGraph<Label> {
-
-adjacencies: Vec<Vec<usize>>, node_labels: Vec<Label>, }   impl<Label> DirectedGraph<Label> {
-
-pub fn new() -> Self { DirectedGraph { adjacencies: Vec::new(), node_labels: Vec::new(), } }   pub fn add_node( &mut self, label: Label, ) -> usize { self.adjacencies.push(Vec::new()); self.node_labels.push(label); self.num_nodes() - 1 }   pub fn num_nodes(&self) -> usize { self.node_labels.len() }   pub fn add_edge( &mut self, from: usize, to: usize, ) -> Result<(), &str> { if from > self.num_nodes() || to > self.num_nodes() { Err("Node not in graph.") } else { self.adjacencies[from].push(to); Ok(()) } }    pub fn smallest_node(&self) -> Option<usize>
-
-    where
-
-        Label: Ord,
-
-    {
-
-        // 与 C++匹配，但不是惯用的
-
-        // implementation!
-
-        if self.node_labels.is_empty() {
-
-            None
-
-        } else {
-
-            let mut least = &self.node_labels[0];
-
-            let mut index = 0;
-
-            for i in 1..self.node_labels.len() {
-
-                if *least > self.node_labels[i] {
-
-                    least = &self.node_labels[i];
-
-                    index = i;
-
-                }
-
-            }
-
-            Some(index)
-
-        }
-
+fn main() {
+    pub struct DirectedGraph<Label> {
+        adjacencies: Vec<Vec<usize>>,
+        node_labels: Vec<Label>,
     }
 
-}
+    impl<Label> DirectedGraph<Label> {
+        pub fn new() -> Self {
+            DirectedGraph {
+                adjacencies: Vec::new(),
+                node_labels: Vec::new(),
+            }
+        }
 
-}
+        pub fn add_node(&mut self, label: Label) -> usize {
+            self.adjacencies.push(Vec::new());
+            self.node_labels.push(label);
+            self.num_nodes() - 1
+        }
 
+        pub fn num_nodes(&self) -> usize {
+            self.node_labels.len()
+        }
+
+        pub fn add_edge(
+            &mut self,
+            from: usize,
+            to: usize,
+        ) -> Result<(), &str> {
+            if from > self.num_nodes() || to > self.num_nodes() {
+                Err("Node not in graph.")
+            } else {
+                self.adjacencies[from].push(to);
+                Ok(())
+            }
+        }
+
+        pub fn smallest_node(&self) -> Option<usize>
+        where
+            Label: Ord,
+        {
+            // 与 C++ 匹配，但不是惯用的
+            // implementation!
+
+            if self.node_labels.is_empty() {
+                None
+            } else {
+                let mut least = &self.node_labels[0];
+                let mut index = 0;
+
+                for i in 1..self.node_labels.len() {
+                    if *least > self.node_labels[i] {
+                        least = &self.node_labels[i];
+                        index = i;
+                    }
+                }
+
+                Some(index)
+            }
+        }
+    }
+}
 ```
 
 这些实现之间的主要区别在于，在 C++ 版本中，`>` 操作符或 `operator>` 方法在不知道是否为该类型定义的情况下用于值。在 Rust 版本中，有一个约束要求 `Label` 类型实现 `Ord` 特性。（有关 Rust 特性和它们如何与 C++ 概念相关的更多详细信息，请参阅概念、接口和静态分发章节。）
@@ -207,48 +215,103 @@ pub fn new() -> Self { DirectedGraph { adjacencies: Vec::new(), node_labels: Vec
 
 作为旁注，`smallest_node` 的更惯用实现利用了 Rust 的迭代器。这种实现风格可能需要程序员适应，尤其是那些更习惯于早期示例中使用的实现风格的程序员。
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { pub struct DirectedGraph<Label> {
-
-adjacencies: Vec<Vec<usize>>, node_labels: Vec<Label>, }   impl<Label> DirectedGraph<Label> {
-
-pub fn new() -> Self { DirectedGraph { adjacencies: Vec::new(), node_labels: Vec::new(), } }   pub fn add_node( &mut self, label: Label, ) -> usize { self.adjacencies.push(Vec::new()); self.node_labels.push(label); self.num_nodes() - 1 }   pub fn num_nodes(&self) -> usize { self.node_labels.len() }   pub fn add_edge( &mut self, from: usize, to: usize, ) -> Result<(), &str> { if from > self.num_nodes() || to > self.num_nodes() { Err("Node not in graph.") } else { self.adjacencies[from].push(to); Ok(()) } }    pub fn smallest_node(&self) -> Option<usize>
-
-    where
-
-        Label: Ord,
-
-    {
-
-        self.node_labels
-
-            .iter()
-
-            .enumerate()
-
-            .map(|(i, l)| (l, i))
-
-            .min()
-
-            .map(|(_, i)| i)
-
+fn main() {
+    pub struct DirectedGraph<Label> {
+        adjacencies: Vec<Vec<usize>>,
+        node_labels: Vec<Label>,
     }
 
-}
+    impl<Label> DirectedGraph<Label> {
+        pub fn new() -> Self {
+            DirectedGraph {
+                adjacencies: Vec::new(),
+                node_labels: Vec::new(),
+            }
+        }
 
-}
+        pub fn add_node(&mut self, label: Label) -> usize {
+            self.adjacencies.push(Vec::new());
+            self.node_labels.push(label);
+            self.num_nodes() - 1
+        }
 
+        pub fn num_nodes(&self) -> usize {
+            self.node_labels.len()
+        }
+
+        pub fn add_edge(
+            &mut self,
+            from: usize,
+            to: usize,
+        ) -> Result<(), &str> {
+            if from > self.num_nodes() || to > self.num_nodes() {
+                Err("Node not in graph.")
+            } else {
+                self.adjacencies[from].push(to);
+                Ok(())
+            }
+        }
+
+        pub fn smallest_node(&self) -> Option<usize>
+        where
+            Label: Ord,
+        {
+            self.node_labels
+                .iter()
+                .enumerate()
+                .map(|(i, l)| (l, i))
+                .min()
+                .map(|(_, i)| i)
+        }
+    }
+}
 ```
 
 更为惯用的实现会利用 [itertools crate](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.position_min)。
 
-```rs
+```rust
 use itertools::*;
 
 pub struct DirectedGraph<Label> {
- adjacencies: Vec<Vec<usize>>, node_labels: Vec<Label>, }   impl<Label> DirectedGraph<Label> {
- pub fn new() -> Self { DirectedGraph { adjacencies: Vec::new(), node_labels: Vec::new(), } }   pub fn add_node( &mut self, label: Label, ) -> usize { self.adjacencies.push(Vec::new()); self.node_labels.push(label); self.num_nodes() - 1 }   pub fn num_nodes(&self) -> usize { self.node_labels.len() }   pub fn add_edge( &mut self, from: usize, to: usize, ) -> Result<(), &str> { if from > self.num_nodes() || to > self.num_nodes() { Err("Node not in graph.") } else { self.adjacencies[from].push(to); Ok(()) } }      pub fn smallest_node(&self) -> Option<usize>
+    adjacencies: Vec<Vec<usize>>,
+    node_labels: Vec<Label>,
+}
+
+impl<Label> DirectedGraph<Label> {
+    pub fn new() -> Self {
+        DirectedGraph {
+            adjacencies: Vec::new(),
+            node_labels: Vec::new(),
+        }
+    }
+
+    pub fn add_node(&mut self, label: Label) -> usize {
+        self.adjacencies.push(Vec::new());
+        self.node_labels.push(label);
+        self.num_nodes() - 1
+    }
+
+    pub fn num_nodes(&self) -> usize {
+        self.node_labels.len()
+    }
+
+    pub fn add_edge(
+        &mut self,
+        from: usize,
+        to: usize,
+    ) -> Result<(), &str> {
+        if from > self.num_nodes() || to > self.num_nodes() {
+            Err("Node not in graph.")
+        } else {
+            self.adjacencies[from].push(to);
+            Ok(())
+        }
+    }
+
+    pub fn smallest_node(&self) -> Option<usize>
     where
         Label: Ord,
     {
@@ -261,7 +324,7 @@ pub struct DirectedGraph<Label> {
 
 Rust 还支持 `constexpr` 模板参数的等效功能。例如，可以定义一个泛型函数，该函数返回从特定值开始的连续整数数组，其大小在编译时确定。
 
-```rs
+```cpp
 #include <array>
 #include <cstddef>
 
@@ -272,23 +335,19 @@ makeSequentialArray(int start) {
   for (size_t i = 0; i < N; i++) {
     arr[i] = start + i;
   }
-} 
+}
 ```
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { fn make_sequential_array<const N: usize>(
-
-    start: i32,
-
-) -> [i32; N] {
-
-    std::array::from_fn(|i| start + i as i32)
-
+fn main() {
+    fn make_sequential_array<const N: usize>(
+        start: i32,
+    ) -> [i32; N] {
+        std::array::from_fn(|i| start + i as i32)
+    }
 }
-
-}
-
 ```
 
 对应的 Rust 函数使用辅助函数 `std::array::from_fn` 来构建数组。`from_fn` 本身将元素类型和常量作为类型参数。这些参数被省略，因为 Rust 可以推断它们，因为它们都是产生数组类型的一部分。
@@ -299,7 +358,7 @@ makeSequentialArray(int start) {
 
 在定义泛型特质时，`Self` 类型是必要的，以引用具体的实现类型。因为 Rust 在具体类型之间没有继承，也没有方法重写，所以这足以避免需要将实现类型作为类型参数传递。
 
-关于此的示例，请参阅 古怪重复出现的模板模式 章节。
+关于此的示例，请参阅古怪重复出现的模板模式章节。
 
 ## 关于类型检查和类型错误的说明
 
@@ -309,7 +368,9 @@ makeSequentialArray(int start) {
 
 一个类似的 Rust 程序无法编译，即使没有实例化泛型结构的具体类型的函数。
 
-```rs
+
+
+```cpp
 #include <stdexcept>
 #include <vector>
 
@@ -349,10 +410,10 @@ BOOST_AUTO_TEST_CASE(test_add_node_float) {
   float label = 1.0f;
   auto n1 = g.addNode(label);
   BOOST_CHECK_CLOSE(label, g.getNode(n1), 0.0001);
-} 
+}
 ```
 
-```rs
+```rust
 pub struct DirectedGraph<Label> {
     adjacencies: Vec<Vec<usize>>,
     // The mistake is here: size_t should be Label
@@ -391,15 +452,15 @@ impl<Label> DirectedGraph<Label> {
 
 尽管有错误，C++ 示例仍然可以编译并通过测试。
 
-```rs
+```text
 Running 2 test cases...
 
-*** No errors detected 
+*** No errors detected
 ```
 
 即使没有测试用例，Rust 示例也无法编译并产生用于识别错误的有用信息。
 
-```rs
+```text
 error[E0308]: mismatched types
     --> example.rs:26:31
      |
@@ -412,7 +473,7 @@ error[E0308]: mismatched types
      |                          arguments to this method are incorrect
      |
      = note:        expected type `usize`
-             found type parameter `Label` 
+             found type parameter `Label`
 ```
 
 ## 生命周期参数
@@ -423,8 +484,10 @@ Rust 的泛型也用于类、方法、特质和函数，这些函数在它们操
 
 ## 条件编译
 
-C++模板与 Rust 泛型之间一个显著的区别是，C++模板实际上是一种更通用的宏语言，支持诸如条件编译（例如，与`if constexpr`、`requires`或`std::enable_if`结合使用时）等功能。Rust 通过其宏系统支持这些用例，该系统与 C++有显著不同。宏系统最常见的使用，即条件编译，由[`cfg`属性和`cfg!`宏](https://doc.rust-lang.org/rust-by-example/attribute/cfg.html)提供。
+C++ 模板与 Rust 泛型之间一个显著的区别是，C++ 模板实际上是一种更通用的宏语言，支持诸如条件编译（例如，与 `if constexpr`、`requires` 或 `std::enable_if` 结合使用时）等功能。Rust 通过其宏系统支持这些用例，该系统与 C++ 有显著不同。宏系统最常见的使用，即条件编译，由 [`cfg` 属性和 `cfg!` 宏](https://doc.rust-lang.org/rust-by-example/attribute/cfg.html)提供。
 
 Rust 中将条件编译与泛型分离的设计考虑与从 Rust 中省略模板特化的设计考虑相似。
 
-<link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为我们提供关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=模板类、函数和方法)
+<link rel="stylesheet" type="text/css" href="../../quiz/style.css">
+
+[点击此处为我们提供关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=模板类、函数和方法)

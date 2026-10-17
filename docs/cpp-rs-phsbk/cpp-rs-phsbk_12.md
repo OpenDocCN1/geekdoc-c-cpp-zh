@@ -1,4 +1,5 @@
-# 标签联合和 std::variant
+
+# 标签联合和 `std::variant`
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/data_modeling/tagged_unions.html`](https://cel.cs.brown.edu/crp/idioms/data_modeling/tagged_unions.html)
 
@@ -36,54 +37,55 @@ struct Shape {
     }
     }
   }
-}; 
+};
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { enum Shape {
-
     Rectangle { width: f64, height: f64 },
-
     Triangle { base: f64, height: f64 },
-
 }
 
 impl Shape {
-
     fn area(&self) -> f64 {
-
         match self {
-
             Shape::Rectangle {
-
                 width,
-
                 height,
-
             } => width * height,
-
             Shape::Triangle { base, height } => {
-
                 0.5 * base * height
-
             }
-
         }
-
     }
-
 }
-
 }
-
 ```
 
 当匹配枚举时，Rust 要求处理枚举的所有变体。在 C++ 标签 `switch` 上使用 `default` 的情况下，Rust 的 `match` 中可以使用通配符。
 
 ```rs
-#include <iostream>   enum Tag { Rectangle, Triangle, Circle };   struct Shape {
- Tag tag; union { struct { double width; double height; } rectangle; struct { double base; double height; } triangle; struct { double radius; } circle; };    void print_shape() {
+#include <iostream>
+
+enum Tag { Rectangle, Triangle, Circle };
+
+struct Shape {
+  Tag tag;
+  union {
+    struct {
+      double width;
+      double height;
+    } rectangle;
+    struct {
+      double base;
+      double height;
+    } triangle;
+    struct {
+      double radius;
+    } circle;
+  };
+
+  void print_shape() {
     switch (this->tag) {
     case Rectangle: {
       std::cout << "Rectangle" << std::endl;
@@ -96,71 +98,42 @@ impl Shape {
     }
     }
   }
-}; 
+};
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { enum Shape {
-
 Rectangle { width: f64, height: f64 }, Triangle { base: f64, height: f64 }, }   impl Shape {
-
     fn print_shape(&self) {
-
         match self {
-
             Shape::Rectangle { .. } => {
-
                 println!("Rectangle");
-
             }
-
             _ => {
-
                 println!("Some other shape");
-
             }
-
         }
-
     }
-
 }
-
 }
-
 ```
 
-Rust 不支持 C++ 风格的 fallthrough，其中可以在转到下一个情况之前执行某些行为。然而，在 Rust 中，只要同时匹配的枚举变体绑定相同的名称和类型，就可以同时匹配多个枚举变体。
+Rust 不支持 C++ 风格的 `fallthrough`，其中可以在转到下一个情况之前执行某些行为。然而，在 Rust 中，只要同时匹配的枚举变体绑定相同的名称和类型，就可以同时匹配多个枚举变体。
 
 ```rs
-
 #![allow(unused)] fn main() { enum Shape {
-
 Rectangle { width: f64, height: f64 }, Triangle { base: f64, height: f64 }, }   impl Shape {
-
     fn bounding_area(&self) -> f64 {
-
         match self {
-
             Shape::Rectangle { height, width }
-
             }
-
                 height,
-
                 base: width,
-
             } => width * height,
-
         }
-
     }
-
 }
-
 }
-
 ```
 
 ## 访问值而不检查判别符
@@ -224,104 +197,68 @@ int main() {
   }
 
   return 0;
-} 
+}
 ```
 
 ```rs
-
 // 为每个变体定义一个单独的结构体。
 
 struct Rectangle { width: f64, height: f64 }
 
-struct  Triangle { base: f64, height: f64 }
+struct Triangle { base: f64, height: f64 }
 
 enum Shape {
-
     Rectangle(Rectangle),
-
     Triangle(Triangle),
-
 }
 
 fn get_shapes() -> Vec<Shape> {
-
     vec![
-
         Shape::Triangle(Triangle {
-
             base: 1.0,
-
             height: 1.0,
-
         }),
-
         Shape::Triangle(Triangle {
-
             base: 1.0,
-
             height: 1.0,
-
         }),
-
         Shape::Rectangle(Rectangle {
-
             width: 1.0,
-
             height: 1.0,
-
         }),
-
     ]
-
 }
 
 fn main() {
-
     let shapes = get_shapes();
 
     // 这个迭代器仅遍历三角形
-
     // 通过迭代
-
     // 使用三角形类型而不是形状类型。
-
     let triangles = shapes
-
         .iter()
-
         // 仅保留三角形
-
         .filter_map(|shape| match shape {
-
             Shape::Triangle(t) => Some(t),
-
             _ => None,
-
         });
 
     let mut total_base = 0.0;
 
     for triangle in triangles {
-
         // 因为迭代器产生三角形
-
         // 而不是 Shapes，可以直接访问 base
-
         // 直接访问。
-
         total_base += triangle.base;
-
     }
-
 }
-
 ```
 
 在 Rust 中，这种用法很常见，变体通常从一开始就被设计成具有自己的类型。
 
 在 C++ 中，这种方法也是可能的。它在 C++17 或更高版本中通常与 `std::variant` 一起使用。
 
-## `std::variant` (since C++17)
+## `std::variant`（since C++17）
 
 当在 C++17 标准下编程时，`std::variant` 可以用来以更接近 Rust 枚举的方式表示标签联合。
 
@@ -351,7 +288,7 @@ double area(const Shape &shape) {
         }
       },
       shape);
-} 
+}
 ```
 
 因为 Rust 不依赖于模板来实现这种语言特性，所以当遗漏或添加新的标签联合变体时，错误信息更容易阅读，这消除了使用标签联合的障碍之一。比较 C++（使用 gcc）和 Rust 在省略 `Triangle` 情况下的错误。
@@ -382,7 +319,7 @@ double area(const Shape &shape) {
         }
       },
       shape);
-} 
+}
 ```
 
 ```rs
@@ -405,33 +342,28 @@ impl Shape {
 
 然而，错误信息差异很大。
 
+
+
 ```rs
 example.cc: In instantiation of ‘area(const Shape&)::<lambda(auto:27&&)> [with auto:27 = const Triangle&]’:
 /usr/include/c++/14.2.1/bits/invoke.h:61:36:   required from ‘constexpr _Res std::__invoke_impl(__invoke_other, _Fn&&, _Args&& ...) [with _Res = double; _Fn = area(const Shape&)::<lambda(auto:27&&)>; _Args = {const Triangle&}]’
    61 |     { return std::forward<_Fn>(__f)(std::forward<_Args>(__args)...); }
-      |              ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/c++/14.2.1/bits/invoke.h:96:40:   required from ‘constexpr typename std::__invoke_result<_Functor, _ArgTypes>::type std::__invoke(_Callable&&, _Args&& ...) [with _Callable = area(const Shape&)::<lambda(auto:27&&)>; _Args = {const Triangle&}; typename __invoke_result<_Functor, _ArgTypes>::type = double]’
    96 |       return std::__invoke_impl<__type>(__tag{}, std::forward<_Callable>(__fn),
-      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    97 |                                         std::forward<_Args>(__args)...);
       |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/c++/14.2.1/variant:1060:24:   required from ‘static constexpr decltype(auto) std::__detail::__variant::__gen_vtable_impl<std::__detail::__variant::_Multi_array<_Result_type (*)(_Visitor, _Variants ...)>, std::integer_sequence<long unsigned int, __indices ...> >::__visit_invoke(_Visitor&&, _Variants ...) [with _Result_type = std::__detail::__variant::__deduce_visit_result<double>; _Visitor = area(const Shape&)::<lambda(auto:27&&)>&&; _Variants = {const std::variant<Rectangle, Triangle>&}; long unsigned int ...__indices = {1}]’
+/usr/include/c++/14.2.1/variant:1060:24:   required from ‘static constexpr decltype(auto) std::__detail::__variant::__gen_vtable_impl<std::variant<_Result_type (*)(_Visitor, _Variants ...)>, std::integer_sequence<long unsigned int, __indices ...> >::__visit_invoke(_Visitor&&, _Variants ...) [with _Result_type = std::__variant::__deduce_visit_result<double>; _Visitor = area(const Shape&)::<lambda(auto:27&&)>&&; _Variants = {const std::variant<Rectangle, Triangle>&}; long unsigned int ...__indices = {1}]’
  1060 |           return std::__invoke(std::forward<_Visitor>(__visitor),
-      |                  ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  1061 |               __element_by_index_or_cookie<__indices>(
-      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  1062 |                 std::forward<_Variants>(__vars))...);
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /usr/include/c++/14.2.1/variant:1820:5:   required from ‘constexpr decltype(auto) std::__do_visit(_Visitor&&, _Variants&& ...) [with _Result_type = __detail::__variant::__deduce_visit_result<double>; _Visitor = area(const Shape&)::<lambda(auto:27&&)>; _Variants = {const variant<Rectangle, Triangle>&}]’
  1820 |                   _GLIBCXX_VISIT_CASE(1)
       |                   ^~~~~~~~~~~~~~~~~~~
-/usr/include/c++/14.2.1/variant:1882:34:   required from ‘constexpr std::__detail::__variant::__visit_result_t<_Visitor, _Variants ...> std::visit(_Visitor&&, _Variants&& ...) [with _Visitor = area(const Shape&)::<lambda(auto:27&&)>; _Variants = {const variant<Rectangle, Triangle>&}; __detail::__variant::__visit_result_t<_Visitor, _Variants ...> = double]’
+/usr/include/c++/14.2.1/variant:1882:34:   required from ‘constexpr std::visit_result_t<_Visitor, _Variants ...> std::visit(_Visitor&&, _Variants&& ...) [with _Visitor = area(const Shape&)::<lambda(auto:27&&)>; _Variants = {const variant<Rectangle, Triangle>&}; std::visit_result_t<_Visitor, _Variants ...> = double]’
  1882 |             return std::__do_visit<_Tag>(
-      |                    ~~~~~~~~~~~~~~~~~~~~~^
  1883 |               std::forward<_Visitor>(__visitor),
-      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  1884 |               static_cast<_Vp>(__variants)...);
-      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 example.cc:17:20:   required from here
    17 |   return std::visit(
       |          ~~~~~~~~~~^
@@ -453,7 +385,7 @@ example.cc:23:7: error: no return statement in ‘constexpr’ function returnin
    23 |       },
       |       ^
 example.cc: In lambda function:
-example.cc:23:7: warning: control reaches end of non-void function [-Wreturn-type] 
+example.cc:23:7: warning: control reaches end of non-void function [-Wreturn-type]
 ```
 
 ```rs
@@ -476,47 +408,70 @@ help: ensure that all possible cases are being handled by adding a match arm wit
   |
 12~             } => width * height,
 13~             &Shape::Triangle { .. } => todo!(),
-  | 
+  |
 ```
 
 ## 使用不安全的 Rust 来避免检查判别符
 
-在无法重写代码以使用 上述方法 的情况下，仍然可以检查判别符，然后使用 [`unreachable!` 宏](https://doc.rust-lang.org/std/macro.unreachable.html) 来避免处理不可能的情况。然而，这仍然涉及到实际检查判别符。如果必须避免检查判别符的成本，则可以使用 [不安全的函数 `unreachable_unchecked`](https://doc.rust-lang.org/std/hint/fn.unreachable_unchecked.html) 来避免处理该情况，并指示编译器优化器应假设该情况无法到达，从而可以优化掉判别符检查。
+在无法重写代码以使用上述方法的情况下，仍然可以检查判别符，然后使用 [`unreachable!` 宏](https://doc.rust-lang.org/std/macro.unreachable.html) 来避免处理不可能的情况。然而，这仍然涉及到实际检查判别符。
+
+如果必须避免检查判别符的成本，则可以使用[不安全的函数 `unreachable_unchecked`](https://doc.rust-lang.org/std/hint/fn.unreachable_unchecked.html) 来避免处理该情况，并指示编译器优化器应假设该情况无法到达，从而可以优化掉判别符检查。
 
 与在 C++ 示例中访问非活动变体是未定义行为类似，到达 `unreachable_unchecked` 也是未定义行为。与任何基于 `unsafe` 的性能优化一样，您始终应该首先测量安全检查的性能影响，并且只有在绝对必要时才求助于 `unsafe` 代码。
 
 ```rs
-
 enum Shape {
+    Rectangle {
+        width: f64,
+        height: f64,
+    },
+    Triangle {
+        base: f64,
+        height: f64,
+    },
+}
 
-Rectangle { width: f64, height: f64 }, Triangle { base: f64, height: f64 }, }   impl Shape {
+impl Shape {
+    fn area(&self) -> f64 {
+        match self {
+            Shape::Rectangle { width, height } => width * height,
+            Shape::Triangle { base, height } => 0.5 * base * height,
+        }
+    }
+}
 
-fn area(&self) -> f64 { match self { Shape::Rectangle { width, height, } => width * height, Shape::Triangle { base, height } => { 0.5 * base * height } } } }   fn get_triangles() -> Vec<Shape> {
+fn get_triangles() -> Vec<Shape> {
+    vec![
+        Shape::Triangle {
+            base: 1.0,
+            height: 1.0,
+        },
+        Shape::Triangle {
+            base: 1.0,
+            height: 1.0,
+        },
+    ]
+}
 
-vec![ Shape::Triangle { base: 1.0, height: 1.0, }, Shape::Triangle { base: 1.0, height: 1.0, }, ] }   use std::hint::unreachable_unchecked;
+use std::hint::unreachable_unchecked;
 
 fn main() {
-
     let mut total_base = 0.0;
 
     for triangle in get_triangles() {
-
         let Shape::Triangle { base, .. } = triangle else {
-
-            // 安全性：get_triangles 确保会生成三角形，所以
-
+            // 安全性：`get_triangles` 确保会生成三角形，所以
             // 其他情况无法到达。
-
-            unsafe { unreachable_unchecked() }
-
+            unsafe {
+                unreachable_unchecked()
+            }
         };
 
         total_base += base;
-
     }
-
 }
-
 ```
 
-<link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为我们关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Tagged unions and std::variant)
+<link rel="stylesheet" type="text/css" href="../../quiz/style.css">
+
+[点击此处为我们关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Tagged%20unions%20and%20std::variant)

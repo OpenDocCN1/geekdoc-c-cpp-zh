@@ -1,12 +1,13 @@
+
 # 关于
 
-# About
+## About
 
-[Nikhil Marathe](http://nikhilism.com)在某一个下午(June 16, 2012)开始写这本书。当他在写[node-taglib](https://github.com/nikhilm/node-taglib)的时候苦于没有好的 libuv 文档。虽然已经有了官方文档，但是没有好理解的教程。本书正是应需求而生，并且努力变得准确。也就是说，本书中可能会有错误。所以鼓励大家 Pull requests。你当然可以直接给他发 email，告诉他错误。
+[Nikhil Marathe](http://nikhilism.com) 在某一个下午（June 16, 2012）开始写这本书。当他在写 [node-taglib](https://github.com/nikhilm/node-taglib) 的时候，苦于没有好的 libuv 文档。虽然已经有了官方文档，但是没有好理解的教程。本书正是应需求而生，并且努力变得准确。也就是说，本书中可能会有错误。所以鼓励大家提交 Pull requests。你当然可以直接给他发 email，告诉他错误。
 
-Nikhil 从 Marc Lehmann 的关于 libev 的[手册](http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod)中讲解 libev 和 libuv 的不同点的部分，获取了不少的灵感。
+Nikhil 从 Marc Lehmann 关于 libev 的[手册](http://pod.tst.eu/http://cvs.schmorp.de/libev/ev.pod)中讲解 libev 和 libuv 不同点的部分，获取了不少灵感。
 
-本书的中文翻译者为：[luohaha](https://github.com/luohaha)，[byronhe](https://github.com/byronhe)，[littleneko](https://github.com/littleneko)。同样欢迎您的 Pull requests 来改进本书的翻译工作。
+本书的中文翻译者为：[luohaha](https://github.com/luohaha)、[byronhe](https://github.com/byronhe)、[littleneko](https://github.com/littleneko)。同样欢迎您提交 Pull requests 来改进本书的翻译工作。
 
 ### Licensing
 

@@ -1,11 +1,12 @@
+
 # array
 
-std::array 是一个支持随机访问且大小（size）固定的容器（译注：可以认为是一个紧缩版的 vector 吧）。它有如下特点：
+`std::array`是一个支持随机访问且大小（size）固定的容器（译注：可以认为是一个紧缩版的`vector`吧）。它有如下特点：
 
-*   不预留多余空间，只分配必须空间（译注：size() == capacity()）。
-*   可以使用初始化表（initializer list）的方式进行初始化。
-*   保存了自己的 size 信息。
-*   不支持隐式指针类型转换。
+* 不预留多余空间，只分配必须空间（译注：`size() == capacity()`）。
+* 可以使用初始化表（initializer list）的方式进行初始化。
+* 保存了自己的`size`信息。
+* 不支持隐式指针类型转换。
 
 换句话说，可以认为它是一个很不错的内建数组类型。一些代码片段：
 
@@ -17,7 +18,7 @@ int* p1 = a; // 错误: std::array 不能隐式地转换为指针
 int* p2 = a.data(); // 正确，data()得到指向第一个元素的指针 
 ```
 
-不过要注意：是可以定义一个长度为 0 的 array 的；但是无法从初始化表中推导出 size 信息：
+不过要注意：是可以定义一个长度为 0 的`array`的；但是无法从初始化表中推导出`size`信息：
 
 ```cpp
 array<int> a3 = { 1, 2, 3 };  //错误：没有 size 信息
@@ -25,7 +26,7 @@ array<int,0> a0;   // 正确: 没有任何元素
 int* p = a0.data();  // 为定义行为，不要这样做 
 ```
 
-array 非常适合在嵌入式系统（和有类似限制/性能敏感/安全关键系统等）中使用。它提供了序列型容器该有的大部分通用函数（和 vector 很像）：
+`array`非常适合在嵌入式系统（和有类似限制/性能敏感/安全关键系统等）中使用。它提供了序列型容器该有的大部分通用函数（和`vector`很像）：
 
 ```cpp
 template<class C> C::value_type sum(const C& a)
@@ -58,10 +59,10 @@ array<apple ,10> apples;
 nasty(apples);  // 错误: 不能将 array 转换为 array; 
 ```
 
-如果支持这种转换的话，apple array 中就能放 pear 啦。
+如果支持这种转换的话，`apple` array 中就能放`pear`啦。
 
 参考：
 
-*   Standard: 23.3.1 Class template array
+* Standard: 23.3.1 Class template array
 
 （翻译：interma）

@@ -1,3 +1,4 @@
+
 # 空数组
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/null/zero_length_arrays.html`](https://cel.cs.brown.edu/crp/idioms/null/zero_length_arrays.html)
@@ -25,33 +26,21 @@ int main() {
 ```
 
 ```rs
-
 fn sum_slice(arr: &[i32]) -> i32 {
-
     let mut sum = 0;
-
     for x in arr {
-
         sum += x;
-
     }
-
     sum
-
 }
 
 fn main() {
-
     let sum = sum_slice(&[]);
-
     assert!(sum == 0);
 
     let sum2 = sum_slice(&vec![]);
-
     assert!(sum2 == 0);
-
 }
-
 ```
 
 <link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Zero-length arrays)

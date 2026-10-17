@@ -1,27 +1,13 @@
+
 # 在 .NET 7 中实现事件驱动微服务架构：使用 C# 11 和 .NET 7 开发可随不断变化的业务需求扩展的事件型分布式应用
 
-
-
-
-
 ![](img/290aa6845834e57fd715912cc7e76d30_0_0.png)
-
-
-
-
-
-
 
 Joshua Garverick
 
 Omar Dean McIver
 
 ![](img/290aa6845834e57fd715912cc7e76d30_1_0.png)
-
-
-
-
-
 
 - **副级小组产品经理:** Gebin George
 - **出版产品经理:** Kunal Sawant
@@ -31,35 +17,31 @@ Omar Dean McIver
 - **项目协调员:** Manisha Singh
 - **校对员:** Safis Editing
 - **索引员:** Subalakshmi Govindhan
-- **制作设计员:** Shyam Sundar Korumilli
+- **生产设计员:** Shyam Sundar Korumilli
 - **业务发展执行:** Debadrita Chatterjee
 - **开发者关系营销执行:** Rayyan Khan 和 Deepak Kumar
 
-
-
-
-
-
 > 感谢我的妻子 Melissa 和女儿 Audrey，在我外出和编写书籍时带给我灵感和支持。
+
 – Josh Garverick
 
 > 感谢我的妻子 Raegan，你的爱、支持让我能够追求我的激情。感谢我的孩子们 Olivia、Maxwell 和 Benjamin，为我的新生活带来了光。
+
 – Omar McIver
 
 # 贡献者
 
 # 关于作者
 
-Joshua Garverick，八次 Azure MVP，是《迁移到 Azure》(Migrating to Azure) 和《开发者 Azure指南》(The Developer's Guide to Azure) 的作者，以及多个在线课程的作者。他是一位资深 IT 专业人士，拥有 15 年的多个行业经验，如金融、医疗保健、物流、零售/消费品、石油和保险。他精通数字化转型以及应用生命周期管理，目前参与全球零售行业的应用开发。
+Joshua Garverick，八次 Azure MVP，是《迁移到 Azure》(Migrating to Azure) 和《开发者 Azure 指南》(The Developer's Guide to Azure) 的作者，以及多个在线课程的作者。他是一位资深 IT 专业人士，拥有 15 年的多个行业经验，如金融、医疗保健、物流、零售/消费品、石油和保险。他精通数字化转型以及应用生命周期管理，目前参与全球零售行业的应用开发。
 
 Omar McIver 是微软认证培训师、Azure 解决方案架构师和 FinOps 实践者，在 .NET 技术栈方面拥有超过 12 年的经验。他精通云原生开发和应用现代化。他的 .NET Core Udemy 课程评 4.5 星。他处于云原生开发的前沿，专注于成本优化、性能调优和高度可扩展的微服务架构。
 
 # 关于评审
 
-**Mikhail Filippov** 在 JetBrains 担任 Rider（跨平台 .NET IDE）的团队负责人。他在多个领域拥有20 年的软件开发经验，包括 .NET 运行时、ASP.NET MVC、MSBuild 以及大型规模基础设施的设计实践。此外，Mikhail 喜欢阅读科幻小说并使用 C# 和 Kotlin 进行爱好项目。
+**Mikhail Filippov** 在 JetBrains 担任 Rider（跨平台 .NET IDE）的团队负责人。他在多个领域拥有 20 年的软件开发经验，包括 .NET 运行时、ASP.NET MVC、MSBuild 以及大型规模基础设施的设计实践。此外，Mikhail 喜欢阅读科幻小说并使用 C# 和 Kotlin 进行爱好项目。
 
 **Jamie Taylor** 是微软 MVP、软件工程师、导师和播客，拥有超过十五年的经验。他的主要关注点是每天激励他的家人。在教学背景下，他专注于导师、编写高质量代码以及与所有人分享知识。除了开发和教学，Jamie 是一位优秀的播客——主持了三个非常成功的播客节目：.NET Core Podcast、Tabs and Spaces，以及与音乐家合作弹奏了几首曲子。
-
 
 前言 XV
 
@@ -67,62 +49,43 @@ Omar McIver 是微软认证培训师、Azure 解决方案架构师和 FinOps 实
 
 # 1 示例应用程序 3
 
-
 # 2 生产者-消费者模式 21
 
 - 进一步阅读 38
 
 # 3 消息中间件 39
 
-
 # 4 领域模型和异步事件 55
-
 
 ## 第二部分：微服务的测试与部署
 
 # 5 容器化与本地环境搭建 79
 
-
 # 6 微服务的本地化测试与调试 95
-
-
-
-
-
-
-
 
 # 8 CI/CD 流水线与集成测试
 
-
 ## 9 故障注入与混沌测试
-
 
 # 第 3 部分：微服务的测试与部署
 
 # 10
 
-
 # 11
-
 
 # 12
 
 # 服务与应用程序韧性 217
 
-
 # 13
 
 # 遥测捕获与集成 239
-
 
 # 14
 
 # 重新审视可观测性 255
 
-
 ## 评估
-
 
 # 索引
 
@@ -130,7 +93,7 @@ Omar McIver 是微软认证培训师、Azure 解决方案架构师和 FinOps 实
 
 # 前言
 
-本书书将引导你通过领域驱动设计（DDD）来实现微服务，并分为三个章节，每个章节都关注不同的方面。
+本书将引导你通过领域驱动设计（DDD）来实现微服务，并分为三个章节，每个章节都关注不同的方面。
 
 第一部分将涵盖如何利用事件驱动架构来实现微服务。
 
@@ -146,12 +109,7 @@ Omar McIver 是微软认证培训师、Azure 解决方案架构师和 FinOps 实
 
 # 本书涵盖的内容
 
-
 # 索引
-
-
-
-
 
 ## 前言 xii
 
@@ -168,12 +126,11 @@ Omar McIver 是微软认证培训师、Azure 解决方案架构师和 FinOps 实
 
 # 下载示例代码文件
 
-你可以从 GitHub https://github.com/PackPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7 下载本书的示例代码文件。如果代码有更新，将在 GitHub 仓库中同步更新。
+你可以从 GitHub `https://github.com/PackPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7` 下载本书的示例代码文件。如果代码有更新，将在 GitHub 仓库中同步更新。
 
-在我们丰富的书籍和视频目录中还有其他代码包，可以在 https://github.com/PackPublishing/ 处获取。快去看看吧！
+在我们丰富的书籍和视频目录中还有其他代码包，可以在 `https://github.com/PackPublishing/` 处获取。快去看看吧！
 
 # 下载彩色图片
-
 
 # 使用的规范
 
@@ -205,17 +162,18 @@ dotnet add package OpenTelemetry.Instrumentation
 **粗体**：表示新术语、重要词汇或你在屏幕上看到的单词。例如，菜单或对话框中的单词将以**粗体**显示。这里有一个示例：“如果你在使用来自 Visual Studio 的新项目对话框，请确保取消勾选 Use controls 复选框以使用最小 APIs。”
 
 > 提示或重要注释
+
 显示如下。
 
 # 与我们联系
 
 我们随时欢迎读者的反馈。
 
-**一般反馈：** 如果你对本书的任何方面有疑问，请发送邮件至 customercare@packpub.com 并在邮件邮件主题中注明书名。
+**一般反馈：** 如果你对本书的任何方面有疑问，请发送邮件至 `customercare@packpub.com` 并在邮件主题中注明书名。
 
-**错误勘正：** 尽管我们尽力确保内容的准确性，但错误在所难免。如果你在书中发现了错误，如能向我们报告我们将不胜感激。请访问 www.packpub.com/support/errata 并填写表单。
+**错误勘正：** 尽管我们尽力确保内容的准确性，但错误在所难免。如果你在书中发现了错误，如能向我们报告我们将不胜感激。请访问 `www.packpub.com/support/errata` 并填写表单。
 
-**盗版：** 如果你在互联网上遇到任何形式的我们作品的非法副本，如能为你提供位置地址或网站名称，我们将不胜感激。请联系 copyright@packt.com 并附上材料链接。
+**盗版：** 如果你在互联网上遇到任何形式的我们作品的非法副本，如能为你提供位置地址或网站名称，我们将不胜感激。请联系 `copyright@packt.com` 并附上材料链接。
 
 # 分享你的想法
 
@@ -233,27 +191,27 @@ dotnet add package OpenTelemetry.Instrumentation
 
 在任何时间、任何地点、在任何设备上阅读。直接从你喜欢的技术书中搜索、复制并粘贴代码到你的应用程序中。
 
-优惠不仅于此，你每天还能在收箱中获得独家折扣、资讯和精彩的免费内容。
+优惠不仅于此，你每天还能在收件箱中获得独家折扣、资讯和精彩的免费内容。
 
 遵循以下简单步骤获取这些福利：
 
-- 1. 扫描二维码或访问下方链接
+1. 扫描二维码或访问下方链接
 
 ![](img/290aa6845834e57fd715912cc7e76d30_20_0.png)
 
-https://packt.link/free-ebook/978180232782
+`https://packt.link/free-ebook/978180232782`
 
-- 2. 提交你的购买证明
+2. 提交你的购买证明
 
-- 3. 完成！我们将把免费 PDF 和其他福利发送到你的邮箱直接
+3. 完成！我们将把免费 PDF 和其他福利发送到你的邮箱。
 
-# # 第一部分：事件驱动架构与 .NET 7
+# 第一部分：事件驱动架构与 .NET 7
 
 本部分将涵盖 .NET 7 中使开发 EDA 变得更容易的新功能，以及贯穿本书的示例应用程序以及领域驱动（DDD）的核心原则。
 
 本部分包含以下章节：
 
-# # 1 示例应用程序
+# 1 示例应用程序
 
 在过去的几年里，高并发、可扩展的事件驱动应用程序的出现导致应用程序开发发生了有趣的转变。配套的设计模式使得编写和实现事件驱动架构更具吸引力，并有助于降低充分利用云平台弹性的学习曲线。我们将查看一个使用 .NET 7 实现并利用云原生应用和构造应用程序。
 
@@ -261,22 +219,19 @@ https://packt.link/free-ebook/978180232782
 
 在本章中，我们将涵盖主要主题：
 
-
 ### 技术要求
 
 要使用代码库并跟随示例，你需要了解或在机器上安装若干先决条件。这些包括：
 
-
 我们将使用一个自定义开发并包含在源码中的应用程序。我们使用的主要开发平台是 .NET 7。所有的示例都使用 Visual Studio 2022 作为主要的集成开发环境 (IDE)。
 
 > 重要提示
+
 本章提到的所有白皮书和其他来源链接均在章节末尾的延伸阅读部分提供。
 
 ### 探索业务因素和应用程序
 
 深入了解应用程序为什么存在、它是如何产生的以及它试图解决什么问题或机会是一个好主意。该应用程序是一个概念应用，涉及物联网 (IoT) 设备、大规模分布式事件摄取以及面部识别功能。该应用程序的主要市场是交通枢纽处的闸机：
-
-
 
 ![](img/290aa6845834e57fd715912cc7e76d30_25_0.png)
 
@@ -290,7 +245,7 @@ https://packt.link/free-ebook/978180232782
 
 另一个用例可以是交通调度和车辆可用性。通常，交通部门车队中拥有的车辆（如火车、电车、公交车）数量是监控客户需求的直接结果。使用实时捕获的数据可以帮助加速对所需调度调整、车队调整以及减少客流量较少站点服务的分析。
 
-添加人脸识别软件并非硬性性要求但但它在潜在识别在逃罪犯或被通缉者方面提供了增值能力。对于任何人工智能，在编程和操作时考虑到伦理和安全性都是关重要的。虽然在许多交通站可以找到闭路摄像头和更先进的视频监控设备，但这些摄像头根据执法机构发布的警报或通报识别出人员时，并立即通知任何人。在人脸扫描期间收集的数据必须被视为个人身份信息，并在未发现匹配项时必须清除。
+添加人脸识别软件并非硬性要求，但它提供了在潜在识别在逃罪犯或被通缉者方面的增值能力。对于任何人工智能，在编程和操作时考虑到伦理和安全性都是至关重要的。虽然在许多交通站可以找到闭路摄像头和更先进的视频监控设备，但这些摄像头根据执法机构发布的警报或通报识别出人员时，并立即通知任何人。在人脸扫描期间收集的数据必须被视为个人身份信息，并在未发现匹配项时必须清除。
 
 进一步分析这一点，其他潜在的驱动因素可能会发挥作用。例如，检查该应用的业务需求将增加清晰度。查看领域模型以及任何与需求相关的领域特定语言（DSL），将有助于消除对客户、订单、项目、甚至支付方式的定义的歧义。让我们来看领域模型，以更好地理解不同服务、上下文（contexts）和聚合（aggregates）的布局。
 
@@ -304,34 +259,25 @@ https://packt.link/free-ebook/978180232782
 
 我们在此应用中引用的主要领域与应用旨在提供的主要功能相关。下表提供了每个区域的描述：
 
-
 表 1.1 – 应用功能
 
 ### 示例应用程序
 
 定义了这些基线领域后，可以推导出一些简单的交互规则。例如，乘客可以使用某件设备进入交通站，同时通过“识别”领域进行人脸识别。设备可以抛出一个指示故障的错误，从而调度一次维护事件。设备事件（如闸机操作）可以每次旋转触发一次事件，允许聚合每次旋转和每个站的乘客吞吐量。这些交互随后可以被划分为关注点重叠的，并最终帮助模型和应用至重要的聚合根（aggregate roots）。它们包括：
 
-
 每个聚合都将包含名称和 ID 等通用属性。与聚合相关的实体（entities）和值对象（value objects）之间需要某些差异，因为每个对象都根据领域规定对数据有自己的要求。图 1.3 表示每个聚合的高级图，包括属性（列表项）、实体（白色圆角矩形）和值对象（绿色圆角矩形）：
-
-
 
 设备与维护领域
 
-
 图 1.3 – 高级聚合视图
 
-4 章“领域模型与异步设计”将深入探讨领域模型，包括对事件、处理器以及异步设计的审查。
+第 4 章“领域模型与异步设计”将深入探讨领域模型，包括对事件、处理器以及异步设计的审查。
 
 建立架构基线有助于推动应用程序及其组件最终如何实现的决策。此外，它提供了一个评估不同模式和实践的机会，最终目标是选择路线。本节涵盖了示例应用程序的整体架构设计以及实现创建和消费的核心原则。
 
-
-
-
-
 ### 评估架构结构与范式
 
-该应用程序使用“生产者-消费者”模式（Producer-Consumer pattern）来产生事件，这些事件随后会被需要这些信息的组件消费。你可能还会看到这种模式被称为发布发布订阅（Publish-Subscribe）或 pub-sub。使用这种模式的关键点在于，任何数量的组件都可以产生包含相关领域信息的事件，而任何数量可能的组件都可以消费这些事件并采取相应的行动。我们将在第 2 章“生产者-消费者模式”中更详细地深入探讨生产者-消费者模式。
+该应用程序使用“生产者-消费者”模式（Producer-Consumer pattern）来产生事件，这些事件随后会被需要这些信息的组件消费。你可能还会看到这种模式被称为发布-订阅（Publish-Subscribe）或 pub-sub。使用这种模式的关键点在于，任何数量的组件都可以产生包含相关领域信息的事件，而任何数量可能的组件都可以消费这些事件并采取相应的行动。我们将在第 2 章“生产者-消费者模式”中更详细地深入探讨生产者-消费者模式。
 
 深入一层来看，将使用两种技术架构规范。一个用于闸机单元内部的设备，它托管了设备领域（Equipment domain）架构。另一个是云组件的布局，如图 1.4 所示参考架构中所提到的。闸机设备与云组件之间的高层级流转如下：
 
@@ -357,10 +303,6 @@ https://packt.link/free-ebook/978180232782
 
 当使用具有流式能力的事件时，它允许你调试某个时间点的数据并重放事件以辅助调试。例如，如果某个事件导致服务代码出现错误，你完全可以回到错误抛出之前的时间点并重放事件以识别潜在的 bug。此外，它还可以用于执行“假设如果”测试（what if testing）。
 
-
-
-
-
 ### 本地开发与调试
 
 对于本地开发，使用 Visual Studio 是最简单的选项，可以确保解决方案所需的任何前提条件都能被安装和管理。此外，你可以使用 Visual Studio Code，或者使用 GitHub CodeSpaces 来利用云端完全封装的开发环境。
@@ -370,16 +312,20 @@ https://packt.link/free-ebook/978180232782
 你有几种不同的选项可以在本地调试应用程序：
 
 - 直接从 Visual Studio 启动调试 (F5)。
-- 使用 docker compose 运行应用程序，并通过 Visual Studio 挂载到 Docker 进程。
-- 将应用程序部署到 Kubernetes 中，并使用 Visual Studio 中的 Kubernetes 扩展将其挂载到应用程序。
 
-### 新 .NET 7
+
+
+使用 `docker compose` 运行应用程序，并通过 Visual Studio 挂载到 Docker 进程。
+
+将应用程序部署到 Kubernetes 中，并使用 Visual Studio 中的 Kubernetes 扩展将其挂载到应用程序。
+
+## 新 .NET 7
 
 随着 .NET 7 的发布，底层功能进行了许多改进，并带有针对特定语言的更新。在该应用程序中，我们将利用框架和语言角度的一些最新更新。在语言方面，Minimal APIs 的实现和 JSON 数据的异步流式传输有助于简化服务的实现，而利用热重载（Hot Reload）的能力允许在开发生命周期中进行快速且有意义的调试。
 
 ### Minimal APIs
 
-.NET 7 中令人兴奋的特性之一是 Minimal APIs。它允许你用极少的代码开发 ASP.NET Core Web API。.NET 团队已努力使该语句变为全局构造函数——这意味着顶层语句（例如使用 System 或 Microsoft.AspNetCore.Mvc）被假认为 Web API 项目中的所有文件都需要，因此不再需要在每个文件中重复编写。此外，不再不再需要 Startup.cs 文件。以下示例代码说明了如何直接从主 Program.cs 文件创建应用，并在编译时将创建一个 ASP.Core Web API 应用程序：
+.NET 7 中令人兴奋的特性之一是 Minimal APIs。它允许你用极少的代码开发 ASP.NET Core Web API。.NET 团队已努力使该语句变为全局构造函数——这意味着顶层语句（例如使用 `System` 或 `Microsoft.AspNetCore.Mvc`）被假认为 Web API 项目中的所有文件都需要，因此不再需要在每个文件中重复编写。此外，不再需要 `Startup.cs` 文件。以下示例代码说明了如何直接从主 `Program.cs` 文件创建应用，并在编译时将创建一个 ASP.Core Web API 应用程序：
 
 ### 审查实现细节 17
 
@@ -390,7 +336,7 @@ new ContentResult { Content = "Testing" }; });
 app.Run();
 ```
 
-对于简单的 API，你可以直接在 Program.cs 文件中映射 Get、Post、Put、Patch 和 Delete 操作，它们将直接添加到 Web API 的路由中。此外，如果你想像传统的 Web API 项目布局那样将控制器代码保留在单独的文件中，也可以调用 MapControllers()。启动时，应用程序将寻找派生自 Controller 基类的项。如果你选择此选项，你将需要调用 WebApplication.BuildConfig() 方法并传递构建配置，告诉应用程序将控制器添加到配置服务中，如下代码块所示：
+对于简单的 API，你可以直接在 `Program.cs` 文件中映射 `Get`、`Post`、`Put`、`Patch` 和 `Delete` 操作，它们将直接添加到 Web API 的路由中。此外，如果你想像传统的 Web API 项目布局那样将控制器代码保留在单独的文件中，也可以调用 `MapControllers()`。启动时，应用程序将寻找派生自 `Controller` 基类的项。如果你选择此选项，你将需要调用 `WebApplication.BuildConfig()` 方法并传递构建配置，告诉应用程序将控制器添加到配置服务中，如下代码块所示：
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -424,27 +370,22 @@ app.Run();
 
 - 1. 从业务角度查看应用程序可以获得哪些潜在洞察？
 
-
-
-
-
-## 2 生产者-消费者模式
+## 生产者-消费者模式
 
 在为应用程序选择通信模式时，通常需要考虑组件之间可能进行通信的情况。典型的 Web 应用程序遵循请求/响应模式，即向服务器发送请求，服务器返回响应并在客户端对其进行恰当处理。对于希望在这些通信通道中处理高吞吐量的应用程序，标准的请求/响应模式并不是理想的。
 
 当每秒发送成百上千个请求时，由于每个请求都必须等待相应的响应，应用程序将缓慢到停滞。另一个例子是长运行进程。可能会有一个由某个事件触发的操作，但它直到几小时后才会完成。阻塞运行该进程的线程会限制执行能力，而且系统最终只需要知道进程何时完成即可。此类场景需要更具韧性的异步消息模式。本章介绍的生产者-消费者模式涵盖了其中这样一种模式，并阐述了以下领域：
 
-
 ### 生产者-消费者模式
 
 在本章结束，你将对以下内容有清晰的理解：
-
 
 ### 技术要求
 
 你可以在 GitHub 上的相应文件夹中找到本章的所有代码示例，地址为：[GitHub Link](https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/chapter02)。
 
 > 注意事项
+
 本章中提到的所有白皮书和其他来源的链接位于章节末尾的“延伸阅读”部分。
 
 ### 检查生产者和消费者
@@ -453,7 +394,7 @@ app.Run();
 
 ### 结合真实世界示例
 
-开发者理解组件之间通信模式的理念，因为他们在编写特定应用程序时会实现这些模式。一种已经使用了几十年的极其流行的模式是请求/响应模式。大多数人都能自然地理解这种模式，因为它遵循的模式与我们人类交流的方式相似。如果你正在与某人交并提问，你通常可以预期他们给出回复。虽然该回复可能并不完全是你所预期或预期的，但你仍然会收到对你查询的回应。
+开发者理解组件之间通信模式的理念，因为他们在编写特定应用程序时会实现这些模式。一种已经使用了几十年的极其流行的模式是请求/响应模式。大多数人都能自然地理解这种模式，因为它遵循的模式与我们人类交流的方式相似。如果你正在与某人交谈并提问，你通常可以预期他们给出回复。虽然该回复可能并不完全是你所预期或预期的，但你仍然会收到对你查询的回应。
 
 对于在理解生产者和消费者如何工作方面有些困难的人，可以通过“员工建议箱”的形式来看简单的例子。员工在纸条上写下建议并将其放入一个通常锁着的箱子里。建议进去了，但除了持有箱钥匙的人以外，没有人可以取回。这些建议可以立即收集、在当天结束时收集，或者在每月某个特定时间收集。这种互动的重要部分是持有箱钥匙的人（通常是管理层人员）汇总这些建议并将它们带回群体。有些建议可能不会被实施，但前提是那些对场所做出改变的人将阅读并可能采取行动。写这些建议的员工是生产者，他们产生建议以使工作场所更加愉快或高效。在这种情况下，消费者是经理或主管，他们收集这些建议并采取行动，根据工作场所的情况处理这些建议。
 
@@ -462,9 +403,10 @@ app.Run();
 接下来，我们来看示例应用程序及其主要用例，即监控公共交通工具日常运营期间闸机设备的使用情况。当设备被使用、发生故障或机制卡住时，会产生事件。这些事件通过消息代理程序（message broker）发送到 Kafka 主题（类似于消息队列），感兴趣的消费者将订阅该主题。一旦事件进入主题，消费者就会将其引入，并运行事件处理器来将其处理数据库、应用程序日志文件条目，或触发更多事件。这将导致一次写操作。虽然比我们的第一个例子复杂，但它遵循相同的通用行为。这里的区别在于事件的产生、消费和处理发生在高或低频率下，且这些活动受领域内部业务逻辑的支配。
 
 > 注意事项
+
 消息代理程序将在第 4 章“领域模型与异步设计”中进行更详细的介绍。
 
-## 2 生产者-消费者模式
+## 生产者-消费者模式
 
 这些示例每一个帮助你说明生产者和消费者之间的互动如何在日常生活中存在。接下来我们将研究这种模式如何使事件驱动架构取得成功。
 
@@ -473,10 +415,6 @@ app.Run();
 提醒一下，许多事件驱动系统在设计时已经考虑到会有大量消息的产生和消费。消息的产生和消费方式需要具有高度的可扩展性、韧性和容错性。否则，由于无法保证产生的消息一定会被消费，应用程序的结构完整性将失效。
 
 扩展性可以通过不同的机制解决。某些服务允许利用自动伸缩功能，通过创建额外的副本来处理请求或使用的增加。这很重要，因为它确保了无论用户模式如何都能保证性能。如果达到了自动伸缩的上限且消息流量较大，如果不采取额外的措施，可能会产生性能影响。在生产者-消费者模式中，对产生的任何消息都没有明确的预期。正如前面提到的，系统的一致性不需要是即时的，这允许消息的消费者根据要求对其进行处理。
-
-
-
-
 
 ### 在代码中探索实现细节
 
@@ -563,7 +501,7 @@ builder.Services.AddSingleton<ProducerConfig>(producerConfig);
 builder.Services.AddSingleton(producerTopic);
 ```
 
-接下来，我们需要添加一个路由来允许向端点执行 POST 操作。此方法将包含一些基本的错误处理，并且目前只处理字符串消息。该路由将调用 `ProducersService` 并等待 `Send()`` 方法的返回。以下代码可以放在第一个 `app.MapGet` 函数和 `app.Run()` 之间：
+接下来，我们需要添加一个路由来允许向端点执行 POST 操作。此方法将包含一些基本的错误处理，并且目前只处理字符串消息。该路由将调用 `ProducersService` 并等待 `Send()` 方法的返回。以下代码可以放在第一个 `app.MapGet` 函数和 `app.Run()` 之间：
 
 ```csharp
 app.MapPost("/send", async (http) => {
@@ -581,8 +519,6 @@ var svc = http.RequestServices.GetRequiredService<IProducerService>();
 
 
 
-
-
 ```go
 await svc.SetTopic(ProducerTopic);
 try {
@@ -597,11 +533,11 @@ try {
 };
 ```
 
-我们还需要一个存放生产者消息的去处。如之前所述，Kafka 使用主题（topics）的概念进行操作。在本示例中，我们需要关注一个可以放置正在发送的消息的主题。你可能已经注意到，我们为 Topic 属性添加了一个额外的配置绑定。在 `appsettings.json` 文件中为此项输入值将允许你设置生产者写入消息的主题名称。
+我们还需要一个存放生产者消息的去处。如之前所述，Kafka 使用主题（topics）的概念进行操作。在本示例中，我们需要关注一个可以放置正在发送的消息的主题。你可能已经注意到，我们为 `Topic` 属性添加了一个额外的配置绑定。在 `appsettings.json` 文件中为此项输入值将允许你设置生产者写入消息的主题名称。
 
 提醒一下，所有的示例代码可以在 GitHub 仓库的章节文件夹中找到。
 
-### 消费者代码
+## 消费者代码
 
 消费者代码与生产者代码相似，因为它们都使用了 `BackgroundService` 抽象类。与消费者服务的区别在于，它使用传入 `ExecuteAsync` 方法的 `CancellationToken` 值来决定是否应该停止服务。如果令牌不是取消请求，消费者服务将继续在后台运行。在进入主程序循环之前，让我们先来看 `consumerService` 类：
 
@@ -672,9 +608,6 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 - 调用了 `CreateDefaultBuilder`，并传入了来自 `Main` 程序方法的命令行参数。
 - 向 `ConfigureAppsettings` 方法传递了两个占位符，分别用于托管上下文和配置本身。
-
-## 32 生产者-消费者模式
-
 - JSON 配置文件被指定为应用程序配置设置的源。根据传递给 `AddJsonFile` 的参数，它们被列为可选；然而，它们将是必不可的，因为主题名称和 `ConsumerConfig` 的值将从中获取。
 - `ConsumerConfig` 值、默认组 ID 和主题名称的私有变量从 JSON 配置文件中加载，并设置为静态变量以供以后使用。组 ID 对于 Kafka 主题的消费者至关重要，因为 Kafka 会跟踪特定组从主题中读取了哪些内容。你可以创建多个共享相同组 ID 的消费者，Kafka 将自动跟踪已消费的内容——而不仅仅是消费者应用程序。
 
@@ -696,7 +629,7 @@ Invoke-RestMethod -Method Post -Uri "https://localhost:5001/send" -UseBasicParsi
 
 然而，我们还没有处理完消费者。直接从 `Receive` 方法写入控制台是观察结果的一种快速方法，但我们还希望确保利用事件处理器来处理收到的消息。建立这种模式在以后编写领域代码时将产生丰厚回报。
 
-### 事件处理
+## 事件处理
 
 通常，预计事件处理器将在消费者代码中使用。虽然处理器对象本身通常位于主库，但消费者实现将引入这些事件处理器，通常在后台过程中运行。事件处理本质不需要非常复杂，正如下面的代码所示。
 
@@ -725,12 +658,9 @@ while (!stoppingToken.IsCancellationRequested) {
 
 要测试此新添加，请以调试模式运行生产者和消费者项目，并在你选择的终端中发布命令向生产者 API 发送新消息。你应该能在消费者的控制窗口中看到输出。
 
-
-
-
 在运行了生产者和消费者客户端的代码实现后，现在是时候进一步了解我们所需的基础设施的实现细节了。
 
-### 审查基础设施中的实现细节
+## 审查基础设施中的实现细节
 
 在上一节中，我们稍微关注了 Kafka 的基础设施配置，尽管设置 Kafka 的工作比仅仅运行一个脚本要复杂得多。为了理解生产者和消费者示例，我们对如何与 Kafka 尤其是主题（topic）交互做了一些假设。
 
@@ -742,9 +672,7 @@ while (!stoppingToken.IsCancellationRequested) {
 
 Kafka 中的主题还由分区（partitions）组成。与其他数据持久化技术一样，分区可以用于存储具有共同键的事件或消息。这确保了特定键的所有相关信息都位于特定分区内。启用多个分区允许数据集更广泛分布，并可能允许使用该共同键作为搜索词实现更快的搜索能力。
 
-此外，分区可以作为多个 broker 之间负载均衡的手段，分区本身被视为并行单元。这为解决方案增加了复杂性——在某些情况下，你可能不想使用多个分区，因为你没有使用键值。将 null 作为键值向主题写入消息或事件是可能的。如果采用了这种方法，还需要另一个共同标识符来关联主题中的事件（如果需要）。如果没有使用键值，每条记录将通过轮询分配（round-robin assignment）写入分区。
-
-### 审查基础设施中的实现细节 35
+此外，分区可以作为多个 broker 之间负载均衡的手段，分区本身被视为并行单元。这为解决方案增加了复杂性——在某些情况下，你可能不想使用多个分区，因为你没有使用键值。将 `null` 作为键值向主题写入消息或事件是可能的。如果采用了这种方法，还需要另一个共同标识符来关联主题中的事件（如果需要）。如果没有使用键值，每条记录将通过轮询分配（round-robin assignment）写入分区。
 
 在 Kafka 中创建主题是简单的。你可以通过以下方式创建主题：
 
@@ -757,7 +685,7 @@ Kafka 中的主题还由分区（partitions）组成。与其他数据持久化�
 
 ### 流 (Streams) 和 表 (Tables)
 
-主题并不是读取或写入记录的唯一区域。Kafka 还有一个流的概念。本质上，流是信息。Kafka 提供的流 允许将记录转换为输入主题，并将转换后的记录放入输出主题。流可以根据特定主题编程地创建。
+主题并不是读取或写入记录的唯一区域。Kafka 还有一个流的概念。本质上，流是信息。Kafka 提供的流允许将记录转换为输入主题，并将转换后的记录放入输出主题。流可以根据特定主题编程地创建。
 
 另一方面，表构造通过特定方式呈现的可用数据。使用如 `mapreduce` 等常用技术，你可以创建转换或压缩记录，意图使用另一个流写入输出主题。虽然这些构造在 Kafka 中非常重要且有用，你可能会发现它们在领域作为事件处理器的扩展。Kafka 的 connect API 允许你与不同的系统和数据存储建立连接。如果计划仅考虑使用 Kafka 作为消息平台，使用流和表以及 connect API 将非常有意义。对于我们的示例应用程序，虽然我们正在使用 Kafka，但已经有抽象允许我们在不同平台之间使用消息持久化，将逻辑留给领域内的事件处理器。
 
@@ -766,16 +694,27 @@ Kafka 中的主题还由分区（partitions）组成。与其他数据持久化�
 在领域范围内，我们已经识别了多个需要被跟踪的不同聚合。在使用 Kafka 等平台时跟踪聚合更改的常用方法是为每个聚合创建一个主题。与每个聚合相关的事件由特定的事件处理器处理。这些处理器可以根据需要更新数据存储。图 2.2 展示了 Kafka 中基于聚合的主题示例：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_56_0.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_1.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_2.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_3.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_4.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_5.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_6.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_7.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_8.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_9.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_10.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_56_11.png)
 
 图 2.2 – 按聚合根划分的布局示例
@@ -784,10 +723,7 @@ Kafka 中的主题还由分区（partitions）组成。与其他数据持久化�
 
 让我们看看在领域中使用其中一个聚合的示例。聚合是需要被跟踪的。维护聚合状态可以锁定维护的。与每个聚合相关的事件由特定的事件处理器处理。这些处理器可以根据需要更新数据存储。维护完成后，状态可以反映维护人员已收到通知。对于我们的应用程序，虽然我们正在使用 Kafka，但已经有抽象允许我们在不同平台之间使用消息和持久化，将逻辑留给领域内的事件处理器。
 
-
-
-
-### 延伸阅读
+## 延伸阅读
 
 - Martin Fowler 写的《What Do You Mean by "Event-Driven"》：可以在 https://martinfowler.com/articles/201701-event-driven.html 阅读。
 - 微软的 Azure 架构中心：可以在 https://docs.microsoft.com/en-us/azure/architecture 查看。
@@ -796,7 +732,10 @@ Kafka 中的主题还由分区（partitions）组成。与其他数据持久化�
 - Confluent 提供的《Docker 上的 Apache Kafka 快速上手》：可以在 https://developer.confluent.io/quickstart/kafka-docker 查看。
 - Apache Foundation 提供的 Apache Kafka 官方文档：可以在 https://kafka.apache.org/documentation 查看。
 - Red Hat 提供的《Kafka 生产者/消费者教程》：可以在 https://redhat-developer-demos.github.io/kafka-tutorial/kafka-tutorial/1.0.x/03-consumers-producers.html 查看。
-- Coding Harbour 写的《Kafka 主题和分区简介》：可以在 https://codingharbour.com/apache-kafka/the-introduction-to-kafka-topics-and-partitions/ 查看。
+
+
+
+Coding Harbour 写的《Kafka 主题和分区简介》：可以在 https://codingharbour.com/apache-kafka/the-introduction-to-kafka-topics-and-partitions/ 查看。
 
 ## 3 消息中间件
 
@@ -864,10 +803,6 @@ Kafka 中的主题还由分区（partitions）组成。与其他数据持久化�
 ![](img/290aa6845834e57fd715912cc7e6d30_62_0.png)
 
 图 3.1 – 基于队列与基于流
-
-
-
-
 
 ### 消息代理 (Message Brokers)
 
@@ -950,54 +885,42 @@ services:
     hostname: zookeeper
     container_name: zookeeper
     ports:
-```
-
-
-
-
-
-### 消息代理代理
-
-```
-"2181:2181"
-environment:
-  ZOOKEEPER_CLIENT_PORT: 2181
-broker:
-  image: bitnami/kafka
-hostname: broker
-  container_name: broker
-depends_on:
-  - zookeeper
-ports:
-  - "20902:20902"
-environment:
-  KAFKA_PORT: 9092
-  KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
-  KAFKA_LISTENERS: EXTERNAL_SAME_HOST://20902,
-  INTERNAL://9092
-  KAFKA_ADVERSED_LISTENERS: INTERNAL://broker:9092,
-  EXTERNAL_SAME_HOST://localhost:20902
-  KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:
-  INTERNAL:PLAINTEXT,EXTERNAL_SAME_HOST:PLAINTEXT
-  KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
-ALLOW_PLAINTEXT_LISTENER: "yes"
-JMX_PORT: 9999
+      "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+  broker:
+    image: bitnami/kafka
+    hostname: broker
+    container_name: broker
+    depends_on:
+      - zookeeper
+    ports:
+      - "20902:20902"
+    environment:
+      KAFKA_PORT: 9092
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENERS: EXTERNAL_SAME_HOST://20902, INTERNAL://9092
+      KAFKA_ADVERSED_LISTENERS: INTERNAL://broker:9092, EXTERNAL_SAME_HOST://localhost:20902
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT, EXTERNAL_SAME_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+      JMX_PORT: 9999
 ```
 
 这是一个基础的 Kafka 配置，包含一个代理（broker）和一个 Zookeeper 节点，并在代理节点上进行了一些额外配置，以允许 Zookeeper 与代理之间的内部流量，以及通过端口 20902 的外部（localhost）流量。但如果我们想在这个家族中再添加另一个代理将会怎样？使用现有的配置，我们可以更新 compose 文件使其看起来像下面所示。对第一个代理节点进行的更新已高亮显示：
 
-```
+```yaml
 version: '2'
 services:
   zookeeper:
   ...
 ```
 
-实现消息代理技术 49 
+实现消息代理技术 49
 
 broker1:
 
-```
+```yaml
 image: bitnami/kafka
 hostname: broker1
 container_name: broker1
@@ -1009,10 +932,10 @@ environment:
   BROKER_ID: 1
   KAFKA_PORT: 9092
   KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
-  KAFKA_LISTENERS: EXTERNAL_SAME_HOST:::29092,INTERNAL:::9092
-  KAFKA_ADVERTISED_Listeners: INTERNAL://broker1:9092,EXTERNAL_SAME_HOST://localhost:29092
+  KAFKA_LISTENERS: EXTERNAL_SAME_HOST:::29092, INTERNAL:::9092
+  KAFKA_ADVERTISED_Listeners: INTERNAL://broker1:9092, EXTERNAL_SAME_HOST://localhost:29092
   KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:
-    INTERNAL:PLAINTEXT,EXTERNAL_SAME_HOST:PLAINTEXT
+    INTERNAL:PLAINTEXT, EXTERNAL_SAME_HOST:PLAINTEXT
   KAFKA_INTER_BROKER_LISTENER_NAME: "INTERNAL"
   ALLOW_PLAINTEXT_LISTENER: "yes"
   JMX_PORT: 9999
@@ -1020,7 +943,7 @@ environment:
 
 broker2:
 
-```
+```yaml
 image: bitnami/kafka
 hostname: broker2
 container_name: broker2
@@ -1032,37 +955,30 @@ environment:
   BROKER_ID: 2
   KAFKA_PORT: 9093
   KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
-  KAFKA_LISTENERS: EXTERNAL_SAME_HOST:::29093,INTERNAL:::9093
-```
-
-```
-KAFKA_ADVERTISED_LISTENERS: INTERNAL://broker2:9093
-EXTERNAL_SAME_HOST://localhost:29093
-KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:
-INTERNAL:PLAINTEXT, EXTERNAL_SAME_HOST:PLAINTEXT
-KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
-ALLOW_PLAINTEXT_LISTENER: "yes"
-JMX_PORT: 10000
+  KAFKA_LISTENERS: EXTERNAL_SAME_HOST:::29093, INTERNAL:::9093
+  KAFKA_ADVERTISED_LISTENERS: INTERNAL://broker2:9093, EXTERNAL_SAME_HOST://localhost:29093
+  KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:
+    INTERNAL:PLAINTEXT, EXTERNAL_SAME_HOST:PLAINTEXT
+  KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+  ALLOW_PLAINTEXT_LISTENER: "yes"
+  JMX_PORT: 10000
 ```
 
 Zookeeper 的配置没有显示，因为它与第一个 docker compose 相同。此设置将创建一个具有两个代理和一个 Zookeeper 节点的 Kafka 实例，这允许你根据需要在代理之间进行数据复制。请注意每个代理上的端口，因为它们不能直接使用相同的端口进行通信，否则会产生冲突。只要每个代理都有唯一的运行端口，Zookeeper 就会跟踪集群中的每个代理。
 
 虽然拥有多个代理很有趣，但与 Kafka 实例的交互是通过命令行界面（CLI）完成的。为了添加基于 Web 的 UI 管理视图，请在 docker compose 文件的末尾添加以下服务：
 
-```
+```yaml
 kafka-ui:
-image: obsidianandynamics/kafdrop
-ports:
-  - 9100:9000
-environment:
-  - KAFKA_BROKERCONNECT=broker1:9092
-  - JVM_OPTS=-Xms32M -Xmx64M
-```
-
-```
-depends_on:
-  - broker1
-  - broker2
+  image: obsidianandynamics/kafdrop
+  ports:
+    - 9100:9000
+  environment:
+    - KAFKA_BROKERCONNECT=broker1:9092
+    - JVM_OPTS=-Xms32M -Xmx64M
+  depends_on:
+    - broker1
+    - broker2
 ```
 
 Kafdrop 是一个用于 Kafka 的开源 UI，允许你查看集群的基本情况，创建主题（topics）并查看这些主题内的消息。下面的截图显示了 Kafka 的 Kafdrop UI：
@@ -1073,6 +989,8 @@ Kafdrop 是一个用于 Kafka 的开源 UI，允许你查看集群的基本情�
 
 ### 启用弹性和扩展性
 
+
+
 由于 Kafka 将成为 MTAEDA 架构中生产者和消费者的主要集成点，因此考虑弹性的（resiliency）和扩展性（scalability）非常重要。在这种情况下，弹性性与 Kafka 在压力下的表现有关——例如某个代理离线、由于网络负载导致生产者与消费者之间的通信比预期的要长，或者 Zookeeper 离线。在这种背景下，扩展性与需要可用的代理或 Zookeeper 节点数量，以及可以启动多少来处理额外负载有关。
 
 Kafka 集群的三个实现弹性的基础方面是：拥有的代理数量、创建的主题的副本因子，以及对每个代理持久化存储的使用以防止数据丢失。我们已经看到在使用 docker 时是如何增加代理数量的。在创建主题时，你可以指定主题的副本因子，它将默认为可用代理的最大数量。你不一定需要所有可用代理，但在关键主题的情况下，利用所有代理是有意义的。下面的截图显示了使用 Kafdrop 创建新主题的过程，其中指定了副本因子：
@@ -1081,22 +999,26 @@ Kafka 集群的三个实现弹性的基础方面是：拥有的代理数量、�
 
 图 3.3 – 使用 Kafdrop 创建新主题
 
-
-
-
-
 ### 延伸阅读
 
 要了解更多关于本章涵盖的主题，请参考以下资源：
 
 - RabbitMQ vs Kafka：比较两种流行的消息中间件，由 SPEC India 编写：https://www.spec-india.com/blog/rabbitmq-vs-kafka
+
 - EventStore 入门：https://developers.eventstore.com/server/v21.6/introduction/#getting-started
+
 - 首页 | AMQP，由 AMQP Foundation 编写：https://amqp.org
+
 - MQTT：物联网消息标准，由 MQTT 编写：https://mqtt.org
+
 - 精确一次交付（Exactly Once Delivery），由 Cloud Computing Patterns 提供：https://www.cloudcomputingpatterns.org/exactly_once_delivery/
+
 - 至少一次交付（At Least Once Delivery），由 Cloud Computing Patterns 提供：https://www.cloudcomputingpatterns.org/at_least_once_delivery/
+
 - CloudEvents：一种通用方式描述事件数据的规范：https://cloudevents.io/
+
 - Apache Zookeeper，由 Apache Foundation 编写：https://zookeeper.org/
+
 - Kafdrop，由 Obsidian Dynamics 编写：https://github.com/obsidiandynamics/kafdrop
 
 ## 4 领域模型与异步事件
@@ -1106,7 +1028,9 @@ Kafka 集群的三个实现弹性的基础方面是：拥有的代理数量、�
 本章旨在深入探讨示例应用程序的领域模型。为此，我们将涵盖以下主题：
 
 - 复习领域命令和事件
+
 - 使用异步操作
+
 - 探索 .NET 6 的新异步特性
 
 ### 领域模型与异步事件
@@ -1114,15 +1038,19 @@ Kafka 集群的三个实现弹性的基础方面是：拥有的代理数量、�
 在本章结束时，我们能够做到以下几点：
 
 - 进一步详细地理解应用程序的领域模型，包括命令、事件、事件处理器、实体和值对象。
+
 - 理解为什么异步设计是有益的，以及它的实现对于使应用程序支持事件驱动架构（EDA）至关重要。
 
 ### 技术要求
 
 你可以在本书的 GitHub 仓库中找到本章的所有代码示例：
+
 https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/chapter04 和
+
 https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/src。
 
 > **注意**
+
 本章中提到的所有白皮书和其他来源的链接可以在章末的“延伸阅读”部分找到。
 
 ### 解决方案结构
@@ -1130,6 +1058,7 @@ https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Archi
 整个 MTAEDA 解决方案的结构分为两个主要部分：
 
 - 为所有领域提供基础功能的核心库
+
 - 领域本身，使用独立的解决方案文件与其他领域隔离
 
 核心库的设置旨在降低各个领域解决方案的复杂性，并旨在为每个领域提供可以利用非常基础的功能。这些功能包括用于领域对象的接口、与 Kafka 交互的接口和类，以及用于方便事件打包和解包的工具类。
@@ -1137,10 +1066,15 @@ https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Archi
 每个领域解决方案都遵循标准格式，包括处理以下领域的项目：
 
 - 领域逻辑
+
 - 基础设施（数据访问和仓库）
+
 - 基于命令的 API 端点（创建、更改或更新信息）
+
 - 基于查询的 API 端点（仅检索信息）
+
 - 监听器服务（事件处理器的代理）
+
 - 测试项目
 
 对所有解决方案使用标准布局可以确保无论你处于哪个解决方案中，定位特定的项目、文件或引用都变得更容易。例外是布局中的核心库，它包含了重要的共享对象和接口。核心库包含自定义代码，以及对外部库的引用，例如 MediatR。Mediator 是调解者模式的实现，旨在用于事件驱动架构和领域驱动设计。让我们更详细地探索核心库组件。
@@ -1150,13 +1084,20 @@ https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Archi
 MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体实现组成。这些分为领域接口、基础设施接口和类以及工具类。如下表所示，有几个领域接口：
 
 | 名称 | 描述 |
+
 | :--- | :--- |
-| IDomainAggregateRoot | 允许聚合根对象被标识（仅限装饰器）。 |
-| IDomainEntity | 允许实体被标识，并要求实现一个用于领域数据的字符串字段。 |
-| IDomainEvent | 实现来自 MediatR 库的 `INotification`。 |
-| IDomainEventHandler | 允许领域事件被标识，并要求实现一个用于领域数据的字符串字段。实现来自 MediatR 库的 `INotificationHandler<T>`，其中 T 是一个 `INotification` 对象。允许事件处理器被标识，并要求实现 `Handle()` 方法。 |
-| IDomainValueObject | 允许值对象在领域内被标识（仅限装饰器）。 |
-| IRepository<T> | 泛型类型 `T` 必须是 `IDomainEntity` 对象。允许为任何仓库实现强制执行一组基础方法。 |
+
+| `IDomainAggregateRoot` | 允许聚合根对象被标识（仅限装饰器）。 |
+
+| `IDomainEntity` | 允许实体被标识，并要求实现一个用于领域数据的字符串字段。 |
+
+| `IDomainEvent` | 实现来自 MediatR 库的 `INotification`。 |
+
+| `IDomainEventHandler` | 允许领域事件被标识，并要求实现一个用于领域数据的字符串字段。实现来自 MediatR 库的 `INotificationHandler<T>`，其中 T 是一个 `INotification` 对象。允许事件处理器被标识，并要求实现 `Handle()` 方法。 |
+
+| `IDomainValueObject` | 允许值对象在领域内被标识（仅限装饰器）。 |
+
+| `IRepository<T>` | 泛型类型 `T` 必须是 `IDomainEntity` 对象。允许为任何仓库实现强制执行一组基础方法。 |
 
 ### 领域模型与异步事件
 
@@ -1165,17 +1106,23 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 下表说明了 infrastructure 文件夹下的组件：
 
 | 名称 | 描述 |
+
 | :--- | :--- |
-| IEventReader | 围绕事件的读取操作接口。 |
-| IEventWriter | 围绕事件的写入操作接口。 |
-| KafkaConsumer | 实现 IEventReader。一个连接到 Kafka 实例并从一个或多个处消费事件的者。 |
-| KafkaProducer | 实现 IEventWriter。一个连接到 Kafka 实例并向主题发布事件的者。 |
+
+| `IEventReader` | 围绕事件的读取操作接口。 |
+
+| `IEventWriter` | 围绕事件的写入操作接口。 |
+
+| `KafkaConsumer` | 实现 `IEventReader`。一个连接到 Kafka 实例并从一个或多个处消费事件的者。 |
+
+| `KafkaProducer` | 实现 `IEventWriter`。一个连接到 Kafka 实例并向主题发布事件的者。 |
 
 表 4.2 – 基础设施接口和类
 
 工具类方面，核心库只提供了一个。`EventUtil` 类提供了对解包领域事件、事件处理器和异常的方法。这有助于使用第 1 章中讨论的 CloudEvents Schema 作为所有事件的标准格式，但它仍然提供了获取原始对象并执行任何操作的方法。
 
 > **注意**
+
 以下图例适用于本章中的所有图。
 
 ![](img/290aa6845834e57fd715912cc7e76d30_78_0.png)
@@ -1194,10 +1141,6 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 图 4.2 – 设备领域的领域架构
 
-
-
-
-
 ### 领域模型与异步事件
 
 设备领域是应用程序的核心。许多事件是由源此领域的事件触发的。
@@ -1206,8 +1149,9 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 设备领域利用两个聚合根对象来管理领域内的所有交互：
 
-- * **摄像头 (Camera)**：用于跟踪与摄像头相关的基础设备信息以及相关的维护事件。它包括摄像头 ID、设备型号信息和站点 ID。
-- * **闸机 (Turnstile)**：用于跟踪与闸机相关的基础设备信息以及相关的维护事件。它包括闸机 ID、设备型号信息、维护前的最大进站次数、安装日期和站点 ID。
+- **摄像头 (Camera)**：用于跟踪与摄像头相关的基础设备信息以及相关的维护事件。它包括摄像头 ID、设备型号信息和站点 ID。
+
+- **闸机 (Turnstile)**：用于跟踪与闸机相关的基础设备信息以及相关的维护事件。它包括闸机 ID、设备型号信息、维护前的最大进站次数、安装日期和站点 ID。
 
 你会发现**摄像头**和**闸机**聚合也出现在其他领域中。在某些情况下，它们关联的信息会有所不同。由于这些对象是与多个领域都相关的对象，因此这种程度的重复是很常见的。然而，它们所交互的事件和实体将归类到特定的领域中。
 
@@ -1217,7 +1161,7 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 ### 事件 (Events)
 
-设备领域内有九个核心事件。除一个外，所有事件都与**闸机**上可能发生的动作有关。与**摄像头**相关的唯一事件是 **CameraInstalled**（摄像头安装），它在 **TurnstileCameraInstalled**（闸机摄像头安装）处理后触发。**CameraInstalled** 旨在将摄像头的**型号**信息传回领域，并与**闸机**和**站点**关联。
+设备领域内有九个核心事件。除一个外，所有事件都与**闸机**上可能发生的动作有关。与**摄像头**相关的唯一事件是 `CameraInstalled`（摄像头安装），它在 `TurnstileCameraInstalled`（闸机摄像头安装）处理后触发。`CameraInstalled` 旨在将摄像头的**型号**信息传回领域，并与**闸机**和**站点**关联。
 
 ### 事件处理器 (Event handlers)
 
@@ -1230,6 +1174,7 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 对于值对象，我们有以下实体：
 
 - 地址 (Address)：一种用于定位站点的标准地址格式。
+
 - 型号 (Model)：与闸机、摄像头或其他类型的设备相关的设备型号信息。
 
 现在我们对设备领域的运作有了更好的理解，让我们移动到站点领域。
@@ -1252,14 +1197,16 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 ### 实体 (Entities)
 
-与站点关联的领域实体只有一个，即 **WorkOrder**（工单）。这是一个领域实体，包含与维护计划相关的特定工单信息。它可以适用于任何类型的设备，并捕获工单何时被创建、何时被分配以及何时完成。
+与站点关联的领域实体只有一个，即 `WorkOrder`（工单）。这是一个领域实体，包含与维护计划相关的特定工单信息。它可以适用于任何类型的设备，并捕获工单何时被创建、何时被分配以及何时完成。
 
 ### 事件 (Events)
 
 有六个与站点相关的领域事件：
 
 - 两个与站点信息（名称或地址）的变化有关。
+
 - 两个事件指示站点状态的变化。
+
 - 两个事件处理在站点内安装或退役闸机。
 
 这些事件直接关系到下一段中列出的该领域事件处理器。
@@ -1275,8 +1222,11 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 ### 审查领域结构和组件
 
 ![](img/290aa6845834e57fd715912cc7e76d30_83_0.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_83_1.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_83_2.png)
+
 ![](img/290aa6845834e57fd715912cc7e76d30_83_3.png)
 
 图 4.4 – 维护领域的领域架构
@@ -1305,15 +1255,11 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 ### 聚合 (Aggregates)
 
-调度领域有两个聚合根来管理调度活动。其中是 **CameraMaintenanceSchedule**（摄像头维护计划），处理与摄像头相关的任何维护记录。另一个是 **TurnstileMaintenanceSchedule**（闸机维护计划），处理与闸机相关的任何维护记录。
+调度领域有两个聚合根来管理调度活动。其中是 `CameraMaintenanceSchedule`（摄像头维护计划），处理与摄像头相关的任何维护记录。另一个是 `TurnstileMaintenanceSchedule`（闸机维护计划），处理与闸机相关的任何维护记录。
 
 ### 实体 (Entities)
 
-调度领域直接处理的领域实体只有一个，即 **WorkOrder** 实体。**WorkOrder** 是一个包含维护计划相关的特定工单信息的领域实体。
-
-
-
-
+调度领域直接处理的领域实体只有一个，即 `WorkOrder` 实体。`WorkOrder` 是一个包含维护计划相关的特定工单信息的领域实体。
 
 ### 审查领域结构与组件
 
@@ -1325,19 +1271,21 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 ### 聚合根 (Aggregates)
 
-通知领域内只有一个聚合根，即 **NotificationConfiguration**（通知配置）。该聚合根包含特定通知配置设置的信息。它存储了配置标识符、发送通知的地址、通知类型以及一个可选的模板标识符，用于引入模板以格式化通知正文本身。
+通知领域内只有一个聚合根，即 `NotificationConfiguration`（通知配置）。该聚合根包含特定通知配置设置的信息。它存储了配置标识符、发送通知的地址、通知类型以及一个可选的模板标识符，用于引入模板以格式化通知正文本身。
 
 ### 事件 (Events)
 
-该领域有三个与 NotificationConfiguration 相关的事件：一个用于创建配置，一个用于更新配置，一个用于将其移除使用。
+该领域有三个与 `NotificationConfiguration` 相关的事件：一个用于创建配置，一个用于更新配置，一个用于将其移除使用。
 
 ### 事件处理器 (Event handlers)
 
 共有三个事件处理器：
 
-- *MaintenanceRequested*：该处理器将处理提出的维护请求，并创建一个工单（WorkOrder）以启动流程。
-- *WorkOrderCreated*：在处理维护事件后，该处理器将处理工单的初始处理。
-- *OffenderIdentified*：当识别领域触发事件声称在逃犯者列表中找到匹配项时，该处理器将向适当的接收者发送通知。
+- `MaintenanceRequested`：该处理器将处理提出的维护请求，并创建一个工单（`WorkOrder`）以启动流程。
+
+- `WorkOrderCreated`：在处理维护事件后，该处理器将处理工单的初始处理。
+
+- `OffenderIdentified`：当识别领域触发事件声称在逃犯者列表中找到匹配项时，该处理器将向适当的接收者发送通知。
 
 现在我们已经涵盖了通知领域，可以转向乘客领域（passenger domain）。
 
@@ -1355,11 +1303,11 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 ### 聚合根 (Aggregates)
 
-乘客领域只有一个聚合根，恰是 **passenger**（乘客）。该聚合根包含了乘客的标识符以及对 **LoyaltyProgram**（忠诚计划）实体的引用。此外，还使用了独立的乘客信息结构（**PassengerInfo**）来更新乘客的基础信息。
+乘客领域只有一个聚合根，恰是 `passenger`（乘客）。该聚合根包含了乘客的标识符以及对 `LoyaltyProgram`（忠诚计划）实体的引用。此外，还使用了独立的乘客信息结构（`PassengerInfo`）来更新乘客的基础信息。
 
 ### 事件 (Events)
 
-有三个与忠诚计划本身相关的事件：一个用于为乘客请求新计划，一个用于更新信息，一个用于退休或关闭计划。此外，还有一个用于通过 **PassengerInfo** 对象更新乘客信息的事件。
+有三个与忠诚计划本身相关的事件：一个用于为乘客请求新计划，一个用于更新信息，一个用于退休或关闭计划。此外，还有一个用于通过 `PassengerInfo` 对象更新乘客信息的事件。
 
 ### 事件处理器 (Event handlers)
 
@@ -1379,15 +1327,18 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 共有三个聚合根：
 
-- * **Camera**（摄像头）：用于跟踪与执行识别的摄像头相关的基础设备信息。它只存储摄像头标识符、站点标识符和闸机标识符。
-- * **Offender**（逃犯）：用于跟踪逃犯标识符、任何站内交互（进出站）以及逃犯的图像。
-- * **Passenger**（乘客）：用于跟踪乘客标识符、任何站内交互（进出站）以及乘客的图像。
+- **Camera**（摄像头）：用于跟踪与执行识别的摄像头相关的基础设备信息。它只存储摄像头标识符、站点标识符和闸机标识符。
+
+
+
+- **Offender**（逃犯）：用于跟踪逃犯标识符、任何站内交互（进出站）以及逃犯的图像。
+- **Passenger**（乘客）：用于跟踪乘客标识符、任何站内交互（进出站）以及乘客的图像。
 
 虽然领域内有三个聚合，但正如我们接下来看到的，只有一个显式定义的实体。
 
 ### 实体 (Entities)
 
-识别领域唯一的领域实体是 **CustomerStationInteraction**（客户站内交互）实体。它记录了站内特定交互的信息，例如使用的闸机以及进站（ingress）或出站（egress）的时间戳。虽然对于单个站点两个时间戳都有值，但更常见的情况是根据乘客的行程，其中一个或另一个会有值。
+识别领域唯一的领域实体是 **CustomerStationInteraction**（客户站内交互）实体。它记录了站内特定交互的信息，例如使用的闸机以及进站（`ingress`）或出站（`egress`）的时间戳。虽然对于单个站点两个时间戳都有值，但更常见的情况是根据乘客的行程，其中一个或另一个会有值。
 
 ### 事件 (Events)
 
@@ -1398,9 +1349,9 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 正如乘客领域只有两个事件一样，它也有两个事件处理器。每个事件处理器的匹配将使用 **CustomerStationInteraction** 实体创建一个识别记录，在涉及逃犯的情况下，还会发送通知。
 
 > **重要说明**
-> 请花时间审查每个领域解决方案的源代码，以及主存储库 `src` 文件夹中的共享代码库 (MTAEDA.sln)。
+> 请花时间审查每个领域解决方案的源代码，以及主存储库 `src` 文件夹中的共享代码库 (`MTAEDA.sln`)。
 
-领域模型与异步事件
+## 领域模型与异步事件
 
 至此，我们已经查看了每个领域的细节，了解了它们是如何运行的以及它们如何与彼此的事件交互。正如我们在本书中所学到的，这些事件不需要立即响应。现在，让我们来看看异步操作。
 
@@ -1408,12 +1359,7 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 在应用程序中实现同步操作有许多用途。但在某些时刻，当应用程序负载增加时，同步操作将无法扩展。这就是异步操作用武之地。这些操作允许在不同的上下文中进行多次执行，而同步操作会在调用的操作完成之前阻塞其他操作的执行。
 
-
-
-
-使用异步操作
-
-异步方法在利用可用资源方面更加高效。运行时间较的操作可以使用 C# 中的 `yield` 结构来继续执行，而其他操作在仍有可用资源时可以被调用。当与并行执行等概念结合时，异步执行可以在保持应用程序响应能力的同时同时，促进应用程序的进一步扩展。
+异步方法在利用可用资源方面更加高效。运行时间较长的操作可以使用 C# 中的 `yield` 结构来继续执行，而其他操作在仍有可用资源时可以被调用。当与并行执行等概念结合时，异步执行可以在保持应用程序响应能力的同时，促进应用程序的进一步扩展。
 
 ### 异步并行处理
 
@@ -1421,7 +1367,7 @@ MTAEDA 应用程序的核心库由所有领域都可以利用的接口和具体�
 
 让我们来看一个控制台程序中实现 `Parallel.ForEachAsync` 的示例，该程序有指向 Kafka 中不同主题的多个消费者。在这种情况下，我们将使用上述方法消费三个主题，允许它们都并行运行并在事件可用时进行消费。
 
-我们将从开始，使用一个顶层程序从 `appsettings.json` 文件中拉取配置信息，并为配置中列出的每个主题名称创建一个消费者。通过调用 `ConfigurationBuilder` 获取信息，从而解析 `appsettings.json` 文件。主题列表以管道符分隔的字符串存储，在拆分该字符串后，将执行初始循环来设置每个消费者并将其添加到消费者对象列表中。设置每个消费者的代码如下：
+我们将从使用一个顶层程序从 `appsettings.json` 文件中拉取配置信息，并为配置中列出的每个主题名称创建一个消费者开始。通过调用 `ConfigurationBuilder` 获取信息，从而解析 `appsettings.json` 文件。主题列表以管道符分隔的字符串存储，在拆分该字符串后，将执行初始循环来设置每个消费者并将其添加到消费者对象列表中。设置每个消费者的代码如下：
 
 ```csharp
 var consumer = new ConsumerBuilder<int, string>{
@@ -1457,7 +1403,7 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 当你在调试代码时，请确保通过从第 3 章“消息中间件”的代码文件夹运行 `docker compose up` 来运行 Kafka 实例。理想情况下，你可以添加代码来调用任何正在消费的主题的事件程序。尝试实验向列表中添加更多主题，或允许代码块根据事件的元数据解析事件程序。
 
-我们已经涵盖了大量内容，不仅涉及整个领域模型，还涉及如何利用异步操作利用并行执行。随着我们继续开发示例应用程序，这些功能将变得更加普遍，理解如何以及何时利用它们将是有益益的。
+我们已经涵盖了大量内容，不仅涉及整个领域模型，还涉及如何利用异步操作利用并行执行。随着我们继续开发示例应用程序，这些功能将变得更加普遍，理解如何以及何时利用它们将是有益的。
 
 ### 总结
 
@@ -1471,11 +1417,9 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 回答以下问题以测试你对本章知识的掌握：
 
-- 1. 哪个领域负责管理执行维护而创建的工作订单详情？
-
-- 2. 使用协调者模式（mediator pattern）的主要原因是什么？示例应用程序是如何实现它的？
-
-- 3. 异步编程意味着多线程执行吗？
+1. 哪个领域负责管理执行维护而创建的工作订单详情？
+2. 使用协调者模式（`mediator pattern`）的主要原因是什么？示例应用程序是如何实现它的？
+3. 异步编程意味着多线程执行吗？
 
 ### 进一步阅读
 
@@ -1525,26 +1469,23 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 假设你已经具有了一些 Docker 经验，但值得花时间回顾一下操作容器的基础知识。我们首先涵盖隔离、移植性、可重用、分层和抽象的基础知识。
 
-关于隔离，Docker 允许在容器范围内专注于一个进程。在 Docker 的世界中，容器是不可变的，它们从镜像创建，镜像可以直接从从注册表中获取，也可以从为特定需求定制的私有注册表中获取。这种不可变性的概念允许隔离局限于容器所需的进程，而不是任何外部影响或变动。并不是说外部影响不能修改 Docker 容器内部的内容。不可变性体现在容器重启时，在连接期间修改的所有信息都会被删除。
-
-
-
+关于隔离，Docker 允许在容器范围内专注于一个进程。在 Docker 的世界中，容器是不可变的，它们从镜像创建，镜像可以直接从注册表中获取，也可以从为特定需求定制的私有注册表中获取。这种不可变性的概念允许隔离局限于容器所需的进程，而不是任何外部影响或变动。并不是说外部影响不能修改 Docker 容器内部的内容。不可变性体现在容器重启时，在连接期间修改的所有信息都会被删除。
 
 ### 复习容器化基础知识
 
 这些内容本质上依赖于操作系统。基于 Windows 的依赖项的一个示例可能是特定程序对 Win32 DLL 的依赖。对于基于语言的服务和可执行文件，如果该语言是真正的跨平台语言（如 .NET、Python、Java 等），那么容器运行在什么操作系统上并不重要。
 
-可重用性的概念与分层理念交织在一起。其核心思想是：根据某些因素（例如使用的编排引擎、该编排引擎内的资源以及系统的整体需求），一个镜像可以跨 N 个容器。因此，启动运行相同可执行文件或服务的多个容器只需要一个镜像。此外，在构建镜像时，Docker 更新镜像的方式并不存在可重用性的概念。Docker 使用了基于校验和（checksums）标识的文件系统分层，这减少了根据常用操作创建唯一文件系统还原点的需求。当按顺序查看时，文件系统似乎具有不同的层。
+可重用性的概念与分层理念交织在一起。其核心思想是：根据某些因素（例如使用的编排引擎、该编排引擎内的资源以及系统的整体需求），一个镜像可以跨 N 个容器。因此，启动运行相同可执行文件或服务的多个容器只需要一个镜像。此外，在构建镜像时，Docker 更新镜像的方式并不存在可重用性的概念。Docker 使用了基于校验和（`checksums`）标识的文件系统分层，这减少了根据常用操作创建唯一文件系统还原点的需求。当按顺序查看时，文件系统似乎具有不同的层。
 
 例如，Docker 优化系统的一种方式是针对基础镜像使用诸如 Ubuntu 的基础系统，例如，确保容器运行所需的最少要求都已安装并捕获为校验和。当你基于其中一个现有的镜像构建新镜像时，这些校验和将作为基础镜像的一部分传递过来，消除了你安装运行所需基础要求的需求。现在，你将根据语言或其他特性为你的应用程序安装任何特定内容。配置中添加的每行代码都会创建一个新的校验和，随后创建一个新的文件系统检查点。
 
-抽象是另一个可以从根本上改变你编写软件组件的领域。通过容器，你可以从运行你想要的服务或程序的主要关注点中抽象出大量的技术复杂性。这包括无需担心底层操作系统、同一宿主机上安装的其他项目。事实上，被认为最佳实践的是限制运行容器的身份范围，以防止使用提权权限的潜在攻击。在许多情况下，Docker 镜像将默认使用 root 账户执行，这提供了过多的控制权。在执行容器时创建一个并使用服务主体系（service principal）或用户，有助于防止此类攻击。
+抽象是另一个可以从根本上改变你编写软件组件的领域。通过容器，你可以从运行你想要的服务或程序的主要关注点中抽象出大量的技术复杂性。这包括无需担心底层操作系统、同一宿主机上安装的其他项目。事实上，被认为最佳实践的是限制运行容器的身份范围，以防止使用提权权限的潜在攻击。在许多情况下，Docker 镜像将默认使用 `root` 账户执行，这提供了过多的控制权。在执行容器时创建一个并使用服务主体系（`service principal`）或用户，有助于防止此类攻击。
 
 这些话题本身可能非常庞大，且远超本书的范畴。然而，理解这些基础知识如何让你作为开发者从中受益，并将让你能够更多地关注绝对需要的部分，而减少对你可能需要的其他辅助操作细节的关注。
 
 ### 开发益处
 
-在本地开发方面，可移植性和可重用性基础是非常重要的。无论使用 Docker Compose、minikube 还是其他本地运行 Docker 容器的方法，在容器内部执行的进程在任何这些方法中都是一致的。这意味着在不同操作系统上工作的开发者在技术上可以运行相同的容器，无论开发者选择哪种操作系统，都能提供无缝的体验。
+在本地开发方面，可移植性和可重用性基础是非常重要的。无论使用 Docker Compose、`minikube` 还是其他本地运行 Docker 容器的方法，在容器内部执行的进程在任何这些方法中都是一致的。这意味着在不同操作系统上工作的开发者在技术上可以运行相同的容器，无论开发者选择哪种操作系统，都能提供无缝的体验。
 
 使用容器对开发生命周期有益的方式之一是，现在有大量的工具允许你在不离开桌面的情况下调试容器。在过去的几年里，来自 Docker、微软以及其他开源伙伴的工具使得集成开发环境（IDE）在帮助构建和调试基于容器的应用程序方面更加高效。这些工具减少了开发者的摩擦，因为调试看起来将变得自然得多，而无需连接两个不同的进程或命令行工具来调试特定的函数或代码段。
 
@@ -1564,9 +1505,9 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 ### 使用 Docker Compose 启动基础设施
 
-我们之前做的工作有一点是，它在我们的场景中是完全可重用的。开始开始，将 `docker-compose.yml` 文件从源文件复制到 `src` 目录下的任何领域解决方案文件夹中。这将为你提供一个基础的 Kafka 实现，你可以在调试服务代码时连接到它。
+我们之前做的工作有一点是，它在我们的场景中是完全可重用的。开始，将 `docker-compose.yml` 文件从源文件复制到 `src` 目录下的任何领域解决方案文件夹中。这将为你提供一个基础的 Kafka 实现，你可以在调试服务代码时连接到它。
 
-为了本演示说明，我们将使用 MTAEDA . solution 来说明放置文件的位置，并使用 **Visual Studio** 来说明如何触发 Docker 容器的启动。
+为了本演示说明，我们将使用 `MTAEDA.sln` 解决方案来说明放置文件的位置，并使用 **Visual Studio** 来说明如何触发 Docker 容器的启动。
 
 开始，你的领域解决方案根文件夹应该像**图 5.1**所示，其中 `docker-compose.yml` 文件已复制进去：
 
@@ -1574,7 +1515,7 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 > 图 5.1 - 添加 docker-compose.yml 后的文件结构
 
-如果你在使用 Visual Studio 并且安装了 Docker 工具，可以对没有关联 Dockerfile 的项目点击右键，点击上下文菜单，转到 **添加 | Docker 支持...** 以启用你的项目。你会注意到生成的 Dockerfile 内部包含多个 `FROM` 指令，这指示了一个名为多阶段 Dockerfile（multi-stage Dockerfiles）的概念。我们将在本章节稍后检查多阶段 Dockerfile。作为参考，**图 5.2** 展示了 **Docker 支持...** 菜单项的位置：
+如果你在使用 Visual Studio 并且安装了 Docker 工具，可以对没有关联 Dockerfile 的项目点击右键，点击上下文菜单，转到 **添加 | Docker 支持...** 以启用你的项目。你会注意到生成的 Dockerfile 内部包含多个 `FROM` 指令，这指示了一个名为多阶段 Dockerfile（`multi-stage Dockerfiles`）的概念。我们将在本章节稍后检查多阶段 Dockerfile。作为参考，**图 5.2** 展示了 **Docker 支持...** 菜单项的位置：
 
 ### 84 容器化与本地环境设置
 
@@ -1588,23 +1529,21 @@ await Parallel.ForEachAsync(consumerList, options, async (s, t)
 
 在云应用世界中，Kubernetes 是流行的部署目标。Kubernetes 作为多个组件和/微服务的编排层，提供了弹性和扩展性机制。虽然这是运行微服务工作负载的流行方式，但并不总是容易设置以方便开发生命周期。像 **minikube** 这样的工具提供了一种在你的本地机器上设置轻量级 Kubernetes 集群的方法，允许你测试部署是如何运行的。如果你在 Windows 或 macOS 上运行 Docker Desktop，有一个选项可以启用 Kubernetes 服务在 Docker 启动时自动启动。这也可以为为你提供一种在本地测试编排和部署的方法。
 
-
-
-
-
 ### 设置本地环境
 
 然而，拥有一个部署目标只是战斗的一半。你仍然需要一种创建符合 Kubernetes 规范的部署的方法，以便让你的代码在该环境中运行。你可以阅读该平台的文档并从头开始编写清单。你也可以使用如 Helm 等工具，使用标准化的模板包创建捆绑部署，但这仍然需要你投入工作，以确保所有需要运行的服务都已考虑在内。由于我们在解决方案中已经有一个 compose 文件，如果能利用它而不是重复劳动将是最好的。幸运的是，存在一些工具可以将 compose 文件转换为 Kubernetes 部署。
 
-其中一个工具名为 compose。此工具将读取现有的 compose 文件，并将其转换为 Kubernetes所需的适当 YAML 模板，以便在集群中创建你的容器（Containers）和内部服务（Services）。一旦你安装了合适的本地集群，就可以通过访问 https://compose.io/installation/ 参考你操作系统的安装说明来安装 compose。运行该工具非常简单，在命令提示符或控制窗口中输入以下内容即可：
+
+
+其中一个工具名为`compose`。此工具将读取现有的`compose`文件，并将其转换为 Kubernetes 所需的适当 YAML 模板，以便在集群中创建你的容器（Containers）和内部服务（Services）。一旦你安装了合适的本地集群，就可以通过访问 https://compose.io/installation/ 参考你操作系统的安装说明来安装`compose`。运行该工具非常简单，在命令提示符或控制窗口中输入以下内容即可：
 
 ```
 compose convert /path/to/docker-compose.yml
 ```
 
-这将为你 compose 文件中的每个 Service 创建两个文件——一个用于 Service 本，另一个用于 Deployment（部署）。你可以将所有 YAML 文件移动到解决方案级下的 compose 目录中，以便在一个处跟踪它们，也可以将 Service 和 Deployment 清单放在每个 Service 项目目录下的 compose 目录中。花一点时间检查生成的 YAML 文件，并将其与 compose 文件中的信息进行比较。你会发现，端口映射将出现在 service YAML 中，而其他内容将出现在 deployment YAML 中。
+这将为你`compose`文件中的每个 Service 创建两个文件——一个用于 Service 本身，另一个用于 Deployment（部署）。你可以将所有 YAML 文件移动到解决方案级下的`compose`目录中，以便在一个处跟踪它们，也可以将 Service 和 Deployment 清单放在每个 Service 项目目录下的`compose`目录中。花一点时间检查生成的 YAML 文件，并将其与`compose`文件中的信息进行比较。你会发现，端口映射将出现在 service YAML 中，而其他内容将出现在 deployment YAML 中。
 
-生成 YAML 文件后，你将想要测试它们以确保其功能正常。如果你是第一次使用 Kubernetes，系统将选择 cluster 作为当前上下文（context）。如果你以前连接过其他集群，请务必在测试 YAML 文件之前，将上下文设置为本地实例（通常称为 docker-desktop）。在设置好上下文 之后，运行以下命令在你的本地集群中创建一个新的命名空间（namespace），并应用 zookeeper 和 broker 服务的 Deployment 和文件：
+生成 YAML 文件后，你将想要测试它们以确保其功能正常。如果你是第一次使用 Kubernetes，系统将选择`cluster`作为当前上下文（context）。如果你以前连接过其他集群，请务必在测试 YAML 文件之前，将上下文设置为本地实例（通常称为`docker-desktop`）。在设置好上下文之后，运行以下命令在你的本地集群中创建一个新的命名空间（namespace），并应用`zookeeper`和`broker`服务的 Deployment 和文件：
 
 ```
 kubectl create namespace kafka
@@ -1616,12 +1555,16 @@ kubectl apply -f /compose/broker-1-deployment.yml -n kafka
 ### 容器化与本地环境搭建
 
 | kafka |
-| :--- |
-| kubectl apply -f ./kompose/broker1-service.yml -n kafka |
-| kubectl apply -f ./kompose/broker2-deployment.yml -n kafka |
-| kubectl apply -f ./kompose/broker2-service.yml -n kafka |
 
-你可以通过命令行（kubectl logs -n equipment deployment/zookeeper）检查 Zookeeper Pod 的日志，以确保 Zookeeper 正在运行且没有出现问题。可以尝试其他生成的 Deployments 和 Services，以更熟悉数据 基础设施的构成。
+| :--- |
+
+| `kubectl apply -f ./kompose/broker1-service.yml -n kafka` |
+
+| `kubectl apply -f ./kompose/broker2-deployment.yml -n kafka` |
+
+| `kubectl apply -f ./kompose/broker2-service.yml -n kafka` |
+
+你可以通过命令行（`kubectl logs -n equipment deployment/zookeeper`）检查 Zookeeper Pod 的日志，以确保 Zookeeper 正在运行且没有出现问题。可以尝试其他生成的 Deployments 和 Services，以更熟悉数据基础设施的构成。
 
 在本章中，我们专注于为领域服务的开发设置本地环境支持，包括如何启用容器编排支持。接下来，我们将通过使用 GitHub Codespaces 另一种一致管理环境的替代方法。
 
@@ -1635,7 +1578,7 @@ GitHub 是当今领先的开源协作平台。有超过 7300 万开发者使用�
 
 设置新的 Codespace 非常简单。通过遵循 Codespaces Quickstart（链接请参见本章的“延伸阅读”部分）中的指令，你可以在几分钟内启动并运行一个新的 Codespace。浏览器版的 Visual Studio Code。你不仅可以安装扩展并让它们在会话之间持久，还可以直接从浏览器运行和调试你的应用程序。
 
-使用 Equipment 领域进行此测试，使用 Quickstart 链接创建一个新的 Codespace。一旦 Codespace 创建完成，你将在新标签页中看到你的编辑器，使用以下终端导航到仓库 src 目录下的解决方案文件夹：
+使用 Equipment 领域进行此测试，使用 Quickstart 链接创建一个新的 Codespace。一旦 Codespace 创建完成，你将在新标签页中看到你的编辑器，使用以下终端导航到仓库`src`目录下的解决方案文件夹：
 
 ```
 cd src/MTAEDA.Equipment
@@ -1645,16 +1588,17 @@ cd src/MTAEDA.Equipment
 cd MTAEDA.Equipment.Query.API
 ```
 
-当你处于想要测试的服务的目录时，只需在终端中输入 `dotnet`。这将启动服务的恢复（restore）、构建（build）并最终运行。一旦服务启动，你将看到一个类似于图 5.3 的所示弹出窗口。点击“Open in Browser”将打开一个带有该服务基础 URL 的新标签，允许你导航到 Swagger 页面（如果相关）或从浏览器编辑器执行另一个验证测试。
+当你处于想要测试的服务的目录时，只需在终端中输入`dotnet`。这将启动服务的恢复（restore）、构建（build）并最终运行。一旦服务启动，你将看到一个类似于图 5.3 的所示弹出窗口。点击“Open in Browser”将打开一个带有该服务基础 URL 的新标签，允许你导航到 Swagger 页面（如果相关）或从浏览器编辑器执行另一个验证测试。
 
 ![](img/290aa6845834e57fd715912cc7e76d30_107_1)
+
 图 5.3 – Codespaces 中的应用程序弹出窗口
 
 使用 Codespaces 的一个缺点是它仅支持 Visual Studio。如果你不使用它，将受到很大限制。这就是 Dev Containers 发挥用场的地方。
 
 ### 作为环境的 Dev Containers
 
-使用 Dev Containers 进行本地开发是一种集中封装一切的方便方法。创建 Codespace 时，根目录下会出现一个 .devcontainer 文件夹。该目录可以被修改以定制每个容器。你可以使用 devcontainer.json 文件定义某些语言设置，也可以为环境包含一个 Dockerfile。
+使用 Dev Containers 进行本地开发是一种集中封装一切的方便方法。创建 Codespace 时，根目录下会出现一个`.devcontainer`文件夹。该目录可以被修改以定制每个容器。你可以使用`devcontainer.json`文件定义某些语言设置，也可以为环境包含一个 Dockerfile。
 
 现在我们更好地理解了 Dockerfile 如何工作，让我们深入了解服务。
 
@@ -1666,12 +1610,13 @@ cd MTAEDA.Equipment.Query.API
 
 现在我们对 Dockerfile 的工作有了更好的理解，让我们进入下一步：将服务连接到我们的 Docker Compose 文件。
 
-# 向 Docker Compose 文件添加服务我们将我们将 Equipment 领域服务在 compose 文件中定义服务。在文件末尾，保持与其他服务相同的缩进，首先通过添加三个新的服务定义，如下代码块所示：
+# 向 Docker Compose 文件添加服务
+
+我们将 Equipment 领域服务在`compose`文件中定义服务。在文件末尾，保持与其他服务相同的缩进，首先通过添加三个新的服务定义，如下代码块所示：
 
 ```
 query-service:
 ```
-
 
 ```yaml
 image: ''
@@ -1685,11 +1630,11 @@ command-service:
 
 现在，我们将保持镜像不变，并开始为每个服务添加一些细节。至少，我们需要指定每个服务暴露了哪些端口。这有助于服务发现找到不同的内部服务，并允许将外部工具挂载到您的服务上。例如，在查询服务数据库上暴露端口 1433，可以允许您在需要时使用 SQL Server Management Studio 连接到数据库。
 
-在某些情况下，服务具有依赖项，这些项必须在服务启动之前运行。命令服务（command service）和监听器（listener）都需要至少一个可用的消息代理（broker），否则服务将无法正常运行。查询服务依赖于数据库服务。使用 `depends_on` 属性允许我们指定 Docker Compose 在启动领域服务之前，哪些服务必须处于运行状态。
+在某些情况下，服务具有依赖项，这些项必须在服务启动之前运行。命令服务（command service）和监听器（listener）都需要至少一个可用的消息代理（broker），否则服务将无法正常运行。查询服务依赖于数据库服务。使用`depends_on`属性允许我们指定 Docker Compose 在启动领域服务之前，哪些服务必须处于运行状态。
 
-此外，还需要设置环境变量，这要求服务定义中存在 `environment` 属性。在我们的示例中，只有一个服务需要环境变量——数据库服务。SQL Server 镜像需要最终用户许可协议（EULA）的值为 `Y`，否则容器将不会启动。此外，必须为系统管理员（sa）账户提供值，该值也是通过环境变量传递的。
+此外，还需要设置环境变量，这要求服务定义中存在`environment`属性。在我们的示例中，只有一个服务需要环境变量——数据库服务。SQL Server 镜像需要最终用户许可协议（EULA）的值为`Y`，否则容器将不会启动。此外，必须为系统管理员（sa）账户提供值，该值也是通过环境变量传递的。
 
-`hostname` 和 `container_name` 属性不是必须的，但它们为容器的命名提供了灵活性，包括在客户端内部的命名，以及 Docker 在创建容器时的命名。我们将填写一些易于识别的名称，以便在 Docker UI 或通过命令行识别容器。
+`hostname`和`container_name`属性不是必须的，但它们为容器的命名提供了灵活性，包括在客户端内部的命名，以及 Docker 在创建容器时的命名。我们将填写一些易于识别的名称，以便在 Docker UI 或通过命令行识别容器。
 
 在服务定义中添加这些字段后，以下代码块概述了这些属性在每个服务下的排列方式。由于 API 服务以及监听器都运行在默认端口上，我们将默认端口映射到每个服务的唯一端口号。接下来的代码块也对此：
 
@@ -1734,7 +1679,7 @@ hostname: equip-cmd-svc
 container_name: equip-cmd-svc
 ```
 
-你还会注意到 sa 密码的变量是 `$ADMIN_PASSWORD`。在启动容器之前，将其设置为合适的值是非常重要的。
+你还会注意到`sa`密码的变量是`$ADMIN_PASSWORD`。在启动容器之前，将其设置为合适的值是非常重要的。
 
 ### 使用 Dockerfile 在本地构建和运行 91
 
@@ -1746,7 +1691,7 @@ export ADMIN_PASSWORD=<你的密码值>
 
 当你通过 Docker Compose 发出启动容器的命令时，该环境变量将在构建过程中被使用，用于设置数据库服务的系统管理员密码。
 
-最后，让我们使用 `context` 属性将领域服务的每个镜像指向其各自的目录。这将允许 Docker Compose 根据每个服务的 Dockerfile 路径来构建镜像。将 `image` 属性更改 `build` 属性，并通过删除冒号后的单引号来编辑该行。在放置 `context` 属性下方添加新行。例如，命令 API 可能如下所示：
+最后，让我们使用`context`属性将领域服务的每个镜像指向其各自的目录。这将允许 Docker Compose 根据每个服务的 Dockerfile 路径来构建镜像。将`image`属性更改`build`属性，并通过删除冒号后的单引号来编辑该行。在放置`context`属性下方添加新行。例如，命令 API 可能如下所示：
 
 ```yaml
 build:
@@ -1769,9 +1714,9 @@ event-listener:
     context: ../MTAEDA.Equipment.Listener
 ```
 
-通过运行 `docker compose build` 然后运行 `docker compose up` 来测试新配置。你应该看到服务在适当的地方进行构建（我们的领域服务），并在需要的地方拉取镜像。
+通过运行`docker compose build`然后运行`docker compose up`来测试新配置。你应该看到服务在适当的地方进行构建（我们的领域服务），并在需要的地方拉取镜像。
 
-在本节中，我们介绍了了单阶段和多阶段 Dockerfile 区别，以及如何将 Dockerfile 和相关服务集成到 Docker Compose 文件中供本地使用。
+在本节中，我们介绍了单阶段和多阶段 Dockerfile 区别，以及如何将 Dockerfile 和相关服务集成到 Docker Compose 文件中供本地使用。
 
 ### 总结
 
@@ -1782,25 +1727,31 @@ event-listener:
 ### 问题
 
 - 为什么使用 Kubernetes 而不是 Docker Compose 作为基础设施和服务的调度器？
+
 - 容器化的哪些基本原理可以提高开发体验？
-- Docker Compose 文件中的 `depends_on` 指令有何意义？
+
+- Docker Compose 文件中的`depends_on`指令有何意义？
+
 - 使用 GitHub Codespaces 作为开发环境有哪些限制？
+
 - Kafka 和数据库服务的启动方式与领域服务有何不同？
 
 ### 延伸阅读
 
 - Docker Compose 概述由 Docker 提供访问 https://docs.docker.com/compose/
+
 - Kompose - 从 Docker Compose 到 Kubernetes 由 Kompose 提供访问 https://kompose.io/
+
 - GitHub Codespaces 快速上手由 GitHub 提供访问 https://docs.github.com/en/codespaces/getting-started/quickstart
+
 - Codespaces 深度解析由 GitHub 提供访问 https://docs.github.com/en/codespaces/getting-started/deep-dive
-
-
-
 
 在本章中我们将涵盖以下主题：
 
 - 编排与容器
+
 - 容器中的调试
+
 - 针对容器的测试
 
 在本章结束时，你将能够编排完成完整本地运行环境所需的所有组件，包括我们正在积极编写的组件。你还将学习如何连接并调试运行在容器中的代码，以及如何针对基于容器的微服务执行功能测试和负载测试。
@@ -1809,13 +1760,13 @@ event-listener:
 
 对于本章，你将位于 GitHub 上的源代码，地址为：https://github.com/PacketPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/chapter06。
 
-我们还将使用 Postman。如果你以前没有使用过 Postman，但熟悉如何使用 `curl` 或 `Invoke-WebRequest` 发起 API 请求，那么开始使用它应该不会遇到问题。你可以从 http://getpostman.com/ 免费下载桌面版本。
+我们还将使用 Postman。如果你以前没有使用过 Postman，但熟悉如何使用`curl`或`Invoke-WebRequest`发起 API 请求，那么开始使用它应该不会遇到问题。你可以从 http://getpostman.com/ 免费下载桌面版本。
 
 我们将使用的另一个简单但有效的开源工具是 JMeter，它由 Apache 基金会管理维护。你可以从 https://jmeter.apache.org/ 下载它。
 
 ### 配置编排与容器
 
-我们已经开始使用容器技术对应用程序的组件进行编排了。我们在之前的章节中探索过的 `docker-compose .yml` 文件定义了我们需要的支持容器及其配置。当我们使用此文件执行 `docker-compose` 时，我们正在通过在 Docker 中启动特定配置的容器来对依赖资源进行编排。
+我们已经开始使用容器技术对应用程序的组件进行编排了。我们在之前的章节中探索过的`docker-compose .yml`文件定义了我们需要的支持容器及其配置。当我们使用此文件执行`docker-compose`时，我们正在通过在 Docker 中启动特定配置的容器来对依赖资源进行编排。
 
 下一步是将 MTAEDA 微服务添加到此编排定义中，这样我们就可以高效且一致地开发代码了。
 
@@ -1830,14 +1781,20 @@ event-listener:
 如果应用程序的所有内容（包括基础设施需求）都定义在代码中，我们将在从以下方面受益：
 
 - 更快的环境配置
+
 - 更高的可靠性
+
 - 一致的测试
+
 - 依赖关系的透明度
+
 - 更易的可移植性
 
 对于本书，我们将关注开发环境的编排，以便利用更快的环境配置。我们必须能够在支持持续更改和调试的同时，高效地启动所有应用程序组件。
 
 ### 创建容器镜像
+
+
 
 我们将创建一个配置文件，描述容器应如何托管生产者服务和消费者服务的应用程序代码。为了实现这一目标，我们将为每个服务创建一个 `Dockerfile`，并使用 Docker 命令行界面来构建并启动这些镜像。
 
@@ -1927,8 +1884,6 @@ docker run -d consumer:latest
 
 为了克服这个问题，我们需要在连接调试器的情况下，通过使用 Debug 构建，快速动态地在容器内部运行未发布的开发代码。我们必须理解 Visual Studio 如何修改容器镜像以支持调试，以及它是如何融入整体组件的编排中的。
 
-
-
 ### 调试单个微服务
 
 虽然 Visual Studio 在设置发布构建的 Dockerfile 方面表现出色，但在容器中调试代码时，它并不会使用整个定义。
@@ -1939,7 +1894,7 @@ docker run -d consumer:latest
 
 ![](img/290aa6845834e57fd715912cc7e76d30_122_0.png)
 
-在容器窗口中，你将看到一个名为 consumer 的正在运行的容器，它是基于 consumer:dev 镜像的。如果你进一步探索，如预期的那样，你会看到运行镜像与 Dockerfile 定义之间存在显著差异。
+在容器窗口中，你将看到一个名为 consumer 的正在运行的容器，它是基于 `consumer:dev` 镜像的。如果你进一步探索，如预期的那样，你会看到运行镜像与 Dockerfile 定义之间存在显著差异。
 
 Visual Studio 创建了一个不同的镜像，包含一系列映射的卷（包括一个指向本地解决方案文件夹的卷），并配置且附加了远程调试器。
 
@@ -1949,7 +1904,7 @@ Visual Studio 创建了一个不同的镜像，包含一系列映射的卷（包
 
 Visual Studio 提供了实现此操作的灵活性。如果我们想添加一个同时影响最终镜像和调试环境的自定义内容，我们为 Dockerfile 的 base 部分添加命令：
 
-```file
+```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 443
@@ -1983,9 +1938,9 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "consumer.dll"]
 ```
 
-你可以看到最终镜像是基于基础镜像的，因此它不会包含添加到 mydebug 镜像中的任何命令。在示例命令中，我们期望基础镜像（或任何派生于它的镜像）拥有一个文件 /tmp/image_type，内容为 "This is my base image"。当运行我们的调试容器时，我们期望 Visual Studio 目标是 mydebug 镜像，该镜像应该包含内容 "This is my debug image"，它位于 /tmp/image_type 文件中。
+你可以看到最终镜像是基于基础镜像的，因此它不会包含添加到 `mydebug` 镜像中的任何命令。在示例命令中，我们期望基础镜像（或任何派生于它的镜像）拥有一个文件 `/tmp/image_type`，内容为 "This is my base image"。当运行我们的调试容器时，我们期望 Visual Studio 目标是 `mydebug` 镜像，该镜像应该包含内容 "This is my debug image"，它位于 `/tmp/image_type` 文件中。
 
-我们必须做的最后一件事是告诉 Visual Studio 在调试时使用这个新镜像的名称。要完成这一点，向 .csproj 文件添加以下部分：
+我们必须做的最后一件事是告诉 Visual Studio 在调试时使用这个新镜像的名称。要完成这一点，向 `.csproj` 文件添加以下部分：
 
 ```xml
 <PropertyGroup>
@@ -1997,9 +1952,7 @@ ENTRYPOINT ["dotnet", "consumer.dll"]
 
 太棒了！开发环境的依赖以及任何调试环境的特定设置现在都受源码控制了！
 
-我们可以确定，所有使用相同代码库和 Docker 启动配置的开发者都运行着匹配开发和生产需求的一致容器定义。因此，我们可以在任何安装了 Docker 和 Visual Studio 的机器上启动完全工作的调试会话，而不需要任何其他本地依赖。这甚至扩展到了你可能已或未安装的最新 .NET Core SDK 版本。如果你喜欢尝试 SDK 的预览发布版，就会体会到这有多么。。
-
-MTAAD 开发环境的可移植性变得简单得多，并且现在通过代码可靠地控制。还记得“一切皆代码”（EaC）部分吗？
+我们可以确定，所有使用相同代码库和 Docker 启动配置的开发者都运行着匹配开发和生产需求的一致容器定义。因此，我们可以在任何安装了 Docker 和 Visual Studio 的机器上启动完全工作的调试会话，而不需要任何其他本地依赖。这甚至扩展到了你可能已或未安装的最新 .NET Core SDK 版本。如果你喜欢尝试 SDK 的预览发布版，就会体会到这有多么。MTAAD 开发环境的可移植性变得简单得多，并且现在通过代码可靠地控制。还记得“一切皆代码”（EaC）部分吗？
 
 但等一下……我们一次只调试一个微服务。Kafka 集群服务呢？
 
@@ -2019,7 +1972,7 @@ MTAAD 开发环境的可移植性变得简单得多，并且现在通过代码�
 
 图 6 - 在容器中调试（等等，文字说是图 6，但图片是 125。让我们根据上下文来看）。
 
-在容器窗口中，你将看到一个名为 consumer 的正在运行的容器，它是基于 consumer:dev 镜像的。如果你进一步探索，如预期的那样，你会看到运行镜像与 Dockerfile 定义之间存在显著差异。
+在容器窗口中，你将看到一个名为 consumer 的正在运行的容器，它是基于 `consumer:dev` 镜像的。如果你进一步探索，如预期的那样，你会看到运行镜像与 Dockerfile 定义之间存在显著差异。
 
 Visual Studio 创建了一个不同的镜像，包含一系列映射的卷（包括一个指向本地解决方案文件夹的卷），并配置且附加了远程调试器。
 
@@ -2063,9 +2016,9 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "consumer.dll"]
 ```
 
-你可以看到最终镜像是基于基础镜像的，因此它不会包含添加到 mydebug 镜像中的任何命令。在示例命令中，我们期望基础镜像（或任何派生于它的镜像）拥有一个文件 /tmp/image_type，内容为 "This is my base image"。当运行我们的调试容器时，我们期望 Visual Studio 目标是 mydebug 镜像，该镜像应该包含内容 "This is my debug image"，它位于 /tmp/image_type 文件中。
+你可以看到最终镜像是基于基础镜像的，因此它不会包含添加到 `mydebug` 镜像中的任何命令。在示例命令中，我们期望基础镜像（或任何派生于它的镜像）拥有一个文件 `/tmp/image_type`，内容为 "This is my base image"。当运行我们的调试容器时，我们期望 Visual Studio 目标是 `mydebug` 镜像，该镜像应该包含内容 "This is my debug image"，它位于 `/tmp/image_type` 文件中。
 
-我们必须做的最后一件事是告诉 Visual Studio 在调试时使用这个新镜像的名称。要完成这一点，向 .csproj 文件添加以下部分：
+我们必须做的最后一件事是告诉 Visual Studio 在调试时使用这个新镜像的名称。要完成这一点，向 `.csproj` 文件添加以下部分：
 
 ```xml
 <PropertyGroup>
@@ -2091,21 +2044,25 @@ ENTRYPOINT ["dotnet", "consumer.dll"]
 
 接下来，在 consumer 项目的右键菜单上选择**添加**，然后选择**容器编排支持...**：
 
-
-
 ### 在容器中调试
 
 ![](img/290aa6845834e57fd715912cc7e76d30_129_0.png)
 
 | 环境 | 标签 | 端口 | 卷 | 文件 | 日志 | 详情 |
+
 | --- | --- | --- | --- | --- | --- | --- |
+
 | 名称 | 数值 | | | | | |
+
 | ASPNETCORE_URLS | http://+:80 | | | | | |
+
 | DOTNET_RUNNING_L... | true | | | | | |
+
 | DOTNET_VERSION | 6.0.13 | | | | | |
+
 | MOCK_FALLBACK_P... | /usr/local/sbin/usr/local/sbin/bin/usr/sbin/bin/bin/bin/bin | | | | | |
 
-图 6.7 – 容器窗口，显示了按 docker-compose.yml 文件定义运行的所有服务。
+图 6.7 – 容器窗口，显示了按 `docker-compose.yml` 文件定义运行的所有服务。
 
 我们现在有了一个完整的调试开发环境，在 Kafka 服务的支持下运行并行微服务代码。
 
@@ -2115,13 +2072,15 @@ ENTRYPOINT ["dotnet", "consumer.dll"]
 
 ### 修复 Debug 自定义镜像
 
-当从单容器调试过渡到编排调试时，我们丢失了之前一节中“调试单个微服务”里的一个非常重要的功能。docker-compose 文件中定义的容器不再应用我们在 Dockerfile 镜像定义（我们将其命名为 `mydebug`）中添加的自定义调试构建命令。
+
+
+当从单容器调试过渡到编排调试时，我们丢失了之前一节中“调试单个微服务”里的一个非常重要的功能。`docker-compose` 文件中定义的容器不再应用我们在 Dockerfile 镜像定义（我们将其命名为 `mydebug`）中添加的自定义调试构建命令。
 
 我们修改了 `csproj` 文件并添加了一个名为 `DockerfileFastModeStage` 的设置，以指定仅在调试模式下运行时构建的镜像名称。遗憾的是，在使用 `docker-compose` 编排多个容器时，Visual Studio 并不会遵循该设置。
 
 幸运的是，修复方法很简单：
 
-- 1. 在 Visual Studio docker-compose 项目中，添加一个名为 `docker-compose.vs.debug.yml` 的新文件。可能存在一个名称非常相似的文件，但请确保你有一个具有此特定文件名的新文件：
+1. 在 Visual Studio docker-compose 项目中，添加一个名为 `docker-compose.vs.debug.yml` 的新文件。可能存在一个名称非常相似的文件，但请确保你有一个具有此特定文件名的新文件：
 
 ## 微服务的本地化测试与调试
 
@@ -2131,7 +2090,7 @@ ENTRYPOINT ["dotnet", "consumer.dll"]
 
 在此文件中，我们将为 `docker-compose.yml` 文件指定覆盖设置，这些设置在调试模式下编排时将具有优先级。
 
-- 2. 添加以下代码以指示 Visual Studio 针对每个 Dockerfile 中的 `mydebug` 镜像：
+2. 添加以下代码以指示 Visual Studio 针对每个 Dockerfile 中的 `mydebug` 镜像：
 
 ```
 version: '3.4'
@@ -2157,18 +2116,21 @@ DevOps 生命周期中所有阶段的完整测试方案不在本书的讨论范�
 
 我们将使用 Postman 建立一个简单的测试：
 
-- 1. 创建一个新的集合（Collection），它仅仅是一个用于存储一组相关 API 请求的文件夹，我们可以重复执行这些请求。
-- 2. 接下来，创建一个新请求。将方法类型设置为 POST，并将请求 URL 设置为 `http://localhost:5000/send`。
-- 3. 选择 Body 标签，将格式更改为 Raw，并在文本区域中输入事件消息。我选择使用“This is a Postman test to our orchestrated environment.”（这是对我们编排环境的 Postman 测试）。
+1. 创建一个新的集合（Collection），它仅仅是一个用于存储一组相关 API 请求的文件夹，我们可以重复执行这些请求。
+
+2. 接下来，创建一个新请求。将方法类型设置为 POST，并将请求 URL 设置为 `http://localhost:5000/send`。
+
+3. 选择 Body 标签，将格式更改为 Raw，并在文本区域中输入事件消息。我选择使用“This is a Postman test to our orchestrated environment.”（这是对我们编排环境的 Postman 测试）。
 
 ![](img/290aa6845834e57fd715912cc7e76d30_131_0.png)
 
-- 4. 确保 Visual Studio 解决方案正在调试上一节中的 docker-compose 启动。
-- 5. 点击 Send，你应该看到 Postman 确认收到了状态码为 200 的响应。如果你检查生产者和消费者的容器，你将看到消息已经传播。
+4. 确保 Visual Studio 解决方案正在调试上一节中的 docker-compose 启动。
+
+5. 点击 Send，你应该看到 Postman 确认收到了状态码为 200 的响应。如果你检查生产者和消费者的容器，你将看到消息已经传播。
 
 Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操作和请求后测试操作添加脚本。
 
-- 6. 在 Tests 框中添加以下代码，允许你断言响应是成功的：
+6. 在 Tests 框中添加以下代码，允许你断言响应是成功的：
 
 > 图 6-9 – 设置一个简单的 Postman API 请求
 
@@ -2188,9 +2150,6 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 
 图 6.10 – 创建简单的响应测试
 
-
-
-
 ## 微服务的本地化测试与调试
 
 在总结报告中，我实现了每秒 57.4 次请求的吞吐量。这听起来不多，但请注意，我们还没有对生产者（Producer）应用程序进行扩展。
@@ -2209,21 +2168,29 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 
 ### 问题
 
-- 1. Visual Studio 在项目的默认 Docker 模板中提供了类似于流水线的活动？
-- 2. Visual Studio 如何在容器中高效地调试代码？
-- 3. 如果生产者服务完全失败但所有其他组件均健康，会发生什么？
+1. Visual Studio 在项目的默认 Docker 模板中提供了类似于流水线的活动？
+
+2. Visual Studio 如何在容器中高效地调试代码？
+
+3. 如果生产者服务完全失败但所有其他组件均健康，会发生什么？
 
 ### 延伸阅读
 
 - [GitOps and the Rise of Everything-as-Code](Jelle den Burger 著，访问 https://www.meshcloud.io/2022/04/04/gitops-and-the-rise-of-everything-as-code/)
+
 - [Visual Studio Container Tools](Microsoft 著，访问 https://docs.microsoft.com/en-us/visualstudio/containers/overview?view=vs-2022
+
 - [Modify Container Images for Debugging](Microsoft 著，访问 https://docs.microsoft.com/en-us/visualstudio/containers/container-build?WT.mc_id=visualstudio_containers_aka_containerfastmode&view=vs-2022#modify-container-image-only-for-debugging
+
 - [Create a multi-container app with Docker Compose](Microsoft 著，访问 https://docs.microsoft.com/en-us/visualstudio/containers/tutorial-multicainer-view=vs-2022
+
 - [Docker Compose build properties](Microsoft 著，访问 https://docs.microsoft.com/en-us/visualstudio/containers/docker-compose-properties?view=vs-2022
+
 - [API Testing Strategy](Cerosh Jacob 著，访问 https://medium.com/geekculture/api-testing-strategy-3841ff43f6
+
 - [Event-Oriented Architecture Anti-Patterns](Sergi Gonzalez 著，访问 https://medium.com/letgo/event-oriented-architecture-patterns-2dcc68ed282)
 
-# # 7 微服务的可观测性
+# 7 微服务的可观测性
 
 在上一章中，我们能够编排 MTAEDA 应用程序，以便于启动和调试系统的所有组件。每个独立服务在运行时都可以进行查询，因此易于识别问题并获得解决问题所需的洞察。
 
@@ -2238,8 +2205,11 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 我们将在本章中涵盖以下主题：
 
 - 如何监控服务的健康和可用性
+
 - 跨微服务的日志关联
+
 - 在事件之间使用因果关系日志（causation logging）
+
 - 利用 Azure Application Insights 实现可观测性
 
 在本章结束时，你将了解如何在事件驱动的应用服务中添加独立日志，而不会丢失支持高级环境所需的聚合信息。
@@ -2254,8 +2224,10 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 
 从一个清晰的可观测性定义开始是明智的。换句话说，意味着能够注意到或辨别某些事情。应用到我们对软件应用程序的辨别上，意味着更具体地说明它是什么。在软件系统中，这通过通常所谓的“三支柱”来实现：
 
-字体 指标（Metrics）：随时间变化的一系列测量值
+- 指标（Metrics）：随时间变化的一系列测量值
+
 - 日志（Logs）：系统内部消息的记录
+
 - 追踪（Traces）：连接相关事件的指标集
 
 在此处，有必要解决网络上看到的批评意见。虽然在极大规模扩展时这些支柱确实存在局限性，但理解和使用这三支柱是所有微服务架构的基本要求。
@@ -2263,6 +2235,7 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 在微服务世界中，我们有两个需要克服的重要障碍，需要修改方法：
 
 1. 微服务架构的应用程序根据定义由许多较小的独立组件组成，它们之间完全隔离。它们甚至运行在不同的基础设施上，使用不同的语言开发，或需要不同的 CPU 架构。
+
 2. 事件驱动架构将微服务解耦到我们无法控制有多少消费者对单个产生的事件做出反应的。
 
 对于这三支柱的每一个，让我们理解与单体应用程序相比，这些障碍带来的特定挑战。这将为本章后续章节提供关键。
@@ -2274,10 +2247,6 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 在微服务世界中，我们不能（也不应该）认为整个应用程序有一个单一的可用性信号。应用程序由许多独立运行的服务组成，每个服务都有其自身的健康状况与否。一个服务的不可用并不意味着整个系统的完全故障。其他服务应该具有容错能力并继续运行。
 
 此外，微服务应该进行水平扩展。虽然服务的某个实例不健康或不可用，但它不代表整个系统的单点故障。
-
-
-
-
 
 ### 微服务可观测性
 
@@ -2322,7 +2291,9 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 在 Kubernetes 中，可以使用任何三种不同的方法配置存活探针：
 
 - 命令探针（command probe）
+
 - HTTP 请求探针（HTTP request probe）
+
 - TCP 探针（TCP probe）
 
 对于**生产者（Producer）** 服务，我们将专注于创建一个存活 API 端点，它将配置为 **HTTP 请求探针。**
@@ -2331,7 +2302,7 @@ Postman 拥有一套强大的 JavaScript 脚本工具，允许你为请求前操
 
 # 添加生产者存活端点
 
-在生产者项目的 Program.cs 文件中，已经有使用 MapGet() 和 MapPost() 方法定义的简单端点的内联定义。在 `"/"` 和 `/send` 设置代码之间添加以下内容：
+在生产者项目的 `Program.cs` 文件中，已经有使用 `MapGet()` 和 `MapPost()` 方法定义的简单端点的内联定义。在 `"/"` 和 `/send` 设置代码之间添加以下内容：
 
 ```go
 app.MapGet("/healthz", () => "Ok!");
@@ -2345,7 +2316,7 @@ app.MapGet("/healthz", () => "Ok!");
 
 > 图 7.1 – 来自存活健康 API 端点的响应
 
-MapGet () 的默认响应码为 200。无论返回什么内容，Kubernetes 都会将其解释为服务存活且良好。如果我们的端点挂起或未报告任何内容，编排器将终止并替换服务实例。
+`MapGet()` 的默认响应码为 200。无论返回什么内容，Kubernetes 都会将其解释为服务存活且良好。如果我们的端点挂起或未报告任何内容，编排器将终止并替换服务实例。
 
 如果就绪端点指示容器不可用，编排器将停止向其发送流量。
 
@@ -2356,30 +2327,34 @@ MapGet () 的默认响应码为 200。无论返回什么内容，Kubernetes 都�
 在 Kubernetes 中，可以使用任何三种不同的方法配置存活探针：
 
 - 命令探针
+
 - HTTP 请求探针
+
 - TCP 探针
 
-对于**生产者（Producer）** 服务，我们将专注于创建一个存活 API 端点，它将配置为 **HTTP 请求探针。**
 
-对于**消费者（Consumer）** 服务，我们将专注于创建一个 TCP 监听器服务，它将配置为 **TCP 探针。**
+
+对于**生产者（Producer）**服务，我们将专注于创建一个存活 API 端点，它将配置为 **HTTP 请求探针**。
+
+对于**消费者（Consumer）**服务，我们将专注于创建一个 TCP 监听器服务，它将配置为 **TCP 探针**。
 
 # 添加生产者存活端点
 
-在生产者项目的 Program.cs 文件中，已经有使用 MapGet() 和 MapPost() 方法定义的简单端点的内联定义。在 `"/"` 和 `/send` 设置代码之间添加以下内容：
+在生产者项目的 `Program.cs` 文件中，已经有使用 `MapGet()` 和 `MapPost()` 方法定义的简单端点的内联定义。在`"/"`和`/send`设置代码之间添加以下内容：
 
 ```go
 app.MapGet("/healthz", () => "Ok!");
 ```
 
-它非常简单地创建了一个返回 Ok 字符串的新 API 端点。
+它非常简单地创建了一个返回 `Ok` 字符串的新 API 端点。
 
-启动应用程序并通过 http://localhost:5000/healthz 访问健康端点：
+启动应用程序并通过 `http://localhost:5000/healthz` 访问健康端点：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_144_0.png)
 
 > 图 7.1 – 来自存活健康 API 端点的响应
 
-MapGet () 的默认响应码为 200。无论返回什么内容，Kubernetes 都会将其解释为服务存活且良好。如果我们的端点挂起或未报告任何内容，编排器将终止并替换服务实例。
+`MapGet()` 的默认响应码为 200。无论返回什么内容，Kubernetes 都会将其解释为服务存活且良好。如果我们的端点挂起或未报告任何内容，编排器将终止并替换服务实例。
 
 如果就绪端点指示容器不可用，编排器将停止向其发送流量。
 
@@ -2398,7 +2373,7 @@ app.MapGet("/complexhealth", (HttpContext http) => {
 });
 ```
 
-重新启动应用程序并通过 http://localhost:5000/complexhealth 访问存活端点。
+重新启动应用程序并通过 `http://localhost:5000/complexhealth` 访问存活端点。
 
 如果当前是周日，它将返回 **500** 状态码，指示不健康：
 
@@ -2412,7 +2387,7 @@ app.MapGet("/complexhealth", (HttpContext http) => {
 
 > 图 7.3 – 来自复杂存活 API 端点的响应，指示健康
 
-让我们查看使用存活 HTTP 请求端点时， Kubernetes 配置文件的部分是什么样的：
+让我们查看使用存活 HTTP 请求端点时，Kubernetes 配置文件的部分是什么样的：
 
 ```yaml
 spec:
@@ -2432,7 +2407,7 @@ spec:
 
 # 添加消费者存活端点
 
-对于消费者，添加 TCP 存活端点稍微复杂一些。在 Main 入口处，构建 Ihost 之前添加以下代码：
+对于消费者，添加 TCP 存活端点稍微复杂一些。在 `Main` 入口处，构建 `IHost` 之前添加以下代码：
 
 ```go
 Task.Run(() => {
@@ -2448,19 +2423,13 @@ Task.Run(() => {
 });
 ```
 
-
-
-
-
 ### 存活（Liveness）与就绪
 
-}
-
-这段代码在端口 123 上创建一个 TCP 监听器，并绑定到运行该进程的系统的所有网络接口。`AcceptTcpClient()` 方法是一个阻塞调用，这就是为什么整个范围被封装在 `Task.Run()` 方法中。否则，它将阻塞主消费者服务的启动。示例在 TCP 客户端成功连接时会输出 Ok。这是一个可选步骤。Kubernetes 确认存活状态只需要连接成功，即使连接被立即关闭也可以。
+这段代码在端口 123 上创建一个 TCP 监听器，并绑定到运行该进程的系统的所有网络接口。`AcceptTcpClient()` 方法是一个阻塞调用，这就是为什么整个范围被封装在 `Task.Run()` 方法中。否则，它将阻塞主消费者服务的启动。示例在 TCP 客户端成功连接时会输出 `Ok`。这是一个可选步骤。Kubernetes 确认存活状态只需要连接成功，即使连接被立即关闭也可以。
 
 此更改对于 Kubernetes 部署是足够的，因为编排器可以直接访问容器 Pod 并查询 123 端口。要使用 `docker-compose` 在本地进行测试，我们必须将相同的端口映射到本地主机。修改 `docker-compose.yml` 文件以包含来自消费者的端口映射：
 
-```
+```yaml
 services:
   consumer:
     image: ${DOCKER_REGISTRY}-consumer
@@ -2513,7 +2482,7 @@ spec:
 
 让我们模拟这样一个场景：生产者服务启动了，但我们不想在最初 30 秒内接受任何请求。在现实世界中，某些服务在启动时可能需要完成大量工作，即使存活端点有响应，我们可能也希望等待另一个操作完成后再接收传入请求。
 
-在 `/complexhealthz` 端点下方以下代码：
+在 `/complexhealthz` 端点下方添加以下代码：
 
 ```csharp
 var appStartTime = DateTime.UtcNow;
@@ -2533,7 +2502,7 @@ app.Map("/readyz", (HttpContext http) =>
 });
 ```
 
-启动应用程序并通过 http://localhost:5000/readyz 访问就绪端点。
+启动应用程序并通过 `http://localhost:5000/readyz` 访问就绪端点。
 
 在启动后的 30 秒内，响应代码将为 500，消息将显示距离服务准备好接受请求还剩多少秒：
 
@@ -2549,7 +2518,7 @@ app.Map("/readyz", (HttpContext http) =>
 
 图 7.6 – 就绪 HTTP 端点显示已准备好处理服务请求
 
-让我们预览一下配置部分的样式，以指示 Kubernetes 使用我们的存活 TCP 请求端点：
+让我们预览一下配置部分的样式，以指示 Kubernetes 使用我们的就绪 HTTP 请求端点：
 
 ```yaml
 spec:
@@ -2598,17 +2567,21 @@ spec:
 选择订阅以管理部署的资源和成本。使用资源组像文件夹一样管理所有资源。
 
 | 订阅 * | PAYG Dev-Test |
+
 | 资源组 * | (New) RG-MTAEDA |
 
 实例详情
 
 | 名称 * | mtaeda_appinsights |
+
 | 区域 * | (US) Central US |
+
 | 资源模式 * | Classic Workspace-based |
 
 工作区详情
 
 | 订阅 * | PAYG Dev-Test |
+
 | Log Analytics 工作区 | (new) DefaultWorkspace-41c1b1e0-3e91-48d6-938-abee77d4a507-CUS ... |
 
 图 7.8 – 在 Azure 中创建 Application Insights
@@ -2623,24 +2596,22 @@ spec:
 
 图 7.9 – 复制 Application Insights 实例的连接字符串
 
-
-
-
 既然我们已经有了 Application Insights 实例和连接字符串，让我们首先为 Producer 服务设置遥测数据。
 
 # 向 Application Insights 传输遥测数据
 
 将 Application Insights 添加到 Producer 服务的步骤如下：
 
-- 1. 打开 producer.csproj 文件，并添加以下两个包：
+1. 打开 `producer.csproj` 文件，并添加以下两个包：
+
 ```xml
 <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
 <PackageReference Include="Microsoft.ApplicationInsights.Kubernetes" Version="2.0.4" />
 ```
 
-- 2. 在 Program.cs 文件中，在调用构建 `builder.Build()` 命令之前添加以下服务项：
+2. 在 `Program.cs` 文件中，在调用构建 `builder.Build()` 命令之前添加以下服务项：
 
-```sharp
+```csharp
 builder.Services.AddApplicationInsightsTelemetry(
   (options) =>
     options.ConnectionString =
@@ -2651,9 +2622,9 @@ builder.Services.AddApplicationInsightsKubernetes(
   Enricher());
 ```
 
-- 3. 重新编译并启动应用程序。
+3. 重新编译并启动应用程序。
 
-- 4. 几秒后，回到 Azure 中的 Application Insights 实例，并选择 **Live metrics**（实时指标）窗格。你将看到一个服务器，它代表 Producer 容器，正在流式传输经典仪表指标，如 CPU、提交内存和请求计数：
+4. 几秒后，回到 Azure 中的 Application Insights 实例，并选择 **Live metrics**（实时指标）窗格。你将看到一个服务器，它代表 Producer 容器，正在流式传输经典仪表指标，如 CPU、提交内存和请求计数：
 
 ### 微服务可观测性
 
@@ -2665,16 +2636,16 @@ builder.Services.AddApplicationInsightsKubernetes(
 
 现在，让我们按照相似的步骤将 Application Insights 添加到 consumer 服务。请务必注意此代码与 Producer 代码之间的细微差异：
 
-- 1. 打开 consumer.csproj 文件，并添加以下包：
+1. 打开 `consumer.csproj` 文件，并添加以下包：
 
 ```xml
 <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.21.0" />
 <PackageReference Include="Microsoft.ApplicationInsights.Kubernetes" Version="2.0.4" />
 ```
 
-- 2. 在 Program.cs 文件中，将以下代码添加到 `CreateHostBuilder()` 方法的末尾。注意，我们正在扩展该单行代码：
+2. 在 `Program.cs` 文件中，将以下代码添加到 `CreateHostBuilder()` 方法的末尾。注意，我们正在扩展该单行代码：
 
-```sharp
+```csharp
 } // End of the ConfigureAppConfiguration parentheses
 .ConfigureServices(
 (config) => config.AddApplicationInsightsTelemetryWorkerService(
@@ -2687,9 +2658,9 @@ Insights ---
 
 ### 日志聚合
 
-- 3. 重新编译并启动应用程序。
+3. 重新编译并启动应用程序。
 
-- 4. 再等几秒钟，回到 Azure 中的 Application Insights 实例并选择 Live metrics。你将看到两个服务器，分别代表 Producer 和 Consumer 消费者。我们对两者的仪表指标都聚合了可见性。
+4. 再等几秒钟，回到 Azure 中的 Application Insights 实例并选择 Live metrics。你将看到两个服务器，分别代表 Producer 和 Consumer 消费者。我们对两者的仪表指标都聚合了可见性。
 
 ![](img/290aa6845834e57fd715912cc7e76d30_155_0.png)
 
@@ -2697,15 +2668,17 @@ Insights ---
 
 通过启用遥测数据，我们为 Application Insights 实例配置了连接字符串和通信通道。在代码中还添加了一个 Kubernetes Enricher 服务，它会修改日志信息使其更符合托管容器的特性。例如，指标显示容器 ID 为服务器名称，而不是底层节点的主机。得益于此，我们可以计划在 Kubernetes 环境中扩展应用程序服务，并获取查看容器特定指标以及聚合服务级指标所需的必要信息。
 
+
+
 虽然现在能够获得服务更详细指标的可见性很棒，但我们的主要目标是聚合日志。此配置是将日志直接从服务传输到 Application Insights 的先驱。
 
-# 向 Application Insights 传输日志
+## 向 Application Insights 传输日志
 
 向 Application Insights 日志遵循 .NET 的标准 `ILogger` 模式。设置指标的遥测数据会自动配置 `ILogger` 服务，将 Application Insights 实例作为目标。我们只需要在代码中访问 `ILogger` 服务即可。
 
 按照以下步骤操作 Producer 服务：
 
-- 1. 在 Program.cs 文件中，我们从 builder 初始化 app，添加以下代码：
+1. 在 `Program.cs` 文件中，我们从 `builder` 初始化 `app`，添加以下代码：
 
 ```csharp
 var app = builder.Build();
@@ -2714,14 +2687,14 @@ using var scope = app.Services.CreateScope();
 var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
 ```
 
-- 2. 在 /send 端点代码中，在我们设置 Producer 服务的 topic 之后，添加对 logger 的调用：
+2. 在 `/send` 端点代码中，在我们设置 Producer 服务的 `topic` 之后，添加对 `logger` 的调用：
 
-```sharp
+```csharp
 await svc.SetTopic(ProducerTopic);
 logger.Debug("Producer service set the topic to {topic}", ProducerTopic);
 ```
 
-- 3. 在 appsettings.json 文件中，配置 Application Insights 的日志级别以捕捉：
+3. 在 `appsettings.json` 文件中，配置 Application Insights 的日志级别以捕捉：
 
 ```json
 "Logging": {
@@ -2734,17 +2707,17 @@ logger.Debug("Producer service set the topic to {topic}", ProducerTopic);
 }
 ```
 
-- 4. 重新编译并启动应用程序。
+4. 重新编译并启动应用程序。
 
-- 5. 对 Producer 服务的 Application /send 端点发起 POST 调用。
+5. 对 Producer 服务的 Application `/send` 端点发起 POST 调用。
 
-- 6. 回到 Azure 中的 Application Insights 实例，选择 Transaction search（事务搜索）窗格。搜索 topic：
+6. 回到 Azure 中的 Application Insights 实例，选择 Transaction search（事务搜索）窗格。搜索 `topic`：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_157_0.png)
 
 图 7.12 - 事务搜索
 
-- 7. 我们已成功写入 Application Insights。点击其中一条消息将揭示端到端详情：
+7. 我们已成功写入 Application Insights。点击其中一条消息将揭示端到端详情：
 
 ### 微服务可观测性
 
@@ -2761,8 +2734,8 @@ logger.Debug("Producer service set the topic to {topic}", ProducerTopic);
 Application Insights 支持这种模式，即分布式跟踪（distributed tracing）。它对标识使用了略不同的名称：
 
 - 而不是 Log Item Id，我们使用 Log Id。
-- 而不是 Correlation Id，我们使用 operation_Id。
-- 而不是 Causation Id，我们使用 operation_ParentId。
+- 而不是 Correlation Id，我们使用 `operation_Id`。
+- 而不是 Causation Id，我们使用 `operation_ParentId`。
 
 以下是这些标识在实际运行中的示例。添加了多个消费者以说明关联/因果模式的工作原理：
 
@@ -2775,14 +2748,11 @@ Application Insights 支持这种模式，即分布式跟踪（distributed traci
 
 表 7.1 – 关联与因果标识模式示例
 
-
-
-
-# 生成带有关联 ID 和因果 ID 的日志和事件负载
+## 生成带有关联 ID 和因果 ID 的日志和事件负载
 
 在生产者项目中，打开 `producerService.cs` 文件并为 `CloudEvent` 结构添加定义：
 
-```cs
+```csharp
 internal class CloudEvent : ISerializer<CloudEvent>
 {
     public string? Id { get; set; }
@@ -2805,7 +2775,7 @@ internal class CloudEvent : ISerializer<CloudEvent>
 
 在 `Program.cs` 文件中，添加此行以获取 `TelemetryClient` 服务：
 
-```cs
+```csharp
 var telemetryClient = scope.ServiceProvider.GetRequiredService<TelemetryClient>();
 ```
 
@@ -2815,7 +2785,7 @@ var telemetryClient = scope.ServiceProvider.GetRequiredService<TelemetryClient>(
 
 最后，无论关联 ID 的值是什么，我们必须将当前遥测客户端的操作 ID 设置为关联 ID，以便其出现在任何日志中。
 
-```cs
+```csharp
 var causationID = System.Diagnostics.Activity.Current.TraceId.ToString();
 var correlationID = http.Request.Headers.RequestId.FirstOrDefault() ?? causationID;
 telemetryClient.Context.Operation.Id = correlationID;
@@ -2823,7 +2793,7 @@ telemetryClient.Context.Operation.Id = correlationID;
 
 我们需要修改 `IProducer` 接口的 `Send()` 方法定义，以便传入关联 ID 和因果 ID：
 
-```cs
+```csharp
 internal interface IProducerService
 {
     Task Send(string message, string correlationID, string causationID);
@@ -2833,7 +2803,7 @@ internal interface IProducerService
 
 至此，我们还需要更新 `producerService` 中的 `Send()` 实现以接受这些 ID 并使用它们构造 `CloudEvent` 负载：
 
-```cs
+```csharp
 public async Task Send(string message, string correlationID, string causationID)
 {
     await Task.Run(() =>
@@ -2859,17 +2829,17 @@ public async Task Send(string message, string correlationID, string causationID)
 
 生产者服务剩下的工作是在 `/send` 方法中将 ID 传递给 `Send()` 调用：
 
-```cs
+```csharp
 await svc.Send(message, correlationID, causationID);
 ```
 
 现在，我们可以查看如何在消费者服务中处理相同的挑战。
 
-# 具有一致性关联 ID 和因果 ID 的消费者日志
+## 具有一致性关联 ID 和因果 ID 的消费者日志
 
 在消费者项目中，在 `consumerService.cs` 文件中添加一个与生产者中添加的类似的 `CloudEvent` 类：
 
-```cs
+```csharp
 internal class CloudEvent : IDeserializer<CloudEvent>
 {
   public string? Id { get; set; }
@@ -2881,7 +2851,7 @@ internal class CloudEvent : IDeserializer<CloudEvent>
 
 ### 关联与因果
 
-```cs
+```csharp
 public CloudEvent Deserialize(ReadOnlySpan<byte> data, bool isNull, SerializationContext context)
 {
     var messageParts = Encoding.UTF8.GetString(data).Split("||");
@@ -2899,13 +2869,13 @@ public CloudEvent Deserialize(ReadOnlySpan<byte> data, bool isNull, Serializatio
 
 在 `Program.cs` 文件中，获取 `TelemetryClient` 实例并将其传递给 `consumersService`，以便我们拥有日志机制：
 
-```cs
+```csharp
 var telemetryClient = scope.ServiceProvider.GetRequiredService<TelemetryClient>();
 ```
 
 遥测客户端被进一步推入 `MessageReceivedEventHandler` 中，该处理器最终响应任何发布的新 Kafka 事件。在它的代码中，我们将客户端的操作 ID 设置为来自事件负载的 ID。记住，这是我们想要持久化的关联 ID。
 
-```cs
+```csharp
 public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient telemetryClient)
 {
     await Task.Run(() =>
@@ -2916,20 +2886,16 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 }
 ```
 
-
-
-
-
 4. 在探索特定操作的分组事件日志时，你如何识别链中的前一个日志？
 
 ### 延伸阅读
 
-- [通过 kubernetes.io 配置存活探针、就绪探针和启动探针](访问：https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
-- [在 Kubernetes 上使用 TCP 探测监控 ASP.NET Core 后台服务的健康](Rahul Rai 访问：https://thecloudblog.net/post/monitoring-health-of-aspnet-core-background-services-with-tcp-probes-on-kubernetes/)
-- [用于 Kubernetes 的 Microsoft Application Insights](由微软开源社区编写，访问：https://github.com/microsoft/ApplicationInsights-Kubernetes
-- [.NET Core 和 ASP.NET Core 中的日志记录](由 Microsoft 提供，访问：https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0
-- [.NET 运行时中的 HTTP 关联协议实现](由微软开源社区编写，访问：https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/HttpContextProtocol.md
-- [作为遥测关联数据模型的 Application Insights](Microsoft 提供，访问：https://docs.microsoft.com/en-us/azure/azure-monitor/app/correlation#example
+- [通过 kubernetes.io 配置存活探针、就绪探针和启动探针](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+- [在 Kubernetes 上使用 TCP 探测监控 ASP.NET Core 后台服务的健康](https://thecloudblog.net/post/monitoring-health-of-aspnet-core-background-services-with-tcp-probes-on-kubernetes/)（Rahul Rai）
+- [用于 Kubernetes 的 Microsoft Application Insights](https://github.com/microsoft/ApplicationInsights-Kubernetes)（由微软开源社区编写）
+- [.NET Core 和 ASP.NET Core 中的日志记录](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0)（由 Microsoft 提供）
+- [.NET 运行时中的 HTTP 关联协议实现](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/HttpContextProtocol.md)（由微软开源社区编写）
+- [作为遥测关联数据模型的 Application Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/correlation#example)（Microsoft 提供）
 
 ## CI/CD 流水线与集成测试
 
@@ -2946,6 +2912,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 - 学习集成测试方法，并实现基础功能验证测试以及回归测试的实现
 
 > **重要说明**
+
 本章中提到的所有白皮书和其他来源的链接可以在章节末尾的“延伸阅读”部分找到。
 
 ## 审查常见的 CI/CD 模式
@@ -2965,6 +2932,8 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 例如，你可能希望为任何环境设置一套标准的流水线，以确保每次部署都是一致的。
 
+
+
 图 8.1 展示了适用于任何环境的单一流水线方法：
 
 ## 审查常见的 CI/CD 模式
@@ -2973,7 +2942,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 图 8.1 – 适用于任何环境的单一流水线
 
-根据你的工作流，你可能希望有一个从构建到生产环境的流水线。这为特定构物或一组构物的生命周期提供了单一视图视图。图 8.2 显示了适用于所有环境方法的单一流水线：
+根据你的工作流，你可能希望有一个从构建到生产环境的流水线。这为特定构物或一组构物的生命周期提供了单一视图。图 8.2 显示了适用于所有环境方法的单一流水线：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_169_1.png)
 
@@ -2983,7 +2952,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 例如，GitHub 允许用户创建可重用的工作流，这些工作流可以被多个开发者导入和使用。Azure Pipelines 也以嵌套 YAML 文件的形式允许重用模板。
 
-现在有了基于环境的流水线示例，我们可以查看 CI/CD 流水线中常见的下一个模式，即**构物管理**。
+现在有了基于环境的流水线示例，我们可以查看 CI/CD 流水线中常见的下一个模式，即`构物管理`。
 
 ## 构物管理
 
@@ -2993,7 +2962,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 ## 触发器与门控
 
-为了利用 CI/CD 平台的优势，通常预计仓库中的一个或多个分支已设置好在提交提交时自动构建。这种 CI 调用是由提交推送到远程所**触发**的。部署也可以根据成功的构建进行触发；然而，CD 流水线自动移动到环境通常被限于较低的环境，在那里破坏性变更是可以容忍和预期的。
+为了利用 CI/CD 平台的优势，通常预计仓库中的一个或多个分支已设置好在提交提交时自动构建。这种 CI 调用是由提交推送到远程所`触发`的。部署也可以根据成功的构建进行触发；然而，CD 流水线自动移动到环境通常被限于较低的环境，在那里破坏性变更是可以容忍和预期的。
 
 不可避免的是，在发布代码到环境之前某些条件需要确认。例如，在大型组织中，每次推送到生产都需要某种类型的确认。对于许多团队来说，这是一个可能需要几分钟、几小时甚至几天的手动过程。开发者的一个共同痛点是解决手动干预的时间。需要某种干预的情况通常被称为门。
 
@@ -3001,13 +2970,9 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 ### 特性标记
 
-通常被视为高级模式，特性标记（feature flags）的使用通过通过标记隐藏可能尚未完全准备好进入生产环境的功能，或者在生产环境出现问题时回滚功能，来帮助持续交付。你可能决定让某些用户可以轻松访问某些即将推出的功能，以帮助从他们那里直接获取反馈。这种做法被称为使用**金丝雀小组**（canary group），即小部分用户可以测试新功能并提供反馈，特别是在某些未按预期工作的情况下。
+通常被视为高级模式，特性标记（feature flags）的使用通过通过标记隐藏可能尚未完全准备好进入生产环境的功能，或者在生产环境出现问题时回滚功能，来帮助持续交付。你可能决定让某些用户可以轻松访问某些即将推出的功能，以帮助从他们那里直接获取反馈。这种做法被称为使用`金丝雀小组`（canary group），即小部分用户可以测试新功能并提供反馈，特别是在某些未按预期工作的情况下。
 
-
-
-
-
-实现功能标记（feature flags）允许你保护用户免受未完成功能的影响，同时允许代码进入生产环境。这为新功能与现有代码并行的行的测试测试奠定了基础。
+实现功能标记（feature flags）允许你保护用户免受未完成功能的影响，同时允许代码进入生产环境。这为新功能与现有代码并行的测试奠定了基础。
 
 ## 为 CI/CD 实现启用 GitHub Actions
 
@@ -3017,7 +2982,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 对于持续集成设置，我们将从一个旨在构建源代码以及运行任何适用单元测试的基础模板开始。完成后，所需的 Docker 镜像将存储在 GitHub Packages 中：
 
-- 点击 **Configure**（配置）将根据你选择的存储库启动一个新的 CI 流水线模板。**图 8.3** 展示了你将在示例中使用的流水线模板：
+- 点击`Configure`（配置）将根据你选择的存储库启动一个新的 CI 流水线模板。图 8.3 展示了你将在示例中使用的流水线模板：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_171_0.png)
 
@@ -3045,19 +3010,20 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 我们将遵循与之前 CI 流水线类似的路径：
 
-- 1. 要创建 CD 流水线，我们必须滚动到 **Deployment**（部署）并点击 **View all**（查看全部）来查看部署流，如*图 8.6*所示：
+- 1. 要创建 CD 流水线，我们必须滚动到`Deployment`（部署）并点击`View all`（查看全部）来查看部署流，如图 8.6 所示：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_173_0.png)
 
 > 图 8.6 – 查看链接以列出所有部署操作类型
 
-- 2. 从那里，我们可以在搜索栏中输入 `azure` 来查找特定的 Azure 部署。对于我们的目的，我们需要寻找 **Deploy to AKS**（部署到 AKS）模板，如*图 8.7*所示，因为部署目标将是 Azure Kubernetes Service：
+- 2. 从那里，我们可以在搜索栏中输入`azure`来查找特定的 Azure 部署。对于我们的目的，我们需要寻找`Deploy to AKS`（部署到 AKS）模板，如图 8.7 所示，因为部署目标将是 Azure Kubernetes Service：
 
 ## CI/CD 流水线与集成测试
 
 ## 开始使用 GitHub Actions
 
 构建、测试并部署你的代码。按你想要的方式进行代码审查、分支管理和优先级划分。选择一个工作流开始。
+
 学习如何自己设置工作流
 
 ![](img/290aa6845834e57fd715912cc7e76d30_174_0.png)
@@ -3073,8 +3039,11 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 在集成测试方面，有几种方法被认为是标准的（来源：https://softwaretestingfundamentals.com/integration-testing/）。这些包括：
 
 - 大爆炸（Big-band）：所有组件结合在一起
+
 - 自上而下（Top-down）：首先测试顶级单元，然后测试低级单元（即测试一个 API 路由，然后测试它依赖的组件）
+
 - 自下向上（Bottom-up）：首先测试低级单元，然后测试顶级单元（即在测试依赖于这些交互的 API 路由之前测试组件之间的交互）
+
 - 三明治/混合（Sandwich/hybrid）：自上而下和自下向上方法的有意混合
 
 这些方法提供了特定的优势，取决于你希望如何验证代码的功能。它们还可以支持操作顺序是决定性因素的场景。
@@ -3094,40 +3063,51 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 ### 问题
 
 - 在设计 CI/CD 流水线时，确保实现所有模式重要吗？为什么？
+
 - 是否存在实现功能标记无益的情况？
+
 - 软件开发周期中的哪些闸门可以自动化以减少摩擦并提高上市时间？
+
 - 在流水线中实现集成测试是否有最佳实践或优选方法？
 
 ### 扩展阅读
 
 - 使用持续集成：https://docs.microsoft.com/en-us/devops/develop/what-is-continuous-integration
+
 - 什么是持续交付：https://docs.microsoft.com/en-us/devops/deliver/what-is-continuous-delivery
+
 - 什么是功能标记：https://azure.microsoft.com/en-us/overview/continuous-delivery-vs-continuous-deployment
+
 - 使用环境部署：https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment
+
 - 重用工作流：https://docs.github.com/en/actions/using-workflows/reusing-workflows
+
 - 查看部署：https://docs.github.com/en/actions/managing-workflow-runs/reviewing-deployments
--为 GitHub Action 添加审批工作流：https://timheuer.com/blog/add-approval-workflow-to-github-actions/
+
+- 为 GitHub Action 添加审批工作流：https://timheuer.com/blog/add-approval-workflow-to-github-actions/
+
 - 使用 GitHub Actions 的审批工作流：https://www.aaron-powell.com/posts/2020-03-23-approval-workflows-with-github-actions/
 
+- `特性切换（又称特性标记）：` https://martinfowler.com/articles/feature-toggles.html
 
+- `特性标记（Feature flags）：` https://www.optimizely.com/optimization-glossary/feature-flags/
 
+- `什么是特性标记？` https://launchdarkly.com/blog/what-are-feature-flags/
 
-
-- **特性切换（又称特性标记）：** https://martinfowler.com/articles/feature-toggles.html
-- **特性标记（Feature flags）：** https://www.optimizely.com/optimization-glossary/feature-flags/
-- **什么是特性标记？** https://launchdarkly.com/blog/what-are-feature-flags/
-- **集成测试：** https://softwaretestingfundamentals.com/integration-testing/
+- `集成测试：` https://softwaretestingfundamentals.com/integration-testing/
 
 ## 9. 故障注入与混沌测试
 
-正如软件开发实践在过去几十年中一直在不断演变一样，软件测试也是如此。随着**基础设施即代码 (IaC)** 和**配置即代码 (CaC)** 等范式的额外吸引力，应用程序现在有越来越多的部分被存储在代码中，并可以通过多种方式进行测试。利用云服务托管应用程序部分的一个额外益处是，可以在隔离环境或生产环境中测试，当云平台发生故障时，应用程序将如何响应。
+正如软件开发实践在过去几十年中一直在不断演变一样，软件测试也是如此。随着`基础设施即代码 (IaC)`和`配置即代码 (CaC)`等范式的额外吸引力，应用程序现在有越来越多的部分被存储在代码中，并可以通过多种方式进行测试。利用云服务托管应用程序部分的一个额外益处是，可以在隔离环境或生产环境中测试，当云平台发生故障时，应用程序将如何响应。
 
 有时，从虚拟机服务到无服务器函数再到身份验证平台，任何服务都可能变得不可用。在处理运行在本地部署环境中的应用程序时，往往会忽视观察应用程序面对意外停机时反应的能力。能够根据对潜在问题的理解来预测、编写、测试并解决问题，将为你的开发生命周期带来更多信心，对应用程序的稳定性也更有信心。
 
 在本章中我们将涵盖以下主题：
 
 - 容错性与故障注入
+
 - 混沌测试
+
 - 实现故障注入和混沌测试
 
 ### 故障注入与混沌测试
@@ -3135,7 +3115,9 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 在本章结束时，你将能够完成以下操作：
 
 - 理解什么是故障注入以及它与容错性总体原则的关系
+
 - 理解混沌测试以及它如何增强故障注入测试
+
 - 在你的流水线中实现故障注入和混沌测试
 
 ### 技术要求
@@ -3143,13 +3125,14 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 你可以在 GitHub 上对应的章节文件夹中找到本章的代码示例，地址为 https://github.com/PackPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/chapter9 和 https://github.com/PackPublishing/Implementing-Event-Driven-Microservices-Architecture-in-.NET-7/tree/main/src。
 
 > **重要**
+
 > 本章提到的所有白皮书和其他来源的链接可以在章节末尾的“进一步阅读”部分找到。
 
 ## 容错性与故障注入
 
-**容错性**（fault tolerance）的概念——即应用程序、平台或运行时容忍系统性故障的能力——本身似乎是一个很容易理解的概念。毕竟，你会期望应用程序在服务不可用时能够优雅地恢复。在许多情况下，应用程序在编写时已经考虑到，托管它的底层基础设施始终是可靠的，除非发生灾难性事件。这种可靠性可能是在本地数据中心建立起来的，且很少受到挑战，但同样的假设对于云平台、服务和组件来说并不成立。
+`容错性`（fault tolerance）的概念——即应用程序、平台或运行时容忍系统性故障的能力——本身似乎是一个很容易理解的概念。毕竟，你会期望应用程序在服务不可用时能够优雅地恢复。在许多情况下，应用程序在编写时已经考虑到，托管它的底层基础设施始终是可靠的，除非发生灾难性事件。这种可靠性可能是在本地数据中心建立起来的，且很少受到挑战，但同样的假设对于云平台、服务和组件来说并不成立。
 
-尽管云平台将为某些云服务的可用性提供特定的**服务水平协议 (SLAs)**，但始终存在服务层级或区域级停机的可能性，这种停机可能毫无警告且影响广泛。因此，当你为云端开发应用程序时，记住这些类型的停机是非常重要的。
+尽管云平台将为某些云服务的可用性提供特定的`服务水平协议 (SLAs)`，但始终存在服务层级或区域级停机的可能性，这种停机可能毫无警告且影响广泛。因此，当你为云端开发应用程序时，记住这些类型的停机是非常重要的。
 
 研究云提供商的状态页面，可以让你深入了解哪些服务受到了停机影响、受影响的频率如何以及采取了哪些修复措施来问题。使用这些信息可以帮助你评估哪些故障或停机最可能发生，以及你如何准备应用程序来应对它们。
 
@@ -3167,7 +3150,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 ### 混沌测试
 
-虽然混沌测试涉及执行旨在破坏你的应用程序所依赖的服务测试，但混沌工程的总体设计最早是由 Netflix 的工程师在 2010 年建立的。这种工程的主要目的是测试你的服务在极端情况下的表现。22012 年，Netflix 引入了 Chaos Monkey，这是他们的内部混沌测试平台。这为其他公司和工程师利用并修改该套件到其应用程序打开了大门。
+虽然混沌测试涉及执行旨在破坏你的应用程序所依赖的服务测试，但混沌工程的总体设计最早是由 Netflix 的工程师在 2010 年建立的。这种工程的主要目的是测试你的服务在极端情况下的表现。2012 年，Netflix 引入了 Chaos Monkey，这是他们的内部混沌测试平台。这为其他公司和工程师利用并修改该套件到其应用程序打开了大门。
 
 ### 混沌工程的顺序
 
@@ -3185,47 +3168,45 @@ public async Task Handle(ConsumerResult<int, CloudEvent> result, TelemetryClient
 
 Gremlin 等套件旨在更容易采用混沌工程，避免像 Netflix 流行的 Chaos Monkey 套件那样具有激进的学习曲线。对于基于 Kubernetes 的应用程序，一个流行的混沌测试框架是 Chaos Mesh。它的出现时间没有像 Chaos Monkey 这样的套件那么久，但 Chaos Mesh 是以统一方式实施混沌实验的可靠选择。
 
+# 针对模块化编排引擎实施故障注入和混沌测试。Chaos Mesh 也是`云原生计算基金会 (CNCF)`的一个孵化项目，它向更广泛的开源社区开放使用。
 
 
 
+有趣的是，我们将用来设置一些基准实验的`Azure Chaos Studio`，它在背后依赖`Chaos Mesh`来对基于`Kubernetes`的目标进行编排和运行实验。它还允许在虚拟机、虚拟机规模集以及其他资源上进行基于代理的安装，让您对实验的运行位置和方式有更深入的控制。我们将首先深入研究`Chaos Mesh`，然后再转向使用`Azure Chaos Studio`编排实验。
 
-# 针对模块化编排引擎实施故障注入和混沌测试。Chaos Mesh 也是**云原生计算基金会 (CNCF)** 的一个孵化项目，它向更广泛的开源社区开放使用。
+## 从 Chaos Mesh 开始
 
-有趣的是，我们将用来设置一些基准实验的 **Azure Chaos Studio**，它在背后依赖 Chaos Mesh 来对基于 Kubernetes 的目标进行编排和运行实验。它还允许在虚拟机、虚拟机规模集以及其他资源上进行基于代理的安装，让您对实验的运行位置和方式有更深入的控制。我们将首先深入研究 Chaos Mesh，然后再转向使用 Azure Chaos Studio 编排实验。
+首先，我们将查看安装和使用`Chaos Mesh`，以直观如何构建实验来影响`Kubernetes`集群内的服务、命名空间，甚至是宿主机。它可以安装在任何有效的`Kubernetes`环境中，从`minikube`到`Docker Desktop`再到云托管托管集群。每个实验都是作为集群中的一个**自定义资源定义 (CRD)** 创建的，这允许捕获您想要生成的每个实验的特定`.yaml`文件；然后可以在流水线或测试运行期间应用它们。
 
-# 从 Chaos Mesh 开始
-
-首先，我们将查看安装和使用 Chaos Mesh，以直观如何构建实验来影响 Kubernetes 集群内的服务、命名空间，甚至是宿主机。它可以安装在任何有效的 Kubernetes 环境中，从 **minikube** 到 **Docker Desktop** 再到云托管托管集群。每个实验都是作为集群中的一个**自定义资源定义 (CRD)** 创建的，这允许捕获您想要生成的每个实验的特定 .yaml 文件；然后可以在流水线或测试运行期间应用它们。
-
-如果您恰好在使用 **Linux** 发行版、**Windows 的 Linux 子系统 (WSL)** 或 **macOS**，Chaos Mesh 主页提供的命令行命令可以帮助您开始安装过程：
+如果您恰好在使用`Linux`发行版、**Windows 的 Linux 子系统 (WSL)** 或`macOS`，`Chaos Mesh`主页提供的命令行命令可以帮助您开始安装过程：
 
 ```
 curl -SSL https://mirrors.chaos-mesh.org/v2.2.2/install.sh | bash
 ```
 
-执行此操作将在您选择的集群中创建 Chaos Mesh。如果您不想通过命令行安装，也可以通过 **Helm** 图表安装 Chaos Mesh，只需将 Helm 仓库添加到缓存中并从那里安装。安装完成后，您应该检查该命名空间及其内部的资源。将安装三个服务：
+执行此操作将在您选择的集群中创建`Chaos Mesh`。如果您不想通过命令行安装，也可以通过`Helm`图表安装`Chaos Mesh`，只需将`Helm`仓库添加到缓存中并从那里安装。安装完成后，您应该检查该命名空间及其内部的资源。将安装三个服务：
 
-- **Chaos-daemon**: 它接收并执行混沌实验，包括任何支持的实验类型。
-- **Chaos-dashboard**: 它允许您使用基于 Web 的 UI 管理网。
-- **Chaos-mesh-controller-manager**: 这是网的控制平面。它位于 Kubernetes API 和 `chaos-daemon` 服务之间，接收来自 Kubernetes API 的事件并将它们发送到 `chaos-daemon` 服务进行执行。
+- **Chaos-daemon**：它接收并执行混沌实验，包括任何支持的实验类型。
+- **Chaos-dashboard**：它允许您使用基于 Web 的 UI 管理网。
+- **Chaos-mesh-controller-manager**：这是网的控制平面。它位于`Kubernetes` API 和`chaos-daemon`服务之间，接收来自`Kubernetes` API 的事件并将它们发送到`chaos-daemon`服务进行执行。
 
 ### 故障注入和混沌测试
 
-使用 `kubectl`，您可以通过端口转发访问 Chaos Mesh 仪表板：
+使用`kubectl`，您可以通过端口转发访问`Chaos Mesh`仪表板：
 
 ```
 kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 ```
 
-遵循以下步骤配置 Chaos Mesh：
+遵循以下步骤配置`Chaos Mesh`：
 
-- 1. 首次连接时，系统会要求输入基于角色的访问控制 (RBAC) 令牌以继续，如图 9.1 所示：
+1. 首次连接时，系统会要求输入基于角色的访问控制 (RBAC) 令牌以继续，如图 9.1 所示：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_184_0.png)
 
 图 9.1 – Chaos Mesh 仪表板中的 RBAC 授权界面
 
-- 2. 如果您没有令牌，点击“点击此处生成链接”；系统将为您提供指令。将打开新窗口，如图 9.2 所示。默认设置是从带范围的令牌开始，允许您选择连接的命名空间和角色。在本例中，我们将使用集群范围的 RBAC 令牌以实现最大的可见性和管理。通常情况下，在不将这些令牌缩小到至少命名空间级别的情况下生成它们并不认为是最佳实践：
+2. 如果您没有令牌，点击“点击此处生成链接”；系统将为您提供指令。将打开新窗口，如图 9.2 所示。默认设置是从带范围的令牌开始，允许您选择连接的命名空间和角色。在本例中，我们将使用集群范围的 RBAC 令牌以实现最大的可见性和管理。通常情况下，在不将这些令牌缩小到至少命名空间级别的情况下生成它们并不认为是最佳实践：
 
 ### 实施故障注入和混沌测试
 
@@ -3233,15 +3214,15 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 
 图 9.2 – Chaos Mesh 仪表板中的令牌生成器界面
 
-- 3. 确保按照对话框所示的说明操作，并复制令牌名称以及令牌本身（运行 `kubectl describe` 命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到**图 9.1**所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与**图 9.3**所示类似的主页：
+3. 确保按照对话框所示的说明操作，并复制令牌名称以及令牌本身（运行`kubectl describe`命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到图 9.1 所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与图 9.3 所示类似的主页：
 
-### 故障注入和混沌测试
+### 实施故障注入和混沌测试
 
 ![](img/290aa6845834e57fd715912cc7e76d30_186_0.png)
 
 图 9.3 – Chaos Mesh 仪表板的示例首页显示
 
-- 4. 从这里，我们可以开始点击**新建实验 (New experiment)** 按钮来创建一个新的基础混沌实验。这将加载一个类似于**图 9.4** 所示的新屏幕。默认将选择 **Kubernetes**，您可以点击**压力测试 (Stress Test)** 在集群中创建一个新的压力测试实验。将出现选项，让您可以填写 CPU 工作线程数量、要模拟的 CPU 负载百分比以及其他配置选项。如**图 9.4** 所示填写值，并向下滚动表单直到看到**提交 (Submit)** 按钮。点击设置 CPU 压力测试的值并移动到下一部分，在在该部分您可以设置实验的目标：
+4. 从这里，我们可以开始点击**新建实验 (New experiment)** 按钮来创建一个新的基础混沌实验。这将加载一个类似于图 9.4 所示的新屏幕。默认将选择`Kubernetes`，您可以点击**压力测试 (Stress Test)** 在集群中创建一个新的压力测试实验。将出现选项，让您可以填写 CPU 工作线程数量、要模拟的 CPU 负载百分比以及其他配置选项。如图 9.4 所示填写值，并向下滚动表单直到看到**提交 (Submit)** 按钮。点击设置 CPU 压力测试的值并移动到下一部分，在该部分您可以设置实验的目标：
 
 ### 实施故障注入和混沌测试
 
@@ -3301,17 +3282,13 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 | Kubernetes | Nodes | |
 | 注入到 | | |
 
-- 5. 确保按照对话框所示的说明操作，复制令牌名称以及令牌本身（运行 `kubectl describe` 命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到**图 9.1**所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与**图 9.3**所示类似的主页：
+5. 确保按照对话框所示的说明操作，复制令牌名称以及令牌本身（运行`kubectl describe`命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到图 9.1 所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与图 9.3 所示类似的主页：
 
-- 4. 从这里，我们可以开始点击**新建实验 (New experiment)** 按钮来创建一个新的基础混沌实验。这将加载一个类似于**图 9.4** 所示的新屏幕。默认将选择 **Kubernetes**，您可以点击**压力测试 (Stress Test)** 在集群中创建一个新的压力测试实验。将出现选项，让您可以填写 CPU 工作线程数量、要模拟的 CPU 负载百分比以及其他配置选项。如**图 9.4** 所示填写值，并向下滚动表单直到看到**提交 (Submit)** 按钮。点击设置 CPU 压力测试的值并移动到下一部分，在在该部分您可以设置实验的目标：
+4. 从这里，我们可以开始点击**新建实验 (New experiment)** 按钮来创建一个新的基础混沌实验。这将加载一个类似于图 9.4 所示的新屏幕。默认将选择`Kubernetes`，您可以点击**压力测试 (Stress Test)** 在集群中创建一个新的压力测试实验。将出现选项，让您可以填写 CPU 工作线程数量、要模拟的 CPU 负载百分比以及其他配置选项。如图 9.4 所示填写值，并向下滚动表单直到看到**提交 (Submit)** 按钮。点击设置 CPU 压力测试的值并移动到下一部分，在该部分您可以设置实验的目标：
 
-- 5. 确保按照对话框所示的说明操作，复制令牌名称以及令牌本身（运行 `kubectl describe` 命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到**图 9.1**所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与**图 9.3**所示类似的主页：
+5. 确保按照对话框所示的说明操作，复制令牌名称以及令牌本身（运行`kubectl describe`命令后显示）。您需要点击**关闭 (Close)** 来关闭此对话框并返回到图 9.1 所示的 RBAC 界面。在相应的框中输入令牌名称和令牌值，然后点击**提交 (Submit)**。这应该为您重新加载仪表板，显示与图 9.3 所示类似的主页：
 
-
-
-
-
-# 实现故障注入和混沌测试 171
+## 实现故障注入和混沌测试 171
 
 5. 接下来，将使用 AKS 集群进行测试并执行相同的操作。你会注意到只有“服务直连”（service-direct）选项被启用。点击该选项并等待操作完成。完成后，点击包含集群的所在行右侧的“管理操作”（Manage actions）链接。这将打开一个新的窗格面板（如图 9.10 所示），列出该集群可用的服务直连混沌实验：
 
@@ -3319,7 +3296,7 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 
 图 9.10 – 可用的服务直连功能列表
 
-6. 此列表列出了通过调用 Kubernetes API 可以执行的操作。对于其他资源类型，这些功能将反映受 Azure Resource Management API 影响的属性或操作。例如，当点击虚拟机规模集的“管理操作”链接时，你将看到一组可以直接在机器上运行的功能，这是因为在启用基于代理的实验类型时已安装了代理。图 9.11 展示了为虚拟机或虚拟机规模集启用的基于代理的实验类型示例：
+6. 此列表列出了通过调用`Kubernetes` API 可以执行的操作。对于其他资源类型，这些功能将反映受 Azure Resource Management API 影响的属性或操作。例如，当点击虚拟机规模集的“管理操作”链接时，你将看到一组可以直接在机器上运行的功能，这是因为在启用基于代理的实验类型时已安装了代理。图 9.11 展示了为虚拟机或虚拟机规模集启用的基于代理的实验类型示例：
 
 ### 故障注入和混沌测试
 
@@ -3333,29 +3310,29 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 
 图 9.12 - 显示可用注入故障的实验创建窗格
 
-8. 在编辑故障定义时，从下拉菜单中选择 AKS Chaos Mesh Stress Chaos。你会看到两个需要填充的字段——一个用于实验，另一个用于 JSON 规范，后者告诉实验目标是什么。我们早些从 Chaos Mesh 保存的 Chaos 定义文件将包含了我们所需的信息，但该文件是 .yaml 格式。一种方法是使用在线 YAML 转 JSON 转换器，并从选择器向下复制 YAML 内容。文件的其余部分不需要。
+8. 在编辑故障定义时，从下拉菜单中选择 AKS Chaos Mesh Stress Chaos。你会看到两个需要填充的字段——一个用于实验，另一个用于 JSON 规范，后者告诉实验目标是什么。我们早些从`Chaos Mesh`保存的 Chaos 定义文件将包含了我们所需的信息，但该文件是`.yaml`格式。一种方法是使用在线 YAML 转 JSON 转换器，并从选择器向下复制 YAML 内容。文件的其余部分不需要。
 
-9. 如果你愿意，也可以手动将所需的 YAML 转换为 JSON。完成后，复制转换后的 JSON 并将其粘贴到 jsonSpec 字段中，如图 9.13 所示。这将告诉实验目标是 mtaeaida-infra 命名空间，并在命名空间中的 pod 上运行 10 分钟的 CPU 压力测试：
+9. 如果你愿意，也可以手动将所需的 YAML 转换为 JSON。完成后，复制转换后的 JSON 并将其粘贴到`jsonSpec`字段中，如图 9.13 所示。这将告诉实验目标是`mtaeaida-infra`命名空间，并在命名空间中的 pod 上运行 10 分钟的 CPU 压力测试：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_193_0.png)
 
-图 9.13 – 使用来自 YAML 文件的 JSON 设置更新 jsonSpec 字段
+图 9.13 – 使用来自 YAML 文件的 JSON 设置更新`jsonSpec`字段
 
 ### 故障注入和混沌测试
 
-- 10. jsonSpec 字段是必的——如果没有它，实验将不知道做什么或对哪个命名空间采取操作。如果你还没有这样做，请点击**下一步：目标资源**（Next: Target resources）；你将看到你已启用基于服务的故障的 AKS 集群列表。选择合适的集群，点击*保存*（Save），并返回实验编辑器。点击**保存**（Save）回到主实验。在顶部，你会看到一个启动（Start）按钮，它将触发实验。在在此之前，需要为作为混沌实验一部分创建的托管身份赋予权限。
+10. `jsonSpec`字段是必需的——如果没有它，实验将不知道做什么或对哪个命名空间采取操作。如果你还没有这样做，请点击**下一步：目标资源**（Next: Target resources）；你将看到你已启用基于服务的故障的 AKS 集群列表。选择合适的集群，点击**保存**（Save），并返回实验编辑器。点击**保存**（Save）回到主实验。在顶部，你会看到一个启动（Start）按钮，它将触发实验。在此之前，需要为作为混沌实验一部分创建的托管身份赋予权限。
 
-- 11. 在 Azure 门户中，转到主屏幕并点击**添加 | 添加角色分配**（Add | Add role assignment）选项。对于 AKS 集群，你将寻找名为 *Azure Kubernetes RBAC Cluster Admin* 的角色。选择此角色并点击下一步选择要分配的身份。点击**托管身份**（Managed identity）作为要分配访问的类型，并点击**选择成员**（Select members）打开托管身份窗格。
+11. 在 Azure 门户中，转到主屏幕并点击**添加 | 添加角色分配**（Add | Add role assignment）选项。对于 AKS 集群，你将寻找名为 *Azure Kubernetes RBAC Cluster Admin* 的角色。选择此角色并点击下一步选择要分配的身份。点击**托管身份**（Managed identity）作为要分配访问的类型，并点击**选择成员**（Select members）打开托管身份窗格。
 
-- 12. 在**托管身份**（Managed identity）下，使用下拉菜单找到**混沌实验**（Chaos Experiments），它应该关联有一个身份，如图 9.14 所示。在选择*Chaos Experiment* 后出现的身份上，注意你的实验名称应该是身份名称的一部分。点击身份窗格上的**提交**（Submit）按钮并点击**下一步**（Next）进入**审核**（Review）窗格。点击**审核并分配**（Review + Assign），RBAC 机制将会被添加：
+12. 在**托管身份**（Managed identity）下，使用下拉菜单找到**混沌实验**（Chaos Experiments），它应该关联有一个身份，如图 9.14 所示。在选择 *Chaos Experiment* 后出现的身份上，注意你的实验名称应该是身份名称的一部分。点击身份窗格上的**提交**（Submit）按钮并点击**下一步**（Next）进入**审核**（Review）窗格。点击**审核并分配**（Review + Assign），RBAC 机制将会被添加：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_194_0.png)
 
 图 9.14 - 为托管身份添加角色分配
 
-- 13. 返回**实验**（Experiments）窗格并找到该实验。点击它后，你将在窗格顶部看到**启动**（Start）按钮——按下此按钮并确认你想运行实验。实验现在将启动并按照你指定的持续运行。
+13. 返回**实验**（Experiments）窗格并找到该实验。点击它后，你将在窗格顶部看到**启动**（Start）按钮——按下此按钮并确认你想运行实验。实验现在将启动并按照你指定的持续运行。
 
-现在你已经使用 Azure Chaos Studio 启动了第一次成功的混沌实验，请花些时间创建不同类型的实验。记住，如果你在特定实验类型的 **jsonSpec** 字段上遇到困难，可以返回 Chaos Mesh 仪表板并使用相同参数创建一个新实验。
+现在你已经使用`Azure Chaos Studio`启动了第一次成功的混沌实验，请花些时间创建不同类型的实验。记住，如果你在特定实验类型的`jsonSpec`字段上遇到困难，可以返回`Chaos Mesh`仪表板并使用相同参数创建一个新实验。
 
 ### 故障注入和混沌测试
 
@@ -3367,12 +3344,12 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 
 ### 问题
 
-- jsonSpec 与异常有什么区别？
+- `jsonSpec`与异常有什么区别？
 - 哪些是可以预测的故障？
 - 故障注入是一个独立的概念吗？
 - 故障注入发生在何处？
 - 在设计实验时，应该有多大的影响？
-- 哪些资源类型与 Chaos Studio 兼容？
+- 哪些资源类型与`Chaos Studio`兼容？
 
 ## 延伸
 
@@ -3381,7 +3358,6 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 - 故障注入测试：https://microsoft.github.io/code-with-engineering/
 - 混沌原理：https://principlesofchaos.org/
 - Netflix 猴子军：http://techblog.netflix.com/2011/07/netflix-simian-army.html
-
 - Chaos Toolkit：https://github.com/chaostoolkit
 - 混沌工程：https://learn.microsoft.com/en-us/architecture/framework/resiliency/chaos-engineering
 - 混沌工程：历史、原理与实践：https://www.gremlin.com/community/tutorials/chaos-engineering-the-history-principles-and-practice/
@@ -3392,16 +3368,11 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 - Azure Chaos Studio：https://azure.microsoft.com/en-us/services/chaos-studio/
 - Chaos Studio 支持的资源类型和角色分配：https://docs.microsoft.com/en-us/azure/chaos-studio/chaos-studio-fault-providers
 
-
-
-
-
-# 10
-面向可扩展性的现代设计模式
+# 10 面向可扩展性的现代设计模式
 
 在过去，确定如何处理应用程序的可扩展性主要取决于容量规划和托管在数据中心中的静态资源。随着云服务的普及，现在有了更灵活的选项来管理应用程序的可扩展性。这并不是说不需要容量规划——它仍然是系统架构设计的重要部分。
 
-然而，在云中实现可扩展选项的方法往往会有所不同。过去静态资源是主柱，而现在你可以根据应用程序托管的方式，利用自动伸缩选项。如 **Kubernetes**、应用服务（app services）和托管存储等云服务可以进行单独调优，以便在没有重度负载时提供最少的资源消耗，并在最需要时实现资源利用的最大化。
+然而，在云中实现可扩展选项的方法往往会有所不同。过去静态资源是主柱，而现在你可以根据应用程序托管的方式，利用自动伸缩选项。如`Kubernetes`、应用服务（app services）和托管存储等云服务可以进行单独调优，以便在没有重度负载时提供最少的资源消耗，并在最需要时实现资源利用的最大化。
 
 本章将重点关注针对潜在性能问题需要监控的关键指标，以及哪些设置可以进行精细调整，以便对性能下降做出自动响应。
 
@@ -3411,18 +3382,21 @@ kubectl port-forward -n chaos-mesh svc/chaos-dashboard 9000:2333
 - 为 Kubernetes 服务实现自动伸缩
 - 为 Azure App Service 实现自动伸缩
 
-在本章结束时，你将理解基于 CPU 负载、**输入/输出 (I/O)** 负载、请求负载和内存密集型操作等指标的不同类型的自动伸缩。你还将能够了解如何为部署到 Kubernetes 的服务实现自动伸缩功能，以及如何为部署到 Azure Web Apps 或 Azure API Apps 的服务实现自动伸缩功能。
+
+
+在本章结束时，你将理解基于 CPU 负载、输入/输出 (I/O) 负载、请求负载和内存密集型操作等指标的不同类型的自动伸缩。你还将能够了解如何为部署到 Kubernetes 的服务实现自动伸缩功能，以及如何为部署到 Azure Web Apps 或 Azure API Apps 的服务实现自动伸缩功能。
 
 > **注意**
+>
 > 本章提到的所有白皮书和其他来源的链接可以在章末的*进一步阅读（Further reading）*部分找到。
 
-### 自动伸缩机制
+## 自动伸缩机制
 
 在应用程序运行期间有四个主要的指标需要关注，可以识别维护可用性或响应性 SLA（服务水平协议）的潜在问题。这些包括 CPU 负载、I/O 负载（在 Kubernetes 中通常表现磁盘压力）、请求和网络负载（通常表现为网络压力和内存负载）。理解这些指标对于帮助你准备调整配置设置、从而构建可扩展的支持基础设施至关重要。了解你的应用程序组件如何影响这些指标中的每一个也同样重要。
 
 ### 计算和 CPU 负载
 
-CPU 的使用量在物理机、虚拟机和托管云服务之间差异很大。对于云服务，可以进行更大量的细粒度调整。例如，对于 **Azure App Service**，初始为 App Service 提供的可用计算量与托管该服务的 App Service Plan（应用服务计划）绑定。可以设置阈值来寻找持续时间超过 2 到 5 分钟的持续 CPU 活动、CPU 使用异常（峰值），甚至是特定时间点的基准（例如设定的百分比）。
+CPU 的使用量在物理机、虚拟机和托管云服务之间差异很大。对于云服务，可以进行更大量的细粒度调整。例如，对于 Azure App Service，初始为 App Service 提供的可用计算量与托管该服务的 App Service Plan（应用服务计划）绑定。可以设置阈值来寻找持续时间超过 2 到 5 分钟的持续 CPU 活动、CPU 使用异常（峰值），甚至是特定时间点的基准（例如设定的百分比）。
 
 类似的规则在 Kubernetes 世界中也适用，但有所不同。Kubernetes 不仅允许你对集群内的节点（在 Kubernetes 生态系统中称为主机）设置监控，还可以对该集群内运行的任何 pod 设置监控。此外，你并不限于集群内的处理能力总和——它可以被过度分配的，这可能会导致各种不同的问题。
 
@@ -3462,18 +3436,14 @@ Kubernetes 本身是一个非常强大的编排平台，允许你控制特定的
 
 水平 Pod 自动伸缩器 (HPA) 是 Kubernetes 内部的构造，允许你指定一个目标条件或阈值，负载达到该阈值之前，集群将扩展并创建新的 pod 或一组 pod。最小和最大节点等常用参数适用于此处，使你能够对扩展发生的规模设置一些保护。另一个参数是部署本身正在经历的条件——即触发自动伸缩的是 CPU 还是内存。
 
-
-
-
-
 ## 用于可扩展性的现代设计模式
 
 | 指标类型 | 说明 | 示例 |
 |---|---|---|
-| 资源 (Resource) | 直接与可用 pod 容器资源（CPU、内存）相关的指标。 | - type: Resource<br>  resource:`<br>    name: memory<br>    target:`<br>      type: Utilization<br>      averageUtilization: 70 |
-| Pods | 与部署内的 pod 相关的指标通常按所有 pod 的平均值进行测量（每秒数据包数）。 | - type: Pod<br>  pods:`<br>    metric:`<br>      name: packets-per-second<br>    target:`<br>      type: AverageValue<br>      averageValue: 2k |
-| 对象 (Object) 与集群内可能影响性能的其他对象的指标（每秒请求数）。 | - type: Object<br>  object:`<br>    metric:`<br>      name: requests-per-second<br>    describedObject:`<br>      apiVersion: networking.k8s.io/v1<br>      kind: Ingress<br>      name: main-route<br>    target:`<br>      type: Value<br>      value: 8k |
-| 外部 (External) | 与集群外部对象相关的指标。例如，托管的队列服务。 | - type: External<br>  external:`<br>    metric:`<br>      name: queue_messages_ready<br>    selector: matchLabels: queue: "worker_tasks"<br>    target:`<br>      type: AverageValue<br>      averageValue: 20 |
+| 资源 (Resource) | 直接与可用 pod 容器资源（CPU、内存）相关的指标。 | `- type: Resource`<br>`  resource:`<br>`    name: memory`<br>`    target:`<br>`      type: Utilization`<br>`      averageUtilization: 70` |
+| Pods | 与部署内的 pod 相关的指标通常按所有 pod 的平均值进行测量（每秒数据包数）。 | `- type: Pod`<br>`  pods:`<br>`    metric:`<br>`      name: packets-per-second`<br>`    target:`<br>`      type: AverageValue`<br>`      averageValue: 2k` |
+| 对象 (Object) | 与集群内可能影响性能的其他对象的指标（每秒请求数）。 | `- type: Object`<br>`  object:`<br>`    metric:`<br>`      name: requests-per-second`<br>`    describedObject:`<br>`      apiVersion: networking.k8s.io/v1`<br>`      kind: Ingress`<br>`      name: main-route`<br>`    target:`<br>`      type: Value`<br>`      value: 8k` |
+| 外部 (External) | 与集群外部对象相关的指标。例如，托管的队列服务。 | `- type: External`<br>`  external:`<br>`    metric:`<br>`      name: queue_messages_ready`<br>`    selector: matchLabels: queue: "worker_tasks"`<br>`    target:`<br>`      type: AverageValue`<br>`      averageValue: 20` |
 
 表 10.1 - 与 HPA 相关的 Kubernetes 指标类型
 
@@ -3534,7 +3504,7 @@ resource azureerm_kubernetes_cluster_node_pool "app-pool" {
 }
 ```
 
-我们仍在启用自动伸缩，并设置节点计数。在这种情况下，可以看到比默认池更强大。在部署过程中，您可以使用 nodeSelector 选择此池。
+我们仍在启用自动伸缩，并设置节点计数。在这种情况下，可以看到比默认池更强大。在部署过程中，您可以使用 `nodeSelector` 选择此池。
 
 ### 第三方插件
 
@@ -3544,15 +3514,13 @@ resource azureerm_kubernetes_cluster_node_pool "app-pool" {
 
 KEDA（Kubernetes Event-Driven Autoscaling，事件驱动伸缩）是一种通过允许对资源或部署设置事件指标来增强 Kubernetes 自动伸缩能力的插件。这并不是说事件可能与基准指标无关——但它为应用程序如何以及何时扩展提供了更多选项。在编写时，KEDA 有超过 50 种可用伸缩器，但我们将特别关注两个：Apache Kafka 和 Azure Acquisition Insights。
 
-> 注意事项
+> **注意事项**
+>
 > 请花时间查看本章扩展阅读部分关于上述 KEDA 伸缩器的链接。
 
 Apache Kafka 伸缩器允许根据处理消费者组和主题时检测到的延迟处理触发器。这将导致可用副本调整以减少检测到的延迟。为了利用这种机制进行扩展，您需要确保 `scaleTargetRef` 部分包含对 Kafka 部署名称的引用以及至少一个组名称。您可能会发现某些组不需要配置自动伸缩，因为消耗的消息量较小。对于其他领域，例如设备、通知或标识，消耗的消息量可能更大，为每个消费者组配置自动伸缩会更为合理。
 
 Insights 伸缩器允许根据捕获的特定指标处理触发器，无论这些是内置还是自定义指标。如果需要，可以通过调整 `metricFilter` 属性并包含针对特定结果的子句对指标进行进一步细化。
-
-
-
 
 # 为 Azure App Service 实现自动伸缩
 
@@ -3587,23 +3555,25 @@ Azure Monitor 使用四种主要类型的条件来信号潜在问题的发生。
 
 ### Web Apps 的调整
 
+
+
 Web Apps 可能是 Azure 中最著名的 App Service 实现，自平台成立以来一直存在。多年来增加了许多功能和选项——托管和运行静态 Web 应用的能力、使用 Docker 容器作为运行 Web 应用的机制，以及可以托管应用程序的各种运行时。所有 App Services 都要求存在 App Service Plan，它控制服务的基础设施架构，并与 Azure Monitor 等平台功能挂接。
 
 要调整 Web App 或任何 App Service 的扩展设置，你有两个选项。一种是向上扩展（scale up），这是一种手动操作，需要切换服务计划类型。另一种是向外扩展（scale out），可以手动或自动完成。这就是智能检测告警所使用的逻辑可以派上用场的地方，因为它让你了解如何根据计划可用的各种指标类别在 App Service Plan 上构建自定义操作。适用指标类型的完整列表可以在“进一步阅读”下的“Azure App Services Web 站点监控”中找到。
 
 CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都可以作为驱动自动伸缩的告警手段。其他复杂的指标，例如关于建立和关闭连接的低级 TCP 信息也可以使用。
 
-### API Apps 的调整
+## API Apps 的调整
 
 由于 API Apps 曾是独立的 App Service 类型，通常会……
 
-### 总结
+## 总结
 
 在本章中，我们检查了应用程序性能的一些关键指标、如何调整资源以适应需求，以及如何为某些基础设施部分设置自动扩展。通的可扩展性模式通常关注能够调整应用程序可用的 CPU 或内存以缓解需求增长。
 
 甚至可以通过新的语言功能来提高处理效率，例如 .NET 6 中新的 FileStream 改进。通过不同的复杂度，我们查看了如何使用指标、阈值和操作组为 Kubernetes 对象配置自动扩展。当你继续基于事件的系统时，这些模式将成为你工具箱的重要部分。
 
-### 问题
+## 问题
 
 - 网络负载可以强制虚拟或物理网络的扩展事件吗？
 - 在确定自动伸缩模式时，哪些性能指标可能是工程师的主要关注点？
@@ -3611,10 +3581,7 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 - 在 AKS 集群中创建多个池节点，而不是增加默认池节点的大小不是更容易吗？
 - 如果 Kubernetes 创建用于 HPA 指标的良好实践是不依赖外部系统或对象，为什么使用像 KEDA 这样的插件被认为是有效的？
 
-
-
-
-## 延伸阅读 193
+## 延伸阅读
 
 - [水平 Pod 扩缩 (Horizontal Pod Autoscale)，由 Kubernetes 提供，访问：https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
 - [水平 Pod 扩缩教程 (Horizontal Pod Autoscale Walkthrough)，由 Kubernetes 提供，访问：https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
@@ -3628,7 +3595,7 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 - [主动性故障诊断 (Proactive Failure Diagnostics)，由 Microsoft 提供，访问：https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/proactive-failure-diagnostics
 - [Azure 服务网站监控 (Azure Services Web Site Monitoring)，由 Microsoft 提供，访问：https://docs.microsoft.com/en-us/Azure/app-service/web-sites-monitor
 
-## 11 最小化数据丢失
+## 最小化数据丢失
 
 在本章中，我们将研究减少或消除数据丢失的技术。云原生开发架构带来了一个固有的风险，即由于独立服务之间的瞬态故障或它们之间的连接问题导致数据丢失。因此，我们针对此类故障来设计应用程序，而事件驱动架构使用了一些关键技术来降低这种丢失风险。我们将探索一些设计范式，例如最终一致性和保证投递，并学习如何根据语境识别可能易丢失的数据，以及定义可以接受多少程度的丢失（如果有的话）。
 
@@ -3669,6 +3636,7 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 ### ACID 范式/即时一致性
 
 如前所述，ACID 代表原子（Atomic）、一致（Consistent）、隔离（Isolated）和持久（Durable）。
+
 通过即时一致性，我们获得了每个事务将作为一个操作单元完成的保证。因此，它要么成功要么失败。在即时一致性模型中，我们期望数据在任何时候都是一致的。
 
 ### BASE 范式/最终一致性
@@ -3678,8 +3646,6 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 ### 最小化数据丢失
 
 在多个位置。这种传播遵循最终一致性的概念。最终，数据将会传播；因此带来了跨服务的一致性。最终一致性是事件驱动架构的一个极佳模型。随着时间的推移，预计它将具有更高的概率收敛（变得一致）。
-
-
 
 让我们回到 BASE 的缩写：
 
@@ -3691,10 +3657,6 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 
 你有多种方法可以构建逻辑模式来容忍最终一致性。例如，你可以不断重试失败的过程，直到它最终成功。这很笨拙，但执行频率比你想象的要高得多。一个更好且广为人知的模式是 Saga 模式。
 
-
-
-
-
 ### Saga 模式
 
 解耦的业务事务可以重构为一种流，即 Saga 模式，这样它们在依赖于最终一致性数据收敛时，就可以消除失败/重试模式。这种做法通过改变事务和事件的依赖顺序，并在实现一致性时触发下一个事务来实现的。实质上，这是在重构一个单体过程，但通过使用事件作为松耦合，我们避免了引入硬依赖或性能瓶颈。
@@ -3703,19 +3665,19 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 
 虽然这听起来可能有些复杂，但重要的是注意到它是如何解耦过程，并允许通过事件进行协调，而不是通过单个阻塞过程来实现一些“设置后即忘”的过程。通过按此顺序链化事务（作为 Saga），我们看到了更少的轮询和更多的事件驱动活动。通过这种方式我们获得了最终一致性和更高的可扩展性。
 
-# 命令查询责任分离 (CQRS)
+## 命令查询责任分离 (CQRS)
 
 最终一致性对于修改状态的事务和查询状态的事务要求截然不同的行为。修改状态是权威的，且通常会导致后续事件确认修改，并触发流中的后续步骤。查询状态必须考虑到响应可能是不一致的，并且可能与之前的修改存在差异这一事实。这驱动了系统中命令查询责任分离（CQRS）模式的发展。这意味着编写代码时，应该将命令（修改，也称为变动）与查询（读取）分离开。这避免了编写出可能从一个状态转换到另一个状态的代码，而这种状态转换在自然预期下是认为外部事务是具有 ACID 特质的。
 
 在比较了即时一致性和最终一致性之后，你的关注可能会放在接受最终一致性、Saga 模式和 CQRS 上。重要的是，良好的解决方案将同时使用 ACID 和 BASE 范式。我们必须关注理解任何给定业务事务中这两种范式之间的相互作用。通常，你会在组件内部看到 ACID 事务，而在组件之间看到 BASE 事务。
 
-# 识别可接受的数据丢失
+## 识别可接受的数据丢失
 
 在设计处理瞬态故障的系统时，数据丢失将不可避免地发生。许多架构模式可以层层叠加以尽量减少数据丢失，但要保证永远不会发生丢失是极具挑战性的。
 
 在本章后面的部分，我们将检查数据丢失的影响以及我们可以补偿的内容。在在此之前，我们必须识别什么是可接受的什么是不可接受的数据丢失。这样做的好处是缩小不可接受数据丢失的范围，大部分精力将投入到尽力减少这种丢失。
 
-# 可接受与不可接受的数据丢失
+## 可接受与不可接受的数据丢失
 
 定义什么是可接受和不可接受的数据丢失，受所执行操作的背景以及在该背景下的业务影响的影响很大。例如，如果添加客户的新支付方式从未成功并导致了数据丢失，那么通过向客户标记问题并要求其重新输入来恢复这种损失可能是合理的。然而，如果背景是一个电子商务应用程序，将这种责任推给客户重复此类操作，可能会需要考虑重大的声誉损害。根据你的业务背景，你可能认为新支付方式的丢失是可接受的或不可接受的。
 
@@ -3723,7 +3685,7 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 
 你应用程序的关键功能将决定什么是可接受的、哪些是不可接受的数据丢失。
 
-# 数据丢失的方法
+## 数据丢失的方法
 
 系统中的数据可以通过多种方式丢失，从连接和可用性的瞬态故障开始。我们可以将任何故障机制抽象为两种主要的故障模式：
 
@@ -3749,9 +3711,6 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 事件代理器通常提供几种交付保证方法。通过用于产生和消费事件的接口（API 或 SDK），事件代理器可以确保消息是如何交付的：
 
 - 最多一次交付 (At-most-once delivery)
-
-# 减少数据丢失
-
 - 至少一次交付 (At-least-once delivery)
 - 有效一次交付 (Effectively once delivery)
 
@@ -3764,11 +3723,11 @@ CPU 负载、内存负载、数据 I/O 和页面加载时间等常用指标都�
 - 首先，生产者不等待代理器对接收到事件的确认。我们将“发后不管”。这对于性能和吞吐量是非常棒的。但这意味着代理器可能永远无法成功接收事件。然而生产者只会崩溃。
 - 第二，读取事件的消费者在完成处理之前可能会崩溃或失败。代理器感知不到这种失败，因此将假设成功且不再将相同的事件提供给任何其他消费者。再次，这对于性能来说是个好消息，希望如此；显然，这种交付保证只适用于系统中可接受的数据丢失。
 
-# 最多一次交付代码示例 – 生产者
+## 最多一次交付代码示例 – 生产者
 
 我们确保生产者只发送一次消息。如果生产者崩溃或代理器未能接收消息，生产者不应重试发送事件。要么发送，要么完全不发送。
 
-查看 Send() 方法，我们可以看到这种行为已经生效，无需进行任何更多更改：
+查看`Send()`方法，我们可以看到这种行为已经生效，无需进行任何更多更改：
 
 ```
 public async Task Send(string message, string correlationId, string causationId)
@@ -3780,13 +3739,11 @@ public async Task Send(string message, string correlationId, string causationId)
 })
 ```
 
-
-
-
-
 ```
 Key = 1
 ```
+
+
 
 如果交付报告未确认成功，`ProduceAsync()` 可能会返回异常。这会导致线程崩溃。然而，由于生产者仅是对实时 API 请求做出响应，生产者本身不会在重启时自动重试发送该事件。它要么成功，要么就失败了。
 
@@ -3803,7 +3760,7 @@ public async Task Handle(ConsumerResult<int, CloudEvent>
 result, TelemetryClient telemetryClient)
 ```
 
-### 最小化数据丢失
+## 最小化数据丢失
 
 ```csharp
 {
@@ -3896,7 +3853,7 @@ do
         brokerReceivedEvent =
 ```
 
-# 交付保障 207
+## 交付保障 207
 
 ```csharp
 deliveryResult.Status ==
@@ -3932,11 +3889,7 @@ protected override async Task ExecuteAsync
 }
 ```
 
-
-
-
-
-### 最小化数据丢失
+## 最小化数据丢失
 
 ```csharp
 await new MessageReceivedEventHandler(
@@ -3965,7 +3918,7 @@ if (!File.Exists(filename)) {
 
 通过本节中的代码更改，你可以看到至少一次交付的保证如何为生产者和消费者都增加了额外的开销。随着交付保证变得更加可靠和可观测，这是一种性能权衡。接下来，我们将处理可用交付保证中最可靠但性能最差的一种交付方式。
 
-### “有效一次”交付 (Effectively-once delivery)
+## “有效一次”交付 (Effectively-once delivery)
 
 有效一次交付意味着代理将确保产生的事件被有效地送达（听起来太显而易见，对吧？）。这意味着只有一个消费者可以读取该事件，并且代理期望获得已处理该事件的确认。
 
@@ -3981,7 +3934,7 @@ if (!File.Exists(filename)) {
 
 有效一次交付是三种交付方法中性能权衡最大的。这种保证最适用于此类数据：在这些系统中，如果考虑重复事件的可能性是不可行或不可接受的，那么数据丢失是不可接受的（即
 
-### 有效一次代码示例 - 生产者
+## 有效一次代码示例 - 生产者
 
 为了从生产者实现有效一次交付，我们必须再次确保生产者接收到代理的确认。但在接收该确认发生失败的情况下，生产者的任何重试都不能导致在代理中产生重复事件。此外，我们必须确保对生产者源的任何保存进度都与与代理的成功提交原子地绑定。
 
@@ -3994,7 +3947,7 @@ var producerConfig = new ProducerConfig();
 producerConfig.EnableIdempotence = true;
 ```
 
-### 最小化数据丢失
+## 最小化数据丢失
 
 我们已经删除了重试产生的重复事件，这意味着对于单个生产者实例，我们实现了精确一次交付。但如果生产者在接收到确认之前崩溃了呢？代理将给新的生产者实例一个完全新的生产者 ID。它将从其内部保存的进度标记处继续，这取决于进度是在事件产生之前还是之后保存（至少一次或至多一次），从而导致重复事件或丢失事件。
 
@@ -4041,7 +3994,7 @@ brokerReceivedEvent = false;
 
 这有一种方法可以消除在本地和代理事务范围提交之前的失败风险，那种方法也是使用 Kafka 作为我们本地进度的状态存储。在那种情况下，我们只有一个事务范围，它完全存储在代理上。根据生产者应用程序的性质，这可能会带来其自身的小众挑战，这超出了本节的范围
 
-### 有效一次代码示例 – 消费者
+## 有效一次代码示例 – 消费者
 
 向消费者实现有效一次交付遵循与生产者相似的模式。然而，我们没有使用代理上的事务范围，而是通过控制内部偏移量值和提交调用来实现相同的效果。
 
@@ -4073,6 +4026,8 @@ var result = consumer.Consume(stoppingToken);
       (result.TopicPartition);
 ```
 
+
+
 ```csharp
 try {
    using (var localTransaction = new TransactionScope())
@@ -4096,9 +4051,6 @@ try {
 }
 consumer.Commit(result);
 ```
-
-
-
 
 在处理事件之前，我们会捕获当前的偏移量位置。然后我们可以将偏移量增加到正在处理的事件。事件处理完毕后，我们将偏移量位置提交到 broker 和本地事务作用域，其中包含任何已保存的进度。
 
@@ -4131,23 +4083,35 @@ consumer.Commit(result);
 ### 问题
 
 - 1. 哪种数据一致性范式可以确保在任何时刻处于一致状态？
+
 - 2. 哪种数据一致性范式无法确保在任何时刻处于一致状态？
+
 - 3. 使用什么开发模式来避免对数据范式一致状态的假设？
+
 - 4. 哪种数据一致性范式可以支持超扩展性？
+
 - 5. 如果一个事件驱动事务可以接受数据丢失但不是幂等的，最合适的交付保证配置是什么？
+
 - 6. 如果一个事件驱动事务无法容忍数据丢失且是幂等的，最合适的交付保证配置是什么？
+
 - 7. 如果一个事件驱动事务无法容忍数据丢失且不是幂等的，最合适的交付保证配置是什么？
 
 ### 扩展阅读
 
 - Kafka 中的处理保证 - Andy Bryant 编写，可访问 https://medium.com/@andy.bryant/processing-guarantees-in-kafka-12dd2e30be0
+
 - Apache Kafka 中的精确一次支持 - Jay Kreps 编写，可访问 https://medium.com/@jaykreps/exactly-once-support-in-apache-kafka-55efdd0a35f
+
 - Kafka 事务与精确一次处理 – SmallRye 编写，可访问 https://smallrye.io/smallrye-reactive-messaging/3.18.0/kafka/transactions/
+
 - Saga 分布式事务模式 – Microsoft 编写，可访问 https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga
+
 - CQRS 模式 – Microsoft 开源社区编写，可访问 https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+
 - 微服务架构中的数据一致性 - Dilfuruz Kizilpinar 编写，可访问 https://resources.experfy.com/bigdata-cloud/data-consistency-in-microservices-architecture/
 
 ## 12
+
 服务与应用程序的韧性
 
 在第 10 章《可扩展性的现代设计模式》中，我们回顾了处理应用程序内部可扩展性的某些模式。同样重要的概念是“韧性（Resiliency）”，这意味着服务或应用程序在运行时处理错误或异常的概率。如果组件本身没有正常运行，或者没有提供任何清晰的方法来追溯问题的根源，那么考虑组件流量和使用的变化就没有意义了。
@@ -4157,7 +4121,9 @@ consumer.Commit(result);
 在本章中，我们将涵盖以下内容：
 
 - 通过云原生模式实现韧性
+
 - 冗余与实现业务连续性
+
 - 优雅通信
 
 在本章结束时，你将能够回顾并实现云原生软件模式，以提高你的应用程序的韧性。我们将检查冗余技术，以确保在本地、区域或全平台出现服务故障时能够访问数据，并学习如何编写用户友好的消息，清晰地传达当下的问题，而不会导致应用程序完全失败。
@@ -4167,6 +4133,7 @@ consumer.Commit(result);
 你可以在 GitHub 上的章节文件夹中找到本章的所有代码示例，地址为 https://github.com/PacktPublishing/Implementing-Driven-Microservices-Architecture-.NET-7/tree/main/chapter12 和 https://github.com/PacktPublishing/Implementing-Driven-Microservices-Architecture-in-.NET-7/tree/main/src。
 
 > 重要说明
+
 章节中提到的所有白皮书和其他资源的链接位于章节末尾的扩展阅读部分。
 
 ## 通过云原生模式实现韧性
@@ -4177,18 +4144,20 @@ consumer.Commit(result);
 
 为了熟悉 Polly.net，让我们来看一个同时实现断路器策略和重试策略的示例。这些包括
 
-
-
-
 ## 通过云原生模式实现韧性
 
 遵循：
 
 - **隔板隔离 (Bulkhead isolation)**：此模式刻意限制了调用者可用的资源数量，以及可以处理的请求数量。
+
 - **缓存 (Cache)**：使用此策略将强制执行的方法从缓存中提取值。如果值不存在，它将从数据存储中获取值并将其放入缓存中。
+
 - **超时 (Timeout)**：这保证了最长等待时间。例如，设置限制为 5 秒的超时策略如果操作耗时超过 5 秒，将会失败。
+
 - **回退 (Fallback)**：这提供了一种在方法调用失败时为该方法返回替代值的方法。
+
 - **速率限制 (Rate limit)**：有时被称为节流（throttling），当调用次数达到特定阈值时，它限制调用者的连续调用次数。
+
 - **策略包装 (PolicyWrap)**：这是一个轻量级包装器，允许你将多个策略组合为一个，并作为组的一部分执行它们。
 
 可以使用 `PolicyWrap` 对象将多个策略实现组合在一起。例如，你可以将重试和回退策略组合在一起，帮助方法重试执行并在失败时返回默认消息。回退策略与断路器的相似之处在于可以使用替代消息或函数来通信成功或失败。然而，它们的不同之处在于，回退策略可能会执行多次，而不会停止对特定方法调用的流量，而断路器会停止一段时间的流量。
@@ -4196,7 +4165,9 @@ consumer.Commit(result);
 为了我们的示例，我们将使用一个简单的示例来确保我们正在为特定的代码块分配重试策略。一旦我们成功添加了该代码并进行了测试，我们将继续在示例应用程序中实现类似的策略：
 
 1. 首先，在 Visual Studio 中创建一个新项目。你可以使用控制台应用模板、Web API 或 REST API 模板或你选择的任何其他模板。右键点击项目，从上下文菜单中选择“管理程序包”。我们将从 NuGet 安装 Polly。
+
 2. 接下来，我们为刚刚创建的项目添加一个新类，以容纳我们想要为服务执行的逻辑。你可以给这个类命名任何名称；但在本示例中，我们将将其命名为 `ServiceBusinessLogic`。
+
 3. 在刚刚创建的新类中，让我们添加一个 `AsyncPolicy` 类型的私有变量，存储对重试策略的引用。在类构造函数，我们可以这样实例化 `AsyncPolicy` 对象：
 
 ```
@@ -4212,6 +4183,7 @@ retryPolicy = Policy.Handle<Exception>()
 ```
 
 4. 这将使用 `Policy` 静态对象为异常分配处理程序（在此例中，为任何异常），同时设置重试次数以及一个用于返回重试之间延迟的递增 `TimeSpan` 对象的函数。在本例示例中，我们从 1 秒开始，并在每次重试尝试后简单的增加 1 秒。在某些情况下，可能需要更渐进的退避时间，在这种情况下，使用 `Math.Pow(2, retryAttempt)` 等内容可能会更有用。
+
 5. 现在，添加一个公共访问的返回类型为 `string` 的方法并命名为 `TestMethod`。在方法体内，我们需要做两件事：调用策略并向方法填充某些功能以返回值。让我们先从创建方法的核心功能开始：
 
 ```
@@ -4292,6 +4264,7 @@ app.MapGet("/testbreaker", async
 由于我们的应用程序没有出现任何一种场景的示例，我们需要查看冗余对我们有益的领域。在上一节中，我们查看了管理韧性方面的软件模式，并根据策略的成功或失败执行不同的操作。接下来，我们可以研究如何用冗余增强韧性策略：
 
 1. 首先，在 Visual Studio 中打开设备领域解决方案。我们感兴趣的区域是负责记录闸机用量的发布者。导航到 Command API 项目并打开 `TurnstileController` 文件。
+
 2. 你会在类底部看到处理领域入站和出站事件的方法。在这里实现策略调用。我们需要先创建重试策略，因此将在 `TurnstileController` 构造函数中添加以下代码：
 
 ```
@@ -4300,10 +4273,6 @@ asyncPolicy = Policy.Handle<Exception>()
     return System.TimeSpan.FromSeconds(retryCount++));
 });
 ```
-
-
-
-
 
 3. 这将对等待时间进行简单的递增，最大为3秒。为了将该策略应用于入口（ingress）和出站（egress），我们将在每个方法中添加以下代码：
 
@@ -4330,29 +4299,34 @@ return await asyncPolicy.ExecuteAsync(async () =>
 
 ## 服务与应用韧性
 
-- 1. 让我们在 `src` 文件夹中打开 MTAEDA.Core 解决方案。我们将在 Core 项目中添加一个新的事件和事件处理器，以便我们能够触发一个重试回退（retry failback）事件，随后在我们创建的新监听器项目中处理事件。
-- 2. 创建新类 `RetryFailbackEvent` 并实现 `IDomainEvent`。然后，创建一个名为 `RetryFailbackEventEventHandler` 的新类，它实现 `IDomainEventHandler<RetryFailbackEvent>`。
-- 3. 然后，为项目创建 `Events` 和 `EventHandlers` 文件夹，并将新类放在它们各自的文件夹中。你的项目看起来应该是这样的
+
+
+让我们在`src`文件夹中打开`MTAEDA.Core`解决方案。我们将在`Core`项目中添加一个新的事件和事件处理器，以便我们能够触发一个重试回退（retry failback）事件，随后在我们创建的新监听器项目中处理事件。
+
+创建新类`RetryFailbackEvent`并实现`IDomainEvent`。然后，创建一个名为`RetryFailbackEventEventHandler`的新类，它实现`IDomainEventHandler<RetryFailbackEvent>`。
+
+然后，为项目创建`Events`和`EventHandlers`文件夹，并将新类放在它们各自的文件夹中。你的项目看起来应该是这样的：
 
 图 12.4:
 
 ![](img/290aa6845834e57fd715912cc7e76d30_246_0.png)
 
-图 12.4 – MTAEDA.Core 中展开的项目视图
-- 4. 对于 `RetryFailbackEvent` 的实现，我们将实现 `DomainData` 属性，但还想添加几个属性来捕重要信息，如表 12.1 所示。这些属性将通过通过向静态 `Create` 方法传递值来设置。有关该方法实现的更多信息，请参考 GitHub 上的源代码。
+图 12.4 – `MTAEDA.Core`中展开的项目视图
+
+对于`RetryFailbackEvent`的实现，我们将实现`DomainData`属性，但还想添加几个属性来捕重要信息，如表 12.1 所示。这些属性将通过通过向静态`Create`方法传递值来设置。有关该方法实现的更多信息，请参考 GitHub 上的源代码。
 
 ## 冗余与启用连续性
 
 | 属性名称 | 类型 | 说明 |
 | :--- | :--- | :--- |
-| Action | String | 正在执行的操作——可能是调用方法的名称 |
-| Domain | String | 发送信息的源域 |
-| FailoverSite | String | 发送到事件的地址 |
-| TransactionDate | DateTime | 事件的时间戳 |
+| `Action` | `String` | 正在执行的操作——可能是调用方法的名称 |
+| `Domain` | `String` | 发送信息的源域 |
+| `FailoverSite` | `String` | 发送到事件的地址 |
+| `TransactionDate` | `DateTime` | 事件的时间戳 |
 
-表 12.1 - RetryFailbackEvent 的属性
+表 12.1 - `RetryFailbackEvent`的属性
 
-- 5. 下一步，我们将查看 `RetryFailbackEvent` 类中 `IDomainEventHandler` 接口的实现。在 `Handler` 方法体中，我们想要获取事件转发的信息并将其持久化到磁盘。在 `Handle` 方法内部编写以下代码以持久化回退事件：
+下一步，我们将查看`RetryFailbackEvent`类中`IDomainEventHandler`接口的实现。在`Handler`方法体中，我们想要获取事件转发的信息并将其持久化到磁盘。在`Handle`方法内部编写以下代码以持久化回退事件：
 
 ```csharp
 public Task Handle (RetryFailbackEvent notification, CancellationToken cancellation)
@@ -4363,9 +4337,9 @@ public Task Handle (RetryFailbackEvent notification, CancellationToken cancellat
 });
 ```
 
-- 6. 使用标准表达式，我们能够按照已知路径将事件内容写入 JSON 文件。将文件存储在与运行服务相同的目录中可能是你想要修改的区域，特别是当你能够利用磁盘或非操作系统驱动器时。
+使用标准表达式，我们能够按照已知路径将事件内容写入 JSON 文件。将文件存储在与运行服务相同的目录中可能是你想要修改的区域，特别是当你能够利用磁盘或非操作系统驱动器时。
 
-- 7. 解决方案的下一部分是包含监听器和服务端终点的项目，它将允许闸机在发生通信错误时传递事件信息。我们将在 `Listeners` 文件夹中添加一个新的 ASP.NET Web API 项目，并将其命名为 `MTAEDA.RetryFallback`。确保取消勾选控制器，因为我们将为此特定服务使用最小 API，如图 12.5 所示。
+解决方案的下一部分是包含监听器和服务端终点的项目，它将允许闸机在发生通信错误时传递事件信息。我们将在`Listeners`文件夹中添加一个新的 ASP.NET Web API 项目，并将其命名为`MTAEDA.RetryFallback`。确保取消勾选控制器，因为我们将为此特定服务使用最小 API，如图 12.5 所示。
 
 ### 附加信息
 
@@ -4381,7 +4355,7 @@ public Task Handle (RetryFailbackEvent notification, CancellationToken cancellat
 
 图 12.5 - 新项目中的附加信息
 
-从项目中移除模板化的 Service 代码，取而之，映射一个新的 POST 方法，以允许从闸机传递事件信息：
+从项目中移除模板化的`Service`代码，取而之，映射一个新的`POST`方法，以允许从闸机传递事件信息：
 
 ```csharp
 app.MapPost("/fallback", (context) => {
@@ -4406,9 +4380,9 @@ app.MapPost("/fallback", (context) => {
 });
 ```
 
-- 9. 我们必须为此服务创建的最后部分——后台工作进程，它将轮询 IoT Hub 以确定其是否可达。写入超过重试阈值的事件对于保留信息非常棒，但不能确保数据到达它需要的地方。创建一个名为 `IoTHubConnectivityWorker` 的新类，它派自 `BackgroundWorker` 类。该类有两个关键元素：确定连接是否存在循环，以及使用 `IEventProvider` 确保保存的事件得到适当处理。
+我们必须为此服务创建的最后部分——后台工作进程，它将轮询 IoT Hub 以确定其是否可达。写入超过重试阈值的事件对于保留信息非常棒，但不能确保数据到达它需要的地方。创建一个名为`IoTHubConnectivityWorker`的新类，它派自`BackgroundWorker`类。该类有两个关键元素：确定连接是否存在循环，以及使用`IEventProvider`确保保存的事件得到适当处理。
 
-- 10. `IoTHubConnectivityWorker` 类的主要功能位于 `Do` 方法中，我们重写了该方法以便自定义。可以将以下代码放在 try-catch 块中，以开始移动由于 `RetryFailbackEvent` 处理产生的任何文件：
+`IoTHubConnectivityWorker`类的主要功能位于`Do`方法中，我们重写了该方法以便自定义。可以将以下代码放在 try-catch 块中，以开始移动由于`RetryFailbackEvent`处理产生的任何文件：
 
 ```csharp
 var baseDirectory = e.Argument?.ToString() ?? Environment.CurrentDirectory;
@@ -4434,10 +4408,6 @@ foreach(var dir in Directory.GetDirectories(baseDirectory))
 }
 ```
 
-
-
-
-
 # 冗余与实现业务连续性 231
 
 ```go
@@ -4445,40 +4415,37 @@ foreach(var dir in Directory.GetDirectories(baseDirectory))
 }
 ```
 
-- 11. 对于 `catch` 块，捕获异常但不要中断循环执行至关重要，因为如果向服务发送了更多事件，它需要继续运行。我们将使用通过 `ILogger` 接口注入的日志服务来记录错误并继续执行，因为我们预计在此过程中会遇到异常。
+对于`catch`块，捕获异常但不要中断循环执行至关重要，因为如果向服务发送了更多事件，它需要继续运行。我们将使用通过`ILogger`接口注入的日志服务来记录错误并继续执行，因为我们预计在此过程中会遇到异常。
 
-> 重要提示
-> 在设备域的 `Infrastructure` 项目中，我们将添加 `IEventWriterProvider` 的新实现，以便向 `Event Hub` 发送事件，这是在与 `IoT Hub` 工作时的一种常见实现。
+> **重要提示**
+>
+> 在设备域的`Infrastructure`项目中，我们将添加`IEventWriterProvider`的新实现，以便向`Event Hub`发送事件，这是在与`IoT Hub`工作时的一种常见实现。
 
 # 基础设施连续性
 
-我们现在的重点转向需要部署以帮助事件发布的 Azure 资源。图 12.6 提供了如果事件被发送到 `RetryFailback` 服务并在恢复与枢纽连接后进行转发的路径概述：
+我们现在的重点转向需要部署以帮助事件发布的 Azure 资源。图 12.6 提供了如果事件被发送到`RetryFailback`服务并在恢复与枢纽连接后进行转发的路径概述：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_251_0.png)
 
 图 12.6 – 设备事件冗余的端到端解决方案图
 
-让我们更详细地查看图中的几个区域。我们已经熟悉 `Azure IoT Hub` 及其与其他服务之间的逻辑连接。设备与 `IoT Hub` 之间的证书认证是一种常见且受支持的模式，将证书扩展到 `RetryFailback` 服务允许我们保持相同的身份验证方法并确保允许通信。有两个端点配置对于在 `IoT Hub` 接收到事件后路由闸门事件（turnstile events）非常关键。这些端点用于将特定事件转发到位于 `Azure Service Bus` 实例中的主题。
+让我们更详细地查看图中的几个区域。我们已经熟悉`Azure IoT Hub`及其与其他服务之间的逻辑连接。设备与`IoT Hub`之间的证书认证是一种常见且受支持的模式，将证书扩展到`RetryFailback`服务允许我们保持相同的身份验证方法并确保允许通信。有两个端点配置对于在`IoT Hub`接收到事件后路由闸门事件（turnstile events）非常关键。这些端点用于将特定事件转发到位于`Azure Service Bus`实例中的主题。
 
-在本实例中选择 `Service Bus` 而不是 `Storage Containers`、`CosmosDB` 和 `Event Hubs` 是出于几个原因。`Service Bus` 的每次事务成本通常低于其他端点类型。此外，使用 `Service Bus` 允许与其他系统集成到我们的应用程序中的可能，而无需重构到 `Event Hubs` 的连接。
+在本实例中选择`Service Bus`而不是`Storage Containers`、`CosmosDB`和`Event Hubs`是出于几个原因。`Service Bus`的每次事务成本通常低于其他端点类型。此外，使用`Service Bus`允许与其他系统集成到我们的应用程序中的可能，而无需重构到`Event Hubs`的连接。
 
-最后，我们可以像在第 3 节“消息代理”中那样配置 `Kafka`，来监听写入 `Service Bus` 实例中两个主题的事件。这允许无缝集成到 `Kafka`，并允许根据域的需求触发事件处理程序。
+最后，我们可以像在第 3 节“消息代理”中那样配置`Kafka`，来监听写入`Service Bus`实例中两个主题的事件。这允许无缝集成到`Kafka`，并允许根据域的需求触发事件处理程序。
 
 现在我们已经解决了事件数据的冗余需求，我们可以专注于确保下游消费者能够理解发生了什么。随着服务的优雅降级（graceful degradation），需要简洁且优雅的通信。
 
 # 服务之间的优雅通信
 
- 每个人都可能遇到过网站或应用程序的问题，其中弹出的错误消息对终端用户来说完全没有意义。有时，根本没有错误消息。在其他情况下，错误消息中可能会出现一个完整的堆栈转储（trace dump）。这两种情况都远非理想状态，因为它们对用户的影响是有害的，而且如果对消息进行调整，可能会共享有关代码库的信息。
+每个人都可能遇到过网站或应用程序的问题，其中弹出的错误消息对终端用户来说完全没有意义。有时，根本没有错误消息。在其他情况下，错误消息中可能会出现一个完整的堆栈转储（trace dump）。这两种情况都远非理想状态，因为它们对用户的影响是有害的，而且如果对消息进行调整，可能会共享有关代码库的信息。
 
 日志中跟踪的消息可能也是如此。如果发送了有关潜在错误或异常的信息，要找到发生了什么以及如何修复它——将变得极具挑战性。不仅对于系统的可用性，对于系统的维护性，为每种类型的受众提供清晰、有意义的消息也是关重要的。
 
-管理异常消息的一种常用方法是开发不同于 `System.Exception` 的异常类型。例如，`NullReferenceException`、`FileNotFoundException` 和 `InvalidOperationException` 类型都派生自基类 `Exception`。可以通过共享库为所有开发团队提供通用的 `Exception` 库，或者每个团队可以创建并维护自己的自定义类型。
+管理异常消息的一种常用方法是开发不同于`System.Exception`的异常类型。例如，`NullReferenceException`、`FileNotFoundException`和`InvalidOperationException`类型都派生自基类`Exception`。可以通过共享库为所有开发团队提供通用的`Exception`库，或者每个团队可以创建并维护自己的自定义类型。
 
 在大多数情况下，这可能不是与终端用户通信的首选方法。微服务开发者通常会使用自定义的 HTTP 码向用户指示特定结果。无论该返回代码是在前端被捕获并使用客户端库渲染给用户，还是在后端被捕获并翻译成有意义的消息，开发者都负责确保一种人类友好的方式。
-
-
-
-
 
 # 服务与应用韧性
 
@@ -4497,11 +4464,11 @@ default:
 return statusMessage;
 ```
 
-- 6. 根据你的需求或想要测试的内容，可以调整此私有方法以包含其他状态码。为了示例起见，我们保持其简短，以说明设置状态消息的整体模式。要使用新类，你可以将 `BaseController` 中设备领域的 `RaiseEvent` 方法的返回值从 `IActionResult` 改为 `HttpOperationResult`。在这样做时，务必更改方法体以确保返回正确的对象。
+根据你的需求或想要测试的内容，可以调整此私有方法以包含其他状态码。为了示例起见，我们保持其简短，以说明设置状态消息的整体模式。要使用新类，你可以将`BaseController`中设备领域的`RaiseEvent`方法的返回值从`IActionResult`改为`HttpOperationResult`。在这样做时，务必更改方法体以确保返回正确的对象。
 
 为了将通知推送到适当的用户界面，可以使用如 SignalR 等服务来桥接这些通信。其他各种 JavaScript 库的实现也可以方便通知，包括回调（callbacks）和 WebSockets。虽然我们关注事件和服务的内部机制，但我们可能希望尝试不同的 UI 框架，以组合出一个向用户显示通知的示例。
 
-我们已经看到目标驱动的通知对系统连续性和用户体验有多重要。在完成本章的最后部分后，我们现在可以期待观察平台的每个部分是如何履行其职的
+我们已经看到目标驱动的通知对系统连续性和用户体验有多重要。在完成本章的最后部分后，我们现在可以期待观察平台的每个部分是如何履行其职的。
 
 ### 总结
 
@@ -4513,17 +4480,17 @@ return statusMessage;
 
 ### 问题
 
-- 1. 韧性（resiliency）、冗余（redundancy）和可靠性（reliability）之间有什么区别？
-- 2. 回退模式（fallback）和断路器模式（circuit breaker patterns）之间有什么区别？
-- 3. 实现重试策略（retry policy）的主要优势是什么？
-- 4. 业务连续性（business continuity）和灾难恢复（disaster recovery）之间有什么区别？
-- 5. 对于站级发布服务的示例，是否存在执行该逻辑的其他选项以确保事件发布到正确的主题？
+1. 韧性（resiliency）、冗余（redundancy）和可靠性（reliability）之间有什么区别？
+2. 回退模式（fallback）和断路器模式（circuit breaker patterns）之间有什么区别？
+3. 实现重试策略（retry policy）的主要优势是什么？
+4. 业务连续性（business continuity）和灾难恢复（disaster recovery）之间有什么区别？
+5. 对于站级发布服务的示例，是否存在执行该逻辑的其他选项以确保事件发布到正确的主题？
 
 ### 扩展阅读
 
 - Microsoft 出版的《Resiliency and High Availability in Microservices》，访问：https://learn.microsoft.com/en-us/dotnet/architecture/microservices/micro-microservice-container-applications/resilient-high-availability-microservices
-- Polly Project 出版的Polly.Net，访问：https://github.com/App-vNext/Polly
-- Polly Project 出版的针对 Polly.Net 的混沌测试库 Simba，访问：https://github.com/Polly-Contrib/Simmy
+- Polly Project 出版的`Polly.Net`，访问：https://github.com/App-vNext/Polly
+- Polly Project 出版的针对`Polly.Net`的混沌测试库`Simba`，访问：https://github.com/Polly-Contrib/Simmy
 - Microsoft 出版的《Business Continuity and Disaster Recovery》，访问：https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/area/management-business-continuity-disaster-recovery
 - Apache Software Foundation 出版的 Apache Kafka Connect，访问：https://kafka.apache.org/documentation/#connect
 - Microsoft 出版的《在 Azure Event Hubs 上集成 Kafka Connect 支持》，访问：https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-kafka-connect-tutorial
@@ -4538,14 +4505,19 @@ return statusMessage;
 
 - 识别应用层、服务层和组件层的不同遥测类型和级别。
 - 学习使用 OpenTelemetry 度量提供者（meter providers）实现基础遥测采集。
-- 学习使用 OpenTelemetry 和 .NET 诊断计数器（diagnostic meters）实现自定义遥测采集。
-- 确定哪些信息足够向上传递到监控代理，以及每种信息需要什么级别的告警。
+
+
+
+学习使用 OpenTelemetry 和 .NET 诊断计数器（diagnostic meters）实现自定义遥测采集。
+
+确定哪些信息足够向上传递到监控代理，以及每种信息需要什么级别的告警。
 
 ### 技术要求
 
 你可以在此处的遥测文件夹中找到本章的所有代码：https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Architecture-.NET-7/tree/main/chapter13 和 https://github.com/PacktPublishing/Implementing-Event-Driven-Microservices-Architecture-.NET-7/tree/main/src。
 
 > 注意
+
 本章中提到的所有白皮书和其他来源的链接在本章末尾的扩展阅读部分均提供。
 
 ### 应用级、服务级与组件级遥测
@@ -4566,16 +4538,12 @@ return statusMessage;
 
 在不增加代码开销的情况下实现基础遥测的想法在年前是不可能的。随着 Relic、DynaTrace、DataDog 和 Application Insights 等平台的出现，只需向项目添加库引用并配置连接信息，即可实现大量的服务和组件遥测。即使只有少量的配置和编码，这些平台也能捕获并暴露指标、日志和跟踪。某些自定义指标在 .NET 中实现可能比使用应用性能管理（APM）系统的 SDK 并在 APM 平台中额外格式化这些信息要容易。根据你的用例，拥有实现遥测和报告的选项是有益的。
 
-
-
-
-
 ### 遥测采集与集成
 
-- Meter（计量器） – 这允许你构建一组不同的计数器，可以使用之前列出的其中一个 meter SDK。
-- Counter<T>（计数器） – 这允许你创建一个计数器对象，该对象捕获 T 类型的信息用于聚合和报告。T 的类型约束是它必须是一个非空的值类型。
+- `Meter`（计量器） – 这允许你构建一组不同的计数器，可以使用之前列出的其中一个 meter SDK。
+- `Counter<T>`（计数器） – 这允许你创建一个计数器对象，该对象捕获 `T` 类型的信息用于聚合和报告。`T` 的类型约束是它必须是一个非空的值类型。
 
-Meter 对象具有一个工厂方法，可以创建各种不同的计数器。创建 Meter 对象和关联计数器的标准语法如下所示：
+`Meter` 对象具有一个工厂方法，可以创建各种不同的计数器。创建 `Meter` 对象和关联计数器的标准语法如下所示：
 
 ```cs
 using OpenTelemetry.Metrics;
@@ -4590,13 +4558,13 @@ var counter = meter.CreateCounter<int>(Name: "requests-received", Unit: "request
 
 # 实现自定义遥测采集
 
-我们将创建一个简单的示例，不仅可以让你看到 OpenTelemetry SDK 是如何工作的，还能看到 Meter 对象如何用于包含许多不同的计数器和数据点：
+我们将创建一个简单的示例，不仅可以让你看到 OpenTelemetry SDK 是如何工作的，还能看到 `Meter` 对象如何用于包含许多不同的计数器和数据点：
 
 - 在 Visual Studio 中或使用 `dotnet` 命令行创建一个新的 Minimal API 项目。这里是新 Minimal API 项目的截图：
 
 # 实现自定义遥测采集
 
-一个用于创建可以在 Windows、Linux 和 macOS 上运行 .NET  命令行应用程序的项目。
+一个用于创建可以在 Windows、Linux 和 macOS 上运行 .NET 命令行应用程序的项目。
 
 ```
 # Linux macOS Windows Console
@@ -4640,12 +4608,12 @@ var counter = meter.CreateCounter<int>(Name: "requests-received", Unit: "request
 
 | ASP.NET Core Web API | C# | Linux | macOS | Windows | Cloud | Service | Web | WebAPI |
 |---|---|---|---|---|---|---|---|---|
-| Framework | .NET 7.0 (标准支持) | | | | | | | | | |
-| 身份验证类型 | 无 | | | | | | | | | | |
-| 配置 HTTPS | | | | | | | | | | |
-| 使用控制器（取消勾选以使用 minimal APIs） | | | | | | | | | | |
-| 启用 OpenAPI 支持 | | | | | | | | | | |
-| 不使用顶层语句 | | | | | | | | | | |
+| Framework | .NET 7.0 (标准支持) | | | | | | | | |
+| 身份验证类型 | 无 | | | | | | | | |
+| 配置 HTTPS | | | | | | | | | |
+| 使用控制器（取消勾选以使用 minimal APIs） | | | | | | | | | |
+| 启用 OpenAPI 支持 | | | | | | | | | |
+| 不使用顶层语句 | | | | | | | | | |
 
 图 13.3 – 新项目对话框中的“额外信息”页面
 
@@ -4658,7 +4626,7 @@ dotnet add package OpenTelemetry.Instrumentation.EventCounters --prerelease
 
 - 4. 你可以选择保留有的模板服务代码（WeatherForecast 服务），也可以用自己的代码替换它。在本示例中，我们将使用模板代码。
 
-- 5. 将以下声明放置在 `Program.cs` 文件的顶部，创建一个新的 Meter 对象，以及用于收集特定信息的计数器：
+- 5. 将以下声明放置在 `Program.cs` 文件的顶部，创建一个新的 `Meter` 对象，以及用于收集特定信息的计数器：
 
 ```cs
 var meter = new Meter("SampleMeter");
@@ -4685,7 +4653,7 @@ builder.Services.AddTransient((c) =>
 });
 ```
 
-8. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+8. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4695,7 +4663,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-9. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+9. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4705,7 +4673,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-10. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+10. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4715,7 +4683,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-11. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+11. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4725,7 +4693,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-12. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+12. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4735,7 +4703,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-13. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+13. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4745,7 +4713,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-14. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+14. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4755,7 +4723,7 @@ app.Use((context, next) =>
     context.Request.Path.Value,
 ```
 
-15. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置 计数器：
+15. 更新应用程序，使得每次发生操作时都会向收到的请求添加一个值。这将随着应用程序的运行进行聚合。请记住，重启或停止应用程序将重置计数器：
 
 ```cs
 app.Use((context, next) =>
@@ -4764,10 +4732,6 @@ app.Use((context, next) =>
     SourceUrl: context.Request.Path.Value,
     context.Request.Path.Value,
 ```
-
-
-
-
 
 ### 遥测采集与集成
 
@@ -4798,10 +4762,13 @@ app.UseOpenTelemetryPrometheusScrapingEndpoint();
 
 - 5. 在调试模式下运行程序，并使用 Swagger API 页面测试对端点的调用。尝试多次调用每个方法以生成一些信息，然后在另一个标签页中导航到 https://localhost:7182/metrics 查看由服务发布的指标数据。图 13.4 展示了查看抓取端点时应该看到的输出：
 
-```text
+
+
 ### TYPE requests_received_Requests counter
 ### UNIT requests_received_Requests
 # HELP requests_received_Requests Counter using the Sample Meter
+
+```
 requests_received_Requests(path="/favicon.ico") 1 1674415139490
 Microsoft.AspNetCore.Server.Core.Internal.Http.HttpRequestHeaders, ") 1 1674415139490
 requests_received_Requests(path="/weather") 1 1674415139490
@@ -4810,9 +4777,13 @@ requests_received_Requests(path="/metric") 10 1674415139490
 requests_received_Requests(path="/metric") 1 1674415139490
 Microsoft.AspNetCore.Server.Core.Internal.Http.HttpRequestHeaders, ") 6 1674415139490
 Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders, ") 1 1674415139490
+```
+
 ### TYPE degrees_forecast counter
 ### UNIT degrees_forecast count
 # HELP degrees_forecast Sample forecast captured from service
+
+```
 drees_forecast(Date = 1/23/2023, Temperature = 0, Summary = Swelling,
 Temperature = 40) 1 1674415139490
 drees_forecast(Date = 1/23/2023, Temperature = 5, Summary = Bracing, Temperature
@@ -4837,7 +4808,7 @@ Temperature = 45) 1 1674415139490
 
 图 13.4 - Prometheus 发布指标示例
 
-- 6. 通过在 Prometheus 配置中创建条目来配置 Prometheus 抓取新暴露的端点。调试后，您可能希望调整计数类型或向 meter 添加不同类型的对象（例如直方图）。实验完成后，该是进入 Jaeger 导出器的设置了。
+6. 通过在 Prometheus 配置中创建条目来配置 Prometheus 抓取新暴露的端点。调试后，您可能希望调整计数类型或向 meter 添加不同类型的对象（例如直方图）。实验完成后，该是进入 Jaeger 导出器的设置了。
 
 ### 使用 Jaeger 导出器进行分布式追踪
 
@@ -4849,31 +4820,37 @@ helm repo update
 helm install jaeger jaegracing/jaeger -n monitoring
 ```
 
-
-
-
-
 ### 问题
 
-- 1. 在什么情况下，你会仅依赖 Application Insights 等平台遥测服务来捕获和分析来自服务的信息？
-- 2. .NET 中 `Activity` 和 `Meter` 对象类型之间的主要区别是什么？
-- 3. 在采集遥测数据时，是否有需要注意的事项，例如平台限制、成本或性能？
+1. 在什么情况下，你会仅依赖 Application Insights 等平台遥测服务来捕获和分析来自服务的信息？
+
+2. .NET 中 `Activity` 和 `Meter` 对象类型之间的主要区别是什么？
+
+3. 在采集遥测数据时，是否有需要注意的事项，例如平台限制、成本或性能？
 
 ### 延伸阅读
 
 - Microsoft 提供的指标收集，访问：https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-collection
+
 - Microsoft 提供的分布式链路追踪实施演练，访问：https://learn.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs
+
 - Microsoft 提供的指标 API 比较，访问：https://learn.microsoft.com/en-us/dotnet/core/diagnostics/compare-metric-apis
+
 - Microsoft Inc. 提供的 Lens: 适用于 Kubernetes的 IDE，访问：https://k8lens.dev/
+
 - Helm 作者提供的 Helm 安装，访问：https://helm.sh/docs/intro/
+
 - Prometheus 作者提供的《什么是 Prometheus？》，访问：https://prometheus.io/docs/introduction/overview/
+
 - Jaeger 作者提供的《Jaeger：快速入门》，访问：https://www.jaegracing.io/docs/1.41/getting-started/
+
 - Microsoft 提供的采集分布式链路，访问：https://learn.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-collection-walkthroughs
+
 - Microsoft 提供的 .NET 分布式链路追踪，访问：https://learn.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing?source=recommendations
+
 - Monitoring Artist 提供的 OpenTelemetry 可视化仪表板，通过 GrafanaLabs 访问：https://grafana.com/grafana/dashboards/15983
 
-# 14
-回顾可观测性
+# 14 回顾可观测性
 
 在第 7 章“微服务可观测性”中，我们探讨了如何实现微服务的内部观测性。我们研究了如何聚合指标、日志和追踪，以便能够高效地观察和理解跨分布式、高扩展解决方案的性能和问题。
 
@@ -4882,8 +4859,11 @@ helm install jaeger jaegracing/jaeger -n monitoring
 在本章结束时，你将能够完成以下操作：
 
 - 理解如何使用服务元数据暴露服务信息
+
 - 理解如何利用服务发现并使用 Consul 实现它
+
 - 学习服务发布并理解 Azure API Management 的支持功能
+
 - 学习 Ortelius 服务体系以及它如何为服务分类、跟踪和追踪依赖关系
 
 ### 技术要求
@@ -4920,6 +4900,7 @@ OpenAPI 规范 (OAS) 为 HTTP API 定义了一种与语言无关的接口，允�
 得益于工具链的演进，我们处理 OpenAPI 有两种不同的方法：
 
 - 通过描述描述来设计 API，然后为服务生成代码。
+
 - 编写 API 以满足需求，然后生成 OpenAPI 规范。
 
 ## 回顾可观测性
@@ -4932,13 +4913,11 @@ OpenAPI 规范 (OAS) 为 HTTP API 定义了一种与语言无关的接口，允�
 
 在开发 .NET Core 时，最广泛使用的 OpenAPI 规范生成工具是 Swashbuckle。它使用名为 Swagger 的对象模型和中间件。
 
-
-
-
 ## 生成服务信息
 
-- 1. 自动生成 JSON 格式的规范。
-- 2. 展示服务将提供一个 UI 用于导航规范。
+1. 自动生成 JSON 格式的规范。
+
+2. 展示服务将提供一个 UI 用于导航规范。
 
 这两种配置的初始步骤都是向生产者项目添加 Swashbuckle 库引用。在包含 `producer.csproj` 文件的文件夹中，运行以下命令：
 
@@ -5002,6 +4981,8 @@ Swashbuckle 使用另一个名为 `ApiExplorer` 的 .NET 库来提取添加到�
 
 ## 生成服务信息
 
+
+
 ```csharp
 [HttpPost("Send")]
 [ProducesResponseType(typeof(string), 200)]
@@ -5037,7 +5018,7 @@ string message)
 
 最后，尽管我们可以从 `HttpContext` 特性中访问请求体，但控制器定义允许我们更显式地指定调用包含的内容。这通过简单在方法签名中添加预期的参数来实现。由于此调用使用 POST 方法，我们将特性标记为 `[FromBody]`。注意，我们将此参数保留为简单的字符串，但也可以很容易地定义为强类型类或结构体，并在 POST 请求体中以 JSON 格式表示。
 
-### 添加启动服务和中间件
+## 添加启动服务和中间件
 
 我们在构建控制器时所做的修改已经完成了在运行时生成基础 OpenAPI 规范所需的工作。然而，有几个服务需要注入，一些中间件需要配置才能完成。
 
@@ -5061,10 +5042,7 @@ app.UseEndpoints(endpoints => {
 });
 ```
 
-
-
-
-### 查看运行时 OpenAPI 规范
+## 查看运行时 OpenAPI 规范
 
 在 Swagger UI 顶部，有一个指向 JSON 文件的链接。默认情况下，它以 `/swagger/v1/swagger.json` 结尾。点击此链接将带你访问由 Swagger（而非 SwaggerUI）中间件提供的 JSON 内容。这才是真正的 OpenAPI 规范格式：
 
@@ -5099,6 +5077,7 @@ app.UseEndpoints(endpoints => {
 图 14.4 - swagger/v1/swagger.json
 
 > **重要提示**
+
 请确保将此文件保存到本地本地文件系统中。当我们在本章稍后尝试**服务发布**（Service Publishing）时，会再次使用它。
 
 这里的格式符合 OpenAPI（在本例中为 3.0.1）。通过浏览规范文档，你可以追踪到哪些章节、子章节和属性是必须的。你会在文档中找到所有这些。这就是为什么即使你没有配置版本，Swagger 中间件也会自动分配版本。
@@ -5109,7 +5088,7 @@ app.UseEndpoints(endpoints => {
 
 有了遵循 OpenAPI 规范的文档化 API，我们需要让我们的 API 可供他人发现。我们将在服务发布部分介绍这一点。在到达发布阶段之前，服务可用性还有另一个我们必须涵盖的重要部分：服务发现（service discovery）。
 
-### 服务发现
+## 服务发现
 
 在当前共享 API 的背景下，很容易将服务发现想成开发者寻找一个可使用的 API 服务。对于本章来说，那更多是服务发布的一个（预期的）下游事件。相反，我们将关注在为我们的 API 寻找健康端点（endpoints）的背景下的服务发现。
 
@@ -5127,11 +5106,11 @@ app.UseEndpoints(endpoints => {
 
 我们将探索服务发现的领先解决方案之一：由 HashiCorp 开发的 Consul。
 
-### 探索 Consul
+## 探索 Consul
 
 Consul 是一个服务网格和发现平台，帮助抽象可用性、可靠性和安全性方面。
 
-### 设置 Consul
+## 设置 Consul
 
 现在，我们需要在 `docker-compose.yml` 中配置 Consul 服务。首先，我们将定义一个网络：
 
@@ -5180,10 +5159,6 @@ services:
 
 运行 `docker-compose up` 将启动服务。现在，你可以在浏览器中访问 `http://localhost:8500`，这将进入 Consul 服务器 UI。在服务部分，你将看到 1 个 Consul 实例（指服务器）和 2 个 Consul DNS 实例（一个在服务器上，一个在客户端上）。
 
-
-
-
-
 ![](img/290aa6845834e57fd715912cc7e76d30_290_0.png)
 
 图 14.5 – Consul 服务用户界面
@@ -5192,13 +5167,13 @@ DNS 的服务监控定义在 JSON 配置文件中。任何 Consul 集群默认�
 
 现在我们已经运行了一个名为 Basel 的 Consul 集群，我们需要确保它能够跟踪我们服务的多个实例。
 
-### 服务发现/注册
+## 服务发现/注册
 
 在 Kubernetes 等环境中使用 Consul 时，只需为你的 pod 添加注解（annotations）即可启用服务注册，这非常简单。在这方面，Consul 在服务实例创建时发现它们，并在它们被销毁时将其移除。非常简单！
 
 在 docker-compose 环境中运行时，服务注册的复杂程度会稍微高一些。Consul 拥有一个用于注册服务实例的 API 端点。在 Kubernetes 中，Consul 部署了一个控制器（controller），该控制器可以在相关的 pod 规范创建时填充此端点。对于 docker-compose，我们需要手动调用该 API 端点。
 
-- 1. 我们使用一个 bash 脚本并在入口点（entrypoint）调用它：
+1. 我们使用一个 bash 脚本并在入口点（entrypoint）调用它：
 
 ```bash
 #!/usr/bin/env bash
@@ -5225,7 +5200,7 @@ curl -v -XPUT -d "$MSG" http://consul-client:8500/v1/agent/service/register && d
 
 消费者的 IP 地址是从 `ip addr` 命令中提取的。然后，它被用于构建 PUT 请求体，告诉 Consul 该服务在 TCP 123 上定义了一个健康检查。这与我们在第 7 章“微服务可观测性”中创建的端点相同。
 
-- 2. 生产者（producer）脚本几乎相同，变化的地方都在你预料的地方：
+2. 生产者（producer）脚本几乎相同，变化的地方都在你预料的地方：
 
 ```bash
 #!/usr/bin/env bash
@@ -5250,9 +5225,9 @@ EOM
 curl -v -XPUT -d "$MSG" http://consul-client:8500/v1/agent/service/register && dotnet producer.dll "$@"
 ```
 
-注意，对于生产者，创建的存活端点是 http，路径是 /healthz。
+注意，对于生产者，创建的存活端点是 http，路径是 `/healthz`。
 
-- 3. 在 `docker-compose.yml` 文件中，我们现在覆盖容器入口点以执行此脚本。同时，我们将每个服务实例指向使用静态 IP 地址的 Consul 服务器作为其 DNS：
+3. 在 `docker-compose.yml` 文件中，我们现在覆盖容器入口点以执行此脚本。同时，我们将每个服务实例指向使用静态 IP 地址的 Consul 服务器作为其 DNS：
 
 ```yaml
 dns:
@@ -5260,7 +5235,7 @@ dns:
   entrypoint: ./entrypoint.sh
 ```
 
-- 4. 我们现在可以通过 `docker-compose down` 之后执行 `docker-compose up` 来重启环境。
+4. 我们现在可以通过 `docker-compose down` 之后执行 `docker-compose up` 来重启环境。
 
 几秒钟后，Consul 用户界面将显示生产者和消费者服务，每个服务都有 2 个实例，且都是健康状态：
 
@@ -5270,7 +5245,7 @@ dns:
 
 此时，我们的服务实例正在被 Consul 积极监控健康状况。如果我们创建了服务的任何新实例，它们将自动注册到 Consul 中。现在我们只需要确保它们能正确解析即可。
 
-### 服务解析
+## 服务解析
 
 任何想要访问我们服务的开发者只需要使用 Consul DNS 解析器或绑定或转发到它的 DNS 服务器。我们已经配置了生产者和消费者实例使用 Consul 解析器进行解析。从设计上来说，它们永远不需要关心彼此之间的直接通信。它们的交互完全通过事件进行。然而，为了演示发现，我们可以连接到消费者实例，并查看如何到达健康的、负载均衡的生产者实例：
 
@@ -5296,19 +5271,14 @@ producer.service.consul IN A 10.3.0.3
 ;; MSG size: 84
 ;; time: 0
 ```
+
 图 14.7 – producer.service
 
-
-
-注意，对于生产者，创建的存活端点是 http，路径是 /healthz。
+注意，对于生产者，创建的存活端点是 http，路径是 `/healthz`。
 
 ![](img/290aa6845834e57fd715912cc7e76d30_294_0.png)
 
 图 14.8 – producer.service
-
-
-
-
 
 ## 服务发布
 
@@ -5345,15 +5315,17 @@ producer.service.consul IN A 10.3.0.3
 
 我们的重点是演示使用 APIM 发布服务的概念，我们实际上并没有将服务推送到我们的本地机器之外，因此没有后端需要配置。
 
-在 APIm 资源的 **开发者门户**部分，选择 **门户概览** 窗格。在这里，您可以发布开发者门户，它将包含我们刚刚上传的定义：
+
+
+在 APIM 资源的**开发者门户**部分，选择**门户概览**窗格。在这里，您可以发布开发者门户，它将包含我们刚刚上传的定义：
 
 ![](img/290aa6845834e57fd715912cc7e76d30_298_0.png)
 
-从此窗格，我们可以通过顶部的按钮启动 **开发者门户**。
+从此窗格，我们可以通过顶部的按钮启动**开发者门户**。
 
-点击 **开发者门户** 按钮，我们将进入一个发布给您的组织开发者的视图。作为 APIM 实例的创建者，您可能会发现它以可编辑模式打开。可以使用 **Ctrl + click** 或 **Command + click** 链接来交互式浏览默认站点布局。
+点击**开发者门户**按钮，我们将进入一个发布给您的组织开发者的视图。作为 APIM 实例的创建者，您可能会发现它以可编辑模式打开。可以使用`Ctrl + click`或`Command + click`链接来交互式浏览默认站点布局。
 
-点击 **探索 API** 按钮，然后点击 **producer** 服务名称。您将看到在本章之前创建的 OpenAPI 规范中定义的内容的另一种呈现形式：
+点击**探索 API**按钮，然后点击`producer`服务名称。您将看到在本章之前创建的 OpenAPI 规范中定义的内容的另一种呈现形式：
 
 ### producer
 
@@ -5377,7 +5349,7 @@ producer.service.consul IN A 10.3.0.3
 
 这里有许多内容需要跟踪，而且 API 服务在不断变化、不断移动和不断改进。
 
-我想让您了解一个在 **云原生计算基金会** (CNCF) 下不断成长的开源项目，它正试图解决这个问题，即 Ortelius。Ortelius 的目标是创建一个集中的供应链证据存储库，帮助解决 API 服务上不断演变的依赖问题。
+我想让您了解一个在**云原生计算基金会** (CNCF) 下不断成长的开源项目，它正试图解决这个问题，即 Ortelius。Ortelius 的目标是创建一个集中的供应链证据存储库，帮助解决 API 服务上不断演变的依赖问题。
 
 Ortelius 允许 API 开发者注册他们的服务并跟踪他们的消费者。通过这样做，可以在应用程序和所使用的 API 服务之间创建依赖映射。
 
@@ -5392,36 +5364,23 @@ Ortelius 允许 API 开发者注册他们的服务并跟踪他们的消费者。
 ### 问题
 
 - 1. 什么是 OpenAPI 规范？
-
 - 2. 根据创建者的观点，创建 OpenAPI 规范的最佳方法是什么？
-
 - 3. SwaggerGen 和 SwaggerUI 之间有什么区别？
-
 - 4. 相比于传统的负载均衡，服务发现的优势在哪里？
-
-### 5. 使用设计优先的 OpenAPI 设计并将其发布到 API 管理服务如何帮助开发周期？
+- 5. 使用设计优先的 OpenAPI 设计并将其发布到 API 管理服务如何帮助开发周期？
 
 ### 扩展阅读
 
 - OpenAPI Initiative Home – The Linux Foundation, available at https://www.openapi.org/
-
 - OpenAPI Initiative Best Practices – The Linux Foundation, available at https://openapi.github.io/Documentation/best-practices.html
-
 - Worknik Documentation – Wordnik, available at https://developer.wordnik.com/docs
-
 - ASPNET Core web API documentation with Swagger / OpenAPI – Microsoft, available at https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger.view=aspnetcore-7.0
-
 - Get started with Swashbuckle and ASP.NET Core – Microsoft, available at https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-7.0&tabs=visual-studio
-
-
-
-
-
-* * 什么是服务发现？ – 由 HashiCorp 提供，请访问 https://developer.hashicorp.com/consul/docs/concepts/service-discovery
-* * Consul 的 Docker 示例配置 – 由 HashiCorp 提供，请访问 https://github.com/hashicorp/learn-consul-docker/tree/main/datacenter-deploy-service-discovery
-* * Raft – 通俗易懂分布式共识 – 由 Ben Johnson 提供，请访问 http://thesecretsofdata.com/raft/
-* 教程：导入并发布你的第一个 API – 由 Microsoft Learn 提供，请访问 https://learn.microsoft.com/en-us/azure/api-management/import-and-publish
-* 版本控制 – Ortelius 的秘诀 – 由 Ortelius 提供，请访问 https://docs.ortelius.io/guides/userguide/introduction/#versioning---ortelius-secret-sauce
+- 什么是服务发现？ – 由 HashiCorp 提供，请访问 https://developer.hashicorp.com/consul/docs/concepts/service-discovery
+- Consul 的 Docker 示例配置 – 由 HashiCorp 提供，请访问 https://github.com/hashicorp/learn-consul-docker/tree/main/datacenter-deploy-service-discovery
+- Raft – 通俗易懂分布式共识 – 由 Ben Johnson 提供，请访问 http://thesecretsofdata.com/raft/
+- 教程：导入并发布你的第一个 API – 由 Microsoft Learn 提供，请访问 https://learn.microsoft.com/en-us/azure/api-management/import-and-publish
+- 版本控制 – Ortelius 的秘诀 – 由 Ortelius 提供，请访问 https://docs.ortelius.io/guides/userguide/introduction/#versioning---ortelius-secret-sauce
 
 ## 评估
 
@@ -5457,739 +5416,1169 @@ Ortelius 允许 API 开发者注册他们的服务并跟踪他们的消费者。
 - 5. 最多一次（At-most-once）最容易导致数据丢失。
 - 6. 是——只要存在一个代理，Kafka 集群就可以运行。
 - 7. Zookeeper 通过汇集配置数据、通过主选举确定活动代理等来跟踪集群内的不同代理。
-- 8. – 主题可以通过命令行创建、使用 Kakdrop 等 GUI 界面创建，甚至在使用 SDK 连接到 Kafka 实例时通过代码编程创建。
+- 8. 主题可以通过命令行创建、使用 Kakdrop 等 GUI 界面创建，甚至在使用 SDK 连接到 Kafka 实例时通过代码编程创建。
 
 ## 第 4 章，领域模型和异步事件
 
 - 1. 维护领域。
 - 2. 使用中者模式的主要要目的是解耦生产者和消费者代码，允许特定对象管理通信并减少可能将消费者和生产者耦合的依赖。示例应用程序使用 `INotification` 和 `INotificationHandler<T>` 接口来区分领域内的事件处理器，并在调用事件处理程序时执行已知的操作。
-- 3. – 异步编程（如 C# 中的 `async/await` 模式）在调用异步方法时不会自动创建线程。异步方法可以通过 `Task.Run()` 或 `Task.Factory.StartNew()` 产生新的后台线程。
-
-
-
-
+- 3. 异步编程（如 C# 中的 `async/await` 模式）在调用异步方法时不会自动创建线程。异步方法可以通过 `Task.Run()` 或 `Task.Factory.StartNew()` 产生新的后台线程。
 
 286 评估
 
 - 2. 虽然有人可能认为提到的所有基础知识都大有益，但移植性和可重用性方面往往更为突出。拥有一个可移植的解决方案可以让更多的人参与特定领域解决方案的开发，而可重用性可以减少在尝试设置测试代码时的变动次数。
-
 - 3. `depends_on` 指令允许你在 Docker Compose 文件中指定一个或多个服务，这些服务必须在特定服务启动之前启动。例如，在启动 Kafka 代理节点之前启动 Zookeeper，或者在启动查询 API 服务之前启动 SQL Server。
-
 - 4. 除了内存和 CPU 的平台限制（在 GitHub 文档中描述）外，最大的限制是 Visual Studio Code 是此处唯一支持的 IDE。
-
 - 5. 主要区别在于 Kafka 和数据库服务引用的是预构建的镜像，而领域服务在启动之前将从源代码构建本地镜像，前提是假设服务代码已发生了任何更改。
 
 ## 第 6 章，微服务的本地化测试与调试
 
 - 1. Dockerfile 在 SDK 镜像上以发布模式（Release mode）构建代码，发布文件，然后将其复制到仅包含运行时的镜像中。
-
 - 2. Visual Studio 运行一个在运行时准备好构建和执行代码的容器（而不是构建镜像）。该容器还安装并配置了远程调试器，并映射了本地源代码卷。
-
 - 3. 消费者（Consumer）将继续从 Kafka 集群读取事件并照常处理它们。如果没有生产者（Producer），将不再有事件写入 Kafka 集群。
 
 ## 第 7 章，微服务可观测性
 
 - 1. Kubernetes 将继续检查存活端点（liveness endpoint）。如果失败时间超过了配置的容错时间，Pod 将终止。如果 Pod 是某个部署（deployment）的一部分，它将尝试创建一个 Pod 实例。
-
 - 2. Kubernetes 将继续检查就绪端点（readiness endpoint）。如果失败时间超过了配置的容错时间，Kubernetes 将停止向 Pod 发送任何请求，直到就绪端点再次成功。在具有多个副本的部署中，只要其他 Pod 的就绪端点成功，它们将共同负载。
-
 - 3. 与特定触发操作相关的事件日志将一致地报告关联标识符（correlation identifier）。
 
 ## 第 8 章，CI/CD 流水线与集成测试
 
 - 4. 每个事件将报告一个因果标识符（causation identifier），指示触发当前事件的先验事件。这是一个树形层次，因为一个事件可能会触发多个后续事件——特别是在使用发布-订阅模式时。
-
 - 1. 不一定。取决于组件本身的需求，你可能只需要实现讨论过的一种或两种 CI/CD 模式。至少确保你分离了环境并使用了制品存储库，这是一种良好的做法。
-
 - 2. 通常情况下，在处理由用户界面驱动的应用程序时，功能标志（feature flags）被认为是有益的——也就是说，有一个作为用户体验基础的首要用户界面。如果你的应用程序是一组微服务（例如），除非你有严格性要求将较新的服务限制在特定的消费者子集中，否则使用标志可能并不相关。
-
 - 3. 虽然平均更改通常是人们首先想到的问题，但另一个频繁的访客是变更管理。例如，使用 ServiceNow 等工单系统的组织在管理其如何提出、审批和执行请求时，如果将集成整合到 CI/CD 流水线中，可以显著改进变更生命周期。实现这一点的一种方法是允许非生产环境的更改被视为风险较低并自动批准更改，从而使 CI/CD 流水线无需审批开销即可推送新代码。生产环境更改的审查和审批是必要的关卡，但一旦该项在 ServiceNow 中获得批准，它就可以触发 CD 流水线执行并部署新代码到生产环境。
-
 - 4. 这有很大的解释空间。你希望选择一种运行集成测试的方法（本章前面提到的方法之一），在流水线中实现这些测试可以是一个团队的决定。你可能会发现你所属的组织倾向于使用一种规定性的方法来运行此类测试，但你如何编排这些测试并不如确保遵循该方法那样重要。
 
 ## 第 9 章，故障注入与混沌测试
 
 - 1. 故障（fault）是发生在电路、计算机硬件、操作系统或其他托管机制内部的现象，会导致无法轻易恢复的故障。异常（exception）通常是软件开发中的一个子集，在执行过程中发生了错误，这种错误可能是预期的也可能是意外。
-
 - 2. 一个可以预期并处理的常见故障是云原生服务的区域性中断。例如，如果 Azure 美国东部地区出现影响 App Services 的故障，可以通过在另一个区域保留 App Services 的备副本并配置它们在发生此类故障时可用来处理。
 
-- 3. 故障注入可以被视为一门独立的学科。但在软件世界中，它并不非如此。将故障注入作为执行混沌实验的方法是一种常用方法，用于说明故障注入所扮演的相互互联的角色。在基于硬件的场景中，你可能会认为故障注入更像是一个独立概念，主要因为如果注入成功，它会导致产品完全功能障碍，而这也许是可以恢复的。
 
-- 4. 故障注入以及混沌测试可以在各种位置和环境中发生，并通过多种手段进行。常见位置是集成环境或 QA 环境，其中某些人还会在生产环境中运行故障注入测试以获取见解。这些测试可以通过流水线自动化、脚本运行器甚至手动运行。首选方法是尽可能自动化。
-
-- 5. 混沌实验的初始影响（或爆炸半径，blast radius）应该从小开始并逐渐增大，直到暴露或证明应用程序的容错性。你可能会从数据库中的单条记录或密钥存储库中的密钥开始，然后扩展到影响整个数据库、密钥存储库或二者。
-
-- 6. 根据微软提供的故障提供者列表，以下类型可以作为混沌实验的目标：Azure Cache for Redis、域名（经典）、虚拟机、虚拟机组、Key Vault、网络安全组、Azure Kubernetes Service 和 Cosmos DB。
 
 ## 第 10 章，可扩展性的现代设计模式
 
-- 1. 不；虚拟和物理网络是根据有限资源创建的，无法自动扩展。与网络流量相关的监控细节可以作为触发自动扩展的手段。
+1. 不；虚拟和物理网络是根据有限资源创建的，无法自动扩展。与网络流量相关的监控细节可以作为触发自动扩展的手段。
 
-- 2. CPU 和内存可能是最容易调整的资源，通常被视为监控使用率或过度使用的目标。
+2. `CPU` 和内存可能是最容易调整的资源，通常被视为监控使用率或过度使用的目标。
 
-- 3. 开箱即用，HPA 支持相对于分配给应用程序的 Pod 的 CPU 和内存使用率阈值。可以利用其他类型的指标，从监控集群组件甚至托管系统，建议是坚持使用受故障支持的 HPA 模式。
+3. 开箱即用，`HPA` 支持相对于分配给应用程序的 `Pod` 的 `CPU` 和内存使用率阈值。可以利用其他类型的指标，从监控集群组件甚至托管系统，建议是坚持使用受故障支持的 `HPA` 模式。
 
-- 4. 从短期、长期来看，甚至增加集群节点的资源可能会变得更难以维护，并剥夺你高效分离工作负载的能力。将默认池中的系统关键 Pod 与附加节点池中的应用程序关键 Pod 分离，是管理独立可扩展工作负载的好方法，而无需担心消耗 Kubernetes 运行集群所需的资源。
-
-
-
-
+4. 从短期、长期来看，甚至增加集群节点的资源可能会变得更难以维护，并剥夺你高效分离工作负载的能力。将默认池中的系统关键 `Pod` 与附加节点池中的应用程序关键 `Pod` 分离，是管理独立可扩展工作负载的好方法，而无需担心消耗 `Kubernetes` 运行集群所需的资源。
 
 可能触发集群自动伸缩容事件的上游依赖，以主动帮助应用程序处理流量激增。毕竟，处理事件是我们应用程序系统架构的主题。
 
 ## 第 11 章，最小化数据损失
 
-- 1. 强一致性/ACID
-- 2. 最终一致性/BASE
-- 3. 命令查询职责分离 (CQRS)
-- 4. 最终一致性/BASE
-- 5. 最多一次交付 (At-most-once delivery)
-- 6. 至少一次交付 (At-least-once delivery)
-- 7. 精确一次交付 (Effectively-once delivery)
+1. 强一致性/`ACID`
+
+2. 最终一致性/`BASE`
+
+3. 命令查询职责分离 (`CQRS`)
+
+4. 最终一致性/`BASE`
+
+5. 最多一次交付 (`At-most-once delivery`)
+
+6. 至少一次交付 (`At-least-once delivery`)
+
+7. 精确一次交付 (`Effectively-once delivery`)
 
 ## 第 12 章，服务与应用的弹性弹性
 
-1. 弹性（Resiliency）是指应用程序或平台处理故障、异常或其他可能出现的能力。冗余（Redundancy）是指数据或服务的复制（或两者都有），以帮助防止因网络问题或灾难导致的数据丢失。可靠性（Reliability）是衡量平台或应用程序持续运行能力的可信度。
-2. 回退（Fallback）和断路器（Circuit breaker）模式都允许你停止执行并返回一个可以替代预期操作的值。回退模式不会执行任何额外的逻辑来允许在相同目标上继续后续操作，而断路器将暂停执行一段时间时间，并在达到阈值后重置。
+1. 弹性（`Resiliency`）是指应用程序或平台处理故障、异常或其他可能出现的能力。冗余（`Redundancy`）是指数据或服务的复制（或两者都有），以帮助防止因网络问题或灾难导致的数据丢失。可靠性（`Reliability`）是衡量平台或应用程序持续运行能力的可信度。
+
+2. 回退（`Fallback`）和断路器（`Circuit breaker`）模式都允许你停止执行并返回一个可以替代预期操作的值。回退模式不会执行任何额外的逻辑来允许在相同目标上继续后续操作，而断路器将暂停执行一段时间时间，并在达到阈值后重置。
+
 3. 它允许你重试可能由于超时或其他连接性问题而失败的操作，可以通过受保护的等待或通过与其他模式结合来管理超时、断路器或其他机制来实现。
-4. 灾难恢复（Disaster recovery）指的是当数据中心离线时，该中心所采取的计划，并概述了将激活以恢复应用程序功能的备用站点。业务连续性（Business continuity）涉及维护服务的连续性，无论停机是由于临时故障还是数据中心丢失的灾难。
-5. 可以可以使用工作站服务器上的轻量级 Kubernetes 集群运行服务，或者利用存储账户来存放事件而不是服务实例。根据定价和领域需求，可能还有其他潜在解决方案。这绝不是替代方案的详尽列表。
+
+4. 灾难恢复（`Disaster recovery`）指的是当数据中心离线时，该中心所采取的计划，并概述了将激活以恢复应用程序功能的备用站点。业务连续性（`Business continuity`）涉及维护服务的连续性，无论停机是由于临时故障还是数据中心丢失的灾难。
+
+5. 可以可以使用工作站服务器上的轻量级 `Kubernetes` 集群运行服务，或者利用存储账户来存放事件而不是服务实例。根据定价和领域需求，可能还有其他潜在解决方案。这绝不是替代方案的详尽列表。
 
 290 评估
 
 ## 第 13 章，遥测采集集成
 
-- 1. 有时，用于采集遥测数据的平台由开发人员决定，另一种采集和分析信息的方法是特定的云服务，如 Kubernetes。常见的示例包括 ELK 栈和 Splunk。
-- 2. 活动类型通常在代码执行期间用于跟踪跨多个环境的发生或频率。信息的衡量方式是驱动因素之一，以及实现方法。
-- 3. 是的，这些示例都将考虑到整体设计和对任何遥测平台的使用。取决于所选择的平台，从数据存储到事务的成本有所不同。当服务过于频繁（chatty）时，资源调整不当也会影响性能。
+1. 有时，用于采集遥测数据的平台由开发人员决定，另一种采集和分析信息的方法是特定的云服务，如 `Kubernetes`。常见的示例包括 `ELK` 栈和 `Splunk`。
+
+2. 活动类型通常在代码执行期间用于跟踪跨多个环境的发生或频率。信息的衡量方式是驱动因素之一，以及实现方法。
+
+3. 是的，这些示例都将考虑到整体设计和对任何遥测平台的使用。取决于所选择的平台，从数据存储到事务的成本有所不同。当服务过于频繁（`chatty`）时，资源调整不当也会影响性能。
 
 ## 第 14 章，可观测性重探
 
-- 1. OpenAPI 是一种用于描述可用 REST API 方法的标准格式，包括它们的详细签名和结构。
-- 2. 设计优先（Design-first）是创建 OpenAPI 规范的最佳实践。
-- 3. Swagger 为你的 OpenAPI 服务提供 JSON 格式。SwaggerUI 渲染出一个便于浏览的交互式页面。
-- 4. 服务发现（Service discovery）设计用于处理跨多个环境的服务实例快速创建和删除。
-- 5. 一旦 API 被设计并发布；它们可以通过 mock 实现和共享，真实的运行服务。
+1. `OpenAPI` 是一种用于描述可用 `REST API` 方法的标准格式，包括它们的详细签名和结构。
+
+2. 设计优先（`Design-first`）是创建 `OpenAPI` 规范的最佳实践。
+
+3. `Swagger` 为你的 `OpenAPI` 服务提供 `JSON` 格式。`SwaggerUI` 渲染出一个便于浏览的交互式页面。
+
+4. 服务发现（`Service discovery`）设计用于处理跨多个环境的服务实例快速创建和删除。
+
+5. 一旦 `API` 被设计并发布；它们可以通过 `mock` 实现和共享，真实的运行服务。
 
 # 索引
 
 # 符号
 
-- .NET 7 特性 16
-- 热重载 (hot reload) 18
-- gRPC JSON 转码 17
-- 极简 API 16, 17
-- 可观测性 (observability) 17
-- .NET 7.0  99
-- .NET 应用程序 131
-- .NET Framework 72
-- API 服务
+- `.NET 7` 特性 16
+
+- 热重载 (`hot reload`) 18
+
+- `gRPC JSON` 转码 17
+
+- 极简 `API` 16, 17
+
+- 可观测性 (`observability`) 17
+
+- `.NET 7.0` 99
+
+- `.NET` 应用程序 131
+
+- `.NET Framework` 72
+
+- `API` 服务
+
   - 目录 279, 280
+
   - 共享 256
-- Application Insights 190, 240, 241
+
+- `Application Insights` 190, 240, 241
+
   - 实例，用于管理日志聚合 131-133
+
   - 遥测，133-136
+
 - 应用级遥测 240
-- 性能管理 (APM) 241
+
+- 性能管理 (`APM`) 241
+
 - 应用弹性
+
   - 通过云原生模式 218-223
+
   - 架构结构和范式
+
 - 赋值
-- 命令查询职责分离 (CQRS)
+
+- 命令查询职责分离 (`CQRS`)
+
   - 事件溯源 12, 13
+
   - 高级逻辑架构 10-12
+
 - 制品管理 149
+
 - 异步操作
+
   - 使用 72
-- 异步 JavaScript 和 XML (AJAX) 72
+
+- 异步 `JavaScript` 和 `XML` (`AJAX`) 72
+
 - 异步并行处理 73, 74
+
 - 异步编程
+
   - 至少一次交付 206
 
 # A
 
-- 抽象 (abstraction) 81
+- 抽象 (`abstraction`) 81
+
 - 可接受的数据丢失 200
+
   - 识别 200
-- ACID 范式/强一致性 197
-- 高级消息队列协议 (AMQP) 41, 43, 44
+
+- `ACID` 范式/强一致性 197
+
+- 高级消息队列协议 (`AMQP`) 41, 43, 44
+
 - 聚合存储 36
-- Apache Kafka 188
-- API 应用
+
+- `Apache Kafka` 188
+
+- `API` 应用
+
   - 调整 191
-- API 方法
+
+- `API` 方法
+
   - 转换，进入控制器 259-261
 
 # 索引
 
 - 至少一次交付，示例
+
   - 消费者 207, 208
+
   - 生产者 206, 207
+
 - 最多一次交付，示例
+
   - 消费者 203-205
+
   - 生产者 202, 203
-- 原子性、一致性和持久性 (ACID) 196, 197
+
+- 原子性、一致性和持久性 (`ACID`) 196, 197
+
 - 自动提交 204
-- 自动伸缩实现，针对 Azure App Services 189
-  - 实现 Kubernetes 服务 183
-  - 实现原生 Kubernetes 选项 185
+
+- 自动伸缩实现，针对 `Azure App Services` 189
+
+  - 实现 `Kubernetes` 服务 183
+
+  - 实现原生 `Kubernetes` 选项 185
+
   - 第三方插件 188
+
 - 自动伸缩机制
-  - 计算和 CPU 负载 180, 181
-  - 磁盘和 I/O 负载 181
+
+  - 计算和 `CPU` 负载 180, 181
+
+  - 磁盘和 `I/O` 负载 181
+
   - 内存密集型操作 182
+
   - 请求和网络负载 181, 182
-- Azure API Management (APIM) 275-279
-- Azure Application Insights 131, 188
+
+- `Azure API Management` (`APIM`) 275-279
+
+- `Azure Application Insights` 131, 188
+
   - 实例，管理日志聚合 131-133
-- Azure App Services 180
-  - 实现 Kubernetes 189
-- Azure Chaos Studio 163
-- Azure Monitor 131, 240
+
+- `Azure App Services` 180
+
+  - 实现 `Kubernetes` 189
+
+- `Azure Chaos Studio` 163
+
+- `Azure Monitor` 131, 240
+
   - 日志告警 189
+
 - 指标告警 189
+
 - 资源管理 171
-- 基本可用、软状态和最终一致性 (BASE) 197, 198
+
+- 基本可用、软状态和最终一致性 (`BASE`) 197, 198
+
 # B
-- 轰击式方法 (big-bang approach) 154
-- 自下而上方法 (bottom-up approach) 154
+
+- 轰击式方法 (`big-bang approach`) 154
+
+- 自下而上方法 (`bottom-up approach`) 154
+
 - 广播模式 46
-- 舱隔离模式 (bulkhead isolation pattern) 219
+
+- 舱隔离模式 (`bulkhead isolation pattern`) 219
+
 - 业务连续性 25
+
   - 启用 223, 224
+
 - 业务驱动因素
+
   - 领域模型，审查 6-9
 
 # C
+
 - 基于缓存的技术 41
+
 - 缓存模式 219
-- 金丝雀发布组 (canary group) 150
-- Cassandra 247
-- CloudEvents 139
+
+- 金丝雀发布组 (`canary group`) 150
+
+- `Cassandra` 247
+
+- `CloudEvents` 139
+
   - 用于产生事件 140-142
-- Chaos Monkey 163
-- Chaos Dashboard 163
-- Chaos Engineering 161
+
+- `Chaos Monkey` 163
+
+- `Chaos Dashboard` 163
+
+- `Chaos Engineering` 161
+
   - 原理 162
-- Chaos Mesh 162
+
+- `Chaos Mesh` 162
+
   - 配置 164
-- Chaos-controller-manager 163
+
+- `Chaos-controller-manager` 163
 
 # Consul 集群
+
 - 添加 268
+
 - 混沌测试
+
   - 实现 162
+
 # CI/CD 实现
-- 关联 ID 142-145
-- GitHub Actions 启用 151
+
+- 关联 `ID` 142-145
+
+- `GitHub Actions` 启用 151
+
 # CI/CD 模式
+
 - 消费者代码 29-32
+
 - 制品管理 149
-- Consul 服务 124
+
+- `Consul` 服务 124
+
 - 基于环境的方法 148
+
 - 容器镜像
+
   - 功能标记 150
+
   - 创建 97-101
+
   - 门禁 150
+
   - 审查 148
+
   - 容器化
+
 - 断路器模式 218
+
   - 开发优势 82
+
 # CloudEvent 139
-  - GitHub 代码基础 80, 81
+
+  - `GitHub` 代码基础 80, 81
+
 # CloudEvents Schema 44, 58
-# 云原生计算基金会 (CNCF) 163, 241, 280
+
+# 云原生计算基金会 (`CNCF`) 163, 241, 280
+
   - 配置 96
+
 # 云原生模式
+
   - 调试自定义镜像，修复 109
+
   - 应用弹性通过 218-223
+
   - 调试 101
+
 # 云平台选项 186
+
   - 个体微服务
+
   - 节点池伸缩 186
+
   - 调试 102-104
+
   - 分层节点，带自动伸缩 186
-  - Kafka 集群服务，调试 104-109
+
+  - `Kafka` 集群服务，调试 104-109
+
 # 代码
-  - Kafka 集群服务，编排 104-109
+
+  - `Kafka` 集群服务，编排 104-109
+
   - 实现细节，探索 25
+
   - 测试 110
-# 命令行界面 (CLI) 50
-# 内容交付网络 (CDN) 41
-# 命令查询职责分离 (CQRS) 13, 199
+
+# 命令行界面 (`CLI`) 50
+
+# 内容交付网络 (`CDN`) 41
+
+# 命令查询职责分离 (`CQRS`) 13, 199
+
 # 持续交付 147
+
 - 服务间通信 232
+
   - 持续部署
+
   - 结果 233-236
-  - GitHub Actions 153, 154
+
+  - `GitHub Actions` 153, 154
+
 - 组件级遥测 240
+
   - 持续集成 147
-# 配置即代码 (CaC) 14, 159
-  - GitHub Actions 153-151
 
+# 配置即代码 (`CaC`) 14, 159
 
+  - `GitHub Actions` 153-151
 
+创建、检索、更新和删除 (`CRUD`) 12
 
-
-创建、检索、更新和删除 (CRUD) 12
-
-自定义资源定义 (CRD) 163
+自定义资源定义 (`CRD`) 163
 
 自定义遥测捕获
+
 实现 242-246
 
 # D
 
 数据一致性范式
-ACID 范式/立即一致性 197
-BASE 范式/最终一致性 197, 198
-CQRS 模式 199
-Saga 模式 199
 
-DataDog 241
+`ACID` 范式/立即一致性 197
+
+`BASE` 范式/最终一致性 197, 198
+
+`CQRS` 模式 199
+
+`Saga` 模式 199
+
+`DataDog` 241
+
 数据丢失
+
 影响 213
+
 方法 201
+
 失败模式 200
+
 防止 196, 197
+
 数据丢失防护
+
 挑战 196
 
-Debug 构建 101
-Debug 自定义镜像
+`Debug` 构建 101
+
+`Debug` 自定义镜像
+
 修复 109
 
 交付保证，方法 201, 202
-一次交付 (at-once delivery) 206
-至多一次 (at-most-once delivery) 202
-有效一次交付 (effectively-once delivery) 208, 209
+
+一次交付 (`at-once delivery`) 206
+
+至多一次 (`at-most-once delivery`) 202
+
+有效一次交付 (`effectively-once delivery`) 208, 209
 
 出队列 40
-Dev Containers
-使用，作为本地环境 87
-DevOps 97
-灾难恢复 25
-分布式追踪 139
-使用，Jaeger 导出器 249-252
-DNS 服务器 267
 
-Docker 123
+`Dev Containers`
+
+使用，作为本地环境 87
+
+`DevOps` 97
+
+灾难恢复 25
+
+分布式追踪 139
+
+使用，`Jaeger` 导出器 249-252
+
+`DNS` 服务器 267
+
+`Docker` 123
+
 隔离 80
+
 本地基础设施，创建 83
 
-Docker Compose 89
-用于，用于运行中的基础设施 83, 84
-Docker Compose 文件
-服务，添加 88-91
-Docker Desktop 163, 247
+`Docker Compose` 89
 
-Dockerfile
+用于，用于运行中的基础设施 83, 84
+
+`Docker Compose` 文件
+
+服务，添加 88-91
+
+`Docker Desktop` 163, 247
+
+`Dockerfile`
+
 顺序文件，对比多阶段文件 88
+
 使用，在本地构建和运行 88
-Docker 网络
+
+`Docker` 网络
+
 设置 267
-领域驱动设计 (DDD) 40
+
+领域驱动设计 (`DDD`) 40
+
 领域模型
+
 审查 69
-领域特定语言 (DSL) 6
+
+领域特定语言 (`DSL`) 6
+
 领域结构和组件
+
 审查 59
+
 领域结构和组件，
-MEDA 应用
+
+`MEDA` 应用
+
 设备领域 59
+
 识别领域 70
+
 维护领域 62, 63
+
 通知领域 66, 67
+
 乘客领域 68, 69
+
 调度领域 64, 65
+
 站点领域 61, 62
-DynaTrace 241
+
+`DynaTrace` 241
 
 # E
 
 有效一次交付 208, 209
+
 有效一次交付，示例
+
 消费者 211-213
+
 生产者 209-211
-Elasticsearch 247
+
+`Elasticsearch` 247
 
 # 索引 295
 
-最终用户许可协议 (EULA) 89
+最终用户许可协议 (`EULA`) 89
+
 基于环境的方法
+
 - 引用链接 148, 149
+
 设备领域 59
+
 聚合根 60
+
 实体 60
+
 事件处理器 60
+
 事件 60
+
 值对象 61
+
 设备领域，聚合根
+
 摄像头 60
+
 闸机 60
-关键 Kafka 组件
+
+关键 `Kafka` 组件
+
 审查 47-50
+
 事件
+
 连续性 224, 225
+
 重试 224, 225
+
 事件驱动架构 24
+
 事件处理 33
+
 事件负载
-产生，带有因果 ID 140-142
-产生，带有关联 ID 140-142
-事件 Schema 15
+
+产生，带有因果 `ID` 140-142
+
+产生，带有关联 `ID` 140-142
+
+事件 `Schema` 15
+
 事件溯溯 12, 13
+
 事件结构 15
+
 最终一致性 23
-万物皆代码 (EaC) 97
+
+万物皆代码 (`EaC`) 97
+
 精确一次模式 46
 
 容错性 24, 160, 161
+
 容错的 121
+
 功能标记 150
+
 功能性测试
-使用 Postman 111-193
+
+使用 `Postman` 111-193
 
 # G
+
 - 门 150
-通用可用 (GA) 169
-GitHub Actions
-启用，用于 CI/CD 实现 151
+
+通用可用 (`GA`) 169
+
+`GitHub Actions`
+
+启用，用于 `CI/CD` 实现 151
+
 用于持续部署 153, 154
+
 用于持续集成 151-153
-GitHub CodeSpaces
+
+`GitHub CodeSpaces`
+
 使用，作为在线开发者环境 86, 87
-GitHub Packages 150
-GitOps 97
-Grafana 247
-Gremlin 162
+
+`GitHub Packages` 150
+
+`GitOps` 97
+
+`Grafana` 247
+
+`Gremlin` 162
+
 保证交付 41
+
 保证交付模式 45
 
 # H
 
 - 健康检查实例 267
-Helm 85, 163, 247
+
+`Helm` 85, 163, 247
+
 高层逻辑架构 10-12
-水平 Pod 自动伸缩器 (HPAs) 183-185
+
+水平 `Pod` 自动伸缩器 (`HPAs`) 183-185
+
 主机 181
+
 热重载 18
-HTTP 上下文头 141
-HTTP 用于关联 138
-HTTP 请求探针 124
+
+`HTTP` 上下文头 141
+
+`HTTP` 用于关联 138
+
+`HTTP` 请求探针 124
 
 # F
 
 回退模式 219
+
 故障注入 161
+
 实现 162
+
 故障
+
 预测 161
 
 # I
 
-Java 虚拟机 (JVM) 182
+`Java` 虚拟机 (`JVM`) 182
+
 幂等性 208
-JMeter 113
+
+`JMeter` 113
+
 识别领域 70
-jQuery 72
+
+`jQuery` 72
+
 聚合根 71
 
 # K
 
 实体 71
-Kafka 主 23
+
+`Kafka` 主 23
+
 事件处理器 71, 72
-关键性能指标 (KPIs) 162
+
+关键性能指标 (`KPIs`) 162
+
 事件 71
+
 组合工具 85
+
 身份与访问管理
+
 考虑 14
-kubectl 164
+
+`kubectl` 164
+
 不可变性 80
-Kubernetes 124
+
+`Kubernetes` 124
+
 实现模式
+
 用于，用于启动基础设施 84-86
-.NET 特性 16
-基于 Kubernetes 的应用程序 162
-事件结构和 Schema 15
-Kubernetes 集群 240
+
+`.NET` 特性 16
+
+基于 `Kubernetes` 的应用程序 162
+
+事件结构和 `Schema` 15
+
+`Kubernetes` 集群 240
+
 身份与访问管理
+
 考虑 14
-Kubernetes 事件驱动自动伸缩 (KEDA) 188
-Visual Studio 解决方案 144
-Kubernetes 服务
+
+`Kubernetes` 事件驱动自动伸缩 (`KEDA`) 188
+
+`Visual Studio` 解决方案 144
+
+`Kubernetes` 服务
+
 自动伸缩，实现 183
 
 # L
 
-基础设施即代码 (IaC) 14, 159
-Linux 163
+基础设施即代码 (`IaC`) 14, 159
+
+`Linux` 163
+
 基础设施连续性 231, 232
+
 存活端点 123
+
 内存计数器 204
-集成环境 (IDE) 38
+
+集成环境 (`IDE`) 38
+
 创建 124
+
 集成存活端点，添加 124-126
+
 存活指标 124
+
 存活探针 122
+
 测试套件 154, 155
-使用 JMeter 113-116
+
+使用 `JMeter` 113-116
+
 本地冗余 225-231
+
 本地环境
-物联网 (IoT) 4
-GitHub CodeSpaces 和 Dev Containers，分层 86
-基础设施，使用 Docker 创建 83
+
+物联网 (`IoT`) 4
+
+`GitHub CodeSpaces` 和 `Dev Containers`，分层 86
+
+基础设施，使用 `Docker` 创建 83
+
 用于分布式追踪 249-252
+
 设置 82
-JavaScript 库 236
-Log4Shell 280
+
+`JavaScript` 库 236
+
+`Log4Shell` 280
 
 索引 297
+
 日志聚合 130, 131
+
 保证交付模式 45
+
 审查 45
-Azure 应用程序中心，创建 131-133
+
+`Azure` 应用程序中心，创建 131-133
+
 日志
-产生，带有因果 ID 140-142
-产生，带有关联 ID 140-142
+
+产生，带有因果 `ID` 140-142
+
+产生，带有关联 `ID` 140-142
+
 审查 43
+
 日志 122
-高级队列协议 (AMQP) 43, 44
-消息遥测传输 (MQTT) 74
+
+高级队列协议 (`AMQP`) 43, 44
+
+消息遥测传输 (`MQTT`) 74
+
 流到应用程序 136-138
+
 遥测流到应用程序
-使用 Prometheus 导出器 247-249
+
+使用 `Prometheus` 导出器 247-249
+
 指标 121, 122
+
 微服务
-minikube 84, 163
-MiniKube 247
-最小 API 功能 26
+
+`minikube` 84, 163
+
+`MiniKube` 247
+
+最小 `API` 功能 26
+
 修改 199
+
 维护领域 62, 63
+
 聚合根 63
-消息遥测传输 (MQTT) 74
-MEDA 应用
+
+消息遥测传输 (`MQTT`) 74
+
+`MEDA` 应用
+
 组件 58
+
 核心库 57, 58
+
 接口 57, 58
+
 领域结构和组件，
+
 审查 59
+
 事件处理器 24
+
 事件 64
+
 压力 35
-Mass Transit 事件驱动应用 (MTAEDA) 14
+
+`Mass Transit` 事件驱动应用 (`MTAEDA`) 14
+
 调停器模式 57
-MediatR 57
+
+`MediatR` 57
+
 消息代理 23, 40
+
 基于缓存的技术 41
+
 基于队列的技术 40, 41
+
 基于流的技术 42, 43
+
 消息代理技术
-关键 Kafka 组件，审查 47-50
+
+关键 `Kafka` 组件，审查 47-50
+
 实现 46
+
 弹性，启用 51, 52
+
 可扩展性，启用 51, 52
+
 变异 199
 
 # N
 
-NASA 公共 API URL 275
-原生 Kubernetes 选项 183
-水平 Pod 自动伸缩器 183-185
-副本Sets 185
-消息交付模式
-至少一次模式 46
-至多一次模式 46
-精确一次模式 46
-Newman
+`NASA` 公共 `API` `URL` 275
+
+原生 `Kubernetes` 选项 183
+
+水平 `Pod` 自动伸缩器 183-185
+
+副本`Sets` 185
+
+
+
+# 消息交付模式
+
+- 至少一次模式 46
+- 至多一次模式 46
+- 精确一次模式 46
+
+# Newman
+
 引用链接 113
-New Relic 241
-Node-RED 44
+
+# New Relic 241
+
+# Node-RED 44
 
 # 非侵入式遥测捕获
+
 实现 241, 242
 
 # NoSQL 数据存储 162
-通知领域 66, 67
-聚合根 67
-事件处理器 68
-事件 68
+
+## 通知领域 66, 67
+
+- 聚合根 67
+- 事件处理器 68
+- 事件 68
+
 实现细节，在基础设施中审查 34
 
 # 生产者
+
 检查 22, 23
+
 生产者服务 124
-Prometheus 241, 247
-Prometheus 导出器
+
+# Prometheus 241, 247
+
+## Prometheus 导出器
+
 用于，指标摄入 247-294
 
 # O
 
-可观测性 119-121
-可观测性支柱
-日志 120, 122
-指标 120, 122
-追踪 120-123
-OpenAPI 规范 257, 258
+## 可观测性 119-121
+
+### 可观测性支柱
+
+- 日志 120, 122
+- 指标 120, 122
+- 追踪 120-123
+
+## OpenAPI 规范 257, 258
+
 运行时，查看 265, 266
-OpenAPI  v3.1.0 257
-编排
+
+## OpenAPI v3.1.0 257
+
+## 编排
+
 配置 96
-Ortelius 280
+
+## Ortelius 280
 
 # Q
 
-质量保证 119
-基于队列的代理
+## 质量保证 119
+
+## 基于队列的代理
+
 基于队列的技术 40, 41
 
 # R
 
-Raft 268
-速率限制模式 219
-就绪端点 123, 128
-消费者就绪端点，跳过 130
-生产者就绪端点，添加 128-130
+## Raft 268
+
+## 速率限制模式 219
+
+## 就绪端点 123, 128
+
+- 消费者就绪端点，跳过 130
+- 生产者就绪端点，添加 128-130
 
 # P
 
-Parallel.ForEach 方法 73
-乘客领域 68, 69
-聚合根 69
-事件处理器 70
-事件 69
-PolicyWrap 模式 219
-Polly 217
-迁移性 80
-POST 260
-生产者-消费者模式 22
-采用曲线 25
-实现细节，在代码中探索 25
-就绪指标 124
-就绪探针 122
-恢复点 (RPO) 52
-冗余 223, 224
-副本Sets 185
-请求体 261
-弹性
-启用 51, 52
-修剪模式 24
-可重用性 81
-基于角色的访问控制 (RBAC) 164
-运行时 Swagger UI
+## Parallel.ForEach 方法 73
+
+## 乘客领域 68, 69
+
+- 聚合根 69
+- 事件处理器 70
+- 事件 69
+
+## PolicyWrap 模式 219
+
+## Polly 217
+
+## 迁移性 80
+
+## POST 260
+
+## 生产者-消费者模式 22
+
+- 采用曲线 25
+- 实现细节，在代码中探索 25
+
+## 就绪指标 124
+
+## 就绪探针 122
+
+## 恢复点 (RPO) 52
+
+## 冗余 223, 224
+
+## 副本Sets 185
+
+## 请求体 261
+
+## 弹性
+
+- 启用 51, 52
+- 修剪模式 24
+
+## 可重用性 81
+
+## 基于角色的访问控制 (RBAC) 164
+
+## 运行时 Swagger UI
+
 查看 263, 264
 
 # S
 
-Saga 模式 199
-三明治混合方法 155
-可扩展性 24
-启用 51, 52
-调度领域 64, 65
-聚合根 25
-事件处理器 66
-事件 66
+## Saga 模式 199
+
+## 三明治混合方法 155
+
+## 可扩展性 24
+
+- 启用 51, 52
+
+## 调度领域 64, 65
+
+- 聚合根 25
+- 事件处理器 66
+- 事件 66
+
 # Schema
-自定义 Schema 45
-审查 44
+
+- 自定义 Schema 45
+- 审查 44
+
 # Schema 标准
+
 使用 44
-语义化版本 44
-服务器 UI
+
+## 语义化版本 44
+
+## 服务器 UI
+
 访问 269
+
 # 服务发现 266, 270-272
-Consul，探索 266
-负载均衡，挑战 266
+
+- Consul，探索 266
+- 负载均衡，挑战 266
+
 # 服务信息
+
 生成 257
-服务等级协议 (SLAs) 160
-服务级遥测 240
-服务发布 265, 275
-Azure API 管理 275-279
+
+## 服务等级协议 (SLAs) 160
+
+## 服务级遥测 240
+
+## 服务发布 265, 275
+
+- Azure API 管理 275-279
+
 # 服务注册 270-272
-服务
+
+## 服务
+
 通信 232
 
 # SignalR 236
 
 # SOLID
+
 引用链接 122
-站点领域 61, 62
-聚合根 62
-实体 62
-事件处理器 62
-事件 62
-存储偏移量 204
-基于流的代理
-对比基于队列的代理 42
-基于流的技术 42, 43
-示例 43
-流 35
+
+## 站点领域 61, 62
+
+- 聚合根 62
+- 实体 62
+- 事件处理器 62
+- 事件 62
+
+## 存储偏移量 204
+
+## 基于流的代理
+
+- 对比基于队列的代理 42
+- 基于流的技术 42, 43
+- 示例 43
+
+## 流 35
 
 # Swagger
-文档，生成 258
-历史 258
+
+- 文档，生成 258
+- 历史 258
 
 # Swagger, 文档
-API 方法，从内联
-转换为 259-261
-中间件， 262
-启动服务， 262
+
+- API 方法，从内联转换为 259-261
+- 中间件， 262
+- 启动服务， 262
 
 # SWAGR
-Swashbuckle 258
-系统管理员 (sa) 89
-系统弹性 24
+
+## Swashbuckle 258
+
+## 系统管理员 (sa) 89
+
+## 系统弹性 24
 
 # T
 
-表格 35
-任务异步编程 (TAP) 82
-TCP 探针 124
-遥测
-应用级 240
-组件级 240
-服务级 240
+## 表格 35
+
+## 任务异步编程 (TAP) 82
+
+## TCP 探针 124
+
+## 遥测
+
+- 应用级 240
+- 组件级 240
+- 服务级 240
 
 # Terraform 186
-超时模式 219
-自上而下方法 154
-主题，在 Kafka 中 34
-顶级程序功能 23
-追踪 122
-触发器 150
-TurnstileMaintenanceSchedule 65
 
+## 超时模式 219
 
+## 自上而下方法 154
 
+## 主题，在 Kafka 中 34
 
+## 顶级程序功能 23
+
+## 追踪 122
+
+## 触发器 150
+
+## TurnstileMaintenanceSchedule 65
 
 # U
 
-不可接受的数据丢失 200
-唯一标识符 138
-用户验收测试 119
+## 不可接受的数据丢失 200
+
+## 唯一标识符 138
+
+## 用户验收测试 119
 
 # V
 
-值对象
-实体 61
-冗余性 122
-Visual Studio 97
-Visual Studio 解决方案拓扑 14
+## 值对象
+
+- 实体 61
+- 冗余性 122
+
+## Visual Studio 97
+
+## Visual Studio 解决方案拓扑 14
 
 # W
 
-Web Apps
+## Web Apps
+
 调整 190, 191
-WebSockets 44, 236
-Windows 163
-Windows Linux 子系统 (WSL) 16
+
+## WebSockets 44, 236
+
+## Windows 163
+
+## Windows Linux 子系统 (WSL) 16
 
 # <packt>
 
-Packt.com
+## Packt.com
 
 订阅我们的在线数字库，即可完整访问 7,000 多部书籍和视频，以及行业领先的工具，帮助您规划个人发展并提升职业。欲需更多信息，请访问我们的网站。
 
@@ -6241,4 +6630,3 @@ ISBN: 9781803243672
 - 在并行处理数据时强制数据排序，并安全地合并来自多个源的数据
 - 使用并发集合帮助跨线程同步数据
 - 使用 Parallel Stacks 和 Parallel Tasks 窗口调试日常并行应用程序
-

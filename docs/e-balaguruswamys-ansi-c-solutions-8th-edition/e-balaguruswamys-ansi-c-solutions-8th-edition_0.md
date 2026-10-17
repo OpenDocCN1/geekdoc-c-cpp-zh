@@ -1,12 +1,8 @@
+
 # E. Balaguruswamy 的 ANSI C 解决方案：第 8 版
 
-
-
-![](img/image8.jpg)
-
-![](img/image8.jpg)
-
 ## 2.1
+
 ```c
 #include <stdio.h>
 int main(){
@@ -17,6 +13,7 @@ int main(){
 ```
 
 ## 2.2
+
 ```c
 /* void bar3d(int left, int top, int right, int bottom, int depth, int topflag);
 其中，left 指定左上角的 X 坐标，top 指定左上角的 Y 坐标，right 指定右下角的 X 坐标，bottom 指定右下角的 Y 坐标，depth 指定条形以像素为单位的深度，topflag 决定是否在条形上放置一个三维顶端（如果为非零则放置，否则不放置） */
@@ -48,6 +45,7 @@ int main(){
 ```
 
 ## 2.3
+
 ```c
 #include <stdio.h>
 int main(){
@@ -58,6 +56,7 @@ int main(){
 ```
 
 ## 2.4
+
 ```c
 #include <stdio.h>
 int main(){
@@ -69,6 +68,7 @@ int main(){
 ```
 
 ## 2.5
+
 ```c
 #include <stdio.h>
 int main(){
@@ -85,6 +85,7 @@ int main(){
 ```
 
 ## 2.6
+
 ```c
 #include<stdio.h>
 #include<time.h>
@@ -98,6 +99,7 @@ int main(){
 ```
 
 ## 2.7
+
 ```c
 #include <stdio.h>
 int add(int a,int b){return a+b;}
@@ -113,6 +115,7 @@ int main(){
 ```
 
 ## 2.8
+
 ```c
 #include <stdio.h>
 int main(int argc, const char * argv[]) {
@@ -125,6 +128,7 @@ int main(int argc, const char * argv[]) {
 ```
 
 ## 2.9
+
 ```c
 #include <stdio.h>
 int main(int argc, const char * argv[]) {
@@ -137,26 +141,25 @@ int main(int argc, const char * argv[]) {
 ```
 
 ## 2.10
+
 ```c
 #include <stdio.h>
 int main() {
-  printf(" ----------                 ----------------------\n");
-  printf("|                                    |\n");
-  printf("|                        ------------>>------------>             |\n");
-  printf("|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-�
-�  0
-
-
-
+  printf(" ----------                 ----------------------\n");
+  printf("|                                    |\n");
+  printf("|                        ------------>>----------->             |\n");
+  printf("|                                                                        |\n");
+  printf("0\n");
+  return 0;
+}
 ```
 
 ## 2.11
+
 ```c
 #include <stdio.h>
 int main() {
   printf("3 of
-
 
 
 , a,,;
@@ -168,10 +171,10 @@ f("%f",&a,c);
   printf("Area =3f",area);
   return 0;
 }
-
-
+```
 
 ## 2.12
+
 ```c
 #include <stdio.h>
 int main() {
@@ -187,6 +190,7 @@ int main() {
 ```
 
 ## 2.13
+
 ```c
 #include <stdio.h>
 int main() {
@@ -202,6 +206,7 @@ int main() {
 ```
 
 ## 2.14
+
 ```c
 #include <stdio.h>
 int main() {
@@ -215,6 +220,7 @@ int main() {
 ```
 
 ## 2.15
+
 ```c
 #include <stdio.h>
 int main() {
@@ -228,12 +234,13 @@ int main() {
 ```
 
 # Interview Questions
-* Structured approach
-* Portable
-* Use of pointers : directly manage memory
-* Recursion : Call a function within a function
-* Semicolon(`;`)
-* No.
-* Braces `{}`
-* `main()`
+
+- Structured approach
+- Portable
+- Use of pointers : directly manage memory
+- Recursion : Call a function within a function
+- Semicolon(`;`)
+- No.
+- Braces `{}`
+- `main()`
 

@@ -1,15 +1,12 @@
+
 # 50 道 C 语言初级与中级练习：学习 C 编程的实用方法
 
-
-
-![](img/image_rsrc1SU.jpg)
-
-
-
 ## C 语言概览
-Dennis Ritchie 于 20 世纪 70 年代初在贝尔实验室创建了 C 编程语言，它在今天仍被广泛使用。它是作为 B 语言的扩展而开发的，具有新的数据类型和功能。多年来，C 已成为世界上使用最广泛的编程语言之一，影响了如 C++、C#、Objective-C 等许多现代编程语言的发展，并间接地影响了 Java 和 Python 等语言。
+
+Dennis Ritchie 于 20 世纪 70 年代初在贝尔实验室创建了 C 编程语言，它在今天仍被广泛使用。它是作为 B 语言的扩展而开发的，具有新的数据类型和功能。多年来，C 已成为世界上使用最广泛的编程语言之一，影响了如 `C++`、`C#`、`Objective-C` 等许多现代编程语言的发展，并间接地影响了 `Java` 和 `Python` 等语言。
 
 ## C 语言的重要性
+
 C 语言经常用于系统编程，特别是在操作系统的创建中。例如，Linux 和 Windows 内核包含了 C 代码。
 
 C 是一种编译型语言，因此它的运行速度比解释型语言更快。结果，它适用于资源受限的环境或需要高性能的场景。
@@ -23,40 +20,51 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 ## 初级
 
 ### 第一部分：C 语言基础
+
 - 基础 C 语法和操作的介绍。
 - 简单的 I/O、算术计算和常量的使用。
 
 ### 第二部分：控制结构
+
 - 条件语句的介绍。
 - 使用 `if-else` 和 `switch-case` 进行决策。
 
 ### 第三部分：循环
+
 - 迭代的介绍。
 
 ### 第四部分：函数
+
 - 模块化编程的介绍。
 
 ### 第五部分：数组
+
 - 数据结构的介绍。
 
 ### 第六部分：字符串与字符
+
 - 字符串操作的介绍。
 
 ### 第七部分：指针
+
 - 内存管理的介绍。
 
 ### 第八部分：函数
+
 - 专注于递归。
 
 ### 第九部分：结构体
+
 - 用户定义结构的介绍。
 
 ### 第十部分：文件与 I/O
+
 - 文件操作的介绍。
 
 ## 初级
 
 ### 第一部分：C 语言基础
+
 - 1-1: 编写打印“Hello, World!”的程序。
 - 1-2: 编写接收输入并输出其长度的程序。
 - 1-3: 编写将摄氏度转换为华氏度的程序。
@@ -64,6 +72,7 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 1-5: 编写计算数字之和的程序。
 
 ### 第二部分：控制结构
+
 - 2-1: 编写检查数字是偶数还是奇数的程序。
 - 2-2: 编写打印月份名称的程序。
 - 2-3: 编写检查字符是否为元音或辅音的程序。
@@ -71,6 +80,7 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 2-5: 编写检查是否为闰年的程序。
 
 ### 第三部分：循环
+
 - 3-1: 编写打印前 10 个自然数的程序。
 - 3-2: 编写计算数字阶乘的程序。
 - 3-3: 编写打印到指定项项的斐波那契数列的程序。
@@ -78,13 +88,15 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 3-5: 编写输出某个数字的乘法表的程序。
 
 ### 第四部分：函数
+
 - 4-1: 编写一个返回两个数字之和的函数。
 - 4-2: 创建一个找到三个数中最大值的函数。
 - 4-3: 编写一个计算数字阶乘的函数。
 - 4-4: 创建一个检查数字是否为质数的函数。
-- 4-5: 编写一个将字符串转换为大写的 de 函数。
+- 4-5: 编写一个将字符串转换为大写的 `de` 函数。
 
 ### 第五部分：数组
+
 - 5-1: 编写查找数组中最大和最小元素的程序。
 - 5-2: 创建一个反转数组元素的程序。
 - 5-3: 编写一个计算数组元素总和和平均值的程序。
@@ -94,6 +106,7 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 ## 中级
 
 ### 第六部分：字符串与字符
+
 - 6-1: 编写一个接收字符串并输出其长度的程序。
 - 6-2: 实现一个检查字符串是否为回文的程序。
 - 6-3: 创建一个不使用 `strcat()` 连接两个字符串的程序。
@@ -101,6 +114,7 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 6-5: 实现一个统计字符串中元音和辅音数量的程序。
 
 ### 第七部分：指针
+
 - 7-1: 编写使用指针交换两个整数值的程序。
 - 7-2: 实现一个使用指针查找字符串长度的程序。
 - 7-3: 创建一个使用指针反转字符串的程序。
@@ -108,6 +122,7 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 7-5: 实现一个使用指针按升序排序整数数组的程序。
 
 ### 第八部分：函数
+
 - 8-1: 实现一个计算第 n 斐波那契数的递归函数。
 - 8-2: 编写一个使用函数实现二分查找算法的程序。
 - 8-3: 实现一个使用递归函数计算数字 n 方的程序。
@@ -115,28 +130,20 @@ C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
 - 8-5: 实现一个计算两个数字最大公约数(GCD)的递归函数。
 
 ### 第九部分：结构体
+
 - 9-1: 定义一个表示复数的结构体。实现两个复数的加、减、乘函数。
 - 9-2: 创建一个表示日期（日、月、年）的结构体。编写一个计算两个日期之间差值（天）的程序。
 - 9-3: 实现一个包含姓名、学号和三门科目成绩的学生结构体。编写一个计算学生平均分数的函数。
 - 9-4: 编写一个使用结构体存储并显示书籍信息（书籍 ID、标题、作者、价格）的程序。
+- 9-5: 创建一个名为 `Time` 的结构体，包含三个整数成员：`hours`、`minutes` 和 `seconds`。创建一个函数来计算两个时间。
 
+### 第 10 节 文件与输入/输出
 
-
-
-
-## 9-5. 创建一个名为 `Time` 的结构体，包含三个整数成员：`hours`、`minutes` 和 `seconds`。创建一个函数来计算两个时间。
-
-## 第 10 节 文件与输入/输出
-
-### 10-1. 编写一个程序，创建一个文本并将并将输入的字符串写入文件。
-
-### 10-2. 实现一个程序，读取文件并统计文件中的行数、单词数和字符数。
-
-### 10-3. 创建一个程序，将一个文件的内容复制到另一个文件中。
-
-### 10-4. 实现一个程序，将两个文本文件合并到第三个文件中。
-
-### 10-5. 编写一个程序，读取文件并显示文件中长的一行。
+- 10-1: 编写一个程序，创建一个文本并将并将输入的字符串写入文件。
+- 10-2: 实现一个程序，读取文件并统计文件中的行数、单词数和字符数。
+- 10-3: 创建一个程序，将一个文件的内容复制到另一个文件中。
+- 10-4: 实现一个程序，将两个文本文件合并到第三个文件中。
+- 10-5: 编写一个程序，读取文件并显示文件中长的一行。
 
 ## 初学者 1 答案：
 
@@ -183,22 +190,31 @@ int main() {
 ## 初学者 1 输出：
 
 #1-1
+
 Hello, World!
 
 #1-2
+
 Enter a number: 5.0
+
 Double of 5.000000 is 10.000000
 
 #1-3
+
 Enter temperature in Celsius: 25
+
 Temperature in Fahrenheit: 77.000000
 
 #1-4
+
 Enter the radius of the circle: 5
+
 Area of the circle: 78.539816
 
 #1-5
+
 Enter three numbers: 1 2 3
+
 Sum = 6.000000, Average = 2.000000, Product = 6.000000
 
 ## 初学者 2 答案：
@@ -263,23 +279,33 @@ int main() {
 ## 初学者 2 输出：
 
 #2-1
+
 Enter an integer: 4
+
 4 is even
 
 #2-2
+
 Enter month number (1-12): 7
+
 July
 
 #2-3
+
 Enter a character: e
+
 e is a vowel
 
 #2-4
+
 Enter three numbers: 5 3 7
+
 Largest number is 7.000000
 
 #2-5
+
 Enter a year: 2000
+
 2000 is a leap year
 
 ## 初学者 3 答案：
@@ -347,34 +373,56 @@ int main() {
 ## 初学者 3 输出：
 
 #3-1
+
 1 2 3 4 5 6 7 8 9 10
 
 #3-2
+
 Enter positive integer: 5
+
 Factorial of 5 = 120
 
 #3-3
+
 Enter number of terms: 7
+
 Fibonacci Series: 0 1 1 2 3 5 8
 
 #3-4
+
 Enter two numbers (intervals): 10 50
+
 Prime numbers between 10 and 50 are: 11 13 17 19 23 29 31 37 41 43 47
 
 #3-5
+
 Enter a number: 5
+
 1 = 5
+
 2 = 10
+
 3 = 15
+
 4 = 20
+
 5 = 25
+
 6 = 30
+
 7 = 35
+
 8 = 40
+
 9 = 45
+
 10 = 50
 
 ## 初学者 4 答案：
+
+
+
+下面是排版后的 Markdown 文档：
 
 ```c
 #include <stdio.h>
@@ -440,20 +488,20 @@ int main() {
 
 ## 初学者 4 输出：
 
-#4-1
-Sum of 5 and 3: 8.000000
+`#4-1`  
+`Sum of 5 and 3: 8.000000`
 
-#4-2
-Largest of 5, 3, and 7: 7.000000
+`#4-2`  
+`Largest of 5, 3, and 7: 7.000000`
 
-#4-3
-Factorial of 5: 120
+`#4-3`  
+`Factorial of 5: 120`
 
-#4-4
-Is 17 prime? Yes
+`#4-4`  
+`Is 17 prime? Yes`
 
-#4-5
-Uppercase: HELLO WORLD!
+`#4-5`  
+`Uppercase: HELLO WORLD!`
 
 ## 初学者 5 答案：
 
@@ -527,21 +575,21 @@ int main() {
 
 ## 初学者 5 输出：
 
-#5-1
-Minimum: 5, Maximum: 90
+`#5-1`  
+`Minimum: 5, Maximum: 90`
 
-#5-2
-Reversed: 90 8 5 20 10
+`#5-2`  
+`Reversed: 90 8 5 20 10`
 
-#5-3
-Sum: 133.000000, Average: 26.600000
+`#5-3`  
+`Sum: 133.000000, Average: 26.600000`
 
-#5-4
-Sorted: 5 8 10 20 90
+`#5-4`  
+`Sorted: 5 8 10 20 90`
 
-#5-5
-Enter a number to search: 20
-20 found in the array.
+`#5-5`  
+`Enter a number to search: 20`  
+`20 found in the array.`
 
 ## 中级 1 答案：
 
@@ -561,10 +609,6 @@ int string_length(char *str) {
 
 // #6-2
 ```
-
-
-
-
 
 ```c
 bool is_palindrome(char *str) {
@@ -639,24 +683,24 @@ int main() {
 }
 ```
 
-### 中间 1 输出:
+### 中间 1 输出：
 
-#6-1
-Length of 'Hello, World!': 13
+`#6-1`  
+`Length of 'Hello, World!': 13`
 
-#6-2
-Is 'radar' a palindrome? Yes
+`#6-2`  
+`Is 'radar' a palindrome? Yes`
 
-#6-3
-Concatenated: Hello, World!
+`#6-3`  
+`Concatenated: Hello, World!`
 
-#6-4
-Spaces replaced: Hello-World!
+`#6-4`  
+`Spaces replaced: Hello-World!`
 
-#6-5
-In 'Programming in C', Vowels: 5, Consonants: 11
+`#6-5`  
+`In 'Programming in C', Vowels: 5, Consonants: 11`
 
-### 中间 2 解决方案:
+### 中间 2 解决方案：
 
 ```c
 #include <stdio.h>
@@ -736,25 +780,27 @@ int main() {
 }
 ```
 
-### 中间 2 输出:
+### 中间 2 输出：
 
-#7-1
-Before swap: x = 5, y = 8
-After swap: x = 8, y = 5
+`#7-1`  
+`Before swap: x = 5, y = 8`  
+`After swap: x = 8, y = 5`
 
-#7-2
-Length of 'OpenAI': 6
+`#7-2`  
+`Length of 'OpenAI': 6`
 
-#7-3
-Reversed string: gnimmargP
+`#7-3`  
+`Reversed string: gnimmargP`
 
-#7-4
-Sum of array: 15
+`#7-4`  
+`Sum of array: 15`
 
-#7-5
-Sorted array: 2 5 9 12 45
+`#7-5`  
+`Sorted array: 2 5 9 12 45`
 
-### 中间 3 解决方案:
+### 中间 3 解决方案：
+
+
 
 ```c
 #include <stdio.h>
@@ -810,45 +856,55 @@ int main() {
     // #8-1 Test
     int n = 9;
     printf("Fibonacci number at position %d: %d\n", n, fibonacci(n));
+
     // #8-2 Test
     int arr[] = {2, 3, 4, 10, 40};
     int x = 10;
     int result = binary_search(arr, 0, 4, x);
     if (result == -1) printf("Element not present in array\n");
     else printf("Element %d is present at index %d\n", x, result);
+
     // #8-3 Test
     double base = 2.0;
     int exponent = -3;
     printf("%.2lf raised to the power %d is %.2lf\n", base, exponent, power(base, exponent));
+
     // #8-4 Test
     int limit = 50;
     printf("Prime numbers up to %d: ", limit);
     print_primes_to_n(limit);
+
     // #8-5 Test
     int num1 = 56, num2 = 98;
     printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+
     return 0;
 }
 ```
 
-### 中间 3 输出:
+## 中间 3 输出
 
-#8-1
+### #8-1
+
 Fibonacci number at position 9: 34
 
-#8-2
+### #8-2
+
 Element 10 is present at index 3
 
-#8-3
+### #8-3
+
 2.00 raised to the power -3 is 0.12
 
-#8-4
+### #8-4
+
 Prime numbers up to 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
 
-#8-5
+### #8-5
+
 GCD of 56 and 98 is 14
 
-### 中间 4 解决方案:
+## 中间 4 解决方案
 
 ```c
 #include <stdio.h>
@@ -928,6 +984,7 @@ void displayBookInfo(Book b) {
 
 int main() {
     // Test cases for each part will be here
+
     // #9-1 Test
     Complex c1 = {2.0, 3.0};
     Complex c2 = {1.0, 2.0};
@@ -952,12 +1009,12 @@ int main() {
     Time t1 = {2, 30, 45};
     Time t2 = {1, 20, 20};
     Time sumTime = addTimes(t1, t2); // Note: addTimes needs to be defined
+
     return 0;
 }
 ```
-*(注：由于提供的文本在 #9-5 处出现了 `Time` 类型和 `addTimes` 函数但在原始代码中未给出定义，上述翻译保留了原文的逻辑结构。)*
 
-
+> 注：由于提供的文本在 `#9-5` 处出现了 `Time` 类型和 `addTimes` 函数但在原始代码中未给出定义，上述翻译保留了原文的逻辑结构。
 
 ```c
 printf("\n#9-5\nSum of times 2:30:45 and 1:20:20 is %d:%02d:%02d\n", sumTime.hours, sumTime.minutes, sumTime.seconds);
@@ -970,22 +1027,31 @@ return 0;
 ## Intermediate 4 输出
 
 ### #9-1
-和: 3.000000 + 5.000000i
+
+和：3.000000 + 5.000000i
 
 ### #9-2
+
 （使用代码中描述的近似方法）
+
 日期 01/01/2021 和 02/03/2021 之间的差：63 天
 
 ### #9-3
+
 John 的平均分：78.33
 
 ### #9-4
-书籍 ID: 101
-标题: The Great Book
-作者: John Doe
-价格: 19.99
+
+书籍 ID：101
+
+标题：The Great Book
+
+作者：John Doe
+
+价格：19.99
 
 ### #9-5
+
 时间 2:30:45 和 1:20:20 的和为 3:51:05
 
 ## Intermediate 5 解答案
@@ -1097,23 +1163,28 @@ int main() {
     // #10-1 测试
     printf("#10-1\n");
     createFileAndWrite();
+
     // #10-2 测试
     printf("\n#10-2\n");
     countFileContents();
+
     // #10-3 测试
     printf("\n#10-3\n");
     copyFile();
+
     // #10-4 测试
     printf("\n#10-4\n");
     mergeFiles();
+
     // #10-5 测试
     printf("\n#10-5\n");
     displayLongestLine();
+
     return 0;
 }
 ```
 
-对于 #10-1，我假设用户输入了 "Hello, World! This is a sample string."
+对于 #10-1，我假设用户输入了 `"Hello, World! This is a sample string."`。
 
 对于 #10-2，计数是基于上述字符串。行末尾计算了一个换行字符。
 
@@ -1126,21 +1197,30 @@ int main() {
 ## Intermediate 5 输出
 
 ### #10-1
-输入一个字符串: Hello, World! This is a sample string.
+
+
+
+输入一个字符串: `Hello, World! This is a sample string.`
 
 ### #10-2
+
 Lines: 1
+
 Words: 7
+
 Characters: 40
 
 ### #10-3
+
 文件复制成功。
 
 ### #10-4
-已将 file1.txt 和 file2.txt 合并到 merged.txt
+
+已将`file1.txt`和`file2.txt`合并到`merged.txt`
 
 ### #10-5
-Longest Line: Hello, World! This is a sample string.
+
+Longest Line: `Hello, World! This is a sample string.`
 
 我们希望您对在 Amazon 购买的商品满意！我们想借此机会提醒您，为您购买的产品留下评价很重要。您的反馈对我们以及其他潜在买家都至关重要。
 
@@ -1153,4 +1233,3 @@ Longest Line: Hello, World! This is a sample string.
 介绍我的个人博客。保持联系！
 
 `premiumbookself.wordpress.com/`
-

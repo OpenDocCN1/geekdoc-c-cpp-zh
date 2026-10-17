@@ -1,9 +1,5 @@
+
 # C++ & Python 技巧与指南 - 第 5 版 2021
-
-
-
-
-
 
 获取内部技能
 
@@ -15,56 +11,63 @@
 
 重新发现你的设备
 
-
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_0.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_1.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_2.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_3.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_4.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_5.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_6.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_7.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_8.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_9.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_10.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_11.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_12.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_13.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_14.png)
+
 ![](img/763cdde75d55911fbf7836a707fd3c3b_1_15.png)
 
-
 欢迎回来……在完成我们的独家初学者数字指南后，我们已经教会了掌握你新设备、软件或爱好基础的所有知识。
+
 然而那只是个开始！
 
 提升你的技能集是所有消费技术用户的目标，我们的长期行业专家团队将帮助你准确实现这一目标。在这一系列丰富的标题中，我们将更深入地探讨如何最大限度地利用最新的消费电子产品、软件、爱好和趋势！
+
 我们将一步步引导你使用你之前可能一直畏惧于尝试的所有先进技术。让我们的专家指南帮助你建立对技术的理解，并获得让你从一个自信的用户变为经验丰富的专家的技能。
 
 在接下来的页面中，我们的旅程将继续，我们将在每一个阶段与你在一起，提供建议、信息并最终激励你走更远。
 
-
 # 6 处理数据
-
-
 
 - 64 If... Else 语句
 
 # 56 处理代码
 
-
 # 28 使用模块
-
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_3_0.png)
 
 # 44 C++ 输入/输出
 
-
 ![](img/763cdde75d55911fbf7836a707fd3c3b_4_0.png)
 
 ……我们选择了两种最强大且多功能的编程语言——Python 和 C++，并将它们拆解为易于的教程和指南，帮助你学习它们如何工作，以及如何让它们为你服务……
-
-
 
 # 6 处理数据
 
@@ -91,13 +94,13 @@ print(fruits[0]) # 输出: apple
 print(fruits[1]) # 输出: banana
 ```
 
-你可以使用 `append()` 方法向列表添加项目。
+你可以使用`append()`方法向列表添加项目。
 
 ```python
 fruits.append("orange")
 ```
 
-要移除项目，可以使用 `remove()` 方法或 `pop()` 方法。
+要移除项目，可以使用`remove()`方法或`pop()`方法。
 
 ```python
 fruits.remove("banana")
@@ -134,14 +137,14 @@ print(user["name"]) # 输出: Alice
 
 ## 14 字符串的分割与合并
 
-字符串可以使用 `split()` 方法分割为列表。
+字符串可以使用`split()`方法分割为列表。
 
 ```python
 text = "apple,banana,cherry"
 words = text.split(",")
 ```
 
-相反，列表可以使用 `join()` 方法合并为字符串。
+相反，列表可以使用`join()`方法合并为字符串。
 
 ```python
 words = ["Python", "is", "fun"]
@@ -160,7 +163,7 @@ print(f"Hello, {name}! You are {age} years old.")
 
 ## 18 日期与时间
 
-Python 提供了 `datetime` 模块来处理日期和时间。
+Python 提供了`datetime`模块来处理日期和时间。
 
 ```python
 from datetime import datetime
@@ -170,7 +173,7 @@ print(now)
 
 ## 20 打开文件
 
-可以使用 `open()` 函数打开并读取文件。
+可以使用`open()`函数打开并读取文件。
 
 ```python
 with open("example.txt", "r") as file:
@@ -179,7 +182,7 @@ with open("example.txt", "r") as file:
 
 ## 22 写入文件
 
-要写入文件，请使用 `w` 模式的 `open()` 函数。
+要写入文件，请使用`w`模式的`open()`函数。
 
 ```python
 with open("output.txt", "w") as file:
@@ -188,7 +191,7 @@ with open("output.txt", "w") as file:
 
 ## 24 异常
 
-异常是执行过程中发生的错误。你可以使用 `try-except` 块处理它们。
+异常是执行过程中发生的错误。你可以使用`try-except`块处理它们。
 
 ```python
 try:
@@ -213,7 +216,7 @@ plt.show()
 
 ## 56 While 循环
 
-`while` 循环在条件为真时执行。
+`while`循环在条件为真时执行。
 
 ```python
 count = 0
@@ -224,7 +227,7 @@ while count < 5:
 
 ## 58 For 循环
 
-`for` 循环用于迭代序列，如列表、元组或字符串。
+`for`循环用于迭代序列，如列表、元组或字符串。
 
 ```python
 for fruit in ["apple", "banana", "cherry"]:
@@ -233,11 +236,11 @@ for fruit in ["apple", "banana", "cherry"]:
 
 ## 60 Do... While 循环
 
-Python 没有原生的 `do-while` 循环，但你可以使用 `while True` 循环配合 `break` 来模拟它。
+Python 没有原生的`do-while`循环，但你可以使用`while True`循环配合`break`来模拟它。
 
 ## 62 If 语句
 
-`if` 语句允许根据特定条件执行代码。
+`if`语句允许根据特定条件执行代码。
 
 ```python
 age = 18
@@ -247,7 +250,7 @@ if age >= 18:
 
 ## 64 If... Else 语句
 
-`else` 块允许在 `if` 条件为假时执行备用代码。
+`else`块允许在`if`条件为假时执行备用代码。
 
 ```python
 if age >= 18:
@@ -257,10 +260,6 @@ else:
 ```
 
 (注：由于原始文本包含大量重复的占位符和错误片段，译文已根据要求进行了去重和结构化处理，确保了核心技术内容如 C++、Python 基础、数据结构、循环、模块等的翻译准确性。)
-
-
-
-
 
 # 数据处理
 
@@ -273,7 +272,9 @@ else:
 使用元组的原因取决于程序的意图。通常，元组被预留给某些特殊情况，但它们也被用于，例如在在冒险游戏中，存储非玩家角色的名字。
 
 ### 第 1 步
+
 元组的创建方式与列表相同，但在这种情况下你使用圆括号而不是方括号。
+
 `months=("January", "February", "March", "April", "May", "June")`
 
 ```
@@ -286,7 +287,9 @@ File "example.py", Oct 19 2014, 13:31:11
 ```
 
 ### 第 3 步
+
 你可以在包含多组数据的列表内部创建分组的元组。例如，一个名为 NPC（非玩家角色）的元组，其中包含角色名称和在冒险游戏中的战斗力评级：
+
 `NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
 
 ```
@@ -299,8 +302,11 @@ File "example.py", Oct 19 2014, 13:31:11
 ```
 
 ### 第 2 步
+
 就像列表一样，命名元组中的项可以通过它们在元组中的位置进行索引：
+
 `months[]`
+
 `months[5]`
 
 然而，任何尝试删除或替换元组的尝试都会导致错误（Error）。
@@ -321,8 +327,11 @@ AttributeError: 'tuple' object has no attribute 'append'
 ```
 
 ### 第 4 步
+
 可以通过在 Shell 中输入整个 NPC 来访问这些数据项中的每一个；或者通过它们的位置 NPC[0] 对它们进行索引。你也可以索引 NPC 列表中的个人项目：
+
 `NPC[0]`
+
 将显示 100。
 
 ```
@@ -341,10 +350,13 @@ File "example.py", Oct 19 2014, 13:31:11
 ### 第 5 步 值得注意的是，在列表中引用多个元组时，索引与标准略有不同。如果你使用 Valeria 的 NPC[5]，但并不完全：
 
 # 第 8 步
+
 现在将元组解包为两个对应的变量：
+
 `(name, combat_rating)=NPC`
 
 你可以通过输入 name 和 combat_rating 来检查值。
+
 `NPC[2][1]`
 
 ```
@@ -368,9 +380,13 @@ Type="copyright", "credits" or "license" for more information.
 ```
 
 ### 第 6 步 这意味着索引遵循如下：
+
 - 0
+
 - 0, 2
+
 - 0, 1
+
 - 1, 0
 
 你可以想象，当有很多元组数据需要处理时，这会变得困惑：
@@ -415,7 +431,8 @@ Type="copyright", "credits" or "license" for more information.
 
 ### 第 7 步 元组利用了解包功能，数据项存储在元组中。创建一个包含两个项（名字和战斗力）的第一个元组：`NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
 
-### 第 10 步 你可以使用 `max` 和 `min` 函数找到数字元组的最大值和最小值。数字可以是整数或浮点数。输出最大和最小值，使用：
+### 第 10 步 你可以使用`max`和`min`函数找到数字元组的最大值和最小值。数字可以是整数或浮点数。输出最大和最小值，使用：
+
 `numbers=(10.3, 45.2, 109.3, 6.1, 56.7, 99)`
 
 ```
@@ -444,26 +461,13 @@ Type="copyright", "credits" or "license" for more information.
 
 列表非常有用，但 Python 中的字典是处理数据项的一种更技术的方法。起初可能很难掌握，然后你就能将它们应用到自己的代码中。
 
-## 值对 (KEY PAIRS)
+
+
+# 值对 (KEY PAIRS)
 
 字典类似于列表，但每个数据项以对的形式出现，这些被称为键（Key）和值（Value）。键部分必须是唯一的，可以是数字或字符串，而值可以是任何数据项。假设你在 Python 中创建一个电话簿。你会创建一个字典名称并在花括号中输入数据，用冒号分隔键和值。例如：`phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}`
 
-与列表和元组一样，你可以通过给出字典名称来检查字典的内容：phonebook，在此示例中将显示数据项：
-
-```
-Python 3.4.2 (Default, Oct 19 2014, 13:31:11)
-[GC 4.9.2] on line
-Type="copyright", "credits" or "license" for more information.
->>> phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}
->>> phonebook
-{'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}
-```
-
-列表非常有用，但 Python 中的字典是处理数据项的一种更具技术的方法。起初可能很难掌握，然后你就能将它们应用到自己的代码中。
-
-字典类似于列表，但每个数据项以对的形式出现，这些被称为键（Key）和值（Value）。键部分必须是唯一的，可以是数字或字符串，而值可以是任何数据项。假设你在 Python 中创建一个电话簿。你会创建一个字典名称并在花括号中输入数据，用冒号分隔键和值。例如：`phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}`
-
-与列表和元组一样，你可以通过给出字典名称来检查字典的内容：phonebook，在示例示例中将显示数据项：
+与列表和元组一样，你可以通过给出字典名称来检查字典的内容：`phonebook`，在此示例中将显示数据项：
 
 ```python
 Python 3.4.2 (Default, Oct 19 2014, 13:31:11)
@@ -475,25 +479,6 @@ Type="copyright", "credits" or "license" for more information.
 ```
 
 列表非常有用，但 Python 中的字典是处理数据项的一种更具技术的方法。起初可能很难掌握，然后你就能将它们应用到自己的代码中。
-
-字典类似于列表，但每个数据项以对的形式出现，这些被称为键（Key）和值（Value）。键部分必须是唯一的，可以是数字或字符串，而值可以是任何数据项。假设你在 Python 中创建一个电话簿。你会创建一个字典名称并在花括号中输入数据，用冒号分隔键和值。例如：`phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}`
-
-与列表和元组一样，你可以通过给出字典名称来检查字典的内容：phonebook，在示例示例中将显示数据项：
-
-```python
-Python 3.4.2 (Default, Oct 19 2014, 13:31:11)
-[GC 4.9.2] on line
-Type="copyright", "credits" or "license" for more information.
->>> phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}
->>> phonebook
-{'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}
-```
-
-*(注：由于提供的原文中存在大量重复段落，翻译已根据指令“不要重复输出原文”的原则进行了精简，保留了核心逻辑结构。)*
-
-**修正后的翻译输出：**
-
-[content]
 
 # 数据处理
 
@@ -503,13 +488,15 @@ Type="copyright", "credits" or "license" for more information.
 
 ## 不变元组
 
-使用元组的原因取决于程序的意图。通常，元组被预留给某些特殊情况，但它们也被用于，例如在在冒险游戏中，存储非玩家角色的名字。
+使用元组的原因取决于程序的意图。通常，元组被预留给某些特殊情况，但它们也被用于，例如在冒险游戏中，存储非玩家角色的名字。
 
 ### 第 1 步
+
 元组的创建方式与列表相同，但在这种情况下你使用圆括号而不是方括号。
+
 `months=("January", "February", "March", "April", "May", "June")`
 
-```
+```python
 Python 3.4.2 (Default) - Windows Shell
 File "example.py", Oct 19 2014, 13:31:11
 [GC 4.9.1 on 5 line]
@@ -518,27 +505,17 @@ File "example.py", Oct 19 2014, 13:31:11
 >>> months("January", "February", "March", "April", "May", "June")
 ```
 
-### 第 3 步
-你可以在包含多组数据的列表内部创建分组的元组。例如，一个名为 NPC（非玩家角色）的元组，其中包含角色名称和在冒险游戏中的战斗力评级：
-`NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
-
-```
-Python 3.4.2 (Default) - Windows Shell
-File "example.py", Oct 19 2014, 13:31:11
-[GC 4.9.1 on 5 line]
->>> type("January") # 更多信息请参考 'str' 或 'license'
->>> NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95))
->>> NPC("Conan", 100), ("Beit", 80), ("Valeria", 95))
-```
-
 ### 第 2 步
+
 就像列表一样，命名元组中的项可以通过它们在元组中的位置进行索引：
+
 `months[]`
+
 `months[5]`
 
-然而，任何尝试删除或替换元组的尝试都会导致错误（Error）。 
+然而，任何尝试删除或替换元组的尝试都会导致错误（Error）。
 
-```
+```python
 Python 3.4.2 (Default) - Windows Shell
 File "example.py", Oct 19 2014, 13:31:11
 [GC 4.9.1 on 5 line]
@@ -553,12 +530,30 @@ File "example.py", line 11
 AttributeError: 'tuple' object has no attribute 'append'
 ```
 
+### 第 3 步
+
+你可以在包含多组数据的列表内部创建分组的元组。例如，一个名为 NPC（非玩家角色）的元组，其中包含角色名称和在冒险游戏中的战斗力评级：
+
+`NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
+
+```python
+Python 3.4.2 (Default) - Windows Shell
+File "example.py", Oct 19 2014, 13:31:11
+[GC 4.9.1 on 5 line]
+>>> type("January") # 更多信息请参考 'str' 或 'license'
+>>> NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95))
+>>> NPC("Conan", 100), ("Beit", 80), ("Valeria", 95))
+```
+
 ### 第 4 步
-可以通过在 Shell 中输入整个 NPC 来访问这些数据项中的每一个；或者通过它们的位置 NPC[0] 对它们进行索引。你也可以索引 NPC 列表中的个人项目：
+
+可以通过在 Shell 中输入整个 NPC 来访问这些数据项中的每一个；或者通过它们的位置 `NPC[0]` 对它们进行索引。你也可以索引 NPC 列表中的个人项目：
+
 `NPC[0]`
+
 将显示 100。
 
-```
+```python
 Python 3.4.2 (Default) - Windows Shell
 File "example.py", Oct 19 2014, 13:31:11
 [GC 4.9.1 on 5 line]
@@ -569,29 +564,43 @@ File "example.py", Oct 19 2014, 13:31:11
 100
 ```
 
-# 元组
+### 第 5 步
 
-### 第 5 步 值得注意的是，在列表中引用多个元组时，索引与标准略有不同。如果你使用 Valeria 的 NPC[5]，但并不完全：
+值得注意的是，在列表中引用多个元组时，索引与标准略有不同。如果你使用 Valeria 的 `NPC[5]`，但并不完全。
 
-### 第 8 步 现在将元组解包为两个对应的变量：
-`(name, combat_rating)=NPC`
+### 第 6 步
 
-你可以通过输入 name 和 combat_rating 来检查值。
-`NPC[2][1]`
+这意味着索引遵循如下：
 
-### 第 6 步 这意味着索引遵循如下：
 - 0
 - 0, 2
 - 0, 1
 - 1, 0
 
-你可以想象，当有很多元组数据需要处理时，这会变得困惑：
+你可以想象，当有很多元组数据需要处理时，这会变得困惑。
 
-### 第 9 步 记住，在列表中，你也可以从列表末尾倒向对元组索引。例如，使用多个项的元组，你会引用 Valeria 与：NPC[2][-1]
+### 第 7 步
 
-### 第 7 步 元组利用了解包功能，数据项存储在元组中。创建一个包含两个项（名字和战斗力）的第一个元组：`NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
+元组利用了解包功能，数据项存储在元组中。创建一个包含两个项（名字和战斗力）的第一个元组：`NPC=("Conan", 100), ("Beit", 80), ("Valeria", 95)`
 
-### 第 10 步 你可以使用 `max` 和 `min` 函数找到数字元组的最大值和最小值。数字可以是整数或浮点数。输出最大和最小值，使用：
+### 第 8 步
+
+现在将元组解包为两个对应的变量：
+
+`(name, combat_rating)=NPC`
+
+你可以通过输入 `name` 和 `combat_rating` 来检查值。
+
+`NPC[2][1]`
+
+### 第 9 步
+
+记住，在列表中，你也可以从列表末尾倒向对元组索引。例如，使用多个项的元组，你会引用 Valeria 与：`NPC[2][-1]`
+
+### 第 10 步
+
+你可以使用 `max` 和 `min` 函数找到数字元组的最大值和最小值。数字可以是整数或浮点数。输出最大和最小值，使用：
+
 `numbers=(10.3, 45.2, 109.3, 6.1, 56.7, 99)`
 
 # 字典 (Dictionaries)
@@ -602,11 +611,7 @@ File "example.py", Oct 19 2014, 13:31:11
 
 字典类似于列表，但每个数据项以对的形式出现，这些被称为键（Key）和值（Value）。键部分必须是唯一的，可以是数字或字符串，而值可以是任何数据项。假设你在 Python 中创建一个电话簿。你会创建一个字典名称并在花括号中输入数据，用冒号分隔键和值。例如：`phonebook={'Emma': 1234, 'Daniel': 3456, 'Hannah': 6789}`
 
-与列表和元组一样，你可以通过给出字典名称来检查字典的内容：phonebook，在示例示例中将显示数据项：
-
-
-
-
+与列表和元组一样，你可以通过给出字典名称来检查字典的内容：`phonebook`，在示例示例中将显示数据项：
 
 # 字符串的分割与合并
 
@@ -617,14 +622,13 @@ File "example.py", Oct 19 2014, 13:31:11
 你已经查看过了一些列表，使用了 `.insert`、`.remove` 和 `.pop`，但也有适用于字符串的函数。
 
 - **第 1 步** 字符串函数工具箱中的主要工具是 `.split()`。通过它，你可以根据括号内的参数分割数据字符串。例如，这里有一个包含三个项目的字符串，每个项目都由空格隔开：
+
 `text="Daniel Hannah Emma"`
 
-- **第 3 步** 注意 `text.split()` 部分带有引号，接着是一个空格，然后是结束引号和括号。空格是分隔符，表示每个列表项都由空格隔开。就像 CSV（逗号分隔值）包含逗号，所以你会使用：
-`text="January,February,March,April,May,June"`
-`text.split(",")`
-
 - **第 2 步** 现在让我们字符串转换为列表并准确地分割内容：
+
 `names=text.split(",")`
+
 然后输入新列表查看这三个项目。
 
 ```python
@@ -635,7 +639,14 @@ File "example.py", Oct 19 2014, 13:31:11
 >>> ['Daniel', 'Hannah', 'Emma']
 ```
 
+- **第 3 步** 注意 `text.split()` 部分带有引号，接着是一个空格，然后是结束引号和括号。空格是分隔符，表示每个列表项都由空格隔开。就像 CSV（逗号分隔值）包含逗号，所以你会使用：
+
+`text="January,February,March,April,May,June"`
+
+`text.split(",")`
+
 - **第 4 步** 你之前已经见过如何使用一个名称将字符串分割成单个字母：
+
 `name=text.split("David")`
 
 ```python
@@ -661,6 +672,25 @@ alphabet
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_14_0.png)
 
+**第 6 步** 因此你可以将 `join` 应用到你在第 4 步中创建的分割名称上，再次组合字母：
+
+```python
+name="".join(name)
+name
+```
+
+我们已经将字符串合并回来，并保留了原来的列表，通过 `join` 进行处理。
+
+**第 7 步** 使用 `join` 函数的一个很好的例子是当你有一组单词想要将它们组合成句子时：
+
+```python
+list=["con", "raised", "his", "mighty", "and", "struck", "the"]
+text="".join(list)
+text
+```
+
+注意 `join` 之前字符之间的空格（第 6 步中没有空格）
+
 **第 8 步** 与分割合并一样，分隔符不一定是空格，也可以是逗号、连字符或你喜欢的任何字符：
 
 ```python
@@ -671,16 +701,7 @@ col
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_14_1.png)
 
-**第 6 步** 因此你可以将 join 应用到你在第 4 步中创建的分割名称上，再次组合字母：
-
-```python
-name="".join(name)
-name
-```
-
-我们已经将字符串合并回来，并保留了原来的列表，通过 join 进行处理。
-
-**第 9 步** 有一些可以应用于字符串的有趣函数，例如 .capitalize() 和 .title()。例如：
+**第 9 步** 有一些可以应用于字符串的有趣函数，例如 `.capitalize()` 和 `.title()`。例如：
 
 ```python
 title="con cimerian"
@@ -703,17 +724,7 @@ Type "copyright, "credits" or "license" for more information.
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_14_3.png)
 
-**第 7 步** 使用 join 函数的一个很好的例子是当你有一组单词想要将它们组合成句子时：
-
-```python
-list=["con", "raised", "his", "mighty", "and", "struck", "the"]
-text="".join(list)
-text
-```
-
-注意 join 之前字符之间的空格（第 6 步中没有空格）
-
-**第 10 步** 你可以在字符串上使用逻辑运算符，来检查字符串中是否包含 'in' 和 'not'。这些允许你检查字符串是否包含（或不包含）一段字符序列：
+**第 10 步** 你可以在字符串上使用逻辑运算符，来检查字符串中是否包含 `in` 和 `not`。这些允许你检查字符串是否包含（或不包含）一段字符序列：
 
 ```python
 message="Have a nice day"
@@ -747,18 +758,25 @@ False
 
 ## 格式化
 
-从 Python 3 开始，字符串格式化变成了一个更整洁的过程，使用带有大括号的 .format 函数。这比之前的版本更有逻辑、更好的方法。
+从 Python 3 开始，字符串格式化变成了一个更整洁的过程，使用带有大括号的 `.format` 函数。这比之前的版本更有逻辑、更好的方法。
 
 **第 1 步** Python 中的基本格式化是将每个变量调用到大括号中：
+
 `name="Conan"`
+
 `print("the hero of the Hyborian Age is: {}".format(name))`
 
-**第 2 步** 记得用两个括号关闭 print 函数，因为你将变量封装在一个括号中，并将 print 函数封装在另一个括号中。你可以在单个函数中包含多个字符串格式化情况：
+**第 2 步** 记得用两个括号关闭 `print` 函数，因为你将变量封装在一个括号中，并将 `print` 函数封装在另一个括号中。你可以在单个函数中包含多个字符串格式化情况：
+
 `name="Conan"`
+
 `place="Cimmeria"`
+
 `print("{} hailed the North, in a cold land known as {}".format(name, place))`
 
 **第 4 步** 有许多应用字符串格式化的方法，它们非常简单，正如我们所展示的可能会变得复杂。这取决于你从程序想要的。经常引用字符串格式化的好地方是 Python 文档，位于 https://docs.python.org/3.11/library/string.html。在这里，你会找到：
+
+
 
 ```python
 Python 3.4.2 Shell
@@ -769,15 +787,17 @@ the hero of the Hyborian Age is: Conan
 'Conan'
 ```
 
-![](![](img/763cdde75d55911fbf7836a707fd3c3b_15_0.png)
+![](img/763cdde75d55911fbf7836a707fd3c3b_15_0.png)
 
 # 字符串格式化
 
 **第 5 步** 有趣的是，你可以使用字符串格式化引用列表。你还可以在列表前放置一个星号：
 
-`numbers=1, 3, 45, 567546, 342534645`
-`print("Some numbers: {0}, {1}, {2}, {3}, {4}")`
-`format(*numbers)`
+```python
+numbers=1, 3, 45, 567546, 342534645
+print("Some numbers: {0}, {1}, {2}, {3}, {4}")
+format(*numbers)
+```
 
 ```python
 Python 3.4.2 Shell
@@ -799,20 +819,22 @@ col
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_14_1.png)
 
-**第 6 步** 因此你可以将 join 应用到你在第 4 步中创建的分割名称上，再次组合字母：
+**第 6 步** 因此你可以将 `join()` 应用到你在第 4 步中创建的分割名称上，再次组合字母：
 
 ```python
 name="".join(name)
 name
 ```
 
-我们已经将字符串合并回来，并保留了原来的列表，通过 join 进行处理。
+我们已经将字符串合并回来，并保留了原来的列表，通过 `join()` 进行处理。
 
-**第 9 步** 有一些可以应用于字符串的有趣函数，例如 .capitalize() 和 .title()。例如：
+**第 9 步** 有一些可以应用于字符串的有趣函数，例如 `.capitalize()` 和 `.title()`。例如：
 
 ```python
 title="con cimerian"
 title.capitalize()
+```
+
 ```python
 Python 3.2.2 (default, Oct 19 2014, 13:31:11)
 SGC 4.9 on linux
@@ -826,7 +848,7 @@ Type "copyright, "credits" or "license" for more information.
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_14_3.png)
 
-**第 7 步** 使用 join 函数的一个很好的例子是当你有一组单词想要将它们组合成句子时：
+**第 7 步** 使用 `join()` 函数的一个很好的例子是当你有一组单词想要将它们组合成句子时：
 
 ```python
 list=["con", "raised", "his", "mighty", "and", "struck", "the"]
@@ -834,9 +856,9 @@ text="".join(list)
 text
 ```
 
-注意 join 之前字符之间的空格（第 6 步中没有空格）
+注意 `join()` 之前字符之间的空格（第 6 步中没有空格）。
 
-**第 10 步** 你可以在字符串上使用逻辑运算符，来检查字符串中是否包含 'in' 和 'not'。这些允许你检查字符串是否包含（或不包含）一段字符序列：
+**第 10 步** 你可以在字符串上使用逻辑运算符，来检查字符串中是否包含 `in` 和 `not`。这些允许你检查字符串是否包含（或不包含）一段字符序列：
 
 ```python
 message="Have a nice day"
@@ -844,12 +866,6 @@ message="Have a nice day"
 "bad" not in message
 "day" in message
 ```
-
-（注：由于文本中存在大量重复段落，已根据指令“不要重复输出原文”的要求对内容进行了清理翻译）
-
-
-
-
 
 ## 日期和时间
 
@@ -859,7 +875,7 @@ message="Have a nice day"
 
 `time` 模块包含了许多函数，可以帮助你获取当前系统时间、从字符串中读取日期、格式化日期等。
 
-- **步骤 1** 首次，你需要导入 `time` 模块。它是 Python 3 内置的，因此你不需要将其复制到提示符中并导入它。一旦导入，你就可以用简单的命令调用当前的时间和日期：
+**步骤 1** 首先，你需要导入 `time` 模块。它是 Python 3 内置的，因此你不需要将其复制到提示符中并导入它。一旦导入，你就可以用简单的命令调用当前的时间和日期：
 
 ```python
 import time
@@ -877,7 +893,7 @@ Type "help "credits" or "license" for more information.
 >>>
 ```
 
-- **步骤 3** 你可以通过 `time.localtime()` 查看时间的呈现结构。
+**步骤 3** 你可以通过 `time.localtime()` 查看时间的呈现结构。
 
 输出显示为：`time_struct_tm(tm_year=2017, tm_mon=9, tm_hour=7, tm_min=6, tm_sec=13, tm_wday=3, tm_yday=250, is_dst=0)`，显然这取决于你的当前时间。
 
@@ -892,9 +908,9 @@ time_struct_tm(tm_year=2017, tm_mon=9, tm_hour=7, tm_min=6, tm_sec=13, tm_wday=3
 >>>
 ```
 
-- **步骤 2** 时间被分为九个元组，这些元组像任何其他元组一样被划分为索引项目，如下方的屏幕所示。
+**步骤 2** 时间被分为九个元组，这些元组像任何其他元组一样被划分为索引项目，如下方的屏幕所示。
 
-- **步骤 4** `time` 模块中内置了许多函数。最常用的之一是 `strftime()`。通过它，你能够呈现广泛的参数，因为它会将时间转换为字符串。例如，要显示当前的星期几，你可以使用：
+**步骤 4** `time` 模块中内置了许多函数。最常用的之一是 `strftime()`。通过它，你能够呈现广泛的参数，因为它会将时间转换为字符串。例如，要显示当前的星期几，你可以使用：
 
 | 索引 | 字段 | 取值 |
 |---|---|---|
@@ -908,7 +924,9 @@ time_struct_tm(tm_year=2017, tm_mon=9, tm_hour=7, tm_min=6, tm_sec=13, tm_wday=3
 | 7 | 年中的天 | 1 到 366 (儒日) |
 | 8 | 夏令时 | -1, 0, 1 - 库定义的 DST |
 
+```python
 time.strftime('%A')
+```
 
 ```python
 Python 3.4.2 Shell
@@ -921,7 +939,7 @@ Type "help "credits" or "license" for more information.
 >>>
 ```
 
-## **步骤 5**
+## 步骤 5
 
 这自然意味着你可以将各种函数整合到代码中，例如：
 
@@ -933,41 +951,13 @@ time.strftime("%Y-%m-%d")
 time.strftime("%H:%M:%S")
 ```
 
-Python 3.4.2
+## 步骤 6
 
-| 编辑 | Shell | 调试 | 选项 | 帮助 |
-|---|---|---|---|--|
-| Python 3.4.2 (default, Oct 19, 2014, 12:33:11) | | | | |
-| (C) GPL v4.0 in type | | | | |
-| type("credit" or "license") for more information. | | | | |
-| time=time.strftime("%H") | | | | |
-| minute=time.strftime("%M") | | | | |
-| second=time.strftime("%S") | | | | |
-| date=time.strftime("%Y-%m-%d") | | | | |
-| full=time.strftime("%H:%M:%S") | | | | |
-| | | | | |
-
-## **步骤 6**
-
-注意小时和分钟的两个项目，作为最后几项，将它们输入为 %H%M 不会在 Shell 中无法正确显示时间。你可以轻松地修正这一点：
+注意小时和分钟的两个项目，作为最后几项，将它们输入为 `%H%M` 不会在 Shell 中无法正确显示时间。你可以轻松地修正这一点：
 
 ```python
 time.strftime("%H:%M")
 ```
-
-## Python 3.4.2
-
-| 编辑 | Shell | 调试 | 选项 | 帮助 |
-|---|---|---|---|--|
-| Python 3.4.2 (default, Oct 19, 2014, 12:33:11) | | | | |
-| (C) GPL v4.0 in type | | | | |
-| type("credit" or "license") for more information. | | | | |
-| time=time.strftime("%H") | | | | |
-| minute=time.strftime("%M") | | | | |
-| second=time.strftime("%S") | | | | |
-| date=time.strftime("%Y-%m-%d") | | | | |
-| full=time.strftime("%H:%M:%S") | | | | |
-| | | | | |
 
 这意味着你能够显示当前时间或显示作为用户输入的时间。以下是编辑器中的代码：
 
@@ -978,29 +968,23 @@ print("Welcome", name, ", at")
 print(name, "logged in at:", time.strftime("%H:%M"))
 ```
 
-（注：由于原文 OCR 文本在后期存在大量重复和噪音，翻译已根据逻辑流进行了清理。）
-
-
-
-
-
 # 打开文件
 
-第 5 ：就像列表、元组、字典等一样，你可以对文本的字符进行索引。例如：
+**第 5 步** 就像列表、元组、字典等一样，你可以对文本的字符进行索引。例如：
 
-```
+```python
 poem.read(5)
 ```
 
 显示前几个字符，而在输入之后：
 
-```
+```python
 poem.read(5)
 ```
 
-将显示下一行。输入 (1) 将一次显示一个字符。
+将显示下一行。输入 `(1)` 将一次显示一个字符。
 
-第 6 ：同样，你可以使用 `readline()` 函数一次显示一行文本。例如：
+**第 6 步** 同样，你可以使用 `readline()` 函数一次显示一行文本。例如：
 
 ```python
 poem=open("/home/pi/Documents/Poem.txt")
@@ -1009,24 +993,24 @@ poem.readline()
 
 将显示文本的第一行：
 
-```
+```python
 poem.readline()
 ```
 
 再次显示下一行。
 
-第 7 ：你可能猜到你可以将 `readline()` 函数传递给变量，允许你再次调用它：
+**第 7 步** 你可能猜到你可以将 `readline()` 函数传递给变量，允许你再次调用它：
 
 ```python
 poem=open("/home/pi/Documents/Poem.txt")
 line=poem.readline()
 ```
 
-```
+```python
 line:
 ```
 
-第 8 ：进一步扩展，你可以使用 `readlines()` 获取文本的所有行并将其存储为多行。这些可以存储在一个变量中：
+**第 8 步** 进一步扩展，你可以使用 `readlines()` 获取文本的所有行并将其存储为多行。这些可以存储在一个变量中：
 
 ```python
 poem=open("/home/pi/Documents/Poem.txt")
@@ -1038,7 +1022,7 @@ lines[2]
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_20_0.png)
 
-```
+```python
 Python 3.4.2
  3.4.2 (default, Oct 19 2014, 13:31:11)
 >>> type="copyright", "credits" or "license" for more information.
@@ -1049,11 +1033,11 @@ nThe dark woods, masking slopes of sombre hills:\n1
 The grey clouds everlasting arching hill
 ```
 
-第 9 ：你也可以使用语句来读取文本框中的行：
+**第 9 步** 你也可以使用语句来读取文本框中的行：
 
 ```python
 for lines in lines:
-print(line)
+    print(line)
 ```
 
 由于这非常简单，还有其他方法可以产生输出：
@@ -1061,12 +1045,12 @@ print(line)
 ```python
 poem=open("/home/pi/Documents/Poem.txt")
 for lines in lines:
-print(line)
+    print(line)
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_20_1.png)
 
-```
+```python
 Python 3.4.2
  3.4.2 (default, Oct 19 2014, 13:31:11)
 >>> type="copyright", "credits" or "license" for more information.
@@ -1077,19 +1061,19 @@ The dark woods, masking slopes of sombre hills:\n1
 The grey clouds everlasting arching hill
 ```
 
-第 10 让我们想象你想使用一个奇数列表矩阵一次打印一个文本字符。你可以使用与你所看到的内容混合文本：
+**第 10 步** 让我们想象你想使用一个奇数列表矩阵一次打印一个文本字符。你可以使用与你所看到的内容混合文本：
 
 ```python
 import time
-ppoem=open("/home/pi/Documents/Poem.txt")
+poem=open("/home/pi/Documents/Poem.txt")
 for lines in lines:
-print(line, end="")
-time.sleep(.15)
+    print(line, end="")
+    time.sleep(.15)
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_20_2.png)
 
-```
+```python
 Python 3.4.2
  3.4.2 (default, Oct 19 2014, 13:31:11)
 >>> type="copyright", "credits" or "license" for more information.
@@ -1104,7 +1088,7 @@ The grey clouds everlasting arching hill
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_20_3.png)
 
-写入文件
+# 写入文件
 
 在 Python 中读取外部文件确实很难，但写入文件仍然。使用 `write()` 函数，你可以将程序的输出输出到文件中，然后你可以 `read()` 回。
 
@@ -1112,18 +1096,23 @@ The grey clouds everlasting arching hill
 
 `write()` 函数比 `read()` 稍微复杂。除了文件名，你还必须包含一个访问模式，以决定文件是读取模式还是写入模式。
 
-第 1：通过打开 IDLE 并输入以下内容开始：
-`t.open('/home/pi/Documents/text.txt','w')`
+**第 1 步** 通过打开 IDLE 并输入以下内容开始：
 
-从 home/pi/Documents 到你的系统。这段代码将创建一个名为 text.txt 的写入文件。如果该位置没有该文件，将创建一个。如果已经存在，它将覆盖它，所以要小心。
+```python
+t.open('/home/pi/Documents/text.txt','w')
+```
 
-第 3：然而，实际文件仍然是空白（你可以写入文件的行）。`write()` 函数是你将更改提交到文件中：
+从 `/home/pi/Documents` 到你的系统。这段代码将创建一个名为 `text.txt` 的写入文件。如果该位置没有该文件，将创建一个。如果已经存在，它将覆盖它，所以要小心。
 
-`t.close()`
+**第 3 步** 然而，实际文件仍然是空白（你可以写入文件的行）。`write()` 函数是你将更改提交到文件中：
+
+```python
+t.close()
+```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_21_0.png)
 
-```
+```python
 Python 3.4.2
 File Edit Options help
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -1131,24 +1120,30 @@ Python 3.4.2 (default, Oct 19 2014, 13:31:11)
 >>> t.write("awake in a small room. A single table stands to side, there is a locked door in front of you.")
 ```
 
-第 4：如果你现在用文本编辑器打开文本文件，你可以看到你创建的行已经写入。这为你提供了一些有趣的可能性：日志文件的创建甚至是冒险的开始。你输入的字符。
+**第 4 步** 如果你现在用文本编辑器打开文本文件，你可以看到你创建的行已经写入。这为你提供了一些有趣的可能性：日志文件的创建甚至是冒险的开始。你输入的字符。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_21_1.png)
 
-```
+```python
 Python 3.4.2
 File Edit Options help
+```
+
+
+
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+```
 >>> type="w" creates file.
 >>> t.open('/home/pi/Documents/text.txt','r')
 >>> t.write("awake in a small room. A single table stands to side, there is a locked door in front of you.")
 ```
 
-写入文件
+## 写入文件
 
-第 5：为了扩展这段代码，你可以重新打开文件'a'模式。这将任何文本添加到文件的末尾，而不会创建新行。
+**第 5 步**：为了扩展这段代码，你可以重新打开文件使用`'a'`模式。这将任何文本添加到文件的末尾，而不会创建新行。
 
-第 8：你可以将变量传递到你在 Python 中创建的文件。然而，你想打印 Pi 的值。你可以从 math 模块调用 Pi，创建一个新变量并将输出打印到新文件中：
+**第 8 步**：你可以将变量传递到你在 Python 中创建的文件。然而，你想打印 Pi 的值。你可以从`math`模块调用 Pi，创建一个新变量并将输出打印到新文件中：
 
 ```python
 t=open("home/pi/Documents/text.txt", "a")
@@ -1164,19 +1159,20 @@ print("Writing to a file...")
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_22_0.png)
 
-第 6：你可以逐行扩展文本，每一行都添加新行。当你打开它时，用 `close()` 完成代码并在编辑器中打开文件查看结果：
+**第 6 步**：你可以逐行扩展文本，每一行都添加新行。当你打开它时，用`close()`完成代码并在编辑器中打开文件查看结果：
 
 ```python
 t.write("门是由实橡木制成的。它从外面锁住，将你锁在里面。你是一个囚犯。\n")
 ```
 
-第 9：现在创建一个变量并赋值为 Pi 的值：
+**第 9 步**：现在创建一个变量并赋值为 Pi 的值：
 
 ```python
 pi=math.pi
 ```
 
 你还需要创建一个新文件来写入 Pi：
+
 ```python
 t=open("home/pi/Documents/pi.txt", "w")
 ```
@@ -1187,9 +1183,9 @@ t=open("home/pi/Documents/pi.txt", "w")
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_22_2.png)
 
-第 7：有各种类型的文件访问可以考虑使用 `()` 函数。每种取决于文件和光标的位置。例如，`r+` 以读写模式打开文件并将光标置于文件开头。
+**第 7 步**：有各种类型的文件访问可以考虑使用`()`函数。每种取决于文件和光标的位置。例如，`r+`以读写模式打开文件并将光标置于文件开头。
 
-第 10：最后，使用字符串格式化调用变量并将其写入文件，然后提交更改到文件中：
+**第 10 步**：最后，使用字符串格式化调用变量并将其写入文件，然后提交更改到文件中：
 
 你可以看到结果，你能够将任何变量传递到文件中。
 
@@ -1205,21 +1201,17 @@ t=open("home/pi/Documents/pi.txt", "w")
 
 与其停止代码的流，Python 包含了异常对象来处理代码中的意外错误。你可以通过创建产生异常的情况来对抗错误。
 
-第 1：你可以通过简单的除以零创建一个异常。如截图所示，会有 `ZeroDivisionError: Division by zero` 信息。异常是一个类，有很多种。
+**第 1 步**：你可以通过简单的除以零创建一个异常。如截图所示，会有`ZeroDivisionError: Division by zero`信息。异常是一个类，有很多种。
 
-第 3：你可以使用 `raise` 函数来创建我们的错误处理代码。假设你的代码在宇宙中环绕，过多会导致核心崩溃。为了防止游戏由于由于核心崩溃而退出，你可以创建一个自定义异常：`raise("warp core breach")`
+**第 3 步**：你可以使用`raise`函数来创建我们的错误处理代码。假设你的代码在宇宙中环绕，过多会导致核心崩溃。为了防止游戏由于由于核心崩溃而退出，你可以创建一个自定义异常：`raise("warp core breach")`
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_23_0.png)
 
-第 2：大多数异常是由 Python 自动抛出的，源于代码本身的内在问题。然而，你可以使用自己设计的异常来包含潜在错误并对其做出反应，而不是让代码失败。
+**第 2 步**：大多数异常是由 Python 自动抛出的，源于代码本身的内在问题。然而，你可以使用自己设计的异常来包含潜在错误并对其做出反应，而不是让代码失败。
 
-第 4：为了捕获代码中的任何错误，你可以在块中捕获潜在错误：此块由 `try`、 `except` 组成，代码在其中被持有，然后有一个异常可以执行某些操作，或者执行其他操作。
+**第 4 步**：为了捕获代码中的任何错误，你可以在块中捕获潜在错误：此块由`try`、`except`组成，代码在其中被持有，然后有一个异常可以执行某些操作，或者执行其他操作。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_23_1.png)
-
-
-
-
 
 # 第 5 步
 
@@ -1227,9 +1219,9 @@ t=open("home/pi/Documents/pi.txt", "w")
 
 ```python
 try:
-a=input("Enter the first number: ")
-b=input("Enter the second number: ")
-print(a/b)
+    a=input("Enter the first number: ")
+    b=input("Enter the second number: ")
+    print(a/b)
 except ZeroDivisionError:
     print("You tried to divide by zero!")
 else:
@@ -1244,8 +1236,8 @@ else:
 
 ```python
 try:
-txt = open("/home/pi/Documents/textfile.txt", "w")
-txt.write("This is a test. Normal service will shortly resume!")
+    txt = open("/home/pi/Documents/textfile.txt", "w")
+    txt.write("This is a test. Normal service will shortly resume!")
 except IOError:
     print("unable to write the file. Check permissions")
 else:
@@ -1257,7 +1249,7 @@ txt.close()
 
 # 第 8 步
 
-自然地，你可以通过将 "r" 只读实例更改为 "w" 来快速解决此问题。如你所知，当我们写入内容并将更改提交到文件中。在这种情况下，代码成功执行：
+自然地，你可以通过将`"r"`只读实例更改为`"w"`来快速解决此问题。如你所知，当我们写入内容并将更改提交到文件中。在这种情况下，代码成功执行：
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_24_2.png)
 
@@ -1270,12 +1262,12 @@ txt.close()
 
 # 第 9 步
 
-你也可以使用 `finally:` 块，它的工作方式类似，但不能与 `else` 一起使用。使用我们步骤中的示例：
+你也可以使用`finally:`块，它的工作方式类似，但不能与`else`一起使用。使用我们步骤中的示例：
 
 ```python
 try:
-txt = open("/home/pi/Documents/textfile.txt", "w")
-txt.write("This is a test. Normal service will shortly resume!")
+    txt = open("/home/pi/Documents/textfile.txt", "w")
+    txt.write("This is a test. Normal service will shortly resume!")
 except IOError:
     print("Content written to file successfully. Have a nice day.")
 finally:
@@ -1288,12 +1280,12 @@ except IOError:
 
 # 第 7 步
 
-如果 file.txt 是以只读打开的（"r" 部分），这显然将不起通。因此 Python 会告诉你是做错了什么，你使用 `IOError` 类创建了一个异常，以告知用户存在问题：
+如果`file.txt`是以只读打开的（`"r"`部分），这显然将不起通。因此 Python 会告诉你是做错了什么，你使用`IOError`类创建了一个异常，以告知用户存在问题：
 
 ```python
 try:
-txt = open("/home/pi/Documents/textfile.txt", "w")
-txt.write("This is a test. Normal service will shortly resume!")
+    txt = open("/home/pi/Documents/textfile.txt", "w")
+    txt.write("This is a test. Normal service will shortly resume!")
 except IOError:
     print("unable to write the file. Check permissions")
 else:
@@ -1305,12 +1297,12 @@ txt.close()
 
 # 第 10 步
 
-由于你使用了 "r" 只读实例，将会发生错误。如果你将其更改为 "w"，代码将执行而不会在 IDLE Shell 中显示错误。不用说，第一次获取异常代码可能会很棘手。练习一下，你就会掌握：
+由于你使用了`"r"`只读实例，将会发生错误。如果你将其更改为`"w"`，代码将执行而不会在 IDLE Shell 中显示错误。不用说，第一次获取异常代码可能会很棘手。练习一下，你就会掌握：
 
 ```python
 try:
-txt = open("/home/pi/Documents/textfile.txt", "w")
-txt.write("This is a test. Normal service will shortly resume!")
+    txt = open("/home/pi/Documents/textfile.txt", "w")
+    txt.write("This is a test. Normal service will shortly resume!")
 except IOError:
     print("unable to write the file. Check permissions")
 else:
@@ -1326,11 +1318,11 @@ txt.close()
 
 ## 进入图形世界
 
-你可以绘制简单的图形、线条、正方形等，或者可以使用许多 Python Python 模块之一来呈现壮观的效果。
+你可以绘制简单的图形、线条、正方形等，或者可以使用许多 Python 模块之一来呈现壮观的效果。
 
-- **第 1 步** 开始学习 Python 图形最好的图形模块之一是 Turtle（海龟）。海龟基于许多学校使用的海龟机器人，可以编程在大张大纸上画东西。可以通过 `import turtle` 导入海龟模块：
+- **第 1 步** 开始学习 Python 图形最好的图形模块之一是 Turtle（海龟）。海龟基于许多学校使用的海龟机器人，可以编程在大张大纸上画东西。可以通过`import turtle`导入海龟模块：
 
-- **第 3 步** 的命令 `turtle.circle(50)` 是在屏幕上画圆，其中 50 是大小。此外，你可以按喜欢的尺寸进行绘制，一直大到 100、150 和 180，其中大小为 50，但你是在告诉 Python 只画 180 度。
+- **第 3 步** 的命令`turtle.circle(50)`是在屏幕上画圆，其中 50 是大小。此外，你可以按喜欢的尺寸进行绘制，一直大到 100、150 和 180，其中大小为 50，但你是在告诉 Python 只画 180 度。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_25_0.png)
 
@@ -1352,9 +1344,11 @@ import turtle
 turtle.circle(50)
 turtle.getscreen().mainloop()
 ```
-像通常一样按 F5 保存代码并执行。一个新窗口将打开，“Turtle” 将画出一个圆。
+
+像通常一样按 F5 保存代码并执行。一个新窗口将打开，"Turtle" 将画出一个圆。
 
 - **第 4 步** 圆的最后部分告诉 Python 保持窗口打开，以便用户可以关闭它。现在，让我们做一个正方形：
+
 ```python
 import turtle
 print("Drawing a square")
@@ -1363,6 +1357,7 @@ for t in range(4):
     turtle.left(90)
 turtle.getscreen().mainloop()
 ```
+
 你可以看到我们插入了一个循环来绘制正方形的边。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_25_2.png)
@@ -1371,11 +1366,11 @@ turtle.getscreen().mainloop()
 
 # Python 图形
 
-第 5 步 你可以为正方形添加新行来添加颜色：`turtle.color("Red")`
-然后你可以通过输入 `turtle.shape("turtle")` 将字符改为海龟。
-你还可以使用 `turtle.begin_fill()` 和 `turtle.end_fill()` 命令用这些颜色填充正方形：
+**第 5 步** 你可以为正方形添加新行来添加颜色：`turtle.color("Red")`
+然后你可以通过输入`turtle.shape("turtle")`将字符改为海龟。
+你还可以使用`turtle.begin_fill()`和`turtle.end_fill()`命令用这些颜色填充正方形：
 
-第 8 步 现在通过导入 pygame 来获取代码：
+**第 8 步** 现在通过导入 pygame 来获取代码：
 
 ```python
 import pygame
@@ -1392,7 +1387,7 @@ pygame.display.flip()
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_26_0.png)
 
-第 6 步 你可以看到 Turtle 可以画一些漂亮的形状并且比示例更复杂：
+**第 6 步** 你可以看到 Turtle 可以画一些漂亮的形状并且比示例更复杂：
 
 ```python
 from turtle import *
@@ -1406,9 +1401,10 @@ while True:
 end_fill()
 done()
 ```
+
 这是一个不同的方法，但非常有效。
 
-第 9 步 在上一步中你导入了 pygame 引擎并要求它保存我们的树莓图像，作为 RPI.png。接下来你根据实际图像定义了背景颜色和窗口大小。最后你有一个循环来关闭窗口。
+**第 9 步** 在上一步中你导入了 pygame 引擎并要求它保存我们的树莓图像，作为`RPI.png`。接下来你根据实际图像定义了背景颜色和窗口大小。最后你有一个循环来关闭窗口。
 
 ```python
 w = 900
@@ -1417,7 +1413,6 @@ screen = pygame.display.set_mode((w, h))
 screen.fill(white)
 screen.blit(img,(0,0))
 pygame.display.flip()
-
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -1428,7 +1423,7 @@ while True:
 
 你可以显示图形的另一种方法是使用 pygame。有很多方法可以帮助你将图形输出到屏幕上，但让我们让我们显示预定义的图像。将其保存到你保存 python 的文件夹中。
 
-第 10 步 按 F 保存代码并运行，你的图像将在新窗口中显示。玩玩颜色、大小等，花些时间探索 pygame 模块中的函数。
+**第 10 步** 按 F 保存代码并运行，你的图像将在新窗口中显示。玩玩颜色、大小等，花些时间探索 pygame 模块中的函数。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_26_2.png)
 
@@ -1446,13 +1441,13 @@ Python 模块简单来说是由 Python 创建的源文件，包含类、函数�
 
 # 日历模块
 
-除了 `time` 模块外，`calendar` 模块在执行时可以产生一些有趣的结果。它比简单的显示 `time` 模块格式要强大得多，你实际上可以调用日历类型。
+除了`time`模块外，`calendar`模块在执行时可以产生一些有趣的结果。它比简单的显示`time`模块格式要强大得多，你实际上可以调用日历类型。
 
 ## 处理日期
 
-日历模块内置在 Python 3 中。然而，由于某些原因它没有安装，可以在 Windows 上使用 `pip install calendar` 或 Linux 上使用 `sudo pip install calendar`。
+日历模块内置在 Python 3 中。然而，由于某些原因它没有安装，可以在 Windows 上使用`pip install calendar`或 Linux 上使用`sudo pip install calendar`。
 
-- **第 1 步** 启动 Python 并导入 `calendar` 来调用模块。它加载到内存中：
+- **第 1 步** 启动 Python 并导入`calendar`来调用模块。它加载到内存中：
 
 - **第 3 步** 日历模块中有许多功能你会在编写代码时可能会感兴趣。例如，你可以显示两个年份之间的闰年：
 
@@ -1475,33 +1470,38 @@ Python 3.4.2 (Default. Oct 19 2014, 13:31)
  22  23  24  25  26  27  28
  29  30  31
 >>>
->>> 
+>>>
 ```
-
-- **第 2 步** 你可以看到 2017 年 9 月的天数以日历形式显示。自然地，你可以将第二行的 2017, 9 部分更改为任何想要的年份和月份，例如生日 (1973, 6)。第一行配置 `TextCalendar` 从星期日开始，如果你喜欢，可以选择星期一。
-
-- **第 4 步** 你甚至可以将那个特定的示例制成一段可以运行的代码，使用你的交互式 Python 代码：
-
-```python
-import calendar
-Calendar=calendar.TextCalendar()
-y1=input("Enter the first year: ")
-y2=input("Enter the second year: ")
-leaps=calendar.leapdays(y1,y2)
-print(f"Number of leap years between {y1}, and {y2}, is, {leaps}")
-```
-
-
 
 
 
 ## 日历模块 (Calendar Module)
 
-STEP 5 你还可以创建一个程序，显示指定年份内所有的日期、周月份：
+**第 2 步** 你可以看到 2017 年 9 月的天数以日历形式显示。自然地，你可以将第二行的 `2017, 9` 部分更改为任何想要的年份和月份，例如生日 `(1973, 6)`。第一行配置 `TextCalendar` 从星期日开始，如果你喜欢，可以选择星期一。
+
+**第 4 步** 你甚至可以将那个特定的示例制成一段可以运行的代码，使用你的交互式 Python 代码：
 
 ```python
 import calendar
+
+Calendar=calendar.TextCalendar()
+
+y1=input("Enter the first year: ")
+
+y2=input("Enter the second year: ")
+
+leaps=calendar.leapdays(y1,y2)
+
+print(f"Number of leap years between {y1}, and {y2}, is, {leaps}")
+```
+
+**STEP 5** 你还可以创建一个程序，显示指定年份内所有的日期、周月份：
+
+```python
+import calendar
+
 year=int(input("Enter the year to display: "))
+
 print(calendar.month(year))
 ```
 
@@ -1509,58 +1509,73 @@ print(calendar.month(year))
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_30_0.png)
 
-STEP 8 你还可以打印单独的月份或星期几天：
+**STEP 8** 你还可以打印单独的月份或星期几天：
 
 ```python
 import calendar
+
 for name in calendar.month_name:
+
 print(name)
 ```
 
 ```python
 import calendar
+
 for name in calendar.day_name:
+
 print(name)
 ```
 
 ![](img/763cdde75d55911fbf7836a70fdfd3c3b_30_1.png)
 
-STEP 6 有趣的是，我们可以使用简单的循环来列出每月天数：
+**STEP 6** 有趣的是，我们可以使用简单的循环来列出每月天数：
 
 ```python
 import calendar
+
 cal=calendar.TextCalendar(calendar.SUNDAY)
+
 for i in cal.monthdays(2018, 6):
+
 print(i)
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_30_2.png)
 
-STEP 9 日历模块还允许我们编写 HTML 格式函数，这样你就可以在网站上显示它。让我们先创建一个新文件：
+**STEP 9** 日历模块还允许我们编写 HTML 格式函数，这样你就可以在网站上显示它。让我们先创建一个新文件：
 
 ```python
 import calendar
+
 cal=open("/home/pi/Documents/calendar.html", "w")
+
 cal.write(calendar.TextCalendar(calendar.SUNDAY).formathtml(2018, 1))
+
 print("Done")
+
 cal.close()
 ```
 
-这段代码将创建一个名为 calendar 的 HTML 文件，用浏览器打开它，并显示 2018 年 1 月的日历。
+这段代码将创建一个名为 `calendar` 的 HTML 文件，用浏览器打开它，并显示 2018 年 1 月的日历。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_30_3.png)
 
-STEP 7 你可以看到代码在在周的开始处产生了零（在这种情况下是周日），以及来自上个月的重叠日期。因此，天数将从 2018 年和 2013 年的周五开始以显示第一个 cls。
+**STEP 7** 你可以看到代码在在周的开始处产生了零（在这种情况下是周日），以及来自上个月的重叠日期。因此，天数将从 2018 年和 2013 年的周五开始以显示第一个 `cls`。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_30_4.png)
 
-STEP 10 当然，你可以修改它将特定日期显示为网页：
+**STEP 10** 当然，你可以修改它将特定日期显示为网页：
 
 ```python
 import calendar
+
 year=int(input("Enter the year to display as a webpage: "))
+
 cal=open("/home/pi/Documents/calendar.html", "w")
+
 cal.write(calendar.TextCalendar(calendar.MONDAY).formatyear(year))
+
 cal.close()
 ```
 
@@ -1578,11 +1593,13 @@ OS 模块允许你直接与操作系统中的内置命令交互。命令取决�
 
 OS 模块的主要功能之一是能够列出、移动、创建、删除以及与其他存储在系统上的文件交互，使其成为备份代码的完美模块。
 
-你可以通过 Python 交互的一些简单系统环境来启动 os 模块。如果你使用 Linux 或树莓派，请尝试这个：
+你可以通过 Python 交互的一些简单系统环境来启动 `os` 模块。如果你使用 Linux 或树莓派，请尝试这个：
 
 ```python
 import os
+
 home=os.getcwd()
+
 print(home)
 ```
 
@@ -1590,12 +1607,13 @@ print(home)
 
 **STEP 3** Windows 的输出与系统不同：正如你可能怀疑的，`os.getcwd()` 函数让 Python 获取当前工作目录。
 
-**STEP 2** 打印变量 home 返回的结果是当前用户的文件夹。在我们的示例中，`/home/pi;` 将取决于登录的用户和所使用的操作系统。例如，Windows 将输出 `C:\Program Files (x86)\Python`
+**STEP 2** 打印变量 `home` 返回的结果是当前用户的文件夹。在我们的示例中，`/home/pi;` 将取决于登录的用户和所使用的操作系统。例如，Windows 将输出 `C:\Program Files (x86)\Python`
 
 **STEP 4** OS 模块的另一个有趣元素是它可以启动安装在系统中的程序。例如，如果你想在 Python 程序中启动 Chrome 浏览器，可以使用：
 
 ```python
 import os
+
 os.system("/usr/bin/chromium-browser")
 ```
 
@@ -1605,8 +1623,8 @@ os.system("/usr/bin/chromium-browser")
 
 ```python
 import os
-os.system('start "https://www.youtube.com/')
 
+os.system('start "https://www.youtube.com/')
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_32_0.png)
@@ -1615,10 +1633,11 @@ os.system('start "https://www.youtube.com/')
 
 ```python
 import os
+
 os.mkdir("NEW")
 ```
 
-根据函数在当前工作目录创建一个名为 NEW 的新目录。
+根据函数在当前工作目录创建一个名为 `NEW` 的新目录。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_32_1.png)
 
@@ -1626,6 +1645,7 @@ os.mkdir("NEW")
 
 ```python
 import os
+
 os.rename("NEW", "OLD")
 ```
 
@@ -1633,6 +1653,7 @@ os.rename("NEW", "OLD")
 
 ```python
 import os
+
 os.rmdir("OLD")
 ```
 
@@ -1642,27 +1663,41 @@ os.rmdir("OLD")
 
 ```python
 import os
+
 os.system('chromium-browser "http://bookmarks.com/')
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_32_3.png)
 
-**STEP 10** 另一个与 OS 的模块是 shutil。你可以使用 shutil 模块创建一个带时间戳的目录并将文件复制进去：
+**STEP 10** 另一个与 OS 的模块是 `shutil`。你可以使用 `shutil` 模块创建一个带时间戳的目录并将文件复制进去：
 
 ```python
 import os, shutil, time
+
 root_src_dir = r'/home/pi/Documents/'
+
 root_dst_dir = r'/home/pi/backup/' + time.asctime(0)
+
 for root, dirs, files in os.walk(root_src_dir):
+
     for d in dirs:
+
         dst = os.path.join(root_dst_dir, d)
+
         if not os.path.exists(dst):
+
             os.makedirs(dst)
+
     for file in files:
+
         src_file = os.path.join(root, file)
+
         dst_file = os.path.join(dst, file)
+
         if os.path.exists(dst_file):
+
             shutil.copy(src_file, dst_file)
+
 print('>>>>>>Backup complete<<<<<<')
 ```
 
@@ -1670,8 +1705,11 @@ print('>>>>>>Backup complete<<<<<<')
 
 ```python
 import os
+
 a=('chromium-browser "http://bookmarks.com/')
+
 b=('chromium-browser "http://www.google.uk/')
+
 os.system(a+b)
 ```
 
@@ -1681,16 +1719,17 @@ os.system(a+b)
 
 ## 随机模块 (Random Module)
 
-random 模块是你 Python 编程生活中可能会遇到很多；正如其名所示，它旨在创建随机数字或字母。然而，它并不是真正的随机，但足以满足大多数需求。
+`random` 模块是你 Python 编程生活中可能会遇到很多；正如其名所示，它旨在创建随机数字或字母。然而，它并不是真正的随机，但足以满足大多数需求。
 
 ### 随机数 (RANDOM NUMBERS)
 
-random 模块中有许多函数，应用时可以创建一些有趣且非常有用的 Python 程序。
+`random` 模块中有许多函数，应用时可以创建一些有趣且非常有用的 Python 程序。
 
-与其他模块一样，在使用我们在本教程中将学习的任何函数之前，你需要导入 random。让我们从简单打印一个 1 到 5 之间的随机数开始：
+与其他模块一样，在使用我们在本教程中将学习的任何函数之前，你需要导入 `random`。让我们从简单打印一个 1 到 5 之间的随机数开始：
 
 ```python
 import random
+
 print(random.randint(0,5))
 ```
 
@@ -1706,38 +1745,45 @@ Windows 的输出与系统不同：正如你可能怀疑的，`os.getcwd()` 函�
 
 ```python
 >>> random.randint(0,5)
+
 4
 ```
 
 ```python
 >>> random.randint(0,5)
+
 2
 ```
 
 ```python
 >>> random.randint(0,5)
+
 5
 ```
 
 ```python
 >>> random.randint(0,5)
+
 3
 ```
 
 ```python
 >>> random.randint(0,5)
+
 1
 ```
 
 ```python
 >>> random.randint(0,5)
+
 4
 ```
 
-然而，random 模块并不只用于数字。你可以使用它从列表中选择一个项，该列表可以包含：
+然而，`random` 模块并不只用于数字。你可以使用它从列表中选择一个项，该列表可以包含：
 
 ```python
 import random
+
 random.choice(["Conan", "Valeria", "Belit"])
 ```
 
@@ -1750,7 +1796,6 @@ random.choice(["Conan", "Valeria", "Belit"])
 | Type "credits" or "license" for more information. |
 | >>> random.choice(["Conan", "Valeria", "Belit"]) |
 'Valeria'
-```
 
 你可以通过从变量列表使用 `random.choice()` 来扩展之前的示例。
 
@@ -1770,15 +1815,11 @@ print(choice)
 
 对于显示 0 到 100 之间的浮点数，精确到十五位小数：
 
-
-
-
-
 ## 步骤 6
 
 有趣的是，你还可以使用 `random` 模块中的函数来打乱列表中的项，为公式增加一点随机性：
 
-```
+```python
 random.shuffle(list)
 print(list)
 ```
@@ -1794,7 +1835,7 @@ import random
 output={"Heads":0,"Tails":0}
 coin=list(output.keys())
 for i in range(10000):
-    output[random.choice(["Heads","Tails"]])+=1
+    output[random.choice(["Heads","Tails"])]+=1
 print("Heads:", output["Heads"])
 print("Tails:", output["Tails"])
 ```
@@ -1803,7 +1844,7 @@ print("Tails:", output["Tails"])
 
 # Python 3.2.1
 
-```
+```python
 Python 3.2 (default, Oct 19, 2013, 23:11)
 [C 3.2.1 on Windows]
 Type type 'help' or 'license' for more information.
@@ -1829,7 +1870,7 @@ print(list)
 
 ## 步骤 10
 
-这是一段有趣的代码。使用一个包含 466 个单词的文本文件，你可以从文件中随机选取单词（文本文件位于 www.github.com/dwyl/english-words）。
+这是一段有趣的代码。使用一个包含 466 个单词的文本文件，你可以从文件中随机选取单词（文本文件位于 `www.github.com/dwyl/english-words`）。
 
 ```python
 import random
@@ -1839,7 +1880,7 @@ import random
 
 # Python 3.2.2
 
-```
+```python
 Python 3.2 (default, Oct 19, 2013, 23:11)
 [C 3.2.2 on Linux]
 Type type 'help' or 'license' for more information.
@@ -1864,7 +1905,7 @@ for i in range(10):
 
 # Python 3.2.2
 
-```
+```python
 Python 3.2 (default, Oct 19, 2013, 23:11)
 [C 3.2.2 on Linux]
 Type type 'help' or 'license' for more information.
@@ -1877,47 +1918,36 @@ Type type 'help' or 'license' for more information.
 
 # Tkinter 模块
 
-在命令行甚至在 Shell 中运行你的代码时，Tkinter 模块允许程序员设置一个图形用户界面（GUI）来与用户交互，而且它也异常强大。
+在命令行甚至在 Shell 中运行你的代码时，`Tkinter` 模块允许程序员设置一个图形用户界面（GUI）来与用户交互，而且它也异常强大。
 
 ## 获取 GUI
 
+
+
 Tkinter 易于使用，但你还有更多可以做。让我们先看看它是如何工作的，并向其中输入一些代码。很快，你就会发现这个模块到底有多强大。
 
-- **步骤 1** Tkinter 通常内置在 Python 3 中。但是，如果不可用，你需要从命令提示符安装 tkinter。我们可以开始以以前不同的方式导入模块，以节省输入和导入它们所有内容的时间：
+## Tkinter
+
+### 步骤 1
+
+Tkinter 通常内置在 Python 3 中。但是，如果不可用，你需要从命令提示符安装 tkinter。我们可以开始以以前不同的方式导入模块，以节省输入和导入它们所有内容的时间：
+
 ```python
 import tkinter as tk
 from tkinter import *
 ```
 
-- **步骤 3** 理想的方法是将 `mainloop()` 添加到你的事件循环中，但我们很快就会遇到这一点。你刚刚创建了一个 Tkinter 部件，我们还有几个可以玩的：
-```python
-btn=Button(root)
-btn.pack()
-btn["text"]="Hello everyone"
-```
+### 步骤 2
 
-焦点位于新创建的窗口上。回到 Shell 并继续执行其他行。
+不建议使用星号导入模块中的所有内容，但这并不会产生伤害。让我们从创建一个基础 GUI 开始：
 
-![](img/763cdde75d55911fbf7836a707fd3c3b_35_0.png)
-
-```
-Python 3.4.2 Shell
-Tkinter 3.4.2 (default, Oct 19 2014, 13:31:11)
-(C) 2000-2014 Python Software Foundation, Inc., in Windows
-Type "copyright", "credits" or "license" for more information.
-Type help() for general help.
->>> from tkinter import *
->>> root=Tk()
-```
-
-- **步骤 2** 不建议使用星号导入模块中的所有内容，但这并不会产生伤害。让我们从创建一个基础 GUI 开始：
 ```python
 root=Tk()
 ```
 
 这创建了一个小的基础窗口。目前还没有什么可以做的，但点击 X 关闭窗口。
 
-```
+```text
 Python 3.4.2 Shell
 Tkinter 3.4.2 (default, Oct 19 2014, 13:31:11)
 (C) 2000-2014 Python Software Foundation, Inc., in Windows
@@ -1928,6 +1958,7 @@ Type help() for general help.
 ```
 
 然后添加一些函数：
+
 ```python
 def click():
     print("You clicked!")
@@ -1936,13 +1967,35 @@ btn["command"]=click
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_35_1.png)
 
-# Tkinter 模块
+### 步骤 3
 
-## 步骤 5
+理想的方法是将 `mainloop()` 添加到你的事件循环中，但我们很快就会遇到这一点。你刚刚创建了一个 Tkinter 部件，我们还有几个可以玩的：
+
+```python
+btn=Button(root)
+btn.pack()
+btn["text"]="Hello everyone"
+```
+
+焦点位于新创建的窗口上。回到 Shell 并继续执行其他行。
+
+![](img/763cdde75d55911fbf7836a707fd3c3b_35_0.png)
+
+```text
+Python 3.4.2 Shell
+Tkinter 3.4.2 (default, Oct 19 2014, 13:31:11)
+(C) 2000-2014 Python Software Foundation, Inc., in Windows
+Type "copyright", "credits" or "license" for more information.
+Type help() for general help.
+>>> from tkinter import *
+>>> root=Tk()
+```
+
+### 步骤 5
 
 执行步骤 4 代码，会出现一个带有“Hello everyone!”的窗口。如果你点击它，Shell 将输出“You clicked!”。这很简单，但展示了几行代码可以实现什么。
 
-```python
+```text
 # default. Oct 19 2014, 10:31
 # GUI
 Type 'help' or 'license' for more information.
@@ -1969,7 +2022,7 @@ w2.pack(side="left")
 root.mainloop()
 ```
 
-## 步骤 8
+### 步骤 8
 
 你也可以创建单选按钮。尝试：
 
@@ -1980,7 +2033,7 @@ v = IntVar()
 Label(root, title="Options", text="Choose a language:")
 ```
 
-## 步骤 9
+### 步骤 9
 
 你可以创建复选框、按钮并输出到 Shell：
 
@@ -1993,7 +2046,7 @@ var1 = IntVar()
 Label(root, title="Adventure Game")
 ```
 
-```python
+```text
 # default. Oct 19 2014, 10:31
 # GUI
 Type 'help' or 'license' for more information.
@@ -2018,21 +2071,23 @@ mainloop()
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_36_1.png)
 
-## 步骤 10
+### 步骤 10
 
-步骤 9 引入的代码了 Tkinter 中的几何元素。注意，这描述了复选框和按钮的位置（北、东、南、西）。root 参数放在不同的行上。玩玩看你会得到什么：
+步骤 9 引入的代码了 Tkinter 中的几何元素。注意，这描述了复选框和按钮的位置（北、东、南、西）。`root` 参数放在不同的行上。玩玩看你会得到什么：
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_36_2.png)
 
-# Pygame 模块
+## Pygame 模块
 
 我们已经简单地看了 Pygame 模块，但它还有很多需要探索的内容。Pygame 的开发是为了帮助 Python 程序员创建图形或基于文本的游戏。
 
-## 游戏
+### 游戏
 
 Pygame 不是 Python 的内置模块，但使用树莓派已经安装了它。其他人需要在命令提示符中使用：`pip install pygame`。
 
-- **步骤 1** 自然地，在使用它们之前，你需要将 Pygame 模块加载到内存中。Pygame 要求用户在使用任何函数之前对其进行初始化：
+#### 步骤 1
+
+自然地，在使用它们之前，你需要将 Pygame 模块加载到内存中。Pygame 要求用户在使用任何函数之前对其进行初始化：
 
 ```python
 import pygame
@@ -2041,7 +2096,9 @@ pygame.init()
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_37_0.png)
 
-- **步骤 3** 遗憾的是，如果不关闭 Python IDLE Shell，无法关闭新创建的 Pygame 窗口，这并不实用。由于这个原因，你需要在编辑器（新建 -> 文件）中工作并创建一个 True/False 循环：
+#### 步骤 3
+
+遗憾的是，如果不关闭 Python IDLE Shell，无法关闭新创建的 Pygame 窗口，这并不实用。由于这个原因，你需要在编辑器（新建 -> 文件）中工作并创建一个 True/False 循环：
 
 ```python
 import pygame
@@ -2060,11 +2117,9 @@ while running:
     pygame.quit()
 ```
 
+#### 步骤 4
 
-
-
-
-## 步骤 4 如果 Pygame 窗口仍然无法关闭，这只是 IDLE（使用 Tkinter 编写）与 Pygame 模块之间的差异。如果你通过命令行运行代码，它会完美地关闭。
+如果 Pygame 窗口仍然无法关闭，这只是 IDLE（使用 Tkinter 编写）与 Pygame 模块之间的差异。如果你通过命令行运行代码，它会完美地关闭。
 
 你将对代码进行一些调整，在 `while` 循环中运行主 Pygame 代码；这使得代码更紧凑且更容易追踪。我们下载了一张图片供使用，并需要为 pygame 设置一些参数：
 
@@ -2081,7 +2136,9 @@ while running:
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_38_0.png)
 
-## 步骤 5 让我们快速浏览代码的变化。我们定义了两种颜色：黑色和白色以及它们的 RGB 颜色值。我们加载了
+#### 步骤 5
+
+让我们快速浏览代码的变化。我们定义了两种颜色：黑色和白色以及它们的 RGB 颜色值。我们加载了
 
 ```python
 import pygame
@@ -2100,7 +2157,7 @@ def sprite(x,y):
     gamewindow.blit(img, (x,y))
 ```
 
-img = pygame.image.load("/home/pi/Downloads/sprite1.png")
+`img = pygame.image.load("/home/pi/Downloads/sprite1.png")`
 
 ```python
 def sprite(x,y):
@@ -2148,7 +2205,7 @@ for event in pygame.event.get():
         pygame.quit()
 ```
 
-下载了图片 sprite1.png 并将其加载到变量 `img` 中，还定义了 `sprite` 函数，现在 `blit` 函数可以轻松地移动图像了。
+下载了图片 `sprite1.png` 并将其加载到变量 `img` 中，还定义了 `sprite` 函数，现在 `blit` 函数可以轻松地移动图像了。
 
 ```python
 x=(800*0.45)
@@ -2165,7 +2222,7 @@ for event in pygame.event.get():
         pygame.quit()
 ```
 
-# 使用模块
+## 使用模块
 
 现在我们可以再次更改代码，这个 `while` 循环，并添加移动精灵在屏幕上所需的变量：
 
@@ -2250,6 +2307,8 @@ def text_generator(text):
 clock.tick(60)
 ```
 
+
+
 ```python
 class DynamicText(object):
     def __init__(self, font, pos, autoreset=False):
@@ -2289,11 +2348,9 @@ while True:
     clock.tick(60)
 ```
 
-## 步骤 10 当你运行这段代码时，它将向右滚动。带有介绍文本的 Pygame 窗口 十秒钟后会出现主游戏 Pygame 脚本，你可以在其中移动战士。总的来说，效果非常好，但始终有改进的空间。
+## 步骤 10
 
-
-
-
+当你运行这段代码时，它将向右滚动。带有介绍文本的 Pygame 窗口十秒钟后会出现主游戏 Pygame 脚本，你可以在其中移动战士。总的来说，效果非常好，但始终有改进的空间。
 
 # 创建你自己的模块
 
@@ -2305,7 +2362,7 @@ while True:
 
 让我们从创建一个基础数学函数开始。将一个数字乘以 2，或者将一个数字求次方。在 IDE 和编辑器中创建一个新文件：
 
-步骤 1
+**步骤 1**
 
 ```python
 def timestwo(x):
@@ -2321,27 +2378,28 @@ def power(x,y):
     return x ** y
 ```
 
-现在你将把函数定义从程序中提取到一个单独的文件。高亮这些函数并选择 编辑（Edit） > 剪切（Cut）。选择 文件（File） > 新文件（New File），并在窗口中粘贴。你现在有了独立的文件，一个包含函数，另一个包含调用：
+现在你将把函数定义从程序中提取到一个单独的文件。高亮这些函数并选择 **编辑（Edit） > 剪切（Cut）**。选择 **文件（File） > 新文件（New File）**，并在窗口中粘贴。你现在有了独立的文件，一个包含函数，另一个包含调用：
 
-步骤 3
+**步骤 3**
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_41_0.png)
 
 在框下方，输入调用代码的函数：
+
+```python
 print(timestwo(2))
 print(timethree(3))
 print(square(4))
 print(power(5,3))
-
 ```
 
-步骤 2
+**步骤 2**
 
-如果你现在尝试执行未**定义**的 `basic_math.py` 代码，你将得到 **NameError: 'timestwo' is not defined**。这是因为代码不再能够访问这些函数。
+如果你现在尝试执行未定义的 `basic_math.py` 代码，你将得到 `NameError: 'timestwo' is not defined`。这是因为代码不再能够访问这些函数。
 
-步骤 4
+**步骤 4**
 
-```
+```python
 Traceback (most recent call last):
   File "C:/Users/Documents/Python/basic_math.py", line 3, in <module>
     print(timestwo(2))
@@ -2352,16 +2410,23 @@ NameError: 'timestwo' is not defined
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_41_1.png)
 
-步骤 5
+**步骤 5**
 
-返回包含函数定义的定义的窗口，点击 文件（File） > 另存为（Save As）。将其命名为 `minim.py` 并保存到原始 `basic_math.py` 相同的路径。现在关闭 `minim.py` 窗口，保留 `basic_math.py` 窗口。
+返回包含函数定义的定义的窗口，点击 **文件（File） > 另存为（Save As）**。将其命名为 `minim.py` 并保存到原始 `basic_math.py` 相同的路径。现在关闭 `minim.py` 窗口，保留 `basic_math.py` 窗口。
 
 # 创建你自己的模块
 
-步骤 6 回到 `basic_math.py` 窗口：在代码输入的顶部：
-from minimax import *
+**步骤 6**
 
-步骤 9 最后，你现在可以一系列 `if` 语句来确定对数字和新创建的函数进行什么操作：
+回到 `basic_math.py` 窗口：在代码输入的顶部：
+
+```python
+from minimax import *
+```
+
+**步骤 9**
+
+最后，你现在可以一系列 `if` 语句来确定对数字和新创建的函数进行什么操作：
 
 这将导入你定义的函数。按 F5 保存并执行代码以查看运行效果。
 
@@ -2384,7 +2449,9 @@ else:
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_42_0.png)
 
-步骤 7 你现在可以进一步使用代码，利用新创建的用户交互使创建的模块充分发挥作用。通过创建一个基础菜单，你可以选择：
+**步骤 7**
+
+你现在可以进一步使用代码，利用新创建的用户交互使创建的模块充分发挥作用。通过创建一个基础菜单，你可以选择：
 
 ```python
 print("Select option.\n")
@@ -2397,14 +2464,19 @@ choice = int(input("Enter choice (1/2/3/4): "))
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_42_1.png)
 
-步骤 8 现在我们可以添加用户来获取数字，代码将：
+**步骤 8**
+
+现在我们可以添加用户来获取数字，代码将：
 
 ```python
 num1 = int(input("enter number: "))
 ```
+
 这将用户输入保存为变量 `num1`。
 
-步骤 10 注意，对于最后的选项，我们添加了第二个变量 `num2`。这通过定义的函数传递。保存并执行程序查看运行效果。
+**步骤 10**
+
+注意，对于最后的选项，我们添加了第二个变量 `num2`。这通过定义的函数传递。保存并执行程序查看运行效果。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_42_2.png)
 
@@ -2431,13 +2503,18 @@ choice = int(input("Enter choice (1/2/3/4): "))
 
 没有什么比响应用户的程序更令人满足了。这种基础的用户交互是任何语言中最基础的之一。你已经使用了 `cout`（标准输出流），现在将使用 `cin`（标准输入流）来提示用户。
 
-步骤 1 用户想要输入到程序的任何内容都需要声明为一个变量。`cin` 命令的工作方式与 `cout` 输出到屏幕的方式相反。
+**步骤 1**
 
-步骤 2 变量的数据类型必须与你从用户那里要求的类型匹配。例如，为了提问，你会使用整数：
+用户想要输入到程序的任何内容都需要声明为一个变量。`cin` 命令的工作方式与 `cout` 输出到屏幕的方式相反。
+
+**步骤 2**
+
+变量的数据类型必须与你从用户那里要求的类型匹配。例如，为了提问，你会使用整数：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main () {
     int age;
     cout << "What is your age: ";
@@ -2446,11 +2523,14 @@ int main () {
 }
 ```
 
-步骤 3 为了询问名字，你需要将输入存储为字符串：
+**步骤 3**
+
+为了询问名字，你需要将输入存储为字符串：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main () {
     string name;
     cout << "What is your name: ";
@@ -2461,13 +2541,18 @@ int main () {
 
 # 用户交互
 
-步骤 5 与之前的代码相同。用户的输入存储在字符串中，因为它包含多个字符。由于变量 `name` 不改变，你可以按喜欢的方式检索它。
+**步骤 5**
 
-步骤 8 虽然 `cin` 适用于大多数输入任务，但它有一个局限。它是为单单词设计的，而不是多个单词。然而，`getline` 可以考虑第一个参数和变量：
+与之前的代码相同。用户的输入存储在字符串中，因为它包含多个字符。由于变量 `name` 不改变，你可以按喜欢的方式检索它。
+
+**步骤 8**
+
+虽然 `cin` 适用于大多数输入任务，但它有一个局限。它是为单单词设计的，而不是多个单词。然而，`getline` 可以考虑第一个参数和变量：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
     string mystr;
     cout << "Enter a sentence: \n";
@@ -2477,11 +2562,14 @@ int main() {
 }
 ```
 
-步骤 6 你可以向用户请求输入，只需确保有一个变量存储值。假设用户输入两个数字：
+**步骤 6**
+
+你可以向用户请求输入，只需确保有一个变量存储值。假设用户输入两个数字：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
     int num1, num2;
     cout << "Enter two whole numbers: \n";
@@ -2491,26 +2579,31 @@ int main() {
 }
 ```
 
-步骤 9 构建并执行代码，然后输入带空格的内容。当你完成后，代码读取该行并替换为 `cin >> mystr`，结果再次显示阶段的字符数。
+**步骤 9**
+
+构建并执行代码，然后输入带空格的内容。当你完成后，代码读取该行并替换为 `cin >> mystr`，结果再次显示阶段的字符数。
 
 | | | |
 |---|---|---|
-| 1 | <iostream> | |
-| 2 | using namespace std; | |
+| 1 | `<iostream>` | |
+| 2 | `using namespace std;` | |
 | 3 | | |
-| 4 | int main() | |
+| 4 | `int main()` | |
 | 5 | | |
-| 6 | string mystr; | |
-| 7 | cout << "Enter a sentence: \n"; | |
-| 8 | getline(cin,mystr); | |
+| 6 | `string mystr;` | |
+| 7 | `cout << "Enter a sentence: \n";` | |
+| 8 | `getline(cin,mystr);` | |
 | 9 | | |
-| 10 | cout << "Your sentence is: " << mystr.size() << " characters long."; | |
+| 10 | `cout << "Your sentence is: " << mystr.size() << " characters long.";` | |
 
-步骤 7 同样，一旦你将数据存储在字符串中，就可以对其进行处理。例如，询问两个数字并进行一些数学运算：
+**步骤 7**
+
+同样，一旦你将数据存储在字符串中，就可以对其进行处理。例如，询问两个数字并进行一些数学运算：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
     int num1, num2;
     cout << "Enter two whole numbers: \n";
@@ -2520,11 +2613,14 @@ int main() {
 }
 ```
 
-步骤 10 `getline` 是一个可以帮助 C++ 程序员学习交互的命令。当你发现你的代码不起作用时，未来最好使用 `getline(cin, variable)`：
+**步骤 10**
+
+`getline` 是一个可以帮助 C++ 程序员学习交互的命令。当你发现你的代码不起作用时，未来最好使用 `getline(cin, variable)`：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
     string name;
     cout << "Enter your full name: \n";
@@ -2533,10 +2629,6 @@ int main() {
     return 0;
 }
 ```
-
-
-
-
 
 # 字符字面量
 
@@ -2551,32 +2643,31 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
-int main() {
 
+int main() {
 }
 ```
 
-- **步骤 2** 你已经体验过 `\n` 字符会在调用它的地方放置新行。这一行代码：**cout << "Hello\n\I'm a C++\nProgram\n";** 会输出三行文本，每行都从上一个 `\n` 之后开始。
+- **步骤 2** 你已经体验过 `\n` 字符会在调用它的地方放置新行。这一行代码：`cout << "Hello\n\I'm a C++\nProgram\n";` 会输出三行文本，每行都从上一个 `\n` 之后开始。
 
 - **步骤 3** 如果你想在 `cout` 语句内部插入双引号，你必须使用反斜线，因为它已经使用了 `<iostream>`。
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
-
-cout << "Hello, user. This is how to use \"quotes\";
-
+    cout << "Hello, user. This is how to use \"quotes\";
 }
 ```
 
-| | userinteraction.cpp | <iostream> |
+| | userinteraction.cpp | `<iostream>` |
 |---|---|---|
-| 1 | | #include <iostream> |
-| 2 | | using namespace std; |
+| 1 | | `#include <iostream>` |
+| 2 | | `using namespace std;` |
 | 3 | | |
 | 4 | | |
-| 5 | | int main () |
+| 5 | | `int main ()` |
 | 6 | | |
 | 7 | | |
 | 8 | | |
@@ -2589,32 +2680,31 @@ cout << "Hello, user. This is how to use \"quotes\";
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main() {
-
-cout << "ALARM! \a";
-
+    cout << "ALARM! \a";
 }
 ```
 
-| | userinteraction.cpp | <iostream> |
+| | userinteraction.cpp | `<iostream>` |
 |---|---|---|
-| 1 | | #include <iostream> |
-| 2 | | using namespace std; |
+| 1 | | `#include <iostream>` |
+| 2 | | `using namespace std;` |
 | 3 | | |
-| 4 | | int main () |
+| 4 | | `int main ()` |
 | 5 | | |
-| 6 | | cout << "Hello\n\I'm a C++\nProgram\n"; |
-| 7 | | C:\Users\Documents\userinteraction.exe |
-| 8 | | process finished (0x) execution time: 0.000s |
+| 6 | | `cout << "Hello\n\I'm a C++\nProgram\n";` |
+| 7 | | `C:\Users\Documents\userinteraction.exe` |
+| 8 | | `process finished (0x) execution time: 0.000s` |
 
-| | userinteraction.cpp | <iostream> |
+| | userinteraction.cpp | `<iostream>` |
 |---|---|---|
-| 1 | | #include <iostream> |
-| 2 | | using namespace std; |
+| 1 | | `#include <iostream>` |
+| 2 | | `using namespace std;` |
 | 3 | | |
-| 4 | | int main () |
+| 4 | | `int main ()` |
 | 5 | | |
-| 6 | | cout << "ALARM! \a"; |
+| 6 | | `cout << "ALARM! \a";` |
 | 7 | | |
 | 8 | | |
 
@@ -2640,21 +2730,22 @@ cout << "ALARM! \a";
 
 # Unicode 字符 (UTF-8)
 
-Unicode 字符是跨所有平台通用的符号或字符。例如，版权符号可以通过键盘输入 Unicode 代码后按 ALT+X 来输入。对于版权符号，输入：00A9 然后按 Alt+X。在 C++ 代码中，你会使用：
+Unicode 字符是跨所有平台通用的符号或字符。例如，版权符号可以通过键盘输入 Unicode 代码后按 ALT+X 来输入。对于版权符号，输入：`00A9` 然后按 Alt+X。在 C++ 代码中，你会使用：
 
 ```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-
     cout << "\u00A9";
 }
 ```
 
+
+
 # Unicode 字符表
 
-完整的 Unicode 字符列表可以在 www.unicode-table.com/en/ 找到。将鼠标悬停在字符上，即可查看在 C++ 中输入的唯一代码。
+完整的 Unicode 字符列表可以在 `www.unicode-table.com/en/` 找到。将鼠标悬停在字符上，即可查看在 C++ 中输入的唯一代码。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_48_0.png)
 
@@ -2672,9 +2763,13 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 #define LENGTH 50
+
 #define WIDTH 40
+
 #define HEIGHT 60
 
 int main() {
@@ -2686,20 +2781,27 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 #define LENGTH 50
+
 #define WIDTH 40
+
 #define HEIGHT 60
+
 #define NEWLINE "\n"
 
 int main() {
 
     cout << "Length: " << LENGTH << NEWLINE;
+
     cout << "Width: " << WIDTH << NEWLINE;
+
     cout << "Height: " << HEIGHT << NEWLINE;
 
     return 0;
+
 }
 ```
 
@@ -2707,7 +2809,9 @@ int main() {
 
 ```cpp
 const int LENGTH = 50;
+
 const int WIDTH = 40;
+
 const int HEIGHT = 60;
 ```
 
@@ -2721,6 +2825,7 @@ const int HEIGHT = 60;
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 #define PI 3.14159
@@ -2730,23 +2835,27 @@ int main() {
     cout << "The Value of Pi: " << PI << endl;
 
     return 0;
+
 }
 ```
 
-img/763cdde75d55911fbf7836a707fd3c3b_50_1.png
+![](img/763cdde75d55911fbf7836a707fd3c3b_50_1.png)
 
 步骤 8 定义常量的另一种方法是使用 `const` 关键字结合数据类型。以 PI 为例：
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main() {
 
     const double PI = 3.14159;
+
     cout << "The Value of Pi: " << PI << endl;
 
     return 0;
+
 }
 ```
 
@@ -2756,19 +2865,25 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main() {
 
     const int LENGTH = 50;
+
     const int WIDTH = 40;
+
     const char NEWLINE = "\n";
 
     int area;
+
     area = LENGTH * WIDTH;
+
     cout << "Area is: " << area << NEWLINE;
 
     return 0;
+
 }
 ```
 
@@ -2786,7 +2901,9 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 #include <fstream>
+
 using namespace std;
 
 int main() {
@@ -2798,23 +2915,31 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 #include <fstream>
+
 using namespace std;
 
 int main() {
 
 string namefile;
+
 ofstream newfile;
+
 newfile.open("name.txt");
+
 cout << "Enter your name: " << endl;
+
 getline(cin, namefile);
+
 newfile << namefile << endl;
+
 newfile.close();
 
 }
 ```
 
-- **步骤 3** 我们在步骤2的截图中包含了注释以帮助你理解过程。你创建了一个 `string name` 来存储用户的输入名称。你还创建一个名为 `name.txt` 的文本文件（使用 `ofstream` 和 `newfile.open`），询问用户的名称并存储它，然后将数据写入文件。
+- **步骤 3** 我们在步骤 2 的截图中包含了注释以帮助你理解过程。你创建了一个 `string name` 来存储用户的输入名称。你还创建一个名为 `name.txt` 的文本文件（使用 `ofstream` 和 `newfile.open`），询问用户的名称并存储它，然后将数据写入文件。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_51_0.png)
 
@@ -2822,21 +2947,19 @@ newfile.close();
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_51_1.png)
 
-
-
-
-
 # 文件输入/输出
 
 STEP 5 上面的代码对于打开只有一两行的文件非常好，但如果有多行呢？我们打开了罗伯特·爱德华·霍华德诗歌《西墨利亚》（Cimmeria）的文本文件
 
 ```cpp
 string line;
+
 ifstream infile("C:\users\david\Documents\Cimmeria.txt");
 
 cout << "Cimmeria, by Robert E Howard: \n" << endl;
 
 while (getline(infile, line))
+
     cout << line << endl;
 
 file.close();
@@ -2846,17 +2969,25 @@ STEP 8 正如你预期的，你可以向文件中写入任何内容，并可以�
 
 ```cpp
 string name;
+
 int age;
+
 ofstream outfile;
+
 newfile.open("name.txt");
 
 cout << "Enter your name: " << endl;
+
 getline(cin, name);
+
 newfile << name << endl;
 
 cout << "how old are you: " << endl;
+
 cin >> age;
+
 newfile << age << endl;
+
 newfile.close();
 ```
 
@@ -2876,13 +3007,13 @@ STEP 10 这是一个如何向文本文件创建多个不同元素的示例。你
 
 ```cpp
 string line;
+
 ifstream infile("C:\users\david\Documents\Cimmeria.txt");
+
 cout << "Cimmeria, by Robert E Howard: \n" << endl;
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_52_3.png)
-
-# 循环与决策
 
 # 循环与决策
 
@@ -2898,11 +3029,8 @@ cout << "Cimmeria, by Robert E Howard: \n" << endl;
 
 `while` 循环是 C++ 代码中最流行的循环形式之一。当 `while` 条件为真时，它们会反复运行包含的代码。
 
-
-
-
-
 # 第 6 步
+
 使用倒计时代码，不要忘记包含 `windows.h` 库，这样你就可以使用 `Sleep` 命令。在控制台中构建并运行，你可以看到数字从 10 到 1 以秒为单位递减，直到达到零并发射（Blast Off!）！
 
 ```
@@ -2914,64 +3042,99 @@ C:\Users\dev8\Documents\ForLoop.exe
 按任意键继续。
 
 # 第 9 步
+
 这是一个显示用户输入数字乘法表的循环示例。对学生非常有用：
 
 ```cpp
 {
+
 int nr;
+
 cout << "输入一个数字查看其乘法表:";
+
 cin >> nr;
+
 for (int i = 1; i <= 12; i++) {
+
 cout << i << " x " << nr << " = " << i * nr << endl;
+
 }
+
 return 0;
+
 }
 ```
 
 # 第 7 步
+
 当然，你可以在循环中包含更多内容，包括一些用户输入：
 
 ```cpp
 int i, fact = 1;
+
 cout << "输入一个整数:";
+
 cin >> nr;
+
 for (int i = 1; i <= nr; i++) {
+
 fact *= i;
+
 }
+
 cout << "\n" << nr << " 的阶乘 = " << fact << endl;
+
 return 0;
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_58_0.png)
 
 # 第 10 步
+
 整数 `i` 可以从 12 扩展到任何任何数字，在此过程中显示一个巨大的乘法表（或很小的）。循环使用的数据类型不需要是整数；只要它运行正常即可。
 
 ```cpp
 for (float i = 0.00; i <= 1.0; i += 0.01) {
+
 cout << i << endl;
+
 }
+
 return 0;
 ```
 
 ```cpp
 #include <iostream>
+
 #include <windows.h>
+
 using namespace std;
+
 int main() {
+
 int fact = 1;
+
 int nr;
+
 cout << "输入一个整数:";
+
 cin >> nr;
+
 for (int i = 1; i <= nr; i++) {
+
 fact *= i;
+
 }
+
 cout << "\n" << nr << " 的阶乘 = " << fact << endl;
+
 return 0;
+
 }
 ```
 
 # 第 8 步
+
 第 7 步的代码可以工作并运行，因为它通过循环显示该数字的阶乘。用户的数字存储在整数中，随后的循环用于检查条件是真是假，每次检查都相同，并向其打印用户的数字，
 
 ```
@@ -2985,13 +3148,21 @@ C:\Users\dev8\Documents\ForLoop.exe
 
 ```cpp
 #include <iostream>
+
 #include <windows.h>
+
 using namespace std;
+
 int main() {
+
 for (float i = 0.00; i <= 1.0; i += 0.01) {
+
 cout << i << endl;
+
 }
+
 return 0;
+
 }
 ```
 
@@ -3000,6 +3171,7 @@ return 0;
 `do... while` 循环与 `for` 甚至 `while` 循环略有不同。`for` 和 `while` 都会在循环开始时（或者在循环顶部）设置并检查条件。然而，`do... while` 循环类似于 `while` 循环，但它在循环底部检查条件。
 
 ### DO 循环
+
 `do... while` 循环的优点是它保证至少运行一次。它的结构是 `do`，后面跟着语句，条件为真则继续执行。这就是它的工作方式。
 
 - 第 1 步：从一个空白 C++ 文件开始并输入标准头文件：
@@ -3008,21 +3180,31 @@ return 0;
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main () {
+
 }
+
 }
 ```
 
 ```cpp
 int num = 1;
+
 do {
+
     cout << "数字: " << num << endl;
+
     num = num + 1;
+
 }
+
 while (num < 30); 
+
 return 0;
+
 }
 ```
 
@@ -3030,13 +3212,21 @@ return 0;
 
 ```cpp
 {
+
     int num = 1;
+
 do {
+
     cout << "数字: " << num << endl;
+
     num = num + 1;
+
 }
+
 while (num < 30); 
+
 return 0;
+
 }
 ```
 
@@ -3045,25 +3235,39 @@ return 0;
 ![](img/763cdde75d55911fbf7836a707fd3c3b_59_0.png)
 
 # 第 5 步
+
 如果你想累加输入的数字直到用户输入零：
 
 ```cpp
 {
+
     float number = 0;
+
     float sum = 0;
+
     cout << "***执行 do... while 循环...";
+
     do {
+
         cout << "输入 0 停止并显示所有数字:" << endl;
+
         cin >> number;
+
         sum += number;
+
     }
+
     while(number != 0);
+
     cout << "所有数字的总和: " << sum;
+
     return 0;
+
 }
 ```
 
 # 第 8 步
+
 最后，`while` 语句检查变量的条件。如果用户输入零，循环终止，否则无限持续。当用户最终输入零时，显示 `sum` 的值。循环，然后
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_0.png)
@@ -3073,37 +3277,50 @@ return 0;
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_2.png)
 
 # 第 9 步
+
 使用之前的倒计时和发射！，`do... while` 循环看起来如下：
 
 ```cpp
 do {
+
     int a = 10;
+
     cout << a << endl;
+
     a = a - 1;
+
 } while (a != 0);
 ```
 
+
+
+```cpp
 cout << "发射!" << endl;
+```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_3.png)
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_4.png)
 
 # 第 6 步
+
 第 5 步的代码工作如下：变量被赋值，然后值为 0 的 `sum` 是给用户的简短指令，然后 `do... while` 循环。
 
 ```cpp
 float number = 0;
 float sum = 0;
+
 do {
     cout << "输入 0 停止并显示所有输入的数字:" << endl;
     cin >> number;
     sum += number;
 } while (number != 0);
+
 cout << "所有数字的总和: " << sum;
 ```
 
 # 第 7 步
+
 在此实例中，`do... while` 循环允许用户输入变量，并将其赋值给 `sum`。计算使用第二个变量 `sum`，每当用户输入新值时都会加上该值。
 
 ```cpp
@@ -3115,27 +3332,35 @@ do {
 ```
 
 # 第 10 步
+
 使用 `do... while` 循环的主要优点是它是退出条件循环。如果你需要至少执行一次的循环（例如，检查游戏中的生命值），那么 `do... while` 循环是完美的。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_5.png)
 
-## if 语句
+## `if` 语句
+
 决策语句 `if` 可能是任何编程语言中最常用的语句之一，无论是 C++、Python 还是其他。它代表了代码中的一个分支点，如果一个条件为真，则执行此；如果为假，则执行那个。
 
-###  IF
+### `if`
+
 在语句中使用布尔表达式。如果布尔表达式为真，则执行语句内的代码。否则，则执行语句后的代码。
 
 - 第 1 步：创建一个新的 C++ 文件并像常一样输入相关的标准头文件：
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 int main() {
     int num = 1;
+
     if (num < 30) {
         cout << "数字小于 30。" << endl;
     }
+
     cout << "数字的值: " << num << endl;
+
     return 0;
 }
 ```
@@ -3144,9 +3369,11 @@ int main() {
 
 ```cpp
 int num = 1;
+
 if (num < 30) {
     cout << "数字小于 30。" << endl;
 }
+
 cout << "数字的值: " << num << endl;
 ```
 
@@ -3158,18 +3385,23 @@ cout << "数字的值: " << num << endl;
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 int main() {
     int num = 31; // 修改 num 的值
+
     if (num < 30) // 如果 num 的值是
-{
-}
+    {
+    }
 ```
 
 # 第 5 步
+
 当你将值更改为 30 以上的任何数字时，运行代码，你可以看到 `if` 语句为假，大括号内的代码没有执行。语句后的代码被执行。
 
 # 第 8 步
+
 最后，`while` 语句检查变量的条件。如果用户输入零，循环终止，否则无限持续。当用户最终输入零时，显示 `sum` 的值。循环，然后
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_0.png)
@@ -3178,11 +3410,7 @@ int main() {
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_60_2.png)
 
-
-
-
-
-## If... Else 语句
+## `if... else` 语句
 
 在代码中使用 `if` 语句有更好的方法，`if... else` 的工作原理与标准的 `if` 语句相同。如果布尔表达式为真，则执行大括号内的代码。否则，则将执行下一组大括号中的代码。
 
@@ -3194,16 +3422,18 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main() {
     int num = 1;
+
     if (num < 30) {
         cout << "The number is less than 30!" << endl;
-    }
-    else {
+    } else {
         cout << "The number is greater than 30!" << endl;
     }
+
     return 0;
 }
 ```
@@ -3212,12 +3442,13 @@ int main() {
 
 ```cpp
 int num = 1;
+
 if (num < 30) {
     cout << "The number is less than 30!" << endl;
-}
-else {
+} else {
     cout << "The number is greater than 30!" << endl;
 }
+
 return 0;
 ```
 
@@ -3241,20 +3472,22 @@ else {
 
 ```cpp
 int num;
+
 cout << "Enter a number: ";
 cin >> num;
+
 if (num < 30) {
     cout << "The number is less than 30!" << endl;
-}
-else {
+} else {
     cout << "The number is greater than 30!" << endl;
 }
+
 return 0;
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_63_0.png)
 
-## If... Else 语句
+## `if... else` 语句
 
 步骤 6：代码运行方式如你预期的一样，但如果你想在用户输入数字 30 时显示某些内容呢？尝试：
 
@@ -3262,21 +3495,24 @@ return 0;
 
 ```cpp
 {
-  int num;
-  cout << "Enter a number: ";
-  cin >> num;
-  if (num < 30) {
-    cout << "The number is less than 30!" << endl;
-  } else if (num > 30) {
-    cout << "The number is greater than 30!" << endl;
-  } else if (num == 30) {
-    cout << "The number is exactly 30!" << endl;
-  }
+    int num;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    if (num < 30) {
+        cout << "The number is less than 30!" << endl;
+    } else if (num > 30) {
+        cout << "The number is greater than 30!" << endl;
+    } else if (num == 30) {
+        cout << "The number is exactly 30!" << endl;
+    }
 }
 ```
 
 ```cpp
 int num, guess, tries = 0;
+
 cout << "****** Two-player guessing game *******" << endl;
 cout << "\nPlayer One, enter a number for\nPlayer Two to guess: " << endl;
 cout << string(50, '\n');
@@ -3286,47 +3522,58 @@ cout << string(50, '\n');
 
 ```cpp
 do {
-  cout << "enter your guess: ";
-  cin >> guess;
-  tries++;
-  if (guess > num) {
-    cout << "\nToo High!\n" << endl;
-  } else if (guess < num) {
-    cout << "\nToo Low!\n" << endl;
-  } else {
-    cout << "\nWell done! You got it in" << endl;
-  }
+    cout << "enter your guess: ";
+    cin >> guess;
+    tries++;
+
+    if (guess > num) {
+        cout << "\nToo High!\n" << endl;
+    } else if (guess < num) {
+        cout << "\nToo Low!\n" << endl;
+    } else {
+        cout << "\nWell done! You got it in" << endl;
+    }
 } while (guess != num);
 ```
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 int main() {
-  int num;
-  cout << "Enter a number: ";
-  cin >> num;
-  if (num < 30) {
-    cout << "The number is less than 30!" << endl;
-  } else if (num > 30) {
-    cout << "The number is greater than 30!" << endl;
-  } else if (num == 30) {
-    cout << "The number is exactly 30!" << endl;
-  }
-  return 0;
+    int num;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    if (num < 30) {
+        cout << "The number is less than 30!" << endl;
+    } else if (num > 30) {
+        cout << "The number is greater than 30!" << endl;
+    } else if (num == 30) {
+        cout << "The number is exactly 30!" << endl;
+    }
+
+    return 0;
 }
 ```
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_64_0)
 
-代码中新添加的部分被称为**嵌套 if else 语句**，用于多个条件。在这种情况下，如果用户输入的数字大于 30 或实际上等于 30，会向他们展示不同的结果。步骤 10：获取玩家并编写代码。玩家一输入要猜的数字，然后玩家二可以根据需要进行多少次猜测。想让它更难吗？也许使用小数。
+代码中新添加的部分被称为嵌套 `if else` 语句，用于多个条件。在这种情况下，如果用户输入的数字大于 30 或实际上等于 30，会向他们展示不同的结果。步骤 10：获取玩家并编写代码。玩家一输入要猜的数字，然后玩家二可以根据需要进行多少次猜测。想让它更难吗？也许使用小数。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_64_1.png)
 
-```
+![](img/7836a707fd3c3b_64_2.png)
+
+```text
 C:\Users\David\Documents\C++\Else.exe
+
 Enter a number: 30
+
 Number is exactly 30!
+
 Process exited (0) execution time: 0 sec
 ```
 
@@ -3362,6 +3609,7 @@ Process exited (0) execution time: 0 sec
 var points = 123;
 var line = 5;
 var totalTime = 45;
+
 write("Points: " + points);
 write("Lives: " + line);
 write("Total Time: " + totalTime);
@@ -3373,21 +3621,28 @@ write("Total Time: " + totalTime);
 
 ```cpp
 orig = 2;
+
 target = 2;
 
 #endif
+
 if (n == 0)
-return;
+    return;
 
 // Loop running...
 
 // (n - 3) is the greatest multiple of 4
+
 // In the loop head will move over
+
 // End marks the barrier for falling out
+
 char count = orig * 2;
 
 // If we're aligned for writing
+
 // if zero is 0 {
+
 // defined = defined
 ```
 
@@ -3407,19 +3662,21 @@ char count = orig * 2;
 
 用户输入往往是代码中的致命错误。例如，当用户应该输入数字却输入了字母时。通常用户输入的可能会会导致内部缓冲区溢出，从而导致代码崩溃。观察这些用户输入并清除所需的内容。
 
-```
+```text
 Enter an integer number
+
 You have entered wrong input
+
 You have entered wrong input
+
 You have entered wrong input
+
 The number is: 12
+
 Process returned (0) execution time: .21495 s
+
 Press any key to continue...
 ```
-
-
-
-
 
 # 代码操作
 
@@ -3427,7 +3684,7 @@ Press any key to continue...
 
 Python 是一门相对容易上手的语言；初学者有充足的空间来找到编程的感觉。然而，与任何其他编程语言一样，很容易犯一些常见的错误，这些错误会导致程序无法运行。
 
-## 初学者错误（共10种）
+## 初学者错误（共 10 种）
 
 以下是学者在发现自己犯了错误时经常遇到的十个 Python 错误。能够识别这些错误将为你将来省去很多麻烦。
 
@@ -3446,12 +3703,14 @@ Python 在显示代码时使用缩进。缩进意味着该部分的代码是上�
 ```python
 # 设置 pygame
 import pygame
+
 pygame.init()
 mainloop = pygame.Clock()
 
 # 设置窗口
 width = 800
 height = 600
+
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('caption')
 
@@ -3468,9 +3727,11 @@ RIGHT = 3
 
 ```python
 import random
+
 set_count = random.randint(1, 10)
 all = 'abcdef'
 value = random.choice(all)
+
 if set_count > 5:
     print(value)
 ```
@@ -3483,34 +3744,51 @@ if set_count > 5:
 n = list(range(1, 11))
 ```
 
+
+
 ### 冒号
 
 初学者经常忘记在结构性语句的结尾添加冒号，例如：`if` 等等等。冒号分隔代码并创建后续代码所属的缩进。
 
 ```python
 class Hongkong:
+
     def __init__(self, word):
+
         self.word = word
+
         self.missed_letters = []
 
     def guessed(self, letter):
+
         if letter not in self.missed_letters:
+
             self.missed_letters.append(letter)
+
         else:
+
             return False
 
     def won(self):
+
         if len(self.missed_letters) == len(self.word):
+
             return True
+
         return False
 
     def lose(self):
+
         for letter in self.word:
+
             if letter not in self.missed_letters:
+
                 return False
+
         return True
 
     def reset(self):
+
         return None
 ```
 
@@ -3520,8 +3798,11 @@ Python 是一种大小写敏感的编程语言，因此你需要检查任何变�
 
 ```
 Python 3.6.2 (v3.6.2:fd3d3b5, Jul 8 2017, 04:14:34 on win32)
+
 >>> Lives10
+
 10
+
 >>> print('Lives left:', Lives10)
 ```
 
@@ -3531,41 +3812,55 @@ Python 3.6.2 (v3.6.2:fd3d3b5, Jul 8 2017, 04:14:34 on win32)
 
 ### 括号
 
-每个人都会忘记关闭语句末尾添加的括号。Python 依赖于右括号数量与左括号相等，因此你代码中的任何错误都可能导致你忘记计数；包括方括号：
+每个人都会忘记关闭语句末尾添加的括号。Python 依赖于右括号数量与左括号相等，因此你代码中的任何错误都可能导致你忘记计数；包括方括号。
 
 ### 操作系统
 
-为多个平台编写编写是困难的，尤其是你想开始执行操作系统的命令时。例如，如果你为屏幕编写代码，你会使用 `clear`。而对于 Linux，你需要通过捕获错误并使用冒号发布来解决这个问题：
+为多个平台编写代码是困难的，尤其是你想开始执行操作系统的命令时。例如，如果你为屏幕编写代码，你会使用 `clear`。而对于 Linux，你需要通过捕获错误并使用冒号发布来解决这个问题：
 
 ```python
 def print_status(self):
+
     print(board(len(self.missed_letters)))
+
     print('Word: ' + self.hide_word())
+
     print('Letters left: ')
+
     for letter in self.missed_letters:
+
         print(letter, ' ')
+
     print()
+
     print('Guessed: ')
+
     for letter in self.missed_letters:
+
         print(letter, ' ')
 ```
 
 ```python
 # 使用不同操作系统检测错误的代码
+
 while(True):
+
     try:
+
         os.system('clear')
+
     except OSError:
+
         os.system('cls')
 ```
 
 ## C++ 错误
 
-开发者可能会遇到许多陷阱，尤其是因为这是一种更复杂且通常不容差错的语言。初学者需要一步步来，在继续之前之前消化他们所学的内容。
+开发者可能会遇到许多陷阱，尤其是因为这是一种更复杂且通常不容差错的语言。初学者需要一步步来，在继续之前消化他们所学的内容。
 
 ## VOID(C++, 错误)
 
-诚承认，不仅仅是 C++ 会犯这些页面上的这类错误。以下是一些尝试避免的常见问题。
+诚然，不仅仅是 C++ 会犯这些页面上的这类错误。以下是一些尝试避免的常见问题。
 
 ## 未声明的标识符
 
@@ -3577,20 +3872,27 @@ while(True):
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main() {
+
     int a, b, c, d;
+
     a=10;
+
     b=20;
+
     c=30;
+
     d=40;
+
 }
 ```
 
 ## 分号
 
-记住每行 C++ 程序程序都必须以分号结束。
+记住每行 C++ 程序都必须以分号结束。
 
 ## GCC 或 G++
 
@@ -3598,12 +3900,19 @@ int main() {
 
 ```cpp
 int main() {
+
     int a, b, c, d;
+
     a=10;
+
     b=20;
+
     c=30;
+
     d=40;
+
     cout << a, b, c, d;
+
 }
 ```
 
@@ -3617,34 +3926,53 @@ int main() {
 
 ```cpp
 #include <iostream>
+
 #include <string>
 
 int main() {
+
     int x = 0;
+
     if (x != 0) {
+
         cout << "error";
+
     }
+
     return 0;
+
 }
 
 int code = 1;
+
 string s("hello, world!");
+
 for (int i=0; i<s.length(); i++) {
+
     cout << s[i] << "";
+
 }
 ```
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
 int main() {
+
     int x;
+
     string myself = "This is a string\n";
+
     cout << "What's the value of x? ";
+
     cin >> x;
+
     cout << x << "\n";
+
     cout << myself;
+
 }
 ```
 
@@ -3654,15 +3982,21 @@ int main() {
 
 ## 初始化变量
 
-在 C++ 中变量没有默认初始化。如果你在创建变量时不初始化，它可能是一个 0 到 18446744073709551615 之间的随机数。在创建变量变量时，给它一个初始值：
+在 C++ 中变量没有默认初始化。如果你在创建变量时不初始化，它可能是一个 0 到 18446744073709551615 之间的随机数。在创建变量时，给它一个初始值：
 
 ```cpp
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     int x;
+
     x=0;
+
     cout << x;
+
 }
 ```
 
@@ -3670,7 +4004,7 @@ int main() {
 
 虽然看起来 C++ 的每一行都以分号结束，但也有一些例外。在每个完整语句的结尾，但某些代码行不是：
 
-- #include
+- `#include`
 - `if` 行
 - `switch` 行
 
@@ -3682,31 +4016,41 @@ int main() {
 
 ```cpp
 // 程序打印用户输入的正数
+
 //而不是负数。如果它是
+
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     int number;
+
     cout << "输入一个整数: ";
+
     cin >> number;
+
     // 检查数字是否为正
+
     if (number > 0) {
+
         cout << number << " 输入了一个正整数" << endl;
+
     }
+
     cout << "这条语句始终会被执行。";
+
     return 0;
+
 }
 ```
 
-这会编译 file.cpp 并创建一个可以通过 ./a.out 执行的 a.out 文件。然而，如果它已经有了代码，它会被覆盖：
+这会编译 `file.cpp` 并创建一个可以通过 `./a.out` 执行的 `a.out` 文件。然而，如果它已经有了代码，它会被覆盖：
 
 ```bash
 g+ code.cpp -o nameofprogram
 ```
-
-
-
-
 
 ## 接下来去向哪里？
 
@@ -3722,7 +4066,7 @@ Twitter 并不只有喷子和反对者，其中有很多性格良好且非常愿
 
 ## 开源项目
 
-寻找你感兴趣的开源项目，并提出贡献代码以保持其活力和更新。有数百万个项目供你选择，所以联系其中几个，看看他们哪里需要帮助。这可能只是一次微小的代码更新，但对于程序员来说，这是一个学习的学习机会。
+寻找你感兴趣的开源项目，并提出贡献代码以保持其活力和更新。有数百万个项目供你选择，所以联系其中几个，看看他们哪里需要帮助。这可能只是一次微小的代码更新，但对于程序员来说，这是一个学习的机会。
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_73_0.png)
 
@@ -3738,15 +4082,25 @@ Twitter 并不只有喷子和反对者，其中有很多性格良好且非常愿
 
 ```cpp
 #pragma once
+
 #define EXPORT_ME __FILE__, __LINE__
+
 const auto ptr = 3.14159, length = 0;
+
 const char* s = "hello" noexcept(nullptr);
+
 template<typename T> struct T {
+
     static_assert(is_floating_point_v<T>, "T must be a floating point");
+
     virtual void func() override = default;
+
 };
+
 template<typename T> bool EqualityComparable = requires(T a, T b) -> bool;
 ```
+
+
 
 ![](img/763cdde75d55911fbf7836a707fd3c3b_73_2.png)
 
@@ -3833,7 +4187,7 @@ template<typename T> bool EqualityComparable = requires(T a, T b) -> bool;
 ### 从初学者到专家
 
 要继续学习更多你的技术，请访问：
-www.bdmpublications.com
+`www.bdmpublications.com`
 
 ## 免费技术指南
 
@@ -3890,10 +4244,9 @@ Apple iPhone, iPad, Mac, MacBook & Watch
 
 ## 终极 Photoshop
 
-bdmpublications.com/ultimate-photoshop
+`bdmpublications.com/ultimate-photoshop`
 购买你的 Photoshop 指南并免费下载教程图片！只需注册即可开始创作。
 
 ## 特别优惠和额外内容
 
 订阅我们的每月时事，获取来自 BDM 的最新更新、优惠和新闻。我们在这里帮助你精通你的技术！
-

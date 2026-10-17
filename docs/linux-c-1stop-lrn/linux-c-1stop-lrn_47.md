@@ -1,1309 +1,1316 @@
+
+
 # 索引
 
-### 符号
+## 符号
 
-!号，Exclamation Mark, 布尔代数
+`!`号，Exclamation Mark，布尔代数
 
-"引号，Double Quote, 继续 Hello World
+`"`引号，Double Quote，继续 Hello World
 
-#!，Shebang, 执行脚本
+`#!`，Shebang，执行脚本
 
-#号，Pound Sign，Number Sign or Hash Sign, 数学函数
+`#`号，Pound Sign，Number Sign or Hash Sign，数学函数
 
-%号，Percent Sign, 常量
+`%`号，Percent Sign，常量
 
-&号，Ampersand, 布尔代数
+`&`号，Ampersand，布尔代数
 
-'引号，Single Quote or Apostrophe, 继续 Hello World
+`'`引号，Single Quote or Apostrophe，继续 Hello World
 
-()括号，Parenthesis, 表达式
+`()`括号，Parenthesis，表达式
 
-*号，Asterisk, 继续 Hello World
+`*`号，Asterisk，继续 Hello World
 
-.号，Period, 复合类型与结构体
+`.`号，Period，复合类型与结构体
 
-/斜线，Slash, 继续 Hello World
+`/`斜线，Slash，继续 Hello World
 
-1's Complement, 1's Complement 表示法
+`1's Complement`，1's Complement 表示法
 
-1-bit Full Adder, 为什么计算机用二进制计数
+`1-bit Full Adder`，为什么计算机用二进制计数
 
-1GL，1st Generation Programming Language, 程序和编程语言
+`1GL`，1st Generation Programming Language，程序和编程语言
 
-2's Complement, 2's Complement 表示法
+`2's Complement`，2's Complement 表示法
 
-2GL，2nd Generation Programming Language, 程序和编程语言
+`2GL`，2nd Generation Programming Language，程序和编程语言
 
-3GL，3rd Generation Programming Language, 程序和编程语言
+`3GL`，3rd Generation Programming Language，程序和编程语言
 
-4GL，4th Generation Programming Language, 程序和编程语言
+`4GL`，4th Generation Programming Language，程序和编程语言
 
-5GL，5th Generation Programming Language, 程序和编程语言
+`5GL`，5th Generation Programming Language，程序和编程语言
 
-9's Complement, 1's Complement 表示法
+`9's Complement`，1's Complement 表示法
 
-:号，Colon, goto 语句和标号
+`:`号，Colon，goto 语句和标号
 
-;号，Semicolon, 第一个程序
+`;`号，Semicolon，第一个程序
 
-<>括号，Angel Bracket, 数学函数
+`<>`括号，Angel Bracket，数学函数
 
-?号，Question Mark, 继续 Hello World
+`?`号，Question Mark，继续 Hello World
 
-[]括号，Bracket, 数组的基本概念
+`[]`括号，Bracket，数组的基本概念
 
-\斜线，Backslash, 继续 Hello World
+`\`斜线，Backslash，继续 Hello World
 
-_ 下划线，Underscore, 变量
+`_`下划线，Underscore，变量
 
-{}括号，Brace or Curly Brace, 第一个程序
+`{}`括号，Brace or Curly Brace，第一个程序
 
-|线，Pipe Sign, 布尔代数
+`|`线，Pipe Sign，布尔代数
 
-Θ-notation, 算法的时间复杂度分析
+`Θ-notation`，算法的时间复杂度分析
 
-分页符，Form Feed, 继续 Hello World
+分页符，Form Feed，继续 Hello World
 
-响铃，Alert or Bell, 继续 Hello World
+响铃，Alert or Bell，继续 Hello World
 
-回车，Carriage Return, 继续 Hello World
+回车，Carriage Return，继续 Hello World
 
-垂直制表符，Vertical Tab, 继续 Hello World
+垂直制表符，Vertical Tab，继续 Hello World
 
-换行符，Line Feed, 继续 Hello World
+换行符，Line Feed，继续 Hello World
 
-水平制表符，Horizontal Tab, 继续 Hello World
+水平制表符，Horizontal Tab，继续 Hello World
 
-空格，Blank, 第一个程序
+空格，Blank，第一个程序
 
-退格，Backspace, 继续 Hello World
+退格，Backspace，继续 Hello World
 
-### A
+## A
 
-ABI，Application Binary Interface, 函数调用
+`ABI`，Application Binary Interface，函数调用
 
-Abstraction Layer, 数据抽象
+`Abstraction Layer`，数据抽象
 
-Accumulator, while 语句
+`Accumulator`，while 语句
 
-Adapt, 数据类型标志
+`Adapt`，数据类型标志
 
-Address, 内存与地址
+`Address`，内存与地址
 
-Address Operator, 指针的基本概念
+`Address Operator`，指针的基本概念
 
-Address Space, CPU
+`Address Space`，CPU
 
-Addressing Mode, 寻址方式
+`Addressing Mode`，寻址方式
 
-Algorithm, 算法的概念
+`Algorithm`，算法的概念
 
-Alignment, 结构体和联合体
+`Alignment`，结构体和联合体
 
-Allocated Storage Duration, 变量的存储布局
+`Allocated Storage Duration`，变量的存储布局
 
-Ambiguity，歧义, 自然语言和形式语言
+`Ambiguity`，歧义，自然语言和形式语言
 
-Amortize, Memory Hierarchy
+`Amortize`，Memory Hierarchy
 
-Anchor, 引言
+`Anchor`，引言
 
-ANSI，American National Standards Institute, 继续 Hello World
+`ANSI`，American National Standards Institute，继续 Hello World
 
-Append, fopen/fclose
+`Append`，fopen/fclose
 
-Architecture，体系结构, 程序和编程语言
+`Architecture`，体系结构，程序和编程语言
 
-Argument，实参, 形参和实参
+`Argument`，实参，形参和实参
 
-Arithmetic Type, 复合类型与结构体
+`Arithmetic Type`，复合类型与结构体
 
-Array, 数组的基本概念
+`Array`，数组的基本概念
 
-ASCII，American Standard Code for Information Interchange，美国信息交换标准码, 字符类型与字符编码
+`ASCII`，American Standard Code for Information Interchange，美国信息交换标准码，字符类型与字符编码
 
-Assembler, 最简单的汇编程序
+`Assembler`，最简单的汇编程序
 
-Assembler Directive, 最简单的汇编程序
+`Assembler Directive`，最简单的汇编程序
 
-(参见 Pseudo-operation)
+（参见 `Pseudo-operation`）
 
-Assembler，汇编器, 程序和编程语言
+`Assembler`，汇编器，程序和编程语言
 
-Assembly Language，汇编语言, 程序和编程语言
+`Assembly Language`，汇编语言，程序和编程语言
 
-Assertion, 折半查找
+`Assertion`，折半查找
 
-Assignment，赋值, 赋值
+`Assignment`，赋值，赋值
 
-Associativity，结合性, 表达式
+`Associativity`，结合性，表达式
 
-Asynchronous, 信号的基本概念
+`Asynchronous`，信号的基本概念
 
-Automatic Storage Duration, 变量的存储布局
+`Automatic Storage Duration`，变量的存储布局
 
-Average Case, 算法的时间复杂度分析
+`Average Case`，算法的时间复杂度分析
 
-### B
+## B
 
-Backgroud, wait 和 waitpid 函数
+`Backgroud`，wait 和 waitpid 函数
 
-Backward Compatibility, 继续 Hello World
+`Backward Compatibility`，继续 Hello World
 
-Base Case, 递归
+`Base Case`，递归
 
-Base Pointer Addressing Mode, 寻址方式
+`Base Pointer Addressing Mode`，寻址方式
 
-Basic Multilingual Plane, Unicode 和 UTF-8
+`Basic Multilingual Plane`，Unicode 和 UTF-8
 
-Batch, Shell 的历史
+`Batch`，Shell 的历史
 
-Best Practice, 变量
+`Best Practice`，变量
 
-BFS，Breadth First Search, 队列与广度优先搜索
+`BFS`，Breadth First Search，队列与广度优先搜索
 
-Biased Exponent, 浮点数
+`Biased Exponent`，浮点数
 
-Big Endian, CPU
+`Big Endian`，CPU
 
-Big-O notation, 算法的时间复杂度分析
+`Big-O notation`，算法的时间复杂度分析
 
-Binary, 为什么计算机用二进制计数
+`Binary`，为什么计算机用二进制计数
 
-Binary File, 文件的基本概念
+`Binary File`，文件的基本概念
 
-Binary Operator，双目运算符, 布尔代数
+`Binary Operator`，双目运算符，布尔代数
 
-Binary Search, 折半查找
+`Binary Search`，折半查找
 
-Binary Tree, 二叉树的基本概念
+`Binary Tree`，二叉树的基本概念
 
-Bit-field, 结构体和联合体
+`Bit-field`，结构体和联合体
 
-Bitwise AND, 按位与、或、异或、取反运算
+`Bitwise AND`，按位与、或、异或、取反运算
 
-Bitwise NOT, 按位与、或、异或、取反运算
+`Bitwise NOT`，按位与、或、异或、取反运算
 
-Bitwise OR, 按位与、或、异或、取反运算
+`Bitwise OR`，按位与、或、异或、取反运算
 
-Bitwise Shift, 移位运算
+`Bitwise Shift`，移位运算
 
-Bitwise XOR, 按位与、或、异或、取反运算
+`Bitwise XOR`，按位与、或、异或、取反运算
 
-Bit，位, 为什么计算机用二进制计数
+`Bit`，位，为什么计算机用二进制计数
 
-Block, read/write, 总体存储布局
+`Block`，read/write，总体存储布局
 
-Block Bitmap, 总体存储布局
+`Block Bitmap`，总体存储布局
 
-Block Group, 总体存储布局
+`Block Group`，总体存储布局
 
-Block Scope, 变量的存储布局
+`Block Scope`，变量的存储布局
 
-Boilerplate, 第一个程序
+`Boilerplate`，第一个程序
 
-Boolean Algebra，布尔代数, 布尔代数
+`Boolean Algebra`，布尔代数，布尔代数
 
-Boot Block, 总体存储布局
+`Boot Block`，总体存储布局
 
-Bootloader, 设备
+`Bootloader`，设备
 
-Branch, if 语句
+`Branch`，if 语句
 
-Break, 虚拟内存管理
+`Break`，虚拟内存管理
 
-Breakpoint, 断点
+`Breakpoint`，断点
 
-BST，Binary Search Tree, 排序二叉树
+`BST`，Binary Search Tree，排序二叉树
 
-Buffer, strcpy 与 strncpy
+`Buffer`，strcpy 与 strncpy
 
-Buffer Overflow, strcpy 与 strncpy
+`Buffer Overflow`，strcpy 与 strncpy
 
-Bug, 程序的调试
+`Bug`，程序的调试
 
-Bus, CPU
+`Bus`，CPU
 
-Byte, 赋值
+`Byte`，赋值
 
-Byte Order, CPU
+`Byte Order`，CPU
 
-### C
+## C
 
-C89, 继续 Hello World
+`C89`，继续 Hello World
 
-(参见 C90)
+（参见 `C90`）
 
-(参见 ISO/IEC 9899:1990)
+（参见 `ISO/IEC 9899:1990`）
 
-C90, 继续 Hello World
+`C90`，继续 Hello World
 
-(参见 C89)
+（参见 `C89`）
 
-(参见 ISO/IEC 9899:1990)
+（参见 `ISO/IEC 9899:1990`）
 
-C99, 继续 Hello World
+`C99`，继续 Hello World
 
-(参见 ISO/IEC 9899:1999)
+（参见 `ISO/IEC 9899:1999`）
 
-Cache, Memory Hierarchy
+`Cache`，Memory Hierarchy
 
-Cache Line, Memory Hierarchy
+`Cache Line`，Memory Hierarchy
 
-Call by Value, 形参和实参
+`Call by Value`，形参和实参
 
-Callback Function, 回调函数
+`Callback Function`，回调函数
 
-Callee, 折半查找
+`Callee`，折半查找
 
-Caller, 折半查找
+`Caller`，折半查找
 
-Calling Convention, 函数调用
+`Calling Convention`，函数调用
 
-CamelCase, 标识符命名
+`CamelCase`，标识符命名
 
-Carry, 为什么计算机用二进制计数
+`Carry`，为什么计算机用二进制计数
 
-Cast Operator, 强制类型转换
+`Cast Operator`，强制类型转换
 
-Catch, 信号的基本概念
+`Catch`，信号的基本概念
 
-Ceiling, 表达式
+`Ceiling`，表达式
 
-Character, 常量
+`Character`，常量
 
-Character Class, 引言
+`Character Class`，引言
 
-Character Encoding，字符编码, 字符类型与字符编码
+`Character Encoding`，字符编码，字符类型与字符编码
 
-Child Process, 引言
+`Child Process`，引言
 
-Circular Linked List, 双向链表
+`Circular Linked List`，双向链表
 
-Circular Queue, 环形队列
+`Circular Queue`，环形队列
 
-Class Invariant, 堆栈
+`Class Invariant`，堆栈
 
-Clause, if/else 语句
+`Clause`，if/else 语句
 
-Code Path, return 语句
+`Code Path`，return 语句
 
-Coding Style，代码风格, 继续 Hello World
+`Coding Style`，代码风格，继续 Hello World
 
-Coercion, 强制类型转换
+`Coercion`，强制类型转换
 
-(参见 Implicit Conversion)
+（参见 `Implicit Conversion`）
 
-Collision, 哈希表
+`Collision`，哈希表
 
-Column-major, 多维数组
+`Column-major`，多维数组
 
-Comma Operator, 逗号运算符
+`Comma Operator`，逗号运算符
 
-Comment，注释, 第一个程序
+`Comment`，注释，第一个程序
 
-Compiler，编译器, 程序和编程语言
+`Compiler`，编译器，程序和编程语言
 
-Compile，编译, 程序和编程语言
+`Compile`，编译，程序和编程语言
 
-Composition, 表达式
+`Composition`，表达式
 
-Compound Assignment Operator, 复合赋值运算符
+`Compound Assignment Operator`，复合赋值运算符
 
-Compound Literal, 复合类型与结构体
+`Compound Literal`，复合类型与结构体
 
-Compound Type, 复合类型与结构体
+`Compound Type`，复合类型与结构体
 
-Condition Variable, Condition Variable
+`Condition Variable`，Condition Variable
 
-Conditional Operator, 条件运算符
+`Conditional Operator`，条件运算符
 
-Constant Expression, 全局变量、局部变量和作用域
+`Constant Expression`，全局变量、局部变量和作用域
 
-Constant，常量, 常量
+`Constant`，常量，常量
 
-Context，上下文, 自然语言和形式语言
+`Context`，上下文，自然语言和形式语言
 
-Contract, 折半查找
+`Contract`，折半查找
 
-Control Flow, if 语句
+`Control Flow`，if 语句
 
-Controlling Expression, if 语句
+`Controlling Expression`，if 语句
 
-Controlling Terminal, 终端的基本概念
+`Controlling Terminal`，终端的基本概念
 
-Conversion Specification, 常量
+`Conversion Specification`，常量
 
-Core Dump, 通过终端按键产生信号
+`Core Dump`，通过终端按键产生信号
 
-CPU，Central Processing Unit，中央处理器, 计算机体系结构基础
+`CPU`，Central Processing Unit，中央处理器，计算机体系结构基础
 
-(参见 Processor，处理器)
+（参见 `Processor`，处理器）
 
-Current Working Directory, fopen/fclose, 引言
+`Current Working Directory`，fopen/fclose，引言
 
-### D
+## D
 
-Daemon, 守护进程
+`Daemon`，守护进程
 
-Dangling-else, if/else 语句
+`Dangling-else`，if/else 语句
 
-Data Abstraction, 复合类型与结构体
+`Data Abstraction`，复合类型与结构体
 
-Data Block, 总体存储布局
+`Data Block`，总体存储布局
 
-Data Structure, 数据结构的概念
+`Data Structure`，数据结构的概念
 
-Data-driven Programming, 多维数组
+`Data-driven Programming`，多维数组
 
-DbC，Design by Contract, 折半查找
+`DbC`，Design by Contract，折半查找
 
-Dead Code, return 语句
+`Dead Code`，return 语句
 
-Debug，调试, 程序的调试
+`Debug`，调试，程序的调试
 
-Decimal，十进制, 为什么计算机用二进制计数
+`Decimal`，十进制，为什么计算机用二进制计数
 
-Declaration, 变量
+`Declaration`，变量
 
-Declarative, 程序和编程语言
+`Declarative`，程序和编程语言
 
-Decrement Operator, for 语句
+`Decrement Operator`，for 语句
 
-Default Argument Promotion, Integer Promotion
+`Default Argument Promotion`，Integer Promotion
 
-Definition, 变量
+`Definition`，变量
 
-Delimiter, 继续 Hello World, 分割字符串
+`Delimiter`，继续 Hello World，分割字符串
 
-dentry cache, 内核数据结构
+`dentry cache`，内核数据结构
 
-Dequeue, 队列与广度优先搜索
+`Dequeue`，队列与广度优先搜索
 
-Dereference, 指针的基本概念
+`Dereference`，指针的基本概念
 
-Designated Initializer, 复合类型与结构体
+`Designated Initializer`，复合类型与结构体
 
-Device, 设备
+`Device`，设备
 
-Device Driver, 设备
+`Device Driver`，设备
 
-DFS，Depth First Search, 深度优先搜索
+`DFS`，Depth First Search，深度优先搜索
 
-Direct Addressing Mode, 寻址方式
+`Direct Addressing Mode`，寻址方式
 
-Disassemble, 目标文件
+`Disassemble`，目标文件
 
-Divide-and-Conquer, 归并排序
+`Divide-and-Conquer`，归并排序
 
-DRAM，Dynamic RAM, Memory Hierarchy
+`DRAM`，Dynamic RAM，Memory Hierarchy
 
-Duff's Device, goto 语句和标号
+`Duff's Device`，goto 语句和标号
 
-### E
+## E
 
-Echo, 终端登录过程
+`Echo`，终端登录过程
 
-Element, 数组的基本概念
+`Element`，数组的基本概念
 
-Encapsulate，封装, if/else 语句
+`Encapsulate`，封装，if/else 语句
 
-Encapsulation, extern 和 static 关键字, fopen/fclose
+`Encapsulation`，extern 和 static 关键字，fopen/fclose
 
-Enqueue, 队列与广度优先搜索
+`Enqueue`，队列与广度优先搜索
 
-Enumeration, 数据类型标志
+`Enumeration`，数据类型标志
 
-Epoch, 数组应用实例：直方图, 本节综合练习
+`Epoch`，数组应用实例：直方图，本节综合练习
 
-Equality Operator, if 语句
+`Equality Operator`，if 语句
 
-Escape Sequence，转义序列, 继续 Hello World
+`Escape Sequence`，转义序列，继续 Hello World
 
-Exception, goto 语句和标号, MMU
+`Exception`，goto 语句和标号，MMU
 
-Executable, ELF 文件
+`Executable`，ELF 文件
 
-Exit Status, 自定义函数
+`Exit Status`，自定义函数
 
-Explicit Conversion, 强制类型转换
+`Explicit Conversion`，强制类型转换
 
-Exponent, 浮点数
+`Exponent`，浮点数
 
-Export, extern 和 static 关键字
+`Export`，extern 和 static 关键字
 
-Expression，表达式, 表达式
+`Extended ASCII`，ASCII 码
 
-Extended ASCII, ASCII 码
+`External Linkage`，变量的存储布局
 
-External Linkage, 变量的存储布局
+## F
 
-### F
+`Factorial`，递归
 
-Factorial, 递归
+`False`，if 语句
 
-False, if 语句
+`Fetch`，计算机体系结构基础
 
-Fetch, 计算机体系结构基础
+`FIFO`，First In First Out，队列与广度优先搜索
 
-FIFO，First In First Out, 队列与广度优先搜索
+`File Descriptor`，C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-File Descriptor, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`File Scope`，变量的存储布局
 
-File Scope, 变量的存储布局
+`File Status Flag`，fcntl
 
-File Status Flag, fcntl
+`Filesystem Hierarchy Standard`，形参和实参
 
-Filesystem Hierarchy Standard, 形参和实参
+`Flat`，嵌套结构体
 
-Flat, 嵌套结构体
+`Flip-flop`，Memory Hierarchy
 
-Flip-flop, Memory Hierarchy
+`Floating Point`，常量
 
-Floating Point, 常量
+`Floor`，表达式
 
-Floor, 表达式
+`Flush`，C 标准库的 I/O 缓冲区
 
-Flush, C 标准库的 I/O 缓冲区
+`Foreground`，wait 和 waitpid 函数
 
-Foreground, wait 和 waitpid 函数
+`Formal Language`，形式语言，自然语言和形式语言
 
-Formal Language，形式语言, 自然语言和形式语言
+`Format String`，格式化字符串，常量
 
-Format String，格式化字符串, 常量
+`FPU`，Floating Point Unit，浮点型
 
-FPU，Floating Point Unit, 浮点型
+`Function Call`，函数调用，数学函数
 
-Function Call，函数调用, 数学函数
+`Function Designator`，数学函数
 
-Function Designator, 数学函数
+`Function Prototype Scope`，变量的存储布局
 
-Function Prototype Scope, 变量的存储布局
+`Function Scope`，变量的存储布局
 
-Function Scope, 变量的存储布局
+`Function Type`，数学函数
 
-Function Type, 数学函数
+`Function-like Macro`，函数式宏定义
 
-Function-like Macro, 函数式宏定义
+`Functional Programming`，while 语句
 
-Functional Programming, while 语句
+`Function`，函数，数学函数
 
-Function，函数, 数学函数
+## G
 
-### G
+`Gate`，为什么计算机用二进制计数
 
-Gate, 为什么计算机用二进制计数
+`GCD`，Greatest Common Divisor，最大公约数，习题
 
-GCD，Greatest Common Divisor，最大公约数, 习题
+`GDT`，Group Descriptor Table，总体存储布局
 
-GDT，Group Descriptor Table, 总体存储布局
+`General-purpose Register`，CPU
 
-General-purpose Register, CPU
+`Generalize`，泛化，数学函数
 
-Generalize，泛化, 数学函数
+`Generics Algorithm`，回调函数
 
-Generics Algorithm, 回调函数
+`Global Variable`，全局变量、局部变量和作用域
 
-Global Variable, 全局变量、局部变量和作用域
+`Globbing`，`[文件名代换（Globbing）：* ? []](ch31s03.html#id2872839)`
 
-Globbing, [文件名代换（Globbing）：* ? []](ch31s03.html#id2872839)
+`Grammar`，语法，自然语言和形式语言
 
-Grammar，语法, 自然语言和形式语言
+`Greedy`，sed
 
-Greedy, sed
+`Group Descriptor`，总体存储布局
 
-Group Descriptor, 总体存储布局
+## H
 
-### H
+`Half Word`，CPU
 
-Half Word, CPU
+`Handle`，fopen/fclose
 
-Handle, fopen/fclose
+（参见 `Opaque Pointer`）
 
-(参见 Opaque Pointer)
+`Hard coding`，数组应用实例：统计随机数
 
-Hard coding, 数组应用实例：统计随机数
+`Hard-float`，浮点型
 
-Hard-float, 浮点型
+`Header File`，头文件，数学函数
 
-Header File，头文件, 数学函数
+`Header Guard`，头文件
 
-Header Guard, 头文件
+`Heap`，虚拟内存管理
 
-Heap, 虚拟内存管理
+`Helper Function`，函数
 
-Helper Function, 函数
+`Heredoc`，Here Document，以字节为单位的 I/O 函数
 
-Heredoc，Here Document, 以字节为单位的 I/O 函数
+`Hexadecimal`，不同进制之间的换算
 
-Hexadecimal, 不同进制之间的换算
+`High-level Language`，高级语言，程序和编程语言
 
-High-level Language，高级语言, 程序和编程语言
+`High-order Function`，回调函数
 
-High-order Function, 回调函数
+`Highlight`，高亮显示，变量
 
-Highlight，高亮显示, 变量
+`Histogram`，数组应用实例：直方图
 
-Histogram, 数组应用实例：直方图
+`Hungarian notation`，标识符命名
 
-Hungarian notation, 标识符命名
+## I
 
-### I
+`Identifier`，变量
 
-Identifier, 变量
+`IDE`，Integrated Development Environment，为什么要在 Linux 平台上学 C 语言？用 Windows 学 C 语言不好吗？
 
-IDE，Integrated Development Environment, 为什么要在 Linux 平台上学 C 语言？用 Windows 学 C 语言不好吗？
+`IEEE 1003.1`，C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-IEEE 1003.1, C 标准 I/O 库函数与 Unbuffered I/O 函数
+（参见 `POSIX.1`）
 
-(参见 POSIX.1)
+`IEEE 754`，浮点数
 
-IEEE 754, 浮点数
+`ILP32`，整型
 
-ILP32, 整型
+`Immediate`，最简单的汇编程序
 
-Immediate, 最简单的汇编程序
+`Immediate Mode`，寻址方式
 
-Immediate Mode, 寻址方式
+`Imperative`，程序和编程语言
 
-Imperative, 程序和编程语言
+`Imperative Programming`，while 语句
 
-Imperative Programming, while 语句
+`Implementation-defined`，整型
 
-Implementation-defined, 整型
+`Implicit Conversion`，强制类型转换
 
-Implicit Conversion, 强制类型转换
+（参见 `Coercion`）
 
-(参见 Coercion)
+`Implicit Declaration`，自定义函数
 
-Implicit Declaration, 自定义函数
+`Implicit Rule`，隐含规则和模式规则
 
-Implicit Rule, 隐含规则和模式规则
+`Implied`，浮点数
 
-Implied, 浮点数
+`Incremental`，增量式开发，归并排序
 
-Incremental, 增量式开发, 归并排序
+`Indent`，第一个程序
 
-Indent, 第一个程序
+`Index`，数组的基本概念
 
-Index, 数组的基本概念
+`Indexed Addressing Mode`，寻址方式
 
-Indexed Addressing Mode, 寻址方式
+`Indirect Addressing Mode`，寻址方式
 
-Indirect Addressing Mode, 寻址方式
+`Indirect Block`，数据块寻址
 
-Indirect Block, 数据块寻址
+`Indirection Operator`，指针的基本概念
 
-Indirection Operator, 指针的基本概念
+`Infinite Loop`，while 语句
 
-Infinite Loop, while 语句
+`Infinite recursion`，递归
 
-Infinite recursion, 递归
+`Initialization`，初始化，赋值
 
-Initialization，初始化, 赋值
+`Initializer`，赋值
 
-Initializer, 赋值
+`Inline Assembly`，C 内联汇编
 
-Inline Assembly, C 内联汇编
+`inline function`，内联函数
 
-inline function, 内联函数
+`inode`，总体存储布局
 
-inode, 总体存储布局
+`inode Bitmap`，总体存储布局
 
-inode Bitmap, 总体存储布局
+`inode Table`，总体存储布局
 
-inode Table, 总体存储布局
+`Input`，输入，程序和编程语言
 
-Input，输入, 程序和编程语言
+`Institute of Electrical and Electronics Engineers`，浮点数
 
-Institute of Electrical and Electronics Engineers, 浮点数
+`Instruction Decoder`，CPU
 
-Instruction Decoder, CPU
+`Instruction Set`，指令集，程序和编程语言
 
-Instruction Set，指令集, 程序和编程语言
+`Instruction`，指令，程序和编程语言
 
-Instruction，指令, 程序和编程语言
+`Integer`，常量
 
-Integer, 常量
+`Integer Conversion Rank`，Usual Arithmetic Conversion
 
-Integer Conversion Rank, Usual Arithmetic Conversion
 
-Integer Promotion, Integer Promotion
 
-Integer Type, 字符类型与字符编码
 
-Interactive, Shell 的历史
+## A
 
-Interface, 形参和实参
+`Integer Promotion`, `Integer Promotion`
 
-Internal Linkage, 变量的存储布局
+`Integer Type`, 字符类型与字符编码
 
-Internet Super-Server, 网络登录过程
+`Interactive`, Shell 的历史
 
-Interpreter，解释器, 程序和编程语言
+`Interface`, 形参和实参
 
-Interpret，解释, 程序和编程语言
+`Internal Linkage`, 变量的存储布局
 
-Interrupt, 设备
+`Internet Super-Server`, 网络登录过程
 
-Inverter, 为什么计算机用二进制计数
+`Interpreter`，解释器, 程序和编程语言
 
-IPC，InterProcess Communication, 进程间通信
+`Interpret`，解释, 程序和编程语言
 
-ISO 10646, Unicode 和 UTF-8
+`Interrupt`, 设备
 
-ISO/IEC 9899:1990, 继续 Hello World
+`Inverter`, 为什么计算机用二进制计数
 
-(参见 C89)
+`IPC`，`InterProcess Communication`, 进程间通信
 
-(参见 C90)
+`ISO 10646`, Unicode 和 UTF-8
 
-ISO/IEC 9899:1999, 继续 Hello World
+`ISO/IEC 9899:1990`, 继续 Hello World
 
-(参见 C99)
+(参见 `C89`)
 
-ISR，Interrupt Service Routine, 设备
+(参见 `C90`)
 
-Iteration, while 语句
+`ISO/IEC 9899:1999`, 继续 Hello World
 
-### J
+(参见 `C99`)
 
-Job, Session 与进程组
+`ISR`，`Interrupt Service Routine`, 设备
 
-Job Control, Session 与进程组
+`Iteration`, while 语句
 
-### K
+## J
 
-k-th Order Statistic, 习题
+`Job`, Session 与进程组
 
-Kernel, 设备
+`Job Control`, Session 与进程组
 
-Key-value Pair, 习题, 本节综合练习
+## K
 
-Keyword，关键字, 变量
+`k-th Order Statistic`, 习题
 
-(参见 Reserved Word，保留字)
+`Kernel`, 设备
 
-### L
+`Key-value Pair`, 习题, 本节综合练习
 
-Label, goto 语句和标号
+`Keyword`，关键字, 变量
 
-Leap of Faith, 递归
+(参见 `Reserved Word`，保留字)
 
-Lexical，词法, 自然语言和形式语言
+## L
 
-LIFO，Last In First Out, 堆栈
+`Label`, goto 语句和标号
 
-Line Discipline, 终端登录过程
+`Leap of Faith`, 递归
 
-Linear Function, 算法的时间复杂度分析
+`Lexical`，词法, 自然语言和形式语言
 
-Linkage, 变量的存储布局
+`LIFO`，`Last In First Out`, 堆栈
 
-Linker Script, 多目标文件的链接
+`Line Discipline`, 终端登录过程
 
-Linker，或 Link Editor, 最简单的汇编程序
+`Linear Function`, 算法的时间复杂度分析
 
-Literal，字面, 自然语言和形式语言
+`Linkage`, 变量的存储布局
 
-Little Endian, CPU
+`Linker Script`, 多目标文件的链接
 
-Load, 设备
+`Linker`，或 `Link Editor`, 最简单的汇编程序
 
-Loader, ELF 文件
+`Literal`，字面, 自然语言和形式语言
 
-Local Variable，局部变量, 全局变量、局部变量和作用域
+`Little Endian`, CPU
 
-Locality, Memory Hierarchy
+`Load`, 设备
 
-Logical AND, 布尔代数
+`Loader`, ELF 文件
 
-Logical NOT, 布尔代数
+`Local Variable`，局部变量, 全局变量、局部变量和作用域
 
-Logical OR, 布尔代数
+`Locality`, Memory Hierarchy
 
-Loop Invariant, 插入排序
+`Logical AND`, 布尔代数
 
-Loop Variable, while 语句
+`Logical NOT`, 布尔代数
 
-Loop，循环, while 语句
+`Logical OR`, 布尔代数
 
-Low Coupling, High Cohesion, 函数类型和函数指针类型
+`Loop Invariant`, 插入排序
 
-Low-level Language，低级语言, 程序和编程语言
+`Loop Variable`, while 语句
 
-LP64, 整型
+`Loop`，循环, while 语句
 
-LSB，Least Significant Bit, 不同进制之间的换算
+`Low Coupling`, `High Cohesion`, 函数类型和函数指针类型
 
-lvalue，左值, 表达式
+`Low-level Language`，低级语言, 程序和编程语言
 
-### M
+`LP64`, 整型
 
-Machine Language，机器语言, 程序和编程语言
+`LSB`，`Least Significant Bit`, 不同进制之间的换算
 
-Macro, 数组应用实例：统计随机数
+`lvalue`，左值, 表达式
 
-Maintenance, 折半查找
+## M
 
-Mantissa, 浮点数
+`Machine Language`，机器语言, 程序和编程语言
 
-(参见 Significand)
+`Macro`, 数组应用实例：统计随机数
 
-Mask, 掩码
+`Maintenance`, 折半查找
 
-Mathematical Induction, 递归
+`Mantissa`, 浮点数
 
-Member, 复合类型与结构体
+(参见 `Significand`)
 
-Memberwise Initialization, 复合类型与结构体
+`Mask`, 掩码
 
-Memory, 计算机体系结构基础
+`Mathematical Induction`, 递归
 
-Memory Hierarchy, Memory Hierarchy
+`Member`, 复合类型与结构体
 
-Memory Leak, malloc 与 free
+`Memberwise Initialization`, 复合类型与结构体
 
-Metaphor，隐喻, 自然语言和形式语言
+`Memory`, 计算机体系结构基础
 
-MMU，Memory Management Unit，内存管理单元, MMU
+`Memory Hierarchy`, Memory Hierarchy
 
-Mnemonic，助记符, 程序和编程语言
+`Memory Leak`, malloc 与 free
 
-Modulo, if/else 语句
+`Metaphor`，隐喻, 自然语言和形式语言
 
-MSB，Most Significant Bit, 不同进制之间的换算
+`MMU`，`Memory Management Unit`，内存管理单元, MMU
 
-Multi-dimensional Array, 多维数组
+`Mnemonic`，助记符, 程序和编程语言
 
-Multibyte Character, 在 Linux C 编程中使用 Unicode 和 UTF-8
+`Modulo`, if/else 语句
 
-Multiplex, 网络登录过程
+`MSB`，`Most Significant Bit`, 不同进制之间的换算
 
-Mutex，Mutual Exclusive Lock, mutex
+`Multi-dimensional Array`, 多维数组
 
-### N
+`Multibyte Character`, 在 Linux C 编程中使用 Unicode 和 UTF-8
 
-Name Space, 变量的存储布局
+`Multiplex`, 网络登录过程
 
-Natural Language，自然语言, 自然语言和形式语言
+`Mutex`，`Mutual Exclusive Lock`, mutex
 
-Necessary Condition, 全局变量、局部变量和作用域
+## N
 
-Nest，嵌套, 继续 Hello World
+`Name Space`, 变量的存储布局
 
-No Linkage, 变量的存储布局
+`Natural Language`，自然语言, 自然语言和形式语言
 
-Node, 不完全类型和复杂声明
+`Necessary Condition`, 全局变量、局部变量和作用域
 
-Non-printable Character, 字符类型与字符编码
+`Nest`，嵌套, 继续 Hello World
 
-Non-volatile Memory, Memory Hierarchy
+`No Linkage`, 变量的存储布局
 
-Nonblock I/O, open/close
+`Node`, 不完全类型和复杂声明
 
-Normalize, 浮点数
+`Non-printable Character`, 字符类型与字符编码
 
-Null Character, 字符类型与字符编码
+`Non-volatile Memory`, Memory Hierarchy
 
-Null Statement, if 语句
+`Nonblock I/O`, open/close
 
-Null-terminated String, 字符串
+`Normalize`, 浮点数
 
-### O
+`Null Character`, 字符类型与字符编码
 
-Object File, ELF 文件
+`Null Statement`, if 语句
 
-(参见 Relocatable)
+`Null-terminated String`, 字符串
 
-Object-like Macro, 函数式宏定义
+## O
 
-Octal, 不同进制之间的换算
+`Object File`, ELF 文件
 
-Offset, 以字节为单位的 I/O 函数
+(参见 `Relocatable`)
 
-Old Style C, 继续 Hello World
+`Object-like Macro`, 函数式宏定义
 
-Opaque Pointer, fopen/fclose
+`Octal`, 不同进制之间的换算
 
-(参见 Handle)
+`Offset`, 以字节为单位的 I/O 函数
 
-Operand，操作数, 表达式
+`Old Style C`, 继续 Hello World
 
-Operating System, 程序和编程语言, 设备
+`Opaque Pointer`, fopen/fclose
 
-Operator，运算符, 表达式
+(参见 `Handle`)
 
-Out-of-band, ioctl
+`Operand`，操作数, 表达式
 
-Output，输出, 程序和编程语言
+`Operating System`, 程序和编程语言, 设备
 
-Overflow, Sign and Magnitude 表示法
+`Operator`，运算符, 表达式
 
-Override, 作为交互登录 Shell 启动，或者使用--login 参数启动
+`Out-of-band`, ioctl
 
-### P
+`Output`，输出, 程序和编程语言
 
-Padding, 结构体和联合体
+`Overflow`, Sign and Magnitude 表示法
 
-Page Frame，页帧, MMU
+`Override`, 作为交互登录 Shell 启动，或者使用`--login`参数启动
 
-Page in, 虚拟内存管理
+## P
 
-Page out, 虚拟内存管理
+`Padding`, 结构体和联合体
 
-Page Table, MMU
+`Page Frame`，页帧, MMU
 
-Page，页, MMU
+`Page in`, 虚拟内存管理
 
-Paging，换页, 虚拟内存管理
+`Page out`, 虚拟内存管理
 
-Parameter，形参, 形参和实参
+`Page Table`, MMU
 
-Parent Process, 引言
+`Page`，页, MMU
 
-Parity, if/else 语句
+`Paging`，换页, 虚拟内存管理
 
-Parity Check, 异或运算的一些特性
+`Parameter`，形参, 形参和实参
 
-Parse，解析, 自然语言和形式语言
+`Parent Process`, 引言
 
-Pattern, 引言
+`Parity`, if/else 语句
 
-Pattern Rule, 隐含规则和模式规则
+`Parity Check`, 异或运算的一些特性
 
-PA，Physical Address，物理地址, MMU
+`Parse`，解析, 自然语言和形式语言
 
-PCB，Process Control Block, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Pattern`, 引言
 
-PC，Program Counter, CPU
+`Pattern Rule`, 隐含规则和模式规则
 
-Placeholder, 常量
+`PA`，`Physical Address`，物理地址, MMU
 
-Plane, Unicode 和 UTF-8
+`PCB`，`Process Control Block`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-Platform Independent，平台无关的, 程序和编程语言
+`PC`，`Program Counter`, CPU
 
-Pointer, 堆栈
+`Placeholder`, 常量
 
-Poll, read/write
+`Plane`, Unicode 和 UTF-8
 
-Pop, 堆栈
+`Platform Independent`，平台无关的, 程序和编程语言
 
-Portable，可移植, 程序和编程语言
+`Pointer`, 堆栈
 
-Position Independent Code, 编译、链接、运行
+`Poll`, read/write
 
-Positional Parameter, 位置参数和特殊变量
+`Pop`, 堆栈
 
-POSIX.1, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Portable`，可移植, 程序和编程语言
 
-(参见 IEEE 1003.1)
+`Position Independent Code`, 编译、链接、运行
 
-POSIX，Portable Operating System Interface, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Positional Parameter`, 位置参数和特殊变量
 
-Post-mortem Debug, 通过终端按键产生信号
+`POSIX.1`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-Postcondition, 折半查找
+(参见 `IEEE 1003.1`)
 
-Postfix Decrement Operator, for 语句
+`POSIX`，`Portable Operating System Interface`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-Postfix Increment Operator, for 语句
+`Post-mortem Debug`, 通过终端按键产生信号
 
-Precondition , 折半查找
+`Postcondition`, 折半查找
 
-Predecessor, 深度优先搜索
+`Postfix Decrement Operator`, for 语句
 
-Prededence，优先级, 表达式
+`Postfix Increment Operator`, for 语句
 
-Predicate, return 语句
+`Precondition`, 折半查找
 
-Prefix Increment Operator, for 语句
+`Predecessor`, 深度优先搜索
 
-Preprocess, 数组应用实例：统计随机数
+`Prededence`，优先级, 表达式
 
-Preprocessing Directive, 数组应用实例：统计随机数
+`Predicate`, return 语句
 
-Prerequisite, 基本规则
+`Prefix Increment Operator`, for 语句
 
-Primitive Type, 复合类型与结构体
+`Preprocess`, 数组应用实例：统计随机数
 
-Privileged Mode, MMU
+`Preprocessing Directive`, 数组应用实例：统计随机数
 
-Procedure Abstraction, 复合类型与结构体
+`Prerequisite`, 基本规则
 
-Process, 设备
+`Primitive Type`, 复合类型与结构体
 
-Process Descriptor, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Privileged Mode`, MMU
 
-Process Group, Session 与进程组
+`Procedure Abstraction`, 复合类型与结构体
 
-Process Group Leader, Session 与进程组
+`Process`, 设备
 
-Processor，处理器, 计算机体系结构基础
+`Process Descriptor`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-(参见 CPU，Central Processing Unit，中央处理器)
+`Process Group`, Session 与进程组
 
-Programming Language，编程语言, 程序和编程语言
+`Process Group Leader`, Session 与进程组
 
-Program，程序, 程序和编程语言
+`Processor`，处理器, 计算机体系结构基础
 
-Prototype, 自定义函数
+(参见 `CPU`，`Central Processing Unit`，中央处理器)
 
-Pseudo TTY, 网络登录过程
+`Programming Language`，编程语言, 程序和编程语言
 
-Pseudo-operation, 最简单的汇编程序
+`Program`，程序, 程序和编程语言
 
-(参见 Assembler Directive)
+`Prototype`, 自定义函数
 
-Pseudocode, 深度优先搜索
+`Pseudo TTY`, 网络登录过程
 
-Pseudorandom, 数组应用实例：统计随机数
+`Pseudo-operation`, 最简单的汇编程序
 
-PTY Master, 网络登录过程
+(参见 `Assembler Directive`)
 
-PTY Slave, 网络登录过程
+`Pseudocode`, 深度优先搜索
 
-Push, 堆栈
+`Pseudorandom`, 数组应用实例：统计随机数
 
-### Q
+`PTY Master`, 网络登录过程
 
-Quadratic Function, 算法的时间复杂度分析
+`PTY Slave`, 网络登录过程
 
-Quantifier, 引言
+`Push`, 堆栈
 
-### R
+## Q
 
-Race Condition, 竞态条件与 sigsuspend 函数
+`Quadratic Function`, 算法的时间复杂度分析
 
-Radix, 浮点数
+`Quantifier`, 引言
 
-Random Access Memory, Memory Hierarchy
+## R
 
-Rationale, 形参和实参
+`Race Condition`, 竞态条件与 sigsuspend 函数
 
-Recurrence, 归并排序
+`Radix`, 浮点数
 
-Recursive, 递归
+`Random Access Memory`, Memory Hierarchy
 
-Redundancy，冗余, 自然语言和形式语言
+`Rationale`, 形参和实参
 
-Redundant Array of Independent Disks，独立磁盘冗余阵列, 习题
+`Recurrence`, 归并排序
 
-Reference, 指针的基本概念
+`Recursive`, 递归
 
-Reference Count, 内核数据结构
+`Redundancy`，冗余, 自然语言和形式语言
 
-Register, CPU
+`Redundant Array of Independent Disks`，独立磁盘冗余阵列, 习题
 
-Register Addressing Mode, 寻址方式
+`Reference`, 指针的基本概念
 
-Regular Expression, 引言
+`Reference Count`, 内核数据结构
 
-Regular File, stdin/stdout/stderr
+`Register`, CPU
 
-Relational Operator, if 语句
+`Register Addressing Mode`, 寻址方式
 
-Release, 折半查找
+`Regular Expression`, 引言
 
-Relocatable, ELF 文件
+`Regular File`, stdin/stdout/stderr
 
-(参见 Object File)
+`Relational Operator`, if 语句
 
-Remainder, if/else 语句
+`Release`, 折半查找
 
-Reserved Word，保留字, 变量
+`Relocatable`, ELF 文件
 
-(参见 Keyword，关键字)
+(参见 `Object File`)
 
-Resource Limit, 引言
+`Remainder`, if/else 语句
 
-Return Value，返回值, 数学函数
+`Reserved Word`，保留字, 变量
 
-Reuse, 增量式开发
+(参见 `Keyword`，关键字)
 
-Ripple Carry Adder, 为什么计算机用二进制计数
+`Resource Limit`, 引言
 
-Row-major, 多维数组
+`Return Value`，返回值, 数学函数
 
-Rule, 基本规则
+`Reuse`, 增量式开发
 
-Rule of Least Surprise, 形参和实参
+`Ripple Carry Adder`, 为什么计算机用二进制计数
 
-Run-time，运行时, 程序的调试
+`Row-major`, 多维数组
 
-Running, read/write
+`Rule`, 基本规则
 
-rvalue，右值, 表达式
+`Rule of Least Surprise`, 形参和实参
 
-(参见 Value，值)
+`Run-time`，运行时, 程序的调试
 
-### S
+`Running`, read/write
 
-Scaffold, 增量式开发
+`rvalue`，右值, 表达式
 
-Scalar Type, 复合类型与结构体
+(参见 `Value`，值)
 
-Scientific Notation, 浮点数
+## S
 
-Scope, 变量的存储布局
+`Scaffold`, 增量式开发
 
-Script, Shell 的历史
+`Scalar Type`, 复合类型与结构体
 
-Section, 最简单的汇编程序
+`Scientific Notation`, 浮点数
 
-Sector, 实例剖析
+`Scope`, 变量的存储布局
 
-sed，Stream Editor, sed
+`Script`, Shell 的历史
 
-Seed, 数组应用实例：直方图
+`Section`, 最简单的汇编程序
 
-Segment, ELF 文件
+`Sector`, 实例剖析
 
-Selection Statement, if 语句
+`sed`，`Stream Editor`, sed
 
-Semantic，语义, 自然语言和形式语言
+`Seed`, 数组应用实例：直方图
 
-Semaphore, Semaphore
+`Segment`, ELF 文件
 
-Sentinel, 指向指针的指针与指针数组
+`Selection Statement`, if 语句
 
-Sequence Point, Side Effect 与 Sequence Point
+`Semantic`，语义, 自然语言和形式语言
 
-Session, Session 与进程组
+`Semaphore`, Semaphore
 
-Session Leader, Session 与进程组
+`Sentinel`, 指向指针的指针与指针数组
 
-Shared Object，or Shared Library, ELF 文件
+`Sequence Point`, Side Effect 与 Sequence Point
 
-Short-circuit, Side Effect 与 Sequence Point
+`Session`, Session 与进程组
 
-Side Effect, 数学函数
+`Session Leader`, Session 与进程组
 
-Sign and Magnitude, Sign and Magnitude 表示法
+`Shared Object`，or `Shared Library`, ELF 文件
 
-Sign Bit, Sign and Magnitude 表示法
+`Short-circuit`, Side Effect 与 Sequence Point
 
-Sign Extension, 编译器如何处理类型转换
+`Side Effect`, 数学函数
 
-Signal Mask, 信号在内核中的表示
+`Sign and Magnitude`, Sign and Magnitude 表示法
 
-Signed Number, 有符号数和无符号数
+`Sign Bit`, Sign and Magnitude 表示法
 
-Significance Loss, 浮点数
+`Sign Extension`, 编译器如何处理类型转换
 
-Significand, 浮点数
+`Signal Mask`, 信号在内核中的表示
 
-(参见 Mantissa)
+`Signed Number`, 有符号数和无符号数
 
-Single Linked List, 单链表
+`Significance Loss`, 浮点数
 
-Single Pass, 数组应用实例：直方图
+`Significand`, 浮点数
 
-Sleep, read/write
+(参见 `Mantissa`)
 
-Slot, 哈希表
+`Single Linked List`, 单链表
 
-Soft-float, 浮点型
+`Single Pass`, 数组应用实例：直方图
 
-Source Code，源代码, 程序和编程语言
+`Sleep`, read/write
 
-Sparse, 复合类型与结构体
+`Slot`, 哈希表
 
-Special Case, 单链表
+`Soft-float`, 浮点型
 
-Special-purpose Register, CPU
+`Source Code`，源代码, 程序和编程语言
 
-SQL，Structured Query Language，结构化查询语言, 程序和编程语言
+`Sparse`, 复合类型与结构体
 
-SRAM，Static RAM, Memory Hierarchy
+`Special Case`, 单链表
 
-Stack, 递归
+`Special-purpose Register`, CPU
 
-Stack Frame, 递归
+`SQL`，`Structured Query Language`，结构化查询语言, 程序和编程语言
 
-Standalone, 网络登录过程
+`SRAM`，`Static RAM`, Memory Hierarchy
 
-Standard Error, stdin/stdout/stderr
+`Stack`, 递归
 
-Standard Input, stdin/stdout/stderr
+`Stack Frame`, 递归
 
-Standard Output, stdin/stdout/stderr
+`Standalone`, 网络登录过程
 
-Startup Routine, main 函数和启动例程
+`Standard Error`, stdin/stdout/stderr
 
-Statement, 程序和编程语言
+`Standard Input`, stdin/stdout/stderr
 
-Statement Block, if 语句
+`Standard Output`, stdin/stdout/stderr
 
-Static Storage Duration, 变量的存储布局
+`Startup Routine`, main 函数和启动例程
 
-Stem, 隐含规则和模式规则
+`Statement`, 程序和编程语言
 
-Storage Class Specifier, 变量的存储布局
+`Statement Block`, if 语句
 
-Storage Duration，or Lifetime, 变量的存储布局
+`Static Storage Duration`, 变量的存储布局
 
-Stratify, 增量式开发
+`Stem`, 隐含规则和模式规则
 
-Stream, 以字节为单位的 I/O 函数
+`Storage Class Specifier`, 变量的存储布局
 
-String Literal, 继续 Hello World
+`Storage Duration`，or `Lifetime`, 变量的存储布局
 
-Structure, 自然语言和形式语言
+`Stratify`, 增量式开发
 
-Substring, 搜索字符串
+`Stream`, 以字节为单位的 I/O 函数
 
-Successor, 深度优先搜索
+`String Literal`, 继续 Hello World
 
-Sufficient Condition, 全局变量、局部变量和作用域
+`Structure`, 自然语言和形式语言
 
-Super Block, 总体存储布局
+`Substring`, 搜索字符串
 
-Surrogate Pair, Unicode 和 UTF-8
+`Successor`, 深度优先搜索
 
-SUS，Single UNIX Specification, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Sufficient Condition`, 全局变量、局部变量和作用域
 
-Swap Device，交换设备, 虚拟内存管理
+`Super Block`, 总体存储布局
 
-Symbol, 最简单的汇编程序
+`Surrogate Pair`, Unicode 和 UTF-8
 
-Syntax，语法, 自然语言和形式语言
+`SUS`，`Single UNIX Specification`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-System Call, 最简单的汇编程序
+`Swap Device`，交换设备, 虚拟内存管理
 
-### T
+`Symbol`, 最简单的汇编程序
 
-Tag, 复合类型与结构体
+`Syntax`，语法, 自然语言和形式语言
 
-Target, 基本规则
+`System Call`, 最简单的汇编程序
 
-Terminal, stdin/stdout/stderr
+## T
 
-Ternary Operator, 条件运算符
+`Tag`, 复合类型与结构体
 
-Text File, 文件的基本概念
+`Target`, 基本规则
 
-The Open Group, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`Terminal`, stdin/stdout/stderr
 
-Tight Loop, read/write
+`Ternary Operator`, 条件运算符
 
-Timing, 竞态条件与 sigsuspend 函数
+`Text File`, 文件的基本概念
 
-Token, 自然语言和形式语言
+`The Open Group`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-Translation Unit, 变量的存储布局
+`Tight Loop`, read/write
 
-Traversal, 数组的基本概念
+`Timing`, 竞态条件与 sigsuspend 函数
 
-Trigraph, 常量
+`Token`, 自然语言和形式语言
 
-True, if 语句
+`Translation Unit`, 变量的存储布局
 
-Truncate, fopen/fclose, open/close
+`Traversal`, 数组的基本概念
 
-Truncate toward Zero, 表达式
+`Trigraph`, 常量
 
-Truth Table，真值表, 布尔代数
+`True`, if 语句
 
-Type, 常量
+`Truncate`, fopen/fclose, open/close
 
-Type Cast, 强制类型转换
+`Truncate toward Zero`, 表达式
 
-Type Qualifier, 变量的存储布局
+`Truth Table`，真值表, 布尔代数
 
-### U
+`Type`, 常量
 
-UCS-2, Unicode 和 UTF-8
+`Type Cast`, 强制类型转换
 
-UCS-4, Unicode 和 UTF-8
+`Type Qualifier`, 变量的存储布局
 
-UCS，Universal Character Set, Unicode 和 UTF-8
+## U
 
-Unary Operator，单目运算符, 布尔代数
+`UCS-2`, Unicode 和 UTF-8
 
-Unbound Pointer, 指针的基本概念
+`UCS-4`, Unicode 和 UTF-8
 
-Unbuffered I/O, C 标准 I/O 库函数与 Unbuffered I/O 函数
+`UCS`，`Universal Character Set`, Unicode 和 UTF-8
 
-Undefined, 整型
+`Unary Operator`，单目运算符, 布尔代数
 
-Underflow, Sign and Magnitude 表示法
+`Unbound Pointer`, 指针的基本概念
 
-Unicode, Unicode 和 UTF-8
+`Unbuffered I/O`, C 标准 I/O 库函数与 Unbuffered I/O 函数
 
-Unicode Transformation Format, Unicode 和 UTF-8
+`Undefined`, 整型
 
-Uniform Distribution, 数组应用实例：统计随机数
+`Underflow`, Sign and Magnitude 表示法
 
-Unsigned Number, 有符号数和无符号数
+`Unicode`, Unicode 和 UTF-8
 
-Unspecified, 整型
+`Unicode Transformation Format`, Unicode 和 UTF-8
 
-Upper Bound, 算法的时间复杂度分析
+`Uniform Distribution`, 数组应用实例：统计随机数
 
-User Mode, MMU
+`Unsigned Number`, 有符号数和无符号数
 
-Usual Arithmetic Conversion, Usual Arithmetic Conversion
+`Unspecified`, 整型
 
-UTC，Coordinated Universal Time, 本节综合练习
+`Upper Bound`, 算法的时间复杂度分析
 
-UTF-16, Unicode 和 UTF-8
+`User Mode`, MMU
 
-UTF-32, Unicode 和 UTF-8
+`Usual Arithmetic Conversion`, Usual Arithmetic Conversion
 
-UTF-8, Unicode 和 UTF-8
+`UTC`，`Coordinated Universal Time`, 本节综合练习
 
-### V
+`UTF-16`, Unicode 和 UTF-8
 
-Value-result, 传入参数与传出参数
+`UTF-32`, Unicode 和 UTF-8
 
-Value，值, 变量
+`UTF-8`, Unicode 和 UTF-8
 
-(参见 rvalue，右值)
+## V
 
-Variable Argument, 形参和实参
+`Value-result`, 传入参数与传出参数
 
-Variable，变量, 变量
+`Value`，值, 变量
 
-VA，Virtual Address，虚拟地址, MMU
+(参见 `rvalue`，右值)
 
-VFS，Virtual Filesystem, VFS
+`Variable Argument`, 形参和实参
 
-Virtual Memory Management，虚拟内存管理, MMU
+`Variable`，变量, 变量
 
-Virtual Terminal, 终端登录过程
+`VA`，`Virtual Address`，虚拟地址, MMU
 
-VLA，Variable Length Array, 数组的基本概念
+`VFS`，`Virtual Filesystem`, VFS
 
-Volatile Memory, Memory Hierarchy
+`Virtual Memory Management`，虚拟内存管理, MMU
 
-Von Neumann Architecture, 计算机体系结构基础
+`Virtual Terminal`, 终端登录过程
+
+
+
+VLA，Variable Length Array，数组的基本概念
+
+Volatile Memory，Memory Hierarchy
+
+Von Neumann Architecture，计算机体系结构基础
 
 ### W
 
-Watchpoint, 观察点
+Watchpoint，观察点
 
-Whitespace, 字符类型与字符编码
+Whitespace，字符类型与字符编码
 
-Wide Character, 在 Linux C 编程中使用 Unicode 和 UTF-8
+Wide Character，在 Linux C 编程中使用 Unicode 和 UTF-8
 
-Wildcard, [文件名代换（Globbing）：* ? []](ch31s03.html#id2872839)
+Wildcard，[文件名代换（Globbing）：`*` `?` `[]`](ch31s03.html#id2872839)
 
-Wire, 为什么计算机用二进制计数
+Wire，为什么计算机用二进制计数
 
-Word, CPU
+Word，CPU
 
-Worst Case, 算法的时间复杂度分析
+Worst Case，算法的时间复杂度分析
 
 ### X
 
-XOR，eXclusive OR, 为什么计算机用二进制计数
+XOR，eXclusive OR，为什么计算机用二进制计数
 
-XSI，X/Open System Interface, C 标准 I/O 库函数与 Unbuffered I/O 函数
+XSI，X/Open System Interface，C 标准 I/O 库函数与 Unbuffered I/O 函数
 
 ### Z
 
-Zeroth, 数组的基本概念
+Zeroth，数组的基本概念
 
-Zombie, wait 和 waitpid 函数
+Zombie，`wait` 和 `waitpid` 函数

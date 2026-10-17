@@ -1,18 +1,16 @@
+
 # C++ 初学者指南：一周内一步步学习使用 C++ 编程语言
 
-
-
-![](img/image_rsrc376.jpg)
-
-
 ## 描述
+
 `C++` 是一种计算机编程语言。它的开发是为了对当时的 `C` 编程语言进行改进。`C` 是一种结构化编程语言，而 `C++` 是一种面向对象的编程语言。这意味着 `C++` 为 `C` 编程语言引入了面向对象的编程特性。面向对象编程涉及将项目视为对象，这正是 `C++` 的做法。它是一种大小敏感的编程语言，意味着它区分大写和小写字母。在 `C++` 中命名和引用/调用对象时必须格外小心，以便根据定义使用正确的大小来调用它们。
 
 要使用 `C++` 进行编程，你只需要文本编辑器和一个 `C++` 编译器。文本编辑器将为你提供一个编写 `C++` 程序的环境。建议你的 `C++` 源文件使用 `.cpp` 扩展名，以标记它们为 `C++` 文件。这是 `C++` 编译器默认使用的扩展名。`C++` 编译器的目的是处理你的 `C++` 源文件并给你结果。取决于你电脑上使用的操作系统类型，有许多方法可以将这些内容导入你的计算机。对于文本编辑器，你可以使用基础工具，如 Windows 上的 `Notepad` 以及适用于 Windows 和 Linux/Unix 的 `vim`。一旦配置好这些工具，你就可以在电脑上编写、编译并执行 `C++` 程序了。
 
-
 ## 引言
+
 `C++` 是一种通用语言，可以处理各种大型系统，也可以较小的系统。它在创建商业应用时是一种主流的语言。有大量使用 `C++` 编写的项目，包括：
+
 * 操作系统，如 `Linux` 和 `Mac OS X`
 * 游戏，如《魔兽世界》和《暗黑破坏》系列
 * 热门 `Wii`、`PlayStation` & `XBOX` 游戏
@@ -21,18 +19,17 @@
 * 浏览器（`Chrome`、`Internet Explorer` 和 `Firefox`）
 * 许多 Apple iOS 应用程序
 
-
-此列表证明了 C++ 是一种通用语言，它几乎可以完成任何事情。如果你在好奇 C++ 在明天或未来 10 年后是否仍然适用，那么答案是肯定的！C++ 结合其前身 C 语言，可以访问硬件并实现高层次的抽象。它是仅次于 C 的第三种常用语言，在 Java 之后位居第二。目前，还没有竞争对手可以取代 `C++`。
+此列表证明了 `C++` 是一种通用语言，它几乎可以完成任何事情。如果你在好奇 `C++` 在明天或未来 10 年后是否仍然适用，那么答案是肯定的！`C++` 结合其前身 `C` 语言，可以访问硬件并实现高层次的抽象。它是仅次于 `C` 的第三种常用语言，在 `Java` 之后位居第二。目前，还没有竞争对手可以取代 `C++`。
 
 ## 第 1 章：C++ 函数
 
-函数指的是一组执行相关任务的语句。C++ 中的每个程序都至少有一个函数，即 `main()` 函数，并且在程序中可以定义更多函数。一个 C++ 程序可以被细分为一组函数。你如何细分代码取决于你个人，但应该以这种方式进行，使得每个函数都执行某个特定的任务。当这些代码分组在一起并命名后，你就可以很容易地通过函数名反复调用它来重用这些代码。同样，代码将得到优化，因为你不需要再次编写它。
+函数指的是一组执行相关任务的语句。`C++` 中的每个程序都至少有一个函数，即 `main()` 函数，并且在程序中可以定义更多函数。一个 `C++` 程序可以被细分为一组函数。你如何细分代码取决于你个人，但应该以这种方式进行，使得每个函数都执行某个特定的任务。当这些代码分组在一起并命名后，你就可以很容易地通过函数名反复调用它来重用这些代码。同样，代码将得到优化，因为你不需要再次编写它。
 
 假设你的目标是检查三个数字 150、230 和 450，以判断它们是偶数还是奇数。如果不使用函数，你每次都必须为偶数编写逻辑。这将导致代码的重复。然而，通过使用函数，你只需要编写一次逻辑并不断调用它。
 
 ### 函数声明
 
-函数声明的作用是告诉 C++ 编译器函数的名称、返回类型和参数。在 C++ 中定义一个函数，我们使用以下语法：
+函数声明的作用是告诉 `C++` 编译器函数的名称、返回类型和参数。在 `C++` 中定义一个函数，我们使用以下语法：
 
 ```cpp
 returnType functionName( dataType parameter...)    
@@ -94,7 +91,7 @@ int main () {
 
 ### 按值传递
 
-这种机制涉及将实际值复制到函数的形式参数。函数内部对参数的任何更改对参数都没有影响。这是 C++ 中使用的默认。这意味着函数中的代码不能改变参数。让我们创建一个简单的示例来演示这一点：
+这种机制涉及将实际值复制到函数的形式参数。函数内部对参数的任何更改对参数都没有影响。这是 `C++` 中使用的默认。这意味着函数中的代码不能改变参数。让我们创建一个简单的示例来演示这一点：
 
 ```cpp
 #include <iostream>
@@ -158,10 +155,8 @@ void interchange( int * a, int * b) {
 ### 算术运算符
 
 这些是用于处理数字的运算符。最常用的运算符所示如下。
+
 算术运算符
-
-
-
 
 | 运算符 | 操作 |
 | :--- | :--- |
@@ -193,16 +188,24 @@ return 0;
 ```
 
 使用此程序，输出如下：
+
 The addition of the two operands is  13
+
 The subtraction of the two operands is  7
+
 The multiplication of the two operands is  30
+
 The division of the two operands is  3
+
 The remainder after division of the two operands is  1
+
 Incrementing operand one by one  10
+
 Decrementing operand two by one  3
 
 ### 关系运算符
-这些是用于根据操作数的值来确定条件的值的运算符。C++ 中可能的关系运算符如下。
+
+这些是用于根据操作数的值来确定条件的值的运算符。`C++` 中可能的关系运算符如下。
 
 | 运算符 | 操作 |
 | :--- | :--- |
@@ -232,15 +235,22 @@ return 0;
 ```
 
 使用此程序，输出如下：
+
 Is i equal to j = 0
+
 Is i not equal to j = 1
+
 Is i greater than j = 1
+
 Is i less than j = 0
+
 Is i greater than or equal j = 1
+
 Is i less than or equal j = 0
 
 ### 逻辑运算符
-这些是用于根据操作数的值（操作数值为布尔值）来确定条件的值的运算符。C++ 中可能的逻辑运算符如下。
+
+这些是用于根据操作数的值（操作数值为布尔值）来确定条件的值的运算符。`C++` 中可能的逻辑运算符如下。
 
 | 运算符 | 操作 |
 | :--- | :--- |
@@ -251,6 +261,7 @@ Is i less than or equal j = 0
 下面是根据操作数值对应的 AND 运算符逻辑运算符表。
 
 ### 关系运算符 - AND
+
 | 操作数 A | 操作数 B |
 | :--- | :--- |
 | True | True |
@@ -277,20 +288,29 @@ return 0;
 ```
 
 使用此程序，输出如下：
+
 i AND j = 1
+
 i AND k = 0
+
 k AND i = 0
+
 k AND k = 0
 
 下面是根据操作数值对应的 OR 运算符逻辑运算符表。
 
 ### 关系运算符 - OR
+
 | 操作数 A | 操作数 B |
 | :--- | :--- |
 | True | True |
 | True | False |
-| False | True |
-| False | False |
+
+
+
+| `False` | `True` |
+
+| `False` | `False` |
 
 以下程序用于演示如何将 OR 运算符逻辑运算符。
 
@@ -309,21 +329,29 @@ std::cout << "k AND k = " << (k && k) << std::endl;
 return 0;
 }
 ```
-*(注：源文本在 OR 运算符示例中包含 `&&`；根据指令保留了该逻辑，未修改语义).*
+
+(注：源文本在 OR 运算符示例中包含`&&`；根据指令保留了该逻辑，未修改语义).
 
 使用此程序，输出如下：
+
+```text
 i AND j = 1
 i AND k = 0
 k AND i = 0
 k AND k = 0
+```
 
 下面是根据操作数值对应的 NOT 运算符逻辑运算符表。
 
 ### 关系运算符 - NOT
+
 | 操作数 A | 结果 |
+
 | :--- | :--- |
-| True | 0 |
-| False | 1 |
+
+| `True` | `0` |
+
+| `False` | `1` |
 
 以下程序用于演示如何将 NOT 运算符逻辑运算符。
 
@@ -341,19 +369,30 @@ return 0;
 ```
 
 使用此程序，输出如下：
+
+```text
 NOT i = 0
 NOT j = 1
+```
 
 ### 赋值运算符
+
 这些是用于简化赋值操作的运算符。C++ 中可能的赋值运算符如下。
 
 | 运算符 | 操作 |
+
 | :--- | :--- |
+
 | `=` | 用于给操作数赋值。 |
+
 | `+=` | 一步完成加法和赋值操作。 |
+
 | `-=` | 一步完成减法和赋值操作。 |
+
 | `*=` | 一步完成乘法和赋值操作。 |
+
 | `/=` | 一步完成除法和赋值操作。 |
+
 | `%=` | 一步完成取模和赋值操作。 |
 
 现在让我们详细查看如何实现这些运算符。以下程序用于演示如何使用赋值运算符。
@@ -377,29 +416,35 @@ return 0;
 ```
 
 使用此程序，输出如下：
+
+```text
 The value of i+j is 15
 The value of i+=j is 15
 The value of i-=j is 5
 The value of i*=j is 50
 The value of i/=j is 5
 The value of i%=j is 5
+```
 
 ### 位运算运算符
+
 这些是用于对操作数进行位操作的运算符。C++ 中可能的位运算运算符如下。
 
 | 运算符 | 操作 |
+
 | :--- | :--- |
+
 | `&` | 如果两个操作数的对应位都为 1，则结果对应位为 1 |
+
 | `|` | 如果任意一个操作数的对应位为 1，则结果对应位即为 1 |
+
 | `^` | 如果仅有一个操作数的对应位为 1，则结果对应位为 1 |
+
 | `<<` | 将左操作数的值向左移动右操作数指定的位数 |
+
 | `>>` | 将左操作数的值向右移动右操作数指定的位数 |
 
 以下程序用于演示如何使用位运算运算符。
-
-
-
-
 
 ```cpp
 #include <iostream>
@@ -419,49 +464,64 @@ int main() {
 ```
 
 通过这个程序，输出结果如下：
+
+```text
 Showcasing the & bit operator 0
 Showcasing the | bit operator 15
 Showcasing the ^ bit operator 15
 Showcasing the << bit operator 20
 Showcasing the >> bit operator 1
+```
 
 ## 第 3 章：存储类
 
 在给定的 C++ 程序中，变量函数的作用域和生命周期取决于其所定义的存储类。这些限定符被放置在它们所修改的类型之前。在 C++ 中，可以使用以下存储类。
 
 * `auto`
+
 * `static`
+
 * `register`
+
 * `mutable`
+
 * `extern`
 
 ### auto 存储类
 
-对于所有的局部变量，默认的存储类是 `auto` 存储类。
+对于所有的局部变量，默认的存储类是`auto`存储类。
+
 示例：
+
 ```cpp
 int mount;
 auto int month;
 ```
-在上面的示例中，定义了两个变量，它们的存储类是相同的。`auto` 只能用于局部变量。
+
+在上面的示例中，定义了两个变量，它们的存储类是相同的。`auto`只能用于局部变量。
 
 ### register 存储类
 
-如果你希望定义局部变量并将它们存储在 RAM 而不是寄存器中，你可以使用 `register` 存储类。这意味着变量的大小将等于寄存器的最大 own。该变量不能对其使用 `&` 运算符，因为没有对应的内存地址。
+如果你希望定义局部变量并将它们存储在 RAM 而不是寄存器中，你可以使用`register`存储类。这意味着变量的大小将等于寄存器的最大 own。该变量不能对其使用`&`运算符，因为没有对应的内存地址。
+
 语法：
+
 ```cpp
 register int miles;
 ```
-你应该只对需要快速访问的变量（如计数器）使用这些寄存器。请记住，当你定义 `register` 时，并不意味着该变量会被存储在该寄存器中。变量可能会根据实现和硬件限制被存储在寄存器中。
+
+你应该只对需要快速访问的变量（如计数器）使用这些寄存器。请记住，当你定义`register`时，并不意味着该变量会被存储在该寄存器中。变量可能会根据实现和硬件限制被存储在寄存器中。
 
 ### static 存储类
 
-与其每次进入和离开作用域都创建和销毁局部变量，`static` 存储类会告诉编译器在其生命周期内存储局部变量。因此，如果你希望局部变量在函数调用期间保持其值，你应该将这些局部变量设为 `static`。
+与其每次进入和离开作用域都创建和销毁局部变量，`static`存储类会告诉编译器在其生命周期内存储局部变量。因此，如果你希望局部变量在函数调用期间保持其值，你应该将这些局部变量设为`static`。
 
-`static` 修饰符不仅限于局部变量，它也可以应用于全局变量。之后，该变量的作用域将被限制在声明该变量的文件中。
+`static`修饰符不仅限于局部变量，它也可以应用于全局变量。之后，该变量的作用域将被限制在声明该变量的文件中。
 
-当你在类的数据成员上使用 `static` 时，该类的所有对象将共享该成员的唯一一个拷贝。这里是一个示例。
+当你在类的数据成员上使用`static`时，该类的所有对象将共享该成员的唯一一个拷贝。这里是一个示例。
+
 示例：
+
 ```cpp
 #include <iostream>
 // 函数声明
@@ -481,7 +541,10 @@ void func( void ) {
     std::cout << " and count is " << count << std::endl;
 }
 ```
+
 编译并执行上述代码时，将产生以下输出。
+
+```text
 i is 6 and count is 9
 i is 7 and count is 8
 i is 8 and count is 7
@@ -492,15 +555,18 @@ i is 12 and count is 3
 i is 13 and count is 2
 i is 14 and count is 1
 i is 15 and count is 0
+```
 
 ### extern 存储类
 
-有一些全局变量对所有程序文件都是可见。`extern` 存储类可以用于提供这些程序文件可见的全局变量引用。你不能使用 `extern` 初始化变量，因为它只会指向一个预定义的存储位置的可讨论名称。
+有一些全局变量对所有程序文件都是可见。`extern`存储类可以用于提供这些程序文件可见的全局变量引用。你不能使用`extern`初始化变量，因为它只会指向一个预定义的存储位置的可讨论名称。
 
-当你有多个文件并且定义了一个其他文件可以使用的函数或全局变量时，在另一个文件中使用 `extern` 留在提供该函数或变量的引用。简单来说，我们使用 `extern` 来声明存在于另一个文件的函数或全局变量。
+当你有多个文件并且定义了一个其他文件可以使用的函数或全局变量时，在另一个文件中使用`extern`留在提供该函数或变量的引用。简单来说，我们使用`extern`来声明存在于另一个文件的函数或全局变量。
 
-当多个文件共享相同的函数或全局变量时，使用了 `extern` 修饰符。这里有一个示例程序。
+当多个文件共享相同的函数或全局变量时，使用了`extern`修饰符。这里有一个示例程序。
+
 第一个文件：`main.cpp`
+
 ```cpp
 #include <iostream>
 int count ;
@@ -510,7 +576,9 @@ main() {
     write_extern();
 }
 ```
+
 第二个文件：`support.cpp`
+
 ```cpp
 #include <iostream>
 extern int count;
@@ -518,75 +586,117 @@ void write_extern(void) {
     std::cout << "Count is " << count << std::endl;
 }
 ```
-在这里，程序中的 `count` 使用 `extern` 关键字在另一个文件中声明。现在，如果你像下文所示组合这两个文件：
+
+在这里，程序中的`count`使用`extern`关键字在另一个文件中声明。现在，如果你像下文所示组合这两个文件：
+
 `g++ main.cpp support.cpp -o write`
+
 将生成一个正确的可执行程序。现在尝试执行它并检查结果如下：
+
 `./write`
 
 ## 第 4 章：标识符
 
-现在让我们程序中的标识符。这些标识符用于识别多个事物，例如类、模块、函数和块内的变量。标识符是一组你可以命名程序或文件的字母和数字，它们必须以字母开头，之后可以包含任何字母或数字。除了句子中可能看到的标点符号外，不允许其他字符作为标识符。你不会看到如 `@`、`&`、`%` 或 `$` 等字符，且编程是对大小敏感的。这意味着 `YokoOno` 与 `Yokoono`、`yokoOno` 和 `yokoono` 不同。确保你只在大程序中使用大写的字母。虽然几乎任何内容都可以标识符，但某些内容是 C++ 的保留关键字，不能作为标识符使用。这些词如下。
+现在让我们程序中的标识符。这些标识符用于识别多个事物，例如类、模块、函数和块内的变量。标识符是一组你可以命名程序或文件的字母和数字，它们必须以字母开头，之后可以包含任何字母或数字。除了句子中可能看到的标点符号外，不允许其他字符作为标识符。你不会看到如`@`、`&`、`%`或`$`等字符，且编程是对大小敏感的。这意味着`YokoOno`与`Yokoono`、`yokoOno`和`yokoono`不同。确保你只在大程序中使用大写的字母。虽然几乎任何内容都可以标识符，但某些内容是 C++ 的保留关键字，不能作为标识符使用。这些词如下。
 
 | asm | | |
+
 |---|---|---|
+
 | break | bool | auto |
+
 | char | catch | case |
+
 | const cast | const | class |
+
 | delete | default | continue |
+
 | dynamic cast | double | do |
+
 | explicit | enum | else |
+
 | false | extern | export |
+
 | friend | for | float |
+
 | inline | if | goto |
+
 | mutable | long | int |
+
 | protected | private | namespace |
+
 | reinterpret cast | register | public |
+
 | signed | short | return |
+
 | static cast | static | sizeof |
+
 | template | switch | struct |
+
 | true | throw | this |
+
 | typeid | typedef | try |
+
 | unsigned | union | typename |
+
 | void | virtual | using |
+
 | while | wchar t | volatile |
 
-
-
-
-对于标识符来说，其他一切都是允许的。将标识符想象成用户名和密码。可以随机组合它们，但要确保它们是功能性的**。
+对于标识符来说，其他一切都是允许的。将标识符想象成用户名和密码。可以随机组合它们，但要确保它们是功能性的。
 
 ### 三元组 (Trigraphs)
+
 三元组是由三个字符组成的序列，代表其中一个字符。你会注意到这些符号，因为它们开头会有两个问号。使用三个字符来代替一个字符似乎有点多此一举，但背后的原因是防止你将程序代码与字符本身的含义混淆，因为很多字符是非常相似的。以下是一些常用的三元组示例，以向你说明我们的意思：
 
 - `??=` : #
+
 - `??/` : `\`
+
 - `\??'` : `^`
+
 - `??(` : `[`
+
 - `[??)` : `]`
+
 - `]??!` : `|`
+
 - `??<` : `{`
+
 - `{??>` : `}`
+
 - `??-` : ~
 
 由于三元组的误导性，并不是所有的编译器都支持三元组，大多数人都会避开它们。然而人们发现，当你背下三元组后，在函数中按错符号导致出错的概率就会降低。
 
 ### 空格符 (Whitespace)
+
 接下来是空白符。这是程序中的空行。有时这些行包含注释，被称为空行。编译器会完全忽略它们。空白符描述了空格、换行、制表符、字符和注释。它仅仅被用于让你的程序看起来更有组织、更易读。在变量/标识符和语句之间至少应该有一行空白符。
 
 ### 验 (QUIZ)
+
 你以为你可以在不接受测试的情况下就轻松翻过这本书吗？也不许作弊！仅仅因为你可以偷看答案，并不意味着你应该这样做。你应该像对待普通测试一样对待它，以真正测试你的知识，以便判断你是否需要回去重读某些内容。这是一个简短的测试，所以你没问题的。
 
 1. 什么是空白符？
+
 2. 填充`___ <<x=y+1_>>`
+
 3. 什么是三元组？
+
 4. 谁发明了带类的 C 语言 (C with Classes)？
+
 5. 大多数函数使用的头文件是什么？
 
 **答案**
+
 1. 编译器忽略的空格或注释
+
 2. `Cout <<x=y+1;>>`
+
 3. 代表单个字符的三个字符序列
+
 4. 比雅恩·斯特斯特鲁普 (Bjarne Strousup)
+
 5. `<iostream>`
 
 ## 第 5 章：C++ 中的决策控制
@@ -598,7 +708,8 @@ void write_extern(void) {
 有几种不同类型的决策控制语句可以使用。例如，你可以选择一种只允许你获得一个答案并称之为正确的语句。有些条件语句会根据用户输入的各种答案给出结果。或者你也可以得到一个给出一个列表的语句，比如项目菜单，让用户从中选择。
 
 ### switch 语句 (Switch statements)
-你可以使用的第一种条件语句是 `switch` 语句。这些语句对你很有帮助，因为它们允许你检查变量的值是否与代码中列出的其他值或其他情况（cases）相等。你在这里检查的变量将由语句与各种情况进行比较。你可以使用这种创建其中一个 `switch` 语句的良好语法示例如下：
+
+你可以使用的第一种条件语句是`switch`语句。这些语句对你很有帮助，因为它们允许你检查变量的值是否与代码中列出的其他值或其他情况（cases）相等。你在这里检查的变量将由语句与各种情况进行比较。你可以使用这种创建其中一个`switch`语句的良好语法示例如下：
 
 ```cpp
 Switch(expression){
@@ -610,34 +721,39 @@ Switch(expression){
 }
 ```
 
-在使用 `switch` 语句时，你必须遵循一些规则才能让它们在代码中正常工作。首先，你与 `switch` 语句一起使用的表达式应该是枚举类型或整类类型。此外，它也可以属于一个具有转换函数的类。好消息是，当你使用 C++ 时，向这种语法中添加多少个此类 `case` 语句都没有限制，因此你可以根据代码需要将其写长或短。这里需要记住的重要点是，你需要在每个想要使用的值后面添加一个冒号作为值。
+在使用`switch`语句时，你必须遵循一些规则才能让它们在代码中正常工作。首先，你与`switch`语句一起使用的表达式应该是枚举类型或整类类型。此外，它也可以属于一个具有转换函数的类。好消息是，当你使用 C++ 时，向这种语法中添加多少个此类`case`语句都没有限制，因此你可以根据代码需要将其写长或短。这里需要记住的重要点是，你需要在每个想要使用的值后面添加一个冒号作为值。
 
-一旦变量找到了与其相等的值，它就会一直运行，直到找到你写的跳出语句的方法。当系统最终找到这个 `break` 语句时，`switch` 将停止它当前正在执行的操作。然后，控制流将传递到代码的下一个部分。你不需要在 cases 中添加 `break` 语句。如果你没有这些 `break` 语句，你的控制流将自动传递到下一个部分。
+一旦变量找到了与其相等的值，它就会一直运行，直到找到你写的跳出语句的方法。当系统最终找到这个`break`语句时，`switch`将停止它当前正在执行的操作。然后，控制流将传递到代码的下一个部分。你不需要在 cases 中添加`break`语句。如果你没有这些`break`语句，你的控制流将自动传递到下一个部分。
 
 ### ‘if’ 语句 (The ‘if’ statements)
-你可以使用的下一种条件语句被称为 `if` 语句。在条件语句中你可以创建的最基础的内容之一就是 `if` 语句。这些基于真或假的陈述。如果系统判定输入匹配你设置的条件，则为真，程序将运行你添加的部分。例如，如果你设置让系统询问 2 + 2 是多少，而用户输入了正确答案 4，那么这将被视为真，你所选择的消息，比如“正确！”将显示在屏幕上。
+
+
+
+你可以使用的下一种条件语句被称为`if`语句。在条件语句中你可以创建的最基础的内容之一就是`if`语句。这些基于真或假的陈述。如果系统判定输入匹配你设置的条件，则为真，程序将运行你添加的部分。例如，如果你设置让系统询问 2 + 2 是多少，而用户输入了正确答案 4，那么这将被视为真，你所选择的消息，比如“正确！”将显示在屏幕上。
 
 每当你让用户输入某些信息时，如果他们添加的信息符合或满足你的条件，它将继续显示你添加到代码中的语句或其他内容。但如果用户输入了错误的答案会发生什么？如果用户输入 5 作为问题“2 + 2 是多少？”的答案，那么它将无法满足你设置的条件，程序会将此视为假。
 
-由于 `if` 语句是条件语句最基本的形式之一，你会发现它无法很好地处理假答案。
+由于`if`语句是条件语句最基本的形式之一，你会发现它无法很好地处理假答案。
 
-### ‘if else’ 语句 (The ‘if’ else statements)
-当用户最终输入错误答案时，你会遇到各种问题，这就是 `if-else` 语句派上用场的地方。`if-else` 语句可以用于各种情况。它不仅允许用户输入不满足你条件的答案，而且在某些情况下你可能希望让用户从几个不同的选项中进行选择。为了创建一个 `if-else` 语句，其语法非常简单如下：
+## `if else` 语句
+
+当用户最终输入错误答案时，你会遇到各种问题，这就是`if-else`语句派上用场的地方。`if-else`语句可以用于各种情况。它不仅允许用户输入不满足你条件的答案，而且在某些情况下你可能希望让用户从几个不同的选项中进行选择。为了创建一个`if-else`语句，其语法非常简单如下：
 
 ```cpp
 if(expression){
     statement(s) // 如果表达式为真则执行
-}Else{
+}else{
     statement(s) // 如果表达式为假则执行
 }
 ```
 
-### ‘elif’ 语句 (The ‘elif’ statements)
-你可以使用的另一种选项是 `elif` 语句。这些语句允许你将事情提升到一个层次。这允许你走得更远并让你的程序更好。这些 `elif` 语句将列出你希望为用户提供的选项。把它想象成游戏中的菜单。你可以在菜单上列出几个不同的项目，让用户选择他们想要的哪一个。这是一个非常棒的选项，因为你可以向正在编写的代码中添加很多功能。
+## `elif` 语句
 
-## 第 6 章：使用 switch 语句
+你可以使用的另一种选项是`elif`语句。这些语句允许你将事情提升到一个层次。这允许你走得更远并让你的程序更好。这些`elif`语句将列出你希望为用户提供的选项。把它想象成游戏中的菜单。你可以在菜单上列出几个不同的项目，让用户选择他们想要的哪一个。这是一个非常棒的选项，因为你可以向正在编写的代码中添加很多功能。
 
-作为 C++ 初学者，使用 `switch` 选择语句是你需要学习的最后几件事之一。`switch` 语句通过检查常量表达式的值并运行一组语句或 cases 来工作。cases 然后使用 `break` 语句关闭。`switch` 选择语句 own 与 `if-else` 语句非常相似。主要区别是 `switch` 语句仅限于常量。此外，你可以轻松使用 `switch` 语句创建多种可能性。这里是一个典型的 `switch` 选择语句示例：
+# 第 6 章：使用 switch 语句
+
+作为 C++ 初学者，使用`switch`选择语句是你需要学习的最后几件事之一。`switch`语句通过检查常量表达式的值并运行一组语句或 cases 来工作。cases 然后使用`break`语句关闭。`switch`选择语句与`if-else`语句非常相似。主要区别是`switch`语句仅限于常量。此外，你可以轻松使用`switch`语句创建多种可能性。这里是一个典型的`switch`选择语句示例：
 
 ```cpp
 switch (n) // 在此示例中，检查 n 的值
@@ -654,7 +770,8 @@ default:
     cout << "无法确定 N 的值";
 ```
 
-### 活动：使用语句的颜色程序 (Activity: Color Program using Statements)
+## 活动：使用语句的颜色程序
+
 如果你不知道如何应用语句，那么知道语句的功能是没有意义的。为了确保你掌握所学内容，你需要看到这些语句的运行。下面是一个在循环中使用语句的示例程序：
 
 ```cpp
@@ -694,14 +811,17 @@ int main () {
 }
 ```
 
-**部分 1 – 在程序中初始化**：第一部分包含了你的标准初始化。注意 `char` 和 `bool` 数据类型被使用了，因为它们符合大多数程序的需求。
-**部分 2 – 检查有效答案**：记住，当表达式为真时，`while` 循环内部的语句将执行。一旦用户提供了有效输入，该值将变为 `false`。
-**部分 3 – 检查小写输入**：在此部分，小写输入转换为大写。例如，当用户输入 `y` 时，保存的是大写的 `Y`。在 switch 中声明 cases 时不能使用逻辑运算符。
-**部分 4 – switch 语句**：最后，部分 4 包含一个根据用户输入执行不同 cases 的 `switch` 语句。再次记住，cases 用 `break` 语句关闭。确保包含一条语句将 `valid` 的布尔值改为 `false`，否则 `while` 循环将无限重复。
+**部分 1 – 在程序中初始化**：第一部分包含了你的标准初始化。注意`char`和`bool`数据类型被使用了，因为它们符合大多数程序的需求。
 
-## 第 7 章：文件的读写
+**部分 2 – 检查有效答案**：记住，当表达式为真时，`while`循环内部的语句将执行。一旦用户提供了有效输入，该值将变为`false`。
 
-这个被称为 `file/o`（文件输入输出）的概念是编程中最重要的理解内容之一。事实上，在正式编程课程的第一和第二学期中，他们会详细讨论如何输入和输出文件。所以，让我们简短讨论一下——输入流和输出流。
+**部分 3 – 检查小写输入**：在此部分，小写输入转换为大写。例如，当用户输入`y`时，保存的是大写的`Y`。在 switch 中声明 cases 时不能使用逻辑运算符。
+
+**部分 4 – switch 语句**：最后，部分 4 包含一个根据用户输入执行不同 cases 的`switch`语句。再次记住，cases 用`break`语句关闭。确保包含一条语句将`valid`的布尔值改为`false`，否则`while`循环将无限重复。
+
+# 第 7 章：文件的读写
+
+这个被称为`file/o`（文件输入输出）的概念是编程中最重要的理解内容之一。事实上，在正式编程课程的第一和第二学期中，他们会详细讨论如何输入和输出文件。所以，让我们简短讨论一下——输入流和输出流。
 
 然而，输入输出流只是一个模糊的概念；与其任何其他相比，它们更多是数据流思想的象征。例如，输入流表示数据正在被引入程序。相反，输出流表示数据正在从程序流出。这就是输入输出流的全部含义。
 
@@ -720,7 +840,7 @@ int main() {
 }
 ```
 
-你将需要的第一件事是打开文件。为了这一点，你可以仅仅实例化输出流，简称为 `ofstream`。如下：
+你将需要的第一件事是打开文件。为了这一点，你可以仅仅实例化输出流，简称为`ofstream`。如下：
 
 ```cpp
 int main() {
@@ -728,7 +848,7 @@ int main() {
 }
 ```
 
-接下来我们需要做的是打开一个文件。注意 `ifstream`、`ofstream` 和 `fstream` 都有独立的 `open` 方法。然而，这些参数的用法超出了本书的范围。现在我们打开了一个名为 `numbers.txt` 的文件：
+接下来我们需要做的是打开一个文件。注意`ifstream`、`ofstream`和`fstream`都有独立的`open`方法。然而，这些参数的用法超出了本书的范围。现在我们打开了一个名为`numbers.txt`的文件：
 
 ```cpp
 int main() {
@@ -737,7 +857,7 @@ int main() {
 }
 ```
 
-由于我们有一个 `ofstream` 文件（默认是 `ios::out`），我们可以向文件中写入文本。现在我们打开了这个文件流，这非常直观，不需要担心。我们需要测试文件是否打开。我们可以通过 `if` 语句完成这一点：
+由于我们有一个`ofstream`文件（默认是`ios::out`），我们可以向文件中写入文本。现在我们打开了这个文件流，这非常直观，不需要担心。我们需要测试文件是否打开。我们可以通过`if`语句完成这一点：
 
 ```cpp
 #include <iostream>
@@ -755,7 +875,7 @@ int main() {
 }
 ```
 
-然而，还有一件事我们需要——在完成后关闭文件。这确保了文件不会损坏。这是一个良好的习惯。你可以在 `if` 语句中这样做如下：
+然而，还有一件事我们需要——在完成后关闭文件。这确保了文件不会损坏。这是一个良好的习惯。你可以在`if`语句中这样做如下：
 
 ```cpp
 if (my_file.is_open()) {
@@ -763,7 +883,7 @@ if (my_file.is_open()) {
 }
 ```
 
-最后，我们想要做的是一种非常基础的异常处理。当文件没有打开时，该怎么办？这是一个很好的开始的地方。让我们定义一个 `else` 语句：
+最后，我们想要做的是一种非常基础的异常处理。当文件没有打开时，该怎么办？这是一个很好的开始的地方。让我们定义一个`else`语句：
 
 ```cpp
 #include <iostream>
@@ -780,30 +900,33 @@ int main() {
 }
 ```
 
-## 第 8 章：更多函数与数据类型
+# 第 8 章：更多函数与数据类型
 
-在 `main()` 函数之外也可以创建单独的函数。然而，不要忘记只有 `main()` 在运行程序时会被自动调用。使用单独函数的一种简单方法是通过它们传递参数并返回一个值。
+在`main()`函数之外也可以创建单独的函数。然而，不要忘记只有`main()`在运行程序时会被自动调用。使用单独函数的一种简单方法是通过它们传递参数并返回一个值。
 
-### 调用函数 (Calling Functions)
-这是一个从 `main` 函数中调用其他函数的简单示例：
+## 调用函数
 
-例如，如果你想声明一个可以包含共 10 个整数值的数组，你可以使用语法 `int myarray [10];`。这就是为什么使用了字符数组。为了声明存储字符数据的数组，只需使用语法 `char myarray [y];`。在这种情况下，值 `y` 代表 `myarray` 中可以存储的单个字符数量。
+这是一个从`main`函数中调用其他函数的简单示例：
 
-### 数组 (Arrays)
+例如，如果你想声明一个可以包含共 10 个整数值的数组，你可以使用语法`int myarray [10];`。这就是为什么使用了字符数组。为了声明存储字符数据的数组，只需使用语法`char myarray [y];`。在这种情况下，值`y`代表`myarray`中可以存储的单个字符数量。
+
+## 数组
+
 数组可以用于保存大量数据同时保持功能结构。在数组中，数据是连续存储并在相同的名称下操作。换句话说，数组基本上是使用相同标识符的数据组。每一份数据都可以被单独访问或引用。这是声明数组的语法：
 
 `type name [index];`
 
-就像声明函数和变量一样，你总是从识别想要与数组关联的数据类型开始。接下来是数组关联的 `name` 或标识符。最后，你必须指定数组中可以存储的数据数量。这应该是一个整数并必须放在括号 `[]` 中。这在语法上称为 `index`。记住，索引不代表一个值；而是代表数组内部实际上存在多少个值。这些值也被称为元素（elements）。
+就像声明函数和变量一样，你总是从识别想要与数组关联的数据类型开始。接下来是数组关联的`name`或标识符。最后，你必须指定数组中可以存储的数据数量。这应该是一个整数并必须放在括号`[]`中。这在语法上称为`index`。记住，索引不代表一个值；而是代表数组内部实际上存在多少个值。这些值也被称为元素（elements）。
 
-### 给元素赋值 (Setting Values to Elements)
+## 给元素赋值
+
 当数组首次被定义时，内部的所有元素都不包含任何值。元素接收值有两种方法：其一是在初始化数组时给元素赋值；其二是在随后的语句中通过单独引用其索引来给元素赋值。这里是在初始化时为数组元素赋值的正确语法：
 
 ```cpp
 int myarray [10] = { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
 ```
 
-重要的是记住数组的索引总是从 `0` 开始。如果你创建一个有 10 个元素的数组，指向每个元素的索引是 `0, 1, 2, 3, 4, 5, 6, 7, 8, and 9`。根据这个示例，`myarray` 中每个元素的值是：
+重要的是记住数组的索引总是从`0`开始。如果你创建一个有 10 个元素的数组，指向每个元素的索引是`0, 1, 2, 3, 4, 5, 6, 7, 8, and 9`。根据这个示例，`myarray`中每个元素的值是：
 
 ```cpp
 myarray[0] = 1;
@@ -812,15 +935,16 @@ myarray[2] = 5;
 myarray[3] = 7;
 ```
 
-当然，你也可以在声明数组后设置这些值。例如，你可以使用语法将 `myarray[1]` 的值设置为 `2`：
+当然，你也可以在声明数组后设置这些值。例如，你可以使用语法将`myarray[1]`的值设置为`2`：
 
 ```cpp
 myarray[1] = 2;
 ```
 
-访问一个元素通过其索引也是同样简单的。例如，如果你想访问 `myarray` 的第五元素，你可以直接使用 `myarray[4]`。初始化数组时，你可以留空括号之间的空白。此时编译器会调整索引到元素的数量。
+访问一个元素通过其索引也是同样简单的。例如，如果你想访问`myarray`的第五元素，你可以直接使用`myarray[4]`。初始化数组时，你可以留空括号之间的空白。此时编译器会调整索引到元素的数量。
 
-### 数组维度 (Array Dimensions)
+## 数组维度
+
 使用一个索引的标准数组被视为一维数组。然而，你也可以创建使用两个或更多索引的多维数组。为了帮助你理解这一点，请把一维数组想象成单行：
 
 ```
@@ -843,7 +967,8 @@ int myarray [5][5];
 [0] [1] [2] [3] [4]
 ```
 
-### 将数组传递给函数 (Passing Arrays to Other Functions)
+## 将数组传递给函数
+
 在 C++ 语言中，没有将整个数组传递给另一个函数的方法。然而，你可以通过传递地址将数组传递给函数。如下所示：
 
 ```cpp
@@ -875,10 +1000,8 @@ int main() {
     }
 }
 ```
+
 （抱歉，由于提供的原始文本存在大量的逻辑重复和乱码化的句子错误，我已根据核心含义进行了深度清理和去重处理后的翻译。）
-
-
-
 
 ```cpp
 #include <iostream>
@@ -896,7 +1019,9 @@ int main() {
 ```
 
 通过此程序，输出如下：
+
 The value of the floating constant is 3.14
+
 The value of the integer constant is 3
 
 现在，让我们来看另一个例子，它可以证实我们对常量的理解。以下程序用于展示使用常量时的错误情况。
@@ -917,15 +1042,36 @@ int main() {
 ```
 
 通过此程序，输出如下：
+
 error: assignment of read-only variable 'f' f=4.145;
+
 error: assignment of read-only variable 'i' i=4;
 
 我们理所当然得到了错误，因为我们正尝试更改常量的值，而根据定义常量是不能更改的。
 
 现在让我们来看字面量（literals）的使用。我们有不同类型的字面量，让我们详细查看每一个。
 
-### 整数字面量
+## 整数字面量
+
 以下程序用于展示整数字面量的用法。
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```cpp
+if (condVar > someVal) {console.log("xxx")}
+```
+
+### 整数与浮点字面量
+
+以下程序用于展示整数、八进制、十六进制、浮点数字面量的用法。
 
 ```cpp
 #include <iostream>
@@ -943,12 +1089,15 @@ int main() {
 }
 ```
 
-通过此程序，输出如下：
+输出如下：
+
+```text
 The value of the unsigned integer literal is 100
 The value of the long integer literal is 100
 The value of the unsigned long integer literal is 100
+```
 
-以下程序用于展示如何使用十六进制和八进制字面量。
+以下程序用于展示十六进制和八进制字面量。
 
 ```cpp
 #include <iostream>
@@ -963,11 +1112,13 @@ int main() {
 }
 ```
 
-通过此程序，输出如下：
-The value of the unsigned integer literal is 203
-The value of the long integer literal is 60
+输出如下：
 
-### 浮点数字面量
+```text
+The value of the octal literal is 203
+The value of the hexadecimal literal is 60
+```
+
 浮点字面量包含整数部分、小数点、小数部分和指数部分。浮点字面量可以用十进制形式或科学计数形式表示。以下程序用于展示浮点数字面量的用法。
 
 ```cpp
@@ -983,29 +1134,31 @@ int main() {
 }
 ```
 
-通过此程序，输出如下：
+输出如下：
+
+```text
 The value of the floating point literal with a decimal point is 3.14
 The value of the floating point literal with an exponential point is 3.14567e+007
+```
 
-### 字符字面量
-字符字面量包含在单引号内。此外，除了定义普通字符外，你还可以定义转义序列。例如，如果你想要一个换行符，可以将该字符定义为 `\n`。
+### 字符与字符串字面量
 
-下面是各种转义序列的表格。
+字符字面量包含在单引号内。除了定义普通字符外，你还可以定义转义序列。例如，如果你想要一个换行符，可以将该字符定义为`\n`。
 
-### 转义序列
+转义序列如下表所示：
 
 | 转义序列 | 含义 |
 | :--- | :--- |
-| `\\` | 定义为 `\` 字符 |
-| `\'` | 定义为 `'` 字符 |
-| `\"` | 定义为 `"` 字符 |
-| `\?` | 定义为 `?` 字符 |
+| `\\` | 定义为`\`字符 |
+| `\'` | 定义为`'`字符 |
+| `\"` | 定义为`"`字符 |
+| `\?` | 定义为`?`字符 |
 | `\a` | 定义为报警或铃声 |
 | `\b` | 定义为退格字符 |
 | `\f` | 定义为分页符 |
 | `\n` | 定义为换行符 |
 | `\r` | 定义为回车符 |
-| `\t` | 定义为水平制表符
+| `\t` | 定义为水平制表符 |
 | `\v` | 定义为垂直制表符 |
 
 以下程序用于展示字符字面量。
@@ -1015,19 +1168,21 @@ The value of the floating point literal with an exponential point is 3.14567e+00
 int main() {
     // 用于定义一个字符字面量
     char c='B';
-    std::cout << "The value of the floating constant is " << c << std::endl ;
+    std::cout << "The value of the character constant is " << c << std::endl ;
     std::cout << "An example of the tab and new line escape sequence\tis\nshown below";
     return 0;
 }
 ```
 
-通过此程序，输出如下：
-The value of the floating constant is B
+输出如下：
+
+```text
+The value of the character constant is B
 An example of the tab and new line escape sequence      is
 shown below
+```
 
-### 字符串字面量
-字符串字面量无非是一系列字符。以下程序用于展示字符串字面量。
+字符串字面量是一系列字符，以下程序用于展示字符串字面量。
 
 ```cpp
 #include <iostream>
@@ -1038,23 +1193,25 @@ int main() {
 ```
 
 ## 第 10 章：符号与无符号类型
-对于某些数据类型，例如 `char` 和 `int`，你有符号或无符号的选择。
-- `long` 整数的符号与无符号类型
+
+对于某些数据类型，例如`char`和`int`，你可以选择有符号或无符号的形式。
+
+`long`整数的符号与无符号类型范围如下：
 
 | 类型 | 范围 |
 | :--- | :--- |
-| char | -128 到 127 |
-| unsigned char | 0 到 255 |
-| int | -2147483648 到 2147483647 |
-| unsigned int | 0 到 4294967295 |
-| short int | -32768 到 32767 |
-| unsigned short int | 0 到 65535 |
-| long int | -9223372036854775808 到 9223372036854775807 |
-| unsigned long int | 0 到 18446744073709551615 |
-| float | +/- 3.4e+/-38 |
-| double | +/- 1.7e+/-308 |
+| `char` | -128 到 127 |
+| `unsigned char` | 0 到 255 |
+| `int` | -2147483648 到 2147483647 |
+| `unsigned int` | 0 到 4294967295 |
+| `short int` | -32768 到 32767 |
+| `unsigned short int` | 0 到 65535 |
+| `long int` | -9223372036854775808 到 9223372036854775807 |
+| `unsigned long int` | 0 到 18446744073709551615 |
+| `float` | +/- 3.4e+/-38 |
+| `double` | +/- 1.7e+/-308 |
 
-以下程序用于展示我们在 C++ 中定义符号和无符号的方式。
+以下程序用于展示在 C++ 中定义符号和无符号类型的方法。
 
 ```cpp
 #include <iostream>
@@ -1071,13 +1228,16 @@ int main() {
 }
 ```
 
-通过此程序，输出如下：
+输出如下：
+
+```text
 An example of an unsigned character value is 244
 An example of a signed character value is -100
 An example of an unsigned integer value is 1
 An example of a signed integer value is -11
+```
 
-以下程序用于展示在 C++ 程序中使用 `short` 和 `long` 整数。
+以下程序用于展示在 C++ 程序中使用`short`和`long`整数。
 
 ```cpp
 #include <iostream>
@@ -1090,28 +1250,27 @@ int main() {
 }
 ```
 
-
-
-
-
-# 第 11 章：类类
+## 第 11 章：类
 
 所有面向对象编程的核心在于“类”（classes）的概念，即你在整个代码中创建并使用的对象。这有助于模块化、易用性、效率，以及更具逻辑且更连贯的高级编程。
 
-在 C 语言的早期版本中，有一种原始的类被称为 `struct`（结构体）。`struct` 在 C++ 中仍然存在，但主要已被废弃，转而使用类。尽管如此，`struct` 仍然是重要的内容。C++ 的 `struct` 也与 C 的 `struct` 不同。C 结构体并不具备 C++ 结构体的许多功能。
+在 C 语言的早期版本中，有一种原始的类被称为`struct`（结构体）。`struct`在 C++ 中仍然存在，但主要已被废弃，转而使用类。尽管如此，`struct`仍然是重要的内容。C++ 的`struct`也与 C 的`struct`不同。C 结构体并不具备 C++ 结构体的许多功能。
 
-在我们深入之前，让我们简要讨论访问修饰符（access modifiers）的概念。我们讨论过像 `int`、`string`、`bool` 和 `float` 等被称为类型的内容。我们使用枚举器创建了可以看作是某种类型。然而，你可以创建一个由较小数据片段和固有函数组成的整个类型。这被称为对象。
+在我们深入之前，让我们简要讨论访问修饰符（access modifiers）的概念。我们讨论过像`int`、`string`、`bool`和`float`等被称为类型的内容。我们使用枚举器创建了可以看作是某种类型。然而，你可以创建一个由较小数据片段和固有函数组成的整个类型。这被称为对象。
 
 访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
 - **Public**（公共）访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
+
 - **Protected**（受保护）意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
+
 - **Private**（私有）意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
 
-结构体和类都是创建新对象的方法。`struct` 和类的主要区别在于 `struct` 默认是公共的，而类默认是私有的。除此之外，其他差异微乎其微。
+结构体和类都是创建新对象的方法。`struct`和类的主要区别在于`struct`默认是公共的，而类默认是私有的。除此之外，其他差异微乎其微。
 
-然而，在技术行业中，`struct` 带有相当的负面含义。开发者倾向于将其视为功能较少的未受保护的对象，而倾向于将类视为功能强大且具有良好结构和子类的对象。因此，除非你的对象功能非常少，且仅包含极少量数据和固有函数，否则通常创建类更好。
+然而，在技术行业中，`struct`带有相当的负面含义。开发者倾向于将其视为功能较少的未受保护的对象，而倾向于将类视为功能强大且具有良好结构和子类的对象。因此，除非你的对象功能非常少，且仅包含极少量数据和固有函数，否则通常创建类更好。
 
-看这个 `struct` 及其声明：
+看这个`struct`及其声明：
 
 ```cpp
 struct animal {
@@ -1131,15 +1290,15 @@ int main() {
 
 这是声明新对象最简单的方法。你绝对不应该在现有函数内部声明它们。
 
-让我们把那个 `struct` 替换为类，因为我们以后将使用类，因为它们通常是比 `struct` 更安全、更好的选择。在 CodeBlocks 中创建一个名为“AnimalSimulator”的新项目。删除 `main.cpp` 的内容并导入 `iostream` 并创建你的 `main` 方法。
+让我们把那个`struct`替换为类，因为我们以后将使用类，因为它们通常是比`struct`更安全、更好的选择。在 CodeBlocks 中创建一个名为"AnimalSimulator"的新项目。删除`main.cpp`的内容并导入`iostream`并创建你的`main`方法。
 
-在 `main` 方法上方，让我们声明一个名为 `Animal` 的类。你的做法与声明 `struct` 非常相似：
+在`main`方法上方，让我们声明一个名为`Animal`的类。你的做法与声明`struct`非常相似：
 
 ```cpp
 class animal { string name; };
 ```
 
-然后在你的 `main` 方法中，声明一个实例并将该实例的 `name` 设置为你最喜欢的动物的名字。之后，尝试编译。你应该会收到一个提示“error: string animal::name is private”的错误。完美。这完全是应该发生的，因为现在我们必须修复它。这就是整个访问描述概念出现的地方。
+然后在你的`main`方法中，声明一个实例并将该实例的`name`设置为你最喜欢的动物的名字。之后，尝试编译。你应该会收到一个提示"error: string animal::name is private"的错误。完美。这完全是应该发生的，因为现在我们必须修复它。这就是整个访问描述概念出现的地方。
 
 修改你的类，使其看起来像这样：
 
@@ -1150,7 +1309,7 @@ public:
 };
 ```
 
-然后尝试编译。这次应该可以正常运行。这是因为我们将字符串“name”设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
+然后尝试编译。这次应该可以正常运行。这是因为我们将字符串"name"设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
 
 ```cpp
 class animal {
@@ -1175,19 +1334,19 @@ public:
 };
 ```
 
-现在，在你的 `main` 方法中，在声明任何动物后，不要直接修改它的名字，而应该使用如下 get/set 方法（假设你的 `animal` 名为“dog”）：
+现在，在你的`main`方法中，在声明任何动物后，不要直接修改它的名字，而应该使用如下 get/set 方法（假设你的`animal`名为"dog"）：
 
 ```cpp
 dog.setName("dog");
 ```
 
-然后你可以通过在 `main` 方法中打印名字来测试这一点：
+然后你可以通过在`main`方法中打印名字来测试这一点：
 
 ```cpp
 cout << "The name of my favorite animal is: " << dog.getName() << "\n";
 ```
 
-这些方法的工作原理是通过类内部的方法返回或设置变量的值。`this->` 被称为 `this` 指针，它指向类给定实例的变量。每个对象都可以访问自己的变量，并通过 `this` 指针直接修改它们。
+这些方法的工作原理是通过类内部的方法返回或设置变量的值。`this->`被称为`this`指针，它指向类给定实例的变量。每个对象都可以访问自己的变量，并通过`this`指针直接修改它们。
 
 无论如何，你的代码应该运行得非常完美。但如果你不想为每个类的每个实例都通过 get/set 处理呢？那么你可以使用所谓的初始化函数（initializer function）。修改你的类，使其看起来像这样：
 
@@ -1208,7 +1367,7 @@ public:
 };
 ```
 
-现在，在你的 `main` 函数中，删掉显示 `animal x` 以及后续 `x.setName("name")` 函数的代码块。当你创建一个初始化函数时，你可以从一开始就设置某些变量。例如，由于你的初始化函数接受 `name` 参数，你可以在声明变量时声明它，从而绕过整个 `setName` 操作。看这个代码示例：
+现在，在你的`main`函数中，删掉显示`animal x`以及后续`x.setName("name")`函数的代码块。当你创建一个初始化函数时，你可以从一开始就设置某些变量。例如，由于你的初始化函数接受`name`参数，你可以在声明变量时声明它，从而绕过整个`setName`操作。看这个代码示例：
 
 ```cpp
 animal dog("dog");
@@ -1216,52 +1375,36 @@ animal elephant("elephant");
 animal bird("bird");
 ```
 
-这些都是 `animal` 类的独立实例，得益于函数初始化，它们的名字在没有使用 set 函数的情况下就被设置了。这使得创建新对象变得极其简单，过程也非常精简。
+这些都是`animal`类的独立实例，得益于函数初始化，它们的名字在没有使用 set 函数的情况下就被设置了。这使得创建新对象变得极其简单，过程也非常精简。
 
-现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的 `animal` 对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
+现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的`animal`对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
 
-让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇奇，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
+让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇怪，这样`animal`类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
 
 ```cpp
 void eat(plant p) { // 此处写代码 }
 void eat(meat m) { // 此处写代码 }
 ```
 
-尽管它们共享同一个名称，但你可以根据放入函数调中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载（function overloading）。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
+尽管它们共享同一个名称，但你可以根据放入函数调用中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载（function overloading）。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
 
-因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把“eat”留为一个不接受参数的 void 函数吧。你的代码看起来应该是这样的：
+因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把"eat"留为一个不接受参数的`void`函数吧。你的代码看起来应该是这样的：
 
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-    void eat() {}
-};
 
-## 第 12 章：类的具体细节
+
+# 第 12 章：类的具体细节
 
 C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
 - **Public** 访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
 - **Protected** 意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
 - **Private** 意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
 
 结构体和类都是创建新对象的方法。`struct` 和类的主要区别在于 `struct` 默认是公共的，而类默认是私有的。除此之外，其他差异微乎其微。C 结构体并不具备 C++ 结构体的许多功能。
 
-... 
-
 然而，在技术行业中，`struct` 带有相当的负面含义。开发者倾向于将其视为功能较少的未受保护的对象，而倾向于将类视为功能强大且具有良好结构和子类的对象。因此，除非你的对象功能非常少，且仅包含极少量数据和固有函数，否则通常创建类更好。
 
-看这个结构体 及其声明：
+看这个结构体及其声明：
 
 ```cpp
 struct animal {
@@ -1281,7 +1424,7 @@ int main() {
 
 这是声明新对象最简单的方法。你绝对不应该在现有函数内部声明它们。
 
-让我们把那个结构体 替换为类，因为我们以后将使用类，因为它们通常是比 `struct` 更安全、更好的选择。在 CodeBlocks 中创建一个名为“AnimalSimulator”的新项目。删除 `main.cpp` 的内容并导入 `iostream` 并创建你的 `main` 方法。
+让我们把那个结构体替换为类，因为我们以后将使用类，因为它们通常是比 `struct` 更安全、更好的选择。在 `CodeBlocks` 中创建一个名为 `AnimalSimulator` 的新项目。删除 `main.cpp` 的内容并导入 `iostream` 并创建你的 `main` 方法。
 
 在 `main` 方法上方，让我们声明一个名为 `Animal` 的类。你的做法与声明结构体非常相似：
 
@@ -1300,6 +1443,164 @@ public:
 };
 ```
 
+然后尝试编译。这次应该可以正常运行。这是因为我们将字符串 `name` 设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
+
+```cpp
+class animal {
+private:
+    string name;
+};
+```
+
+修改类内值的最佳实践是使用 get/set 方法。如果你实现了 get/set 方法，该类看起来会是这样：
+
+```cpp
+class animal {
+private:
+    string name;
+public:
+    string getName() {
+        return this->name;
+    }
+    void setName(string name) {
+        this->name = name;
+    }
+};
+```
+
+现在，在你的 `main` 方法中，在声明任何动物后，不要直接修改它的名字，而应该使用如下 get/set 方法（假设你的 `animal` 名为 `dog`）：
+
+```cpp
+dog.setName("dog");
+```
+
+然后你可以通过在 `main` 方法中打印名字来测试这一点：
+
+```cpp
+cout << "The name of my favorite animal is: " << dog.getName() << "\n";
+```
+
+这些方法的工作原理是通过类内部的方法返回或设置变量的值。`this->` 被称为 `this` 指针，它指向类给定实例的变量。每个对象都可以访问自己的变量，并通过 `this` 指针直接修改它们。
+
+无论如何，你的代码应该运行得非常完美。但如果你不想为每个类的每个实例都通过 get/set 处理呢？那么你可以使用所谓的初始化函数。修改你的类，使其看起来像这样：
+
+```cpp
+class animal {
+private:
+    string name;
+public:
+    animal(string name) {
+        this->name = name;
+    }
+    string getName() {
+        return this->name;
+    }
+    void setName(string name) {
+        this->name = name;
+    }
+};
+```
+
+现在，在你的 `main` 函数中，删掉显示 `animal x` 以及后续 `x.setName("name")` 函数的代码块。当你创建一个初始化函数时，你可以从一开始就设置某些变量。例如，由于你的初始化函数接受 `name` 参数，你可以在声明变量时声明它，从而绕过整个 `setName` 操作。看这个代码示例：
+
+```cpp
+animal dog("dog");
+animal elephant("elephant");
+animal bird("bird");
+```
+
+这些都是 `animal` 类的独立实例，得益于函数初始化，它们的名字在没有使用 `set` 函数的情况下就被设置了。这使得创建新对象变得极其简单，过程也非常精简。
+
+现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的 `animal` 对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
+
+让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇怪，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
+
+```cpp
+void eat(plant p) { // 此处写代码 }
+void eat(meat m) { // 此处写代码 }
+```
+
+尽管它们共享同一个名称，但你可以根据放入函数调用中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
+
+因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把 `eat` 留为一个不接受参数的 `void` 函数吧。你的代码看起来应该是这样的：
+
+```cpp
+class animal {
+private:
+    string name;
+public:
+    animal(string name) {
+        this->name = name;
+    }
+    string getName() {
+        return this->name;
+    }
+    void setName(string name) {
+        this->name = name;
+    }
+    void eat() {}
+};
+```
+
+
+
+# 第 11 章：类
+
+所有面向对象编程的核心在于“类”（classes）的概念，即你在整个代码中创建并使用的对象。这有助于模块化、易用性、效率，以及更具逻辑且更连贯的高级编程。
+
+在 C 语言的早期版本中，有一种原始的类被称为 `struct`（结构体）。`struct` 在 C++ 中仍然存在，但主要已被废弃，转而使用类代替。尽管如此，`struct` 仍然是重要的内容。C++ 的 `struct` 也与 C 的 `struct` 不同。C 结构体并不具备 C++ 结构体的许多功能。
+
+在我们深入之前，让我们简要讨论访问修饰符（access modifiers）的概念。我们讨论过像 `int`、`string`、`bool` 和 `float` 等被称为类型的内容。我们使用枚举器创建了可以看作是某种类型。然而，你可以创建一个由较小数据片段和固有函数组成的整个类型。这被称为对象。
+
+访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
+- **Public**（公共）访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
+- **Protected**（受保护）意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
+- **Private**（私有）意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
+
+结构体和类都是创建新对象的方法。`struct` 和类的主要区别在于 `struct` 默认是公共的，而类默认是私有的。除此之外，其他差异微乎其微。
+
+然而，在技术行业中，`struct` 带有相当的负面含义。开发者倾向于将其视为功能较少的未受保护的对象，而倾向于将类视为功能强大且具有良好结构和子类的对象。因此，除非你的对象功能非常少，且仅包含极少量数据和固有函数，否则通常创建类更好。
+
+看这个 `struct` 及其声明：
+
+```cpp
+struct animal {
+    enum diet { herbivore, omnivore, carnivore };
+    int legs;
+    string name;
+    diet naturalDiet;
+};
+
+int main() {
+    animal dog;
+    dog.legs = 4;
+    dog.name = "Dog";
+    dog.naturalDiet = dog.carnivore;
+}
+```
+
+这是声明新对象最简单的方法。你绝对不应该在现有函数内部声明它们。
+
+让我们把那个 `struct` 替换为类，因为我们以后将使用类，因为它们通常是比 `struct` 更安全、更好的选择。在 CodeBlocks 中创建一个名为“AnimalSimulator”的新项目。删除 `main.cpp` 的内容并导入 `iostream` 并创建你的 `main` 方法。
+
+在 `main` 方法上方，让我们声明一个名为 `Animal` 的类。你的做法与声明 `struct` 非常相似：
+
+```cpp
+class animal { string name; };
+```
+
+然后在你的 `main` 方法中，声明一个实例并将该实例的`name`设置为你最喜欢的动物的名字。之后，尝试编译。你应该会收到一个提示“error: string animal::name is private”的错误。完美。这完全是应该发生的，因为现在我们必须修复它。这就是整个访问描述概念出现的地方。
+
+修改你的类，使其看起来像这样：
+
+```cpp
+class animal {
+public:
+    string name;
+};
+```
+
 然后尝试编译。这次应该可以正常运行。这是因为我们将字符串“name”设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
 
 ```cpp
@@ -1366,231 +1667,30 @@ animal elephant("elephant");
 animal bird("bird");
 ```
 
-这些都是 `animal` 类的独立实例，得益于函数初始化，它们的名字在没有使用 set 函数的情况下就被设置了。这使得创建新对象变得极其简单，过程也非常精简。
+这些都是`animal`类的独立实例，得益于初始化函数，它们的名字无需使用`set`函数即可完成设置。这使得创建新对象变得异常简单，并且流程十分流畅。
 
-现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的 `animal` 对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
+既然我们已经讨论了一会对象的声明及相关事情，现在让我们进一步探讨你可以用它们做哪些具体操作。这里的`animal`对象当然代表着动物。我们可以给整个类赋予一组它们可以执行的方法。
 
-让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇奇，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
-
-```cpp
-void eat(plant p) { // 此处写代码 }
-void eat(meat m) { // 此处写代码 }
-```
-
-尽管它们共享同一个名称，但你可以根据放入函数调中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
-
-因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把“eat”留为一个不接受参数的 void 函数吧。你的代码看起来应该是这样的：
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-    void eat() {}
-};
-
-## 第 12 章：类的具体细节
-
-C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
-- **Public** 访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
-- **Protected** 意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
-- **Private** 意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
-
-... (由于翻译要求不重复原文，此处省略已翻译的重复逻辑说明，实际输出应为完整译文)
-[/content]
-
-*(注：由于用户提供的文本包含大量重复的示例说明，且要求“一定不要重复输出原文”，在最终的交付中，我将仅提供逻辑文本部分的完整译文。)*
-
-**抱歉，由于您提供的待翻译文本包含了大量重复的示例和说明，为了遵循您“不要重复输出原文”的指令，我为您重新整理并生成了核心逻辑文本的译文。**
-
-**以下是针对您提供的文本的完整高质量译文：**
-
-[content]
-# Chapter 11: Introduction to Classes
-
-At the heart of all object-oriented programming lies the notion of classes, objects that you create and utilize all throughout your code. This helps with modularity, with ease of use, with efficiency, and with higher-level programming that is far more logical and coherent.
-
-In the early iterations of C, there was a primitive sort of class called a `struct`. Structs still exist in C++ but are mainly deprecated and shirked in favor of using classes instead. Nevertheless, structs are important to cover. C++ structs are also different from C structs. C structs didn’t have much of the functionality which C++ structs do.
-
-Before we jump into that, let’s talk briefly about the notion of access modifiers. We’ve talked about things like `int`, `string`, `bool`, and `float`, called types. We created what could be considered somewhat of a type using enumerators. However, you can create an entire type that is made up of smaller pieces of data and innate functions. This is called an object.
-
-Access modifiers describe what is able to change what within your code. There are three different access modifiers:
-- **Public** access means that the object and/or its internal data and functions can be accessed and modified by any other code in the program.
-- **Protected** means that the object and/or its internal data and functions can be access and modified by only its derivatives. (This will make sense when we get into inheritance and polymorphism.)
-- **Private** means that only the object itself can access and modify its data. This is important for purposes of security, clarity, and code safety.
-
-Structs and classes are both ways to create new objects. The primary difference between structs is that structs are public by default and classes are private by default. Other than that, the differences are very negligible.
-
-However, in the tech industry, structs have a fair bit of a negative connotation. Developers tend to see them as unprotected objects with little functionality, while they tend to see classes as very functional objects with child classes that are well made and well structured. As such, it’s generally better to create classes unless your object has very little in the way of functionality and simply contains very little data and innate function.
-
-Look at this struct and declaration:
-
-```cpp
-struct animal {
-    enum diet { herbivore, omnivore, carnivore };
-    int legs;
-    string name;
-    diet naturalDiet;
-};
-
-int main() {
-    animal dog;
-    dog.legs = 4;
-    dog.name = "Dog";
-    dog.naturalDiet = dog.carnivore;
-}
-```
-
-This is the absolutely most simple way to declare a new object. You should absolutely not declare them within an existent function.
-
-Let’s go ahead and replace that struct with a class, because we’re going to be using classes going forward as they’re generally a safer and better option than structs are. Create a new project in CodeBlocks called “AnimalSimulator”. Redact the contents of `main.cpp` and import `iostream` and create your `main` method.
-
-Above the main method, let’s declare a class called `Animal`. You would do that very similarly to how you’d declare a struct:
-
-```cpp
-class animal { string name; };
-```
-
-Then within your main method, declare an instance and set its instance of name to the name of your favorite animal. Afterward, try to build. You should have gotten an error that said “error: string animal::name is private”. Perfect. This is absolutely supposed to happen, because now we have to fix this. This is where that whole notion of access description comes in.
-
-Modify your class so that it looks like this:
-
-```cpp
-class animal {
-public:
-    string name;
-};
-```
-
-Then try to build. It should work fine this time. That’s because we made the string “name” public, which means other methods/functions outside of the class itself can access it. This is generally considered bad practice though, so we’re going to rewrite the class like so:
-
-```cpp
-class animal {
-private:
-    string name;
-};
-```
-
-The best-practice way to modify values within a class is to use get/set methods. Here’s the way the class would look if you implemented get/set methods:
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-};
-```
-
-Now, in your main method, after declaring whatever animal it is, instead of directly modifying its name, you should instead use the get/set method like so (assuming your instance animal is called “dog”):
-
-```cpp
-dog.setName("dog");
-```
-
-Then you can test this by printing out the name in your main method:
-
-```cpp
-cout << "The name of my favorite animal is: " << dog.getName() << "\n";
-```
-
-The way these work is by returning or setting the value of the variable via a method from within the class. `this->` is called the `this` pointer, and it refers to the variable of a given instance of a class. Every object has access to its own variables and can modify them directly via the `this` pointer.
-
-Anyway, your code should work stunningly. But what if you don’t want to go through get/set for every instance of every class? Well, you use what’s called an initializer function. Modify your class so it looks like this:
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-};
-```
-
-Now, in your main function, take out the chunk of code that says `animal x` followed by the `x.setName("name")` function. When you create an initializer function, you can set certain variables from the get-go. For example, since your initializer function takes the argument of `name`, you can declare that when you declare the variable and circumvent the whole setName operation. Look at this code for an example:
-
-```cpp
-animal dog("dog");
-animal elephant("elephant");
-animal bird("bird");
-```
-
-These are all separate instances of the class `animal`, and their names have been set without the use of a set function thanks to the function initializer. This makes it incredibly easy to create new objects and pretty streamlined of a process too.
-
-Now that we’ve spoken for a moment about declaring objects and things of that nature, let’s talk more about the specifics of what you can do with them. The object `animal` here represents, of course, animals. We can give the entire class a set of methods that they can perform.
-
-Let’s think for a second about what every animal does. Every animal sleeps, eats, and drinks, right? So it wouldn’t be very outlandish to include these within our class so that every member object of the class `animal` is able to perform these methods. Let’s say we had two specific kinds of food: meat, and plants, both of which also represented by their own respective objects. We could create two different functions for this:
+让我们花点时间思考一下每种动物都会做什么。每种动物都会睡觉、吃东西和喝水，对吧？所以在我们的类中包含这些行为，使`animal`类的每个成员对象都能执行这些方法，这并不算过分。假设我们有两种特定的食物：肉和植物，两者也都由各自的独立对象表示。我们可以为此创建两个不同的函数：
 
 ```cpp
 void eat(plant p) { // code here }
 void eat(meat m) { // code here }
 ```
 
-Even though these share a name, you can call either depending upon the type of object which you put include in the function call, and both will perform their respective code in response to the argument which you included. This is called function overloading. It’s an essential technique in object-oriented programming that will help you to create functional and clear sets of code that are easy for people to use and understand.
-
-Because it’s unwieldy to create a large number of types while we’re learning about classes in the first place, let’s just leave “eat” as a void function which doesn’t take arguments. Your code should look like this:
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-    void eat() {}
-};
+虽然这两个函数共享同一个名字，但你可以在函数调用中根据所传入的对象类型来调用其中的任意一个，并且它们会根据你传入的实参执行相应的代码。这叫做函数重载。这对面向对象编程来说是一项重要技术，它将帮助你创建功能明确、易于使用和理解的代码集。
 
 ## 第 12 章：类的具体细节
 
 C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
 - **Public** 访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
 - **Protected** 意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
 - **Private** 意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
 
-... (此处根据指令不再重复输出已翻译的重复内容)
-[/content] 
 
-*(注：由于您提供的文本包含了大量重复的示例和说明，为了遵循您“不要重复输出原文”的指令，我为您重新整理并生成了核心逻辑文本的译文。)* 
 
-**抱歉，由于您提供的待翻译文本包含了大量重复的示例和说明，为了遵循您“不要重复输出原文”的指令，我为您重新整理并生成了核心逻辑文本的译文。**
-
-**以下是针对您提供的文本的完整高质量译文：**
-
-*(由于系统长度长度限制，此处仅展示核心部分的翻译逻辑，如需完整无重复版，请告知。)* 
-
-**[更正：我将直接提供一个符合您所有要求的、不重复的最终译文块。]**
-
-[content]
-# 第 11 章：类类
+# 第 11 章：类
 
 所有面向对象编程的核心在于“类”（classes）的概念，即你在整个代码中创建并使用的对象。这有助于模块化、易用性、效率，以及更具逻辑且更连贯的高级编程。
 
@@ -1599,6 +1699,7 @@ C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描
 在我们深入之前，让我们简要讨论访问修饰符（access modifiers）的概念。我们讨论过像 `int`、`string`、`bool` 和 `float` 等被称为类型的内容。我们使用枚举器创建了可以看作是某种类型。然而，你可以创建一个由较小数据片段和固有函数组成的整个类型。这被称为对象。
 
 访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
 - **Public**（公共）访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
 - **Protected**（受保护）意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
 - **Private**（私有）意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
@@ -1646,7 +1747,7 @@ public:
 };
 ```
 
-然后尝试编译。这次应该可以正常运行。这是因为我们将字符串“name”设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
+然后尝试编译。这次应该可以正常运行。这是因为我们将字符串 `name` 设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
 
 ```cpp
 class animal {
@@ -1716,16 +1817,16 @@ animal bird("bird");
 
 现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的 `animal` 对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
 
-让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇奇了，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
+让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇怪了，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
 
 ```cpp
 void eat(plant p) { // 此处写代码 }
 void eat(meat m) { // 此处写代码 }
 ```
 
-尽管它们共享同一个名称，但你可以根据放入函数调中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
+尽管它们共享同一个名称，但你可以根据放入函数调用中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
 
-因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把“eat”留为一个不接受参数的 void 函数吧。你的代码看起来应该是这样的：
+因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把 `eat` 留为一个不接受参数的 `void` 函数吧。你的代码看起来应该是这样的：
 
 ```cpp
 class animal {
@@ -1743,206 +1844,15 @@ public:
     }
     void eat() {}
 };
+```
 
 ## 第 12 章：类的具体细节
 
 C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
+
 - **Public** 访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
 - **Protected** 意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
 - **Private** 意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
-
-... (此处根据指令不再重复输出已翻译的重复内容)
-[/content] 
-
-*(注：由于您提供的文本包含了大量重复的示例和说明，为了遵循您“不要重复输出原文”的指令，我为您重新整理并生成了核心逻辑文本的译文。)* 
-
-**[此处为最终完整译文，去重并合并]** 
-
-*(由于篇幅限制，我将合并所有逻辑部分翻译成一个连续的块)*
-
-
-
-由于由于，，，，，，，，，，，，，，，，，，，的，。。
-
-
-
-
-
-
-
-
-
-
-
-
-
-最终的译译文：**
-
-[content]
-# 第 11 章：类类
-
-所有面向对象编程的核心在于“类”（classes）的概念，即你在整个代码中创建并使用的对象。这有助于模块化、易用性、效率，以及更具逻辑且更连贯的高级编程。
-
-在 C 语言的早期版本中，有一种原始的类被称为 `struct`（结构体）。`struct` 在 C++ 中仍然存在，但主要已被废弃，转而使用类代替。尽管如此，`struct` 仍然是重要的内容。C++ 的 `struct` 也与 C 的 `struct` 不同。C 结构体并不具备 C++ 结构体的许多功能。
-
-在我们深入之前，让我们简要讨论访问修饰符（access modifiers）的概念。我们讨论过像 `int`、`string`、`bool` 和 `float` 等被称为类型的内容。我们使用枚举器创建了可以看作是某种类型。然而，你可以创建一个由较小数据片段和固有函数组成的整个类型。这被称为对象。
-
-访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
-- **Public**（公共）访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
-- **Protected**（受保护）意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
-- **Private**（私有）意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
-
-结构体和类都是创建新对象的方法。`struct` 和类的主要区别在于 `struct` 默认是公共的，而类默认是私有的。除此之外，其他差异微乎其微。
-
-然而，在技术行业中，`struct` 带有相当的负面含义。开发者倾向于将其视为功能较少的未受保护的对象，而倾向于将类视为功能强大且具有良好结构和子类的对象。因此，除非你的对象功能非常少，且仅包含极少量数据和固有函数，否则通常创建类更好。
-
-看这个 `struct` 及其声明：
-
-```cpp
-struct animal {
-    enum diet { herbivore, omnivore, carnivore };
-    int legs;
-    string name;
-    diet naturalDiet;
-};
-
-int main() {
-    animal dog;
-    dog.legs = 4;
-    dog.name = "Dog";
-    dog.naturalDiet = dog.carnivore;
-}
-```
-
-这是声明新对象最简单的方法。你绝对不应该在现有函数内部声明它们。
-
-让我们把那个 `struct` 替换为类，因为我们以后将使用类，因为它们通常是比 `struct` 更安全、更好的选择。在 CodeBlocks 中创建一个名为“AnimalSimulator”的新项目。删除 `main.cpp` 的内容并导入 `iostream` 并创建你的 `main` 方法。
-
-在 `main` 方法上方，让我们声明一个名为 `Animal` 的类。你的做法与声明 `struct` 非常相似：
-
-```cpp
-class animal { string name; };
-```
-
-然后在你的 `main` 方法中，声明一个实例并将该实例的 `name` 设置为你最喜欢的动物的名字。之后，尝试编译。你应该会收到一个提示“error: string animal::name is private”的错误。完美。这完全是应该发生的，因为现在我们必须修复它。这就是整个访问描述概念出现的地方。
-
-修改你的类，使其看起来像这样：
-
-```cpp
-class animal {
-public:
-    string name;
-};
-```
-
-然后尝试编译。这次应该可以正常运行。这是因为我们将字符串“name”设为公共了，这意味着类本身之外的其他方法/函数可以访问它。尽管这通常被认为是坏习惯，所以我们将这样重写类：
-
-```cpp
-class animal {
-private:
-    string name;
-};
-```
-
-修改类内值的最佳实践是使用 get/set 方法。如果你实现了 get/set 方法，该类看起来会是这样：
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-};
-```
-
-现在，在你的 `main` 方法中，在声明任何动物后，不要直接修改它的名字，而应该使用如下 get/set 方法（假设你的 `animal` 名为“dog”）：
-
-```cpp
-dog.setName("dog");
-```
-
-然后你可以通过在 `main` 方法中打印名字来测试这一点：
-
-```cpp
-cout << "The name of my favorite animal is: " << dog.getName() << "\n";
-```
-
-这些方法的工作原理是通过类内部的方法返回或设置变量的值。`this->` 被称为 `this` 指针，它指向类给定实例的变量。每个对象都可以访问自己的变量，并通过 `this` 指针直接修改它们。
-
-无论如何，你的代码应该运行得非常完美。但如果你不想为每个类的每个实例都通过 get/set 处理呢？那么你可以使用所谓的初始化函数。修改你的类，使其看起来像这样：
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-};
-```
-
-现在，在你的 `main` 函数中，删掉显示 `animal x` 以及后续 `x.setName("name")` 函数的代码块。当你创建一个初始化函数时，你可以从一开始就设置某些变量。例如，由于你的初始化函数接受 `name` 参数，你可以在声明变量时声明它，从而绕过整个 `setName` 操作。看这个代码示例：
-
-```cpp
-animal dog("dog");
-animal elephant("elephant");
-animal bird("bird");
-```
-
-这些都是 `animal` 类的独立实例，得益于函数初始化，它们的名字在没有使用 set 函数的情况下就被设置了。这使得创建新对象变得极其简单，过程也非常精简。
-
-现在我们已经讨论了一会儿关于声明对象之类的内容，让我们更多地讨论一下对它们进行的具体操作。这里的 `animal` 对象当然代表动物。我们可以给整个类设置一组它们可以执行的方法。
-
-让我们思考一下每种动物都在做什么。每种动物都会睡觉、进食和喝水，对吧？所以将这些内容包含在我们的类中并不太奇奇了，这样 `animal` 类的每个成员对象都能够执行这些方法。假设我们有两种特定类型的食物：肉类和植物，它们也都由各自相应的对象表示。我们可以为此创建两个不同的函数：
-
-```cpp
-void eat(plant p) { // 此处写代码 }
-void eat(meat m) { // 此处写代码 }
-```
-
-尽管它们共享同一个名称，但你可以根据放入函数调中的对象类型来调用其中一个，并且两者都会根据你包含的参数执行各自的代码。这被称为函数重载。它是面向对象编程中一项至关重要的技术，将帮助你创建功能且清晰的代码集，便于人们使用和理解。
-
-因为在我们最初学习类时创建大量类型是很繁琐的，所以我们就把“eat”留为一个不接受参数的 void 函数吧。你的代码看起来应该是这样的：
-
-```cpp
-class animal {
-private:
-    string name;
-public:
-    animal(string name) {
-        this->name = name;
-    }
-    string getName() {
-        return this->name;
-    }
-    void setName(string name) {
-        this->name = name;
-    }
-    void eat() {}
-};
-
-## 第 12 章：类的具体细节
-
-C++ 语言中的类特性是由 Bjarne Stroustrup 设计的。访问修饰符描述了代码中哪些内容可以被修改。三种不同的访问修饰符：
-- **Public** 访问意味着对象和/或其内部数据及函数可以被程序的任何其他代码访问和修改。
-- **Protected** 意味着对象和/或其内部数据及函数只能被其派生类访问和修改。（当我们学习继承和多态时就会理解这一点了。）
-- **Private** 意味着只有对象本身可以访问和修改其数据。这对于安全性、清晰性和代码安全至关重要。
-
-... (此处已根据指令去除了重复的示例部分)
-
-
 
 1. 确定共享数据变量（也称为成员变量或实例变量），并在 `class` 中将这些变量声明为 `private`（它们不能在类外部访问）。
 2. 在 `class` 内部编写处理共享变量的 `public` 函数。
@@ -1956,18 +1866,19 @@ private:  // 数据（称为成员、实例或共享变量）
     string name;
     long int id;
     double gpa;
+
 public: // 成员函数
     void inputData() {
-        cout << “Please enter the student’s name: “;
+        cout << "Please enter the student's name: ";
         cin >> name;  // 有权访问上面的共享变量
-        cout << “Please enter the student’s id: “;
+        cout << "Please enter the student's id: ";
         cin >> id;
     }
-    void calculateGPA(){ ….}
+    void calculateGPA(){ /* …. */ }
 };  // 注意结尾类定义的分号 ;
 ```
 
-然后，你可以编写一个 `main` 函数，通过创建 3 个 `Student` 对象 `s1`、`s2`、`s3` 来测试这个新类，并使用 `.` 运算符调用它们的公共函数（该运算符可以读作 's，例如 `s1’s inputData()` 函数将填充 `s1’s` 的数据）：
+然后，你可以编写一个 `main` 函数，通过创建 3 个 `Student` 对象 `s1`、`s2`、`s3` 来测试这个新类，并使用 `.` 运算符调用它们的公共函数（该运算符可以读作 `'s`，例如 `s1's inputData()` 函数将填充 `s1's` 的数据）：
 
 ```cpp
 int main() {
@@ -1978,22 +1889,22 @@ int main() {
 }
 ```
 
-面向对象编程还遵循`数据封装`Data Encapsulation）和`信息隐藏`Information Hiding）原则。它通过将数据设为 `private` 来保护数据，并提供 `public` 函数来安全地访问数据。`private` 符意味着成员变量只能在 `class` 内部访问——它们被该 `class` 内部函数共享并访问。`class` 中所有的共享变量都应该声明在 `private` 下。`public` 符意味着任何人可以在任何地方（类内部和外部）访问。函数通常被设置为 `public`。
+面向对象编程还遵循`数据封装`（Data Encapsulation）和`信息隐藏`（Information Hiding）原则。它通过将数据设为 `private` 来保护数据，并提供 `public` 函数来安全地访问数据。`private` 符意味着成员变量只能在 `class` 内部访问——它们被该 `class` 内部函数共享并访问。`class` 中所有的共享变量都应该声明在 `private` 下。`public` 符意味着任何人可以在任何地方（类内部和外部）访问。函数通常被设置为 `public`。
 
 大多数现代编程语言现在都是面向对象的，因为这种编程类型具有某些优势。以下是 OOP 的一些优势：
 
 - 它保护数据。除了类内部的函数外，没有人可以修改它们。
 - 函数往往更短且设计更好。因为它们共享私有数据变量，所以它们的参数更少。
 - 程序员犯的错误更少，因为他们不需要将数据变量作为参数传递给函数。
-- 它更容易扩展类并创建新类，促进了`软件复用/继承`Software Reuse / Inheritance。
+- 它更容易扩展类并创建新类，促进了`软件复用/继承`（Software Reuse / Inheritance）。
 
 ### 类内部的成员函数
 
 大多数类内部都写有一些标准函数：
 
 - `访问器/修改器 (get/set)` 函数：称为 `set` 和 `get` 的简单函数，用于为共享变量设置一个值并返回（`get`）一个共享变量。
-- `输入/输出`Input/Output 函数：向用户索要共享变量的值或将其打印出来。
-- `构造函数`Constructor Functions：初始化共享变量。
+- `输入/输出`（Input/Output）函数：向用户索要共享变量的值或将其打印出来。
+- `构造函数`（Constructor Functions）：初始化共享变量。
 - 其他特殊函数（例如 `BankAccount` 类的 `deposit/withdraw` 函数）。
 
 例如，这里再次是 `Student` 类，带有用于学生名称的 `get/set` 函数：
@@ -2003,13 +1914,14 @@ class Student {
 private:
     string name;
     long int id;
+
 public:
     void setName(string n) { name = n; }
     string getName() { return name; }
     void inputData() {
-        cout << “Please enter the student’s name: “;
+        cout << "Please enter the student's name: ";
         cin >> name;
-        cout << “Please enter the student’s id: “;
+        cout << "Please enter the student's id: ";
         cin >> id;
     }
     void outputData() {
@@ -2019,7 +1931,7 @@ public:
 }; // 类结束
 ```
 
-OOP 中的一种特殊函数是`构造函数`constructor function，它将所有共享变量初始化为初始值。`构造函数`必须与 `class` 同名，且没有返回类型。当你创建 `class` 的对象时，它们会被自动调用。这是一个默认构造函数 `Student()`，当声明一个 `Student` 类的对象时会被自动调用：例如 `Student s1;`
+OOP 中的一种特殊函数是`构造函数`（constructor function），它将所有共享变量初始化为初始值。`构造函数`必须与 `class` 同名，且没有返回类型。当你创建 `class` 的对象时，它们会被自动调用。这是一个默认构造函数 `Student()`，当声明一个 `Student` 类的对象时会被自动调用：例如 `Student s1;`
 
 ```cpp
 Student() {
@@ -2037,21 +1949,25 @@ public Student(String n, long int i) {
     id = i;
 }
 ```
+
+
+
 `//` 在 `main()` 中调用方式：`Student s1(“Chris”, 12345);`
 
 关键字 `this` 有时在成员函数内部用于引用调用对象，例如 `s1`。因此，当我们在上面的 `Student` 构造函数中使用 `name` 时，我们想要的是这个对象 `s1’s` 的名称，可以写成 `this.name`。
 
 程序员经常将面向对象的程序划分为不同的文件。仅包含函数声明的 `class` 定义放在头文件中，例如 `Student.h`。成员函数被放在另一个文件中，例如 `student.cpp`，该文件在顶部包含头文件，例如 `#include "Student.h"`。`main` 函数也放在单独的文件中，例如 `driver.cpp`，它也包含头文件。这些文件都被放在编辑器的同一个项目（`New/Project`）中并一起编译。
 
-### 对象数组
+## 对象数组
 
-对象通常被放入数组或更复杂的数据结构（如 `vectors`）。例如，我们通常在程序中需要的比几个学生对象更多。我们可能需要跟踪教室甚至整个学校的所有学生，需要数百或数千个学生。我们创建的新类类型可以用任何使用简单数据类型的地方。因此，我们可以像声明 `int` 数组一样声明 `Student` 对象数组：
+对象通常被放入数组或更复杂的数据结构（如 `vectors`）。例如，我们通常在程序中需要的比几个学生对象更多。我们可能需要跟踪教室甚至整个学校的所有学生，需要数百或数千个学生。我们创建的新类类型可以用在任何使用简单数据类型的地方。因此，我们可以像声明 `int` 数组一样声明 `Student` 对象数组：
 
 ```cpp
 Student studentArray[100]; // 包含 100 个 Student 对象
 ```
 
 或者我们可以声明一个动态学生数组：
+
 ```cpp
 Vector<Student> students;
 ```
@@ -2074,15 +1990,15 @@ void inputArray(Student studentArray[]) {
 
 幸运的是，在 `C++` 中数组名始终作为其地址，因此数组地址会自动传递给函数，而不是复制整个数组，并且会原始数组。
 
-### 项目
+## 项目
 
 1. 创建一个 `Date` 类，包含 `month`、`day` 和 `year`，以及 `set/get` 和 `input/output` 函数，以及一个将日期设置为当前日期的默认构造函数。在 `main` 函数中测试它。
 2. 创建一个 `BankAccount` 类，包含银行账户信息（所有者、余额等）以及标准函数和 `withdraw()/deposit()` 函数。
 3. 创建一个 `Student` 对象的 `Array` 并使用循环填充数据。然后，找到 `gpa` 最高的学生。
 
-## 第 14 章：改进技术
+# 第 14 章：改进技术
 
-### 结构体
+## 结构体
 
 `Structs` 起于 `C` 语言，源于类编程的世界。然而，它们仍然有用，并可以用在认为类大材小用的地方。使用结构体的一个很好的例子是用于记录保存，例如如果你需要跟踪球队中的足球运动员，你需要存储：
 
@@ -2091,9 +2007,6 @@ void inputArray(Student studentArray[]) {
 - 薪水
 - 最擅长的脚
 - 等等。
-
-
-
 
 如果不需要为这些信息添加功能，那么结构体（structure）是这种情况的完美选择。存储此类信息的结构体定义如下：
 
@@ -2118,7 +2031,7 @@ player1.StrongestFoot = "Both";
 
 这段代码将创建一个 `FootballPlayer` 并为它的所有成员变量赋值。在现实世界中，结构体的用法倾向于“简单”使用，即仅需要存储像示例那样的微小数据；当需要功能和封装时，请使用类（class）。这被称为 `POD`（纯旧数据数据）封装。注意：结构体变量的默认访问权限是公有的（public），而类的默认权限是私有的（private）。
 
-### 枚举 (Enums)
+## 枚举 (Enums)
 
 `Enums` 是枚举类型（Enumerated Type）的缩写，它的作用类似于布尔值，但具有无限的用户定义类型，它可以用于诸如“主屏幕”或“设置屏幕”等情况的标记。
 
@@ -2143,7 +2056,9 @@ int main(){
 #include "stdafx.h"
 #include <iostream>
 using namespace std;
+
 enum CurrentScreen{HOME, SETTINGS, CONTACTS, CALCULATOR};
+
 int main(){
     CurrentScreen phone1;
     // 修改我
@@ -2172,7 +2087,7 @@ You’re on the home page
 
 这段代码展示了你可以将条件结构与枚举结合，轻松地创建一个良好的分支结构。尝试修改注释的“修改我”枚举定义，并观察输出如何变化。
 
-### 联合体 (Unions)
+## 联合体 (Unions)
 
 联合体（Unions）是为了提供高效内存利用而设计的数据结构，它可以包含任意数量的成员变量，但一次只能存储一个变量的数据。因此，整个结构只占用最大成员变量的内存。
 
@@ -2201,11 +2116,13 @@ e.i = 4;
 #include "stdafx.h"
 #include <iostream>
 using namespace std;
+
 union Example{
     int i;
     int x;
     int y;
 };
+
 int main(){
     Example e;
     e.i = 4;
@@ -2228,16 +2145,19 @@ However, the union is 4 bytes
 #include "stdafx.h"
 #include <iostream>
 using namespace std;
+
 union Example{
     int i;
     int x;
     int y;
 };
+
 void Print_Union(Example e ){
     cout << "i: " << e .i << endl;
     cout << "x: " << e .x << endl;
     cout << "y: " << e .y << endl;
 }
+
 int main(){
     Example e;
     cout << "1" << endl;
@@ -2268,7 +2188,7 @@ y: 1
 
 如所见，当你改变其中一个值时，它们都变得相等，这是因为所有值都共享相同的内存位置，因此当其中一个改变时，所有的都会改变。
 
-### 可变参数列表 (Variable argument lists)
+## 可变参数列表 (Variable argument lists)
 
 可变参数列表允许无限参数的可能性。之前我们遇到过具有固定数量参数（可以传递到方法的变量）的函数，例如：
 
@@ -2286,15 +2206,12 @@ void Add(int numberOfVariables , ...){}
 
 其中 `numberOfVariables` 是传递的额外参数数量，注意这不包括该变量本身。这是必要的，因为 `va_list` 并不知道变量的总数，也不会跟踪它在列表中的位置。使用 `va_list` 需要使用几个函数：
 
-*   `va_start(va_list, numberOfVariables)`
-    *   获取传入的变量，并将第二个参数指定的数字赋值给第一个参数。
-*   `va_arg(va_list, type)`
-    *   从第一个参数指定的列表中获取下一个变量，并创建一个由 `type` 指定类型的变量。
-*   `va_end(va_list)`
-    *   清理列表。
-
-
-
+- `va_start(va_list, numberOfVariables)`
+  - 获取传入的变量，并将第二个参数指定的数字赋值给第一个参数。
+- `va_arg(va_list, type)`
+  - 从第一个参数指定的列表中获取下一个变量，并创建一个由 `type` 指定类型的变量。
+- `va_end(va_list)`
+  - 清理列表。
 
 我们现在可以使用这些函数来创建一个可工作的变长参数函数：
 
@@ -2362,8 +2279,8 @@ int main(){
 }
 ```
 
+## 命名空间
 
-### 命名空间
 Namespaces（命名空间）用于防止同名的变量和函数混淆。例如，`Run()` 函数可能适用于许多情况，因此需要一种方法来区分不同的 `Run()` 函数，这就是可以使用命名空间的地方。
 
 它们的定义方式如下，大括号内的所有函数和变量都是该命名空间的一部分：
@@ -2403,48 +2320,49 @@ int main(){
 }
 ```
 
-输出：
+
+
+```
 Initialisation started!
 Processing!
+```
 
 因此，命名空间提供了一种整洁划分代码的方式，并通过提供一种几乎可以标记代码块的方法提高了可读性。
 
 ### 问题
-1. 建议使用 `struct` 的情况是什么？
-2. `enum` 是什么缩写？
-3. `union` 的大小是如何决定的？
-4. 关于 `union` 的一个关键因素是什么？
+
+1. 建议使用`struct`的情况是什么？
+2. `enum`是什么缩写？
+3. `union`的大小是如何决定的？
+4. 关于`union`的一个关键因素是什么？
 5. 什么是变长函数（Variadic function）？
-6 ` `va_list` 包含什么？
+6. `va_list`包含什么？
 7. 为什么变长函数中需要指定参数数量？
-8. 为什么需要运行 `va_end()`？
+8. 为什么需要运行`va_end()`？
 9. 命名空间的基本作用是什么？
-10. 调用命名空间内部的函数时使用什么语法？假设你在命名空间 `Math` 内部调用函数 `Add()`
+10. 调用命名空间内部的函数时使用什么语法？假设你在命名空间`Math`内部调用函数`Add()`
 
 ### 答案
-1. 用于普通旧数据 (POD)。
-2. 举举类型 (Enumerated type)。
+
+1. 用于普通旧数据（POD）。
+2. 枚举类型（Enumerated type）。
 3. 它是最大成员变量的大小。
 4. 所有成员变量共享相同的内存位置，因此一次只有一个变量可以持有值。
 5. 一个具有可能无限数量参数的函数。
 6. 传递给函数的变量列表。
-7. 没有方法知道 `va_list` 的大小，因此你需要指定传递的参数数量。
-8. 它在变量列表使用后后执行清理工作。
+7. 没有方法知道`va_list`的大小，因此你需要指定传递的参数数量。
+8. 它在变量列表使用后执行清理工作。
 9. 以有意义的方式划分和标记变量及函数。
 10. `Math::Add()`
 
-
-
-
-
 ## 第 15 章：C++ 中的多线程应用
 
-如果你是 C++ 编程专家，或者在过去的五年里一直一直在编写软件，那么你很可能了解 Win32 线程。在使用 C++ 创建跨平台软件时，你遇到的最大挑战之一就是如何正确地处理线程。由于许多系统有不同的多线程处理方法，你的源代码可能会因为各种定义不同平台行为的预处理器条件而变得混乱。
+如果你是 C++ 编程专家，或者在过去的五年里一直在编写软件，那么你很可能了解 Win32 线程。在使用 C++ 创建跨平台软件时，你遇到的最大挑战之一就是如何正确地处理线程。由于许多系统有不同的多线程处理方法，你的源代码可能会因为各种定义不同平台行为的预处理器条件而变得混乱。
 
-C++ 有一种名为 `std::thread` 的机制。好处是，任何 C++ 编译器都可以实现这种线程。所以，如果你正被迫使用 `Dev-C++`，那么现在是时候考虑其他东西了。让我们假设你现在拥有一个可以帮助你而不是拖你后腿的编译器。在 C++ 语言中编写线程软件的最佳方法是使用 API。仅仅丢给你几行代码并让你自己去消化剩下的部分是不对的。
+C++ 有一种名为`std::thread`的机制。好处是，任何 C++ 编译器都可以实现这种线程。所以，如果你正被迫使用`Dev-C++`，那么现在是时候考虑其他东西了。让我们假设你现在拥有一个可以帮助你而不是拖你后腿的编译器。在 C++ 语言中编写线程软件的最佳方法是使用 API。仅仅丢给你几行代码并让你自己去消化剩下的部分是不对的。
 
 ### 什么是线程？
-网络上有许多关于线程的资源，阅读其中一些是有好处的。让我们回到主问题。线程支持软件在不同的处理器上同时且并行运行。嗯，这听起来很不错，对吧？虽然这是一好事，但它带来了一些问题。这使得在没有良好设计的情况下，很难考虑性能问题。如果你仍然不理解线程是什么以及它们为什么那么有用，那么你应该花时间读一些关于线程的简短文章。
+网络上有许多关于线程的资源，阅读其中一些是有好处的。让我们回到主问题。线程支持软件在不同的处理器上同时且并行运行。嗯，这听起来很不错，对吧？虽然这是一件好事，但它带来了一些问题。这使得在没有良好设计的情况下，很难考虑性能问题。如果你仍然不理解线程是什么以及它们为什么那么有用，那么你应该花时间读一些关于线程的简短文章。
 
 ### 消费者，生产者
 多线程最流行的例子之一是生产者-消费者模型。换句话说，这里有一个线程释放值供他人计算，而另一个线程接收这些值并进行使用。这是一个任何人都能理解的常规描述。
@@ -2455,16 +2373,16 @@ C++ 有一种名为 `std::thread` 的机制。好处是，任何 C++ 编译器�
 - `std::lock_guard`：它锁定作用范围内的互斥锁。一旦超出作用范围，它就会移除。
 - `std::thread`：显示执行的单个线程。
 
-该程序中的生产者将共享数据对象增加到 5，而主线程则增加数据对象，直到生产者线程定义了 5 为止。最有趣的是创建线程的方法，特别是当你想初始化一个 `std::thread` 时。做法是提供一个线程要执行的函数以及其函数参数。此外，全局互斥锁有助于保护数据免受多次修改。最后，使用 `{...}` 定义显式作用域，而 `std::lock_guard` 应该控制访问。
+该程序中的生产者将共享数据对象增加到 5，而主线程则增加数据对象，直到生产者线程定义了 5 为止。最有趣的是创建线程的方法，特别是当你想初始化一个`std::thread`时。做法是提供一个线程要执行的函数以及其函数参数。此外，全局互斥锁有助于保护数据免受多次修改。最后，使用`{...}`定义显式作用域，而`std::lock_guard`应该控制访问。
 
 ### 两个任务：一个进程
-如果你正在编写并行软件怎么办？该示例要求为两个独立的值并行构建一个不同的函数。这是使用 `Future` 对象来完成异步计算的最佳用例。
+如果你正在编写并行软件怎么办？该示例要求为两个独立的值并行构建一个不同的函数。这是使用`Future`对象来完成异步计算的最佳用例。
 
-`future` 是一个确保根据计算类型存在正确值的对象。这个对象类似于一个占位值。它帮助程序员开始计算并确认已产生的结果。准确地说，异步结果会产生 `future` 对象。`std::promise`、`std::async` 和 `std::packaged_task` 代表了允许实现 `get_future()` 方法的接口。
+`future`是一个确保根据计算类型存在正确值的对象。这个对象类似于一个占位值。它帮助程序员开始计算并确认已产生的结果。准确地说，异步结果会产生`future`对象。`std::promise`、`std::async`和`std::packaged_task`代表了允许实现`get_future()`方法的接口。
 
 - `std::async`：这是一种高级方法，为未来提供值并产生最小的灵活性。此外，它是实现异步计算最简单的方法。你需要记住，这种方法与其他对象不同。
 - `std::promise`：它向未来呈现一个值。
-- `std::packaged_task`：它是人们交付未来 值的最佳方式之一。
+- `std::packaged_task`：它是人们交付未来值的最佳方式之一。
 
 ## 第 16 章：与 bug 的作战
 
@@ -2480,18 +2398,14 @@ C++ 有一种名为 `std::thread` 的机制。好处是，任何 C++ 编译器�
 3. 区分预处理器符号和 C++ 符号。
 4. 在同一层级搜索代码块。
 
-
-
-
-
 此外，你必须为模块头开发一种标准格式，并提供与类、函数、作者-日期以及关于修改历史的相关信息。
 
 **提示**：所有负责单兵项目的程序员都应该使用相同的编码风格。用不同编码风格编写的程序会令人困惑并显得不专业。
 
 ### 开启警告和错误消息
-C++ 语言的语法提供了检查错误的能力。当编译器遇到难以解析的结构时，它除了显示消息外别无事事做。它会尝试同步并备份源代码。有时这个过程是成功的，但它不会创建可执行文件。这将迫使程序员处理所有的错误消息。
+C++ 语言的语法提供了检查错误的能力。当编译器遇到难以解析的结构时，它除了显示消息外别无他事可做。它会尝试同步并备份源代码。有时这个过程是成功的，但它不会创建可执行文件。这将迫使程序员处理所有的错误消息。
 
-尽管如此，一旦 C++ 程序发现了一个一个它可以运行但看起来很可疑的结构，它只会简单发送一条警告消息。这是因为 C++ 语言非常清楚你想要什么，所以它会继续运行并构建一个可执行文件，帮助你忽略警告。然而，如果你不想被打扰，可以禁用警告。
+尽管如此，一旦 C++ 程序发现了一个它可以运行但看起来很可疑的结构，它只会简单发送一条警告消息。这是因为 C++ 语言非常清楚你想要什么，所以它会继续运行并构建一个可执行文件，帮助你忽略警告。然而，如果你不想被打扰，可以禁用警告。
 
 **提示**：禁用警告是一个非常糟糕的主意。这就像断开汽车的引擎检查灯一样。记住，忽略问题不是解决方案。
 
@@ -2512,7 +2426,7 @@ C++ 语言的语法提供了检查错误的能力。当编译器遇到难以解�
 **提示**：对真实的错误使用异常。对于一个发送“某些事情不起作用”指示的函数抛出异常是无关的。
 
 ### 在删除所指向的内容后移除指针
-确保在删除指针所指向的内容后，移除了这些指针。你通过为指针分配一个 `nullptr` 值来实现这一点。你很快就会学到这一点。你可能会很容易发现自己在不知情的情况下使用了一个已返回给堆的内存块。程序在 99% 的时间里可能运行良好，但很难识别那 1% 内存块被分配且程序无法运行的实例。
+确保在删除指针所指向的内容后，移除了这些指针。你通过为指针分配一个`nullptr`值来实现这一点。你很快就会学到这一点。你可能会很容易发现自己在不知情的情况下使用了一个已返回给堆的内存块。程序在 99% 的时间里可能运行良好，但很难识别那 1% 内存块被分配且程序无法运行的实例。
 
 如果由于空了错误的指针并尝试使用它们来存储值，你的程序将立即崩溃。程序崩溃是一件坏事，但它也揭示了问题。问题确实存在，只是能否找到它的问题。
 
@@ -2520,7 +2434,7 @@ C++ 语言的语法提供了检查错误的能力。当编译器遇到难以解�
 当构造函数分配了在对象结束时应返回的资源时，请确保在类中定义了析构函数。一旦定义了析构函数，使其可见。
 
 ### 拷贝构造函数和重载赋值运算符
-如果你的类需要析构函数，那么它确实需要一个重载的赋值运算符加上拷贝构造函数。如果你的构造函数分配了如堆内存之类的资源，赋值运算符和默认拷贝构造函数将不会执行任何操作通过产生多个指针来产生问题。
+如果你的类需要析构函数，那么它确实需要一个重载的赋值运算符加上拷贝构造函数。如果你的构造函数分配了如堆内存之类的资源，赋值运算符和默认拷贝构造函数将不会执行任何操作，而是通过产生多个指针来产生问题。
 
 如果调用了这些对象的一个析构函数，它将返回资产。而当另一个拷贝的析构函数出现时，它就会搞乱一切。
 
@@ -2530,74 +2444,82 @@ C++ 语言的语法提供了检查错误的能力。当编译器遇到难以解�
 再次，在你调试程序时，随身携带一些原始数据，以帮助你找出程序运行时可能出现的任何奇怪行为。没有比监控每个运行中的函数更彻底的方法来完成完整检查了。
 
 ## 第 17 章：新版本：C++ 14
+
 C++ 14 于 2014 年 12 月发布。在发布之前，它经常被称为“C++1y”。C++14 为核心语言添加了大量的更新。在许多情况下，C++14 是在 C++11 添加的功能的基础上构建的。总的来说，这是一个精细得多的，对用户的影响较小。
 
 ### 返回类型推导
-C++11 开启了 lambda 表达式，并允许它们根据表达式确定返回类型。这个新版本为所有函数赋予了这种能力。需要使用 `auto` 来确定返回类型。
+C++11 开启了 lambda 表达式，并允许它们根据表达式确定返回类型。这个新版本为所有函数赋予了这种能力。需要使用`auto`来确定返回类型。
 
 ### 放宽限制的 constexpr
-C++11 还引入了 `constexpr` 声明函数的概念。这本质上是一个可以在编译时执行的函数。在 C++11 中，`constexpr` 函数只能有一个表达式。C++14 减少了版本 11 中存在的限制。这些函数现在能够包含以下内容：
+C++11 还引入了`constexpr`声明函数的概念。这本质上是一个可以在编译时执行的函数。在 C++11 中，`constexpr`函数只能有一个表达式。C++14 减少了版本 11 中存在的限制。这些函数现在能够包含以下内容：
 
-* 除了 `thread_local` 或 `static` 变量类型或任何未初始化的声明外的所有声明
-* 包括 `if` 语句和 `switch` 的条件
-* 任何循环语句，包括 `for` 或 `while`
+* 除了`thread_local`或`static`变量类型或任何未初始化的声明外的所有声明
+* 包括`if`语句和`switch`的条件
+* 任何循环语句，包括`for`或`while`
 
-
-
-
-在此版本的 C++ 中，禁止使用 `goto` 语句。
+在此版本的 C++ 中，禁止使用`goto`语句。
 
 ### 数字分隔符
 C++14 现在为用户提供了使用数字分隔符的选项。这仅仅是在数值字面量中使用单个单引号。这包括整数和浮点数。尽管这项功能并非翻天覆地，但对于阅读数字非常有帮助。分隔符不会改变数字的求值，除了可读性外，没有特殊的编码优势。下面的示例展示了如何使用它。
 
 ### 关键字：auto
-`auto` 关键字是 C++14 中的一个新特性。尽管它在 C++3 中就已经引入，但现在它有了不同的含义。它的目的是让编码变得更简单、更整洁且不易出错。以下是 `auto` 的用法示例及其等价写法。上面的示例用于替代：
+`auto`关键字是 C++14 中的一个新特性。尽管它在 C++3 中就已经引入，但现在它有了不同的含义。它的目的是让编码变得更简单、更整洁且不易出错。以下是`auto`的用法示例及其等价写法。上面的示例用于替代：
 
-使用 `auto` 也不对速度产生任何负面影响。这是因为 `auto`是在编译时推导的，而不是在运行时。与 C++11 不同，`auto` 现在可以与函数一起使用。你现在有了编写的能力：
-
-### 示例程序
-以下是 C++11 和 C++14 中使用 `auto` 关键字的示例。
-
-1) 这是该程序的 C++11 版本。
-C++14 版本如下：
-
-## 泛型 Lambda
-Lambda 函数在 C++11 中引入，当时它们需要被声明为具体类型。C++14 在使用这一要求上更加宽松。它允许将 lambda 参数声明为 `auto` 类型。
+使用`auto`也不对速度产生任何负面影响。这是因为`auto`是在编译时推导的，而不是在运行时。与 C++11 不同，`auto`现在可以与函数一起使用。你现在有了编写的能力：
 
 ```
 auto f = [](auto x){ return func(normalize(x)); };
 ```
 
-上述定义等价于以下伪代码：闭包的函数调用运算符如上所示。为了正确编写 lambda，`x` 必须被完美地转发给 `normalize`。它必须通过 `std::forward` 传递给 `normalize`。下面是一个泛型 lambda 基本用法的完整程序示例。运行上述代码的结果如下：
+### 示例程序
+以下是 C++11 和 C++14 中使用`auto`关键字的示例。
+
+1) 这是该程序的 C++11 版本。
+C++14 版本如下：
+
+## 泛型 Lambda
+
+Lambda 函数在 C++11 中引入，当时它们需要被声明为具体类型。C++14 在使用这一要求上更加宽松。它允许将 lambda 参数声明为`auto`类型。
+
+```
+auto f = [](auto x){ return func(normalize(x)); };
+```
+
+
+
+上述定义等价于以下伪代码：闭包的函数调用运算符如上所示。为了正确编写`lambda`，`x`必须被完美地转发给`normalize`。它必须通过`std::forward`传递给`normalize`。下面是一个泛型`lambda`基本用法的完整程序示例。运行上述代码的结果如下：
 
 ## 新标准库特性
-随着 C++14 的出现，新的标准库特性随之而来。这些特性包括：
+
+随着`C++14`的出现，新的标准库特性随之而来。这些特性包括：
 
 - 锁和共享互斥锁
 - 关联容器中的异构查找
 - 用户定义的标准字面量
 - 元组寻址
 
-
-
-
-这里是 `C++14` 提供的主要库功能列表，此外还有许多较小的库新增。
+这里是`C++14`提供的主要库功能列表，此外还有许多较小的库新增。
 
 ### 用户自定义字面量 (User Defined Literals)
-`C++14` 添加了许多后缀，用于指定定义字面量的类型。这些后缀的示例包括 `'s'` 或 `'st'`。这用于字符和字符串类型。给定示例的最后一行将报错错误。这是因为 `str` 将被确定为 `'const char*'` 类型，而 `str1` 将被确定为 `string`。以下后缀——'h'`、`min'`、`s'`、`ms'`、`us'`、`ns'` 用于表示不同的时间间隔类型。
+
+`C++14`添加了许多后缀，用于指定定义字面量的类型。这些后缀的示例包括`'s'`或`'st'`。这用于字符和字符串类型。给定示例的最后一行将报错错误。这是因为`str`将被确定为`'const char*'`类型，而`str1`将被确定为`string`。以下后缀——`'h'`、`'min'`、`'s'`、`'ms'`、`'us'`、`'ns'`用于表示不同的时间间隔类型。
 
 ### 二进制字面量 (Binary Literals)
-在 `C++14` 二进制字面量出现之前，像 `11111101` 这样的格式是不支持的。为了使用它们，需要将它们转换为支持的类型。下面的代码段展示了如何在编程中使用它们。二进制字面量以 `0b` 或 `0B` 开头，随后跟是一系列 0 和 1。在许多其他编程语言中也可以找到类似的语法。这些编程语言包括 `Java`、`Perl` 和 `Python`，它们都提供了对二进制字面量的支持。二进制字面量的类型为 `int`。在所有接受常量字面量的地方都可以使用它。
+
+在`C++14`二进制字面量出现之前，像`11111101`这样的格式是不支持的。为了使用它们，需要将它们转换为支持的类型。下面的代码段展示了如何在编程中使用它们。二进制字面量以`0b`或`0B`开头，随后跟是一系列0和1。在许多其他编程语言中也可以找到类似的语法。这些编程语言包括`Java`、`Perl`和`Python`，它们都提供了对二进制字面量的支持。二进制字面量的类型为`int`。在所有接受常量字面量的地方都可以使用它。
 
 ### 变量模板 (Variable Template)
-变量模板的设计目的是让编码更容易，并简化常量的定义和使用。变量模板本质上是一组变量的定义。变量模板是在声明变量的地方使用模板声明来创建的。这些只是 `C++14` 引入的特性。还引入了许多其他特性，但并不是重大的进展。`C++14` 包含的一些次要特性包括带尺寸的初始化（sized deal locations）和一些语法清理。尽管 `C++14` 的版本更新相比于 `C++11` 的重大更新，但它是必要的。
+
+变量模板的设计目的是让编码更容易，并简化常量的定义和使用。变量模板本质上是一组变量的定义。变量模板是在声明变量的地方使用模板声明来创建的。这些只是`C++14`引入的特性。还引入了许多其他特性，但并不是重大的进展。`C++14`包含的一些次要特性包括带尺寸的初始化（sized deal locations）和一些语法清理。尽管`C++14`的版本更新相比于`C++11`的重大更新，但它是必要的。
 
 ## 第 18 章：游戏设计
 
 ### 游戏设计简介
-到此时，你已经学会了如何在 `C++` 中完成很多事情，并且实际上已经学会了这本书所提供的所有内容。本单元专门用于制作一些你在互联网断开时可以玩玩的电脑游戏。你不会从这里学到很多，但这更多是一种获得经验的方式。这些游戏可以打时间，并在网络恢复之前玩起来很有趣。你将专注于易制作的游戏。每一次，代表性的游戏将更深入地关注复杂主题和用户关系。接下来的所有游戏都将是人机模式，所以你不需要担心带朋友一起玩。不过，你可以修改游戏以具有多人模式，但对于一个良好的基础草案来说，这不是一个大要求。
+
+到此时，你已经学会了如何在`C++`中完成很多事情，并且实际上已经学会了这本书所提供的所有内容。本单元专门用于制作一些你在互联网断开时可以玩玩的电脑游戏。你不会从这里学到很多，但这更多是一种获得经验的方式。这些游戏可以打时间，并在网络恢复之前玩起来很有趣。你将专注于易制作的游戏。每一次，代表性的游戏将更深入地关注复杂主题和用户关系。接下来的所有游戏都将是人机模式，所以你不需要担心带朋友一起玩。不过，你可以修改游戏以具有多人模式，但对于一个良好的基础草案来说，这不是一个大要求。
 
 ### 用户友好性 (User-Friendliness)
+
 用户友好性是评估你的程序易用程度时使用的术语。即使你做了一个非常复杂的程序，用户在使用时也应该有一个实际的体验。混乱的控制和有限的输入想法会让用户感到困惑，用户将不喜欢你的程序，你会感到难过，因为你的程序由于没人喜欢而失败了。这里只是让程序更具友好性的一个例子。假设你有一个程序来显示一些偶数，这里是程序运行时的样子。
 
 假设有人看到了那个程序。我们不能假设用户自动知道这些是偶数。一个可行的方案是说明这些是偶数。
@@ -2605,39 +2527,46 @@ auto f = [](auto x){ return func(normalize(x)); };
 现在看起来好一点了。这是让你的程序增色、使其看起来更酷炫的好方法。用户现在知道显示的是什么。记住保持这些信息简单简短。不要写长描述，但要清楚用户需要知道正在发生什么。
 
 ### 正反面 (Heads or Tails)
+
 这是你将制作的第一个游戏。它涉及一些你需要找回的基本技能。希望到这里你没有忘记任何东西。
 
 游戏基础：硬币有两个面。有一个正面和一个反面。稍后，硬币将被抛向空中并落在正面或反面。在投掷之前，你必须猜硬币会落在正面还是反面。硬币投出。如果落在你猜的一面，你就赢了游戏。否则你就输了。
 
-你所有的实际代码都将在 `main` 方法中实现。不过，如果你真的想，可以将其将其放在 `function` 中。
+你所有的实际代码都将在`main`方法中实现。不过，如果你真的想，可以将其将其放在`function`中。
 
-从你需要的逻辑开始。由于你需要东西来决定硬币落在正面还是反面，随机数生成器效果最好，因为它产生随机值，就像硬币会落在随机的一面一样。因此，在顶部包含 `Time` 和 `Stdlib` 库。现在让我们用问候欢迎用户，让他们知道正在玩游戏。`getch()` 是暂停程序直到用户按下“回车”的命令。在上方，你需要包含 `Conio` 库（`<conio.h>`），因为它持有 `getch()` 命令。否则，这是一个启动简单“基于文本”游戏的得当方法。
+从你需要的逻辑开始。由于你需要东西来决定硬币落在正面还是反面，随机数生成器效果最好，因为它产生随机值，就像硬币会落在随机的一面一样。因此，在顶部包含`Time`和`Stdlib`库。现在让我们用问候欢迎用户，让他们知道正在玩游戏。`getch()`是暂停程序直到用户按下“回车”的命令。在上方，你需要包含`Conio`库（`<conio.h>`），因为它持有`getch()`命令。否则，这是一个启动简单“基于文本”游戏的得当方法。
 
-现在是时候玩真正的游戏了。询问玩家他或她选择正面还是反面，让用户输入选择。现在，决定硬币落在正面还是反面。这是通过随机数生成器完成的。即使数字并不一定代表硬币的实际面。你可以自己分配。在这种情况下，数字 1 是正面，2 是反面。所以制作一个在 1 和 2 之间的随机数生成器。抛掷硬币后，现在是决定胜者的时间了。这是通过告诉用户选了什么以及电脑选择了什么来完成的。注意你必须一直输入你的选择，但可以编辑程序以接受如‘Heads’、‘HEADS’甚至‘Heads’的结果。
+现在是时候玩真正的游戏了。询问玩家他或她选择正面还是反面，让用户输入选择。现在，决定硬币落在正面还是反面。这是通过随机数生成器完成的。即使数字并不一定代表硬币的实际面。你可以自己分配。在这种情况下，数字1是正面，2是反面。所以制作一个在1和2之间的随机数生成器。抛掷硬币后，现在是决定胜者的时间了。这是通过告诉用户选了什么以及电脑选择了什么来完成的。注意你必须一直输入你的选择，但可以编辑程序以接受如`'Heads'`、`'HEADS'`甚至`'Heads'`的结果。
 
 ### 石剪刀布 (Rock Paper Scissors)
-这与你刚刚制作的游戏非常相似，但有一些复杂性。游戏基础：两个玩家都有机会选择石头、纸或剪刀。同时，每个玩家用手势显示。玩家的选择决定了谁胜负。例如，如果玩家 1 选择石头，玩家 2 选择剪刀，玩家 1 将赢，因为石头赢剪刀。如果两个玩家选择相同的物体，游戏平局结束。
+
+这与你刚刚制作的游戏非常相似，但有一些复杂性。游戏基础：两个玩家都有机会选择石头、纸或剪刀。同时，每个玩家用手势显示。玩家的选择决定了谁胜负。例如，如果玩家1选择石头，玩家2选择剪刀，玩家1将赢，因为石头赢剪刀。如果两个玩家选择相同的物体，游戏平局结束。
 
 ### 猜数字 (Guess the Number)
-这是你从书中完成的最后一个项目。游戏基础：一个人想一个 1-100 之间的随机数，另一个人要在 10 次机会内猜中。每次如果不正确，都会告诉用户高还是低，如果玩家在 10 次内猜失败，就输了。在这种情况下，你必须猜电脑选择的数字。从大纲开始。另一种方法是让用户输入。创建一个变量来告诉玩家猜了多少次。现在从 0 开始。在游戏中会有某种循环。重复命令让用户再次尝试，直到他们用完机会。判断数字是高、低还是等于隐藏数字涉及到条件语句。如果用户猜对了，就不需要使用循环，将使用 `break` 语句。回来看，循环是这样的。你需要检测玩家是通过猜数字赢了，还是用完机会输了。
+
+这是你从书中完成的最后一个项目。游戏基础：一个人想一个1-100之间的随机数，另一个人要在10次机会内猜中。每次如果不正确，都会告诉用户高还是低，如果玩家在10次内猜失败，就输了。在这种情况下，你必须猜电脑选择的数字。从大纲开始。另一种方法是让用户输入。创建一个变量来告诉玩家猜了多少次。现在从0开始。在游戏中会有某种循环。重复命令让用户再次尝试，直到他们用完机会。判断数字是高、低还是等于隐藏数字涉及到条件语句。如果用户猜对了，就不需要使用循环，将使用`break`语句。回来看，循环是这样的。你需要检测玩家是通过猜数字赢了，还是用完机会输了。
 
 ### 龙之对决 (Dragon Clash)
-Dragon Clash 是作者制作的游戏。这是一个基于文本的战斗游戏，其中两条龙——光龙和暗龙交替攻击对方或自己，直到其中一个没有了力量。这在本地商店可能值 60 美元，但玩起来应该很有趣。这个整个游戏花了他几天，想想创建这种东西花了多久。关于这个没有官方教程。你将得到一个完整的游戏。
+
+`Dragon Clash`是作者制作的游戏。这是一个基于文本的战斗游戏，其中两条龙——光龙和暗龙交替攻击对方或自己，直到其中一个没有了力量。这在本地商店可能值60美元，但玩起来应该很有趣。这个整个游戏花了他几天，想想创建这种东西花了多久。关于这个没有官方教程。你将得到一个完整的游戏。
 
 ## 第 19 章：项目：通讯录 (Project: Agenda)
-对于这个项目，我们将模拟一个电话通讯录，就像你家里那种，并用它记录你需要的所有重要号码，但我们将使用 `C++` 实现。对于每个联系人，将存储他们的名字和电话（你可以添加任意数量的字段）。此外，我们将使用 `C++` 标准模板库的新强大特性：`vector`。
 
-使用 vector
-想象这个通讯录将有 100 个电话号码。你会为数字声明 100 个变量吗？再为名字声明 100 个？当然不。这里是 `vector` 完美适用的地方。通过 `vector`，你可以插入任意数量的元素。在 `C++` 中使用 `vector` 必须在代码中添加 `<vector>` 库。我们还需要 `iostream` 和 `string`。
+对于这个项目，我们将模拟一个电话通讯录，就像你家里那种，并用它记录你需要的所有重要号码，但我们将使用`C++`实现。对于每个联系人，将存储他们的名字和电话（你可以添加任意数量的字段）。此外，我们将使用`C++`标准模板库的新强大特性：`vector`。
+
+使用`vector`
+
+想象这个通讯录将有100个电话号码。你会为数字声明100个变量吗？再为名字声明100个？当然不。这里是`vector`完美适用的地方。通过`vector`，你可以插入任意数量的元素。在`C++`中使用`vector`必须在代码中添加`<vector>`库。我们还需要`iostream`和`string`。
 
 ```cpp
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 ```
 
-在 `namespace std` 之后，我们将声明我们的 `vector`。它们将位于 `main` 函数之外。在 `main`（或任何 `function`）之外声明变量意味着该变量是全局的。换句话说，任何人都可以对其进行读写。
+在`namespace std`之后，我们将声明我们的`vector`。它们将位于`main`函数之外。在`main`（或任何`function`）之外声明变量意味着该变量是全局的。换句话说，任何人都可以对其进行读写。
 
 ```cpp
 vector<string> Names;
@@ -2723,4 +2652,3 @@ void SearchByName(){
     }
 }
 ```
-

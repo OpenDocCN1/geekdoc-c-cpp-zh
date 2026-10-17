@@ -1,34 +1,11 @@
+
 # 计算机工程师 Ruchi Sanghvi (STEM 拓驱传记)
-
-
-
-
-
-
-
-
-
 
 ![](img/ae9e705c714cd97fa29230fa02d2c484_0_0.png)
 
-
 已从系列中退出
 
-
-
-
 送给 Caleb，我的计算机天才
-
-
-
-
-
-
-
-
-
-
-
 
 # 第 1 章
 
@@ -76,7 +53,7 @@ Ruchi 的父亲知道她的梦想，但他警告她，生意场是“男人的�
 
 Ruchi 飞往加利福尼亚州的硅谷。这个地区已经成为技术产业的中心。
 
-#  2 章
+# 第 2 章
 
 > iStockphoto.com/Kameleon007, p. 8; iStockphoto.com/albacazar, p. 9; iStockphoto.com/JasonDoi, p. 10; Steve Jennings/Getty Images Entertainment, pp. 12, 24; Justin Sullivan/Getty Images, p. 13; © Gilles Mangasson/Getty Images, p. 14; Washington Post/Getty Images, p. 15; Independent Picture Service, pp. 16, 20; © Ed Ou/Getty images, p. 18; AP Photo/Eric Risberg, p. 21; Steve Jennings/Wiremage/Getty Images, p. 22; Ariel Zambichel/WIRED/Const Nast Collection, p. 26.
 
@@ -91,10 +68,6 @@ Ruchi 安排了在 Facebook 的面试，但当她到达时没人。有人在两�
 > “当我开始在 Facebook 工作时，那里只有 20 个人。我看到它发展到有一千名员工，用户从五百万增长到十多亿。我见证了它从一个为大学生的服务演变为为全世界服务的服务。”
 
 —Ruchi Sanghvi
-
-
-
-
 
 # 第3章
 
@@ -133,6 +106,7 @@ Ruchi 安排了在 Facebook 的面试，但当她到达时没人。有人在两�
 ## 技术面对谈
 
 > “1月25日，9万万人同意参加埃及一天的革命，他们是使用 Facebook 进行组织的。我做最疯狂的梦也从未想象过，我构建的产品会以如此深刻的方式影响世界。”
+
 — 鲁奇·桑维（Ruchi Sanghvi）
 
 这一巨大的变化激励了更多人开始使用这个社交网站。它还通过连接为不同政治事业而斗争的人创造了历史。例如，2011年，埃及的数千万人使用 Facebook 组织抗议。他们想要一个新的、更公平的政府。在 Facebook 的帮助下，他们的抗议引发了被称为“阿拉伯之春”的中东革命。桑维还注意到，自己国家的女性正在利用 Facebook 为印度的平等权利权发声。在不知不觉中，桑维帮助连接了那些试图改变世界的人。
@@ -152,11 +126,8 @@ Ruchi 安排了在 Facebook 的面试，但当她到达时没人。有人在两�
 ## 技术面对谈
 
 > “等等，我不再受灵感了。我不想按照别人对成功的定义来生活。”
+
 — 鲁奇·桑维（Ruchi Sanghvi）
-
-
-
-
 
 ## JUSTWORKS（大有异工）
 
@@ -171,40 +142,48 @@ Sanghvi 多年来一直高强度工作。2013 年秋季，她决定休息一下�
 ![](img/ae9e705c714cd97fa29230fa02d2c484_28_0.png)
 
 ### 移民改革
+
 作为一名美国移民，Sanghvi 面临着许多障碍。她需要政府特殊许可才能在美国上大学。为了毕业后留在该国，她必须有一份稳定的工作。但对于移民来说，找工作可能很困难。许多小型公司不愿意填写雇用移民所需的额外表格。Sanghvi 在 Facebook 的工作非常幸运。现在她想帮助其他移民。2013 年，她请求美国参议院通过新法律消除这些障碍，让美国移民获得寻找他们想要工作的自由。
 
 Sanghvi 开始投资其他初创公司。这些公司正在开发让 Sanghvi 感到兴奋的新技术。其中一家初创公司名为 Codeacademy。这个免费网站以有趣且引人胜的方式教人们如何编写计算机代码。
 
 Sanghvi 一生都在冒险并不断推自己去尝试新事物。她展示了人凭借勇气和努力可以成就什么。现在的问题是，Sanghvi 下一步将取得什么成就？
 
-
 ### 1982
+
 Ruchi Sanghvi 于 1 月 20 日出生于印度浦拉那。
 
 ### 2000
+
 Ruchi 离开印度，前往宾夕法尼亚州匹兹堡堡的卡内基基梅梅隆大学留学。
 
 ### 2005
+
 Sanghvi 获得计算机工程硕士学位毕业。同年秋季，她在 Facebook 找到了一份工作。
 
 ### 2006
+
 Sanghvi 帮助推出了 Facebook 新闻动态（News Feed），这吸引了许多新用户访问该网站。
 
 ### 2007
+
 Sanghvi 领导了 Facebook 平台（Platform）的开发和发布，允许第三方开发者为 Facebook 创建应用。
 
 ### 2008
+
 Sanghvi 领导了 Facebook Connect 的开发和发布，这是 Facebook 平台的一部分。
 
 ### 2011
+
 Sanghvi 和她的丈夫创立了自己的公司 Cove。Sanghvi 因其在 Facebook 的工作获得了技术伙伴奖（TechFellow Award）。
 
 ### 2012
+
 Sanghvi 和她的丈夫将 Cove 卖给了 Dropbox，Sanghvi 成为运营副总裁。
 
 ### 2013
-Sanghvi 决定离开 Dropbox 的工作，探索新的职业机会。
 
+Sanghvi 决定离开 Dropbox 的工作，探索新的职业机会。
 
 - 6 Sophie Moura, "Ruchi Sanghvi: 下一个马克·扎克伯格," Marie Claire, 2010, 2014 年 5 月 5 日 访问, http://www.marieclaire.com/career-money/advice/ruchi-sanghvi.
 
@@ -218,31 +197,37 @@ Sanghvi 决定离开 Dropbox 的工作，探索新的职业机会。
 
 - 25 同上。
 
-
 **applications**（应用程序）
+
 运行在互联网、计算机或移动设备上的软件
 
 **hardware**（硬件）
+
 用于计算机的硬件和软件
 
 **cloud storage**（云存储）
+
 在远程位置存储计算机数据
 
 **databases**（数据库）
+
 组织过的计算机数据集合
 
 **Silicon Valley**（硅谷）
+
 加利福尼亚州旧金山以南的科技中心
 
 **code**（代码）
+
 计算机程序的一组指令
 
 **third-party developers**（第三方开发者）
+
 为其他公司开发软件的个人和公司
 
 **computer engineering**（计算机工程）
-设计的科学
 
+设计的科学
 
 ### 书籍
 
@@ -255,37 +240,57 @@ Woster, Patricia. 《Flickr 联合创始人和网络社区创建者 Caterina Fak
 ### 网站
 
 Ruchi 关于移民改革
+
 http://www.fwd.us/testimony
+
 观看 Ruchi Sanghvi 向美国国会就美国移民问题发表的演讲。
 
 http://forgirlisinscience
+
 了解更多 Ruchi Sanghvi 以及 STEM 领域的女性。
 
 Ruchi Sanghvi：从 Facebook 到面对未知
+
 http://www.inktalks.com/discover/75/ruchi-sangivi-from-facebook-to-the-unknown
+
 听 Ruchi Sanghvi 克服恐惧和冒险。
 
 ![](img/ae9e705c714cd97fa29230fa02d2c484_32_0.png)
 
-
 Dropbox, 26
 
 埃及, 17
+
 Facebook, 4–5, 11–17, 18–21, 23, 25
+
 Facebook Connect, 21
+
 Facebook 新闻动态, 15–16
+
 Facebook 平台, 20
+
 移民改革, 27
+
 印度, 5–7, 19
+
 纽约, 9
+
 宾夕法尼亚州, 7
+
 抗议, 17–18
+
 硅谷, 10
+
 社交网络, 11–17
+
 初创公司, 23, 25
+
 技术伙伴奖, 22–24
+
 技术, 5, 26, 28
+
 女性权利, 17
+
 扎克伯格, Mark, 13–14
 
 # 关于作者
@@ -293,5 +298,3 @@ Facebook 平台, 20
 Laura Hamiltonman 为青少年写过许多纪书籍。她喜欢描写像 Ruchi Sanghvi 这样塑造世界的人。
 
 33029100393602
-
-

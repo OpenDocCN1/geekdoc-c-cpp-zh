@@ -1,97 +1,59 @@
+
 # Professional Team Foundation Server 2012 高级指南
-
-
-
-
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
 Ed Blankenship
+
 Martin Woodward
+
 Grant Holliday
+
 Brian Keller
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_4_0.png)
 
-
+www.wiley.com
 
 www.wiley.com
 
+## 致谢
 
-
-www.wiley.com
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-致谢
-
-执行编辑
+### 执行编辑
 - Neil Elliott
 
-制作经理
+### 制作经理
 - Tim Tate
 
-项目编辑
+### 项目编辑
 - Christina Haviland
 
-副出版商
+### 副出版商
 - Mike Minatelli
 
-技术编辑
+### 技术编辑
 - Katie Crocker
 
-拷贝编辑
+### 拷贝编辑
 - Rosemarie Graham
 
-索引
+### 索引
 - David Mayhew
-
 - Ashley
 
-封面设计
+### 封面设计
 - Ryan Sneed
 
-封面图片
+### 封面图片
 - Steve Pepple / iStockphoto
 
-业务经理
+### 业务经理
 - Amy Knies
 
-营销经理
+### 营销经理
 - Ashley Zurcher
 
-致谢
+### 致谢
 - Ed Blankenship
 - Martin Woodward
 - Grant Holliday
@@ -109,9 +71,6 @@ Martin Woodward 是微软 Visual Studio Team Foundation Server 的高级产品�
 
 Grant Holliday 是微软服务澳大利亚的首席现场工程师（PFE）。作为 PFE，他与客户合作对 Team Foundation Server 进行主动健康检查和工作坊。在担任这一职位之前，他在华盛顿州里奇兰了三年，担任 Visual Studio Team Foundation 产品组的产品经理。他负责微软内部 TFS 服务器的部署，包括开发部门（Developer Division）使用的最大、最繁忙的 TFS 服务器。Grant 还参与了 Team Foundation Service 在 Windows Azure 平台上运行的早期阶段。Grant 通过他的博客 http://blogs.msdn.com/granth 和活动行业分享他的见解。
 
-
-
-
 # 关于作者
 
 STEVEN T. JEAN 是 Imagenet（前身为 Notion Solutions）的高级 ALM 顾问，在微软技术前沿工作了 20 年。他是微软 Visual Studio ALM 领域的专家，也是 Team Foundation Server (TFS) 的认证专业人士。他专注于各种 ALM 过程、工具以及在用户小组中讨论的话题。在空闲时间，他喜欢与妻子和女儿待在一起、旅行和摄影。你可以在他的博客 http://sstjean.blogspot.com 找到他，他的 Twitter 账号是 @SteveJean。Steven 也是这本书的技术编辑之一。
@@ -124,7 +83,7 @@ STEVEN T. JEAN 是 Imagenet（前身为 Notion Solutions）的高级 ALM 顾问�
 
 最后，我想感谢我的妻子 Catherine。在很多方面（无论大小），我都欠 Catherine 许多。我知道在纽卡斯尔那个美好的日子里，她同意成为我的妻子并签署了“无论疾病贫穷”，但我确信，如果我们的誓言是“无论疾病贫穷，历经四本书的创作，以及由于丈夫不理解工作与生活平衡而错过的无数次夜晚和假期”，她可能会重新考虑的。然而，幸运的是，她是一个信守承诺的女性。我的目标是在余生中尽力让她理解我我是有多么感激。为了这一切。
 
- — ED BLANKSHIP
+— ED BLANKSHIP
 
 **首先，我想感谢**我的合著者 Ed、Grant 和 Brian，让我能够帮助他们完成这本书。我还想感谢 Steve Je 的帮助以及对细节的关注。我很难管理一群比我这些人更了解 Team Foundation Server 广度的人士，与他们所有人工作是一件愉快的事。
 
@@ -142,252 +101,111 @@ MARTIN WOODWARD
 
 GRANT HOLLIDAY
 
+## 引言
 
-引言
 xxvii
 
+## 引言
 
-引言
 xxvii
 
 3
 
 * 并行开发 7
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 你需要的内容
-# 安装 Team Foundation Server
-## 配置 Team Foundation Server
-# 创建你的项目
 
+# 安装 Team Foundation Server
+
+## 配置 Team Foundation Server
+
+# 创建你的项目
 
 * Team Explorer 33
 
-
-
-
-
-
-
-
-
 - 出错时的恢复 (Recovering When Things Go Wrong) 124
 
-
 - 从 Team Foundation Server 导入 135
+
 - 通过命令行使用 Team Foundation Server 版本控制 137
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 分支关系 195
 
-
 - 使用 Team Foundation Server 管理产物 235
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 自定义工作流变量 440
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 域组 580
+
 - 本地组 580
 
 - 服务器权限 584
+
 - 工作项跟踪 587
+
 - 构建权限 594
 
 - 拒绝、允许和取消权限 595
+
 - 避免授予单个用户权限 596
 
 - 命令行工具 597
 
-
-
-
 - 动态管理视图 (DMV) 601
+
 - SQL 等待类型 607
 
 - 命令日志 610
+
 - 性能计数器 614
+
 - 客户端性能跟踪 616
+
 - 存储使用情况 619
 
 - 性能分析日志 (PAL) 622
+
 - 用于 System Center Operations (SCOM) 的 Team Foundation Server 管理包 624
 
-
-
 # 软件 628
-# 架构 630
-# 测试 631
 
+# 架构 630
+
+# 测试 631
 
 # 维护 652
 
 # 摘要 655
 
-
 - 升级计划 658
+
 - 升级需求 660
+
 - Visual Studio 662
+
 - 升级工具 663
+
 - 团队升级 665
+
 - 团队 670
+
 - 部署环境 672
 
-
-
 - 流量 678
+
 - 桌面 681
+
 - 扩展 687
 
-
 - 使用 698
+
 - 连接 700
+
 - 类型 702
+
 - 扩展 705
 
-
-
 # 摘要 724
-
 
 # 引言
 
@@ -396,9 +214,6 @@ xxvii
 从 2005 版本开始，微软引入了一项名为 Team Foundation Server 的新产品来补充其开发产品。现在，第四个版本的 Team Foundation Server 2012 随着过去的投入而不断成长，并完美契合 Visual Studio 生命周期管理 (ALM) 产品族。
 
 正如你将发现的，Team Foundation Server 是管理项目和发布的大型产品。本书的作者结合了自 Team Foundation Server首次发布以来的经验，记录了他们在过程中学到的技巧。作者的背景非常多样：管理 Team Foundation Server 环境、为 .NET 开发团队设计协作组件、推广 Visual Studio 和 Team Foundation Server、在软件开发公司管理发布，以及帮助客户利用 Team Foundation Server 解决现实问题的咨询背景。
-
-
-
 
 # 引言
 
@@ -496,10 +311,6 @@ Team Foundation Server 和 Visual Studio 包含了许多新的测试功能。你
 
 如果你处于管理 Team Foundation Server 实例的职位，本书为执行该角色提供了大量优质信息。在书的第一部分，你可能从阅读第 2 章“规划部署”开始，了解设置 Team Foundation 环境的要求。然后你可以通过第 3 章“安装与配置”安装新服务器。如果你是从早期版本的 Team Foundation Server 升级，在开始升级过程之前，你可能希望先阅读第 25 章“从早期版本升级”。
 
-
-
-
-
 # 引言
 
 - 第 23 章——监控服务器健康与性能”
@@ -519,26 +330,33 @@ Team Foundation Server 和 Visual Studio 包含了许多新的测试功能。你
 
 ## 使用本书的准备工作
 
+
+
 为了完成书中的许多实操示例，拥有一个 Team Foundation Server 2012 环境或可以用于测试产品中不同功能的 Team Foundation Service 账户将非常有帮助。你并不需要专门的硬件，因为你现在可以在 Windows 8 和 Windows 7 等客户端操作系统上安装 Team Foundation Server 2012。不用担心设置和配置新的 Team Foundation Server 2012 环境，因为你将在第 2 章和第 3 章学习相关知识。
 
 第 1 章讨论了获取 Team Foundation Server 的几种方案，包括用于演示目的的完整虚拟机。第 4 章还讨论了在本书中所需的连接到你的 Foundation Server 环境的不同工具。
 
 示例的源代码可以从 Wrox 网站下载：
-http://www.wrox.com/remitle.cgi?isbn=9781118314098
+
+`http://www.wrox.com/remitle.cgi?isbn=9781118314098`
 
 ## 进一步学习
 
 每位作者都会定期撰写关于 Team Foundation Server 和其他 Visual Studio 产品的技术文章，这些文章可能对你的进一步学习有所帮助。欢迎查看作者的博客站点，并在你喜欢的 RSS 阅读器中订阅它们。
 
-- Ed Blankenship—www.edssquared.com
-- Martin Woodward—www.woodwardweb.com
-- Grant Holloway—http://blogs.msdn.com/b/granth
-- Brian Keller—http://blogs.msdn.com/b/briankel
+- Ed Blankenship—`www.edssquared.com`
+
+- Martin Woodward—`www.woodwardweb.com`
+
+- Grant Holloway—`http://blogs.msdn.com/b/granth`
+
+- Brian Keller—`http://blogs.msdn.com/b/briankel`
 
 此外，我们还推荐你关注以下两个博客和 RSS Feed送，以获取所有新闻和更新：
 
-- Brian Harry—http://blogs.msdn.com/b/bharry
-- Visual Studio ALM 产品团队—http://blogs.msdn.com/b/visualstudio
+- Brian Harry—`http://blogs.msdn.com/b/bharry`
+
+- Visual Studio ALM 产品团队—`http://blogs.msdn.com/b/visualstudio`
 
 ## 持续的产品更新与发布计划
 
@@ -546,7 +364,7 @@ http://www.wrox.com/remitle.cgi?isbn=9781118314098
 
 需要记住的是，你要确保安装了 Visual Studio 产品的开发机器以及你的 Team Foundation 服务器始终保持最新版本。本书是针对发布版本编写的，包含了第一季度更新中的内容和功能。
 
-你可以在 http://aka.ms/TFSShippingCadence 获取更多关于 Visual Studio 和 Team Foundation Server 这种新发布节奏的信息。
+你可以在 `http://aka.ms/TFSShippingCadence` 获取更多关于 Visual Studio 和 Team Foundation Server 这种新发布节奏的信息。
 
 ## 惯例
 
@@ -558,64 +376,79 @@ http://www.wrox.com/remitle.cgi?isbn=9781118314098
 | NOTE | 注释表示当前讨论的备注、提示、暗示、技巧或旁白。 |
 
 ### 侧边栏
+
 对当前讨论的旁注以如下方式缩进。
 
 关于文中的样式：
 
 - 我们在引入新术语和重要词汇时会进行高亮显示。
-- 我们这样显示按键操作：Ctrl+A。
-- 我们在文中这样显示文件名、URL 和代码：例如：persistence.properties。
+
+- 我们这样显示按键操作：`Ctrl+A`。
+
+- 我们在文中这样显示文件名、URL 和代码：例如：`persistence.properties`。
+
 - 我们通过两种方式展示代码：
+
   我们使用等宽字体。
+
   我们使用加粗来强调重要内容。
 
 ## 源代码
 
 在你阅读本书时，你可以在此处找到代码：
-http://www.wrox.com/remitle.cgi?isbn=9781118314098
+
+`http://www.wrox.com/remitle.cgi?isbn=9781118314098`
 
 如果你在书中发现任何错误，请通过以下地址告诉我们：
-http://wrox.com/contact/techsupport
+
+`http://wrox.com/contact/techsupport`
 
 ## 勘误表
 
 我们尽力确保书中没有错误。然而，没有人是完美的，错误在所难免。如果你在其中一书中发现错误，我们将非常感谢你的反馈。通过提交勘误表，你帮助我们提供更高质量的内容。
 
 要查找本书的勘误表，请访问：
-http://www.wrox.com/remitle.cgi?isbn=978111831498
+
+`http://www.wrox.com/remitle.cgi?isbn=978111831498`
 
 ## P2P.WROX.COM
 
-关于作者和同行的讨论，请加入 http://p2p.wrox.com。论坛是一个基于 Web 的系统，可以在其中发布与 Wrox 书籍及相关技术的消息，并与其他读者互动。论坛提供了订阅功能，当有新帖子时会发送电子邮件。Wrox 的作者、编辑、其他行业专家和同行都在这些论坛中。
+关于作者和同行的讨论，请加入 `http://p2p.wrox.com`。论坛是一个基于 Web 的系统，可以在其中发布与 Wrox 书籍及相关技术的消息，并与其他读者互动。论坛提供了订阅功能，当有新帖子时会发送电子邮件。Wrox 的作者、编辑、其他行业专家和同行都在这些论坛中。
 
 加入论坛，请按照以下步骤操作：
 
-1. 访问 http://p2p.wrox.com 并点击 Register 链接。
+1. 访问 `http://p2p.wrox.com` 并点击 Register 链接。
+
 2. 阅读使用条款并点击 Agree。
+
 3. 完成加入所需的信息以及你想提供的任何可选信息，然后点击 Submit。
+
 4. 你将收到一封电子邮件，说明如何验证你的账户并完成加入流程。
 
 > NOTE 你可以在不加入 P2P 的情况下阅读论坛消息，但为了发布自己的消息，你必须加入。
 
-
-
-
-
 ## 第一部分
+
 ## 入门
 
 - 第 1 章：介绍 Team Foundation Server 2012
+
 - 第 2 章：规划部署
+
 - 第 3 章：安装与配置
+
 - 第 4 章：连接到 Team Foundation Server
 
 ## 1
-介绍 Team Foundation Server 2012
+
+### 介绍 Team Foundation Server 2012
 
 本章内容概览：
 
 - 了解 Team Foundation Server 2012
+
 - 了解 Team Foundation Server 2012 的新功能
+
 - 获取 Team Foundation Server 2012
 
 本章将向你介绍 Microsoft Visual Studio Team Foundation Server 2012。在这里，你将学习它是什么、使用它时所需的概念，以及如何获取它。
@@ -633,12 +466,19 @@ http://www.wrox.com/remitle.cgi?isbn=978111831498
 Team Foundation Server 在一个非常紧凑的产品中为你的软件开发团队提供了核心协作功能。Team Foundation Server 提供的功能包括：
 
 - 项目管理
-- 工作项跟踪 (WIT)
+
+- 工作项跟踪 `WIT`
+
 - 版本控制
+
 - 测试用例管理
+
 - 编译自动化
+
 - 报告
+
 - 实验室与环境管理
+
 - 反馈管理
 
 本书对这些主题中的每一个都进行了广泛的探讨。
@@ -651,9 +491,9 @@ Team Foundation Server 是一种专为软件工程团队设计的服务器产品
 
 Team Foundation Server 在设计时考虑了扩展性。它可以集成一个全面的 API，使其能够作为“一等公民”与外部工具集成。微软使用 .NET 编程模型和事件系统来构建 Team Foundation Server，以及客户端与 Visual Studio 的集成。
 
-Team Foundation Server 有许多竞争对手，包括其他企业级应用生命周期管理 (ALM) 系统和特定用途的产品（如源代码控制系统）。在产品中提供所有不同系统的主要优势在于 Team Foundation 充分地整合了这些不同的系统。这允许开发工具领域实现真正的创新，正如你在这一最新版本中提供的几个新工具中会注意到的那样。你不再需要担心自己去整合这些系统，而是利用微软已经为你完成的工作。
+Team Foundation Server 有许多竞争对手，包括其他企业级应用生命周期管理 `ALM` 系统和特定用途的产品（如源代码控制系统）。在产品中提供所有不同系统的主要优势在于 Team Foundation 充分地整合了这些不同的系统。这允许开发工具领域实现真正的创新，正如你在这一最新版本中提供的几个新工具中会注意到的那样。你不再需要担心自己去整合这些系统，而是利用微软已经为你完成的工作。
 
-> 注意：Visual Studio 公司副总裁 Jason Zander 在一篇最初关于 Team Foundation Server 2010 的博客文章中很好地说明了这一点。你可以在 http://aka.ms/IntegratedALMSSolution 找到该博客文章。
+> 注意：Visual Studio 公司副总裁 Jason Zander 在一篇最初关于 Team Foundation Server 2010 的博客文章中很好地说明了这一点。你可以在 `http://aka.ms/IntegratedALMSSolution` 找到该博客文章。
 
 当我们比较目前市场上的企业产品时，你会发现 Team Foundation Server 设计得非常易于定制和扩展。Team Foundation Server 确保使用任何开发平台的开发者都可以参与并使用 Team Foundation Server，包括 Visual Studio、基于 Eclipse 的开发、Xcode 等许多平台。
 
@@ -663,26 +503,23 @@ Team Foundation Server 有许多竞争对手，包括其他企业级应用生命
 
 关于工作空间，这些新功能将在后续章节中详细介绍。
 
-## 版本控制
+### 版本控制
 
 如果你使用过旧版本的 Team Foundation Server，你可能对最新版本中的新功能感到好奇。正如正如本书所展示的，这些新功能将贯穿始终。
 
 Team Foundation Server 的一个目标是极大地改进开发人员的体验，例如在 Visual Studio 2012 中引入的改进。
 
-### 代码审查
+#### 代码审查
 
 Team Foundation Server 2012 还引入了一套内置的请求、响应和管理代码审查的体验。这套功能后台使用了强大的工作项跟踪体验来帮助你讨论。
 
-### 管理个人工作
+#### 管理个人工作
 
 在 Visual Studio 2012 中，连接到 Team Foundation Server 2012 时，还有新的体验用于管理你的个人内容和工作。
 
-### Web 访问
+#### Web 访问
 
 Team Web Access 在 Team Foundation Server 2012 中经过了重新设计，为那些没有任何传统客户端的用户提供了更好的体验。它支持现代浏览器（包括移动浏览器），并适用于多种设备形态。
-
-
-
 
 ## 项目管理
 
@@ -690,19 +527,19 @@ Team Web Access 在 Team Foundation Server 2012 中经过了重新设计，为�
 
 ## 敏捷与 Scrum 产品管理
 
-Team Web Access 新增的体验包括敏捷项目管理和产品规划。新的敏捷计划（Agile Planning）工具专为实践 Scrum 原则的用户设计，但实际上对使用任何流程的用户也大有益。
+Team Web Access 新增的体验包括敏捷项目管理和产品规划。新的敏捷计划 `Agile Planning` 工具专为实践 Scrum 原则的用户设计，但实际上对使用任何流程的用户也大有益。
 
-此版本中引入的主要工具包括：发布待办列表（Release Backlog）规划；冲刺/迭代规划（包括团队负载能力）；速率和冲刺报告；以及一个适用于每日 Scrum 任务的新任务板。这些每项工具都以团队为导向，以便不同团队可以管理自己的待办列表和进度。
+此版本中引入的主要工具包括：发布待办列表 `Release Backlog` 规划；冲刺/迭代规划 `包括团队负载能力`；速率和冲刺报告；以及一个适用于每日 Scrum 任务的新任务板。这些每项工具都以团队为导向，以便不同团队可以管理自己的待办列表和进度。
 
-这些工具引入的优点之一是能够按日期跟踪和结束迭代（Iterations）。这些迭代随后用于 Team Foundation Server，以提供更丰富的体验。
+这些工具引入的优点之一是能够按日期跟踪和结束迭代 `Iterations`。这些迭代随后用于 Team Foundation Server，以提供更丰富的体验。
 
 ## 利益者反馈
 
-团队和产品所有现在现在从其应用程序和软件的运行版本向利益者、业务用户和客户请求反馈。这些利益者将收到一封电子邮件，其中包含连接到 Team Foundation Server 的链接，并可以使用一个命名为 Microsoft 反馈客户端（Microsoft Feedback Client）的新轻量级客户端立即提供反馈。
+团队和产品所有现在现在从其应用程序和软件的运行版本向利益者、业务用户和客户请求反馈。这些利益者将收到一封电子邮件，其中包含连接到 Team Foundation Server 的链接，并可以使用一个命名为 Microsoft 反馈客户端 `Microsoft Feedback Client` 的新轻量级客户端立即提供反馈。
 
 ## 构建
 
-此版本还对内置构建系统进行了若干改进，包括对门禁检查（gated-check-ins）进行批量处理的能力。如果您一天内收到许多需要快速验证的检查。此外，新的 Team Explorer 包含了一些用户体验改进，包括将构建标记为公共或团队收藏，以及当您的团队包含大量定义时对定义进行过滤。
+此版本还对内置构建系统进行了若干改进，包括对门禁检查 `gated-check-ins` 进行批量处理的能力。如果您一天内收到许多需要快速验证的检查。此外，新的 Team Explorer 包含了一些用户体验改进，包括将构建标记为公共或团队收藏，以及当您的团队包含大量定义时对定义进行过滤。
 
 使用 MSTest 之外的第三方测试框架的开发团队很高兴知道，团队现在可以在 Team Foundation Server 2012 的自动化构建过程中在测试运行中包含测试。
 
@@ -710,19 +547,19 @@ Team Web Access 新增的体验包括敏捷项目管理和产品规划。新的�
 
 微软极大地改进了获取 Team Foundation Server 的方式。正如后续章节所述，有多种选项供您选择。
 
-许可可能会有些混乱，但 Team Foundation Server 的许可遵循微软其他产品的许可模式。有一个服务器许可。此外，在某些显著例外的情况下，每个连接到服务器的用户都应该拥有 Team Foundation Server 的客户端访问许可（CAL）。
+许可可能会有些混乱，但 Team Foundation Server 的许可遵循微软其他产品的许可模式。有一个服务器许可。此外，在某些显著例外的情况下，每个连接到服务器的用户都应该拥有 Team Foundation Server 的客户端访问许可 `CAL`。
 
-> 注意：关于这些潜在例外的更多信息，或关于您需要购买什么的问题，您可以寻求具有 ALM 能力的微软合作伙伴、您的本地微软开发专家的帮助，或参考最终用户许可协议（EULA）。此处还提供了适用于 Visual Studio、MSDN 和 Team Foundation Server 的许可白皮书：http://aka.ms/VisualstudioLicensing。
+> 注意：关于这些潜在例外的更多信息，或关于您需要购买什么的问题，您可以寻求具有 ALM 能力的微软合作伙伴、您的本地微软开发专家的帮助，或参考最终用户许可协议 `EULA`。此处还提供了适用于 Visual Studio、MSDN 和 Team Foundation Server 的许可白皮书：`http://aka.ms/VisualstudioLicensing`。
 
 ## Team Foundation Service
 
-到目前为止，采用 Team Foundation Service 最简单的方法是通过微软直接提供的名为 Team Foundation Service 的托管选项。它与本地部署的 Team Foundation Server 产品共享大部分代码库，但经过修改以可以托管在 Windows Azure 上并供多个租户使用。可以在 http://tfs.visualstudio.com 获取。
+到目前为止，采用 Team Foundation Service 最简单的方法是通过微软直接提供的名为 Team Foundation Service 的托管选项。它与本地部署的 Team Foundation Server 产品共享大部分代码库，但经过修改以可以托管在 Windows Azure 上并供多个租户使用。可以在 `http://tfs.visualstudio.com` 获取。
 
 使用 Team Foundation Service 的最佳部分是您的团队无需担心备份、高可用性、升级或其他潜在的耗时管理和维护任务。另一个好处是 Team Service 客户和本地客户都会接收包含新功能的更新。
 
 > Brian Harry 宣布，内部产品团队在过去的两三年中改进了他们的工程流程，他们能够快速提供频繁的更新。通过 Team Foundation Server 2012，产品团队计划提供包含典型性能改进和错误修复的更新，同时也带来新功能。频率尚待定，但第一个本地更新将在 2012 年底之前可用。
 
-Team Foundation 客户看到的更新频率将比本地修复更频繁。Brian 提到他的团队能够每三周部署一次热补丁，这与内部冲刺计划相一致。您可以从 Brian Harry 的博客文章 http://aka.ms/TFReleaseCadence 了解更多关于此主题的信息。
+Team Foundation 客户看到的更新频率将比本地修复更频繁。Brian 提到他的团队能够每三周部署一次热补丁，这与内部冲刺计划相一致。您可以从 Brian Harry 的博客文章 `http://aka.ms/TFReleaseCadence` 了解更多关于此主题的信息。
 
 这次讨论可以获得的一点是，如果您选择本地安装 Team Foundation Server，请确保您的团队始终使用 Team Foundation Server 的最新更新。
 
@@ -730,7 +567,7 @@ Team Foundation 客户看到的更新频率将比本地修复更频繁。Brian �
 
 ## 获取选项
 
-微软已于 2012 年后期发布了广泛可用的 Team Foundation Service。他们宣布将为最多五个人的团队免费提供全套功能集。MSDN 订阅者将可以将 Team Foundation Service 作为其 MSDN 订阅的额外福利。如果您或您的团队不属于上述任何一类，在公布更多细节之前，您将可以免费使用 Team Foundation Service。在任何时候，如果您决定不再继续使用 Team Foundation Service，您可以随时下载您的源代码并关闭账户。
+微软已于 2012 年后期发布了广泛可用的 Team Foundation Service。他们宣布将为最多五人的团队免费提供全套功能集。MSDN 订阅者将可以将 Team Foundation Service 作为其 MSDN 订阅的额外福利。如果您或您的团队不属于上述任何一类，在公布更多细节之前，您将可以免费使用 Team Foundation Service。在任何时候，如果您决定不再继续使用 Team Foundation Service，您可以随时下载您的源代码并关闭账户。
 
 迄为止，Team Foundation Service 与本地产品相比尚未实现完全对等。例如，实验室管理、报告和流程模板自定义功能目前尚不可。随着 Team Foundation Service 时间的推移，它将与本地版本具有更高、乃至完全的对等。
 
@@ -738,11 +575,15 @@ Team Foundation 客户看到的更新频率将比本地修复更频繁。Brian �
 
 ## Express
 
-从 Team Foundation Server 2012 开始，小型软件工程团队可以利用 Team Foundation Server 2012 的 Express 版本，该版本对多达五名开发者免费。Team Foundation Server Express 可以在 http://aka.ms/TFS2012Express 获取。Express 版本包含但不限于核心开发功能：
+从 Team Foundation Server 2012 开始，小型软件工程团队可以利用 Team Foundation Server 2012 的 Express 版本，该版本对多达五名开发者免费。Team Foundation Server Express 可以在 `http://aka.ms/TFS2012Express` 获取。Express 版本包含但不限于核心开发功能：
 
 - 版本控制
+
 - 工作项跟踪
+
 - 构建自动化
+
+
 
 对于希望在不产生额外费用的情况下获得本地 Team Foundation Server 实例的小团队来说，这是一个完美的开始。如果您的团队规模增长超过五个人，您可以购买六个及以上的 CAL。Express 实例可以随时升级以利用全套功能，而不会丢失任何数据。
 
@@ -753,8 +594,6 @@ Team Foundation 客户看到的更新频率将比本地修复更频繁。Brian �
 如果您安装了 Team Foundation Server 的试用版，可以轻松应用项目来激活试用版。如果您的团队决定完全采用 Team Foundation Server，可以将团队项目集从试用服务器移动到不同的服务器实例。
 
 或者，如果您需要延长 30 天，可以在试用期结束前通过 Team Foundation Server 管理控制台中进行扩展。您可以通过访问 http://aka.ms/ExtendTFrial 找到更多关于扩展试用的信息。
-
-
 
 如果您有一个随用随用的虚拟机（包括演示和评估 Visual Studio 2012 和 Team Foundation Server 2012 所需的所有软件），您可以下载完整的 Visual Studio 2012 虚拟机镜像。该虚拟机有一个时间限制，从您首次启动机器的那天开始。您可以随时下载一份新的虚拟机副本来重新开始演示体验。
 
@@ -794,8 +633,7 @@ Microsoft 提供了许多批量许可方案，包括企业版（Enterprise）、
 
 接下来的几章将让您熟悉规划 Team Foundation Server 部署、安装全新的服务器，以及连接到您的新服务器的各种方法。第 2 章将通过检查部署 Team Foundation Server 开始这一讨论。
 
-## 2
-部署规划
+# 2 部署规划
 
 本章内容包括？
 
@@ -816,7 +654,7 @@ Microsoft 提供了许多批量许可方案，包括企业版（Enterprise）、
 
 此书涵盖了许多 ALM 主题，因为 Team Foundation Server 是 Visual Studio ALM 产品家族的一部分。您可以在 http://aka.ms/ALM2012Book 可的配套书籍《使用 Visual Studio 2012 专业应用生命周期管理》中找到有关所有不同 ALM 工具的更多信息。
 
-## 发布或项目的透明度
+### 发布或项目的透明度
 
 您的团队在发布周期内理解以下任何问题时是否存在困难？
 
@@ -832,17 +670,13 @@ Microsoft 提供了许多批量许可方案，包括企业版（Enterprise）、
 
 在发布可见性方面遇到问题的团队通常希望从寻找一个工具开始，收集所有必要的数据以轻松回答上述任何问题。Team Foundation Server 是可用透明度最好的产品之一，因为它允许您存储从软件生命周期开始到结束的所有不同制品。它不仅提供了一种获取这些信息的方法，还允许您利用这些制品和系统之间的丰富链接做出明智决策。Team Foundation Server 通过展示所有制品之间的端到端关系，提供了丰富的信息。
 
-
-
-
-
-## 跨团队和角色的协作
+### 跨团队和角色的协作
 
 某些团队在跨功能小组之间提供信息和进行通信方面存在困难。测试人员可能觉得他们对于被退回的缺陷（bug）缺乏足够的信息；开发人员可能觉得他们对于需要实现的需求或需要修复的缺陷缺乏足够的信息。利益相关者和业务用户可能认为他们没有一种简单的方法来对他们交互的应用程序提供反馈，以便软件开发团队能够采取适当的行动。
 
 如果您正在经历这些问题，那么能够轻松查看存储在 Team Foundation Server (TFS) 中软件过程中不同产物的信息和注释，可能会让您大获其益。
 
-## 自动化编译、测试、打包和部署
+### 自动化编译、测试、打包和部署
 
 团队可能会在发布周期的最后阶段花费大量时间手动完成编译、打包和部署应用程序的步骤。他们可能在开发人员机器上执行这些操作，并手动复制到测试环境和生产环境。
 
@@ -850,13 +684,13 @@ Microsoft 提供了许多批量许可方案，包括企业版（Enterprise）、
 
 此外，您还可以利用自动化构建系统引入“关卡”检查，通过 Team Foundation Build 系统中的门禁提交（gated check-in）功能，让每次提交都通过这些检查以验证更改的质量。这可以帮助您的团队减少熵，防止缺陷引入版本控制库。
 
-## 管理测试计划
+### 管理测试计划
 
 测试或质量保证部门可能在使用 Word 或 Excel 文档组织测试用例，这通常会导致无法组织测试用例目录。此外，跟踪每个测试用例的执行情况可能极其困难；因此，判断发布版本的测试进度变得困难。
 
 Team Foundation Server 允许您管理手动和物理测试用例集，还允许您管理发布周期内的测试执行进度。它包含了跨产品或应用程序需要支持的多个配置跟踪测试的能力。
 
-## 并行开发
+### 并行开发
 
 开发团队在管理并发发生的多个开发线更改方面有着众所周知的困难。通过在支持上一个版本的同时稳定下一个版本，并对功能发布版本进行早期工作，您可以使这些并行开发线都井井有序。整合这些发布版本之间的更改特别耗时且容易出错，特别是当开发人员手动为每行代码应用修复程序时。
 
@@ -868,7 +702,7 @@ Team Foundation Server 中的版本控制系统提供了卓越的分支合并工
 
 只有在团队内部使用 Team Foundation Server 时，其最大价值才能实现。因此，确保成功采纳 Team Foundation Server 需要与组织中的许多人员达成共识。接下来的章节将帮助您避免常见的陷阱，并就如何开始这项看似庞大且令人生畏的任务为您提供建议。
 
-## 采纳时间线
+### 采纳时间线
 
 通常情况下，按团队/应用程序拆分采纳被证明是一种成功的方法。对于大多数团队来说，部分工作可能是相同的，您从早期过渡中学习的经验将帮助您在后续过渡中取得更大的成功。表 2-1 展示了示例采纳时间线。
 
@@ -890,7 +724,7 @@ Team Foundation Server 中的版本控制系统提供了卓越的分支合并工
 | 开发自定义迁移工具（仅在未使用商业或免费可用工具时需要） | 两到四周 |
 | 测试迁移 | 一到两周 |
 
-## 分阶段方法
+### 分阶段方法
 
 | 活动 | 预计时间 |
 | --- | --- |
@@ -912,10 +746,6 @@ Team Foundation Server 中的版本控制系统提供了卓越的分支合并工
 在此时，您可能需要记录整个发布过程中的测试用例及其执行情况。通过测试用例和需求之间的追溯性，您将能够识别出项目中哪些需求已被测试人员恰当覆盖。
 
 经过一段时间后，您将在 Team Foundation Server 数据仓库中建立起一个历史数据库，并开始使用报告功能来预测您是否能在预期时间内完成（例如，剩余工作量是否已在
-
-
-
-
 
 ## 第 2 章 规划部署
 
@@ -974,6 +804,8 @@ Team Foundation Server 基础设施是你公司的生产环境。理想情况下
 
 ## Team Foundation Server 管理员
 
+
+
 你可能需要识别一个负责管理 Team Foundation Server 环境配置和健康的资源。你的组织可能并不需要全职资源来完成此任务，但这通常需要投入大量的日常努力，以确保关键环境为你的公司运行良好。这个角色可能承担以下几个示例职责：
 
 - 倡导并领导组织内的采用。
@@ -1005,38 +837,35 @@ Team Foundation Server 基础设施是你公司的生产环境。理想情况下
 
 > 注意：如果你是从之前的 Team Foundation Server 升级，请参阅第 25 章有关规划升级的信息，而不是遵循本节提到的迁移技术。
 
-## 版本控制
+### 版本控制
 
 从旧版本控制系统迁移到 Team Foundation Server 版本控制是软件开发团队最常见的起点之一。
 
-## Visual SourceSafe (VSS)
+#### Visual SourceSafe (VSS)
 
-你的团队可能正在使用 Visual SourceSafe (VSS)，并希望在微软结束该产品支持生命周期之前进行迁移。Team Foundation Server 实际上带有一个 VSS
+你的团队可能正在使用 Visual SourceSafe (`VSS`)，并希望在微软结束该产品支持生命周期之前进行迁移。Team Foundation Server 实际上带有一个 `VSS` 转换工具允许你将源代码从 `VSS` 仓库迁移，并在迁移过程中包含历史记录。
 
+#### 其他版本控制系统
 
-转换工具允许你将源代码从 VSS 仓库迁移，并在迁移过程中包含历史记录。
-
-## 其他版本控制系统
-
-如果你目前没有使用 VSS，那么你也有其他选择。微软的 Team Foundation Server 产品团队一直在开发一个用于迁移和同步场景的平台。该平台在 CodeLex 上免费提供，并定期更新。在编写时，它目前已适用于从基于文件的系统和 IBM Rational ClearCase 进行迁移。
+如果你目前没有使用 `VSS`，那么你也有其他选择。微软的 Team Foundation Server 产品团队一直在开发一个用于迁移和同步场景的平台。该平台在 CodeLex 上免费提供，并定期更新。在编写时，它目前已适用于从基于文件的系统和 IBM Rational ClearCase 进行迁移。
 
 Team Foundation Server 集成平台构建在一个可扩展的平台之上，允许创建所有适配器，以从其他系统迁移源代码。CodeLex 项目收到了来自产品团队多次且定期的贡献，你可以预计未来会有更多适配器出来。
 
 如果你准备好迎接挑战，还可以使用 Team Foundation Server 集成平台的扩展性钩子为你的版本控制系统创建自定义适配器。你也可以考虑为 CodeLex 项目做出贡献，这样当其他人遇到与你面临的相同场景时，也能使用这个自定义适配器！
 
-> 注意：你可以通过访问 CodeLex 项目网站 http://aka.ms/TFSIntegrationPlatform 获取有关 Team Foundation Server 集成平台的更多信息。
+> 注意：你可以通过访问 CodeLex 项目网站 `http://aka.ms/TFSIntegrationPlatform` 获取有关 Team Foundation Server 集成平台的更多信息。
 
 此外，还有一系列市售的第三方迁移解决方案，允许你将源代码从流行的遗留和第三方源码控制系统迁移。
 
-> 注意：第 8 章详细讨论了更多从遗留版本控制系统迁移的内容，包括 VSS。
+> 注意：第 8 章详细讨论了更多从遗留版本控制系统迁移的内容，包括 `VSS`。
 
-## 工作项跟踪
+### 工作项跟踪
 
 除了迁移源代码，大多数团队还希望考虑从他们的遗留系统迁移工作项。这些可能是缺陷（bugs）、需求、测试用例、任务等。
 
 幸运的是，上述的 Team Foundation Server 集成平台也设计用于在迁移源代码之外移动工作项。目前，一个适配器允许你将 IBM Rational ClearQuest 中的遗留制品移动到 Team Foundation。同样，可以使用 Team Foundation Server 集成平台的可扩展架构构建自定义适配器，以从其他跟踪系统迁移工作项。
 
-还有几种其他方法可以用于导入工作项跟踪数据。你可以使用 Microsoft Office Excel 以及 Team Explorer 允许你导入信息电子表格的集成功能。市售工具也可将从 Quality Center 的制品导入到 Team Foundation。如果你感兴趣迁移从其他应用程序导出的 Excel 文档中的用例，还可以使用 CodePlex (http://aka.ms/TestCaseImportTool) 上的测试用例导入工具。
+还有几种其他方法可以用于导入工作项跟踪数据。你可以使用 Microsoft Office Excel 以及 Team Explorer 允许你导入信息电子表格的集成功能。市售工具也可将从 Quality Center 的制品导入到 Team Foundation。如果你感兴趣迁移从其他应用程序导出的 Excel 文档中的用例，还可以使用 CodePlex (`http://aka.ms/TestCaseImportTool`) 上的测试用例导入工具。
 
 > 注意：第 11 章提供了更多关于 Team Foundation Server 项目跟踪的深度信息和介绍。
 
@@ -1058,7 +887,7 @@ Team Foundation Server 集成平台构建在一个可扩展的平台之上，允
 
 > **注意** 第 19 章和第 20 章提供了对团队项目集和扩展性功能的更深入的观察。
 
-## 团队项目的范围
+### 团队项目的范围
 
 从核心角度讲，一个*团队项目*包含了所有的制品，如源代码、工作项、生成、报告以及关联的 SharePoint 团队门户站点。通常情况下，一个团队项目“比你想的要大”。思考什么必须分组到单个团队项目中的一种良好方法，是考虑你软件开发项目中一个典型需求的影响。如果该需求会影响 ASP.NET 前端、Java 中间件和 SQL 数据库仓库，那么所有这些项目和开发者团队可能都希望在同一个团队项目中工作。
 
@@ -1070,46 +899,45 @@ Team Foundation Server 集成平台构建在一个可扩展的平台之上，允
 
 然而，如果你不需要要求将项目的所有制品交付给客户，你不一定需要这些团队项目方法。在决定组织合适的团队项目集和团队项目结构时，了解 Team Foundation Server 功能集中影响你预期策略的限制是有帮助的。
 
-## 结构化项目集和团队项目 | 25
+### 结构化项目集和团队项目 | 25
 
 这种方法通常适用于具有长期生命周期的独立软件供应商 (ISV)。事实上，微软本身在其许多产品上使用了这种方法。在这些情况下，通常从应用程序项目开始是安全的，然后根据需要转为发布项目，以便方便报告。
 
-## 重命名团队项目
+### 重命名团队项目
 
 遗憾的是，一旦创建了团队项目，你目前无法对其进行重命名。该限制没有解决方法。你将希望在创建任何团队项目之前已充分审查并确定了你的团队项目策略。
 
-此外，当你为代表尚未确定名称的产品或产品家族的团队命名时，你也将希望考虑这些名称。一旦你为团队选了名称
-项目（特别是当它使用代号或其他早期项目名称时），该名称将用于整个团队项目的生命周期。
+此外，当你为代表尚未确定名称的产品或产品家族的团队命名时，你也将希望考虑这些名称。一旦你为团队选了名称项目（特别是当它使用代号或其他早期项目名称时），该名称将用于整个团队项目的生命周期。
 
 如果你正在使用一个规模较大的项目，则可以使用区域路径（area paths）来区分不同的产品族、产品，并最终这些产品中的组件。区域路径可以随时进行重命名和重新组织。第 11 章提供了更多关于区域路径的信息。
 
 团队项目集（team project collection）的一个关键区别是，你可以在稍后更改团队项目集的名称。
 
-## 在不同团队项目或项目集之间移动工作项
+### 在不同团队项目或项目集之间移动工作项
 
 由于你可以选择为不同的团队项目使用完全不同的过程模板，因此你无法跨团队项目边界移动工作项。请确保你为团队项目选择了适当的范围。例如，如果你想在一个应用程序中创建一个缺陷（bug），但发现它实际上属于另一个团队项目中的另一个应用程序，你会发现你无法将该 bug 移动到另一个团队项目中。在这种情况下，你必须在下一个团队项目中创建该工作项的副本（因为在另一个团队的过程模板中，“bug”工品的名称可能不同）。
 
 相反，你可能考虑将团队项目的负责人范围扩大到包含同一应用族中的多个应用程序。然后你可以通过使用区域路径层次级来划分团队项目内的应用程序。要在存储在同一个团队项目中的两个应用程序之间移动 bug，你需要将区域路径更改代表另一个应用程序的路径。然而，所有使用团队项目的应用程序或团队必须使用相同的过程模板。第 11 章提供了更多关于区域路径的信息。
 
-## 在 Office Excel、Project 或 Project Server 中管理多个团队项目的工作项
+### 在 Office Excel、Project 或 Project Server 中管理多个团队项目的工作项
 
 与之前的限制类似，由于团队项目可以具有不同的过程模板，Microsoft Office Excel 和 Project 插件无法与来自多个团队项目的工作项协同工作。如前所述，你将希望确保团队项目规模足够大，并使用区域路径层次级来区分应用程序或团队。然后使用迭代路径（iteration path）层次级来区分迭代/迭代。
 
 此外，如果你想设置与 Project Server 的两个同步，你会发现 Project Server 中的企业级项目可以映射到单个团队项目。如果你有一个跨越存在多个团队项目的应用程序的企业级项目，你的团队项目策略将需要修改，以创建一个包含所有这些应用程序的团队项目。然而，Project Server 中的多个企业级计划可以映射到单个 Team Foundation Server 团队项目。第 15 章提供了更多关于与 Project Server 和 Team Foundation Server 集成的信息。
 
-## 管理团队和容量规划
+### 管理团队和容量规划
 
 Team Foundation Server 2012 引入了管理团队工品和成员的新支持，以及敏捷规划工具，包括规划冲刺/迭代/项目容量的能力。这些概念被限制在团队项目范围内。这意味着一个“团队”拥有成员，并且它执行的工作定义在同一个团队项目内部。
 
 容量规划工具仅对同一个团队项目内部的工作进行规划。因此，如果你有在多个产品发布/项目之间共享的团队资源，如果你想从团队和容量规划的角度获得单一视图，你将希望将整个团队成员的工作维护在同一个团队项目中。第 13 章定义了团队以及在 Team Web Access 中使用的新敏捷规划工具。
 
-## 跟踪团队项目中跨分支的合并更改
+### 跟踪团队项目中跨分支的合并更改
 
 你无法对跨越团队项目边界的分支使用分支可视化和跟踪合并更改可视化功能。通常情况下，如果你想使用 Team Foundation Version 中引入的可视化功能，在你的合并策略中，应避免产生跨项目创建分支的需求。
 
 你可以在同一个团队项目内部拥有多个分支“族”。你可以为每个分支定义不同的安全权限，以防止一个团队看到另一个团队。你可以保留某些团队的读取权限，使他们看不到团队项目版本控制仓库内所有的版本控制内容。第 10 章讨论了设置版本控制仓库的更多选项，包括在同一个团队项目中存储多个产品文件夹的能力。
 
-## 受限于团队项目的报告和仪表板
+### 受限于团队项目的报告和仪表板
 
 对于跨越团队项目边界的分支，你无法使用分支可视化和跟踪合并更改可视化功能。通常情况下，如果你想使用 Team Foundation Version 引入的可视化功能，在你的合并策略中，应避免产生跨项目创建分支的需求。
 
@@ -1117,7 +945,7 @@ Team Foundation Server 2012 引入了管理团队工品和成员的新支持，�
 
 此外，受限于团队项目的 SharePoint 仪表板允许你创建多个仪表板。这些仪表板受限于区域路径和迭代路径。
 
-## 在团队项目集之间移动团队项目
+### 在团队项目集之间移动团队项目
 
 一旦在团队项目集中创建了团队项目，你无法在另一个团队项目之间移动团队项目工品（如更改、工作项、构建）。
 
@@ -1125,7 +953,7 @@ Team Foundation Server 2012 引入了管理团队工品和成员的新支持，�
 
 此限制的关键结论是，可以拆分较大的团队项目集，但无法重新组织团队项目集。
 
-## 受限于团队项目集的工品
+### 受限于团队项目集的工品
 
 团队项目集的一个重要概念是团队项目集内的所有工品与其他团队项目集隔离。例如，版本控制文件与更改、工作项、构建、测试用例、测试结果等包含在团队项目中。
 
@@ -1137,7 +965,7 @@ Team Foundation Server 2012 引入了管理团队工品和成员的新支持，�
 
 最后，你无法创建跨团队项目集的工作项查询来提取工作项。然而，你可以创建一个提取同一个团队项目集内多个项目工作项的工作项查询。此外，报告数据仓库包含来自所有团队项目集和项目的工品的信息，因此你可以创建提取这些信息的自定义报告。
 
-## 服务器限制
+### 服务器限制
 
 Team Foundation Server 是一个极具扩展性的产品。然而，你应该意识到并理解它的限制，以优化环境性能。了解大多数限制并非由产品强制执行，而是产品组为了维持特定水平而提供的通用实践和建议会有帮助。
 
@@ -1146,18 +974,13 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 因此，如果你的部署结构需要数百个团队项目集，你基本上有两个选择：
 
 - 你可以购买额外的硬件并为 Team Foundation Server 环境提供更多 SQL Server 实例。
-
-
-
-
-
-## 2. 你可以考虑在现有的团队集合中更激进地对团队项目进行分组。为了保持高性能，你应该限制一个团队集合内的团队项目数量。团队集合中包含的实际项目数量受过程模板中定义的工作项类型复杂性的限制。标准过程模板（例如，Microsoft 敏捷开发框架 v6.0）中包含的工作项已被证明可以支持在单台服务器上运行超过 500 个项目。性能下降与团队集合内的项目数量之间存在线性关系。请确保你的团队结构考虑了这一点，并在需要许多项目时为额外的硬件资源做出适当的计划。
+- 你可以考虑在现有的团队集合中更激进地对团队项目进行分组。为了保持高性能，你应该限制一个团队集合内的团队项目数量。团队集合中包含的实际项目数量受过程模板中定义的工作项类型复杂性的限制。标准过程模板（例如，Microsoft 敏捷开发框架 v6.0）中包含的工作项已被证明可以支持在单台服务器上运行超过 500 个项目。性能下降与团队集合内的项目数量之间存在线性关系。请确保你的团队结构考虑了这一点，并在需要许多项目时为额外的硬件资源做出适当的计划。
 
 ## 基础服务器环境的准备工作
 
 以下章节探讨了在开始安装新的 Team Foundation Server（团队基础服务器）之前采取的一些有益准备步骤。如果你是从早期版本的 Team Foundation Server 升级，你会发现后续章节是没必要的；请参阅专门用于升级的第 2 章。
 
-## 理解架构和水平扩展选项
+### 理解架构和水平扩展选项
 
 在配置你的基础服务器部署时，你有多个选项可用。你可以将所有组件（Team Foundation Server 应用程序、SQL Server、SQL 分析服务、SQL 报表服务和 SharePoint）部署在单台机器上。这被称为单服务器安装，对于 450 个或更少的用户运行良好。通常情况下，单服务器安装是最简单的，如图 2-1 所示。
 
@@ -1168,12 +991,18 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 | SQL 分析服务 |
 | SharePoint |
 
-图 2-1：单服务器安装
+
+
+# 单服务器安装与多服务器部署
+
+## 图 2-1：单服务器安装
 
 对于超过 450 个用户，应该考虑采用多服务器安装。多服务器安装有几种形式。最多情况下，有一个运行 SQL Server 和 SQL 分析服务的数据层，另一个是运行 Team Foundation Server、SQL 报表服务和 SharePoint 的应用层，如图 2-2 所示。注意，在多服务器配置中，SQL 报表服务组件实际上安装在应用层而不是数据层，因为前端 SQL 报表组件是基于 Web 的，可以与 Team Foundation Server 的其他 Web 组件进行负载均衡。如果你的环境需要，这将允许未来实现轻松且优的扩展。你的组织可能已经现有的 SharePoint Server 或报表服务希望结合 Team Foundation Server 使用。在这种情况下，你将有一个用于 Team Foundation Server 应用层的服务器、一个用于 SQL Server 数据库的服务器，以及用于运行 SharePoint Server 或报表服务的独立服务器。图 2-3 显示了使用这种特定场景的拓扑。
 
 | 应用层 |
+
 | :--- |
+
 | 数据层 |
 
 图 2-2：多服务器安装
@@ -1190,7 +1019,7 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 
 表 2-3 显示了单服务器安装的硬件要求，其中应用层和数据层位于同一台物理机器上。然而，请记住这些数字是最低建议值，显然，投入到问题中的硬件越多越好，特别是如果你更频繁地使用该环境。你需要继续监控环境的性能和利用率，以便进行扩展资源。
 
-表 2-3：单服务器安装的硬件要求
+### 表 2-3：单服务器安装的硬件要求
 
 | 用户数 | CPU | 硬盘 | 内存 |
 | :--- | :--- | :--- | :--- |
@@ -1199,21 +1028,21 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 
 对于多服务器安装（应用层和数据层具有独立的物理服务器），表 2-4 列出了应用层要求，表 2-5 列出了数据层要求。
 
-表 2-4：应用层硬件要求
+### 表 2-4：应用层硬件要求
 
 | 用户数 | CPU | 硬盘 | 内存 |
 | :--- | :--- | :--- | :--- |
 | 500 到 2200 个 | 单 2.13 GHz 双核 Intel Xeon | 500GB | 4GB |
 | 2200 到 3600 个 | 单 2.13 GHz 双核 Intel Xeon | 500GB | 8GB |
 
-表 2-5：数据层要求
+### 表 2-5：数据层要求
 
 | 用户数 | CPU | 硬盘 | 内存 |
 | :--- | :--- | :--- | :--- |
 | 450 到 2200 个 | 单 2.33 GHz 双核 Intel Xeon | 2TB SAS阵列 | 8GB |
 | 2200 到 3600 个 | 双 2.33 GHz 双核 Intel Xeon | 3TB SAS 列 | 16GB |
 
-## 第 2 章规划部署
+# 第 2 章规划部署
 
 ## 虚拟化
 
@@ -1222,10 +1051,6 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 - SQL Server 数据库引擎
 - SQL Server 报表服务
 - SQL Server 分析服务
-
-
-
-
 
 以下内容可以安全地安装在虚拟化环境中，对 Team Foundation Server 系统产生最小或无影响：
 
@@ -1239,73 +1064,67 @@ Team Foundation Server 是一个极具扩展性的产品。然而，你应该意
 
 除了 Team Foundation Server 的硬件要求外，您还需要通过确保满足某些软件前提条件来为新安装做好准备。
 
-## 操作系统
+### 操作系统
 
 Team Foundation Server 2012 现在对于服务器操作系统（即 Windows Server）仅支持 64 位的操作系统。唯一的例外是，如果您在客户端操作系统（即 Windows 8）上安装 Team Foundation Server，在这种情况下您也可以在 32 位的操作系统上安装 Team Foundation Server。表 2-6 列出了应用程序服务器支持的操作系统。
 
-表 2-6：应用程序层支持的操作系统
+#### 表 2-6：应用程序层支持的操作系统
 
 | 操作系统 | 附加说明 |
 | :--- | :--- |
 | 带有 Service Pack 2 的 Windows Server 2008 | 仅 64 位 |
-| Windows Server 2008 R2 | |
+| Windows Server 2008 R2 |  |
 | Windows Server | 推荐 |
-| Windows 7 | |
-| Windows 8 | |
+| Windows 7 |  |
+| Windows 8 |  |
 
 > 注意：Team Foundation Server 支持在运行 Windows 7 或 Windows 8 等操作系统的服务器上安装。然而，如果您使用客户端操作系统进行安装，将无法利用报告功能或与 SharePoint 产品进行集成。
 
-## SQL Server
+### SQL Server
 
 Team Foundation Server 使用 SQL Server 存储其数据，使用 SQL Server Analysis Services 为数据仓库存储联机分析 (OLAP) 数据立方，并使用 SQL Reporting Services 为丰富报告提供演示层。您可以在任何组件上使用默认实例或具名 SQL 实例。表 2-7 列出了支持的 SQL Server 版本。
 
-### 表 2-7：支持的 SQL Server 版本
+#### 表 2-7：支持的 SQL Server 版本
 
 | SQL Server 版本 | 附加说明 |
 | :--- | :--- |
 | SQL Server 2012 Express | 使用“基本”配置向导安装 Team Foundation Server 或使用 Team Foundation Express 版本时使用。 |
-| SQL Server 2008 R2 | |
+| SQL Server 2008 R2 |  |
 | SQL Server 2012 | 推荐。 |
 
-> **注意** 只要满足某些要求，您就可以使用现有的 SQL Server 实例。请访问 Microsoft 下载 页面（http://aka.ms/TFS2012InstallGuide）查看最新版本的 Team Foundation Server 安装指南。
+> **注意** 只要满足某些要求，您就可以使用现有的 SQL Server 实例。请访问 Microsoft 下载 页面（`http://aka.ms/TFS2012InstallGuide`）查看最新版本的 Team Foundation Server 安装指南。
 
-### 包含版本
+#### 包含版本
 
 在购买 Team Foundation 2012 时，如果您在单个服务器上安装，可以安装有限用途的 SQL Server 2012 标准版。此“有限用途”权限允许您仅将该 SQL 实例用于 Team Foundation Server 2012 数据库。这意味着无法将该实例用于任何自定义数据库或您在组织内安装的其他应用程序。
 
-可以使用额外的 Team Foundation Server 生产许可（例如，通过 MSDN 订阅）在与应用层服务器分离的数据层上安装有限用途的 SQL 许可。您可以在 http://aka.ms/VisualStudioLicensing 上的最新版本《Visual Studio 许可白皮书》中阅读更多关于许可细节的说明。
+可以使用额外的 Team Foundation Server 生产许可（例如，通过 MSDN 订阅）在与应用层服务器分离的数据层上安装有限用途的 SQL 许可。您可以在 `http://aka.ms/VisualStudioLicensing` 上的最新版本《Visual Studio 许可白皮书》中阅读更多关于许可细节的说明。
 
-### SQL Server 企业版
+#### SQL Server 企业版
 
 如果您使用的是单独许可的 SQL Server 企业版，Team Foundation Server 将利用仅企业版才有的功能。以下是 Team Foundation Server 可以利用的某些功能：
 
 - 联机重索引——这对于 Team Foundation Server 运行的用于保持 SQL 实例健康的定期维护作业特别有用，因为它能够在执行这些步骤时保持数据库在线。这可以带来更好的性能并减少阻塞调用。
-
 - 分析服务中的视角（Perspectives）——数据仓库 OLAP 数据立方体的架构将利用名为“视角”的功能。SQL 分析服务中的视角允许对 OLAP 数据立方体中的维度、度量和数据进行聚焦。
-
 - 索引压缩——Team Foundation Server 将利用索引压缩，通过减少 I/O 和内存占用来提高性能。（然而，此功能可能需要更多的 CPU 占用，但由于 I/O 通常是数据层的瓶颈，这并不是问题。）
-
 - 用于高可用和冗余的数据层聚类——如果您正在寻找集群数据层，那么您将希望利用企业版，因为它允许您拥有许多备用集群作为底层操作系统层。
-
 - 查询优化——Team Foundation Server 可以从 SQL Server 企业版才有的高级查询优化中受益。
-
 - 报告服务中的数据驱动订阅——此功能允许您订阅报告并设置定期电子邮件等，以便使用驱动数据在每个获取数据的报告中设置参数。
-
 - 报告服务的横扩展部署——如果您决定将多个应用程序组合成 Team Foundation Server 农场，并希望在每一个前端服务器上安装 SQL Reporting Services 以实现高可用负载，则此功能尤为必要。
 
 ### SharePoint 产品
 
 Team Foundation Server 能够与新或现有的 SharePoint 环境集成。从 Team Foundation Server 2010 开始，这种集成是可选的，且安装时并不需要。您可以在安装时选择与 SharePoint 集成，也可以稍后添加。
 
-表 2-8：可用于集成的 SharePoint 产品版本。
+#### 表 2-8：可用于集成的 SharePoint 产品版本。
 
 | SharePoint 产品 | 附加说明 |
 | :--- | :--- |
-| Windows SharePoint Services (WSS) 3.0 | |
+| Windows SharePoint Services (WSS) 3.0 |  |
 | Microsoft Office SharePoint Server (MOSS) 2007 | 可单独许可 |
-| SharePoint Foundation 2010 | |
+| SharePoint Foundation 2010 |  |
 | SharePoint Server 2010 | 推荐。可单独许可 |
-| SharePoint Server 2013 | |
+| SharePoint Server 2013 |  |
 
 如果您正在使用完整版的 SharePoint Server（例如 Microsoft Office SharePoint Server (MOSS) 2007 或 SharePoint Server (SPS) 2010），Team Foundation Server 将利用仅在完整企业版中才有的功能（例如 Excel 服务）。它通过提供一组在 Microsoft Office Excel 工作簿中显示图表的“丰富型”仪表板来实现。。当使用免费版 SharePoint 产品（WSS 3.0 或 SharePoint Foundation 2010）时，您的门户网站将无法使用这些“丰富型”仪表板，取而将获得两个“轻量版”仪表板，而不是开箱可用流程模板中的全系列仪表板。
 
@@ -1317,18 +1136,15 @@ Team Foundation Server 能够与新或现有的 SharePoint 环境集成。从 Te
 
 您将需要几个帐户。表 2-9 列出了您在设置 Team Foundation Server 环境时可能使用的推荐服务账户。该表假设 Team Foundation Server 位于活动目录环境中。
 
-| 表 2-9：推荐的服务账户 |
+#### 表 2-9：推荐的服务账户
+
 | 服务账户 | 示例帐户名称 | 附加说明 |
 | :--- | :--- | :--- |
-| Team Foundation Server | yourdomain\TFSSERVER | 应启用“账户敏感且不可委派”选项。 |
-| Team Foundation Server Reporting | yourdomain\TFSREPORTS | 必须是用户帐户（而非网络服务）。应授予“允许本地登录”权限。 |
-| Team Foundation Server Build | yourdomain\TFSBUILD | |
-| Team Foundation Server Proxy | yourdomain\TFSPROXY | |
-| Lab Management | yourdomain\TFSSLAB | 必须是用户帐户（而非网络服务），并且即使不使用虚拟实验室管理功能也可以在标准环境中使用。 |
-
-
-
-
+| Team Foundation Server | `yourdomain\TFSSERVER` | 应启用“账户敏感且不可委派”选项。 |
+| Team Foundation Server Reporting | `yourdomain\TFSREPORTS` | 必须是用户帐户（而非网络服务）。应授予“允许本地登录”权限。 |
+| Team Foundation Server Build | `yourdomain\TFSBUILD` |  |
+| Team Foundation Server Proxy | `yourdomain\TFSPROXY` |  |
+| Lab Management | `yourdomain\TFSSLAB` | 必须是用户帐户（而非网络服务），并且即使不使用虚拟实验室管理功能也可以在标准环境中使用。 |
 
 以下是 Team Foundation Server 服务帐户的最佳实践列表：
 
@@ -1340,13 +1156,13 @@ Team Foundation Server 能够与新或现有的 SharePoint 环境集成。从 Te
 
 由于您正在使用 Team Foundation Server 的某些功能，您最终将需要几个文件夹位置。表 2-10 列出了推荐的文件夹共享位置及其用途。这些共享的建议权限为：对 TFService 和 TFSBUILD 账户具有完全控制权限，对所有团队成员具有只读权限，但 Visual Studio Lab Management 的库除外（该库应包含 TFSLAB 服务账户的完全控制权限）。
 
-表 2-10：建议的文件夹共享位置
+#### 表 2-10：建议的文件夹共享位置
 
 | 描述 | 目的 |
 |---|------|
-| 构建产物 (Build Drops) | \\builds.tfs.contoso.local\\Builds | 用于自动构建系统复制构建过程的输出结果。应包含与任何构建服务器硬件隔离的文件服务器上。 |
-| 符号服务器 (Symbol Server) | \\symbols.tfs.contoso.local\\Symbols | 用于自动构建系统发布符号。应包含与任何构建服务器硬件隔离的文件服务器上。 |
-| 实验室管理库 (Lab Management Library) | \\library.lab.tfs.contoso.local\\LabLibrary | 用于实验室管理系统存储虚拟机和环境模板。 |
+| 构建产物 (Build Drops) | `\\builds.tfs.contoso.local\\Builds` | 用于自动构建系统复制构建过程的输出结果。应包含与任何构建服务器硬件隔离的文件服务器上。 |
+| 符号服务器 (Symbol Server) | `\\symbols.tfs.contoso.local\\Symbols` | 用于自动构建系统发布符号。应包含与任何构建服务器硬件隔离的文件服务器上。 |
+| 实验室管理库 (Lab Management Library) | `\\library.lab.tfs.contoso.local\\LabLibrary` | 用于实验室管理系统存储虚拟机和环境模板。 |
 
 ### SMTP 服务器
 
@@ -1358,7 +1174,7 @@ Team Foundation Server 的优秀功能之一是能够根据系统发生的事件
 
 为了确保 Team Foundation Server 环境中服务器之间的最佳连接以及客户端连接，您可能希望确保在网络流量可能流过的每个防火墙上打开某些端口。表 2-11 列出了 Team Foundation Server 用于网络流量的默认端口。
 
-表 2-11：所需端口
+#### 表 2-11：所需端口
 
 | 端口 | 描述 |
 |---|---|
@@ -1383,38 +1199,80 @@ Team Foundation Server 的优秀功能之一是能够根据系统发生的事件
 
 > 注意：即使目前所有不同组件都位于同一台服务器上，您也应该为表 2-12 中列出的所有不同组件设置每个单独的友好 DNS 名称。您永远不知道自己何时想要将环境扩展到额外的或不同的硬件上。让 Team Foundation Server 配置并使用这些友好 DNS 名称，将允许您在未来可能出现的架构变更场景中具有最大的灵活性。
 
-表 2-12 列出了您应该为您的 Team Foundation 环境创建的建议 DNS 条目（即使它只有一个服务器）。这些条目中的每一个可以是 DNS 记录或 CNAME 记录，并假设后缀为 domain.local。
 
-表 2-12：友好 DNS 记录
+
+表 2-12 列出了您应该为您的 Team Foundation 环境创建的建议 DNS 条目（即使它只有一个服务器）。这些条目中的每一个可以是 DNS 记录或 CNAME 记录，并假设后缀为 `domain.local`。
+
+### 表 2-12：友好 DNS 记录
 
 | DNS 记录条目 | 指向 |
 |---|---|
-| tfs.domain.local | Team Foundation Server 应用程序农场的应用程序层或网络负载均衡器 IP。用于 Team Foundation Server 应用程序层、Team Web Access 和 SQL 报告服务 |
-| data.tfs.domain.local | 数据层或 SQL Server 集群 IP。用于配置数据库、团队项目集基础以及关系仓库数据库的位置 |
-| warehouse.tfs.domain.local | SQL Server 分析服务实例 |
-| india.proxy.tfs.domain.local | 为每个带有代理服务器的远程位置设置一个友好 DNS 条目（可选） |
-| sharepoint.tfs.domain.local | 如果 SharePoint 服务器与应用程序层分离，则设置单独的 DNS 条目（可选） |
-| lab.tfs.domain.local | 用于 Team Foundation Server 的 System Center Virtual Manager 服务器 |
-| builds.tfs.domain.local | 包含构建产物的服务器 |
-| symbols.tfs.domain.local | 包含符号库的文件服务器 |
+| `tfs.domain.local` | Team Foundation Server 应用程序农场的应用程序层或网络负载均衡器 IP。用于 Team Foundation Server 应用程序层、Team Web Access 和 SQL 报告服务 |
+| `data.tfs.domain.local` | 数据层或 SQL Server 集群 IP。用于配置数据库、团队项目集基础以及关系仓库数据库的位置 |
+| `warehouse.tfs.domain.local` | SQL Server 分析服务实例 |
+| `india.proxy.tfs.domain.local` | 为每个带有代理服务器的远程位置设置一个友好 DNS 条目（可选） |
+| `sharepoint.tfs.domain.local` | 如果 SharePoint 服务器与应用程序层分离，则设置单独的 DNS 条目（可选） |
+| `lab.tfs.domain.local` | 用于 Team Foundation Server 的 System Center Virtual Manager 服务器 |
+| `builds.tfs.domain.local` | 包含构建产物的服务器 |
+| `symbols.tfs.domain.local` | 包含符号库的文件服务器 |
 
 ## Team Foundation 环境的准备
 
-> 注意：关于如何让 Team Foundation 使用友好名称而不是服务器名称，请访问 Ed Blank 的博客：http://aka.ms/FriendlyDNS。
+> 注意：关于如何让 Team Foundation 使用友好名称而不是服务器名称，请访问 Ed Blank 的博客：`http://aka.ms/FriendlyDNS`。
 
-## 遗留 Visual Studio 版本
+### 遗留 Visual Studio 版本
 
 如果成员使用的是旧版本的 Visual Studio，您可能希望他们能够连接到 Team Foundation Server 2012。Visual Studio 2008 和 Visual Studio 2010 提供了兼容性更新。安装更新后，这些版本中的现有功能将得到维护。用户可以使用 Visual Studio 2012 或 Team Explorer 2012 并。Visual Studio 2012 中的新功能将随更新可用。
 
 即使有了兼容性更新，您也无法在旧版本的 Visual Studio 中执行许多管理活动。对于管理活动，请使用与服务器匹配的 Visual Studio 版本。
 
-如果您有成员使用旧版本的 Visual Studio（例如 Visual Studio 55、3、6 等）或支持微软源代码界面 (MSCCI) 的其他开发环境，则可以安装最新版本的 Team Foundation Server 2012 MSCCI 提供程序，它可以允许成员在旧环境中执行版本控制操作。与兼容性更新一样，团队成员应该安装并运行 Visual Studio 2012 或 Team Explorer 2012，以确保他们可以使用 Team Foundation Server 2012 的其他功能。
+如果您有成员使用旧版本的 Visual Studio（例如 Visual Studio 55、3、6 等）或支持微软源代码界面 `MSCCI` 的其他开发环境，则可以安装最新版本的 Team Foundation Server 2012 MSCCI 提供程序，它可以允许成员在旧环境中执行版本控制操作。与兼容性更新一样，团队成员应该安装并运行 Visual Studio 2012 或 Team Explorer 2012，以确保他们可以使用 Team Foundation Server 2012 的其他功能。
 
 Visual Studio 2012 引入了在 Visual Studio 2012 和 Visual Studio 2010 之间支持 Visual Studio 解决方案和项目的往回功能。这允许某些团队成员开始使用 Visual Studio 2012 的新功能，而不需要整个团队都升级，只要他们使用的是带有服务包1 的 Visual Studio 2010。Visual Studio 还具有多目标支持，因此当您移动到新的 IDE 时不需要升级 .NET 框架。
 
+### 摘要
+
+本章回顾了你可以采取的各种方式来获得采纳 Team Foundation Server 的支持方法，并审查了采纳的可能时间表。你学习了如何识别团队中的关键人物，这些人物对于采纳的成功至关重要。
+
+构建团队项目集和团队项目有许多不同的方法，本章讨论了不同的可能性和局限性，这些内容将帮助你为团队制定出最合适的策略。
+
+你了解了实现某些功能所需的不同硬件建议和软件先决条件。此外，做好准备还意味着在安装之前确保环境和账户已就绪，因此本文提供了一份建议检查的项清单。
+
+在第 3 章中，你将学习如何实际安装并设置新的 Team Foundation Server 环境。你将学习如何设置先决条件，并确定 Team Foundation Server 环境的每个组件应该安装在何。最后，你将学习配置 Team Foundation Server 和创建第一个团队项目的过程。
+
+## 安装与配置
+
+本章包含内容：
+
+- 准备安装 Team Foundation Server 2012
+- 安装并配置 Team Foundation Server 2012
+- 使用 Team Foundation Server 2012 创建你的第一个团队项目
+
+在 2010 版本发布之前，安装和配置 Team Foundation Server 可能会轻松消耗整个周末甚至更久。安装错误难以诊断，配置完全通过命令行完成，且配置选项在很大程度上缺乏灵活性。坦率地说，Team Foundation Server 2010 版本在安装、配置和管理方面是一个重大的飞跃。
+
+Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 `.iso` 文件，或将其刻录到物理 DVD 介质质的需要。
+
+Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
+
+在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
+
+### 你将需要的
+
+在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
+
+### Team Foundation Server 2012
+
+有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 MSDN 订阅。购买 MSDN 订阅时，Visual Studio 2012 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 `CAL`。MSDN 订阅者可以登录 `http://msdn.microsoft.com/subscriptions` 下载软件。Team Foundation Server 2012 可以在开发工具和 Visual Studio 2012 类别中找到。
+
+组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 `VLSC` 获取软件。通常，一个组织中只有少数管理员有权从 VLSC 下载软件。
+
+> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 `.iso` 形式提供。`.iso` 文件本质上是一个将多个文件和目录打包成单个文件的容器。`.iso` 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 `.iso` 文件的支持，不需要额外软件。
 
 
 
+组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (`VLSC`) 获取软件。通常，一个组织中只有少数管理员有权从 `VLSC` 下载软件。
+
+> 注意：`MSDN` 订阅者和批量许可客户可以使用的大多数包都以 `.iso` 形式提供。`.iso` 文件本质上是一个将多个文件和目录打包成单个文件的容器。`.iso` 文件可以挂载为虚拟 `CD/DVD` 驱动器，或可以刻录到物理 `CD/DVD` 介质。`Windows Server 2012` 和 `Windows 8` 包含了对挂载 `.iso` 文件的支持，不需要额外软件。
 
 ## 摘要
 
@@ -1436,91 +1294,9 @@ Visual Studio 2012 引入了在 Visual Studio 2012 和 Visual Studio 2010 之间
 
 在 2010 版本发布之前，安装和配置 Team Foundation Server 可能会轻松消耗整个周末甚至更久。安装错误难以诊断，配置完全通过命令行完成，且配置选项在很大程度上缺乏灵活性。坦率地说，Team Foundation Server 2010 版本在安装、配置和管理方面是一个重大的飞跃。
 
-Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 .iso 文件，或将其刻录到物理 DVD 介质质的需要。
+Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 `.iso` 文件，或将其刻录到物理 `DVD` 介质质需要。
 
-Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-## 你将需要的
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-## Team Foundation Server 2012
-
-有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 MSDN 订阅。购买 MSDN 订阅时，Visual Studio 2012 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 (CAL)。MSDN 订阅者可以登录 http://msdn.microsoft.com/subscriptions 下载软件。Team Foundation Server 2012 可以在开发工具和 Visual Studio 2012 类别中找到。
-
-组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (VLSC) 获取软件。通常，一个组织中只有少数管理员有权从 VLSC 下载软件。
-
-> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 .iso 形式提供。.iso 文件本质上是一个将多个文件和目录打包成单个文件的容器。.iso 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 .iso 文件的支持，不需要额外软件。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 .iso 文件，或将其刻录到物理 DVD 介质质需要。
-
-Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-Team Foundation Server 2012 提供了基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-（此处省略重复翻译逻辑）
-
-> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 .iso 形式提供。.iso 文件本质上是一个将多个文件和目录打包成单个文件的容器。.iso 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 .iso 文件的支持，不需要额外软件。
-
-## Team Foundation Server 2012
-
-有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 MSDN 订阅。购买 MSDN 订阅时，Visual Studio 2012 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 (CAL)。MSDN 订阅者可以登录 http://msdn.microsoft.com/subscriptions 下载软件。Team Foundation Server 2012 可以在开发工具和 Visual Studio 2012 类别中找到。
-
-组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (VLSC) 获取软件。通常，一个组织中只有少数管理员有权从 VLSC 下载软件。
-
-> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 .iso 形式提供。.iso 文件本质上是一个将多个文件和目录打包成单个文件的容器。.iso 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 .iso 文件的支持，不需要额外软件。
-
-## 安装与配置
-
-本章包含内容：
-
-- 准备安装 Team 12 Team Foundation Server 2012
-- 安装并配置 Team Foundation Server 2012
-- 使用 Team Foundation Server 2012 创建你的第一个团队项目
-
-在 2010 版本发布之前，安装和配置 Team Foundation Server 可能会轻松消耗整个周末甚至更久。安装错误难以诊断，配置完全通过命令行完成，且配置选项在很大程度上缺乏灵活性。坦率地说，Team Foundation Server 2010 版本在安装、配置和管理方面是一个重大的飞跃。
-
-Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 .iso 文件，或将其刻录到物理 DVD 介质质需要。
-
-Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
+Team Foundation Server 2012 提供了一个基于 `GUI` 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
 
 在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
 
@@ -1530,113 +1306,67 @@ Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制�
 
 ## Team Foundation Server 2012
 
-有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 MSDN 订阅。购买 MSDN 订阅时，Visual Studio 2012 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 (CAL)。MSDN 订阅者可以登录 http://msdn.microsoft.com/subscriptions 下载软件。Team Foundation Server 2012 可以在开发工具和 Visual Studio 2012 类别中找到。
+有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 `MSDN` 订阅。购买 `MSDN` 订阅时，`Visual Studio 2012` 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 (`CAL`)。`MSDN` 订阅者可以登录 `http://msdn.microsoft.com/subscriptions` 下载软件。Team Foundation Server 2012 可以在开发工具和 `Visual Studio 2012` 类别中找到。
 
-组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (VLSC) 获取软件。通常，一个组织中只有少数管理员有权从 VLSC 下载软件。
+组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (`VLSC`) 获取软件。通常，一个组织中只有少数管理员有权从 `VLSC` 下载软件。
 
-> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 .iso 形式提供。.iso 文件本质上是一个将多个文件和目录打包成单个文件的容器。.iso 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 .iso 文件的支持，不需要额外软件。
-
-## 摘要
-
-本章回顾了你可以采取的各种方式来获得采纳 Team Foundation Server 的支持方法，并审查了采纳的可能时间表。你学习了如何识别团队中的关键人物，这些人物对于采纳的成功至关重要。
-
-构建团队项目集和团队项目有许多不同的方法，本章讨论了不同的可能性和局限性，这些内容将帮助你为团队制定出最合适的策略。
-
-你了解了实现某些功能所需的不同硬件建议和软件先决条件。此外，做好准备还意味着在安装之前确保环境和账户已就绪，因此本文提供了一份建议检查的项清单。
-
-在第 3 章中，你将学习如何实际安装并设置新的 Team Foundation Server 环境。你将学习如何设置先决条件，并确定 Team Foundation Server 环境的每个组件应该安装在何。最后，你将学习配置 Team Foundation Server 和创建第一个团队项目的过程。
-
-## 安装与配置
-
-本章包含内容：
-
-- 准备安装 Team Foundation Server 2012
-- 安装并配置 Team Foundation Server 2012
-- 使用 Team Foundation Server 2012 创建你的第一个团队项目
-
-在 2010 版本发布之前，安装和配置 Team Foundation Server 可能会轻松消耗整个周末甚至更久。安装错误难以诊断，配置完全通过命令行完成，且配置选项在很大程度上缺乏灵活性。坦率地说，Team Foundation Server 2010 版本在安装、配置和管理方面是一个重大的飞跃。
-
-Team Foundation Server 2012 扩展了这些改进，并进一步加快了安装和配置过程。其中一个例子是提供了轻量级 Web 安装程序。这消除了使用第三方软件下载并挂载 .iso 文件，或将其刻录到物理 DVD 介质质需要。
-
-Team Foundation Server 2012 提供了一个基于 GUI 的配置和管理控制台、一个灵活的架构（可以选择选择你想要使用的组件）、在每个配置步骤之前都有健壮的验证逻辑，以及许多更多完善的细节功能。
-
-在本章中，你将学习如何安装和配置 Team Foundation Server 2012。一些高级配置区域将留给后面的章节，但在阅读本章后，你将能够在几分钟内安装和配置简单的 Team Foundation Server 部署。
-
-## 你将需要的
-
-在开始安装之前，你应该获取所有所需组件的安装媒体。考虑你可能需要的更新（如服务包）以及你想与 Team Foundation Server 2012 一起使用的客户端和可选组件也是一个好主意。你还应该下载并查看最新的 Team Foundation Server 2012 安装指南，因为它是定期更新的。
-
-## Team Foundation Server 2012
-
-有几种方法获取 Team Foundation Server 2012。到目前，最常见的方法是通过 MSDN 订阅。购买 MSDN 订阅时，Visual Studio 2012 的所有版本都包含一个 Team Foundation Server 2012 服务器许可和一个客户端许可 (CAL)。MSDN 订阅者可以登录 http://msdn.microsoft.com/subscriptions 下载软件。Team Foundation Server 2012 可以在开发工具和 Visual Studio 2012 类别中找到。
-
-组织获取 Team Foundation Server 的另一种方法是通过批量许可协议。你可能需要联系你组织的批量许可管理员，以从微软批量许可服务中心 (VLSC) 获取软件。通常，一个组织中只有少数管理员有权从 VLSC 下载软件。
-
-> 注意：MSDN 订阅者和批量许可客户可以使用的大多数包都以 .iso 形式提供。.iso 文件本质上是一个将多个文件和目录打包成单个文件的容器。.iso 文件可以挂载为虚拟 CD/DVD 驱动器，或可以刻录到物理 CD/DVD 介质。Windows Server 2012 和 Windows 8 包含了对挂载 .iso 文件的支持，不需要额外软件。
+> 注意：`MSDN` 订阅者和批量许可客户可以使用的大多数包都以 `.iso` 形式提供。`.iso` 文件本质上是一个将多个文件和目录打包成单个文件的容器。`.iso` 文件可以挂载为虚拟 `CD/DVD` 驱动器，或可以刻录到物理 `CD/DVD` 介质。`Windows Server 2012` 和 `Windows 8` 包含了对挂载 `.iso` 文件的支持，不需要额外软件。
 
 ## 使用试用
 
 Team Foundation Server 的试用版是在做出购买前评估产品的极佳方式。你应该至少设置试用 45 天，以决定是否购买 Team Foundation Server。
 
-从试用版升级到付费版本是一个简单的过程，涉及更改你的密钥。步骤见 http.ms/TfsChange。
+从试用版升级到付费版本是一个简单的过程，涉及更改你的密钥。步骤见 `http.ms/TfsChange`。
 
 ## Team Foundation Server 2012 安装指南
 
-Team Foundation Server 2012 安装指南定期更新。它提供了安装 Team Foundation Server 的分步说明和其他重要信息。你可以在 http://aka.ms/TfsGuide 下载下载。
+Team Foundation Server 2012 安装指南定期更新。它提供了安装 Team Foundation Server 的分步说明和其他重要信息。你可以在 `http://aka.ms/TfsGuide` 下载下载。
 
-> 注意：安装指南以 zip 格式提供。由于从互联网获取的文件限制，你可能会打开它时遇到困难。右键点击文件，选择属性，点击解除锁定。
+> 注意：安装指南以 `zip` 格式提供。由于从互联网获取的文件限制，你可能会打开它时遇到困难。右键点击文件，选择属性，点击解除锁定。
 
 ## SQL Server 2012
 
-在第 2 章中，你了解了 Team Foundation Server 2012 如何使用 SQL 存储数据。如果你使用现有的 SQL Server 部署，则不需要下载安装媒体。然而，如果你计划设置单独的 SQL Server 2012，你可能需要获取媒体。
+在第 2 章中，你了解了 Team Foundation Server 2012 如何使用 `SQL` 存储数据。如果你使用现有的 `SQL Server` 部署，则不需要下载安装媒体。然而，如果你计划设置单独的 `SQL Server 2012`，你可能需要获取媒体。
 
-SQL Server Express 2012 可与 Team Foundation Server 2012 使用。但除非使用 SQL Server 标准版（更高版本），否则你无法在 Team Foundation Server 2012 中报告功能。如果你想使用 SQL Server 2012，Team Foundation Server 将自动为你安装。
+`SQL Server Express 2012` 可与 Team Foundation Server 2012 使用。但除非使用 `SQL Server` 标准版（更高版本），否则你无法在 Team Foundation Server 2012 中报告功能。如果你想使用 `SQL Server 2012`，Team Foundation Server 将自动为你安装。
 
-如果你计划使用 SQL Server 2012 标准版（更高版本），可以通过上述相同的渠道（MSDN、VLSC）获取。Team Foundation Server 包含许可证。
+如果你计划使用 `SQL Server 2012` 标准版（更高版本），可以通过上述相同的渠道（`MSDN`、`VLSC`）获取。Team Foundation Server 包含许可证。
 
 ## 操作系统
 
 在第 2 章中，你了解了支持 Team Foundation Server 2012 的操作系统。安装和配置你的操作系统超出了本章的范围，但在你设置 Team Foundation Server 2012 之前是你采取的重要步骤。
 
-正如你在第 2 章所学，Team Foundation Server 2012 可以安装在客户端操作系统（带有 Service Pack 1 的 Windows 7 或 Windows 8）上。在客户端操作系统上安装将为你提供 Team Foundation Server 的大部分功能，包括源代码控制、工作跟踪、测试用例管理、构建自动化实验室管理。
+正如你在第 2 章所学，Team Foundation Server 2012 可以安装在客户端操作系统（带有 Service Pack 1 的 `Windows 7` 或 `Windows 8`）上。在客户端操作系统上安装将为你提供 Team Foundation Server 的大部分功能，包括源代码控制、工作跟踪、测试用例管理、构建自动化实验室管理。
 
 ## SharePoint
 
-在第 2 章中，你了解了 SharePoint 如何作为开发项目的辅助工作空间。如果你想与 Team Foundation Server 2012 一起使用 SharePoint 2010，这将自动安装并配置你的 Team Foundation Server 2012。
-
-
-
-
+在第 2 章中，你了解了 `SharePoint` 如何作为开发项目的辅助工作空间。如果你想与 Team Foundation Server 2012 一起使用 `SharePoint 2010`，这将自动安装并配置你的 Team Foundation Server 2012。
 
 ## 客户端软件
 
-你还应该考虑在使用 Team Foundation 2012 时选择哪些客户端软件。第 4 章涵盖了多种类型的软件客户端，例如 Visual Studio、Eclipse、Project 和 Excel。至少为了完成本章中的练习，你应该安装 Team Explorer 2012。
+你还应该考虑在使用 Team Foundation 2012 时选择哪些客户端软件。第 4 章涵盖了多种类型的软件客户端，例如 `Visual Studio`、`Eclipse`、`Project` 和 `Excel`。至少为了完成本章中的练习，你应该安装 `Team Explorer 2012`。
 
-> 注意：Team Explorer 2012 可以从 http://aka.ms/TeamExplorer2012 下载。Team Explorer 也包含在 Visual Studio Professional、Premium 和 Ultimate 版本中。如果你安装了这些产品中的任何一个，就不需要单独下载和安装 Team Explorer 了。
+> 注意：`Team Explorer 2012` 可以从 `http://aka.ms/TeamExplorer2012` 下载。`Team Explorer` 也包含在 `Visual Studio Professional`、`Premium` 和 `Ultimate` 版本中。如果你安装了这些产品中的任何一个，就不需要单独下载和安装 `Team Explorer` 了。
 
 ## 服务包和其他更新
 
-微软会定期为 Visual Studio 系列产品（包括 Team Foundation Server）发布服务包和其他更新。在将 Team Foundation Server 提供给你的开发团队之前，你可能需要考虑在安装并配置服务器后需要应用哪些更新。通过在引入服务器之前安装更新，可以最大限度地减少未来服务器有活跃用户时潜在的停机时间。
+微软会定期为 `Visual Studio` 系列产品（包括 Team Foundation Server）发布服务包和其他更新。在将 Team Foundation Server 提供给你的开发团队之前，你可能需要考虑在安装并配置服务器后需要应用哪些更新。通过在引入服务器之前安装更新，可以最大限度地减少未来服务器有活跃用户时潜在的停机时间。
 
 微软提供了几种类型的更新。最常见的包括：
 
-- 服务包（Service Packs）——服务包是迄为止微软提供的经过测试最充分、支持最好的更新。强烈建议安装服务包，因为它们通常会修复多个 bug，提高稳定性，并偶尔添加或改进功能。
-
-- 累积更新（Cumulative Updates）——在 Team Foundation Server 2010 Service Pack 1 发布后，产品团队转向了定期生成累积更新包的模型。这些累积更新是团队为响应客户问题而处理的所有修复的汇总。累积更新接受适当水平的测试，建议所有 Team Foundation 客户在这些更新可用时应用它们。
-
-- 热补丁（Hotfixes）——热补丁（也称为 QFEs，即快速修复工程）由微软提供以解决特定问题。由于热补丁不像服务包或累积更新那样经过测试，它们有时会引入新功能。因此，只有当热补丁解决了你在环境中观察到的特定问题时，你才考虑安装它。
-
-- 通用发行版（General Distribution）——通用发行版（GDR）介于热补丁和服务包之间。GDR 也经过了良好的测试和支持，但通常处理的问题范围比服务包要窄。
-
-- 功能包（Feature Packs）——功能包是微软提供的更新，用于为产品添加或增强功能。某些功能仅适用于拥有 MSDN 订阅的客户。这是微软为基于订阅的许可增加价值的一种方式。
+- 服务包（`Service Packs`）——服务包是迄为止微软提供的经过测试最充分、支持最好的更新。强烈建议安装服务包，因为它们通常会修复多个 bug，提高稳定性，并偶尔添加或改进功能。
+- 累积更新（`Cumulative Updates`）——在 Team Foundation Server 2010 Service Pack 1 发布后，产品团队转向了定期生成累积更新包的模型。这些累积更新是团队为响应客户问题而处理的所有修复的汇总。累积更新接受适当水平的测试，建议所有 Team Foundation 客户在这些更新可用时应用它们。
+- 热补丁（`Hotfixes`）——热补丁（也称为 `QFEs`，即快速修复工程）由微软提供以解决特定问题。由于热补丁不像服务包或累积更新那样经过测试，它们有时会引入新功能。因此，只有当热补丁解决了你在环境中观察到的特定问题时，你才考虑安装它。
+- 通用发行版（`General Distribution`）——通用发行版（`GDR`）介于热补丁和服务包之间。`GDR` 也经过了良好的测试和支持，但通常处理的问题范围比服务包要窄。
+- 功能包（`Feature Packs`）——功能包是微软提供的更新，用于为产品添加或增强功能。某些功能仅适用于拥有 `MSDN` 订阅的客户。这是微软为基于订阅的许可增加价值的一种方式。
 
 一旦你有了安装媒体，并配置了操作系统和必要的先决条件，就可以开始安装 Team Foundation Server。
 
-设置 Team Foundation Server 2012 可以分为两个不同的阶段：安装和配置。在安装阶段，组件被复制到你的机器上。在配置阶段，你决定启用哪些选项、使用哪些账户进行权限管理、使用哪个 SQL Server 实例以及其他设置。
+设置 Team Foundation Server 2012 可以分为两个不同的阶段：安装和配置。在安装阶段，组件被复制到你的机器上。在配置阶段，你决定启用哪些选项、使用哪些账户进行权限管理、使用哪个 `SQL Server` 实例以及其他设置。
 
-> 注意：许多组织中的常用做法是使用名为 Sysprep 的工具。该工具允许你对操作系统和额外软件进行通用化，使其更容易部署到多台机器。然而，并非所有软件都兼容 sysprep。Team Foundation Server 采用的双阶段方法的一个优势是你可以作为 sysprep 镜像的一部分进行安装。Team Foundation Server 的配置可以推迟到将 sysprep 镜像放到特定机器之后。不支持在完成配置阶段后对 Team Foundation Server 2012 执行 sysprep。
+> 注意：许多组织中的常用做法是使用名为 `Sysprep` 的工具。该工具允许你对操作系统和额外软件进行通用化，使其更容易部署到多台机器。然而，并非所有软件都兼容 `sysprep`。Team Foundation Server 采用的双阶段方法的一个优势是你可以作为 `sysprep` 镜像的一部分进行安装。Team Foundation Server 的配置可以推迟到将 `sysprep` 镜像放到特定机器之后。不支持在完成配置阶段后对 Team Foundation Server 2012 执行 `sysprep`。
 
-在安装阶段之前，下载并运行 Web 安装程序或加载你的 Team Foundation 媒体。如果你正在使用 .iso 文件，可以像之前解释的那样，将 .iso 文件虚拟挂载为 DVD，然后运行 tfs_server.exe。
+在安装阶段之前，下载并运行 Web 安装程序或加载你的 Team Foundation 媒体。如果你正在使用 `.iso` 文件，可以像之前解释的那样，将 `.iso` 文件虚拟挂载为 `DVD`，然后运行 `tfs_server.exe`。
 
 在第一个（也是唯一的）预安装屏幕上，你将被要求更改安装路径并接受许可条款，如图 3-1 所示。接受许可条款后，选择“现在安装”。设置程序将继续复制并安装所有所需文件到你的机器上。这比之前的版本是一个更高效的过程。
 
@@ -1666,10 +1396,6 @@ Team Foundation Server 包含了几个用于配置服务器的向导。这为你
 | :--- | :--- |
 | 基础（Basic） | 基础向导是小团队快速上手 Team Foundation Server 最快、最简单的方法。基础向导允许你使用源代码控制、工作项跟踪、用例管理和实验室管理。然而，使用基础向导无法使用报告服务和 SharePoint 集成。如果你在 Windows 操作系统上安装 Team Foundation Server，以后可以添加这两个组件。通过基础向导，你可以使用现有的 SQL Server 实例，或者让 Team Foundation Server 为你安装并配置 SQL Server 语言版。 |
 | 标准单服务器（Standard Single Server） | 标准单服务器向导假设你正在单台服务器上安装 Team Foundation Server。此向导允许你使用源代码控制、工作项跟踪、用例管理、实验室管理、报告和 SharePoint 集成。如果你想使用远程 SharePoint 或 SQL Server 部署进行安装，或者想使用 SharePoint Foundation 2010 以外版本的 SharePoint，则不应使用此向导。 |
-
-
-
-
 
 ## 高级
 
@@ -1709,6 +1435,10 @@ Team Foundation Server 包含了几个用于配置服务器的向导。这为你
 
 > 注意 让 Team Foundation Server 安装并配置 SQL Server Express 是快速上手的快捷方法，对于测试服务器效果良好。但对于生产服务器，您应该考虑花时间安装和配置 SQL Server 2012 标准版（如果您有许可，则使用更高版本）。这将使您更容易利用报表服务等功能，并避免 SQL Server 2012 快速版实施的 10 GB 数据库大小限制。《Team Foundation Server 安装指南》包含了安装供 Team Foundation Server 使用的 SQL Server 标准版的步骤说明。
 
+
+
+# 第 3 节 安装与配置
+
 选择您的 SQL Server 实例后，点击“下一步”。您将看到您所选择的配置设置列表（如图 3-4 所示），您将有机会返回并进行更改。基本向导只有几页，但其他向导的页面更多。
 
 当您对选项感到满意时，点击“下一步”（点击“验证”也将产生相同效果）。向导将验证如果您继续操作，您提议的更改将成功执行。
@@ -1726,8 +1456,6 @@ Team Foundation Server 包含了几个用于配置服务器的向导。这为你
 当您准备好继续配置选项时，点击“下一步”。向导将尝试使用您选择的选项配置 Team Foundation Server。如果选择在配置中安装 SQL Server Express，此过程可能需要几分钟。否则，它只需要几分钟。
 
 配置完成后，您将看到一个如图 3-6 所示的确认屏幕。请页面上显示的任何警告或错误，以及任何信息通知（例如图 3-6 所示的消息，表示在配置期间打开了额外的防火墙端口）。您还可以通过点击向导页面底部的链接访问详细的日志信息，完成后点击“关闭”。
-
-# 第 3 节 安装与配置
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_91_0.png)
 
@@ -1747,25 +1475,23 @@ Team Foundation Server 包含了几个用于配置服务器的向导。这为你
 
 当您从之前的 Team Foundation Server 版本升级时，使用升级功能。升级详见第 25 节。
 
-## 配置 Team Foundation Server 代理
+### 配置 Team Foundation Server 代理
 
 此向导可将此机器配置为 Team Foundation 代理服务器。有关配置代理服务器的更多信息，请参第 26 节。
 
-## 配置 Team Foundation 构建服务
+### 配置 Team Foundation 构建服务
 
 如果您想将此机器配置为构建控制器和/或一个更多的构建代理程序，则可以使用此向导。Team Foundation Build 详见第 4 部分。
 
-## 为 SharePoint 产品配置扩展
+### 为 SharePoint 产品配置扩展
 
 如果您计划配置 Team Foundation Server 与运行在远程机器或远程 SharePoint 场中的 SharePoint 集成，则应使用此向导。如果您正在使用场，可能需要在该场中的每台机器上运行此向导。
 
-## 配置 Team Foundation Server
+### 配置 Team Foundation Server
 
 在 Team Foundation 配置工具中，选择“基本”向导并启动向向。点击“下一步”进入欢迎页。系统将提示您指定想要使用的哪个 SQL Server 实例，如图 3-3 所示。
 
 您可以选择现有的 SQL Server 实例，或者让基本向导帮您安装并配置 SQL Server Express。
-
-# 第 3 节 安装与配置
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_89_0.png)
 
@@ -1773,55 +1499,7 @@ Team Foundation Server 包含了几个用于配置服务器的向导。这为你
 
 > 注意 让 Team Foundation Server 安装并配置 SQL Server Express 是快速上手的快捷方法，对于测试服务器效果良好。但对于生产服务器，您应该考虑花时间安装和配置 SQL Server 2012 标准版（如果您有许可，则使用更高版本）。这将使您更容易利用报表服务等功能，并避免 SQL Server 2012 快速版实施的 10 GB 数据库大小限制。《Team Foundation Server 安装指南》包含了安装供 Team Foundation Server 使用的 SQL Server 标准版的步骤说明。
 
-选择您的 SQL Server 实例后，点击“下一步”。您将看到您所选择的配置设置列表（如图 3-4 所示），您将有机会返回并进行更改。基本向导只有几页，但其他向导的页面更多。
-
-当您对选项感到满意时，点击“下一步”（点击“验证”也将产生相同效果）。向导将验证如果您继续操作，您提议的更改将成功执行。
-
-值得注意的是，此时尚未对您的服务器进行任何更改。此过程对于帮助您发现可能缺少了某些先决条件非常有价值，并且它可以提醒您将为您进行某些配置更改。
-
-## 配置 Team Foundation Server | 53
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_90_0.png)
-
-**图 3-4：** 配置设置审核屏幕
-
-此步骤完成后，您将看到一个类似于图 3-5 的屏幕。如果您的配置存在潜在问题，将向显示任何错误或警告，以及如何处理它们的信息。
-
-当您准备好继续配置选项时，点击“下一步”。向导将尝试使用您选择的选项配置 Team Foundation Server。如果选择在配置中安装 SQL Server Express，此过程可能需要几分钟。否则，它只需要几分钟。
-
-配置完成后，您将看到一个如图 3-6 所示的确认屏幕。请页面上显示的任何警告或错误，以及任何信息通知（例如图 3-6 所示的消息，表示在配置期间打开了额外的防火墙端口）。您还可以通过点击向导页面底部的链接访问详细的日志信息，完成后点击“关闭”。
-
-# 第 3 节 安装与配置
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_91_0.png)
-
-图 3-5：就绪检查页面
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_91_1.png)
-
-图 3-6：配置结果页面
-
-在此步骤结束时，您已成功在您的机器上成功配置了一个 Team Foundation Server 2012 实例。该实例现在作为服务运行，您可以与其进行交互。
-
-此实例现在作为服务运行，您可以开始操作。您可以采用多个应用层节点来为您的部署提供负载均衡和容错能力。如果您正在将 Team Foundation 应用程序从一台服务器移动到另一台服务器，或者处于第 21 节描述的灾难恢复场景，也可以使用此向导。
-
-应用层仅用于在第 20 节描述的高可用环境中配置 Team Foundation Server。
-
-高级向导为您的配置提供了最大的灵活性。它还提供了与标准服务器向导完全相同的 Team Foundation Server 功能。但高级向导允许您为 SharePoint、SQL Server 和 SQL 报表服务定义远程系统。此向导还允许您使用 Kerberos 身份验证、使用非默认 SQL Server 实例，以及使用除 SharePoint Foundation 2010 以外的 SharePoint 版本。高级向导为您提供了禁用报表服务和/或 SharePoint 集集的选项，尽管您可以随时添加这些组件。
-
-当您从之前的 Team Foundation Server 版本升级时，使用升级功能。升级详见第 25 节。
-
-## 配置 Team Foundation Server 代理
-
-此向导可将此机器配置为 Team Foundation 代理服务器。有关配置代理服务器的更多信息，请参第 26 节。
-
-## 配置 Team Foundation 构建服务
-
-如果您想将此机器配置为构建控制器和/或一个更多的构建代理程序，则可以使用此向导。Team Foundation Build 详见第 4 部分。
-
-## 为 SharePoint 产品配置扩展
-
-如果您计划配置 Team Foundation Server 与运行在远程机器或远程 SharePoint 场中的 SharePoint 集成，则应使用此向导。如果您正在使用场，可能需要在该场中的每台机器上运行此向导。
+选择您的 SQL Server 实例后，点击“下一步”。您将看到您所选择的配置设置列表（如图 3-4 所示），您将有机会返回并进行更改。
 
 ## 创建您的第一个项目
 
@@ -1837,19 +1515,15 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 如果 Team Explorer 窗口在 Visual Studio 中不可见，可以通过点击“查看 Team Explorer”来启用。Team Explorer 如图 3-8 所示。
 
-如果您将 Team Explorer 安装在 Team Foundation Server 2012 同一台机器上，您的服务器名称可能会自动填充（由 localhost 或计算机名称指示，如图 3-8 所示）。
+如果您将 Team Explorer 安装在 Team Foundation Server 2012 同一台机器上，您的服务器名称可能会自动填充（由 `localhost` 或计算机名称指示，如图 3-8 所示）。
 
-在不同的机器上安装 Team Explorer，应通过点击 Team Explorer 窗口顶部的“连接到 Team Foundation”链接手动添加您的托管的 Team Foundation。在“连接到 Team Foundation”对话框中，点击“服务器”以添加新服务器。点击“添加”并提供 Team Foundation Server 的地址。您可以在 Team Foundation Server 管理控制台的“服务器 URL”下找到它（例如 http://8080/tfs）。
+在不同的机器上安装 Team Explorer，应通过点击 Team Explorer 窗口顶部的“连接到 Team Foundation”链接手动添加您的托管的 Team Foundation。在“连接到 Team Foundation”对话框中，点击“服务器”以添加新服务器。点击“添加”并提供 Team Foundation Server 的地址。您可以在 Team Foundation Server 管理控制台的“服务器 URL”下找到它（例如 `http://8080/tfs`）。
 
-添加服务器后，点击“确定”，然后在“选择 Team Foundation 服务器”下拉框中选择您想要连接的服务器。如果您使用了基本配置，您将有一个单一的项目集合 DefaultCollection。选择此集合并点击“连接”。
+添加服务器后，点击“确定”，然后在“选择 Team Foundation 服务器”下拉框中选择您想要连接的服务器。如果您使用了基本配置，您将有一个单一的项目集合 `DefaultCollection`。选择此集合并点击“连接”。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_93_0.png)
 
 图 3-8：Team Explorer 窗口
-
-
-
-
 
 > 注意：团队项目集提供了将一个或多个团队项目组合在一起的方法。你将在本书后续部分学习更多关于团队项目集的知识。
 
@@ -1863,7 +1537,7 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 完成后，团队资源管理器（Team Explorer）将显示你的团队项目，如图 3-10 所示。你现在可以开始为团队项目处理项目、源码控制、构建定义等。
 
-# 配置友型 DNS 名称
+### 配置友型 DNS 名称
 
 如果你遵循了之前的步骤，那么你现在已经有一个可以与团队共享的 Team Foundation Server 部署。你可以开始向安全组添加用户（在第 22 章中解释）。
 
@@ -1873,13 +1547,13 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 然而，如第 2 章所述，在发布服务器地址之前，你可能想要采取一个额外的配置步骤，那就是考虑为端点分配友型 DNS 名称。
 
-友型 DNS 名称允许你为 Team Foundation Server 端点分配易于记忆的名称，这些名称在后台会重定向到你的实际服务器。你可以为你的团队分配友型 DNS 名称（例如 tfs.contoso.com），以及其他组件，如服务实例或代理服务器。
+友型 DNS 名称允许你为 Team Foundation Server 端点分配易于记忆的名称，这些名称在后台会重定向到你的实际服务器。你可以为你的团队分配友型 DNS 名称（例如 `tfs.contoso.com`），以及其他组件，如服务实例或代理服务器。
 
 这些友型 DNS 名称不仅让用户更方便，还可以作为管理员保护你。例如，如果你需要将 Team Foundation Server 实例从一台机器移动到另一台机器（例如在备份/恢复或迁移到新硬件期间），你可以重定向友型 DNS 名称，而无需向连接到 Team Foundation Server 实例的客户端发布新的服务器名称。
 
 你可以在未来的任何时候执行此步骤，但现在执行（在服务器被使用之前）将避免切换客户端到新名称所需的工作。
 
-> 注意：Ed Blankansky 编写了一篇详细的博客文章，描述了如何在 Team Foundation Server 2010 中使用友型 DNS 名称。这些步骤等适用于 Team Foundation Server 2012。参见 http://aka.ms/FriendlyTfsNames。
+> 注意：Ed Blankansky 编写了一篇详细的博客文章，描述了如何在 Team Foundation Server 2010 中使用友型 DNS 名称。这些步骤等适用于 Team Foundation Server 2012。参见 `http://aka.ms/FriendlyTfsNames`。
 
 ## 总结
 
@@ -1887,7 +1561,7 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 在第 4 章中，你将学习更多用于处理 Team Foundation Server 的各种客户端应用程序。
 
-## 4 连接到 Team Foundation Server
+# 第 4 章 连接到 Team Foundation Server
 
 本章内容摘要：
 
@@ -1899,11 +1573,9 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 到此时，你应该已经有一个可以工作的 Team Foundation Server 项目集——要么是你使用第 3 章中的说明自己安装的，要么是别人为你提供的。本章教你如何从可以与 Team Foundation Server 通信的各种产品连接到实例，当你无法连接时，还会学习一些常见的故障排除技术。首先，一些关于 Team Foundation Server 架构的信息将很有帮助。
 
-# TEAM FOUND SERVER 架构
+## TEAM FOUND SERVER 架构
 
 图 4-1 显示了 Team Foundation Server 安装中可用的主要服务器。Team Foundation Server 主应用程序托管在应用程序层。桌面上的客户端连接到此应用程序层 (AT)。从这里，客户端获取所有其他组件的连接信息（例如 SharePoint 门户、分析服务等）。
-
-## 第 4 章 连接到 Team Foundation Server
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_97_0.png)
 
@@ -1917,13 +1589,7 @@ Team Explorer 2012 安装后，从启动屏幕启动 Visual Studio 2012。
 
 基于 Windows 的客户端，Windows 身份验证是典型的形式。这让 Team Foundation Server 运行在标准端口 80 或 443 上变得更容易，反过来使其更容易通过互联网访问。
 
-客户端与应用程序层之间的通信使用 Team Foundation 服务协议进行。这由一组 Web 服务组成，客户端使用 HTTP 或 HTTPS 协议连接，取决于应用程序层如何配置。客户端连接使用 Windows 身份验证（也称为 NTLM）、Kerberos 或通过 SSL/TLS 加密连接；可以使用基本身份验证。
 
-对于本地 Team Foundation Server，Windows 身份验证是典型的形式，除非另有明确配置。对于 Team Foundation 服务，使用基于声明的身份验证（例如，微软账户）。
-
-基于 Windows 的客户端，Windows 身份验证是典型的形式。这让 Team Foundation Server 运行在标准端口 80 或 443 上变得更容易，反过来使其更容易通过互联网访问。
-
-客户端与应用程序层之间的通信使用 Team Foundation 服务协议进行。这由一组 Web 服务组成，客户端使用 HTTP 或 HTTPS 协议连接，取决于应用程序层如何配置。客户端连接使用 Windows 身份验证（也称为 NTLM）、Kerberos 或通过 SSL/TLS 加密连接；可以使用基本身份验证。
 
 在本章中，你学习了如何安装和配置简单的 Team Foundation Server 2012 实例。在此，你学习了微软在此版本中对安装和配置所做的迭代改进，例如轻量级 Web 安装程序。你还学习了如何创建团队项目，这将成为你软件开发工作的基础容器。
 
@@ -1946,43 +1612,37 @@ URL 的格式如下：
 ```
 
 以下是 URL 各部分的解释：
-- protocol—用于连接的（HTTP 或 HTTPS）。
-- serverName—指向你的服务器的域名 (DNS)。注意，DNS 可以是在你的组织中创建的友型名称。它不必是应用程序层的实际机器名称。
-- port—连接到应用程序层的端口。在默认安装中，它是 8080。如果它是协议的标准端口（即 HTTP 的 80 端口或 HTTPS 的 443 端口），可以省略。
-- virtualDirectory—Foundation Server 应用程序安装的路径。默认是 tfs。virtualDirectory 在 Team Foundation Server 2010 中添加。在之前的版本中，应用程序安装在网站的根目录下。但在 2010 版本中，它被移动到 tfs 文件夹，以便于与其他应用程序相同的默认网站上托管 Team Foundation Server。
-- collectionName—你所连接的项目集名称。默认情况下，Team Foundation Server 至少有一个项目集——通常称为 DefaultCollection。然而，如第 3 章讨论和第 19 章涵盖的所示，可以创建多个项目集。
+
+- `protocol`—用于连接的（HTTP 或 HTTPS）。
+- `serverName`—指向你的服务器的域名 (DNS)。注意，DNS 可以是在你的组织中创建的友型名称。它不必是应用程序层的实际机器名称。
+- `port`—连接到应用程序层的端口。在默认安装中，它是 8080。如果它是协议的标准端口（即 HTTP 的 80 端口或 HTTPS 的 443 端口），可以省略。
+- `virtualDirectory`—Foundation Server 应用程序安装的路径。默认是 `tfs`。`virtualDirectory` 在 Team Foundation Server 2010 中添加。在之前的版本中，应用程序安装在网站的根目录下。但在 2010 版本中，它被移动到 `tfs` 文件夹，以便于与其他应用程序相同的默认网站上托管 Team Foundation Server。
+- `collectionName`—你所连接的项目集名称。默认情况下，Team Foundation Server 至少有一个项目集——通常称为 `DefaultCollection`。然而，如第 3 章讨论和第 19 章涵盖的所示，可以创建多个项目集。
 
 以下是连接到 Foundation Server 的示例 URL：
 
-- http://vsalm:8080/tfs
-- http://vsalm:8080/tfs/DefaultCollection
+- `http://vsalm:8080/tfs`
+- `http://vsalm:8080/tfs/DefaultCollection`
+- `http://vsalm:8080/tfs/AdventureWorks`
+- `https://tfs.codeplex.com/tfs/TFS01`
+- `https://mycompany.visualstudio.com/`
+- `https://tfs.mycompany.com/tfs`
 
-
-
-
-
-## 介绍 Team Foundation Server 安全与规则 | 63
-
-- http://vsalm:8080/tfs/AdventureWorks
-- https://tfs.codeplex.com/tfs/TFS01
-- https://mycompany.visualstudio.com/
-- https://tfs.mycompany.com/tfs
-
-请注意，这些 URL 大部分无法直接在浏览器中有效。它们被用作 Team Foundation 客户端与该服务器 Web 服务通信的 URL 根。但是，如果您指定了 URL 的 `virtualDirectory`（虚拟目录）部分，或者特殊的名称名称为 `web`，这会将您重定向到名为 Web Access 的 Team Foundation Server Web 客户端（例如 http://vsalm:8080/tfs/，或 https://tfs.mycompany.com/tfs/）。
+请注意，这些 URL 大部分无法直接在浏览器中有效。它们被用作 Team Foundation 客户端与该服务器 Web 服务通信的 URL 根。但是，如果您指定了 URL 的 `virtualDirectory`（虚拟目录）部分，或者特殊的名称名称为 `web`，这会将您重定向到名为 Web Access 的 Team Foundation Server Web 客户端（例如 `http://vsalm:8080/tfs/`，或 `https://tfs.mycompany.com/tfs/`）。
 
 > 注意：请参阅本章后文“通过 浏览器访问 Team Foundation Server”章节，获取有关 Team Web Access 的更多信息。
 
-## 介绍 TEAM FOUNDATION SERVER 安全与角色
+## 介绍 Team Foundation Server 安全与角色
 
 Team Foundation Server 在安全、组和权限方面的强大功能起初可能会令人生感到无从。然而，从核心上讲，Team Foundation Server 安全有几个需要注意的简单概念：
 
-- 用户 (Users)
-- 组 (Groups)
-- 权限 (Permissions)
+- 用户 `Users`
+- 组 `Groups`
+- 权限 `Permissions`
 
 > 注意：关于 Team Foundation Server 安全的详细信息，请参阅第 22 章。
 
-## 用户 (Users)
+### 用户 Users
 
 在 Team Foundation Server 的本地部署版本中，它利用了 Windows 用户。并没有独立的 Team Foundation Server 用户概念——只有拥有使用 Team Foundation Server 资源权限的 Windows 用户。如果 Team Foundation Server 处于活动目录（Active Directory）环境中（推荐配置），则可以授予域用户使用 Team Foundation Server 的权限。也可以使用本地用户（在所谓的“工作组模式”中定义在该机器本地的用户）。
 
@@ -1990,24 +1650,24 @@ Team Foundation Server 在安全、组和权限方面的强大功能起初可能
 
 用户详细信息（用户名、显示名称、电子邮件地址等）均从 Windows 用户详细信息中获取。用户验证使用 Windows 身份验证进行。这意味着不需要专门为 Team Foundation Server 创建或管理用户的基础。现有的用户创建系统可以供公司使用，并处理密码策略、密码重置等问题。
 
-## 组 (Groups)
+### 组 Groups
 
 Team Foundation Server 有两种您必须关注的组：
 
-- 1. Windows 安全组（域、分发或本地组）
-- 2. Team Foundation Server 组
+1. Windows 安全组（域、分发或本地组）
+2. Team Foundation Server 组
 
-正如您在第 22 章中将到的，Windows 安全组基本上由 Windows 安全系统维护的用户集合。例如，为了完成第 3 章描述的 Team Foundation Server 安装，用户必须位于服务器上的本地 Administrators（管理员）组中。
+正如您在第 22 章中将到的，Windows 安全组基本上由 Windows 安全系统维护的用户集合。例如，为了完成第 3 章描述的 Team Foundation Server 安装，用户必须位于服务器上的本地 `Administrators`（管理员）组中。
 
 Team Foundation Server 有在服务器上维护的自己的组结构。在系统中，组分为三个层级：
 
-- 1. 服务器组 (Server groups)
-- 2. Team 项目集合组 (Team project collection groups)
-- 3. Team 项目组 (Team project groups)
+1. 服务器组 `Server groups`
+2. Team 项目集合组 `Team project collection groups`
+3. Team 项目组 `Team project groups`
 
-服务器组影响 Team Foundation Server 实例并跨越项目集合之间的边界。默认组（在第 22 章中详细介绍）具有硬编码名称，无法从服务器上更改或删除（例如 Team Foundation Administrators 或 Team Foundation Users）。
+服务器组影响 Team Foundation Server 实例并跨越项目集合之间的边界。默认组（在第 22 章中详细介绍）具有硬编码名称，无法从服务器上更改或删除（例如 `Team Foundation Administrators` 或 `Team Foundation Users`）。
 
-在 Team Foundation 实例级别拥有服务器组权限的用户。例如，Team Foundation Administrators 组中的用户可以创建新项目。Team Foundation Valid Users 组中的用户可以连接到 Team Foundation Server 实例并查看哪些项目集合可用（但他们可能没有权限实际连接到特定项目）。对服务器组的修改必须使用第 3 章介绍的 Team Foundation Server 管理控制台进行。
+在 Team Foundation 实例级别拥有服务器组权限的用户。例如，`Team Foundation Administrators` 组中的用户可以创建新项目。`Team Foundation Valid Users` 组中的用户可以连接到 Team Foundation Server 实例并查看哪些项目集合可用（但他们可能没有权限实际连接到特定项目）。对服务器组的修改必须使用第 3 章介绍的 `Team Foundation Server 管理控制台` 进行。
 
 Team 项目集合组是在集合创建过程中创建的。默认组及其成员在第 22 章中详细介绍。然而，它们控制着谁是项目集合的管理员，谁可以连接并使用它等。
 
@@ -2019,9 +1679,9 @@ Team 项目集合组是在集合创建过程中创建的。默认组及其成员
 
 Team Foundation 组成员由 Windows 用户和组组成。在每个层级，都可以创建自定义组并分配某些权限。
 
-## 权限 (Permissions)
+### 权限 Permissions
 
-Team Foundation Server 中的每个用户或组都可以被分配允许（Allow）或拒绝（Deny）权限。通常，在开始使用 Team Foundation Server 时，您应该从其他组（如 Valid Users 组）继承一组默认权限，允许他们连接到服务器。对组的修改必须使用服务器管理控制台进行。
+Team Foundation Server 中的每个用户或组都可以被分配允许（Allow）或拒绝（Deny）权限。通常，在开始使用 Team Foundation Server 时，您应该从其他组（如 `Valid Users` 组）继承一组默认权限，允许他们连接到服务器。对组的修改必须使用服务器管理控制台进行。
 
 > 注意：有关对团队项目管理员、贡献者或读者的细粒度控制的更多信息，请参阅第 22 章。
 
@@ -2031,36 +1691,32 @@ Visual Studio Team Explorer 是 Team Foundation Server 的客户端界面。它�
 
 Visual Studio Team Explorer 也可以单独安装或下载。如果安装在没有 Visual Studio 的机器上，它将安装一个精简版的 Visual Studio（称为 Visual Studio Shell），并在其中提供所有与 Team Foundation Server 交互的丰富客户端功能。
 
-## 理解 Visual Studio 中的 Team Explorer
+### 理解 Visual Studio 中的 Team Explorer
 
 Team Explorer 和 Team Explorer Everywhere 的由特定用户连接 Team Foundation Server 所需的访问许可（CAL）涵盖，无论用户从多少台机器连接。
 
 到目前，您应该已经有一个带有项目集合和团队项目的 Team Foundation Server 实例，方法如下：
 
 - 自己安装一个（按照第 3 章的说明）
-- 从微软下载试用虚拟机 (VM)
+- 从微软下载试用虚拟机 `VM`
 - 注册 Team Foundation 服务
 - 从托管提供商租赁托管 Team Foundation Server 解决方案
 
 您现在必须从想要用于开发的机器连接到您的 Team Foundation Server 实例。
 
-## 从 Visual Studio 2012 连接到 Team Foundation Server 2012
+### 从 Visual Studio 2012 连接到 Team Foundation Server 2012
 
 最常见的路线是从 Visual Studio 2012 连接到 Team Foundation Server 2012。坦率地说，有很多连接方法。
 
-您可以点击 Team ⇄ Team Foundation Server，或者从 Visual Studio 启动页点击左侧的 Connect to Team Foundation 链接。Team Explorer 的另一种方法是从 View ⇩ Team Explorer，然后点击那里的链接。
+您可以点击 `Team` ⇄ `Team Foundation Server`，或者从 Visual Studio 启动页点击左侧的 `Connect to Team Foundation` 链接。Team Explorer 的另一种方法是从 `View` ⇩ `Team Explorer`，然后点击那里的链接。
 
-无论您使用哪种方式连接，都会面对一个相当令人生畏的空白 Connect to Team Project 对话框，如图 4-3 所示。![](img/aaf6096fc6b4485534c737801bdbc4fd_103_0.png)
+无论您使用哪种方式连接，都会面对一个相当令人生畏的空白 `Connect to Team Project` 对话框，如图 4-3 所示。![](img/aaf6096fc6b4485534c737801bdbc4fd_103_0.png)
 
 图 4-3：Connect to Team Project 对话框
 
-
-
-
-
 通常情况下，在此处，选择 Team Foundation Server 的下拉菜单也是空的。要将你的服务器添加到列表，请点击“Servers”（服务器）按钮。这将显示另一个空对话框——添加/删除 Team Foundation Server 对话框。点击“Add”（添加）按钮。
 
-最后，你可以输入想要连接的 Team Foundation Server 实例详细信息。输入你的 Team Foundation Server 实例名称（例如 vs 或 tfs.mycompany.com）。在图 4-4 所示的对话框底部，你将看到用于连接到 Team Foundation Server 的 URL 预览。
+最后，你可以输入想要连接的 Team Foundation Server 实例详细信息。输入你的 Team Foundation Server 实例名称（例如 `vs` 或 `tfs.mycompany.com`）。在图 4-4 所示的对话框底部，你将看到用于连接到 Team Foundation Server 的 URL 预览。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_104_0.png)
 
@@ -2072,17 +1728,17 @@ Team Explorer 和 Team Explorer Everywhere 的由特定用户连接 Team Foundat
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_105_0.png)
 
-## 在 Windows 上存储你的 Team Foundation Server 密码
+### 在 Windows 上存储你的 Team Foundation Server 密码
 
 在基于 Windows 的系统中，连接到 Team Foundation Server 时使用的是该站的默认凭据。这些通常你的 Windows 登录凭据，可以在域内提供无缝的 SSO（单点登录）体验。
 
 然而，有时你需要使用另一组凭据登录 Team Foundation Server。当你的 Team Foundation Server 托管在互联网上且与你登录域不同时，情况尤为如此。如果默认凭据不适用，Team Explorer 将使用标准的 Windows 身份验证提示要求你输入用户名和密码。
 
-你也可以存储这些凭据，以便 Windows 始终对该服务器使用。在 Windows 7 及更高版本上，点击“开始”，然后输入“Credential Manager”（凭据管理器）。在其中，添加包含你项目的 Team Foundation Server 实例，并输入你应该使用的域、用户名和密码。你也可以使用命令行工具 CMDKEY.exe 管理网络密码。
+你也可以存储这些凭据，以便 Windows 始终对该服务器使用。在 Windows 7 及更高版本上，点击“开始”，然后输入“Credential Manager”（凭据管理器）。在其中，添加包含你项目的 Team Foundation Server 实例，并输入你应该使用的域、用户名和密码。你也可以使用命令行工具 `CMDKEY.exe` 管理网络密码。
 
-## Team Explorer
+### Team Explorer
 
-连接后，你现在应该可以在 Visual Studio 内部看到 Team Explorer，如图 4-6 所示。如果你没有看到 Team Explorer，请转到“View”（查看）Team Explorer。
+连接后，你现在应该可以在 Visual Studio 内部看到 Team Explorer，如图 4-6 所示。如果你没有看到 Team Explorer，请转到“View”（查看） `Team Explorer`。
 
 ## Team Explorer 69
 
@@ -2116,10 +1772,9 @@ Team Explorer 中提供的不同页面或上下文有：
 - **Settings（设置）**——管理团队项目的配置。
 
 > **注意** 本书后面将详细介绍这些每个项目。
+> **注意** 有关版本之间兼容性的详细说明，请参见下文：`aka.ms/Compatibility`。
 
-> **注意** 有关版本之间兼容性的详细说明，请参见下文：aka.ms/Compatibility。
-
-## 无法连接的旧客户端
+### 无法连接的旧客户端
 
 由于过旧版本与 Team Foundation Server 通信可能会导致问题，服务器会检查 HTTP Header 中的 User-Agent。如果客户端是旧版本，将向用户显示以下错误：
 
@@ -2127,13 +1782,15 @@ Team Explorer 中提供的不同页面或上下文有：
 TF2500: You must update your client in order to connect to Team Foundation Server. To obtain this update, go to Microsoft site: microsoft.com/fwlink/?LinkId=16688
 ```
 
-如果发生此错误，应更新客户端。有关如何执行检测的更多信息，请参见 aka.ms/TF2532。
+如果发生此错误，应更新客户端。有关如何执行检测的更多信息，请参见 `aka.ms/TF2532`。
 
-## 较旧的 Visual Studio 版本
+### 较旧的 Visual Studio 版本
 
 由于 Team Foundation Server 2012 的发布以及 Visual Studio 2005 用户的日益减少，团队决定不再为该版本发布兼容性补丁。然而，有一个更新的 MSSCI 程序可用。
 
-Team Foundation 服务器通过 aka.ms/FTMSSCCI 提供了 MSSCI 程序。MSSCI 程序需要在机器上安装相应的 Explorer。有关 MSSCI 程序的更多信息，请参见第 6 章。还提供了 64 位的 MSSCI 程序。
+
+
+Team Foundation 服务器通过 `aka.ms/FTMSSCCI` 提供了 `MSSCI` 程序。`MSSCI` 程序需要在机器上安装相应的 `Explorer`。有关 `MSSCI` 程序的更多信息，请参见第 6 章。还提供了 64 位的 `MSSCI` 程序。
 
 ## 从 Eclipse 和跨平台连接 Team Foundation Server
 
@@ -2146,14 +1803,11 @@ Team Foundation 服务器通过 aka.ms/FTMSSCCI 提供了 MSSCI 程序。MSSCI �
 
 与微软 Visual Studio 组织的产品不同的是，Team Explorer Everywhere 使用 Java 编写，并支持所有主要平台，包括 Windows、Mac OS X 以及各种 UNIX（如 Linux、HP-UX、Solaris 和 AIX）。
 
-## Eclipse 的 Team Foundation Server 插件
+### Eclipse 的 Team Foundation Server 插件
 
 作为 Team Explorer Everywhere 的一部分提供的 Eclipse 插件在 3.4 及更高版本的 Eclipse 开发环境中作为标准的 Repository 插件安装。这不仅包括最新版本的独立 Eclipse IDE，还包括了诸如 Rational Application Developer、Adobe FlexBuilder 等工具，以及支持嵌入式开发。通过使用 100% 的 Java 技术将功能作为 Eclipse 插件提供，其安装非常简单，开发者在 Eclipse 中使用版本控制提供程序也十分方便。
 
 如图 4-7 所示，Team Explorer Everywhere 在 Eclipse 中提供的不仅仅是控制功能。本章前面介绍的整个 Team Explorer 2012 体验都提供给 Eclipse 开发者，这意味着开发组织的所有部分在使用 Team Foundation Server 管理开发生命周期时都是平等的。
-
-
-
 
 将源代码或任何其他文件视为文件。从版本控制的角度来看，对于 Team Foundation Server 而言，所有代码都是创建的。
 
@@ -2163,42 +1817,45 @@ Team Foundation 服务器通过 aka.ms/FTMSSCCI 提供了 MSSCI 程序。MSSCI �
 
 Eclipse 插件可以作为 Team Explorer Everywhere 安装，或者通过下载插件更新站点进行安装。服务包 1 介质包含了该版本的完整版插件，因此可以直接从该介质进行安装。
 
-> 注意：要为 Eclipse 安装 Team Foundation Server 插件，只需在 Eclipse 中使用以下更新站点（或从 Eclipse 市场中心安装）。这将确保您安装了最新发布的插件版本：http://dl.microsoft.com/eclipse/tfs。
-如果您想下载 Eclipse 插件的最新预发布版本，则可以使用 http://dl.microsoft.com/eclipse/tfs/preview 处的更新站点。
+> 注意：要为 Eclipse 安装 Team Foundation Server 插件，只需在 Eclipse 中使用以下更新站点（或从 Eclipse 市场中心安装）。这将确保您安装了最新发布的插件版本：`http://dl.microsoft.com/eclipse/tfs`。
+
+如果您想下载 Eclipse 插件的最新预发布版本，则可以使用 `http://dl.microsoft.com/eclipse/tfs/preview` 处的更新站点。
 
 有关如何使用 Eclipse 集成开始进行版本控制的更多信息，请参阅第 6 节。使用 Team Foundation Server 构建 Java 应用程序也将在第 17 节中介绍。
 
-## Team Foundation Server 的跨平台命令行客户端
+### Team Foundation Server 的跨平台命令行客户端
 
-Team Explorer 还允许您使用 Team Foundation Server 的跨平台命令行客户端 (tf) 在许多 UNIX 和 Linux 风格操作系统上执行版本控制操作，如图 4-8 所示。
+Team Explorer 还允许您使用 Team Foundation Server 的跨平台命令行客户端 (`tf`) 在许多 UNIX 和 Linux 风格操作系统上执行版本控制操作，如图 4-8 所示。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_110_0.png)
 
 图 4-8：Mac OS X 上的跨平台命令行客户端
 
-命令语法与作为 Team Explorer 安装的一部分安装在 Windows 上的版本控制命令行工具 (tf.exe) 类似。这允许针对这两种工具编写工具和脚本。
+命令语法与作为 Team Explorer 安装的一部分安装在 Windows 上的版本控制命令行工具 (`tf.exe`) 类似。这允许针对这两种工具编写工具和脚本。
 
-### 为了最大可移植性使用连字符
+#### 为了最大可移植性使用连字符
 
-Team Foundation 版本控制命令行接受多个参数。在大多数文档中，示例以正斜杠字符 (/collection:TeamProjectCollectionUrl) 为前缀。然而，在 UNIX Shell 中，正斜杠是转义字符。这意味着，要实际向 tf 命令传递正斜杠（通常需要连用另一个正斜杠）。
-为了避免这种混淆，所有的命令行客户端都能接受使用连字符或正斜杠作为参数的前缀。例如，--collection:TeamProjectCollectionUrl 是在 Windows 和所有 UNIX Shell 中传递集合 URL 的有效方式。
+Team Foundation 版本控制命令行接受多个参数。在大多数文档中，示例以正斜杠字符 (`/collection:TeamProjectCollectionUrl`) 为前缀。然而，在 UNIX Shell 中，正斜杠是转义字符。这意味着，要实际向 `tf` 命令传递正斜杠（通常需要连用另一个正斜杠）。
+
+为了避免这种混淆，所有的命令行客户端都能接受使用连字符或正斜杠作为参数的前缀。例如，`--collection:TeamProjectCollectionUrl` 是在 Windows 和所有 UNIX Shell 中传递集合 URL 的有效方式。
+
 因此，如果您正在编写一个生成命令行的脚本或工具，请使用连字符，以确保该工具可以在所有平台上轻松地运行。
 
 ## 第 4 节 连接到 TEAM FOUNDATION SERVER
 
-## 连接到 TEAM FOUNDATION SERVER 的其他方法
+### 连接到 TEAM FOUNDATION SERVER 的其他方法
 
 除了安装 Team Explorer 或 Team Explorer Everywhere 之外，还有许多其他方法连接到 Team Foundation Server。在服务器本身，可以使用 Team Foundation Server 管理控制台。从客户端，有许多不同的连接选项，取决于您想要做什么。
 
-通过 通过 浏览器访问 Team Foundation Server
+#### 通过浏览器访问 Team Foundation Server
 
-在 Team Foundation Server 2012 中，一个名为 Team Web Access (TWA) 的完全重制的 Web 客户端默认安装在应用层上，它位于虚拟路径 (http://server:8080/tf) 下的特殊 Web 目录下。如图 4-9 所示，TWA 是不希望安装专用 Team Foundation Server 客户端用户的理想选择。除了现代 Web 浏览器外，客户端机器不需要安装额外软件（该站点在 Firefox、Safari、Chrome 以及 Internet Explorer 中均可运行）。它还用于许多地方的链接，该链接可以指向 Team Foundation Server 中的数据——例如，当传递指向工作项或搁存 (shelvet) 的链接时。
+在 Team Foundation Server 2012 中，一个名为 Team Web Access (`TWA`) 的完全重制的 Web 客户端默认安装在应用层上，它位于虚拟路径 (`http://server:8080/tf`) 下的特殊 Web 目录下。如图 4-9 所示，`TWA` 是不希望安装专用 Team Foundation Server 客户端用户的理想选择。除了现代 Web 浏览器外，客户端机器不需要安装额外软件（该站点在 Firefox、Safari、Chrome 以及 Internet Explorer 中均可运行）。它还用于许多地方的链接，该链接可以指向 Team Foundation Server 中的数据——例如，当传递指向工作项或搁存 (`shelvet`) 的链接时。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_111_0.png)
 
-### 连接到 Team Foundation Server 的其他方法
+##### 连接到 Team Foundation Server 的其他方法
 
-从高级层次来看，TWA 提供以下功能：
+从高级层次来看，`TWA` 提供以下功能：
 
 - 优先处理产品待办列表、迭代待办列表和看板
 - 创建和编辑工作项以及工作项查询
@@ -2207,9 +1864,9 @@ Team Foundation 版本控制命令行接受多个参数。在大多数文档中�
 - 对版本控制的只读访问（包括源代码资源管理器）以及搁存集，以及比较文件控制版本的能力
 - 队列和管理生成定义
 
-当您最初访问 TWA 时，系统会提示您选择想要连接的团队项目集、团队项目以及哪个团队。做出选择后，系统将记录随后的访问。但是，您可以通过选择页面右上角的下拉菜单来更改上下文。
+当您最初访问 `TWA` 时，系统会提示您选择想要连接的团队项目集、团队项目以及哪个团队。做出选择后，系统将记录随后的访问。但是，您可以通过选择页面右上角的下拉菜单来更改上下文。
 
-### 在 Microsoft Excel 中使用 Team Foundation Server
+#### 在 Microsoft Excel 中使用 Team Foundation Server
 
 作为 Team Explorer 安装过程的一部分，团队支持作为功能区带上的新选项卡添加到 Microsoft Excel 中。这允许直接从 Excel 表格添加和编辑工作项，如图 4-10 所示。
 
@@ -2217,13 +1874,11 @@ Team Foundation 版本控制命令行接受多个参数。在大多数文档中�
 
 图 4-10：添加和编辑工作项
 
-## 第 4 节 连接到 TEAM FOUNDATION SERVER
-
 要从 Excel 连接到 Team Foundation Server，转到功能区并点击“新建”。选择想要使用的项目，然后您就可以直接在 Excel 中添加和编辑工作项。
 
 由于 Team Foundation Server 2010 引入了增强的链接功能，可以使用链接工作项的 Microsoft Project 轻松创建后续项目，允许您控制工作项之间的依赖关系。
 
-### 在 Microsoft Project 中使用 Team Foundation Server
+##### 在 Microsoft Project 中使用 Team Foundation Server
 
 除了提供 Excel 集成外，安装 Team Explorer 会在 Microsoft Project 中安装一个 Team 功能区，如图 4-11 所示。这提供了直接在 Project 中添加和编辑工作项以及查看进度数据的能力。
 
@@ -2231,27 +1886,21 @@ Team Foundation 版本控制命令行接受多个参数。在大多数文档中�
 
 图 4-11：Microsoft Project 中的 Team 功能区
 
-## PROJECT SERVER 的 TEAM FOUNDATION 扩展
+### PROJECT SERVER 的 TEAM FOUNDATION 扩展
 
-> 作为 Team Foundation Server 2010 服务包 1 的功能包引入，与 Project Server 的集成已内置在 2012 版本中。通过启用 Team Foundation Server 和 Project Server 之间的数据流，项目经理可以访问在 Team Foundation Server 中工作的敏捷和正式软件团队的最新项目状态和资源可用性。更多信息，请参阅 MSDN 文档：http://aka.ms/tf2012ProjectServer。
+> 作为 Team Foundation Server 2010 服务包 1 的功能包引入，与 Project Server 的集成已内置在 2012 版本中。通过启用 Team Foundation Server 和 Project Server 之间的数据流，项目经理可以访问在 Team Foundation Server 中工作的敏捷和正式软件团队的最新项目状态和资源可用性。更多信息，请参阅 MSDN 文档：`http://aka.ms/tf2012ProjectServer`。
 
-## Windows Explorer 与 Team Foundation Server
+### Windows Explorer 与 Team Foundation Server
 
-自 Team Foundation Server Power Tools (http://aka.ms/VSPTools) 起，可以选择 Windows Shell 集成。一旦启用，当您浏览映射到 Team Foundation Server 工作区的文件夹时，文件和文件夹将根据状态（是否已签出）进行装饰。
+自 Team Foundation Server Power Tools (`http://aka.ms/VSPTools`) 起，可以选择 Windows Shell 集成。一旦启用，当您浏览映射到 Team Foundation Server 工作区的文件夹时，文件和文件夹将根据状态（是否已签出）进行装饰。
 
 右键点击文件或文件夹，可以在 Team Foundation Server 菜单（图 4-12）下访问一些基本的版本控制操作，这在在 Visual Studio 或 Eclipse 之外处理 Team Foundation Server 时非常有用。
-
-
-
-
-
-## 第 4 章 连接到 Team Foundation Server
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_115_0.png)
 
 图 4-12：Windows 外壳集成
 
-## 将 Microsoft Test Manager 连接到 Team Foundation Server
+### 将 Microsoft Test Manager 连接到 Team Foundation Server
 
 Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示界面。它是 Visual Studio Test Professional、Visual Studio Ultimate 的一部分，现在也包含在 Visual Studio Premium 2012 中。
 
@@ -2259,13 +1908,11 @@ Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示
 
 初始连接后，你的偏好将被记住，你将自动连接到该测试计划。要更改测试计划或连接到不同的项目或项目集，请点击屏幕右上角的测试计划名称，如图 4-13 所示。
 
-## 连接到 Team Foundation Server 的其他方法 | 79
-
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_116_0.png)
 
 图 4-13：Microsoft Test Manager
 
-## 通过第三方生态系统集成访问 Team Foundation Server
+### 通过第三方生态系统集成访问 Team Foundation Server
 
 正如第 22 节所述，Team Foundation Server 通过其强大的扩展机制支持丰富且活跃的第三方生态系统。作为 Team Explorer 集成部分的相同 .NET 对象模型供安装在机器上的其他第三方应用程序使用。
 
@@ -2301,7 +1948,7 @@ Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示
 
 本章从解释版本控制的基本概念以及从工具无关的视角通常能从工具中找到的功能开始。然后检查了重要的版本控制工具并分析了它们的优缺点。本章最后从高层次概述了 Team Foundation Server 的版本控制能力，以及何时 Team Foundation Server 是你团队的正确工具。
 
-## 什么是版本控制？
+### 什么是版本控制？
 
 版本控制有许多名称。源码控制（Source control）经常使用，但修订控制（revision control）甚至软件配置管理（SCM）也可以用于指代同一组功能。由于现代软件项目包含的不仅仅是一组源代码，因此全范围内使用了“版本控制”一词，尽管这些术语可以互换（而且通常如此——即使在 Team Foundation 产品中也是如此）。
 
@@ -2317,7 +1964,7 @@ Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示
 
 然而，并不是所有的版本控制都是相同的。为了彻底理解文件的本质。
 
-## 仓库
+#### 仓库
 
 通常，代码存储在仓库（repository）中。仓库是文件的集合，通常存储在服务器上。为了理解仓库，关注文件的仓库会有所帮助。然而，仓库与文件系统不同。
 
@@ -2325,25 +1972,23 @@ Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示
 
 使用仓库的本地工作副本，开发者可以与团队成员并行工作，并知道在开发者执行特定操作之前，代码副本不会更改。
 
-## 工作副本
+#### 工作副本
 
 仓库中的文件必须位于开发者机器的本地区域。这允许开发者在决定将其提交（check in）或提交（commit）到仓库之前对文件操作、更改和调试。这种本地版本在 Team Foundation Server 中被称为工作区（workspace），但在某些版本控制系统中，它也可以被称为沙箱（sandbox）或工作副本（working copy）。
 
-## 工作文件夹映射
+#### 工作文件夹映射
 
 工作文件夹映射（working folder mapping）是存储中存储文件的地方与你在本地文件系统中拥有该部分仓库副本的地方之间的链接。工作目录（working directory）、工作区映射（workspace mapping）或沙箱（sandbox）等术语也可以表示工作映射。
 
+#### 获取 (Get)
 
+一旦你设置了工作文件夹映射，就必须将文件从仓库下载到你的本地机器。在 Team Foundation Server（以及其他版本控制工具）中，此过程被称为*获取 (Get)*。在并发版本系统 (`CVS`) 和 Subversion (`SVN`) 中，相同的过程被称为*检出 (check-out)*——这个词在 Team Foundation Server 等某些版本控制系统中含义有所不同，稍后将会详细描述。在 Git 等分布式版本控制系统 (`DVCS`) 工具中，你不是从仓库获取单个文件，而是将整个仓库克隆到本地。
 
-
-
-## 获取 (Get)
-
-一旦你设置了工作文件夹映射，就必须将文件从仓库下载到你的本地机器。在 Team Foundation Server（以及其他版本控制工具）中，此过程被称为*获取 (Get)*。在并发版本系统 (CVS) 和 Subversion (SVN) 中，相同的过程被称为*检出 (check-out)*——这个词在 Team Foundation Server 等某些版本控制系统中含义有所不同，稍后将会详细描述。在 Git 等分布式版本控制系统 (DVCS) 工具中，你不是从仓库获取单个文件，而是将整个仓库克隆到本地。
-
-## 添加 (Add)
+#### 添加 (Add)
 
 如果你的仓库中没有任何文件怎么办？当你第一次开始使用版本控制系统时，它是空的。在这种情况下，你需要*添加*一些文件。你从本地机器上选择文件和文件夹并将它们添加到仓库中，以便你与团队的其他成员共享。当你执行此操作时，很少想要添加所有文件。
+
+
 
 例如，你可能拥有源代码中的一些编译后的二进制文件，或者每次编写代码时工具在源目录中生成的文件。通常你不需要，实际上也不应该共享这些文件。Team Foundation Server 提供了工具，帮助你从文件夹中选择你正在编辑的文件，并过滤掉你想要排除的 DLL、编译类和对象文件，这些文件通常是构建过程的一部分，而不是你想要存储的代码。
 
@@ -2375,10 +2020,6 @@ Microsoft Test Manager 是测试人员与 Team Foundation Server 交互的所示
 
 如之前所述，版本控制仓库是一个存储了对其所做所有更改的文件系统。文件系统上的这个额外维度被称为*历史 (History)*。
 
-
-
-
-
 分布式版本控制系统（DVCS）正成为日益重要的角色，特别是在开源社区中。
 
 ## Microsoft VisualSourceSafe
@@ -2406,7 +2047,7 @@ Subversion (SVN) 是由 ColLabNet 于 2000 年创立的开源版本控制项目�
 
 | 优点 | 缺点 |
 | --- | --- |
-| SVN 在开源许可模型下运行（免费使用）。 | 像 CVS，SVN 利用源代码文件夹内部的 .svn 目录存储本地副本的状态并允许与服务器同步。然而，这可能会污染本地源码树，并导致大型项目或大文件出现性能问题。 |
+| SVN 在开源许可模型下运行（免费使用）。 | 像 CVS，SVN 利用源代码文件夹内部的 `.svn` 目录存储本地副本的状态并允许与服务器同步。然而，这可能会污染本地源码树，并导致大型项目或大文件出现性能问题。 |
 | SVN 被开源项目广泛使用（但正在逐渐被 Git 取代）。 | 重命名操作（Renames）在仓库中被处理为复制并删除操作，这在合并分支时可能会导致问题。 |
 | 服务器可以在多种操作系统上运行。 | 在 Windows 环境中配置身份验证和执行某些管理功能可能具有挑战性。 |
 | SVN 在所有平台上的开发者工具中提供了广泛的支持。 | 没有暂存功能（shelving functionality）。 |
@@ -2420,23 +2061,29 @@ Microsoft Visual Studio Team Foundation Server 于 2006 年首次发布，它是
 | 优点 | 缺点 |
 | --- | --- |
 | 它不仅仅是版本控制，还与该产品的工作项跟踪、构建和报告能力紧密集成。 | 离线支持和对偶尔连接的开发者支持在 Team Foundation Server 的之前的版本中得到了显著提高，但像 TFS 和 SVN 这样的集中版本控制工具在离线支持方面永远不如像 Git 这样的分布式版本控制工具。 |
-| 供应商提供了原级的 Visual Studio 和 Eclipse 集成。 | 可以设置一个集中服务器用于代码提交和团队成员协作。不过，你可以在 http://tfs.visualstudio.com 快速方便地为你设置集中服务器。 |
+| 供应商提供了原级的 Visual Studio 和 Eclipse 集成。 | 可以设置一个集中服务器用于代码提交和团队成员协作。不过，你可以在 `http://tfs.visualstudio.com` 快速方便地为你设置集中服务器。 |
 
 ## 常见版本控制产品
 
 ### 优点
 
 - 它具有许多企业级客户感兴趣的功能，例如集中安全管理、与 Active Directory 身份验证集成、单登录（SSO）以及 SharePoint 集成。
+
 - 服务器产品仅运行在 Windows 平台，但提供了跨平台的客户端。
+
 - 它具有高度的可扩展性。
+
 - 暂存集（Shelveset）支持允许你在服务器上存储更改，而不必提交到主代码仓库。
+
 - 提交策略（Check-in policies）规范了代码在提交到仓库之前必须通过的规则。
+
 - 门禁提交（Gated check-in）支持允许构建在代码提交到主仓库之前通过。
+
 - 所有数据都存储在 SQL Server 数据库中，以确保安全和方便备份。
 
 ### 缺点
 
-分布式版本控制系统（DVCS）已经存在了多年，但直到最近几年，随着 BitKeeper、Git、Mercurial、Veracity 和 Bazaar 等系统的创建，它们才获得了广泛采用。Git 和 Mercurial 可能是这类类型工具中最广为人知的，并见证迄为止最广泛的 DVCS 采用。在此时，Git 正在成为最重要的工具之一，这部分归功于 GitHub (http://www.github.com) 作为代码托管地的兴起。
+分布式版本控制系统（DVCS）已经存在了多年，但直到最近几年，随着 BitKeeper、Git、Mercurial、Veracity 和 Bazaar 等系统的创建，它们才获得了广泛采用。Git 和 Mercurial 可能是这类类型工具中最广为人知的，并见证迄为止最广泛的 DVCS 采用。在此时，Git 正在成为最重要的工具之一，这部分归功于 GitHub (`http://www.github.com`) 作为代码托管地的兴起。
 
 分布式版本控制（DVCS）的运行方式与之前讨论的版本控制系统有一些（但是基本的）区别。关键在于，DVCS 仓库之间是平等的关系，而更改不是在集中仓库中被序列化，而是被存储在本地仓库中。虽然并不需要集中版本控制仓库，但在任何环境中，通常会有一个集中仓库作为团队执行自动化构建的代码枢纽，并被团队认为是确定性版本。表 5-4 显示了 DVCS 优缺点的对比。
 
@@ -2447,12 +2094,8 @@ Microsoft Visual Studio Team Foundation Server 于 2006 年首次发布，它是
 | 它在离线时具有完整的仓库支持。它还具有快速仓库访问。 | 使用开发者仓库会减少与团队同步更改的频率，导致整体可见性的丢失。 |
 | 你可以轻松拥有多个仓库和高度灵活的拓扑结构。在集中式服务器方法可能使用分支的情况下，你可以使用仓库，这有助于扩展性。由于与仓库工作所需的所有工作都在客户端完成，DVCS 解决方案对服务器的硬件要求通常更低。 | 在更改推送到集中仓库之前，没有针对进度的集中备份。 |
 | 它鼓励频繁提交到本地仓库，提供了跟踪这些更改并查看代码演进的能力。 | 当前的 DVCS 解决方案缺乏企业需求常见的安全、审计和报告功能，例如通过路径控制版本控制访问权限。访问权限是在仓库级别控制的，而不是路径级别。 |
-| 大多数集中式系统（如 SVN 和 Team Foundation）允许对文件进行可选锁定以防止合并冲突。DVCS 工具的本质使得这变得不可能。 |
+| 大多数集中式系统（如 SVN 和 Team Foundation）允许对文件进行可选锁定以防止合并冲突。DVCS 工具的本质使得这变得不可能。 | |
 | 因为 DVCS 系统通常跟踪更改，并且由于分布式仓库的本质意味着合并更加频繁，DVCS 合并产生冲突的概率比集中式版本控制系统中从不同分支合并的更改要低。然而，合并越频繁，执行合并所需的工作可能就越多。 | 由于整个仓库都克隆到每台机器上，在网络中移动大型仓库可能会出现问题。这通常通过拥有多个较小的仓库而不是单一全局仓库来避免。 |
-
-
-
-
 
 # 优势
 
@@ -2479,14 +2122,23 @@ Team Foundation Server 是目前市场上领先的工具之一。虽然它具有
 本章包含哪些内容？
 
 - 理解版本控制
+
 - 学习 Team Foundation Server 2012 的新功能
+
 - 使用源代码资源管理器（Source Control Explorer）
+
 - 使用新的“我的工作”（My Work）体验
+
 - 查看文件和文件夹的历史记录
+
 - 使用版本控制命令行
+
 - 在 Eclipse 和非 Windows 平台上使用 Team Foundation 版本控制
+
 - 理解版本控制的安全和权限
+
 - 为 Visual SourceSafe 用户使用 Team Foundation Server
+
 - 为 Subversion 用户使用 Team Foundation Server
 
 版本控制是人们采用 Team Foundation Server 的主要原因之一。大多数专业开发人员都有某些版本控制系统的经验。你必须接受的第一点是每个版本控制系统都是不同的。虽然起初可能会不安，但迁移到 Team Foundation Server 有明显的益处。Team Foundation Server 提供了一个稳健、强大且可扩展的版本控制基础设施，你可以依靠它来支持软件开发的需求。从单人团队到 5000 人或更多团队，Team Foundation Server 都是如今支持许多组织的关键任务系统。它由微软从头开始构建，而不是基于其之前的版本控制产品（VSS）。
@@ -2508,9 +2160,12 @@ Team Foundation Server 将所有的版本控制数据存储在 SQL 中，，工�
 现在将解决方案添加到版本控制中。在资源管理器中右键点击并选择 Add Solution to Source Control（添加到源码控制）。你应该看到图 6-1 所示的屏幕。
 
 aaf609fc6b448553477801dbc4fd_134_0.png
+
 **图 6-1**: 添加解决方案对话
 
-> 注意 如果这是首次添加到团队项目的源码，一个很好的建议是不要接受将其直接放在团队项目下的默认做法。相反，创建一个名为 Main 的新文件夹并将解决方案放在其中——即 $/Main/HelloWorld。如果你以后在项目开发中采用分支策略，这将让你处于有利位置。即使你不知道要创建什么分支，也创建一个 Main 文件夹。第 9 章将详细介绍分支的所有知识，这个文件夹将非常有用。
+
+
+> 注意 如果这是首次添加到团队项目的源码，一个很好的建议是不要接受将其直接放在团队项目下的默认做法。相反，创建一个名为 Main 的新文件夹并将解决方案放在其中——即 `$/Main/HelloWorld`。如果你以后在项目开发中采用分支策略，这将让你处于有利位置。即使你不知道要创建什么分支，也创建一个 Main 文件夹。第 9 章将详细介绍分支的所有知识，这个文件夹将非常有用。
 
 你现在这里了。为了让团队中的其他人看到你的更改，你需要提交（check in）文件。要执行此操作，在 Team Explorer 中打开等待更改页（View > Other Windows > Pending Changes）并点击 Check In 按钮。你可以根据需要为更改提供注释，如图 6-2 所示。
 
@@ -2518,17 +2173,11 @@ aaf609fc6b448553477801dbc4fd_134_0.png
 
 如果你右键点击文件，将看到可选的菜单，如获取最新、签出编辑和比较，以及一个带有历史记录、撤销更改和存储命令的源码控制子菜单。这些命令将在稍后解释，但首先你将后退一步，回顾 Team Foundation Server 版本控制核心的一些概念。
 
-
-
-
-
 # 第 6 章 使用 Team Foundation 版本控制
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_135_0.png)
 
 图 6-2：待处理更改视图
-
-
 
 图 6-3：解决方案资源管理器中的受版本控制文件
 
@@ -2574,7 +2223,7 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 
 在 Visual Studio 或 Eclipse 中无法编辑工作空间的所有者计算机名称。但是，你可能需要编辑这些内容。要这样做，请使用 `tf /updateComputerName` 或 `tf /updateUserName` 命令。
 
-注意，`updateComputerName` 不会将工作空间从一台机器移动到另一台。你是在告诉 Team Foundation Server，由于某种原因，此工作空间所在机器的主机名发生了变化（即，它被重命名或从备份中恢复）。同样，`updateUserName` 选项不会更改工作空间的所有者。它告诉 Team Foundation Server 你的名称已从（例如）DOMAIN\user 发生了变化。
+注意，`updateComputerName` 不会将工作空间从一台机器移动到另一台。你是在告诉 Team Foundation Server，由于某种原因，此工作空间所在机器的主机名发生了变化（即，它被重命名或从备份中恢复）。同样，`updateUserName` 选项不会更改工作空间的所有者。它告诉 Team Foundation Server 你的名称已从（例如）`DOMAIN\user` 发生了变化。
 
 在底层，Team Foundation Server 实际上存储了帐户的 Windows 安全标识符 (SID)。更新只是告诉服务器使用当前用户名来更新其缓存。
 
@@ -2584,20 +2233,17 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 
 本地工作空间是 Team Foundation Server 2012 新引入的，且仅从 Team Foundation Server 2012 客户端可用（如 Visual Studio 2012 或 Team Explorer）。如果你需要从旧版本客户端（如 Visual Studio 2010 或 Visual Studio 2008）工作，将需要使用服务器工作空间，后文所述。
 
-在本地工作空间，存储在本地磁盘上的所有信息存储在一个名为 $tf（在 Unix 系统上为 .tf）的文件夹中。这些文件夹位于工作空间映射的根目录。如果没有公共根目录，它将位于活动文件夹映射的根目录。
+在本地工作空间，存储在本地磁盘上的所有信息存储在一个名为 `$tf`（在 Unix 系统上为 `.tf`）的文件夹中。这些文件夹位于工作空间映射的根目录。如果没有公共根目录，它将位于活动文件夹映射的根目录。
 
 除了在本地存储信息外，本地工作空间在工作方式上有许多重要区别。本地工作空间的主要优势是，你可以离线从 Team Foundation 工作，并且可以在 Visual Studio 或 Eclipse 之外无需执行显式检出操作即可编辑文件。
 
-为了实现这一点，当你执行操作（例如签入操作或查看哪些待处理的文件）时，更改将扫描你的本地工作空间内容，并与最后下载的文件版本（存储在 $tf 文件夹中）进行比较。然后它会告诉你哪些文件被编辑过，哪些文件在本地被删除，以及哪些文件被添加。
+为了实现这一点，当你执行操作（例如签入操作或查看哪些待处理的文件）时，更改将扫描你的本地工作空间内容，并与最后下载的文件版本（存储在 `$tf` 文件夹中）进行比较。然后它会告诉你哪些文件被编辑过，哪些文件在本地被删除，以及哪些文件被添加。
 
 编辑操作会自动添加到你的待处理更改列表中；然而，在 Visual Studio 或 Eclipse 之外执行的添加和删除操作被归类为检测到的更改 (Detected Changes) 或候选更改。它们会展示给你看，但不会添加到你的待处理更改列表中，以防你并非有意从版本控制存储中添加或删除文件。处理检测到的更改在本章后面讨论。
 
 如果你在 Visual Studio 或 Eclipse 之外执行重命名或移动操作，当磁盘扫描时，它无法判断这些文件是关联的，并且存在添加文件（带有新名称/路径）和删除文件（带有旧名称/路径）的操作。随后，在检测到的更改中，你可以关联这两个更改并将它们提升为重命名。
 
 因为在本地编辑文件之前没有与服务器通信，所以当你对文件放置锁定时，无法阻止用户编辑该文件。锁定在本地工作空间仍然可用，但在服务器工作空间中的作用相当于签入；即，锁定防止他人签入对该文件的更改。
-
-
-
 
 本地工作空间（Local Workspaces）的另一个缺点是它们存储了文件的本地副本，以便你进行离线比较和撤销，并且由于需要扫描磁盘来确定你编辑了哪些文件，因此本地工作空间中的文件数量与性能之间存在权衡。取决于你本地硬盘的速度，当你处理包含超过 100,000 个文件的工作空间时，你可能会在某些控制操作中发现性能下降；然而，这些场景非常罕见，且性能下降随你本地文件数量的增加呈线性。
 
@@ -2631,8 +2277,6 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 
 如前所述，工作空间包含的信息部分是工作映射。在简单范围内，工作文件夹映射指定本地机器的哪些部分映射到存储中的文件。如果你映射到 `C:\Local\MyTeamProject\$MyTeamProject` 并通过执行“获取最新（Get Latest）”将文件下载到本地机器，你将在本地目录中拥有一份服务器所有文件的副本。
 
-
-
 ## 工作空间权限
 
 在 Team Foundation Server 2005 和 2008 中，工作空间的所有者是在创建工作空间时设置，并且只能由工作空间的所有者使用。在 Team Foundation Server 2010 中，这些限制被删除了。更改所有只需在“编辑工作空间”（Edit Workspace）对话框中编辑所有字段即可（见图 6-5）。控制谁可以使用工作空间，所有者可以为其工作空间从三个权限配置文件选择一个：私有工作空间（Private workspace）、公共工作空间（限制）（Public workspace (limited)）或公共工作空间（Public workspace）。
@@ -2640,11 +2284,8 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 在底层，工作空间实际上拥有用户拥有的四种权限：
 
 - 1. 读取（Read）——该权限存在，但在发行产品中未强制执行。理论上，它将控制谁有能力查看该工作空间是否存在、具有哪些映射以及工作空间中存在哪些待处理更改。然而，当 Team Foundation Server 2010 发布时，任何有效用户都能像在 2008 和 2005 版本一样查看这些属性。
-
 - 2. 使用（Use）——该权限更有趣。它规定了谁被允许更改工作空间的状态——获取文件、签出（check out）等。
-
 - 3. 提交（CheckIn）——提交权限是单独分离的，在某些情况下，其他人可以使用工作空间，但只有所有者可以提交更改。
-
 - 4. 管理（Administer）——管理权限控制谁可以更改映射、名称、所有者、计算机等，以及谁可以更改工作空间和工作空间权限。
 
 在 Studio 中，这些权限通过选择之前提到的三个权限配置文件之一来设置。私有工作空间是默认设置，其行为与 2010 发布之前的 Team Foundation Server 用户的行为相似。只有所有者可以使用该工作空间。相应的权限为：所有者（owner）：读取、使用、提交和管理。
@@ -2659,88 +2300,72 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 
 ## 获取（Get）
 
-到目前为止，你已经看到过“获取”（Get）这个术语，但还没有明确它的含义。从存储库获取文件到你的本地系统，请注意这与 SVN 或 CVS 系统执行的操作不同（在这些系统中被称为“签出”check out）。“签出”在 Team Foundation Server 中另一种含义，你稍后将学习。
+
+
+到目前为止，你已经看到过“获取”（Get）这个术语，但还没有明确它的含义。从存储库获取文件到你的本地系统，请注意这与 SVN 或 CVS 系统执行的操作不同（在这些系统中被称为“签出”`check out`）。“签出”在 Team Foundation Server 中另一种含义，你稍后将学习。
 
 当你从版本控制获取文件时，可以执行以下操作之一：
 
 - 获取最新（Get Latest）——下载自开始获取的所有文件的最新版本。
-
-- 获取特定版本（Get Specific Version）——在版本控制的高级菜单中找到获取特定版本。你可以根据日期、标签或更改集编号（changeset number）获取版本。这种版本规格在 Team Foundation Server 中被称为 versionspec。
+- 获取特定版本（Get Specific Version）——在版本控制的高级菜单中找到获取特定版本。你可以根据日期、标签或更改集编号（`changeset number`）获取版本。这种版本规格在 Team Foundation Server 中被称为 `versionspec`。
 
 ## 文件修改时间（FILE MODIFICATION TIMES）
 
-默认情况下，Team Foundation Server 你本地工作空间中的文件修改时间是你执行从版本控制获取新版本时的当前本地时间。在 Team Foundation Server 2012 中，可以通过编辑工作空间中的属性（如图 6-5 所示）更改此行为。如果你将文件设置为提交（Checkin），那么下次执行获取时，文件的修改时间将是文件提交到 Team Foundation Server 的时间。这对于需要在本地运行修改时间的进程非常有用（例如，运行 robocopy 部署到 ASP.NET 或运行其他依赖时间戳的操作）。
+默认情况下，Team Foundation Server 你本地工作空间中的文件修改时间是你执行从版本控制获取新版本时的当前本地时间。在 Team Foundation Server 2012 中，可以通过编辑工作空间中的属性（如图 6-5 所示）更改此行为。如果你将文件设置为提交（`Checkin`），那么下次执行获取时，文件的修改时间将是文件提交到 Team Foundation Server 的时间。这对于需要在本地运行修改时间的进程非常有用（例如，运行 `robocopy` 部署到 ASP.NET 或运行其他依赖时间戳的操作）。
 
 在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同。
 
 ## 版本规格（VERSIONSPECS）
 
-在所示的“获取”对话框中……（等待，文本在此处截断或重复了，基于提供的）：
+在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同，他们他们执行签出（`check-out`）。
 
-在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同，他们他们执行签出（check-out）。
-
-（注：提供的 OCR 文本在结尾处包含了一些重复/不一致之处，我已根据提供的进行了处理）。
-
-*（自我纠正：提供的 OCR 文本在结尾有大量的重叠和重复。我将根据提供的文本进行逻辑上的合并。）*
-
-**等待，查看原始文本，页面 144-145 和 146 有内容重叠。我将提供合并后的干净版本。**
-
-[content]
 ## 工作空间权限
 
-在 Team Foundation Server 2005 和 2008 中，工作空间的所有者是在创建工作空间时设置，并且只能由工作空间的所有者使用。在 Team Foundation Server 2010 中，这些限制被删除了。更改所有者只需在“编辑工作空间”（Edit Workspace）对话框中编辑所有字段即可（见图 6-5）。控制谁可以使用工作空间，所有者可以为其工作空间从三个权限配置文件选择一个：私有工作空间（Private workspace）、公共工作空间（限制）（Public workspace (limited)）或公共工作空间（Public workspace）。
+在 Team Foundation Server 2005 和 2008 中，工作空间的所有者是在创建工作空间时设置，并且只能由工作空间的所有者使用。在 Team Foundation Server 2010 中，这些限制被删除了。更改所有者只需在“编辑工作空间”（`Edit Workspace`）对话框中编辑所有字段即可（见图 6-5）。控制谁可以使用工作空间，所有者可以为其工作空间从三个权限配置文件选择一个：私有工作空间（Private workspace）、公共工作空间（限制）（Public workspace (limited)）或公共工作空间（Public workspace）。
 
 在底层，工作空间实际上拥有用户拥有的四种权限：
 
 - 1. 读取（Read）——该权限存在，但在发行产品中未强制执行。理论上，它将控制谁有能力查看该工作空间是否存在、具有哪些映射以及工作空间中存在哪些待处理更改。然而，当 Team Foundation Server 2010 发布时，任何有效用户都能像在 2008 和 2005 版本一样查看这些属性。
-
-- 2. 使用（Use）——该权限更有趣。它规定了谁被允许更改工作空间的状态——获取文件、签出（check out）等。
-
+- 2. 使用（Use）——该权限更有趣。它规定了谁被允许更改工作空间的状态——获取文件、签出（`check out`）等。
 - 3. 提交（CheckIn）——提交权限是单独分离的，在某些情况下，其他人可以使用工作空间，但只有所有者可以提交更改。
-
 - 4. 管理（Administer）——管理权限控制谁可以更改映射、名称、所有者、计算机等，以及谁可以更改工作空间和工作空间权限。
 
-在 Studio 中，这些权限通过选择之前提到的权限配置文件之一来设置。私有工作空间是默认设置，其行为与 2010 发布之前的 Team Foundation Server 用户的行为相似。只有所有者可以使用该工作空间。相应的权限为：所有者（owner）：读取、使用、提交和管理。
+在 Studio 中，这些权限通过选择之前提到的权限配置文件之一来设置。私有工作空间是默认设置，其行为与 2010 发布之前的 Team Foundation Server 用户的行为相似。只有所有者可以使用该工作空间。相应的权限为：所有者（`owner`）：读取、使用、提交和管理。
 
-公共工作空间（限制）意味着任何有效用户都可以使用该工作空间，但只有所有者被执行提交或更改工作空间属性。在这种情况下，有效用户的权限为有效用户（valid-user）：读取、使用。如果所有者将工作空间设置为公共，则所有用户本质上拥有与所有者相同的权利（即有效用户：读取、使用、提交和管理）。这意味着任何有效用户都将允许更改工作空间的所有者，然后将工作空间权限设回私有，因此应谨慎使用。
+公共工作空间（限制）意味着任何有效用户都可以使用该工作空间，但只有所有者被执行提交或更改工作空间属性。在这种情况下，有效用户的权限为有效用户（`valid-user`）：读取、使用。如果所有者将工作空间设置为公共，则所有用户本质上拥有与所有者相同的权利（即有效用户：读取、使用、提交和管理）。这意味着任何有效用户都将允许更改工作空间的所有者，然后将工作空间权限设回私有，因此应谨慎使用。
 
 公共工作空间在共享同一机器以进行并行更改时非常有用，但可以维护关于哪些用户实际上从该特定机器检查更改的正确审核记录。限制公共工作空间也适用于请求同事帮助你在工作空间中的机器上进行某些更改，但你希望他们使用自己的登录凭据进行，并确保他们无法为你提交这些更改。
 
 “编辑工作空间”对话框仅允许你从三个权限集之一进行选择。如果你有更复杂的工作空间需求（例如在所有有效用户之间共享工作空间），你实际上可以使用 .NET 模型进行控制。
 
-关于 Team Foundation Server 工作空间权限的详细信息，请参见 Philip Kelley 的博客：http://aka.ms/workspacePermissions。
+关于 Team Foundation Server 工作空间权限的详细信息，请参见 Philip Kelley 的博客：`http://aka.ms/workspacePermissions`。
 
 ## 获取（Get）
 
-到目前为止，你已经看到过“获取”（Get）这个术语，但还没有明确它的含义。从存储库获取文件到你的本地系统，请注意这与 SVN 或 CVS 系统执行的操作不同（在这些系统中被称为“签出”check out）。“签出”在 Team Foundation Server 中另一种含义，你稍后将学习。
+到目前为止，你已经看到过“获取”（Get）这个术语，但还没有明确它的含义。从存储库获取文件到你的本地系统，请注意这与 SVN 或 CVS 系统执行的操作不同（在这些系统中被称为“签出”`check out`）。“签出”在 Team Foundation Server 中另一种含义，你稍后将学习。
 
 当你从版本控制获取文件时，可以执行以下操作之一：
 
 - 获取最新（Get Latest）——下载自开始获取的所有文件的最新版本。
-
-- 获取特定版本（Get Specific Version）——在版本控制的高级菜单中找到获取特定版本。你可以根据日期、标签或更改集编号（changeset number）获取版本。这种版本规格在 Team Foundation Server 中被称为 versionspec。
+- 获取特定版本（Get Specific Version）——在版本控制的高级菜单中找到获取特定版本。你可以根据日期、标签或更改集编号（`changeset number`）获取版本。这种版本规格在 Team Foundation Server 中被称为 `versionspec`。
 
 ## 文件修改时间（FILE MODIFICATION TIMES）
 
-默认情况下，Team Foundation Server 你本地工作空间中的文件修改时间是你执行从版本控制获取新版本时的当前本地时间。在 Team Foundation Server 2012 中，可以通过编辑工作空间中的属性（如图 6-5 所示）更改此行为。如果你将文件设置为提交（Checkin），那么下次执行获取时，文件的修改时间将是文件提交到 Team Foundation Server 的时间。这对于需要在本地运行修改时间的进程非常有用（例如，运行 robocopy 部署到 ASP.NET 或运行其他依赖时间戳的操作）。
+默认情况下，Team Foundation Server 你本地工作空间中的文件修改时间是你执行从版本控制获取新版本时的当前本地时间。在 Team Foundation Server 2012 中，可以通过编辑工作空间中的属性（如图 6-5 所示）更改此行为。如果你将文件设置为提交（`Checkin`），那么下次执行获取时，文件的修改时间将是文件提交到 Team Foundation Server 的时间。这对于需要在本地运行修改时间的进程非常有用（例如，运行 `robocopy` 部署到 ASP.NET 或运行其他依赖时间戳的操作）。
 
-在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同。再次，这与 VSS 用户预期的略有不同，他们他们执行签出（check-out）。
+在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同。再次，这与 VSS 用户预期的略有不同，他们他们执行签出（`check-out`）。
 
 ## 版本规格（VERSIONSPECS）
 
-在所示的“获取”对话框中……（等待，文本在此处截断或重复了，基于提供的）：
-
-在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同，他们他们执行签出（check-out）。
-
-（注：提供的 OCR 文本在结尾处包含了一些重复/不一致之处，我已根据提供的进行了处理）。
+在 Team Foundation Server 中，获取文件的唯一时间是你明确告诉服务器你想这样做。这意味着你可以确保你知道文件的状态；但再次，这与 VSS 用户预期的略有不同，他们他们执行签出（`check-out`）。
 
 ## 锁（Locks）
 
 仅在服务器工作空间可用，签出锁对于旧版本控制系统如 VSS 或 PVCS的用户熟悉。它阻止其他人签出该
 
-在你持有检出锁（check-out lock）时，文件会被锁定。如果其他用户已经在他们的工作空间中检出了文件，则无法对该文件放置检出锁。
+在你持有检出锁（`check-out lock`）时，文件会被锁定。如果其他用户已经在他们的工作空间中检出了文件，则无法对该文件放置检出锁。
 
-例如，当你在对文件进行某些重大或复杂的修改时，可以使用检出锁，以确保在你完成之前没有人对该文件进行任何更改，因为你不希望在提交（check-in）之前处理合并你的更改的额外复杂性。
+例如，当你在对文件进行某些重大或复杂的修改时，可以使用检出锁，以确保在你完成之前没有人对该文件进行任何更改，因为你不希望在提交（`check-in`）之前处理合并你的更改的额外复杂性。
 
 检出锁的缺点是，如果使用本地工作空间（Local Workspace）的用户没有检出该文件，那么这无法阻止他们使用该文件。对于使用服务器工作空间（Server Workspaces）的用户，在锁定时无法轻松在本地工作空间中使该文件可编辑或对其进行操作，这限制了团队在同一代码库上工作的能力。
 
@@ -2774,7 +2399,7 @@ Team Foundation Server 2012 发布的一个大动力是减少版本控制操作�
 
 图 6-6：Team Explorer 中的待处理更改
 
-www-it-ebooks.info
+`www-it-ebooks.info`
 
 提交是作为一个单一原子事务执行的。在提交操作期间，服务器首先检查你是否能够对这些文件执行提交（即你对文件的“提交”权限已设置为“允许”），文件上没有提交锁，并且你正尝试提交该文件的最新版本之一。如果由于某些原因无法发生提交（例如，因为在你检出文件期间，其他人也编辑了该文件并提交了更改），则整个提交操作将失败。你将收到原因通知，并获得如何采取纠正措施的说明。这与 VSS 等系统不同，这些系统没有原子提交的概念。
 
@@ -2782,7 +2407,7 @@ www-it-ebooks.info
 
 ## 对提交进行注释
 
-与常见的版本控制系统一样，在向 Team Foundation Server 执行提交时，你可以提供一条注释来总结你的更改。添加注释是一项最佳实践，在 Team Foundation Server 中，你实际上可以通过使用检查策略（check-policy）来强制执行此操作。在 Team Foundation Server 的早期版本中，更改集注释策略是 Team Foundation Server Power Tools 的一部分，但在 Visual Studio 2012 和 Team Foundation Server 2012 的 Team Explorer 中，它现在作为标准配置发布。添加注释意味着当你查看后续历史时，很容易看到为什么进行这些更改。
+与常见的版本控制系统一样，在向 Team Foundation Server 执行提交时，你可以提供一条注释来总结你的更改。添加注释是一项最佳实践，在 Team Foundation Server 中，你实际上可以通过使用检查策略（`check-policy`）来强制执行此操作。在 Team Foundation Server 的早期版本中，更改集注释策略是 Team Foundation Server Power Tools 的一部分，但在 Visual Studio 2012 和 Team Foundation Server 2012 的 Team Explorer 中，它现在作为标准配置发布。添加注释意味着当你查看后续历史时，很容易看到为什么进行这些更改。
 
 在提供注释时，你应该集中在*你为什么要进行更改*，而不是*做了什么*。例如，“编辑了 HelloWorld.cs”或“修复了 bug 123”并不特别有用。相反，“重构代码为离散的方法”会有用得多。
 
@@ -2804,16 +2429,13 @@ www-it-ebooks.info
 
 图 6-7：提交对话框
 
-图 6-7 示例中，检测到了三个发生在 Visual Studio 之外的更改。readme.txt 被添加到受映射文件夹中，Class2.cs 被重命名为 Messages.cs。正如本章早期讨论的，如果在 Visual Studio 或 Eclipse 中重命名名称，则会创建相应的重命名更改并存储在该文件的历史中。然而，如果文件是在 Visual Studio 或 Eclipse 之外重命名的，这将显示为文件的添加和删除。为了告诉 Team Foundation Server 这是一个重命名并维护完整历史，你可以选择两个更改，右键点击并选择“提升为重命名”，如图 6-7 所示。
+图 6-7 示例中，检测到了三个发生在 Visual Studio 之外的更改。`readme.txt` 被添加到受映射文件夹中，`Class2.cs` 被重命名为 `Messages.cs`。正如本章早期讨论的，如果在 Visual Studio 或 Eclipse 中重命名名称，则会创建相应的重命名更改并存储在该文件的历史中。然而，如果文件是在 Visual Studio 或 Eclipse 之外重命名的，这将显示为文件的添加和删除。为了告诉 Team Foundation Server 这是一个重命名并维护完整历史，你可以选择两个更改，右键点击并选择“提升为重命名”，如图 6-7 所示。
 
 ## 忽略文件（Ignoring Files）
 
 如果本地工作空间扫描器检测到了你你不希望进入版本控制的文件，你可以通过右键点击文件并选择相应选项来指定它们被忽略，如图 6-8 所示。
 
-这将创建一个名为 .tfignore 的文件，其中包含被忽略的文件名（或模式）。一旦提交，其他团队成员将继承这些忽略设置，这允许你确保他们不会意外提交你要求 Team Foundation Server 忽略的文件。
-
-
-
+这将创建一个名为 `.tfignore` 的文件，其中包含被忽略的文件名（或模式）。一旦提交，其他团队成员将继承这些忽略设置，这允许你确保他们不会意外提交你要求 Team Foundation Server 忽略的文件。
 
 # 第 6 章 114 使用 Team Foundation 版本控制
 
@@ -2823,11 +2445,11 @@ www-it-ebooks.info
 
 ## .TFNIGNORE 文件语法
 
-.tfnignore 文件的语法实际上允许配置比“推广候选更改”对话框菜单中能够实现的更复杂的忽略模式。.tfnignore 文件是一个文本文件，其设置会递归地应用到工作区中该文件下的所有文件夹，除非模式以 `\` 为前缀。允许使用 `*` 和 `?` 等通配符，你可以通过路径开始忽略该模式以使其特定化（但路径部分不允许使用通配符模式，仅允许模式的文件名部分允许通配符）。行首的 `#` 字符表示你想要专门包含该模式的文件，这些文件原本可能会被项目全局排除模式或文件层次结构中上级的 .tfnignore 文件忽略。最后，为了方便跨平台应用 .tfnignore，路径分隔符可以是 `/` 或 `\`，它们在 Windows 和 Unix 文件系统中都被解释为路径分隔符。
+`.tfnignore` 文件的语法实际上允许配置比“推广候选更改”对话框菜单中能够实现的更复杂的忽略模式。`.tfnignore` 文件是一个文本文件，其设置会递归地应用到工作区中该文件下的所有文件夹，除非模式以 `\` 为前缀。允许使用 `*` 和 `?` 等通配符，你可以通过路径开始忽略该模式以使其特定化（但路径部分不允许使用通配符模式，仅允许模式的文件名部分允许通配符）。行首的 `#` 字符表示你想要专门包含该模式的文件，这些文件原本可能会被项目全局排除模式或文件层次结构中上级的 `.tfnignore` 文件忽略。最后，为了方便跨平台应用 `.tfnignore`，路径分隔符可以是 `/` 或 `\`，它们在 Windows 和 Unix 文件系统中都被解释为路径分隔符。
 
-由于 .tfnignore 文件与其他版本控制系统的文件（如 .gitignore、.svnIgnore 或 .gitignore）具有相似性，通常可以通过复制文件并重命名，将为一个系统设计的忽略文件模式转换为另一个系统。
+由于 `.tfnignore` 文件与其他版本控制系统的文件（如 `.gitignore`、`.svnIgnore` 或 `.gitignore`）具有相似性，通常可以通过复制文件并重命名，将为一个系统设计的忽略文件模式转换为另一个系统。
 
-以下是一个 .tfnignore 文件的示例：
+以下是一个 `.tfnignore` 文件的示例：
 
 ```
 ## 一个 .tfnignore 示例
@@ -2854,13 +2476,17 @@ Alpha\*.txt
 !\\.dll
 ```
 
-# 提交备注 (Check-In Notes)
+## 提交备注 (Check-In Notes)
 
 在签入文件时，从提交人员处获取有关更改的元数据通常是有用的。例如，在对更改进行安全审查时或引用第三方工单系统时。在其他版本控制系统中，这是通过开发者在提供提交备注时采用某种约定来实现的。然而，Team Foundation 提供了一种捕获提交结构化数据的机制——提交备注。
 
-在 Team Explorer 的“待处理页面”（Pending Pages）中，你可以直接访问提交备注以捕获有关提交的数据，如图 6-7 所示。提交备注都是基于文本的响应，除了强制要求输入某个值的简单检查外，不允许任何验证。提交备注可以是很多行（实际上多达 2 GB 数据）。但通常，它只是一个简单的名称或值。
 
-要为团队项目配置提交备注，你需要拥有“修改安全设置”（Manipulate security settings）的允许权限（管理员默认拥有）。在 Visual Studio 中，前往团队项目设置->源代码控制。点击“提交备注”选项卡，如图 6-9 所示。
+
+# 第 6 章 使用 TEAM FOUNDATION 版本控制
+
+在 `Team Explorer` 的“待处理页面”（Pending Pages）中，你可以直接访问提交备注以捕获有关提交的数据，如图 6-7 所示。提交备注都是基于文本的响应，除了强制要求输入某个值的简单检查外，不允许任何验证。提交备注可以是很多行（实际上多达 2 GB 数据）。但通常，它只是一个简单的名称或值。
+
+要为团队项目配置提交备注，你需要拥有“修改安全设置”（`Manipulate security settings`）的允许权限（管理员默认拥有）。在 Visual Studio 中，前往团队项目设置->源代码控制。点击“提交备注”选项卡，如图 6-9 所示。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_152_0.png)
 
@@ -2872,13 +2498,13 @@ Alpha\*.txt
 
 为了在提交之前进行更复杂的验证，提交策略可以由具有“修改安全设置”权限的用户（通常是项目管理员）配置。
 
-提交策略是运行在提交客户端的一段代码，用于验证提交是否允许。对于 Visual Studio，它是用 .NET 编写的。对于 Eclipse 或跨平台命令行客户端，提交策略是用 Java 编写的。图 6-10 显示了 Visual Studio 2012 标准实现的提交策略。
+提交策略是运行在提交客户端的一段代码，用于验证提交是否允许。对于 Visual Studio，它是用 `.NET` 编写的。对于 Eclipse 或跨平台命令行客户端，提交策略是用 Java 编写的。图 6-10 显示了 Visual Studio 2012 标准实现的提交策略。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_153_0.png)
 
 图 6-10：Visual Studio 2010 的提交策略
 
-额外的提交策略作为 Team Foundation Server 2012 提供。注意，由 Team Explorer Everywhere 和跨平台命令行客户端强制的提交策略必须由具有权限的用户从 Team Explorer 客户端配置。这是因为一旦在 Visual Studio 和 Eclipse 中配置了，提交策略将适用于所有检查该项目的用户。
+额外的提交策略作为 Team Foundation Server 2012 提供。注意，由 `Team Explorer Everywhere` 和跨平台命令行客户端强制的提交策略必须由具有权限的用户从 `Team Explorer` 客户端配置。这是因为一旦在 Visual Studio 和 Eclipse 中配置了，提交策略将适用于所有检查该项目的用户。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_153_1.png)
 
@@ -2892,21 +2518,11 @@ Alpha\*.txt
 
 ## 取消待处理更改 (Undo Pending Changes)
 
-即使是最好的开发者有时也会出错，并希望直接撤销更改而不是提交。在 Team Foundation 中，这是通过完成实现的。这允许你选择要撤销的更改，这些文件将恢复到你下载到工作区的之前的版本（而不是服务器上的最新版本，因为可能不同）。如果你撤销的更改是添加文件（称为 add），则该文件将从你的待处理更改列表中删除。
-
-（注：此处原文存在大量重复的段落，已根据要求按逻辑处理翻译，确保不重复输出原文。）
+即使是最好的开发者有时也会出错，并希望直接撤销更改而不是提交。在 Team Foundation 中，这是通过完成实现的。这允许你选择要撤销的更改，这些文件将恢复到你下载到工作区的之前的版本（而不是服务器上的最新版本，因为可能不同）。如果你撤销的更改是添加文件（称为 `add`），则该文件将从你的待处理更改列表中删除。
 
 ## 更改集 (Changeset)
 
-（注：此处原文存在大量重复的段落，已根据要求按逻辑处理翻译，确保不重复输出原文。）
-
 ## 从本地系统删除源文件
-
-（注：此处原文存在大量重复的段落，已根据要求按逻辑处理翻译，确保不重复输出原文。）
-
-
-
-
 
 # Team Foundation Server 版本控制概念
 
@@ -2914,7 +2530,7 @@ Alpha\*.txt
 
 ## 回滚更改集
 
-有时，提交到存储库的更改可能需要被撤销。虽然该功能在 Team Foundation Server 2010 中可以通过命令行使用，但在 Visual Studio 2012 中，你现在可以通过在历史视图中右键点击，或者在 Team Explorer 中从更改集详细页来回滚更改集。
+有时，提交到存储库的更改可能需要被撤销。虽然该功能在 Team Foundation Server 2010 中可以通过命令行使用，但在 Visual Studio 2012 中，你现在可以通过在历史视图中右键点击，或者在 `Team Explorer` 中从更改集详细页来回滚更改集。
 
 # 搁存集 (Shelvesets)
 
@@ -2924,7 +2540,7 @@ Alpha\*.txt
 
 搁存集与更改集有许多相似之处。它们可以包含相同的元数据（工作项关联、提交说明、注释等）。然而，它们不会在相同的版本中被识别。如果同一个人以相同的名称将一组更改保存到搁存集中，则该搁存集的内容将被新版本的内容覆盖。此外，如果版本控制中删除了一个文件，只要你删除了该文件，该搁存集的内容就会消失。搁存集是无法删除的。因此，搁存集是服务器上的临时数据存储，其寿命由搁存集的所有者控制。
 
-要将搁存集的内容获取到工作区，首先找到搁存（shelves），然后将其取消搁存（unshelve）。要查找属于你或其他用户的搁存，请到 Team Explorer 中的“待处理更改”页面，并在“操作”菜单中探索“查找搁存（Find Shelves）”。你可以取消搁存到不同计算机上的不同工作区。你可以将搁存集的名称通过电子邮件发送给团队成员，他们可以通过你的用户名找到它，查看详细信息，将其文件与其他版本进行比较，只要他们对搁存的文件有工作映射，就可以将其取消搁存到你的工作区。
+要将搁存集的内容获取到工作区，首先找到搁存（shelves），然后将其取消搁存（unshelve）。要查找属于你或其他用户的搁存，请到 `Team Explorer` 中的“待处理更改”页面，并在“操作”菜单中探索“查找搁存（Find Shelves）”。你可以取消搁存到不同计算机上的不同工作区。你可以将搁存集的名称通过电子邮件发送给团队成员，他们可以通过你的用户名找到它，查看详细信息，将其文件与其他版本进行比较，只要他们对搁存的文件有工作映射，就可以将其取消搁存到你的工作区。
 
 在许多情况下，使用搁存集可以是与团队传递和存储版本控制数据的快速简单方法，并可以减少对代码临时分支的需求。然而，搁存集会占用服务器的一些资源，因此在不再需要时你应该删除旧的搁存集。
 
@@ -2946,7 +2562,7 @@ Alpha\*.txt
 
 # 使用源控制管理器
 
-源控制管理器（图 6-14）提供了你的 Team Foundation 工作区的视图。你可以通过点击 Team Explorer 主页中“待处理更改”下方的链接，或者在 Visual Studio 中转到“视图 -> 窗口 -> 源控制管理器”来显示源控制管理器。
+源控制管理器（图 6-14）提供了你的 Team Foundation 工作区的视图。你可以通过点击 `Team Explorer` 主页中“待处理更改”下方的链接，或者在 Visual Studio 中转到“视图 -> 窗口 -> 源控制管理器”来显示源控制管理器。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_158_0.png)
 
@@ -2964,14 +2580,11 @@ Alpha\*.txt
 
 # 管理解决方案绑定
 
-解决方案与版本控制设置之间的映射存储在 .sln 文件中。如果你想自定义绑定或完全删除绑定，可以在编辑解决方案中的文件时转到“文件 -> 源控制 -> 更改源控制”。
+解决方案与版本控制设置之间的映射存储在 `.sln` 文件中。如果你想自定义绑定或完全删除绑定，可以在编辑解决方案中的文件时转到“文件 -> 源控制 -> 更改源控制”。
 
 如果你使用 VSS 升级将 VSS 存储库导入 Team Foundation 解决方案，你会发现解决方案的绑定已自动转换。如果没有，使用 Team Foundation Server Power Tools 中的 `tfpt bind` 命令自动执行。或者你可以在第一次打开解决方案时，在源控制对话框中删除旧绑定并添加新绑定来修复绑定。
 
 第 8 章提供了更多关于从旧版本控制系统迁移的解决方案。
-
-
-
 
 ## 查看历史记录
 
@@ -3023,7 +2636,7 @@ Alpha\*.txt
 
 ## 在 Eclipse 中检测本地更改
 
-在 Eclipse 的 Team Server 插件中（作为 Team Explorer Everywhere 的一部分），通过 Team Explorer 中的“操作”或在包管理器中右键单击，你可以选择“检测本地更改”（Detect Local Changes）。如果你有本地工作区，将进行全磁盘扫描以检测更改。即使配合服务器工作区使用，你的本地工作区也将与服务器版本进行比较，插件将……
+在 Eclipse 的 Team Server 插件中（作为 `Team Explorer Everywhere` 的一部分），通过 `Team Explorer` 中的“操作”或在包管理器中右键单击，你可以选择“检测本地更改”（Detect Local Changes）。如果你有本地工作区，将进行全磁盘扫描以检测更改。即使配合服务器工作区使用，你的本地工作区也将与服务器版本进行比较，插件将……
 
 ## 重新创建工作区
 
@@ -3031,21 +2644,24 @@ Alpha\*.txt
 
 ## 继续我的工作工作
 
-如果你安装了 Visual Studio 2012 Ultimate 或 Visual Studio 2012 Premium，你将在 Team Explorer 主页的顶部看到“我的工作”（My Work）链接。点击该链接将带你进入图 6-17 所示的“我的工作”页面。
-
-
-
+如果你安装了 Visual Studio 2012 Ultimate 或 Visual Studio 2012 Premium，你将在 `Team Explorer` 主页的顶部看到“我的工作”（My Work）链接。点击该链接将带你进入图 6-17 所示的“我的工作”页面。
 
 当您将工作项从“可用（Available）”移动到“进行中（Progress）”时，Visual Studio 会相应地更新工作项的状态。这让你能够轻松记住自己正在处理的工作，同时也让你的团队成员在查看任务板时看到最新进展，如图 6-20 所示，其中高亮的任务已移动到“进行中（In Progress）”列。
 
 ## 第 3 冲刺
 
 | 5 月 7 日 - 5 月 18 日（剩余 2 个工作日） | 全部 | | |
+
 |---|---|---|---|
+
 | 待处理事项 | 团队成员 | | |
+
 | | 待办 TO DO 35 h | 进行中 IN PROGRESS 8 h | 完成 DONE |
+
 | > Annie Hermann | | | | 功能实现设计 (7 Brian Keller) | 功能实现设计 (5 Brian Keller) | 应用工作流设计 (Brian Keller) | 功能实现设计 |
+
 | > Brian Skinner (12 h) | | | | 与策略团队评审实现 (4 Julia Juliana) | 与早期采用者评审新功能 (2 Julia Juliana) | 与技术人员评审应用设计 (Julia Juliana) | 与早期采用者评审功能 (Julia Juliana) |
+
 | > Martin Woodward (10 h) | | | | 创建获取 GPS 位置和地址的窗口 (4 Martin Wood...) | 更新占位符返回加拿大地址 (3 Martin Wood...) | 创建数据库表和网格查找客户 (7 Martin Wood...) |
 
 图 6-18：显示待办工作的敏捷任务板
@@ -3056,7 +2672,7 @@ Alpha\*.txt
 
 当你点击“挂起”按钮时，它将创建一个新的“架（shelf）”来存放你在版本控制中的更改。默认情况下，“架”的标题将是你添加到“进行中”部分的第一个工作项的标题，你可以在按下“挂起”按钮之前编辑名称，如图 6-22 所示。
 
-# 第 6 章 使用 TEAM FOUNDATION 版本控制
+
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_165_0.png)
 
@@ -3084,7 +2700,7 @@ Alpha\*.txt
 
 工作项会在任务板中更新，并在更改集与你与更改关联的工作项之间创建一个链接。这一切通过使用“我的页面（My Page）”简单轻松地完成。
 
-注意：“我的工作”页面非常实用，你可能会发现自己经常去那里。从 Visual Studio 任何地方快速进入“我的工作”页面的快捷键是 Ctrl+0,M。欲查看 Team Explorer 快捷键的完整列表，请访问 http://aka.ms/TEKeys。
+注意：“我的工作”页面非常实用，你可能会发现自己经常去那里。从 Visual Studio 任何地方快速进入“我的工作”页面的快捷键是 `Ctrl+0,M`。欲查看 Team Explorer 快捷键的完整列表，请访问 http://aka.ms/TEKeys。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_167_0.png)
 
@@ -3116,11 +2732,7 @@ Alpha\*.txt
 
 工作项会在任务板中更新，并在更改集与你与更改关联的工作项之间创建一个链接。这一切通过使用“我的页面（My Page）”简单轻松地完成。
 
-注意：“我的工作”页面非常实用，你可能会发现自己经常去那里。从 Visual Studio 任何地方快速进入“我的工作”页面的快捷键是 Ctrl+0,M。欲查看 Team Explorer 快捷键的完整列表，请访问 http://aka.ms/TEKeys。
-
-
-
-
+注意：“我的工作”页面非常实用，你可能会发现自己经常去那里。从 Visual Studio 任何地方快速进入“我的工作”页面的快捷键是 `Ctrl+0,M`。欲查看 Team Explorer 快捷键的完整列表，请访问 http://aka.ms/TEKeys。
 
 # 第 6 章 使用 Team Foundation 版本控制
 
@@ -3150,7 +2762,7 @@ Alpha\*.txt
 
 选择 Team Foundation Server。在下一个屏幕上，系统将提示你选择你的 Team Foundation Server。如果你还没有设置过现有的 Team Foundation Server 连接，系统将提示你输入 Team Foundation Server 实例的名称或完全限定 URL。
 
-请注意，如果你的 Team Foundation Server 实例未安装在 http://server_name:8080/tfs，那么你可能需要使用完全限定 URL（即 https://fabrikam.tfpreview.com）而不是主机名与开发团队共享你的 Team Foundation Server 地址，以确保使用正确的连接设置。
+请注意，如果你的 Team Foundation Server 实例未安装在 `http://server_name:8080/tfs`，那么你可能需要使用完全限定 URL（即 `https://fabrikam.tfpreview.com`）而不是主机名与开发团队共享你的 Team Foundation Server 地址，以确保使用正确的连接设置。
 
 一旦选了服务器，系统将要求你选择要共享 Eclipse 项目的项目集和团队项目，如图 6-26 所示。
 
@@ -3162,7 +2774,7 @@ Alpha\*.txt
 
 **图 6-26：**关于 Team Foundation Server 的详情
 
-你将看到如图 6-27 所示的页面，该页面询问你将项目放置在版本控制仓库中的位置。如果你认为未来想使用 Team Foundation Server 的分支功能，请将项目放入 Main 文件夹中。
+你将看到如图 6-27 所示的页面，该页面询问你将项目放置在版本控制仓库中的位置。如果你认为未来想使用 Team Foundation Server 的分支功能，请将项目放入 `Main` 文件夹中。
 
 共享向导的最后一页将确认共享详情，允许你在点击“完成”之前检查详情。请注意，插件将自动创建任何所需的工作文件夹映射。
 
@@ -3178,13 +2790,7 @@ Alpha\*.txt
 
 **图 6-26：**关于 Team Foundation Server 的详情
 
-（注意：OCR 源码中包含重叠文本，已根据逻辑文档流进行了去重）。
-
-
-
-
-
-跨平台 Windows 客户端在大多数版本中都广泛兼容支持的支持相同的命令和参数，从而允许使用命令行接口重用脚本并进行集成。然而，它们源于不同的命令行接口实现。Windows 版本使用 .NET 编写，而跨平台实现使用 Java 编写。因此，它们之间存在一些细微差异，但大多数功能是完全相同的。
+跨平台 Windows 客户端在大多数版本中都广泛兼容支持的支持相同的命令和参数，从而允许使用命令行接口重用脚本并进行集成。然而，它们源于不同的命令行接口实现。Windows 版本使用 `.NET` 编写，而跨平台实现使用 `Java` 编写。因此，它们之间存在一些细微差异，但大多数功能是完全相同的。
 
 ## 获取帮助
 
@@ -3208,7 +2814,7 @@ tf workspace -new -collection:http://servername:8080/tfs/defaultCollection -logi
 tf work -map -workspace:MyWorkspace $/TeamProject/Main/Path.
 ```
 
-这里是在 `MyWorkspace` 中在服务器路径 `$ /TeamProject/Main/Path` 和当前目录 (`.`) 之间创建一个工作文件夹。
+这里是在 `MyWorkspace` 中在服务器路径 `$/TeamProject/Main/Path` 和当前目录 (`.`) 之间创建一个工作文件夹。
 
 现在，您想要下载代码：
 
@@ -3240,7 +2846,7 @@ tf checkin -comment="Making changes from the command line"
 
 ## TEAM FOUNDATION VERSION CONTROL POWER TOOLS AND THIRD-PARTYILITIES
 
-Team Foundation Server 提供的功能非常丰富，通过基于 .NET 的 Team Foundation Server API 和第三方工具创建的扩展可以以更易于使用的方式暴露功能。要列举所有工具都来不完，以下章节详细介绍了每个 Team Foundation Server 用户都应该拥有的某些极具价值的工具。
+Team Foundation Server 提供的功能非常丰富，通过基于 `.NET` 的 Team Foundation Server API 和第三方工具创建的扩展可以以更易于使用的方式暴露功能。要列举所有工具都来不完，以下章节详细介绍了每个 Team Foundation Server 用户都应该拥有的某些极具价值的工具。
 
 ## Microsoft Studio Team Foundation Server Power Tools
 
@@ -3265,16 +2871,26 @@ MSSCCI 提供程序允许 Team Foundation Server 版本控制集成到支持旧�
 由于该提供程序是在原始开发者可能创建 API 很久之后才创建的，而且它是针对一个与 IDE 开发者测试过的系统完全不同的版本控制系统，效果因人而异——许多人在各种环境中使用它。然而，MSSCCI 的下载页面显示针对以下环境进行了测试：
 
 - Visual Studio .NET 2003
+
 - Visual C++ 6 SP6
+
 - Visual Basic 6 SP6
+
 - Visual FoxPro 9 SP2
+
 - Microsoft Access 2007
+
 - SQL Server Management Studio
+
 - Enterprise Architect 7.5
+
 - PowerBuilder 11.5
+
 - Microsoft embedded VC++ 4.0
 
 ## 配置版本控制
+
+
 
 Team Foundation Server 是高度可配置的，并包含非常细粒且灵活的安全模型。对于版本控制尤其如此。
 
@@ -3282,13 +2898,13 @@ Team Foundation Server 是高度可配置的，并包含非常细粒且灵活的
 
 在您的团队中广泛开始版本控制功能之前，您应该确定哪些个人将承担管理员职责。团队中的大多数开发者通常被归类为贡献者（contributors）。您组织角色的方式取决于便利性和组织需求。
 
-## 切换切换到 Team Foundation Server | 141
+### 切换切换到 Team Foundation Server | 141
 
 > 注意：有关安全和权限的更多信息，请参见第 22 章。
 
-版本控制具有非常灵活的权限模型，可以精确控制文件夹甚至文件级别的权限。您可以通过在 Visual Studio 的源控制管理器中右键点击文件或分支并选择“高级安全”（Advanced Security）来查看安全设置。
+版本控制具有非常灵活的权限模型，可以精确控制文件夹甚至文件级别的权限。您可以通过在 Visual Studio 的源控制管理器中右键点击文件或分支并选择“`Advanced Security`”来查看安全设置。
 
-图 6-30 显示了安全对话框和继承的安全设置。更改文件夹或分支的设置时，通过设置切换显式拒绝，或在继承权限允许的情况下允许。若要禁用该项的继承权限，请关闭“继承”（Inheritance），如图 6-30 所示。
+图 6-30 显示了安全对话框和继承的安全设置。更改文件夹或分支的设置时，通过设置切换显式拒绝，或在继承权限允许的情况下允许。若要禁用该项的继承权限，请关闭“`Inheritance`”，如图 6-30 所示。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_178_0.png)
 
@@ -3298,103 +2914,99 @@ Team Foundation Server 是高度可配置的，并包含非常细粒且灵活的
 
 第 8 章介绍了将代码从旧版本控制系统迁移到 Team Foundation Server 的选项。然而，除了迁移代码之外，您还必须确保您的开发者熟悉 Team Foundation Server 的版本控制功能。无论如何
 
+与你过去使用的控制系统相比，Team Foundation Server 的行为将与你习惯的有所。。首先需要理解的是，Team Foundation Server 不仅仅是版本控制。Team Foundation Server 的真正价值在于版本控制、工作项跟踪、生成和测试数据之间的紧密集成，所有数据都存储在 `SQL` 数据库中，允许你跟踪整个应用程序开发生命周期的进度。
 
-与你过去使用的控制系统相比，Team Foundation Server 的行为将与你习惯的有所。。首先需要理解的是，Team Foundation Server 不仅仅是版本控制。Team Foundation Server 的真正价值在于版本控制、工作项跟踪、生成和测试数据之间的紧密集成，所有数据都存储在 SQL 数据库中，允许你跟踪整个应用程序开发生命周期的进度。
+然而在版本控制功能方面，存在一些通常会让那些之前使用过 Team Foundation Server 之外的最常用版本控制系统（特别是 `VSS` 和 `SVN`）的开发者感到困惑的。
 
-然而在版本控制功能方面，存在一些通常会让那些之前使用过 Team Foundation Server 之外的最常用版本控制系统（特别是 VSS 和 SVN）的开发者感到困惑的。
+### Visual SourceSafe 用户如何使用 Team Foundation Server
 
-## Visual SourceSafe 用户如何使用 Team Foundation Server
+Team Foundation Server 的设计初衷是让 `VSS` 用户感到熟悉。它使用了如 `Get`、`check out`、`check in` 等术术和概念来描述相似的操作。然而，尽管有这些相似之处，`VSS` 和 Team Foundation Server 之间存在一些根本区别。
 
-Team Foundation Server 的设计初衷是让 VSS 用户感到熟悉。它使用了如 Get（获取）、check out（检出）、check in（签入）等术术和概念来描述相似的操作。然而，尽管有这些相似之处，VSS 和 Team Foundation Server 之间存在一些根本区别。
+#### 速度、可靠性和可扩展性
 
-## 速度、可靠性和可扩展性
+你对 Team Foundation Server 注意的第一点之一是，检出、获取甚至仅仅向下浏览文件夹的操作比其他版本控制系统快得多，特别是当你通过广域网（`WAN`）使用 `VSS` 时。Team Foundation Server 是为了现代的互联网风格协议设计的，并将所有数据存储在 `SQL` 数据库中。相比之下，`VSS` 仓库是存储在网络文件夹中的文件集合，使用标准的 Windows 文件协议访问，这些协议在高延迟网络上的扩展性并不良好。
 
-你对 Team Foundation Server 注意的第一点之一是，检出、获取甚至仅仅向下浏览文件夹的操作比其他版本控制系统快得多，特别是当你通过广域网（WAN）使用 VSS 时。Team Foundation Server 是为了现代的互联网风格协议设计的，并将所有数据存储在 SQL 数据库中。相比之下，VSS 仓库是存储在网络文件夹中的文件集合，使用标准的 Windows 文件协议访问，这些协议在高延迟网络上的扩展性并不良好。
+由于 Team Foundation Server 使用真实的 `SQL` 数据库进行存储，因此其可靠性非常高。在 `VSS` 中，没有原子性签入，向仓库传输数据是非事务的。因此，如果 `VSS` 客户端与网络共享之间的连接丢失，受影响文件的完整性（从而影响仓库）可能会受到影响。由于架构上的差异，这种数据完整性不会影响 Team Foundation Server。
 
-由于 Team Foundation Server 使用真实的 SQL 数据库进行存储，因此其可靠性非常高。在 VSS 中，没有原子性签入，向仓库传输数据是非事务的。因此，如果 VSS 客户端与网络共享之间的连接丢失，受影响文件的完整性（从而影响仓库）可能会受到影响。由于架构上的差异，这种数据完整性不会影响 Team Foundation Server。
-
-VSS 建议用于 20 人或以下的开发者团队，而 Team Foundation Server 可以扩展到数千个活动用户。通过灵活的架构，当服务器资源成为限制因素或当你想要确保服务器可用性时，Team Foundation Server 可以很好地扩展。
+`VSS` 建议用于 20 人或以下的开发者团队，而 Team Foundation Server 可以扩展到数千个活动用户。通过灵活的架构，当服务器资源成为限制因素或当你想要确保服务器可用性时，Team Foundation Server 可以很好地扩展。
 
 > 注意：第 20 章提供了更多关于 Team Foundation Server 可扩展性和高可用性的信息。
 
-## 版本
+#### 版本
 
-如本章早期讨论的，Team Foundation Server 根据修改它们的更改集（changeset）进行版本划分。因此，文件版本不会单独递增。VSS 用户第一次查看文件历史并看到历史中出现无关的数字序列时，通常是他们第一次意识到正在使用一个根本上不同的版本控制工具。在 Team Foundation Server 中，更改的日期和时间是由服务器记录的而不是客户端，因此由于 VSS 客户端钟不准确引起的时间问题消失了。
+如本章早期讨论的，Team Foundation Server 根据修改它们的更改集（`changeset`）进行版本划分。因此，文件版本不会单独递增。`VSS` 用户第一次查看文件历史并看到历史中出现无关的数字序列时，通常是他们第一次意识到正在使用一个根本上不同的版本控制工具。在 Team Foundation Server 中，更改的日期和时间是由服务器记录的而不是客户端，因此由于 `VSS` 客户端钟不准确引起的时间问题消失了。
 
-## 固定与共享
+#### 固定与共享
 
 > 注意：第 9 章提供了有关分支和合并的信息。
 
-## 标签和历史
+#### 标签和历史
 
-在 VSS 中，标签（labels）可以被视为版本中的某个时间点以及历史视图中的标签。该点之前的所有更改都包含在标签中。在 Team Foundation Server 中，最接近的对应的是更改集，它是仓库版本控制的基本单位。如果你记录执行生成时的更改集，你就确切知道它包含的文件版本。
+在 `VSS` 中，标签（`labels`）可以被视为版本中的某个时间点以及历史视图中的标签。该点之前的所有更改都包含在标签中。在 Team Foundation Server 中，最接近的对应的是更改集，它是仓库版本控制的基本单位。如果你记录执行生成时的更改集，你就确切知道它包含的文件版本。
 
 在 Team Foundation Server 中，标签更加灵活。现在你可以选择包含在标签中的文件版本——并在稍后对其进行编辑。你可以将 Team Foundation Server 中的标签想为标记哪些文件构成了该标签。由于 Team Foundation Server 中的标签不同，它们不会显示文件历史标准视图中的时间点，而是显示在历史视图的单独标签页中。
 
-在 VSS 中，当你内部创建一个新文件夹时，除了创建新的子文件夹外，还会为父文件夹创建一个新版本。重命名、删除和更新也是如此。
+在 `VSS` 中，当你内部创建一个新文件夹时，除了创建新的子文件夹外，还会为父文件夹创建一个新版本。重命名、删除和更新也是如此。
 
-在 Team Foundation Server 中，这些记录在子项目上，并为父项目创建新版本。这最显著的影响是，当对文件夹内部或其子项目之一进行更改时，父文件夹的“最后签入”（Last Check-in）时间不会改变。要确定 Team Foundation Server 中文件夹何时进行过最后更改，你需要右键点击文件夹并选择“查看历史”（View History），这比其 VSS 对应操作要快得多。
+在 Team Foundation Server 中，这些记录在子项目上，并为父项目创建新版本。这最显著的影响是，当对文件夹内部或其子项目之一进行更改时，父文件夹的“最后签入”（Last Check-in）时间不会改变。要确定 Team Foundation Server 中文件夹何时进行过最后更改，你需要右键点击文件夹并选择“查看历史”（`View History`），这比其 `VSS` 对应操作要快得多。
 
-## 关键字扩展
+#### 关键字扩展
 
-VSS 有一个名为关键字扩展的功能，源代码中可以包含如 $Author: $$Revision: $ 和 $Date: $ 等关键字，在每次签入版本控制时，适当的数据就会插入到标签中。当 IDE 无法集成到 TFS 时，这一功能尤特别有用，因为那时在独立的 VSS 客户端应用程序中查找任何此类信息（或查看打印输出）是一项相当缓慢的任务。
+`VSS` 有一个名为关键字扩展的功能，源代码中可以包含如 `$Author: $` `$Revision: $` 和 `$Date: $` 等关键字，在每次签入版本控制时，适当的数据就会插入到标签中。当 IDE 无法集成到 TFS 时，这一功能尤特别有用，因为那时在独立的 `VSS` 客户端应用程序中查找任何此类信息（或查看打印输出）是一项相当缓慢的任务。
 
-然而，在比较文件版本差异或执行合并时，关键字扩展会产生许多问题。Team Foundation Server 采取了根本不同的方法，并且在你签入文件时不会更改文件内容。因此，不再支持关键字扩展。VSS 用户对此并不感到意外，但强大的 IDE 集成结合 Team Foundation Server 的速度和性能意味着，一旦你接受了这一点这一事实，这就不再是一个问题。
+然而，在比较文件版本差异或执行合并时，关键字扩展会产生许多问题。Team Foundation Server 采取了根本不同的方法，并且在你签入文件时不会更改文件内容。因此，不再支持关键字扩展。`VSS` 用户对此并不感到意外，但强大的 IDE 集成结合 Team Foundation Server 的速度和性能意味着，一旦你接受了这一点这一事实，这就不再是一个问题。
 
-## 文件的并发编辑
+#### 文件的并发编辑
 
 Team Foundation Server 支持多个开发者同时编辑同一个文件，并具有强大的功能来促进和解决可能因此产生的冲突。该功能通常在大多数团队项目模板中启用，对开发者生产力是一个助力。
 
-在 VSS 中，只有在对文件进行编辑时，才会发生检出和签入。在 Team Foundation Server 中，所有修改（包括重命名、移动和删除）都需要检出。检出操作还将在单个原子事务中提交所有更改，包括添加、编辑、移动、重命名和删除。由于此，维护一个一致的仓库变得更容易。
+在 `VSS` 中，只有在对文件进行编辑时，才会发生检出和签入。在 Team Foundation Server 中，所有修改（包括重命名、移动和删除）都需要检出。检出操作还将在单个原子事务中提交所有更改，包括添加、编辑、移动、重命名和删除。由于此，维护一个一致的仓库变得更容易。
 
-## Team Foundation Server 的新功能
+#### Team Foundation Server 的新功能
 
-VSS 开发者应该熟悉本章及本书其他部分描述的 Team Foundation Server 提供的许多新功能。搁存（Shelving）就是这种经常被新开发者忽略的功能之一，因为 VSS 中没有相应的功能。
+`VSS` 开发者应该熟悉本章及本书其他部分描述的 Team Foundation Server 提供的许多新功能。搁存（`Shelving`）就是这种经常被新开发者忽略的功能之一，因为 `VSS` 中没有相应的功能。
 
-## Subversion 用户使用 Team Foundation Server
+### Subversion 用户使用 Team Foundation Server
 
 在之前的 Team Foundation Server 版本中，从 Subversion 迁移对于开发者来说通常是最痛苦的过渡，因为他们的版本控制与服务器工作空间（Server Workspaces）采用的之间存在差异。然而，Subversion 用户在使用和理解本地模型（Local model 是 Team Foundation Server 的新默认设置）将会容易得多。因此，如果你正在从 Subversion 迁移用户，建议让他们处于可以使用本地工作空间的环境中。
 
-
-
-
-## 将版本控制切换到 Team Foundation Server | 145
+#### 将版本控制切换到 Team Foundation Server | 145
 
 | SVN | TEAM FOUNDATION SERVER |
 | :--- | :--- |
-| Add (添加) | Add (添加) |
-| Delete (删除) | Delete (删除) |
-| Copy (拷贝) | Branch (分支) |
-| Move (移动) | Move, rename (移动，重命名) |
-| Revert (还原) | Rollback (回滚) |
-| Status (状态) | Status, pending changes (状态，等待更改) |
-| Diff (差异) | Compare (比较) |
-| Blame (责任) | Annotate (注释) |
-| Log (日志) | History (历史) |
+| `Add` (添加) | `Add` (添加) |
+| `Delete` (删除) | `Delete` (删除) |
+| `Copy` (拷贝) | `Branch` (分支) |
+| `Move` (移动) | `Move`, `rename` (移动，重命名) |
+| `Revert` (还原) | `Rollback` (回滚) |
+| `Status` (状态) | `Status`, `pending changes` (状态，等待更改) |
+| `Diff` (差异) | `Compare` (比较) |
+| `Blame` (责任) | `Annotate` (注释) |
+| `Log` (日志) | `History` (历史) |
 
-## Shell 功能
+#### Shell 功能
 
-在 Windows 平台上访问 SVN 的流行方法是通过 TortoiseSVN Shell 扩展。Team Foundation 2012 Power Tools 也提供了类似的 Shell 扩展功能，如前所述，它是微软的一个独立下载包。
+在 Windows 平台上访问 `SVN` 的流行方法是通过 `TortoiseSVN` Shell 扩展。Team Foundation 2012 Power Tools 也提供了类似的 Shell 扩展功能，如前所述，它是微软的一个独立下载包。
 
-## 历史方面的差异
+#### 历史方面的差异
 
 Team Foundation Server 将名称视为特定类型，这意味着重命名操作可以在历史中被追踪，而不是显示为删除和添加。查看特定文件的历史可以允许你查看重命名发生之前的历史，以及文件合并到当前位置之前在之前的分支中发生的更改。在 Visual Studio 中，除了分支层级结构外，还可以查看完整的合并历史，让你能够轻松看到某个特定更改已合并到哪些分支。
 
-## 管理与设置
+#### 管理与设置
 
 Subversion 的设置最初由 Windows 上的典型安装程序驱动，或在大多数类 Unix 操作系统上的包管理系统驱动。然而，为使用进行服务器初始配置需要大量使用命令行并编辑配置文件。安全配置更为复杂，且配置 Subversion 委托给 Windows 用户账户进行身份验证需要工作。Subversion 服务器运行在许多平台上，但结果是使用 Windows 系统的管理员可能会感到有些陌生。
 
-Team Foundation Server 的设置和管理是通过 Windows 上的系列小部件和图形化工具完成的。基础 Team Foundation Server 安装的初始设置非常，如果存在前提条件（如 IIS 或 SQL Server），它将会自动安装。Team Foundation Server 可以安装在 Windows Vista 7 或 Windows 8 等版本的 Windows 上，但对于大型团队，建议安装在 Windows 的完整服务器版本上。Team Foundation Server 甚至安装在包含域控制器的 Windows Server 版本上，例如 Windows Server 2012 Essentials。
+Team Foundation Server 的设置和管理是通过 Windows 上的系列小部件和图形化工具完成的。基础 Team Foundation Server 安装的初始设置非常，如果存在前提条件（如 IIS 或 `SQL Server`），它将会自动安装。Team Foundation Server 可以安装在 Windows Vista 7 或 Windows 8 等版本的 Windows 上，但对于大型团队，建议安装在 Windows 的完整服务器版本上。Team Foundation Server 甚至安装在包含域控制器的 Windows Server 版本上，例如 Windows Server 2012 Essentials。
 
 > 注意：第 8 节提供了有关帮助你将源代码从其他版本控制系统迁移到 Team Foundation Server 的工具和技术的更多细节。第 9 节提供了关于分支和合并的更详细解释和指导。第 10 节提供了在特定场景下使用版本控制的更详细步骤引导。
 
 ## 总结
 
-本章向你介绍了 Team Foundation Server 版本控制中的所有核心概念，并对如何在日常开发中开始和使用工具提供了一些见解。你还学习了在何处查找服务器设置和配置，以及如何管理安全权限。你了解了人们在从 VSS 或 SVN 切换版本控制时常见的常见困难。
+本章向你介绍了 Team Foundation Server 版本控制中的所有核心概念，并对如何在日常开发中开始和使用工具提供了一些见解。你还学习了在何处查找服务器设置和配置，以及如何管理安全权限。你了解了人们在从 `VSS` 或 `SVN` 切换版本控制时常见的常见困难。
 
 第 7 节将更深入地检查如何使用版本控制的一些功能，例如提交策略和代码审查，以及一些最佳实践，所有为了确保代码质量。
 
-## 7 确保代码质量
+# 7 确保代码质量
 
 **本章包含内容：**
 
@@ -3402,7 +3014,7 @@ Team Foundation Server 的设置和管理是通过 Windows 上的系列小部件
 - 监控提交策略的覆盖
 - 创建自定义提交策略
 - 部署自定义提交策略
-- 设置门禁提交构建（gated check-in builds）
+- 设置门禁提交构建（`gated check-in builds`）
 - 在门禁提交构建后协调工作区
 - 管理代码审查
 
@@ -3420,7 +3032,7 @@ Team Foundation Server 的主要 true点之一是工作项跟踪、版本控制�
 
 Visual Studio ALM 套件包含许多方法，可以帮助你衡量和提高软件质量。Visual Studio 本身包含许多提高其创建软件质量的机制，例如单元测试、代码分析和架构层验证等。Team Foundation Server 在帮助你衡量软件质量以及帮助确保健康的软件开发过程中也起着重要作用。
 
-本章检查了你可以用于提高代码质量的不同方法，例如门禁提交（gated check-ins）、提交策略以及使用 Team Foundation Server 管理代码审查的提示。
+本章检查了你可以用于提高代码质量的不同方法，例如门禁提交（`gated check-ins`）、提交策略以及使用 Team Foundation Server 管理代码审查的提示。
 
 ## 什么是质量？
 
@@ -3449,11 +3061,7 @@ Team Foundation Server 2012 支持不同质量，但质量仅被认为是测试�
 
 提交策略由每次提交之前在客户端上执行的代码组成，用于验证提交是否允许。它们定义了开发者将代码提交到版本控制库之前必须满足的条件或必须运行的过程。
 
-Team Foundation Server 中有两套提交策略：一组适用于在 Visual Studio 中进行 Windows 风格开发的开发者，另一组适用于在 Eclipse 中或 Unix 文件系统上工作的开发者。它们是分开的，是因为提交策略的底层实现是代码。在 Visual Studio 中，.NET 显然是编写策略的语言。在 Eclipse 中，逻辑选择是 Java。
-
-
-
-
+Team Foundation Server 中有两套提交策略：一组适用于在 Visual Studio 中进行 Windows 风格开发的开发者，另一组适用于在 Eclipse 中或 Unix 文件系统上工作的开发者。它们是分开的，是因为提交策略的底层实现是代码。在 Visual Studio 中，`.NET` 显然是编写策略的语言。在 Eclipse 中，逻辑选择是 `Java`。
 
 # 第7章 确保代码质量
 
@@ -3467,27 +3075,14 @@ Team Foundation Server 中有两套提交策略：一组适用于在 Visual Stud
 
 以下列表描述了 Visual Studio 2012 自带的默认策略类型：
 
--   **更改集注释策略（Changeset Comments Policy）**——此选项要求用户在提交时提供注释。在 Team Foundation Server 之前的版本中，该策略仅在安装了 Team Foundation 服务器工具时可用，但由于该策略被频繁启用，现在已改为默认安装。如果你只启用一种提交策略，那么这种是值得开启的。
-
--   **工作项（Work Items）**——团队负责人可能希望每次提交都必须关联一个工作项。这样，就可以对更改进行记录，从而更容易跟踪任何与更改集相关的工作项，同时也启动了追溯性流程。通过指定特定的源代码更改是某个功能任务的实现或对 Bug 的修复，你可以确保工作项、更改集，甚至更改集中所包含的文件的特定更改之间存在链接。这也有助于防止开发者实现未文档记录的功能，或者通过要求工作项必须存在来防止此类违规行为。
-
--   **构建（Build）**——此选项要求项目最后一次构建必须成功。如果未成功，则在修复故障代码之前无法提交更改集。这是为了防止开发者不断堆积到失败的自动化构建中。有关构建自动化的更多信息，请参阅本手册的第四部分。
-
--   **代码分析（Code Analysis）**——此选项增加了一个检查，确保在源代码提交到版本控制策略之前，已运行了静态代码分析规则集且没有错误。你可以使用 Microsoft 定义的标准规则来配置此策略，也可以将自定义规则存储在版本控制存储中，然后选择将其用于提交策略。
+- **更改集注释策略（Changeset Comments Policy）**——此选项要求用户在提交时提供注释。在 Team Foundation Server 之前的版本中，该策略仅在安装了 Team Foundation 服务器工具时可用，但由于该策略被频繁启用，现在已改为默认安装。如果你只启用一种提交策略，那么这种是值得开启的。
+- **工作项（Work Items）**——团队负责人可能希望每次提交都必须关联一个工作项。这样，就可以对更改进行记录，从而更容易跟踪任何与更改集相关的工作项，同时也启动了追溯性流程。通过指定特定的源代码更改是某个功能任务的实现或对 Bug 的修复，你可以确保工作项、更改集，甚至更改集中所包含的文件的特定更改之间存在链接。这也有助于防止开发者实现未文档记录的功能，或者通过要求工作项必须存在来防止此类违规行为。
+- **构建（Build）**——此选项要求项目最后一次构建必须成功。如果未成功，则在修复故障代码之前无法提交更改集。这是为了防止开发者不断堆积到失败的自动化构建中。有关构建自动化的更多信息，请参阅本手册的第四部分。
+- **代码分析（Code Analysis）**——此选项增加了一个检查，确保在源代码提交到版本控制策略之前，已运行了静态代码分析规则集且没有错误。你可以使用 Microsoft 定义的标准规则来配置此策略，也可以将自定义规则存储在版本控制存储中，然后选择将其用于提交策略。
 
 在 Eclipse 中，要配置提交策略，请进入 Team Explorer 的设置页面并选择“提交策略”（Check-Policies）链接。在 Team Explorer Everywhere 中，默认分发了以下提交策略：
 
--   **更改集注释策略（Changeset Comment Policy）**——此策略的行为与 Visual Studio 版本完全相同，要求输入注释。然而，它必须在 Eclipse 和跨平台命令行客户端中分别配置。
 
--   **工作项策略（Work Item Policy）**——同样，等同于 Visual Studio 中的“工作项”策略，要求提交必须关联一个工作项。
-
--   **工作查询策略（Work Query Policy）**——此策略要求必须选择了特定查询中的工作项。例如，你可能希望强制他人关联分配给他们的工作项，或者你可能希望将其与当前的工作项进行关联。
-
--   **构建策略（Build Policy）**——此选项要求 Eclipse 中不存在（失败的）构建。每当保存文件时，都可以自动标记不同的插件和检查（例如，如果配置了，FindBugs 插件的静态代码分析错误可能会触发此策略）。构建策略允许你使用旨在帮助代码质量的 Eclipse 插件，作为你 Foundation Server 提交过程的一部分进行接入。
-
--   **模式策略（Patterns Policy）**——此选项防止匹配一组正则表达式的内容被提交到服务器。你可以使用此策略来确保不会意外提交 .class 文件或可能使用了命名不当的文件。
-
-你还可以添加额外的策略，以便它们在提交之前进行评估。在 Eclipse 中，你还可以启用提交策略适用的版本控制路径；例如，你可能希望策略仅适用于代码库的特定分支。一旦在 Visual Studio 或 Eclipse 中启用了策略，进入“更改”页面将评估这些策略，并在失败时显示任何警告。
 
 # 第7章 确保代码质量
 
@@ -3501,15 +3096,11 @@ Team Foundation Server 中有两套提交策略：一组适用于在 Visual Stud
 
 在 Eclipse 中，要配置提交策略，请进入 Team Explorer 的设置页面并选择“提交策略”链接。在 Team Explorer Everywhere 中，默认分发了以下提交策略：
 
--   **更改集注释策略（Changeset Comment Policy）**——此策略的行为与 Visual Studio 版本完全相同，要求输入注释。然而，它必须在 Eclipse 和跨平台命令行客户端中分别配置。
-
--   **工作项策略（Work Item Policy）**——同样，等同于 Visual Studio 中的“工作项”策略，要求提交必须关联一个工作项。
-
--   **工作查询策略（Work Query Policy）**——此策略要求必须选择了特定查询中的工作项。例如，你可能希望强制他人关联分配给他们的工作项，或者你可能希望将其与当前的工作项进行关联。
-
--   **构建策略（Build Policy）**——此选项要求 Eclipse 中不存在（失败的）构建。每当保存文件时，都可以自动标记不同的插件和检查（例如，如果配置了，FindBugs 插件的静态代码分析错误可能会触发此策略）。构建策略允许你使用旨在帮助代码质量的 Eclipse 插件，作为你 Foundation Server 提交过程的一部分进行接入。
-
--   **模式策略（Patterns Policy）**——此选项防止匹配一组正则表达式的内容被提交到服务器。你可以使用此策略来确保不会意外提交 .class 文件或可能使用了命名不当的文件。
+- **更改集注释策略（Changeset Comment Policy）**——此策略的行为与 Visual Studio 版本完全相同，要求输入注释。然而，它必须在 Eclipse 和跨平台命令行客户端中分别配置。
+- **工作项策略（Work Item Policy）**——同样，等同于 Visual Studio 中的“工作项”策略，要求提交必须关联一个工作项。
+- **工作查询策略（Work Query Policy）**——此策略要求必须选择了特定查询中的工作项。例如，你可能希望强制他人关联分配给他们的工作项，或者你可能希望将其与当前的工作项进行关联。
+- **构建策略（Build Policy）**——此选项要求 Eclipse 中不存在（失败的）构建。每当保存文件时，都可以自动标记不同的插件和检查（例如，如果配置了，FindBugs 插件的静态代码分析错误可能会触发此策略）。构建策略允许你使用旨在帮助代码质量的 Eclipse 插件，作为你 Foundation Server 提交过程的一部分进行接入。
+- **模式策略（Patterns Policy）**——此选项防止匹配一组正则表达式的内容被提交到服务器。你可以使用此策略来确保不会意外提交 `.class` 文件或可能使用了命名不当的文件。
 
 你还可以添加额外的策略，以便它们在提交之前进行评估。在 Eclipse 中，你还可以启用提交策略适用的版本控制路径；例如，你可能希望策略仅适用于代码库的特定分支。一旦在 Visual Studio 或 Eclipse 中启用了策略，进入“更改”页面将评估这些策略，并在失败时显示任何警告。
 
@@ -3531,50 +3122,38 @@ Team Foundation Server 中有两套提交策略：一组适用于在 Visual Stud
 
 **图 7-5：** 电子邮件设置
 
-
-
-
 已安装，因为对于团队成员没有的策略进行提交操作将失败，并显示消息，表明 Visual Studio Team Explorer 无法找到该提交策略。
 
 以下是 Power Tools 中可用的提交策略：
 
-- **自定义路径策略（Custom Path Policy）**——使用此策略允许你指定仅应用于项目中的某个文件夹（或可以用正则表达式表示的其他匹配项）的不同提交策略。例如，你可以定义一个检查项目文件中是否指定了属性的提交策略，并将该提交策略的范围限制在 *.proj 文件。
-
-- **禁止模式（Forbidden Patterns）**——此策略允许管理员指定不允许提交到版本控制的模式。例如，你可以限制开发者向你的版本控制存储库提交 dll 文件。
-
+- **自定义路径策略（Custom Path Policy）**——使用此策略允许你指定仅应用于项目中的某个文件夹（或可以用正则表达式表示的其他匹配项）的不同提交策略。例如，你可以定义一个检查项目文件中是否指定了属性的提交策略，并将该提交策略的范围限制在 `*.proj` 文件。
+- **禁止模式（Forbidden Patterns）**——此策略允许管理员指定不允许提交到版本控制的模式。例如，你可以限制开发者向你的版本控制存储库提交 `dll` 文件。
 - **工作项查询策略（Work Item Query Policy）**——启用此策略允许管理员指定开发者可以将他们的提交与指定工作项查询中的工作项相关联。例如，管理员可以创建一个仅包含未关闭工作项的工作项查询，这实际上允许开发者仅与打开状态的工作项相关联。
 
 ## 创建自定义提交策略
 
 除了本文介绍的开箱即用提交策略外，你还可以创建自己的提交策略，以帮助提高质量并对你的开发项目实施治理。坦率地说，提交策略系统是 Team Foundation Server 许多可扩展点之一。
 
-## 为 Visual Studio 创建自定义提交策略
+### 为 Visual Studio 创建自定义提交策略
 
 针对 Visual Studio 用户的自定义提交策略是通过创建一个任何语言编写的简单 .NET 类库来创建和部署的。该类库可以包含许多提交策略。
 
 按照以下步骤创建一个用 C# 实现的提交策略：
 
-- 1. 首先，启动 Visual Studio 2012，通过选择“新建项目（New Project）”，然后选择“类库（Class Library）”，创建一个新的类库，如图 7-6 所示。
-
-- 2.为项目选择位置和名称，然后点击确定。
-
-- 3. 你可以删除生成的默认文件，它的名称总是 Class1.cs。
-
-- 4. 通过右键点击解决方案管理器中的项目并选择“添加引用（Add References）”，向项目添加以下引用。从“程序集（Assemblies）”选择 Microsoft.TeamFoundation.VersionControl.Client。
-
-- 5. 从项目的右菜单中选择“添加类（Add Class）”命令创建一个新类。
-
-- 6. 为代表新提交策略功能的类选择一个名称，并点击确定。
-
-## 第 7 章确保代码质量
+1. 首先，启动 Visual Studio 2012，通过选择“新建项目（New Project）”，然后选择“类库（Class Library）”，创建一个新的类库，如图 7-6 所示。
+2. 为项目选择位置和名称，然后点击确定。
+3. 你可以删除生成的默认文件，它的名称总是 `Class1.cs`。
+4. 通过右键点击解决方案管理器中的项目并选择“添加引用（Add References）”，向项目添加以下引用。从“程序集（Assemblies）”选择 `Microsoft.TeamFoundation.VersionControl.Client`。
+5. 从项目的右菜单中选择“添加类（Add Class）”命令创建一个新类。
+6. 为代表新提交策略功能的类选择一个名称，并点击确定。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_193_0.png)
 
 图 7-6：创建一个新类
 
-在此时，你需要为 Microsoft.TeamFoundation.VersionControl.Client 程序集添加 using 语句。该类还应该通过添加 [Serializable] 特性标记为可序列化。该类还应该派自 PolicyBase，它是所有提交策略非常有用的抽象基类。
+在此时，你需要为 `Microsoft.TeamFoundation.VersionControl.Client` 程序集添加 using 语句。该类还应该通过添加 `[Serializable]` 特性标记为可序列化。该类还应该派自 `PolicyBase`，它是所有提交策略非常有用的抽象基类。
 
-在派生该类后，Visual Studio 可以帮助实现基类的所有必要接口——特别是 IPolicyDefinition 和 IPolicyEvaluation 接口。列表 7-2 显示了一个示例提交策略的代码，该策略执行简单的测试以检查提交是否包含任何禁止词。完整解决方案请参见此代码。列表 7-2：ForbiddenCommentPolicy.cs
+在派生该类后，Visual Studio 可以帮助实现基类的所有必要接口——特别是 `IPolicyDefinition` 和 `IPolicyEvaluation` 接口。列表 7-2 显示了一个示例提交策略的代码，该策略执行简单的测试以检查提交是否包含任何禁止词。完整解决方案请参见此代码。列表 7-2：`ForbiddenCommentPolicy.cs`
 
 ```csharp
 using Microsoft.TeamFoundation.VersionControl.Client;
@@ -3649,47 +3228,35 @@ public override bool Edit(PolicyEditArgs policyEditArgs)
 /// </summary>
 ```
 
-## 第 7 章确保代码质量
-
 请注意关于代码的以下几点：
 
-- Team Foundation Server 存储设置涉及类的实例化；因此，包含设置的属性应该是可序列化的，任何不需要序列化的私有成员变量应标记为 NonSerialized
-- Evaluate 方法是提交的主要功能。在这里可以检查提交。它将以 PolicyFailure 对象数组的形式向用户返回任何违项。基类有一个名为 PendingCheckin 的保护属性，包含了提交的所有必要细节。Evaluate 方法在提交生命周期中被调用多次；因此它应该快速返回。
+- Team Foundation Server 存储设置涉及类的实例化；因此，包含设置的属性应该是可序列化的，任何不需要序列化的私有成员变量应标记为 `NonSerialized`
+- `Evaluate` 方法是提交的主要功能。在这里可以检查提交。它将以 `PolicyFailure` 对象数组的形式向用户返回任何违项。基类有一个名为 `PendingCheckin` 的保护属性，包含了提交的所有必要细节。`Evaluate` 方法在提交生命周期中被调用多次；因此它应该快速返回。
+- `Type` 属性决定了管理员为团队项目配置版本控制设置时提交策略的外观，它是图 7-1“策略类型”列中显示的名称。
+- 提交策略以序列化信息的形式在服务器上存储配置数据。`Edit` 方法为想要配置的终端用户提供了一个显示用户界面的机制。如果提交策略不需要任何 UI 即可配置（例如检查策略），此方法必须返回 true。在前面的示例中，你采取了快捷方法，使用 Visual Basic 中的 `InputBox`（通过添加 `Microsoft.VisualBasic` 引用）来显示简单的输入。在更复杂的场景下，你会创建自己的 Windows Form 并显示它。
 
-Type 属性决定了管理员为团队项目配置版本控制设置时提交策略的外观，它是图 7-1“策略类型”列中显示的名称。
+### 为 Eclipse 创建自定义提交策略
 
-提交策略以序列化信息的形式在服务器上存储配置数据。Edit 方法为想要配置的终端用户提供了一个显示用户界面的机制。如果提交策略不需要任何 UI 即可配置（例如检查策略），此方法必须返回 true。在前面的示例中，你采取了快捷方法，使用 Visual Basic 中的 InputBox（通过添加 Microsoft.VisualBasic 引用）来显示简单的输入。在更复杂的场景下，你会创建自己的 Windows Form 并显示它。
+针对 Eclipse 的自定义提交策略实现为 Eclipse 项目。这允许使用 Eclipse 的开发者轻松创建并使用 Eclipse 提供的标准工具进行部署。要进行部署，你必须安装了插件开发的 Eclipse 版本，Eclipse for RCP 和 RAP 开发者可以从 `http://www.eclipse.org/downloads/` 免费下载。一旦安装了 Eclipse 版本，你可以按照 TFS for Java 的 `samples/com.microsoft.tfsdk.samples.checkinpolicy` 中的说明创建提交策略。
 
-## 为 Eclipse 创建自定义提交策略
-
-针对 Eclipse 的自定义提交策略实现为 Eclipse 项目。这允许使用 Eclipse 的开发者轻松创建并使用 Eclipse 提供的标准工具进行部署。要进行部署，你必须安装了插件开发的 Eclipse 版本，Eclipse for RCP 和 RAP 开发者可以从 http://www.eclipse.org/downloads/ 免费下载。一旦安装了 Eclipse 版本，你可以按照 TFS for Java 的 samples\com.microsoft.tfsdk.samples.checkinpolicy 中的说明创建提交策略。
-
-> 注意：TFS for Java SDK 是用于 Team Foundation Server 的完整 Java API，用于创建 Team Explorer Everywhere。Microsoft 在 http://aka.ms/tfsdk4 对其进行积极维护和定期更新。SDK 包含许多代码段和示例项目，包括一个带有完整文档的提交策略示例。
+> 注意：TFS for Java SDK 是用于 Team Foundation Server 的完整 Java API，用于创建 Team Explorer Everywhere。Microsoft 在 `http://aka.ms/tfsdk4` 对其进行积极维护和定期更新。SDK 包含许多代码段和示例项目，包括一个带有完整文档的提交策略示例。
 
 ## 部署提交策略
 
 为 Visual Studio 部署提交策略的最简单方法是使用 Visual Studio 扩展部署项目（VSIX 文件）。VSIX 是通过 Visual Studio 扩展管理器易于打包和安装 Visual Studio 扩展的一种方式。
 
-> 注意：要创建 VSIX 项目，你必须从 http://aka.ms/vsdk 安装 Visual Studio 2012 SDK。这仅适用于希望使用 VSIX 模块编写自己的提交策略的用户，而对于仅仅想要安装 VSIX 模块的用户来说是不需要的。
+> 注意：要创建 VSIX 项目，你必须从 `http://aka.ms/vsdk` 安装 Visual Studio 2012 SDK。这仅适用于希望使用 VSIX 模块编写自己的提交策略的用户，而对于仅仅想要安装 VSIX 模块的用户来说是不需要的。
 
 一旦你安装了 Visual Studio 2012 SDK，应按如下方式创建一个包含你的提交策略项目的 VSIX 模块：
 
 - 在提交策略解决方案中，通过转到“文件 > 添加 > 新建项目”，并在“扩展”部分选择“VSIX 项目”，创建一个新的 VSIX 项目，如图 7-7 所示。
 
-
-
-
-
-## 第 7 章 确保代码质量
-
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_197_0.png)
 
 图 7：在当前解决方案中创建 VSIX 项目并打开 VSIX 清单文件，如下所示
 
-- 这将在当前解决方案中创建新项目并打开 VSIX 清单文件，如图 7-8 所示。在清单表形式，为扩展程序提供一个合适的名称和作者，并设置你的版本。提供一个在 Visual Studio 扩展程序管理器中查看扩展程序时使用的描述。如果需要，你还可以提供许可证（包含在 .rtf 文件中）、图标、预览图像以及其他元数据。
-
+- 这将在当前解决方案中创建新项目并打开 VSIX 清单文件，如图 7-8 所示。在清单表形式，为扩展程序提供一个合适的名称和作者，并设置你的版本。提供一个在 Visual Studio 扩展程序管理器中查看扩展程序时使用的描述。如果需要，你还可以提供许可证（包含在 `.rtf` 文件中）、图标、预览图像以及其他元数据。
 - 接下来，你需要为要部署的检查项目添加引用。要执行此操作，在“解决方案资源管理器”中右键点击 VSIX 项目，选择“添加引用...” -> “解决方案项目”，然后选择要检查的签入策略项目。
-
 - 为了让 Visual Studio 在项目部署后进行检查，你需要让 VSIX 项目在首次启用扩展启动时添加一个注册表项。你可以通过 `.pkgdef` 文件来实现，这是一种 Visual Studio 理解的特殊类型文本文件。要创建 `.pkgdef` 文件，右键点击 VSIX 项目，选择“添加” -> “新建项...” -> “文本文件”，并将文件命名为 `custompolicies.pkgdef`，如图 7-9 所示。
 
 `pkgdef` 文件应包含列表 7-3 所示的内容，以便在正确的位置创建注册表项。该注册表项包含了加载系统检查签入策略所需的命名空间和程序集。
@@ -3720,6 +3287,8 @@ Type 属性决定了管理员为团队项目配置版本控制设置时提交策
 如果你在记事本中打开 `source.extension.vsixmanifest` 文件，它看起来应该类似于列表 7-4 所示。
 
 ## 列表 7-4：source.extension.vsixmanifest
+
+
 
 ```xml
 <xml version="1.0" encoding="utf-8"?>
@@ -3788,9 +3357,6 @@ path="custompolicies.pkgdef" />
 
 图 7-14：带有门控签入构建的签入工作流
 
-
-
-
 通过受控检查（gated check-in），错误的检查将不会被提交，失败的构建会将更改留为“架上等待”（shelfwait）状态，以便开发者在修复问题后重新提交。对于失败构建之后的构建，其他团队成员获取最新版本时将无需解决该问题，团队在开始工作日时不会受到此阻碍。
 
 你的受控检查过程可以执行额外的检查和测试，这些测试作为提交策略的一部分来执行是非常困难且耗时的。例如，你可以检查以确保静态分析规则通过，并确保单元测试的代码覆盖率随时间推移而提高。或者，你也可以自定义构建过程，以包含其他你认为可能会遗漏的项，例如用新字符串更新资源文件，或确保新的程序集已包含在安装过程中，请参第 18 章。
@@ -3823,7 +3389,7 @@ FIGURE 7-15：切换到触发器选项选项卡
 
 > 注意 其他构建定义配置选项将在第 17 章进行更详细的探讨。
 
-开发者经常询问系统，哪种文件夹的版本控制将触发构建中的受控检查。这实际上取决于构建定义的工作空间（workspace）。例如，如果你的构建定义包含了对 $\TeamProject\DEV 的映射，那么只有该特定文件夹或子文件夹中的更改才会触发受控检查。由于某些原因，正如第 17 章讨论的那样，精确界定受控检查的工作空间是非常重要的。
+开发者经常询问系统，哪种文件夹的版本控制将触发构建中的受控检查。这实际上取决于构建定义的工作空间（workspace）。例如，如果你的构建定义包含了对 `$TeamProject\DEV` 的映射，那么只有该特定文件夹或子文件夹中的更改才会触发受控检查。由于某些原因，正如第 17 章讨论的那样，精确界定受控检查的工作空间是非常重要的。
 
 ## 验证提交
 
@@ -3854,16 +3420,13 @@ FIGURE 7-1：协调工作空间的选项
 
 > 如果构建失败，这里提到的每种方法中的选项都将是取消搁存（unshelve）已提交的更改，而不是协调工作空间，以便开发者可以修复问题并重新提交更改，以进行另一次受控检查验证构建。
 
-![]((img/aaf6096fc6b4485534c737801bdbc4fd_207_0.png)
+![](img/aaf6096fc6b4485534c737801bdbc4fd_207_0.png)
 
 FIGURE 7-18：协调工作空间的命令
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_207_1.png)
 
 FIGURE 7-19：协调工作空间的对话框
-
-
-
 
 注意：虽然 Visual Studio Premium 2012 和 Ultimate 2012 版本包含了丰富的代码审查体验，但未使用这些 Visual Studio 版本的开发者仍然可以通过使用 Team Foundation 服务器分发待审查的文件，并通过创建提交备注（Check-In notes）来记录特定更改集（changeset）的代码审查员来执行代码审查。有关更改集（Changesets）和提交备注的更多信息，请参阅第 6 章。
 
@@ -3909,12 +3472,9 @@ FIGURE 7-19：协调工作空间的对话框
 
 # 174 第 7 章 确保代码质量
 
-
-
-
-
 ## 8
-从旧版版本控制系统迁移
+
+### 从旧版版本控制系统迁移
 
 **本章内容：**
 
@@ -3931,6 +3491,8 @@ FIGURE 7-19：协调工作空间的对话框
 有一点是肯定的：迁移到新版本控制系统的过程为你提供了一个难得的机会，让你重新组织并清理那些需要关注的源代码结构部分。本章探索了将现有源代码迁移到 Team Foundation Server 的各种选项。
 
 ## 迁移 VS 升级
+
+
 
 Team Foundation Server 管理员可能会说他们想从 Team Foundation Server 的旧版本迁移到 Team Foundation Server 2012。更有可能的是，他们的意思是想要升级到新版本。如果 Team Foundation Server 管理员选择了错误的方法，团队在过渡到 Team Foundation Server 2012 的过程中将面临数据丢失和更多工作量。
 
@@ -3953,7 +3515,7 @@ Team Foundation Server 管理员可能会说他们想从 Team Foundation Server 
 
 在迁移的情况下，数据转换仅使用公共 API 完成，而这些 API 限于在移动数据时提供某些信息。这种局限性导致的结果是某些数据在迁移过程中丢失或失真。示例包括构制品 ID（更改集编号、工作项 ID）、时间戳、区域路径（area paths）和迭代路径（iteration paths）。
 
-> 注意：Team Foundation 版本控制团队的计划经理 Matthew Metrik 就这一特定概念写了多篇博客文章，并讨论了每种不同的场景。更多信息请访问 http://aka.ms/TfsUpgradeOrMigration。
+> 注意：Team Foundation 版本控制团队的计划经理 Matthew Metrik 就这一特定概念写了多篇博客文章，并讨论了每种不同的场景。更多信息请访问 `http://aka.ms/TfsUpgradeOrMigration`。
 
 ## 迁移历史还是最新版本
 
@@ -3970,7 +3532,7 @@ Team Foundation Server 管理员可能会说他们想从 Team Foundation Server 
 
 最终，迁移源代码历史的投资回报应该被确定并与劣势进行权衡。如果团队最终只迁移了最新版本，始终可以让旧版版本控制系统处于只读状态，以便团队在需要时研究存档中的历史。
 
-> 注意：关于此特定主题的更多信息，Developer Smackdown 播客的主及其嘉宾 Ed Blankenship 在一集中讨论了基础迁移，地址为 http://aka.ms/EdPodcastMigration。
+> 注意：关于此特定主题的更多信息，Developer Smackdown 播客的主及其嘉宾 Ed Blankenship 在一集中讨论了基础迁移，地址为 `http://aka.ms/EdPodcastMigration`。
 
 ## 从 VISUAL SOURCESAFE 迁移
 
@@ -3978,7 +3540,7 @@ Team Foundation Server 管理员可能会说他们想从 Team Foundation Server 
 
 ## VSSCONVERTER.EXE 去去哪里了？
 
-在 Team Foundation 2012 中，VSSConverter.exe 工具已更新并重命名为 VssUpgrade.exe。与旨在简化常见升级场景的 VSS 升级向导不同，此工具允许更精细的控制。
+在 Team Foundation 2012 中，`VSSConverter.exe` 工具已更新并重命名为 `VssUpgrade.exe`。与旨在简化常见升级场景的 VSS 升级向导不同，此工具允许更精细的控制。
 
 该工具包含了向导目前不支持的若干功能，包括：
 
@@ -3988,13 +3550,9 @@ Team Foundation Server 管理员可能会说他们想从 Team Foundation Server 
 - 将 VSS 用户映射到活动目录 (AD) 域用户帐户。
 - 在从 VSS 绑定迁移到相应的 Team Foundation Server 绑定期间更新 Visual Studio 解决方案和项目的绑定。
 
-关于 VssUpgrade.exe 工具的更多信息，请参阅 http://aka.ms/Tfs2012VssUpgrade。
+关于 `VssUpgrade.exe` 工具的更多信息，请参阅 `http://aka.ms/Tfs2012VssUpgrade`。
 
-
-
-
-
-> 注意：Microsoft Visual SourceSafe 2005 标准版的主流支持已于2012 年 7 月 10 日结束。当微软结束对某个产品的主流支持时，它将停止发布非安全热补丁、提供电话支持并提供其他主流支持选项。某些公司可能可以通过某些扩展支持选项获得某些福利，但此类公司可能必须在主流支持结束后 90 天内采取行动以利用这些支持。关于 VisualSourceSafe2005 支持生命期的最新信息，请参阅 http://aka.ms/SupportVSS。公司也可以联系其微软代表，进一步询问主流支持后的支持选项。
+> 注意：Microsoft Visual SourceSafe 2005 标准版的主流支持已于2012 年 7 月 10 日结束。当微软结束对某个产品的主流支持时，它将停止发布非安全热补丁、提供电话支持并提供其他主流支持选项。某些公司可能可以通过某些扩展支持选项获得某些福利，但此类公司可能必须在主流支持结束后 90 天内采取行动以利用这些支持。关于 VisualSourceSafe2005 支持生命期的最新信息，请参阅 `http://aka.ms/SupportVSS`。公司也可以联系其微软代表，进一步询问主流支持后的支持选项。
 
 VSS 升级向导在迁移过程中会将所有的签入（check-ins）回放到 Team Foundation 中。它通过为同一用户在同一时间提交且具有相同内容的文件创建更改集（changesets）来实现。此外，这些更改之间不能冲突，才能包含在同一个更改集中。例如，如果用户在相对相同的时间段内添加了一个特定文件又删除了它，那么这些操作将不会在同一个更改集迁移中提交。
 
@@ -4006,11 +3564,11 @@ VSS 升级向导在迁移过程中会将所有的签入（check-ins）回放到 
 
 在尝试进行迁移工作之前，首要步骤是确保 VSS 仓库已完全备份。这使得在迁移过程中发生任何错误时能够将其恢复到原始状态。务必对数据库的副本运行迁移实用程序，而不是实际数据库。
 
-关键之一是确保，如果 VSS 数据库旧于最新版本（Visual SourceSafe 2005），则应在迁移之前升级数据库。在安装 Visual SourceSafe 2005 后，可以使用 DDUPUPD 工具升级到最新版本。
+关键之一是确保，如果 VSS 数据库旧于最新版本（Visual SourceSafe 2005），则应在迁移之前升级数据库。在安装 Visual SourceSafe 2005 后，可以使用 `DDUPUPD` 工具升级到最新版本。
 
 在启动向导之前，一个重要的步骤是在您的 VSS 仓库上运行 VisualSource ANALYZE 工具。这将检查完整性并修复任何结构性错误。
 
-> 注意：有关 VSS ANALYZE 工具的更多信息，请参阅 http://aka.ms/VssAnalyze。
+> 注意：有关 VSS ANALYZE 工具的更多信息，请参阅 `http://aka.ms/VssAnalyze`。
 
 您的开发团队可能选择不迁移 VSS 仓库中存储的所有历史记录，而是选择仅迁移历史记录的子集。您的团队可能决定只需要最近几年的历史，以减少迁移执行时间。如果是这样，管理员应该使用 VSS 中提供的归档功能对选择日期之前的所有内容进行存档。
 
@@ -4038,11 +3596,11 @@ www.itooks.info
 
 ## 第8章 迁移遗留系统
 
-一旦安装了向导，可以通过开始菜单下的 Studio 2012 Team Foundation 启动，或者通过运行安装路径下的 Vss.exe 启动。
+一旦安装了向导，可以通过开始菜单下的 Studio 2012 Team Foundation 启动，或者通过运行安装路径下的 `Vss.exe` 启动。
 
 在向导中，您需要提供以下内容：
 
-- VisualSourceRepository——包含 srcsafe.ini 的文件夹。
+- VisualSourceRepository——包含 `srcsafe.ini` 的文件夹。
 - VisualSourceAdmin password（可选）——管理员账户的密码。
 
 VSS 升级还需要一个 Server 实例。一旦您指定了有效的存储，就可以点击“列出”项目，如图 8-3 所示。当您准备好后，点击“下一步”。
@@ -4074,10 +3632,6 @@ VSS 升级向导在迁移过程中还需要一个 Server 实例进行临时存�
 
 向导的局限性之一是 Team Foundation 中更改集的日期时间戳将是迁移发生的时间，而不是原始签入时间。然而，如图 8-8 所示，原始的 VSS 提交时间保留在更改集的注释中。
 
-
-
-
-
 ## 从 VisualSource 迁移 | 187
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_224_0.png)
@@ -4094,7 +3648,7 @@ www.it-ebooks.com
 
 微软的 Team Foundation Server 产品拥有专门的资源，用于创建一个名为 Team Foundation Server 集成平台（TFS Integration Platform）的平台，该平台允许客户构建和同步工具。它本质上是一个完整的框架，提供了一个用于配置迁移/同步运行的用户界面 (UI)、用于执行操作的服务，以及当团队使用该工具处理迁移/同步操作时为团队提供的冲突解决体验。
 
-微软在专门的 CodePlex 项目站点 http://fsintegration.codeplex.com/ 上提供了免费实用程序和源代码。CodePlex 项目站点经常上传更新，Visual Studio ALM Rangers 还提供了一份可以快速上手的快速文档。图 8-9 是 Team Foundation Server 集成平台配置工具的截图。
+微软在专门的 CodePlex 项目站点 `http://fsintegration.codeplex.com/` 上提供了免费实用程序和源代码。CodePlex 项目站点经常上传更新，Visual Studio ALM Rangers 还提供了一份可以快速上手的快速文档。图 8-9 是 Team Foundation Server 集成平台配置工具的截图。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_225_0.png)
 
@@ -4117,23 +3671,23 @@ Team Foundation Server 集成平台可以通过适配器系统协助将版本控
 如果你想从自定义的内部系统迁移，可以使用 Team Foundation Server 集成平台中提供的 API 创建自定义适配器。Team Foundation Server 集成平台的源代码中提供了两种类型适配器的示例，以帮助你开始。
 
 > 注意：如本章前面提到的，某些项不使用该工具进行迁移，在决定工具是否满足你的需求时，应该考虑到这一点。内置适配器不会迁移以下产物：
-
-- 权限
-- 标签 (Labels)
-- 签存集 (Shelvesets)
-- 工作项查询
-- 文件编码
-- 待处理更改
-- 提交备注
-- 工作空间
-- 团队
-- 测试用例
-- 提交策略
-- 报告
-- 团队门户
-- 过程模板
-- 生成 (Builds)
-- 仓库项
+>
+> - 权限
+> - 标签 (Labels)
+> - 签存集 (Shelvesets)
+> - 工作项查询
+> - 文件编码
+> - 待处理更改
+> - 提交备注
+> - 工作空间
+> - 团队
+> - 测试用例
+> - 提交策略
+> - 报告
+> - 团队门户
+> - 过程模板
+> - 生成 (Builds)
+> - 仓库项
 
 ## 流行的第三方迁移工具
 
@@ -4145,13 +3699,15 @@ Timely Migration 团队构建的一项工具非常成功地将源代码历史从
 
 除了 SVN 之外，Timely Migration 工具还支持从 CVS 或 StarTeam 仓库迁移，并具有与 SVN 迁移工具类似的功能。
 
-> **注意**：有关关于 Timely Migration 工具的更多信息，请访问网站 http://aka.ms/Timelymigration。该工具需要付费，此外测试和实际运行所需的任何支持小时也是收费。你可以下载该工具的试用版，这是一个功能完整的评估版本，允许你在购买产品之前测试迁移。然而，当它提交到 Team Foundation Server 时，它会混淆每个文件的内容。
+> **注意**：有关关于 Timely Migration 工具的更多信息，请访问网站 `http://aka.ms/Timelymigration`。该工具需要付费，此外测试和实际运行所需的任何支持小时也是收费。你可以下载该工具的试用版，这是一个功能完整的评估版本，允许你在购买产品之前测试迁移。然而，当它提交到 Team Foundation Server 时，它会混淆每个文件的内容。
 
 ## ClearCase
 
 幸运的是，Team Foundation Server 集成平台包含一个适配器，允许团队从 IBM Rational ClearCase 源代码控制仓库迁移到 Team Foundation Server。你可以使用现有的适配器选择迁移完整历史或选定的历史。
 
 本章前面介绍了关于 Team Foundation Server 集成平台的更多信息。
+
+
 
 > **注意**：你还可以使用 Team Foundation Server 集成工具，它包含该平台的编译版本，是从 ClearQuest 迁移所需的最少必要工具。集成工具发布版可以在 Visual Studio Gallery 上找到：http://aka.ms/TFSIP。
 
@@ -4195,10 +3751,7 @@ Timely Migration 团队构建的一项工具非常成功地将源代码历史从
 
 如果同一个文件在源分支和目标分支中都被编辑过，Team Foundation Server 将此标记为冲突。尽管 2012 版本为了简化合并体验做了重大更改，如果同一个文件在两个分支中都被编辑过，它仍然会被标记为冲突，即使更改位于完全不同的区域。
 
-对于某些更改（例如文件在两个不同位置都被编辑过），Team Foundation Server 可以对应该发生的情况做出假设（你想看到一个包含更改的文件
-
-
-（来自两个地方）。这被称为自动合并（automerge）。在 Team Foundation Server 2012 中，可以自动合并的冲突数量和类型比早期版本有所增加。而且，与早期版本不同，如果操作安全，Team Foundation Server 将替你自动合并文件，但允许你审查这些更改，以确保执行了预期的行为。例如，如果了两个不同的错误，你可能想要这两处更改。然而，如果这些更改只是以两种不同的方式修复了同一个错误，也许可能需要不同的解决方案。在大多数开发团队交流良好的情况下，更改是由于对文件进行了不同的修改而的结果。自动合并通常能很好地合并这些更改，使开发者能够轻松验证这些更改。
+对于某些更改（例如文件在两个不同位置都被编辑过），Team Foundation Server 可以对应该发生的情况做出假设（你想看到一个包含更改的文件（来自两个地方）。这被称为自动合并（automerge）。在 Team Foundation Server 2012 中，可以自动合并的冲突数量和类型比早期版本有所增加。而且，与早期版本不同，如果操作安全，Team Foundation Server 将替你自动合并文件，但允许你审查这些更改，以确保执行了预期的行为。例如，如果了两个不同的错误，你可能想要这两处更改。然而，如果这些更改只是以两种不同的方式修复了同一个错误，也许可能需要不同的解决方案。在大多数开发团队交流良好的情况下，更改是由于对文件进行了不同的修改而的结果。自动合并通常能很好地合并这些更改，使开发者能够轻松验证这些更改。
 
 也存在许多情况，实际结果是不明确的，且无法进行自动合并。例如，如果你在一个分支中删除了该文件，而在另一个分支中对其进行了编辑，你是想保留带有更改的文件，还是想将其删除呢？执行合并的人员负责理解代码，并与做出冲突更改的团队成员沟通，以了解他们的意图。
 
@@ -4237,9 +3790,6 @@ Timely Migration 团队构建的一项工具非常成功地将源代码历史从
 
 有关分支和合并的更多信息，请参见本章后面的“功能分支”。
 
-
-
-
 # 常见分支策略 | 199
 
 假设在生产环境中发现了某些必须解决的 bug，需要进行细微更改以反映业务对某些功能的需求。然而，开发小组不想将 Main 分支上正在进行的 V2 的所有功能都包含进来。因此，这些更改在 V1 分支中进行，并从中进行构建。任何必须包含在下一个版本中的 bug 修复或更改（以确保该 bug 在下次发布中被修复）都会合并（反向集成）到 Main 分支中。如果某个 bug 修复已在 Main 分支中，但需要进入 V1，则可能简单地向其合并（正向集成）。在某个时刻，确定构建版本是良好的，然后从 V1 分支执行新的 V1_1 构建并将其部署到生产环境。
@@ -4276,10 +3826,6 @@ www.it-ebooks.info
 
 特性分支允许大量的并行开发。然而，这是以推迟每个团队更改的集成直到特性完成并且我们将特性合并回 Main 分支为代价的。例如，在 9-7 中，合并 F2 分支时，必须对 F4 引入的所有更改和不可避免的冲突进行分析解决。
 
-
-
-
-
 ## 场景
 
 在此示例中，你将看到一个名为 Tailspin Toys 的虚构组织，该组织已安装 Team Foundation Server 并正在使用版本控制功能。假设你是内部 IT 团队的成员，该团队支持一个对业务运营至关重要的订单履行站点。团队在任何时候生产环境中都只有一个版本的站点。然而，由于软件的至重要性，IT 团队需要进行漫长的测试周期，并涉及业务部门的一系列专家，以确保软件运行符合要求。
@@ -4308,63 +3854,7 @@ IT 部门有一个名为 IT 的单团队项目，以及一个已提交（check i
 2. QA——代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 Main 分支上进行。对测试版本的任何修复或修改都应直接在 QA 分支上进行，并反向集成（reverse-integrated）回 Main。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
 3. Prod——这代表当前生产环境中的代码。正常代码从 Main 到 QA 再到 Prod。还会为此创建一个构建，以便可以提交并反复构建紧急热修复（hotfixes）。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并（baseless merge）将其推回 Main。注意，Prod 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
 
-但，不同的是，开发组织中有些人意识到这些问题，并想制定出一个分支计划来缓解其中一些问题。你被选中实施这一计划。
 
-## 计划
-
-经过仔细考虑，团队决定代码提升策略非常适合他们的组织。图 9-8 显示了该组织决定采用的计划。
-
-```
-/IT/Main
-```
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_239_0.png)
-
-根据代码提升策略的建议，代码将由以下三个分支组成：
-
-1. Main——这是主要开发工作的地方。这是执行集成构建的分支，也是开发新功能的分支。
-2. QA——代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 Main 分支上进行。对测试版本的任何修复或修改都应直接在 QA 分支上进行，并反向集成回 Main。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
-3. Prod——这代表当前生产环境中的代码。正常代码从 Main 到 QA 再到 Prod。还会为此创建一个构建，以便可以提交并反复构建紧急热修复。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并将其推回 Main。注意， Prod 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
-
-但，不同的是，开发组织中有些人意识到这些问题，并想制定出一个分支计划来缓解其中一些问题。你被选中实施这一计划。
-
-## 计划 
-
-经过仔细考虑，团队决定代码提升策略非常适合他们的组织。图 9-8 显示了该组织决定采用的计划。
-
-```
-/IT/Main
-```
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_239_0.png)
-
-根据代码提升策略的建议，代码将由以下三个分支组成：
-
-1. Main——这是主要开发工作的地方。这是执行集成构建的分支，也是开发新功能的分支。
-2. QA——代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 Main 分支上进行。对测试版本的任何修复或修改都应直接在 QA 分支上进行，并反向集成回 Main。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
-3. Prod——这代表当前生产环境中的代码。正常代码从 Main 到 QA 再到 Prod。还会为此创建一个构建，以便可以提交并反复构建紧急热修复。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并将其推回 Main。注意，Prod 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
-
-但，不同的是，开发组织中有些人意识到这些问题，并想制定出一个分支计划来缓解其中一些问题。你被选中实施这一计划。
-
-## 计划 
-
-经过仔细考虑，团队决定代码提升策略非常适合他们的组织。图 9-8 显示了该组织决定采用的计划。
-
-```
-/IT/Main
-```
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_239_0.png)
-
-根据代码提升策略的建议，代码将由以下三个分支组成：
-
-1. Main——这是主要开发工作的地方。这是执行集成构建的分支，也是开发新功能的分支。
-2. QA——代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 Main 分支上进行。对测试版本的任何修复或修改都应直接在 QA 分支上进行，并反向集成回 Main。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
-3. Prod——这代表当前生产环境中的代码。正常代码从 Main 到 QA 再到 Prod。还会为此创建一个构建，以便可以提交并反复构建紧急热修复。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并将其推回 Main。注意，Prod 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
-
-（注：由于输入文本中存在大量重复段落，根据“不要重复输出原文”的原则，以下为核心内容的唯一翻译汇总）
-
-[content]
 
 ## 场景
 
@@ -4386,42 +3876,41 @@ IT 部门有一个名为 IT 的单团队项目，以及一个已提交（check i
 /IT/Main
 ```
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_239_0.png)
-
 根据代码提升策略的建议，代码将由以下三个分支组成：
 
-1. Main——这是主要开发工作的地方。这是执行集成构建的分支，也是开发新功能的分支。
-2. QA——代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 Main 分支上进行。对测试版本的任何修复或修改都应直接在 QA 分支上进行，并反向集成（reverse-integrated）回 Main。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
-3. Prod——这代表当前生产环境中的代码。正常代码从 Main 到 QA 再到 Prod。还会为此创建一个构建，以便可以提交并反复构建紧急热修复（hotfixes）。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并（baseless merge）将其推回 Main。注意，Prod 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
+### 1. Main
+这是主要开发工作的地方。这是执行集成构建的分支，也是开发新功能的分支。
+
+### 2. QA
+代码在被业务部门测试期间所在地。由于这些阶段可能很长，新代码开发将在 `Main` 分支上进行。对测试版本的任何修复或修改都应直接在 `QA` 分支上进行，并反向集成（reverse-integrated）回 `Main`。将创建一个在早晨运行的自动构建。结果构建将推送到 QA Web 服务器，供业务部门在下一个工作日进行测试。
+
+### 3. Prod
+这代表当前生产环境中的代码。正常代码从 `Main` 到 `QA` 再到 `Prod`。还会为此创建一个构建，以便可以提交并反复构建紧急热修复（hotfixes）。不过，这种紧急热修复是非常例外的。如果执行紧急热修复，将执行一个无基础的合并（baseless merge）将其推回 `Main`。注意，`Prod` 构建的结果首先部署到测试环境，以确保它们在手动运行之前符合预期。
 
 ## 实现
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_240.png)
 **图 9-9:** 源代码代码库
 
 在源代码管理器中，首先要做的是将文件夹转换为分支。这将会是具破坏性的，因为它需要团队成员成员重新同步工作空间。
 
-当分支准备好发布给 QA 团队时，不再调用以前使用的代码冻（code freeze），而是选择最新版本将其转换为 QA 分支。你可以通过右键点击 Main 分支并选择 Branching and Merging -> Branch 来执行操作，这将显示分支对话框。
+当分支准备好发布给 QA 团队时，不再调用以前使用的代码冻（code freeze），而是选择最新版本将其转换为 QA 分支。你可以通过右键点击 `Main` 分支并选择 `Branching and Merging -> Branch` 来执行操作，这将显示分支对话框。
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_241_0.png)
 **图 9-10:** 路径路径
 
-在此对话框中，你输入想要创建的完整路径，在示例中是 `$/IT/Releases/QA`。如果 Releases 文件夹不存在，它将作为此操作的一部分自动创建。如图 9-10 所示，有一个警告说明这将作为单次事务提交到仓库。
+在此对话框中，你输入想要创建的完整路径，在示例中是 `$/IT/Releases/QA`。如果 `Releases` 文件夹不存在，它将作为此操作的一部分自动创建。如图 9-10 所示，有一个警告说明这将作为单次事务提交到仓库。
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_241_1.png)
 **图 9-11:** 编辑构建
 
 一旦完成，你修改构建定义以使其看起来如下（如图 9-12 所示）：
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_242_0.png)
 **图 9-12:** 修改过程
 
 ## 实现分支策略
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_242_1.png)
 **图 9-13:** 分支对话框
 
 Team Foundation 使用构建模板。此模板的行为可以通过设置以下构建参数进行自定义：
+
 - Required
 - Items
 - Build Number
@@ -4431,21 +3920,15 @@ Team Foundation 使用构建模板。此模板的行为可以通过设置以下�
 - Owner
 - Relationships
 
-注意，要将文件夹转换为分支，你必须在 Team 中拥有 Manage 权限。此外，一旦你将文件夹转换为分支，其上方或下方不能再是分支。
+注意，要将文件夹转换为分支，你必须在 Team 中拥有 `Manage` 权限。此外，一旦你将文件夹转换为分支，其上方或下方不能再是分支。
 
-在未来，如果你想将分支转换为普通文件夹，请前往 Visual Studio 并点击 File -> Source Branching and Merging -> Convert to Folder。
+在未来，如果你想将分支转换为普通文件夹，请前往 Visual Studio 并点击 `File -> Source Branching and Merging -> Convert to Folder`。
 
-现在回到示例实现。第二天早上开始设置分支。你按照之前所述对 Main 执行 Convert 操作，源代码树现在如图 9-14 所示。
+现在回到示例实现。第二天早上开始设置分支。你按照之前所述对 `Main` 执行 `Convert` 操作，源代码树现在如图 9-14 所示。
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_243_0.png)
 **图 9-14:** 作为分支的 Main
 
-
-
-
 这种行为与对文件夹或文件进行分支操作时的体验略有不同。在 Visual Studio 或 Eclipse 客户端中对文件夹或文件分支时，假设你正在本地工作空间中创建该文件的副本。图 9-16 显示了选择文件时分支对话框的示例。
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_244_0.png)
 
 **图 9-16：** 选择文件时的分支对话框
 
@@ -4463,68 +3946,49 @@ Team Foundation 使用构建模板。此模板的行为可以通过设置以下�
 
 # 208 | 第 9 章 分支与合并
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_245_0.png)
-
 图 9-17：创建的 QA 分支
 
 ## 处理更改集 (Changesets)
 
 在初始测试期间，你发现 Windows XP 上 Internet Explorer 6 的样式表存在一个 bug。开发团队中没有人足够老派到运行这种配置，但它在公司中仍然常见，因此团队决定为之创建一个修复。
 
-修改在 QA 分支的 `Site.css` 文件中进行，并作为更改集 8 提交。下一次计划的构建（QA_20120516）获取了此更改并将其添加到测试环境中运行的代码中。一旦修复通过验证，就必须将其合并到 Main 分支。
+修改在 `QA` 分支的 `Site.css` 文件中进行，并作为更改集 8 提交。下一次计划的构建（`QA_20120516`）获取了此更改并将其添加到测试环境中运行的代码中。一旦修复通过验证，就必须将其合并到 `Main` 分支。
 
-对于此类合并，最好尽快执行合并，并由做出更改的开发者完成。也就是说，在他们脑海中这些记忆是新鲜的，不会被遗忘，或者修复程序不会被误解。测试团队有一项策略：在修复程序合并到 Main 分支之前，相关的 bug 不能移动到关闭（Closed）状态——这是一个合理的策略。
+对于此类合并，最好尽快执行合并，并由做出更改的开发者完成。也就是说，在他们脑海中这些记忆是新鲜的，不会被遗忘，或者修复程序不会被误解。测试团队有一项策略：在修复程序合并到 `Main` 分支之前，相关的 bug 不能移动到关闭（Closed）状态——这是一个合理的策略。
 
-为了合并该内容，开发者右键点击源分支（在此例中为 QA 分支）并选择“分支与合并”。显示如图 9-18 所示的合并向导对话框。
+为了合并该内容，开发者右键点击源分支（在此例中为 `QA` 分支）并选择“分支与合并”。显示如图 9-18 所示的合并向导对话框。
 
-开发者选择合并更改集，以确保只拾取开发者所感知的更改。开发者检查目标分支已识别为 Main，然后点击“下一步”。这将显示更改集选择页面。
+开发者选择合并更改集，以确保只拾取开发者所感知的更改。开发者检查目标分支已识别为 `Main`，然后点击“下一步”。这将显示更改集选择页面。
 
 在此页面上，你选择想要合并的单个更改集或更改集范围。在示例测试的情况下，你选择一个单个更改集或一个更改集范围。在示例测试的案例中，开发者选中了其所感兴趣的更改集（102），然后点击“下一步”。如图 9-19 所示，这显示了更改集选择页面。点击“完成”后，合并完成。更改更改页面现在如 9-20 所示。
 
 ## 实现分支策略 | 209
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_246_0.png)
-
 图 9-17：创建的 QA 分支
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_246_0.png)
 
 图 9-18：源控制
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_246_1.png)
-
 图 9-19：更改集选择页面
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_247_0.png)
 
 图 9-20：显示结果
 
 ## 第 9 章 分支与合并
 
-![](img/aaf6096fc6b4485534c737801bdbc4fd_247_1.png)
-
 图 9-21：历史
 
-在图 9-21 中，你可以看到对 Main 的更改。通过展开节点，你可以看到 QA 分支的更改。最后，展开节点，你可以看到它应该在的地方。
+在图 9-21 中，你可以看到对 `Main` 的更改。通过展开节点，你可以看到 `QA` 分支的更改。最后，展开节点，你可以看到它应该在的地方。
 
 另一种可视化此更改并查看谁制作的方法是在源控制中右键点击并选择“分支与合并”，以及 `tf branch` 命令行。
 
-在从 QA 分支对话框中，从分支版本下拉菜单中选择标签（如图 9-25 所示），然后点击 `(...)` 按钮来绑定构建创建的标签。（默认情况下，每个标签都会绑定该构建包含的文件。）输入目标分支名称 $/IT/Releases/Prod` 并点击“分支”。
+在从 `QA` 分支对话框中，从分支版本下拉菜单中选择标签（如图 9-25 所示），然后点击 `(...)` 按钮来绑定构建创建的标签。（默认情况下，每个标签都会绑定该构建包含的文件。）输入目标分支名称 `$/IT/Releases/Prod` 并点击“分支”。
 
 ## 212 | 第 9 章 分支与合并
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_249_0.png)
 
 图 9-24：时间轴视图
 
 另一种可视化方法可以通过点击时间轴跟踪按钮来实现，该按钮在 9-23 中突出显示。它以熟悉的格式显示数据，如图 9-24 所示。再次，如果这些是有颜色的，你会看到所有分支都是绿色的，这意味着代码在它应该在的地方。
 
-
-
-
 # 实施分支策略
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_250_0.png)
 
 图 9-25：Visual Studio 中的按标签分支
 
@@ -4542,7 +4006,7 @@ tf branch $$TTIT/Releases/QA $$TTIT/Releases/Prod /version:L"Orders QA_20120516.
 
 从图 9-26 显示的构建报告中，可以看到与更改集 8 关联的分支执行成功。如第 6 节讨论，更改集代表了版本控制仓库中一个唯一的（不可变）时间点。因此，如果你想从更改集 8 分支，这将包含文件在执行构建时的精确状态。
 
-团队决定按更改集 8 建立分支，以便使 QA 分支中的所有更改与更改集 8 保持一致。为了实现这一点，开发者在源资源管理器（Source Explorer）中右键点击 QA 分支，并选择合并（Merging） > 分支...（Branch...）。开发者将“从版本分支”更改为更改集8，并将目标分支名称设置为 $$TTIT/Releases/Prod。
+团队决定按更改集 8 建立分支，以便使 `QA` 分支中的所有更改与更改集 8 保持一致。为了实现这一点，开发者在源资源管理器（Source Explorer）中右键点击 `QA` 分支，并选择合并（Merging） > 分支...（Branch...）。开发者将“从版本分支”更改为更改集8，并将目标分支名称设置为 `$$TTIT/Releases/Prod`。
 
 一旦创建分支，版本控制仓库将如图 9-27 所示。
 
@@ -4555,6 +4019,7 @@ www.it-ebooks.info
 查看摘要 | 查看日志 | 打开 Drop Flopper | 诊断 | <未分配质量> | 操作
 
 [Tailspin] 项目集合服务帐户触发了更改集 8 的 Orders QA (IT)
+
 运行了 21 秒（默认控制器 - vsvm），于 64.3 分钟前完成
 
 ## 最新活动
@@ -4576,55 +4041,52 @@ www.it-ebooks.info
 # 关联更改集
 
 更改集 5 由 Martin Woodward 提交
+
 修复 IE66 CSS 问题
 
 # 关联工作项
 
 Bug 1，在 IE66 中发现错误
+
 当前状态为已完成（Done），当前分配给 Martin Woodward
 
 任务 2，更改样式表以支持 IE66
+
 当前状态为已完成（Done），当前分配给 Martin Woodward
 
 图 9-26：构建报告
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_251_0.png)
 
 图 9-27：已创建 Prod 分
 
 www.it-ebooks.info
 
-如果你右键点击 Main 分支并选择分支与合并层次结构视图（Branching and Merging View Hierarchy），你可以看到当前分支结构的可视化，如图 9-28 所示。如果你将鼠标悬停在每个分支上，你会看到一个带有该分支附加元数据的提示框，包括你输入的任何描述。
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_252_0.png)
+如果你右键点击 `Main` 分支并选择分支与合并层次结构视图（Branching and Merging View Hierarchy），你可以看到当前分支结构的可视化，如图 9-28 所示。如果你将鼠标悬停在每个分支上，你会看到一个带有该分支附加元数据的提示框，包括你输入的任何描述。
 
 **图 9-28：** 当前分支层次结构
 
-此时，开发者现在可以在 Prod 分支中创建一个修复。开发者编辑了错误的更改集文件并将其提交到更改集 11。然后开发者创建一个构建并将其部署到生产环境。你必须确保修复位于适当的分支中，以便将其包含在未来的发布中。
+此时，开发者现在可以在 `Prod` 分支中创建一个修复。开发者编辑了错误的更改集文件并将其提交到更改集 11。然后开发者创建一个构建并将其部署到生产环境。你必须确保修复位于适当的分支中，以便将其包含在未来的发布中。
 
-要做到这一点，你右键点击 Prod 分支并选择查看历史（View History）。然后，右键点击更改集并选择跟踪更改集（Track Changeset）。与之前一样，你勾选“所有可见”复选框并点击可视化（Visualize）。更改将仅在 Prod 分支中以绿色显示，如图 9-29 底部的框所示。
-
-![](img/aaf6096fc6b4485534c737801bdbc4fd_252_1.png)
+要做到这一点，你右键点击 `Prod` 分支并选择查看历史（View History）。然后，右键点击更改集并选择跟踪更改集（Track Changeset）。与之前一样，你勾选“所有可见”复选框并点击可视化（Visualize）。更改将仅在 `Prod` 分支中以绿色显示，如图 9-29 底部的框所示。
 
 **图 9-29：更改集的可视化**
 
 ## 第 9 章分支与合并
 
-要将此合并到 Main，开发者有两个选择：阶梯式合并（ladder merge）或无基础合并（baseless merge）。如果你在分支过程中发现必须经常执行无基础合并或通过其他分支进行合并（阶梯式合并），这表明模型不再针对你环境中的典型情况进行优化，你可能需要对其进行修订。
+要将此合并到 `Main`，开发者有两个选择：阶梯式合并（ladder merge）或无基础合并（baseless merge）。如果你在分支过程中发现必须经常执行无基础合并或通过其他分支进行合并（阶梯式合并），这表明模型不再针对你环境中的典型情况进行优化，你可能需要对其进行修订。
 
-然而，在 Tailspin 场景中，对生产环境进行临时更改是非常罕见的。因此，IT 团队希望优化通常用的分分支流程，即从 Main 开始，在 QA 上合并，然后到 Prod。因此，开发者必须使用阶梯式合并或无基础合并。
+然而，在 Tailspin 场景中，对生产环境进行临时更改是非常罕见的。因此，IT 团队希望优化通常用的分分支流程，即从 `Main` 开始，在 `QA` 上合并，然后到 `Prod`。因此，开发者必须使用阶梯式合并或无基础合并。
 
 # 阶梯式合并
 
-如图 9-29 所示，团队在 Prod 中有一个更改。……（此处省略原文中重复的描述，以保持逻辑清晰）如果你在分支过程中发现必须经常执行无基础合并或通过其他分支进行合并（阶梯式合并），这表明模型不再针对你环境中的典型情况进行优化，你可能需要对其进行修订。
+如图 9-29 所示，团队在 `Prod` 中有一个更改。如果你发现必须经常执行无基础合并或通过其他分支进行合并（阶梯式合并），这表明模型不再针对你环境中的典型情况进行优化，你可能需要对其进行修订。
 
-然而，在 Tailspin 场景中，对生产环境进行临时更改是非常罕见的。因此，IT 团队希望优化通常用的分支流程，即从 Main 开始，在 QA 上合并，然后到 Prod。因此，开发者必须使用阶梯式合并或无基础合并。
-
-（注：原文中存在大量重复段落，已根据逻辑流进行了去重处理）
+然而，在 Tailspin 场景中，对生产环境进行临时更改是非常罕见的。因此，IT 团队希望优化通常用的分支流程，即从 `Main` 开始，在 `QA` 上合并，然后到 `Prod`。
 
 # 无基础合并
 
-为了遏制无基础合并，简单的拖拽方法在 Visual Studio 2012 中并不是理想的。相反，开发者右键点击 Prod 分支并选择合并。显示源控制合并向导（图 9-18），显示了可用的父或子目标路径。在你的示例中，$/IT/Releases/QA 将是唯一的选项。但要执行无基础合并，点击浏览按钮并选择 Main 分支。合并框随后会显示警告（如图 9-30 所示），提示将执行无基础合并。
+为了遏制无基础合并，简单的拖拽方法在 Visual Studio 2012 中并不是理想的。相反，开发者右键点击 `Prod` 分支并选择合并。显示源控制合并向导（图 9-18），显示了可用的父或子目标路径。在你的示例中，`$/IT/Releases/QA` 将是唯一的选项。但要执行无基础合并，点击浏览按钮并选择 `Main` 分支。合并框随后会显示警告（如图 9-30 所示），提示将执行无基础合并。
+
+
 
 > 注意 相同的操作可以通过命令行使用命令执行：
 
@@ -4635,10 +4097,6 @@ $/IT/Releases/Prod $$TTIT/Main
 
 在你的示例中，正如许多活跃开发环境的情况，团队的其他成员一直在进行开发，Main 分支中发生了额外的提交。因此，极有可能发生冲突。如之前讨论的，Team Foundation Server 2012 将尝试为你自动合并冲突（如果可能的话）。例如，如果开发者在 Main 分支上编辑文件，而更改了 Prod 分支中文件的不相关部分，这些更改将自动合并，即使这是无基础合并。遗憾的是，在你的示例场景中，有人将 Main 分支中的 _Layout.cshtml 文件重命名为 _MainLayout.cshtml。如果你按照上一节所述执行了阶梯式合并，Team Foundation Server 将能够利用共同基版本将更改重命名。
 
-
-
-
-
 # 第 9 章 分支与合并
 
 文件名。然而，由于这是无基合并（没有用于比较的公共基版本），Team Foundation Server 在进行计算时只能使用分支当前的状态。它无法确定 *Layout.cshtml* 的重命名是否发生在该分支结束生成并分支回 Main 的时间点之后，但它足够聪明，会通过显示冲突对话框（如图 9-31 所示）先向你确认，查看这是否是你真的想要执行的操作。
@@ -4647,7 +4105,7 @@ $/IT/Releases/Prod $$TTIT/Main
 
 图 9-31：解决无基合并冲突
 
-要执行无基合并（baseless merge），Tailspin IT 的开发人员必须使用 Team Foundation Server 命令行客户端 (tf.exe)。开发者打开 Visual Studio 2012 命令行提示符并输入命令来指示要合并的 107 更改：
+要执行无基合并（baseless merge），Tailspin IT 的开发人员必须使用 Team Foundation Server 命令行客户端 (`tf.exe`)。开发者打开 Visual Studio 2012 命令行提示符并输入命令来指示要合并的 107 更改：
 
 ```
 tf merge /baseless /recursive /version:C107 $$TTIT/Releases/Prod $$TIT/Main
@@ -4685,7 +4143,7 @@ www.it-ebooks.info
 tf checkin /recursive /nprompt $/IT/Team
 ```
 
-> 注意：关于使用 tf merge 命令执行操作的信息（包括更多示例），请参阅 http://aka.ms/tfmerge 上的 MSDN 文档。有关针对已知源和目标分支从命令行进行过去合并的更多信息，请参阅 MSDN 上 tf merges 命令的帮助文档 (http://aka.ms/tfmerge) 或在开发者提示符中输入 `help merges`。
+> 注意：关于使用 `tf merge` 命令执行操作的信息（包括更多示例），请参阅 http://aka.ms/tfmerge 上的 MSDN 文档。有关针对已知源和目标分支从命令行进行过去合并的更多信息，请参阅 MSDN 上 `tf merges` 命令的帮助文档 (http://aka.ms/tfmerge) 或在开发者提示符中输入 `help merges`。
 
 # 跨分支跟踪更改
 
@@ -4701,7 +4159,7 @@ tf checkin /recursive /nprompt $/IT/Team
 
 此视图不显示分支之间的关系（层次结构），而是显示合并发生的顺序。因此，围绕 Main 和 V2.0 的部分合并的事件顺序，以及随后对 V2.0 的合并显示得更加清晰。悬停在每个分支上会显示额外的元数据，包括所有者和描述。
 
-总结
+## 总结
 
 从本章可以看出，Team Foundation Server 的分支合并功能不仅允许某些复杂的软件配置管理场景，还提供了帮助理解版本控制存储库发生了什么的功能。
 
@@ -4709,11 +4167,8 @@ tf checkin /recursive /nprompt $/IT/Team
 
 本章查看了分支使用的术语，讨论了常用的分支技术，然后提供了在使用 Team Foundation 2012 工具的组织中实现基础分支策略的详细演示。最后，本章检查了可用更改集跟踪功能，以确定特定更改已传播到哪些分支。
 
-
-
-
-
 # 10
+
 ## 常见的版本控制场景
 
 **本章包含内容：**
@@ -4789,10 +4244,6 @@ tf checkin /recursive /nprompt $/IT/Team
 
 第一种方法基于这样一个前提：产品所需的一切内容都存储在分支文件夹内。这意味着可以在分支文件夹内创建一个名为 `Dependencies` 的文件夹，如图 10-1 所示，并用于管理第三方依赖项。
 
-
-
-
-
 ## 第三方源代码/依赖项 | 227
 
 可以创建子文件夹来管理产品族可能需要的不同类型的第三方依赖项。例如，可以创建一个 `UIControls` 子文件夹用于存放第三方自定义 UI 控件，或者创建一个 `EnterpriseLibrary` 子文件夹来存储来自 Microsoft Enterprise Library（微软企业应用库）的程序集。你甚至可以创建进一步的子文件夹来隔离依赖项可能出现的不同主版本。将依赖项分离并组织到子文件夹中，有助于随着时间的推移简化依赖项的管理和发现性。
@@ -4804,6 +4255,8 @@ tf checkin /recursive /nprompt $/IT/Team
 列表 10-1 显示了如果 `ProductA` 的 Visual Studio 项目使用了 `Dependencies` 文件夹中的依赖项，将使用哪种路径，如图 10-1 所示。
 
 ### 列表 10-1 Visual Studio 项目文件中的 HintPath 分支依赖项文件夹
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4904,10 +4357,6 @@ www.it-ebooks.info
 - 1. 在同一团队项目中建立分支结构
 - 2. 在不同的团队项目中建立分支结构
 
-
-
-
-
 # 内部共享库 | 231
 
 | 产品族 1 | 产品族 2 |
@@ -4922,7 +4371,7 @@ www.it-ebooks.info
 
 图 10-6 显示了同一团队项目中，公共库与其他相关产品族并行的额外分支结构。拥有共享库开发的团队现在拥有一套 way在版本控制中管理变化的机制。
 
--   Demo
+- Demo
 - BuildProcessTemplates
 - CommonLibraries
 - DEV
@@ -4981,10 +4430,6 @@ www.it-ebooks.info
 ## 使用符号 和源服务器启用共享库调试
 
 开发者希望将 Visual Studio 项目与共享库包含在同一个解决方案中的一个常见原因是，以便在调试时更容易地进入共享库的源代码。通过利用源和符号服务器，这允许开发者即使没有将 Visual Studio 项目放在同一个解决方案中，也能对源代码进行调试。
-
-
-
-
 
 # 第 10 章 常见的版本控制场景
 
@@ -5062,17 +4507,16 @@ www.it-ebooks.info
 
 如果不由团队管理，版本控制仓库可能会很快变得混乱。通过引入一些组织（特别是针对性的方法），不仅提高了源代码的可发现性，还改进了应用程序的部署方法。当应用程序使用第三方依赖和共享库时，情况尤其如此。
 
+
+
 此外，在版本控制文件夹中管理 Team Foundation Server 的静态构件将允许管理员在一个位置轻松访问所有这些构件。这确保了在灾难恢复场景下所需关键构件的定位能力，并为 Team Foundation Server 和 Visual Studio 的代码提供了一个共同的管理场所。
 
 本书的这一部分探讨了 Team Foundation Server 版本控制仓库中的可用功能。下一部分将介绍 Team Foundation Server 工作跟踪系统中的可用功能。
 
 在下一部分，您将学习 Team Foundation Server 的项目管理、工作跟踪和报告能力。第 11 章将向您介绍工作跟踪系统的概念，并提供使用 Team Foundation Server 管理项目和工作的基础知识。
 
-
-
-
-
 # 11
+
 ## 介绍工作项跟踪
 
 **本章包含内容：**
@@ -5089,11 +4533,11 @@ www.it-ebooks.info
 
 本书第三部分的后续章节将允许你熟悉过程模板的自定义（第 12 章）、描述新的敏捷规划工具的使用（第 13 章）、深入探讨使用报告和 SharePoint 仪表板获取软件开发项目进展的实时洞察（第 14 章），并讨论 Team Foundation Server 与 Microsoft Project Server 之间的集成实现（第 15 章）。
 
-## TEAM FOUNDATION SERVER 2012 中的项目管理增强
+### TEAM FOUNDATION SERVER 2012 中的项目管理增强
 
 Team Foundation Server 2010 对 Team Foundation Server 早期版本的项目管理功能交付了重大升级。在 Team Foundation Server 2012 中，微软在使 Team Foundation Server 与敏捷方法保持方面取得了巨大进展。本节重点介绍了你将在版本中发现的一些重大改进和新增，以及在 Team Foundation Server 2010 中引入的功能。这将使得来自 Team Foundation 2005 或 2008 的读者能够快速掌握 2010 和 2012 版本带来的显著差异。如果你是 Team Foundation Server 的新手，工作项等概念将在本章稍后部分进行更详细的解释。
 
-## 丰富的工作项关系
+### 丰富的工作项关系
 
 根据微软介绍，Team Foundation 前两个版本（2005 和 2008）用户请求最多的项目管理功能是表示工作项之间的关系。在这些 Team Foundation Server 版本中，仅可以通过简单的链接机制将工作项相互关联。但这些链接没有提供任何显式的含义、方向性或基数关系（cardinality）。
 
@@ -5101,26 +4545,22 @@ Team Foundation Server 2010 对 Team Foundation Server 早期版本的项目管�
 
 从 Team Foundation Server 2010 开始，微软引入了工作项之间丰富的关系链接。你可以使用多种链接类型对工作项之间的关系。这些链接还包含了方向性和基数关系。Team Foundation Server 2012 引入了以下链接：
 
-- *父/子（Parent/child）——这是一种独特的链接类型，用于表示功能目录等层级结构，或详细说明用于实现需求或用户故事（父项）的任务工作项（子项）。任何工作项可以零或多个子项，以及零或一个父工作项。
-- *已测试（Tested/by）——这种链接类型主要用于建模测试用例工作项与所测试的需求或用户故事之间的关系。这使得通过检查相关测试用例的最近结果，更容易确定需求或用户故事的质量。一个工作项可以测试零或多个。
-- *后继/前置（Successor/predecessor）——后继/前置链接类型用于表示彼此之间存在依赖关系的工作项。例如，为网页设计用户界面是……的前置。
-- *相关（Related）——相关链接类型用于显示两个项目相关联，但没有特定的方向或层级关系。这对于不符合其他类别的通用关联很有用。*
+- *父/子（Parent/child）*——这是一种独特的链接类型，用于表示功能目录等层级结构，或详细说明用于实现需求或用户故事（父项）的任务工作项（子项）。任何工作项可以零或多个子项，以及零或一个父工作项。
+- *已测试（Tested/by）*——这种链接类型主要用于建模测试用例工作项与所测试的需求或用户故事之间的关系。这使得通过检查相关测试用例的最近结果，更容易确定需求或用户故事的质量。一个工作项可以测试零或多个。
+- *后继/前置（Successor/predecessor）*——后继/前置链接类型用于表示彼此之间存在依赖关系的工作项。例如，为网页设计用户界面是……的前置。
+- *相关（Related）*——相关链接类型用于显示两个项目相关联，但没有特定的方向或层级关系。这对于不符合其他类别的通用关联很有用。
 
 在 Team Foundation Server 2012 中，你还可以使用“阻塞（Blocked by）”链接显示一个项目在另一个项目完成之前无法启动，并使用“重复（Duplicate）”链接表示两个项目代表同一事物。
-
-
-
-
 
 # 工作项 | 247
 
 > 注意：在第13章中，你将学习更多关于团队管理和使用敏捷计划工具的内容。
 
-# 工作项
+## 工作项
 
 如果你是 Team Foundation Server 的新手，在阅读完前面的章节后，你可能想知道工作项究竟是什么。工作项是 Team Foundation Server 中项目管理能力的基础构建块。微软将工作项定义为“……Team Foundation 用于跟踪工作分配和进度的数据库记录。”
 
-# 工作项类型
+### 工作项类型
 
 有许多类型的工作项，被称为工作项类型。工作项类型的实例是一个工作项，这就像面向对象编程 (OOP) 中的类实例是一个对象一样。工作项可以代表需要完成（或已完成）的显式工作，例如 `Task`（任务）工作项类型。工作项可以捕获你正在构建的软件细节，例如 `Requirement`（需求）或 `User Story`（用户故事）工作项类型。工作项可用于记录过程，例如 `Bug`（缺陷）工作项类型（指示软件存在的问题）或 `Issue`（问题）工作项类型（可能描述工具、流程或人员方面的问题，这些问题可能会减慢你的项目进度，甚至阻止项目进行）。Team Foundation Server 2012 还包含了其他工作项类型，你也可以创建自己的。
 
@@ -5128,19 +4568,19 @@ Team Foundation Server 2010 对 Team Foundation Server 早期版本的项目管�
 
 工作项包含几个关键元素，如表11-1 所示。
 
-# 表 11-1：工作项元素
+### 表 11-1：工作项元素
 
 | 元素 | 说明 |
 | --- | --- |
 | 字段 (Field) | 字段包含作为工作项一部分捕获的信息。某些字段由所有工作项类型共享（称为系统字段）。系统字段的示例包括 `Title`（标题，对工作项的单行描述）、`ID`（在你的团队项目范围内全局唯一的数字）和 `Assigned`（分配给哪个作为开发人员的用户正在修复某个缺陷项）。其他字段可能特定于某个特定的工作项类型，例如 `Steps to reproduce`（重现步骤）字段，它位于 Bug 工作项类型中，描述如何重现发现的缺陷。 |
 | 规则 (Rule) | 规则可以规定给定字段允许的值。例如，你可能决定缺陷的 `Priority`（优先级）字段应分配值为 0、1 或 2，且不能留空。 |
 
-# 表 11-1（续）
+### 表 11-1（续）
 
 | 元素 | 说明 |
 | --- | --- |
 | 表单 (Form) | *表单描述 Visual Studio 等工作项客户端显示工作项的方式。（你将在本章稍后的部分学习更多关于查看和交互工作项的方法。）* |
-| 状态 (State) | *状态表示工作项在项目中的位置。例如，在 MSF 敏捷软件开发过程模板中，Bug 项类型从 *Active*（活动）状态开始，当开发人员宣布代码已编写或修改以修复缺陷时，开发人员将 Bug 工作项的状态更改为 *Resolved*（已解决）。如果测试人员可以验证缺陷已无法重现，或者如果测试人员仍能重现缺陷，可以将缺陷工作项的状态更改为 *Closed*（已关闭）。但如果测试人员仍然可以重现缺陷，则需要将其重新激活（即测试人员将缺陷的状态改回 *Active*）。**** |
+| 状态 (State) | *状态表示工作项在项目中的位置。例如，在 MSF 敏捷软件开发过程模板中，Bug 项类型从 *Active*（活动）状态开始，当开发人员宣布代码已编写或修改以修复缺陷时，开发人员将 Bug 工作项的状态更改为 *Resolved*（已解决）。如果测试人员可以验证缺陷已无法重现，或者如果测试人员仍能重现缺陷，可以将缺陷工作项的状态更改为 *Closed*（已关闭）。但如果测试人员仍然可以重现缺陷，则需要将其重新激活（即测试人员将缺陷的状态改回 *Active*）。* |
 | 转换 (Transition) | *转换* 类似于规则，但它们定义了工作项如何从一个状态移动到另一个状态。在上一个示例中，缺陷工作项必须从 Active 状态开始，然后移动到 Resolved 或 Closed 状态。但是，也可以移动回 Active 状态。这一切由作为工作项类型一部分的转换模型定义。此外，转换规定了为了从一个状态移动到另一个状态，必须填写某些字段。例如，要将缺陷从 Active 状态移动到 Resolved 状态，开发人员必须分配一个 *Reason*（原因，如已修复、按设计、无法重现等）。* |
 | 链接 (Link) | 工作项还包含指向其他工作项的链接，使用你在上一节中读过的任何链接类型。 |
 | 历史 (History) | 工作项还包含完整的历史，包括关于所有字段更改和转换的信息。 |
@@ -5153,17 +4593,17 @@ Team Foundation Server 2010 对 Team Foundation Server 早期版本的项目管�
 
 图 11-1：缺陷（敏捷）工作项表单
 
-## 区域与迭代 (Areas and Iterations)
+### 区域与迭代 (Areas and Iterations)
 
-工作项可用多数系统字段（如 Title 和 ID）都非常浅于懂。但有两个重要的字段——Area（区域）和 Iteration（迭代）值得进一步讨论。
+工作项可用多数系统字段（如 `Title` 和 `ID`）都非常浅于懂。但有两个重要的字段——`Area`（区域）和 `Iteration`（迭代）值得进一步讨论。
 
-Area 字段是一个多功能字段，可以为工作项创建逻辑分类。有许多使用方法，但一种常见的方法是为应用程序的每个逻辑部分定义一个区域。
+`Area` 字段是一个多功能字段，可以为工作项创建逻辑分类。有许多使用方法，但一种常见的方法是为应用程序的每个逻辑部分定义一个区域。
 
-Area 字段是一个多功能字段，可以为工作项创建逻辑分类。有许多使用方法，但一种常见的方法是为应用程序的每个逻辑部分定义一个区域。
+`Area` 字段是一个多功能字段，可以为工作项创建逻辑分类。有许多使用方法，但一种常见的方法是为应用程序的每个逻辑部分定义一个区域。
 
-例如，在图 11-1 中，区域路径被称为 area。
+例如，在图 11-1 中，区域路径被称为 `area`。
 
-Iterations 字段对于项目计划很有用，可以指示你计划工作的时间范围。
+`Iterations` 字段对于项目计划很有用，可以指示你计划工作的时间范围。
 
 不需要使用迭代来对工作项进行分类，但随着项目团队的增长，它们对于查询、管理和报告工作项非常有用。
 
@@ -5175,9 +4615,10 @@ Iterations 字段对于项目计划很有用，可以指示你计划工作的时
 
 图 11-2：缺陷（敏捷）工作项状态图
 
-## 区域
+### 区域
 
-areas
+`areas`
+
 选择你的团队拥有的区域。选中的区域将决定显示在团队待办列表上的内容以及你的团队负责的工作项。
 
 | 区域 | | |
@@ -5197,9 +4638,10 @@ areas
 
 图 11-3：区域管理
 
-## 迭代
+### 迭代
 
-iterations
+`iterations`
+
 选择你想要用于迭代计划（冲刺计划）的迭代。迭代将出现在你的待办视图视图，作为可计划的迭代。
 
 | 迭代 | 开始日期 | 结束日期 |
@@ -5212,19 +4654,15 @@ iterations
 
 图 11-4：迭代管理
 
-
-
-
-
 区域和迭代管理的一个优秀特性是，你可以使用安全上下文菜单（如图 11-3 所示）来定义细粒度的权限，以指示允许谁修改或读取你团队项目每个部分的各个项。例如，你可能在为一家政府安全承包商工作，存在某些敏感性质的漏洞只能由具有特定安全许可的团队成员查看。或者，你可能正在构建应用程序下一个版本的原型，并希望限制访问，以尽量减少竞争对手获取这些信息的泄露风险。通过迭代和区域安全设置，可以实现此类限制。
 
-你可以随时返回区域（Area）和迭代（Iteration）设置来添加、重命名或删除区域和迭代。如果你重命名或移动了已存在工作项的区域，这些工作项将自动使用新名称或位置重新分配到 Team Foundation Server。如果你删除了已存在工作项的区域或迭代，系统会提示你 Team Foundation Server 应使用什么值来替换受影响工作项中的迭代或区域值。
+你可以随时返回区域（`Area`）和迭代（`Iteration`）设置来添加、重命名或删除区域和迭代。如果你重命名或移动了已存在工作项的区域，这些工作项将自动使用新名称或位置重新分配到 Team Foundation Server。如果你删除了已存在工作项的区域或迭代，系统会提示你 Team Foundation Server 应使用什么值来替换受影响工作项中的迭代或区域值。
 
 你会发现工作项贯穿整个 Team Foundation Server。它们构成了你在第 14 章中读到的许多报告的基础。它们可以与文件的更改及其原因建立链接。项目经理和团队负责人可以使用它们进行项目规划，并用它们帮助控制哪些团队成员应该关注重点以及他们如何与其他团队成员交互。
 
 工作项、工作项类型以及所有涉及工作项的操作（编辑、查询、报告等）统称为 Team Foundation Server 的**工作项跟踪能力**。现在你已经理解了工作项的基础知识，准备好学习过程模板了，过程模板包含了工作项类型的定义。
 
-# 过程模板
+## 过程模板
 
 过程模板定义了任何新团队项目的默认特性。过程模板是 Team Foundation Server 中一个强大的概念。过程模板包含了默认的工作项类型、报告、文档、过程指导以及其他相关的制品，这些产物为你提供了启动软件项目所需的所有内容。
 
@@ -5241,7 +4679,7 @@ iterations
 
 采用正确的过程模板可以对组织产生转型影响，因为它为团队中的每个人提供了一个可预测且重复的流程，用于捕获和通信信息、做出决策，并确保你的交付超过客户的预期。这反过来可以提高软件质量和开发速度，最终为你的客户带来更多价值。
 
-# 用于敏捷软件开发的 MSF
+### 用于敏捷软件开发的 MSF
 
 随 Team Foundation Server 2012 附的 MSF for Agile Software Development v6.0 过程模板为实践敏捷方法论（如 Scrum 或极端编程 XP）的团队而设计。这些方法论源于著名的《敏捷宣言》（www.agilemanifesto.org/）。
 
@@ -5255,140 +4693,132 @@ iterations
 
 以下是 MSF for Agile Software Development 过程模板中可用的工作项类型：
 
-- Bug（缺陷）
-- Issue（问题）
-- Task（任务）
-- Test Case（用例）
-- User Story（用户故事）
-
-> 注意：所有微软提供的过程模板（以及自定义和第三方过程模板）中还有额外的工作项类型，它们无法直接创建，而在特殊情况下创建。Code Request（代码请求）和 Code Review Response（代码评审响应）工作项用于提供代码评审功能，你在第 7 章读过这些。Feedback Request（反馈请求）和 Feedback Response（反馈响应）工作项类型在接收和提供利益相关者反馈的过程中创建，这些在《Professional Application Lifecycle Management with Visual Studio 2012》（Wrox, 2012. ISBN 978-1118-31408-1）中涵盖。最后，Shared steps（共享步骤）工作项是 Test Case 的一种特殊实例。你将在第 24 章学习更多关于共享步骤和用例的知识。大多数团队成员不会直接交互共享步骤，因此它们未包含在列表中。
-
-MSF for Agile Software Development 过程模板与 Team Foundation Server 2012 新出的敏捷规划工具和任务板配合良好。
-
-> 注意：可以通过 http://aka.ms/MSFAile6 深入探索 MSF for Agile Software Development v6.0 过程模板，包括对包含的每个工作项类型的更多详细信息。
+- `Bug`（缺陷）
+- `Issue`（问题）
+- `Task`（任务）
+- `Test Case`（用例）
+- `User Story`（用户故事）
 
 
 
+> 注意：所有微软提供的过程模板（以及自定义和第三方过程模板）中还有额外的工作项类型，它们无法直接创建，而在特殊情况下创建。`Code Request`（代码请求）和 `Code Review Response`（代码评审响应）工作项用于提供代码评审功能，你在第 7 章读过这些。`Feedback Request`（反馈请求）和 `Feedback Response`（反馈响应）工作项类型在接收和提供利益相关者反馈的过程中创建，这些在《Professional Application Lifecycle Management with Visual Studio 2012》（Wrox, 2012. ISBN 978-1118-31408-1）中涵盖。最后，`Shared steps`（共享步骤）工作项是 `Test Case` 的一种特殊实例。你将在第 24 章学习更多关于共享步骤和用例的知识。大多数团队成员不会直接交互共享步骤，因此它们未包含在列表中。
 
+`MSF for Agile Software Development` 过程模板与 `Team Foundation Server 2012` 新出的敏捷规划工具和任务板配合良好。
+
+> 注意：可以通过 `http://aka.ms/MSFAile6` 深入探索 `MSF for Agile Software Development v6.0` 过程模板，包括对包含的每个工作项类型的更多详细信息。
 
 # 用于 CMMI 过程改进的 MSF
 
-MSF for CMMI 过程改进 v6.0 过程模板专为那些希望或可能已经采用更正式方法进行软件开发的团队而设计。该过程模板基于能力成熟模型集成（CMMI）开发模型，该模型是由卡内基·梅隆大学的软件工程研究所（SE）开发的。CMMI 不仅定义了一个软件开发框架，还规定了组织以客观且可重复的方式不断改进其流程的方法。组织甚至可以获得外部评审员的认证，该评审员可以验证其是否处于 CMMI 五个成熟度等级之一。
+`MSF for CMMI 过程改进 v6.0` 过程模板专为那些希望或可能已经采用更正式方法进行软件开发的团队而设计。该过程模板基于能力成熟模型集成（`CMMI`）开发模型，该模型是由卡内基·梅隆大学的软件工程研究所（`SE`）开发的。`CMMI` 不仅定义了一个软件开发框架，还规定了组织以客观且可重复的方式不断改进其流程的方法。组织甚至可以获得外部评审员的认证，该评审员可以验证其是否处于 `CMMI` 五个成熟度等级之一。
 
-CMMI 是系统集成商（SIs）和软件工厂等组织用于开发软件的流行模型。该模型中几乎没有主观性，因此它允许组织使用一种广泛认可的标准来表示其服务，并且该标准可以被中立第三方组织赞誉和认证。CMMI 也被 NASA 或国防承包商等组织开发许多关键系统。事实上，卡内基·梅隆大学的软件工程研究所最初由美国国防部资助，以帮助他们找到管理项目的最佳方法。
+`CMMI` 是系统集成商（`SIs`）和软件工厂等组织用于开发软件的流行模型。该模型中几乎没有主观性，因此它允许组织使用一种广泛认可的标准来表示其服务，并且该标准可以被中立第三方组织赞誉和认证。`CMMI` 也被 `NASA` 或国防承包商等组织开发许多关键系统。事实上，卡内基·梅隆大学的软件工程研究所最初由美国国防部资助，以帮助他们找到管理项目的最佳方法。
 
-正如你所预期的，用于 CMMI 过程改进的 MSF 模板比其敏捷副本更为复杂。CMMI 模板包含以下工作项类型：
+正如你所预期的，用于 `CMMI` 过程改进的 `MSF` 模板比其敏捷副本更为复杂。`CMMI` 模板包含以下工作项类型：
 
-- Bug
-- 变更（Change Request）
-- 问题（Issue）
-- 需求（Requirement）
-- 评审（Review）
-- 风险（Risk）
-- 任务（Task）
-- 测试用例（Test Case）
+- `Bug`
+- 变更（`Change Request`）
+- 问题（`Issue`）
+- 需求（`Requirement`）
+- 评审（`Review`）
+- 风险（`Risk`）
+- 任务（`Task`）
+- 测试用例（`Test Case`）
 
-> 注意：反馈（Feedback）、代码评审（Code review）和共享步骤（Shared Steps）工作项类型由于之前讨论敏捷软件开发过程模板时提到的相同原因也未在此列表中。
+> 注意：反馈（`Feedback`）、代码评审（`Code review`）和共享步骤（`Shared Steps`）工作项类型由于之前讨论敏捷软件开发过程模板时提到的相同原因也未在此列表中。
 
-除了包含三个额外的工作项类型外，CMMI 过程模板中的工作项类型比敏捷过程模板更复杂。比较图 11-1 所示的敏捷过程模板中的 bug 工作项表单截图。注意额外的字段，例如根因（Root Cause）、分检（Triage）和阻塞（Blocked），这些字段在敏捷过程模板的 bug 工作项中不存在。CMMI 过程模板的 bug 工作项下半部分还有额外的标签页。
+除了包含三个额外的工作项类型外，`CMMI` 过程模板中的工作项类型比敏捷过程模板更复杂。比较图 11-1 所示的敏捷过程模板中的 `bug` 工作项表单截图。注意额外的字段，例如根因（`Root Cause`）、分检（`Triage`）和阻塞（`Blocked`），这些字段在敏捷过程模板的 `bug` 工作项中不存在。`CMMI` 过程模板的 `bug` 工作项下半部分还有额外的标签页。
 
 # 第 11 章介绍工作项跟踪
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_293_0.png)
 
-图 11-5：Bug (CMMI) 工作项表单
+图 11-5：`Bug (CMMI)` 工作项表单
 
-CMMI 过程模板的工作项类型状态和转换比敏捷过程模板更复杂。现在，比较图 11-2 所示的敏捷过程模板中的 bug 工作项类型状态图与图 11-6 所示的 CMMI 过程模板中的 bug 工作项类型状态图。
+`CMMI` 过程模板的工作项类型状态和转换比敏捷过程模板更复杂。现在，比较图 11-2 所示的敏捷过程模板中的 `bug` 工作项类型状态图与图 11-6 所示的 `CMMI` 过程模板中的 `bug` 工作项类型状态图。
 
-你在这两个图中注意到的主要区别是 CMMI 过程模板引入了一个额外的状态——提议（Proposed）。在开发者被分配处理 bug 之前，这个明确决策阶段在 CMMI 过程模板中至关重要。这会导致团队询问诸此类问题：“这真的是 bug 吗，还是代表了对更改某些功能设计的请求？修复这个 bug 是否对软件的其他部分产生意外影响？如果你选择处理这个 bug，应该如何相对于你的工作对其优先级排序？”
+你在这两个图中注意到的主要区别是 `CMMI` 过程模板引入了一个额外的状态——提议（`Proposed`）。在开发者被分配处理 `bug` 之前，这个明确决策阶段在 `CMMI` 过程模板中至关重要。这会导致团队询问诸此类问题：“这真的是 `bug` 吗，还是代表了对更改某些功能设计的请求？修复这个 `bug` 是否对软件的其他部分产生意外影响？如果你选择处理这个 `bug`，应该如何相对于你的工作对其优先级排序？”
 
 www.it-ebooks.info
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_294_0.png)
 
-这并不意味着即使你使用敏捷过程模板，这些问题也是不重要的，而且实践敏捷方法论的资深团队在分检 bug 时可能已经在脑中进行了这些检查。但 CMMI 过程模板将这一步显式化，有助于确保每个 bug 都能得到修复，无论开发团队的经验水平如何。
+这并不意味着即使你使用敏捷过程模板，这些问题也是不重要的，而且实践敏捷方法论的资深团队在分检 `bug` 时可能已经在脑中进行了这些检查。但 `CMMI` 过程模板将这一步显式化，有助于确保每个 `bug` 都能得到修复，无论开发团队的经验水平如何。
 
-理解 CMMI 的另一种方式是意识到，通过遵循该模型，NASA 并不能保证永远不会开发出因软件缺陷而失败的火箭。但如果 NASA 正确遵循了 CMMI，那么它就可以保证使用了约定的流程来做出导致该缺陷的决策。相反，在出现缺陷的情况下，它可以审计所使用的流程，检查进入决策过程的假设，并在完善流程时从这些错误中汲取经验，帮助确保同样的错误永远不再发生。
+理解 `CMMI` 的另一种方式是意识到，通过遵循该模型，`NASA` 并不能保证永远不会开发出因软件缺陷而失败的火箭。但如果 `NASA` 正确遵循了 `CMMI`，那么它就可以保证使用了约定的流程来做出导致该缺陷的决策。相反，在出现缺陷的情况下，它可以审计所使用的流程，检查进入决策过程的假设，并在完善流程时从这些错误中汲取经验，帮助确保同样的错误永远不再发生。
 
-同样重要的一点是，仅靠用于 CMMI 过程改进的 MSF 并不能确保组织能够成功通过 CMMI 认证审核。这类似于手头有烟雾报警器和灭火器，如果他们不知道如何正确使用和维护这些设备，就无法确保家庭的安全。
+同样重要的一点是，仅靠用于 `CMMI` 过程改进的 `MSF` 并不能确保组织能够成功通过 `CMMI` 认证审核。这类似于手头有烟雾报警器和灭火器，如果他们不知道如何正确使用和维护这些设备，就无法确保家庭的安全。
 
-但 Team Server 2012 连同用于 CMMI 过程改进的 MSF 模板，对于帮助组织采用 CMMI 作为其开发模型非常有帮助。Team Foundation Server 的功能，如端到端追溯性、多维度报告、丰富的链接（工作项与其他构建和更改集之间的链接）以及历史记录保存，都是极其实用的能力，可以帮助组织准备并通过 CMMI 审核。
+但 `Team Server 2012` 连同用于 `CMMI` 过程改进的 `MSF` 模板，对于帮助组织采用 `CMMI` 作为其开发模型非常有帮助。`Team Foundation Server` 的功能，如端到端追溯性、多维度报告、丰富的链接（工作项与其他构建和更改集之间的链接）以及历史记录保存，都是极其实用的能力，可以帮助组织准备并通过 `CMMI` 审核。
 
-> 注意：你可以在 http://aka.ms/MSFCMMIMETHODOLOGY 深入探索用于 CMMI 过程改进的 v6.0 过程模板，包括每个包含的工作项类型的更多详细信息。
+> 注意：你可以在 `http://aka.ms/MSFCMMIMETHODOLOGY` 深入探索用于 `CMMI` 过程改进的 v6.0 过程模板，包括每个包含的工作项类型的更多详细信息。
 
 # CMMI 开发方法论
 
-有一种常见的误解，认为 CMMI 规定了瀑布模型或“前期大设计”。虽然有很多方法论，但 Scrum 已经成为当时最流行的方法。如果你想实践 Scrum，Visual Studio Scrum 模板提供了很好的选择。但如果你有其他喜欢的过程模板，例如敏捷软件开发过程模板，你不应该限制在这个模板中。
+有一种常见的误解，认为 `CMMI` 规定了瀑布模型或“前期大设计”。虽然有很多方法论，但 `Scrum` 已经成为当时最流行的方法。如果你想实践 `Scrum`，`Visual Studio Scrum` 模板提供了很好的选择。但如果你有其他喜欢的过程模板，例如敏捷软件开发过程模板，你不应该限制在这个模板中。
 
-例如，你可能喜欢敏捷过程模板中包含的一些额外报告。你仍然可以使用敏捷模板并实践 Scrum，你只需要在你作为 Scrum 团队使用的术语与敏捷模板期望你输入的方式之间进行心理转换（例如将待办列表项称为用户故事）。
+例如，你可能喜欢敏捷过程模板中包含的一些额外报告。你仍然可以使用敏捷模板并实践 `Scrum`，你只需要在你作为 `Scrum` 团队使用的术语与敏捷模板期望你输入的方式之间进行心理转换（例如将待办列表项称为用户故事）。
 
-因此，你可能会问用于敏捷开发的 MSF 是否旨在支持任何敏捷方法论——Scrum——Visual Studio Scrum 模板的目的是什么？Visual Studio Scrum 模板是为了为采用 Scrum 的团队提供通用的特定构件和术语而创建。不是故事或需求，Visual Studio Scrum 使用待办列表类型。不是问题或风险，Visual Studio Scrum 使用阻碍类型。Sprint 由迭代（Iteration）表示，而你用于定义 Sprint 的天数由速率报告显示。第 13 章中的敏捷规划工具是专为 Scrum 模板设计的。简而言之，如果你实践或考虑实践 Scrum，Visual Studio Scrum 模板旨在帮助你这样做，同时充分利用 Team Server 2012。
+因此，你可能会问用于敏捷开发的 `MSF` 是否旨在支持任何敏捷方法论——`Scrum`——`Visual Studio Scrum` 模板的目的是什么？`Visual Studio Scrum` 模板是为了为采用 `Scrum` 的团队提供通用的特定构件和术语而创建。不是故事或需求，`Visual Studio Scrum` 使用待办列表类型。不是问题或风险，`Visual Studio Scrum` 使用阻碍类型。`Sprint` 由迭代（`Iteration`）表示，而你用于定义 `Sprint` 的天数由速率报告显示。第 13 章中的敏捷规划工具是专为 `Scrum` 模板设计的。简而言之，如果你实践或考虑实践 `Scrum`，`Visual Studio Scrum` 模板旨在帮助你这样做，同时充分利用 `Team Server 2012`。
 
 # Visual Studio Scrum
 
-虽然有很多开发方法论，Scrum 定义了团队成员必须遵循的清晰角色、职责和活动。实践 Scrum 的团队使用每日站（团队成员讨论昨天做了什么，今天将做什么，以及任何可能阻碍他们的事情——称为阻碍）。而不是项目经理，实践 Scrum 的团队通常由 Scrum 领导。
-
-
-
-
+虽然有很多开发方法论，`Scrum` 定义了团队成员必须遵循的清晰角色、职责和活动。实践 `Scrum` 的团队使用每日站（团队成员讨论昨天做了什么，今天将做什么，以及任何可能阻碍他们的事情——称为阻碍）。而不是项目经理，实践 `Scrum` 的团队通常由 `Scrum` 领导。
 
 ## 第三方过程模板
 
-有多个第三方提供了可供 Team Foundation Server 2012 使用的过程模板。其中一些第三方过程模板的列表可以在 http://aka.ms/ProcessTemplates 找到。来自第三方的过程模板通常提供免费使用的许可，但有时也可以从构建这些过程模板的组织处购买咨询或补充产品等额外服务。
+有多个第三方提供了可供 `Team Foundation Server 2012` 使用的过程模板。其中一些第三方过程模板的列表可以在 `http://aka.ms/ProcessTemplates` 找到。来自第三方的过程模板通常提供免费使用的许可，但有时也可以从构建这些过程模板的组织处购买咨询或补充产品等额外服务。
 
-目前有许多优秀的第三方过程模板可供选择，但您应该仔细考虑采用第三方过程模板时的支持情况以及数十种映射实现的复杂性。例如，当 Team Foundation Server 的下一个版本发布时，该过程模板是否会升级以利用新功能或改进的功能？如果是的话，将项目迁移到新版本过程模板的升级路径是什么？
+目前有许多优秀的第三方过程模板可供选择，但您应该仔细考虑采用第三方过程模板时的支持情况以及数十种映射实现的复杂性。例如，当 `Team Foundation Server` 的下一个版本发布时，该过程模板是否会升级以利用新功能或改进的功能？如果是的话，将项目迁移到新版本过程模板的升级路径是什么？
 
-如果您尚未准备好在第三方选择不再投入开发时接手过程模板的维护工作，那么您可能希望考虑上述由 Microsoft 构建并支持的过程模板。
+如果您尚未准备好在第三方选择不再投入开发时接手过程模板的维护工作，那么您可能希望考虑上述由 `Microsoft` 构建并支持的过程模板。
 
 ## 自定义过程模板
 
-最后，您可能会发现 Microsoft 或第三方提供的任何过程模板都不符合您团队或开发项目的需求。虽然您完全可以从零开始创建自己的过程模板，但更常见的方法是从现有的过程模板开始，并对其进行定制以满足您的需求。您可以在第 12 章中学习有关自定义过程模板的知识。
+最后，您可能会发现 `Microsoft` 或第三方提供的任何过程模板都不符合您团队或开发项目的需求。虽然您完全可以从零开始创建自己的过程模板，但更常见的方法是从现有的过程模板开始，并对其进行定制以满足您的需求。您可以在第 12 章中学习有关自定义过程模板的知识。
 
 现在您已经了解了选择过程模板的选项，下一节将向您介绍管理工作项的不同方式。
 
 ## 管理工作项
 
-在 Team Foundation Server 2012 中有许多方法可以访问工作项。由于工作项将由团队中的许多利益相关者（包括程序员、测试人员、项目经理等）使用，而且其中大多数人并不使用 Visual Studio 作为主要工具，您会发现 Microsoft 提供了许多访问工作项的客户端。
+在 `Team Foundation Server 2012` 中有许多方法可以访问工作项。由于工作项将由团队中的许多利益相关者（包括程序员、测试人员、项目经理等）使用，而且其中大多数人并不使用 `Visual Studio` 作为主要工具，您会发现 `Microsoft` 提供了许多访问工作项的客户端。
 
-在本节中，您将学习如何使用 Visual Studio、Excel、Project 和 Team Web Access 来访问工作项。本章将不会涵盖从这些客户端访问工作项的每一个方面，但它将让您更好地了解每个客户端如何使用、它们各自的相对优势，以及每个客户端的文档指引。
+在本节中，您将学习如何使用 `Visual Studio`、`Excel`、`Project` 和 `Team Web Access` 来访问工作项。本章将不会涵盖从这些客户端访问工作项的每一个方面，但它将让您更好地了解每个客户端如何使用、它们各自的相对优势，以及每个客户端的文档指引。
 
-本节列出的客户端列表并非详尽。有几十个第三方客户端，其中几个将在本节中进行介绍。测试人员可能会使用 Microsoft Test Manager（在第 24 章中讨论）。Eclipse 用户随处使用 Team Explorer。如果您需要，甚至可以使用 Team Foundation Server 对象编写自己的客户端。
+本节列出的客户端列表并非详尽。有几十个第三方客户端，其中几个将在本节中进行介绍。测试人员可能会使用 `Microsoft Test Manager`（在第 24 章中讨论）。`Eclipse` 用户随处使用 `Team Explorer`。如果您需要，甚至可以使用 `Team Foundation Server` 对象编写自己的客户端。
 
-## 使用 Visual Studio
+### 使用 Visual Studio
 
-在第 4 章中，您学习了如何使用 Team Explorer 配合 Team Foundation Server 2012 工作。Team Explorer 不仅为想要连接 Foundation Server 的 Visual Studio 用户提供了访问支持，还安装了与 Excel 和 Project 工作所需的插件。即使您不计划使用 Visual Studio，如果您想在 Team Foundation Server 中使用 Excel 或 Project，也应该安装 Team Explorer。
+在第 4 章中，您学习了如何使用 `Team Explorer` 配合 `Team Foundation Server 2012` 工作。`Team Explorer` 不仅为想要连接 `Foundation Server` 的 `Visual Studio` 用户提供了访问支持，还安装了与 `Excel` 和 `Project` 工作所需的插件。即使您不计划使用 `Visual Studio`，如果您想在 `Team Foundation Server` 中使用 `Excel` 或 `Project`，也应该安装 `Team Explorer`。
 
-> **注意** 本章中的示例假设您正在使用 Team Explorer 2012。虽然可以使用旧版本的 Team Explorer 连接到 Team Foundation Server 2012，但您将无法访问产品中的某些新功能。特别是 Team Explorer 的早期版本（2005 和 2008 版）无法感知 Team Foundation Server 2012 的关系链接功能，您将无法管理这些链接类型，也无法使用较新的查询功能来导航您的工作项。
+> **注意** 本章中的示例假设您正在使用 `Team Explorer 2012`。虽然可以使用旧版本的 `Team Explorer` 连接到 `Team Foundation Server 2012`，但您将无法访问产品中的某些新功能。特别是 `Team Explorer` 的早期版本（2005 和 2008 版）无法感知 `Team Foundation Server 2012` 的关系链接功能，您将无法管理这些链接类型，也无法使用较新的查询功能来导航您的工作项。
 
-您仍然可以使用旧版本的 Visual Studio 配合 Team Explorer 2012 使用。Team Explorer 2012 将与您的旧版 Visual Studio “并存”安装，您可以通过打开 Visual Studio 2012 壳来访问它。您可以继续使用旧版 Visual Studio 客户端提交代码更改，然后切换到 Team Explorer 2012 更新您的工作项。
+您仍然可以使用旧版本的 `Visual Studio` 配合 `Team Explorer 2012` 使用。`Team Explorer 2012` 将与您的旧版 `Visual Studio` “并存”安装，您可以通过打开 `Visual Studio 2012` 壳来访问它。您可以继续使用旧版 `Visual Studio` 客户端提交代码更改，然后切换到 `Team Explorer 2012` 更新您的工作项。
 
-## 管理工作项
+### 管理工作项
 
-使用 Visual Studio 可以轻松创建工作项。打开 Visual Studio 2012 的 Team Explorer 窗口并点击 Work。现在，在 New Work Item（新建工作项）菜单中，下拉菜单将显示您的团队项目项目中可用的工作项类型。点击您想要创建实例的工作项类型。将出现空白的工作项表单，类似于图 11-1 所示。
+使用 `Visual Studio` 可以轻松创建工作项。打开 `Visual Studio 2012` 的 `Team Explorer` 窗口并点击 `Work`。现在，在 `New Work Item`（新建工作项）菜单中，下拉菜单将显示您的团队项目项目中可用的工作项类型。点击您想要创建实例的工作项类型。将出现空白的工作项表单，类似于图 11-1 所示。
 
 新工作项的外观将根据您选择创建的工作项类型而形成。大多数情况下，填写工作项表单是显而易懂的，但在创建和编辑工作项时有几点需要注意。
 
-首先，您的工作项在首次成功保存之前没有 ID。请记住，ID 是一个在您的整个项目集中都是唯一的数字，从 1 开始顺序编号。这意味着，如果您的团队项目集中已经存在包含工作项的项目，那么您在一个新的团队项目内保存的第一个工作项的 ID 将不会是 1。
+首先，您的工作项在首次成功保存之前没有 `ID`。请记住，`ID` 是一个在您的整个项目集中都是唯一的数字，从 1 开始顺序编号。这意味着，如果您的团队项目集中已经存在包含工作项的项目，那么您在一个新的团队项目内保存的第一个工作项的 `ID` 将不会是 1。
 
-> **注意** 有时，您可能会遇到在特定工作项客户端中无法完全编辑的工作项类型。用例步骤（Steps of the Test Case）和共享步骤（Shared Steps）工作项类型就表现出这种特性。由于您将无法管理这些链接类型或使用较新的查询功能来导航您的工作项，因此早期版本的 Team Explorer（2005 和 2008 版）无法感知 Team Foundation Server 2012 的关系链接功能。（注：此处原文内容似乎与上方 Note 重复，已按原文翻译）。
+> **注意** 有时，您可能会遇到在特定工作项客户端中无法完全编辑的工作项类型。用例步骤（`Steps of the Test Case`）和共享步骤（`Shared Steps`）工作项类型就表现出这种特性。由于您将无法管理这些链接类型或使用较新的查询功能来导航您的工作项，因此早期版本的 `Team Explorer`（2005 和 2008 版）无法感知 `Team Foundation Server 2012` 的关系链接功能。（注：此处原文内容似乎与上方 Note 重复，已按原文翻译）。
 
+`Team Foundation Server 2012` 允许从命令提示符执行删除操作。
 
+打开 `Visual Studio` 命令提示符，并输入 `tfadmin destroyui /` 来查看命令行语法帮助。此操作是不可逆的，因此在使用时请务必小心。
 
-
-
-Team Foundation Server 2012 允许从命令提示符执行删除操作。
-打开 Visual Studio 命令提示符，并输入 `tfadmin destroyui /` 来查看命令行语法帮助。此操作是不可逆的，因此在使用时请务必小心。
 通常情况下，具有破坏性的操作仅能从命令行执行，并且需要管理员权限。
 
-微软建议的方法是适当地转换工作项（work items）而不是删除它们。例如，如果你检查图 11-2 所示的状态，你会发现解决 Bug 项的有效理由包括：表明该 bug 无法复现、它已过时（可能它属于一个已删除或更改的功能或特性），或者它是已存在 bug 的重复项。
+微软建议的方法是适当地转换工作项（`work items`）而不是删除它们。例如，如果你检查图 11-2 所示的状态，你会发现解决 `Bug` 项的有效理由包括：表明该 `bug` 无法复现、它已过时（可能它属于一个已删除或更改的功能或特性），或者它是已存在 `bug` 的重复项。
 
-虽然你可能想直接删除这些工作项而不是使用上述理由来处理它们，但解决数据在以后可能非常有用，可以帮助 QA 负责人（lead）发现某位测试人员在填写这些错误 bug 时没有充分利用其技能。以后可以很容易生成报告，例如显示某个测试人员创建的所有 bug 在此后被发现与现有项重复。但如果某些工作项被删除了，它们就不会出现在此类报告中。
+虽然你可能想直接删除这些工作项而不是使用上述理由来处理它们，但解决数据在以后可能非常有用，可以帮助 `QA` 负责人（`lead`）发现某位测试人员在填写这些错误 `bug` 时没有充分利用其技能。以后可以很容易生成报告，例如显示某个测试人员创建的所有 `bug` 在此后被发现与现有项重复。但如果某些工作项被删除了，它们就不会出现在此类报告中。
 
-## 工作项查询 (Work-Item Queries)
+### 工作项查询
 
-既然你已经知道如何创建工作项，下一个任务是你应该学习如何找到它们。你可以直接在 Team Explorer 的搜索框中输入工作项的 ID，但这假设你知道所有工作项的 ID。在大多数情况下，你需要使用的是查询。
+既然你已经知道如何创建工作项，下一个任务是你应该学习如何找到它们。你可以直接在 `Team Explorer` 的搜索框中输入工作项的 `ID`，但这假设你知道所有工作项的 `ID`。在大多数情况下，你需要使用的是查询。
 
-你正在使用的过程模板可能包含一些内置查询。从 Team Explorer 打开“工作项”页面，展开“查询”节点下的“查询”和“共享查询”（Shared Queries）文件夹。“共享查询”文件夹的内容对所有人可见，而“我的查询”（My Queries）提供了一个保存查询的个人位置，可能只对你本人有用。通过将特定的查询保存在“我的查询”中，你可以避免为团队成员创建过多的内容。
+你正在使用的过程模板可能包含一些内置查询。从 `Team Explorer` 打开“工作项”页面，展开“查询”节点下的“查询”和“共享查询”（`Shared Queries`）文件夹。“共享查询”文件夹的内容对所有人可见，而“我的查询”（`My Queries`）提供了一个保存查询的个人位置，可能只对你本人有用。通过将特定的查询保存在“我的查询”中，你可以避免为团队成员创建过多的内容。
 
 > 注意：你应该考虑使用权限来锁定“共享查询”节点内的查询。这可以防止他人误用自己的查询覆盖共享查询，从而导致他人产生意外结果。你可以通过右键点击查询或查询文件夹并选择“安全性”来设置安全设置。
 
@@ -5400,21 +4830,21 @@ Team Foundation Server 2012 允许从命令提示符执行删除操作。
 
 图 17：查询结果
 
-图 11-7 中的查询结果是一个“工作项树”查询。这种查询类型返回一个与你的查询匹配的工作项列表，并按父/子关系对其进行分组。在这个示例中，有顶层用户故事（User Story）项链接到子任务（task）工作项。
+图 11-7 中的查询结果是一个“工作项树”查询。这种查询类型返回一个与你的查询匹配的工作项列表，并按父/子关系对其进行分组。在这个示例中，有顶层用户故事（`User Story`）项链接到子任务（`task`）工作项。
 
-另一种查询类型是“工作项和直接链接”。这种查询与“工作项树”查询类似，不同之处在于它没有与父/子项链接。例如，如果你指定要查看以“已测试”（tested-by）链接类型呈现的所有用户故事和测试用例。这对于发现测试计划中的潜在漏洞很有用。
+另一种查询类型是“工作项和直接链接”。这种查询与“工作项树”查询类似，不同之处在于它没有与父/子项链接。例如，如果你指定要查看以“已测试”（`tested-by`）链接类型呈现的所有用户故事和测试用例。这对于发现测试计划中的潜在漏洞很有用。
 
-最后，“列表”（List）查询不显示任何链接，它是所有 Team Foundation Server 版本中都存在的基础查询类型。
+最后，“列表”（`List`）查询不显示任何链接，它是所有 `Team Foundation Server` 版本中都存在的基础查询类型。
 
-从查询结果窗口，你可以通过双击工作项来打开它。你还可以使用查询结果窗口顶部工具栏的几个选项。当你将鼠标悬停在这些工具栏上时时，所有选项都允许你创建新的工作项（链接到你高亮的任何工作项）；在 Microsoft Project、Outlook 或 Excel 中打开你的查询结果（选择其中一个）；更改查询结果中显示的列（以及顺序）；以及编辑你正在操作的查询。
+从查询结果窗口，你可以通过双击工作项来打开它。你还可以使用查询结果窗口顶部工具栏的几个选项。当你将鼠标悬停在这些工具栏上时时，所有选项都允许你创建新的工作项（链接到你高亮的任何工作项）；在 `Microsoft Project`、`Outlook` 或 `Excel` 中打开你的查询结果（选择其中一个）；更改查询结果中显示的列（以及顺序）；以及编辑你正在操作的查询。
 
 图 11-8 中的查询编辑器是获取图 11-7 中的查询并点击“编辑查询”后的结果。
 
-即使你以前从未用过 Team Foundation Server，这个查询也应该相当容易通过逆向工程来学习它的功能。
+即使你以前从未用过 `Team Foundation Server`，这个查询也应该相当容易通过逆向工程来学习它的功能。
 
-第一行 `Team Project = @Project` 意味着你的查询结果应该限制在保存该项目的团队项目范围内。如果你删除了它，你的结果可能会返回整个团队项目集的工作项。`@Project` 是一个查询变量。查询变量在执行查询时会被转换为相应的值。因此，对于此项目，`@Project` 将解析为“Tailspin Toys”。通过使用查询变量，你可以创建更灵活的查询。另外两个 # 管理工作项 | 265
+第一行 `Team Project = @Project` 意味着你的查询结果应该限制在保存该项目的团队项目范围内。如果你删除了它，你的结果可能会返回整个团队项目集的工作项。`@Project` 是一个查询变量。查询变量在执行查询时会被转换为相应的值。因此，对于此项目，`@Project` 将解析为“`Tailspin Toys`”。通过使用查询变量，你可以创建更灵活的查询。另外两个 # 管理工作项 | 265
 
- 可用查询变量是 `@Me`（它会被转换为当前登录用户的用户名）和 `@Today`（它会被转换为今天的日期）。
+可用查询变量是 `@Me`（它会被转换为当前登录用户的用户名）和 `@Today`（它会被转换为今天的日期）。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_302_0.png)
 
@@ -5431,6 +4861,8 @@ Team Foundation Server 2012 允许从命令提示符执行删除操作。
 - 匹配链接工作项过滤器
 
 图 11-8：查询编辑器。
+
+
 
 查询的下一行（`AND Area Path Under @Project`）表示可以包含项目区域路径的工作项，因为指定的区域路径是有效的。你可以将其更改为 `Tailspin Toys\Web site`（对于此项目，`@Project` 解析为 `Tailspin Toys`）。如果你想将结果限制在区域路径精确匹配 `Tailspin Toys` 的项上，可以将运算符更改为 `=`（对于项目集中的项）。
 
@@ -5453,9 +4885,6 @@ Microsoft Excel 是另一个编辑工作项的流行客户端。如果你在安�
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_303_0.png)
 
 图 11-9：Excel 中的工作项
-
-
-
 
 您可以在 Excel 网格中进行任何所需的更改。通过点击现有的工作项并从区带（Ribbon）Team 选项卡中的“添加子项”(Adding Child)，可以为“工作项树”查询添加新的工作项。对于列表类型或“工作项和直接链接”类型的查询（这些查询在 Excel 中也会压缩为平面列表），您只需将光标置于网格底部的新行，并通过创建新的工作项来开始输入。
 
@@ -5501,9 +4930,6 @@ Team Web Access 为 Web 客户端提供了许多惊喜的功能。您可以编�
 
 > 注意：如果您兴趣将 Team Web Access 作为终端用户提交和跟踪 bug 及增强请求的方式，您应该考虑 Team Web Access 的“仅工作项视图”(Work Item Only View)。当用户使用“仅工作项视图”连接到 Team Foundation 时，他们不需要 Team Foundation Server 的客户端访问许可 (CAL)。有关为您的用户启用“仅工作项视图”的更多细节，请参阅 http://aka.ms/TFSOnlyView。
 
-
-
-
 基础设施不会支持或强制执行该流程。过多的流程会抑制生产力和速度。
 
 Team Foundation Server 中的过程模板提供了一种在不干扰工作的情况下，向整个团队引入流程的方法。当你创建一个新的团队项目时，将使用过程模板来用于设置工作项、项目项查询、敏捷工具设置和偏好、共享文档库、仪表板等。过程模板是文件的集合，包括 XML 文件、文档和报告。
@@ -5513,9 +4939,11 @@ Team Foundation Server 中的过程模板提供了一种在不干扰工作的情
 接下来，选择一个过程模板，点击下载（Download），然后选择你想保存过程模板的位置。图 12-2 显示了过程模板管理器对话框。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_311_0.png)
+
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_311_1.png)
 
 图 12-1: 下载过程模板
+
 图 12-2: 过程模板管理器对话框
 
 ## 插件 (Plug-ins)
@@ -5601,10 +5029,6 @@ Team Foundation Server 中的过程模板提供了一种在不干扰工作的情
 
 团队项目集中所有工作项类型的字段最大数量约为 1000 个。此外，一个 Team Foundation 实例的所有团队项目集可以定义大约 1000 个可报告字段。这些最大值恰好对应 SQL Server 表可以创建的列数，减去 Team Foundation Server 使用的开销。
 
-
-
-
-
 工作项字段也可以包含在运行时应用于该字段的规则。对于单个字段，可以指定多个适用的规则。表 12-3 显示了一些常用的常用的字段规则示例。
 
 ## **表 12-3:** 字段规则示例
@@ -5626,21 +5050,23 @@ Team Foundation Server 中的过程模板提供了一种在不干扰工作的情
 
 ## 工作项状态与转换
 
-工作项可以分为不同的状态，并可以使用转换（transitions）定义这些状态之间的工作流。每个转换都可以包含一个转换原因。例如，一个 bug 可以处于 Active（活动）状态，然后带有 Fixed（修复）、Duplicate（重复）、As Designed（符合设计）、Cannot Reproduce（无法重现）、Deferred（延迟）等原因转换为 Resolved（已解决）状态。状态和原因的组合用于报告和工作项查询，以进一步区分相同状态下的工作项。
 
-每个工作项只能有一个初始转换，该转换可以包含多个原因。图 12-7 显示了 MSF Agile v6.1 过程模板中 Bug 工作项的状态和转换。图 12-7 还显示了在 Active 和 Resolved 状态之间转换的可用原因。
+
+工作项可以分为不同的状态，并可以使用转换（`transitions`）定义这些状态之间的工作流。每个转换都可以包含一个转换原因。例如，一个 bug 可以处于 `Active`（活动）状态，然后带有 `Fixed`（修复）、`Duplicate`（重复）、`As Designed`（符合设计）、`Cannot Reproduce`（无法重现）、`Deferred`（延迟）等原因转换为 `Resolved`（已解决）状态。状态和原因的组合用于报告和工作项查询，以进一步区分相同状态下的工作项。
+
+每个工作项只能有一个初始转换，该转换可以包含多个原因。图 12-7 显示了 MSF Agile v6.1 过程模板中 Bug 工作项的状态和转换。图 12-7 还显示了在 `Active` 和 `Resolved` 状态之间转换的可用原因。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_318_0.png)
 
 图 12-7：Bug 工作项的状态和转换
 
-## 状态与转换的规则
+# 状态与转换的规则
 
-在在本章的前面，你已经学了规则可以全局应用于工作项类型的字段。规则也可以应用于状态级别，或者应用于特定的转换或原因。所有规则的组合是根据字段、状态、转换和原因的规则来应用的。图 12-8 显示了 Microsoft.VSTS.Common ResolvedBy 字段在 Active 和 Resolved 状态之间转换的各种字段规则。
+在本章的前面，你已经学了规则可以全局应用于工作项类型的字段。规则也可以应用于状态级别，或者应用于特定的转换或原因。所有规则的组合是根据字段、状态、转换和原因的规则来应用的。图 12-8 显示了 `Microsoft.VSTS.Common ResolvedBy` 字段在 `Active` 和 `Resolved` 状态之间转换的各种字段规则。
 
-你也可以对某些字段规则使用相同的 `for` 和 `not` 属性来限制转换。图 12-9 显示了为 Active 和 Resolved 状态之间的转换指定的这些属性。作为图中的示例，你允许贡献者（Contributors）安全组的人将工作项从 Active 状态移动到 Resolved 状态，但读取（Readers）安全组的成员即使是贡献者安全组的成员，永远无法进行此转换。
+你也可以对某些字段规则使用相同的 `for` 和 `not` 属性来限制转换。图 12-9 显示了为 `Active` 和 `Resolved` 状态之间的转换指定的这些属性。作为图中的示例，你允许贡献者（`Contributors`）安全组的人将工作项从 `Active` 状态移动到 `Resolved` 状态，但读取（`Readers`）安全组的成员即使是贡献者安全组的成员，永远无法进行此转换。
 
-## 第 12 章 自定义过程模板
+# 第 12 章 自定义过程模板
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_319_0.png)
 
@@ -5650,7 +5076,7 @@ Team Foundation Server 中的过程模板提供了一种在不干扰工作的情
 
 图 12-9：转换指定的属性
 
-## 工作项格式布局
+# 工作项格式布局
 
 一旦定义了所有字段以及状态和转换的工作流，你就可以指定工作项表单在 Team Foundation Server 客户端中打开时的布局。布局通过一组项目（items）来指定。图 12-10 显示了 MSF Agile 模板中 Bug 工作项类型布局的部分示例。
 
@@ -5681,7 +5107,7 @@ Team Foundation Server 中的过程模板提供了一种在不干扰工作的情
 
 Team Foundation Server 2012 模板编辑器不支持多个工作项表单布局。如果你选择使用多个工作项表单布局，必须使用在本章后面描述的 XML 编辑方法。
 
-Team Foundation Server 2012 在布局中引入了一些新功能，你可以在最新的过程模板中注意到。首先注意到可以应用于布局对象的两个属性是 HideControlBorder（隐藏控件边界）和 HideReadOnlyEmptyFields（隐藏只读空字段）。这可以为你的工作项表单提供更整洁的外观。
+Team Foundation Server 2012 在布局中引入了一些新功能，你可以在最新的过程模板中注意到。首先注意到可以应用于布局对象的两个属性是 `HideControlBorder`（隐藏控件边界）和 `HideReadOnlyEmptyFields`（隐藏只读空字段）。这可以为你的工作项表单提供更整洁的外观。
 
 ```
 <FORM>
@@ -5690,7 +5116,7 @@ Team Foundation Server 2012 在布局中引入了一些新功能，你可以在�
 
 第一个属性指示控件周围的边界是否应该隐藏。第二个属性指示字段为空且只读时是否应该隐藏。请记住，某些用户在某些状态下或因为他们是安全组的成员，会对字段应用只读角色。这通过移除用户无法编辑且未设置值的字段，有助于减少表单上的杂乱。
 
-接下来的两个功能应用于特定的控件定义。这是一个属性，用于指示控件渲染时应显示的字段值的大小。如果你认为某些字段很重要（如标题字段），可以将其标记为 large（大）、xlarge（极大）或 xxlarge（巨大）。你也可以将不重要的字段标记为 small（小）。
+接下来的两个功能应用于特定的控件定义。这是一个属性，用于指示控件渲染时应显示的字段值的大小。如果你认为某些字段很重要（如标题字段），可以将其标记为 `large`（大）、`xlarge`（极大）或 `xxlarge`（巨大）。你也可以将不重要的字段标记为 `small`（小）。
 
 控件定义的第二个属性位于布局，用于指定字段没有值时显示的文本。这可以在表单上提供一个有用的提示，而无需通过添加 DEFAULT 字段值。
 
@@ -5710,11 +5136,7 @@ EmptyText="&lt;Enter title here&gt;"
 
 有多种工作项控件用于在表单布局中显示和编辑字段。表 12-4 说明了每个可用的标准工作项控件。
 
-
-
-
-
-# 表 12-4：标准工作项表单控件
+### 表 12-4：标准工作项表单控件
 
 | 控制 | 说明 |
 | --- | --- |
@@ -5725,10 +5147,10 @@ EmptyText="&lt;Enter title here&gt;"
 | 附件 (Attachments) | 为用户提供了管理工作项上文件附件的能力。但是，它不会修改特定的工作项字段。 |
 | 工作项分类 (Work Item Classification) | 专门编辑区域路径（Area Path）和迭代路径（Iteration Path）字段，并在树形控件中显示活动节点。 |
 | 工作项日志 (Work Item Log) | 显示工作项的历史修订视图，包括每次修订的注释。此外，当用户保存工作项更改时，用户可以指定一个富文本注释，存储在工作项的特定修订中。 |
-| 标签 (Label) | 允许在工作项表单上指定标签。标签可以指定纯文本值，并包含指向静态 URL 的链接或使用支持的宏的动态链接，例如 @ReportSiteUrl、@ReportManagerUrl、@TabPage、@ProcessGuidance 和 @Me。 |
-| 网页 (Webpage) | 可以显示字面量 HTML 数据，或指向某个点或动态 URL，该 URL 也可以使用标签控件上提到的任何支持宏。此外，UrlAttribute 可以包含字符串参数（类似于在 .NET 方法 String.Format() 中使用格式化字符串时），并指定另一个字段的值作为动态 URL 的参数。 |
+| 标签 (Label) | 允许在工作项表单上指定标签。标签可以指定纯文本值，并包含指向静态 URL 的链接或使用支持的宏的动态链接，例如 `@ReportSiteUrl`、`@ReportManagerUrl`、`@TabPage`、`@ProcessGuidance` 和 `@Me`。 |
+| 网页 (Webpage) | 可以显示字面量 HTML 数据，或指向某个点或动态 URL，该 URL 也可以使用标签控件上提到的任何支持宏。此外，`UrlAttribute` 可以包含字符串参数（类似于在 .NET 方法 `String.Format()` 中使用格式化字符串时），并指定另一个字段的值作为动态 URL 的参数。 |
 
-# 工作项类别
+## 工作项类别
 
 Team Foundation Server 2010 引入了一种新的工作项跟踪功能：工作项类别。此功能允许不同团队中具有不同名称的工作项类型在外部工具、报告和工作项查询中使用。例如，一个项目可能有一个名为“Bug”的工作项类型，而另一个工作项则称为“Defect”（缺陷），它们需要在从从两个团队拉取数据的报告中一起出现。
 
@@ -5738,7 +5160,7 @@ Microsoft Team Manager 是使用工作项根据其类别来创建和选择工作
 
 Team Foundation Server 2012 还引入了一个特殊的工作项类别：隐藏类型类别（Hidden Types Category）。此新类别指定了你不希望用户手动创建的工作项类型。默认情况下，反馈和评审工作项类型包含在此类别中，因为这些是专门为用户体验制作的新类型。不同的用户界面将不再在创建新工作项的可用工作项列表中暴露此类类别中的工作项类型。
 
-# 工作项链接类型
+## 工作项链接类型
 
 Team Foundation Server 2010 还引入了富链接类型的概念，这些链接类型可以在整个 Team Foundation Server 中用于报告和查询工作项。这些富链接类型
 
@@ -5751,21 +5173,21 @@ Team Foundation Server 2010 还引入了富链接类型的概念，这些链接�
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_323_0.png)
 
-# 过程模板的结构
+## 过程模板的结构
 
 真正允许在 Team Foundation Server 中的工作项之间实现完全的可追溯性。每个链接类型可以有特定的拓扑结构，并具有描述链接两端的不同名称。
 
 表 12-5 显示了可选的标准定义链接类型。
 
-表 12-5：标准定义链接类型
+### 表 12-5：标准定义链接类型
 
 | 前向名称 | 反向名称 | 链接类型引用名称 | 拓扑结构 |
 |--- |--- |--- |--- |
-| 后继 (Successor) | 前驱 (Predecessor) | System.LinkTypes.Dependency | 依赖 (Dependency) |
-| 子项 (Child) | 父项 (Parent) | System.LinkTypes.Hierarchy | 树 (Tree) |
-| 相关 (Related) | 相关 (Related) | System.LinkTypes.Related | 网络 (Network) |
-| 由...测试 (Tested By) | 测试 (Tests) | Microsoft.VSTS.Common.TestedBy | 依赖 (Dependency) |
-| 测试用例 (Test Case) | 共享步骤 (Shared Steps) | Microsoft.VSTS.TestCase.SharedStepReferencedBy | 依赖 (Dependency) |
+| 后继 (Successor) | 前驱 (Predecessor) | `System.LinkTypes.Dependency` | 依赖 (Dependency) |
+| 子项 (Child) | 父项 (Parent) | `System.LinkTypes.Hierarchy` | 树 (Tree) |
+| 相关 (Related) | 相关 (Related) | `System.LinkTypes.Related` | 网络 (Network) |
+| 由...测试 (Tested By) | 测试 (Tests) | `Microsoft.VSTS.Common.TestedBy` | 依赖 (Dependency) |
+| 测试用例 (Test Case) | 共享步骤 (Shared Steps) | `Microsoft.VSTS.TestCase.SharedStepReferencedBy` | 依赖 (Dependency) |
 
 来源：MSDN Library (http://aka.ms/WITLinkTypes)
 
@@ -5793,11 +5215,11 @@ Team Foundation Server 2010 还引入了富链接类型的概念，这些链接�
 
 图 12-15：树形拓扑结构
 
-# 全局列表 (Global Lists)
+## 全局列表 (Global Lists)
 
 全局列表在团队项目层级可用，用于管理工作跟踪系统中的常用列表。例如，一个公司可能有一个部门列表，希望在跨多个团队项目的多个项类型中使用。该公司可以指定一个 `ALLOWEDVALUES` 字段规则，该规则仅包含为部门创建的全局列表中的值。每当需要更新列表时，都可以编辑全局列表，这不涉及为每个团队项目部署新的工作项定义。
 
-# 全局工作流和字段 (Global Workflows and Fields)
+## 全局工作流和字段 (Global Workflows and Fields)
 
 Team Foundation Server Pack 2010 引入了管理全局字段和工作流的新概念。添加全局字段和工作流主要是为了项目服务器集成（Project Server Integration）功能，以同步 Team Foundation 和 Project Server 之间的更改。
 
@@ -5805,11 +5227,11 @@ Team Foundation Server Pack 2010 引入了管理全局字段和工作流的新�
 
 > 注意：你可以在 MSD 文档中找到更多关于全局工作流的信息：http://aka.ms/WITGlobalWorkflows。
 
-# 工作项项目 (Work Item Items)
+## 工作项项目 (Work Item Items)
 
 过程模板还可以包含一个工作项列表，这些项将在团队项目创建过程中初始化。如果每个新团队项目都应该包含特定的启动工作项来启动项目，则这非常有用。默认情况下，标准的箱箱模板没有定义任何默认工作项。
 
-# 工作项查询和文件夹 (Work Item Queries and Folders)
+## 工作项查询和文件夹 (Work Item Queries and Folders)
 
 过程模板中应为新的团队项目定义某些工作项查询及其组织文件夹结构。应该包含标准的工作项查询。此外，可以指定工作项查询文件夹的默认安全性和权限。
 
@@ -5817,11 +5239,7 @@ Team Foundation Server Pack 2010 引入了管理全局字段和工作流的新�
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_326_0.png)
 
-
-
-
-
-# Microsoft Project 列映射
+## Microsoft Project 列映射
 
 Microsoft Project 列映射将工作项字段与 Microsoft Project 文件中定义的字段相关联。图 12-17 显示了在 MSF Agile 过程模板中定义的默认 Project 列映射。这与 Project Server 实现中用于字段的映射并不相同。这些映射仅在您希望在未连接到 Project Server 的情况下，直接在 Microsoft 客户端中打开工作项或工作项查询时才会使用。
 
@@ -5833,7 +5251,7 @@ Microsoft Project 列映射将工作项字段与 Microsoft Project 文件中定�
 
 > 注意：关于自定义 Microsoft Project 字段映射的更多详细信息，可以在 http://aka.ms/WITProjectClientMappings 的 MSDN 库中找到。
 
-# 版本控制权限与设置
+## 版本控制权限与设置
 
 过程模板还可以包含在团队项目创建向导期间创建的团队项目版本控制库的设置和权限。例如可以提供“启用多次检出”（Enable multiple check-out）设置、“检出时获取最新版本”（Enable get latest version on check-out）设置以及所需的“签入备注”（Check-in notes）。还可以指定每个组的权限。
 
@@ -5854,6 +5272,9 @@ Microsoft Project 列映射将工作项字段与 Microsoft Project 文件中定�
 | 标记 | ☑ | ☐ |
 | 锁定 | ☑ | ☐ |
 | 修改其他用户的更改 | ☐ | ☐ |
+
+
+
 | 解锁其他用户的更改 | ☐ | ☐ |
 | 撤销其他用户的更改 | ☐ | ☐ |
 | 管理标记 | ☐ | ☐ |
@@ -5892,7 +5313,7 @@ Microsoft Project 列映射将工作项字段与 Microsoft Project 文件中定�
 
 # 使用过程模板编辑器 | 293
 
-Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获取并定期更新。找到 Power Tools 安装程序最新下载的最快方法是搜索词“Team Foundation Server Power Tools”。目前，整个 Visual Studio 产品线的所有 Power Tools 列表位于 http://aka.ms/TFPowerTools，但在 Team Foundation Server 发布新版本后，它可能不是完全最新的。在开始安装 Power Tools 之前，请确保关闭所有 Visual Studio 实例，因为安装程序将设置和配置多个加载项。
+Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获取并定期更新。找到 Power Tools 安装程序最新下载的最快方法是搜索词“Team Foundation Server Power Tools”。目前，整个 Visual Studio 产品线的所有 Power Tools 列表位于 `http://aka.ms/TFPowerTools`，但在 Team Foundation Server 发布新版本后，它可能不是完全最新的。在开始安装 Power Tools 之前，请确保关闭所有 Visual Studio 实例，因为安装程序将设置和配置多个加载项。
 
 > 注意：始终确保您使用的是最新版本的 Team Foundation Server。Power Tools 每月都会发布错误修复和新功能。
 
@@ -5900,7 +5321,7 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 与其直接在服务器上编辑工作项（这是一种方法），最佳实践是下载过程模板并使用您偏好的 XML 编辑器编辑。> 注意：第 10 章提供了有关使用过程模板的更多信息
 
-当您将过程模板存储在离线位置时，可以打开 ProcessTemplate.xml。图 12-21 显示了团队项目集合中过程模板中的工作项。
+当您将过程模板存储在离线位置时，可以打开 `ProcessTemplate.xml`。图 12-21 显示了团队项目集合中过程模板中的工作项。
 
 # 294 | 第 12 章 自定义模板
 
@@ -5908,31 +5329,27 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 图 12-21：编辑器窗口
 
-从窗口中，您可以轻松编辑工作项类型。例如，您可以通过点击“编辑”按钮来编辑工作项类型。> 注意：如果您想了解更多关于过程模板的信息，可以阅读帮助文档：C:\Program Files (x86)\Microsoft Foundation Server\2012\Help\ProcessEditor.mht
+从窗口中，您可以轻松编辑工作项类型。例如，您可以通过点击“编辑”按钮来编辑工作项类型。> 注意：如果您想了解更多关于过程模板的信息，可以阅读帮助文档：`C:\Program Files (x86)\Microsoft Foundation Server\2012\Help\ProcessEditor.mht`
 
 # 使用 XML 编辑器和 WITAdmin
 
 管理过程模板和工作项定义的另一种方法是使用您偏好的 XML 编辑器编辑文件，并使用工具导出和导入工作项定义。XML 架构在 MSDN 库中有详细文档：
 
-- 模板架构—http://aka.ms/ProcessTemplateSchema
-- 工作项类型架构—http://aka.ms/WITSchema
+- 模板架构—`http://aka.ms/ProcessTemplateSchema`
+- 工作项类型架构—`http://aka.ms/WITSchema`
 
-名为 witadmin.exe 的命令行工具是在您安装 Visual Studio Team Explorer 时安装的。在开发人员命令提示符中（并在具有相应权限的情况下），您可以执行多项管理工作跟踪系统的功能。表 12-6 显示了一些可用命令，但您可以通过执行 witadmin.exe / 获取完整列表。
+名为 `witadmin.exe` 的命令行工具是在您安装 Visual Studio Team Explorer 时安装的。在开发人员命令提示符中（并在具有相应权限的情况下），您可以执行多项管理工作跟踪系统的功能。表 12-6 显示了一些可用命令，但您可以通过执行 `witadmin.exe /` 获取完整列表。
 
 # 表 12-6：witadmin 示例命令
 
 | 命令 | 说明 |
 | --- | --- |
-| Listfields | 特别适用于您需要团队项目集合中所有字段及其详细信息时。每个条目甚至会列出使用该字段的工作项类型和团队项目。使用 /unused 关时，还可以获取团队项目集中完全未使用的字段列表。 |
+| Listfields | 特别适用于您需要团队项目集合中所有字段及其详细信息时。每个条目甚至会列出使用该字段的工作项类型和团队项目。使用 `/unused` 关时，还可以获取团队项目集中完全未使用的字段列表。 |
 | Changefield | 允许在字段创建后更新现有字段的属性。例如，您可以更新任何名称属性，但您会发现某些属性无法更改。一个例子是工作项类型字段。除非它是 HTML 和 PlainText 之间，否则无法更改工作项类型。 |
 | Deletefield | 在字段被任何团队项目的任何工作项类型未使用后，将其完全删除。如果这是使用指定字段的最后一个团队项目，它将在下次仓库处理周期期间从仓库中删除。 |
 | Listwit | 有助于列出团队项目中可用的工作项类型。 |
 | Rename | 即使团队项目中已有该类型的工作项，也可以重命名现有的工作项类型。例如，您可以在未来的某时刻决定将 Requirement 工作项类型重命名为 User Story 或 Feature。 |
 | destroywi, destroywitid | 允许在团队项目中完全删除特定的工作项或工作项类型及其所有现有项。数据不会在仓库中被删除，直到发生完整构建为止。 |
-
-
-
-
 
 # 表 12-6（续）
 
@@ -5971,34 +5388,15 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
 
-> 注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。每当下一个仓库处理周期开始时，你都会开始看到问题，因为冲突的字段定义将进一步阻碍仓库处理。另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
-
-注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。每当下一个仓库处理周期开始时，你都会开始看到问题，因为冲突的字段定义将进一步阻碍仓库处理。另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
-
-注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。每当下一个仓库处理周期开始时，你都会开始看到问题，因为冲突的字段定义将进一步阻碍仓库处理。另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
-
-注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。每当下一个仓库处理周期开始时，你都会开始看到问题，因为冲突的字段定义将进一步阻碍仓库处理。另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
-
-注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。每当下一个仓库处理周期开始时，你都会开始看到问题，因为冲突的字段定义将进一步阻碍仓库处理。另一个影响更大的场景是更改现有工作项类型定义的状态名称。你必须处理旧状态中的所有工作项。此外，可能存在使用该特定名称的现有工作项查询以及依赖旧状态名称的标准报告，所有这些都必须更新。
-
-（注：由于原文中存在大量重复段落，此处翻译已根据“不要重复输出原文”的原则进行了精简处理。）
-
-[自定义敏捷工具](https://aka.ms/AgileProcess)
-
-[自定义敏捷工具](https://aka.ms/AgileProcess)
+> 注意：可能用于更改现有工作项状态名称的方法是：在测试环境中测试你的工作项类型定义更新，该环境应等待成功的仓库处理周期发生，且更新过程中不会产生任何错误。
 
 [自定义敏捷工具](https://aka.ms/AgileProcess)
 
 ## 工作量、剩余工作和栈优先级
 
-（此处为翻译）
-
 - 工作量（Effort）
 - 剩余工作（Remaining Work）
 - 栈优先级（Stack Rank）
-
-
-
 
 用于“任务”工作类型中“剩余工作”字段剩余值所使用的单位。如果您想使用“小时”以外的内容（例如故事点），则可以在此处编辑该设置：
 
@@ -6068,7 +5466,7 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 您可能还想移动字段（例如，清空“关闭日期”和“关闭人”字段），并更改某些现有的转换以利用新状态。
 
-> 注意：关于在工作项类型定义中添加新状态的完整文章可以在 MSDN 库中找到：http://aka.ms/WITCustomizeStates。
+> 注意：关于在工作项类型定义中添加新状态的完整文章可以在 MSDN 库中找到：`http://aka.ms/WITCustomizeStates`。
 
 然而，添加状态意味着报告将受到影响。MSF Agile 过程中的某些报告可能会受到影响：
 
@@ -6077,6 +5475,8 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 - **所有迭代状态**——此报告显示了每个迭代路径中存在多少个 Bug，并按状态以分段条形图显示。
 
 ## 显示自定义链接类型
+
+
 
 新的链接控制允许与 Team Foundation Server 中提供的新链接类型进行丰富交互，包括您为过程模板创建的任何自定义链接类型。您可以利用新链接在工作项表单上创建一个额外的控制层，按工作项类型、工作链接类型和外部链接进行过滤。
 
@@ -6106,7 +5506,8 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 <ExternalLinkFilters FilterType="excludeAll" />
 <WorkItemFilters FilterType="include" />
 </Control>
-</Tab>```
+</Tab>
+```
 
 要了解更多关于 Team Foundation 中跟踪依赖关系的信息，请访问 aqua.ms/TFDependencies
 
@@ -6130,9 +5531,6 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 > 注意 Team Foundation 实际上可以检测多个帐户使用相同的显示名称。在这种情况下，工作项字段中使用的名称将是 Active Directory 显示名称与完整用户名的组合（格式为 DOMAIN\user）的消歧名称。
 
-
-
-
 # Team Web Access 自定义工作项控件
 
 由于 Team Web Access 在 Team Foundation Server 2012 中经过完全重写，创建自定义工作项控件的模型已经完全改变，并且现在已获得完全支持。你将创建一个基于 jQuery 的控件，并使用新引入的 Web Access 扩展管理体验进行部署。这使得你无需担心向服务器部署任何内容。
@@ -6140,6 +5538,7 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 欲需了解更多信息，请参阅以下两篇关于创建和部署新 Team Web Access 自定义工作项控件的博客文章：
 
 - 1. http://aka.ms/TWACustomControls
+
 - 2. http://aka.ms/TWADployCustomControls
 
 # 首选控件与回退控件
@@ -6156,11 +5555,11 @@ Team Foundation Server Power Tools 安装程序可在 Visual Studio Gallery 获�
 
 要为 Windows Forms 创建自定义控件，你本质上必须创建一个新的 Windows Forms 控件，该控件实现了 Team Foundation Server 2012 SDK 中的特定接口。以下章节描述了可以为工作项控件实现的一些常用接口。
 
-# IWorkItemControl
+## IWorkItemControl
 
-IWorkItemControl 接口实际上是需要实现的主要接口，也是自定义工作项控件所必需的。它包含了自定义工作项控件的基础功能，其成员供 Visual Studio Explorer 中的工作项表单使用。
+`IWorkItemControl` 接口实际上是需要实现的主要接口，也是自定义工作项控件所必需的。它包含了自定义工作项控件的基础功能，其成员供 Visual Studio Explorer 中的工作项表单使用。
 
-列表 12-1 显示了 IWorkItemControl 接口的完整签名。
+列表 12-1 显示了 `IWorkItemControl` 接口的完整签名。
 
 LISTING 12-1: IWorkItemControl 接口定义
 
@@ -6195,25 +5594,36 @@ namespace Microsoft.TeamFoundation.WorkItemTracking.Controls
 表 12-7: 用于提供基础功能的常用成员
 
 | 成员 | 描述 |
+
 | --- | --- |
+
 | WorkItemDatasource | 包含对实际 WorkItem 对象的引用（必须正确转换为 Microsoft.TeamFoundation.WorkItemTracking.Client.WorkItem 类型）。它在初始化期间可能可能为 null，因此请务必优雅地处理此情况。 |
+
 | WorkItemFieldName | 包含工作项控件用于编辑的字段名称。这是在控件定义中工作项类型类型定义的布局部分中定义的。并非所有控件都需要编辑工作项字段，因此此属性的值可以为空。 |
+
 | Properties | 提供工作项类型定义中控件中定义的所有属性。在 Team Foundation Server 2012 中，你甚至可以使用 CustomControlOptions 类型，该类型包含供控件使用的自定义属性。 |
+
 | ReadOnly | 指定控件是否应向最终用户渲染为只读。 |
+
 | BeforeUpdateDatasource/AfterUpdateDatasource | 这些事件在数据刷新到数据源（工作项）之前和之后实现并触发。 |
+
 | Clear | 可能由工作项系统调用。它指示控件应该清除 |
 
 # 表 12-7（续）
 
 | 成员 | 描述 |
+
 | --- | --- |
+
 | FlushDatasource | 由工作项系统调用，指示工作项存储控件的值。这通常在用户保存工作项时发生。 |
+
 | InvalidatedDatasource | 由工作项系统调用，指示控件应该重绘。通过读取刷新。 |
+
 | SetSite | 提供指向 IServiceProvider 的指针，允许控件访问工作项服务。 |
 
-# IWorkToolTip
+## IWorkToolTip
 
-IWorkToolTip 接口允许控件在用户悬停在字段上时关于字段的提示信息。列表 12-2 显示了 IWorkToolTip 接口的签名。
+`IWorkToolTip` 接口允许控件在用户悬停在字段上时关于字段的提示信息。列表 12-2 显示了 `IWorkToolTip` 接口的签名。
 
 LISTING 12-2: IWorkToolTip 接口定义
 
@@ -6233,9 +5643,9 @@ namespace Microsoft.TeamFoundation.WorkItemTracking.Controls
 }
 ```
 
-# IWorkItemAction
+## IWorkItemAction
 
-当控件需要用户的某些操作时，实现了 IWorkItemAction 接口。列表 12-3  IWorkItemAction 接口的定义。
+当控件需要用户的某些操作时，实现了 `IWorkItemAction` 接口。列表 12-3 `IWorkItemAction` 接口的定义。
 
 LISTING 12-3: IWorkItemAction 接口定义
 
@@ -6259,9 +5669,9 @@ namespace Microsoft.TeamFoundation.WorkItemTracking.Controls
 }
 ```
 
-# IWorkItemClipboard
+## IWorkItemClipboard
 
-IWorkItemClipboard 接口为控件提供了与剪贴板集成的功能。列表 12-4 是 IWorkItemClipboard 接口的定义。
+`IWorkItemClipboard` 接口为控件提供了与剪贴板集成的功能。列表 12-4 是 `IWorkItemClipboard` 接口的定义。
 
 LISTING 12-4: IWorkItemClipboard 接口定义
 
@@ -6290,12 +5700,10 @@ namespace Microsoft.TeamFoundation.WorkItemTracking.Controls
 一旦对工作项控件实现了接口，你就必须编译 .NET 项目并部署包含自定义项编译程序集以及工作项自定义控件部署文件。每个构件都应部署到 Visual Studio 2012 和 Microsoft Test Manager 2012 客户端的以下位置之一。客户端将按照以下顺序搜索工作项控件：
 
 - 注册表中的值项：如果你想将构件存储在自定义文件夹中，可以向以下注册表项添加自定义值指向该自定义文件夹。注意：除非由自定义安装程序手动创建，否则此注册表项不存在。
+
 `[HKEY_LOCAL_MACHINE\Software\VisualStudio\11.0\WorkItemTracking\WorkItemTracking\CustomControls\LookInFolders] "C:\\CustomControls\MyCustomLocation\*"`
 
-- 应用程序数据 2012 特定位置：例如 C:\ProgramData\Microsoft\Team Foundation Work Item Tracking\CustomControls\11.0\.
-
-
-
+- 应用程序数据 2012 特定位置：例如 `C:\ProgramData\Microsoft\Team Foundation Work Item Tracking\CustomControls\11.0\`.
 
 本地应用数据 2012-特定位置—例如，`C:\Users\Username\AppData\Local\Microsoft\Team Foundation\Work Item Tracking\Controls\11.0`。
 
@@ -6346,10 +5754,17 @@ Visual Studio 私有程序集位置—例如，`C:\Program Files (x86)\Microsoft
 本章内容包括：
 
 - 定义和管理您的产品待办列表
+
 - 在平衡资源能力的同时规划迭代
+
 - 使用任务看板跟踪您的工作
+
 - 了解自定义敏捷规划和跟踪工具的选项
+
 - 发现团队如何向利益相关者请求特定需求的反馈
+
+
+
 - 学习项目利益相关者如何使用 Microsoft Feedback Client 对您的软件提供丰富的反馈
 
 《敏捷宣言》了影响团队管理方式的一般原则。敏捷团队不是尝试使用瀑布方法预先定义整个项目进度，而是允许计划随时间推演。工作被拆分为若干连续的*迭代*，每次迭代的持续时间在一到四周之间。
@@ -6373,9 +5788,7 @@ Team Foundation Server 2012 引入了“团队”（team）的概念，您可以
 要创建一个团队，请遵循以下步骤：
 
 1. 打开浏览器并访问团队项目的 Web Access 首页。可以通过点击 Team Explorer 中的 Web Access 访问它。地址格式为 `http://<server>:<port>/tfs/<collection-name>/<team-project-name>`。
-
 2. 点击右上角的齿图标打开管理上下文。如果您没有团队项目的管理权限，需要联系团队项目管理员执行这些步骤。在此屏幕上，您将看到为团队项目配置的团队列表。
-
 3. 点击“新建团队”（New Team）显示新建团队对话框，如图 13-1 所示。您可以为团队提供名称和描述，并指定默认团队成员继承。在“设置”选项卡中，您还可以声明哪些用户应该是团队管理员，并为您的团队创建一个区域（area）。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_350_0.png)
@@ -6384,14 +5797,7 @@ Team Foundation Server 2012 引入了“团队”（team）的概念，您可以
 
 您在第 11 章中接触过区域（areas）的概念。区域提供了一种对团队项目内部工作分类的方法。您可以选择为每个团队创建区域，这样（例如）针对 Fabrikam Fiber Web Site 团队提交的错误将自动路由到 Fabrikam Fiber Web Site 团队。
 
-4. 完成后点击“创建团队”（Create Team）以创建团队并返回团队项目的团队列表。点击列表中的您的团队以显示图 13-2 所示的管理对话框。从这里您可以轻松添加新的团队成员或团队
-
-
-
-
-## 第 13 章 团队管理与敏捷计划工具
-
-管理员。你也可以更改团队的名称或描述，或者选择一张图像代表你的团队。
+4. 完成后点击“创建团队”（Create Team）以创建团队并返回团队项目的团队列表。点击列表中的您的团队以显示图 13-2 所示的管理对话框。从这里您可以轻松添加新的团队成员或团队管理员。你也可以更改团队的名称或描述，或者选择一张图像代表你的团队。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_351_0.png)
 
@@ -6445,11 +5851,7 @@ Team Foundation Server 2012 引入了“团队”（team）的概念，您可以
 
 实践 Scrum 的团队会熟悉名为“速率”（velocity）的概念。速率是一个用于计算团队在给定迭代中能够交付工作量的指标。在 Scrum 中，它通常以故事点（story points）衡量。其他团队可能更喜欢用小时、天等进行估算。无论你的团队使用什么估算技术，待办的唯一要求是你应该保持估算技术的一致。例如，当团队中的某些人以天为单位估算，而另一些人以故事点为单位估算时，很难制定一致的计划。
 
-
-
-
-
-# 迭代规划
+## 迭代规划
 
 > **注意** 大多数实践 Scrum 的团队在团队提供工作量估算（Effort estimate）时也会更改待办列表（backlog）项目的状态。你不强制遵循这一协议，但对于区分真正的新工作（可能仅处于“想法”阶段）和你的团队花时间进行估算的工作非常有帮助。
 
@@ -6458,8 +5860,6 @@ Team Foundation Server 2012 引入了“团队”（team）的概念，您可以
 预测结果纯粹是估算。为了实际为给定的迭代安排工作，你可以将工作拖放并释放到此视图左侧列出的当前迭代或未来迭代中。当你将工作拖放并释放到某个迭代时，迭代路径（Iteration path）中的值将更新以反映分配的迭代，并且 Team Foundation Server 中工作项的迭代（Iteration）字段也将会被更新。
 
 > **注意** 尽管你已将工作分配给特定的迭代，它仍然显示在产品待办列表中，直到你将工作切换到“进行中”（in progress）状态。对于 Scrum 过程模板，工作在到达“已承诺”（Committed）状态之前被认为处于进行中。按照惯例，大多数团队通常等到将工作拆分为子任务后才将其切换到“已承诺”状态。接下来，你将了解如何拆分。
-
-# 迭代规划
 
 在你确定了想要为给定的迭代交付的工作后，可以点击产品待办列表左侧列表中的迭代，以打开图 13-8 所示的迭代规划视图。该图显示了一个处于迭代中期的迭代，这意味着团队已经完成了一些工作，并正准备完成本次迭代。
 
@@ -6478,14 +5878,13 @@ Fabrikfiber/Fabrikfiber: Fiber Web 团队 > Cameron Skinner
 Sprint 3
 
 2月 06日 - 2月 17日
+
 剩余 9 天
 
 内容 容量 工作详细信息位于
 
 +   过去
-
 +   当前
-
 +   Sprint 3
 
 | ID | 标题 | 状态 | 产品... | 工作 | 团队 |
@@ -6501,14 +5900,11 @@ Sprint 3
 | 58 | 与技术早期采用者评审功能。 | 进行中 | 任务 | Jen | (15/15 小时) |
 | 60 | 为新功能创建 UI。 | 进行中 | 任务 | Brian | |
 | 62 | 与策略团队评审实现。 | 待办 | 任务 | Jen | |
-| 64 | 为客户详情创建 UI。 | 待办 | 任务 | Annie | | |
+| 64 | 为客户详情创建 UI。 | 待办 | 任务 | Annie | |
 
 +   未来
-
 +   Sprint 4
-
 +   Sprint 5
-
 +   Sprint 6
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_357_0.png)
@@ -6523,25 +5919,9 @@ Sprint 3
 
 > 注意：许多人都有的一个常见问题是早期在定义待办列表项时定义的“工作量”（effort）与为任务提供的“剩余工作量”（remaining work）之间的关系。工作量通常是为了降低待办列表风险的粗略估算，而剩余工作是对待完成内容的更精确的衡量。
 
-为了实际为给定的迭代安排工作，你可以将工作拖放并释放到此视图左侧列出的当前迭代或未来迭代中。当你将工作拖放并释放到某个迭代时，迭代路径（Iteration path）中的值将更新以反映分配的迭代，并且 Team Foundation Server 中工作项的迭代字段也将更新。
-
-> **注意** 尽管你已将工作分配给特定的迭代，它仍然显示在产品待办列表中，直到你将工作切换到“进行中”状态。对于 Scrum 过程模板，工作在到达“已承诺”状态之前被认为处于进行中。按照惯例，大多数团队通常等到将工作拆分为子任务后才将其切换到“已承诺”状态。接下来，你将了解如何拆分。
-
-你应该为此任务提供标题，并且如果可能，为剩余工作量提供估算。默认情况下，剩余工作假设以小时为单位，但你也可以对其进行自定义（参见“自定义选项”）。你可以将其分配给将完成此项工作的团队成员，但不强制这样做。保存此工作并继续将你的其余工作拆分为任务。如果你还没有这样做，请将剩余工作项的状态设置为“已承诺”，因为此迭代已经完成拆分。
-
-> 注意：许多人都有的一个常见问题是早期在定义待办列表项时定义的“工作量”与为任务提供的“剩余工作量”之间的关系。工作量通常是为了降低待办列表风险的粗略估算，而剩余工作是对待完成内容的更精确的衡量。
-
-为了实际为给定的迭代安排工作，你可以将工作拖放并释放到此视图左侧列出的当前迭代或未来迭代中。当你将工作拖放并释放到某个迭代时，迭代路径（Iteration path）中的值将更新以反映分配的迭代，并且 Team Foundation Server 中工作项的迭代字段也将更新。
-
-> **注意** 尽管你已将工作分配给特定的迭代，它仍然显示在产品待办列表中，直到你将工作切换到“进行中”状态。对于 Scrum 过程模板，工作在到达“已承诺”状态之前被认为处于进行中。按照惯例，大多数团队通常等到将工作拆分为子任务后才将其切换到“已承诺”状态。接下来，你将了解如何拆分。
-
-（此处省略重复的翻译段落，根据指令“不要重复输出原文”且原文中存在大量重复内容，此处保留核心逻辑翻译）
-
-
-
-
-
 # 跟踪工作 | 323
+
+
 
 > 注意：任务板理解你团队项目所基于底层流程的规则和限制。例如，考虑一种情况：你过早地将任务从“进行中”（In Progress）移动到“已完成”（Done）——可能是误操作，也可能是你意识到还有额外工作需要完成。如果你尝试从“已完成”列移回“进行中”列，将收到一条错误消息，指示“进行中”的工作剩余时间不能为 0。要修复此问题，请双击任务打开它并分配一个新的剩余时间值。
 
@@ -6580,6 +5960,7 @@ Sprint 3
 Team Foundation Solver 微软公司。保留所有权利。
 
 图 13：敏捷任务板
+
 该界面对触控友好。如果你有一个共享的团队房间，可以配置看板板，让团队成员能够随时更新他们的工作状态。所有内容都存储在 Team Foundation 仓库中，成员可以在任何网络浏览器或设备上访问相同的视图，查看同事正在做什么，并提供自己的状态更新。
 
 如果你发现在此视图中空间受限，可以通过点击父工作项标题左侧的箭头来折叠已完成的待办项。你还可以使用浏览器的缩放功能（使用 Ctrl + 和 Ctrl +）在单个屏幕上显示更多工作。
@@ -6616,10 +5997,6 @@ www-it-ebooks.info
 
 从旧版本升级的过程将在第 2 章中进行更详细的介绍。
 
-
-
-
-
 > 注意：如果你在“活动”列表中没有看到“请求反馈”（Request Feedback），说明你的 Team Foundation Server 实例未配置为使用 SMTP 邮件服务器。你的 Team Foundation Server 管理员可以使用应用程序层上的 Team Foundation Server 管理控制台进行此配置。
 
 你还需要确保你的用户账户具有适当的许可访问以请求反馈。只有拥有 Visual Test Professional 2012、Visual Studio Premium 2012 或 Visual Studio Ultimate 2012 的用户允许使用此功能请求反馈。这可以使用 Team Web Access 的管理功能进行配置，第 22 章中有更详细的描述。
@@ -6627,8 +6004,6 @@ www-it-ebooks.info
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_364_0.png)
 
 图 13-13：请求反馈对话框
-
-## 328 | 第 13 章 团队管理与敏捷规划工具
 
 按照对话框中的步骤操作操作，向你的利益相关者请求反馈：
 
@@ -6665,9 +6040,10 @@ Cameron Skinner 邀请你对团队项目 FabrikamFiber 提供反馈
 如果你的机器上尚未安装反馈工具，请安装该反馈工具。
 
 谢谢，
+
 Cameron Skinner
 
-如果点击“开始你的反馈会话”链接未能启动反馈会话，请复制以下 URL (nbfclient://localhost:8080/Default/Collection/FabrikamFiber?id=81) 并将其粘贴到浏览器地址栏以启动会话。
+如果点击“开始你的反馈会话”链接未能启动反馈会话，请复制以下 URL (`nbfclient://localhost:8080/Default/Collection/FabrikamFiber?id=81`) 并将其粘贴到浏览器地址栏以启动会话。
 
 **图 13-14：** 请求反馈的电子邮件
 
@@ -6704,9 +6080,6 @@ www.it-ebooks.info
 ## 自愿反馈
 
 利益相关者还可以随时通过直接启动反馈客户端（启动 Microsoft Visual Studio 2012 反馈客户端）而不是反馈请求电子邮件来提供主动或自愿的反馈。他们首先会被提示连接到想要提供反馈的适当 Team Foundation Server 实例和团队项目。之后，他们可以使用视频、音频、文本和屏幕截图提供反馈。
-
-
-
 
 此前。这里需要注意的是，使用自愿反馈方法创建的反馈响应（Feedback Response）工作项不会显示在默认的“反馈请求”（Feedback Requests）工作项查询中。相反，你应该编写自定义查询来搜索所有类型为“反馈响应”的项。由反馈客户端非主动生成的反馈，其标题默认会以“自愿”（Voluntary）开头。
 
@@ -6768,7 +6141,10 @@ Team Foundation Server 2010 允许组织将多个多个独立的服务器合并�
 
 > **注意** Team Foundation Server 2012 的一个用新功能之一是任务板。每个任务板页面的顶部都有一个微型的燃尽图（burndown chart），每当你更新当前迭代中的任何工作项时，它就会自动更新。产品待办列表顶部的速率图（velocity graph）以及冲刺待办列表（sprint backlog）右侧的容量图（capacity graph）也是如此。
 
+
+
 由于此图没有使用数据仓库功能，它是最新的，不会产生任何延迟。这使其成为发布到例如项目状态邮件的理想人选。
+
 更多信息请参阅第 13 章。
 
 在 2010 版本之前，不支持对关系型仓库进行报告。从 2010 版本开始，情况不再如此。仓库之上提供了几个视图来支持报告。这些视图使得查询数据更加容易，并保持了未来版本的兼容性。此外，命名规范已标准化，以区分事实表和维度表。例如，`dbo.WorkItem` 现在是 `dbo.DimWorkItem`，将其标识为维度表。
@@ -6776,6 +6152,7 @@ Team Foundation Server 2010 允许组织将多个多个独立的服务器合并�
 > **注意** 本章后面提供了关于事实表和维的详细讨论。
 
 除了支持对关系型仓库的查询，工作项跟踪适配器还进行了更新以提高性能。新的适配器现在从操作存储移动到关系型仓库的速度比之前的版本更快。适配器的目标是在正常运行期间将工作项跟踪的延迟保持在五分钟。
+
 在 2012 版本中，关系型仓库的唯一架构更改是：
 
 - 在迭代中增加了开始日期结束日期。
@@ -6784,14 +6161,12 @@ Team Foundation Server 2010 允许组织将多个多个独立的服务器合并�
 # 分析服务立方体的变更
 
 尽管 Team Foundation Server 2005 和 2008 中的立方体提供了有用数据，并且客户使用良好，但仍有改进空间。除了支持架构改进外，Team Foundation Server 2010 的变更改进了可用性、查询性能和处理性能。
+
 Team Foundation Server 2010 对立方体架构的主要更改包括：
 
 - 将“当前工作项”（Current Work Item）和“工作项历史”（Work Item History）度量组合并到“工作项”（Work Item）度量组中。现在只需包含日期度量即可显示历史趋势。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_372_0.png)
-
-
-
 
 区域（Area）和迭代（Iteration）维度已作为真正的层次结构合并到工作项（Work Item）维度。
 
@@ -6829,17 +6204,15 @@ Team Foundation Server 2012 集成同时支持 SharePoint 2007 和 SharePoint 20
 
 # TEAM FOUNDATION SERVER 数据仓库
 
-
-
 Team Foundation Server 的报告功能和数据仓库功能由表 14-1 所示的三个存储组成。
 
 **表 14-1：Team Foundation Server 报告数据存储**
 
 | 数据存储 | 数据库名称 | 特性 |
 |---|---|---|
-| 运行型 (Operational) | Tfs_Configuration,<br>Tfs_Collection | 规范化，针对检索最新数据进行了优化，且具有事务性。 |
-| 关系型仓库数据库 | Tfs_Warehouse | 具有星型架构，并包含所有用于分析的历史数据。 |
-| Analysis Services 立方体 | Tfs_Analysis | 数据经过预聚合、预索引，并包含高级分析功能。 |
+| 运行型 (Operational) | `Tfs_Configuration`, `Tfs_Collection` | 规范化，针对检索最新数据进行了优化，且具有事务性。 |
+| 关系型仓库数据库 | `Tfs_Warehouse` | 具有星型架构，并包含所有用于分析的历史数据。 |
+| Analysis Services 立方体 | `Tfs_Analysis` | 数据经过预聚合、预索引，并包含高级分析功能。 |
 
 除了这三个数据存储外，还有一组计划作业，用于在存储器之间移动数据：
 
@@ -6852,26 +6225,23 @@ Team Foundation Server 的报告功能和数据仓库功能由表 14-1 所示的
 
 **图 14-2：Team Foundation Server 数据仓库架构**
 
-# 运行型存储 (Operational Stores)
+## 运行型存储 (Operational Stores)
 
-Team Foundation Server 的运行型存储只是支持日常操作的数据库。在之前的版本中，不同的区域有不同的数据库；在 Foundation 2010 中，它们被合并到了单一的 Tfs_Collection 中。这些数据库的架构针对报告进行了优化，而不是针对历史数据。
+Team Foundation Server 的运行型存储只是支持日常操作的数据库。在之前的版本中，不同的区域有不同的数据库；在 Foundation 2010 中，它们被合并到了单一的 `Tfs_Collection` 中。这些数据库的架构针对报告进行了优化，而不是针对历史数据。
 
 不应直接访问运行型存储。访问它们的唯一接口是通过立方体。
 
-# 关系型仓库数据库与仓库适配器 (Relational Warehouse Database and Warehouse Adapters)
+## 关系型仓库数据库与仓库适配器 (Relational Warehouse Database and Warehouse Adapters)
 
-关系型仓库数据库将数据存储在组织为星型架构的表中。星型架构的核心被称为事实表，相关表表示维度。例如，dbo.CurrentItem 为运行存储中的每个工作项提供一行。维度表存储给定维度的值。例如，Person 维度被 Work Items 事实表引用。你将在本章后面学习更多关于事实表和维度的知识。
+关系型仓库数据库将数据存储在组织为星型架构的表中。星型架构的核心被称为事实表，相关表表示维度。例如，`dbo.CurrentItem` 为运行存储中的每个工作项提供一行。维度表存储给定维度的值。例如，Person 维度被 Work Items 事实表引用。你将在本章后面学习更多关于事实表和维度的知识。
 
 Team Foundation Server 中的每个组件对存储数据的要求不同。运行存储的仓库适配器负责将数据传输到仓库。当你向工作项类型添加新字段并将其标记为可报告时，仓库适配器将对立方体执行架构更改。
 
 然而，这种方法的缺点是，如果你对关系型仓库或立方体进行自定义，必须将其作为自定义仓库适配器进行部署。否则，当仓库重建时，你的自定义内容将会丢失。
 
-
-
-
 > 注意 与之前的 Team Foundation Server 版本一样，具有 `Html` 数据类型的字段不会存储在关系型数据仓库中。因此，无法对这些字段进行查询；你必须使用 Work Item Tracking 模型来查询和检索它们。
 
-## 查询当前工作项视图
+### 查询当前工作项视图
 
 使用 `CurrentWorkItemView`，你可以查询关系型数据仓库并使用 Work Item Tracking 模型检索工作项列表。例如，以下是一个工作项查询 (WIQ)，它返回 Contoso 项目中分配给 John Smith 的所有未关闭 Bug：
 
@@ -6919,7 +6289,7 @@ ORDER BY
 [System.Id]
 ```
 
-## 动态检索 Web 地址
+### 动态检索 Web 地址
 
 人们想要做的操作之一是从报告中的工作项提供指向该工作项 Web Access 视图的超链接。这非常有用，因为它允许其他无需安装 Visual Studio 的情况下与工作项进行交互。
 
@@ -6947,7 +6317,7 @@ WHERE WorkItemType = 'WorkItemTracking/Workitem'
 AND ProjectNodeTypeTypeName = 'Team Project Collection'
 ```
 
-## 查询工作项历史视图
+### 查询工作项历史视图
 
 你可以构建一个“截至（as of）”查询，返回在特定日期之前修改过的每个工作项的最后记录。例如，以下“截至”查询返回了截至 2011 年 12 月底的剩余工作：
 
@@ -6959,7 +6329,7 @@ AND RecordCount > 0
 AND ProjectPath = '\ContosoCollection\Contoso'
 ```
 
-## 查询关系型数据仓库的其他考虑
+### 查询关系型数据仓库的其他考虑
 
 关系型数据仓库不适用于所有查询，因此某些查询使用操作存储的 Work Item Tracking 模型会更快。Team Foundation Server 2010 引入了多个项目集合，这些集合共享关系型数据仓库和立方体。
 
@@ -6980,11 +6350,6 @@ AND ProjectPath = '\ContosoCollection\Contoso'
 - 使用 `ProjectPath` 或 `ProjectGUID` 作为过滤器。项目团队名称在同一逻辑服务器上的多个集合中并不一定是唯一的，而项目路径是带有名称的完全限定路径，且项目的 GUID 是唯一的。
 - 使用唯一键进行联接。例如，工作项 ID 在仓库中不再保证是唯一的，因为相同的工作项 ID 可能存在于不同的团队项目集合中。
 - 注意补偿记录。每当工作项被更新时，仓库中就会添加一对记录。第一条记录会抵消之前的记录。这使得某些类型的关系型数据仓库查询变得更快。
-
-（注：提供的 OCR 文本包含大量重复和碎片。此处已根据逻辑流输出去重后的内容。）
-
-
-
 
 # SharePoint 扩展
 
@@ -7010,18 +6375,23 @@ Excel 服务是 SharePoint 企业版的一个功能。它允许将 Excel 工作�
 出于某些原因，您的团队项目可能没有关联项目门户或报告，例如在以下场景：
 
 - *在创建团队项目时，服务器或团队集合可能尚未配置报告或 SharePoint 集成。*
-- *用于创建团队项目时使用的过程模板可能未包含报告或 SharePoint 任务。*
+
+
+
+*用于创建团队项目时使用的过程模板可能未包含报告或 SharePoint 任务。*
 
 # 第 14 章 报告与 SharePoint 仪表板
 
-- 在项目创建向导期间可能跳过了创建 SharePoint 站步骤。
-- 在升级之前，团队项目与项目门户之间的连接可能被移除或已失效。
-- 2005 或 2008 服务器可能被导入到 2010 而不是升级，这不会保留项目门户和报告设置。
+在项目创建向导期间可能跳过了创建 SharePoint 站步骤。
+
+在升级之前，团队项目与项目门户之间的连接可能被移除或已失效。
+
+2005 或 2008 服务器可能被导入到 2010 而不是升级，这不会保留项目门户和报告设置。
 
 幸运的是，在 Team Foundation Server Power Tools 的帮助下，在之后可以轻松地从模板中添加门户或默认报告。通过 Visual Studio 命令行提示符，可以使用以下命令：
 
-- tfft addprojectportal—为没有门户的现有团队项目创建门户。
-- tfft addprojectreports—为现有团队项目创建（或覆盖）报告。
+- `tfft addprojectportal` — 为没有门户的现有团队项目创建门户。
+- `tfft addprojectreports` — 为现有团队项目创建（或覆盖）报告。
 
 此外，您可以使用 Visual Studio 并导航到 Team 菜单栏、Team Project Settings，然后是 Portal Settings（门户设置），随时修改团队项目与 SharePoint 站点的关联，如图 14-4 所示。
 
@@ -7029,11 +6399,11 @@ Excel 服务是 SharePoint 企业版的一个功能。它允许将 Excel 工作�
 
 图 14-4：门户设置对话框
 
-# 创建报告
+## 创建报告
 
 报告是 Team Foundation Server 中的一项强大功能。它打破了由于信息缺乏通常导致的团队内部障碍。Team Foundation Server 提供了一套强大的内置报告，并提供了根据需要添加额外报告的能力。
 
-# 工具
+## 工具
 
 由于 Team Foundation Server 中的报告基于 SQL Server，因此任何可以从 SQL Server 生成报告的工具都可以使用。以下是 Team Foundation Server 设计配合的主要工具：
 
@@ -7048,7 +6418,7 @@ Excel 服务是 SharePoint 企业版的一个功能。它允许将 Excel 工作�
 
 图 14-5：报告编制工具比较
 
-# 来自工作项查询的 Excel 报告
+## 来自工作项查询的 Excel 报告
 
 使用 Excel 创建报告的门槛最低。对于大多数用途来说，它足够强大了，并且利用了大多数人已经熟悉的工具。也许最令人印象深刻的新型报告功能（最初引入于 Team Foundation Server 2010 中）是根据工作项查询（Work Item Queries）创建报告的能力。
 
@@ -7101,55 +6471,51 @@ Excel 服务是 SharePoint 企业版的一个功能。它允许将 Excel 工作�
 
 > 注意：欲更多信息，请参阅 http://aka.ms/Tfs2012ExcelReports 中的“Using Work Item Queries Creating Reports in Microsoft Excel”。
 
-# SQL Server Reporting 报告
+## SQL Server Reporting 报告
 
 Reporting Services 提供了一个强大的平台。除了允许您运行报告外，Reporting Services 还提供了以下功能：
 
 - **订阅（Subscriptions）**——可以按定期计划执行报告并将结果通过电子邮件发送（例如，每周报告）。
 - **数据驱动订阅**——可以根据数据库查询的结果动态更改报告的参数或执行计划。例如，可以向开启高优先级 Bug 的团队成员发送每日电子邮件。
-
-
-
-
-缓存和快照——如果报告特别复杂，或者经常刷新，你可以配置缓存和快照来提高性能。
-
-链接报告——通过使用链接报告，你可以基于单个基础报告创建具有不同参数的多个报告（例如，针对项目内不同团队具有不同区域和迭代参数的剩余工作报告）。
+- 缓存和快照——如果报告特别复杂，或者经常刷新，你可以配置缓存和快照来提高性能。
+- 链接报告——通过使用链接报告，你可以基于单个基础报告创建具有不同参数的多个报告（例如，针对项目内不同团队具有不同区域和迭代参数的剩余工作报告）。
 
 | | A | B | C | D | E | F | G | I | n |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 返回目录 | | | | | | | | | |
-| 2 | | | | | | | | | | |
+| 1 | 返回目录 | | | | | | | | |
+| 2 | | | | | | | | | |
 | 3 | 团队项目集 | 工作项.区域层次结构 | 工作项类型 | | | | | | |
-| 4 | | | | | | | | | | |
-| 5 | 工作项计数 | | | | | | | | | |
-| 6 | | | | | | | | | | |
-| 7 | | | | | | | | | | |
-| 8 | 30 | | | | | | | | | |
-| 9 | 25 | | | | | | | | | |
-| 10 | | | | | | | | | | | |
-| 11 | | | | | | | | | | | |
-| 12 | | 17 | 17 | 17 | 17 | 17 | 17 | | | | |
-| 13 | 5 | | | | | | | | | | |
-| 14 | | | | | | | | | | | |
-| 15 | | | | | | | | | | | |
-| 16 | 4月07日结束周 | 4月28日结束周 | 5月12日结束周 | 5月19日结束周 | 5月26日结束周 | 6月02日结束周 | 6月09日结束周 | | | | |
-| 17 | | | | 2012 | | | | | | | |
-| 18 | | | | | | | | | | | |
-| 19 | | | | | | | | | | | |
-| 20 | 年-周-日期层次结构 | | | | | | | | | | |
-| 21 | 团队项目集 | Tailspin Toys | .T | | | | | | | | |
-| 22 | 工作项.区域层次结构 | Tailspin Toys | .T | | | | | | | | |
-| 23 | 工作项类型 | 用户故事 | .T | | | | | | | | |
-| 24 | | | | | | | | | | | | ||| 25 | 工作项计数 | | | | | | | | | | |
-| 26 | 趋势日期 | | | | | | | | | | | |
-| 27 | 2012 | 4月07日结束周 | 4月28日结束周 | 5月12日结束周 | 5月19日结束周 | 5月26日结束周 | 6月02日结束周 | 6月09日结束周 | | | | |
-| 28 | | 17 | 7 | | | | | | | | | |
-| 29 | | | 17 | 7 | | | | | | | | |
-| 30 | | | | 17 | 7 | | | | | | | |
-| 31 | | | | | 17 | 7 | | | | | | |
-| 32 | | | | | | 17 | 7 | | | | | |
-| 33 | | | | | | | | | | | | |
-| 34 | 总计 | 17 | | | | | | | | | | |
+| 4 | | | | | | | | | |
+| 5 | 工作项计数 | | | | | | | | |
+| 6 | | | | | | | | | |
+| 7 | | | | | | | | | |
+| 8 | 30 | | | | | | | | |
+| 9 | 25 | | | | | | | | |
+| 10 | | | | | | | | | |
+| 11 | | | | | | | | | |
+| 12 | | 17 | 17 | 17 | 17 | 17 | 17 | | |
+| 13 | 5 | | | | | | | | |
+| 14 | | | | | | | | | |
+| 15 | | | | | | | | | |
+| 16 | 4月07日结束周 | 4月28日结束周 | 5月12日结束周 | 5月19日结束周 | 5月26日结束周 | 6月02日结束周 | 6月09日结束周 | | |
+| 17 | | | | 2012 | | | | | |
+| 18 | | | | | | | | | |
+| 19 | | | | | | | | | |
+| 20 | 年-周-日期层次结构 | | | | | | | | |
+| 21 | 团队项目集 | Tailspin Toys | .T | | | | | | |
+| 22 | 工作项.区域层次结构 | Tailspin Toys | .T | | | | | | |
+| 23 | 工作项类型 | 用户故事 | .T | | | | | | |
+| 24 | | | | | | | | | |
+| 25 | 工作项计数 | | | | | | | | |
+| 26 | 趋势日期 | | | | | | | | |
+| 27 | 2012 | 4月07日结束周 | 4月28日结束周 | 5月12日结束周 | 5月19日结束周 | 5月26日结束周 | 6月02日结束周 | 6月09日结束周 | | |
+| 28 | | 17 | 7 | | | | | | |
+| 29 | | | 17 | 7 | | | | | |
+| 30 | | | | 17 | 7 | | | | |
+| 31 | | | | | 17 | 7 | | | |
+| 32 | | | | | | 17 | 7 | | |
+| 33 | | | | | | | | | |
+| 34 | 总计 | 17 | | | | | | | |
 
 # 按状态的工作项计数（前10名）
 
@@ -7161,13 +6527,13 @@ Reporting Services 提供了一个强大的平台。除了允许您运行报告�
 - 集成在 Visual Studio Team Explorer 中
 - 作为 SharePoint 项目门户上的 Web 部件
 
-# 权限
+## 权限
 
 在从报告管理器网站访问 SQL Server Report Builder 之前，你必须获得相应的权限。除了此权限外，如果你想发布报告供他人使用，你还需要该权限。Team Foundation Content Manager 角色是 Team Foundation Server 配置的一部分创建的，包含了这两个权限。
 
 > 注意 更多信息，请参阅 http://aka.ms/tfs2012SSRRoles 上的“SQL Server Reporting Services Roles”。
 
-# SQL Server Report Builder
+## SQL Server Report Builder
 
 Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境。使用该工具，你可以直接从 Reporting Services 服务器创建和编辑报告。
 
@@ -7181,7 +6547,7 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 
 在图 14-11 所示的“设计查询”屏幕上，拖入工作项.区域层次结构和工作项计数。
 
-# 设计查询与 SharePoint 仪表板
+## 设计查询与 SharePoint 仪表板
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_388_0.png)
 
@@ -7195,13 +6561,13 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 
 > 注意 更多信息，请参阅 http://aka.ms/tfs2012SSRRoles 上的“SQL Server Reporting Services Roles”。
 
-# 权限
+## 权限
 
 在从报告管理器网站访问 SQL Server Report Builder 之前，你必须获得相应的权限。除了此权限外，如果你想发布报告供他人使用，你还需要该权限。Team Foundation Content Manager 角色是 Team Foundation Server 配置的一部分创建的，包含了这两个权限。
 
 > 注意 更多信息，请参阅 http://aka.ms/tfs2012SSRRoles 上的“SQL Server Reporting Services Roles”。
 
-# SQL Server Report Builder
+## SQL Server Report Builder
 
 Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境。使用该工具，你可以直接从 Reporting Services 服务器创建和编辑报告。
 
@@ -7215,7 +6581,7 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 
 在图 14-11 所示的“设计查询（Design a query）”屏幕上，拖入工作项.区域层次结构维度和工作项计数。
 
-# 设计查询与 SharePoint 仪表板
+## 设计查询与 SharePoint 仪表板
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_388_0.png)
 
@@ -7227,24 +6593,21 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 
 > 注意 更多信息，请参阅 http://aka.ms/tfs2012SSRRoles 上的“SQL Server Reporting Services Roles”。
 
-
-
-
-# 访问仪表板
+## 访问仪表板
 
 访问团队项目仪表板简单方法是在团队资源管理器（Team Explorer）中选择“文档”（Documents）链接，然后选择“显示项目门户”（Show Project Portal）链接，如图 14-14 所示。这将打开默认浏览器并导航到与该项目相关的 SharePoint 站点。
 
 如果团队项目没有关联的项目门户，则主屏幕上将没有“文档”链接。
 
-# 自定义仪表板
+## 自定义仪表板
 
 默认仪表板没有应用过滤器，因此，你进行的首次自定义是将范围限制为你的团队正在使用的区域（area）和迭代（iteration）。
 
 为你的团队创建自定义仪表板，请遵循以下步骤：
 
 - 1. 浏览到你项目门户站点上的现有仪表板。
-2. 选择站点工具栏中的“复制仪表板”（Copy Dashboard）按钮，如图 14-15 所示。
-3. 在图 14-16 显示的“复制仪表板”页面上，为新仪表板输入仪表板名称（Dashboard Name）和标题（Title）。然后，点击“复制仪表板”按钮。
+- 2. 选择站点工具栏中的“复制仪表板”（Copy Dashboard）按钮，如图 14-15 所示。
+- 3. 在图 14-16 显示的“复制仪表板”页面上，为新仪表板输入仪表板名称（Dashboard Name）和标题（Title）。然后，点击“复制仪表板”按钮。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_393_0.png)
 
@@ -7260,21 +6623,23 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 
 现在你可以修改仪表板上的 Web 部，以显示特定于你团队详情。
 
-# 高级自定义
+## 高级自定义
 
 简要介绍的几个高级自定义主题包括：
 
 - 自定义项目门户
 - 自定义仓库适配器（warehouse adapters）
-- TfRedirect.aspx
+- `TfRedirect.aspx`
 
-# 自定义项目门户
+## 自定义项目门户
 
 项目门户的设计是为了根据团队或组织的需求进行自定义。除了 SharePoint 提供的简单自定义功能外，你还可以修改过程模板以更改未来创建的项目门户。以下是你可能需要执行的几种场景：
 
 - 你的组织有一个现有的 SharePoint 站点模板，你想对其进行修改以包含 Team Foundation Server 仪表板。
 - 你想修改现有的 Team Foundation Server 站点模板，以便为未来的项目门户包含你的自定义内容。
 - 你想更改门户的视觉外观。
+
+
 
 > 注意：有关更多信息，请参阅 Phil Hodgson 写的白皮书“Customizing Foundation Server Project Portals”，地址为 http://aka.ms/TfsProjPortals。
 
@@ -7299,13 +6664,13 @@ Report Builder 提供了一个类似于 Microsoft Office 的报告编写环境�
 /sites/DefaultCollection/FabrikamFiber/_layouts/TfsRedirect.aspx?tf:Type=Redirect&tf:ReportName=Dashboards/Burndown&tf:Toolbar=0&Width=381pt&Height=180pt
 ```
 
-TfsRedirect.aspx 是一个“胶水”组件，帮助 SharePoint、Reporting Services 和 Team Foundation Server 协同工作。例如，项目门户上有多个项指向相关资源：
+`TfsRedirect.aspx` 是一个“胶水”组件，帮助 SharePoint、Reporting Services 和 Team Foundation Server 协同工作。例如，项目门户上有多个项指向相关资源：
 
 - 团队 Web 访问（Team Web Access）
 - 过程指南（Process Guidance）
 - 仪表板页面上的报告
 
-由于这些设置仅存储在 Team Foundation Server 中并且可以随时更改，因此 SharePoint 使用 TfsRedirect.aspx 来检索它们。
+由于这些设置仅存储在 Team Foundation Server 中并且可以随时更改，因此 SharePoint 使用 `TfsRedirect.aspx` 来检索它们。
 
 通过指定 `Test` 参数，你可以查看底层设置，这对于调试项目配置问题可能很有用。对于任何现项目门户，只需在站点 URL 后面追加以下内容：
 
@@ -7325,13 +6690,13 @@ TfsRedirect.aspx 是一个“胶水”组件，帮助 SharePoint、Reporting Ser
 
 # 15 Project Server 集成
 
-# 本章包含什么？
+## 本章包含什么？
 
 - 了解 Project Server 的优势
 - 理解集成可能有所帮助的场景
 - 介绍如何使用 Team Server 和 Project Server
 
-# 概述
+## 概述
 
 Project Server 在解决开发和测试团队面临的某些场景方面非常出色。并不是所有团队和组织都需要处理此类场景，但那些可能发现利用 Project Server 可以获益的组织是。以下列表列出了拥有开发团队的组织贡献项目的一些方式：
 
@@ -7343,7 +6708,7 @@ Team Foundation Server 和 Project Server 之间的集成最初在 Team Foundati
 
 如果你想尝试此，可以下载一个演示程序，其中包含了如何使用这些工具的逐步工作流，地址为 http://aka.ms/ProjectServerIntegration。它最初为集成 Team Server 2010 构建的，但很容易将其升级为使用 Team Server 2012 和 Visual Studio 2012。Christophe Fissinger 在 http://aka.ms/UpgradeProjectServerVM 的博客文章概述了这些简单步骤。
 
-# Project Server 基础
+## Project Server 基础
 
 Project Server 在解决开发和测试团队面临的某些场景方面非常出色。并不是所有团队和组织都需要处理此类场景，但那些可能发现利用 Project Server 可以获益的组织是。以下列表列出了拥有开发团队的组织贡献项目的一些方式：
 
@@ -7351,25 +6716,17 @@ Project Server 在解决开发和测试团队面临的某些场景方面非常�
 - 共享资源跟踪的可视性——由于组织可能有多个正在进行的项目，某些团队成员需要参与多个项目。Project Server 能够帮助“预订”共享成员，并在特定团队成员跨多个项目被过度使用时对其进行跟踪。
 - 项目组合分析——Project Server 为组织提供了深度洞察整体项目组合。这还包括自定义项目请求生命周期的能力，从早期启动阶段到项目成本估计，再到所选项目的完成。
 
-
-
-
-
 对于我们现有的预算，我们应该选择哪些项目进行批准以向组织提供最高价值？
 
 - 跨项目依赖关系和交付物——Project Server 能够在当另一个项目的交付物开始滞后时，跟踪您的项目产生的影响。
-
 - 进度——Project Server 非常清楚项目经理能够对任务安排进度，并获取项目完成日期和关键路径的估算，以满足截止日期。
-
 - 工作时间表和行政性时间——需要进行时间跟踪的团队可以使用 Project Server 完成。
-
 - 休假、节假日和休息时间——通过跟踪团队成员因公司假期、休假和其他类型的休假而无法可用的时间，Project Server 能够帮助项目经理根据这些信息跟踪项目的整体进度和团队成员的可用性。
-
 - 非项目项目资源——某些项目可能拥有非相关的资源，例如制造设备、活动地点等，这些资源需要在项目的进度计划和预算内进行跟踪。Project Server 可以与项目相关的任务和资源一起跟踪这些资源。
 
 如果这些收益中有任何一个对你的组织特别有吸引，那么你可能希望研究将 Project 与 Team Foundation Server 集成。这两者的结合将成为一个跟踪你的项目和软件发布的极其强大的平台。
 
-## 双向同步
+### 双向同步
 
 Team Foundation Server 和 Project Server 集成的优点之一是，一旦设置，它是双向同步的。这意味着项目经理可以进行更改并将其推送到 Project Server，然后推送到 Team Foundation Server。现在，开发人员/测试人员可以在 Team Foundation Server 中针对项目更改进行修改，以反映 Project Server 中的更改，项目经理可以批准并将其包含在他的项目中。
 
@@ -7387,20 +6744,15 @@ Team Foundation Server 和 Project Server 集成的优点之一是，一旦设�
 
 图 15-2：带有 Team Foundation 特定列的 Microsoft 项目计划
 
-## 工作项同步周期
+### 工作项同步周期
 
 Foundation Server 管理员应该理解 Team Foundation 工作项的周期，该项与存储在 Project Server 中的企业级项目同步。讨论从一个简单的示例开始，显示项目经理在 Project Server 的项目计划中添加任务并将其保存到 Team Foundation Server。
 
 **步骤 1**：项目经理在 Microsoft Project 中从 Project Server 中打开他的项目。
-
 **步骤 2**：项目经理添加新任务（或选择现有任务），并将“发布到团队”（Publish to Team）字段值更改为“是”，并为“工作项类型”（Work Item Type）字段提供值，例如根据所使用的项目团队提供需求、用户故事、产品待办列表项或任务。
-
 **步骤 3**：项目经理保存并发布企业级项目计划到 Project Server。Project Server 接收发布指令并在 Foundation Server 中创建工作项。此时，任何更改都将跨处同步。
-
 **步骤 4**：例如，现在工作项已在 Foundation Server 中创建。
-
 **步骤 5**：然而，当项目经理在 Project Server 中进行更改时，任何更改都将跨处同步。
-
 **步骤 6**：最后，项目经理在 Project Server 中打开工作项，并注意到同步的更新。
 
 例如，在 Foundation Server 中创建工作项后，默认情况下，项目经理在 Project Server 中提交了这些更新，如图 15-3 所示。
@@ -7443,29 +6795,25 @@ Foundation Server 管理员应该理解 Team Foundation 工作项的周期，该
 
 www.it-ebooks.info
 
-
-
-
-
 # 概述 | 365
 
 你可能从表格中注意到，Project Server 中的某些字段存储了两个字段。这是因为企业项目中的特定项目存在“审批”工作流。该值可能与完全发布的企业项目中所包含的内容以及当前处于状态审批队列中的内容有所不同。
 
 你还可以自定义这些字段映射，包括用于同步同步的额外字段。此外，如果你在 Foundation Server 中为团队项目使用 Scrum 过程模板，则还需要额外的步骤。关于如何自定义字段映射以及在使用 Scrum 过程模板时需要哪些额外步骤的更多信息，可以参阅 http://aka.ms/CustomizeTFSFields 的 MSDN 文章。
 
-# 镜像字段 (Mirror Fields)
+## 镜像字段 (Mirror Fields)
 
 由于 Project Server 中存在“审批”周期，有时工作项字段的值可能与 Project Server 中的当前值不一致。当项目经理拒绝状态更新审批时，这种现象尤为明显。此类情况可以被监控，这也是 Foundation Server 中的工作项类型拥有名为“镜像字段”的工作项字段的原因。
 
 镜像字段用于存储状态更新被批准之前的中间值。例如，“剩余工作量”（Remaining Work）字段的镜像字段命名为“第二套账”。每两个字段的值不一致时，就处于中间状态，即状态更新尚未被批准或已被拒绝。
 
-# 监控提交到 Project Server 的工作项
+## 监控提交到 Project Server 的工作项
 
 作为管理员，你可能希望监控 Foundation Server 和 Project Server 之间状态更新的流。你可以创建一个工作项查询，来查找 Project Server 上“上次提交状态 = 失败”（Last Submit Status = Failure）同步过滤中的问题。这将返回一个同步过程中存在问题的工作项列表，你可以对其进行故障排除。
 
 关于此过程的更多信息，你可以阅读 http://aka.ms/MonitorTFSPSIntegration 中的额外的故障排除步骤。
 
-# Foundation Server 全局工作流 (Global Workflows)
+## Foundation Server 全局工作流 (Global Workflows)
 
 针对工作项类型定义和过程模板引入了一种新概念，称为“全局工作流”，它简化了 Project Server 和 Foundation Server 的集成。全局工作流并非仅用于此集成，也可以用于其他场景。
 
@@ -7475,11 +6823,13 @@ www.it-ebooks.info
 
 你可以通过阅读 http://aka.ms/TFSGlobalWorkflow 的 MSDN 文章了解更多关于全局工作流的信息。
 
-# # 团队项目与企业项目之间的关系
+## 团队项目与企业项目之间的关系
 
 Team Foundation Server 中的每个团队项目都可以映射到多个 Project Server 企业项目。然而，重要的一点是，Project Server 中的企业项目只能映射到 Team Foundation Server 中的单个团队项目。在贵公司制定项目结构策略时，应当考虑这种关系，正如第 2 节所讨论的。
 
 # 初始配置
+
+
 
 配置 Team Foundation Server 和 Project Server 之间的集成包含一些初始步骤，这些步骤非常简单，且只需执行一次。每创建一个包含与 Team Foundation Server 同步任务的新企业项目时，都需要执行其中一个步骤。在本节中，你将介绍设置集成的要点。
 
@@ -7488,14 +6838,15 @@ Team Foundation Server 中的每个团队项目都可以映射到多个 Project 
 作为管理员，你可能希望确保为运行 Team Foundation Server 和 Project Server 的服务账户提供适当权限。这是你需要确保完全完成的领域之一，如果设置不当，这是一个常见的问题区域。以下列表提供了必要权限的摘要：
 
 - 对于 Project Server 2007，你必须授予 Team Foundation 服务账户访问共享服务提供程序（Shared Services Provider）的权限。
-- 对于 Project Server 2010 和 Project Server 2013，你必须授予 Team Foundation 服务账户访问 Project Service 的权限。你还需要为每个 PWA 实例授予所需的权限。请务必检查这两项，这似乎是许多团队遗漏的区域。你可以通过阅读 http://aka.ms/TFSPFPermissions 的文章获取有关此类集成的必要权限的信息。
+
+- 对于 Project Server 2010 和 Project Server 2013，你必须授予 Team Foundation 服务账户访问 Project Service 的权限。你还需要为每个 PWA 实例授予所需的权限。请务必检查这两项，这似乎是许多团队遗漏的区域。你可以通过阅读 `http://aka.ms/TFSPFPermissions` 的文章获取有关此类集成的必要权限的信息。
 
 # 配置命令行工具
 
 用于管理 Team Foundation Server 和 Project Server 集成的命令行工具名为 `Tfsadmin.exe`。当你安装任何版本的 Visual Studio 2012 时，可以使用该工具。你可以通过打开命令提示符并导航到以下目录找到该工具：
 
 ```
-cd %ProgramFiles\Microsoft Visual Studio 11.0\Common7\IDE
+cd %ProgramFiles%\Microsoft Visual Studio 11.0\Common7\IDE
 ```
 
 # Project Server 安装组件
@@ -7503,13 +6854,14 @@ cd %ProgramFiles\Microsoft Visual Studio 11.0\Common7\IDE
 此外，你需要在 Project Server 拓扑中的每个层级安装 Team Foundation Server 扩展，
 
 - 每个托管 Project Server 2007 的应用层服务器，将与 Foundation Server 同步
+
 - 每个托管 Project Server 2010 或 Project Server 2013 的 Web 层和应用层服务器，将与 Foundation Server 同步
 
 Team Foundation Server 扩展现在作为 Team Foundation Server 2012 镜像的一部分（如图 15-4 所示）。这些扩展在 Team Foundation Server 2010 版本中作为功能包单独提供，但现在已包含在 Team Foundation Server 2012 镜像中。
 
 # 一次性集成步骤
 
-如前所述，需要执行一次性步骤来映射 Project Server 和 Foundation Server 实例以便它们同步。以下是这些步骤的简要概述；更多信息可以参考 http://aka.ms/TFSPFConfiguration
+如前所述，需要执行一次性步骤来映射 Project Server 和 Foundation Server 实例以便它们同步。以下是这些步骤的简要概述；更多信息可以参考 `http://aka.ms/TFSPFConfiguration`
 
 步骤 1：你需要注册包含与 Team Foundation Server 同步的企业项目的 Project Web Access（PWA）实例。你通过运行此命令行来执行第一步，并根据你的设置替换相应的值：
 
@@ -7527,14 +6879,10 @@ TfsAdmin ProjectServer /MapPWATCollection
 /tfs:http://tfs.contoso.local:8080/tfs/DefaultCollection
 ```
 
-
-
-
-
 # 第 3 步：你将为参与同步的每个团队项目集合定义字段映射。你可以使用默认字段映射，也可以使用本章稍早描述的自定义字段映射集：
 
 ```
-TfsAdmin ProjectServer/@DploadFieldMappings/collection://tfs.contoso.local:8080/tfs/DefaultCollection/useDefaultFieldMappings
+TfsAdmin ProjectServer /MapFieldMappings /collection:http://tfs.contoso.local:8080/tfs/DefaultCollection /useDefaultFieldMappings
 ```
 
 一旦完成这三个步骤，同步就准备就绪了，你不需要再次运行这些命令。对于每个企业项目，你还有最后一步，这将在下一节中介绍。
@@ -7550,7 +6898,7 @@ TfsAdmin ProjectServer/@DploadFieldMappings/collection://tfs.contoso.local:8080/
 此步骤每个项目仅需执行一次，你应该通过映射管理器指定应参与同步的工作项类型：
 
 ```
-TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080/tfs/DefaultCollection/enterpriseproject@"E-Commerce Site Project Plan"/teamproject@"Engineering"/workitemypes@"User Story,Task"
+TfsAdmin ProjectServer /MapPlanToTeamProject /collection:http://tfs.contoso.local:8080/tfs/DefaultCollection /enterpriseproject:"E-Commerce Site Project Plan" /teamproject:"Engineering" /workitemtypes:"User Story,Task"
 ```
 
 工作项类型的最后一个选项将取决于你的团队项目所使用的过程模板。上一个示例的命令行输入使用了 MSF Agile 过程模板。如果你使用的是 Scrum 过程模板，可能希望指定使用产品积压列表（Product Backlog Items）和任务（Tasks）。对于 MSF CMMI 过程模板，你可能会指定需求（Requirements）和任务（Tasks）。
@@ -7562,10 +6910,12 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 下一个需要记住的一点是，使用 Project Server 的项目经理如果想输入已发布的企业项目，则需要在他们的机器上安装适当的软件。项目经理机器所需的最小安装如下：
 
 - Microsoft Office Project 2007 Professional、Microsoft Office Project 2010 Professional 或 Microsoft Office Project 2013 Professional
-- Team Explorer for Visual Studio 2012 (http://aka.ms/TeamExplorer2012)
+
+- Team Explorer for Visual Studio 2012 (`http://aka.ms/TeamExplorer2012`)
 
 | 项目经理的 TEAM FOUNDATION SERVER CAL 要求 |
-| 尽管需要安装 Team Explorer 才能在 Microsoft Project 中获取项目插件，但如果项目经理仅连接到 Project Server，则不需要 Team Foundation Server 访问许可 (CAL)。如果他们需要查看详情并以其他方式与 Team Foundation Server 交互，则需要 CAL，此时你仍然需要为项目经理准备一个 CAL。你可以在 MSDN 文章 http://aka.ms/TFSPSConfiguration 中找到更多关于此要求的信息。 |
+
+| 尽管需要安装 Team Explorer 才能在 Microsoft Project 中获取项目插件，但如果项目经理仅连接到 Project Server，则不需要 Team Foundation Server 访问许可 (CAL)。如果他们需要查看详情并以其他方式与 Team Foundation Server 交互，则需要 CAL，此时你仍然需要为项目经理准备一个 CAL。你可以在 MSDN 文章 `http://aka.ms/TFSPSConfiguration` 中找到更多关于此要求的信息。 |
 
 ## 总结
 
@@ -7582,7 +6932,9 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 # Team Foundation Build
 
 - 第 16 章：构建自动化概述
+
 - 第 17 章：使用 Team Foundation Build
+
 - 第 18 章：自定义构建过程
 
 # 16
@@ -7592,8 +6944,11 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 **本章包含哪些内容？**
 
 - 了解构建自动化
+
 - 编写构建脚本
+
 - 使用构建自动化服务器
+
 - 采用构建自动化
 
 在版本控制之后，控制构建是你提高软件质量所能做的第二重要的事情。本章定义了构建自动化，并研究了它为什么对整个软件工程过程有益。随后将介绍 Team Foundation Server 的高级能力和局限性，并与目前使用的常用构建系统进行比较。最后，提供了一些通用建议，以帮助现在就在你的环境中采用构建自动化。
@@ -7621,14 +6976,13 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 构建自动化是简化构建过程的过程，以便通过简单的单操作将应用程序组装成可用的产品。这不仅涉及特定开发者正在工作的代码部分，还包括其他典型活动：
 
 - 将代码编译为二进制文件
+
 - 将二进制文件封装成 MSI 文件、XAP 文件、JAR 文件、DMG 镜像等可安装模块
 
-
-
-
-
 - 运行测试
+
 - 创建文档
+
 - 部署结果已就绪并可以使用
 
 只有当应用程序的各个组合在一起后，你才能判断应用程序是否正常工作以及它的预期功能。组装应用程序的各个通常是一个复杂、耗时且容易出错的过程。构建应用程序有许多部分，如果没有自动化构建，这些活动通常会落在团队中一两位掌握“秘诀”的个人身上。如果没有自动化构建，即使他们犯了错误，这种毁灭性的后果直到后期才发现，使得修复任何错误的成本都非常高昂。
@@ -7644,13 +6998,14 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 作为自动化构建的一部分，你不仅可以测试代码是否正确编译，还可以确保它运行全套的自动化测试。这会立即带给你极大的信心，确保没有引入任何破坏其他内容的更改。
 
 对于开发者来说，按 F5 键很容易。但当你想要自动化构建让运行你的应用程序变得同样容易——甚至更简单时，这就是构建自动化服务器发挥用场的地方。
+
 构建自动化服务器是一台加载版本控制中的更改并自动重新构建项目的机器。这可以按需进行、按照定期计划（例如每晚或每日构建）进行，也可以在开发者每次提交代码时执行——这一过程被称为持续集成。当某些内容被提交时，软件开发团队有机会在提交者脑海中对该内容记忆新鲜时立即修复它。通过尽早修复问题，可以将修复该问题的成本降至最低，并防止团队中的其他人员由于某人破坏了他们所依赖的内容而无法构建或测试他们的组件。
 
 然而，在构建服务器上设置持续集成构建之前，你必须为你的构建编写脚本，使其能够通过单个命令运行。
 
 # 马丁·福勒论持续集成
 
-持续集成（CI）一术语源于世纪末的敏捷软件开发方法，如极端编程（XP）。马丁·福勒（Martin Fowler）在 2000 年发表的关于持续集的论文，在今天于 www.martinfowler.com/articles/continuousIntegration.html 仍然值得阅读。
+持续集成（CI）一术语源于世纪末的敏捷软件开发方法，如极端编程（XP）。马丁·福勒（Martin Fowler）在 2000 年发表的关于持续集的论文，在今天于 `www.martinfowler.com/articles/continuousIntegration.html` 仍然值得阅读。
 
 请注意，按照最初的描述，该术语指的是通过增加集成频率来提高软件交付的速度和质量，而不是为每次提交都构建一个版本的实践。福勒所展示的许多实践得到了 Team Foundation Server 中工具的支持——不仅仅是构建服务中的这一项小功能。然而，“持续集成”术语已成为提交后进行构建的同义词，因此 Team Foundation Server 将其作为此类触发器的名称，正如第 17 节讨论。
 
@@ -7660,9 +7015,9 @@ TfsAdmin ProjectServer/@MapPlanToTeamProject/collection://tfs.contoso.local:8080
 
 # Make
 
-专门构建脚本语言的鼻祖是 Make。Make 最初由 Stuart Feldman 博士于 1977 年在贝尔实验室创建，它现在在 UNIX  平台上仍被广泛使用，用于通过读取存储在名为 makefile 的文本文件中的构建配置来从源代码创建程序。通常，为了构建一个可执行文件，你必须输入多个命令来编译和链接源代码，同时确保每个依赖项都已正确编译和链接。Make 的设计专门用于帮助 C 语言程序员以高效的方式管理这一过程。
+专门构建脚本语言的鼻祖是 Make。Make 最初由 Stuart Feldman 博士于 1977 年在贝尔实验室创建，它现在在 UNIX 平台上仍被广泛使用，用于通过读取存储在名为 `makefile` 的文本文件中的构建配置来从源代码创建程序。通常，为了构建一个可执行文件，你必须输入多个命令来编译和链接源代码，同时确保每个依赖项都已正确编译和链接。Make 的设计专门用于帮助 C 语言程序员以高效的方式管理这一过程。
 
-makefile 定义了一系列目标，每个命令在冒号内部使用制表符缩进：
+`makefile` 定义了一系列目标，每个命令在冒号内部使用制表符缩进：
 
 ```
 #注释
@@ -7670,7 +7025,7 @@ makefile 定义了一系列目标，每个命令在冒号内部使用制表符�
 <TAB>命令
 ```
 
-例如，一个简单的 Hello World 应用程序可以如下 makefile：
+例如，一个简单的 Hello World 应用程序可以如下 `makefile`：
 
 ```
 # 定义 C 编译器和编译器标志
@@ -7678,7 +7033,7 @@ CC=gcc
 CFLAGS=-g
 ```
 
-当执行 make 时没有指定目标，则调用的默认目标。
+当执行 `make` 时没有指定目标，则调用的默认目标。
 
 ```
 all: helloworld
@@ -7699,7 +7054,7 @@ clean:
 
 之前的脚本等同于命令行中顺序执行的以下命令：
 
-gcc -c -o helloworld
+`gcc -c -o helloworld`
 
 在所示的简单 makefile 中，一切都非常易读。对于执行打包和部署活动的复杂 makefile，可能需要一段时间才能弄清楚哪些命令按顺序执行。Make 使用声明式语言，对于习惯于使用命令式语言（大多数现代编程语言都是）的开发者来说可能难以阅读。对于许多开发者来说，这感觉你必须反向查看——即查看目标，然后跟踪它的依赖项，然后是它们的依赖项，以跟踪实际发生的顺序。
 
@@ -7707,23 +7062,23 @@ gcc -c -o helloworld
 
 # Apache Ant
 
-Ant 是类似于 Make 的构建自动化工具，但它从底层就被设计为跨平台工具。James Davidson 最初在太阳公司开发了 Ant。它于 2000 年发布。根据 Davidson 的说法，“Ant”是 Another Neat Tool（另一个巧妙工具）的缩写。它是一个基于 Java 的工具，并使用存储在 build.xml 文件中的 XML 文件。
+Ant 是类似于 Make 的构建自动化工具，但它从底层就被设计为跨平台工具。James Davidson 最初在太阳公司开发了 Ant。它于 2000 年发布。根据 Davidson 的说法，“Ant”是 Another Neat Tool（另一个巧妙工具）的缩写。它是一个基于 Java 的工具，并使用存储在 `build.xml` 文件中的 XML 文件。
 
-Ant 与 Make 有许多相似之处。构建文件由一个包含多个目标的项目组成。每个目标定义了系列要执行的任务和一组依赖项。Ant 是声明式的自动依赖管理。例如，一个简单的 Java Hello World 示例可以使用以下 build.xml 来编译它 Ant：
 
-```
+
+# 第 16 章构建自动化概述
+
+## Ant 与 Make
+
+Ant 与 Make 有许多相似之处。构建文件由一个包含多个目标的项目组成。每个目标定义了系列要执行的任务和一组依赖项。Ant 是声明式的自动依赖管理。例如，一个简单的 Java Hello World 示例可以使用以下 `build.xml` 来编译它 Ant：
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <project name="helloworld" basdir="." default="package">
 
   <target name="compile">
 		<mkdir dir="${basedir}/bin" />
 ```
-
-
-
-
-
-# 第 16 章构建自动化概述
 
 ```xml
 <javac srcdir="${basedir}/src
@@ -7755,31 +7110,31 @@ Ant 脚本可能会变得复杂，而且 Ant 脚本中使用的 XML 非常冗长
 
 Ant 在 Java 社区中非常常见，以至于大多数现代 IDE 都自带了一个版本的 Ant，允许在开发环境内部执行构建，并提供帮助编写 Ant 的工具。
 
-# Apache Maven
+## Apache Maven
 
-Maven 是一个用 Java 编写的开源项目管理和构建自动化工具。Maven 的核心概念是项目对象模型 (pom.xml)，它描述了正在构建的项目。Maven 在功能上类似于 Make，并派生自 Ant，但它具有一些新颖的概念，定义了一个独特的新类构建工具，使得 Maven 在书中书中讨论价值。
+Maven 是一个用 Java 编写的开源项目管理和构建自动化工具。Maven 的核心概念是项目对象模型 `pom.xml`，它描述了正在构建的项目。Maven 在功能上类似于 Make，并派生自 Ant，但它具有一些新颖的概念，定义了一个独特的新类构建工具，使得 Maven 在书中书中讨论价值。
 
-Make 和 Ant 允许编写完全自由的脚本，并且你的源文件可以位于任何地方。Maven 则采取了一个不合理的假设，即你正在进行构建，并对构建过程中文件应该所在的位置使用了约约定。它将“约约定优于配置”（Convention over Configuration）的软件设计范式应用于构建。这种范式的主要优势是它能帮助你熟悉 Maven 项目，因为它们都遵循某些模式来完成构建（缺点是失去了灵活性）。
+Make 和 Ant 允许编写完全自由的脚本，并且你的源文件可以位于任何地方。Maven 则采取了一个不合理的假设，即你正在进行构建，并对构建过程中文件应该所在的位置使用了约约定。它将“约约定优于配置”`Convention over Configuration` 的软件设计范式应用于构建。这种范式的主要优势是它能帮助你熟悉 Maven 项目，因为它们都遵循某些模式来完成构建（缺点是失去了灵活性）。
 
 Maven 与受 Make 启发的构建工具之间的另一个区别是，它将将依赖管理提升到了新的高度。Make 和 Ant 处理被构建项目内部的依赖，而 Maven 可以管理对外部库的依赖（这在许多 Java 项目中特别常见）。如果你的代码依赖于某个版本的库，那么 Maven 将从项目仓库下载该库并存储在本地，供构建使用。这有助于构建的可移植性，因为它意味着你只需要安装 Java 和 Maven。构建过程应该处理好运行构建所需的所有内容。
 
-> 有关 Maven 的更多信息，请请访问 http://maven.apache.org/。
+> 有关 Maven 的更多信息，请请访问 `http://maven.apache.org/`。
 
-# NAnt
+## NAnt
 
-NAnt (http://nant.sourceforge.net/) 的灵感来自 Apache Ant，但用 .NET 编写并用于构建 .NET 项目。与 Ant 类似，它也是一个开源项目，最初发布于 2001 年。有趣的是，根据 NAnt 的 FAQ，Nant 的名字来源于该工具是“不是 Ant”（Not Ant），从其缩写中提取出 Ant，意思是 Nant 是“不是另一个工具”（Not Another Tool）。但实际上，Nant 是执行构建自动化的新方法，在早期的 .NET 1.0 和 1.1 项目中非常有用。
+NAnt `http://nant.sourceforge.net/` 的灵感来自 Apache Ant，但用 .NET 编写并用于构建 .NET 项目。与 Ant 类似，它也是一个开源项目，最初发布于 2001 年。有趣的是，根据 NAnt 的 FAQ，Nant 的名字来源于该工具是“不是 Ant”`Not Ant`，从其缩写中提取出 Ant，意思是 Nant 是“不是另一个工具”`Not Another Tool`。但实际上，Nant 是执行构建自动化的新方法，在早期的 .NET 1.0 和 1.1 项目中非常有用。
 
-语法上与 Ant 非常相似，NAnt 文件以 .build 后缀存储。每个文件由一个包含许多任务的项目组成。每个 target（目标）定义了若干要执行的任务和一组依赖关系。它有用于执行 .NET 活动的任务，例如使用 `<exec />` 来执行 C# 命令行编译器工具。
+语法上与 Ant 非常相似，NAnt 文件以 `.build` 后缀存储。每个文件由一个包含许多任务的项目组成。每个 `target` 目标定义了若干要执行的任务和一组依赖关系。它有用于执行 .NET 活动的任务，例如使用 `<exec />` 来执行 C# 命令行编译器工具。
 
-NAnt 文件的主要问题是 Visual Studio 并不理解这种编写方式，而且对 Visual Studio 解决方案文件 (.sln) 和项目的更改也必须在 NAnt 文件中进行；否则自动化构建脚本将无法识别这些依赖关系。要使用 .sln 文件或 .vbproj/.csproj 文件执行构建，你必须在构建服务器上安装 Visual Studio，并使用 `deven` 任务从命令行驱动 Visual Studio，而大多数人都会避免这样做。
+NAnt 文件的主要问题是 Visual Studio 并不理解这种编写方式，而且对 Visual Studio 解决方案文件 `.sln` 和项目的更改也必须在 NAnt 文件中进行；否则自动化构建脚本将无法识别这些依赖关系。要使用 `.sln` 文件或 `.vbproj` / `.csproj` 文件执行构建，你必须在构建服务器上安装 Visual Studio，并使用 `deven` 任务从命令行驱动 Visual Studio，而大多数人都会避免这样做。
 
-# MSBuild
+## MSBuild
 
-MSBuild 是 Visual Studio 自 2005 版本以来一直使用的构建系统。然而，MSBuild 平台是 .NET Framework 的一部分安装的，你可以从命令行使用 MSBuild.exe 构建项目，而无需使用 Visual Studio IDE。
+MSBuild 是 Visual Studio 自 2005 版本以来一直使用的构建系统。然而，MSBuild 平台是 .NET Framework 的一部分安装的，你可以从命令行使用 `MSBuild.exe` 构建项目，而无需使用 Visual Studio IDE。
 
-Visual Studio 保持 MSBuild 文件的更新。事实上，对于 Visual Studio 开发者来说广为人知的 .csproj 和 .vbproj 文件简单来说就是 MSBuild 脚本。
+Visual Studio 保持 MSBuild 文件的更新。事实上，对于 Visual Studio 开发者来说广为人知的 `.csproj` 和 `.vbproj` 文件简单来说就是 MSBuild 脚本。
 
-MSBuild 受到如 Ant 或 NAnt 等基于 XML 的构建自动化系统的深度影响，同时也受到其前身 Make（以及那里的 Make）的影响。MSBuild 文件通常以 .proj 扩展结尾（例如 TFSBuild.proj, MyProject.vbproj, MyCSharpProject.csproj）。MSBuild 文件遵循一种新模式，并在项目内部包含许多属性和 target。每个 target 包含许多任务。
+MSBuild 受到如 Ant 或 NAnt 等基于 XML 的构建自动化系统的深度影响，同时也受到其前身 Make 影响。MSBuild 文件通常以 `.proj` 扩展结尾（例如 `TFSBuild.proj`, `MyProject.vbproj`, `MyCSharpProject.csproj`）。MSBuild 文件遵循一种新模式，并在项目内部包含许多属性和 `target`。每个 `target` 包含许多任务。
 
 以下是一个 MSBuild 脚本的示例，你可以通过 Visual Studio 命令提示符使用 `msbuild helloworld.proj` 命令来执行它：
 
@@ -7800,19 +7155,17 @@ MSBuild 受到如 Ant 或 NAnt 等基于 XML 的构建自动化系统的深度�
 </Project>
 ```
 
-然而，MSBuild 也有一些显著的例外。除了 PropertyGroup 中简单的属性（可以被视为键值对），Items 是一个值的列表，这在编程术语中可以类似于数组或枚举。一个 Item 还关联有相关的元数据。当你创建一个 Item 时，它实际上是一个实现了 ITask 接口的 .NET 对象。每个 Item 有一组预定义的元数据，但你也可以作为 Item 的子节点添加自己的属性。
+然而，MSBuild 也有一些显著的例外。除了 `PropertyGroup` 中简单的属性（可以被视为键值对），`Items` 是一个值的列表，这在编程术语中可以类似于数组或枚举。一个 `Item` 还关联有相关的元数据。当你创建一个 `Item` 时，它实际上是一个实现了 `ITask` 接口的 .NET 对象。每个 `Item` 有一组预定义的元数据，但你也可以作为 `Item` 的子节点添加自己的属性。
 
-MSBuild 使用与 Ant 或 Nano 等工具的另一个区别在于，Visual Studio 和 Team Foundation 使用许多目标 用于构建过程。这些目标存储在带有 targets 扩展的 MSBuild 脚本中。它们通常存储在 %ProgramFiles%/MSBuild 或个人机器的 .NET Framework 中。Visual Studio 创建的实际脚本通常连接相关的 targets 文件，并提供许多属性来自定义 targets 文件中定义的构建行为。通过这种方式，MSBuild 与 Maven 有细微的相似之处，因为都呈现了典型的构建模式，由项目对其进行自定义。
+MSBuild 使用与 Ant 或 Nano 等工具的另一个区别在于，Visual Studio 和 Team Foundation 使用许多目标 用于构建过程。这些目标存储在带有 `targets` 扩展的 MSBuild 脚本中。它们通常存储在 `%ProgramFiles%/MSBuild` 或个人机器的 .NET Framework 中。Visual Studio 创建的实际脚本通常连接相关的 `targets` 文件，并提供许多属性来自定义 `targets` 文件中定义的构建行为。通过这种方式，MSBuild 与 Maven 有细微的相似之处，因为都呈现了典型的构建模式，由项目对其进行自定义。
 
-在 MSBuild 脚本中，从上到下读取文件，最后定义属性或 target 的将胜出（与 Ant 不同，第一个定义的地方为胜者）。这种行为意味着你在 MSBuild 脚本 targets 文件中编写的任何内容都会覆盖导入模板中的行为。
+在 MSBuild 脚本中，从上到下读取文件，最后定义属性或 `target` 的将胜出（与 Ant 不同，第一个定义的地方为胜者）。这种行为意味着你在 MSBuild 脚本 `targets` 文件中编写的任何内容都会覆盖导入模板中的行为。
 
-微软提供的标准模板包含许多 targets 文件，这些文件在标准模板中以 Before 或 After 命名调用，被设计为在之前或之后运行你自定义逻辑的钩点。一个经典的例子是 BeforeBuild 和 AfterBuild。良好的做法是只覆盖被设计为可覆盖的 target，或者覆盖用于控制构建过程的属性。导入的 targets 文件通常是广为人知的，如果你想进一步了解它们的作用，可以阅读它们。
+微软提供的标准模板包含许多 `targets` 文件，这些文件在标准模板中以 `Before` 或 `After` 命名调用，被设计为在之前或之后运行你自定义逻辑的钩点。一个经典的例子是 `BeforeBuild` 和 `AfterBuild`。良好的做法是只覆盖被设计为可覆盖的 `target`，或者覆盖用于控制构建过程的属性。导入的 `targets` 文件通常是广为人知的，如果你想进一步了解它们的作用，可以阅读它们。
 
-以下是由 Visual Studio 2011 生成的简单 .vbproj 文件，用于一个简单的 Hello World 风格应用程序。希望你现在能识别并理解文件中的许多元素。注意它不包含任何 Targets——这些都在导入的 Microsoft
+以下是由 Visual Studio 2011 生成的简单 `.vbproj` 文件，用于一个简单的 Hello World 风格应用程序。希望你现在能识别并理解文件中的许多元素。注意它不包含任何 Targets——这些都在导入的 Microsoft
 
-
-
-.VisualBasic.target.files 包含了 Visual Basic 编译器的实际布局。.vbproj 文件包含属性和项目组（ItemGroups），这些内容配置了 .target 的行为：
+`.VisualBasic.target.files` 包含了 Visual Basic 编译器的实际布局。`.vbproj` 文件包含属性和项目组 `ItemGroups`，这些内容配置了 `.target` 的行为：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -7864,6 +7217,8 @@ MSBuild 使用与 Ant 或 Nano 等工具的另一个区别在于，Visual Studio
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
 ```
+
+
 
 ```xml
 <ItemGroup>
@@ -7930,23 +7285,23 @@ MSBuild 使用与 Ant 或 Nano 等工具的另一个区别在于，Visual Studio
 </Project>
 ```
 
-## Windows Foundation (Windows )
+## Windows Foundation
 
-虽然下一章重点关注其他工具，但值得提到的是 Windows Foundation (WF)。WF 是微软提供的一个编程框架，用于自动化构建。在构建自动化的早期，WF 是使用 .NET 实现的，并且能够处理许多版本控制系统，包括 Team Foundation Server。由于其关注 .NET 开发者，它可以使用 NAnt 或 MSBuild 脚本构建 .NET 项目并通知开发者。构建输出（包括单元测试结果、代码覆盖报告、API 文档等）可以通过 Web 访问。
+虽然下一章重点关注其他工具，但值得提到的是 Windows Foundation `WF`。`WF` 是微软提供的一个编程框架，用于自动化构建。在构建自动化的早期，`WF` 是使用 `.NET` 实现的，并且能够处理许多版本控制系统，包括 Team Foundation Server。由于其关注 `.NET` 开发者，它可以使用 `NAnt` 或 `MSBuild` 脚本构建 `.NET` 项目并通知开发者。构建输出（包括单元测试结果、代码覆盖报告、API 文档等）可以通过 Web 访问。
 
 虽然任何构建过程都可以由 CruiseControl 执行，但它通常用于 Ant 构建和 Java 项目。正如提到的，Team Foundation Server 作为版本控制库受到 CruiseControl 支持。然而，构建的数据和通知存储在 CruiseControl 系统中。
 
 ## CruiseControl
 
-CruiseControl (https://cruisecontrol.sourceforge.net/) 是另一个使用 Java 实现的开源构建服务器。因此，它运行在包括 Windows 和 Linux 在许多平台上。CruiseControl 的核心是一个定期检查配置系统的循环，如果检测到更改，它将触发新的构建。一旦构建完成，就会发送有关状态的通知。
+CruiseControl `https://cruisecontrol.sourceforge.net/` 是另一个使用 Java 实现的开源构建服务器。因此，它运行在包括 Windows 和 Linux 在许多平台上。CruiseControl 的核心是一个定期检查配置系统的循环，如果检测到更改，它将触发新的构建。一旦构建完成，就会发送有关状态的通知。
 
-CruiseControl 的配置通过 config.xml 文件进行。由于其作为一个活跃且充满活力的源码项目已久，许多扩展被贡献给了 CruiseControl。许多不同的版本控制系统（包括 Team Foundation Server）都可以被 CruiseControl 查询，以及许多不同的通知方案（包括电子邮件、Web 控制台、即时消息甚至是 Windows 托盘系统）。构建输出（包括单元测试结果、代码覆盖报告、API 文档等）可以通过 Web 访问。
+CruiseControl 的配置通过 `config.xml` 文件进行。由于其作为一个活跃且充满活力的源码项目已久，许多扩展被贡献给了 CruiseControl。许多不同的版本控制系统（包括 Team Foundation Server）都可以被 CruiseControl 查询，以及许多不同的通知方案（包括电子邮件、Web 控制台、即时消息甚至是 Windows 托盘系统）。构建输出（包括单元测试结果、代码覆盖报告、API 文档等）可以通过 Web 访问。
 
 ## CruiseControl.NET
 
-CruiseControl.NET (https://ccnet.thoughtworks.com/) 是一个开源构建服务器，但正如其名称所示，它是使用 .NET 实现的。它基于基于原始版本的 CruiseControl，并且同样由相同的 ThoughtWorks 咨询公司开发。
+CruiseControl.NET `https://ccnet.thoughtworks.com/` 是一个开源构建服务器，但正如其名称所示，它是使用 `.NET` 实现的。它基于基于原始版本的 CruiseControl，并且同样由相同的 ThoughtWorks 咨询公司开发。
 
-CruiseControl.NET 的配置通常通过编辑名为 ccnet.config 的 XML 文件进行。它也能够处理许多版本控制系统，包括 Team Foundation Server。
+CruiseControl.NET 的配置通常通过编辑名为 `ccnet.config` 的 XML 文件进行。它也能够处理许多版本控制系统，包括 Team Foundation Server。
 
 ## Hudson / Jenkins
 
@@ -7954,7 +7309,7 @@ Hudson 是另一个使用 Java 实现的开源构建服务器。Hudson 是该服
 
 该项目以及 Hudson 商标的持有者——创建了一个该项目的社区分支，并名为 Jenkins。近年来，它们已成为 CruiseControl 的流行替代方案，这主要是是因为它提供了一个易于使用的基于 Web 的界面来配置新构建，而不是手动编辑 XML 文件。
 
-虽然 Hudson / Jenkins 能够构建许多项目（Ant 甚至 MSBuild），但它在处理构建以及跟踪 Maven 项目构建之间的依赖关系方面具有一些特殊功能，这正是它在本书中值得被特别提出的原因。
+虽然 Hudson / Jenkins 能够构建许多项目（Ant 甚至 `MSBuild`），但它在处理构建以及跟踪 Maven 项目构建之间的依赖关系方面具有一些特殊功能，这正是它在本书中值得被特别提出的原因。
 
 Hudson 能够与许多版本控制工具配合，包括 Team Foundation Server。然而，与所有外部构建系统一样，这些构建的数据存储在 Hudson 系统内部，尽管它确实拥有一些实用的构建能力。
 
@@ -7962,7 +7317,7 @@ Hudson 能够与许多版本控制工具配合，包括 Team Foundation Server�
 
 构建自动化对于提高软件开发质量至关重要，因此自 2005 年最初发布以来，Team Foundation Server 就包含了构建自动化功能。在内部，该功能被称为“Big Build”，但人们将 Team Foundation Server 的构建自动化组件称为 Team Build 或 Team Foundation Server。
 
-MSBuild 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundation Build 的原始形态是紧密围绕 MSBuild 构建的。构建通过位于 Team Foundation Server 版本控制中 `$/Project/TeamTypes/TypeName` 文件夹下的 MSBuild 脚本 `TFSBuild.proj` 定义。
+`MSBuild` 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundation Build 的原始形态是紧密围绕 `MSBuild` 构建的。构建通过位于 Team Foundation Server 版本控制中 `$/Project/TeamTypes/TypeName` 文件夹下的 MSBuild 脚本 `TFSBuild.proj` 定义。
 
 当触发构建时，`TFSBuild.proj` 会下载到服务器并执行。结果会被发布回服务器，更重要的是，构建指标会馈送到强大的 Team Foundation Server 数据仓库中。构建会自动与 Team Foundation Server 的项目跟踪进行关联。
 
@@ -7970,7 +7325,7 @@ MSBuild 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundatio
 
 幸运的是，2008 年的 Team Foundation Server 版本在构建能力上取得了巨大的改进。事实上，Team Foundation Build 可能是从 Team Foundation Server 2005 升级的最主要原因。在 2008 年，你拥有了通过多种触发器之一来触发构建的能力，包括计划构建和持续集成构建。
 
-2010 年的发布版对 Team Foundation Server 的构建有了更多的改进。其中最大的一点是从完全基于 MSBuild 的解决方案转变为使用 WF 作为编排引擎的解决方案。这具有几个重要优势，包括能够轻松在 Visual Studio 用户界面中显示有关构建的常用构建配置属性，以及将构建分布到多个服务器（或构建代理）的能力。
+2010 年的发布版对 Team Foundation Server 的构建有了更多的改进。其中最大的一点是从完全基于 `MSBuild` 的解决方案转变为使用 `WF` 作为编排引擎的解决方案。这具有几个重要优势，包括能够轻松在 Visual Studio 用户界面中显示有关构建的常用构建配置属性，以及将构建分布到多个服务器（或构建代理）的能力。
 
 虽然你在 Team Foundation Server 的版本控制和工作跟踪功能中获得了非常丰富的集成，但重要的是，Team Foundation Server 的构建自动化功能只能与 Team Foundation Server 版本控制配合使用。虽然对于本书的读者来说这不是一个问题，但在计划迁移到 Team Foundation Server 时这是一个重要的考虑因素。只有在源代码进入 Team Foundation Server 后，开启其自动化功能才有意义。
 
@@ -7978,7 +7333,7 @@ MSBuild 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundatio
 
 希望你现在已经说服构建自动化是你想要做的事情。采用构建自动化作为一种实践如何？
 
-第一步是确保你有一个可以运行的完整构建并打包待部署产品的命令。如果使用 Visual Studio，这很容易，大多数 Visual Studio 项目类型都可以使用 MSBuild 轻松构建。但如果你有用 Java 或软件语言开发的组件，那么你需要做一些工作，使用最合适的脚本语言（如 Ant 或 Maven）来组合你的构建脚本。
+第一步是确保你有一个可以运行的完整构建并打包待部署产品的命令。如果使用 Visual Studio，这很容易，大多数 Visual Studio 项目类型都可以使用 `MSBuild` 轻松构建。但如果你有用 Java 或软件语言开发的组件，那么你需要做一些工作，使用最合适的脚本语言（如 Ant 或 Maven）来组合你的构建脚本。
 
 接下来，你应该确保每个人都知道如何构建该项目，并且所有开发者都能从他们的机器上运行它。
 
@@ -7987,9 +7342,6 @@ MSBuild 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundatio
 ## BRIAN THE BUILD BUNNY
 
 > 让团队关注构建状态的一些方法比其他方法更具想象力。鼓励团队关注当前构建状态的一种流行方法是创建创意且引人注目的构建状态机制。虽然墙显示器和指示灯是向……传达信息的好方法……
-
-
-
 
 本章内容经过了刻意的泛化处理，因为无论你选择何种技术或平台，构建自动化都是至关重要的。然而，Team Foundation Server（TFS）在构建自动化方面具有一些创新特性。
 
@@ -8013,13 +7365,13 @@ MSBuild 首次于 2005 年随 Visual Studio 出发，而 2005 年 Team Foundatio
 
 > 注意：有关自定义标准构建过程的信息，请参阅第 18 节。
 
-## TEAM FOUNDATION BUILD 介绍
+### TEAM FOUNDATION BUILD 介绍
 
-Team Foundation Server 的构建自动化能力自 Team Foundation Server 2005 初始发布以来经历了最显著的变化。最初，构建功能扩展了 MSBuild，以实现与 Team Foundation 版本控制和项目跟踪集成的基础级构建自动化。
+Team Foundation Server 的构建自动化能力自 Team Foundation Server 2005 初始发布以来经历了最显著的变化。最初，构建功能扩展了 `MSBuild`，以实现与 Team Foundation 版本控制和项目跟踪集成的基础级构建自动化。
 
-在 2008 版本中，构建系统作为一套完全的就级构建系统，拥有了自己的独立地位。该版本在 Team Foundation Server 中引入了新的一等公民概念，例如构建定义（build definition）和构建代理（build agent），并且内置了灵活的触发器功能。然而，构建过程仍然依赖于 MSBuild。
+在 2008 版本中，构建系统作为一套完全的就级构建系统，拥有了自己的独立地位。该版本在 Team Foundation Server 中引入了新的一等公民概念，例如构建定义（build definition）和构建代理（build agent），并且内置了灵活的触发器功能。然而，构建过程仍然依赖于 `MSBuild`。
 
-2010 版本在构建自动化领域引入了更多功能。最大的变化是引入了 Windows Workflow 4.0 作为构建编排机制。解决方案的实际编译仍然由专门的构建语言处理（例如用于 .NET 解决方案的 MSBuild，以及用于基于 Java 项目的 Ant 或 Maven）。然而，过程的其他部分由使用 Windows Workflow 4.0 的构建过程模板管理。
+2010 版本在构建自动化领域引入了更多功能。最大的变化是引入了 Windows Workflow 4.0 作为构建编排机制。解决方案的实际编译仍然由专门的构建语言处理（例如用于 .NET 解决方案的 `MSBuild`，以及用于基于 Java 项目的 Ant 或 Maven）。然而，过程的其他部分由使用 Windows Workflow 4.0 的构建过程模板管理。
 
 > 注意：有关这些构建语言的更多信息，请参阅第 16 节。
 
@@ -8031,7 +7383,7 @@ Team Foundation Server 的构建自动化能力自 Team Foundation Server 2005 �
 
 随着 Team Foundation Service 的引入，产品需要允许客户在使用托管服务的同时运行自己的构建服务器。这使得构建服务器通信转向基于轮询（polling-based）的消息架构。本质上，Team Foundation Server 为每个构建维护一个消息队列，构建通过持续轮询来保持同步。
 
-## TEAM FOUNDATION BUILD 架构
+### TEAM FOUNDATION BUILD 架构
 
 图 17-1 显示了 Team Foundation Build 架构中关键的几个逻辑组件。
 
@@ -8045,36 +7397,33 @@ Team Foundation Server 的构建自动化能力自 Team Foundation Server 2005 �
 
 构建代理是执行构建的实际机器。每个构建代理都有一个构建计数器作为父节点，但一个计数器可以拥有多个用于构建的构建代理。每个构建计数器必须分配给单个项目集。
 
-构建代理执行构建定义过程模板中描述的构建主体部分——包括使用 MSBuild 执行实际的编译和测试步骤。
+构建代理执行构建定义过程模板中描述的构建主体部分——包括使用 `MSBuild` 执行实际的编译和测试步骤。
 
 一旦构建代理成功执行构建，默认构建过程模板会将构建结果（如网站、可执行文件、程序集等）归档到基于 Windows 的文件共享中作为输出位置（drop location）。它还会将任何符号发布到*符号服务器*（symbol server）（如果已配置）。
 
 所有关于构建的信息（例如构建号、状态以及特定构建的进度）都称为*构建详情*（build details）。请注意，构建计数器和构建代理进程由*构建服务*托管。构建计数器和构建代理可以运行在同一台机器上，但在生产配置中，建议不要与应用程序层位于同一台机器。
 
-## 设置 TEAM FOUNDATION BUILD 服务
+### 设置 TEAM FOUNDATION BUILD 服务
 
 本节详细介绍了如何设置构建服务以启用构建自动化。这对于管理 Foundation Server 实例的用户非常有用。如果你已经为你的项目集准备了构建计数器，你可能希望跳过此节，直接进入“与构建交互”部分以了解如何创建和管理构建定义。
 
-> Team Foundation Server 的构建服务从媒体中安装。本节简要介绍了安装构建服务；但有关如何安装和配置构建服务的最新信息，以及支持的硬件软件列表，请参阅《Team Foundation 安装指南》。该指南包含在 Foundation Server 的安装媒体中，但最新版本发布在 http://aka.ms/tfinstallguide。微软持续更新《安装指南》，以包含额外的指导或新出现的问题。因此，使用下载的版本也是值得的。下载《安装指南》后，除非右键点击 .chm 文件、点击属性并点击“解除锁定”，否则无法查看其内容。另一种方法是双击 .chm 文件以打开文件安全警告对话框，勾选“打开此文件之前始终询问”，然后点击打开。
+
+
+> Team Foundation Server 的构建服务从媒体中安装。本节简要介绍了安装构建服务；但有关如何安装和配置构建服务的最新信息，以及支持的硬件软件列表，请参阅《Team Foundation 安装指南》。该指南包含在 Foundation Server 的安装媒体中，但最新版本发布在 http://aka.ms/tfinstallguide。微软持续更新《安装指南》，以包含额外的指导或新出现的问题。因此，使用下载的版本也是值得的。下载《安装指南》后，除非右键点击 `.chm` 文件、点击属性并点击“解除锁定”，否则无法查看其内容。另一种方法是双击 `.chm` 文件以打开文件安全警告对话框，勾选“打开此文件之前始终询问”，然后点击打开。
 
 正如，对于生产用途，建议将构建服务安装在独立于应用程序层的机器上。然而，构建机器（任何以构建计数器或构建代理角色运行构建服务的或两者兼有的机器）非常适合安装在虚拟机中。构建代理机器的情况特别重要的是，虚拟机具有快速的磁盘访问并分配了大量的 CPU 资源。
 
 将构建代理托管在虚拟机中具有技术带来的多个优点，例如可以快速增加计数器的可用构建代理池并跨物理主机管理这些代理。由于进程需要访问机器以运行可能作为构建和测试脚本执行的任何代码，在虚拟环境中运行还提供了构建代理之间的某种隔离，以确保一个的操作不会影响另一个的结果。另一个值得提的虚拟化优点是，构建代理可以随时恢复到已知的清洁状态——再次确保了构建环境的清洁。
 
-
-
-
 # 设置 Team Foundation 服务
 
-393
-
-在机器上安装构建控制器或代理（agents）时，你必须拥有本地管理员权限。作为安装的一部分，你必须提供一个运行服务的服务账户。此用户通常被称为 TFSBUILD 用户。
+在机器上安装构建控制器或代理（agents）时，你必须拥有本地管理员权限。作为安装的一部分，你必须提供一个运行服务的服务账户。此用户通常被称为 `TFSBUILD` 用户。
 
 如果需要标准构建，且你公司的策略允许，则建议使用“网络服务”（Network Service）账户。这可以避免使用真实域用户账户时可能遇到的密码过期等问题。只有在域环境中，当将构建服务作为 Windows 服务运行，且构建代理与应用程序层位于同一域中或具有信任关系时，才能使用“网络服务”此选项。
 
 如果你需要手动将“网络服务”账户添加到组（例如“项目集构建账户”Project Collection Build Accounts）中，使用的格式应为 `DOMAIN\MACHINE_NAME`，其中 `DOMAIN` 是构建所在的域名称，`MACHINE_NAME` 是构建服务器的名称。
 
-如果执行安装的用户也是你将要附加构建服务的项目的 Team Foundation 管理员（Team Foundation Administrators）组的一员，则安装过程将自动将你添加到项目集中相应的构建服务组中。你必须手动将 TFSBUILD 用户添加到该组。（更多信息请参阅“Team Foundation Server 安装指南”）。
+如果执行安装的用户也是你将要附加构建服务的项目的 Team Foundation 管理员（Team Foundation Administrators）组的一员，则安装过程将自动将你添加到项目集中相应的构建服务组中。你必须手动将 `TFSBUILD` 用户添加到该组。（更多信息请参阅“Team Foundation Server 安装指南”）。
 
 与 Team Foundation 的安装一样，构建服务的设置分为两个部分：安装和后续配置。
 
@@ -8154,9 +7503,6 @@ www.it-ebooks.info
 
 有时需要使用真实的域账户作为交互式进程运行构建服务主机。常见的例子是需要构建代理通过桌面与运行中的应用程序进行交互，例如你想在没有完整测试代理的情况下运行代码 UI 测试。可以通过多个步骤来确保这种配置尽可能可靠。
 
-
-
-
 接下来，你应该将构建服务用户配置为服务器的自动登录账户。这将确保当机器因 Windows 更新需要重启或其他事件而重启时，它将直接进入构建用户的交互式会话。有关更多信息，请参阅 http://aka.ms/KB310584。
 
 你应该确保为构建用户账户禁用了屏幕保护程序，以防止其锁定会话。
@@ -8195,13 +7541,13 @@ www.it-ebooks.info
 
 > 在 Visual Studio 中，如果你打开了想要实现自动化构建的解决方案，当你创建新的构建定义时，它会为你在构建定义中默认一些值（如构建定义名称、工作区模板以及要构建哪个解决方案）。你仍然可以编辑这些内容。
 
-## 常规（General）部分
+### 常规（General）部分
 
 如图 17-10 所示的常规部分允许你设置构建定义的名称和描述，你可以选择禁用或暂停构建定义。在未来的任何时候都可以重命名构建定义，所以如果你现在还没有命名规范，不必太担心这一点。
 
 对于构建描述，良好的做法是提供一个关于构建的简短行描述，这对团队成员很有用。
 
-## 触发器（Trigger）部分
+### 触发器（Trigger）部分
 
 触发器部分控制何时运行构建。如图 17-11 所示，有很多触发器可以用于构建。有关构建扩展性的更多信息，请参阅 http://aka.ms/TfsBuild。
 
@@ -8215,20 +7561,19 @@ www.it-ebooks.info
 
 图 17-11：触发器
 
-## 滚动构建
+#### 滚动构建
 
 滚动构建触发器类似于 Team Foundation Server 的持续集成触发器。然而，它会合并多次提交，以确保构建控制器不会有等待处理的构建队列。可选，可以指定一个间隔，以控制在触发新构建之前经过的最短时间。这是由持续集成构建服务器（如 CruiseControl 或 CruiseNET）使用的触发器类型。
 
 带有滚动构建触发器的构建定义也可以与持续集成构建结合使用。两者可以共享资源。然而，持续集成构建可以负责快速的快速检查，而滚动构建可以执行额外的活动，如运行完整的 UI 自动化、生成代码文档、将构建打包成 MSI 安装程序和 ISO 镜像进行分发，甚至将构建部署到测试环境中进行评估。
 
-## 门禁检查
+#### 门禁检查
 
 门禁检查是 Team Foundation Server 2010 的新功能。它与持续集成触发器相似，但有一个不同之处。当在门禁检查构建覆盖的区域执行提交时，开发者将看到如图 17-12 所示的对话框。
 
 任何提交都会自动存储为搁存（shelf）。构建服务器会将尝试提交的代码与版本控制存储库中的代码进行合并。只有在构建成功后，才会代表执行提交的人将更改提交到版本控制中。
 
 > 注意 防止提交触发构建，请在注释字符串的任何位置插入 ***CI***。此特殊字符串表示构建应忽略该提交。
-
 
 （到签入注释的结束以确保不需要后续构建）。由于合并冲突无法将暂存（shelvet）与源代码控制的最新版本合并，则构建将失败。如果由于任何原因构建失败，暂存中的任何签入代码将保留在服务器上以便修复。
 
@@ -8244,8 +7589,8 @@ www.it-ebooks.info
 
 由于受控签入要求代码作为构建过程的一部分自动合并，这有两个重要影响：
 
-- 1. 代码可能与作为暂存提交的代码略有不同。
-- 2. 尽管 Team Foundation Server 具有内置的池化功能，但一次只能执行一个受控签入构建，以防止合并冲突。
+1. 代码可能与作为暂存提交的代码略有不同。
+2. 尽管 Team Foundation Server 具有内置的池化功能，但一次只能执行一个受控签入构建，以防止合并冲突。
 
 受控签入对于有大量开发人员在同一代码库中工作的组织非常有用，在这些组织中，由于人为错误，持续集成（Continuous Integration）构建经常失败。（即使是最优秀的开发者每年也可能破坏一两次构建；如果你有 300 名开发者向同一个树签入，这意味着构建每天至少会中断一次。）
 
@@ -8255,7 +7600,7 @@ www.it-ebooks.info
 
 > 注意：有关使用受控签入确保代码质量的更多信息，请参见第 7 章。
 
-## 计划
+### 计划
 
 计划（Schedule）触发器可以定义每周计划中排队构建的时间——即每日、每夜或每周构建。注意，每个构建定义只能提供一个时间，该时间将在所选的日期重复。选择此时间时应确保它不会与网络中任何正在进行的备份或其他维护作业冲突，且理想情况下还应确保在构建预期完成时，如果发生任何错误，有人可以帮助修复构建。
 
@@ -8267,17 +7612,19 @@ www.it-ebooks.info
 
 Visual Studio Team Explorer 安装了许多命令行工具，其中之一就是 `tfsbuild.exe` 命令。该命令可用于执行有限数量的 Team Foundation 任务，在不需要完全访问 Team Foundation API 的脚本场景中非常有用。
 
+
+
 例如，要触发构建，可以使用类似所示的命令：
 
 ```
 tfsbuild http://vsam:8080/tfs/DefaultCollection AdventureWorks "My Build Definition"
 ```
 
-在此示例中，http://vsam:8080/tfs/DefaultCollection 是团队项目集的 URL，AdventureWorks 是团队项目名称，而 "My Build Definition" 是你希望为其排队构建的构建定义名称。
+在此示例中，`http://vsam:8080/tfs/DefaultCollection` 是团队项目集的 URL，`AdventureWorks` 是团队项目名称，而 `"My Build Definition"` 是你希望为其排队构建的构建定义名称。
 
-有关 `tfsbuild` 命令的更多信息，请打开 TFSBuild 的开发人员提示符以获取帮助，或访问 http://aka.ms/TfsBuildExe。
+有关 `tfsbuild` 命令的更多信息，请打开 TFSBuild 的开发人员提示符以获取帮助，或访问 `http://aka.ms/TfsBuildExe`。
 
-www.it-ebooks.info
+`www.it-ebooks.info`
 
 # 工作空间部分
 
@@ -8287,7 +7634,7 @@ www.it-ebooks.info
 
 图 17-13：工作空间部分
 
-默认工作文件夹映射通常给出团队项目的根目录（例如 `$/AdventureWorks`），映射到由环境变量 (`$SourceDir`) 表示的源目录。这种映射几乎太宽了，涵盖许多不应属于构建的文件。投放位置（drop location）必须是网络上 Windows 共享的 UNC 路径。代理必须具有网络访问权限，且运行的构建服务必须具有该位置的写入权限，因为文件将作为构建的一部分直接从构建复制到投放位置。全路径有 260 个字符的限制，因此你应该确保服务器名称和路径尽可能短，为输出留出最大空间。然而，你可以在投放位置放置对应构建定义的构建以帮助管理。任何不应触发构建的文件或文件夹应被屏蔽（cloaked）。
+默认工作文件夹映射通常给出团队项目的根目录，例如 `$/AdventureWorks`，映射到由环境变量 (`$SourceDir`) 表示的源目录。这种映射几乎太宽了，涵盖许多不应属于构建的文件。投放位置必须是网络上 Windows 共享的 UNC 路径。代理必须具有网络访问权限，且运行的构建服务必须具有该位置的写入权限，因为文件将作为构建的一部分直接从构建复制到投放位置。全路径有 260 个字符的限制，因此你应该确保服务器名称和路径尽可能短，为输出留出最大空间。然而，你可以在投放位置放置对应构建定义的构建以帮助管理。任何不应触发构建的文件或文件夹应被屏蔽（cloaked）。
 
 > 注意：有关工作文件夹映射和屏蔽映射的更多信息，请参见第 6 章。
 
@@ -8305,10 +7652,7 @@ www.it-ebooks.info
 
 如果构建没有输出，你可以选择第一个选项，这允许构建定义在不填写投放位置的情况下有效。此选项是 Team Foundation Server 2012 的新功能，因为对于某些构建过程，强制要求投放位置是没有意义的。
 
-
-
-
-## 过程部分 (Process Section)
+## 过程部分
 
 过程部分决定了构建定义应该使用哪个已注册的构建过程模板，以及在启动 Windows Workflow 过程时向其传递哪些属性，如图 17-15 所示。
 
@@ -8322,11 +7666,11 @@ www.it-ebooks.info
 
 构建过程以及由带箱提供的主过程模板所使用的各种属性的更多细节，将在本章节后后的“理解构建过程”节中进行详细描述。
 
-## 保留策略部分 (Retention Policy Section)
+## 保留策略部分
 
 图 17-16 所示的保留策略部分规定了自动保留构建的规则，以及对于超出保留策略的构建应该删除哪些内容。
 
-## 使用构建 (Working with Builds)
+## 使用构建
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_446_0.png)
 
@@ -8336,18 +7680,18 @@ www.it-ebooks.info
 
 在 Team Foundation Server 中，构建可以在以下四种状态之一结束，如下所示：
 
-- 成功 (Succeeded)—成功表示构建中的所有内容都是良好的，这是您希望看到的结果。
-- 部分成功 (Partially Succeeded)—部分成功是给予已通过编译但在构建过程中发生某些问题（如单元测试）的构建的默认状态。在单元测试失败的情况下，可以让构建失败。（请参阅本章节后的“构建过程参数”以获取更多信息。）
-- 失败 (Failed)—构建是指由于某些原因完成的构建。
-- 停止 (Stopped)—停止的构建是在运行期间被手动终止的构建。
+- 成功 `Succeeded` — 成功表示构建中的所有内容都是良好的，这是您希望看到的结果。
+- 部分成功 `Partially Succeeded` — 部分成功是给予已通过编译但在构建过程中发生某些问题（如单元测试）的构建的默认状态。在单元测试失败的情况下，可以让构建失败。请参阅本章节后的“构建过程参数”以获取更多信息。
+- 失败 `Failed` — 构建是指由于某些原因完成的构建。
+- 停止 `Stopped` — 停止的构建是在运行期间被手动终止的构建。
 
-保留策略控制默认情况下对每种类型的构建结果保留多少结果。在任何时候，通过构建详细信息的上下文菜单或构建报告，您都可以指示将特定的构建标记为**无限保留** (Retained Indefinitely)（或永久保留）。将构建标记为无限保留意味着它将被排除在自动保留策略之外。
+保留策略控制默认情况下对每种类型的构建结果保留多少结果。在任何时候，通过构建详细信息的上下文菜单或构建报告，您都可以指示将特定的构建标记为**无限保留** `Retained Indefinitely`（或永久保留）。将构建标记为无限保留意味着它将被排除在自动保留策略之外。
 
 > 警告 对于使用 Microsoft Test Manager 记录前向测试执行的团队，删除测试结果将破坏快速快进所需的的操作记录。因此，请小心您的测试团队为构建定义设置的保留策略。您可以更改保留策略，将测试结果排除在删除项之外（如图 17-16 所示），或将您的测试团队的任何构建标记为无限保留。有关更多信息，请参阅第 24 章。
 
 对于团队触发（手动队列）构建和个人开发者队列的私有构建，都有独立的保留策略。本章节后将提供有关私有构建的更多信息。更改私有构建保留策略会影响所有为定义执行私有构建的开发人员——而不只是编辑设置的开发者。
 
-对于每个保留策略，您可以通过选择“删除内容”列来确定哪些内容会被自动删除。选择`<指定删除>(Specify With Delete>` 将显示图 17-17 所示的内容，允许从该点开始自动删除构建时应用自定义设置。
+对于每个保留策略，您可以通过选择“删除内容”列来确定哪些内容会被自动删除。选择`<指定删除>` `Specify With Delete` 将显示图 17-17 所示的内容，允许从该点开始自动删除构建时应用自定义设置。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_447_0.png)
 
@@ -8355,11 +7699,11 @@ www.it-ebooks.info
 
 有关每个删除选项的含义的更多信息，请参阅本章节后的“删除构建”节。
 
-## 保存构建定义 (Saving the Build Definition)
+## 保存构建定义
 
-一旦您对构建定义的设置满意，可以点击保存按钮或按 Ctrl+S 进行保存。在 Eclipse 中，点击 OK 按钮将更改保存到服务器。
+一旦您对构建定义的设置满意，可以点击保存按钮或按 `Ctrl+S` 进行保存。在 Eclipse 中，点击 OK 按钮将更改保存到服务器。
 
-## 队列构建 (Queuing a Build)
+## 队列构建
 
 当您创建了新的构建定义后，应该手动队列构建以确保其按预期工作。构建定义的最新成功构建用于确定更改集，工作项将与后续构建关联，因此第一次构建将是与下次触发构建比较的基准。
 
@@ -8371,7 +7715,7 @@ www.it-ebooks.info
 
 图 17-18：队列构建对话框
 
-## 理解队列过程 (Understanding the Queue Process)
+## 理解队列过程
 
 当您创建了新的构建定义后，应该手动队列构建以确保其按预期工作。构建定义的最新成功构建用于确定更改集，工作项将与后续构建关联，因此第一次构建将是与下次触发构建比较的基准。
 
@@ -8379,38 +7723,33 @@ www.it-ebooks.info
 
 随后您将看到队列构建对话框，如图 17-18 所示。
 
-（注：原文此处存在大量重复段落，译文已根据要求不再重复输出）
-
-## 私有构建 (Private Builds)
+## 私有构建
 
 一旦您对每次提交都开始执行构建，系统创建的构建数量可能会迅速增加。然而，一旦状态（通过或失败）已知，并不是所有构建都具有相关性。找到您正在寻找的构建可能会变得复杂，存储每个保留构建的所有构建结果所需的磁盘空间也是如此。
 
 在 Team Foundation Server 中，构建可以在以下四种状态之一结束，如下所示：
 
-- 成功 (Succeeded)—成功表示构建中的所有内容都是良好的，这是您希望看到的结果。
-- 部分成功 (Partially Succeeded)—部分成功是给予已通过编译但在构建过程中发生某些问题（如单元测试）的构建的默认状态。在单元测试失败的情况下，可以让构建失败。（请参阅本章节后的“构建过程参数”以获取更多信息。）
-- 失败 (Failed)—构建是指由于某些原因完成的构建。
-- 停止 (Stopped)—停止的构建是在运行期间被手动终止的构建。
+- 成功 `Succeeded` — 成功表示构建中的所有内容都是良好的，这是您希望看到的结果。
+- 部分成功 `Partially Succeeded` — 部分成功是给予已通过编译但在构建过程中发生某些问题（如单元测试）的构建的默认状态。在单元测试失败的情况下，可以让构建失败。请参阅本章节后的“构建过程参数”以获取更多信息。
+- 失败 `Failed` — 构建是指由于某些原因完成的构建。
+- 停止 `Stopped` — 停止的构建是在运行期间被手动终止的构建。
 
-保留策略控制默认情况下对每种类型的构建结果保留多少结果。在任何时候，通过构建详细信息的上下文菜单或构建报告，您都可以指示将特定的构建标记为**无限保留** (Retained Indefinitely)（或永久保留）。将构建标记为无限保留意味着它将被排除在自动保留策略之外。
+保留策略控制默认情况下对每种类型的构建结果保留多少结果。在任何时候，通过构建详细信息的上下文菜单或构建报告，您都可以指示将特定的构建标记为**无限保留** `Retained Indefinitely`（或永久保留）。将构建标记为无限保留意味着它将被排除在自动保留策略之外。
 
-## 构建通知与警报 (Build Notifications and Alerts)
+## 构建通知与警报
 
 Team Foundation Server 提供了强大的事件建模和 API，允许对任何想象的应用程序或设备进行构建结果的自定义集成，从标准邮件警报到岩浆、纸屑吹风机、构建状态屏幕，甚至是说话机器人。然而，开箱为开发者提供了两个主要的通知系统：
 
 1. Windows 构建通知工具
 2. 电子邮件警报
 
-## 构建通知工具 (Build Notifications Tool)
+## 构建通知工具
 
 通知工具是一个在 Windows 系统区域运行的小程序。
-在 2008 版本中，它是作为 Team Foundation Server Power Tools的一部分，但在 2010 和 2012 版本中随 Visual Studio 和 Visual Studio Team Explorer 一起提供。
+
+在 2008 版本中，它是作为 Team Foundation Server Power Tools 的一部分，但在 2010 和 2012 版本中随 Visual Studio 和 Visual Studio Team Explorer 一起提供。
 
 图 21 显示了构建通知工具正在运行并在屏幕右角以 Outlook 样弹出消息向用户显示通知。它可以配置为在登录时运行，但在请求受控检查时由 Visual Studio 运行。如果构建成功，通知工具将向用户显示对话框（图 17-22），询问他们是否想要协调他们的工作区。构建通知工具通过定期轮询 Team Foundation Server 来工作，因此通知在构建完成后可能需要两分钟才能显示给用户。
-
-
-
-
 
 # 414 第 17 章 使用 TEAM FOUNDATION
 
@@ -8420,7 +7759,7 @@ Team Foundation Server 提供了强大的事件建模和 API，允许对任何�
 
 ## 电子邮件警报
 
-一旦在 Team Explorer 中选中了团队项目，就可以在 Visual Studio 的团队项目警报（Team Project Alerts）中配置基本的电子邮件警报。使用图 17-23 所示界面，可以在构建质量 way或开发者启动构建时启用电子邮件警报。
+一旦在 Team Explorer 中选中了团队项目，就可以在 Visual Studio 的团队项目警报 `Team Project Alerts` 中配置基本的电子邮件警报。使用图 17-23 所示界面，可以在构建质量 way 或开发者启动构建时启用电子邮件警报。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_451_1.png)
 
@@ -8428,24 +7767,24 @@ Team Foundation Server 提供了强大的事件建模和 API，允许对任何�
 
 电子邮件可以发送到任何地址，包括团队分发列表，前提是 Team Foundation 服务器应用程序层配置了正确的 SMTP 服务器信息以发送消息。然而，电子邮件警报属于创建警报的用户，该用户必须通过 Web 界面删除或编辑该警报。
 
-在 Team Foundation 服务器应用程序层机器上，可以在 Team Foundation\Tools 文件夹中找到 `BisSubscribe.exe` 命令，可用于脚本化创建团队项目的项目的警报。
+在 Team Foundation 服务器应用程序层机器上，可以在 `Team Foundation\Tools` 文件夹中找到 `BisSubscribe.exe` 命令，可用于脚本化创建团队项目的项目的警报。
 
 ## 管理构建
 
-主要的构建管理活动在 Visual Studio 或 Eclipse 的构建（Builds）页面中进行，通过点击 Team Explorer 中的构建链接可以访问该页面。图 17-2 显示了构建生成器（Build Explorer）。
+主要的构建管理活动在 Visual Studio 或 Eclipse 的构建 `Builds` 页面中进行，通过点击 Team Explorer 中的构建链接可以访问该页面。图 17-2 显示了构建生成器 `Build Explorer`。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_452_0.png)
 
 图 17-2：构建生成器
 
-特定团队项目的所有构建定义都列在 Team Explorer 的“所有构建定义”（All Build Definitions）部分。虽然没有将构建排序到文件夹的方法，但在 Team Foundation Server 2012 中现在可以对构建定义进行搜索和过滤。
+特定团队项目的所有构建定义都列在 Team Explorer 的“所有构建定义” `All Build Definitions` 部分。虽然没有将构建排序到文件夹的方法，但在 Team Foundation Server 2012 中现在可以对构建定义进行搜索和过滤。
 
 ## 构建生成器
 
 构建生成器允许访问其感知的构建、已运行的构建以及正在运行或等待运行的构建。构建生成器分为以下两个选项页：
 
-- 1. 队列中的构建（Queued builds）
-- 2. 已完成构建（Completed builds）
+1. 队列中的构建 `Queued builds`
+2. 已完成构建 `Completed builds`
 
 ## 队列中的构建
 
@@ -8461,11 +7800,11 @@ Team Foundation Server 提供了强大的事件建模和 API，允许对任何�
 
 构建通过“已完成构建”选项页顶部的标准进行过滤——默认显示该团队当天的所有构建。你可以调整选项将列表限制为仅显示你的构建，或更大的日期范围。
 
-“已完成构建”选项页显示了对单个构建详细信息进行构建管理的位置。你可以将构建标记为“无限保留”（Retain Indefinitely），以防止其包含在自动保留策略中。你还可以删除构建并编辑构建质量。
+“已完成构建”选项页显示了对单个构建详细信息进行构建管理的位置。你可以将构建标记为“无限保留” `Retain Indefinitely`，以防止其包含在自动保留策略中。你还可以删除构建并编辑构建质量。
 
 Team Foundation Server 2012 的新增功能是重试构建的能力。此选项将以原始构建执行时的相同参数再次将构建放入队列。如果你的构建是因为环境问题（如断电）而非代码问题失败，此功能将非常有用。
 
-## 操作构建 | 417
+## 操作构建
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_454_0.png)
 
@@ -8481,28 +7820,23 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 
 你可以删除以下内容：
 
-- **详细信息（Details）**——这是 Team Foundation Server 数据库中的构建记录，删除此项意味着构建不再显示在构建生成器中。构建实际上仍在数据库中，只是被标记为已删除。要完全移除构建记录，你必须使用 `tfsbuild.exe` 命令行销它。
+- **详细信息** `Details` — 这是 Team Foundation Server 数据库中的构建记录，删除此项意味着构建不再显示在构建生成器中。构建实际上仍在数据库中，只是被标记为已删除。要完全移除构建记录，你必须使用 `tfsbuild.exe` 命令行销它。
 
-> 注意：关于此内容的更多信息，以及哪些信息会被删除或保留以及原因，请参见 Adam Root 的博客文章：http://aka.ms/DeletedBuilds。
+> 注意：关于此内容的更多信息，以及哪些信息会被删除或保留以及原因，请参见 Adam Root 的博客文章：`http://aka.ms/DeletedBuilds`。
 
-- **输出文件（Drop）**——这些是复制到网络共享的所有输出内容。这些文件可能很大，是你最可能想要删除的内容。
-
-- **测试结果（Test Results）**——构建通过“已完成构建”选项页顶部的标准进行过滤——默认显示该团队当天的所有构建。你可以调整选项将列表限制为仅显示你的构建，或更大的日期范围。
-
-- **标签（Label）**——“已完成构建”选项页显示了对单个构建详细信息进行构建管理的位置。你可以将构建标记为“无限保留”，以防止其包含在自动保留策略中。你还可以删除构建并编辑构建质量。
-
-- **符号（Symbols）**——Team Foundation Server 2012 的新增功能是重试构建的能力。此选项将以原始构建执行时的相同参数再次将构建放入队列。如果你的构建是因为环境问题（如断电）而非代码问题失败，此功能将非常有用。
-
-
-
-
+- **输出文件** `Drop` — 这些是复制到网络共享的所有输出内容。这些文件可能很大，是你最可能想要删除的内容。
+- **测试结果** `Test Results` — 构建通过“已完成构建”选项页顶部的标准进行过滤——默认显示该团队当天的所有构建。你可以调整选项将列表限制为仅显示你的构建，或更大的日期范围。
+- **标签** `Label` — “已完成构建”选项页显示了对单个构建详细信息进行构建管理的位置。你可以将构建标记为“无限保留”，以防止其包含在自动保留策略中。你还可以删除构建并编辑构建质量。
+- **符号** `Symbols` — Team Foundation Server 2012 的新增功能是重试构建的能力。此选项将以原始构建执行时的相同参数再次将构建放入队列。如果你的构建是因为环境问题（如断电）而非代码问题失败，此功能将非常有用。
 
 作为构建过程的一部分，你可以通过这些标签进行过滤，以确保分配到的符合构建要求的构建代理。有关此的更多信息，请参阅本章节后面的“理解构建过程”部分。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_458_0.png)
+
 图 17-30：构建控制器属性对话框
 
 ![](img/..._458_1.png)
+
 图 17-31：构建代理属性对话框
 
 ## 最小化构建路径
@@ -8511,12 +7845,15 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 
 在 Team Foundation Server 2010 中，构建文件夹被缩减为 `$(SystemDrive)\Builds\$(BuildAgentId)\$(BuildDefinitionPath)`，对于典型的构建，它类似于 `C:\Builds\1\Team Project\Build Definition Name\`。虽然有了改进，但你仍可能遇到构建路径长度问题并需要对其进行缩减。
 
+
+
 通过将构建代理的工作目录设置为类似于 `$(SystemDrive)\B\$(BuildAgentId)$$(BuildDefinitionId)` 的路径，可以创建最短的公共路径，这将创建一个类似于 `C:\B\1\4\` 的典型构建工作文件夹。使用 `BuildDefinitionId` 还可以确保创建每个新的工作文件夹，并防止在为团队项目删除和添加同名构建定义时偶尔发生的工作区问题。
 
 > Visual Studio 和 Team Foundation Server 都已转为季度更新周期。在 Team Foundation Server 2012 的首次季度更新中引入的特性之一是将服务器路径限制从 260 个字符增加到 400 个字符。
 
 这并不能完全消除问题，因为限制的仍然是服务器路径（例如 `$/Project/Folder/File.cs`），而不是本地路径长度。
-有关更多信息，请参阅 Brian Harry 的博客文章：http://aka.ms/Tfs2012FirstUpdate。
+
+有关更多信息，请参阅 Brian Harry 的博客文章：`http://aka.ms/Tfs2012FirstUpdate`。
 
 ## 理解构建过程
 
@@ -8529,12 +7866,14 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 本节其余部分重点关注 Team Foundation Server 自带的过程模板。这些包括以下内容：
 
 - **DefaultTemplate.11.1**——为 Team Foundation Server 2012 创建的所有新构建的默认模板。该模板将是本节剩余部分讨论的重点。
+
 - **DefaultTemplate**——为 Team Foundation 2010 创建的所有新构建的默认模板。
+
 - **UpgradeTemplate**——用于在 Team Foundation 之前的版本中使用 MSBuild 包装方法的的构建，也用于如 XAML 等 .NET 编译项目，以及使用 Ant 或 Maven 的 Java 构建。`UpgradeTemplate` 用于任何已从 Team Foundation 2008 实例升级到 Team Foundation 2010 或 2012 的现有构建定义。`UpgradeTemplate` 基本上执行某些硬编码在早期 Team Foundation 代理过程中的清理功能。它封装了对名为 `TPSBuild.proj` 的 MSBuild 文件的调用，该文件控制其余基于 MSBuild 的构建。
 
 此外，`LabDefaultTemplate` 和 `LabDefaultTemplate` 也适用于第 24 章描述的实验室管理功能。
 
-如前所述，所有构建过程模板都存储为 XAML 文件，并位于团队项目根目录下的 `BuildProcessTemplates` 文件夹中（$/TeamProject/BuildProcessTemplates）。然而，如果创建了自定义过程模板，它们可能位于你的项目分支结构内部。
+如前所述，所有构建过程模板都存储为 XAML 文件，并位于团队项目根目录下的 `BuildProcessTemplates` 文件夹中（`$/TeamProject/BuildProcessTemplates`）。然而，如果创建了自定义过程模板，它们可能位于你的项目分支结构内部。
 
 ## DefaultTemplate.11
 
@@ -8543,23 +7882,41 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 > **警告** 第 18 章描述了如何编辑构建过程。然而，值得注意的是，此时的最佳实践是根据构建编辑器中的“过程”部分基于 `DefaultTemplate` 创建新过程并对其进行编辑。团队项目中共享相同构建过程模板的所有构建将受到该模板更改的影响。因此，将未编辑的 `DefaultTemplate.xml` 文件留在版本控制中是好的，以避免让那些期望在使用 Team Foundation 的系统之间保持相同的团队成员感到困惑。
 
 | DefaultTemplate 过程 |
+
 | :--- |
+
 | 获取构建详细 |
+
 | 更新构建版本 |
+
 | 创建 Drop Folder |
+
 | 获取构建代理 |
+
 | 在代理上运行 |
+
 | 获取构建目录 |
+
 | 初始化工作区 |
+
 | 获取源 |
+
 | 创建标签 |
+
 | 编译 |
+
 | 测试 |
+
 | 关联工作项 |
+
 | 计算受影响的测试 |
+
 | 索引源 |
+
 | 发布符号 |
+
 | 将构建输出复制到 Drop Folder |
+
 | 提交闸更改 (Gated Changes) |
 
 图 17-32：DefaultTemplate 过程
@@ -8570,43 +7927,74 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 
 构建控制器现在必须确定由哪个构建代理来执行实际构建。它通过……
 
-
 构建过程参数：
 
 - 1. 必选 (Required)
+
   - 要构建的项目
+
     - 要构建的配置
+
       - Debug
+
 - 2. 基础 (Basic)
+
   - 自动化测试
+
     - 1. 测试程序集
+
       - 额外的命令行参数
 
 | 类别过滤器 | |
+
 | :--- | :--- |
+
 | 测试失败时进行构建 | False |
+
 | 最大测试优先级 | -1 |
+
 | 最小测试优先级 | -1 |
+
 | 运行设置 | Test Assembly Frospec |
+
 | 测试名称 | $/TailpoinToys/Development/Ration2/TraceAndImpactTestSettings/"test-all" |
+
 | 构建编号格式 | ${BuildDefinitionName}${Date:yyyyMMdd}(R{rev1}) |
+
 | 清理工作区 | All |
+
 | 日志优先级 | Normal |
+
 | 代码分析 | Never |
+
 | 索引符号 | True |
+
 | 构建符号路径 | $(VSALM)symbols |
+
 - 3. 高级 (Advanced)
+
   - 代理设置
+
     使用代理名称*且 Tag 为空；最大等待时间: 04:00:00
+
     - 分析文本: True
+
     - 准确的检出和工作项: True
+
     - 在此处创建工作项: False
+
     - 禁用测试: False
+
     - 获取版本:
+
       - 标签源: True
+
     - MSBuild 参数: /p:DeployBuild=True
+
     - MSBuild 多进程: True
+
     - MSBuild 平台: Auto
+
     - 私有投放位置：Solution Build Outputs: False
 
 图 17-33：编辑构建定义时可参数
@@ -8615,23 +8003,23 @@ Team Foundation Server 2012 的新增功能是重试构建的能力。此选项�
 
 在 DefaultTemplate 的必选部分，指定了要构建的项目。这些项目由“要构建的配置”和“要构建的项目”组成。
 
-## 要构建的配置
+### 要构建的配置
 
 默认的 Visual Studio 构建配置是使用所选解决方案的默认构建配置。然而，你可以覆盖此设置——例如，如果你想在服务器上进行 Release 构建，但解决方案中的默认值是 Debug 构建。
 
 若要修改配置，请点击“要构建的配置”参数中的 `. .` 按钮，显示配置对话框。
 
-> 注意：Team Foundation Build 通常处理解决方案配置。这些配置允许你指定一个命名的项目级平台和配置集合，并对它们进行构建。有关解决方案配置的更多信息，请参阅 Aaron Hallberg（微软 Team Build 团队前负责人）发表的博客文章：http://aka.ms/TfsBuildSolConf。
+> 注意：Team Foundation Build 通常处理解决方案配置。这些配置允许你指定一个命名的项目级平台和配置集合，并对它们进行构建。有关解决方案配置的更多信息，请参阅 Aaron Hallberg（微软 Team Build 团队前负责人）发表的博客文章：`http://aka.ms/TfsBuildSolConf`。
 
-## 要构建的项目
+### 要构建的项目
 
-“要构建的项目”参数在本章较早之前创建构建定义时已讨论过。该参数描述了作为构建定义的一部分，应该构建哪些 MSBuild 项目文件 (.vbproj 或 .csproj) 或 Visual Studio 文件 (.sln 文件)。
+“要构建的项目”参数在本章较早之前创建构建定义时已讨论过。该参数描述了作为构建定义的一部分，应该构建哪些 MSBuild 项目文件 (`.vbproj` 或 `.csproj`) 或 Visual Studio 文件 (`.sln` 文件)。
 
-项目将按照它们提供的顺序执行执行。因此，如果你想在执行解决方案构建后调用某个项目（例如，使用开源项目 Wix 的 .wix 文件创建 MSI 安装程序），请将其指定为第二个。点击“要构建的项目”中的 `. .` 按钮会显示解决方案/项目对话框，允许你向列表添加其他文件并允许你控制顺序。
+项目将按照它们提供的顺序执行执行。因此，如果你想在执行解决方案构建后调用某个项目（例如，使用开源项目 Wix 的 `.wix` 文件创建 MSI 安装程序），请将其指定为第二个。点击“要构建的项目”中的 `. .` 按钮会显示解决方案/项目对话框，允许你向列表添加其他文件并允许你控制顺序。
 
 要构建的项目的服务器路径。这些服务器路径必须由构建定义定义的工作文件夹模板映射。否则，当代理尝试将构建文件的服务器路径转换为构建代理上的本地路径以运行构建时，构建将失败。
 
-## 自动化测试
+### 自动化测试
 
 在 DefaultTemplate 的基础部分，“自动化测试”提供了将作为构建一部分执行的测试。默认情况下，这设置为执行由匹配模式 *test* 的构建创建的程序集中找到的所有测试——也就是说，对于使用 Microsoft 框架实现的测试，将包含 HelloWorldTests.dll。
 
@@ -8653,9 +8041,6 @@ www.it-ebooks.info
 
 使用此功能的另一个示例是，你可以设置一个构建，使所有优先级为 1 或更低的测试作为标准持续集成（CI）构建的一部分运行，但所有测试都在另一个额外的构建定义中运行，该定义设置为每隔 30 分钟触发一次的滚动构建。这样，持续集成构建就可以对近似反馈提供快速反馈。（注：原文此处存在大量重复错误，已在翻译中进行逻辑修正）。
 
-
-
-
 # 第 17 章使用 Team Foundation 构建（Build）
 
 如果你有大量的源文件，并且在构建过程中没有对这些源文件进行现场操作（例如，你没有编辑 AssemblyInfo 文件以包含构建版本号），你可以将“清理工作区”（Clean Workspace）参数的值设置为“输出”（Outputs）。这将在每次执行构建时删除构建输出，但在每次构建运行之间保留版本控制工作空间，因此只会获取两次构建之间发生变化的文件。
@@ -8676,7 +8061,7 @@ www.it-ebooks.info
 
 > 注意：静态代码分析允许你提供一组规则，这些规则可以在构建期间进行检查，以确保遵守代码规范，并避免常见的错误和安全问题。受托管代码分析工具（Managed Code Analysis，也称为 FxCop）是 Visual Studio 用于根据规则库分析代码的工具。根据 .NET Framework 设计指南，开箱提供了近 200 条规则。这些规则被组织成一系列规则集和组。
 
-> 注意：有关更多关于 Visual Studio 2012 中 C++ 更新后的静态代码分析功能的信息，请参见此处 MSDN 文章：http://aka.ms/VS2012CppAnalysis。
+> 注意：有关更多关于 Visual Studio 2012 中 C++ 更新后的静态代码分析功能的信息，请参见此处 MSDN 文章：`http://aka.ms/VS2012CppAnalysis`。
 
 # 理解构建过程 | 433
 
@@ -8692,7 +8077,7 @@ www.it-ebooks.info
 
 符号服务器的配置是在默认模板（DefaultTemplate）中基本部分的“发布符号的路径”（Path to Publish Symbols）参数中，通过用于符号存储的 Windows 文件位置来完成的。
 
-> 注意：有关每个开发人员都应该了解符号文件的更多信息，请参阅 John Robbins 的博客文章：http://aka.ms/PdbFiles。
+> 注意：有关每个开发人员都应该了解符号文件的更多信息，请参阅 John Robbins 的博客文章：`http://aka.ms/PdbFiles`。
 
 # 代理设置（Agent Settings）
 
@@ -8704,7 +8089,7 @@ www.it-ebooks.info
 
 # 分析测试影响（Analyze Test Impact）
 
-如果测试运行的 .testsettings 文件指示应执行测试影响分析，则默认模板高级部分“分析测试影响”（Analyze Test Impact）参数的默认值“True”意味着将执行该分析。将其设置为“False”意味着无论 .testsettings 如何，都不会执行影响分析。
+如果测试运行的 `.testsettings` 文件指示应执行测试影响分析，则默认模板高级部分“分析测试影响”（Analyze Test Impact）参数的默认值“True”意味着将执行该分析。将其设置为“False”意味着无论 `.testsettings` 如何，都不会执行影响分析。
 
 # 关联更改集和工作项（Associate Changesets and Work Items）
 
@@ -8716,69 +8101,68 @@ www.it-ebooks.info
 
 当构建失败时，默认行为是为运行构建的人员创建一个工作项（例如在持续集成触发的构建定义情况下）。如果你不需要自动创建工作项，请将默认模板高级部分的“失败时创建工作项”（Create Work Item on Failure）参数设置为“False”。
 
-# 禁用测试（Disable Tests）
+
+
+# 第 17 章 使用 TEAM FOUNDATION BUILD
+
+## 禁用测试（Disable Tests）
 
 默认情况下，自动化测试（Automated Tests）选项卡中指定的测试将执行，除非默认模板高级部分的“禁用测试”（Disable Tests）参数设置为“True”。这通常用于手动排队一个希望无测试运行的单次构建（例如，为了临时加快构建过程）。
 
-# 获取版本（Get Version）
+## 获取版本（Get Version）
 
-默认情况下，使用最新版本的源码执行构建。然而，你可能希望创建一个始终构建特定标签文件的构建定义——例如，QARelease@$/MyProject。将默认模板高级部分的“获取版本”（Get Version）参数设置为 QARelease@$/MyProject 将强制构建定义仅获取带有此标签的文件。因为可以在 Team Foundation Server 中编辑标签，所以你现在可以标记用于 QA 发布的版本和文件，并知道一旦触发它们将包含在构建中。
+默认情况下，使用最新版本的源码执行构建。然而，你可能希望创建一个始终构建特定标签文件的构建定义——例如，`QARelease@$/MyProject`。将默认模板高级部分的“获取版本”（Get Version）参数设置为 `QARelease@$/MyProject` 将强制构建定义仅获取带有此标签的文件。因为可以在 Team Foundation Server 中编辑标签，所以你现在可以标记用于 QA 发布的版本和文件，并知道一旦触发它们将包含在构建中。
 
 在构建中使用“获取版本”的另一种方法是在版本控制中设立一个用于 QA 文件的分支，并将更改合并到该分支以包含在构建中。有关分支的更多信息，请参阅第 9 节。
 
+## 标签源 (Label Sources)
 
+默认情况下，`DefaultTemplate` 中高级（Advanced）部分的 `Label Sources` 参数设置为 True，这意味着构建工作区中的源会在构建过程开始时进行标记，以便于轻松确定包含在构建中的精确版本。如果不需要创建标签，则将其设置为 False。但请注意，这将禁用更改分析功能，该功能依赖于上一次成功构建的标签来确定构建之间的差异。
 
+## MSBuild 参数 (MSBuild Arguments)
 
+使用 `DefaultTemplate` 中高级（Advanced）部分的 `MSBuild Arguments` 参数，在构建过程中每次调用 `MSBuild.exe` 时，向其传递额外的线性参数。
 
-# 标签源 (Label Sources)
+## MSBuild 多进程 (MSBuild Multi-Proc)
 
-默认情况下，DefaultTemplate 中高级（Advanced）部分的 Label Sources 参数设置为 True，这意味着构建工作区中的源会在构建过程开始时进行标记，以便于轻松确定包含在构建中的精确版本。如果不需要创建标签，则将其设置为 False。但请注意，这将禁用更改分析功能，该功能依赖于上一次成功构建的标签来确定构建之间的差异。
+使用 `MSBuild Multi-Proc` 参数在可能的情况下利用构建服务器上的所有可用处理器并行构建解决方案中的项目。
 
-# MSBuild 参数 (MSBuild Arguments)
+## MSBuild 平台 (MSBuild Platform)
 
-使用 DefaultTemplate 中高级（Advanced）部分的 MSBuild Arguments 参数，在构建过程中每次调用 MSBuild.exe 时，向其传递额外的线性参数。
+默认情况下，执行构建过程的 MSBuild 平台是根据构建代理的当前操作系统自动检测的。然而，如果需要显式平台，可以将 `DefaultTemplate` 中高级部分的此参数显式设置为 `x86`（例如，当项目调用不兼容 x64 的程序集，且您需要强制将其加载到正确版本的 CLR 中）。
 
-# MSBuild 多进程 (MSBuild Multi-Proc)
+## 私有投放位置 (Private Drop Location)
 
-使用 MSBuild Multi-Proc 参数在可能的情况下利用构建服务器上的所有可用处理器并行构建解决方案中的项目。
+使用 `DefaultTemplate` 中高级（Advanced）部分的 `Private Drop Location` 参数指定在执行私有构建或伙伴构建（buddy builds）时使用的备用投放位置。如果没有指定（默认值），私有结果将投放到与构建定义指定的投放位置相同的位置。
 
-# MSBuild 平台 (MSBuild Platform)
+## 特定的构建输出 (Solution Specific Build Outputs)
 
-默认情况下，执行构建过程的 MSBuild 平台是根据构建代理的当前操作系统自动检测的。然而，如果需要显式平台，可以将 DefaultTemplate 中高级部分的此参数显式设置为 x86（例如，当项目调用不兼容 x64 的程序集，且您需要强制将其加载到正确版本的 CLR 中）。
+使用 `DefaultTemplate` 中高级（Advanced）部分的 `Solution Build Outputs` 参数根据解决方案名称将输出存放在文件夹中。此参数是 2012 年引入的新功能。
 
-# 私有投放位置 (Private Drop Location)
-
-使用 DefaultTemplate 中高级（Advanced）部分的 Private Drop Location 参数指定在执行私有构建或伙伴构建（buddy builds）时使用的备用投放位置。如果没有指定（默认值），私有结果将投放到与构建定义指定的投放位置相同的位置。
-
-# 特定的构建输出 (Solution Specific Build Outputs)
-
-使用 DefaultTemplate 中高级（Advanced）部分的 Solution Build Outputs 参数根据解决方案名称将输出存放在文件夹中。此参数是 2012 年引入的新功能。
-
-# 使用 Team Foundation Server 构建 Ant 和 Maven 项目
+## 使用 Team Foundation Server 构建 Ant 和 Maven 项目
 
 标准构建代理可以对 .NET 项目类型执行基本的编译和测试活动。构建代理上需要 Visual Studio Ultimate 或 Visual Studio Premium 才能执行具有代码覆盖或静态分析等功能的高级 .NET 构建。
 
-此外，通过在构建代理上安装 Build Extensions Power Tool，并配合合适的 Java 开发工具包 (JDK) 版本以及 Ant 和/或 Maven，也可以从 Team Foundation 构建中执行 Java 构建。最新版本的 Build Extensions Power Tool 可以在 http://aka.ms/fs2012BuildExtensions 获取。
-
-# 436 | 第 17 章 使用 TEAM FOUNDATION BUILD
+此外，通过在构建代理上安装 Build Extensions Power Tool，并配合合适的 Java 开发工具包 (JDK) 版本以及 Ant 和/或 Maven，也可以从 Team Foundation 构建中执行 Java 构建。最新版本的 Build Extensions Power Tool 可以在 `http://aka.ms/fs2012BuildExtensions` 获取。
 
 此 Power Tool 提供了一套工作流活动（Workflow Activities）和 MSBuild 任务，这些任务封装了 Java 构建工具对 Ant 或 Maven 的调用。构建工具的结果由构建代理解释并发布回 Team Foundation Server，并包含任何 JUnit 测试结果。Java 构建过程的数据随后将与 Visual Studio 构建相同的方式在 Team Foundation Server 中可用。
 
 创建基于 Java 的构建定义最简单的方法是使用 Team Explorer 从 Eclipse 创建它。在 Team Explorer 中右键点击 Builds 节点，并按照本章较早之前概述的流程执行构建定义创建过程。唯一的显著区别是，Eclipse 中的构建定义请求的不是之前描述的 Process 部分，而是创建一个项目文件。
 
-点击 Create（创建）按钮显示构建配置向导（Build Configuration Wizard），然后选择您希望用于执行构建的 Ant build.xml 或 Maven.pom 文件。
+点击 Create（创建）按钮显示构建配置向导（Build Configuration Wizard），然后选择您希望用于执行构建的 Ant `build.xml` 或 Maven `pom` 文件。
 
-注意，这将使用 UpgradeTemplate 过程模板创建一个构建，其中所有功能都由一个带有基于 MSBuild 的封装脚本的 TFSBuild.proj 文件控制。通过这种方式，可以从 Eclipse 或在无法方便使用合适的 Windows 工作流编辑器的平台上轻松编辑构建功能。
+注意，这将使用 `UpgradeTemplate` 过程模板创建一个构建，其中所有功能都由一个带有基于 MSBuild 的封装脚本的 `TFSBuild.proj` 文件控制。通过这种方式，可以从 Eclipse 或在无法方便使用合适的 Windows 工作流编辑器的平台上轻松编辑构建功能。
 
-# 总结 (SUMMARY)
+## 总结 (SUMMARY)
 
-本章主要介绍了使用 Team Foundation Server 提供的构建功能。您学习了构建服务的安装和构建定义的创建。您熟悉了使用 Team Foundation Server 管理构建的工具和窗口。最后，本章描述了构建过程，详细检查了 DefaultTemplate 的可用配置参数，并描述了如何使用 Team Foundation Server 构建 Java 项目（以及 Visual Studio 项目）。
+本章主要介绍了使用 Team Foundation Server 提供的构建功能。您学习了构建服务的安装和构建定义的创建。您熟悉了使用 Team Foundation Server 管理构建的工具和窗口。最后，本章描述了构建过程，详细检查了 `DefaultTemplate` 的可用配置参数，并描述了如何使用 Team Foundation Server 构建 Java 项目（以及 Visual Studio 项目）。
 
 第 18 章将更详细地检查构建过程的自定义，并提供了一些常见构建自定义的示例。
 
-# 18 # 自定义构建过程
+# 第 18 章 自定义构建过程
 
 ## 本章内容概览
+
 - 了解 Windows Workflow Foundation（Windows 工作流基础）
 - 创建自定义过程参数
 - 查看标准的工作流活动
@@ -8792,7 +8176,7 @@ www.it-ebooks.info
 
 在本章中，你将学习使用 Windows Workflow Foundation 的基础知识，以及如何使用 Visual Studio 2012 提供的工作流设计工具自定义构建过程。此外，你还将学习如何创建可以部署到构建机并用于自动化构建的构建工作流活动。
 
-# Windows Workflow Foundation 简介 (INTRODUCTION TO WINDOWS WORKFLOW FOUNDATION)
+## Windows Workflow Foundation 简介 (INTRODUCTION TO WINDOWS WORKFLOW FOUNDATION)
 
 Windows Workflow Foundation (WF) 是 .NET Framework 中的一个框架，用于管理应用程序中的工作流。您的团队可以使用它可以管理自定义应用程序工作流。坦率地说，大部分日常工作已由 Team Foundation 构建完成。因此，在本节中，你将学习用于构建的 WF 基本原理。从高层面上来说，WF 通过一系列活动描述执行某些操作的过程，并为执行序列提供运行时。工作流存储在 XAML 文件中，描述了活动序列、工作流暴露的参数以及工作流期间声明的局部变量。
 
@@ -8802,17 +8186,11 @@ Windows Workflow Foundation (WF) 是 .NET Framework 中的一个框架，用于�
 
 可以通过 Visual Studio 编辑工作流文件。例如，现有的构建过程模板存储在版本控制仓库的项目项目的 `buildProcessTemplates` 子文件夹中。因此，你应该能找到名为 `DefaultTemplate.11.1.xml` 的默认构建过程模板，可以直接从源码控制打开它。
 
-# Visual Basic.NET 表达式 (Visual Basic.NET Expressions)
+## Visual Basic.NET 表达式 (Visual Basic.NET Expressions)
 
 可以在工作流的多个位置使用 Visual Basic.NET 表达式来实现自动化。这些表达式在运行时解析并评估。例如，图 18-2 显示了如何将 .NET Framework 中的功能（在此例中为 `String.IsNullOrEmpty` 函数）用于 `Condition` 参数。工作流编辑器通过包含 IntelliSense 功能也提供了提高效率的能力，因为开发者在使用 Visual Studio 时熟悉 IntelliSense。
 
 如果你想在 .NET Framework 中使用特定类型的名称，还可以在工作流的 `Imports` 列表中添加项，如图 18-3 所示。可以通过点击工作流编辑器窗口左下角的标签进行编辑。这与在 Visual Basic.NET 源代码中添加 `Imports` 语句或在 Visual C# 源代码文件中添加 `using` 语句非常相似。
-
-
-
-
-
-# Windows 工作流基础简介 | 439
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_476_0.png)
 
@@ -8828,7 +8206,7 @@ www.it-ebook.info
 
 图 18-3: 为工作流的导入（Imports）列表添加项
 
-## 自定义工作流变量
+### 自定义工作流变量
 
 正如你可以在方法或函数内部声明局部变量一样，你可能希望存储局部变量以便在工作流期间使用。工作变量可以通过点击工作流编辑器左下角的“变量”（Variables）选项卡来定义，如图 18-4 所示。局部变量具有名称、.NET 类型和默认值。
 
@@ -8844,13 +8222,13 @@ www.it-ebook.info
 
 以下是你可以从生成过程模板中使用的一些常用变量：
 
-- SourcesDirectory—这是生成代理（build agent）上用于下载源代码的本地路径。
-- BinariesDirectory—这是生成代理上用于存储编译输出的本地路径。该目录也将被复制到发布文件夹（drop folder）中用于生成过程。
-- TestResultsDirectory—这是生成代理上用于存储测试结果的本地路径。
-- Workspace—这是生成定义（build definition）的工作空间定义。
-- WorkspaceName—这是生成代理上执行生成过程中创建并使用的工作空间名称。
-- BuildDetail—这存储有关生成代理的信息。
-- BuildAgent—这存储当前生成所使用的生成代理的信息。
+- `SourcesDirectory`—这是生成代理（build agent）上用于下载源代码的本地路径。
+- `BinariesDirectory`—这是生成代理上用于存储编译输出的本地路径。该目录也将被复制到发布文件夹（drop folder）中用于生成过程。
+- `TestResultsDirectory`—这是生成代理上用于存储测试结果的本地路径。
+- `Workspace`—这是生成定义（build definition）的工作空间定义。
+- `WorkspaceName`—这是生成代理上执行生成过程中创建并使用的工作空间名称。
+- `BuildDetail`—这存储有关生成代理的信息。
+- `BuildAgent`—这存储当前生成所使用的生成代理的信息。
 
 这些工作流通过使用全局命名的变量 `BuildDetail` 向 Team Foundation Server 服务提供生成的反馈，该变量的类型为 `Microsoft.TeamFoundation.Build.Client.IBuildDetail`。例如，生成可以传递最终状态（成功、失败、部分成功）甚至是编译或测试状态。这是通过使用 Team Foundation Server 提供的 `SetBuildProperties` 活动设置 `BuildDetail` 属性来实现的。（此活动和其他常用的 Team Foundation 活动将在本文稍后部分触发。）
 
@@ -8904,8 +8282,6 @@ www.it-ebook.info
 
 参数元数据编辑器允许你编辑 `Metadata` 集合，如图 18-7 所示。
 
-# 444 第 18 章 自定义生成过程
-
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_481_0.png)
 
 图 18-6: 参数默认值的编辑按钮
@@ -8916,15 +8292,17 @@ www.it-ebook.info
 
 每个自定义参数都应使用工作流参数列表中定义的名称进行指定。在参数元数据编辑器中不显示参数的名称，你可以
 
-
 指定一个友好的名称和描述以显示更多信息。图 18-8 显示了根据图 18-6 和 18-7 定义的名为 CustomParameter 的自定义参数，与图 18-5 中创建的参数名称匹配。
 
 | 构建过程参数： | | |
 |---|---|---|
 | 1. 必选 | | |
 | > 要构建项 | | |
+
+
+
 | 2. 基础 | | |
-| > 自动化测试 | 在匹配“**Test***”的文本源中运行测试。目标：'X86 $(BuildDefinitionName)$(DateTime:yyyyMMdd)(Rec.r)' | | |
+| > 自动化测试 | 在匹配“**Test***”的文本源中运行测试。目标：'X86 `$(BuildDefinitionName)$(DateTime:yyyyMMdd)(Rec.r)`' | | |
 | 构建号格式 | 全部 |
 | 清理工作区 | 普通 |
 | 日志详细程度 | 自动配置 |
@@ -8933,13 +8311,13 @@ www.it-ebook.info
 | 我的自定义参数 | 示例 |
 | 4. 高级 | | |
 
-**图 18-8：** 命名为 MyCustomParameter 的自定义参数
+**图 18-8：** 命名为 `MyCustomParameter` 的自定义参数
 
-> **注意** 您可以通过在 Metadata 集合中包含每个需要覆盖的项，来覆盖任何标准构建过程参数的默认元数据。您可能希望覆盖可见性、显示名称、自定义编辑器等。
+> **注意** 您可以通过在 `Metadata` 集合中包含每个需要覆盖的项，来覆盖任何标准构建过程参数的默认元数据。您可能希望覆盖可见性、显示名称、自定义编辑器等。
 
 # 参数可见性
 
-您可以通过更新元数据条目的“查看参数”（View parameter）属性，来指定何时向终端用户显示参数。这对于向某些终端用户隐藏参数（例如没有权限编辑构建定义的用户）以及允许某些参数手动队列构建非常有帮助。以下是该属性的可用值：
+您可以通过更新元数据条目的“查看参数”（`View parameter`）属性，来指定何时向终端用户显示参数。这对于向某些终端用户隐藏参数（例如没有权限编辑构建定义的用户）以及允许某些参数手动队列构建非常有帮助。以下是该属性的可用值：
 
 - 从不显示——参数将不会显示，并将始终使用构建过程模板中指定的默认值。
 - 仅在编辑定义时——参数将仅在构建编辑器中显示并可编辑。
@@ -8948,15 +8326,15 @@ www.it-ebook.info
 
 # 参数类别
 
-如果您最终有许多自定义参数，您应该使用元数据主题中的类别（category）条目将参数分组。已经有几个类别会在整个标准构建过程中被构建定义编辑器使用。这些类别是必选（Required）、基础（Basic）和高级（Advanced）。您可以使用其中任何一个，也可以指定自定义类别，例如部署（Deployment）。
+如果您最终有许多自定义参数，您应该使用元数据主题中的 `category` 条目将参数分组。已经有几个类别会在整个标准构建过程中被构建定义编辑器使用。这些类别是必选（`Required`）、基础（`Basic`）和高级（`Advanced`）。您可以使用其中任何一个，也可以指定自定义类别，例如部署（`Deployment`）。
 
-默认情况下，类别在用户界面中按字母顺序排在标准类别之后显示。如果您希望以不同的顺序排列，可以使用三位数数字（如格式 #nnn）作为类别的前缀。标准类别均已定义为 #100 Required、#200 Basic 和 #300 Advanced。在图 18-7 所示的示例中，您的“Tailspin Specific”的类别编号为 #250，以便其在原始过程中置于基础和高级属性之间。
+默认情况下，类别在用户界面中按字母顺序排在标准类别之后显示。如果您希望以不同的顺序排列，可以使用三位数数字（如格式 `#nnn`）作为类别的前缀。标准类别均已定义为 `#100 Required`、`#200 Basic` 和 `#300 Advanced`。在图 18-7 所示的示例中，您的“Tailspin Specific”的类别编号为 `#250`，以便其在原始过程中置于基础和高级属性之间。
 
 # 参数的自定义编辑器
 
-由于您可以向自定义构建过程模板中添加任何 .NET 类型的自定义参数，因此您可能需要提供一个自定义设计器，允许用户为该自定义类型指定值。大多数标准 .NET 类型以及为 Foundation Server Build 自定义的类型已经定义了编辑器。
+由于您可以向自定义构建过程模板中添加任何 `.NET` 类型的自定义参数，因此您可能需要提供一个自定义设计器，允许用户为该自定义类型指定值。大多数标准 `.NET` 类型以及为 Foundation Server Build 自定义的类型已经定义了编辑器。
 
-例如，在编辑“要构建项”参数时，您可以点击带有省略号的按钮（如图 18-9 所示），使用 Microsoft 为 Microsoft.TeamFoundation.Build.Workflow.Activities.BuildSettings 创建的自定义设计器，以显示图 18-10 所示的自定义编辑器对话框。
+例如，在编辑“要构建项”参数时，您可以点击带有省略号的按钮（如图 18-9 所示），使用 Microsoft 为 `Microsoft.TeamFoundation.Build.Workflow.Activities.BuildSettings` 创建的自定义设计器，以显示图 18-10 所示的自定义编辑器对话框。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_483_0.png)
 
@@ -8964,9 +8342,9 @@ www.it-ebook.info
 
 # Windows 工作流基础简介 | 447
 
-自定义编辑器对话框本质上是一个 Windows Form，用于编辑自定义类型的对象，然后将其传回继承自 System.Drawing.Design.UITypeEditor 类的自定义编辑器类。
+自定义编辑器对话框本质上是一个 Windows Form，用于编辑自定义类型的对象，然后将其传回继承自 `System.Drawing.Design.UITypeEditor` 类的自定义编辑器类。
 
-例如，如果您创建了一个自定义构建过程参数（如图 18-11 所示），名为 EnvironmentLocations，类型为 Collections.Generic.Dictionary<string, string>，用于存储不同环境的位置以及键。此时您必须为 Dictionary 类型创建一个自定义编辑器，因为没有包含该编辑器以便您的终端用户能够编辑该参数的值。
+例如，如果您创建了一个自定义构建过程参数（如图 18-11 所示），名为 `EnvironmentLocations`，类型为 `Collections.Generic.Dictionary<string, string>`，用于存储不同环境的位置以及键。此时您必须为 `Dictionary` 类型创建一个自定义编辑器，因为没有包含该编辑器以便您的终端用户能够编辑该参数的值。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_484_0.png)
 
@@ -8976,9 +8354,9 @@ www.it-ebook.info
 
 图 18-11：自定义构建过程参数
 
-列表 18-1 显示了编辑 EnvironmentLocations 参数的示例编辑器。
+列表 18-1 显示了编辑 `EnvironmentLocations` 参数的示例编辑器。
 
-# 列表 18-1：自定义参数编辑器实现示例，EnvironmentsCustomEditor.cs
+# 列表 18-1：自定义参数编辑器实现示例，`EnvironmentsCustomEditor.cs`
 
 ```
 using System;
@@ -9027,7 +8405,7 @@ namespace Wrox.Build.CustomEditor
 }
 ```
 
-您会在列表 18-1 中注意到该类是一个包装器，它调用您创建的 Form 来呈现用户界面。在示例中，Form 类型是 EnvironmentsDialog。
+您会在列表 18-1 中注意到该类是一个包装器，它调用您创建的 Form 来呈现用户界面。在示例中，Form 类型是 `EnvironmentsDialog`。
 
 在创建了自定义编辑器后，您可以按照图 18-12 所示在元数据参数中指定全名。使用以下格式，第一个项是类型名称，第二个是程序集：
 
@@ -9035,7 +8413,7 @@ namespace Wrox.Build.CustomEditor
 CustomEditor, CustomEditor
 ```
 
-或者，如果您使用的是自定义编辑器而非 .NET 类型，可以为您的类型添加 System.ComponentModel.Editor 特性，以指示当定义该类型时应使用哪个自定义编辑器：
+或者，如果您使用的是自定义编辑器而非 `.NET` 类型，可以为您的类型添加 `System.ComponentModel.Editor` 特性，以指示当定义该类型时应使用哪个自定义编辑器：
 
 ```
 [Serializable, Editor("CustomEditor, CustomEditor", typeof(UITypeEditor))]
@@ -9054,20 +8432,19 @@ public class MyCustomType
 
 为了使用自定义参数编辑器，Visual Studio 需要找到它。向 Visual Studio 提供程序集的三种方法：
 
-- 1. 您可以将程序集放在 Visual Studio 的 Common7\PrivateAssemblies 文件夹中，手动修改所有编辑模板的单元。
-- 2. 您可以创建一个 VSIX 包和企业扩展库并通过 Visual Studio 扩展管理器进行部署。这样做的好处是让新客户端在创建扩展时进行检查。
+- 1. 您可以将程序集放在 Visual Studio 的 `Common7\PrivateAssemblies` 文件夹中，手动修改所有编辑模板的单元。
+- 2. 您可以创建一个 `VSIX` 包和企业扩展库并通过 Visual Studio 扩展管理器进行部署。这样做的好处是让新客户端在创建扩展时进行检查。
 - 3. 如果您的程序集中包含任何自定义工作流活动，应将其提交到控制器的自定义路径。这将根据需要自动将程序集放在所有客户端。
 
-关于 VSIX 的更多信息，请参阅第 7 章。但是，由于您即将构建一些自定义活动，您将选择该选项并与自定义活动一起部署。
+关于 `VSIX` 的更多信息，请参阅第 7 章。但是，由于您即将构建一些自定义活动，您将选择该选项并与自定义活动一起部署。
 
 # 工作流活动
 
-工作流活动是构建过程模板的构建组件。活动可以是简单的也可以是复合的。复合活动是可以包含其他活动的活动。例如，整个构建过程工作流从一个序列（Sequence）工作流活动开始，它是一种类型
+工作流活动是构建过程模板的构建组件。活动可以是简单的也可以是复合的。复合活动是可以包含其他活动的活动。例如，整个构建过程工作流从一个序列（`Sequence`）工作流活动开始，它是一种类型
 
+复合活动（`composite activity`）按照指定的顺序执行包含的活动。相反，简单活动（`simple activity`）是不包含其他活动的活动。
 
-复合活动（composite activity）按照指定的顺序执行包含的活动。相反，简单活动（simple activity）是不包含其他活动的活动。
-
-每个活动都暴露了可以使用 Visual Studio 中的属性窗口进行编辑的参数。你可以使用字面量、表达式、变量、工作流参数等。一个重要的属性是活动的显示名称（display name），因为它是最终被用于构建日志的内容。每个活动上都有一个显示名称。
+每个活动都暴露了可以使用 Visual Studio 中的属性窗口进行编辑的参数。你可以使用字面量、表达式、变量、工作流参数等。一个重要的属性是活动的显示名称（`display name`），因为它是最终被用于构建日志的内容。每个活动上都有一个显示名称。
 
 图 18-13 显示了 Visual Studio 工具箱窗口中显示的可用活动。你可以将活动拖放到你的构建过程模板文件中，类似于向 ASP.NET 页面或 Windows Forms 表单添加控件。
 
@@ -9077,21 +8454,21 @@ public class MyCustomType
 
 # 注意的工作流框架活动
 
-构建过程工作流可以使用任何工作流活动。.NET Framework 提供了几个标准的工作流活动，你可以在构建过程模板中使用。本节涵盖了一些常用的工作流活动。
+构建过程工作流可以使用任何工作流活动。`.NET Framework` 提供了几个标准的工作流活动，你可以在构建过程模板中使用。本节涵盖了一些常用的工作流活动。
 
-# 序列 (Sequence)
+## 序列 (Sequence)
 
-序列活动包含其他活动，它将按从上到下的顺序运行每个活动。其他某些活动只能包含一个活动（例如 If 活动）。因此，如果你在这些情况下需要使用多个活动，可以插入一个序列活动，然后在该序列活动内部包含所需的活动。
+序列活动包含其他活动，它将按从上到下的顺序运行每个活动。其他某些活动只能包含一个活动（例如 `If` 活动）。因此，如果你在这些情况下需要使用多个活动，可以插入一个序列活动，然后在该序列活动内部包含所需的活动。
 
-# If
+## If
 
-复合活动允许你根据活动暴露的表达式属性切换条件开关。工作流可以采取两个分支，取决于表达式求值结果是 True（真）还是 False（假）。你可以使用任何有效表达式，包括标准的 .NET 方法，如 `System.IO.File.Exists`。
+复合活动允许你根据活动暴露的表达式属性切换条件开关。工作流可以采取两个分支，取决于表达式求值结果是 True（真）还是 False（假）。你可以使用任何有效表达式，包括标准的 `.NET` 方法，如 `System.IO.File.Exists`。
 
 该活动对于拆分构建过程中的可选部分非常有用。例如，你可以定义一个名为 `Deployment` 的布尔参数，其默认值为 `False`。然后，如果表达式的值为 `True`，你就可以构建的部署功能封装在活动内部。每当参数被指定为 `True` 时，部署功能就会运行；如果未设置，则将跳过。
 
-# 赋值 (Assign)
+## 赋值 (Assign)
 
-赋值活动是简单工作流活动之一，允许你为工作流变量或参数分配一个值。赋值活动的一个很棒的特性是，它的值可以被任何表达式（包括使用 .NET 方法）使用。可以使用 `System.String.Format` 或 `System.Path.Combine` 方法使用其他参数或变量值来初始化变量。
+赋值活动是简单工作流活动之一，允许你为工作流变量或参数分配一个值。赋值活动的一个很棒的特性是，它的值可以被任何表达式（包括使用 `.NET` 方法）使用。可以使用 `System.String.Format` 或 `System.Path.Combine` 方法使用其他参数或变量值来初始化变量。
 
 例如，如果你想为 `witadmin.exe` 工具的位置初始化一个变量，你可以使用如下表达式：
 
@@ -9099,25 +8476,25 @@ public class MyCustomType
 System.Path.Combine(IF String.IsNullOrEmpty(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)),Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)),"Microsoft Visual Studio 11.0\Common\7IDE","witadmin.exe")
 ```
 
-# 异常处理 (Exception Handling)
+## 异常处理 (Exception Handling)
 
-这三个活动允许你通过 Rethrow（重新抛出）、Throw（抛出）和 TryCatch（尝试捕捉）来处理异常。TryCatch 复合活动主要用于在一个活动周围设置 try-catch-finally 块。它允许通过指定 catch 块来处理不同类型的异常。Throw 和 Rethrow 允许你抛出新异常或重新抛出已捕获的现有异常。
+这三个活动允许你通过 `Rethrow`（重新抛出）、`Throw`（抛出）和 `TryCatch`（尝试捕捉）来处理异常。`TryCatch` 复合活动主要用于在一个活动周围设置 try-catch-finally 块。它允许通过指定 catch 块来处理不同类型的异常。`Throw` 和 `Rethrow` 允许你抛出新异常或重新抛出已捕获的现有异常。
 
-# 并行 (Parallel)
+## 并行 (Parallel)
 
 并行活动允许同时运行多个活动。你会发现默认过程模板中的几个位置都使用了并行活动来加速构建过程。
 
-你可能还会使用并行活动运行多个 AgentScope 活动（在本章中讨论），以便多个构建服务器并行运行构建过程的各个。例如，你可能配置构建过程，在某一台机器上编译 Debug 配置的同时，在另一台构建机器上编译 Release 配置。
+你可能还会使用并行活动运行多个 `AgentScope` 活动（在本章中讨论），以便多个构建服务器并行运行构建过程的各个。例如，你可能配置构建过程，在某一台机器上编译 Debug 配置的同时，在另一台构建机器上编译 Release 配置。
 
-# ForEach<T> 和 ParallelForEach<T>
+## ForEach<T> 和 ParallelForEach<T>
 
-ForEach<T> 复合活动允许你对集合或实现 `IEnumerable` 接口的任何对象定义 for-each 循环。例如，默认构建过程模板使用此活动来迭代集合。它将遍历集合中的每个项目，并使用该项目运行相同的例程。
+`ForEach<T>` 复合活动允许你对集合或实现 `IEnumerable` 接口的任何对象定义 for-each 循环。例如，默认构建过程模板使用此活动来迭代集合。它将遍历集合中的每个项目，并使用该项目运行相同的例程。
 
-ParallelForEach<T> 的工作方式与 ForEach<T> 活动类似，不同在于它尝试并行运行每次迭代。
+`ParallelForEach<T>` 的工作方式与 `ForEach<T>` 活动类似，不同在于它尝试并行运行每次迭代。
 
-# 调用方法 (InvokeMethod)
+## 调用方法 (InvokeMethod)
 
-InvokeMethod 活动允许你调用任何 .NET 方法，并将返回值存储到工作流变量中。这在操作构建过程中定义的定义的强类型变量和工作流参数时非常有用。
+`InvokeMethod` 活动允许你调用任何 `.NET` 方法，并将返回值存储到工作流变量中。这在操作构建过程中定义的定义的强类型变量和工作流参数时非常有用。
 
 # 注意的 Team Foundation Server 活动
 
@@ -9125,48 +8502,47 @@ InvokeMethod 活动允许你调用任何 .NET 方法，并将返回值存储到�
 
 > 注意：有关超过 70 多个标准 Team Foundation Server 工作活动的更多信息和文档，请参阅 MSD 文档：http://aka.ms/TeamBuildActivities。
 
-# AgentScope
+## AgentScope
 
-AgentScope 复合活动在构建代理（build agent）上执行其包含的活动。它执行所有必要的步骤，以通过活动上的 `ReservationSpec` 属性传递的保留规范保留匹配的构建代理。如果没有可用的代理符合保留规范，该活动将等待直到有可用代理为止（但不再超过活动上 `MaxWaitTime` 属性设置的值）。
+`AgentScope` 复合活动在构建代理（build agent）上执行其包含的活动。它执行所有必要的步骤，以通过活动上的 `ReservationSpec` 属性传递的保留规范保留匹配的构建代理。如果没有可用的代理符合保留规范，该活动将等待直到有可用代理为止（但不再超过活动上 `MaxWaitTime` 属性设置的值）。
 
-> 注意：确保构建过程中完成的大部分工作都在 AgentScope 活动内部完成是非常重要的。AgentScope 活动之外的活动实际上将在构建控制器（build controller）上执行，而不是构建代理。如果活动内容广泛，它将为构建控制器增加额外负载，从而减慢整个构建农场。
+> 注意：确保构建过程中完成的大部分工作都在 `AgentScope` 活动内部完成是非常重要的。`AgentScope` 活动之外的活动实际上将在构建控制器（build controller）上执行，而不是构建代理。如果活动内容广泛，它将为构建控制器增加额外负载，从而减慢整个构建农场。
 
-此外，在 AgentScope 活动内部更改任何工作流参数或变量将不会保留其值，因为构建过程会离开作用域。这在逻辑上是合理的，因为作用域之外的操作可能在完全不同的机器上执行。构建信息节点是关于构建的内部结构，例如，构建日志中显示的每个信息都是一种构建信息节点。
+此外，在 `AgentScope` 活动内部更改任何工作流参数或变量将不会保留其值，因为构建过程会离开作用域。这在逻辑上是合理的，因为作用域之外的操作可能在完全不同的机器上执行。构建信息节点是关于构建的内部结构，例如，构建日志中显示的每个信息都是一种构建信息节点。
 
-# MSBuild 和 MSTest
+## MSBuild 和 MSTest
 
-MSBuild 和 MSTest 活动允许你调用 MSBuild.exe 编译解决方案或项目，或调用 MSTest.exe 在构建过程中运行一组测试。你会发现它们位于默认构建过程模板的相应位置。
+`MSBuild` 和 `MSTest` 活动允许你调用 `MSBuild.exe` 编译解决方案或项目，或调用 `MSTest.exe` 在构建过程中运行一组测试。你会发现它们位于默认构建过程模板的相应位置。
 
-# WriteBuildMessage、WriteBuildWarning 和 WriteBuildError
+## WriteBuildMessage、WriteBuildWarning 和 WriteBuildError
 
-WriteBuildMessage、WriteBuildWarning 和 WriteBuildError 活动分别向构建日志添加消息、警告和错误这些活动的主要属性是 Importance，它指示消息是否包含在构建日志中。
+`WriteBuildMessage`、`WriteBuildWarning` 和 `WriteBuildError` 活动分别向构建日志添加消息、警告和错误这些活动的主要属性是 `Importance`，它指示消息是否包含在构建日志中。
 
-WriteBuildMessage 活动应该设置的额外属性是 Importance。如果详细程度（verbosity）设置为 High，则会在构建日志中显示。将详细程度设置为更高的值（如 Detailed 或 Diagnostic）将显示 Importance 值为 Normal 或 Low 的构建消息。
+`WriteBuildMessage` 活动应该设置的额外属性是 `Importance`。如果详细程度（verbosity）设置为 High，则会在构建日志中显示。将详细程度设置为更高的值（如 Detailed 或 Diagnostic）将显示 `Importance` 值为 Normal 或 Low 的构建消息。
 
-# InvokeProcess
+## InvokeProcess
 
-InvokeProcess 活动用于处理命令行工具、批处理、PowerShell 脚本等。该活动是自定义构建过程的构建块，因为构建过程中使用了命令行工具。例如，你可能使用 InvokeProcess 活动调用 vscmd.exe 工具将数据库项目的架构发布到开发数据库服务器。
+`InvokeProcess` 活动用于处理命令行工具、批处理、PowerShell 脚本等。该活动是自定义构建过程的构建块，因为构建过程中使用了命令行工具。例如，你可能使用 `InvokeProcess` 活动调用 `vscmd.exe` 工具将数据库项目的架构发布到开发数据库服务器。
 
-InvokeProcess 活动是一个复合活动，定义了两个位置，你可以在其中指定如何处理标准输出和错误输出。你可能使用 WriteBuildMessage 活动处理标准输出，使用 WriteBuildError 活动处理错误输出。如果命令行工具不向 STDERR 写入，则你可能希望使用活动的 Result 属性获取命令行工具的返回代码。然后你可以将其与预期的值进行比较。如果返回错误，你可以对其进行善处理。
+`InvokeProcess` 活动是一个复合活动，定义了两个位置，你可以在其中指定如何处理标准输出和错误输出。你可能使用 `WriteBuildMessage` 活动处理标准输出，使用 `WriteBuildError` 活动处理错误输出。如果命令行工具不向 STDERR 写入，则你可能希望使用活动的 `Result` 属性获取命令行工具的返回代码。然后你可以将其与预期的值进行比较。如果返回错误，你可以对其进行善处理。
 
-# UpdateBuildNumber
+## UpdateBuildNumber
 
-UpdateBuildNumber 活动允许构建过程使用构建字符串格式更新其构建号。
+`UpdateBuildNumber` 活动允许构建过程使用构建字符串格式更新其构建号。
 
 > 有关构建号格式字符串的更多信息请参见第 17 章。
 
-# SetBuildProperties 和 GetBuildDetail
+## SetBuildProperties 和 GetBuildDetail
 
-SetBuildProperties 用于用于 IBuildDetail 对象上设置不同的属性。它在默认构建过程模板的多个位置被使用，用于存储持久信息，例如构建的投放文件夹或其最终状态。
-
-
-
+`SetBuildProperties` 用于用于 `IBuildDetail` 对象上设置不同的属性。它在默认构建过程模板的多个位置被使用，用于存储持久信息，例如构建的投放文件夹或其最终状态。
 
 # 第 18 章 定制构建过程
 
 或者，如果无法使用 `SetBuildProperties` 活动设置特定的构建属性，你可以将额外信息存储在 `IBuildDetail` 对象上。你可以通过 `GetBuildDetail` 活动获取该对象，然后使用 `Assign` 活动设置相应的属性，或者在自定义构建工作流活动内部添加构建信息。
 
 ## CopyDirectory, DeleteDirectory 和 CreateDirectory
+
+
 
 `CopyDirectory`、`DeleteDirectory` 和 `CreateDirectory` 活动将帮助你处理常见的目录映射。例如，你可以使用 `CopyDirectory` 活动帮助将应用程序项目的输出从 *PublishedWeb* 文件夹（存储在构建变量 `BinariesDirectory` 中）复制到你的开发 Web 服务器。
 
@@ -9221,9 +8597,6 @@ Foundation 2012 的新活动 `WriteCustomInformation` 允许你创建一个用�
 - Normal（普通）：如果构建设置为 Normal，则此活动将被记录。
 - High（高）：此活动将始终被记录。
 
-
-
-
 通常名为 `TFSBuild.proj`，可以在任何工具中轻松编辑。基于 WF（工作流）的过程需要 Windows Workflow 编辑器，它是 Visual Studio 的一部分，且仅在 Windows 上运行。
 
 > 注意：Jim Lamb 写了一篇非常出色的博客文章，讨论了在 Team Foundation Server 中何时使用 MSBuild 或 WF 的。请参阅：http://aka.ms/WFvsMSBuild。
@@ -9257,9 +8630,9 @@ Foundation 2012 的新活动 `WriteCustomInformation` 允许你创建一个用�
 
 在设置 .NET 目标级别后，你希望通过在引用管理器中搜索“Build”，从 Team Foundation Server API 添加以下引用，如图 18-17 所示：
 
-- Microsoft.TeamFoundation.Build.Client
-- Microsoft.TeamFoundation.Build.Common
-- Microsoft.TeamFoundation.Build.Workflow
+- `Microsoft.TeamFoundation.Build.Client`
+- `Microsoft.TeamFoundation.Build.Common`
+- `Microsoft.TeamFoundation.Build.Workflow`
 
 接下来，通过在解决方案资源管理器的 Visual Studio 项目节点上右键点击“代码活动 -> 新项”上下文菜单开始一个新活动。图 18-18 显示了带有代码活动模板的“添加新项”对话框。
 
@@ -9275,7 +8648,7 @@ Foundation 2012 的新活动 `WriteCustomInformation` 允许你创建一个用�
 
 如果你将创建代码活动，那么创建一个基类活动是有益的，该类可以存储你在活动中使用的一些常用方法。列表 18-2 显示了上述侧边栏“社区 Team Foundation Server 活动与扩展”中提到的社区 Team Foundation Server 生成基代码活动类的良好示例。
 
-## 列表 18-2：自定义生成工作流基代码活动类，BaseCodeActivity.cs
+### 列表 18-2：自定义生成工作流基代码活动类，BaseCodeActivity.cs
 
 ```
 ///
@@ -9445,7 +8818,6 @@ public abstract class BaseCodeActivity : CodeActivity
     }
 }
 ```
-
 
 
 
@@ -9646,8 +9018,6 @@ namespace Wrox.Build.Activities
 }
 ```
 
-
-
 ```csharp
 case TfsVersionAction.SetVersion:
     this.SetVersion();
@@ -9708,135 +9078,21 @@ if (this.SetAssemblyDescription)
 
 # 列表 18-3 (继续)
 
-```csharp
-foreach (string filename in
-    this.ActivityContext.GetValue(this.Files))
-{
-    FileInfo file = new FileInfo(filename);
-    this.LogBuildMessage(string.Format(CultureInfo.CurrentCulture,
-        "版本 ({0}) 位于 {1}", file.FileName,
-        this.ActivityContext.GetValue(this.Version)));
-    bool changedAttribute = false;
 
-    // 首先确保文件是可写的。
-    FileAttributes fileAttributes = File.GetAttributes(
-        file.FileName);
 
-    // 如果已经设置了只读，则重置它。
-    if ((fileAttributes & FileAttributes.ReadOnly) != 0)
-    {
-        this.LogBuildMessage("正在使文件变为可写",
-            BuildImportance.Low);
-        File.SetAttributes(file.FileName,
-            fileAttributes & ~FileAttributes.ReadOnly);
-        changedAttribute = true;
-    }
-
-    // 打开文件
-    using (StreamReader reader = new StreamReader(file.FileName, true))
-    {
-        entireFile = reader.ReadToEnd();
-    }
-
-    // 解析整个文件。
-    string newFile = this.regexExpression.Replace(entireFile,
-        String.Format("@AssemblyFileVersion(\"{0}\")",
-        this.ActivityContext.GetValue(this.Version)));
-
-    if (this.SetAssemblyFileVersion)
-    {
-        // (此处逻辑根据原文上下文延续，翻译内容保持代码结构)
-```
-
-*(此处为后续代码逻辑的翻译对应)*
-
-```csharp
-    // 解析整个文件。
-    string newFile = this.regexExpression.Replace(entireFile,
-        String.Format("@AssemblyFileVersion(\"{0}\")",
-        this.ActivityContext.GetValue(this.Version)));
-
-    if (this.SetAssemblyFileVersion)
-    {
-        // (此处逻辑根据原文上下文延续，翻译内容保持代码结构)
-```
-
-*(注：由于原文提供的代码块存在部分重复和截断逻辑，我将严格遵循“不要重复输出原文”的原则，对提供的文本内容进行结构化翻译)*
-
-[content]
-    // 解析整个文件。
-    string newFile = this.regexExpression.Replace(entireFile,
-        String.Format("@AssemblyFileVersion(\"{0}\")",
-        this.ActivityContext.GetValue(this.Version)));
-
-    if (this.SetAssemblyFileVersion)
-    {
-        // (此处逻辑根据原文上下文延续，翻译内容保持代码结构)
-```
-
-*(由于用户提供的文本包含大量重复的代码片段和破碎的逻辑，为了确保文档质量，我将按照逻辑块进行完整翻译翻译：)*
-
-# LISTING 18-3 (继续)
-
-```csharp
-foreach (string filename in
-    this.ActivityContext.GetValue(this.Files))
-{
-    FileInfo file = new FileInfo(filename);
-    this.LogBuildMessage(string.Format(CultureInfo.CurrentCulture,
-        "版本 ({0}) 位于 {1}", file.FileName,
-        this.ActivityContext.GetValue(this.Version)));
-    bool changedAttribute = false;
-
-    // 首先确保文件是可写的。
-    FileAttributes fileAttributes = File.GetAttributes(
-        file.FileName);
-
-    // 如果已经设置了只读，则重置它。
-    if ((fileAttributes & FileAttributes.ReadOnly) != 0)
-    {
-        this.LogBuildMessage("正在使文件变为可写",
-            BuildImportance.Low);
-        File.SetAttributes(file.FileName,
-            fileAttributes & ~FileAttributes.ReadOnly);
-        changedAttribute = true;
-    }
-
-    // 打开文件
-    using (StreamReader reader = new StreamReader(file.FileName, true))
-    {
-        entireFile = reader.ReadToEnd();
-    }
-
-    // 解析整个文件。
-    string newFile = this.regexExpression.Replace(entireFile,
-        String.Format("@AssemblyFileVersion(\"{0}\")",
-        this.ActivityContext.GetValue(this.Version)));
-
-    if (this.SetAssemblyFileVersion)
-    {
-        // ... (后续逻辑翻译)
-```
-
-*(由于您提供的“原文”中存在大量重复的重复代码块片段，作为高级文档工程师，我将为您提供该文本中非代码部分的完整翻译：)*
-
-[content]
 # 自定义构建工作流
 
 有趣的是，如果你想创建一个自定义活动，为了确保过程模板中的引用正确，你必须加载模板并从单独的 Visual Studio 项目中编辑它，你无法将过程模板存储在库内部，因为在构建机器上运行时引用是错误的。
 
 让我们演示创建一个用于编辑过程模板的单独 Visual Studio 项目的过程。遵循以下步骤：
 
-- 在 Explorer 中的解决方案上右键点击，点击 Alt-> 新项目。
+- 在 Explorer 中的解决方案上右键点击，点击 `Alt-> 新项目`。
 - 此时，你可以选择任何类型的项目。然而，最好能为你的自定义活动创建一些单元测试，选择单元测试项目类型，如图 18-19 所示。
 - 为了确保在编辑过程模板时具有正确的程序集签名，向新项目添加项目引用以使用工作流库，如图 18-20 所示。
 
+5. 现在既然构建过程模板已经分支到正确的版本位置，你就可以将它们添加到新的 Visual Studio 项目中。你可以通过在解决方案资源管理器 `Solution Explorer` 窗口中选择新的 Visual Studio 项目，然后点击解决方案资源管理器工具栏中的“显示所有”按钮来实现，如图 18-23 所示。
 
-
-
-5. 现在既然构建过程模板已经分支到正确的版本位置，你就可以将它们添加到新的 Visual Studio 项目中。你可以通过在解决方案资源管理器（Solution Explorer）窗口中选择新的 Visual Studio 项目，然后点击解决方案资源管理器工具栏中的“显示所有”按钮来实现，如图 18-23 所示。
-
-6. 一旦你执行了该操作，你将看到文件系统中未包含在项目中的所有文件夹和目录。你可以右键点击构建过程模板文件夹或文件，并在键菜单中选择“包含在项目中”（Include Project），如图 18-24 所示。
+6. 一旦你执行了该操作，你将看到文件系统中未包含在项目中的所有文件夹和目录。你可以右键点击构建过程模板文件夹或文件，并在键菜单中选择“包含在项目中” `Include Project`，如图 18-24 所示。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_512_0.png)
 
@@ -9850,11 +9106,11 @@ foreach (string filename in
 
 图 18-24：从键菜单中选择“包含在项目中”
 
-7. 如果你此时尝试编译解决方案，最终将会导致一些编译错误。这是因为默认情况下，添加到 Visual Studio 项目的 XAML 文件被设置为编译。关于此点的可用操作指南将指导你添加适当的引用以确保它们被正确编译。然而，你也可以指示 MSBuild 忽略过程模板模板，并简单地将它们复制到输出目录。你可以通过 Visual Studio 中的属性（Properties）窗口执行此操作，通过将“生成操作”（Building Action）属性设置为 `None`，并将“复制到输出目录”（Copy to Output directory）设置为 `Copy always`（始终复制），如图 18-25 所示。
+7. 如果你此时尝试编译解决方案，最终将会导致一些编译错误。这是因为默认情况下，添加到 Visual Studio 项目的 XAML 文件被设置为编译。关于此点的可用操作指南将指导你添加适当的引用以确保它们被正确编译。然而，你也可以指示 MSBuild 忽略过程模板模板，并简单地将它们复制到输出目录。你可以通过 Visual Studio 中的属性 `Properties` 窗口执行此操作，通过将“生成操作” `Building Action` 属性设置为 `None`，并将“复制到输出目录” `Copy to Output directory` 设置为 `Copy always`，如图 18-25 所示。
 
 到达这一步花费了一点时间，但你应该能够成功地编译整个解决方案。你可以通过打开解决方案并从 Visual Studio 项目中的位置打开过程模板文件来编辑过程模板文件。当你这样做时，活动库中的活动将显示在工作流设计器的 Visual Studio 工具箱中，如图 18-26 所示。
 
-将其中一个自定义活动拖放到工作流将将其恰当地添加，并确保它在被 Team Foundation Server Builder（TFS Builder）使用时是正确的。更好的是，在你完成了所有必要的修改并进行了充分测试后，你可以使用 Team Foundation Server 版本控制的合并功能将这些更改合并到构建过程模板的生产副本中，如图 18-27 所示。
+将其中一个自定义活动拖放到工作流将将其恰当地添加，并确保它在被 Team Foundation Server Builder `TFS Builder` 使用时是正确的。更好的是，在你完成了所有必要的修改并进行了充分测试后，你可以使用 Team Foundation Server 版本控制的合并功能将这些更改合并到构建过程模板的生产副本中，如图 18-27 所示。
 
 ## 自定义构建工作流活动
 
@@ -9872,13 +9128,13 @@ foreach (string filename in
 
 图 18-27：管理构建过程模板的生产副本
 
-在本章后面的部分，你将学习如何自定义默认构建过程模板，以使用 TfVersion 自定义活动以及你在本章中学到的所有自定义方法。
+在本章后面的部分，你将学习如何自定义默认构建过程模板，以使用 `TfVersion` 自定义活动以及你在本章中学到的所有自定义方法。
 
 ## 自定义构建活动的部署
 
 一旦你有了一个完成自定义活动库解决方案的构建定义，你就可以编译后的程序集存储在版本控制文件夹中，并指定你的构建控制器该文件夹。如果你已经按照第 10 节所述创建了管理 Team Foundation Server 产品的团队项目，你可以使用专门为此此目的创建的 `$/TFS/CustomAssemblies` 文件夹，如图 18-28 所示。
 
-为了确保程序集在复制到磁盘上的本地目录时添加到 `CustomAssemblies` 目录，你可能希望在 `CustomAssemblies` 文件夹根目录下创建一个名为 `.tfignore` 的文件，其内容如列表 18-4所示。单行 `*.dll` 告诉 Team Foundation Server 在扫描以检测需要将文件添加到版本控制的本地更改时，排除它找到的任何 DLL 文件。
+为了确保程序集在复制到磁盘上的本地目录时添加到 `CustomAssemblies` 目录，你可能希望在 `CustomAssemblies` 文件夹根目录下创建一个名为 `.tfignore` 的文件，其内容如列表 18-4 所示。单行 `*.dll` 告诉 Team Foundation Server 在扫描以检测需要将文件添加到版本控制的本地更改时，排除它找到的任何 DLL 文件。
 
 ## 自定义构建工作流活动
 
@@ -9893,7 +9149,7 @@ foreach (string filename in
 *.dll
 ```
 
-从 Team Explorer 页面（Pages）中的链接，你可以转到“管理构建控制器”（Manage Build Controllers）并编辑控制器属性，将“版本控制路径”（Version Control Path）设置为“自定义属性”（Custom Properties），指向你自定义程序集的版本控制路径，如图 18-29 所示。
+从 Team Explorer 页面 `Pages` 中的链接，你可以转到“管理构建控制器” `Manage Build Controllers` 并编辑控制器属性，将“版本控制路径” `Version Control Path` 设置为“自定义属性” `Custom Properties`，指向你自定义程序集的版本控制路径，如图 18-29 所示。
 
 构建控制器和由版本控制文件夹管理的代理将任何适当的程序集加载到构建服务中，供构建模板使用。你必须对签入版本控制文件夹的新版本自定义程序集进行所有部署。当你签入新版本的程序集时，构建控制器和代理将在完成代理的任何当前构建后重启其服务。然后它们加载新版本的程序集并继续执行构建队列中的任何构建。
 
@@ -9905,7 +9161,7 @@ foreach (string filename in
 
 额外的构建机器到构建场，而无需担心如何向它们部署适当的自定义程序集。
 
-在本章早期需要记住一个关键点。类中至少有一个添加了 `BuildActivity` 属性的活动的程序集将被构建控制器和构建代理加载。你可能来自自定义程序集的有外部引用，但其内部没有包含任何构建活动。因此，即使这些活动包含在自定义程序集的版本控制文件夹中，也不会被构建服务加载。如果它们没有被加载，你可能会注意到来自自定义程序集的“找不到引用”（Cannot find reference）。
+在本章早期需要记住一个关键点。类中至少有一个添加了 `BuildActivity` 属性的活动的程序集将被构建控制器和构建代理加载。你可能来自自定义程序集的有外部引用，但其内部没有包含任何构建活动。因此，即使这些活动包含在自定义程序集的版本控制文件夹中，也不会被构建服务加载。如果它们没有被加载，你可能会注意到来自自定义程序集的“找不到引用” `Cannot find reference`。
 
 然而，你可以指定未包含自定义活动但应被构建服务加载的程序集。你可以通过签入一个文件名为为 `CustomAssembliesAndExtensions.xml` 的 XML 文件来实现，该文件指定了要加载的程序集，如列表 18-5 所示。
 
@@ -9935,7 +9191,7 @@ foreach (string filename in
 
 ## 创建日志可视化器
 
-你可以为构建日志中包含的标准信息类型或自定义信息类型创建自定义可视化。你创建一个 Presentation Foundation（演示基础）来显示。
+你可以为构建日志中包含的标准信息类型或自定义信息类型创建自定义可视化。你创建一个 Presentation Foundation `演示基础` 来显示。
 
 ## 构建报告自定义
 
@@ -9945,20 +9201,16 @@ Team Foundation Server 2012 增加了更丰富的自定义可能性，无需部�
 
 `WriteSummaryInformation` 有四个重要的属性：
 
-- SectionKey—部分的唯一标识符。
-- SectionDisplayName—在构建详情页面上作为部分标题显示的文本。
-- SectionPriority—指定部分相对于构建详情页面其他部分的相对优先级。
-- Message—显示在部分中的字符串。可以通过 `[text](link)` 格式在此消息中包含链接。指向 Team Foundation 产品的 vsts// 链接也可以用于链接 Team Foundation Server 中的其他资产。其他链接将传递给操作系统评估。
+- `SectionKey`—部分的唯一标识符。
+- `SectionDisplayName`—在构建详情页面上作为部分标题显示的文本。
+- `SectionPriority`—指定部分相对于构建详情页面其他部分的相对优先级。
+- `Message`—显示在部分中的字符串。可以通过 `[text](link)` 格式在此消息中包含链接。指向 Team Foundation 产品的 `vsts//` 链接也可以用于链接 Team Foundation Server 中的其他资产。其他链接将传递给操作系统评估。
 
-> 注意 有关链接 Service 支持的 Team Foundation Service 产品的 vsts// 链接信息，请参见 http://aka.ms/vstsLinks。
+> 注意 有关链接 Service 支持的 Team Foundation Service 产品的 `vsts//` 链接信息，请参见 http://aka.ms/vstsLinks。
 
 你可以通过悬停在构建详情页面部分标题上来找到部分的键和优先级，如图 18-30 所示。使用该键，你可以向现有部分添加内容，甚至覆盖优先级以使其在构建报告中向上或向下移动。
 
 图 18-30 显示了一个自定义构建摘要报告部分的示例，其 XAML 如列表 18-6 所示。
-
-
-
-
 
 # 482 | 第 18 章 自定义构建过程
 
@@ -9971,20 +9223,35 @@ Team Foundation Server 2012 增加了更丰富的自定义可能性，无需部�
 ```xml
 <mtbwa:WriteCustomSummaryInformation
 SectionKey="CustomSection"
-SectionDisplayName="My Custom Section"
-SectionPriority="75"
-Message="This is plain line of text" />
-<mtbwa:WriteCustomSummaryInformation
-SectionKey="CustomSection"
-SectionDisplayName="My Custom Section"
-SectionPriority="75"
-Message="Open [Work Item 1] (vstfs://WorkItemTracking/WorkItem/1)." />
-<mtbwa:WriteCustomSummaryInformation
-SectionKey="OpenedWorkItem"
-SectionDisplayName="Latest Activity"
-SectionPriority="100"
-Message="Deployed to [http://tailspinga/] (http://tailspinga/)." />
 ```
+
+
+
+SectionDisplayName="My Custom Section"
+
+SectionPriority="75"
+
+Message="This is plain line of text" />
+
+<mtbwa:WriteCustomSummaryInformation
+
+SectionKey="CustomSection"
+
+SectionDisplayName="My Custom Section"
+
+SectionPriority="75"
+
+Message="Open [Work Item 1] (vstfs://WorkItemTracking/WorkItem/1)." />
+
+<mtbwa:WriteCustomSummaryInformation
+
+SectionKey="OpenedWorkItem"
+
+SectionDisplayName="Latest Activity"
+
+SectionPriority="100"
+
+Message="Deployed to [http://tailspinga/] (http://tailspinga/)." />
 
 # 自定义构建过程以在程序集上标记版本号
 
@@ -9992,11 +9259,11 @@ Message="Deployed to [http://tailspinga/] (http://tailspinga/)." />
 
 www.it-ebooks.info
 
-# 定义自定义构建过程参数
+## 定义自定义构建过程参数
 
 为了允许构建编辑器具有关闭此功能的选项，并创建一个文件规范，你可以暴露自定义构建过程参数以便在构建过程模板内部使用。首先，使用在本章之前指定的创建自定义工作流的方法，创建表 18-2 中列出的构建过程参数。
 
-# 表 18-2: 自定义构建过程参数
+### 表 18-2: 自定义构建过程参数
 
 | 名称 (NAME) | 方向 (DIRECTION) | 参数类型 (ARGUMENT TYPE) | 默认值 (DEFAULT VALUE) |
 | --- | --- | --- | --- |
@@ -10009,7 +9276,7 @@ www.it-ebooks.info
 
 图 18-31: 指定显示给用户的适当元数据
 
-此外，由于你想对 .NET 程序集使用四部分版本标准，请将 BuildNumberFormat 工作流参数的默认值更改如下：
+此外，由于你想对 .NET 程序集使用四部分版本标准，请将 `BuildNumberFormat` 工作流参数的默认值更改如下：
 
 ```
 $($BuildDefinitionName)_1.0.0($Version.*)
@@ -10019,11 +9286,11 @@ $($BuildDefinitionName)_1.0.0($Version.*)
 
 # 484 | 第 18 章 自定义构建过程
 
-# 允许该功能可选的
+## 允许该功能可选的
 
-现在是时候将自定义功能添加到自定义构建过程模板本身了。标记程序集信息源文件的最合适位置应该是紧随从版本控制获取最新版本之后，并且在任何编译之前。如果你使用的是基于默认构建过程模板的自定义构建过程模板，你将在 AgentScope 活动内部、显示名为 Initialize Workspace 的 Sequence 活动之后找到它。
+现在是时候将自定义功能添加到自定义构建过程模板本身了。标记程序集信息源文件的最合适位置应该是紧随从版本控制获取最新版本之后，并且在任何编译之前。如果你使用的是基于默认构建过程模板的自定义构建过程模板，你将在 `AgentScope` 活动内部、显示名为 `Initialize Workspace` 的 `Sequence` 活动之后找到它。
 
-你可以开始通过使用你创建的 StampVersionNumber 布尔工作流参数作为 If 活动的 Condition（条件）参数，来允许该过程完全跳过你正在添加的用于标记程序集版本号的功能。请记住，If 允许在设计器中的每个放置位置中仅包含一个条件。因此，你可以向放置位置添加一个新的 Sequence 活动，如图 18-32 所示。
+你可以开始通过使用你创建的 `StampVersionNumber` 布尔工作流参数作为 `If` 活动的 `Condition`（条件）参数，来允许该过程完全跳过你正在添加的用于标记程序集版本号的功能。请记住，`If` 允许在设计器中的每个放置位置中仅包含一个条件。因此，你可以向放置位置添加一个新的 `Sequence` 活动，如图 18-32 所示。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_521_0.png)
 
@@ -10031,11 +9298,11 @@ $($BuildDefinitionName)_1.0.0($Version.*)
 
 www.it-ebooks.info
 
-你可能会将 If 活动的 DisplayName（显示名称）更改为“If StampVersionNumber”，并把 Sequence 的 DisplayName 更改为类似“Stamp Version Number”（标记版本号）的内容，如图 18-32 所示，以提高工作流的可读性。
+你可能会将 `If` 活动的 `DisplayName`（显示名称）更改为“If StampVersionNumber”，并把 `Sequence` 的 `DisplayName` 更改为类似“Stamp Version Number”（标记版本号）的内容，如图 18-32 所示，以提高工作流的可读性。
 
-# 定义本地工作流变量
+## 定义本地工作流变量
 
-在标记版本号序列期间你可能需要的某些变量在后续过程中并不需要。选择你之前添加的 Sequence 活动，并添加表 18-3 中列出的自定义变量。对于变量的范围，使用你之前添加的 Sequence 活动的显示名称，以便变量仅在该标记段落内部使用，如图 18-33 所示。
+在标记版本号序列期间你可能需要的某些变量在后续过程中并不需要。选择你之前添加的 `Sequence` 活动，并添加表 18-3 中列出的自定义变量。对于变量的范围，使用你之前添加的 `Sequence` 活动的显示名称，以便变量仅在该标记段落内部使用，如图 18-33 所示。
 
 **表 18-3:** 自定义工作流变量
 
@@ -10050,19 +9317,21 @@ www.it-ebooks.info
 
 **图 18-33:** 在范围内定义变量
 
-# 初始化工作流变量
+## 初始化工作流变量
 
-在能够有效地使用这些变量之前，你必须将它们初始化为相应的值。Assign 活动是初始化工作流变量的理想选择。在之前创建的 Sequence 中添加一个新的 Assign 活动，将其 To 参数设置为如下内容：
+在能够有效地使用这些变量之前，你必须将它们初始化为相应的值。`Assign` 活动是初始化工作流变量的理想选择。在之前创建的 `Sequence` 中添加一个新的 `Assign` 活动，将其 `To` 参数设置为如下内容：
 
 ```
 System.Text.RegularExpressions.Regex(VersionNumberExpression).Match(BuildDetail).Value
 ```
 
-这创建一个包含版本号的新正则表达式，然后它尝试与构建号进行匹配。VersionString 变量现在应该初始化为四部分的版本字符串。
+这创建一个包含版本号的新正则表达式，然后它尝试与构建号进行匹配。`VersionString` 变量现在应该初始化为四部分的版本字符串。
 
 ```
 System.IO.Path.Combine(SourcesDirectory, VersionString)
 ```
+
+
 
 这是使用了定义的本地目录并将其与 AssemblyInfoSpec 结合。将每个 Assign 活动的 DisplayName 改为有意义的名称以有助于读性。
 
@@ -10087,9 +9356,6 @@ System.IO.Path.Combine(SourcesDirectory, VersionString)
 此外，完整的构建号被标记为 AssemblyDescription，这在查看自动化构建过程中创建的程序集并想要追溯到原始 Team Foundation Server 时非常有帮助。
 
 最后，注意该活动通过将 AssemblyInfofiles 变量传递给活动的 Files 参数来对每个文件执行操作。
-
-
-
 
 现在当使用此模板进行构建时，程序集版本信息将与赋予构建的数字匹配，这便于跟踪程序集源自哪个构建，如图 18-36 所示。
 
@@ -10205,10 +9471,6 @@ job agent 具有直接访问数据层的权限。由于由于，大多数任务�
 
 `Tfs_Configuration` 数据库存储了 Team Foundation Server 实例的核心信息，如表 19-1 所示。
 
-
-
-
-
 # 表 19-1: 配置数据库的内容
 
 | 组件 | 说明 |
@@ -10222,7 +9484,7 @@ job agent 具有直接访问数据层的权限。由于由于，大多数任务�
 
 ## 关系型仓库和 OLAP 节点数据库
 
-Tfs_Warehouse 数据库和 Tfs_Analysis cube 是支持 Team Foundation Server 数据仓库和报告功能的关键存储器。将在第 14 章中进行详细讨论。
+`Tfs_Warehouse` 数据库和 `Tfs_Analysis` cube 是支持 Team Foundation Server 数据仓库和报告功能的关键存储器。将在第 14 章中进行详细讨论。
 
 ## 团队项目集合
 
@@ -10304,18 +9566,14 @@ www.it-ebooks.info
 | 版本 | 识别运行在此服务器上的 Team 版本以及已安装的补丁级别的方法。这在两种情况下都很有用：首先，它是检查是否安装了服务包或热补的简单方法；其次，如果你从另一个服务器迁移集合，可以在这里检查版本是否匹配。 |
 | 管理控制台用户 | 用户名称 | 授予 Team Foundation Server 环境管理权限的个人列表，包括 SharePoint 报告、报告服务和 SQL 数据库。你可以通过添加或删除用户来添加或删除管理用户。重新应用链接将重新应用这些用户的权限。 |
 
-
-
-
-
 # 502 | 第 19 章 Team Foundation Server 管理简介
 
 # 表 19-2（续）
 
 | 设置 | 描述 |
 |---|---|
-| 来自多个 Team Foundation Server 环境的数据库可以托管在共享的 SQL Server 实例上。为了避免名称冲突，可以为数据库标记。例如，Tfs_ContosoConfiguration 和 Tfs_ContosoDefaultCollection 可能代表与共享 SQL Server 上的 Contoso 关联的数据库。 |
-| 版本 | 服务器运行着一个特定版本的代码，Tfs_Configuration 数据库在扩展属性中有一个版本时间戳。这显示了该时间戳的内容，且它必须与应用程序版本匹配。 |
+| 来自多个 Team Foundation Server 环境的数据库可以托管在共享的 SQL Server 实例上。为了避免名称冲突，可以为数据库标记。例如，`Tfs_ContosoConfiguration` 和 `Tfs_ContosoDefaultCollection` 可能代表与共享 SQL Server 上的 Contoso 关联的数据库。 |
+| 版本 | 服务器运行着一个特定版本的代码，`Tfs_Configuration` 数据库在扩展属性中有一个版本时间戳。这显示了该时间戳的内容，且它必须与应用程序版本匹配。 |
 | 应用层 | 与此 Team Foundation Server 环境关联的应用程序团队服务器列表。如果某个服务器在过去三个日内没有活动，可以通过勾选框将其从列表中过滤掉。此外，如果你有一个使用服务器对象模型的应用程序（而非服务器插件），它将显示在此列表中。 |
 | 报表服务摘要 | 报表服务管理器 URL：指向 Web 报告管理器根文件夹的 URL。报表服务服务器 URL：指向 Reporting Services Web 服务根目录的 URL。读取帐户使用报告数据源，允许报告按照此处指定的帐户连接到数据仓库。 |
 
@@ -10349,7 +9607,7 @@ www.it-ebooks.info
 
 点击管理控制台中的“更改 URL”（Change URLs）链接后，你将看到类似于图 19-9 的对话框，允许你更改系统所使用的两个 URL。
 
-# 504 | 第 19 章 Team Foundation Server 管理简介
+# 504 | 第 19 章 TEAM FOUNDATION SERVER 管理简介
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_541_0.png)
 
@@ -10418,10 +9676,6 @@ www.it-ebooks.info
 此选项卡显示集合中的项目列表以及它们的描述。由于现有项目创建向向的实现方式，无法添加新的团队
 
 **图 19-13:** 通用选项卡
-
-
-
-
 
 通过管理控制台进行项目。你仍然必须使用 Visual Studio Team Explorer 2012 在集合中创建新的团队项目。
 
@@ -10503,7 +9757,7 @@ www.it-ebooks.info
 
 ## 分离团队项目集合
 
-每个集合的共享信息（如标识）都存储在实例的 Tfs_Configuration 数据库中。由于由于，在将集合连接到另一个服务器之前，必须将其分离。分离过程会在断开与 SQL 服务器的连接之前将共享信息复制到集合数据库中，但它不再与 Team Foundation Server 相关。
+每个集合的共享信息（如标识）都存储在实例的 `Tfs_Configuration` 数据库中。由于由于，在将集合连接到另一个服务器之前，必须将其分离。分离过程会在断开与 SQL 服务器的连接之前将共享信息复制到集合数据库中，但它不再与 Team Foundation Server 相关。
 
 要开始分离过程，请从管理控制台中团队项目集合节点的“常规”选项卡上点击“分离集合”。在分离操作正在进行的较短持续内（通常为几分钟），该集合将处于离线状态。
 
@@ -10533,13 +9787,9 @@ www.it-ebooks.info
 
 **图 19-24：** 指定要连接的 SQL 实例和数据库
 
-一旦通过集合验证并你继续执行向导，后台作业代理将执行一个作业。该作业将共享数据从集合数据库中复制并放入实例的 TFS_Configuration 数据库中。如图 19-25 所示，一旦作业完成，集合将上线，用户可以开始访问它。
+一旦通过集合验证并你继续执行向导，后台作业代理将执行一个作业。该作业将共享数据从集合数据库中复制并放入实例的 `TFS_Configuration` 数据库中。如图 19-25 所示，一旦作业完成，集合将上线，用户可以开始访问它。
 
 每个 Team Foundation Server 和每个集合都有唯一的实例 ID。在连接过程中，服务器将检查集合的实例 ID 并确保它与服务器上的现有集合不冲突。如果检测到冲突，则新集合的实例 ID 将自动更改。
-
-
-
-
 
 # 第 19 节 Team Foundation Server 服务器管理简介
 
@@ -10554,8 +9804,16 @@ www.it-ebooks.info
 如果您想在不先分离集合的情况下删除团队项目集，可以使用 `TFSConfig.exe` 命令行工具来实现。在应用程序层服务器上打开命令提示符，并运行以下命令：
 
 ```
+TFSConfig.exe
+```
+
+
+
+```
 TFSConfig.exe collection /delete /collectionName:YourCollection
 ```
+
+
 
 收集集合与首次分离集合的区别在于，一个被删除的集合将无法重新附加到服务器。
 
@@ -10658,17 +9916,13 @@ www.it-ebooks.info
 
 # TFSControl.exe
 
-TFSControl.exe 工具用于启动或 Team Foundation Server 在服务器上使用的所有和服务应用程序池。如果您有多个应用程序层，需要在每个服务器上运行它以完全启动或停止环境。
+`TFSControl.exe` 工具用于启动或 Team Foundation Server 在服务器上使用的所有和服务应用程序池。如果您有多个应用程序层，需要在每个服务器上运行它以完全启动或停止环境。
 
-quiesce 选项将友好地停止服务器上的所有相关服务，unquiesce 选项将启动它们。在需要对服务器进行维护时需要友好停止服务的示例。
+`quiesce` 选项将友好地停止服务器上的所有相关服务，`unquiesce` 选项将启动它们。在需要对服务器进行维护时需要友好停止服务的示例。
 
 # 其他管理工具
 
 与大多数产品一样，功能存在缺失。Team Foundation Server 2012 也不例外，有很多微软赞助和非微软赞助的实用程序。本节介绍了在微软正常发布周期之外发布的工具，以及一个由另一公司开发的实用工具。
-
-
-
-
 
 # Team Foundation Server Power Tools
 
@@ -10712,7 +9966,7 @@ Team Foundation Server 完整健康检查是最全面的扫描，运行时间最
 
 图 19-29：查看最佳实践报告
 
-这并不广为人知，但你实际上可以使用 TfsBpaCmd.exe 工具从命令行使用 BPA 工具。通过此功能，你可以考虑每周作为计划任务运行一次，以主动检测任何服务器配置问题。
+这并不广为人知，但你实际上可以使用 `TfsBpaCmd.exe` 工具从命令行使用 BPA 工具。通过此功能，你可以考虑每周作为计划任务运行一次，以主动检测任何服务器配置问题。
 
 > 注意：第 23 章将更详细地介绍 BPA 工具的使用。
 
@@ -10774,10 +10028,6 @@ Attric Corporation 创建了一套名为 Team Foundation Sidekicks 的免费工�
 - 探索可用性解决方案
 - 探索负载均衡
 - 了解配置最佳实践
-
-
-
-
 
 # 演进中的架构
 
@@ -10870,10 +10120,6 @@ Team Foundation 的大部分工作都在数据层进行。因此，最常见的�
 
 存储过程具有查询计划。这些是预编译的，服务器使用它们来确定执行特定存储过程的最有效方式。Team Foundation 中的某些命令（例如 Merge）包含复杂的逻辑。这使得查询计划非常详尽，且体积会累积。由于每个项目集合都是独立的数据库，SQL 会为每个存储过程缓存一个独立的查询计划。
 
-
-
-
-
 可扩展性限制在于，计划缓存在同一 SQL 实例上的所有数据库之间共享。在 SQL Server 2008 中，计划缓存的大小根据以下公式计算：
 
 - 0 到 4 GB 之间可见目标内存的 75%
@@ -10922,9 +10168,6 @@ SQL 缓冲区缓存是存储最近访问的数据库页内存。将页面留在�
 ## 连接池
 
 连接池用于减少打开和关闭数据库连接的开销。然而，如果连接池太小，它可能会成为瓶颈。如果连接池太大，它可能会消耗数据库服务器过多的内存。
-
-
-
 
 速度并不是瓶颈，代理服务器的吞吐量与磁盘性能成正比。
 
@@ -10975,10 +10218,6 @@ SQL 缓冲区缓存是存储最近访问的数据库页内存。将页面留在�
 -   应用层和 Web 访问
 -   虚拟化
 
-
-
-
-
 # 存储配置错误
 
 2008年，微软对其规模巨大的开发者部门（Developer Division）服务器进行了一次升级。在升级前的几周内，存储供应商在存储阵列上发现了一个需要更新固件的问题。据称，此更新对存储性能的影响微乎其微，且团队被告知可以在服务器在线时完成。
@@ -10998,7 +10237,9 @@ SQL 缓冲区缓存是存储最近访问的数据库页内存。将页面留在�
 
 如果您升级了托管 Team Foundation Server 数据库的现有 SQL Server 实例，将不会对现有集合自动使用压缩。现有集合需要启用压缩并重建其索引才能看到压缩带来的处。您可以通过在您的每个集合数据库上运行以下脚本来实现：
 
+```
 EXEC prc_EnablePrefixCompression @Online = 1, @disable = 0
+```
 
 新创建的集合将自动具有压缩功能。
 
@@ -11045,9 +10286,9 @@ Web 访问的无状态实现根据需要对客户端会话进行脱水（存储�
 
 Team Explorer 2012 以及早期版本的补丁将在连接空闲 30 秒后发送 Keep-Alive 包。这足以防止大多数负载均衡器关闭连接。然而，如果到远程服务器的连接依赖于中间服务器（例如 Forefront Threat Management Gateway），Keep-Alive 包可能无法到达目标服务器。在这种情况下，对于长时间运行的命令可能会遇到问题。
 
-```
-解释 HTTP KEEP-ALIVE 和 TCP KEEP-ALIVE
 
+
+# 解释 HTTP KEEP-ALIVE 和 TCP KEEP-ALIVE
 
 当人们在 Web 应用背景下讨论 Keep-Alive 设置时，通常指的是 HTTP Keep-Alive。HTTP Keep-Alive 是 HTTP 1.1 的一个功能，指示服务器在响应后保持客户端连接。这避免了连接的开销，对于打开许多图片的网页浏览器非常有用。它不是为每张图片打开和关闭连接，而是重用连接。
 
@@ -11065,7 +10306,6 @@ Team Foundation Server 中的某些操作处理需要长时间。某些操作（
 
 Team Foundation Server 中一个实用的诊断工具是活动日志。（请参阅第 23 章获取有关此内容的更多信息。）活动日志记录了系统中每个请求的 IP 地址。的
 
-
 使用负载均衡器可能会隐藏客户端真实的 IP 地址。在这种情况下，活动日志将显示负载均衡器是系统的唯一客户端。
 
 为了避免掩盖，您可能需要启用 IP 传递（IP pass-through）设置或某些等效设置。如果负载均衡器通过 `X-Forwarded-For` HTTP 请求头设置了真实的客户端 IP 地址，则活动日志将显示该地址。
@@ -11074,7 +10314,7 @@ Team Foundation Server 中一个实用的诊断工具是活动日志。（请参
 
 如前所述，ASP.NET 的默认配置将每个 CPU 的并发执行请求数限制为 12 个。您可以通过监控“Application Queue”性能计数器中的 `ASP.NET|CurrentRequests` 来检查是否已达到此限制。如果该值不为零，那么您确实存在性能问题。
 
-要启用并发处理，您可以在 http://aka.me/xb821268 的 KB821268 get中找到指导建议。该文章描述了更改 `maxWorkerThreads` 和 `maxIOThreads` 设置的步骤。
+要启用并发处理，您可以在 `http://aka.me/xb821268` 的 KB821268 get中找到指导建议。该文章描述了更改 `maxWorkerThreads` 和 `maxIOThreads` 设置的步骤。
 
 如果您的瓶颈是 SQL Server 的吞吐量，那么大多数并发请求将处于空闲状态，等待数据层级的响应。在这种情况下，您可以增加设置以允许更多的并发连接。
 
@@ -11090,73 +10330,7 @@ Team Foundation Server 中一个实用的诊断工具是活动日志。（请参
 
 这个问题通过两种方式解决。第一种方法是对服务器的活动日志进行分析，识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
 
-这些努力取得了成效。这种方法是分析服务器的日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-这些努力取得了成效。这种方法是分析服务器的活动日志并识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-（注：由于原文中存在大量段落重复，根据指令“不要重复输出原文”的要求，此处仅翻译核心逻辑，实际操作中已严格遵循原文结构进行去重化翻译。）
-
-与 SQL Server 的资源管理器功能类似，Team Foundation Server 也包含它自己的资源管理器。系统中的每条命令都会根据其资源密集程度分配成本。一旦所有命令的总成本超过可配置的限制，后续请求将进入队列，直到有足够的资源可用。每个单独的命令也可以有并发限制。
-
-该资源管理器可以防止系统因大量请求而崩溃，并防止 SQL Server 过载。
-
-> 微软资源管理器 (RESOURCE GOVERNOR)
-
-在运行微软开发部门的内部服务器时，团队不断努力争，以保持服务器性能领先于用户需求。似乎无论他们做了多少优化和硬件升级，收益很快就会被抵消。这通常是因为系统中数据的急剧增长，或者更常见的是某个运行异常的工具。
-
-这个问题通过两种方式解决。第一种方法是对服务器的活动日志进行分析，识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-（注：原文文本中存在严重的段落重复，译文已按要求进行逻辑处理，确保内容连贯且不冗余。）
-
-# 资源管理器 (Resource Governor)
-
-与 SQL Server 的资源管理器功能类似，Team Foundation Server 也包含它自己的资源管理器。系统中的每条命令都会根据其资源密集程度分配成本。一旦所有命令的总成本超过可配置的限制，后续请求将进入队列，直到有足够的资源可用。每个单独的命令也可以有并发限制。
-
-该资源管理器可以防止系统因大量请求而崩溃，并防止 SQL Server 过载。
-
-> 微软资源管理器 (RESOURCE GOVERNOR)
-
-在运行微软开发部门的内部服务器时，团队不断努力争，以保持服务器性能领先于用户需求。似乎无论他们做了多少优化和硬件升级，收益很快就会被抵消。这通常是因为系统中数据的急剧增长，或者更常见的是某个运行异常的工具。
-
-这个问题通过两种方式解决。第一种方法是对服务器的活动日志进行分析，识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-# 资源管理器 (Resource Governor)
-
-与 SQL Server 的资源管理器功能类似，Team Foundation Server 也包含它自己的资源管理器。系统中的每条命令都会根据其资源密集程度分配成本。一旦所有命令的总成本超过可配置的限制，后续请求将进入队列，直到有足够的资源可用。每个单独的命令也可以有并发限制。
-
-该资源管理器可以防止系统因大量请求而崩溃，并防止 SQL Server 过载。
-
-> 微软资源管理器 (RESOURCE GOVERNOR)
-
-在运行微软开发部门的内部服务器时，团队不断努力争，以保持服务器性能领先于用户需求。似乎无论他们做了多少优化和硬件升级，收益很快就会被抵消。这通常是因为系统中数据的急剧增长，或者更常见的是某个运行异常的工具。
-
-这个问题通过两种方式解决。第一种方法是对服务器的活动日志进行分析，识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-# 资源管理器 (Resource Governor)
-
-与 SQL Server 的资源管理器功能类似，Team Foundation Server 也包含它自己的资源管理器。系统中的每条命令都会根据其资源密集程度分配成本。一旦所有命令的总成本超过可配置的限制，后续请求将进入队列，直到有足够的资源可用。每个单独的命令也可以有并发限制。
-
-该资源管理器可以防止系统因大量请求而崩溃，并防止 SQL Server 过载。
-
-> 微软资源管理器 (RESOURCE GOVERNOR)
-
-在运行微软开发部门的内部服务器时，团队不断努力争，以保持服务器性能领先于用户需求。似乎无论他们做了多少优化和硬件升级，收益很快就会被抵消。这通常是因为系统中数据的急剧增长，或者更常见的是某个运行异常的工具。
-
-这个问题通过两种方式解决。第一种方法是对服务器的活动日志进行分析，识别出产生负载最大的工具或用户。在其中一个案例中，单个用户承担了系统 50% 以上的负载。一旦确定，团队就与工具协作了解其需求，并对如何更有效地使用对象模型提出了建议。
-
-（注：由于提供的原始文本包含大量重复段落，译文已根据高级指令进行了去重处理，确保输出的质量与专业性。）
-
-# 资源管理器：方法成本
+## 资源管理器：方法成本
 
 | 方法名称 | 估算成本 |
 |---|---|
@@ -11179,10 +10353,9 @@ Team Foundation Server 中一个实用的诊断工具是活动日志。（请参
 | Table | 3 |
 | Table | 4 |
 | Update | 5 |
-| Update | 4
+| Update | 4 |
 
 在 2012 发布时，这种方法包含了工作项跟踪。默认情况下，它是。在 2012 发布时，这种方法包含了工作项跟踪。默认情况下，它是。
-
 
 - 1. 距离构建服务器和用户的距离
 - 2. 存储大小
@@ -11196,30 +10369,28 @@ Team Foundation Server 中一个实用的诊断工具是活动日志。（请参
 
 与应用程序层一样，您还应该将代理服务器的版本缓存目录更改为专用驱动器。
 
-> 注意：更多信息，请参阅 http://aka.ms/TfsProxySettings 上的“如何：更改 Team Foundation Server 代理设置”。
+> 注意：更多信息，请参阅 `http://aka.ms/TfsProxySettings` 上的“如何：更改 Team Foundation Server 代理设置”。
 
 ## 虚拟化
 
 虚拟化是实现您的高可用性目标的极佳解决方案。您可以将应用程序层和数据服务器配置为高可用主机上的虚拟机访客。如果底层主机需要计划内或计划外的维护，您可以快速地将虚拟机迁移到另一台主机，而不会中断服务。
 
-> 注意：此配置超出了本章的范围，您应该参阅 http://aka.ms/PrivateCloudRefarch 上的“私有云参考架构”。
+> 注意：此配置超出了本章的范围，您应该参阅 `http://aka.ms/PrivateCloudRefarch` 上的“私有云参考架构”。
 
 微软在支持的虚拟化环境中支持 Team Foundation Server 的虚拟化。欲需更多信息，请参阅微软网站上的以下页面：
 
-- * 微软服务器及支持的虚拟化环境：http://aka.ms/VirtSupport1
-- * 在非微软硬件虚拟化软件上运行微软软件的运行策略：http://aka.ms/VirtSupport2
-- * 非微软硬件虚拟化软件的支持合作伙伴：http://aka.ms/VirtSupport
-- * 服务器虚拟化（官方支持的产品）：http://aka.ms/VirtSupport
+- * 微软服务器及支持的虚拟化环境：`http://aka.ms/VirtSupport1`
+- * 在非微软硬件虚拟化软件上运行微软软件的运行策略：`http://aka.ms/VirtSupport2`
+- * 非微软硬件虚拟化软件的支持合作伙伴：`http://aka.ms/VirtSupport`
+- * 服务器虚拟化（官方支持的产品）：`http://aka.ms/VirtSupport`
 
-您还应该阅读 http://aka.ms/SQLHyperV 上的“在 Hyper-V 环境中运行 SQL Server 2008”中的最佳实践和性能建议，并结合阅读 http://aka.ms/SQLHyperVDM 上的“使用 Hyper-V 动态内存运行 SQL Server”。无论使用何种虚拟化技术，这些测试和建议都非常有参考价值。
+您还应该阅读 `http://aka.ms/SQLHyperV` 上的“在 Hyper-V 环境中运行 SQL Server 2008”中的最佳实践和性能建议，并结合阅读 `http://aka.ms/SQLHyperVDM` 上的“使用 Hyper-V 动态内存运行 SQL Server”。无论使用何种虚拟化技术，这些测试和建议都非常有参考价值。
 
 ## 总结
 
 本章探讨了 Team Foundation Server 的可扩展性和可用性的一些局限性，以及大型繁忙环境面临的问题。您了解到 Team Foundation Server 与 SQL Server 的性能直接挂钩。最后，讨论了克服这些局限性的解决方案和最佳实践，以满足您的可扩展性和高可用性目标。
 
 第 21 章将讨论 Team Foundation Server 管理的另一个重要方面——灾难恢复。
-
-## 21
 
 # 灾难恢复
 
@@ -11231,7 +10402,7 @@ Team Foundation Server 中一个实用的诊断工具是活动日志。（请参
 
 灾难恢复是一个重要的课题，但由于范围太大，无法在一个章节中涵盖。本章的目的是提示您思考您的灾难恢复计划是什么，以及它与 Team Foundation Server 的关系。
 
-> 注意：更多信息，请参阅 http://tinyurl.com/SQLDR 上的“用于高可用性和灾难恢复的可靠 SQL Server 架构”。
+> 注意：更多信息，请参阅 `http://tinyurl.com/SQLDR` 上的“用于高可用性和灾难恢复的可靠 SQL Server 架构”。
 
 ## 业务连续性与恢复目标
 
@@ -11279,7 +10450,9 @@ Team Foundation Server 包含许多组件：数据层、应用程序层、SQL Re
 
 ### SharePoint 产品
 
-对于与 Team Foundation Server 关联的官方支持产品的备份，您应该参阅 http://tinyurl.com/SharePointBackup 上的“备份和恢复概述”。特别是如果您对 SharePoint 产品有任何自定义，还必须备份它们，以便在新服务器上重建。
+对于与 Team Foundation Server 关联的官方支持产品的备份，您应该参阅 `http://tinyurl.com/SharePointBackup` 上的“备份和恢复概述”。特别是如果您对 SharePoint 产品有任何自定义，还必须备份它们，以便在新服务器上重建。
+
+
 
 ## SQL Reporting Services 密钥
 
@@ -11288,10 +10461,6 @@ SQL Reporting Services 使用密钥来加密数据源连接字符串、报告凭
 第 10 章讨论了使用团队项目管理 Team Foundation Server 构件的方法，包括将 Reporting Services 密钥存储在版本控制中。团队项目集合数据库很可能会被备份和恢复，这是确保密钥得到妥善备份的绝位置。
 
 > 注意：更多信息，请参阅 http://aka.ms/BackupReportingServicesKey 上的“备份 SQL Reporting Services 密钥”。
-
-
-
-
 
 ## 您丢失了报告服务的加密密钥吗？
 
@@ -11357,7 +10526,7 @@ SQL Server 对所有用户数据库使用的默认恢复模式是完全模式。
 
 ## 注意事项
 
-Team Foundation Server 有两种类型的数据库：Tfs_Configuration 数据库和集合数据库（collection databases）。访问 Team Foundation Server 的用户的名称、电子邮件和组组成员与活动目录（Active Directory）同步。这些信息并不是与每个单独的集合同步，而是存储在配置数据库中。
+Team Foundation Server 有两种类型的数据库：`Tfs_Configuration` 数据库和集合数据库（collection databases）。访问 Team Foundation Server 的用户的名称、电子邮件和组组成员与活动目录（Active Directory）同步。这些信息并不是与每个单独的集合同步，而是存储在配置数据库中。
 
 由于数据库之间存在这种依赖关系，以某种方式对配置数据库和集合数据库进行备份，并使它们可以恢复到共同的时间点是至关重要的。当你的配置数据库与集合数据库位于不同的服务器或实例上时，实现这一点可能会变得更加困难。
 
@@ -11380,9 +10549,6 @@ Team Foundation Server 有两种类型的数据库：Tfs_Configuration 数据库
 如果你对数据层进行虚拟化，你可以备份运行 SQL Server 的虚拟机。但你也应该考虑 SQL 数据库备份。取决于所使用的虚拟化备份技术，它无法确保数据库的事务一致性。如果无法维护事务一致性，那么从你的虚拟机备份中恢复是不安全的，你可能会遇到数据丢失。
 
 在具有多个 SQL 服务器的环境中，如果不使用标记事务，无法保持数据库备份同步。此外，事务日志备份的执行频率可以比虚拟机备份更高，并且它们允许提供更细粒度的恢复点。
-
-
-
 
 因此，像考虑服务器本身的安全性一样，考虑备份的安全性也同样重要，这包括使用加密以及对备份进行安全的传输、处理和存储。
 
@@ -11488,9 +10654,6 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 
 **图 21-9：** 备份计划进度屏幕
 
-
-
-
 ## Team Foundation Server 备份计划详情
 
 一旦配置了备份计划，Team Foundation Server 管理控制台中的 Team Foundation Server 备份将显示该备份计划的详细信息。图 21-10 所示的详情界面显示了配置设置，例如运行备份计划的帐户、备份发送到的路径，以及包含在备份计划中的数据库和 SQL 服务器。
@@ -11525,6 +10688,9 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 | TFSDeleteOldBackup | 删除旧备份文件 | 2012/10/15 晚上 7:08:27 | 从未运行 |
 | TFSDifferentialBackup | 同步差异备份 | 2012/10/15 上午 2:00:00 | 从未运行 |
 | TFSTransactionalBackup | 事务备份 | 2012/10/15 上午 2:00:00 | 从未运行 |
+
+
+
 | TFSFullBackup | 同步全量备份 | 2012/10/14 上午 2:00:00 | 从未运行 |
 
 图 21-11：带有计划任务信息的备份计划详情
@@ -11532,11 +10698,17 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_601_0.png)
 
 | 名称 | 状态 | 触发器 | 下一次运行时间 | 上一次运行时间 |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | TFSDeleteOld | 准备就 | 每周一、周二、周三...凌晨 2:00 | 2012/10/15 上午 2:00:00 | 从未 |
+
 | TFSDiff | 准备就 | 每周一、周三...凌晨 2:00 | 2012/10/15 上午 2:00:00 | 从未 |
+
 | TFSFull | 准备就 | 每周日...凌晨 2:00 | 2012/10/14 上午 2:00:00 | 从未 |
+
 | TFSTrans | 准备就 | 每天凌晨 2:00 - 触发，重置... | 2012/10/14 上午 2:00:00 | 从未 |
+
 | User_Feed_s | 准备就 | 除周...外每天晚上 11:00 | 2012/10/13 晚上 11:09:26 | 2012/10/12 晚上 11:09:27 |
 
 图 21-12：Windows 任务计划程序
@@ -11545,10 +10717,10 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 
 如果你查看与每个计划任务相关的参数，你会发现它们正在运行带有参数的相同命令。以下是这些参数：
 
-- TFSFullBackup
-- TFSDifferentialBackup
-- TFSTransactionalBackup
-- TFSDeleteOldBackup
+- `TFSFullBackup`
+- `TFSDifferentialBackup`
+- `TFSTransactionalBackup`
+- `TFSDeleteOldBackup`
 
 ## 创建备份计划
 
@@ -11570,19 +10742,19 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 
 如果你查看与每个计划任务相关的参数，你会发现它们正在运行带有参数的相同命令。以下是这些参数：
 
-- TFSFullBackup
-- TFSDifferentialBackup
-- TFSTransactionalBackup
-- TFSDeleteOldBackup
+- `TFSFullBackup`
+- `TFSDifferentialBackup`
+- `TFSTransactionalBackup`
+- `TFSDeleteOldBackup`
 
 ## 更改帐户
 
 如果你查看与每个计划任务相关的参数，你会发现它们正在运行带有参数的相同命令。以下是这些参数：
 
-- TFSFullBackup
-- TFSDifferentialBackup
-- TFSTransactionalBackup
-- TFSDeleteOldBackup
+- `TFSFullBackup`
+- `TFSDifferentialBackup`
+- `TFSTransactionalBackup`
+- `TFSDeleteOldBackup`
 
 ## 将备份还原到原始服务器
 
@@ -11595,15 +10767,11 @@ Team Foundation Server 备份计划在运行该向导的应用程序层上作为
 5. 重建仓库。
 6. 重启 Team Foundation 使用的服务。
 
-## 停止 Team Foundation 使用的服务
+### 停止 Team Foundation 使用的服务
 
 Team Foundation Server 有一个应用程序池和一个作业代理。如果在这些任何一个正在运行时还原备份，还原可能会失败或处于不一致状态。
 
 为了安全地停止服务，你应该使用每个应用程序分层工具中的选项运行 `TFServiceControl.exe` 命令。该程序会停止应用程序池和作业代理。如果你有多个分层，则必须在每个分层上运行它。
-
-
-
-
 
 # 数据库还原向导
 
@@ -11662,7 +10830,7 @@ Team Foundation Server 有一个应用程序池和一个作业代理。如果在
 
 # 更新所有服务帐户
 
-一旦还原了 Foundation 数据库，你必须确保当前的 Team Foundation 服务帐户在数据库上具有所需的访问权限和权限。这是通过使用 TfsConfig.exe 命令完成的，该命令位于你应用程序层的 Tools 目录中。
+一旦还原了 Foundation 数据库，你必须确保当前的 Team Foundation 服务帐户在数据库上具有所需的访问权限和权限。这是通过使用 `TfsConfig.exe` 命令完成的，该命令位于你应用程序层的 Tools 目录中。
 
 > 注意：有关此过程的更多信息，请参考 MSDN 上的“还原数据到相同位置”，http://aka.ms/TFSRestoreSameLocation。
 
@@ -11672,7 +10840,7 @@ Team Foundation Server 有一个应用程序池和一个作业代理。如果在
 
 1. 登录到你的一个应用程序层服务器上。
 2. 打开命令提示符。
-3. 进入目录 \Program Files\Team Foundation Server\Tools。
+3. 进入目录 `\Program Files\Team Foundation Server\Tools`。
 4. 输入命令：
 
 ```
@@ -11685,7 +10853,7 @@ TfsConfig rebuild /analyservices
 
 # 启动所有服务帐户
 
-一旦还原了 Foundation 数据库，你必须确保当前的 Team Foundation 服务帐户在数据库上具有所需的访问权限和权限。这是通过使用位于你应用程序层 Tools 目录中的 TfsConfig.exe 命令完成的。
+一旦还原了 Foundation 数据库，你必须确保当前的 Team Foundation 服务帐户在数据库上具有所需的访问权限和权限。这是通过使用位于你应用程序层 Tools 目录中的 `TfsConfig.exe` 命令完成的。
 
 > 注意：有关此过程的更多信息，请参考 MSDN 上的“还原数据到相同位置”，http://aka.ms/TFSRestoreSameLocation。
 
@@ -11695,7 +10863,7 @@ TfsConfig rebuild /analyservices
 
 1. 登录到你的一个应用程序层服务器上。
 2. 打开命令提示符。
-3. 进入目录 \Program Files\Team Foundation Server\Tools。
+3. 进入目录 `\Program Files\Team Foundation Server\Tools`。
 4. 输入命令：
 
 ```
@@ -11708,7 +10876,7 @@ TfsConfig rebuild /analyservices
 
 # 启动 Team Foundation 使用的服务
 
-让服务器重新上线的最后一步是应用程序池和作业代理。使用与停止服务类似的方法，你可以运行 TFServiceControl。
+让服务器重新上线的最后一步是应用程序池和作业代理。使用与停止服务类似的方法，你可以运行 `TFServiceControl`。
 
 # 还原到不同的硬件
 
@@ -11751,7 +10919,6 @@ Team Foundation 安全中要理解的第一个概念是不同类型的用户，�
 # 域用户
 
 Windows 网络中的域通常指活动目录（AD）域。AD 是 Windows Server 自带的目录服务和身份验证服务。用户帐户
-
 
 在目录中创建的用户被称为域用户（domain users）。在目录中，每个用户对象都有一组属性，包括唯一标识符（称为安全 ID，或 SID）、显示名称和电子邮件地址。
 
@@ -11805,9 +10972,6 @@ Team Foundation Server 同步系统中每个组成员的用户的某些属性。
 
 每个应用程序层上的 Team Foundation 后台作业代理定期执行此任务。
 
-
-
-
 # 域组
 
 与域用户一样，*域组*是存在于 AD 中的组。有时它们也被称为*安全组*。它们可以包含其他域用户、组和计算机帐户。
@@ -11822,6 +10986,8 @@ Team Foundation Server 同步系统中每个组成员的用户的某些属性。
 
 与本地用户一样，*本地组*仅存在于单台机器上。这些组仅用于保护存在于该机器上的资源。本地组的一个特点是它们可以包含域用户和组组成员。
 
+
+
 如果你想允许域组的成员对你的机器具有管理访问权限，这个功能就非常有用。你可以将一个名为 `MYDOMAIN\MyGroup` 的域组添加到你计算机的 `BUILDIN\Administrators` 本地组中。
 
 # Team Foundation Server 组
@@ -11832,28 +10998,28 @@ Team Foundation Server 也有它自己的应用程序组结构。系统内有三
 - 2. 团队项目集合组
 - 3. 团队项目组
 
-# 服务器组
+## 服务器组
 
 默认的服务器组（如表 22-1 所示）具有硬编码名称，无法从服务器上更改或删除。
 
 要修改服务器组的成员身份或权限，你需要使用 Team Foundation Server 管理控制或 `TFSSecurity.exe` 命令行工具。
 
-# 团队项目集合组
+## 团队项目集合组
 
 默认的团队项目集合组是在集合创建过程中创建的。表 22-2 显示了每个组及其成员。
 
-# 表 22-1：内置 Team Foundation Server 组
+### 表 22-1：内置 Team Foundation Server 组
 
 | 组名称 | 组描述 | 组成员 |
 | :--- | :--- | :--- |
 | Team Foundation Administrators | 此组的成员可以对 Team Foundation 应用程序实例执行所有操作。 | 默认情况下，此组包含任何托管 Team Foundation Server 应用程序服务的服务器的本地管理员组 (BUILT\Administrators)。此组还包含 Service Accounts 组的成员。 |
-| Team Foundation Proxy Service Accounts | 此组应仅包含 Team Foundation Server Proxy 使用的帐户帐户。 |默认不包含任何组成员。 |
+| Team Foundation Proxy Service Accounts | 此组应仅包含 Team Foundation Server Proxy 使用的帐户帐户。 | 默认不包含任何组成员。 |
 | Team Foundation Service Accounts | 此组的成员对 Team Foundation 应用程序实例具有服务级权限。这仅适用于服务帐户。 | 此组包含当前以此身份运行的服务帐户。如果你发现此组包含了个人用户帐户，你应该删除它们，因为这些帐户在 Team Foundation Server 2012 的电子邮件警报管理/所有权等领域的体验将会降低。如果你需要删除用户帐户，可以使用此博客获取操作说明：http://aka.ms/TFSRemoveServiceAccountGroup。 |
 | Team Foundation Valid Users | 此组的成员可以访问 Team Foundation 应用程序实例。 | 此组的成员可以访问 Team Foundation Server。此组自动包含已在 Team Foundation Server 任何地方添加的用户和组。你无法修改此组的成员身份。 |
 | SharePoint Web Application Services | 此应用程序组应仅包含 SharePoint Web 应用程序的帐户帐户。 | 如果你的 Team Server 配置为与 SharePoint 产品集成，则 SharePoint Web Application 服务帐户将是其中的成员。 |
 | Project Server Integration Service Accounts | 此组的成员对 Project Server 集成具有服务级权限。这仅适用于服务帐户。 | 默认不包含任何组成员。 |
 
-# 表 22-2：默认团队项目集合组
+### 表 22-2：默认团队项目集合组
 
 | 组名称 | 组描述 | 组成员 |
 | :--- | :--- | :--- |
@@ -11862,16 +11028,16 @@ Team Foundation Server 也有它自己的应用程序组结构。系统内有三
 | Project Collection Build Service Accounts | 此组成员应包含用于此项目集合的构建服务帐户。 | 默认不包含任何组成员。 |
 | Project Collection Proxy Service Accounts | 此组应仅包含用于此项目集合的代理帐户。 | 此组包含 Team Foundation Service Accounts 组。如果你发现此组包含了个人用户帐户，你应该删除它们，因为这些帐户在 Team Foundation Server 2012 的电子邮件警报管理/所有权等领域的体验将会降低。如果你需要删除用户帐户，可以使用此博客获取操作说明：http://aka.ms/TFSRemoveServiceAccountGroup。 |
 | Project Collection Service Accounts | 此应用程序组包含团队项目集合服务帐户。 | 此组包含 Team Foundation Service Accounts 服务器组。 |
-| Project Collection Test Service Accounts | 此组成员应包含用于此项目集合的测试服务帐户。 | |
+| Project Collection Test Service Accounts | 此组成员应包含用于此项目集合的测试服务帐户。 |  |
 | Project Collection Valid Users | 此应用程序组包含所有访问团队项目集合的用户和组。 | 此组自动包含已在团队项目集合任何地方添加的用户和组。你无法修改此组的成员身份。 |
 
-要修改团队项目集合组的成员身份或权限，你可以使用 Team Foundation 管理控制台、Visual Studio Team Web Access 或 TFSSecurity 命令行工具。
+要修改团队项目集合组的成员身份或权限，你可以使用 Team Foundation 管理控制台、Visual Studio Team Web Access 或 `TFSSecurity` 命令行工具。
 
-# 团队项目组
+## 团队项目组
 
 团队项目组最初在过程模板中定义，并在项目创建向导过程中被创建。表 22-3 显示了解决方案解决方案（MSF）敏捷软件开发和能力成熟模型集成 (CMMI) 过程改进模板包含的默认组。你可以额外创建安全组或使用定义条款时创建的团队项目组来进一步加强项目内部的安全性。
 
-**表 22-3：默认项目组**
+### 表 22-3：默认项目组
 
 | 组名称 | 组描述 | 组成员 |
 | :--- | :--- | :--- |
@@ -11888,21 +11054,17 @@ Team Foundation Server 也有它自己的应用程序组结构。系统内有三
 - *团队项目集合权限
 - *团队项目权限
 
-
-
-
-
 ## 服务器权限
 
 Team Foundation 管理员（Team Foundation Administrators）组与 Team Foundation 服务帐户（Team Foundation Service Accounts）组具有硬编码权限。这是为了防止管理员被意外锁定在系统之外。表 22-4 显示了某些有趣的服务器级权限。
 
-表 22-4：服务器权限
+### 表 22-4：服务器权限
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 代表他人发出请求 | Impersonate | 拥有此权限的用户可以代表其他用户或服务操作。 |
-| 编辑实例级信息 | GENERIC_WRITE | 拥有此权限的用户可以启动和停止集合、编辑描述、管理组成员关系，并管理集合中组的权限。这是一项强大的权限。 |
-| 查看实例级信息 | GENERIC_READ | 拥有此权限的用户可以查看服务器级组成员关系以及这些用户的权限。 |
+| 代表他人发出请求 | `Impersonate` | 拥有此权限的用户可以代表其他用户或服务操作。 |
+| 编辑实例级信息 | `GENERIC_WRITE` | 拥有此权限的用户可以启动和停止集合、编辑描述、管理组成员关系，并管理集合中组的权限。这是一项强大的权限。 |
+| 查看实例级信息 | `GENERIC_READ` | 拥有此权限的用户可以查看服务器级组成员关系以及这些用户的权限。 |
 
 ## 团队项目集合权限
 
@@ -11922,51 +11084,51 @@ Team Foundation 管理员（Team Foundation Administrators）组与 Team Foundat
 
 如果你强制人们使用网络服务（Network Service）或服务帐户作为其构建服务的帐户，就可以避免普通用户帐户成为项目集合管理员的问题。
 
-## 表 22-5：团队项目集合权限
+### 表 22-5：团队项目集合权限
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 编辑集合级信息 | GENERIC_WRITE | 拥有此权限的用户可以编辑团队项目集合中用户和组的集合级权限。他们可以从集合中添加或移除集合级 Team Foundation 组 |
-| 查看集合级信息 | GENERIC_READ | 拥有此权限的用户可以查看集合级组成员关系以及这些用户的权限 |
-| 管理构建资源 | ManageBuildResources | 拥有此权限的用户可以管理团队项目集合的构建计算机、代理和构建控制器。这些用户还可以为其他用户授予或拒绝“查看构建资源”和“使用构建资源”权限 |
-| 使用构建资源 | UseBuildResources | 拥有此权限的用户可以预留和分配构建代理。此权限应仅分配给构建服务的帐户 |
-| 查看构建资源 | ViewBuildResources | 拥有此权限的用户可以查看为集合配置的构建控制器和构建代理。要使用这些资源，需要额外的权限 |
-| 管理测试控制器 | MANAGE_TEST_CONTROLLERS | 拥有此权限的用户可以为团队项目集合注册和注销测试控制器 |
-| 查看测试运行 | VIEW_TEST_RESULTS | 拥有此权限的用户可以查看此节点的测试计划 |
-| 管理工作项链接类型 | WORK_ITEM_LINK | 拥有此权限的用户可以添加、删除和更改工作项的链接类型 |
+| 编辑集合级信息 | `GENERIC_WRITE` | 拥有此权限的用户可以编辑团队项目集合中用户和组的集合级权限。他们可以从集合中添加或移除集合级 Team Foundation 组 |
+| 查看集合级信息 | `GENERIC_READ` | 拥有此权限的用户可以查看集合级组成员关系以及这些用户的权限 |
+| 管理构建资源 | `ManageBuildResources` | 拥有此权限的用户可以管理团队项目集合的构建计算机、代理和构建控制器。这些用户还可以为其他用户授予或拒绝“查看构建资源”和“使用构建资源”权限 |
+| 使用构建资源 | `UseBuildResources` | 拥有此权限的用户可以预留和分配构建代理。此权限应仅分配给构建服务的帐户 |
+| 查看构建资源 | `ViewBuildResources` | 拥有此权限的用户可以查看为集合配置的构建控制器和构建代理。要使用这些资源，需要额外的权限 |
+| 管理测试控制器 | `MANAGE_TEST_CONTROLLERS` | 拥有此权限的用户可以为团队项目集合注册和注销测试控制器 |
+| 查看测试运行 | `VIEW_TEST_RESULTS` | 拥有此权限的用户可以查看此节点的测试计划 |
+| 管理工作项链接类型 | `WORK_ITEM_LINK` | 拥有此权限的用户可以添加、删除和更改工作项的链接类型 |
 
-## 表 22-5（续）
+### 表 22-5（续）
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 管理项目服务器 | AdministerProject | 拥有此权限的用户可以配置 Team Foundation 与 Project Server 的集成 |
-| 更改跟踪设置 | DIAGNOSTIC | 拥有此权限的用户可以更改收集详细信息的跟踪设置 |
+| 管理项目服务器 | `AdministerProject` | 拥有此权限的用户可以配置 Team Foundation 与 Project Server 的集成 |
+| 更改跟踪设置 | `DIAGNOSTIC` | 拥有此权限的用户可以更改收集详细信息的跟踪设置 |
 
 ## 团队项目权限
 
 如表 22-6 所示，Team Foundation Server 2010 引入了某些控制 Test Manager 资源的项目级权限。
 
-表 22-6：团队项目权限
+### 表 22-6：团队项目权限
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 创建测试运行 | PUBLISH_TEST_RESULTS | 拥有此权限的用户可以添加或修改项目的测试结果 |
-| 删除测试运行 | DELETE_TEST_RESULTS | 拥有此权限的用户可以删除该项目的计划测试 |
-| 管理测试配置 | MANAGE_TEST_CONFIGURATIONS | 拥有此权限的用户可以创建并删除测试配置 |
-| 管理测试环境 | MANAGE_TEST_ENVIRONMENTS | 拥有此权限的用户可以创建并删除测试环境 |
-| 查看测试运行 | VIEW_TEST_RESULTS | 拥有此权限的用户可以查看此节点的测试运行 |
-| 删除团队项目 | DELETE | 拥有此权限的用户可以删除他们拥有的 Team Foundation |
+| 创建测试运行 | `PUBLISH_TEST_RESULTS` | 拥有此权限的用户可以添加或修改项目的测试结果 |
+| 删除测试运行 | `DELETE_TEST_RESULTS` | 拥有此权限的用户可以删除该项目的计划测试 |
+| 管理测试配置 | `MANAGE_TEST_CONFIGURATIONS` | 拥有此权限的用户可以创建并删除测试配置 |
+| 管理测试环境 | `MANAGE_TEST_ENVIRONMENTS` | 拥有此权限的用户可以创建并删除测试环境 |
+| 查看测试运行 | `VIEW_TEST_RESULTS` | 拥有此权限的用户可以查看此节点的测试运行 |
+| 删除团队项目 | `DELETE` | 拥有此权限的用户可以删除他们拥有的 Team Foundation |
 
-## 权限 587
+### 权限 587
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 编辑项目级信息 | GENERIC_WRITE | 拥有此权限的用户可以编辑 Team Foundation 中用户和组的项目级权限 |
-| 查看项目级信息 | GENERIC_READ | 拥有此权限的用户可以查看组成员关系以及这些用户的权限 |
+| 编辑项目级信息 | `GENERIC_WRITE` | 拥有此权限的用户可以编辑 Team Foundation 中用户和组的项目级权限 |
+| 查看项目级信息 | `GENERIC_READ` | 拥有此权限的用户可以查看组成员关系以及这些用户的权限 |
 
 让我们详细查看其中的某些权限。
 
-## 工作项跟踪
+### 工作项跟踪
 
 Team Foundation Server 的工作项跟踪组件中有三组不同的项目可以进行管理。对以下内容存在权限：
 
@@ -11976,16 +11138,12 @@ Team Foundation Server 的工作项跟踪组件中有三组不同的项目可以
 
 www.it-ebooks.info
 
-
-
-
-
-## 区域 (Areas)
+### 区域 (Areas)
 
 区域路径可以应用于树中的任何节点。如果启用了继承，父节点上的权限可以继承到子节点。可用的权限分为两类：
 
--   修改区域路径中工作项（work items）的权限
--   修改区域路径本身的权限
+- 修改区域路径中工作项（work items）的权限
+- 修改区域路径本身的权限
 
 表 22-7 所示的权限特别有趣，因为它们可以用于为不同的用户组隐藏或锁定树的某些。
 
@@ -11993,24 +11151,24 @@ www.it-ebooks.info
 
 | 权限名称 | 命令-项目_写入 | 描述 |
 | --- | --- | --- |
-| 编辑此节点中的工作项 | WORK_ITEM_WRITE | 拥有此权限的用户可以编辑此区域中的工作项。 |
-| 查看此节点中的工作项 | WORK_ITEM_READ | 拥有此权限的用户可以查看但无法更改此区域的工作项。 |
+| 编辑此节点中的工作项 | `WORK_ITEM_WRITE` | 拥有此权限的用户可以编辑此区域中的工作项。 |
+| 查看此节点中的工作项 | `WORK_ITEM_READ` | 拥有此权限的用户可以查看但无法更改此区域的工作项。 |
 
 例如，假设你有一个涵盖了整个组织或产品工程部门的大型团队。你这样做是为了对一组特定的工作项进行工作，而不是让项目处于孤立状态。如果有一个超级团队正在处理某个机密任务，而你不希望组织中的其他人看到那些工作项，你可以移除“查看此权限中的工作项”。
 
 另一个例子可能是变更请求区域路径。你的团队可以有一组区域路径，其中一个区域路径命名为 `\Change Requests`。你可以配置权限，允许服务器上的任何人在该区域路径中创建工作项。
 
-## 迭代 (Iterations)
+### 迭代 (Iterations)
 
 迭代的权限与区域路径的权限非常相似。然而，显著的区别在于缺少“查看此节点中的工作项”和“编辑此节点中的工作项”权限。这意味着你无法控制谁可以将工作项移动到迭代路径中。但你可以控制对迭代结构本身的修改。
 
-## 团队查询文件夹 (Team Query Folders)
+### 团队查询文件夹 (Team Query Folders)
 
 *团队查询文件夹*是 Team Foundation Server 2010 引入的一个新功能。在这些文件夹出现之前，你只能拥有平面的查询列表。有些人尝试通过复杂的命名方案来规避这个问题。另一些人使用带有文件夹以及每个文件夹中 *.WI 文件的 SharePoint 文档库来实现相同的目的。
 
 实际上，在 2010 年之前，为微软 Windows 和 Office 组织专门构建的 Team Foundation 内部版本就已经提供了团队查询文件夹。使用文件夹的团队反馈是，需要对它们设置权限。由于这些反馈，团队在将该功能包含在最终的 Team Foundation Server 2010 发布之前，添加了表 22-8 所示的权限。
 
-## 表 22-8：团队查询文件夹权限
+### 表 22-8：团队查询文件夹权限
 
 | 权限名称 | 描述 |
 | --- | --- |
@@ -12018,7 +11176,7 @@ www.it-ebooks.info
 | 贡献 | 查看并编辑此文件夹及其内容。 |
 | 删除 | 查看、编辑和删除此文件夹及其内容。 |
 | 管理权限 | 管理此文件夹及其内容的权限。 |
-| 完全控制 | 查看、编辑和管理此文件夹的权限。
+| 完全控制 | 查看、编辑和管理此文件夹的权限。 |
 
 ## 绕过规则与强制回滚错误 (BYPASS RULES AND THE FORCING ROLLBACK ERROR)
 
@@ -12042,17 +11200,19 @@ Forcing rollback ---> Forcing rollback ---> Forcing rollback
 
 > 注意：有关更多信息，请参阅 http://aka.ms/VisualStudioLicensing 上最新版本的“Visual Studio 许可白皮书”。该许可白皮书定期更新。
 
+
+
 Team Foundation Server 2012 在 Team Web Access 中引入了一个新的管理页面，用于帮助管理 Team Web Access 终端用户的不同功能，如图 22-1 所示。Team Foundation Server 2012 的首次更新将页面和选项页名称改为“访问级别”（Access Levels）。用户可以是以下组的成员：
 
--   限制 (Limited)
--   标准 (Standard)
--   完全 (Full)
+- `Limited`
+- `Standard`
+- `Full`
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_627_0.png)
 
 图 22-1：Team Web Access 中的新功能访问级别管理页面
 
-限制访问级别允许用户获得类似于旧版“仅工作项”功能的访问。它允许他们查看工作项，适用于那些没有 Team Foundation Server CAL 的用户。然而，它没有提供他们必要的安全权限，因此请务必将这些用户添加到项目的贡献者（Contributors）默认安全组，或者启用此访问级别下的“查看此节点中的工作项”和“编辑此节点中的工作项”。
+限制访问级别允许用户获得类似于旧版“仅工作项”功能的访问。它允许他们查看工作项，适用于那些没有 Team Foundation Server CAL 的用户。然而，它没有提供他们必要的安全权限，因此请务必将这些用户添加到项目的 `Contributors` 默认安全组，或者启用此访问级别下的“查看此节点中的工作项”和“编辑此节点中的工作项”。
 
 这种限制层级的伟大之处在于，你可以从一个 bug 创建工作项。
 
@@ -12060,9 +11220,9 @@ Team Foundation Server 2012 在 Team Web Access 中引入了一个新的管理�
 
 完全访问级别是为那些拥有更高版本的用户设计的，例如：
 
--   带有 MSDN 的 Visual Studio Test 2012
--   带有 MSDN 的 Visual Studio Premium 2012
--   带有 MSDN 的 Visual Studio Ultimate 2012
+- 带有 MSDN 的 Visual Studio Test 2012
+- 带有 MSDN 的 Visual Studio Premium 2012
+- 带有 MSDN 的 Visual Studio Ultimate 2012
 
 完全访问级别的成员拥有限制和标准组的所有功能。此外，在 Team Foundation Server 2012 的首次更新中，完全访问级别的成员还可以使用基于 Web 的测试功能。
 
@@ -12070,16 +11230,13 @@ Team Foundation Server 2012 在 Team Web Access 中引入了一个新的管理�
 
 为了帮助组织确保许可合规性，该页面还提供了审核日志（Audit Log）功能，允许你生成一个包含所有用户及其功能许可访问情况的 Excel 工作簿。
 
-
-
-
 当您的服务器从 2008 版本升级到 2010 或 2012 版本时，之前被分支并自动转换为真实分支的文件夹会被。如果您之前对该文件夹具有读取（Read）和提交（CheckIn）权限，您将获得祖父权限（grandfathered in），并赋予合并管理分支（Merge ManageBranch）权限。
 
 ## 代表其他用户提交
 
 在某些场景下，您可能希望使用一个账户提交更改，但记录是由另一个用户进行的更改。这的一个例子是用于生成热补丁的共享工作站。每个用户都登录该机器并使用共享用户名访问服务器。然后，在用户完成修复后，他们进行提交并指定其用户名为更改的实际作者。
 
-要执行此操作，您必须在 TF.exe 的 `checkin` 命令行中指定 `/author` 标记：
+要执行此操作，您必须在 `TF.exe` 的 `checkin` 命令行中指定 `/author` 标记：
 
 ```
 C:\CodeMyProject\ tf check * /author:jsmith
@@ -12088,7 +11245,7 @@ Checking in add: MyFolder
 Changeset #11 checked.
 ```
 
-如果您想查看是谁代表其他用户提交了更改集，遗憾的是，您必须使用命令行工具。要执行此操作，请在 TF.exe 的 `changet` 命令中指定 `/nprompt` 标记：
+如果您想查看是谁代表其他用户提交了更改集，遗憾的是，您必须使用命令行工具。要执行此操作，请在 `TF.exe` 的 `changet` 命令中指定 `/nprompt` 标记：
 
 ```
 C:\CodeMyProject\ tf changet 11 /nprompt
@@ -12101,7 +11258,7 @@ Checked in by: Administrator
 
 项目团队的 `check-policy` 设置存储在版本控制注解（annotation）中。注解不是公共 API 的一部分，在 Team Foundation Server 2010 和 2012 中，它们被属性 API（properties API）所取代。注解类似于属性，它们是附加到版本控制路径上的额外元数据。
 
-由于注解位于每个团队项目的根版本文件夹上，用户至少需要对该文件夹具有读取（Read）权限。如果没有此权限，他们将收到类似于“$/MyProject 不存在或您没有访问它的权限”的错误消息。当用户尝试提交一个他们实际上拥有权限的另一个路径时，这可能会让他们困惑。
+由于注解位于每个团队项目的根版本文件夹上，用户至少需要对该文件夹具有读取（Read）权限。如果没有此权限，他们将收到类似于 `$/MyProject` 不存在或您没有访问它的权限”的错误消息。当用户尝试提交一个他们实际上拥有权限的另一个路径时，这可能会让他们困惑。
 
 ## 分支与权限
 
@@ -12125,22 +11282,22 @@ collection:http://server:8080/tf/recursive
 
 另一个选项是使用 Team Foundation Power Tools。按照以下步骤操作：
 
-- 1. 打开源代码控制资源管理器（Source Control Explorer）。
-- 2. 右键点击要撤销检出的项（或要撤销多个文件的父文件夹）。
-- 3. 选择“在源代码控制状态中查找”（Find in Source Control Status）。
-- 4. 在“查找源代码控制”对话框中，勾选“状态”复选框。
-- 5. 可选：在通配符（Wildcard）文本框中输入值。
-- 6. 可选：在“显示”文本框中输入用户名。
-- 7. 点击查找。这将列出项目。
-- 8. 选择要撤销的项目。
-- 9. 右键点击并选择撤销（Undo）。
-- 10. 在提示“撤销所有更改吗？”时点击“是”。
+1. 打开源代码控制资源管理器（Source Control Explorer）。
+2. 右键点击要撤销检出的项（或要撤销多个文件的父文件夹）。
+3. 选择“在源代码控制状态中查找”（Find in Source Control Status）。
+4. 在“查找源代码控制”对话框中，勾选“状态”复选框。
+5. 可选：在通配符（Wildcard）文本框中输入值。
+6. 可选：在“显示”文本框中输入用户名。
+7. 点击查找。这将列出项目。
+8. 选择要撤销的项目。
+9. 右键点击并选择撤销（Undo）。
+10. 在提示“撤销所有更改吗？”时点击“是”。
 
 ## 销毁（Destroy）
 
 当您删除版本控制中的文件时，这只是“软”删除。文件内容仍然存在，任何具有读取权限的用户都可以检索它。
 
-要永久地删除文件并移除其版本，您必须使用 TF.exe destroy 命令。当文件被销毁时，应用程序日志中会记录该操作。
+要永久地删除文件并移除其版本，您必须使用 `TF.exe destroy` 命令。当文件被销毁时，应用程序日志中会记录该操作。
 
 ## 构建权限
 
@@ -12150,14 +11307,11 @@ collection:http://server:8080/tf/recursive
 
 | 权限名称 | 命令行名称 | 描述 |
 | --- | --- | --- |
-| 永久保留 | RetainIndefinitely | 具有此权限的用户可以标记构建不被任何保留策略自动删除。 |
-| 删除构建 | DeleteBuilds | 具有此权限的用户可以删除完成的构建。 |
-| 队列构建 | QueueBuilds | 具有此权限的用户可以将构建放入队列。 |
-| 编辑构建 | EditBuild | 具有此权限的用户可以创建和修改构建定义。 |
-| 覆盖提交验证 | OverrideCheckInValidation | 具有此权限的用户可以提交不触发系统的更改集。 |
-
-
-
+| 永久保留 | `RetainIndefinitely` | 具有此权限的用户可以标记构建不被任何保留策略自动删除。 |
+| 删除构建 | `DeleteBuilds` | 具有此权限的用户可以删除完成的构建。 |
+| 队列构建 | `QueueBuilds` | 具有此权限的用户可以将构建放入队列。 |
+| 编辑构建 | `EditBuild` | 具有此权限的用户可以创建和修改构建定义。 |
+| 覆盖提交验证 | `OverrideCheckInValidation` | 具有此权限的用户可以提交不触发系统的更改集。 |
 
 # 使用 Active Directory 组
 
@@ -12173,7 +11327,7 @@ collection:http://server:8080/tf/recursive
 
 为了使权限和安全管理变得更容易，您应该避免使用显式用户权限。相反，请识别用户的角色，并为该角色创建一个组。然后对该角色应用权限。
 
-通过这种流程，让其他人获得相同的权限要容易得多。例如，当某人在组织内部发生职位变更或晋升时，该人员可以轻松地添加到“Branch Admins”或“Build Masters”组，以为其新职责提供所需的访问权限。
+通过这种流程，让其他人获得相同的权限要容易得多。例如，当某人在组织内部发生职位变更或晋升时，该人员可以轻松地添加到 `Branch Admins` 或 `Build Masters` 组，以为其新职责提供所需的访问权限。
 
 尽管如此，您仍然想要避免组的泛滥和组的嵌套。如果您想找出某个用户如何访问某个文件，您不希望在五个不同的嵌套组中查找。请保持嵌套浅层。
 
@@ -12191,7 +11345,7 @@ collection:http://server:8080/tf/recursive
 
 # 命令行工具
 
-TFSSecurity.exe 包含在 Visual Studio Team Explorer 的安装中。如果您熟悉命令行，您会发现它是一个非常强大的工具，比在 Visual Studio 中点击菜单和对话框要快得多。
+`TFSSecurity.exe` 包含在 Visual Studio Team Explorer 的安装中。如果您熟悉命令行，您会发现它是一个非常强大的工具，比在 Visual Studio 中点击菜单和对话框要快得多。
 
 该工具最实用的应用可能是 `/imx` 命令。使用此选项，您可以列出系统内任何用户或组的扩展组成员情况。这对于研究用户是如何嵌套在组中的非常有帮助。
 
@@ -12205,14 +11359,14 @@ TFSSecurity.exe /collection:http://server:8080/tfs/Collection /imx n:DOMAIN\user
 
 > 注意：需更多信息，请参阅 http://aka.ms/TFSSecurityTool 中的“使用 TFSSecurity 更改组和权限”。
 
-TFSSecurity.exe 不是唯一的工具。表 22-12 显示了其他包含的命令行工具。
+`TFSSecurity.exe` 不是唯一的工具。表 22-12 显示了其他包含的命令行工具。
 
 ### 表 22-12: 其他命令行工具
 
 | 工具名称 | 更多信息 |
 | --- | --- |
-| TF.exe Permission | http://aka.ms/TFPersion |
-| TFLabConfig.exe Permissions | http://aka.ms/TFLabConfigPermissions |
+| `TF.exe Permission` | http://aka.ms/TFPersion |
+| `TFLabConfig.exe Permissions` | http://aka.ms/TFLabConfigPermissions |
 
 ## 总结
 
@@ -12223,6 +11377,7 @@ TFSSecurity.exe 不是唯一的工具。表 22-12 显示了其他包含的命令
 第 23 章涵盖了所有与监控服务器状况和报告 Team Foundation Server 性能相关的内容。该章将向您介绍最佳实践分析器（Best Practices Analyzer）和 System Center Operations Manager 管理包。它还将涵盖服务器随时间推移收集的一些丰富的活动日志细节。
 
 # 23
+
 ## 监控服务器状况和性能
 
 本章内容包括：
@@ -12262,24 +11417,14 @@ Team Foundation Server 的健康和性能很大程度上取决于底层组件的
 
 - 对象—物理磁盘或逻辑磁盘
 - 计数器—Avg. Disk Sec/Transfer
-
-www.it-ebooks.info
-
-
-
-
-- 实例（Instance）——理想情况下，你应该针对单个磁盘收集此数据。然而，你也可以使用 _Total（总量）来识别通用问题。如果 _Total 较高，则可以进一步收集以隔离受影响的特定磁盘。
-
+- 实例（Instance）——理想情况下，你应该针对单个磁盘收集此数据。然而，你也可以使用 `_Total` 来识别通用问题。如果 `_Total` 较高，则可以进一步收集以隔离受影响的特定磁盘。
 - 收集间隔（Collection Interval）——理想情况下，你应该至少每分钟收集一次（但不要超过 15 秒）。收集运行应持续足够的时间，以表明这是一个持续问题，而不仅仅是瞬时峰值。建议的最小间隔为 15 分钟。
 
 在查看结果时，你应该考虑以下阈值（秒）：
 
 - < 0.030——这是正常范围，没有明显的存储存延迟问题。
-
 - > 0.030 到 0.050——你可能会稍感担心。继续收集并分析数据。尝试将性能问题与这些峰值关联起来。
-
 - > 0.050 到 0.100——你应该表示担心，并带有你的数据和分析向你的存储提供商升级。将峰值与性能疑虑关联起来。
-
 - > 0.100——你应该非常担心，并向你的存储提供商升级。将峰值与性能疑虑关联起来。
 
 通过这些数据和阈值，你应该能够识别存储问题，并与你的服务器管理员或存储提供商合作解决问题。
@@ -12292,23 +11437,29 @@ Team Foundation Server 的大部分应用程序逻辑以存储过程的形式在
 
 ## 动态管理视图 (DMV)
 
-动态管理视图 (DMVs) 返回服务器状态信息，用于监控服务器实例的健康、诊断问题和调整性能。要使用它们，你必须拥有 SQL Server 上的 VIEW STATE 权限，或者是 sysadmins 数据库角色的成员。
+动态管理视图 (DMVs) 返回服务器状态信息，用于监控服务器实例的健康、诊断问题和调整性能。要使用它们，你必须拥有 SQL Server 上的 VIEW STATE 权限，或者是 `sysadmins` 数据库角色的成员。
 
 如果你对 DMVs 还不熟悉，最简单的入门方法是从 Jimmy May 的博客（http://aka.ms/SQLDMALLStars）下载示例脚本。以下是脚本中包含的五个示例：
 
 - 1. 耗能查询（CPU、读取次数、频率等）
-- 2. 等待统计（Wait Stats）
-- 3. 虚拟文件统计（包括虚拟文件延迟的计算）
-- 4. 计划缓存（Plan Cache）
-- 5. 阻塞（实时）
 
-每个查询都有一系列被注释掉的 WHERE 和 ORDER BY 子，可以取消注释以提供不同的信息。
+
+
+## 等待统计（Wait Stats）
+
+## 虚拟文件统计（包括虚拟文件延迟的计算）
+
+## 计划缓存（Plan Cache）
+
+## 阻塞（实时）
+
+每个查询都有一系列被注释掉的 `WHERE` 和 `ORDER BY` 子，可以取消注释以提供不同的信息。
 
 > 注意：有关更多信息和示例，请参阅 http://aka.ms/SQL2012DMV 中的“动态管理视图和函数 (Transact-SQL)”。
 
 ## 当前运行进程
 
-此处检查的查询是识别 SQL Server 内部性能问题最有用的查询。它是 dm_exec_requests、dm_exec_sql_text 和 dm_exec_query_memory_grants DMVs 的组合，用于实时发现问题。这并非特定于 Team Foundation Server，可以在任何 SQL Server 上查看 SQL 正在执行的操作。
+此处检查的查询是识别 SQL Server 内部性能问题最有用的查询。它是 `dm_exec_requests`、`dm_exec_sql_text` 和 `dm_exec_query_memory_grants` DMVs 的组合，用于实时发现问题。这并非特定于 Team Foundation Server，可以在任何 SQL Server 上查看 SQL 正在执行的操作。
 
 所示，该查询将返回有关所有系统进程的有趣细节（在表 23-1 中解释）。它还处理运行中的查询，并将所有运行时间最长的进程排在顶部。
 
@@ -12346,10 +11497,6 @@ ELSE 1
 | Command | 命令 |
 | DBName | 数据库名称 |
 | blockedby | 阻塞此进程的会话 ID |
-
-
-
-
 
 如果一个进程正在使用所有处理器，这意味着它正在充分利用可用的 CPU 硬件。这非常棒。然而，它会降低系统的并发性，并在完成之前阻塞所有其他进程的运行。
 
@@ -12481,10 +11628,6 @@ GROUP BY db_name(database_id)
 ORDER BY 2 DESC
 ```
 
-
-
-
-
 ## 表 23-4: dm_os_buffer_descriptors 的示例输出
 
 | DBNAME | BUFFERPOLMB |
@@ -12510,10 +11653,10 @@ ORDER BY 2 DESC
 
 应用层跟踪谁在什么时候执行了什么命令。它记录了每个请求的信息，如用户名、IP 地址、用户代理、执行时间和执行计数。在 Team Foundation Server 2012 中，命令日志还显示了通过 Web Access 界面执行的活动。
 
-在 2005 和 2008 版本中，这些数据记录在 TfsActivityLogging 数据库中。在 Team Foundation Server 2010 和 2012 中，表被移动到了 Tfs_Configuration 和 Team Foundation Project Collection 数据库中。以下用于记录这些数据的两个表：
+在 2005 和 2008 版本中，这些数据记录在 `TfsActivityLogging` 数据库中。在 Team Foundation Server 2010 和 2012 中，表被移动到了 `Tfs_Configuration` 和 Team Foundation Project Collection 数据库中。以下用于记录这些数据的两个表：
 
-- 1. tbl_Command
-- 2. tbl_Parameter
+- 1. `tbl_Command`
+- 2. `tbl_Parameter`
 
 对于衡量活跃用户进行过滤是非常重要的。否则，如果用户在“连接到 Team Foundation Server”对话框中选择了一个集合，他或她将被包含在该集合中，尽管该用户并没有使用该集合。这会导致数字膨胀。
 
@@ -12538,8 +11681,9 @@ SUM(ExecutionTime AS Float) / 1000000 / SUM(ExecutionCount) DESC
 
 使用命令日志中的信息，你可以帮助确定性能缓慢的投诉是普遍存在的、在客户端的还是针对特定用户的。
 
-> 注意：命令日志中的 ExecutionTime 从服务器接收到请求的第一个字节开始，到服务器开始向客户端传输请求的最后一个包时结束。
-由于由于这一点，它只显示了服务器对请求的视图，客户端在处理请求时可能会花费额外时间。为了获得更准确的客户端视图，请使用客户端跟踪。此行为的示例是 GetMetadata。当 Team Explorer 首次连接到项目时调用此命令。当连接到具有大量项目的集合时，元数据很大（有时达到数百兆）。一旦服务器处理了请求，客户端将花费时间处理响应。处理时间不会反映在命令日志中。
+> 注意：命令日志中的 `ExecutionTime` 从服务器接收到请求的第一个字节开始，到服务器开始向客户端传输请求的最后一个包时结束。
+
+由于由于这一点，它只显示了服务器对请求的视图，客户端在处理请求时可能会花费额外时间。为了获得更准确的客户端视图，请使用客户端跟踪。此行为的示例是 `GetMetadata`。当 Team Explorer 首次连接到项目时调用此命令。当连接到具有大量项目的集合时，元数据很大（有时达到数百兆）。一旦服务器处理了请求，客户端将花费时间处理响应。处理时间不会反映在命令日志中。
 
 ## 活动请求
 
@@ -12571,6 +11715,8 @@ $tfadmin.QueryActiveRequests($null, "False") % { $_ }
 
 Team Foundation Server 未提供调用此 Web 服务的工具。你需要编写或使用其他方法。编写请求最简单（但不一定最好）的方法是使用 Windows PowerShell。以下脚本将动态生成 Web 服务对象，执行请求并输出结果（见图 23-1）。
 
+
+
 ```
 $tfadmin = New-WebServiceProxy -UseDefaultCredential
 -URI http://tfsserver:8080/tfs/TeamFoundation/Administration/v3.0
@@ -12590,17 +11736,28 @@ $tfadmin.QueryActiveRequests($null, "False") % { $_ }
 如果满足了任何这些条件，Windows 事件将记录一个 ID 为 7005 的警告事件。这允许监控系统（如 System Center）向你发出报警。事件文本如下：
 
 详细信息：服务主机 DefaultCollection 的请求已执行 34 秒，超过了 30 秒的警告阈值。
+
 请求详细：请求详情
-Url：/tf/DefaultCollection/VersionControl/v1/repository.asmx
-方法：QueryHistory
-参数：itemSpec = $/ (Full)
-maxCount = 256
-includesFiles = True
-generateDownloadUrls = False
-sortending = False
-用户名：VSAM\Administrator
-用户代理：Team Foundation (TF.exe, 11.0.50727.1, Other, SKU): 9
-唯一 ID：af139e8-3526-a42a-a9e9-16fa08ba5c
+
+Url：`/tf/DefaultCollection/VersionControl/v1/repository.asmx`
+
+方法：`QueryHistory`
+
+参数：`itemSpec = $/ (Full)`
+
+`maxCount = 256`
+
+`includesFiles = True`
+
+`generateDownloadUrls = False`
+
+`sortending = False`
+
+用户名：`VSAM\Administrator`
+
+用户代理：Team Foundation (`TF.exe, 11.0.50727.1, Other, SKU`): 9
+
+唯一 ID：`af139e8-3526-a42a-a9e9-16fa08ba5c`
 
 一旦条件通过，将记录一个 ID 为 7006 的额外事件。这允许监控系统变得智能并自动解决警报。事件文本如下：
 
@@ -12608,9 +11765,9 @@ sortending = False
 
 默认值设计得对大多数环境来说是合理的。但在某些环境中，这些值可以被覆盖。这些阈值可以在以下 Team Foundation 注册表路径路径 `/Configuration/ServiceHost/` 下进行覆盖：
 
-- QueuedRequestElapsedThreshold = 15
-- QueuedRequestThreshold = 10
-- TotalExecutionElapsedThreshold = 60
+- `QueuedRequestElapsedThreshold = 15`
+- `QueuedRequestThreshold = 10`
+- `TotalExecutionElapsedThreshold = 60`
 
 ## 性能计数器
 
@@ -12622,10 +11779,6 @@ sortending = False
 - Current SQL Execution Retries/Sec
 - Current SQL Executions/Sec
 - Current SQL Notification Queries/Sec
-
-
-
-
 
 这些计数器用于诊断 Team Foundation Server 所使用的 SQL Server 环境中的连接问题和瞬态错误。
 
@@ -12663,7 +11816,7 @@ Team Foundation Server 还包含低层级跟踪功能，用于诊断复杂的服
 
 > 注意：有关启用客户端侧跟踪的更多信息，请参阅“Team Foundation Server Client Tracing”博客文章：http://aka.ms/TfsClientTracing。
 
-如果你想以一种方便的方式让你的 Team Foundation Server 客户端向服务器提供 Web 服务，可以在客户端上启用 `PerfTraceListener` 跟踪监听器。这通过在相应的 app.config 文件中添加以下配置来实现：
+如果你想以一种方便的方式让你的 Team Foundation Server 客户端向服务器提供 Web 服务，可以在客户端上启用 `PerfTraceListener` 跟踪监听器。这通过在相应的 `app.config` 文件中添加以下配置来实现：
 
 ```xml
 <configuration>
@@ -12744,11 +11897,9 @@ $jobService.QueryHistory([Guid]('@a4804dcf-4bb6-4109-b61c-e59c2e8a9ff7')) | sele
 
 ## 存储使用
 
-对于像 Team Foundation Server 这样的系统，随着人们发现系统的价值并将其用于更多领域，存储使用的快速增长并不常见。作为管理员，你可能想知道是什么导致数据增长。由于所有 Team Foundation Server 数据都存储在 SQL Server 中，你可以使用 SQL sp_spacedused 过程来识别数据增长的位置。
+对于像 Team Foundation Server 这样的系统，随着人们发现系统的价值并将其用于更多领域，存储使用的快速增长并不常见。作为管理员，你可能想知道是什么导致数据增长。由于所有 Team Foundation Server 数据都存储在 SQL Server 中，你可以使用 SQL `sp_spacedused` 过程来识别数据增长的位置。
 
 以下脚本将列出数据库总大小和最大的 10 个表。你需要对每个集合数据库运行它。
-
-
 
 ```sql
 }
@@ -12782,14 +11933,13 @@ DROP TABLE #t
 | WorkItemsAre | 工作项跟踪的最新版本 | 销毁工作项 |
 | tbl_tmpLobParameter | 正在进行的大检查的临时存储 | 不无 |
 
-> **注意** 在 Team Foundation Server 2012 中，工作项跟踪附件和测试附件的存储已合并到版本控制也使用的单个 tbl_Content 表中。
+> **注意** 在 Team Foundation Server 2012 中，工作项跟踪附件和测试附件的存储已合并到版本控制也使用的单个 `tbl_Content` 表中。
 
 ## 数据仓库
 
 Team Foundation Server 的核心组件之一是数据仓库。通常情况下，人们对数据仓库的性能或操作没有意见。然而，随着服务器规模的扩大，你可能会遇到两类问题：
 
 - 1. **处理时间**——随着可报告字段数量的增加，Analysis Services 需要处理的维度数量也随之增加。这增加了处理立方体的时间，导致数据延迟较高。
-
 - 2. **架构冲突**——在简单情况下，当集合中的两个字段（例如 Priority）名称相同但类型不同（例如字符串与整数）时，会导致架构冲突。此时该项目集合将无法进行数据仓库更新，导致关系仓库和立方体变得过时。
 
 你可以使用“立方体状态”（Cube Status）和“阻塞字段”（Blocked Fields）报告来监控 Team Foundation Server 数据仓库的健康状况和性能。它们显示以下信息：
@@ -12806,6 +11956,8 @@ Team Foundation Server 的核心组件之一是数据仓库。通常情况下，
 一些工具对于监控服务器健康状况和性能非常有用。有些是 Team Foundation Server 特有的，有些则不是。
 
 # 日志性能分析 (PAL) 工具
+
+
 
 日志性能分析 (PAL) 工具知道如何分析计数器日志文件、查找阈值违规情况并生成服务器健康报告。它并非 Team Foundation Server 特有，可以识别 SQL Server 问题。
 
@@ -12829,11 +11981,7 @@ Team Foundation Server 最佳实践分析 (BPA) 是微软支持人员用于诊�
 
 图 23-6：BPA 报告示例
 
-
-
-
-
-## 测试与实验室管理
+# 测试与实验室管理
 
 本章内容：
 
@@ -12858,7 +12006,6 @@ Team Foundation Server 最佳实践分析 (BPA) 是微软支持人员用于诊�
 多年来，人们开发了许多软件测试方法来解决软件中可能发现的各种缺陷。软件测试领域可以分为功能测试、回归测试、可扩展性测试、验收测试、安全测试等领域。但作为 Team Foundation Server 管理员，你通常应该熟悉软件测试的两个大类分类：
 
 - **手动测试**是目前整个软件测试领域采用的最常用的测试类型。手动测试涉及人类的参与，就像最终用户预期的那样，其目的是验证功能并对发现的任何缺陷提交错误报告。这可以通过计划好的测试用例进行，也可以通过新的敏捷技术和工具（如探索性测试）进行。
-
 - **自动化测试**涉及编写和运行软件，这些软件反过来检查你正在测试的软件。自动化测试的明显优势是它们可以快速、频繁运行，且很少或没有人工交互。通常需要投入成本来编写和维护自动化测试。
 
 软件行业——以自动化从银行到汽车组装的一切事而闻名——竟然如此依赖手动测试，这似乎是违反直觉的。但事实是，在早期，当软件项目演进并经历剧烈变动时，手动测试提供了适应快速变化所需的灵活性。然而，在实施早期保持自动化测试的更新可能是代价昂贵的。
@@ -12895,10 +12042,6 @@ Visual Studio 2010 引入了一个新成员——测试管理器（Test Manager�
 
 首先注意到的是（这意料之中），并非 Team Foundation Server 完全负责协调如测试自动化、实验室部署和测试结果收集等活动，尽管它确实得到了其他促进这些任务的服务器和服务的帮助。
 
-
-
-
-
 # 测试架构 | 631
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_668_0.png)
@@ -12908,9 +12051,7 @@ Visual Studio 2010 引入了一个新成员——测试管理器（Test Manager�
 测试架构中剩余的组件如下：
 
 - 测试控制器（test controller）负责协调一个或多个测试代理（test agents）以执行自动化测试。测试控制器还会在运行结束后从测试代理处搜集测试结果。这些数据可以存储在 Team Foundation Server 中，用于报告和诊断。
-
 - 需要系统中心虚拟机管理器（SCVMM）来协调跨越一个或多个物理 Hyper-V 主机的虚拟机（VM）操作（如部署、置备、快照和状态管理）。此外，需要一个 SCVMM 服务器，以便在 Team Foundation Server 的 Lab Management 中配置 SCVMM 虚拟环境。
-
 - SCVMM 库服务器（library server）供 SCVMM 用于存储虚拟机和虚拟机模板（VM templates）。一旦虚拟机或虚拟机模板在虚拟机库中可用，它就可以将其作为运行中的实例部署到物理 Hyper-V 主机上。你将在本章稍后部分学习更多关于虚拟机和虚拟机模板的知识。
 
 > SCVMM 虚拟环境是一个或多个已部署虚拟机的集合。Lab Management 将受管理的环境视为已部署、快照或回滚的单一机器集合。SCVMM 环境可用于模拟真实环境，该环境可能包含 Web 服务器、数据库服务器和带有浏览器的客户端机器。SCVMM 环境部署到物理 Hyper-V 主机上，而这些主机又由 SCVMM 进行管理和监控。SCVMM 代理会自动安装在 Hyper-V 主机上，从而能够物理访问虚拟机主机并与 SCVMM 服务器通信。
@@ -12933,35 +12074,29 @@ Microsoft Test Manager 最初在 Visual Studio 版本中引入。它从零开始
 
 图 24-2: Microsoft Test Manager
 
-> 注意：如果你对 Visual Studio Test Professional 产品与 Microsoft Test Manager 之间的差异感到困，你并不孤单。有关差异的更多细节可见此博客：http://aka.ms/MTMvsTestPro。
+> 注意：如果你对 Visual Studio Test Professional 产品与 Microsoft Test Manager 之间的差异感到困惑，你并不孤单。有关差异的更多细节可见此博客：http://aka.ms/MTMvsTestPro。
 
 本节提供了 Microsoft Test Manager 使用的术语和构物的简单概述，以及你作为 Team Foundation Server 管理员应该注意的一些关键设置。
 
 > 注意：你可以通过《Professional Application Lifecycle Management with Visual Studio 2012》（John Wiley & Sons, 2012）的第六部分（地址为：http://aka.ms/ALM2012Book）以及 MSDN 库（地址为：http://aka.ms/VisualStudioTesting）了解更多关于 Microsoft Test Manager 的信息。
 
-# 测试计划 (Test Plans)
+## 测试计划 (Test Plans)
 
 Microsoft Test Manager 使用测试计划来定义和跟踪特定软件发布中测试的所有内容。测试团队通常会为每个开发迭代或发布版本创建一个测试计划。这样做是为了确保他们正在设计的测试是有效的，并确保开发团队实现的功能按预期方式工作。
 
-# 测试套件 (Test Suites)
+## 测试套件 (Test Suites)
 
 测试套件用于组织你的测试用例。Microsoft Test Manager 中三种类型的测试套件：
 
 - 1. **基于需求的测试套件（Requirements-based test suite）**——这包括任何通过“测试”（Tests）关系链接到需求工作项的测试用例。对于应用程序开发的任何给定迭代，你通常希望从添加包含要实现的所有需求的测试计划开始。
-
 - 2. **基于查询的测试套件（Query-based test suite）**——这允许你指定一个动态工作项查询来选择测试用例。例如，你可能想包含所有优先级为 1 的用例，即使它们是针对在后续迭代中实现的需求的。这有助于确保关键功能在开发进行过程中不会损坏（回归）。
-
 - 3. **静态测试套件（Static test suite）**——这是一个可以手动添加到套件的测试用例列表。静态测试套件还可以作为其他测试套件的容器，为你提供一种分级的测试组织选项。它是唯一可以包含其他测试套件的测试类型，并用于组织测试计划中的测试。
 
-# 测试用例 (Test Cases)
+## 测试用例 (Test Cases)
 
 测试用例用于描述测试人员执行的一系列操作，以验证应用程序是否按预期工作。例如，一个简单的测试用例可能确认用户可以访问网页并创建新用户账户。同样，另一个测试用例可能验证，如果用户尝试使用弱密码创建新账户，应用程序将阻止用户这样做。图 24-3 显示了一个测试用例示例。
 
-测试用例的结构你应该应该很熟悉。测试用例作为工作项存储在 Team Foundation Server 中。它包含了所有核心工作项字段（标题、迭代、区域、分配给等）。测试用例还有一个“步骤”（Steps）选项卡，包含了测试人员在执行该测试用例时应执行的各个测试步骤。测试用例在 Team Foundation Server 中以工作项表示的一个主要优势是，它可以与其他工作项链接（例如前述的与需求的关系）并进行报告。
-
-
-
-
+测试用例的结构你应该很熟悉。测试用例作为工作项存储在 Team Foundation Server 中。它包含了所有核心工作项字段（标题、迭代、区域、分配给等）。测试用例还有一个“步骤”（Steps）选项卡，包含了测试人员在执行该测试用例时应执行的各个测试步骤。测试用例在 Team Foundation Server 中以工作项表示的一个主要优势是，它可以与其他工作项链接（例如前述的与需求的关系）并进行报告。
 
 # Microsoft Test Manager | 635
 
@@ -12975,15 +12110,17 @@ Microsoft Test Manager 使用测试计划来定义和跟踪特定软件发布中
 
 www.it-books.info
 
-# 探索测试
+## 探索测试
 
 敏捷团队执行一种被称为探索测试的新型测试，且通常不会从正式的测试用例开始。Microsoft Test Manager 2012 中提供的新探索测试工具允许你在没有定义测试用例的情况下启动探索测试会话。测试人员能够跟踪自己的操作，并根据实际情况提供注释。
 
 很棒的是，测试人员可以在探索测试过程中创建正式的测试用例，因为测试运行器记录了所执行的操作。此外，如果发现了 Bug，测试人员可以使用这些记录的动作步骤为探索测试人员提交丰富的可操作的 Bug。你将在下一节中了解到更多关于通过测试运行器获取丰富可操作 Bug 的信息。
 
-# 可操作 Bug
+## 可操作 Bug
 
-许多软件项目都会陷入一种常见的场景：测试人员发现并记录了缺陷，但开发者无法复现。这被称为“无法复现（No Repro）”场景，也是格言“在我的机器上是好的”的来源。为了解决这个问题，微软的测试架构能够从环境中每台机器（包括本地模块）的测试运行的丰富数据。这是自动完成，不需要测试人员任何额外工作。当测试人员提交 Bug 时，Microsoft Test Manager 可以自动包含详细信息，例如系统信息（操作系统、服务包级别、总内存、可用内存等）、操作日志、事件日志以及一段显示测试人员作为测试用例所执行操作的视频录制。
+
+
+许多软件项目都会陷入一种常见的场景：测试人员发现并记录了缺陷，但开发者无法复现。这被称为“无法复现（No Repro）”场景，也是格言“在我的机器上是好的”的来源。为了解决这个问题，微软的测试架构能够从环境中每台机器（包括本地模块）的测试运行的丰富数据。这是自动完成，不需要测试人员任何额外工作。当测试人员提交 Bug 时，`Microsoft Test Manager` 可以自动包含详细信息，例如系统信息（操作系统、服务包级别、总内存、可用内存等）、操作日志、事件日志以及一段显示测试人员作为测试用例所执行操作的视频录制。
 
 即使开发者无法在自己的机器上复现，开发者至少也可以获得缺陷存在的证明，以及一组用于寻找问题为何在测试人员环境中产生线索的数据。测试运行期间收集的数据集是由测试设置配置的。
 
@@ -12991,15 +12128,11 @@ www.it-books.info
 
 可以按测试计划配置测试设置，以描述测试人员运行测试时应该收集哪些信息。收集正确的信息集对于开发者分析问题发生的原因来说可能是无价的。
 
-然而，作为 Team Foundation Server 管理员，你也应该意识到测试设置具有占用大量磁盘空间的潜力。图 24-5 显示了 Microsoft Test Manager 中的测试设置配置对话框，以及一个诊断数据适配器列表，这些适配器可以启用并从测试运行中收集各种数据。
+然而，作为 `Team Foundation Server` 管理员，你也应该意识到测试设置具有占用大量磁盘空间的潜力。图 24-5 显示了 `Microsoft Test Manager` 中的测试设置配置对话框，以及一个诊断数据适配器列表，这些适配器可以启用并从测试运行中收集各种数据。
 
 你可以为环境中的每台机器指定运行的诊断数据适配器类型。对于不同的机器角色，某些诊断数据适配器比其他更有意义。例如，在你的数据库服务器上录制视频可能会导致一段非常无聊的视频。
 
-人们往往想从每次测试运行中收集所有数据、所有的数据，以防在发现 Bug 时遗漏任何关键信息。然而，这可能会影响测试运行的
-
-# Microsoft Test Manager | 637
-
-性能，并可能迅速耗尽 Team Foundation 实例上的所有可用磁盘空间。
+人们往往想从每次测试运行中收集所有数据、所有的数据，以防在发现 Bug 时遗漏任何关键信息。然而，这可能会影响测试运行的性能，并可能迅速耗尽 `Team Foundation` 实例上的所有可用磁盘空间。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_674_0.png)
 
@@ -13007,17 +12140,17 @@ www.it-books.info
 
 测试设置和开发负责人共同工作构建能够彻底捕捉正确信息的测试设置是非常重要的。你还可以拥有多个测试设置，例如“完整诊断”和另一个“轻量级诊断”。测试人员可以使用“轻量级诊断”设置运行大部分工作，如果他们遇到 Bug，则可以使用“完整诊断”重新运行，并将额外的细节添加到同一个 Bug 中。
 
-每个测试设置所需的确切磁盘空间将根据测试运行的长度、被测试应用程序的复杂性以及你收集信息环境中的机器数量而异。但总而言之，从资源角度来看，这两个诊断适配器需要特别关注 IntelliTrace 和 Video Recorder。
+每个测试设置所需的确切磁盘空间将根据测试运行的长度、被测试应用程序的复杂性以及你收集信息环境中的机器数量而异。但总而言之，从资源角度来看，这两个诊断适配器需要特别关注 `IntelliTrace` 和 `Video Recorder`。
 
-IntelliTrace 可以提供关于 .NET 应用程序极其详尽的历史调试数据，这可以帮助开发者理解应用程序执行期间发生了什么。
+`IntelliTrace` 可以提供关于 `.NET` 应用程序极其详尽的历史调试数据，这可以帮助开发者理解应用程序执行期间发生了什么。
 
 www-it-ebooks.info
 
-开发者可以使用 Visual Studio 2012 旗舰版分析 IntelliTrace 文件，但运行 Microsoft Test Manager 的测试人员可以在测试执行期间捕捉 IntelliTrace 文件。
+开发者可以使用 `Visual Studio 2012` 旗舰版分析 `IntelliTrace` 文件，但运行 `Microsoft Test Manager` 的测试人员可以在测试执行期间捕捉 `IntelliTrace` 文件。
 
-> 注意 你可以在 http://aka.ms/IntelliTrace 阅读更多关于 IntelliTrace 的信息。
+> 注意 你可以在 http://aka.ms/IntelliTrace 阅读更多关于 `IntelliTrace` 的信息。
 
-如果不勾选，IntelliTrace 文件本身可能会消耗几十或数百兆字节的磁盘空间。好消息是，IntelliTrace 文件的最大可以通过配置特定的数据适配器来限制，并且对于成功的测试运行（测试用例），IntelliTrace 文件将被丢弃。从资源角度来看，这是最需要关注的诊断适配器。
+如果不勾选，`IntelliTrace` 文件本身可能会消耗几十或数百兆字节的磁盘空间。好消息是，`IntelliTrace` 文件的最大可以通过配置特定的数据适配器来限制，并且对于成功的测试运行（测试用例），`IntelliTrace` 文件将被丢弃。从资源角度来看，这是最需要关注的诊断适配器。
 
 视频录制每分钟测试执行也会消耗约一兆字节的磁盘空间。如果启用，视频录制将始终保存，直到测试例失败。这也可以用于审核第三方组织，确保他们正确运行测试用例。它还可以作为应用程序的视频，向利益相关者展示开发进度。
 
@@ -13025,19 +12158,19 @@ www-it-ebooks.info
 
 # 附件清理
 
-如果你在使用诊断数据适配器收集测试运行的丰富信息，最终可能需要清理旧数据以释放磁盘空间。微软创建了附件清理程序来帮助。这是一个命令行工具，你可以根据年龄、大小、附件类型（例如 IntelliTrace 文件或视频）清理附件。
+如果你在使用诊断数据适配器收集测试运行的丰富信息，最终可能需要清理旧数据以释放磁盘空间。微软创建了附件清理程序来帮助。这是一个命令行工具，你可以根据年龄、大小、附件类型（例如 `IntelliTrace` 文件或视频）清理附件。
 
-Team Foundation Server 管理员可以与开发和测试团队合作，确保适当的留存，并创建一个计划任务定期运行附件清理程序。
+`Team Foundation Server` 管理员可以与开发和测试团队合作，确保适当的留存，并创建一个计划任务定期运行附件清理程序。
 
-小心，如果你删除了测试，那么链接到这些附件的任何 Bug 将无法访问原始附件。例如，如果你决定删除 180 天前的 IntelliTrace 和视频录制，那么在被清理后打开的 Bug 将无法访问这些附件。
+小心，如果你删除了测试，那么链接到这些附件的任何 Bug 将无法访问原始附件。例如，如果你决定删除 180 天前的 `IntelliTrace` 和视频录制，那么在被清理后打开的 Bug 将无法访问这些附件。
 
-> 注意 附件清理程序现在包含在最新版本的 Team Foundation Server Power Tools 中，请访问 http://aka.ms/TFS2012PowerTools。
+> 注意 附件清理程序现在包含在最新版本的 `Team Foundation Server Power Tools` 中，请访问 http://aka.ms/TFS2012PowerTools。
 
 # 将构建分配到测试计划
 
-任何测试团队工作中的另一个挑战性方面是确定他们应该测试哪些构建。开发团队在周内可能会产生多个构建，甚至在某一天内产生多个构建，特别是当它采用持续集成时。要求团队安装并测试每个构建通常是不现实的。Microsoft Test Manager 可以帮助这一过程。
+任何测试团队工作中的另一个挑战性方面是确定他们应该测试哪些构建。开发团队在周内可能会产生多个构建，甚至在某一天内产生多个构建，特别是当它采用持续集成时。要求团队安装并测试每个构建通常是不现实的。`Microsoft Test Manager` 可以帮助这一过程。
 
-由于 Test Foundation Server 已经包含了关于构建的信息以及包含在每个构建中的工作（修复了哪些 Bug 或实现了哪些需求），这些信息可以供测试团队用于确定哪些构建值得测试。图 24-6 显示了 Microsoft Test Manager 中的分配构建对话框。
+由于 `Test Foundation Server` 已经包含了关于构建的信息以及包含在每个构建中的工作（修复了哪些 Bug 或实现了哪些需求），这些信息可以供测试团队用于确定哪些构建值得测试。图 24-6 显示了 `Microsoft Test Manager` 中的分配构建对话框。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_676_0.png)
 
@@ -13047,23 +12180,19 @@ Team Foundation Server 管理员可以与开发和测试团队合作，确保适
 
 当前使用的构建可以与新构建进行比较，以确定给定构建发生了哪些变化，并帮助判断新构建是否值得采用。例如，一个 Bug 被开发者修复，但必须由测试人员验证。或者，可能某个需求已经完成编码并准备好进行测试。
 
-
-
-
-
 > 注意：在配置测试计划时，你应该考虑构建的节奏（cadence）。例如，你可能不希望每一个持续集成构建都出现在可用构建列表中。相反，你可能考虑创建一个专用构建来定义每日构建（nightly builds）或滚动构建（rolling builds），或者将该代码定义为测试计划的过滤器。如果测试团队在下一次计划构建之前需要一个构建，也可以手动为构建定义排队一个新构建。在可预测的节奏上拥有经过合并的构建数量也将使你的构建报告更易于阅读。
 
 # 分析受影响的测试
 
-测试影响分析（Test impact analysis）是一项强大的新功能，可以帮助提高测试人员的效率，允许根据代码更改快速识别需要重新运行的测试。测试分析可以在测试执行期间后台运行。此功能会记录每次执行了哪些代码方法。这些可以是自动化测试（例如，单元测试、负载测试或代码化 UI 测试），以及手动测试，但你分析的代码必须是托管代码（即基于 .NET Framework 2.0 及以上版本）。
+测试影响分析（Test impact analysis）是一项强大的新功能，可以帮助提高测试人员的效率，允许根据代码更改快速识别需要重新运行的测试。测试分析可以在测试执行期间后台运行。此功能会记录每次执行了哪些代码方法。这些可以是自动化测试（例如，单元测试、负载测试或代码化 UI 测试），以及手动测试，但你分析的代码必须是托管代码（即基于 `.NET Framework 2.0` 及以上版本）。
 
-每当你选择新构建时，Microsoft Test Manager 会提供一份受影响的测试列表。为了支持此功能，你必须在运行期间使用测试诊断数据适配器（按你的测试设置配置），并且你的构建定义将按照书中第四部分的描述配置并启用测试影响分析。
+每当你选择新构建时，`Microsoft Test Manager` 会提供一份受影响的测试列表。为了支持此功能，你必须在运行期间使用测试诊断数据适配器（按你的测试设置配置），并且你的构建定义将按照书中第四部分的描述配置并启用测试影响分析。
 
 # 构建留存
 
-在本书的第四部分中，你学习了如何定义构建定义、触发构建、删除构建以及设置构建留存策略。大多数情况下，意外删除构建（由于激进的留存策略无意中丢失构建）不会给软件开发团队带来问题，因为你可以根据旧的更改集（changeset）重新创建构建。但如果你在使用 Microsoft Test Manager 进行手动测试，不当的构建删除会导致你丢失针对该构建运行的测试。
+在本书的第四部分中，你学习了如何定义构建定义、触发构建、删除构建以及设置构建留存策略。大多数情况下，意外删除构建（由于激进的留存策略无意中丢失构建）不会给软件开发团队带来问题，因为你可以根据旧的更改集（changeset）重新创建构建。但如果你在使用 `Microsoft Test Manager` 进行手动测试，不当的构建删除会导致你丢失针对该构建运行的测试。
 
-当测试存储在 Team Foundation Server 中时，它们将与与其运行的关联构建一起存储。这可能包括伪产物，例如视频录制、IntelliTrace 文件或操作记录（这些记录可用于部分或全自动执行）。如果开发人员需要任何信息来诊断问题，而该已与测试结果一起被删除了，那么他可能会丢失帮助复现和调试问题的宝贵信息。同样，如果测试人员使用操作录制来快进测试执行（Microsoft Test Manager 的一项功能），删除测试将破坏快进所需的操作记录。相同的操作记录也可以用于完全自动化的代码化 UI 回归测试。
+当测试存储在 `Team Foundation Server` 中时，它们将与与其运行的关联构建一起存储。这可能包括伪产物，例如视频录制、`IntelliTrace` 文件或操作记录（这些记录可用于部分或全自动执行）。如果开发人员需要任何信息来诊断问题，而该已与测试结果一起被删除了，那么他可能会丢失帮助复现和调试问题的宝贵信息。同样，如果测试人员使用操作录制来快进测试执行（`Microsoft Test Manager` 的一项功能），删除测试将破坏快进所需的操作记录。相同的操作记录也可以用于完全自动化的代码化 UI 回归测试。
 
 为了避免这种情况，在删除可能被测试团队使用的构建时要非常小心。这是遵循为你将测试的构建所描述的构建节奏的另一个良好理由。
 
@@ -13073,15 +12202,15 @@ Team Foundation Server 管理员可以与开发和测试团队合作，确保适
 
 # 自定义工作项类型
 
-你已经看到 Microsoft Test Manager 如何使用需求、测试用例、共享步骤和缺陷，所有这些内容都作为工作项存储在 Team Foundation Server 中。但如果你想自定义你的过程模板，或使用第三方过程模板，Microsoft Test Manager 如何知道哪个工作项等同于“需求”或“缺陷”等？答案是使用用例来定义 Team Foundation Server 中你的每个工作项类型的规则。
+你已经看到 `Microsoft Test Manager` 如何使用需求、测试用例、共享步骤和缺陷，所有这些内容都作为工作项存储在 `Team Foundation Server` 中。但如果你想自定义你的过程模板，或使用第三方过程模板，`Microsoft Test Manager` 如何知道哪个工作项等同于“需求”或“缺陷”等？答案是使用用例来定义 `Team Foundation Server` 中你的每个工作项类型的规则。
 
 > 注意：关于使用类别定义工作项角色的更多信息，请参阅 http://tinyurl.com/MTWITCategories。关于自定义过程模板的更多信息请参阅第 12 章。
 
 # 测试自动化
 
-本章主要处理通过 Visual Studio 和 Microsoft Test Manager 进行的手动测试，也将提供自动化测试。正如之前提到的，自动化测试是有益的，因为它们具有快速且重复运行的能力，无需人工干预，从而揭示回归问题，这些问题表明开发团队（例如）他们对代码所做的最后更改破坏了昨晚构建中的正常功能。
+本章主要处理通过 `Visual Studio` 和 `Microsoft Test Manager` 进行的手动测试，也将提供自动化测试。正如之前提到的，自动化测试是有益的，因为它们具有快速且重复运行的能力，无需人工干预，从而揭示回归问题，这些问题表明开发团队（例如）他们对代码所做的最后更改破坏了昨晚构建中的正常功能。
 
-表 24-1 显示了 Visual Studio 2012 支持的几种自动化测试类型。
+表 24-1 显示了 `Visual Studio 2012` 支持的几种自动化测试类型。
 
 表 24-1：自动化测试类型
 
@@ -13090,58 +12219,57 @@ Team Foundation Server 管理员可以与开发和测试团队合作，确保适
 | 代码化 UI (Coded UI) | 此测试提供了编写测试的能力，能够自动与应用程序的用户界面交互并验证某些执行结果，并在遇到错误时提交缺陷。代码 UI 测试通常由之前手动运行的测试用例演变而来，前提是应用程序的用户界面（UI）已基本稳定。你甚至可以使用手动测试的操作录制作为创建新的代码化 UI 测试的基础。 |
 | 单元 (Unit) | 这些低级测试验证目标应用程序代码的功能是否符合开发人员的预期。 |
 | Web 性能 (Web performance) | 此测试主要用于测试 Web 应用程序的性能。例如，测试用户在网站上搜索项目时产生的 Web 请求。此 Web 测试可以是定期运行的性能测试之一，以验证你的网站性能符合预期。 |
-| 负载 (Load) | 这些测试验证目标应用程序能够根据需要执行并扩展。通过执行各种测试对目标系统施压力。Visual Studio 会记录详细信息并自动生成报告。负载测试经常用于 Web 测试集。然而，非 Web 应用程序也可以通过定义单元测试或数据库测试进行测试。 |
+| 负载 (Load) | 这些测试验证目标应用程序能够根据需要执行并扩展。通过执行各种测试对目标系统施压力。`Visual Studio` 会记录详细信息并自动生成报告。负载测试经常用于 Web 测试集。然而，非 Web 应用程序也可以通过定义单元测试或数据库测试进行测试。 |
 | 通用 (Generic) | 这些测试允许调用外部测试系统，例如利用第三方测试包的现有测试套件。这些测试的结果可以自动重复。范围从简单的控制台应用程序结果到外部测试包导出的 XML 文档。 |
 | 排序 (Ordered) | 本质上包含其他测试，建立了测试执行的特定顺序，并允许同一个测试被包含多次。 |
 
-每种测试类型在《Professional Application Lifecycle Management with Visual Studio 2012》（John Wiley & Sons, 2012）的第五和第六部分中都有详细描述。作为 Team Foundation Server 管理员，你熟悉作为构建定义一部分运行的自动化测试，这在本书的第四部分已有介绍。你还需要熟悉本章介绍的测试控制器和代理（“测试架构”章节）。配置测试代理时，某些测试类型（如代码 UI 测试）需要你将测试代理配置为交互进程，以便其访问桌面。
+每种测试类型在《Professional Application Lifecycle Management with Visual Studio 2012》（John Wiley & Sons, 2012）的第五和第六部分中都有详细描述。作为 `Team Foundation Server` 管理员，你熟悉作为构建定义一部分运行的自动化测试，这在本书的第四部分已有介绍。你还需要熟悉本章介绍的测试控制器和代理（“测试架构”章节）。配置测试代理时，某些测试类型（如代码 UI 测试）需要你将测试代理配置为交互进程，以便其访问桌面。
 
 自动化测试还可以作为自动化测试运行或 Lab Management 环境中构建-部署-测试工作流的一部分。你将在下一节中学习 Lab Management。
 
-如果你想通过 Microsoft Test Manager 或在 Lab Management 环境运行自动化测试，你需要确保代表这些自动化测试的测试用例项知道哪个测试是对应的自动化。将自动化与测试用例关联是关键步骤，你在此获取更多信息：http://aka.ms/TestCaseAssociatedAutomation。
-
-
-
-
+如果你想通过 `Microsoft Test Manager` 或在 Lab Management 环境运行自动化测试，你需要确保代表这些自动化测试的测试用例项知道哪个测试是对应的自动化。将自动化与测试用例关联是关键步骤，你在此获取更多信息：http://aka.ms/TestCaseAssociatedAutomation。
 
 > 注意：如果您想运行大量测试（例如单元测试），并希望自动化创建和更新与大量测试相关的自动化过程，可以使用 `tcm.exe testcase import` 命令行实用程序。首次运行此命令将创建测试，并像您的单元测试一样自动关联自动化。后续运行此命令行实用程序将更新现有的测试用例，并根据发现的任何新测试创建新的测试用例。有关此功能的更多信息，请参阅此处：http://aka.ms/ImportTestCasesFromTestAssembly。
 
-## Visual Studio 实验室管理 (VISUAL STUDIO LAB MANAGEMENT)
+## Visual Studio 实验室管理
 
-Visual Studio Lab Management 是 Team Foundation Server 的一项强大功能，它允许您编排物理和虚拟实验室测试，使开发人员和测试人员能够自助所需的环境、构建-部署-测试工作流，并增强开发人员与测试人员之间的协作。本节概述了启用实验室管理所需的组件及其相关功能。
+`Visual Studio Lab Management` 是 `Team Foundation Server` 的一项强大功能，它允许您编排物理和虚拟实验室测试，使开发人员和测试人员能够自助所需的环境、构建-部署-测试工作流，并增强开发人员与测试人员之间的协作。本节概述了启用实验室管理所需的组件及其相关功能。
 
 本节还为您在计划采用实验室管理提供了一个起点，涵盖了维护测试环境的考虑因素以及故障排除技巧。本节中提供了多个 URL 以及指向支持文档的链接，所有内容都更深入地探讨了这些主题。
 
-## 配置实验室管理的挑战
+### 配置实验室管理的挑战
 
-必须预先说明，Visual Studio Lab Management 的虚拟实验室方面（特别是首次上手时）有时可能会让人不知所措和沮丧。虽然实验室管理技术能够为您承担许多繁重工作，但总有一些领域您必须根据自己的环境进行自定义，以适应您的个人流程并满足现有 IT 基础设施的要求。请坚持下去，因为实验室管理的收益通常远大于初始投资。您可以在 http://aka.ms/LabManagementStories 阅读有关一些采用实验室管理的团队及其结果。
+必须预先说明，`Visual Studio Lab Management` 的虚拟实验室方面（特别是首次上手时）有时可能会让人不知所措和沮丧。虽然实验室管理技术能够为您承担许多繁重工作，但总有一些领域您必须根据自己的环境进行自定义，以适应您的个人流程并满足现有 IT 基础设施的要求。请坚持下去，因为实验室管理的收益通常远大于初始投资。您可以在 http://aka.ms/LabManagementStories 阅读有关一些采用实验室管理的团队及其结果。
 
 配置实验室管理还需要开发、构建工程、测试和 IT 等多个学科的混合知识。因此，请准备好沉浸在文档中，然后买一些甜圈，组建一个具有相应专业水平的虚拟团队。
 
-## Team Foundation Server 2012 实验室管理的新特性
+### Team Foundation Server 2012 实验室管理的新特性
 
-Team Foundation Server 2012 为实验室管理引入了多项改进。
+`Team Foundation Server 2012` 为实验室管理引入了多项改进。
+
 本节将从帮助您熟悉新特性开始。
 
-### 标准环境 (Standard Environments)
+#### 标准环境
 
-引入了标准环境以取代 Team Foundation Server 2010 中存在的“物理环境”概念。与 SCVM 环境相比，标准环境允许您在 Visual Studio、Team Foundation Server 和 Microsoft Test Manager 中将任何机器（无论是虚拟还是物理的）作为环境使用。您还可以利用标准环境进行手动测试和收集数据。
+引入了标准环境以取代 `Team Foundation Server 2010` 中存在的“物理环境”概念。与 SCVM 环境相比，标准环境允许您在 `Visual Studio`、`Team Foundation Server` 和 `Microsoft Test Manager` 中将任何机器（无论是虚拟还是物理的）作为环境使用。您还可以利用标准环境进行手动测试和收集数据。
 
-标准环境确实存在某些缺点——因为它们不受 SCVM 管理，所以您无法使用 Microsoft Test Manager 置备机器并回滚/快照，也无法在标准环境中启动和停止性能操作。
+标准环境确实存在某些缺点——因为它们不受 SCVM 管理，所以您无法使用 `Microsoft Test Manager` 置备机器并回滚/快照，也无法在标准环境中启动和停止性能操作。
 
 然而，在您当前的环境之上创建标准环境是立即开始实验室管理的最快方法。您只需要在第一个标准环境之前设置一个测试控制器（test controller）即可就绪。对于那些希望立即从实验室管理中获益的人来说，这是一个很好的第一步。可以通过访问 http://aka.ms/CreatingStandardEnvironments 了解更多关于创建标准环境的信息。
 
-### 系统中心虚拟机管理器 2012 (System Center Virtual Machine Manager 2012)
+#### 系统中心虚拟机管理器 2012
 
-除了对 System Center Virtual Machine Manager 2008 R2 的支持外，Team Foundation Server 2012 现在引入了对最新版本 SCVM —— System Center Virtual Machine Manager 2012 的支持。SCVM 2012 包含了一些超出本书书涵盖范围的改进，但实验室管理现在将支持集群式主机组、环境中的高可用虚拟机以及新的 .VHDXs 硬盘格式。
+除了对 `System Center Virtual Machine Manager 2008 R2` 的支持外，`Team Foundation Server 2012` 现在引入了对最新版本 SCVM —— `System Center Virtual Machine Manager 2012` 的支持。SCVM 2012 包含了一些超出本书书涵盖范围的改进，但实验室管理现在将支持集群式主机组、环境中的高可用虚拟机以及新的 `.VHDXs` 硬盘格式。
 
-> 注意：在编写本文时，System Center Virtual Machine Manager 2012 的初始版本尚不支持 Windows Server 2012 物理主机或以 Windows 8 或 Windows Server 2012 为操作系统的客端虚拟机。SCVM 2012 的 Service Pack 1 将引入此类支持，届时 Team Foundation Server 2012 中的实验室管理将支持 Windows 8 和 Windows Server 2012。Team Foundation Server 2012 可能需要更新，因此请确保在发布新更新时保持服务器已更新。
+> 注意：在编写本文时，`System Center Virtual Machine Manager 2012` 的初始版本尚不支持 Windows Server 2012 物理主机或以 Windows 8 或 Windows Server 2012 为操作系统的客端虚拟机。SCVM 2012 的 Service Pack 1 将引入此类支持，届时 `Team Foundation Server 2012` 中的实验室管理将支持 Windows 8 和 Windows Server 2012。`Team Foundation Server 2012` 可能需要更新，因此请确保在发布新更新时保持服务器已更新。
 
-### 代理合并 (Consolidation of Agents)
+#### 代理合并
 
-Visual Studio 2012 和 Team Foundation Server 2012 所所的简化之一是只需要一个代理：即测试代理（test agent）。在之前的版本中，实验室管理需要三个代理：构建代理、测试代理和实验室代理。以前代理的所有功能现在都已合并到单个代理安装包中。
+`Visual Studio 2012` 和 `Team Foundation Server 2012` 所所的简化之一是只需要一个代理：即测试代理（test agent）。在之前的版本中，实验室管理需要三个代理：构建代理、测试代理和实验室代理。以前代理的所有功能现在都已合并到单个代理安装包中。
 
-### 代理的自动安装 (Auto-Installation of Agents)
+#### 代理的自动安装
+
+
 
 Team Foundation Server 2012 实验室管理引入的另一项改进是，您不再需要担心在组成环境的单独机器上安装和配置测试代理。每当您创建新的标准环境或 SCMM 环境时，实验室管理将自动为您处理安装和配置。当代理发布新更新时，实验室管理也将为您处理释放并安装新版本的代理。这可以大大减少使用实验室管理所需的维护工作。对于代理的自动更新，当 Visual Studio 发布每个新的周期性更新时，您需要确保您的测试控制器（s）已更新。
 
@@ -13153,7 +12281,7 @@ Team Foundation Server 2012 实验室管理引入的另一项改进是，您不�
 
 在本章的较些部分（“测试架构”部分），您学习了构成使用标准环境和 SCMM 虚拟环境测试环境的组件。充分理解这些组件及其如何相互集成对于配置和管理实验室管理至关重要。
 
-当您准备好为您的 Team Foundation 服务器投放 SCMM 虚拟机环境时，应该从 http://ms/ConfiguringLabManagement 的 MSDN 文档开始。该帮助提供了首次配置环境的逐步说明。在开始之前请阅读文档，并做好花费几个小时的准备。
+当您准备好为您的 Team Foundation 服务器投放 SCMM 虚拟机环境时，应该从 `http://ms/ConfiguringLabManagement` 的 MSDN 文档开始。该帮助提供了首次配置环境的逐步说明。在开始之前请阅读文档，并做好花费几个小时的准备。
 
 完成后，您将为 Team Foundation Server 添加实验室管理功能，并配置了虚拟机库共享（VM library share）和一个或多个虚拟机主机（VM hosts）。然后您就可以开始准备虚拟机、定义虚拟环境并配置支持构建-部署-测试工作流的定义。
 
@@ -13163,13 +12291,9 @@ Team Foundation Server 2012 实验室管理引入的另一项改进是，您不�
 
 除非是组织 IT 部门的系统管理员，否则您可能需要启用某些端口和协议以支持您的测试架构。如果您的解决方案跨越多个网络（例如您的测试基础设施与 Team Foundation Server 实例分离），这一点将尤为重要。
 
-
-
-
-
 # 容量规划
 
-> 注意：支持本章中描述的测试架构所需的端口和协议的详细说明，请访问 http://aka.ms/TFPSports。
+> 注意：支持本章中描述的测试架构所需的端口和协议的详细说明，请访问 `http://aka.ms/TFPSports`。
 
 许多因素会影响您的团队使用实验室管理（Lab Management）功能的硬件需求。这些因素包括以下变量：
 
@@ -13187,15 +12311,15 @@ Team Foundation Server 2012 实验室管理引入的另一项改进是，您不�
 - 我应该购买什么样的服务器？
 - 我需要多少存储容量？
 
-> 注意：实验室管理团队已编写了指南来帮助您回答这些问题。您可以在 http://aka.ms/LabManagementCapacityPlanning 访问这些指南。Visual Studio ALM Rangers 在在 Codeplex 上的实验室管理指南中也包含了一份容量规划工作簿：http://aka.ms/ALMRangersLabManagementGuidance。
+> 注意：实验室管理团队已编写了指南来帮助您回答这些问题。您可以在 `http://aka.ms/LabManagementCapacityPlanning` 访问这些指南。Visual Studio ALM Rangers 在在 Codeplex 上的实验室管理指南中也包含了一份容量规划工作簿：`http://aka.ms/ALMRangersLabManagementGuidance`。
 
 # 管理主机组和库共享
 
-任何实验室管理部署的基础设施将由一个 SCVMM 服务器、一个或多个库共享（library shares）以及一个或多个运行 Hyper-V 的物理主机组成（这些主机与其他主机组织成主机组）。SCVMM 协调虚拟机从库共享到 Hyper-V 主机的部署，利用主机组内 Hyper-V 主机上的可用资源来决定虚拟机应该部署到哪台主机服务器。
+任何实验室管理部署的基础设施将由一个 `SCVMM` 服务器、一个或多个库共享（library shares）以及一个或多个运行 `Hyper-V` 的物理主机组成（这些主机与其他主机组织成主机组）。`SCVMM` 协调虚拟机从库共享到 `Hyper-V` 主机的部署，利用主机组内 `Hyper-V` 主机上的可用资源来决定虚拟机应该部署到哪台主机服务器。
 
 您可以使用几种技术来优化实验室管理部署的性能。例如，确保您的库共享与虚拟机主机位于同一个网络交换机上，可以大幅减少将虚拟机部署到主机的时间。另一种技术是允许库共享与虚拟机主机之间进行非加密文件传输。
 
-> 注意：实验室管理团队已编写了指南，帮助您理解 SCVMM 主机组和库与 Team Foundation Server 实验室管理功能的交互。这些指南还提供了优化主机组和库的最佳实践。您可以在 http://aka.ms/LabManagementHostAndLibraries 找到指南。
+> 注意：实验室管理团队已编写了指南，帮助您理解 `SCVMM` 主机组和库与 Team Foundation Server 实验室管理功能的交互。这些指南还提供了优化主机组和库的最佳实践。您可以在 `http://aka.ms/LabManagementHostAndLibraries` 找到指南。
 
 # 创建虚拟机和虚拟机模板
 
@@ -13205,19 +12329,19 @@ Team Foundation Server 2012 实验室管理引入的另一项改进是，您不�
 
 您可能好奇虚拟机和虚拟机模板之间的区别是什么，以及在何时应该使用每种。
 
-可以通过启动一个运行中的虚拟机、将其关闭、保存到 SCVMM 库中，并向 SCVMM 服务器注册，从而将虚拟机存储在 SCVMM 库中。当它后从库部署到虚拟机主机时，它将具有与最初保存到库时相同的机器名称和其他配置属性。这种方法显而易见的缺点是，如果多次部署此虚拟机，可能会在您的实验室管理网络上遇到机器名称冲突。此问题的解决方案是使用虚拟机模板。
+可以通过启动一个运行中的虚拟机、将其关闭、保存到 `SCVMM` 库中，并向 `SCVMM` 服务器注册，从而将虚拟机存储在 `SCVMM` 库中。当它后从库部署到虚拟机主机时，它将具有与最初保存到库时相同的机器名称和其他配置属性。这种方法显而易见的缺点是，如果多次部署此虚拟机，可能会在您的实验室管理网络上遇到机器名称冲突。此问题的解决方案是使用虚拟机模板。
 
-虚拟机模板经过了 sysprep 步骤，本质上删除了机器名称、域成员关系和其他标识属性。当虚拟机模板从库部署到虚拟机主机时，您可以指定其机器名称（或使用随机选择的 GUID）、域成员关系等。这可以保护您免受名称冲突的影响，甚至允许您在给定的虚拟环境中多次使用同一个虚拟机模板。
+虚拟机模板经过了 `sysprep` 步骤，本质上删除了机器名称、域成员关系和其他标识属性。当虚拟机模板从库部署到虚拟机主机时，您可以指定其机器名称（或使用随机选择的 GUID）、域成员关系等。这可以保护您免受名称冲突的影响，甚至允许您在给定的虚拟环境中多次使用同一个虚拟机模板。
 
-通常情况下，当您的测试环境需要不支持 sysprep 的软件时，您将使用虚拟机模板。例如，SQL Server 2008 不支持 sysprep，但 SQL Server 2012 提供了这种支持。如果您被迫使用虚拟机，请确保在实验室管理中使用网络隔离来创建虚拟环境。这不能防止虚拟环境内部的名称冲突（如果您在虚拟环境中两个同名的虚拟机，您将遇到问题），但它将在不同的 SCVMM 环境之间提供隔离。
+通常情况下，当您的测试环境需要不支持 `sysprep` 的软件时，您将使用虚拟机模板。例如，`SQL Server 2008` 不支持 `sysprep`，但 `SQL Server 2012` 提供了这种支持。如果您被迫使用虚拟机，请确保在实验室管理中使用网络隔离来创建虚拟环境。这不能防止虚拟环境内部的名称冲突（如果您在虚拟环境中两个同名的虚拟机，您将遇到问题），但它将在不同的 `SCVMM` 环境之间提供隔离。
 
-MSDN 上维护着一个非常好的详细教程，介绍了如何为实验室管理创建虚拟机模板并让您的开发者和测试人员在其环境中可用，地址如下：http://aka.ms/CreatingVirtualMachineTemplates。
+`MSDN` 上维护着一个非常好的详细教程，介绍了如何为实验室管理创建虚拟机模板并让您的开发者和测试人员在其环境中可用，地址如下：`http://aka.ms/CreatingVirtualMachineTemplates`。
 
 # 使用虚拟环境
 
-在向 SCMM 填充了虚拟机和或虚拟机模板后，您可以使用 Test Manager 定义一个 SCMM 虚拟环境。一个 SCMM 环境由一个或多个虚拟机或虚拟机模板组成，您可以在给定的 SCMM 环境中使用两次同一个虚拟机模板（这将对虚拟机模板自定义两次，从同一个模板创建两个运行的虚拟机实例）。定义 SCMM 环境后，您就可以将它们部署到 SCMM 主机。
+在向 `SCMM` 填充了虚拟机和或虚拟机模板后，您可以使用 `Test Manager` 定义一个 `SCMM` 虚拟环境。一个 `SCMM` 环境由一个或多个虚拟机或虚拟机模板组成，您可以在给定的 `SCMM` 环境中使用两次同一个虚拟机模板（这将对虚拟机模板自定义两次，从同一个模板创建两个运行的虚拟机实例）。定义 `SCMM` 环境后，您就可以将它们部署到 `SCMM` 主机。
 
-> 注意：有关创建实验室环境的更多信息，请参见 http://aka.ms/CreatingLabEnvironments。
+> 注意：有关创建实验室环境的更多信息，请参见 `http://aka.ms/CreatingLabEnvironments`。
 
 # 确定虚拟机内存
 
@@ -13225,20 +12349,19 @@ MSDN 上维护着一个非常好的详细教程，介绍了如何为实验室管
 
 将每个虚拟环境中的虚拟机数量乘以需要支持的并发虚拟环境数量，您可能会发现，每台虚拟机减少几百兆字节的内存就能为您的环境节省大量资源。因此，在不牺牲测试工作性能或准确性的情况下，了解测试环境中虚拟机的最低内存要求可能是非常重要的。
 
-如果您的机器基于 Windows 7 SP1、Windows Server 2008 R2 SP1、Windows 8 和 Windows Server 2012，请务必利用名为“动态内存”（dynamic memory）的新 Hyper-V 功能，它允许您在虚拟实验室中支持更多虚拟机。动态内存允许您指定虚拟机的最小和最大内存，并根据需要为虚拟机提供更多内存而不是保持静态。它可以极大提高您的主机的虚拟机密度。
+如果您的机器基于 `Windows 7 SP1`、`Windows Server 2008 R2 SP1`、`Windows 8` 和 `Windows Server 2012`，请务必利用名为“动态内存”（`dynamic memory`）的新 `Hyper-V` 功能，它允许您在虚拟实验室中支持更多虚拟机。`dynamic memory` 允许您指定虚拟机的最小和最大内存，并根据需要为虚拟机提供更多内存而不是保持静态。它可以极大提高您的主机的虚拟机密度。
 
 # 定义构建-部署-测试工作流
 
 尽管您选择使用实验室管理管理虚拟机进行手动测试，但当您部署以利用自动化构建软件、部署到环境并在该环境中运行测试的支持时，实验室管理的真正威力会被释放。这被称为构建-部署-测试工作流。
 
-通过考虑以下假设场景来想象此工作流的益处。您开发的软件包含由数据库驱动的网站，需要运行浏览器的人访问。您的 Web 应用程序需要兼容 IIS 7 和 IIS 8，并且数据库同时支持 SQL Server 和 Oracle。
+通过考虑以下假设场景来想象此工作流的益处。您开发的软件包含由数据库驱动的网站，需要运行浏览器的人访问。您的 Web 应用程序需要兼容 `IIS 7` 和 `IIS 8`，并且数据库同时支持 `SQL Server` 和 `Oracle`。
 
 仅仅为了支持这些配置而部署几十台机器就是非常耗时的。在机器准备好后，您部署软件，然后运行测试。现在，为了支持开发团队每天的更改，每晚都要这样操作。
 
 当然，某些组织已经投入了大量脚本来使此工作流的部分或全部自动化，但这样做的成本可能很高。开发和测试团队不应该是维护此类基础设施的部门——他们应该花时间构建和测试优秀的软件。
 
-一旦您安装并配置了实验室管理基础设施，您可以使用 Team Build 轻松地创建一个新定义，允许您构建构建-部署-测试工作流。您可以创建多个定义来支持多个环境（例如，您可能会创建一个测试 SQL Server 和 IIS 7 的工作流，另一个测试 Oracle 数据库和 IIS 8 的工作流）。图 24-7 显示了一个典型的
-
+一旦您安装并配置了实验室管理基础设施，您可以使用 `Team Build` 轻松地创建一个新定义，允许您构建构建-部署-测试工作流。您可以创建多个定义来支持多个环境（例如，您可能会创建一个测试 `SQL Server` 和 `IIS 7` 的工作流，另一个测试 `Oracle` 数据库和 `IIS 8` 的工作流）。图 24-7 显示了一个典型的
 
 由 Lab Management 启用的构建-部署-测试工作流。此工作流可以根据您的特定需求进行自定义和扩展。
 
@@ -13274,11 +12397,11 @@ Test Controller
 
 **图 24-7**：构建-部署-测试工作流
 
-> 注意：要获取使用 Lab Management 配置构建-部署-测试工作流的逐步操作说明，请访问 http://aka.ms/BuildDeployTestWorkflow。
+> 注意：要获取使用 Lab Management 配置构建-部署-测试工作流的逐步操作说明，请访问 `http://aka.ms/BuildDeployTestWorkflow`。
 
 请注意，为了作为构建-部署-测试工作流的一部分运行自动化测试，您必须创建自动化测试（例如代码化 UI 测试或单元测试），将这些测试存储在 Foundation Server 版本控制中，将其包含在自动化构建中，并将这些测试与测试工作项关联。这些测试用例工作项反过来必须是结果，您将需要一些前期工作来创建这些关联，并获得将您的构建与测试计划、测试用例以及最终与所测试的需求起来的丰富报告数据。
 
-> 注意：要学习如何将自动化测试与测试用例关联，请访问 http://aka.ms/TestCaseAssociatedAutomation。
+> 注意：要学习如何将自动化测试与测试用例关联，请访问 `http://aka.ms/TestCaseAssociatedAutomation`。
 
 同时记住，构建-部署-测试工作流构建过程模板可以帮助您处理手动测试场景，即您只想部署新选择的构建。测试人员或开发人员可以随时手动队列新构建并仅执行工作流中的构建和部署部分，这将通过部署他们所选的新构建来准备好环境。
 
@@ -13286,69 +12409,67 @@ Test Controller
 
 在配置 Lab Management 时，有几个权限需要注意。您可能希望考虑使用这些权限来管理（例如）修改虚拟环境定义的能力。由于您的构建-部署-测试工作流将依赖于这些定义，因此让用户仅在理解其更改影响的情况下才进行更改是非常重要的。
 
-> 注意：要了解可以分配的与 Lab Management 活动相关的粒度权限，请访问 http://aka.ms/LabManagementPermissions。
+> 注意：要了解可以分配的与 Lab Management 活动相关的粒度权限，请访问 `http://aka.ms/LabManagementPermissions`。
 
 ## 地理分布团队
 
-您可能有地理位置分布的团队需要与 Lab Management 工作。但 Lab Management 构件（如 VMC）的大小可能会对广网（WAN）产生巨大压力。
+您可能有地理位置分布的团队需要与 Lab Management 工作。但 Lab Management 构件（如 `VMC`）的大小可能会对广网（WAN）产生巨大压力。
 
 您应该考虑将虚拟机 宿主机部署在一起，并与需要它们的测试团队共享公共库。如果您有多个团队需要访问，请考虑为虚拟环境适当命名，以指示它们属于哪些用户。（例如，您可以将位于芝加哥的虚拟环境替换为“CHI”，将位于纽约的虚拟环境替换为“NYC”，以此此类推。）您主要通过使用权限来实现这种管理。
 
-处理这种情况的办法是在 SCVMM 中为每个位置创建多个主机组。您可以将该位置的 Hyper-V 主机放入对应的 SCVMM 主机组中。然后，您可以在 Lab Management 中开放每个主机组，开发人员和测试人员可以选择希望为其环境提供的所在地的主机组。
+处理这种情况的办法是在 `SCVMM` 中为每个位置创建多个主机组。您可以将该位置的 `Hyper-V` 主机放入对应的 `SCVMM` 主机组中。然后，您可以在 Lab Management 中开放每个主机组，开发人员和测试人员可以选择希望为其环境提供的所在地的主机组。
 
 您可能还希望在每个位置创建额外的库供主机组使用。这有助于避免跨广网复制大文件（如 VM 模板），并允许它们在每个位置供对应的主组可用。
 
 ## VMware
 
-VMware 是一种流行的虚拟化技术，一个常见问题集中在 Lab Management 基础设施是否支持 VMware 镜像。答案是：“取决于你想做什么”。
+`VMware` 是一种流行的虚拟化技术，一个常见问题集中在 Lab Management 基础设施是否支持 `VMware` 镜像。答案是：“取决于你想做什么”。
 
-开箱即用的适用于 SCVMM 环境的 Lab Management 功能仅适用于 Microsoft 的 Hyper-V 虚拟化技术。然而，您可以从 VMware 机器创建一个标准环境，这将让您能够利用自动化构建-部署-测试工作流，并在手动测试运行中使用该环境。
+开箱即用的适用于 `SCVMM` 环境的 Lab Management 功能仅适用于 Microsoft 的 `Hyper-V` 虚拟化技术。然而，您可以从 `VMware` 机器创建一个标准环境，这将让您能够利用自动化构建-部署-测试工作流，并在手动测试运行中使用该环境。
 
-然而，尽管 VMware 是一种虚拟化技术，Lab Management 标准环境并未提供访问 VMware 快照功能的工作流活动。可以自动化这些活动并将其与 Team Build 的构建-部署-测试工作流集成；但截至本文编写，尚未有社区项目支持，因此您将面临自己编写这些活动的情况。或者，有一些免费工具可以[此处文本不完整]。
+然而，尽管 `VMware` 是一种虚拟化技术，Lab Management 标准环境并未提供访问 `VMware` 快照功能的工作流活动。可以自动化这些活动并将其与 `Team Build` 的构建-部署-测试工作流集成；但截至本文编写，尚未有社区项目支持，因此您将面临自己编写这些活动的情况。或者，有一些免费工具可以[此处文本不完整]。
 
-> 注意：微软在 http://aka.ms/CreatingEnvironments 提供了有关环境的详细信息。
+> 注意：微软在 `http://aka.ms/CreatingEnvironments` 提供了有关环境的详细信息。
 
 ## 高级拓扑
 
-您可能有地理位置分布的团队需要与 Lab Management 工作。但 Lab Management 构件（如 VMC）的大小可能会对广网（WAN）产生巨大压力。
+您可能有地理位置分布的团队需要与 Lab Management 工作。但 Lab Management 构件（如 `VMC`）的大小可能会对广网（WAN）产生巨大压力。
 
 您应该考虑将虚拟机 宿主机部署在一起，并与需要它们的测试团队共享公共库。如果您有多个团队需要访问，请考虑为虚拟环境适当命名，以指示它们属于哪些用户。（例如，您可以将位于芝加哥的虚拟环境替换为“CHI”，将位于纽约的虚拟环境替换为“NYC”，以此此类推。）您主要通过使用权限来实现这种管理。
 
-
-
-
-
 ## 第 24 章 测试与实验室管理
 
-> 注意：修剪快照的另一个原因是 Hyper-V 对每个虚拟机（VM）有 50 个快照的内置限制。取决于你使用实验室管理（Lab Management）的方式，此限制可能是需要注意的，特别是当你每天向同一环境构建并部署多次时。
+> 注意：修剪快照的另一个原因是 `Hyper-V` 对每个虚拟机（VM）有 50 个快照的内置限制。取决于你使用实验室管理（Lab Management）的方式，此限制可能是需要注意的，特别是当你每天向同一环境构建并部署多次时。
 
-虽然可以通过 SCVMM 管理控制台管理快照，但不建议这样做。SCVMM 感知单个虚拟机。它并不理解每个 SCVMM 环境中虚拟机的组成结构，这种级别的组织是由实验室管理维护的。最佳方法是通过微软测试管理器（Microsoft Test manager）界面通过实验室管理来管理快照。
+虽然可以通过 `SCVMM` 管理控制台管理快照，但不建议这样做。`SCVMM` 感知单个虚拟机。它并不理解每个 `SCVMM` 环境中虚拟机的组成结构，这种级别的组织是由实验室管理维护的。最佳方法是通过微软测试管理器（Microsoft Test manager）界面通过实验室管理来管理快照。
 
-关于快照的另一个考虑因素是密码过期。如果不采取适当措施防止这种情况的发生，过期策略会导致身份验证失败。http://aka.ms/LabManagementSnapshots 上的文档对该过程提供了详细说明，并附带防止其影响你 SCVMM 环境的预防性措施。
+关于快照的另一个考虑因素是密码过期。如果不采取适当措施防止这种情况的发生，过期策略会导致身份验证失败。`http://aka.ms/LabManagementSnapshots` 上的文档对该过程提供了详细说明，并附带防止其影响你 `SCVMM` 环境的预防性措施。
 
 ## 工作流自定义
 
-实验室管理提供的默认-构建-部署（default-build-deploy）工作流是一个强大的工作流，但在某些情况下你可能希望对其进行自定义以添加新活动或更改现有的活动。实验室管理的工作流构建在 Team Build 之，而此版本的 Team Build 使用 Windows 工作流（Windows Workflow），扩展和自定义内置工作流有无限可能。
+实验室管理提供的默认-构建-部署（default-build-deploy）工作流是一个强大的工作流，但在某些情况下你可能希望对其进行自定义以添加新活动或更改现有的活动。实验室管理的工作流构建在 `Team Build` 之，而此版本的 `Team Build` 使用 `Windows Workflow`，扩展和自定义内置工作流有无限可能。
 
-> 注意：要了解更多关于自定义内置实验室管理工作流的知识，请参阅 http://aka.ms/CustomizingLabManagementWorkflow。本文还详细介绍了开箱即用的实验室管理活动，这些活动可以在极少额外工作的情况下轻松添加到现有工作流中。此外，http://tinyurl.com/LabManagementBDSnapshot 上的一个博客文章详细说明了如何使用实验室管理活动自动创建快照，以便在构建-部署-测试工作流失败时进行引用。
+> 注意：要了解更多关于自定义内置实验室管理工作流的知识，请参阅 `http://aka.ms/CustomizingLabManagementWorkflow`。本文还详细介绍了开箱即用的实验室管理活动，这些活动可以在极少额外工作的情况下轻松添加到现有工作流中。此外，`http://tinyurl.com/LabManagementBDSnapshot` 上的一个博客文章详细说明了如何使用实验室管理活动自动创建快照，以便在构建-部署-测试工作流失败时进行引用。
 
 ## 虚拟机和虚拟机模板的补丁
 
-你创建的许多快照作为使用实验室管理体验的一部分，将是短暂的。快照通常在部署新构建或发现漏洞时创建。但一周或两周后，旧的快照可能会被清理，以留给新的构建，漏洞也将解决。然而，某些虚拟机产物——例如你虚拟机库中的虚拟机和虚拟机模板，或者你作为构建-部署-测试工作流一部分使用的 SCVMM 虚拟环境基线快照——可能会持续数月甚至几年。通常，你将希望这些产物通过 Windows Update 的最新安全更新和其他补丁保持更新，手动维护你环境中的所有虚拟机可能非常耗力。
+你创建的许多快照作为使用实验室管理体验的一部分，将是短暂的。快照通常在部署新构建或发现漏洞时创建。但一周或两周后，旧的快照可能会被清理，以留给新的构建，漏洞也将解决。然而，某些虚拟机产物——例如你虚拟机库中的虚拟机和虚拟机模板，或者你作为构建-部署-测试工作流一部分使用的 `SCVMM` 虚拟环境基线快照——可能会持续数月甚至几年。通常，你将希望这些产物通过 Windows Update 的最新安全更新和其他补丁保持更新，手动维护你环境中的所有虚拟机可能非常耗力。
 
-推荐的解决方案是使用 http://aka.ms/VMServicingTool 提供的虚拟机服务工具（Virtual Machine Servicing Tool）。该工具可以调度使用 Windows Update 的最新更新自动修复你的虚拟机和模板。使用此工具需要你托管和维护 Windows Update 服务（WSUS）。这是微软提供的免费下载，允许你指定希望整合到环境中的补丁。
+推荐的解决方案是使用 `http://aka.ms/VMServicingTool` 提供的虚拟机服务工具（Virtual Machine Servicing Tool）。该工具可以调度使用 Windows Update 的最新更新自动修复你的虚拟机和模板。使用此工具需要你托管和维护 Windows Update 服务（`WSUS`）。这是微软提供的免费下载，允许你指定希望整合到环境中的补丁。
 
 ## Windows 激活
 
-你可能需要熟悉的其他 Windows 技术之一是 Windows 激活。如果你的开发人员和测试人员拥有 MSDN 订阅，那么你可能熟悉可以使用软件（见 http://aka.ms/VisualStudioLicensing）进行开发和测试的益处。然而，尽管 MSDN 订阅者已获得许可，你仍然需要激活 Windows激活。
+你可能需要熟悉的其他 Windows 技术之一是 Windows 激活。如果你的开发人员和测试人员拥有 `MSDN` 订阅，那么你可能熟悉可以使用软件（见 `http://aka.ms/VisualStudioLicensing`）进行开发和测试的益处。然而，尽管 `MSDN` 订阅者已获得许可，你仍然需要激活 Windows激活。
 
-建议考虑几个决策点。如果你使用虚拟机模板，在从这些模板创建机器后，试用期将永久消失。如果你在一个环境中使用的时间小于操作系统评估期（某些系统为 180 天），则建议你不要在环境中激活机器，而是利用试用功能。在这种情况下，你可能希望使用从 http://aka.ms/kmsClientKeys 获取的密钥管理服务器（KMS）客户端产品密钥。这些特殊的**密钥将让你处于试用状态，并寻找可用的 KMS 服务器（稍后将讨论这一点）。
 
-如果你需要比操作系统评估期更长的环境，则你需要激活软件。如果你恰好是批量许可客户，则可以在密钥管理服务器（KMS）附近设置一个特殊的内部激活密钥，供公司内部的实验室管理环境使用。你需要 KMS 服务器的特殊产品密钥，这些密钥可以从 Windows 许可服务中心获取：http://aka.ms/VolumeLicensingServiceCenter。要了解更多关于使用内部 KMS 服务器的知识，可以在此处阅读：http://aka.ms/UnderstandingKMS。
+
+建议考虑几个决策点。如果你使用虚拟机模板，在从这些模板创建机器后，试用期将永久消失。如果你在一个环境中使用的时间小于操作系统评估期（某些系统为 180 天），则建议你不要在环境中激活机器，而是利用试用功能。在这种情况下，你可能希望使用从 `http://aka.ms/kmsClientKeys` 获取的密钥管理服务器（KMS）客户端产品密钥。这些特殊的密钥将让你处于试用状态，并寻找可用的 KMS 服务器（稍后将讨论这一点）。
+
+如果你需要比操作系统评估期更长的环境，则你需要激活软件。如果你恰好是批量许可客户，则可以在密钥管理服务器（KMS）附近设置一个特殊的内部激活密钥，供公司内部的实验室管理环境使用。你需要 KMS 服务器的特殊产品密钥，这些密钥可以从 Windows 许可服务中心获取：`http://aka.ms/VolumeLicensingServiceCenter`。要了解更多关于使用内部 KMS 服务器的知识，可以在此处阅读：`http://aka.ms/UnderstandingKMS`。
 
 ## 故障排除
 
-正如在本章中所看到的，使用 Visual Studio 和 Team Foundation Server 2012 的软件测试功能可能涉及多个组件、长时间的工作流、复杂的拓扑结构以及跨开发和测试团队的许多利益相关者。实验室管理产品团队在 http://aka.ms/TroubleshootingLabManagement 的 MSDN 上维护一份不断演变的故障排除技术列表以及一个活跃的论坛。
+正如在本章中所看到的，使用 Visual Studio 和 Team Foundation Server 2012 的软件测试功能可能涉及多个组件、长时间的工作流、复杂的拓扑结构以及跨开发和测试团队的许多利益相关者。实验室管理产品团队在 `http://aka.ms/TroubleshootingLabManagement` 的 MSDN 上维护一份不断演变的故障排除技术列表以及一个活跃的论坛。
 
 ## 总结
 
@@ -13356,9 +12477,9 @@ VMware 是一种流行的虚拟化技术，一个常见问题集中在 Lab Manag
 
 在第 25 章中，你将学习从早期版本的 Team Foundation Server 升级到 Team Foundation Server 2012。
 
-## 第 25 章从早期版本升级
+# 第 25 章 从早期版本升级
 
-### 本章内容
+## 本章内容
 
 - 了解升级类型
 - 原地升级与基于迁移的升级的区别
@@ -13366,7 +12487,7 @@ VMware 是一种流行的虚拟化技术，一个常见问题集中在 Lab Manag
 - 使用升级向导
 - 启用旧版项目
 
-### 概述
+## 概述
 
 将软件和数据库从早期版本升级到 Team Foundation Server 2012 并不困难。然而，你会发现升级后的 Team Foundation Server 2012 环境包含旧版项目时，运行起来就像是原生的实例一样。你的工作是根据团队的方便程度启用任何想要的新功能。
 
@@ -13382,18 +12503,14 @@ VMware 是一种流行的虚拟化技术，一个常见问题集中在 Lab Manag
 
 对于基于硬件迁移的升级，将对旧数据库进行完整备份并恢复到新硬件环境中。
 
-
-
-
-
 其他人描述的方法（不推荐）将涉及设置一个全新的 Team Foundation Server 2012 环境，带有新的数据库，创建新的团队项目，然后使用 Team Foundation Server 集成平台作为工具来迁移源代码和工作项。
 
 这种方法会导致许多副作用，并且被认为是一种低保真的数据传输。这是因为数据已经发生了变化（例如日期和工作项 ID 数字），而且这种方法不会迁移报告、安全权限和生成信息等数据。通过采用实际的升级路径（在本章介绍），配置向导将升级基础架构（schema），并保留早先 Team Foundation Server 环境中所有数据的原始状态。因此，它被认为是一种高保真升级。
 
 有关关于这些差异的更多信息，您可以阅读 Matt Mitrik 关于此主题的文章：
 
-- http://aka.ms/TFSMigrationDefinition
-- http://aka.ms/TFSUpgradeDefinition
+- `http://aka.ms/TFSMigrationDefinition`
+- `http://aka.ms/TFSUpgradeDefinition`
 
 原地升级和硬件迁移升级各有有利优缺点。执行硬件迁移的主要缺点是您需要获取新硬件（无论是物理机还是虚拟机）。但好处是，在升级完成并验证后，您可以丢弃任何旧硬件，并将其重新用于其他用途，或补充之前使用的任何虚拟机。在过去的七年中，在亲自参与了 100 多次升级后，我们这些作者强烈推荐基于硬件迁移的升级方式。
 
@@ -13404,19 +12521,19 @@ VMware 是一种流行的虚拟化技术，一个常见问题集中在 Lab Manag
 - **利用较新版本的操作系统**——如果旧环境是 Windows Server 2008 R2，您可以通过确保新硬件安装了最新版本来利用较新版本的操作系统（如 Windows Server 2012）。否则，最终升级将要求您也升级操作系统，这可能会影响您的回滚计划。
 - **利用 64 位架构分层**——较早版本的 Team Foundation server 软件仅安装在 32 位操作系统上。如果您计划使用 Windows Server 操作系统，那么 Team Foundation 仅支持 64 位版本。
 - **安装先决软件的新副本**——正如本章后文所述，您将需要确保 SQL Server 和 SharePoint 升级到新版本以用于 Team Foundation Server 2012。购买新硬件允许您免费安装每个先决软件，而不必担心在最终升级期间必须升级软件。
-- **内置的备份和恢复功能**——您不必担心在单独的工具中创建数据库备份还原。为了使升级期间迁移到新硬件的过程更容易，Team Foundation Server 2012 引入了两个新工具来帮助处理该过程：TFSBackup.exe 和 TFSRestore.exe。
+- **内置的备份和恢复功能**——您不必担心在单独的工具中创建数据库备份还原。为了使升级期间迁移到新硬件的过程更容易，Team Foundation Server 2012 引入了两个新工具来帮助处理该过程：`TFSBackup.exe` 和 `TFSRestore.exe`。
 
 ## 升级计划
 
 升级过程中还有其他需要考虑的方面，这些与全新的安装 Team Foundation Server 2012 不同。让我们来看其中几个。
 
-## 连接 URL
+### 连接 URL
 
-如果之前的设置没有使用趋势性的 DNS 名称，建议您使用第 2 章中描述的概念，以便未来的升级更加顺畅。Team Foundation Server 管理员和您的团队成员将感谢您。您可以在关于在 Team Foundation Server 环境中使用友好 DNS 的博客文章，地址为 http://aka.ms/FriendlyDNS。
+如果之前的设置没有使用趋势性的 DNS 名称，建议您使用第 2 章中描述的概念，以便未来的升级更加顺畅。Team Foundation Server 管理员和您的团队成员将感谢您。您可以在关于在 Team Foundation Server 环境中使用友好 DNS 的博客文章，地址为 `http://aka.ms/FriendlyDNS`。
 
 此外，请记住，某些旧版本的 Visual Studio 客户端和其他连接到 Team Foundation Server 2012 的工具可能需要在连接 URL 中包含团队项目集名称和虚拟目录。第 4 章和第 19 章提供了有关这些更改的更多信息。
 
-## Team Foundation Server 环境中的其他服务器
+### Team Foundation Server 环境中的其他服务器
 
 记住，可能还有其他服务器在完全使用之前需要进行升级。例如，所有的生成服务器都需要升级到最新版本，以及代理服务器、测试程序、控制器和代理程序。
 
@@ -13443,18 +12560,18 @@ Team Foundation Server 2012 不再支持 32 位操作系统。Team Foundation �
 - 64 位或 32 位 Windows 7（家庭版、专业版、终极版）
 - 64 位或 32 位 Windows 8
 
-## SQL Server
+### SQL Server
 
 此版本对 SQL Server 的要求进行了一些更改。Team Foundation Server 2012 支持以下 SQL Server 版本：
 
 - SQL Server 2008 R2 Express、标准版或企业版
 - SQL Server 2012 Express、标准版或企业版
 
-您会发现 Team Foundation Server 2012 不再支持 SQL Server 2008 首版。如果您使用的是 SQL Server 2008 R2 SP1 企业版，您还需要确保已安装累计更新包 1，可以在 http://aka.ms/SQL2008R2SP1CU 下载。如果检测到未安装，升级向导将抛出错误。
+您会发现 Team Foundation Server 2012 不再支持 SQL Server 2008 首版。如果您使用的是 SQL Server 2008 R2 SP1 企业版，您还需要确保已安装累计更新包 1，可以在 `http://aka.ms/SQL2008R2SP1CU` 下载。如果检测到未安装，升级向导将抛出错误。
 
 此外，如果您想利用更轻量的 SQL 版本，Team Foundation Server 2012 支持使用 SQL Server 2008 R2 或 SQL Server 2012 Express 版本。使用 SQL Express 时不支持报告服务和服务分析服务。这种配置在选择使用基本配置向导或使用 Foundation Express 时很常见。但如果您正在升级服务器，您将使用升级配置向导。
 
-## SharePoint
+### SharePoint
 
 Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于团队项目门户。遗憾的是，如果您仍在使用 Windows SharePoint Services 2.0，则必须升级到 Team Foundation Server 2012 支持的以下 SharePoint 产品和技术：
 
@@ -13464,13 +12581,9 @@ Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于�
 - Office SharePoint 2010 Server
 - Office SharePoint 2013 Server（目前技术预览版）
 
+> 注意：有关为 Team Foundation Server 2010 环境升级 SharePoint 产品和技术的更多信息，请参阅 MSDN 上的相关主题和分步操作说明：`http://aka.ms/TFSUpgradingSharePoint`。
 
-
-
-
-> 注意：有关为 Team Foundation Server 2010 环境升级 SharePoint 产品和技术的更多信息，请参阅 MSDN 上的相关主题和分步操作说明：http://aka.ms/TFSUpgradingSharePoint。
-
-## Project Server
+### Project Server
 
 如果您在 Team Foundation Server 2010 中集成了 Project Server 实例，那么您就不需要在在升级 Team Foundation Server 实例之前担心升级 Project Server 软件。Team Foundation Server 2012 支持以下版本的 Project Server：
 
@@ -13478,13 +12591,13 @@ Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于�
 - 带有 SP1 的 Project Server 2010
 - Project Server 2013（目前正处于技术预览阶段）
 
-## System Center
+### System Center
 
 如果您已通过 System Center Virtual Machine Manager 在 Team Foundation Server 2010 中配置了实验室管理（Lab Management）功能，那么您不需要对您的 System Center 2008 R2 实例进行任何更改。此版本在 Team Foundation Server 2012 中仍受支持。您稍可以将该实例升级到使用带有 SP1 的 System Center Virtual Machine Manager 2012，但这不需要在升级过程中完成。如果您打算安装 System Center 2012，请确保在提供 Service Pack 1 时对其进行安装，因为它开始开始支持 Windows 8 和 Windows Server 2012。
 
 ## 使用配置工具
 
-最新版本的《Team Foundation Server 2012 安装指南》和 MSDN 库提供了有关如何使用任一方法（原地升级或基于硬件迁移的升级）进行升级的分步说明列表和检查清单。您将希望确保遵循清单中的每条路径，以确保尽可能顺畅地升级。最新版本的分步工作流和检查清单始终可以在 MSDN 库中找到：http://aka.ms/UpsgradeTFS。
+最新版本的《Team Foundation Server 2012 安装指南》和 MSDN 库提供了有关如何使用任一方法（原地升级或基于硬件迁移的升级）进行升级的分步说明列表和检查清单。您将希望确保遵循清单中的每条路径，以确保尽可能顺畅地升级。最新版本的分步工作流和检查清单始终可以在 MSDN 库中找到：`http://aka.ms/UpsgradeTFS`。
 
 如果您遵循基于硬件迁移的方法，您将能够轻松地备份旧数据库实例上的数据库，并将其还原到新的数据库服务器实例上。一旦您完成了所有先决软件的升级，并按照《安装指南》列出的还原了所有 Team Foundation Server 数据库的完整备份，就可以运行 Team Foundation Server 升级向导了。
 
@@ -13502,7 +12615,7 @@ Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于�
 
 图 25-1：升级向导选项
 
-## 使用配置工具 | 665
+### 使用配置工具 | 665
 
 如果您将在 Team Foundation Server 应用程序层农场包含多个应用程序层服务器，您必须仅为第一个应用程序层服务器运行一次升级向导。您可以对每个额外的应用程序层服务器使用“仅应用程序层”（Application-Tier Only）向导，将它们连接到已升级的数据库。
 
@@ -13529,6 +12642,8 @@ Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于�
 - 可以通过 Microsoft Test Manager 访问测试计划和测试用例。
 - 检查使用实验室管理（Lab Management）的环境是否列在实验室中心（Lab Center）中。
 
+
+
 此外，为了确保整个环境健康，您可以在 Power Tools 的最新版本中运行 Team Foundation Server 2012 最佳实践分析器（第 19 章介绍）。这将运行全套规则检查整个环境。您还可以使用第 23 章中学的技术开始监控环境。
 
 ## 升级遗留团队项目
@@ -13541,17 +12656,13 @@ Team Foundation Server 2008 支持使用 Windows SharePoint Services 2.0 用于�
 
 接下来的章节将重点关注为使用 Team Foundation Server 2010 可标准项目模板创建的团队项目启用 Team Foundation Server 2012 功能所需的步骤。
 
-> 注意：如果您是从旧版本升级的，可以按照 MSDN 文章“更新升级后的团队项目以访问功能”中提到的步骤，在继续本章后续章节之前，启用并添加 Team Foundation Server 2010 引入的功能。该 MSDN 文章请访问：http://aka.ms/EnableTFS2010Features。您将需要确保对服务器上的每个团队项目遵循所述的步骤。
+> 注意：如果您是从旧版本升级的，可以按照 MSDN 文章“更新升级后的团队项目以访问功能”中提到的步骤，在继续本章后续章节之前，启用并添加 Team Foundation Server 2010 引入的功能。该 MSDN 文章请访问：`http://aka.ms/EnableTFS2010Features`。您将需要确保对服务器上的每个团队项目遵循所述的步骤。
 
 由于这些是升级过程中的一次性步骤，您可能会发现寻求具有 ALM 能力的 Microsoft 合作伙伴的帮助会有帮助，他们在该领域拥有专业知识。
 
-
-
-
-
 # 功能启用
 
-Team Foundation Server 2012 引入的令人兴奋的改进之一是新的“配置功能”（Configure Features）向导。配置功能向导将帮助您为使用 Team Foundation Server 2010 中标准流程模板创建的团队项目启用 Team Foundation Server 2012 中的可用新功能：
+Team Foundation Server 2012 引入的令人兴奋的改进之一是新的“配置功能”向导。配置功能向导将帮助您为使用 Team Foundation Server 2010 中标准流程模板创建的团队项目启用 Team Foundation Server 2012 中的可用新功能：
 
 - MSF Agile软件开发 v5.0
 - MSF CMMI 过程改进 v5.0
@@ -13561,7 +12672,7 @@ Team Foundation Server 2012 引入的令人兴奋的改进之一是新的“配�
 - 代码审查 (Code Reviews)
 - 利益相关者反馈 (Stakeholder Feedback)
 - 我的工作 (My Work)
-- 计划工具（产品待办列表、迭代计划和任务看板） 
+- 计划工具（产品待办列表、迭代计划和任务看板）
 - 故事板集成 (Storyboard Integration)
 - 隐藏类型项目类别 (Hidden Types Item Category)
 
@@ -13579,15 +12690,15 @@ Team Foundation Server 2012 引入的令人兴奋的改进之一是新的“配�
 
 配置功能向导将尝试检查该团队项目当前使用的流程模板，并查看是否检测到可以部分应用的新版本。如果无法检测到相应的流程模板，它可能允许您手动选择注册在服务器上的基于 Team Foundation Server 2012 的新流程模板。
 
-如果您对选择感到满意，可以点击“配置”（Configure），并将启用尽可能的功能。您将获得一个确认页面，其中列出了您需要采取的任何额外步骤。如果过程没有成功完成，您必须手动更新团队项目，或在更新流程模板后尝试重新运行配置功能向导。
+如果您对选择感到满意，可以点击“配置”，并将启用尽可能的功能。您将获得一个确认页面，其中列出了您需要采取的任何额外步骤。如果过程没有成功完成，您必须手动更新团队项目，或在更新流程模板后尝试重新运行配置功能向导。
 
-可以通过访问此 MSDN 文章了解更多关于配置功能向导以及启用 Foundation Server 2012 中引入的功能的其他手动方法：http://aka.ms/EnableTFS2012Features。
+可以通过访问此 MSDN 文章了解更多关于配置功能向导以及启用 Foundation Server 2012 中引入的功能的其他手动方法：`http://aka.ms/EnableTFS2012Features`。
 
-如果您有一个从高度自定义流程模板创建的团队项目，可以在此处找到遵循这些以可以使用 Team Foundation Server 2012 引入的功能手动说明：http://aka.ms/UpdateCustomTFSProcess。对于这些自定义流程模板，选项之一是维护您的自定义流程模板的任何必要功能并上传兼容的流程模板。然后，您可以运行配置功能向导和您更新后的自定义流程模板。如果您有多个团队项目需要更新，这将非常有益。
+如果您有一个从高度自定义流程模板创建的团队项目，可以在此处找到遵循这些以可以使用 Team Foundation Server 2012 引入的功能手动说明：`http://aka.ms/UpdateCustomTFSProcess`。对于这些自定义流程模板，选项之一是维护您的自定义流程模板的任何必要功能并上传兼容的流程模板。然后，您可以运行配置功能向导和您更新后的自定义流程模板。如果您有多个团队项目需要更新，这将非常有益。
 
 # 从 VISUAL STUDIO SCRUM 1.0 升级
 
-Visual Studio Scrum 1.0 流程模板未包含在 Team Foundation Server 2010 中，但它是由微软在之后发布的。如果您有使用此流程模板创建的团队项目，Jason Stangrome 发布了一组 PowerShell 脚本，可以自动化许多手动升级步骤。这些脚本可以在他的博客上找到：http://aka.ms/UpgradeScrumProcessTemplate。
+Visual Studio Scrum 1.0 流程模板未包含在 Team Foundation Server 2010 中，但它是由微软在之后发布的。如果您有使用此流程模板创建的团队项目，Jason Stangrome 发布了一组 PowerShell 脚本，可以自动化许多手动升级步骤。这些脚本可以在他的博客上找到：`http://aka.ms/UpgradeScrumProcessTemplate`。
 
 # 允许访问高级功能
 
@@ -13599,9 +12710,9 @@ Visual Studio Scrum 1.0 流程模板未包含在 Team Foundation Server 2010 中
 
 您控制此类访问的方法是在 Team Web Access 管理页面中设置用户的许可证。Team Foundation Server 2012 提供三种许可组来启用功能：
 
-- **受限 (Limited)**——包括您组织中所有需要创建工作项权限的用户。不需要 Team Foundation Server CAL。
-- **标准 (Standard)**——包括所有拥有 Team Foundation Server CAL 或带有 MSDN 的 Visual Studio 专业版的用户。
-- **完全 (Full)**——包括所有拥有上述任一 Visual Studio 版本的用户，他们可以访问 Team Web Access 中的所有功能。
+- **受限**——包括您组织中所有需要创建工作项权限的用户。不需要 Team Foundation Server CAL。
+- **标准**——包括所有拥有 Team Foundation Server CAL 或带有 MSDN 的 Visual Studio 专业版的用户。
+- **完全**——包括所有拥有上述任一 Visual Studio 版本的用户，他们可以访问 Team Web Access 中的所有功能。
 
 # 许可组与权限
 
@@ -13613,7 +12724,7 @@ Visual Studio Scrum 1.0 流程模板未包含在 Team Foundation Server 2010 中
 
 图 25-4：Team Web Access 的功能不可见通知
 
-要为拥有访问许可证的用户启用全套功能，您应该进入 Team Web Access 管理站点来管理许可组，如图 25-5 所示。您可以通过打开浏览器并访问格式为 http://yourservername:8080/tfs/_admin/_licenses 的 Team Web Access 站点来操作。将适当的用户或安全组添加到完全许可组，或者如果您知道访问此 Team Foundation 实例的所有用户都已许可，可以将完全许可组设置为默认访问组。
+要为拥有访问许可证的用户启用全套功能，您应该进入 Team Web Access 管理站点来管理许可组，如图 25-5 所示。您可以通过打开浏览器并访问格式为 `http://yourservername:8080/tfs/_admin/_licenses` 的 Team Web Access 站点来操作。将适当的用户或安全组添加到完全许可组，或者如果您知道访问此 Team Foundation 实例的所有用户都已许可，可以将完全许可组设置为默认访问组。
 
 # 自动化构建
 
@@ -13631,14 +12742,13 @@ Visual Studio Scrum 1.0 流程模板未包含在 Team Foundation Server 2010 中
 
 # 从 Team Foundation Server 2008 升级构建
 
-升级过程之前的 Team Foundation 2008 中的构建定义在环境升级后仍然存在。然而，不再使用基于 Windows Workflow 的新默认构建流程模板，您会发现遗留定义使用了 UpgradeTemplate.xml 构建流程模板。
+升级过程之前的 Team Foundation 2008 中的构建定义在环境升级后仍然存在。然而，不再使用基于 Windows Workflow 的新默认构建流程模板，您会发现遗留定义使用了 `UpgradeTemplate.xml` 构建流程模板。
 
-UpgradeTemplate.xml 构建流程模板是一种调用在早期版本 Team Foundation Server 中定义和使用的 legacy TFSBuild.proj MSBuild文件的构建流程模板。这将允许您在新服务器上继续使用遗留构建。您需要确保每个遗留定义都能成功运行。
+`UpgradeTemplate.xml` 构建流程模板是一种调用在早期版本 Team Foundation Server 中定义和使用的 legacy `TFSBuild.proj` MSBuild 文件的构建流程模板。这将允许您在新服务器上继续使用遗留构建。您需要确保每个遗留定义都能成功运行。
 
-然而，UpgradeTemplate.xml 并没有添加 Team Foundation 2010 引入的新功能或默认构建流程模板中包含的功能。例如，测试影响分析、源代码索引、将符号发布到符号服务器或添加运行第三方测试框架单元测试的功能只是默认构建流程模板中的功能之一。
+然而，`UpgradeTemplate.xml` 并没有添加 Team Foundation 2010 引入的新功能或默认构建流程模板中包含的功能。例如，测试影响分析、源代码索引、将符号发布到符号服务器或添加运行第三方测试框架单元测试的功能只是默认构建流程模板中的功能之一。
 
 有机会可以将现有的构建转换为基于 Windows Workflow 的构建流程模板。
-
 
 模板。然而，如果你的项目包含大量的自定义内容（包括使用自定义 MSBuild 任务），你必须花费更多精力来定义自定义构建过程，并将 MSBuild 任务转换为自定义工作流活动。
 
@@ -13648,7 +12758,7 @@ UpgradeTemplate.xml 构建流程模板是一种调用在早期版本 Team Founda
 
 提高开发人员效率的一个非常棒的功能是本地工作空间，你在第 6 章中学习过它。对于新的 Team Foundation Server 2012 安装，任何新创建的工作空间都默认启用了本地工作空间（相对于工作空间）。然而，出于向后兼容性的考虑，当你从早期版本的 Team Foundation Server 升级时，默认值仍保留为服务器工作空间，对于那些过去可能使用过 Visual SourceSafe 或早期版本 Team Foundation Server 的人员来说，这是一个全新的范式转变。
 
-我们强烈建议在服务器升级后，将默认设置更改为本地工作空间。当你的开发人员下次连接到服务器时，他们将获得一个将其遗留工作空间“升级”为本地工作空间的选项。只有当在服务器设置中检测到更改时，才会向开发者显示通知。可以在 http://aka.ms/SetTFSWorkspacesDefault 找到处理此更新的步骤指南。
+我们强烈建议在服务器升级后，将默认设置更改为本地工作空间。当你的开发人员下次连接到服务器时，他们将获得一个将其遗留工作空间“升级”为本地工作空间的选项。只有当在服务器设置中检测到更改时，才会向开发者显示通知。可以在 `http://aka.ms/SetTFSWorkspacesDefault` 找到处理此更新的步骤指南。
 
 ## 部署新报告
 
@@ -13661,8 +12771,6 @@ tft.exe addprojectreports /collection:http://tfs:8080/tfs/DefaultCollection /pro
 此命令将下载指定的流程模板以及该模板中包含的所有报告，并下载到与指定项目相关的报告站点。如果存在同名报告，`/force` 选项允许你覆盖已存在的内容。你可以修改报告、更新已上传的流程模板，并根据需要重复此过程。
 
 ## 部署新的 SharePoint 门户站点
-
-
 
 遗留团队项目中的 Team 门户站点未能充分利用第 14 章描述的所有 SharePoint 仪表板功能。这是最艰巨的任务之一，因为没有办法可以将现有站点转换并在门户模板上启用仪表板。
 
@@ -13720,10 +12828,6 @@ TFSConfig.exe Lab /UpgradeSCVMM
 
 微软建议运行 Team Foundation Server 的服务器应具有可靠的网络连接，最小带宽为 1 Mbps，最大延迟为 350 毫秒。
 
-
-
-
-
 # 网络流量来源
 
 在 Team Foundation Server 环境的组件中存在许多不同的网络流量来源。表 26-1 详细列出了每个组件的贡献，这些贡献在每个环境中都会有所不同。在大多数环境中，版本控制和工作项跟踪通常是最大的贡献源。根据您的配置，来自 Lab Management 的虚拟机部署也可能是一个大贡献源。
@@ -13731,13 +12835,23 @@ TFSConfig.exe Lab /UpgradeSCVMM
 表 26-1：与每个组件相关的网络流量
 
 | 组件 | 流量 |
+
+
+
 |---|---|
+
 | 版本控制 | 源文件和操作 |
+
 | 工作项跟踪 | 工作项、操作、元数据缓存和附件 |
+
 | Web 访问 | 网页、图像、脚本、样式表、附件和源文件 |
+
 | 报告 | 报告、数据库查询和 Analysis Services 服务的查询 |
+
 | SharePoint 产品（包括仪表板） | 网页、文档、工作项和报告 |
+
 | Team Foundation Build | 体系日志和生成输出 |
+
 | Lab Management | 命令、System Center 虚拟机管理器 (SCVMM) 流量、实验室环境和模板 |
 
 ## 版本控制
@@ -13767,7 +12881,7 @@ TFSConfig.exe Lab /UpgradeSCVMM
 
 在 Team Foundation Server 2010 和 2012 中，所有使缓存失效的操作都将使用增量更新。这意味着不仅大大减少了服务器的负载（以内存压力和请求的形式），还减少了到客户端的整体网络流量。
 
-> 注意：要测量工作跟踪的元数据缓存，请在任何客户端计算机上找到 `C:\Users\<user>\Local\AppData\Microsoft\Team Foundation\4.0\` 文件夹。右键点击以 GUID 命名的子目录，选择“属性”，并在“属性”对话框中读取大小。记住，元数据缓存在通过网络传输时可能会被压缩，因此您可能需要使用如 NetMon 等网络流量嗅探器来查看实际的网络流量大小，而不是查看文件夹大小。*
+> 注意：要测量工作跟踪的元数据缓存，请在任何客户端计算机上找到 `C:\Users\<user>\Local\AppData\Microsoft\Team Foundation\4.0\` 文件夹。右键点击以 GUID 命名的子目录，选择“属性”，并在“属性”对话框中读取大小。记住，元数据缓存在通过网络传输时可能会被压缩，因此您可能需要使用如 NetMon 等网络流量嗅探器来查看实际的网络流量大小，而不是查看文件夹大小。
 
 # 微软元数据缓存刷新问题
 
@@ -13783,53 +12897,49 @@ Visual Studio 2010 和 2012 客户端在服务器上删除字段时会执行增�
 
 您有多种不同的方法来克服与地理分布团队合作工作时面临的挑战。这些解决方案中的每一个都可以单独使用，也可以与其他方案结合以满足您的需求。
 
-# 带有远程代理服务器的中央服务器
+## 带有远程代理服务器的中央服务器
 
 Team Foundation Server Proxy 是一个能够缓存版本控制文件下载和测试结果服务器。在本章稍后会讨论。这是推荐的、最简单的配置和维护环境。当您的用户在可以托管代理服务器的分支机构工作时，这是最佳选择。
 
 然而，如果您的用户均匀分布在世界各地，那么就没有中心位置可以放置服务器，延迟对所有人来说都是一个问题。您可能需要在每个远程位置放置代理服务器。
 
-# 多个分布式服务器
+## 多个分布式服务器
 
 如果您的分布式团队正在开发可以相互独立开发的产品，那么运行多个服务器可能是一个选项。这种方法的处处是人们可以在本地服务器上进行项目工作。当然，缺点是有多个服务器需要维护，并且不同存储库中存在不同的代号。跨多个实例的报告和资源管理将变得非常有挑战性。
 
 如果您的团队聚集在远程站点，这些站点通常会有一个专用的 VPN，其开销较小且通常网络连接更好。然而，如果您在世界范围内有移动工作人员，他们通常可以通过本地 ISP 连接到公司网络获得更好的 Internet 连接。
 
-> 注意：有关此更多信息，请参阅 MSDN 上的“移动集合”页面，地址为 http://aka.ms/TFSMoveTPC。
+> 注意：有关此更多信息，请参阅 MSDN 上的“移动集合”页面，地址为 `http://aka.ms/TFSMoveTPC`。
 
-# 镜像
+## 镜像
 
 如果您的开发工作无法在远程站点之间划分，那么一个选项是使用 Team Foundation Integration 来镜像源代码和工作项。这听起来可能像解决所有问题的灵丹妙药，但并不是没有代价的。
 
 您设置的每个镜像都有与其相关的开销。当人们依赖镜像时，它的操作和维护必须被重视。此主题将进行详细讨论。
 
-# 远程桌面
+## 远程桌面
 
 在某些环境中，将知识产权存储在 IT 部门控制之外的机器上是不可接受的。这在政府、国防和金融行业等高度监管的环境中为如此。
 
 此类环境的一种解决方案是维护一个中央 Team Foundation Server 以及用于客户端的远程桌面服务 (RDS) 或虚拟桌面基础设施 (VDI)。基本上，远程用户将连接到与同一网络的虚拟桌面。跨网络的唯一流量是键盘鼠标输入和视频输出，取决于您对 Team Foundation Server 的使用，这可能比远程桌面需要更多带宽。
 
-# 连接 Internet 的外部网服务器
+## 连接 Internet 的外部网服务器
 
 虚拟专用网络 (VPN) 和其他远程访问技术与直接通过 Internet 访问相比可能会成为瓶颈。通过在 Internet 上直接暴露服务器，您可以允许人们直接连接，而无需将流量封装在 VPN 隧道中的开销。如果您决定将 Team Foundation Server 连接到 Internet，应考虑启用并强制使用 HTTP over SSL (HTTPS) 协议来加密进出服务器的流量。微软托管的 Team Foundation Service 就使用了这种方法。
 
-# 元数据过滤
+## 元数据过滤
 
 正如本章前面提到的，元数据缓存具有成为巨大网络流量的的。当启用元数据过滤时，服务器将仅发送您连接的项目所需的最少元数据。如果人们通常只连接到一个团队项目，这可以减少网络流量。
 
-
-
-
-
 缺点是，每当你连接到新服务器时，元数据（Metadata）缓存就会失效。如果人们连接到服务器上的多个项目，这尤其会成为障碍。在这种情况下，服务器在每次他们连接时都会发送相同的元数据。如果一次性下载所有项目的完整元数据，将会更高效。
 
-> 注意：关于元数据过滤工作原理以及如何启用它的更多详细信息，请参阅 Martin Woodward 的博客：http://aka.ms/TFSMetadataFiltering。
+> 注意：关于元数据过滤工作原理以及如何启用它的更多详细信息，请参阅 Martin Woodward 的博客：`http://aka.ms/TFSMetadataFiltering`。
 
-## 构建服务器 (BUILD SERVERS)
+## 构建服务器
 
 当你在一个地理分布团队中工作时，夜间构建（nightly builds）对测试人员的可用性是一个重要的决策点。你有几种不同的可选方案，每种方案都有不同的优势和权衡。
 
-## 本地构建服务器农场
+### 本地构建服务器农场
 
 这是中小型团队最常见的场景，构建服务器与团队基础服务器（Team Foundation Server）环境本身位于同一位置。在这种情况下，构建速度不会受到广域网（WAN）速度的影响。
 
@@ -13837,27 +12947,27 @@ Team Foundation Server Proxy 是一个能够缓存版本控制文件下载和测
 
 或者，Windows Server 2008 R2 和 Windows Server 2012 提供了实用功能，可以托管一个在该场景下缓存缓存缓存的文件。例如，你可以使用分布式文件系统 (DFS) 或 BranchCache 来暴露相同的 UNC 路径但显示实际的文件内容。如果你采用这种方法，请确保在构建定义中使用已启用 DFS 或 BranchCache 的 UNC 路径，而不是包含硬编码服务器名称的 UNC 路径。如第 2 章中描述的友好 DNS 名称对于构建生成（Build Drops）和符号文件（Symbol file）共享都是完美的选择。
 
-## 远程构建服务器农场
+### 远程构建服务器农场
 
 在这种情况下，你将在远程位置建立构建服务器。将此与每个站点的团队基础服务器代理（Team Foundation Server Proxy）相结合，你可以获得一个良好的解决方案。构建服务器可以通过代理服务器访问本地站点，开发人员可以访问本地构建输出。然而，如果多个团队需要访问相同构建生成和符号服务器存储的能力，那么你可能希望考虑上一节中提到的缓存/同步文件共享的选项。
 
-## 团队基础服务器代理 (TEAM FOUNDATION SERVER PROXY)
+## 团队基础服务器代理
 
 团队基础服务器代理是一个能够从版本控制中下载文件的服务器。此外，2012 版本的团队基础服务器代理引入了缓存测试结果附件的能力，这些附件可能很大。测试附件的类型来自于在运行测试期间运行的不同诊断数据适配器，例如 IntelliTest、视频录制器、代码覆盖率工具等。即使你没有地理分布的团队，这些功能对于所有使用版本控制的团队来说都是有用的，包括本地服务器农场和本地团队。
 
-## 团队基础服务器代理的工作原理
+### 团队基础服务器代理的工作原理
 
 团队基础服务器代理纯用于版本控制下载和测试结果附件的缓存。它尚未用于工作项附件或团队基础服务器中的其他功能。通常，代理服务器用于远程办公室，以提高版本控制和测试结果附件的性能。然而，它可以（并且应该）作为任何繁忙的团队基础服务器环境拓扑结构的一部分。
 
-> 注意：有关团队基础代理如何工作的更多详细信息，请参阅 http://tinyurl.com/HowTFProxyWorks。此文章为团队基础服务器 2008 产品编写，但仍然适用于版本控制下载。
+> 注意：有关团队基础代理如何工作的更多详细信息，请参阅 `http://tinyurl.com/HowTFProxyWorks`。此文章为团队基础服务器 2008 产品编写，但仍然适用于版本控制下载。
 
-## 兼容性
+### 兼容性
 
 2008、2010 和 2012 代理服务器可以作为团队基础服务器 2008、2010 和 2012 的代理。这些版本中的每一个，如果配置了 2010 或 2012 代理服务器并赋予访问团队基础服务器 2010 或 2012 服务器实例的权限，它将自动为该实例上的所有团队项目集合代理处理请求。当你向服务器添加新集合时，这非常有用，你不需要对代理进行任何特殊操作即可使其为这些集合可用。
 
 需要注意的是，只有团队基础服务器 2012 代理服务器具有缓存来自团队基础服务器 2012 环境的测试结果附件的能力。这对于适用于不同的客户端，如 Visual Studio 2012 和 Microsoft Test Manager 2012。较早版本的客户端和代理服务器将没有缓存测试结果附件所需的功能，因为该功能是在此版本中新引入的。
 
-## 配置代理
+### 配置代理
 
 代理服务器不需要在团队基础服务器上注册即可使用。唯一的要求是运行代理服务器的服务帐户必须对每个项目集合具有“查看集合级信息”权限。
 
@@ -13877,69 +12987,11 @@ Team Foundation Server Proxy 是一个能够缓存版本控制文件下载和测
 
 - 使用内置的网络 Service 帐户运行代理，这样你就不需要每次更改密码时都更新服务帐户密码了。
 - 将代理服务帐户添加到你想要进行代理的每台服务器的服务器级组中。
-- 在服务器上注册代理，并将其设置为代理服务器所在或应作为其他位置代理的 Active Directory 站点的默认设置。如第 2 章中描述的友好 DNS 名称对于构建生成和符号文件共享都是完美的选择。> 注意：关于如何启用元数据过滤的更多信息，请参阅 http://aka.ms/TFSMetadataFiltering。
+- 在服务器上注册代理，并将其设置为代理服务器所在或应作为其他位置代理的 Active Directory 站点的默认设置。如第 2 章中描述的友好 DNS 名称对于构建生成和符号文件共享都是完美的选择。
 
-## 设置 (Proxy Settings)
+> 注意：关于如何启用元数据过滤的更多信息，请参阅 `http://aka.ms/TFSMetadataFiltering`。
 
-在数据场景中，元数据缓存的清理。缺点是，每当你连接到新服务器时，元数据缓存就会失效。如果人们连接到服务器上的多个项目，这尤其会成为障碍。在这种情况下，服务器在每次他们连接时都会发送相同的元数据。如果一次性下载所有项目的完整元数据，将会更高效。
-
-> 注意：关于元数据过滤工作原理以及如何启用它的更多详细信息，请参阅 Martin Woodward 的博客：http://aka.ms/TFSMetadataFiltering。
-
-## 构建服务器 (BUILD SERVERS)
-
-当你在一个地理分布团队中工作时，夜间构建（nightly builds）对测试人员的可用性是一个重要的决策点。你有几种不同的可选方案，每种方案都有不同的优势和权衡。
-
-## 本地构建服务器农场
-
-这是中小型团队最常见的场景，构建服务器与团队基础服务器（Team Foundation Server）环境本身位于同一位置。在这种情况下，构建速度不会受到广域网（WAN）速度的影响。
-
-这种方法的缺点是，远程团队获取构建输出需要时间和广域网带宽。此外，除非你使用其他技术，或者设置了脚本将构建输出拷贝到远程站点，否则在远程站点的每个人都将通过广域网多次传输文件。这很慢，而且如果按广域网流量收费，可能会非常昂贵。
-
-或者，Windows Server 2008 R2 和 Windows Server 2012 提供了实用功能，可以托管一个在该场景下缓存缓存的文件。例如，你可以使用分布式文件系统 (DFS) 或 BranchCache 来暴露相同的 UNC 路径但显示实际的文件内容。如果你采用这种方法，请确保在构建定义中使用已启用 DFS 或 BranchCache 的 UNC 路径，而不是包含硬编码服务器名称的 UNC 路径。如第 2 章中描述的友好 DNS 名称对于构建生成（Build Drops）和符号文件（Symbol file）共享都是完美的选择。
-
-## 远程构建服务器农场
-
-在这种情况下，你将在远程位置建立构建服务器。将此与每个站点的团队基础服务器代理（Team Foundation Server Proxy）相结合，你可以获得一个良好的解决方案。构建服务器可以通过代理服务器访问本地站点，开发人员可以访问本地构建输出。然而，如果多个团队需要访问相同构建生成和符号服务器存储的能力，那么你可能希望考虑上一节中提到的缓存/同步文件共享的选项。
-
-## 团队基础服务器代理 (TEAM FOUNDATION SERVER PROXY)
-
-团队基础服务器代理是一个能够从版本控制中下载文件的服务器。此外，2012 版本的团队基础服务器代理引入了缓存测试结果附件的能力，这些附件可能很大。测试附件的类型来自于在运行测试期间运行的不同诊断数据适配器，例如 IntelliTest、视频录制器、代码覆盖率工具等。即使你没有地理分布的团队，这些功能对于所有使用版本控制的团队来说都是有用的，包括本地服务器农场和本地团队。
-
-## 团队基础服务器代理的工作原理
-
-团队基础服务器代理纯用于版本控制下载和测试结果附件的缓存。它尚未用于工作项附件或团队基础服务器中的其他功能。通常，代理服务器用于远程办公室，以提高版本控制和测试结果附件的性能。然而，它可以（并且应该）作为任何繁忙的团队基础服务器环境拓扑结构的一部分。
-
-> 注意：有关团队基础代理如何工作的更多详细信息，请参阅 http://tinyurl.com/HowTFProxyWorks。此文章为团队基础服务器 2008 产品编写，但仍然适用于版本控制下载。
-
-## 兼容性
-
-2008、2010 和 2012 代理服务器可以作为团队基础服务器 2008、2010 和 2012 的代理。这些版本中的每一个，如果配置了 2010 或 2012 代理服务器并赋予访问团队基础服务器 2010 或 2012 服务器实例的权限，它将自动为该实例上的所有团队项目集合代理处理请求。当你向服务器添加新集合时，这非常有用，你不需要对代理进行任何特殊操作即可使其为这些集合可用。
-
-需要注意的是，只有团队基础服务器 2012 代理服务器具有缓存来自团队基础服务器 2012 环境的测试结果附件的能力。这对于适用于不同的客户端，如 Visual Studio 2012 和 Microsoft Test Manager 2012。较早版本的客户端和代理服务器将没有缓存测试结果附件所需的功能，因为该功能是在此版本中新引入的。
-
-## 配置代理
-
-代理服务器不需要在团队基础服务器上注册即可使用。唯一的要求是运行代理服务器的服务帐户必须对每个项目集合具有“查看集合级信息”权限。
-
-设置此设置的最简单方法是将代理服务帐户添加到内置的服务器级组中：
-
-```
-[TEAM FOUNDATION]\Team Foundation Proxy Service Accounts
-```
-
-每个项目集合都有其所属的自己的服务器级组：
-
-```
-[DefaultCollection]Project Collection Proxy Service Accounts
-```
-
-如果你正在为远程地点的所有用户设置代理服务，你可能需要执行以下操作：
-
-- 使用内置的网络 Service 帐户运行代理，这样你就不需要每次更改密码时都更新服务帐户密码了。
-- 将代理服务帐户添加到你想要进行代理的每台服务器的服务器级组中。
-- 在服务器上注册代理，并将其设置为代理服务器所在或应作为其他位置代理的 Active Directory 站点的默认设置。如第 2 章中描述的友好 DNS 名称对于构建生成和符号文件共享都是完美的选择。> 注意：关于如何启用元数据过滤的更多详细信息，请参阅 http://aka.ms/TFSMetadataFiltering。
-
-## 设置 (Proxy Settings)
+### 设置
 
 版本控制代理设置是每个用户和每机器的设置。为了强制你的客户端配置该站点的默认代理，你可以运行以下命令：
 
@@ -13948,11 +13000,9 @@ tf exe proxy /configure
 tf exe proxy /enabled:true
 ```
 
-
-
-
-
 # Team Foundation Server 代理 | 685
+
+
 
 如果您已配置了代理，可以通过运行以下命令查询注册表键：
 
@@ -13961,7 +13011,7 @@ reg.exe query HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\TeamFoundat
 reg.exe query HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\TeamFoundation\SourceControl\Proxy /v Url
 ```
 
-您也可以运行以下命令在不使用 tfe.exe 的情况下为代理服务器设置注册表键：
+您也可以运行以下命令在不使用 `tfe.exe` 的情况下为代理服务器设置注册表键：
 
 ```
 reg.add HKEY_CURRENT_USER\Software\VisualStudio\11.0\TeamFoundation\SourceControl\Proxy /v Enabled /d f /f
@@ -13994,23 +13044,23 @@ set TFSPROXY=redmon.proxy.tfs.contoso.local:8081
 
 # 第 26 章节 与地理分布团队的协作
 
-# 使用 TEAM FOUNDATION SERVER 集成工具进行镜像
+## 使用 TEAM FOUNDATION SERVER 集成工具进行镜像
 
 过去，Codelex 上提供过一个名为“TFS 迁移同步工具包”的下载项目。该工具包的意图是让人们构建自定义工具，以实现与其他版本控制和工作跟踪系统的迁移和同步。它的原始版本收到了许多负面反馈，没有多少人能够成功使用它。
 
 2008 年，团队决定投入资金以解决以前版本的反馈，并构建一个能够与其他系统同步的坚实平台。这一努力的成果就是 Team Foundation Server 集成工具，它在 http://aka.ms/IntegrationTools 发布，并支持同步。该工具允许 Team Foundation Server 与其他系统进行同步。该工具还支持双向同步，其内置的 SDK 允许 Team Foundation Server 保持数据同步。这些功能可以允许您处理冲突。
 
-# 智能冲突解决 (Intelligent Conflict Resolution)
+## 智能冲突解决 (Intelligent Conflict Resolution)
 
 在任何同步类型中，总存在您无法预见并自动处理的问题。例如：
 
 冲突解决过程允许您解决冲突并赋予一个“范围”。例如，您可以说：“当发生编辑/编辑冲突时，始终选择左侧的更改。”随着时间的推移，系统被赋予了规则，解决新冲突的数量就会减少。
 
-# 代理功能 (Capabilities)
+## 代理功能 (Capabilities)
 
 在同步两个不同的系统时，您几乎可以确定配置是映射的。这就是映射发挥作用的地方。
 
-# 功能 (Capabilities)
+## 功能 (Capabilities)
 
 在初始版本中，代理服务器 具有以下功能：
 
@@ -14019,22 +13069,18 @@ set TFSPROXY=redmon.proxy.tfs.contoso.local:8081
 - **工作项跟踪**——支持工作项修订、字段、区域和迭代以及链接（包括到更改集的链接）。
 - **上下文同步**——支持工作项类型、组组成和全局列表。
 
-# 字段映射、值映射和用户映射 (Field Maps, Value Maps, and User Maps)
+## 字段映射、值映射和用户映射 (Field Maps, Value Maps, and User Maps)
 
 在同步两个不同的系统时，几乎几乎可以确定映射是实用的。例如，您可能在一侧拥有值 1、2,3，而在另一侧拥有值 A、B、C。通过定义字段映射并将其关联值映射，工具可以在更新发生时进行值的转换。
 
 另一个强大的功能是用户映射。例如，当将 Team Foundation Server（使用 Active Directory 进行身份验证）与拥有内置命名的系统同步时，这非常有用。用户映射功能允许您将一个系统映射到另一个系统。
 
-# 健康监测 (Health Monitoring)
+## 健康监测 (Health Monitoring)
 
 当您安装 Team Foundation Server 集成工具时，两个报告会被复制到您的机器。要使用这些报告，可以按照随附的说明设置数据源并上传报告。一旦运行起来，它们将向您显示两个结果：
 
 - 1. 延迟
 - 2. 冲突
-
-
-
-
 
 如果人们日常工作依赖于同步，那么你可能希望让用户可以使用这些报告。你还可以设置数据驱动的订阅，当延迟超过特定阈值时通过电子邮件发送报告。例如，在微软，每次同步都有一个数据驱动的订阅，它每 30 分钟检查一次是否有任何端点的过期时间超过 30 分钟。当其中某个端点过期时，它向同步所有者发送报告，以提醒其该状况。
 
@@ -14046,18 +13092,19 @@ set TFSPROXY=redmon.proxy.tfs.contoso.local:8081
 
 这些每每都可以通过对延迟报告和冲突报告的订阅来检测。
 
-## 示例
+### 示例
 
 Team Foundation 集成工具（Team Foundation Integration Tools）包含了许多入门所需的模板，但以下是一些最常见的用法。
 
-## 版本控制到第二个服务器的双向同步
+### 版本控制到第二个服务器的双向同步
 
 查看版本控制会话配置中的片段：
 
 在这种场景下，你配置了左、右两个迁移源，并提供了你想要保持同步的两个控制路径。可以提供多个路径以及不同的端点。
+
 你应该始终选择尽可能小的映射，因为必须处理的更改越多，落后和不同步的可能性就越大。如果人们在两个不同的位置处理相同的代码，那么将代码镜像到代码的分支中是一个好主意。这样，你就可以控制远程服务器的更改何时以及如何合并到另一侧的主分支。
 
-## 同步不同过程模板的工作项
+### 同步不同过程模板的工作项
 
 外包开发团队可能使用与内部开发团队不同的过程模板。这将导致调试错误、任务和其他工作项时使用的字段和值出现不匹配。其他组织可能有非常充分的理由使用自己的模板，这是没有问题的。
 
@@ -14094,11 +13141,11 @@ valueMap="PriorityValueMap" />
 </WITSessionCustomSetting>
 ```
 
-## 离线工作
+### 离线工作
 
 在地理分布团队中，你有时需要离线工作。你的客户端和服务器之间可能连接问题，或者服务器可能为了维护而离线。无论情况下，你都可以采取措施在离线工作时保持高效。
 
-## 版本控制
+#### 版本控制
 
 如果你的解决方案绑定到 Team Foundation 控制，Visual Studio 2008 和 2012 将在你尝试打开解决方案时尝试连接到服务器。如果服务器一段时间不可用，解决方案将在“离线模式”下打开。这允许你在与服务器断开连接时继续编写代码。
 
@@ -14116,14 +13163,16 @@ valueMap="PriorityValueMap" />
 
 由于这些原因，强烈建议考虑使用本地工作区而不是传统的服务器工作区，并使用 Visual Studio 2012。
 
-## 强制离线
+#### 强制离线
 
 如果连接服务器的速度缓慢或不可靠，可能希望将 Team Foundation Server 标记为离线并禁用启动时重连，以便其超时。执行此操作，你需要安装 Team Foundation Server Power Tools。一旦安装，可以按照以下步骤操作：
 
 - 1. 打开 Visual Studio 2012 开发人员命令提示符。
 - 2. 输入：
+
 ```tfftexe connections
 ```
+
 - 3. 一旦显示 TFS 连接对话框（如图 26-2所示），选择你的服务器，展开集合并选择该集合。
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_728_0.png)
@@ -14142,10 +13191,6 @@ valueMap="PriorityValueMap" />
 
 此外，第三方工具 TeamCompanion for Ekobit 提供了一个 Outlook 加载项，它也可以缓存工作项查询结果并允许在离线时查看和编辑数据。
 
-
-
-
-
 # 692 第 26 节 与地理分布团队协作
 
 > 注意：有关更多信息，请参阅 MSDN 上的“离线工作并重新连接到 Team Foundation Server”文章，网址为 http://aka.ms/TFSWorkOffline。
@@ -14154,7 +13199,7 @@ valueMap="PriorityValueMap" />
 
 其他几个考虑因素可以改进与地理分布团队协作的体验。
 
-## 维护窗口与时区
+### 维护窗口与时区
 
 默认的 Team Foundation 安装会将优化和清理任务安排在 UTC 时间凌晨 3 点开始。这意味着这些任务在北美是晚上、欧洲是清晨而在亚洲是午后运行。
 
@@ -14173,13 +13218,13 @@ Team Foundation Server 的优势之一是，你通常不需要数据库管理员
 | 版本控制管理 | 该任务删除数据库中之前已删除的内容。此外，它还会删除作为大提交一部分暂存到临时表中的内容。 | 每日 |
 | 工作项跟踪管理 | 该任务在工作项跟踪表上运行。它重组碎片索引并更新表统计信息。它还会删除系统不再使用的工作和附件。它还会删除孤立附件；保存工作项和上传附件是两个独立的事务，其中一个可以成功而另一个失败。 | 每日 |
 
-## 使用 SQL Server Enterprise 进行在线索引操作
+### 使用 SQL Server Enterprise 进行在线索引操作
 
 “优化数据库”任务会在每个集合上运行，可能会导致某些版本控制命令出现阻塞并影响性能。如果你在全球范围内都有用户并且拥有大型索引，可能没有适合该任务运行的理想时间。在这种情况下，你可能希望将 SQL Server 升级到支持在线索引操作的引擎。
 
 Team Foundation 2012 完整版包含 SQL Server 2012 标准版的受限许可证。Team Foundation 2012 包含了 SQL Server 2012 Express 版。如果你为数据层单独许可了企业版或数据中心版，那么 Team Foundation 将自动利用这些版本中提供的在线索引操作，这将防止非在线索引操作常见的阻塞和性能缓慢问题。
 
-## 分布式应用层
+### 分布式应用层
 
 在 Team Foundation 2008 中，可以在与应用层分离的服务器上安装 Team System Web Access。在 Team Foundation 2010 和 Team Foundation 2012 中，这不再可行，因为 Web Access 现在已集成到服务器本身中。
 
@@ -14199,6 +13244,8 @@ Team Foundation 2012 完整版包含 SQL Server 2012 标准版的受限许可证
 - 探索服务器模型
 - 构建插件
 - 探索其他选项
+
+
 
 从一开始开始，Team Foundation Server 的设计就是为了可扩展。微软承认，它永远无法构建出客户所需的所有不同功能。其哲学是，微软自己的功能也应该构建在相同的 API 之上。事实证明这是一个非常明智的选择，并导致了繁荣的生态系统。以下是该生态系统的一些示例：
 
@@ -14221,11 +13268,7 @@ Team Foundation 2012 完整版包含 SQL Server 2012 标准版的受限许可证
 
 在应用层上，Web 服务与服务器模型提供的服务进行交互。然后，服务器对象访问内部 SQL 表和存储过程。图 27-1 显示了这些不同组件是如何交互的。
 
-
-
-
-
-# .NET Client Object Model | 697
+### .NET Client Object Model
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_734_0.png)
 
@@ -14240,7 +13283,7 @@ Team Foundation 2012 完整版包含 SQL Server 2012 标准版的受限许可证
 
 Team Explorer 和 Excel 客户端提供的功能也可以被扩展。如你所见，微软作为 Team Foundation Server 交付的几乎所有内容都可以进行扩展和在此构建，以满足你自己的需求和要求。
 
-# .NET 客户端对象模型
+## .NET 客户端对象模型
 
 客户端对象模型是程序化与 Team Foundation Server 交互最常用的方式。它是 Team Explorer 和所有基于 .NET 的客户端应用程序用于访问服务器时使用的相同 API。
 
@@ -14248,13 +13291,13 @@ Team Explorer 和 Excel 客户端提供的功能也可以被扩展。如你所�
 
 www.it-ebooks.info
 
-# 连接服务器
+### 连接服务器
 
-根据你想要的操作，要连接到服务器，必须使用 Microsoft.TeamFoundation.Client.dll 程序集中定义的以下类之一：
+根据你想要的操作，要连接到服务器，必须使用 `Microsoft.TeamFoundation.Client.dll` 程序集中定义的以下类之一：
 
-- TfsConnection
-- TfsConfigurationServer
-- TfsTeamProjectCollection
+- `TfsConnection`
+- `TfsConfigurationServer`
+- `TfsTeamProjectCollection`
 
 ```csharp
 using System;
@@ -14294,7 +13337,7 @@ namespace ClientObjectModelSample
 
 欲查看另一个示例，请访问 http://tinyurl.com/TFSImpersonationVC 中的“在版本控制客户端 API 中使用 TFS 身份冒充”。
 
-#团队项目选择对话框
+### 团队项目选择对话框
 
 虽然你可以使用客户端对象模型枚举集合和团队项目，但你也可以利用 `TeamProjectPicker` 对话框。这与 Visual Studio 使用的对话框相同，并且预填充了用户之前连接过的代码片段。
 
@@ -14319,7 +13362,7 @@ using (TeamProjectPicker tpp = new
 
 > 注意：需更多信息，请参阅 http://tinyurl.com/TeamProjectPicker 中的“使用 TeamProjectPicker API”。
 
-# 处理多个 API 版本
+### 处理多个 API 版本
 
 如果你正在使用客户端对象模型构建扩展，你可能希望确保它能够在不同的服务器版本上运行。没有单一的、确定方法可以实现这一点。你可以通过查看服务器提供的功能和服务来推断服务器版本。
 
@@ -14388,30 +13431,26 @@ else {
 
 > 注意：这种方法仅用于从客户端侧程序化判断正在通信的服务器版本。如果你是管理员并想查看 Team Foundation Server 实例运行的具体服务级别，可以从 Team Foundation Server 管理控制台轻松查看。
 
-# 客户端对象模型
+### 客户端对象模型分发
 
 一旦你构建了应用程序，你可能想让其他人使用。你的应用程序将依赖于对象模型程序集，而你不被允许随程序重新分发它们。通常建议是，任何需要对象模型的客户端都应该已经安装 Visual Studio Team Explorer；但是，有一个独立的对象模型安装程序位于 http://aka.ms/tfsom。
 
-# SOAP 订阅
+## SOAP 订阅
 
 所有版本的 Team Foundation Server 都包含事件订阅。你可以订阅工作项、提交和其他事件。在订阅定义中，你指定要订阅的事件类型和应调用的 SOAP 端点。当事件触发时，Team Foundation Server 会调用你端点的 `Notify` 方法，并执行代码。
 
 SOAP 订阅是 Team Foundation Server 2005 发布的一个佳示例。当时产品缺乏持续集成构建功能。社区通过构建一个订阅 `CheckEvent` 的服务来应对。然后，当有人提交文件到特定路径时，该服务就会启动该路径的构建。
 
-
-
-
-
-## 702 | 第 27 章 扩展 Team Foundation Server
+### 局限性
 
 在运行 SOAP 事件订阅之前，你可能需要考虑以下两点局限性：
 
-- 1. SOAP 事件订阅允许你仅在事件发生后才做出反应。你无法阻止事件的进一步执行。Team Foundation Server 在事件发生后异步请求端点。这意味着它们并不适用于“强制执行”活动。它们只能发送警报或运行代码将事件改回其先前的值。
-- 2. SOAP 事件订阅的交付是不有保证的。如果你的端点不可用，或者它在处理事件时出现问题，可能会丢失事件。如果丢失事件对你来说是个问题，你将需要运行一次来协调丢失的事件。
+1. SOAP 事件订阅允许你仅在事件发生后才做出反应。你无法阻止事件的进一步执行。Team Foundation Server 在事件发生后异步请求端点。这意味着它们并不适用于“强制执行”活动。它们只能发送警报或运行代码将事件改回其先前的值。
+2. SOAP 事件订阅的交付是不有保证的。如果你的端点不可用，或者它在处理事件时出现问题，可能会丢失事件。如果丢失事件对你来说是个问题，你将需要运行一次来协调丢失的事件。
 
 > 警告 更多信息，请参阅 http://tinyurl.com/TFSGuaranteedEvents 中的“TFS 是否保证事件订阅交付？”
 
-## 可用的事件类型
+### 可用的事件类型
 
 要检索所有可订阅的 SOAP 事件列表，你可以使用以下 PowerShell 脚本配合 IRegistration 服务：
 
@@ -14457,15 +13496,17 @@ $reg.GetRegistrationEntries($null) | fl Type, EventType
 | | TestRunStartedEvent |
 | Discussion | CodeReviewChangeEvent |
 
-> 注意 WITAdapterSchemaConflictEvent 是 Team Foundation Server 2010 Pack 1 中提供的一个新事件。当工作项跟踪仓库首次检测到架构冲突、每当架构冲突原因发生变化以及最后当架构冲突解决时，都会触发它。使用此事件，你可以订阅电子邮件警报，或使用 SOAP 事件订阅尝试自动解决仓库架构冲突。
+> 注意 `WITAdapterSchemaConflictEvent` 是 Team Foundation Server 2010 Pack 1 中提供的一个新事件。当工作项跟踪仓库首次检测到架构冲突、每当架构冲突原因发生变化以及最后当架构冲突解决时，都会触发它。使用此事件，你可以订阅电子邮件警报，或使用 SOAP 事件订阅尝试自动解决仓库架构冲突。
 
-## 构建端点
+### 构建端点
 
 托管端点的简单方法是构建一个 Windows 服务并使用 WCF WSHttpHttp 绑定。或者，你也可以将其作为网站部署在 IIS 中。
 
-## 添加订阅
+### 添加订阅
 
-一旦你有了订阅处理程序，就必须将订阅添加到 Team Foundation Server。在脚本中执行此操作的方法是使用 C:\Program Files\Microsoft Team Foundation Server 2012\Tools\ 上任何分层服务器的 BisSubscribe.exe 工具。如果你不想为了新订阅登录服务器，也可以将此程序复制到本地机器。
+
+
+一旦你有了订阅处理程序，就必须将订阅添加到 Team Foundation Server。在脚本中执行此操作的方法是使用 `C:\Program Files\Microsoft Team Foundation Server 2012\Tools\` 上任何分层服务器的 `BisSubscribe.exe` 工具。如果你不想为了新订阅登录服务器，也可以将此程序复制到本地机器。
 
 在 Team Foundation Server 2012 中，你还可以从创建电子邮件服务时相同的 Alerts Web 页面创建新警报。只需将消息格式更改为 SOAP 消息并在“发送到”中指定端点，如图 27-2 所示。
 
@@ -14475,9 +13516,9 @@ $reg.GetRegistrationEntries($null) | fl Type, EventType
 
 ## 列出事件订阅
 
-如果你是集合管理员，你可能想查看为所有用户为集合配置了哪些订阅。通过 BisSubscribe.exe 或 Alerts Explorer 无法实现。
+如果你是集合管理员，你可能想查看为所有用户为集合配置了哪些订阅。通过 `BisSubscribe.exe` 或 Alerts Explorer 无法实现。
 
-你可以使用以下 PowerShell 脚本来实现，该脚本调用 IEventService 服务上的 GetAllEventSubscriptions 方法：
+你可以使用以下 PowerShell 脚本来实现，该脚本调用 `IEventService` 服务上的 `GetAllEventSubscriptions` 方法：
 
 ```powershell
 # 获取所有事件订阅
@@ -14502,18 +13543,19 @@ $event = $Tpc.GetServer([Microsoft.TeamFoundation.Framework.Client, IEventServic
 $event.GetAllEventSubscriptions() | fl ID, EventType, ConditionString
 ```
 
-如果有你想删除的订阅，可以使用 BisSubscribe.exe /unsubscribe，或者在运行之前的脚本后使用以下行：
+如果有你想删除的订阅，可以使用 `BisSubscribe.exe /unsubscribe`，或者在运行之前的脚本后使用以下行：
 
 - 取消订阅事件
-  $event.UnsubscribeEvent(<id>)
 
- 服务器模型
+  `$event.UnsubscribeEvent(<id>)`
+
+### 服务器模型
 
 随着 Team Foundation 支持多集合的架构更改，服务器模型现在更易访问了。
 
-> 注意 关于服务器模型的信息，请参阅 MSDN 上的“扩展 Team Foundation”http://aka.ms/TfsServer。
+> 注意 关于服务器模型的信息，请参阅 MSDN 上的“扩展 Team Foundation”`http://aka.ms/TfsServer`。
 
- 服务器扩展接口
+### 服务器扩展接口
 
 虽然服务器模型中的许多接口被标记为公共，但某些更适合自定义和扩展。表 27-2 根据以下指南说明了接口及其适用性：
 
@@ -14525,22 +13567,18 @@ $event.GetAllEventSubscriptions() | fl ID, EventType, ConditionString
 
 | 接口 | 描述 | 适用性 |
 |---|---|---|
-| ISubscriber | 这用于……将在本文中介绍。 | 适用 |
-| ITeamFoundationRequestFilter | 这允许扩展检查并管理请求。将在本文中介绍。 | 适用 |
-| ISecurityChangeEvent | 响应安全变化的通知。这通常是一个审计器…… | 限制 |
-| ITeamFoundationHostStateType | 用于防止集合启动。如果客户想要实现…… | 限制 |
-| ICatalogResourceTypeSet | 如果你要扩展目录……这就是你实现的的接口。 | 限制 |
-| IStepformer | 这是服务引擎 API……这与工作流非常相似。 | 限制 |
-| IServicingStepGroupExecutionHandler | 这些是服务引擎中的钩子，允许你更改步骤的状态…… | 限制 |
-| ISecurityNamespaceExtension | 这允许你覆盖现有安全命名空间内的行为。 | 限制 |
-| ILinkingConsumer, ILinkingProvider | 链接接口用于扩展……该系统目前未被广泛使用…… | 不适用 |
-| ISubscriptionPersistence | 当事件订阅被读取和写入时使用…… | 不适用 |
-| ITeamFoundationsSystemHostValidator | 此接口是内部的，不供公共使用。 | 不适用 |
-| IIdentityProvider | 此接口用于支持其他身份类型…… | 不适用 |
-
-
-
-
+| `ISubscriber` | 这用于……将在本文中介绍。 | 适用 |
+| `ITeamFoundationRequestFilter` | 这允许扩展检查并管理请求。将在本文中介绍。 | 适用 |
+| `ISecurityChangeEvent` | 响应安全变化的通知。这通常是一个审计器…… | 限制 |
+| `ITeamFoundationHostStateType` | 用于防止集合启动。如果客户想要实现…… | 限制 |
+| `ICatalogResourceTypeSet` | 如果你要扩展目录……这就是你实现的的接口。 | 限制 |
+| `IStepformer` | 这是服务引擎 API……这与工作流非常相似。 | 限制 |
+| `IServicingStepGroupExecutionHandler` | 这些是服务引擎中的钩子，允许你更改步骤的状态…… | 限制 |
+| `ISecurityNamespaceExtension` | 这允许你覆盖现有安全命名空间内的行为。 | 限制 |
+| `ILinkingConsumer`, `ILinkingProvider` | 链接接口用于扩展……该系统目前未被广泛使用…… | 不适用 |
+| `ISubscriptionPersistence` | 当事件订阅被读取和写入时使用…… | 不适用 |
+| `ITeamFoundationsSystemHostValidator` | 此接口是内部的，不供公共使用。 | 不适用 |
+| `IIdentityProvider` | 此接口用于支持其他身份类型…… | 不适用 |
 
 # 端插件 (Server Plug-Ins)
 
@@ -14548,8 +13586,8 @@ Team Foundation Server 包含了服务器插件的概念。这些插件的编写
 
 有两个接口适用于扩展：
 
-- 1. ISubscriber—用于定义实时的、进程内的事件订阅
-- 2. ITeamFoundationRequestFilter—可以检查请求的实现类
+- 1. `ISubscriber`—用于定义实时的、进程内的事件订阅
+- 2. `ITeamFoundationRequestFilter`—可以检查请求的实现类
 
 要使用这些接口，你必须在应用程序层的 `\Application Tier\Web Services\bin` 目录中添加对 `Microsoft.TeamFoundation.Framework.Server.dll` 程序集的引用。此外，你还需要对包含你想要订阅的事件的程序集进行引用。
 
@@ -14557,64 +13595,64 @@ Team Foundation Server 包含了服务器插件的概念。这些插件的编写
 
 > 警告 如果你有有多个应用程序层，你的服务器插件和作业扩展必须部署到所有层中。如果插件在特定的应用程序层上不可用，则对该层的请求将不会触发该插件。
 
-# ISubscriber：进程内事件处理 (In-Process Eventing)
+## `ISubscriber`：进程内事件处理 (In-Process Eventing)
 
-这是第三方使用扩展的最常见路径。Team Foundation Server 2012 事件会向所有订阅了事件的 ISubscribers 触发。服务器上几乎主要事件都会发布事件。
+这是第三方使用扩展的最常见路径。Team Foundation Server 2012 事件会向所有订阅了事件的 `ISubscribers` 触发。服务器上几乎主要事件都会发布事件。
 
 你可以订阅两种不同类型的事件：
 
-- 1. DecisionPoint（决策点）—你可以阻止某些事情发生。
-- 2. Notification（通知）—当事情发生时，你会接收到事件。
+- 1. `DecisionPoint`（决策点）—你可以阻止某些事情发生。
+- 2. `Notification`（通知）—当事情发生时，你会接收到事件。
 
-在大多数（但并非所有）情况下，都会触发 DecisionPoint 和 Notification，如表 27-3 所示。这意味着你必须在事件处理程序中检查 `NotificationType`；否则，你的代码可能会在你预期它只运行一次的情况下运行两次。
+在大多数（但并非所有）情况下，都会触发 `DecisionPoint` 和 `Notification`，如表 27-3 所示。这意味着你必须在事件处理程序中检查 `NotificationType`；否则，你的代码可能会在你预期它只运行一次的情况下运行两次。
 
-# 表 27-3：可用的通知事件
-
-| 组件 | 服务器对象模型程序集 | 事件 | 通知类型 |
-| --- | --- | --- | --- |
-| 版本控制 (Version Control) | Microsoft .TeamFoundation .VersionControl .Server.dll | CheckInNotification | 决策, 通知 |
-| | | PendChangesNotification | 决策, 通知 |
-| | | UndoPendingChangesNotification | 决策, 通知 |
-| | | ShelvesetNotification | 决策, 通知 |
-| | | WorkspaceNotification | 决策, 通知 |
-| | | LabelNotification | 通知 |
-| | | CodeChurnCompletedNotification | 通知 |
-| 构建 (Build) | Microsoft .TeamFoundation .Build.Server .dll | BuildCompletionNotificationEvent | 通知 |
-| | | BuildQualityChangedNotificationEvent | 通知 |
-| 工作项跟踪 (Work Item Tracking) | Microsoft .TeamFoundation .WorkItemTracking .Server .DataAccessLayer .dll | WorkItemChangedEvent | 通知 |
-| | | WorkItemMetadataChangedNotification | 通知 (最小) |
-| | | WorkItemsDestroyedNotification | 通知 (最小) |
-| 测试管理 (Test Management) | Microsoft.TeamFoundation .TestManagement .Server.dll | TestSuiteChangedNotification | 通知 |
-| | | TestRunChangedNotification | 通知 |
-
-# 表 27-3（续）
+### 表 27-3：可用的通知事件
 
 | 组件 | 服务器对象模型程序集 | 事件 | 通知类型 |
 | --- | --- | --- | --- |
-| | | TestPlanChangedNotification | 通知 |
-| | | TestCaseChangedNotification | 通知 |
-| | | TestPointChangedNotification | 通知 |
-| | | TestRunCoverageUpdatedNotification | 通知 |
-| | | BuildCoverageUpdatedNotification | 通知 |
-| | | TestConfigurationChangedNotification | 通知 |
-| 框架 (Framework) | Microsoft .TeamFoundation.Server.dll | StructureChangedNotification | 通知 |
-| | | AuthorizationChangedNotification | 通知 |
-| 框架 | Microsoft .TeamFoundation.Framework.Server.dll | IdentityChangedNotification | 通知 |
-| | | SecurityChangedNotification | 决策, 通知 |
-| | | SendEmailNotification | 决策 |
-| | | HostReadyEvent | 通知 |
+| 版本控制 (Version Control) | `Microsoft.TeamFoundation.VersionControl.Server.dll` | `CheckInNotification` | 决策, 通知 |
+| | | `PendChangesNotification` | 决策, 通知 |
+| | | `UndoPendingChangesNotification` | 决策, 通知 |
+| | | `ShelvesetNotification` | 决策, 通知 |
+| | | `WorkspaceNotification` | 决策, 通知 |
+| | | `LabelNotification` | 通知 |
+| | | `CodeChurnCompletedNotification` | 通知 |
+| 构建 (Build) | `Microsoft.TeamFoundation.Build.Server.dll` | `BuildCompletionNotificationEvent` | 通知 |
+| | | `BuildQualityChangedNotificationEvent` | 通知 |
+| 工作项跟踪 (Work Item Tracking) | `Microsoft.TeamFoundation.WorkItemTracking.Server.DataAccessLayer.dll` | `WorkItemChangedEvent` | 通知 |
+| | | `WorkItemMetadataChangedNotification` | 通知 (最小) |
+| | | `WorkItemsDestroyedNotification` | 通知 (最小) |
+| 测试管理 (Test Management) | `Microsoft.TeamFoundation.TestManagement.Server.dll` | `TestSuiteChangedNotification` | 通知 |
+| | | `TestRunChangedNotification` | 通知 |
 
-> 注意 关于 ISubscriber 接口定义，请参阅 http://aka.ms/ISubscriber。
+### 表 27-3（续）
 
-# 决策点 (Decision Points)
+| 组件 | 服务器对象模型程序集 | 事件 | 通知类型 |
+| --- | --- | --- | --- |
+| | | `TestPlanChangedNotification` | 通知 |
+| | | `TestCaseChangedNotification` | 通知 |
+| | | `TestPointChangedNotification` | 通知 |
+| | | `TestRunCoverageUpdatedNotification` | 通知 |
+| | | `BuildCoverageUpdatedNotification` | 通知 |
+| | | `TestConfigurationChangedNotification` | 通知 |
+| 框架 (Framework) | `Microsoft.TeamFoundation.Server.dll` | `StructureChangedNotification` | 通知 |
+| | | `AuthorizationChangedNotification` | 通知 |
+| 框架 | `Microsoft.TeamFoundation.Framework.Server.dll` | `IdentityChangedNotification` | 通知 |
+| | | `SecurityChangedNotification` | 决策, 通知 |
+| | | `SendEmailNotification` | 决策 |
+| | | `HostReadyEvent` | 通知 |
 
-DecisionPoint 事件在操作提交之前触发，可以防止操作发生。大多数操作不允许你更改值，只能接受或拒绝请求。
+> 注意 关于 `ISubscriber` 接口定义，请参阅 `http://aka.ms/ISubscriber`。
+
+## 决策点 (Decision Points)
+
+`DecisionPoint` 事件在操作提交之前触发，可以防止操作发生。大多数操作不允许你更改值，只能接受或拒绝请求。
 
 > 警告 这些处理是在请求处理线程上执行的，因此它们应该是轻量级的且执行迅速。否则，它们将影响任何触发该事件的调用者。
 
-对于 DecisionPoint 通知，你的 `ProcessEvent` 调用将在更改发生之前被调用。如果你拒绝请求，可以设置一个显示给用户的消息。更改将被中止，处理将不再继续。
+对于 `DecisionPoint` 通知，你的 `ProcessEvent` 调用将在更改发生之前被调用。如果你拒绝请求，可以设置一个显示给用户的消息。更改将被中止，处理将不再继续。
 
-以下代码示例显示了一个 ISubscriber 插件，该插件订阅了 CheckinNotification 事件和 DecisionPoint 类型的通知事件：
+以下代码示例显示了一个 `ISubscriber` 插件，该插件订阅了 `CheckinNotification` 事件和 `DecisionPoint` 类型的通知事件：
 
 ```csharp
 using System;
@@ -14688,11 +13726,11 @@ namespace DecisionPointSubscriber
 
 # 第 27 章 扩展 Team Foundation Server
 
- 通知 (Notifications)
+## 通知 (Notifications)
 
 对于通知事件，不期望有返回值，其发布仅作为事件发生的通知。通知事件是异步执行的，因此它们对调用者没有影响。你仍应注意不要消耗过多的资源。
 
-以下代码示例显示了一个订阅 LabelNotification 事件的简单 ISubscriber 插件：
+以下代码示例显示了一个订阅 `LabelNotification` 事件的简单 `ISubscriber` 插件：
 
 ```csharp
 using System;
@@ -14703,8 +13741,6 @@ using Microsoft.TeamFoundation.VersionControl.Server;
 ```
 
 www.it-ebooks.info
-
-
 
 
 
@@ -14800,22 +13836,22 @@ processing events", exception);
 
 此接口允许插件检查并管理所有传入的请求。Team Foundation Server 2012 包含了两个内置过滤器：
 
-- 1. ResourceGovernorFilter——Team Foundation Server 中的每个方法都分配有一个成本。资源调节器请求过滤器控制可以并发运行的请求数量，并排队请求直到有可用资源。
-- 2. UserAgentCheckingFilter——如果你尝试使用 Visual Studio 2010 客户端连接到 Team Foundation Server 2012，将收到一个错误，提示客户端在没有补丁的情况下不兼容。客户端用户代理的检查和请求的拒绝是由此请求过滤器完成的。
+- 1. `ResourceGovernorFilter`——Team Foundation Server 中的每个方法都分配有一个成本。资源调节器请求过滤器控制可以并发运行的请求数量，并排队请求直到有可用资源。
+- 2. `UserAgentCheckingFilter`——如果你尝试使用 Visual Studio 2010 客户端连接到 Team Foundation Server 2012，将收到一个错误，提示客户端在没有补丁的情况下不兼容。客户端用户代理的检查和请求的拒绝是由此请求过滤器完成的。
 
-> 注意：关于 ITTeamFoundationRequestFilter 接口定义，请参阅 http://aka.ms/ITTeamFoundationRequestFilter。
+> 注意：关于 `ITTeamFoundationRequestFilter` 接口定义，请参阅 http://aka.ms/ITTeamFoundationRequestFilter。
 
-由于请求过滤器不依赖于服务器实现的任何特定事件，因此有一种方法可以检查所有的服务器请求。表格 27-4 描述了 ITTeamFoundationRequestFilter 中的每个方法。
+由于请求过滤器不依赖于服务器实现的任何特定事件，因此有一种方法可以检查所有的服务器请求。表格 27-4 描述了 `ITTeamFoundationRequestFilter` 中的每个方法。
 
-表 27-4：ITTeamFoundationRequestFilter 接口
+### 表 27-4：ITTeamFoundationRequestFilter 接口
 
 | 方法 | 描述 |
 |---|---|
-| BeginRequest | 在服务器确定请求的目标站点或主机并验证其即将开始处理时调用。所有带有 `BeginRequest` 的请求都会调用它。 |
-| RequestReady | 在请求通过身份验证并准备开始执行时调用。此时 `requestContext.User` 属性将包含已验证的用户信息。 |
-| EnterMethod | 在请求上执行的方法已声明时调用。`EnterMethod` 包含了方法名称和输入参数的类型。 |
-| LeaveMethod | 在方法执行完成后调用。一旦调用了 `EnterMethod`，`LeaveMethod` 也一定会被调用。 |
-| EndRequest | 在请求完成后调用。所有带有 `BeginRequest` 的请求都有 `EndRequest` 调用。 |
+| `BeginRequest` | 在服务器确定请求的目标站点或主机并验证其即将开始处理时调用。所有带有 `BeginRequest` 的请求都会调用它。 |
+| `RequestReady` | 在请求通过身份验证并准备开始执行时调用。此时 `requestContext.User` 属性将包含已验证的用户信息。 |
+| `EnterMethod` | 在请求上执行的方法已声明时调用。`EnterMethod` 包含了方法名称和输入参数的类型。 |
+| `LeaveMethod` | 在方法执行完成后调用。一旦调用了 `EnterMethod`，`LeaveMethod` 也一定会被调用。 |
+| `EndRequest` | 在请求完成后调用。所有带有 `BeginRequest` 的请求都有 `EndRequest` 调用。 |
 
 以下代码示例显示了一个实现 `EnterMethod` 的简单 `ITTeamFoundationRequestFilter` 插件：
 
@@ -14850,10 +13886,6 @@ namespace RequestFilter
 }
 ```
 
-
-
-
-
 ```
 {
   resultMessage = null;
@@ -14886,13 +13918,11 @@ namespace RequestFilter
 
 最后，作业将向应用程序事件日志记录一条消息，指示过去一个月内有多少工作空间和状态未被访问。
 
-# 作业部署
+## 作业部署
 
 自定义作业扩展最困难的部分是部署。为单个集合定义单个作业很容易的。然而，如果你想为所有新集合定义并调度你的作业，目前还没有简单的方法可以实现。
 
-# 第 27 章 扩展 TEAM FOUNDATION SERVER
-
-> 注意：内置作业是使用内置项目集合脚本中的维护步骤（servicing steps）进行调度的。遗憾的是，这些维护步骤在每次补丁 Team Foundation Server 时都会被替换。因此，如果你对它们进行了自定义，在下次升级时它们会被覆盖。一种创性的解决方案是使用订阅 `HostReadyEvent` 的 Isubscriber 通知插件。每当服务器启动时，它都可以检查作业是否已为所有项目集合调度，如果没有，则进行调度。
+> 注意：内置作业是使用内置项目集合脚本中的维护步骤（servicing steps）进行调度的。遗憾的是，这些维护步骤在每次补丁 Team Foundation Server 时都会被替换。因此，如果你对它们进行了自定义，在下次升级时它们会被覆盖。一种创性的解决方案是使用订阅 `HostReadyEvent` 的 `Isubscriber` 通知插件。每当服务器启动时，它都可以检查作业是否已为所有项目集合调度，如果没有，则进行调度。
 
 下面的 PowerShell 脚本演示了如何从客户端对象模型使用 `TeamFoundationJobService` 为单个集合定义并调度作业：
 
@@ -14962,7 +13992,9 @@ Framework.Client.TeamFoundationJobSchedule
 $JobDefinition.Add($JobSchedule)
 # 将作业定义保存到集合的作业服务。
 $JobService.UpdateJob($JobDefinition)
-```此脚本连接到指定的集合（如果没有指定则连接默认集合）。然后为作业扩展创建一个 `TeamFoundationJobDefinition` 对象。接着为作业创建一个 `TeamFoundationJobSchedule`，调度为从明天 UTC 时间 5 点开始每 24 小时运行一次。一旦定义了作业及其调度，就会通过 `UpdateJob()` 保存到服务器。
+```
+
+此脚本连接到指定的集合（如果没有指定则连接默认集合）。然后为作业扩展创建一个 `TeamFoundationJobDefinition` 对象。接着为作业创建一个 `TeamFoundationJobSchedule`，调度为从明天 UTC 时间 5 点开始每 24 小时运行一次。一旦定义了作业及其调度，就会通过 `UpdateJob()` 保存到服务器。
 
 要调用作业及其调度，并查看你的作业扩展是否工作，可以运行以下 PowerShell 命令：
 
@@ -14973,9 +14005,11 @@ $JobService.QueueJobNow($JobDefinition, $false)
 
 # VISUAL STUDIO 扩展性
 
-你可以使用宏、插件、VPackage 和托管扩展 MEF 框架来扩展 Visual Studio，并且可以通过包括 VSIX 和自定义扩展库在内的多种方式进行部署。
 
-通过利用 Visual Studio 扩展性，还可以自动化和扩展 Team Foundation 的窗口、对话框和事件。请注意，并非所有对话框在不深度使用反射的情况下都是可扩展的，如果是，Visual Studio 的更新可能会破坏你的集成。
+
+你可以使用宏、插件、`VPackage` 和托管扩展 `MEF` 框架来扩展 `Visual Studio`，并且可以通过包括 `VSIX` 和自定义扩展库在内的多种方式进行部署。
+
+通过利用 `Visual Studio` 扩展性，还可以自动化和扩展 Team Foundation 的窗口、对话框和事件。请注意，并非所有对话框在不深度使用反射的情况下都是可扩展的，如果是，`Visual Studio` 的更新可能会破坏你的集成。
 
 # 第 27 章 扩展 TEAM FOUNDATION SERVER
 
@@ -14983,9 +14017,9 @@ $JobService.QueueJobNow($JobDefinition, $false)
 
 **图 27-3：** 与 Source Control Explorer 交互的插件示例
 
-> 注意：扩展 Source 请参见 http://tinyurl.com/TFSExtending。扩展工作项跟踪的示例请参见 http://tinyurl.com/TFSExtendingMenu。关于 Visual Studio 扩展性的通用信息，请参见 http://aka.ms/VExtensions。
+> 注意：扩展 Source 请参见 http://tinyurl.com/TFSExtending。扩展工作项跟踪的示例请参见 http://tinyurl.com/TFSExtendingMenu。关于 `Visual Studio` 扩展性的通用信息，请参见 http://aka.ms/VExtensions。
 
-Team Foundation UI 的一个区域是为 Visual Studio 内部的扩展性设计的，即它包含的新控件。表 27-5 描述了可能的 Team Explorer 扩展点。
+Team Foundation UI 的一个区域是为 `Visual Studio` 内部的扩展性设计的，即它包含的新控件。表 27-5 描述了可能的 Team Explorer 扩展点。
 
 | 扩展类型 | 资源管理器 |
 | :--- | :--- |
@@ -14994,7 +14028,7 @@ Team Foundation UI 的一个区域是为 Visual Studio 内部的扩展性设计�
 | Team Explorer 导航项 | Team Explorer 允许快捷方式出现在顶部的下拉列表中。这些被定义为导航项。 |
 | Team Explorer 导航链接 | 部分可以包含导航到其他页面的链接。 |
 
-Team Explorer 是一个新的基于 WPF 的控件，利用了 `Microsoft.TeamFoundation.VersionControl.Extensibility` 定义的扩展性。扩展 Visual Studio 2012 中的 Team Explorer 示例参见 http://aka.ms/ExtDE。类似的 Eclipse 示例（Java TFS SDK）可以在 http://aka.ms/tsdk4java 找到。 |
+Team Explorer 是一个新的基于 `WPF` 的控件，利用了 `Microsoft.TeamFoundation.VersionControl.Extensibility` 定义的扩展性。扩展 `Visual Studio 2012` 中的 Team Explorer 示例参见 http://aka.ms/ExtDE。类似的 Eclipse 示例（Java TFS SDK）可以在 http://aka.ms/tsdk4java 找到。
 
 # 其他资源
 
@@ -15007,13 +14041,8 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 | Visual Studio ALM Rangers | 这为缺失的功能或指导提供带外解决方案。他们会定期收集新项目的提名，进行开发并在 Codelex 上发布。 | 有关更多信息，请参考 MSDN 上的 Visual Studio ALM Ranger 页面 http://aka.ms/Rangers。 |
 | Visual Studio Industry Partners (VSIP) | 为销售集成和扩展 Visual Studio 合作伙伴提供技术资源、见解和大量的联合营销。 | 要了解现有的 VSIP 合作伙伴，请参见 http://aka.ms/vsip。 |
 | 微软合作伙伴计划：ALM 能力 | 微软计划中的应用程序生命管理 (ALM) 能力使合作伙伴能够证明他们在为 Microsoft Visual 工具提供培训、咨询或部署方面的专业知识。 | 要查找到已获得 ALM 能力的合作伙伴，请参见 Microsoft Pinpoint http://aka.ms/ALPartners。 |
-| Codelex | 这是微软的开源项目托管网站。你可以下载并使用 Codelex 上许多扩展 Team Foundation Server 的项目。你还可以使用 Codelex 与世界共享你自己的扩展。 | 有关扩展 Team Foundation Server 的开源项目，请参见 http://www.codeplex com/site/search?query=tfs. |
-
-
-
-
-
-| 表 27-6（续） |
+| Codelex | 这是微软的开源项目托管网站。你可以下载并使用 Codelex 上许多扩展 Team Foundation Server 的项目。你还可以使用 Codelex 与世界共享你自己的扩展。 | 有关扩展 Team Foundation Server 的开源项目，请参见 http://www.codeplex com/site/search?query=tfs。 |
+| 表 27-6（续） |  |  |
 | 资源 | 描述 | 备注 |
 | --- | --- | --- |
 | Visual Studio 库 | 此提供了工具、控件和模板的快速访问，帮助您充分利用 Visual Studio 的功能。 | 如需 Visual Studio 工具和扩展列表，请参见 http://tinyurl.com/VSGalleryTFS。 |
@@ -15031,7 +14060,7 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 
 - 访问控制项 (Access Control Entries), 531
 - 访问仪表板, 356
-- 账户命令 TfsConfig.exe, 517
+- 账户命令 `TfsConfig.exe`, 517
 - 获取选项, 7–11
 - 可操作项目, 332, 656
 - 活动目录组 (Active Directory groups), 596
@@ -15065,7 +14094,7 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 - MMC 嵌入程序 (MMC snap-in), 348
 - 报告部分 (Reporting section), 515, 516
 - SCVMM, 555
-- SharePoint  部分 (SharePoint Web Applications section), 514–515
+- SharePoint 部分 (SharePoint Web Applications section), 514–515
 - SMTP 配置, 597
 - 团队项目集部分 (Team Project Collections section), 505–514
 - 访问, 506
@@ -15073,19 +14102,19 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 - SharePoint 站点标签页 (SharePoint Site tab), 509
 - 状态标签页 (Status tab), 507
 - 团队项目集 (Team Projects collection), 522
-- TfsConfig.exe, 493, 517–519, 572
+- `TfsConfig.exe`, 493, 517–519, 572
 - Visual 升级 (Visual Source Upgrade), 182
 - 管理工具, 519–524
 - 最佳实践分析器 (Best Practices Analyzer)
 - 健康检查调用, 520
-- TfsSpaCmd.exe, 522
+- `TfsSpaCmd.exe`, 522
 - 使用, 520–623–624
 - 命令行配置, 516–519
-- Tfs.exe, 权限, 517, 597
-- Tfs.exe, 代理, 617–684
-- TfsConfig.exe, 493, 517–519, 572
-- TfsSecurity.exe, 517, 580, 597
-- TfsSecurityControl.exe, 519, 566–567, 572–573
+- `Tfs.exe`, 权限, 517, 597
+- `Tfs.exe`, 代理, 617–684
+- `TfsConfig.exe`, 493, 517–519, 572
+- `TfsSecurity.exe`, 517, 580, 597
+- `TfsSecurityControl.exe`, 519, 566–567, 572–573
 - vitamin, 225, 297, 301, 416
 - 演进, 493
 - 局限性, 498
@@ -15196,7 +14225,7 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 - 请求队列 (Requests)
 - 性能计数器, 542
 - 工作线程, 532
-- AssemblyInfoSpec, 483, 486
+- `AssemblyInfoSpec`, 483, 486
 - 代理 (Agent): 范围, 452–453
 - 关联, 451
 - 关联工作项, 435
@@ -15209,20 +14238,17 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 - 附件 (Attachments), 343
 - 另参参见
 
-
-
-
-
 # BaseCode.cs — 构建资产
 
-- BaseCode.cs, 自定义构建工作流活动, 461–466
+- `BaseCode.cs`, 自定义构建工作流活动, 461–466
 - bameless merges, 196, 216–220
 - 基础向导 (Basic wizard), 50
 - Bazaar, 91
 
 ## 最佳实践分析器 (Best Practices Analyzer)
+
 - 健康检查, 520–521
-- TfsBaCmd.exe 工具, 520
+- `TfsBaCmd.exe` 工具, 520
 - using, 520–523, 623–624
 - 升级验证, 666
 - 双向同步, 361–366. *另参见* Server-Team Foundation server
@@ -15254,6 +14280,7 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
   - 门控提交 (gated check-in)
 
 ## 符号服务器与源码功能 (Symbol Server and Source Features), 233
+
 - 数据层瓶颈 (bottlenecks, data tier), 529–531
 - 分支 (branch), 193–222
 - 进入产品族分支, 233–235
@@ -15265,681 +14292,1293 @@ Team Foundation 非常具有扩展性，因此有很多解决方案和资源可�
 - 分支内的文件夹, 依赖 (folder inside branch)
   - 文件夹, 226–228
   - 文件夹结构设置, 223–225
-  - 实现分支, 201–222
-  - 主分支, 198, 199, 200, 201, 203
-  - 无分支技术 (no branching technique), 197–198
-  - 在线指南 (guidance online), 197
-  - 权限, 592–593
+
+
+
+- 实现分支, 201–222
+
+- 主分支, 198, 199, 200, 201, 203
+
+- 无分支技术 (no branching technique), 197–198
+
+- 在线指南 (guidance online), 197
+
+- 权限, 592–593
+
 - 提交以验证, 168
+
 - 持续集成 (Continuous Integration), 164–165
+
   - 定义, 164
-  -  true, 165–166
+
+  - true, 165–166
+
   - 协调工作区 (reconciling workspace), 168–170
+
   - 设置, 167–168
+
   - 触发器, 408
+
   - 何时不使用, 166–167
+
   - 简介, 389–390
+
   - 管理, 415–420
+
   - 网络流量, 677
+
   - 新功能, 7
+
   - 权限, 594
+
   - 私有, 411–413
+
   - 队列, 411–413
+
   - 服务帐户, 373
+
   - Prod, 200, 203, 212, 213, 214, 215
+
   - 晋入级分支 (promotion-level branching), 199–200, 202–203
+
   - Qa, 200, 203, 206, 207, 210, 212, 213, 216
+
   - 关系, 195
+
   - 策略, 196–201
+
   - tf 分支, 207, 212, 213
+
   - 跟踪更改, 220–222
+
   - 按标签分支 (branch by label), 212–213
+
   - 分支对话框 (Branch dialog), 205, 206, 207
+
   - 按更改集分支 (branch from changeset), 213–216
+
   - 每个功能分支 (branch per feature), 200–201
+
   - 按版本分支 (branch per release), 198–199
+
 ## Team Foundation 构建健康检查 (Team Foundation Build Health), 520
+
 - 测试计划, 639–640
-- tfsbuild.exe, 402, 418
+
+- `tfsbuild.exe`, 402, 418
+
 - 使用, 399–422
+
 - 构建管理人员 (Build Administrators), 默认项目
+
   - 组, 276
+
 - 构建代理 (build agents)
+
   - Agent 设置, 433–434
+
   - 定义, 391
+
   - 管理, 420–422
+
   - Team Foundation 构建架构, 391
+
   - 构建资产 (build assets), 围栏, 225
 
 # 构建自动化 (build automation) – 构建服务
 
-build automation
+`build automation`
+
   - 采用, 386–387
+
   - Apache Ant, 377–378, 390, 435
+
   - Apache Maven, 378–379, 390, 435–436
+
   - 构建房屋 (building house), 373–374
+
   - 定义, 375–376
+
   - 导入, 173
+
   - Make, 376–377, 379
+
   - MSBuild
+
     - 使用, 379–383, 457–458
+
     - NAnt, 379, 380, 384
+
     - 概述, 373–382
+
     - 升级, 670–672
+
     - WF, 383, 457–458
+
   - Windows Foundation, 383
+
 - 构建自动化服务器 (build automation servers)
+
   - CruiseControl, 384, 403
+
   - CruiseControl.NET, 384, 403
+
   - Hudson/Jenkins, 384–385
+
   - Team Foundation Server, 385–386
+
   - 使用, 383–386
+
   - Build Bunny, Brian, 386
+
   - 构建配置 (Build Configuration), 管理, 306, 396–398
+
   - 管理, 420–422
+
   - Team Foundation 构建架构, 391
+
   - 构建仪表板 (Build Dashboard), 355
+
   - 构建默认值 (Build Defaults), 定义, 407
+
   - 构建编辑器, 167, 400–401, 425, 426, 443
+
   - 构建定义 (build definitions)
+
     - 创建, 399–410
+
     - 描述, 390–391
+
     - 构建 QA, 207–308
+
     - 保存, 410
+
   - 构建删除选项 (Build Options), 410
+
   - 构建详情, 391
+
   - 构建详细视图 (Build Detail View), 418–420
-  - build.tf.domain.local, 406
+
+  - `build.tf.domain.local`, 406
+
   - 目的, Team Foundation Server架构, 660
+
   - 构建管理器 (Build Explorer), 415–417
+
   - 已完成构建标签 (Completed builds tab), 416–417
+
   - 队列构建标签 (Queued builds tab), 416
+
   - 协调工作区, 169
+
   - 构建信息转换器 (build information converter), 自定义, 380–381
+
   - 构建信息节点, 452, 453, 454, 480
+
 - 构建语言 (build languages)
+
   - Ant, 377–378, 390, 435–436
+
   - Make, 376–377, 379
+
   - Maven, 378–379, 390, 435–436
+
   - MSBuild, 379–383
+
   - NAnt, 379, 380, 384
+
 - 构建日志噪音 (build log noise), 456
+
 - 构建日志验证 (build log verify), 455–457
+
 - 构建通知工具, 413–414
+
 - 构建通知托盘 (Build Notifications Tray), 169
+
 - 构建格式 (build Format), 431
+
 - 构建号格式, 453, 473, 483
+
 - 构建参数 (build parameters)
+
   - 自定义, 442–449
+
   - 自定义编辑器, 446–449
+
   - 元数据规范, 444–445
+
   - 要构建的项目 (Projects to Build), 408, 426, 427
+
 - 可见性, 445
+
 - 构建路径, 最小化, 222
+
 - 构建过程 (build process)
+
   - 内自定义工作流, 473–478
+
   - 自定义, 437–439
+
   - 默认模板 (DefaultTemplate), 423–435, 11.1, 423–438
+
   - 定义自定义构建参数, 483
+
   - 构建自定义团队测试, 235, 238
+
   - 在程序集上盖版本号, 482–488
+
   - 理解, 422–436
+
   - 升级模板 (UpgradeTemplate), 423, 436, 671
+
   - 构建过程参数, 423–435
+
   - 构建质量定义, 420
+
 - 构建报告 (build report)
+
   - 从更改分支, 213, 214
+
   - 构建详细视图 (Build Details View), 418–420
+
   - 输出, 637–482
+
   - 协调工作区, 169
+
   - Team Foundation 构建架构, 391
+
   - 构建留策略, 410, 442, 640, 641
+
 - 构建服务器, 地理分布团队, 681
+
 - 构建服务 (build service)
+
   - 配置 Team Foundation 构建服务, 51, 393, 394, 395, 396
+
   - 配置, 393–399
+
   - 安装, 393
+
   - 设置, 392–399
+
   - 构建服务配置向导 (Build Service Configuration Wizard), 394–398
+
   - 构建服务主机, 作为交互进程, 398–399
 
 # 构建服务属性对话框 (Build Service Properties dialog)– 提交策略包 (Check-In Policy Pack)
 
 - 构建服务属性对话框, 398
+
 - 构建状态通知, 386
+
 - 构建摘要报告章节, 481–482
+
 - 构建验证测试 (build verification tests), 166, 176, 427
+
 - 构建代理 (BuildAgent), 441
+
 - 构建, 过程模板, 275
+
 - 构建更改集视图 (BuildChangeSet), 339
+
 - 构建覆盖率 (BuildCoverage), 339
+
 - 构建部署工作流 (build-deploy-workflow), 649–651
+
 - 构建详情 (BuildDetail), 441–442
+
 - 构建详细信息视图 (BuildDetailsView), 339
+
 - 构建项目 (BuildProject), 337
-- 构建 tfs.domain.local, 400
+
+- 构建 `tfs.domain.local`, 400
+
 - 下降图表 (downshift charts), 7, 246, 259, 300, 316, 324, 335
+
 - 业务目标, 灾难恢复, 549–550
+
 - 更改集 (changesets)
+
   - 从更改分支, 213–216
+
   - 处理, 208–220
+
   - 定义, 87, 117–118
+
   - 更改集的提交策略侧, 154
+
   - 从本地文件系统移除版本控制, 117–118
+
   - 回滚, 119
+
   - 跟踪可视化 (Tracking Visualization), 216, 220–221
+
   - 更改检查 (versionscks), 108
+
   - 更改集策略 (Changeset Policy), 112, 150, 151
+
   - 更改计算机或所有者, 工作区, 100
+
   - 提交,
+
     - 注释, 112
+
     - 提交, 87, 97, 110
+
     - 定义, 87, 109
+
     - 门控提交对话框 (Gated Check-In), 168, 404
+
     - 门控提交, 验证, 168
+
     - 持续集成 (Continuous Integration), 164–165
+
       - 定义, 164
+
       - 原因, 165–166
+
       - 协调工作区, 168–180
+
       - 设置, 168–119
+
       - 触发器, 403–405
+
       - 何时不使用, 166–167
+
     - 等待更改, 110–117
+
     - 验证, 168
+
   - 提交 (Check-in), 资源管理器, 543
+
   - 提交锁 (check-in locks), 110
+
   - 提交注释 (check-in notes), 115–116
+
   - 提交权限 (Check-In permission), 工作区, 106
+
   - 提交策略 (check-in policies)
+
     - 配置, 149–150
+
     - 自定义, 155–159
+
     - 定义, 116, 149
+
     - 部署, 159–164
+
 - 缓存 (cache)
+
   - 清除版本控制, 570–571
+
   - 文件下载目录, 544–545
+
   - 身份缓存, 配置, 497
+
   - 报告服务 (Reporting Services), 350
+
   - 缓冲缓存, 530–531
+
   - 计划缓存, 529–530, 605
+
   - 安全身份缓存 (security_identity_cache), 544
+
 - 客户端访问许可 (Client Access License)
+
   - 请求, 资源管理器, 543
+
   - 能力成熟度集成 (Capability Maturity Integration). 参见 CMMI
+
   - 额规划, 实验室 (Lab Management), 646
+
   - 管理团队, 26–227
+
   - 配置, 497
+
   - 类别, 446
+
   - 带代理的中央服务器, 679
+
   - 集中系统, 84, 90, 93
-  - 证书, TfConfig.exe, 517
+
+  - 证书, `TfConfig.exe`, 517
+
   - 更改服务警 (Change Service Alert), 503, 504
+
   - 更改 URL, 503, 504
-  - 更改字段, admin.exe, 295
-  - 更改 ID, TfConfig.exe, 517
+
+  - 更改字段, `admin.exe`, 295
+
+  - 更改 ID, `TfConfig.exe`, 517
+
   - 配置, 151
+
   - 自定义, 159
+
   - 部署, 163
+
   - 监控提交订单, 152–154
+
   - , 116–117
+
   - 权限, 592
+
   - 提交策略 (Check-In Policy), 154–155
 
 # 检出 (check-outs) – 命令日志
 
 - 检出 (check-outs)
+
   - 代码质量, 147–176. 参见代码审查
+
   - 控制, Get, 86, 107
+
   - 定义, 86–87
+
   - 从版本控制中, 137–139
+
 - 提交策略 (check-in policies)
+
     - 配置, 149–150
+
     - 自定义, 155–159
+
     - 定义, 116, 149
+
     - 部署, 159–164
+
 - 本地工作区 (Local Workspaces), 86–87
+
 - 检出锁 (check-out locks), 109–110
+
   - 定义, 116, 149
+
   - 子节点生成, 195
+
   - 子/父链接类型, 244, 287
+
   - Eclipse, 151, 159, 163
+
   - .chm 文件, 快速, 425, 392
+
   - 监控提交订单, 152–154
+
   - 分类, 过程模板文件, 275
+
   - 概述, 116–117
+
   - 清洁工作区参数 (Clean Workspace parameter), 431–432
+
 - 威力工具 (Power Tools), 154–155
+
 - ClearCase, 22, 99, 100
+
 - Team Explorer Everywhere, 151
+
 - 清除版本控制缓存, 类型, 150–151, 570–571, 警告, 151–152
+
 - ClearQuest, 22, 188, 190
+
 - 提交策略 (Check-In Policy), 154–155
+
 - 客户端访问许可 (CAL)
+
   - 定义, 148–149
+
   - 排除, 11
+
   - 强制执行, 149
+
 - 反馈客户端 (Feedback Client), 328
+
 - 门控检查 (gated checks)
+
   - MSDN 订阅, 44
+
   - 验证, 168
+
   - 在线信息, 8
+
   - 持续集成 (Continuous Integration), 164–165
+
     - 项目经理, 369
+
     - 定义, 164
+
     - Team Explorer 和 Team Everywhere, 使用原因, 165–166, 66, 131
+
     - 重新协调工作区, 170–168
+
     - Team Web Assist, 589–599
+
     - 设置, 167–188
+
     - 工作项视图功能 (Work Item View Feature), 270, 580, 590
+
     - 触发器, 403
+
     - 客户端对象模型, 697–701
+
     - 何时不使用, 166–167
+
     - 客户端性能跟踪, 616–617
+
     - 门控检查, 164–170
+
     - 客户端软件, Team Foundation Server, 概述, 147–148
+
     - 安装, 47
+
   - 代码审查 (code reviews)
+
     - 客户端层, 60, 495, 496
+
     - 完成, 175–176
+
     - 客户端侧备份, 551
+
     - 定义, 170
+
     - 隐蔽工作区映射, 104–105,
+
     - 管理, 170–176, 406
+
     - 我的工作功能 (My Work feature), 129–130
-
-
-
-
 
 # 命令行配置工具 - 当前 SQL 连接重试次数/秒
 
 - 命令行配置工具，516–519
-- TF.exe, 517, 597
-- TF. Proxy, 674–685
-- TFSConfig.exe, 493, 514, 517–592
-- TFSSecurity.exe, 517, 580, 583
-- TFSServiceControl.exe, 519, 566–567, 572–573
-- maden.exe, 295, 297, 303, 451, 516
+
+- `TF.exe`, 517, 597
+
+- `TF. Proxy`, 674–685
+
+- `TFSConfig.exe`, 493, 514, 517–592
+
+- `TFSSecurity.exe`, 517, 580, 583
+
+- `TFSServiceControl.exe`, 519, 566–567, 572–573
+
+- `maden.exe`, 295, 297, 303, 451, 516
+
 - 注释，在线检查，-112
+
 - 提交 (commit)，87, 90, 110。另参见检查 (check)
+
 - 提交状态 (Commit state)，396
-- 用成员，IWorkItem，305–306
-- CommonConfiguration.xml 文件，299, 300
+
+- 用成员，`IWorkItem`，305–306
+
+- `CommonConfiguration.xml` 文件，299, 300
+
 - 记录对等节点，342
+
 - 能力 (Competency)，通过微软合作伙伴计划结合 ALM
+
 - 能力 (Competency)，295
+
 - 完成 (Complete)，397
+
 - 已完成构建页，生成器资源管理器 (Builder Explorer)，416–417
+
 - 正在完成的评审，449–456
+
 - 工作空间名称更改，针对工作空间，100
+
 - 并发版本系统。CVS
-- ConfigPT.xml, 568
+
+- `ConfigPT.xml`, 568
+
 - 配置向导 (Configuration Wizard)，503, 393
-- 配置数据库 (Tfs_Configuration database)
+
+
+
+- 配置数据库 (`Tfs_Configuration database`)
+
   - 内容，496–497
+
   - 高可用性，536
-  - tlb_security_identity_cache_table，544
+
+  - `tlb_security_identity_cache_table`，544
+
 - Team Foundation Server 服务器架构，495
-- 配置阶段，48, 51, 55–64。另参见缩进 (indentation)，更新 (updates)
+
+- 配置阶段，48, 51, 55–64。另参见缩进 (`indentation`)，更新 (`updates`)
+
 - 配置工具，命令行-516–519
-- TF.exe 权限，517, 597
-- TF. Proxy，674–685
-- TFSConfig.exe，493, 514, 517–592
-- TFSSecurity.exe，517, 580, 583
-- TFSServiceControl.exe，519, 566–567, 572–573
-- maden.exe，295, 297, 303, 451, 516
+
+- `TF.exe` 权限，517, 597
+
+- `TF. Proxy`，674–685
+
+- `TFSConfig.exe`，493, 514, 517–592
+
+- `TFSSecurity.exe`，517, 580, 583
+
+- `TFSServiceControl.exe`，519, 566–567, 572–573
+
+- `maden.exe`，295, 297, 303, 451, 516
+
 - 配置构建参数，426–427
+
 - SharePoint 的配置扩展，51
+
 - 配置功能，667–699
+
 - Team Foundation Server 构建服务，51, 393, 394, 395, 396
+
 - 配置 Team Foundation Server 代理，51
-- ConfigureMain 命令，TFSConfig.exe，517
-- 冲突 (conflict)，194–195
+
+- `ConfigureMain` 命令，`TFSConfig.exe`，517
+
+- 冲突 (`conflict`)，194–195
+
 - 冲突解决，195, 687
-- 混乱状态 (confused state)，工作空间，124–125
+
+- 混乱状态 (`confused state`)，工作空间，124–125
 
 - 连接到 Team Foundation Server，59–79
+
 - Team Foundation Server 的跨平台命令行工具，72–73
+
   - 来自 Eclipse，71–72
+
   - 错误，70
+
   - 来自 Excel，75–76
+
   - Microsoft Project，66–77
+
   - Team Explorer，65–71
+
   - 通过第三方集成，78–79
+
   - 来自 Visual Studio，66–68
+
 - 连接字符串，497, 511, 552
-- 人口普查 (census)，19–20
+
+- 人口普查 (`census`)，19–20
+
 - 代理合并，644–645
-- 持续集成 (Continuous Integration)
+
+- 持续集成 (`Continuous Integration`)
+
   - 自动构建，375
+
   - Fowler 的论文，376
-  - 门禁检查 (gated-check)，164–165
-  - 三级 (trijer)，402–403
-- 贡献者 (Contributors)，团队项目安全组，276
-- 优于配置的设计范式 (Convention over Configuration design paradigm)，578
+
+  - 门禁检查 (`gated-check`)，164–165
+
+  - 三级 (`trijer`)，402–403
+
+- 贡献者 (`Contributors`)，团队项目安全组，276
+
+- 优于配置的设计范式 (`Convention over Configuration design paradigm`)，578
+
 - 转换为批处理对话框，198, 205
+
 - 转换工具，VSS，22
-- ConvertWorkSpace 项活动，454
-- ConvertWorkItems 活动，454
-- 复制规则 (Copy rule)，项目帮助，280
-- CopyDirectory 活动，454
+
+- `ConvertWorkSpace` 项活动，454
+
+- `ConvertWorkItems` 活动，454
+
+- 复制规则 (`Copy rule`)，项目帮助，280
+
+- `CopyDirectory` 活动，454
+
 - 复制复杂的文件夹映射助记程序配置，1010
-- 各种 (confurations)，105
+
+- 各种 (`confurations`)，105
+
 - 项目成本计算，Project Server，360
-- 创建新项 (Create New Item) 对话框，313
-- 失败时创建工作项 (Create Work Item on Failure) 参数，434
-- 创建分支 (CreateBranch)，资源服务器，543
-- 创建目录 (CreateDirectory) 活动，454
-- “为 Team Foundation Server 2010 创建报告”(Socha-Leialosa)，354
-- 登录管理器 (Credential Manager)，668
+
+- 创建新项 (`Create New Item`) 对话框，313
+
+- 失败时创建工作项 (`Create Work Item on Failure`) 参数，434
+
+- 创建分支 (`CreateBranch`)，资源服务器，543
+
+- 创建目录 (`CreateDirectory`) 活动，454
+
+- “为 Team Foundation Server 2010 创建报告”(`Socha-Leialosa`)，354
+
+- 登录管理器 (`Credential Manager`)，668
+
 - 跨预算交付物，Project Server，361
+
 - 跨集合报告，334, 532
+
 - Team Foundation Server 的跨平台命令行客户端，72–73
+
 - CruiseControl，384, 385, 403
+
 - CruiseControl.NET，384, 403
-- 立方 (cubes)。另参见 Analysis Services 立方
+
+- 立方 (`cubes`)。另参见 Analysis Services 立方
+
 - 累积更新，47
+
 - 当前报告，348, 349
+
 - 当前 SQL 连接失败次数/秒，614
+
 - 当前 SQL 连接重试次数/秒，614
 
 # 当前 SQL 执行重试次数/秒 –日期版本
 
 - 当前 SQL 执行重试次数/秒，614
+
 - 当前 SQL 执行次数/秒，614
+
 - 当前 SQL 通知查询/秒，614
+
 - 当前运行的查询，602–607
-- currentWorkItemView，339, 340–341
+
+- `currentWorkItemView`，339, 340–341
+
 - 自定义适配器，Team Foundation Platform，188–189
+
 - 自定义构建，480–481
+
 - 自定义构建参数，442–449
+
 - 自定义过程参数，483
+
 - 自定义工作流活动，458–480，在线信息，355
+
 - Web 部分，355
+
 - 数据安全，555–556
+
 - 数据存储，337–344。另参见 关系型数据库: 项目集合: 备份，551
+
 - 瓶颈，529–531
+
 - 聚类，31, 36
+
 - 定义，4
+
 - 高可用性，536–537
+
 - 可扩展性解决方案，537–538
+
 - Team Foundation Server 架构，60, 495, 496–497
+
 - 构制品管理，237–238
-- BaseCode.cs，461–466
+
+- `BaseCode.cs`，461–466
+
 - 在构建过程中，473–478
+
 - 创建，458–473
-- 自定义AssembliesAndExtensions.xml，479–480
+
+- 自定义`AssembliesAndExtensions.xml`，479–480
+
 - 部署，478–480
-- 自定义Version.cs，466–473
+
+- 自定义`Version.cs`，466–473
+
 - 自定义编辑器，针对构建参数，446–447
+
 - 自定义策略，155–159
-- 自定义路径 (Path)，255
+
+- 自定义路径 (`Path`)，255
+
 - 自定义链接类型，278–280
+
 - 自定义工作项，303–309
+
 - 自定义工作项类型，247–301, 341
+
 - 自定义工作变量，440–442
+
 - 自定义构建过程，360–482
+
 - 自定义仪表板，356–357
+
 - 自定义过程模板版，260–273, 310
+
 - 自定义项目门户，357
+
 - 自定义数据仓库适配器，357–358
+
 - 自定义策略.def，160
+
 - 数据仓库，337–344
+
 - 更改，335–336
+
 - 分析作业，337
+
 - 属性，443
+
 - --，543
+
 - 特性，373
+
 - 视角，363, 539
+
 - 处理，344
+
 - 对象的关系，442–443
+
 - Team Foundation Server 架构，495
+
 - 术语，442–443
+
 - 数据存储，337–344
+
 - 高级架构，338
+
 - 运行数据存储，337, 338
+
 - 权限，344
+
 - 处理时间问题，621
+
 - 关系型数据库更改，334–335
+
 - 特性，373
+
 - 签入策略覆盖，154
+
 - 查询，332
-- Tf.Warehouse，154, 337, 348, 497, 572, 595
+
+- `Tf.Warehouse`，154, 337, 348, 497, 572, 595
+
 - 仓库适配器，338–339
+
 - 可扩展性限制，532
+
 - 架构冲突，621
+
 - 数据库架构，版本文件夹，225
+
 - 数据驱动订阅，349
-- DataSchema，225
+
+- `DataSchema`，225
+
 - 标准工作项表单，285
+
 - 版本，108
-- CVS (当前版本系统)，86, 89, 90, 107, 109, 144, 190。另参见 SVN.ignore,114
+
+- CVS (当前版本系统)，86, 89, 90, 107, 109, 144, 190。另参见 `SVN.ignore`,114
 
 # 仪表板 (SharePoint 仪表板)
 
 - 访问，356
+
 - 自定义化，356–357
+
 - Excel 服务兼容性，345–346
+
 - 介绍，246
+
 - 网络流量，677
 
 # DBName 列
 
-- DBName 列，606
-- DUFD 工具，181
+- `DBName` 列，606
+
+- `DUFD` 工具，181
+
 - 声明式活动，458
+
 - 默认字段映射，364–365
+
 - 默认报告参数，列表，354
-- DEFAULT 规则，工作项，280
+
+- `DEFAULT` 规则，工作项，280
+
 - 默认项目安全组，276–277
-- DefaultCollection，56, 62
-- DefaultTemplate，223–435
-- DefaultTemplate.11.1，423, 438
-- DeleteCollection，资源管理器，543
-- DeleteDirectory 活动，454
-- Delete.command，witmand.exe，229
+
+- `DefaultCollection`，56, 62
+
+- `DefaultTemplate`，223–435
+
+- `DefaultTemplate.11.1`，423, 438
+
+- `DeleteCollection`，资源管理器，543
+
+- `DeleteDirectory` 活动，454
+
+- `Delete.command`，`witmand.exe`，229
+
 - 删除构建，417–418
+
 - 删除项目集合，514
+
 - 删除工作项，262–263
+
 - 差异分区过程，858
+
 - 差异，225
+
 - 拒绝权限，595
-- 依赖 (dependencies)
+
+- 依赖 (`dependencies`)
+
   - 传感器库程序，233
+
   - 第三方，226–230
-- Dependencies 文件夹，226–230
+
+- `Dependencies` 文件夹，226–230
+
 - 依赖拓扑，类型链接，228
+
 - 部署规划，规划
+
 - 部署签入，159–164
+
 - 部署自定义工作流活动，478–480
+
 - 使用自定义工作项的部署，308–309
+
 - 部署 SharePoint 团队站点，672–673
+
 - 部署更新，到过程模板，296–298
+
 - 部署资产，版本文件夹，225
-- 删除 (Destroy)，资源管理器，543
-- destroygloallcommand，witmand.exe，229
-- destroywitcommand，witmand.exe，229
+
+- 删除 (`Destroy`)，资源管理器，543
+
+- `destroygloallcommand`，`witmand.exe`，229
+
+- `destroywitcommand`，`witmand.exe`，229
+
 - 分离项目集合，511–513
+
 - 检测本地更改，125
+
 - 检测到的更改，113
+
 - 开发者资源管理器，542
+
 - 存储配置，538
+
 - Team Foundation Server 适配，534
-- Diagnose 命令，TFSConfig.exe，518
+
+- `Diagnose` 命令，`TFSConfig.exe`，518
+
 - 诊断数据，239, 336, 640
-- diff 工具，5, 6, 99, 220
+
+- `diff` 工具，5, 6, 99, 220
+
 - 差异数据库备份，554
+
 - 维度，342–443
+
 - 有向网络拓扑，链接，278–288
 
 - 禁用测试参数，434
+
 - 灾难恢复，549–573。另参见 AlwaysOn 技术，553, 556, 694
+
 - 业务连续性目标，449–550
+
 - 定义责任，550
+
 - 在线信息，549
+
 - 需要问的问题，449–550
+
 - 显示名称更改，302–303, 578
+
 - 显示名称消义，578–579
+
 - 显示自定义链接类型，302
+
 - 冲突团队，693–694
+
 - 多个冲突服务器，679
+
 - 分布式团队。另参见地理分布团队
-- 分布式版本控制系统 (DVCS)
+
+- 分布式版本控制系统 (`DVCS`)
+
   - 定义，84
+
   - Git，6, 86, 87, 88, 89, 90, 91
+
     - 概述，91
+
     - 优势与缺点，92–93
+
 - 分发客户端对象模型，701
-- mo_io_virtual_file_stats，608–609
-- mo_out_buffer_descriptors，609–610
-- DMVs。另参见动态管理视图
+
+- `mo_io_virtual_file_stats`，608–609
+
+- `mo_out_buffer_descriptors`，609–610
+
+- `DMVs`。另参见动态管理视图
+
 - DNS 名称，友好的，39–41, 57
+
 - 域组，580
+
 - 域用户，575–577
+
 - 域，身份同步任务，578
-- dop col，605–606
+
+- `dop col`，605–606
+
 - 休闲元素，528
-- 动态管理视图 (DMVs)，601–602
+
+- 动态管理视图 (`DMVs`)，601–602
+
 - 动态检索 Web 访问，341
 
 # E
 
 - Eclipse
+
   - 签入策略
+
     - 配置，151
+
     - 自定义，159
+
     - 部署，163
 
 - 检测本地更改，125
+
 - 从 Team Foundation Server 项目，135–137
+
 - 在 Team Foundation Server 中共享 Eclipse 项目，133–135
+
 - Team Foundation Server 插件，71–72, 125, 131–132
+
 - 版本控制，100–139
-
-
-
-
 
 ## 编辑项目级信息 – 团队项目级别的文件夹
 
 - Visual Studio 比较, 137
-- 边界框 (bboxes), 131
+
+- 边界框 (`bboxes`), 131
+
 - 编辑项目级信息, 587
+
 - 工作区对话框, 102, 105, 106, 107
+
 - Ekobit Teamman, 270, 691
+
 - 消除单点故障, 535
+
 - 服务器可扩展性接口, 705–708
+
 - 服务器模型对象, 705–722
+
 - 服务器插件, 708–722
+
 - SOAP 事件订阅, 701–705
+
 - Visual Studio, 722–723
 
 ### 扩展
+
 - Project Server 扩展, 77, 367
+
 - SharePoint 扩展, 51, 345
-- 外壳 (Shell), 718–720
-- 外壳扩展 (Shell Extensions), 139
+
+- 外壳 (`Shell`), 718–720
+
+- 外壳扩展 (`Shell Extensions`), 139
 
 ### 电子邮件
+
 - 警报
-- 团队基础构建 (Team Foundation Building), 414–415
-- 团队 Web  (Team Web Access), 153–154
+
+- 团队基础构建 (`Team Foundation Building`), 414–415
+
+- 团队 Web (`Team Web Access`), 153–154
+
 - 反馈请求邮件, 329
-- 启用本地工作区 (Local Workspaces), 672
+
+- 启用本地工作区 (`Local Workspaces`), 672
+
 - 加密密钥, 报告服务, 235–236, 551–552, 558
+
 - 点, 703–704
+
 - 强制执行代码质量, 149
+
 - 增强报告, 245–246
+
 - 企业项目，映射, 26, 368–369
+
 - 企业级 TFS 管理, 526
-- Evaluate 方法, 158
+
+- `Evaluate` 方法, 158
+
 - 事件订阅, 701–705
+
 - 外网服务器, 连接互联网的, 680
-- extProgramming (XP), 253, 376
+
+- `extProgramming` (`XP`), 253, 376
 
 ![](img/aaf6096fc6b4485534c737801bdbc4fd_772_0.png)
 
 - 事实表, 335, 339, 342, 343
-- tfacts, 342–343
+
+- `tfacts`, 342–343
+
 - 构建失败的, 165, 166, 409
-- 故障转移集群实例 (Failover Cluster Instance), 536, 537
+
+- 故障转移集群实例 (`Failover Cluster Instance`), 536, 537
+
 - 功能分支, 200–201
+
 - 功能启用, 667–699
+
 - 功能包, 48
-- 反馈客户端 (Feedback Client)
+
+- 反馈客户端 (`Feedback Client`)
+
 - 下载, 328
+
 - 新功能, 7
+
 - 提供反馈, 328–331
+
 - 请求反馈, 326–328
+
 - 利益相关者反馈, 7, 312–326
+
 - 自愿反馈, 331–332
+
 - 反馈请求, 254, 328, 331
+
 - 反馈响应, 254, 331, 332
+
 - Feldman, 376
+
 - 字段
-- 示例 URL, 团队基础服务器 (Team Foundation Server), 62–63
+
+- 示例 URL, 团队基础服务器 (`Team Foundation Server`), 62–63
+
 - Excel
+
 - 报告，来自工作查询, 347–349
-- 团队基础服务器 (Team Foundation Server), 75–76
+
+- 团队基础服务器 (`Team Foundation Server`), 75–76
+
 - 工作管理, 266–267
+
 - Excel 服务, 345–346
+
 - Excel Web 组件, 355
+
 - 异常处理，复合分析, 451
+
 - 排除的更改集, 112–113
+
 - 具有团队基础场景的现有服务器, 30
+
 - 枚举代码, 636
-- 工作项 (work item), 278–281
+
+- 工作项 (`work item`), 278–281
+
 - 工作项元素, 247
+
 - 字段, 标准工作项表单控件, 285
+
 - 字段映射
+
 - 默认, 364–365
+
 - Microsoft Project, 290
-- 字段类型属性 (Field Type attribute), 工作项字段, 278
+
+- 字段类型属性 (`Field Type attribute`), 工作项字段, 278
+
 - 文件下载缓存目录, 544–545
+
 - 文件修改时间, 627
+
 - 文件文件夹位置, 38
-- FindMatchingFiles 活动, 454, 486
+
+- `FindMatchingFiles` 活动, 454, 486
+
 - 防火墙问题, 396
+
 - 平列表查询, 264, 267
-- 团队项目级别的文件夹, 依赖文件夹 (Dependencies folder), 228–230
-- exportileprocessconfig, witadmin exe, 296
-- exportcommonprocessconfig, witadmin, Field exe, 296
-- exportglobalist, witadmin.exe, 296
-- exportglobalworkflow command, witadmin.exe, 296
-- exportlinktype command, witadmin.exe, 296
-- exportwitcmd command, witadmin.exe, 296
+
+- 团队项目级别的文件夹, 依赖文件夹 (`Dependencies folder`), 228–230
+
+- `exportileprocessconfig`, `witadmin exe`, 296
+
+- `exportcommonprocessconfig`, `witadmin`, `Field exe`, 296
+
+- `exportglobalist`, `witadmin.exe`, 296
+
+- `exportglobalworkflow command`, `witadmin.exe`, 296
+
+- `exportlinktype command`, `witadmin.exe`, 296
+
+- `exportwitcmd command`, `witadmin.exe`, 296
+
 - 表达式, Visual Basic.NET, 438–440
+
 - 可扩展性, 695–724
+
 - 架构, 697
-- 客户端对象模型 (client object model), 697–701
+
+- 客户端对象模型 (`client object model`), 697–701
+
 - 概述, 4
+
 - 点, 696–697
+
 - 资源, 723–724
 
 ## 分支内部文件夹方法 – 健康检查扫描
 
-- 分支内部文件夹方法, 依赖文件夹 (Dependencies folder), 226–228
+- 分支内部文件夹方法, 依赖文件夹 (`Dependencies folder`), 226–228
+
 - 文件夹共享位置, 38
+
 - 分支文件夹结构, 222–225
-- 禁用模式策略 (Forbidden Patterns Policy), 151, 155
-- ForbiddenCommentContentPolicy.cs, 156–159
-- 强制获取 (Force Get), 103, 123
-- 强制覆盖 (force overwrite), 125
-- 强制回滚 (forcing rollback), 589
-- ForForEach-composite 活动, 452
+
+- 禁用模式策略 (`Forbidden Patterns Policy`), 151, 155
+
+- `ForbiddenCommentContentPolicy.cs`, 156–159
+
+- 强制获取 (`Force Get`), 103, 123
+
+- 强制覆盖 (`force overwrite`), 125
+
+- 强制回滚 (`forcing rollback`), 589
+
+- `ForForEach-composite` 活动, 452
+
 - 预测行, 318–319
+
 - 表单, 工作项元素, 248
-- 前向能力更新 (Forward Capability Update), Visual Studio, 41
-- 前向集成 (forward integration), 196
+
+- 前向能力更新 (`Forward Capability Update`), Visual Studio, 41
+
+- 前向集成 (`forward integration`), 196
+
 - Fowler, 376
+
 - 友好 DNAMS, 39–41
-- 全局级访问 (full level access), 591
+
+- 全局级访问 (`full level access`), 591
+
 - 全局数据库备份, 591
+
 - 全局元数据刷新, 678
+
 - 全局处理, 分析服务, 344
+
 - 全局恢复模式, 552, 553, 554
-- FullyassemblyInfo.spec, 485, 486
-- 本地构建服务器, 681
+
+- `FullyassemblyInfo.spec`, 485, 486
+
+
+
+## 本地构建服务器, 681
+
 - 元数据过滤, 680–681
 - 镜像同步 (mirroring), 680–689
 - 全局分布式服务器, 679
@@ -15951,7 +15590,7 @@ build automation
 - 解决方案, 679–681
 - SQL 镜像, 694
 - 离线工作, 689–692
-- Get, 107–109
+- `Get`, 107–109
 - 检出 (check-out) , 86, 107
 - 定义, 86
 - 文件修改时间, 107
@@ -15962,10 +15601,10 @@ build automation
 - Get 版本参数, 434
 - GetBuild 活动, 454
 - GetBuildEnvironment 活动, 455
-- Git, 6, 87, 89, 91
-- GitHub, 991
-- .gitignore, 114
-- Git-tf.exe, 6
+- `Git`, 6, 87, 89, 91
+- `GitHub`, 991
+- `.gitignore`, 114
+- `Git-tf.exe`, 6
 - 全局列表, 289
 - 全局工作流, 289, 365–366
 - 授权查询内存 (granted_query_memory), 604–605
@@ -15998,14 +15637,14 @@ build automation
 - 文件, 275
 
 ## H
+
 - Hallberg, Aeron, 427
 - 基于硬件迁移的升级, 178, 658–660
 - 硬件需求/扩展性, 527–528
 - 团队基础服务器安装, 32
 - harry, Brian, 8, 422, 534
 - 健康检查扫描, 520–521, 624
-
-www.it-ebooks.info
+- www.it-ebooks.info
 
 ## 健康监控 – 索引和表分区
 
@@ -16016,8 +15655,8 @@ www.it-ebooks.info
 - Hello World 应用程序, .vbproj 文件, 380–383
 - 帮助, 137, 138, 220
 - Hyper-V
-- “在 Hyper-V 环境下运行 SQL Server 2008”, 547
-- “使用 Hyper-V 动态内存运行 SQL Server”, 547
+  - “在 Hyper-V 环境下运行 SQL Server 2008”, 547
+  - “使用 Hyper-V 动态内存运行 SQL Server”, 547
 - 帮助文本属性 (Help Text attribute), 工作项字段, 269
 - 隐藏类型工作项类别 (Hidden Types Work Item Category), 268
 - 隐藏工作控制属性 (Hide Work Control attribute), 284
@@ -16026,19 +15665,19 @@ www.it-ebooks.info
 - 用于移植性的连字符, 73
 
 ## I
-- 高可用性
-- Always, 536, 556, 694
-- 数据层集群 (clustering data tiers), 31, 36
-- 数据层, 316–537
-- 定义, 525, 536
-- 文件缓存属性, 544–545
-- 保持简单, 535
-- 负载均衡, 540–542
-- 资源管理器 (resource governor), 532–544
 
-## IBM Rational
-- ClearQuest, 22, 99, 190
-- ClearQuest, 188, 190
+- 高可用性
+  - Always, 536, 556, 694
+  - 数据层集群 (clustering data tiers), 31, 36
+  - 数据层, 316–537
+  - 定义, 525, 536
+  - 文件缓存属性, 544–545
+  - 保持简单, 535
+  - 负载均衡, 540–542
+  - 资源管理器 (resource governor), 532–544
+- IBM Rational
+  - ClearQuest, 22, 99, 190
+  - ClearQuest, 188, 190
 - SQL Server 版本, 538–539
 - 团队基础层, 31
 - 虚拟化, 546–547
@@ -16046,7 +15685,7 @@ www.it-ebooks.info
 - 高处理器使用, 运行, 605–606
 - 身份路径 (Identity Path), 负载均衡, 540–541
 - 影响团队, 19
-- 身份命令 (Identities command), TfConfig.exe, 518
+- 身份命令 (Identities command), `TfConfig.exe`, 518
 - 身份缓存, 数据库, 497
 - 身份同步工作, 507–579
 - 空闲超时, 负载均衡, 540–541
@@ -16063,14 +15702,14 @@ www.it-ebooks.info
 - 集成提供者 (Provider), 707
 - 障碍 (impedment), 259
 - 实现策略, 201–222
-- 导入命令 (Import command), TfConfig.exe, 518
-- import agileprocessconfig, waitadmin.exe, 296
-- importcommonprocessconfig, waitadmin.exe, 296
-- importglobalist, waitadmin.exe, 296
-- importglobalworkflow, waitadmin.exe, 296
-- import projects, 来自基础服务器, 135–137
-- import type, waitadmin.exe, 296
-- importwit command, waitadmin.exe, 296
+- 导入命令 (Import command), `TfConfig.exe`, 518
+- `import agileprocessconfig`, `waitadmin.exe`, 296
+- `importcommonprocessconfig`, `waitadmin.exe`, 296
+- `importglobalist`, `waitadmin.exe`, 296
+- `importglobalworkflow`, `waitadmin.exe`, 296
+- `import projects`, 来自基础服务器, 135–137
+- `import type`, `waitadmin.exe`, 296
+- `importwit command`, `waitadmin.exe`, 296
 - 包含的更改 (Included Changes), 112–113
 - 增量元数据刷新, 678
 - 增量处理, 分析服务, 344
@@ -16084,6 +15723,7 @@ www.it-ebooks.info
 - HTTP Keep-Alive, 541, 737
 
 ## 索引操作 – iWorkItemUser
+
 - 索引操作, SQL 版本, 35, 693
 - 行业合作伙伴, Visual Studio, 723
 - 信息构件, 构建变量, 441–442
@@ -16094,36 +15734,36 @@ www.it-ebooks.info
 - 现地更新, 178, 658–659
 - 进行中 (InProgress), 元数据, 299
 - 安装 (团队基础服务器), 43–53
-- 客户端软件, 47
-- 配置阶段, 48, 51–55
-- 安装阶段, 48
-- 多路器, 29–30, 32
-- 所需项, 44
-- 准备步骤, 29–41
-- 服务包, 47
-- SharePoint, 46
-- 单机服务器, 29, 32, 693
-- 软件需求, 34–37
-- SQL Server 2012, 45–46
-- 类型, 49–51
-- 更新, 47–48
+  - 客户端软件, 47
+  - 配置阶段, 48, 51–55
+  - 安装阶段, 48
+  - 多路器, 29–30, 32
+  - 所需项, 44
+  - 准备步骤, 29–41
+  - 服务包, 47
+  - SharePoint, 46
+  - 单机服务器, 29, 32, 693
+  - 软件需求, 34–37
+  - SQL Server 2012, 45–46
+  - 类型, 49–51
+  - 更新, 47–48
 - 安装指南
-- 构建服务设置, 392
-- .chem 文件, 45, 392
-- 下载, 45
-- 安装类型, 49
-- 所需端口, 396
-- SQL Server 标准, 52
-- SQL Server 版本, 35
-- TFSBuildUser, 393
+  - 构建服务设置, 392
+  - `.chem` 文件, 45, 392
+  - 下载, 45
+  - 安装类型, 49
+  - 所需端口, 396
+  - SQL Server 标准, 52
+  - SQL Server 版本, 35
+  - `TFSBuildUser`, 393
 - 已安装更新对话框, 505
 - 安装器 (Insteller), 225
 - 资源器资产 (insteller assets), 版本控制文件夹, 225
 - 集成债务 (integration debt), 201
 - 集成平台 (团队基础服务器集成平台) (Team Foundation Server Integration Platform)
-- 低保真数据传输, 178, 659, 666
-- 使用, 22, 188–189
-- 工作项跟踪, 666
+  - 低保真数据传输, 178, 659, 666
+  - 使用, 22, 188–189
+  - 工作项跟踪, 666
 - 集成工具, 团队基础服务器, 190, 680, 686–689
 - 与项目服务器集成。见项目服务器
 - 与 SharePoint 集成。见 SharePoint
@@ -16133,16 +15773,11 @@ www.it-ebooks.info
 - 工作项控制, 304–308
 - 内部共享库, 230–235
 - 连接互联网的服务器, 680
-- InvokeForReason 复合活动, 455
-
-
-
-
+- `InvokeForReason` 复合活动, 455
 
 # Jasmine – 负载测试
 
-Jasmine, 429
-
+- Jasmine, 429
 - JavaSWT, 工作项表布局值, 284
 - Jenkins / Hudson, 384–385
 - 任务部署, 720–722
@@ -16150,24 +15785,24 @@ Jasmine, 429
 - 任务历史, 497, 618–619
 - 任务历史, 配置数据库, 497
 - 任务历史清理, 692
-- Jobs 命令, TfConfig.exe, 518
+- Jobs 命令, `TfConfig.exe`, 518
 - 标签, 123–124, 143
 - Label, 标准工作项表控件, 285
 - Lab Sidekick, 524
 - Lab Sources 参数, 435
-- labversionspec, 108
+- `labversionspec`, 108
 - LabItem, 资源调节器, 543
 - 阶式合并, 216, 217
 - WAN 延迟，图形化分布
 - 团队, 676
 - 最新版本
   - 迁移, 179–180
-  - versionspec, 108–109
+  - `versionspec`, 108–109
 - 遗留团队项目，升级, 663–673
 - 遗留 Visual Studio 版本, 41
-- slibrary 服务器, SCVMM, 631–632
+- `slibrary` 服务器, SCVMM, 631–632
 - 库共享, Lab 管理, 647
-- License 命令, TfConfig.exe, 518
+- License 命令, `TfConfig.exe`, 518
 - 保持简单，高可用性, 535
 - Keep-Alive 设置, 541
 - Kelley, Philip, 107
@@ -16190,24 +15825,24 @@ Jasmine, 429
 - 卷日志记录, 10, 445
 - 白皮书, 8
 - 局限性
-- Lab 过程插件, 275
-- Lab 命令, TfConfig.exe, 518
-- Lab 管理, 643–655
-  - 高级拓扑, 652
-  - 备份, 551, 552
-  - 容量规划, 646
-  - 挑战, 643
-  - 端口和协议, 645–646
-  - 地理分布的团队, 661
-  - 健康的测试实验室, 652–655
-  - 主机组, 647
-  - 库共享, 38, 64
-  - 网络流量, 677
-  - 新功能, 644–645
-  - 权限, 651
-  - 服务帐户, 37
-  - 故障排除, 655
-  - 升级, 673
+  - Lab 过程插件, 275
+  - Lab 命令, `TfConfig.exe`, 518
+  - Lab 管理, 643–655
+    - 高级拓扑, 652
+    - 备份, 551, 552
+    - 容量规划, 646
+    - 挑战, 643
+    - 端口和协议, 645–646
+    - 地理分布的团队, 661
+    - 健康的测试实验室, 652–655
+    - 主机组, 647
+    - 库共享, 38, 64
+    - 网络流量, 677
+    - 新功能, 644–645
+    - 权限, 651
+    - 服务帐户, 37
+    - 故障排除, 655
+    - 升级, 673
 - Visual Studio Lab 管理健康检查, 520
 - Team Foundation Server, 25–29
 - Team Foundation Server 架构, 527–534
@@ -16216,9 +15851,9 @@ Jasmine, 429
 - 链接，工作项, 248
 - 工作链接类型, 244–245, 286–289
 - 链接报告, 350, 350
-- Listfields 命令, witadmin.exe, 295
-- Listlinktypes 命令, witadmin.exe, 296
-- Listwit 命令, witadmin.exe, 295
+- `Listfields` 命令, `witadmin.exe`, 295
+- `Listlinktypes` 命令, `witadmin.exe`, 296
+- `Listwit` 命令, `witadmin.exe`, 295
 - 负载均衡, 540–542
 - 负载测试, 642
 - LabDefaultTemplate, 423
@@ -16248,7 +15883,7 @@ Jasmine, 429
 - 逻辑架构。见架构
 - 长期运行的进程，正在运行的进程
   - 查询, 604
--  Reporting Services 加密密钥, 552
+- Reporting Services 加密密钥, 552
 - Low, Greg, 530, 605
 - 低保真数据传输, 178, 659, 666
 - 标记事务，SQL, 555
@@ -16327,16 +15962,21 @@ Jasmine, 429
 - 基于迁移的更新, 178, 658–660
 - 最小化构建路径, 422
 - 镜像字段, 365
+
+
+
 - 地理分布的团队, 680, 668–689
 - SQL, 694
 - Mitnik, 179, 659
 - MMIC 挂载。管理控制台, 498
 - 监控提交策略, 152–154
 - 监控服务器字段活动, 599–625
-- 最佳实践
-  - 健康扫描, 520–521
-  - TfsBpaCmd.exe 工具, 522
-  - 使用, 520–522, 623–624
+
+### 最佳实践
+- 健康扫描, 520–521
+- `TfsBpaCmd.exe` 工具, 522
+- 使用, 520–522, 623–624
+
 - 升级验证, 666
 - 日志性能分析工具, 622
 - SQL Server 帮助, 601–610
@@ -16345,12 +15985,14 @@ Jasmine, 429
 - Team Foundation Server 帮助, 610–621
 - Team Foundation Server 集成工具, 687–688
 - 移动团队项目集, 115
-- MSBuild
-  - 构建自动化, 379
-  - 对比, 457–458
-  - 活动, 453
-  - 参数，参数, 435
-  - 多进程参数, 435
+
+### MSBuild
+- 构建自动化, 379
+- 对比, 457–458
+- 活动, 453
+- 参数，参数, 435
+- 多进程参数, 435
+
 - MSDN 代码库, 358, 724
 - MSDN 下载, 10
 - MSDN 订阅, 10, 44, 655–686
@@ -16374,7 +16016,7 @@ Jasmine, 429
 - 新标签, 123
 - 新团队项目向导, 574, 271
 - 新工作项报告, 348
-- make, 377
+- `make`, 377
 - 无分枝技术, 197–198
 - 非人员项目资源，Project Server, 361
 - NTLM, 600, 501, 177
@@ -16395,6 +16037,7 @@ Jasmine, 429
 - 所有者更改，针对工作区, 100
 
 # P
+
 - 包管理器, 103, 125, 134
 - 页面压缩，SQL Server 版, 538
 - 页面查看, 355, 358
@@ -16403,9 +16046,9 @@ Jasmine, 429
 - 并行组合活动, 451
 - 并行开发, 15–16
 
-# ParallelForEach 组合活动
+## ParallelForEach 组合活动
+`ParallelForEach` 组合活动, 452
 
-ParallelForEach 组合活动, 452
 - 父分支, 244, 288
 - 父/子链接类型
 - 部分种子，构建状态, 409
@@ -16418,31 +16061,31 @@ ParallelForEach 组合活动, 452
 - 性能代码审查, 173–175
 - Performance Sidekick, 524
 - 权限, 583–595
-- 区域级, 588
-- 分支, 592–593
-- 构建, 594
-- 检查策略, 592
-- 数据仓库, 344
-- 默认团队安全组, 276–277
-- 组和权限，过程模板
-- 插件式, 275
-- 继承, 596
-- 介绍, 65
-- 迭代, 588
-- Lab 管理, 651
-- 管理, 595–597
-- 在线信息, 583
-- Project Server-Team Foundation 集成, 366–367
-- Report Builder, 351
-- 报告, 594–595
-- 服务器级, 584
-- 团队项目, 586
-- 团队项目集, 584–586
-- 团队查询求解, 588–589
-- Tf.exe 权限, 517, 597
-- 版本控制, 140–141, 290–291, 591–594
-- 工作项跟踪, 587–591
-- 工作区, 106–109
+  - 区域级, 588
+  - 分支, 592–593
+  - 构建, 594
+  - 检查策略, 592
+  - 数据仓库, 344
+  - 默认团队安全组, 276–277
+  - 组和权限，过程模板
+  - 插件式, 275
+  - 继承, 596
+  - 介绍, 65
+  - 迭代, 588
+  - Lab 管理, 651
+  - 管理, 595–597
+  - 在线信息, 583
+  - Project Server-Team Foundation 集成, 366–367
+  - Report Builder, 351
+  - 报告, 594–595
+  - 服务器级, 584
+  - 团队项目, 586
+  - 团队项目集, 584–586
+  - 团队查询求解, 588–589
+  - `Tf.exe` 权限, 517, 597
+  - 版本控制, 140–141, 290–291, 591–594
+  - 工作项跟踪, 587–591
+  - 工作区, 106–109
 - 个人代理服务器, 685–686
 - 视角，立方体, 36, 343, 539
 - 分阶段选项方法，Team Foundation Server, 17–18
@@ -16450,8 +16093,7 @@ ParallelForEach 组合活动, 452
 - 透视图表, 345, 347, 348
 - 透视表, 345, 347
 - 计划更改，SQL Server, 529–530, 605
-- 计划部署, 13–42。见安装；
-- 迁移
+- 计划部署, 13–42。见安装；迁移
   - 防火墙问题, 39
   - 生成关注, 19–20
   - 托管 Team Foundation Server, 18–19
@@ -16478,7 +16120,7 @@ ParallelForEach 组合活动, 452
   - 备份与存储, 556–562
   - 最佳实践分析
     - 健康扫描, 520–521
-    - TfsBpaCmd.exe 工具, 522
+    - `TfsBpaCmd.exe` 工具, 522
     - 使用, 520–522, 623–624
   - 升级验证, 666
 - 日志性能分析工具, 622
@@ -16488,276 +16130,268 @@ ParallelForEach 组合活动, 452
 - Team Foundation Server 帮助, 610–621
 - Team Foundation Server 集成工具, 687–688
 
-
-
-
-
 # 原则 – 代理服务器
 
-- 原则，可扩展性/可用性，533–535
-- 私有构建，411–413
-- 私有丢弃位置参数，435
-- 私有工作区，106, 134
-- 过程编辑器，520
-- 过程参数元数据编辑器对话框，443–444
-- 构建定义中的过程部分，408
-- 过程模板，277–310。另请参阅构建 MSF；对于敏捷软件开发；对于 CMMI
+- 原则，可扩展性/可用性, 533–535
+- 私有构建, 411–413
+- 私有丢弃位置参数, 435
+- 私有工作区, 106, 134
+- 过程编辑器, 520
+- 过程参数元数据编辑器对话框, 443–444
+- 构建定义中的过程部分, 408
+- 过程模板, 277–310。另请参阅构建 MSF；对于敏捷软件开发；对于 CMMI
+
 Process 过程改进：Visual Studio Scrum 过程模板
-- 敏捷计划工具，298–300
-- 剖析，273–292
-- 工品管理，236–237
-- 选择，252–253
-- 自定义文本项，303–309
-- 自定义化，270–310, 325
-- 默认团队项目安全组，276–277
-- 已定义，252
-- 部署更新到，296–298
-- 下载，274
-- 在现有团队项目上编辑工作项，297–298
-- 初始区域和迭代节点，277
-- 初始工作项，289
-- 介绍，255–252
-- Microsoft 过程列映射文件，290
-- p 文件，274–276
-- SharePoint 团队项目文档库设置，291–292
-- 第三方，260
-- 版本控制和权限，290–291
-- 工作项查询和文件夹，289
-- 工作项类型自定义，247, 301–303
-- 工作项类型定义，278–289
-- 过程模板管理器对话框，274
-- 数据仓库处理时间，621
-- Prod分支（生产分支），200, 203, 212, 213, 214
-- 产品待办列表项，259, 299, 315, 323, 364, 369
-- 产品待办列表，317–319
-- 产品族，分支到，233–235
-- 产品代码，223
+- 敏捷计划工具, 298–300
+- 剖析, 273–292
+- 工品管理, 236–237
+- 选择, 252–253
+- 自定义文本项, 303–309
+- 自定义化, 270–310, 325
+- 默认团队项目安全组, 276–277
+- 已定义, 252
+- 部署更新到, 296–298
+- 下载, 274
+- 在现有团队项目上编辑工作项, 297–298
+- 初始区域和迭代节点, 277
+- 初始工作项, 289
+- 介绍, 255–252
+- Microsoft 过程列映射文件, 290
+- p 文件, 274–276
+- SharePoint 团队项目文档库设置, 291–292
+- 第三方, 260
+- 版本控制和权限, 290–291
+- 工作项查询和文件夹, 289
+- 工作项类型自定义, 247, 301–303
+- 工作项类型定义, 278–289
+- 过程模板管理器对话框, 274
+- 数据仓库处理时间, 621
+- Prod分支（生产分支）, 200, 203, 212, 213, 214
+- 产品待办列表项, 259, 299, 315, 323, 364, 369
+- 产品待办列表, 317–319
+- 产品族，分支到, 233–235
+- 产品代码, 223
+
 使用 Visual Studio 2012 专业应用程序生命周期管理 (Wrox)
-- ALM 工具，144
-- 自动化测试类型，642
-- 客户端测试，5
-- 反馈请求和反馈响应，254
-- Microsoft Test Manager，633
-- 静态代码分析，233
-- 测试技术，148, 628
-Process 仪表板，355
-- 项目，223。另请参阅 Microsoft Project；团队项目
-- 项目管理员，494
-- 项目管理员，默认团队项目安全组，276
-- 项目仪表板，355。另请参阅项目项跟踪增强，244–287
-- 新功能，7
-- 概述，243
-- 项目对象模型，378
-- 项目门户，自定义化，357
+- ALM 工具, 144
+- 自动化测试类型, 642
+- 客户端测试, 5
+- 反馈请求和反馈响应, 254
+- Microsoft Test Manager, 633
+- 静态代码分析, 233
+- 测试技术, 148, 628
+
+Process 仪表板, 355
+- 项目, 223。另请参阅 Microsoft Project；团队项目
+- 项目管理员, 494
+- 项目管理员，默认团队项目安全组, 276
+- 项目仪表板, 355。另请参阅项目项跟踪增强, 244–287
+- 新功能, 7
+- 概述, 243
+- 项目对象模型, 378
+- 项目门户，自定义化, 357
+
 Project Server 服务器
-- 配置健康检查，520
-- 核心要素，361
-- 项目经理所需的各种软件，369
-- 同步引擎健康检查，520
-- Team Foundation 库，361
-- Team Foundation Server 升级，663
+- 配置健康检查, 520
+- 核心要素, 361
+- 项目经理所需的各种软件, 369
+- 同步引擎健康检查, 520
+- Team Foundation 库, 361
+- Team Foundation Server 升级, 663
 - 359–369
-- 双向同步，361–366
-- 默认字段映射，364–365
-- 映射到团队项目的企业项目，26, 366, 368–369
-- Project Server 扩展，77, 367
-- 全局工作变通，366–369
-- 初始配置，367–368
-- 一次集成，357, 369
-- Tfsadmin.exe，367
-- 要构建的项目参数，427
-- 提升候选更改，113–115
-- 提升级分支，199–200, 202–203
-- 提议的，元数据，299
-- 协议，Team Foundation Server URL，62
-- 产品控制，位置管理，645–646
-- 可提供的缓存，328–331
-- 代理命令，TfsConfig.exe，518
+- 双向同步, 361–366
+- 默认字段映射, 364–365
+- 映射到团队项目的企业项目, 26, 366, 368–369
+- Project Server 扩展, 77, 367
+- 全局工作变通, 366–369
+- 初始配置, 367–368
+- 一次集成, 357, 369
+- `Tfsadmin.exe`, 367
+- 要构建的项目参数, 427
+- 提升候选更改, 113–115
+- 提升级分支, 199–200, 202–203
+- 提议的，元数据, 299
+- 协议，Team Foundation Server URL, 62
+- 产品控制，位置管理, 645–646
+- 可提供的缓存, 328–331
+- 代理命令，`TfsConfig.exe`, 518
+
 代理服务器 (Team Foundation 代理服务器)
-- 带有代理成员的中央服务器，679
-- 配置 Team Foundation Server 代理向导，551
-- 地理分布的团队，682–686
-- 网络性能限制，533
-- 可扩展性，545–546
+- 带有代理成员的中央服务器, 679
+- 配置 Team Foundation Server 代理向导, 551
+- 地理分布的团队, 682–686
+- 网络性能限制, 533
+- 可扩展性, 545–546
 
 # 代理服务器 – 报告
 
-- 服务帐户，37
-- 存储性能限制，533–534
-- Team Foundation 代理服务帐户，581, 582
-- 版本控制缓存，570
-- 虚拟化环境，34
-- 虚拟化环境，34
-- 公共展示，106–107
-- 清理大型版本缓存，571
+- 服务帐户, 37
+- 存储性能限制, 533–534
+- Team Foundation 代理服务帐户, 581, 582
+- 版本控制缓存, 570
+- 虚拟化环境, 34
+- 虚拟化环境, 34
+- 公共展示, 106–107
+- 清理大型版本缓存, 571
 - “私有云参考架构。”546
-- Reference名称属性，工作项，279
-- RegisterDB 命令，TfsConfig.exe，519
-- 注册，配置数据库，497
-- 版本控制的监管合规性，84
-- 链接链接类型，245, 287
-- 相关工作项，提交，112
+- Reference名称属性，工作项, 279
+- `RegisterDB` 命令，`TfsConfig.exe`, 519
+- 注册，配置数据库, 497
+- 版本控制的监管合规性, 84
+- 链接链接类型, 245, 287
+- 相关工作项，提交, 112
 - 相关数据仓库数据库
-- 更改到，334–335
-- 特性，337
-- 提交策略信息，154
-- 查询，392–342
-QA 分支，200, 203, 206, 207, 210, 212, 213, 216
-- 质量仪表板，355
-- 代码质量，季度更新周期，422
+  - 更改到, 334–335
+  - 特性, 337
+  - 提交策略信息, 154
+  - 查询, 392–342
+- QA 分支, 200, 203, 206, 207, 210, 212, 213, 216
+- 质量仪表板, 355
+- 代码质量，季度更新周期, 422
 - 查询 427
-- Tfs_Warehouse，154, 337, 338, 444, 497, 595
-- 适配器，338–339
+- `Tfs_Warehouse`, 154, 337, 338, 444, 497, 595
+- 适配器, 338–339
 - 关系
-- 分支，195
-- 对象，在内部，342–343
-- 工作项，244–245
-- 运行过程，602–607
-- 提交查询，337–349
-- 排除，337–349
-- 过程模板，289
-- 使用，263–266
-- 基于查询的测试集，634
-- QueryHistory，资源管理，543
-- 由 Builder 队列，416
-- 队列中的构建，411–413
-- 重命名命令，withadmin.exe，295
-- 重命名团队项目，25–26
-- 修复命令，TfsConfig.exe，519
-- 收集，TfsConfig.exe，519
-- RAM，虚拟机，648–649
-- 读取权限，106
-- 预读缓冲，SQL Server 版本，539
-- 默认团队安全组，276
-- FromSource，资源管理，543
-- READONLY 规则，工作项，280
-- 重新应用帐户，503, 504
-- 重建命令，TfsConfig.exe，518
-- 协调工作区，提交，168–170
-- 协调命令，342
-- 恢复命令，TfsConfig.exe，518
-- 从配置状态恢复，124–125
-- 重建视图，125
-- 递归文件夹，105
+  - 分支, 195
+  - 对象，在内部, 342–343
+  - 工作项, 244–245
+  - 运行过程, 602–607
+  - 提交查询, 337–349
+  - 排除, 337–349
+  - 过程模板, 289
+  - 使用, 263–266
+- 基于查询的测试集, 634
+- `QueryHistory`, 资源管理, 543
+- 由 Builder 队列, 416
+- 队列中的构建, 411–413
+- 重命名命令，withadmin.exe, 295
+- 重命名团队项目, 25–26
+- 修复命令，`TfsConfig.exe`, 519
+- 收集，`TfsConfig.exe`, 519
+- RAM，虚拟机, 648–649
+- 读取权限, 106
+- 预读缓冲，SQL Server 版本, 539
+- 默认团队安全组, 276
+- FromSource，资源管理, 543
+- READONLY 规则，工作项, 280
+- 重新应用帐户, 503, 504
+- 重建命令，`TfsConfig.exe`, 518
+- 协调工作区，提交, 168–170
+- 协调命令, 342
+- 恢复命令，`TfsConfig.exe`, 518
+- 从配置状态恢复, 124–125
+- 重建视图, 125
+
 Report Builder (SQL Server 报告)
-- 权限，351
-- 使用，351–353
-- Reportable 属性，工作项，279
-- Reportable 名称属性，工作项，279
-- 报告，333–358。另请参阅 Reporting Services
-- 在此处构建，169, 214, 319
-- 来自更改集，213, 214
-- Build 详细，418–420
-- 输出，480–482
-- 协调工作区，169
-- Team Foundation Build 架构，391
-- 交叉集合，334, 532
-- 分析作业，337
-- 贡款，443
+- 权限, 351
+- 使用, 351–353
+- Reportable 属性，工作项, 279
+- Reportable 名称属性，工作项, 279
+- 报告, 333–358。另请参阅 Reporting Services
+- 在此处构建, 169, 214, 319
+- 来自更改集, 213, 214
+- Build 详细, 418–420
+- 输出, 480–482
+- 协调工作区, 169
+- Team Foundation Build 架构, 391
+- 交叉集合, 334, 532
+- 分析作业, 337
+- 贡款, 443
 
 # 报告章节 – 计划
 
-- BIDS，347, 354
-- 更改到，335–336
-- 特性，337
-- spectives，363, 539
-- 处理，344
-- 行复合活动，451
-- 获取 Web 地址，341
-- 反向反转，196
-- 版本控制，83, 96。另请参阅版本控制
-- rich item 链接项，286–287
-- rich item 项，244–245
-Robbins, John，433
-- 对象关系，342–343
-- Team Foundation Server 架构，495
-- 术语，342–443
-- *Tfs_analysis*，337, 338, 444, 497, 572
-- 增强，245–246
-- 来自工作项查询，347–349
-- 工作流量，677
-- 新功能，334–337
-- 权限，594–595
+- BIDS, 347, 354
+- 更改到, 335–336
+- 特性, 337
+- spectives, 363, 539
+- 处理, 344
+- 行复合活动, 451
+- 获取 Web 地址, 341
+- 反向反转, 196
+- 版本控制, 83, 96。另请参阅版本控制
+- rich item 链接项, 286–287
+- rich item 项, 244–245
+
+Robbins, John, 433
+- 对象关系, 342–343
+- Team Foundation Server 架构, 495
+- 术语, 342–443
+- *Tfs_analysis*, 337, 338, 444, 497, 572
+- 增强, 245–246
+- 来自工作项查询, 347–349
+- 工作流量, 677
+- 新功能, 334–337
+- 权限, 594–595
+
 关系型数据库
-- 更改到，334–335
-- 特性，337
-- 查询，332
-- 仓库适配器，338–339
-- 报告工具，347–354
-- 报告创建，347–354
-- 服务帐户，337
-SharePoint 集成，
-- 迭代冲刺，272, 259, 300, 316, 324, 325
-- 管理，494
+- 更改到, 334–335
+- 特性, 337
+- 查询, 332
+- 仓库适配器, 338–339
+- 报告工具, 347–354
+- 报告创建, 347–354
+- 服务帐户, 337
+
+SharePoint 集成,
+- 迭代冲刺, 272, 259, 300, 316, 324, 325
+- 管理, 494
 - 跨团队协作，角色
-- 回滚触发器，403
-- Root，Adam，418
-- 工作项元素，247
-- 工作项状态和转换，281–282
+- 回滚触发器, 403
+- Root, Adam, 418
+- 工作项元素, 247
+- 工作项状态和转换, 281–282
 
-运行，339
-“在动态环境中运行 SQL Server 2008”，357
-
-沙盒，85。另请参阅工作区
-构建版本，410
-可扩展性，525–547
-
-- 层限制，531–532
-- ASP.NET  配置，532, 542
+运行, 339
+“在动态环境中运行 SQL Server 2008”, 357
+沙盒, 85。另请参阅工作区
+构建版本, 410
+可扩展性, 525–547
+- 层限制, 531–532
+- ASP.NET 配置, 532, 542
 - 数据层
-- 瓶颈，529–531
-- 解决方案，537–538
-- 数据仓库限制，532
-- 文件下载目录，544–545
-- 限制，28–29
-- 负载均衡，540–542
-- 每个 SQL Server 最大活动集合，528–532
+  - 瓶颈, 529–531
+  - 解决方案, 537–538
+- 数据仓库限制, 532
+- 文件下载目录, 544–545
+- 限制, 28–29
+- 负载均衡, 540–542
+- 每个 SQL Server 最大活动集合, 528–532
 
-*TfsRedirect*, 管理控制台，515, 516
+*TfsRedirect*, 管理控制台, 515, 516
 报告章节，管理
 Reporting Services (SQL Reporting Services)
-- 数据驱动订阅，349
-- 加密备份，235–236, 551–552, 555
-- 链接报告，350, 354
-- 报告，343–359
-- 单服务器实例，29
-- 订阅，349
+- 数据驱动订阅, 349
+- 加密备份, 235–236, 551–552, 555
+- 链接报告, 350, 354
+- 报告, 343–359
+- 单服务器实例, 29
+- 订阅, 349
 
-*Reports*，过程模板插件，275
-Reports 文件夹选项卡，509
-- 仓库，已定义，84–85
-- 请求反馈邮件，329
-- 请求代码审查，171–172
-- 请求反馈，326–328
-- REQUIRED 规则，工作项，280
-- 基于需的测试集，634
-- *Resolved*，元状态，299
-- 资源管理器，542–544
-
-REST API，Web 访问，339–541
-- 数据库恢复向导，567–571
-- 或备份到原始服务器，566–573
-- 零售渠道，Team Foundation，111
-- 保留策略章节，构建定义，408–410
-
-Microsoft 硬件配置，527–528
-
-
-
-
+*Reports*, 过程模板插件, 275
+Reports 文件夹选项卡, 509
+- 仓库，已定义, 84–85
+- 请求反馈邮件, 329
+- 请求代码审查, 171–172
+- 请求反馈, 326–328
+- REQUIRED 规则，工作项, 280
+- 基于需的测试集, 634
+- *Resolved*, 元状态, 299
+- 资源管理器, 542–544
+REST API，Web 访问, 339–541
+- 数据库恢复向导, 567–571
+- 或备份到原始服务器, 566–573
+- 零售渠道，Team Foundation, 111
+- 保留策略章节，构建定义, 408–410
+Microsoft 硬件配置, 527–528
 
 ## schema 冲突 – 快照
-
 schema 冲突, 数据仓库, 621
-
 SCM (软件/源配置管理), 83.
 *另参见 版本控制*
-
 SCOM (System Center Operations Manager), 624–625
 团队范围, 24–25
 
 ## Scrum
-
 - 敏捷规划工具, 7
 - 简介, 258–259
 - 任务板, 7, 127–128, 254, 312, 322–334
@@ -16769,242 +16403,445 @@ SCOM (System Center Operations Manager), 624–625
 - 默认安全定义, 277
 - 字段映射, 365
 - 概述, 258–315
+
+
+
 - 过程模板编辑器窗口, 293–294
+
 - 升级, 669
 
 ## ScrumMaster, 259
 
 ## SCVMM (System Center Virtual Machine Manager)
+
 - 管理控制台, 55
+
 - 划分, 631
+
 - 库服务器, 631
+
 - 虚拟环境, 632–648
+
 - 秒列, 604
+
 - 安全, 575–598. 另参见 组；权限；用户
+
 - 简介, 63–65
+
 - 管理, 595–597
 
-## TFSsecurity.exe, 517–580, 583, 597
+## `TFSsecurity.exe`, 517–580, 583, 597
+
 - 版本控制, 140–141
+
 - 种子代理服务器, 685
+
 - 序列复合属性, 450–451
+
 - 服务器扩展性接口, 705–708
+
 - 服务器组, 64
+
 - 服务器健康与性能. 另参见 监控服务器
+
 - 服务器对象模型, 705–722
+
 - 服务器插件, 708–722
+
 - 服务器代理, 代理服务器
+
 - 服务器跟踪, 615–616
+
 - 服务器工作区, 102–103
-- SERVEDDEFAULT, 规则工作, 项目字段, 280
+
+- `SERVEDDEFAULT`, 规则工作, 项目字段, 280
+
 - 服务器级权限, 584
-- servername, Team Foundation Server URL 部分, 62
+
+- `servername`, Team Foundation Server URL 部分, 62
 
 ## 服务帐户
+
 - 最佳实践, 38
+
 - 域服务器, 576
+
 - 列表, 37
+
 - 更新密码, 498, 502–503
+
 - 服务包, Team Foundation 安装, 47–48
+
 - 维护, 配置数据库, 497
-- SetBuildProperties 属性, 453–454
-- Settings 命令, TfsConfig.exe, 519
-- Setup 命令, TfsConfig.exe, 519
+
+- `SetBuildProperties` 属性, 453–454
+
+- `Settings` 命令, `TfsConfig.exe`, 519
+
+- `Setup` 命令, `TfsConfig.exe`, 519
+
 - 影子帐户, 577
 
 ## 共享工程团队, 20
+
 - 共享库, 220–235
+
 - 共享管理责任方法, 20–21
+
 - 共享资源跟踪, Project Server, 360
-- SharedResources 复合属性, 454–455
+
+- `SharedResources` 复合属性, 454–455
+
 - 备份, 351
+
 - 扩展, 31, 544
+
 - 网络流量, 667
+
 - 产品帮助检查, 520
+
 - 站点团队, Team Project Collections 部分, 509
+
 - Team Foundation Server 安装, 46
+
 - Team Foundation Server 升级预条件, 662–663
+
 - 团队项目站点, 24, 27, 291, 632–673
+
 - 虚拟门户文档库服务, 291–292
+
 - 虚拟化环境, 34
+
 - Web 服务, 管理控制台, 514–515
+
 - 文件内模板插件, 276
+
 - SharePoint 仪表板. 另参见 仪表板
+
 - SharePoint 集成, 347–353
+
 - Excel 服务, 345–346
+
 - SharePoint 扩展, 51, 345
+
 - 优化且丰富的, 337
+
 - 概述, 36–37
+
 - 支持的 SharePoint 项目, 36–37
+
 - 在 Team Foundation Server 中共享 Eclipse 项目, 133–135
+
 - shell 扩展, 139, 145
+
 - shelve Sidekick, 524
+
 - 搁 (shelves), 118–120
+
 - 搁功能, 88, 119, 144
+
 - 兄弟分支, 195
+
 - sidekick 工具, 103, 111, 523–554
-- SIMPLE 恢复模式, 553
+
+- `SIMPLE` 恢复模式, 553
+
 - 简单工作流活动, 450
+
 - 单点登录, 60, 91, 355
+
 - 单机安装, 29, 62, 693
+
 - SMTP 服务器, 38–39, 55
+
 - 照照, 350, 653–664
 
 ## SOAP 事件订阅 – 结构化团队集合和团队项目
 
 - SOAP 事件订阅, 701–705
+
 - Socha-Leialoha, Jun, 336, 354
+
 - 软件质量, 148–149. *另参见 代码质量*
+
 - 软件需求, Team Foundation Server 安装, 34–37
+
 - 软件测试. 另参见 测试
+
 - 软件/源配置管理 (SCM), 83. *另参见 版本*
+
 - 特定构建输出参数, 435
+
 - 源分支, 194
+
 - 源代码
+
 - 针对自定义工具, 238–239
+
 - 第三方, 226
+
 - 源代码控制. *另参见 版本*
+
 - 将解决方案添加到源控制, 96–97, 133
+
 - 已定义, 83, 96
+
 - 管理源控制绑定, 122
+
 - 源控制管理器
+
 - 标记文件, 123–124
+
 - 管理源控制绑定, 122
+
 - 索引, 121–125
+
 - 查看历史, 123
+
 - 源控制合并向导, 209, 216
+
 - 源文件夹, 224, 225
-- source.extension.vsmanifest, 162–163
+
+- `source.extension.vsmanifest`, 162–163
+
 - 网络流量源, 地理分布团队, 677–679
-- sourcesDirectory, 441
+
+- `sourcesDirectory`, 441
+
 - 冲刺 (sprints), 7, 246, 259
+
 - 迭代报告, 7, 246, 259, 300, 316, 324, 325, 336
+
 - SQL 分析服务.
+
 - SQL Azure, 614
+
 - SQL 连接字符串, 491, 519, 551, 552
+
 - SQL 标记事务, 555
+
 - SQL 镜像, 694
+
 - SQL报告服务. 另参见 分析服务
+
 - SQL Always-On, 536, 556, 694
+
 - 缓冲区缓存, 530–531
+
 - 当前运行进程, 602–607
+
 - 健康, 601–610
+
 - 内存内容, 609–610
+
 - 计划代码, 529–530
+
 - 推荐的 SQL Server, 528–529
+
 - “在 Hyper-V 中运行 SQL 2008,” 547
+
 - “带有 Hyper-V 运行 SQL,” 547
+
 - “存储 10 最佳实践,” 337
+
 - Team Foundation Server 安装, 45–46
+
 - Team Foundation Server 要求, 34–36
+
 - Team Foundation 升级, 33, 555
+
 - VSS 向导, 188
+
 - 等待时间, 607–608
+
 - SQL Server 商业智能 (IDS), 347, 354
+
 - SQL Server 版本, 高可用性, 538–539
+
 - 在线索引, 35, 693
+
 - 升级到, 538–539
+
 - SQL报告. 另参见 报告生成器
-- face.ini, 184
+
+- `face.ini`, 184
+
 - 栈, 299, 300
+
 - 持有反馈, 7, 312–326. *另参见*
+
 - 版本程序集, 482–488
+
 - 标准级, 590
+
 - 标准元素, 631, 632, 644
+
 - 标准服务器, 250
+
 - 标准工作项控制, 284–286
+
 - 每日站会, 259
+
 - 开始团队集合, 507
+
 - 无状态, 网页访问, 540
+
 - 工作项, 281
+
 - 工作项元素, 248
+
 - 静态代码分析, 432, 433
+
 - 静态测试套件, 634
+
 - 迭代状态, 301
+
 - 状态 Sidekick, 523
+
 - 状态卡. Team Project Collections, 507
+
 - 停止构建, 409
+
 - 停止团队集合, 507
+
 - 存储健康, 608–609
+
 - 系统健康, 600–601
+
 - 存储配置, 开发版, 538
+
 - 数据分层, 529
+
 - 代理服务器, 533–534
+
 - “存储 10 最佳实践,” 337
+
 - 存储使用, Team Foundation, 619–622
+
 - 报告, 301
+
 - 存储库程序集, 依赖项, 233
+
 - 结构化团队集合和团队项目, 23–25
 
 ## 订阅 – Team Foundation Server 2012
 
 - 订阅, 报告服务, 349
+
 - 成功, 构建状态, 409
+
 - 后继/前驱类型, 244, 287
 
 ## SVN (Subversion)
 
 - CVS, 86, 89, 90, 107, 109, 144
+
 - 优势与缺点, 90
+
 - Team Foundation Server, 144–146
+
 - 及时忽略, 190
-- .svnignore, 114
+
+- `.svnignore`, 114
+
 - 切换到 Foundation 版本控制, 141–146
+
 - 切换工作区, Source Control Explorer, 122
 
 ## Symbol Server
+
 - 目的, 38
+
 - 设置, 433
+
 - Team Foundation Build 架构, 391
+
 - Team Foundation Server, 660
-- symbols.tf.domain.local, 420
+
+- `symbols.tf.domain.local`, 420
+
 - 同步作业, 337, 357
+
 - 同步名称更改属性, 项目字段, 279
+
 - 双向同步, 361–366
+
 - 版本控制双向同步到服务器, 688
+
 - 工作项同步到过程模板, 688–689
+
 - 属性, 302–303
-- sysprop 探测, 648
+
+- `sysprop` 探测, 648
 
 ## System Center Operations Manager (SCOM), 624–625
+
 - System Center Virtual Machine Server SCVMM, 系统健康, 600–601
-- tbl_LocalVersion, 620
-- tbl_PropertyValue, 620
-- tbl_security_identity_cache, 544
-- tbl_tmpLOBParameter, 620
+
+- `tbl_LocalVersion`, 620
+
+- `tbl_PropertyValue`, 620
+
+- `tbl_security_identity_cache`, 544
+
+- `tbl_tmpLOBParameter`, 620
+
 - TCP Keep-Alive, 541
 
 ## 团队
 
 - 区域路径, 315
+
 - 区域, 313
+
 - 跨团队协作, 15
+
 - 创建, 312–317
+
 - 团队项目, 312
+
 - 团队管理, 313, 314
 
 ## Team Build. 另参见 Team Explorer
+
 - CAL, 131
+
 - 已定义, 65–66
+
 - 等待处理更改, 111
+
 - 理解, 66–71
 
 ## Team Explore Everywhere
+
 - CAL, 131
+
 - 提交策略, 151
+
 - 组件, 71
+
 - Team Foundation Server for Eclipse, 72–125, 121–132
+
 - 更新文章, 732
+
 - Team Foundation 管理. 另参见 管理控制台
+
 - Team Foundation Build. 另参见 构建
+
 - Team Foundation Content Manager, 351
+
 - Team Foundation Gantt, 361
+
 - Team Foundation 代理服务器. 另参见 代理服务器
+
 - Team Foundation Server 2012. 另参见 Project Server-
 
 ## Team Foundation Integration
+
 - 获取选项, 7–11
+
 - 地址处理, 61–63
+
 - 采用
 
 ## T
@@ -17012,154 +16849,289 @@ SCOM (System Center Operations Manager), 624–625
 - 表和索引分区, SQL Server 企业版, 539
 
 ## Tailspin Toys 示例
+
 - 代码推广分支策略, 202–203
+
 - 处理更改, 208–220
+
 - 实施, 203–208
+
 - 概述, 202
+
 - 现在执行完整备份, 565
+
 - 目标分支, 194
+
 - 任务板, 7, 127–128, 254, 312–322
+
 - 任务程序, 563, 564
-- tbl_Content, 620, 621
+
+- `tbl_Content`, 620, 621
+
 - Microsoft 开发者部门, 534
+
 - 分阶段方法, 17–18
+
 - 时间线, 16–17
+
 - al 系统, 4
+
 - 架构, 495–497
+
 - 应用层, 60, 495, 496
+
 - 客户端, 60, 495, 496
+
 - 数据层, 60, 495, 496–497
+
 - 安装, 59–61
+
 - 团队集合, 497
+
 - 构建自动化能力, 385–386
+
 - 竞争对手, 4
-
-
-
-
 
 # Team Foundation 管理员 – 团队项目集
 
 - 配置, 51–58
+
 - 连接到 Team Foundation Server, 59–79
+
 - Team Foundation Server 的跨平台命令行客户端, 72–73
+
 - 来自 Eclipse, 71–72
+
 - 错误, 70
+
 - 来自 Excel, 75–76
+
 - Microsoft Project, 76–77
+
 - Team Explorer, 65–71
+
 - 通过第三方集成, 78–79
+
 - 来自 Visual Studio, 66–68
+
 - 通过 Web, 74–75
+
 - 已定义, 3–5
+
 - 从 Team Foundation Server 导入项目, 135–137
+
 - 在 Team Foundation Server 中共享 Eclipse 项目, 133–135
+
 - Team Foundation 插件, 71–72, 125, 131–132, 137
+
 - 在 Excel 中, 75–76
+
 - 功能, 4
+
 - 健康状况, 610–621
+
 - 托管, 18–19
+
 - 介绍, 3–11
+
 - 限制性, 25–29
+
 - 新功能, 5–7
+
 - 概述, 3–5
+
 - 季度更新周期, 422
+
 - 服务帐户, 37
+
 - 存储用量, 619–621
+
 - SVN 版本, 144–146
+
 - 试用基础, 9–10, 40–45
+
 - 上传过程到, 296–297
+
 - URL 方案, 61–63
+
 - 版本控制功能, 90–91
+
 - VSS 命令行, 142–144
+
 - Windows Explorer 集成器, 77
+
 - 工作流活动, 452–455
+
 - Zander, 5
+
 - Team Foundation Server 集成工具, 190, 680, 686–689
+
 - 用于 Eclipse 的 Team Foundation Server 插件, 71–72, 125, 131–132, 137
+
 - Team Foundation Server 代理。参见 节点
+
 - Team Foundation Server 版本控制。参见 版本控制
+
 - Team Foundation Server 仓库检查, 520
+
 - Team Foundation Server Web 协议, 60
+
 - Team Foundation Service, 概述, 8–9
+
 - 团队门户站点, SharePoint, 24, 37, 291, 332, 672–673
+
 - 团队项目
+
 - 创建, 56–57
+
 - 默认团队项目安全组, 276–277
+
 - 定义, 24, 36, 512
+
 - 定义, 508, 660
+
 - 在现有团队项目上编辑工作项, 297–298
+
 - 企业 级项目映射, 26, 366, 368–369
+
 - 项目级文件夹, 依赖文件夹, 228–230
+
 - 跨团队项目管理工作项, 26
+
 - 命名, 25–26
+
 - 新项目向导, 57, 274, 291
+
 - 权限, 586–587
+
 - 重命名, 25
+
 - 范围, 24–55
+
 - SharePoint 团队项目项目门户文档库设置, 291–292
+
 - 每个应用程序一个项目方法, 24
+
 - 每个发布版本一个项目方法, 24–25
+
 - 每个团队一个项目方法, 25
+
 - 团队对比, 312
+
 - 升级旧团队项目, 666–673
+
 - 团队项目集, 64, 582–583
+
 - 团队项目集
+
 - 激活的, 28, 529–537
+
 - 范围属于团队项目集的属性, 28
+
 - 缓存, 513–514
+
 - 创建, 509–511
-- DefaultCollection, 56, 62
+
+- `DefaultCollection`, 56, 62
+
 - 删除, 514
+
 - 解离, 511–513
+
 - 休眠的, 528
+
 - 关键点, 497
+
 - 管理, 505–514
+
 - 跨团队项目集管理工作项, 26
+
 - Team Foundation Server 管理员, 494
+
 - Team Foundation Server 完整健康检查, 520–521
+
 - Team Foundation Server Expression, 19, 35, 337, 662
+
 - Team Foundation Server 框架健康检查, 520
+
 - Team Foundation Server 组, 580–583
+
 - Team Foundation Server 安装。参见 安装
+
 - Team Foundation Server 集成平台。参见 集成平台
 
 # 团队项目集 – tfpt
 
 - 移动, 511
+
 - 权限, 584–586
+
 - 重命名, 26
+
 - 启动和停止, 507
+
 - 结构化, 23–25
+
 - Team Foundation Server 架构, 495, 497
+
 - 管理控制台中的团队项目集部分, 505–514
+
 - 访问, 506
+
 - 通用选项卡, 506–507
+
 - SharePoint 选项卡, 35
+
 - 状态选项卡, 507
+
 - 团队项目选项卡, 507–508
+
 - 团队项目组, 65, 383, 596, 597
+
 - 团队项目选择日, 699
+
 - 团队项目集中的团队项目选项卡, 507–508
+
 - 团队查询文件夹, 588–589
+
 - Team Web Access：参见 敏捷计划工具 CAL, 589–591
+
 - 自定义工作控制 Web Access, 341
+
 - 电子邮件警报, 153–154
+
 - 新功能, 6
+
 - 团队工作项视图, 270, 589, 590
+
 - 工作项管理, 268–270
+
 - TeamCompanion, 270, 691
+
 - TeamPlain, 696
+
 - TeamPranie, 696
+
 - 测试, 627–643。另请参见 实验室管理
+
 - 可操作的缺陷, 332, 636
+
 - 架构, 630–631
+
 - 构建验证控制, 166, 477
+
 - 探索性的, 636
+
 - 手动, 628–629
+
 - 试点项目, 215, 253
--  Visual Studio 2012 专业生命周期, 148, 628
+
+- Visual Studio 2012 专业生命周期, 148, 628
+
 - 测试代理, 644–645
+
+
+
 - 测试附件, 520, 620, 638
 - 测试自动化, 641–643
 - 已定义, 628
@@ -17171,7 +17143,7 @@ SCOM (System Center Operations Manager), 624–625
 - 虚拟化环境, 34
 - 测试仪表板, 355
 - 测试影响, 过程模板, 276
-- 测试管理器 (Test Manager), 632–641
+- 测试管理器 (`Test Manager`), 632–641
 - 构建保留策略, 410, 640
 - 已定义, 78
 - Visual Studio 2012 专业生命周期, 633
@@ -17190,47 +17162,47 @@ SCOM (System Center Operations Manager), 624–625
 - 测试Settings, 429, 431, 434
 - 链接类型测试, 244, 287
 - 分支, 207, 212, 213
-- tf 帮助, 137, 138, 220
-- tf 锁命令, 111
-- tf 负载, 103
-- 工作空间 /delete:workspace, 111
-- 工作空间 /new /template:workspace, 105
-- 工作空间 /update:workspace, 100
-- 工作空间 /update:username, 100
-- tf.exe, 73, 218, 523, 593, 685
-- tf.exe 权限, 517, 597
-- tf.exe 代理, 517, 684–685
-- tf.Ignore, 113, 114–115, 478–480
-- tf3, 139
+- `tf` 帮助, 137, 138, 220
+- `tf` 锁命令, 111
+- `tf` 负载, 103
+- 工作空间 `/delete:workspace`, 111
+- 工作空间 `/new /template:workspace`, 105
+- 工作空间 `/update:workspace`, 100
+- 工作空间 `/update:username`, 100
+- `tf.exe`, 73, 218, 523, 593, 685
+- `tf.exe` 权限, 517, 597
+- `tf.exe` 代理, 517, 684–685
+- `tf.Ignore`, 113, 114–115, 478–480
+- `tf3`, 139
 
 # addprojectportal - 升级
 
-- addprojectportal, 346
-- addprojectreport, 346, 672
+- `addprojectportal`, 346
+- `addprojectreport`, 346, 672
 - 帮助, 139
-- addprojectorch, 140
-- ftpe.exe addprojectportal, 673
-- ftpe.exe 连接, 690
-- TfsAdmin.exe, 367
-- Tfs_Analysis, 337, 338, 444, 497, 592
-- Tfsamd.exe 工具, 522
-- TfsBUILD.exe, 393, 396
-- Tfsbuild.exe, 402, 405, 418
-- TfsConfig.exe, 493, 514, 517–519
-- Tfs_Configuration_database：参见 配置数据库
-- TfsDeleteOldBackup, 564
-- TfsDifferentialBackup, 564
-- TfsFullBackup, 564
-- TfsConfig.exe 权限, 597
-- TfsRedirect.aspx, 358
-- TfsSecurity.exe, 517, 580, 583
-- Tfs_server.exe, 48, 393
-- TfsServiceControl.exe, 519, 566–573
-- TfsBackup, 564
-- TfsVersion.exe, 466, 473, 478, 488
-- TfsVersion.cs，自定义工作流活动, 466–473
-- Tfs_Warehouse, 154, 337, 338, 444, 497, 572
-- TfsWarehouseDataReader, 395
+- `addprojectorch`, 140
+- `ftpe.exe addprojectportal`, 673
+- `ftpe.exe` 连接, 690
+- `TfsAdmin.exe`, 367
+- `Tfs_Analysis`, 337, 338, 444, 497, 592
+- `Tfsamd.exe` 工具, 522
+- `TfsBUILD.exe`, 393, 396
+- `Tfsbuild.exe`, 402, 405, 418
+- `TfsConfig.exe`, 493, 514, 517–519
+- `Tfs_Configuration_database`：参见 配置数据库
+- `TfsDeleteOldBackup`, 564
+- `TfsDifferentialBackup`, 564
+- `TfsFullBackup`, 564
+- `TfsConfig.exe` 权限, 597
+- `TfsRedirect.aspx`, 358
+- `TfsSecurity.exe`, 517, 580, 583
+- `Tfs_server.exe`, 48, 393
+- `TfsServiceControl.exe`, 519, 566–573
+- `TfsBackup`, 564
+- `TfsVersion.exe`, 466, 473, 478, 488
+- `TfsVersion.cs`，自定义工作流活动, 466–473
+- `Tfs_Warehouse`, 154, 337, 338, 444, 497, 572
+- `TfsWarehouseDataReader`, 395
 - 第三方集成, Team Foundation Server 访问, 78–79
 - 第三方迁移工具, 100
 - 第三方过程模板, 260
@@ -17266,13 +17238,9 @@ SCOM (System Center Operations Manager), 624–625
 - 故障排除。实验室管理, 565
 - 信任，身份同步作业, 578
 - TryCatch 复合活动, 451
-- Unattend 命令。TfsConfig.exe, 519
+- Unattend 命令。`TfsConfig.exe`, 519
 - 撤销挂定更改, 115
 - 单元测试
-
-
-
-
 
 ## 升级 – 虚拟化
 
@@ -17304,8 +17272,8 @@ SCOM (System Center Operations Manager), 624–625
     - SCM, 83
     - 安全性, 140–141
     - VSS, 120, 180–181
-- UpgradeTemplate, 423, 436, 671
-- UpgradeTemplate_.xml, 671
+- `UpgradeTemplate`, 423, 436, 671
+- `UpgradeTemplate_.xml`, 671
 - “将 Foundation Server 2008 Reports 升级到 2010”（Socha-Leialoha）
 - 将过程模板上传到 Team Foundation Server, 296–297
 - URL 方案, Team Foundation Server, 61–63
@@ -17318,7 +17286,7 @@ SCOM (System Center Operations Manager), 624–625
     - 定义, 83,
     - 用户
         - 用户侧边栏, 524
-- 源码控制资源 (Source Control Explorer)
+- 源码控制资源 (`Source Control Explorer`)
     - 标记文件, 123–124
     - 管理解决方案控制编码, 122
 
@@ -17327,9 +17295,9 @@ SCOM (System Center Operations Manager), 624–625
 - 假期, Project Server, 361
 - 提交的验证, 168
 - VALIDUSER 规则, 工作项字段, 280
-- .vbproj 文件, Hello World 样式应用, 380–383
-- VDownloadHandler, 资源调节器, 543
-- 速度 (velocity), 318–319
+- `.vbproj` 文件, Hello World 样式应用, 380–383
+- `VDownloadHandler`, 资源调节器, 543
+- 速度 (`velocity`), 318–319
 - 速度报告, 259
 - Veracity, 91
 - 升级验证, 665–666
@@ -17354,12 +17322,12 @@ SCOM (System Center Operations Manager), 624–625
     - 使用, 95–146
 - 版本控制, 清除, 570–571
 - 程序集版本号, 标记, 482–488
-- VersionNumberRegularExpression, 485
-- versionspec, 107–109, 144
-- Versionstring, 485, 486, 487
+- `VersionNumberRegularExpression`, 485
+- `versionspec`, 107–109, 144
+- `Versionstring`, 485, 486, 487
 - 查看项目级, 587
 - 在源码控制资源中查看历史, 123
-- 虚拟 virtualDirectory, Team Foundation URL 部分, 62
+- 虚拟 `virtualDirectory`, Team Foundation URL 部分, 62
 - 虚拟化
     - 虚拟环境, SCVMM, 632, 648–649
     - 虚拟机. 见 VMs
@@ -17386,7 +17354,7 @@ SCOM (System Center Operations Manager), 624–625
 - 季度周期更新, 422
 - Test Professional, 69, 78, 327, 591, 633, 669
 - 工作项管理, 260–266
-- Visual Studio 扩展部署项目 (VSIX), 159–163, 449, 722
+- Visual Studio 扩展部署项目 (`VSIX`), 159–163, 449, 722
 - Visual Studio 脚本模板
     - 已提交状态，工作, 319
     - 默认迭代节点, 277
@@ -17411,8 +17379,8 @@ SCOM (System Center Operations Manager), 624–625
         - 对象模型, 182
         - 优点与缺点, 89
         - VSS 升级, 122, 180, 181
-        - VSSConverter.exe 工具, 180
-        - VssUpgrade.exe 工具, 180, 182
+        - `VSSConverter.exe` 工具, 180
+        - `VssUpgrade.exe` 工具, 180, 182
         - 等待时间, SQL, 607–608
         - 等待列, 606–607
         - 自定义, 357–358
@@ -17437,10 +17405,10 @@ SCOM (System Center Operations Manager), 624–625
         - MSBuild 版本, 457–458
         - Visual Basic.NET 表达式, 438–440
         - WinForms，工作项布局工具, 283
-        - witadmin.exe, 295–296, 297, 303, 451, 516
-        - WITExport.exe, 516
-        - WITields.exe, 516
-        - WITImport.exe, 753
+        - `witadmin.exe`, 295–296, 297, 303, 451, 516
+        - `WITExport.exe`, 516
+        - `WITields.exe`, 516
+        - `WITImport.exe`, 753
 
 ## 工作项 – 工作项跟踪
 
@@ -17502,31 +17470,34 @@ SCOM (System Center Operations Manager), 624–625
     - 复合, 449–456
     - 自定义构建工作活动, 458–480
     - 产品管理, 237–238
-    - BaseCode.cs, 461–478
-    - 在构建过程中, 473–478
-    - 创建, 457–483
-    - CustomActivitiesAndExtensions.xml, 480
-    - CustomAssemblies.tinfo, 479–480
-    - 部署, 478–488
-    - 集成到构建, 473–478
-    - TfsVersion.cs, 466
-    - 定义, 449
-    - 简单, 450
-    - Team Foundation, 452
-    - 工作流变量
-    - 自定义, 440
-    - 虚拟化, 642
-    - 迁移工作项, 247
+    - `BaseCode.cs`, 461–478
+
+
+
+- 在构建过程中, 473–478
+- 创建, 457–483
+- `CustomActivitiesAndExtensions.xml`, 480
+- `CustomAssemblies.tinfo`, 479–480
+- 部署, 478–488
+- 集成到构建, 473–478
+- `TfsVersion.cs`, 466
+- 定义, 449
+- 简单, 450
+- Team Foundation, 452
+- 工作流变量
+- 自定义, 440
+- 虚拟化, 642
+- 迁移工作项, 247
 
 ## 工作项跟踪 – Zander
 
 - 权限, 587–591
 - Team Foundation 集成, 666
 - 工作项跟踪，过程模板插件, 276
-- Workitemhistory, 339,341
-- WorkitemLong, 620
-- WorkitemAre, 620
-- WorkitemWere, 620
+- `Workitemhistory`, 339,341
+- `WorkitemLong`, 620
+- `WorkitemAre`, 620
+- `WorkitemWere`, 620
 - 工作区, 441
 - 工作区, 99–103
 - 计算机名称更改, 100
@@ -17540,7 +17511,7 @@ SCOM (System Center Operations Manager), 624–625
     - 缺点, 101–102
     - 启用, 672
     - 高级, 99
-    - nview, 5–6
+    - `nview`, 5–6
     - 使用, 101–102
     - 所有者名称更改, 100
     - 权限, 106–134
@@ -17551,10 +17522,6 @@ SCOM (System Center Operations Manager), 624–625
     - 沙盒, 85
     - 服务器工作区, 102–103
     - 切换, 源码控制资源, 122
-
-
-
-
 
 ## 使用 ALM 解决现实世界的挑战
 
@@ -17570,49 +17537,67 @@ SCOM (System Center Operations Manager), 624–625
 - 为整个团队提供务实的教程——包括开发者、项目经理、测试人员、架构师、业务经理和外部利益相关者
 
 在任何销售书籍和电子书均有销售。
+
 www.it-ebook.info
 
 ## 与 Wrox 连接。
 
 参与
+
 通过参与我们在 @p2p.wrox.com 的 P2P 论坛在在线上积极活跃
 
 用户组计划
+
 成为成员并享受所有福利
 
 Wrox Blox
+
 下载简短的信息片段和代码，让你与时保持同步并避免陷扰
 
 Twitter 上的 Wrox
+
 在 Twitter 上关注 @wrox，获取 Wrox 世界的最新动态
 
 加入社区
+
 在 newsletter.wrox.com 订阅我们的免费每月新闻邮件
 
 Facebook 上的 Wrox
+
 加入 facebook.com/wroxpress 上的 Wrox Facebook 页面，获取新书和出版物的更新信息，以及即将举行的程序员会议和用户组活动。
 
 Wrox.com
+
 浏览广泛的 Wrox 书籍、电子书和博客，找到你确切需要的。
 
 ## 相关的 Wrox 书籍
 
 ### Visual Studio 2012 专业版应用生命周期管理
+
 ISBN: 978-1-118-31408-1
+
 本版专注于最新版本的 Visual Studio，向你展示了如何使用 Visual Studio 2012 的应用生命周期管理（ALM）能力来简化软件设计、开发和部署。这本及时且具有权威性的著作分为六大部分部分，涵盖了 Team Foundation、利益相关者参与、项目管理、架构、软件开发和测试。无论是作为循序渐进的指南，还是设计软件解决方案的参考，本书都提供了一种实用的方法，帮助你使用微软的旗舰开发工具解决整个应用生命周期中的现实世界挑战。
 
 ### C# 2012 和 .NET 4.5 专业版
-ISBN: 978-1-118-31442-5在快速回顾 C# 基础后，专家作者团队深入针对新语言和框架新增、测试驱动开发以及并发编程功能提供了无与伦比的覆盖。最终，本书将为你提供有关 C# 2012 和 .NET 4.5 需要的所有知识，让你能够最大限地发挥这些动态技术的潜力。
+
+ISBN: 978-1-118-31442-5
+
+在快速回顾 C# 基础后，专家作者团队深入针对新语言和框架新增、测试驱动开发以及并发编程功能提供了无与伦比的覆盖。最终，本书将为你提供有关 C# 2012 和 .NET 4.5 需要的所有知识，让你能够最大限地发挥这些动态技术的潜力。
 
 ### Visual Basic 2012 和 .NET 4.5 专业版
+
 ISBN: 978-1-118-31445-6
+
 由资深程序员和开发者组成的作者团队编写，本书让你快速上手并了解 Visual Studio 2012 的预期。这本详尽的指南充满了实用的示例，检查了 Visual Studio 2012 的功能，并带你浏览集成开发环境（IDE）的每一个方面，从常见任务和功能到其强大的工具。
 
 ### Visual Studio 2012 专业版
+
 ISBN: 778-1-118-33770-7
+
 这本书是你快速在 Visual Studio 2012 上运行所需的书籍。它由一位微软 C# MVP 编写，引导你熟悉集成开发环境（IDE），向你展示如何利用每个工具和功能。
 
 ### Visual Basic 2012 程序员参考
-ISBN: 978-1-118-31407-4
-Visual Basic 2012 充满了强大的功能，这本书将帮助你掌握所有。你将对 Visual Basic 基本主题有坚实的理解，并开始应用这些信息来执行许多重要的开发任务。书中的教程充满了代码示例以及使用它们编写 way程序的最佳方法。
 
+ISBN: 978-1-118-31407-4
+
+Visual Basic 2012 充满了强大的功能，这本书将帮助你掌握所有。你将对 Visual Basic 基本主题有坚实的理解，并开始应用这些信息来执行许多重要的开发任务。书中的教程充满了代码示例以及使用它们编写 way程序的最佳方法。

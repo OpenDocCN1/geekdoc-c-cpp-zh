@@ -1,26 +1,9 @@
-# C++ 最佳实践：提升 C++  de 45 条简单规则与具体行动项
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# C++ 最佳实践：提升 C++ de 45 条简单规则与具体行动项
 
 献我的妻子 Jen，以及她对呆萌羊驼的热爱。
+
 封面是我妻子在访问科罗拉多州长格维的红狐狸羊驼农场（Red Fox Alpaca Ranch）时拍摄的。
-
-
 
 # 1. 引言
 
@@ -55,11 +38,7 @@
 
 例外极少。那些做出不同决策的离群者：是那些遵循书中建议的组织。
 
-
-
-
-
--   通过你自己的研究，让你去思考并更深层次地理解语言。
+- 通过你自己的研究，让你去思考并更深层次地理解语言。
 
 ## 链接与参考
 
@@ -68,37 +47,39 @@
 # 3. 使用工具：自动化测试
 
 你需要一个单一的命令来运行测试。
+
 如果没有这个命令，就没有人会运行测试。
 
-- Catch2¹ - 由 Phil Nash² 和 Martin Hořeňovský³ 提供的、广受欢迎且支持良好的的测试框架。
-- doctest⁴ - 与 catch2 类似，但为了编译性能进行了精简。
-- Google Test⁵
-- Boost.Test⁶ - 测试框架，采用 boost 风格。
+- `Catch2`¹ - 由 Phil Nash² 和 Martin Hořeňovský³ 提供的、广受欢迎且支持良好的的测试框架。
+- `doctest`⁴ - 与 `catch2` 类似，但为了编译性能进行了精简。
+- `Google Test`⁵
+- `Boost.Test`⁶ - 测试框架，采用 boost 风格。
 
-ctest⁷ 是一个用于 CMake 的测试运行器，可以与任何框架配合使用。它是通过 CMake 的 `add_test⁸` 功能调用的。
+`ctest`⁷ 是一个用于 CMake 的测试运行器，可以与任何框架配合使用。它是通过 CMake 的 `add_test`⁸ 功能调用的。
 
 你需要熟悉这些工具、它们的作用，并从中选择适合你的工具。
+
 如果没有自动化测试，那么这本书的其余部分都是毫无意义的。如果你无法验证自己没有破坏现有代码，就无法应用这些实战练习。
+
 CppCast 的 Oleg Rabaev 曾表示：
 
 - 如果一个组件难以测试，说明它的设计得不当。
 - 如果一个组件容易测试，这是它设计良好的良好指标。
 
 > ¹https://github.com/catchorg/Catch2
-²https://twitter.com/phil_nash
-³https://twitter.com/horenmar_ctu
-⁴https://github.com/onctam/doct
-⁵https://github.com/google/googletest
-⁶https://www.boost.org/libs/1_74_0/libs/test/doc/html/index.html
-⁷https://cmake.org/cmake/cmake/help/latest/manual/ctest.1.html
-⁸https://cmake.org/cmake/cmake/help/latest/command/add_test.html
+> ²https://twitter.com/phil_nash
+> ³https://twitter.com/horenmar_ctu
+> ⁴https://github.com/onctam/doct
+> ⁵https://github.com/google/googletest
+> ⁶https://www.boost.org/libs/1_74_0/libs/test/doc/html/index.html
+> ⁷https://cmake.org/cmake/cmake/help/latest/manual/ctest.1.html
+> ⁸https://cmake.org/cmake/cmake/help/latest/command/add_test.html
 
 如果一个组件设计得当，它就是容易测试的。
 
 ## 练习：你是否可以使用一个单一的命令来运行套测试？
 
 - 是：太棒了！运行测试并确保它们全部通过！
-
 - 否：你的程序有产生输出吗？
   - 是：从“Approval Tests⁹（认可测试）”开始，它将为你提供开始测试所需的as。
   - 否：制定一个如何实现某种最小形式测试的策略。
@@ -110,9 +91,9 @@ CppCast 的 Oleg Rabaev 曾表示：
 - C++ on Sea 2020: Clare Macrae “Quickly and Effectively Testing Legacy C++ Code with Approval Tests”12
 
 > 9https://cppcast.com/clare-macrae/
-10https://youtube.be/ob5_XZRFQHO
-11https://youtube.be/3GZHvcd32s
-12https://youtube.be/tXEuf_3VzRE
+> 10https://youtube.be/ob5_XZRFQHO
+> 11https://youtube.be/3GZHvcd32s
+> 12https://youtube.be/tXEuf_3VzRE
 
 # 4. 使用工具：持续构建
 
@@ -250,10 +231,6 @@ CppCast 的 Oleg Rabaev 曾表示：
 - 测试所有配置选项
 - 针对比你支持或要求的更新版本的编译器进行测试
 
-
-
-
-
 # 8. 慢下来
 
 对于任何给定的问题，C++ 中都有数十解决方案。对于这些解决方案中哪种最好，也有几十种不同的观点。从一个应用程序到另一个应用程序之间复制和粘贴是很容易的。用你熟悉的解决方案继续前进也是很容易的。
@@ -330,7 +307,7 @@ C++ 是一种偏向于系统编程的通用编程语言，它：
 - 函数式
 - 面向对象
 - 泛型
-- 编译时（constexpr 和模板元编程）
+- 编译时（`constexpr` 和模板元编程）
 
 知道何时使用这些工具中的每一个是编写良好 C++ 的关键。僵化坚持单一范式的项目会错过该语言最优秀的特性。
 
@@ -346,7 +323,7 @@ C++ 是一种偏向于系统编程的通用编程语言，它：
 - C++ Weekly Ep 137: C++ 并不是一种面向对象的语言²
 
 > ¹https://www.manning.com/books/functional-programming-in-c-plus-plus?a_aid=FPinCXX&a_bid=441f12cc
-²https://youtu.be/AUT201AXeJg
+> ²https://youtu.be/AUT201AXeJg
 
 # 11. 学习另一种语言
 
@@ -386,16 +363,17 @@ Ben Deane 推荐了所有程序员都应该学习的语言¹：
 # 12. 将所有非 constexpr 的都改为 const
 
 很多人（如 Kate Gregory 和 James McNellis）已经说过多次了。
-让对象变为 const 会做两件事：
+
+让对象变为 `const` 会做两件事：
 
 - 1. 它强迫我们思考……
 - 2. 它向阅读者传达了……
 
-正如便带一句，C++ 中，如果它是 static，可能会影响性能。
+正如便带一句，C++ 中，如果它是 `static`，可能会影响性能。
 
 > 练习：将所有非 constexpr 的都改为 const
 
-当你阅读代码时，static 应该是成为你的默认值。
+当你阅读代码时，`static` 应该是成为你的默认值。
 
 ```cpp
 static auto data = [](){ // 立即调用
@@ -403,7 +381,7 @@ std::vector<int> result;
 }(); // 填充
 ```
 
-![](img/882530931ce4e960621b6327_0) 这里的 static 是为了确保对象不会在每次遇到函数时重新初始化。
+![](img/882530931ce4e960621b6327_0) 这里的 `static` 是为了确保对象不会在每次遇到函数时重新初始化。
 
 ## 资源
 
@@ -419,7 +397,7 @@ std::vector<int> result;
 
 # 13. 所有已知的皆为 constexpr
 
-#define 的时代已经过去了。constexpr 应该是你的新默认值！不幸的是人们过度复杂化 constexpr，让我们拆解最简单的东西。
+`#define` 的时代已经过去了。`constexpr` 应该是你的新默认值！不幸的是人们过度复杂化 constexpr，让我们拆解最简单的东西。
 
 如果你看到类似这样的（我在真实代码中见过）：
 
@@ -435,35 +413,31 @@ static constexpr.
 static constexpr std::array<int, 5> angles{-90,45,0,45,90};
 ```
 
-> 这里的 static 是为了确保对象不会在每次遇到函数时重新初始化。有了 static，变量持续整个 lifetime，并且知道它会被初始化一次。
+> 这里的 `static` 是为了确保对象不会在每次遇到函数时重新初始化。有了 `static`，变量持续整个 lifetime，并且知道它会被初始化一次。
 
 - 数组的大小现在在编译时已知
 - 我们消除了动态分配
-- 我们不再为访问 static 付费
+- 我们不再为访问 `static` 付费
 
-主要的收益来自前两者，但我们需要 constexpr 思维来寻找这种机会。差异可能是巨大的。
+主要的收益来自前两者，但我们需要 `constexpr` 思维来寻找这种机会。差异可能是巨大的。
 
-# 练习：constexpr  const 值
+# 练习：constexpr const 值
 
-阅读代码时，查看所有的 const 值。问：“这个值在编译时已知吗？”如果是，需要什么才能让它变为 constexpr？
+阅读代码时，查看所有的 `const` 值。问：“这个值在编译时已知吗？”如果是，需要什么才能让它变为 `constexpr`？
 
-# 练习：static constexpr  static const 值
+# 练习：static constexpr static const 值
 
-遍历你当前的代码库，寻找目前为 static const 的代码。你可能在某处有一些。
+遍历你当前的代码库，寻找目前为 `static const` 的代码。你可能在某处有一些。
 
-- 如果它目前是 static const，很可能大小和数据在编译时已知。
-- 这部分代码可以变成 constexpr 吗？
-- 是什么阻止了它变成 constexpr？
-- 修改填充 static const 数据的函数使其也成为 constexpr 需要多少工作？
+- 如果它目前是 `static const`，很可能大小和数据在编译时已知。
+- 这部分代码可以变成 `constexpr` 吗？
+- 是什么阻止了它变成 `constexpr`？
+- 修改填充 `static const` 数据的函数使其也成为 `constexpr` 需要多少工作？
 
+`constexpr` 编译时已知
 
-
-
-
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
+- C++ 2017：Jason Turner “constexpr”
+- C++ 2019：Hana “编译时状态”
 
 # 14. 大多数情况下使用 auto
 
@@ -480,6 +454,8 @@ const auto result = count( /* stuff */
 ```cpp
 auto result = count( /* stuff */
 ```
+
+
 
 使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
 
@@ -713,85 +689,6 @@ for (const element_type : get_map()) {
 }
 ```
 
-# 15. 优先使用范围 for 语法而非旧循环
-
-我们将通过一系列示例来说明这一点。
-
-```cpp
-for (std::size_t i = 0; i < container.size(); ++i) {
-  // 哎，类型不匹配
-}
-```
-
-循环时容器不匹配。
-
-```cpp
-for (auto itr = container.begin();
-  itr != container.end();
-  ++itr) {
-  // 哎，我们大多数都在某个时候写过这样
-}
-```
-
-范围 for 循环的示例。
-
-```cpp
-for(const auto &element : container) {
-  // 消除了其他所有问题
-}
-```
-
-> 在范围 for 循环内部迭代时，永远不要修改容器本身。
-
-## 练习：使你的循环现代化
-
-你的代码中可能有很多旧风格的循环。
-
-1.  应用 clang-tidy 的 modernize-loop-convert 检查。
-2.  寻找无法转换的循环。
-    *   无法转换的循环可能代表代码中的 bug。
-    *   无法转换但没有 bug 的循环是简化的良好候选。
-
-## 资源
-
--   clang-tidy modernize-loop-convert¹
-
-> https://clang.llvm.org/extra/clang-tidy/checks/modernize-loop-convert.html
-
-# 16. 在范围 for 循环中使用 auto
-
-不使用 `auto` 会让代码更容易出现静默错误。
-
-意外转换
-
-```cpp
-for (const int value : container_of_double) {
-    // 意外转换，可能产生警告
-}
-```
-
-意外切片
-
-```cpp
-for (const base value : container_of_derived) {
-    // 意外的静默切片
-}
-```
-
-没有问题
-
-```cpp
-for (const auto &value : container) {
-    // 不可能发生意外转换
-}
-```
-
-优先选择：
-
--   非修改循环使用 `const auto &`
--   修改循环使用 `auto &`
--   仅当你必须处理如 `std::vector<bool>` 等奇怪类型，或者从容器中移动元素时使用 `auto &&`
-
 # 17. 优先使用算法而非循环
 
 算法传达了意义并帮助我们编写 C++。在 C++20 中我们有了 ranges，使得算法的使用更加舒适。
@@ -813,28 +710,6 @@ ranges 在所有编译器中都支持。
 ¹https://sourceforge.net/p/cppcheck/
 ²https://en.cppreference.com/w/algorithm
 
-# 17. 优先使用算法而非循环
-
-算法传达了意义并帮助我们编写 C++。在 C++20 中我们有了 ranges，使得算法的使用更加舒适。
-
-算法读起来像句子。
-
-```cpp
-auto has_value = std::any_of(begin(container), end(container), greater_than(12));
-```
-
-注意在少数情况下，静态分析工具可能会建议使用算法。
-
-ranges 在所有编译器中都支持。
-
-¹https://sourceforge.net/p/cppcheck/
-²https://en.cppreference.com/w/algorithm
-
-[/content] (抱歉，由于您提供的原文中存在大量重复和逻辑混乱，上述翻译已根据“以下是翻译的文本”部分的逻辑进行了去重和对齐处理)
-
-**重新为您提供您要求的“以下是翻译的文本”部分的精准翻译：**
-
-[content]
 constexpr 编译时已知
 
 -   C++ 2017：Jason Turner “constexpr”
@@ -865,17 +740,13 @@ auto result = count( /* stuff */
 ```cpp
 const auto value = get_string();
 ```
-[/content]
 
-*(Note: The source text provided by the user was extremely repetitive and fragmented. I have translated the specific section requested "以下是需要翻译的文本" while maintaining the Markdown formatting rules.)* 
 
-**等等，我发现您提供的“原文”部分包含了大量的重复内容。根据您的指令“不要重复输出原文”，以下是针对“以下是需要翻译的文本”部分的翻译结果：**
 
-[content]
 constexpr 编译时已知
 
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
+- C++ 2017：Jason Turner “constexpr”
+- C++ 2019：Hana “编译时状态”
 
 # 14. 大多数情况下使用 auto
 
@@ -902,380 +773,6 @@ auto result = count( /* stuff */
 ```cpp
 const auto value = get_string();
 ```
-[/content] (由于原文本身存在大量重复，我仅翻译了最后要求的特定段落)
-
----
-**纠正：根据您的要求，我应该翻译的是“以下是需要翻译的文本”之后的内容。以下是最终译文：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (注：您提供的原始文本在结构上高度重复，我已按照“不要重复输出原文”的原则，对目标段落进行了翻译) 
-
-**抱歉，我重新审视了任务。以下是针对“以下是需要翻译的文本”部分的完整翻译：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (由于原文存在逻辑循环，此处仅翻译了核心逻辑部分) 
-
-**实际上，最符合您指令的输出（去重重复后的逻辑翻译）如下：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (由于您提供的文本是无限循环，我已根据指令“不要重复输出原文”进行了去重翻译) 
-
-**最终结果（由于原文极其极其重复，我仅提供核心且不重复的翻译内容）：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (抱歉，由于输入文本存在严重的格式错误，我已为您提取了核心翻译) 
-
-**为了确保完全，我将直接提供最后一段被标记的文本的翻译：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (注：原文中存在大量重复，已按要求去重) 
-
-**非常抱歉，我发现您提供的原文是一个无限重复循环。以下是为您整理后的翻译内容：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (由于输入文本异常，此处仅翻译目标部分) 
-
-**抱歉，我无法处理您提供的文本，因为它包含了无限重复的段落。请检查您的输入内容。** 
-
----
-**如果我必须输出，以下是针对“以下是需要翻译的文本”部分的唯一翻译：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 `const` 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (由于原文重复严重，已进行去重翻译) 
-
-**抱歉，我似乎陷入了由于原文重复导致的逻辑循环。请提供非重复的文本。** 
-
----
-**等等，我重新理解了您的指令。您是希望我翻译“以下是需要翻译的文本”之后的内容。我已经翻译了，但由于原文本身是重复的，输出看起来可能很奇怪。以下是最终的翻译：**
-
-(见上) 
-
-**抱歉，我将尝试最后一次彻底的清理。由于我是高级文档工程师，我将直接对“以下是需要翻译的文本”之后的段落进行翻译：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：$auto$ 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，$auto$ 需要初始化，与 $const$ 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (注：原文中存在大量重复，已按要求去重) 
-
-**由于输入文本极其异常，我无法提供更有效的翻译。** 
-
----
-**等等，我发现您提供的文本其实是把一段话复制了无数遍。以下是那段唯一的翻译：**
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，$auto$ 需要初始化，与 $const$ 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-[/content] (由于原文重复严重，已进行去重翻译) 
-
-**抱歉，我无法处理您提供的文本。** 
-
----
-**对不起，由于系统的的的的的的的的的的的的的的的的的。** 
-
-*(Self-correction: I apologize for the repetitive output because the provided source text was a broken loop. I have translated the unique content within that loop.)* 
-
-**Final Answer (Cleaned):** 
-
-[content]
-constexpr 编译时已知
-
--   C++ 2017：Jason Turner “constexpr”
--   C++ 2019：Hana “编译时状态”
-
-# 14. 大多数情况下使用 auto
-
-我不认为总是使用 `auto`，但让我问你一个问题：`auto` 的类型是什么？
-
-答案是，“我不在乎。”
-
-```cpp
-const auto result = count( /* stuff */
-```
-
-或者，如果你更喜欢：
-
-```cpp
-auto result = count( /* stuff */
-```
-
-使用 `auto` 避免了不必要的转换和数据丢失。与范围 `for` 循环一样，`auto` 需要初始化，与 $const$ 一样解释了为什么这样做很好。
-
-示例：
-
-可能的转换。
-
-```cpp
-const auto value = get_string();
-```
-
-
-
 
 ## 不要害怕模板
 
@@ -1314,6 +811,7 @@ Arithmetic divide(Arithmetic numerator, Arithmetic denominator) {
 ## 19. 不要复制粘贴代码
 
 如果你发现自己正准备选择一段代码并复制它：停下！
+
 后退一步，重新查看这段代码。
 
 - 你为什么要复制它？
@@ -1322,6 +820,7 @@ Arithmetic divide(Arithmetic numerator, Arithmetic denominator) {
 - 记住，不要害怕模板。
 
 我发现这个简单的规则对我的代码质量产生了最直接的影响。
+
 如果粘贴操作的结果是进入当前函数，请考虑使用 lambda。
 
 C++14 风格的 lambda 带有泛型（即 `auto`）参数，为你提供了一种简单易用的方法来创建可用代码，这些代码可以与不同的数据类型共享，而无需处理模板语法。
@@ -1329,6 +828,7 @@ C++14 风格的 lambda 带有泛型（即 `auto`）参数，为你提供了一�
 练习：尝试 CPD。
 
 有几种不同的复制粘贴检测器可以查找你代码库中的重复代码。
+
 对于这个练习，请下载 PMD CPD 工具并在你的代码库上运行它。
 
 > https://pmd.github.io/latest/pmd_userdocs_cpd.html
@@ -1346,8 +846,8 @@ C++14 风格的 lambda 带有泛型（即 `auto`）参数，为你提供了一�
 - 我不会复制粘贴代码⁴
 
 > ²https://www.viva64.com/en/t/0068/
-³https://www.viva64.com/en/b/0260/
-⁴https://twitter.com/bjorn_fahler/status/107243225779987200
+> ³https://www.viva64.com/en/b/0260/
+> ⁴https://twitter.com/bjorn_fahler/status/107243225779987200
 
 ## #20. 遵循规则 0
 
@@ -1411,7 +911,7 @@ S::~S() {
 
 ## 21. 如果你必须手动管理资源，请遵循规则 5
 
-如果你提供析构函数是因为 `std::unique_ptr` 对于你的用例没有意义，那么你必须使用 `=delete`、`=default` 或实现其他特殊成员函数。
+如果你提供析构函数是因为 `std::unique_ptr` 对于你的用例没有意义，那么你必须使用 `=delete`、` =default` 或实现其他特殊成员函数。
 
 这条规则最初被称为规则 3，在 C++11 之后被称为规则 5。
 
@@ -1466,7 +966,7 @@ struct Derived : Base {
 };
 ```
 
-> 与其 `= delete，不如考虑将这些特殊成员设为保护。
+> 与其 `= delete`，不如考虑将这些特殊成员设为保护。
 
 练习：实现你的 unique_ptr<>
 
@@ -1474,21 +974,20 @@ struct Derived : Base {
 
 练习：在你的代码中寻找违反规则 5 的地方
 
-当你定义特殊成员函数时，现有代码可能没有提供一致的语义。为了评估影响，你可以快速 = delete 任何缺失的特殊成员函数并看看会发生什么。
+当你定义特殊成员函数时，现有代码可能没有提供一致的语义。为了评估影响，你可以快速 `= delete` 任何缺失的特殊成员函数并看看会发生什么。
 
 ## 资源
 
 - C++ 参考：三/五/零规则
 
-（注：此处链接未在原文列出，按要求保留）
-
 ## 22. 不要调用未定义行为
 
-好了，有很多未定义行为 (UB)，而且很难追踪，所以我们将在后面的章节中给出一些示例。你需要理解的关键点是 UB 的存在会破坏整个程序。
+好了，有很多未定义行为（UB），而且很难追踪，所以我们将在后面的章节中给出一些示例。你需要理解的关键点是 UB 的存在会破坏整个程序。
 
 抽象引入¹
 
 一个合规的实现执行良好的程序，应产生与相同程序和输入的抽象机器的所有可能执行之一相同的观测行为。
+
 然而，如果任何此类执行包含了未定义操作，本文档对执行该程序的实现不作任何要求（即使在第一次未定义操作发生之前）。
 
 注意这句话：“本文档对执行该程序的实现不作任何要求（即使在第一次未定义操作发生之前）”。
@@ -1508,14 +1007,10 @@ struct Derived : Base {
 - C++Now 2018: John Regehr “主旨演讲：未定义行为与编译器优化”²
 - CppCon 2018: Barbara Geller & Ansel Sermersheim “未定义行为不是错误”³
 
-> ²2https://youtube.be/AeWxtEOOgH0
-3https://youtube.com/XEXpwis_deQ
+> ²https://youtube.be/AeWxtEOOgH0
+> ³https://youtube.com/XEXpwis_deQ
 
-
-
-
-
-# 23. 永远不要测试这是否为 nullptr，这是未定义行为 (UB)
+# 23. 永远不要测试这是否为 nullptr，这是未定义行为（UB）
 
 *对 this 是否为 nullptr 的无效检查。*
 
@@ -1532,7 +1027,9 @@ int Class::member() {
 ```
 
 从技术上讲，并不是这个检查本身是未定义行为（UB）。但是这个检查永远不会失败。如果 `this` 等于 `nullptr`，你将处于未定义行为的状态。
+
 人们以前经常这样做，但这一直都是 UB。你不能访问其生命周期之外的对象。如今的编译器总是会移除这个检查。
+
 从理论上讲，`this` 可能为空的唯一方法是当你直接在一个空对象上调用成员函数。
 
 永远不要测试这是否为 nullptr，它是 UB
@@ -1549,6 +1046,8 @@ obj->do_thing(); // 永远不要这样做
 即使在（技术上可以，但永远不要这样做）调用 `delete this` 的场景下也是。
 
 `delete this` 的错误示例。
+
+
 
 ```cpp
 struct S {
@@ -1606,13 +1105,13 @@ int get_value(int &thing) {
 
 在你的代码中搜索检查对象内存地址的陈语句，并理解它们在做什么以及它们是如何（或是否）起作用。
 
-> 除了 ==== 之外，可能还有什么其他方法可以检查对象的地址？
+> 除了 `====` 之外，可能还有什么其他方法可以检查对象的地址？
 
 这个练习将让你获得使用各种搜索/grepping 工具以及玩转正则表达式的宝贵经验。
 
 ## 资源
 
-- -Wtautological-undefined-compare¹
+- `-Wtautological-undefined-compare`¹
 
 https://clang.llvm.org/docs/DiagnosticsReference.html#wtautological-undefined-compare
 
@@ -1638,397 +1137,6 @@ std::string_view get_name(Values value) {
 
 对 `nullptr` 的检查可能会隐藏对 `NULL` 的检查或对 `0` 的检查。对 `this` 为 `NULL` 的检查可能只存在于非常老的代码库中。确保你已启用警告，然后寻找这些情况。
 
-这是一个最好最好通过一系列示例来描述的问题。从这一个开始：
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-这是一个最好最好最好最好通过一系列示例来描述的问题。从这一个开始：
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-（由于原始文本中存在大量重复的代码块，已根据要求“不要重复输出原文”进行处理，以下是核心内容的翻译与整合：）
-
-```cpp
-带警告的 switch
-enum class Values {
-    val1,
-    val2
-};
-
-std::string_view get_name(Values value) {
-    switch (value) {
-}
-```
-
-这是一个最好通过一系列示例来描述的问题。从这一个开始：
-
-这是一个 `delete this` 的错误示例。
-
-```cpp
-struct S {
-    std::string data;
-}
-
-void delete_yourself() {
-    // 执行一些操作
-    delete this; // 技术上可以
-
-    if (this) {
-        // 这一块将始终执行，没有任何改变
-        // 我们对 'this' 的视图
-    }
-
-    // 永远不要这样做
-    data.size(); // UB，data 的生命周期已经结束
-}
-```
-
-在现代编译器上，没有任何场景会让 `if (this)` 检查返回 `false`。
-
-## 练习：你是否检查了这是否为 nullptr？
-
-对 `nullptr` 的检查可能会隐藏对 `NULL` 的检查或对 `0` 的检查。对 `this` 为 `NULL` 的检查可能只存在于非常老的代码库中。确保你已启用警告，然后寻找这些情况。
-
-在你的代码库中搜索 `this ==` 可能会很有意思，看看那里有什么什么奇怪的事情。
-
-## 资源
-
-- 迁移到 GCC-6 优化移除了对 this 的空指针检查¹
-
-¹https://www.gnu.org/software/gcc/gcc-6/porting_to.html#this-cannot-be-null
-
-# 24. 永远不要测试引用是否为 nullptr，它是 UB
-
-空引用的检查被移除
-
-```cpp
-int get_value(int &thing) {
-  if (&thing == nullptr) {
-    // 编译器移除
-    return 42;
-  } else {
-    return thing;
-  }
-}
-```
-
-创建一个空引用是 UB，不要尝试。始终假设引用指向一个有效对象。在设计 API's 时利用这一事实。
-
-## 练习：检查对对象地址的检查检查
-
-使用 `&thing ==` 检查对象的特定地址有许多有效的用例，但也有一些这种检查可能是错误的办法。
-
-在你的代码中搜索检查对象内存地址的陈语句，并理解它们在做什么以及它们是如何（或是否）起作用。
-
-> 除了 ==== 之外，可能还有什么其他方法可以检查对象的地址？
-
-这个练习将让你获得使用各种搜索/grepping 工具以及玩转正则表达式的宝贵经验。
-
-## 资源
-
-- -Wtautological-undefined-compare¹
-
-https://clang.llvm.org/docs/DiagnosticsReference.html#wtautological-undefined-compare
-
-# 25. 在 switch 语句中避免 default
-
 这是一个最好通过一系列示例来描述的问题。从这一个开始：
 
 ```cpp
@@ -2042,12 +1150,6 @@ std::string_view get_name(Values value) {
     switch (value) {
 }
 ```
-
-（注：由于原文中存在大量重复的 switch 示例和描述，此处译文已按要求去除了重复部分。）
-
-
-
-
 
 ## SFINAE 除法函数
 
@@ -2102,7 +1204,9 @@ auto divide(Numerator numerator, Denominator denominator) {
 }
 ```
 
-注意，`if constexpr` 块内部的代码在语法上必须仍然是正确的。`if constexpr`并不等同于 `#define`。
+
+
+注意，`if constexpr`块内部的代码在语法上必须仍然是正确的。`if constexpr`并不等同于`#define`。
 
 ## 资源
 
@@ -2112,13 +1216,13 @@ auto divide(Numerator numerator, Denominator denominator) {
 - [C++17 In Tiny Tables: constexpr if⁴]
 
 > ¹https://youtube.be/nY6Qbm_uMI
-²https://youtube.be/zeCV_udkP_o
-³https://youtube.be/nnY4e4faNp0
-⁴https://github.com/tvaneerd/cpp17_in_TTs/master/blob/if_constexpr
+> ²https://youtube.be/zeCV_udkP_o
+> ³https://youtube.be/nnY4e4faNp0
+> ⁴https://github.com/tvaneerd/cpp17_in_TTs/master/blob/if_constexpr
 
 # 28. 使用 Concepts 约束模板参数 (C++20)
 
-相比于 SFINAE，Concepts（最终）将带来更好的错误信息和更快的编译时间。而且代码比 SFINAE 可读性得多。
+相比于 SFINAE，Concepts 将带来更好的错误信息和更快的编译时间。而且代码比 SFINAE 可读性得多。
 
 如果我们继续构建除法示例，可以从“优先使用 if constexpr 而非 SFINAE”章节中使用这个 `if constexpr` 版本。
 
@@ -2142,10 +1246,9 @@ auto divide(Numerator numerator, Denominator denominator) {
 }
 ```
 
-我们可以使用 concepts 将其拆分为两个不同的函数。
-Concepts 可以用于多种不同的上下文。此版本在函数声明后使用了一个简单的 `requires` 子句。
+我们可以使用 concepts 将其拆分为两个不同的函数。Concepts 可以用于多种不同的上下文。此版本在函数声明后使用了一个简单的 `requires` 子句。
 
-## requires 子句中的 Concepts
+### requires 子句中的 Concepts
 
 ```cpp
 #include <stdexcept>
@@ -2158,18 +1261,18 @@ Concepts 可以用于多种不同的上下文。此版本在函数声明后使�
 template <typename Numerator, typename Denominator>
 auto divide(Numerator numerator, Denominator denominator) requires
 (std::integral_v<Numerator> && std::integral_v<Denominator>) {
-// 整数除法
-if (denominator == 0) {
-    throw std::runtime_error("divide by 0!");
-}
-return numerator / denominator;
+    // 整数除法
+    if (denominator == 0) {
+        throw std::runtime_error("divide by 0!");
+    }
+    return numerator / denominator;
 }
 ```
 
 ```cpp
 template <typename Numerator, typename Denominator>
 auto divide(Numerator numerator, Denominator denominator) {
-return numerator / denominator;
+    return numerator / denominator;
 }
 ```
 
@@ -2185,37 +1288,32 @@ return numerator / denominator;
 ```cpp
 auto divide(std::integral auto numerator,
   std::integral auto denominator) {
-// 整数除法
-if (denominator == 0) {
-    throw std::runtime_error("divide by 0!");
-}
-```
-
-使用 Concepts 约束模板参数 (C++20)
-
-```cpp
-return numerator / denominator;
+    // 整数除法
+    if (denominator == 0) {
+        throw std::runtime_error("divide by 0!");
+    }
+    return numerator / denominator;
 }
 auto divide(auto numerator, auto denominator) {
-  // 浮点除法
-return numerator / denominator;
+    // 浮点除法
+    return numerator / denominator;
 }
 ```
 
 > Concepts 可以定义复杂的需求，包括预期的成员。本节仅略微接触这些可能性。
 
-## 练习：理解 C++20 提供的 concepts。
+### 练习：理解 C++20 提供的 concepts。
 
 按照习惯，cpprefence 通过提供 concepts 列表¹提供了帮助。
 
-## 练习：创建你自己的 concept
+### 练习：创建你自己的 concept
 
 这个示例是否给你带来了一些想法，关于你想要但 `<concepts>` 未提供的 concept 示例？
 
 查看 cpprefence² 上简单的 `std::integral` concept 的实现，看看它是否能给你灵感。
 
 > ¹https://cpprefence.com/w/cpp/concepts
-²https://cpprefence.com/w/cpp/type_traits
+> ²https://cpprefence.com/w/cpp/type_traits
 
 ## 资源
 
@@ -2225,120 +1323,19 @@ return numerator / denominator;
 - [C++17 In Tiny Tables: constexpr if⁴]
 
 > ¹https://youtube.be/nY6Qbm_uMI
-²https://youtube.be/zeCV_udkP_o
-³https://youtube.be/nnY4e4faNp0
-⁴https://github.com/tvaneerd/cpp17_in_TTs/master/blob/if_constexpr
-
-# 28. 使用 Concepts 约束模板参数 (C++20)
-
-相比于 SFINAE，Concepts 将带来更好的错误信息（最终）和更好的编译时间。而且代码比 SFINAE 可读性得多。
-
-如果我们继续构建除法示例，可以从“优先使用 if constexpr 而非 SFINAE”章节中使用这个 `if constexpr` 版本。
-
-`if constexpr` 版本的 `divide` 函数
-
-```cpp
-#include <stdexcept>
-#include <type_traits>
-#include <utility>
-
-template <typename Numerator, typename Denominator>
-auto divide(Numerator numerator, Denominator denominator) {
-    if constexpr (std::is_integral_v<Numerator> &&
-                 std::is_integral_v<Denominator>) {
-        // 整数除法
-        if (denominator == 0) {
-            throw std::runtime_error("divide by 0!");
-        }
-    }
-    return numerator / denominator;
-}
-```
-
-我们可以使用 concepts 将其拆分为两个不同的函数。
-Concepts 可以用于多种不同的上下文。此版本在函数声明后使用了一个简单的 `requires` 子句。
-
-## requires 子句中的 Concepts
-
-```cpp
-#include <stdexcept>
-#include <type_traits>
-#include <utility>
-```
-
-```cpp
-// 重载解析将选择最具体的版本
-template <typename Numerator, typename Denominator>
-auto divide(Numerator numerator, Denominator denominator) requires
-(std::integral_v<Numerator> && std::integral_v<Denominator>) {
-// 整数除法
-if (denominator == 0) {
-    throw std::runtime_error("divide by 0!");
-}
-return numerator / denominator;
-}
-```
-
-```cpp
-template <typename Numerator, typename Denominator>
-auto divide(Numerator numerator, Denominator denominator) {
-return numerator / denominator;
-}
-```
-
-此版本将 concepts 用作函数参数。C++20 甚至有“auto concept”，这是一种隐式模板函数。
-
-简洁的 concepts 要求语法
-
-```cpp
-#include <stdexcept>
-#include <concepts>
-```
-
-```cpp
-auto divide(std::integral auto numerator,
-  std::integral auto denominator) {
-// 整数除法
-if (denominator == 0) {
-    throw std::runtime_error("divide by 0!");
-}
-```
-
-使用 Concepts 约束模板参数 (C++20)
-
-```cpp
-return numerator / denominator;
-}
-auto divide(auto numerator, auto denominator) {
-  // 浮点除法
-return numerator / denominator;
-}
-```
-
-> Concepts 可以定义复杂的需求，包括预期的成员。本节仅略微接触这些可能性。
-
-## 练习：理解 C++20 提供的 concepts。
-
-按照习惯，cpprefence 通过提供 concepts 列表¹提供了帮助。
-
-## 练习：创建你自己的 concept
-
-这个示例是否给你带来了一些想法，关于你想要但 `<concepts>` 未提供的 concept 示例？
-
-查看 cpprefence² 上简单的 `std::integral` concept 的实现，看看它是否能给你灵感。
-
-（注：由于原文中存在大量重复的 28 章节内容，此处已已按要求进行整合/翻译，确保核心逻辑清晰）
+> ²https://youtube.be/zeCV_udkP_o
+> ³https://youtube.be/nnY4e4faNp0
+> ⁴https://github.com/tvaneerd/cpp17_in_TTs/master/blob/if_constexpr
 
 # 29. 通用代码去模板化
 
-将参数无关的代码移出模板。
-类似技术也适用于基类。
+将参数无关的代码移出模板。类似技术也适用于基类。
 
-## 练习：Bloaty McBloface 和 -ftime-trace。
+### 练习：Bloaty McBloface 和 -ftime-trace。
 
 我们有了更多的可用工具来查找编译时间中的膨胀。在你的二进制文件上运行它们并看看你发现了什么。
 
-使用 clang 的 -ftime-trace 时，也请查看 ClangBuildAnalyzer。
+使用 clang 的 `-ftime-trace` 时，也请查看 ClangBuildAnalyzer。
 
 ## 资源
 
@@ -2346,7 +1343,7 @@ return numerator / denominator;
 - [C++ Weekly Ep 89: “Overusing Lambdas”³]
 
 > ²https://github.com/mikael-persson/templight
-³https://youtube.be/OmKQX_8Y
+> ³https://youtube.be/OmKQX_8Y
 
 # 30. 使用 Lippincott 函数
 
@@ -2382,11 +1379,7 @@ void use_other_thing() {
 
 Lippincott 函数（以 Lisa Lippincott 命名）提供了一个中心化的异常处理例程。
 
-
-
-
-
-# 使用 Lippincott 函数
+### 使用 Lippincott 函数
 
 Lippincott 用于去重异常处理。
 
@@ -2417,7 +1410,7 @@ void use_other_thing() {
 
 这项技术并不是新鲜——它在 C++98 之前的时代就已经存在了。
 
-## 练习：你使用异常吗？
+### 练习：你使用异常吗？
 
 如果你的项目使用了异常，那么可能有理由来简化并集中你的错误处理程序。如果它没有使用异常，那么你可能有其他类型重复的错误处理程序。这些程序可以被简化吗？
 
@@ -2427,7 +1420,7 @@ void use_other_thing() {
 - C++ Weekly Ep 91: 使用 Lippincott Functions²
 
 > ¹https://cppsecrets.blogspot.com/2013/12/using-lippincott-function-for.html
-²https://youtu.be/-amJL3AyADI
+> ²https://youtu.be/-amJL3AyADI
 
 # 31. 害怕全局状态
 
@@ -2437,7 +1430,7 @@ void use_other_thing() {
 
 全局状态会导致微妙且难以追踪的 bug，其中一个函数更改了全局状态，而另一个函数要么依赖于该更改，要么受到了其不利影响。
 
-## 练习：全局状态，还剩下什么？
+### 练习：全局状态，还剩下什么？
 
 如果你完成了之前的练习，你已经将所有的静态变量都变成了 `const`。这太棒了！你可能甚至将其中一些设为了 `constexpr`，那更好！
 
@@ -2474,10 +1467,9 @@ void use_other_thing() {
 有些开发者区分了“内部”和“外部” API。他们允许仅供内部使用的不安全 API。
 
 > 是否有任何保证外部用户永远不会调用“内部”API？
-
 > 是否有任何保证你的内部用户永远不会误用 API？
 
-## 练习：检查类型
+### 练习：检查类型
 
 C++ 指南支持库 (GSL) 有一种 `not_null` 指针类型，由于零成本抽象，它保证传递的指针永远为 `nullptr`。这对于你目前传递原始指针的 API 是否有效（重构 API 不是可选项）？
 
@@ -2485,9 +1477,11 @@ C++ 指南支持库 (GSL) 有一种 `not_null` 指针类型，由于零成本抽
 "std::string_view (C++17) 和 std::span (C++20) 是传递给函数的指针/长度对的极佳替代方案。"
 ```
 
+
+
 ## 资源
 
-- boost::safe_numerics¹
+- `boost::safe_numerics`¹
 
 > ¹https://github.com/boostorg/safe_numerics
 
@@ -2495,7 +1489,7 @@ C++ 指南支持库 (GSL) 有一种 `not_null` 指针类型，由于零成本抽
 
 `[[nodiscard]]` (C++17) 是一个 C++ 属性，告诉编译器如果在忽略返回值时发出警告。它可以用于函数上：
 
-[[nodiscard]] 示例用法。
+`[[nodiscard]]` 示例用法。
 
 ```cpp
 [[nodiscard]] int get_value();
@@ -2509,7 +1503,7 @@ int main()
 
 也可以用于类型：
 
-[[nodiscard]] 在类型上。
+`[[nodiscard]]` 在类型上。
 
 ```cpp
 struct [[nodiscard]] ErrorCode{};
@@ -2525,19 +1519,19 @@ int main()
 
 C++20 增加了提供描述的能力。
 
-广泛使用 [[nodiscard]]
+广泛使用 `[[nodiscard]]`
 
-C++20 带有描述的 [[nodiscard]]。
+C++20 带有描述的 `[[nodiscard]]`。
 
-[[nodiscard("Ignoring this result leaks resources")]]
+`[[nodiscard("Ignoring this result leaks resources")]]`
 
-我们的除法示例是 [[nodiscard]] 的直接应用。
+我们的除法示例是 `[[nodiscard]]` 的直接应用。
 
-[[nodiscard]] 应用于 divide 函数。
+`[[nodiscard]]` 应用于 `divide` 函数。
 
 ```cpp
 #include <stdexcept>
-##include <concepts>
+#include <concepts>
 ```
 
 ```cpp
@@ -2560,16 +1554,16 @@ C++20 带有描述的 [[nodiscard]]。
 
 ## 练习：为使用 [[nodiscard]] 确定一套规则
 
-阅读 Reddit 讨论“An Argument Pro Liberal Use Of nodiscard”。考虑你的类型和函数。哪些值应该标记为 [[nodiscard]]？
+阅读 Reddit 讨论“An Argument Pro Liberal Use Of nodiscard”。考虑你的类型和函数。哪些值应该标记为 `[[nodiscard]]`？
 
 调用这些函数并忽略结果应该是编译错误还是警告？
 
 > ¹https://www.reddit.com/r/cpp/comments/9us7f3/an_argument_pro_liberal_use_of_nodiscard/
 
-广泛使用 [[nodiscard]] 
+广泛使用 `[[nodiscard]]`
 
-- vector.size()
-- vector.empty()
+- `vector.size()`
+- `vector.empty()`
 
 ## 资源
 
@@ -2623,10 +1617,6 @@ Rectangle(Position, Size);
 
 在很多情况下，只需要一点努力就能创建更具类型的 API。
 
-
-
-
-
 ## 练习：考虑 =删除有问题的转换。
 
 简单的函数声明。
@@ -2635,16 +1625,16 @@ Rectangle(Position, Size);
 double high_precision_thing(double);
 ```
 
-如果使用 float 调用上述函数可能是一个 bug 怎么办？
+如果使用 `float` 调用上述函数可能是一个 bug 怎么办？
 
-删除从 float 到 double 的这种有问题的意外类型提升。
+删除从 `float` 到 `double` 的这种有问题的意外类型提升。
 
 ```
 double high_precision_thing(double);
 double high_precision_thing(float) = delete;
 ```
 
-在 C++11 中，任何函数或重载都可以被标记为 **=deleted**。
+在 C++11 中，任何函数或重载都可以被标记为 `=deleted`。
 
 ## 资源
 
@@ -2670,9 +1660,9 @@ int *get_value();
 谁拥有这个返回值？我吗？在我用完后删除它是我的工作吗？
 更糟糕的是，如果内存是由 `malloc` 分配的，而我需要调用 `free` 呢？
 
-这是一个单一的 int 还是 int 数组？
+这是一个单一的 `int` 还是 `int` 数组？
 
-这段代码的问题太多了，即使是 [[nodiscard]] 也无法帮助我们。
+这段代码的问题太多了，即使是 `[[nodiscard]]` 也无法帮助我们。
 
 ## 练习：你懂这些了
 
@@ -2713,8 +1703,8 @@ void use_string() {
 
 ```cpp
 void use_string() {
-// 字符串存在堆上
-std::string *value = new std::string("Hello World");
+  // 字符串存在堆上
+  std::string *value = new std::string("Hello World");
 }
 ```
 
@@ -2742,13 +1732,13 @@ std::string *value = new std::string("Hello World");
 
 你已经在避免使用堆并使用智能指针进行资源管理，对吧？！
 
-将其提升到下一个水平，并在需要堆的少数情况下使用 `std::make_unique<>() (C++14)。
+将其提升到下一个水平，并在需要堆的少数情况下使用 `std::make_unique<>()` (C++14)。
 
-在极少数需要共享所有权的情况下，使用 `std::make_shared<>() (C++11)。
+在极少数需要共享所有权的情况下，使用 `std::make_shared<>()` (C++11)。
 
 ## 练习：你使用 Qt 或其他组件库吗？
 
-你考虑过编写自己的 qobject 辅助函数吗？赋予它所需的语义并确保使用 [[nodiscard]]。
+你考虑过编写自己的 qobject 辅助函数吗？赋予它所需的语义并确保使用 `[[nodiscard]]`。
 
 在任何情况下，你可以将对 `new` 的使用限制在几个核心库函数中。
 
@@ -2768,8 +1758,8 @@ https://en.cppreference.com/w/cpp/memory/shared_ptr/make_shared
 
 按顺序选择你的容器：
 
-- std::array<>
-- std::vector<>
+- `std::array<>`
+- `std::vector<>`
 
 基于栈的固定大小连续容器。数据必须在编译时已知，且必须有足够的栈空间来存放数据。这种容器帮助我们优先使用栈而非堆。
 
@@ -2783,9 +1773,9 @@ https://en.cppreference.com/w/cpp/memory/shared_ptr/make_shared
 
 ## 练习：将 vector 替换为 array
 
-寻找固定大小的 vector 并尽可能地将它们替换为 array。C++17 的类模板推导可以做到这一点。
+寻找固定大小的 `vector` 并尽可能地将它们替换为 `array`。C++17 的类模板推导可以做到这一点。
 
-固定大小数据的 vector。
+固定大小数据的 `vector`。
 
 ```cpp
 const std::vector<int> data{n+1, n+2, n+3, n+4};
@@ -2793,12 +1783,12 @@ const std::vector<int> data{n+1, n+2, n+3, n+4};
 
 可以变成
 
-固定大小数据的 array。
+固定大小数据的 `array`。
 
 | const std::array<int, 4> data{n+1, n+2, n+3, n+4}; // C++11 |
 | const std::array data{n+1, n+2, n+3, n+4}; // C++17 |
 
-你已经把这些为 const，如果可以，把它们改为 constexpr。
+你已经把这些为 `const`，如果可以，把它们改为 `constexpr`。
 
 ## 资源
 
@@ -2810,17 +1800,15 @@ const std::vector<int> data{n+1, n+2, n+3, n+4};
 
 虽然编译器不断改进且优化器会处理这些类型，但它们仍然可能增加大量的编译时间和运行时开销。
 
-带有泛化捕获表达式的 C++14 lambda 可以实现 std::bind 能够实现。
+带有泛化捕获表达式的 C++14 lambda 可以实现 `std::bind` 能够实现。
 
-使用 std::bind 改变顺序
+使用 `std::bind` 改变顺序
 
 ```cpp
 #include <functional>
-
 double divide(double numerator, double denominator) {
     return numerator / denominator;
 }
-
 auto inverted_divide = std::bind(divide,
     std::placeholders::_2,
     std::placeholders::_1);
@@ -2830,11 +1818,9 @@ auto inverted_divide = std::bind(divide,
 
 ```cpp
 #include <functional>
-
 double divide(double numerator, double denominator) {
     return numerator / denominator;
 }
-
 auto inverted_divide = [](const auto numerator,
                            const auto denominator) {
     return divide(denominator/numerator);
@@ -2845,27 +1831,26 @@ auto inverted_divide = [](const auto numerator,
 
 在 Compiler Explorer 中尝试这些选项。编译时间和生成的汇编是什么样的？
 
-std::function and std::bind
+`std::function` and `std::bind`
 
 ```cpp
 #include <functional>
-
 template<typename Func>
 std::function<int(int)> bind_3(Func func) {
     return std::bind(func, std::placeholders::_1, 3);
 }
-
 int main(int argc, const char *[]) {
     return bind_3(std::plus<>{})(argc);
 }
 ```
 
-仅使用 std::bind，为了加分，函数 bind_3 返回了什么类型？
+仅使用 `std::bind`，为了加分，函数 `bind_3` 返回了什么类型？
 
 ```cpp
 #include <functional>
 ```
 
+```cpp
 template<typename Func>
 auto bind_3(Func func)
 {
@@ -2893,16 +1878,14 @@ int main(int argc, const char *[]) {
 }
 ```
 
-
-
-
-
 ## Resources
 
 - CppCon 2015: Stephan T. Lavavej “<functional>: 有什么新以及正确用法”¹
+
 - C++ Weekly Ep 16: “避免使用 std::bind”²
 
 ¹https://youtube.be/zt7Wvfap
+
 ²https://youtube.be/ZlHitxU4a
 
 ## 41. 跳过 C++11
@@ -2912,17 +1895,25 @@ int main(int argc, const char *[]) {
 ### 语言特性
 
 - C++11 的 `constexpr` 隐含了 `const`，这在 C++14 中发生了变化
+
 - C++11 缺少函数的类型推导（lambda 已经有了）
+
 - C++11 没有 `auto` 或变长参数
+
 - C++14 增加了 `[[deprecated]]` 属性
+
 - C++14 增加了数字分隔符，例如：`1'000`
+
 - C++14 的 `constexpr` 函数可以比单个 `return` 语句更复杂
 
 ### 库特性
 
 - `std::make_unique` 在 C++14 中添加，使得“无原始 new”成为标准
+
 - C++11 没有 `std::exchange`
+
 - C++14 增加了对 `std::array` 的某些 `constexpr` 支持
+
 - `cbegin`, `cend`, `crbegin` 和 `crend` 函数在 C++11 中添加到标准容器
 
 ## 练习：你现在可以使用 C++14 吗？
@@ -2936,22 +1927,33 @@ int main(int argc, const char *[]) {
 在极少数情况下，每个新的编译器版本带来了：
 
 - 更好的性能
+
 - 更少的 bug
+
 - 更好的警告
+
 - 更好的标准符合性
 
-C++17 移除了一些特性，如 `std::auto_ptr`, `std::unary_function` 和 `std::binary_function`。当你将项目移动到 C++17 模式时，可能会遇到这些问题。std::unary_function` 和 `std::binary_function` 的大部分用法都可以删除。
+C++17 移除了一些特性，如 `std::auto_ptr`, `std::unary_function` 和 `std::binary_function`。当你将项目移动到 C++17 模式时，可能会遇到这些问题。`std::unary_function` 和 `std::binary_function` 的大部分用法都可以删除。
 
 ## Resources
 
 - C++ Weekly Ep 173: C++98 的重要部分（13分钟）²
+
 - C++ Weekly Ep 176: C++11 的重要部分（12分钟）³
+
+
+
 - C++ Weekly Ep 178: C++14 的重要部分（9分钟）⁴
+
 - C++ Weekly Ep 190: C++17 的重要部分（10分钟）⁵
 
 ²https://youtu.be/T8Y_LZPVR
+
 ³https://youtube.be/D5n6xUKU
+
 ⁴https://youtube.be/mXxvaEdNH
+
 ⁵https://youtube.be/QpFJOlz1r
 
 ## 42. 不要对简单类型使用 initializer_list
@@ -2960,7 +1962,7 @@ C++17 移除了一些特性，如 `std::auto_ptr`, `std::unary_function` 和 `st
 
 ## 练习：理解开销
 
-使用 Andreas Fertig 的 cppinsights.io¹ 来理解这两个示例的作用。使用 `shared_ptr` 的 `initializer_list` 构造函数。
+使用 Andreas Fertig 的 `cppinsights.io`¹ 来理解这两个示例的作用。使用 `shared_ptr` 的 `initializer_list` 构造函数。
 
 ```cpp
 #include <vector>
@@ -2971,7 +1973,7 @@ std::vector<std::shared_ptr<int>> vec{
 };
 ```
 
-不要对简单类型使用 initializer_list
+不要对简单类型使用 `initializer_list`
 
 使用 `shared_ptr` 的 `array` 构造。
 
@@ -3006,75 +2008,100 @@ std::vector<std::unique_ptr<int>> data{
 ## Resources
 
 - C++ Now 2018: Jason Turner “初始化列表坏了，让我们修复它们”²（深入探讨这些主题的问题）
+
 - C++ Insights³
 
 ²https://youtu.be/sSlmmMMFX
+
 ³https://cppinsights.io/
 
 ## 43. 使用工具：构建生成器
 
-- CMake¹
-- Meson²
-- Bazel³
+- `CMake`¹
+
+- `Meson`²
+
+- `Bazel`³
+
 - 其他⁴
 
-原始的 make 文件或 Visual Studio 项目会让实现上述任何内容都变得过于复杂。使用构建工具来帮助维护跨平台和编译器的移植性。
+原始的 `make` 文件或 Visual Studio 项目会让实现上述任何内容都变得过于复杂。使用构建工具来帮助维护跨平台和编译器的移植性。
 
 将你的构建脚本像其他代码一样对待。它们有自己的最佳实践，编写不可维护的构建脚本和编写不可维护的 C++ 一样容易。
 
 构建生成器还通过 `cmake --build` 等工具抽象并简化了持续构建环境，无论使用什么平台，都能执行正确的操作。
 
 > ¹https://cmake.org
+
 ²https://mesonbuild.com/
+
 ³https://bazel.build/
+
 ⁴https://github.com/lefticus/cpppractices/blob/master/02-Use_the_Tools_Available.md
 
 ## 练习：调查你的构建系统。
 
 - 你的项目目前使用构建生成器吗？
+
 - 你的构建脚本有多旧了？
 
-看看是否有你需要应用的当前最佳实践。是否有类似 tidy 的格式化工具可以运行在你的构建脚本上？
+看看是否有你需要应用的当前最佳实践。是否有类似 `tidy` 的格式化工具可以运行在你的构建脚本上？
 
 回顾书中之前的最佳实践，看它们如何适用于你的构建脚本。
 
 - 你是否在重复自己？
+
 - 是否有更高级的抽象？
 
-> 最近版本的 CMake 添加了如 `--profiling-output` 等工具，帮助你查看生成器花时间在的地方。
+> 最近版本的 `CMake` 添加了如 `--profiling-output` 等工具，帮助你查看生成器花时间在的地方。
 
 ## Resources
 
 - Professional CMake: A Practical Guide⁵
-- cmake-tidy⁶
+
+- `cmake-tidy`⁶
+
 - C++ Now 2017: Daniel Pfeiffer “Effective CMake”⁷
+
 - CopCon 2017: Mathieu Roper “Using Modern CMake”⁸
 
 ⁵https://crascit.com/professional-cmake
+
 ⁶https://github.com/MaciejPatro/cmake-tidy
+
 ⁷https://youtube.be/bsXLMQg
+
 ⁸https://youtube.be/eC9-iRN2
 
 ## 使用工具：构建生成器
 
 - CppCon 2018: Jussi Pakkanen “使用 Meson 构建系统轻松编译百万行代码”⁹
+
 - Bazel 2019¹⁰
+
 - CppCon 2019: Mathieu Rupert “Cato the Elder”¹¹ - 关于构建质量的吐槽
+
 - C++ Weekly Ep 218 - Ultimate CMake 快速入门¹²
+
 - 关于 CMake 的讨论¹³
 
 > https://youtu.be/SCZLnopmY
+
 ¹⁰https://www.youtube.com/playlist?list=PLNXygaZ8Rsf7g43Z8
+
 ¹¹https://youtu.be/D07ILP4Km
+
 ¹²https://youtube.be/YbGH7yat-Jo
+
 ¹³https://twitter.com/Cor3nt/status/13109904491503206
 
 ## 44. 使用工具：包管理器
 
 近年来对 C++ 包器的兴趣异常增长。这两个最受欢迎：
 
-- Vcpkg¹
-- Conan²
+- `Vcpkg`¹
+
+- `Conan`²
 
 使用包管理器有明显的优势。包管理器有助于移植性并减少开发者的维护负担。
 
@@ -3083,68 +2110,90 @@ std::vector<std::unique_ptr<int>> data{
 花时间清理项目的依赖项。将你的依赖与上述包管理器提供的进行对比。是否有包管理器包含了你所有的依赖？你现在的包过时了多久？你错过了哪些安全修复？
 
 ¹https://github.com/Microsoft/vcpkg
+
 ²https://conan.io/
-
-
-
-
 
 ## Resources
 
 - Unity 编译指南¹
+
 - 使用 Meson 进行 Unity 编译²
+
 - 使用 CMake 进行 Unity 编译³
+
 - 使用 Meson 使用 PCH（预编译头）⁴
+
 - 使用 CMake 使用 PCH⁵
-- ccache⁶
+
+- `ccache`⁶
+
 - CMake 编译器启动器⁷
+
 - Clang 构建分析器⁸
+
 - C++ Build Insights 入门⁹
-- 介绍使用 vcperf/timetrace 进行 C++ 编译时间分析¹⁰
+
+- 介绍使用 `vcperf/timetrace` 进行 C++ 编译时间分析¹⁰
 
 ¹https://onqtam.com/programming/2018-07-07-unity-builds/
+
 ²https://mesonbuild.com/Unity-builds.html
+
 ³https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html
+
 ⁴https://mesonbuild.com/Precompiled-headers.html
+
 ⁵https://cmake.org/cmake/help/latest/command/target_precompile_headers.html
+
 ⁶https://ccache.dev/
+
 ⁷https://cmake.org/cmake/help/latest/prop_tgt/LANG_COMPILER_LAUNCHER.html?highlight=ccache
+
 ⁸https://github.com/aras-p/ClangBuildAnalyzer
+
 ⁹https://docs.microsoft.com/en-us/cpp/build-insights/get-started-with-cpp-build-insights?view=vs-2019
+
 ¹⁰https://devblogs.microsoft.com/cppblog/introducing-vcperf-timetrace-for-cpp-build-time-analysis/
 
 ## 46. 使用工具：多个编译器
 
 在你的平台上支持*至少 2 个* 编译器。每个编译器都执行不同的分析，并以略不同的方式实现标准。
 
-如果你使用 Visual Studio，你应该能够相对容易地在 clang 和 cl.exe 之间切换。你也可以使用 WSL 并启用远程 Linux 构建。
+如果你使用 Visual Studio，你应该能够相对容易地在 `clang` 和 `cl.exe` 之间切换。你也可以使用 `WSL` 并启用远程 Linux 构建。
 
-如果你使用 Linux，你应该能够在 GCC 和 Clang 之间进行切换。
+如果你使用 Linux，你应该能够在 `GCC` 和 `Clang` 之间进行切换。
 
-> 在 MacOS 上，请确保你正在使用的编译器确实是你认为的那个一个。gcc 命令很可能是指向 Apple 安装的 clang 的软链接。
+> 在 MacOS 上，请确保你正在使用的编译器确实是你认为的那个一个。`gcc` 命令很可能是指向 Apple 安装的 `clang` 的软链接。
 
 要在你的平台上安装较新版本或不同的编译器，可以使用以下方法：
 
 Ubuntu / Debian
-- GCC¹
+
+- `GCC`¹
 
 Windows
-- GCC MinGW²
-- Clang 官方下载³
+
+- `GCC MinGW`²
+
+- `Clang` 官方下载³
 
 MacOS
+
 - Homebrew / MacPorts⁴
 
 ¹https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/ppa
+
 ²https://apt.llvm.org/
+
 ³http://mingw.org/
+
 ⁴https://releases.llvm.org/download.html
 
 ## 练习：添加另一个编译器
 
 由于你已经开启了系统的持续构建，现在是时候添加另一个编译器了。
 
-你当前所需的编译器的新版本总是一个好主意。但如果你只支持 GCC，请考虑添加 Clang。如果你只支持 Clang，考虑添加 GCC。如果你在 Windows 上，除了 MSVC 之外，再添加 MinGW 或 Clang。
+你当前所需的编译器的新版本总是一个好主意。但如果你只支持 `GCC`，请考虑添加 `Clang`。如果你只支持 `Clang`，考虑添加 `GCC`。如果你在 Windows 上，除了 `MSVC` 之外，再添加 `MinGW` 或 `Clang`。
 
 ## 练习：添加另一个操作系统
 
@@ -3166,13 +2215,14 @@ MacOS
 
 模糊测试器生成各种长度的随机数据字符串。你编写的测试框架（test harness）消耗这些数据字符串，并以适用于应用程序的方式进行处理。模糊测试器分析由测试执行生成的覆盖率数据，并利用这些信息移除冗余测试并生成新的独特测试。
 
-从理论上说，如果运行足够的时间，模糊测试最终将达到测试代码的100% 覆盖率。结合 AddressSanitizer，这使其成为寻找你代码中 bug 的强大工具。2015年的一篇有趣文章描述了模糊测试和 AddressSanitizer 的结合如何在少于6 小时内发现 OpenSSL 中的安全漏洞“heartbeat”。
+从理论上说，如果运行足够的时间，模糊测试最终将达到测试代码的100% 覆盖率。结合 `AddressSanitizer`，这使其成为寻找你代码中 bug 的强大工具。2015年的一篇有趣文章描述了模糊测试和 `AddressSanitizer` 的结合如何在少于6 小时内发现 OpenSSL 中的安全漏洞“heartbeat”。
 
 > 模糊测试主要发现内存和安全漏洞。
 
-存在许多不同的模糊测试工具。为了本节内容，我将仅涵盖 LLVM 的 libFuzzer。所有的模糊测试器都在相同的前提下运行。
+存在许多不同的模糊测试工具。为了本节内容，我将仅涵盖 LLVM 的 `libFuzzer`。所有的模糊测试器都在相同的前提下运行。
 
 ¹https://blog.hboeck.de/archives/868-How-Heartbleed-couldve-been-found.html
+
 ²https://www.llvm.org/docs/LibFuzzer.html
 
 你必须提供某种入口点。入口点通常采用如下函数的形式：
@@ -3183,8 +2233,9 @@ libFuzzer 入口点。
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size);
 ```
 
-Data 指针始终有效，且 Size 参数 >=0。
-如果你的库仅仅解析输入文件（例如 libpng），那么你的工作就非常简单：
+`Data` 指针始终有效，且 `Size` 参数 >=0。
+
+如果你的库仅仅解析输入文件（例如 `libpng`），那么你的工作就非常简单：
 
 libFuzzer 数据正在使用。
 
@@ -3258,7 +2309,7 @@ bool greaterThanFive(int value) {
 
 应用此处演示的示例为你的代码创建模糊测试。你遇到了哪些挑战？
 
-- 查看 FuzDataProvider.h
+- 查看 `FuzDataProvider.h`
 
 ## 练习：调查变异测试。
 
@@ -3269,25 +2320,32 @@ bool greaterThanFive(int value) {
 - C++ Now 2018: Marshall Clow "通过模糊测试让你的库更可靠"⁴
 
 ³https://github.com/llvm-mirror/compiler-rt/master/blob/include/fuzzer/FuzDataProvider.h
+
 ⁴https://youtube.be/LILJRHToyUk
 
 - C++ Weekly Ep 85: Fuzz⁵
+
 - CppCast: Alex Denisov “使用 Mull 进行变异测试”⁶
+
 - NDC TechTown 2019: Seph De Busser “测试测试：C++ 的变异测试”⁷
+
 - CppCon 2017: Kostya Serebryany “或是...”
+
 - CppCon 2020: Barnabás Bágyi “使用 libFuzzer 生成和运行类接口测试”⁹ - 关于以新方式使用模糊测试的启发性演讲。视频尚未上线 YouTube，但请在本书出版后寻找。
+
 - Autotest⁰ - 与“使用 libFuzzer 生成和运行类接口测试”演讲相关的库。
 
 ⁵https://youtube.be/g00KBqooU
+
 ⁶https://cppcast.com/alex-denisov/
+
 ⁷https://youtube.be/M-5_M8qZXa
+
 ⁸https://youtube.be/k-Cv8Q3zNWQ
+
 ⁹https://cppcon2020.sched.com/event/e7An/fuzzing-class-interfaces-for-generating-and-running-tests-with-libfuzzer?iframe=no
+
 ⁰https://gitlab.com/wilzegers/autotest/
-
-
-
-
 
 # 48. 继续你的 C++ 教育
 
@@ -3298,8 +2356,11 @@ bool greaterThanFive(int value) {
 Kate Gregory 发表了一篇关于[如何提问的优秀文章](1)。一些关键点包括：
 
 - 不要使用截图
+
 - 使用良好的变量名
+
 - 添加一些测试
+
 - 听听人们在告诉你的什么
 
 ## 会议与本地用户小组
@@ -3308,8 +2369,12 @@ Kate Gregory 发表了一篇关于[如何提问的优秀文章](1)。一些关�
 
 我是在全球 COVID-19 大流行期间完成这本书的写作的。因此，目前会议和用户小组大多以在线形式举行。但这为许多人提供了一个极佳的机会。
 
+
+
 > ^1http://www.regcons.com/KateBlog/HowToAskForCodingHelp.aspx
+
 2https://isocpp.org/wiki/faq/conferences-worldwide
+
 3https://meetingcpp.com/usergroups/
 
 继续你的 C++ 教育
@@ -3331,6 +2396,7 @@ Kate Gregory 发表了一篇关于[如何提问的优秀文章](1)。一些关�
 团队培训能让你的团队向新的方向思考，提高士气并增加员工留存。既然你已经看到这里了，我要给你一张优惠券。
 
 ⁴https://www.m.com/North-Denver-Metro-C-Meetup/
+
 ⁵https://en.cpppreference.com/w/Cppreference
 
 ## YouTube
@@ -3340,8 +2406,8 @@ Kate Gregory 发表了一篇关于[如何提问的优秀文章](1)。一些关�
 - CopperSpice^8
 
 > ^6https://www.youtube.com/channel/UCxJflfPGHS3_nRDv1u-Qu8g
-^7https://www.youtube.com/c/JasonTurner-lefticus
-^8https://www.youtube.com/cospice
+> ^7https://www.youtube.com/c/JasonTurner-lefticus
+> ^8https://www.youtube.com/cospice
 
 # 49. 感谢
 
@@ -3374,9 +2440,7 @@ Kate Gregory 发表了一篇关于[如何提问的优秀文章](1)。一些关�
 - Kacper Kołodziej
 - Lars Ove Larsen
 - Magnus Westin
-
 感谢
-
 Martin Hammerchmidt
 Matt Godbolt
 Matthew Guidry
@@ -3501,4 +2565,3 @@ constexpr decltype(auto) bind(auto &&callable, auto &&param) {
 对于上面的示例，我应该做哪些不同的改进？可以使用概念（concepts）进行约束吗？需要更好的命名吗？你会有什么不同的做法？
 
 ³https://godbolt.org/z/hhde3P3
-

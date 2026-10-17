@@ -1,17 +1,18 @@
+
 # 第三十五章 线程
 
 **目录**
 
-*   1\. 线程的概念
-*   2\. 线程控制
-    *   2.1\. 创建线程
-    *   2.2\. 终止线程
-*   3\. 线程间同步
-    *   3.1\. mutex
-    *   3.2\. Condition Variable
-    *   3.3\. Semaphore
-    *   3.4\. 其它线程间同步机制
-*   4\. 编程练习
+* 1\. 线程的概念
+* 2\. 线程控制
+  * 2.1\. 创建线程
+  * 2.2\. 终止线程
+* 3\. 线程间同步
+  * 3.1\. `mutex`
+  * 3.2\. `Condition Variable`
+  * 3.3\. `Semaphore`
+  * 3.4\. 其它线程间同步机制
+* 4\. 编程练习
 
 ## 1\. 线程的概念
 
@@ -19,29 +20,21 @@
 
 以前我们讲过，`main`函数和信号处理函数是同一个进程地址空间中的多个控制流程，多线程也是如此，但是比信号处理函数更加灵活，信号处理函数的控制流程只是在信号递达时产生，在处理完信号之后就结束，而多线程的控制流程可以长期并存，操作系统会在各线程之间调度和切换，就像在多个进程之间调度和切换一样。由于同一进程的多个线程共享同一地址空间，因此 Text Segment、Data Segment 都是共享的，如果定义一个函数，在各线程中都可以调用，如果定义一个全局变量，在各线程中都可以访问到，除此之外，各线程还共享以下进程资源和环境：
 
-*   文件描述符表
-
-*   每种信号的处理方式（`SIG_IGN`、`SIG_DFL`或者自定义的信号处理函数）
-
-*   当前工作目录
-
-*   用户 id 和组 id
+* 文件描述符表
+* 每种信号的处理方式（`SIG_IGN`、`SIG_DFL`或者自定义的信号处理函数）
+* 当前工作目录
+* 用户 id 和组 id
 
 但有些资源是每个线程各有一份的：
 
-*   线程 id
+* 线程 id
+* 上下文，包括各种寄存器的值、程序计数器和栈指针
+* 栈空间
+* `errno`变量
+* 信号屏蔽字
+* 调度优先级
 
-*   上下文，包括各种寄存器的值、程序计数器和栈指针
-
-*   栈空间
-
-*   `errno`变量
-
-*   信号屏蔽字
-
-*   调度优先级
-
-我们将要学习的线程库函数是由 POSIX 标准定义的，称为 POSIX thread 或者 pthread。在 Linux 上线程函数位于`libpthread`共享库中，因此在编译时要加上`-lpthread`选项。
+我们将要学习的线程库函数是由 POSIX 标准定义的，称为 POSIX thread 或者 `pthread`。在 Linux 上线程函数位于`libpthread`共享库中，因此在编译时要加上`-lpthread`选项。
 
 ## 2\. 线程控制
 
@@ -57,7 +50,7 @@ int pthread_create(pthread_t *restrict thread,
 
 返回值：成功返回 0，失败返回错误号。以前学过的系统函数都是成功返回 0，失败返回-1，而错误号保存在全局变量`errno`中，而 pthread 库的函数都是通过返回值返回错误号，虽然每个线程也都有一个`errno`，但这是为了兼容其它函数接口而提供的，pthread 库本身并不使用它，通过返回值返回错误码更加清晰。
 
-在一个线程中调用 pthread_create()创建新的线程后，当前线程从 pthread_create()返回继续往下执行，而新的线程所执行的代码由我们传给`pthread_create`的函数指针`start_routine`决定。`start_routine`函数接收一个参数，是通过`pthread_create`的`arg`参数传递给它的，该参数的类型为`void *`，这个指针按什么类型解释由调用者自己定义。`start_routine`的返回值类型也是`void *`，这个指针的含义同样由调用者自己定义。`start_routine`返回时，这个线程就退出了，其它线程可以调用`pthread_join`得到`start_routine`的返回值，类似于父进程调用`wait(2)`得到子进程的退出状态，稍后详细介绍`pthread_join`。
+在一个线程中调用`pthread_create()`创建新的线程后，当前线程从`pthread_create()`返回继续往下执行，而新的线程所执行的代码由我们传给`pthread_create`的函数指针`start_routine`决定。`start_routine`函数接收一个参数，是通过`pthread_create`的`arg`参数传递给它的，该参数的类型为`void *`，这个指针按什么类型解释由调用者自己定义。`start_routine`的返回值类型也是`void *`，这个指针的含义同样由调用者自己定义。`start_routine`返回时，这个线程就退出了，其它线程可以调用`pthread_join`得到`start_routine`的返回值，类似于父进程调用`wait(2)`得到子进程的退出状态，稍后详细介绍`pthread_join`。
 
 `pthread_create`成功返回后，新创建的线程的 id 被填写到`thread`参数所指向的内存单元。我们知道进程 id 的类型是`pid_t`，每个进程的 id 在整个系统中是唯一的，调用`getpid(2)`可以获得当前进程的 id，是一个正整数值。线程 id 的类型是`thread_t`，它只在当前进程中保证是唯一的，在不同的系统中`thread_t`这个类型有不同的实现，它可能是一个整数值，也可能是一个结构体，也可能是一个地址，所以不能简单地当成整数用`printf`打印，调用`pthread_self(3)`可以获得当前线程的 id。
 
@@ -126,11 +119,9 @@ new thread:  pid 7398 tid 3084446608 (0xb7d8eb90)
 
 如果需要只终止某个线程而不终止整个进程，可以有三种方法：
 
-*   从线程函数`return`。这种方法对主线程不适用，从`main`函数`return`相当于调用`exit`。
-
-*   一个线程可以调用`pthread_cancel`终止同一进程中的另一个线程。
-
-*   线程可以调用`pthread_exit`终止自己。
+* 从线程函数`return`。这种方法对主线程不适用，从`main`函数`return`相当于调用`exit`。
+* 一个线程可以调用`pthread_cancel`终止同一进程中的另一个线程。
+* 线程可以调用`pthread_exit`终止自己。
 
 用`pthread_cancel`终止一个线程分同步和异步两种情况，比较复杂，本章不打算详细介绍，读者可以参考[[APUE2e]](bi01.html#bibli.apue "Advanced Programming in the UNIX Environment")。下面介绍`pthread_exit`的和`pthread_join`的用法。
 
@@ -154,11 +145,9 @@ int pthread_join(pthread_t thread, void **value_ptr);
 
 调用该函数的线程将挂起等待，直到 id 为`thread`的线程终止。`thread`线程以不同的方法终止，通过`pthread_join`得到的终止状态是不同的，总结如下：
 
-*   如果`thread`线程通过`return`返回，`value_ptr`所指向的单元里存放的是`thread`线程函数的返回值。
-
-*   如果`thread`线程被别的线程调用`pthread_cancel`异常终止掉，`value_ptr`所指向的单元里存放的是常数`PTHREAD_CANCELED`。
-
-*   如果`thread`线程是自己调用`pthread_exit`终止的，`value_ptr`所指向的单元存放的是传给`pthread_exit`的参数。
+* 如果`thread`线程通过`return`返回，`value_ptr`所指向的单元里存放的是`thread`线程函数的返回值。
+* 如果`thread`线程被别的线程调用`pthread_cancel`异常终止掉，`value_ptr`所指向的单元里存放的是常数`PTHREAD_CANCELED`。
+* 如果`thread`线程是自己调用`pthread_exit`终止的，`value_ptr`所指向的单元存放的是传给`pthread_exit`的参数。
 
 如果对`thread`线程的终止状态不感兴趣，可以传`NULL`给`value_ptr`参数。
 
@@ -245,15 +234,13 @@ int pthread_detach(pthread_t tid);
 
 ## 3\. 线程间同步
 
-### 3.1\. mutex
+### 3.1\. `mutex`
 
 多个线程同时访问共享数据时可能会冲突，这跟前面讲信号时所说的可重入性是同样的问题。比如两个线程都要把某个全局变量增加 1，这个操作在某平台需要三条指令完成：
 
-1.  从内存读变量值到寄存器
-
-2.  寄存器的值加 1
-
-3.  将寄存器的值写回内存
+1. 从内存读变量值到寄存器
+2. 寄存器的值加 1
+3. 将寄存器的值写回内存
 
 假设两个线程在多处理器平台上同时执行这三条指令，则可能导致下图所示的结果，最后变量只加了一次而非两次。
 
@@ -319,6 +306,8 @@ void *doit(void *vptr)
 
 我们创建两个线程，各自把`counter`增加 5000 次，正常情况下最后`counter`应该等于 10000，但事实上每次运行该程序的结果都不一样，有时候数到 5000 多，有时候数到 6000 多。
 
+
+
 ```cpp
 $ ./a.out
 b76acb90: 1
@@ -335,10 +324,10 @@ b76acb90: 6
 b76acb90: 7
 b7eadb90: 6
 b76acb90: 8
-... 
+...
 ```
 
-对于多线程的程序，访问冲突的问题是很普遍的，解决的办法是引入互斥锁（Mutex，Mutual Exclusive Lock），获得锁的线程可以完成“读-修改-写”的操作，然后释放锁给其它线程，没有获得锁的线程只能等待而不能访问共享数据，这样“读-修改-写”三步操作组成一个原子操作，要么都执行，要么都不执行，不会执行到中间被打断，也不会在其它处理器上并行做这个操作。
+对于多线程的程序，访问冲突的问题是很普遍的，解决的办法是引入互斥锁（Mutex，Mutual Exclusive Lock）。获得锁的线程可以完成“读-修改-写”的操作，然后释放锁给其它线程；没有获得锁的线程只能等待而不能访问共享数据。这样，“读-修改-写”三步操作组成一个原子操作，要么都执行，要么都不执行，不会执行到中间被打断，也不会在其它处理器上并行做这个操作。
 
 Mutex 用`pthread_mutex_t`类型的变量表示，可以这样初始化和销毁：
 
@@ -348,26 +337,30 @@ Mutex 用`pthread_mutex_t`类型的变量表示，可以这样初始化和销毁
 int pthread_mutex_destroy(pthread_mutex_t *mutex);
 int pthread_mutex_init(pthread_mutex_t *restrict mutex,
        const pthread_mutexattr_t *restrict attr);
-pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER; 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 ```
 
 返回值：成功返回 0，失败返回错误号。
 
-`pthread_mutex_init`函数对 Mutex 做初始化，参数`attr`设定 Mutex 的属性，如果`attr`为`NULL`则表示缺省属性，本章不详细介绍 Mutex 属性，感兴趣的读者可以参考[[APUE2e]](bi01.html#bibli.apue "Advanced Programming in the UNIX Environment")。用`pthread_mutex_init`函数初始化的 Mutex 可以用`pthread_mutex_destroy`销毁。如果 Mutex 变量是静态分配的（全局变量或`static`变量），也可以用宏定义`PTHREAD_MUTEX_INITIALIZER`来初始化，相当于用`pthread_mutex_init`初始化并且`attr`参数为`NULL`。Mutex 的加锁和解锁操作可以用下列函数：
+`pthread_mutex_init`函数对 Mutex 做初始化，参数`attr`设定 Mutex 的属性。如果`attr`为`NULL`，则表示缺省属性。本章不详细介绍 Mutex 属性，感兴趣的读者可以参考[[APUE2e]](bi01.html#bibli.apue "Advanced Programming in the UNIX Environment")。用`pthread_mutex_init`函数初始化的 Mutex 可以用`pthread_mutex_destroy`销毁。
+
+如果 Mutex 变量是静态分配的（全局变量或`static`变量），也可以用宏定义`PTHREAD_MUTEX_INITIALIZER`来初始化，相当于用`pthread_mutex_init`初始化并且`attr`参数为`NULL`。
+
+Mutex 的加锁和解锁操作可以用下列函数：
 
 ```cpp
 #include <pthread.h>
 
 int pthread_mutex_lock(pthread_mutex_t *mutex);
 int pthread_mutex_trylock(pthread_mutex_t *mutex);
-int pthread_mutex_unlock(pthread_mutex_t *mutex); 
+int pthread_mutex_unlock(pthread_mutex_t *mutex);
 ```
 
 返回值：成功返回 0，失败返回错误号。
 
-一个线程可以调用 pthread_mutex_lock 获得 Mutex，如果这时另一个线程已经调用 pthread_mutex_lock 获得了该 Mutex，则当前线程需要挂起等待，直到另一个线程调用 pthread_mutex_unlock 释放 Mutex，当前线程被唤醒，才能获得该 Mutex 并继续执行。
+一个线程可以调用`pthread_mutex_lock`获得 Mutex。如果这时另一个线程已经调用`pthread_mutex_lock`获得了该 Mutex，则当前线程需要挂起等待，直到另一个线程调用`pthread_mutex_unlock`释放 Mutex。当前线程被唤醒后，才能获得该 Mutex 并继续执行。
 
-如果一个线程既想获得锁，又不想挂起等待，可以调用 pthread_mutex_trylock，如果 Mutex 已经被另一个线程获得，这个函数会失败返回 EBUSY，而不会使线程挂起等待。
+如果一个线程既想获得锁，又不想挂起等待，可以调用`pthread_mutex_trylock`。如果 Mutex 已经被另一个线程获得，这个函数会失败并返回`EBUSY`，而不会使线程挂起等待。
 
 现在我们用 Mutex 解决先前的问题：
 
@@ -417,12 +410,12 @@ void *doit(void *vptr)
     }
 
     return NULL;
-} 
+}
 ```
 
 这样运行结果就正常了，每次运行都能数到 10000。
 
-看到这里，读者一定会好奇：Mutex 的两个基本操作 lock 和 unlock 是如何实现的呢？假设 Mutex 变量的值为 1 表示互斥锁空闲，这时某个进程调用 lock 可以获得锁，而 Mutex 的值为 0 表示互斥锁已经被某个线程获得，其它线程再调用 lock 只能挂起等待。那么 lock 和 unlock 的伪代码如下：
+看到这里，读者一定会好奇：Mutex 的两个基本操作 lock 和 unlock 是如何实现的呢？假设 Mutex 变量的值为 1 表示互斥锁空闲，这时某个进程调用 lock 可以获得锁；而 Mutex 的值为 0 表示互斥锁已经被某个线程获得，其它线程再调用 lock 只能挂起等待。那么 lock 和 unlock 的伪代码如下：
 
 ```cpp
 lock:
@@ -436,14 +429,16 @@ lock:
 unlock:
     mutex = 1;
     唤醒等待 Mutex 的线程;
-    return 0; 
+    return 0;
 ```
 
 unlock 操作中唤醒等待线程的步骤可以有不同的实现，可以只唤醒一个等待线程，也可以唤醒所有等待该 Mutex 的线程，然后让被唤醒的这些线程去竞争获得这个 Mutex，竞争失败的线程继续挂起等待。
 
-细心的读者应该已经看出问题了：对 Mutex 变量的读取、判断和修改不是原子操作。如果两个线程同时调用 lock，这时 Mutex 是 1，两个线程都判断 mutex>0 成立，然后其中一个线程置 mutex=0，而另一个线程并不知道这一情况，也置 mutex=0，于是两个线程都以为自己获得了锁。
+细心的读者应该已经看出问题了：对 Mutex 变量的读取、判断和修改不是原子操作。如果两个线程同时调用 lock，这时 Mutex 是 1，两个线程都判断`mutex > 0`成立，然后其中一个线程置`mutex = 0`，而另一个线程并不知道这一情况，也置`mutex = 0`，于是两个线程都以为自己获得了锁。
 
-为了实现互斥锁操作，大多数体系结构都提供了 swap 或 exchange 指令，该指令的作用是把寄存器和内存单元的数据相交换，由于只有一条指令，保证了原子性，即使是多处理器平台，访问内存的总线周期也有先后，一个处理器上的交换指令执行时另一个处理器的交换指令只能等待总线周期。现在我们把 lock 和 unlock 的伪代码改一下（以 x86 的 xchg 指令为例）：
+为了实现互斥锁操作，大多数体系结构都提供了 swap 或 exchange 指令。该指令的作用是把寄存器和内存单元的数据相交换。由于只有一条指令，保证了原子性；即使是多处理器平台，访问内存的总线周期也有先后，一个处理器上的交换指令执行时，另一个处理器的交换指令只能等待总线周期。
+
+现在我们把 lock 和 unlock 的伪代码改一下（以 x86 的 xchg 指令为例）：
 
 ```cpp
 lock:
@@ -458,20 +453,32 @@ lock:
 unlock:
     movb $1, mutex
     唤醒等待 Mutex 的线程;
-    return 0; 
+    return 0;
 ```
 
 unlock 中的释放锁操作同样只用一条指令实现，以保证它的原子性。
 
-也许还有读者好奇，“挂起等待”和“唤醒等待线程”的操作如何实现？每个 Mutex 有一个等待队列，一个线程要在 Mutex 上挂起等待，首先在把自己加入等待队列中，然后置线程状态为睡眠，然后调用调度器函数切换到别的线程。一个线程要唤醒等待队列中的其它线程，只需从等待队列中取出一项，把它的状态从睡眠改为就绪，加入就绪队列，那么下次调度器函数执行时就有可能切换到被唤醒的线程。
+也许还有读者好奇，“挂起等待”和“唤醒等待线程”的操作如何实现？每个 Mutex 有一个等待队列。一个线程要在 Mutex 上挂起等待，首先把自己加入等待队列中，然后置线程状态为睡眠，再调用调度器函数切换到别的线程。
 
-一般情况下，如果同一个线程先后两次调用 lock，在第二次调用时，由于锁已经被占用，该线程会挂起等待别的线程释放锁，然而锁正是被自己占用着的，该线程又被挂起而没有机会释放锁，因此就永远处于挂起等待状态了，这叫做死锁（Deadlock）。另一种典型的死锁情形是这样：线程 A 获得了锁 1，线程 B 获得了锁 2，这时线程 A 调用 lock 试图获得锁 2，结果是需要挂起等待线程 B 释放锁 2，而这时线程 B 也调用 lock 试图获得锁 1，结果是需要挂起等待线程 A 释放锁 1，于是线程 A 和 B 都永远处于挂起状态了。不难想象，如果涉及到更多的线程和更多的锁，有没有可能死锁的问题将会变得复杂和难以判断。
+一个线程要唤醒等待队列中的其它线程，只需从等待队列中取出一项，把它的状态从睡眠改为就绪，加入就绪队列，那么下次调度器函数执行时就有可能切换到被唤醒的线程。
 
-写程序时应该尽量避免同时获得多个锁，如果一定有必要这么做，则有一个原则：如果所有线程在需要多个锁时都按相同的先后顺序（常见的是按 Mutex 变量的地址顺序）获得锁，则不会出现死锁。比如一个程序中用到锁 1、锁 2、锁 3，它们所对应的 Mutex 变量的地址是锁 1<锁 2<锁 3，那么所有线程在需要同时获得 2 个或 3 个锁时都应该按锁 1、锁 2、锁 3 的顺序获得。如果要为所有的锁确定一个先后顺序比较困难，则应该尽量使用 pthread_mutex_trylock 调用代替 pthread_mutex_lock 调用，以免死锁。
+一般情况下，如果同一个线程先后两次调用 lock，在第二次调用时，由于锁已经被占用，该线程会挂起等待别的线程释放锁。然而锁正是被自己占用着的，该线程又被挂起而没有机会释放锁，因此就永远处于挂起等待状态了，这叫做死锁（Deadlock）。
 
-### 3.2\. Condition Variable
+另一种典型的死锁情形是这样：线程 A 获得了锁 1，线程 B 获得了锁 2。这时线程 A 调用 lock 试图获得锁 2，结果是需要挂起等待线程 B 释放锁 2；而这时线程 B 也调用 lock 试图获得锁 1，结果是需要挂起等待线程 A 释放锁 1，于是线程 A 和 B 都永远处于挂起状态了。
 
-线程间的同步还有这样一种情况：线程 A 需要等某个条件成立才能继续往下执行，现在这个条件不成立，线程 A 就阻塞等待，而线程 B 在执行过程中使这个条件成立了，就唤醒线程 A 继续执行。在 pthread 库中通过条件变量（Condition Variable）来阻塞等待一个条件，或者唤醒等待这个条件的线程。Condition Variable 用`pthread_cond_t`类型的变量表示，可以这样初始化和销毁：
+不难想象，如果涉及到更多的线程和更多的锁，死锁的问题将会变得复杂和难以判断。
+
+写程序时应该尽量避免同时获得多个锁。如果一定有必要这么做，则有一个原则：如果所有线程在需要多个锁时都按相同的先后顺序（常见的是按 Mutex 变量的地址顺序）获得锁，则不会出现死锁。
+
+比如一个程序中用到锁 1、锁 2、锁 3，它们所对应的 Mutex 变量的地址是锁 1 < 锁 2 < 锁 3，那么所有线程在需要同时获得 2 个或 3 个锁时，都应该按锁 1、锁 2、锁 3 的顺序获得。
+
+如果要为所有的锁确定一个先后顺序比较困难，则应该尽量使用`pthread_mutex_trylock`调用代替`pthread_mutex_lock`调用，以免死锁。
+
+### 3.2. Condition Variable
+
+线程间的同步还有这样一种情况：线程 A 需要等某个条件成立才能继续往下执行。现在这个条件不成立，线程 A 就阻塞等待，而线程 B 在执行过程中使这个条件成立了，就唤醒线程 A 继续执行。
+
+在 pthread 库中，通过条件变量（Condition Variable）来阻塞等待一个条件，或者唤醒等待这个条件的线程。Condition Variable 用`pthread_cond_t`类型的变量表示，可以这样初始化和销毁：
 
 ```cpp
 #include <pthread.h>
@@ -479,12 +486,16 @@ unlock 中的释放锁操作同样只用一条指令实现，以保证它的原�
 int pthread_cond_destroy(pthread_cond_t *cond);
 int pthread_cond_init(pthread_cond_t *restrict cond,
        const pthread_condattr_t *restrict attr);
-pthread_cond_t cond = PTHREAD_COND_INITIALIZER; 
+pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
 ```
 
 返回值：成功返回 0，失败返回错误号。
 
-和 Mutex 的初始化和销毁类似，`pthread_cond_init`函数初始化一个 Condition Variable，`attr`参数为`NULL`则表示缺省属性，`pthread_cond_destroy`函数销毁一个 Condition Variable。如果 Condition Variable 是静态分配的，也可以用宏定义`PTHEAD_COND_INITIALIZER`初始化，相当于用`pthread_cond_init`函数初始化并且`attr`参数为`NULL`。Condition Variable 的操作可以用下列函数：
+和 Mutex 的初始化和销毁类似，`pthread_cond_init`函数初始化一个 Condition Variable，`attr`参数为`NULL`则表示缺省属性，`pthread_cond_destroy`函数销毁一个 Condition Variable。
+
+如果 Condition Variable 是静态分配的，也可以用宏定义`PTHEAD_COND_INITIALIZER`初始化，相当于用`pthread_cond_init`函数初始化并且`attr`参数为`NULL`。
+
+Condition Variable 的操作可以用下列函数：
 
 ```cpp
 #include <pthread.h>
@@ -495,22 +506,22 @@ int pthread_cond_timedwait(pthread_cond_t *restrict cond,
 int pthread_cond_wait(pthread_cond_t *restrict cond,
        pthread_mutex_t *restrict mutex);
 int pthread_cond_broadcast(pthread_cond_t *cond);
-int pthread_cond_signal(pthread_cond_t *cond); 
+int pthread_cond_signal(pthread_cond_t *cond);
 ```
 
 返回值：成功返回 0，失败返回错误号。
 
 可见，一个 Condition Variable 总是和一个 Mutex 搭配使用的。一个线程可以调用`pthread_cond_wait`在一个 Condition Variable 上阻塞等待，这个函数做以下三步操作：
 
-1.  释放 Mutex
+1. 释放 Mutex
+2. 阻塞等待
+3. 当被唤醒时，重新获得 Mutex 并返回
 
-2.  阻塞等待
+`pthread_cond_timedwait`函数还有一个额外的参数可以设定等待超时。如果到达了`abstime`所指定的时刻，仍然没有别的线程来唤醒当前线程，就返回`ETIMEDOUT`。
 
-3.  当被唤醒时，重新获得 Mutex 并返回
+一个线程可以调用`pthread_cond_signal`唤醒在某个 Condition Variable 上等待的另一个线程，也可以调用`pthread_cond_broadcast`唤醒在这个 Condition Variable 上等待的所有线程。
 
-`pthread_cond_timedwait`函数还有一个额外的参数可以设定等待超时，如果到达了`abstime`所指定的时刻仍然没有别的线程来唤醒当前线程，就返回`ETIMEDOUT`。一个线程可以调用`pthread_cond_signal`唤醒在某个 Condition Variable 上等待的另一个线程，也可以调用`pthread_cond_broadcast`唤醒在这个 Condition Variable 上等待的所有线程。
-
-下面的程序演示了一个生产者-消费者的例子，生产者生产一个结构体串在链表的表头上，消费者从表头取走结构体。
+下面的程序演示了一个生产者-消费者的例子：生产者生产一个结构体串在链表的表头上，消费者从表头取走结构体。
 
 ```cpp
 #include <stdlib.h>
@@ -559,9 +570,9 @@ void *producer(void *p)
     }
 }
 
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
-    pthread_t pid, cid;  
+    pthread_t pid, cid;
 
     srand(time(NULL));
     pthread_create(&pid, NULL, producer, NULL);
@@ -569,13 +580,13 @@ int main(int argc, char *argv[])
     pthread_join(pid, NULL);
     pthread_join(cid, NULL);
     return 0;
-} 
+}
 ```
 
 执行结果如下：
 
 ```cpp
-$ ./a.out 
+$ ./a.out
 Produce 744
 Consume 744
 Produce 567
@@ -585,20 +596,20 @@ Produce 911
 Consume 911
 Consume 567
 Produce 698
-Consume 698 
+Consume 698
 ```
 
 #### 习题
 
-1、在本节的例子中，生产者和消费者访问链表的顺序是 LIFO 的，请修改程序，把访问顺序改成 FIFO。
+1. 在本节的例子中，生产者和消费者访问链表的顺序是 LIFO 的，请修改程序，把访问顺序改成 FIFO。
 
-### 3.3\. Semaphore
+### 3.3. Semaphore
 
-Mutex 变量是非 0 即 1 的，可看作一种资源的可用数量，初始化时 Mutex 是 1，表示有一个可用资源，加锁时获得该资源，将 Mutex 减到 0，表示不再有可用资源，解锁时释放该资源，将 Mutex 重新加到 1，表示又有了一个可用资源。
+Mutex 变量是非 0 即 1 的，可看作一种资源的可用数量。初始化时 Mutex 是 1，表示有一个可用资源；加锁时获得该资源，将 Mutex 减到 0，表示不再有可用资源；解锁时释放该资源，将 Mutex 重新加到 1，表示又有了一个可用资源。
 
-信号量（Semaphore）和 Mutex 类似，表示可用资源的数量，和 Mutex 不同的是这个数量可以大于 1。
+信号量（Semaphore）和 Mutex 类似，表示可用资源的数量；和 Mutex 不同的是，这个数量可以大于 1。
 
-本节介绍的是 POSIX semaphore 库函数，详见 sem_overview(7)，这种信号量不仅可用于同一进程的线程间同步，也可用于不同进程间的同步。
+本节介绍的是 POSIX semaphore 库函数，详见`sem_overview(7)`。这种信号量不仅可用于同一进程的线程间同步，也可用于不同进程间的同步。
 
 ```cpp
 #include <semaphore.h>
@@ -607,12 +618,14 @@ int sem_init(sem_t *sem, int pshared, unsigned int value);
 int sem_wait(sem_t *sem);
 int sem_trywait(sem_t *sem);
 int sem_post(sem_t * sem);
-int sem_destroy(sem_t * sem); 
+int sem_destroy(sem_t * sem);
 ```
 
-semaphore 变量的类型为 sem_t，sem_init()初始化一个 semaphore 变量，value 参数表示可用资源的数量，pshared 参数为 0 表示信号量用于同一进程的线程间同步，本节只介绍这种情况。在用完 semaphore 变量之后应该调用 sem_destroy()释放与 semaphore 相关的资源。
 
-调用 sem_wait()可以获得资源，使 semaphore 的值减 1，如果调用 sem_wait()时 semaphore 的值已经是 0，则挂起等待。如果不希望挂起等待，可以调用 sem_trywait()。调用 sem_post()可以释放资源，使 semaphore 的值加 1，同时唤醒挂起等待的线程。
+
+`semaphore`变量的类型为`sem_t`，`sem_init()`初始化一个`semaphore`变量，`value`参数表示可用资源的数量，`pshared`参数为`0`表示信号量用于同一进程的线程间同步，本节只介绍这种情况。在用完`semaphore`变量之后应该调用`sem_destroy()`释放与`semaphore`相关的资源。
+
+调用`sem_wait()`可以获得资源，使`semaphore`的值减`1`，如果调用`sem_wait()`时`semaphore`的值已经是`0`，则挂起等待。如果不希望挂起等待，可以调用`sem_trywait()`。调用`sem_post()`可以释放资源，使`semaphore`的值加`1`，同时唤醒挂起等待的线程。
 
 上一节生产者－消费者的例子是基于链表的，其空间可以动态分配，现在基于固定大小的环形队列重写这个程序：
 
@@ -670,31 +683,31 @@ int main(int argc, char *argv[])
 
 #### 习题
 
-1、本节和上一节的例子给出一个重要的提示：用 Condition Variable 可以实现 Semaphore。请用 Condition Variable 实现 Semaphore，然后用自己实现的 Semaphore 重写本节的程序。
+1、本节和上一节的例子给出一个重要的提示：用`Condition Variable`可以实现`Semaphore`。请用`Condition Variable`实现`Semaphore`，然后用自己实现的`Semaphore`重写本节的程序。
 
-### 3.4\. 其它线程间同步机制
+### 3.4. 其它线程间同步机制
 
-如果共享数据是只读的，那么各线程读到的数据应该总是一致的，不会出现访问冲突。只要有一个线程可以改写数据，就必须考虑线程间同步的问题。由此引出了读者写者锁（Reader-Writer Lock）的概念，Reader 之间并不互斥，可以同时读共享数据，而 Writer 是独占的（exclusive），在 Writer 修改数据时其它 Reader 或 Writer 不能访问数据，可见 Reader-Writer Lock 比 Mutex 具有更好的并发性。
+如果共享数据是只读的，那么各线程读到的数据应该总是一致的，不会出现访问冲突。只要有一个线程可以改写数据，就必须考虑线程间同步的问题。由此引出了读者写者锁（`Reader-Writer Lock`）的概念，`Reader`之间并不互斥，可以同时读共享数据，而`Writer`是独占的（`exclusive`），在`Writer`修改数据时其它`Reader`或`Writer`不能访问数据，可见`Reader-Writer Lock`比`Mutex`具有更好的并发性。
 
-用挂起等待的方式解决访问冲突不见得是最好的办法，因为这样毕竟会影响系统的并发性，在某些情况下解决访问冲突的问题可以尽量避免挂起某个线程，例如 Linux 内核的 Seqlock、RCU（read-copy-update）等机制。
+用挂起等待的方式解决访问冲突不见得是最好的办法，因为这样毕竟会影响系统的并发性，在某些情况下解决访问冲突的问题可以尽量避免挂起某个线程，例如 Linux 内核的`Seqlock`、`RCU`（`read-copy-update`）等机制。
 
 关于这些同步机制的细节，有兴趣的读者可以参考[[APUE2e]](bi01.html#bibli.apue "Advanced Programming in the UNIX Environment")和[[ULK]](bi01.html#bibli.ulk "Understanding the Linux Kernel")。
 
-## 4\. 编程练习
+## 4. 编程练习
 
-哲学家就餐问题。这是由计算机科学家 Dijkstra 提出的经典死锁场景。
+哲学家就餐问题。这是由计算机科学家`Dijkstra`提出的经典死锁场景。
 
-原版的故事里有五个哲学家(不过我们写的程序可以有 N 个哲学家)，这些哲学家们只做两件事－－思考和吃饭，他们思考的时候不需要任何共享资源，但是吃饭的时候就必须使用餐具，而餐桌上的餐具是有限的，原版的故事里，餐具是叉子，吃饭的时候要用两把叉子把面条从碗里捞出来。很显然把叉子换成筷子会更合理，所以：一个哲学家需要两根筷子才能吃饭。
+原版的故事里有五个哲学家(不过我们写的程序可以有`N`个哲学家)，这些哲学家们只做两件事－－思考和吃饭，他们思考的时候不需要任何共享资源，但是吃饭的时候就必须使用餐具，而餐桌上的餐具是有限的，原版的故事里，餐具是叉子，吃饭的时候要用两把叉子把面条从碗里捞出来。很显然把叉子换成筷子会更合理，所以：一个哲学家需要两根筷子才能吃饭。
 
 现在引入问题的关键：这些哲学家很穷，只买得起五根筷子。他们坐成一圈，两个人的中间放一根筷子。哲学家吃饭的时候必须同时得到左手边和右手边的筷子。如果他身边的任何一位正在使用筷子，那他只有等着。
 
-假设哲学家的编号是 A、B、C、D、E，筷子编号是 1、2、3、4、5，哲学家和筷子围成一圈如下图所示：
+假设哲学家的编号是`A`、`B`、`C`、`D`、`E`，筷子编号是`1`、`2`、`3`、`4`、`5`，哲学家和筷子围成一圈如下图所示：
 
-**图 35.2\. 哲学家问题**
+**图 35.2. 哲学家问题**
 
 ![哲学家问题](img/thread.philosopher.png)
 
-每个哲学家都是一个单独的线程，每个线程循环做以下动作：思考 rand()%10 秒，然后先拿左手边的筷子再拿右手边的筷子（筷子这种资源可以用 mutex 表示），有任何一边拿不到就一直等着，全拿到就吃饭 rand()%10 秒，然后放下筷子。
+每个哲学家都是一个单独的线程，每个线程循环做以下动作：思考`rand()%10`秒，然后先拿左手边的筷子再拿右手边的筷子（筷子这种资源可以用`mutex`表示），有任何一边拿不到就一直等着，全拿到就吃饭`rand()%10`秒，然后放下筷子。
 
 编写程序仿真哲学家就餐的场景：
 
@@ -710,4 +723,4 @@ Philosopher A releases chopsticks 5 1
 ... 
 ```
 
-分析一下，这个过程有没有可能产生死锁？调用 usleep(3)函数可以实现微秒级的延时，试着用 usleep(3)加快仿真的速度，看能不能观察到死锁现象。然后修改上述算法避免产生死锁。
+分析一下，这个过程有没有可能产生死锁？调用`usleep(3)`函数可以实现微秒级的延时，试着用`usleep(3)`加快仿真的速度，看能不能观察到死锁现象。然后修改上述算法避免产生死锁。

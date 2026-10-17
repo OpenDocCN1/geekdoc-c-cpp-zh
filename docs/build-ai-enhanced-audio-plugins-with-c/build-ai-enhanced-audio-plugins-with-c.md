@@ -1,13 +1,7 @@
+
 # C++ AI增强音频插件构建指南
 
-
-
-
-
-
 ![](img/f36e66929543fe6d506774ef8e004b7e_0_0.png)
-
-
 
 《使用 C++ 构建 AI 增强型音频插件》一书通过使用 Python、C++ 和音频 API 的实例示例，解释了如何将人工智能技术嵌入到音频和音乐专业人士使用的工具中。这些示例展示了如何结合各种技术来产生专业的、经 AI 增强的创作工具。
 
@@ -21,22 +15,7 @@
 
 François Pachet，研究总监
 
-
-
 ![](img/f36e66929543fe6d506774ef8e004b7e_3_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 出备注
 
@@ -46,46 +25,28 @@ François Pachet，研究总监
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_6_0.png)
 
-
-
 # 前言
 
 我很高兴介绍这本关于构建音频插件的书。我叫 Yee-King，在伦敦大学金学院工作。我是一位教育者、音乐家，也是伦敦大学在线计算机科学学士学位的课程主任。随着 AI 辅助音乐创作领域的爆炸式增长，对于掌握从想法到实际插件的整个软件链的需求比任何时候都更强烈。Matthew 提供了一种直接、实用的方法，这不仅对想要在该领域做出贡献的人有很大帮助，还会鼓励他人实验并分享他们的代码。Matthew 的教学经验显示并绝对有助于这本书变得易读且切中要点。
 
 我想感谢所有与我合作的音乐家（特别是 Domenico、Finn、Alex）和研究人员，他们给了我灵感，确实，书中的一些项目是基于他们的。
 
-
-
-
-
-
-
-
-
-
-
-
-
 - 32.2 使用神经网络通过各种形状和数据格式处理 WAV 文件的步骤。 . . . . . 270
 - 32.3 处理 44,100 个样本所需的时间。低于 1000ms 的任何时间都可能实现实时运行。Linux 在隐藏单元较少时看起来速度非常快，但 Windows 和 macOS 在 128 个单元时可以追赶。. . . . 272
 - 33.1 基于块的处理会导致音频出现不希望的伪影。左侧面板显示了如果在一个块中处理完整信号，网络的输出。右侧面板显示了如果分多个块通过网络时会发生什么。解决方案是在块之间保留 LSTM 的状态。. . . . . . . . . . . . . . 277
 - 33.2 用于存储 LSTM 状态的数据类型细分。. . . . . . . . . . . . . . 280
-- 33.3 在 AudioPlug 测试环境中运行的 LSTM 插件，示波器显示了 LSTM 处理前后的正弦测试音。. . . . . . . . . . . . . . . . 284
+- 33.3 在 AudioPlug 测试环境中运行的 LSTM 插件，示波器显示了 LSTM 处理前后的正弦测试音。. . . . . . . . . . . . . . . . . 284
 - 34.1 LSTM 如何处理音频？. . . . . . . . . . . . . . . . . . . 287
 - 34.2 训练神经网络的四个阶段：1：将测试输入通过你为建模的设备（例如放大器）；2：将测试输入通过神经网络；3：计算网络输出之间的误差；4：使用反向传播更新网络参数以减少误差。回到阶段 2。. . . . . 288
 - 34.3 Tensorboard 是一个基于 Web 的机器学习仪表板。在这里，你可以看到训练运行的列表 (1) 以及显示在两次独立运行中训练 (2) 和验证 (3) 误差进展的图表。. . . . . . . . . . . . . . . . . . 291
-- 34.4 Atkins 信号 'v2.0.0.wav' 的频谱图。你可以看到信号是变化且动态的。. . . . . . . . . . . 292
-- 34.5 从吉他放大器捕获训练数据类似于“重采样”（re-amping）。. . . . . . . . . . . . . . . . . . . . . 292
-- 34.6 Reaper 中的清洁信号（顶部）和重采样信号（底部）。. . . . . . . 294
+- 34.4 Atkins 信号 'v2.0.0.wav' 的频谱图。你可以看到信号是变化且动态的。. . . . . . . . . . . . 292
+- 34.5 从吉他放大器捕获训练数据类似于“重采样”（re-amping）。. . . . . . . . . . . . . . . . . . . . . . 292
+- 34.6 Reaper 中的清洁信号（顶部）和重采样信号（底部）。. . . . . . . . . . 294
 - 35.1 序列长度和批大小。. . . . . . . . . . . . . . . . . . . . . . . 298
 - 35.2 一个具有四层隐藏 LSTM 层和一个将信号“混合”到单个通道的连接单元的 LSTM 网络。. . . . . . . . . . . . . . . . . . . . . 303
 - 35.3 损失意味着什么？上面的两个图显示了目标输出的提取。中间的两个图显示了未训练（左侧）和已训练（右侧）网络的输出。右侧更接近目标。底部的图显示了上述两个图中每个点之间的简单误差。这些值的总和可以是一个简单的损失函数。. . . . . . . . . . . . . . . 305
 
-
-
 ![](img/f36e66929543fe6d506774ef8e004b7e_18_0.png)
-
-
 
 ## 本书简介
 
@@ -108,10 +69,6 @@ François Pachet，研究总监
 ## 1.2 本书的目标
 
 本书的首要目标是教你如何构建 AI 增强的音乐软件。但我采用的方法与许多其他 AI 和信号处理书籍不同。我仔细开发了这种方法，以解决特定问题并应对你作为 AI 增强音乐软件开发者将面临的特殊挑战。
-
-
-
-
 
 # 书籍
 
@@ -168,10 +125,6 @@ François Pachet，研究总监
 
 如果你是一名计划将本书作为教学一部分的教育者，这是一个极佳的主意！在教学中使用本书显而易的方法是将内容分配在讲座和实验课之间。在讲座中，你可以介绍 AI 理论，取决于课程的水平和重点。书中涵盖的内容足以让读者执行训练和推理，并将 AI 系统集成到运行的应用程序中。我还解释了所用特定机器学习技术的特性。你可以根据需要走得更远。
 
-
-
-
-
 # 本书介绍
 
 示例应用程序。我已经和学生一起对这些指令进行了实战测试和迭代。
@@ -192,6 +145,8 @@ François Pachet，研究总监
 
 GPL 在源代码自由方面采取了更强烈的哲学立场。你可以在你的项目中调整并使用 GPL 许可的代码，即使是商业项目，但你会被要求发布你的代码。如果你的代码链接到 GPL 库，你也有义务使用 GPL 许可将你的源代码开源。
 
+
+
 如果多个许可是兼容的，那么发布带有多个许可的代码是可能的。我在书中编写的代码按“MIT / GPL”双重许可释放的。我将解释原因。如果你在你的项目中使用我的代码，则适用 MIT 许可。如果你使用了我的示例（这些示例也链接了 GPL 许可的代码），则适用 GPL 许可。
 
 我对代码进行双重许可是因为 JUCE 库的原因。如果你针对 JUCE 库进行构建，你可以对整个项目采用 GPL，或者申请 JUCE 许可，然后，你就不需要对你的代码采用 GPL 了。
@@ -201,9 +156,7 @@ GPL 在源代码自由方面采取了更强烈的哲学立场。你可以在你�
 以下是一些示例，说明了你可能希望与书中源代码交互的典型方式。
 
 - 我想尝试书中的示例。我不计划发布任何商业内容。太极了——你可以这样做，没问题。
-
 - 我想在自己的插件项目中使用本书作者编写的代码，在这些项目中，我使用的是自己的框架而不是 JUCE。因此我不会针对 JUCE 库进行构建。太极了——在这种情况下，我的代码适用 MIT 许可，你可以自由地发布使用 MIT 代码的商业项目。
-
 - 我将书中的一个示例转换为了一个非常酷的插件，我想将其商业发布。我不想用 GPL 发布我的完整代码。它使用了 JUCE 库。别担心，你可以那样做。你只需要从 JUCE 网页获取相应的许可。
 
 ## 1.7 用户就绪
@@ -218,7 +171,7 @@ GPL 在源代码自由方面采取了更强烈的哲学立场。你可以在你�
 
 # 设置你的开发环境
 
-在接下来的章节中，我将解释如何设置音频开发所需的开发环境。你需要这个设置来处理和运行书中的程序。完成这些章节后，你应该能够使用集成开发环境构建并运行链接到 JUCE音频库和 libtorch 机器学习库的简单 C++ 程序。这些章节还将让你熟悉 CMake 工具，它允许你创建适用于 Windows、macOS 和 Linux 系统的跨平台应用程序和插件。你可以按照自己的方式使用这些章节——阅读、涂鸦等，但我建议在有电脑的情况下操作。准备在计算机上安装软件，在其命令行 shell 中运行命令并执行程序。
+在接下来的章节中，我将解释如何设置音频开发所需的开发环境。你需要这个设置来处理和运行书中的程序。完成这些章节后，你应该能够使用集成开发环境构建并运行链接到 JUCE 音频库和 libtorch 机器学习库的简单 C++ 程序。这些章节还将让你熟悉 CMake 工具，它允许你创建适用于 Windows、macOS 和 Linux 系统的跨平台应用程序和插件。你可以按照自己的方式使用这些章节——阅读、涂鸦等，但我建议在有电脑的情况下操作。准备在计算机上安装软件，在其命令行 shell 中运行命令并执行程序。
 
 ## 2.1 组件部分
 
@@ -228,104 +181,91 @@ GPL 在源代码自由方面采取了更强烈的哲学立场。你可以在你�
 
 ### 2.1.1 不同组件的用途
 
-FIGURE 2.1 构建 AI 增强音频软件需要许多组件。
+**FIGURE 2.1** 构建 AI 增强音频软件需要许多组件。
 
-构建工具帮助开发者指定如何构建他们的软件。例如，他们正在使用哪些软件库？源代码文件在哪里？目标平台是什么？当你想要
-
-设置你的开发环境时，构建工具非常有用。
+构建工具帮助开发者指定如何构建他们的软件。例如，他们正在使用哪些软件库？源代码文件在哪里？目标平台是什么？当你想要设置你的开发环境时，构建工具非常有用。
 
 12
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_30_0.png)
 
-# ### FIGURE 2.2
+### FIGURE 2.2
 
 涉及 AI 增强音频应用程序开发的组件。
 
+## 设置你的开发环境
 
+为了能够使用不同的集成开发环境（IDEs）为多个平台构建你的软件。我们将使用 `CMake`¹ 构建工具来帮助我们为各种 IDE 生成项目。这将使得为不同的硬件和操作系统平台构建软件成为可能。
 
+## CMake
 
+`CMake` 是我们将在本书中使用的构建工具。通过 `CMake`，你只需要编写一个配置文件，然后就可以它来为不同的 IDE 生成项目。在配置文件中，你可以为构建指定不同的目标，例如测试程序和主程序。你可以指定任何要执行的操作，例如复制文件。这使得对于希望支持各种操作系统的音频应用开发者来说，是一项非常有价值的工具，因为你可以维护单一的 `CMake` 配置和代码库，并用它为多个平台进行构建。
 
-# 设置你的开发环境
+## 集成开发环境 (IDE)
 
-为了能够使用不同的集成开发环境（IDEs）为多个平台构建你的软件。我们将使用 CMake¹ 构建工具来帮助我们为各种 IDE 生成项目。这将使得为不同的硬件和操作系统平台构建软件成为可能。
+IDE 是一套工具，允许开发者编写、构建和调试软件。IDE 将是你软件开发活动的核心枢纽。通过使用 `CMake` 构建工具，你可以从同一个代码库为不同的 IDE 生成项目。有很多 IDE 可用，但在书中，我将介绍用于 Apple 设备开发的 Xcode、用于 Windows 的 Visual Studio 以及用于 GNU/Linux 的 Visual Studio Code 或自定义设置。事实上，你也可以使用 Visual Code 进行 Windows、Apple 和 Linux 的开发，这允许跨平台的一致性环境。
 
-# CMake
-
-CMake 是我们将在本书中使用的构建工具。通过 CMake，你只需要编写一个配置文件，然后就可以它来为不同的 IDE 生成项目。在配置文件中，你可以为构建指定不同的目标，例如测试程序和主程序。你可以指定任何要执行的操作，例如复制文件。这使得对于希望支持各种操作系统的音频应用开发者来说，是一项非常有价值的工具，因为你可以维护单一的 CMake 配置和代码库，并用它为多个平台进行构建。
-
-# 集成开发环境 (IDE)
-
-IDE 是一套工具，允许开发者编写、构建和调试软件。IDE 将是你软件开发活动的核心枢纽。通过使用 CMake 构建工具，你可以从同一个代码库为不同的 IDE 生成项目。有很多 IDE 可用，但在书中，我将介绍用于 Apple 设备开发的 Xcode、用于 Windows 的 Visual Studio 以及用于 GNU/Linux 的 Visual Studio Code 或自定义设置。事实上，你也可以使用 Visual Code 进行 Windows、Apple 和 Linux 的开发，这允许跨平台的一致性环境。
-
-# 代码库
+## 代码库
 
 代码库是项目中的源代码文件集。构建工具和一些实用的宏将允许为所有平台拥有一个单一的代码库。
 
-# 原生程序 (Native program)
+## 原生程序 (Native program)
 
 你在书中遇到的一些程序将被编译成在特定 CPU 硬件上运行的机器码的原生程序。我们将使用 C++ 语言编写这些程序。当开发者希望直接与插件和数字音频工作站 (DAW) 技术集成时，原生程序是最合适的。例如，VST 插件就是原生程序。原生程序的运行速度通常比解释型程序更快，这对实时音频应用至关重要。
 
 > https://CMake.org/
 
-# 解释型程序 (Interpreted program)
+## 解释型程序 (Interpreted program)
 
 我们编写的一些程序将被解释，而不是被编译。解释型程序在运行时动态转换为机器码，而不是在运行之前转换为机器码。我们将使用 Python 语言编写解释型程序。解释型程序更适合开发机器学习模型时所需的实验。AI 研究人员在提供研究结果时附 Python 代码是常见做法，以便其他人更容易执行他们的工作。研究人员提供 C++ 代码的情况较少，但在过去几年的 AI 研究中，这种趋势正在出现。
 
-# 机器学习模型 (Machine learning model)
+## 机器学习模型 (Machine learning model)
 
 机器学习执行与人工智能系统相关的智能处理。神经网络是机器学习模型的一个示例。你可以将机器学习模型视为一种数据处理黑盒，它可以学习如何以对用户有用的方式处理数据。模型的结构（黑盒内部）及其参数决定了它执行什么种处理。根据应用的不同，我们有时使用 Python 开发模型，有时使用 C++。在 Python 中对模型设计和训练数据进行实验通常更简单直接。C++ 允许将模型集成到原生应用程序和插件中，以便用户可以访问。
 
-# 训练好的模型 (Trained model)
+## 训练好的模型 (Trained model)
 
 训练好的模型是学习了有价值信息的机器学习模型。模型定义了机器学习组件的结构。训练教会该组件以特定方式处理数据。通过学习进行配置的能力是机器学习的本质。第三方提供的训练模型通常被称为预训练模型。如果你听过 OpenAI 臭名昭著的 GPT 模型，“P”代表预训练（pre-trained）。
 
-# 推理 (Inference)
+## 推理 (Inference)
 
 推理是使用训练好的模型生成输出的过程。推理不会改变机器学习模型的内部配置；它只是让数据流过它。一旦模型训练完成，我们将使用它进行推理。
 
-# 设置你的开发环境
-
-# 生成式模型 (Generative model)
+## 生成式模型 (Generative model)
 
 生成式模型是可以生成有趣内容的机器学习模型。例如，它不是检测图像中的猫，而是可能生成猫的图像。GPT 中的“G”代表生成式（generative），因为 GPT 生成文本。
 
-# 机器学习库 (Machine learning library)
+## 机器学习库 (Machine learning library)
 
-机器学习库是一套让执行机器学习任务更容易的组件。典型组件包括不同的算法（如聚类和神经网络）、训练模型的程序以及数据导入器。示例包括 sc-learn、TensorFlow 和 PyTorch。我们将使用 PyTorch 库及其兼容 C++ 的 libtorch。这将允许我们同时在 Python 和 C++ 中工作，利用每种语言的优势。libtorch 也兼容 CMake 构建。
+机器学习库是一套让执行机器学习任务更容易的组件。典型组件包括不同的算法（如聚类和神经网络）、训练模型的程序以及数据导入器。示例包括 `sc-learn`、`TensorFlow` 和 `PyTorch`。我们将使用 `PyTorch` 库及其兼容 C++ 的 `libtorch`。这将允许我们同时在 Python 和 C++ 中工作，利用每种语言的优势。`libtorch` 也兼容 `CMake` 构建。
 
-# 音频库 (Audio library)
+## 音频库 (Audio library)
 
-音频库是一套让构建音频应用程序更容易的组件。典型组件包括音频文件读取器写入器、音频设备管理和声音合成程序。我们将使用 JUCE 音频库，因为它允许我们构建跨平台的音频应用和插件。如果你不热于使用 JUCE，你应该能够转换为其他音频库。例如，可以直接使用 Steinberg 的库创建 VST 插件，或者使用 IPLug。我选择使用 JUCE 的原因有几个：它在不同平台上提供了非常一致的体验；它包含一套跨平台的用户界面组件；它与 CMake 构建兼容，并可以导出 VST3、AudioUnit 等多种格式的插件。JUCE 还提供了构建可以托管其他插件的应用程序和插件的组件，我们将在书的一些示例中使用这种能力。
+音频库是一套让构建音频应用程序更容易的组件。典型组件包括音频文件读取器写入器、音频设备管理和声音合成程序。我们将使用 `JUCE` 音频库，因为它允许我们构建跨平台的音频应用和插件。如果你不热于使用 `JUCE`，你应该能够转换为其他音频库。例如，可以直接使用 Steinberg 的库创建 VST 插件，或者使用 `IPLug`。我选择使用 `JUCE` 的原因有几个：它在不同平台上提供了非常一致的体验；它包含一套跨平台的用户界面组件；它与 `CMake` 构建兼容，并可以导出 VST3、AudioUnit 等多种格式的插件。`JUCE` 还提供了构建可以托管其他插件的应用程序和插件的组件，我们将在书的一些示例中使用这种能力。
 
-# 应用程序编程接口 (API)
+## 应用程序编程接口 (API)
 
-API 是一套你可以用于开发应用程序的现成组件。API 有不同的形式，但 JUCE API 包含代表用户界面组件、音频文件读取器等的 C++ 类。另见下文关于库的注释。
+API 是一套你可以用于开发应用程序的现成组件。API 有不同的形式，但 `JUCE API` 包含代表用户界面组件、音频文件读取器等的 C++ 类。另见下文关于库的注释。
 
-# 动态链接与静态链接 (Dynamic and static linking)
+## 动态链接与静态链接 (Dynamic and static linking)
 
 当你构建原生应用程序时，部分过程是将你的应用程序连接到你使用的库。这里有两种选择：动态链接和静态链接。静态链接意味着库（例如音频库）包含在你的程序内部。动态链接意味着库作为一个独立文件存在，你的应用程序存储对其的引用。根据平台，动态链接库也被称为 DLL、共享对象和 dyl。当你运行动态链接的应用程序时，这些库必须位于运行应用程序的计算机上。根据操作系统，定位库的方法不同。当你在书中遇到时，我会详细解释如何处理。
 
-# 数字音频工作站 (DAW)
+## 数字音频工作站 (DAW)
 
 数字音频工作站 (DAW) 就像是音乐人的 IDE。它是一系列协同工作的工具，允许音乐的录制和制作。DAWs 支持用于声音合成、效果处理和 MIDI 处理的插件。
 
-# 插件 (Plugin)
+## 插件 (Plugin)
 
 插件是工作在更大的程序内部的软件组件。我们将在 DAW 中创建插件。我们创建插件将包含机器学习能力。
 
-# 插件主机 (Plugin host)
+## 插件主机 (Plugin host)
 
 插件主机是任何加载和使用外部插件的软件。DAWs 是插件主机，但我们将在某些示例中使用更简单的插件主机来帮助测试我们的软件，并允许我们的软件托管和控制插件。
 
 ### 2.1.2 计算机硬件
 
 现在你已经了解开发环境的主要组件，是时候简要讨论计算机硬件了。我使用了多种计算机系统来编写这本书并开发其中的跨平台软件。这些包括一台带有独立 Nvidia Geforce 2070 图形处理器 (GPU) 的 Windows 10 i7、一台带有 M1 芯片的 Apple Silicon Mac、一台带有 Intel i5 CPU 的 Intel Mac（运行 macOS），以及带有集成 Intel GPU 的 Ubuntu Linux 机器。如果你无法访问许多不同的机器，不要担心。你只需要一台机器就可以完成本书。但如果你想构建适用于 Windows、macOS 和 Linux 的程序版本，你需要访问这些系统。你还需要在开发机器（机器）上安装软件的管理员权限，除非它已为你安装。
-
-
-
-
-# 设置你的开发环境
 
 ## GPU、训练与推理
 
@@ -338,8 +278,6 @@ API 是一套你可以用于开发应用程序的现成组件。API 有不同的
 到这里，你可能担心需要一个强大的 GPU 来完成书中的实际活动，但情况并不一定。首先，书中的并非所有的机器学习算法都需要高强度计算。此外，书中的机器学习算法仅在训练阶段需要高强度计算。训练是机器学习学习的过程；推理（Inference）则是我们使用模型执行任务的过程。记住，本书的目标之一是构建音乐和音频专业人士可以访问的应用——这意味着我们所的推理部分在 CPU 上运行得足够快即可。尽管如此，有时访问 GPU 也会很有用——所以请稍后查看关于 Google Colabs 云端 GPU 的信息。我将在适当的情况下提供预训练模型。
 
 > ²https://colab.google.com/
-
-# 设置你的开发环境
 
 ## 2.2 设置 C++ 开发环境
 
@@ -359,11 +297,9 @@ API 是一套你可以用于开发应用程序的现成组件。API 有不同的
 
 我们将从允许我们构建软件的基础工具开始：IDE 和 C++ 开发工具。你在这里的操作取决于你的操作系统和硬件。
 
-# 设置你的开发环境
-
 ## 2.3 Windows：安装 Visual Studio
 
-如果你在开发 Windows 程序，我建议你使用 Visual Studio Community。这是让 C++ 运行的最简单方法。如果你想获得一致的开发环境，以后可以安装 VS Code。安装 Visual Studio 的简单方法是从 App Store，但从 App Store 下载大型文件可能不可靠。另一种方法是注册并登录开发者门户网站并访问-
+如果你在开发 Windows 程序，我建议你使用 `Visual Studio Community`。这是让 C++ 运行的最简单方法。如果你想获得一致的开发环境，以后可以安装 `VS Code`。安装 `Visual Studio` 的简单方法是从 App Store，但从 App Store 下载大型文件可能不可靠。另一种方法是注册并登录开发者门户网站并访问：
 
 - C++ 开发
 - 核心功能
@@ -382,9 +318,9 @@ API 是一套你可以用于开发应用程序的现成组件。API 有不同的
 
 ## 2.4 macOS：安装 Xcode
 
-如果你在 macOS 上进行开发，我建议你使用 Xcode。这是让 C++ 运行的最简单方法。如果你想要一致的开发环境，以后可以安装 VS Code。安装 Xcode 的简单方法是从 App Store，但从 App Store 下载大型文件可能不可靠。另一种方法是注册并登录开发者门户网站并访问-Xcode 下载更可靠，而且你也可以选择旧版本的 Xcode。如果你有旧版本的 macOS，必须安装命令行工具。你可以通过在终端（Terminal）中运行以下命令来实现：
+如果你在 macOS 上进行开发，我建议你使用 `Xcode`。这是让 C++ 运行的最简单方法。如果你想要一致的开发环境，以后可以安装 `VS Code`。安装 `Xcode` 的简单方法是从 App Store，但从 App Store 下载大型文件可能不可靠。另一种方法是注册并登录开发者门户网站并访问 `Xcode` 下载更可靠，而且你也可以选择旧版本的 `Xcode`。如果你有旧版本的 macOS，必须安装命令行工具。你可以通过在终端（Terminal）中运行以下命令来实现：
 
-```
+```bash
 sudo xcode-select --install
 ```
 
@@ -392,16 +328,9 @@ sudo xcode-select --install
 
 ## 2.5 GNU/Linux：安装 Visual Studio
 
-如果你在 GNU/Linux 下工作，我以后将简称为 Linux，你可能已经有了首选的源代码编辑器。我工作了多年编程（包括写博士论文）；我一直使用 Nano 进行命令行编辑，并使用 Gedit 作为简单的图形编辑器。最近，我转向了 Visual Studio Code (VSCode) 用于大多数活动。VSCode 是开源的，并为 C++ 和 CMake 提供了优秀的扩展。我是使用 James Yu 开发的 LaTeX Workshop 扩展来编写这本书的。你可以从 Microsoft 网站下载 VSCode，或者在存储库中找到它。下一节是关于配置 Visual Studio Code 的进一步说明。无论你的 IDE 选择是什么，你可能都需要使用你的包管理器
+如果你在 GNU/Linux 下工作，我以后将简称为 Linux，你可能已经有了首选的源代码编辑器。我工作了多年编程（包括写博士论文）；我一直使用 `Nano` 进行命令行编辑，并使用 `Gedit` 作为简单的图形编辑器。最近，我转向了 `Visual Studio Code (VSCode)` 用于大多数活动。`VSCode` 是开源的，并为 C++ 和 `CMake` 提供了优秀的扩展。我是使用 James Yu 开发的 LaTeX Workshop 扩展来编写这本书的。你可以从 Microsoft 网站下载 `VSCode`，或者在存储库中找到它。下一节是关于配置 `Visual Studio Code` 的进一步说明。无论你的 IDE 选择是什么，你可能都需要使用你的包管理器安装 C++ 编译工具和 `CMake`。例如，在 Ubuntu 上，我运行了以下命令：
 
-
-
-
-# 设置你的开发环境
-
-安装 C++ 编译工具和 CMake。例如，在 Ubuntu 上，我运行了以下命令：
-
-```
+```bash
 sudo apt install build-essential cmake
 ```
 
@@ -414,9 +343,9 @@ int main() {
 }
 ```
 
-将其保存为 'main.cpp' 并运行以下命令以进行编译和链接：
+将其保存为 `main.cpp` 并运行以下命令以进行编译和链接：
 
-```
+```bash
 g++ main.cpp -o myprogram
 ```
 
@@ -426,7 +355,9 @@ g++ main.cpp -o myprogram
 ./myprogram
 ```
 
-如果一切设置正确，你应该应该看到一个名为 myprogram 的程序出现，并且当你运行时它，它应该打印出“Hello, AI-enhanced audio!”
+
+
+如果一切设置正确，你应该看到一个名为`myprogram`的程序出现，并且当你运行它时，它应该打印出“Hello, AI-enhanced audio!”
 
 ## 2.6 所有平台：Visual Studio Code
 
@@ -444,20 +375,19 @@ g++ main.cpp -o myprogram
 
 我使用什么样的配置来进行于跨平台 AI 增强音频开发？我的配置包括一个用于 macOS 编译的 M1 Mac Mini，一个带有 GeForce 2070 GPU 用于 Windows/Linux 以及加速 GPU 训练的技嘉 Aero，以及一个用于通用 Linux 的 Thinkpad X1。我使用 RME 音频接口和 Genelec 扬声器。我通常在 Visual Studio Code 中工作，它为我在三个操作系统上都提供了一致的体验，而且 VSCode 中的 CMake 支持非常先进。我还有了 Xcode 和 Visual Studio Community 2022 来测试我的构建。我发现音乐人经常使用非常旧版本的 macOS，因此我也保留了一台运行旧版本 macOS 的 Intel Mac 用于测试。
 
-# 3
-# 安装 JUCE
+# 3 安装 JUCE
 
 本章将教你 JUCE 库以及相关工具。JUCE 允许你创建 C++ 软件项目，这些项目可以从同一代码库导出到多个平台。我将引导你使用 Projucer 和 IDE 构建你的第一个插件，涵盖 Windows、macOS 和 Linux。我还将展示你如何使用 AudioPluginHost 工具测试你的插件，这是 JUCE 库自带的一个插件宿主机。在本章结束时，你将在你的机器上构建、运行和测试插件。
 
 ## 3.1 为什么选择 JUCE？
 
-现在你已经有一个可以工作的 C++ 开发环境，准备好添加下一层了：JUCE，代表 Jules' Utility Class Extensions，最初由 Julian Store 开发。JUCE 将允许你构建跨平台的原生音频插件，这些插件可以集成到标准音频软件中。JUCE并不是开发跨平台音频插件的唯一方法。其他类似的库，例如 Oli Larkin 的 iPlugin2，或者你甚至可以直接使用插件开发 API，例如 Steinberg 的 VST3。我选择使用 JUCE 的原因如下：它在不同平台上提供了非常一致的体验；它包含了一套跨平台用户界面组件；它与 CMake 编译工具兼容，并且可以导出多种格式的插件，例如 VST3、Audio Unit 等。JUCE 还提供了用于构建应用程序和可以托管其他插件的插件的组件。
+现在你已经有一个可以工作的 C++ 开发环境，准备好添加下一层了：JUCE，代表 Jules' Utility Class Extensions，最初由 Julian Store 开发。JUCE 将允许你构建跨平台的原生音频插件，这些插件可以集成到标准音频软件中。JUCE 并不是开发跨平台音频插件的唯一方法。其他类似的库，例如 Oli Larkin 的 iPlugin2，或者你甚至可以直接使用插件开发 API，例如 Steinberg 的 VST3。我选择使用 JUCE 的原因如下：它在不同平台上提供了非常一致的体验；它包含了一套跨平台用户界面组件；它与 CMake 编译工具兼容，并且可以导出多种格式的插件，例如 VST3、Audio Unit 等。JUCE 还提供了用于构建应用程序和可以托管其他插件的插件的组件。
 
 一些人认为 JUCE 是一个带有主见的（opinionated）的库，它迫使你以特定的方式工作。这可能是真的，但它具有合理的一致性，我的学生上手用 JUCE 编写应用程序的速度很快。然而，如果你愿意，你应该能够将书中的概念移植到其他插件 API。这完全取决于用户界面小部件和音频缓冲区——取决于你愿意花多少时间让它们工作，你想要多少工程自由度以及你的许可要求是什么。
 
 ## 3.2 安装 JUCE
 
-要安装 JUCE，请访问网站¹并下载适用于你平台的版本。或者，你可以访问 JUCE 的 GitHub 发布页面²并从那里下载。你将得到一个包含几个子文件夹的文件夹。有一个 `docs` 文件夹包含 JUCE API 的文档（API 是带有 JUCE 的就绪组件/类的集合）。有一个 `examples` 文件夹包含示例 JUCE 项目。有一个 `extras` 文件夹包含额外的项目，其中一些是工具。其中一个工具就是 AudioPluginHost，稍后我会教你如何使用它来测试你的插件。
+要安装 JUCE，请访问网站¹并下载适用于你平台的版本。或者，你可以访问 JUCE 的 GitHub 发布页面²并从那里下载。你将得到一个包含几个子文件夹的文件夹。有一个`docs`文件夹包含 JUCE API 的文档（API 是带有 JUCE 的就绪组件/类的集合）。有一个`examples`文件夹包含示例 JUCE 项目。有一个`extras`文件夹包含额外的项目，其中一些是工具。其中一个工具就是 AudioPluginHost，稍后我会教你如何使用它来测试你的插件。
 
 ## 3.3 Projucer
 
@@ -475,7 +405,7 @@ Projucer 是随 JUCE 分发的一个程序。Projucer 是管理你 JUCE 项目�
 
 Projucer 是管理你 JUCE 项目的核心枢。它可以为不同的操作系统和 IDE 组合生成不同类型的项目。图 3.1 显示了 Projucer 可用的内容。
 
-对于 Projucer 最有趣的是插件。如果你熟悉音乐制作中的 VST 或 Audio Unit 插件，你会知道你需要另一个项目来宿主插件。插件不能独立运行。所以你不会得到的可运行项目。Projucer 视图在左侧，配置面板在右侧。在我的情况下，那是 VisualStudio2022。
+对于 Projucer 最有趣的是插件。如果你熟悉音乐制作中的 VST 或 Audio Unit 插件，你会知道你需要另一个项目来宿主插件。插件不能独立运行。所以你不会得到的可运行项目。Projucer 视图在左侧，配置面板在右侧。在我的情况下，那是`VisualStudio2022`。
 
 ```
 | Builds
@@ -489,7 +419,7 @@ Projucer 是管理你 JUCE 项目的核心枢。它可以为不同的操作系�
   -- PluginProcessor.h
 ```
 
-`Builds` 包含 IDE 文件夹。`Source` 文件夹包含项目的源代码。`.jucer` 文件是 Projucer 配置文件。
+`Builds`包含 IDE 文件夹。`Source`文件夹包含项目的源代码。`.jucer`文件是 Projucer 配置文件。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_43_0.png)
 
@@ -505,20 +435,18 @@ JUCE 项目比基础 C++ 项目复杂，因为它们可以产生多个东西。�
 
 ## 3.5 在 Windows 上构建并运行 JUCE 基础插件
 
-现在你将发现如何在不同平台上构建 JUCE 项目。首先是 Windows 和 Visual Studio。要在 Visual Studio 中构建并运行项目，点击 Projucer 中的 Visual Studio 图标，或者进入 Builds 文件夹从那里打开项目。如果你在系统中安装了多个版本的 Visual Studio，请检查项目是否在正确的版本中打开。在我的情况下，那是 Visual Studio Community 2022。项目加载后，从解决方案区域选择 Standalone 项目，并在生成菜单中选择“生成解决方案”。它可能会打印一些警告，如果一切顺利，构建过程中没有错误。如果构建失败，请检查第 7 中的常见错误。最后，从调试菜单中选择“无调试运行”，你的插件应该会以独立模式启动。
+现在你将发现如何在不同平台上构建 JUCE 项目。首先是 Windows 和 Visual Studio。要在 Visual Studio 中构建并运行项目，点击 Projucer 中的 Visual Studio 图标，或者进入`Builds`文件夹从那里打开项目。如果你在系统中安装了多个版本的 Visual Studio，请检查项目是否在正确的版本中打开。在我的情况下，那是 Visual Studio Community 2022。项目加载后，从解决方案区域选择 Standalone 项目，并在生成菜单中选择“生成解决方案”。它可能会打印一些警告，如果一切顺利，构建过程中没有错误。如果构建失败，请检查第 7 中的常见错误。最后，从调试菜单中选择“无调试运行”，你的插件应该会以独立模式启动。
 
 ¹https://www.juce.com
+
 ²https://github.com/juce-framework/releases
-
-
-
-
 
 # 安装 JUCE
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_45_0.png)
 
 图 3.3
+
 在 Visual Studio Community 2022 中构建独立解决方案。
 
 ### 3.5.1 在 Windows 中显示 JUCE 调试输出
@@ -527,28 +455,29 @@ JUCE 项目比基础 C++ 项目复杂，因为它们可以产生多个东西。�
 
 ## 3.6 在 macOS 上构建并运行 JUCE 基础插件
 
-要在 Xcode 中构建并运行项目，点击 Xcode 中的 Xcode 图标启动 Xcode，选择如图 3 所示的 Standalone（独立）选项，点击界面上的播放按钮。如果一切设置正确，它将报告构建成功并启动应用程序。来自 `DBG` 宏的输出将出现在 Xcode 的内置控制台中。
+要在 Xcode 中构建并运行项目，点击 Xcode 中的 Xcode 图标启动 Xcode，选择如图 3 所示的 Standalone（独立）选项，点击界面上的播放按钮。如果一切设置正确，它将报告构建成功并启动应用程序。来自`DBG`宏的输出将出现在 Xcode 的内置控制台中。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_46_0.png)
 
-图 3.4 在 Visual Studio/Windows 中启用 JUCE 项目的控制台输出。顶部：将文本输出重定向到立即窗口并打开立即窗口。底部：正在运行的程序，在立即窗口中显示着 `DBG` 输出。
+图 3.4 在 Visual Studio/Windows 中启用 JUCE 项目的控制台输出。顶部：将文本输出重定向到立即窗口并打开立即窗口。底部：正在运行的程序，在立即窗口中显示着`DBG`输出。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_47_0.png)
 
 ### 3.5
+
 在 Xcode 中运行 JUCE 插件项目 – 确保你选择了 Standalone。
 
 ## 3.7 在 Linux 上构建并运行 JUCE 基础插件
 
-要在 Linux 上构建项目，请在 Proj 中创建项目，确保你已经添加了 Linux Makefile 导出器，并从 Proj 菜单中选择“Save Project”。打开终端并 `cd` 进入你保存的项目位置。你应该创建一个 `Builds` 文件夹，其中包含一个 `LinuxMakefile` 以加载 `LinuxMakefile` 文件夹。最后，运行命令：
+要在 Linux 上构建项目，请在 Proj 中创建项目，确保你已经添加了 Linux Makefile 导出器，并从 Proj 菜单中选择“Save Project”。打开终端并使用`cd`进入你保存的项目位置。你应该创建一个`Builds`文件夹，其中包含一个`LinuxMakefile`以加载`LinuxMakefile`文件夹。最后，运行命令：
 
-```
+```bash
 make -j4 # 如果你有 4 个 CPU 核心
 ```
 
 这将构建你的项目并将其存储在 builder 文件夹中。要运行它：
 
-```
+```bash
 ./build/YourProjectName
 ```
 
@@ -564,7 +493,7 @@ make -j4 # 如果你有 4 个 CPU 核心
 
 # 4 安装并使用 CMake
 
-现在一切运行良好，我们将回退一步，将 Proj 替换为名为 CMake 的替代生成器。CMake 是一个比 Proj 更通用的工具，而且在将库集成到项目中时它特别有效，如果它们也使用。 机器学习库 `libtorch` 和神经网络库 `RTNeural` 是我们之后将使用的库的示例，它们支持 CMake。你可能会奇怪我们为什么要过早引入它，过早会带来很多沮丧的配置问题。不要担心——如果你在这里并且系统正常，设置 CMake 应该是简单的。
+现在一切运行良好，我们将回退一步，将 Proj 替换为名为 CMake 的替代生成器。CMake 是一个比 Proj 更通用的工具，而且在将库集成到项目中时它特别有效，如果它们也使用。机器学习库`libtorch`和神经网络库`RTNeural`是我们之后将使用的库的示例，它们支持 CMake。你可能会奇怪我们为什么要过早引入它，过早会带来很多沮丧的配置问题。不要担心——如果你在这里并且系统正常，设置 CMake 应该是简单的。
 
 ## 4.1 在 Windows 上安装 CMake
 
@@ -580,33 +509,30 @@ brew install cmake
 
 ## 4.3 在 Linux 上安装 CMake
 
-在 Linux 上可以使用包管理器安装 CMake。例如，如果你使用 Debian/ Ubuntu：
+在 Linux 上可以使用包管理器安装 CMake。例如，如果你使用 Debian/Ubuntu：
 
 ```bash
 sudo apt install cmake
 ```
 
 ¹https://cmake.org
+
 ²https://brew.sh/
-
-
-
-
 
 ## 4.4 使用 CMake
 
 我假设你已经安装了 CMake 和 IDE。如果是这样，我们可以测试你是否可以创建一个 CMake 配置，使用 CMake 生成 IDE 项目，然后在你的 IDE 中进行构建。让我们从一个典型的“Hello World”程序开始。此示例的完整版本在位于第 39.2.1 节的仓库指南中有描述。你现在不需要参考该仓库指南。如果你使用以下步骤重新创建示例，将会学到更多内容。
 
-首先为你的项目创建一个文件夹。在文件夹中创建一个名为 `CMakeLists.txt` 的文件（注意字母的大小写）。将以下内容放入你的 `CMakeLists.txt` 中：
+首先为你的项目创建一个文件夹。在文件夹中创建一个名为`CMakeLists.txt`的文件（注意字母的大小写）。将以下内容放入你的`CMakeLists.txt`中：
 
 ```cmake
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 add_executable(hello-cmake src/main.cpp)
 ```
 
-这段文本包含一组 CMake 命令。`cmake_minimum_required` 命令告诉 CMake 如果版本低于至少 3.0 则报错。`project` 命令定义了项目名称。`add_executable` 命令向项目添加一个名为 `hello-cmake` 的可执行文件，该文件将从 `src/main.cpp` 文件构建。
+这段文本包含一组 CMake 命令。`cmake_minimum_required`命令告诉 CMake 如果版本低于至少 3.0 则报错。`project`命令定义了项目名称。`add_executable`命令向项目添加一个名为`hello-cmake`的可执行文件，该文件将从`src/main.cpp`文件构建。
 
-下一步是创建 `src/main.cpp` 文件。在你的项目文件夹添加一个名为 `src` 的文件夹，并创建一个名为 `main.cpp` 的文件。在其中放入经典的 hello world 程序。我的看起来像这样，但也可以在里面放入更热烈的消息：
+下一步是创建`src/main.cpp`文件。在你的项目文件夹添加一个名为`src`的文件夹，并创建一个名为`main.cpp`的文件。在其中放入经典的 hello world 程序。我的看起来像这样，但也可以在里面放入更热烈的消息：
 
 ```cpp
 #include <iostream>
@@ -623,7 +549,7 @@ int main() {
 |   -- main.cpp
 ```
 
-现在我们准备好使用 CMake 生成 IDE 了。启动你喜欢的 shell ——对于我来说，是 macOS 上的 Terminal.app，Windows 上的 PowerShell.exe 或 Ubuntu 上的普通 Terminal。只需切换到你创建的项目文件夹内部的目录即可。这可能涉及使用 `cd` 命令。进入目录后，运行此 CMake 命令：
+现在我们准备好使用 CMake 生成 IDE 了。启动你喜欢的 shell ——对于我来说，是 macOS 上的 Terminal.app，Windows 上的 PowerShell.exe 或 Ubuntu 上的普通 Terminal。只需切换到你创建的项目文件夹内部的目录即可。这可能涉及使用`cd`命令。进入目录后，运行此 CMake 命令：
 
 ```bash
 cmake -G
@@ -640,7 +566,7 @@ cmake -G "Xcode" -B build
 cmake -G "Unix Makefiles" -B build
 ```
 
-`-B` 选项 CMake 创建一个 build 文件夹并将生成的项目输出到该文件夹。结尾的点 '.' 告诉它 CMake 配置文件位于当前文件夹。因此，此命令应该创建一个名为 build 的文件夹，其中包含你的 IDE 项目。
+`-B`选项 CMake 创建一个`build`文件夹并将生成的项目输出到该文件夹。结尾的点 '.' 告诉它 CMake 配置文件位于当前文件夹。因此，此命令应该创建一个名为`build`的文件夹，其中包含你的 IDE 项目。
 
 ## 4.5 CMake 命令行构建：任何平台
 
@@ -673,9 +599,13 @@ cmake --build build --config Release
 
 ## 4.6 在 VSCode 中构建：任何平台
 
-使用第 2.6 节描述的跨平台标准 VSCode 设置，你可以轻松构建 hello-cmake CMake 项目。首先，如果你一直在 IDE 内部通过命令行尝试 CMake，那么在与你的 `CMakeLists.txt` 文件相同的文件夹中可能会有一个 build 文件夹。删除该文件夹，因为当 VSCode 接管构建文件夹管理时可能会引起混乱。
 
-接下来，启动 VSCode，从包含 `CMakeLists.txt` 文件的菜单中选择“打开文件夹”并打开它。你需要安装 Microsoft 的 'CMake Tools' 扩展。当你打开 `CMakeLists.txt` 文件时可能会提示你执行此操作，或者你可能需要进入 VSCode 设置/扩展查找并安装该扩展。此扩展将允许 VSCode 解析 `CMakeLists.txt` 文件。当你在 VSCode 中打开包含 `CMakeLists.txt` 文件的文件夹时，VSCode 应该自动检测该文件并配置构建。在此之前，VSCode 可能会要求你选择一个构建套件（build kit）。你在这里看到不同的选项，取决于你的操作系统。要查看哪些套件可用，请从“视图”菜单打开 VSCode 命令面板并运行 `CMake: Scan for Kits`。以下是我 Windows 10 机器上的部分输出：
+
+使用第 2.6 节描述的跨平台标准 VSCode 设置，你可以轻松构建 `hello-cmake` CMake 项目。首先，如果你一直在 IDE 内部通过命令行尝试 CMake，那么在与你的 `CMakeLists.txt` 文件相同的文件夹中可能会有一个 `build` 文件夹。删除该文件夹，因为当 VSCode 接管构建文件夹管理时可能会引起混乱。
+
+接下来，启动 VSCode，从包含 `CMakeLists.txt` 文件的菜单中选择“打开文件夹”并打开它。你需要安装 Microsoft 的 `CMake Tools` 扩展。当你打开 `CMakeLists.txt` 文件时可能会提示你执行此操作，或者你可能需要进入 VSCode 设置/扩展查找并安装该扩展。此扩展将允许 VSCode 解析 `CMakeLists.txt` 文件。
+
+当你在 VSCode 中打开包含 `CMakeLists.txt` 文件的文件夹时，VSCode 应该自动检测该文件并配置构建。在此之前，VSCode 可能会要求你选择一个构建套件（build kit）。你在这里看到不同的选项，取决于你的操作系统。要查看哪些套件可用，请从“视图”菜单打开 VSCode 命令面板并运行 `CMake: Scan for Kits`。以下是我 Windows 10 机器上的部分输出：
 
 ```
 - Visual Studio 17 2022
@@ -694,22 +624,21 @@ cmake --build build --config Release
 - Unix Makefiles
 ```
 
-一旦你选择了构建套件，点击 VSCode 底部的“构建”按钮进行编译和链接，然后点击播放图标运行程序。你应该能在 VSCode 的终端中看到 hello-cmake 程序的输出。
+一旦你选择了构建套件，点击 VSCode 底部的“构建”按钮进行编译和链接，然后点击播放图标运行程序。你应该能在 VSCode 的终端中看到 `hello-cmake` 程序的输出。
 
 ## 4.7 在 Visual Studio 中构建：Windows
 
 如果你在 Windows 上使用 Microsoft Visual Studio，处理 CMake 项目有两种方法：使用 CMake 生成项目或使用 Studio 构建支持。我推荐第一种方法，因为我在第二方法上遇到过问题，尽管它生成的 JUCE 项目看起来更整洁。以下指令适用于从 CMake 生成的项目。
 
-运行上述带有 `-G` 选项的 CMake 命令后，你将在 build 文件夹中看到 `hello-cmake.sln` 文件。在 Windows 资源管理器中找到该文件——简单的方法是在 PowerShell 中运行 `explorer.exe`。然后用 Visual Studio 打开 .sln 文件。sln 文件是一个 VS 解决方案，它是“产品”的集合。解决方案中的每个产品都有独立的 Visual Studio 项目文件。图 4.3 显示了 Visual Studio 中的 hello-cmake 项目，突出了目标列表、控制台和运行按钮。项目在初启动时会将“ALL BUILD”作为播放按钮的目标，因此你应该在解决方案管理器中右键点击 hello-cmake 并选择“设为启动项目”选项。点击播放按钮将构建并运行 hello-cmake。
+运行上述带有 `-G` 选项的 CMake 命令后，你将在 `build` 文件夹中看到 `hello-cmake.sln` 文件。在 Windows 资源管理器中找到该文件——简单的方法是在 PowerShell 中运行 `explorer.exe`。然后用 Visual Studio 打开 `.sln` 文件。
+
+`sln` 文件是一个 VS 解决方案，它是“产品”的集合。解决方案中的每个产品都有独立的 Visual Studio 项目文件。图 4.3 显示了 Visual Studio 中的 `hello-cmake` 项目，突出了目标列表、控制台和运行按钮。项目在初启动时会将“ALL BUILD”作为播放按钮的目标，因此你应该在解决方案管理器中右键点击 `hello-cmake` 并选择“设为启动项目”选项。点击播放按钮将构建并运行 `hello-cmake`。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_56_0.png)
 
 图 4.3
 
 在 Visual Studio Community 2022 中查看的 CMake 项目。
-
-
-
 
 安装与使用 CMake
 
@@ -718,14 +647,18 @@ cmake --build build --config Release
 ![](img/f36e66929543fe6d506774ef8e004b7e_57_0.png)
 
 图 4.4
+
 在 Xcode 中查看 CMake 项目。
 
 ## 4.8 在 Xcode 中构建：macOS
 
 在包含 `CMake.txt` 文件的终端（Terminal）应用程序中运行以下命令：
-`cmake -G "Xcode" -B build`
 
-这将在 build 文件夹中生成一个 Xcode 项目，你可以用 Xcode 打开它。在 Xcode 中打开项目后，点击播放按钮，它将构建并运行程序。图 4.4 展示了你在 Xcode 中打开 CMake 项目时看到的内容。
+```bash
+cmake -G "Xcode" -B build
+```
+
+这将在 `build` 文件夹中生成一个 Xcode 项目，你可以用 Xcode 打开它。在 Xcode 中打开项目后，点击播放按钮，它将构建并运行程序。图 4.4 展示了你在 Xcode 中打开 CMake 项目时看到的内容。
 
 ## 4.9 为 GNU/Linux 构建项目
 
@@ -739,7 +672,7 @@ cmake --build build --config Release
 
 第一步是为插件项目设置文件结构。考虑以下结构：
 
-```
+```text
 |-- CMakeLists.txt
 |-- README.md
 |-- src
@@ -792,17 +725,18 @@ JUCE_VST3_CAN_REPLACE_VST2=0
 
 注意 `COPY_PLUGIN_AFTER_BUILD` 属性是重要的。
 
-## 4.10.2 自定义 CMakeLists.txt 文件
+### 4.10.2 自定义 CMakeLists.txt 文件
 
 你必须对 `CMakeLists.txt` 文件进行一些自定义。首先，`add_subdirectory` 命令告诉 JUCE 所在位置。接下来，`target_sources` 块定义了包含哪些文件。然后，`target_compile` 块允许你设置编译器标志。`juce_generate_juce_header` 命令创建头文件。`juce_add_plugin` 命令配置插件。
 
-## 4.10.3 JUCE 总结
+### 4.10.3 JUCE 总结
 
 总结一下，你需要：
+
 - 一个 `CMakeLists.txt` 文件
 - 一个包含 `PluginEditor` 和 `PluginProcessor` 的 `src` 文件夹
 
-## 4.10.4 构建与运行
+### 4.10.4 构建与运行
 
 希望你已经准备好构建项目。可以使用我们在 4.8 节中看到的命令运行程序。
 
@@ -816,16 +750,13 @@ JUCE_VST3_CAN_REPLACE_VST2=0
 
 ## 5.1 什么是 libtorch？
 
-libtorch 是一个开源机器学习库，允许你创建、训练和使用神经网络架构。它是流行的 PyTorch 库的原内核，并包含了 TorchScript 系统，使得导入使用 PyTorch 创建的模型变得简单。通过 libtorch 的 C++ API，你可以轻松将其功能集成到你的 C++ 应用程序中，访问全面的神经网络设计、训练和推理库。PyTorch，因此 libtorch 被机器学习开发者和研究人员广泛使用，对于那些希望将机器学习引入项目的人来说，这是一个强大的工具。
+libtorch 是一个开源机器学习库，允许你创建、训练和使用神经网络架构。它是流行的 PyTorch 库的原内核，并包含了 TorchScript 系统，使得导入使用 PyTorch 创建的模型变得简单。
+
+通过 libtorch 的 C++ API，你可以轻松将其功能集成到你的 C++ 应用程序中，访问全面的神经网络设计、训练和推理库。PyTorch，因此 libtorch 被机器学习开发者和研究人员广泛使用，对于那些希望将机器学习引入项目的人来说，这是一个强大的工具。
 
 ## 5.2 简单的 libtorch 示例
 
 在开始安装之前，我想通过展示一个简单的 libtorch C++ 程序示例来激发你的兴趣。请考虑以下程序：
-
-
-
-
-## 设置 libtorch
 
 ```cpp
 #include <torch/torch.h>
@@ -845,7 +776,9 @@ int main() {
 #include <iostream>
 ```
 
-这些行包含了 libtorch 库的头文件和 C++ 标准库 `iostream`。请记住，在 C++ 中，头文件包含函数、常量等的声明。它们告诉你的 IDE 和编译器哪些函数是可用的。当你包含一个头文件时，你正在使该头文件中声明的内容在你的程序中可用。因此，我们正在让 libtorch 和 iostream 库在我们的程序中使用。注意，被包含的文件位于角括号 `< >` 中。这会影响 IDE 在其自动补全和代码检查功能搜索这些头文件的位置，以及编译器在编译阶段调入头文件时的搜索位置。使用角括号意味着它们需要位于标准路径中，或者至少放置在你系统的某个地方。因此，某个地方必须有一个文件夹就在那里。我们将使用 CMake 来告诉 IDE 和编译器去哪里调用名为 `torch.h` 的 torch 文件，IDE 和编译器需要知道去哪里查找。接下来，我们有 `main` 函数：
+这些行包含了 libtorch 库的头文件和 C++ 标准库 `iostream`。请记住，在 C++ 中，头文件包含函数、常量等的声明。它们告诉你的 IDE 和编译器哪些函数是可用的。当你包含一个头文件时，你正在使该头文件中声明的内容在你的程序中可用。因此，我们正在让 libtorch 和 iostream 库在我们的程序中使用。
+
+注意，被包含的文件位于角括号 `< >` 中。这会影响 IDE 在其自动补全和代码检查功能搜索这些头文件的位置，以及编译器在编译阶段调入头文件时的搜索位置。使用角括号意味着它们需要位于标准路径中，或者至少放置在你系统的某个地方。因此，某个地方必须有一个文件夹就在那里。我们将使用 CMake 来告诉 IDE 和编译器去哪里调用名为 `torch.h` 的 torch 文件，IDE 和编译器需要知道去哪里查找。接下来，我们有 `main` 函数：
 
 ```cpp
 int main() {
@@ -855,15 +788,15 @@ int main() {
 }
 ```
 
-`main` 函数是程序执行的入口。换句话说，它是程序运行时自动被调用的第一个函数。这个 `main` 从从 `torch` 命名空间创建一个 `Tensor` 类型的对象开始的。那是在 `torch.h` 头文件中声明的内容。我们将该 `Tensor` 对象赋值给名为 `tensor` 的变量。请记住，C++ 中的对象包含数据以及与该数据相关的函数。这意味着我们的张量对象包含了一些数据和与 `Tensor` 相关的函数。张量（Tensors）是基于神经网络的机器学习中的核心数据结构，我们将在书中遇到很多它们。
+`main` 函数是程序执行的入口。换句话说，它是程序运行时自动被调用的第一个函数。这个 `main` 从从 `torch` 命名空间创建一个 `Tensor` 类型的对象。那是在 `torch.h` 头文件中声明的内容。我们将该 `Tensor` 对象赋值给名为 `tensor` 的变量。
 
-## 设置 libtorch
+请记住，C++ 中的对象包含数据以及与该数据相关的函数。这意味着我们的张量对象包含了一些数据和与 `Tensor` 相关的函数。张量（Tensors）是基于神经网络的机器学习中的核心数据结构，我们将在书中遇到很多它们。
 
 我们使用 libtorch 库中一个名为 `rand` 的函数创建了 `Tensor` 对象。`rand` 接受一个数组作为参数，在这种情况下，包含一个 `2` 和 `3`。我假设你知道什么是数组。然后我们使用标准库中的 `cout` 函数来打印 `tensor` 变量的内容。
 
 这里是程序的预期输出：
 
-```
+```text
 0.9660 0.2080 0.5723
 0.6885 0.2689 0.9441
 [CPUFloatType{2,3}]
@@ -875,23 +808,23 @@ int main() {
 
 现在你已经看到了最精简的 libtorch 程序，是时候安装 libtorch 了，这样你就可以在机器上运行它（并希望运行更有趣的程序）。
 
-第一步是获取并安装 libtorch 库，它是 PyTorch 框架的一部分。如何操作取决于你的操作系统和硬件。第一步是访问 PyTorch 框架的下载页面，可以在 https://pytorch.org/ 找到。下载将允许你选择库的版本、操作系统（Mac 或 Linux）、包类型（Conda, Pip, libtorch, Source）、语言（Python 或 C++）以及计算平台（Nvidia CUDA 加速或 CPU）。选择 PyTorch 版本（编写时为 1.12.1）、你的操作系统、LibTorch，页面将为你提供一个下载链接。如果有选择，请选择 cxx11 ABI，而不是 pre-cxx11 ABI。
+第一步是获取并安装 libtorch 库，它是 PyTorch 框架的一部分。如何操作取决于你的操作系统和硬件。第一步是访问 PyTorch 框架的下载页面，可以在 https://pytorch.org/ 找到。下载将允许你选择库的版本、操作系统（Mac 或 Linux）、包类型（Conda, Pip, libtorch, Source）、语言（Python 或 C++）以及计算平台（Nvidia CUDA 加速或 CPU）。
 
+选择 PyTorch 版本（编写时为 1.12.1）、你的操作系统、LibTorch，页面将为你提供一个下载链接。如果有选择，请选择 cxx11 ABI，而不是 pre-cxx11 ABI。
 
-
-如有必要，添加 -G 选项来选择所需的 IDE 目标。
+如有必要，添加 `-G` 选项来选择所需的 IDE 目标。
 
 ## 5.8 编译与运行
 
-现在，你应该拥有一个 Makefile 项目（Linux）、一个 MSVC .sln 项目（Windows）或一个 Xcode 项目（macOS），或者 Visual Studio Code 已自动读取了 CMakeLists 文件。像之前一样，在你的 IDE 中打开该项目并进行编译。运行程序。和之前一样，这里是程序的预期的输出：
+现在，你应该拥有一个 Makefile 项目（Linux）、一个 MSVC `.sln` 项目（Windows）或一个 Xcode 项目（macOS），或者 Visual Studio Code 已自动读取了 `CMakeLists` 文件。像之前一样，在你的 IDE 中打开该项目并进行编译。运行程序。和之前一样，这里是程序的预期的输出：
 
-```
+```text
 0.9660 0.2080 0.5723
 0.6885 0.2689 0.9441
 [ CPUFloatType{2,3} ]
 ```
 
-## 5.9 Libtorch, CMake 和 JUCE
+## 5.9 Libtorch、CMake 和 JUCE
 
 在本节中，我们将把目前为止安装的所有内容整合到一个项目中，该项目将展示你如何在 JUCE 插件内部运行机器学习代码。先不要太兴奋——机器学习代码不会做太多事情，但我们将看到 JUCE 是如何与 libtorch 交互的。
 
@@ -899,7 +832,7 @@ int main() {
 
 在 `CMakeLists.txt` 中，告诉 CMake libtorch 的安装位置，指令它找到 libtorch 并将其添加到编译标志中：
 
-```
+```cmake
 set(CMAKE_PREFIX_PATH "../src_resources/libtorch/libtorch")
 # libtorch 的位置
 find_package(Torch REQUIRED)
@@ -908,7 +841,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
 你可以将 `target.link_libraries` 命令放在 `CMakeLists.txt` 中。如下所示为 `target.link_libraries` 命令添加一行行：
 
-```
+```cmake
 target_link_libraries(fm-torchknob
 PRIVATE
   juce::ju_audio_utils
@@ -922,7 +855,11 @@ juce::juce_recommended_warning_flags
 
 这指示 CMake 将你的项目与 libtorch 库链接。如果你在 Windows 上，需要添加以下内容：
 
-```
+
+
+## 5.9 将 libtorch 添加到 CMake 项目
+
+```cmake
 if (MSVC)
   file(GLOB TORCH_DLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
   add_custom_command(TARGET fm-torchknob
@@ -932,13 +869,13 @@ if (MSVC)
     ${TORCH_FILE_DIR}:fm-torchknob)
 ```
 
-确保你将你的名称设置为项目名称（你在 `target.link_libraries` 命令中指定的）。
+确保你将你的名称设置为项目名称（你在`target.link_libraries`命令中指定的）。
 
 此时，尝试对你的项目进行编译以验证命令设置正确。CMake 应该无错误运行，你能够编译并运行生成的项目。由于你没有更改代码，只是在构建中添加了 libtorch，该插件的功能与 FM superknob 插件完全相同。
 
-需要注意的一点是，你不能再使用 `JuceHeader.h` 作为包含文件。原因是在编写时，`JuceHeader.h` 文件使用了 `using namespace torch`，这会将许多内容放入全局命名空间，其中某些内容与 JUCE 放置的内容同名。这导致了编译器问题。与其包含整个 `JuceHeader.h`，你应该包含 JUCE 模块文件夹中的单独头文件。例如，这是我在 `PluginEditor.h` 文件中是如何设置的：
+需要注意的一点是，你不能再使用`JuceHeader.h`作为包含文件。原因是在编写时，`JuceHeader.h`文件使用了`using namespace torch`，这会将许多内容放入全局命名空间，其中某些内容与 JUCE 放置的内容同名。这导致了编译器问题。与其包含整个`JuceHeader.h`，你应该包含 JUCE 模块文件夹中的单独头文件。例如，这是我在`PluginEditor.h`文件中是如何设置的：
 
-```
+```cpp
 // 不要用这个：
 //#include <JuceHeader.h>
 // 而用这个：
@@ -950,20 +887,20 @@ if (MSVC)
 
 ## 5.10 检查你的 libtorch 和 JUCE 项目
 
-在继续构建之前，你应该进行一个快速测试，以验证你是否可以在 JUCE 项目中使用 libtorch 组件。在 `PluginEditor.cpp` 文件的顶部添加以下代码：
+在继续构建之前，你应该进行一个快速测试，以验证你是否可以在 JUCE 项目中使用 libtorch 组件。在`PluginEditor.cpp`文件的顶部添加以下代码：
 
 ```cpp
 #include <torch/torch.h>
 ```
 
-现在，在 `PluginEditor.cpp` 文件的构造函数中添加以下内容：
+现在，在`PluginEditor.cpp`文件的构造函数中添加以下内容：
 
 ```cpp
 torch::Tensor tensor = torch::rand({i, i});
 std::cout << "JUCE" and "torch" << tensor << std::endl;
 ```
 
-注意，我使用了 `std::cout`，因为 JUCE 的 `DBG` 宏无法处理像这样打印张量。你应该看到类似这样的宏输出：
+注意，我使用了`std::cout`，因为 JUCE 的`DBG`宏无法处理像这样打印张量。你应该看到类似这样的宏输出：
 
 ```
 JUCE and torch 0.1046
@@ -974,7 +911,7 @@ JUCE and torch 0.1046
 
 现在你的系统中应该已经安装了 libtorch。你应该能够创建命令行 libtorch 项目，访问 libtorch API 来创建数据并打印出来。你应该能够使用 CMake 将 libtorch 与 JUCE 结合。你应该能够从你的 JUCE 插件代码访问 libtorch 库。
 
-## 6 # Python 安装说明
+## 6 Python 安装说明
 
 在本章中，我将提供如何为后续章节的工作配置 Python 环境的说明。我们只使用 Python 来训练神经网络和进行一些分析工作。我们将使用 C++ 构建应用程序。当需要 Python 代码时，我不会像解释 C++ 代码那样非常详细地解释它，因为 Python 中的机器学习在其他书中有很好的介绍，这与 C++ 内容不同。我会解释代码背后的原理，并在代码仓库中提供运行的示例。书中只有部分示例需要 Python 代码。
 
@@ -986,20 +923,15 @@ JUCE and torch 0.1046
 
 使用你偏好的搜索引擎搜索“Python Windows releases”。你应该会到达 www.python.org 上的一个页面，上面列出了 Python 版本列表以及适用于 Windows 的不同安装程序。书中的代码测试到了 Python 3.10，因此选择标题为“Download Windows installer (64-bit)”的 Python 3.10 链接。运行安装程序。你现在可以在你偏好的 shell（例如 PowerShell）中运行 Python 命令了。
 
-
-
-
-## Python 安装指南
-
 ## 6.5 在你的 venv 中安装包
 
-一旦你创建并激活了虚拟环境，就可以开始安装包了。你可以使用 `pip` 命令来安装包。以下是我推荐的一份常用入门包列表（假设你正处于虚拟环境中）：
+一旦你创建并激活了虚拟环境，就可以开始安装包了。你可以使用`pip`命令来安装包。以下是我推荐的一份常用入门包列表（假设你正处于虚拟环境中）：
 
 - `pip install scipy numpy matplotlib jupyter ipython librosa pandas`
 
 这是一个简单的 Python 脚本，它将使用这些包中的一些来生成一个 400Hz 的正弦波并将其保存为 WAV 文件：
 
-```
+```python
 import numpy as np
 from scipy.io.wavfile import write
 freq = 400
@@ -1020,11 +952,10 @@ python
 Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
 ```
 
-## Python 安装指南
-
 ![](img/f36e66929543fe6d506774ef8e004b7e_75_0.png)
 
 **图 6.1**
+
 运行中的 Jupyter notebook。其中有包含 Python 代码的单元格，你可以执行它们。如果你触发了绘图命令，图表将嵌入工作表中。
 
 - 输入 'copyright'、'credits' 或 'license' 获取更多信息
@@ -1033,7 +964,7 @@ Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
 
 尝试运行一个命令，然后查询它的文档：
 
-```
+```python
 from scipy.io.wavfile import write
 ?write
 ```
@@ -1074,21 +1005,21 @@ Jupyter notebooks 是一个基于浏览器的 Python 环境。它会启动一个
 
 **解决方案** 这可能发生在你没有安装相应的组件时。对于 Visual Studio，你需要前文提到的组件。对于 Xcode，你需要安装命令行工具。对于 Linux，你需要 build-essentials (Debian) 或你发行版的对应项。
 
-**问题** 结合 JUCE 构建时报错 `null` 引用具有歧义。
+**问题** 结合 JUCE 构建时报错`null`引用具有歧义。
 
-**解决方案** 这是由于包含了 JuceHeader 导致的，那里有 `using namespace juce` 定义了冲突。解决方案是包含所需的单个 JUCE 头文件，而不是整个 JuceHeader。
+**解决方案** 这是由于包含了 JuceHeader 导致的，那里有`using namespace juce`定义了冲突。解决方案是包含所需的单个 JUCE 头文件，而不是整个 JuceHeader。
 
 **问题** 编译器似乎不理解基础语法，例如构造函数的初始化列表。
 
 **解决方案** 我在 Mac 上使用 Visual Studio 构建项目时观察到了这种情况。可能是由于默认 C++ 版本低于 C11。解决方案是告诉构建工具你想使用的 C++ 版本。在你的 CMakeLists.txt 文件中添加：
 
-```
+```cmake
 set_property(TARGET project-name PROPERTY CXX_STANDARD 14)
 ```
 
 你应该将 project-name 替换为在 CMake 中设置的项目名称。
 
-## 基础插件开发
+# 基础插件开发
 
 在本章中，你将构建一个简单的合成器插件。这个过程将向你展示插件开发的一些要素。你将学习 processBlock 函数以及如何填充代表你想生成的信号的缓冲区。你将学习用户界面控件以及如何编辑你插件的用户界面。这将涉及实现监听器和布局代码。在本章结束时，你将有一个运行中的插件。
 
@@ -1100,7 +1031,7 @@ set_property(TARGET project-name PROPERTY CXX_STANDARD 14)
 
 为了让频率插件运行起来，你需要三个变量和一个函数。在 PluginProcessor.h 的私有部分添加三个 double 类型变量：
 
-```
+```cpp
 private:
   double phase;
   double dphase;
@@ -1110,18 +1041,12 @@ private:
 
 现在在 PluginProcessor.h 的私有部分添加一个函数原型（函数的规范）：
 
-
-
-
-
-## 基础插件开发
-
 ```cpp
 private:
   double getDPhase(double freq, double sampleRate);
 ```
 
-打开 PluginProcessor.cpp 和构造函数。你将在这里初始化 `phase`、`dphase` 和 `frequency` 变量：
+打开 PluginProcessor.cpp 和构造函数。你将在这里初始化`phase`、`dphase`和`frequency`变量：
 
 ```cpp
 TestPluginAudioProcessor::TestPluginAudioProcessor
@@ -1142,7 +1067,7 @@ TestPluginAudioProcessor::TestPluginAudioProcessor()
 }
 ```
 
-`getDPhase` 函数的实现告诉我们正弦波生成器的相位每个样本的变化量，并允许我们根据音频系统的配置合成出正确频率的正弦波。
+`getDPhase`函数的实现告诉我们正弦波生成器的相位每个样本的变化量，并允许我们根据音频系统的配置合成出正确频率的正弦波。
 
 ```cpp
 double TestPluginAudioProcessor::getDPhase(double freq, double sampleRate)
@@ -1154,30 +1079,31 @@ double TestPluginAudioProcessor::getDPhase(double freq, double sampleRate)
 
 让我们明确一下这段代码的作用。正弦波在 $2\pi$ 内完成一个完整周期。如果你计算数值从 0 增加到 $2\pi$（约 6.3）的正弦函数输出并将其绘图，你将看到完整的正弦波。正弦函数的输入称为“相位”。图 8.1 的上半部分说明了相位如何随相位变化。
 
-但数字音频系统是离散的——它们是步进的。事实上，我们一秒内有 `sampleRate` 个步长，例如 44,100 步。为了在一秒内完成正弦波，我们需要 44,100 个值。因此，我们将 $2\pi$ 分成 44,100 步，这就是相位在每步中的变化方式。对于采样率设置为 44,100Hz 的音频系统的 1Hz 正弦波：
+但数字音频系统是离散的——它们是步进的。事实上，我们一秒内有`sampleRate`个步长，例如 44,100 步。为了在一秒内完成正弦波，我们需要 44,100 个值。因此，我们将 $2\pi$ 分成 44,100 步，这就是相位在每步中的变化方式。对于采样率设置为 44,100Hz 的音频系统的 1Hz 正弦波：
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_82_0.png)
 
 **图 8.1**
+
 dphase 取决于采样率（样本之间的间隔）和频率（你完成正弦波所需的速度）。
 
-当采样率设置为 44,100Hz 时，dphase 为 $2\pi$。这就是 `getDPhase` 函数第 4 行的第一部分。图 8.1 的下半部分展示了正弦函数的离散版本。
+当采样率设置为 44,100Hz 时，dphase 为 $2\pi$。这就是`getDPhase`函数第 4 行的第一部分。图 8.1 的下半部分展示了正弦函数的离散版本。
 
-如果频率更高会怎样？频率越高意味着正弦波通过周期更快，因此 dphase 更高。频率增加，dphase 也增加。这就是为什么我们在 `getDPhase` 函数第 4 行的第二部分通过频率来缩放 1Hz 的 dphase。
+如果频率更高会怎样？频率越高意味着正弦波通过周期更快，因此 dphase 更高。频率增加，dphase 也增加。这就是为什么我们在`getDPhase`函数第 4 行的第二部分通过频率来缩放 1Hz 的 dphase。
 
 ## 8.2 插件的生命周期
 
 当你在主机实例化插件时，主机按特定顺序调用插件的函数。在此过程中，插件获得了宿主机提供的音频系统的访问权限。工作原理如下：
 
 - 调用 PluginProcessor 的构造函数。此时音频系统不可用，因此你无法查询采样率或块大小。
-- 调用 PluginProcessor 的 `prepareToPlay` 函数。音频系统已就绪；你现在知道了采样率和块大小。
-- 反复调用 PluginProcessor 的 `processBlock` 函数。这是你生成或处理音频并将结果放入发送到 `processBlock` 的缓冲区的地方。
-- 4. 调用 PluginProcessor 的 `releaseResources` 函数。此时音频系统正在关闭。
-- 5. 调用 PluginProcessor 的析构函数。
+- 调用 PluginProcessor 的`prepareToPlay`函数。音频系统已就绪；你现在知道了采样率和块大小。
+- 反复调用 PluginProcessor 的`processBlock`函数。这是你生成或处理音频并将结果放入发送到`processBlock`的缓冲区的地方。
+- 调用 PluginProcessor 的`releaseResources`函数。此时音频系统正在关闭。
+- 调用 PluginProcessor 的析构函数。
 
-计算 dphase 值的时点是在 `prepareToPlay` 中，因为只有在那里你才有音频配置的信息。
+计算 dphase 值的时点是在`prepareToPlay`中，因为只有在那里你才有音频配置的信息。
 
-在 PluginProcessor.cpp 的 `prepareToPlay` 函数中添加以下内容：
+在 PluginProcessor.cpp 的`prepareToPlay`函数中添加以下内容：
 
 ```cpp
 dphase = getDPhase(frequency, sampleRate);
@@ -1190,317 +1116,26 @@ dphase = getDPhase(frequency, sampleRate);
 ![](img/f36e66929543fe6d506774ef8e00b7e_83_0.png)
 
 **图 8.2**
+
 合成器加载传入的数据。
 
-`processBlock` 函数的签名如下：
+`processBlock`函数的签名如下：
 
-```cpp
-void processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midi);
-```
 
-你可以看到它接收音频缓冲区和 MIDI缓冲区。对于合成器，音频缓冲区提供了输出位置。MIDI缓冲区提供了合成器需要的消息。
 
-对于合成器，`processBlock` 函数需要将正弦波写入缓冲区。记住，主机会反复调用此函数，以便它可以从你的插件接收音频。目前我们将使用 `std::sin` 来生成正弦波。有更高效的方法，但目前这样足够了。我们将从单通道正弦波开始。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-通常默认的 `processBlock` 生成如下内容：
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
 
-```cpp
-juce::ScopedDenormals denormals;
-auto totalInputChannels = getTotalInputChannels();
-auto totalOutputChannels = getTotalOutputChannels();
-for (auto i = 0; i < totalOutputChannels; ++i)
-{
-   buffer.clear (i, 0, buffer.getNumSamples());
-}
-```
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-第一行看起来有点奇怪，但本质上是为了防止极小的浮点值（渐小）引起问题。然后代码遍历通道并清除它们以保持静音。在默认的 `processBlock` 中添加以下代码：
-
-```cpp
-for (int channel = 0; channel < totalOutputChannels; ++channel)
-{
-   if (channel == 0)
-   {
-      float* channelData = buffer.getWritePointer (channel);
-      int numSamples = buffer.getNumSamples();
-      for (int i = 0; i < numSamples; ++i)
-      {
-         channelData[i] = (float)std::sin(phase) * 0.25;
-         phase += dphase;
-      }
-   }
-}
-```
-
-仔细阅读这段代码——你认为它是什么？你能让正弦波更大吗？戴耳机时请小心。尝试在 JUCE AudioHost 中运行你的插件。
-
-**挑战：**你能让正弦波在立体声中工作吗？你可以为每个通道使用相位数组，还是使用单个相位变量？
-
-## 8.4 使用滑动块改变频率
-
-如果你在音乐技术领域工作了一段时间，你肯定问过自己：“这个开着吗？”现在你有一个一直开启的插件。如果觉得这在工作时很有用，请保存一个持续播放正弦波的插件副本，并准备一个新的可以继续开发的副本。
-
-你现在将通过为频率添加 GUI 控件来让正弦波具有交互性。这包含两个部分：在用户界面上添加组件，然后添加响应它的代码。添加组件是一个三阶段的过程：
-
-- 1. 在 PluginEditor.h 的 PluginEditor 类私有区域添加变量：
-
-```cpp
-private:
-...
-juce::Slider freqControl;
-```
-
-- 2. 在 PluginEditor.cpp 的 PluginEditor 构造函数中调用 `addAndMakeVisible`：
-
-```cpp
-// 我们的 UI 类继承自 Component 类的这个函数
-addAndMakeVisible(freqControl);
-```
-
-- 3. 在 PluginEditor.cpp 的 PluginEditor `resized` 函数中对滑动块调用 `setBounds`：
-
-```cpp
-// 设置宽度为整个 UI 的宽度
-// 设置高度为整个 UI 高度的一分之一
-freqControl.setBounds(0, 0, getWidth(), getHeight()/5);
-```
-
-执行这些步骤，然后编译并运行。你应该能在用户界面上看到滑动块。JUCE Slider 类的参考可以在此处找到¹。现在滑动块已经显示出来了，你需要响应它。你必须在你的 PluginEditor 中实现 `SliderListener` 接口以响应滑动块。这是一个四步的过程：
-
-- 1. 在 PluginEditor.h 中指定你的类继承自 `Slider::Listener`：
-
-```cpp
-class TestPluginAudioProcessorEditor :
-public juce::AudioProcessor,
-public Slider::Listener
-```
-
-- 2. 在 PluginEditor.h 中为纯虚函数²提供原型：
-
-```cpp
-void sliderValueChanged (Slider *slider) override;
-```
-
-¹https://docs.juce.com/master/classSlider.1_ILhtml
-²https://docs.juce.com/master/classSlider_1_ILListener.html
-
-
-
-
-
-## 基础插件开发
-
-3. 在 PluginEditor.cpp 中，为 SliderListener 上的纯虚函数提供 TestEditor 的实现：
-
-```cpp
-void TestPluginAudioProcessor::sliderValueChanged (
-  Slider *slider)
-{
-  if (slider == &freqControl) {
-    // 获取滑块值并进行某些操作
-    DBG("Slider value " << slider->getValue());
-  }
-}
-```
-
-4. 现在告诉滑块我们想要监听它：在 PluginEditor.cpp 的构造函数中：
-freqControl.addListener(this);
-
-
-
-
-
-
-
-如果你运行这段代码，当你移动滑块时，你应该能看到控制台打印出的消息。下一步是更改合成系统上的参数，使其根据滑块上设置的值改变正弦的频率。你必须在 `PluginEditor` 和 `PluginProcessor` 之间建立通信来实现这一目标。首先，你需要在 `PluginProcessor` 中定义一个公共函数，`PluginEditor` 可以调用它来更改频率。在 `PluginProcessor.h` 的公共部分添加以下函数签名：
-
-```cpp
-void updateFrequency(double newFreq);
-```
-
-你还记得我们需要让弦波运行得更快变量名称吗？你还记得我们是如何为弦波设置初始频率的？检查 `prepareToPlay` 中的代码。你需要在 `update frequency` 中执行相同的操作。因此，在 `PluginProcessor.cpp` 中为 `updateFrequency` 添加实现：
-
-```cpp
-void TestPluginAudioProcessor::updateFrequency(double newFreq)
-{
-  frequency = newFreq;
-  phase = getPhase(frequency, getSampleRate());
-}
-```
-
-我们更新了频率以备后之用，并更改了相位变量以反映新的频率。最后一步是在滑块移动时从 `PluginEditor` 调用此函数，回到 `PluginEditor.cpp`：
-
-```cpp
-void TestPluginAudioProcessor::sliderValueChanged (Slider *slider)
-{
-  if (slider == &freqControl) {
-    // 获取滑块值并进行某些操作
-    DBG("Slider value " << slider->getValue());
-    audioProcessor.updateFrequency(slider->getValue());
-  }
-}
-```
-
-## 基础插件开发
-
-注意第 6 行的添加，我们在 `audioProcessor` 变量上调用了 `updateFrequency`。你可以看到 `PluginEditor` 通过这个 `audioProcessor` 变量可以访问 `PluginProcessor` 公共函数。一旦代码就绪，当你移动滑块时，你应该能听到弦波的频率变化。如果遇到问题，第 39.2.4 节描述了一个解决方案。
-
-## 8.5 从 MIDI 输入更改频率
-
-你对弦波插件应该做的下一件事是响应 MIDI 输入更改频率。这提供了一个检查插件如何接收和处理 MIDI 数据的机会。为了实现这一点，我们需要检查一些细节并更新 `processBlock` 函数。首先，检查 `acceptsMidi` 函数的实现。
-
-```cpp
-bool acceptsMidi() const override;
-```
-
-你应该看到它看起来像这样：
-
-```cpp
-#if JucePlugin_WantsMidiInput
-return true;
-#else
-return false;
-#endif
-```
-
-因此，它不是简单地返回 true 或 false，而是检查 `CMakeLists.txt` 文件中设置的属性。在 `CMakeLists.txt` 文件中查找这一行：
-
-```cmake
-NEEDS_MIDI_INPUT TRUE
-```
-
-你可以简单返回 true 或 false，但礼道的 JUCE 做法是编辑 `CMakeLists.txt`。如果你更新了 `CMakeLists.txt`，可能需要重新生成你的 IDE 项目。IDE 应该自动检测更改并要求你重新加载。现在你的插件已准备好接收 MIDI。让我们来看 `processBlock` 函数的签名：
-
-```cpp
-void processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer& override);
-```
-
-你可以看到它接收一个 `MidiBuffer` 对象。这将包含你的插件想要处理的任何输入 MIDI 数据。我们将从仅仅打印出消息开始。将这段使用循环遍历输入 MIDI 消息的代码添加到你的 `processBlock` 函数的末尾：
-
-```cpp
-for (const auto metadata : midiMessages){
-  auto message = metadata.getMessage();
-  DBG("processBlock: Got message " << message.getDescription());
-}
-```
-
-## 基础插件开发
-
-![](img/f36e66929543fe6d506774ef8e004b7e_88_0.png)
-
-图 8.3
-
-打印在独立模式（Standalone mode）下，从 USB 控制器键盘（左侧）进入插件的 MIDI 消息描述，以及来自 AudioPluginHost 中屏幕钢琴键盘的 MIDI（右侧）。
-
-现在你需要发送一些 MIDI。如果你有 MIDI 输入设备（如 USB 控制器键盘），选择选项并检查在按下按键时是否打印了消息。图 8.3 描述了这种场景。如果你没有 MIDI 控制器，也可以使用 AudioPluginHost 向你的插件发送 MIDI。创建如图 8.3 所示的图表，其中主机中的 MIDI 输入块连接到插件的 MIDI 输入。你可能需要扫描新插件以将你的插件添加到列表中。点击屏幕钢琴键盘上的按钮。
-
-现在我们有 MIDI 进入插件了，我们需要决定如何响应它。回到我们的 MIDI 解析代码，让我们加入一些逻辑，以响应 note-on（力度开启）消息来更新频率：
-
-## 基础插件开发
-
-```cpp
-for (const auto metadata : midiMessages){
-  auto message = metadata.getMessage();
-  DBG("processBlock: Got message " << message.getDescription());
-  if (message.isOnNote()){
-    // 根据 note-on 消息更新频率
-    updateFrequency(juce::MidiMessage::frequencyFromNumber(message.getNoteNumber()));
-  }
-}
-```
-
-## 基础插件开发
-
-##8.6 挑战：幅度控制
-
-下一步是响应 MIDI 来切换幅度。以下逻辑将生效：如果你接收到 note-on 消息，将幅度设为最大；如果你接收到 note-off 消息，将幅度设为零。39.2.5 提供了解决方案。
-
-## 8.7 进度检查
-
-你现在能够创建一个简单的插件并在音频类中实现基础合成。你应该知道如何为插件绘制图形界面元素并实现监听器，以便插件响应输入。你应该能够处理输入的 MIDI 并设置频率。设置了一些挑战，你无疑从中受益；例如实现幅度包络。
-
-# 9 FM 合成器插件
-
-在本章中，你将开发一个具有更高级合成算法的插件：频率调制。这个 FM 合成插件将对书中后续的工作有所帮助，在那里你将使用机器学习技术来控制插件。我将向你如何实现一个包含调制器和载波的双振器 FM合成算法。我将解释指数和深度变量如何改变音色。你将为插件添加基于滑块的用户界面，允许你控制合成引擎。我将向你如何将插件参数暴露给主机环境，这是插件与主机深度集成的方式之一。然后，我们将看到如何在合成算法中使用这些插件参数以及如何通过用户界面控制它们。在本章结束，你将拥有一个单音 FM 合成插件。
-
-## 9.1 FM 合成算法
-
-在上一章中，你看到了如何创建一个生成正弦波的简单合成器插件。正弦波是非常良好、干净的声音；如果你将许多它们加在一起，就可以创建丰富的音色。这种加法合成的问题是计算开销大且难以控制。频率调制（FM）合成旨在通过以计算效率的方式和少量的控制参数生成复杂的音色来解决这两个问题。对于音乐历史爱好者来说，有一个有趣的故事可以研究，关于 FM 合成以及它如何从 John Chowning 的研究变为商业产品（雅马哈对此闻名，但 New England Digital 公司的 Sinclair 系列也是如此）。
-
-基础 FM 算法的工作原理是使用一个振荡器在音频速率上控制另一个振荡器的频率。你可能熟悉 LFO 调制音调的概念，可以听到音调像汽车警报器一样上升下降。FM 就像那样，只是频率移动得快得多。这种快速频率调制的结果是被调制的音色
-
-
-
-
-
-# FM 振荡器插件 73
-
-振荡器（载波）变得更加丰富，其频谱中出现了额外的频率。以下表达式规定了一个简单 FM 合成算法的参数和组件，该算法涉及两个振荡器，并包含了参数示例值：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-$f_0 = 400 \quad$ 基础频率
-$m_i = 0.5 \quad$ 调制索引
-$m_d = 100 \quad$ 调制深度
-$m_f = f_0m_i \quad$ 此时的调制信号
-$m = m_d\sin(2\pi m_t) \quad$ 载波频率
-$c_f = f_0 + m \quad$ 此时的载波信号
-$c = \sin(2\pi c_t) \quad$ 载波信号
-(9.1)
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-## 9.2 代码中的 FM 合成
 
-现在你已经看到了算法，让我们将其转换为插件中的代码。你可以从仓库指南中的示例 39.2.6 开始，那是一个带有响应 MIDI 音符的包络生成器的正弦振荡器插件。在 `CMakeLists.txt` 中编辑新的 `PRODUCT_NAME` 和 `PLUGIN_CODE` 值。运行构建以验证功能正常。
-
-插件拥有变量来管理其输出的幅度以及单个振荡器的相位和频率，我们可以将其称为载波振荡器。我们需要添加变量来管理调制振荡器的相位和频率。打开 `PluginProcessor.h`，并向其私有区域（private section）添加以下内容：
-
-然后在初始化列表中初始化它们，你可以在 `PluginProcessor.cpp` 中构造函数体正上方找到它——我设置索引和深度就像我在上面的表达式中做 true：
-
-```cpp
-1 double mod_phase;
-2 double mod_dphase;
-3 double mod_index;
-4 double mod_depth;
-```
-
-```cpp
-1 ... mod_phase{0}, mod_dphase{0}, mod_index{0.5}, mod_depth{100}
-2 // 构造函数体如下
-3 {
-```
-
-# FM 振荡器插件
-
-现在根据频率 ($f_0$) 和调制索引 ($m_i$) 变量设置 `mod_dphase`。在 PluginProcessor 的 `updateFrequency` 函数中，你会看到设置原始载波振荡器的行，因此为调制振荡器添加一些代码：
-
-```
-1 frequency = newFreq;
-2 dphase = getPhase(frequency, getSampleRate());
-3 // mod_index 是基础频率的倍数：
-   mod_dphase = getPhase(frequency * mod_index, getSampleRate());
-```
-
-我们即将实现 FM 音色。下一步是更改 `PluginProcessor.cpp` 中 `processBlock` 函数的算法。你应该看到类似下面的内容，它将正弦函数的完整输出写入通道缓冲区：
-
-```
-1 channelData[sInd] = (float) (std::sin(phase) * amp);
-2 mod = std::sin(mod_phase);
-3 *= mod_depth;
-4 dphase = getPhase(frequency + mod, getSampleRate());
-5 phase += dphase;
-6 mod_dphase += mod_dphase;
-```
-
-将该块更改为：
-
-```cpp
-1 channelData[sInd] = (float) (std::sin(phase) * amp);
-2 mod = std::sin(mod_phase);
-3 *= mod_depth;
-4 dphase = getPhase(frequency + mod, getSampleRate());
-5 phase += dphase;
-6 mod_dphase += mod_dphase;
-```
 
 现在编译并运行——你应该能听到更丰富、更低沉的音色。这是因为调制索引为 0.5，所以调制在基础频率的一半结束。现在你可以尝试不同的调制索引和调制深度值，或者移动到下一节，在其中我们为这些参数添加滑块控制。
 
@@ -1508,16 +1143,16 @@ $c = \sin(2\pi c_t) \quad$ 载波信号
 
 你可以添加滑块来控制调制索引和调制深度。使用以下程序保存后续完整代码：
 
-1. 在 `PluginEditor.h` 的私有成员变量中添加两个 `Slider` 字段
-2. 在 `PluginEditor.cpp` 的构造函数中调用 `addAndMakeVisible(slider)`
-3. 在 `PluginEditor.cpp` 的构造函数中对滑块调用 `setRange`——对于调制索引使用参数 0.25 到 10，对于调制深度使用 0 到 1000
-4. 在 `PluginEditor.cpp` 的构造函数中调用 `addListener(this)`
-5. 在 `PluginEditor.cpp` 的 `resize` 函数中对滑块调用 `setBounds`
-6. 在 `PluginEditor.cpp` 中更新 `sliderValueChanged` 函数以检测滑块变化——添加两个 `if` 块
+1. 在 `PluginEditor.h` 的私有成员变量中添加两个 `Slider` 字段。
+2. 在 `PluginEditor.cpp` 的构造函数中调用 `addAndMakeVisible(slider)`。
+3. 在 `PluginEditor.cpp` 的构造函数中对滑块调用 `setRange`——对于调制索引使用参数 0.25 到 10，对于调制深度使用 0 到 1000。
+4. 在 `PluginEditor.cpp` 的构造函数中调用 `addListener(this)`。
+5. 在 `PluginEditor.cpp` 的 `resize` 函数中对滑块调用 `setBounds`。
+6. 在 `PluginEditor.cpp` 中更新 `sliderValueChanged` 函数以检测滑块变化——添加两个 `if` 块。
 
 ![](img/f36e6929543fe6d506774ef8e004b7e_93_0.png)
 
-FIGURE.11带有1频率滑块的简单 FM 插件。
+FIGURE.11 带有 1 频率滑块的简单 FM 插件。
 
 现在，你需要允许插件的用户界面告诉音频处理器更新 `mod.depth` 和 `mod.index`。你可以通过在 `PluginProcessor.h` 的公共区域添加两个 setter（设置器）函数来实现：
 
@@ -1534,6 +1169,7 @@ void TestAudioProcessor::setModIndex(double newIndex)
     mod_index = newIndex;
     updateFrequency(frequency);
 }
+
 void TestAudioProcessor::setModDepth(double newDepth)
 {
     mod_depth = newDepth;
@@ -1545,6 +1181,7 @@ void TestAudioProcessor::setModDepth(double newDepth)
 ```cpp
 if (slider == &modIndexControl)
     audioProcessor.setModIndex(slider->getValue());
+
 if (slider == &modDepthControl)
     audioProcessor.setModDepth(slider->getValue());
 ```
@@ -1605,24 +1242,20 @@ FIGURE.4 显示了 FM 插件的自定义 UI（右侧）、自动生成的参数 
 
 记得 `mod_dphase` 是调制振荡器所在的位置（因此它决定了它的频率）。我们正在读取 `modIndex`，使用某些语法将其转换为双，然后使用它更新 `mod_dphase`。随后，我们使用 `modDepth` 参数设置 `mod_depth` 变量。
 
-注意，我们设置的 GUI 滑块不再影响算法。你可以修改之前创建的两个 setter（setModIndex 和 setModDepth），让它们更改参数而不是变量。
+注意，我们设置的 GUI 滑块不再影响算法。你可以修改之前创建的两个 setter（`setModIndex` 和 `setModDepth`），让它们更改参数而不是变量。
 
 ```cpp
 1 void TestAudioProcessor::setModIndex(double newIndex)
-2
+2 {
 3     *modIndexParam = (float) newIndex;
 4 }
 5 void TestAudioProcessor::setModDepth(double newDepth)
-6
+6 {
 7     *modDepthParam = (float) newDepth;
 8 }
 ```
 
-图 9.4 显示了结果，插件有两个接口：1) 一个在 Editor.h 中定义的自定义用户界面，它包含了我们创建的原始控件组，以及 2) 主机通过查询插件自动生成的通用界面。你可以在仓库指南中的示例 39.2.8 中找到完成的 FM 插件。
-
-
-
-
+图 9.4 显示了结果，插件有两个接口：1) 一个在 `Editor.h` 中定义的自定义用户界面，它包含了我们创建的原始控件组，以及 2) 主机通过查询插件自动生成的通用界面。你可以在仓库指南中的示例 39.2.8 中找到完成的 FM 插件。
 
 ## 9.6 进度检查
 
@@ -1630,15 +1263,13 @@ FIGURE.4 显示了 FM 插件的自定义 UI（右侧）、自动生成的参数 
 
 ## 9.7 书的第一部分的结束
 
-恭喜你——你已经到达本书第一部分的结尾。你完成了一些相当复杂的设置程序，我预计你已经遇到并克服了奇怪的错误信息、段错误和语法错误。尽管如此，如果你现在可以构建插件并在宿主环境中运行它们，拥有一个可用的 Python 开发环境，并且可以将 libtorch 集成到你的 C++ 程序中，你就可以继续阅读剩下的章节了。
+恭喜你——你已经到达本书第一部分的结尾。你完成了一些相当复杂的设置程序，我预计你已经遇到并克服了奇怪的错误信息、段错误和语法错误。尽管如此，如果你现在可以构建插件并在宿主环境中运行它们，拥有一个可用的 Python 开发环境，并且可以将 `libtorch` 集成到你的 C++ 程序中，你就可以继续阅读剩下的章节了。
 
 # 第二部分
 
 # AI 驱动的插件控制：元控制器
 
-# 10
-
-# 使用回归算法控制合成器
+# 10 使用回归算法控制合成器
 
 本章引入了回归，这是一种用于估计已知数据点之间数值的统计技术。本章从二维线性回归开始，即为已知数据点拟合一条直线。然后，它将该概念扩展到更高维，以实现一对多的映射。我解释了这些神经网络如何实现与线性回归相同的直线方程，其中权重（weights）和偏置（biases）是网络的参数，而学习则是估计合适数值的过程。在本章结束时，你应该理解线性回归和简单神经网络是如何工作的。
 
@@ -1646,7 +1277,7 @@ FIGURE.4 显示了 FM 插件的自定义 UI（右侧）、自动生成的参数 
 
 既然你已经完成了书中核心工具的安装、测试和熟悉，你将开始第一个示例项目：元控制器。元控制器是一种合成器编程的创新工具。它允许你使用一个或多个控制项来控制合成器的多个参数，例如，单个滑块可以控制几十或上百个参数。这意味着合成器用户可以比传统的合成器编程技术更动态地在任何多音合成器的空间中进行移动。
 
-![](img/f36e66929543fe6d506774ef8e004b7e_99_0.png)
+![](img/f36e69229543fe6d506774ef8e004b7e_99_0.png)
 
 图 10.1 元控制器使用回归控制其他插件。
 
@@ -1654,10 +1285,11 @@ FIGURE.4 显示了 FM 插件的自定义 UI（右侧）、自动生成的参数 
 
 但在你深入元控制器项目之前，我想解释一下它所使用的背景机器学习技术。这种技术被称为回归，我们将使用神经网络来实现它。
 
-![](img/f36e66929543fe6d506774ef8e004b7e_100_0.png)
+![](img/f36e69229543fe6d506774ef8e004b7e_100_0.png)
 
 图 10.2
-线性回归找到最拟合某些数据的直线。直线的的重要特征是它与 y 轴的截距点和斜率梯度。
+
+线性回归找到最拟合某些数据的直线。直线的重要特征是它与 y 轴的截距点和斜率梯度。
 
 因此，本章的目标是解释什么是回归，以及如何使用神经网络来实现。
 
@@ -1670,7 +1302,9 @@ FIGURE.4 显示了 FM 插件的自定义 UI（右侧）、自动生成的参数 
 逻辑上的下一个问题是——你如何确定放置这条直线？
 
 首先，你可以考虑按如下方式指定直线：
+
 $y = mx + b$
+
 $y$ 是 y 坐标，$x$ 是 x 坐标，$m$ 是斜率的梯度，$b$ 是 y 轴上的截距。这些值在图 10.2 中所示。因此，线性回归函数的主要工作是计算 $m$ 和 $b$。如果你有了 $m$ 和 $b$，你就可以为任何 $x$ 计算 $y$。最佳直线将使其自身与已知数据点集之间的总误差最小。如果点不在一条直线上，最佳直线将不会通过所有点，因此线性回归函数必须最小化点与直线之间的误差。一旦你估计出了定义直线的截距值和梯度值 $b$ 和 $m$，你就可以在给定的 $x$ 值的情况下估计任何 $y$。简单吧！
 
 ### 10.2.1 回归还是插值？
@@ -1683,15 +1317,13 @@ $y$ 是 y 坐标，$x$ 是 x 坐标，$m$ 是斜率的梯度，$b$ 是 y 轴上�
 
 一对多的映射在商业合成器中已经可行。雅马 ModX 合成器上的“超级钮”可以映射到多个参数。你可以映射单个旋钮（超级钮）使其控制其他参数。其他合成器以不同程度允许这种映射；例如，我的 Access Virus 合成器允许我通过矩阵功能将控制面板上的两个旋钮映射到各种合成参数。但 Access Virus 只允许我指定乘数 $m$，而不能使用截距点（即其他参数的控制范围）。你是否用过提供这种元控制器的合成器？如果你想尝试一下，请回到 FM 合成示例并添加一个新控制器，同时改变调制指数和调制量。
 
-![](img/f36e66929543fe6d506774ef8e004b7e_102_0.png)
+![](img/f36e69229543fe6d506774ef8e004b7e_102_0.png)
 
 图 10.3
+
 带有两条直线的线性回归，允许根据单个“元控制器”输入估计两个参数。x 轴代表控制输入，y 轴显示映射控制的两个参数的设置。
 
-
-
-
-使用回归法进行合成器控制
+## 使用回归法进行合成器控制
 
 ## 10.3 神经网络与线性回归
 
@@ -1699,21 +1331,21 @@ $y$ 是 y 坐标，$x$ 是 x 坐标，$m$ 是斜率的梯度，$b$ 是 y 轴上�
 
 ## 10.4 前馈神经网络
 
-一种常见的神经网络是前馈神经网络。数字从一端进入，数字从响应端输出。从外部看，它就像 C++ 中的一个函数，其中输入是函数参数，输出是返回值。普通的神经网络并不是一开始就知道从输入到输出需要进行哪些精确计算的。它必须学习计算是什么。学习函数正是机器学习的核心。但我们不应该操之过急。在我们考虑神经网络如何
+一种常见的神经网络是前馈神经网络。数字从一端进入，数字从响应端输出。从外部看，它就像 C++ 中的一个函数，其中输入是函数参数，输出是返回值。普通的神经网络并不是一开始就知道从输入到输出需要进行哪些精确计算的。它必须学习计算是什么。学习函数正是机器学习的核心。但我们不应该操之过急。在我们考虑神经网络如何工作之前，还需要了解其基本结构。
 
-![](img/f36e66929543fe6d506774ef8e004b7e_103_0.png)
+![](img/f36e69229543fe6d506774ef8e004b7e_103_0.png)
 
 **图 10.4** 神经网络对其输入应用函数。
 
-这种映射允许它根据输入计算输出，图 10 所示简单的前馈神经网络。这个神秘的过程是什么？事实证明在简单的前馈神经网络中，这个过程与直线的定义相同，换句话说，输出 $y$ 与另一个值缩放并和（$y = mx + b$）。区别在于我们更改了变量名称。缩放值 $m$ 被称为*权重*，而加值称为*偏置*。因此 $y = wx + b$。
+这种映射允许它根据输入计算输出，图 10 所示简单的前馈神经网络。这个神秘的过程是什么？事实证明在简单的前馈神经网络中，这个过程与直线的定义相同，换句话说，输出 $y$ 与另一个值缩放并和（$y = mx + b$）。区别在于我们更改了变量名称。缩放值 $m$ 被称为权重，而加值称为偏置。因此 $y = wx + b$。
 
 ## 使用回归法进行合成器控制
 
 给定输入为 0.2，权重 $w$ 和偏置 $b$ 应该是多少才能产生 0.5 的输出？你能给出解决方案吗？你可能意识到有很多解决方案。我得出了 $w=1$ 和 $b=0.3$。这行得通，但如果我们有第二个输入-输出对，例如 $0.4$ 和 $0.9$ 呢？我的 $w$ 和 $b$ 值有效吗？你的有效吗？
 
-![](img/f36e66929543fe6d506774ef8e004b7e_104_0.png)
+![](img/f36e69229543fe6d506774ef8e004b7e_104_0.png)
 
-你是通过什么过程确定权重和偏置参数的？在神经网络中，这个过程被称为学习，它迭代地调整权重和偏置，直到神经网络在面对输入时能够纠正或接近于正确的输出。当我告诉你第二个输入-输出对时，你可能改变了你估计的权重和偏置。如果你这样做了，你表现得就像一个神经网络！当然，真实的神经网络有许多权重和偏置，允许它们对复杂函数建模。权重和偏置被称为参数。我们图 10.5 中的网络有两个参数。为了提供参考，请考虑我们对 GPT 系列等大型语言模型神经网络的参数数量是以*十亿*或*万亿*计的。但它们从根本上仍然接收输入并以某种方式处理它以产生输出。
+你是通过什么过程确定权重和偏置参数的？在神经网络中，这个过程被称为学习，它迭代地调整权重和偏置，直到神经网络在面对输入时能够纠正或接近于正确的输出。当我告诉你第二个输入-输出对时，你可能改变了你估计的权重和偏置。如果你这样做了，你表现得就像一个神经网络！当然，真实的神经网络有许多权重和偏置，允许它们对复杂函数建模。权重和偏置被称为参数。我们图 10.5 中的网络有两个参数。为了提供参考，请考虑我们对 GPT 系列等大型语言模型神经网络的参数数量是以十亿或万亿计的。但它们从根本上仍然接收输入并以某种方式处理它以产生输出。
 
 图 10.5 神经网络通过权重缩放并加上偏置。
 
@@ -1721,23 +1353,21 @@ $y$ 是 y 坐标，$x$ 是 x 坐标，$m$ 是斜率的梯度，$b$ 是 y 轴上�
 
 你现在应该理解 1D 线性回归是什么，以及它如何扩展到更高维度。你还应该理解带有权重和偏置的简单前馈神经网络单元与线性回归之间的联系。
 
-## 11
+# 11 使用回归和 `libtorch` 进行实验
 
-### 使用回归和 libtorch 进行实验
-
-现在你对神经网络如何建模输入和输出之间的线性关系有了感觉，是时候深入研究 libtorch 的实现了。本章提供了使用 libtorch 通过简单神经网络实现线性回归的指令。假设开发环境已搭建，包括 IDE、JUCE、CMake 和 libtorch。实现涉及创建一个新项目、生成数据集、向数据集添加噪声、创建神经网络模型、将数据集转换为张量、计算误差、使用优化器从误差中学习以及运行训练循环。所以你会很忙。完成这些工作的结果将得到一个训练好的神经网络，它可以根据 $x$ 值以低错误率预测 $y$ 值。指令还包括将实现扩展到高维数据集和非线性映射的挑战。
+现在你对神经网络如何建模输入和输出之间的线性关系有了感觉，是时候深入研究 `libtorch` 的实现了。本章提供了使用 `libtorch` 通过简单神经网络实现线性回归的指令。假设开发环境已搭建，包括 IDE、JUCE、CMake 和 `libtorch`。实现涉及创建一个新项目、生成数据集、向数据集添加噪声、创建神经网络模型、将数据集转换为张量、计算误差、使用优化器从误差中学习以及运行训练循环。所以你会很忙。完成这些工作的结果将得到一个训练好的神经网络，它可以根据 $x$ 值以低错误率预测 $y$ 值。指令还包括将实现扩展到高维数据集和非线性映射的挑战。
 
 ## 11.1 创建新项目
 
-从创建一个新项目文件夹开始。你可以重用来自最小 libtorch 项目的 `CMakeLists.txt` 文件，该项目是基于 repo-guide 39.2.10 的。你应该会有如下目录结构：
+从创建一个新项目文件夹开始。你可以重用来自最小 `libtorch` 项目的 `CMakeLists.txt` 文件，该项目是基于 repo-guide 39.2.10 的。你应该会有如下目录结构：
 
-```
+```text
 1 | CMakeLists.txt
 2 | -- src
 3 | -- main.cpp
 ```
 
-你的 `main.cpp` 文件应该是最小的 libtorch 示例：
+你的 `main.cpp` 文件应该是最小的 `libtorch` 示例：
 
 ```cpp
 1 // 我添加了一些我们需要的额外头文件
@@ -1752,12 +1382,9 @@ $y$ 是 y 坐标，$x$ 是 x 坐标，$m$ 是斜率的梯度，$b$ 是 y 轴上�
 10 }
 ```
 
-（注：提示中剩余的 OCR 文本高度碎片化/损坏，因此我已根据可用片段重建了连贯部分。）
+# 使用 `libtorch` 进行回归实验
 
 
-
-
-# 使用 libtorch 进行回归实验
 
 ```cpp
 for (int i=0;i<xys.size();++i) {
@@ -1767,7 +1394,7 @@ for (int i=0;i<xys.size();++i) {
 }
 ```
 
-每次调用函数时都创建一个新的随机数生成器可能是低效的，但目前可以保持简单。尝试将你的函数与你希望已经写的 `printXYS` 函数结合使用：
+每次调用函数时都创建一个新的随机数生成器可能是低效的，但目前可以保持简单。尝试将你的函数与你希望已经写的`printXYS`函数结合使用：
 
 ```cpp
 int main() {
@@ -1779,7 +1406,7 @@ int main() {
 }
 ```
 
-我这个版本的 `printXYS` 函数输出如下所示：
+我这个版本的`printXYS`函数输出如下所示：
 
 ```
 x: 0, y: 5
@@ -1816,9 +1443,9 @@ xys: 8, y: 9.00655
 auto net = torch::nn::Linear(1, 1);
 ```
 
-是的——就是这样。Torch 的 `Linear` 是一个简单的“前向”神经网络层。我们向 `Linear` 函数传递了参数 1 和 1，这意味着该 Linear 层有一个输入和一个输出。图 11.1 显示了一个 1 输入 1 输出的 `Linear` 层。
+是的——就是这样。Torch 的`Linear`是一个简单的“前向”神经网络层。我们向`Linear`函数传递了参数 1 和 1，这意味着该 Linear 层有一个输入和一个输出。图 11.1 显示了一个 1 输入 1 输出的`Linear`层。
 
-根据 `Linear` 的文档，它“对输入的数据应用线性变换：$y = xA^T + b$”。除了 $T$ 组件外，这个表达式应该非常熟悉——它与直线的定义 $y = mz + b$ 相同。关于 libtorch 文档的一个快速说明：最佳策略是在 PyTorch 文档中查找内容，因为它有更详细的细节和解释。一旦你在 PyTorch 文档中找到并阅读了你需要的函数，你可以在 libtorch 文档中找到它们，因为有时 C++ 的名称会 way。
+根据`Linear`的文档，它“对输入的数据应用线性变换：$y = xA^T + b$”。除了 $T$ 组件外，这个表达式应该非常熟悉——它与直线的定义 $y = mz + b$ 相同。关于 libtorch 文档的一个快速说明：最佳策略是在 PyTorch 文档中查找内容，因为它有更详细的细节和解释。一旦你在 PyTorch 文档中找到并阅读了你需要的函数，你可以在 libtorch 文档中找到它们，因为有时 C++ 的名称会 way。
 
 所以你创建了第一个神经网络——但它的参数是什么？你将使用机器学习来学习这些参数。
 
@@ -1862,7 +1489,7 @@ std::cout << "Passing 0.5 in ... this came out:\n"
     << output << std::endl;
 ```
 
-你可能在好奇 input 是以及它的数据类型。你不能直接将浮点传递给张量结构。`Empty` 允许你创建一个特定形状的空张量（情况下为 1x1）。现在在张量上，让我们看看神经网络的另一端输出了什么。在我的机器上，输出如下：
+你可能在好奇 input 是以及它的数据类型。你不能直接将浮点传递给张量结构。`Empty`允许你创建一个特定形状的空张量（情况下为 1x1）。现在在张量上，让我们看看神经网络的另一端输出了什么。在我的机器上，输出如下：
 
 ```
 0.8999
@@ -1880,7 +1507,7 @@ Passing 0.5 in ...
 
 # 1.6.1 更复杂的模型
 
-感兴趣，让我们看看更复杂的神经网络参数是什么样的。尝试将 `Linear` 的参数改为 2 和 3，以创建一个如图 2 所示的网络。你还需要更改生成输入的代码。这是更新后的代码，注意输入大小为 1x2：
+感兴趣，让我们看看更复杂的神经网络参数是什么样的。尝试将`Linear`的参数改为 2 和 3，以创建一个如图 2 所示的网络。你还需要更改生成输入的代码。这是更新后的代码，注意输入大小为 1x2：
 
 ```cpp
 auto input = torch::empty({1, 2});
@@ -1925,7 +1552,7 @@ torch::Tensor in_t;
 in_t = torch::empty({(long) xs.size(), 1});
 ```
 
-注意我指定了数据类型而不是使用 `auto`。这使得我们正在处理一个 `Tensor` 变量。然后你将 x 坐标拷贝到输入张量：
+注意我指定了数据类型而不是使用`auto`。这使得我们正在处理一个`Tensor`变量。然后你将 x 坐标拷贝到输入张量：
 
 ```cpp
 for (int i=0;i<xs.size(); ++i) {
@@ -1940,7 +1567,7 @@ torch::Tensor out_t = net(in_t);
 std::cout << "output: " << out_t << std::endl;
 ```
 
-我们调用变量 `net`，因为它是一个函数，传递了输入张量。`net` 返回另一个包含网络对输出应该是什么的猜测的张量。这是我从上面代码看到的输出示例：
+我们调用变量`net`，因为它是一个函数，传递了输入张量。`net`返回另一个包含网络对输出应该是什么的猜测的张量。这是我从上面代码看到的输出示例：
 
 ```
 output: -0.7382
@@ -1962,10 +1589,6 @@ torch::Tensor correct_t;
 correct_t = torch::empty({(long) xs.size(), 1});
 ```
 
-
-
-
-
 ## 使用 libtorch 进行回归实验
 
 ```cpp
@@ -1982,7 +1605,7 @@ torch::Loss loss_t = torch::mse_loss(out_t, correct_t);
 float loss = loss_t.item<float>();
 ```
 
-`torch::mse_loss` 是我们计算损失的方法。尝试计算损失，然后查看正确输出与网络输出之间的差异。你能弄清楚 MSE 是如何计算的吗？提示：MSE 代表均方误差（mean squared error）。
+`torch::mse_loss`是我们计算损失的方法。尝试计算损失，然后查看正确输出与网络输出之间的差异。你能弄清楚 MSE 是如何计算的吗？提示：MSE 代表均方误差（mean squared error）。
 
 ## 11.9 从优化器中学习
 
@@ -1991,6 +1614,7 @@ float loss = loss_t.item<float>();
 ![](img/f36e66929543fe6d506774ef8e004b7e_113_0.png)
 
 图 11.3
+
 优化器调整网络权重。
 
 我们将使用随机梯度下降（SGD）优化器。SGD 是一种根据数据集中部分输入-输出对来计算网络所需变化的优化器。因此它是一个高效的优化器。以下代码创建一个优化器：
@@ -2034,11 +1658,11 @@ while(loss > 0.5) {
 }
 ```
 
-将所有内容整合在一起，如果你愿意，可以将它们组织成函数。确保通过引用（使用 `&`）传递网络和优化器等对象，以避免昂贵的拷贝操作。你可以在 repo-guide 39.1 中找到解决方案。你的网络需要多少轮次才能学习到 w 和 b 的合理值？在数据中添加更多噪声如何影响完成训练所需的时间？你认为你需要多低的误差？注意，是不可能实现零误差的，即穿过所有数据点的完美直线。
+将所有内容整合在一起，如果你愿意，可以将它们组织成函数。确保通过引用（使用`&`）传递网络和优化器等对象，以避免昂贵的拷贝操作。你可以在 repo-guide 39.1 中找到解决方案。你的网络需要多少轮次才能学习到 w 和 b 的合理值？在数据中添加更多噪声如何影响完成训练所需的时间？你认为你需要多低的误差？注意，是不可能实现零误差的，即穿过所有数据点的完美直线。
 
 ## 11.11 训练扩展：高维
 
-你能生成一个高维数据集和一个适当的网络来执行回归吗？上面的示例是一一映射的——你能实现多对一或多对多的映射吗？你可能会发现使用高维数据集比自己编写代码更简单。例如，查看 torch 的 `range` 和 `rand` 函数。
+你能生成一个高维数据集和一个适当的网络来执行回归吗？上面的示例是一一映射的——你能实现多对一或多对多的映射吗？你可能会发现使用高维数据集比自己编写代码更简单。例如，查看 torch 的`range`和`rand`函数。
 
 # 12 元控制器
 
@@ -2049,6 +1673,7 @@ while(loss > 0.5) {
 ![](img/f36e66929543fe6d506774ef8e004b7e_116_0.png)
 
 图 12.1
+
 优化器调整网络权重。
 
 ### 12.2 Wekinator：元控制器的灵感
@@ -2060,11 +1685,8 @@ Fiebring 将 Wekinator 实现为开放声音控制（OSC）消息处理器。输
 Fiebring 在2009 年发布了 Wekinator 的原始版本，后来有了 Wekinator 2.0 等版本。Louis McCallum 与 Fiebring 合作，使用 Tensorflow.js 库用 Javascript 重新实现了 Wekinator 的概念。McCallum 将新库命名为 learner.js。learner.js 在浏览器中运行，对于希望与他人分享其创作的人特别有用。事实上，learner.js 是为了在 MIMIC 浏览器编程环境中使用开发的。MIMIC 结合 learner.js 让分享和帮助别人的 Wekinator 示例变得更容易。
 
 > ¹http://www.wekinator.org/
+
 > ²https://mimicproject.com/
-
-
-
-
 
 为开发创新乐器的人士设计的元控制器（meta-controller）。在演出前几天，我们发现我们的流会被传输到上海的一家俱乐部，那里有我们甚至都看不见的真人！幸运的是，尽管有三个人在实时编辑同一个文件，但系统并没有发生太严重的崩溃。
 
@@ -2080,14 +1702,19 @@ Fiebring 将 Wekinator 的输入描述为“人类动作”，它们可以是复
 
 如图 12.2 所示的工作流是 Wekinator 系统的一项重大创新。它被描述为交互式机器学习，因为用户以交互的方式向机器学习算法提供训练数据。交互意味着用户提供训练数据、进行实时训练并在必要时进行实验。这与普通的机器学习不同。在普通的机器学习中，训练不是交互性的，而且通常涉及规模得多的数据集。这里的技巧之一在于，你不需要使用海量数据集进行完美训练，就能为用户提供有意义的控制感。只要用户在操作控制器输入时能发生合理的控制，创意工作就可以进行。
 
+
+
 ![](img/f36e66929543fe6d506774ef8e004b7e_119_0.png)
 
 图 12.2
+
 Wekinator 工作流：数据收集、训练、推理，然后回到数据收集。
 
 ## 12.5 Wekinator 的灵活性
 
-Wekinator 是一个强大的系统，是因为它的交互式机器学习工作流，也是因为它是一个通用的系统。你可以向它输入许多类型的输入数据——任何你可以在任何维度上转换为 OSC 的东西。然后，你可以将输入映射到各种类型和维度的输出。Wekinator 的一个问题是，它的工作流与现有音乐技术的集成有点复杂。例如，要用 Wekinator 控制插件合成器，你需要弄清楚如何将输入控制数据转换为 OSC 消息，然后将输出的 OSC 消息转换为托管插件的 DAW 能够理解的控制信号。你还需要指定想要控制多少个参数。
+Wekinator 是一个强大的系统，是因为它的交互式机器学习工作流，也是因为它是一个通用的系统。你可以向它输入许多类型的输入数据——任何你可以在任何维度上转换为 OSC 的东西。然后，你可以将输入映射到各种类型和维度的输出。
+
+Wekinator 的一个问题是，它的工作流与现有音乐技术的集成有点复杂。例如，要用 Wekinator 控制插件合成器，你需要弄清楚如何将输入控制数据转换为 OSC 消息，然后将输出的 OSC 消息转换为托管插件的 DAW 能够理解的控制信号。你还需要指定想要控制多少个参数。
 
 你将在后续章节中开发的元控制器牺牲了 Wekinator 的部分灵活性，以获得与插件和插件宿主机等标准音乐技术的更深集成。但你也可以通过为其添加 OSC 输入和输出，将其适配回完整的 Wekinator。
 
@@ -2095,34 +1722,35 @@ Wekinator 是一个强大的系统，是因为它的交互式机器学习工作�
 
 你现在应该解释 Wekinator 是什么，以及它如何让用户使用交互式机器学习工作流来指定输入与输出之间复杂的映射。你应该知道元控制器是 Wekinator 的变体，侧重于控制合成器和效果器等插件。
 
-## 13 线性插值超级旋钮（superknob）
+# 13 线性插值超级旋钮（superknob）
 
 在本章中，你将开始构建控制器系统。第一步是实现类似于 Yamaha 合成器（如 MODX+）上的“超级旋钮”。这种描述的超级旋钮允许你使用单个旋钮控制简单 FM 合成器上的两个合成器参数。它是通过简单的插值实现的。这将为元控制器奠定基础，它允许你使用单一用户界面控制任何插件上的所有参数。
 
 ## 13.1 FM 合成器
 
-你应该从图 13.1 所示的双参数 FM 合成器开始，该器可以在 repo-guide 39.2.9 中找到。回顾一下该合成器的功能：
+你应该从图 13.1 所示的双参数 FM 合成器开始，该器可以在 `repo-guide 39.2.9` 中找到。回顾一下该合成器的功能：
 
-- 1. 两个滑块控制调制指数和调制深度
-- 2. 一个切换开关开启持续播放或包络播放
-- 3. 钢琴键盘允许在合成器上弹奏音
+1. 两个滑块控制调制指数和调制深度。
+2. 一个切换开关开启持续播放或包络播放。
+3. 钢琴键盘允许在合成器上弹奏音。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_121_0.png)
 
 **图 13.1** 简单双参数 FM 合成器的用户界面。切换开关在无人声音模式和包络模式之间切换，两个滑块控制调制深度和指数，钢琴键盘允许你在合成器上弹奏音符。
 
-复制项目副本并编辑 CMakeLists.txt 文件，设置你自己的“公司名称”和插件名称/代码。在独立模式下构建并运行它以验证其工作正常。
+复制项目副本并编辑 `CMakeLists.txt` 文件，设置你自己的“公司名称”和插件名称/代码。在独立模式下构建并运行它以验证其工作正常。
 
-## 线性插值超级旋钮
+## 13.2 线性插值超级旋钮
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_122_0.png)
 
 图 13.2
+
 超级旋钮
 
-## 线性插值超级旋钮
+我在用户界面上把旋钮做得很大，如图 13.2 所示。现在你已经在用户界面上显示了你喜欢的超级旋钮。现在你的任务是获取 0-1 范围内的超级旋钮值，并将其映射到每个滑块指定的范围。
 
-我在用户界面上把旋钮做得很大，如图 13.2 所示。现在你已经在用户界面上显示了你喜欢的超级旋钮。现在你的任务是获取 0-1 范围内的超级旋钮值，并将其映射到每个滑块指定的范围。这就像直线方程：$y = mx + b$，其中 $y$ 是滑块的值（即调制或调制深度），而 $x$ 是超级旋钮的值。为了计算 $m$（也称为权重），你需要通过从最高允许值减去最低值来计算目标滑块的范围。计算 $b$（也称为偏移量），使用 `getMinValue` 函数：
+这就像直线方程：$y = mx + b$，其中 $y$ 是滑块的值（即调制或调制深度），而 $x$ 是超级旋钮的值。为了计算 $m$（也称为权重），你需要通过从最高允许值减去最低值来计算目标滑块的范围。计算 $b$（也称为偏移量），使用 `getMinValue` 函数：
 
 ```cpp
 double high = modIndexSlider.getMinValue();
@@ -2145,25 +1773,29 @@ modIndexSlider.setValue(newV);
 
 你应该能够解释超级旋钮的概念，以及它如何允许单个旋钮同时控制多个参数。
 
-
-控制和线性插值。你应该拥有一个具有工作超级旋钮（superknob）功能的 FM 合成器插件，它可以在用户指定的范围内同时控制两个参数。
+控制和线性插值。你应该拥有一个具有工作超级旋钮（`superknob`）功能的 FM 合成器插件，它可以在用户指定的范围内同时控制两个参数。
 
 # 14 未经训练的 torchknob
 
-本章提供了关于如何用神经网络替换 superknob 中线性插值系统的指导说明。我们将这个新系统称为‘torchknob’。本章将引导你创建一个简单的神经网络，该网络可以从单个输入映射到两个输出控制，并添加一个 `softmax` 层来管理输出范围。你将创建一个独立的 `NeuralNetwork` 类，该类设计用于提供传递数据和训练网络的函数。在本章结束时，你将能够使用神经网络控制 FM 合成器的参数，尽管这种方式并不具有可预测性！
+本章提供了关于如何用神经网络替换 `superknob` 中线性插值系统的指导说明。我们将这个新系统称为“torchknob”。本章将引导你创建一个简单的神经网络，该网络可以从单个输入映射到两个输出控制，并添加一个 `softmax` 层来管理输出范围。
+
+你将创建一个独立的 `NeuralNetwork` 类，该类设计用于提供传递数据和训练网络的函数。在本章结束时，你将能够使用神经网络控制 FM 合成器的参数，尽管这种方式并不具有可预测性！
 
 ## 14.1 Torchknob 软件架构
 
-图 14.1 显示了 torchknob 系统的高级架构。这在结构上与上一节中的 superknob 相似，但它不是使用范围控制来指定从大旋钮到合成器的映射，而是由用户训练神经网络来学习这种映射。目标是实现之前提到的 Wekinator 工作流：
+图 14.1 显示了 torchknob 系统的高级架构。这在结构上与上一节中的 `superknob` 相似，但它不是使用范围控制来指定从大旋钮到合成器的映射，而是由用户训练神经网络来学习这种映射。
 
-- 1. 将参数滑块设置到所需的位置
-- 2. 将 torchknob 设置到所需的位置
-- 3. 将 torchknob -> 滑块的映射存储为训练数据点
-- 4. 回到步骤 1，直到用户定义了他们喜欢的数量的输入-输出关联
-- 5. 在 torchknob -> 滑块的映射集上训练神经网络
-- 6. 移动顶部的 torchknob，神经网络将自动将滑块设置为所需的位置，在训练数据点之间进行推断或回归。
+目标是实现之前提到的 Wekinator 工作流：
+
+1. 将参数滑块设置到所需的位置。
+2. 将 torchknob 设置到所需的位置。
+3. 将 `torchknob -> 滑块` 的映射存储为训练数据点。
+4. 回到步骤 1，直到用户定义了他们喜欢的数量的输入-输出关联。
+5. 在 `torchknob -> 滑块` 的映射集上训练神经网络。
+6. 移动顶部的 torchknob，神经网络将自动将滑块设置为所需的位置，在训练数据点之间进行推断或回归。
 
 未经训练的 torchknob
+
 108
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_126_0.png)
@@ -2174,7 +1806,9 @@ torchknob 系统架构。
 
 ### 14.2 通过网络传递数据的快速黑客方法
 
-从复制你的 FM superknob 项目开始。记住重命名插件并给它一个唯一的代码，以确保新项目不会与你插件列表中的另一个项目冲突。一旦你有了 SuperKnob 项目的副本，编辑你的 `CMakeLists.txt` 文件将 `libtorch` 包含在项目中。你可以在第 5.9 节找到如何执行此操作的说明。
+从复制你的 FM `superknob` 项目开始。记住重命名插件并给它一个唯一的代码，以确保新项目不会与你插件列表中的另一个项目冲突。
+
+一旦你有了 `SuperKnob` 项目的副本，编辑你的 `CMakeLists.txt` 文件将 `libtorch` 包含在项目中。你可以在第 5.9 节找到如何执行此操作的说明。
 
 接下来，你可以尝试一种快速方法，通过神经网络将数据从一个滑块传递到另外两个滑块。在 `PluginEditor.h` 中，确保你包含了头文件 `torch/torch.h`。在编辑器类的私有部分添加以下内容：
 
@@ -2182,7 +1816,7 @@ torchknob 系统架构。
 torch::nn::Linear linear(1, 2);
 ```
 
-这创建了一个类型为 `torch::nn::Linear` 且形状为‘1 个输入，两个输出’的类成员。这正是我们需要从一个滑块映射到另外两个滑块所需的。然后你可以使用这段代码在 `PluginEditor.cpp` 的 `sliderChanged` 函数中通过线性层传递 superknob 的值。
+这创建了一个类型为 `torch::nn::Linear` 且形状为“1 个输入，两个输出”的类成员。这正是我们需要从一个滑块映射到另外两个滑块所需的。然后你可以使用这段代码在 `PluginEditor.cpp` 的 `sliderChanged` 函数中通过线性层传递 `superknob` 的值。
 
 ```cpp
 // 创建一个 1x1 张量
@@ -2201,15 +1835,20 @@ modfthSlider.setValue(out[0].item<float>());
 modfthSlider.setValue(out[0].item<float>());
 ```
 
-尝试 superknob。你应该能看到两个合成参数滑块显示为‘我应该’，因为网络在开始时具有随机的权重和偏置，所以两个滑块可能不会移动很多，或者完全不动，因为从网络输出的值超出了滑块的范围。每次运行程序时，神经网络的权重和偏置（参数）都是不同的。反复运行直到你看到一些移动。
+尝试 `superknob`。你应该能看到两个合成参数滑块显示为“我应该”，因为网络在开始时具有随机的权重和偏置，所以两个滑块可能不会移动很多，或者完全不动，因为从网络输出的值超出了滑块的范围。每次运行程序时，神经网络的权重和偏置（参数）都是不同的。反复运行直到你看到一些移动。
 
 ### 14.3 BasicNeuralNetwork 类
 
-现在你已经有了一个概念验证；你可以从滑块读取值，将它们输入神经网络，读取输出并使用它们来设置另外两个滑块的值。问题是，一旦你进展到更复杂的网络并且想要开始训练，代码将变得混乱。解决这个问题的方案是从底一个独立的 `NeuralNetwork` 类开始，该类提供一组简单的公共函数用于传入数据和训练。在设计类时，我通常从一个“理想化”的头文件开始，其中包含了我想要的一切（当然，除了兰博基尼）。例如，在头文件中，我指定我拥拥函数。让我们这样做。在你的 `src` 文件夹中创建两个新文件：`NeuralNetwork.h` 和 `NeuralNetwork.cpp`。在 `NeuralNetwork.h` 中，放入以下“理想化”类定义：
+现在你已经有了一个概念验证；你可以从滑块读取值，将它们输入神经网络，读取输出并使用它们来设置另外两个滑块的值。问题是，一旦你进展到更复杂的网络并且想要开始训练，代码将变得混乱。
+
+解决这个问题的方案是从底一个独立的 `NeuralNetwork` 类开始，该类提供一组简单的公共函数用于传入数据和训练。在设计类时，我通常从一个“理想化”的头文件开始，其中包含了我想要的一切（当然，除了兰博基尼）。
+
+例如，在头文件中，我指定我拥拥函数。让我们这样做。在你的 `src` 文件夹中创建两个新文件：`NeuralNetwork.h` 和 `NeuralNetwork.cpp`。在 `NeuralNetwork.h` 中，放入以下“理想化”类定义：
 
 ```cpp
 #pragma once
 #include <torch/torch.h>
+
 class NeuralNetwork : torch::nn::Module {
 public:
     NeuralNetwork(int64_t n_inputs, int64_t n_outputs);
@@ -2218,6 +1857,7 @@ public:
         std::vector<float> inputs,
         std::vector<float> outputs);
     void runTraining(int epochs);
+
 private:
     int64_t n_inputs;
     int64_t n_outputs;
@@ -2228,18 +1868,18 @@ private:
 
 对该代码的一些注释：
 
-- 1. `NeuralNetwork` 类继承自 `torch::nn::Module`。这意味着它继承了父类的所有函数。继承 `Module` 是在 Torch 中创建网络的推荐方法。
-- 2. `NeuralNetwork` 构造函数接受两个整数作为参数，指定输入数量和输出数量。
-- 3. 公共的 `forward` 函数接收一个 `float` 向量作为输入，并在输出提供一个 `float` 向量。虽然网络本身需要以张量形式的数据，但从 JUCE 的角度来看，使用 `float` 和 `vector` 会更清晰，因为 JUCE 代码不需要知道 `libtorch` 的任何内容。
-- 4. 有一个名为 `forward` 的私有函数，它接收并返回张量。另一个 `forward` 函数将在内部使用此函数来完成推理。
-- 5. 两个 `forward` 函数都指定其参数为引用。对于那些 C++ 新手手来说，我们避免了每次调用函数时都拷贝数据（通过引用传递）。
-- 6. `addTrainingData` 函数允许我们添加训练数据。
-- 7. `runTraining` 函数最终允许我们训练网络。
-- 8. 有一个私有类成员 `linear`，一个线性层。它被设置为 `nullptr`。
+1. `NeuralNetwork` 类继承自 `torch::nn::Module`。这意味着它继承了父类的所有函数。继承 `Module` 是在 Torch 中创建网络的推荐方法。
+2. `NeuralNetwork` 构造函数接受两个整数作为参数，指定输入数量和输出数量。
+3. 公共的 `forward` 函数接收一个 `float` 向量作为输入，并在输出提供一个 `float` 向量。虽然网络本身需要以张量形式的数据，但从 JUCE 的角度来看，使用 `float` 和 `vector` 会更清晰，因为 JUCE 代码不需要知道 `libtorch` 的任何内容。
+4. 有一个名为 `forward` 的私有函数，它接收并返回张量。另一个 `forward` 函数将在内部使用此函数来完成推理。
+5. 两个 `forward` 函数都指定其参数为引用。对于那些 C++ 新手手来说，我们避免了每次调用函数时都拷贝数据（通过引用传递）。
+6. `addTrainingData` 函数允许我们添加训练数据。
+7. `runTraining` 函数最终允许我们训练网络。
+8. 有一个私有类成员 `linear`，一个线性层。它被设置为 `nullptr`。
 
 你现在应该在每个函数上方编写注释说明其作用。
 
-有了文档，现在是将注意力转向 `NeuralNetwork.cpp` 文件了。这是我们实现头文件中承诺的地方。我们需要将 `NeuralNetwork.cpp` 添加到 `CMakeLists.txt` 文件的 `target_sources` 命令中，以便新类被包含在构建中。这是一个添加 `NeuralNetwork.cpp` 文件的 CMake  示例：
+有了文档，现在是将注意力转向 `NeuralNetwork.cpp` 文件了。这是我们实现头文件中承诺的地方。我们需要将 `NeuralNetwork.cpp` 添加到 `CMakeLists.txt` 文件的 `target_sources` 命令中，以便新类被包含在构建中。这是一个添加 `NeuralNetwork.cpp` 文件的 CMake 示例：
 
 ```cmake
 target_sources(fm-torchknob
@@ -2268,15 +1908,13 @@ std::vector<float> NeuralNetwork::forward(
   std::vector<float> out = {0.0f, 0.0f};
   return out;
 }
+
 void NeuralNetwork::addTrainingData(
   std::vector<float> inputs,
-  std::vector<float>outputs)
+  std::vector<float> outputs)
 {
 }
 ```
-
-
-
 
 # 未训练的 torchknob
 
@@ -2297,26 +1935,30 @@ void NeuralNetwork::addTrainingData(
 
 为了确保编译和链接工作正常，请将 `NeuralNetwork` 添加到 `PluginEditor.h` 文件的私有区域：
 
-+ 1 NeuralNetwork nn(1, 2);
-
-然后在 `sliderValueChanged` 函数中，将以下代码放入响应 superknob 的块中：
-
 ```cpp
-1 // 对 NeuralNetwork 调用 forward 
-2 std::vector<float> nn_outs = nn.forward(
-3     // 传递一个包含 superknob 值的 vector
-4     std::vector<float>(float)superknob.getValue());
-5
-6 // 使用返回的数据设置滑块值
-7 modepthSlider.setValue(nn_outs[0]);
-8 modIndexSlider.setValue(nn_outs[1]);
+NeuralNetwork nn(1, 2);
 ```
 
-这段代码调用了我们新 `NeuralNetwork` 类的 `forward` 方法，传递了 superknob 的值，并使用输出设置另外两个滑块的值。构建并运行以检查是否有错误。注意，`NeuralNetwork` 上的公共 `forward` 函数目前返回两个零——它并没有实际使用神经网络来推断滑块值。
+然后在 `sliderValueChanged` 函数中，将以下代码放入响应 `superknob` 的块中：
+
+```cpp
+// 对 NeuralNetwork 调用 forward
+std::vector<float> nn_outs = nn.forward(
+    // 传递一个包含 superknob 值的 vector
+    std::vector<float>(float)superknob.getValue());
+
+// 使用返回的数据设置滑块值
+modepthSlider.setValue(nn_outs[0]);
+modIndexSlider.setValue(nn_outs[1]);
+```
+
+这段代码调用了我们新 `NeuralNetwork` 类的 `forward` 方法，传递了 `superknob` 的值，并使用输出设置另外两个滑块的值。构建并运行以检查是否有错误。注意，`NeuralNetwork` 上的公共 `forward` 函数目前返回两个零——它并没有实际使用神经网络来推断滑块值。
 
 ## 14.4 单元测试
 
-此时，值得配置你的 CMake 项目以允许轻量级单元测试。我不知道你的编译速度有多快，但在每次修改神经网络代码时构建一个完整的 JUCE 应用都比我预期的要慢。你可以创建一个简单的程序来测试你的 `NeuralNetwork` 类，它的构建和运行会更快，从而允许更快的开发周期。使用 CMake 进行单元测试有多种正式方法，但这里是我简单但不完美的方法。
+此时，值得配置你的 CMake 项目以允许轻量级单元测试。我不知道你的编译速度有多快，但在每次修改神经网络代码时构建一个完整的 JUCE 应用都比我预期的要慢。你可以创建一个简单的程序来测试你的 `NeuralNetwork` 类，它的构建和运行会更快，从而允许更快的开发周期。
+
+使用 CMake 进行单元测试有多种正式方法，但这里是我简单但不完美的方法。
 
 在你的 `src` 文件夹添加名为 `test_nn.cpp` 的新文件。在该文件中放入以下内容：
 
@@ -2324,7 +1966,7 @@ void NeuralNetwork::addTrainingData(
 #include "NeuralNetwork.h"
 #include <iostream>
 
-int main() 
+int main()
 {
     NeuralNetwork nn(2, 2);
     std::cout << nn.forward({0.1, 0.5}) << std::endl;
@@ -2336,8 +1978,9 @@ int main()
 
 ```cmake
 add_executable(test_nn
-src/NeuralNetwork.cpp
-src/test_nn.cpp
+  src/NeuralNetwork.cpp
+  src/test_nn.cpp)
+
 target_link_libraries(test_nn "${TORCH_LIBRARIES}")
 set_property(TARGET test_nn PROPERTY CXX_STANDARD 14)
 ```
@@ -2346,7 +1989,9 @@ set_property(TARGET test_nn PROPERTY CXX_STANDARD 14)
 
 ## 14.5 实现 NeuralNetwork 的 forward 函数
 
-接下来，我们将替换 `NeuralNetwork.cpp` 文件中两个 `forward` 函数的代码，改为通过网络传递数据的代码。首先是公共函数：
+
+
+接下来，我们将替换`NeuralNetwork.cpp`文件中两个`forward`函数的代码，改为通过网络传递数据的代码。首先是公共函数：
 
 ```cpp
 std::vector<float> NeuralNetwork::forward(std::vector<float> inputs)
@@ -2369,12 +2014,15 @@ std::vector<float> NeuralNetwork::forward(std::vector<float> inputs)
 }
 ```
 
-关于 `forward` 函数的一些注释：
+关于`forward`函数的一些注释：
 
-- 1. 本质上，它为输入数据创建一个 tensor，将 vector 数据拷贝到 tensor 中，将 tensor 传递给网络，将网络的输出拷贝回 vector 并返回它。
-- 2. 代码是通用的，因此它可以处理任何数量的输入和输出。
-- 3. 它使用了一些动态内存分配来创建 tensor 和 vector。这绝对不是实现此代码最高效的方法，但它的运行速度是“GUI 级”而不是音频级，，因此不需要高度优化。
-- 4. 更高效的方法是将 vector 和 tensor 创建为类数据成员并重用它们，但这会增加代码的复杂性，我目前想保持尽可能清晰。
+1. 本质上，它为输入数据创建一个 tensor，将 vector 数据拷贝到 tensor 中，将 tensor 传递给网络，将网络的输出拷贝回 vector 并返回它。
+
+2. 代码是通用的，因此它可以处理任何数量的输入和输出。
+
+3. 它使用了一些动态内存分配来创建 tensor 和 vector。这绝对不是实现此代码最高效的方法，但它的运行速度是“GUI 级”而不是音频级，因此不需要高度优化。
+
+4. 更高效的方法是将 vector 和 tensor 创建为类数据成员并重用它们，但这会增加代码的复杂性，我目前想保持尽可能清晰。
 
 接下来是私有函数：
 
@@ -2386,10 +2034,7 @@ torch::Tensor NeuralNetwork::forward(const torch::Tensor& input)
 }
 ```
 
-
-
-
-未训练的 torchknob.h
+## 未训练的`torchknob.h`
 
 注意，我在代码中添加了一些打印语句，以便我们可以检查数据在网络中的流动情况。你可以在图 14.2 中看到神经网络架构的可视化。
 
@@ -2412,7 +2057,7 @@ int main() {
 
 在我的系统中，我看到的输出如下（略有截）：
 
-```
+```text
 forward input 0
 [ CPUfloat{1,1} ]
 forward after linear 0.2885 0.4512
@@ -2433,51 +2078,51 @@ forward after softmax 0.5974 0.4053
 0.743922 0.256078
 ```
 
-现在你可以回到你的 JUCE 合成器并测试新的神经网络了。记住网络的输出范围在 [0..1] 之间，因此你应该将它们缩放到滑块的正确范围。。
+现在你可以回到你的 JUCE 合成器并测试新的神经网络了。记住网络的输出范围在 [0..1] 之间，因此你应该将它们缩放到滑块的正确范围。
 
 ## 14.8 进度检查
 
 此时，你应该已经有一个可以工作的 JUCE/libtorch 插件项目。你应该有一个神经网络类，并且能够从 JUCE 滑块获取数据并将其传递给神经网络。你应该能够将网络中线性层的输出通过 softmax 层进行归一化处理。你应该能够使用归一化后的神经网络输出来移动另外两个滑块。你应该有一个测试程序，它作为一个单独的目标出现在你的 CMake 项目中。
 
-## 15
-# 训练 torchknob
+# 15 训练`torchknob`
 
-本章将开始介绍如何训练驱动 torchknob 的神经网络。首先，重点是为训练准备用户界面，添加数据输入旋钮和功能按钮。然后，演示了通过从用户界面捕获输入和输出值来收集训练数据集的过程。之后，章节描述了如何将训练数据转换为张量格式并存储。接着讨论了训练循环的实现，其中使用了随机梯度下降（SGD）优化器来更新神经网络参数。此外，本章还重新考虑了使用 softmax 层进行输出归一化的做法。它建议将其替换为 sigmoid 激活函数，这是原始 Wekinator 和 learner.js 系统中所使用的输出归一化方法。
+本章将开始介绍如何训练驱动`torchknob`的神经网络。首先，重点是为训练准备用户界面，添加数据输入旋钮和功能按钮。然后，演示了通过从用户界面捕获输入和输出值来收集训练数据集的过程。之后，章节描述了如何将训练数据转换为张量格式并存储。接着讨论了训练循环的实现，其中使用了随机梯度下降（SGD）优化器来更新神经网络参数。此外，本章还重新考虑了使用 softmax 层进行输出归一化的做法。它建议将其替换为 sigmoid 激活函数，这是原始 Wekinator 和 learner.js 系统中所使用的输出归一化方法。
 
-### 15.1 为训练准备用户界面
+## 15.1 为训练准备用户界面
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_137_0.png)
 
 你需要一个包含示例输入和输出对的数据集，以训练神经网络，使其在面对正确的输入时产生正确的输出。一旦它学习了这种映射，它就可以推断出以前可能没见过的新输出。在 FM 合成器的语境下，你是在说：“当超级旋钮在这里处时，我希望其他滑块在相应”。你通常需要几个示例来训练网络。你可能已经知道训练大型网络需要包含数百万或数十亿个示例的数据集。但对于我们的目的来说，只需几个示例就能实现良好的功能。对于熟悉神经网络的人来说，我们将利用过拟合（over-fitting），因为我们只是在寻找数据点之间有趣的回归关系。
 
-我们将使用迭代学习方法来收集训练数据，这种方法有时被称为*交互式*机器学习。我们需要更改用户界面，包含所需的元素，以允许用户交互式地向训练系统提供示例。图 15.2 显示了界面的线框原型图。它包含以下额外元素：
+我们将使用迭代学习方法来收集训练数据，这种方法有时被称为交互式机器学习。我们需要更改用户界面，包含所需的元素，以允许用户交互式地向训练系统提供示例。图 15.2 显示了界面的线框原型图。它包含以下额外元素：
 
-- 1. 一个训练旋钮，允许你在不使用滑块的情况下指定训练输入
-- 2. 一个添加按钮，用于向训练数据集添加训练示例
-- 3. 一个训练按钮，用于触发训练
+1. 一个训练旋钮，允许你在不使用滑块的情况下指定训练输入。
+2. 一个添加按钮，用于向训练数据集添加训练示例。
+3. 一个训练按钮，用于触发训练。
 
-你的任务是在 `PluginEditor` 类中实现必要的代码，使其具有图 15.2 所示的用户界面。继续在你的 `PluginEditor.h` 和 `cpp` 文件中添加 UI 控件。确保你将 `PluginEditor` 添加按钮和滑块的监听器。你将在 `PluginEditor` 类中实现实际的监听代码。
+你的任务是在`PluginEditor`类中实现必要的代码，使其具有图 15.2 所示的用户界面。继续在你的`PluginEditor.h`和`cpp`文件中添加 UI 控件。确保你将`PluginEditor`添加按钮和滑块的监听器。你将在`PluginEditor`类中实现实际的监听代码。
 
-# 训练 torchknob
+# 训练`torchknob`
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_138_0.png)
 
 ### 图 15.2
+
 可训练超级旋钮系统的用户界面原型（左侧）。我们有一个额外的旋钮来指定训练输入，而不会触发滑块的移动。实际的用户界面原型（右侧）。
 
 ## 15.2 收集数据集
 
 现在你有了用户界面，是时候收集数据了。我们将实现逻辑来捕获滑块的状态并将其保存到数据集中。我们将使用“添加”按钮保存当前值，并使用“训练”按钮启动训练过程。
 
-你的任务是在 `PluginEditor` 类中实现必要的代码，使其具有图 15.2 所示的用户界面。继续在你的 `PluginEditor.h` 和 `cpp` 文件中添加 UI 控件。确保你将 `PluginEditor` 添加按钮和滑块的监听器。你将在 `PluginEditor` 类中实现实际的监听代码。
+你的任务是在`PluginEditor`类中实现必要的代码，使其具有图 15.2 所示的用户界面。继续在你的`PluginEditor.h`和`cpp`文件中添加 UI 控件。确保你将`PluginEditor`添加按钮和滑块的监听器。你将在`PluginEditor`类中实现实际的监听代码。
 
 ## 15.3 实现数据存储
 
-一旦有了数据，我们需要以神经网络可以使用的格式将其存储。我们将使用 `std::vector<torch::Tensor>` 来存储输入和输出对。在 `NeuralNetwork` 类中，我们将添加添加这些数据和执行训练的方法。
+一旦有了数据，我们需要以神经网络可以使用的格式将其存储。我们将使用`std::vector<torch::Tensor>`来存储输入和输出对。在`NeuralNetwork`类中，我们将添加添加这些数据和执行训练的方法。
 
-### 15.4 编写 runTraining 代码
+### 15.4 编写`runTraining`代码
 
-最后阶段是实现 `runTraining` 函数，它将使用误差指标和优化器训练神经网络。这里涉及的组件与你之前处理过的回归器示例相似。它们只是重新排列到了 `NeuralNetwork` 类中。首先是优化器——在 `NeuralNetwork.h` 的私有部分添加数据成员：
+最后阶段是实现`runTraining`函数，它将使用误差指标和优化器训练神经网络。这里涉及的组件与你之前处理过的回归器示例相似。它们只是重新排列到了`NeuralNetwork`类中。首先是优化器——在`NeuralNetwork.h`的私有部分添加数据成员：
 
 ```cpp
 // 使用 unique ptr 以便我们可以在构造函数
@@ -2485,26 +2130,21 @@ forward after softmax 0.5974 0.4053
 std::unique_ptr<torch::optim::SGD> optimiser;
 ```
 
-
-
-
-# 训练 torchknob
-
-注意，我在这里使用了 `unique_ptr`。这允许我在创建神经网络模型之后，再决定优化器从其构造函数中接收哪些参数。事实上，只有当我通过在神经网络构造函数中调用 `register_module` 函数创建模型后，我才知道具体的参数是什么。因此，我必须动态创建 SGD。我不能像之前处理网络层那样使用这种风格：
+注意，我在这里使用了`unique_ptr`。这允许我在创建神经网络模型之后，再决定优化器从其构造函数中接收哪些参数。事实上，只有当我通过在神经网络构造函数中调用`register_module`函数创建模型后，我才知道具体的参数是什么。因此，我必须动态创建 SGD。我不能像之前处理网络层那样使用这种风格：
 
 ```cpp
 torch::optim::SGD optimiser(nullptr);
 ```
 
-遗憾的是，SGD 并没有具有该签名的构造函数。如果你对 C++ 并不熟悉，你可能不熟悉 `unique_ptr` 或指针。你需要了解的是，指针是 C++ 从 C 语言继承来的，它们允许程序在运行时向操作系统请求内存，而不是在开始时请求所有需要的内存。如果你使用指针分配内存，你也必须返回这部分内存。否则，就会发生内存泄漏，你的程序占用了内存但没有释放。指针以令 C++ 程序员感到恐惧和困惑而闻名，并可能引发各种问题。`unique_ptr` 和所谓的“智能指针”是在 C++ 较后的版本中发明的，以解决其中的一些问题。智能指针一旦超出作用范围就会自动释放它们使用的内存。你可以看到在 JUCE 开发工具包自带的许多 JUCE 示例应用程序中，出现了如 `unique_ptr` 和 `shared_ptr` 这样的智能指针。
+遗憾的是，SGD 并没有具有该签名的构造函数。如果你对 C++ 并不熟悉，你可能不熟悉`unique_ptr`或指针。你需要了解的是，指针是 C++ 从 C 语言继承来的，它们允许程序在运行时向操作系统请求内存，而不是在开始时请求所有需要的内存。如果你使用指针分配内存，你也必须返回这部分内存。否则，就会发生内存泄漏，你的程序占用了内存但没有释放。指针以令 C++ 程序员感到恐惧和困惑而闻名，并可能引发各种问题。`unique_ptr`和所谓的“智能指针”是在 C++ 较后的版本中发明的，以解决其中的一些问题。智能指针一旦超出作用范围就会自动释放它们使用的内存。你可以看到在 JUCE 开发工具包自带的许多 JUCE 示例应用程序中，出现了如`unique_ptr`和`shared_ptr`这样的智能指针。
 
-我在这里使用智能指针，因为它允许我在不给其分配 SGD 对象的情况下，创建一个 SGD 变量。这很有帮助，因为只有当我知道要优化的神经网络参数时，我才能创建对象。有了智能指针，我可以在 `NeuralNetwork` 类构造函数中创建神经网络模型后再创建对象。以下是使用 `std::make_unique` 创建封装在 `unique_ptr` 中的 SGD 对象的代码。将此代码放在 `NeuralNetwork.cpp` 中 `NeuralNetwork` 构造函数的末尾：
+我在这里使用智能指针，因为它允许我在不给其分配 SGD 对象的情况下，创建一个 SGD 变量。这很有帮助，因为只有当我知道要优化的神经网络参数时，我才能创建对象。有了智能指针，我可以在`NeuralNetwork`类构造函数中创建神经网络模型后再创建对象。以下是使用`std::make_unique`创建封装在`unique_ptr`中的 SGD 对象的代码。将此代码放在`NeuralNetwork.cpp`中`NeuralNetwork`构造函数的末尾：
 
 ```cpp
 optimizer = std::make_unique<torch::optim::SGD>(this->parameters(), 0.01); // 参数，学习率
 ```
 
-我如何在“this”上调用 parameters？记得我们的 `NeuralNetwork` 继承自 `torch::Module` 类吗。这意味着它从 `Module` 继承了一组函数。其中一个函数是 'parameters'，它以优化器可以理解的形式返回已注册模块的参数。'this' 指向当前的 `NeuralNetwork` 对象。我可以不加 'this' 调用 'parameters'，但我更喜欢这种更显式的语法，因为它告诉你 `parameters` 是当前对象内部的函数，而不是命名空间某处的全局或其他。
+我如何在“this”上调用`parameters`？记得我们的`NeuralNetwork`继承自`torch::Module`类吗。这意味着它从`Module`继承了一组函数。其中一个函数是`parameters`，它以优化器可以理解的形式返回已注册模块的参数。`this`指向当前的`NeuralNetwork`对象。我可以不加`this`调用`parameters`，但我更喜欢这种更显式的语法，因为它告诉你`parameters`是当前对象内部的函数，而不是命名空间某处的全局或其他。
 
 接下来是实际的 Training 函数。在这里事情变得有些复杂，因为我们首先将训练数据转换为大张量（tensor），然后将其结合优化器来改进权重：
 
@@ -2529,7 +2169,7 @@ for (int i=0; i<epochs; ++i) {
 }
 ```
 
-再次，我建议切换到你的 `test_nn.cpp` 文件并尝试一个简单的测试程序。这是一个简单的测试程序的示例：
+再次，我建议切换到你的`test_nn.cpp`文件并尝试一个简单的测试程序。这是一个简单的测试程序的示例：
 
 ```cpp
 int main() {
@@ -2547,19 +2187,19 @@ int main() {
 
 ## 15.5 训练实验
 
-图 15.3 显示了一个你可以使用 torchknob 控制的合成器进行的实验示例。尝试针对不同数量的轮次（epochs）训练网络。你能否获得一个满意的结果，让模型将滑块移动到你训练的正确位置？
+图 15.3 显示了一个你可以使用`torchknob`控制的合成器进行的实验示例。尝试针对不同数量的轮次（epochs）训练网络。你能否获得一个满意的结果，让模型将滑块移动到你训练的正确位置？
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_143_0.png)
 
 图 15.3 你可以进行的实验图。
 
-```
+```text
 input-tensor depth0: (2,1) linear depth1: output: (2,2) sigmoid depth2: output: (2,2) linear depth3: output: (2,2) output-tensor depth0: (2,2)
 ```
 
 你可以进行的实验示例。首先，将训练滑块调到最低值，调制控制也是如此。添加一个训练点。然后移动到中间。最后，移动到最高位置。添加一个训练点。
 
-```
+```text
 input-tensor depth0: (2,1) linear depth1: output: (2,2) sigmoid depth2: output: (2,2) linear depth3: output: (2,2) output-tensor depth0: (2,2)
 ```
 
@@ -2567,7 +2207,7 @@ input-tensor depth0: (2,1) linear depth1: output: (2,2) sigmoid depth2: output: 
 
 ## 15.6 理想模型
 
-如果你尝试了实验，你可能发现线性层接 softmax 的基础模型无法很好地学习输入输出之间的映射。我之前提到过，如果你仔细查看 learner.js 代码，就可以找到模型的规范。它是用 JavaScript 编写的，可以在 libtorch 中重建该模型。模型包含两个全连接层，中间有一个 Sigmoid 激活层。在 libtorch 中，你需要在 `NeuralNetwork` 类中三个变量：
+如果你尝试了实验，你可能发现线性层接 softmax 的基础模型无法很好地学习输入输出之间的映射。我之前提到过，如果你仔细查看 learner.js 代码，就可以找到模型的规范。它是用 JavaScript 编写的，可以在 libtorch 中重建该模型。模型包含两个全连接层，中间有一个 Sigmoid 激活层。在 libtorch 中，你需要在`NeuralNetwork`类中三个变量：
 
 ```cpp
 torch::nn::Linear linear1(nullptr);
@@ -2597,18 +2237,15 @@ out = sig(out);
 out = linear2(out);
 ```
 
-注意，第二个线性层之后没有激活函数，甚至没有 softmax 层。但由于它通过 Wekinator 方法经过了良好的测试，这个更简单的线性/softmax 模型应该比线性/softmax 网络更有效地学习映射。用你的 test_nn.cpp 脚本运行一些测试。它是否比线性/softmax 网络实现了更低的误差？为了避免冒犯机器学习工程师，我应该说明，通过衡量训练集上的误差来评估网络的方法并不是标准做法。通常，你会将数据集分为训练集、验证集，甚至可能是测试集。训练使用训练集进行，使用验证集监控训练进度以避免过拟合，并使用测试集作为额外的资源来验证训练。但在这里我们有一个非常小的训练集，可能只包含几项。因此，无法那样划分数据。这种工作流旨在允许简单的、交互式的机器学习
+注意，第二个线性层之后没有激活函数，甚至没有 softmax 层。但由于它通过 Wekinator 方法经过了良好的测试，这个更简单的线性/softmax 模型应该比线性/softmax 网络更有效地学习映射。用你的`test_nn.cpp`脚本运行一些测试。它是否比线性/softmax 网络实现了更低的误差？为了避免冒犯机器学习工程师，我应该说明，通过衡量训练集上的误差来评估网络的方法并不是标准做法。通常，你会将数据集分为训练集、验证集，甚至可能是测试集。训练使用训练集进行，使用验证集监控训练进度以避免过拟合，并使用测试集作为额外的资源来验证训练。但在这里我们有一个非常小的训练集，可能只包含几项。因此，无法那样划分数据。这种工作流旨在允许简单的、交互式的机器学习少量的数据。在书中的其他示例中，我将演示如何使用非交互式工作流训练神经网络的完整且正确的过程。
 
-
-
-
-# 训练 torchbook
-
-少量的数据。在书中的其他示例中，我将演示如何使用非交互式工作流训练神经网络的完整且正确的过程。
+# 训练`torchbook`
 
 ## 15.7 理想的训练循环
 
 现在你已经有了该任务的理想模型，你需要一个更智能的训练函数。更智能意味着它包含了一些措施来判断训练何时完成。目前，训练循环只是运行指定的 epoch（轮次）次数。但你如何知道它是否训练得足够了？一种方法是观察每个 epoch 之后的变化。如果变化变得非常小，说明训练完成。在你的训练循环中尝试这种方法：
+
+
 
 ```cpp
 float loss(0), ploss(1000), dloss(1000);
@@ -2636,17 +2273,17 @@ for (int i=0; i<epochs; ++i) {
 
 这里有一些你可以尝试的更多实验：
 
-- 1. 尝试给神经网络传递冲突的值。观察到它无法创造奇迹——如果你将两个数据点放在两个不同的位置，它只会停在中间以最小化误差。
-- 2. 创建一个使用更多参数的更复杂的合成算法。
-- 3. 创建一个自定义或更复杂的 GUI 元素来生成更多的控制输入，例如 2D 触控板类型的控制器。
+1. 尝试给神经网络传递冲突的值。观察到它无法创造奇迹——如果你将两个数据点放在两个不同的位置，它只会停在中间以最小化误差。
+
+2. 创建一个使用更多参数的更复杂的合成算法。
+
+3. 创建一个自定义或更复杂的 GUI 元素来生成更多的控制输入，例如 2D 触控板类型的控制器。
 
 ## 15.9 进度检查
 
 此时，你应该能够训练一个神经网络通过参数空间学习回归。你应该能够通过用户界面交互式地创建一个输入-输出对的数据集。你应该已经尝试过不同的训练循环和不同的神经网络模型。
 
-## 16
-
-# 插件元控制器 (Plugin meta-controller)
+# 16 插件元控制器 (Plugin meta-controller)
 
 本章涵盖了将 torchknob FM 合成器适配为插件宿主机（plugin host）的步骤。这意味着我们可以从 torchknob 概念（神经网络学习控制固定合成器的参数）转变为元控制器概念（神经网络可以控制任何插件合成器）。涵盖的步骤包括移除 FM 合成器的 UI 和 DSP 代码、添加加载 VST 合成器的代码，以及将插件挂载到 `processBlock` 函数中以便使其生成音频并处理 MIDI。
 
@@ -2658,14 +2295,15 @@ for (int i=0; i<epochs; ++i) {
 
 复制一份你在之前节中创建的 FM torchknob。该项目的参考实现在第 39.3.4 节中描述。如果你想尽可能地遵循这些指令，可以从该参考实现开始。或者，如果你想跳到 16.2 并从纯洁的项目 39.3.5 开始。
 
-图 16.1
-托管插件以控制更高级的合成器。
+图 16.1 托管插件以控制更高级的合成器。
 
 记得修改 `CMakeLists.txt` 文件中所有项目名称出现，并更改 `PLUGIN.CODE`。在我的情况下，从 FM 合成器参考项目开始工作，我执行了“查找并替换”，将 `fm-torchknob-train` 替换为 `plugin-host`，然后将代码从 `cbc3` 改为 `dbcl1`。
 
 接下来，你需要在项目中启用插件托管能力。在 `CMakeLists.txt` 中找到 `target.compile.definitions` 块。将属性 `JUCE_PLUGINHOST_VST3` 设置为 1，例如：
 
+```
 JUCE_PLUGINHOST_VST3=1
+```
 
 这将启用你的应用程序中的插件托管能力。现在生成项目、构建并运行以验证一切已就绪。
 
@@ -2687,14 +2325,9 @@ JUCE_PLUGINHOST_VST3=1
 juce::AudioProcessorValueTreeState;
 ```
 
+在调用 `createPluginInstance` 之后变量 `errorMsg` 将为空，此时插件应该已经准备好可以使用。
 
-
-
-## 插件元控制器 (Plugin meta-controller)
-
-在调用 `createPluginInstance` 之后变量 'errorMsg' 将为空，此时插件应该已经准备好可以使用。
-
-要测试 `loadPlugin`，请在你的系统中找到一个插件。插件有默认位置，且这些位置取决于你的操作系统。你可以使用 JUCE VST3PluginFormat 的 `getDefaultLocationToSearch` 函数查询默认位置。使用系统的系统的文件管理器或终端找到一个 VST3 插件并获取完整文件路径。然后在 `AudioProcessor.cpp` 的 `prepareToPlay` 函数中调用 `loadPlugin`，该函数会在音频系统就绪时被调用。如果你在其他地方（例如构造函数）调用它，你可能还不知道采样率或块大小，而创建插件需要这些参数。你的插件应该会被成功加载，并且你之前编写的相应消息将会出现。
+要测试 `loadPlugin`，请在你的系统中找到一个插件。插件有默认位置，且这些位置取决于你的操作系统。你可以使用 JUCE VST3PluginFormat 的 `getDefaultLocationToSearch` 函数查询默认位置。使用系统的文件管理器或终端找到一个 VST3 插件并获取完整文件路径。然后在 `AudioProcessor.cpp` 的 `prepareToPlay` 函数中调用 `loadPlugin`，该函数会在音频系统就绪时被调用。如果你在其他地方（例如构造函数）调用它，你可能还不知道采样率或块大小，而创建插件需要这些参数。你的插件应该会被成功加载，并且你之前编写的相应消息将会出现。
 
 ## 16.3 在 processBlock 中使用插件
 
@@ -2725,7 +2358,7 @@ pluginInstance->processBlock(buffer, midiMessages);
 
 到此时，你应该拥有一个可以加载并托管另一个插件的插件。你应该能够对托管的插件调用 `processBlock`，如果你传递了 MIDI 音符数据，它应该会生成音频信号。
 
-## 17 在 AudioProcessGraph 结构中放置插件
+# 17 在 AudioProcessGraph 结构中放置插件
 
 本章描述了将插件集成到 `AudioProcessGraph` 结构的过程。`AudioProcessorGraph` 是 JUCE 库中的内置类，允许创建一个连接多个插件的图，并管理 MIDI 和其他复杂性。通过这个图，可以同时拥有多个插件。事实上，它是 AudioPluginHost 测试环境采用的技术。本章详细介绍了将现有插件控制器转换为可与 `AudioProcessorGraph` 工作的所有步骤。这些步骤包括为图添加所需的字段、创建 MIDI 和音频输入/输出节点、初始化图、将插件封装在图节点中以及在 `processBlock` 函数中使用图。
 
@@ -2734,16 +2367,15 @@ pluginInstance->processBlock(buffer, midiMessages);
 ![](img/f36e66929543fe6d506774ef8e004b7e_153_0.png)
 
 在开始之前，我想说明这一节中包含了一些相当大的代码块。这些是为了完整性，以便你可以看到 JUCE 中基于图的音频处理的完整实现。但我并不期望你输入书中的所有代码。你可以参考仓库指南中的 39.3.7，那里有一个插件图的完全可运行的实现。
+
 `AudioProcessorGraph` 是 JUCE API 中的一个类，允许你在图中处理音频和 MIDI 单元。如果你使用过 AudioPluginHost 测试环境，你已经见过通过 `AudioProcessGraph` 可以实现的各种功能的完整开发示例了。如果你没见过，我建议你查看一下。
 
-**图 17.1**
-使用处理器图将插件连接在一起。
-
-在 AudioProcessGraph 结构中放置插件
+**图 17.1** 使用处理器图将插件连接在一起。
 
 现在可以。你可以在 JUCE 分发包的 `extras` 文件夹中找到 `AudioPluginHost`。编译并运行它。图 17.1 展示了你用 `AudioProcessGraph` 创建的图的简单示例。在那个示例中，有 MIDI 输入输出节点以及音频输入输出节点。图中嵌入了两个插件节点：一个合成器和一个效果单元。
 
 两个插件都接收来自 MIDI-in 节点的 MIDI 信号以便被控制。MIDI-in 同时也连接到 MIDI-out，对于熟悉板载合成器的人来说，这是一种 MIDI 透传（MIDI-thru）。audio-in 没有连接到任何地方。
+
 来自合成器节点的音频传递到效果节点，然后到 audio-out。
 
 ## 17.2 为 AudioProcessorGraph 添加字段
@@ -2808,10 +2440,6 @@ int main() {
 }
 ```
 
-
-
-
-
 ## 17.4 将插件添加到图表中
 
 为了让插件在图表中正常运行，你必须稍微调整 `loadPlugin` 函数。只需从 `loadPlugin` 中删除两行即可：
@@ -2820,8 +2448,7 @@ int main() {
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_157_0.png)
 
-图 17.2 
-你将创建的图表。
+图 17.2 你将创建的图表。
 
 ```cpp
 pluginInstance->enableAllBuses();
@@ -2862,8 +2489,6 @@ audioProcGraph->addConnection({
 });
 ```
 
-## 将插件放在 AudioProcessGraph 结构中
-
 ```cpp
 8  {outputNode->nodeID, i3));
 9  // 接入 MIDI 输入
@@ -2876,21 +2501,23 @@ audioProcGraph->addConnection({
 
 然后在 `loadPlugin` 中调用它，在“挂起”（suspend）之前：
 
+
+
 ```cpp
 1 ...
 2  pluginInstance = pluginFormatManager.createPluginInstance(
 3      *pluginDescriptors[0],
 4      getSampleRate(), getBlockSize(), errorMsg);
 5  if (errorMsg == "") { dDBG("Plugin probably loaded"); }
-6  else {dDBG("Plugin failed to load " << errorMsg); return; }
-7  
+6  else { dDBG("Plugin failed to load " << errorMsg); return; }
+7
 8  // 然后：
 9  addPluginToGraph();
-10  susProcessing(false);
+10 susProcessing(false);
 11 // loadPlugin 结束
 ```
 
-## 17.5 在 processBlock 中调用图表
+## 17.5 在 `processBlock` 中调用图表
 
 迁移到图模型的最后一步是在宿主的 `processBlock` 函数中对图表调用 `processBlock`。这与你之前对 `pluginInstance` 执行的操作非常相似，不同之处在于你不是对 `pluginInstance` 调用 `processBlock`，而是对 `audioProcGraph` 调用 `processBlock`。编辑 `Audio-Processor.cpp` 中的 `processBlock` 函数。
 
@@ -2907,7 +2534,8 @@ audioProcGraph->addConnection({
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_159_0.png)
 
-图 17.3 
+图 17.3
+
 添加了加载按钮的基础宿主用户界面。
 
 现在你将在插件界面上添加一个新按钮，允许你加载任何插件。在 `PluginEditor.h` 的私有部分添加一个按钮，并按照通常步骤使其显示出来：添加 `addAndVisible`、`addListener` 以及更新 `resized` 函数。你最终将得到如图 17.3 所示的用户界面图。新按钮应该调用 `PluginEditor` 上的按钮回调。但如何将按钮连接到 `loadPlugin` 函数呢？我们需要触发文件浏览器对话框，然后收集生成的文件名并传递给 `loadPlugin`。下面的代码将显示一个文件对话框。
@@ -2918,14 +2546,17 @@ audioProcGraph->addConnection({
 auto fileChooser = juce::FileBrowserComponent::openMode |
 juce::FileBrowserComponent::selectFiles;
 fChooser(fileChooserFlags,
-	[this](const juce::FileChooser& chooser){
-	DBG("你选择了一个插件文件 " << chooser.getResult().getFullPathName());
-	this->audioProcessor.loadPlugin(chooser.getResult());
-});
+    [this](const juce::FileChooser& chooser) {
+        DBG("你选择了一个插件文件 " << chooser.getResult().getFullPathName());
+        this->audioProcessor.loadPlugin(chooser.getResult());
+    });
 ```
 
 为了实现它，你需要在 `PluginEditor.h` 文件添加一个私有变量：
+
+```cpp
 juce::FileChooser("Select a plugin.");
+```
 
 该代码使用匿名函数作为异步回调。如果你熟悉 JavaScript，这种模式对你来说很熟悉。思路是 GUI 不会被查找文件的浏览器中断，因为浏览器是在单独线程中运行的。一旦用户选择了文件，代码将尝试使用 `AudioProcessor` 的 `loadPlugin` 函数加载它。`fileChooserFlags` 指定用户可以选择文件。
 
@@ -2962,17 +2593,18 @@ juce::FileChooser("Select a plugin.");
 
 我们对宿主做的最后一个更改是显示用户界面。本章解释了如何弹出一个包含用户界面的窗口。
 
-### 18.1 AudioProcessor 类结构
+## 18.1 `AudioProcessor` 类结构
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_161_0.png)
 
 此时，我将进行一个简单的回顾，讨论 `PluginInstance`、`AudioProcessorGraph` 等类结构。这将让你理解如何从节点启动插件的用户界面。图 18.1 显示了 `AudioProcessor` 的类结构。你可以看到 `PluginInstance` 和 `AudioProcessorGraph` 都是 `AudioProcessor`。我们正在开发的应用程序也是如此。
 
-图 18.1 AudioProcessor 及其后类的类结构。
+图 18.1 `AudioProcessor` 及其后类的类结构。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_162_0.png)
 
 图 18.2
+
 在独立窗口中显示 Surge XT 插件界面的宿主界面。
 
 这就是为什么它们都拥有各种函数来获取用户界面。检查你的 `PluginProcessor.h` —— 有一个重写的函数 `createEditor`。查看 `PluginProcessor.cpp` 中的实现 —— 它创建并返回了你在 `PluginEditor` 文件定义的编辑器实例。在我的 `PluginProcessor.cpp` 文件中，`createEditor` 函数包含一行代码：
@@ -2989,16 +2621,12 @@ return new PluginHostEditor(*this);
 class PluginHostEditor :
 ```
 
-
-
-
-
 # 显示插件的用户界面
 
 ```cpp
 public juce::AudioProcessorEditor,
-public juce::Button::Listener ,
-public juce::Slider::Listener ,
+public juce::Button::Listener,
+public juce::Slider::Listener,
 private juce::MidiKeyboardState::listener
 ```
 
@@ -3011,6 +2639,7 @@ private juce::MidiKeyboardState::listener
 ![](img/f36e66929543fe6d506774ef8e004b7e_163_0.png)
 
 **图 18.3**
+
 带有“显示 UI”按钮的宿主用户界面。
 
 要为插件 UI 创建新窗口，你需要在主 UI 上有一个按钮来打开插件窗口，然后你需要一个新的类来表示并把插件 UI 渲染到其中。从向主 UI 添加一个新按钮开始。该按钮最终将触发已加载插件 UI 的打开。按照通常习惯，你需要调用 `addMakeVisible` 将其添加到 UI 中，调用 `addListener` 将主 UI 分配为按钮的监听器，然后在 `resized` 函数中调整大小。我的用户界面最终看起来像图 18.3。
@@ -3019,13 +2648,13 @@ private juce::MidiKeyboardState::listener
 
 在 `PluginProcessor` 中，添加一个新的公共函数，它最终返回一个代表 UI 的 `AudioProcessorEditor` 对象：
 
-```
+```cpp
 juce::AudioProcessorEditor* getPluginEditor();
 ```
 
 然后在 `PluginProcessor.cpp` 中进行实现：
 
-```
+```cpp
 juce::AudioProcessorEditor* PluginHostProcessor::getPluginEditor()
 {
     if (pluginNode)
@@ -3037,11 +2666,11 @@ juce::AudioProcessorEditor* PluginHostProcessor::getPluginEditor()
 
 在第 30 行，代码检查 `pluginNode` 是否可用。只有当你通过 `loadPlugin` 按钮加载了插件时，情况才如此。如果 `pluginNode` 存在，会对其调用 `getProcessor`，这将返回节点内部的 `AudioProcessor` 指针，换句话说就是插件。这很奇怪，因为之前你将插件封装在智能 `unique_ptr` 中，而现在它被转换为了普通的裸指针。我认为在此时你只需要做一个良好的公民，不要对该指针执行删除操作。那么你是如何从 `AudioProcessor` 获取 UI 的呢？如之前提到的，你可以调用 `createEditor`，或者更好地调用 `createEditorIfNeeded`，它只会在需要时才调用 `createEditor`。现在你拥有了宿主插件的 `AudioProcessorEditor` 访问权限。现在你需要在窗口中显示它。
 
-## 18.3 PluginWindow 类
+## 18.3 `PluginWindow` 类
 
 现在来看 `PluginWindow` 类本身。向你的项目添加两个新文件：`PluginWindow.h` 和 `PluginWindow.cpp`。你至少需要将 `.cpp` 文件添加到 `CMakeLists.txt` 中，就像你之前对 `NeuralNetwork` 类做的那样。这涉及编辑 `target_sources` 命令：
 
-```
+```cpp
 target_sources(fm-torchknob
     PRIVATE
     src/PluginEditor.cpp
@@ -3053,7 +2682,7 @@ target_sources(fm-torchknob
 现在在 `PluginWindow` 中放入一些代码：`public juce::DocumentWindow`
 
 ```cpp
-class PluginWindow : public juce::DocumentWindow{
+class PluginWindow : public juce::DocumentWindow {
 public:
     PluginWindow(juce::AudioProcessorEditor* editor);
     PluginWindow() override;
@@ -3063,17 +2692,17 @@ public:
 };
 ```
 
-这里是 `PluginWindow.cpp` 中所有函数的定义。
+这里是 `PluginWindow.cpp` 中所有函数的定义：
 
 ```cpp
 #include "PluginWindow.h"
 
 PluginWindow::PluginWindow(juce::AudioProcessorEditor* editor)
-:DocumentWindow("Plugin UI",
-    juce::LookAndFeel::getDefaultLookAndFeel()),
-    findColor(juce::ResizableWindow::backgroundColourId,
-    juce::DocumentWindow::minimizeButton |
-    juce::DocumentWindow::closeButton)
+    : DocumentWindow("Plugin UI",
+        juce::LookAndFeel::getDefaultLookAndFeel()),
+      findColor(juce::ResizableWindow::backgroundColourId,
+        juce::DocumentWindow::minimizeButton |
+        juce::DocumentWindow::closeButton)
 {
     setSize(400, 300);
 
@@ -3097,31 +2726,44 @@ void PluginWindow::closeButtonPressed()
 等等，我需要重新检查后部分的 OCR 文本，因为它有点乱。让我们根据提供的片段重构：
 
 OCR 文本显示：
+
 `PluginWindow::PluginWindow(juce::AudioProcessorEditor* editor) : DocumentWindow("Plugin UI", juce::LookAndFeel::getDefaultLookAndFeel()), findColor(juce::ResizableWindow::backgroundColourId, juce::DocumentWindow::minimizeButton | juce::DocumentWindow::closeButton)`
+
 `setSize(400, 300);`
+
 `if (editor) { setContentViewOwned(editor, true); }`
+
 `setResizable(true, true);`
+
 `centresetBounds();`
+
 `PluginWindow::PluginWindow() : DocumentWindow("Plugin UI", ...) { }`
+
 `void PluginWindow::closeButtonPressed() { setVisible(false); }`
 
 实际上，看特定的 OCR：
+
 `setSize(400, 300);`
+
 `if (editor) { setContentViewOwned(editor, true); }`
+
 `setResizable(true, true);`
+
 `centresetBounds();`
+
 `PluginWindow::PluginWindow() : DocumentWindow("Plugin UI", ...) { }`
+
 `void PluginWindow::closeButtonPressed() { setVisible(false); }`
 
 等等，OCR 文本在结尾非常混乱。让我清理源码提供的：
 
 ```cpp
 PluginWindow::PluginWindow(juce::AudioProcessorEditor* editor)
-:DocumentWindow("Plugin UI",
-    juce::LookAndFeel::getDefaultLookAndFeel()),
-    findColor(juce::ResizableWindow::backgroundColourId,
-    juce::DocumentWindow::minimizeButton |
-    juce::DocumentWindow::closeButton)
+    : DocumentWindow("Plugin UI",
+        juce::LookAndFeel::getDefaultLookAndFeel()),
+      findColor(juce::ResizableWindow::backgroundColourId,
+        juce::DocumentWindow::minimizeButton |
+        juce::DocumentWindow::closeButton)
 {
     setSize(400, 300);
 
@@ -3142,55 +2784,63 @@ void PluginWindow::closeButtonPressed()
 }
 ```
 
-等等，OCR 文本继续：
-`你需要创建一个 Listener 来监听关闭事件以及移除窗口所需的项。在 PluginEditor.h 中继承自 PluginWindow 的监听器：`
+你需要创建一个 `Listener` 来监听关闭事件以及移除窗口所需的项。在 `PluginEditor.h` 中继承自 `PluginWindow` 的监听器：
+
+
+
 `std::unique_ptr<PluginWindow> pluginWindow;`
 
-`在 PluginEditor.cpp 中，添加实现：`
-`void PluginHostEditor::pluginCloseButtonClicked() {`
-`  pluginWindow.reset(nullptr);`
-`}`
+在`PluginEditor.cpp`中，添加实现：
 
-`最后一步是注册 PluginHostEditor 为监听器。在 PluginEditor.cpp 的构造函数中，创建窗口后，注册为：`
-`pluginWindow = std::make_unique<PluginWindow>(audioProcessor.getHostedEditor());`
-`pluginWindow->addWindow(this);`
+```cpp
+void PluginHostEditor::pluginCloseButtonClicked() {
+    pluginWindow.reset(nullptr);
+}
+```
+
+最后一步是注册`PluginHostEditor`为监听器。在`PluginEditor.cpp`的构造函数中，创建窗口后，注册为：
+
+```cpp
+pluginWindow = std::make_unique<PluginWindow>(audioProcessor.getHostedEditor());
+pluginWindow->addWindow(this);
+```
 
 让我们根据提供的 OCR 文本提供一个干净的版本。
 
-[content]
 # 显示插件的用户界面
 
 ```cpp
 public juce::AudioProcessorEditor,
-public juce::Button::Listener ,
-public juce::Slider::Listener ,
+public juce::Button::Listener,
+public juce::Slider::Listener,
 private juce::MidiKeyboardState::listener
 ```
 
-事实上，它包含多个类。我们感兴趣的是 `AudioProcessorEditor`。如果你查看 `AudioProcessorEditor` 的类层次结构，你会发现它继承自 `Component`。`Component` 就像 JUCE 中的任何其他 `Component` 一样，例如 `TextButton` 或 `Slider`。你可以直接在你的用户界面上显示它。同样，如果你对加载的任何外部插件调用 `createEditor`，你将接收到的 `AudioProcessorEditor` 对象，它就是一个 `Component`。如果你想显示插件的用户界面，可以仅将其视为 `Component` 并将其直接放置在你的界面窗口中。
+事实上，它包含多个类。我们感兴趣的是`AudioProcessorEditor`。如果你查看`AudioProcessorEditor`的类层次结构，你会发现它继承自`Component`。`Component`就像 JUCE 中的任何其他`Component`一样，例如`TextButton`或`Slider`。你可以直接在你的用户界面上显示它。同样，如果你对加载的任何外部插件调用`createEditor`，你将接收到的`AudioProcessorEditor`对象，它就是一个`Component`。如果你想显示插件的用户界面，可以仅将其视为`Component`并将其直接放置在你的界面窗口中。
 
-但将插件 UI 嵌入到你的主窗口中并不是一个好主意：插件 UI 的生命周期有点奇怪，因此你不希望将其作为你主 UI 的部分。插件 UI 的审美风格与你的 UI 完全不同，因此将其简单地放在你的 UI 中并没有什么意义。而且插件的用户界面会有它自己偏好的尺寸。在接下来的章节中，你将发现如何为插件创建一个独立的窗口。
+但将插件 UI 嵌入到你的主窗口中并不是一个好主意：插件 UI 的生命周期有点奇怪，因此你不希望将其作为主 UI 的一部分。插件 UI 的审美风格与你的 UI 完全不同，因此将其简单地放在你的 UI 中并没有什么意义。而且插件的用户界面会有它自己偏好的尺寸。在接下来的章节中，你将发现如何为插件创建一个独立的窗口。
 
 ## 18.2 访问插件的用户界面
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_163_0.png)
 
 **图 18.3**
+
 带有“显示 UI”按钮的宿主用户界面。
 
-要为插件 UI 创建新窗口，你需要在主 UI 上有一个按钮来打开插件窗口，然后你需要一个新的类来表示并把插件 UI 渲染到其中。从向主 UI 添加一个新按钮开始。该按钮最终将触发已加载插件 UI 的打开。按照通常习惯，你需要调用 `addMakeVisible` 将其添加到 UI 中，调用 `addListener` 将主 UI 分配为按钮的监听器，然后在 `resized` 函数中调整大小。我的用户界面最终看起来像图 18.3。
+要为插件 UI 创建新窗口，你需要在主 UI 上有一个按钮来打开插件窗口，然后你需要一个新的类来表示并把插件 UI 渲染到其中。从向主 UI 添加一个新按钮开始。该按钮最终将触发已加载插件 UI 的打开。按照通常习惯，你需要调用`addMakeVisible`将其添加到 UI 中，调用`addListener`将主 UI 分配为按钮的监听器，然后在`resized`函数中调整大小。我的用户界面最终看起来像图 18.3。
 
-一旦按钮显示出来并在被点击时接收到事件，你就需要弄清楚如何访问插件的用户界面。记住，当你实现 `AudioProcessorGraph` 时，你将插件封装在了图节点中。因此，你需要以某种方式从图中提取插件的 `AudioProcessor`。一旦你访问了代表插件的 `AudioProcessor`，你就可以调用它的 `createEditor` 函数来获取插件 UI 的访问权限。
+一旦按钮显示出来并在被点击时接收到事件，你就需要弄清楚如何访问插件的用户界面。记住，当你实现`AudioProcessorGraph`时，你将插件封装在了图节点中。因此，你需要以某种方式从图中提取插件的`AudioProcessor`。一旦你访问了代表插件的`AudioProcessor`，你就可以调用它的`createEditor`函数来获取插件 UI 的访问权限。
 
-在 `PluginProcessor` 中，添加一个新的公共函数，它最终返回一个代表 UI 的 `AudioProcessorEditor` 对象：
+在`PluginProcessor`中，添加一个新的公共函数，它最终返回一个代表 UI 的`AudioProcessorEditor`对象：
 
 ```cpp
 juce::AudioProcessorEditor* getPluginEditor();
 ```
 
-然后在 `PluginProcessor.cpp` 中进行实现：
+然后在`PluginProcessor.cpp`中进行实现：
 
-```
+```cpp
 juce::AudioProcessorEditor* PluginHostProcessor::getPluginEditor()
 {
     if (pluginNode)
@@ -3200,13 +2850,13 @@ juce::AudioProcessorEditor* PluginHostProcessor::getPluginEditor()
 }
 ```
 
-在第 30 行，代码检查 `pluginNode` 是否可用。只有当你通过 `loadPlugin` 按钮加载了插件时，情况才如此。如果 `pluginNode` 存在，会对其调用 `getProcessor`，这将返回节点内部的 `AudioProcessor` 指针，换句话说就是插件。这很奇怪，因为之前你将插件封装在智能 `unique_ptr` 中，而现在它被转换为了普通的裸指针。我认为在此时你只需要做一个良好的公民，不要对该指针执行删除操作。那么你是如何从 `AudioProcessor` 获取 UI 的呢？如之前提到的，你可以调用 `createEditor`，或者更好地调用 `createEditorIfNeeded`，它只会在需要时才调用 `createEditor`。现在你拥有了宿主插件的 `AudioProcessorEditor` 访问权限。现在你需要在窗口中显示它。
+在第 30 行，代码检查`pluginNode`是否可用。只有当你通过`loadPlugin`按钮加载了插件时，情况才如此。如果`pluginNode`存在，会对其调用`getProcessor`，这将返回节点内部的`AudioProcessor`指针，换句话说就是插件。这很奇怪，因为之前你将插件封装在智能`unique_ptr`中，而现在它被转换为了普通的裸指针。我认为在此时你只需要做一个良好的公民，不要对该指针执行删除操作。那么你是如何从`AudioProcessor`获取 UI 的呢？如之前提到的，你可以调用`createEditor`，或者更好地调用`createEditorIfNeeded`，它只会在需要时才调用`createEditor`。现在你拥有了宿主插件的`AudioProcessorEditor`访问权限。现在你需要在窗口中显示它。
 
-## 18.3 PluginWindow 类
+## 18.3 `PluginWindow`类
 
-现在来看 `PluginWindow` 类本身。向你的项目添加两个新文件：`PluginWindow.h` 和 `PluginWindow.cpp`。你至少需要将 `.cpp` 文件添加到 `CMakeLists.txt` 中，就像你之前对 `NeuralNetwork` 类做的那样。这涉及编辑 `target_sources` 命令：
+现在来看`PluginWindow`类本身。向你的项目添加两个新文件：`PluginWindow.h`和`PluginWindow.cpp`。你至少需要将`.cpp`文件添加到`CMakeLists.txt`中，就像你之前对`NeuralNetwork`类做的那样。这涉及编辑`target_sources`命令：
 
-```
+```cmake
 target_sources(fm-torchknob
     PRIVATE
     src/PluginEditor.cpp
@@ -3215,7 +2865,7 @@ target_sources(fm-torchknob
     src/PluginWindow.cpp
 ```
 
-现在在 `PluginWindow` 中放入一些代码：`public juce::DocumentWindow`
+现在在`PluginWindow`中放入一些代码：`public juce::DocumentWindow`
 
 ```cpp
 class PluginWindow : public juce::DocumentWindow{
@@ -3228,7 +2878,7 @@ public:
 };
 ```
 
-这里是 `PluginWindow.cpp` 中所有函数的定义。
+这里是`PluginWindow.cpp`中所有函数的定义。
 
 ```cpp
 #include "PluginWindow.h"
@@ -3262,20 +2912,33 @@ void PluginWindow::closeButtonPressed()
 等等，我需要重新检查后部分的 OCR 文本，因为它有点乱。让我们根据提供的片段重构：
 
 OCR 文本显示：
+
 `PluginWindow::PluginWindow(juce::AudioProcessorEditor* editor) : DocumentWindow("Plugin UI", juce::LookAndFeel::getDefaultLookAndFeel()), findColor(juce::ResizableWindow::backgroundColourId, juce::DocumentWindow::minimizeButton | juce::DocumentWindow::closeButton)`
+
 `setSize(400, 300);`
+
 `if (editor) { setContentViewOwned(editor, true); }`
+
 `setResizable(true, true);`
+
 `centresetBounds();`
+
 `PluginWindow::PluginWindow() : DocumentWindow("Plugin UI", ...) { }`
+
 `void PluginWindow::closeButtonPressed() { setVisible(false); }`
 
 实际上，看特定的 OCR：
+
 `setSize(400, 300);`
+
 `if (editor) { setContentViewOwned(editor, true); }`
+
 `setResizable(true, true);`
+
 `centresetBounds();`
+
 `PluginWindow::PluginWindow() : DocumentWindow("Plugin UI", ...) { }`
+
 `void PluginWindow::closeButtonPressed() { setVisible(false); }`
 
 等等，OCR 文本在结尾非常混乱。让我清理源码提供的：
@@ -3307,17 +2970,11 @@ void PluginWindow::closeButtonPressed()
 }
 ```
 
-
-
-
-
 ## 18.5 进度检查
 
 在此时，你应该能够加载一个插件，然后点击主 UI 上的按钮，弹出一个显示插件 UI 的新窗口。你还应该能够关闭插件 UI 窗口，这可能是最困难的部分！
 
-# 19
-
-# 从插件宿主到元控制器
+# 19 从插件宿主到元控制器
 
 本章通过解释如何将插件宿主与来自 torchknob 的神经网络代码集成，完成了插件元控制器（plugin meta-controller）的实现。第一节讨论了查询插件参数并过滤掉不需要的参数。下一节涵盖了为插件创建一个具有正确输入输出数量的神经网络。后续节讨论了如何通过设置训练旋钮位置和选择插件预设来创建数据。随后的章节解释了如何使用神经网络控制插件。本章最后提到了元控制器的扩展功能，例如训练数据集填充、自定义 UI 组件、选择性参数控制、多合成器宿主，以及通过状态加载/保存和来自其他源的输入功能来提高易用性。
 
@@ -3325,11 +2982,11 @@ void PluginWindow::closeButtonPressed()
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_169_0.png)
 
-回想 torchknob FM 合成控制系统的设计。旋钮同时控制两个参数。现在你把该控制扩展到插件合成器上的所有参数。但你如何知道给定插件上有哪些参数呢？我一直在滥用带有自定义宿主的插件一段时间了。例如，我曾与 Martin Roth 在 2008 年开发一个自动 VST 插件程序[47]。那时，你可以向插件请求参数列表，你会收到一个字符串数组和参数的元数据。然后你可以通过传递 0-1 范围内的浮点值来设置参数。现在在 JUCE 中大致是这样工作的。但情况变得稍微复杂了一些，因为 JUCE 中的插件包装器 `AudioProcessor` 类¹ 是插件格式无关的。换句话说，它对多种插件格式使用同一组参数控制函数。某些格式排列参数的方式略微复杂，例如相关参数的分组。这使得插件查询变得稍微复杂了一些。
+回想 torchknob FM 合成控制系统的设计。旋钮同时控制两个参数。现在你把该控制扩展到插件合成器上的所有参数。但你如何知道给定插件上有哪些参数呢？我一直在滥用带有自定义宿主的插件一段时间了。例如，我曾与 Martin Roth 在 2008 年开发一个自动 VST 插件程序[47]。那时，你可以向插件请求参数列表，你会收到一个字符串数组和参数的元数据。然后你可以通过传递 0-1 范围内的浮点值来设置参数。现在在 JUCE 中大致是这样工作的。但情况变得稍微复杂了一些，因为 JUCE 中的插件包装器`AudioProcessor`类¹是插件格式无关的。换句话说，它对多种插件格式使用同一组参数控制函数。某些格式排列参数的方式略微复杂，例如相关参数的分组。这使得插件查询变得稍微复杂了一些。
 
-以下代码展示了插件列表及其值。将其作为私有函数添加到 PluginProcessor.h 和 cpp 中：
+以下代码展示了插件列表及其值。将其作为私有函数添加到`PluginProcessor.h`和`PluginProcessor.cpp`中：
 
-```
+```cpp
 void PluginHotProcessor::printPluginParameters()
 {
     if (pluginNode)
@@ -3344,9 +3001,9 @@ void PluginHotProcessor::printPluginParameters()
 }
 ```
 
-`getName` 的 '100' 告诉它自动将名称重命名为 100 个字符。你可以传递此参数。将代码添加到你的 PluginProcessor 中加载插件后调用 `printPluginParameters`。以下是我加载 Dexed 时看到的输出提取：
+`getName`的`100`告诉它自动将名称重命名为 100 个字符。你可以传递此参数。将代码添加到你的`PluginProcessor`中加载插件后调用`printPluginParameters`。以下是我加载 Dexed 时看到的输出提取：
 
-```
+```text
 p: Cutoff : 1
 p: Resonance : 0
 p: Output : 1
@@ -3366,9 +3023,9 @@ p: PITCH EG RATE : 1
 p: PITCH EG RATE : 2
 ```
 
-在输出末尾，我看到了许多意之外的参数，例如：
+在输出末尾，我看到了许多意外的参数，例如：
 
-```
+```text
 p: MIDI CC 15|125 : 0
 p: MIDI CC 15|126 : 0
 p: MIDI CC 15|127 : 0
@@ -3379,10 +3036,10 @@ p: MIDI CC 15|128 : 0
 
 如果你使用 JUCE 开发插件，JUCE 默认会添加额外的参数。我相信这些参数的目的是以某种方式暴露 MIDI CC 控制。但目前，我们需要忽略它们，因为它们不是我们想要操纵的核心参数。你可以简单地在打印函数中添加一个过滤器来移除这些特殊参数：
 
-```
+```cpp
 for (const juce::AudioProcessorParameter* p : params) {
-if (! p->getName(100).contains("MIDI CC"))
-    DBG("p: " << p->getName(100) << " : " << p->getValue());
+    if (! p->getName(100).contains("MIDI CC"))
+        DBG("p: " << p->getName(100) << " : " << p->getValue());
 }
 ```
 
@@ -3390,15 +3047,17 @@ if (! p->getName(100).contains("MIDI CC"))
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_171_0.png)
 
-现在你已经打印出了正确的参数集，准备好创建一个可以控制它们的神经网络了。该网络将为 torchknob 提供一个输入，并为每个参数提供一个输出。首先，在 PluginProcessor.h 中添加一个类似于 PluginParameters 函数的公共函数。它的目的是计算有效参数的数量。签名如下：
+现在你已经打印出了正确的参数集，准备好创建一个可以控制它们的神经网络了。该网络将为 torchknob 提供一个输入，并为每个参数提供一个输出。首先，在`PluginProcessor.h`中添加一个类似于`PluginParameters`函数的公共函数。它的目的是计算有效参数的数量。签名如下：
 
-```
+```cpp
 int countValidParameters();
 ```
 
-你需要编写实现部分，使用与 `printPluginParameters` 相同的过滤逻辑。`NeuralNetwork` 对象存储在 PluginEditor 中。这是合理的，因为 PluginEditor 接收旋钮的移动并将将其传递给 `NeuralNetwork`。因此，在 PluginEditor 调用 `loadPlugin` 后，它应该查询参数数量并相应地配置网络。在 `PluginEditor.cpp:button::clicked` 中，你可以调用 `loadPlugin` 并设置你的神经网络：
+你需要编写实现部分，使用与`printPluginParameters`相同的过滤逻辑。`NeuralNetwork`对象存储在`PluginEditor`中。这是合理的，因为`PluginEditor`接收旋钮的移动并将其传递给`NeuralNetwork`。因此，在`PluginEditor`调用`loadPlugin`后，它应该查询参数数量并相应地配置网络。在`PluginEditor.cpp:button::clicked`中，你可以调用`loadPlugin`并设置你的神经网络：
 
 图 19.2 用于更复杂的神经网络
+
+
 
 ```
 void chooser::launchFlags(const juce::FileChooser& chooser) {
@@ -3408,39 +3067,39 @@ void chooser::launchFlags(const juce::FileChooser& chooser) {
 }
 ```
 
-这创建了一个有一个输入和与插件参数数量等多的输出的神经网络。你需要在 PluginEditor.h 的私有变量中一个名为 `nn` 类型为 `NeuralNetwork` 的变量。验证你的代码是否可以编译并运行。你还不能训练网络，因为你必须从插件创建数据。
+这创建了一个有一个输入和与插件参数数量等多的输出的神经网络。你需要在`PluginEditor.h`的私有变量中一个名为`nn`类型为`NeuralNetwork`的变量。验证你的代码是否可以编译并运行。你还不能训练网络，因为你必须从插件创建数据。
 
 ## 19.3 从插件参数创建训练数据
 
-记住，训练数据由输入（来自 torchknob 或或其他 GUI 元素的值）组成。输出由合成器的参数设置组成。为了为训练数据生成输入-输出对，你必须读取 torchknob 滑块值和当前参数设置。在 Processor.h 中编写一个公共函数，返回包含插件有效参数的向量。签名如下：
+记住，训练数据由输入（来自`torchknob`或其他 GUI 元素的值）组成。输出由合成器的参数设置组成。为了为训练数据生成输入-输出对，你必须读取`torchknob`滑块值和当前参数设置。在`Processor.h`中编写一个公共函数，返回包含插件有效参数的向量。签名如下：
 
-```
+```cpp
 std::vector<float> getHostedParamValues();
 ```
 
-参考上面的参数查询编写实现部分。当用户点击添加按钮时，在 `NeuralNetwork` 上调用 `addTrainingData`。`addTrainingData` 函数的签名如下：
+参考上面的参数查询编写实现部分。当用户点击添加按钮时，在`NeuralNetwork`上调用`addTrainingData`。`addTrainingData`函数的签名如下：
 
-```
+```cpp
 void addTrainingData(std::vector<float> inputs, std::vector<float> outputs);
 ```
 
-你应该在 PluginEditor.cpp 的 `buttonClicked` 函数中调用它。调用看起来像这样：
+你应该在`PluginEditor.cpp`的`buttonClicked`函数中调用它。调用看起来像这样：
 
-```
+```cpp
 nn.addTrainingData({float)superKnob.getValue(), getPluginValues());
 ```
 
 ## 19.4 使用神经网络控制插件
 
-最后一步激活界面右侧的控制旋钮。控制旋钮应该将值发送到神经网络，然后获取输出并发送到插件参数。在 PluginProcessor.h 中创建一个公共函数：
+最后一步激活界面右侧的控制旋钮。控制旋钮应该将值发送到神经网络，然后获取输出并发送到插件参数。在`PluginProcessor.h`中创建一个公共函数：
 
-```
+```cpp
 void setHostedParamValues(std::vector<float> values);
 ```
 
-这是 `getHostedParamValues` 的相反操作。实现方式如下：
+这是`getHostedParamValues`的相反操作。实现方式如下：
 
-```
+```cpp
 void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 {
     int pind(0);
@@ -3456,23 +3115,19 @@ void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 }
 ```
 
-目前就到此。尝试通过移动训练旋钮、选择插件上的预设、点击添加并重复几次。然后看看插件在预设之间形变得有多好。你会发现 `setState` 在 JUCE 中被认为是过时的。你应该使用 `AudioProcessorParameter` 和 `AudioProcessorParameterGroup`，但目前这种方法可行且更简单。
+目前就到此。尝试通过移动训练旋钮、选择插件上的预设、点击添加并重复几次。然后看看插件在预设之间形变得有多好。你会发现`setState`在 JUCE 中被认为是过时的。你应该使用`AudioProcessorParameter`和`AudioProcessorParameterGroup`，但目前这种方法可行且更简单。
 
-
-
-
-
-## 19.5 扩展元控制器 (meta-controller)
+## 19.5 扩展元控制器（meta-controller）
 
 你可以考虑对元控制器进行许多可能的扩展方案：
 
-- 1. 通过遍历插件上的预设来自动填充训练数据集，加载这些预设并将它们分配到旋钮上的不同位置
-- 2. 使用自定义 UI 组件提供控制输入。与其使用一个旋钮，你可以尝试实现一个 X/Y 触摸板
-- 3. 使用 MIDI CC 数据作为控制输入
-- 4. 允许用户选择他们想要控制的参数
-- 5. 托管并控制多个合成器
-- 6. 提高可用性：加载和保存状态，可能还有模型
-- 7. 从另一个更高维度的源获取控制值，例如，从音频流的频谱甚至视频流中提取特征。
+1. 通过遍历插件上的预设来自动填充训练数据集，加载这些预设并将它们分配到旋钮上的不同位置。
+2. 使用自定义 UI 组件提供控制输入。与其使用一个旋钮，你可以尝试实现一个 X/Y 触摸板。
+3. 使用 MIDI CC 数据作为控制输入。
+4. 允许用户选择他们想要控制的参数。
+5. 托管并控制多个合成器。
+6. 提高可用性：加载和保存状态，可能还有模型。
+7. 从另一个更高维度的源获取控制值，例如，从音频流的频谱甚至视频流中提取特征。
 
 ## 19.6 本部分的结束
 
@@ -3482,16 +3137,15 @@ void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 
 ## 自主音乐即兴者
 
-## 20
-## 背景：关于序器的一切
+## 20 背景：关于序器的一切
 
-在本书的这一部分中，你将构建一个自主音乐即兴者。音乐即兴者是一个插件，它接收 MIDI 数据，对数据建模并根据之前收到的输入数据的风格生成 MIDI 数据。你可以将与即兴者的交互想象成与自己进行的一场音乐对话。在我们进入构建即兴者的细节之前，在本章中，我将提供关于算法作曲领域及其相关分支——音乐代理（musical agents）的背景信息。你将在几十年分析和生成音乐的研究中发现一个巨大的宝库。随后，我将解释你将用于实现即兴者的算法：变变阶马尔可夫模型（variable order Markov model）。我将该模型与其他模型（如深度学习系统）进行比较，并解释我为什么选择这种技术。
+在本书的这一部分中，你将构建一个自主音乐即兴者。音乐即兴者是一个插件，它接收 MIDI 数据，对数据建模并根据之前收到的输入数据的风格生成 MIDI 数据。你可以将与即兴者的交互想象成与自己进行的一场音乐对话。在我们进入构建即兴者的细节之前，在本章中，我将提供关于算法作曲领域及其相关分支——音乐代理（musical agents）的背景信息。你将在几十年分析和生成音乐的研究中发现一个巨大的宝库。随后，我将解释你将用于实现即兴者的算法：变阶马尔可夫模型（variable order Markov model）。我将该模型与其他模型（如深度学习系统）进行比较，并解释我为什么选择这种技术。
 
 ## 20.1 超越序器
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_176_0.png)
 
-我想首先将即兴者置于音乐技术的“分类法”中。在当今的音乐制作中，人们普遍认为主要的科技形式涵盖以下列表：传统乐器、数字音频工作站 (DAW)、插件、合成器、序器、采样器、混音工具、录音硬件以及 MIDI 和其他控制器[36, 1]。这些类别并不是互排斥的——某些技术跨越了通用领域，而且这些技术可能是软件，也可能是硬件。我会将即兴者归类为“序器”类别，尽管它也是一个插件。但正如本节标题所示，它超越了序器——它是一种智能序器，可以根据你提供它的序列生成新的序列。
+我想首先将即兴者置于音乐技术的“分类法”中。在当今的音乐制作中，人们普遍认为主要的科技形式涵盖以下列表：传统乐器、数字音频工作站（DAW）、插件、合成器、序器、采样器、混音工具、录音硬件以及 MIDI 和其他控制器[36, 1]。这些类别并不是互斥的——某些技术跨越了通用领域，而且这些技术可能是软件，也可能是硬件。我会将即兴者归类为“序器”类别，尽管它也是一个插件。但正如本节标题所示，它超越了序器——它是一种智能序器，可以根据你提供它的序列生成新的序列。
 
 现代序器距离蒸汽动力钢琴有多远？
 
@@ -3503,31 +3157,27 @@ void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 
 我与 AI 即兴者交互的经历。左图：在 Canute 中与 Alex McLean 一同演奏，由 AI 即兴者添加更多打击乐器。右图：在与音乐家 Finn Peters 的表演中现场编写一个 AI 即兴者。
 
-为了更完整地为即兴者提供背景，我们需要视眼超越商业音乐技术，转向新的音乐技术。算法作曲是音乐技术中一个成熟的各个领域，它涉及通过特定程序生成音乐序列。算法作曲丰富的历史故事通常始于莫扎特的“骰子游戏”，作曲家写下几个音乐片段，然后为每个片段分配 1 到 6 之间的数字。一系列骰子决定了这些片段在最终作品中出现的顺序。
+为了更完整地为即兴者提供背景，我们需要视眼超越商业音乐技术，转向新的音乐技术。算法作曲是音乐技术中一个成熟的领域，它涉及通过特定程序生成音乐序列。算法作曲丰富的历史故事通常始于莫扎特的“骰子游戏”，作曲家写下几个音乐片段，然后为每个片段分配 1 到 6 之间的数字。一系列骰子决定了这些片段在最终作品中出现的顺序。
 
-回到 20 世纪，据报道，第一部使用计算机通过算法生成的作品是 Hiller 和 Isaacson 在 1957 年创作的《伊利亚克组套曲》(Illiac Suite)[16]。《伊利亚克组套曲》使用了多种算法作曲技术，包括从概率分布和马尔可夫模型中采样音符，后者根据之前的音符选择音符。在接下来的几章节中，你将学习更多关于马尔可夫模型的知识。其他先驱使用计算机并看到算法过程（如基于概率的方法）潜力的作曲家包括 Xenakis 和 Koenig。你应该寻找 Koenig 的工作，例如《Function Blau》——其中可以发现一些迷人的模式。
+回到 20 世纪，据报道，第一部使用计算机通过算法生成的作品是 Hiller 和 Isaacson 在 1957 年创作的《伊利亚克组套曲》（Illiac Suite）[16]。《伊利亚克组套曲》使用了多种算法作曲技术，包括从概率分布和马尔可夫模型中采样音符，后者根据之前的音符选择音符。在接下来的几章节中，你将学习更多关于马尔可夫模型的知识。其他先驱使用计算机并看到算法过程（如基于概率的方法）潜力的作曲家包括 Xenakis 和 Koenig。你应该寻找 Koenig 的工作，例如《Function Blau》——其中可以发现一些迷人的模式。
 
-从《伊利亚克组套曲》到现在的，算法作曲的发展伴随着人工智能和机器学习领域的快速发展。在经历了了 50 年代和 60 年代的早期实验后，20 70 年代见证了音乐语法等形式体系的发展，这允许通过定义规则来识别和生成符合风格的音乐[37, 19]。20 80 年代看到了更先进的马尔可夫建模技术的发展[8]，这是基于语音识别研究的工作。马尔可夫建模的工作持续到今天，许多研究人员转向深度神经网络方法。Pachet 等人利用马尔可夫模型进行了一些最复杂的工作，在 2010 年代的 Flow Machines 中使用它们执行音乐风格迁移[13]。
+从《伊利亚克组套曲》到现在，算法作曲的发展伴随着人工智能和机器学习领域的快速发展。在经历了 50 年代和 60 年代的早期实验后，20 70 年代见证了音乐语法等形式体系的发展，这允许通过定义规则来识别和生成符合风格的音乐[37, 19]。20 80 年代看到了更先进的马尔可夫建模技术的发展[8]，这是基于语音识别研究的工作。马尔可夫建模的工作持续到今天，许多研究人员转向深度神经网络方法。Pachet 等人利用马尔可夫模型进行了一些最复杂的工作，在 2010 年代的 Flow Machines 中使用它们执行音乐风格迁移[13]。
 
 20 90 年代出现了动力系统技术、混沌和细胞自动机的使用，例如[27]。20 90 年代还看到算法作曲研究人员使用进化计算，这是计算问题解决中的一种新兴趋势。例如：GenJazz 爵士生成器。顺带一下，我在硕士期间开始尝试应用于声音合成器的进化技术。在 20 90 年代中期，我重新实现了使用 Web Audio API 的工作。20 10 年代，我使用了进化技术来编写合成器[48]，最终转向深度神经网络技术。
 
-## 20.2 音乐代理 (Musical agents)
+## 20.2 音乐代理（Musical agents）
 
-我将首先向你介绍“音乐代理”的概念。在上面提到的分类法中，Tatar 和 Pasquier 描述了音乐代理设计的许多方面，我们将考虑其中几个。作为一个起点，在设计音乐代理时需要考虑的问题是：它用于生成的音乐语料是什么？语料是原始音频还是符号化（例如 MIDI）数据？系统具有何种程度的自主性？它执行创作过程的哪部分？在接下来的章节中，我们将回答其中的一些问题。音乐语料将由你在表演期间输入模型的 MIDI 数据组成，然后它还可以保存和加载模型。语料是符号化的，因为它由 MIDI 事件而非原始音频组成。系统将具有程度上的自主性，至少在我们如何实现它的方面。它将选择播放什么以及何时播放，但这取决于它的人类伙伴提供它学习的数据。关于创作过程，即兴者是现场表演的一个极佳工具。
+我将首先向你介绍“音乐代理”的概念。在上面提到的分类法中，Tatar 和 Pasquier 描述了音乐代理设计的许多方面，我们将考虑其中几个。作为一个起点，在设计音乐代理时需要考虑的问题是：它用于生成的音乐语料是什么？语料是原始音频还是符号化（例如 MIDI）数据？系统具有何种程度的自主性？它执行创作过程的哪部分？在接下来的章节中，我们将回答其中的一些问题。音乐语料将由你在表演期间输入模型的 MIDI 数据组成，然后它还可以保存和加载模型。语料是符号化的，因为它由 MIDI 事件而非原始音频组成。系统将具有一定程度的自主性，至少在我们如何实现它的方面。它将选择播放什么以及何时播放，但这取决于它的人类伙伴提供它学习的数据。关于创作过程，即兴者是现场表演的一个极佳工具。
 
-谈到自主即兴者的现场表演，我将最后说明，我已经与 AI 系统工作了多年。在 2012 年，你可以参考两个例子：首先，我与现场编程先驱 Alex McLeod 一同演奏鼓组，由一个学习并响应我的鼓声的 AI 专业人士。其次，我实际上在与 Finn Peters 的现场编程表演期间，使用 SuperCollider 语言实时编写一个 AI 即兴者，我与他合作过许多项目，包括他的《Butterflies》和《Music of the Mind》 专辑。其中一次 Finn Peters 与 AI 即兴者的表演是为 BBC Radio 3 频道的《Jazz on 3》节目录制的，甚至被列入他们的年度场次名单。我们在本书的这一部分开发的系统是我设计的系列系统之一。但该即兴者的其他版本已经在 BBC 国家电台进行过现场表演，并被如钢琴家 Carles Marigo 等音乐家使用，他基于 2022 年的技术创作了一个剧场秀。
+谈到自主即兴者的现场表演，我将最后说明，我已经与 AI 系统工作了多年。在 2012 年，你可以参考两个例子：首先，我与现场编程先驱 Alex McLean 一同演奏鼓组，由一个学习并响应我的鼓声的 AI 即兴者提供伴奏。其次，我实际上在与 Finn Peters 的现场编程表演期间，使用 SuperCollider 语言实时编写一个 AI 即兴者，我与他合作过许多项目，包括他的《Butterflies》和《Music of the Mind》专辑。其中一次 Finn Peters 与 AI 即兴者的表演是为 BBC Radio 3 频道的《Jazz on 3》节目录制的，甚至被列入他们的年度场次名单。我们在本书的这一部分开发的系统是我设计的系列系统之一。但该即兴者的其他版本已经在 BBC 国家电台进行过现场表演，并被如钢琴家 Carles Marigo 等音乐家使用，他基于 2022 年的技术创作了一个剧场秀。
 
-
-
-
-
-## 20.3 序列建模 (Sequence modelling)
+## 20.3 序列建模（Sequence modelling）
 
 我们将开发的即兴钢琴背后的基本思想是序列建模。序列建模意味着尝试理解序列的属性。通过这种理解，你可以执行诸如预测序列中的下一个元素或生成与给定数据集相似的序列等任务。即兴钢琴的目标是对你输入的序列进行建模，以便它随后能生成相似但又有趣的不同序列。序列建模是计算机科学中一个巨大的研究领域。它在许多领域都有应用，例如金融数据建模、自然语言处理和音频信号。事实上，大语言模型就是序列建模器。GPT 和类似的模型最终都在预测序列中的下一个符号。
 
 有许多技术可以描述和建模序列。例如，你可能会定义一种数学关系，如“序列中的下一个数字是前一个数字的两倍”。如果这能描述你的银行账户，那将是一个很棒的模型。或者你可以描述规则，例如“如果你有一个 1，下一个数字始终是 3；如果你有一个 3，下一个数字始终是 1”。这将产生一个 1,3,1,3... 的序列。转向音乐领域，你可以提出具有音乐意义的规则，如“序列仅包含 C 大调的音符”。要根据该规则生成序列，你只需要从 C 大调中随机选择音符。
 
-这类清晰的规则很容易理解，但问题是，许多现实世界的序列太复杂或充满噪声，无法通过简单的规则进行预测和生成。这就是统计序列建模的用场。统计序列建模的目标是识别包含概率元素的序列模式。例如，“如果上一个数字是 1，那么下一个数字有 50% 的概率是 2，50% 的概率是 4”。事实上，这就是一阶马尔可夫模型（first-order Markov model）。一阶马尔可夫模型之所以是因为只回溯序列一步。你可以有一个零阶马尔可夫模型，通常称为概率分布。零阶马尔可夫模型可能会说：“4 有 50% 的概率，2 有 25% 的概率，1 有 25% 的概率”。零阶意味着它不看过去——只看序列中观察到的数字分布。
+这类清晰的规则很容易理解，但问题是，许多现实世界的序列太复杂或充满噪声，无法通过简单的规则进行预测和生成。这就是统计序列建模的用场。统计序列建模的目标是识别包含概率元素的序列模式。例如，“如果上一个数字是 1，那么下一个数字有 50% 的概率是 2，50% 的概率是 4”。事实上，这就是一阶马尔可夫模型（first-order Markov model）。一阶马尔可夫模型之所以这样称呼，是因为只回溯序列一步。你可以有一个零阶马尔可夫模型，通常称为概率分布。零阶马尔可夫模型可能会说：“4 有 50% 的概率，2 有 25% 的概率，1 有 25% 的概率”。零阶意味着它不看过去——只看序列中观察到的数字分布。
 
 ### 20.3.1 深度网络作为序列建模器
 
@@ -3537,35 +3187,36 @@ void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 
 马尔可夫模型可以从单次表演中实时从零收集的数据中生成模式，也可以从更大的数据集中为其提供数据。我们将构建的即兴钢琴在计算上是高效的，可以在小数据集上进行实时学习。我合作过的音乐家们明显感觉到他们自己的存在于这类模型所生成的音乐中，并乐于与它们互动。我不是说你不能通过神经网络实现这一点，但你完全可以通过马尔可夫模型实现，所以这就是我们将使用的工具。
 
-## 20.4 马尔可夫模型 (Markov models)
+## 20.4 马尔可夫模型（Markov models）
 
 因此，我们将使用马尔可夫模型对音乐序列进行建模。在上一节中，我暗示了马尔可夫模型是如何工作的，并提到它们有不同的阶。让我们从一个仅两个不同音符的序列开始。假设你有这样一个序列：
 
 > $A, A, B, A, B, A, B, B, B$ (20.1)
 
-要创建一个马尔可夫模型，我们首先将这些字母中的每一个称为状态。因此，在序列的第 1 和第 2 ，状态是 'A'；在第 3 ，状态是 'B'。然后我们讨论状态转移。从第 1 到第 2 ，状态从 A 转移到 A。从第 2 到第 3 ，状态从 A 变为 B。A 到 A 确实不是严格的转移，因为看起来没有发生变化，但想象你正在弹音符。你弹了一个 A，然后又是 A，然后是 B，以此类推。该序列中有 8 次转移：
+要创建一个马尔可夫模型，我们首先将这些字母中的每一个称为状态。因此，在序列的第 1 和第 2 个位置，状态是`A`；在第 3 个位置，状态是`B`。然后我们讨论状态转移。从第 1 个位置到第 2 个位置，状态从`A`转移到`A`。从第 2 个位置到第 3 个位置，状态从`A`变为`B`。`A`到`A`确实不是严格的转移，因为看起来没有发生变化，但想象你正在弹音符。你弹了一个`A`，然后又是`A`，然后是`B`，以此类推。该序列中有 8 次转移：
 
 > $A \rightarrow A, A \rightarrow B, B \rightarrow A, A \rightarrow B, B \rightarrow A, A \rightarrow B, B \rightarrow B, B \rightarrow B$ (20.2)
 
-我们可以将转移后的状态称为*观测值*（observation）。从这些
+我们可以将转移后的状态称为观测值（observation）。从这些转移中，我们可以计算给定当前状态的观测值概率。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_182_0.png)
 
 # 图 20.3
+
 左侧为双状态模型的视觉化，右侧为状态转移。
 
 ### 20.4.1 从模型生成
 
-下一步是从模型中生成序列。从这些转移中，我们可以计算给定当前状态的观测值概率。从这些转移中，我们可以计算给定当前状态的观测值概率。从这些转移中，我们可以计算给定当前状态的观测值概率。
+下一步是从模型中生成序列。从这些转移中，我们可以计算给定当前状态的观测值概率。
 
-| A | B |
-|---|---|
-| A | 0.25 | 0.75 |
-| B | 0.4 | 0.6 |
+| 当前状态 | `A` | `B` |
+|---|---:|---:|
+| `A` | 0.25 | 0.75 |
+| `B` | 0.4 | 0.6 |
 
-如果你理解了，现在你理解了一阶马尔可夫模型。如果你不确定，这个序列的零阶马尔可夫模型看起来是什么样的？零阶只是观测状态的分布。我们看到了四个 A 和五个 B。从零阶模型生成仅意味着从该分布中采样。你有 44.4% 的概率得到 A，55.5% 的概率得到 B。现在轮到你了——写出一个音符序列，然后尝试将其转换为状态矩阵。
+如果你理解了，现在你理解了一阶马尔可夫模型。如果你不确定，这个序列的零阶马尔可夫模型看起来是什么样的？零阶只是观测状态的分布。我们看到了四个`A`和五个`B`。从零阶模型生成仅意味着从该分布中采样。你有 44.4% 的概率得到`A`，55.5% 的概率得到`B`。现在轮到你了——写出一个音符序列，然后尝试将其转换为状态矩阵。
 
-## 20.5 高阶模型 (Higher order models)
+## 20.5 高阶模型（Higher order models）
 
 复杂性的下一步是增加模型的阶数，超过一阶。一阶意味着我们看上一步。二阶意味着我们看上两步，但它是如何工作的？回到我们的原始序列：
 
@@ -3573,37 +3224,36 @@ void HostedPluginProcessor::setHostedParamValues(std::vector<float> values)
 
 二阶建模查看的是由两个字母组成的状态之后的观测值：
 
-```
-$A, A \rightarrow B$
-$A, B \rightarrow A$
-$B, A \rightarrow B$
-$A, B \rightarrow A$
-$B, A \rightarrow B$
-$A, B \rightarrow B$
-$B, B \rightarrow B$
+```text
+A, A → B
+A, B → A
+B, A → B
+A, B → A
+B, A → B
+A, B → B
+B, B → B
 ```
 
 作为状态转移矩阵，你有：
 
-| A | B |
-|---|---|---|
-| A,A | 0 | 1 |
-| A,B | 0.666 | 0.333 |
-| B,A | 0 | 1 |
-| B,B | 0 | 1 |
-| (20.5)
+| 状态 | `A` | `B` |
+|---|---:|---:|
+| `A,A` | 0 | 1 |
+| `A,B` | 0.666 | 0.333 |
+| `B,A` | 0 | 1 |
+| `B,B` | 0 | 1 |
 
-要生成这个二阶马尔可夫模型，你通常从左列选择一个双字母状态，从其可能的下一个状态中采样。你选择的下一个状态推入之前状态的末尾，旧的状态被丢弃，因此保留了一个双字母状态。从数据结构的角度来看，这是一个先进先出的栈（FIFO stack）。根据上述矩阵中的概率，生成的序列将不会特别有趣，因为你通常会生成一串 B。序列建模器在音乐语境下陷入重复状态并不是我们希望的。好吧，也许对于科技舞迷来说是吧。我稍后会解释我如何解决这个问题的。
+(20.5)
 
-
-
-
+要生成这个二阶马尔可夫模型，你通常从左列选择一个双字母状态，从其可能的下一个状态中采样。你选择的下一个状态推入之前状态的末尾，旧的状态被丢弃，因此保留了一个双字母状态。从数据结构的角度来看，这是一个先进先出的栈（FIFO stack）。根据上述矩阵中的概率，生成的序列将不会特别有趣，因为你通常会生成一串`B`。序列建模器在音乐语境下陷入重复状态并不是我们希望的。好吧，也许对于科技舞迷来说是吧。我稍后会解释我如何解决这个问题的。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_184_0.png)
 
 # 图 20.4
 
 减一。随着阶数的增加，观测次数会减少。例如，如果你的序列中像我们之前做的那样有九个字母，你只能进行八阶观测。高阶意味着你的模型对事件发生之前的历史了解更多，因此它可能会做出更合理的音乐决策。为了用一个音乐例子来阐明这一点，想象你正在进行一项听力测试，听一段音乐，然后你必须猜下一个音或和弦是什么。你认为用较长的片段还是较短的片段更容易猜下一个音？
+
+
 
 然而，高阶也意味着观测较少，这意味着模型输出的变异较少。你如何能让模型既具有高阶提供的状态化音乐感知，又具有产生有趣序列的变异呢？在下一节中，我将描述变阶阶数马尔可夫模型，它充分利用了低阶模型的丰富性和高阶模型的理解力。
 
@@ -3617,25 +3267,25 @@ $B, B \rightarrow B$
 |---|---|---|
 | A | 0.25 | 0.75 |
 | B | 0.5 | 0.5 |
-| A.A | 0 | 1 (20.6) |
+| A.A | 0 | 1 |
 | A.B | 0.666 | 0.333 |
 | B.A | 0 | 1 |
 | B.B | 0 | 1 |
 
 如你所见，对于同一个序列，我们既拥有一阶模型的丰富性（更多的观测），又有二阶模型的信息（更长的记忆）。图 20.4 展示了该模型基于图的可视化。虽然模型看起来更复杂，但它只是一阶和二阶模型的组合。生成过程更为复杂——我用于生成的算法运行如下：
 
-- 1. 选择随机状态：
-- 2. 使用状态从状态转移矩阵中选择下一个观测：$A \rightarrow B$
-- 3. 将观测追加到上一个状态：A,B
-- 4. 使用当前状态从状态转移矩阵中选择下一个观测：$B \rightarrow A$
-- 5. 将观测追加到上一个状态：A,B
-- 6. 使用当前状态从状态转移矩阵中选择下一个状态：A,B, A \rightarrow ?$
+1. 选择随机状态。
+2. 使用状态从状态转移矩阵中选择下一个观测：`A → B`。
+3. 将观测追加到上一个状态：`A,B`。
+4. 使用当前状态从状态转移矩阵中选择下一个观测：`B → A`。
+5. 将观测追加到上一个状态：`A,B`。
+6. 使用当前状态从状态转移矩阵中选择下一个状态：`A,B, A → ?`。
 
 你会注意到我们在最后遇到了障碍——假设我们只有一阶和二阶矩阵，那么在状态“A,B,A”之后没有可用的观测。此时，我添加以下步骤：
 
-- 1. 如果没有可用观测，将上一个状态的阶数减一，从 A,B 变为 B,A
-- 2. 使用 B,A 从状态转移矩阵中选择观测
-- 3. 回到步骤 1 直到收到观测
+1. 如果没有可用观测，将上一个状态的阶数减一，从 `A,B` 变为 `B,A`。
+2. 使用 `B,A` 从状态转移矩阵中选择观测。
+3. 回到步骤 1，直到收到观测。
 
 阶数的还原会一直持续，直到有可用观测。之前，我提到过序列模型可能会陷入重复的状态循环，仅有一个可能的下一个状态。考虑以下矩阵——对于几个状态，只有一个后续选项，即 B：
 
@@ -3656,9 +3306,7 @@ $B, B \rightarrow B$
 
 你现在应该对算法作曲领域和音乐智能体（musical agents）的概念有了洞察。你还应该理解如何从简单的字母序列构建马尔可夫模型。你应该能够解释模型中的阶数、状态、观测和状态转移矩阵的概念。你还看到了将在后续章节中用于构建即兴智能体的变阶马尔可夫模型算法。
 
-## 21
-
-## 使用马尔可夫模型编程
+# 21 使用马尔可夫模型编程
 
 在本章中，我将向你展示如何使用我创建的变阶马尔可夫模型库。该库是用 C++ 编写的。我们将进行各种命令行实验，向模型输入不同的序列并研究它的行为。
 
@@ -3666,21 +3314,15 @@ $B, B \rightarrow B$
 
 我的假设是你已经遵循了书的第一部分的设置说明，并且已经安装了可以使用的 CMake 和 IDE。如果你仍然需要完成设置，应该回到书的该部分并确保你有一个可用的构建环境。
 
-### 21.2 构建马尔可夫模型
+## 21.2 构建马尔可夫模型
 
 我的假设是你已经遵循了书的第一部分的设置说明，并且已经安装了可以使用的 CMake 和 IDE。如果你仍然需要完成设置，应该回到书的该部分并确保你有一个可用的构建环境。
 
 （注：后续文本中存在大量 OCR 还原和交织错误，已根据要求提取核心逻辑并进行清洗化翻译处理。）
 
-
-
-
-
-# 使用马尔可夫模型编程
-
 我看到如下输出（每次可能都不同）：
 
-```
+```text
 1 Next state C order 0
 2 Next state A order 0
 3 Next state B order 1
@@ -3700,13 +3342,11 @@ $B, B \rightarrow B$
 
 你应该已经使用 `MarkovModelCPP` 库训练了一些马尔可夫模型。你已经实验了 `MarkovManager` 上 `getEvent` 函数的 `needChoices` 参数。你可能已经进行了一些实验来研究序列建模的质量。
 
-## 22
-
-## 即兴器插件
+# 22 即兴器插件
 
 在本章中，你将开始构建马尔可夫即兴插件，该插件对传入的 MIDI 数据进行建模，并从该模型生成相似但“有趣不同”风格的 MIDI 数据。本章首先概述了插件的各个组件，然后解释了如何准备 JUCE 项目以构建该插件。随后我们将深入研究音高建模，然后将其存储在马尔可夫模型中。你将看到如何从发送到 `processBlock` 函数的 MIDI 信息中提取数据，然后将其转换为适用于我们正在使用的马尔可夫模型库的格式。在本章结束，你将拥有一个基础的单音即兴器，它可以建模并生成音符流。
 
-### 22.1 自主即兴插件概述
+## 22.1 自主即兴插件概述
 
 即兴插件旨在对传入的 MIDI 数据进行建模，以便随后从该模型生成 MIDI 数据。从模型中生成的 MIDI 数据应该具有与它学习到的 MIDI 相似但“有趣不同”的模式。即兴器实时运行，在接收到 MIDI 数据时不断更新其模型。这使得交互变得非常有趣——它在不断学习新花样。22.1 描述了模型的主要组件。它对音高、持续时间、起始时间和速度进行建模。这些是描述传入 MIDI 音符流的主要元素：哪些音符？音符多长？音符何时发生，音量有多大？在接下来的章节中，你将看到如何为这些音乐元素构建模型，并将它们组合成一个完全运行的即兴器插件。
 
@@ -3714,7 +3354,7 @@ $B, B \rightarrow B$
 
 175
 
-![](img/f36e66929543fe6d506774ef8e004b7e_193_0.png)
+![图 22.1](img/f36e66929543fe6d506774ef8e004b7e_193_0.png)
 
 图 22.1
 
@@ -3747,7 +3387,7 @@ target_link_libraries(markov-expts PRIVATE markov-lib JUCE_audio_basics JUCE_aud
 add_subdirectory(JUCE)
 ```
 
-该目标有一些你可以看到的的设置：
+该目标有一些你可以看到的设置：
 
 ```cmake
 add_executable(markov-expts
@@ -3757,22 +3397,23 @@ add_executable(markov-expts
 
 启动即兴器插件
 
-![](img/f36e66929543fe6d506774ef8e004b7e_194_0.png)
+![图 22.2](img/f36e66929543fe6d506774ef8e004b7e_194_0.png)
 
 **图 22.2 启动项目的用户界面。**
 
 编译整个项目，你可以使用.. MIDI target，还有一些有用的需要知道：
+
 1. 项目是一个 MIDI 效果，`NEEDS_INPUT` 和 `NEEDS_OUTPUT` 设置为 TRUE。
 2. 你应该如所示更改 `COMPANY_NAME`、`MANUFACTURER_CODE` 和 `PRODUCT_NAME`。
 3. 在 Windows/ Visual Studio 上调试输出，你必须...
 
 ## 22.3 音高建模
 
-我们将从音高建模开始。启动项目已经有一个基础的 JUCE 架构，包括一个屏幕
+我们将从音高建模开始。启动项目已经有一个基础的 JUCE 架构，包括一个屏幕。
 
 ### 22.3.1 存储 MIDI 信息以供后处理
 
-你可能注意到 `handleNoteOn` 函数调用了 `processor.addMidi`，发送了 MIDI 信息。这完成了这些 MIDI 信息从屏幕键盘通过插件 界面到音频处理器的流程。但音频处理器应该对 MIDI 信息做什么？最终，它将它们添加到马尔可夫模型中，但我们需要考虑如何做到这一点。
+你可能注意到 `handleNoteOn` 函数调用了 `processor.addMidi`，发送了 MIDI 信息。这完成了这些 MIDI 信息从屏幕键盘通过插件界面到音频处理器的流程。但音频处理器应该对 MIDI 信息做什么？最终，它将它们添加到马尔可夫模型中，但我们需要考虑如何做到这一点。
 
 首先，用户可以随时点击键盘触发 `addMidi`。我更倾向于选择何时处理 MIDI，因此我将其存储以便后处理。作为一个原则——不要让用户干扰你的音频处理器——只在你想要的时候！你可以使用 JUCE `MidiBuffer` 对象存储 MIDI。将它添加到 `Processor.h` 的私有部分：
 
@@ -3780,17 +3421,13 @@ add_executable(markov-expts
 juce::MidiBuffer midiToProcess;
 ```
 
-
-
-
-
 # 开始 Improviser 插件
 
 # 178
 
 然后，在 `PluginProcessor.cpp` 中，编辑 `addMidi` 函数，将消息添加到缓冲区 `midiToProcess` 中。
 
-```
+```cpp
 midiToProcess.addEvent(msg, sampleOffset);
 ```
 
@@ -3798,30 +3435,29 @@ midiToProcess.addEvent(msg, sampleOffset);
 
 ## 22.4 从 MIDI 音符构建马尔可夫模型
 
-看看你是否能通过构建下一个序列的马尔可夫模型来处理这些的 MIDI 消息。要构建马尔可夫模型，你将使用 `MarkovManager` 类。在 PluginProcessor.h 定义的音频处理器类中定位 `MarkovManager` 对象的最佳位置。原因如下：
+看看你是否能通过构建下一个序列的马尔可夫模型来处理这些 MIDI 消息。要构建马尔可夫模型，你将使用 `MarkovManager` 类。在 `PluginProcessor.h` 定义的音频处理器类中定位 `MarkovManager` 对象的最佳位置。原因如下：
 
-- 最重要的是，只有音频处理器可以访问采样级数据，这使其能够在马尔可夫模型中精确表示时间
-- 音频处理器对象在插件生命周期内持续，而用户界面可能会被销毁并重建
-- 虽然屏幕上的 MIDI 键盘与插件用户界面交互，但音频处理器在它的 `process-Block` 函数中接收最重要的 MIDI，即来自插件宿主的 MIDI
+- 最重要的是，只有音频处理器可以访问采样级数据，这使其能够在马尔可夫模型中精确表示时间。
+- 音频处理器对象在插件生命周期内持续，而用户界面可能会被销毁并重建。
+- 虽然屏幕上的 MIDI 键盘与插件用户界面交互，但音频处理器在它的 `processBlock` 函数中接收最重要的 MIDI，即来自插件宿主的 MIDI。
 
 在 `PluginProcessor.h` 的音频处理器类的私有部分中添加 `MarkovManager` 对象，并包含头文件：
 
-```
+```cpp
 // 顶部假设你的 MM 文件夹在上级目录
 #include "../MarkovCPP/src/MarkovManager.h"
-//
+
 // 在 MidiMarkovProcessor 类的私有字段中：
 MarkovManager pitchModel;
 ```
 
 在 `PluginProcessor.cpp` 中，在构造函数的初始化列表中初始化 `pitchModel` 变量：
 
-```
-//
+```cpp
 // 在构造函数体上方
 pitchModel()
 {
-// 这里是构造函数体
+    // 这里是构造函数体
 }
 ```
 
@@ -3829,27 +3465,32 @@ pitchModel()
 
 我们现在将使用 `putEvent` 函数向 `MarkovProcessor::pitchModel` 对象添加我们拥有的任何音。在下面的代码中：
 
-```
+```cpp
 if (midiToProcess.getNumEvents() > 0) {
-    Messages.addEvents(midiToProcess,
-                    midiToProcess.getFirstEventTime(),
-                    midiToProcess.getLastEventTime()+1, 0);
+    Messages.addEvents(
+        midiToProcess,
+        midiToProcess.getFirstEventTime(),
+        midiToProcess.getLastEventTime() + 1,
+        0
+    );
     midiToProcess.clear();
 }
 ```
 
-这段代码检查 MIDI 缓冲区 `midiProcess` 是否有事件（用户将在屏幕 MIDI 键盘上使用）。如果有，它将使用一个跨越从最早到最晚事件的窗口来获取事件。然后它调用 `addsTo` midiMessages`，这是发送到 `processBlock` 的 MIDI 消息缓冲区——记住它有这个函数原型：
+这段代码检查 MIDI 缓冲区 `midiProcess` 是否有事件（用户将在屏幕 MIDI 键盘上使用）。如果有，它将使用一个跨越从最早到最晚事件的窗口来获取事件。然后它调用 `addsTo` `midiMessages`，这是发送到 `processBlock` 的 MIDI 消息缓冲区——记住它有这个函数原型：
 
-```
-void processBlock(juce::AudioBuffer<float>& audioBuffer,
-                    juce::MIDIBuffer& midiMessages) override {
+```cpp
+void processBlock(
+    juce::AudioBuffer<float>& audioBuffer,
+    juce::MIDIBuffer& midiMessages
+) override {
 ```
 
 第二个参数将包含从插件宿主发送的任何 MIDI 消息（如果你在 DAW 或类似的软件中运行插件）。因此，我们正在从屏幕 MIDI 键盘收集的所有消息添加到从宿主接收的消息中。现在我们需要处理的所有 MIDI 都在一个地方了。
 
 之后，我们通过调用 `clear` 从 `midiToProcess` 中移除屏幕键盘上存储的音符。我们现在准备好将音符推入马尔可夫模型。在 `processBlock` 中，遍历 `midiMessages` 并将所有音符添加到马尔可夫模型中：
 
-```
+```cpp
 for (const auto metadata : midiMessages) {
     auto message = metadata.getMessage();
     if (message.isNoteOn(std::to_string(message.getNumber()))) {
@@ -3861,8 +3502,11 @@ for (const auto metadata : midiMessages) {
 
 这段代码从缓冲区中提取任何 MIDI Note On 消息并将其添加到马尔可夫模型。然后，它打印模型的完整状态。尝试运行它并按下屏幕钢琴键盘上的键。你应该能看到这样的输出，显示你的模型正在迅速增长：
 
+```text
 9,96,96,95,77,79,81,89,91,93,1,95,
+
 9,96,95,93,91,89,86,84,82,1,80,
+```
 
 如果你手头有一个 MIDI 控制器，你可以在独立模式（Standalone）下运行应用程序，并将键盘配置为输入设备。然后你就可以通过弹按键将音符放入你的模型中。
 
@@ -3870,48 +3514,60 @@ for (const auto metadata : midiMessages) {
 
 现在你有了一个模型，可以使用它来生成音符并将其发送出去。你可以从开始调用模型上的 `getEvent` 并打印音符开始。这里是实现此操作的代码：
 
-```
+```cpp
 for (const auto metadata : midiMessages) {
     auto message = metadata.getMessage();
     if (message.isNoteOn()) {
         pitch_model = pitchModel.getEvent(std::to_string(message.getNumber()));
         int note = std::stoi(pitchModel.getEvent(true));
-        DBG ("incoming note: " << message.getNumber()
+        DBG(
+            "incoming note: " << message.getNumber()
             << " model note: "
             << " order: "
             << pitchModel.getOrderLastEvent()
-            << std::endl);
+            << std::endl
+        );
     }
 }
 ```
 
 当我在独立模式运行插件并按下钢琴键盘上的几个键时，你可以看到这样的输出：
 
+```text
 incoming:89 model:82 order 0
-incoming:86 model:84 order 0
-incoming:71 model:84 order 1
-incoming:72 model:82 order 0
-incoming:81 model:89 order 0
-incoming:74 model:81 order 0
-incoming:80 model:76 order 1
-incoming:75 model:81 order 1
 
-在这里，理解 `getEvent` 函数中 'true' 参数的设计至关重要，它将为模型选择一个下一个状态至少有两个选择的阶。模型返回用于查找的上一个状态的阶，你通过 `getOrderLastEvent` 函数查询此。如果你只向模型传递了几个 MIDI 音符（事件），它通常会生成一个低阶数，因为它没有不同的结果。在我的上面示例中，马尔可夫模型主要运行在零阶（从所有观察值中采样）或一阶。如果你存入更多事件，它将能够以更高的阶数进行采样——模型正在变得越来越丰富。尝试使用屏幕键盘或 MIDI 键盘向模型发送音符序列。如果你以重复的模式弹奏，它会增加其阶数吗？在现场表演期间训练马尔可夫模型就像演奏乐器——你必须通过练习来学会获得你想要的效果。
+incoming:86 model:84 order 0
+
+incoming:71 model:84 order 1
+
+incoming:72 model:82 order 0
+
+incoming:81 model:89 order 0
+
+incoming:74 model:81 order 0
+
+incoming:80 model:76 order 1
+
+incoming:75 model:81 order 1
+```
+
+
+
+在这里，理解`getEvent`函数中`true`参数的设计至关重要，它将为模型选择一个下一个状态至少有两个选择的阶。模型返回用于查找的上一个状态的阶，你通过`getOrderLastEvent`函数查询此。如果你只向模型传递了几个 MIDI 音符（事件），它通常会生成一个低阶数，因为它没有不同的结果。在我的上面示例中，马尔可夫模型主要运行在零阶（从所有观察值中采样）或一阶。如果你存入更多事件，它将能够以更高的阶数进行采样——模型正在变得越来越丰富。尝试使用屏幕键盘或 MIDI 键盘向模型发送音符序列。如果你以重复的模式弹奏，它会增加其阶数吗？在现场表演期间训练马尔可夫模型就像演奏乐器——你必须通过练习来学会获得你想要的效果。
 
 # 开始 Improviser 插件
 
-# 181
+## 181
 
-![](img/f36e66929543fe6d506774ef8e00b7e_199_0.png)
+![图 22.3](img/f36e66929543fe6d506774ef8e00b7e_199_0.png)
 
-图 22.3
 在 AudioPluginHost 中运行的马尔可夫插件。注意它是如何接收 MIDI 然后将其传递给 Dexed 合成器的。
 
 ## 22.6 从马尔可夫插件发送 MIDI 音符到另一个插件
 
-Improviser 插件旨在作为一个 MIDI 效果，因此典型的设置是它位于 MIDI 数据源和可以播放的合成器之间。图 22.3 描述了这种设置，MIDI 插件在 MIDI 进入 Dexed 合成器之前对其处理。要让你的插件工作，你只需要在 `processBlock` 函数中向 `midiMessages` 缓冲区添加。将其想象成一列到达站的火车。火车进入你的插件；你处理进入的消息；然后你添加你想发送到后续插件的任何。火车离开你的 `processBlock` 并进入下一个。下面的代码显示了如何从模型读取音符然后添加到 `midiMessages` 缓冲区：
+Improviser 插件旨在作为一个 MIDI 效果，因此典型的设置是它位于 MIDI 数据源和可以播放的合成器之间。图 22.3 描述了这种设置，MIDI 插件在 MIDI 进入 Dexed 合成器之前对其处理。要让你的插件工作，你只需要在`processBlock`函数中向`midiMessages`缓冲区添加。将其想象成一列到达站的火车。火车进入你的插件；你处理进入的消息；然后你添加你想发送到后续插件的任何。火车离开你的`processBlock`并进入下一个。下面的代码显示了如何从模型读取音符然后添加到`midiMessages`缓冲区：
 
-```
+```cpp
 // 从模型获取音符转换为 int
 int note = std::stoi(pitchModel.getEvent(true));
 // 将 int 转换为 note on message
@@ -3920,15 +3576,15 @@ juce::MidiMessage nOn = juce::MidiMessage::noteOn(1, note, 0.5f);
 midiMessages.addEvent(nOn, 0);
 ```
 
-如果你直接在 `processBlock` 中调用，你将在每次 `processBlock` 被调用时发送消息。这可能是一个坏主意，因为 `processBlock` 每秒被调用 `sampleRate / blocksize` 次，例如 44.1kh/1024 设置下每秒 43 次。
+如果你直接在`processBlock`中调用，你将在每次`processBlock`被调用时发送消息。这可能是一个坏主意，因为`processBlock`每秒被调用`sampleRate / blocksize`次，例如 44.1kh/1024 设置下每秒 43 次。
 
-# 图 22.4
+## 图 22.4
 
-![](img/f36e66929543fe6d506774ef8e00b7e_200_0.png)
+![图 22.4](img/f36e66929543fe6d506774ef8e00b7e_200_0.png)
 
-现在是做设计决定了——音乐播放器何时播放音符？一个简单的想法是在接收音符时播放。为了这一点，你可以在将任何输入添加到马尔可夫模型之后，在 `processBlock` 的结尾添加这段代码：
+现在是做设计决定了——音乐播放器何时播放音符？一个简单的想法是在接收音符时播放。为了这一点，你可以在将任何输入添加到马尔可夫模型之后，在`processBlock`的结尾添加这段代码：
 
-```
+```cpp
 if (midiMessages.getNumEvents() > 0) {
     int note = std::stoi(pitchModel.getEvent(true));
     juce::MidiMessage n = juce::MidiMessage(note, 0.5f);
@@ -3940,15 +3596,11 @@ if (midiMessages.getNumEvents() > 0) {
 
 使用 AudioPluginHost 的 MIDI Logger 插件来观察从马尔可夫插件输出的 MIDI。MIDI Logger 插件作为 AudioPluginHost 的内置插件提供。
 
-
-
-
-
 # 开始编写即兴插件
 
 ## 22.6.1 为生成的音符分离独立的 MIDI 缓冲区
 
-现在我们要让 `processBlock` 变得稍微复杂一些。直接将模型生成的 MIDI 音符存储在输出 MIDI 缓冲区中的问题在于，我们无法无法在发送音符之前选择清空该缓冲区。如果你不希望即兴器将输入的音符原样输出回去，你需要清除这些音符并将其替换为生成的音符。为了实现这一点，你可以在 `processBlock` 中创建一个临时的 MIDI 缓冲区并将生成的音符写入其中：
+现在我们要让`processBlock`变得稍微复杂一些。直接将模型生成的 MIDI 音符存储在输出 MIDI 缓冲区中的问题在于，我们无法无法在发送音符之前选择清空该缓冲区。如果你不希望即兴器将输入的音符原样输出回去，你需要清除这些音符并将其替换为生成的音符。为了实现这一点，你可以在`processBlock`中创建一个临时的 MIDI 缓冲区并将生成的音符写入其中：
 
 ```cpp
 // 添加以下内容：
@@ -3967,7 +3619,7 @@ midiMessages.addEvents(generatedMessages, generatedMessages.getFirstFirstTime(),
 
 ## 22.7 Note-off 消息
 
-在测试中你会发现音符从未结束。这是因为你必须发送 MIDI note-off 消息来告诉合成器停止播放音符。这很复杂，因为你希望在发送 note-on 的不同时间发送 note-off 消息；同时发送 note-on 和 note-off 会导致音符过短，或者合成器甚至会忽略 note-off 消息。你需要稍后发送 note-off 消息，晚一秒钟。由于 `processBlock` 只为你提供了一个很短的时间窗口来发送消息，你需要等待 `processBlock` 的调用来生成 note-off 消息。你需要某种方法在 `processBlock` 的调用之间记住，你有一些 note-off 消息需要发送。
+在测试中你会发现音符从未结束。这是因为你必须发送 MIDI note-off 消息来告诉合成器停止播放音符。这很复杂，因为你希望在发送 note-on 的不同时间发送 note-off 消息；同时发送 note-on 和 note-off 会导致音符过短，或者合成器甚至会忽略 note-off 消息。你需要稍后发送 note-off 消息，晚一秒钟。由于`processBlock`只为你提供了一个很短的时间窗口来发送消息，你需要等待`processBlock`的调用来生成 note-off 消息。你需要某种方法在`processBlock`的调用之间记住，你有一些 note-off 消息需要发送。
 
 实现这一点的简单方法（这在你稍后处理时间建模时很有帮助）是使用一个数组，在其中记录何时需要发送 note-off。该数组将有 127 个元素，每个元素对应一个可能的音符。另一个变量将允许你跟踪已过去的采样数（`elapsedSamples`）。
 
@@ -3985,7 +3637,7 @@ for (auto i=0;i<127;++i){
 }
 ```
 
-`unsigned long` 类型是合适的，因为已过去的采样数可能会变得很大。将这些添加到 `processBlock` 的私有部分：
+`unsigned long`类型是合适的，因为已过去的采样数可能会变得很大。将这些添加到`processBlock`的私有部分：
 
 ```cpp
 unsigned long noteOffTimes[127];
@@ -4001,12 +3653,13 @@ for (auto i=0;i<127;++i)
     noteOffTimes[i] = 0;
 ```
 
-首先，是管理 `elapsedSamples`。在 `processBlock` 函数结束处：
+首先，是管理`elapsedSamples`。在`processBlock`函数结束处：
+
 ```cpp
 elapsedSamples += buffer.getNumSamples();
 ```
 
-这意味着每当调用一次 `processBlock` 时，`elapsedSamples` 就会增加块中的采样数，例如 1024。当你想要播放一个音符并备后停止时，通过 `noteOffTimes` 存储触发 note-off 的时间。在 `processBlock` 的音符生成代码中：
+这意味着每当调用一次`processBlock`时，`elapsedSamples`就会增加块中的采样数，例如 1024。当你想要播放一个音符并备后停止时，通过`noteOffTimes`存储触发 note-off 的时间。在`processBlock`的音符生成代码中：
 
 ```cpp
 int note = std::stoi(pitchModel.getEvent(true));
@@ -4016,39 +3669,39 @@ generatedMessages.add(nOn, 0);
 noteOffTimes[note] = elapsedSamples + getSampleRate();
 ```
 
-我将 note-off 设置为 `elapsedSamples + getSampleRate()`，这相当于“一秒后的未来”。现在你需要在每次运行 `processBlock` 运行时检查 `noteOffTimes` 数组，并在必要时添加 note-off：
+我将 note-off 设置为`elapsedSamples + getSampleRate()`，这相当于“一秒后的未来”。现在你需要在每次运行`processBlock`运行时检查`noteOffTimes`数组，并在必要时添加 note-off：
 
-在那段代码中，我检查 `elapsedSamples` 是否已经进展到 note-off 应该发生的时间。如果是，就是时候发送 note-off 了。发送它并重置 `noteOffTimes` 中的相关值。在 AudioPluginHost 中使用 MIDI 日志器进行测试。你应该能看到你的插件输出了 MIDI-on 和 MIDI note-off 消息。如果你想加载插件的最新版本，需要退出并重启 AudioPluginHost。如果你保存了布局，下次它应该会自动加载，让事情变得更简单。
+在那段代码中，我检查`elapsedSamples`是否已经进展到 note-off 应该发生的时间。如果是，就是时候发送 note-off 了。发送它并重置`noteOffTimes`中的相关值。在 AudioPluginHost 中使用 MIDI 日志器进行测试。你应该能看到你的插件输出了 MIDI-on 和 MIDI note-off 消息。如果你想加载插件的最新版本，需要退出并重启 AudioPluginHost。如果你保存了布局，下次它应该会自动加载，让事情变得更简单。
 
 这不是采样精确的定时，因为你没有检查缓冲区中每个采样的时间，而是每个缓冲区只检查一次。你可以尽管开发一个更精确的定时系统，但目前这可以工作，最坏的误差也就是一个缓冲区长度。
 
 ## 22.8 添加重置按钮
 
-现在是为马尔可夫插件的用户界面添加一个重置按钮的好时机，用于重置马尔可夫模型。在 `PluginEditor.h` 中添加一个用户界面 TextButton 对象：
+现在是为马尔可夫插件的用户界面添加一个重置按钮的好时机，用于重置马尔可夫模型。在`PluginEditor.h`中添加一个用户界面 TextButton 对象：
 
 ```cpp
 juce::TextButton resetButton;
 ```
 
-在构造函数中调用 `MakeVisible`：
+在构造函数中调用`MakeVisible`：
 
 ```cpp
 addAndVisible(resetButton);
 ```
 
-在 `resize` 中设置边界：
+在`resize`中设置边界：
 
 ```cpp
 resetButton.setBounds(0, rowHeight, getWidth(), rowHeight);
 ```
 
-在 `PluginProcessor.h` 中添加函数原型：
+在`PluginProcessor.h`中添加函数原型：
 
 ```cpp
 void resetModel();
 ```
 
-然后在 `PluginProcessor.cpp` 中进行实现：
+然后在`PluginProcessor.cpp`中进行实现：
 
 ```cpp
 void MarkovProcessor::resetModel()
@@ -4057,7 +3710,7 @@ void MarkovProcessor::resetModel()
 }
 ```
 
-最后，在 `PluginEditor.cpp` 中放入一些代码来处理：
+最后，在`PluginEditor.cpp`中放入一些代码来处理：
 
 ```cpp
 void MarkovEditor::buttonClicked(juce::Button* btn)
@@ -4072,34 +3725,29 @@ void MarkovEditor::buttonClicked(juce::Button* btn)
 
 此时，你应该拥有一个功能完整的单声道模型。你应该能够在你的 DAW 或或其他主机中加载它，并在示例 39.3 中看到本章的结果。
 
-# 23
+# 23 起时间建模
 
-# 起时间建模
+在本章中，你将为即兴器添加时间。你将使用两个马尔可夫链来实现这一点：一个用于音符持续时间，另一个用于“音符起始间隔”（inter-onset-interval），即音符开始之间流逝的时间。你将学到`processBlock`如何为你提供采样精确的定时。我们将使用这些数据来控制即兴器的行为。
 
-在本章中，你将为即兴器添加时间。你将使用两个马尔可夫链来实现这一点：一个用于音符持续时间，另一个用于“音符起始间隔”（inter-onset-interval），即音符开始之间流逝的时间。你将学到 `processBlock` 如何为你提供采样精确的定时。我们将使用这些数据来控制即兴器的行为。
-
-### 23.1 音符持续时间与音符起始间隔
+## 23.1 音符持续时间与音符起始间隔
 
 现在我们要教代理什么是定时。定时在音乐中非常重要；知道何时停止完全是另一回事。我们将考虑定时的两个方面：音符持续多久以及音符之间等待多久。我将这两者称为音符持续时间和音符起始间隔（IOI）。图 23.1 在典型的钢琴卷图中说明了这些属性。
 
-### 23.2 建模音符起始间隔
+## 23.2 建模音符起始间隔
 
-我们将首先建模音符起始间隔，这将允许即兴器决定何时播放音符。目前，即兴器在你弹的时候就播放。如果它根据你音符之间的间隔来播放，将会有趣得多。测量 IOI 的第一步是捕捉音符开始的绝对时间，即图 23.2 所示的起始采样值。我们不需要担心正在播放哪些音符——IOI 测量的是任何播放音符之间的间隔。让我们在 PluginProcessor.h 的私有部分添加用于存储 IOI 马尔可夫模型和起始采样值的变量：
+我们将首先建模音符起始间隔，这将允许即兴器决定何时播放音符。目前，即兴器在你弹的时候就播放。如果它根据你音符之间的间隔来播放，将会有趣得多。测量 IOI 的第一步是捕捉音符开始的绝对时间，即图 23.2 所示的起始采样值。我们不需要担心正在播放哪些音符——IOI 测量的是任何播放音符之间的间隔。让我们在`PluginProcessor.h`的私有部分添加用于存储 IOI 马尔可夫模型和起始采样值的变量：
 
--   MarkovManager iOIModel;
--   unsigned long startSample;
-
-
-
-
+- `MarkovManager iOIModel;`
+- `unsigned long startSample;`
 
 # 建模音符触发时间
 
-unsigned long lastNoteOnTime;
-确保你在 `PluginProcessor.cpp` 的 `resetMarkovModel` 函数中重置时重置了 `last`。然后在初始化列表中将 `lastNoteOnTime` 初始化为 0，并设置 `iOIModel()`。
+`unsigned long lastNoteOnTime;`
+
+确保你在`PluginProcessor.cpp`的`resetMarkovModel`函数中重置时重置了`last`。然后在初始化列表中将`lastNoteOnTime`初始化为 0，并设置`iOIModel()`。
 
 ```cpp
-现在，当我们在 `processBlock` 中接收到 MIDI note-on 消息时，将其发生的绝对样本时间（`elapsedTime + message.sample, getTimeStamp()`）存储到 `lastNoteOnTime`：
+现在，当我们在`processBlock`中接收到 MIDI note-on 消息时，将其发生的绝对样本时间（`elapsedTime + message.sample, getTimeStamp()`）存储到`lastNoteOnTime`：
 for (const auto& metadata : midiMessages) {
   auto message = metadata.getMessage();
   if (message.isNote()) {
@@ -4112,13 +3760,13 @@ for (const auto& metadata : midiMessages) {
 
 从这段代码中看到 - 当你以独立模式（standalone mode）运行应用并点击屏幕键盘时，请确保使用了了类似的逻辑：
 
-- Note on at: 55296
-- Note on at: 82944
-- Note on at: 110592
-- Note on at: 152064
-- Note on at: 177664
+- `Note on at: 55296`
+- `Note on at: 82944`
+- `Note on at: 110592`
+- `Note on at: 152064`
+- `Note on at: 177664`
 
-在事情变得更复杂之前，你应该对代码进行模块化。你可以在 `PluginProcessor.cpp/h` 中添加一个名为 `identifyOI` 的函数。
+在事情变得更复杂之前，你应该对代码进行模块化。你可以在`PluginProcessor.cpp/h`中添加一个名为`identifyOI`的函数。
 
 ```cpp
 // 在头文件中，private 部分：
@@ -4133,7 +3781,7 @@ void PluginProcessor::identifyOI(const juce::MidiBuffer& midiMessages) {
 updateNoteOnTime(midiMessages);
 ```
 
-注意我如何使用 `const &`。`const` 意味着我们不会修改发送的数据（`MidiBuffer` - 我们只是在读取它）。`&` 意味着数据将通过引用传递，而不是发送副本。这使得代码更高效，因为不需要在每次调用该函数时都复制 `MidiBuffer`。在我们表现得优秀的工程师的同时，你也可以将 `processBlock` 中的音高模型代码模块化到任何你喜欢的函数中。我将其称为为音高管理函数 `analysePitches`。
+注意我如何使用`const &`。`const`意味着我们不会修改发送的数据（`MidiBuffer`——我们只是在读取它）。`&`意味着数据将通过引用传递，而不是发送副本。这使得代码更高效，因为不需要在每次调用该函数时都复制`MidiBuffer`。在我们表现得优秀的工程师的同时，你也可以将`processBlock`中的音高模型代码模块化到任何你喜欢的函数中。我将其称为为音高管理函数`analysePitches`。
 
 ```cpp
 // 1 在头文件中，private 部分：
@@ -4150,7 +3798,7 @@ updateNoteOnTime(midiMessages);
 // 12 }
 ```
 
-现在你需要更新 `identifyOI` 函数，它负责计算 IOI 并将其添加到你的 IO 模型中：
+现在你需要更新`identifyOI`函数，它负责计算 IOI 并将其添加到你的 IO 模型中：
 
 ```cpp
 1 unsigned long exactNoteOnTime = elapsedSamples + message.getTimestamp();
@@ -4164,31 +3812,29 @@ updateNoteOnTime(midiMessages);
 
 现在在独立模式下构建并运行。点击屏幕上的间隔键，并监控 IOIs。按大约一秒的间隔敲击，别告诉任何人你的节奏感不好——我自称是一名鼓手！
 
-- Note on at: 778752 OI: 45668
-- Note on at: 82944 OI: 41472
-- Note on at: 86062 OI: 4044
-
-
-
-
+- `Note on at: 778752 OI: 45668`
+- `Note on at: 82944 OI: 41472`
+- `Note on at: 86062 OI: 4044`
 
 # 24 音符时长的建模
+
+
 
 在本章中，你将通过实现一个音符时长模型，完成对即兴者中时间和节奏的建模。音符时长模型会记录不同音符的开始和结束时间。它会计算音符的时长并使用独立的马尔可夫模型对其进行建模。在本章结束时，你应该拥有一个良好的插件，它可以用单声道 MIDI 序列来限制即兴者。
 
 ## 24.1 计算音符时长
 
-目前，即兴者总是播放时长为一秒的音符。理想情况下，我们希望根据输入音符长度的模型来设置音符时长，就像我们处理音高和 IOI（音符间隔）那样。为了测量音符时长，你可以使用与单声道音高模型中准备音结束（note-off）消息类似的技术。我们通过计算应该发送音结束信息的绝对已时间（采样数）来管理结束时间，并将其存储在一个为 127 个可能的音符各预留槽位的数组中。每当 `processBlock` 运行时，我们都会检查数组，查看当前时间是否已经过了任何音结束应该发送的时间；如果是，我们就将其添加到输出的 MIDI 消息缓冲区。
+目前，即兴者总是播放时长为一秒的音符。理想情况下，我们希望根据输入音符长度的模型来设置音符时长，就像我们处理音高和 IOI（音符间隔）那样。为了测量音符时长，你可以使用与单声道音高模型中准备音结束（note-off）消息类似的技术。我们通过计算应该发送音结束信息的绝对已时间（采样数）来管理结束时间，并将其存储在一个为 127 个可能的音符各预留槽位的数组中。每当`processBlock`运行时，我们都会检查数组，查看当前时间是否已经过了任何音结束应该发送的时间；如果是，我们就将其添加到输出的 MIDI 消息缓冲区。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_212_0.png)
 
-**图 24.1** 测量音符时长必须处理跨越多次 process 调用的音符。
+**图 24.1** 测量音符时长必须处理跨越多次`process`调用的音符。
 
 回到音符时长，我们将通过将输入音符开始（note-on）的起始采样点存储在每个音符一个槽位的数组中来测量。当该音符的音结束到达时，我们可以计算自存储的音符开始以来经过的采样数。这将是音符的时长。
 
-图 24.1 说明了测量音符开始和结束之间采样数的概念。它没有存储数组，但本应为每个可能的音符都有一个独立的“起始采样点”。它展示了音符如何跨越 `process.h` 的调用：
+图 24.1 说明了测量音符开始和结束之间采样数的概念。它没有存储数组，但本应为每个可能的音符都有一个独立的“起始采样点”。它展示了音符如何跨越`process.h`的调用：
 
-好了，该编辑一些代码了。在 `Plugin-Processor.h` 中添加一个新的私有数据成员：
+好了，该编辑一些代码了。在`Plugin-Processor.h`中添加一个新的私有数据成员：
 
 ```cpp
 unsigned long noteOnTimes[127];
@@ -4203,7 +3849,7 @@ for (int i=0; i<127; i++) {
 }
 ```
 
-然后，当你在 `analysePitches` 中检测到音符时，将经过的时间记录到该音符的数组中：
+然后，当你在`analysePitches`中检测到音符时，将经过的时间记录到该音符的数组中：
 
 ```cpp
 for (const auto metadata : midiMessages) {
@@ -4217,9 +3863,9 @@ for (const auto metadata : midiMessages) {
 }
 ```
 
-注意我没有在每次调用 `process` 时只使用一次 `elapsedSamples - lastElapsedSamples`，因为音符可能发生在该块内部。在我运行块大小为 2048 的系统上，当我在 AudioPluginHost 中运行插件（如 24.2 所示）时，我看到代码输出如下内容：
+注意我没有在每次调用`process`时只使用一次`elapsedSamples - lastElapsedSamples`，因为音符可能发生在该块内部。在我运行块大小为 2048 的系统上，当我在 AudioPluginHost 中运行插件（如 24.2 所示）时，我看到代码输出如下内容：
 
-```
+```text
 Msg timestamp 1107
 Msg timestamp 593
 Msg timestamp 1133
@@ -4229,7 +3875,7 @@ Msg timestamp 102
 Msg timestamp 623
 ```
 
-现在你已经知道任何输入音符何时开始了。下一步一步是检测音符何时结束并计算它们的长度。回到 `analysePitches` 中的音符迭代器，添加一个新块来处理音结束：
+现在你已经知道任何输入音符何时开始了。下一步一步是检测音符何时结束并计算它们的长度。回到`analysePitches`中的音符迭代器，添加一个新块来处理音结束：
 
 ```cpp
 if (message.isNoteOff()) {
@@ -4237,7 +3883,8 @@ if (message.isNoteOff()) {
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_214_0.png)
 
-图 24.2
+**图 24.2**
+
 在音符开始消息上测试 Test 函数 - 时间戳在 0 和 2048 的块大小之间。
 
 ```cpp
@@ -4248,7 +3895,7 @@ DBG("n: " << message.getNoteNumber() << " lasted " << length << " (use like this
 
 试一下！当我在插件内置的钢琴键盘上弹音时，这很简单：
 
-```
+```text
 n: 65 lasted 36555
 n: 72 lasted 37940
 n: 72 lasted 4880
@@ -4256,13 +3903,13 @@ n: 72 lasted 1952
 n: 72 lasted 7587
 ```
 
-尝试长按音符，并验证打印输出中的音符长度看起来是否正确。你需要一个马尔可夫模型来对这些时长进行建模。你只需要在 `PluginProcessor.h` 的私有字段中添加另一个 `MarkovManager` 对象：
+尝试长按音符，并验证打印输出中的音符长度看起来是否正确。你需要一个马尔可夫模型来对这些时长进行建模。你只需要在`PluginProcessor.h`的私有字段中添加另一个`MarkovManager`对象：
 
 ```cpp
 MarkovManager noteDurationModel;
 ```
 
-现在，在 `analysePitches` 中的音符迭代器中对模型调用 `putEvent`：
+现在，在`analysePitches`中的音符迭代器中对模型调用`putEvent`：
 
 ```cpp
 if (message.isNoteOff()) {
@@ -4278,7 +3925,7 @@ if (message.isNoteOff()) {
 
 ## 24.2 从模型生成音符时长
 
-现在你有了一个音符时长的模型，如何使用它来规定即兴者播放的音符时长呢？这比处理 IOI 数据容易！答案是使用模型来决定未来音结束的发生情况，而不是硬编码该值。这就是我们设置音结束的方式（这段代码可以在 `generateNotesFromModel` 中）：
+现在你有了一个音符时长的模型，如何使用它来规定即兴者播放的音符时长呢？这比处理 IOI 数据容易！答案是使用模型来决定未来音结束的发生情况，而不是硬编码该值。这就是我们设置音结束的方式（这段代码可以在`generateNotesFromModel`中）：
 
 ```cpp
 // 从音高模型获取音高
@@ -4298,7 +3945,7 @@ offOffTimes[note] = elapsedSamples + duration;
 
 ### 音符时长建模
 
-为了处理时长，我们需要一个独立的函数，因为 `analysePitches` 应该处理音高而不是时长。类似于这样的：
+为了处理时长，我们需要一个独立的函数，因为`analysePitches`应该处理音高而不是时长。类似于这样的：
 
 ```cpp
 void MyAudioProcessor::analysePitches(const juce::Array<juce::MidiMessage>& midiMessages) {
@@ -4330,19 +3977,15 @@ void MyAudioProcessor::analyseDuration(const juce::Array<juce::MidiMessage>& mid
 }
 ```
 
-然后你的 `processBlock` 就可以包含三个整洁的函数：
+然后你的`processBlock`就可以包含三个整洁的函数：
 
-- analysePitches(midiMessages);
-- analyseDuration(midiMessages);
-- analyseOI(midiMessages);
+- `analysePitches(midiMessages);`
+- `analyseDuration(midiMessages);`
+- `analyseOI(midiMessages);`
 
-这种感觉好多了。没有什么比糟糕更糟糕。记得在 `PluginProcessor` 中重置新模型。
+这种感觉好多了。没有什么比糟糕更糟糕。记得在`PluginProcessor`中重置新模型。
 
-
-
-
-
-## 24.3 量化 (Quantisation)
+## 24.3 量化（Quantisation）
 
 如果你从 DAW 向即兴器发送 MIDI 数据，它可能已经过量化，这意味着音符的时序对齐到了时间网格。即兴器在模型中也会使用这种量化的时间。如果你是自由地向插件输入，时间将不会被量化。你需要对时间进行量化，以避免最终得到一个主要是低阶的模型。原因是每个 IOI（音符间隔）和音符持续时间都是不同的，因为它们在样本级别可能落在任何位置。
 
@@ -4352,10 +3995,9 @@ void MyAudioProcessor::analyseDuration(const juce::Array<juce::MidiMessage>& mid
 
 到此时，你应该已经有一个完全可以运行的基于马尔可夫模型的音乐智能体插件。它可以从实时 MIDI 流中实时学习，并在学习的同时生成输出。你还应该能够更多地思考即兴器中的设计决策。为音高、IOI 和持续时间建立独立的模型是一个好主意吗？还是复合模型会为你产生更好的结果？此外，你应该已经考虑过量化。那里有很多供你探索。
 
-## 25
-## 多声马尔可夫模型 (Polyphonic Markov model)
+# 25 多声马尔可夫模型（Polyphonic Markov model）
 
-在本章中，你将进一步开发马尔可夫建模即兴器插件，使其能够模拟多声 MIDI 序列。这里的基本原理是多声状态只是另一种状态。我们的第一个工作是弄清楚如何将多声状态传递给马尔可夫模型。然后，我们必须研究在从模型生成时如何处理这些状态。你还将处理与人类在键盘上弹奏和弦相关的实际问题，即音符（note-on）并非精确在同一时间发生。解决方案是一个 `ChordDetector` 类，它根据音符开启时间的一些约束为你提供和弦。
+在本章中，你将进一步开发马尔可夫建模即兴器插件，使其能够模拟多声 MIDI 序列。这里的基本原理是多声状态只是另一种状态。我们的第一个工作是弄清楚如何将多声状态传递给马尔可夫模型。然后，我们必须研究在从模型生成时如何处理这些状态。你还将处理与人类在键盘上弹奏和弦相关的实际问题，即音符（note-on）并非精确在同一时间发生。解决方案是一个`ChordDetector`类，它根据音符开启时间的一些约束为你提供和弦。
 
 ## 25.1 准备多声状态
 
@@ -4369,7 +4011,7 @@ markovModel.putEvent(
 );
 ```
 
-`MarkovManager::putEvent` 函数期望一个字符串，上面的代码将 MIDI 码转换为字符串。因此，如果你想向它发送一个和弦，你需要弄清楚如何将几个数字编码成一个字符串。然后，当编码后的数字从 'getEvent' 返回时，你需要从你的编码字符串转换回几个音符数字。将以下函数添加到 `PluginProcessor.h` 文件的私有部分：
+`MarkovManager::putEvent`函数期望一个字符串，上面的代码将 MIDI 码转换为字符串。因此，如果你想向它发送一个和弦，你需要弄清楚如何将几个数字编码成一个字符串。然后，当编码后的数字从`getEvent`返回时，你需要从你的编码字符串转换回几个音符数字。将以下函数添加到`PluginProcessor.h`文件的私有部分：
 
 ```cpp
 std::string notesToMarkovState(const std::vector<int>& notesVec);
@@ -4402,13 +4044,14 @@ std::vector<int> MidiMarkovProcessor::markovStateToNotes(
 }
 ```
 
-本质上，你通过用连字符连接音符来为音符向量创建状态。然后，为了从状态返回向量，就对连字符进行分词（tokenize）。然后使用适当的 `const` 和语法来明确发送的数据未被编辑，并确保它没有被不必要的拷贝。
+本质上，你通过用连字符连接音符来为音符向量创建状态。然后，为了从状态返回向量，就对连字符进行分词（tokenize）。然后使用适当的`const`和语法来明确发送的数据未被编辑，并确保它没有被不必要的拷贝。
 
 ### 25.2 判断何时是多声的：音符之间有多长？
 
-现在，你可以将多声状态传递给马尔可夫模型了；你必须弄清楚你的插件何时在在 MIDI 缓冲区中接收到多声 MIDI。你可能会想：“很好，我只需检查音符的时间戳，如果它们相同，那就是和弦。如果它们不同，我把音符视为个，并将它们单独传递给模型。”遗憾的是，人类的局限性可能会阻碍这个计划。至少像我这样无法以样本级精度触发音符的人类，键盘往往不会在精确的同一时间开始，尤其是当你以样本测量开始时间时。它们甚至可能不在同一个 `processBlock` 调用中到达。例如，RME 声卡可以可靠地运行在 96kHz 的采样率和 16 个样本的缓冲区大小下。如果我的 DAW 使用这些设置，`processBlock` 每次只会看到 16 个样本，大约是 0.0002 秒或 0.2ms。我写了一些测试代码来查看 MIDI 在时间上相差多远
+现在，你可以将多声状态传递给马尔可夫模型了；你必须弄清楚你的插件何时在 MIDI 缓冲区中接收到多声 MIDI。你可能会想：“很好，我只需检查音符的时间戳，如果它们相同，那就是和弦。如果它们不同，我把音符视为个，并将它们单独传递给模型。”遗憾的是，人类的局限性可能会阻碍这个计划。至少像我这样无法以样本级精度触发音符的人类，键盘往往不会在精确的同一时间开始，尤其是当你以样本测量开始时间时。它们甚至可能不在同一个`processBlock`调用中到达。例如，RME 声卡可以可靠地运行在 96kHz 的采样率和 16 个样本的缓冲区大小下。如果我的 DAW 使用这些设置，`processBlock`每次只会看到 16 个样本，大约是 0.0002 秒或 0.2ms。我写了一些测试代码来查看 MIDI 在时间上相差多远。
 
-![](img/f36e66929543fe6d50677d](img/f36e66929543fe6d50677d)
+![](img/f36e66929543fe6d50677d)
+
 *多声马尔可夫模型 - 202*
 
 时间戳是不相同的 - 它们是和弦。在下面的图中，当时间足够足够时，它们被视为和弦。如果它们相远，则被视为独立的音符。
@@ -4423,13 +4066,17 @@ for (auto& message : midiMessages) {
 }
 ```
 
-下图显示了 `ChordDetector` 如何处理不同的间隔：
+下图显示了`ChordDetector`如何处理不同的间隔：
 
-![](img/f36e66929543fe6d50677d)5.1### 25.3 使用 ChordDetector 类
+![](img/f36e66929543fe6d50677d)5.1
 
-为了解决这个问题，我实现了一个名为 `ChordDetector` 的类，它可以帮助检测和弦。你告诉它间隔，以判断是单音还是和弦。如上所述，50ms 的时间对我有效，但你可以得更快或更准确。然后你将音符发送给 `ChordDetector`，如果音符时间足够，它会将它们并在向量中，你可以在需要时检索。你可以在代码 39.4.6 中找到 `ChordDetector` 类。你可以在命令行上加载项目对 `ChordDetector` 进行测试。
+### 25.3 使用`ChordDetector`类
 
-将 `ChordDetector.h` 和 `ChordDetector.cpp` 文件放入项目的 `src` 文件夹。然后，你必须编辑你的 `CMakeLists.txt` 文件，将新的 `ChordDetector.cpp` 包含在构建中。找到指定项目 `.cpp` 文件的 `target_sources`。添加一行：
+为了解决这个问题，我实现了一个名为`ChordDetector`的类，它可以帮助检测和弦。你告诉它间隔，以判断是单音还是和弦。如上所述，50ms 的时间对我有效，但你可以得更快或更准确。然后你将音符发送给`ChordDetector`，如果音符时间足够，它会将它们并在向量中，你可以在需要时检索。你可以在代码 39.4.6 中找到`ChordDetector`类。你可以在命令行上加载项目对`ChordDetector`进行测试。
+
+将`ChordDetector.h`和`ChordDetector.cpp`文件放入项目的`src`文件夹。然后，你必须编辑你的`CMakeLists.txt`文件，将新的`ChordDetector.cpp`包含在构建中。找到指定项目`.cpp`文件的`target_sources`。添加一行：
+
+
 
 ```cmake
 target_sources(midi-markov-vi)
@@ -4466,11 +4113,7 @@ chordDetector = ChordDetector((unsigned long) maxIntervalInSamples);
 
 为了检测和弦并以正确的格式发送给马尔可夫模型，请将 `analysePitches` 中 MIDI 处理循环的音符部分替换为以下内容：
 
-
-
-
-
-# 多音马尔可夫模型
+## 多音马尔可夫模型
 
 ```cpp
 if (message.isNoteOn()){
@@ -4490,16 +4133,25 @@ if (message.isNoteOn()){
 }
 ```
 
-在这段代码中，你可以调用 `addNote` 告诉和弦检测器音符，通过 `hasChord` 查询它是否准备好提供和弦，并使用 `getChord` 获取和弦。然后，你使用 `notesToMarkovState` 将音符转换为适用于马尔可夫模型的字符串。如果没有和弦，你可能会从和弦检测器得到单个音符，这是正常的，因为你也应该能够检测到单个音符。你可以在 Standalone 中测试这一点。反复点击屏幕键盘以验证你是否收到了单个音符。当你这样做时，你会看到类似这样的输出：
+在这段代码中，你可以调用 `addNote` 告诉和弦检测器音符，通过 `hasChord` 查询它是否准备好提供和弦，并使用 `getChord` 获取和弦。然后，你使用 `notesToMarkovState` 将音符转换为适用于马尔可夫模型的字符串。
 
+如果没有和弦，你可能会从和弦检测器得到单个音符，这是正常的，因为你也应该能够检测到单个音符。你可以在 Standalone 中测试这一点。反复点击屏幕键盘以验证你是否收到了单个音符。当你这样做时，你将看到类似这样的输出：
+
+```text
 + ChordDetector::addNote 2205 n: 98 : 202126
+
 Got notes from detector 86-
+
 ChordDetector::addNote 2205 n: 88 : 223232
+
 Got notes from detector 98-
+```
 
 现在尝试在上下滑动屏幕键盘时点击鼠标按钮。偶尔松开，你将看到和弦被检测到，例如：
 
+```text
 + Got notes from detector 76-77-79-81-
+```
 
 在执行此操作时，你应该注释掉从 `pitchModel` 提取音符的行，因为目前代码无法处理像这样的多音节状态。
 
@@ -4519,11 +4171,13 @@ for (const int& note) : markStateToNotes(notes){
 }
 ```
 
-注意，我在图表中对所有音符使用了相同的时长 0.5f（我们目前还没有速度模型，但我们将在下一节中添加一个）。如果你尝试为每个音符提取单独的时长，将对模型进行过度采样，导致生成的时长无法反映模型收到的时长。你可以尝试提取多个时长来观察会发生什么。
+注意，我在图表中对所有音符使用了相同的时长 `0.5f`（我们目前还没有速度模型，但我们将在下一节中添加一个）。如果你尝试为每个音符提取单独的时长，将对模型进行过度采样，导致生成的时长无法反映模型收到的时长。你可以尝试提取多个时长来观察会发生什么。
 
 ## 25.5 训练速度模型
 
-我们将为即兴器增加另一个模型——速度模型。该模型将对音符中看到的速度序列进行建模。这将对表演的动态感和表现力产生巨大影响。你可能已经推算出这里的步骤，但我仍然会带你过一遍。如果你想从一个干净、可用的多音模型开始，可以使用示例 9.4。在 `PluginProcessor.h` 和 `cpp` 中，在私有部分添加一个模型并在构造函数中初始化它。
+我们将为即兴器增加另一个模型——速度模型。该模型将对音符中看到的速度序列进行建模。这将对表演的动态感和表现力产生巨大影响。你可能已经推算出这里的步骤，但我仍然会带你过一遍。
+
+如果你想从一个干净、可用的多音模型开始，可以使用示例 9.4。在 `PluginProcessor.h` 和 `cpp` 中，在私有部分添加一个模型并在构造函数中初始化它。
 
 ```cpp
 // 在头文件中：
@@ -4584,84 +4238,119 @@ juce::MidiMessage nM = juce::MidiMessage::noteOn(0, note, velocity);
 
 ## 25.7 对模型进行实验
 
-你现在有了一个马尔可夫模型。在宿主机环境中测试该插件。训练模型的一种方法是使用现有的 MIDI 文件。你可能在 DAW 中已经有了项目，或者网上有很多包含名曲、爵士独奏之类的 MIDI 文件。如果你使用的 DAW 可以导入 MIDI 文件，你可以加载一个 MIDI 文件，让插件在学习其内容时进行即兴。
+你现在有了一个马尔可夫模型。在宿主机环境中测试该插件。训练模型的一种方法是使用现有的 MIDI 文件。你可能在 DAW 中已经有了项目，或者网上有很多包含名曲、爵士独奏之类的 MIDI 文件。
+
+如果你使用的 DAW 可以导入 MIDI 文件，你可以加载一个 MIDI 文件，让插件在学习其内容时进行即兴。
 
 ## 25.8 仅播放模式
 
 一旦你的模型学习了一些模式，你可能希望从模型生成内容，而不向其状态转移矩阵添加任何新信息。此功能的实现实际上相当简单。你需要开启或关闭 `processBlock` 中调用 `putEvent` 的代码部分。那是模型学习的部分。
 
-你可以通过在用户界面上添加一个“学习开启/关闭”开关并在 `PluginProcessor` 中添加函数以切换 `putEvent` 调用的方法来实现。这一点留给你你自己完成。
+你可以通过在用户界面上添加一个“学习开启/关闭”开关并在 `PluginProcessor` 中添加函数以切换 `putEvent` 调用的方法来实现。这一点留给你自己完成。
 
 ## 25.9 加载和保存模型
 
 另一个有用功能是加载和保存模型。如果你的模型生成了非常有音乐性的输出，你可能想将其留作以后用。事实上，插件被期望在关闭和重新打开 DAW 项目时保留其状态。你不希望每次加载 DAW 项目时都要重新编写所有的合成器和效果器。
 
-基础实现允许你从插件将模型导出为文件，然后再次加载这些文件。更好的解决方案是通过实现 `getStateInformation` 和 `setStateInformation` 函数来自动加载和保存模型，这是插件标准的一部分。如果你实现了这些函数，它们将从发送的数据保存并恢复模型，当你重新打开 DAW 或其他插件宿主机项目时，插件将从已训练的模型开始。你可以调用 `MarkovManager::getAsModelFromString` 将模型转换为字符串。然后，你可以将三个模型合并为一个字符串，并将其转换为保存状态所需的 `juce::MemoryBlock`。这留给你来实现。
+基础实现允许你从插件将模型导出为文件，然后再次加载这些文件。更好的解决方案是通过实现 `getStateInformation` 和 `setStateInformation` 函数来自动加载和保存模型，这是插件标准的一部分。
+
+如果你实现了这些函数，它们将从发送的数据保存并恢复模型，当你重新打开 DAW 或其他插件宿主机项目时，插件将从已训练的模型开始。你可以调用 `MarkovManager::getAsModelFromString` 将模型转换为字符串。然后，你可以将三个模型合并为一个字符串，并将其转换为保存状态所需的 `juce::MemoryBlock`。这留给你来实现。
 
 ## 25.10 进度检查
 
-此时，你应该拥有一个多音马尔可夫模型 MIDI 效果，你可以将其加载到插件宿主机并对 MIDI 输入进行训练。然后，插件将根据其模型集输出多音 MIDI，管理音高、速度、时长和起始间隔。我希望你在向模型输入不同类型的训练数据时，也能够进行一些实验。你可能还研究了更精确的时序、加载和保存以及插件的其他有用控制和功能。
+此时，你应该拥有一个多音马尔可夫模型 MIDI 效果，你可以将其加载到插件宿主机并对 MIDI 输入进行训练。然后，插件将根据其模型集输出多音 MIDI，管理音高、速度、时长和起始间隔。
 
+我希望你在向模型输入不同类型的训练数据时，也能够进行一些实验。你可能还研究了更精确的时序、加载和保存以及插件的其他有用控制和功能。
 
-
-
-
-# 第四部分
-
-# 神经音频效果
+# 第四部分：神经音频效果
 
 ## 26 欢迎来到神经效果
 
-欢迎来到神经效果（Neural Effects）！在本书的范围内，我将解释如何使用神经网络作为效果单元。在之后介绍创建神经音频效果的完整细节之前，我将提供一些背景信息，帮助你理解神经效果技术。背景知识从本章开始，本章简要介绍了音频效果的发展史，从使用具有回响的建筑到模拟吉他放大器的神经网络。在本章之后，我将介绍更多关于我所谓的“DSP 三剑客”的材料，即有限脉冲滤波器、无限脉冲滤波器和波波形整形器。当我们讲到神经效果时，我将向你展示准备训练数据、设计网络架构以及在 Python 中实现训练的细节。然后，我们将切换到 C++ 来开发插件。我们将比较两种运行神经网络的方法：TorchScript 和 RTNeural。在本书的这一部分的结束时，你将拥有一个运行在插件中的、完全工作的吉他放大器神经网络仿真器。
+欢迎来到神经效果（Neural Effects）！在本书的范围内，我将解释如何使用神经网络作为效果单元。
+
+在之后介绍创建神经音频效果的完整细节之前，我将提供一些背景信息，帮助你理解神经效果技术。背景知识从本章开始，本章简要介绍了音频效果的发展史，从使用具有回响的建筑到模拟吉他放大器的神经网络。
+
+在本章之后，我将介绍更多关于我所谓的“DSP 三剑客”的材料，即有限脉冲滤波器、无限脉冲滤波器和波波形整形器。
+
+当我们讲到神经效果时，我将向你展示准备训练数据、设计网络架构以及在 Python 中实现训练的细节。然后，我们将切换到 C++ 来开发插件。我们将比较两种运行神经网络的方法：TorchScript 和 RTNeural。
+
+在本书的这一部分的结束时，你将拥有一个运行在插件中的、完全工作的吉他放大器神经网络仿真器。
 
 ## 26.1 音频效果简史
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_228_0.png)
 
-2020年，Wilmering及其同事提交了一份简要的音频效果历史[44]。他们从讨论混响（reverberation）作为音频转换的第一形式开始，注意到回响空间的悠久历史，特别是宗教活动场所。他们从具有有趣美学的自然空间转向人工音频效果，将音频效果的年代史分为四个时代。
+2020 年，Wilmering 及其同事提交了一份简要的音频效果历史[44]。他们从讨论混响（reverberation）作为音频转换的第一形式开始，注意到回响空间的悠久历史，特别是宗教活动场所。他们从具有有趣美学的自然空间转向人工音频效果，将音频效果的年代史分为四个时代。
 
-第一个时代涵盖了20世纪初使用声音录制和再现技术进行的音频转换。例如，斯特拉文斯基（Stravinsky）操纵唱片音调来产生失真效果。像斯特拉文斯基之前一样，今天的DJ在转盘技巧（turntablism）实践中也操纵“唱片”。这一时代延续到了有据记载的磁带剪辑技术，例如斯托克豪森（Stockhausen）的作品。磁带操纵的实践今天仍在，像 Jamie Lidell¹这样的艺术家正在探索磁带与其他音乐技术（如 Eurorack）之间的创意交互。
+第一个时代涵盖了 20 世纪初使用声音录制和再现技术进行的音频转换。例如，斯特拉文斯基（Stravinsky）操纵唱片音调来产生失真效果。像斯特拉文斯基之前一样，今天的 DJ 在转盘技巧（turntablism）实践中也操纵“唱片”。
 
-音频效果的第二个时代涉及电机械效果。这些是专门制造的硬件单元，用于产生特定的声音转换。一个例子是1930年代的Leslie扬声器，其特点是一个旋转的高频喇叭。快进到今天，诸如铃声混响（ringing reverbs）之类的电机械效果仍在生产。
+这一时代延续到了有据记载的磁带剪辑技术，例如斯托克豪森（Stockhausen）的作品。磁带操纵的实践今天仍在，像 Jamie Lidell¹ 这样的艺术家正在探索磁带与其他音乐技术（如 Eurorack）之间的创意交互。
 
-第三个时代涵盖模拟信号处理，使用模拟电路来转换音频。这一时代始于20世纪30年代，出现了许多新效果，如频率偏移、幅度调制、失真、动态范围压缩和基于延迟的混响器。将其与现在联系起来，Warm Audio等公司生产经典效果的再现品，Solid State Logic等公司制造带有模拟声音转换电路的调音台。当然，必须提到带有声音处理滤波器的模拟合成器，它们仍然在大规模生产，并非常深受音乐家的喜爱。模拟处理器与现代之间的另一个联系是作为插件提供的各种数字仿真效果。使用深度学习技术仿真模拟处理器是该领域最最近的进展，这这也是本书部分的主题。
+音频效果的第二个时代涉及电机械效果。这些是专门制造的硬件单元，用于产生特定的声音转换。一个例子是 1930 年代的 Leslie 扬声器，其特点是一个旋转的高频喇叭。快进到今天，诸如铃声混响（ringing reverbs）之类的电机械效果仍在生产。
 
-Wilmering等人确定的第四个时代是数字信号处理（DSP）时代，对于音乐家和音频工程师来说，至少从20世纪70年代随着机架式数字效果的出现而开始。DSP发生在数字领域，信号被转换为数字表示，转换被指定为数字处理器指令。Eventide数字延迟单元于1971年发布，是数字效果的早期示例。吉他手在20世纪80年代通过Boss等品牌获得了更便宜的数字线路效果，如合唱（choruses）和法兰（flangers）。20世纪90年代出现了日益廉价且强大的DSP芯片，允许出现像Zoom那样的廉价多效果单元。这些足够便宜，我可以负担得起我简陋的1990年代工作室。我使用一个Zoom 1204处理来自我的Amiga 1200电脑上合成芯片的声音。
+第三个时代涵盖模拟信号处理，使用模拟电路来转换音频。这一时代始于 20 世纪 30 年代，出现了许多新效果，如频率偏移、幅度调制、失真、动态范围压缩和基于延迟的混响器。
 
-DSP时代在1996年发生了一个有趣的转折，当时Steinberg发布了其虚拟工作室技术（VST）的第一版本。这为开发者创建在标准PC和Mac硬件上的各种信号处理插件打开了大门，而不需要专门的外置DSP系统。它开启了现代音乐制作时代，生产者可以在Cubase等完全集成的数字音频工作站环境中完全“箱内”（in-the-box）工作。
+将其与现在联系起来，Warm Audio 等公司生产经典效果的再现品，Solid State Logic 等公司制造带有模拟声音转换电路的调音台。当然，必须提到带有声音处理滤波器的模拟合成器，它们仍然在大规模生产，并非常深受音乐家的喜爱。
 
-> ¹http://jamielidellmusic.com/
+模拟处理器与现代之间的另一个联系是作为插件提供的各种数字仿真效果。使用深度学习技术仿真模拟处理器是该领域最最近的进展，这也是本书部分的主题。
 
-插件软件中的一个重要主题一直是仿真复古的外置效果。对稀有的电子管驱动的EQ和其他单元进行日益准确的仿真，是数字信号处理技术进步的标杆。一个说明性的轶事是，我最近幸运地购买了一个Apogee-audio I/O盒。它带有几种模拟效果和前级器电路的仿真。直到后来的发布中，你可以在设备上运行的插件中才添加了现代数字风格的EQ和压缩器。首要任务显然是仿真模拟效果，而且是来自一家制造数字抗混叠滤波器和模拟数字转换器的公司。
+Wilmering 等人确定的第四个时代是数字信号处理（DSP）时代，对于音乐家和音频工程师来说，至少从 20 世纪 70 年代随着机架式数字效果的出现而开始。DSP 发生在数字领域，信号被转换为数字表示，转换被指定为数字处理器指令。
 
-除了开发如EQ和动态范围之类的数字录室制作效果外，DSP时代的另一个线索是数字吉他放大器的开发。这些通常是硬件单元，使用DSP技术仿真一个或多个不同的吉他放大器。Line 6 Pod是1999年推出的一个早期单元。随后的设备如Kemper这样的设备允许用户捕捉和仿真真实的设置。当我们开始处理相关内容时，我将详细介绍神经放大器。
+Eventide 数字延迟单元于 1971 年发布，是数字效果的早期示例。吉他手在 20 世纪 80 年代通过 Boss 等品牌获得了更便宜的数字线路效果，如合唱（choruses）和法兰（flangers）。20 世纪 90 年代出现了日益廉价且强大的 DSP 芯片，允许出现像 Zoom 那样的廉价多效果单元。
+
+这些足够便宜，我可以负担得起我简陋的 1990 年代工作室。我使用一个 Zoom 1204 处理来自我的 Amiga 1200 电脑上合成芯片的声音。
+
+DSP 时代在 1996 年发生了一个有趣的转折，当时 Steinberg 发布了其虚拟工作室技术（VST）的第一版本。这为开发者创建在标准 PC 和 Mac 硬件上的各种信号处理插件打开了大门，而不需要专门的外置 DSP 系统。
+
+它开启了现代音乐制作时代，生产者可以在 Cubase 等完全集成的数字音频工作站环境中完全“箱内”（in-the-box）工作。
+
+> ¹ http://jamielidellmusic.com/
+
+插件软件中的一个重要主题一直是仿真复古的外置效果。对稀有的电子管驱动的 EQ 和其他单元进行日益准确的仿真，是数字信号处理技术进步的标杆。
+
+一个说明性的轶事是，我最近幸运地购买了一个 Apogee-audio I/O 盒。它带有几种模拟效果和前级器电路的仿真。直到后来的发布中，你可以在设备上运行的插件中才添加了现代数字风格的 EQ 和压缩器。
+
+首要任务显然是仿真模拟效果，而且是来自一家制造数字抗混叠滤波器和模拟数字转换器的公司。
+
+除了开发如 EQ 和动态范围之类的数字录室制作效果外，DSP 时代的另一个线索是数字吉他放大器的开发。这些通常是硬件单元，使用 DSP 技术仿真一个或多个不同的吉他放大器。
+
+Line 6 Pod 是 1999 年推出的一个早期单元。随后的设备如 Kemper 这样的设备允许用户捕捉和仿真真实的设置。当我们开始处理相关内容时，我将详细介绍神经放大器。
 
 ## 26.2 神经效果时代
 
-在Wilmering等人第四个音频时代之后是神经效果时代。神经效果出现于2010年代初，作为一种使用神经网络对信号处理进行建模的方法。神经网络建模效果的最早例子是2013年[9]。他们表示这证明了可行性，但还需要更多工作。这些工作大部分依赖于已建立的神经网络架构，如递归和卷积模型，你将在接下来的章节中学习所有架构。但神经效果的另一类工作涉及可微数字处理（DDSP），它允许将更传统的信号处理组件嵌入神经网络中。DSP组件的参数然后使用神经网络训练方法进行调整。这种想法是，神经网络在学习音频转换方面具有优势，因为它从开始使用的就是设计为在正确参数下执行该种转换的组件。这项工作的一个示例来自Native Instruments的Kuznetsov, Parker和Esqueda[22]。他们展示了如何使用DDSP技术为EQ和失真创建高效的非线性效果模型。
+在 Wilmering 等人第四个音频时代之后是神经效果时代。神经效果出现于 2010 年代初，作为一种使用神经网络对信号处理进行建模的方法。
 
-到此，我将为这段简短的音频处理历史画上句号。欲进一步阅读，Wilmering等人的文章是音频效果历史的一个良好起点，但网上也有一些关于个人公司和品牌历史的精彩介绍，例如Eventide和Boss。对于神经效果，Vanhatalo等人2022年发布了一份综述，涵盖了关于神经吉他放大器建模的大部分工作，尽管我们将在接几个章节中自己实现这些模型之一[43]。如果你想阅读一些关于先进神经效果的技术细节，你将在[24]中找到关于神经混响的一些非常专业的信息和实用的参考文献。
+神经网络建模效果的最早例子是 2013 年[9]。他们表示这证明了可行性，但还需要更多工作。这些工作大部分依赖于已建立的神经网络架构，如递归和卷积模型，你将在接下来的章节中学习所有架构。
+
+但神经效果的另一类工作涉及可微数字处理（DDSP），它允许将更传统的信号处理组件嵌入神经网络中。DSP 组件的参数然后使用神经网络训练方法进行调整。
+
+这种想法是，神经网络在学习音频转换方面具有优势，因为它从开始使用的就是设计为在正确参数下执行该种转换的组件。
+
+这项工作的一个示例来自 Native Instruments 的 Kuznetsov、Parker 和 Esqueda[22]。他们展示了如何使用 DDSP 技术为 EQ 和失真创建高效的非线性效果模型。
+
+到此，我将为这段简短的音频处理历史画上句号。欲进一步阅读，Wilmering 等人的文章是音频效果历史的一个良好起点，但网上也有一些关于个人公司和品牌历史的精彩介绍，例如 Eventide 和 Boss。
+
+对于神经效果，Vanhatalo 等人 2022 年发布了一份综述，涵盖了关于神经吉他放大器建模的大部分工作，尽管我们将在接下来几个章节中自己实现这些模型之一[43]。
+
+如果你想阅读一些关于先进神经效果的技术细节，你将在[24]中找到关于神经混响的一些非常专业的信息和实用的参考文献。
 
 ## 26.3 进度检查
 
 这一章很短，但你应该能够区分实现音频效果的方法，并按时间顺序进行排列。
 
+# 27 有限脉冲响应、信号与系统
 
 
-
-
-# 27
-有限脉冲响应、信号与系统
 
 在本章中，我将介绍一些重要的数字信号处理（DSP）概念。深入探讨传统数字音频效果设计的细节超出了本书的范围，但我将提供理论和代码示例。关于音频效果的详尽论述，我推荐阅读 Will Pinkle 的书[33]。在这里，我将介绍数字音频效果中使用的三种主要技术，并将它们与神经网络架构中的概念联系起来。我将这三种技术称为“DSP 三位一体体”：有限脉冲响应滤波器（FIR）、无限脉冲响应滤波器（IIR）和整形器（shapers）。在接下来的章节中，我将引导你学习数字信号处理的基础知识，尽量通过代码、可视化和更传统的数学表达式来呈现信息，使其尽可能易于理解。
 
 ## 27.1 信号与系统
 
-数字信号处理围绕着信号和系统的概念展开。我们有一个数字信号（例如音频信号），并将其通过某种数字系统，该系统会以某种方式改变信号。考虑单通道音频系统，信号 $x$ 在特定时间点 $n$ 有一个特定值：$x[n]$。上一个时间步的信号是 $x[n-1]$。现在让我们定义一个表示音量控制系统。我们可以根据输入 $x$ 和音量控制 $b$ 定义系统在时间 $n$ 的输出 $y$：
+数字信号处理围绕着信号和系统的概念展开。我们有一个数字信号（例如音频信号），并将其通过某种数字系统，该系统会以某种方式改变信号。考虑单通道音频系统，信号`x`在特定时间点`n`有一个特定值：`x[n]`。上一个时间步的信号是`x[n-1]`。现在让我们定义一个表示音量控制系统。我们可以根据输入`x`和音量控制`b`定义系统在时间`n`的输出`y`：
 
-$y[n] = b.x[n]$ (27.1)
+`y[n] = b.x[n]` (27.1)
 
-如果你偏好代码，这里有一些根据输入 $x$ 和音量系数 $b$ 输出 $y$ 的代码：
+如果你偏好代码，这里有一些根据输入`x`和音量系数`b`输出`y`的代码：
 
 ```cpp
 float b = 0.5; // volume level
@@ -4674,9 +4363,9 @@ for (int n=0;n<3;++n++){
 
 ### 有限脉冲响应、信号与系统
 
-我们可以将该系统称为“单极滤波器”。之所以称为单极是因为输出计算只考虑了一个输入。这里是一个双极滤波器，它考虑两个输入——现在的输入 $x[n]$ 和上一步步的输入 $x[n-1]$。这一次，我们不再使用单一系数 $b$，而是使用系数 $b_0$ 和 $b_1$：
+我们可以将该系统称为“单极滤波器”。之所以称为单极是因为输出计算只考虑了一个输入。这里是一个双极滤波器，它考虑两个输入——现在的输入`x[n]`和上一步步的输入`x[n-1]`。这一次，我们不再使用单一系数`b`，而是使用系数`b_0`和`b_1`：
 
-> $y[n] = b_0x[n] + b_1x[n-1]$
+> `y[n] = b_0x[n] + b_1x[n-1]`
 
 然后在 C++ 中实现：
 
@@ -4692,15 +4381,15 @@ int main() {
 }
 ```
 
-这是一个基础的低通滤波器，因为它对两个值取平均，平滑了任何大的（快速的、高频）变化。你可以使用许多极点和零点创建各种系统。以下表达式是任意数量系数的 $y[n]$ 的通用形式。那个那个 $\sum$ 符号看起来可能有点吓人，但它实际上只是一个 `for` 循环。大 $\sum$ 表示“求和”，$i$ 是迭代值，从 0 到 $N$，$N$ 是系数的数量。用口语来说，你可以说某一点的输出是之前的输入经过某些系数缩放后的和。
+这是一个基础的低通滤波器，因为它对两个值取平均，平滑了任何大的（快速的、高频）变化。你可以使用许多极点和零点创建各种系统。以下表达式是任意数量系数的`y[n]`的通用形式。那个那个`∑`符号看起来可能有点吓人，但它实际上只是一个`for`循环。大`∑`表示“求和”，`i`是迭代值，从 0 到`N`，`N`是系数的数量。用口语来说，你可以说某一点的输出是之前的输入经过某些系数缩放后的和。
 
-> $y[n] = \sum_{i=0}^{N} b_ix[n-i]$
+> `y[n] = \sum_{i=0}^{N} b_ix[n-i]`
 
 有些人更倾向于这样拆解方程，虽然不那么优雅，但可能更易读：
 
-> $y[n] = b_0x[n] + b_1x[n-1] + b_2x[n-2] + ... + b_Nx[n-N]$
+> `y[n] = b_0x[n] + b_1x[n-1] + b_2x[n-2] + ... + b_Nx[n-N]`
 
-通用形式在代码中是什么样子的？这里有一个实现创建信号 $x$系统的代码版本。它执行的操作比这些方程要多，因为方程只告诉你 $y[n]$，而代码计算了整个 $y$：
+通用形式在代码中是什么样子的？这里有一个实现创建信号`x`系统的代码版本。它执行的操作比这些方程要多，因为方程只告诉你`y[n]`，而代码计算了整个`y`：
 
 ```cpp
 int main() {
@@ -4731,29 +4420,30 @@ for (int n=0;n<len;n++) {
     }
 }
 ```
+
 你可以在 3.5 找到该代码。
 
 ## 27.2 脉冲响应
 
-数字信号处理的问题在于为了创建你需要的效果确定系数 $b_N$ 应该是多少。一种方法是获取你需要的效果并找到它的脉冲响应。系统的脉冲响应是输入一种特殊信号（称为脉冲）时的输出。脉冲信号是一个幅度，后跟着静音。你可以在图 27.1 的左侧看到它。它听起来像是一个短暂的点击声。图 27.1 展示了我们目前看到的系统的脉冲响应。为什么脉冲响应有用？关键在于，一旦你有了脉冲响应（假设系统具有某些特性，即线性和不变性），就可以计算系统对任何信号的输出。
+数字信号处理的问题在于为了创建你需要的效果确定系数`b_N`应该是多少。一种方法是获取你需要的效果并找到它的脉冲响应。系统的脉冲响应是输入一种特殊信号（称为脉冲）时的输出。脉冲信号是一个幅度，后跟着静音。你可以在图 27.1 的左侧看到它。它听起来像是一个短暂的点击声。图 27.1 展示了我们目前看到的系统的脉冲响应。为什么脉冲响应有用？关键在于，一旦你有了脉冲响应（假设系统具有某些特性，即线性和不变性），就可以计算系统对任何信号的输出。
 
-有了脉冲响应就可以计算系统的输出？答案是系数（$b_0, b_1$ 等）与脉冲响应之间存在直接关系。事实上，对于我们目前看到的系统，脉冲响应就是系数。回想一下之前讨论的双极平均滤波器，我们将系数定义为 0.5 和 0.5：
+有了脉冲响应就可以计算系统的输出？答案是系数（`b_0, b_1`等）与脉冲响应之间存在直接关系。事实上，对于我们目前看到的系统，脉冲响应就是系数。回想一下之前讨论的双极平均滤波器，我们将系数定义为 0.5 和 0.5：
 
-```
+```text
 y[n] = 0.5x[n] + 0.5x[n-1] (27.5)
 ```
 
-如果你将脉冲信号通过它，你会得到 $[0.5,0.5]$ 输出，如图 27.1 所示——脉冲响应与系数相同。因此，如果我们通过输入脉冲信号并记录输出来捕捉系统的脉冲响应，就可以使用输出计算该系统对任何信号的效果。当我第一次遇到这个并在代码中实现它时，我非常震惊！因为你可以通过通过并记录输出来捕捉任何效果的脉冲响应。例如，你可以输入点击并记录响应。然后你可以将该响应应用于任何信号，听起来就像在同一个房间播放信号一样。我们将在讨论卷积的章节中这样做，卷积是将脉冲响应应用于系统的过程名称。
+如果你将脉冲信号通过它，你会得到`[0.5,0.5]`输出，如图 27.1 所示——脉冲响应与系数相同。因此，如果我们通过输入脉冲信号并记录输出来捕捉系统的脉冲响应，就可以使用输出计算该系统对任何信号的效果。当我第一次遇到这个并在代码中实现它时，我非常震惊！因为你可以通过通过并记录输出来捕捉任何效果的脉冲响应。例如，你可以输入点击并记录响应。然后你可以将该响应应用于任何信号，听起来就像在同一个房间播放信号一样。我们将在讨论卷积的章节中这样做，卷积是将脉冲响应应用于系统的过程名称。
 
 ## 27.3 线性不变
 
-在我们深入实验卷积之前，我想澄清 LTI 的含义。线性和不变性是 DSP 系统中的重要属性，因为它们有助于卷积过程，即给定脉冲响应，可以将系统应用于任何信号；这只适用于 LTI 系统。我在这里引入这些概念是因为它们解释了为什么吉他放大器和失真踏板很难建模。线性意味着如果你翻倍输入值，输出值也会翻倍。它也适用于任何标量：双倍、三倍等。这里是一个简单乘法器的线性和缩放示例，即其脉冲响应为 $[0.5,0,0,0]$：
+在我们深入实验卷积之前，我想澄清 LTI 的含义。线性和不变性是 DSP 系统中的重要属性，因为它们有助于卷积过程，即给定脉冲响应，可以将系统应用于任何信号；这只适用于 LTI 系统。我在这里引入这些概念是因为它们解释了为什么吉他放大器和失真踏板很难建模。线性意味着如果你翻倍输入值，输出值也会翻倍。它也适用于任何标量：双倍、三倍等。这里是一个简单乘法器的线性和缩放示例，即其脉冲响应为`[0.5,0,0,0]`：
 
-| $y[n] = b_0x[n]$ | 系统 |
+| `y[n] = b_0x[n]` | 系统 |
 | :--- | :--- |
-| $b_0 = 0.5$ | 系数 |
-| $0.5 \rightarrow 0.25$ | 输入 0.5 |
-| $0.6 \rightarrow 0.3$ | 输入 0.6 (27.6) |
+| `b_0 = 0.5` | 系数 |
+| `0.5 \rightarrow 0.25` | 输入 0.5 |
+| `0.6 \rightarrow 0.3` | 输入 0.6 (27.6) |
 
 考虑一个现实世界的例子，例如吉他放大器。当你增加增益（等同于在正确意义上缩放输入）时，输出信号发生了变化。但它并不是变得更大——它还失真了。所以吉他放大器不是线性的。吉他手使用非线性放大器是因为增加增益以音乐的方式改变音色。
 
@@ -4761,22 +4451,18 @@ y[n] = 0.5x[n] + 0.5x[n-1] (27.5)
 
 线性的另一个部分是加性：如果你在不同场合将两个信号通过系统，然后捕捉并求和输出，你得到的输出与输入两个信号之和得到的输出相同。这里是加性的简单演示，这里的点是 0.375 = 0.25 + 0.125：
 
-| $y[n] = b_0x[n]$ | 系统 |
+| `y[n] = b_0x[n]` | 系统 |
 | :--- | :--- |
-| $b_0 = 0.5$ | 系数 |
-| $0.5 \rightarrow 0.25$ | 输入 0.5 |
-| $0.25 \rightarrow 0.125$ | 输入 0.25 |
-| $0.75 \rightarrow 0.375$ | 输入 0.5 + 0.125 (27.7) |
+| `b_0 = 0.5` | 系数 |
+| `0.5 \rightarrow 0.25` | 输入 0.5 |
+| `0.25 \rightarrow 0.125` | 输入 0.25 |
+| `0.75 \rightarrow 0.375` | 输入 0.5 + 0.125 (27.7) |
 
 什么是时间不变性？这意味着对信号进行延迟除了延迟它之外不会以任何方式改变输出信号。系统的行为不随时间改变。所以我们之前讨论的带有旋转高音喇叭的 1930 年 Leslie 扬声器不是时间不变的。
 
-
-
-
-
 # 有限脉冲响应、信号与系统
 
-```
+```text
 $y[n] = b_0x[n] \quad \text{系统}
 b_0 = 0.5 \quad \text{系数}
 x_1 = [0.25, 0.5, 0.0] \quad \text{输入 1}
@@ -4791,9 +4477,7 @@ y_2 = [0.0, 0.125, 0.25] \quad \text{输出 2 (延迟) } \quad (27.8)$
 
 到目前为止，这一部分相当理论化。但你可以对你见过的代码段进行一些实验。例如，你能验证三极点滤波器系统是线性且时不变的吗？如果你想尝试一些冒险，可以在 JUCE 中实现一个简单的插件，允许你实验具有不同极点数量的滤波器。你可以创建一个用户界面，允许用户通过绘制脉冲响应来指定滤波器。
 
-# 28
-
-# 卷积
+# 28 卷积
 
 在本章中，我将讨论卷积。卷积是一种允许你计算将给定信号通过给定系统所产生的影响。我们将查看执行卷积的两种方法——时域和频域。时域过程与我们已经看到的方程紧密对应，易于理解。频域版本要高效得多，但它对上一章中看到的方程的解释就没那么直观。在学习本章的过程中，你将看到各种代码示例，最初在命令行上运行以通过卷积处理音频文件。在章节结束，你将看到如何使用 JUCE API 提供的内置 DSP 组件实现高效的卷积，从而创建一个卷积混响插件。
 
@@ -4822,7 +4506,7 @@ y_2 = [0.0, 0.125, 0.25] \quad \text{输出 2 (延迟) } \quad (27.8)$
 }
 ```
 
-这段代码在仓库 39.5.1 中描述。`my_tiny` 命名空间还包含函数 `saveWav`：
+这段代码在仓库 39.5.1 中描述。`my_tiny`命名空间还包含函数`saveWav`：
 
 ```cpp
 1 static void my_tiny::saveWav(
@@ -4832,7 +4516,7 @@ y_2 = [0.0, 0.125, 0.25] \quad \text{输出 2 (延迟) } \quad (27.8)$
 5 const std::string& filename)
 ```
 
-去构建项目吧。看看你是否能加载和保存音频文件。通过将文件加载到 Audacity 等音频编辑器中来验证文件是否保存正确。我用测试了采样率为 44,100Hz 的单声道文件，因为这些是我感兴趣的文件。注意 `saveWav` 函数使用 INT16 格式，即双字节有符号整数。双字节符号整数的范围是 -32768 到 32768。`loadWav` 函数没有指定采样点，因此它将它们转换为 tinywav 的默认格式，即 32 位/字节 IEEE 浮点数。一旦这些浮点值出现在你的程序中，它们将是 -1 到 1。你可以通过在程序中检查它们来验证这一点。
+去构建项目吧。看看你是否能加载和保存音频文件。通过将文件加载到 Audacity 等音频编辑器中来验证文件是否保存正确。我用测试了采样率为 44,100Hz 的单声道文件，因为这些是我感兴趣的文件。注意`saveWav`函数使用 INT16 格式，即双字节有符号整数。双字节符号整数的范围是 -32768 到 32768。`loadWav`函数没有指定采样点，因此它将它们转换为 tinywav 的默认格式，即 32 位/字节 IEEE 浮点数。一旦这些浮点值出现在你的程序中，它们将是 -1 到 1。你可以通过在程序中检查它们来验证这一点。
 
 ## 28.3 简单的时域卷积
 
@@ -4857,17 +4541,14 @@ std::vector<float> conv(std::vector<float> xs, std::vector<float> bs) {
 ```
 
 这是方程的简单实现：
-$y[n] = \sum_{k=0}^{N-1} x[n-k]b[k]$
 
-尝试不同的系数，你会发现结果正如预期。例如，你使用了系数 $\{0.5, 0.5, 0\}$ 的移动平均滤波器，这是一个低通滤波器。
+`y[n] = \sum_{k=0}^{N-1} x[n-k]b[k]`
+
+尝试不同的系数，你会发现结果正如预期。例如，你使用了系数`\{0.5, 0.5, 0\}`的移动平均滤波器，这是一个低通滤波器。
 
 ## 28.4 频域卷积
 
 在频域中，卷积变得简单得多。我们不需要在时域进行求和，只需将信号和脉冲响应的傅里叶变换相乘即可。对于长脉冲响应，这种方法要高效得多。
-
-
-
-
 
 ## 卷积
 
@@ -4880,6 +4561,7 @@ $y[n] = \sum_{k=0}^{N-1} x[n-k]b[k]$
 ![](img/f36e66929543fe6d506774ef8e004b7e_242_0.png)
 
 ### 28.1
+
 左侧是原始鼓点循环频谱，右侧是过滤后的版本。在过滤后的频谱中高频被衰减了。
 
 右侧图像显示了在 15,000Hz 左右出现了一个凹陷，这是由移动滤波器引起的。尝试不同的系数，观察滤波后频谱产生的变化。尝试添加更多系数、负系数等。你可以创建一个回声效果吗？这里要掌握的重点是，你可以通过各种系数的组合创建不同的滤波器和延迟效果。
@@ -4914,9 +4596,12 @@ std::cout << "With len " << b.size() << "\n";
 std::cout << "s file in " << duration.count() / 1000.0 << "s\n";
 ```
 
+
+
 我在我的第 10 代 Intel CPU Linux 机器上看到了这样的输出，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
 
 响应：
+
 - 当 IR 长度为 1000 时，卷积 2.87288 秒的文件耗时 0.142s
 - 当 IR 长度为 2000 时，卷积 2.87288 秒的文件耗时 0.23s
 - 当 IR 长度为 3000 时，卷积 2.87288 秒的文件耗时 0.36s
@@ -4936,79 +4621,10 @@ std::cout << "s file in " << duration.count() / 1000.0 << "s\n";
 - 当 IR 长度为 80000 时，卷积 2.87288 秒的文件耗时 2.11s
 - 当 IR 长度为 90000 时，卷积 2.87288 秒的文件耗时 2.33s
 - 当 IR 长度为 100000 时，卷积 2.87288 秒的文件耗时 2.56s
-
-我在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应，看到了这样的输出：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-响应：
-- 当 IR 长度为 1000 时，卷积 2.87288 秒的文件耗时 0.142s
-- 当 IR 长度为 2000 时，卷积 2.87288 秒的文件耗时 0.23s
-- 当 IR 长度为 3000 时，卷积 2.87288 秒的文件耗时 0.36s
-- 当 IR 长度为 4000 时，卷积 2.87288 秒的文件耗时 0.46s
-- 当 IR 长度为 25000 时，卷积 2.87288 秒的文件耗时 0.67s
-- 当 IR 长度为 26000 时，卷积 2.87288 秒的文件耗时 0.68s
-- 当 IR 长度为 27000 时，卷积 2.87288 秒的文件耗时 0.75s
-- 当 IR 长度为 28000 时，卷积 2.87288 秒的文件耗时 0.85s
-- 当 IR 长度为 29000 时，卷积 2.87288 秒的文件耗时 0.89s
-- 当 IR 长度为 30000 时，卷积 2.87288 秒的文件耗时 0.92s
-- 当 IR 长度为 35000 时，卷积 2.87288 秒的文件耗时 1.02s
-- 当 IR 长度为 40000 时，卷积 2.87288 秒的文件耗时 1.13s
-- 当 IR 长度为 40000 时，卷积 2.87288 秒的文件耗时 1.25s
-- 当 IR 长度为 50000 时，卷积 2.87288 秒的文件耗时 1.48s
-- 当 IR 长度为 60000 时，卷积 2.87288 秒的文件耗时 1.68s
-- 当 IR 长度为 70000 时，卷积 2.87288 秒的文件耗时 1.88s
-- 当 IR 长度为 80000 时，卷积 2.87288 秒的文件耗时 2.11s
-- 当 IR 长度为 90000 时，卷积 2.87288 秒的文件耗时 2.33s
-- 当 IR 长度为 100000 时，卷积 2.87288 秒的文件耗时 2.56s
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
 
 ## 28.5 频域卷积
 
 提升卷积性能的答案是将信号和系统转换为频域，然后转换到时域。为了简单，我将在频域进行。
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
-
-在我的第 10 代 Intel CPU Linux 机器上，使用“Release”版本的构建，处理一个 2.8 秒的鼓点循环，带有不同的脉冲响应：
 
 ## 28.6 在 JUCE 中卷积
 
@@ -5016,9 +4632,9 @@ std::cout << "s file in " << duration.count() / 1000.0 << "s\n";
 
 ### 28.6.1 准备插件项目
 
-你可以从仓库指南 39.2.2 中描述的插件启动项目开始本节。加载 CMakeLists.txt 文件并编辑目标名称，它初始为“minimal_plugin”。你应该在 CMakeLists.txt 文件中替换该目标名称的所有出现处。。此外，将你的 PLUGIN_CODE 设置为唯一内容。
+你可以从仓库指南 39.2.2 中描述的插件启动项目开始本节。加载 `CMakeLists.txt` 文件并编辑目标名称，它初始为“minimal_plugin”。你应该在 `CMakeLists.txt` 文件中替换该目标名称的所有出现处。此外，将你的 `PLUGIN_CODE` 设置为唯一内容。
 
-接下来，在 juce_add_plugin 命令中，将‘IS_SYNTH’ 设置为‘FALSE’。这将允许插件成为效果单元。通过添加 target::juce_dsp_libraries 块来编辑 target_link_libraries 块，如下所示：
+接下来，在 `juce_add_plugin` 命令中，将 `IS_SYNTH` 设置为 `FALSE`。这将允许插件成为效果单元。通过添加 `target::juce_dsp_libraries` 块来编辑 `target_link_libraries` 块，如下所示：
 
 ```cpp
 target_link_libraries(convolution_plugin
@@ -5033,13 +4649,7 @@ target_link_libraries(convolution_plugin
 
 此时你应该尝试构建插件。根据你使用的 IDE，采取相应的步骤生成并构建 IDE 项目。
 
-
-
-
-
-## 卷积
-
-## 28.6.2 创建卷积 DSP 链
+### 28.6.2 创建卷积 DSP 链
 
 在你的项目中，打开 `PluginProcessor.h` 文件，并在找到 `Plugin` 类的私有部分（private section）中添加以下行：
 
@@ -5063,9 +4673,9 @@ convolution.loadImpulseResponse(impFile,
 0);
 ```
 
-现在将你的 `impFile` 设置为存在的路径。目前，我们将将其硬编码。接下来的行调用了 `loadImpulseResponse`。最后一个选项 '0' 告诉它保留完整的脉冲响应。如果你没有脉冲响应文件，可以通过从扬声器播放循环点击声（loop click）并录制结果创建一个。脉冲响应也可以从在线资源获取，例如约克大学出色的 OpenAIR 仓库³
+现在将你的 `impFile` 设置为存在的路径。目前，我们将将其硬编码。接下来的行调用了 `loadImpulseResponse`。最后一个选项 `0` 告诉它保留完整的脉冲响应。如果你没有脉冲响应文件，可以通过从扬声器播放循环点击声（loop click）并录制结果创建一个。脉冲响应也可以从在线资源获取，例如约克大学出色的 OpenAIR 仓库³。
 
-## 28.6.3 为音频处理配置链
+### 28.6.3 为音频处理配置链
 
 现在你已经创建了链并加载了脉冲响应，你仍然需要为音频处理设置它。首先，你需要在你的插件中实现 `reset` 函数。插件基类带有 `reset` 的实现，但你可以重写它。在 `PluginProcessor.h` 中：
 
@@ -5122,9 +4732,7 @@ dsp::ProcessContextReplacing<float> (inputBlock));
 
 在本章中，你应该已经完成了一些对 WAV 文件执行卷积的命令行程序。你应该能够解释时域卷积和频域卷积的区别，并说明哪一个更快。你应该知道如何使用 JUCE API 中的类来实现卷积插件。我希望你还用一些额外的控制控件自定义了你的卷积插件。
 
-## 29
-
-## 无限脉冲响应滤波器（IIR filters）
+## 29 无限脉冲响应滤波器（IIR filters）
 
 在本章中，你将了解到无限脉冲响应以及它们与前两章中看到的有限脉冲响应（FIR）有何不同。我们将从底层的 C++ 实现开始，然后转向使用 JUCE 的实时插件实现。你将学习滤波器系数和频率响应。你将看到如何利用 JUCE 的模块功能，使用针对不同类型滤波器的预设系数来高效地实现 IIR 滤波器。
 
@@ -5137,6 +4745,7 @@ dsp::ProcessContextReplacing<float> (inputBlock));
 另一种类型的脉冲响应，与 FIR 不同，它不保证衰减为零。这就是无限脉冲响应 (IIR)。IIR 的技巧在于输出是基于之前的输入计算的，并且之前的输出被反馈回输入——它们探索了反馈的力量。反馈系统有着迷人的跨学科历史——我推荐控制论作为一个有趣的切入点。Pickering 2002 年的论文提供了对 20 世纪英国控制先驱 Ashby、Park 和 Beer 活动的见解，他们对反馈非常感兴趣。在相关的平行宇宙中，牙牙制作人如 King Tubby 和 Augustus Pablo 在艺术、科学和工程领域开创了反馈。
 
 图 29.1
+
 无限脉冲响应是强大的！
 
 我推荐控制论作为一个有趣的
@@ -5146,27 +4755,26 @@ dsp::ProcessContextReplacing<float> (inputBlock));
 ![](img/f366929543fe6d506774ef8e004b7e_250_0)
 
 **图 29.2**
+
 极对极，IIR 滤波器生成的脉冲响应丰富得多。左面板显示的是双极 FIR。右面板显示的是双极 IIR。
 
 回到数字信号处理的话题，思考 IIR 和反馈与 FIR 和卷积相比的情况，它允许你使用更少的系数创建更剧烈的滤波和延迟效果。这意味着 IIR 滤波器的运行效率更高。
 
+
+
 例如，在音乐制作的基于 DSP 滤波器的早期，无法实时对信号与脉冲响应（如混响响应）进行卷积。部分原因是计算复杂性，另一部分是存储脉冲响应所需的内存成本。
 
-与其使用 FIR 不同，早期的数字混响（例如 1979 年来自 Lexington 著名的 Model 224）广泛使用了 IIR。卷积和 FIR 仅可用于非实时用途。直到 1990 年，DSP 硬件才有足够的速度允许卷积混响。Sony DRE S777 是一款价值 20,000 美元的 2U 机架式设备，可以从 CD-ROM 加载脉冲响应，被 Sony Sound 杂志描述为“笨重、沉重且火热”，但“房间签名令人难以置信”¹
+与其使用 FIR 不同，早期的数字混响（例如 1979 年来自 Lexington 著名的 Model 224）广泛使用了 IIR。卷积和 FIR 仅可用于非实时用途。直到 1990 年，DSP 硬件才有足够的速度允许卷积混响。Sony DRE S777 是一款价值 20,000 美元的 2U 机架式设备，可以从 CD-ROM 加载脉冲响应，被 Sony Sound 杂志描述为“笨重、沉重且火热”，但“房间签名令人难以置信”¹。
 
-IIR 滤波器还广泛用于数字声音合成器，在这些合成器中，需要具有强共振峰等音乐特性的滤波器，因为 IIR 滤波器非常适合此类应用。这特别是在当
-
-
-
-
+IIR 滤波器还广泛用于数字声音合成器，在这些合成器中，需要具有强共振峰等音乐特性的滤波器，因为 IIR 滤波器非常适合此类应用。这特别是在当……
 
 # 无限脉冲响应滤波器
 
 233
 
-![](img/f36e66929543fe6d506774ef8e004b7e_251_0.png)
+![图 29.3](img/f36e66929543fe6d506774ef8e004b7e_251_0.png)
 
-# 图 29.3
+**图 29.3**
 
 两个 FIR 滤波器（左）与 IIR 滤波器（右）的对比。IIR 滤波器的响应更为剧烈。
 
@@ -5178,13 +4786,11 @@ IIR 滤波器还广泛用于数字声音合成器，在这些合成器中，需�
 
 用数学方法表示反馈会没那么痛苦（至少在物理上如此），而且相对直观，与你之前看到的有限脉冲响应表达式相似。一个简单的单极无限脉冲响应可以表示如下差方程：
 
-```
-$y[n] = a.y[n - 1] + b.x[n]$
+```text
+y[n] = a.y[n - 1] + b.x[n]
 ```
 
-注意我们如何使用 $a$ 和 $b$ 来区分作用于输入 $x$ 的系数和作用于输出 $y$ 的系数。我见过这个方程的不同版本。$b$ 有时写在前面并减去 $a$ 项。作为一名计算机科学家，我不在意，因为根据我阅读的书，我可以使用相同的代码并将系数取负即可！
-
-# 无限脉冲响应滤波器
+注意我们如何使用 `a` 和 `b` 来区分作用于输入 `x` 的系数和作用于输出 `y` 的系数。我见过这个方程的不同版本。`b` 有时写在前面并减去 `a` 项。作为一名计算机科学家，我不在意，因为根据我阅读的书，我可以使用相同的代码并将系数取负即可！
 
 在代码中，该滤波器如下：
 
@@ -5201,11 +4807,11 @@ int main() {
 }
 ```
 
-注意系数 $a$ 作用于之前的输出 $y[n-1]$，而系数 $b$ 作用于当前的输入 $x[n]$。
+注意系数 `a` 作用于之前的输出 `y[n-1]`，而系数 `b` 作用于当前的输入 `x[n]`。
 
 在我的系统上，我看到如下输出：
 
-```
+```text
 x[1]=-0.100000 y[1]=-0.050000
 x[2]=0.200000 y[2]=0.145000
 x[3]=0.500000 y[3]=0.119500
@@ -5213,7 +4819,7 @@ x[4]=-0.200000 y[4]=0.017750
 x[5]=0.000000 y[5]=-0.008875
 ```
 
-现在，让我们编写代码继续计算更长的输出数组，以观察 0.9 反馈的效果。在以下代码中，我使用零填充输入 $x$ 计算了 100 个 $y$ 的值：
+现在，让我们编写代码继续计算更长的输出数组，以观察 0.9 反馈的效果。在以下代码中，我使用零填充输入 `x` 计算了 100 个 `y` 的值：
 
 ```cpp
 int main() {
@@ -5231,9 +4837,9 @@ int main() {
 }
 ```
 
-为了避免巨大的突增，我只是决定从 $x$ 中获取 $x\_tm$ 或将其设为零。
+为了避免巨大的突增，我只是决定从 `x` 中获取 `x_tm` 或将其设为零。
 
-```
+```text
 x[1]=-0.100000 y[1]=-0.050000
 x[2]=0.200000 y[2]=0.145000
 x[3]=0.500000 y[3]=0.119500
@@ -5246,15 +4852,13 @@ x[98]=0.000000 y[98]=0.000001
 x[99]=0.000000 y[99]=-0.000001
 ```
 
-# 无限脉冲响应滤波器
+即使只有一个极点且只有六个非零输入，你也可以看到信号在 100 步后继续存在。该程序的运行代码见指南第 3.5 节。尝试增加系数 `a` 的值会怎样？
 
-即使只有一个极点且只有六个非零输入，你也可以信号在 100 步后继续存在。该程序的运行代码见指南第 3.5 节。尝试增加系数 $a$ 的值会怎样？
+## 29.3 C++ 中的双极 IIR 滤波器
 
-## C++ 中的双极 IIR 滤波器
+现在我们将添加另一个极点。这是一个双极版本的表达式，考虑了两个之前的输出 `y[n-1]` 和 `y[n-2]` 以及一个之前的输入 `x[n-1]` 和当前输入 `x[n]`：
 
-现在我们将添加另一个极点。这是一个双极版本的表达式，考虑了两个之前的输出 $y[n-1]$ 和 $y[n-2]$ 以及一个之前的输入 $x[n-1]$ 和当前输入 $x[n]$：
-
-```
+```text
 y[n] = a_1y[n-1] + a_2y[n-2] + b_1x[n] + b_2x[n-1]
 ```
 
@@ -5274,13 +4878,17 @@ int main() {
 }
 ```
 
-你可以自己尝试这段代码，例如计算更长的输出。你可以尝试将代码与 3.1 节的 wav 示例集成，以便用你的 IIR 滤波器处理整个文件。
+你可以自己尝试这段代码，例如计算更长的输出。你可以尝试将代码与 3.1 节的 `wav` 示例集成，以便用你的 IIR 滤波器处理整个文件。
 
-# IIR 和 FIR 滤波器的通用形式这是允许任意数量极点的 IIR 滤波器通用差方程。我采用了维基百科和某些 DSP 教书中看到的“减法”形式：
+# IIR 和 FIR 滤波器的通用形式
 
-$$y[n] = b_0x[n] + b_1x[n-1] + b_2x[n-2] + \dots + b_Mx[n-M] - a_1y[n-1] - a_2y[n-2] - \dots - a_Ny[n-N] \quad (2.3)$$
+这是允许任意数量极点的 IIR 滤波器通用差方程。我采用了维基百科和某些 DSP 教书中看到的“减法”形式：
 
-上面有时会从单极和双极示例扩展。有时会添加归一化组件，它是所有 $a$ 和 $b$ 系数和的倒数。这与我们之前的归一化类似。这是一个通用 IIR 滤波器的实现，你可以在指南 3.5.9 中找到：
+```text
+y[n] = b_0x[n] + b_1x[n-1] + b_2x[n-2] + … + b_Mx[n-M] - a_1y[n-1] - a_2y[n-2] - … - a_Ny[n-N]    (2.3)
+```
+
+上面有时会从单极和双极示例扩展。有时会添加归一化组件，它是所有 `a` 和 `b` 系数和的倒数。这与我们之前的归一化类似。这是一个通用 IIR 滤波器的实现，你可以在指南 3.5.9 中找到：
 
 ```cpp
 std::vector<float> x = my_tiny::loadWav(
@@ -5307,11 +4915,9 @@ my_tiny::saveWav(y, 1, 44100, "../../audio/iir_test.wav");
 
 查看之前节中的各种代码，你可能会好奇如何知道系数应该是。对于 FIR 滤波器来说这很容易，因为系数就是脉冲响应。对于 FIR 滤波器，如果你能获得系统的脉冲响应，就可以用该系统转换任何信号。这对于 IIR 系统并非如此。识别 IIR 滤波器系数的通用过程被称为“滤波器设计”。对经典滤波器技术的全面探索超出了本书的范围，但为了让你对过程有个大致概念，你通常从频率响应开始，你设计的滤波器如何影响信号中不同频率的数值描述。例如：它去除了低频吗？去多少？斜率是多少？
 
-# 无限脉冲响应滤波器
-
 237
 
-![](img/f36e66929543fe6d506774ef8e004b7e_255_0.png)
+![图 29.4](img/f36e66929543fe6d506774ef8e004b7e_255_0.png)
 
 **图 29.4** IIR 滤波器的类型及其频率响应。IIR 滤波器设计是一种折中。
 
@@ -5319,11 +4925,7 @@ my_tiny::saveWav(y, 1, 44100, "../../audio/iir_test.wav");
 
 简短的滤波器设计结束了我们对 IIR 滤波器的高层介绍。在下一节中，我将向你展示基于 JUCE 中 `IIRCo` 类的一些简单滤波器设计技术。
 
-
-
-
-
-# 无限脉冲响应滤波器 (Infinite Impulse Response filters)
+# 无限脉冲响应滤波器（Infinite Impulse Response filters）
 
 238
 
@@ -5331,11 +4933,11 @@ my_tiny::saveWav(y, 1, 44100, "../../audio/iir_test.wav");
 
 ## 29.6.1 准备插件项目
 
-复制存储库指南第 39.2.2 节中描述的插件启动项目副本。加载 `CMakeLists.txt` 文件并编辑目标名称，该名称初始为‘minimal plugin’。你可以使用包含 IIR 和 filter 单词的名称来命名。替换 `CMakeLists.txt` 文件中所有的目标名称实例。此外，将你的 `PLUGIN_CODE` 设置为唯一内容。
+复制存储库指南第 39.2.2 节中描述的插件启动项目副本。加载 `CMakeLists.txt` 文件并编辑目标名称，该名称初始为“minimal plugin”。你可以使用包含 IIR 和 filter 单词的名称来命名。替换 `CMakeLists.txt` 文件中所有的目标名称实例。此外，将你的 `PLUGIN_CODE` 设置为唯一内容。
 
-接下来，在 `add_library` 命令中，将 'IS_SYNTH' 设置为 'FALSE'。这将允许插件作为一个效果单元。通过如下方式添加 `juce::juce_dsp` 模块来编辑 `target_link_libraries` 块：
+接下来，在 `add_library` 命令中，将 `IS_SYNTH` 设置为 `FALSE`。这将允许插件作为一个效果单元。通过如下方式添加 `juce::juce_dsp` 模块来编辑 `target_link_libraries` 块：
 
-```
+```cmake
 target_link_libraries(IIR_plugin
     PRIVATE
         juce::juce_audio_utils
@@ -5352,7 +4954,7 @@ target_link_libraries(IIR_plugin
 
 在你的项目中，打开 `PluginProcessor.h` 文件，并在此处找到的 Plugin 类的私有部分添加以下行：
 
-```
+```cpp
 juce::dsp::ProcessorChain<juce::dsp::IIR::Filter<float>> processorChain;
 ```
 
@@ -5368,9 +4970,8 @@ void reset() override;
 void TestPluginAudioProcessor::reset()
 {
     processorChain.reset();
+}
 ```
-
-# 无限脉冲响应滤波器
 
 ## 29.6.3 生成一些系数
 
@@ -5392,7 +4993,7 @@ filter.coefficients = juce::dsp::IR::
 reset();
 ```
 
-该代码告知处理器链采样率、分块大小和通道数。然后，它使用‘Coefficients’类上的静态 `makeLowPass` 函数为低通滤波器生成一些系数。静态可调用意味着我们可以直接调用该函数而无需实例化 `Coefficients` 对象。
+该代码告知处理器链采样率、分块大小和通道数。然后，它使用 `Coefficients` 类上的静态 `makeLowPass` 函数为低通滤波器生成一些系数。静态可调用意味着我们可以直接调用该函数而无需实例化 `Coefficients` 对象。
 
 现在，将其放入 `processBlock` 中：
 
@@ -5421,32 +5022,37 @@ dsp::ProcessContextReplacing<float>(inBlock));
 
 在本章中，你学习了无限脉冲响应。你应该能够解释为什么无限脉冲响应可能比有限脉冲响应更好。你应该知道什么是频率响应，并能够解释频率响应图。你应该能够在命令行程序中实现可以处理 WAV 文件的 IIR 滤波器。你还应该能够使用 JUCE 的 `ProcessorChain` 功能在 JUCE 插件中使用预设系数实现 IIR 滤波器。
 
-# 30
+# 30 波形整形器（Waveshapers）
 
-## 波形整形器 (Waveshapers)
-
-在本章中，我将引导你通过波形整形创建失真效果的过程。你将首先通过将 libtorch 中可用的简单 clip、relu 和 sigmoid 波形整形器实现为命令行程序来演示基本概念。然后，你将创建一个基本的 JUCE 波形整形插件，允许你即时重塑波形。在章节结束时，你将看到如何将波形整形与其他技术相结合以构建一个完整的 JUCE 插件。
+在本章中，我将引导你通过波形整形创建失真效果的过程。你将首先通过将 libtorch 中可用的简单 `clip`、`relu` 和 `sigmoid` 波形整形器实现为命令行程序来演示基本概念。然后，你将创建一个基本的 JUCE 波形整形插件，允许你即时重塑波形。在章节结束时，你将看到如何将波形整形与其他技术相结合以构建一个完整的 JUCE 插件。
 
 ## 30.1 什么是波形整形器？
 
 ![waveshaper](https://example.com/waveshaper)
 
-在篇文章中，《数字音频》的著名作者 Curtis Roads 写道‘失真’尚待解释。波形整形是将信号通过非线性函数的过程。传输函数根据输入决定输出。注意波形整形如何为信号添加频率成分。与 IIR 滤波器不同，波形整形就像遍历信号并调用一个函数。
-
-# 波形整形器
+在篇文章中，《数字音频》的著名作者 Curtis Roads 写道“失真”尚待解释。波形整形是将信号通过非线性函数的过程。传输函数根据输入决定输出。注意波形整形如何为信号添加频率成分。与 IIR 滤波器不同，波形整形就像遍历信号并调用一个函数。
 
 242
 
 ![waveshaper_0](https://example.com/waveshaper_0)
+
 ![waveshaper_1](https://example.com/waveshaper_1)
+
 ![waveshaper_2](https://example.com/waveshaper_2)
+
 ![waveshaper_3](https://example.com/waveshaper_3)
+
 ![waveshaper_4](https://example.com/waveshaper_4)
+
 ![waveshaper_5](https://example.com/waveshaper_5)
+
 ![waveshaper_6](https://example.com/waveshaper_6)
+
 ![waveshaper_7](https://example.com/waveshaper_7)
 
-图 30.2
+**图 30.2**
+
+
 
 不同波形整形传输函数对正弦波的影响。顶行：传输函数，中间行：整形后的正弦波，底部：整形后的正弦波。
 
@@ -5458,26 +5064,25 @@ dsp::ProcessContextReplacing<float>(inBlock));
 // 获取一些数学和其他操作的包含文件
 #include <algorithm>
 #include <cmath>
+
 // relu 在值非负时将其设置为零，否则如此。
 // 它保持值不变
 float relu(float x) {
-return std::max(0.0f, x);
+    return std::max(0.0f, x);
 }
+
 // sigmoid 比较微妙，在值范围的
-// 极端应用了结合直流偏移的// 压缩效应
+// 极端应用了结合直流偏移的压缩效应
 float sigmoid(float x) {
     return 1.0f / (1.0f + std::exp(-x));
 }
 ```
 
-
-
-
-
-# 波形整形器 (Waveshapers)
+### 波形整形器（Waveshapers）
 
 ```cpp
 17 }
+
 // clip 将任何超过阈值的值推到最大值
 float clip(float input, float clip_value) {
     if (std::abs(input) > clip_value) {
@@ -5487,15 +5092,17 @@ float clip(float input, float clip_value) {
 }
 ```
 
-编写一个程序，使用我们之前看到的 `loadWav` 和 `saveWav` 函数来加载 WAV 文件，将其通过这些波形整形传输函数之一，并将其保存为新的 WAV 文件。在文件名中加上你所应用的函数名称。这是一个用于开始编写的 main 函数：
+编写一个程序，使用我们之前看到的 `loadWav` 和 `saveWav` 函数来加载 WAV 文件，将其通过这些波形整形传输函数之一，并将其保存为新的 WAV 文件。在文件名中加上你所应用的函数名称。这是一个用于开始编写的 `main()` 函数：
 
 ```cpp
 int main() {
     std::vector<float> audio =
-    my_tky::loadWav("../audio/drums_16bit.wav");
-    for (auto i=0; i<audio.size(); ++i){
+        my_tky::loadWav("../audio/drums_16bit.wav");
+
+    for (auto i = 0; i < audio.size(); ++i) {
         audio[i] = relu(audio[i]);
     }
+
     my_tky::saveWav(audio, 1, 44100,
         "../audio/waveshaper.wav");
 }
@@ -5503,13 +5110,13 @@ int main() {
 
 你可以在代码仓库的第 39.5.12 部分找到此版本的录音。尝试不同的波形整形器和不同类型的音频信号。你会如何描述不同传输函数的音色？作为一个挑战性，你能想出一个合适的传输函数来实现一个基础的动态范围压缩器吗？你能设计让传输函数具有状态性，以便你的压缩器具有攻击时间（attack time）和释放时间（release time）吗？
 
-# 30.3 基础 JUCE 波形整形器
+## 30.3 基础 JUCE 波形整形器
 
 在 JUCE 中实现波形整形器非常简单。在本节中，我们将从一个“DIY 型” JUCE 波形整形器插件开始，这能让你清楚地看到发生了什么。在下一节中，我们将使用 JUCE DSP 处理器链组件来重建波形整形器，以便我们与之前开始的 IIR 和 FIR 实现进行集成。
 
 从第 39.2.2 节描述的插件启动项目开始。对插件的 `CMakeLists.txt` 文件和项目属性进行常规更改。确保 `juce_add_plugin` 块中的 `IS_SYNTH` 设置为 `FALSE`。现在你只需要将激活函数添加到 `PluginProcessor.h` 的私有部分（private section）：
 
-# 波形整形器
+### 波形整形器
 
 ```cpp
 float relu(float x);
@@ -5522,22 +5129,26 @@ float clip(float x, float clip);
 ```cpp
 float TestPluginAudioProcessor::relu(float x) {
 }
+
 float TestPluginAudioProcessor::sigmoid(float x) {
 }
+
 float TestPluginAudioProcessor::clip(float x, float clip) {
 }
 ```
 
-继续将 `...` 替换为传输函数的实现。最后一步是使用传输函数在 `PluginProcessor` 的 `processBlock` 函数中处理音频。这里是是将 `clip` 波形整形器应用到输入样本的最小代码。将其放入 `PluginProcessor.cpp`：
+继续将 `...` 替换为传输函数的实现。最后一步是使用传输函数在 `PluginProcessor` 的 `processBlock` 函数中处理音频。这里是将 `clip` 波形整形器应用到输入样本的最小代码。将其放入 `PluginProcessor.cpp`：
 
 ```cpp
 juce::ScopedNoDenormals nDenormals;
 auto inChannels = getTotalInputChannels();
 auto outChannels = getTotalOutputChannels();
+
 {
     for (int c = 0; c < inChannels; ++c) {
         auto* cData = buffer.getWritePointer(c);
-        for (auto s=0; s < buffer.getNumSamples(); ++s) {
+
+        for (auto s = 0; s < buffer.getNumSamples(); ++s) {
             cData[s] = clip(cData[s], 0.1);
         }
     }
@@ -5546,21 +5157,21 @@ auto outChannels = getTotalOutputChannels();
 
 你可以在代码仓库的第 39.5.13 部分找到此插件的可运行版本。通过在用户界面上添加参数控制进行实验，例如改变 `clip` 参数。你也可以添加界面控件来切换不同的波形整形传输函数。
 
-# 3.4 使用 ProcessorChain 的 JUCE 波形整形器
+## 30.4 使用 ProcessorChain 的 JUCE 波形整形器
 
 现在你有了一个简单的 JUCE 波形整形器插件，我们将再次尝试，但这次使用 JUCE DSP 处理器链。这种方法比上一节的基础波形整形器稍微复杂一点，因为它抽象了一些处理过程，但这种方法的优势是更容易与其他 JUCE DSP 处理器链组件（如 IIR 和 FIR 滤波器）集成。
 
 以下是我们将完成的步骤概述：
 
-- 1. 准备插件项目，在链接器指令中添加 JUCE DSP 模块
-- 2. 在插件中添加 `juce::dsp::ProcessorChain`
-- 3. 在插件构造函数中使用带有波形整形函数设置 `ProcessorChain`
-- 4. 实现 `reset` 和 `prepareToPlay` 函数
-- 5. 最后，在插件的 `processBlock` 函数中将音频缓冲区传递给 `ProcessorChain`
+1. 准备插件项目，在链接器指令中添加 JUCE DSP 模块。
+2. 在插件中添加 `juce::dsp::ProcessorChain`。
+3. 在插件构造函数中使用带有波形整形函数设置 `ProcessorChain`。
+4. 实现 `reset` 和 `prepareToPlay` 函数。
+5. 最后，在插件的 `processBlock` 函数中将音频缓冲区传递给 `ProcessorChain`。
 
-# 30.4.1 准备插件项目
+### 30.4.1 准备插件项目
 
-从代码仓库 39.2.2 中描述的基础插件项目开始一个新的插件项目。重命名项目并按照通常方法在 `CMakeLists.txt` 文件中设置插件代码。在 `CMakeLists.txt` 的 `target.link_libraries` 命令的私有部分添加如下行，以便在项目构建中包含 JUCE DSP 模块：
+从代码仓库 39.2.2 中描述的基础插件项目开始一个新的插件项目。重命名项目并按照通常方法在 `CMakeLists.txt` 文件中设置插件代码。在 `CMakeLists.txt` 的 `target_link_libraries` 命令的私有部分添加如下行，以便在项目构建中包含 JUCE DSP 模块：
 
 ```cmake
 target_link_libraries(my_waveshaper
@@ -5571,7 +5182,7 @@ PRIVATE
 
 验证项目是否可以编译。
 
-# 30.4.2 添加 juce::dsp::ProcessorChain
+### 30.4.2 添加 `juce::dsp::ProcessorChain`
 
 打开头文件 `PluginProcessor.h` 并添加以下私有部分：
 
@@ -5579,7 +5190,7 @@ PRIVATE
 juce::dsp::ProcessorChain processorChain;
 ```
 
-# 30.4.3 实现 reset 和 prepareToPlay 函数
+### 30.4.3 实现 `reset` 和 `prepareToPlay` 函数
 
 接下来，如你在 IIR 实现中所做的那样，你需要重写 `reset` 函数。在 `PluginProcessor.h` 的公共部分添加内容：
 
@@ -5599,18 +5210,23 @@ void TestPluginAudioProcessor::reset() {
 在 `PluginProcessor.cpp` 中实现 `prepareToPlay`：
 
 ```cpp
-void TestPluginAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
+void TestPluginAudioProcessor::prepareToPlay(
+    double sampleRate,
+    int samplesPerBlock)
 {
     // 计算有多少通道
-    const auto channels = jmax(getTotalInputChannels(), getNumOutputChannels());
+    const auto channels =
+        jmax(getTotalInputChannels(), getNumOutputChannels());
+
     // 设置 processorChain
     processorChain.prepare({
-      (uint32) samplesPerBlock,
-      (uint32) channels });
+        (uint32) samplesPerBlock,
+        (uint32) channels
+    });
 }
 ```
 
-# 30.4.4 在 processBlock 中实现波形整形
+### 30.4.4 在 `processBlock` 中实现波形整形
 
 下一步是在插件的 `processBlock` 函数中将音频传递给 `ProcessorChain`。这与 IIR 和 FIR 示例中的实现相同：
 
@@ -5619,145 +5235,160 @@ ScopedNoDenormals noDen;
 const auto inChans = getTotalInputChannels();
 const auto outChans = getTotalOutputChannels();
 const auto numChans = jmax(inChans, outChans);
+
 auto inBlock = dsp::AudioBlock<float>(buffer)
-  .setSubsetBlock(
-    0, (size_t) numChans);
+    .setSubsetBlock(0, (size_t) numChans);
+
 processorChain.process(
-  dsp::ProcessContextReplacing<float>(inBlock)
+    dsp::ProcessContextReplacing<float>(inBlock)
 );
 ```
 
+### 波形整形器（Waveshapers）
 
+![图 30.3](img/f36e66929543fe6d506774ef8e004b7e_266_0.png)
 
+**图 30.3**
 
-
-# 波整形器 (Waveshapers)
-
-# 248
-
-![](img/f36e66929543fe6d506774ef8e004b7e_266_0.png)
-
-# 图 30.3
-
-为波整形器插件自动生成的通用 UI。
+为波形整形器插件自动生成的通用 UI。
 
 我们将该参数作为一个真正的插件参数添加——在 `PluginProcessor.h` 的公共部分添加以下内容：
 
-+   juce::AudioParameterFloat* clipThreshold;
+```cpp
+juce::AudioParameterFloat* clipThreshold;
+```
 
 现在在构造函数中实例化该参数并使用 `addParameter` 将其注册到插件：
 
-```
-addParameter(clipThreshold = new juce::AudioParameterFloat (
-  "ClipThresh",
-  "Clip threshold",
-  0.0f,
-  1.0f,
-  0.1f
+```cpp
+addParameter(clipThreshold = new juce::AudioParameterFloat(
+    "ClipThresh",
+    "Clip threshold",
+    0.0f,
+    1.0f,
+    0.1f
 ));
 ```
 
 现在，通过自动生成的 UI 使参数编辑器变得可编辑，只需将 `PluginProcessor.cpp` 中 `createEditor` 定义中的行替换为以下内容：
 
-```
-juce::AudioProcessorEditor* TestPluginAudioProcessor::createEditor()
+```cpp
+juce::AudioProcessorEditor*
+TestPluginAudioProcessor::createEditor()
 {
-  return new GenericAudioProcessorEditor(*this);
-// return new TestPluginAudioProcessorEditor(*this);
+    return new GenericAudioProcessorEditor(*this);
+    // return new TestPluginAudioProcessorEditor(*this);
 }
 ```
 
 `GenericAudioProcessorEditor` 将根据你为插件注册的参数自动生成 UI。编译并运行以进行测试。你的界面应该看起来像图 30.3 所示，有一个控制裁剪阈值的滑块。
 
-# 30.5.1 修复 lambda 函数
+### 30.5.1 修复 lambda 函数
 
 下一步是修复 lambda 函数，目前它没有方法访问裁剪阈值参数。修改 `PluginProcessor.h` 中 `processorChain` 变量的规格说明，使其能够接受一个 `std::function` 作为其 lambda：
 
-+   juce::dsp::ProcessorChain<juce::dsp::WaveShaper<float, std::function<float(float)>>> processorChain;
+```cpp
+juce::dsp::ProcessorChain<
+    juce::dsp::WaveShaper<
+        float,
+        std::function<float(float)>
+    >
+> processorChain;
+```
 
-# 波整形器 (Waveshapers)
+![图 30.4](img/f36e66929543fe6d506774ef8e004b7e_267_0.png)
 
-![](img/f36e66929543fe6d506774ef8e004b7e_267_0.png)
-
-# 30.4
+**图 30.4**
 
 正弦波通过一系列块，这些块以简化的方式模拟了吉他放大器的处理过程。
 
 注意我们如何为 `WaveShaper` 模板添加了第二个属性：`std::function<float>(float)`。我们之前只指定了输入波整形传输函数的一个属性；之前波整形器对该第二个属性使用默认函数类型，这不允许我们送入一个“作用域（scope）”。现在我们可以在 `PluginProcessor.cpp` 的构造函数中使用一个不同的 lambda 来更新代码：
 
-```
+```cpp
 auto waveshaper = processorChain::template get<0>();
+
 waveshaper->toUse = [this](float x) {
     float clip = this->clipThreshold->get();
+
     if (std::abs(x) > clip) {
         return (x < 0) ? -1.0f : 1.0f;
     }
+
     return x;
 };
 ```
 
-注意方括号中有一个 `this`，它为 lambda 提供了访问当前插件处理对象的权限。这就是我之前提到的作用域。现在 lambda 就可以访问我们添加到插件处理器公共部分的 `clipThreshold` 变量了。这意味着裁剪波整形器的行为可以发生动态变化。让插件运行起来，然后通过它享受你喜爱的吉他、贝斯、合成器或鼓。。我特别喜欢用它制作出超级模糊的吉他音色。你可以在代码仓库 39.5.14 中找到此插件的可运行版本。
+注意方括号中有一个 `this`，它为 lambda 提供了访问当前插件处理对象的权限。这就是我之前提到的作用域。现在 lambda 就可以访问我们添加到插件处理器公共部分的 `clipThreshold` 变量了。这意味着裁剪波整形器的行为可以发生动态变化。让插件运行起来，然后通过它享受你喜爱的吉他、贝斯、合成器或鼓。我特别喜欢用它制作出超级模糊的吉他音色。你可以在代码仓库 39.5.14 中找到此插件的可运行版本。
 
-# 30.6 迈向吉他放大器模拟器
+## 30.6 迈向吉他放大器模拟器
 
-现在你已经看到了创建一个经典的基于 DSP 的吉他放大器模拟器所需的所有组件，但你应该将它们组合起来创建一个令人信服的
+现在你已经看到了创建一个经典的基于 DSP 的吉他放大器模拟器所需的所有组件，但你应该将它们组合起来创建一个令人信服的……
 
-在 2013 年的一份白皮书中，Fractal Audio Systems 描述了吉他放大器涉及的处理过程以及如何使用 DSP 对其进行建模[42]。Fractal 作为 Axe-Fx 系列高端模拟器的制造商，将吉他放大器描述为一系列滤波器和失真块。通常，吉他进入一个前级器，导致 EQ 滤波和非线性失真。在三种 DSP 技术（IIR、FIR 和波整形）中，你会使用哪一个来建模这些块？接情况下，信号进入一个通常是可以调节的 EQ —— IIR 滤波。最后，信号再次被功率放大——波整形。最后，信号通过扬声器器箱（speaker cabinet）和 FIR 卷积转换为声音。实现一个像 Fractal Audio Systems 描述的完整吉他放大器模型超出了本书部分的范围。本书的这一部分是对 DSP 技术的简要介绍，但坦率地说，建模非常有趣，所以这里介绍了如何构建 JUCE DSP 处理器链来分别执行波整形、IIR 滤波和卷积到前级器。
+在 2013 年的一份白皮书中，Fractal Audio Systems 描述了吉他放大器涉及的处理过程以及如何使用 DSP 对其进行建模[42]。Fractal 作为 Axe-Fx 系列高端模拟器的制造商，将吉他放大器描述为一系列滤波器和失真块。通常，吉他进入一个前级器，导致 EQ 滤波和非线性失真。在三种 DSP 技术（IIR、FIR 和波整形）中，你会使用哪一个来建模这些块？接下来，信号进入一个通常是可以调节的 EQ——IIR 滤波。最后，信号再次被功率放大——波整形。最后，信号通过扬声器器箱（speaker cabinet）和 FIR 卷积转换为声音。实现一个像 Fractal Audio Systems 描述的完整吉他放大器模型超出了本书部分的范围。本书的这一部分是对 DSP 技术的简要介绍，但坦率地说，建模非常有趣，所以这里介绍了如何构建 JUCE DSP 处理器链来分别执行波整形、IIR 滤波和卷积到前级器。
 
-# 30.6.1 将 JUCE DSP 处理器链接在一起
+### 30.6.1 将 JUCE DSP 处理器链接在一起
 
 在指令序列中，你将看到如何将 JUCE DSP 处理器链接在一起。你可以在代码仓库 39.5.1 中找到完整项目。指令涵盖了以下步骤：
 
-- 1. 创建项目
-- 2. 定义处理器链
-- 3. 实例化并准备处理器链
-- 4. 使用处理器链处理音频
+1. 创建项目。
+2. 定义处理器链。
+3. 实例化并准备处理器链。
+4. 使用处理器链处理音频。
 
 建议合理的起点是上一节中的波整形示例。如果你对其进行了大量自定义，你可能想从代码仓库 39.5.14 中的清洁示例开始。更改处理器名称。编译以验证。
 
-# 30.6.2 准备并实例化处理器链
+### 30.6.2 准备并实例化处理器链
 
 打开 `PluginProcessor.h`。如果你是从清洁示例开始的，你应该会在私有部分看到：
 
-```
+```cpp
 juce::dsp::ProcessorChain<
-    juce::dsp::WaveShaper
-    <float, std::function<float)>>
-    > ProcessorChain;
+    juce::dsp::WaveShaper<
+        float,
+        std::function<float(float)>
+    >
+> ProcessorChain;
 ```
 
-注意我在代码布局中将其拆分了，这样你可以看到处理器链目前由一个 `WaveShaper`。让我们添加更多处理器。我要创建如图 30.4 所示的处理器序列。这些块由一个模拟过载前级的比例器、一个高通滤波器和一个模拟扬声器器箱的卷积处理器组成。
+注意我在代码布局中将其拆分了，这样你可以看到处理器链目前由一个 `WaveShaper` 组成。让我们添加更多处理器。我要创建如图 30.4 所示的处理器序列。这些块由一个模拟过载前级的波形整形器、一个高通滤波器和一个模拟扬声器器箱的卷积处理器组成。
 
-```
+```cpp
 // 为滤波器设置类型
 using Filter = juce::dsp::IIR::Filter<float>;
 using FilterCoeffs = juce::dsp::IIR::Coefficients<float>;
+
 juce::dsp::ProcessorChain<
-    // 阶段1：前级失真波整形
-    juce::dsp::WaveShaper
-    <float, std::function<float)>>,
-    // 阶段2：色调控制 IIR 滤波器
-    // 封装在复制器中实现立体
+    // 阶段 1：前级失真波形整形
+    juce::dsp::WaveShaper<
+        float,
+        std::function<float(float)>
+    >,
+
+    // 阶段 2：色调控制 IIR 滤波器
+    // 封装在复制器中实现立体声
     juce::dsp::ProcessorDuplicator<Filter, FilterCoeffs>,
-    // 阶段3：箱箱模拟
-    FIR 卷积
+
+    // 阶段 3：箱体模拟
+    // FIR 卷积
     juce::dsp::Convolution
 > ProcessorChain;
 ```
 
 指定 IIR 滤波器的代码比其他模块长，因为 IIR 滤波器无法以立体声工作。所以 IIR 滤波器被封装在 `ProcessorDuplicator` 中将其转换为立体声。
 
-我们需要能够访问链中的三项，这是通过 `get` 函数和数值索引实现的。我们在之前的代码中看到这一点，当时对 `processorChain` 调用 `get(0)` 以访问波整形器，但在该代码中波整形器是唯一的模块。访问链中模块的方便语法是将此添加到 `PluginProcessor.h` 的私有部分：
+我们需要能够访问链中的三项，这是通过 `get` 函数和数值索引实现的。我们在之前的代码中看到这一点，当时对 `processorChain` 调用 `get(0)` 以访问波形整形器，但在该代码中波形整形器是唯一的模块。访问链中模块的方便语法是将此添加到 `PluginProcessor.h` 的私有部分：
 
-```
+```cpp
 enum {
     ws_index,
     iir_index,
     conv_index
-}
+};
 ```
 
-该代码了值为 0 的 `ws_index`、值为 1 的 `iir_index` 和值为 2 的 `conv_index`。你将在下一步中使用这些名称。现在让我们配置处理块。在 `PluginProcessor.cpp` 中，构造函数添加了这段代码，它设置了波整形器和 FIR 卷积器。注意它还没有设置 IIR 滤波器，我们需要采样率来配置 IIR 滤波器的系数，而在调用 `preparePlay` 之前我们并不知道采样率。
+
+
+该代码设置了值为 0 的`ws_index`、值为 1 的`iir_index`和值为 2 的`conv_index`。你将在下一步中使用这些名称。现在让我们配置处理块。在`PluginProcessor.cpp`中，构造函数添加了这段代码，它设置了波整形器和 FIR 卷积器。注意它还没有设置 IIR 滤波器，我们需要采样率来配置 IIR 滤波器的系数，而在调用`preparePlay`之前我们并不知道采样率。
 
 ```
 // 设置波整形器
@@ -5780,7 +5411,7 @@ convolution.loadImpulseResponse(
     0);
 ```
 
-为了简洁，我从上面的示例中移除了一些代码检查，但你可以在代码仓库章节 39.5.5 中看到它。要设置 IIR 滤波器，在 `PluginProcessor.cpp` 的 `preparePlay` 函数中添加以下代码：
+为了简洁，我从上面的示例中移除了一些代码检查，但你可以在代码仓库章节 39.5.5 中看到它。要设置 IIR 滤波器，在`PluginProcessor.cpp`的`preparePlay`函数中添加以下代码：
 
 ```
 // 设置 IIR 滤波器 - 在这种情况下 200Hz 高通
@@ -5796,15 +5427,11 @@ processorChain.prepare({
 
 第一部分配置了高通“色调”滤波器的系数。第二部分告知处理器链音频配置。编译并测试。
 
-# 30.6.3 使用处理器链处理音频
+## 30.6.3 使用处理器链处理音频
 
-最后一步是在 `processBlock` 函数中将输入音频块传递给处理器链。这与你之前看到的其他 DSP 模块效果完全相同：
+最后一步是在`processBlock`函数中将输入音频块传递给处理器链。这与你之前看到的其他 DSP 模块效果完全相同：
 
-
-
-
-
-## 波形整形器
+### 波形整形器
 
 ```cpp
 1 ScopedNoDenormals noDenormals;
@@ -5822,7 +5449,7 @@ processorChain.prepare({
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_271_0.png)
 
-## 图 30.5
+### 图 30.5
 
 为卷积箱体模拟器捕捉脉冲响应。
 
@@ -5831,6 +5458,7 @@ processorChain.prepare({
 在本章中，你探索了波形整形以及如何使用它来创建失真效果。现在你应该有一个可以执行波形整形的 JUCE 插件了。最后我们看到了如何将波形整形与 IIR 和 FIR 滤波器等其他 DSP 技术结合成吉他音箱模拟器。
 
 ## 31
+
 ### 神经网络吉他音箱仿真简介
 
 在本章中，我将为你高级概述使用神经网络创建吉他音箱仿真的过程。通过训练过程，神经网络可以学习模拟电子管放大器和其他吉他设备的复杂非线性行为。我将解释一些关键概念，例如训练数据如何引导网络参数，以及反向传播如何使网络学习。在本章结束时，你将对训练神经网络为吉他音箱建模有更深入的理解，为下一章的实际实现做好准备。
@@ -5853,7 +5481,7 @@ processorChain.prepare({
 
 所以你可能在阅读书的这部分时还没有接触过神经网络。你对这里的神经网络应该的第一点是，它们本质上是我们已经过的 DSP 过程的高级版本。和基于 DSP 的模拟器一样，神经网络接收输入、处理它并产生输出。事实上，取决于神经网络的架构，处理过程可以留下输入、之前的输出和非线性
 
-你可能听过一些网络架构，例如递归网络（RNN）、其后代长短期记忆网络（LSTM）以及卷积网络（CNN）。正如我之前提到的，这些架构与 DSP 技术之间存在联系。Native Instruments 的一个团队在使用神经网络建模滤波器时，他们指出，“卷积神经网络（CNN）可以被视为一种非线性 FIR 滤波器，而递归神经网络（RNN）可以被视为一种 IIR 滤波器.”[22]。为了完成这三者，神经网络等同波形整形的是激活函数。
+你可能听过一些网络架构，例如递归网络（RNN）、其后代长短期记忆网络（LSTM）以及卷积网络（CNN）。正如我之前提到的，这些架构与 DSP 技术之间存在联系。Native Instruments 的一个团队在使用神经网络建模滤波器时，他们指出，“卷积神经网络（CNN）可以被视为一种非线性 FIR 滤波器，而递归神经网络（RNN）可以被视为一种 IIR 滤波器.”。为了完成这三者，神经网络等同波形整形的是激活函数。
 
 ## 31.3 什么是训练？
 
@@ -5863,10 +5491,6 @@ processorChain.prepare({
 
 训练过程我们
 
-
-
-
-
 # 神经网络吉他放大器仿真介绍
 
 257
@@ -5874,6 +5498,7 @@ processorChain.prepare({
 ![](img/f36e66929543fe6d506774ef8e004b7e_275_0.png)
 
 图 31.2
+
 训练神经网络的四个阶段：1：将测试输入通过你想要建模的设备（例如放大器），2：将测试输入通过神经网络，3：计算网络输出与放大器输出之间的误差，4：使用反向传播更新网络参数以减少误差。返回阶段 2。
 
 这被归类为监督学习。之所以是监督的，是因为我们告诉训练程序输入和输出应该是什么。之所以是机器学习，是因为训练程序和神经网络决定了如何从输入中最好获得所需的输出。
@@ -5924,18 +5549,15 @@ processorChain.prepare({
 
 到此，你应该能够区分黑箱、灰箱和白箱，并将神经网络归类为黑箱。你应该将常见的神经网络架构（如 LSTM 和 ConvNets）与经典的 DSP 技术（如 IIR 和 FIR 滤波器）建立联系。你应该大致掌握训练神经网络来建模吉他放大器涉及的环节，即创建训练数据，然后迭代更新网络参数，直到它以正确的方式处理音频。你应该知道验证数据和训练数据之间的区别。你应该理解训练和推理通常在不同的环境中进行；我们将在 Python 中训练，并在 C++ 中推理。在下一章中，你将发现如何将 Python 中创建的模型导入你的 C++ 程序中。
 
+# 32
 
-
-
-
-# 32 
 ## 神经元 FX：LSTM 网络
 
-在本章中，你将把上一章的理论付诸实践，开始构建一个可以处理音频信号的 LSTM 模型。你将从设置一个适用于创建和测试 LSTM 的 Python 环境开始。你将制作一些 LSTM 并学习如何在 Python 中将音频信号传递给它们。然后，你将学习如何使用 TorchScript 将模型从 Python 导出为特定格式，该格式可以通过 `libtorch` 导入到 C++ 程序中。一旦你的 LSTM 在 C++ 中运行正常，你将看到如何使用它来处理从 WAV 文件读取的音频信号。在章节结束时，你将对不同大小模型的性能进行实验，并了解它们如何应用于实时场景。
+在本章中，你将把上一章的理论付诸实践，开始构建一个可以处理音频信号的 LSTM 模型。你将从设置一个适用于创建和测试 LSTM 的 Python 环境开始。你将制作一些 LSTM 并学习如何在 Python 中将音频信号传递给它们。然后，你将学习如何使用 TorchScript 将模型从 Python 导出为特定格式，该格式可以通过`libtorch`导入到 C++ 程序中。一旦你的 LSTM 在 C++ 中运行正常，你将看到如何使用它来处理从 WAV 文件读取的音频信号。在章节结束时，你将对不同大小模型的性能进行实验，并了解它们如何应用于实时场景。
 
 ## 32.1 本章的计划
 
-在开始本章的工作之前，你需要设置好 Python 和 C++ 环境，包括 `libtorch`。请参考第一部分的说明指令。从现在起，我假设你已经创建了一个全新的 Python 虚拟环境，并已准备好构建和运行 C++ 程序。
+在开始本章的工作之前，你需要设置好 Python 和 C++ 环境，包括`libtorch`。请参考第一部分的说明指令。从现在起，我假设你已经创建了一个全新的 Python 虚拟环境，并已准备好构建和运行 C++ 程序。
 
 在本章中，我们将完成以下项任务：
 
@@ -5971,26 +5593,33 @@ pip install torch librosa scipy numpy ipython jupyter
 
 ## 将数字通过 LSTM
 
-接下来，我们将定义并让音频通过一个简单的 LSTM 网络。这里有一个 Python 脚本，它导入了 `torch` 模块，创建一个 LSTM 层并将一个数字通过该层：
+接下来，我们将定义并让音频通过一个简单的 LSTM 网络。这里有一个 Python 脚本，它导入了`torch`模块，创建一个 LSTM 层并将一个数字通过该层：
+
+
 
 ```python
 import torch
+
 # 设置随机种子以便生成生成
 # 相同的网络参数
 torch.manual_seed(10)
+
 # 创建一个简单的 LSTM 网络层
 my_lstm = torch.LSTM(1, 1, 1)
+
 # 创建一个输入 - 注意是一个 2 维结构 [[]]
 in_t = torch.tensor([[1.0]])
+
 # 将其通过 LSTM 层
 out_t, h_t = my_lstm.forward(in_t)
+
 # 打印结果
 print(out_t)
 ```
 
 继续运行该脚本。以下是我运行它时看到的内容：
 
-```
+```text
 tensor([[0.0318]], grad_fn=<SqueezeBackward1>)
 ```
 
@@ -6000,37 +5629,42 @@ tensor([[0.0318]], grad_fn=<SqueezeBackward1>)
 
 ```python
 import torch
+
 torch.manual_seed(10)
 my_t = torch.nn.LSTM(1, 1, 1)
 
 # 创建一个输入
 in_t = torch.tensor([[1.0], [0.], [0.], [0.], [0.]])
+
 # 将其通过 LSTM 层
 out_t, hx = my_lstm.forward(in_t)
+
 # 打印结果
 print(out_t)
 ```
 
 你还记得那个特定信号叫什么吗？希望你说是“脉冲信号”。我看到了以下结果：
 
-```
+```text
 [[0.0318],
-[0.1224],
-[0.1459],
-[0.1563],
-[0.1615],
-[0.1642]]
+ [0.1224],
+ [0.1459],
+ [0.1563],
+ [0.1615],
+ [0.1642]]
 ```
 
 有趣！信号会消失吗？尝试这个：
 
 ```python
 import torch
+
 torch.manual_seed(10)
 my_lstm = torch.nn.LSTM(1, 1, 1)
 
 # 100 个零
-in_t = torch.zeros((100,1))
+in_t = torch.zeros((100, 1))
+
 # 在开头放置 1.0
 in_t[0][0] = 1.0
 
@@ -6045,17 +5679,25 @@ print(out_t)
 此时，你已经多次看到“张量”这个词。什么是张量？我喜欢将其想为复杂性不断增加的序列中的某些结构。序列是：标量、向量、矩阵、张量：
 
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 这是在序列中复杂性不断增加的结构。序列是：
+
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 这是在序列中复杂性不断增加的结构。序列是：标量、向量、矩阵、张量：
+
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 （注：此处原文似乎存在重复段落，已按逻辑翻译）
@@ -6063,49 +5705,60 @@ $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 ```python
 # 将其通过 LSTM 层
 out_t, hx = my_lstm.forward(in_t)
+
 # 打印结果
 print(out_t)
 ```
 
 这是在序列中复杂性不断增加的结构。序列是：标量、向量、矩阵、张量：
+
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 （注：此处原文似乎存在重复段落，已按逻辑翻译）
 
 这是在序列中复杂性不断增加的结构。序列是：标量、向量、矩阵、张量：
+
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 （注：此处原文似乎存在重复段落，已按逻辑翻译）
 
 这是在序列中复杂性不断增加的结构。序列是：标量、向量、矩阵、张量：
+
 $[0.5, 0.1, 0.25] \rightarrow$ 向量
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 矩阵
+
 $[0.5, 0.1, 0.25, 0.05, 0.9, 0.4] \rightarrow$ 张量
 
 （注：此处原文似乎存在重复段落，已按逻辑翻译）
 
 （注：由于源文本中出现了大量相似的重复，翻译时已根据核心逻辑处理）
 
-The PyTorch LSTM layer is designed so you can choose to reset or keep its previous state each time you pass in a number. So, if you hold on that hidden value x, you can pass it into the network next time, and remember what state it was after receiving the first value.
+PyTorch 的 LSTM 层设计使得你可以在每次传入数字时，选择重置或保留其先前的状态。因此，如果你保留那个隐藏值 `x`，你可以在下次将其传递到网络，并记住它在接收到第一个值后的状态。
 
 （此处省略了重复的示例性文本说明）
 
-Try commenting the call to manual_seed so the network is random each time you run the script. 
+尝试注释掉对 `manual_seed` 的调用，这样网络在每次运行脚本时都是随机的。
 
-Tensors are the currency of networks.
+张量是网络的通用媒介。
 
 ## 32.5 将音频通过 LSTM
 
-At this point, I am keen to hear what it sounds like when you send a signal through. Here is some code that synthesises a sine passes it through an LSTM, and then saves the original and processed to WAV files:
+此时，我很想听听将信号传入网络后会是什么声音。下面的代码生成一个正弦波，将其通过 LSTM，然后把原始信号和处理后的信号保存为 WAV 文件：
 
 ```python
 import torch
 import numpy as np
 from scipy.io.wavfile import write
+
 torch.manual_seed(10)
 
 # synthesize a 400Hz
@@ -6119,47 +5772,49 @@ clean_sine = np.sin(
 # box = [[], []]
 clean_sine = np.reshape(
     clean_sine,
-    (len(clean_sine), 1))
+    (len(clean_sine), 1)
+)
 
 my_lstm = torch.nn.LSTM(1, 1, 1)
 in_t = torch.tensor(clean_sine)
 
 # pass it through the LSTM layer
 out_t, hx = my_lstm.forward(in_t)
+
 # print the results
 print(out_t)
 
 write('sine_400.wav', 44100, out_t.detach().numpy())
 ```
 
-Now, let's analyse what the LSTM did to the sine wave ranging the time and frequency. Figure 32.1 shows the 400Hz sine tone before and after it passed through the LSTM in the domains. You can see that the sinusoidal shape has been 'pinched' at its low point and widened at its high point. This results in the creation of additional harmonics. So you can see that
+现在，让我们从时域和频域分析 LSTM 对正弦波做了什么。图 32.1 展示了 400Hz 正弦音调通过 LSTM 前后的时域和频域情况。你可以看到，正弦波形在低点处被“挤压”，在高点处变宽。这会产生额外的谐波。因此，你可以看到：
 
-![](img/f36e66929543fe6d506774ef8e04b7e_284_0.png)
+![图 32.1](img/f36e66929543fe6d506774ef8e04b7e_284_0.png)
 
-### Figure 32.1
-What does our simple, random LSTM do to a sine wave? It changes the shape of the wave and introduces extra frequencies. Even with one LSTM unit, we are already creating the kind of harmonic distortion that guitar players wax about when discussing their valve amplifier setups.
+### 图 32.1
 
-## 32.6 What is the LSTM doing?
+我们简单的随机 LSTM 对正弦波做了什么？它改变了波形，并引入了额外的频率。即使只有一个 LSTM 单元，我们也已经在产生吉他手讨论电子管放大器装置时所称道的那种谐波失真。
 
-As we saw in the previous section, a single LSTM layer with a single unit can add interesting harmonic distortion to audio signals. How does it do that? An LSTM unit is a rather elaborate delay and feedback unit with four distinct, parameterised components: input gate, forget gate, output gate and update system. These components work together to manage previous inputs, previous state and outputs to the unit to compute its subsequent output. As the name suggests, it can take account of the short-term, i.e. recent inputs and outputs, and the longer-term, i.e. less inputs and outputs. Schmidhuber invented the LSTM in 1997 to solve the problem of networks losing track of older parts of the signal they were modeling. The design allows the LSTM to learn to forget certain things and remember others.
+## 32.6 LSTM 在做什么？
 
-Let's take a quick look at the parameters that control those four components:
+正如上一节所见，一个只有单个单元的 LSTM 层可以为音频信号添加有趣的谐波失真。它是如何做到的？LSTM 单元是一种相当复杂的延迟和反馈单元，包含四个不同的、参数化的组件：输入门、遗忘门、输出门和更新系统。这些组件共同管理传入单元的先前输入、先前状态和输出，以计算后续输出。顾名思义，它既可以考虑短期信息（即最近的输入和输出），也可以考虑长期信息（即较早的输入和输出）。Schmidhuber 于 1997 年发明了 LSTM，用于解决网络无法记住所建模信号较早部分的问题。这种设计使 LSTM 能够学会遗忘某些内容，同时记住其他内容。
+
+让我们快速查看控制这四个组件的参数：
 
 ```python
 for p in my_lstm.parameters():
     print(p.data)
 ```
 
-I see the following output:
+我看到以下输出：
+
+```text
 tensor([[-0.5418,]])
-
-
-
-
+```
 
 ## 神经网络 FX：LSTM 网络
 
-```
+```text
 [-0.3582],
 [-0.0454],
 [0.2963]])
@@ -6181,7 +5836,7 @@ tensor([0.6780, 0.5214, -0.7319, -0.6145])
 
 ## 32.7 使用 TorchScript 导出 LSTM 模型
 
-你现在将开始尝试在 C++ 程序中运行 LSTM。第一步是将 LSTM 从 Python 导出到 C++。如果你在在书的其他地方看过元控制器（meta-controller）的示例，你就会知道可以使用 libtorch 在 C++ 中设计和训练神经网络。在那种设置下，不需要 Python。避免 Python 是有意义的，因为对于那个示例，我们希望最终用户能够在他们的 DAW 软件中交互式地训练神经网络，因此所有内容都需要在编译后的插件内部运行。
+你现在将开始尝试在 C++ 程序中运行 LSTM。第一步是将 LSTM 从 Python 导出到 C++。如果你在书的其他地方看过元控制器（meta-controller）的示例，你就会知道可以使用 libtorch 在 C++ 中设计和训练神经网络。在那种设置下，不需要 Python。避免 Python 是有意义的，因为对于那个示例，我们希望最终用户能够在他们的 DAW 软件中交互式地训练神经网络，因此所有内容都需要在编译后的插件内部运行。
 
 在这里，我将使用不同的工作流：在 Python 中设计并训练网络，并将训练好的模型导入到 C++ 中。为什么这样做而不是在 C++ 中工作？原因之一是 Python 是一种更快速的原型设计语言，特别是当你使用笔记本交互式地开发代码时。这意味着你可以快速进行各种修改（hack around）并让数据达到正确的形状，等等。使用 Python 进行设计和训练的另一个原因是，你可以轻松地在 Python 中绘制信号和其他图表。对我们的目的而言，主要原因是你可以从 Python 访问 GPU 加速的训练，无论是使用你自己的本地 GPU 还是远程 GPU（例如运行在 Google 的计算基础设施上的 GPU）。对于吉他放大器仿真系统，我们并不打算让最终用户执行训练，因此我们应该将工作流设计得尽可能简单。
 
@@ -6189,20 +5844,23 @@ tensor([0.6780, 0.5214, -0.7319, -0.6145])
 
 ```python
 import torch
+
 torch.manual_seed(10)
 my_lstm = torch.nn.LSTM(1, 1)
+
 traced_lstm = torch.jit.trace(
     my_lstm,
     torch.rand(1, 1)
 )
+
 traced_lstm.save('my_lstm.pt')
 ```
 
-这非常直接。我们必须使用该函数将一些数据通过网络，然后接收到一个被追踪（traced）的网络，我们可以将其保存为 Torch (.pt) 文件。
+这非常直接。我们必须使用该函数将一些数据通过网络，然后接收到一个被追踪（traced）的网络，我们可以将其保存为 Torch（`.pt`）文件。
 
 ## 32.8 将 TorchScript 模型导入 C++
 
-要将导出的 TorchScript 文件加载到 C++ 程序中，请从代码仓库 39.2.10 中的最小 libtorch 示例开始。编辑 CMakeLists.txt 中的 `CMAKE_PREFIX_PATH` 属性，指向你的 libtorch 文件夹的位置。尝试进行测试构建以验证一切运行正常。如果你能编译并运行该程序，你就准备好导入并处理 TorchScript 文件了。编辑 `src` 文件夹下的 `main.cpp`：
+要将导出的 TorchScript 文件加载到 C++ 程序中，请从代码仓库 39.2.10 中的最小 libtorch 示例开始。编辑 `CMakeLists.txt` 中的 `CMAKE_PREFIX_PATH` 属性，指向你的 libtorch 文件夹的位置。尝试进行测试构建以验证一切运行正常。如果你能编译并运行该程序，你就准备好导入并处理 TorchScript 文件了。编辑 `src` 文件夹下的 `main.cpp`：
 
 ```cpp
 // 加载模型
@@ -6215,36 +5873,21 @@ torch::Tensor in_t = torch::zeros({10, 1});
 ```
 
 ```cpp
-8 in_t[0] = 1.0;
-9 std::vector<torch::jit::IValue> inputs;
-10 inputs.push_back(in_t);
+in_t[0] = 1.0;
+std::vector<torch::jit::IValue> inputs;
+inputs.push_back(in_t);
 ```
 
 ```cpp
-12 // 将数据通过模型传递
-13 将其存储为 IValue
-14 torch::jit::IVValue out_ival = my_lstm.forward(inputs);
-15 std::cout << out_ival << std::endl;
+// 将数据通过模型传递
+// 将其存储为 IValue
+torch::jit::IVValue out_ival = my_lstm.forward(inputs);
+std::cout << out_ival << std::endl;
 ```
 
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
 
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
 
-```cpp
-8 in_t[0] = 1.0;
-9 std::vector<torch::jit::IValue> inputs;
-10 inputs.push_back(in_t);
-```
-
-```cpp
-12 // 将数据通过模型传递
-13 将其存储为 IValue
-14 torch::jit::IVValue out_ival = my_lstm.forward(inputs);
-15 std::cout << out_ival << std::endl;
-```
-
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
+这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 `IValue` 传递。`IValue` 提供了一种将数据传递到 TorchScript 模型的通用方法。模型也返回 `IValue`，但不是向量。这里是：
 
 ```cpp
 8 in_t[0] = 1.0;
@@ -6259,67 +5902,7 @@ torch::Tensor in_t = torch::zeros({10, 1});
 15 std::cout << out_ival << std::endl;
 ```
 
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
-
-```cpp
-8 in_t[0] = 1.0;
-9 std::vector<torch::jit::IValue> inputs;
-10 inputs.push_back(in_t);
-```
-
-```cpp
-12 // 将数据通过模型传递
-13 将其存储为 IValue
-14 torch::jit::IVValue out_ival = my_lstm.forward(inputs);
-15 std::cout << out_ival << std::endl;
-```
-
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
-
-```cpp
-8 in_t[0] = 1.0;
-9 std::vector<torch::jit::IValue> inputs;
-10 inputs.push_back(in_t);
-```
-
-```cpp
-12 // 将数据通过模型传递
-13 将其存储为 IValue
-14 torch::jit::IVValue out_ival = my_lstm.forward(inputs);
-15 std::cout << out_ival << std::endl;
-```
-
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
-
-```cpp
-8 in_t[0] = 1.0;
-9 std::vector<torch::jit::IValue> inputs;
-10 inputs.push_back(in_t);
-```
-
-```cpp
-12 // 将数据通过模型传递
-13 将其存储为 IValue
-14 torch::jit::IVValue out_ival = my_lstm.forward(inputs);
-15 std::cout << out_ival << std::endl;
-```
-
-（注：由于原文文本中存在大量重复的代码块和句子，根据“一定不要重复输出原文”的原则，此处译文仅展示核心逻辑部分的翻译，但在实际操作中，我会严格按照原文结构进行逐一翻译。由于用户提供的待翻译文本本身存在逻辑重复，译文将针对这些内容进行完整翻译。）
-
-**重新审视并翻译完整文本：**
-
-**Neural FX: LSTM network** -> **神经网络 FX：LSTM 网络**
-
-```
-[-0.3582],
-[-0.0454],
-[0.2963]])
-tensor([[-0.9843],
-[-0.2911],
-[0.1551]])
-tensor([[-0.9655, 0.1192, -0.1923, 0.2199]])
-tensor([0.6780, 0.5214, -0.7319, -0.6145])
-```
+## 神经网络 FX：LSTM 网络
 
 我数了四个不同的参数张量，但每个参数都由四个数字组成。因此，对于具有单个单元的 LSTM 层，我们有 16 个参数。如上所述，LSTM 具有四个不同的组件，这四组参数控制着每个组件的行为，使得 LSTM 能够细微地记住某些东西并遗忘另一些东西。随着层中单元数量的增加，参数的数量也会增加，但并不是线性增长的，因为每个内部参数都会与几个其他参数相互作用：
 
@@ -6330,13 +5913,13 @@ tensor([0.6780, 0.5214, -0.7319, -0.6145])
 
 在现阶段，没有必要详细介绍 LSTM 的工作原理；将 LSTM 视为具有可调参数的巧妙记忆设备就足够了。现在，你应该尝试将信号通过不同大小的 LSTM 网络。如果你使用了种子设置功能，那么当你发现某些设置对信号产生了有趣的事情时，你可以在随后的运行中恢复网络。你将找到我提供的一个有用笔记本（notebook）——查看仓库指南中的第 39.5.17 节。
 
-**32.7 使用 TorchScript 导出 LSTM 模型** -> **32.7 使用 TorchScript 导出 LSTM 模型**
+## 32.7 使用 TorchScript 导出 LSTM 模型
 
-你现在将开始尝试在 C++ 程序中运行 LSTM。第一步是将 LSTM 从 Python 导出到 C++。如果你在书的其他地方看过元控制器的示例，你就会知道可以使用 libtorch 在 C++ 中设计和训练神经网络。在那种设置下，不需要 Python。避免 Python 是有意义的，因为对于那个示例，我们希望最终用户能够在他们的 DAW 软件中交互式地训练神经网络，因此所有内容都需要在编译后的插件内部运行。
+你现在将开始尝试在 C++ 程序中运行 LSTM。第一步是将 LSTM 从 Python 导出到 C++。如果你在书的其他地方看过元控制器的示例，你就会知道可以使用 `libtorch` 在 C++ 中设计和训练神经网络。在那种设置下，不需要 Python。避免 Python 是有意义的，因为对于那个示例，我们希望最终用户能够在他们的 DAW 软件中交互式地训练神经网络，因此所有内容都需要在编译后的插件内部运行。
 
 在这里，我将使用不同的工作流：在 Python 中设计并训练网络，并将训练好的模型导入到 C++ 中。为什么这样做而不是在 C++ 中工作？原因之一是 Python 是一种更快速的原型设计语言，特别是当你使用笔记本交互式地开发代码时。这意味着你可以快速进行各种修改并让数据达到正确的形状，等等。使用 Python 进行设计和训练的另一个原因是，你可以轻松地在 Python 中绘制信号和其他图表。对我们的目的而言，主要原因是你可以从 Python 访问 GPU 加速的训练，无论是使用你自己的本地 GPU 还是远程 GPU（例如运行在 Google 的计算基础设施上的 GPU）。对于吉他放大器仿真系统，我们并不打算让最终用户执行训练，因此我们应该将工作流设计得尽可能简单。
 
-所以，如果我们需要两个环境，就需要一种方法将神经网络模型从 Python 传递到 C++。我们将使用的方法是 TorchScript。TorchScript 是一种保存模型的格式，它可以被 Python 的 PyTorch 和 C++ 的 libtorch 环境共同理解。让我们直接将我们的简单 LSTM“谐波失真”效果导出到 Torch。
+所以，如果我们需要两个环境，就需要一种方法将神经网络模型从 Python 传递到 C++。我们将使用的方法是 `TorchScript`。`TorchScript` 是一种保存模型的格式，它可以被 Python 的 `PyTorch` 和 C++ 的 `libtorch` 环境共同理解。让我们直接将我们的简单 LSTM“谐波失真”效果导出到 Torch。
 
 ```python
 import torch
@@ -6349,11 +5932,11 @@ traced_lstm = torch.jit.trace(
 traced_lstm.save('my_lstm.pt')
 ```
 
-这非常直接。我们必须使用该函数将一些数据通过网络，然后接收到一个被追踪（traced）的网络，我们可以将其保存为 Torch (.pt) 文件。
+这非常直接。我们必须使用该函数将一些数据通过网络，然后接收到一个被追踪（traced）的网络，我们可以将其保存为 Torch（`.pt`）文件。
 
-**32.8 将 TorchScript 模型导入 C++** -> **32.8 将 TorchScript 模型导入到 C++ 中**
+## 32.8 将 TorchScript 模型导入到 C++ 中
 
-要将导出的 TorchScript 文件加载到 C++ 程序中，请从代码仓库 39.2.10 中的最小 libtorch 示例开始。编辑 CMakeLists.txt 中的 `CMAKE_PREFIX_PATH` 属性，指向你的 libtorch 文件夹的位置。尝试进行测试构建以验证一切运行正常。如果你能编译并运行该程序，你就准备好导入并处理 TorchScript 文件了。编辑 `src` 文件夹下的 `main.cpp`：
+要将导出的 TorchScript 文件加载到 C++ 程序中，请从代码仓库 39.2.10 中的最小 `libtorch` 示例开始。编辑 `CMakeLists.txt` 中的 `CMAKE_PREFIX_PATH` 属性，指向你的 `libtorch` 文件夹的位置。尝试进行测试构建以验证一切运行正常。如果你能编译并运行该程序，你就准备好导入并处理 TorchScript 文件了。编辑 `src` 文件夹下的 `main.cpp`：
 
 ```cpp
 // 加载模型
@@ -6378,27 +5961,17 @@ torch::Tensor in_t = torch::zeros({10, 1});
 15 std::cout << out_ival << std::endl;
 ```
 
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
+这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 `IValue` 传递。`IValue` 提供了一种将数据传递到 TorchScript 模型的通用方法。模型也返回 `IValue`，但不是向量。
 
-（此处省略原文中重复的段落翻译，以遵循“不要重复输出原文”原则，仅翻译核心内容）
+## 32.9 在 C++ 中处理 LSTM 文件
 
-**9 在 C++ 中处理 LSTM 文件** -> **9 在 C++ 中处理 LSTM 文件**
+这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 `IValue` 传递。`IValue` 提供了一种将数据传递到 TorchScript 模型的通用方法。模型也返回 `IValue`，但不是向量。
 
-这段代码复制了我们之前看到的 Python 示例，该示例将脉冲信号通过网络。导入的 TorchScript 模型的一个使其与直接定义的模型有所不同的细节是，需要将张量作为 IValue 传递。IValue 提供了一种将将数据传递到 TorchScript 模型的通用方法。模型也返回 IValue 但不是向量。这里是：
+## 32.10 性能测试
 
-（后续重复内容已根据指令跳过）
+处理具有不同隐藏单元数量的 44,100 个样本所花费的时间。
 
----
-
-
-
-
-## 神经效果 FX：LSTM 网络
-## 272
-
-处理具有不同隐藏单元数量的 44,100 个样本所花费的时间
-
-![](img/f36e66929543fe6d506774ef8e004b7e_290_0.png)
+![图 32.3](img/f36e66929543fe6d506774ef8e004b7e_290_0.png)
 
 ### 图 32.3
 
@@ -6414,13 +5987,17 @@ print("saving " + fname)
 traced_lstm.save(fname)
 ```
 
-然后，有一个 C++ 程序，它通过每个导出的模型运行一个一秒钟的测试信号，并使用了标准库。我在这里不会详细介绍代码细节，因为它与之前的代码示例非常相似。你应该打开 `main.cpp` 查看一下。你会看到它完成了整个过程：从 float 向量中的信号开始，通过图 32.2 所示的过程通过 LSTM 后，得到一个表示该信号信号的 float 向量。图 32.3 显示了该程序在我开发机器上的运行结果：一台英特尔 10 代 Linux 机器、一台英特尔 6 代 Windows 机器和一台 M1 Mac Mini。Linux 机器可以实时运行多达 256 个 LSTM 单元。Mac Mini 可以实时运行多达 128 个单元，但它在所有规模上的开销似乎比英特尔 CPU 机器要大 - 一个 LSTM 单元在 Mac 上需要 658ms。Mac 运行的是自编译的 libtorch 2.1。在现实世界的场景中，这里还会有更多的处理操作，但这个简单的程序让我们对预期的在实时音频应用中使用的网络类型有了初步了解。我们将在本书的这部分之后，当我们使用 libtorch 和 RTNeural 在插件中部署训练好的 LSTM 时，再次回到性能问题。
+然后，有一个 C++ 程序，它通过每个导出的模型运行一个一秒钟的测试信号，并使用了标准库。我在这里不会详细介绍代码细节，因为它与之前的代码示例非常相似。你应该打开 `main.cpp` 查看一下。你会看到它完成了整个过程：从 float 向量中的信号开始，通过图 32.2 所示的过程通过 LSTM 后，得到一个表示该信号信号的 float 向量。
 
-神经效果 FX：LSTM 网络 273
+图 32.3 显示了该程序在我开发机器上的运行结果：一台英特尔 10 代 Linux 机器、一台英特尔 6 代 Windows 机器和一台 M1 Mac Mini。Linux 机器可以实时运行多达 256 个 LSTM 单元。Mac Mini 可以实时运行多达 128 个单元，但它在所有规模上的开销似乎比英特尔 CPU 机器要大——一个 LSTM 单元在 Mac 上需要 658ms。Mac 运行的是自编译的 `libtorch 2.1`。
+
+在现实世界的场景中，这里还会有更多的处理操作，但这个简单的程序让我们对预期的在实时音频应用中使用的网络类型有了初步了解。我们将在本书的这部分之后，当我们使用 `libtorch` 和 `RTNeural` 在插件中部署训练好的 LSTM 时，再次回到性能问题。
 
 ## 32.10.1 梯度计算
 
-我想了解的最后一个概念是计算梯度的想法。一旦你在后面的章节中学习了如何训练神经网络，这将会变得清晰得多，但因为它与性能有关，所以我提到了它。当你将数据通过网络时，libtorch 库不仅仅是计算输出；它还计算描述数据如何流过网络的梯度。这些梯度在训练期间被使用，以允许反向传播算法更新参数。我们现在并没有在训练——我们只是想进行推理。正如我上面提到的，推理就是你将数据通过网络以获取输出。在执行推理时，你可以关闭梯度计算，这会消耗更少的 CPU 周期。惊讶的是，我发现这提高了 Windows 和 macOS 的性能，但并没有影响最终性能。要关闭梯度计算，请在推理之前加上以下行，这会通知 libtorch 系统不要计算梯度：
+我想了解的最后一个概念是计算梯度的想法。一旦你在后面的章节中学习了如何训练神经网络，这将会变得清晰得多，但因为它与性能有关，所以我提到了它。当你将数据通过网络时，`libtorch` 库不仅仅是计算输出；它还计算描述数据如何流过网络的梯度。这些梯度在训练期间被使用，以允许反向传播算法更新参数。
+
+我们现在并没有在训练——我们只是想进行推理。正如我上面提到的，推理就是你将数据通过网络以获取输出。在执行推理时，你可以关闭梯度计算，这会消耗更少的 CPU 周期。惊讶的是，我发现这提高了 Windows 和 macOS 的性能，但并没有影响最终性能。要关闭梯度计算，请在推理之前加上以下行，这会通知 `libtorch` 系统不要计算梯度：
 
 ```cpp
 torch::NoGradGuard nograd;
@@ -6428,47 +6005,45 @@ torch::NoGradGuard nograd;
 
 ## 32.11 检查
 
-哇，这些是大量的数字计算。到此为止，你应该能够在 Python 中定义一个简单的 LSTM 模型，然后让信号通过该模型并绘制结果。随后，你应该能够使用 TorchScript 导出你的模型并将模型文件导入到 C++ 中。使用导入的模型，你应该能够处理一个 WAV 文件并将结果保存到新的 WAV 文件。你还应该能够反思不同尺寸 LSTM 模型的性能，以及这与它们在实时场景中潜在用途的关系。
+哇，这些是大量的数字计算。到此为止，你应该能够在 Python 中定义一个简单的 LSTM 模型，然后让信号通过该模型并绘制结果。随后，你应该能够使用 `TorchScript` 导出你的模型并将模型文件导入到 C++ 中。使用导入的模型，你应该能够处理一个 WAV 文件并将结果保存到新的 WAV 文件。你还应该能够反思不同尺寸 LSTM 模型的性能，以及这与它们在实时场景中潜在用途的关系。
 
-## 33
-## JUCE LSTM 插件
+# 33 JUCE LSTM 插件
 
-在本章中，你将在之前的工作的基础上进行构建。你将能够构建一个简单的 LSTM 模型，然后让信号通过该模型并绘制结果。随后，你应该能够使用 TorchScript 导出你的模型并将模型文件导入到 C++ 中。使用导入的模型，你应该能够处理一个 WAV 文件并将结果保存到新的 WAV 文件。你还应该能够反思不同尺寸 LSTM 模型的性能，以及这与它们在实时场景中潜在用途的关系。
+在本章中，你将在之前的工作的基础上进行构建。你将能够构建一个简单的 LSTM 模型，然后让信号通过该模型并绘制结果。随后，你应该能够使用 `TorchScript` 导出你的模型并将模型文件导入到 C++ 中。使用导入的模型，你应该能够处理一个 WAV 文件并将结果保存到新的 WAV 文件。你还应该能够反思不同尺寸 LSTM 模型的性能，以及这与它们在实时场景中潜在用途的关系。
 
+![图 33.1](img/f36e66929543fe6d506774ef8e004b7e_295_0.png)
 
-
-
-
-# JUCE LSTM 插件
-
-![](img/f36e66929543fe6d506774ef8e004b7e_295_0.png)
-
-## 图 33.1
+### 图 33.1
 
 基于块的处理会导致音频中产生不希望的伪影。左面板显示了如果在一个块中对整个信号进行处理，网络的输出结果。右面板显示了如果将信号分成多个块通过网络会发生什么。解决方案是在块与之间保留 LSTM 的状态。
 
 ```python
 my_lstm = torch.nn.LSTM(1, 1, 1)
+
 # 传入 0.5
 input = torch.tensor([[0.5]])
-output, = my_lstm.forward(input)
+output, state = my_lstm.forward(input)
 print(output)
+
 # 传入 0.1
 input = torch.tensor([[0.1]])
-output, = my_lstm.forward(input)
+output, state = my_lstm.forward(input)
 print(output)
+
 # 在一个序列中依次传入 0.5 然后 0.1
 input = torch.tensor([[0.6], [0.1]])
-output, = my_lstm.forward(input)
+output, _ = my_lstm.forward(input)
 ```
 
 我看到的结果是：
 
-> 0.5 → 0.0575
-0.1 → 0.0836
-[0.5, 0.1] → [0.0575, 0.1191] (33.1)
+> `0.5` → `0.0575`
+>
+> `0.1` → `0.0836`
+>
+> `[0.5, 0.1]` → `[0.0575, 0.1191]`（33.1）
 
-关键点在于，当 0.1 在单个块中紧随 0.5 之后时，它会产生不同的输出。这告诉 LSTM 是状态的——当你传入一个块时，它会逐个处理数字，但会记住它们之间的状态。在块结束时，它会重置其状态。幸运的是，可以存储该状态以便在下次调用 `forward` 时将其传回。注意我是如何存储 `forward` 调用返回的第二个值，并在后续代码中将其传递给第二次 `forward`调用的：
+关键点在于，当 `0.1` 在单个块中紧随 `0.5` 之后时，它会产生不同的输出。这告诉 LSTM 是状态的——当你传入一个块时，它会逐个处理数字，但会记住它们之间的状态。在块结束时，它会重置其状态。幸运的是，可以存储该状态以便在下次调用 `forward()` 时将其传回。注意我是如何存储 `forward()` 调用返回的第二个值，并在后续代码中将其传递给第二次 `forward()` 调用的：
 
 ```python
 1 input = torch.tensor([[0.5]])
@@ -6482,30 +6057,34 @@ output, = my_lstm.forward(input)
 9 print(output)
 ```
 
-这，即单独传递的值得到的结果与在一个块中传递的值相同：
+这，即单独传递的值，得到的结果与在一个块中传递的值相同：
 
-> $0.5 \rightarrow 0.0575$
+> `0.5` → `0.0575`
+
+
+
 0.1 $\rightarrow 0.1191$
+
 $[0.5, 0.1]$
 
-所以，在多次 `forward` 调用之间保留状态的秘密在于存储返回的状态，并将其发送回下一次 `forward` 调用。我们很快就会看到如何在 C++ 中以适当的形式创建状态数据，这在 libtorch (for C++) 中并不是一个记录良好的操作，但在 Python 的 LSTM 示例中有很好的描述。不过，在在此之前，我们需要先修复 TorchScript 模型。
+所以，在多次`forward`调用之间保留状态的秘密在于存储返回的状态，并将其发送回下一次`forward`调用。我们很快就会看到如何在 C++ 中以适当的形式创建状态数据，这在 libtorch（for C++）中并不是一个记录良好的操作，但在 Python 的 LSTM 示例中有很好的描述。不过，在此之前，我们需要先修复 TorchScript 模型。
 
 ## 33.3 更新 TorchScript 模型以接收状态值
 
 我们用于生成 TorchScript 模型的原始代码看起来如下：
 
 ```python
-1 torch.manual_seed(21)
-2 my_lstm = torch.nn.LSTM(1, 1, 1)
-3 traced_lstm = torch.jit.trace(my_lstm, (torch.rand(1, 1, 1),))
-4 traced_lstm.save('my_lstm.pt')
+torch.manual_seed(21)
+my_lstm = torch.nn.LSTM(1, 1, 1)
+traced_lstm = torch.jit.trace(my_lstm, (torch.rand(1, 1, 1),))
+traced_lstm.save('my_lstm.pt')
 ```
 
 当我们追踪模型时，只是简单地传递了一个输入，而没有传递任何状态数据。生成的 TorchScript 模型会接受状态数据吗？让我们试一下：
 
 ```python
-1 torch.manual_seed(21)
-2 my_lstm = torch.nn.LSTM(1, 1, 1)
+torch.manual_seed(21)
+my_lstm = torch.nn.LSTM(1, 1, 1)
 ```
 
 在这种情况下，我为输入和状态生成了随机数据。然后，我在追踪中使用了这些值。现在我有了一个准备好接收状态数据的 TorchScript 模型。在 Python 中调试此类模型比在 C++ 中要容易得多，因为错误信息更清晰，而且调试循环速度更快。我知道这一点，是因为我在编写这本书的这部分代码时，是在 C++ 中进行调试的，那比用 Python 要慢且更困难。
@@ -6525,17 +6104,17 @@ $[0.5, 0.1]$
 
 ### 33.4.1 LSTM 状态的数据结构
 
-首先需要知道的是状态元组存储在一个听起来相当奇特的类型 `c10::intrusive_ptr<c10::ival::Tuple>` 中。让我们看看这个类型以及它意味着什么，`c10` 是与 PyTorch 合并的深度学习框架的缩写，它包含了 `c10::intrusive_ptr`（带有引用计数的高效智能指针），`c10::ival::Tuple` 是具有两个组件的兼容 torchscript 数据结构。`intrusive_ptr` 是对对象的包装，`ival` 是 TorchScript 的内部表示。`intrusive_ptr` 智能指针通过引用计数管理对象。`ival` 是 TorchScript 的内部表示，`Tuple` 是具有两个组件的兼容 torchscript 数据结构。状态元组存储在一种听起来相当奇特的类型 `c10::intrusive_ptr<c10::ival::Tuple>` 中。让我们看看这个类型以及它意味着什么，`c10` 是与 PyTorch 合并的深度学习框架的缩写。`c10::intrusive_ptr` 是带有引用计数的高效智能指针，`c10::ival::Tuple` 是具有两个组件的兼容 torchscript 数据结构。状态元组存储在一种 33.2 `c10::intrusive_ptr<c10::ival::Tuple>` 中。让我们看看：
+首先需要知道的是状态元组存储在一个听起来相当奇特的类型`c10::intrusive_ptr<c10::ival::Tuple>`中。让我们看看这个类型以及它意味着什么，`c10`是与 PyTorch 合并的深度学习框架的缩写，它包含了`c10::intrusive_ptr`（带有引用计数的高效智能指针），`c10::ival::Tuple`是具有两个组件的兼容 torchscript 数据结构。`intrusive_ptr`是对对象的包装，`ival`是 TorchScript 的内部表示。`intrusive_ptr`智能指针通过引用计数管理对象。`ival`是 TorchScript 的内部表示，`Tuple`是具有两个组件的兼容 torchscript 数据结构。状态元组存储在一种听起来相当奇特的类型`c10::intrusive_ptr<c10::ival::Tuple>`中。让我们看看这个类型以及它意味着什么，`c10`是与 PyTorch 合并的深度学习框架的缩写。`c10::intrusive_ptr`是带有引用计数的高效智能指针，`c10::ival::Tuple`是具有两个组件的兼容 torchscript 数据结构。状态元组存储在一种 33.2 `c10::intrusive_ptr<c10::ival::Tuple>`中。让我们看看：
 
 ```cpp
 // 拷贝 output 到块
-    auto out_elements = out_ival.toTuple()->elements();
-    torch::Tensor out_t = out_elements[0].toTensor();
-    out_t = out_t.view({-1});
-    float* data_ptr = out_t.data_ptr<float>();
-    std::copy(data_ptr, data_ptr + inBlock.size(), inBlock.begin());
-    // 保留状态
-    return out_t.toTuple();
+auto out_elements = out_ival.toTuple()->elements();
+torch::Tensor out_t = out_elements[0].toTensor();
+out_t = out_t.view({-1});
+float* data_ptr = out_t.data_ptr<float>();
+std::copy(data_ptr, data_ptr + inBlock.size(), inBlock.begin());
+// 保留状态
+return out_t.toTuple();
 ```
 
 ### 33.4.2 创建初始状态
@@ -6575,31 +6154,27 @@ LSTMState processBlock(
 }
 ```
 
-
-
-
-
 # JUCE LSTM 插件 283
 
 1. 创建插件项目并添加必要的变量
 2. 将 LSTM 模型加载到插件中
-3. 将 JUCE 的 `processBlock` 与我们的 LSTM `processBlock` 代码集成
+3. 将 JUCE 的`processBlock`与我们的 LSTM`processBlock`代码集成
 
-从仓库指南第 39.2.11 节的最小化 JUCE 和 libtorch 项目开始。对 `CMakeLists.txt` 进行常规更改 - 你需要一个 `UNIQUE_PRODUCT_NAME` 和 `PLUGIN_CODE`。在 `PluginProcessor.h` 中添加此头文件，并添加类型定义：
+从仓库指南第 39.2.11 节的最小化 JUCE 和 libtorch 项目开始。对`CMakeLists.txt`进行常规更改 - 你需要一个`UNIQUE_PRODUCT_NAME`和`PLUGIN_CODE`。在`PluginProcessor.h`中添加此头文件，并添加类型定义：
 
 ```cpp
 #include <torch/script.h>
 typedef c10::intrusive_ptr<Tuple> LSTM;
 ```
 
-在 `PluginProcessor.h` 的私有部分添加这些 LSTM 模型及其状态的变量：
+在`PluginProcessor.h`的私有部分添加这些 LSTM 模型及其状态的变量：
 
 ```cpp
 torch::jit::script::Module lstModel;
 LSTMState lstState;
 ```
 
-现在，为插件的通道设置模型。在 `PluginProcessor.cpp` 中：
+现在，为插件的通道设置模型。在`PluginProcessor.cpp`中：
 
 ```cpp
 withInput("Input", juce::AudioChannelSet::mono(), true)
@@ -6610,18 +6185,19 @@ withOutput("Output", juce::AudioChannelSet::mono(), true)
 
 # 33.5.1 在 PluginProcessor.cpp 的构造函数中加载 LSTM 模型
 
-在 `PluginProcessor.cpp` 中初始化模型。我在这里使用了绝对路径 - 请将其更改为你系统中 `.pt` 文件的实际路径：
+在`PluginProcessor.cpp`中初始化模型。我在这里使用了绝对路径 - 请将其更改为你系统中`.pt`文件的实际路径：
 
 ```cpp
 lstModel = torch::jit::load("path/to/my_lstm_with_state.pt");
 ```
 
-现在，将命令行中 `getRandomStartState` 函数的原型添加到你的 `PluginProcessor.h` 文件的私有部分：
+现在，将命令行中`getRandomStartState`函数的原型添加到你的`PluginProcessor.h`文件的私有部分：
 
+```cpp
 LSTMState getRandomStartState(int numLayers, int hiddenSize);
 ```
 
-将上述仓库 20.5.22 中 `main.cpp` 的 `getRandomStartState` 实现添加到你的 `PluginProcessor.cpp` 中。记住在函数实现中为该类添加命名空间（即 `AudioAudio::`），并在 `PluginProcessor.cpp` 的构造函数中，创建模型后初始化状态。假设你的模型是 1 层、1 个隐藏单元，将此内容放入构造函数中：
+将上述仓库 20.5.22 中`main.cpp`的`getRandomStartState`实现添加到你的`PluginProcessor.cpp`中。记住在函数实现中为该类添加命名空间（即`AudioAudio::`），并在`PluginProcessor.cpp`的构造函数中，创建模型后初始化状态。假设你的模型是 1 层、1 个隐藏单元，将此内容放入构造函数中：
 
 ```cpp
 lstState = getRandomStartState(1, 1);
@@ -6641,7 +6217,7 @@ JUCE LSTM 插件 284
 
 ## 33.5.2 集成 processBlock 代码
 
-最后一步是通过将 JUCE 的 `processBlock` 函数调用与你之前在命令行程序中看到的 `processBlockState` 函数集成，从而将传入的音频通过 LSTM。`processBlockState` 的原型如下：
+最后一步是通过将 JUCE 的`processBlock`函数调用与你之前在命令行程序中看到的`processBlockState`函数集成，从而将传入的音频通过 LSTM。`processBlockState`的原型如下：
 
 ```cpp
 LSTMState processBlockState(
@@ -6651,7 +6227,7 @@ LSTMState processBlockState(
     std::vector<float>& outBlock, int numSamples){
 ```
 
-JUCE 的 `processBlock` 函数具有以下原型：
+JUCE 的`processBlock`函数具有以下原型：
 
 ```cpp
 void processBlock (
@@ -6659,23 +6235,23 @@ void processBlock (
     juce::MidiBuffer& midi);
 ```
 
-因此，诀窍是将 `juce::AudioBuffer` 转换为 `processBlockState` 函数可以接受的格式。好消息是 - 我们已经有了两个与 相关的参数 `model` 和 `state`。我们只需要一个 `float` 输入向量和一个 `float` 输出向量。我们在这里需要注意内存分配 - 如果可能，我们不想在音频循环中间为 `float` 分配内存（这限制了我们对 TorchScript 模型内部的控制）。
+因此，诀窍是将`juce::AudioBuffer`转换为`processBlockState`函数可以接受的格式。好消息是 - 我们已经有了两个与相关的参数`model`和`state`。我们只需要一个`float`输入向量和一个`float`输出向量。我们在这里需要注意内存分配 - 如果可能，我们不想在音频循环中间为`float`分配内存（这限制了我们对 TorchScript 模型内部的控制）。
 
-我的解决方案是在调用 `prepareToPlay` 时集成输入和输出块 - 我们知道缓冲区的大小。然后，我将使用 `std::copy` 从 `AudioBuffer` 和我的向量缓冲区中拷贝数据。因此 - 在 `PluginProcessor.h` 中，在私有部分添加以下向量：
+我的解决方案是在调用`prepareToPlay`时集成输入和输出块 - 我们知道缓冲区的大小。然后，我将使用`std::copy`从`AudioBuffer`和我的向量缓冲区中拷贝数据。因此 - 在`PluginProcessor.h`中，在私有部分添加以下向量：
 
 ```cpp
 std::vector<float> inBuffer;
 std::vector<float> outBuffer;
 ```
 
-在 `PluginProcessor.cpp` 的 `prepareToPlay` 函数中，设置它们：
+在`PluginProcessor.cpp`的`prepareToPlay`函数中，设置它们：
 
 ```cpp
 inBuffer.resize((size_t)samplesPerBlock);
 outBuffer.resize((size_t)samplesPerBlock);
 ```
 
-编译并运行以检查任何错误。现在，通过这些向量从 JUCE 的 `processBlock` 获取数据进入 `processBlockState` 函数。在 `PluginProcessor.cpp` 的 `processBlock` 函数中，添加以下代码：
+编译并运行以检查任何错误。现在，通过这些向量从 JUCE 的`processBlock`获取数据进入`processBlockState`函数。在`PluginProcessor.cpp`的`processBlock`函数中，添加以下代码：
 
 ```cpp
 for (int channel = 0; channel < totalInputChannels; ++channel)
@@ -6697,10 +6273,6 @@ JUCE LSTM 插件 286
 ## 33.6 进度检查
 
 在此点上，你应该能够通过 TorchScript 定义 LSTM 模型、追踪并导出它。最后，你可以将其功能集成到 JUCE 插件中。
-
-
-
-
 
 ## 34.2 准备训练
 
@@ -6735,7 +6307,7 @@ Python 训练程序的脚本应该位于示例代码中的 'python' 子文件夹
 - myk.train.py : 训练和更新函数的定义
 - train.py : 控制器程序和参数
 
-你可以直接运行 `train.py` 脚本。它将尝试加载数据集并训练网络。如果它无法在数据集中找到文件，它将打印一些帮助信息并退出。在我的系统中，运行脚本时我看到如下输出 - 如果在第 12 行看到消息：'epoch, train, val 0.7639494 0.7458705'，说明你已经准备好进行训练了！
+你可以直接运行`train.py`脚本。它将尝试加载数据集并训练网络。如果它无法在数据集中找到文件，它将打印一些帮助信息并退出。在我的系统中，运行脚本时我看到如下输出 - 如果在第 12 行看到消息：'epoch, train, val 0.7639494 0.7458705'，说明你已经准备好进行训练了！
 
 ```
 1 train.py
@@ -6751,14 +6323,17 @@ Python 训练程序的脚本应该位于示例代码中的 'python' 子文件夹
 11 About to train
 12 epoch, train, val 0 0.7639494 0.7458705
 ```
+
+
+
 
 当你运行脚本时，如果看到错误信息，请仔细阅读并修复问题。常见的错误是 `ModuleNotFound`（意味着你没有安装 Python 模块）以及与音频文件位置相关的断言错误（assertion errors）。默认脚本假设在上一两级目录中有一个 `data` 和 `audio.ht1` 子文件夹，如上面输出的第 2 行所示。那里是训练数据所在的位置，当你下载这本书的代码时，你应该已经收到一个包含正确数据的 `audio.ht1` 文件夹。我很快会详细介绍如何准备训练数据。在这个阶段，你应该能够运行 `train.py` 脚本并看到与上面所示类似的输出。请仔细阅读任何错误并在继续之前解决它们。
 
 ## 34.2 Tensorboard
 
-训练程序已设置为输出到 tensorboard。图 34.3 显示了 tensorboard 的运行情况。它是一个学习仪表板，可以通过你的浏览器向你展示训练进度。当你运行训练脚本时，它会创建一个名为 'runs' 的文件夹。每当你运行一次脚本，它会在 `runs` 文件夹中创建一个新的子文件夹。以下是运行两次 `train.py` 后的文件结构示例：
+训练程序已设置为输出到 tensorboard。图 34.3 显示了 tensorboard 的运行情况。它是一个学习仪表板，可以通过你的浏览器向你展示训练进度。当你运行训练脚本时，它会创建一个名为 `runs` 的文件夹。每当你运行一次脚本，它会在 `runs` 文件夹中创建一个新的子文件夹。以下是运行两次 `train.py` 后的文件结构示例：
 
-```
+```text
 1 | -- Oct24_16_22-50_yogurt52 ht1 LSTM model with 32 hidden units
 2 | -- events.out.tevents.1698160970.yogurt52.1689590.0
 3 | | saved_models
@@ -6768,11 +6343,11 @@ Python 训练程序的脚本应该位于示例代码中的 'python' 子文件夹
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_309_0.png)
 
-# 图 34.3
+### 图 34.3
 
 Tensorboard 是一个基于 Web 的机器学习仪表板。在这里，你可以看到训练运行列表，以及显示在两次独立运行中训练和验证 (3) 误差的图表。
 
-```
+```text
 -- l1stm_size_32_epoch_1_loss_0.7031.pth
 -- l1stm_size_32_epoch_3_loss_0.6968.pth
 neural_model_l1stm_32.json
@@ -6784,16 +6359,23 @@ cctx24_16-23-03_yogurt52 ht1 LSTM model with 32 hidden units
 neural_model_l1stm_32.json
 ```
 
-如果你在包含 `runs` 子文件夹的文件夹中按如下方式运行 tensorboard：`tensorboard --logdir runs`，你将看到一个控制台的 URL，例如 [http://localhost:6006/](http://localhost:6006/)。如果你在浏览器中打开它，你应该能看到类似于图 34.3 所示的界面。尝试在一个窗口中运行 `training.py` 脚本，然后在另一个窗口中运行 tensorboard 命令。观察你的仪表板以查看训练运行的进度。我很快会详细介绍 `runs` 文件夹中的文件。尽管如此，作为快速洞察，`.pth` 文件是某一时刻已训练模型的快照，`.json` 文件是以 Neural 格式导出的模型（稍后会有更多介绍），而 `.wav` 文件是在保存 `.pth` 文件时通过网络运行的数据示例。
+如果你在包含 `runs` 子文件夹的文件夹中按如下方式运行 tensorboard：
+
+```bash
+tensorboard --logdir runs
+```
+
+你将看到一个控制台的 URL，例如 [http://localhost:6006/](http://localhost:6006/)。如果你在浏览器中打开它，你应该能看到类似于图 34.3 所示的界面。尝试在一个窗口中运行 `training.py` 脚本，然后在另一个窗口中运行 tensorboard 命令。观察你的仪表板以查看训练运行的进度。我很快会详细介绍 `runs` 文件夹中的文件。尽管如此，作为快速洞察，`.pth` 文件是某一时刻已训练模型的快照，`.json` 文件是以 Neural 格式导出的模型（稍后会有更多介绍），而 `.wav` 文件是在保存 `.pth` 文件时通过网络运行的数据示例。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_310_0.png)
 
-**图 34.4**
-**准备训练数据**
+### 图 34.4
 
-训练程序被设置为输出到 tensorboard。它是一个学习仪表板，将通过你的网络  浏览器向你展示训练的进度。当你运行训练脚本时，它会创建一个名为 'runs' 的文件夹。每当你运行一次脚本，它会在 `runs` 文件夹中创建一个新的子文件夹。这里是运行两次 `train.py` 后的文件结构示例：
+# 准备训练数据
 
-```
+训练程序被设置为输出到 tensorboard。它是一个学习仪表板，将通过你的网络浏览器向你展示训练的进度。当你运行训练脚本时，它会创建一个名为 `runs` 的文件夹。每当你运行一次脚本，它会在 `runs` 文件夹中创建一个新的子文件夹。这里是运行两次 `train.py` 后的文件结构示例：
+
+```text
 1 | -- Oct24_16_22-50_yogurt52 ht1 LSTM model with 32 hidden units
 2 | -- events.out.tevents.1698160970.yogurt52.1689590.0
 3 | | saved_models
@@ -6803,11 +6385,11 @@ neural_model_l1stm_32.json
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_309_0.png)
 
-# 图 34.3
+### 图 34.3
 
 Tensorboard 是一个基于 Web 的机器学习仪表板。在这里，你可以看到训练运行列表，以及显示在两次独立运行中训练和验证 (3) 误差的图表。
 
-```
+```text
 -- l1stm_size_32_epoch_1_loss_0.7031.pth
 -- l1stm_size_32_epoch_3_loss_0.6968.pth
 neural_model_l1stm_32.json
@@ -6819,125 +6401,31 @@ cctx24_16-23-03_yogurt52 ht1 LSTM model with 32 hidden units
 neural_model_l1stm_32.json
 ```
 
-如果你在包含 `runs` 子文件夹的文件夹中按如下方式运行 tensorboard：`tensorboard --logdir runs`，你将看到一个控制台的 URL，例如 [http://localhost:6006/](http://localhost:6006/)。如果你在浏览器中打开它，你应该能看到类似于图 34.3 所示的界面。尝试在一个窗口中运行 `training.py` 脚本，然后在另一个窗口中运行 tensorboard 命令。观察你的仪表板以查看训练运行的进度。我很快会详细介绍 `runs` 文件夹中的文件。尽管如此，作为快速洞察，`.pth` 文件是某一时刻已训练模型的快照，`.json` 文件是以 Neural 格式导出的模型（稍后会有更多介绍），`.wav` 文件是在保存 `.pth` 文件时通过网络运行的数据示例。
+如果你在包含 `runs` 子文件夹的文件夹中按如下方式运行 tensorboard：
+
+```bash
+tensorboard --logdir runs
+```
+
+你将看到一个控制台的 URL，例如 [http://localhost:6006/](http://localhost:6006/)。如果你在浏览器中打开它，你应该能看到类似于图 34.3 所示的界面。尝试在一个窗口中运行 `training.py` 脚本，然后在另一个窗口中运行 tensorboard 命令。观察你的仪表板以查看训练运行的进度。我很快会详细介绍 `runs` 文件夹中的文件。尽管如此，作为快速洞察，`.pth` 文件是某一时刻已训练模型的快照，`.json` 文件是以 Neural 格式导出的模型（稍后会有更多介绍），而 `.wav` 文件是在保存 `.pth` 文件时通过网络运行的数据示例。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_310_0.png)
 
-**图 34.4**
-**准备训练数据**
-
-[/content]
-
-*(注：由于提供的文本中存在大量重复内容，译文在翻译时已根据“不要重复输出原文”的原则进行了去重处理，确保了逻辑的完整性。)*
-
-抱歉，由于您提供的原始文本较长且包含大量重复内容，我为您提取了核心内容的翻译。如果您需要针对特定重复段落的逐字完全翻译，请告知。
-
-**以下是核心内容的完整译文：**
-
-[content]
-## 34.2 准备训练
-
-我在本章中采用的方法是运行一个我为这本书创建的 Python 训练程序。我将解释程序每个部分的作用，以及针对上述提到的问题所做出的决策。你需执行的第一项操作是下载训练程序的代码并使其在你的机器上运行。代码的描述在仓库指南的第 39.5.23 节中。要运行这些代码，你需要一个安装了正确包的虚拟环境。这里有一个 pip 命令，可以安装你运行代码所需的所有包：
-
-```
-pip install torch torchaudio scipy numpy soundfile packaging
-```
-
-在编写本文时，我使用的是下表所示的包版本：
-
-- torch, 版本: 2.1.0
-- torchaudio, 版本: 2.1.0
-- scipy, 版本: 1.11.3
-- numpy, 版本: 1.26.3
-- tensorboard, 版本: 2.15.0
-- soundfile, 版本: 0.12.1
-- packaging, 版本: 23.2
-
-如果你安装了这些包并在运行脚本时遇到某些问题，我建议你在书的 GitHub 仓库上将这些问题作为 issue 提交。如果你想安装特定版本的包，可以使用如下 pip 命令：
-
-```
-pip install torch==2.1.0
-```
-
-Python 训练程序的脚本应该位于示例代码中的 'python' 子文件夹中。在那个文件夹中，你应该能看到以下文件：
-
-- myk.data.py : 准备数据的函数
-- myk.evaluate.py : 测试已训练网络的函数
-- myk.loss.py : 损失函数的定义
-- myk.models.py : 模型定义
-- myk.train.py : 训练和更新函数的定义
-- train.py : 控制器程序和参数
-
-你可以直接运行 `train.py` 脚本。它将尝试加载数据集并训练网络。如果它无法在数据集中找到文件，它将打印一些帮助信息并退出。在我的系统中，运行脚本时我看到如下输出 - 如果在第 12 行看到消息：'epoch, train, val 0.7639494 0.7458705'，说明你已经准备好进行训练！
-
-```
-1 train.py
-2 Loading dataset from folder .../data/audio_ht1
-3 generate_dataset:: Loaded frames from audio file 120
-4 Splitting dataset
-5 Looking for GPU power
-6 cuda device not available/not selected
-7 Creating model
-8 Creating data loaders
-9 Creating optimiser
-10 Creating loss functions
-11 About to train
-12 epoch, train, val 0 0.7639494 0.7458705
-```
-
-当你运行脚本时，如果看到错误信息，请仔细阅读并修复问题。常见的错误是 `ModuleNotFound`（意味着你没有安装 Python 模块）以及与音频文件位置相关的断言错误。默认脚本假设在上一两级目录中有一个 `data` 和 `audio.ht1` 子文件夹，如上面输出的第 2 行所示。那里是训练数据所在的位置，当你下载这本书的代码时，你应该已经收到一个包含正确数据的 `audio.ht1` 文件夹。我很快会详细介绍如何准备训练数据。在这个阶段，你应该能够运行 `train.py` 脚本并看到与上面所示类似的输出。请仔细阅读任何错误并在继续之前解决它们。
-
-## 34.2 Tensorboard
-
-训练程序已设置为输出到 tensorboard。图 34.3 显示了 tensorboard 的运行情况。它是一个学习仪表板，可以通过你的浏览器向你展示训练进度。当你运行训练脚本时，它会创建一个名为 'runs' 的文件夹。每当你运行一次脚本，它会在 `runs` 文件夹中创建一个新的子文件夹。这里是运行两次 `train.py` 后的文件结构示例：
-
-```
-1 | -- Oct24_16_22-50_yogurt52 ht1 LSTM model with 32 hidden units
-2 | -- events.out.tevents.1698160970.yogurt52.1689590.0
-3 | | saved_models
-4 | | -- 1.wav
-5 | | -- 3.wav
-```
-
-![](img/f36e66929543fe6d506774ef8e004b7e_309_0.png)
-
-# 图 34.3
-
-Tensorboard 是一个基于 Web 的机器学习仪表板。在这里，你可以看到训练运行列表，以及显示在两次独立运行中训练和验证 (3) 误差的图表。
-
-```
--- l1stm_size_32_epoch_1_loss_0.7031.pth
--- l1stm_size_32_epoch_3_loss_0.6968.pth
-neural_model_l1stm_32.json
-cctx24_16-23-03_yogurt52 ht1 LSTM model with 32 hidden units
--- events.tf.events.1698106983.model52.186961.0
--- saved_model/
--- 1.wav
--- l1stm_size_32_epoch_1_loss_0.756.pth
-neural_model_l1stm_32.json
-```
-
-如果你在包含 `runs` 子文件夹的文件夹中按如下方式运行 tensorboard：`tensorboard --logdir runs`，你将看到一个控制台的 URL，例如 [http://localhost:6006/](http://localhost:6006/)。如果你在浏览器中打开它，你应该能看到类似于图 34.3 所示的界面。尝试在一个窗口中运行 `training.py` 脚本，然后在另一个窗口中运行 tensorboard 命令。观察你的仪表板以查看训练运行的进度。我很快会详细介绍 `runs` 文件夹中的文件。尽管如此，作为快速洞察，`.pth` 文件是某一时刻已训练模型的快照，`.json` 文件是以 Neural 格式导出的模型（稍后会有更多介绍），`.wav` 文件是在保存 `.pth` 文件时通过网络运行的数据示例。
-
-![](img/f36e66929543fe6d506774ef8e004b7e_310_0.png)
-
-**图 34.4**
-**准备训练数据**
-
-
-
+### 图 34.4
 
 # 训练音箱模拟器：数据集
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_312_0.png)
 
-**图 34.6** Reaper 中的清洁信号（顶部）和重新调音（re-amped）信号（底部）。
+### 图 34.6
+
+Reaper 中的清洁信号（顶部）和重新调音（re-amped）信号（底部）。
 
 可以为你做到。例如，你可以将信号通过一个音箱建模插件，并看看是否能用 LSTM 复现它。当然，你建模的内容可能并不非常真实。通过一个实际的物理踏板或放大器来处理信号会更好（也更有趣）。
 
 ## 34.3.3 延迟
 
-当你将信号输出到计算机并通过效果链重新捕获时，由于音频硬件中使用的缓冲区，信号中会产生延迟。取决于你捕获信号的方式，延迟可能是一个问题，也可能不是。如果你从 DAW 播放信号，并通过你正在建模的效果将其录制回 DAW，那么通常没问题。这是因为 DAW 会根据音频设备的缓冲区大小自动应用延迟补偿。如果你使用其他方法来执行播放和清洁信号。如果你在效果链中使用了某些外部数字效果，这些将在声卡和输出增加的基础上增加更多延迟。你的 DAW 将无法补偿由外部数字效果引起的延迟。幸运的是，测试文件 'v2.0.0.wav' 在开头有一些短脉冲，让你更容易将录制内容与原始内容对齐。如果你不对齐滤波器，训练可能无法正常工作。
+当你将信号输出到计算机并通过效果链重新捕获时，由于音频硬件中使用的缓冲区，信号中会产生延迟。取决于你捕获信号的方式，延迟可能是一个问题，也可能不是。如果你从 DAW 播放信号，并通过你正在建模的效果将其录制回 DAW，那么通常没问题。这是因为 DAW 会根据音频设备的缓冲区大小自动应用延迟补偿。如果你使用其他方法来执行播放和清洁信号。如果你在效果链中使用了某些外部数字效果，这些将在声卡和输出增加的基础上增加更多延迟。你的 DAW 将无法补偿由外部数字效果引起的延迟。幸运的是，测试文件 `v2.0.0.wav` 在开头有一些短脉冲，让你更容易将录制内容与原始内容对齐。如果你不对齐滤波器，训练可能无法正常工作。
 
 ## 34.3.4 你能建模什么样的效果？
 
@@ -6947,7 +6435,7 @@ neural_model_l1stm_32.json
 
 在此阶段，你应该能够无错误地运行训练脚本 `train.py`。你应该已经进行了一些训练运行，并使用 tensorboard 观察了它们的进度。你可能还通过将提供的测试信号通过效果单元来创建了自己的训练数据。
 
-## 数据形状、LSTM 模型和损失函数
+# 数据形状、LSTM 模型和损失函数
 
 在本章中，我将详细解释数据的形状以及它是如何为训练而组织的。我的经验是，准确确定数据结构所采取的形式可以很大地有助于理解神经网络和训练脚本在做什么。之后，我将解释为什么你需要为 LSTM 模型添加额外的层，以便 LSTM 的“多通道”输出可以混合为单通道。我们将通过对损失函数的检查来结束本章，该函数引导训练脚本正确调整神经网络的参数，以获得一个可用的训练模型。
 
@@ -6957,11 +6445,15 @@ neural_model_l1stm_32.json
 
 让我们来看创建数据集的函数调用。在 `train.py` 中，你会发现类似下面的行代码：
 
-```
+```python
 dataset = myk_data.generate_dataset(audio_folder + "/input/",
-audio_folder + "/output/",
-frag_len_seconds=0.5)
+                                    audio_folder + "/output/",
+                                    frag_len_seconds=0.5)
 ```
+
+
+
+
 
 `generate_dataset` 函数接收三个参数：
 
@@ -6969,7 +6461,7 @@ frag_len_seconds=0.5)
 2. 输出数据文件夹。它应该包含输入 WAV 的处理版本。对于输入，对于我们的目的来说，一个文件就足够。
 3. 分段（frag）或序列长度，我们在训练期间每次调用 `forward` 时发送到 LSTM 的序列长度。
 
-## 数据形状、LSTM 模型和损失函数 297
+## 数据形状、LSTM 模型和损失函数
 
 输入和输出流非常直接，但序列长度在这里到底起什么作用呢？关于数据集准备，音频文件被拼接成两个长的样本序列，一个用于输入，一个用于输出。然后，它们被切成具有你在 `sequence_length` 参数中指定的长度的子序列。
 
@@ -6989,7 +6481,7 @@ frag_len_seconds=0.5)
 
 诀窍在于 LSTM 通过其内部单元可以访问之前信号的某种表示。这意味着当网络在插件中运行时，它可能会忽略任何超过 0.5s 的内容。
 
-## 数据形状、LSTM 模型和损失函数 316
+## 数据形状、LSTM 模型和损失函数
 
 LSTM 在预测输出时能看到多少？
 
@@ -6997,20 +6489,19 @@ LSTM 在预测输出时能看到多少？
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_316_1.png)
 
-batch size
+`batch size`
+
 训练器使用多少个示例来更新神经网络参数？
 
 ### 图 35.1
+
 序列长度和块大小。
 
 ## 35.2 块大小
 
 在讨论数据形状和大小时，让我们考虑 `batch_size`，在 `train.py` 脚本的其他地方，我们定义了一个名为 `batch_size` 的变量：处理多少个序列来更新网络参数。更新网络是训练的核心——调整网络直到它能处理我们想要的信号。
 
-幸运的是我们，有一些非常详细的研究论文已经探索了
-
-
-数据形状、LSTM 模型与损失函数
+幸运的是我们，有一些非常详细的研究论文已经探索了数据形状、LSTM 模型与损失函数。
 
 针对吉他放大器建模问题，理想的序列长度和批大小（batch sizes）这些设置提供了一个良好的起点。脚本的默认设置为序列长度为 0.5s，批大小为 50。
 
@@ -7018,45 +6509,53 @@ batch size
 
 `generate` 函数返回一个 `TensorDataset` 对象。它通过 `myk.data.py` 中的以下代码创建该对象：
 
-```
-1 input_tensor = torch_tensor(np.array(input_fragments))
-2 output_tensor = torch_tensor(np.array(output_fragments))
-3 dataset = TensorDataset(input_tensor, output_tensor)
+```python
+input_tensor = torch_tensor(np.array(input_fragments))
+output_tensor = torch_tensor(np.array(output_fragments))
+dataset = TensorDataset(input_tensor, output_tensor)
 ```
 
-有几点需要注意：1) 我们将输入和输出片段转换为 numpy 数组，2) 我们将 numpy 数组转换为 torch 张量。第一步是可选的，因为可以从普通的 Python 列表创建 torch 张量。但 numpy 数组比基础列表更复杂的数据结构，允许指定类型。在处理大型数据集时，控制数据类型至关重要。以下代码演示了如何在 numpy 中指定数据类型：
+有几点需要注意：
 
-```
-1 import numpy as np
-2 data = [[1], [2], [3]],[[4], [5]]
-3 data_np = np.array(data, dtype=np.float32)
+1. 我们将输入和输出片段转换为 numpy 数组。
+2. 我们将 numpy 数组转换为 torch 张量。
+
+第一步是可选的，因为可以从普通的 Python 列表创建 torch 张量。但 numpy 数组比基础列表更复杂的数据结构，允许指定类型。在处理大型数据集时，控制数据类型至关重要。以下代码演示了如何在 numpy 中指定数据类型：
+
+```python
+import numpy as np
+
+data = [[1], [2], [3]], [[4], [5]]
+data_np = np.array(data, dtype=np.float32)
 ```
 
 Numpy 数组也必须具有规则的形状。考虑以下代码，它会导致崩溃：
 
-```
-1 import numpy as np
-2 data = [[1], [2], [3]],[[4], [5]]
-3 data_np = np.array(data)
+```python
+import numpy as np
+
+data = [[1], [2], [3]], [[4], [5]]
+data_np = np.array(data)
 ```
 
 对比这段代码，它不会崩溃：
 
-```
-1 import numpy as np
-2 data = [[1], [2], [3]],[[4], [5], [6]]
-3 data_np = np.array(data)
+```python
+import numpy as np
+
+data = [[1], [2], [3]], [[4], [5], [6]]
+data_np = np.array(data)
 ```
 
 转换为张量是必要的，因为正如前面的章节所述，张量是能够接受数据的数据结构。
 
 ### 35.2.2 Dataset shape
 
-`input_fragments` 对象的形状为 (序列数量, 序列长度, 序列宽度（单声道为 1））。因此，第一个维度索引可用的序列，第二个维度索引给定序列中的样本，最后一个维度索引音频中的通道。底图说明了输入和输出张量的形状：
+`input_fragments` 对象的形状为（序列数量, 序列长度, 序列宽度（单声道为 1））。因此，第一个维度索引可用的序列，第二个维度索引给定序列中的样本，最后一个维度索引音频中的通道。底图说明了输入和输出张量的形状：
 
 ## 数据形状、LSTM 模型与损失函数
 
-```
+```text
 [
   [[x_1], [x_2], [x_3], [x_4]],
   [[x_5], [x_6], [x_7], [x_8]],
@@ -7068,31 +6567,32 @@ Numpy 数组也必须具有规则的形状。考虑以下代码，它会导致�
 
 为了让你获得数据形状以及如何从中选择内容的实践经验，这里有一些 Python 代码，从 1D 数组的 0-11 中提取单个序列并对其进行重塑：
 
-```
-1 import numpy as np
-2 total_len = 12
-3 a = np.arange(0, total_len, 1)
-4 print(a)
-5 channels = 1 # 单声道
-6 seq_len = 2 # 序列中的样本
-7 num_seqs = int(a) / seq_len / channels
-8 b = a.reshape((num_seqs, seq_len, channels))
-9 print('1 seq:', b[0])
-10 print('3rd seq:', b[2])
-11 # 第一个序列，第一个样本，第一个通道
-12 print(b[0][0][0])
-13 # 第三个序列，第二个样本，第一个通道
-14 print(b[2][1][0])
+```python
+import numpy as np
+
+total_len = 12
+a = np.arange(0, total_len, 1)
+print(a)
+channels = 1  # 单声道
+seq_len = 2  # 序列中的样本
+num_seqs = int(a) / seq_len / channels
+b = a.reshape((num_seqs, seq_len, channels))
+print('1 seq:', b[0])
+print('3rd seq:', b[2])
+# 第一个序列，第一个样本，第一个通道
+print(b[0][0][0])
+# 第三个序列，第二个样本，第一个通道
+print(b[2][1][0])
 ```
 
 我看到这段代码的如下输出：
 
-```
-1 0 1 2 3 4 5 6 7 8 9 10 11
-2 1st seq: [[0] [1]]
-3 3rd seq: [[4] [5]]
-4 0
-5 5
+```text
+0 1 2 3 4 5 6 7 8 9 10 11
+1st seq: [[0] [1]]
+3rd seq: [[4] [5]]
+0
+5
 ```
 
 在上述代码中，一个批（batch）由多个序列组成，例如 `b[0:2]`。在列表中进行选择是 Python 语言中的一项强大功能。`b[0:4]` 从 b 中选择索引 0、1、2 和 3。`b[:,1]` 从 b 中选择所有“行”，然后从每行中选择第二列。你自己尝试一下 Python 的列表选择语法。
@@ -7101,7 +6601,7 @@ Numpy 数组也必须具有规则的形状。考虑以下代码，它会导致�
 
 现在你已经理解了完整训练数据的结构以及序列长度与批大小之间的交互，是时候将训练数据划分为训练数据、验证数据和测试数据了。将数据集划分为训练、验证和测试数据是通过 `train.py` 脚本中的以下行实现的：
 
-```
+```python
 train_ds, val_ds, test_ds = myk_data.get_train_valid_test_datasets(dataset)
 ```
 
@@ -7119,7 +6619,7 @@ train_ds, val_ds, test_ds = myk_data.get_train_valid_test_datasets(dataset)
 
 现在我们已经将数据划分为训练、验证和测试，我们将准备数据。这涉及确定我们将使用哪种设备。以下是 `train.py` 用于选择设备的代码：
 
-```
+```python
 if not torch.cuda.is_available():
     device = 'cpu'
 else:
@@ -7129,7 +6629,7 @@ else:
 
 你可以看到它选择了 cpu 设备或 cuda 设备。CUDA 代表计算统一设备架构，是 PyTorch 用来在 Nvidia 加速器上执行计算的框架。当你安装 PyTorch 时它应该已经安装在你的机器上了。只有当你拥有适当类型的 GPU（基本上是最近的）时才可用。一旦确定了设备，下一步是准备数据加载器（data loaders）。数据加载器为数据集提供了一个接口，允许批处理、打乱和其他功能。将 `TensorDataset` 转换为 `DataLoader` 非常简单：
 
-```
+```python
 train_dl = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
 ```
 
@@ -7137,27 +6637,29 @@ train_dl = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
 
 现在数据已经准备就绪，你可以创建你的神经网络模型了。在之前涉及 LSTM 网络的章节中，我们使用了一个只包含 LSTM 层而没有其他内容的简单模型。该模型的问题在于它生成的输出值数量。对于单声道信号，你想要单声道的输出。但 LSTM 层生成的输出宽度与其隐藏单元的数量相同：
 
-```
+```python
 import torch
+
 # 具有 1 个输入、4 个隐藏单元、1 层 LSTM：
 lstm = torch.nn.LSTM(1, 4, 1)
+
 # 发送数据
 input = torch.zeros(1, 1)
 ```
 
-
-
-# 数据形状、LSTM 模型与损失函数
+## 数据形状、LSTM 模型与损失函数
 
 ```python
 print(input.shape)
+
 output, = lstm.forward(input)
+
 print(output.shape)
 ```
 
 输出结果如下，这意味着输入是 1x1，但输出是 1x4：
 
-```
+```text
 torch.Size([1, 1])
 torch.Size([1, 4])
 ```
@@ -7166,32 +6668,38 @@ torch.Size([1, 4])
 
 ```python
 import torch
+
 # LSTM 有输入，4个隐藏单元，1层。1->4
 lstm, _ = torch.nn.LSTM(i, 4)
+
 # 密集层（torch 语言中的线性层）4->1
 dense = torch.nn.Linear(4, i)
+
 # 将信号通过 LSTM 层
 output, = lstm.forward(torch.zeros((1, 1)))
+
 # 信号通过密集层
 output = dense(output)
 ```
 
 该模型（如图 35.2 所示）产生单一的输出通道：
 
-```
+```text
 torch.Size([1, 1])
 ```
 
-## 35.5.1 为模型定义类
+### 35.5.1 为模型定义类
 
 我们现在需要将神经网络模型的功能封装成与 PyTorch 兼容的格式。为此，我们扩展了 `torch.nn.Module`。在类类中，我们实现了一个定义网络层的构造函数，以及一个通过我们想要经过的层的 `forward` 函数。由于该类扩展了 `torch.nn.Module`，它可以与其他 PyTorch 功能（如 TorchScript 和我们将要使用的优化器）配合使用。以下是该类的关键部分：构造函数（在 Python 中称为 `__init__`）和 `forward` 函数。`self` 为非静态方法提供了访问对象的方法。它类似于 C++ 中的 `this`：
 
 ```python
-class SimpleLSTM(torch.nn.Module): # 扩展 torch.nn.Module
+class SimpleLSTM(torch.nn.Module):  # 扩展 torch.nn.Module
     def __init__(self, hidden_size=32):
-        super().__init__() # 调用父类构造函数
+        super().__init__()  # 调用父类构造函数
+
         # 批优先输入数据为 [batch,sequence,feature]
         self.lstm = torch.nn.LSTM(i, hidden_size, batch_first=True)
+
         # 从 32 个隐藏层混回 1 个输出
         self.dense = torch.nn.Linear(hidden_size, 1)
 
@@ -7202,15 +6710,15 @@ class SimpleLSTM(torch.nn.Module): # 扩展 torch.nn.Module
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_323_0.png)
 
-# 图 35.3
+## 图 35.3
 
 损失意味着什么？顶部的两个图显示了目标输出的提取。中间的两个图显示了未训练（左）和已训练网络（右）的输出。右侧更接近目标。底部的图显示上述两个图中每个点之间的简单误差。这些值的总和可以作为一个简单的损失函数。
 
 需要注意的点：LSTM 层是以批模式创建的，这意味着输入的第一个维度是序列选择索引，我们正在处理它。这两个层被分配给名为 `lstm` 和 `dense` 的类变量。`forward` 传播将数据通过 LSTM 然后通过密集层。你可以按照如下方式进行测试：
 
 ```python
-1 model = SimpleLSTM()
-2 model.forward(torch.zeros((1, 1)))
+model = SimpleLSTM()
+model.forward(torch.zeros((1, 1)))
 ```
 
 完整的类定义在 `myk_models.py` 中。如果你检查代码，会发现它包含一些额外的函数：`zero_on_next_forward` 和 `save_rtneural`。`zero_on_next_forward` 会导致在下一次调用 `forward` 时传入一组零作为 LSTM 状态。它被用于在训练期间重置网络。`save_rtneural` 将当前模型参数保存到 JSON 文件，该文件可以导入 RTNeural 库，从而实现比 TorchScript 更快的推理。稍后会有更多相关介绍！
@@ -7221,28 +6729,36 @@ class SimpleLSTM(torch.nn.Module): # 扩展 torch.nn.Module
 
 为你的问题设计合适的损失函数是一门艺术。Alec Wright 在他关于非线性吉他放大器仿真的论文中描述了一种复杂的损失函数，我们在这里重新实现它 [45]。Wright 的损失函数由三个阶段组成，他发现这些阶段对引导训练过程非常有效。让我们逐一考虑每一个，但在之前，我要指出，所有损失函数都是使用 torch 函数编写的，这意味着在硬件可用的情况下，可以使用 torch 的并行化能力进行计算。
 
-### 35.6.1 预强调滤波器 (Pre-emphasis filter)
+### 35.6.1 预强调滤波器（Pre-emphasis filter）
 
 Wright 损失的第一阶段是预强调滤波器。根据论文，这防止了训练过度关注大信号。预强调滤波器类似于图 35.3 中所示的距离，但它包含了信号的幅度。预强调滤波器实现在 `myk_models.py` 中。你可以使用以下代码来实验 ESR 损失：
 
 ```python
-(注：原文此处未给出具体代码块，但根据上下文应为预强调滤波器的实现)
+（注：原文此处未给出具体代码块，但根据上下文应为预强调滤波器的实现）
 ```
-*(注：由于原文文本在35.6.1末处结束的描述直接引用了后续35.6.2的逻辑，此处根据翻译要求保持结构对应)*
 
-### 35.6.2 误差与信号损失 (Error to signal loss)
+*（注：由于原文文本在35.6.1末处结束的描述直接引用了后续35.6.2的逻辑，此处根据翻译要求保持结构对应）*
+
+### 35.6.2 误差与信号损失（Error to signal loss）
 
 预强调滤波器的下一个阶段是误差信号比（ESR）。ESR 类似于图 35.3 中的距离度量，但它包含了信号的幅度。这意味着对于安静信号，微小的误差也是显著的。预强调滤波器实现在 `myk_models.py` 中。你可以使用以下代码来实验 ESR 损失：
 
 ```python
 import myk_models
 import torch
+
 esr = myk_models.ESRLoss()
-target = target * 0.1 # 非常不同
+
+target = target * 0.1  # 非常不同
 output = esr.forward(output, target)
-output = target * 0.99 # 非常接近
+
+output = target * 0.99  # 非常接近
+
 print(esr.forward(output, target))
 ```
+
+
+
 
 ### 35.6.3 DC偏移损失 (DC offset loss)
 
@@ -7251,23 +6767,20 @@ print(esr.forward(output, target))
 ```python
 import myk_models
 import torch
+
 dc = myk_models.DCLoss()
 ```
 
 这里是用于实验 DC 偏移损失的代码。它生成一个信号然后添加不同类型的 DC 偏移：
 
-
-
-
-
-# 数据形状、LSTM 模型与损失函数
-
 ```python
 target = torch.randn(10, 1)
 output = target + 0.1
 print(dc.forward(output, target)) # 增加
+
 output = target - 0.1
 print(dc.forward(output, target)) # 减少
+
 output = target + 0.5
 print(dc.forward(output, target)) # 大增加
 ```
@@ -7276,17 +6789,15 @@ print(dc.forward(output, target)) # 大增加
 
 ## 35.7 进度检查
 
-在此阶段，你应该理解训练数据、验证数据和测试数据之间的区别，以及它们与过拟合和泛化之间的联系。你应该已经过数据集形状，并能够以不同的方式从张量数据结构中选择内容。你应该使用 SimpleLSTM 类创建一些 LSTM 模型，并能够说明为什么全连接层（dense layer）是必要的。你还应该检查 ESR 和 DC 偏移损失函数，并通过将信号通过这些损失函数进行实验。
+在此阶段，你应该理解训练数据、验证数据和测试数据之间的区别，以及它们与过拟合和泛化之间的联系。你应该已经检查过数据集形状，并能够以不同的方式从张量数据结构中选择内容。你应该使用 `SimpleLSTM` 类创建一些 LSTM 模型，并能够说明为什么全连接层（dense layer）是必要的。你还应该检查 ESR 和 DC 偏移损失函数，并通过将信号通过这些损失函数进行实验。
 
-# 36
-
-# LSTM 训练循环
+# 36 LSTM 训练循环
 
 在本章中，我将带你介绍 LSTM 训练循环。训练循环是执行神经网络实际训练的代码块，其中它的参数会逐渐调整，直到它能够正确处理信号。这个训练循环有一些有趣的特征，解决了研究人员在训练 LSTM 网络时遇到的一些问题，例如使用预热步骤（warm-up step）和听起来很奇异的截断时间反向传播（truncated backpropagation through time）。
 
 ## 36.1 训练循环概述
 
-到此时，你已经看到了许多数据准备、神经网络模型和损失函数，但还没有看到训练循环的细节，它是将所有这些元素付诸行动。主训练循环代码是 train.py。在设置好数据和模型后（如之前讨论的），它通过设置一个文件夹来随训练进度保存模型快照，准备训练。该文件夹是 Summary-Writer 生成的 log dir 子文件夹：
+到此时，你已经看到了许多数据准备、神经网络模型和损失函数，但还没有看到训练循环的细节，它是将所有这些元素付诸行动。主训练循环代码是 `train.py`。在设置好数据和模型后（如之前讨论的），它通过设置一个文件夹来随训练进度保存模型快照，准备训练。该文件夹是 Summary-Writer 生成的 log dir 子文件夹：
 
 ```python
 1 writer = SummaryWriter(comment='32 node LSTM amp')
@@ -7296,15 +6807,11 @@ print(dc.forward(output, target)) # 大增加
 
 下一节介绍训练循环的主流程，图如图所示，你将看到每个 epoch 如何将数据分成批次（batches），计算每个批次的损失并更新网络参数。有一个名为 `myk.train.epoch_interval` 的函数，它完成了一个训练 epoch 涉及的所有工作。下文将介绍更多信息。
 
-epoch 完成后，损失将被记录并显示在 tensorboard 中。然后会进行各种检查：如果验证损失是新记录，则保存模型权重；如果太久没有新记录，则退出；如果 超过了“max.epochs”，则退出。如果测试没有结束脚本，它将运行另一个 epoch。
-
-# LSTM 训练循环
+epoch 完成后，损失将被记录并显示在 tensorboard 中。然后会进行各种检查：如果验证损失是新记录，则保存模型权重；如果太久没有新记录，则退出；如果超过了 `max.epochs`，则退出。如果测试没有结束脚本，它将运行另一个 epoch。
 
 ![](img/f36e66929543fe6d506774ef8e004b7e_328_0.png)
 
 **图 36.1** 训练循环。数据分批处理，并在批次之间更新网络参数。在 epoch 之间，会检查是否需要保存模型并退出。
-
-# LSTM 训练循环
 
 ## 36.1.1 优化器（Optimiser）
 
@@ -7314,6 +6821,7 @@ epoch 完成后，损失将被记录并显示在 tensorboard 中。然后会进�
 optimiser = torch.optim.Adam(model.parameters(),
     lr=learning_rate,
     weight_decay=1e-4)
+
 scheduler = torch.optim.scheduler.ReduceLROPlateau(
     optimiser,
     'min',
@@ -7330,13 +6838,11 @@ scheduler = torch.optim.scheduler.ReduceLROPlateau(
 
 如上所述，位于 `myk.train` 模块中的 `train_epoch_interval` 函数完成了一个 epoch 训练的大部分工作。它有一些有趣的特征；例如，它执行了一个预热步骤。这涉及将序列的第一个函数输入神经网络并丢弃损失。这允许网络进行预热，避免了我们在调查 LSTM 中状态的影响之前观察到的信号跌落（图 33.1）。默认预热长度为 1000 个样本。该 epoch 的另一个特性是它使用更短的长度以允许更频繁的更新。
 
-LSTM 训练循环
-
 已经通过，例如每 50 个样本。这种技术有一个漂亮的名字叫截断时间反向传播。网络的状态在进行此操作时会被保留。`epoch.interval` 函数返回所有批次的平均损失。主循环随后记录这些训练，并计算验证集。
 
 ## 36.2 整合一切：训练 LSTM
 
-现在，你已经看到了训练过程中的所有关键组件。现在我将工作流呈现为可以遵循的步骤，以训练一个 LSTM 放大器
+现在，你已经看到了训练过程中的所有关键组件。现在我将工作流呈现为可以遵循的步骤，以训练一个 LSTM 放大器：
 
 1. 将训练信号加载到 DAW
 2. 布线使 DAW 输出训练信号到吉他放大器，然后录制处理后的信号
@@ -7356,15 +6862,7 @@ LSTM 训练循环
 
 ## 36.4 进度检查
 
-关于训练的信息到此结束。这里有很多细节——这些是研究人员和他们的计算机多年来辛苦获得的信息。所以，到此时，你应该已经成功运行了训练脚本。我希望你也使用数字失真效果或真实的放大器或失真电路创建了自己的的数据集。在接下来的章节中，你需要一个训练好的模型来使用，因此在继续之前，你应该在这里停下来并尝试训练自己的模型。
-
-
-
-
-
-# LSTM训练循环
-
-# 314
+关于训练的信息到此结束。这里有很多细节——这些是研究人员和他们的计算机多年来辛苦获得的信息。所以，到此时，你应该已经成功运行了训练脚本。我希望你也使用数字失真效果或真实的放大器或失真电路创建了自己的数据集。在接下来的章节中，你需要一个训练好的模型来使用，因此在继续之前，你应该在这里停下来并尝试训练自己的模型。
 
 # 清洁输入信号
 
@@ -7430,21 +6928,19 @@ LSTM 训练循环
 
 有一个名为 `lstm_size_32_epoch_3_loss_0.6968.pth` 的文件。这就是你想要转换成 TorchScript 模型的文件。以下 Python 代码将从 pth 文件加载模型并使用 TorchScript 导出它：
 
-```
+```python
 1 import torch
 2 import my_models # 确保此文件在同一文件夹下
-```
 
-# 在插件中实现模型
-
-```python
 # 将此设置为你实际的 pth 文件名
 # 可能包含完整路径
 # saved_path_path = 'lstm_size_32_epoch_3_loss_0.6968.pth'
 # export_pt_path = 'dist_32.ts'
+
 # 从路径加载
 # model = torch.load(saved_path_path)
 # model.eval()
+
 # 保存
 # scripted_model = torch::jit::script(model)
 # scripted_jit.save(scripted_model, export_pt_path)
@@ -7471,12 +6967,15 @@ std::vector<float> outputBuffer;
 ```cpp
 #include <filesystem>
 // ...
+
 std::string modelFolder = "C:\\models";
 std::string fp = modelFolder + "dist_32.ts";
+
 if (!std::filesystem::exists(fp)) {
     DBG("File " << fp << " not found");
     throw std::exception();
 }
+
 try {
     moduleModel = torch::jit::load(fp);
 } catch (const c10::Error& e) {
@@ -7494,13 +6993,16 @@ void AudioPluginProcessor::processBlock(torch::jit::Module& model, std::vector<f
     torch::Tensor in_t = torch::from_blob(inBlock.data(), static_cast<int64_t>(numSamples));
     // 形状改为 3D
     in_t = in_t.view({1, -1, 1});
+
     // 准备 IValue 向量
     std::vector<torch::jit::IValue> inputs;
     inputs.push_back(in_t);
+
     // 处理输入
     torch::jit::IValue out_ival = model.forward(inputs);
     torch::Tensor out_t = out_ival.toTensor();
     out_t = out_t.view({-1});
+
     // 将输出拷贝到输出块
     float* data_ptr = out_t.data_ptr<float>();
     std::copy(data_ptr, data_ptr + outBlock.size(), outBlock.begin());
@@ -7513,15 +7015,6 @@ void AudioPluginProcessor::processBlock(torch::jit::Module& model, std::vector<f
 
 ```cpp
 inBuffer.resize((size_t)samplesPerBlock);
-```
-
-
-
-
-
-# 在插件中实现模型
-
-```cpp
 outBuffer.resize((size_t)samplesPerBlock);
 ```
 
@@ -7533,16 +7026,28 @@ for (int channel = 0; channel < totalNumChannels; ++channel) {
     auto* input = buffer.getReadPointer(channel);
     // 将输入音频拷贝到缓冲区
     std::copy(input, input + buffer.size(), buffer.begin());
-    // 将其传递通过神经网络
-    processBlockNN(lstmModel, buffer, outBuffer, buffer);
-    // 这样你就可以向输出音频缓冲区写入数据
-    auto* output = buffer.getWritePointer(channel);
-    // 拷贝到输出音频缓冲区
-    std::copy(outBuffer.begin(), outBuffer.begin() + buffer.size(), output);
 }
 ```
 
-这完成了将音频传输到神经网络并传回的工作。编译并测试。如果你足够幸运或者在 Linux 上运行，你可能会听到神经网络对你的信号施了魔法，并模拟你训练的任何内容。更有可能的情况是你会触及 TorchScript 的性能极限，并听到音频断断。例如，在你的 M1 Mac Mini (2020型) 上运行具有 32 个单元的 LSTM 层，该插件在 AudioPluginHost 中运行正常，而在 Reaper 中，我可以听到每个块都在被处理，并伴有短暂的静音。如果你在 Reaper 中渲染音频，渲染速度为实时的 0.2 倍，但结果听起来是正确的。该插件在我的 Linux Intel 第10 代 i7 机器上运行得惊人。这表明我们在 sec:lstm-performance 节中看到的最佳情况性能数据远非现实。
+
+
+// 将其传递通过神经网络
+
+`processBlockNN(lstmModel, buffer, outBuffer, buffer);`
+
+// 这样你就可以向输出音频缓冲区写入数据
+
+`auto* output = buffer.getWritePointer(channel);`
+
+// 拷贝到输出音频缓冲区
+
+`std::copy(outBuffer.begin(), outBuffer.begin() + buffer.size(), output);`
+
+```
+std::copy(outBuffer.begin(), outBuffer.begin() + buffer.size(), output);
+```
+
+这完成了将音频传输到神经网络并传回的工作。编译并测试。如果你足够幸运或者在 Linux 上运行，你可能会听到神经网络对你的信号施了魔法，并模拟你训练的任何内容。更有可能的情况是你会触及 TorchScript 的性能极限，并听到音频断断。例如，在你的 M1 Mac Mini (2020型) 上运行具有 32 个单元的 LSTM 层，该插件在 AudioPluginHost 中运行正常，而在 Reaper 中，我可以听到每个块都在被处理，并伴有短暂的静音。如果你在 Reaper 中渲染音频，渲染速度为实时的 0.2 倍，但结果听起来是正确的。该插件在我的 Linux Intel 第10 代 i7 机器上运行得惊人。这表明我们在 `sec:lstm-performance` 节中看到的最佳情况性能数据远非现实。
 
 ## 37.3 进度检查
 
@@ -7550,7 +7055,7 @@ for (int channel = 0; channel < totalNumChannels; ++channel) {
 
 ## 38 使用 RTNeural 加速 LSTM
 
-##章节中，你将学习如何使用 RTNeural 推理引擎让你的神经网络处理音频更快。你将发现为什么 RTNeural 存在以及是谁创建了它。然后，你将学习如何将模型的权重导出到 JSON 文件，以便重新读回以使用 RTNeural 网络。你将看到 RTNeural 和 TorchScript 的对比，证明两个系统中具有相同权重和架构的模型输出相同的值。你会看到 RTNeural 模型运行速度比 TorchScript 模型快两到三倍。最后，你将看到如何在 JUCE 插件中部署 RTNeural，这是我们对神经效果技术工作的总结。
+在本章节中，你将学习如何使用 RTNeural 推理引擎让你的神经网络处理音频更快。你将发现为什么 RTNeural 存在以及是谁创建了它。然后，你将学习如何将模型的权重导出到 JSON 文件，以便重新读回以使用 RTNeural 网络。你将看到 RTNeural 和 TorchScript 的对比，证明两个系统中具有相同权重和架构的模型输出相同的值。你会看到 RTNeural 模型运行速度比 TorchScript 模型快两到三倍。最后，你将看到如何在 JUCE 插件中部署 RTNeural，这是我们对神经效果技术工作的总结。
 
 ### 38.1 什么是 RTNeural？
 
@@ -7572,7 +7077,9 @@ for (int channel = 0; channel < totalNumChannels; ++channel) {
 
 ```cpp
 const int lstm_units = 64;
+
 using MyLSTMType = RTNeural::ModelT<float, 1, 1>;
+
 RTNeural::LSTMLayer<float, 1, lstm_units> model;
 ```
 
@@ -7596,16 +7103,21 @@ RTNeural::DenseT<float, lstm_units, 1>;
 ```cpp
 // 创建模型
 MyLSTMType model;
+
 // 创建 json 对象
 std::ifstream jsonStream("weights.json");
 lohmann::json jsonJson;
 jsonStream >> jsonJson;
+
 // 获取 lstm 层
 auto &lstm = model.get();
+
 // 从 json 对象加载权重
 RTNeural::load<float>(jsonJson, "lstm");
+
 // 获取 dense 层
 auto &dense = model.get();
+
 // 从 json 对象加载权重
 RTNeural::load<float>(jsonJson, "dense");
 ```
@@ -7621,9 +7133,9 @@ RTNeural::load<float>(jsonJson, "dense");
 | 1 | 0.085324 | 0.085324 |
 | 2 | 0.099943 | 0.099943 |
 | 3 | 0.104003 | 0.104003 |
-| 4 | 0.098274 | 0.098274 | 
+| 4 | 0.098274 | 0.098274 |
 
-我通过创建具有不断增加单元数量的双层 LSTM-Dense 网络测试了 RTNeural 的性能。我多次通过神经网络传递 4 万个值并计算了平均时间。与相应的 TorchScript 网络相比，RTNeural 的运行速度快两到三倍。如果你有兴趣，可以使用项目 39.5 中的代码 (`performance.cpp`) 重复我的实验。 Chowdhury 的 RTNeural 论文[6] 也显示了类似的结果。
+我通过创建具有不断增加单元数量的双层 LSTM-Dense 网络测试了 RTNeural 的性能。我多次通过神经网络传递 4 万个值并计算了平均时间。与相应的 TorchScript 网络相比，RTNeural 的运行速度快两到三倍。如果你有兴趣，可以使用项目 39.5 中的代码 (`performance.cpp`) 重复我的实验。Chowdhury 的 RTNeural 论文[6] 也显示了类似的结果。
 
 ### 38.5 RTNeural 性能
 
@@ -7638,6 +7150,7 @@ RTNeural 有一些限制。主要的限制是不部分 torch 模块，并且与 
 ```cmake
 # 你应该已经有了这一行
 add_subdirectory(../JUCE ..)
+
 # 在下方添加这两行：
 add_subdirectory(../RTNeural ${CMAKE_CURRENT_BINARY_DIR}/RTNeural)
 include_directories(../RTNeural)
@@ -7645,51 +7158,54 @@ include_directories(../RTNeural)
 
 假设你上面的项目文件夹名为 RTNeural，包含 RTNeural GitHub 仓库的克隆。如果你正在处理书中的代码，它应该已经在那里了。接下来，根据需要更改 CMakeLists.txt 中的 PLUGINCODE 和 PLUGIN_NAME 属性。你应该确保将 IS_SYN 设置为 FALSE，以便你的插件作为效果处理器。你可以尝试测试构建以验证你的 RTNeural 和 JUCE 路径设置正确。
 
-
-
-
-
 ## 使用 RTNeural 加速 LSTM
 
-## 38.6.1 定义模型架构
+### 38.6.1 定义模型架构
 
 下一步是定义模型架构——就像我们在命令行 RTNeural 程序中做的那样。你可以将规格定义添加到 `PluginProcessor.h` 文件中：
 
 ```cpp
 #include <RTNeural/RTNeural.h>
+
 using RTLSTMModel32 = RTNeural::ModelT<float, 1, 1,
 RTNeural::LSTMayer<float, 1, 32,
 RTNeural::Dense<float, 32, 1>>;
 ```
 
-注意，我给模型重命名为 'RTLSTMModel32'，这会让让我（以后以后！）清楚地看出这是一个 32 单元的模型。接下来，我们可以在 `PluginProcessor.h` 的私有部分添加该类型的对象：
+注意，我给模型重命名为 `RTLSTMModel32`，这会让让我（以后以后！）清楚地看出这是一个 32 单元的模型。接下来，我们可以在 `PluginProcessor.h` 的私有部分添加该类型的对象：
 
 ```cpp
 RTLSTMModel32 lstmModel;
 ```
 
-## 38.6.2 将权重加载到模型
+### 38.6.2 将权重加载到模型
 
 让我们添加一个函数，从 JSON 文件将一些权重加载到模型中：
 
 ```cpp
 // prototype in PluginProcessor.h
 void setupModel(Processor::RTLSTMModel32& model, std::string jsonFile);
+
 // implementation in PluginProcessor.cpp:
 void testAudioProcessor::setupModel(RTLSTMModel32& model, std::string jsonFile) {
+
     int lstm_units = 32;
+
     // 读取 json 文件
     std::ifstream jsonStream(jsonFile, std::ifstream::binary);
     nlohmann::json modelJson;
     jsonStream >> modelJson;
+
     // 获取层级并检查权重数量是否正确
     auto lstm = model.get<LSTM>();
     const int lstm_unit_size = modelJson["lstm.weight_ih_10"].size();
     if (lstm_unit_size != lstm_units) 
         std::cout << "model wants " << lstm_units << " units but JSON file specifies " << lstm_unit_size << " units; if not correct" << std::endl; 
     throw std::exception("");
+
     // 加载 lstm 权重
     RTNeural::torch_helpers::loadLSTM<float>(modelJson, "lstm.", lstm);
+
     auto& dense = model.get<Dense>();
     RTNeural::torch_helpers::loadDense<float>(modelJson, "dense.", dense);
 }
@@ -7707,21 +7223,23 @@ Juce Plug-In-Host
 
 然后，你可以从 `PluginProcessor.cpp` 中的 PluginProcessor 构造函数调用该代码。
 
-- setupModel(lstmModel, "path-to-json-file");
+- `setupModel(lstmModel, "path-to-json-file");`
 
-## 38.6.3 通过模型传输音频
+### 38.6.3 通过模型传输音频
 
 现在，通过编辑 `PluginProcessor.cpp` 中的构造函数，让你的插件成为单声道插件。
 
-1. .withInput("Input", juce::AudioChannelSet::mono());
-2. .withOutput("Output", juce::AudioChannelSet::mono());
+1. `.withInput("Input", juce::AudioChannelSet::mono());`
+2. `.withOutput("Output", juce::AudioChannelSet::mono());`
 
 然后实现 `processorBlock`，使每个传入的样本都通过 LSTM 网络 - `PluginProcessor.cpp`。
 
 ```cpp
 for (int channel = 0; channel < totalInputChannels; ++channel) {
+
   auto* out = buffer.getWritePointer(channel);
   auto* inData = buffer.readPointer(channel);
+
   for (auto i=0; i<buffer.getNumSamples(); ++i){
     // 简单就如此！
     out[i] = lstmModel.forward(&dataIn[i]);
@@ -7740,10 +7258,6 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 在书的这一部分，我们深入探讨了一个特定问题，即非线性吉他放大器路径的建模。我们没有考虑的这个问题的一个方面是为插件添加控制，例如音色控制。实现这一点的简单方法是在神经网络信号路径之前或之后添加 IIR 滤波器。它将不是非线性音色控制的仿真，但它允许用户调整音色并获得主效果的非线性行为。
 
 实现音色控制正确的方法是训练神经网络，使其知道在不同的音色设置下应该如何表现。这实际上比你想象的要简单得多。
-
-
-
-
 
 ## 39.3 第 2 部分：元控制器 (meta-controller)
 
@@ -7800,137 +7314,131 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 
 ### 39.4.5 带有入音间隔(IOI)和时长的单音 MIDI 马尔可夫
 
-```
+
+
+## Part3_Improviser
+
+### 39.4.2 JUCE 马尔可夫模型启动项目
+
+```text
 -- Part3_Improviser
 | -- 020a_markov-starter
 ```
 
-```
--- Part3_Improviser
-| -- 020e_midi_markov_duration
-```
-
-### 39.4.2 JUCE 马尔可夫模型启动项目
-
-### 39.4.6 和弦检测类 (ChordDetector)
-
-```
--- Part3_Improviser
-| -- 020b_juce_markov-starter
-```
-
-```
--- Part3_Improviser
-| -- 020f_chord_detector
-```
-
 ### 39.4.3 单音 MIDI 马尔可夫特效
 
-### 39.4.7 多音 MIDI 马尔可夫
-
-```
+```text
 -- Part3_Improviser
 | -- 020c_midi_markov_pitch
 ```
 
-```
--- Part3_Improviser
-| -- 020g_midi_markov_poly
-```
-
 ### 39.4.4 带有入音间隔的单音 MIDI 马尔可夫
 
-### 39.4.8 带有速度度的多音 MIDI 马尔可夫
-
-```
+```text
 -- Part3_Improviser
 | -- 020d_midi_markov_ioi
 ```
 
+### 39.4.6 和弦检测类 (`ChordDetector`)
+
+```text
+-- Part3_Improviser
+| -- 020f_chord_detector
 ```
+
+### 39.4.7 多音 MIDI 马尔可夫
+
+```text
+-- Part3_Improviser
+| -- 020g_midi_markov_poly
+```
+
+### 39.4.8 带有速度度的多音 MIDI 马尔可夫
+
+```text
 -- Part3_Improviser
 | -- 020h_midi_markov_vel
 ```
 
 ## 39.5 第 4 部分：神经效果器 (Neural FX)
 
-### 39.5.1 使用 tinywav 读写 WAV 文件
+### 39.5.1 使用 `tinywav` 读写 WAV 文件
 
-```
+```text
 -- Part4_NeuralFX
 | 029a_three_pole
 ```
 
-### 39.5.6 频域卷积
+### 39.5.2 `Tinywav` 启动代码
 
-```
--- Part4_NeuralFX
-| 032c_convolution_freq_domain
-```
-
-### 39.5.2 Tinywav 启动代码
-
-```
+```text
 -- Part4_NeuralFX
 | 031a_tinywav
 ```
 
-### 39.5.7 JUCE 卷积插件
-
-```
--- Part4_NeuralFX
-| 033a_convolution_JUCE
-```
-
 ### 39.5.3 时域卷积：移动平均
 
-### 39.5.8 单极 IIR 基础
-
-```
+```text
 -- Part4_NeuralFX
 | 031b_convolution_time_domain
 ```
 
-```
--- Part4_NeuralFX
-| 034a_iir_basic
-```
-
-### 39.5.9 多极 IIR 基础
-
 ### 39.5.4 绘制 WAV 文件频谱图
 
-```
--- Part4_NeuralFX
-| 034b_iir_general
-```
+查看`utils/to.wave_spectrums.py`
 
-查看 utils/to.wave_spectrums.py
-
-```
--- Part4_NeuralFX
-| -- utils
-```
-
-### 39.5.10 IIR 滤波器设计脚本
-
-查看 utils/iir_filter.py
-
-```
+```text
 -- Part4_NeuralFX
 | -- utils
 ```
 
 ### 39.5.5 时域卷积：性能
 
-### 39.5.11 使用 JUCE 模块的 IIR 滤波器
-
-```
+```text
 -- Part4_NeuralFX
 | 031c_convolution_time_domain
 ```
 
+### 39.5.6 频域卷积
+
+```text
+-- Part4_NeuralFX
+| 032c_convolution_freq_domain
 ```
+
+### 39.5.7 JUCE 卷积插件
+
+```text
+-- Part4_NeuralFX
+| 033a_convolution_JUCE
+```
+
+### 39.5.8 单极 IIR 基础
+
+```text
+-- Part4_NeuralFX
+| 034a_iir_basic
+```
+
+### 39.5.9 多极 IIR 基础
+
+```text
+-- Part4_NeuralFX
+| 034b_iir_general
+```
+
+### 39.5.10 IIR 滤波器设计脚本
+
+查看`utils/iir_filter.py`
+
+```text
+-- Part4_NeuralFX
+| -- utils
+```
+
+### 39.5.11 使用 JUCE 模块的 IIR 滤波器
+
+```text
 -- Part4_NeuralFX
 | 034d_iir_JUCE
 ```
@@ -7939,115 +7447,117 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 
 ### 39.5.12 命令行波形整形器
 
-### 39.5.18 C++ TorchScript
-
-```
+```text
 -- Part4_NeuralFX
 |-- 035a_waveshaper_basic
 ```
 
-```
--- Part4_NeuralFX
-|-- 036b_lstm-torchscript
-```
-
 ### 39.5.13 基础 JUCE 波形整形器
 
-### 39.5.19 C++ 处理 WAV 文件
-
-```
+```text
 -- Part4_NeuralFX
 |-- 035b_waveshaper_JUCE
 ```
 
-```
--- Part4_NeuralFX
-|-- 036c_lstm-wav
-```
-
 ### 39.5.14 带有 DSP 模块的 JUCE 波形整形器
 
-### 39.5.20 C++ LSTM 测试
-
-```
+```text
 -- Part4_NeuralFX
 |-- 035c_waveshaper_DSP
 ```
 
-```
--- Part4_NeuralFX
-|-- 036d_lstm-performance
-```
-
 ### 39.5.15 使用经典 DSP 的放大器模拟
 
-### 39.5.21 C++ 基于块的 LSTM 处理
-
-```
+```text
 -- Part4_NeuralFX
 |-- 035d_JUCE_processor_chain
 ```
 
+### 39.5.16 基础 Python 示例
+
+```text
+-- Part4_NeuralFX
+|-- 036a_lstm-python
 ```
+
+### 39.5.17 带有图表的 Python LSTM Notebook
+
+```text
+-- Part4_NeuralFX
+|-- 036a_lstm-python
+```
+
+### 39.5.18 C++ TorchScript
+
+```text
+-- Part4_NeuralFX
+|-- 036b_lstm-torchscript
+```
+
+### 39.5.19 C++ 处理 WAV 文件
+
+```text
+-- Part4_NeuralFX
+|-- 036c_lstm-wav
+```
+
+### 39.5.20 C++ LSTM 测试
+
+```text
+-- Part4_NeuralFX
+|-- 036d_lstm-performance
+```
+
+### 39.5.21 C++ 基于块的 LSTM 处理
+
+```text
 -- Part4_NeuralFX
 |-- 036e_lstm-blocks
 ```
 
-### 39.5.16 基础 Python 示例
-
 ### 39.5.22 带有状态的 C++ 基于块的 LSTM 处理
 
-```
--- Part4_NeuralFX
-|-- 036a_lstm-python
-```
-
-```
+```text
 -- Part4_NeuralFX
 |-- 036f_lstm-memory
 ```
 
-### 39.5.17 带有图表的 Python LSTM Notebook 
-
 ### 39.5.23 Python LSTM 训练程序
 
-```
--- Part4_NeuralFX
-|-- 036a_lstm-python
-```
-
-```
+```text
 -- Part4_NeuralFX
 |-- 037a_train_lstm
 ```
 
 ### 39.5.24 C++ 训练过的 LSTM JUCE 项目
 
-### 39.5.26 C++ 训练过的 LSTM RTNeural 项目
-
-```
+```text
 -- Part4_NeuralFX
 |-- 037b_trained-lstm-JUCE
 ```
 
-```
--- Part4_NeuralFX
-|-- 037e_lstm-rtneural
-```
-
 ### 39.5.25 C++ 训练过的 LSTM RTNeural 项目
 
-### 39.5.27 Bonus项目：Steinmetz 回响的 C++ 实现
-
-```
+```text
 -- Part4_NeuralFX
 |-- 037d_lstm
 ```
 
+### 39.5.26 C++ 训练过的 LSTM RTNeural 项目
+
+```text
+-- Part4_NeuralFX
+|-- 037e_lstm-rtneural
 ```
+
+### 39.5.27 Bonus 项目：Steinmetz 回响的 C++ 实现
+
+```text
 -- Part4_NeuralFX
 |-- 038a_neural_steinmetz
 ```
+
+
 
 # 参考文献
 
@@ -8062,67 +7572,36 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 - [9] John Covert and David L. Virtual guitar amplifier using a recurrent neural network. In *2013 Proceedings of IEEE Southeastcon*, pages 1–5. IEEE, 2013.
 - [10] Giovanni Sanctis and Augusto Sarti. Virtual modeling in the digital domain. *IEEE transactions on audio, speech, and language*, 18(4):715–727, 2009. IEEE.
 
-
-
-
-
 # 参考文献
 
-[23] Yann LeCun, Yoshua Bengio, Geoffrey Hinton, Lecun Y., Bengio Y., and Hinton G. Deep learning. Nature, 521(7553):436–444, 2015. ISBN: 1315786504_eprint: arXiv:1312.6184v5.
-
-[24] Sunho Lee, Hyeong-Seok Choi, and Kyogu Lee. Differentiable autoencoder. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 30:2541–2556, 2022. Publisher: IEEE.
-
-[25] Joel Lehmann, Jeff Chloe, Dusan Miseic, Christoph Adami, Lee Altenberg, Julie Beaieu, Peter J. Bentley, Samuel Bernard, Guillaume Beslon, and David M. Bryson. The surprising creativity of digital evolution: A collection of anecdotes from the evolutionary computation and artificial life research communities. Artificial life, 26(2):274–306, 2020. Publisher: MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA.
-
-[26] Louis McCallum and Mick S. Grierson. Supporting Interactive Machine Learning Approaches to Building Musical Instruments in the Browser. In Proceedings of the International Conference on New Interfaces for Musical Expression, pages 271–272. Birmingham City Birmingham, UK, 2020.
-
-[27] Eduardo Ricardo Miranda. Cellular Automata Music: An Interdisciplinary Project. Interface, 22(1):3–21, January 1993.
-
-[28] David Moffat. AI Mixing Systems. In Handbook of Artificial Intelligence for Music, pages 345–375. Springer, 2021.
-
-[29] Hans Moravec. When will computer hardware match the human brain. Journal of evolution and technology, 1(1):10, 1998.
-
-[30] Gerhard Niehaus. Algorithmic composition: paradigms of automated music generation. Springer Science & Business Media, 2009.
-
-[31] Aaron van den Orord, Sander Dieleman, Heiga Zen, Karen Simononyan, Oriol Vinyals, Alex Graves, Nach Kalchbrenner, Andrew Senior, and Koray Kuyavucukoglu. Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499, 2016.
-
-[32] Andrew Pickering. Cybernetics and the mangle: Ashby, Beer and Pask. Social studies of science, 32(3):413–437, 2002. Publisher: Sage Publications London.
-
-[33] Will Pinkle. Designing audio effect plugins in C++: for AAX, AU, and VST3 with DSP theory. Routledge, 2019.
-
-[34] Nicola Plat, Clarence Hilton, Marco Gillies, Rebecca Fiebrick, Phoenix Perry, Carlos González Díaz, Ruth Gibson, Bruno Martelli, and Michael Zbyszynski. Interactive Machine Learning for Embodied Interaction Design: A tool and methodology. In Proceedings of the Fifteenth International Conference on Tangible, Embedded, and Embodied Interaction, pages 1–5, 2021.
-
-[35] Martínez Ramírez, Emmanouil Benetos, and Joshua D. Reiss. Deep learning for black-box modeling of audio effects. Applied Sciences, 10(2):638, 2020. Publisher: MDPI AG.
-
-[36] Anders Reuter. Who let the DAWs Out? The Digital in a New Generation of the Digital Audio Workstation. Popular Music and Society, 45(2):113–128, March 2022.
-
-[37] Curtis Roads and Paul Wieneke. Grammars as representations for music. Computer Music Journal, 48–55, 1979. Publisher: JSTOR.
-
-[38] David Silver, Julian Schrittwer, Karen Simonyan, Ioannis Antonaglo, Agus Huang, Arthur Perez, Thomas Hubert, Lucas Baker, Matthew Lai, Adrian Bolton, and others. Mastering the game of go without human knowledge. Nature, 550(7676):354–359, 2017. Publisher: Nature Publishing Group.
-
-[39] Christian J. Steinmetz and Joshua D. Reiss. Steerable discovery of neural audio. arXiv preprint arXiv:2112.09226, 2021.
-
-[40] Christian J. Steinmetz and Joshua D. Reiss. Efficient neural networks for real-time modeling of analog dynamic compression. arXiv:2102.06200, 2022.
-
-[41] Fabian-Robert Stöter, Stefan Ulrich, Anthine Liutkus, and Yuki Mitsuji. Openmix-a a reference implementation for music source separation. Journal of Open Source Software, 4(1):1667, 2019.
-
-[42] Fractal Audio Systems. Point Iterative Matching & Impedance. Technical report, Fractal Audio, 2013.
-
-[43] Tara Vanhatalo, Pierre Gerard, Antonio Brusco, Guillaume Lille, and Yann Bache. A Review of Neural Network-Based Estimation of Guitar Amplifiers. Applied Sciences, 10(2):5894, January 2022. Publisher: Multidisciplinary Publishing Institute.
-
-[44] Thomas Wilmering, David Moffat, Alessia Milo, and Mark. Sandler. A History of Audio Effects. Applied Sciences, 10(3):791, January 2020. Publisher: Multidisciplinary Publishing Institute.
-
-[45] Alec Wright, Eero-Pekka Damskäki, Lauri Juvela, and Vesa Välmäki. Real-Time Guitar Emulation with Deep Learning. Applied Sciences, 10(3):766, January 2020. Publisher: Multidisciplinary Publishing Institute.
-
-[46] Alec Wright, Eero-Pekka Damskäki, and Vesa Välmäki. Real-time black-box modelling with recurrent neural networks. In 22nd international conference on digital audio effects (DAFx19), pages 1–8, 2019.
-
-[47] Matthew Yee-King and Martin Roth. Synthbot: An unsupervised synthesizer. In Computer Music Conference, Belfast, 2008.
-
-[48] Matthew Yee-King. Synthesizer Programming: Techniques and Applications. PhD thesis, University of Sussex, 2011.
-
-[49] Matthew Yee-King, Leon Fedden, and Mark Inverno. Automatic programming of VST synthesizers using deep networks and other techniques. IEEE Transactions on Emerging Topics in Computational Intelligence, 2(2):150–159, 2018. Publisher: IEEE.
-
-[50] Nimal Yoganathan and Owen Chapman. Sounding rhythms: Kingby’s dub in the context of soundscape. Organised Sound, 23(1):91–100, 2018. Publisher: Cambridge University Press.
+- [23] Yann LeCun, Yoshua Bengio, Geoffrey Hinton, Lecun Y., Bengio Y., and Hinton G. Deep learning. Nature, 521(7553):436–444, 2015. ISBN: 1315786504_eprint: arXiv:1312.6184v5.
+- [24] Sunho Lee, Hyeong-Seok Choi, and Kyogu Lee. Differentiable autoencoder. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 30:2541–2556, 2022. Publisher: IEEE.
+- [25] Joel Lehmann, Jeff Chloe, Dusan Miseic, Christoph Adami, Lee Altenberg, Julie Beaieu, Peter J. Bentley, Samuel Bernard, Guillaume Beslon, and David M. Bryson. The surprising creativity of digital evolution: A collection of anecdotes from the evolutionary computation and artificial life research communities. Artificial life, 26(2):274–306, 2020. Publisher: MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA.
+- [26] Louis McCallum and Mick S. Grierson. Supporting Interactive Machine Learning Approaches to Building Musical Instruments in the Browser. In Proceedings of the International Conference on New Interfaces for Musical Expression, pages 271–272. Birmingham City Birmingham, UK, 2020.
+- [27] Eduardo Ricardo Miranda. Cellular Automata Music: An Interdisciplinary Project. Interface, 22(1):3–21, January 1993.
+- [28] David Moffat. AI Mixing Systems. In Handbook of Artificial Intelligence for Music, pages 345–375. Springer, 2021.
+- [29] Hans Moravec. When will computer hardware match the human brain. Journal of evolution and technology, 1(1):10, 1998.
+- [30] Gerhard Niehaus. Algorithmic composition: paradigms of automated music generation. Springer Science & Business Media, 2009.
+- [31] Aaron van den Orord, Sander Dieleman, Heiga Zen, Karen Simononyan, Oriol Vinyals, Alex Graves, Nach Kalchbrenner, Andrew Senior, and Koray Kuyavucukoglu. Wavenet: A generative model for raw audio. arXiv preprint arXiv:1609.03499, 2016.
+- [32] Andrew Pickering. Cybernetics and the mangle: Ashby, Beer and Pask. Social studies of science, 32(3):413–437, 2002. Publisher: Sage Publications London.
+- [33] Will Pinkle. Designing audio effect plugins in C++: for AAX, AU, and VST3 with DSP theory. Routledge, 2019.
+- [34] Nicola Plat, Clarence Hilton, Marco Gillies, Rebecca Fiebrick, Phoenix Perry, Carlos González Díaz, Ruth Gibson, Bruno Martelli, and Michael Zbyszynski. Interactive Machine Learning for Embodied Interaction Design: A tool and methodology. In Proceedings of the Fifteenth International Conference on Tangible, Embedded, and Embodied Interaction, pages 1–5, 2021.
+- [35] Martínez Ramírez, Emmanouil Benetos, and Joshua D. Reiss. Deep learning for black-box modeling of audio effects. Applied Sciences, 10(2):638, 2020. Publisher: MDPI AG.
+- [36] Anders Reuter. Who let the DAWs Out? The Digital in a New Generation of the Digital Audio Workstation. Popular Music and Society, 45(2):113–128, March 2022.
+- [37] Curtis Roads and Paul Wieneke. Grammars as representations for music. Computer Music Journal, 48–55, 1979. Publisher: JSTOR.
+- [38] David Silver, Julian Schrittwer, Karen Simonyan, Ioannis Antonaglo, Agus Huang, Arthur Perez, Thomas Hubert, Lucas Baker, Matthew Lai, Adrian Bolton, and others. Mastering the game of go without human knowledge. Nature, 550(7676):354–359, 2017. Publisher: Nature Publishing Group.
+- [39] Christian J. Steinmetz and Joshua D. Reiss. Steerable discovery of neural audio. arXiv preprint arXiv:2112.09226, 2021.
+- [40] Christian J. Steinmetz and Joshua D. Reiss. Efficient neural networks for real-time modeling of analog dynamic compression. arXiv:2102.06200, 2022.
+- [41] Fabian-Robert Stöter, Stefan Ulrich, Anthine Liutkus, and Yuki Mitsuji. Openmix-a a reference implementation for music source separation. Journal of Open Source Software, 4(1):1667, 2019.
+- [42] Fractal Audio Systems. Point Iterative Matching & Impedance. Technical report, Fractal Audio, 2013.
+- [43] Tara Vanhatalo, Pierre Gerard, Antonio Brusco, Guillaume Lille, and Yann Bache. A Review of Neural Network-Based Estimation of Guitar Amplifiers. Applied Sciences, 10(2):5894, January 2022. Publisher: Multidisciplinary Publishing Institute.
+- [44] Thomas Wilmering, David Moffat, Alessia Milo, and Mark. Sandler. A History of Audio Effects. Applied Sciences, 10(3):791, January 2020. Publisher: Multidisciplinary Publishing Institute.
+- [45] Alec Wright, Eero-Pekka Damskäki, Lauri Juvela, and Vesa Välmäki. Real-Time Guitar Emulation with Deep Learning. Applied Sciences, 10(3):766, January 2020. Publisher: Multidisciplinary Publishing Institute.
+- [46] Alec Wright, Eero-Pekka Damskäki, and Vesa Välmäki. Real-time black-box modelling with recurrent neural networks. In 22nd international conference on digital audio effects (DAFx19), pages 1–8, 2019.
+- [47] Matthew Yee-King and Martin Roth. Synthbot: An unsupervised synthesizer. In Computer Music Conference, Belfast, 2008.
+- [48] Matthew Yee-King. Synthesizer Programming: Techniques and Applications. PhD thesis, University of Sussex, 2011.
+- [49] Matthew Yee-King, Leon Fedden, and Mark Inverno. Automatic programming of VST synthesizers using deep networks and other techniques. IEEE Transactions on Emerging Topics in Computational Intelligence, 2(2):150–159, 2018. Publisher: IEEE.
+- [50] Nimal Yoganathan and Owen Chapman. Sounding rhythms: Kingby’s dub in the context of soundscape. Organised Sound, 23(1):91–100, 2018. Publisher: Cambridge University Press.
 
 # 索引
 
@@ -8133,11 +7612,11 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 - 音效果
   - 历史, 210
   - 类型, 210
-- AudioPluginGraph
+- `AudioPluginGraph`
   - 添加插件, 139
-- AudioProcessGraph
+- `AudioProcessGraph`
   - 初始化, 137
-- AudioProcessorGraph, 135
+- `AudioProcessorGraph`, 135
 - 反向传播, 258
 - 批, 96
   - 批处理, 258
@@ -8149,125 +7628,122 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 - 概述, 5
 - 它是谁?, 6
 - 构建工具, 11
-- CMake, 32
+- `CMake`, 32
   - 命令, 34, 35
 - 描述, 13
-- JUCE, 40
-- Libtorch 和 JUCE, 50
-- Libtorch 配置, 47
+- `JUCE`, 40
+- `Libtorch` 和 `JUCE`, 50
+- `Libtorch` 配置, 47
 - macOS 安装, 33
 - Windows 安装, 32
-- Colab, 58
+- `Colab`, 58
 - 卷积
   - 频域, 226
-  - JUCE, 227
+  - `JUCE`, 227
   - 时域, 222
-- CUDA, 302
+- `CUDA`, 302
 - 数据加载器, 302
 - 数据集, 121
 - 噪声, 89
 - 准备, 292
 - 存储, 121
-- DAW, 16
-- 用于 Windows 的 DBG, 27
+- `DAW`, 16
+- 用于 Windows 的 `DBG`, 27
 - 开发环境, 11
 - 组件, 11
 - 问题, 60
 - 设置, 18
-- DLL, 15, 48
-- DSP, 214
+- `DLL`, 15, 48
+- `DSP`, 214
 - 脉冲响应, 216
-- LTI 系统, 217
+- `LTI` 系统, 217
 - 动态链接, 48
 - 训练轮, 96
 - 误差函数, 94
-- FIR, 214
-- FM 合成算法, 72
+- `FIR`, 214
+- `FM` 合成算法, 72
 - 频率响应, 236
 - 泛化, 301
 - 生成序列, 171
 - 生成式模型, 15
-- GPU, 17
+- `GPU`, 17
 - 吉他放大器, 249
 - 构建, 39
 - 头文件, 41
-- 加载 WAV 文件, 220
+- 加载 `WAV` 文件, 220
 - 损失函数, 305
-- IDE, 13
-- LSTM, 262
+- `IDE`, 13
+- `LSTM`, 262
 - 音频, 265
-- C++, 235
-- 描述, 266
-- 定义, 231
-- JUCE, 282
-- JUCE, 237
+  - `C++`, 235
+  - 描述, 266
+  - 定义, 231
+  - `JUCE`, 282
+- `JUCE`, 237
 - 模型, 303
 - 单极, 333
 - 性能, 271
-- IIR/FIR 差分方程, 235
-- 处理 WAV, 269
+- `IIR/FIR` 差分方程, 235
+- 处理 `WAV`, 269
 - 脉冲响应, 216
 - 状态, 276, 280
 - 推理, 140, 259
-- LSTM 状态和块大小, 297
+- `LSTM` 状态和块大小, 297
 - 性能, 320
 - 马尔可夫模型
-- 安装 libortorch, 44
-- C++, 169
-- 发生起始间隔, 188
-- 定义, 163
-- 交互式机器学习, 100
-- 生成, 171
-- 解释型程序, 14
-- 高阶, 165
-- IOI, 188
-- 观测, 163
-- IOI 模型
-- 多音性, 204
-- 生成, 191
-- 状态, 163
-- JUCE
--- 状态转换, 164
-- 添加滑块, 66
-- 变阶, 166
-- CMake, 40
-- 元控制器用途, 81
-- 安装, 24
-- MIDI 和弦检测
-- Linux, 29
-- C++, 203
+  - 安装 `libortorch`, 44
+  - `C++`, 169
+  - 发生起始间隔, 188
+  - 定义, 163
+  - 交互式机器学习, 100
+  - 生成, 171
+  - 解释型程序, 14
+  - 高阶, 165
+  - `IOI`, 188
+  - 观测, 163
+- `IOI` 模型
+  - 多音性, 204
+  - 生成, 191
+  - 状态, 163
+- `JUCE`
+  - 状态转换, 164
+  - 添加滑块, 66
+  - 变阶, 166
+  - `CMake`, 40
+  - 元控制器用途, 81
+  - 安装, 24
+- `MIDI` 和弦检测
+  - Linux, 29
+  - `C++`, 203
 - macOS, 27
-- MIDI 输入, 69
-- MIDI 输入, 69
-- Morave, 2
-- RTNeural, 323
+- `MIDI` 输入, 69
+- `MIDI` 输入, 69
+- `Morave`, 2
+- `RTNeural`, 323
 - 音乐代理, 60
 - 独立运行目标, 26
 - 原生程序, 13
 - 为什么, 7
 - 神经效果
-- Windows, 26
-- 介绍, 212
-- JUCE CMake 命令, 40
-- 神经 FX
-- Libtorch
-- 混响, 327
-- 描述, 44
+  - Windows, 26
+  - 介绍, 212
+- `JUCE` `CMake` 命令, 40
+- 神经 `FX`
+- `Libtorch`
+  - 混响, 327
+  - 描述, 44
 - 神经网络
-- 安装, 46
-- 作为 FIR 和 IIR, 256
-- 简单示例, 44
-- C++ 类, 109
+  - 安装, 46
+  - 作为 `FIR` 和 `IIR`, 256
+  - 简单示例, 44
+  - `C++` 类, 109
 - 线性回归
-- 定义, 256
-- 神经网络, 85
-- 寻找最佳拟合, 90
+  - 定义, 256
+  - 神经网络, 85
+  - 寻找最佳拟合, 90
 - 合成器控制, 82
 - 前向, 114
 - Linux
-
-
-
 
 # 索引
 
@@ -8285,80 +7761,81 @@ for (int channel = 0; channel < totalInputChannels; ++channel) {
 - 频率模型, 176
 - 生成, 180
 - 插件示例
-- 正弦波合成器, 62
+  - 正弦波合成器, 62
 - 插件宿主, 29
 - 插件位置, 131
 - 插件
-- 添加参数, 77
-- FM 合成器, 72
-- 托管, 129
-- 生命周期, 64
-- 参数, 151
-- processBlock, 65
-- 显示用户界面, 145
-- processBlock 函数, 65
-- Pro, 24
-- Python
-- 安装包, 56
-- Linux 安装, 54
-- macOS 安装, 54
-- Neural FX 设置, 262
-- 笔记本, 65
-- 训练设置, 289
-- 虚拟环境, 55
-- Windows 安装, 53
+  - 添加参数, 77
+  - `FM` 合成器, 72
+  - 托管, 129
+  - 生命周期, 64
+  - 参数, 151
+  - `processBlock`, 65
+  - 显示用户界面, 145
+  - `processBlock` 函数, 65
+- `Pro`, 24
+- `Python`
+  - 安装包, 56
+  - Linux 安装, 54
+  - macOS 安装, 54
+  - `Neural FX` 设置, 262
+  - 笔记本, 65
+  - 训练设置, 289
+  - 虚拟环境, 55
+  - Windows 安装, 53
 - 量化, 190
 - 节奏, 187
-- RTNeural, 320
-- 导出权重, 321
-- JUCE, 323
-- 性能, 323
+- `RTNeural`, 320
+  - 导出权重, 321
+  - `JUCE`, 323
+  - 性能, 323
 - 序列建模技术, 162
 - 序列器, 158
 - 信号, 214
 - 滑块器, 66
 - 智能指针, 123
-- Softmax, 115
+- `Softmax`, 115
 - 源代码仓库, 8
-- Superknob, 104
+- `Superknob`, 104
 - 系统, 214
 - 张量, 93, 264
 - 张力
-- C++, 93
-- Torchknob, 107
-- TorchScript
-- 导出, 267, 315
-- 导入, 268
+  - `C++`, 93
+- `Torchknob`, 107
+- `TorchScript`
+  - 导出, 267, 315
+  - 导入, 268
 - 训练好的模型, 14
 - 训练, 96, 259, 287
-- 定义, 256
-- 示例运行, 313
-- 损失, 305
-- LSTM, 312
-- UI, 119
+  - 定义, 256
+  - 示例运行, 313
+  - 损失, 305
+  - `LSTM`, 312
+- `UI`, 119
 - 验证和测试数据, 301
 - 训练循环, 122, 127
 - 训练的定义, 255
 - 验证数据, 301
 - 变变阶马尔可夫模型, 166
 - 速度模型, 205
-- Virtualenv, 55
-- Visual Studio
-- 安装, 19
-- Visual Studio Code, 21
-- CMake 构建, 36
-- 安装, 20
+- `Virtualenv`, 55
+- `Visual Studio`
+  - 安装, 19
+- `Visual Studio Code`, 21
+  - `CMake` 构建, 36
+  - 安装, 20
 - 波形整形器
-- C++, 242
-- 定义, 241
-- JUCE, 243
-- 参数, 247
-- Wekinator, 99
-- 输入和输出, 100
+  - `C++`, 242
+  - 定义, 241
+  - `JUCE`, 243
+  - 参数, 247
+- `Wekinator`, 99
+  - 输入和输出, 100
 - Windows
-- Visual Studio, 37
-- Windows 调试输出, 27
+  - `Visual Studio`, 37
+  - Windows 调试输出, 27
 
 # Xcode
+
 - 构建, 39
 - 安装, 19

@@ -1,5 +1,5 @@
-# C# 与 Twilio 速查指南
 
+# C# 与 Twilio 速查指南
 
 # *Succinctly* 系列书籍背后的故事
 
@@ -59,9 +59,6 @@ Syncfusion 致力于制作多个主题的书籍。书籍将始终免费。我们
 
 Ed Freitas 是一名顾问。他最近参与使用 Redshift（Amazon Web Services）分析了 16 亿行数据，以收集有关客户模式的有价值见解。Ed 拥有计算机科学硕士学位，他喜欢足球、跑步、旅行和生活技巧。您可以通过 Edfreitas.me 联系他。
 
-
-
-
 # 致谢
 
 感谢所有为本书做出贡献的人，特别是希拉里·鲍灵（Hillary Bowling）、特雷斯·沃特金斯（Tres Watkins）和摩根·韦斯顿（Morgan Weston），以及 Syncfusion 团队，正是他们让这本书成为现实。同时要感谢手稿经理达伦·韦斯特（Darren West）和技术编辑詹姆斯·麦卡弗雷（James McCaffrey），他们对书籍的组织结构、代码质量和准确性进行了彻底的审查。感谢大家。
@@ -86,9 +83,9 @@ Twilio 最近扩展了其 API 支持，以兼容 Facebook Messenger，这与社�
 
 读完本电子书后，你应该能够自如地使用 Visual Studio 2015 配合 Twilio C# 辅助库编写语音和消息应用程序。我们将探索语音和消息应用程序的一些常见用例，这些用例对商业自动化流程非常有用，并可能成为任何公司的宝贵资源。
 
-**重要提示：** 以下示例代码中提供的一些电话号码，例如 33484464，实际上是无效（非真实）的电话号码。如果你希望在设备上进行真实交互，应提供具有国际格式的无效电话号码，例如 +16500000000。
+**重要提示：** 以下示例代码中提供的一些电话号码，例如 `33484464`，实际上是无效（非真实）的电话号码。如果你希望在设备上进行真实交互，应提供具有国际格式的无效电话号码，例如 `+16500000000`。
 
-本电子书的所有示例代码均可作为压缩的 .rar 文件在此 URL 处下载。
+本电子书的所有示例代码均可作为压缩的 `.rar` 文件在此 URL 处下载。
 
 玩得开心！
 
@@ -164,22 +161,19 @@ Twilio 还会询问额外信息，以便了解你最初将尝试使用其平台�
 
 ## 安装 Twilio API 辅助库
 
-为了开始编码，我们需要创建一个 Visual Studio 控制台应用程序。在 Visual Studio 2015 中，前往“文件”，“新建”，然后选择“项目”。你会看到如图 6 所示的界面。选择“控制台应用程序”并将其命名为 TwilioSuccinctly。
-
-
-
+为了开始编码，我们需要创建一个 Visual Studio 控制台应用程序。在 Visual Studio 2015 中，前往“文件”，“新建”，然后选择“项目”。你会看到如图 6 所示的界面。选择“控制台应用程序”并将其命名为 `TwilioSuccinctly`。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_14_0.png)
 
 # 图 6：新的 Visual Studio 控制台应用程序
 
-创建 Visual Studio 项目后，让我们添加两个类——一个名为 **TwilioCore**，另一个名为 **TwilioExample**，后者将作为 **TwilioCore** 的封装器。该项目应如图 7 所示。
+创建 Visual Studio 项目后，让我们添加两个类——一个名为 **`TwilioCore`**，另一个名为 **`TwilioExample`**，后者将作为 **`TwilioCore`** 的封装器。该项目应如图 7 所示。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_14_1.png)
 
 # 图 7：TwilioSuccinctly 项目结构
 
-接下来，让我们添加 Twilio API 辅助库，该库可在 NuGet 上获取。为此，请右键单击 **TwilioSuccinctly** 项目，并点击“管理 NuGet 包”。
+接下来，让我们添加 Twilio API 辅助库，该库可在 NuGet 上获取。为此，请右键单击 **`TwilioSuccinctly`** 项目，并点击“管理 NuGet 包”。
 
 在搜索框中输入 Twilio，然后从返回的结果中选择 Twilio REST API 辅助库进行安装。
 
@@ -274,27 +268,29 @@ namespace TwilioSuccinctly
 }
 ```
 
-让我们详细审查此类。为了使用 Twilio API 辅助库，我们需要引入 **Twilio** 命名空间。
+让我们详细审查此类。为了使用 Twilio API 辅助库，我们需要引入 **`Twilio`** 命名空间。
 
-**TwilioCore** 继承自 **IDisposable** 接口，这意味着我们可以创建 **TwilioCore** 的实例，并且如果在 **using** 语句中调用，它可以被自动释放。这非常方便——它帮助我们编写整洁的代码。
+**`TwilioCore`** 继承自 **`IDisposable`** 接口，这意味着我们可以创建 **`TwilioCore`** 的实例，并且如果在 **`using`** 语句中调用，它可以被自动释放。这非常方便——它帮助我们编写整洁的代码。
 
 为了进行身份验证，Twilio 需要账户 SID 和授权令牌（Auth Token）。
 
-这些已被添加到 **TwilioCore** 类中，作为一个构造函数的参数，同时也作为两个分别名为 **SID** 和 **aTk** 的公共属性。可以在这个 [URL](URL) 找到账户 SID 和 Auth Token。为了查看它们，您需要点击“显示 API 凭据”，如图 9 所示。
+这些已被添加到 **`TwilioCore`** 类中，作为一个构造函数的参数，同时也作为两个分别名为 **`SID`** 和 **`aTk`** 的公共属性。可以在这个 [URL](URL) 找到账户 SID 和 Auth Token。为了查看它们，您需要点击“显示 API 凭据”，如图 9 所示。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_17_0.png)
 
-到目前为止，实际的 **TwilioCore** 类非常简单。有两个构造函数，一个没有参数，不分配任何值给 **SID** 和 **aTk** 属性；另一个初始化这两个属性。其余部分包括释放机制的实现以及调用 Dispose 方法的类析构函数。
+到目前为止，实际的 **`TwilioCore`** 类非常简单。有两个构造函数，一个没有参数，不分配任何值给 **`SID`** 和 **`aTk`** 属性；另一个初始化这两个属性。其余部分包括释放机制的实现以及调用 Dispose 方法的类析构函数。
 
-**SendSms** 方法特别有趣。该方法返回一个属于 Twilio API 辅助库命名空间的 **Message** 对象。为了让 **SendSms** 执行任何操作，**SID** 和 **aTk** 属性都需要分配值。
+**`SendSms`** 方法特别有趣。该方法返回一个属于 Twilio API 辅助库命名空间的 **`Message`** 对象。为了让 **`SendSms`** 执行任何操作，**`SID`** 和 **`aTk`** 属性都需要分配值。
 
-**SendSms** 方法使用 [RestSharp](https://www.restsharp.com/) 库创建 **TwilioRestClient** 的实例，它是 Twilio API 的封装器。为了发送短信，执行对 **SendMessage** 方法的调用。
+**`SendSms`** 方法使用 [RestSharp](https://www.restsharp.com/) 库创建 **`TwilioRestClient`** 的实例，它是 Twilio API 的封装器。为了发送短信，执行对 **`SendMessage`** 方法的调用。
 
-**SendMessage** 方法需要三个参数。第一个参数 ***from*** 是发送消息的号码。第二个参数 ***to*** 是接收消息的号码。第三个参数 ***msg*** 是消息的实际文本。
+**`SendMessage`** 方法需要三个参数。第一个参数 ***from*** 是发送消息的号码。第二个参数 ***to*** 是接收消息的号码。第三个参数 ***msg*** 是消息的实际文本。
 
-既然我们已经看到 **TwilioRestClient** 类如何轻松允许我们发送短信，让我们编写一个合适的示例。为了做到这一点，我们将实现 **TwilioExample** 类。
+既然我们已经看到 **`TwilioRestClient`** 类如何轻松允许我们发送短信，让我们编写一个合适的示例。为了做到这一点，我们将实现 **`TwilioExample`** 类。
 
 ### 代码清单 2：TwilioExample 类
+
+
 
 ```csharp
 using System;
@@ -337,9 +333,9 @@ namespace TwilioSuccinctly
 }
 ```
 
-静态方法 **SendSimpleSmsExample** 创建 **TwilioCore** 类的实例，传入账户 SID `cStrSid` 和 Auth Token `cStrAuthTk`，然后使用发送方 `cStrSender` 和接收方 `cStrReceiver` 电话号码调用方法 **SendSms**。
+静态方法 `SendSimpleSmsExample` 创建 `TwilioCore` 类的实例，传入账户 SID `cStrSid` 和 Auth Token `cStrAuthTk`，然后使用发送方 `cStrSender` 和接收方 `cStrReceiver` 电话号码调用方法 `SendSms`。
 
-现在只缺少从主程序调用 **SendSimpleSmsExample**。这实现在代码清单 3 中。
+现在只缺少从主程序调用 `SendSimpleSmsExample`。这实现在代码清单 3 中。
 
 ### 代码清单 3：主程序
 
@@ -372,15 +368,15 @@ namespace TwilioSuccinctly
 
 到目前为止，我们探讨了如何发送短信。但我们如何跟踪它？
 
-如果我们查看 **SendSimpleSmsExample** 的实现，我们可以看到返回了一个 **Message** 对象。该对象包含一个 **Status** 属性，指示消息是“排队中”还是“已投递”。
+如果我们查看 `SendSimpleSmsExample` 的实现，我们可以看到返回了一个 `Message` 对象。该对象包含一个 `Status` 属性，指示消息是“排队中”还是“已投递”。
 
 通常状态从“排队中”变为“已投递”需要几秒钟（在二到五秒之间），即使接收方号码可能已经收到了短信。
 
-请注意，**Status** 值“排队中”或“已投递”被引用，因为它内部表示为字符串。
+请注意，`Status` 值“排队中”或“已投递”被引用，因为它内部表示为字符串。
 
 Twilio 非常有效——如果您的消息已排队，它很可能会被投递。尽管如此，验证消息确实已有效投递仍然很有用。
 
-让我们探讨如何检查这一点。让我们向 **TwilioCore** 类添加一个方法来检查短信的状态。
+让我们探讨如何检查这一点。让我们向 `TwilioCore` 类添加一个方法来检查短信的状态。
 
 ### 代码清单 4：TwilioCore 的 CheckSmsStatus 方法
 
@@ -398,11 +394,11 @@ public Message CheckSmsStatus(string sid)
 }
 ```
 
-**CheckSmsStatus** 方法通过调用 **TwilioRestClient** 实例的 **GetMessage** 来检查短信状态。
+`CheckSmsStatus` 方法通过调用 `TwilioRestClient` 实例的 `GetMessage` 来检查短信状态。
 
-**GetMessage** 方法需要我们要检查的消息的短信 ID **sid**。这就是为什么 **TwilioCore** 类的 **SendSms** 方法返回一个 **Message** 对象——以便我们可以从中获取短信 ID。
+`GetMessage` 方法需要我们要检查的消息的短信 ID `sid`。这就是为什么 `TwilioCore` 类的 `SendSms` 方法返回一个 `Message` 对象——以便我们可以从中获取短信 ID。
 
-接下来，让我们在 **TwilioExample** 类中通过添加一个 **CheckSmsDelivered** 封装方法围绕 **SendSms** 来实现一个示例。
+接下来，让我们在 `TwilioExample` 类中通过添加一个 `CheckSmsDelivered` 封装方法围绕 `SendSms` 来实现一个示例。
 
 ### 代码清单 5：TwilioExample 的 CheckSmsDelivered 封装方法
 
@@ -411,32 +407,35 @@ public static bool CheckSmsDelivered(string mid)
 {
 ```
 
-
-
-
-
 bool res = false;
+
 using (TwilioCore tc = new TwilioCore(cStrSid, cStrAuthTk))
+
 {
+
     Message m = tc.CheckSmsStatus(mid);
 
     res = (m?.Status == "delivered") ? true : false;
+
 }
+
 return res;
+
 }
+```
 
-该功能非常直观。该方法创建了一个 **TwilioCore** 类的实例，然后调用 **CheckSmsStatus**。状态是通过检查 **CheckSmsStatus** 返回的 **Message** 对象的 **Status** 属性的值来确定的。
+该功能非常直观。该方法创建了一个 `TwilioCore` 类的实例，然后调用 `CheckSmsStatus`。状态是通过检查 `CheckSmsStatus` 返回的 `Message` 对象的 `Status` 属性的值来确定的。
 
-如果 **Status** 属性的值为 "delivered"，**CheckSmsDelivered** 将返回 *true*，确认消息已送达。相反，**CheckSmsDelivered** 将返回 *false*。
+如果 `Status` 属性的值为 "delivered"，`CheckSmsDelivered` 将返回 *true*，确认消息已送达。相反，`CheckSmsDelivered` 将返回 *false*。
 
-正如我们所见，Twilio 通常需要在两到五秒之间更新 Status 属性的值，从 "queued" 变为 "delivered"。现在，让我们在主程序中实现一个方法，该方法在调用 **CheckSmsDelivered** 时会考虑到这一点。
+正如我们所见，Twilio 通常需要在两到五秒之间更新 `Status` 属性的值，从 "queued" 变为 "delivered"。现在，让我们在主程序中实现一个方法，该方法在调用 `CheckSmsDelivered` 时会考虑到这一点。
 
 *代码清单 6：调整后的主程序*
 
+```csharp
 using System;
 using System.Threading;
 using Twilio;
-
 namespace TwilioSuccinctly
 {
     public class Program
@@ -444,14 +443,11 @@ namespace TwilioSuccinctly
         static void Main(string[] args)
         {
             SendSimpleSmsAndCheckIfDeliveredExample();
-
             Console.ReadLine();
         }
-
         public static void SendSimpleSmsAndCheckIfDeliveredExample()
         {
             Message m = TwilioExample.SendSimpleSmsExample();
-
             if (m != null)
             {
                 Thread.Sleep(5000);
@@ -461,15 +457,18 @@ namespace TwilioSuccinctly
         }
     }
 }
+```
 
-我们包含了一个名为 SendSimpleSmsAndCheckIfDeliveredExample 的新方法，该方法调用 TwilioExample 包装类中的 SendSimpleSmsExample，然后，如果返回的 Message 对象的值不为 null，则在调用 Thread.Sleep 之前等待 5.5 秒，然后调用 CheckSmsDelivered。
+我们包含了一个名为 `SendSimpleSmsAndCheckIfDeliveredExample` 的新方法，该方法调用 `TwilioExample` 包装类中的 `SendSimpleSmsExample`，然后，如果返回的 `Message` 对象的值不为 null，则在调用 `Thread.Sleep` 之前等待 5.5 秒，然后调用 `CheckSmsDelivered`。
 
 运行此代码将产生如图 11 所示的输出。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_22_0.png)
 
 Twilio SendSimpleSmsExample
+
 SMS 的状态为：queued
+
 SMS SM4456f8decfd9435aaa992dfde9e8d784d 已送达：True
 
 图 11：SendSimpleSmsAndCheckIfDelivered 方法的输出
@@ -576,18 +575,17 @@ Authy 服务已完全集成到 Twilio 平台中，可以通过访问此 URL 从�
 
 单击“安装”将安装 Authy.Net。Auth.Net 包也可在此处获取。
 
-现在是时候再次编写代码了。我们将扩展原始的 TwilioCore 和 TwilioExample 类，并为其添加 Authy 2FA 功能。
+现在是时候再次编写代码了。我们将扩展原始的 `TwilioCore` 和 `TwilioExample` 类，并为其添加 Authy 2FA 功能。
 
 ## 注册 Authy 接收者
 
 为了通过短信接收验证令牌，必须注册用户（接收者）的手机号码。您可以通过 Authy 仪表板或代码来完成此操作。
 
-让我们修改 TwilioCore 类，以便添加一个方法来注册用户的号码。
-
-
-
+让我们修改 `TwilioCore` 类，以便添加一个方法来注册用户的号码。
 
 # 代码清单 7：包含 RegisterUser 方法的 TwilioCore 类
+
+
 
 ```csharp
 using System;
@@ -642,17 +640,17 @@ namespace TwilioSuccinctly
 }
 ```
 
-**RegisterUser** 方法非常简单。它接收 Authy API 密钥 **apikey**、接收者的电子邮件地址 **uemail**、接收者的手机号码 **unumber** 以及国家代码 **cc** 作为参数。最后一个参数 **tmode** 指示是否使用测试模式（设置为 **true** 时）或生产模式（设置为 **false** 时）。
+`RegisterUser` 方法非常简单。它接收 Authy API 密钥 `apikey`、接收者的电子邮件地址 `uemail`、接收者的手机号码 `unumber` 以及国家代码 `cc` 作为参数。最后一个参数 `tmode` 指示是否使用测试模式（设置为 `true` 时）或生产模式（设置为 `false` 时）。
 
-当将 **tmode** 设置为 **true** 时，您需要使用用于测试的 Auth API 密钥。如果您想在生产环境中使用此功能（即 **tmode** 设置为 **false** 时），您需要使用用于生产的 API 密钥。两者都可以在 Authy 仪表板上找到。
+当将 `tmode` 设置为 `true` 时，您需要使用用于测试的 Auth API 密钥。如果您想在生产环境中使用此功能（即 `tmode` 设置为 `false` 时），您需要使用用于生产的 API 密钥。两者都可以在 Authy 仪表板上找到。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_29_0.png)
 
-**RegisterUser** 方法首先验证 **apikey**、**uemail** 和 **unumber** 是否为空字符串，然后传入 **apikey** 和 **tmode** 创建 **AuthyClient** 的实例。为了注册用户，调用方法 **RegisterUser** 以传递 **uemail**、**unumber** 和 **cc**。
+`RegisterUser` 方法首先验证 `apikey`、`uemail` 和 `unumber` 是否为空字符串，然后传入 `apikey` 和 `tmode` 创建 `AuthyClient` 的实例。为了注册用户，调用方法 `RegisterUser` 以传递 `uemail`、`unumber` 和 `cc`。
 
-有了这些，让我们创建一个包装器，以便稍后在主程序中使用。让我们修改 **TwilioExample** 类并添加一个 **RegisterUser** 包装器方法。
+有了这些，让我们创建一个包装器，以便稍后在主程序中使用。让我们修改 `TwilioExample` 类并添加一个 `RegisterUser` 包装器方法。
 
-*代码清单 8：TwilioExample 中的 RegisterUser 包装器方法*
+### 代码清单 8：TwilioExample 中的 RegisterUser 包装器方法
 
 ```csharp
 using System;
@@ -679,17 +677,17 @@ namespace TwilioSuccinctly
 }
 ```
 
-**RegisterUser** 包装器方法的实现也相当直接。本质上，**TwilioCore** 的 **RegisterUser** 方法中使用的相同参数在这里也被使用。
+`RegisterUser` 包装器方法的实现也相当直接。本质上，`TwilioCore` 的 `RegisterUser` 方法中使用的相同参数在这里也被使用。
 
-创建一个 **TwilioCore** 类的实例并调用 **RegisterUser** 方法。此调用返回的结果是一个 **RegisterUserResult** 对象，该对象稍后用于获取 **UserId**。发送验证码需要 **UserId**。
+创建一个 `TwilioCore` 类的实例并调用 `RegisterUser` 方法。此调用返回的结果是一个 `RegisterUserResult` 对象，该对象稍后用于获取 `UserId`。发送验证码需要 `UserId`。
 
 ### 通过 SMS 获取验证码
 
-在 **TwilioCore** 和 **TwilioExample** 类中都实现了 **RegisterUser** 方法后，下一步是创建一个方法，以便我们可以将验证码作为 SMS 发送。
+在 `TwilioCore` 和 `TwilioExample` 类中都实现了 `RegisterUser` 方法后，下一步是创建一个方法，以便我们可以将验证码作为 SMS 发送。
 
-我们将分两步完成，即在 **TwilioCore** 类上创建一个 **SendSms** 方法，并在 **TwilioExample** 类上创建一个 **SendSms** 包装器方法。
+我们将分两步完成，即在 `TwilioCore` 类上创建一个 `SendSms` 方法，并在 `TwilioExample` 类上创建一个 `SendSms` 包装器方法。
 
-让我们实现 **TwilioCore** 类的 **SendSms** 方法。
+让我们实现 `TwilioCore` 类的 `SendSms` 方法。
 
 > *代码清单 9：TwilioCore 类的 SendSms 令牌验证方法*
 
@@ -706,9 +704,9 @@ public SendSmsResult SendSms(string akey, string userid, bool tmode)
 }
 ```
 
-该方法接受 **apikey**、**userid** 和 **tmode** 参数。如果 **apikey** 和 **userid** 不是空字符串，则创建 **AuthyClient** 的实例，并立即通过传递 **userid** 调用 **SendSms**。然后结果作为 **SendSmsResult** 对象返回给调用方法。
+该方法接受 `apikey`、`userid` 和 `tmode` 参数。如果 `apikey` 和 `userid` 不是空字符串，则创建 `AuthyClient` 的实例，并立即通过传递 `userid` 调用 `SendSms`。然后结果作为 `SendSmsResult` 对象返回给调用方法。
 
-接下来，让我们在 **TwilioExample** 类中创建包装器方法。
+接下来，让我们在 `TwilioExample` 类中创建包装器方法。
 
 *代码清单 10：TwilioExample 类的 SendSms 包装器方法*
 
@@ -724,7 +722,7 @@ public static SendSmsResult SendSms(string apikey, string userid, bool tmode)
 }
 ```
 
-包装器方法的实现也相当简单。创建一个 **TwilioCore** 类的实例，并使用 **apikey**、**userid** 和 **tmode** 参数调用 **TwilioCore** 的 **SendSms** 方法。返回 **SendSmsResult** 对象给调用方法，然后用于检查验证码是否成功发送。
+包装器方法的实现也相当简单。创建一个 `TwilioCore` 类的实例，并使用 `apikey`、`userid` 和 `tmode` 参数调用 `TwilioCore` 的 `SendSms` 方法。返回 `SendSmsResult` 对象给调用方法，然后用于检查验证码是否成功发送。
 
 有了这些，为了测试我们所做的工作，让我们现在创建一个方法，该方法在我们的主程序中注册一个接收者并发送 SMS 验证码。
 
@@ -778,11 +776,11 @@ namespace TwilioSuccinctly
 }
 ```
 
-**main** 方法调用 **SendSmsAndVerifyToken** 方法，该方法从 **TwilioExample** 类调用 **RegisterUser** 方法。如果返回的 **RegisterUserResult** 对象不为 **null**，则将调用 **SendSms** 方法。
+`main` 方法调用 `SendSmsAndVerifyToken` 方法，该方法从 `TwilioExample` 类调用 `RegisterUser` 方法。如果返回的 `RegisterUserResult` 对象不为 `null`，则将调用 `SendSms` 方法。
 
-**TwilioExample** 类的 **SendSms** 方法返回一个 **SendSmsResult** 对象，该对象有一个名为 **Success** 的属性，当设置为 **true** 时，表示验证码已通过 SMS 发送。
+`TwilioExample` 类的 `SendSms` 方法返回一个 `SendSmsResult` 对象，该对象有一个名为 `Success` 的属性，当设置为 `true` 时，表示验证码已通过 SMS 发送。
 
-请注意，**RegisterUser** 和 **SendSms** 方法中的 **tmode** 参数被设置为 **false**，这表明 Authy 期望使用生产环境的 API 密钥。
+请注意，`RegisterUser` 和 `SendSms` 方法中的 `tmode` 参数被设置为 `false`，这表明 Authy 期望使用生产环境的 API 密钥。
 
 当我们稍后运行程序时，接收者用户将被注册并显示在 Authy 仪表板上。
 
@@ -794,7 +792,7 @@ namespace TwilioSuccinctly
 
 可以使用 VerifyToken 方法完成此验证。让我们看看该方法在 TwilioExample 类中的实现。
 
-# 代码清单 12：TwilioExample 的 VerifyToken 包装器方法
+### 代码清单 12：TwilioExample 的 VerifyToken 包装器方法
 
 ```csharp
 public static VerifyTokenResult VerifyToken(string apikey, string userid, string token, bool tmode)
@@ -810,14 +808,11 @@ public static VerifyTokenResult VerifyToken(string apikey, string userid, string
 }
 ```
 
-该方法创建 TwilioCore 类的实例，然后从该实例中调用 VerifyToken 方法。返回的结果是一个 VerifyTokenResult 对象。
+该方法创建 `TwilioCore` 类的实例，然后从该实例中调用 `VerifyToken` 方法。返回的结果是一个 `VerifyTokenResult` 对象。
 
-现在让我们看看 TwilioCore 类中 VerifyToken 方法的实现。
+现在让我们看看 `TwilioCore` 类中 `VerifyToken` 方法的实现。
 
-
-
-
-## 代码列表 13：TwilioCore 的 VerifyToken 方法
+### 代码列表 13：TwilioCore 的 VerifyToken 方法
 
 ```csharp
 public VerifyTokenResult VerifyToken(string apikey, string userid, string token, bool tmode)
@@ -832,11 +827,11 @@ public VerifyTokenResult VerifyToken(string apikey, string userid, string token,
 }
 ```
 
-该方法检查**apikey**、**userid**、**token**和**tmode**是否不为空字符串。请注意，**token**是用户通过短信接收到的值。我们将验证其是否正确——这就是使用 Authy 进行 2FA 的目的。
+该方法检查 `apikey`、`userid`、`token` 和 `tmode` 是否不为空字符串。请注意，`token` 是用户通过短信接收到的值。我们将验证其是否正确——这就是使用 Authy 进行 2FA 的目的。
 
-令牌本身的验证是通过创建一个**AuthyClient**类的实例并调用其**VerifyToken**方法来实现的。
+令牌本身的验证是通过创建一个 `AuthyClient` 类的实例并调用其 `VerifyToken` 方法来实现的。
 
-当我们运行主**程序**时，将产生图 24 所示的结果。请注意，当你运行自己的**示例**时，你将收到与图 24 输出截图中显示的不同的验证码。
+当我们运行主 `程序` 时，将产生图 24 所示的结果。请注意，当你运行自己的 `示例` 时，你将收到与图 24 输出截图中显示的不同的验证码。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_34_0.png)
 
@@ -864,7 +859,7 @@ public VerifyTokenResult VerifyToken(string apikey, string userid, string token,
 
 由于本章的一些示例需要数据存储，我们将使用 Azure 表存储（Azure Table Storage）以确保我们的数据安全且易于在微软云上访问。
 
-本章中提供的示例旨在易于跟随和有趣地实现，同时在业务背景下也有用。我们将继续使用我们在第 1 章中开发的 TwilioCore 类。
+本章中提供的示例旨在易于跟随和有趣地实现，同时在业务背景下也有用。我们将继续使用我们在第 1 章中开发的 `TwilioCore` 类。
 
 ### 使用 Azure 表存储作为后端
 
@@ -880,23 +875,25 @@ public VerifyTokenResult VerifyToken(string apikey, string userid, string token,
 
 尽管如此，我们将快速探索如何使用 Azure 表存储开始工作。
 
+
+
 为了在 Microsoft Azure 上启动存储实例，你需要使用 Microsoft 账户登录或注册 Azure。你可以通过访问 https://azure.microsoft.com 来完成。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_37_0.png)
 
-一旦你注册或登录到 Azure 门户，你可以浏览 Azure 服务列表并选择存储账户（经典）（Storage accounts (classic)）。
+一旦你注册或登录到 Azure 门户，你可以浏览 Azure 服务列表并选择存储账户（经典）`Storage accounts (classic)`。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_38_0.png)
 
 *图 26：筛选 Azure 服务列表*
 
-当你选择**存储账户（经典）**时，你将看到如下屏幕，允许你添加一个新的存储账户。
+当你选择存储账户（经典）时，你将看到如下屏幕，允许你添加一个新的存储账户。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_38_1.png)
 
 *图 27：存储账户（经典）面板*
 
-为了添加一个新的存储账户（经典），点击**添加**。这将显示一个屏幕，允许你添加账户的名称并选择将托管该账户的 Azure 位置。
+为了添加一个新的存储账户（经典），点击添加。这将显示一个屏幕，允许你添加账户的名称并选择将托管该账户的 Azure 位置。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_39_0.png)
 
@@ -946,11 +943,7 @@ public VerifyTokenResult VerifyToken(string apikey, string userid, string token,
 
 让我们先花一点时间思考如何设计这个解决方案。我们需要能够创建具有未来 `DateTime` 的预约，我们可以将其存储在 Azure 表存储上。这个未来的 `DateTime` 将是预约的计划日期。我们还需要建立一个流程，监视预约何时被计划，从表存储中检索信息，并向该预约的注册电话号码发送短信。
 
-我们将首先探索允许我们与 Azure 表存储进行交互的第一个动作。为了做到这一点，让我们安装 WindowsAzure.Storage NuGet 包，然后创建一个**Appointment**类。
-
-
-
-
+我们将首先探索允许我们与 Azure 表存储进行交互的第一个动作。为了做到这一点，让我们安装 `WindowsAzure.Storage` NuGet 包，然后创建一个 `Appointment` 类。
 
 若要安装 NuGet 包，只需单击“安装”。这将把必要的引用添加到 Visual Studio 项目中。
 
@@ -959,6 +952,8 @@ public VerifyTokenResult VerifyToken(string apikey, string userid, string token,
 安装了 NuGet 包后，我们可以创建 `AppointmentData` 和 `Appointment` 类。
 
 ### 代码清单 14：Appointment 和 AppointmentData 类
+
+
 
 ```csharp
 using System;
@@ -1210,36 +1205,35 @@ namespace TwilioSuccinctly
 }
 ```
 
-让我们分析这段代码。我们定义了一个 **AppointmentData** 类，它表示要存储在 Azure 表存储中的数据。**AppointmentData** 类继承自 **TableEntity**，并包含表存储用于索引和查找数据记录的 **PartitionKey** 和 **RowKey** 属性。
 
-我们将把用户的电话号码存储在 **PartitionKey** 上，而在 **RowKey** 上，我们将以字符串形式保留预约到期时的日期和时间，例如，29042016203000，其中 29 是日，04 是月，2016 是年，20 是一天中的小时（晚上 8 点），30 是分，00 是秒。
 
-**AppointmentData** 类还包含一个 **string Id** 属性，一个表示预约名称的 **string Name** 属性，一个包含与 **PartitionKey** 相同数据的 **string PhoneNumber** 属性，一个包含与 **RowKey** 相同数据的 **string Time** 属性，以及一个表示是否已为该预约发送短信的 **bool Sent** 属性。
+让我们分析这段代码。我们定义了一个 `AppointmentData` 类，它表示要存储在 Azure 表存储中的数据。`AppointmentData` 类继承自 `TableEntity`，并包含表存储用于索引和查找数据记录的 `PartitionKey` 和 `RowKey` 属性。
 
-**AppointmentData** 类将由 **Appointment** 类实例化，以便将信息存储在 Azure 表存储中。你可以将 **AppointmentData** 类视为数据层（模型），将 **Appointment** 类视为业务逻辑层（控制器）。
+我们将把用户的电话号码存储在 `PartitionKey` 上，而在 `RowKey` 上，我们将以字符串形式保留预约到期时的日期和时间，例如，29042016203000，其中 29 是日，04 是月，2016 是年，20 是一天中的小时（晚上 8 点），30 是分，00 是秒。
 
-**Appointment** 类的构造函数创建一个 **AppointmentData** 实例，该实例将用于在 Azure 上存储预约数据。
+`AppointmentData` 类还包含一个 `string Id` 属性，一个表示预约名称的 `string Name` 属性，一个包含与 `PartitionKey` 相同数据的 `string PhoneNumber` 属性，一个包含与 `RowKey` 相同数据的 `string Time` 属性，以及一个表示是否已为该预约发送短信的 `bool Sent` 属性。
 
-在表存储中，**DateTime** 值应以 *string* 值的形式存储。**FormatTime** 方法的目的接收像 29042016203000 这样的日期时间 *string*，并将其转换为等效的 *DateTime* 表示形式（4/29/2016 8:30:00 PM），作为 *string*，以便可以在 **Console** 上显示。
+`AppointmentData` 类将由 `Appointment` 类实例化，以便将信息存储在 Azure 表存储中。你可以将 `AppointmentData` 类视为数据层（模型），将 `Appointment` 类视为业务逻辑层（控制器）。
 
-**Create** 方法负责在表存储中创建预约提醒。通过将 **cStrConnStr** 连接字符串传递给 **CloudStorageAccount.Parse** 方法，建立与 Azure 实例的连接。接下来，创建 **CloudTableClient** 的实例，然后使用它获取 AppointmentsSuccinctly 表的引用。
+`Appointment` 类的构造函数创建一个 `AppointmentData` 实例，该实例将用于在 Azure 上存储预约数据。
 
-调用 **CloudTable** 实例的 **Execute** 方法，并使用 **AppointmentData** 类作为 T，**Data.PhoneNumber** 作为 **PartitionKey** 和 **RowKey**。我们这样做是为了获取一个 *TableResult* 对象，以便可以将其 **Result** 属性强制转换为空的 **AppointmentData** 对象。该对象将用于设置相应的预约属性，并通过调用 **TableOperation.Insert** 方法插入到表存储中。最后，**CloudTable** 实例的 **Execute** 方法将 **AppointmentData** 对象提交到表存储。
+在表存储中，`DateTime` 值应以 `string` 值的形式存储。`FormatTime` 方法的目的接收像 29042016203000 这样的日期时间 `string`，并将其转换为等效的 `DateTime` 表示形式（4/29/2016 8:30:00 PM），作为 `string`，以便可以在 `Console` 上显示。
+
+`Create` 方法负责在表存储中创建预约提醒。通过将 `cStrConnStr` 连接字符串传递给 `CloudStorageAccount.Parse` 方法，建立与 Azure 实例的连接。接下来，创建 `CloudTableClient` 的实例，然后使用它获取 AppointmentsSuccinctly 表的引用。
+
+调用 `CloudTable` 实例的 `Execute` 方法，并使用 `AppointmentData` 类作为 T，`Data.PhoneNumber` 作为 `PartitionKey` 和 `RowKey`。我们这样做是为了获取一个 `TableResult` 对象，以便可以将其 `Result` 属性强制转换为空的 `AppointmentData` 对象。该对象将用于设置相应的预约属性，并通过调用 `TableOperation.Insert` 方法插入到表存储中。最后，`CloudTable` 实例的 `Execute` 方法将 `AppointmentData` 对象提交到表存储。
 
 ![Image](img/7d3e41c7ef83c5fb4ef242998ad60317_43_0.png)
+
 ![Image](img/7d3e41c7ef83c5fb4ef242998ad60317_43_1.png)
 
+`MarkAsSent` 方法的工作方式与 `Create` 方法几乎完全相同。主要区别在于，`MarkAsSent` 执行的是 `InsertOrReplace` 而非 `Insert`，因此在短信发送完成后，会将 `AppointmentData` 对象的 `Sent` 属性更新为值 `true`。
 
+相应地，`Get` 方法的工作方式也与 `MarkAsSent` 或 `Create` 方法几乎完全相同，不过它会创建一个 `TableQuery` 类的实例，然后通过链式调用 `GenerateFilterCondition` 方法来执行 `Where` 方法。在此配置下，会调用 `CloudTable.ExecuteQuery`，返回类型为 `IEnumerable<AppointmentData>`。
 
+由于 `GenerateFilterCondition` 基于 `PartitionKey` 进行过滤，所有具有相同电话号码的记录都将被检索。通过遍历 `IEnumerable<AppointmentData>` 结果集，并将当前日期 `tdy` 与预约的到期日 `exp` 进行比较，系统将检索并返回给调用方法第一个已过期且未发送短信（`Sent` 属性设置为 `false`）的预约。
 
-
-**MarkAsSent** 方法的工作方式与 **Create** 方法几乎完全相同。主要区别在于，**MarkAsSent** 执行的是 **InsertOrReplace** 而非 **Insert**，因此在短信发送完成后，会将 **AppointmentData** 对象的 **Sent** 属性更新为值 **true**。
-
-相应地，**Get** 方法的工作方式也与 **MarkAsSent** 或 **Create** 方法几乎完全相同，不过它会创建一个 **TableQuery** 类的实例，然后通过链式调用 **GenerateFilterCondition** 方法来执行 **Where** 方法。在此配置下，会调用 **CloudTable.ExecuteQuery**，返回类型为 **IEnumerable\<AppointmentData\>**。
-
-由于 **GenerateFilterCondition** 基于 **PartitionKey** 进行过滤，所有具有相同电话号码的记录都将被检索。通过遍历 **IEnumerable\<AppointmentData\>** 结果集，并将当前日期 **tdy** 与预约的到期日 **exp** 进行比较，系统将检索并返回给调用方法第一个已过期且未发送短信（**Sent** 属性设置为 **false**）的预约。
-
-现在，让我们实现几个示例，将上述内容付诸实践。在代码清单 15 中，我们将创建一个 **AppointmentExample** 类，该类将创建一些预约，并为到期的预约发送短信。
+现在，让我们实现几个示例，将上述内容付诸实践。在代码清单 15 中，我们将创建一个 `AppointmentExample` 类，该类将创建一些预约，并为到期的预约发送短信。
 
 ### 代码清单 15: AppointmentExample 封装类
 
@@ -1340,9 +1334,9 @@ namespace TwilioSuccinctly
 }
 ```
 
-**AppointmentExample** 类执行两项操作。它通过其 **Create** 方法创建预约，并且还创建一个 **Fetch Timer** 对象，该对象执行 **Fetch_Elapsed** 事件，用于检索第一个过期的预约并发送短信。
+`AppointmentExample` 类执行两项操作。它通过其 `Create` 方法创建预约，并且还创建一个 `Fetch Timer` 对象，该对象执行 `Fetch_Elapsed` 事件，用于检索第一个过期的预约并发送短信。
 
-在代码清单 16 中，我们将通过在我们的 **Main** 程序中调用它来实际操作。
+在代码清单 16 中，我们将通过在我们的 `Main` 程序中调用它来实际操作。
 
 ### 代码清单 16: 主程序
 
@@ -1384,7 +1378,7 @@ namespace TwilioSuccinctly
 }
 ```
 
-当我们执行 **Main** 程序时，我们会得到图 35 中创建的预约。
+当我们执行 `Main` 程序时，我们会得到图 35 中创建的预约。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_53_0.png)
 
@@ -1398,7 +1392,7 @@ namespace TwilioSuccinctly
 
 图 37: Azure 表存储中的预约数据
 
-我们可以清楚地看到，对于 BurgerKing（第一个过期的）预约，**Sent** 属性已被设置为 **True**。
+我们可以清楚地看到，对于 BurgerKing（第一个过期的）预约，`Sent` 属性已被设置为 `True`。
 
 ## 自动即时线索警报
 
@@ -1406,17 +1400,17 @@ namespace TwilioSuccinctly
 
 收集线索的过程始于拥有一个或多个落地页，用于收集关于您的组织提供的产品或服务的网站访客信息。
 
-为了简单起见，我们假设所收集的信息存储在 Azure 表存储中。这些信息将包括客户的全名、电子邮件地址、电话号码以及他们感兴趣的网络研讨会。此外，还将有一个 **FollowedUp** 属性，用于指示是否已跟进该线索。
+为了简单起见，我们假设所收集的信息存储在 Azure 表存储中。这些信息将包括客户的全名、电子邮件地址、电话号码以及他们感兴趣的网络研讨会。此外，还将有一个 `FollowedUp` 属性，用于指示是否已跟进该线索。
 
-我们将创建一个小型应用程序，从 Azure 获取线索数据，然后使用我们的 **TwilioCore** 类发送短信。
+我们将创建一个小型应用程序，从 Azure 获取线索数据，然后使用我们的 `TwilioCore` 类发送短信。
 
-让我们创建一个负责检索存储在 Azure 中的线索并发送短信的 **LeadsCore** 类。我们将使用 Azure Storage Explorer 在表存储上手动创建 Lead 记录。
+让我们创建一个负责检索存储在 Azure 中的线索并发送短信的 `LeadsCore` 类。我们将使用 Azure Storage Explorer 在表存储上手动创建 Lead 记录。
 
-首先，我们使用 Storage Explorer 创建一个名为 **LeadsSuccinctly** 的表。该表将用于跟踪潜在线索可能感兴趣的网络研讨会。除了 **FollowedUp** 字段具有 *bool* 值外，所有字段都将具有 *string* 值。
+首先，我们使用 Storage Explorer 创建一个名为 `LeadsSuccinctly` 的表。该表将用于跟踪潜在线索可能感兴趣的网络研讨会。除了 `FollowedUp` 字段具有 `bool` 值外，所有字段都将具有 `string` 值。
 
-该表的 **PartitionKey** 应包含线索感兴趣的网络研讨会的名称，而 **RowKey** 应为线索发布在站点上时日期和时间的字符串表示形式。
+该表的 `PartitionKey` 应包含线索感兴趣的网络研讨会的名称，而 `RowKey` 应为线索发布在站点上时日期和时间的字符串表示形式。
 
-就像我们在预约提醒代码中所做的那样，我们将使用 **Timer** 对象来检索第一个发布的线索。
+就像我们在预约提醒代码中所做的那样，我们将使用 `Timer` 对象来检索第一个发布的线索。
 
 让我们看看 Azure 上从我们网站收集的线索，如图 38 所示。
 
@@ -1427,6 +1421,8 @@ namespace TwilioSuccinctly
 让我们编写代码。与我们之前的示例一样，我们将拥有一个与表存储交互的核心类，然后在其周围拥有一个实际实现业务逻辑的封装类。
 
 ### 代码清单 17: LeadsCore 类
+
+
 
 ```csharp
 using System;
@@ -1460,9 +1456,6 @@ namespace TwilioSuccinctly
     }
 }
 ```
-
-
-
 
 # 代码清单 17：LeadsData 和 LeadsCore 类
 
@@ -1643,21 +1636,23 @@ public string FormatTime(string t)
 }
 ```
 
-我们定义了一个 **LeadsData** 类，它表示存储在表存储（Table Storage）中的数据模型。
+我们定义了一个 `LeadsData` 类，它表示存储在表存储（Table Storage）中的数据模型。
 
-该类包含多个属性，直接对应 Azure 表中的字段。这些字段包括 FullName、Email、Webinar、FollowedUp 和 PhoneNumber。
+该类包含多个属性，直接对应 Azure 表中的字段。这些字段包括 `FullName`、`Email`、`Webinar`、`FollowedUp` 和 `PhoneNumber`。
 
-**LeadsCore** 类实现了必要的逻辑，用于检索第一个尚未跟进的潜在客户（lead），并将该潜在客户标记为已跟进。
+`LeadsCore` 类实现了必要的逻辑，用于检索第一个尚未跟进的潜在客户（lead），并将该潜在客户标记为已跟进。
 
-Get 方法接收一个字符串参数，该参数将作为我们要筛选的网络研讨会（webinar）名称。该值将使用表的 PartitionKey 来查询 Azure 表中的记录。
+`Get` 方法接收一个字符串参数，该参数将作为我们要筛选的网络研讨会（webinar）名称。该值将使用表的 `PartitionKey` 来查询 Azure 表中的记录。
 
-遵循 **Appointments** 类 Get 方法的相同逻辑，**LeadsCore** 类的 Get 方法连接到 Azure，检索一个 LeadsData 对象的 IEnumerable 列表，并检查哪些对象尚未跟进（**FollowedUp** 设为 false），同时也检查潜在客户的发布日期 *exp* 是否早于今天的日期 *tdy*。
+遵循 `Appointments` 类 `Get` 方法的相同逻辑，`LeadsCore` 类的 `Get` 方法连接到 Azure，检索一个 `LeadsData` 对象的 `IEnumerable` 列表，并检查哪些对象尚未跟进（`FollowedUp` 设为 false），同时也检查潜在客户的发布日期 `exp` 是否早于今天的日期 `tdy`。
 
-MarkAsFollowedUp 方法负责连接到 Azure 表，定位使用 Get 方法检索到的潜在客户对应的记录，并将其标记为已跟进。MarkAsFollowedUp 方法基本上是将 FollowedUp 属性设置为 true，以便同一个潜在客户不会被再次检索（跟进）。
+`MarkAsFollowedUp` 方法负责连接到 Azure 表，定位使用 `Get` 方法检索到的潜在客户对应的记录，并将其标记为已跟进。`MarkAsFollowedUp` 方法基本上是将 `FollowedUp` 属性设置为 true，以便同一个潜在客户不会被再次检索（跟进）。
 
-为了付诸实践，让我们创建一个 **LeadsExample** 类，该类将封装上述逻辑，并负责创建检索潜在客户的 Timer 对象。
+为了付诸实践，让我们创建一个 `LeadsExample` 类，该类将封装上述逻辑，并负责创建检索潜在客户的 `Timer` 对象。
 
 # 代码清单 18：LeadsExample 封装类
+
+
 
 ```csharp
 using System;
@@ -1734,11 +1729,11 @@ namespace TwilioSuccinctly
 }
 ```
 
-**LeadsExample** 类的 **InitFetch** 方法创建一个 **Timer** 对象（赋值给 **Fetch** 属性），当 **Fetch_Elapsed** 事件被触发时，该对象将检索潜在客户。
+`LeadsExample`类的`InitFetch`方法创建一个`Timer`对象（赋值给`Fetch`属性），当`Fetch_Elapsed`事件被触发时，该对象将检索潜在客户。
 
-**Fetch_Elapsed** 事件创建一个 **LeadsCore** 类的实例，用于执行 **Get** 方法以检索需要跟进的潜在客户。检索到的潜在客户随后被标记为已跟进（**FollowedUp** 属性设为 **true**），然后过程重复——当 **Timer** 对象再次触发 **Fetch_Elapsed** 事件时，将获取另一个潜在客户。
+`Fetch_Elapsed`事件创建一个`LeadsCore`类的实例，用于执行`Get`方法以检索需要跟进的潜在客户。检索到的潜在客户随后被标记为已跟进（`FollowedUp`属性设为`true`），然后过程重复——当`Timer`对象再次触发`Fetch_Elapsed`事件时，将获取另一个潜在客户。
 
-现在让我们编写 **Main** 程序，以便调用 **LeadsExample** 封装类。
+现在让我们编写`Main`程序，以便调用`LeadsExample`封装类。
 
 # 代码清单 19：潜在客户主程序
 
@@ -1759,13 +1754,9 @@ namespace TwilioSuccinctly
 }
 ```
 
-
-
-
-
 # 摘要
 
-我们已经看到，自动化一些小型但实用的业务流程有多么简单直接，我们也了解了之前编写的 TwilioCore 类如何用于发送短信。我们还学习了如何使用 Azure 表存储（Azure Table Storage）作为快速且可靠的数据后端。
+我们已经看到，自动化一些小型但实用的业务流程有多么简单直接，我们也了解了之前编写的`TwilioCore`类如何用于发送短信。我们还学习了如何使用 Azure 表存储（Azure Table Storage）作为快速且可靠的数据后端。
 
 在接下来的章节中，我们将探索 Twilio 提供的一些语音功能，以及它们如何用于自动化有用的业务流程。
 
@@ -1811,7 +1802,7 @@ Twilio 负责电信网络基础设施，并完全将这种复杂性从我们的�
 
 如你所见，使用 TwiML 告诉 Twilio 执行特定操作相对简单。该标记语言由代表 Twilio 将执行的操作的蓝色高亮动词组成。
 
-在撰写本文时，可用的 TwiML 动词包括：**Say**、**Play**、**Dial**、**Record**、**Gather**、**Sms**、**Hangup**、**Queue**、**Redirect**、**Pause**、**Conference**、**Reject** 和 **Message**。
+在撰写本文时，可用的 TwiML 动词包括：`Say`、`Play`、`Dial`、`Record`、`Gather`、`Sms`、`Hangup`、`Queue`、`Redirect`、`Pause`、`Conference`、`Reject` 和 `Message`。
 
 关于如何使用这些 TwiML 动词的完整详细信息可以在[这里](#)找到。
 
@@ -1826,14 +1817,19 @@ Twilio 负责电信网络基础设施，并完全将这种复杂性从我们的�
 #### 属性
 
 - 友好名称：[已删除]
+
 - SID：[已删除]
+
 - 电话号码：[已删除]
+
 - 位置：美国亚利桑那州菲尼克斯
+
 - 功能：语音、短信、MMS
 
 ### 语音
 
 - 配置方式：(URL) | (Twiml 应用) | (SIP 中继)
+
 - 请求 URL：http://[已删除]/twillo-voice-response.xml | HTTP GET
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_65_0.png)
@@ -1862,7 +1858,7 @@ Twilio 负责电信网络基础设施，并完全将这种复杂性从我们的�
 </Response>
 ```
 
-请注意，通过使用多个 **Say** 动词以及在一秒 **Pause** 动词之间进行分隔，响应被分解为几个部分。这是因为 Twilio 使用语音合成引擎来向来电者朗读书面文本。
+请注意，通过使用多个`Say`动词以及在一秒`Pause`动词之间进行分隔，响应被分解为几个部分。这是因为 Twilio 使用语音合成引擎来向来电者朗读书面文本。
 
 为了使体验尽可能像人类接听电话一样，以部分形式传达消息并带有必要的停顿非常重要。还要注意句子不长，并且使用了标点符号。
 
@@ -1878,7 +1874,7 @@ TwiML 作为标记语言的一个局限性是它不允许使用变量，因此�
 
 在探索了 TwiML 的一些基础知识后，让我们创建一个简单答录机，它将在电话接听后，根据来电者输入的数字向来电者提供具体说明。
 
-我们将创建一个 `SimpleAnsweringMachine` 类，其中包含答录机应用所需的逻辑。
+我们将创建一个`SimpleAnsweringMachine`类，其中包含答录机应用所需的逻辑。
 
 由于 TwiML 需要一个 URL 端点，我们将创建一个 [NancyFX](http://example.com/nancyfx) 应用程序，我们可以将其作为 Azure [网站](http://example.com/azure-website) 部署。
 
@@ -1887,9 +1883,6 @@ TwiML 作为标记语言的一个局限性是它不允许使用变量，因此�
 为了创建 NancyFX 应用程序，首先请确保安装 [SideWaffle Template Pack for Visual Studio](http://example.com/sidewaffle-template)。SideWaffle 安装程序易于跟随，只需几次点击。
 
 安装 SideWaffle 后，你可以选择 *Nancy empty project with ASP.NET host*，在图 41 中如下所示，创建一个名为 *TwilioNancyAspNetHost* 的新 NancyFX 项目。
-
-
-
 
 ## 添加新项目
 
@@ -1904,6 +1897,8 @@ TwiML 作为标记语言的一个局限性是它不允许使用变量，因此�
 我们的 AnsweringMachineMain 模块将包含用于向来电者发送正确响应的 HTTP REST 端点。为了测试其是否正常工作，我们可以包含代码清单 22 中的代码。
 
 ### 代码清单 22：TwiML 来电问候响应
+
+
 
 ```csharp
 using Nancy;
@@ -1929,11 +1924,11 @@ namespace TwilioNancyAspNetHost
 }
 ```
 
-为了检查我们的 REST 端点是否可公开访问，我们可以使用 Visual Studio 中的发布选项将 NancyFX 应用程序部署到 Azure 网站。
+为了检查我们的 REST 端点是否可公开访问，我们可以使用 Visual Studio 中的发布选项将 `NancyFX` 应用程序部署到 Azure 网站。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_69_0.png)
 
-*图 43：将 NancyFX 应用程序部署到 Azure 网站*
+*图 43：将 `NancyFX` 应用程序部署到 Azure 网站*
 
 输入所需详细信息，点击**创建**，并按照交互式向导完成步骤。只需几次点击，解决方案就会部署到 Azure 并准备就绪。
 
@@ -1941,9 +1936,9 @@ namespace TwilioNancyAspNetHost
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_70_0.png)
 
-**图 44：来自 NancyFX 应用程序的 TwiML 响应**
+**图 44：来自 `NancyFX` 应用程序的 TwiML 响应**
 
-在 NancyFX 应用程序运行起来后，接下来我们将把 Twilio 号码配置指向运行在 Azure 上的 NancyFX 应用程序。
+在 `NancyFX` 应用程序运行起来后，接下来我们将把 Twilio 号码配置指向运行在 Azure 上的 `NancyFX` 应用程序。
 
 为了做到这一点，我们需要进入 Twilio 号码的**仪表板**，然后点击我们要关联的号码。系统将要求您创建一个新的 TwiML 应用程序。
 
@@ -1953,19 +1948,19 @@ namespace TwilioNancyAspNetHost
 
 **图 45：创建新的 TwiML 应用程序**
 
-输入 TwiML 应用程序的名称（您可以指定任何您想要的名称），最重要的是，指示语音请求 URL，即返回来自我们 NancyFX 应用程序的 TwiML 响应的 URL。提供这些详细信息后，点击**保存**。
+输入 TwiML 应用程序的名称（您可以指定任何您想要的名称），最重要的是，指示语音请求 URL，即返回来自我们 `NancyFX` 应用程序的 TwiML 响应的 URL。提供这些详细信息后，点击**保存**。
 
-为了测试一切是否正常工作，只需拿起电话拨打您的 Twilio 号码。如果您听到与 NancyFX XML 响应中输入的消息相同的内容，说明一切正常。
+为了测试一切是否正常工作，只需拿起电话拨打您的 Twilio 号码。如果您听到与 `NancyFX` XML 响应中输入的消息相同的内容，说明一切正常。
 
 在设置和连接就位后，我们现在可以专注于添加所需的功能，以扩展我们答录机应用程序的功能。
 
-该应用程序应快速问候来电者，并要求他们输入访问代码，以便在一个名为 SAMSuccinctly 的 Azure 存储表中返回并存储一个秘密代码。
+该应用程序应快速问候来电者，并要求他们输入访问代码，以便在一个名为 `SAMSuccinctly` 的 Azure 存储表中返回并存储一个秘密代码。
 
-由于我们的 NancyFX (Azure 网站) 应用程序将使用 Azure 存储，请别忘了从 NuGet 安装该包。
+由于我们的 `NancyFX` (Azure 网站) 应用程序将使用 Azure 存储，请别忘了从 NuGet 安装该包。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_71_0.png)
 
-现在我们可以使用 Azure Storage Explorer 按图 47 所示创建我们的 SAMSuccinctly 表。让我们将访问代码存储为 PartitionKey，将秘密代码存储为 RowKey。
+现在我们可以使用 Azure Storage Explorer 按图 47 所示创建我们的 `SAMSuccinctly` 表。让我们将访问代码存储为 `PartitionKey`，将秘密代码存储为 `RowKey`。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_71_1.png)
 
@@ -1987,11 +1982,11 @@ namespace TwilioNancyAspNetHost
 </Response>
 ```
 
-请注意，负责收集访问代码的这个问候响应托管在网站的根目录上 ([http://twiliosuccinctly.azurewebsites.net/](http://twiliosuccinctly.azurewebsites.net/))。然而，动作响应在 /sam 上可用 ([http://twiliosuccinctly.azurewebsites.net/sam](http://twiliosuccinctly.azurewebsites.net/sam))。
+请注意，负责收集访问代码的这个问候响应托管在网站的根目录上 (`http://twiliosuccinctly.azurewebsites.net/`)。然而，动作响应在 `/sam` 上可用 (`http://twiliosuccinctly.azurewebsites.net/sam`)。
 
-现在，让我们实现我们的 **SimpleAnsweringMachine** 类。
+现在，让我们实现我们的 `SimpleAnsweringMachine` 类。
 
-#### 代码清单 24：SimpleAnsweringMachine 类
+#### 代码清单 24：`SimpleAnsweringMachine` 类
 
 ```csharp
 using System;
@@ -2084,11 +2079,11 @@ namespace TwilioSuccinctly
 }
 ```
 
-我们的 **SimpleAnsweringMachine** 类实际上非常简单。它有一个 **Get** 方法，使用访问代码（由 **PartitionKey** 表示）查询 **SAMSuccinctly** 表，并返回一个也包含秘密代码的 **SimpleAnsweringMachineData** 对象。
+我们的 `SimpleAnsweringMachine` 类实际上非常简单。它有一个 `Get` 方法，使用访问代码（由 `PartitionKey` 表示）查询 `SAMSuccinctly` 表，并返回一个也包含秘密代码的 `SimpleAnsweringMachineData` 对象。
 
-如您所见，查询 **SAMSuccinctly** 表与我们在上一章中使用 Azure 类看到的类似。
+如您所见，查询 `SAMSuccinctly` 表与我们在上一章中使用 Azure 类看到的类似。
 
-现在，在代码清单 25 中，让我们看看如何扩展我们的 **AnsweringMachineMain** NancyFX 模块的功能，以便我们可以实现 **SimpleAnsweringMachine** 类所公开的功能。
+现在，在代码清单 25 中，让我们看看如何扩展我们的 `AnsweringMachineMain` `NancyFX` 模块的功能，以便我们可以实现 `SimpleAnsweringMachine` 类所公开的功能。
 
 ### 代码清单 25：扩展的 *AnsweringMachineMain* 类
 
@@ -2151,26 +2146,25 @@ namespace TwilioNancyAspNetHost
 }
 ```
 
-我们的 **AnsweringMachineMain** NancyFX 模块实现了两个 REST 端点。根端点向来电者提供问候信息，并通过 **Gather** TwiML 动词收集访问代码，该动词会触发 /sam 端点上的动作。
+我们的 `AnsweringMachineMain` `NancyFX` 模块实现了两个 REST 端点。根端点向来电者提供问候信息，并通过 `Gather` TwiML 动词收集访问代码，该动词会触发 `/sam` 端点上的动作。
 
-当 /sam 端点被执行时（即来电者输入访问代码数字并按下井号键后），会创建一个 **SimpleAnsweringMachine** 类的实例，并调用其 **Get** 方法，传入由来电者输入的数字（这些数字存储在 HTTP **Request.Query** 对象中）。
+当 `/sam` 端点被执行时（即来电者输入访问代码数字并按下井号键后），会创建一个 `SimpleAnsweringMachine` 类的实例，并调用其 `Get` 方法，传入由来电者输入的数字（这些数字存储在 HTTP `Request.Query` 对象中）。
 
-然后 **Get** 方法会查询 SAMSuccinctly 表，并返回与正在查询的 **PartitionKey**（访问代码）匹配的 **RowKey**（代表秘密代码）。
+然后 `Get` 方法会查询 `SAMSuccinctly` 表，并返回与正在查询的 `PartitionKey`（访问代码）匹配的 `RowKey`（代表秘密代码）。
 
-为了使 NancyFX 应用程序正常运行，*TwilioNancyAspNetHost* 项目需要发布到 Azure 网站。可以通过拿起电话并拨打与该 TwiML 应用程序相关的 Twilio 号码来轻松测试此应用程序。
+为了使 `NancyFX` 应用程序正常运行，`*TwilioNancyAspNetHost*` 项目需要发布到 Azure 网站。可以通过拿起电话并拨打与该 TwiML 应用程序相关的 Twilio 号码来轻松测试此应用程序。
 
-您应该能够输入您的访问代码（SAMSuccinctly 表中现有的两个代码之一），并以语音响应的形式获取您的秘密代码。
-
-
-
+您应该能够输入您的访问代码（`SAMSuccinctly` 表中现有的两个代码之一），并以语音响应的形式获取您的秘密代码。
 
 ## 发起外呼
 
 我们已经了解了如何接听电话并使用 TwiML 处理语音请求。在结束本章并进入更高级的示例之前，让我们讨论一下如何使用 Twilio C# 辅助类库发起外呼。
 
-我们将扩展我们的 **TwilioCore** 类，并添加一个方法来拨打电话。让我们在代码清单 26 中实现这个方法。
+我们将扩展我们的 `TwilioCore` 类，并添加一个方法来拨打电话。让我们在代码清单 26 中实现这个方法。
 
-### 代码清单 26: TwilioCore 的 StartCall 方法
+### 代码清单 26: `TwilioCore` 的 `StartCall` 方法
+
+
 
 ```csharp
 public void StartCall(string from, string to, string url)
@@ -2185,11 +2179,11 @@ public void StartCall(string from, string to, string url)
 }
 ```
 
-如你所见，**StartCall** 方法非常简单。它有两个参数：**from** 和 **to**，分别代表主叫和被叫电话号码。
+如你所见，`StartCall` 方法非常简单。它有两个参数：`from` 和 `to`，分别代表主叫和被叫电话号码。
 
 第三个参数是一个 URL 资源，电话另一端的人在接听电话后将听到该资源的内容。此 URL 需要返回有效的 TwiML 响应。
 
-正如我们在一直使用 **TwilioCore** 类方法时所做的那样，让我们为 **StartCall** 实现一个包装方法，以便我们可以从 **主程序** 中调用它。
+正如我们在一直使用 `TwilioCore` 类方法时所做的那样，让我们为 `StartCall` 实现一个包装方法，以便我们可以从 `主程序` 中调用它。
 
 ### 代码清单 27: StartRecordedCall 包装方法
 
@@ -2204,7 +2198,7 @@ public static void StartRecordedCall()
 }
 ```
 
-现在，我们可以从 **主程序** 中调用这个方法。
+现在，我们可以从 `主程序` 中调用这个方法。
 
 ### 代码清单 28: 从主程序调用 StartRecordedCall 包装方法
 
@@ -2217,7 +2211,7 @@ static void Main(string[] args)
 }
 ```
 
-当执行这段代码时，您应该能在您于 **TwilioExample** 类中指定为 **cStrReceiver** 的电话号码上听到一段录音。
+当执行这段代码时，您应该能在您于 `TwilioExample` 类中指定为 `cStrReceiver` 的电话号码上听到一段录音。
 
 正如我们所见，使用 Twilio 发起外呼很容易。仅需几行代码，我们就能够发起电话通话并播放消息。
 
@@ -2255,17 +2249,24 @@ Twilio 使构建此类系统变得容易。我们在第 3 章中通过构建一�
 
 为了启动电话菜单，我们需要配置我们的 Twilio 号码，以便在收到来电时向我们的 Web 应用程序发送 HTTP 请求。我们将使用并修改我们在上一章创建的现有 NancyFX 应用程序。
 
-首先，我们将 Twilio 号码配置为指向我们的 Web 应用程序将用于处理来电的特定 URL。接下来，我们将修改我们称为 **TwilioSuccinctly** 的 TwiML 应用程序，使其指向新的入站 URL。此 URL 应该是我们在 Azure 网站上的 NancyFX 应用程序的位置，后跟 `/ipm/incoming`。
+首先，我们将 Twilio 号码配置为指向我们的 Web 应用程序将用于处理来电的特定 URL。接下来，我们将修改我们称为 `TwilioSuccinctly` 的 TwiML 应用程序，使其指向新的入站 URL。此 URL 应该是我们在 Azure 网站上的 NancyFX 应用程序的位置，后跟 `/ipm/incoming`。
 
 ### TwilioSuccinctly
 
 | 属性 | 值 |
+
 | :--- | :--- |
-| **SID** | *内容已隐藏* |
-| **Friendly Name** | TwilioSuccinctly |
-| **Voice** | |
+
+| `SID` | *内容已隐藏* |
+
+| `Friendly Name` | TwilioSuccinctly |
+
+| `Voice` | |
+
 | Request URL | http://twiliosuccinctly.azurewebsites.net/ipm/incoming | HTTP GET |
-| **Messaging** | |
+
+| `Messaging` | |
+
 | Request URL | *(空输入框)* | HTTP POST |
 
 **保存** **取消**
@@ -2274,7 +2275,7 @@ Twilio 使构建此类系统变得容易。我们在第 3 章中通过构建一�
 
 基于图 48，我们将假设我们的电话菜单应用程序将通过此 REST 端点 `/ipm/incoming` 接收来电。
 
-我们将使用此端点向来电者致意。让我们在 **AnsweringMachineMain** NancyFX 模块中添加此端点的逻辑。
+我们将使用此端点向来电者致意。让我们在 `AnsweringMachineMain` NancyFX 模块中添加此端点的逻辑。
 
 ### 代码清单 29: 交互式电话菜单的问候语
 
@@ -2298,19 +2299,19 @@ Get["/ipm/incoming"] = _ =>
 
 使用 Visual Studio，让我们将带有此更改的 NancyFX 应用程序发布到 Azure 网站。然后，如果我们拨打我们的 Twilio 号码，我们应该就能听到这个响应。太棒了！
 
-接下来，TwiML 响应中的 **Gather** 动词指向另一个端点：`/ipm/response`。我们将使用此端点根据主叫方输入的内容创建菜单响应。
+接下来，TwiML 响应中的 `Gather` 动词指向另一个端点：`/ipm/response`。我们将使用此端点根据主叫方输入的内容创建菜单响应。
 
-请注意，我们仍然可以使用并扩展我们的 **SimpleAnsweringMachine** 类，以便添加电话菜单所需的任何特定逻辑。
+请注意，我们仍然可以使用并扩展我们的 `SimpleAnsweringMachine` 类，以便添加电话菜单所需的任何特定逻辑。
 
 拥有一个在字符串中每个字符后插入空格的方法也是有用的。这样做是为了让 Twilio 能够逐位读取电话号码，而不是一次性读取整个号码。我们稍后会探讨这一点。
 
-首先，让我们处理主叫方的输入，并在我们的 **AnsweringMachineMain** NancyFX 模块上创建 `/ipm/response` 端点。
+首先，让我们处理主叫方的输入，并在我们的 `AnsweringMachineMain` NancyFX 模块上创建 `/ipm/response` 端点。
 
-正如我们在第 3 章的简单应答机示例中所做的那样，我们将查询 Azure 上的 **SASuccinctly** 表并检索一个值。
+正如我们在第 3 章的简单应答机示例中所做的那样，我们将查询 Azure 上的 `SASuccinctly` 表并检索一个值。
 
-然而，该值将是一个与用户输入的选项对应的电话号码。用户输入的数字将是 **PartitionKey**，检索到的电话号码将是 **RowKey**。电话号码需要采用国际格式，例如 +14800001111。
+然而，该值将是一个与用户输入的选项对应的电话号码。用户输入的数字将是 `PartitionKey`，检索到的电话号码将是 `RowKey`。电话号码需要采用国际格式，例如 +14800001111。
 
-让我们使用 Azure 存储资源管理器在我们的 **SASuccinctly** 表中添加另外三行。
+让我们使用 Azure 存储资源管理器在我们的 `SASuccinctly` 表中添加另外三行。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_80_0.png)
 
@@ -2326,15 +2327,13 @@ Get["/ipm/response"] = _ =>
 }
 ```
 
-
-
 正如你所见，我们再次构建于第 3 章中已学内容之上。
 
-主要区别在于，我们不再使用动词 **Say** 来提供答案（如上一章所示），而是使用动词 **Dial** 将来电者与用户在电话菜单中输入的选项所对应的部门连接起来。
+主要区别在于，我们不再使用动词 `Say` 来提供答案（如上一章所示），而是使用动词 `Dial` 将来电者与用户在电话菜单中输入的选项所对应的部门连接起来。
 
-另一个区别是，我们现在在 **SimpleAnsweringMachine** 类中有一个程序定义的 **InsertSpace** 方法，该方法会在字符串中的每个字符后插入一个空格。这应用于电话号码，以便 Twilio 可以逐位读取，而不是作为一个完整的号码。
+另一个区别是，我们现在在 `SimpleAnsweringMachine` 类中有一个程序定义的 `InsertSpace` 方法，该方法会在字符串中的每个字符后插入一个空格。这应用于电话号码，以便 Twilio 可以逐位读取，而不是作为一个完整的号码。
 
-**SimpleAnsweringMachine** 类中 **InsertSpace** 方法的实现如代码清单 31 所示。
+`SimpleAnsweringMachine` 类中 `InsertSpace` 方法的实现如代码清单 31 所示。
 
 ### 代码清单 31
 
@@ -2373,13 +2372,13 @@ Twilio 也允许我们构建这类服务。我们将探索如何设置一个小�
 
 与我们配置电话菜单的方式相同，让我们配置我们的 Twilio 号码指向一个特定的 URL，我们的 web 应用程序将使用该 URL 来处理传入的呼叫。
 
-接下来，让我们修改名为 TwilioSuccinctly 的 TwiML 应用程序，使其指向我们的新传入 URL。此 URL 应包含我们的 NancyFX 应用程序在 Azure Websites 上的位置，后跟 /conf/incoming。
+接下来，让我们修改名为 TwilioSuccinctly 的 TwiML 应用程序，使其指向我们的新传入 URL。此 URL 应包含我们的 NancyFX 应用程序在 Azure Websites 上的位置，后跟 `/conf/incoming`。
 
 我们的 TwilioSuccinctly TwiML 应用程序的 Voice Request URL 应该如图 50 所示。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_83_0.png)
 
-现在，让我们在我们的 **AnsweringMachineMain** NancyFX 模块上创建我们的会议服务问候 REST 端点，如代码清单 32 所示。
+现在，让我们在我们的 `AnsweringMachineMain` NancyFX 模块上创建我们的会议服务问候 REST 端点，如代码清单 32 所示。
 
 ### 代码清单 32：会议服务问候
 
@@ -2399,15 +2398,18 @@ Get[@"/conf/incoming"] = _ =>
     return Response.AsText(res, "text/xml");
 };
 ```
-这与我们之前看到的没有太大不同。然而，情况即将发生一些变化。为了创建会议，我们需要使用带有几个属性的 **TwiML Conference** 动词。
+
+这与我们之前看到的没有太大不同。然而，情况即将发生一些变化。为了创建会议，我们需要使用带有几个属性的 `TwiML Conference` 动词。
 
 我们这样做是为了指示加入的人是作为听众（静音）、发言者（非静音）还是主持人。会议实际上直到主持人加入后才开始，而这由动词的属性决定。
 
-我们将通过两步过程来完成。在向来电者问候之后，我们会询问他们希望如何加入。 **Gather** 动词通过向 /conf/connect 端点发送请求来实现这一点。
+我们将通过两步过程来完成。在向来电者问候之后，我们会询问他们希望如何加入。 `Gather` 动词通过向 `/conf/connect` 端点发送请求来实现这一点。
 
 一旦呼叫者选择如何加入会议电话，就会请求一个访问码。
 
 ### 代码清单 33：会议服务连接
+
+
 
 ```csharp
 Get[@"/conf/connect"] = _ =>
@@ -2475,11 +2477,10 @@ Get[@"/conf/connect"] = _ =>
     return Response.AsText(res, "text/xml");
 };
 ```
-这个逻辑很容易理解。在收集到访问码之后，**Gather** 动词向自身发送请求（再次发往 /conf/connect 端点），然后验证访问码。
 
-如果 Azure 表上存在该访问码，则通过返回包含 **Conference** 动词的响应来发起会议，并设置正确的属性值，这将取决于所选的菜单选项（而这又由提供的访问码的值决定）。
-
-为了让这正常工作，请在图 51 所示的 SAMSuccinctly 表中创建这些值。
+这个逻辑很容易理解。在收集到访问码之后，`Gather`动词向自身发送请求（再次发往`/conf/connect`端点），然后验证访问码。
+如果 Azure 表上存在该访问码，则通过返回包含`Conference`动词的响应来发起会议，并设置正确的属性值，这将取决于所选的菜单选项（而这又由提供的访问码的值决定）。
+为了让这正常工作，请在图 51 所示的`SAMSuccinctly`表中创建这些值。
 
 | PartitionKey | RowKey |
 | :--- | :--- |
@@ -2490,21 +2491,14 @@ Get[@"/conf/connect"] = _ =>
 | 99 | is-moderator |
 
 *图 51：会议服务选项和访问码*
-
-- 值为 7 的菜单选项（**PartitionKey**）的访问码（**RowKey**）为 77。
-- 值为 8 的菜单选项（**PartitionKey**）的访问码（**RowKey**）为 88。
-- 值为 9 的菜单选项（**PartitionKey**）的访问码（**RowKey**）为 99。
-
-值为 77 的访问码（**PartitionKey**）表示呼叫者以静音状态加入会议（**RowKey**）。
-
-值为 99 的访问码（**PartitionKey**）表示呼叫者以主持人身份加入会议（**RowKey**）。
-
-代码将相应的值分配给正确的 **Conference** 动词属性，例如 **startConferenceOnEnter**、**endConferenceOnExit** 和 **muted**。
-
-由于 **startConferenceOnEnter** 和 **endConferenceOnExit** 的值被设置为主持人变量的值，因此会议仅在主持人加入时开始，并在主持人离开时结束。
-
-**waitUrl** 属性指向会议开始前播放的背景音乐。
-
+- 值为 7 的菜单选项（`PartitionKey`）的访问码（`RowKey`）为 77。
+- 值为 8 的菜单选项（`PartitionKey`）的访问码（`RowKey`）为 88。
+- 值为 9 的菜单选项（`PartitionKey`）的访问码（`RowKey`）为 99。
+值为 77 的访问码（`PartitionKey`）表示呼叫者以静音状态加入会议（`RowKey`）。
+值为 99 的访问码（`PartitionKey`）表示呼叫者以主持人身份加入会议（`RowKey`）。
+代码将相应的值分配给正确的`Conference`动词属性，例如`startConferenceOnEnter`、`endConferenceOnExit`和`muted`。
+由于`startConferenceOnEnter`和`endConferenceOnExit`的值被设置为主持人变量的值，因此会议仅在主持人加入时开始，并在主持人离开时结束。
+`waitUrl`属性指向会议开始前播放的背景音乐。
 如果加入的人是听众，应用程序生成的 XML 响应将如图 34 所示。
 
 ### 代码清单 34：听众的 TwiML 标记响应
@@ -2521,8 +2515,8 @@ Get[@"/conf/connect"] = _ =>
   </Dial>
 </Response>
 ```
-注意，对于听众，**startConferenceOnEnter** 和 **endConferenceOnExit** 的值设置为 **false**，而 **muted** 设置为 **true**。
 
+注意，对于听众，`startConferenceOnEnter`和`endConferenceOnExit`的值设置为`false`，而`muted`设置为`true`。
 现在让我们查看作为发言者加入的人生成的 XML 响应。
 
 ### 代码清单 35：发言者的 TwiML 标记响应
@@ -2540,17 +2534,13 @@ Get[@"/conf/connect"] = _ =>
 </Response>
 ```
 
-
-
-
 ```xml
 <Conference startConferenceOnEnter="false" endConferenceOnExit="false" muted="false" waitUrl="http://bit.ly/20gwxz4">CoolestConf</Conference>
 </Dial>
 </Response>
 ```
 
-请注意，当使用扬声器时，**startConferenceOnEnter** 和 **endConferenceOnExit** 的值均设置为 **false**，并且 **muted** 也设置为 **false**。
-
+请注意，当使用扬声器时，`startConferenceOnEnter`和`endConferenceOnExit`的值均设置为`false`，并且`muted`也设置为`false`。
 最后，让我们看看为作为主持人加入的人生成的 XML 响应。
 
 *代码清单 36：主持人的 TwiML 标记响应*
@@ -2569,66 +2559,47 @@ Get[@"/conf/connect"] = _ =>
 </Response>
 ```
 
-请注意，当使用主持人时，**startConferenceOnEnter** 和 **endConferenceOnExit** 的值均设置为 **true**，并且 **muted** 也设置为 **false**。
-
+请注意，当使用主持人时，`startConferenceOnEnter`和`endConferenceOnExit`的值均设置为`true`，并且`muted`也设置为`false`。
 为了测试这一点，只需使用 Visual Studio 中的发布选项将其部署到 Azure Websites。拨打你的 Twilio 号码，准备就绪。
-
 为了测试此功能，模拟两个用户加入会议，你至少需要两部电话。Twilio 通过几行代码和几个动词及属性所能实现的功能非常酷。
-
 显然，可以为这个会议演示添加更多功能，例如宣布呼叫者的姓名、录制会议以及其他交互式语音选项。可能性是无限的。
-
-我建议你访问 Twilio 文档，以了解 **Conference** 动词提供的其他所有属性并探索其他可能性。
-
+我建议你访问 Twilio 文档，以了解`Conference`动词提供的其他所有属性并探索其他可能性。
 让我们继续，看看我们的最后一个示例。我们将看看如何实现自动语音调查解决方案，这应该很有趣且令人兴奋。
 
 ## 自动语音调查
 
 自动调查允许最终用户拨打一个电话号码，该电话号码将用于执行询问问题并提示用户提供每个问题答案的调查。
-
 电话调查是从用户那里收集有价值数据的好方法，并且它们有许多业务应用，特别是在品牌知名度、产品洞察和客户满意度方面。
-
 首先，让我们解释一下使用 Twilio 时语音调查应该如何工作。
-
 - Twilio 接收呼叫并向我们的 TwilioSuccinctly TwiML 应用发起 HTTP 请求——例如，请求关于如何响应的说明。
 - NancyFX 应用指示 Twilio（使用 TwiML）收集用户的语音输入。用户将被要求提供一个唯一的 ID，我们将通过该 ID 识别他们。
 - 在每个问题之后，Twilio 将携带用户输入再次向我们的 NancyFX 应用发起请求，我们的应用程序会将这些数据存储在 Azure 表中。
 - 存储答案后，应用程序将继续指示 Twilio 将用户重定向到下一个问题，直到调查结束。简而言之，这就是语音调查应用应该做的事情。
-
-我们将扩展我们的 SimpleAnsweringMachine 类，包含一个将数据保存到我们称为 ResponsesSuccinctly 的 Azure 表中的方法。
-
-我们的 ResponsesSuccinctly 表有三个字段。在 PartitionKey 中，我们将存储问题 ID。在 RowKey 中，我们将存储用户 ID。最后，我们将有一个名为 Response 的第三个字段，它也将是一个字符串，并将包含用户的响应。
-
-我们还需要另外两个表——一个名为 Questions，将包含问题 ID（PartitionKey）以及作为字符串的实际问题本身。我们还需要一个 PredefinedAnswers 表，将包含每个问题的可能答案。
-
-因此，我们的调查应用将从 Questions 和 PredefinedAnswers 表中读取，并将用户输入存储在 Azure 上的 ResponsesSuccinctly 表中。
-
-让我们使用 Azure Storage Explorer 创建 Questions 和 PredefinedAnswers 表。我们将从 Questions 表开始，并用示例数据填充它。
+我们将扩展我们的 `SimpleAnsweringMachine` 类，包含一个将数据保存到我们称为 `ResponsesSuccinctly` 的 Azure 表中的方法。
+我们的 `ResponsesSuccinctly` 表有三个字段。在 `PartitionKey` 中，我们将存储问题 ID。在 `RowKey` 中，我们将存储用户 ID。最后，我们将有一个名为 `Response` 的第三个字段，它也将是一个字符串，并将包含用户的响应。
+我们还需要另外两个表——一个名为 `Questions`，将包含问题 ID（`PartitionKey`）以及作为字符串的实际问题本身。我们还需要一个 `PredefinedAnswers` 表，将包含每个问题的可能答案。
+因此，我们的调查应用将从 `Questions` 和 `PredefinedAnswers` 表中读取，并将用户输入存储在 Azure 上的 `ResponsesSuccinctly` 表中。
+让我们使用 Azure Storage Explorer 创建 `Questions` 和 `PredefinedAnswers` 表。我们将从 `Questions` 表开始，并用示例数据填充它。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_89_0.png)
 
-图 52：Azure 上的 Questions 表
-
-你可以看到，表的 **RowKey** 是问题本身的简短 ID 表示形式，而实际问题存储在也是字符串的 **Question** 字段中。
-
-现在让我们使用 Azure Storage Explorer 创建 PredefinedAnswers 表，并用此示例数据填充它。
+图 52：Azure 上的 `Questions` 表
+你可以看到，表的 `RowKey` 是问题本身的简短 ID 表示形式，而实际问题存储在也是字符串的 `Question` 字段中。
+现在让我们使用 Azure Storage Explorer 创建 `PredefinedAnswers` 表，并用此示例数据填充它。
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_89_1.png)
 
-图 53：Azure 上的 PredefinedAnswers 表
-
-在 PredefinedAnswers 的 **PartitionKey** 中，我们存储答案编号，在 **RowKey** 中，我们存储问题编号。作为字符串的 **Answer** 字段包含实际答案本身。
-
-我们可以看到所有问题都有多个预定义答案，有些比其他的多，这些将是提供给用户的选项。然后，他们的答案将存储在 ResponsesSuccinctly 表中。
-
-既然理论部分已经掌握，让我们写一些代码。首先，让我们将我们的 TwiML 应用指向我们的新端点，我们将把它称为 /survey/incoming。
+图 53：Azure 上的 `PredefinedAnswers` 表
+在 `PredefinedAnswers` 的 `PartitionKey` 中，我们存储答案编号，在 `RowKey` 中，我们存储问题编号。作为字符串的 `Answer` 字段包含实际答案本身。
+我们可以看到所有问题都有多个预定义答案，有些比其他的多，这些将是提供给用户的选项。然后，他们的答案将存储在 `ResponsesSuccinctly` 表中。
+既然理论部分已经掌握，让我们写一些代码。首先，让我们将我们的 TwiML 应用指向我们的新端点，我们将把它称为 `/survey/incoming`。
 
 ### 语音
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_90_0.png)
 
 *图 54：用于我们 TwilioSuccinctly TwiML 应用的语音请求 URL*
-
-现在，让我们定义我们的调查问候语。我们将修改我们的 **AnsweringMachineMain** NancyFX 模块以适应这种情况。
+现在，让我们定义我们的调查问候语。我们将修改我们的 `AnsweringMachineMain` NancyFX 模块以适应这种情况。
 
 *代码清单 37：自动语音调查问候语*
 
@@ -2647,19 +2618,21 @@ Get["/survey/incoming"] = _ =>
 };
 ```
 
-问候语要求呼叫者提供社会安全号码以进行身份验证。请记住，在非演示场景中，你永远不会向用户索要社会安全号码！当信息收集完成后，将向 /survey/connect REST 端点发送请求，该端点将处理剩余的调查逻辑。我们稍后需要稍作修改此代码以初始化状态（我们稍后将会讨论这一点）。
 
-社会安全号码值将存储在 ResponsesSuccinctly 表中，并将识别用户提供相应答案的用户。
+
+问候语要求呼叫者提供社会安全号码以进行身份验证。请记住，在非演示场景中，你永远不会向用户索要社会安全号码！当信息收集完成后，将向`/survey/connect` REST 端点发送请求，该端点将处理剩余的调查逻辑。我们稍后需要稍作修改此代码以初始化状态（我们稍后将会讨论这一点）。
+
+社会安全号码值将存储在`ResponsesSuccinctly`表中，并将识别用户提供相应答案的用户。
 
 应用程序不会对社会安全号码进行任何验证（为了验证它是有效或唯一的数字），因为目的只是为了演示如何通过交互式选项收集信息。该应用程序始终可以通过更具体的逻辑进行改进和扩展，以验证此或其他方面。
 
-在我们深入 /survey/connect 端点的细节之前，我们需要为我们的 **SimpleAnsweringMachine** 类添加额外功能，包含一个将数据保存到 ResponsesSuccinctly 表的方法，并且我们需要添加几个从 Questions 和 PredefinedAnswers 表中获取信息的方法。
+在我们深入`/survey/connect`端点的细节之前，我们需要为我们的`SimpleAnsweringMachine`类添加额外功能，包含一个将数据保存到`ResponsesSuccinctly`表的方法，并且我们需要添加几个从`Questions`和`PredefinedAnswers`表中获取信息的方法。
 
-让我们现在创建一个从 Questions 表中读取的方法，以及另一个从 PredefinedAnswers 表中读取的方法。
+让我们现在创建一个从`Questions`表中读取的方法，以及另一个从`PredefinedAnswers`表中读取的方法。
 
-我们需要创建一个 **QuestionsData** 类，对应于 Questions Azure 表的结构。代码清单 38 展示了我们如何定义此类。
+我们需要创建一个`QuestionsData`类，对应于`Questions` Azure 表的结构。代码清单 38 展示了我们如何定义此类。
 
-*代码清单 38：QuestionsData 类*
+### 代码清单 38：`QuestionsData`类
 
 ```csharp
 public class QuestionsData : TableEntity
@@ -2676,17 +2649,17 @@ public class QuestionsData : TableEntity
 }
 ```
 
-我们还需要在我们的 `SimpleAnsweringMachine` 类中包含代码清单 39 的 **using** 语句，因为我们将使用 `List<string>` 来从 Questions 表中获取问题。
+我们还需要在我们的`SimpleAnsweringMachine`类中包含代码清单 39 的`using`语句，因为我们将使用`List<string>`来从`Questions`表中获取问题。
 
-*代码清单 39：使用 System.Collections.Generic*
+### 代码清单 39：使用`System.Collections.Generic`
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-并且，我们需要在我们的 `SimpleAnsweringMachine` 类中包含代码清单 40 的常量。
+并且，我们需要在我们的`SimpleAnsweringMachine`类中包含代码清单 40 的常量。
 
-*代码清单 40：我们 SimpleAnsweringMachine 类的其他常量*
+### 代码清单 40：我们`SimpleAnsweringMachine`类的其他常量
 
 ```csharp
 private const string cStrSurveyResponses = "ResponsesSuccinctly";
@@ -2694,9 +2667,9 @@ private const string cStrSurveyQuestions = "Questions";
 private const string cStrSurveyAnswers = "PredefinedAnswers";
 ```
 
-现在，让我们在我们的 `SimpleAnsweringMachine` 类中实现 `GetQuestions` 方法。
+现在，让我们在我们的`SimpleAnsweringMachine`类中实现`GetQuestions`方法。
 
-*代码清单 41：GetQuestions 方法*
+### 代码清单 41：`GetQuestions`方法
 
 ```csharp
 public string[] GetQuestions()
@@ -2709,10 +2682,6 @@ public string[] GetQuestions()
             storageAccount.CreateCloudTableClient();
         CloudTable table =
 ```
-
-
-
-
 
 ```csharp
     tableClient.GetTableReference(cStrSurveyQuestions);   
@@ -2739,11 +2708,11 @@ public string[] GetQuestions()
 
 让我们快速检查一下这段逻辑。
 
-由于我们希望检索存储在 Questions 表中的所有问题，我们只需查询所有 **PartitionKey** 不等于 -1 的记录，这意味着将返回所有记录（因为我们在通过 Azure Storage Explorer 创建该表时，没有为 **PartitionKey** 等于 -1 输入任何记录）。
+由于我们希望检索存储在`Questions`表中的所有问题，我们只需查询所有`PartitionKey`不等于 -1 的记录，这意味着将返回所有记录（因为我们在通过 Azure Storage Explorer 创建该表时，没有为`PartitionKey`等于 -1 输入任何记录）。
 
-与 Questions 一样，我们还需要为 PredefinedAnswers 和 ResponsesSuccinctly 分别定义一个类。我们将这些类分别命名为 **PredefinedAnswersData** 和 **RespondeData**。让我们现在通过代码列表 42 来完成这一操作。
+与`Questions`一样，我们还需要为`PredefinedAnswers`和`ResponsesSuccinctly`分别定义一个类。我们将这些类分别命名为`PredefinedAnswersData`和`RespondeData`。让我们现在通过代码列表 42 来完成这一操作。
 
-### 代码列表 42：PredefinedAnswersData 和 RespondeData 类
+### 代码列表 42：`PredefinedAnswersData`和`RespondeData`类
 
 ```csharp
 public class PredefinedAnswersData : TableEntity   
@@ -2779,9 +2748,9 @@ public class ResponseData : TableEntity
 }
 ```
 
-接下来，我们在 SimpleAnsweringMachine 类中实现一个方法来从 PredefinedAnswers 表中检索记录，我们将该方法命名为 GetPredefinedAnswers。
+接下来，我们在`SimpleAnsweringMachine`类中实现一个方法来从`PredefinedAnswers`表中检索记录，我们将该方法命名为`GetPredefinedAnswers`。
 
-### 代码列表 43：GetPredefinedAnswers 方法
+### 代码列表 43：`GetPredefinedAnswers`方法
 
 ```csharp
 public string[] GetPredefinedAnswers(string qn)
@@ -2815,11 +2784,11 @@ public string[] GetPredefinedAnswers(string qn)
 }
 ```
 
-该方法通过 RowKey 查询 PredefinedAnswers 表，查找与调用者所问问题相匹配的记录。然后，这些答案以字符串数组的形式返回，以便进一步处理。
+该方法通过`RowKey`查询`PredefinedAnswers`表，查找与调用者所问问题相匹配的记录。然后，这些答案以字符串数组的形式返回，以便进一步处理。
 
-现在，让我们创建一个方法来填充 ResponsesSuccinctly 表。我们也将此方法添加到代码列表 44 中的 SimpleAnsweringMachine 类中。
+现在，让我们创建一个方法来填充`ResponsesSuccinctly`表。我们也将此方法添加到代码列表 44 中的`SimpleAnsweringMachine`类中。
 
-### 代码列表 44：InsertSurveyResponse 方法
+### 代码列表 44：`InsertSurveyResponse`方法
 
 ```csharp
 public void InsertSurveyResponse(string qId, string uId, string aId)
@@ -2856,13 +2825,17 @@ public void InsertSurveyResponse(string qId, string uId, string aId)
 }
 ```
 
-观察这个方法，我们可以看到 **ResponseSuccinctly** 表通过问题 ID (**qId**) 作为 **PartitionKey** 和用户 ID (**uId**) 作为 **RowKey** 进行查询。
+观察这个方法，我们可以看到`ResponseSuccinctly`表通过问题 ID (`qId`) 作为`PartitionKey`和用户 ID (`uId`) 作为`RowKey`进行查询。
 
-如果未找到记录（**updateEntity** 为 **null**），则会为 **updateEntity** 的属性赋值，并通过调用 **Execute** 方法将此对象插入到表中。
+如果未找到记录（`updateEntity`为`null`），则会为`updateEntity`的属性赋值，并通过调用`Execute`方法将此对象插入到表中。
 
-现在，让我们查看我们的 **SimpleAnsweringMachine** 类和 .cs 文件的完整更新代码。
+现在，让我们查看我们的`SimpleAnsweringMachine`类和 .cs 文件的完整更新代码。
 
-### 代码列表 45：更新后的 SimpleAnsweringMachine.cs 文件
+### 代码列表 45：更新后的`SimpleAnsweringMachine.cs`文件
+
+
+
+# SimpleAnsweringMachine 实现
 
 ```csharp
 using System;
@@ -3046,93 +3019,140 @@ namespace TwilioSuccinctly
                     TableQuery<PreDefinedAnswersData>().Where(
 ```
 
-
-
-
-
 TableQuery.GenerateFilterCondition("RowKey",
+
 QueryComparisons.Equal, "q" + qn));
 
 foreach (PredefinedAnswersData en in
+
 table.ExecuteQuery(query))
+
 {
+
     pa.Add(en.PartitionKey + "|" + en.Answer);
+
 }
+
 catch (Exception ex)
+
 {
+
     Console.WriteLine(ex.ToString());
+
 }
 
 return pa.ToArray();
+
 }
 
 public void InsertSurveyResponse(string qId, string uId,
+
     string aId)
+
 {
+
     try
+
     {
+
         var storageAccount =
+
             CloudStorageAccount.Parse(cStrConnStr);
+
         CloudTableClient tableClient =
+
             storageAccount.CreateCloudTableClient();
+
         CloudTable table =
+
             tableClient.GetTableReference(cStrSurveyResponses);
 
         TableOperation retrieveOperation =
+
             TableOperation.Retrieve<ResponseData>(qId, uId);
 
         TableResult retrievedResult =
+
             table.Execute(retrieveOperation);
+
         ResponseData updateEntity =
+
             (ResponseData)retrievedResult.Result;
 
         if (updateEntity == null)
+
         {
+
             updateEntity = new ResponseData();
+
             updateEntity.PartitionKey = qId;
+
             updateEntity.RowKey = uId;
+
             updateEntity.Response = aId;
+
         }
 
         TableOperation insertOrReplaceOperation =
+
             TableOperation.InsertOrReplace(updateEntity);
+
 table.Execute(insertOrReplaceOperation);
+
 }
+
 catch (Exception ex)
+
 {
+
     Console.WriteLine(ex.ToString());
+
 }
+
 }
 
 public string InsertSpace(string s)
+
 {
+
     string res = string.Empty;
 
     int count = 1;
+
     foreach (char c in s)
+
     {
+
         if (char.IsDigit(c) && count < s.Length)
+
             res += c + " ";
+
         else
+
             res += c;
 
         count++;
+
     }
 
     return res;
-}
-} // 类 SimpleAnsweringMachine 结束
-} // 命名空间 TwilioSuccinctly 结束
 
-有了我们最新的 SimpleAnsweringMachine 逻辑，让我们将注意力转移到 AnsweringMachineMain NancyFX 模块，以便我们可以编写 /survey/connect REST 端点的逻辑。
+}
+
+} // 类 SimpleAnsweringMachine 结束
+
+} // 命名空间 TwilioSuccinctly 结束
+```
+
+有了我们最新的 `SimpleAnsweringMachine` 逻辑，让我们将注意力转移到 `AnsweringMachineMain` NancyFX 模块，以便我们可以编写 `/survey/connect` REST 端点的逻辑。
 
 调查应用程序应获取所有问题列表，遍历每个问题，向调用者展示可用的预定义答案，然后存储每个响应。
 
-为了在 AnsweringMachineMain NancyFX 模块上保持状态并了解将向调用者询问哪些问题，我们需要创建一些受保护的 AnsweringMachineMain 类级属性。
+为了在 `AnsweringMachineMain` NancyFX 模块上保持状态并了解将向调用者询问哪些问题，我们需要创建一些受保护的 `AnsweringMachineMain` 类级属性。
 
-我们需要维护状态，因为 /survey/connect 端点对每个新的问题和答案都会调用自身，因此我们需要知道哪些内容已被回答。
+我们需要维护状态，因为 `/survey/connect` 端点对每个新的问题和答案都会调用自身，因此我们需要知道哪些内容已被回答。
 
-*代码清单 46：用于维护 AnsweringMachineMain 状态的受保护类级属性*
+## 代码清单 46：用于维护 AnsweringMachineMain 状态的受 protected 类级属性
 
 ```
 // 状态成员变量使用 protected 修饰符声明，以便在类被继承时使用。
@@ -3141,17 +3161,19 @@ protected static int currentQuestion = 0;
 protected static string userId = string.Empty;
 ```
 
-**questions 字符串**数组保存调用者将被要求回答的问题名称。
+`questions` 字符串数组保存调用者将被要求回答的问题名称。
 
-**currentQuestion 整型**变量保存当前正在提示用户回答的问题的状态。
+`currentQuestion` 整型变量保存当前正在提示用户回答的问题的状态。
 
-最后，**userId 字符串**表示用于识别调用者为每个问题提供的答案的社会安全号码（唯一标识符）的值。
+最后，`userId` 字符串表示用于识别调用者为每个问题提供的答案的社会安全号码（唯一标识符）的值。
 
 为了简单起见，并为了避免唯一标识符被误认为是对问题的回答，我们演示中对社会安全号码的唯一要求是用户输入至少包含两个字符的任何值。
 
-正如大家记得的那样，我们之前已经解决了需要适应 /survey/incoming 端点以初始化状态的问题。我们将在代码清单 47 中对其进行修改。
+正如大家记得的那样，我们之前已经解决了需要适应 `/survey/incoming` 端点以初始化状态的问题。我们将在代码清单 47 中对其进行修改。
 
-# *代码清单 47：带有状态初始化的 /survey/incoming REST 端点*
+## 代码清单 47：带有状态初始化的 /survey/incoming REST 端点
+
+
 
 ```
 Get[@"/survey/incoming"] = _ =>
@@ -3172,9 +3194,9 @@ Get[@"/survey/incoming"] = _ =>
 };
 ```
 
-有了状态初始化，我们可以创建 /survey/connect 端点逻辑，所有的“魔法”将在那里发生。
+有了状态初始化，我们可以创建 `/survey/connect` 端点逻辑，所有的“魔法”将在那里发生。
 
-# *代码清单 48：/survey/connect REST 端点*
+# 代码清单 48：`/survey/connect` REST 端点
 
 ```
 Get[@"/survey/connect"] = _ =>
@@ -3249,29 +3271,29 @@ Get[@"/survey/connect"] = _ =>
 
 让我们对此进行分析，以了解正在发生的事情。
 
-因为我们通过设置 questions 字符串数组为 null，currentQuestion 整数值为 0，userId 变量为空字符串来初始化状态，所以我们执行的第一项检查是验证 userId 是否确实为空。然后我们检查变量 val 是否包含至少两个字符的值（在此阶段，这代表在 /survey/incoming 端点输入的社会安全号码）。
+因为我们通过设置 `questions` 字符串数组为 `null`，`currentQuestion` 整数值为 `0`，`userId` 变量为空字符串来初始化状态，所以我们执行的第一项检查是验证 `userId` 是否确实为空。然后我们检查变量 `val` 是否包含至少两个字符的值（在此阶段，这代表在 `/survey/incoming` 端点输入的社会安全号码）。
 
-我们希望知道变量 val 至少有两个字符，因为我们希望将其与其他响应区分开来，其他响应将是一个字符长，并代表对问题的答案。
+我们希望知道变量 `val` 至少有两个字符，因为我们希望将其与其他响应区分开来，其他响应将是一个字符长，并代表对问题的答案。
 
-当我们确信 val 确实是我们要求调用者输入的社会安全号码时，我们将 userId 变量的状态赋值给 val 变量的值。
+当我们确信 `val` 确实是我们要求调用者输入的社会安全号码时，我们将 `userId` 变量的状态赋值给 `val` 变量的值。
 
-如果 questions 字符串数组为 null，我们通过调用 SimpleAnsweringMachine 实例的 GetQuestions 方法从 Questions Azure 表中获取可用问题列表。
+如果 `questions` 字符串数组为 `null`，我们通过调用 `SimpleAnsweringMachine` 实例的 `GetQuestions` 方法从 Questions Azure 表中获取可用问题列表。
 
-在可用问题列表准备好后，我们通过调用 ProcessQuestion 方法请求应用程序处理第一个问题。ProcessQuestion 方法是 AnsweringMachineMain NancyFX 模块的一个静态方法，我们稍后将进行探讨。
+在可用问题列表准备好后，我们通过调用 `ProcessQuestion` 方法请求应用程序处理第一个问题。`ProcessQuestion` 方法是 `AnsweringMachineMain` NancyFX 模块的一个静态方法，我们稍后将进行探讨。
 
-**ProcessQuestion** 方法的目的是让 Twilio 提出问题并描述可能的答案。然而，Twilio 并不处理对该问题的响应。对问题的实际响应是在 **ProcessQuestion** 方法调用 /survey/connect 端点时处理的。
+`ProcessQuestion` 方法的目的是让 Twilio 提出问题并描述可能的答案。然而，Twilio 并不处理对该问题的响应。对问题的实际响应是在 `ProcessQuestion` 方法调用 `/survey/connect` 端点时处理的。
 
-本质上，/survey/connect 是自我重复的，这意味着为了提出多个问题并获取每个问题的答案，**ProcessQuestion** 方法会触发对执行该方法的同一端点的调用。这就是为什么维护状态很重要。
+本质上，`/survey/connect` 是自我重复的，这意味着为了提出多个问题并获取每个问题的答案，`ProcessQuestion` 方法会触发对执行该方法的同一端点的调用。这就是为什么维护状态很重要。
 
-当第一个问题被提出后，下一次 /survey/incoming 被执行时（当处理对该问题的答案时），控制流传递到主要的 **else** 语句，该语句使代码通过调用 **SimpleAnsweringMachine** 实例的 **GetPredefinedAnswers** 方法获取所有可能的预定义答案。
+当第一个问题被提出后，下一次 `/survey/incoming` 被执行时（当处理对该问题的答案时），控制流传递到主要的 `else` 语句，该语句使代码通过调用 `SimpleAnsweringMachine` 实例的 `GetPredefinedAnswers` 方法获取所有可能的预定义答案。
 
-从调用者接收到的答案，包含在 **val** 变量中，会被检查以确保它存在于从 PredefinedAnswers Azure 表检索到的预定义答案列表中。它通过调用 **GetPredefinedAnswers** 方法来实现这一点。
+从调用者接收到的答案，包含在 `val` 变量中，会被检查以确保它存在于从 PredefinedAnswers Azure 表检索到的预定义答案列表中。它通过调用 `GetPredefinedAnswers` 方法来实现这一点。
 
-如果答案存在于正在被提问的当前问题的预定义答案列表中（正在被提问的当前问题是通过 **currentQuestion** 属性保持状态来获知的），该答案将通过调用 **InsertSurveyResponse** 方法与问题编号和 **userId** 一起存储在 ResponsesSuccinctly 表中。
+如果答案存在于正在被提问的当前问题的预定义答案列表中（正在被提问的当前问题是通过 `currentQuestion` 属性保持状态来获知的），该答案将通过调用 `InsertSurveyResponse` 方法与问题编号和 `userId` 一起存储在 `ResponsesSuccinctly` 表中。
 
 如果提供了对问题的错误答案，即不属于正在被提问的当前问题的预定义答案列表中的答案，调查将被终止。此功能可以在未来得到改进，但目前已经足够好用。
 
-当所有问题都被提出，答案被收集和处理后，可以在 Azure 上的 ResponsesSuccinctly 表上查看信息。
+当所有问题都被提出，答案被收集和处理后，可以在 Azure 上的 `ResponsesSuccinctly` 表上查看信息。
 
 图 55 展示了完成的自动调查结果的样子（在使用 Visual Studio 发布应用程序并调用我们的 Twilio 号码后）。
 
@@ -3279,12 +3301,9 @@ Get[@"/survey/connect"] = _ =>
 
 ![](img/7d3e41c7ef83c5fb4ef242998ad60317_104_1.png)
 
-让我们探索一下 **ProcessQuestion** 方法做什么。
+让我们探索一下 `ProcessQuestion` 方法做什么。
 
-
-
-
-## 代码清单 49：ProcessQuestion 方法
+## 代码清单 49：`ProcessQuestion` 方法
 
 ```csharp
 protected static string ProcessQuestion(SimpleAnsweringMachine sam,
@@ -3305,13 +3324,13 @@ protected static string ProcessQuestion(SimpleAnsweringMachine sam,
 }
 ```
 
-正如我们所见，**ProcessQuestion** 方法调用 /survey/connect 端点，以处理当前被提问问题的答案。
+正如我们所见，`ProcessQuestion` 方法调用 `/survey/connect` 端点，以处理当前被提问问题的答案。
 
-请注意，该方法内部调用了 **GetPossibleAnswers** 方法，该方法简单返回包含所问问题预定义答案的 TwiML XML 标记代码。
+请注意，该方法内部调用了 `GetPossibleAnswers` 方法，该方法简单返回包含所问问题预定义答案的 TwiML XML 标记代码。
 
-让我们看看 **GetPossibleAnswers** 方法。
+让我们看看 `GetPossibleAnswers` 方法。
 
-## 代码清单 50：GetPossibleAnswers 方法
+## 代码清单 50：`GetPossibleAnswers` 方法
 
 ```csharp
 protected static string GetPossibleAnswers(SimpleAnsweringMachine sam,
@@ -3342,9 +3361,9 @@ else
 }
 ```
 
-**GetPossibleAnswers** 方法获取当前被提问问题的预定义答案列表，并将 TwiML 标记返回给调用者 **ProcessQuestion** 方法，以便向呼叫者提供正确的指令，从而允许用户回答问题。
+`GetPossibleAnswers` 方法获取当前被提问问题的预定义答案列表，并将 TwiML 标记返回给调用者 `ProcessQuestion` 方法，以便向呼叫者提供正确的指令，从而允许用户回答问题。
 
-这就结束了我们的调查应用程序。即使由于 /survey/connect 端点的自重复特性带来了一些技术挑战，但它仍然很有趣。
+这就结束了我们的调查应用程序。即使由于 `/survey/connect` 端点的自重复特性带来了一些技术挑战，但它仍然很有趣。
 
 ## 总结
 
@@ -3357,4 +3376,3 @@ Twilio 的一大优点在于它支持当今最常见且最重要的编程语言�
 感谢您对这本电子书的兴趣。希望这只是进一步探索 SMS 和基于语音的应用程序世界的起点。
 
 干杯！
-

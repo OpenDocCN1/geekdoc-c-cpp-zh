@@ -1,20 +1,9 @@
+
 # C++14 常见问题解答
 
+## 前言
 
-
-
-
-
-
-
-
-
-
-
-
-# 前言
-
-本书包含了与 `C++14` 相关的精选问题，并对所有这些问题提供了详细解答，这将帮助读者磨练解决特定问题的技能。
+本书包含了与`C++14`相关的精选问题，并对所有这些问题提供了详细解答，这将帮助读者磨练解决特定问题的技能。
 
 本教程的主要来源是：
 
@@ -22,24 +11,25 @@
 2. `Advanced C++ FAQs: Volume 2 : Generic Programming`
 3. `Advanced C++ FAQs: Volumes 1 & 2`
 
-本书并不是 `C++` 的入门教程。它假设读者已经熟悉 `C++98` 和 `C++03` 的基础知识，并希望将视野扩展到 `C++14`（也称为 `C++1y`）的最新特性。问题按照一星 `*`（最简单）到五星 `*****`（最困难）进行标记。
+本书并不是`C++`的入门教程。它假设读者已经熟悉`C++98`和`C++03`的基础知识，并希望将视野扩展到`C++14`（也称为`C++1y`）的最新特性。问题按照一星`*`（最简单）到五星`*****`（最困难）进行标记。
 
-即将出版的卷将加强这种涵盖 `C++` 各领域的特定方法。
+即将出版的卷将加强这种涵盖`C++`各领域的特定方法。
 
 如有建议、反馈和意见，请联系：
 
-chandrashekhar.kumar@gmail.com
+`chandrashekhar.kumar@gmail.com`。
 
 Chandra Shekhar Kumar
 
-在售书籍书籍
+在售书籍
 
 ## 0.1 变量模板
 
 ### 问题 1 变量模板
+
 什么是变量模板？
 
-问题解答
+#### 问题解答
 
 变量模板是由变量的模板声明所引入的声明。正如我们所知道的，如果一个模板声明定义了一个函数、类、变量或静态数据成员，那么该模板声明也是一个定义。
 
@@ -99,11 +89,12 @@ int main()
 ## 0.2 类模板的 constexpr 静态数据成员
 
 ### 问题 2 类模板的 constexpr 静态数据成员
+
 类模板的 constexpr 静态数据成员有什么问题？
 
-问题解答
+#### 问题解答
 
-让我们重新回顾 `std::is_same` 是如何设计的：
+让我们重新回顾`std::is_same`是如何设计的：
 
 ```cpp
 template<typename T, T v>
@@ -126,19 +117,21 @@ struct is_same<T, T>: true_type{};
 ```
 
 静态成员的主要问题在于：
+
 - 它们需要重复声明：
-    1. 一次在类模板内部，
-    2. 一次在类模板外部，以便在使用了 ODR（单一定义规则）时提供实际定义。
+  1. 一次在类模板内部，
+  2. 一次在类模板外部，以便在使用了 ODR（单一定义规则）时提供实际定义。
 - 由于必须提供两次相同的声明而造成了困惑，而普通常量不需要。
 
-标准类 `numeric_limits` 在 constexpr 数据成员方面也存在相同的问题。
+标准类`numeric_limits`在 constexpr 数据成员方面也存在相同的问题。
 
 ## 0.3 constexpr 函数模板
 
 ### 问题 3 constexpr 函数模板
+
 constexpr 函数模板有什么问题？
 
-问题解答
+#### 问题解答
 
 constexpr 函数模板提供了函数抽象。一个简单的 constexpr 函数：
 
@@ -150,9 +143,9 @@ constexpr bool is_same()
 }
 ```
 
-然而，它们迫使我们在定义处预先选择如何传递常量：要么通过 `const` 引用，要么通过普通的非引用类型。如果通过 `const` 引用传递，则常量必须系统地分配在静态存储器中。如果通过非引用类型传递，则常量需要拷贝。对于内置类型来说，拷贝不是问题，但对于具有值语义且不仅仅是内置类型封装器的用户定义类型来说，这是一个问题。而普通的 constexpr 变量不受此影响。它们只提供了一个简单的定义，而常量是否实际上需要布局在存储中取决于用法。
+然而，它们迫使我们在定义处预先选择如何传递常量：要么通过`const`引用，要么通过普通的非引用类型。如果通过`const`引用传递，则常量必须系统地分配在静态存储器中。如果通过非引用类型传递，则常量需要拷贝。对于内置类型来说，拷贝不是问题，但对于具有值语义且不仅仅是内置类型封装器的用户定义类型来说，这是一个问题。而普通的 constexpr 变量不受此影响。它们只提供了一个简单的定义，而常量是否实际上需要布局在存储中取决于用法。
 
-其他例子是 `std::numeric_limits` 的静态成员函数以及像 `boost::constants::pi<T>()` 这样的函数：
+其他例子是`std::numeric_limits`的静态成员函数以及像`boost::constants::pi<T>()`这样的函数：
 
 ```cpp
 #include <boost/math/constants/constants.hpp>
@@ -165,14 +158,15 @@ Real area(Real r)
 }
 ```
 
-常量的函数模板版本是简单的内联函数，返回对于对应类型正确精度的常量。此外，对于支持此点的编译器，这些函数被声明为 `constexpr`，允许在模板参数为字面量类型的情况下将结果用于常量表达式。这看起来我们创建 constexpr 函数仅仅是为了返回一个常量。
+常量的函数模板版本是简单的内联函数，返回对于对应类型正确精度的常量。此外，对于支持此点的编译器，这些函数被声明为`constexpr`，允许在模板参数为字面量类型的情况下将结果用于常量表达式。这看起来我们创建 constexpr 函数仅仅是为了返回一个常量。
 
 ## 0.4 变量模板的实践
 
 ### 问题 4 变量模板的实践
+
 说明如何使用变量模板为具有适当精度的给定类型计算圆面积？
 
-问题解答
+#### 问题解答
 
 变量模板解决了前述说明的两个问题，并且在 C++11 中引入此功能不需要修改语法，因为现在的语法允许任何声明参数化。之前这是禁止的。
 
@@ -197,12 +191,16 @@ int main()
 ```
 
 使用以下命令：
+
 `clang++ -std=c++11 variable_template.cpp`
 
 我们得到以下输出：
-pi<int> : 3
-pi<float> : 3.1415927410125732421875
-pi<double> : 3.14159265358979311599796346854418516159
+
+`pi<int> : 3`
+
+`pi<float> : 3.1415927410125732421875`
+
+`pi<double> : 3.14159265358979311599796346854418516159`
 
 这个变量模板可以用于泛型函数为给定的半径计算面积：
 
@@ -217,9 +215,10 @@ T area_circle(T r)
 ## 0.5 静态数据成员模板
 
 ### 问题 5 静态数据成员模板
+
 为静态数据成员模板提供合适的定义：
 
-问题解答
+#### 问题解答
 
 正如我们所知道的，类作用域范围内的变量模板是一个静态数据成员模板，静态成员或静态数据成员模板的定义可以在包含静态成员类模板定义的命名空间范围内提供。
 
@@ -238,10 +237,6 @@ const T limits::min = {}; // min 的定义
 
 ### 问题 6 变量模板的特化
 
-
-
-
-
 简化下面的程序以实现所需功能：
 
 ```cpp
@@ -252,7 +247,7 @@ bool t = is_same<int, int>; // true
 bool f = is_same<int, float>; // false
 ```
 
-### 第 6 题答案
+#### 第 6 题答案
 
 变量模板可以像模板函数一样进行模板特化，因此我们可以如下简化代码：
 
@@ -289,9 +284,12 @@ int main()
 }
 ```
 
-### 第 7 题答案
+#### 第 7 题答案
+
 `pi<> : 3.14159265358979311599796346854`
+
 `pi<int> : 3.1415927410125732421875`
+
 `pi<float> : 3.1415927410125732421875`
 
 ## 0.8 lambda 与变量模板
@@ -308,7 +306,8 @@ T area_circle(T r)
 }
 ```
 
-### 第 8 题答案
+#### 第 8 题答案
+
 ```cpp
 template<typename T>
 auto area_circle = [](auto r) { return pi<T> * r * r; };
@@ -336,9 +335,12 @@ int main()
 
 如果是，输出是什么？
 
-### 第 9 题答案
-是的的，代码是正确的，因为变量模板实例是一一类对象。
+#### 第 9 题答案
+
+是的，代码是正确的，因为变量模板实例是一类对象。
+
 输出为：
+
 ```
 42
 0
@@ -359,7 +361,8 @@ int main()
 }
 ```
 
-### 第 10 题答案
+#### 第 10 题答案
+
 是的，根据标准，变量模板的特化是一个变量：对于可以生成有效特化的模板，不应发布任何诊断信息。
 
 ### 0.1 合法的特化但报错
@@ -379,12 +382,14 @@ struct X {};
 ```
 
 典型的错误是：
+
 ```
 specialize.cpp:3:17: error: ‘Y::type’ is private
     typedef int type;
 specialize.cpp:6:13: error: within this context
 template<Y::type N>
 ```
+
 因为模板参数是不符合规范的（ill-formed），它会被立即诊断且不会形成任何结构。因此，在所在位置没有可以特化的模板。这里不存在“不符合规范”，因为不符合规范意味着一种不存在的状态。所以，如果参数是毫无意义的，那么我们就没有声明。如果模板声明本身是毫无意义的，我们没有可以特化的声明，因此会产生编译器错误。
 
 ## 0.12 变量模板与 lambda
@@ -415,6 +420,7 @@ auto area = [](auto c)
 ```
 
 或者：
+
 ```cpp
 template<typename T>
 using f_type = T(*)(Circle<T>);
@@ -430,7 +436,7 @@ f_type<T> area = [](Circle<T> c)
 
 ### 第 13 题对 integral_constant 的增量改进
 
-重新类模板 `is_arithmetic`：
+重新类模板`is_arithmetic`：
 
 ```cpp
 template <class T>
@@ -444,16 +450,21 @@ struct is_arithmetic
 ```
 
 在 C++14 之前，这种类模板的典型用法是：
+
 `std::is_arithmetic<T>::value`
+
 或者
+
 `static_cast<bool>(std::is_arithmetic<T>{})`
 
-对 `integral_constant` 类做了什么改进，以启用像 `std::is_arithmetic<T>()()` 这样的简化用法？
+对`integral_constant`类做了什么改进，以启用像`std::is_arithmetic<T>()()`这样的简化用法？
 
 为了允许模板用作编译时对象的源，进行了以下添加：
+
 `constexpr value_type operator() { return value; }`
 
 所以最终的形式如下：
+
 ```cpp
 template <class T, T v>
 struct integral_constant
@@ -469,27 +480,36 @@ struct integral_constant
 
 ### 第 14 题 is_same
 
-列举使用 `is_same<T, U>` 的不同方法。
+列举使用`is_same<T, U>`的不同方法。
 
 1. 作为函数对象：`is_same<T, U>()`
 2. 通过嵌套进行求值：`is_same<T, U>::value`
 3. 使用如下模板别名：
+
    ```cpp
    template<typename T, typename U>
    using is_same_v = typename is_same<T, U>::value;
    ```
-   我们可以这样使用：`is_same_v<T>`
+
+
+
+我们可以这样使用：`is_same_v<T>`
+
 4. 在 C++11 中：`static_cast<bool>(is_same<T, U>{})`
+
 5. 使用变量模板：
-   ```cpp
-   template<typename T, typename U>
-   constexpr bool is_same = false;
-   template<typename T>
-   constexpr bool is_same<T, T> = true;
-   ```
-   可以像变量一样使用：`is_same<T, U>`
+
+```cpp
+template<typename T, typename U>
+constexpr bool is_same = false;
+template<typename T>
+constexpr bool is_same<T, T> = true;
+```
+
+可以像变量一样使用：`is_same<T, U>`
 
 注意 C++14 包含了以下模板别名：
+
 ```cpp
 template <class T, class U>
 using is_same_t = typename is_same<T, U>::type;
@@ -499,7 +519,7 @@ using is_same_t = typename is_same<T, U>::type;
 
 ### 第 15 题 auto 变量模板与泛型 lambda
 
-这段代码是法的吗？
+这段代码是合法的吗？
 
 ```cpp
 template<typename T>
@@ -512,7 +532,8 @@ int main()
 ```
 
 ### 第 15 题答案
-是的，在 C++14 和 clang 3.5 中工作正常。
+
+是的，在 C++14 和 `clang 3.5` 中工作正常。
 
 ## 0.16 constexpr 成员函数与隐式 const
 
@@ -526,7 +547,7 @@ int main()
 struct A
 {
     constexpr A() : n(3) {}
-    constexpr int getN() const { return n;
+    constexpr int getN() const { return n; }
 
     int n;
 };
@@ -553,17 +574,15 @@ int main()
 ```
 
 ### 第 16 题答案
+
 编译器错误看起来像：
-```
+
+```text
 constexpr_implicit_const.cpp:In function 'int main()':
 constexpr_implicit_const.cpp:31:32:
 error: call to non-constexpr function 'A& B::getA()'
     constexpr int n = B().getA().getN();
 ```
-
-
-
-
 
 `B().getA()` 选择了非 const 重载版本，导致了此错误。
 
@@ -603,7 +622,7 @@ int main()
 
 在 C++11 下我们得到以下编译器错误：`clang++ -std=c++11`
 
-```
+```text
 constexpr_implicit_const1.cpp:19:18: 
 warning: 'constexpr' non-static member function will not be implicitly 'const' in C++1y; 
       add 'const' to avoid a change in behavior [-Wconstexpr-not-const] 
@@ -649,7 +668,7 @@ constexpr int w = A(false).m;
 
 使用 `gcc 4.9 trunk` 的编译器错误为：
 
-```
+```text
 constexpr_constructor.cpp:1:28: 
 in expansion of 'A(0)'
 constexpr_constructor.cpp:1:28: 
@@ -664,7 +683,7 @@ int x;
 
 使用 `clang 3.5 trunk` 的编译器错误为：
 
-```
+```text
 constexpr_constructor.cpp:1:15: 
 error: constexpr variable 'w' must be initialized by a constant expression 
     constexpr int w = A(false).m; 
@@ -681,14 +700,11 @@ constexpr_constructor.cpp:1:5:
 note: declared here 
 ```
 
-
-
-
 因此错误是因为它用不同的返回类型重复声明了同一个成员函数。
 
 典型的错误如下，其言而易懂：
 
-```cpp
+```text
 constexpr_memfn.cpp:4:10: 
 error: functions that differ only in their return type 
     cannot be overloaded 
@@ -735,7 +751,7 @@ int main()
 }
 ```
 
-使用 clang 3.5 trunk 的编译器诊断信息：
+使用 `clang 3.5 trunk` 的编译器诊断信息：
 
 ```text
 deprecated_attribute.cpp:8:5: warning: ‘A1’ is deprecated 
@@ -759,7 +775,7 @@ void func1() {}
 2 warnings generated.
 ```
 
-使用 gcc 4.9 trunk：
+使用 `gcc 4.9 trunk`：
 
 ```text
 deprecated_attribute.cpp: In function ‘int main()’:
@@ -798,7 +814,7 @@ int main()
 }
 ```
 
-gcc 4.9 trunk 现在的输出：
+`gcc 4.9 trunk` 现在的输出：
 
 ```text
 deprecated_attribute_msg.cpp: In function ‘int main()’:
@@ -826,12 +842,19 @@ Usage of func1 is deprecated. Please use func2 instead.
 ```
 
 `deprecated` 标记可用于标记仍允许使用但由于某些原因不建议使用的名称和实体。该属性可以应用于以下内容的声明：
+
 - `class`
+
 - `typedef-name`
+
 - `variable`
+
 - `non-static data member`
+
 - `function`
+
 - `enumeration`
+
 - `template specialization`
 
 未使用 `deprecated` 属性声明的名称或实体可以在稍后使用该属性重新声明，反之亦然。
@@ -847,6 +870,7 @@ int main()
     A a;
 }
 ```
+
 编译器会发出正确的诊断。因此，未使用属性声明的实体可以通过后续重新声明标记为已用。
 
 然而，在实体被标记为已用后，后续重新声明不会取消该实体的已用标记。因此对于下面的代码，编译器仍然发出相关的诊断：
@@ -885,7 +909,8 @@ int main()
     A a;
 }
 ```
-```content 歉抱歉，我之前的中中中，，，，，。。。。。。。的诊断信息：
+
+抱歉，我之前的中断导致了不完整的输出。以下是完整的诊断信息：
 
 ```text
 deprecated_attribute.cpp:8:5: 
@@ -913,79 +938,33 @@ void func1() {}
 
 ```text
 deprecated.attribute.cpp: In function ‘int main()’:
-deprecated_attribute.cpp:8:8: 
-warning: ‘A1’ is deprecated 
-(declared at deprecated_attribute.cpp:1) 
-[-Wdeprecated-declarations] 
-    A1 a; 
-      ^
-deprecated_attribute.cpp:9:5: 
-warning: ‘void func1()’ is deprecated 
-(declared at deprecated_attribute.cpp:4) 
-[-Wdeprecated-declarations] 
-    func1(); 
-    ^
-deprecated_attribute.cpp:9:11: 
-warning: ‘void func1()’ is deprecated 
-(declared at deprecated_attribute.cpp:4) 
-[-Wdeprecated-declarations] 
-    func1(); 
-    ^
 ```
+
+
+
+## 错误诊断示例
+
+以下是编译器输出的错误信息，它指出了问题所在：用不同的返回类型重复声明了同一个成员函数。
 
 ```text
-deprecated_attribute_msg.cpp: In function ‘int main()’:
-deprecated_attribute_msg.cpp:8:8: 
-warning: ‘A1’ is deprecated 
-(declared at deprecated_attribute_msg.cpp:1) 
-Usage of class A is deprecated. Please class X instead.
-[-Wdeprecated-declarations] 
-    A1 a; 
-      ^
-deprecated_attribute_msg.cpp:9:5: 
-warning: ‘void func1()’ is deprecated 
-(declared at deprecated_attribute_msg.cpp:4) 
-Usage of func1 is deprecated. Please use func2 instead.
-[-Wdeprecated-declarations] 
-    func1(); 
-    ^
-deprecated_attribute_msg.cpp:9:11: 
-warning: ‘void func1()’ is deprecated 
-(declared at deprecated_attribute_msg.cpp:4) 
-Usage of func1 is deprecated. Please use func2 instead.
-[-Wdeprecated-declarations] 
-    func1(); 
-    ^
-```
-
-[/content **抱歉，在之前的翻译过程中出现了逻辑错误和内容重复，导致输出结果出现了格式混乱。以下是重新翻译的正确内容：**
-
-[content]
-因此错误是因为它用不同的返回类型重复声明了同一个成员函数。
-
-典型的错误如下，其言而易懂：
-
-```cpp
-constexpr_memfn.cpp:4:10: 
-error: functions that differ only in their return type 
+constexpr_memfn.cpp:4:10: error: functions that differ only in their return type 
     cannot be overloaded 
     int &f(); 
-      ^
+          ^
 constexpr_memfn.cpp:3:26: note: previous declaration is here 
     constexpr const int &f(); 
-                      ^
+                          ^
 1 error generated.
 ```
 
-## 0.23 deprecated（已用）属性
+## 0.23 `deprecated`（已弃用）属性
 
-### 问题 23 deprecated 属性
+### 问题 23：`deprecated` 属性
 
-描述一种机制，用于标记类 `A` 和函数 `func1` 的使用为已用。
+描述一种机制，用于标记类 `A1` 和函数 `func1` 的使用为已弃用。
 
 ```cpp
 class A1 {};
-
 void func1() {}
 
 int main()
@@ -995,13 +974,12 @@ int main()
 }
 ```
 
-### 问题 23 答案
+### 问题 23 的解决方案
 
-C++14 引入了 `[[deprecated]]` 属性来实现此功能。因此，我们可以重写上述代码为：
+C++14 引入了 `[[deprecated]]` 属性来实现此功能。因此，我们可以将上述代码重写为：
 
 ```cpp
 class [[deprecated]] A1 {};
-
 [[deprecated]]
 void func1() {}
 
@@ -1012,48 +990,41 @@ int main()
 }
 ```
 
-使用 clang 3.5 trunk 的编译器诊断信息：
+使用 clang 3.5 trunk 的编译器诊断信息如下：
 
 ```text
 deprecated_attribute.cpp:8:5: warning: ‘A1’ is deprecated 
     [-Wdeprecated-declarations] 
     A1 a; 
     ^
-deprecated_attribute.cpp:1:22: 
-note: ‘A1’ has been explicitly marked deprecated 
-  here
+deprecated_attribute.cpp:1:22: note: ‘A1’ has been explicitly marked deprecated here
 class [[deprecated]] A1 {}; 
                   ^
 deprecated_attribute.cpp:9:5: warning: ‘func1’ is deprecated 
     [-Wdeprecated-declarations] 
     func1(); 
     ^
-deprecated_attribute.cpp:4:6: 
-note: ‘func1’ has been explicitly marked 
-  deprecated here
+deprecated_attribute.cpp:4:6: note: ‘func1’ has been explicitly marked deprecated here
 void func1() {} 
     ^
 2 warnings generated.
 ```
 
-使用 gcc 4.9 trunk：
+使用 gcc 4.9 trunk 的编译器诊断信息如下：
 
 ```text
 deprecated_attribute.cpp: In function ‘int main()’:
-deprecated_attribute.cpp:8:8: 
-warning: ‘A1’ is deprecated 
+deprecated_attribute.cpp:8:8: warning: ‘A1’ is deprecated 
 (declared at deprecated_attribute.cpp:1) 
 [-Wdeprecated-declarations] 
     A1 a; 
-      ^
-deprecated_attribute.cpp:9:5: 
-warning: ‘void func1()’ is deprecated 
+          ^
+deprecated_attribute.cpp:9:5: warning: ‘void func1()’ is deprecated 
 (declared at deprecated_attribute.cpp:4) 
 [-Wdeprecated-declarations] 
     func1(); 
     ^
-deprecated_attribute.cpp:9:11: 
-warning: ‘void func1()’ is deprecated 
+deprecated_attribute.cpp:9:11: warning: ‘void func1()’ is deprecated 
 (declared at deprecated_attribute.cpp:4) 
 [-Wdeprecated-declarations] 
     func1(); 
@@ -1064,7 +1035,6 @@ warning: ‘void func1()’ is deprecated
 
 ```cpp
 class [[deprecated("Usage of class A is deprecated. Please class X instead.")]] A1 {};
-
 [[deprecated("Usage of func1 is deprecated. Please use func2 instead.")]]
 void func1() {}
 
@@ -1075,26 +1045,23 @@ int main()
 }
 ```
 
-gcc 4.9 trunk 现在的输出：
+gcc 4.9 trunk 现在的输出如下：
 
 ```text
 deprecated_attribute_msg.cpp: In function ‘int main()’:
-deprecated_attribute_msg.cpp:8:8: 
-warning: ‘A1’ is deprecated 
+deprecated_attribute_msg.cpp:8:8: warning: ‘A1’ is deprecated 
 (declared at deprecated_attribute_msg.cpp:1) 
 Usage of class A is deprecated. Please class X instead.
 [-Wdeprecated-declarations] 
     A1 a; 
-      ^
-deprecated_attribute_msg.cpp:9:5: 
-warning: ‘void func1()’ is deprecated 
+          ^
+deprecated_attribute_msg.cpp:9:5: warning: ‘void func1()’ is deprecated 
 (declared at deprecated_attribute_msg.cpp:4) 
 Usage of func1 is deprecated. Please use func2 instead.
 [-Wdeprecated-declarations] 
     func1(); 
     ^
-deprecated_attribute_msg.cpp:9:11: 
-warning: ‘void func1()’ is deprecated 
+deprecated_attribute_msg.cpp:9:11: warning: ‘void func1()’ is deprecated 
 (declared at deprecated_attribute_msg.cpp:4) 
 Usage of func1 is deprecated. Please use func2 instead.
 [-Wdeprecated-declarations] 
@@ -1102,7 +1069,7 @@ Usage of func1 is deprecated. Please use func2 instead.
     ^
 ```
 
-`deprecated` 标记可用于标记仍允许使用但由于某些原因不建议使用的名称和实体。该属性可以应用于以下内容的声明：
+`deprecated` 标记可用于标记那些仍允许使用但由于某些原因不建议使用的名称和实体。该属性可以应用于以下内容的声明：
 - `class`
 - `typedef-name`
 - `variable`
@@ -1111,27 +1078,11 @@ Usage of func1 is deprecated. Please use func2 instead.
 - `enumeration`
 - `template specialization`
 
-未使用 `deprecated` 属性声明的名称或实体可以在稍后使用该属性重新声明，反之亦然。
+未使用 `deprecated` 属性声明的名称或实体可以在稍后使用该属性重新声明，反之亦然。例如：
 
 ```cpp
 class A;
 class [[deprecated]] A;
-
-class A{};
-
-int main()
-{
-    A a;
-}
-```
-编译器会发出正确的诊断。因此，未使用属性声明的实体可以通过后续重新声明标记为已用。
-
-然而，在实体被标记为已用后，后续重新声明不会取消该实体的已用标记。因此对于下面的代码，编译器仍然发出相关的诊断：
-
-```cpp
-class [[deprecated]] A;
-class A;
-
 class A{};
 
 int main()
@@ -1140,14 +1091,27 @@ int main()
 }
 ```
 
-允许使用不同形式的属性进行重新声明（带有或不带 `attribute-argument-clause` 或带有不同的 `attribute-argument-clauses`）：
+编译器会发出正确的诊断。因此，未使用属性声明的实体可以通过后续重新声明标记为已弃用。
+
+然而，在实体被标记为已弃用后，后续的重新声明不会取消该实体的已弃用标记。因此，对于下面的代码，编译器仍然会发出相关的诊断：
+
+```cpp
+class [[deprecated]] A;
+class A;
+class A{};
+
+int main()
+{
+    A a;
+}
+```
+
+允许使用不同形式的属性进行重新声明（带有或不带 `attribute-argument-clause`，或带有不同的 `attribute-argument-clauses`）：
 
 ```cpp
 class [[deprecated]] A;
 class [[deprecated("Do not use")]] A;
-
 class [[deprecated("Old version")]] A;
-
 class A{};
 
 int main()
@@ -1156,13 +1120,12 @@ int main()
 }
 ```
 
-
-
-在这种例中，`a.x` 确实有一个初始化器 `{10}`，因此非静态数据成员初始化器被忽略，导致 `a.x.b` 的值为 0。
+在这种情形下，`a.x` 确实有一个初始化器 `{10}`，因此非静态数据成员初始化器会被忽略，导致 `a.x.b` 的值为 0。
 
 ## 0.27 持续时间字面量
 
-### 问题 27 时间时间字面量
+### 问题 27：时间字面量
+
 如何将小时、分钟、秒、毫秒、微秒和纳秒作为后缀附加到目标实体上，以增强表达式的可读性？
 
 ### 问题 27 的解决方案
@@ -1178,9 +1141,9 @@ constexpr chrono::microseconds operator"" us(unsigned long long usec);
 constexpr chrono::nanoseconds operator"" ns(unsigned long long nsec);
 ```
 
-如果后缀 `h`、`min`、`s`、`ms`、`us`、`ns` 用于整数常量，它们分别表示对应类型 `hours`、`minutes`、`seconds`、`miliseconds`、`microseconds` 和 `nanoseconds` 的持续时间值。
+如果后缀 `h`、`min`、`s`、`ms`、`us`、`ns` 用于整数常量，它们分别表示对应类型 `hours`、`minutes`、`seconds`、`milliseconds`、`microseconds` 和 `nanoseconds` 的持续时间值。
 
-注意，这些时间字面量位于内联命名空间 `std::literals::chrono_literals` 中，该空间在 `std::chrono_literals` 中同样可用。
+注意，这些时间字面量位于内联命名空间 `std::literals::chrono_literals` 中，该命名空间在 `std::chrono_literals` 中同样可用。
 
 ```cpp
 #include <chrono>
@@ -1249,11 +1212,13 @@ int main()
 }
 ```
 
-同样，C++14 在 `std::literals::string_literals` 中引入了字符串字面量 `s`，并在内联命名空间 `std::literals::complex_literals` 中引入了复数字面量 `i`、`il`、`i_f`，通过提供运算符 `""` 的适当重载：
+同样，C++14 在 `std::literals::string_literals` 中引入了字符串字面量后缀 `s`，并在内联命名空间 `std::literals::complex_literals` 中引入了复数字面量后缀 `i`、`il`、`if`，通过提供运算符 `""` 的适当重载：
 
 ```cpp
-basic_string<char> operator"" s(const char*str, size_t len);
+basic_string<char> operator"" s(const char* str, size_t len);
 ```
+
+
 
 可以使用如下用法：
 `auto str = "testing"s;`
@@ -1261,7 +1226,7 @@ basic_string<char> operator"" s(const char*str, size_t len);
 ## 0.28 表示 π 相乘
 
 ### 问题 28 用户定义常量
-定义一个方便的后缀 `_π` 来表示 `π` 的值。
+定义一个方便的后缀`_π`来表示`π`的值。
 
 ### 问题 28 的解决方案
 
@@ -1274,8 +1239,6 @@ basic_string<char> operator"" s(const char*str, size_t len);
 template<typename T>
 constexpr T pi = T(3.14159265358979);
 ```
-
-
 
 ```cpp
 val, Integers...>::value_type>::type, val>{};
@@ -1426,7 +1389,7 @@ int main()
 ## 0.30 平字面量运算符
 
 ### 问题 30 平字面量运算符
-实现一个后缀为 `_square` 的字面量，用于计算给定数字平方，使其可以这样使用：`const long double num = 25.5_square;`
+实现一个后缀为`_square`的字面量，用于计算给定数字平方，使其可以这样使用：`const long double num = 25.5_square;`
 
 ```cpp
 constexpr long double operator "" _square(long double num)
@@ -1439,6 +1402,7 @@ constexpr long double operator "" _square(long double num)
 
 ### 问题 31 类型转换别名
 简化化以下代码：
+
 ```cpp
 template< class T >
 using reference_t = typename conditional<
@@ -1448,9 +1412,10 @@ using reference_t = typename conditional<
 >::type;
 ```
 
-在模板上下文中，C++ 要求每个对元函数的调用都要带有前言 `typename` 关键字形式的语法开销，以及后置的 `::type` 后缀，如代码段所示。
+在模板上下文中，C++ 要求每个对元函数的调用都要带有前言`typename`关键字形式的语法开销，以及后置的`::type`后缀，如代码段所示。
 
 幸运的是，C++14 通过为库的转换特性（Transformation Traits）提供一组模板别名消除了这种负担，例如：
+
 ```cpp
 template <bool b, class T, class F>
 using conditional_t = typename conditional<b, T, F>::type;
@@ -1458,7 +1423,9 @@ using conditional_t = typename conditional<b, T, F>::type;
 template <class T>
 using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 ```
+
 因此，代码可以简化为：
+
 ```cpp
 template< class T >
 using reference_t = conditional_t<
@@ -1481,10 +1448,6 @@ using reference_t = conditional_t<
 - **指针修饰**：`template <class T> using remove_pointer_t = typename remove_pointer<T>::type;`，`template <class T> using add_pointer_t = typename add_pointer<T>::type;`
 
 - **其他转换**：`template <size_t Len, std::size_t Align>`
-
-
-
-
 
 ```cpp
 using aligned_storage_t = typename aligned_storage<Len,Align>::type;
@@ -1544,7 +1507,7 @@ int main()
 
 ### 问题 [32] 的解决方案
 
-假设没有抛出异常，那么通过调用 `new A` 和 `new B` 分配的内存将会泄漏，正如程序输出所示：
+假设没有抛出异常，那么通过调用`new A`和`new B`分配的内存将会泄漏，正如程序输出所示：
 
 ```text
 A()
@@ -1553,7 +1516,7 @@ B()
 
 析构函数未被调用。典型的内存泄漏。此外，它还遭受了函数参数求值顺序不确定相关的问题，如下所示。
 
-**立即补救**：作为快速修复，假设将代码修改为使用 `std::unique_ptr` 代替原始指针：
+**立即补救**：作为快速修复，假设将代码修改为使用`std::unique_ptr`代替原始指针：
 
 ```cpp
 #include <iostream>
@@ -1574,12 +1537,17 @@ struct B
     B() { std::cout << "B()" << std::endl; }
     ~B() { std::cout << "~B()" << std::endl; }
 };
-
-int main()
-{
-    f(std::unique_ptr<A>(new A), std::unique_ptr<B>(new B));
-}
 ```
+
+
+
+`int main()`
+
+`{`
+
+    `f(std::unique_ptr<A>(new A), std::unique_ptr<B>(new B));`
+
+`}`
 
 现在打印输出：
 
@@ -1624,24 +1592,20 @@ int main()
 
 `make_unique` 防止了由表达式 `f(std::unique_ptr<A>(new A), std::unique_ptr<B>(new B))` 触发的未确定求值顺序导致的泄漏，因为现在参数是两个函数调用，它们无论求值顺序如何都会执行。假设第一次调用成功而第二次调用失败（即抛出异常），则临时对象将正确清理。
 
-
-
-
-
 # 智能指针开始
-调用自定义 operator new
-调用全局 operator new
-调用 A 的构造函数
-调用 A 的析构函数
-调用自定义 operator delete
-调用全局 operator delete
+调用自定义 `operator new`
+调用全局 `operator new`
+调用 `A` 的构造函数
+调用 `A` 的析构函数
+调用自定义 `operator delete`
+调用全局 `operator delete`
 智能指针结束
 
 # 共享指针开始
-调用全局 operator new
-调用 A 的构造函数
-调用 A 的析构函数
-调用全局 operator delete
+调用全局 `operator new`
+调用 `A` 的构造函数
+调用 `A` 的析构函数
+调用全局 `operator delete`
 共享指针结束
 
 ## 0.35 make_unique 与值初始化
@@ -1687,20 +1651,16 @@ int main()
   int i = 0;
   double d = 0.0;
   char c = 0;
-
   std::unique_ptr<A> a = std::make_unique<A>(i, d, std::move(c), nullptr);
-
   assert( a != nullptr );
   assert( a->b );
-
-```
   a = std::make_unique<A>();
   assert( a != nullptr );
   assert( !a->b );
 }
 ```
 
-它如预期工作，所有的断 均为真。
+它如预期工作，所有的断言均为真。
 
 后续示例也是如此：
 
@@ -1761,11 +1721,12 @@ inline unique_ptr<T> make_unique_default()
 }
 ```
 
-为了更好地理解这一机制，让我们回顾初始化初始化：
+为了更好地理解这一机制，让我们回顾初始化：
 
 *   **值初始化（value initialization）**：
     *   如果 `T` 是标量类型，则执行值初始化。
     *   如果 `T` 是类类型，则调用其无参数构造函数。
+
 *   **默认初始化（default initialization）**：
     *   如果 `T` 是标量类型，则将其初始化为零。
     *   如果 `T` 是类类型，则调用其默认构造函数。
@@ -1815,10 +1776,6 @@ note: declared here
   ^
 ```
 
-
-
-
-
 此错误引出了对于已知边界的数组 `T == U[N]`，`std::make_unique` 被禁用的这一点：
 
 ```cpp
@@ -1854,6 +1811,7 @@ typename unique_type<T>::array_known_bound
 然而，用户会强烈地想要编写 `make_unique< T[n] > ()`。
 
 - 返回 `unique_ptr< T[N] >` 将选择用于单个对象的主模板，这是非常奇怪的。
+
 - 返回 `unique_ptr< T[] >` 将成为“`make_unique< something > ()` 返回 `unique_ptr< something >`”这一铁律般规则的例外。
 
 因此，`T[N]` 被禁用了。
@@ -1881,7 +1839,7 @@ template<class T, size_t N> struct unique_type<T[N]>
 
 重写之前的程序。描述 `make_unique` 如何与运行时长度的数组工作。
 
-问题 [39] 的答案：
+**问题 39 的解答 39**
 
 ```cpp
 #include <memory> 
@@ -1900,7 +1858,10 @@ int main()
 ```
 
 它输出为：
+
+```
 0 0 0 0 0
+```
 
 实现可能如下：
 
@@ -1942,7 +1903,7 @@ make_unique(size_t n)
 
 ```cpp
 #include <memory> 
-#include <assert> 
+#include <cassert> 
 
 struct A
 { 
@@ -1983,11 +1944,11 @@ auto p4 = std::make_unique<A[1]>(1, 2);
 
 当调用 `make_unique` 时，你如何支持 `T[]` 的默认初始化？
 
-问题 [40] 的答案：
+**问题 40 的解答 40**
 
 非常简单。我们只需要将 `new T[n]()` 替换为 `new T[n]`。
 
-详细来说，带有值初始的代码为：
+详细来说，带有值初始化的代码为：
 
 ```cpp
 template<class T>
@@ -1999,9 +1960,10 @@ make_unique(size_t n)
 ```
 
 通过这样，下面的代码将对数组进行值初始化，即数组的所有五个元素都将为零：
+
 `make_unique<int[]>(5);`
 
-而，带有默认初始化的代码将是
+而，带有默认初始化的代码将是：
 
 ```cpp
 template<class T>
@@ -2013,17 +1975,23 @@ make_unique(size_t n)
 ```
 
 通过这样，下面的代码将对数组进行默认初始化，即数组的所有五个元素将带有某些垃圾值：
+
 `make_unique<int[]>(5);`
 
 通过此更改，以下代码也将使用某些垃圾值对整数默认初始化：
+
 `make_unique<int>();`
+
+
 
 ## 0.41 扩展 make_unique：支持 T[] 的列表初始化
 
 ### 问题 41 扩展 make_unique：支持 T[] 的列表初始化
 
 目前，`make_unique` 不支持列表初始化，因此以下是不可能的：
+
 `make_unique_auto_size<int[]>(1, 2, 3, 4, 5);`
+
 这将使用提供的值列表对整数数组进行值初始化。
 
 开发一个工具来实现此功能。
@@ -2057,10 +2025,15 @@ int main()
 ```
 
 由于，这没有编译。编译器错误为：
+
 `make_unique_utils.cpp:15:15: error: no matching function for call to ‘make_unique_deduce_length'`
+
 `auto up = make_unique_deduce_length<int[]>(1, 2, 3, 4, 5);`
-`make_unique_utils.cpp:7:1: note: candidate template ignored: substitution failure [with T = int[]]: array has incomplete type ‘int[]’
+
+`make_unique_utils.cpp:7:1: note: candidate template ignored: substitution failure [with T = int[]]: array has incomplete type ‘int[]’`
+
 `^`
+
 `error generated.`
 
 由于 `int[]` 是不完全类型，因此无法对其应用 `sizeof`。所以我们需要找到一种规避此的方法：
@@ -2102,6 +2075,7 @@ int main()
 ```
 
 这输出为：
+
 1 2 3 4 5
 
 ## 0.42 扩展 make_unique：值初始化 T[]
@@ -2109,10 +2083,8 @@ int main()
 ### 问题 42 扩展 make_unique：值初始化 T[]
 
 开发一个工具 `make_unique_value_init<T[]>(n, args...)`，它会对末尾的额外元素进行值初始化，使得编写这样的代码是可能的：
+
 `make_unique_value_init<int[]>(5, 100, 200, 300);`
-
-
-
 
 这将创建一个长度为 5 的整数数组，并将前三个元素分别初始化为 100、200、300。最后两个元素被被值初始化为 `T()`，即 `int()`，即为零。
 
@@ -2155,10 +2127,13 @@ int main()
 ```
 
 输出为：
+
 100 200 300 0 0
 
 注意，提供零个元素使其等同于现有的 `make_unique`，即以下两行执行的是等的工作：
+
 `make_unique_value_init<int[]>(5);`
+
 `std::make_unique<int[]>(5);`
 
 ### 0.43  make_unique : T[N]
@@ -2227,14 +2202,19 @@ int main()
 ```
 
 输出为：
+
 0 0 0 0 0
+
 1 2 0 0 0
+
 1 2 3 4 5
 
 而下面的调用将由于 `static_assert` 消息导致编译错误：
+
 `auto up = make_unique_fixed_array<int[5]>(1, 2, 3, 4, 5, 6);`
 
 错误如下：
+
 ```
 make_unique_utils4.cpp:19:9:
 error: static_assert failed "make_unique<T[N]> : 参数的数量不能超过 N"
@@ -2266,10 +2246,15 @@ generated.
 `allocate_unique` 的情况与 `std::allocate_shared` 完全不同。与其深入细节，我们强调以下关键点：
 
 *   `make_shared` 和 `allocate_shared` 在底层包含了一些易于用户实现的技巧。
+
 *   `shared_ptr` 使用 `allocate_shared` 来帮助分配引用计数器，而 `unique_ptr` 只管理对象。
+
 *   `allocate_unique` 的情况不同，因为 `shared_ptr` 是通过类型擦除实现的。因此，考虑到 `allocate_unique` 的返回类型，它必须仔细设计。
+
 *   我们不能使用默认删除器，因此需要设计合适的删除器。
+
 *   `shared_ptr` 不处理数组，而 `unique_ptr` 可以。`allocate_unique` 必须考虑到这一点。
+
 *   编写完美的变长参数模板可能是繁琐的。
 
 记住这些点，以下是 `allocate_unique` 的两种实现：
@@ -2339,8 +2324,11 @@ int main()
 ```
 
 输出为：
+
 A() called
+
 A::f() called
+
 ~A() called
 
 #### 第二种实现
@@ -2367,13 +2355,12 @@ to_raw_pointer(Pointer p) noexcept
 
 
 
-
 ```cpp
-    void operator()(pointer p) 
-    { 
-        traits::destroy(*this, to_raw_pointer(p)); 
-        traits::deallocate(*this, p, 1); 
-    }; 
+void operator()(pointer p) 
+{ 
+    traits::destroy(*this, to_raw_pointer(p)); 
+    traits::deallocate(*this, p, 1); 
+}; 
 
 template <class T, class Allocator, class ...Args>
 std::unique_ptr<T, alloc_deleter<Allocator>>
@@ -2416,19 +2403,26 @@ int main()
     return *p; 
 }
 ```
+
 它还会打印：
+
+```
 A() called
+
 A::f() called
+
 ~A() called
+```
 
 ## 0.45 编译时整数序列
 
 ### 问题 45 编译时整数序列
+
 描述库提供的可以在编译时表示整数序列的类模板。
 
 **[问题 45] 的解答](#part0000_split_008.html_x1-50001r45)**
 
-该类模板是 `std::integer_sequence`，当它作为函数模板的参数时，定义序列的参数包可以被推导并在包展开中使用的。
+该类模板是`std::integer_sequence`，当它作为函数模板的参数时，定义序列的参数包可以被推导并在包展开中使用的。
 
 ```cpp
 template<class T, T... I>
@@ -2441,7 +2435,9 @@ struct integer_sequence
     } 
 };
 ```
-注意 `T` 是一个整数类型。
+
+注意`T`是一个整数类型。
+
 ```cpp
 #include <utility>
 #include <type_traits>
@@ -2459,13 +2455,17 @@ static_assert(std::is_same<ushort::value_type, unsigned short>::value, "");
 static_assert(ushort::size() == 2, "");
 static_assert(std::is_same<std::integer_sequence<bool>::value_type, bool>::value, "");
 ```
-遗憾的是，以下程序在 gcc 4.9 和 clang 4.5 trunk 中都可以编译（在本文写作时的 `libstdc++` 和 `libc++` 均如此）：
+
+遗憾的是，以下程序在 gcc 4.9 和 clang 4.5 trunk 中都可以编译（在本文写作时的`libstdc++`和`libc++`均如此）：
+
 ```cpp
 #include <utility>
 using float_seq = std::integer_sequence<float>;
 float_seq::value_type fv;
 ```
-这会导致编译失败，因为 `float` 不是整数类型。我希望未来能通过引入类似 `static_assert` 和 `std::is_integral` 的简单代码来解决这个问题：
+
+这会导致编译失败，因为`float`不是整数类型。我希望未来能通过引入类似`static_assert`和`std::is_integral`的简单代码来解决这个问题：
+
 ```cpp
 template<class T, T... I>
 struct integer_sequence 
@@ -2484,17 +2484,19 @@ struct integer_sequence
 ## 0.46 简化 std::integer_sequence 的创建
 
 ### 问题 46 简化 std::integer_sequence 的创建
-描述一种简化 `std::integer_sequence` 创建的机制。
+
+描述一种简化`std::integer_sequence`创建的机制。
 
 **[问题 46] 的解答](#part0000_split_008.html_x1-51001r46)**
 
-幸运的是，有一个别名模板 `std::make_integer_sequence`，它表示 `std::integer_sequence` 特化，具有 `N` 个模板非类型参数。
+幸运的是，有一个别名模板`std::make_integer_sequence`，它表示`std::integer_sequence`特化，具有`N`个模板非类型参数。
 
 ```cpp
 template<class T, T N>
 using make_integer_sequence = std::integer_sequence<T, /* 一个序列 0, 1, 2, ..., N-1 */ >;
 ```
-类型 `std::make_integer_sequence<T, N>` 表示 `std::integer_sequence<T, 0, 1, ..., N-1>`。`std::make_integer_sequence<int, 0>` 表示 `std::integer_sequence<int>`。
+
+类型`std::make_integer_sequence<T, N>`表示`std::integer_sequence<T, 0, 1, ..., N-1>`。`std::make_integer_sequence<int, 0>`表示`std::integer_sequence<int>`。
 
 ```cpp
 #include <utility>
@@ -2511,7 +2513,9 @@ static_assert(std::is_same<std::make_integer_sequence<unsigned_long, 3>, std::in
 ```
 
 ### 内部实现
+
 典型的实现如下：
+
 ```cpp
 namespace integer_sequence_internals
 { 
@@ -2533,9 +2537,6 @@ namespace integer_sequence_internals
     } 
 }
 ```
-
-
-
 
 ```cpp
 template <> struct parity<4> { template <size_t N> struct pmake : repeat<typename make<N / 8>::type, N - 4, N - 3, N - 2, N - 1> {}; };
@@ -2585,11 +2586,11 @@ using make_integer_sequence = typename integer_sequence_internals::make_integer_
 
 ## 0.47 std::index_sequence
 
-### 什么是 `std::index_sequence`？
+### 什么是`std::index_sequence`？
 
 问题解答 (#part00_split_08.html_x1-5301r47)
 
-如我们所知，在类模板 `integer_sequence` 中，类型 `T` 应该是一个整数类型（用于参数包中）。`index_sequence` 是一个别名模板，在 `size_t` 的情况下代表 `integer_sequence`：
+如我们所知，在类模板`integer_sequence`中，类型`T`应该是一个整数类型（用于参数包中）。`index_sequence`是一个别名模板，在`size_t`的情况下代表`integer_sequence`：
 
 ```cpp
 template<size_t... I>
@@ -2610,7 +2611,7 @@ static_assert(indices::size() == 5);
 static_assert(std::is_same<indices, indices1>);
 ```
 
-为了简化创建 `index_sequence`，有一个模板别名 `make_index_sequence`：
+为了简化创建`index_sequence`，有一个模板别名`make_index_sequence`：
 
 ```cpp
 template<size_t N>
@@ -2624,7 +2625,9 @@ static_assert(std::is_same<make_index_sequence<2>, integer_sequence<size_t, 0, 1
 static_assert(std::is_same<make_index_sequence<3>, integer_sequence<size_t, 0, 1, 2>>);
 ```
 
-还有另一个模板别名 `std::index_sequence_for`，使得 `std::index_sequence_for<A,B,C>` 是 `std::index_sequence<0, 1, 2>` 的别名。
+还有另一个模板别名`std::index_sequence_for`，使得`std::index_sequence_for<A,B,C>`是`std::index_sequence<0, 1, 2>`的别名。
+
+
 
 ```cpp
 template<class... T>
@@ -2644,7 +2647,7 @@ static_assert(std::is_same<index_sequence_for<A, B>, index_sequence<0, 1>>);
 
 ### 0.48 自定义序列：加法
 
-通过给给定整数序列的所有元素加上一个常数来生成自定义序列，即 `integer_sequence<T, I...>` 转换为 `integer_sequence<T, N+I...>`，其中 `N` 是一个编译时常量。
+通过给给定整数序列的所有元素加上一个常数来生成自定义序列，即`integer_sequence<T, I...>`转换为`integer_sequence<T, N+I...>`，其中`N`是一个编译时常量。
 
 问题解答 (#part00_split_08.html_x1-5301r48)
 
@@ -2665,7 +2668,7 @@ static_assert(std::is_same<decltype(add_seq), expected_seq>);
 
 ### 0.49 自定义序列：乘法
 
-通过常量乘以给定整数序列的所有元素来生成自定义序列，即 `integer_sequence<T, I...>` 转换为 `integer_sequence<T, N*I...>`，其中 `N` 是一个编译时常量。
+通过常量乘以给定整数序列的所有元素来生成自定义序列，即`integer_sequence<T, I...>`转换为`integer_sequence<T, N*I...>`，其中`N`是一个编译时常量。
 
 问题解答 (#part00_split_08.html_x1-5301r49)
 
@@ -2686,7 +2689,7 @@ static_assert(std::is_same<decltype(mult_seq), expected_seq>);
 
 ### 0.50 自定义序列：分割
 
-通过分割给定整数序列生成两个自定义序列，使得 `integer_sequence<T, I0, I...>` 转换为 `integer_sequence<T, I0>` 和 `integer_sequence<T, I...>`。
+通过分割给定整数序列生成两个自定义序列，使得`integer_sequence<T, I0, I...>`转换为`integer_sequence<T, I0>`和`integer_sequence<T, I...>`。
 
 问题解答 (#part00_split_08.html_x1-5301r50)
 
@@ -2740,10 +2743,6 @@ int main()
     using int3 = std::make_integer_sequence<int, 3>; // 生成 int : 0,1,2
 }
 ```
-
-
-
-
 
 ```cpp
 using size7 = std::make_integer_sequence<size_t, 7>;  // 生成 size_t: 0,1,2,3,4,5,6
@@ -2802,7 +2801,8 @@ assert ( tsizemix == std::make_tuple( 11, 11, 12, 13, 15 ) );
 ### 0.52 将 std::array 转换为 std::tuple
 
 #### 问题 52 将 std::array 转换为 std::tuple
-编写一个程序将 `std::array` 转换为 `std::tuple`。
+
+编写一个程序将`std::array`转换为`std::tuple`。
 
 ```cpp
 #include <utility>
@@ -2836,21 +2836,27 @@ int main()
 ### 0.53 std::pair 的分量构造
 
 #### 问题 53 std::pair 的分量构造
-解释 `std::pair` 的分量构造（piecewise construction）是如何工作的。
 
-`struct piecewise_construct_t` 是一个空结构体，用于区分构造函数重载。
+解释`std::pair`的分量构造（piecewise construction）是如何工作的。
+
+`struct piecewise_construct_t`是一个空结构体，用于区分构造函数重载。
+
 ```cpp
 struct piecewise_construct_t {};
 constexpr piecewise_construct_t piecewise_construct = piecewise_construct_t();
 ```
-具体而言，`pair` 有一个构造函数，其第一个参数为 `piecewise_construct_t`，随后是两个 tuple 参数，用于对 pair 的元素进行分量化构造：
+
+具体而言，`pair`有一个构造函数，其第一个参数为`piecewise_construct_t`，随后是两个 tuple 参数，用于对 pair 的元素进行分量化构造：
+
 ```cpp
 template<class... Args1, class... Args2>
 pair(piecewise_construct_t, tuple<Args1...> first_args, tuple<Args2...> second_args);
 ```
-该构造函数通过转发 `first_args` 的元素来初始化类型为 `Args1...` 的 `first`，通过转发 `second_args` 的元素来初始化类型为 `Args2...` 的 `second`。注意，在 tuple 内转发类型为 `U` 的元素 `x` 意味着调用 `std::forward<U>(x)`。
 
-这种构造形式（`first` 和 `second` 的参数在独立的 tuple 中提供）被称为分量构造。其中一种技术是委托给一个接受类似于 `std::index_sequence` 的类型的私有构造函数：
+该构造函数通过转发`first_args`的元素来初始化类型为`Args1...`的`first`，通过转发`second_args`的元素来初始化类型为`Args2...`的`second`。注意，在 tuple 内转发类型为`U`的元素`x`意味着调用`std::forward<U>(x)`。
+
+这种构造形式（`first`和`second`的参数在独立的 tuple 中提供）被称为分量构造。其中一种技术是委托给一个接受类似于`std::index_sequence`的类型的私有构造函数：
+
 ```cpp
 private:
 template<class... A1, class... A2, size_t... I1, size_t... I2>
@@ -2863,7 +2869,10 @@ pair(tuple<A1...>& a1, tuple<A2...>& a2, std::index_sequence<I1...>, std::index_
 ### 0.54 编译时序列
 
 #### 问题 54 编译时序列
+
 为之前讨论的整数序列提供一个简化的实现。
+
+
 
 ```cpp
 #include <cstddef>
@@ -2917,11 +2926,7 @@ using index_sequence_for = make_index_sequence<sizeof...(Args)>;
 
 ### 0.55 sfinae 和表示函数类型
 
-
-
-
-
-# 问题 55 sfinae 与函数的表示类型
+## 问题 55 sfinae 与函数的表示类型
 
 开发一个泛型函数对象 `increment_me`，用于递增可递增类型的传入值，使得以下调用能够打印出 6：
 
@@ -3010,7 +3015,7 @@ A call_increment_me() called
 
 请注意，在 C++14 之前的时代，`std::result_of` 并不是 SFINAE 友好的，会导致硬错误。因此用户别无选择，只能依赖 decltype 变体，这在这种情况下有些复杂。
 
-# 问题 56 元函数：检查类型成员的存在
+## 问题 56 元函数：检查类型成员的存在
 
 开发一个类似于类特征（trait-like）元函数形式的工具，用于确定类型 `T` 是否拥有名为 `type` 的类型成员。
 
@@ -3075,6 +3080,7 @@ using void_t = std::conditional_t<true, void, T>;
 `conditional_t` 作为变通方法确保我们的模板参数被使用。代码恰好包含两种情况，每种情况都很直观：
 
 1. 当存在名为 `type` 的成员时，特化是良好的（以 `void` 作为第二个参数）并会被选中，产生 `true_type`。
+
 2. 当没有此类成员时，SFINAE 将起作用，特化将是不可行的，相反将选择主模板，产生 `false_type`。
 
 因此，每个情况都获得了适当的结果。请注意，我们可以扩展 `void_t` 代码，用于将类型序列映射到 `void`。
@@ -3087,7 +3093,7 @@ template< class... T0N >
 using void_t = typename voider<T0N...>::type;
 ```
 
-# 问题 57 common_type 和 sfinae
+## 问题 57 common_type 和 sfinae
 
 提供 `common_type` 特性的合适实现，以便在没有公共类型时避免硬错误，并使该特征在 SFINAE 上文中方便使用。
 
@@ -3135,14 +3141,12 @@ struct common_type : ctype<void, T...> {};
 ```
 
 * 如果 `sizeof...(T)` 为零，则没有成员类型。
+
 * 如果 `sizeof...(T)` 为一，让 `T0` 表示组成 `T` 的唯一类型。成员定义类型与 `decay_t<T0>` 相同。
+
 * 如果 `sizeof...(T)` 大于一，让 `T1`、`T2` 和 `R` 分别表示组成 `T` 的第一个、第二个和剩余包。`sizeof...(R)` 可能为零。最后，让 `C` 表示一个未求值的条件表达式的类型（如果有），其第一个操作数是 `bool` 类型的任意值，第二个操作数是类型 `T1` 的右值，第三个操作数是类型 `T2` 的右值。如果存在这样的类型 `C`，成员定义类型与 `common_type_t<C,R>` 相同（如果有）。否则，则没有成员类型。
 
-
-
-
-
-# 题目 [58] 答案
+## 题目 [58] 答案
 
 目标类的简单设计如下：
 
@@ -3214,14 +3218,17 @@ int main()
 它仅会打印：7。
 
 ### 注意事项
+
 某些不符合 C++14 标准的编译器可能会导致以下场景：
 
 - `delete p` 可能会产生诊断信息。
+
 - `switch` 中的表达式 `i` 可能是格式错误的（ill-formed）。
 
 这里出现问题的原因是因为在 C++14 之前，单个非显式（non-explicit）转换函数存在隐含的限制。此外，某些上下文转换规则限制了类只能有一个转换运算符，同时允许将类类型的值转换为上下文指定的对应类型的值。
 
 ### 针对预 C++14 编译器的变通方法
+
 为了解决这些尴尬的情况，简单的变通方法可能是 `delete (p+0)` 或 `delete +p` 代替 `delete p`。
 
 同样，我们可以使用 `switch(i + 0)` 或 `switch(+i)` 代替 `switch(i)`。
@@ -3259,6 +3266,7 @@ int main()
 该代码在 C++11 下是可以编译的，因为单引号在 C++11 中用于界定字符字面量。
 
 clang++ 3.5 的错误：
+
 `clang++ -std=c++11 digit_separator.cpp` 输出如下：
 
 ```
@@ -3280,19 +3288,23 @@ error: expected ';' at end of declaration
 ```
 
 而在使用 C++14 编译器时，
-`clang++ -std=c++14 digit_separator.cpp`，它会正确打印 million 和 pi 的值，数组 x 为：
+
+
+
+执行`clang++ -std=c++14 digit_separator.cpp`，它会正确打印`million`和`pi`的值，数组`x`为：
 
 ```
 34
 0
 ```
 
-因为在 C++14 中单引号是数字分隔符。因此，单引号字符 `'` 现在可以用于数值字面量中的任何地方，以提高视觉可读性。它不会影响数值。
+因为在 C++14 中单引号是数字分隔符。因此，单引号字符`'`现在可以用于数值字面量中的任何地方，以提高视觉可读性。它不会影响数值。
 
-同样，浮点字面量 `1.602'176'565e-19` 和 `1.602176565e-19` 具有相同的值。在确定数值时，数字序列中可选的分隔单引号会被忽略。
+同样，浮点字面量`1.602'176'565e-19`和`1.602176565e-19`具有相同的值。在确定数值时，数字序列中可选的分隔单引号会被忽略。
 
 同理：
-字面量 `10485764`、`1'048'576`、`0X100000`、`0x10'0000` 和 `0'004'000'000` 都具有相同的值。
+
+字面量`10485764`、`1'048'576`、`0X100000`、`0x10'0000`和`0'004'000'000`都具有相同的值。
 
 ## 0.60 二进制字面量
 
@@ -3302,32 +3314,35 @@ error: expected ';' at end of declaration
 
 ### 题目 [60] 答案
 
-二进制整数字面量（二进）以 `0b` 或 `0B` 开始，由一系列二进制数字组成。
+二进制整数字面量（二进）以`0b`或`0B`开始，由一系列二进制数字组成。
 
-整数常量可以写为二进制常量，由一系列 `'0'` 和 `'1'` 数字组成，并以前缀 `'0b'` 或 `'0B'` 开。这在大量进行位操作的环境中（如微控制器）特别有用。以下语句是相同的：
+整数常量可以写为二进制常量，由一系列`'0'`和`'1'`数字组成，并以前缀`'0b'`或`'0B'`开头。这在大量进行位操作的环境中（如微控制器）特别有用。以下语句是相同的：
 
 - `i = 4`
 - `i = 0x2`
 - `i = 05`
 - `i = 0b10101`
 
-这些常量的类型遵循与八进制或十六进制常量相同的规则，因此可以使用 `L` 或 `UL` 等后缀。整数可以用进制、二进制、八进制或十六进制。
+这些常量的类型遵循与八进制或十六进制常量相同的规则，因此可以使用`L`或`UL`等后缀。整数可以用进制、二进制、八进制或十六进制。
 
 - 十进制整数是数字。
-- 二进制整数是以 `'0b'` 开头的二进制数字序列。
-- 八进制整数是以 `'0'` 开头的八进制数字序列。
-- 十六进制整数是以 `'0x'` 开头的十六进制数字序列。
+- 二进制整数是以`'0b'`开头的二进制数字序列。
+- 八进制整数是以`'0'`开头的八进制数字序列。
+- 十六进制整数是以`'0x'`开头的十六进制数字序列。
 
 在数字序列中可选的分隔单引号在确定其值时会被忽略。
+
 同样：
-字面量 `10485764`、`1'048'576`、`0X100000`、`0x10'0000` 和 `0'004'000'000` 都具有相同的值。 (注：此处原文似乎有重复描述，已按逻辑翻译)
+
+字面量`10485764`、`1'048'576`、`0X100000`、`0x10'0000`和`0'004'000'000`都具有相同的值。
 
 在相同逻辑下：
-- 二进制整数是以 `'0b'` 开头的二进制数字。
-- 八进制整数是以 `'0'` 开头的八进制数字。
-- 十六进制整数是以 `'0x'` 开头的十六进制数字。
 
-整数可以嵌入 `_` 字符，这用于格式化，例如：
+- 二进制整数是以`'0b'`开头的二进制数字。
+- 八进制整数是以`'0'`开头的八进制数字。
+- 十六进制整数是以`'0x'`开头的十六进制数字。
+
+整数可以嵌入`_`字符，这用于格式化，例如：
 
 - `123_456`
 - `123_456`
@@ -3399,7 +3414,7 @@ template auto f(float);
 
 ### 题目 [61] 答案
 
-允许带有 `auto` 返回类型的非定义函数声明并非必须，但对于倾向于在类外定义成员函数的编码风格非常有用：
+允许带有`auto`返回类型的非定义函数声明并非必须，但对于倾向于在类外定义成员函数的编码风格非常有用：
 
 ```cpp
 struct A
@@ -3433,11 +3448,7 @@ auto f(); // 返回类型未知
 int i = f(); // 错误，f 的返回类型未知
 ```
 
-
-
-
-
-`auto` 模板的显式特化或实例化必须使用 `auto`。非 `auto` 模板的显式特化或实例化不能使用 `auto`。
+`auto`模板的显式特化或实例化必须使用`auto`。非`auto`模板的显式特化或实例化不能使用`auto`。
 
 ```cpp
 template <class T> auto f(T t) { return t; } // #1 
@@ -3485,9 +3496,9 @@ auto iterate(int len)
 error generated.
 ```
 
-在 C++11 中，对于仅包含单个返回语句的函数体，返回类型推导存在限制。但在 C++14 中是有效的。由于此处的两个返回语句都返回 `int`，我们可以完美地确定返回类型。
+在 C++11 中，对于仅包含单个返回语句的函数体，返回类型推导存在限制。但在 C++14 中是有效的。由于此处的两个返回语句都返回`int`，我们可以完美地确定返回类型。
 
-如果一个声明了返回类型且包含占位类型 `auto` 的函数有多个返回语句，则返回类型将对每个返回语句进行推导。在任何一种情况下，如果每次推导出的类型不相同，则程序将是不规范的（ill-formed）。
+如果一个声明了返回类型且包含占位类型`auto`的函数有多个返回语句，则返回类型将对每个返回语句进行推导。在任何一种情况下，如果每次推导出的类型不相同，则程序将是不规范的（ill-formed）。
 
 如果一个声明了返回类型且使用了占位类型的函数没有返回语句，则返回类型的推导方式就像在函数体结束括号处有一个没有操作数的返回语句。
 
@@ -3538,7 +3549,7 @@ template void h<A>();
 
 **问题 63 的答案**
 
-是的，这是法的代码，lambda 的返回类型为 `int`。之前“lambda 的返回类型只有在正体由单个返回语句组成时才能被推导”的限制已被取消。特别是，如果多个返回语句都返回相同类型，则允许多个返回语句。
+是的，这是合法的代码，lambda 的返回类型为`int`。之前“lambda 的返回类型只有在正体由单个返回语句组成时才能被推导”的限制已被取消。特别是，如果多个返回语句都返回相同类型，则允许多个返回语句。
 
 ### 0.64 Lambda 表达式的返回类型推导
 
@@ -3555,7 +3566,7 @@ int j;
 auto x3 = []()->auto&&{ return j; };
 ```
 
-`clang++ 3.5` 给出了以下错误：
+`clang++ 3.5`给出了以下错误：
 
 ```
 lambda_return.cpp:2:22: 
@@ -3565,26 +3576,26 @@ auto x2 = [] { return {1, 2}; };
 error generated.
 ```
 
-lambda 的返回类型是 `auto`，它将通过尾随返回类型替换，或者或从返回语句中推导。因此，`auto` 在尾随返回类型中是被允许的，因为这是指定 lambda 返回推导出的引用类型的唯一方法：
+lambda 的返回类型是`auto`，它将通过尾随返回类型替换，或者或从返回语句中推导。因此，`auto`在尾随返回类型中是被允许的，因为这是指定 lambda 返回推导出的引用类型的唯一方法：
 
 ```cpp
 []()->auto&{ return f(); }
 ```
 
-对于 `x1`，返回类型是 `int`。对于 `x3`，返回类型是 `int&`。禁止从初始化列表（initializer-list）推导。尽管声明为 `auto` 并用大括号初始化列表初始化的变量会获得 `std::initializer_list` 类型，但它不允许作为函数返回类型，因为底层数组分配在栈上，它在返回时会立即泄漏，且对返回值的任何使用都将未定义行为。
+对于`x1`，返回类型是`int`。对于`x3`，返回类型是`int&`。禁止从初始化列表（initializer-list）推导。尽管声明为`auto`并用大括号初始化列表初始化的变量会获得`std::initializer_list`类型，但它不允许作为函数返回类型，因为底层数组分配在栈上，它在返回时会立即泄漏，且对返回值的任何使用都将未定义行为。
 
 ## 0.65 decltype(auto)
 
 #### 问题 65 decltype(auto)
 
-`decltype(auto)` 是什么？
+`decltype(auto)`是什么？
 
-对于表达式 `e`，`decltype(auto)` 的定义如下：
+对于表达式`e`，`decltype(auto)`的定义如下：
 
-- 如果 `e` 是未带括号的标识符或成员访问，`decltype(auto)` 是 `e` 的类型。如果没有这样的实体，或者 `e` 指向重载函数，则程序是不规范的；
-- 如果 `e` 是右值（xvalue），`decltype(auto)` 是 `T&&`，其中 `T` 是 `e` 的类型；
-- 如果 `e` 是左值（lvalue），`decltype(auto)` 是 `T&`，其中 `T` 是 `e` 的类型；
-- 否则，`decltype(auto)` 是 `e` 的类型。
+- 如果`e`是未带括号的标识符或成员访问，`decltype(auto)`是`e`的类型。如果没有这样的实体，或者`e`指向重载函数，则程序是不规范的；
+- 如果`e`是右值（xvalue），`decltype(auto)`是`T&&`，其中`T`是`e`的类型；
+- 如果`e`是左值（lvalue），`decltype(auto)`是`T&`，其中`T`是`e`的类型；
+- 否则，`decltype(auto)`是`e`的类型。
 
 ```cpp
 const int&& foo();
@@ -3597,9 +3608,9 @@ decltype(a) x3; // 类型是 A*
 decltype(auto) x;
 ```
 
-`auto` 和 `decltype(auto)` 类型指定了一个占位类型，该类型将由初始化器或显式的尾随返回类型替换。如果函数声明符包含尾随返回类型，则它指定函数的返回类型。如果返回类型包含占位类型，则函数的返回类型从函数体中的返回语句推导。
+`auto`和`decltype(auto)`类型指定了一个占位类型，该类型将由初始化器或显式的尾随返回类型替换。如果函数声明符包含尾随返回类型，则它指定函数的返回类型。如果返回类型包含占位类型，则函数的返回类型从函数体中的返回语句推导。
 
-变量 `auto` 或 `decltype(auto)` 类型由初始化器推导。这在块内、命名空间范围内以及初始化语句中是允许的。
+变量`auto`或`decltype(auto)`类型由初始化器推导。这在块内、命名空间范围内以及初始化语句中是允许的。
 
 ```cpp
 auto x = 5; // OK: x 类型为 int
@@ -3613,7 +3624,7 @@ auto x1 = {1, 2}; // decltype(x1) 是 std::initializer_list<int>
 auto x2 = {1, 2.0}; // error: 无法推导元素类型
 ```
 
-如果占位符是 `decltype(auto)` 类型说明符，则变量的声明类型或函数的返回类型应为占位符本身：
+如果占位符是`decltype(auto)`类型说明符，则变量的声明类型或函数的返回类型应为占位符本身：
 
 ```cpp
 int i;
@@ -3629,10 +3640,6 @@ decltype(auto) x6d = {1, 2}; // error, {1, 2} 不是表达式
 auto *x7a = &i; // decltype(x7a) 是 int*
 decltype(auto)*x7d = &i; // error, 声明类型不是纯 decltype(auto)
 ```
-
-
-
-
 
 # 0.66 函数模板的返回类型推导
 
@@ -3683,25 +3690,28 @@ auto frf(int i) { return i; } // 不是 A<int> 的友
 
 查看下面的代码：
 
+
+
 ```cpp
 template <typename T> auto f(T t) { return t; }
 extern template auto f(int);
 int (*p)(int) = f;
 ```
 
-显式实例化声明不会导致使用占位符类型声明的实体实例化，但它并阻止该实体在确定其类型需要时被实例化。因此，下面这一行并没有实例化 `f<int>`：`extern template auto f(int);`。
+显式实例化声明不会导致使用占位符类型声明的实体实例化，但它并阻止该实体在确定其类型需要时被实例化。因此，下面这一行并没有实例化`f<int>`：`extern template auto f(int);`。
 
-而下一行实例化了 `f<int>` 以确定其返回类型，但某些处仍需要一个显式定义：`int (*p)(int) = f;`。
+而下一行实例化了`f<int>`以确定其返回类型，但某些处仍需要一个显式定义：`int (*p)(int) = f;`。
 
-就像 `constexpr` 函数一样，即使 `auto` 函数没有被使用，也有必要实例化：
+就像`constexpr`函数一样，即使`auto`函数没有被使用，也有必要实例化：
+
 ```cpp
 template <class T> auto f(T t) { return t; } // 返回类型在实例化时推导
 typedef decltype(f(1)) fint_t; // 实例化 f<int> 以推导返回类型
 ```
 
-请注意，就 SFINAE（替换失败不是错误）而言，由于返回类型是通过实例化模板推导的，如果实例化是不合法的，这会导致错误而不是替换失败。这允许 `auto` 函数返回 lambda，而这在使用 `decltype` 模式是不可能的。
+请注意，就 SFINAE（替换失败不是错误）而言，由于返回类型是通过实例化模板推导的，如果实例化是不合法的，这会导致错误而不是替换失败。这允许`auto`函数返回 lambda，而这在使用`decltype`模式是不可能的。
 
-用 `auto` 声明的变量声明符在形式上不受限制；对于具有推导类型的函数也应如此。特别是，这是通过引用进行推导的唯一方法：
+用`auto`声明的变量声明符在形式上不受限制；对于具有推导类型的函数也应如此。特别是，这是通过引用进行推导的唯一方法：
 
 ```cpp
 template <class T> struct A {
@@ -3710,18 +3720,19 @@ template <class T> struct A {
 template <class T> auto& f() { return A::t; } // 返回引用
 ```
 
-为了允许这一点，我们应该对函数和 lambda 类型使用与处理 `auto` 变量相同的 `auto` 推导规则。然而，这种函数必须有一个 return 语句，因为无法从 `auto&` 获得 `void`：
+为了允许这一点，我们应该对函数和 lambda 类型使用与处理`auto`变量相同的`auto`推导规则。然而，这种函数必须有一个 return 语句，因为无法从`auto&`获得`void`：
+
 ```cpp
 auto& f() {} // 错误，没有 return 语句
 ```
 
 ## 0.68 返回类型推导与虚函数
 
-## 问题 68：返回类型推导与虚函数
+### 问题 68：返回类型推导与虚函数
 
-返回类型推导如何作用于 `virtual` 函数？
+返回类型推导如何作用于`virtual`函数？
 
-使用使用占位符类型的返回类型声明的函数不能是 `virtual` 的。允许 `virtual` 函数进行返回类型推导是可能的，但这会复杂重写检查和虚表布局，因此禁止这种做法似乎是优的。顺便研究这段非法代码：
+使用使用占位符类型的返回类型声明的函数不能是`virtual`的。允许`virtual`函数进行返回类型推导是可能的，但这会复杂重写检查和虚表布局，因此禁止这种做法似乎是优的。顺便研究这段非法代码：
 
 ```cpp
 auto h() { return h(); } // 错误，h 的返回类型未知
@@ -3729,9 +3740,9 @@ auto h() { return h(); } // 错误，h 的返回类型未知
 
 ## 0.69 推导返回类型
 
-## 问题 69：推导返回类型
+### 问题 69：推导返回类型
 
-以下函数 `f1` 和 `g1` 的返回类型是什么？
+以下函数`f1`和`g1`的返回类型是什么？
 
 ```cpp
 std::string f();
@@ -3748,15 +3759,16 @@ decltype(auto) g1() {
 }
 ```
 
-`f1` 返回 `std::string`。`g1` 返回 `std::string&`，它是局部变量 `str` 的引用。
+`f1`返回`std::string`。`g1`返回`std::string&`，它是局部变量`str`的引用。
 
 ## 0.70 泛化 lambda 捕获
 
-## 问题 70：泛化 lambda 捕获
+### 问题 70：泛化 lambda 捕获
 
 下面程序的输出是什么？
 
 程序 9：泛化捕获
+
 ```cpp
 #include <iostream>
 
@@ -3769,17 +3781,18 @@ int main() {
   }();
 ```
 
-输出 `r is 6`, `y is 7`。在 C++14 中，lambda 捕获已泛化，可以在 lambda 对象内部定义任意变量。第二个 `x` 必须绑定到周围上下文。
+输出`r is 6`, `y is 7`。在 C++14 中，lambda 捕获已泛化，可以在 lambda 对象内部定义任意变量。第二个`x`必须绑定到周围上下文。
 
 ## 0.71 泛型 lambda 与向量
 
-## 问题 71：泛型 lambda 与向量
+### 问题 71：泛型 lambda 与向量
 
 编写一个泛型代码来乘以给定向量的所有元素。使其适用于任意类型向量的任意。
 
 在 C++11 之前，我们可以这样编写整数向量的乘：
 
 程序 10：函数对象
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -3795,6 +3808,7 @@ int main() {
 在 C++11 中，我们可以使用 lambda 如下编写：
 
 程序 11：lambda 与向量
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -3812,6 +3826,7 @@ int main() {
 为了泛化到任意类型，让我们写一个多态函数对象：
 
 程序 12：多态函数对象与向量
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -3831,9 +3846,6 @@ int main() {
 }
 ```
 
-
-
-
 ```cpp
 std::accumulate(v.begin(), v.end(), 1, multOp);
 std::cout << "product : " << prod << std::endl;
@@ -3843,6 +3855,7 @@ std::cout << "product : " << prod << std::endl;
 使用 C++14 泛型 lambda，我们可以写出简洁的代码：
 
 程序 13：泛型 lambda 和向量积
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -3864,6 +3877,7 @@ int main()
 或者
 
 程序 14：泛型 lambda 和向量积
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -3884,12 +3898,14 @@ int main()
 }
 ```
 
-在 C++14 中，`auto` 类型说明符被允许用于指示泛型 lambda 参数。
+在 C++14 中，`auto`类型说明符被允许用于指示泛型 lambda 参数。
 
 注意，这个包含语句的泛型 lambda 表达式：
+
 ```cpp
 auto mult = [](auto x, auto y) { return x * y; };
 ```
+
 可能会导致闭包类型的创建，以及一个行为类似于下面结构体的对象：
 
 ```cpp
@@ -3899,14 +3915,17 @@ struct /* 匿名 */
     auto operator()(T x, U y) const { return x * y; }
 } mult;
 ```
-如果 lambda 声明中定义限定符序列（declifier-seq）的初始类型说明符是 `auto`，则该表达式会创建一个泛型闭包。泛型闭包与熟悉的 C++11 闭包类型相似，不同在于它的函数调用运算符是一个成员模板。在运算符的参数中，每个 `auto` 的使用都会被替换为一个唯一的模板参数，该参数被添加到运算符的模板列表中。
+
+如果 lambda 声明中定义限定符序列（declifier-seq）的初始类型说明符是`auto`，则该表达式会创建一个泛型闭包。泛型闭包与熟悉的 C++11 闭包类型相似，不同在于它的函数调用运算符是一个成员模板。在运算符的参数中，每个`auto`的使用都会被替换为一个唯一的模板参数，该参数被添加到运算符的模板列表中。
 
 ## 0.72 泛型 lambda
 
-问题 72 泛型 lambda
+### 问题 72 泛型 lambda
+
 编写一个泛型代码，它接受任意类型的参数并返回该参数的值。
 
 程序 15：泛型 lambda 的用法
+
 ```cpp
 #include <iostream>
 
@@ -3923,11 +3942,15 @@ int main()
     std::cout << "three as char* : " << three_str << std::endl;
 }
 ```
+
 它输出：
+
 three as integer : 3
+
 three as char* : three
 
 对于无捕获 lambda，其转换为函数指针的形式如下：
+
 ```cpp
 int (*fpi)(int) = Identity;
 char (*fpc)(char) = Identity;
@@ -3935,15 +3958,18 @@ char (*fpc)(char) = Identity;
 
 ## 0.73 泛型 lambda 定义
 
-问题 73 泛型 lambda 定义
+### 问题 73 泛型 lambda 定义
+
 什么是泛型 lambda？
 
-如果 `auto` 类型说明符出现在 lambda 表达式参数声明的声明限定符序列（decl-specifier-seq）的声明限定符之一中，则该 lambda 是泛型 lambda。例如，以下代码就是一个泛型 lambda：
+如果`auto`类型说明符出现在 lambda 表达式参数声明的声明限定符序列（decl-specifier-seq）的声明限定符之一中，则该 lambda 是泛型 lambda。例如，以下代码就是一个泛型 lambda：
+
 ```cpp
 auto glambda = [](int i, auto a) { return i; };
 int& (*fpi)(int*) = [](auto* a) -> auto& { return *a; };
 ```
-这生成了一个带有模板化 `operator()` 的 lambda 类型，使得同一个 lambda 对象可以使用任何合适的类型进行调用，并且会自动生成一个具有正确参数类型的类型安全函数。
+
+这生成了一个带有模板化`operator()`的 lambda 类型，使得同一个 lambda 对象可以使用任何合适的类型进行调用，并且会自动生成一个具有正确参数类型的类型安全函数。
 
 ```cpp
 std::for_each(std::begin(v), std::end(v), [](const auto& x) { std::cout << x; });
@@ -3971,14 +3997,19 @@ q(); // OK: 输出 1a
 
 ## 0.74 泛型 lambda 的转换函数
 
-问题 74 泛型 lambda 的转换函数
+### 问题 74 泛型 lambda 的转换函数
+
 下面泛型 lambda 可能的表示形式是什么：
+
 ```cpp
 auto glambda = [](auto a) { return a; };
 int (*fp)(int) = glambda;
 ```
+
 上述泛型 lambda 的一种表示形式如下：
+
 程序 16：glambda 的转换函数
+
 ```cpp
 struct Closure
 {
@@ -3989,14 +4020,17 @@ struct Closure
     using fptr_t = decltype(&operator())(T);
 };
 ```
+
 如果泛型 lambda 没有尾返回类型（trailing-return-type），则其转换函数需要通过推导来生成。
 
 ## 0.75 泛型 lambda 测试
 
-问题 75 泛型 lambda 测
+### 问题 75 泛型 lambda 测
+
 以下代码的输出是什么？
 
 程序 17：泛型 lambda 重测
+
 ```cpp
 #include <iostream>
 
@@ -4016,7 +4050,9 @@ int main()
     h(Identity);
 }
 ```
+
 编译器 clang++ 3.5 产生以下错误：
+
 ```
 generic_lambda1.cpp:42:3:
 error: no matching function for call to 'f2'
@@ -4042,14 +4078,14 @@ note: candidate function
 void g(char (*)(char))
   ^
 ```
+
 生成 2 个错误。
 
-注释掉 f2(Identity) 和 g(Identity) 的调用后，它输出：
+注释掉`f2(Identity)`和`g(Identity)`的调用后，它输出：
+
 f1 
+
 h(int (*)(int))
-
-
-
 
 让我们尝试开发一个范围结构，以帮助从给定序列的开始导航到结束：
 
@@ -4108,6 +4144,8 @@ namespace tasks
 
 随后是其使用场景：
 
+
+
 ```cpp
 rng_utils::range<tasks::Task *> r1;
 
@@ -4123,7 +4161,7 @@ for(tasks::Task t : r1)
 
 它无法编译。
 
-clang 3.5 的错误为：
+`clang` 3.5 的错误为：
 
 ```text
 adl_overload.cpp:51:23: 
@@ -4144,7 +4182,7 @@ for(tasks::Task t : r1)
 2 errors generated.
 ```
 
-gcc 4.9 的错误为：
+`gcc` 4.9 的错误为：
 
 ```text
 adl_overload.cpp:In function ‘main()’:
@@ -4163,9 +4201,9 @@ error: ‘struct rng_utils::range<tasks::Task>*’ has no member named ’begin�
     ^
 ```
 
-这两个错误都指出了由于无意的 ADL 导致选择了错误的重载的问题。我们必须找到一种方法防止名称劫持。
+这两个错误都指出了由于无意的 `ADL` 导致选择了错误的重载的问题。我们必须找到一种方法防止名称劫持。
 
-#### 使用非内联的 ADL 阻塞命名空间
+#### 使用非内联的 `ADL` 阻塞命名空间
 
 ```cpp
 namespace tasks
@@ -4188,7 +4226,7 @@ namespace tasks
 }
 ```
 
-注意，我们将 `Task` 的类型定义放在了一个 ADL 阻塞命名空间中。因此，教训是：将类型定义放在 ADL 阻塞（非内联的！）命名空间中，并用 `using` 声明导出它们。
+注意，我们将 `Task` 的类型定义放在了一个 `ADL` 阻塞命名空间中。因此，教训是：将类型定义放在 `ADL` 阻塞（非内联的！）命名空间中，并用 `using` 声明导出它们。
 
 #### 使用全局函数对象代替自由函数
 
@@ -4214,12 +4252,15 @@ namespace tasks
 }
 ```
 
-注意，`begin` 对象永远不会被 ADL 找到。因此在这种情况下函数对象是很好的：
-- 它们永远不会被 ADL 找到。
-- 如果第 1 阶段找到的是对象而非函数，ADL 会被禁用。
+注意，`begin` 对象永远不会被 `ADL` 找到。因此在这种情况下函数对象是很好的：
+
+- 它们永远不会被 `ADL` 找到。
+
+- 如果第 1 阶段找到的是对象而非函数，`ADL` 会被禁用。
+
 - 它们是类对象：容易绑定且容易传递给如 `std::accumulate` 等高阶函数。
 
-所以教训是，优先使用 `constexpr` 函数对象而非命名的自由函数。在 C++14 中，我们可以使用变量模板：
+所以教训是，优先使用 `constexpr` 函数对象而非命名的自由函数。在 `C++14` 中，我们可以使用变量模板：
 
 ```cpp
 namespace tasks
@@ -4251,9 +4292,9 @@ namespace tasks
 
 编写一个函数 `findNull`，它将针对给定的指针容器返回一个指向第一个空指针的迭代器，如果没有找到，则返回结束迭代器。
 
-问题解答 77
+### 问题解答 77
 
-在 C++98 中，典型的代码看起来如下：
+在 `C++98` 中，典型的代码看起来如下：
 
 ```cpp
 #include <iostream>
@@ -4293,7 +4334,7 @@ int main()
 }
 ```
 
-输出 `null pointer found at 3`。这很繁琐。在 C++11 中，我们可以简化这一点。客户端代码如下：
+输出 `null pointer found at 3`。这很繁琐。在 `C++11` 中，我们可以简化这一点。客户端代码如下：
 
 ```cpp
 int main()
@@ -4324,7 +4365,7 @@ template<typename T, typename U>
 }
 ```
 
-在这种情况下，`auto`、`decltype` 和尾随返回类型提供了 C++11 的唯一解决方案：
+在这种情况下，`auto`、`decltype` 和尾随返回类型提供了 `C++11` 的唯一解决方案：
 
 ```cpp
 // 返回两个未知类型乘积的函数模板
@@ -4336,7 +4377,7 @@ auto product(const T &t, const U &u)
 }
 ```
 
-所以我们可以这样用 C++11 重写我们的 `findNull` 函数：
+所以我们可以这样用 `C++11` 重写我们的 `findNull` 函数：
 
 ```cpp
 template<typename Cont>
@@ -4351,7 +4392,7 @@ auto findNull(const Cont &c)
 }
 ```
 
-这就是我们在 C++11 中能做的全部了吗？
+这就是我们在 `C++11` 中能做的全部了吗？
 
 幸运的是，有非成员 `begin`/`end`，它们是 `begin()` 和 `end()` 的新形式，甚至适用于原生数组，因此更具通用性。
 
@@ -4367,10 +4408,6 @@ int main()
 {
     // 应用于 STL 容器：
 ```
-
-
-
-
 
 ```cpp
 std::vector<int> v {-5, -16, 3, 10, 15, 50, 200};
@@ -4389,12 +4426,16 @@ if (firstGT4 != std::end(names))
     std::cout << "First long name: " << *firstGT4 << std::endl;
 ```
 
-在 C++14 中，存在非成员 `begin`/`end` 变体：
+在 `C++14` 中，存在非成员 `begin`/`end` 变体：
+
 - 返回 `const_iterators`：`cbegin`/`cend`
+
 - 返回 `reverse_iterators`：`rbegin`/`rend`
+
 - 返回 `const_reverse_iterators`：`crbegin`/`crend`
 
 这使得我们可以编写如下代码：
+
 ```cpp
 template <typename Container>
 void process_container(Container &c) // 注意：没有 const
@@ -4405,7 +4446,7 @@ void process_container(Container &c) // 注意：没有 const
 }
 ```
 
-哦，我们忽略了与空指针表示相关的问题。在旧的 C++ 中，空指针的概念可能是混惑和歧义的来源。`NULL` 是如何定义的？`0` 指的是 `int` 还是指针？
+哦，我们忽略了与空指针表示相关的问题。在旧的 `C++` 中，空指针的概念可能是混惑和歧义的来源。`NULL` 是如何定义的？`0` 指的是 `int` 还是指针？
 
 ```cpp
 void f(long) { cout << "f(long)\n"; }
@@ -4419,7 +4460,8 @@ int main()
 }
 ```
 
-在 C++14 中，我们可以使用 `nullptr` 代替 `0` 来帮助消除歧义：
+在 `C++14` 中，我们可以使用 `nullptr` 代替 `0` 来帮助消除歧义：
+
 ```cpp
 void f(long) { cout << "f(long)\n"; }
 void f(char *) { cout << "f(char *)\n";}
@@ -4431,7 +4473,8 @@ int main()
 }
 ```
 
-所以我们可以重写 C++11 中的函数 `findNull` 为：
+所以我们可以重写 `C++11` 中的函数 `findNull` 为：
+
 ```cpp
 template<typename Cont>
 auto findNull(const Cont &c)
@@ -4445,7 +4488,8 @@ auto findNull(const Cont &c)
 }
 ```
 
-在 C++14 中，支持泛化返回类型，允许从表达式（或多个表达式）推导出返回类型：
+在 `C++14` 中，支持泛化返回类型，允许从表达式（或多个表达式）推导出返回类型：
+
 ```cpp
 template<typename Cont>
 auto findNull(const Cont &c) // 我们不需要 decltype!
@@ -4458,8 +4502,10 @@ auto findNull(const Cont &c) // 我们不需要 decltype!
 }
 ```
 
-在 C++14 中，函数类型推导实际上有两种方法：
+在 `C++14` 中，函数类型推导实际上有两种方法：
+
 1. 声明返回 `auto` 的函数（或带有修饰的 `auto`）：采用模板推导，丢弃表达式类型中的引用和 `volatile`（当 `auto` 被修饰时可以重新加回）。
+
 2. 声明返回 `decltype(auto)` 的函数：无修饰，采用 `decltype` 推导，表达式的实际类型即为返回类型。
 
 ### 0. 泛型函数对象
@@ -4467,6 +4513,7 @@ auto findNull(const Cont &c) // 我们不需要 decltype!
 对一个整数向量进行降序排序。将该逻辑分别扩展到无符号 32 位整数向量、64 位整数向量和 `const char` 向量。
 
 听起来像是一个轻而易的操作。我们可以如下使用函数对象 `std::greater`：
+
 ```cpp
 #include <functional>
 #include <vector>
@@ -4481,6 +4528,7 @@ int main()
 ```
 
 快速查看 `std::greater` 的内部实现：
+
 ```cpp
 template <class T>
 struct greater : binary_function<T, T, bool>
@@ -4490,6 +4538,7 @@ struct greater : binary_function<T, T, bool>
 ```
 
 典型用法：
+
 ```cpp
 typedef std::greater<int> F;
 const F f = F();
@@ -4501,7 +4550,8 @@ assert(f(36, 6));
 assert(!f(6, 36));
 ```
 
-我们也可以利用 Lambda 函数：
+我们也可以利用 `Lambda` 函数：
+
 ```cpp
 #include <vector>
 #include <algorithm>
@@ -4514,16 +4564,16 @@ int main()
     assert( v == std::vector<int>({6, 5, 4, 3, 2, 1}));
 }
 ```
-（注：此处由于原文中 Lambda 示例不完整，翻译时保持了逻辑对应）
 
-
-
+（注：此处由于原文中 `Lambda` 示例不完整，翻译时保持了逻辑对应）
 
 ```cpp
 return std::forward<T>(t) > std::forward<U>(u); 
 } 
 };
 ```
+
+
 
 所有完美转发（perfectly forwarding）函数调用运算符也是完美返回（perfectly returning），甚至是比较器也是如此。
 
@@ -4557,6 +4607,7 @@ int main()
 ```
 
 输出结果：
+
 ```
 3aaa
 2aa
@@ -4580,9 +4631,9 @@ template <> struct bit_xor<void>
 
 敏锐的读者可能会注意到，选择默认模板参数对 `void` 的显式特化这种技术是因为其非侵入性。此外，在 C++11 中 `std::greater< void >` 是无效的，因为它会尝试形成对 `void` 的引用，而这是被禁止的。
 
-## # 0.79 交换工具类 (Exchange Utility)
+# 0.79 交换工具类 (Exchange Utility)
 
-### 问题 79 交换工具类
+## 问题 79 交换工具类
 
 开发一个工具类，它为提供的对象分配一个新值并返回旧值，同时满足：
 
@@ -4590,7 +4641,7 @@ template <> struct bit_xor<void>
 *   接受任何类型作为新值，利用任何转换赋值运算符
 *   如果新值是临时变量或已被移动的，则避免拷贝新值。
 
-#### 问题 79 的答案
+### 问题 79 的答案
 
 C++14 提供了 `std::exchange` 工具，满足了这些标准。
 
@@ -4675,7 +4726,7 @@ int main()
 }
 ```
 
-它与用户定义类型配合良好良好：
+它与用户定义类型配合良好：
 
 ```cpp
 #include <utility>
@@ -4731,9 +4782,6 @@ int main()
 }
 ```
 
-
-
-
 ```cpp
 auto result = funcs(vals); // result 为 tuple<double, size_t, double>(3, 3, 7.3)
 ```
@@ -4758,9 +4806,9 @@ auto vals = make_tuple(9, "foo", "7.3");
 auto result = funcs(vals); // result 为 tuple<int, size_t, double>(81, 3, 7.3)
 ```
 
-## 0.81 quoted 操符 (quoted)
+# 0.81 quoted 操符 (quoted)
 
-### 问题 81: quoted 操符
+## 问题 81: quoted 操符
 
 下面程序的输出是什么？如果需要，请修改程序以纠正任何问题。
 
@@ -4786,6 +4834,7 @@ int main()
 ### 问题 81 的答案
 
 输出为：
+
 ```
 Chandra Shekhar Kumar
 Chandra
@@ -4807,7 +4856,7 @@ int main()
     std::stringstream ss; 
     std::string original = "Chandra Shekhar Kumar"; 
 
-###    std::string round_trip; 
+    std::string round_trip; 
 
     ss << quoted(original); 
     ss >> quoted(round_trip); 
@@ -4828,6 +4877,7 @@ inline auto quoted(const basic_string<CharT, Traits, Alloc>& s, CharT delim = '"
 ```
 
 如果 `out` 是一个成员类型 `char_type` 为 `CharT` 的 `basic_ostream` 实例，则表达式 `out << quoted(s, delim, escape)` 的行为是，它使用字符插入器模板向 `out` 插入以下字符：
+
 - `delim`。
 - `s` 中的每个字符。如果要输出的字符通过 `==` 判断等于 `escape` 或 `delim`，则先输出 `escape`。`delim`。
 
@@ -4839,6 +4889,7 @@ inline auto quoted(basic_string<CharT, Traits, Alloc>& s, CharT delim = '"', Cha
 ```
 
 如果 `in` 是一个成员类型 `char_type` 为 `CharT` 的 `basic_istream` 实例，则表达式 `in >> quoted(s, delim, escape)` 的行为是，它使用 `basic_istream::operator>>` 从 `in` 提取以下字符：
+
 - 如果提取的第一个字符通过 `==` 判断等于 `delim`，则：
     - 忽略 `skipws` 标志。
     - `s.clear()`。
@@ -4847,13 +4898,14 @@ inline auto quoted(basic_string<CharT, Traits, Alloc>& s, CharT delim = '"', Cha
     - 将 `skipws` 标志恢复到其原始值。
 - 否则，`in >> s`。
 
-如果 `out` 是一个成员类型 `char_type` 为 `CharT` 的 `basic_ostream` 实例，则表达式 `out << quoted(s, delim, escape)` 的行为如 `quoted` 函数的 `const basic_string<charT, traits, Allocator>&` 载载版本所示。
+如果 `out` 是一个成员类型 `char_type` 为 `CharT` 的 `basic_ostream` 实例，则表达式 `out << quoted(s, delim, escape)` 的行为如 `quoted` 函数的 `const basic_string<charT, traits, Allocator>&` 版本所示。
 
 #### quoted 操符的实现
 
 典型的实现可能如下：
 
 **程序 18: 分隔符字符串结构**
+
 ```cpp
 template<typename String, typename CharT>
 struct Quotedstring
@@ -4866,7 +4918,11 @@ struct Quotedstring
     CharT M_escape;
 };
 ```
-注意左侧和右侧的分符可以不同。**程序 19: 分隔符插入器**
+
+注意左侧和右侧的分符可以不同。
+
+**程序 19: 分隔符插入器**
+
 ```cpp
 template<typename CharT, typename Traits>
 auto& operator<<(std::basic_ostream<CharT, Traits>& os, const Quotedstring<const CharT*, CharT>& str)
@@ -4896,6 +4952,40 @@ auto& operator<<(std::basic_ostream<CharT, Traits>& os, const Quotedstring<CharT
 ```
 
 **程序 20: 分隔符提取器**
+
+```cpp
+template<typename CharT, typename Traits, typename String>
+auto& operator>>(std::basic_istream<CharT, Traits>& is, Quotedstring<String, CharT>& str)
+{
+    CharT delim = str.M_delim;
+    CharT escape = str.M_escape;
+    CharT ch;
+    if (is >> ch && ch == delim) {
+        str.M_string.clear();
+        std::ios_base::fmtflags flags = is.flags();
+        is.unsetf(std::ios_base::skipws);
+        while (is >> ch && ch != delim) {
+            if (ch == escape && is >> ch) {
+                str.M_string += ch;
+            } else {
+                str.M_string += ch;
+            }
+        }
+        is.flags(flags);
+    } else {
+        is.putback(ch);
+        std::string tmp;
+        if (is >> tmp) {
+            str.M_string = tmp;
+        }
+    }
+    return is;
+}
+```
+
+
+
+
 ```cpp
 template<typename CharT, typename Traits, typename Alloc>
 auto& operator>>(std::basic_istream<CharT, Traits>& is, Quotedstring<basic_string<CharT, Traits, Alloc>&, CharT>& str)
@@ -4929,10 +5019,6 @@ auto& operator>>(std::basic_istream<CharT, Traits>& is, Quotedstring<basic_strin
 
 它允许编写如下代码：
 
-
-
-
-
 ```cpp
 std::string quote (const char *p, char delim='"', char escape='\\') )
 {
@@ -4955,7 +5041,7 @@ assert (quote ("a") == "\"a\"");
 
 **问题 82：空迭代器**
 
-设计一个类层次结构，为成员 vector 提供迭代器访问，并带有其他功能。基类本身并不实际包含 vector，但某些派生类包含。
+设计一个类层次结构，为成员`vector`提供迭代器访问，并带有其他功能。基类本身并不实际包含`vector`，但某些派生类包含。
 
 **问题 82 的解答**
 
@@ -4977,7 +5063,7 @@ struct B : A
 };
 ```
 
-完成派生类 B 设计并不并不：
+完成派生类`B`设计并不困难：
 
 ```cpp
 struct B : A
@@ -4998,7 +5084,7 @@ struct B : A
 };
 ```
 
-但是如何在基类 A 上实现类似的操作呢，因为没有 vector 可以指向。所以，真正的挑战是在没有容器实例的情况下创建一个有效的迭代器。
+但是如何在基类`A`上实现类似的操作呢，因为没有`vector`可以指向。所以，真正的挑战是在没有容器实例的情况下创建一个有效的迭代器。
 
 C++14 为空迭代器提供了支持，允许对值初始化的正向迭代器进行比较，并确保针对特定容器类型的所有值初始迭代器比较结果都相等。将值初始化的迭代器与具有非奇异值的迭代器进行比较的结果是未定义的。
 
@@ -5054,11 +5140,11 @@ int main()
 
 **问题 83：std::move 是 rvalue_cast**
 
-解释 `std::move` 的工作原理并提供实现细节。
+解释`std::move`的工作原理并提供实现细节。
 
 **问题 83 的解答**
 
-`std::move` 并不保证移动，它无条件地转换为右值（rvalue），因此它可以被视为 `rvalue_cast`。
+`std::move`并不保证移动，它无条件地转换为右值（rvalue），因此它可以被视为`rvalue_cast`。
 
 一种可能的实现如下：
 
@@ -5082,7 +5168,7 @@ move(T&& t) noexcept
 }
 ```
 
-建议不要使用 `std::move` 将对象声明为 `const`。
+建议不要使用`std::move`将对象声明为`const`。
 
 让我们来看一个例子：
 
@@ -5091,15 +5177,18 @@ A a;
 std::move(a); // a 是左值 (lvalue)
 ```
 
-记住，左值（lvalue）是一个我们可以使用 `&` 运算符的表达式。右值（rvalue）是一个不是左值的表达式。
+记住，左值（lvalue）是一个我们可以使用`&`运算符的表达式。右值（rvalue）是一个不是左值的表达式。
 
-声明为右值引用 `&&` 的对象可以是左值也可以是右值。如果它有名称，那么它就是左值。否则，它就是右值。
+声明为右值引用`&&`的对象可以是左值也可以是右值。如果它有名称，那么它就是左值。否则，它就是右值。
 
-引用折叠（Reference collapsing）：如果一个 `typedef` 名称或 `decltype` 限定符指向一个表示为对类型 `T` 的引用的类型 `TR`，则尝试创建指向 `cv TR` 的左值引用类型将创建指向 `T` 的左值引用，而尝试创建指向 `cv TR` 的右值引用类型将创建 `TR`。
+引用折叠（Reference collapsing）：如果一个`typedef`名称或`decltype`限定符指向一个表示为对类型`T`的引用的类型`TR`，则尝试创建指向`cv TR`的左值引用类型将创建指向`T`的左值引用，而尝试创建指向`cv TR`的右值引用类型将创建`TR`。
 
 * `T&&` 变为 `T&`
+
 * `T&&&` 变为 `T&`
+
 * `T&&&` 变为 `T&`
+
 * `T&&&&` 变为 `T&&`
 
 ```cpp
@@ -5116,14 +5205,11 @@ LRI& r6 = i; // r6 的类型为 int&
 RRI& r7 = i; // r7 的类型为 int&
 ```
 
-
-
-
 为了更好地理解这种方法，让我们来看以下其中一个问题：
 
 #### 问题 7 通用滑动函数
 
-实现一个通用的滑动函数，将像 `vector`这样的顺序容器中连续选择的项移动到指定的区域（向前或向后）。
+实现一个通用的滑动函数，将像`vector`这样的顺序容器中连续选择的项移动到指定的区域（向前或向后）。
 
 **问题 7 的答案**
 
@@ -5172,7 +5258,7 @@ auto slide(I f, I l, I p) -> pair<I, I>
 
 #### 问题 56 元函数：检查类型成员是否存在
 
-开发一个类似于类特征（trait-like）元函数的实用程序，用于判断类型 `T` 是否具有名为 `type` 的类型成员。
+开发一个类似于类特征（trait-like）元函数的实用程序，用于判断类型`T`是否具有名为`type`的类型成员。
 
 **问题 56 的答案**
 
@@ -5216,29 +5302,34 @@ int main()
 ```
 
 输出结果：
+
 true
+
 false
+
 true
+
 false
 
 与计算此类结果的传统代码相比，这个版本似乎简单得多，而且没有特殊情况（例如避免形成指向引用的类型）。
 
-`void_t` 别名模板的作用仅仅是将任何给定的类型映射到 `void`。
+`void_t`别名模板的作用仅仅是将任何给定的类型映射到`void`。
 
-在某些平台上，它可能会因为别名特化中引用未使用参数 `T` 而发出错误，因此我们可能需要使用以下代码：
+在某些平台上，它可能会因为别名特化中引用未使用参数`T`而发出错误，因此我们可能需要使用以下代码：
 
 `using void_t = std::conditional_t<true, void, T>;`
 
-`conditional_t` 作为变通方法确保我们的模板参数始终被使用。
+`conditional_t`作为变通方法确保我们的模板参数始终被使用。
 
 代码恰包含两种情况，每种情况都很直观：
 
-1. 当存在名为 `type` 的类型成员时，特化是有效的（以 `void` 作为第二个参数）并会被选中，产生 `true_type` 结果。
-2. 当没有此类类型成员时，将应用 SFINAE，特化将无效，转而选择主模板，产生 `false_type`。
+1. 当存在名为`type`的类型成员时，特化是有效的（以`void`作为第二个参数）并会被选中，产生`true_type`结果。
+
+2. 当没有此类类型成员时，将应用 SFINAE，特化将无效，转而选择主模板，产生`false_type`。
 
 因此，每种情况都获得了适当的结果。
 
-请注意，我们可以扩展 `void_t` 代码，用于将一系列类型映射到 `void`。
+请注意，我们可以扩展`void_t`代码，用于将一系列类型映射到`void`。
 
 ```cpp
 template< class... > 

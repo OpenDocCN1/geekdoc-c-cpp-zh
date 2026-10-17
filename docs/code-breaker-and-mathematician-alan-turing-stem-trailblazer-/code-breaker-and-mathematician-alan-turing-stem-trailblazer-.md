@@ -1,14 +1,7 @@
+
 # 密码破解者与数学家艾伦·图灵（STEM 先驱者传）
 
-
-
-
-
-
 ![](img/db58f542749354fde4835edbc0ae9a1a_0_0.png)
-
-
-
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_0_1.png)
 
@@ -16,28 +9,13 @@
 
 https://archive.org/details/codebreakermathe0000heat
 
-
-
-
-
-
-
-
-
-
 内容顾问：John Dooley，诺克斯学院计算机科学教授
 
-
-
-
-
-
-
-第一章
+## 第一章
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_5_0.png)
 
-## 初露的才华
+### 初露的才华
 
 数学家阿兰·图灵证明了思想可以像武器一样强大。他凭借数学和科学天赋以及对国家的热情，找到了帮助英国及其盟友赢得第二次世界大战（1939–1945）的方法。
 
@@ -47,38 +25,35 @@ https://archive.org/details/codebreakermathe0000heat
 
 9 岁时开始入学萨塞郡的黑泽伯斯特学校（Hazelhurst），这是一所寄宿学校。在那里，他继续钻研对科学的兴趣。他阅读了阿尔伯特·爱因斯坦的广义相对论。该理论是爱因斯坦关于引力如何运作的想法。他说物体会根据其质量弯曲（弯曲）时间和空间。引力就是这些弯曲的结果。阿兰非常聪明，但他的老师并没有看到。他们认为他的学业粗心大意，而且他在某些科目上落后太多，几乎不被允许参加考试。
 
-## 证明自己
+### 证明自己
 
 但阿兰参加了考试。他通过并毕业于谢伯恩学校。随后他进入皇家学院（King's College）。那里的老师更接受他对数学和科学的兴趣。他开始思考更复杂的概念，例如统计学。图灵在学习期间会通过划船、航海和跑步来清醒头脑。1934 年毕业后，图灵留在学院担任研究员。他学习了概率论。这一数学分支涉及随机事件发生的概率。1936 年，图灵因其在概率方面的工作获得了剑桥大学的史密斯奖。
 
-第二章
+## 第二章
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_11_0.png)
 
 > 图灵在皇家学院期间既为了兴趣跑步，也参加了比赛。
 
-## 破译密码
+### 破译密码
 
 有一天，图灵在跑步时脑中产生一个他必须记录下的想法。他认为可能制造一台可以自己解决数学题的计算机器。
 
-图灵想象他的机器正在读取一组解决数学题的指令。这些指令位于一段胶带上。胶带上有方格。有些方格是空的，另一些方格上标有 1 或 0 这样的字符。机器会读取胶带上的数字，并计算出难题的答案。
+图灵想象他的机器正在读取一组解决数学题的指令。这些指令位于一段胶带上。胶带上有方格。有些方格是空的，另一些方格上标有 `1` 或 `0` 这样的字符。机器会读取胶带上的数字，并计算出难题的答案。
 
 图灵脑海中的机器是一个思想实验。他认为它并不可能被制造出来。他独自工作，并没有意识到其他数学家也在研究相似的想法。
 
-## 曲棍球或观察雏花的生长
+### 曲棍球或观察雏花的生长
 
 阿兰对植物特别着迷。当阿兰应该和黑泽伯斯特的同学玩曲棍球时，他的母亲画了一幅他盯着雏花的画。小阿兰对植物的兴趣远大于运动。阿兰还喜欢读一本由埃德温·泰尼·布鲁斯特写的《每个孩子都应该知道的奇观》。这是一本涵盖生物之间异异之处的著名科学书籍。
 
 阿兰的母亲对儿子如此喜欢科学并不感到高兴。在当时，拉丁语和英语文学被认为是英国绅士应有的学习课程。她担心他在离开黑泽伯斯特后无法进入一所好学校。
 
-## 困难的学生
+### 困难的学生
 
 他的母亲没有理由担心。13 岁时，阿兰被谢伯恩学校录取，这是一所备受尊敬的英国机构。在那里，他继续独自钻研对科学的兴趣。
 
-
-
-
-在纽泽西州的普林斯顿大学学习。他学习了数学，后来学习了**密码学**。他对密码学的兴趣源于20世纪30年代令人恐惧的国际时事件。
+在纽泽西州的普林斯顿大学学习。他学习了数学，后来学习了`密码学`。他对密码学的兴趣源于20世纪30年代令人恐惧的国际时事件。
 
 > 普林斯顿大学是美国最老的大学之一。它于1746年开始招收。
 
@@ -96,16 +71,17 @@ https://archive.org/details/codebreakermathe0000heat
 
 很快，德国人改变了创建代码的方法，使得Bomba无法破解。然而，Bomba仍然被证明是有用的。它将成为第二次世界大战期间图灵破译工作的重要组成部分。
 
-## 技术面对谈
+### 技术面对谈
 
 > 从本质上说，图灵]发明了软件的概念。软件才是真正重要的发明。
+
 -- 弗里德曼·迪森，物理学家
 
-# 第三章
+## 第三章
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_17_0.png)
 
-## 构建 BOMBE 机
+### 构建 BOMBE 机
 
 1939年9月1日，德国入侵波兰。两天后，法国和英国对德国宣战。第二次世界大战爆发了。图灵在数学和密码学方面的工作突然变得紧迫，成为战争努力的重要部分。
 
@@ -115,9 +91,9 @@ https://archive.org/details/codebreakermathe0000heat
 
 恩尼格玛机看起来像打字机——在计算机发明之前，人们使用这种带有键盘的机器来书写字。它有一个键盘和几个转轮。当在键盘上输入信息时，转轮会转动并改变字母以打乱信息。该机器能够以许多不同的方式打乱字母，使得破译员无法尝试所有组合。而且设置每天都会更改，以创建一个全新的代码。
 
-## 猜谜游戏
+### 猜谜游戏
 
-图灵对于如何破解恩尼格玛代码有一些线索。他知道某些单词和短语在德国发送的信息中很常见。例如，许多信息是关于天气的。常用的词汇如 *wettervorhersage*（天气预报）可以被破译。这些被称为“字谜”（cribs）。字谜可以帮助解锁信息中剩余的文本。
+图灵对于如何破解恩尼格玛代码有一些线索。他知道某些单词和短语在德国发送的信息中很常见。例如，许多信息是关于天气的。常用的词汇如 `wettervorhersage`（天气预报）可以被破译。这些被称为“字谜”（cribs）。字谜可以帮助解锁信息中剩余的文本。
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_19_0.png)
 
@@ -129,13 +105,14 @@ https://archive.org/details/codebreakermathe0000heat
 
 这些线索帮助图灵对如何破解恩尼格玛代码做出了合理的推断。它们是帮助他在脑海中形成数学解决方案的信息碎片。但这些还不足以破解代码。
 
-## 破解代码
+### 破解代码
 
 破解恩尼格玛代码的主要障碍是可能性的数量。对于破译员来说，测试的可能性太多了。但图灵相信机器可以做到人类做不到的事情。
 
 他根据波兰的 Bomba 建造了一台名为 Bombe 的机器。Bombe 由转子和开关组成，作用类似于三十六台恩尼格玛机。这些部件快速移动，以测试数千种不同的字母组合。
 
 > BOMBE 机
+
 Bombe 是一台巨大的机器。它宽约7英尺（2.1米），高6.5英尺（2米），重1吨（0.9吨）。它使用了12英里（19公里）长的线线，包含了九万七个零件。
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_22_0.png)
@@ -144,11 +121,11 @@ Bombe 是一台巨大的机器。它宽约7英尺（2.1米），高6.5英尺（2
 
 在字谜的帮助下，Bombe 对英国拦截的德国信息进行处理。它为每条加密信息找到少数可能的解决方案，供破译员检查。从那里开始，他们很容易地解码代码并阅读信息。
 
-# 第四章
+## 第四章
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_23_0.png)
 
-## 战后
+### 战后
 
 第二次世界大战以德国在1945年的失败告终。Bombe 机在结果中起了主要作用。Bombe 破译的信息告知了敌人的行动和计划。一些专家认为，如果没有图灵的 Bombe 机，战斗还将持续两年。他们估计战争中还将有两百万人死亡。
 
@@ -158,31 +135,29 @@ Bombe 是一台巨大的机器。它宽约7英尺（2.1米），高6.5英尺（2
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_24_0.png)
 
-## 图灵测试
+### 图灵测试
 
 1948年，图灵成为曼彻大学计算实验室的副主任。在那里，他开发了计算机软件和人工智能的思想。他创造了图灵测试来研究人工智能。
 
 图灵测试是一个观察人工智能是否真的思考的实验。作为法官的人在屏幕上接收信息。有些信息来自另一个人。另一些来自计算机。如果法官错误地认为计算机生成的信息来自人类，那么就可以认为该计算机是智能的。图灵测试的形式仍被用于判断计算机的能力。
 
 > “如果一台计算机能够欺骗人类相信它是人类，那么它就应该被称为智能。”
+
 —— 艾兰·图灵
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_26_0.png)
 
-## 最后的贡献
+### 最后的贡献
 
 1952年，图灵将注意力转向生物学和事物的生长。他对这一主题的兴趣可以追溯到童年，当时他对植物非常着迷。成年后，他提出了新的想法来解释生物体模式是如何形成的。他发表了一篇关于这些想法的论文，关注雏菊。
 
 在此期间，图灵的工作被中断。在20世纪50年代的英国，同性恋是非。图灵是同性恋。1952年，他因犯同性恋罪。他失去了安全许可。他无法再为政府从事密码学工作。
 
-## 死亡与荣誉
+### 死亡与荣誉
 
 图灵于1954年6月因氰化物中毒去世。许多人认为他是自杀。但他的死亡可能是意外的。图灵经常在家里实验中使用氰化物。他可能误吞了毒药或误吸入了毒气。
 
 在他去世后，英国政府承认图灵在定罪时受到了不公正的对待。
-
-
-
 
 人们可能会访问位于英国曼彻的艾兰·图灵纪念碑。它于2001年揭幕。
 
@@ -194,61 +169,73 @@ Bombe 是一台巨大的机器。它宽约7英尺（2.1米），高6.5英尺（2
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_29_0.png)
 
-## 时间线
+### 时间线
 
-### 1912
+#### 1912
+
 艾兰·图灵出生。
 
-### 1934
+#### 1934
+
 图灵毕业于剑桥学院。
 
-### 1938
+#### 1938
+
 图灵毕业于普林斯顿大学。
 
-### 1939
+#### 1939
+
 第二次世界大战爆发。
 
-### 1945
+#### 1945
+
 第二次世界大战结束。
 
-### 1950
+#### 1950
+
 图灵开发了图灵测试。
 
-### 1952
+#### 1952
+
 图灵因同恋罪被定罪，失去了了他的安全审查许可。
 
-### 1954
+#### 1954
+
 图灵去世。
 
-### 2009
+#### 2009
+
 英国首相正式向图灵致歉。
 
-### 2013
+#### 2013
+
 伊丽莎白二世女王正式赦免图灵。
 
-# 来源注释
+## 来源注释
 
 - 15 Joel Achenbach, “The Imitation Game Didn’t Tell You about Turing’s Greatest Triumph,”华盛顿邮报，2015年2月20日, http://www.washingtonpost.com/national/health-science/what-imitation-game-didnt-tell-you-about-alan-turings-greatest-triumph/2015/02/20/ffd210b6-b606-11e4-9423-f3d0a1aec335c_story.html?utm_term=bfb1ad333b44c.
+
 - 24 S. Barry Cooper, Alan Turing:‘I Am Building a Brain.’半世纪后，他的继承者击败卡帕帕，《卫报》（美国版），2012年5月14日, https://www.theguardian.com/2012/the-norther/may/14/alan-turing-gary-kasparov-computer.
+
 - 26 “Quora Question: Can Intelligent Machines Mimic Sentience?”周刊新闻，2016年12月25日, http://www.newsweek.com/quora-question-can-machines-become-sentient-535030?amp=1.
 
-# 词汇表
+## 词汇表
 
-**cryptography（密码学)**：信息编码或解码的科学
+**cryptography（密码学）**：信息编码或解码的科学
 
-**probability（概率)**：某事发生的可能性
+**probability（概率）**：某事发生的可能性
 
 **deciphered（破译）**：将代码转换为普通文本
 
-**statistics（统计学)**：对大量数值数据的科学研究
+**statistics（统计学）**：对大量数值数据的科学研究
 
 **enciphered（加密）**：将普通文本转换为代码
 
 **fellow（学者）**：在学院工作的学者
 
-# 更多信息
+## 更多信息
 
-# 图书
+### 图书
 
 Burrows, Terry. Codes, Ciphers, and Cartography: Math Goes to War: Minneapolis: Lerner Publications, 2018. 探索数学如何在战场上应用。
 
@@ -256,53 +243,81 @@ Kallen, Stuart A. World War II Spies and Secret Agents. Minneapolis: Lerner Publ
 
 Nagelhout, Ryan. Alan Turing: Master of Cracking Codes. New York: PowerK13, 2016. 了解更多关于图灵在二战及计算机开发方面的工作。
 
-# 网站
+### 网站
 
 艾兰·图灵的事迹与传记
+
 http://www.facts-about.org.uk/famous-people-facts-starting-with-a/alan-turing.htm
+
 了解更多艾兰·图灵的人生。
 
 学习数学
+
 http://www.thirteen.org/get-the-math
+
 访问此网站了解更多数学及其实际用途。
 
 美国国家安全局——密码机器图库
+
 https://www.nsa.gov/resources/everyone/digital-media-center/image-galleries/cryptologic-museum/machines
+
 看一看 Bombe（破解机）和其他加密机器的图片。
 
 拓展书籍之外的学习。从我们的网站 www.lernerource.com 下载本书的免费互补教育资源。
 
-# 索引
+## 索引
 
 自动计算引擎 (Automatic Computing Engine), 23
+
 Bomba, 15, 20
+
 Bombe, 16, 20–23
+
 计算机器 (computing machine), 10–12
+
 计算机器实验室 (Computing Machine Laboratory), 24
+
 译文 (crib), 18–19,
+
 氰化氢 (cyanide), 26
+
 爱因斯坦，阿尔伯特 (Einstein, Albert), 8–9
+
 伊丽莎白二世（女王), 28
+
 恩尼玛密码 (Enigma machine), 17–20
 
 政府密码译学校 (Government Code and Cypher School), 15
+
 Hazhurst, 6–8
+
 希特勒，阿道夫 (Hitler, Adolf), 14
+
 剑桥学院 (King's College), 9, 14
+
 国家物理实验室 (National Physical Laboratory), 23
+
 纳粹德国 (Nazi Germany), 14
+
 大英帝国帝国勋官 (Officer of the Most Excellent Order of the British Empire), 23
+
 波兰 (Poland), 15–16
 
 普林斯顿大学 (Princeton University), 13–14
+
 谢尔恩学校 (Sherborne School), 8–9
+
 史密斯奖 (Smith's Prize), 9
+
 剑桥大学 (University of Cambridge), 9
+
 曼彻斯特大学 (University of Manchester), 24
+
 第一次世界大战 (World War I), 15
+
 第二次世界大战 (World War II), 5, 16, 22
 
-# 关于作者
+## 关于作者
 
 Heather E. Schwartz 为孩子们写过六多本非虚构书籍。她总是喜欢研究和学习那些对自己所做充满热情的人，比如艾兰·图灵。
 
@@ -312,46 +327,68 @@ Heather E. Schwartz 为孩子们写过六多本非虚构书籍。她总是喜欢
 
 图灵的父母告诉他，放弃数学去学习文学和拉丁文等更有风度的科目更好。但他坚持了下来，在1939年第二次世界大战爆发时，他已准备好应对他国家面临的最大挑战：纳粹德国。图灵将他的高级数学知识用于破解德语信息。英国以此扭转了战争局面——他们提供了现代计算和人工智能的基础。
 
-# STEM 先驱
+## STEM 先驱
 
 航空航天工程师 Avril Ericsson
+
 虚拟现实游戏设计师 Jane McNeal
+
 动物科学家和航天员 Jane Goode
+
 航天员物理学家 Sally Ride
+
 航天员 Mays
+
 天文学家和太空倡导者 Neil derasse Tyson
+
 破译者和数学家 Alan Turing
+
 计算机工程师 Sanghi
+
 计算机科学家 Jan Bartik
+
 环保主义者 Angela Wang
+
 环保主义者 Rachel Carson
-创始人兼互联网企业家 Mark Zuckerberg
-遗传学专家 John L. Keyes
-天才物理学家 Albert Einstein
-网络安全专家 Paris Tarbiz
-谷歌和眼镜创新者 Sebastian Thun
-GoPro发明者 Nickman
-发明家、工程师和物理学家 Nikola Tesla
-iPod 和电子愿景家 Tony Fadell
-火星科学实验室工程师 Diana Trujillo
-数学家和计算机科学家 Grace Hopper
-Minecraft 创建者 Markus "Notch" Persson
-NASA 天文学家 Nancy Grace
-数学家 Catherine Johnson
-任天堂视频游戏设计师 Shigeru Miyamoto
-核物理学家 Chen-Shung Wu
-程序员教育倡导者 Bill Nye
-空间工程师和科学家 Margaret Hamilton
-空间工程师大事 Elon Musk
-超级水枪科学家 Lonnie Johnson
-理论物理学家 Brian Green
-理论物理学家 Stephen Hawking
-城市生物学家 Danielle Lee
-疫苗专家 Pearl Kenrick 和 Grace Eldering
-YouTube 创始人 Steve Chen, Chad Hurley, 和
-Jared Karim
+
+
+
+# 科技与科学领域杰出人物
+
+## 互联网与计算机科学
+- 创始人兼互联网企业家 **Mark Zuckerberg**
+- YouTube 创始人 **Steve Chen**、**Chad Hurley** 和 **Jared Karim**
+- 程序员教育倡导者 **Bill Nye**
+- Minecraft 创建者 **Markus "Notch" Persson**
+- 任天堂视频游戏设计师 **Shigeru Miyamoto**
+- iPod 和电子愿景家 **Tony Fadell**
+- 谷歌和眼镜创新者 **Sebastian Thun**
+- GoPro 发明者 **Nickman**
+
+## 物理学与工程学
+- 天才物理学家 **Albert Einstein**
+- 发明家、工程师和物理学家 **Nikola Tesla**
+- 理论物理学家 **Brian Green**
+- 理论物理学家 **Stephen Hawking**
+- 核物理学家 **Chen-Shung Wu**
+- 空间工程师和科学家 **Margaret Hamilton**
+- 空间工程师 **Elon Musk**
+- 火星科学实验室工程师 **Diana Trujillo**
+- 超级水枪科学家 **Lonnie Johnson**
+
+## 数学与计算机科学
+- 数学家和计算机科学家 **Grace Hopper**
+- 数学家 **Catherine Johnson**
+- NASA 天文学家 **Nancy Grace**
+
+## 生物学与医学
+- 遗传学专家 **John L. Keyes**
+- 城市生物学家 **Danielle Lee**
+- 疫苗专家 **Pearl Kenrick** 和 **Grace Eldering**
+
+## 网络安全
+- 网络安全专家 **Paris Tarbiz**
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_35_1.png)
 
 ![](img/db58f542749354fde4835edbc0ae9a1a_35_2.png)
-

@@ -1,8 +1,9 @@
+
 # 模板特化
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/data_modeling/template_specialization.html`](https://cel.cs.brown.edu/crp/idioms/data_modeling/template_specialization.html)
 
-C++ 中的模板特化使得模板实体可以为不同的参数有不同的实现。大多数 STL 实现都利用这一点，例如，提供 `[std::vector<bool>` 的空间高效表示](https://en.cppreference.com/w/cpp/container/vector_bool)。
+C++ 中的模板特化使得模板实体可以为不同的参数有不同的实现。大多数 STL 实现都利用这一点，例如，提供 [`std::vector<bool>` 的空间高效表示](https://en.cppreference.com/w/cpp/container/vector_bool)。
 
 由于模板特化的可能性，当一个 C++ 函数操作 `std::vector` 这样的模板类值时，该函数本质上是在模板类提供的接口的术语下定义的，而不是针对特定实现。
 
@@ -84,23 +85,16 @@ int max(const int &x, const int &y) {
 ```
 
 ```rs
-
-#![allow(unused)] fn main() { fn max<'a, T: Ord>(x: &'a T, y: &'a T) -> &'a T {
-
+#![allow(unused)]
+fn main() {
+fn max<'a, T: Ord>(x: &'a T, y: &'a T) -> &'a T {
     if x > y {
-
         x
-
     } else {
-
         y
-
     }
-
 }
-
 }
-
 ```
 
 在 Rust 程序中，*参数化*意味着（假设是安全的 Rust）仅从类型本身就可以判断，如果函数返回，它必须返回 `x` 或 `y` 中的一个。这是因为特质界限 `Ord` 不提供任何构造类型 `T` 的新值的方法，而引用的使用也不提供函数从早期调用中存储 `x` 或 `y` 以在后续调用中返回的方法。

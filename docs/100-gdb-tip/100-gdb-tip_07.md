@@ -1,8 +1,9 @@
+
 # 多进程/线程
 
-# 调试已经运行的进程
+## 调试已经运行的进程
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -27,9 +28,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-调试已经运行的进程有两种方法：一种是 gdb 启动时，指定进程的 ID：gdb program processID（也可以用-p 或者--pid 指定进程 ID，例如：gdb program -p=10210）。以上面代码为例，用“ps”命令已经获得进程 ID 为 10210：
+调试已经运行的进程有两种方法：一种是`gdb`启动时，指定进程的 ID：`gdb program processID`（也可以用`-p`或者`--pid`指定进程 ID，例如：`gdb program -p=10210`）。以上面代码为例，用`ps`命令已经获得进程 ID 为 10210：
 
 ```cpp
 bash-3.2# gdb -q a 10210
@@ -58,7 +59,7 @@ Loaded symbols for /lib/ld.so.1
 #2  0x080509ef in main () at a.c:17 
 ```
 
-如果嫌每次 ps 查看进程号比较麻烦，请尝试如下脚本
+如果嫌每次`ps`查看进程号比较麻烦，请尝试如下脚本：
 
 ```cpp
 # 保存为 xgdb.sh（添加可执行权限）
@@ -69,7 +70,7 @@ pid=$(/sbin/pidof $running_name)
 gdb attach $pid 
 ```
 
-另一种是先启动 gdb，然后用“attach”命令“附着”在进程上：
+另一种是先启动`gdb`，然后用`attach`命令“附着”在进程上：
 
 ```cpp
 bash-3.2# gdb -q a
@@ -99,7 +100,7 @@ Loaded symbols for /lib/ld.so.1
 #2  0x080509ef in main () at a.c:17 
 ```
 
-如果不想继续调试了，可以用“detach”命令“脱离”进程：
+如果不想继续调试了，可以用`detach`命令“脱离”进程：
 
 ```cpp
 (gdb) detach
@@ -110,13 +111,13 @@ No stack.
 
 详情参见[gdb 手册](https://sourceware.org/gdb/current/onlinedocs/gdb/Attach.html#index-attach)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 调试子进程
+## 调试子进程
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -140,9 +141,9 @@ int main(void) {
 } 
 ```
 
-## 技巧
+### 技巧
 
-在调试多进程程序时，gdb 默认会追踪父进程。例如：
+在调试多进程程序时，`gdb`默认会追踪父进程。例如：
 
 ```cpp
 (gdb) start
@@ -164,7 +165,7 @@ Temporary breakpoint 1, main () at a.c:8
 
 可以看到程序执行到第 15 行：父进程退出。
 
-如果要调试子进程，要使用如下命令：“set follow-fork-mode child”，例如：
+如果要调试子进程，要使用如下命令：`set follow-fork-mode child`，例如：
 
 ```cpp
 (gdb) set follow-fork-mode child
@@ -191,13 +192,13 @@ hello world
 
 这个命令目前 Linux 支持，其它很多操作系统都不支持，使用时请注意。参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Forks.html)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 同时调试父进程和子进程
+## 同时调试父进程和子进程
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -221,9 +222,9 @@ int main(void) {
 } 
 ```
 
-## 技巧
+### 技巧
 
-在调试多进程程序时，gdb 默认只会追踪父进程的运行，而子进程会独立运行，gdb 不会控制。以上面程序为例：
+在调试多进程程序时，`gdb`默认只会追踪父进程的运行，而子进程会独立运行，`gdb`不会控制。以上面程序为例：
 
 ```cpp
 (gdb) start
@@ -244,9 +245,9 @@ Parent
 15              exit(0); 
 ```
 
-可以看到当单步执行到第 8 行时，程序打印出“Child” ，证明子进程已经开始独立运行。
+可以看到当单步执行到第 8 行时，程序打印出“Child”，证明子进程已经开始独立运行。
 
-如果要同时调试父进程和子进程，可以使用“`set detach-on-fork off`”（默认`detach-on-fork`是`on`）命令，这样 gdb 就能同时调试父子进程，并且在调试一个进程时，另外一个进程处于挂起状态。仍以上面程序为例：
+如果要同时调试父进程和子进程，可以使用`set detach-on-fork off`（默认`detach-on-fork`是`on`）命令，这样`gdb`就能同时调试父子进程，并且在调试一个进程时，另外一个进程处于挂起状态。仍以上面程序为例：
 
 ```cpp
 (gdb) set detach-on-fork off
@@ -300,11 +301,11 @@ Child
 (gdb) 
 ```
 
-在使用“`set detach-on-fork off`”命令后，用“`i inferiors`”（`i`是`info`命令缩写）查看进程状态，可以看到父子进程都在被 gdb 调试的状态，前面显示“*”是正在调试的进程。当父进程退出后，用“`inferior infno`”切换到子进程去调试。
+在使用`set detach-on-fork off`命令后，用`i inferiors`（`i`是`info`命令缩写）查看进程状态，可以看到父子进程都在被`gdb`调试的状态，前面显示“*”是正在调试的进程。当父进程退出后，用`inferior infno`切换到子进程去调试。
 
 这个命令目前 Linux 支持，其它很多操作系统都不支持，使用时请注意。参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Forks.html)
 
-此外，如果想让父子进程都同时运行，可以使用“`set schedule-multiple on`”（默认`schedule-multiple`是`off`）命令，仍以上述代码为例：
+此外，如果想让父子进程都同时运行，可以使用`set schedule-multiple on`（默认`schedule-multiple`是`off`）命令，仍以上述代码为例：
 
 ```cpp
 (gdb) set detach-on-fork off
@@ -321,15 +322,16 @@ Child
 ```
 
 可以看到打印出了“Child”，证明子进程也在运行了。
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/All_002dStop-Mode.html#All_002dStop-Mode)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 查看线程信息
+## 查看线程信息
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -354,9 +356,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-用 gdb 调试多线程程序，可以用“i threads”命令（i 是 info 命令缩写）查看所有线程的信息，以上面程序为例（运行平台为 Linux，CPU 为 X86_64）:
+用`gdb`调试多线程程序，可以用`i threads`命令（`i`是`info`命令缩写）查看所有线程的信息，以上面程序为例（运行平台为 Linux，CPU 为 X86_64）：
 
 ```cpp
  (gdb) i threads
@@ -366,14 +368,19 @@ int main(void)
 * 1    Thread 0x7ffff7fe9700 (LWP 31738) main () at a.c:18 
 ```
 
-第一项（Id）：是 gdb 标示每个线程的唯一 ID：1，2 等等。
-第二项（Target Id）：是具体系统平台用来标示每个线程的 ID，不同平台信息可能会不同。 像当前 Linux 平台显示的就是： Thread 0x7ffff6e2b700 (LWP 31773)。
-第三项（Frame）：显示的是线程执行到哪个函数。
+第一项（`Id`）：是`gdb`标示每个线程的唯一 ID：1，2 等等。
+
+第二项（`Target Id`）：是具体系统平台用来标示每个线程的 ID，不同平台信息可能会不同。像当前 Linux 平台显示的就是：`Thread 0x7ffff6e2b700 (LWP 31773)`。
+
+第三项（`Frame`）：显示的是线程执行到哪个函数。
+
+
+
 前面带“*”表示的是“current thread”，可以理解为 gdb 调试多线程程序时，选择的一个“默认线程”。
 
 再以 Solaris 平台（CPU 为 X86_64）为例，可以看到显示信息会略有不同：
 
-```cpp
+```
 (gdb) i threads
 [New Thread 2 (LWP 2)]
 [New Thread 3 (LWP 3)]
@@ -386,9 +393,9 @@ int main(void)
   1    LWP    1          main () at a.c:18 
 ```
 
-也可以用“i threads [Id...]”指定打印某些线程的信息，例如：
+也可以用“`i threads [Id...]`”指定打印某些线程的信息，例如：
 
-```cpp
+```
  (gdb) i threads 1 2
   Id   Target Id         Frame
   2    Thread 0x7ffff782c700 (LWP 12248) 0x00007ffff78d9bcd in nanosleep () from /lib64/libc.so.6
@@ -405,9 +412,9 @@ nanxiao
 
 ## 技巧
 
-用 gdb 调试多线程程序时，如果想查看线程信息，可以使用“i threads”命令（i 是 info 命令缩写），例如:
+用 gdb 调试多线程程序时，如果想查看线程信息，可以使用“`i threads`”命令（`i` 是 `info` 命令缩写），例如:
 
-```cpp
+```
 (gdb) i threads
 106 process 2689429      0xff04af84 in __lwp_park () from /lib/libc.so.1
 105 process 2623893      0xff04af84 in __lwp_park () from /lib/libc.so.1
@@ -415,9 +422,9 @@ nanxiao
 103 process 2492821      0xff04af84 in __lwp_park () from /lib/libc.so.1 
 ```
 
-在 Solaris 操作系统上，gdb 为 Solaris 量身定做了一个查看线程信息的命令：“maint info sol-threads”（maint 是 maintenance 命令缩写），例如:
+在 Solaris 操作系统上，gdb 为 Solaris 量身定做了一个查看线程信息的命令：“`maint info sol-threads`”（`maint` 是 `maintenance` 命令缩写），例如:
 
-```cpp
+```
 (gdb) maint info sol-threads
 user   thread #1, lwp 1, (active)
 user   thread #2, lwp 2, (active)    startfunc: monitor_thread
@@ -425,7 +432,7 @@ user   thread #3, lwp 3, (asleep)    startfunc: mem_db_thread
 - Sleep func: 0x000aa32c 
 ```
 
-可以看到相比于 info 命令，maintenance 命令显示了更多信息。例如线程当前状态（active，asleep），入口函数（startfunc）等。
+可以看到相比于 `info` 命令，`maintenance` 命令显示了更多信息。例如线程当前状态（`active`，`asleep`），入口函数（`startfunc`）等。
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Threads.html)
 
@@ -437,7 +444,7 @@ nanxiao
 
 ## 例子
 
-```cpp
+```
 #include <stdio.h>
 #include <pthread.h>
 
@@ -462,7 +469,7 @@ int main(void)
 
 默认情况下，gdb 检测到有线程产生和退出时，会打印提示信息，以上面程序为例:
 
-```cpp
+```
 (gdb) r
 Starting program: /data/nan/a
 [Thread debugging using libthread_db enabled]
@@ -477,7 +484,7 @@ Starting program: /data/nan/a
 
 如果不想显示这些信息，可以使用“`set print thread-events off`”命令，这样当有线程产生和退出时，就不会打印提示信息：
 
-```cpp
+```
 (gdb) set print thread-events off
 (gdb) r
 Starting program: /data/nan/a
@@ -496,7 +503,7 @@ nanxiao
 
 ## 例子
 
-```cpp
+```
 #include <stdio.h>
 #include <pthread.h>
 int a = 0;
@@ -535,7 +542,7 @@ int main(void)
 
 用 gdb 调试多线程程序时，一旦程序断住，所有的线程都处于暂停状态。此时当你调试其中一个线程时（比如执行“`step`”，“`next`”命令），所有的线程都会同时执行。以上面程序为例:
 
-```cpp
+```
 (gdb) b a.c:9
 Breakpoint 1 at 0x400580: file a.c, line 9.
 (gdb) r
@@ -564,10 +571,11 @@ Breakpoint 1, thread1_func (p_arg=0x400718) at a.c:9
 $2 = 3 
 ```
 
-`thread1_func`更新全局变量`a`的值，`thread2_func`更新全局变量`b`的值。我在`thread1_func`里`a++`语句打上断点，当断点第一次命中时，打印`b`的值是`0`，在单步调试`thread1_func`几次后，`b`的值变成`3`，证明在单步调试`thread1_func`时，`thread2_func`也在执行。
+`thread1_func` 更新全局变量 `a` 的值，`thread2_func` 更新全局变量 `b` 的值。我在 `thread1_func` 里 `a++` 语句打上断点，当断点第一次命中时，打印 `b` 的值是 `0`，在单步调试 `thread1_func` 几次后，`b` 的值变成 `3`，证明在单步调试 `thread1_func` 时，`thread2_func` 也在执行。
+
 如果想在调试一个线程时，让其它线程暂停执行，可以使用“`set scheduler-locking on`”命令：
 
-```cpp
+```
 (gdb) b a.c:9
 Breakpoint 1 at 0x400580: file a.c, line 9.
 (gdb) r
@@ -598,9 +606,9 @@ Breakpoint 1, thread1_func (p_arg=0x400718) at a.c:9
 $2 = 0 
 ```
 
-可以看到在单步调试`thread1_func`几次后，`b`的值仍然为`0`，证明在在单步调试`thread1_func`时，`thread2_func`没有执行。
+可以看到在单步调试 `thread1_func` 几次后，`b` 的值仍然为 `0`，证明在单步调试 `thread1_func` 时，`thread2_func` 没有执行。
 
-此外，“`set scheduler-locking`”命令除了支持`off`和`on`模式外（默认是`off`），还有一个`step`模式。含义是：当用"`step`"命令调试线程时，其它线程不会执行，但是用其它命令（比如"`next`"）调试线程时，其它线程也许会执行。
+此外，“`set scheduler-locking`”命令除了支持 `off` 和 `on` 模式外（默认是 `off`），还有一个 `step` 模式。含义是：当用“`step`”命令调试线程时，其它线程不会执行，但是用其它命令（比如“`next`”命令）调试线程时，其它线程也许会执行。
 
 这个命令依赖于具体操作系统的调度策略，使用时需注意。参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/All_002dStop-Mode.html#All_002dStop-Mode).
 
@@ -612,7 +620,7 @@ nanxiao
 
 ## 例子
 
-```cpp
+```
 #include <stdio.h>
 #include <pthread.h>
 
@@ -650,9 +658,9 @@ int main(void)
 
 ## 技巧
 
-gdb 从 7.2 版本引入了`$_thread`这个“`convenience variable`”，用来保存当前正在调试的线程号。这个变量在写断点命令或是命令脚本时会很有用。以上面程序为例:
+gdb 从 7.2 版本引入了 `$_thread` 这个“`convenience variable`”，用来保存当前正在调试的线程号。这个变量在写断点命令或是命令脚本时会很有用。以上面程序为例:
 
-```cpp
+```
 (gdb) wa a
 Hardware watchpoint 2: a
 (gdb) command 2
@@ -662,10 +670,11 @@ End with a line saying just "end".
 >end 
 ```
 
-首先设置了观察点：“wa a”（`wa`是`watch`命令缩写），也就是当`a`的值发生变化时，程序会暂停，接下来在`commands`语句中打印线程号。
+首先设置了观察点：“`wa a`”（`wa` 是 `watch` 命令缩写），也就是当 `a` 的值发生变化时，程序会暂停，接下来在 `commands` 语句中打印线程号。
+
 然后继续执行程序：
 
-```cpp
+```
 (gdb) c
 Continuing.
 [New Thread 0x7ffff782c700 (LWP 20928)]
@@ -691,6 +700,7 @@ thread id=3
 ```
 
 可以看到程序暂停时，会打印线程号：“`thread id=2`”或者“`thread id=3`”。
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Threads.html).
 
 ## 贡献者
@@ -701,7 +711,7 @@ nanxiao
 
 ## 例子
 
-```cpp
+```
 a.c:
 #include <stdio.h>
 int func(int a, int b)
@@ -747,7 +757,9 @@ int main(void)
 
 ## 技巧
 
-gdb 支持在一个会话中同时调试多个程序。以上面程序为例，首先调试`a`程序：
+gdb 支持在一个会话中同时调试多个程序。以上面程序为例，首先调试 `a` 程序：
+
+
 
 ```cpp
 root@bash:~$ gdb a
@@ -877,7 +889,7 @@ int main(void)
 
 ## 技巧
 
-使用 gdb 调试多个进程时，可以使用“`maint info program-spaces`”打印当前所有被调试的进程信息。以上面程序为例：
+使用`gdb`调试多个进程时，可以使用“`maint info program-spaces`”打印当前所有被调试的进程信息。以上面程序为例：
 
 ```cpp
 [root@localhost nan]# gdb a
@@ -953,7 +965,7 @@ int main(void)
 
 ## 技巧
 
-当被调试的程序正常退出时，gdb 会使用`$_exitcode`这个“`convenience variable`”记录程序退出时的“`exit code`”。以调试上面程序为例:
+当被调试的程序正常退出时，`gdb`会使用`$_exitcode`这个“`convenience variable`”记录程序退出时的“`exit code`”。以调试上面程序为例:
 
 ```cpp
 [root@localhost nan]# gdb -q a
@@ -977,12 +989,13 @@ $1 = 0
 ```
 
 可以看到打印的`$_exitcode`的值为`0`。
+
 改变程序，返回值改为`1`：
 
 ```cpp
 int main(void)
 {
-    return 0;
+    return 1;
 } 
 ```
 
@@ -1011,6 +1024,7 @@ $1 = 1
 ```
 
 可以看到打印的`$_exitcode`的值变为`1`。
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Convenience-Vars.html).
 
 ## 贡献者

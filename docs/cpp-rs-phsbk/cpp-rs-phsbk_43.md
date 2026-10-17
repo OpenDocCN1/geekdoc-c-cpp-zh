@@ -1,16 +1,16 @@
+
+
 # Placement new
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/placement_new.html`](https://cel.cs.brown.edu/crp/idioms/placement_new.html)
 
-本章中关于 Rust 的一些陈述取决于编译器如何优化各种程序的具体细节。除非另有说明，此处展示的结果是基于使用[2024 语言版本](https://doc.rust-lang.org/edition-guide/introduction.html)的 rustc 1.87。
+本章中关于 Rust 的一些陈述取决于编译器如何优化各种程序的具体细节。除非另有说明，此处展示的结果是基于使用[2024 语言版本](https://doc.rust-lang.org/edition-guide/introduction.html)的`rustc 1.87`。
 
-C++中 placement new 的主要目的是
+C++中 placement new 的主要目的是：
 
-+   存储分配与初始化分离的情况，例如在`std::vector`或内存池的实现中。
-
-+   需要将结构放置在特定内存位置的情况，例如，与内存映射寄存器一起工作，以及
-
-+   出于性能原因的存储重用。
+- 存储分配与初始化分离的情况，例如在`std::vector`或内存池的实现中。
+- 需要将结构放置在特定内存位置的情况，例如与内存映射寄存器一起工作。
+- 出于性能原因的存储重用。
 
 你也可能是因为寻找如何在 Rust 中直接在堆上构造大值的方法而来到这个页面。
 
@@ -36,7 +36,7 @@ C++中 placement new 的主要目的是
 
 以下示例的 Rust 版本依赖于[优化](https://godbolt.org/#z:OYLghAFBqd5TKALEBjA9gEwKYFFMCWALugE4A0BIEAZgQDbYB2AhgLbYgDkAjF%2BTXRMiAZVQtGIHgBYBQogFUAztgAKAD24AGfgCsp5eiyahSAVyVFyKxqiIEh1ZpgDC6embZMpATnLOAGQImbAA5TwAjbFIQADZyAAd0JWIHJjcPL19E5NShIJDwtiiY%2BJtsOzSRIhZSIgzPbx4/csqhatqiArDI6LjrGrqGrOaBzu6ikriASmt0M1JUTi4AUgAmAGYVgFYAIRxSAgA3bAgAEWwaFjN6Immds5WtAEFLczsAagDa4GwAdQImF%2BRA%2BKwA7Lsns8PjCPoCQB8LAQAF7YchQ8GPF4YzY7XZmJhKFg0U5MdAAfTYxmAjHu2yxzxoTA%2BmApAHcyABrCBshHrWJsMwg76kX4AoHYO6giFQ2EfQSkOFw5laAB0qp4Wi00shLzlcoAVGzQRszl8fv9AcCdbL9Xb4XD0Xq7dLHhtddCXQB6L2IlQfNm2u2WTAgEBIYJEMMRIyoTnkiLodQQfls%2B7uoOujFghlQpkfKnBCDTG3OmGMEGCkFKVCkFhEVBIE1mkViq2SsM4K43IjFlYZsss9lclNrAVCj41usNpDpj2YqFcWb0bjbfjeLg6cjobgAJQs1fmi2woM2fHIUc3S9mnJA2zWquksTB21iGwAHD5PzwZBtDNxpH4Ng7y0cgNy3HcuH4JQQFAy8dFmOBYBQDAcHwYgyEoag6EYVgOG4c9BGEMQJE4GQ5GEZQ1E0K9yH0NZDGpNB1khNZdmsbBbHsRwIGcYZvDWHh/CYTAJl6GJZCSFJuPSdxGhAQScmktIxOKPpZFaGSOiGOSskUzSqkGLpgh6NSJLGHTMgEoTLHGEzJnU2YlCPJZuHWDZglQDwcBNFxUBDLt%2B1wHEPKYLyzB8/sXBCQMNmC7EXjeMxPlbS0JRBcEPRhEMwxSVFyRBQF%2B3nHNioxF4iGwNgEiMSrfKIABPBJmHYE8ABUgqhbB1Eq0hmSOdBAQ%2BGMWDjXYkwgNrT1idQ53K54BqG1k/hHRbMA%2BA0p3rRsS0y20FQ%2BCAcpAPLsAKpV%2BzNLRioujYXA%2BTVrvdOEWJY3aZUHa4SA2tkIBiw6tpnEtUvFYFMtVIbLpenM5sHH0/RPQNBxGsaJrTMrBzZABaIKAD8QfbXtYc9BdsVKhLnkjAsWCLd6so%2BCQCGAVglAgRnmfQGgIAJ9LphLRtakzGEODYMgGrxU7Oe5i1QclOk3XptafubAsqrFjHPWWkd0YHZ5SeeJd/y4NcwO0fhIJcV62MnFyT3ctZ%2BHg69yCQbAWAOahlwAoCQNN2jIOg2CLzNvnyFve9H2fV8Py/Hwf2kP8Vy4DZ1zN7duEdkPyCQhB4AgFD0GqhhoiwiAMCLxgYlIHh3zBUCcN6mCIAiNOImCWoGoI/g29YUgGoAeQiXQKkvc9y44YR%2B6YehO9onAIjMYAXAkegYN4fgcCpExJDnghSBH45sDXrduoqIVli3SNOLT%2BgCAiOs%2B7cHA06IQ5gPX8gTlIRMVAuLeaWCKAK8swaBGGAEoAAagQbAbJ%2B7NQ3IReQJFJDkSIooFQGg076CEkYEwIBzCWEMHfGCkBZjoASDJNeWMsb3XIUQLGjATj0Eug7bcX9Dg4BIcWDiXE0hOBEvxAwgR7LiQMFJPIskrJiNyDJVSUwbKcQPu0IygiFG8OUXZQooibIqN0k0CyxktFmSkE5W2JijYm3AubbgHwCENgeqqWuqptQQHQiQRU7keDTEzsA7OKB5hEASEKUu5cEjF1IKEVq3A7GoAcU4k%2BhB3HwiEmg5BZFZBoKopg2i2DyBsjrAkLuXtjap39twfuQogkgk5rYg8sSeCOLBM4w6bgK7RFPBsLxPiEI3hANIJp2wNhrATrETUmp3zvm2O%2BI2gFyDAW2KBKx6coLWCDk7RCiB85oELmEyuISdnhJAMAHg2wUkMEbtQFutEe4dy7uQG5fdB7DzsHc8ezAiBTxnmneei9l70FXncze1Id5bkIPvSoJxj78FPqgc%2Bdyr5Jy3Lfe%2BHcn4X0dm/O5X8f7YD/sCwBWdQEsHAVAmBcDmB3NSeIFBGT5BZJolueijE8GoCtuxZFXCyEULSFQkMl1WVsRYpsD4WN%2B6sPQOwwER94BOUUW0bwvEBF6KESJORfQhLiJkqopSEi1UxDUUopg2l6jKoNfK41eqDC2UsvJHRmjTLyNMQsVyaximWLTpBD46h3yxCxrEaQHxgCoHqdsDUh03FkA6a67phstkBKqfstpESolcG9b6/1gbg0PVDeebAiSyDwgYlS0iUhaWUQwQyvQCk8kFKKRY0pEFymVInDUtNfqA1BpDWGiArTdntPtt44OwDZiu3dn0bhSdZnzMWR6jOqy4Ih16f01UgzhkbFGVocZkzplJxTn7RtKz1nFNYUsgOQ6emf2iCkRw0ggA%3D%3D)来实现所需的行为。
 
-```rs
+```cpp
 #include <cstddef>
 #include <new>
 
@@ -61,52 +61,40 @@ int main() {
       memory[sizeof(LargeWidget)];
   void *w = memory;
   doWork(w);
-} 
+}
 ```
 
-```rs
-
+```rust
 #[derive(Default)]
-
 struct LargeWidget {
-
     id: usize,
-
 }
 
 fn do_work(w: &mut LargeWidget) {
-
     for i in 0..100 {
-
         *w = LargeWidget { id: i };
 
         // use w
-
         std::hint::black_box(&w);
-
     }
-
 }
 
 fn main() {
-
     let mut scratch = LargeWidget::default();
 
     do_work(&mut scratch);
-
 }
-
 ```
 
-为 `LargeWidget` 添加 `Drop` 实现会导致在每次循环迭代时调用析构函数，但这会使生成的汇编代码难以阅读，因此已从示例中省略。
+为`LargeWidget`添加`Drop`实现会导致在每次循环迭代时调用析构函数，但这会使生成的汇编代码难以阅读，因此已从示例中省略。
 
 ## 在堆上构造大值
 
-`new` 在 C++ 构造对象直接在动态存储中，而 placement `new` 直接在提供的位置构造它们。在 Rust 中，`Box::new` 是一个普通函数，因此值是在栈上构造的，然后移动到堆（或由自定义分配器提供的存储）。
+`new`在 C++中构造对象，直接在动态存储中，而 placement `new`直接在提供的位置构造它们。在 Rust 中，`Box::new`是一个普通函数，因此值是在栈上构造的，然后移动到堆（或由自定义分配器提供的存储）。
 
-虽然值在栈上的初始构造有时可以被优化掉，但为了保证不使用栈来存储大值，需要使用不安全的 Rust 和 `MaybeUninit`。此外，用于在堆上初始化值的机制并不能保证值不会首先在栈上创建然后移动到堆上。相反，它们只是使逐步初始化结构（无论是按字段还是按元素）成为可能，这样整个结构就不必一次性全部位于栈上。然而，相同的优化也适用，因此可能避免额外的复制。 
+虽然值在栈上的初始构造有时可以被优化掉，但为了保证不使用栈来存储大值，需要使用不安全的 Rust 和`MaybeUninit`。此外，用于在堆上初始化值的机制并不能保证值不会首先在栈上创建然后移动到堆上。相反，它们只是使逐步初始化结构（无论是按字段还是按元素）成为可能，这样整个结构就不必一次性全部位于栈上。然而，相同的优化也适用，因此可能避免额外的复制。
 
-```rs
+```cpp
 #include <iostream>
 #include <memory>
 
@@ -122,65 +110,50 @@ int main() {
   for (std::size_t i; i < SIZE; ++i) {
     std::cout << (*b)[i] << std::endl;
   }
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     const SIZE: usize = 8_000_000;
 
     // 此处的优化避免了溢出
-
     // 使用 opt-level=2 的栈
 
     let mut b = Box::new([0; SIZE]);
 
     for i in 0..SIZE {
-
         b[i] = 42;
-
     }
 
     // 使用 b 以确保它不会被优化掉
-
     std::hint::black_box(&b);
-
 }
-
 ```
 
-在另一方面，直接将数组定义为 `[42; SIZE]` 会导致值首先在栈上构造，这会在运行时产生错误。
+另一方面，直接将数组定义为`[42; SIZE]`会导致值首先在栈上构造，这会在运行时产生错误。
 
-```rs
-
+```rust
 fn main() {
-
     const SIZE: usize = 8_000_000;
 
     let b = Box::new([42; SIZE]);
 
     // 使用 b 以确保它不会被优化掉
-
     std::hint::black_box(&b);
-
 }
-
 ```
 
-```rs
+```text
 thread 'main' has overflowed its stack
 fatal runtime error: stack overflow
-Aborted (core dumped) 
+Aborted (core dumped)
 ```
 
-虽然直接在堆上构造值无法强制执行，但可以通过使用不安全的 Rust 来逐步构造值，从而避免栈溢出。这种技术依赖于 `MaybeUninit` 和 `addr_of_mut!`。
+虽然直接在堆上构造值无法强制执行，但可以通过使用不安全的 Rust 来逐步构造值，从而避免栈溢出。这种技术依赖于`MaybeUninit`和`addr_of_mut!`。
 
-```rs
-
+```rust
 fn main() {
-
     const SIZE: usize = 8_000_000;
 
     let mut b = Box::<[i32; SIZE]>::new_uninit();
@@ -188,77 +161,58 @@ fn main() {
     let bptr = b.as_mut_ptr();
 
     for i in 0..SIZE {
-
         unsafe {
-
             std::ptr::addr_of_mut!(((*bptr)[i])).write(42);
-
         }
-
     }
 
     let b2 = unsafe { b.assume_init() };
 
     for i in 0..SIZE {
-
         println!("{}", b2[i]);
-
     }
-
 }
-
 ```
 
 根据需要，这种特定用法可以被泛化。
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { fn init_with<T, const SIZE: usize>(
+fn main() {
+    fn init_with<T, const SIZE: usize>(
+        f: impl Fn(usize) -> T,
+    ) -> Box<[T; SIZE]> {
+        let mut b = Box::<[T; SIZE]>::new_uninit();
+        let bptr = b.as_mut_ptr();
 
-    f: impl Fn(usize) -> T,
-
-) -> Box<[T; SIZE]> {
-
-    let mut b = Box::<[T; SIZE]>::new_uninit();
-
-    let bptr = b.as_mut_ptr();
-
-    for i in 0..SIZE {
-
-        unsafe {
-
-            std::ptr::addr_of_mut!(((*bptr)[i]))
-
-                .write(f(i));
-
+        for i in 0..SIZE {
+            unsafe {
+                std::ptr::addr_of_mut!(((*bptr)[i]))
+                    .write(f(i));
+            }
         }
 
+        unsafe { b.assume_init() }
     }
-
-    unsafe { b.assume_init() }
-
 }
-
-}
-
 ```
 
 注意，处理堆上的大数组时，更符合习惯的方式是将它表示为 boxed slice 或 vector，而不是 boxed array。在这种情况下，使用迭代器定义值可以避免在栈上构造它，并且不需要使用 unsafe Rust。
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { fn init_with<T, const SIZE: usize>(
-
-    f: impl Fn(usize) -> T,
-
-) -> Box<[T]> {
-
-    (0..SIZE).map(f).collect()
-
+fn main() {
+    fn init_with<T, const SIZE: usize>(
+        f: impl Fn(usize) -> T,
+    ) -> Box<[T]> {
+        (0..SIZE).map(f).collect()
+    }
 }
-
-}
-
 ```
 
-[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Placement new)
+
+
+
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Placement%20new)

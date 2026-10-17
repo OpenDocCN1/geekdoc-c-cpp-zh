@@ -1,3 +1,4 @@
+
 # 私有成员和朋友
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/encapsulation/private_and_friends.html`](https://cel.cs.brown.edu/crp/idioms/encapsulation/private_and_friends.html)
@@ -8,7 +9,7 @@
 
 在 Rust 中，模块是封装的单位。项目可见性（Rust 的访问指定符类似物）控制模块边界上的项目访问。
 
-```rs
+```cpp
 #include <iostream>
 #include <string>
 
@@ -39,90 +40,53 @@ int main() {
   std::cout << alice.name << std::endl;
   // compilation error
   // std::cout << alice.age << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 mod person {
-
     pub struct Person {
-
         pub name: String,
 
         // 此字段是私有的
-
         age: i32,
-
     }
 
     impl Person {
-
         // 因为年龄是私有的，需要一个公共
-
         // 构造方法需要创建
-
         // 模块外部的值。
-
-        pub fn new(
-
-            name: String,
-
-            age: i32,
-
-        ) -> Person {
-
+        pub fn new(name: String, age: i32) -> Person {
             Person { name, age }
-
         }
-
     }
 
     // 同一模块中的自由函数可以在
-
     // 访问私有字段，因为访问的
-
     // 封装是模块，而不是
-
     // 结构体。
-
     fn example() {
-
-        let alice =
-
-            Person::new("Alice".to_string(), 42);
-
+        let alice = Person::new("Alice".to_string(), 42);
         println!("{}", alice.name);
 
         // 私有字段在这里可见，
-
         // 在模块内部。
-
         println!("{}", alice.age);
-
     }
-
 }
 
 use person::Person;
 
 fn main() {
-
-    let alice =
-
-        Person::new("Alice".to_string(), 42);
-
+    let alice = Person::new("Alice".to_string(), 42);
     println!("{}", alice.name);
 
     // 编译错误
-
     // println!("{}", alice.age);
-
 }
-
 ```
 
-在 Rust 的示例中，`Person` 的构造函数是私有的因为其中一个字段是私有的。
+在 Rust 的示例中，`Person` 的构造函数是私有的，因为其中一个字段是私有的。
 
 ## 朋友
 
@@ -132,7 +96,7 @@ fn main() {
 
 然而，在 Rust 中，这两种类型可以在同一个模块中定义，并且可以访问彼此的私有字段和方法。整个模块提供了一组类型、方法和函数，共同定义了一个封装的概念。
 
-```rs
+```cpp
 #include <memory>
 
 class BinaryTree {
@@ -185,133 +149,74 @@ int main() {
   b.insert(42);
 
   return 0;
-} 
+}
 ```
 
-```rs
-
+```rust
 mod binary_tree {
-
     pub struct BinaryTree {
-
         // 此字段在模块外部不可见
-
         // 在模块内部。
-
         root: Option<Box<TreeNode>>,
-
     }
 
     impl BinaryTree {
-
         pub fn new() -> BinaryTree {
-
             BinaryTree { root: None }
-
         }
 
         pub fn insert(&mut self, value: i32) {
-
             insert(&mut self.root, value);
-
         }
-
     }
 
     // 此结构和所有其字段均不可见
-
     // 在模块外部可见。
-
     struct TreeNode {
-
         value: i32,
-
         left: Option<Box<TreeNode>>,
-
         right: Option<Box<TreeNode>>,
-
     }
 
     impl TreeNode {
-
         fn new(value: i32) -> TreeNode {
-
             TreeNode {
-
                 value,
-
                 left: None,
-
                 right: None,
-
             }
-
         }
 
         fn insert(&mut self, value: i32) {
-
             if value < self.value {
-
                 insert(&mut self.left, value);
-
             } else {
-
                 insert(&mut self.right, value);
-
             }
-
         }
-
     }
 
     // 此自由函数在模块外部不可见
-
     // 在模块外部可见。
-
-    fn insert(
-
-        node: &mut Option<Box<TreeNode>>,
-
-        value: i32,
-
-    ) {
-
+    fn insert(node: &mut Option<Box<TreeNode>>, value: i32) {
         match node {
-
             None => {
-
-                *node = Some(Box::new(
-
-                    TreeNode::new(value),
-
-                ));
-
+                *node = Some(Box::new(TreeNode::new(value)));
             }
-
             Some(ref mut left) => {
-
                 left.insert(value);
-
             }
-
         }
-
     }
-
 }
 
 // 这将（公开）类型引入作用域。
-
 use binary_tree::BinaryTree;
 
 fn main() {
-
     let mut b = BinaryTree::new();
-
     b.insert(42);
-
 }
-
 ```
 
 ## Passkey 习语
@@ -324,7 +229,7 @@ Passkey 习语有时也用于提供比友元声明更细粒度的对成员的访
 
 在 Rust 中，可以通过相同的习语来表达相同的效果，以实现相同的效果。
 
-```rs
+```cpp
 #include <iostream>
 #include <memory>
 #include <string>
@@ -348,156 +253,95 @@ public:
     return std::make_unique<Person>(Passkey(),
                                     name, age);
   }
-}; 
+};
 ```
 
-```rs
-
+```rust
 pub trait Maker<K, B> {
-
     fn make(passkey: K, args: B) -> Self;
-
 }
 
 // 我们希望能够调用的泛型辅助器。
-
 // 一个否则私有的函数或方法。
-
-fn alloc_thing<K, B, T: Maker<K, B>>(
-
-    passkey: K,
-
-    args: B,
-
-) -> Box<T> {
-
+fn alloc_thing<K, B, T: Maker<K, B>>(passkey: K, args: B) -> Box<T> {
     Box::new(Maker::<K, B>::make(passkey, args))
-
 }
 
 mod person {
-
     use super::*;
-
     use std::marker::PhantomData;
 
     pub struct Person {
-
         pub name: String,
-
         age: u32,
-
     }
 
     // 一个零大小的类型，用作 passkey。
-
     pub struct Passkey {
-
         // 此字段为零大小。它也是
-
         // 私有，这阻止了构造
-
         // 的人之外的 Passkey
-
         // 模块。
-
         _phantom: PhantomData<()>,
-
     }
 
     impl Person {
-
         // 私有方法将被公开
-
         // 使用 passkey 包装器。
-
         fn new(name: String, age: u32) -> Person {
-
             Person { name, age }
-
         }
 
         // 使用外部辅助器的方法的实现
-
         // 需要访问另一个
-
         // 否则私有的方法。
-
-        fn alloc(
-
-            name: String,
-
-            age: u32,
-
-        ) -> Box<Person> {
-
+        fn alloc(name: String, age: u32) -> Box<Person> {
             alloc_thing(
-
                 Passkey {
-
                     _phantom: PhantomData {},
-
                 },
-
                 MakePersonArgs { name, age },
-
             )
-
         }
-
     }
 
     // 需要辅助结构来使特性
-
     // 提供接口泛型。
-
     pub struct MakePersonArgs {
-
         pub name: String,
-
         pub age: u32,
-
     }
 
     // 实现该特性，暴露
-
     // 需要 passkey 的方法。
-
     impl Maker<Passkey, MakePersonArgs> for Person {
-
-        fn make(
-
-            _passkey: Passkey,
-
-            args: MakePersonArgs,
-
-        ) -> Person {
-
+        fn make(_passkey: Passkey, args: MakePersonArgs) -> Person {
             Person::new(args.name, args.age)
-
         }
-
     }
-
 }
 
 fn main() {}
-
 ```
 
-然而，Passkey 习语在 Rust 中可能不太可能被使用，因为
+然而，Passkey 习语在 Rust 中可能不太可能被使用，因为：
 
-+   配对的类型通常定义在同一个模块中（或可以使用 `pub (in path)` 声明），这使得它变得不必要，并且
+- 配对的类型通常定义在同一个模块中（或可以使用 `pub (in path)` 声明），这使得它变得不必要；以及
+- 它需要接口的合作，通过该接口调用函数将使用一个类型。
 
-+   它需要接口的合作，通过该接口调用函数将使用一个类型。
-
-第二点与上面使用`std::make_unique`的情况形成对比，后者能够在`std::make_unique`定义点不知道其存在的情况下转发到底层的构造函数。虽然下面的示例并不实用（因为`alloc_thing`不是一个有用的辅助函数），但它确实展示了为了达到使用 C++中惯用语的相同效果，需要定义哪些类型。
+第二点与上面使用 `std::make_unique` 的情况形成对比，后者能够在 `std::make_unique` 定义点不知道其存在的情况下转发到底层的构造函数。虽然下面的示例并不实用（因为 `alloc_thing` 不是一个有用的辅助函数），但它确实展示了为了达到使用 C++ 中惯用语的相同效果，需要定义哪些类型。
 
 ## 友元和测试
 
-另一种常见的友元声明的用途是使类的内部结构对单元测试可用。尽管这种做法在 C++中通常被劝阻，但在测试其他情况下私有的辅助内部类或辅助方法时，有时是必要的。
+另一种常见的友元声明的用途是使类的内部结构对单元测试可用。尽管这种做法在 C++ 中通常被劝阻，但在测试其他情况下私有的辅助内部类或辅助方法时，有时是必要的。
 
 在 Rust 中，测试通常定义在正在测试的代码相同的模块中。由于模块的内容对子模块是可见的，这使得模块的所有内容都可以用于测试。
+
+
+
+以下是排版后的 Markdown 文档：
+
+---
 
 ```rs
 // Using Boost.Test
@@ -538,61 +382,40 @@ public:
 
 BOOST_AUTO_TEST_CASE(have_birthday_test) {
   PersonTest::test_have_birthday();
-} 
+}
 ```
 
 ```rs
-
-#![allow(unused)] fn main() { pub struct Person {
-
-    pub name: String,
-
-    age: u32,
-
-}
-
-impl Person {
-
-    pub fn new(name: String, age: u32) -> Person {
-
-        Person { name, age }
-
+#![allow(unused)]
+fn main() {
+    pub struct Person {
+        pub name: String,
+        age: u32,
     }
 
-    pub fn have_birthday(&mut self) {
+    impl Person {
+        pub fn new(name: String, age: u32) -> Person {
+            Person { name, age }
+        }
 
-        self.age = self.age + 1;
-
+        pub fn have_birthday(&mut self) {
+            self.age = self.age + 1;
+        }
     }
 
-}
+    #[cfg(test)]
+    mod test {
+        use super::Person;
 
-#[cfg(test)]
-
-mod test {
-
-    use super::Person;
-
-    #[test]
-
-    fn test_have_birthday() {
-
-        let mut alice =
-
-            Person::new("alice".to_string(), 42);
-
-        assert_eq!(alice.age, 42);
-
-        alice.have_birthday();
-
-        assert_eq!(alice.age, 43);
-
+        #[test]
+        fn test_have_birthday() {
+            let mut alice = Person::new("alice".to_string(), 42);
+            assert_eq!(alice.age, 42);
+            alice.have_birthday();
+            assert_eq!(alice.age, 43);
+        }
     }
-
 }
-
-}
-
 ```
 
 ## Rust 特质方法的可见性
@@ -603,8 +426,9 @@ Rust 中特质方法的默认可见性与 Rust 结构体不同，其中默认可
 
 ## 私有构造函数和友元
 
-在 C++中，可以通过将所有构造函数设为私有，然后声明可能从它派生的类为友元，来控制哪些类可以从特定类派生。
+在 C++ 中，可以通过将所有构造函数设为私有，然后声明可能从它派生的类为友元，来控制哪些类可以从特定类派生。
 
 在 Rust 中，可以通过使用[密封特质模式](https://predr.ag/blog/definitive-guide-to-sealed-traits-in-rust/)来实现控制哪些类型可以实现特质的类似目标。
 
-<link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Private members and friends)
+<link rel="stylesheet" type="text/css" href="../../quiz/style.css">
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Private members and friends)

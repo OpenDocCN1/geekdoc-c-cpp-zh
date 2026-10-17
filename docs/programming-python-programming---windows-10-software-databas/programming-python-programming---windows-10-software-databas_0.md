@@ -1,26 +1,11 @@
+
 # 编程：Python 编程 - Windows 10 软件与数据库 (Java, Html, C++, C语言编程、初学者编程指南、PHP、网站设计)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 引言
 
-知道如何开始计算机编程是一个真正的挑战。大多数人对于如何编写计算机代码或编写计算机程序从从何开始几乎无所知。Python 是一种容易学习的语言，它的功能远超简单的编程。
+知道如何开始计算机编程是一个真正的挑战。大多数人对于如何编写计算机代码或编写计算机程序从何开始几乎无所知。Python 是一种容易学习的语言，它的功能远超简单的编程。
 
-它是一种通用语言，最早出现于 20 世纪 80 代，信你不信，它是以蒙提派森剧（Monty Python）命名的。它被广泛用于，从测试微芯片到为世界上一些最大的网站提供支持，再到构建视频游戏。Python 是一门小型的语言，接近英语，并包含了数百个第三方库。
+它是一种通用语言，最早出现于 20 世纪 80 代，信你不信，它是以蒙提派森剧（Monty Python）命名的。它被广泛用于从测试微芯片到为世界上一些最大的网站提供支持，再到构建视频游戏。Python 是一门小型的语言，接近英语，并包含了数百个第三方库。
 
 由于 Python 与英语相似，因此很容易阅读。它在标点符号方面也遵循非常严格的规则，这意味着不像某些计算机语言，你的代码不会充斥着烦人的大括号 `{ }`，这些大括号会阻碍阅读。Python 还包含 `PEP 8`，这是一套告诉每个 Python 开发者如何格式化代码的规则，这意味着你总是知道该做什么、在哪里应该换行，并帮助你阅读其他 Python 脚本，无论它们是谁写的。
 
@@ -65,11 +50,11 @@ Python 已经存在了 20 多年，关于它的代码多。它也是一种开源
 
 - 点击开始菜单并寻找 Python v.* ——取决于你安装的版本
 - 你将看到安装了几个项目：
-    - IDLE – Python GUI – 类似于命令行 Python 提示符，但它有一个图形界面
-    - Module Docs – 一个关于已安装模块的帮助文件
-    - Python (命令行) – 类似于服务器提示符
-    - Python Manuals – 手册，以备不时
-    - Uninstall Python – 希望你永远不需要使用
+  - IDLE – Python GUI – 类似于命令行 Python 提示符，但它有一个图形界面
+  - Module Docs – 一个关于已安装模块的帮助文件
+  - Python (命令行) – 类似于服务器提示符
+  - Python Manuals – 手册，以备不时
+  - Uninstall Python – 希望你永远不需要使用
 
 在可以通过命令行提示符直接访问 Python 之前，我们需要设置 Windows PATH 变量，我们下一步完成。
 
@@ -82,26 +67,23 @@ Python 已经存在了 20 多年，关于它的代码多。它也是一种开源
 - 右键点击链接的 `setup.py` 并选择“链接另存为”或“保存目标为”
 - 完成后，在 PC 上找到该 `.py` 文件并双击运行它。它将在 Python 内部运行并完成安装
 
-
-
-
 为了设置 `PATH` 变量，让 Windows 10 知道去哪里查找 Python：
 
-*   右键点击`我的电脑`
-*   选择`属性`
-*   在下一个界面中，点击`高级系统`
-*   在下一个界面中，点击`环境变量`
-*   我假设你在安装 Python 时，选择了仅为你当前用户安装，而不是为系统中的所有人安装——点击“用户变量”框下的 `Path`
-*   点击`编辑`
-*   在下一个界面中，找到变量值框，并将光标置于表示最后一条条目的分号（`;`）之后
-*   在框中输入以下内容作为最后一条条目，并**不要**忘记在末尾包含分号（`;`）—— `C:\Python25\Scripts;`
-*   连续点击三次`确定`以退出`系统属性`
-*   现在通过点击`开始`、`运行` 并输入 `cmd` 来打开命令提示符。点击`确定`
-*   在下一个框中输入 `easy_install BeautifulSoup` –这将安装 `BeautifulSoup` 模块 – 对你想要使用的任何其他模块重复此操作，它们将会被安装
-*   当你回到命令提示符时，输入 `Python` 然后按回车。
-*   输入 `import BeautifulSoup`（或任何其他模块的名称）
-*   将出现另一个提示，且不会显示任何错误信息。我们现在知道已经正确设置了 `PATH` 变量，并且 `EasyInstall` 已正确安装。
-*   你现在也知道如何安装新包了！
+* 右键点击`我的电脑`
+* 选择`属性`
+* 在下一个界面中，点击`高级系统`
+* 在下一个界面中，点击`环境变量`
+* 我假设你在安装 Python 时，选择了仅为你当前用户安装，而不是为系统中的所有人安装——点击“用户变量”框下的 `Path`
+* 点击`编辑`
+* 在下一个界面中，找到变量值框，并将光标置于表示最后一条条目的分号（`;`）之后
+* 在框中输入以下内容作为最后一条条目，并**不要**忘记在末尾包含分号（`;`）—— `C:\Python25\Scripts;`
+* 连续点击三次`确定`以退出`系统属性`
+* 现在通过点击`开始`、`运行` 并输入 `cmd` 来打开命令提示符。点击`确定`
+* 在下一个框中输入 `easy_install BeautifulSoup` –这将安装 `BeautifulSoup` 模块 – 对你想要使用的任何其他模块重复此操作，它们将会被安装
+* 当你回到命令提示符时，输入 `Python` 然后按回车。
+* 输入 `import BeautifulSoup`（或任何其他模块的名称）
+* 将出现另一个提示，且不会显示任何错误信息。我们现在知道已经正确设置了 `PATH` 变量，并且 `EasyInstall` 已正确安装。
+* 你现在也知道如何安装新包了！
 
 在你的电脑上安装 Python 和 `EasyInstall` 的就到此了。接下来是 Cygwin。
 
@@ -109,9 +91,9 @@ Python 已经存在了 20 多年，关于它的代码多。它也是一种开源
 
 这并不那么简单
 
-*   访问 `http://cygwin.com/http://cygwin.com/`
-*   点击左侧菜单上的`Install Cygwin`
-*   点击 `setup-x86.exe` 然后运行它
+* 访问 `http://cygwin.com/http://cygwin.com/`
+* 点击左侧菜单上的`Install Cygwin`
+* 点击 `setup-x86.exe` 然后运行它
 
 `Cygwin` 是一个非常有用的程序，因为它可以从互联网下载其他程序并为你安装。你需要提供有关你的互联网连接的信息，尽管在在整个设置过程中，你大多数情况下都可以接受默认设置。
 
@@ -143,8 +125,8 @@ $ echo "PATH=$PATH:/cygdrive/c/Python32" >> .bash_profile
 
 `lime text` 是一个非常强大的文本编辑器，它非常有用，而且还有一个永不过期的免费试用版。
 
-*   访问 `http://www.sublimetext.com/` 并下载安装程序
-*   运行它
+* 访问 `http://www.sublimetext.com/` 并下载安装程序
+* 运行它
 
 虽然 `Sublime Text` 不是免费的，但你可以根据需要一直进行试用。不过，我建议，如果你喜欢它并用它来编写许多程序，请购买完整版的许可——对你使用的任何软件都如此。
 
@@ -183,9 +165,6 @@ $ ./hello.py
 >>>
 ```
 
-
-
-
 # 变量
 
 还记得我们在在本章开始创建的那个简单程序吗？`x` 是一个变量，我们在将其打印到屏幕之前，将它与一个数字（在本例中为 3）相关联。变量是任何编程语言中最基础的概念，是我们在处理数据时用于存储值的工具。
@@ -201,7 +180,7 @@ Python 中的变量名几乎可以可以是任何内容，只要你遵循以下�
 ## 保留关键字
 
 * `and`
-* ` as`
+* `as`
 * `assert`
 * `break`
 * `class`
@@ -341,15 +320,17 @@ unicode string !!!
 * `UnicodeEncodeError`
 * `UnicodeDecodeError`
 
+
+
 其中任何一个错误都会导致你的程序崩溃。当这种情况发生时，通常是因为你尝试“隐式”转换的字符串包含默认编码（通常是 ASCII）无法表示的字符。
 
 [其他有用值](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)
 
 还有一些非常有用的值：
 
-* `None` - 在其他编程语言中通常视为 Null，它代表“无”。
-* `True` - 真的布尔值。
-* `False` - 假的布尔值。
+- `None` - 在其他编程语言中通常视为 `Null`，它代表“无”。
+- `True` - 真的布尔值。
+- `False` - 假的布尔值。
 
 你会在编程生涯中经常看到这些值，通过编写以下内容可以将它们包含在你编写的任何程序中：
 
@@ -361,12 +342,9 @@ z = False
 
 [更复杂的数据类型](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)
 
-
-
-
 当你在处理更复杂的信息时，你可能想要将某些数据分组。Python 有许多概念可以让你实现这一点，包括列表推导式、生成器和迭代器等。对这些数据进行分组的基本方法是使用所谓的“数据结构”。这些对象会将所有值存储在一起，在 Python 中，你可以创建自定义的数据结构。不过，它也有四种内置的数据结构。用于存储数据的对象被称为容器。
 
-以下数据类型可以对它们执行执行许多不同的操作，其中许多操作已经内置在数据类型中（称为方法）。
+以下数据类型可以对它们执行许多不同的操作，其中许多操作已经内置在数据类型中（称为方法）。
 
 ### [列表 List](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)
 
@@ -374,15 +352,17 @@ z = False
 
 当你写一个列表时，它应该带有方括号，每个项目之间用逗号隔开：
 
-● # `w` 是一个空列表
-● `w = []`
-● # `x` 只有一个成员
-● `x = [3.0]`
-● # `y` 是一个数字列表
-● `y = [1, 2, 3, 4, 5]`
-● # `z` 是一个字符串列表
+- `# w` 是一个空列表
+- `w = []`
+- `# x` 只有一个成员
+- `x = [3.0]`
+- `# y` 是一个数字列表
+- `y = [1, 2, 3, 4, 5]`
+- `# z` 是一个字符串列表
+
 ### 以及其他列表
-● `z = ['first', [], 'second', [1, 2, 3, 4], 'third']`
+
+- `z = ['first', [], 'second', [1, 2, 3, 4], 'third']`
 
 你可以通过“索引”访问列表上的任何内容。该索引必须是一个表示项目在列表中位置的整数。第一个位置是零。可以通过在变量后放置包含索引的方括号对变量进行索引。
 
@@ -432,8 +412,8 @@ IndexError: tuple index out of range
 
 即使元组中只有一个成员，你仍然需要添加逗号。例如，如果你只放一个 `1`，那么 `t` 不会被归类为元组，而 `1,` 则是。如果你需要创建一个空元组，可以使用以下内容之一：
 
-● `()`
-● `tuple ()`
+- `()`
+- `tuple()`
 
 ### [字典 Dictionaries](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)
 
@@ -492,20 +472,22 @@ TypeError: unhashable type
 （注：提供的文本包含重复章节和碎片化句子。）
 
 ### 条件 Conditions
+
 当你在处理更复杂的信息时，你可能想要将某些数据分组。Python 有许多概念可以让你实现这一点，包括列表推导式、生成器和迭代器等。对这些数据进行分组的基本方法是使用所谓的“数据结构”。这些对象会将所有值存储在一起，在 Python 中，你可以创建自定义的数据结构。不过，它也有四种内置的数据结构。用于存储数据的对象被称为容器。
 
 ### 布尔运算符 Boolean operators
+
 你可以使用 `and` 和 `or` 来构建复杂的表达式。例如：
 
-● `name = "John"`
-● `age = 23`
-● `if name == "John" and age == 23:`
-● `print "Your name is John, and you are also 23 years old."`
-
-● `if name == "John" or name == "Rick":`
-● `print "Your name is either John or."`
+- `name = "John"`
+- `age = 23`
+- `if name == "John" and age == 23:`
+- `print "Your name is John, and you are also 23 years old."`
+- `if name == "John" or name == "Rick":`
+- `print "Your name is either John or."`
 
 ### "in" 运算符
+
 这可以用于检查特定对象是否存在于容器中，例如列表：
 
 ```python
@@ -514,6 +496,7 @@ if name in ["John", "Rick"]:
 ```
 
 ### 'is' 运算符
+
 `is` 运算符不匹配变量值；相反，它匹配实例本身。一个例子：
 
 ```python
@@ -524,63 +507,57 @@ print x is y # 输出 False
 ```
 
 ### "not" 运算符
+
 如果你在布尔运算符前面使用 `not`，它将反转它：
 
-
-
-
-● `print not False` # 输出 True
-
-● `print (not False) == (False)` # 输出 False
+- `print not False` # 输出 True
+- `print (not False) == (False)` # 输出 False
 
 # 循环
 
 Python 有两种不同类型的循环——`For` 和 `While`。“for” 循环会遍历特定的序列，例如：
 
-● `primes = [2, 3, 5, 7]`
-● `for prime in primes:`
-● `print prime`
+- `primes = [2, 3, 5, 7]`
+- `for prime in primes:`
+- `print prime`
 
 它们能够遍历使用 `range` 和 `xrange` 函数的数字序列。这两者的区别在于，前者会返回一个包含特定范围数字的新列表，而后者返回一个迭代器，后者的效率高得多。
 
-● ` # 输出数字 0,1,2,3,4
-● `for x in xrange(5):` # 或 `range(5)`
-● `print x`
-
-● ` # 输出 3,4,5`
-● `for x in xrange(3, 6):` # 或 `range(3, 6)`
-● `print x`
-
-● ` # 输出 3,5,7`
-● `for x in xrange(3, 8, 2):` # 或 `range(3, 8, 2)`
-● `print x`
+- `# 输出数字 0,1,2,3,4`
+- `for x in xrange(5):` # 或 `range(5)`
+- `print x`
+- `# 输出 3,4,5`
+- `for x in xrange(3, 6):` # 或 `range(3, 6)`
+- `print x`
+- `# 输出 3,5,7`
+- `for x in xrange(3, 8, 2):` # 或 `range(3, 8, 2)`
+- `print x`
 
 “while” 循环在特定布尔条件满足时会重复，例如：
 
-● ` # 输出 0,1,2,3,4`
-● `count = 0`
-● `while count < 5:`
-● `print count`
-● `count += 1` # 这等于 `count = count + 1`
+- `# 输出 0,1,2,3,4`
+- `count = 0`
+- `while count < 5:`
+- `print count`
+- `count += 1` # 这等于 `count = count + 1`
 
 ## "break" 和 "continue" 语句
 
 这两者的区别在于，“break” 用于退出 “for” 循环，而 “continue” 会跳过当前的文本块并返回到 “for” 或 “while” 语句。几个例子：
 
-● ` # 输出 0,1,2,3,4`
-● `count = 0`
-● `while True:`
-● `    print count`
-● `    count += 1`
-● `    if count >= 5:`
-● `        break`
-
-● ` # 只输出奇数 - 1,3,5,7,9`
-● `for x in xrange(10):`
-● `    # 检查 x 是否为偶数`
-● `    if x % 2 == 0:`
-● `        continue`
-● `    print x`
+- `# 输出 0,1,2,3,4`
+- `count = 0`
+- `while True:`
+- `    print count`
+- `    count += 1`
+- `    if count >= 5:`
+- `        break`
+- `# 只输出奇数 - 1,3,5,7,9`
+- `for x in xrange(10):`
+- `    # 检查 x 是否为偶数`
+- `    if x % 2 == 0:`
+- `        continue`
+- `    print x`
 
 # 函数
 
@@ -588,10 +565,10 @@ Python 有两种不同类型的循环——`For` 和 `While`。“for” 循环�
 
 我们知道 Python 将使用块，它是一段编写如下形式的代码：
 
-● `block_head:`
-● `    第一行块内容`
-● `    第 2 行块内容`
-● `    ...`
+- `block_head:`
+- `    第一行块内容`
+- `    第 2 行块内容`
+- `    ...`
 
 在块行是某些 Python 代码或另一个块的情况下，块头以以下格式书写——`block_keyword block_name(argument1, argument2...)`。你已经知道一些块关键字——`if`、`for`、`while` 等。我们使用关键字 `def` 在 Python 中定义一个函数，后面紧跟的是函数名：
 
@@ -689,7 +666,7 @@ myobjectx.function()
 
 # 模块和包
 
-所有的 Python 模块都是具有 .py 扩展名的文件，实现了一组函数。通过 `import` 命令从另一个模块导入模块。
+所有的 Python 模块都是具有 `.py` 扩展名的文件，实现了一组函数。通过 `import` 命令从另一个模块导入模块。
 
 第一次加载模块时，它会被初始化。下次导入它时，不会再次加载。
 
@@ -718,32 +695,32 @@ help(urllib.urlopen)
 
 ## 编写模块
 
-编写 Python 模块是一个非常简单的任务。你所需要创建一个与模块名同名的 .py 文件，然后使用 Python 名称（不使用 .py 扩展名）通过 `import` 命令来导入它。
+编写 Python 模块是一个非常简单的任务。你所需要创建一个与模块名同名的 `.py` 文件，然后使用 Python 名称（不使用 `.py` 扩展名）通过 `import` 命令来导入它。
 
 ## 编写包
 
 
 
+包（package）是一个命名空间，包含许多模块和包。它们是带有特殊之处的目录。每个 Python 包都是一个必须包含名为`__init__.py`的特殊文件的目录。该文件本身可以是空的，仅表示该目录是一个 Python 包 —— 这样你就可以像导入模块一样来导入它了。
 
-包（package）是一个命名空间，包含许多模块和包。它们是带有特殊之处的目录。每个 Python 包都是一个必须包含名为 `__init__.py` 的特殊文件的目录。该文件本身可以是空的，仅表示该目录是一个 Python 包 —— 这样你就可以像导入模块一样来导入它了。
-
-如果你创建一个名为 `foo` 的目录（这将作为包名），你可以在该包中创建一个名为 `bar` 的内内模块。不要忘记你还需要向 `foo` 目录中添加 `__init__.py` 文件。为了使用名为 `bar` 的模块，你可以通过两种方式之一导入它：
+如果你创建一个名为`foo`的目录（这将作为包名），你可以在该包中创建一个名为`bar`的内内模块。不要忘记你还需要向`foo`目录中添加`__init__.py`文件。为了使用名为`bar`的模块，你可以通过两种方式之一导入它：
 
 - `import foo.bar`，或者
 - `from foo import bar`
 
-### `__init__.py` 和 `__all__` 变量
+### `__init__.py`和`__all__`变量
 
-如果你使用第一种方法，每当你访问 `bar` 时都必须使用前缀 `foo`。但在第二种方法中，你不需要这样做，因为你正在将模块本身导入到命名空间中。
+如果你使用第一种方法，每当你访问`bar`时都必须使用前缀`foo`。但在第二种方法中，你不需要这样做，因为你正在将模块本身导入到命名空间中。
 
-你还可以使用 `__init__.py` 文件来决定包将将哪些模块导出为 API，同时通过重写 `__all__` 变量来保持其他模块为内部模块 —— 示例：
+你还可以使用`__init__.py`文件来决定包将将哪些模块导出为 API，同时通过重写`__all__`变量来保持其他模块为内部模块 —— 示例：
 
 `__init__.py`:
+
 - `__all__ = ["bar"]`
 
 # MySQL Python 教程
 
-在最后一章节中，我想和你们讨论如何使用 Python 为 MySQL 数据库编程。我将介绍使用 `MySQLdb` 模块的 Python 编程基础。
+在最后一章节中，我想和你们讨论如何使用 Python 为 MySQL 数据库编程。我将介绍使用`MySQLdb`模块的 Python 编程基础。
 
 ## 关于 MySQL 数据库
 
@@ -769,7 +746,7 @@ $ apt-cache search MySQLdb
 - `eikazo` - 专为大量扫描设计的 SANE 图形前端
 ```
 
-在现阶段，我们不知道 `MySQLdb` 模块包的名称是什么，因此可以使用以下命令来查找：
+在现阶段，我们不知道`MySQLdb`模块包的名称是什么，因此可以使用以下命令来查找：
 
 ```bash
 $ sudo apt-get install python-mysqldb
@@ -786,6 +763,7 @@ $ mysql -u root -p
 ```
 
 输入 'help;' 或 '\h' 获取帮助。
+
 输入 '\c' 清除缓冲区。
 
 ```sql
@@ -796,14 +774,14 @@ mysql> SHOW DATABASES;
 - 2 rows in set (0.00 sec)
 ```
 
-使用 root 账户我们可以连接到数据库。要显示所有可用数据库，只需在命令行提示符处输入 `Show Databases`。
+使用 root 账户我们可以连接到数据库。要显示所有可用数据库，只需在命令行提示符处输入`Show Databases`。
 
 ```sql
 mysql> CREATE DATABASE testdb;
 - Query OK, 1 row affected (0.02 sec)
 ```
 
-我们现在可以创建一个 `testdb` 数据库，这就是你在整个章节中将使用的：
+我们现在可以创建一个`testdb`数据库，这就是你在整个章节中将使用的：
 
 ```sql
 mysql> CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'test623';
@@ -816,11 +794,11 @@ mysql> quit;
 - Bye
 ```
 
-接下来，你需要创建一个新用户，并将赋予该用户对 `testdb` 数据库中所有表的所有权限。我们创建一个新的数据库用户。授予该用户对 `testdb` 数据库中所有表的所有权限。
+接下来，你需要创建一个新用户，并将赋予该用户对`testdb`数据库中所有表的所有权限。我们创建一个新的数据库用户。授予该用户对`testdb`数据库中所有表的所有权限。
 
-## `MySQL` 模块
+## `MySQL`模块
 
-这将用于实现 MySQL 的 C API，并且它与 Python 中的 DB API 接口完全不兼容。大多数程序员倾向于使用 `MySQL` 模块，因为它是面向对象的，所以我们将在这里使用它。以下是一个使用 `_mysql` 模块的示例：
+这将用于实现 MySQL 的 C API，并且它与 Python 中的 DB API 接口完全不兼容。大多数程序员倾向于使用`MySQL`模块，因为它是面向对象的，所以我们将在这里使用它。以下是一个使用`_mysql`模块的示例：
 
 ```python
 #!/usr/bin/python
@@ -840,9 +818,9 @@ except _mysql.Error, e:
         result.fetch_row()[0] # 注意：原文此处有一个逻辑错误，但保留了内容
 ```
 
-## `MySQLdb` 模块
+## `MySQLdb`模块
 
-`MySQLdb` 是 Python 的包装器，与 DB API 兼容，使得代码更具可移植性。在第一个示例中，我们使用 `MySQLdb`：
+`MySQLdb`是 Python 的包装器，与 DB API 兼容，使得代码更具可移植性。在第一个示例中，我们使用`MySQLdb`：
 
 ```python
 #!/usr/bin/python
@@ -888,15 +866,13 @@ with con:
     cur.execute("INSERT INTO Writers(Name) VALUES('Truman Capote')")
 ```
 
-
-
-使用 `with` 关键字，解释器会自动释放这些资源，并执行错误处理。
+使用`with`关键字，解释器会自动释放这些资源，并执行错误处理。
 
 ```python
 cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25))")
 ```
 
-上面的 SQL 语句将创建一个名为 `writers` 的新数据库表。该表有两个列：`ID` 和 `Name`。
+上面的 SQL 语句将创建一个名为`writers`的新数据库表。该表有两个列：`ID`和`Name`。
 
 ```python
 cur.execute("INSERT INTO Writers(Name) VALUES('Jack London')")
@@ -904,7 +880,7 @@ cur.execute("INSERT INTO Writers(Name) VALUES('Honore de Balzac')")
 # ...
 ```
 
-要向表中插入新作者，我们使用 `INSERT` 语句并添加另外两行：
+要向表中插入新作者，我们使用`INSERT`语句并添加另外两行：
 
 ```text
 mysql> SELECT * FROM Writers;
@@ -920,7 +896,7 @@ mysql> SELECT * FROM Writers;
 5 rows in set (0.00 sec)
 ```
 
-脚本执行后，我们可以使用 `mysql` 客户端工具查询该表中的所有数据。
+脚本执行后，我们可以使用`mysql`客户端工具查询该表中的所有数据。
 
 ## 获取数据
 
@@ -939,7 +915,7 @@ with con:
         print row
 ```
 
-上面的示例展示了你如何从名为 `Writers` 的表中检索所有数据。
+上面的示例展示了你如何从名为`Writers`的表中检索所有数据。
 
 ```python
 cur.execute("SELECT * FROM Writers")
@@ -951,7 +927,7 @@ cur.execute("SELECT * FROM Writers")
 rows = cur.fetchall()
 ```
 
-我们使用 `fetchall()` 方法检索所有记录，这些记录以结果集的形式返回。
+我们使用`fetchall()`方法检索所有记录，这些记录以结果集的形式返回。
 
 ```python
 for row in rows:
@@ -992,7 +968,7 @@ for i in range(cur.rowcount):
     print row[0], row[1]
 ```
 
-我们使用 `fetchone()` 方法获取每一行，而 `rowcount` 属性将显示 SQL 语句返回的总行数。
+我们使用`fetchone()`方法获取每一行，而`rowcount`属性将显示 SQL 语句返回的总行数。
 
 ```text
 $ ./retrieve2.py
@@ -1007,7 +983,7 @@ $ ./retrieve2.py
 
 ## 字典游标
 
-在 `MySQLdb` 模块中，有许多类型的游标。默认游标以元组的元组的形式返回数据。字典游标以字典的格式发送数据，允许我们通过列名来引用数据：
+在`MySQLdb`模块中，有许多类型的游标。默认游标以元组的元组的形式返回数据。字典游标以字典的格式发送数据，允许我们通过列名来引用数据：
 
 ```python
 #!/usr/bin/python
@@ -1022,7 +998,7 @@ with con:
         print row["Id"], row["Name"]
 ```
 
-在上面的示例中，你可以看到我们使用字典游标从名为 `Writers` 的表中检索了前四行。分解来看，该示例看起来如下：
+在上面的示例中，你可以看到我们使用字典游标从名为`Writers`的表中检索了前四行。分解来看，该示例看起来如下：
 
 ```python
 cur = con.cursor(mdb.cursors.DictCursor)
@@ -1031,7 +1007,7 @@ for row in rows:
     print row["Id"], row["Name"]
 ```
 
-`DictCursor` 用于从表中引入四行数据。数据通过列名引用。
+`DictCursor`用于从表中引入四行数据。数据通过列名引用。
 
 ```text
 $ ./dict.py
@@ -1062,7 +1038,7 @@ with con:
         print "%s %s" % (row[0], row[1])
 ```
 
-我们通过 `description` 对象从表中获取列元数据，并逐行打印所有数据。
+我们通过`description`对象从表中获取列元数据，并逐行打印所有数据。
 
 ```text
 $ ./columnheaders.py
@@ -1095,7 +1071,9 @@ with con:
 cur.execute("UPDATE Writers SET Name = %s WHERE Id = %s", ("Guy Mauasant", "4"))
 ```
 
-在此处，我们使用了由 `%s` 标识的占位符。值在 SQL 语句执行之前绑定到占位符。
+在此处，我们使用了由`%s`标识的占位符。值在 SQL 语句执行之前绑定到占位符。
+
+
 
 ```text
 $ ./prepared.py
@@ -1138,10 +1116,7 @@ with con:
     cur.execute("INSERT INTO Images VALUES(1, %s)", (data, ))
 ```
 
-在上面的脚本中，我们从磁盘读取了一个 .JPG 文件并将其放入名为 `Images` 的表中。
-
-
-
+在上面的脚本中，我们从磁盘读取了一个 `.JPG` 文件并将其放入名为 `Images` 的表中。
 
 我们现在知道如何将图像插入到表中，但我们如何读取这些图像呢？
 
@@ -1165,23 +1140,26 @@ with con:
 上面的脚本显示了我们如何从 `images` 表中读取文件。
 
 `cur.execute("SELECT Data FROM Images WHERE Id=1")`
+
 我们从表中选取了一条记录。
 
 `fout = open('woman2.jpg', 'wb')`
+
 现在我们打开了一个可写的二进制文件。
 
 `fout.write(data)`
+
 然后我们将该数据写入磁盘。
 
 你现在应该在当前目录下看到一个名为 `woman2.jpg` 的图像，我们可以查看它是否是正确的，即你在上一个示例中插入的那个。
 
 ## 事务支持
 
-事务是针对一个或多个不同数据库中的数据进行的数据库操作原子单元。每个事务中 SQL 语句的影响可以对该数据库进行回滚（rollback）或提交（commit）。
+事务是针对一个或多个不同数据库中的数据进行的数据库操作原子单元。每个事务中 SQL 语句的影响可以对该数据库进行回滚（`rollback`）或提交（`commit`）。
 
 如果数据库支持事务，Python 将在游标创建时自动——静默地启动一个事务。我们使用 `commit()` 方法来提交使用该游标进行的更新，并使用 `rollback()` 方法来回滚或丢弃它们。这些方法中的每一个都将启动一个新的事务。
 
-MySQL 数据库包含几种不同的存储引擎类型，最常见的是 `MyISAM` 和 `InnoDB`。InnoDB 现在是默认引擎，尽管在速度和安全性之间存在权衡。`MyISAM` 表的处理速度快得多，但不支持事务。`rollback()` 和 `commit()` 方法没有实现，因此不起任何作用。然而，`InnoDB` 表在防止数据丢失方面安全得多，而且它们支持事务，尽管处理速度较慢。
+MySQL 数据库包含几种不同的存储引擎类型，最常见的是 `MyISAM` 和 `InnoDB`。`InnoDB` 现在是默认引擎，尽管在速度和安全性之间存在权衡。`MyISAM` 表的处理速度快得多，但不支持事务。`rollback()` 和 `commit()` 方法没有实现，因此不起任何作用。然而，`InnoDB` 表在防止数据丢失方面安全得多，而且它们支持事务，尽管处理速度较慢。
 
 ```python
 #!/usr/bin/python
@@ -1213,12 +1191,15 @@ finally:
 `writers` 表已重新创建，我们现在将显式地处理事务。
 
 `cur = con.cursor()`
+
 在 Python DB API 中，并没有调用 `BEGIN` 语句来启动事务。相反，事务在游标创建时就已经启动了。
 
 `cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25)) ENGINE=INNODB")`
+
 在这个例子中，我们查看的是 `InnoDB` 表类型——如果你使用的是旧版本的 MySQL，则需要指定引擎类型。
 
 `con.commit()`
+
 事务必须通过两种方法之一结束——`commit()` 或 `rollback()` 方法。如果你在这一行加上以井号（`#`）开头的注释，表仍然会被创建，但数据不会被写入其中。
 
 到目前为止，我们一直在使用事务，但还没有显式地使用。相反，我们使用了上下文管理器（context managers），它们在代码块执行时处理运行时的进入和退出。你可以在 `Mysdb` 中将连接对象作为上下文管理器。它们会自动回滚或提交事务，并通过消除 `try` 和 `finally` 语句来清理代码。

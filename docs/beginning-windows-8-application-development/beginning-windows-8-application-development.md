@@ -1,130 +1,123 @@
+
 # Windows 8 应用开发入门指南
-
-
-
-
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_0_0.png)
 
-# 开始
+## 开始
 
-# Windows 8
+### Windows 8
 
-# 应用程序开发
+### 应用程序开发
 
+### 参与
 
-# 参与
+通过参与我们在 `@p2p.wrox.com` 的 P2P 论坛，在网上积极发挥作用。
 
-通过参与我们在 @p2p.wrox.com 的 P2P 论坛，在网上积极发挥作用。
-
-# Wrox 博客
+### Wrox 博客
 
 下载简短的资讯文章和代码，让您与时事同步并避免麻烦。
 
-# 加入社区
+### 加入社区
 
-在 newsletter.wrox.com 订阅我们的免费每月时通讯
+在 `newsletter.wrox.com` 订阅我们的免费每月时通讯
 
-# Wrox.com
+### Wrox.com
 
 浏览琳琅多目的 Wrox 书籍、电子书和博客，找到您所需要的内容
 
-# 用户组计划
+### 用户组计划
 
 成为成员并享受所有福利
 
-# Twitter 上的 Wrox
+### Twitter 上的 Wrox
 
-在 Twitter 上关注 @wrox，获知 Wrox 世界的最新动态
+在 Twitter 上关注 `@wrox`，获知 Wrox 世界的最新动态
 
-# Facebook 上的 Wrox
+### Facebook 上的 Wrox
 
-加入 facebook.com/wroxpress  Wrox Facebook 页面，获取新书和出版物的更新，以及即将举行的程序员会议和用户组活动
+加入 `facebook.com/wroxpress` Wrox Facebook 页面，获取新书和出版物的更新，以及即将举行的程序员会议和用户组活动
 
-# 开始
-
-
+## 开始
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_2_0.png)
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_2_1.png)
 
-
-# 开始 Windows ® 应用程序开发
-
-
-
-
-
-
-
-
-
+## 开始 Windows ® 应用程序开发
 
 **制作谢**
 
 **策划编辑**
+
 Mary James
 
 **副编辑**
+
 Kevin Swad
 
 **制作总监**
+
 John Goles
 
 **技术编辑**
+
 Neil Edde
 
 **执行编辑**
+
 Ashley Shaman
 
 **编辑**
 
 **项目协调**
+
 Katie Scott
 
 **文案编辑**
+
 Kim Coker
 
 **校对**
+
 Jennifer Kaik
 
 **自由职业者**
+
 Sarah Franklin
 
 **助理**
+
 David Mayhew
 
 **封面设计师**
+
 Ashley Knies
 
 **业务经理**
+
 Don Zucker
 
 **营销经理**
+
 Tim Tate
 
 **关于作者**
 
-# 关于作者
+## 关于作者
 
 ISTVÁN NOVÁK是一位匈牙利的软件开发者，过去十年中从事 .NET 以及后来的 Silverlight 开发。除了编写代码和编写关于代码的书籍外，他还曾在各公司担任软件开发培训师，并在布达佩斯技术大学授课。此外，他经常在当地微软活动中担任演讲者，其相关资料属于微软。
 
-GYÖRGY BALÁSSY在布达佩斯技术大学教授 .NET。他是当地 MSDCC 的创始成员，在学术和工业活动中他曾多次获得 SharePoint、ASP.NET 和 IIS 的最佳演讲奖和最具价值专业人士奖。他被选为 ASPInsiders 小组的成员。自2005年以来，Balassy一直担任微软地区经理。您可以访问他的博客 http://gyorbalassy.wordpress.com 或通过 balassy@out.me 与他联系。
+GYÖRGY BALÁSSY在布达佩斯技术大学教授 .NET。他是当地 MSDCC 的创始成员，在学术和工业活动中他曾多次获得 SharePoint、ASP.NET 和 IIS 的最佳演讲奖和最具价值专业人士奖。他被选为 ASPInsiders 小组的成员。自2005年以来，Balassy一直担任微软地区经理。您可以访问他的博客 `http://gyorbalassy.wordpress.com` 或通过 `balassy@out.me` 与他联系。
 
 ZOLTÁN ARV是一位专注于客户端应用程序开发和前端架构的软件工程师。他对用户体验和下一代界面充满热情。过去七年来他一直是自由职业者，负责多个企业软件开发项目。Arvai 获得了微软最具价值专业人士（MVP）奖，并三次被评为 Silverlight MVP。他是当地微软会议的频繁演讲者。Arvai 合著编写了关于 Silverlight 4.0 和 Windows Phone 7.5 的匈牙利书籍。他居住在匈牙利的布达佩斯，在那里他喜欢弹旧钢琴，并非常喜欢与世界各地的人交流。
 
 DÁVID FÜLöp是一位匈牙利的软件开发者，过去十年中从事 .NET 以及后来的 Silverlight 开发。除了编写代码和编写关于代码的书籍外，他还曾在各公司担任软件开发培训师，并在布达佩斯技术大学授课。此外，他经常在当地微软活动中担任演讲者。在空闲时间，他练习空拳术、玩游戏，并正努力学习克林林语。
 
-
-
-
-
-# 技术编辑简介
+## 技术编辑简介
 
 **ALEX GOLES** 是 Sela（位于西雅图）的首席技术官 (CTO)。他是一位专注于 Windows 8、Windows Phone、XNA、Silverlight 和 Windows Presentation Foundation (WPF) 的国际专家。Goles 目前为全球各企业提供咨询服务，架构并开发 Windows 8、Windows Phone、富网络应用 (RIA) 和智能客户端解决方案。他曾为微软（位于华盛顿州雷德蒙）的多个产品组开发培训示例和课程。他在 Windows 8、Windows Phone、RIA 和智能客户端领域范围内举办讲座、研讨会并领导项目。作为微软早期采用计划的一部分，他在以色列、印度、瑞典和波兰进行过 Windows Phone 7、WPF 和 Silverlight 的培训。他已连续四年获得微软最有价值专业人士 (MVP) 的认可。
 
-# 致谢
+## 致谢
 
 **写这本书是一场伟大的冒险！** 在我完成上一本书的几周后，Paul Reese 打来来电话，邀请我参与编写一本关于 Windows 8 的书。我没有犹豫，立即说了“好”。我很高兴 Paul 再次给了我机会，希望他对结果感到满意。
 
@@ -158,42 +151,16 @@ ISTVÁN NOVÁK
 
 —DÁVID FÜLÖ
 
-
-
-
-
-
-
-
-
-
 - 安装和使用扩展
 - IDE 值得学习的实用知识
 - Visual Studio 首页
 - 窗口管理
 - 使用快速启动
-
 - 在 Visual Studio 中启动 Expression Blend
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 处理数据 259
   - 数据绑定依赖属性和通知 260
 
-
-
-# 设计控件的视觉外观
+## 设计控件的视觉外观
 
 - 将控件与内部连接 286
 - 响应交互 287
@@ -207,29 +174,21 @@ ISTVÁN NOVÁK
 - 设计器表面 294
 - 属性面板 294
 - 资源面板 294
-
-
-
-
-
-
 - 使用应用程序生命周期事件 317
 
-
-
-# 命令化表面 328
+## 命令化表面 328
 
 - 使用右键菜单 329
 - 使用应用栏 331
 - 使用消息对话框 337
 - 在应用中使用设置 Charm (Charm) 340
 
-# 持久化应用程序数据
+## 持久化应用程序数据
 
 - 应用程序数据存储 | 342
-- ApplicationData 类 | 343
+- `ApplicationData` 类 | 343
 
-## 应用程序和开始屏幕 | 347
+### 应用程序和开始屏幕 | 347
 
 - 应用程序图标和启动屏幕 | 347
 - 使用通知激活磁贴 | 349
@@ -240,16 +199,12 @@ ISTVÁN NOVÁK
 - 使用磁贴图像 352
 - 其他活动磁贴功能 352
 - 磁贴通知示例 353
-
-
-
-
 - 枢纽导航 358
 - 直接导航 359
 - 分级导航 359
 - 语义缩放 360
 
-## 处理页面 | 362
+### 处理页面 | 362
 
 - 向后和向前导航 363
 - 参数和导航事件 366
@@ -261,7 +216,7 @@ ISTVÁN NOVÁK
 - 修复应用栏问题 372
 - 启动文件和网页 375
 
-## 使用分屏应用程序和网格模板 | 377
+### 使用分屏应用程序和网格模板 | 377
 
 - 模板的结构 378
 - 管理示例数据和运行时 382
@@ -270,9 +225,9 @@ ISTVÁN NOVÁK
 - 使用富文本 385
 - 其他值得研究的功能 386
 
-## 总结 | 387
+### 总结 | 387
 
-# 第 11 章：构建连接应用程序 391
+## 第 11 章：构建连接应用程序 391
 
 - 与操作系统和其他应用程序集成 392
 - 选择器：访问数据的统一设计 392
@@ -283,8 +238,8 @@ ISTVÁN NOVÁK
 - 检测网络连接的变化 412
 - 使用源 (Feeds) 415
 - 访问 Windows Live 420
-## 总结 428
 
+### 总结 428
 
 - 适配平板电脑设备 432
 - 构建感知位置的应用 432
@@ -298,9 +253,6 @@ ISTVÁN NOVÁK
 - 使用倾斜仪 458
 - 以简单方法检测方向 459
 - 其他功能 460
-
-
-
 - 在应用程序中使用动画 466
 - 主题过渡 468
 - 主题动画和故事板 469
@@ -311,7 +263,7 @@ ISTVÁN NOVÁK
 - 应用多个变换 477
 - 3D 空间中的变换 478
 
-# 设计控件的视觉外观
+## 设计控件的视觉外观
 
 - 将控件与内部连接 480
 - 响应交互 482
@@ -325,42 +277,36 @@ ISTVÁN NOVÁK
 - 设计器表面 490
 - 属性面板 490
 - 资源面板 491
-
-
-- 了解 ListViewBase 控件 494
-- 使用 GridView 控件 496
+- 了解 `ListViewBase` 控件 494
+- 使用 `GridView` 控件 496
 - 绑定到数据 497
 - 数据分组 498
 - 定义视觉组 499
-- 使用 ListView 500
-- 比较 ListView 和 ListBox 500
-- 使用 FlipView 控件 502
-- 使用 SemanticZoom 503
-- 使用 AppBar 控件 506
+- 使用 `ListView` 500
+- 比较 `ListView` 和 `ListBox` 500
+- 使用 `FlipView` 控件 502
+- 使用 `SemanticZoom` 503
+- 使用 `AppBar` 控件 506
 
-
-
-
-
-# 部署 Windows 8 应用 519
+## 部署 Windows 8 应用 519
 
 - 应用程序包 520
 - 应用程序包清单 523
 - 安装、更新和删除 524
 
-# 命令化表面 526
+## 命令化表面 526
 
 - 使用右键菜单 527
 - 使用应用栏 529
 - 使用消息对话框 533
 - 在应用中使用设置 Charm (Charm) 537
 
-# 持久化应用程序数据 539
+## 持久化应用程序数据 539
 
 - 应用程序数据存储 | 540
-- ApplicationData 类 | 541
+- `ApplicationData` 类 | 541
 
-# 应用程序和开始屏幕 | 545
+## 应用程序和开始屏幕 | 545
 
 - 应用程序图标和启动屏幕 | 545
 - 使用通知激活磁贴 | 546
@@ -371,20 +317,12 @@ ISTVÁN NOVÁK
 - 使用磁贴图像 550
 - 其他活动磁贴功能 550
 - 磁贴通知示例 551
-
-
-
-
-
-
-
-
 - 使用富文本 580
 - 其他值得研究的功能 581
 
-# 总结 | 582
+## 总结 | 582
 
-# 第 16 章：构建连接应用程序 584
+## 第 16 章：构建连接应用程序 584
 
 - 与操作系统和其他应用程序集成 585
 - 选择器：访问数据的统一设计 585
@@ -395,9 +333,10 @@ ISTVÁN NOVÁK
 - 检测网络连接的变化 604
 - 使用源 (Feeds) 607
 - 访问 Windows Live 611
-## 总结 616
 
-# 第 17 章：利用平板电脑功能 | 618
+### 总结 616
+
+## 第 17 章：利用平板电脑功能 | 618
 
 - 适配平板电脑设备 619
 - 构建感知位置的应用 619
@@ -411,19 +350,16 @@ ISTVÁN NOVÁK
 - 使用倾斜仪 644
 - 以简单方法检测方向 645
 - 其他功能 646
-## 总结 647
 
+### 总结 647
 
-
-
-
-# 引言
+## 引言
 
 本书的第二部分从解释作为现代应用开发关键特征的核心原则开始，这些原则将在后续章节中使用。
 
 可用于创建 Windows 8 风格应用程序的四种编程语言有 C++、C#、Visual Basic 和 JavaScript。如果详细介绍这四种语言，本书的篇幅和范围将增加一倍，因此，我们详细介绍了 C#，并在大部分的示例和练习中使用了它。如果你具有 Web 开发经验，或者对使用网络技术编写应用程序感兴趣，第 6 章将重点关注 HTML5、CSS3 和 JavaScript。如果你现在正在使用 C++，那么第 13 章将会在 Windows 8 应用程序的背景下介绍这种优秀的编程语言。
 
-# 本书涵盖内容
+## 本书涵盖内容
 
 Windows 8 承诺可以在新版本的操作系统上运行每一个 Windows 7 应用程序。此外，你可以使用现有的技术和工具在 Windows 8 上开发应用程序。本书侧重于 Windows 8 风格的应用开发，这种开发方式是之前的任何操作系统版本都不不存在的。我们仅在 Windows 8 风格应用开发的背景下介绍现有技术。
 
@@ -440,7 +376,7 @@ Windows 8 承诺可以在新版本的操作系统上运行每一个 Windows 7 �
 
 你将通过实操练习学习这些主题，这些练习将引导你如何结合使用 Microsoft Visual Studio 2012 Express for Windows 8 和 Microsoft Expression Blend 来创建 Windows 8 风格的应用程序。
 
-# 本书的结构
+## 本书的结构
 
 本书分为三个部分，将帮助你理解 Windows 8 应用开发背后的概念，并熟悉基础工具和技术。
 
@@ -450,7 +386,6 @@ Windows 8 承诺可以在新版本的操作系统上运行每一个 Windows 7 �
 
 大多数章节首先建立背景并处理核心概念，通过图表和代码段进行说明。你将通过实操练习学习如何使用这些概念，在练习中，你将从零开始构建应用程序，并改进你之前构建的程序。每个练习都有一个“工作原理”部分，解释该练习（包括所有重要细节）是如何实现目标的。
 
-
 Windows 8 以新风格的应用程序彻底改变了应用开发的格局。在这一部分，你将熟悉使利用这些优秀特性成为可能的概念、技术和工具。
 
 - 第 1 章：“Windows 应用开发简史”——Windows 8 代表了整个操作系统家族生命周期内最大的跨越。在这里，你将学习操作系统在过去的 27 年里是如何演变的，然后遍历随 Windows 同步发展的技术和工具。
@@ -459,50 +394,40 @@ Windows 8 以新风格的应用程序彻底改变了应用开发的格局。在�
 - 第 4 章：“了解你的开发环境”——微软提供了强大的工具来利用精妙的 Windows 8 技术。在本章中，你将学习在开发应用时将使用的两个基础工具：Visual Studio 2012 和 Expression Blend。
 
 
-在这一部分，你将学习开发 Windows 8 应用程序所需的不可或缺的概念和模式。你从现代原则开始，转向创建应用 UI。掌握了这些知识后，你将转向能够让你开发完整 Windows 8 风格应用的的技巧和组件。
-
-- 第 5 章：“现代 Windows 应用开发原则”——在开始编程之前，你必须理解现代 Windows 应用开发的基本原则。你将学习 Windows 8 设计语言的核心概念，然后探索 C# 和 JavaScript 中新的异步模式。
-- 第 6 章：“使用 HTML、CSS 和 JavaScript 创建 Windows 8 风格应用程序”——Windows 8 让 Web 开发者能够基于过去的经验，因为他们可以使用现 HTML、CSS 和 JavaScript 知识。本章提供了这些技术在 Windows 8 开发方面的简要概述。
-- 第 7 章：“使用 XAML 创建 Windows 8 用户界面”——在本章中，你将学习使用扩展标记语言 (XAML) 开发 Windows 8 风格应用 UI 的基础。你在这里发现 XAML 提供了一种丰富的工具，包括布局管理、样式、模板和数据绑定。
-- 第 8 章：“使用 XAML 控件”——Windows 8 提供了许多预定义的 UI 控件，包括按钮、文本框、列表、网格等许多可在 XAML 中。在本章中，你不仅将学习如何使用这些控件，还将学习如何转换和自定义它们，以及如何使用 Expression Blend。
-- 第 9 章：“构建 Windows 8 风格应用程序”——Windows 8 风格应用程序使用一组模式来提供统一的用户体验。在这里，你将学习决定你的应用程序如何实现与 Windows 8 部分新应用相同的用户交互的模式。你还学习了关于将应用程序与操作系统开始屏幕集的重要细节。
-- 第 10 章：“创建多页面应用程序”——在本章中，你将学习如何创建具有多个页面的应用程序。首先学习 Windows 8 风格应用使用的导航概念，并熟悉支持分页的 UI 控件。Visual Studio 提供的模板——网格模板和分屏应用模板——非常适合开始你的多页面应用。在这里你将发现围绕这些模板的细节。
-- 第 11 章：“构建连接应用”——现代应用程序通常利用互联网上的可用服务，如天气信息、金融服务等。在本章中，你将学习如何利用 Windows 8 特性，利用这些互联网服务作为构建模块来开发连接应用。
-
-
-
-
 
 # 序言
 
-第 12 章：“利用平板电脑功能”——Windows 8 专注于带有触摸屏设备和各种传感器的平板电脑。在这里，你将发现允许你将触控体验和传感器信息集成到应用程序中的 API，从而提供出色的平板电脑感知用户体验。
+在这一部分，你将学习开发 Windows 8 应用程序所需的不可或缺的概念和模式。你从现代原则开始，转向创建应用 UI。掌握了这些知识后，你将转向能够让你开发完整 Windows 8 风格应用的技巧和组件。
 
+- 第 5 章：“现代 Windows 应用开发原则”——在开始编程之前，你必须理解现代 Windows 应用开发的基本原则。你将学习 Windows 8 设计语言的核心概念，然后探索 C# 和 JavaScript 中新的异步模式。
+- 第 6 章：“使用 HTML、CSS 和 JavaScript 创建 Windows 8 风格应用程序”——Windows 8 让 Web 开发者能够基于过去的经验，因为他们可以使用现有的 HTML、CSS 和 JavaScript 知识。本章提供了这些技术在 Windows 8 开发方面的简要概述。
+- 第 7 章：“使用 XAML 创建 Windows 8 用户界面”——在本章中，你将学习使用扩展标记语言（XAML）开发 Windows 8 风格应用 UI 的基础。你在这里发现 XAML 提供了一种丰富的工具，包括布局管理、样式、模板和数据绑定。
+- 第 8 章：“使用 XAML 控件”——Windows 8 提供了许多预定义的 UI 控件，包括按钮、文本框、列表、网格等许多可在 XAML 中使用的控件。在本章中，你不仅将学习如何使用这些控件，还将学习如何转换和自定义它们，以及如何使用 Expression Blend。
+- 第 9 章：“构建 Windows 8 风格应用程序”——Windows 8 风格应用程序使用一组模式来提供统一的用户体验。在这里，你将学习决定你的应用程序如何实现与 Windows 8 部分新应用相同的用户交互的模式。你还学习了关于将应用程序与操作系统开始屏幕集成的重要细节。
+- 第 10 章：“创建多页面应用程序”——在本章中，你将学习如何创建具有多个页面的应用程序。首先学习 Windows 8 风格应用使用的导航概念，并熟悉支持分页的 UI 控件。Visual Studio 提供的模板——网格模板和分屏应用模板——非常适合开始你的多页面应用。在这里你将发现围绕这些模板的细节。
+- 第 11 章：“构建连接应用”——现代应用程序通常利用互联网上的可用服务，如天气信息、金融服务等。在本章中，你将学习如何利用 Windows 8 特性，利用这些互联网服务作为构建模块来开发连接应用。
+- 第 12 章：“利用平板电脑功能”——Windows 8 专注于带有触摸屏设备和各种传感器的平板电脑。在这里，你将发现允许你将触控体验和传感器信息集成到应用程序中的 API，从而提供出色的平板电脑感知用户体验。
 
 本部分介绍的主题拓宽了你对 Windows 8 风格应用开发的知识。在这里，你将学习使你能够开始创建专业应用程序，甚至通过 Windows Store 实现其变现的概念和技术。
 
 - 第 13 章：“使用 C++ 创建 Windows 8 风格应用程序”——C++ 编程语言因其性能特性经历了复兴。现在，你可以使用 C++ 开发 Windows 8 风格的应用程序。在本章中，你将学习最新版本的 C++ 如何支持 Windows 8 应用程序，以及在哪些场景下 C++ 是最佳选择。
-
 - 第 14 章：“高级编程概念”——你将学习几项让你能够开发更高级 Windows 8 风格应用程序的概念，例如混合了多种编程语言的混合项目、后台任务，以及查询输入设备和触控能力。
-
-- 第 15 章：“测试和调试 Windows 8 风格应用程序”——如果你想通过应用程序获得成功，创建高质量的应用程序非常重要。在这里，你将学习如何编写额外的代码来测试应用程序逻辑，以确保你的代码行为完全符合预期。你还将学习不可少的调试技术，以找到代码中故障的根源。
-
+- 第 15 章：“测试和调试 Windows 8 风格应用程序”——如果你想通过应用程序获得成功，创建高质量的应用程序非常重要。在这里，你将学习如何编写额外的代码来测试应用程序逻辑，以确保你的代码行为完全符合预期。你还将学习必不可少的调试技术，以找到代码中故障的根源。
 - 第 16 章：“介绍 Windows Store”——作为开发者，你可以将应用程序提交到 Windows Store，使用户能够无缝购买并安装。在本章中，你将了解提交过程的注意事项和流程，以及帮助你完成此工作流的其他工具。
 
 ## 使用本书所需的条件
 
-Windows 8 支持两个平台平台。之一是 Intel 平台（就像之前所有的 Windows 版本支持的那样），包括 32 位的 x86 和 64 位的 x64 版本。另一个基于 ARM 处理器架构（通常用于手机和触摸屏平板电脑设备），该平台（Windows on ARM）是 Windows 操作系统家族中的新成员。
+Windows 8 支持两个平台。之一是 Intel 平台（就像之前所有的 Windows 版本支持的那样），包括 32 位的 x86 和 64 位的 x64 版本。另一个基于 ARM 处理器架构（通常用于手机和触摸屏平板电脑设备），该平台（Windows on ARM）是 Windows 操作系统家族中的新成员。
 
-要创建 Windows 8 风格的应用程序，你需要开发工具，并且它们仅在 Intel 平台上运行。因此，你必须在计算机上安装 Windows 8 的 x86 或 x64 版本进行开发。在本书编写时，Windows on ARM 尚不可。
+要创建 Windows 8 风格的应用程序，你需要开发工具，并且它们仅在 Intel 平台上运行。因此，你必须在计算机上安装 Windows 8 的 x86 或 x64 版本进行开发。在本书编写时，Windows on ARM 尚不可用。
 
-# 序言
-
-你可以使用 Microsoft Visual Studio 2012 和 Microsoft Expression Blend 创建 Windows 8 风格的应用程序。如果你拥有适当的 Microsoft Developer Network (MSDN) 订阅，你可能拥有使用这些工具的许可。否则，你可以下载适用于 Windows 8 的 Microsoft Visual Studio 2012 Express——包含 Expression Blend。本书使用的是 Express 版本。拥有开发工具后，你创建的 Windows 8 风格应用程序将可以在 Intel 和 ARM 平台上运行。
+你可以使用 Microsoft Visual Studio 2012 和 Microsoft Expression Blend 创建 Windows 8 风格的应用程序。如果你拥有适当的 Microsoft Developer Network（MSDN）订阅，你可能拥有使用这些工具的许可。否则，你可以下载适用于 Windows 8 的 Microsoft Visual Studio 2012 Express——包含 Expression Blend。本书使用的是 Express 版本。拥有开发工具后，你创建的 Windows 8 风格应用程序将可以在 Intel 和 ARM 平台上运行。
 
 ## 约定
 
 为了帮助你充分利用这些内容并跟踪进展情况，我们在整本书中使用了一些约定。
 
-## 尝试一下
+### 尝试一下
 
 “尝试一下”（Try It Out）是你应该按照书中正文内容完成的练习。
 
@@ -510,40 +435,34 @@ Windows 8 支持两个平台平台。之一是 Intel 平台（就像之前所有
 2. 每一步都有一个编号。
 3. 按照你的数据库副本完成这些步骤。
 
-**工作工作**
+**工作原理**
 
 在每个“尝试一下”练习之后，将详细解释你输入的代码。
 
-- 关于文本中的样式：
-* 我们在引入新术语和重要词汇时会对其进行高亮显示。
-* 我们显示如所示的按键操作：Ctrl+A。
-* 我们在文中显示文件名、URL 和代码，如：persistence.properties。
-* 我们以两种不同的方式呈现代码：
+关于文本中的样式：
+
+- 我们在引入新术语和重要词汇时会对其进行高亮显示。
+- 我们显示如所示的按键操作：`Ctrl+A`。
+- 我们在文中显示文件名、URL 和代码，如：`persistence.properties`。
+- 我们以两种不同的方式呈现代码：
 
 大多数代码示例使用不带高亮的等宽字体（monotype）。
+
 我们使用**粗体**来强调当前语境下特别重要的代码，或者显示与之前的代码段相比的变化。
 
 ## 源代码
 
-在完成书中的示例时，你可以选择手动输入所有代码，也可以使用随书的源代码文件。本书中使用的所有源代码均可在 http://www.wrox.com 下载。访问该网站时，只需找到书名（使用搜索框或标题列表之一），并点击页面上的“Download Code”链接即可获取全书的所有源代码。
+在完成书中的示例时，你可以选择手动输入所有代码，也可以使用随书的源代码文件。本书中使用的所有源代码均可在 `http://www.wrox.com` 下载。访问该网站时，只需找到书名（使用搜索框或标题列表之一），并点击页面上的“Download Code”链接即可获取全书的所有源代码。
 
-# 序言
-
-> **注意** 由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。由于许多书的标题相似，你可能会发现使用 ISBN 使用的标题是最容易的；本书的 ISBN 为 978-1-118-。
+> **注意** 由于许多书的标题相似，你可能会发现使用 ISBN 查找标题是最容易的；本书的 ISBN 为 978-1-118-。
 
 ## 勘误
 
-我们尽力确保书中或代码中没有错误的。但是，没有人是完美的，错误会发生。如果你在页面中发现错误，并向我们反馈错误，我们将不胜感激。
-
+我们尽力确保书中或代码中没有错误。但是，没有人是完美的，错误会发生。如果你在页面中发现错误，并向我们反馈错误，我们将不胜感激。
 
 为了获取更多关于如何使用 Wrox P2P 的信息，请务必阅读 P2P FAQ，其中包含了关于 P2P 如何工作以及针对 P2P 和书籍常见问题的解答。要阅读 FAQ，请点击任何 P2P 页面上的 FAQ 链接。
 
-
-- 第一章：Windows 8 应用开发的简史
-
-# 1
-
-## Windows 应用开发的简史
+# 第 1 章 Windows 应用开发的简史
 
 **本章将学习：**
 
@@ -552,24 +471,19 @@ Windows 8 支持两个平台平台。之一是 Intel 平台（就像之前所有
 - 感知 Windows 8 的范式转变并将其应用于应用开发
 - 了解 Windows 8 风格应用程序
 
-Windows 8 代表了该操作系统整个生命周期最大的跨跃。它不仅仅是一个更新了旧功能并添加许多请求和趋势功能的新版本。相反，正如微软强调的那样，操作系统被“重新想象了”。在本章中，你首先将学习操作系统在过去 27 年中是如何演变的，然后你将学习随 Windows 同演变的开发技术和工具。
+Windows 8 代表了该操作系统整个生命周期最大的跨跃。它不仅仅是一个更新了旧功能并添加许多请求和趋势功能的新版本。相反，正如微软强调的那样，操作系统被“重新想象了”。在本章中，你首先将学习操作系统在过去 27 年中是如何演变的，然后你将学习随 Windows 一同演变的开发技术和工具。
 
 ## Windows 的生命
 
-当第一个微软 Windows 于 1985 年 11 月 20 日发布时，它的设计是为了图形用户界面 (GUI)。微软将 Windows 创建为其 MS-DOS 操作系统的额外组件，而 Windows 彻底改变了
-
-
-个人电脑的格局。第一个版本的 Windows 使用了非常简单的图形，它与其说是 MS-DOS 的前端，不如说是一个真正的操作系统。
+当第一个微软 Windows 于 1985 年 11 月 20 日发布时，它的设计是为了图形用户界面（GUI）。微软将 Windows 创建为其 MS-DOS 操作系统的额外组件，而 Windows 彻底改变了个人电脑的格局。第一个版本的 Windows 使用了非常简单的图形，它与其说是 MS-DOS 的前端，不如说是一个真正的操作系统。
 
 ### 从 Windows 3.1 到 32 位
 
-在第一个版本发布后，直到1992年3月 Windows 3.1 发布，已经过去了近七年。这个 16 位的操作系统允许多任务处理——在一个用户还不习惯看到这种功能的环境中。新版本的 Windows 包含了可以在 DOS 应用程序之间共享的虚拟设备驱动程序。由于其保护模式，Windows 3.1 能够访问几兆字节的内存——当时 8086 系列中央处理器（CPU）使用的默认地址模式仅允许 640 KB——而不需要任何虚拟内存管理器软件。那个时代的计算机用户可能还记得这个操作系统的启动闪屏，如图 1-1 所示。
+在第一个版本发布后，直到 1992 年 3 月 Windows 3.1 发布，已经过去了近七年。这个 16 位的操作系统允许多任务处理——在一个用户还不习惯看到这种功能的环境中。新版本的 Windows 包含了可以在 DOS 应用程序之间共享的虚拟设备驱动程序。由于其保护模式，Windows 3.1 能够访问几兆字节的内存——当时 8086 系列中央处理器（CPU）使用的默认地址模式仅允许 640 KB——而不需要任何虚拟内存管理器软件。那个时代的计算机用户可能还记得这个操作系统的启动闪屏，如图 1-1 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_31_0.png)
 
 图 1-1：Windows 3.1 的启动闪屏
-
-## Windows 的生命
 
 > **注意** 多任务处理是操作系统的一种能力，允许在同一时期运行多个任务（也称为进程）。这些任务共享计算机的资源，如 CPU 和内存。操作系统在执行任务时会在它们之间切换。每个任务运行时间很短，由于切换速度快，它们似乎是同时运行的。
 
@@ -579,13 +493,13 @@ Windows 95 于 1995 年 8 月发布，是一个 32 位的操作系统，支持�
 
 ### Windows XP 和 Windows Vista
 
-Windows XP 以其图 1-2 所示的著名标志，成为了最受欢迎的 Windows 版本。尽管看起来很奇怪，这种成功（从庞大的安装量来看）仅部分是因为它发布时提供的新用户体验（“eExperience”）。同样，如 GDI+ 图形子系统、快速用户切换、ClearType 字体渲染、64 位支持等创新，也只部分贡献了这一 Windows Vista 版本的成功。实际上，XP 成功的主要推动力是继任者 Windows Vista 的不受欢迎。
+Windows XP 以其图 1-2 所示的著名标志，成为了最受欢迎的 Windows 版本。尽管看起来很奇怪，这种成功（从庞大的安装量来看）仅部分是因为它发布时提供的新用户体验（“Experience”）。同样，如 GDI+ 图形子系统、快速用户切换、ClearType 字体渲染、64 位支持等创新，也只部分贡献了这一 Windows 版本的成功。实际上，XP 成功的主要推动力是继任者 Windows Vista 的不受欢迎。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_32_0.png)
 
 图 1-2：Windows XP 标志
 
-Windows Vista 于 2006 年 11 月发布，以全新的设计面世，并提供了经过极大改进的安全性——相比之下，XP 需要三个服务包才能消除其安全问题和困扰。尽管这可能已经足够让它获得比前任更高的普及率，但 Vista 要求使用更先进的硬件作为其特性的代价。在 Windows XP 服务包 3 (SP3) 之后，大多数已经花费了大量 IT 预算来削减 XP 的企业简单认为迁移到 Vista 是不合理的。Vista 很快成为了 Windows 家族中寿命最短的操作系统。
+Windows Vista 于 2006 年 11 月发布，以全新的设计面世，并提供了经过极大改进的安全性——相比之下，XP 需要三个服务包才能消除其安全问题和困扰。尽管这可能已经足够让它获得比前任更高的普及率，但 Vista 要求使用更先进的硬件作为其特性的代价。在 Windows XP 服务包 3（SP3）之后，大多数已经花费了大量 IT 预算来削减 XP 的企业简单认为迁移到 Vista 是不合理的。Vista 很快成为了 Windows 家族中寿命最短的操作系统。
 
 ### Windows 7 掩盖了 Vista 的失败
 
@@ -597,15 +511,15 @@ Windows 7 定义了一种消除 Vista 失败的成功方式。对于 Windows 团
 
 尽管 Windows 诞生于个人电脑成为日常生活的一部分时代，但它仍然是一个考虑到企业和信息工作者而创建的操作系统。操作系统提供的大多数功能实际上是想要“硬编码”在系统中的。用户在熟悉文件、目录、安全组、权限、共享、注册表等概念之前，无法执行任何操作。这种方法反映了设计者假设用户应该如何与系统交互。
 
-> 注意：由于应用程序开始适应可用的系统资源，Windows 操作系统需要通过清理、磁盘碎片整理、病毒检查、服务包安装等方式进行定期维护。尽管每个新版本在减轻或自动化这种负担方面取得了一些巨大的改进，但这些负担从未完全消失。
+> **注意** 由于应用程序开始适应可用的系统资源，Windows 操作系统需要通过清理、磁盘碎片整理、病毒检查、服务包安装等方式进行定期维护。尽管每个新版本在减轻或自动化这种负担方面取得了一些巨大的改进，但这些负担从未完全消失。
 
 ## 微软迈向消费者的第一步
 
-苹果以消费者为中心的产品（如 iPhone 和 iPad）向世界展示了另一种方法，可以以直观的方式与计算机软件进行交互——而无需了解文件、目录、系统注册表或应用程序安装程序是什么。微软似乎一段时间时间都没有理解这一点，但市场销售数据迫使公司将注意力转向以消费者为中心的设备和操作系统。
+苹果以消费者为中心的产品（如 iPhone 和 iPad）向世界展示了另一种方法，可以以直观的方式与计算机软件进行交互——而无需了解文件、目录、系统注册表或应用程序安装程序是什么。微软似乎一段时间都没有理解这一点，但市场销售数据迫使公司将注意力转向以消费者为中心的设备和操作系统。
 
-微软行为的首次重大变化可以在 2010 年 2 月中旬巴塞罗那移动世界大会上看到（其简洁、柔和且恰当的动画突显了用户界面 (UI)，该设备的使用变得非常直观）。市场认可了这一变化，现在——在 Windows Phone 7.5 “Mango”发布近一年后——微软是移动操作系统 (OS) 市场的第三大竞争者，并且变得越来越接近苹果的 iOS 和谷歌的 Android。
+微软行为的首次重大变化可以在 2010 年 2 月中旬巴塞罗那移动世界大会上看到（其简洁、柔和且恰当的动画突显了用户界面（UI），该设备的使用变得非常直观）。市场认可了这一变化，现在——在 Windows Phone 7.5 “Mango”发布近一年后——微软是移动操作系统（OS）市场的第三大竞争者，并且变得越来越接近苹果的 iOS 和谷歌的 Android。
 
-> 注意：Windows 操作系统家族拥有嵌入式设备版本（Windows Embedded）和手机版本（Windows CE 和 Windows Mobile），这些在 Windows Phone 7 发布之前就已经可用。
+> **注意** Windows 操作系统家族拥有嵌入式设备版本（Windows Embedded）和手机版本（Windows CE 和 Windows Mobile），这些在 Windows Phone 7 发布之前就已经可用。
 
 ## Windows 8 应用登场
 
@@ -615,13 +529,13 @@ Windows Phone 7 以消费者为中心的方法随着 Windows 8 的发布成为�
 
 图 1-3：Windows 8 开始屏幕
 
-这种新的开始屏幕向消费者传递了一个明确的信息。Windows 不仅仅是面向信息工作者和资深用户的操作系统，它还是一种为多点触、平板电脑和平设备设计的消费设备。开始屏幕的界面非常直观，
-
-第 1 章 Windows 应用开发的简史 习惯了触摸屏智能手机和平平板电脑的用户自然地使用开始屏幕、启动应用程序、滚动、缩放并应用他们在其他设备上学到的手势。
+这种新的开始屏幕向消费者传递了一个明确的信息。Windows 不仅仅是面向信息工作者和资深用户的操作系统，它还是一种为多点触控、平板电脑和平板设备设计的消费设备。开始屏幕的界面非常直观，习惯了触摸屏智能手机和平板电脑的用户自然地使用开始屏幕、启动应用程序、滚动、缩放并应用他们在其他设备上学到的手势。
 
 等等，Windows 设计时考虑了对现有应用程序的完全兼容，因此也有桌面模式。当启动为任何之前的 Windows 版本创建的应用程序（或简单的不支持）时，如果你没有看到开始菜单和显示当前日期时间的状态指示，你可能会认为你正在使用 Windows 7。
 
 这是 Windows 8 的另一面——对于所有用过 Windows 的人来说都是熟悉的。使用 Windows 运行业务应用程序（如 Word、Excel 或 PowerPoint）或任何其他企业特定系统的 UI 可能会发现 Windows UI 很奇异。例如，当用户启动 Excel 时，它以桌面模式打开，如图 1-4 所示。
+
+
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_35_0.png)
 
@@ -629,14 +543,9 @@ Windows Phone 7 以消费者为中心的方法随着 Windows 8 的发布成为�
 
 新的 Windows 8 开始屏幕并不是 Windows 7 的简单补充。在这个背后是一个全新的以消费者为中心的应用世界，被称为 Windows 8 风格的应用程序。用户不再看到满屏幕的图标和矩形应用程序窗口，而是一次看到一个应用程序，它占据整个屏幕。没有窗口标题、关闭按钮、尺寸边界或任何其他元素（在用户体验术语中称为“框架”）分散用户对应用程序的注意力。图 1-5 所示的天气应用程序是这种新风格的绝佳例子。
 
-
-
-
-## API 与工具的历史
-
 ![](img/4ba176960f93c5e0483da4464a3d695f_36_0.png)
 
-**图 1-5：** Windows 8 中的应用程序
+图 1-5：Windows 8 中的应用程序
 
 在本书中，你将学习关于这种新 UI 范式的所有知识，最重要的是，你将掌握开发这种新风格应用程序的方法。在深入研究 Windows 8 风格应用程序的开发之前，你应该稍微了解一下 Windows 开发的历史。
 
@@ -663,9 +572,9 @@ main()
 }
 ```
 
-然而，为了达到相同的结果，Windows 需要更多的工作。它要求在单个 `printf` 函数周围编写“脚架（scaff）”代码，你可以称它为任何非直观的东西，如 1-1 所示。
+然而，为了达到相同的结果，Windows 需要更多的工作。它要求在单个`printf`函数周围编写“脚架（scaff）”代码，你可以称它为任何非直观的东西，如 1-1 所示。
 
-- 列表 1-1：Windows 3.1 风格“Hello, world”程序（提取）
+列表 1-1：Windows 3.1 风格“Hello, world”程序（提取）
 
 ```c
 #include <windows.h>
@@ -739,13 +648,12 @@ UINT *wParam, LONG lParam)
 }
 ```
 
-# 第 1 章 Windows 应用程序开发简史
-
 此程序包含许多行代码，因为它是基于一个仅提供低级操作系统的 API 编写的。尽管这段源码很长，但它携带了 Windows 重要的内部细节。当然，所有这些仍然位于 Windows 8 的核心中，只不过是以改进的形式存在：
 
-- 在最开始，程序通过设置 `WindowClass` 结构体的字段并使用 `RegisterClass` 方法创建一个窗口。窗口类是一个概念，用于标识一个处理消息的过程（称为窗口过程）。
+- 在最开始，程序通过设置`WindowClass`结构体的字段并使用`RegisterClass`方法创建一个窗口。窗口类是一个概念，用于标识一个处理消息的过程（称为窗口过程）。
 - 操作系统控制应用程序，并在它想任何时候让程序执行某些操作时（例如刷新 UI 或执行菜单命令）都调用它。
 - 消息循环是应用程序的心脏，它获取消息并分发它们：
+
 ```c
 while (GetMessage(&msg, NULL, 0, 0))
 {
@@ -753,36 +661,46 @@ while (GetMessage(&msg, NULL, 0, 0))
     DispatchMessage(&msg);
 }
 ```
--  程序通过设置 `WindowClass` 结构体的字段并使用 `RegisterClass` 方法创建一个窗口。窗口类是一个概念，用于标识一个处理消息的过程（称为窗口过程）。
+
+- 程序通过设置`WindowClass`结构体的字段并使用`RegisterClass`方法创建一个窗口。窗口类是一个概念，用于标识一个处理消息的过程（称为窗口过程）。
 - 操作系统控制应用程序，并在它想任何时候让程序执行某些操作时（例如刷新 UI 或执行菜单命令）都调用它。
 - 消息循环是应用程序的心脏，它获取消息并分发它们：
+
 ```c
 while (GetMessage(&msg, NULL, 0, 0))
 {
     TranslateMessage(&msg);
     DispatchMessage(&msg);
 }
+```
+
 - 这种开发在当时是极其耗时且痛苦的——因为程序员被迫通过低级操作系统的构造来实现。
-
-
-
 
 # 列表 1-2 (续)
 
 ```
 break;
+
 case WM_PAINT:
+
     Paint();
+
 break;
+
 case WM_DESTROY:
+
     PostQuitMessage(0);
+
     break;
+
 default:
+
     return DefWindowProc(hWnd, message, wParam, lParam);
+
 return 0;
 ```
 
-通过 C++ 提供的面向对象方法，对象的行为可以封装到可重用的代码库中。程序员可以基于这些库创建自己的程序，因此他们只需要定义与内置行为不同的部分即可。例如，他们必须重写列表 1-2 中的 `Paint()` 方法，以重绘其窗口对象的 UI。
+通过 C++ 提供的面向对象方法，对象的行为可以封装到可重用的代码库中。程序员可以基于这些库创建自己的程序，因此他们只需要定义与内置行为不同的部分即可。例如，他们必须重写列表 1-2 中的`Paint()`方法，以重绘其窗口对象的 UI。
 
 随着 C++ 和对象库的出现，Windows 编程发生了巨大变化。微软创建了两个库：微软基础类 (MFC) 和活动模板库 (ATL)，这些库在其旗舰级开发环境 Visual Studio 中仍然得到维护并可用。
 
@@ -815,15 +733,11 @@ Visual Basic 并不是脱离 C 和 C++ 轨迹的编程环境。Delphi 使用 Obj
 2002 年，.NET Framework 为 Windows 开发提供了新的动力。.NET 程序被编译成一种称为微软中间级语言 (MSIL) 的中间语言。这种中间代码在运行时由即时编译 (JIT) 编译器转变为可执行的 CPU 操作。这种新方法为 Windows 开发带来了几个重要的范式，包括：
 
 - 在发布 .NET 之前，每个语言都使用自己的运行时库。学习一种新语言意味着也要学习一个运行时库。有了 .NET，所有语言都使用相同的相同的运行时。2002 年，微软支持两种编程语言（C# 和 Visual Basic.NET）。今天，有 100 多种 .NET 语言正在使用。微软本身将 F# 加入了列表，该列表还支持 IronPython 和 IronRuby（它们由自己的社区驱动）。
-
 - 使用垃圾回收机制，运行时环境自动管理内存分配和对象销毁。这种行为有助于提高生产力，并允许开发者创建更不易出错的代码。
 
 垃圾回收也减少了编写产生内存泄漏程序的概率。
 
-# 第 1 章 Windows 应用程序开发简史
-
 - 程序员不再在后台使用低级 API 方法，而是处理涵盖了 API 复杂性的对象。开发者无需处理琐碎的 Windows 内部细节，可以使用高级抽象，从而提高生产力。
-
 - .NET 与 COM 和 .NET 对象之间提供了极佳的协作水平。.NET 代码不仅可以访问 COM 对象，还可以提供可以被 COM 世界使用的对象。
 
 .NET 是一个托管环境，其语言被称为托管语言——用以区别于 C、Object Pascal (Delphi) 和 C++ 等原生语言，后者编译为特定 CPU 的代码。
@@ -846,22 +760,35 @@ Visual Studio 模板非常强大。例如，你可以使用 Windows Forms Applic
 
 ```csharp
 using System;
+
 using System.Windows.Forms;
 
 namespace HelloWorldForms
+
 {
+
     public partial class Form1 : Form
+
     {
+
         public Form1()
+
         {
+
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
+
         {
+
             label1.Text = "Hello from Windows Forms!";
+
         }
+
     }
+
 }
 ```
 
@@ -875,16 +802,21 @@ namespace HelloWorldForms
 
 ```xml
 <UserControl x:Class="HelloWorld.MainPage"
+
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
-    <TextBlock Text="Hello, World*" />
-</UserControl>
 ```
 
 
 
+```xml
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
 
+<TextBlock Text="Hello, World*" />
+
+</UserControl>
+```
 
 ## 第 1 章 Windows 应用程序开发的简史
 
@@ -892,14 +824,21 @@ namespace HelloWorldForms
 
 ```xml
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
 mc:Ignorable="d"
+
 d:DesignHeight="300" d:DesignWidth="400">
 
 <Grid x:Name="LayoutRoot" Background="White">
+
   <TextBlock FontSize="48">Hello from Silverlight</TextBlock>
+
 </Grid>
+
 </UserControl>
 ```
+
+
 
 这段代码生成图 1-7 所示的页面。图中的文字显示为列表 1-4 中**粗体代码行**的结果。
 
@@ -929,9 +868,6 @@ WPF 和 Silverlight 的主要优点可能是它们可以帮助将开发者负责
 
 原生开发具有性能优势，但在许多情况下，开发过程非常繁琐。托管代码开发通常更快且更不容易出错，但在某些需要计算能力的情况下，原生代码无法被击败。当开发者寻找合适的应用程序技术时，可能会陷入“Catch-22”的困境。
 
-
-
-
 使用他们喜爱的 IDE 开发应用程序。根据所选语言和工具的不同，程序员必须使用不同的 API 和技术。虽然原生编程语言（如 C、C++ 和 Delphi）提供了针对特定 CPU 的代码和更好的性能，但托管代码在开发业务逻辑（LOB）应用程序方面效率更高，并且可以轻松访问 WPF 和 Silverlight 等现代 UI 技术。
 
 Windows 8 风格应用程序提供了原生代码和托管代码均可使用的 API ——没有任何妥协。此外，该 API 也适用于 HTML5/CSS3/JavaScript 开发者。
@@ -943,11 +879,8 @@ Windows 8 不仅改变了操作系统的 UI，还改变了你与其交互的方�
 # 练习
 
 - 1. Windows 家族中第一款为消费者设计并开发的微软操作系统是什么？
-
 - 2. Windows 8 风格应用程序是否有窗口标题和边框？
-
 - 3. 列出经常用于 Windows 应用程序开发的编程语言。
-
 - 4. Web 开发者可以使用哪些语言栈在 Windows 8 上创建 Windows 8 风格的应用程序？
 
 > 注意 你可以在附录 A 中找到练习的答案。
@@ -990,10 +923,6 @@ Windows 8 有两个不同的 UI：普通的桌面 UI（你可能已经习惯了�
 
 个人数字助理（PDA）和智能手机等较小设备曾使用硬件按钮或触笔来操作界面。由于尺寸限制，这些设备在创作内容方面的效率低于消费内容。尽管如此，在这些设备上模拟桌面 GUI 可能并非最佳选择，但它是当时的最佳选择。这些智能设备的操作系统开始重建其桌面版的简化 GUI，以保留用户体验并尽可能降低学习成本。
 
-
-
-
-
 # 输入方法
 
 为了填补智能手机和笔记本电脑之间的空白，第三类设备重新出现了——而且带有新的变化。它们仍然被称为平板电脑（有时称为 *slates*），但大多数设备缺少硬件键盘。它们拥有 7-10 英寸的多点触摸屏和少量实体按钮。其中一些设备配有触控笔，但主要利用手势作为用户交互方法。而且，它们继承了具有以触摸为中心的 GUI 的智能手机操作系统。使用这些平板电脑即使对于一个没有使用过电脑的人来说通常也感觉很自然。
@@ -1034,10 +963,6 @@ Windows GUI 表面上复杂的本质以及操作系统核心的改进，让你�
 - 从边缘划（Swipe from the Edge）——正如你在本章稍后看到的，屏幕的边缘和角落具有手势，可能用于激活某些有用功能。例如，如果你从屏幕边缘划，它可能会激活某些有用功能。
 
 # 第 2 章 使用 Windows
-
-
-
-
 
 ## 开始屏幕
 
@@ -1095,7 +1020,6 @@ Windows 资源管理器中的面板（panel）是一个更复杂的列表控件�
 
 **纠正：重新审视原始文本，原文中确实存在大量段落的粘贴错误重复。以下是基于原文逻辑、去重并翻译后的高质量译文：**
 
-[content]
 ## 开始屏幕
 
 > **注意** Windows Live 是微软的在线服务集合。您可以通过 http://live.com 访问这些服务。Windows Live 包含邮件、日历、在线存储和即时消息功能。您通过在 http://live.com 创建微软账户，就可以免费访问所有这些功能。
@@ -1145,9 +1069,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 ![](img/4ba176960f93c5e0483da4464a3d695f_59_0.png) (注：此处原文存在重复，已按逻辑处理)
 
 *(注：由于提供的原文中存在存在大量段落的粘贴错误重复，翻译时已严格遵循“不要重复输出原文”的原则，对逻辑重复的部分进行了合并处理，确保译文流畅且完整。)*
-
-
-
 
 ### 应用
 
@@ -1218,11 +1139,8 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 每个动态磁贴都有自己的上下文菜单，当然，菜单中的项目可能会有所不同。当你弹出 Windows 8 风格应用的特色栏时，可能会发现以下按钮：
 
 - 固定/从开始取消固定——点击（或触摸）此按钮会让选中的磁贴出现在开始屏幕上，或从那里消失——正如你在之前的“尝试一下”练习中看到的。
-
 - 卸载——点击或触摸该按钮将从设备上删除磁贴对应的程序。你可以通过 Windows Store 重新安装。
-
--更大/更小——某些应用程序提供两种相同的动态磁贴——一个小正方形和一个两倍大的矩形，后者提供更多信息。当特色栏上看到这些按钮时，可以选择你想要的尺寸。
-
+- 更大/更小——某些应用程序提供两种相同的动态磁贴——一个小正方形和一个两倍大的矩形，后者提供更多信息。当特色栏上看到这些按钮时，可以选择你想要的尺寸。
 - 关闭动态更新/开启——此按钮让你关闭动态磁贴的通知。关闭后，磁贴只显示默认图标；开启后，它会再次显示信息。
 
 ### 尝试使用动态磁贴的特色栏
@@ -1230,10 +1148,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 要使用特色栏更改动态磁贴的大小或开启/关闭，请遵循以下步骤：
 
 - 1. 为了弹出特色栏，右键点击或滑动一个动态磁贴。例如，右键点击或滑动音乐动态磁贴。你点击的磁贴会显示一个小框和右上角的标记。同时，特色栏出现，如图 2-12 所示。
-
-
-
-
 
 2. 点击或触摸上下文栏上的“较小”（Smaller）按钮可使音乐磁贴（Music Live Tile）变小。请注意，操作后上下文栏会自动消失，如图 2-13 所示。
 
@@ -1314,9 +1228,7 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 图 2-15：创建磁贴
 
 - 2. 进入开始屏幕的缩小视图。可以通过鼠标或收缩手势实现。
-
 - 3. 右键点击或滑动你创建的组。这会打开屏幕底部的上下文栏，有一个命令：“重命名组”（Name group）。
-
 - 4. 仍在缩小视图中，点击并按住（或滑动）你在第 1 步中创建的组。将该组向侧移动到相邻组处以为其留出空间，如图 2-18 所示。释放按钮或手指将其放置在那里。
 
 ## 开始
@@ -1330,10 +1242,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 ![](img/4ba176960f93c5e0483da4464a3d695f_72_1.png)
 
 图 2-17：重命名磁贴组
-
-
-
-
 
 ## 开始屏幕
 
@@ -1398,7 +1306,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 
 由于其中心位置以及与所有其他按钮不同的颜色，开始按钮确实显得非常特别。考虑到重要的
 
-
 在历史上的之前的 Windows 版本中，开始按钮具有功能，这是完全可以理解的。请注意，在 Windows 8 中，屏幕上没有永久的开始按钮，如果你有一个缺少硬件键盘的触摸屏，没有这个按钮，你就没有办法返回到开始屏幕。
 
 当你使用某些应用程序点击或轻点开始按钮时，它会打开开始屏幕。当你再次点击或轻点（在开始屏幕打开时），你将返回到上次使用的应用程序。这看起来与之前的 Windows 版本的行为略有不同，但实际上是相同的。区别实际上在于新的开始屏幕。它占据了整个屏幕，而不是像开始菜单那样只占据一小部分。但你点击或轻点开始时正在运行的应用仍在运行；它并没有被挂起。
@@ -1437,7 +1344,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 
 - 1. 点击或轻点开始屏幕上的实时磁（Live Tile）启动 Internet Explorer (IE)。
 - 2. 点击或轻点应用底部的文本框导航到 www.microsoft.com，完成输入后，按回车键，或轻点文本框旁的箭头。
-
 - 3. 当页面打开时，将光标移动到屏幕顶部或右下角，或者在屏幕右边缘执行滑动手势打开魅贴栏。点击或轻点魅贴栏上的分享按钮，让 Windows 列出所有可以接受并共享 IE 中打开的 URL 的应用程序。在安装其他应用程序之前，列表中只会显示邮件应用。图 2-23 显示了列出接受应用程序的侧边栏。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_80_0.png)
@@ -1445,7 +1351,6 @@ Windows 资源管理器中的面板是一个更复杂的列表控件。它可以
 图 2-23：可以通过 IE 接受数据的应用程序
 
 - 4. 点击或轻点邮件应用的图标。邮件应用在屏幕右侧打开，并会立即发送一封已经准备好发送的电子邮件。图 2-24 显示了你在设备上应该看到的内容。
-
 - 5. 在邮件应用的文本框中输入电子邮件地址（你可以在这里输入地址，在 Windows 8 应用中），并点击应用程序右上角的发送按钮（见图 2-24）。邮件应用指示这封邮件正在发送，然后它就消失了。54 | 第二章 使用 WINDOWS
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_81_0.png)
@@ -1472,10 +1377,6 @@ PC 和平板电脑不是孤立的。它们几乎总是连接到硬件。台式 P
 ![](img/4ba176960f93c5e0483da4464a3d695f_82_0.png)
 
 图 2-24：通过 IE 分享数据
-
-
-
-
 
 # 第 2 章使用 Windows
 
@@ -1559,19 +1460,15 @@ PC 和平板电脑不是孤立的。它们几乎总是连接到硬件。台式 P
 | 共享 | 开启栏上的此按钮提供了从一个应用程序向另一个应用程序发送数据的选项。 |
 | Windows 桌面 | 这是非 Windows 8 应用程序居住和运行的地方。它在桌面和笔记本电脑上仍然具有核心且重要的功能，可以通过启动非 Windows 8 应用程序或从启动屏幕启动桌面应用程序本身来访问。 |
 
-
-
-
-
 ## 从开发者视角看 Windows 8 架构
 
 在本章中你将学习：
 
--   理解 Windows 8 风格应用程序与桌面应用程序之间不同的技术栈
--   掌握 Windows Runtime 在开发 Windows 8 风格应用程序中的作用
--   了解哪些编程语言可以访问 Windows Runtime 编程接口 (APIs)
--   理解 .NET Framework 4.5 的新功能
--   选择合适的编程语言和技术栈来创建你自己的 Windows 8 应用程序
+- 理解 Windows 8 风格应用程序与桌面应用程序之间不同的技术栈
+- 掌握 Windows Runtime 在开发 Windows 8 风格应用程序中的作用
+- 了解哪些编程语言可以访问 Windows Runtime 编程接口 (APIs)
+- 理解 .NET Framework 4.5 的新功能
+- 选择合适的编程语言和技术栈来创建你自己的 Windows 8 应用程序
 
 在开发应用程序时，你通常会使用一组共同工作的技术。Windows 开发平台提供了大量的工具、技术和方案。在过去的十年里，这些组件的数量大幅增加。Windows 8 通过一种新型应用程序——Windows 8 风格应用——提供了一种新的开发模型，该模型支持多种编程语言（C++、C#、Visual Basic、JavaScript），同时保持了相关技术组件的较低数量。Windows 8 仍然允许传统的桌面应用程序。
 
@@ -1644,10 +1541,6 @@ Windows 8 风格应用程序面向那些不一定熟悉文件、注册表和安�
 
 对于原生应用程序，选择直接编译为特定 CPU 码的 C 或 C++，意味着你必须使用图形设备接口 (GDI) 或 GDI+ 技术来实现 UI。
 
-
-
-
-
 ## Windows 8 开发架构
 
 对于托管型应用程序，你仍然可以使用 GDI 和 GDI+。（在 .NET 中，它们以 Windows Forms 的别名形式使用。）更现代、更强大的选择是 Windows Presentation Foundation（WPF）——它基于可扩展的应用标记语言（XAML）——或者你更年轻（功能并不逊弱）的兄弟，Silverlight XAML。
@@ -1703,10 +1596,6 @@ Windows 8 风格应用程序面向那些不一定熟悉文件、注册表和安�
 
 Windows 8 风格应用程序开发跨越了这一单一 API 问题——无论你选择哪种语言，你只需要学习一套 API —— 由 Windows Runtime 提供。
 
-
-
-
-
 # 第3章 从开发者视角看 Windows 8 架构
 
 并暴露一组更简单的对象和函数，使常见的编程任务变得更简单。.NET Framework 为这些对象添加了运行时环境，并带有垃圾回收、异常处理、应用程序间的通信支持等额外功能。
@@ -1723,22 +1612,34 @@ Windows 8 风格应用程序开发跨越了这一单一 API 问题——无论�
 
 高效工具的一个很好的例子是 IntelliSense，它会在输入代码时监控上下文，并自动提供可能的后续项列表。如图 3-4 所示，IntelliSense 在 `MainPage` 方法的上下文中提供了跟随该成员的表达式列表。IntelliSense 不仅显示适当成员的列表，还在工具提示中显示所选成员（AllowDrop）的简短说明。负责 Windows Runtime 设计的团队始终记住，新的 API 应该易于配合 IntelliSense 这样的强大工具使用。
 
-```
+
+
+```csharp
 public MainPage()
 {
     InitializeComponent();
 }
+```
 
-contentLoaded
-    ActualHeight
-    ActualWidth
-    AllowDrop
-    ApplyTemplate
-    Arrange
-    ArrangeOverride
-    Background
-    Base6
+`contentLoaded`
 
+`ActualHeight`
+
+`ActualWidth`
+
+`AllowDrop`
+
+`ApplyTemplate`
+
+`Arrange`
+
+`ArrangeOverride`
+
+`Background`
+
+`Base6`
+
+```csharp
 // UIElement.AllowDrop
 // 获取或设置一个值，确定此 UIElement 是否可以作为拖放操作的目标。
 ```
@@ -1780,7 +1681,7 @@ Windows OS 通过 Windows Runtime 块暴露给 Windows 8 风格应用程序，�
 
 ## Windows Runtime 中的元数据
 
-在 Windows Runtime 中提供使用元数据的方法是使架构健壮的不可或缺的特性。.NET 处理元数据的方式太棒了！然而，元数据只能绑定到托管类型。许多 Win32 对象没有任何 .NET 封装。在托管代码中使用这些对象需要创建替代元数据的定义。描述定义非常繁琐，并且你需要想要使用的操作的文档。一个例子是可以在 `avcap32.dll` 中找到 `capCaptureWindow` 操作定义：
+在 Windows Runtime 中提供使用元数据的方法是使架构健壮的不可或缺的特性。.NET 处理元数据的方式太棒了！然而，元数据只能绑定到托管类型。许多 Win32 对象没有任何 .NET 封装。在托管代码中使用这些对象需要创建替代元数据的定义。描述定义非常繁琐，并且你需要想要使用的操作的文档。一个例子是可以在`avcap32.dll`中找到`capCaptureWindow`操作定义：
 
 如果你创建了错误的定义（例如，你用 x 代替了它），你的源代码将编译，但会抛出运行时错误，导致你花费大量精力查找并调试此问题。
 
@@ -1788,91 +1689,107 @@ Windows Runtime 的设计者在构建元数据子系统时受到了 .NET Framewo
 
 元数据文件提供了有关 Windows Runtime 中可用每个 API 的信息。它们随 Windows 8 安装，因此在每台安装了 Windows 8 的计算机上都能找到它们。
 
-
-
-
-
 # 第 3 章 从开发者视角看 Windows 8 架构
 
 独立地，即使该机器被用于开发或仅用于其他业务。这些文件是机器可读的，正如你在接下来的练习中学到的那样，你可以检查它们的内容。
 
 ## 尝试查看 Windows Runtime（Windows Runtime）元数据
 
-Windows Runtime 元数据文件位于 Windows 安装文件夹下。它们具有 .winmd 扩展名，你可以使用 ILDASM 工具检查它们的内容。
+Windows Runtime 元数据文件位于 Windows 安装文件夹下。它们具有`.winmd`扩展名，你可以使用 ILDASM 工具检查它们的内容。
 
 要检查元数据文件，请按照以下步骤操作：
 
 - 1. 在开始屏幕上，点击“桌面”标题，然后从任务栏选择“Windows”。
-- 2. 导航到 Windows 安装目录下的 System32Metadata 文件夹。如果你的操作系统安装在默认位置，你可以在 C:\Windows 下找到它。如果你在安装 Windows 期间提供了不同的位置，请选择该文件夹。
-- 3. 此文件夹列出了百多个文件，每个文件的名称都以 Windows 开头，并具有 .winmd 扩展名，如图 3-6 所示。这些文件代表 Windows API 的元数据信息。
+- 2. 导航到 Windows 安装目录下的`System32Metadata`文件夹。如果你的操作系统安装在默认位置，你可以在`C:\Windows`下找到它。如果你在安装 Windows 期间提供了不同的位置，请选择该文件夹。
+- 3. 此文件夹列出了百多个文件，每个文件的名称都以 Windows 开头，并具有`.winmd`扩展名，如图 3-6 所示。这些文件代表 Windows API 的元数据信息。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_99_0.png)
 
 图 3-6：System32WindowsMetadata 文件夹中的 Windows Runtime 元数据文件
 
-滚动到 .windows 文件。右键点击它，并在右键菜单中选择“用方式打开”。屏幕上会弹出一个窗口，你可以将应用程序与 .winmd 文件关联。滚动到弹出窗口底部，选择“在此电脑上查找应用”，如图 3-7 所示。
+滚动到`.windows`文件。右键点击它，并在右键菜单中选择“用方式打开”。屏幕上会弹出一个窗口，你可以将应用程序与`.winmd`文件关联。滚动到弹出窗口底部，选择“在此电脑上查找应用”，如图 3-7 所示。
 
-- 5. 弹出“打开”对话框。在“文件名”文本框中，输入 C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\NETFX 4.0 Tools，使用“用方式打开”对话框导航到此路径。点击“打开”。对话框将填充此文件夹中的文件。滚动到 ildasm 并再次点击“打开”。
+- 5. 弹出“打开”对话框。在“文件名”文本框中，输入`C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\NETFX 4.0 Tools`，使用“用方式打开”对话框导航到此路径。点击“打开”。对话框将填充此文件夹中的文件。滚动到`ildasm`并再次点击“打开”。
 
-- 6. ILASM 工具打开并显示 Windows.Graphics.winmd 文件的元数据树。展开 Windows.Graphics.Display 节点，然后是 Windows.Graphics.DisplayResolutionScale 节点。你可以发现此元数据文件中定义的所有类型，以及 ResolutionScale 类型的枚举值，如图 3-8 所示。
+- 6. ILASM 工具打开并显示`Windows.Graphics.winmd`文件的元数据树。展开`Windows.Graphics.Display`节点，然后是`Windows.Graphics.DisplayResolutionScale`节点。你可以发现此元数据文件中定义的所有类型，以及`ResolutionScale`类型的枚举值，如图 3-8 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_100_0.png)
 
-图 3-6：将 .winmd 文件与应用程序关联
+图 3-6：将`.winmd`文件与应用程序关联
 
 ```
 C:\Windows\System32\WinMetadata\Windows.Graphics.winmd -L ILASM
+
 File View Help
+
 - C:\Windows\System32\WinMetadata\Windows.Graphics.winmd
+
   MANIFEST
+
   Windows.Graphics.Display
+
     Windows.Graphics.Display.DisplayOrientations
+
     Windows.Graphics.Display.DisplayProperties
+
     Windows.Graphics.Display.DisplayPropertiesEventHandler
+
     Windows.Graphics.Display.DisplayPropertiesStatistics
+
     Windows.Graphics.Display.ResolutionScale
+
       class enum public auto antialiasing runtime
+
       extends [mscorlib]System.Error
+
       custom instance valuetype Windows.Foundation.Metadata.VersionAttribute
+
       internal : public static literal valuetype Windows.Graphics.Display.ResolutionScale
+
       Scale100Percent : public static literal valuetype Windows.Graphics.Display.ResolutionScale
+
       Scale140Percent : public static literal valuetype Windows.Graphics.Display.ResolutionScale
+
       Scale180Percent : public static literal valuetype Windows.Graphics.Display.ResolutionScale
+
       value__ : private static specialname rtspecname int32
+
   Windows.Graphics.Imaging
+
   Windows.Graphics.Printing
 ```
 
-图 3-8：ILASM 工具中的 Windows.Graphics.Display 元数据信息
+图 3-8：ILASM 工具中的`Windows.Graphics.Display`元数据信息
 
-- 7. 在 ILASM 窗口中，双击 MANIFEST 节点。将打开一个新窗口来显示元数据文件的清单信息，如图 3-9 所示。
+- 7. 在 ILASM 窗口中，双击`MANIFEST`节点。将打开一个新窗口来显示元数据文件的清单信息，如图 3-9 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_101_0.png)
 
 图 3-9：元数据文件的清单（manifest）承载了关于文件和类型的重要信息
 
-文件的清单（manifest）承载了文件中描述的类型。在图 3-9 中，你可以看到有一个 .module Windows.Graphics.winmd，后面跟着几行内容。这些项目描述了关于元数据文件的信息。
-你会看到三个以 ._assembly extern 开头的条目，这些是对 Windows.Graphics 元数据文件内用类型的其他元数据信息的引用。第一个引用 mscorlib 是 .NET 4 通用语言运行时 (CLR) 的系统组件。
-另外两个 Windows.Foundation 和 Windows.Storage 分别是其他 .winmd 文件 —— 这从它们拥有的 windowsruntime 修饰符可以推断出来。
+文件的清单（manifest）承载了文件中描述的类型。在图 3-9 中，你可以看到有一个`.module Windows.Graphics.winmd`，后面跟着几行内容。这些项目描述了关于元数据文件的信息。
+你会看到三个以`._assembly extern`开头的条目，这些是对`Windows.Graphics`元数据文件内用类型的其他元数据信息的引用。第一个引用`mscorlib`是 .NET 4 通用语言运行时 (CLR) 的系统组件。
+另外两个`Windows.Foundation`和`Windows.Storage`分别是其他`.winmd`文件 —— 这从它们拥有的`windowsruntime`修饰符可以推断出来。
 
-- 8. 从 System32\WinMetadata 文件夹打开其他元数据文件，并检查它们的结构。完成后，关闭所有打开的 ILASM 实例。
+- 8. 从`System32\WinMetadata`文件夹打开其他元数据文件，并检查它们的结构。完成后，关闭所有打开的 ILASM 实例。
 
 ### 工作原理
 
-System32\WinMetadata 文件夹包含本质的 .winmd 文件。在步骤 5 中，你将 .winmd 文件与 ILASM 工具关联起来。在步骤 6 中，你查看了 Windows.Graphics.Display.ResolutionScale 类型的元数据。在步骤 7 中，你检查了 .winmd 清单如何描述对外部元数据文件的依赖。
+`System32\WinMetadata`文件夹包含本质的`.winmd`文件。在步骤 5 中，你将`.winmd`文件与 ILASM 工具关联起来。在步骤 6 中，你查看了`Windows.Graphics.Display.ResolutionScale`类型的元数据。在步骤 7 中，你检查了`.winmd`清单如何描述对外部元数据文件的依赖。
 
 ### 命名空间
 
-正如你在上一个练习中所体验过的，Windows Runtime 类型具有分层名称。例如，Windows Runtime 使用 Windows.Display.ResolutionScale 类型。使用良好的命名空间可以让你更有效率，因为你可以找到特定任务的类型。
+正如你在上一个练习中所体验过的，Windows Runtime 类型具有分层名称。例如，Windows Runtime 使用`Windows.Display.ResolutionScale`类型。使用良好的命名空间可以让你更有效率，因为你可以找到特定任务的类型。
 
-命名空间还可以帮助避免类型冲突。如果你将类型放在自己的命名空间中（例如，将 Circle 放在 MyNamespace），它们就不会与其他类型发生冲突。
+命名空间还可以帮助避免类型冲突。如果你将类型放在自己的命名空间中（例如，将`Circle`放在`MyNamespace`），它们就不会与其他类型发生冲突。
 
 类型可以使用长全名。幸运的是，所有管理命名空间的语言都提供了一些构造来避免全名并允许使用简单名。让我们来看几个例子。
 
-C# 提供 `using` 来解析类型名：
+C# 提供`using`来解析类型名：
 
 ```csharp
 using Windows.UI.Xaml;
+
 namespace MyAppNamespace
 {
     class MyClass: UserControl
@@ -1887,7 +1804,7 @@ namespace MyAppNamespace
 }
 ```
 
-Visual Basic 提供相应的构造 `Imports` 关键字：
+Visual Basic 提供相应的构造`Imports`关键字：
 
 ```vb
 Imports Windows.UI.Xaml
@@ -1895,17 +1812,22 @@ Imports Windows.UI.Xaml
 Namespace MyAppNamespace
 
 Class MyClass
+
 Inherits UserControl
+
     Public Sub New()
+
         '...
         selectedItem = TryCast(Me.FindName(itemName), ListBoxItem)
         '...
     End Sub
+
 End Class
+
 End Namespace
 ```
 
-意外的是 C++ 也通过 `using namespace` 子句提供了相同的概念：
+意外的是 C++ 也通过`using namespace`子句提供了相同的概念：
 
 ```cpp
 using namespace Windows::UI::Xaml;
@@ -1923,7 +1845,7 @@ namespace MyAppNamespace
 }
 ```
 
-C#、Visual Basic 和 C++ 中的 `using`、`Imports` 和 `using namespace` 构造分别指示编译器在指定的命名空间中查找类型名。这种机制允许在程序中只编写类型名，因为编译器也会检查 Windows.UI.Xaml 命名空间。否则，你必须编写完整的 Windows.UI.Xaml.ListBoxItem 名称。
+C#、Visual Basic 和 C++ 中的`using`、`Imports`和`using namespace`构造分别指示编译器在指定的命名空间中查找类型名。这种机制允许在程序中只编写类型名，因为编译器也会检查`Windows.UI.Xaml`命名空间。否则，你必须编写完整的`Windows.UI.Xaml.ListBoxItem`名称。
 
 > 注意 当然，Windows Runtime 命名空间中的对象也可以从 JavaScript 项目访问。在 JavaScript 中，你可以使用不同的机制，正如你在第 6 章“使用 HTML5、CSS、JavaScript 和 jQuery 创建 Windows 8 风格应用程序”中所学到的。
 
@@ -1931,17 +1853,15 @@ C#、Visual Basic 和 C++ 中的 `using`、`Imports` 和 `using namespace` 构�
 
 编程语言都有自己的特点。特定语言的粉丝喜欢使用该语言，是因为它的某些属性，例如可读性、高性能构造、功能性、低语法噪音等。在创建 Windows 8 风格应用程序时，你
 
-
-
-
 ## 理解 Windows Runtime
 
 可以使用具有不同语法和语义方法的多种语言。然而，对于 Windows Runtime 设计者来说，允许来自这些非常不同语言的所有服务是一项挑战。语言投影层（Language Projection layer）负责将 Windows Runtime API 转换以适应相应的语言。由于这种转换，程序员可以使用这些 API，就像它们是语言原生运行时库的一部分一样。
 
-理解语言投影层作用的最佳方法是看一个简单的示例。Windows.Storage.Pickers 命名空间包含一个名为 `FileOpenPicker` 的类型，它可以允许你从文件夹中选择文件。使用 C# 编程语言，你可以使用以下代码来配置此文件夹以选取文件：
+理解语言投影层作用的最佳方法是看一个简单的示例。`Windows.Storage.Pickers`命名空间包含一个名为`FileOpenPicker`的类型，它可以允许你从文件夹中选择文件。使用 C# 编程语言，你可以使用以下代码来配置此文件夹以选取文件：
 
 ```csharp
 using Windows.Storage.Pickers;
+
 //
 FileOpenPicker openPicker = new FileOpenPicker();
 openPicker.View = PickerView.Thumbnail;
@@ -1960,11 +1880,13 @@ openPicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Pic
 openPicker.fileTypeFilter.replaceAll(".png", ".jpg", ".jpeg");
 ```
 
+
+
 高亮的单词代表 Windows Runtime API 类型。在 C# 和 JavaScript 中，它们都以大写字母开头并使用帕斯卡命名法（Pascal case）。使用*斜体*的标识符是 Windows Runtime 类型的成员。你可以看到，C# 中使用帕斯卡命名法，而在 JavaScript 中使用驼峰命名法（Camel case）。这是通过语言投影层实现的，而 JavaScript 语言投影根据惯例使用了驼峰命名法。
 
-> 注意 使用帕斯卡命名法和驼峰命名法意味着单词中的标识符在没有空格的情况下连接，复合词每个元素的首字母大写，而帕斯卡命名法首字母使用大写（例如 "PicturesLibrary" 中的 "P"），驼峰命名法使用小写（例如 "viewMode" 中的 "v"）。
+> 注意 使用帕斯卡命名法和驼峰命名法意味着单词中的标识符在没有空格的情况下连接，复合词每个元素的首字母大写，而帕斯卡命名法首字母使用大写（例如 `"PicturesLibrary"` 中的 `"P"`），驼峰命名法使用小写（例如 `"viewMode"` 中的 `"v"`）。
 
-语言投影层的任务并不依赖语法糖。在 Windows Runtime API 中，`FileOpenPicker` 的 `FileType` 属性是一个字符串向量（或数组）（FileExtensionVector）。C# 语言投影将其渲染为 `List<string>`（字符串列表），并可以使用 `List<string>` 类型的 `Add` 方法添加文件扩展，所示：
+语言投影层的任务并不依赖语法糖。在 Windows Runtime API 中，`FileOpenPicker` 的 `FileType` 属性是一个字符串向量（或数组）（`FileExtensionVector`）。C# 语言投影将其渲染为 `List<string>`（字符串列表），并可以使用 `List<string>` 类型的 `Add` 方法添加文件扩展，所示：
 
 ```csharp
 openPicker.FileTypeFilter.Add(".jpg");
@@ -1972,15 +1894,17 @@ openPicker.FileTypeFilter.Add(".jpeg");
 openPicker.FileTypeFilter.Add(".png");
 ```
 
+
+
 # 第 3 章 从开发者视角看 Windows 8 架构
 
-JavaScript 语言投影将 `fileFilterType` 属性渲染为字符串数组，因此可以使用 `replaceAll` 来设置数组的内容，所示：
+JavaScript 语言投影将`fileFilterType`属性渲染为字符串数组，因此可以使用`replaceAll`来设置数组的内容，所示：
 
 Visual Studio 也利用了投影层的特性。如图 3-10 和 3-11 所示，C# 和 JavaScript 中的 IntelliSense 会根据语言提供适当的自动补全。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_105_0.png)
 
-图 3-10 C# 中 List<string> 的 IntelliSense 成员
+图 3-10 C# 中`List<string>`的 IntelliSense 成员
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_105_1.png)
 
@@ -2028,9 +1952,6 @@ Visual Studio 也利用了投影层的特性。如图 3-10 和 3-11 所示，C# 
 
 支持 8 风格应用程序的两种编程语言——C# 和 Visual——运行在 .NET Framework 之上。Windows 8 发布了新版本的 .NET Framework——版本 4.5。如果不理解 .NET Framework 的新版本，架构将是不完整的，以及 .NET Framework 与 Windows Runtime 的协作。
 
-
-
-
 # .NET Framework 4.5 | 81
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_108_0.png)
@@ -2067,7 +1988,7 @@ Windows 8 风格应用（Windows Runtime 应用）可用的基类库被限制在
 - ASP.NET 提供了异步支持，通过线程来处理响应。
 - Task Parallel Library 在 .NET 4.0 中引入，是为了多线程。
 
-异步编程模式可以提高 UI 响应能力和吞吐量，但对于开发者来说是困难的。在 .NET 4.5 中，使用了 `async` 和 `await` 关键字。
+异步编程模式可以提高 UI 响应能力和吞吐量，但对于开发者来说是困难的。在 .NET 4.5 中，使用了`async`和`await`关键字。
 
 > 注意：你可以在第 6 章中学习更多关于。
 
@@ -2096,10 +2017,6 @@ Windows 8 风格应用（Windows Runtime 应用）可用的基类库被限制在
 | 你有较小的 UI 需要复用。 | 你有大量的 UI 相关代码，并且你需要复用这些代码。 |
 | 你的应用程序运行在单个 Windows 计算机上。你的应用程序主要为通过 Internet 访问的服务和服务组件提供 UI。 | 你的应用程序分布在多个组件中，包括 UI、业务和服务数据库。UI 组件使用遗留、特定或专有的通信技术访问其他服务。 |
 | 你想利用 Windows Store 提供的易于部署的应用模型。 | 你需要比 Windows Store 更复杂的部署模型。 |
-
-
-
-
 
 ## 选择编程语言
 
@@ -2167,10 +2084,6 @@ C# 和 Visual Basic 使用 .NET Framework 4.5，它与 Windows Runtime 原生集
 本章 WROX.COM 代码下载
 
 你可以在 www.wrox.com 的 Download Code 选项卡找到本章的 wrox.com 代码下载。
-
-
-
-
 
 ## 刀集介绍
 
@@ -2241,7 +2154,7 @@ Visual Studio 自上一个版本以来经历了现代化，使其速度更快、
 - 1. 在主菜单中选择 File New Project。新建对话框显示可用的项目模板。
 - 2. 对话框左侧面板显示层次结构。在“Installed”节点下展开“Windows”。选择“Blank Application”模板，将其命名为 Simpleangles，然后点击 OK。
 
-根节点代表该项目。项目拥有子节点，如 Properties、References 以及 Common 文件夹，App.xaml 文件等。IDE 还会打开 App.xaml.cs 文件进行编辑
+根节点代表该项目。项目拥有子节点，如 Properties、References 以及 Common 文件夹，`App.xaml`文件等。IDE 还会打开`App.xaml.cs`文件进行编辑
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_121_0.png)
 
@@ -2259,7 +2172,7 @@ Visual Studio 自上一个版本以来经历了现代化，使其速度更快、
 
 要设计应用程序页面，请遵循以下步骤：
 
-- 1. 在解决方案管理器中双击 MainPage.xaml 文件。IDE 在设计视图中打开文件，如图 4-6 所示。此视图分为两个部分：显示页面预览的设计面板（顶部）和包含描述页面定义的 XAML 代码的 XAML 格（底部）。
+- 1. 在解决方案管理器中双击`MainPage.xaml`文件。IDE 在设计视图中打开文件，如图 4-6 所示。此视图分为两个部分：显示页面预览的设计面板（顶部）和包含描述页面定义的 XAML 代码的 XAML 格（底部）。
 
 > 在 Visual Studio 中打开页面（或任何 XAML）时，加载设计预览可能需要几秒钟。在此期间，设计面板中会显示带有“Loading designer...”的框。
 
@@ -2267,15 +2180,15 @@ Visual Studio 自上一个版本以来经历了现代化，使其速度更快、
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_122_0.png)
 
-图 4-6：设计 MainPage.xaml 文件
-
-
-
-
+图 4-6：设计`MainPage.xaml`文件
 
 # 第 4 章 了解你的开发环境
 
-3. 在 XAML 格中，滚动到 `<Grid ...>` 和 `</Grid>` 元素之间的空行，开始输入 `<Grid.RowD..`。随着你的输入，Visual Studio 内的 IntelliSense 技术会自动显示补全列表，如图 4-7 所示。此时，`RowDefinitions` 被高亮为 "Row" 的建议补全，并按 Tab 键应用该建议补全。按 `>` 关闭 XAML 标签，编辑器会自动为你创建结束标签 `<Grid.RowDefinitions>` 标签，如图 4-8 所示。
+3. 在 XAML 格中，滚动到`<Grid ...>`和`</Grid>`元素之间的空行，开始输入`<Grid.RowD..`。随着你的输入，Visual Studio 内的 IntelliSense 技术会自动显示补全列表，如图 4-7 所示。此时，`RowDefinitions`被高亮为 "Row" 的建议补全，并按 Tab 键应用该建议补全。按`>`关闭 XAML 标签，编辑器会自动为你创建结束标签`<Grid.RowDefinitions>`标签，如图 4-8 所示。
+
+```xml
+
+
 
 ```xml
 <Grid Background="[StaticResource ApplicationPageThemeBrush]">
@@ -2332,9 +2245,9 @@ Visual Studio 自上一个版本以来经历了现代化，使其速度更快、
 
 ### 工作原理
 
-当你使用 C++、C# 或 Visual Basic 编程语言时，XAML 是用于定义 Windows 8 风格应用 UI 的技术。在上一个练习中创建项目时，IDE 为你创建了 MainPage.xml 文件作为默认应用程序页面。
+当你使用 C++、C# 或 Visual Basic 编程语言时，XAML 是用于定义 Windows 8 风格应用 UI 的技术。在上一个练习中创建项目时，IDE 为你创建了`MainPage.xml`文件作为默认应用程序页面。
 
-在步骤 3 和步骤 4 中，你添加了一个网格声明，将屏幕分为两行两列，网格的每个单元格都包含一个 `TextBlock` 和一个 `Rectangle` 元素。在每个单元格中，矩形位于文本前面，因为 `TextBlock` 的声明在 `Rectangle` 之前。
+在步骤 3 和步骤 4 中，你添加了一个网格声明，将屏幕分为两行两列，网格的每个单元格都包含一个`TextBlock`和一个`Rectangle`元素。在每个单元格中，矩形位于文本前面，因为`TextBlock`的声明在`Rectangle`之前。
 
 当你更改 XAML 格的内容时，预览会持续刷新，如图 4-9 所示。
 
@@ -2346,19 +2259,19 @@ Windows 8 风格的应用遵循著名的事件模式。当用户与应用程序�
 
 要在上一个练习中设计的页面添加事件处理代码，请按照以下步骤操作：
 
-- 1. 如果你在上一个练习中关闭了 MainPage.xml 文件，请在解决方案管理器中双击打开它。
+1. 如果你在上一个练习中关闭了`MainPage.xml`文件，请在解决方案管理器中双击打开它。
 
-2. 在 XAML 面中，选择具有 `Name="RedRectangle"` 属性的 `<Rectangle>` 元素。在主窗口右侧的解决方案管理器下方，你可以看到属性窗口，如图 4-10 所示。如果看不到，按 Alt+Enter 显示它。
+2. 在 XAML 面中，选择具有`Name="RedRectangle"`属性的`<Rectangle>`元素。在主窗口右侧的解决方案管理器下方，你可以看到属性窗口，如图 4-10 所示。如果看不到，按`Alt+Enter`显示它。
 
-3. 在 Name 字段中，你会看到两个图标。点击第二个（如图 4-10 中高亮所示）以显示所选矩形的事件。滚动到 `Tapped` 事件，输入 `RectangleTapped` 并按回车。
+3. 在 Name 字段中，你会看到两个图标。点击第二个（如图 4-10 中高亮所示）以显示所选矩形的事件。滚动到`Tapped`事件，输入`RectangleTapped`并按回车。
 
-4. IDE 打开了 MainPage.xml.cs 文件并创建一个新的事件处理方法 `RectangleTapped`。
+4. IDE 打开了`MainPage.xml.cs`文件并创建一个新的事件处理方法`RectangleTapped`。
 
 | Properties | <Name> |
 | --- | --- |
 | Type | Grid |
 | PointerFailed | |
-| PointerMoved PointerPressed PointerReleased PointerWheelChanged... |
+| PointerMoved PointerPressed PointerReleased PointerWheelChanged... | |
 | RightTapped | |
 | SizeChanged | |
 | Tapped | RectangleTapped |
@@ -2366,15 +2279,15 @@ Windows 8 风格的应用遵循著名的事件模式。当用户与应用程序�
 
 图 4-10：属性窗口
 
-> 注意 MainPage.xml.cs 文件被称为代码后置文件（code-behind file），因为它包含了与 MainPage.xml 定义的 UI 关联的代码。如果你在解决方案管理器中展开 MainPage.xml 节点，你会发现它嵌套了 MainPage.xml.cs 文件。
+> 注意`MainPage.xml.cs`文件被称为代码后置文件（code-behind file），因为它包含了与`MainPage.xml`定义的 UI 关联的代码。如果你在解决方案管理器中展开`MainPage.xml`节点，你会发现它嵌套了`MainPage.xml.cs`文件。
 
-5. 在 MainPage.xml.cs 文件顶部以 `using` 开头的最后一行之后追加以下代码行：
+5. 在`MainPage.xml.cs`文件顶部以`using`开头的最后一行之后追加以下代码行：
 
 ```csharp
 using Windows.UI.Xaml;
 ```
 
-6. 在 `Tapped` 方法体中输入以下代码：
+6. 在`Tapped`方法体中输入以下代码：
 
 ```csharp
 private void RectangleTapped(object sender, TappedEventArgs e)
@@ -2387,13 +2300,13 @@ private void RectangleTapped(object sender, TappedEventArgs e)
 }
 ```
 
-7. 点击 MainPage.xml 标签回到设计视图，查看与 `Tapped` 事件关联的 `<Rectangle>` 元素：
+7. 点击`MainPage.xml`标签回到设计视图，查看与`Tapped`事件关联的`<Rectangle>`元素：
 
 ```xml
 <Rectangle Name="RedRectangle" Grid.Row="0" Grid.Column="0" Fill="Red" Tapped="RectangleTapped" />
 ```
 
-IDE 自动为矩形的 Tapped 事件生成 `RectangleTapped` 方法。选择以下粗体代码并按 Ctrl+V：
+IDE 自动为矩形的`Tapped`事件生成`RectangleTapped`方法。选择以下粗体代码并按`Ctrl+V`：
 
 ## Visual Studio IDE 简览
 
@@ -2406,21 +2319,17 @@ IDE 自动为矩形的 Tapped 事件生成 `RectangleTapped` 方法。选择以�
 <Rectangle Name="YellowRectangle" Grid.Row="1" Grid.Column="1" Fill="Yellow" Tapped="RectangleTapped" />
 ```
 
-你可以使用属性窗口设置元素的属性，或者将元素的事件与事件处理方法关联。在步骤 3 中，你创建了一个新的事件处理方法并将其与名为 RedRectangle 的矩形的 Tapped 事件关联。当你触摸或用鼠标点击元素时，就会触发该事件。
+你可以使用属性窗口设置元素的属性，或者将元素的事件与事件处理方法关联。在步骤 3 中，你创建了一个新的事件处理方法并将其与名为`RedRectangle`的矩形的`Tapped`事件关联。当你触摸或用鼠标点击元素时，就会触发该事件。
 
 你在步骤 6 中添加的代码使所有矩形不透明，并将选中的矩形设置为近透明。因此，由于透明度，可以看到 XAML 定义的文本。
 
-在步骤 7 中，你为其他三个矩形（绿色、蓝色和黄色）编辑了 Tapped 事件方法。
+在步骤 7 中，你为其他三个矩形（绿色、蓝色和黄色）编辑了`Tapped`事件方法。
 
 ### 运行项目
 
 要启动应用程序，请按照以下步骤操作：
 
-- 1. 按 Ctrl+F5，或使用“转到调试启动”菜单命令。Visual Studio 将生成并部署你的调试版本，然后立即启动它。应用程序显示了四个矩形。
-
-
-
-
+1. 按`Ctrl+F5`，或使用“转到调试启动”菜单命令。Visual Studio 将生成并部署你的调试版本，然后立即启动它。应用程序显示了四个矩形。
 
 # 第 4 章 了解你的开发环境
 
@@ -2430,11 +2339,11 @@ IDE 自动为矩形的 Tapped 事件生成 `RectangleTapped` 方法。选择以�
 
 图 4-11：运行中的 SimpleRectangles 应用程序
 
-3. 按 Alt+F4 关闭应用程序。程序一旦关闭，就会显示开始屏幕。使用手指或鼠标滑动屏幕，直到到达最右侧的磁贴。你可以发现 SimpleRectangles 应用程序磁贴，如图 4-12 所示。
+3. 按`Alt+F4`关闭应用程序。程序一旦关闭，就会显示开始屏幕。使用手指或鼠标滑动屏幕，直到到达最右侧的磁贴。你可以发现 SimpleRectangles 应用程序磁贴，如图 4-12 所示。
 
 4. 在开始屏幕上点击 Windows 按钮或桌面磁贴以返回 Visual Studio IDE。
 
-5. 打开 `MainPage.xaml.cs` 文件，向下滚动到 `RectangleTapped` 方法，并点击 `if (rectangle != null)` 行开头左侧的编辑器边缘。此点击会在该行添加一个断点，如图 4-13 所示。
+5. 打开`MainPage.xaml.cs`文件，向下滚动到`RectangleTapped`方法，并点击`if (rectangle != null)`行开头左侧的编辑器边缘。此点击会在该行添加一个断点，如图 4-13 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_127_1.png)
 
@@ -2442,40 +2351,42 @@ IDE 自动为矩形的 Tapped 事件生成 `RectangleTapped` 方法。选择以�
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_127_2.png)
 
-图 4-13：在 RectangleTapped 方法中创建断点
+图 4-13：在`RectangleTapped`方法中创建断点
 
 ## Visual Studio IDE 快速浏览
 
-6. 按 F5 或使用“调试 启动（Start Debugging）”命令以调试模式启动应用程序。应用程序的启动方式与之前相同。
+6. 按`F5`或使用“调试 启动（Start Debugging）”命令以调试模式启动应用程序。应用程序的启动方式与之前相同。
 
-7. 点击屏幕。此时会触发 `RectangleTapped` 事件，程序执行在断点处停止，如图 4-14 所示。
+7. 点击屏幕。此时会触发`RectangleTapped`事件，程序执行在断点处停止，如图 4-14 所示。
 
-8. 按两次 F10，程序执行移动到 `rectangle.Fill.Opacity = 0.25;`。按 F5，程序再次运行——直到你点击屏幕。
+8. 按两次`F10`，程序执行移动到`rectangle.Fill.Opacity = 0.25;`。按`F5`，程序再次运行——直到你点击屏幕。
 
-9. 在 Visual Studio IDE 内部，按 Shift+F4 停止应用程序；或者在 SimpleRectangles 应用程序内部，按 Alt+F4 停止。
+9. 在 Visual Studio IDE 内部，按`Shift+F4`停止应用程序；或者在 SimpleRectangles 应用程序内部，按`Alt+F4`停止。
 
-```
+```csharp
 var rectangle = sender as Rectangle;
 if (rectangle != null)
 {
     rectangle.Fill.Opacity = 0.25;
 ```
 
+
+
 图 4-14：执行在断点处停止。
 
-> 注意：在 Visual Studio 中请不要使用 Alt+F4 组合键，因为它会关闭 IDE。Shift+F5 组合键是“调试 停止调试（Stop Debugging）”命令的快捷键。在 IDE 中，你可以使用 Shift+F5 完成调试。
+> 注意：在 Visual Studio 中请不要使用 `Alt+F4` 组合键，因为它会关闭 IDE。`Shift+F5` 组合键是“调试 停止调试（Stop Debugging）”命令的快捷键。在 IDE 中，你可以使用 `Shift+F5` 完成调试。
 
 ### 工作原理
 
-正如此练习所示，你可以使用 F5 或 Ctrl+F5 键带调试或不带调试启动应用程序。在这两种情况下，Visual Studio 都会编译应用程序、立即部署它，并在开始屏幕上创建一个对应的文件，如图 4-12 所示。
+正如此练习所示，你可以使用 `F5` 或 `Ctrl+F5` 键带调试或不带调试启动应用程序。在这两种情况下，Visual Studio 都会编译应用程序、立即部署它，并在开始屏幕上创建一个对应的文件，如图 4-12 所示。
 
 你可以为代码添加断点。当应用程序启动时，每当执行到达断点，应用程序就会停止，IDE 会显示带有断点的文件，并突出显示你的当前位置。
 
-> 注意：你可以在书籍配套网站 www.wrox.com 的 Chapter04.zip 下载包中的 SimpleRectangles-VS 文件夹中找到此练习的完整代码。
+> 注意：你可以在书籍配套网站 `www.wrox.com` 的 `Chapter04.zip` 下载包中的 `SimpleRectangles-VS` 文件夹中找到此练习的完整代码。
 
 ### 使用示例和扩展
 
-查看示例应用程序可以帮助加速你的学习曲线。Visual Studio 的设计者考虑到了这一点，并将 IDE 与示例库（Samples Gallery）网站（http://code.msdn.microsoft.com）集成。该社区是 Windows 编程代码示例的中心，你可以在那里找到数千个优秀的源码项目。在该网站中，你可以通过指定标签、编程语言、Visual Studio 版本和其他标准来搜索示例。当你发现一个有趣的示例时，可以下载它并用 Visual Studio 打开它。此外，你还可以上传自己的示例应用程序。
+查看示例应用程序可以帮助加速你的学习曲线。Visual Studio 的设计者考虑到了这一点，并将 IDE 与示例库（Samples Gallery）网站（`http://code.msdn.microsoft.com`）集成。该社区是 Windows 编程代码示例的中心，你可以在那里找到数千个优秀的源码项目。在该网站中，你可以通过指定标签、编程语言、Visual Studio 版本和其他标准来搜索示例。当你发现一个有趣的示例时，可以下载它并用 Visual Studio 打开它。此外，你还可以上传自己的示例应用程序。
 
 ### 从示例创建新项目
 
@@ -2486,9 +2397,9 @@ if (rectangle != null)
 
 要从示例应用程序创建项目，请遵循以下步骤：
 
-- 1. 使用“文件 关闭解决方案（File Close Solution）”菜单命令，在 IDE 中关闭 SimpleRectangles 项目及其所有文件。
+- 1. 使用“文件 关闭解决方案（File Close Solution）”菜单命令，在 IDE 中关闭 `SimpleRectangles` 项目及其所有文件。
 
-- 2. 使用“文件 新建项目（File New Project）”菜单，或按 Ctrl+Shift+N 组合键创建一个新项目示例。弹出对话框。
+- 2. 使用“文件 新建项目（File New Project）”菜单，或按 `Ctrl+Shift+N` 组合键创建一个新项目示例。弹出对话框。
 
 - 3. 点击对话框中位于底部的 Online（在线）节点。IDE 会连接到由 Visual Studio 托管的免费网站——包括示例库——并检索显示在框内的信息。在 Online 节点下显示两个文件夹：Templates（模板）和 Samples（示例）。
 
@@ -2508,10 +2419,6 @@ if (rectangle != null)
 
 5. 点击已安装（Installed）选项卡。现在你列表中看到 NuGet 包管理器，如图 4-18 所示。如对话框底部的消息所示，大多数扩展程序都需要重启 Visual Studio。点击重启（Restart）。
 
-
-
-
-
 ## Visual Studio IDE 简览
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_132_0.png)
@@ -2526,8 +2433,8 @@ Visual Studio 拥有一个扩展性模型，允许安装插件、模板、工具
 
 | 工具 | 大小 | 测试 | 窗口 | 帮助 |
 |---|---|---|---|---|
-| 附加到进程... | | | | Ctrl+Alt+P |
-| 代码段管理器... | | | | Ctrl+K, Ctrl+X |
+| 附加到进程... | | | | `Ctrl+Alt+P` |
+| 代码段管理器... | | | | `Ctrl+K, Ctrl+X` |
 | 选择工具项... | | | | |
 | 库包管理器 | | | | |
 | 扩展和更新... | | | | |
@@ -2562,7 +2469,7 @@ Visual Studio 2012 的大部分改进都是关于简化 UI 并使其更加整洁
 
 IDE 为你提供了简单（但强大）的窗口管理功能，支持多显示器。你可以通过拖放窗口操作来更改工作台的布局，如图 4-21 所示。你有几种方法在 IDE 中排列窗口：
 
-- 你可以将文档或工具窗口标签页化停靠（tab-dock）到编辑帧中。例如，图 4-21 中的 MainPage.xaml.cs 和 App.xaml.cs 就是这样安排的。
+- 你可以将文档或工具窗口标签页化停靠（tab-dock）到编辑帧中。例如，图 4-21 中的 `MainPage.xaml.cs` 和 `App.xaml.cs` 就是这样安排的。
 
 - 你可以将窗口停靠在框架的边缘，或将其标签页停靠到编辑帧中。在图 4-21 中，你可以看到“在文件中查找”对话框停靠在编辑帧的右边缘。当你通过标题栏拖动“在文件中查找”时，编辑帧的中间会出现一个引导菱形。当你移动窗口且鼠标悬停在右侧引导图标上时，“虚影框架”会显示对话框的新停靠位置。你可以通过释放左鼠标键来接受此操作，或将窗口移动到另一个位置。
 
@@ -2594,7 +2501,7 @@ Visual Studio 拥有数千条命令。你可以在菜单或工具栏中找到大
 
 IDE 为你提供了简单（但强大）的窗口管理功能，支持多显示器。你可以通过拖放窗口操作来更改工作台的布局，如图 4-21 所示。你有几种方法在 IDE 中排列窗口：
 
-- 你可以将文档或工具窗口标签页化停靠（tab-dock）到编辑帧中。例如，图 4-21 中的 MainPage.xaml.cs 和 App.xaml.cs 就是这样安排的。
+- 你可以将文档或工具窗口标签页化停靠（tab-dock）到编辑帧中。例如，图 4-21 中的 `MainPage.xaml.cs` 和 `App.xaml.cs` 就是这样安排的。
 
 - 你可以将窗口停靠在框架的边缘，或将其标签页停靠到编辑帧中。在图 4-21 中，你可以看到“在文件中查找”对话框停靠在编辑帧的右边缘。当你通过标题栏拖动“在文件中查找”时，编辑帧的中间会出现一个引导菱形。当你移动窗口且鼠标悬停在右侧引导图标上时，“虚影框架”会显示对话框的新停靠位置。你可以通过释放左鼠标键来接受此操作，或将窗口移动到另一个位置。
 
@@ -2613,10 +2520,6 @@ IDE 为你提供了简单（但强大）的窗口管理功能，支持多显示�
 ### 使用快速启动（Quick Launch）
 
 Visual Studio 拥有数千条命令。你可以在菜单或工具栏中找到大部分命令。然而，这并不总是直观的。例如，当你有一个打开的项目并想要创建一个新项目时，可以使用快速启动……（注：原文此处存在大量重复段落，已根据要求不重复输出，仅保留翻译逻辑）。
-
-
-
-
 
 # 第 4 章 了解你的开发环境
 
@@ -2640,7 +2543,7 @@ Blend 拥有一套工具，可以帮助你设计 UI。图 4-23 显示了其中�
 
 ## 使用 Expression Blend 让你的应用亮起来
 
-> “对象和时间线”（Objects and Timeline）工具窗口显示构成 UI 的视觉元素的层级结构。在图 4-23 中，我们看到页面（MainPage.xaml）由三个元素组成：BottomAppBar、TopAppBar 和 [Grid]。[Grid] 是可展开的，因此正如小三角形所示，它嵌套了元素。
+> “对象和时间线”（Objects and Timeline）工具窗口显示构成 UI 的视觉元素的层级结构。在图 4-23 中，我们看到页面（`MainPage.xaml`）由三个元素组成：`BottomAppBar`、`TopAppBar` 和 `[Grid]`。`[Grid]` 是可展开的，因此正如小三角形所示，它嵌套了元素。
 
 > 屏幕中间是设计表面。在这里，你可以拖放 UI 元素，并对它们进行移动、调整大小和进行管理。
 
@@ -2650,7 +2553,7 @@ Blend IDE 看起来并不复杂（与其他以设计器为中心的应用程序�
 
 ### 在 UI 上添加一个动画对象
 
-SimpleRectangles 应用程序在用户触摸或点击时会改变矩形的透明度。现在让我们用一个飞入动画效果来扩展它。当矩形被触摸或点击时，文本将飞入屏幕。
+`SimpleRectangles` 应用程序在用户触摸或点击时会改变矩形的透明度。现在让我们用一个飞入动画效果来扩展它。当矩形被触摸或点击时，文本将飞入屏幕。
 
 ### 尝试：使用 Expression Blend 创建文本块
 
@@ -2686,13 +2589,13 @@ SimpleRectangles 应用程序在用户触摸或点击时会改变矩形的透明
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_139_2.png)
 
- 现在准备好使用 Expression Blend 创建动画了。Blend IDE 看起来并不复杂（与其他以设计器为中心的应用程序，如 Adobe 的 Photoshop 相比），但它非常强大，你将在接下来的练习中了解到。
+现在准备好使用 Expression Blend 创建动画了。Blend IDE 看起来并不复杂（与其他以设计器为中心的应用程序，如 Adobe 的 Photoshop 相比），但它非常强大，你将在接下来的练习中了解到。
 
 ## 动画： Expression Blend   
 
-                       工具工具                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              . 以下是需要翻译的文本
+工具工具
 
-[content]
+. 以下是需要翻译的文本
 
 ## How It Works
 
@@ -2708,7 +2611,7 @@ Blend has a set of tools that help you to design the UI. Figure 4-23 shows the m
 
 ## Lighting Up Your Applications with Expression Blend
 
-> The "Objects and Timeline" tool window shows the hierarchy of visual elements constituting the UI. In Figure 4-23, we see that the page (MainPage.xaml) is composed from three elements: BottomAppBar, TopAppBar, and [Grid]. [Grid] is expandable, so it nests elements, as the little triangle indicates.
+> The "Objects and Timeline" tool window shows the hierarchy of visual elements constituting the UI. In Figure 4-23, we see that the page (`MainPage.xaml`) is composed from three elements: `BottomAppBar`, `TopAppBar`, and `[Grid]`. `[Grid]` is expandable, so it nests elements, as the little triangle indicates.
 
 > The middle of the screen is the designer surface. This is where you can drag and drop UI elements, as well as move, size, and manage them.
 
@@ -2718,45 +2621,41 @@ The Blend IDE does not look very complicated (in contrast to other designer-cent
 
 ## Adding an Animated Object to the UI
 
-The SimpleRectangles application changes the opacity of a rectangle when the user taps or clicks. Let’s now extend it with a fly-in animation effect. When the rectangle is tapped or clicked, text will fly in the screen.
+The `SimpleRectangles` application changes the opacity of a rectangle when the user taps or clicks. Let’s now extend it with a fly-in animation effect. When the rectangle is tapped or clicked, text will fly in the screen.
 
 ## TRY OUT Create a Text Block with Expression Blend
 
 To create a text block that will fly in any of the rectangles, follow these steps:
 
-- 1. In the Toolbox, click the TextBlock, as shown in Figure 2-24. The TextBlock is now selected.
+- 1. In the Toolbox, click the `TextBlock`, as shown in Figure 2-24. The `TextBlock` is now selected.
 
 - 2. In the designer surface, draw a rectangle above the red and green angles (outside of the tablet border) in the middle of the screen, as shown in Figure 2-25. To draw the rectangle, click the design surface where you want to put its top-left corner, and without releasing the left mouse button, move the pointer into the position of the bottom-right corner. While you move the mouse, Blend displays the dimensions of the rectangle, as highlighted in Figure 2-25.
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_138_0.png)
 
-- 3. Click the Properties window, and type FlyRectangle into the Name box, as shown in Figure 2-26. This will be the name of the control you can use when writing code.
+- 3. Click the Properties window, and type `FlyRectangle` into the Name box, as shown in Figure 2-26. This will be the name of the control you can use when writing code.
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_138_1.png)
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_138_2.png)
 
-- 4. In the Toolbox, click the mouse pointer tool, which selects the TextBlock you have drawn. In the Properties window scroll down to the Text section, and set the size of the text to 24 points (24 pt), as shown in Figure 2-27.
+- 4. In the Toolbox, click the mouse pointer tool, which selects the `TextBlock` you have drawn. In the Properties window scroll down to the Text section, and set the size of the text to 24 points (24 pt), as shown in Figure 2-27.
 
 - 5. In the Text section, click the second (paragraph mark) tab, and set the horizontal alignment to Center, as shown in Figure 2-28.
 
-- 6. In the designer surface, double-click the TextBlock rectangle to select its text, and type "You've tapped the screen to change the default 'TextBlock' text. The design surface is updated, as shown in Figure 2-29.
+- 6. In the designer surface, double-click the `TextBlock` rectangle to select its text, and type "You've tapped the screen to change the default 'TextBlock' text. The design surface is updated, as shown in Figure 2-29.
 
 ## How It Works
 
-You can use the Toolbox to pick a UI element and place it on the design surface. In this exercise, you used the TextBlock tool to put a box of text on the MainPage.xaml. You used the Properties window to set the name, the size, and the horizontal alignment of text. In addition, you changed the default text.
+You can use the Toolbox to pick a UI element and place it on the design surface. In this exercise, you used the `TextBlock` tool to put a box of text on the `MainPage.xaml`. You used the Properties window to set the name, the size, and the horizontal alignment of text. In addition, you changed the default text.
 
-The new TextBlock UI element was added to the hierarchy of the page's UI elements, and was displayed in the "Objects and Timeline" tool window, as shown in Figure 4-30.
+The new `TextBlock` UI element was added to the hierarchy of the page's UI elements, and was displayed in the "Objects and Timeline" tool window, as shown in Figure 4-30.
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_139_0.png)
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_139_1.png)
 
-[/content]
-
 译文：
-
-[content]
 
 # 第 4 章 了解你的开发环境
 
@@ -2780,7 +2679,7 @@ Blend 拥有一套工具，可以帮助你设计 UI。图 4-23 显示了其中�
 
 ## 使用 Expression Blend 让你的应用亮起来
 
-> “对象和时间线”（Objects and Timeline）工具窗口显示构成 UI 的视觉元素的层级结构。在图 4-23 中，我们看到页面（MainPage.xaml）由三个元素组成：BottomAppBar、TopAppBar 和 [Grid]。[Grid] 是可展开的，因此正如小三角形所示，它嵌套了元素。
+> “对象和时间线”（Objects and Timeline）工具窗口显示构成 UI 的视觉元素的层级结构。在图 4-23 中，我们看到页面（`MainPage.xaml`）由三个元素组成：`BottomAppBar`、`TopAppBar` 和 `[Grid]`。`[Grid]` 是可展开的，因此正如小三角形所示，它嵌套了元素。
 
 > 屏幕中间是设计表面。在这里，你可以拖放 UI 元素，并对它们进行移动、调整大小和进行管理。
 
@@ -2790,7 +2689,7 @@ Blend IDE 看起来并不复杂（与其他以设计器为中心的应用程序�
 
 ### 在 UI 上添加一个动画对象
 
-SimpleRectangles 应用程序在用户触摸或点击时会改变矩形的透明度。现在让我们用一个飞入动画效果来扩展它。当矩形被触摸或点击时，文本将飞入。
+`SimpleRectangles` 应用程序在用户触摸或点击时会改变矩形的透明度。现在让我们用一个飞入动画效果来扩展它。当矩形被触摸或点击时，文本将飞入。
 
 ### 尝试：使用 Expression Blend 创建文本块
 
@@ -2824,13 +2723,9 @@ SimpleRectangles 应用程序在用户触摸或点击时会改变矩形的透明
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_139_1.png)
 
-
-
-
-
 ## 总结 | 115
 
-3. 在菜单中，选择 Project -> Run 命令。Blend IDE 会构建项目（就像你使用 Visual Studio 一样），部署它并启动 SimpleRectangles 应用程序。
+3. 在菜单中，选择 Project -> Run 命令。Blend IDE 会构建项目（就像你使用 Visual Studio 一样），部署它并启动 `SimpleRectangles` 应用程序。
 
 4. 当应用程序启动时，尝试轻触或点击矩形。你可以检查每次在你轻触或点击矩形时，动画都会开始。如果你连续快速点击两个矩形（2秒内），你会发现动画总是从头开始的。
 
@@ -2838,7 +2733,7 @@ SimpleRectangles 应用程序在用户触摸或点击时会改变矩形的透明
 
 你在第 2 步中添加的代码行简单地停止并然后从头开始动画。正如你在第 3 步中体验的那样，Expression Blend 还可以构建并部署你的 Windows 8 风格应用程序。
 
-> 注意 你可以在本书的配套网站 www.wrox.com 的 Chapter04.zip 下载包中的 SimpleRectangles-Blend 文件夹找到此练习的下载代码。
+> 注意 你可以在本书的配套网站 `www.wrox.com` 的 `Chapter04.zip` 下载包中的 `SimpleRectangles-Blend` 文件夹找到此练习的下载代码。
 
 ## 配合使用 Visual Studio 和 Blend
 
@@ -2881,11 +2776,11 @@ Blend 8 提供了托管 Windows 8 风格应用程序 Great技术。然而，如�
 | 主题 | 核心概念 |
 | --- | --- |
 | Visual Studio 2012 Express for Windows 8 | 该工具是 Visual Studio 2012 家族的免费成员。你可以从 MSDN 网站下载它。该工具包含了创建、调试和部署 Windows 8 应用程序所需的所有功能。 |
-| 创建新的应用程序项目 | 使用 File New Project 命令 (Ctrl+Shift+N) 显示 New Project 对话框。在 Installed Templates 选项卡下，选择你打算使用的编程语言，然后选择目标模板。输入你的应用程序名称并可选地更改项目位置。点击 OK 创建项目。 |
-| 从示例创建新项目 | 使用 File New Project 命令 (Ctrl+Shift+N) 显示 New Project 对话框。选择 Online 选项卡，然后展开 Samples 选项卡。你也可以使用对话框右上角的搜索框过滤示例。当你找到寻找的示例时，输入应用程序名称并可选地更改项目位置。点击 OK 从示例创建项目。 |
+| 创建新的应用程序项目 | 使用 File New Project 命令 (`Ctrl+Shift+N`) 显示 New Project 对话框。在 Installed Templates 选项卡下，选择你打算使用的编程语言，然后选择目标模板。输入你的应用程序名称并可选地更改项目位置。点击 OK 创建项目。 |
+| 从示例创建新项目 | 使用 File New Project 命令 (`Ctrl+Shift+N`) 显示 New Project 对话框。选择 Online 选项卡，然后展开 Samples 选项卡。你也可以使用对话框右上角的搜索框过滤示例。当你找到寻找的示例时，输入应用程序名称并可选地更改项目位置。点击 OK 从示例创建项目。 |
 | 安装 Visual Studio 扩展 | 使用 Tools Extension manager 打开 Extension Manager 对话框。在对话框中，选择 Extensions 选项卡在 Visual Studio Gallery 中查找控件、模板和工具，或在 Sample Gallery 中查找项目示例。如果你发现扩展，可以点击 Download 按钮立即启动它。安装扩展时，可能需要重启 Visual Studio。在这种情况下，Extension Manager 将通知你。 |
-| 使用 Quick Launch 查找命令 | 在 Visual Studio 2012 中，Quick Launch 工具通过遍历菜单轻松找到命令。点击 IDE 菜单右上角的 Quick Launch 搜索框，或按 Ctrl+Q。当你输入表达式时，IDE 会列出匹配的命令、选项和打开的文档名称。你可以点击结果列表中的项，Visual Studio 将启动相应的命令或导航到选定的文档。 |
-| 在 Expression Blend 中打开 Visual Studio 项目 | Expression Blend 可以打开用 Visual Studio 创建的 Windows 8 风格应用程序项目。启动 Blend 后使用 File Open Project 命令 (Ctrl+Shift+O)，选择合适的解决方案。Blend 打开解决方案并在 Projects 工具窗口中显示其结构。 |
+| 使用 Quick Launch 查找命令 | 在 Visual Studio 2012 中，Quick Launch 工具通过遍历菜单轻松找到命令。点击 IDE 菜单右上角的 Quick Launch 搜索框，或按 `Ctrl+Q`。当你输入表达式时，IDE 会列出匹配的命令、选项和打开的文档名称。你可以点击结果列表中的项，Visual Studio 将启动相应的命令或导航到选定的文档。 |
+| 在 Expression Blend 中打开 Visual Studio 项目 | Expression Blend 可以打开用 Visual Studio 创建的 Windows 8 风格应用程序项目。启动 Blend 后使用 File Open Project 命令 (`Ctrl+Shift+O`)，选择合适的解决方案。Blend 打开解决方案并在 Projects 工具窗口中显示其结构。 |
 
 # 第二部分
 
@@ -2919,7 +2814,7 @@ Blend 8 提供了托管 Windows 8 风格应用程序 Great技术。然而，如�
 
 WROX.COM 本章下载
 
-你可以在本书的配套网站 www.wrox.com 的 Chapter04.zip 下载包中的 SimpleRectangles-Blend 文件夹找到此练习的代码。
+你可以在本书的配套网站 `www.wrox.com` 的 `Chapter04.zip` 下载包中的 `SimpleRectangles-Blend` 文件夹找到此练习的代码。
 
 Blend 8 提供了托管 Windows 8 风格应用程序 Great技术。然而，如果没有正确的工具包，开发者无法高效地使用它们。微软提供了这些用于开发的工具：
 
@@ -2952,11 +2847,11 @@ Blend 8 提供了托管 Windows 8 风格应用程序 Great技术。然而，如�
 | 主题 | 核心概念 |
 | --- | --- |
 | Visual Studio 2012 Express for Windows 8 | 该工具是 Visual Studio 2012 家族的免费成员。你可以从 MSDN 网站下载它。该工具包含了创建、调试和部署 Windows 8 应用程序所需的所有功能。 |
-| 创建新的应用程序项目 | 使用 File New Project 命令 (Ctrl+Shift+N) 显示 New Project 对话框。在 Installed Templates 选项卡下，选择你打算使用的编程语言，然后选择目标模板。输入你的应用程序名称并可选地更改项目位置。点击 OK 创建项目。 |
-| 从示例创建新项目 | 使用 File New Project 命令 (Ctrl+Shift+N) 显示 New Project 对话框。选择 Online 选项卡，然后展开 Samples 选项卡。你也可以使用对话框右上角的搜索框过滤示例。当你找到寻找的示例时，输入应用程序名称并可选地更改项目位置。点击 OK 从示例创建项目。 |
+| 创建新的应用程序项目 | 使用 File New Project 命令 (`Ctrl+Shift+N`) 显示 New Project 对话框。在 Installed Templates 选项卡下，选择你打算使用的编程语言，然后选择目标模板。输入你的应用程序名称并可选地更改项目位置。点击 OK 创建项目。 |
+| 从示例创建新项目 | 使用 File New Project 命令 (`Ctrl+Shift+N`) 显示 New Project 对话框。选择 Online 选项卡，然后展开 Samples 选项卡。你也可以使用对话框右上角的搜索框过滤示例。当你找到寻找的示例时，输入应用程序名称并可选地更改项目位置。点击 OK 从示例创建项目。 |
 | 安装 Visual Studio 扩展 | 使用 Tools Extension manager 打开 Extension Manager 对话框。在对话框中，选择 Extensions 选项卡在 Visual Studio Gallery 中查找控件、模板和工具，或在 Sample Gallery 中查找项目示例。如果你发现扩展，可以点击 Download 按钮立即启动它。安装扩展时，可能需要重启 Visual Studio。在这种情况下，Extension Manager 将通知你。 |
-| 使用 Quick Launch 查找命令 | 在 Visual Studio 2012 中，Quick Launch 工具通过遍历菜单轻松找到命令。点击 IDE 菜单右上角的 Quick Launch 搜索框，或按 Ctrl+Q。当你输入表达式时，IDE 会列出匹配的命令、选项和打开的文档名称。你可以点击结果列表中的项，Visual Studio 将启动相应的命令或导航到选定的文档。 |
-| 在 Expression Blend 中打开 Visual Studio 项目 | Expression Blend 可以打开用 Visual Studio 创建的 Windows 8 风格应用程序项目。启动 Blend 后使用 File Open Project 命令 (Ctrl+Shift+O)，选择合适的解决方案。Blend 打开解决方案并在 Projects 工具窗口中显示其结构。 |
+| 使用 Quick Launch 查找命令 | 在 Visual Studio 2012 中，Quick Launch 工具通过遍历菜单轻松找到命令。点击 IDE 菜单右上角的 Quick Launch 搜索框，或按 `Ctrl+Q`。当你输入表达式时，IDE 会列出匹配的命令、选项和打开的文档名称。你可以点击结果列表中的项，Visual Studio 将启动相应的命令或导航到选定的文档。 |
+| 在 Expression Blend 中打开 Visual Studio 项目 | Expression Blend 可以打开用 Visual Studio 创建的 Windows 8 风格应用程序项目。启动 Blend 后使用 File Open Project 命令 (`Ctrl+Shift+O`)，选择合适的解决方案。Blend 打开解决方案并在 Projects 工具窗口中显示其结构。 |
 
 # 第二部分
 
@@ -2987,10 +2882,6 @@ Blend 8 提供了托管 Windows 8 风格应用程序 Great技术。然而，如�
 - 理解同步和异步编程的区别
 - 使用 C# 5.0 中新的异步模式
 - 在 JavaScript 中创建异步逻辑
-
-
-
-
 
 ## Windows 8 风格应用程序
 
@@ -3050,9 +2941,6 @@ Windows 8 应用程序导航的基本单元是页面。正如你所猜的，这�
 
 层次结构的根是一个“枢纽页面”（hub page），它是应用程序的入口。
 
-
-
-
 ![](img/4ba176960f93c5e0483da4464a3d695f_153_0.png)
 
 图 5-2：带有标签导航栏的 Windows 8风格 Internet Explorer
@@ -3094,14 +2982,14 @@ Windows 8 应用程序导航的基本单元是页面。正如你所猜的，这�
 要创建你的第一个 Windows 8 风格应用程序，请遵循以下步骤：
 
 - 1. 点击开始屏幕上的图标启动 Visual Studio 2012。
-- 2. 选择“文件 -> 新项目”（或 Ctrl+Shift+N）显示“新项目”对话框。
+- 2. 选择“文件 -> 新项目”（或 `Ctrl+Shift+N`）显示“新项目”对话框。
 - 3. 从左侧树形选择“已安装 -> 模板 -> Visual C# -> Windows Store”类别，然后选择中间面板中的“Grid Application”项目，如图 5-7 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_156_0.png)
 
 图 5-7：新项目对话框
 
-- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 App.xaml.cs 文件。
+- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 `App.xaml.cs` 文件。
 
 - 5. 点击“调试 -> 无调试启动”菜单项启动应用程序。Visual Studio 会编译并启动应用程序，你将看到一个正在运行的 Windows 8 风格应用程序，如图 5-8 所示。
 
@@ -3140,14 +3028,14 @@ Windows 8 应用程序导航的基本单元是页面。正如你所猜的，这�
 要创建你的第一个 Windows 8 风格应用程序，请遵循以下步骤：
 
 - 1. 点击开始屏幕上的图标启动 Visual Studio 2012。
-- 2. 选择“文件 -> 新项目”（或 Ctrl+Shift+N）显示“新项目”对话框。
+- 2. 选择“文件 -> 新项目”（或 `Ctrl+Shift+N`）显示“新项目”对话框。
 - 3. 从左侧树形选择“已安装 -> 模板 -> Visual C# -> Windows Store”类别，然后选择中间面板中的“Grid Application”项目，如图 5-7 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_156_0.png)
 
 图 5-7：新项目对话框
 
-- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 App.xaml.cs 文件。
+- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 `App.xaml.cs` 文件。
 
 - 5. 点击“调试 -> 无调试启动”菜单项启动应用程序。Visual Studio 会编译并启动应用程序，你将看到一个正在运行的 Windows 8 风格应用程序，如图 5-8 所示。
 
@@ -3186,22 +3074,20 @@ Windows 8 应用程序导航的基本单元是页面。正如你所猜的，这�
 要创建你的第一个 Windows 8 风格应用程序，请遵循以下步骤：
 
 - 1. 点击开始屏幕上的图标启动 Visual Studio 2012。
-- 2. 选择“文件 -> 新项目”（或 Ctrl+Shift+N）显示“新项目”对话框。
+- 2. 选择“文件 -> 新项目”（或 `Ctrl+Shift+N`）显示“新项目”对话框。
 - 3. 从左侧树形选择“已安装 -> 模板 -> Visual C# -> Windows Store”类别，然后选择中间面板中的“Grid Application”项目，如图 5-7 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_156_0.png)
 
 图 5-7：新项目对话框
 
-- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 App.xaml.cs 文件。
+- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架并在编辑器中打开主 `App.xaml.cs` 文件。
 
 - 5. 点击“调试 -> 无调试启动”菜单项启动应用程序。Visual Studio 会编译并启动应用程序，你将看到一个正在运行的 Windows 8 风格应用程序，如图 5-8 所示。
 
 - 6. 通过左向右滚动查看应用程序中的组。
 
 - 7. 点击其中一个组标题打开组详情页。
-
-
 
 任务总是按照固定的顺序完成，前一个任务的输出供后续任务可用。换句话说，后一个任务依赖于之前的任务。
 
@@ -3264,18 +3150,20 @@ Windows 8 应用程序导航的基本单元是页面。正如你所猜的，这�
 
 最后，随着 .NET 4.0 引入了基于任务的异步模式 (TAP)，它利用了 `Task` 和 `Task<T>` 类以及 `async`/`await` 关键字，提供了更可读且可维护的异步代码。
 
-
-
-
-
 ### 异步开发平台
 
 通过 `Task`，你可以编写与早期同步代码非常相似的异步逻辑。
 微软采用这种方法并不令人意外，.NET 4.5 包含了直接返回 `Task` 的新方法。例如，`WebClient` 类有一个名为 `DownloadStringAsync` 的新方法（`TaskAsync` 后缀是返回 `Task` 对象的方法的命名约定），如所示所示，该方法简化了你的编程模型。（此代码可以在 `NetFx\NetFxAsyncHistory\TAPForm.cs` 下载代码文件中找到）。
 
 ```
+
+
+
+```
 WebClient wc = new WebClient();
+
 var task = wc.DownloadStringAsync(url);
+
 // TODO: 在此处处理 task.Result 字符串。
 ```
 
@@ -3295,8 +3183,11 @@ var task = wc.DownloadStringAsync(url);
 
 ```
 private void DownloadSync(string url)
+
   WebClient wc = new WebClient();
+
   string result = wc.DownloadString(url);
+
   this.txtStatus.Text = result;
 ```
 
@@ -3304,8 +3195,11 @@ private void DownloadSync(string url)
 
 ```
 private async void DownloadAsync(string url)
+
   WebClient wc = new WebClient();
+
   string result = await wc.DownloadStringTaskAsync(url);
+
   this.txtStatus.Text = result;
 ```
 
@@ -3323,40 +3217,59 @@ private async void DownloadAsync(string url)
 
 为了使用新的 C# 语言元素，你需要一个理解它们的 C# 编译器版本。如果你有 Visual Studio 2012 和 .NET Framework 4.5，你已经准备就绪了，因为它们自带了 C# 5.0。然而，即使你只有 Visual Studio 2010，也可以通过安装 Visual Studio 2010 来尝试新语法。
 
-
-
-
-
 ```csharp
 {
+
   public partial class Form1 : Form
+
 {
+
     public Form1()
+
     {
+
       Initialize();
+
       Write("Ready.");
+
     }
 
     private void btnStart_Click(object sender, EventArgs e)
+
     {
+
       this.Cursor = Cursors.WaitCursor;
+
       Write("Click event handler started.");
+
       int length = DoWork();
+
       Write("Download completed. Download bytes: " + length.ToString());
+
       Write("Click event handler ended.");
+
       this.Cursor = Cursors.Default;
+
     }
 
     private int DoWork()
+
     {
+
       string result = new WebClient().DownloadString("http://gyorgybalassy.wordpress.com");
+
       return result.Length;
+
     }
 
     private void Write(string message)
+
     {
+
       txttxtStatus.Text += message + " \r\n";
+
     }
+
 }
 ```
 
@@ -3390,20 +3303,29 @@ private async void DownloadAsync(string url)
 
 ```csharp
 private void DoWork()
+
 {
+
     Write("DoWork started.");
 
     WebClient wc = new WebClient();
+
     wc.DownloadStringCompleted += OnDownloadCompleted;
+
     wc.DownloadStringAsync(new Uri("http://gyorgybalassy.wordpress.com"));
 
     Write("DoWork ended.");
+
 }
 
 private void OnDownloadCompleted(object sender,
+
     DownloadStringCompletedEventArgs e)
+
 {
+
     Write("Download completed. Downloaded bytes: " + e.Result.Length.ToString());
+
 }
 ```
 
@@ -3411,52 +3333,85 @@ private void OnDownloadCompleted(object sender,
 
 - 2. 因为在这种情况下，回调负责在 UI 上显示结果长度，可以将 `btnStart_Click` 事件处理器简化为：
 
+```
 DoWork();
+```
 
 此时，你的代码看起来应该是这样：
 
 ```csharp
 using System;
+
 using System.Net;
+
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication
+
 {
+
     public partial class Form1 : Form
+
     {
+
         public Form1()
+
         {
+
             InitializeComponent();
+
             Write("Ready.");
+
         }
 
         private void btnStart_Click(object sender, EventArgs e)
+
         {
+
             this.Cursor = Cursors.WaitCursor;
+
             Write("Click event handler started.");
+
             DoWork();
+
             Write("Click event handler ended.");
+
             this.Cursor = Cursors.Default;
+
         }
 
         private void DoWork()
+
         {
+
             Web wc = new WebClient();
+
             wc.DownloadStringCompleted += OnDownloadCompleted;
+
             wc.DownloadStringAsync(new Uri("http://gorgyDalassy.wordpress.com"));
+
             Write("DoWork ended.");
+
         }
 
         private void OnDownloadCompleted(object sender, StringCompletedEventArgs e)
+
         {
+
             Write("Download completed. Downloaded bytes: " + e.Result.Length.ToString());
+
         }
 
         private void Write(string message)
+
         {
+
             this.txtStatus.Text += message + "\r\n";
+
         }
+
     }
+
 }
 ```
 
@@ -3480,14 +3435,19 @@ namespace WindowsFormsApplication
 
 ```csharp
 private async void DoWork()
+
 {
+
     Write("DoWork started.");
 
     WebClient wc = new WebClient();
+
     string result = await wc.DownloadStringAsync(new Uri("http://gyorgybalassy.wordpress.com"));
+
     Write("Download completed. Downloaded bytes: " + result.Length.ToString());
 
     Write("DoWork ended.");
+
 }
 ```
 
@@ -3497,16 +3457,23 @@ private async void DoWork()
 
 ```csharp
 private async void btnStart_Click(object sender, EventArgs e)
+
 {
+
     this.Cursor = Cursors.WaitCursor;
+
     Write("Click event handler started.");
 
     WebClient wc = new WebClient();
+
     string result = await wc.DownloadStringAsync(new Uri("http://gyorgybalassy.wordpress.com"));
+
     Write("Download completed. Downloaded bytes: " + result.Length.ToString());
 
     Write("Click event handler ended.");
+
     this.Cursor = Cursors.Default;
+
 }
 ```
 
@@ -3514,35 +3481,45 @@ private async void btnStart_Click(object sender, EventArgs e)
 
 ```csharp
 private async void btnStart_Click(object sender, EventArgs e)
+
 {
+
     this.Cursor = Cursors.WaitCursor;
+
     Write("Click event handler started.");
 
     WebClient wc = new WebClient();
+
     string result = await wc.DownloadStringAsync(new Uri("http://gyorgybalassy.wordpress.com"));
+
     Write("Download completed. Downloaded bytes: " + result.Length.ToString());
 
     // 备用下载
 
     Write("Click event handler ended.");
+
     this.Cursor = Cursors.Default;
+
 }
 ```
-
-
-
-
 
 # 第5章 现代 Windows 应用程序开发原理
 
 ```csharp
 string result = await wc.DownloadStringTaskAsync(new Uri("http://gyorbalassy.wordpress.com") );
+
 if(result.Length < 100000)
 ```
 
 ```csharp
-{ Write("The result is too small, download started from second URL.");
-result = await wc.DownloadStringTaskAsync(new Uri("https://www.facebook.com/balassy"));
+```
+
+
+
+```csharp
+{
+    Write("The result is too small, download started from second URL.");
+    result = await wc.DownloadStringTaskAsync(new Uri("https://www.facebook.com/balassy"));
 }
 ```
 
@@ -3557,9 +3534,9 @@ this.Cursor = Cursors.Default;
 
 ### 工作原理
 
-在完成第 1 步的应用程序修改并在第 2 步中构建和测试应用程序后，你可以从图 5-18 显示的输出看到，此时的控制流完全不同了。DoWork 方法启动，但当执行到被等待的方法时，控制权会返回给调用者，事件处理程序完成。当被等待的方法准备好返回结果时，执行将将在异步方法的剩余部分继续。代码看起来完全是同步的，因为回调的魔法工作完全是由编译器完成的。
+在完成第 1 步的应用程序修改并在第 2 步中构建和测试应用程序后，你可以从图 5-18 显示的输出看到，此时的控制流完全不同了。`DoWork` 方法启动，但当执行到被等待的方法时，控制权会返回给调用者，事件处理程序完成。当被等待的方法准备好返回结果时，执行将在异步方法的剩余部分继续。代码看起来完全是同步的，因为回调的魔法工作完全是由编译器完成的。
 
-在第 3 步中，你学习了如何在保持相同行为的同时摆脱 DoWork 方法，如图 5-19 所示。
+在第 3 步中，你学习了如何在保持相同行为的同时摆脱 `DoWork` 方法，如图 5-19 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_173_0.png)
 
@@ -3567,24 +3544,24 @@ this.Cursor = Cursors.Default;
 
 现在，既然你已经熟悉了 C# 5.0 中可用的新关键字，让我们来看下如何在 C# 5.0 中实现取消。
 
-> 注意：你可以在书籍的配套网站 www.wrox.com 中 `Chapter05.zip` 下载包的 `CS5TryItOut` 文件夹中找到此练习的完整下载代码。
+> 注意：你可以在书籍的配套网站 `www.wrox.com` 中 `Chapter05.zip` 下载包的 `CS5TryItOut` 文件夹中找到此练习的完整下载代码。
 
 # 尝试尝试：在 C# 5.0 中实现取消操作
 
 要使用 C# 5.0 取消长时间运行的异步操作，请按照以下步骤操作：
 
-- 1. 为了支持 UI 上的取消，从工具箱向 Form1 拖入一个 Button 控件。对于其 Name 属性，输入 `btnCancel`，对于其 Text 属性，输入 `Cancel`。在设计器中双击 Cancel 按钮以生成一个空的 `btnCancel_click` 事件处理方法。
+1. 为了支持 UI 上的取消，从工具箱向 `Form1` 拖入一个 `Button` 控件。对于其 `Name` 属性，输入 `btnCancel`，对于其 `Text` 属性，输入 `Cancel`。在设计器中双击 `Cancel` 按钮以生成一个空的 `btnCancel_click` 事件处理方法。
 
-- 2. 实现取消的首选模式依赖于一个名为 `cancellationSource` 的轻量级对象，添加到 Form 类中，稍后我们将使用它向长时间运行的操作发送取消信号：
+2. 实现取消的首选模式依赖于一个名为 `cancellationSource` 的轻量级对象，添加到 `Form` 类中，稍后我们将使用它向长时间运行的操作发送取消信号：
 
 ```csharp
 private CancellationToken cts;
 ```
 
-- 3. 现在你可以实现第 1 步中生成的 Cancel 按钮的处理程序，通过输入以下代码来发送取消：
+3. 现在你可以实现第 1 步中生成的 `Cancel` 按钮的处理程序，通过输入以下代码来发送取消：
 
 ```csharp
-private void btnCancel_Click(object sender, EventArgs e )
+private void btnCancel_Click(object sender, EventArgs e)
 {
     Write("Cancellation started.");
     this.cts.Cancel();
@@ -3592,7 +3569,7 @@ private void btnCancel_Click(object sender, EventArgs e )
 }
 ```
 
-- 4. 在之前的“尝试尝试”练习中，你已经在 `btnStart_Click` 事件处理程序在使用 `DownloadTaskAsync` 方法。如果你在第二个参数中提供取消令牌（cancellation token），则该方法支持取消：
+4. 在之前的"尝试尝试"练习中，你已经在 `btnStart_Click` 事件处理程序中使用 `DownloadTaskAsync` 方法。如果你在第二个参数中提供取消令牌（cancellation token），则该方法支持取消：
 
 ```csharp
 cts = new CancellationTokenSource();
@@ -3623,7 +3600,6 @@ namespace WindowsApplication
         {
             this.Cursor = Cursors.WaitCursor;
             Write("Click event handler started.");
-
             cts = new CancellationTokenSource();
             WebClient wc = new WebClient();
             string result = await wc.DownloadStringAsync(new Uri("http://gyorbalassy.wordpress.com"), cts.Token);
@@ -3653,13 +3629,13 @@ namespace WindowsApplication
 }
 ```
 
-- 5. 通过启动并立即取消下载来编译并测试你的应用程序。注意图 5-20 中显示的异常被抛出了。
+5. 通过启动并立即取消下载来编译并测试你的应用程序。注意图 5-20 中显示的异常被抛出了。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_175_0.png)
 
-图 5-20：抛出了 TaskCanceledException
+图 5-20：抛出了 `TaskCanceledException`
 
-- 6. 为了让你的代码安全可靠，你应该将 `btnStart` 事件处理程序中的被等待方法封装在 `try-catch` 块中：
+6. 为了让你的代码安全可靠，你应该将 `btnStart` 事件处理程序中的被等待方法封装在 `try-catch` 块中：
 
 ```csharp
 try
@@ -3673,9 +3649,9 @@ catch(TaskCanceledException)
 }
 ```
 
-- 7. 运行此代码并注意下载被取消了，如图 5-21 所示。
+7. 运行此代码并注意下载被取消了，如图 5-21 所示。
 
-- 8. 你甚至可以使用取消机制来实现超时。对于这一点，你需要调用 `CancellationTokenSource` 的 `CancelAfter` 方法：
+8. 你甚至可以使用取消机制来实现超时。对于这一点，你需要调用 `CancellationTokenSource` 的 `CancelAfter` 方法：
 
 ```csharp
 cts = new CancellationTokenSource();
@@ -3697,7 +3673,7 @@ catch (TaskCanceledException)
 
 # 第5章 现代 Windows 应用程序开发原理
 
-# Windows Runtime 上的异步开发
+## Windows Runtime 上的异步开发
 
 在 Windows 8 中，Windows Runtime 为微软提供了重新设计 Windows 应用程序接口 (API) 的机会。现在历史重演，因为在十年前微软开始开发 .NET 时发生了同样的事情。当时，最初的目标之一是在任何 dotnet 语言访问的底层 win32 函数之上创建一个高级面向对象的 API。这个目标已经实现。然而挑战最近发生了变化。
 
@@ -3709,42 +3685,42 @@ catch (TaskCanceledException)
 
 # 尝试尝试：使用 File Open Picker
 
-在开始此练习之前，确保你的“我的图片”文件夹中有 JPG 图像文件。你可以从 C:\Windows\Web\Wallpaper 文件夹复制一些到“我的图片”文件夹中，这样你的应用程序就可以选择它们了。
-
-
-
-
+在开始此练习之前，确保你的"我的图片"文件夹中有 JPG 图像文件。你可以从 `C:\Windows\Web\Wallpaper` 文件夹复制一些到"我的图片"文件夹中，这样你的应用程序就可以选择它们了。
 
 要尝试新的文件打开器（File Opener），请遵循以下步骤：
 
-- 1. 点击启动屏幕上的图标启动新的 Visual Studio 2012。
-- 2. 选择文件（File）、新建（New Project）（或按 Ctrl+Shift+N）显示“新建项目”对话框。
-- 3. 从左侧树形结构选择已安装的模板（Installed Templates）、Visual C# Windows Store 类别，然后在中间窗格中选择空白（Blank）项目类型，如图 5-22 所示。
+1. 点击启动屏幕上的图标启动新的 Visual Studio 2012。
+
+2. 选择文件（File）、新建（New Project）（或按 `Ctrl+Shift+N`）显示"新建项目"对话框。
+
+3. 从左侧树形结构选择已安装的模板（Installed Templates）、Visual C# Windows Store 类别，然后在中间窗格中选择空白（Blank）项目类型，如图 5-22 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_178_0.png)
 
 图 5-22：新建项目对话框
 
-- 4. 点击确定。Visual Studio 创建空项目骨架并在代码编辑器中打开主 App.xaml.cs 文件。
+4. 点击确定。Visual Studio 创建空项目骨架并在代码编辑器中打开主 `App.xaml.cs` 文件。
 
-- 5. 点击视图（View）中的解决方案管理器（Solution Explorer）菜单项（或按 Ctrl+Alt+L）打开解决方案管理器。
+5. 点击视图（View）中的解决方案管理器（Solution Explorer）菜单项（或按 `Ctrl+Alt+L`）打开解决方案管理器。
 
-- 6. 双击 MainPage.xaml 文件在设计器中打开它。注意设计面板中间的仍在加载的通知。在设计器完全加载并显示您的应用程序 UI 图像之前，请等待。
+6. 双击 `MainPage.xaml` 文件在设计器中打开它。注意设计面板中间的仍在加载的通知。在设计器完全加载并显示您的应用程序 UI 图像之前，请等待。
 
-- 7. 点击视图（View）中的工具箱（Toolbox）菜单项（或按 Ctrl+Alt+X）打开工具箱。
+7. 点击视图（View）中的工具箱（Toolbox）菜单项（或按 `Ctrl+Alt+X`）打开工具箱。
 
-- 8. 在工具箱中打开常用 XAML （Common XAML Controls）部分，然后将按钮（Button）控件拖放到设计表面上。
+8. 在工具箱中打开常用 XAML（Common XAML Controls）部分，然后将按钮（Button）控件拖放到设计表面上。
 
-- 9. 双击设计表面上的按钮，以生成在用户点击按钮时调用的事件处理方法。Visual Studio 将切换到 MainPage.xaml.cs 文件中的代码视图，你可以看到新生成的 Button_Click_1 事件程序。
+9. 双击设计表面上的按钮，以生成在用户点击按钮时调用的事件处理方法。Visual Studio 将切换到 `MainPage.xaml.cs` 文件中的代码视图，你可以看到新生成的 `Button_Click_1` 事件程序。
 
-- 10. 滚动到文件顶部并添加以下 `using` 语句：
+10. 滚动到文件顶部并添加以下 `using` 语句：
+
 ```csharp
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Popups;
 ```
 
-- 11. 滚动到 Button_Click_1 方法并在其签名中添加 `async` 修饰符。然后向正体代码中添加以下几行：
+11. 滚动到 `Button_Click_1` 方法并在其签名中添加 `async` 修饰符。然后向正体代码中添加以下几行：
+
 ```csharp
 FileOpenPicker picker = new FileOpenPicker
 {
@@ -3759,6 +3735,7 @@ await dlg.ShowAsync();
 ```
 
 此时，你的方法看起来应该是这样的：
+
 ```csharp
 private async void Button_Click_1(object sender, RoutedEventArgs args)
 {
@@ -3770,38 +3747,36 @@ private async void Button_Click_1(object sender, RoutedEventArgs args)
     picker.FileTypeFilter.Add(".jpg");
     StorageFile file = await picker.PickSingleFileAsync();
     MessageDialog dlg = new MessageDialog(
-    "Selected: " + file.Path + ", Selection completed");
+        "Selected: " + file.Path + ", Selection completed");
     await dlg.ShowAsync();
 }
 ```
+
+
 
 - 12. 点击调试/无调试启动（Debug / Start Without Debugging）菜单项启动应用程序。Visual Studio 将编译并启动应用程序。
 
 - 13. 点击应用程序中唯一的按钮来打开文件选择器。选择任何图像文件，然后点击打开（Open）按钮。文件选择器关闭，所选文件的路径将在弹出对话框中显示。
 
-##原理
+## 原理
 
 在此练习中，你创建了一个 Windows 8 风格的应用程序，允许用户从其“我的图片”（My Pictures）文件夹中选择图像文件。
 
 在步骤 8 和 9 中，你向你的应用程序的主页上添加了一个按钮控件，并生成了 Windows 在用户点击按钮时调用的方法。
 
-你可以使用 `Windows.Storage.Pickers.FileOpenPicker` 类为用户显示标准的 Windows 8 文件选择 UI。因为它的命名空间默认未包含在源文件中，你在第 10 步中添加了它。在这一步中，你还添加了代码中使用的另外两个命名空间。
+你可以使用`Windows.Storage.Pickers.FileOpenPicker`类为用户显示标准的 Windows 8 文件选择 UI。因为它的命名空间默认未包含在源文件中，你在第 10 步中添加了它。在这一步中，你还添加了代码中使用的另外两个命名空间。
 
 在第 11 步中，你添加了代码，首先显示文件选择器，然后在弹出对话框中显示所选文件的路径。在前两个语句中，你配置了文件选择器从用户的“我的图片”文件夹启动，仅显示 JPEG 文件，并以缩略图形式显示这些文件。
 
-`PickSingleFileAsync` 方法显示文件选择器。注意它的名称以 `Async` 结尾，这意味着它是一个异步方法。因此，你必须在调用之前添加 `await` 关键字，并在托管函数的签名中添加 `async` 关键字。
+`PickSingleFileAsync`方法显示文件选择器。注意它的名称以`Async`结尾，这意味着它是一个异步方法。因此，你必须在调用之前添加`await`关键字，并在托管函数的签名中添加`async`关键字。
 
-操作的结果是一个 `Windows.Storage.StorageFile` 对象，它描述了所选的文件。它的 `Path` 属性包含选中文件的完整路径，这就是你在弹出对话框中显示的内容。
+操作的结果是一个`Windows.Storage.StorageFile`对象，它描述了所选的文件。它的`Path`属性包含选中文件的完整路径，这就是你在弹出对话框中显示的内容。
 
-你使用 `Windows.UI.Popups.MessageDialog` 类显示 Windows 8 风格的弹出对话框。注意你用于实现此点的 `ShowAsync` 方法也是异步的，这就是为什么你必须在它之前使用 `await` 关键字。
+你使用`Windows.UI.Popups.MessageDialog`类显示 Windows 8 风格的弹出对话框。注意你用于实现此点的`ShowAsync`方法也是异步的，这就是为什么你必须在它之前使用`await`关键字。
 
-`PickSingleFileAsync` 方法的返回值 `PickSingleFileOperation` 实现了 `IAsyncOperation<StorageFile>` 接口。该接口是 Windows Runtime 中最重要的接口，因为它是异步 API 的标准，你会频繁使用它。
+`PickSingleFileAsync`方法的返回值`PickSingleFileOperation`实现了`IAsyncOperation<StorageFile>`接口。该接口是 Windows Runtime 中最重要的接口，因为它是异步 API 的标准，你会频繁使用它。
 
-在本章较早之前，你学习了 .NET Framework 中的 `Task` 和 `Task<T>` 类型，它们用于引用未来某个时间点交付的值。Windows Runtime 和 .NET 之间非常接近，但 Windows Runtime 等同于 .NET Framework，它的功能对于无法很好地访问 .NET Framework 的其他语言（例如 JavaScript）是可用的。
-
-
-
-
+在本章较早之前，你学习了 .NET Framework 中的`Task`和`Task<T>`类型，它们用于引用未来某个时间点交付的值。Windows Runtime 和 .NET 之间非常接近，但 Windows Runtime 等同于 .NET Framework，它的功能对于无法很好地访问 .NET Framework 的其他语言（例如 JavaScript）是可用的。
 
 ### 异步开发平台
 
@@ -3809,7 +3784,7 @@ private async void Button_Click_1(object sender, RoutedEventArgs args)
 
 图 5-23：新建项目对话框
 
-- 4. 点击确定。Visual Studio 会创建一个空项目骨架并在代码编辑器中打开默认的 `default.js` 文件。
+- 4. 点击确定。Visual Studio 会创建一个空项目骨架并在代码编辑器中打开默认的`default.js`文件。
 
 - 5. 点击调试 ↻ 无调试启动（Start Without Debug）菜单启动应用程序。Visual Studio 将编译并启动应用程序，你将拥有你的第一个 JavaScript Windows 8 应用程序。你可以看到，正如其名称所示，应用程序实际上是空白的。它的表面只显示“Content goes here（内容在此处）”。
 
@@ -3818,11 +3793,12 @@ private async void Button_Click_1(object sender, RoutedEventArgs args)
 - 7. 返回 Visual Studio，通过选择视图 ↻ 解决方案管理器（Solution Explorer）项（或按 Ctrl+Alt+L）打开解决方案管理器窗口。
 
 - 8. 在解决方案管理器，你可以看到应用程序的三个主要文件：
-  - `default.html` 文件包含描述应用程序用户界面的标记代码。
-  - `css` 文件夹中的 `default.css` 文件定义了应用程序的外观和感受。
-  - `js` 文件夹中的 `default.js` 文件包含你的应用程序逻辑。
+  - `default.html`文件包含描述应用程序用户界面的标记代码。
+  - `css`文件夹中的`default.css`文件定义了应用程序的外观和感受。
+  - `js`文件夹中的`default.js`文件包含你的应用程序逻辑。
 
-- 9. 双击 `default.html` 文件在代码编辑器中打开它。找到其中的 `<body>` 和 `</body>` 标签，将其替换为以下内容：
+- 9. 双击`default.html`文件在代码编辑器中打开它。找到其中的`<body>`和`</body>`标签，将其替换为以下内容：
+
 ```html
 <p>Enter a keyword to search for Twitter:</p>
 <div>
@@ -3833,48 +3809,43 @@ private async void Button_Click_1(object sender, RoutedEventArgs args)
 <div id="divResult">*</div>
 ```
 
-- 10. 在解决方案管理器中双击 `css` 文件夹中的 `default.css` 文件，在代码编辑器中打开它。找到文件顶部的 `{ }` 部分，并将其替换为以下内容：
+- 10. 在解决方案管理器中双击`css`文件夹中的`default.css`文件，在代码编辑器中打开它。找到文件顶部的`{ }`部分，并将其替换为以下内容：
 
-```
+```css
 body { padding: 30px; }
 #txtKeyword { width: 500px; }
 #divStatus { padding: 10px; }
 #divResult { padding: 10px; margin-top: 10px; line-height: 2em; }
 ```
 
-- 11. 在解决方案管理器中双击 `js` 文件夹中的 `.js` 文件，在代码编辑器中打开它。找到 `.onactivated` 事件处理器函数中带有“Initialize your application here”注释的 `if` 块。向其中添加以下代码：
+- 11. 在解决方案管理器中双击`js`文件夹中的`.js`文件，在代码编辑器中打开它。找到`.onactivated`事件处理器函数中带有“Initialize your application here”注释的`if`块。向其中添加以下代码：
 
 ```javascript
 var btnSearch = document.getElementById("btnSearch");
 btnSearch.addEventListener("click", onButtonClickClicked);
 ```
 
-- 12. 将以下函数代码块附加到 `.js` 文件的末尾：
+- 12. 将以下函数代码块附加到`.js`文件的末尾：
 
-```
+```javascript
 function onSearchClicked(e) {
   var txtKeyword = document.getElementById("txtKeyword");
   var divStatus = document.getElementById("divStatus");
   var divResult = document.getElementById("divResult");
-
   var url = "http://search.twitter.com/search.json?q=" + txtKeyword.value;
-
   JS.xhr({url: url}).then({
     function complete(result) {
       divStatus.style.backgroundColor = "lightGreen";
       divStatus.innerHTML = "Downloading " + result.response.length + " bytes completed. <br />";
     }
     var hits = JSON.parse(result.responseText).results;
-
     for (var i = 0; i < hits.length; i++) {
       divResult.innerHTML += hits[i].text + "<br/>";
     }
-
     function error(e) {
       divStatus.style.backgroundColor = "red";
       divStatus.innerHTML = "Houston, we have a problem!";
     }
-
     function progress(result) {
       divStatus.style.backgroundColor = "blue";
       divStatus.innerHTML = "Downloaded " + result.response.length + " bytes. <br />";
@@ -3892,35 +3863,32 @@ function onSearchClicked(e) {
 
 根据你选择的项目模板，Visual Studio 生成了一个空骨架，其中包含了使用 JavaScript 启动 Windows 8 风格应用程序所需的一切。你在第 7 步和第 8 步中查看了生成的模板代码。
 
-在第 9 步中，你创建了描述应用程序页面结构的标记。它包含两个输入控件：一个名为 `txtKeyword` 的文本字段和一个名为 `btnSearch` 的按钮。标记还包含两个 `div` 元素（`divStatus` 和 `divResult`），作为它们的占位符。注意 `id` 属性包含了元素的名称，你可以在应用程序代码和样式表中引用它们。
+在第 9 步中，你创建了描述应用程序页面结构的标记。它包含两个输入控件：一个名为`txtKeyword`的文本字段和一个名为`btnSearch`的按钮。标记还包含两个`div`元素（`divStatus`和`divResult`），作为它们的占位符。注意`id`属性包含了元素的名称，你可以在应用程序代码和样式表中引用它们。
 
 在第 10 步中，你使用层级样式表（CSS）定义了 UI 元素的外观和感受。
 
-在接下来的步骤中，你为应用程序添加了逻辑。在第 11 步中，你通过 `onSearchClicked` 事件处理器订阅了搜索按钮的点击事件。该函数在……时调用（注：原文 OCR 似乎存在跳跃/重叠，此处遵循逻辑流进行翻译）。
-
-
-
-
+在接下来的步骤中，你为应用程序添加了逻辑。在第 11 步中，你通过`onSearchClicked`事件处理器订阅了搜索按钮的点击事件。该函数在……时调用（注：原文 OCR 似乎存在跳跃/重叠，此处遵循逻辑流进行翻译）。
 
 # 尝试一下链式调用 Promise
 
 要学习如何链式 Promise，请遵循以下步骤：
 
-- 1. 在 Visual Studio 中，打开你在上一个练习中创建的项目，并打开 `default.js` 文件。
+- 1. 在 Visual Studio 中，打开你在上一个练习中创建的项目，并打开`default.js`文件。
 
-- 2. 找到 `onSearchButtonClicked` 函数并在其顶部添加以下行：
+- 2. 找到`onSearchButtonClicked`函数并在其顶部添加以下行：
 
 ```javascript
 var content;
 ```
 
-- 3. 找到 `then` 方法的完整函数，并在末尾添加以下行：
+- 3. 找到`then`方法的完整函数，并在末尾添加以下行：
 
 ```javascript
 content = result.responseText;
 ```
 
-- 4. 移除 `then` 方法末尾的分号 (;)，并将其替换为以下代码：
+- 4. 移除`then`方法末尾的分号 (;)，并将其替换为以下代码：
+
 ```javascript
 then(
   function () {
@@ -3939,7 +3907,7 @@ then(
   });
 ```
 
-此时，你的 `onSearchButtonClicked` 函数看起来应该是这样：
+此时，你的`onSearchButtonClicked`函数看起来应该是这样：
 
 ```javascript
 function onSearchButtonClicked(e) {
@@ -3947,16 +3915,13 @@ function onSearchButtonClicked(e) {
   var txtKeyword = document.getElementById("txtKeyword");
   var divStatus = document.getElementById("divStatus");
   var divResult = document.getElementById("divResult");
-
   var url = "http://search.twitter.com/search.json?q=" + txtKeyword.value;
-
   WinJS.xhr({ url: url }, then({
     function complete(result) {
       divStatus.style.backgroundColor = "lightGreen";
       divStatus.innerHTML = "Downloading " + result.response.length + 
       bytes completed.<br />";
     }
-
     var hits = JSON.parse(result.responseText).results;
 ```
 
@@ -4005,7 +3970,9 @@ Windows.Storage.CreationCollisionOption.replaceExisting());
 });
 ```
 
-- 5. 按 Ctrl+F 启动应用程序并在 Twitter 上搜索任何关键词。注意，现在结果不仅会显示，还会保存到文件中，该文件的路径显示在绿色状态面板中。你可以在图 S-25 中看到示例输出。
+
+
+- 5. 按 `Ctrl+F` 启动应用程序并在 Twitter 上搜索任何关键词。注意，现在结果不仅会显示，还会保存到文件中，该文件的路径显示在绿色状态面板中。你可以在图 S-25 中看到示例输出。
 
 # 第 5 章 现代 Windows 应用程序开发原理
 
@@ -4013,7 +3980,7 @@ Windows.Storage.CreationCollisionOption.replaceExisting());
 
 图 5-25：在 Twitter 搜索应用程序中保存结果
 
-# 6. 使用 Windows 资源管理器浏览到绿色状态显示的文件夹，并验证 `temp.txt` 文件的内容。
+- 6. 使用 Windows 资源管理器浏览到绿色状态显示的文件夹，并验证 `temp.txt` 文件的内容。
 
 ### 工作原理
 
@@ -4040,26 +4007,18 @@ Windows 8 设计语言是在移动设备以及桌面世界提供卓越用户体�
 # 练习
 
 - 1. 什么是 Windows 8 设计语言？
-
 - 2. 什么样的应用程序适用于扁平和和分级导航？
-
 - 3. 线程和异步执行模型有什么区别？
-
 - 4. C# 5.0 如何支持异步编程？
-
 - 5. 什么是 JavaScript promise？
 
 > 注意 你可以在附录 A 中找到练习答案。
-
-
-
-
 
 # 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 8 风格的应用程序
 
 > 注意：本章包含对 HTML5、CSS 和 JavaScript 的简要介绍。如果你已经拥有这些技术的经验，可以跳过介绍，直接跳转到本章的“Windows Runtime 上的 HTML5 ”部分。
 
-# 网页上的 HTML5 和 CSS
+## 网页上的 HTML5 和 CSS
 
 当蒂姆·伯纳斯李（Tim Bern-Lee）发明万维网时，他需要一种语言来描述那些带有丰富图像装饰、任意格式且由连接的页面组成的内容。由于 1989 年还没有出现这样的语言，他创建了超文本标记语言（HTML），它已成为构建网页的标准。
 
@@ -4069,7 +4028,7 @@ HTML 最初设计用于描述网页的静态内容，而今天这是该语言的
 
 在本章中，你将首先学习 HTML 语言本身在第 5 版本中的增强。在本章后面，你可以预览相关的标准，因为其中许多标准也适用于 Windows 8 应用程序。
 
-# 了解 HTML5 技术
+## 了解 HTML5 技术
 
 从严格意义来说，HTML5 是 HTML 标准的下一个版本，它继承了 HTML4 的大部分功能，使其中一些功能过时，并用新功能对其进行扩展。由于语言本身由 HTML 元素及其属性组成，这本质意味着 HTML5 为语言添加了新的元素和属性。
 
@@ -4080,31 +4039,31 @@ HTML 最初设计用于描述网页的静态内容，而今天这是该语言的
 - 表单元素和输入类型
 - 绘制
 
-# 新的语义和结构化元素
+## 新的语义和结构化元素
 
 以前，网页开发者主要使用 `div` 容器元素将简单元素封装在一个更大的区域中，以便他们可以将其作为一个整体引用并进行格式化。例如，`div` 元素也用于创建页眉、菜单和页脚。大多数网页的标记是由许多相互嵌入的无意义 `div` 元素构建的，这难以维护。
 
 HTML5 引入了新的结构化元素，如 `header`、`nav`、`footer`、`figure`、`summary` 等。这些新元素不仅帮助你更容易地理解标记（因为它们为代码提供了语义），还能帮助搜索引擎和屏幕阅读器理解特定区域的作用。
 
-# 新的媒体元素
+## 新的媒体元素
 
 以前，如果网页开发者想要在网页中嵌入音频或视频文件，他们被迫依赖第三方浏览器插件，因为浏览器没有对多媒体提供直接支持。然而，这些插件在桌面端的部署、稳定性和安全性方面引发了许多问题。此外，大多数移动设备上没有浏览器插件，这导致多媒体内容在这些设备上无法。
 
 为了解决所有这些问题，HTML5 引入了新的媒体元素，如 `audio`、`video`、`track` 等。通过这些新元素，浏览器能够原生播放多媒体内容，而无需用户安装任何第三方插件。
 
-# 新的表单元素和输入类型
+## 新的表单元素和输入类型
 
 表单是 HTML 标准不可或缺的一部分，用于向服务器提交数据。尽管之前的 HTML 版本对表单有强大的支持，但它们没有为网页开发者留出任何重复工作。例如，如果你想让用户在表单中输入数字、日期、电子邮件地址或 URL，你只需要给他们一个通用的文本框，然后你的任务就是验证输入并检查它是否为有效的名称、日期或电子邮件地址。
 
 为了让你的生活更轻松，HTML5 引入了新的输入类型，如 `color`、`date`、`time`、`email` 等。你只需要将输入设为这些类型，浏览器就会渲染出相应的输入字段（例如，用于日期的日期选择器），并进行相应的输入验证。
 
-# 绘制
+## 绘制
 
 HTML5 引入了 `canvas` 元素，你可以使用它通过脚本绘制图形。因为图形不再硬编码在你的网页中，它们可以适应设备或你页面的当前状态，甚至可以是交互性的。某些浏览器支持对 `canvas` 进行硬件加速渲染，这使得 Web 成为图形密集型应用程序和游戏的完美环境。
 
 如你所见，HTML5 在几个领域扩展了之前的版本。这些领域的共同主题是，这些新功能帮助你用非常干净的标记创建现代网站，代码量更少，且不需要浏览器插件。
 
-# HTML 的起步
+## HTML 的起步
 
 在使用 HTML5 创建你的第一个网页之前，你必须学习 HTML 元素的基本语法。如果你理解了语法，理解你的页面是如何运作的将变得简单得多。
 
@@ -4148,50 +4107,57 @@ HTML5 引入了 `canvas` 元素，你可以使用它通过脚本绘制图形。�
 <strong>This is <em>important!</em></strong>
 ```
 
-
-
-
-
 这被称为重叠。你必须避免它（即使许多网络浏览器可以正确地渲染它而不产生错误）。
 
-> 注意：如果你想确保你的标记是正确的，可以使用位于 http://validator.w3.org 的 W3C 标记验证服务。
+> 注意：如果你想确保你的标记是正确的，可以使用位于 `http://validator.w3.org` 的 W3C 标记验证服务。
 
 这是 HTML 语言的基础语法，你将在下一个“尝试一下”练习中使用它来创建一个网页。在练习之后，你将学习如何向其中添加任何华丽的设计。
 
-> 注意：你可以在本书的配套网站 www.wrox.com 上，在 Chapter06.zip 下载包的 HTML\TryItOut 文件夹中找到此练习的完整代码下载。
+> 注意：你可以在本书的配套网站 `www.wrox.com` 上，在 `Chapter06.zip` 下载包的 `HTML\TryItOut` 文件夹中找到此练习的完整代码下载。
 
-# 尝试：使用 HTML5 创建网页
+## 尝试：使用 HTML5 创建网页
 
 要创建一个 HTML 网页，请遵循以下步骤：
 
 - 1. 点击开始屏幕上的图标启动 Visual Studio 2012。
-- 2. 选择文件 ✜ ✜ 网站（或按 Ctrl+Shift+N）以显示“新建网站”对话框。
+- 2. 选择文件 ✜ ✜ 网站（或按 `Ctrl+Shift+N`）以显示“新建网站”对话框。
 - 3. 从左侧树结构中选择已安装 ❖ 模板 Visual # 类别，然后在中间面板中选择 ASP.Net 空白网站项目类型。
 - 4. 点击确定，Visual Studio 将创建一个空骨架。
-- 5. 选择视图 解决方案管理器菜单项（或按 Ctrl+Alt+L）来打开解决方案管理器。在解决方案管理器中，右键点击 WebSite1 项并选择 ✜ 添加新建项。在“新建项”对话框中，选择 HTML 页面模板，并在“新建”文本框中输入 default.html。点击添加。
+- 5. 选择视图 解决方案管理器菜单项（或按 `Ctrl+Alt+L`）来打开解决方案管理器。在解决方案管理器中，右键点击 WebSite1 项并选择 ✜ 添加新建项。在“新建项”对话框中，选择 HTML 页面模板，并在“新建”文本框中输入 `default.html`。点击添加。
 
 Visual Studio 将创建一个带有某些默认内容的新 HTML 文件并在编辑器中打开它。找到 `<title>` 和 `</title>` 标签，并将它们替换为以下代码：
+
+```
 <title>My first webpage</title>
+```
 
 找到 `<body>` 和 `</body>` 标签，并在它们之间添加以下代码：
+
+```
 <h1>Hello World!</h1>
 
 这是一个链接，它将在新的 
 <a href="http://www.wrox.com" target="_blank">Wrox 首页</a>
 浏览器窗口中打开。
+```
 
-## 文本元素
+### 文本元素
 
 ```
 <p>
+
 这是一个带有换行的段落
+
 <br />
+
 一些 <strong>重要</strong>的信息。
-```
+
 </p>
+```
 
-## 列表
+### 列表
 
+```
 <section>
 <h3>编号列表</h3>
 这是一个编程语言的编号列表
@@ -4211,9 +4177,11 @@ Visual Studio 将创建一个带有某些默认内容的新 HTML 文件并在编
 <li>绿色</li>
 </ul>
 </section>
+```
 
-## 表单元素
+### 表单元素
 
+```
 <form>
 <label for="txtName">姓名:</label>
 <input type="text" id="txtName" /> <br />
@@ -4242,12 +4210,15 @@ Visual Studio 将创建一个带有某些默认内容的新 HTML 文件并在编
 
 <label for="chkAccept">我接受条款:</label>
 <input id="chkAccept" type="checkbox" />
-```
-<br />
-<button>保存</button>
-</form>
 
-- 8. 点击“调试 - 无调试开始开始”菜单项（或按 Ctrl+F5）启动应用程序。Visual Studio 将启动开发者 Web 服务器并在你的默认网络浏览器中打开页面。结果应该与图 6-1 所示相似。
+<br />
+
+<button>保存</button>
+
+</form>
+```
+
+- 8. 点击“调试 - 无调试开始开始”菜单项（或按 `Ctrl+F5`）启动应用程序。Visual Studio 将启动开发者 Web 服务器并在你的默认网络浏览器中打开页面。结果应该与图 6-1 所示相似。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_198_0.png)
 
@@ -4263,8 +4234,6 @@ Visual Studio 将创建一个带有某些默认内容的新 HTML 文件并在编
 
 DOCTYPE 之后是根元素 `html`，它包含了 `head` 和 `body` 元素。`body` 包含页面内容，`head` 包含关于页面的浏览器额外信息。在第 6 步中，你设置了页面标题，它显示在渲染页面的浏览器标签页上。
 
-# 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 8 样式
-
 在第 7 步中，你添加了定义页面内容的标记。第一行包含一个 `h1` 元素，用于渲染页面上的顶级标题。标记还包含 `h2` 和 `h3` 元素，它们分别负责显示二级和三级标题。
 
 在顶部标题之后，有一个句子，其中包含一个（锚点）标签，该标签将其内容转换为可点击的超链接。该句子在源代码中被分为三行，由换行符和多个空格分隔，但它由浏览器以单行进行渲染。这是因为标记的格式不会影响渲染后的页面。如果你想让浏览器执行某些操作，你必须使用标签显式地告诉它这样做。这就是为什么标记中存在许多 `<br />` 标签，用于创建换行符。
@@ -4272,12 +4241,6 @@ DOCTYPE 之后是根元素 `html`，它包含了 `head` 和 `body` 元素。`bod
 在二级标题“文本元素”之后，有一个 `<p>` 标签定义了一个段落，这为封装长内容提供了良好的实践。
 
 `ul` 和 `ol` 元素分别定义了无序列表（项目符号列表）和有序列表（编号列表），包含了由 `li` 元素定义的列表项。带有相应介绍句子标题的两个列表被封装在 `section` 元素中。`section` 元素是一个新的 HTML5 标签，你可以用它将页面划分为较小的部分，而不改变视觉表示。
-
-
-
-
-
-## 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 风格应用程序
 
 你可以通过使用 `style` 属性将 CSS 设置直接附加到你想要的 HTML 元素上。在这个示例中，你可以使用一个自定义格式的 HTML 段落：
 
@@ -4305,11 +4268,13 @@ width: 30px; padding: 10px; text-align: center;">
 </style>
 ```
 
+
+
 通过样式块，你可以将使用的所有样式定义集中在页面内的单个位置。你可以轻松地在同一个页面内复用它们。然而，如果你想在多个页面上使用相同的样式，必须在这些页面上重复样式块。
 
-为了解决这个问题，你可以将所有设置移动到一个文件中，称为外部样式表（external style sheet）。外部样式表是一个纯文本文件（通常以 .css 扩展名命名），你通过页面 `head` 部分的 HTML `link` 标签将其附加到页面，如下所示：
+为了解决这个问题，你可以将所有设置移动到一个文件中，称为外部样式表（external style sheet）。外部样式表是一个纯文本文件（通常以`.css`扩展名命名），你通过页面`head`部分的 HTML `link`标签将其附加到页面，如下所示：
 
-```
+```html
 <link href="style.css" rel="stylesheet" type="text/css" />
 ```
 
@@ -4319,21 +4284,21 @@ width: 30px; padding: 10px; text-align: center;">
 
 然而，如果你通过样式块或外部表将样式定义与内容分离，你必须指定你想对页面的哪个部分进行格式化。这就是 CSS 选择器的作用，你可以将样式定义附加到以下内容：
 
-- HTML 标签的所有实例（例如所有的 `h1` 标题）
+- HTML 标签的所有实例（例如所有的`h1`标题）
 - 多个 HTML 元素
 - 单个 HTML 元素
 
-如果你想格式化 HTML 标签的所有出现处，可以通过标签名称来选择它们。例如，如果你想让所有的 `h2` 二级标题具有下划线文本，可以使用以下由选择器和声明组成的 CSS 规则：
+如果你想格式化 HTML 标签的所有出现处，可以通过标签名称来选择它们。例如，如果你想让所有的`h2`二级标题具有下划线文本，可以使用以下由选择器和声明组成的 CSS 规则：
 
-```
+```css
 h2 { text-decoration: underline; }
 ```
 
-在这种情况下，CSS 选择器是 `h2`，它将后续 `{}` 块中的 CSS 声明附加到页面中所有的 `h2` 元素。单个 CSS 规则可以包含多个 CSS 选择器，也可以包含多个 CSS 声明。
+在这种情况下，CSS 选择器是`h2`，它将后续`{}`块中的 CSS 声明附加到页面中所有的`h2`元素。单个 CSS 规则可以包含多个 CSS 选择器，也可以包含多个 CSS 声明。
 
-如果你想格式化页面中的多个元素，可以使用 CSS 选择器。在样式表中，你可以通过给类命名并在其前面加一个点（.）来定义一个新的 CSS 类，如例例所示：
+如果你想格式化页面中的多个元素，可以使用 CSS 选择器。在样式表中，你可以通过给类命名并在其前面加一个点（`.`）来定义一个新的 CSS 类，如例所示：
 
-```
+```css
 <style type="text/css">
 .famous
 {
@@ -4343,23 +4308,23 @@ h2 { text-decoration: underline; }
 </style>
 ```
 
-然后，你可以使用 `class` HTML 属性将你的新类附加到任何 HTML 元素上，如下所示：
+然后，你可以使用`class`HTML 属性将你的新类附加到任何 HTML 元素上，如下所示：
 
-```
+```html
 <p class="famous">Albert Wass</p>
 ```
 
 注意，CSS 本身并不定义你可以用它来格式化的标签名称。这意味着你可以将相同的 CSS 类附加到各种 HTML 元素，如下所示：
 
-```
+```html
 <span class="famous">László Biró</span></span>
 ```
 
-> 注意：良好的做法是根据用途而不是外观来命名你的类，如果你重新设计网站，它们的外观可能会不同，但用途相同。例如，命名为 `highlight`（高亮）的类是很好的，因为它清楚地告诉了它的用途，无论它如何改变你网站的外观和感受，而且你决定用蓝色边框和黄色背景来高亮内容，而不是红色和更大的字体。
+> 注意：良好的做法是根据用途而不是外观来命名你的类，如果你重新设计网站，它们的外观可能会不同，但用途相同。例如，命名为`highlight`（高亮）的类是很好的，因为它清楚地告诉了它的用途，无论它如何改变你网站的外观和感受，而且你决定用蓝色边框和黄色背景来高亮内容，而不是红色和更大的字体。
 
-现在我们知道了如何为页面中的所有元素设置样式。然而，如果你只想格式化单个 HTML 元素，使用类就大过其实了。这时有第三种 CSS 选择器你用于选择单个 HTML 元素——通过它的 HTML `id` 属性。该 `id` 属性正如其名所示，必须包含一个唯一标识页面内单个元素的任意值。你可以通过以 `#` 号开头的 CSS id 选择器来引用此值，如例例所示：
+现在我们知道了如何为页面中的所有元素设置样式。然而，如果你只想格式化单个 HTML 元素，使用类就大过其实了。这时有第三种 CSS 选择器你用于选择单个 HTML 元素——通过它的 HTML `id`属性。该`id`属性正如其名所示，必须包含一个唯一标识页面内单个元素的任意值。你可以通过以`#`号开头的 CSS id 选择器来引用此值，如例所示：
 
-```
+```css
 <style type="text/css">
 #first {
   font-weight: bold;
@@ -4368,35 +4333,30 @@ h2 { text-decoration: underline; }
 </style>
 ```
 
+```html
 <p id="first">Balaton</p>
+```
 
-> 注意：如果你只想格式化单个 HTML 元素，使用类就大过其实了。你有第三种 CSS 选择器用于选择单个 HTML 元素——通过它的 HTML `id` 属性。该 `id` 属性正如其名所示，必须包含一个唯一标识页面内单个元素的任意值。你可以通过以 `#` 号开头的 CSS 选择器来引用此值，如例例所示：
+> 注意：如果你只想格式化单个 HTML 元素，使用类就大过其实了。你有第三种 CSS 选择器用于选择单个 HTML 元素——通过它的 HTML `id`属性。该`id`属性正如其名所示，必须包含一个唯一标识页面内单个元素的任意值。你可以通过以`#`号开头的 CSS 选择器来引用此值，如例所示：
 
 （注：由于提供的原始文本中存在大量重复和 OCR 错误，上述翻译已根据逻辑流进行了清理和整理。）
 
-
-
-
-
 # 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 8 风格的应用程序
 
-> 注意：如果你想确定你的样式表是否正确，可以使用 http://jigsaw.w3.org/css-validator/ 提供的 W3C CSS 验证服务。
+> 注意：如果你想确定你的样式表是否正确，可以使用`http://jigsaw.w3.org/css-validator/`提供的 W3C CSS 验证服务。
 
 你已经拥有了化整个网页所需的所有内容。在接下来的练习中，你将使用 CSS 对你之前创建的 HTML5 网页进行格式化。
 
-> 注意：你可以在本书的配套网站 www.wrox.com 的 Chapter06.zip 下载包的 CSS\TryItOut 文件夹中找到此练习的完整代码。
+> 注意：你可以在本书的配套网站`www.wrox.com`的`Chapter06.zip`下载包的`CSS\TryItOut`文件夹中找到此练习的完整代码。
 
-# 尝试一下：使用 CSS 特性为网页添加设计和布局
+## 尝试一下：使用 CSS 特性为网页添加设计和布局
 
 要学习如何使用 CSS 格式化你在上一个练习中的网页，请按照以下步骤操作：
 
-- 1. 点击启动屏幕上的图标启动 Visual Studio 2012。
-
-- 2. 选择“文件”->“打开网站”（或按 Alt+Shift+O）来显示“打开网站”对话框。选择你在上一个练习中创建网站的文件夹，选择样式表，并点击“打开”。
-
-- 3. 通过查看“解决方案”菜单项（或按 Ctrl+Alt+L）打开“解决方案”窗口。在“解决方案”窗口中，右键点击 WebSite 项并选择“添加新建项”。在“新建项”对话框中，选择“样式表”模板，并在名称框中输入 `default.css`。点击“添加”。
-
-- 4. Visual Studio 会创建一个带有默认内容的新 CSS 文件并在编辑器中打开它。将模板生成的内容替换为以下代码，并按 Ctrl+S 保存更改：
+1. 点击启动屏幕上的图标启动 Visual Studio 2012。
+2. 选择“文件”->“打开网站”（或按`Alt+Shift+O`）来显示“打开网站”对话框。选择你在上一个练习中创建网站的文件夹，选择样式表，并点击“打开”。
+3. 通过查看“解决方案”菜单项（或按`Ctrl+Alt+L`）打开“解决方案”窗口。在“解决方案”窗口中，右键点击 WebSite 项并选择“添加新建项”。在“新建项”对话框中，选择“样式表”模板，并在名称框中输入`default.css`。点击“添加”。
+4. Visual Studio 会创建一个带有默认内容的新 CSS 文件并在编辑器中打开它。将模板生成的内容替换为以下代码，并按`Ctrl+S`保存更改：
 
 ```css
 body {
@@ -4445,13 +4405,13 @@ button {
 }
 ```
 
-- 5. 在解决方案管理器中，双击 `default.html` 文件在编辑器中打开它。在关闭 `</head>` 标签之前添加以下代码：
+5. 在解决方案管理器中，双击`default.html`文件在编辑器中打开它。在关闭`</head>`标签之前添加以下代码：
 
 ```html
 <link rel="stylesheet" type="text/css" href="default.css" />
 ```
 
-- 6. 向下滚动向第一个 `<section>` 元素添加 `class="left-column"` 属性，并向第二个 `<section>` 元素添加 `class="right-column"` 属性。此时，你的 `section` 元素应该像这样：
+6. 向下滚动向第一个`<section>`元素添加`class="left-column"`属性，并向第二个`<section>`元素添加`class="right-column"`属性。此时，你的`section`元素应该像这样：
 
 ```html
 <section class="left-column">
@@ -4477,15 +4437,11 @@ button {
 </section>
 ```
 
-- 7. 点击“调试”->“不调试启动”菜单项（或按 Ctrl+F5）启动应用程序。Visual Studio 将启动 Web 服务器并在浏览器中打开页面。结果应该类似于图 ![](img/4ba17696093c5e0483da4465f207_0.png)。
+7. 点击“调试”->“不调试启动”菜单项（或按`Ctrl+F5`）启动应用程序。Visual Studio 将启动 Web 服务器并在浏览器中打开页面。结果应该类似于图 ![](img/4ba17696093c5e0483da4465f207_0.png)。
 
 ### 工作原理
 
-在练习中，你使用 CSS 格式化了之前创建的网页。在第 4 步中，你创建了独立的 CSS 文件，在第 5 步中你将其连接到 HTML 页面。你在第 4 步中使用的第一个 CSS 规则格式化了 `body` 元素。由于 `body` 元素包含了内容，该规则有效地定义了所有元素的字体样式和行间距。（注：原文此处存在大量重复段落，译文已根据逻辑精简并保留核心说明）
-
-
-
-
+在练习中，你使用 CSS 格式化了之前创建的网页。在第 4 步中，你创建了独立的 CSS 文件，在第 5 步中你将其连接到 HTML 页面。你在第 4 步中使用的第一个 CSS 规则格式化了`body`元素。由于`body`元素包含了内容，该规则有效地定义了所有元素的字体样式和行间距。（注：原文此处存在大量重复段落，译文已根据逻辑精简并保留核心说明）
 
 # 第 6 章 使用 HTML5、CSS 和 JavaScript 创建类似 Windows 8 风格的应用程序
 
@@ -4508,20 +4464,20 @@ var p = getPerson('Flórián', 'Albert', function(fn, ln) {
 var en = p.getDisplayName(); // en 是 'Flórian - Albert'
 ```
 
-> 这只是对 JavaScript 语言的简要介绍，重点关注你将在本章之后创建 Windows 8 风格应用程序时会用到的特性。你可以通过 W3Schools 教程 http://www.w3schools.com/js 了解更多关于 JavaScript 的信息。
+> 这只是对 JavaScript 语言的简要介绍，重点关注你将在本章之后创建 Windows 8 风格应用程序时会用到的特性。你可以通过 W3Schools 教程`http://www.w3schools.com/js`了解更多关于 JavaScript 的信息。
 
 在下一个练习中，你将使用 JavaScript 来响应你在上一个练习中创建的网页上的用户操作。
 
-> 你可以在本书的网站 www.wrox.com 的 Chapter6.zip 压缩包中的 JavaScript\TryItOut 文件夹中找到此练习的完整代码。
+> 你可以在本书的网站`www.wrox.com`的`Chapter6.zip`压缩包中的`JavaScript\TryItOut`文件夹中找到此练习的完整代码。
 
-# 尝试为网页添加客户端代码
+## 尝试为网页添加客户端代码
 
 要学习如何使用 JavaScript 为你在上一个练习中创建的网页添加交互性，请遵循以下步骤：
 
-- 1. 点击开始屏幕上的图标打开 Visual Studio 2012。
-- 2. 选择文件（File）-> 打开网站（Open Web Site）（或按 Alt+Shift+O）以显示打开网站对话框。选择你在上一个练习中创建网站的文件夹并点击打开。
-- 3. 选择解决方案（Solution）菜单项（或按 Ctrl+Alt+L）打开解决方案管理器窗口。在解决方案管理器中，右键点击 WebSite 项目并选择添加新建项（Add Add New Item）。在添加新建项对话框中，选择 JavaScript 模板，并在名称（Name）文本框中输入 `default.js`。点击添加。
-- 4. Visual Studio 会创建一个新的 JavaScript 文件并在编辑器中打开它。在 `default.js` 文件中添加以下代码，然后按 Ctrl+S 保存你的更改：
+1. 点击开始屏幕上的图标打开 Visual Studio 2012。
+2. 选择文件（File）-> 打开网站（Open Web Site）（或按`Alt+Shift+O`）以显示打开网站对话框。选择你在上一个练习中创建网站的文件夹并点击打开。
+3. 选择解决方案（Solution）菜单项（或按`Ctrl+Alt+L`）打开解决方案管理器窗口。在解决方案管理器中，右键点击 WebSite 项目并选择添加新建项（Add Add New Item）。在添加新建项对话框中，选择 JavaScript 模板，并在名称（Name）文本框中输入`default.js`。点击添加。
+4. Visual Studio 会创建一个新的 JavaScript 文件并在编辑器中打开它。在`default.js`文件中添加以下代码，然后按`Ctrl+S`保存你的更改：
 
 ```javascript
 function load() {
@@ -4550,13 +4506,14 @@ function load() {
   });
 }
 ```
-- 5. 在解决方案管理器窗口中，双击 `default.html` 文件在编辑器中打开它。在闭合标签 `</head>` 之前添加以下代码：
+
+5. 在解决方案管理器窗口中，双击`default.html`文件在编辑器中打开它。在闭合标签`</head>`之前添加以下代码：
 
 ```html
 <script type="text/javascript" src="default.js"></script>
 ```
 
-此时，你的 `<head>` 部分应该像这样：
+此时，你的`<head>`部分应该像这样：
 
 ```html
 <head>
@@ -4565,28 +4522,32 @@ function load() {
   <script type="text/javascript" src="default.js"></script>
 </head>
 ```
-- 6. 向下滚动并在起始 `<body>` 标签中添加以下属性：
+
+6. 向下滚动并在起始`<body>`标签中添加以下属性：
 
 ```html
 onload="load();"
 ```
 
-此时，你的 `<body>` 标签应该像这样：
+此时，你的`<body>`标签应该像这样：
 
 ```html
 <body onload="load();">
 ```
-- 7. 向下滚动并在闭合标签 `</button>` 和 `</form>` 之间添加以下元素：
+
+7. 向下滚动并在闭合标签`</button>`和`</form>`之间添加以下元素：
 
 ```html
 <span id="lblMessage" />
 ```
-- 8. 在解决方案管理器中，双击 `default.css` 文件在编辑器中打开它。添加：
+
+8. 在解决方案管理器中，双击`default.css`文件在编辑器中打开它。添加：
 
 ```css
 #lblMessage { color: red; }
 ```
-- 9. 点击“转非调试启动”（Debug Start Without Debugging）菜单项（或按 Ctrl+F5）启动应用程序。Visual Studio 将启动开发者 Web 服务器并在你的默认浏览器中打开该页面。
+
+9. 点击“转非调试启动”（Debug Start Without Debugging）菜单项（或按`Ctrl+F5`）启动应用程序。Visual Studio 将启动开发者 Web 服务器并在你的默认浏览器中打开该页面。
 
 注意，你无法点击“保存”按钮，因为它在页面加载时是禁用的。勾选“我接受条款”（I accept the terms）复框，保存按钮将变为可用。
 
@@ -4600,25 +4561,23 @@ onload="load();"
 
 在本次练习中，你为网页添加了 JavaScript 逻辑，这些逻辑在客户端浏览器上运行。
 
-在第 4 步中，你在单独的 JavaScript 文件中创建了 JavaScript 代码，并在第 5 步通过在 `head` 中添加 script 标签将其连接到 HTML 页面。
+在第 4 步中，你在单独的 JavaScript 文件中创建了 JavaScript 代码，并在第 5 步通过在`head`中添加`script`标签将其连接到 HTML 页面。
 
-在第 6 步中，你为 `body` 元素的 `load` 事件添加了一个事件处理程序，它会在 `body` 元素完全加载后执行 `default.js` 文件中的 `load` 函数。操作顺序很重要，因为 JavaScript 代码引用了页面元素。因此，必须先加载页面。
+在第 6 步中，你为`body`元素的`load`事件添加了一个事件处理程序，它会在`body`元素完全加载后执行`default.js`文件中的`load`函数。操作顺序很重要，因为 JavaScript 代码引用了页面元素。因此，必须先加载页面。
 
 在第 7 步中，你在页面上添加了一个新的占位元素，JavaScript 代码用它显示消息，然后在第 8 步用 CSS 对其进行了格式化。
 
-你添加的 `load` 函数访问页面上的 HTML 元素，并根据用户操作对其进行修改。 引用 HTML 元素的常用技巧是使用 `document.getElementById` 函数，它使用元素 `id` 属性的值。`document.getElementsByTagName` 函数有类似的目的，但它返回指定标签的元素列表。
+你添加的`load`函数访问页面上的 HTML 元素，并根据用户操作对其进行修改。引用 HTML 元素的常用技巧是使用`document.getElementById`函数，它使用元素`id`属性的值。`document.getElementsByTagName`函数有类似的目的，但它返回指定标签的元素列表。
 
-当页面加载时，`load` 函数会立即执行。它通过名称获取保存按钮的引用，然后禁用该按钮。接下来，你使用 `addEventListener` 函数为保存按钮的 `click` 事件附加事件处理程序。
+当页面加载时，`load`函数会立即执行。它通过名称获取保存按钮的引用，然后禁用该按钮。接下来，你使用`addEventListener`函数为保存按钮的`click`事件附加事件处理程序。
 
 事件处理程序是在用户点击按钮时执行的代码块。
 
 
 
-
-
 # Windows Runtime 上的 HTML5 应用程序
 
-在本章的早些时候，你已经学习了 Web 开发人员用于创建在浏览器中运行的应用程序的基础技术。传统上，只有 浏览器才能理解 HTML、CSS 和 JavaScript，并能够使用这些技术执行复杂的应用程序逻辑。如果开发者想在桌面应用程序中使用 Web 技术，他必须将浏览器嵌入到应用程序中，因为桌面无法直接执行 Web 代码。
+在本章的早些时候，你已经学习了 Web 开发人员用于创建在浏览器中运行的应用程序的基础技术。传统上，只有浏览器才能理解 HTML、CSS 和 JavaScript，并能够使用这些技术执行复杂的应用程序逻辑。如果开发者想在桌面应用程序中使用 Web 技术，他必须将浏览器嵌入到应用程序中，因为桌面无法直接执行 Web 代码。
 
 然而，随着 Windows 8 的发布，微软为客户端扩展了这一 Web 平台，现在你可以使用 HTML、CSS 和 JavaScript 创建完全在客户端运行的 Windows 8 风格应用程序。Windows 8 平台包含了原生执行 Web 代码所需的一切。
 
@@ -4635,7 +4594,7 @@ onload="load();"
 
 你还可以注意到 Windows 8 风格应用程序的另一个组件，即 JavaScript 库，你将在下一节中学习它。
 
-# JavaScript 库 (WinJS)
+## JavaScript 库 (WinJS)
 
 如果你是一个 Web 开发人员，你可能喜欢或讨厌 JavaScript。你喜欢它因为它是一种强大且灵活的编程语言。它完全专注于 Web，得益于弱类型特性，你只需要几行代码就可以编写复杂的逻辑。然而，编写良好的代码或调试故障代码是另一回事。由于语言特性，JavaScript 编码和调试工具不像 C# 和 Visual Basic 工具那样先进。
 
@@ -4644,7 +4603,7 @@ JavaScript 开发人员通常通过使用客户端库解决这个问题，这些
 WinJS 提供了以下组件：
 
 - 用于将代码组织到命名空间和类的辅助函数
-- 一个 WinJS promise，它封装了 JavaScript promise的功能，并被 WinJS 中的所有异步函数使用
+- 一个 WinJS promise，它封装了 JavaScript promise 的功能，并被 WinJS 中的所有异步函数使用
 - 一个管理应用程序生命周期的模型
 - 基于模板的数据绑定，使数据从存储变量无缝流向到 UI 元素
 - 用户界面 (UI) 控件，用于封装并增强典型的 HTML 控件
@@ -4653,35 +4612,35 @@ WinJS 提供了以下组件：
 
 从此列表中可以看出，WinJS 是一个巨大且非常有用的库，它将 Windows Runtime 特性自然集成到 JavaScript 编程语言中。
 
-# 使用 JavaScript 创建 Windows 8 风格应用程序
+## 使用 JavaScript 创建 Windows 8 风格应用程序
 
 在接下来的章节中，你将学习使用 JavaScript 创建 Windows 8 风格应用程序的各个方面。首先，你将学习文件系统应用程序接口 (API)，然后是 JavaScript 的 Windows Runtime 数据绑定服务。在理解数据管理后，你将学习查询设备属性并为应用程序添加触控操作。在本章的最后章节中，你将动态创建图像和 Windows 8 风格的动画。
 
 > 注意：由于本书的限制，本章无法展示 JavaScript 创建 Windows 8 风格应用程序的所有细节。请注意，JavaScript 是 Windows 8 平台上的一等公民，你可以像 C# 或 Visual Basic 一样从 JavaScript 访问所有的 Windows Runtime 功能。
 
-# 访问文件系统
+## 访问文件系统
 
-Windows Runtime 为需要访问文件系统进行读文件的应用程序提供了一个全新的 API。由于文件操作可能耗时较长，新 API 方法是异步的，强制开发者避免阻塞 UI 线程并创建响应式应用程序。在 JavaScript 中，你可以通过 promise 方便地管理异步方法，并使用 then 方法进行链式。
+Windows Runtime 为需要访问文件系统进行读文件的应用程序提供了一个全新的 API。由于文件操作可能耗时较长，新 API 方法是异步的，强制开发者避免阻塞 UI 线程并创建响应式应用程序。在 JavaScript 中，你可以通过 promise 方便地管理异步方法，并使用 `then` 方法进行链式。
 
-Windows .Storage 命名空间下的 `FileIO` 类提供了以下读写文件的方法：
+`Windows.Storage` 命名空间下的 `FileIO` 类提供了以下读写文件的方法：
 
-- appendLinesAsync
-- appendTextAsync
-- readBufferAsync
-- readLinesAsync
-- readTextAsync
-- writeBufferAsync
-- writeBytesAsync
-- writeLinesAsync
-- writeTextAsync
+- `appendLinesAsync`
+- `appendTextAsync`
+- `readBufferAsync`
+- `readLinesAsync`
+- `readTextAsync`
+- `writeBufferAsync`
+- `writeBytesAsync`
+- `writeLinesAsync`
+- `writeTextAsync`
 
-这些方法可以在 `IStorageFile` 实例上运行，该实例提供了文件及其内容的信息，你可以对其进行操作。你通常通过向用户显示文件打开器或文件保存器来获取 `IStorageFile`。文件选择器与旧的 Windows 8 风格应用程序的文件非常相似。你可以在 Windows .Storage.Pickers 命名空间中找到 `OpenFilePicker` 和 `FileSavePicker` 类。
+这些方法可以在 `IStorageFile` 实例上运行，该实例提供了文件及其内容的信息，你可以对其进行操作。你通常通过向用户显示文件打开器或文件保存器来获取 `IStorageFile`。文件选择器与旧的 Windows 8 风格应用程序的文件非常相似。你可以在 `Windows.Storage.Pickers` 命名空间中找到 `OpenFilePicker` 和 `FileSavePicker` 类。
 
 在下一次练习中，你将创建一个类似于记事本的应用程序，可以使用它来打开、编辑和保存文本文件。
 
 > 注意：你可以在本书的配套网站 www.wrox.com 的 Chapter06.zip 下载包中的 FileSystem/TryItOut 文件夹中找到此练习的完整代码进行下载。
 
-# 尝试从 HTML5 应用程序访问文件系统
+## 尝试从 HTML5 应用程序访问文件系统
 
 在开始此练习之前，请确保你的桌面上有一些 `.txt` 文件。你可以使用记事本创建一些纯文本内容。在本次练习中，你将创建一个显示这些内容的应用程序。
 
@@ -4690,9 +4649,9 @@ Windows .Storage 命名空间下的 `FileIO` 类提供了以下读写文件的�
 1. 点击启动屏幕上的图标启动 Visual Studio。
 2. 选择新建项目（或按 Ctrl+N）显示新项目对话框。
 3. 从左树中选择 JavaScript 类别，然后在主面板中选择空白项目类型。
-4. 点击确定。Visual Studio 创建空项目骨架并打开 main.js 文件。
+4. 点击确定。Visual Studio 创建空项目骨架并打开 `main.js` 文件。
 5. 通过选择视图菜单（或按 Ctrl+L）打开解决方案管理器。
-6. 在解决方案窗口中双击 default.html 文件用编辑器打开它。
+6. 在解决方案窗口中双击 `default.html` 文件用编辑器打开它。
 7. 找到 `<body>` 和 `</body>` 标签之间的内容，将其替换为以下代码：
 
 ```html
@@ -4704,7 +4663,7 @@ Windows .Storage 命名空间下的 `FileIO` 类提供了以下读写文件的�
 </p>
 ```
 
-8. 点击工具栏上的保存图标（或按 Ctrl+S）保存更改。关闭 default.html 的编辑器标签返回编辑 default.js。
+8. 点击工具栏上的保存图标（或按 Ctrl+S）保存更改。关闭 `default.html` 的编辑器标签返回编辑 `default.js`。
 9. 在 `app.onload` 事件处理程序中找到你的初始化注释行，在其之后添加以下代码：
 
 ```javascript
@@ -4715,7 +4674,7 @@ var btnSave = document.getElementById('btnSave');
 btnSave.addEventListener('click', onSaveButtonClicked);
 ```
 
-10. 在 default.js 文件末尾追加以下代码：
+10. 在 `default.js` 文件末尾追加以下代码：
 
 ```javascript
 function onOpenClicked() {
@@ -4738,37 +4697,31 @@ function onOpenClicked() {
 
 function onSaveButtonClicked() {
   var txtContent = document.getElementById('txtContent');
+  var content = txtContent.value;
+
+  var picker = new Windows.Storage.Pickers.FileSavePicker();
+  picker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.desktop;
+  picker.fileTypeChoices.insert('Plain text', ['.txt']);
+  picker.pickSaveFileAsync().then(function (file) {
+    if (file !== null) {
+      Windows.Storage.FileIO.writeTextAsync(file, content).then(function () {
+        var dlg = new Windows.UI.Popups.MessageDialog(
+          'Your content is successfully saved to ' + file.path, 'Save completed');
+        dlg.showAsync();
+      });
+    }
+  });
+}
 ```
 
-
-
-```javascript
-var content = txtContent.value;
-
-var picker = new Windows.Storage.Pickers.FileSavePicker();
-picker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.desktop;
-picker.fileTypeChoices.insert('Plain text', ['.txt']);
-picker.pickSaveFileAsync().then(function (file) {
-  if (file !== null) {
-    Windows.Storage.FileIO.writeTextAsync(file, content).then(function () {
-      var dlg = new Windows.UI.Popups.MessageDialog(
-        'Your content is successfully saved to ' + file.path, 'Save completed');
-      dlg.showAsync();
-    });
-  }
-});
-```
-
-- 11. 点击“调试-开始调试”菜单项（或按 F5）启动应用程序。结果应该与图 6-6 所示。
-- 12. 点击“打开”启动文件打开选择器。选择一个文件，然后点击选择器对话框下角的“打开”。您的应用程序将内容加载到可编辑区域，如图 6-7 所示。
-- 13. 修改可编辑区域中的文本，然后点击“另存为”将更改保存到新文件中。在文件保存选择器的底部输入文件名，然后点击选择器对话框右下角的“保存”。
-- 14. 点击“关闭”关闭通知保存操作结果的弹出消息对话框，如图 6-8 所示。
+11. 点击“调试-开始调试”菜单项（或按 F5）启动应用程序。结果应该与图 6-6 所示。
+12. 点击“打开”启动文件打开选择器。选择一个文件，然后点击选择器对话框下角的“打开”。您的应用程序将内容加载到可编辑区域，如图 6-7 所示。
+13. 修改可编辑区域中的文本，然后点击“另存为”将更改保存到新文件中。在文件保存选择器的底部输入文件名，然后点击选择器对话框右下角的“保存”。
+14. 点击“关闭”关闭通知保存操作结果的弹出消息对话框，如图 6-8 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_219_0.png)
 
 图 6-6：文本编辑器应用程序的主界面
-
-# 使用 JavaScript 创建 Windows 8 风格应用程序 | 193
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_220_0.png)
 
@@ -4782,10 +4735,10 @@ picker.pickSaveFileAsync().then(function (file) {
 
 根据您所选择的项目模板，Visual Studio 生成了一个空骨架，其中包含了您使用 JavaScript 启动 Windows 8 风格应用程序所需的所有内容。该项目包含主要功能：
 
-- default.html 文件包含定义应用程序 UI 元素的 HTML 标记。
-- default.js 文件包含定义应用程序行为的 JavaScript 逻辑。
+- `default.html` 文件包含定义应用程序 UI 元素的 HTML 标记。
+- `default.js` 文件包含定义应用程序行为的 JavaScript 逻辑。
 
-在第 7 步中，您在 default.html 文件中创建了应用程序的 UI。UI 包含两个按钮（打开和保存）、一个显示所选文件路径的 `span` 元素，以及一个提供文本编辑功能的 `textarea`。注意，所有按钮、`span` 和 `textarea` 元素都有 `id` 属性，这是在 JavaScript 代码中引用它们所需的。
+在第 7 步中，您在 `default.html` 文件中创建了应用程序的 UI。UI 包含两个按钮（打开和保存）、一个显示所选文件路径的 `span` 元素，以及一个提供文本编辑功能的 `textarea`。注意，所有按钮、`span` 和 `textarea` 元素都有 `id` 属性，这是在 JavaScript 代码中引用它们所需的。
 
 在第 9 步中，您添加了应用程序的初始化代码。正如您在本节之前学到的，`WinUI.processAll` 函数负责初始化您的 Windows 8 风格应用程序的标记。因为可以使用该函数在标记成功完成后立即运行您的自定义初始化。
 
@@ -4812,21 +4765,15 @@ picker.pickSaveFileAsync().then(function (file) {
 
 您可以使用声明式或程序式方式定义绑定。在声明式绑定中，您使用表达式扩展 HTML 标记。在程序式绑定中，您使用对象和函数来设置和操作数据。
 
-
-
-
-
 ```css
 hi span {
   font-weight: bold;
 }
 ```
 
-+   11. 点击工具栏上的保存图标（或按 Ctrl+S）来保存您的更改。
-
-+   12. 在“解决方案管理器”（Solution Explorer）窗口中，双击 `js` 文件夹内的 `default.js` 文件以在代码编辑器中打开它。
-
-+   13. 在 `app.activated` 事件处理器中找到 `WinJS.UI.processAll()` 函数调用，并将其替换为以下代码：
+11. 点击工具栏上的保存图标（或按 Ctrl+S）来保存您的更改。
+12. 在“解决方案管理器”（Solution Explorer）窗口中，双击 `js` 文件夹内的 `default.js` 文件以在代码编辑器中打开它。
+13. 在 `app.activated` 事件处理器中找到 `WinJS.UI.processAll()` 函数调用，并将其替换为以下代码：
 
 ```javascript
 args.setPromise(WinJS.UI.processAll()).then(function () {
@@ -4837,13 +4784,14 @@ args.setPromise(WinJS.UI.processAll()).then(function () {
 });
 ```
 
-+   14. 点击工具栏上的保存图标（或按 Ctrl+S）来保存您的更改。
-
-+   15. 点击“视图”（View）菜单项中的“解决方案管理器”（或按 Ctrl+Alt+L）打开解决方案管理器。在解决方案管理器中，双击 `package.appxmanifest` 以在清单编辑器中打开它。
+14. 点击工具栏上的保存图标（或按 Ctrl+S）来保存您的更改。
+15. 点击“视图”（View）菜单项中的“解决方案管理器”（或按 Ctrl+Alt+L）打开解决方案管理器。在解决方案管理器中，双击 `package.appxmanifest` 以在清单编辑器中打开它。
 
 > 清单文件是一个 XML 文件，包含了在部署过程中用到的所有信息。您可以在第 9 章中阅读更多关于清单文件的内容。
 
-+   16. 在清单编辑器中，转到“能力”（Capabilities）选项卡，并在能力能力列表中勾选“图片库访问权限”（Pictures Library Access）选项。
+16. 在清单编辑器中，转到“能力”（Capabilities）选项卡，并在能力能力列表中勾选“图片库访问权限”（Pictures Library Access）选项。
+
+
 
 +   17. 点击“调试”（Debug）菜单项中的“启动调试”（Start Debugging），或按 F5 启动应用程序。结果应与图 6-9 所示。
 
@@ -4853,7 +4801,7 @@ args.setPromise(WinJS.UI.processAll()).then(function () {
 
 ### 工作原理
 
-根据您所选择的项目模板，Visual Studio 生成了一个空骨架，其中包含了您使用 JavaScript  Windows 8 风格应用程序所需的所有内容。
+根据您所选择的项目模板，Visual Studio 生成了一个空骨架，其中包含了您使用 JavaScript Windows 8 风格应用程序所需的所有内容。
 
 在第 7 步中，您在 `default.html` 文件中创建了应用程序的 UI。这个简单的 UI 仅包含一个带有“Your”和“Library”字样的 `h1` 标题元素，以及一个位于它们之间的占位符 `span` 元素。该占位符将渲染库名称。`span` 元素的 `data-win-bind` 属性定义了数据源对象的 `name` 属性，并绑定到 `span` 元素的 `innerText` 属性。
 
@@ -4884,6 +4832,7 @@ args.setPromise(WinJS.UI.processAll()).then(function () {
 +   1. 打开您在练习中创建的应用程序。
 
 +   2. 在代码编辑器中打开 `default.html` 文件，并在闭合的 `</html>` 标签之后插入以下代码：
+
 ```html
 <div id="tmpl" data-win-control="WinJS.Binding.Template">
 <div>
@@ -4903,6 +4852,7 @@ args.setPromise(WinJS.UI.processAll()).then(function () {
 +   4. 在解决方案管理器中，双击 `css` 文件夹内的 `default.css` 文件以在样式编辑器中打开。
 
 +   5. 在 `default.css` 文件末尾添加以下代码：
+
 ```css
 #lv.win-list {
   height: 500px;
@@ -4937,11 +4887,13 @@ args.setPromise(WinJS.UI.processAll()).then(function () {
 +   7. 在解决方案管理器中，双击 `js` 文件夹内的 `default.js` 文件以在代码编辑器中打开。
 
 +   8. 在 `default.js` 顶部创建一个全局变量：
+
 ```javascript
 var files = new WinJS.Binding.List();
 ```
 
 +   9. 找到 `WinJS.Binding.processAll(element, data);` 行并在之后添加以下代码：
+
 ```javascript
 files.getItems().then(function (items) {
   items.forEach(function (item) {
@@ -4968,6 +4920,7 @@ files.getItems().then(function (items) {
 # 使用 JavaScript 创建 Windows 8 风格应用程序
 
 - `itemDataSource` 属性定义了 ListView 用于显示的数据源。在这种情况下，它是后续步骤创建的 `files` 对象的 `dataSource`。
+
 - `itemTemplate` 属性指向页面上用于渲染单个项目的 HTML 元素。在这种情况下，它是创建 ListView 的 `div` 元素。由于模板被 ListView 引用，它必须在页面上的 ListView 之前声明。
 
 在第 2 步中，您在页面添加了两个 `div` 元素。第二个元素通过 `data-win-control` 属性标记并转换为 `WinJS.Binding.Template` 实例。在模板内部，`data-win-bind` 属性将数据源的属性连接到 HTML 元素的属性。
@@ -4979,10 +4932,6 @@ files.getItems().then(function (items) {
 要学习如何在 HTML5 应用程序中使用列表绑定来更新数据源，请按照以下步骤操作：
 
 +   1. 打开您在练习中创建的应用程序。
-
-
-
-
 
 # 3. 找到以下代码块：
 
@@ -5078,7 +5027,9 @@ lv.addEventListener('iteminvoked', function (eventObj) {
 
 在此代码块的最后一行，你调用了绑定对象的 `release` 函数，这向绑定信号你已完成所有修改，它将在更改后通知所有订阅的 UI 控件。这导致 ListView 从 UI 中删除指定的项，并自动重新排序。
 
-在之前的三个练习中，你学习了如何使用数据绑定在 UI 上渲染并操作数据。数据绑定是一个强大的工具，因为它可以帮你消除多行代码，因此你在创建数据驱动的应用程序时每天都会使用它。#尊重用户的设备
+在之前的三个练习中，你学习了如何使用数据绑定在 UI 上渲染并操作数据。数据绑定是一个强大的工具，因为它可以帮你消除多行代码，因此你在创建数据驱动的应用程序时每天都会使用它。
+
+# 尊重用户的设备
 
 此前，客户端应用程序只能在经典的台式电脑和笔记本电脑上运行。Windows 8 带来了一种全新的设备类型：平板电脑与台式电脑和笔记本电脑显著不同。（注：此处原文存在大量重复文本，译文已按逻辑精简或保留核心意图）
 
@@ -5087,10 +5038,6 @@ lv.addEventListener('iteminvoked', function (eventObj) {
 在下一个练习中，你将创建一个适应屏幕大小的应用程序。
 
 > 注意 可以在本书的配套网站找到此练习的完整代码。
-
-
-
-
 
 ## 第 6 章 使用 HTML5、CSS 和 JAVASCRIPT 创建 Windows 8 风格应用程序
 
@@ -5123,7 +5070,9 @@ name {
 ```
 
 - 12. 点击工具栏上的保存图标（或按 Ctrl+S）以保存您的更改。
+
 - 13. 在“解决方案管理器”（Solution Explorer）中，右键点击 `js` 文件夹并选择“添加新项”。在“添加新项”对话框中，选择“JavaScript 文件”并在“名称”（Name）文本框中输入 `data.js`。点击确定。
+
 - 14. 将以下代码添加到 `data.js` 文件中：
 
 ```javascript
@@ -5151,8 +5100,13 @@ items: images
 ```
 
 - 15. 点击工具栏上的保存图标（或按 Ctrl+S）以保存您的更改。
+
 - 16. 通过查看“视图 - 解决方案管理器”菜单项（或按 Ctrl+Alt+L）打开解决方案管理器。在解决方案管理器窗口中，双击 `package.appxmanifest` 以在清单编辑器中打开它。
+
+
+
 - 17. 在清单编辑器中，转到“能力”（Capabilities）选项卡，并勾选能力列表中的“图片库访问”（Pictures Library Access）选项。
+
 - 18. 选择工具栏上的“模拟器”（Simulator）启动应用程序，如图 6-12 所示。
 
 你可以在图 6-13 中看到运行的应用程序。
@@ -5289,17 +5243,15 @@ function refresh(newState) {
 
 在此练习中，你创建了一个图片浏览器应用程序，它与之前练习中创建的非常相似。然而，这个版本尊重用户的设备。
 
-在第 7 步中，你创建了应用程序的 UI。该应用程序使用 WinJS.UI.ListView 控件显示来自图片库的项。注意设置在 `data-options` 属性中的 ListView 控件配置参数：
+在第 7 步中，你创建了应用程序的 UI。该应用程序使用 `WinJS.UI.ListView` 控件显示来自图片库的项。注意设置在 `data-options` 属性中的 ListView 控件配置参数：
 
 - `Item` 属性配置绑定到 ListView 控件的数据对象。你在第 14 步在第 8 步连接到此页的 `data.js` 文件中了 `data.ItemsSource` 对象。
+
 - `ItemTemplate` 属性指向 ListView 上方的 `div` 元素，该元素用于定义列表中每个单独的布局和内容。
+
 - `layout` 属性在这里非常重要，因为它定义了整个列表的布局。在这里设置的默认值是 `WinJS.UI.Grid` 对象，它提供水平滚动并在多行多列中渲染项。这是横屏模式下使用的默认渲染。
 
 在第 11 步中，你使用 CSS 定义了应用程序的外观。注意，你通过其 id 属性 (`#lv`) 引用了 ListView 控件，并使用 ListView 控件内置的 `.win-item` 类格式化了列表项。
-
-
-
-
 
 # 214 | 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 8 风格应用程序
 
@@ -5315,7 +5267,7 @@ function refresh(newState) {
 
 - 3. 从左树中选择“已安装的模板 ✧ JavaScript ✧ Windows Store”类别，然后在中间面板选择“空白应用”项目类型。
 
-- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架，并在代码编辑器中打开默认的 default.js 文件。
+- 4. 点击“确定”。Visual Studio 会创建一个空项目骨架，并在代码编辑器中打开默认的 `default.js` 文件。
 
 - 5. 在 Windows 资源管理器中打开 `C:\Windows\Web\Wallpaper\Nature` 文件夹，并将 `img1.jpg`、`img2.jpg`、`img3.jpg` 和 `img4.jpg` 文件复制到剪贴板。
 
@@ -5382,8 +5334,11 @@ function refresh(newState) {
 要学习如何创建一个可以使用触摸手势进行滚动的应用程序，请按照以下步骤操作：
 
 - 1. 启动 Visual Studio 并打开在上一个练习中创建的应用程序。
+
 - 2. 通过选择“视图 ❖ 解决方案管理器”菜单项（或按 Ctrl+Alt+L）打开解决方案管理器查看。
+
 - 3. 在“解决方案管理器”窗口中，双击 `default.html` 文件在代码编辑器中打开它。
+
 - 4. 找到 `<body>` 元素并将内容（你在上一个练习中添加的内容）替换为以下内容：
 
 ```html
@@ -5417,8 +5372,12 @@ function refresh(newState) {
 - 6. 通过选择工具栏上的“模拟器”启动应用程序。点击模拟器右侧的“触摸模式仿真图标以启用触摸手势。将鼠标悬停在图像上，然后按住左鼠标键并向左移动图像。注意，下一个图像会出现在右侧。
 
 - 7. 回到 Visual Studio，为 `#scroller` CSS 规则添加以下两行代码：
+
+```
 -ms-scroll-snap-type: mandatory;
+
 -ms-scroll-snap-points: interval(0%, 100%);
+```
 
 此时，你的代码应该是这样的：
 
@@ -5456,14 +5415,14 @@ function refresh(newState) {
 HTML5 引入了 `<canvas>` 元素，它提供了一个矩形区域，你可以使用 canvas API 在其中绘制任何想要的内容。使用 canvas 元素，你可以执行以下操作：
 
 - 绘制形状
+
 - 填充颜色
+
 - 创建渐变和图案
+
 - 渲染文本和图像
+
 - 处理像素
-
-
-
-
 
 # 第 6 章 使用 HTML5、CSS 和 JavaScript 创建 Windows 8 风格应用程序
 
@@ -5482,14 +5441,22 @@ HTML5 引入了 `<canvas>` 元素，它提供了一个矩形区域，你可以�
 要学习如何在 Windows 8 风格的应用程序中绘制画布，请遵循以下步骤：
 
 - 1. 点击开始屏幕上的图标启动 Visual Studio 2012。
+
+
+
 - 2. 选择 File ➔ New Project（或按 Ctrl+Shift+N）显示新建项目对话框。
 - 3. 从左侧树形结构选择 Installed ➔ Templates ➔ JavaScript Store 类别，然后在中间窗格中选择 Blank App 项目类型。
-- 4. 点击 OK。Visual Studio 会创建一个空项目骨架，并在代码编辑器中打开默认的 default.js 文件。
-- 5. 选择 View ➔ Solution 菜单项（或按 Ctrl+Alt+L）打开解决方案管理器。双击 default.html 文件在编辑器中打开它。
+- 4. 点击 OK。Visual Studio 会创建一个空项目骨架，并在代码编辑器中打开默认的 `default.js` 文件。
+- 5. 选择 View ➔ Solution 菜单项（或按 Ctrl+Alt+L）打开解决方案管理器。双击 `default.html` 文件在编辑器中打开它。
 - 6. 找到 `<body>` 标签和 `</body>` 标签之间找到由模板生成的 `<p>Content goes here</p>` 内容，并将其替换为以下代码：
-```canvas id="canvas" width="400" height="400"></canvas>```
-- 7. 在解决方案管理器窗口中，双击 css 文件夹内的 default.css 文件在编辑器中打开它。
-- 8. 在 default.css 文件末尾添加以下代码：
+
+```html
+<canvas id="canvas" width="400" height="400"></canvas>
+```
+
+- 7. 在解决方案管理器窗口中，双击 css 文件夹内的 `default.css` 文件在编辑器中打开它。
+- 8. 在 `default.css` 文件末尾添加以下代码：
+
 ```css
 canvas {
   background-color: White;
@@ -5497,82 +5464,66 @@ canvas {
   margin: 15px;
 }
 ```
-- 9. 在解决方案管理器窗口中，双击 js 文件夹内的 default.js 文件在编辑器中打开它。
+
+- 9. 在解决方案管理器窗口中，双击 js 文件夹内的 `default.js` 文件在编辑器中打开它。
 - 10. 找到包含 `args.setPromise(WinJS.UI.processAll());` 的行，并在其之后添加以下代码行：
 
-```
+```javascript
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-
 var line = '#000';
 var head = '#ffffff';
 var eye = '#fff';
 var pupil = 'green';
 var mouth = '#FF0000';
 var nose = 'BLACK';
-
 ctx.save();
-
 ctx.shadowColor = '#999';
 ctx.shadowBlur = 20;
 ctx.shadowOffsetX = 5;
 ctx.shadowOffsetY = 5;
-
 ctx.fillStyle = head;
 ctx.beginPath();
 ctx.arc(200, 200, 100, 0, Math.PI * 2, false);
 ctx.fill();
-
 ctx.restore();
-
 ctx.strokeStyle = line;
 ctx.lineWidth = "2";
 ctx.stroke();
-
 ctx.strokeStyle = mouth;
 ctx.beginPath();
 ctx.moveTo(135, 225);
 ctx.quadraticCurveTo(200, 285, 265, 225);
 ctx.stroke();
-
 ctx.moveTo(135, 225);
 ctx.quadraticCurveTo(200, 310, 265, 225);
 ctx.stroke();
-
 ctx.strokeStyle = line;
 ctx.fillStyle = eye;
 ctx.lineWidth = '1';
-
 ctx.beginPath();
 ctx.arc(160, 160, 15, 0, Math.PI * 2, false);
 ctx.stroke();
 ctx.fill();
-
 ctx.beginPath();
 ctx.arc(240, 160, 15, 0, Math.PI * 2, false);
 ctx.stroke();
 ctx.fill();
-
 ctx.fillStyle = pupil;
 ctx.beginPath();
 ctx.arc(162, 162, 6, 0, Math.PI * 2, false);
 ctx.fill();
-
 ctx.beginPath();
 ctx.arc(238, 162, 6, 0, Math.PI * 2, false);
 ctx.fill();
-
 ctx.save();
 ctx.fillStyle = nose;
 ctx.translate(200, 190);
 ctx.rotate(45 * Math.PI / 180);
-
 ctx.beginPath();
 ctx.fillRect(0, 0, 16, 16);
 ctx.fill();
-
 ctx.restore();
-
 ctx.font = '48px Calibri';
 var text = 'Smile!';
 var metrics = ctx.measureText(text);
@@ -5582,10 +5533,6 @@ ctx.strokeText(text, x, y);
 ctx.fillText(text, x, y);
 ```
 
-
-
-
-
 # 使用 Windows 8 动画库
 
 动画在 Windows 8 平台上起着重要作用，因为它们让 Windows 8 风格的应用程序充满了活力。良好的动画不仅美观，而且通过让用户确信自己知道发生了什么或将发生什么，从而增强了用户体验。动画是 Windows 8 设计语言中不可或缺的一部分。
@@ -5594,11 +5541,11 @@ ctx.fillText(text, x, y);
 
 为了应对这些挑战，微软提供了 Windows 8 动画库，它可以帮助你为 Windows 8 风格的应用程序轻松添加优化且一致的动画。Windows 8 动画库涵盖了以下场景：
 
--   应用程序导航
--   内容动画
--   显示或隐藏 UI 元素
--   集合变化动画
--   选择动画
+- 应用程序导航
+- 内容动画
+- 显示或隐藏 UI 元素
+- 集合变化动画
+- 选择动画
 
 与 WinJS 中的许多其他功能一样，动画也使用了承诺（promises）。为了提供快速流畅的用户体验，动画在单独的线程上播放，而不会阻塞 UI。所有函数都是异步的，并返回承诺对象，你可以使用这些对象来链联动画。在内部，动画基于标准的 CSS3 动画和过渡，并优化地利用了设备的硬件能力。
 
@@ -5617,9 +5564,9 @@ ctx.fillText(text, x, y);
 
 3. 从左侧树形结构中选择已安装模板 JavaScript Windows Store 类别，并在中间窗格中选择“空白应用”项目。
 
-4. 点击确定。Visual Studio 将创建一个空项目骨架，并在代码编辑器中打开默认的 default.js 文件。
+4. 点击确定。Visual Studio 将创建一个空项目骨架，并在代码编辑器中打开默认的 `default.js` 文件。
 
-5. 选择解决方案资源管理器菜单项（或按 Ctrl+Alt+L）打开解决方案资源管理器窗口。双击 default.html 文件在代码编辑器中打开它。
+5. 选择解决方案资源管理器菜单项（或按 Ctrl+Alt+L）打开解决方案资源管理器窗口。双击 `default.html` 文件在代码编辑器中打开它。
 
 ```html
 <h1>Content</h1>
@@ -5637,6 +5584,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam non nibh euism
 At vero eos et accusamus et iuto omnis ducimus qui blanditiis praesentium voluptatum deleniti atque corruptus quos dolores et quas molestias sintaecat cupiditate non provident, similique sunt in culpa officia deserunt mollitia animi facilisis at vero eros et accumsan iusto odio dignissim blandit praesent lupt velit dui dolore feugaut nulla facilis.
 </p>
 ```
+
 （注：此处由于原文包含占位符文本，翻译时保留占位符内容或根据逻辑处理，但根据指令，代码块内不翻译，故保持原样）
 
 *修正：根据指令代码块不需要翻译，保持原文如下：*
@@ -5646,12 +5594,15 @@ At vero eos et accusamus et iuto omnis ducimus qui blanditiis praesentium volupt
 At vero eos et accusamus et iuto omnis ducimus qui blanditiis praesentium voluptatum deleniti atque corruptus quos dolores et quas molestias sintaecat cupiditate non provident, similique sunt in culpa officia deserunt mollitia animi, id est labor et dolorem harum est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil id quo minus maxime facere possimus, omnis voluptas assumenda est, omnis dolor repellendit. Temporibus aut qui blanditiis et aut officia debitis aut rerum necessativitas saepe eveniet ut voluptatem sint et molestias recausandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciiciendis voluptatem maiores consequatur aut perferendis doloribus asperiores repetat.
 </p>
 ```
+
 *重新审视原文，content2 部分在提供的待翻译文本中较长且包含 HTML 标签。根据指令“代码块不需要翻译”，以下所有代码块保持原文：*
 
 ```html
 <p id="content2">
 At vero eos et accusamus et iuto omnis ducimus qui blanditiis praesentium voluptatum deleniti atque corruptus quos dolores et quas molestias sintaecat cupiditate non provident, similique sunt in culpa officia deserunt mollitia animi, id est labor et dolorem harum est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil id quo minus maxime facere possimus, omnis voluptas assumenda est, omnis dolor repellendit...
+</p>
 ```
+
 *此处逻辑应按代码块统一保持原文：*
 
 ```html
@@ -5679,7 +5630,7 @@ At vero eos et accusamus et iuto omnis ducimus qui blanditiis praesentium volupt
 
 ... 你可以在 `<p>` 标签之间编写任何内容。例如，你可以从 [http://lipsum.com](http://lipsum.com) 复制并粘贴著名的 Lorem ipsum 文本。
 
-7. 在解决方案资源管理器中，双击 css 文件夹内的 default.css 文件在编辑器中打开它。
+7. 在解决方案资源管理器中，双击 css 文件夹内的 `default.css` 文件在编辑器中打开它。
 
 8. 将模板内容替换为以下代码：
 
@@ -5691,46 +5642,41 @@ h2 { margin-top: 20px; }
 #content2 { display: none; }
 #btnNext { display: none; }
 #btnHide { display: none; }
-
 #panel { position: fixed; right: 0px; top: 0px; width: 450px; height: 100%; background-color: #323232; opacity: 0; z-index: 1; }
-
 #panel p { position: absolute; top: 45%; }
 ```
 
-9. 在解决方案资源管理器窗口中，双击 js 文件夹内的 default.js 文件在编辑器中打开它。
+9. 在解决方案资源管理器窗口中，双击 js 文件夹内的 `default.js` 文件在编辑器中打开它。
 
 10. 找到包含 Initialize 注释的行，并添加以下代码：
 
 ```javascript
 var headings = document.querySelectorAll('h1, h2');
-
 btnShow.addEventListener('click', function() {
   WinJS.Animation.enter(headings);
   content1.style.display = 'block';
 });
-
 btnNext.addEventListener('click', function() {
   WinJS.Animation.exit(content1).then(function() {
     content1.style.display = 'none';
     content2.style.display = 'block';
   });
 });
-
 btnHide.addEventListener('click', function() {
   WinJS.Animation.exit(content2);
 });
-
 btnShowPanel.addEventListener('click', function() {
   panel.style.opacity = '1';
   WinJS.Animation.showPanel(panel);
 });
-
 btnHidePanel.addEventListener('click', function() {
   WinJS.Animation.hidePanel(panel).then(function() {
     panel.style.opacity = '0';
   });
 });
 ```
+
+
 
 11. 点击调试菜单项（或按 F5）启动应用程序。注意当应用程序启动时，标题是从右下角飞入的。
 
@@ -5758,42 +5704,38 @@ At eos et accusamus et iuto omnis ducimus qui blanditiis praesentium voluptatum 
 
 在第 6 步中，你创建了应用程序的基础标记。注意 HTML 中的以下内容：
 
--   用于渲染应用程序标题和副标题的 h1 和 h2 标签。
--   两个标签，包含了在点击“显示内容”、“下一个内容”和“隐藏内容”按钮时会执行动画的内容。第一个段落在应用程序启动时显示，当你点击“下一个内容”按钮时，它会切换到第二个段落。
--   按钮使用 `button` 元素渲染。
--   右面板使用 `div` 元素创建。
--   大多数元素都有 `id` 属性，以便从 JavaScript 和 CSS 代码中唯一访问。
+- 用于渲染应用程序标题和副标题的`h1`和`h2`标签。
+- 两个标签，包含了在点击“显示内容”、“下一个内容”和“隐藏内容”按钮时会执行动画的内容。第一个段落在应用程序启动时显示，当你点击“下一个内容”按钮时，它会切换到第二个段落。
+- 按钮使用`button`元素渲染。
+- 右面板使用`div`元素创建。
+- 大多数元素都有`id`属性，以便从 JavaScript 和 CSS 代码中唯一访问。
 
 在第 8 步中，你使用 CSS 设置了页面上元素的视觉外观。
-你使用了 `display:none` CSS 声明来完全隐藏元素，并使用 `opacity:0` 声明让元素不可见。两者之间的区别在于不可见元素继续
-
-
-
-
+你使用了`display:none`CSS 声明来完全隐藏元素，并使用`opacity:0`声明让元素不可见。两者之间的区别在于不可见元素继续
 
 # 使用 JavaScript 创建 Windows 8 风格应用程序
 
 占用屏幕空间，而隐藏元素将完全从 UI 中移除，从而将其空间留给其他元素。
 
-注意如何使用 `position`、`right`、`top`、`width` 和 `height` 属性将面板 `div` 转换为全高度框并移动到页面右侧。`z-index` 属性确保面板渲染在其他 UI 元素之上的层。
+注意如何使用`position`、`right`、`top`、`width`和`height`属性将面板`div`转换为全高度框并移动到页面右侧。`z-index`属性确保面板渲染在其他 UI 元素之上的层。
 
 在第 10 步中，你添加了一些在应用程序启动运行时的代码。
 
-第一行代码创建了一个 JavaScript 列表，包含页面上所有的标题（h1 和 h2 元素）。第二行代码使用 Windows 8 库的进入动画（entering animation）对这些元素进行处理。注意 `enterPage` 函数的第二个参数设置了相对于最终位置的偏移量。在这种情况下，当动画移动到 HTML 和 CSS 定义的位置时，标题会从它们的最终位置向右飞行 500 像素，并向下移动 100 像素。这里的偏移量设置仅用于演示目的。微软建议将偏移量设置为 `null` 以创建 Windows 8 风格的动画。
+第一行代码创建了一个 JavaScript 列表，包含页面上所有的标题（`h1`和`h2`元素）。第二行代码使用 Windows 8 库的进入动画（entering animation）对这些元素进行处理。注意`enterPage`函数的第二个参数设置了相对于最终位置的偏移量。在这种情况下，当动画移动到 HTML 和 CSS 定义的位置时，标题会从它们的最终位置向右飞行 500 像素，并向下移动 100 像素。这里的偏移量设置仅用于演示目的。微软建议将偏移量设置为`null`以创建 Windows 8 风格的动画。
 
-应用程序初始化代码中的接下来五行将事件处理函数绑定到页面按钮的点击事件。注意，你可以通过使用 HTML 标记中定义的 `id` 直接访问页面上的 HTML 对象，而无需调用 `document.getElementById`。
+应用程序初始化代码中的接下来五行将事件处理函数绑定到页面按钮的点击事件。注意，你可以通过使用 HTML 标记中定义的`id`直接访问页面上的 HTML 对象，而无需调用`document.getElementById`。
 
 在第 11 步中，你实现了当用户点击我们（此处应为页面）上的按钮时执行的事件处理函数。
 
-你使用了 `style.display` 属性来显示或隐藏 UI 元素。将此属性设置为 `inline` 或 `block` 会相应地显示行内或块级元素。`style.opacity` 属性的行为类似。当你将其设置为 0 时，元素变得不可见。
+你使用了`style.display`属性来显示或隐藏 UI 元素。将此属性设置为`inline`或`block`会相应地显示行内或块级元素。`style.opacity`属性的行为类似。当你将其设置为 0 时，元素变得不可见。
 
-当你点击“显示内容”（Show content）按钮时，会调用 `onBtnOnClick` 函数，该函数为段落文本启动 `enterContent` 函数，隐藏“显示内容”按钮并显示“下一步”（Next）按钮。由于 `enterContent` 函数是异步启动动画的，因此在文本仍在动画时按钮正在发生变化。这些效果是同时发生的。
+当你点击“显示内容”（Show content）按钮时，会调用`onBtnOnClick`函数，该函数为段落文本启动`enterContent`函数，隐藏“显示内容”按钮并显示“下一步”（Next）按钮。由于`enterContent`函数是异步启动动画的，因此在文本仍在动画时按钮正在发生变化。这些效果是同时发生的。
 
-当你点击“下一步”（Next）按钮时，会调用 `onBtnNextClicked` 函数。该事件处理器异步启动 `exitContent` 动画，并使用该函数仅在第一段缓慢淡出、隐藏“下一步”按钮并显示“隐藏内容”按钮后执行额外代码。最后，启动 `enterContent` 使第二段文字淡入。
+当你点击“下一步”（Next）按钮时，会调用`onBtnNextClicked`函数。该事件处理器异步启动`exitContent`动画，并使用该函数仅在第一段缓慢淡出、隐藏“下一步”按钮并显示“隐藏内容”按钮后执行额外代码。最后，启动`enterContent`使第二段文字淡入。
 
-当你点击“隐藏内容”（Hide content）按钮时，会调用 `onBtnHideClicked`，它使用 `exitContent` 和 `style.display` 属性将元素恢复到原始状态。
+当你点击“隐藏内容”（Hide content）按钮时，会调用`onBtnHideClicked`，它使用`exitContent`和`style.display`属性将元素恢复到原始状态。
 
-当你分别点击“显示面板”（Show panel）和“隐藏面板”（Hide panel）按钮时，会调用 `onBtnShowPanel` 和 `onBtnHidePanelClicked` 函数。当你点击“显示面板”按钮时，启动 `showPanel` 动画，面板从屏幕右侧飞入。当你点击“隐藏面板”按钮时，“hidePanel` 动画从屏幕飞出。在这里你可以看到使用 `then` 函数的另一个效果示例。只有在 `hidePanel` 将移出屏幕之后，才使用 `style.opacity` 属性将面板变为不可。
+当你分别点击“显示面板”（Show panel）和“隐藏面板”（Hide panel）按钮时，会调用`onBtnShowPanel`和`onBtnHidePanelClicked`函数。当你点击“显示面板”按钮时，启动`showPanel`动画，面板从屏幕右侧飞入。当你点击“隐藏面板”按钮时，“hidePanel`动画从屏幕飞出。在这里你可以看到使用`then`函数的另一个效果示例。只有在`hidePanel`将移出屏幕之后，才使用`style.opacity`属性将面板变为不可。
 
 ## 总结
 
@@ -5819,14 +5761,14 @@ Windows Runtime 的功能和服务对 JavaScript 应用程序完全可用。一�
 | :--- | :--- |
 | HTML5 | HTML5 是下一代超文本标记语言标准，让你能够在浏览器中创建丰富的互联网应用程序。 |
 | JavaScript 库 (WinJS) | JavaScript 库 (WinJS) 是一个 JavaScript 代码库，为常见的编码模式提供系统级功能和助手，简化使用 JavaScript 创建 Windows 8 风格应用程序的过程。 |
-| document.getElementById 和 document.getElementsByTagName | 通过 `document.getElementById` 和 `document.getElementsByTagName` 函数，你可以在 JavaScript 代码中获取 DOM 元素的引用。 |
-| addEventListener | 通过 `addEventListener` 函数，可以将函数绑定到 DOM 元素以响应用户操作。 |
+| `document.getElementById`和`document.getElementsByTagName` | 通过`document.getElementById`和`document.getElementsByTagName`函数，你可以在 JavaScript 代码中获取 DOM 元素的引用。 |
+| `addEventListener` | 通过`addEventListener`函数，可以将函数绑定到 DOM 元素以响应用户操作。 |
 | 简单绑定 | 简单绑定是一种数据绑定，将单个数据值连接到单个 UI 元素。 |
 | 列表绑定 | 列表绑定是一种数据绑定，将值数组连接到可以处理列表或表格中多个值的复杂 UI 元素。 |
-| WinJS.ListView | ListView 是一个提供项目列表控件。 |
-| @media | @media 查询允许你为特定设备应用 CSS 样式。 |
+| `WinJS.ListView` | `ListView`是一个提供项目列表控件。 |
+| `@media` | `@media`查询允许你为特定设备应用 CSS 样式。 |
 | 锁定模式 | 在停靠模式下，应用程序固定在屏幕边缘。 |
-| canvas | canvas 是一个 HTML5 元素，允许你绘制图形。 |
+| `canvas` | `canvas`是一个 HTML5 元素，允许你绘制图形。 |
 
 # 使用 XAML 描述界面
 
@@ -5836,9 +5778,8 @@ Windows Runtime 的功能和服务对 JavaScript 应用程序完全可用。一�
 
 Windows Forms 不是唯一受这些症状影响的技术。许多其他微软和非微软的技术面临了同样的命运。微软很快意识到了这一点。在 .NET Framework 3.0 中，微软发布了一项新技术 Windows Foundation (WPF)。WPF 的设计旨在让开发者能够构建他们想象的任何 UI，并自由构建创新体验。该技术本身引入了几个非常重要的新概念：
 
-- 全新的控制模型 — WPF 将控件分为两大类——有一个子元素的控件和拥有多个子元素的控件（你将在本章学习更多关于控件以及如何使用它们的信息）。基本上就是如此。这就是 WPF 包含的所有限制。例如，你可以拥有一个按钮控件并在内部放置另一个按钮。然后你可以在内部按钮内添加一个 ListBox。这听起来不太合逻辑，或者它展示了 WPF 引入的新控制模型的灵活性？
+- 全新的控制模型 — WPF 将控件分为两大类——有一个子元素的控件和拥有多个子元素的控件（你将在本章学习更多关于控件以及如何使用它们的信息）。基本上就是如此。这就是 WPF 包含的所有限制。例如，你可以拥有一个按钮控件并在内部放置另一个按钮。然后你可以在内部按钮内添加一个`ListBox`。这听起来不太合逻辑，或者它展示了 WPF 引入的新控制模型的灵活性？
 - 声明式 UI — WPF 包含了一种描述 UI 的新方法。你不再需要编写代码和逻辑，而是使用基于 XML 的语言称为扩展应用程序标记语言（XAML）来声明式地构建 UI。如果你任何
-
 
 使用超文本标记语言（HTML）进行 Web 开发，这个概念对你来说应该非常熟悉。
 
@@ -5856,13 +5797,13 @@ XAML 本身就是一个 XML 文档，仅此此而已。一个非常强大的解�
 
 其语法非常直观。在大多数情况下，语法来自 XML 规范，但一些新添加的内容使得 XAML 变得更加强大。
 
-在下面的代码示例中，创建了一个新的 `Button` 并将其 `Content` 属性设置为 "Hello XAML"。你可以使用属性语法在对象上设置属性。通过这种方法，XAML 元素上的属性映射到对象本身的属性上。
+在下面的代码示例中，创建了一个新的`Button`并将其`Content`属性设置为 "Hello XAML"。你可以使用属性语法在对象上设置属性。通过这种方法，XAML 元素上的属性映射到对象本身的属性上。
 
 ```xml
 <Button Content="Hello XAML" />
 ```
 
-以下代码创建了一个带有渐变画刷的矩形。你可以使用属性语法轻松定义如“White”或“Black”之类的简单颜色。然而，你可能想用一种更复杂的颜色填充你的矩形。渐变画刷是一个完美的选择。它包含一个渐变停止点列表，定义了渐变画刷中出现的颜色。你必须切换到不同的语法，使用属性语法来描述此复杂值的赋值。在下面的示例中，矩形的 `Fill` 属性设置为 `LinearGradientBrush`：
+以下代码创建了一个带有渐变画刷的矩形。你可以使用属性语法轻松定义如“White”或“Black”之类的简单颜色。然而，你可能想用一种更复杂的颜色填充你的矩形。渐变画刷是一个完美的选择。它包含一个渐变停止点列表，定义了渐变画刷中出现的颜色。你必须切换到不同的语法，使用属性语法来描述此复杂值的赋值。在下面的示例中，矩形的`Fill`属性设置为`LinearGradientBrush`：
 
 ```xml
 <Rectangle Width="100" Height="100">
@@ -5887,9 +5828,9 @@ XAML 本身就是一个 XML 文档，仅此此而已。一个非常强大的解�
 
 如果你用面向对象的语言创建过应用程序，你就知道不同的组件和控件可以使用相同的名称共存，但具有不同的命名空间。命名空间是代码的逻辑容器。它们旨在帮助你避免元素名称冲突。这不仅仅适用于 XAML。标准 XML 规范定义了 XAML 命名空间和语法。微软提供了直接映射到通用语言运行时 (CLR) 命名空间的能力。
 
-当你向文档添加 XAML 元素时，默认情况下，XAML 解析器会尝试在默认命名空间中解析该类型。如果类型位于不同的命名空间，你必须使用 `xmlns:prefix` 属性显式引用命名空间。前缀是完整命名空间的快捷方式。因此，每当你想从特定命名空间引用对象时，必须像 `prefix:MyControl` 这样引用，其中 `prefix` 是该特定命名空间的自定义快捷名称。
+当你向文档添加 XAML 元素时，默认情况下，XAML 解析器会尝试在默认命名空间中解析该类型。如果类型位于不同的命名空间，你必须使用`xmlns:prefix`属性显式引用命名空间。前缀是完整命名空间的快捷方式。因此，每当你想从特定命名空间引用对象时，必须像`prefix:MyControl`这样引用，其中`prefix`是该特定命名空间的自定义快捷名称。
 
-默认命名空间是不指定前缀的 `xmlns` 声明。在 Windows 8 风格的应用程序中，XAML 中的默认命名空间是 `http://schemas.microsoft.com/winfx/2006/xaml/presentation`，它直接映射到 `Windows.UI.Controls` 命名空间。所有的基本控件都在这里。
+默认命名空间是不指定前缀的`xmlns`声明。在 Windows 8 风格的应用程序中，XAML 中的默认命名空间是`http://schemas.microsoft.com/winfx/2006/xaml/presentation`，它直接映射到`Windows.UI.Controls`命名空间。所有的基本控件都在这里。
 
 在下一个练习中，你将学习如何使用 XAML 创建你的 Windows 8 风格应用程序。
 
@@ -5897,13 +5838,13 @@ XAML 本身就是一个 XML 文档，仅此此而已。一个非常强大的解�
 
 # 尝试一下：使用 XAML 构建 GreetMe 应用程序
 
-在此练习中，你将使用 XAML 创建一个简单的 Windows 8 风格应用程序。你将在 UI 上放置一个 `Button` 并处理它的 `Click` 事件。当事件触发时，你将获取用户的输入。
+在此练习中，你将使用 XAML 创建一个简单的 Windows 8 风格应用程序。你将在 UI 上放置一个`Button`并处理它的`Click`事件。当事件触发时，你将获取用户的输入。
 
-- 1. 打开 Visual Studio 并创建一个新的 Windows 8 风格应用程序项目。对于项目名称，输入 `GreetMeApplication`。
+- 1. 打开 Visual Studio 并创建一个新的 Windows 8 风格应用程序项目。对于项目名称，输入`GreetMeApplication`。
 
-- 2. 项目加载后，确保 `MainPage.xaml` 是你当前正在编辑的文件。
+- 2. 项目加载后，确保`MainPage.xaml`是你当前正在编辑的文件。
 
-- 3. 要向 UI 添加一个 `Button` 控件，请找到名为 `LayoutRoot` 的 `Grid` 面板，并在 `Grid` 元素内部添加以下代码：
+- 3. 要向 UI 添加一个`Button`控件，请找到名为`LayoutRoot`的`Grid`面板，并在`Grid`元素内部添加以下代码：
 
 ```xml
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
@@ -5913,13 +5854,15 @@ XAML 本身就是一个 XML 文档，仅此此而已。一个非常强大的解�
 </StackPanel>
 ```
 
-- 4. 要为 `Button` 控件订阅点击事件，请将按钮声明更改为：
+
+
+- 4. 要为`Button`控件订阅点击事件，请将按钮声明更改为：
 
 ```xml
 <Button Content="Greet Me" Click="Button_Click"/>
 ```
 
-- 5. 要编写 `Click` 事件处理程序，右键点击 XAML 代码编辑器并选择“查看代码”。这会打开一个新文件。在 `MainPage` 类中添加以下代码：
+- 5. 要编写`Click`事件处理程序，右键点击 XAML 代码编辑器并选择“查看代码”。这会打开一个新文件。在`MainPage`类中添加以下代码：
 
 ```csharp
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -5935,11 +5878,11 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
 **FIGURE 7-1:** 运行应用程序
 
-#原理 (How It Works)
+# 原理 (How It Works)
 
 这是一个非常简单的应用程序，但有很多可以学的。当你在第一步创建项目时，Visual Studio 为你准备了项目结构。图 7-2 显示了生成的结构。
 
-在 `Assets` 文件夹中，你会看到应用程序的一些图形，如 Logo 和启动屏幕图片。你还有两个 XML 文件。其中一个是 `App.xml`，它代表应用程序对象。它是运行时第一个被创建的对象。在 `App.xml` 中，你可以从 `x:Class` 属性看到应用程序对象是 `GreetMeApplication.App`。在解决方案中，你可以看到 `App.xml` 下有一个与标记对象关联的代码文件。如果你打开它，将看到以下代码：
+在`Assets`文件夹中，你会看到应用程序的一些图形，如 Logo 和启动屏幕图片。你还有两个 XML 文件。其中一个是`App.xml`，它代表应用程序对象。它是运行时第一个被创建的对象。在`App.xml`中，你可以从`x:Class`属性看到应用程序对象是`GreetMeApplication.App`。在解决方案中，你可以看到`App.xml`下有一个与标记对象关联的代码文件。如果你打开它，将看到以下代码：
 
 ```csharp
 sealed partial class App : Application
@@ -5989,8 +5932,6 @@ Window.Current.Content = rootFrame;
 Window.Current.Activate();
 ```
 
-
-
 # 理解布局管理系统 | 237
 
 ```csharp
@@ -6002,50 +5943,47 @@ private void OnSuspending(Object sender, SuspendingEventArgs e)
 }
 ```
 
-这是创建应用对象的地方。在 `OnLaunched` 方法中，创建了一个 `Frame` 控件。`Frame` 控件负责在不同页面之间导航，就像网络浏览器一样，但在情况下，这些页面是基于 XAML 的视图。通过 `Frame`（命名为 `rootFrame`），启动导航到 `MainPage`。这就是为什么 `MainPage` 在应用程序运行后立即显示。`Frame` 控件尚未成为可见 `Window` 的，因此将 `Frame` 设置为窗口当前的内容。
+这是创建应用对象的地方。在`OnLaunched`方法中，创建了一个`Frame`控件。`Frame`控件负责在不同页面之间导航，就像网络浏览器一样，但在情况下，这些页面是基于 XAML 的视图。通过`Frame`（命名为`rootFrame`），启动导航到`MainPage`。这就是为什么`MainPage`在应用程序运行后立即显示。`Frame`控件尚未成为可见`Window`的，因此将`Frame`设置为窗口当前的内容。
 
 你可以看到一些关于执行状态和挂起的额外代码。你现在不需要担心。这些代码与应用生命周期有关。你将在第 9 章中学习更多内容。
 
-`Grid` 面板在 `MainPage` 内部拉伸。面板（Panels）用于创建布局。你将在本章中学习更多内容。目前，将面板想象成类似 `Button` 控件的控件容器。`Grid` 的 `x:name` 属性指定了你可以从代码后代码（code-behind）引用该面板的变量。在这种情况下，变量的名为 `LayoutRoot`。稍后你会发现这个名称是常见的。页面上的第一个项目通常是命名为 `LayoutRoot` 的面板。
+`Grid`面板在`MainPage`内部拉伸。面板（Panels）用于创建布局。你将在本章中学习更多内容。目前，将面板想象成类似`Button`控件的控件容器。`Grid`的`x:name`属性指定了你可以从代码后代码（code-behind）引用该面板的变量。在这种情况下，变量的名为`LayoutRoot`。稍后你会发现这个名称是常见的。页面上的第一个项目通常是命名为`LayoutRoot`的面板。
 
-第 3 步，`StackPanel` 放置在 `LayoutRoot` 内部，并使用 `HorizontalAlignment` 和 `VerticalAlignment` 属性位于屏幕中心。`TextBox` 控件用于显示文本，并接收用户输入。注意 `TextBox` 命名为 `txtName`。`StackPanel` 中的第三个元素是 `Button` 控件。为了显示“你好”，其 `Content` 被设置为“Greet”。
+第 3 步，`StackPanel`放置在`LayoutRoot`内部，并使用`HorizontalAlignment`和`VerticalAlignment`属性位于屏幕中心。`TextBox`控件用于显示文本，并接收用户输入。注意`TextBox`命名为`txtName`。`StackPanel`中的第三个元素是`Button`控件。为了显示“你好”，其`Content`被设置为“Greet”。
 
-第 4 步，你将 `Click` 事件设置为命名为 `Button_Click` 的方法。`Click` 事件响应用户操作。当用户点击按钮时，会触发 `Click` 事件。你可以使用处理程序（handlers）订阅这些事件。在这种情况下，当 `Click` 事件触发时，`Button_Click` 事件处理程序将收到通知。XAML 解析器在 `MainPage` 类中查找此方法。在名为 `MainPage.xaml` 的代码后文件中，`MainPage` 类必须实现此方法。
+第 4 步，你将`Click`事件设置为命名为`Button_Click`的方法。`Click`事件响应用户操作。当用户点击按钮时，会触发`Click`事件。你可以使用处理程序（handlers）订阅这些事件。在这种情况下，当`Click`事件触发时，`Button_Click`事件处理程序将收到通知。XAML 解析器在`MainPage`类中查找此方法。在名为`MainPage.xaml`的代码后文件中，`MainPage`类必须实现此方法。
 
-第 5 步，在事件处理程序的体中，你使用 `DialogMessage` 来问候用户。`DialogMessage` 显示由 `txtName` 中输入的文本附加的“Hello”字符串。
+第 5 步，在事件处理程序的体中，你使用`DialogMessage`来问候用户。`DialogMessage`显示由`txtName`中输入的文本附加的“Hello”字符串。
 
 # 理解布局管理系统
 
 当你创建一个应用程序的 UI 时，面临的最困难的问题之一是适应不同的显示分辨率、宽高比和 DPI 设置。如果你考虑到 Windows 8 关于可能的显示设备和硬件（如平板电脑、台式电脑、笔记本电脑、电视等），这似乎是一个挑战。
 
-
-
-
 # Canvas 面板
 
-Canvas 面板是最基础的面板，具有最简单的布局策略。当你向面板中添加控件时，它将显示在左上角。如果你想指定它距离左上角有多远，可以使用 `Canvas.Left` 和 `Canvas.Top` 附加属性。在接随后的代码和图 7-3 中，你可以看到一个按钮被放置在位置 120, 100 处的 Canvas 面板上：
+Canvas 面板是最基础的面板，具有最简单的布局策略。当你向面板中添加控件时，它将显示在左上角。如果你想指定它距离左上角有多远，可以使用`Canvas.Left`和`Canvas.Top`附加属性。在接随后的代码和图 7-3 中，你可以看到一个按钮被放置在位置 120, 100 处的 Canvas 面板上：
 
-```
+```xml
 <Canvas>
   <Button Canvas.Left="120" Canvas.Top="100"/>
 </Canvas>
 ```
 
-Canvas 面板有第三个附加属性 `Canvas.CreateIndex`。如果两个控件相互叠，最后添加到面板 `Children` 集合的控件将位于顶层。如果你想更改顺序，应该设置子元素的 `ZIndex` 以反映元素的适当排序。
+Canvas 面板有第三个附加属性`Canvas.CreateIndex`。如果两个控件相互叠，最后添加到面板`Children`集合的控件将位于顶层。如果你想更改顺序，应该设置子元素的`ZIndex`以反映元素的适当排序。
 
 对于开始使用 Canvas 面板，你所需要的知识点基本上就只有这些了。简单的布局策略意味着布局算法运行得非常快，这在性能优化方面可能非常重要。
 
-在图 7-3 中还有一点你需要注意。`Button` 控件的大小只占据了渲染内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Canvas 面板决定了属性的最终宽度和高度，根据 Canvas 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+在图 7-3 中还有一点你需要注意。`Button`控件的大小只占据了渲染内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着 Canvas 面板决定了属性的最终宽度和高度，根据 Canvas 的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_267_0.png)
 
 # StackPanel 面板
 
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直对齐。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+StackPanel 也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直对齐。如果`Orientation`设置为`Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），StackPanel 的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
 
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
 
-```
+```xml
 <StackPanel Orientation="Horizontal">
   <Button Content="Left" HorizontalAlignment="Left"/>
   <Button Content="Center" HorizontalAlignment="Center"/>
@@ -6053,10 +5991,9 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 </StackPanel>
 ```
 
-```
+```xml
 <Button Content="Stretch" HorizontalAlignment="Stretch"/>
 </StackPanel>
-
 <StackPanel Orientation="Vertical">
   <Button Content="Top" VerticalAlignment="Top"/>
   <Button Content="Center" VerticalAlignment="Center"/>
@@ -6073,15 +6010,15 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 
 # 定义行和列
 
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+你可以通过向 Grid 面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
 
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+- **Auto** —`Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
 
 让我们来看一个简单的例子：
 
-```
+```xml
 <Grid>
   <RowDefinitions Height="Auto">
     <RowDefinition Height="100"/>
@@ -6100,9 +6037,9 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 
 # 在 Grid 内部放置控件
 
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 属性。在下面的代码中，控件被放置在 Grid 的位置：
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`属性。在下面的代码中，控件被放置在 Grid 的位置：
 
-```
+```xml
 <Grid>
   <RowDefinitions>
     <RowDefinition Height="Auto"/>
@@ -6121,15 +6058,15 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 
 # 理解布局系统
 
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
 
 # StackPanel 面板
 
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+StackPanel 也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），StackPanel 的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
 
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
 
-```
+```xml
 <StackPanel Orientation="Horizontal">
   <Button Content="Left" HorizontalAlignment="Left"/>
   <Button Content="Center" HorizontalAlignment="Center"/>
@@ -6137,10 +6074,9 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 </StackPanel>
 ```
 
-```
+```xml
 <Button Content="Stretch" HorizontalAlignment="Stretch"/>
 </StackPanel>
-
 <StackPanel Orientation="Vertical">
   <Button Content="Top" VerticalAlignment="Top"/>
   <Button Content="Center" VerticalAlignment="Center"/>
@@ -6149,93 +6085,13 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 </StackPanel>
 ```
 
-# Grid 面板
 
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
 
 # Grid 面板
 
 Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
 
-# 定义行和列
+## 定义行和列
 
 你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
 
@@ -6262,7 +6118,7 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 
 图 7-5：使用 Grid 面板的复杂布局
 
-# 在 Grid 内部放置控件
+## 在 Grid 内部放置控件
 
 要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
 
@@ -6283,13 +6139,526 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 </Grid>
 ```
 
-# 理解布局系统
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+
+
+```
+<Button Content="Center" VerticalAlignment="Center"/>
+
+<Button Content="Bottom" VerticalAlignment="Bottom"/>
+
+<Button Content="Stretch" VerticalAlignment="Stretch"/>
+
+</StackPanel>
+```
+
+# Grid 面板
+
+Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+
+  <RowDefinitions Height="Auto">
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 Grid 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
+
+```
+<Grid>
+
+  <RowDefinitions>
+
+    <RowDefinition Height="Auto"/>
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+  <ColumnDefinitions>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+  </ColumnDefinitions>
+
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+
+</Grid>
+```
+
+## 理解布局系统
 
 在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
 
 # StackPanel 面板
 
 StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+
+  <Button Content="Left" HorizontalAlignment="Left"/>
+
+  <Button Content="Center" HorizontalAlignment="Center"/>
+
+  <Button Content="Right" HorizontalAlignment="Right"/>
+
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+
+</StackPanel>
+
+<StackPanel Orientation="Vertical">
+
+  <Button Content="Top" VerticalAlignment="Top"/>
+
+  <Button Content="Center" VerticalAlignment="Center"/>
+
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+
+</StackPanel>
+```
+
+# Grid 面板
+
+Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+
+  <RowDefinitions Height="Auto">
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 Grid 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
+
+```
+<Grid>
+
+  <RowDefinitions>
+
+    <RowDefinition Height="Auto"/>
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+  <ColumnDefinitions>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+  </ColumnDefinitions>
+
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+
+  <Button Content="Left" HorizontalAlignment="Left"/>
+
+  <Button Content="Center" HorizontalAlignment="Center"/>
+
+  <Button Content="Right" HorizontalAlignment="Right"/>
+
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+
+</StackPanel>
+
+<StackPanel Orientation="Vertical">
+
+  <Button Content="Top" VerticalAlignment="Top"/>
+
+  <Button Content="Center" VerticalAlignment="Center"/>
+
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+
+</StackPanel>
+```
+
+# Grid 面板
+
+Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+
+  <RowDefinitions Height="Auto">
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 Grid 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
+
+```
+<Grid>
+
+  <RowDefinitions>
+
+    <RowDefinition Height="Auto"/>
+
+    <RowDefinition Height="100"/>
+
+    <RowDefinition Height="1*"/>
+
+    <RowDefinition Height="2*"/>
+
+  </RowDefinitions>
+
+  <ColumnDefinitions>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+    <ColumnDefinition Width="Auto"/>
+
+  </ColumnDefinitions>
+
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+
+  <Button Content="Left" HorizontalAlignment="Left"/>
+
+  <Button Content="Center" HorizontalAlignment="Center"/>
+
+  <Button Content="Right" HorizontalAlignment="Right"/>
+
+</StackPanel>
+```
+
+
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+  <Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
 
 以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
 
@@ -6315,9 +6684,1255 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 
 # Grid 面板
 
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+## StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+## Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+### 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- `Auto` — `Auto`意味着行或列的大小应根据内容调整。
+- `Fixed` — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- `Star sizing`（星号尺寸） — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+### 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+
+
+```
+<ColumnDefinition Width="Auto"/>
+<ColumnDefinition Width="Auto"/>
+</ColumnDefinitions>
+<Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
 
 # 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- `Auto` — `Auto`意味着行或列的大小应根据内容调整。
+- `Fixed` — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- `Star sizing`（星号尺寸）— 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- `Auto` — `Auto`意味着行或列的大小应根据内容调整。
+- `Fixed` — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- `Star sizing`（星号尺寸）— 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- `Auto` — `Auto`意味着行或列的大小应根据内容调整。
+- `Fixed` — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- `Star sizing`（星号尺寸）— 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+
+
+
+```
+<RowDefinition Height="100"/>
+<RowDefinition Height="1*"/>
+<RowDefinition Height="2*"/>
+</RowDefinitions>
+<ColumnDefinitions>
+<ColumnDefinition Width="Auto"/>
+<ColumnDefinition Width="Auto"/>
+<ColumnDefinition Width="Auto"/>
+</ColumnDefinitions>
+<Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+## StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+## Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+### 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+## StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+## Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+### 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+## StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+## Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+### 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+```
+
+
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+# Grid 面板
+
+`Grid`面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid`面板将拥有一个填充整个`Grid`面板区域的单元格。
+
+# 定义行和列
+
+你可以通过向`Grid`面板添加`RowDefinitions`和`ColumnDefinitions`来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置`RowDefinition`和`ColumnDefinition`项目的`Height`和`Width`属性来更改此行为。`Height`和`Width`属性支持三种不同的值：
+
+- **Auto** — `Auto`意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保`Height`和`Width`值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在`Auto`和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid`的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用`Grid`面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用`Grid`面板的复杂布局
+
+# 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用`Grid.Row`和`Grid.Column`附加属性。在下面的代码中，控件被放置在`Grid`的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+# 理解布局系统
+
+在布局中，`Button`控件的大小只占据了渲染其内部内容所需的空间。这是因为`Button`控件上没有设置`Width`和`Height`属性，因此它们默认设置为`Auto`。在这种情况下，`Auto`意味着`Grid`面板决定了属性的最终宽度和高度，根据`Grid`的规定，面板只需要渲染内容的空间。如果你将`Width`和`Height`属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel`也是一个简单直接的面板。它根据`Orientation`属性将子元素一个接一个地水平或垂直排列。如果`Orientation`设置为`Vertical`（垂直），`StackPanel`没有任何附加属性。`StackPanel`的布局算法会考虑`HorizontalAlignment`属性，但不会考虑`VerticalAlignment`。如果`Orientation`设置为`Horizontal`（水平），`StackPanel`的布局算法会考虑`VerticalAlignment`属性，但不会考虑`HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的`StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+
+
+# Grid 面板
+
+`Grid` 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，`Grid` 面板将拥有一个填充整个 `Grid` 面板区域的单元格。
+
+## 定义行和列
+
+你可以通过向 `Grid` 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
+
+- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
+- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
+- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
+
+让我们来看一个简单的例子：
+
+```
+<Grid>
+  <RowDefinitions Height="Auto">
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+</Grid>
+```
+
+之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，`Grid` 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 `Grid` 面板的布局。
+
+![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
+
+图 7-5：使用 `Grid` 面板的复杂布局
+
+## 在 Grid 内部放置控件
+
+要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 `Grid` 的位置：
+
+```
+<Grid>
+  <RowDefinitions>
+    <RowDefinition Height="Auto"/>
+    <RowDefinition Height="100"/>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="2*"/>
+  </RowDefinitions>
+  <ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition Width="Auto"/>
+  </ColumnDefinitions>
+  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
+</Grid>
+```
+
+## 理解布局系统
+
+在布局中，`Button` 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 `Grid` 面板决定了属性的最终宽度和高度，根据 `Grid` 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
+
+# StackPanel 面板
+
+`StackPanel` 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），`StackPanel` 没有任何附加属性。`StackPanel` 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），`StackPanel` 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
+
+以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
+
+```
+<StackPanel Orientation="Horizontal">
+  <Button Content="Left" HorizontalAlignment="Left"/>
+  <Button Content="Center" HorizontalAlignment="Center"/>
+  <Button Content="Right" HorizontalAlignment="Right"/>
+</StackPanel>
+```
+
+```
+<Button Content="Stretch" HorizontalAlignment="Stretch"/>
+</StackPanel>
+<StackPanel Orientation="Vertical">
+  <Button Content="Top" VerticalAlignment="Top"/>
+  <Button Content="Center" VerticalAlignment="Center"/>
+  <Button Content="Bottom" VerticalAlignment="Bottom"/>
+  <Button Content="Stretch" VerticalAlignment="Stretch"/>
+</StackPanel>
+```
+
+
+
+# Grid 面板
+
+Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
+
+## 定义行和列
 
 你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
 
@@ -6344,7 +7959,7 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 
 图 7-5：使用 Grid 面板的复杂布局
 
-# 在 Grid 内部放置控件
+## 在 Grid 内部放置控件
 
 要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
 
@@ -6365,7 +7980,7 @@ Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所
 </Grid>
 ```
 
-# 理解布局系统
+## 理解布局系统
 
 在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
 
@@ -6386,7 +8001,6 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 ```
 <Button Content="Stretch" HorizontalAlignment="Stretch"/>
 </StackPanel>
-
 <StackPanel Orientation="Vertical">
   <Button Content="Top" VerticalAlignment="Top"/>
   <Button Content="Center" VerticalAlignment="Center"/>
@@ -6395,2276 +8009,7 @@ StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将
 </StackPanel>
 ```
 
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` And `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% and 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-
-之前的代码段仅包含布局代码，在没有内容的情况下它是不可见的。在此配置中，Grid 的第一行的大小由第一行的内容决定。第二行是 100px。剩余空间分配在第 3、4 和 5 行之间。它们在剩余空间中的比例分别为 25%、25% 和 50%。图 7-5 显示了使用 Grid 面板的布局。
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-  <ColumnDefinitions>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-    <ColumnDefinition Width="Auto"/>
-  </ColumnDefinitions>
-  <Button Grid.Row="1" Grid.Column="2" Content="Button"/>
-</Grid>
-```
-
-# 理解布局系统
-
-在布局中，Button 控件的大小只占据了渲染其内部内容所需的空间。这是因为 `Button` 控件上没有设置 `Width` 和 `Height` 属性，因此它们默认设置为 `Auto`。在这种情况下，`Auto` 意味着 Grid 面板决定了属性的最终宽度和高度，根据 Grid 的规定，面板只需要渲染内容的空间。如果你将 `Width` 和 `Height` 属性设置为特定值，控件将填充它所需的空间。
-
-# StackPanel 面板
-
-StackPanel 也是一个简单直接的面板。它根据 `Orientation` 属性将子元素一个接一个地水平或垂直排列。如果 `Orientation` 设置为 `Vertical`（垂直），StackPanel 没有任何附加属性。StackPanel 的布局算法会考虑 `HorizontalAlignment` 属性，但不会考虑 `VerticalAlignment`。如果 `Orientation` 设置为 `Horizontal`（水平），StackPanel 的布局算法会考虑 `VerticalAlignment` 属性，但不会考虑 `HorizontalAlignment`。
-
-以下代码包含两个一个水平方向和一个垂直方向的 `StackPanel`。图 7-4 显示了指定的布局：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Button Content="Left" HorizontalAlignment="Left"/>
-  <Button Content="Center" HorizontalAlignment="Center"/>
-  <Button Content="Right" HorizontalAlignment="Right"/>
-</StackPanel>
-```
-
-```
-<Button Content="Stretch" HorizontalAlignment="Stretch"/>
-</StackPanel>
-
-<StackPanel Orientation="Vertical">
-  <Button Content="Top" VerticalAlignment="Top"/>
-  <Button Content="Center" VerticalAlignment="Center"/>
-  <Button Content="Bottom" VerticalAlignment="Bottom"/>
-  <Button Content="Stretch" VerticalAlignment="Stretch"/>
-</StackPanel>
-```
-
-# Grid 面板
-
-Grid 面板稍微复杂一些，具有复杂的布局策略。正如其名称所示，该面板支持行和列的网格状布局。面板的子元素始终放置在单元格内。如果没有定义行或列，Grid 面板将拥有一个填充整个 Grid 面板区域的单元格。
-
-# 定义行和列
-
-你可以通过向 Grid 面板添加 `RowDefinitions` 和 `ColumnDefinitions` 来定义行和列。默认情况下，行和列平均划分可用空间。你可以通过设置 `RowDefinition` 和 `ColumnDefinition` 项目的 `Height` 和 `Width` 属性来更改此行为。`Height` 和 `Width` 属性支持三种不同的值：
-
-- **Auto** — `Auto` 意味着行或列的大小应根据内容调整。
-- **Fixed** — 通过提供显式值，你可以确保 `Height` 和 `Width` 值不受任何其他值的影响，并确保行或列占据了所需的空间。
-- **Star sizing（星号尺寸）** — 星号值意味着应该占据剩余空间。这里的关键词是“剩余”。在 `Auto` 和固定行列获取大小后，剩余空间可以由星号大小的行和列占据。如果有更多行是星号大小，这些行将平均划分剩余空间。星号可以关联一个数字，代表它的比例。
-
-让我们来看一个简单的例子：
-
-让我们来看一个简单的例子：
-
-```
-<Grid>
-  <RowDefinitions Height="Auto">
-    <RowDefinition Height="100"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/>
-  </RowDefinitions>
-</Grid>
-```
-(Wait, I noticed a repeated line in my thought process, I will ensure the output is clean and follows the source text provided by the user.)
-
-Let me re-translate the final section accurately based on the user's provided text.
-
-[content]
-... (rest of the translation as above, ensuring the end of the provided text) ...
-
-![](img/4ba176960f93c5e0483da4464a3d695f_269_0.png)
-
-图 7-5：使用 Grid 面板的复杂布局
-
-# 在 Grid 内部放置控件
-
-要将控件放置在特定的单元格中，应使用 `Grid.Row` 和 `Grid.Column` 附加属性。在下面的代码中，控件被放置在 Grid 的位置：
-
-```
-<Grid>
-  <RowDefinitions>
-    <RowDefinition Height="Auto"/>
-    <RowDefinition Height="100"/> own    <RowDefinition Height="1*"/>
-    <RowDefinition Height="2*"/> own  </RowDefinitions>
-...
-```
-(Actually, the user's text ends with the Grid section. I will provide the full translation of the source text provided in the prompt.)
-
-
-
-
-
-# 深入布局管理系统 | 245
+# 深入布局管理系统
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_272_0.png)
 
@@ -8682,27 +8027,27 @@ Let me re-translate the final section accurately based on the user's provided te
 
 7. 在属性窗口中，打开布局（Layout）部分。设置以下属性：
 
-- HorizontalAlignment: Left
-- VerticalAlignment: Bottom
-- RowSpan: 1
-- ColumnSpan: 2
-- Row and Columns: 0
-- Width and Height: Auto
-- Margin: 30 (Left), 0,0,0
+- `HorizontalAlignment`: Left
+- `VerticalAlignment`: Bottom
+- `RowSpan`: 1
+- `ColumnSpan`: 2
+- `Row` and `Columns`: 0
+- `Width` and `Height`: Auto
+- `Margin`: 30 (Left), 0,0,0
 
 8. 打开文档大纲（Documents Outline）窗口并将其固定。
 
 9. 确保选中了 StackPanel，如图 7-9 所示。
 
-10. 在属性窗口中，将 StackPanel 的 Orientation（方向）属性设置为 Horizontal（水平）。
+10. 在属性窗口中，将 StackPanel 的 `Orientation`（方向）属性设置为 Horizontal（水平）。
 
 11. 在工具箱中找到 TextBlock 元素并双击它将其添加到 StackPanel 中。重复三次，最终得到四个 TextBlock。
 
 12. 选中 StackPanel 中的所有 TextBlock，并在属性窗口中设置以下属性：
 
-- Margin: 15 (Left), 0,0,0
-- FontSize: 36
-- Text: MenuItem
+- `Margin`: 15 (Left), 0,0,0
+- `FontSize`: 36
+- `Text`: MenuItem
 
 13. 选中包含 StackPanel 的 Grid 面板。
 
@@ -8710,15 +8055,15 @@ Let me re-translate the final section accurately based on the user's provided te
 
 15. 在 Rectangle 上设置以下属性：
 
-- HorizontalAlignment: Stretch
-- VerticalAlignment: Stretch
-- RowSpan and ColumnSpan: 1
-- Column: 0
-- Row: 1
-- Width and Height: Auto
-- Margin: 20
+- `HorizontalAlignment`: Stretch
+- `VerticalAlignment`: Stretch
+- `RowSpan` and `ColumnSpan`: 1
+- `Column`: 0
+- `Row`: 1
+- `Width` and `Height`: Auto
+- `Margin`: 20
 
-16. 在属性窗口中，选择画刷（Brush）部分并将 Fill（填充）属性设置为任何深红色。
+16. 在属性窗口中，选择画刷（Brush）部分并将 `Fill`（填充）属性设置为任何深红色。
 
 17. 选中包含 StackPanel 的 Grid 面板。
 
@@ -8726,14 +8071,14 @@ Let me re-translate the final section accurately based on the user's provided te
 
 19. 在新的 StackPanel 上设置以下属性：
 
-- HorizontalAlignment: Stretch
-- VerticalAlignment: Stretch
-- RowSpan and ColumnSpan: 1
-- Column: 1
-- Row: 1
-- Width and Height: Auto
-- Margin: 20
-- Background: #FFD4D4D4
+- `HorizontalAlignment`: Stretch
+- `VerticalAlignment`: Stretch
+- `RowSpan` and `ColumnSpan`: 1
+- `Column`: 1
+- `Row`: 1
+- `Width` and `Height`: Auto
+- `Margin`: 20
+- `Background`: `#FFD4D4D4`
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_273_0.png)
 
@@ -8747,23 +8092,19 @@ Let me re-translate the final section accurately based on the user's provided te
 
 通过点击 Grid 面板略上方和略左侧的位置，你指示 Visual Studio 为 Grid 添加两行和两列。
 
-第一个 StackPanel 用作菜单容器。它的 ColumnSpan 属性设置为 2，因为你希望菜单跨越这些列。Orientation 设置为 Horizontal 以确保菜单项是水平排列的。通过设置对齐属性，你可以确保该面板将置在第一行第一列的左下角。
+第一个 StackPanel 用作菜单容器。它的 `ColumnSpan` 属性设置为 2，因为你希望菜单跨越这些列。`Orientation` 设置为 Horizontal 以确保菜单项是水平排列的。通过设置对齐属性，你可以确保该面板将置在第一行第一列的左下角。
 
-菜单由四个 TextBlock 表示。设置左侧 Margin（边距）可确保菜单项之间留有一些空白。
+菜单由四个 TextBlock 表示。设置左侧 `Margin`（边距）可确保菜单项之间留有一些空白。
 
-Rectangle 充当占位符。在本章稍后的内容中，你将用 ListBox 替换它。将 Rows 设置为 1会将矩形移动到第二行。将 Margin 设置为 20 会在四个方向都留出空白。
+Rectangle 充当占位符。在本章稍后的内容中，你将用 ListBox 替换它。将 `Rows` 设置为 1会将矩形移动到第二行。将 `Margin` 设置为 20 会在四个方向都留出空白。
 
 第二个 StackPanel 将在随后的练习中填充。现在，它是项目详情的占位符。
-
-
-
-
 
 # 系统资源
 
 资源是在许多页面上复用画刷、样式和其他对象的常用方法。在此之前，你已经学习了如何定义自己的资源。然而，在构建 Windows 8 风格应用程序时，你可能希望确保应用程序的设计符合操作系统的设计。为了实现这一点，使用与 Windows 8 相同的颜色、字体和字体样式是有意义的。可以通过引用内置系统资源来实现。你可以使用数十种资源——画刷、颜色、字体、大小以及许多其他共享对象。
 
-探索这些系统资源最好且最简单的方法是使用 Visual Studio 2012 属性窗口，如图 7-11 所示。例如，如果你想确保矩形的颜色与应用程序背景颜色相同，可以启动 Visual Studio 2012，点击 Fill 属性，然后点击 System Resources（系统资源）。你将看到一个适用的系统范围画刷列表。你只需要选择其中一个，例如 AppBarBackgroundColor。
+探索这些系统资源最好且最简单的方法是使用 Visual Studio 2012 属性窗口，如图 7-11 所示。例如，如果你想确保矩形的颜色与应用程序背景颜色相同，可以启动 Visual Studio 2012，点击 `Fill` 属性，然后点击 System Resources（系统资源）。你将看到一个适用的系统范围画刷列表。你只需要选择其中一个，例如 `AppBarBackgroundColor`。
 
 在下一个练习中，你将学习如何在整个应用程序中创建和复用资源。
 
@@ -8773,21 +8114,21 @@ Rectangle 充当占位符。在本章稍后的内容中，你将用 ListBox 替�
 
 # 尝试使用资源
 
-在本次练习中，你将创建一个画刷资源并将其放置在页面的 Resources 部分。然后你从矩形中引用它。
+在本次练习中，你将创建一个画刷资源并将其放置在页面的 `Resources` 部分。然后你从矩形中引用它。
 
 1. 打开之前的项目。
-2. 选择灰色的 StackPanel。在属性窗口中，将 Name 属性设置为 detailsPanel。
+2. 选择灰色的 StackPanel。在属性窗口中，将 `Name` 属性设置为 `detailsPanel`。
 3. 在属性窗口中，选择 Brush 区域。
-4. 选择 Background 属性。
+4. 选择 `Background` 属性。
 5. 在此属性颜色条的右侧，有一个名为 Advanced Properties（高级属性）的小灰色正方块。点击它。
 6. 选择 "Convert to New Resource”（转换为新资源）。
-7. 在弹出的对话框中，为你的新资源提供名称 lightBrush。
+7. 在弹出的对话框中，为你的新资源提供名称 `lightBrush`。
 8. 确保选中了此文档，并且在组合框中也选了 Page 选项。
 9. 点击 OK。
-10. 选择红色矩形并选择它的 Fill 属性。
-11. 在 Brushes 部分中，找到 Stroke 属性下的一系列图标。点击最后一个 Brush Resources（画刷资源）。
+10. 选择红色矩形并选择它的 `Fill` 属性。
+11. 在 Brushes 部分中，找到 `Stroke` 属性下的一系列图标。点击最后一个 Brush Resources（画刷资源）。
 12. 在 Brush Resources 选项卡上，你可以看到本地资源和系统范围资源。
-13. 点击 lightBrush。
+13. 点击 `lightBrush`。
 
 14. 按 F5 运行应用程序。你应该能看到如图 7-12 所示的结果。
 
@@ -8797,9 +8138,9 @@ Rectangle 充当占位符。在本章稍后的内容中，你将用 ListBox 替�
 
 ### 工作原理
 
-“Convert to New Resource Window”会创建一个新资源并将将其保存到你指定的位置。在这种情况下，你将其保存到了当前文档，即当前的 Page.Resources 部分。
+“Convert to New Resource Window”会创建一个新资源并将将其保存到你指定的位置。在这种情况下，你将其保存到了当前文档，即当前的 `Page.Resources` 部分。
 
-Page.Resources 部分应该如下所示：
+`Page.Resources` 部分应该如下所示：
 
 ```
 <Page.Resources>
@@ -8807,227 +8148,238 @@ Page.Resources 部分应该如下所示：
 </Page.Resources>
 ```
 
+
+
 之后，你可以通过从代码中引用它们、使用 Advanced Properties 选项创建引用，或者如果你正在处理画刷，也可以使用 Brush Resources 面板来复用资源。
 
 # Windows 8 风格应用程序中的基础控件
 
 对于 Windows 8 风格应用程序的开发，你可以使用一些简单的控件来构建你的 UI。这些控件可以分为两大类。
 
-# 第 7 章使用 XAML 创建 Windows 8 风格用户界面
+## 第 7 章使用 XAML 创建 Windows 8 风格用户界面
 
-第一类包含 ContentControls（内容控件）。这类控件只能包含一个子元素。你可以通过 ContentControl 的 Content 属性添加此子元素。ContentControl 本身是一个基类，但你也可以在 UI 中使用它来分组或分离 UI 的某部分。你可以将任何想要的内容放入 Content 中。如果你添加一个字符串，它将显示文本；如果你添加一个 UIElement，它将进行渲染。UIElement 是可以以视觉方式显示的组件。
+第一类包含`ContentControls`（内容控件）。这类控件只能包含一个子元素。你可以通过`ContentControl`的`Content`属性添加此子元素。`ContentControl`本身是一个基类，但你也可以在 UI 中使用它来分组或分离 UI 的某部分。你可以将任何想要的内容放入`Content`中。如果你添加一个字符串，它将显示文本；如果你添加一个`UIElement`，它将进行渲染。`UIElement`是可以以视觉方式显示的组件。
 
-第二类包含 ItemsControls（项目控件）。这类控件可以包含元素列表。就像 ContentControl 一样，你也可以直接使用 ItemsControl。你有两种不同的方法向 ItemsControl 填充项目：
+第二类包含`ItemsControls`（项目控件）。这类控件可以包含元素列表。就像`ContentControl`一样，你也可以直接使用`ItemsControl`。你有两种不同的方法向`ItemsControl`填充项目：
 
-- 你可以设置 Items 属性——通常发生在 XAML 中。ItemsControl 可以接受其 Items 集合中的任何类型对象。这使你能够创建任何种的列表或 UI。例如，如果你想要一个可以放置文本、图像和视频的社交墙，你可以使用 ItemsControl 向项目集合中添加 TextBlocks、Images 和 MediaElements。
+- 你可以设置`Items`属性——通常发生在 XAML 中。`ItemsControl`可以接受其`Items`集合中的任何类型对象。这使你能够创建任何种的列表或 UI。例如，如果你想要一个可以放置文本、图像和视频的社交墙，你可以使用`ItemsControl`向项目集合中添加`TextBlocks`、`Images`和`MediaElements`。
 
-- 你可以设置 ItemsSource 属性——与于在 XAML 内或通过代码使用 .Add() 方法直接操作 ItemsControl 不同，在大多数情况下，ItemsSource 属性被设置为数据项集合。如果你设置了 ItemsSource 属性，就不能直接操作 Items 集合。如果你向 Items 集合添加元素，就无法设置 ItemsSource 属性。
+- 你可以设置`ItemsSource`属性——与于在 XAML 内或通过代码使用`.Add()`方法直接操作`ItemsControl`不同，在大多数情况下，`ItemsSource`属性被设置为数据项集合。如果你设置了`ItemsSource`属性，就不能直接操作`Items`集合。如果你向`Items`集合添加元素，就无法设置`ItemsSource`属性。
 
-基本上，每一个控件都派生自 ContentControl 或 ItemsControl 类。唯一的例外是 Border、TextBlock 和 Image 控件，它们甚至不是控件！这一点你并不需要担心。这只是一个简单的技术细节。这些元素的正常用法与派生控件元素非常相似。
+基本上，每一个控件都派生自`ContentControl`或`ItemsControl`类。唯一的例外是`Border`、`TextBlock`和`Image`控件，它们甚至不是控件！这一点你并不需要担心。这只是一个简单的技术细节。这些元素的正常用法与派生控件元素非常相似。
 
-# 具有简单值的控件
+## 具有简单值的控件
 
-在 Windows 8 风格应用程序中，不仅仅是 ContentControls 与 ItemsControls 之分。还有其他不属于这些类的控件。
+在 Windows 8 风格应用程序中，不仅仅是`ContentControls`与`ItemsControls`之分。还有其他不属于这些类的控件。
 
-# Border 元素
+### Border 元素
 
-使用 Border 元素，你可以在控件周围绘制边框和背景。Border 是一个 FrameworkElement，它是所有控件的基类。Border 只能包含一个子，所以如果你需要为多个控件绘制边框，请先将它们分组面板，然后将面板添加到 Border。
+使用`Border`元素，你可以在控件周围绘制边框和背景。`Border`是一个`FrameworkElement`，它是所有控件的基类。`Border`只能包含一个子，所以如果你需要为多个控件绘制边框，请先将它们分组面板，然后将面板添加到`Border`。
 
-表 7-1：Border 类的重要属性
-
-| 属性 | 描述 |
-| --- | --- |
-| CornerRadius | CornerRadius 属性指定边框角的半径。如果你指定单个数字，所有角都是圆角的。如果你指定四个数字，顺序为左上、右上、右下、左下。 |
-
-# 样式应用程序中的基础控件
+表 7-1：`Border`类的重要属性
 
 | 属性 | 描述 |
 | --- | --- |
-| BorderThickness | 使用 BorderThickness 属性，你可以指定边框四边的线条厚度。如果你指定四个数字，顺序为左、上、右、下。仅指定一个数字意味着该值适用于所有。 |
+| `CornerRadius` | `CornerRadius`属性指定边框角的半径。如果你指定单个数字，所有角都是圆角的。如果你指定四个数字，顺序为左上、右上、右下、左下。 |
 
-以下代码示例演示了 Border 元素的使用：
+## 样式应用程序中的基础控件
+
+| 属性 | 描述 |
+| --- | --- |
+| `BorderThickness` | 使用`BorderThickness`属性，你可以指定边框四边的线条厚度。如果你指定四个数字，顺序为左、上、右、下。仅指定一个数字意味着该值适用于所有。 |
+
+以下代码示例演示了`Border`元素的使用：
 
 ```
 <Border Width="400" Height="300" Background="LightBlue" CornerRadius="20"
+
 BorderThickness="1" BorderBrush="LightGray">
+
   <Grid>
+
     <!-- -->
+
   </Grid>
+
 </Border>
 ```
 
-> 注意 在 XML 中，你可以使用 <!-- 表示后续文本只是注释。你可以用 --> 结束注释部分。
+> 注意 在 XML 中，你可以使用`<!--`表示后续文本只是注释。你可以用`-->`结束注释部分。
 
-# Image 元素
+### Image 元素
 
-Image元素用于显示图像。通过 Source 属性，你可以指向元素图片的位置。支持的图像类型包括 PNG、JPEG、GIF、TIFF、BMP 和 XR。如果 Image 无法打开图片，将触发 ImageFailed 事件。如果加载图像成功，将触发 ImageOpened 事件。Image 元素调整图片大小以适应空间。你使用 Stretch 属性控制这种行为。
+`Image`元素用于显示图像。通过`Source`属性，你可以指向元素图片的位置。支持的图像类型包括 PNG、JPEG、GIF、TIFF、BMP 和 XR。如果`Image`无法打开图片，将触发`ImageFailed`事件。如果加载图像成功，将触发`ImageOpened`事件。`Image`元素调整图片大小以适应空间。你使用`Stretch`属性控制这种行为。
 
-表 7-2：Stretch 枚举值
+表 7-2：`Stretch`枚举值
 
 | 值 | 描述 |
 | --- | --- |
-| None | 图片按原始大小显示。 |
-| Fill | 图片填充整个 Image 元素占据的区域。不保留图片的纵横比例。 |
-| Uniform | 图片调整大小以适应 Image 元素占据的区域。保留图片的纵横比例。 |
-| UniformToFill | 图片填充整个 Image 元素占据的区域。保留图片的纵横比例。如果控件和图片的纵横比例不同，图片可能会被裁剪。 |
+| `None` | 图片按原始大小显示。 |
+| `Fill` | 图片填充整个`Image`元素占据的区域。不保留图片的纵横比例。 |
+| `Uniform` | 图片调整大小以适应`Image`元素占据的区域。保留图片的纵横比例。 |
+| `UniformToFill` | 图片填充整个`Image`元素占据的区域。保留图片的纵横比例。如果控件和图片的纵横比例不同，图片可能会被裁剪。 |
 
+### TextBlock 元素
 
+`TextBlock`是一个超级元素，用于显示简单文本。如果你想显示标签、标题或仅未格式化的文本，`TextBlock`是一个很好的选择。要显示更复杂的格式化文本，你应该使用`RichTextBlock`控件。
 
+表 7-3 显示了`TextBlock`类最重要的属性。
 
-
-# TextBlock 元素
-
-TextBlock 是一个超级元素，用于显示简单文本。如果你想显示标签、标题或仅未格式化的文本，TextBlock 是一个很好的选择。要显示更复杂的格式化文本，你应该使用 RichTextBlock 控件。
-
-表 7-3 显示了 TextBlock 类最重要的属性。
-
-# 表 7-3：TextBlock 类的重要属性
+## 表 7-3：`TextBlock`类的重要属性
 
 | 属性 | 描述 |
 | --- | --- |
-| Text | Text 属性代表 TextBlock 的文本内容。Text 属性接受简单文本或称为 Inlines（内联元素）的内容。通过使用 Inlines，你可以为文本内容添加简单的格式。 |
-| TextWrapping | 使用 TextWrapping 枚举，你可以指定当没有足够的水平空间显示整个内容时，文本是应该换行还是截断。 |
-| TextTrimming | 使用 TextTrimming 枚举，你可以指定当没有足够的空间显示整个内容时，文本是否应该被修剪裁剪。 |
-| IsTextSelectionEnabled | 使用 IsTextSelectionEnabled 属性，你可以指定是否可以选择和复制文本。 |
+| `Text` | `Text`属性代表`TextBlock`的文本内容。`Text`属性接受简单文本或称为`Inlines`（内联元素）的内容。通过使用`Inlines`，你可以为文本内容添加简单的格式。 |
+| `TextWrapping` | 使用`TextWrapping`枚举，你可以指定当没有足够的水平空间显示整个内容时，文本是应该换行还是截断。 |
+| `TextTrimming` | 使用`TextTrimming`枚举，你可以指定当没有足够的空间显示整个内容时，文本是否应该被修剪裁剪。 |
+| `IsTextSelectionEnabled` | 使用`IsTextSelectionEnabled`属性，你可以指定是否可以选择和复制文本。 |
 
-# TextBox 控件
+### TextBox 控件
 
-TextBox 控件是简单文本输入的主要 UI 元素。TextBox 控件及其功能的设计能够同样支持触摸屏、平板电脑以及标准 PC（鼠标和键盘）场景。
+`TextBox`控件是简单文本输入的主要 UI 元素。`TextBox`控件及其功能的设计能够同样支持触摸屏、平板电脑以及标准 PC（鼠标和键盘）场景。
 
-表 7-4 显示了 TextBox 类最重要的属性。
+表 7-4 显示了`TextBox`类最重要的属性。
 
-# 表 7-4：TextBox 类的重要属性
-
-| 属性 | 描述 |
-| --- | --- |
-| Text | Text 属性代表 TextBox 的文本内容。Text 属性接受简单文本。 |
-| InputScope | InputScope 属性决定了触摸屏或平板电脑场景应显示什么样的键盘。考虑设置此属性，因为它可以提高用户体验。 |
-| IsSpellCheckEnabled | 使用 IsSpellCheckEnabled 属性，你可以设置 TextBox 的内容是否应该拼写检查。 |
-
-# Windows 8 风格应用程序的基础控件
+## 表 7-4：`TextBox`类的重要属性
 
 | 属性 | 描述 |
 | --- | --- |
-| IsTextPredictionEnabled | 使用 IsTextPrediction 属性，你可以设置打字时是否启用文本预测。 |
-| SelectedText | 使用 SelectedText 属性，你可以获取 TextBox 中选中的文本。 |
+| `Text` | `Text`属性代表`TextBox`的文本内容。`Text`属性接受简单文本。 |
+| `InputScope` | `InputScope`属性决定了触摸屏或平板电脑场景应显示什么样的键盘。考虑设置此属性，因为它可以提高用户体验。 |
+| `IsSpellCheckEnabled` | 使用`IsSpellCheckEnabled`属性，你可以设置`TextBox`的内容是否应该拼写检查。 |
 
-在下面的代码示例中，你可以看到结合 InputScope 使用的 TextBox：
+## Windows 8 风格应用程序的基础控件
+
+| 属性 | 描述 |
+| --- | --- |
+| `IsTextPredictionEnabled` | 使用`IsTextPrediction`属性，你可以设置打字时是否启用文本预测。 |
+| `SelectedText` | 使用`SelectedText`属性，你可以获取`TextBox`中选中的文本。 |
+
+在下面的代码示例中，你可以看到结合`InputScope`使用的`TextBox`：
 
 ```
 <TextBox x:Name="InputTextBox" IsTextPredictionEnabled="True">
+
   <InputScope>
+
     <InputScope.Names>
+
       <InputScopeName NameValue="Url"/>
+
     </InputScope.Names>
+
   </InputScope>
+
   </TextBox.InputScope>
+
 </TextBox>
 ```
 
-# PasswordBox 控件
+### PasswordBox 控件
 
-PasswordBox 是另一个文本输入控件，但它专门用于接收密码。该控件的行为与你在 Windows 8 登录界面上看到的几乎相同。
+`PasswordBox`是另一个文本输入控件，但它专门用于接收密码。该控件的行为与你在 Windows 8 登录界面上看到的几乎相同。
 
-表 7-5 显示了 PasswordBox 类最重要的属性。
-
-| 属性 | 描述 |
-| --- | --- |
-| Password | Password 属性代表控件的内容。通过此属性，你可以获取输入的密码。 |
-| PasswordChar | PasswordChar 属性代表显示密码真实字符的字符。 |
-| IsPasswordRevealButtonEnabled | 使用 IsPasswordRevealEnabled 属性，你可以设置用户是否可以显示密码真实字符。这是通过 PasswordBox 控件上的特殊按钮控制的。 |
-
-# 使用 ProgressBar 和 ProgressRing 控件显示进度
-
-ProgressBar 和 ProgressRing 控件都用于表示运行中的后台进程，但在使用上它们非常不同。
-
-ProgressRing 控件设计用于表示屏幕上有内容正在加载。在 Windows 8 风格应用程序中，每当逻辑需要加载某些数据以显示在屏幕上时，你都会看到此控件弹出。因此，当有未知等待时间时，用户应该意识到后台正在进行操作。ProgressRing 控件有一个重要的属性：IsActive 属性。当该属性设置为 true 时，会显示 ProgressBar；设置为 false 时，则不可见。
-
-另一方面，ProgressBar 控件显示操作的进度。通常，有一条条随着进度的持续对填充区域进行动画。
-
-表 7-6 显示了 ProgressBar 类最重要的属性。
-
-# 表 7-6：ProgressBar 类的重要属性
+表 7-5 显示了`PasswordBox`类最重要的属性。
 
 | 属性 | 描述 |
 | --- | --- |
-| Minimum | Minimum 属性代表控件的最小值。 |
-| Maximum | Maximum 属性代表控件的最大值。 |
-| Value | Value 属性代表控件的当前值。 |
-| IsIndeterminate | 使用 IsInd 属性，当 Minimum、Maximum 和 Value 属性值不可时，你可以设置控件显示进度。 |
+| `Password` | `Password`属性代表控件的内容。通过此属性，你可以获取输入的密码。 |
+| `PasswordChar` | `PasswordChar`属性代表显示密码真实字符的字符。 |
+| `IsPasswordRevealButtonEnabled` | 使用`IsPasswordRevealEnabled`属性，你可以设置用户是否可以显示密码真实字符。这是通过`PasswordBox`控件上的特殊按钮控制的。 |
 
-# 内容控件 (Content Controls)
+## 使用 ProgressBar 和 ProgressRing 控件显示进度
 
-之前的项目是不属于 ContentControls 或 ItemsControls 家族的控件。在本节中，我们将讨论 ContentControls 家族。
+`ProgressBar`和`ProgressRing`控件都用于表示运行中的后台进程，但在使用上它们非常不同。
 
-# Button 控件
+`ProgressRing`控件设计用于表示屏幕上有内容正在加载。在 Windows 8 风格应用程序中，每当逻辑需要加载某些数据以显示在屏幕上时，你都会看到此控件弹出。因此，当有未知等待时间时，用户应该意识到后台正在进行操作。`ProgressRing`控件有一个重要的属性：`IsActive`属性。当该属性设置为`true`时，会显示`ProgressBar`；设置为`false`时，则不可见。
 
-Button 控件可能是你可以使用的最简单的控件。它是一个 ContentControl，因此 Button 的内容可以是任何内容（而不仅仅是文本）。
+另一方面，`ProgressBar`控件显示操作的进度。通常，有一条条随着进度的持续对填充区域进行动画。
 
-关于 Button 控件，你应该注意的一个成员是 Click 事件。Windows 8 风格应用程序中的事件设计方式使其同时响应触摸屏和鼠标输入。因此，处理 Click 事件在支持触摸的设备和标准 PC 环境中都能完美工作。
+表 7-6 显示了`ProgressBar`类最重要的属性。
 
-下面的代码示例演示了如何在 XAML 中使用 Button 控件：
+## 表 7-6：`ProgressBar`类的重要属性
+
+| 属性 | 描述 |
+| --- | --- |
+| `Minimum` | `Minimum`属性代表控件的最小值。 |
+| `Maximum` | `Maximum`属性代表控件的最大值。 |
+| `Value` | `Value`属性代表控件的当前值。 |
+| `IsIndeterminate` | 使用`IsInd`属性，当`Minimum`、`Maximum`和`Value`属性值不可时，你可以设置控件显示进度。 |
+
+## 内容控件 (Content Controls)
+
+之前的项目是不属于`ContentControls`或`ItemsControls`家族的控件。在本节中，我们将讨论`ContentControls`家族。
+
+### Button 控件
+
+`Button`控件可能是你可以使用的最简单的控件。它是一个`ContentControl`，因此`Button`的内容可以是任何内容（而不仅仅是文本）。
+
+关于`Button`控件，你应该注意的一个成员是`Click`事件。Windows 8 风格应用程序中的事件设计方式使其同时响应触摸屏和鼠标输入。因此，处理`Click`事件在支持触摸的设备和标准 PC 环境中都能完美工作。
+
+下面的代码示例演示了如何在 XAML 中使用`Button`控件：
 
 ```
 <Button Content="Click Me" Click="Button_Click"/>
 ```
 
-下面的代码示例演示了后台代码（code-behind）中 Click 事件的事件处理器：
+下面的代码示例演示了后台代码（code-behind）中`Click`事件的事件处理器：
 
 ```
 private void Button_Click(object sender, RoutedEventArgs e)
+
 {
+
     //插入代码
+
 }
 ```
 
-# CheckBox 和 RadioButton 控件
+### CheckBox 和 RadioButton 控件
 
-CheckBox 和 RadioButton 控件是非常相似的控件，因为它们都代表选择选项。控件的主要区别在于，CheckBox 通常允许用户选择多个，而 RadioButton 设计允许用户只选择其中一个。通过设置 RadioButton 的 GroupName 属性可以实现这种行为，因为相同 GroupName 的 RadioButtons 是互斥选择的。两个控件都有 IsChecked 布尔属性来表示是否被选中。
+`CheckBox`和`RadioButton`控件是非常相似的控件，因为它们都代表选择选项。控件的主要区别在于，`CheckBox`通常允许用户选择多个，而`RadioButton`设计允许用户只选择其中一个。通过设置`RadioButton`的`GroupName`属性可以实现这种行为，因为相同`GroupName`的`RadioButtons`是互斥选择的。两个控件都有`IsChecked`布尔属性来表示是否被选中。
 
-下面的代码示例演示了 RadioButton 控件的使用：
+下面的代码示例演示了`RadioButton`控件的使用：
 
 ```
 <StackPanel>
+
   <RadioButton GroupName="Settings" IsChecked="True"/>
+
   <RadioButton GroupName="Settings"/>
+
   <RadioButton GroupName="Settings"/>
+
 </StackPanel>
 ```
 
-# ScrollViewer 控件
+### ScrollViewer 控件
 
-通过定义布局，你可以为不同的屏幕尺寸和分辨率做准备。然而，屏幕的某些部分总是需要比屏幕实际显示更多的数据。你可以通过将区域分组到 ScrollViewer 控件中解决这个问题。ListBox 等派生的 ItemsControl 类型内部也使用了 ScrollViewer。
+通过定义布局，你可以为不同的屏幕尺寸和分辨率做准备。然而，屏幕的某些部分总是需要比屏幕实际显示更多的数据。你可以通过将区域分组到`ScrollViewer`控件中解决这个问题。`ListBox`等派生的`ItemsControl`类型内部也使用了`ScrollViewer`。
 
-表 7-7 显示了 ScrollViewer 类最重要的属性。
+表 7-7 显示了`ScrollViewer`类最重要的属性。
 
 | 属性 | 描述 |
 | --- | --- |
-| HorizontalScrollBarVisibility | 使用 HorizontalScrollBarVisibility，你可以设置水平滚动条是始终可见、从不需要或需要时显示。 |
-| VerticalScrollBarVisibility | 使用 VerticalScrollBarVisibility，你可以设置垂直滚动条是始终可见、从不需要或需要时。 |
+| `HorizontalScrollBarVisibility` | 使用`HorizontalScrollBarVisibility`，你可以设置水平滚动条是始终可见、从不需要或需要时显示。 |
+| `VerticalScrollBarVisibility` | 使用`VerticalScrollBarVisibility`，你可以设置垂直滚动条是始终可见、从不需要或需要时。 |
 
 ## Toggle 控件
 
+所示，`ToggleSwitch`控件是一个简单的开关。它有两个状态：开启和关闭。你可以在 Windows 8 的控制面板中找到很多`ToggleSwitch`控件。
 
+表 7-8 显示了`ToggleSwitch`类最重要的属性。
 
-所示，ToggleSwitch 控件是一个简单的开关。它有两个状态：开启和关闭。你可以在 Windows 8 的控制面板中找到很多 ToggleSwitch 控件。
+## 第 7 章 使用 XAML 创建 Windows 8 风格的用户界面
 
-表 7-8 显示了 ToggleSwitch 类最重要的属性。
-
-
-
-
-
-# 第 7 章 使用 XAML 创建 Windows 8 风格的用户界面
-
-# 表 7-8：ToggleSwitch 类的重要属性
+## 表 7-8：`ToggleSwitch`类的重要属性
 
 | 属性 | 描述 |
 | --- | --- |
-| IsOn | IsOn 属性决定开关状态是开启 (On) 还是关闭 (Off)。 |
-| OnContent | OnContent 属性决定当控件处于开启状态时显示的内容。 |
-| OffContent | OffContent 属性决定当控件处于关闭状态时显示的内容。 |
+| `IsOn` | `IsOn`属性决定开关状态是开启 (On) 还是关闭 (Off)。 |
+| `OnContent` | `OnContent`属性决定当控件处于开启状态时显示的内容。 |
+| `OffContent` | `OffContent`属性决定当控件处于关闭状态时显示的内容。 |
 
-以下代码示例演示了 ToggleSwitch 类的用法：
+以下代码示例演示了`ToggleSwitch`类的用法：
 
 ```xml
 <ToggleSwitch OnContent="It's on" OffContent="It's Off" IsOn="True"/>
@@ -9035,29 +8387,38 @@ CheckBox 和 RadioButton 控件是非常相似的控件，因为它们都代表�
 
 在本次练习中，你将创建一个简单的 UI 来显示足球运动员的详细信息。
 
-# 尝试一下 使用基本控件构建用户界面
+## 尝试一下 使用基本控件构建用户界面
 
-在练习中，你将为球员创建一个详情视图（Details view），并为球员列表创建一个 ListBox：
+在练习中，你将为球员创建一个详情视图（Details view），并为球员列表创建一个`ListBox`：
 
 - 1. 打开之前的项目，或者你可以打开 SimpleControlsDemo - Start 解决方案。
-- 2. 选择右侧的 StackPanel。在属性窗口中，将面板命名为 detailsPanel。
-- 3. 从工具箱（Toolbox）中依次选择一个 TextBlock、一个 Image 和另一个 TextBlock 添加到 StackPanel，可以通过拖放或双击每个项目来实现。
+- 2. 选择右侧的`StackPanel`。在属性窗口中，将面板命名为`detailsPanel`。
+- 3. 从工具箱（Toolbox）中依次选择一个`TextBlock`、一个`Image`和另一个`TextBlock`添加到`StackPanel`，可以通过拖放或双击每个项目来实现。
 - 4. 点击设计器区域底部的 XAML 标签切换到 XAML 编辑器。
-- 5. 找到 detailsPanel。
+- 5. 找到`detailsPanel`。
 - 6. 将当前内容替换为以下代码：
+
 ```xml
 <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap"
+
 Text="This is a placeholder for Title" FontSize="32"/>
+
 <Image x:Name="playerPhoto" HorizontalAlignment="Center" Height="150" Width="200"
+
 Margin="0,20,0,20"/>
+
 <TextBlock x:Name="Content" HorizontalAlignment="Stretch" TextWrapping="Wrap"
+
 Text="This is a placeholder for the biography"/>
 ```
+
+
+
 - 7. 回到设计视图（Designer view）。
-- 8. 从工具箱中选择 ListBox 控件。
-- 9. 在矩形（Rectangle）上精确绘制一个 ListBox。
-- 10. 将新列表命名为 listBoxPlayers。
-- 11. 按 F5 运行应用程序。你应该能看到图 7-13 显示的结果。
+- 8. 从工具箱中选择`ListBox`控件。
+- 9. 在矩形（Rectangle）上精确绘制一个`ListBox`。
+- 10. 将新列表命名为`listBoxPlayers`。
+- 11. 按`F5`运行应用程序。你应该能看到图 7-13 显示的结果。
 
 # 处理数据 | 259
 
@@ -9069,7 +8430,7 @@ Text="This is a placeholder for the biography"/>
 
 你有许多方法向 UI 中添加控件。你可以选择目标并双击“新建项”（New Item）选项，也可以使用拖放功能。选择要添加的项目然后在设计器表面上绘制它同样有效。
 
-在 StackPanel 中添加三个控件会根据 Orientation 属性自动排列，该属性默认设置为垂直（Vertical）。
+在`StackPanel`中添加三个控件会根据`Orientation`属性自动排列，该属性默认设置为垂直（Vertical）。
 
 在图像上添加外边距（Margin）会在控件之间创建一些空白。
 
@@ -9079,35 +8440,35 @@ Text="This is a placeholder for the biography"/>
 
 大多数时候，你可能希望在 UI 上显示数据并接受用户输入，然后将其写回数据模型。如果没有数据绑定（data binding），你将需要大量的管道代码（plumbing code）。
 
-例如，假设你有一个代表 Person 对象 FirstName（名字）的 TextBox。假设你想每当 TextBox 的 Text 属性发生变化时，就更新 FirstName 属性的值。你必须订阅 TextBox 的 Changed 事件，并手动更新 Person 实例上的 FirstName 属性。
+例如，假设你有一个代表`Person`对象`FirstName`（名字）的`TextBox`。假设你想每当`TextBox`的`Text`属性发生变化时，就更新`FirstName`属性的值。你必须订阅`TextBox`的`Changed`事件，并手动更新`Person`实例上的`FirstName`属性。
 
-相反的方法同样繁琐。每当 FirstName 属性变化时，你都必须手动更新 TextBox 的 Text 属性。如果 UI 上有多个控件显示同一个 FirstName 属性，你必须更新所有它们。
+相反的方法同样繁琐。每当`FirstName`属性变化时，你都必须手动更新`TextBox`的`Text`属性。如果 UI 上有多个控件显示同一个`FirstName`属性，你必须更新所有它们。
 
-通过数据绑定，你可以忘记所有这些。数据绑定机制可以充当控件属性与数据对象之间的“胶水”。在上述示例中，你可以将 TextBox 的 Text 属性绑定到 Person 实例的 FirstName 属性。每当一方的值发生变化时，另一方都会收到通知并自动更新，从而节省了你编写大量额外代码来保持双方同步的时间。
+通过数据绑定，你可以忘记所有这些。数据绑定机制可以充当控件属性与数据对象之间的“胶水”。在上述示例中，你可以将`TextBox`的`Text`属性绑定到`Person`实例的`FirstName`属性。每当一方的值发生变化时，另一方都会收到通知并自动更新，从而节省了你编写大量额外代码来保持双方同步的时间。
 
 ## 数据绑定属性与通知
 
-数据绑定有一条重要规则：数据绑定的目标属性必须是一个依赖属性（dependency property），且目标对象必须派自 DependencyObject 类。
+数据绑定有一条重要规则：数据绑定的目标属性必须是一个依赖属性（dependency property），且目标对象必须派自`DependencyObject`类。
 
-图 7-14 显示了绑定的概念。大多数情况下，你不需要担心这个限制，因为控件上定义的多数属性都是依赖属性，且所有控件都派自 DependencyObject 类。
+图 7-14 显示了绑定的概念。大多数情况下，你不需要担心这个限制，因为控件上定义的多数属性都是依赖属性，且所有控件都派自`DependencyObject`类。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_287_0.png)
 
 **图 7-14：** 对象之间的数据绑定
 
-你可以在 XAML 中声明式地定义数据绑定，也可以在代码中使用 Binding 类进行命令式定义，Binding 类具有许多实用的属性，可以对绑定机制提供更多控制。表 7-9 显示了最重要的属性。
+你可以在 XAML 中声明式地定义数据绑定，也可以在代码中使用`Binding`类进行命令式定义，`Binding`类具有许多实用的属性，可以对绑定机制提供更多控制。表 7-9 显示了最重要的属性。
 
-**表 7-9：Binding 类的重要属性**
+**表 7-9：`Binding`类的重要属性**
 
 | 属性 | 描述 |
 | --- | --- |
-| Path | Path 属性指定了你想要绑定的源属性。可以是任何属性。 |
-| Mode | 使用 Mode 属性，你可以在以下选项之间选择。 |
-| Source | Source 属性指定源属性。 |
-| ElementName | ElementName 属性引用源。 |
-| Converter | 此属性接受 IValueConverter。 |
+| `Path` | `Path`属性指定了你想要绑定的源属性。可以是任何属性。 |
+| `Mode` | 使用`Mode`属性，你可以在以下选项之间选择。 |
+| `Source` | `Source`属性指定源属性。 |
+| `ElementName` | `ElementName`属性引用源。 |
+| `Converter` | 此属性接受`IValueConverter`。 |
 
-以下代码演示了 TwoWay 的用法：
+以下代码演示了`TwoWay`的用法：
 
 ```xml
 <Grid x:Name="LayoutRoot">
@@ -9117,8 +8478,6 @@ Text="This is a placeholder for the biography"/>
     <StackPanel DataContext="(StaticResource persondata)">
 ```
 
-
-
 ```xml
 <TextBox Text="{Binding Path=FirstName, Mode=TwoWay}"/>
 <TextBox Text="{Binding Path=LastName, Mode=TwoWay}"/>
@@ -9126,7 +8485,7 @@ Text="This is a placeholder for the biography"/>
 </Grid>
 ```
 
-TextBox 控件上的绑定不再需要引用源，因为父级 StackPanel 的 DataContext 正在引用它。TextBox 是 StackPanel 的子元素，因此它继承了 DataContext，这意味着绑定将从继承的 DataContext 中获取源对象。
+`TextBox`控件上的绑定不再需要引用源，因为父级`StackPanel`的`DataContext`正在引用它。`TextBox`是`StackPanel`的子元素，因此它继承了`DataContext`，这意味着绑定将从继承的`DataContext`中获取源对象。
 
 ## 使用值转换器更改绑定管道线中的数据
 
@@ -9134,14 +8493,14 @@ TextBox 控件上的绑定不再需要引用源，因为父级 StackPanel 的 Da
 
 有时，你可能对此管道线有更好的控制。例如，考虑构建一个显示百分比变化率的 UI。如果百分比为正，你可以使用绿色作为显示字体的前景色颜色；如果为负，你可以用红色显示该值。
 
-你想要绑定的数据对象具有一个类型为 Double 的 `Change` 属性，代表百分比的变化。在这种情况下，你必须将 `Foreground` 颜色属性直接到 `Change` 属性。`Color` 到 `Double` 的绑定似乎没有太大意义。幸运的是，数据绑定管道线有一个转换步骤，它被称为值转换（value conversion）。通过转换器，你可以注入一些自定义代码将一个值转换为不同的值或类型。
+你想要绑定的数据对象具有一个类型为`Double`的`Change`属性，代表百分比的变化。在这种情况下，你必须将`Foreground`颜色属性直接到`Change`属性。`Color`到`Double`的绑定似乎没有太大意义。幸运的是，数据绑定管道线有一个转换步骤，它被称为值转换（value conversion）。通过转换器，你可以注入一些自定义代码将一个值转换为不同的值或类型。
 
-转换器是实现 `IValueConverter` 接口的类。该接口定义了两个方法：
+转换器是实现`IValueConverter`接口的类。该接口定义了两个方法：
 
-- `Convert` 在读取源属性值时调用。
-- `ConvertBack` 在将目标属性的值写回到源属性时调用。
+- `Convert`在读取源属性值时调用。
+- `ConvertBack`在将目标属性的值写回到源属性时调用。
 
-以下代码演示了 `IValueConverter` 的实现。如果价格大于 9.99，TextBlock 属性的 `Foreground` 应该是红色；否则将为绿色。将颜色转换回价格并没有真正意义，因此没有实现 `ConvertBack` 方法。转换器可以作为资源添加，稍后通过 Binding 类的 `Converter` 参数进行引用。
+以下代码演示了`IValueConverter`的实现。如果价格大于 9.99，`TextBlock`属性的`Foreground`应该是红色；否则将为绿色。将颜色转换回价格并没有真正意义，因此没有实现`ConvertBack`方法。转换器可以作为资源添加，稍后通过`Binding`类的`Converter`参数进行引用。
 
 ```csharp
 // 值转换器类
@@ -9154,7 +8513,6 @@ public class PriceToColorConverter : IValueConverter
         if (price > 9.99) return Colors.Red;
         else return Colors.Green;
     }
-
     public object ConvertBack(object value, string typeName, object parameter, string language)
     {
         throw new NotImplementedException();
@@ -9170,35 +8528,34 @@ public class PriceToColorConverter : IValueConverter
     <!-- -->
     <Local:PriceToColorConverter x:Key="priceConverter"/>
   </Grid.Resources>
-
   <StackPanel DataContext="{StaticResource salesData}">
     <TextBlock Foreground="{StaticResource priceConverter}" Text="{Binding Path=Price}"/>
   </StackPanel>
 </Grid>
 ```
 
-之前的代码使用 `PriceToColorConverter` 来确保 TextBlock 的前景色根据 `price` 的值涂成相应的颜色。转换器被放置在 grid 的资源部分，并通过 XML 命名空间 `local` 进行引用。`local` 前缀映射到 `PriceToColorConverter` 类的 CLR 命名空间。
+之前的代码使用`PriceToColorConverter`来确保`TextBlock`的前景色根据`price`的值涂成相应的颜色。转换器被放置在`grid`的资源部分，并通过 XML 命名空间`local`进行引用。`local`前缀映射到`PriceToColorConverter`类的 CLR 命名空间。
 
-`Convert` 和 `ConvertBack` 方法除了 `value` 之外还支持其他参数：
+`Convert`和`ConvertBack`方法除了`value`之外还支持其他参数：
 
-- **typeName**: 你想要转换数据的目标类型。
-- **Parameter**: 在使用转换器时，你可以在绑定机制中添加一个转换器参数。你可以对此属性执行任何你需要的转换逻辑。
-- **Language**: 这是转换的语言。某些转换逻辑可能特定于语言和区域。你可以使用此参数来决定应用何种逻辑。
+- `typeName`: 你想要转换数据的目标类型。
+- `Parameter`: 在使用转换器时，你可以在绑定机制中添加一个转换器参数。你可以对此属性执行任何你需要的转换逻辑。
+- `Language`: 这是转换的语言。某些转换逻辑可能特定于语言和区域。你可以使用此参数来决定应用何种逻辑。
 
 ## 绑定到集合
 
-大多数情况下，你必须处理数据列表。ItemsControls 设计用于显示任何数据集合。因此，如果你有一个数据集合，可以轻松地将其绑定。但有一个小陷阱：你的数据可以随时更改，而 UI（在本例中 ItemsControl）应该感知到源集合的任何更改。通过使用 `INotifyPropertyChanged` 接口的 `PropertyChanged` 事件来通知绑定。你应该知道简单的集合（如 List）没有实现此功能。但是，名为 `ObservableCollection` 的新集合是为此设计的。
+大多数情况下，你必须处理数据列表。`ItemsControls`设计用于显示任何数据集合。因此，如果你有一个数据集合，可以轻松地将其绑定。但有一个小陷阱：你的数据可以随时更改，而 UI（在本例中`ItemsControl`）应该感知到源集合的任何更改。通过使用`INotifyPropertyChanged`接口的`PropertyChanged`事件来通知绑定。你应该知道简单的集合（如`List`）没有实现此功能。但是，名为`ObservableCollection`的新集合是为此设计的。
 
 在下一个练习中，你创建一个非常简单的主-详情场景，你可以绑定到集合并显示详情。
 
 ## 简单主-详情场景
 
-在这个练习中，你为 ListBox 填充玩家列表，并绑定详情视图及其代表所选玩家的数据。
+在这个练习中，你为`ListBox`填充玩家列表，并绑定详情视图及其代表所选玩家的数据。
 
-1. 打开之前的项目，或打开 DataBinding 项目。
+1. 打开之前的项目，或打开`DataBinding`项目。
 2. 在解决方案窗口中，右键点击项目并选择添加类（Add Class）。
-3. 将文件命名为 `Player.cs`。
-4. 为 `Player` 类添加以下代码：
+3. 将文件命名为`Player.cs`。
+4. 为`Player`类添加以下代码：
 
 ```csharp
 public class Player : INotifyPropertyChanged
@@ -9213,7 +8570,6 @@ public class Player : INotifyPropertyChanged
             RaisePropertyChanged("PlayerName");
         }
     }
-
     private string photoUrl;
     public string PhotoUrl
     {
@@ -9224,7 +8580,6 @@ public class Player : INotifyPropertyChanged
             RaisePropertyChanged("PhotoUrl");
         }
     }
-
     private string biography;
     public string Biography
     {
@@ -9235,9 +8590,7 @@ public class Player : INotifyPropertyChanged
             RaisePropertyChanged("Biography");
         }
     }
-
     public event PropertyChangedEventHandler PropertyChanged;
-
     protected void RaisePropertyChanged(string propertyName)
     {
         if (PropertyChanged != null)
@@ -9246,8 +8599,8 @@ public class Player : INotifyPropertyChanged
 }
 ```
 
-5. 添加另一个名为 `PlayerDataSource.cs` 的类。
-6. 为 `PlayerDataSource` 类添加以下代码：
+5. 添加另一个名为`PlayerDataSource.cs`的类。
+6. 为`PlayerDataSource`类添加以下代码：
 
 ```csharp
 public class PlayerDataSource
@@ -9281,9 +8634,10 @@ public class PlayerDataSource
 }
 ```
 
-7. 在 Document Outline 窗口中，点击根 Grid 面板。
-8. 打开 Properties 窗口并找到 `DataContext` 属性。
 
+
+7. 在 Document Outline 窗口中，点击根 `Grid` 面板。
+8. 打开 Properties 窗口并找到 `DataContext` 属性。
 9. 点击 New（新建）按钮。在 Select Object 框中，选择 `PlayerDataSource` 类。点击 OK 按钮。
 10. 点击 ListBox，在 Properties 窗口中找到 `ItemsSource` 属性并点击 Advanced Properties（高级属性）。选择 Data Binding。从 Path 窗口选择 `Players` 并点击 OK 按钮。
 11. 点击 Details 面板并找到 `DataContext` 属性。
@@ -9309,10 +8663,6 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 
 通过 UI 到 UI 的绑定，`detailsPanel` 的 `DataContext` 绑定到 ListBox 的 `SelectedItem`，因此当 ListBox 中的选择项发生变化时，detailsPane 的 `DataContext` 就会更新。这意味着 `detailsPanel` 的 `DataContext` 始终是一个 `Player` 实例。
 
-
-
-
-
 当 ListBox 的 SelectedItem 发生变化时，detailsPanel 的内容将通过绑定引擎自动更新。
 
 ## 总结
@@ -9321,7 +8671,7 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 
 引入了一种全新的非常灵活的控件模型，以适应新一代 UI 的需求。这种新控件允许你自定义 UI 以及可能需要的控件。
 
-在新概念中，引入了基于面板（panels）的新型布局管理系统。实现了许多面板以满足开发者的需求，例如 Grid、StackPanel、Canvas 和 VariableSizeWrapGrid。
+在新概念中，引入了基于面板（panels）的新型布局管理系统。实现了许多面板以满足开发者的需求，例如 `Grid`、`StackPanel`、`Canvas` 和 `VariableSizeWrapGrid`。
 
 你可以使用强大的数据绑定引擎将数据对象与 UI 绑定在一起。它还支持简单的对象和集合。如果模型使用 `INotifyPropertyChanged` 和 `INotifyCollectionChanged` 接口通知绑定更改，则绑定将自动更新。
 
@@ -9343,10 +8693,10 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 | 主题 | 核心概念 |
 | :--- | :--- |
 | 可扩展应用程序标记语言 (XAML) | XAML 是一种基于 XML 的语言，你可以用它声明式地描述用户界面 (UI)。它对设计工具提供了很好的支持，并允许开发者将 UI 与代码分离。 |
-| 资源 (Resource) | 你可以在应用程序的多个层级共享资源，以便在任何时候复用它们。大多数情况下，你共享样式、颜色、画刷和转换器。你可以在 XAML 中使用 StaticResource 属性引用这些对象。 |
+| 资源 (Resource) | 你可以在应用程序的多个层级共享资源，以便在任何时候复用它们。大多数情况下，你共享样式、颜色、画刷和转换器。你可以在 XAML 中使用 `StaticResource` 属性引用这些对象。 |
 | 面板 (Panels) | 布局系统构建在面板之上。面板负责根据特定逻辑安排自己的子元素。面板是构建复杂 UI 的强大工具。 |
 | 数据绑定 (Data binding) | 使用数据绑定，你可以在两个对象之间建立“实时连接”。当一个对象发生变化时，另一个对象也会同步。大多数情况下，你将 UI 属性绑定到数据对象的属性。 |
-| INotifyPropertyChanged | 为了更新绑定，必须通知它更改。你可以通过触发 `INotifyPropertyChanged` 接口中定义的 `PropertyChanged` 事件来实现这一点。因此，你必须确保包含源属性的对象实现了此接口。 |
+| `INotifyPropertyChanged` | 为了更新绑定，必须通知它更改。你可以通过触发 `INotifyPropertyChanged` 接口中定义的 `PropertyChanged` 事件来实现这一点。因此，你必须确保包含源属性的对象实现了此接口。 |
 | 可观测集合 (ObservableCollection) | 就像简单对象一样，集合必须通知绑定集合的变化。在集合的情况下，这是通过使用 `INotifyCollectionChanged` 接口定义的 `CollectionChanged` 事件实现的。`ObservableCollection` 实现了此接口。 |
 | 数据上下文 (DataContext) | FrameworkElements 定义了一个名为 `DataContext` 的属性。这是一个特殊属性，因为它的值会被 FrameworkElement 内部的子元素继承。正如名称所示，如果你将此属性设置为一个数据对象，该对象下方视觉树中的每个元素都将继承该值，这意味着它们将共享相同的数据上下文。 |
 | 转换器 (Converters) | 绑定机制允许你将两个完全不同的属性绑定在一起。为了确保这些转换有效并正常工作，你可以在绑定管道中添加转换器。 |
@@ -9385,16 +8735,12 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 
 动画库包含一组预定义的动画，这些动画具有高性能、流畅性，并与 Windows 动画的外观和感受一致。你不需要担心如何让它们快速流畅，甚至不需要保持一致。它们已经利用了平台的独立动画能力，并贯穿整个 Windows 操作系统的 UI。将动画库想象成动画调色板，你可以随地使用它们，而且它们已经针对出色的 Windows 8 风格 UI 的需求进行了调整。
 
-
-
-
-
 # 在应用程序中使用动画 | 273
 
 应用程序库支持两种类型的动画：
 
--   **主题过渡（Theme transitions）** — 这些过渡由布局系统自动触发。它们是对页面活动布局更改的响应。这些通常是动画用于为加载、卸载或更改对象的位置提供视觉效果。
--   **主题动画（Theme animations）** — 这些动画通过代码手动触发，并且你可以为动画指定特定的过渡效果。
+- **主题过渡（Theme transitions）** — 这些过渡由布局系统自动触发。它们是对页面活动布局更改的响应。这些通常是动画用于为加载、卸载或更改对象的位置提供视觉效果。
+- **主题动画（Theme animations）** — 这些动画通过代码手动触发，并且你可以为动画指定特定的过渡效果。
 
 ## 主题过渡
 
@@ -9451,11 +8797,11 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 
 | 主题过渡 (THEME TRANSITION) | 描述 |
 | :--- | --- |
-| AddDeleteThemeTransition | 为项的添加或删除提供动画过渡。通常应用于项容器。 |
-| ContentThemeTransition | 在控件内容更改时应用过渡。 |
-| EntranceThemeTransition | 在项首次显示时提供过渡。 |
-| ReorderThemeTransition | 当列表控件中项的顺序改变时提供过渡。通常用于拖放操作。 |
-| RepositionThemeTransition | 当控件重新定位到新位置时提供过渡。 |
+| `AddDeleteThemeTransition` | 为项的添加或删除提供动画过渡。通常应用于项容器。 |
+| `ContentThemeTransition` | 在控件内容更改时应用过渡。 |
+| `EntranceThemeTransition` | 在项首次显示时提供过渡。 |
+| `ReorderThemeTransition` | 当列表控件中项的顺序改变时提供过渡。通常用于拖放操作。 |
+| `RepositionThemeTransition` | 当控件重新定位到新位置时提供过渡。 |
 
 ## 主题动画与故事板（Storyboards）
 
@@ -9485,7 +8831,12 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
       <FadeOutAnimation Storyboard.TargetName="targetRectangle" />
     </Storyboard>
   </Grid.Resources>
-  <Rectangle x:Name="targetRectangle" Fill="Blue" Width="200" Height="300" />
+```
+
+
+
+```xml
+<Rectangle x:Name="targetRectangle" Fill="Blue" Width="200" Height="300" />
 </Grid>
 ```
 
@@ -9521,18 +8872,18 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 
 （注：由于原文中存在大量重复段落，译文已根据逻辑整合了核心内容的翻译，并保持了格式完整性。）
 
-主题动画（续）
+## 主题动画（续）
 
 表 8-2 描述了部分动画：
 
 | 主题动画 (THEME ANIMATION) | 描述 |
 | :--- | --- |
-| FadeInThemeTransition | 控件出现时的透明度动画。 |
-| FadeOutThemeTransition | 控件隐藏时的透明度动画。 |
-| PopInThemeTransition | UI 的平移和透明度动画。 |
-| PopOutThemeTransition | UI 的平移和透明度动画。 |
-| TapUpThemeTransition | 元素触发后的动画。 |
-| TapDownThemeTransition | 元素触发时的动画。 |
+| `FadeInThemeTransition` | 控件出现时的透明度动画。 |
+| `FadeOutThemeTransition` | 控件隐藏时的透明度动画。 |
+| `PopInThemeTransition` | UI 的平移和透明度动画。 |
+| `PopOutThemeTransition` | UI 的平移和透明度动画。 |
+| `TapUpThemeTransition` | 元素触发后的动画。 |
+| `TapDownThemeTransition` | 元素触发时的动画。 |
 
 ## 了解视觉状态（Visual States）
 
@@ -9559,7 +8910,7 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 </Grid>
 ```
 
-如所示，视觉状态包含故事板来表示控件的状态。你可以任何时候定义视觉状态。视觉状态必须放置在视觉状态组（VisualStateGroups）中。你的控件在一个视觉状态组内只能处于一种状态，但如果所有状态都位于不同的视觉状态组，它就可以处于两个或多个状态。
+如所示，视觉状态包含故事板来表示控件的状态。你可以任何时候定义视觉状态。视觉状态必须放置在视觉状态组（`VisualStateGroups`）中。你的控件在一个视觉状态组内只能处于一种状态，但如果所有状态都位于不同的视觉状态组，它就可以处于两个或多个状态。
 
 之前的代码示例在组内定义了两个不同的状态。该组是 `VisibilityGroup`，它包含了 `Visible` 和 `Hidden` 状态。你可以使用 `VisualStateManager` 类的 `GoState` 方法从代码更改状态。下面的代码示例演示了如何更改当前的视觉状态：
 
@@ -9567,12 +8918,9 @@ ListBox 绑定到位于 DataContext 中的 `Players` 集合。（记住现在的
 VisualStateManager.GoState(this, "Hidden", true);
 ```
 
-`GoState` 方法的第一个参数是视觉视觉状态控件。在这种情况下，你可以指定该控件，它是对 `Page` 控件的引用。`GoState` 方法的第二个参数是你想要切换的视觉状态名称。最后一个参数是布尔值，用于决定是否使用视觉过渡。视觉过渡是视觉状态管理中更高级的概念。它们是
+`GoState` 方法的第一个参数是视觉视觉状态控件。在这种情况下，你可以指定该控件，它是对 `Page` 控件的引用。`GoState` 方法的第二个参数是你想要切换的视觉状态名称。最后一个参数是布尔值，用于决定是否使用视觉过渡。视觉过渡是视觉状态管理中更高级的概念。它们是旨在根据原始视觉状态和新目标视觉状态区分状态更改之间的动画。`true` 表示在可用时使用过渡。
 
-
-旨在根据原始视觉状态和新目标视觉状态区分状态更改之间的动画。true 表示在可用时使用过渡。
-
-> 注意：你可以在 http://msdn.microsoft.com/en-us/library/windows/windows.ui.xml.visualtransition.aspx 了解更多关于视觉过渡的信息。
+> 注意：你可以在 `http://msdn.microsoft.com/en-us/library/windows/windows.ui.xml.visualtransition.aspx` 了解更多关于视觉过渡的信息。
 
 通过设置视觉状态，包含的 storyboard 将自动启动。不需要手动启动它。在这种情况下，如果你切换到 `Visible` 状态，将使用 `FadeInThemeAnimation` 来显示 `targetRectangle`。如果你切换到 `Hidden` 状态，则将使用 `FadeOutThemeAnimation` 来隐藏 `targetRectangle`。
 
@@ -9580,15 +8928,15 @@ VisualStateManager.GoState(this, "Hidden", true);
 
 在接下来的练习中，你将应用动画库中的动画创建一个美观且流畅的体验。
 
-> 注意：你可以在书籍的配套网站 www.wrox.com 的 `AnimationLibraryDemo` 文件夹下载此练习的完整代码。
+> 注意：你可以在书籍的配套网站 `www.wrox.com` 的 `AnimationLibraryDemo` 文件夹下载此练习的完整代码。
 
 ## 尝试使用动画库
 
 在此练习中，你将使用 `EntranceThemeTransition`、`AddDeleteThemeTransition` 和 `RepositionThemeTransition` 来对面板中的项添加和删除执行动画。
 
-- 1. 使用 `Blank App (XAML)` 模板创建一个新项目。
-- 2. 打开 `MainPage.xaml`。
-- 3. 找到 `Page` 控件内部的 `Grid`，并在 `Grid` 内部添加名为 `itemsContainer` 的 `VariableSizedGrid`，所示：
+1. 使用 `Blank App (XAML)` 模板创建一个新项目。
+2. 打开 `MainPage.xaml`。
+3. 找到 `Page` 控件内部的 `Grid`，并在 `Grid` 内部添加名为 `itemsContainer` 的 `VariableSizedGrid`，所示：
 
 ```xml
 <VariableSizedGrid x:Name="itemsContainer">
@@ -9599,13 +8947,14 @@ VisualStateManager.GoState(this, "Hidden", true);
 </VariableSizedGrid x:Name="itemsContainer" Margin="0,50,0,0"/>
 ```
 
-- 5. 订阅按钮的 Click 事件：
+5. 订阅按钮的 `Click` 事件：
+
 ```xml
 <Button x:Name="btnAdd" Content="Add" Click="btnAdd_Click_1"/>
 <Button x:Name="btnRemove" Content="Remove" Click="btnRemove_Click_1" Margin="8,0,0,0"/>
 ```
 
-- 6. 打开 `MainPage.xaml.cs` 并找到 `OnNavigatedTo` 方法。在其内部编写代码向 `itemsContainer` 添加 20 个红色矩形。每个矩形的宽度为 100 像素，高度为 100 像素，并且每个边有 8 像素的页边距，所示：
+6. 打开 `MainPage.xaml.cs` 并找到 `OnNavigatedTo` 方法。在其内部编写代码向 `itemsContainer` 添加 20 个红色矩形。每个矩形的宽度为 100 像素，高度为 100 像素，并且每个边有 8 像素的页边距，所示：
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -9622,7 +8971,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-- 7. 在 `btnAdd` 的事件处理程序中添加代码以添加新的矩形：
+7. 在 `btnAdd` 的事件处理程序中添加代码以添加新的矩形：
 
 ```csharp
 private void btnAdd_Click_1(object sender, RoutedEventArgs e)
@@ -9637,7 +8986,7 @@ private void btnAdd_Click_1(object sender, RoutedEventArgs e)
 }
 ```
 
-- 8. 在 `btnRemove` 的事件处理程序中添加代码以删除第二个矩形：
+8. 在 `btnRemove` 的事件处理程序中添加代码以删除第二个矩形：
 
 ```csharp
 private void btnRemove_Click_1(object sender, RoutedEventArgs e)
@@ -9646,10 +8995,10 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 }
 ```
 
-- 9. 按 F5 运行应用程序。
-- 10. 点击 Add 和 Remove 按钮。观察项的行为。
-- 11. 切换回 Visual Studio 2012 并按 Shift+F5 停止调试。
-- 12. 为首次出现添加动画，所示：
+9. 按 `F5` 运行应用程序。
+10. 点击 `Add` 和 `Remove` 按钮。观察项的行为。
+11. 切换回 Visual Studio 2012 并按 `Shift+F5` 停止调试。
+12. 为首次出现添加动画，所示：
 
 ```xml
 <VariableSizedWrapGrid Name="itemsContainer">
@@ -9663,10 +9012,10 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 ## 在你的应用程序中使用动画
 
-- 13. 按 F5 运行应用程序。观察项在启动时的行为。
-- 14. 点击 Add 和 Remove 按钮。观察项的行为。
-- 15. 切换回 Visual Studio 2012 并按 Shift+F5 停止调试。
-- 16. 通过添加以下代码为删除、添加和重新定位添加动画：
+13. 按 `F5` 运行应用程序。观察项在启动时的行为。
+14. 点击 `Add` 和 `Remove` 按钮。观察项的行为。
+15. 切换回 Visual Studio 2012 并按 `Shift+F5` 停止调试。
+16. 通过添加以下代码为删除、添加和重新定位添加动画：
 
 ```xml
 <VariableSizedWrapGrid Name="itemsContainer">
@@ -9680,8 +9029,8 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 </VariableSizedWrapGrid>
 ```
 
-- 17. 点击 Add 和 Remove 按钮。观察项的行为。
-- 18. 按 F5 运行应用程序。
+17. 点击 `Add` 和 `Remove` 按钮。观察项的行为。
+18. 按 `F5` 运行应用程序。
 
 ### 工作原理
 
@@ -9689,7 +9038,7 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 在第 6 步中，你添加了 20 个红色矩形，每个宽 100 像素，高 100 像素，带有 8 像素的页边距。在第 7 步中，`btnAdd` 事件处理程序添加了新的矩形。在第 8 步中，`btnRemove` 事件处理程序删除了第二个矩形。
 
-在第 9 步中，你按 F5 运行应用程序。在第 10 步中，你点击 Add 和 Remove 按钮观察项的行为。在第 11 步中，你停止调试。在第 12 步中，你使用 `EntranceThemeTransition` 为首次出现添加动画。
+在第 9 步中，你按 `F5` 运行应用程序。在第 10 步中，你点击 `Add` 和 `Remove` 按钮观察项的行为。在第 11 步中，你停止调试。在第 12 步中，你使用 `EntranceThemeTransition` 为首次出现添加动画。
 
 在第 13 步中，你运行应用并观察启动行为。在第 14 步中，你观察点击按钮后的行为。在第 15 步中，你停止调试。在第 16 步中，你通过更新 `ChildrenTransitions` 为删除、添加和重新定位添加动画。在第 17 步中，你观察最终行为，在第 18 步中再次运行应用。
 
@@ -9697,7 +9046,7 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 在第 6 步中，你添加了 20 个红色矩形，每个宽 100 像素，高 100 像素，带有 8 像素的页边距。在第 7 步中，`btnAdd` 事件处理程序添加了新的矩形。在第 8 步中，`btnRemove` 事件处理程序删除了第二个矩形。
 
-在第 9 步中，你按 F5 运行应用程序。在第 10 步中，你点击 Add 和 Remove 按钮观察项的行为。在第 11 步中，你停止调试。在第 12 步中，你使用 `EntranceThemeTransition` 为首次出现添加动画。
+在第 9 步中，你按 `F5` 运行应用程序。在第 10 步中，你点击 `Add` 和 `Remove` 按钮观察项的行为。在第 11 步中，你停止调试。在第 12 步中，你使用 `EntranceThemeTransition` 为首次出现添加动画。
 
 在第 13 步中，你运行应用并观察启动行为。在第 14 步中，你观察点击按钮后的行为。在第 15 步中，你停止调试。在第 16 步中，你通过更新 `ChildrenTransitions` 为删除、添加和重新定位添加动画。在第 17 步中，你观察最终行为，在第 18 步中再次运行应用。
 
@@ -9707,40 +9056,36 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 以下是一些你可以使用的常用动画类型：
 
-- **DoubleAnimation**: `DoubleAnimation` 非常适合动画属性。
-- **ColorAnimation**: `ColorAnimation` 是更改颜色的简单方法。
-- **ObjectAnimation**: 有时对象具有依赖属性。
-
-
-
-
+- `DoubleAnimation`：`DoubleAnimation` 非常适合动画属性。
+- `ColorAnimation`：`ColorAnimation` 是更改颜色的简单方法。
+- `ObjectAnimation`：有时对象具有依赖属性。
 
 # 282 | 第 8 章 使用 XAML 控件
 
 支持以下几种变换类型：
 
-- 平移变换 (TranslateTransform)
-- 缩放变换 (ScaleTransform)
-- 旋转变换 (RotateTransform)
-- 倾斜变换 (SkewTransform)
+- 平移变换 (`TranslateTransform`)
+- 缩放变换 (`ScaleTransform`)
+- 旋转变换 (`RotateTransform`)
+- 倾斜变换 (`SkewTransform`)
 
-> 注意：可以使用矩阵创建更复杂的变换。如果你想更深入地探索变换的世界，可以在此处找到该主题的更多信息：http://msn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.matrixxtransform.aspx。
+> 注意：可以使用矩阵创建更复杂的变换。如果你想更深入地探索变换的世界，可以在此处找到该主题的更多信息：`http://msn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.matrixxtransform.aspx`。
 
 ## 变换的起点
 
-变换必须有一个中心点。该点决定了变换的起始点。例如，如果你想指定让矩形绕其中心点旋转，则应该将 RenderTransformOrigin 属性设置为 (0.5,0.5)。
+变换必须有一个中心点。该点决定了变换的起始点。例如，如果你想指定让矩形绕其中心点旋转，则应该将 `RenderTransformOrigin` 属性设置为 `(0.5,0.5)`。
 
-这些坐标是相对于 UIElement 左上角的相对坐标：
+这些坐标是相对于 `UIElement` 左上角的相对坐标：
 
-- (0,0) 是左上角。
-- (1,1) 是右下角。
-- (0.5, 0.5) 是 UIElement 的正中心。
+- `(0,0)` 是左上角。
+- `(1,1)` 是右下角。
+- `(0.5, 0.5)` 是 `UIElement` 的正中心。
 
-你可能在好奇椭圆，因为它没有视觉上的左上角。然而，从布局的角度来看，每个 UIElement 都被放置在 UI 的一个边界形内，该矩形代表了 UIElement 所需的最小宽度和高度。设置 RenderTransformOrigin 属性时应该考虑到这个边界形。
+你可能在好奇椭圆，因为它没有视觉上的左上角。然而，从布局的角度来看，每个 `UIElement` 都被放置在 UI 的一个边界形内，该矩形代表了 `UIElement` 所需的最小宽度和高度。设置 `RenderTransformOrigin` 属性时应该考虑到这个边界形。
 
-你放入 XAML 页面的每个 UIElement 都有一个名为 RenderTransform 的属性。将之前描述的任何变换分配此属性，即可得到一个变换后的 UIElement。下面的代码示例展示了一个例子：
+你放入 XAML 页面的每个 `UIElement` 都有一个名为 `RenderTransform` 的属性。将之前描述的任何变换分配此属性，即可得到一个变换后的 `UIElement`。下面的代码示例展示了一个例子：
 
-```
+```xml
 <Rectangle Width="200" Height="200" Fill="Red" RenderTransformOrigin="0.5,0.5">
   <Rectangle.RenderTransform>
     <RotateTransform Angle="45"/>
@@ -9752,9 +9097,13 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 ## 应用多个变换
 
-如果你想对 UIElement 应用多个变换，可以如下使用 TransformGroup：
+如果你想对 `UIElement` 应用多个变换，可以如下使用 `TransformGroup`：
 
 ```
+
+
+
+```xml
 <Rectangle Width="200" Height="200" Fill="Red" RenderTransformOrigin="0.5,0.5">
   <Rectangle.RenderTransform>
     <TransformGroup>
@@ -9787,7 +9136,7 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 - 2. 打开 MainPage.xml 并找到 Grid 面板。
 - 3. 向 Grid 中添加一个橙色的 Border，并在 Border 控件内放置简单的文本内容。使用 TextBlock 显示文本。添加以下代码：
 
-```
+```xml
 <Border Width="500" Height="350" Background="Orange"
   HorizontalAlignment="Center" VerticalAlignment="Center">
   <Grid>
@@ -9798,14 +9147,14 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 - 4. 在主 Grid 面板内添加一个 Next（下一步）按钮，并订阅 Click 事件：
 
-```
+```xml
 <Grid Background="StaticResource ApplicationBackgroundThemeBrush">
   <Button x:Name="startButton" Content="Start Rotation" HorizontalAlignment="Center" VerticalAlignment="Top"
     Click="startButton_Click_1" />
 </Grid>
 ```
 
-```
+```xml
 <Border Width="500" Height="350" Background="Orange"
   HorizontalAlignment="Center" VerticalAlignment="Center">
   <Grid>
@@ -9818,17 +9167,13 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 ... (此处省略原文中重复的描述，保持格式一致)
 
-
-
-
-
 # 设计控件的视觉外观
 
 按钮如何知道哪个视觉元素充当控件的背景？是边框的背景、还是面板的背景？或者是形状的填充颜色？你是否需要显式地提供这些信息？
 
 挑战在于告诉 Button 控件 `Background` 属性绑定到圆形的 `Fill` 属性上。你可以使用一个熟悉的概念，称为**模板绑定（template binding）**。它非常类似于数据绑定（在第 7 章中详细讨论过），但它是专门设计用于控件模板的。下面的代码示例演示了 `TemplateBinding` 的用法：
 
-```
+```xml
 <Button Content="This is the Content" Width="200" Height="200" FontSize="20"
   Background="#FFB6C9">
   <ControlTemplate TargetType="Button">
@@ -9867,7 +9212,7 @@ private void btnRemove_Click_1(object sender, RoutedEventArgs e)
 
 以下代码段演示了在控件模板中使用视觉状态：
 
-```
+```xml
 <Button Content="This is the Content" Height="200" Width="200"
 Background="#FFB6C0" FontSize="20">
 <Button.Template>
@@ -9944,9 +9289,6 @@ VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
 
 > 注意 大多数情况下，你可能希望使用控件模板，或者将其作为某些控件的默认值。一种常见的做法是将控件模板放在资源中，并将该样式设置为控件种的默认值。
 
-
-
-
 # 工具栏
 
 图 8-7 显示了 Expression Blend 工具栏。
@@ -10013,17 +9355,20 @@ Expression
      xmlns:x="http://schemas.microsoft.com/expression/blend/2008"
      xmlns:d="http://schemas.openxmlformats.org/markup-compatibility/2006"
      mc:Ignorable="d">
-
   <Grid Background="{Resource ApplicationPageThemeBrush}">
     <Button Content="This is the Content" Height="200" Width="200" Background="#FFF8C09" FontSize="20">
       <ControlTemplate TargetType="Button">
-        <Grid x:Name="Grid" RenderTransformOrigin="0.5,0.5">
-          <Grid.RenderTransform>
-            <CompositeTransform />
-          </Grid.RenderTransform>
-          <VisualStateManager.StateGroups>
-          
-        </Grid>
+```
+
+
+
+```xml
+<Grid x:Name="Grid" RenderTransformOrigin="0.5,0.5">
+  <Grid.RenderTransform>
+    <CompositeTransform />
+  </Grid.RenderTransform>
+  <VisualStateManager.StateGroups>
+</Grid>
       </ControlTemplate>
     </Button>
   </Grid>
@@ -10034,11 +9379,11 @@ Expression
 
 294 | 第 8 章 使用 XAML 控件
 
-# 属性面板
+## 属性面板
 
 图 8-14 所示的属性面板与 Visual Studio 2012 中的面板非常相似。属性面板在当选中一个元素时，所有属性都会在此部分列出。属性面板也是切换到编辑模式时订阅事件的地方。然而，此选项很少使用，因为大部分编码是在 Visual Studio 2012 中完成的。
 
-# 资源面板
+## 资源面板
 
 图 8-15 所示的资源面板让你查看整个应用程序中的所有资源。在此面板上，你可以在不同部分之间移动资源，也可以编辑某些资源。通过拖放，你可以将资源应用到设计表面上的元素。
 
@@ -10052,20 +9397,20 @@ Expression
 
 > 你可以在书籍辅助网站 wrox.com 上找到此练习的完整代码。
 
-# 尝试使用 Blend 自定义模板
+## 尝试使用 Blend 自定义模板
 
 1. 打开 Expression Blend 并选择 New Project（新建项目）。
 2. 在 New Project 对话框中，确保选择了 XAML 。选择 Blank 模板。
-3. 将应用程序命名为 ControlTemplateDemo。点击 OK。
-4. 在工具栏上选择 Button。图 8-16 显示工具栏上的 Button。
-5. 使用鼠标在设计表面上绘制 Button。
+3. 将应用程序命名为`ControlTemplateDemo`。点击 OK。
+4. 在工具栏上选择`Button`。图 8-16 显示工具栏上的`Button`。
+5. 使用鼠标在设计表面上绘制`Button`。
 6. 点击属性面板查看按钮的属性。
-7. 点击 Background 属性并从调色板中选择一种橙色。
-8. 在属性面板上，找到 Layout 部分，并将 Width 和 Height 都设置为 200。
-9. 在属性面板上，找到 Text 部分，并将 FontSize 设置为 20。
-10. 右键点击 Button，从右键菜单中选择 Edit Template（编辑模板）。
+7. 点击`Background`属性并从调色板中选择一种橙色。
+8. 在属性面板上，找到 Layout 部分，并将`Width`和`Height`都设置为 200。
+9. 在属性面板上，找到 Text 部分，并将`FontSize`设置为 20。
+10. 右键点击`Button`，从右键菜单中选择 Edit Template（编辑模板）。
 11. Edit Template 提供了多种选择。选择 Edit a Copy（编辑副本）。
-12. 输入 MyButtonTemplate 作为资源名称并点击 OK。
+12. 输入`MyButtonTemplate`作为资源名称并点击 OK。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_322_0.png)
 
@@ -10073,13 +9418,13 @@ Expression
 
 # 第 8 章 使用 XAML 控件
 
-13. 查看对象和时间轴面板。你可以看到 Button 的原始结构。
-14. 在对象和时间轴面板上，右键点击 Template 根节点下的第一个项目。从右键菜单中删除。
-15. 在工具栏上，双击 Grid 面板。图 8-17 显示工具栏上的 Grid 面板。
+13. 查看对象和时间轴面板。你可以看到`Button`的原始结构。
+14. 在对象和时间轴面板上，右键点击`Template`根节点下的第一个项目。从右键菜单中删除。
+15. 在工具栏上，双击`Grid`面板。图 8-17 显示工具栏上的`Grid`面板。
 16. 在工具栏上，按住 rectangle，然后从列表中选择 ellipse。
 17. 双击 ellipse。
 18. 点击资源面板以激活它。
-19. 在搜索框中，开始输入 contentpresent。一旦结果列表找到 ContentPresenter 控件，双击它。
+19. 在搜索框中，开始输入 contentpresent。一旦结果列表找到`ContentPresenter`控件，双击它。
 20. 在工具栏上，点击并按住 rectangle 工具，然后从弹出菜单中选择 ellipse。双击 ellipse。图 8-18 显示工具栏上的 Rectangle 工具。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_323_0.png)
@@ -10088,60 +9433,46 @@ Expression
 
 图 8-18：工具栏上的 Rectangle 工具
 
-21. 在属性面板上，在 Name 框中输入 mouseEllipse。
-22. 在对象和时间轴面板上，选择第一个 ellipse。在属性面板上，找到 Fill 属性。在 Fill 属性周围有一个红色的矩形，当鼠标悬停在其上时，会显示“Default”。点击矩形并选择 Template Binding 选项。在 Template Binding 提供的列表中，选择 Background。
-
-23. 在对象和时间轴面板上，选择属性面板，在搜索框中，开始输入 horizontalalignment。在 HorizontalContentAlignment 属性周围有一个红色的矩形，当鼠标悬停在其上时，会显示“Default”。点击矩形并选择 Template Binding 选项。在 Template Binding 提供的列表中，选择 HorizontalAlignment。
-
-
-
-
-
-24. 在“属性”（Properties）面板上，在搜索文本框中开始输入单词 `verticalalignment`。在 `VerticalContentAlignment` 属性旁边有一个小的灰色矩形，当鼠标悬停在其上方时，工具提示会显示文本“Default”。点击矩形并选择“Template Binding”（模板绑定）选项。在 Template Binding 提供的列表中，选择 `VerticalAlignment`。
-
-25. 在“对象和时间线”（Objects and Timeline）面板上，选择 `mouseOverEllipse`。在“属性”面板上，确保搜索文本框是空的。
-
+21. 在属性面板上，在 Name 框中输入`mouseEllipse`。
+22. 在对象和时间轴面板上，选择第一个 ellipse。在属性面板上，找到`Fill`属性。在`Fill`属性周围有一个红色的矩形，当鼠标悬停在其上时，会显示“Default”。点击矩形并选择 Template Binding 选项。在 Template Binding 提供的列表中，选择`Background`。
+23. 在对象和时间轴面板上，选择属性面板，在搜索框中，开始输入 horizontalalignment。在`HorizontalContentAlignment`属性周围有一个红色的矩形，当鼠标悬停在其上时，会显示“Default”。点击矩形并选择 Template Binding 选项。在 Template Binding 提供的列表中，选择`HorizontalAlignment`。
+24. 在“属性”（Properties）面板上，在搜索文本框中开始输入单词`verticalalignment`。在`VerticalContentAlignment`属性旁边有一个小的灰色矩形，当鼠标悬停在其上方时，工具提示会显示文本“Default”。点击矩形并选择“Template Binding”（模板绑定）选项。在 Template Binding 提供的列表中，选择`VerticalAlignment`。
+25. 在“对象和时间线”（Objects and Timeline）面板上，选择`mouseOverEllipse`。在“属性”面板上，确保搜索文本框是空的。
 26. 点击“Fill”（填充）属性。选择“Gradient brush”（渐变画刷）选项。
-
-27. 在调色板编辑器下方有一条指示线。小形状（箭头）代表渐变停止点（gradient stops）。点击左侧的，并在 A（Alpha）值旁边的文本框中输入 `0`。
-
+27. 在调色板编辑器下方有一条指示线。小形状（箭头）代表渐变停止点（gradient stops）。点击左侧的，并在 A（Alpha）值旁边的文本框中输入`0`。
 28. 点击右侧的，并在调色板上选择一种浅黄色。
-
 29. 在“属性”面板上，找到“Appearance”（外观）部分，并将“Visibility”（可见性）属性设置为“Collapsed”（折叠）。
-
 30. 点击“States”（状态）面板以激活它。
-
-31. 选择 `PointerOver` 视觉状态，然后将“Visibility”属性设置为“Visible”（可见）。
-
+31. 选择`PointerOver`视觉状态，然后将“Visibility”属性设置为“Visible”（可见）。
 32. 按 F5 运行应用程序。将鼠标移动到按钮上方以测试状态变化。
 
-## 工作原理 (How It Works)
+### 工作原理 (How It Works)
 
 在本次练习中，你所的操作与你在 XAML 中所完成的完全相同。唯一的区别是，在这种情况下，你正在使用 Expression Blend 在不编写任何单行代码的情况下完成相同的工作。
 
-从第 1 步到第 9 步，你为 Button 控件添加了一些属性（如宽度、高度、背景颜色和字体大小）。
+从第 1 步到第 9 步，你为`Button`控件添加了一些属性（如宽度、高度、背景颜色和字体大小）。
 
-从第 10 步到第 21 步，你为 Button 控件创建了控件模板（至少是它的结构）。
+从第 10 步到第 21 步，你为`Button`控件创建了控件模板（至少是它的结构）。
 
-从第 22 步到第 24 步，你应用了模板绑定（Template Bindings），确保某些属性（如 Button 控件的背景颜色）到模板中适当控件的属性。
+从第 22 步到第 24 步，你应用了模板绑定（Template Bindings），确保某些属性（如`Button`控件的背景颜色）到模板中适当控件的属性。
 
-从第 25 步到第 31 步，你配置了 `mouseOverEllipse` 的行为为高亮视觉效果，并使用状态（states）来完成过渡。
+从第 25 步到第 31 步，你配置了`mouseOverEllipse`的行为为高亮视觉效果，并使用状态（states）来完成过渡。
 
 这些是你练习期间执行的主要步骤。然而，理解某些步骤是非常重要的，因为你可以从它们中学到很多关于 Expression Blend 的知识。让我们回顾一下最重要的步骤。
 
 在第 2 步中，你选择了 XAML 选项。不过，你也可以选择 HTML 选项。Expression Blend 同时支持基于 XAML 和 HTML 的开发，这使其变得非常强大且独特。
 
-在第 4 步中，你选择了 Button 控件。此操作会使 Blend 进入绘制模式。你的光标在设计器表面上变为十字准星。当你绘制一个新项目时，它会自动添加到“对象和时间线”面板中的被选中项目中。同时，它也会成为新的被选中项目。“属性”面板现在显示了新 Button 控件的属性。
+在第 4 步中，你选择了`Button`控件。此操作会使 Blend 进入绘制模式。你的光标在设计器表面上变为十字准星。当你绘制一个新项目时，它会自动添加到“对象和时间线”面板中的被选中项目中。同时，它也会成为新的被选中项目。“属性”面板现在显示了新`Button`控件的属性。
 
 在第 8 步中，你找到了“Layout”（布局）部分。“属性”面板上的属性分在不同的部分，这些部分可以折叠和展开。
 
-在第 10 步中，你可以点击设计器表面上的 Button，也可以点击“对象和时间线”面板上的 Button。两者在执行右键点击时的反应是相同的。“Edit Template”（编辑模板）选项允许你进入控件模板并对其进行自定义。通过选择“Edit a copy”（编辑副本）选项，Button 的原始内容和结构将被绑定。如果你想进行细调，这是一个很棒的选项。新对话框是 Resource（资源）对话框。你必须指定资源的名称，因为新的控件模板将被保存为资源。
+在第 10 步中，你可以点击设计器表面上的`Button`，也可以点击“对象和时间线”面板上的`Button`。两者在执行右键点击时的反应是相同的。“Edit Template”（编辑模板）选项允许你进入控件模板并对其进行自定义。通过选择“Edit a copy”（编辑副本）选项，`Button`的原始内容和结构将被绑定。如果你想进行细调，这是一个很棒的选项。新对话框是 Resource（资源）对话框。你必须指定资源的名称，因为新的控件模板将被保存为资源。
 
-在第 15 步中，你清空了原始内容，可以通过双击工具栏上的 `Grid` 面板来向模板添加一个新面板。
+在第 15 步中，你清空了原始内容，可以通过双击工具栏上的`Grid`面板来向模板添加一个新面板。
 
-在第 22 步中，你使用属性选项来访问高级功能，如模板绑定、数据或引用资源。`Template Binding` 选项为你展示了可以绑定的父控件的相应属性。
+在第 22 步中，你使用属性选项来访问高级功能，如模板绑定、数据或引用资源。`Template Binding`选项为你展示了可以绑定的父控件的相应属性。
 
-在第 31 步中，你激活了 `PointerOver` 视觉状态。一旦你点击它，设计器表面就会显示红色边框和一条“状态录制已开启”的消息。你现在在“属性”面板上设置的所有内容都将成为动画的一部分，该动画将在状态激活时运行。
+在第 31 步中，你激活了`PointerOver`视觉状态。一旦你点击它，设计器表面就会显示红色边框和一条“状态录制已开启”的消息。你现在在“属性”面板上设置的所有内容都将成为动画的一部分，该动画将在状态激活时运行。
 
 > 这看起来步骤非常多。但请放心，一旦你开始使用 Expression Blend 并进行一些练习，这个过程只需要不到一分钟，这使得在自定义 UI 时非常高效。
 
@@ -10149,29 +9480,29 @@ Expression
 
 Windows 8 风格应用程序设计原则以及带有默认样式的基础控件集的巨大优点之一，是跨应用程序和 Windows 操作系统创建一致用户体验的能力。随着你使用越来越多的 Windows 8 风格应用程序，你会发现 UI 中有很多相似且熟悉的概念。这些应用程序可能使用相似的控件和相似的布局。它们的交互模式和手势也是相同的。这从用户体验的角度来看是非常好的，特别是考虑到自信地使用应用程序的学习曲线时。
 
-这种相似性源于一些成熟的 UI 模式，这些模式由内置复杂控件（如 `GridView`、`ListView`、`FlipView`、`SemanticZoom` 或 `AppBar` 控件）形成。使用这些控件，你可以让应用程序更容易理解，并让用户更加熟悉。
+这种相似性源于一些成熟的 UI 模式，这些模式由内置复杂控件（如`GridView`、`ListView`、`FlipView`、`SemanticZoom`或`AppBar`控件）形成。使用这些控件，你可以让应用程序更容易理解，并让用户更加熟悉。
 
 ## 了解控件 (Getting to Know...)
 
-这种相似性来自由 `GridView`、`ListView`、`FlipView`、`SemanticZoom` 或 `AppBar` 等内置复杂控件形成的成熟 UI 模式。使用这些控件，你可以让应用程序更容易理解，并让用户更加熟悉。
+这种相似性来自由`GridView`、`ListView`、`FlipView`、`SemanticZoom`或`AppBar`等内置复杂控件形成的成熟 UI 模式。使用这些控件，你可以让应用程序更容易理解，并让用户更加熟悉。
 
-了解 ListViewBase 控件
+了解`ListViewBase`控件
 
-复杂的控件源自 `ListViewBase`。`ListViewBase` 类支持触控交互模式、按需加载、分组、多选以及许多其他功能。`ListView` 和 `GridView` 控件源自 `ListViewBase`，这意味着在使用这些控件时，你可以获得上述所有功能。
+复杂的控件源自`ListViewBase`。`ListViewBase`类支持触控交互模式、按需加载、分组、多选以及许多其他功能。`ListView`和`GridView`控件源自`ListViewBase`，这意味着在使用这些控件时，你可以获得上述所有功能。
 
 ## 使用 GridView 控件 (Using GridView Control)
 
-如图 19 所示的 `GridView` 控件代表了项目的水平网格。许多应用程序偏于这种布局。
+如图 19 所示的`GridView`控件代表了项目的水平网格。许多应用程序偏于这种布局。
 
 ![](img/4ba176960f935e0483da464a3d695f_326_0) 图 19：应用程序中的 GridView
 
 ## 绑定数据 (Binding to Data)
 
-将 `GridView` 绑定到集合非常简单所示：
+将`GridView`绑定到集合非常简单所示：
 
-> 注意：第 7 章提供了关于 `ItemsControl`、`Items` 和 `ItemsSource` 的详细信息。
+> 注意：第 7 章提供了关于`ItemsControl`、`Items`和`ItemsSource`的详细信息。
 
-以下代码演示了绑定 `GridView`：
+以下代码演示了绑定`GridView`：
 
 ```xml
 <Page.Resources>
@@ -10192,21 +9523,21 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 </GridView>
 ```
 
-此代码段绑定到一个集合。该集合位于 `Page.Resources` 部分。在使用绑定设置 `ItemsSource` 属性时，可以引用为静态资源。此 `GridView` 还配置为使用自定义的 `ItemTemplate` 显示。所有这些功能与 `ItemsControl` 的工作完全相同。
+此代码段绑定到一个集合。该集合位于`Page.Resources`部分。在使用绑定设置`ItemsSource`属性时，可以引用为静态资源。此`GridView`还配置为使用自定义的`ItemTemplate`显示。所有这些功能与`ItemsControl`的工作完全相同。
 
 ## 数据分组 (Grouping Data)
 
-在视觉和逻辑上划分数据是非常常见的。然而，更改数据集合的原始结构和内容在性能上是非常昂贵的。这也需要大量的代码。为了解决这个问题，你可以使用名为 `CollectionView` 的类。
+在视觉和逻辑上划分数据是非常常见的。然而，更改数据集合的原始结构和内容在性能上是非常昂贵的。这也需要大量的代码。为了解决这个问题，你可以使用名为`CollectionView`的类。
 
-`CollectionView` 包装你的原始集合，无论你在进行排序、分组还是过滤，它都保持不变。排序、分组和过滤规则可以被更改、添加或删除，而你的原始集合是不受影响的。
+`CollectionView`包装你的原始集合，无论你在进行排序、分组还是过滤，它都保持不变。排序、分组和过滤规则可以被更改、添加或删除，而你的原始集合是不受影响的。
 
-要在 `CollectionSource` 上启用分组，请执行以下步骤：
+要在`CollectionSource`上启用分组，请执行以下步骤：
 
-- 1. 将 `CollectionSource` 对象的 `Source` 属性设置为分组数据。
-- 2. 将 `IsSourceGroup` 属性设置为 `true`。这为你的数据开启了分组。
-- 3. 将 `ItemsPath` 属性设置为代表组内项的属性名称。
+- 1. 将`CollectionSource`对象的`Source`属性设置为分组数据。
+- 2. 将`IsSourceGroup`属性设置为`true`。这为你的数据开启了分组。
+- 3. 将`ItemsPath`属性设置为代表组内项的属性名称。
 
-以下代码演示了 `CollectionView` 类的用法：
+以下代码演示了`CollectionView`类的用法：
 
 ```xml
 <Page.Resources>
@@ -10215,39 +9546,36 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 </Page.Resources>
 ```
 
-
-
-
-
+```xml
 <Page.Resources>
-
 ```
+
+```xml
 <GridView ItemsSource="Binding Source={StaticResource teamList}"
      Margin="0,120,0,0" MaxHeight="500">
-
 </GridView>
 ```
 
-在这种情况下，你有一个 `Team` 对象集合。每个 `Team` 对象都有一组 `Player` 对象集合。你在这里做的是使用团队作为分组，并将玩家作为组项目。这段代码段配置了 `CollectionViewSource` 以支持这种场景。
+在这种情况下，你有一个`Team`对象集合。每个`Team`对象都有一组`Player`对象集合。你在这里做的是使用团队作为分组，并将玩家作为组项目。这段代码段配置了`CollectionViewSource`以支持这种场景。
 
-注意，在之前的代码段中，没有设置 `source` 属性。这是因为在大多数情况下，你将在后台代码文件（code-behind）中使用它。你可以将 `Source` 属性设置为任何集合。
+注意，在之前的代码段中，没有设置`source`属性。这是因为在大多数情况下，你将在后台代码文件（code-behind）中使用它。你可以将`Source`属性设置为任何集合。
 
 ## 定义视觉分组
 
-尽管你的 `CollectionSource` 已经准备好以分组视图显示，但 `GridView` 仍然需要一些精化。`GridView` 需要知道使用哪个属性来显示组头部。你可以使用 `GroupStyle` 属性来指定它。
+尽管你的`CollectionSource`已经准备好以分组视图显示，但`GridView`仍然需要一些精化。`GridView`需要知道使用哪个属性来显示组头部。你可以使用`GroupStyle`属性来指定它。
 
-`GroupStyle` 属性允许你完全自定义分组的视觉表示。`GroupStyle` 属性定义了一个 `HeaderTemplate` 来自定义头部的外观。
+`GroupStyle`属性允许你完全自定义分组的视觉表示。`GroupStyle`属性定义了一个`HeaderTemplate`来自定义头部的外观。
 
-以下代码演示了 `GroupStyle` 的定义：
+以下代码演示了`GroupStyle`的定义：
 
-```
+```xml
 <Page.Resources>
 <CollectionView xName="teamList" IsSourceGrouped="True"
      ItemPath="Players"/>
 </Page.Resources>
 ```
 
-```
+```xml
 <GridView ItemsSource="Binding Source={StaticResource teamList}"
      Margin="0,120,0,0" MaxHeight="500">
 <GridView.ItemTemplate>
@@ -10264,10 +9592,17 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 <GroupStyle.HeaderTemplate>
 <DataTemplate>
 <Grid Background="LightGray">
-<TextBlock Text="{Binding TeamName}" Foreground="Black" Margin="30" Style="{StaticResource HeaderTextStyle}"/>
-</Grid>
-</DataTemplate>
 ```
+
+
+
+```
+<TextBlock Text="{Binding TeamName}" Foreground="Black" Margin="30" Style="{StaticResource HeaderTextStyle}"/>
+
+</Grid>
+
+</DataTemplate>
+
 </GroupStyle.HeaderTemplate>
 <GroupStyle.Panel>
 <ItemsPanelTemplate>
@@ -10280,26 +9615,26 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 </GridView>
 ```
 
-此代码示例显示了按团队分组的玩家。在 `GroupStyle` 上，定义了几个属性：
+此代码示例显示了按团队分组的玩家。在`GroupStyle`上，定义了几个属性：
 
-- `HidesIfEmpty` 属性定义了当组内没有项目时是否显示该组。
-- `HeaderTemplate` 属性定义了组头部中应该显示哪些数据。它绑定到 `TeamName` 属性。
-- 代表头部文本的 `TextBlock` 样式引用了 `HeaderTextStyle` 静态资源。
-- 组的默认面板被覆盖。使用 `GroupStyle.panel` 属性，将其使用 `VariableSizedWrapGrid`。
+- `HidesIfEmpty`属性定义了当组内没有项目时是否显示该组。
+- `HeaderTemplate`属性定义了组头部中应该显示哪些数据。它绑定到`TeamName`属性。
+- 代表头部文本的`TextBlock`样式引用了`HeaderTextStyle`静态资源。
+- 组的默认面板被覆盖。使用`GroupStyle.panel`属性，将其使用`VariableSizedWrapGrid`。
 
-如你所见，可以使用许多属性和选项来自定义 `Grid` 控制的分组功能。
+如你所见，可以使用许多属性和选项来自定义`Grid`控制的分组功能。
 
 ## 使用 ListView 控制
 
-`ListView` 是一个垂直排列的可滚动项目列表。它被设计用来一个接一个地表示项目，并支持让用户易于使用和学习的功能。默认情况下，`ListView` 没有视觉表示；只有项目会被渲染。图 8-20 显示了 `ListView` 控制在 PC 设置应用程序中的用法。设置组被表示为垂直项目列表。
+`ListView`是一个垂直排列的可滚动项目列表。它被设计用来一个接一个地表示项目，并支持让用户易于使用和学习的功能。默认情况下，`ListView`没有视觉表示；只有项目会被渲染。图 8-20 显示了`ListView`控制在 PC 设置应用程序中的用法。设置组被表示为垂直项目列表。
 
 ## 比较 ListView 和 ListBox
 
-`ListBox` 和 `ListView` 都是 `ItemsControls`，它们具有非常相似的行为。这两个控件都旨在视觉上排列项目列表。默认情况下，这些控件垂直堆叠显示这些项目。
+`ListBox`和`ListView`都是`ItemsControls`，它们具有非常相似的行为。这两个控件都旨在视觉上排列项目列表。默认情况下，这些控件垂直堆叠显示这些项目。
 
-然而，两者之间存在微妙（但非常重要）的区别。从技术上讲，它们有不同的基类。`ListBox` 直接继承自 `Selector` 类，而 `ListView` 继承自 `ListViewBase` 类。尽管如此，它们重要的区别在于默认的视觉外观。
+然而，两者之间存在微妙（但非常重要）的区别。从技术上讲，它们有不同的基类。`ListBox`直接继承自`Selector`类，而`ListView`继承自`ListViewBase`类。尽管如此，它们重要的区别在于默认的视觉外观。
 
-`ListView` 设计时考虑了 Windows 8 风格和触摸应用程序，而 `ListBox` 控制更多是一种传统设计。默认情况下，`ListView` 控制为项目留出了更多空间，以便触摸时更舒适，并且它没有像 `ListBox` 那样的视觉外观。
+`ListView`设计时考虑了 Windows 8 风格和触摸应用程序，而`ListBox`控制更多是一种传统设计。默认情况下，`ListView`控制为项目留出了更多空间，以便触摸时更舒适，并且它没有像`ListBox`那样的视觉外观。
 
 ## PC 设置
 
@@ -10324,15 +9659,15 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 
 选择在后台运行并显示快速状态和通知的应用程序，即使屏幕锁定也是如此。
 
-**图 8-20：** PC 设置中的 ListView 控制
+**图 8-20：** PC 设置中的`ListView`控制
 
-在触控和选择方面，它们的行为也非常不同。当你尝试滚动 `ListBox` 的内容时，你会发现它会高亮你首先点击的元素。滚动和选择动作从相同的触摸手势开始，`ListView` 控制在开始无法区分。
+在触控和选择方面，它们的行为也非常不同。当你尝试滚动`ListBox`的内容时，你会发现它会高亮你首先点击的元素。滚动和选择动作从相同的触摸手势开始，`ListView`控制在开始无法区分。
 
-`ListView` 在选择上有完全不同的手势和鼠标动作，因此在这种情况下不会发生这种情况。`ListView` 还支持来自动画库的过渡和动画，以帮助用户更容易地理解从列表中添加或删除项目时发生了什么。
+`ListView`在选择上有完全不同的手势和鼠标动作，因此在这种情况下不会发生这种情况。`ListView`还支持来自动画库的过渡和动画，以帮助用户更容易地理解从列表中添加或删除项目时发生了什么。
 
-这些是两个控件之间微妙而重要的区别。建议在 Windows 8 风格的应用程序中优先使用 `ListView` 控制。
+这些是两个控件之间微妙而重要的区别。建议在 Windows 8 风格的应用程序中优先使用`ListView`控制。
 
-在 Windows 8 风格的应用程序中使用 `ListView` 控制。以下代码显示了如何使用 `CollectionViewSource`：
+在 Windows 8 风格的应用程序中使用`ListView`控制。以下代码显示了如何使用`CollectionViewSource`：
 
 ```
 <CollectionViewSource>
@@ -10342,128 +9677,163 @@ Windows 8 风格应用程序设计原则以及带有默认样式的基础控件�
 
 ```
 </ItemTemplate>
-```
+
 <TextBlock Text="{ Name Name
+
 <TextBlock Text="{Binding Date}"/>
+
 <TextBlock Text="{Binding TeamName}"/>
+
 </Grid>
+
 </ListView>
 ```
 
 ## 使用 FlipView 控件
 
-`FlipView` 控件是一种设计为只显示一个项目的 `ItemsControl`。听起来可能奇怪，`FlipView` 的概念对于列表中的项目非常有用——你可以将此控件视为具有许多页面的详细视图。在使用触摸设备时，`FlipView` 提供平滑的过渡。当使用鼠标设备时，它提供分页控件。图 8-21 显示了 `FlipView` 的用法。
+`FlipView`控件是一种设计为只显示一个项目的`ItemsControl`。听起来可能奇怪，`FlipView`的概念对于列表中的项目非常有用——你可以将此控件视为具有许多页面的详细视图。在使用触摸设备时，`FlipView`提供平滑的过渡。当使用鼠标设备时，它提供分页控件。图 8-21 显示了`FlipView`的用法。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_331_0.png)
 
-图 8-21：照片应用程序中的 FlipView 控制
+图 8-21：照片应用程序中的`FlipView`控制
 
-以下代码段演示了 `FlipView` 的用法：
+以下代码段演示了`FlipView`的用法：
 
 ```
 <FlipView Width="480" Height="250" ItemsSource="{Binding Photos}"/>
+
 <FlipView.ItemTemplate>
+
 <DataTemplate>
+
 <Grid>
+
   <Image Width="480" Height="250" Source="{Binding Image}"
+
          Stretch="UniformToFill"/>
+
   <Border Height="80" VerticalAlignment="Bottom">
+
     <TextBlock Text="{Binding ImageTitle}"/>
+
   </Border>
+
 </Grid>
+
 </DataTemplate>
+
 </FlipView.ItemTemplate>
+
 </FlipView>
 ```
 
-注意 `FlipView` 如何使用 `ItemTemplate` 定义如何显示单个项目。它一次显示一个项目。
+注意`FlipView`如何使用`ItemTemplate`定义如何显示单个项目。它一次显示一个项目。
 
 ## SemanticZoom
 
-`SemanticZoom` 绝对 Windows 8 应用程序中最酷的功能。`SemanticZoom` 允许你定义两个级别来表示相同的数据。这意味着如果你有大量数据，你可以创建一个可以看到每个数据的细节，并定义数据的概述。`SemanticZoom` 在级别之间提供了良好的过渡，并支持手势。你可以使用缩放手势切换这些级别。
+`SemanticZoom`绝对 Windows 8 应用程序中最酷的功能。`SemanticZoom`允许你定义两个级别来表示相同的数据。这意味着如果你有大量数据，你可以创建一个可以看到每个数据的细节，并定义数据的概述。`SemanticZoom`在级别之间提供了良好的过渡，并支持手势。你可以使用缩放手势切换这些级别。
 
-`SemanticZoom` 具有对应于那两个级别的属性：
+`SemanticZoom`具有对应于那两个级别的属性：
 
-- ZoomedOutView
-- ZoomedInView
+- `ZoomedOutView`
+- `ZoomedInView`
 
-你可以向这些属性添加任何实现了 `ISemanticZoomInformation` 接口的控件。XAML 框架提供了实现此接口的两个控件：`GridView` 和 `ListView`。图 8-22 显示了 Windows 8 开始菜单如何使用 `SemanticZoom`。
+你可以向这些属性添加任何实现了`ISemanticZoomInformation`接口的控件。XAML 框架提供了实现此接口的两个控件：`GridView`和`ListView`。图 8-22 显示了 Windows 8 开始菜单如何使用`SemanticZoom`。
 
-> 注意 不要将 `SemanticZoom` 与光学缩放混淆。`SemanticZoom` 为相同的数据提供不同的表示，而光学缩放并不改变视图。它只是放大可视区域。
+> 注意 不要将`SemanticZoom`与光学缩放混淆。`SemanticZoom`为相同的数据提供不同的表示，而光学缩放并不改变视图。它只是放大可视区域。
 
-以下代码示例显示了如何使用 `SemanticZoom`：
+以下代码示例显示了如何使用`SemanticZoom`：
 
 ```
 <SemanticZoom>
+
   <SemanticZoom.ZoomedOutView>
+
     <!-- 在此处使用 GridView 或 ListView -->
+
   </SemanticZoom.ZoomedOutView>
+
   <SemanticZoom.ZoomedInView>
+
     <!-- 在此处使用 GridView 或 ListView -->
+
   </SemanticZoom.ZoomedInView>
+
 </SemanticZoom>
 ```
 
 在下一个练习中，你将学习使用 Windows 8 的控件，并学习更多关于准备好的应用程序模板的知识。
 
-
-
-
-
-> 注意：你可以在此书的配套网站 www.wrox.com 的 ComplexControlsDemo 文件夹中找到此练习的完整代码。
+> 注意：你可以在此书的配套网站 www.wrox.com 的`ComplexControlsDemo`文件夹中找到此练习的完整代码。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_333_0.png)
 
-图 8-22：使用 SemanticZoom 的 Windows 8 开始菜单
+图 8-22：使用`SemanticZoom`的 Windows 8 开始菜单
 
 # 尝试用一下：在 Windows 8 中使用复杂控件
 
 - 1. 打开 Visual Studio 2012，并选择文件（File）新建（New）项目（New Project）。
-- 2. 新项目对话框提供了许多适用于 Windows 8 风格应用的 XAML 模板。选择 GridApp (XAML) 模板。
-- 3. 将项目命名为 ComplexControlsDemo。点击（或触摸）OK 按钮。
+- 2. 新项目对话框提供了许多适用于 Windows 8 风格应用的 XAML 模板。选择`GridApp (XAML)`模板。
+- 3. 将项目命名为`ComplexControlsDemo`。点击（或触摸）OK 按钮。
 - 4. 按（或触摸）F5 运行应用程序。
-- 5. 尝试滚动应用程序。然后选择一个 GridButtonItem 并点击它。
-- 6. 详情页是一个 FlipView。可以使用屏幕左右边缘的箭头或滑动手势来更改当前活动项。
+- 5. 尝试滚动应用程序。然后选择一个`GridButtonItem`并点击它。
+- 6. 详情页是一个`FlipView`。可以使用屏幕左右边缘的箭头或滑动手势来更改当前活动项。
 
 ### 工作原理
 
 如你所见，此模板为你创建了一个示例应用程序和一个基础结构，供你开始。现在，理解这段代码的每一个部分非常重要，这样你就可以对其进行改进或重用。
 
-首先，让我们研究数据模型。解决方案包含一个 DataModel 文件夹，其中包含 SampleDataSource.cs 文件。如果你打开该文件，将看到一个 SampleDataSource 类。该类只暴露了一个名为 AllGroups 的属性。AllGroups 属性的类型为 ObservableCollection<SampleDataGroup>，这意味着组中的每个项目都是 SampleData 实例。
+首先，让我们研究数据模型。解决方案包含一个`DataModel`文件夹，其中包含`SampleDataSource.cs`文件。如果你打开该文件，将看到一个`SampleDataSource`类。该类只暴露了一个名为`AllGroups`的属性。`AllGroups`属性的类型为`ObservableCollection<SampleDataGroup>`，这意味着组中的每个项目都是`SampleData`实例。
 
-SampleData 类暴露了两个集合：Items 和 ToItems。这两个集合都包含 SampleDataItem。每个 SampleDataItem 都有 Content 以及指向其所属组的引用。SampleDataGroup 和 SampleDataItem 都继承自 SampleDataCommon。
+`SampleData`类暴露了两个集合：`Items`和`ToItems`。这两个集合都包含`SampleDataItem`。每个`SampleDataItem`都有`Content`以及指向其所属组的引用。`SampleDataGroup`和`SampleDataItem`都继承自`SampleDataCommon`。
 
-此基类包含了这些类的通用属性（Title、Subtitle、Description、Image、UniqueId）。因此，组和项目都具有 Title 和 Subtitle。SampleDataSource 类为该层级结构创建了大量的示例数据。
+此基类包含了这些类的通用属性（`Title`、`Subtitle`、`Description`、`Image`、`UniqueId`）。因此，组和项目都具有`Title`和`Subtitle`。`SampleDataSource`类为该层级结构创建了大量的示例数据。
 
-现在，打开 groupedItemsPage.xaml。这是 Grid 所在的位置。找到 PageResources 部分。在该部分，你将找到一个配置好的 CollectionViewSource。因为你想展示数据，CollectionViewSource 是一个帮助你实现目标非常有用的对象。
+现在，打开`groupedItemsPage.xaml`。这是`Grid`所在的位置。找到`PageResources`部分。在该部分，你将找到一个配置好的`CollectionViewSource`。因为你想展示数据，`CollectionViewSource`是一个帮助你实现目标非常有用的对象。
 
-现在你可以看到 Source 绑定到了组，IsSourceGroup 属性被设置为 true，且 ItemsPath 绑定到 TopItems：
+现在你可以看到`Source`绑定到了组，`IsSourceGroup`属性被设置为`true`，且`ItemsPath`绑定到`TopItems`：
 
 ```xml
 x:Name=groupedItemsViewSource
+
 Source=(Binding Groups)
+
 IsSourceGroup="true"
+
 ItemsPath=TopItems
+
 Source={Binding AllGroups, Source={d:DesignInstance
+
 Type=SampleDataSource, IsDesignTimeCreatable=True}}/>
 ```
 
-如果你将 GridView 绑定到此 CollectionSource，它将绑定到早先检查过的分组数据集合上。
+如果你将`GridView`绑定到此`CollectionSource`，它将绑定到早先检查过的分组数据集合上。
 
-现在，找到名为 itemGridView 的 GridView。它的 ItemSource 绑定到 CollectionView。IsItemClickEnabled 属性设置为 true，因此当点击或触摸 GridView 中的项时，会触发 ItemClick 事件。你通过 ItemView.ItemClick 事件对该事件订阅了订阅。如果你仔细观察 GridView，你会发现其他内容也是如此的，例如自定义的 GroupStyle 或用于 GridView 的自定义面板。
+现在，找到名为`itemGridView`的`GridView`。它的`ItemSource`绑定到`CollectionView`。`IsItemClickEnabled`属性设置为`true`，因此当点击或触摸`GridView`中的项时，会触发`ItemClick`事件。你通过`ItemView.ItemClick`事件对该事件订阅了订阅。如果你仔细观察`GridView`，你会发现其他内容也是如此的，例如自定义的`GroupStyle`或用于`GridView`的自定义面板。
 
 ```xml
 x:Name=itemGridView
+
 AutomationProperties.Automation=itemGridView
+
 AutomationProperties.Name="Grouped Items"
+
 Margin="0,-3,0,0"
+
 Padding="16,0,40,46"
+
 ItemsSource={Binding Source={StaticResource groupedItemsViewsource}}
+
 ItemTemplate={StaticResource Standard 250x250ItemTemplate}
+
 SelectMode="None"
+
 IsItemClickEnabled="True"
+
 ItemClick=ItemView_ItemClick
+
 <GridView.ItemsPanel>
+
 <ItemsPanelTemplateTemplate
 ```
 
@@ -10471,28 +9841,51 @@ ItemClick=ItemView_ItemClick
 
 ```xml
 <VirtualizingStackPanel Orientation="Horizontal"/>
+
 <ItemsPanelTemplate>
+
 </GridView.ItemsPanel>
+
 <GridView.GroupStyle>
+
 <GroupStyle>
+
 <GroupStyle.HeaderTemplate>
+
 <DataTemplate>
+
 <Grid Margin="1,0,0,0">
+
 <Button
+
 AutomationProperties.Name="Group Title
+
 Content="{Binding Title}"
+
 Click="Header_Click"
+
 Style="{StaticResource'}"/>
+
 </Grid>
+
 </DataTemplate>
+
 </GroupStyle.HeaderTemplate>
+
 <GroupStyle.Panel>
+
 <ItemsPanelTemplate>
+
 <VariableSizedWrapGrid Orientation="Vertical"
+
 Margin="0,0,80,0"/>
+
 </ItemsPanelTemplate>
+
 </GroupStyle.Panel>
+
 </GroupStyle>
+
 </GridView.GroupStyle>
 ```
 
@@ -10500,16 +9893,21 @@ Margin="0,0,80,0"/>
 
 ```csharp
 void ItemView_ItemClick(object sender, ItemEventArgs e)
+
 {
+
   // 导航到相应的目的地
+
   var itemId = e.SelectedItem as SampleDataItem;
+
   this.Frame.Navigate(typeof(DetailPage), itemId);
+
 }
 ```
 
-这意味着如果你点击 GridView 中的某项，ItemEventArgs 将告诉你点击了哪一个项。然后你可以传递 itemId 导航到 DetailPage。
+这意味着如果你点击`GridView`中的某项，`ItemEventArgs`将告诉你点击了哪一个项。然后你可以传递`itemId`导航到`DetailPage`。
 
-> 注意：你可以在此书的配套网站 www.wrox.com 的 ComplexControlsDemo 文件夹中找到此练习的完整代码。
+> 注意：你可以在此书的配套网站 www.wrox.com 的`ComplexControlsDemo`文件夹中找到此练习的完整代码。
 
 > 注意：值得进一步研究此模板。
 
@@ -10519,28 +9917,37 @@ void ItemView_ItemClick(object sender, ItemEventArgs e)
 
 在很多情况下，你会发现一个想要为 UI 添加额外功能、命令或操作的地方，但你不想占用内容区域的空间。
 
-每个页面有两个 AppBar 区域：TopAppBar 和 BottomAppBar。如果你遵循 Windows 8 设计原则，使用 TopAppBar 添加导航控件（如返回按钮），并使用 BottomAppBar 显示与应用程序和当前页面相关的命令。图 8-23 显示了 AppBar 的用法。
+每个页面有两个`AppBar`区域：`TopAppBar`和`BottomAppBar`。如果你遵循 Windows 8 设计原则，使用`TopAppBar`添加导航控件（如返回按钮），并使用`BottomAppBar`显示与应用程序和当前页面相关的命令。图 8-23 显示了`AppBar`的用法。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_336_0.png)
 
-图 8-23：AppBar 控件
+图 8-23：`AppBar`控件
 
-下面的代码示例显示了如何使用 AppBar：
+下面的代码示例显示了如何使用`AppBar`：
 
 ```xml
 <Page.TopAppBar>
+
 <AppBar>
+
   <StackPanel Orientation="Horizontal" Alignment="Right">
+
     <Button Style={StaticResource RemoveButtonStyle}
+
         Click="RemoveButton_Click" />
+
     <Button Style={StaticResource AddButtonStyle}
+
         Click="AddButton_Click" />
+
   </StackPanel>
+
 </AppBar>
+
 </Page.TopAppBar>
 ```
 
-337
+
 
 ## 总结
 
@@ -10550,26 +9957,22 @@ void ItemView_ItemClick(object sender, ItemEventArgs e)
 
 使用控件模板，你有完全更改控件视觉外观的能力，同时保留该控件提供的所有功能。
 
-在 Windows 8 风格的应用程序中，你有许多令人兴奋的方式使用特定的复杂控件（如 GridView、ListView、FlipView 或 SemanticZoom）来显示数据。
+在 Windows 8 风格的应用程序中，你有许多令人兴奋的方式使用特定的复杂控件（如`GridView`、`ListView`、`FlipView`或`SemanticZoom`）来显示数据。
 
 在第 9 章中，你将学习如何使用操作系统提供的控件和服务与其进行更多集成。你还将学习其他重要功能，如数据持久化、本地化、通知和实时磁贴（Live Tiles）。
 
-# 练习
+## 练习
 
 - 1. 独立动画和依赖动画的区别是什么？
 - 2. 什么是 Animation Library？
 - 3. 什么是渲染变换（render transformation）？
 - 4. 如何将控件属性绑定到模板内部的另一个属性？
-- 5. 将集合绑定到 GridView 时，为什么要使用 CollectionSource？
-- 6. SemanticZoom 的目的是什么？
+- 5. 将集合绑定到`GridView`时，为什么要使用`CollectionSource`？
+- 6.`SemanticZoom`的目的是什么？
 
 > 注意：练习答案可以在附录 A 中找到。
 
-
-
-
-
-# 本章你学到的
+## 本章你学到的
 
 | 主题 | 核心概念 |
 | --- | --- |
@@ -10578,11 +9981,11 @@ void ItemView_ItemClick(object sender, ItemEventArgs e)
 | 动画库 (Animation Library) | API 提供了一组预定义的动画和过渡效果，这些都是独立动画，并且与 Windows 8 的行为一致。 |
 | 故事板 (Storyboard) | 动画使用故事板控制。单个故事板可以同时控制多个动画。 |
 | 视觉状态 (Visual states) | 你可以为控件分配不同的视觉状态。对于每个视觉状态，你可以定义 UI 的外观。视觉状态使用故事板描述。在切换状态时，动画负责过渡到新状态。 |
-| 渲染变换 (Render transformation) | 大多数情况下，你对变换进行动画。渲染变换是在布局逻辑执行后应用的，因此它不会影响布局。你可以对单个 UIElement 应用一个或多个变换。 |
-| 控件模板 (Control template) | 要更改控件的视觉外观，你可以将新的控件模板分配给控件的 Template 属性。这将允许你重新定义控件的内部视觉结构，而不会影响控件的行为和逻辑。 |
-| 内容呈现器 (ContentPresenter) | 如果在控件Template 内部有控件，你应该显式地为控件定义一个占位符以便其显示内容。你可以使用 ContentPresenter 标记内容应该放置在控件内部的位置。 |
-| 集合源 (CollectionConfigSource) | CollectionSource 作为数据集合的视图。它支持分组、排序和过滤，而不会影响底层集合。它是 GridView 或 ListView 等复杂控件展示数据的极佳方式。 |
-| 分组 (Grouping) | 项目控件（ItemsControls）代表视觉列表。列表中的项目可以使用 GroupStyles 和 HeaderTemplates 通过任何属性进行视觉上的分组。 |
+| 渲染变换 (Render transformation) | 大多数情况下，你对变换进行动画。渲染变换是在布局逻辑执行后应用的，因此它不会影响布局。你可以对单个`UIElement`应用一个或多个变换。 |
+| 控件模板 (Control template) | 要更改控件的视觉外观，你可以将新的控件模板分配给控件的`Template`属性。这将允许你重新定义控件的内部视觉结构，而不会影响控件的行为和逻辑。 |
+| 内容呈现器 (ContentPresenter) | 如果在控件`Template`内部有控件，你应该显式地为控件定义一个占位符以便其显示内容。你可以使用`ContentPresenter`标记内容应该放置在控件内部的位置。 |
+| 集合源 (CollectionConfigSource) | `CollectionSource`作为数据集合的视图。它支持分组、排序和过滤，而不会影响底层集合。它是`GridView`或`ListView`等复杂控件展示数据的极佳方式。 |
+| 分组 (Grouping) | 项目控件（ItemsControls）代表视觉列表。列表中的项目可以使用`GroupStyles`和`HeaderTemplates`通过任何属性进行视觉上的分组。 |
 
 # 构建 Windows 8 风格的应用程序
 
@@ -10598,11 +10001,11 @@ void ItemView_ItemClick(object sender, ItemEventArgs e)
 
 本章的 WROX.COM 代码下载
 
-你可以在 www.wrox.com/remitle.cgi?isbn=012680 的“Download Code”选项卡中找到本章的代码下载。代码位于 Chapter09.zip 下载包中，并根据相应的练习描述进行了单独命名。
+你可以在`www.wrox.com/remitle.cgi?isbn=012680`的“Download Code”选项卡中找到本章的代码下载。代码位于`Chapter09.zip`下载包中，并根据相应的练习描述进行了单独命名。
 
 在第 7 章和第 8 章中，你学习了如何使用可扩展的应用程序标记语言 (XAML) 为 Windows 8 风格的应用创建用户界面 (UI)，并学习了基础的 UI 控件。Windows 8 风格的应用程序使用一套模式来提供统一的用户体验。在本章中，你将学习这些决定你的应用程序如何实现与作为 Windows 8 运行的应用程序相同的用户交互体验的模式。你还学习了关于将应用与操作系统启动屏幕集成的重要细节。
 
-# WINDOWS 8 应用程序的生命周期
+## WINDOWS 8 应用程序的生命周期
 
 在 Windows 的之前的任何版本中，即使在 Windows 8 的桌面模式下，用户也可以同时运行多个应用程序，所有程序都在各自的窗口中显示信息。在这种模式下，每个运行的应用程序都会消耗资源，尽管用户大部分时间都在正确关注其中一个应用。
 
@@ -10610,17 +10013,17 @@ void ItemView_ItemClick(object sender, ItemEventArgs e)
 
 Windows 8 风格的应用始终有一个前台应用程序在管理用户交互，而其他应用程序被隐藏了。Windows 8 操作系统使用非常简单的策略来管理资源：提供最佳的用户体验。
 
-# 应用程序生命周期状态
+## 应用程序生命周期状态
 
 如如图 9-1 所示，Windows 8 应用程序可以处于四种状态：未运行、运行中、挂起和已终止。
 
-# 应用生命周期
+## 应用生命周期
 
 如图 9-1 所示，Windows 8 应用的生命周期。
 
 ![应用生命周期](img/4ba17960f93c5e048da44643d695f341.png)
 
-# Windows 8 应用程序的生命周期
+## Windows 8 应用程序的生命周期
 
 当应用程序启动（通过用户或另一个应用）时，它会被激活并进入运行状态。在这种状态下，前台应用程序获得可用资源以保持响应。通常情况下，只有一个应用程序处于运行状态——或者在屏幕上并排时，两个应用处于运行状态。
 
@@ -10628,28 +10031,24 @@ Windows 8 风格的应用始终有一个前台应用程序在管理用户交互�
 
 这种生命周期的结果是，前台应用程序始终拥有系统提供的最大资源，而且仍然节省了电池。当前台应用程序等待用户输入时，它消耗的 CPU 周期很少。即使是挂起的应用程序也非常节省资源，因为它们不消耗内存。
 
-# 管理应用状态
+## 管理应用状态
 
 从应用程序开发的角度来看，Windows 8 应用生命周期模型存在一些问题。假设一个应用程序显示股票汇率，并每 30 秒刷新一次。当此应用处于前台时，用户可以查看变化。然而，如果应用进入后台，它的代码无法运行，也不会刷新。因此，当用户在 10 分钟后切换回该应用时，应用显示的是 10 分钟前的信息，可能还需要 30 秒才能显示当前的汇率。
 
-
-
-
-
-## 表 9-1: 应用生命周期事件
+### 表 9-1: 应用生命周期事件
 
 | 应用事件 | 图 9-1 中的状态转换 | 描述 |
 |---|---|---|
-| OnLaunched（启动） | Activating（激活） | 应用由用户或其他应用程序启动。处理方法接收类型为 `LaunchActivatedEventArgs` 的参数。你可以检查应用启动的 `Kind` 属性。`PreviousExecutionState` 属性告诉你是应用在此激活之前的状态。其值（`ApplicationExecutionState` 枚举值之一）为 `Terminated` 或 `ClosedByUser`，表示应用程序之前分别被系统或用户关闭。 |
-| Suspending（挂起） | Suspending（挂起） | 由于用户切换到另一个应用程序，系统挂起你的应用程序。事件处理器接收 `SuspendingEventArgs`。在在此事件处理器中，你通常保存应用程序的状态，以便在应用程序被系统终止时恢复它。你还可以向系统释放不必要的资源。 |
-| Resuming（恢复） | Resuming（恢复） | 当用户切换回你被挂起的应用程序时，会调用此事件处理器。在这里你可以取回在 `Suspending` 事件处理器中释放的资源。 |
+| `OnLaunched`（启动） | Activating（激活） | 应用由用户或其他应用程序启动。处理方法接收类型为`LaunchActivatedEventArgs`的参数。你可以检查应用启动的`Kind`属性。`PreviousExecutionState`属性告诉你是应用在此激活之前的状态。其值（`ApplicationExecutionState`枚举值之一）为`Terminated`或`ClosedByUser`，表示应用程序之前分别被系统或用户关闭。 |
+| `Suspending`（挂起） | Suspending（挂起） | 由于用户切换到另一个应用程序，系统挂起你的应用程序。事件处理器接收`SuspendingEventArgs`。在在此事件处理器中，你通常保存应用程序的状态，以便在应用程序被系统终止时恢复它。你还可以向系统释放不必要的资源。 |
+| `Resuming`（恢复） | Resuming（恢复） | 当用户切换回你被挂起的应用程序时，会调用此事件处理器。在这里你可以取回在`Suspending`事件处理器中释放的资源。 |
 | No event（无事件） | Terminating（终止） | 当系统需要资源并决定终止你的应用程序时，它不允许你拦截终止过程，因此它不会提供任何事件处理器来响应终止事件。 |
 
-## 挂起、恢复和关闭应用程序
+### 挂起、恢复和关闭应用程序
 
-Windows 8 要求你维护应用程序的挂起和恢复策略。当你切换到另一个应用程序时，它不会立即挂起你的应用程序。它会给你几秒钟时间重新考虑并切换回应用程序。几秒后，如果你的应用程序仍在后台运行，操作系统将将其挂起，应用程序对象将接收到 `Suspending` 事件。
+Windows 8 要求你维护应用程序的挂起和恢复策略。当你切换到另一个应用程序时，它不会立即挂起你的应用程序。它会给你几秒钟时间重新考虑并切换回应用程序。几秒后，如果你的应用程序仍在后台运行，操作系统将将其挂起，应用程序对象将接收到`Suspending`事件。
 
-## Windows 8 的生命周期
+### Windows 8 的生命周期
 
 你应该在此事件处理器方法中执行若干活动：
 
@@ -10657,20 +10056,20 @@ Windows 8 要求你维护应用程序的挂起和恢复策略。当你切换到�
 - 如果你对资源持有任何独占锁（例如，你锁定了应用程序内部使用的文件），你可以释放锁，并在金融应用挂起期间为其他应用程序提供文件的访问访问。
 - 如果可能，你可以减少内存占用。例如，如果你在内存中保留一个大型矩阵以加速某些操作，你可以对其进行保存并释放它占用的内存。
 
-操作系统对你的要求非常严格。你有最多 5 秒的时间来执行所有活动。如果 `Suspending` 事件未在 5 秒内返回，应用程序将被终止。应用程序不应启动阻塞执行的操作（例如弹出消息并等待用户输入，或向互联网上传数据）。
+操作系统对你的要求非常严格。你有最多 5 秒的时间来执行所有活动。如果`Suspending`事件未在 5 秒内返回，应用程序将被终止。应用程序不应启动阻塞执行的操作（例如弹出消息并等待用户输入，或向互联网上传数据）。
 
-当你切换回被挂起的应用程序时，操作系统将其带到前台，应用程序会立即接收到 `Resuming` 事件。此时你可以恢复继续应用程序正常运行所需的一切：
+当你切换回被挂起的应用程序时，操作系统将其带到前台，应用程序会立即接收到`Resuming`事件。此时你可以恢复继续应用程序正常运行所需的一切：
 
 - 你可以恢复应用程序状态。
-- 你可以将数据重新加载到内存中，这些数据是在 `Suspending` 事件中为了减少内存占用而保存的。
+- 你可以将数据重新加载到内存中，这些数据是在`Suspending`事件中为了减少内存占用而保存的。
 
 从挂起状态恢复应用程序时，操作系统并不限制你恢复应用程序数据和 UI 的时间。
 
-Windows 8允许你在关闭应用程序时保存状态。如果用户明确关闭应用程序（按下 Alt+F4 或使用关闭手势），应用程序立即进入后台。然而，它不会立即运行。操作系统会等待几秒钟，然后挂起应用程序。应用程序接收到 `Suspending` 事件，并有 5 秒时间保存状态。从事件处理器返回（或 5 秒过去）后，操作系统将关闭应用程序进程。
+Windows 8允许你在关闭应用程序时保存状态。如果用户明确关闭应用程序（按下`Alt+F4`或使用关闭手势），应用程序立即进入后台。然而，它不会立即运行。操作系统会等待几秒钟，然后挂起应用程序。应用程序接收到`Suspending`事件，并有 5 秒时间保存状态。从事件处理器返回（或 5 秒过去）后，操作系统将关闭应用程序进程。
 
 现在你已经熟悉 Windows 8 生命周期管理的基础，是时候在实践中使用它了。
 
-## 使用生命周期事件
+### 使用生命周期事件
 
 让我们创建一个演示如何处理生命周期事件的应用程序。该应用程序提供了以下功能：
 
@@ -10685,11 +10084,11 @@ void OnResuming(object sender, object e)
 }
 ```
 
-## Windows 8 应用程序的生命周期
+### Windows 8 应用程序的生命周期
 
-5. 当应用程序启动时，它可以恢复状态。要实现这一点，请导航到 `OnLaunched` 方法。将以下代码复制到主体：
+5. 当应用程序启动时，它可以恢复状态。要实现这一点，请导航到`OnLaunched`方法。将以下代码复制到主体：
 
-6. 此时 `App.cs` 文件中的代码所示（为了简洁删除了注释）：
+6. 此时`App.cs`文件中的代码所示（为了简洁删除了注释）：
 
 ```cs
 using System;
@@ -10743,15 +10142,11 @@ namespace AppDemo
 }
 ```
 
+#### 工作原理
 
+当你从 Visual Studio 启动应用程序时，会调用`OnLaunched`方法，并显示了你在图 9-2 中看到的跟踪消息。在第 8 步中，当你切换到任务管理器时，操作系统会保持应用程序活动状态几秒钟，然后将其挂起。当应用程序接收到`Suspension`事件时，执行了以下代码行（在`OnSuspending`方法体内）：
 
-
-
-### 工作原理
-
-当你从 Visual Studio 启动应用程序时，会调用 `OnLaunched` 方法，并显示了你在图 9-2 中看到的跟踪消息。在第 8 步中，当你切换到任务管理器时，操作系统会保持应用程序活动状态几秒钟，然后将其挂起。当应用程序接收到 `Suspension` 事件时，执行了以下代码行（在 `OnSuspending` 方法体内）：
-
-```
+```cs
 var deferral = e.SuspendingOperation GetDeferral();
 EventTracer.WriteLine("Application is being suspended.");
 await Task.Delay(DelayOnSuspending());
@@ -10760,6 +10155,8 @@ EventTracer.WriteLine("The app has (0) ms left after saving its state.");
 Time.Now.TotalMilliseconds());
 deferral.Complete();
 ```
+
+
 
 代码获取了一个延迟（deferral）对象，因为它即将执行异步方法调用。正如你在第 5 章中学习到的，`await Task.Delay()` 调用会立即从 `OnSuspending` 方法返回，操作系统将不知道当前上下文中存在异步调用。获取延迟对象指示了这一点，`OnSuspending` 方法的调用者知道它应该等待 `deferral.Complete()` 操作作为完成信号。
 
@@ -10783,7 +10180,7 @@ deferral.Complete();
 
 > 你将在第 16 章中学习 Windows Store 和相关的提交过程。
 
-此应用程序包是一个基于开放式封装规范 (OPC) 标准的容器。它是一个使用 .zip 文件存储你的应用程序、其资源和相关信息的结构。当你在 Visual Studio 中运行应用程序时，IDE 会在后台创建并部署应用程序包。你可以创建一个独立的包，稍后可以将其提交到 Windows Store。
+此应用程序包是一个基于开放式封装规范 (OPC) 标准的容器。它是一个使用 `.zip` 文件存储你的应用程序、其资源和相关信息的结构。当你在 Visual Studio 中运行应用程序时，IDE 会在后台创建并部署应用程序包。你可以创建一个独立的包，稍后可以将其提交到 Windows Store。
 
 在本次练习中，你将学习如何创建一个应用程序包，仅仅是为了发现它的结构。
 
@@ -10791,23 +10188,23 @@ deferral.Complete();
 
 要创建并检查应用程序包，请按照以下步骤操作：
 
-- 1. 打开你在上一个练习中创建的 AppLifeCycleDemo 解决方案。你也可以在本章下载包的 `AppLifeCycleDemo Complete` 文件夹中找到此解决方案。
+1. 打开你在上一个练习中创建的 `AppLifeCycleDemo` 解决方案。你也可以在本章下载包的 `AppLifeCycleDemo Complete` 文件夹中找到此解决方案。
 
-- 2. 使用 Store 的 `Create App Package` 命令。出现 App Package 对话框，并询问你是否想要构建一个包以上传到 Windows Store，如图 9-6 所示。选择“否”，然后点击“下一步”。
+2. 使用 Store 的 `Create App Package` 命令。出现 App Package 对话框，并询问你是否想要构建一个包以上传到 Windows Store，如图 9-6 所示。选择“否”，然后点击“下一步”。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_351_0.png)
 
 图 9-6：Create App Package 对话框
 
-- 3. 在对话框的下一页中，你可以指定包设置，如图 9-7 所示。保持所有设置为默认，并点击“创建”。
+3. 在对话框的下一页中，你可以指定包设置，如图 9-7 所示。保持所有设置为默认，并点击“创建”。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_351_1.png)
 
 图 9-7：指定包设置
 
-- 4. IDE 构建了 AppLifeCycleDemo 项目，并在几秒钟创建了包。弹出 Create App Package 对话框，并带有指向包含应用程序包文件夹的超链接，如图 9-8 所示。点击超链接在 Windows 资源管理器中打开该文件夹。
+4. IDE 构建了 `AppLifeCycleDemo` 项目，并在几秒钟创建了包。弹出 Create App Package 对话框，并带有指向包含应用程序包文件夹的超链接，如图 9-8 所示。点击超链接在 Windows 资源管理器中打开该文件夹。
 
-- 5. 在文件夹中，你可以看到以 .zip 结尾的应用程序包，如图 9-9 所示。双击 .zip 文件以打开其内容。
+5. 在文件夹中，你可以看到以 `.zip` 结尾的应用程序包，如图 9-9 所示。双击 `.zip` 文件以打开其内容。
 
 部署应用程序
 
@@ -10817,34 +10214,30 @@ deferral.Complete();
 
 | 名称 | 修改日期 | 类型 |
 | --- | --- | --- |
-| Add-DeployPackage.ps1 | 2012-05-21 | 29 KB |
-| Add-DeployPackage.psd | 2012-04-17 | 5 KB |
-| AppxManifest_1.0.2_Any_Debug | 2012-06-19 | 26 KB |
-| AppxManifest_1.0.2_Any_Debug.exe | 2012-06-19 | 5 KB |
-| AppxManifest_1.0.2_Any_Debug.cer | 2012-06-19 | 1 KB |
+| `Add-DeployPackage.ps1` | 2012-05-21 | 29 KB |
+| `Add-DeployPackage.psd` | 2012-04-17 | 5 KB |
+| `AppxManifest_1.0.2_Any_Debug` | 2012-06-19 | 26 KB |
+| `AppxManifest_1.0.2_Any_Debug.exe` | 2012-06-19 | 5 KB |
+| `AppxManifest_1.0.2_Any_Debug.cer` | 2012-06-19 | 1 KB |
 
 图 9-9：应用程序文件
 
-- 6. 在文件夹中，你可以看到以 .appx 结尾的应用程序，如图 9-10 所示。将 .appx 扩展名更改为 .zip。
+6. 在文件夹中，你可以看到以 `.appx` 结尾的应用程序，如图 9-10 所示。将 `.appx` 扩展名更改为 `.zip`。
 
 | 名称 | 类型 |
 | --- | --- |
-| Assets | 文件夹 |
-| Common | 文件夹 |
-| ContentTypes.xml | XML 文档
-| App.xaml | Windows 标记文件 |
-| AppLifeCycleDemo.exe | 应用程序 |
-| AppxBlock.xml | XML 文档 |
-| AppManifest.xml | XML 文档 |
-| AppSignature.p7x | P7X 文件 |
-| MainPage.xaml | Windows 标记文件 |
-| resources.pri | PFF 文件 |
+| `Assets` | 文件夹 |
+| `Common` | 文件夹 |
+| `ContentTypes.xml` | XML 文档 |
+| `App.xaml` | Windows 标记文件 |
+| `AppLifeCycleDemo.exe` | 应用程序 |
+| `AppxBlock.xml` | XML 文档 |
+| `AppManifest.xml` | XML 文档 |
+| `AppSignature.p7x` | P7X 文件 |
+| `MainPage.xaml` | Windows 标记文件 |
+| `resources.pri` | PFF 文件 |
 
 图 9-10：应用程序的内容
-
-
-
-
 
 应用程序包清单设计器包含四个选项卡：应用程序 UI (Application UI)、功能 (Capabilities)、声明 (Declarations) 和打包 (Packaging)。JavaScript 应用程序还有一个名为“内容 URI (Content URIs)”的选项卡。每个选项卡都是特定类型信息的容器，如表 9-2 所示。
 
@@ -10860,7 +10253,7 @@ deferral.Complete();
 
 ## 安装、更新和删除
 
-Windows 要求应用程序必须使用受信任的签名进行签名。该签名使 Windows 能够确认签名者的身份，并验证包的内容未被篡改。如果有人更改了你的应用程序的内容（例如，更改了代表包的 .zip 文件中的执行文件），签名将失效。出于安全考虑，Windows 不会部署未签名的包。
+Windows 要求应用程序必须使用受信任的签名进行签名。该签名使 Windows 能够确认签名者的身份，并验证包的内容未被篡改。如果有人更改了你的应用程序的内容（例如，更改了代表包的 `.zip` 文件中的执行文件），签名将失效。出于安全考虑，Windows 不会部署未签名的包。
 
 > 注意 Windows 8 保留了一份受信任的认证机构列表——即创建用于数字签名代码和文档证书的第三方。当你的应用程序使用直接或间接来自受信任认证机构的证书进行签名时，该签名被视为受信任的。
 
@@ -10871,10 +10264,6 @@ Windows 要求应用程序必须使用受信任的签名进行签名。该签名
 与之前的 Windows 版本不同，Windows 8 安装时不需要提升权限——你不需要以管理员身份登录计算机。安装期间不需要自定义操作，安装应用程序所需的所有内容都包含包中。这使得整个安装用户体验变得快速简单；用户不会被提示提供额外信息。用户不需要感知注册表或程序文件的内容。获取应用程序就像在超市买啤酒一样——从架子上拿下来，付款，然后即可。
 
 如果用户不喜欢某个应用程序，或简单地不想再使用它，他仍然可以卸载它。就像安装一样，卸载应用程序也很简单。
-
-
-
-
 
 # 第 9 章构建 Windows 8 风格应用程序
 
@@ -10918,7 +10307,7 @@ private async void MainPageRightTapped(object sender, RightTappedRoutedEventArgs
 
 图 9-14：屏幕上显示了上下文菜单。
 
-#原理
+# 原理
 
 准备好的项目包含一个 `GameController.cs` 文件，它定义了负责实现谜游戏逻辑的 `GameController` 类型。在第 4 步中，你为 `LayoutRoot` 网格添加了事件处理器，在第 5 步中，你定义了事件处理器的方法体。每当你在应用程序屏幕上右键点击（或使用“点按住”手势）时，都会显示上下文菜单。
 
@@ -10965,7 +10354,7 @@ var point = e.GetPosition(null);
 
 在此练习中，你为 SimplePuzzle 应用程序的应用栏添加几个命令。要向应用程序带有命令的应用栏，请遵循以下步骤：
 
-- 使用文件打开项目（Ctrl+Shift+O）命令打开本章节下载的 `SimplePuzzle.sln` 文件。如果你在上一个练习中修改了该项目，请使用 Chapter09.zip 下载提取此项目以便从原始样式开始。
+- 使用文件打开项目（Ctrl+Shift+O）命令打开本章节下载的 `SimplePuzzle.sln` 文件。如果你在上一个练习中修改了该项目，请使用 `Chapter09.zip` 下载提取此项目以便从原始样式开始。
 - 在解决方案管理器中，双击 `MainPage.xaml` 文件在设计器中打开它。
 - 在 XAML 窗格中，在 `<Grid x:Name="LayoutRoot"...>` 节点之前输入以下代码：
 
@@ -10982,27 +10371,53 @@ var point = e.GetPosition(null);
           Style={StaticResource AppBarButtonStyle}>
           <AutomationProperties.AutomationId>
             NewGameProperties.AutomationId
-          </AutomationProperties.AutomationId>
-          <AutomationProperties.Name>
-            New Game
-          </AutomationProperties.Name>
-        </Button>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Right"
-          Orientation="Horizontal">
-          <Button x:Name="ResetGameButton" Height="84"
-            VerticalAlignment="Top"
-            Style={StaticResource AppBarButtonStyle}>
-            <AutomationProperties.AutomationId>
-              RestartGameButton.AutomationId
-            </AutomationProperties.AutomationId>
-          <AutomationProperties.Name>
-            Restart
-          </AutomationProperties.Name>
-        </Button>
-        </StackPanel>
-      </StackPanel>
-    </Grid>
-  </AppBar>
+```
+
+
+
+```xml
+</AutomationProperties.AutomationId>
+
+<AutomationProperties.Name>
+
+  New Game
+
+</AutomationProperties.Name>
+
+</Button>
+
+<StackPanel Grid.Column="1" HorizontalAlignment="Right"
+
+  Orientation="Horizontal">
+
+  <Button x:Name="ResetGameButton" Height="84"
+
+    VerticalAlignment="Top"
+
+    Style={StaticResource AppBarButtonStyle}>
+
+    <AutomationProperties.AutomationId>
+
+      RestartGameButton.AutomationId
+
+    </AutomationProperties.AutomationId>
+
+  <AutomationProperties.Name>
+
+    Restart
+
+  </AutomationProperties.Name>
+
+</Button>
+
+</StackPanel>
+
+</StackPanel>
+
+</Grid>
+
+</AppBar>
+
 </Page.BottomAppBar>
 ```
 
@@ -11014,17 +10429,25 @@ var point = e.GetPosition(null);
 
 5. 关闭应用程序。
 
-6. 在 `MainPage.xaml` 文件中，为第一个 `<Button>` 节点（带有 `NewGameButton`）添加 `Style` 属性，如下**粗体**代码所示：
+6. 在`MainPage.xaml`文件中，为第一个`<Button>`节点（带有`NewGameButton`）添加`Style`属性，如下**粗体**代码所示：
 
 ```xml
 <Button x:Name="NewGameButton" Height="84" VerticalAlignment="Top"
+
   Style={StaticResource AppBarButtonStyle}>
+
   <AutomationProperties.AutomationId>
+
     NewGameButton
+
   </AutomationProperties.AutomationId>
+
   <AutomationProperties.Name>
+
     New Game
+
   </AutomationProperties.Name>
+
 </Button>
 ```
 
@@ -11032,26 +10455,41 @@ var point = e.GetPosition(null);
 
 8. 关闭应用程序。
 
-#原理
+## 原理
 
 命令栏的布局由你在第 3 步中插入的 XAML 片段定义。布局的骨架很简单：
 
 ```xml
 <Page.BottomAppBar>
+
   <AppBar x:Name="CommandBar">
+
     <Grid>
+
       <Grid.ColumnDefinitions>
+
         <ColumnDefinition/>
+
         <ColumnDefinition/>
+
       </Grid.ColumnDefinitions>
+
       <StackPanel Orientation="Horizontal">
+
         <!-- 左对齐的按钮 -->
+
       </StackPanel>
+
       <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+
         <!-- 右对齐的按钮 -->
+
       </StackPanel>
+
     </Grid>
+
   </AppBar>
+
 </Page.BottomAppBar>
 ```
 
@@ -11059,31 +10497,37 @@ var point = e.GetPosition(null);
 
 图 9-16：现在第一个按钮按预期显示
 
-
-
-
 # 第 9 章 构建 Windows 8 应用程序
 
-页面具有 `BottomAppBarProperty`，并且 `AppBar` 控件被分配了此属性。该控件使用两列网格，每列有一个 `StackPanel`，右对齐。按钮根据布局放在相应的 `StackPanel` 中。
+页面具有`BottomAppBarProperty`，并且`AppBar`控件被分配了此属性。该控件使用两列网格，每列有一个`StackPanel`，右对齐。按钮根据布局放在相应的`StackPanel`中。
 
 应用栏中的按钮定义如下：
 
 ```xml
 <Button x:Name="NewGameButton" Height="84" VerticalAlignment="Top"
+
 Style="StaticResource AppBarButtonStyle"
+
 Content="&#xE0B4;">
+
 <AutomationProperties.AutomationId>
+
 NewGameButton
+
 </AutomationProperties.AutomationId>
+
 <AutomationProperties.Name>
+
 New Game
+
 </AutomationProperties.Name>
+
 </Button>
 ```
 
-这种定义并不直观，显示应用栏的关键是 `Style` 属性。该资源在 `Style.xml` 文件中定义，负责显示应用栏，如图 9-16 所示。在步骤 3 中输入 XAML 代码时，`NewGameButton` 没有样式属性，这就是为什么你在图 9-15 中看到了一个特殊的按钮。
+这种定义并不直观，显示应用栏的关键是`Style`属性。该资源在`Style.xml`文件中定义，负责显示应用栏，如图 9-16 所示。在步骤 3 中输入 XAML 代码时，`NewGameButton`没有样式属性，这就是为什么你在图 9-15 中看到了一个特殊的按钮。
 
-`<AutomationProperties.AutomationId>` 元素定义了用于 Windows 8 自动化的应用栏按钮标识符。`<AutomationProperties.Name>` 元素设置了显示的按钮名称。有趣的是，`<Button>` 元素的内容由十六进制代码 `&#xE0B4;` 表示。这种代码是 Segoe UI 字体（将此字体分配给应用栏），如图 9-17 所示。
+`<AutomationProperties.AutomationId>`元素定义了用于 Windows 8 自动化的应用栏按钮标识符。`<AutomationProperties.Name>`元素设置了显示的按钮名称。有趣的是，`<Button>`元素的内容由十六进制代码`&#xE0B4;`表示。这种代码是 Segoe UI 字体（将此字体分配给应用栏），如图 9-17 所示。
 
 ![](img/ba176960f93ce0483da464a3d5f_361.png) 图 9-17：Segoe UI 符号
 
@@ -11097,29 +10541,37 @@ New Game
 
 1. 打开上一个练习中使用的解决方案，除非它已经在 Visual Studio 中。
 
-2. 打开 `MainPage.xaml` 文件，在编辑器的窗格中导航到代表 `NewGameButton` 的 `<Button>` 元素。为该元素添加 `Tapped` 属性，如下代码所示：
+2. 打开`MainPage.xaml`文件，在编辑器的窗格中导航到代表`NewGameButton`的`<Button>`元素。为该元素添加`Tapped`属性，如下代码所示：
 
 ```xml
 <Button x:Name="NewGameButton" Height="84" VerticalAlignment="Top"
+
 Style="StaticResource AppBarButtonStyle"
+
 Tapped="NewGameButtonTapped">
 ```
 
-3. 在 XAML 窗格中，右键点击 `Tapped` 属性并选择“转到事件”。IDE 会创建方法的骨架。输入方法体，如下代码片段所示：
+3. 在 XAML 窗格中，右键点击`Tapped`属性并选择“转到事件”。IDE 会创建方法的骨架。输入方法体，如下代码片段所示：
 
 ```csharp
 private void NewGameButtonTapped(object sender,
+
 Windows.UI.Xaml.Input.TappedRoutedEventArgs args)
+
 {
+
   game.StartNew(_height, _width);
+
 }
 ```
 
-4. 回到 `MainPage.xaml` 文件，导航到代表 `ResetGameButton` 的 `<Button>` 元素。为该元素添加 `Tapped` 属性，如下代码所示：
+4. 回到`MainPage.xaml`文件，导航到代表`ResetGameButton`的`<Button>`元素。为该元素添加`Tapped`属性，如下代码所示：
 
 ```xml
 <Button x:Name="ResetGameButton" Height="84" VerticalAlignment="Top"
+
 Style="StaticResource AppBarButtonStyle"
+
 Tapped="ResetGameButtonTapped">
 ```
 
@@ -11127,9 +10579,13 @@ Tapped="ResetGameButtonTapped">
 
 ```csharp
 private void ResetGameButtonTapped(object sender,
+
 Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+
 {
+
   game.RestoreStartPositions();
+
 }
 ```
 
@@ -11139,9 +10595,9 @@ Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
 
 ### 工作原理
 
-在此练习中，你以在第 8 章中学到的方法为应用栏按钮分配了事件处理代码。然而，这次你使用了 `Tapped` 事件。
+在此练习中，你以在第 8 章中学到的方法为应用栏按钮分配了事件处理代码。然而，这次你使用了`Tapped`事件。
 
-由于 `SimplePuzzle`的工作方式是异步的，当你运行应用程序时，当应用正在打拼图时可以使用重启命令。这可能会导致错误，因此在初始化阶段禁用重启应用按钮更好。你可以观察到的另一个问题是，点击新游戏或重启按钮后，应用栏仍然显示在屏幕上。在练习中，你将学习如何管理这些问题。
+由于`SimplePuzzle`的工作方式是异步的，当你运行应用程序时，当应用正在打拼图时可以使用重启命令。这可能会导致错误，因此在初始化阶段禁用重启应用按钮更好。你可以观察到的另一个问题是，点击新游戏或重启按钮后，应用栏仍然显示在屏幕上。在练习中，你将学习如何管理这些问题。
 
 > 注意：你可以在本书的配套网站 www.wrox.com 的 Chapter09.zip 下载包 SimplePuzzle App 文件夹中找到此练习的代码。
 
@@ -11151,37 +10607,44 @@ Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
 
 1. 打开上一个练习中使用的解决方案，除非它已经在 Visual Studio 中。
 
-2. 打开 `GameController.cs` 文件，导航到 `StartNew` 方法，并将 `await Shuffle(10)` 语句更改为：
+2. 打开`GameController.cs`文件，导航到`StartNew`方法，并将`await Shuffle(10)`语句更改为：
 `await Shuffle(height * width * 10);`
 
 此更改有效地打乱了拼图块，并且花费的时间比之前的解决方案长，因此让你有时间检查在拼图初始化时重启按钮已禁用。
 
-3. 打开 `MainPage.xaml.cs` 文件，用这里的加粗代码扩展 `Page_Loaded` 方法体：
+3. 打开`MainPage.xaml.cs`文件，用这里的加粗代码扩展`Page_Loaded`方法体：
 
 ```csharp
 private void Page_Loaded(object sender, EventArgs args)
+
 {
+
     _game = new GameController(PuzzleCanvas);
+
     _game.GameStarted += (s, arg) => VisualStateManager.GoToState(this, "InProgress", true);
+
     _game.ShuffleStarted += (s, arg) => RestartGameButton.IsEnabled = false;
+
     _game.ShuffleCompleted += (s, arg) => RestartGameButton.IsEnabled = true;
+
     _game.GameCompleted += GameCompleted;
+
     _height = 3;
+
     _width = 3;
+
     _StartNew();
+
 }
 ```
 
 4. 按 Ctrl+F5 运行应用程序。移动几个拼块，然后右键点击或使用 Windows+Z 组合键显示应用栏。点击新游戏按钮。观察在拼图打乱时重启按钮是禁用的，然后它又变为可用。关闭应用程序。
 
-5. 在 `MainPage.xaml` 文件中，将以下代码片段添加到 `NewGameButtonTapped` 方法体中，然后将该片段用于 `ResetGameButtonTapped` 方法体：
+5. 在`MainPage.xaml`文件中，将以下代码片段添加到`NewGameButtonTapped`方法体中，然后将该片段用于`ResetGameButtonTapped`方法体：
 
 ```csharp
 CommandBar.IsOpen = false;
 ```
-
-
-
 
 ## 38 | 第 9 章 构建 Windows 8 风格应用程序
 
@@ -11191,71 +10654,117 @@ CommandBar.IsOpen = false;
 
 - 1. 打开你在上一个练习中使用的解决方案，除非它在 Visual Studio 中仍打开着。
 
-- 2. 打开 `MainPage.xml` 文件，在文件顶部 `using` 指令的末尾追加以下行：
+- 2. 打开`MainPage.xml`文件，在文件顶部`using`指令的末尾追加以下行：
 
-- 3. 在 `NewGameButtonTapped` 方法的头部添加 `async` 修饰符，并将以下**加粗代码**插入到方法中：
+- 3. 在`NewGameButtonTapped`方法的头部添加`async`修饰符，并将以下**加粗代码**插入到方法中：
 
 ```csharp
 using Windows.UI.Popups;
 
 private async void NewGameButtonTapped(object sender, TappedRoutedEventArgs e)
+
 {
+
     Windows.Xaml.Input;
+
     if (_game.State == GameState.InProgress || _game.State == GameState.Shuffle)
+
     {
+
         bool abort = true;
+
         var messageDialog = new MessageDialog(
+
             "Are you sure you want to abort this game and start a new one?",
+
             "Game is in progress");
+
         messageDialog.Commands.Add(new UICommand("Yes", (command) => { abort = true; }));
+
         messageDialog.Commands.Add(new UICommand("No", (command) => { abort = false; }));
+
         messageDialog.DefaultCommandIndex = 1;
+
         await messageDialog.ShowAsync();
+
         if (abort) return;
+
     }
+
     _game.StartNew(_height, _width);
+
     StatusBar.IsOpen = false;
+
 }
 ```
 
-- 4. 导航到 `ResetGameButtonTapped` 方法。给其头部添加 `async` 修饰符，并将以下加粗代码插入到方法体中：
+- 4. 导航到`ResetGameButtonTapped`方法。给其头部添加`async`修饰符，并将以下加粗代码插入到方法体中：
 
 ```csharp
 private async void ResetGameButtonTapped(object sender, Windows.Xaml.Input.TappedRoutedEventArgs e)
+
 {
+
     if (_game.State == GameState.InProgress)
+
     {
+
         bool abort = true;
+
         var messageDialog = new MessageDialog(
+
             "Are you sure you want to restart this game?",
+
             "Game is in progress");
+
         messageDialog.Commands.Add(
+
             new UICommand("Yes", (command) => { restart = true; }));
+
         messageDialog.Commands.Add(
+
             new UICommand("No", (command) => { restart = false; }));
+
         messageDialog.DefaultCommandIndex = 0;
+
         messageDialog.CancelCommandIndex = 1;
+
         await messageDialog.ShowAsync();
+
         if (!restart) return;
+
         _game.RestoreStartPositions();
+
         Command.IsOpen = false;
+
 }
 ```
 
-- 5. 给 `GameCompleted` 方法添加 `async` 修饰符，并按照如下加粗代码更改其方法体：
+- 5. 给`GameCompleted`方法添加`async`修饰符，并按照如下加粗代码更改其方法体：
 
 ```csharp
 private async void GameCompleted(object sender, EventArgs e)
+
 {
+
     VisualStateManager.GoToState(this, "Completed", true);
+
     var messageDialog = new MessageDialog(
+
         "You have successfully solved the puzzle!",
+
         "Game Completed");
+
     messageDialog.Commands.Add(new UICommand("OK"));
+
     await messageDialog.ShowAsync();
+
     _game.StartNew(_height, _width);
+
 }
 ```
+
+
 
 - 6. 按 Ctrl+F5 运行应用。在应用栏中，点击“新游戏”按钮。出现第 3 步中指定的确认消息，如图 9-18 所示。
 
@@ -11466,8 +10975,15 @@ private async void GameCompleted(object sender, EventArgs e)
         "You have successfully solved the puzzle!",
         "Game Completed");
     messageDialog.Commands.Add(new UICommand("OK"));
-    await messageDialog.ShowAsync();
-    _game.StartNew(_height, _width);
+```
+
+
+
+```
+await messageDialog.ShowAsync();
+
+_game.StartNew(_height, _width);
+
 }
 ```
 
@@ -11489,10 +11005,6 @@ private async void GameCompleted(object sender, EventArgs e)
 
 重要的是，数据的生命周期与应用程序的生命周期相绑定。如果你移除应用程序，所有的应用数据也将被移除。
 
-
-
-
-
 ## 应用数据存储
 
 Windows 8 提供了三个应用存储器，如表 9-3所示。在为应用程序设计数据管理时，您应该决定哪种存储器适用于特定类型的应用数据。
@@ -11511,38 +11023,44 @@ Windows 8 提供了三个应用存储器，如表 9-3所示。在为应用程序
 
 ## ApplicationData 类
 
-Runtime 提供了 Windows Storage 命名空间下的 ApplicationData 类。该类是所有应用数据存储器、设置和文件的中心。表 9-4 总结了该类最重要的成员。
+Runtime 提供了 Windows Storage 命名空间下的`ApplicationData`类。该类是所有应用数据存储器、设置和文件的中心。表 9-4 总结了该类最重要的成员。
 
 # 第 9 章 构建 Windows 8 风格的应用程序
 
-表 9-4：重要的 ApplicationData 成员
+表 9-4：重要的`ApplicationData`成员
 
 | 成员 | same |
 | --- | --- |
-| ClearAsync | 此方法从本地、漫游和临时应用数据存储器中删除所有应用数据。 |
-| Current | 此属性提供与当前应用关联的数据存储器的访问。 |
-| DataChanged | 当漫游应用数据同步时触发此事件。 |
-| LocalFolder | 获取本地应用数据存储器中的根文件夹。 |
-| LocalSettings | 获取本地应用数据存储器中的应用设置容器。 |
-| RoamingFolder | 获取漫游应用数据存储器中的根文件夹。 |
-| RoamingSettings | 获取漫游应用数据存储器中的应用设置容器。 |
-| RoamingStorageQuota | 获取从漫游应用数据存储器同步到云端的最大大小。 |
-| TemporaryFolder | 获取临时应用数据存储器中的根文件夹。 |
-| Version | 获取应用存储器中应用数据的版本号。 |
+| `ClearAsync` | 此方法从本地、漫游和临时应用数据存储器中删除所有应用数据。 |
+| `Current` | 此属性提供与当前应用关联的数据存储器的访问。 |
+| `DataChanged` | 当漫游应用数据同步时触发此事件。 |
+| `LocalFolder` | 获取本地应用数据存储器中的根文件夹。 |
+| `LocalSettings` | 获取本地应用数据存储器中的应用设置容器。 |
+| `RoamingFolder` | 获取漫游应用数据存储器中的根文件夹。 |
+| `RoamingSettings` | 获取漫游应用数据存储器中的应用设置容器。 |
+| `RoamingStorageQuota` | 获取从漫游应用数据存储器同步到云端的最大大小。 |
+| `TemporaryFolder` | 获取临时应用数据存储器中的根文件夹。 |
+| `Version` | 获取应用存储器中应用数据的版本号。 |
 
-当您使用 ApplicationData 类时，只需几步即可保存和恢复 SimplePuzzle 中的拼图表。在本章下载的 SimplePuzzle ManageState 文件夹中有一个准备好的示例，演示了如何使用 ApplicationData。当您启动 SimplePuzzle 时，它会识别是否存在可以恢复的游戏，并向用户提供恢复已保存游戏或开始新游戏的选项。当拼图被解决时，它会移除之前保存的状态。
+当您使用`ApplicationData`类时，只需几步即可保存和恢复 SimplePuzzle 中的拼图表。在本章下载的 SimplePuzzle ManageState 文件夹中有一个准备好的示例，演示了如何使用`ApplicationData`。当您启动 SimplePuzzle 时，它会识别是否存在可以恢复的游戏，并向用户提供恢复已保存游戏或开始新游戏的选项。当拼图被解决时，它会移除之前保存的状态。
 
-大部分工作可以在 App.xaml.cs 文件中找到，如列表 9-1 所示。为了简洁，省略了部分未更改的代码和注释。
+大部分工作可以在`App.xaml.cs`文件中找到，如列表 9-1 所示。为了简洁，省略了部分未更改的代码和注释。
 
 # 列表 9-1：App.xaml.cs 文件（提取）
 
 ```
 sealed partial class App {
+
     // 应用状态常量
+
     private const string PUZZLE_STATE = "PuzzleState";
+
     private const string TABLE_ROWS = "TableRows";
+
     private const string TABLE_COLS = "TableCols";
+
     private const string EMPTY_CELL = "EmptyCell";
+
     private const string TABLE_CELLS = "TableCells";
 
     public App()
@@ -11550,9 +11068,13 @@ sealed partial class App {
 
 ```
 {
+
   this.InitializeComponent();
+
   this.Suspending += OnSuspending;
+
   this.Resuming += OnResuming;
+
 }
 ```
 
@@ -11560,45 +11082,77 @@ sealed partial class App {
 
 ```
 private void OnSuspending(object sender, SuspendingEventArgs e)
+
 {
+
   if (Game.State != GameState.Completed)
+
   {
+
     SavePuzzleState();
+
   }
+
 }
 
 private void OnResuming(object sender, object e)
+
 {
+
   RestorePuzzleState();
+
 }
 
 internal static void SavePuzzleState()
+
 {
+
   var puzzleState = new ApplicationDataCompositeValue();
+
   puzzleState["TABLE_ROWS"] = Game.Height;
+
   puzzleState["TABLE_COLS"] = Game.Width;
+
   puzzleState["EMPTY_CELL"] = Game.EmptyPosition;
+
   var cellValues = "";
+
   for (int i = 0; i < Game.Height * Game.Width; i++)
+
   {
+
     if (Game[i] != null)
+
     {
+
       cellValues += String.Format("{0}:{1}", i, Game[i].PuzzleId);
+
     }
+
   }
+
   puzzleState["TABLE_CELLS"] = cellValues;
+
   ApplicationData.Current.LocalSettings.Values["PUZZLE_STATE"] = puzzleState;
+
 }
 
 internal static bool IsStateSaved()
+
 {
+
   var data = ApplicationData.Current.LocalSettings.Values["PUZZLE_STATE"];
+
   return data != null;
+
 }
 
 internal static void RestorePuzzleState()
+
 {
+
   var puzzleState = ApplicationData.Current.LocalSettings.Values["PUZZLE_STATE"]
+
   as ApplicationDataCompositeValue;
 ```
 
@@ -11608,33 +11162,47 @@ internal static void RestorePuzzleState()
 
 ```
 if (puzzleState == null) return;
+
 Game.Height = (int)puzzleState[TABLE_ROWS];
+
 Game.Width = (int)puzzleState[TABLE_COLS];
+
 Game.InitEmptyTable();
+
 Game.EmptyPosition = (int)puzzleState[EMPTY_CELL];
+
 var cellValues = ((string)puzzleState[TABLE_CELLS])
+
     .Split(new char[] {':'}, StringSplitOptions.EmptyEntries);
+
 for (int i = 0; i < cellValues.Length; i += 2)
+
 {
+
     Game.Add(int.Parse(cellValues[i]), int.Parse(cellValues[i+1]));
+
 }
+
 internal static void RemovePuzzleState()
+
 {
+
     ApplicationData.Current.LocalSettings.Values.Remove(PUZZLE_STATE);
+
 }
 ```
 
-此代码中的关键方法为 SavePuzzleState、IsStateSaved、RestorePuzzleState 和 RemovePuzzleState。
+此代码中的关键方法为`SavePuzzleState`、`IsStateSaved`、`RestorePuzzleState`和`RemovePuzzleState`。
 
-SavePuzzleState 使用 ApplicationDataCompositeValue 实例 (puzzleState) 来存储表格高度、宽度、空单元位置以及每个单元中的拼图碎片。当拼图组合完成后，它会被保存到 ApplicationData.Current.LocalSettings。
+`SavePuzzleState`使用`ApplicationDataCompositeValue`实例 (`puzzleState`) 来存储表格高度、宽度、空单元位置以及每个单元中的拼图碎片。当拼图组合完成后，它会被保存到`ApplicationData.Current.LocalSettings`。
 
-IsStateSaved 检查 LocalSettings 是否包含 PUZZLE_STATE 值，该值用于保存游戏。
+`IsStateSaved`检查`LocalSettings`是否包含`PUZZLE_STATE`值，该值用于保存游戏。
 
-RestorePuzzleState 的工作与 SavePuzzleState 类似，但它从 LocalSettings 读取值并相应初始化拼图。
+`RestorePuzzleState`的工作与`SavePuzzleState`类似，但它从`LocalSettings`读取值并相应初始化拼图。
 
-通过移除容器，可以像 RemovePuzzleState 所示删除应用数据。
+通过移除容器，可以像`RemovePuzzleState`所示删除应用数据。
 
-> 注意 当您加载 SimplePuzzle ManageState 文件夹中的解决方案时，查看 MainPage.xaml.cs 文件以发现这些方法的用法。
+> 注意 当您加载 SimplePuzzle ManageState 文件夹中的解决方案时，查看`MainPage.xaml.cs`文件以发现这些方法的用法。
 
 在之前的练习中，每次启动 SimplePuzzle 应用程序，它都会显示默认图标。在实际应用程序中，您可能希望有一个吸引人的图标。在下一节中，您将学习如何将应用程序与开始屏幕集成。
 
@@ -11646,14 +11214,11 @@ RestorePuzzleState 的工作与 SavePuzzleState 类似，但它从 LocalSettings
 
 当您使用 Visual Studio 创建新的 Windows 8 应用时，它会自动创建一个启动界面和几个放置在应用程序项目 Assets 文件夹中的图标。当部署应用程序时，图标信息将从应用程序清单文件中提取并压缩到应用程序包中。
 
-通过编辑 Package.appmanifest 文件，可以声明这些图标。程序清单编辑器的 Application UI 选项卡包含图标信息（如图 9-21 所示）以及启动界面信息。您可以在 Packaging 选项卡上设置在 Windows Store 中显示的图标。
+通过编辑`Package.appmanifest`文件，可以声明这些图标。程序清单编辑器的 Application UI 选项卡包含图标信息（如图 9-21 所示）以及启动界面信息。您可以在 Packaging 选项卡上设置在 Windows Store 中显示的图标。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_374_0.png)
 
 > 图 9-21：Application UI 页面上的图标信息
-
-
-
 
 # 348 | 第 9 章 Windows 8 应用程序
 
@@ -11674,8 +11239,8 @@ RestorePuzzleState 的工作与 SavePuzzleState 类似，但它从 LocalSettings
 
 在此练习中，你从准备好的示例开始。要为 SimplePuzzle 应用添加宽图标，请遵循以下步骤：
 
-1. 使用“打开项目”（Ctrl+Shift+O）命令，打开 SimplePuzzle 文件夹中的 SimplePuzzle.sln 文件。
-2. 在解决方案资源管理器中，双击 Package.appmanifest 文件打开它。在 UI 页面上，滚动到“宽图标”（Wide logo）字段，并在文本框中输入 WideLogo.png。
+1. 使用“打开项目”（Ctrl+Shift+O）命令，打开 SimplePuzzle 文件夹中的`SimplePuzzle.sln`文件。
+2. 在解决方案资源管理器中，双击`Package.appmanifest`文件打开它。在 UI 页面上，滚动到“宽图标”（Wide logo）字段，并在文本框中输入`WideLogo.png`。
 3. 按 Ctrl+F5 运行应用程序。应用程序使用带有 SimplePuzzle 文本的新启动屏幕。
 4. 按 Windows 键切换到开始屏幕。应用程序的磁贴上有新图标，如图 9-22 所示。
 5. 从开始屏幕右键点击 SimplePuzzle 或使用滑动手势选择它，选择“较大”（Larger）。现在磁贴以更大的尺寸显示，并带有不同的图标（中间有一个 W），如图 9-23 所示。
@@ -11697,25 +11262,25 @@ RestorePuzzleState 的工作与 SavePuzzleState 类似，但它从 LocalSettings
 
 ### 工作原理
 
-准备的应用程序在其 Assets 文件夹中包含四个图标。在第 2 步中，你声明 Assets wideLogo.png 文件应作为 SimplePuzzle 在宽模式下的图标。由于你为应用程序分配了宽图标，在第 5 步中，你可以 Larger 命令 显示宽图标。
+准备的应用程序在其 Assets 文件夹中包含四个图标。在第 2 步中，你声明 Assets`wideLogo.png`文件应作为 SimplePuzzle 在宽模式下的图标。由于你为应用程序分配了宽图标，在第 5 步中，你可以 Larger 命令 显示宽图标。
 
 更改图标只是自定义应用程序磁贴的方法之一。你对磁贴有更多控制。例如，你可以让它动起来，正如你将学到的那样。
 
-> 注意在更改 Package.appxmanifest 文件的 Application UI 页面上的属性（如名称、背景颜色、前景文本等）后尝试 SimplePuzzle 应用程序。
+> 注意在更改`Package.appxmanifest`文件的 Application UI 页面上的属性（如名称、背景颜色、前景文本等）后尝试 SimplePuzzle 应用程序。
 
 # 使用通知使磁贴生动
 
 与其他图标化操作系统（如运行在 Apple iPad 和 iPhone 上的 iOS）相比，Windows 8 最具特征的区别之一是能够在开始屏幕上显示磁贴，可以显示有关应用程序的最新信息。例如，视频和音乐应用程序的磁贴可以分别显示正在播放的视频或音乐信息。你还可以通过通知让你的应用程序更加生动。你可以在磁贴中添加文本块、图像和徽标，你将在本节中学习。
 
-许多预定义模板描述了应用程序磁贴的布局。例如，如图 9-25 所示，TileSquareText02 模板允许你在磁贴中显示两个文本块。如图 9-26 所示，另一个模板 TileWideImageAndText01 允许你设置一个图像（在磁贴顶部）和一个文本块。你可以用具体的文本和图像元素设置模板中的占位符，并相应更新你的应用程序磁贴。
+许多预定义模板描述了应用程序磁贴的布局。例如，如图 9-25 所示，`TileSquareText02`模板允许你在磁贴中显示两个文本块。如图 9-26 所示，另一个模板`TileWideImageAndText01`允许你设置一个图像（在磁贴顶部）和一个文本块。你可以用具体的文本和图像元素设置模板中的占位符，并相应更新你的应用程序磁贴。
 
 ![](img/4ba176960f93c5e0483da446a3d695f_376_1.png)
 
-图 9-25：TileSquareText02 模板
+图 9-25：`TileSquareText02`模板
 
 ![](img/4ba176960f93c5e0483da446a3d695f_376_2.png)
 
-图 9-26：TileWideImageAndText01 模板
+图 9-26：`TileWideImageAndText01`模板
 
 # 磁贴格式
 
@@ -11723,6 +11288,7 @@ RestorePuzzleState 的工作与 SavePuzzleState 类似，但它从 LocalSettings
 
 ```
 // 获取磁贴通知 XML
+
 var xmlText = TileUpdate.GetTemplateContent(TemplateType.WideImageAndText01);
 ```
 
@@ -11730,46 +11296,57 @@ var xmlText = TileUpdate.GetTemplateContent(TemplateType.WideImageAndText01);
 
 ```
 <tile>
+
   <visual>
+
     <binding template="WideImageAndText01">
+
       <image id="1" src=""
+
       <text id="1"/></text>
+
     </binding>
+
   </visual>
+
 </tile>
 ```
 
-> 注意 XDocument.Parse 用于格式化 XML。
+> 注意`XDocument.Parse`用于格式化 XML。
 
 # 更新磁贴通知
 
-Windows.UI.Notifications 命名空间提供了 TileManager 类型，它负责磁贴更新。其用法非常简单，如下代码所示：
+`Windows.UI.Notifications`命名空间提供了`TileManager`类型，它负责磁贴更新。其用法非常简单，如下代码所示：
 
 ```
 // 获取磁贴 XML
+
+
+
+```csharp
 var xmlText = TileManager.GetTemplateContent(TemplateType.SquareText04);
+
 // 用文本更新磁贴
 tileXml.GetTagName("text")[0].InnerText = Message.Text;
+
 // 创建 TileNotification 实例
 var notification = new TileNotification(xmlText);
+
 // 更新磁贴
 TileManager.CreateTileUpdaterForApplication().Update(notification);
 ```
 
 # 移除磁贴通知
 
-如果你没有要显示的通知，可以使用 Clear() 方法轻松恢复磁贴的原始状态，如下代码所示：
+如果你没有要显示的通知，可以使用`Clear()`方法轻松恢复磁贴的原始状态，如下代码所示：
 
-```
+```csharp
 TileManager.CreateTileUpdaterForApplication().Clear();
 ```
 
-
-
-
 # 使用磁贴图像
 
-你可以在应用程序实时磁贴（Live Tiles）中使用任何允许图像标签的预定义模板显示图像，例如前面提到的 `TileWideImageAndText01` 模板：
+你可以在应用程序实时磁贴（Live Tiles）中使用任何允许图像标签的预定义模板显示图像，例如前面提到的`TileWideImageAndText01`模板：
 
 ```xml
 <tile>
@@ -11782,15 +11359,15 @@ TileManager.CreateTileUpdaterForApplication().Clear();
 </tile>
 ```
 
-`src` 属性定义了磁贴的源。你可以使用三种不同的源，如表 9-6 所示。
+`src`属性定义了磁贴的源。你可以使用三种不同的源，如表 9-6 所示。
 
 ## 表 9-6：磁贴图像源
 
 | 来源 | 描述 |
 | --- | --- |
-| 应用图像 | 此类型的图像是应用程序的一部分（随应用部署）。使用 "ms-appx:///" 前缀访问这些图像，后跟图像在应用程序包内的相对路径。例如，位于 Assets 文件夹中的 Logo.png 图像可以通过 "ms-appx:///Assets/Logo.png" 访问。 |
-| 本地图像 | 这种图像可以在当前用户的本地文件夹中找到。使用 "ms-appdata:///local/" 前缀访问这些图像，后跟图像在应用程序内的相对路径。例如，SmallLogo.png 可以通过 ms-appdata:///local/SmallLogo.png 访问。 |
-| 网页图像 | 此类型的图像可以通过 URI 访问，例如 http://mysite.com/logo.png。 |
+| 应用图像 | 此类型的图像是应用程序的一部分（随应用部署）。使用`"ms-appx:///"`前缀访问这些图像，后跟图像在应用程序包内的相对路径。例如，位于`Assets`文件夹中的`Logo.png`图像可以通过`"ms-appx:///Assets/Logo.png"`访问。 |
+| 本地图像 | 这种图像可以在当前用户的本地文件夹中找到。使用`"ms-appdata:///local/"`前缀访问这些图像，后跟图像在应用程序内的相对路径。例如，`SmallLogo.png`可以通过`ms-appdata:///local/SmallLogo.png`访问。 |
+| 网页图像 | 此类型的图像可以通过 URI 访问，例如`http://mysite.com/logo.png`。 |
 
 ## 其他实时磁贴功能
 
@@ -11798,11 +11375,11 @@ TileManager.CreateTileUpdaterForApplication().Clear();
 
 - 就像你可以显示磁贴通知一样，你还可以添加徽标（badges）。徽标可以是 0 到 9 之间的数字（大于 9 的数字显示为图标），也可以是从预定义集中选择的符号（glyph）。
 - 磁贴通知可以有一个过期日期。当通知过期时，它会自动调用，就像你通过程序调用一样。
-- 应用程序可以将辅助实时磁贴固定到屏幕上 —— 需活动用户确认。辅助磁贴是你的应用程序的快捷方式。当你使用辅助磁贴启动或激活应用程序时，应用可以传递参数。例如，实时磁贴代表位置。 |
+- 应用程序可以将辅助实时磁贴固定到屏幕上 —— 需活动用户确认。辅助磁贴是你的应用程序的快捷方式。当你使用辅助磁贴启动或激活应用程序时，应用可以传递参数。例如，实时磁贴代表位置。
 
 ## 磁贴通知示例
 
-你可以在本章代码的 Tile Notification 文件夹中找到磁贴通知的示例。在 Visual Studio 中打开 .sln 解决方案，并检查 MainPage.xaml 和 MainPage.cs 以熟悉这些场景。
+你可以在本章代码的`Tile Notification`文件夹中找到磁贴通知的示例。在 Visual Studio 中打开`.sln`解决方案，并检查`MainPage.xaml`和`MainPage.cs`以熟悉这些场景。
 
 ## 总结
 
@@ -11830,31 +11407,25 @@ Windows 8 为应用程序提供了一种非常简单的资源管理策略。当�
 | 沙箱 | 沙箱是一种安全机制，将运行的应用程序隔离，并防止它们访问未被允许使用的系统资源。 |
 | 应用程序包清单 | 应用程序清单文件描述了要部署包的信息。该文件包含关于应用程序运行的沙箱的信息（即应用程序可以使用资源类型）、应用程序为 Windows 8 应用程序提供的扩展，以及特定应用程序的视觉属性（如徽标、启动屏幕等）。 |
 | 上文菜单 | 上文菜单是针对特定 UI 控件的菜单，可以在当前上下文中对特定用户控件执行操作（如剪贴板操作）。当用户右键点击它们（或执行“长按”手势）时，会显示上下文菜单。 |
-| 应用栏 | 应用栏是为用户提供特定特定功能的上下文菜单（例如创建新项目、保存信息、打开图像等）。应用栏可以位于屏幕底部和顶部，当用户从屏幕顶部或底部滑动手指或按下 Windows+Z 组合键时，它会打开。 |
-
-| 主题 | 核心概念 |
-| --- | --- |
+| 应用栏 | 应用栏是为用户提供特定特定功能的上下文菜单（例如创建新项目、保存信息、打开图像等）。应用栏可以位于屏幕底部和顶部，当用户从屏幕顶部或底部滑动手指或按下`Windows+Z`组合键时，它会打开。 |
 | 消息对话框 | 消息对话框可以弹出向用户显示信息，或请求确认特定操作。虽然消息对话框会等待用户输入，但它们不会阻塞 UI。 |
 | 应用程序数据存储 | 应用程序数据存储为每个用户持久化应用程序信息。本地存储仅存在用户的当前设备。漫游存储在用户的所有设备之间同步数据。临时存储像缓存一样，系统在需要空间时可以删除其中的数据。 |
 | 磁贴通知 | 应用程序可以向其开始屏幕上的实时磁贴发送通知。这些通知可以使用文本块和图像。通常，这些通知反映应用程序内部的变化，让用户通过查看其磁贴来了解应用程序的状态。 |
 
 # 10
+
 # 创建多页面应用程序
 
 **在本章你将学到：**
 
 - 理解 Windows 8 应用程序中使用的导航模式
-- 了解 Page 类并理解页面之间的导航机制
+- 了解`Page`类并理解页面之间的导航机制
 - 通过文件关联启动其他应用程序
 - 使用拆分应用程序和网格应用程序模板创建自定义内容的应用程序
 
 **本章 WROX.COM 代码下载**
 
-你可以在 www.wrox.com/remitle.cgi?isbn=012680 的 Download Code 选项卡找到本章的代码下载。代码位于 Chapter10.zip 下载包中，并如相应练习所述进行了单独命名。
-
-
-
-
+你可以在`www.wrox.com/remitle.cgi?isbn=012680`的 Download Code 选项卡找到本章的代码下载。代码位于`Chapter10.zip`下载包中，并如相应练习所述进行了单独命名。
 
 # 导航基础
 
@@ -11866,7 +11437,7 @@ Windows 8 为应用程序提供了一种非常简单的资源管理策略。当�
 
 # 中心导航 (Hub Navigation)
 
-最频繁使用的模式可能是中心导航。在这种情况下，内容被放置在一个中心页中，该页面可以使用键盘（PgUp 和 PgDn 键）、鼠标轮，甚至是触摸滑动手势进行水平滚动。中心页是一个虚拟的宽页面，宽度是屏幕的几倍。内容会飞入。内容的构建方式让用户始终知道有更多内容可以发现。
+最频繁使用的模式可能是中心导航。在这种情况下，内容被放置在一个中心页中，该页面可以使用键盘（`PgUp`和`PgDn`键）、鼠标轮，甚至是触摸滑动手势进行水平滚动。中心页是一个虚拟的宽页面，宽度是屏幕的几倍。内容会飞入。内容的构建方式让用户始终知道有更多内容可以发现。
 
 例如，当你启动财务（Finance）应用时，你会看到一个与图 10-1 类似的屏幕。你可以看到右侧的内容溢出了屏幕。直觉上，你可以猜测滚动或向左滑动屏幕会提供更多内容。当你触摸并到达中心页的边缘时，你会看到一个弹性效果，表示没有更多内容可以滚动了。
 
@@ -11902,7 +11473,7 @@ Windows 8 为应用程序提供了一种非常简单的资源管理策略。当�
 
 # 语义缩放 (Semantic Zoom)
 
-Windows 8 提供了一个名为语义缩放的功能。当你有很多许多难以通过滚动和滑动查看的项时，可以使用此功能加速导航。语义缩放使用收缩手势在包含大量项的列表中进行放大或缩小。你也可以结合 Ctrl 键和数字小键盘上的 + 和 - 键分别进行放大和缩小，或者点击开始屏幕右下角的缩放图标。
+Windows 8 提供了一个名为语义缩放的功能。当你有很多许多难以通过滚动和滑动查看的项时，可以使用此功能加速导航。语义缩放使用收缩手势在包含大量项的列表中进行放大或缩小。你也可以结合`Ctrl`键和数字小键盘上的`+`和`-`键分别进行放大和缩小，或者点击开始屏幕右下角的缩放图标。
 
 | * | G | Ny | U, Ü |
 | :--- | :--- | :--- | :--- |
@@ -11924,12 +11495,9 @@ Windows 8 提供了一个名为语义缩放的功能。当你有很多许多难�
 
 # 处理页面
 
-你在之前的练习中创建的每个 Windows 8 应用的文件名都以 `Page` 结尾，例如 `Page.xaml`。在这些示例中，你将学习创建多页面创建的模式。
+你在之前的练习中创建的每个 Windows 8 应用的文件名都以`Page`结尾，例如`Page.xaml`。在这些示例中，你将学习创建多页面创建的模式。
 
 > 注意 你在第 8 章中学习过语义缩放。
-
-
-
 
 ## 第 10 章 创建多页应用程序
 
@@ -11961,9 +11529,10 @@ Windows 8 提供了一个名为语义缩放的功能。当你有很多许多难�
 </Grid>
 ```
 
-- 4. 在 XAML 名称中，右键点击代码底部的 <Button> 元素（命名为 NextButton）的 `Click` 属性，选择“转到事件处理程序”命令。
+- 4. 在 XAML 名称中，右键点击代码底部的`<Button>`元素（命名为`NextButton`）的`Click`属性，选择“转到事件处理程序”命令。
 
 - 5. 在方法体中输入以下**粗体**代码：
+
 ```csharp
 private void NextButtonClicked(object sender, EventArgs args)
 {
@@ -11971,7 +11540,8 @@ private void NextButtonClicked(object sender, EventArgs args)
 }
 ```
 
-- 6. 在 Step2.xaml 文件中添加以下新方法：
+- 6. 在`Step2.xaml`文件中添加以下新方法：
+
 ```csharp
 private void GoBack(object sender, EventArgs args)
 {
@@ -11979,7 +11549,8 @@ private void GoBack(object sender, EventArgs args)
 }
 ```
 
-- 7. 在编辑器中打开 Step1.xaml 文件。向下滚动到 `NextButtonClicked` 方法，并其方法体中添加以下**粗体**代码：
+- 7. 在编辑器中打开`Step1.xaml`文件。向下滚动到`NextButtonClicked`方法，并其方法体中添加以下**粗体**代码：
+
 ```csharp
 private void NextButtonClicked(object sender, EventArgs args)
 {
@@ -11987,7 +11558,7 @@ private void NextButtonClicked(object sender, EventArgs args)
 }
 ```
 
-- 8. 按 Ctrl+F5 运行应用程序。启动后，将显示第一页，如图 10-7 所示。点击“开始潜水日志”（Start Dive Log）项目，应用程序将移动到下一页，如图 10-8 所示。
+- 8. 按`Ctrl+F5`运行应用程序。启动后，将显示第一页，如图 10-7 所示。点击“开始潜水日志”（Start Dive Log）项目，应用程序将移动到下一页，如图 10-8 所示。
 
 处理页面 | 365
 
@@ -12013,17 +11584,17 @@ private void NextButtonClicked(object sender, EventArgs args)
 
 ### 工作原理
 
-你开始使用的对话框解决方案包含了三个页面（MainPage.xaml、Step1.xaml 和 Step3.xaml），并带有预设的导航代码。在步骤 2 和步骤 3 中，你添加了一个新的页面文件 Step2.xaml 并设置了它的内容。在步骤 5 中，你添加了从 Step2 页面导航到 Step3 页面的代码：
+你开始使用的对话框解决方案包含了三个页面（`MainPage.xaml`、`Step1.xaml`和`Step3.xaml`），并带有预设的导航代码。在步骤 2 和步骤 3 中，你添加了一个新的页面文件`Step2.xaml`并设置了它的内容。在步骤 5 中，你添加了从`Step2`页面导航到`Step3`页面的代码：
 
 ```csharp
 Frame.Navigate(typeof(Step3));
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame`是`Page`上的一个属性，用于控制页的内容。你使用参数值为`typeof(Step3)`的`Navigate`方法将页面内容设置为指定类型的实例——在这种情况下，是`Step3`。
 
-在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
+在步骤 7 中，你使用了这种方法从`Step1`页面导航到`Step2`页面。
 
-在 Step2.xaml 文件中，你使用以下标记定义了回退按钮：
+在`Step2.xaml`文件中，你使用以下标记定义了回退按钮：
 
 ```xml
 <Button x:Name="backButton" Click="GoBack"
@@ -12031,7 +11602,9 @@ IsEnabled={Binding Frame.CanGoBack, ElementName=PageRoot}
 Style={StaticResource BackButtonStyle} />
 ```
 
-`IsEnabled` 属性绑定到 PageRoot 元素的 `Frame.CanGoBack` 属性。这代表 Page 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
+
+
+`IsEnabled` 属性绑定到 `PageRoot` 元素的 `Frame.CanGoBack` 属性。这代表 `Page` 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
 所有页面都使用了相同的方法来启用回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
@@ -12044,11 +11617,11 @@ private void GoBack(object sender, EventArgs args)
 }
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame` 是 `Page` 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
 
 在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
 
-在 Step2.xaml 文件中，你使用以下标记定义了回退按钮：
+在 `Step2.xaml` 文件中，你使用以下标记定义了回退按钮：
 
 ```xml
 <Button x:Name="backButton" Click="GoBack"
@@ -12056,7 +11629,7 @@ IsEnabled={Binding Frame.CanGoBack, ElementName=PageRoot}
 Style={StaticResource BackButtonStyle} />
 ```
 
-`IsEnabled` 属性绑定到 PageRoot 元素的 `Frame.CanGoBack` 属性。这代表 Page 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
+`IsEnabled` 属性绑定到 `PageRoot` 元素的 `Frame.CanGoBack` 属性。这代表 `Page` 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
 回退按钮，如图 10-9 所示：
 
@@ -12067,11 +11640,11 @@ private void GoBack(object sender, EventArgs args)
 }
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame` 是 `Page` 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
 
 在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
 
-在 Step2.xaml 文件中，你使用以下标记定义了回退按钮：
+在 `Step2.xaml` 文件中，你使用以下标记定义了回退按钮：
 
 ```xml
 <Button x:Name="backButton" Click="GoBack"
@@ -12079,7 +11652,7 @@ IsEnabled={Binding Frame.CanGoBack, ElementName=PageRoot}
 Style={StaticResource BackButtonStyle} />
 ```
 
-`IsEnabled` 属性绑定到 PageRoot 元素的 `Frame.CanGoBack` 属性。这代表 Page 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
+`IsEnabled` 属性绑定到 `PageRoot` 元素的 `Frame.CanGoBack` 属性。这代表 `Page` 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
 回退按钮，如图 10-9 所示：
 
@@ -12090,11 +11663,11 @@ private void GoBack(object sender, EventArgs args)
 }
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame` 是 `Page` 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
 
 在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
 
-在 Step2.xaml 文件中，你使用以下标记定义了回退按钮：
+在 `Step2.xaml` 文件中，你使用以下标记定义了回退按钮：
 
 ```xml
 <Button x:Name="backButton" Click="GoBack"
@@ -12102,7 +11675,7 @@ IsEnabled={Binding Frame.CanGoBack, ElementName=PageRoot}
 Style={StaticResource BackButtonStyle} />
 ```
 
-`IsEnabled` 属性绑定到 PageRoot 元素的 `Frame.CanGoBack` 属性。这代表 Page 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
+`IsEnabled` 属性绑定到 `PageRoot` 元素的 `Frame.CanGoBack` 属性。这代表 `Page` 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
 回退按钮，如图 10-9 所示：
 
@@ -12115,21 +11688,21 @@ private void GoBack(object sender, EventArgs args)
 
 （注：由于提供的文本中存在大量重复段落，译文已根据“不要重复输出原文”的原则进行了去重处理，仅保留核心逻辑与翻译。）
 
-## 第 10 章 创建多页应用程序
+# 第 10 章 创建多页应用程序
 
-### 工作原理
+## 工作原理
 
-你开始使用的对话框解决方案包含了三个页面（MainPage.xaml、Step1.xaml 和 Step3.xaml），并带有预设的导航代码。在步骤 2 和步骤 3 中，你添加了一个新的页面文件 Step2.xaml 并设置了它的内容。在步骤 5 中，你添加了从 Step2 页面导航到 Step3 页面的代码：
+你开始使用的对话框解决方案包含了三个页面（`MainPage.xaml`、`Step1.xaml` 和 `Step3.xaml`），并带有预设的导航代码。在步骤 2 和步骤 3 中，你添加了一个新的页面文件 `Step2.xaml` 并设置了它的内容。在步骤 5 中，你添加了从 Step2 页面导航到 Step3 页面的代码：
 
 ```csharp
 Frame.Navigate(typeof(Step3));
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame` 是 `Page` 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
 
 在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
 
-在 Step2.xaml 文件中，你使用以下标记定义了回退按钮：
+在 `Step2.xaml` 文件中，你使用以下标记定义了回退按钮：
 
 ```xml
 <Button x:Name="backButton" Click="GoBack"
@@ -12137,7 +11710,7 @@ IsEnabled={Binding Frame.CanGoBack, ElementName=PageRoot}
 Style={StaticResource BackButtonStyle} />
 ```
 
-`IsEnabled` 属性绑定到 PageRoot 元素的 `Frame.CanGoBack` 属性。这代表 Page 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
+`IsEnabled` 属性绑定到 `PageRoot` 元素的 `Frame.CanGoBack` 属性。这代表 `Page` 实例。数据绑定的结果是，只有当有页面可以返回时，你才能在 Step2 页面使用回退按钮。同样的方法用于启用所有其他页面上的回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
 回退按钮，如图 10-9 所示：
 
@@ -12148,7 +11721,7 @@ private void GoBack(object sender, EventArgs args)
 }
 ```
 
-Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
+`Frame` 是 `Page` 上的一个属性，用于控制页的内容。你使用参数值为 `typeof(Step3)` 的 `Navigate` 方法将页面内容设置为指定类型的实例——在这种情况下，是 Step3。
 
 在步骤 7 中，你使用了这种方法从 Step1 页面导航到 Step2 页面。
 
@@ -12162,11 +11735,7 @@ Frame 是 Page 上的一个属性，用于控制页的内容。你使用参数�
 
 所有页面都使用了相同的方法来启用回退按钮。这就是为什么在图 10-7 中回退按钮是隐藏的（那是第一页，所以没有可以返回的页面），而在图 10-9 中显示出来（你从 Step3 页面导航到第一页，所以有可以返回的页面）。
 
-
-
-
-
-```
+```csharp
 _lastCancelled = false;
 
 protected async override void OnNavigatedFrom(NavigationEventArgs e)
@@ -12209,7 +11778,6 @@ protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
 要完成准备好的应用程序，请遵循以下步骤：
 
 - 1. 使用“文件打开项目”（Ctrl+Shift+O）命令，从本章下载的 DiveLog - AppBar 文件夹打开 `DiveLog.sln` 文件。
-
 - 2. 在设计器中打开 `MainPage.xaml` 文件。该文件包含显示在页面顶应用栏，由以下 XAML 定义：
 
 ```xml
@@ -12242,6 +11810,7 @@ private void DepthButtonTapped(object sender, TappedRoutedEventArgs e)
 {
   Frame.Navigate(typeof(Step2), Frame.BackStackDepth);
 }
+
 private void CompletedButtonTapped(object sender, TappedRoutedEventArgs e) {
   Frame.Navigate(typeof(Step3), Frame.BackStackDepth);
 }
@@ -12264,7 +11833,6 @@ private void CompletedButtonTapped(object sender, TappedRoutedEventArgs e) {
 ![](img/4ba176960f93c5e0483da4464a3d695f_398_1.png)
 
 - 7. 点击“最大深度与底部时间”应用按钮。你会被直接发送到 Step2。Parameter 标签显示 0，表示这是导航栈上的第一个页面。
-
 - 8. 现在再次使用 Windows+Z 组合键（或从屏幕顶部边缘滑动）显示应用栏。显示。
 
 ### 它是如何工作的
@@ -12280,13 +11848,17 @@ private void CompletedButtonTapped(object sender, TappedRoutedEventArgs e) {
 在 `OnNavigatedTo` 方法中输入以下**粗体代码**：
 
 ```csharp
+
+
+
+```
 protected override void OnNavigatedTo(NavigationEventArgs args)
 {
   LocalFrame.Navigate(typeof(MainPage));
 }
 ```
 
-在 `App.cs` 中，初始化代码如下：
+在`App.cs`中，初始化代码如下：
 
 ```csharp
 var rootFrame = new Frame();
@@ -12296,7 +11868,7 @@ if (rootFrame == null) {
 Window.Current.Content = rootFrame;
 ```
 
-在 `App.cs` 中，初始化代码如下：
+在`App.cs`中，初始化代码如下：
 
 ```csharp
 var rootFrame = new Frame();
@@ -12306,7 +11878,7 @@ if (rootFrame == null) {
 Window.Current.Content = rootFrame;
 ```
 
-在 `App.cs` 中，初始化代码如下：
+在`App.cs`中，初始化代码如下：
 
 ```csharp
 var rootFrame = new Frame();
@@ -12316,7 +11888,7 @@ if (rootFrame == null) {
 Window.Current.Content = rootFrame;
 ```
 
-在 `App.cs` 中，初始化代码如下：
+在`App.cs`中，初始化代码如下：
 
 ```csharp
 var rootFrame = new Frame();
@@ -12332,21 +11904,21 @@ Window.Current.Content = rootFrame;
 
 要应用布局更改并修复应用栏，请遵循以下步骤：
 
-- 1. 如果你在之前的练习后关闭了 Visual Studio，请重新打开 `DiveLog.sln`。
+1. 如果你在之前的练习后关闭了 Visual Studio，请重新打开`DiveLog.sln`。
 
-- 2. 在解决方案管理器中，选择 DiveLog 项目并添加新页面。命名为 LogEntry。
+2. 在解决方案管理器中，选择`DiveLog`项目并添加新页面。命名为`LogEntry`。
 
-- 3. 当新页面在设计器中打开时，将 `<Grid>` 元素（包括 `</Grid>` 结束标签）替换为 `<Frame Name="LocalFrame" />`。
+3. 当新页面在设计器中打开时，将`<Grid>`元素（包括`</Grid>`结束标签）替换为`<Frame Name="LocalFrame" />`。
 
-- 4. 打开 `MainPage.xaml` 文件。在 XAML 部分，选择 `<Page:AppBar>` 片段（从开始到 `</Page:AppBar>` 的最后一个字符），按 Shift+Del 剪切。切换回 LogEntry.xaml，并将光标放在之前粘贴的 `<Frame>` 位置。
+4. 打开`MainPage.xaml`文件。在 XAML 部分，选择`<Page:AppBar>`片段（从开始到`</Page:AppBar>`的最后一个字符），按 Shift+Del 剪切。切换回`LogEntry.xaml`，并将光标放在之前粘贴的`<Frame>`位置。
 
-- 5. 打开 `MainPage.cs` 文件，选择属于四个方法的代码（NewEntryButtonTapped、LocationTapped、DepthButtonTapped 和 CompletedTapped）。按 Shift+Del 剪切。
+5. 打开`MainPage.cs`文件，选择属于四个方法的代码（`NewEntryButtonTapped`、`LocationTapped`、`DepthButtonTapped`和`CompletedTapped`）。按 Shift+Del 剪切。
 
-- 6. 打开 `LogEntry.xaml.cs` 文件，并将光标放在类定义的结束大括号之前。按 Ctrl+V 粘贴上一步中剪切的代码。
+6. 打开`LogEntry.xaml.cs`文件，并将光标放在类定义的结束大括号之前。按 Ctrl+V 粘贴上一步中剪切的代码。
 
-- 7. 将粘贴代码中所有的 `Frame` 更改为 `LocalFrame`。每个方法中有两个出现处，因此总共需要更改八处。
+7. 将粘贴代码中所有的`Frame`更改为`LocalFrame`。每个方法中有两个出现处，因此总共需要更改八处。
 
-- 8. 在第 6 步粘贴的四个方法中的每个方法中追加以下代码：
+8. 在第 6 步粘贴的四个方法中的每个方法中追加以下代码：
 
 `Command.IsOpen = false;`
 
@@ -12356,15 +11928,11 @@ Window.Current.Content = rootFrame;
 
 图 10-16：导航到 Step2 页面后的修复布局层次
 
-
-
-
-
 # 374 | 第 10 章 创建多页面应用
 
+```csharp
 using Windows.UI.Xaml.Navigation;
 
-```csharp
 namespace DiveLog
 {
     public sealed partial class LogEntryPage : Page
@@ -12406,19 +11974,19 @@ namespace DiveLog
 }
 ```
 
-- 10. 打开 App.xaml.cs 文件，并在 OnLaunched 方法体内找到以下行：
+10. 打开`App.xaml.cs`文件，并在`OnLaunched`方法体内找到以下行：
 `if ((rootFrame.Navigate(typeof(MainPage))))`
 
-- 11. 将 MainPage 替换为 LogEntryPage，如下所示：
+11. 将`MainPage`替换为`LogEntryPage`，如下所示：
 `if ((rootFrame.Navigate(typeof(LogEntryPage))))`
 
-- 12. 按 Ctrl+F5 运行应用程序。你可以使用应用栏导航到每个页面，因为现在它显示在每个页面上——这与上一个练习不同。尝试使用应用栏在各个页面之间进行导航跳转。
+12. 按 Ctrl+F5 运行应用程序。你可以使用应用栏导航到每个页面，因为现在它显示在每个页面上——这与上一个练习不同。尝试使用应用栏在各个页面之间进行导航跳转。
 
-- 13. 关闭应用程序。
+13. 关闭应用程序。
 
 ## 运行原理
 
-在步骤 2 中，你将 LogEntryPage 添加到项目中，以实现步骤 10-15 中描述的布局概念。在步骤 3 中，你创建了 `LocalFrame` 元素。在随后的步骤（从步骤 4 到步骤 8）中，你将应用栏和相关的事件处理方法移动到了 LogEntryPage。在步骤 9 和步骤 10 中，你将 LogEntryPage 作为应用程序的根页面。你修改了 App.xaml.cs 文件，使应用程序使用 LogEntryPage 而不是 MainPage。步骤 9 中添加的代码在启动后将你重定向到 MainPage 页面。
+在步骤 2 中，你将`LogEntryPage`添加到项目中，以实现步骤 10-15 中描述的布局概念。在步骤 3 中，你创建了`LocalFrame`元素。在随后的步骤（从步骤 4 到步骤 8）中，你将应用栏和相关的事件处理方法移动到了`LogEntryPage`。在步骤 9 和步骤 10 中，你将`LogEntryPage`作为应用程序的根页面。你修改了`App.xaml.cs`文件，使应用程序使用`LogEntryPage`而不是`MainPage`。步骤 9 中添加的代码在启动后将你重定向到`MainPage`页面。
 
 如你所见，除了移动了应用栏代码外，你没有修改现有页面的代码。由于这些更改，应用程序现在按预期运行。
 
@@ -12426,16 +11994,16 @@ namespace DiveLog
 
 ## 启动文件和网页
 
-你可以从当前运行的应用程序通过任何与文件扩展名关联的程序来启动其他文件。Windows.System 命名空间包含一个负责此操作的 `Launcher` 对象。使用 `Launcher` 对象非常简单，本章下载内容的 LaunchFiles 文件夹中的 LauncherFiles.sln 示例解决方案所示。
+你可以从当前运行的应用程序通过任何与文件扩展名关联的程序来启动其他文件。`Windows.System`命名空间包含一个负责此操作的`Launcher`对象。使用`Launcher`对象非常简单，本章下载内容的`LaunchFiles`文件夹中的`LauncherFiles.sln`示例解决方案所示。
 
-`Launcher` 是一个带有两个方法的静态类：
+`Launcher`是一个带有两个方法的静态类：
 
-- `LaunchFileSync` 接受一个文件（`IStorageObject`）参数，并打开与指定文件类型关联的应用程序。
-- `LauncherAsync` 接受一个 URI 参数，并使用指定的 Uri 默认（或指定的）浏览器。
+- `LaunchFileSync`接受一个文件（`IStorageObject`）参数，并打开与指定文件类型关联的应用程序。
+- `LauncherAsync`接受一个 URI 参数，并使用指定的 Uri 默认（或指定的）浏览器。
 
-这两个方法都有一个重载版本，接受类型为 `LauncherOptions` 的第二个参数。通过它，你可以指定多个选项来启动文件关联或 URI。
+这两个方法都有一个重载版本，接受类型为`LauncherOptions`的第二个参数。通过它，你可以指定多个选项来启动文件关联或 URI。
 
-让我们来看使用 `Launcher` 的几个示例。要启动与 .png 文件扩展名关联的默认程序，请使用以下简单的代码段：
+让我们来看使用`Launcher`的几个示例。要启动与`.png`文件扩展名关联的默认程序，请使用以下简单的代码段：
 
 ```csharp
 const string FILE = "@Assets/Surface.png"; // ...
@@ -12474,7 +12042,7 @@ if (success) {
 }
 ```
 
-使用 `LauncherOptions` 参数，你可以在启动程序之前向用户请求确认，在以下代码段中的**粗体代码**表示：
+使用`LauncherOptions`参数，你可以在启动程序之前向用户请求确认，在以下代码段中的**粗体代码**表示：
 
 ```csharp
 const string FILE = "Assets\Surface.png"; //...
@@ -12493,7 +12061,7 @@ if (file == null) {
 }
 ```
 
-使用 `LauncherOptions`，你甚至可以让用户通过“打开方式”对话框启动关联的程序：
+使用`LauncherOptions`，你甚至可以让用户通过“打开方式”对话框启动关联的程序：
 
 ```csharp
 const string FILE = "Assets\Surface.png";
@@ -12508,71 +12076,70 @@ if (file != null)
 
 
 
-
-
 # 使用拆分应用和网格应用模板
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_406_0.png)
 
 **图 10-19:** 由拆分和网格应用模板创建的基础设施文件
 
-# **表 10-2：拆分和网格应用模板中的常用基础设施文件**
+## 表 10-2：拆分和网格应用模板中的常用基础设施文件
 
 | 文件 | 描述 |
 |---|---|
-| BindableBase.cs | 该文件包含 BindableBase 抽象类，它是一个实现 `INotifyPropertyChanged` 接口的辅助类——正如你在第 8 章中学到的，它在 XAML 数据绑定中起着关键作用。你可以使用此类来派生你的模型类（即将在应用程序中显示的类）。SampleDataSource.cs 文件中的模型类即派自此类。 |
-| BooleanNegationConverter.cs | 这是一个数据绑定转换器类，用于反转布尔标志的值。它没有直接在模板中使用。 |
-| BooleanToVisibilityConverter.cs | 这是一个数据绑定类，用于将布尔值 `true` 和 `false` 翻译为 `Visibility` 枚举中的 `Visible` 和 `Collapsed` 值。虽然此转换器没有直接在模板中使用，但当你想要将 UI 元素的可见性绑定到布尔值时，它非常方便。 |
+| `BindableBase.cs` | 该文件包含`BindableBase`抽象类，它是一个实现`INotifyPropertyChanged`接口的辅助类——正如你在第 8 章中学到的，它在 XAML 数据绑定中起着关键作用。你可以使用此类来派生你的模型类（即将在应用程序中显示的类）。`SampleDataSource.cs`文件中的模型类即派自此类。 |
+| `BooleanNegationConverter.cs` | 这是一个数据绑定转换器类，用于反转布尔标志的值。它没有直接在模板中使用。 |
+| `BooleanToVisibilityConverter.cs` | 这是一个数据绑定类，用于将布尔值`true`和`false`翻译为`Visibility`枚举中的`Visible`和`Collapsed`值。虽然此转换器没有直接在模板中使用，但当你想要将 UI 元素的可见性绑定到布尔值时，它非常方便。 |
 
-# 表 10-2（续）
+## 表 10-2（续）
 
 | 文件 | 描述 |
 | --- | --- |
-| LayoutAwarePage.cs | 该文件实现了 LayoutAwarePage 类，为你的页面添加功能，包括应用程序生命周期管理、视觉状态处理和导航。你稍后会学习更多关于该类的知识。 |
-| Readme.txt | 该文件包含了对 Common 文件夹中文件的通用描述。 |
-| RichTextColumns.cs | 该文件包含 RichTextColumns 类，帮助你管理多列富文本以及相关的滚动任务。该类仅在网格应用模板中使用。 |
-| StandardStyles.xaml | 该文件包含预定义的资源（样式、数据模板等）。 |
-| SuspensionManager.cs | 该文件包含了 SuspensionManager 类的实现，该类通过通过捕获全局会话状态来简化应用的生命周期管理。 |
-| SampleDataSource.cs | 该文件为你的应用程序定义了一个可以在设计时使用的示例数据源。 |
+| `LayoutAwarePage.cs` | 该文件实现了`LayoutAwarePage`类，为你的页面添加功能，包括应用程序生命周期管理、视觉状态处理和导航。你稍后会学习更多关于该类的知识。 |
+| `Readme.txt` | 该文件包含了对`Common`文件夹中文件的通用描述。 |
+| `RichTextColumns.cs` | 该文件包含`RichTextColumns`类，帮助你管理多列富文本以及相关的滚动任务。该类仅在网格应用模板中使用。 |
+| `StandardStyles.xaml` | 该文件包含预定义的资源（样式、数据模板等）。 |
+| `SuspensionManager.cs` | 该文件包含了`SuspensionManager`类的实现，该类通过通过捕获全局会话状态来简化应用的生命周期管理。 |
+| `SampleDataSource.cs` | 该文件为你的应用程序定义了一个可以在设计时使用的示例数据源。 |
 
 除了共同文件外，拆分应用和网格应用模板还包含自己的页面文件，分别如表 10-3 和表 10-4 所示。
 
-# 表 10-3：拆分应用模板页面
+## 表 10-3：拆分应用模板页面
 
 | 页面文件 | 描述 |
 | --- | --- |
-| ItemsPage.xaml | 这是应用程序的启动页。它在 GridView（或吸附模式下的 ListView）中显示项目组。 |
-| SplitPage.xaml | 在 ItemsPage 中选择一个组将导航到此页面。它包含左侧的项目列表，以及右侧的所选项目详情信息。在吸附模式下，此视图的工作就像列表和项目详情是两个独立的页面一样。 |
+| `ItemsPage.xaml` | 这是应用程序的启动页。它在`GridView`（或吸附模式下的`ListView`）中显示项目组。 |
+| `SplitPage.xaml` | 在`ItemsPage`中选择一个组将导航到此页面。它包含左侧的项目列表，以及右侧的所选项目详情信息。在吸附模式下，此视图的工作就像列表和项目详情是两个独立的页面一样。 |
 
-# 表 10-4：网格应用模板页面
+## 表 10-4：网格应用模板页面
 
 | 页面文件 | 描述 |
 | --- | --- |
-| GroupedItemsPage.xaml | 这是应用程序的启动页。它在 GridView（或吸附模式下的 ListView）中显示所有组及其对应的项目。 |
+| `GroupedItemsPage.xaml` | 这是应用程序的启动页。它在`GridView`（或吸附模式下的`ListView`）中显示所有组及其对应的项目。 |
 
-# 使用拆分应用和网格应用模板 | 381
+## 使用拆分应用和网格应用模板 | 381
 
 | 页面文件 | 描述 |
-| GroupDetailPage.xaml | 在 GroupedItemsPage 中选择一个组头将导航到此页面。它包含了关于该组及其项目的详细信息。 |
-| ItemDetailPage.xaml | 在 GroupedItemsPage 视图或 GroupDetailPage 视图中选择一个项目将导航到此页面。它包含了所选项目的详情。 |
+| --- | --- |
+| `GroupDetailPage.xaml` | 在`GroupedItemsPage`中选择一个组头将导航到此页面。它包含了关于该组及其项目的详细信息。 |
+| `ItemDetailPage.xaml` | 在`GroupedItemsPage`视图或`GroupDetailPage`视图中选择一个项目将导航到此页面。它包含了所选项目的详情。 |
 
 与大多数 Windows 8 应用程序一样，这些模板使用模型-视图-视图（MVVM）设计模式来分离构建应用程序的职责。如果你想更好地理解这些模板，就无法避免对 MVVM 有一个基本的概述。
 
 为了尽可能松散地处理应用程序中协作的组件，MVVM 建议你围绕模型（Model）、视图（View）和视图（ViewModel）这三个角色来划分应用程序组件的构建。模型代表一个获取内容（应用程序数据）并向存储（数据库）写回修改的对象。视图是显示应用程序内容的 UI。对于使用 XAML 的 Windows 8 应用程序，视图是代表你 UI 的 XAML 代码。
 
-为了将模型和视图分离，数据在它们之间通过 ViewModel 进行传输。当查询模型某种内容时，它会检索一个代表该内容的 ViewModel。当用户修改 UI 上的某些信息时，视图使用 ViewModel 并将其发送到模型以进行持久化。
+为了将模型和视图分离，数据在它们之间通过`ViewModel`进行传输。当查询模型某种内容时，它会检索一个代表该内容的`ViewModel`。当用户修改 UI 上的某些信息时，视图使用`ViewModel`并将其发送到模型以进行持久化。
 
 > 注意 Microsoft Patterns and Practices 团队发布了一篇关于 MVVM 的精彩文章（http://msdn.microsoft.com/en-us/library/gg430869(v=PandP.40).aspx），通过应用程序示例提供了一种深入的方法。虽然该示例使用了 Silverlight，但它可以轻松应用于 C# 编写的 Windows 8 应用程序。
 
-当你开始使用一个新的拆分应用或网格应用时，这些模板包含一个 Model、若干 ViewModel 和几个 View（每个页面类型一个视图）组件。如果你想自定义应用程序，必须执行以下步骤：
+当你开始使用一个新的拆分应用或网格应用时，这些模板包含一个`Model`、若干`ViewModel`和几个`View`（每个页面类型一个视图）组件。如果你想自定义应用程序，必须执行以下步骤：
 
 1. 修改模型以检索你想显示的内容类型。你也可以修改模型以保存修改后的内容。
-2. 随着模型的演进，指定代表从模型检索的数据或要由模型持久化的 ViewModel 类。
-3. 根据你的应用程序内容更改预定义的 UI（模板页面），并使用 XAML 数据绑定将 ViewModel 与你的 UI 绑定。
+2. 随着模型的演进，指定代表从模型检索的数据或要由模型持久化的`ViewModel`类。
+3. 根据你的应用程序内容更改预定义的 UI（模板页面），并使用 XAML 数据绑定将`ViewModel`与你的 UI 绑定。
 4. 可添加样式、内容和数据模板以提供你自己的视觉设计。
 5. 可为应用程序添加新页面并实现导航逻辑。
 
-你可以在本章节下载的 FamilyTripsSplit 和 FamilyTripsGrid 文件夹中找到两个准备好的示例应用程序，它们分别使用拆分应用模板和网格应用模板创建。这些应用程序显示带有描述的照片，如图10-20 所示。
+你可以在本章节下载的`FamilyTripsSplit`和`FamilyTripsGrid`文件夹中找到两个准备好的示例应用程序，它们分别使用拆分应用模板和网格应用模板创建。这些应用程序显示带有描述的照片，如图10-20 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_409_0.png)
 
@@ -12580,112 +12147,163 @@ if (file != null)
 
 正如你在下一节中学的，这些打开这些应用程序并与新创建的、未自定义的拆分和网格应用程序进行比较。
 
-# 管理示例数据和运行时数据
+## 管理示例数据和运行时数据
 
-DataModel 文件夹包含一个 SampleDataSource.cs 文件，它代表内存中的应用程序内容，就像是从数据库读取或从数据源查询的一样。表 10-5 总结了该文件中的类型及其角色。
+`DataModel`文件夹包含一个`SampleDataSource.cs`文件，它代表内存中的应用程序内容，就像是从数据库读取或从数据源查询的一样。表 10-5 总结了该文件中的类型及其角色。
 
-**表 10-5：SampleDataSource.cs 文件中的类型**
-
-| 类型 | 描述 |
-|---|---|
-| SampleDataCommon | 用于唯一 ID 项目的抽象 ViewModel 类。 |
-| SampleDataItem | 继承 DataCommon 并添加 Content 属性的数据项（ViewModel）。 |
-
-# 使用拆分应用和网格应用模板
+**表 10-5：`SampleDataSource.cs`文件中的类型**
 
 | 类型 | 描述 |
 |---|---|
-| SampleDataGroup | 继承 DataCommon 属性的数据项（ViewModel），并添加代表属于该组的 SampleDataItem 实例的 Items 属性。 |
-| SampleDataSource | 模型具有（只读）操作，如 GetGroups、GetGroup 和 GetItem。 |
+| `SampleDataCommon` | 用于唯一 ID 项目的抽象`ViewModel`类。 |
+| `SampleDataItem` | 继承`DataCommon`并添加`Content`属性的数据项（`ViewModel`）。 |
 
+## 使用拆分应用和网格应用模板
 
+| 类型 | 描述 |
+|---|---|
+| `SampleDataGroup` | 继承`DataCommon`属性的数据项（`ViewModel`），并添加代表属于该组的`SampleDataItem`实例的`Items`属性。 |
+| `SampleDataSource` | 模型具有（只读）操作，如`GetGroups`、`GetGroup`和`GetItem`。 |
 
+将`sampleDataGroups`放入`DefaultViewModel`容器的`"Items"`元素中会将数据绑定到`CollectionViewSource`，这是因为存在`Source={Binding Items}`声明。
 
-将 `sampleDataGroups` 放入 DefaultViewModel 容器的 "Items" 元素中会将数据绑定到 CollectionViewSource，这是因为存在 `Source={Binding Items}` 声明。
+> 注意：`FamilyTrips`示例应用（基于拆分和网格的两个）都包含一个`TripDataSource`类，该类代表应用程序的设计时和运行时数据源。`TripDataSource`的结构与`SampleDataSource`非常相似。
 
-> 注意：FamilyTrips 示例应用（基于拆分和网格的两个）都包含一个 TripDataSource 类，该类代表应用程序的设计时和运行时数据源。TripDataSource 的结构与 SampleDataSource 非常相似。
+## 布局管理
 
-# 布局管理
+两个模板都派生自`Common`文件夹中的`LayoutAwarePage`类。该类承担了管理应用程序布局的责任。当你旋转移动设备的屏幕或将应用停靠在你的应用旁边时，系统会自动为你管理布局。
 
-两个模板都派生自 Common 文件夹中的 `LayoutAwarePage` 类。该类承担了管理应用程序布局的责任。当你旋转移动设备的屏幕或将应用停靠在你的应用旁边时，系统会自动为你管理布局。
-
-一旦继承自 `LayoutAwarePage` 的页面加载，它就会订阅当前窗口的 `SizeChanged` 事件。当此事件触发时，LayoutAwarePage 会自动将页面移动到相应的虚拟状态。当窗口大小变化时，不仅现有控件会发生变化，整个页面布局也会发生变化。例如，当屏幕上停靠在 Split Application 旁的应用时，ItemsView 的布局将从 GridView 变为 ListView，如下文中加粗的标记所示：
+一旦继承自`LayoutAwarePage`的页面加载，它就会订阅当前窗口的`SizeChanged`事件。当此事件触发时，`LayoutAwarePage`会自动将页面移动到相应的虚拟状态。当窗口大小变化时，不仅现有控件会发生变化，整个页面布局也会发生变化。例如，当屏幕上停靠在 Split Application 旁的应用时，`ItemsView`的布局将从`GridView`变为`ListView`，如下文中加粗的标记所示：
 
 ```
 <VisualStateManager.VisualStateGroups>
+
 <VisualStateGroup x:Name="ApplicationState">
+
   <VisualState x:Name="FullLandscape" />
+
   <VisualState x:Name="Filled" />
+
   <VisualState x:Name="FullScreenPortrait" />
+
   <!-- 为了简洁省略了部分细节 --
+
 </VisualState>
+
 <VisualState x:Name="Snapped">
+
 <Storyboard>
+
     <!-- 省略了返回按钮和标题的动画 --
+
     <ObjectAnimationUsingKeyFrames>
+
       Storyboard.TargetName="listItem"
+
       Storyboard.TargetProperty="Visibility"
+
       <DiscreteObjectKeyFrame KeyTime=0 Value="Visible"/>
+
     </ObjectAnimationUsingKeyFrames>
+
     <ObjectAnimationUsingKeyFrames>
+
       Storyboard.TargetName="gridView"
+
       Storyboard.TargetProperty="Visibility"
+
       <DiscreteObjectKeyFrame KeyTime=0 Value="Collapsed"/>
+
     </ObjectAnimationUsingKeyFrames>
+
   </Storyboard>
+
 </VisualState>
+
 </VisualStateGroup>
+
 </VisualStateManager.VisualStateGroups>
 ```
 
-此标记将 ListView 的 `Visibility` 属性设置为 `Visible`（并显示），并将 GridView 的 `Visibility` 属性设置为 `Collapsed`（并隐藏）。你可以使用类似的技巧在窗口大小变化时更改你应用程序的布局。
+此标记将`ListView`的`Visibility`属性设置为`Visible`（并显示），并将`GridView`的`Visibility`属性设置为`Collapsed`（并隐藏）。你可以使用类似的技巧在窗口大小变化时更改你应用程序的布局。
 
-# 使用逻辑页面
+## 使用逻辑页面
 
-Split Application 模板的 SplitPage 视图有一个技巧。最初，它将屏幕分为两个窗格——左侧是列表视图，右侧是详情视图。然而，当窗口布局变为竖屏或停靠时，剩余窗口的宽度不足以同时显示两个窗格。
+Split Application 模板的`SplitPage`视图有一个技巧。最初，它将屏幕分为两个窗格——左侧是列表视图，右侧是详情视图。然而，当窗口布局变为竖屏或停靠时，剩余窗口的宽度不足以同时显示两个窗格。
 
-在这种情况下，页面允许在列表视图和详情视图之间进行内部导航，就像一个物理页面实际上是两个一样。SplitPage 视图被视为两个逻辑页面。当用户从列表导航到某个项目时，列表视图会被隐藏，只显示详情视图。当详情页上使用返回按钮时，它仅会导航回整个视图。
+在这种情况下，页面允许在列表视图和详情视图之间进行内部导航，就像一个物理页面实际上是两个一样。`SplitPage`视图被视为两个逻辑页面。当用户从列表导航到某个项目时，列表视图会被隐藏，只显示详情视图。当详情页上使用返回按钮时，它仅会导航回整个视图。
 
-# 使用富文本列
+## 使用富文本列
 
-Grid Application 模板的 ItemDetailPage 使用 `FlipView` 来表示其内容。FlipView 的模板包含一个 `ScrollView`（以便你能够水平滚动内容），它使用 `RichTextColumns` 在屏幕上分多列显示内容：
+Grid Application 模板的`ItemDetailPage`使用`FlipView`来表示其内容。`FlipView`的模板包含一个`ScrollView`（以便你能够水平滚动内容），它使用`RichTextColumns`在屏幕上分多列显示内容：
 
 ```
 <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47">
+
 <RichTextBlock x:Name="richTextBlock" Width="560">
+
   <Style TargetType="StaticResource RichTextStyle">
+
     <Paragraph>
+
       <Run FontSize="26.667" FontWeight="Light" Text="Binding Title"/>
+
       <LineBreak/>
+
       <LineBreak/>
+
       <Run FontWeight="SemiBold" Text="Binding Subtitle"/>
+
     </Paragraph>
+
     <Paragraph LineStackingStrategy="MaxHeight">
+
       <InlineContainer>
+
         <Image x:Name="Image" MaxHeight="480" Margin="0,20,0,10"
+
         Stretch="Uniform" Source="Binding Image"/>
+
       </InlineContainer>
+
     </Paragraph>
+
     <Paragraph>
+
       <Run FontWeight="SemiLight" Text="Binding Content"/>
+
     </Paragraph>
+
   </Style>
+
 </RichTextBlock>
+
 <common:RichTextColumns.ColumnTemplate>
+
   <DataTemplate>
+
     <RichTextBlockOverflow Width="560" Margin="80,0,0,0">
+
       <RichTextBlockOverflow.RenderTransform>
+
         <TranslateTransform X="-1" Y="4"/>
+
       </RichTextBlockOverflow.RenderTransform>
+
     </RichTextBlockOverflow>
+
   </DataTemplate>
+
 </common:RichTextColumns.ColumnTemplate>
+
 </common:RichTextColumns>
 ```
 
-`<RichTextBlock>` 元素的宽度定义了第一列宽为 560 像素。第一个 `<Paragraph>` 元素嵌套了项目的标题、子标题和描述。第二个 `<Paragraph>` 包含图像，第三个 `<Paragraph>` 包含可能非常长的内容，会跨多列。
 
-当 `<RichTextColumns>` 元素的内容无法放入页面上的单列时，系统会自动添加额外的列，内容可以在其中发生溢出。`<common:RichTextColumns.ColumnTemplate>` 元素为额外的富文本列定义了一个模板。它使用宽度为 560 像素的 `<RichTextBlockOverflow>`——与第一列宽度相同。如果你将其更改为280，你将识别出溢出的列，如图 10-21 所示。
+
+`<RichTextBlock>`元素的宽度定义了第一列宽为 560 像素。第一个`<Paragraph>`元素嵌套了项目的标题、子标题和描述。第二个`<Paragraph>`包含图像，第三个`<Paragraph>`包含可能非常长的内容，会跨多列。
+
+当`<RichTextColumns>`元素的内容无法放入页面上的单列时，系统会自动添加额外的列，内容可以在其中发生溢出。`<common:RichTextColumns.ColumnTemplate>`元素为额外的富文本列定义了一个模板。它使用宽度为 560 像素的`<RichTextBlockOverflow>`——与第一列宽度相同。如果你将其更改为280，你将识别出溢出的列，如图 10-21 所示。
 
 布局标题：1
 
@@ -12693,61 +12311,58 @@ Grid Application 模板的 ItemDetailPage 使用 `FlipView` 来表示其内容�
 
 图 10-21：溢出列窄于第一列
 
-> 注意：FamilyTrips 示例应用并没有修改布局。然而，可以通过 Styles.xml 中的一些样式来自定义页面设计。
+> 注意：`FamilyTrips`示例应用并没有修改布局。然而，可以通过`Styles.xml`中的一些样式来自定义页面设计。
 
 # 其他值得学习的功能
 
-你可以从 Split Application 和 Grid Application 模板中获得灵感。这里是一些值得关注的内容：
+你可以从`Split Application`和`Grid Application`模板中获得灵感。这里是一些值得关注的内容：
 
-- 查看 LayoutAwarePage 的构造函数，并研究状态切换部分以确定窗口是如何变化的。
-- 你可以在其他应用程序中使用 SuspensionManager 类。查看它是如何保存和加载的。
+- 查看`LayoutAwarePage`的构造函数，并研究状态切换部分以确定窗口是如何变化的。
+- 你可以在其他应用程序中使用`SuspensionManager`类。查看它是如何保存和加载的。
 
-RichTextColumns 类实现了一个面板控件，可以根据需要为溢出内容创建额外的列。它用极少的代码完成了相当复杂的工作。
+`RichTextColumns`类实现了一个面板控件，可以根据需要为溢出内容创建额外的列。它用极少的代码完成了相当复杂的工作。
 
-StandardStyles.xml 文件包含了许多你可以使用的样式和模板。
+`StandardStyles.xml`文件包含了许多你可以使用的样式和模板。
 
 ## 总结
 
-大多数应用程序都有多个屏幕——使用 Windows 8 术语称为页面。多种导航模式可以帮助用户直观地浏览内容——这些模式包括中心导航、直接导航、层次导航和语义缩放。多页面场景的核心对象是 Page 对象，它是应用程序页面的基础元素。每个 Page 实例都关联一个 Frame 对象（可以通过 Frame 属性访问），它控制页的内容。你可以使用 Frame 导航到其他页面，传递目标页面类型。
+大多数应用程序都有多个屏幕——使用 Windows 8 术语称为页面。多种导航模式可以帮助用户直观地浏览内容——这些模式包括中心导航、直接导航、层次导航和语义缩放。多页面场景的核心对象是`Page`对象，它是应用程序页面的基础元素。每个`Page`实例都关联一个`Frame`对象（可以通过`Frame`属性访问），它控制页的内容。你可以使用`Frame`导航到其他页面，传递目标页面类型。
 
-你可以处理与导航相关的事件，如 NavigatingFrom、NavigatedFrom 和 NavigatedTo。如果你想在 Page 派生类内部处理这些事件，可以重写 OnNavigatingFrom、OnNavigatedFrom 和 OnNavigatedTo 方法。
+你可以处理与导航相关的事件，如`NavigatingFrom`、`NavigatedFrom`和`NavigatedTo`。如果你想在`Page`派生类内部处理这些事件，可以重写`OnNavigatingFrom`、`OnNavigatedFrom`和`OnNavigatedTo`方法。
 
-你不需要从空页面开始应用程序。Split Application 和 Grid Application 模板提供了适用于多种场景的快速上手。这些模板配备了很好的预定义工具。
+你不需要从空页面开始应用程序。`Split Application`和`Grid Application`模板提供了适用于多种场景的快速上手。这些模板配备了很好的预定义工具。
 
 在第11章中，你将学习 Windows8 的一些新功能，这些功能使你能够构建相互协作或与互联网服务的连接应用。
 
 # 练习题
 
-- 1. 对于从组列表中选择项目，并在导航到该组后从列表中选择项目的导航模式称为什么？
-2. Page 对象的哪个属性在导航中起着关键作用？
+1. 对于从组列表中选择项目，并在导航到该组后从列表中选择项目的导航模式称为什么？
+2. `Page`对象的哪个属性在导航中起着关键作用？
 3. 如何从当前页面导航到另一个页面？
 4. 如何防止离开页面？
-5. 在 Split Application 和 Grid Application 项目中，哪个预定义类提供了管理窗口大小变化的功能？
+5. 在`Split Application`和`Grid Application`项目中，哪个预定义类提供了管理窗口大小变化的功能？
 
-> > 练习题的答案见附录 A。
-
-
-
+> 练习题的答案见附录 A。
 
 # 本章你学到了
 
 | 主题 | 关键概念 |
 | :--- | :--- |
 | 导航模式 | Windows 8 语言的设计者创建了许多相当直观的导航模式，帮助用户轻松找到他们想要的内容。最重要的模式包括中枢式导航（hub navigation）、直接导航、分级导航和语义缩放。 |
-| 页面控制 | UI 控件是创建具有导航功能的 Windows 8 应用程序的关键构建块。从 `Page` 派生你的应用屏幕，你可以在应用中获得隐式导航，包括带有历史记录的前进后退导航以及导航事件。 |
-| Frame 控制 | Page 的 `Frame` 属性是 `Frame` 类的实例。`Frame` 是可以包含并显示页面的容器。从一个页面导航到另一个页面意味着将 `Frame` 的内容更改另一个 `Page` 实例。 |
-| Frame.Navigate 方法 | Frame 的 `Navigate` 方法是页面导航的关键操作。该方法接受两个参数。第一个参数是要导航到的页面类型，第二个（可选）参数是用作页面参数的对象。此参数可以用于传递页面初始化所需的数据。 |
-| OnNavigatingFrom 方法、OnNavigatingFrom 事件 | 当你准备从一个页面导航到另一个页面时，`NavigatingFrom` 事件会在源 Page 实例上触发。可以通过重写 `OnNavigatingFrom` 方法在源页面内处理此事件。如果你想阻止导航，将事件的 `Cancel` 属性设置为 `true`。 |
-| OnNavigatedFrom 方法、NavigatedFrom 事件 | 当你从一个页面导航到另一个页面后，`NavigatedFrom` 事件会在源 Page 实例上触发。可以通过重写 `OnNavigatedFrom` 方法在源页面内处理此事件。 |
-| OnNavigatingTo 方法、NavigatedTo 事件 | 当你准备从一个页面导航到另一个页面时，`NavigatingTo` 事件会在目标 Page 实例上触发。可以通过重写 `OnNavigatingTo` 方法在目标页面内处理此事件。 |
+| 页面控制 | UI 控件是创建具有导航功能的 Windows 8 应用程序的关键构建块。从`Page`派生你的应用屏幕，你可以在应用中获得隐式导航，包括带有历史记录的前进后退导航以及导航事件。 |
+| Frame 控制 | `Page`的`Frame`属性是`Frame`类的实例。`Frame`是可以包含并显示页面的容器。从一个页面导航到另一个页面意味着将`Frame`的内容更改另一个`Page`实例。 |
+| Frame.Navigate 方法 | `Frame`的`Navigate`方法是页面导航的关键操作。该方法接受两个参数。第一个参数是要导航到的页面类型，第二个（可选）参数是用作页面参数的对象。此参数可以用于传递页面初始化所需的数据。 |
+| OnNavigatingFrom 方法、OnNavigatingFrom 事件 | 当你准备从一个页面导航到另一个页面时，`NavigatingFrom`事件会在源`Page`实例上触发。可以通过重写`OnNavigatingFrom`方法在源页面内处理此事件。如果你想阻止导航，将事件的`Cancel`属性设置为`true`。 |
+| OnNavigatedFrom 方法、NavigatedFrom 事件 | 当你从一个页面导航到另一个页面后，`NavigatedFrom`事件会在源`Page`实例上触发。可以通过重写`OnNavigatedFrom`方法在源页面内处理此事件。 |
+| OnNavigatingTo 方法、NavigatedTo 事件 | 当你准备从一个页面导航到另一个页面时，`NavigatingTo`事件会在目标`Page`实例上触发。可以通过重写`OnNavigatingTo`方法在目标页面内处理此事件。 |
 
 # 总结 | 389
 
 | 主题 | 关键概念 |
 | :--- | :--- |
-| Launcher 类 | `Launcher` 类可以通过与应用程序关联的文件，或通过 URI 启动应用程序。该类分别提供了 `LaunchFileSync` 和 `LaunchUriAsync` 方法来实现此目的。 |
-| 分页应用程序模板 | `Split Application` 模板支持分级导航。它是一个用于在分组项目间导航的应用程序的双页面项目。第一页允许选择组，第二页在显示项目列表的同时显示所选项目的详细信息。 |
-| 网格应用程序模板 | `Grid Application` 模板支持分级导航。它是一个用于在项目组间导航的应用程序的三页面项目。第一页允许选择组。另外两个页面专门用于显示组详情和项目详情。 |
+| Launcher 类 | `Launcher`类可以通过与应用程序关联的文件，或通过 URI 启动应用程序。该类分别提供了`LaunchFileSync`和`LaunchUriAsync`方法来实现此目的。 |
+| 分页应用程序模板 | `Split Application`模板支持分级导航。它是一个用于在分组项目间导航的应用程序的双页面项目。第一页允许选择组，第二页在显示项目列表的同时显示所选项目的详细信息。 |
+| 网格应用程序模板 | `Grid Application`模板支持分级导航。它是一个用于在项目组间导航的应用程序的三页面项目。第一页允许选择组。另外两个页面专门用于显示组详情和项目详情。 |
 
 # 11
 
@@ -12762,11 +12377,11 @@ StandardStyles.xml 文件包含了许多你可以使用的样式和模板。
 
 本章的 WROX.COM 下载
 
-你可以在 wrox.com 网站上的 Download Code 选项卡上（www.wrox.com/remtitle.cgi?isbn=012680）找到本章的 wrox.com 代码下载。代码位于 `Chapter11.zip` 下载包中，并根据相应的练习进行了单独命名。
+你可以在 wrox.com 网站上的 Download Code 选项卡上（www.wrox.com/remtitle.cgi?isbn=012680）找到本章的 wrox.com 代码下载。代码位于`Chapter11.zip`下载包中，并根据相应的练习进行了单独命名。
 
 应用程序不是孤岛。它们存在于生态系统中，该生态系统将它们与其他应用程序和服务连接——有时通过操作系统，有时通过互联网。了解如何让你的 Windows 8 风格的应用程序使用操作系统提供的功能来访问某些资源，或访问其他 Windows 8 风格的应用程序提供的数据和服务是非常重要的。你将在本章中学习这些相关的集成选项。
 
-此外，你还学习了 Windows 8 风格应用程序中的各种网络选项。阅读本章后，你将能够将网络信息处理整合到应用程序中，并与聚合馈（syndication feeds）配合。本章的最后部分是关于使用高级抽象软件开发包 Live SDK 将你的应用程序集成到微软的在线服务中。
+此外，你还学习了 Windows 8 风格应用程序中的各种网络选项。阅读本章后，你将能够将网络信息处理整合到应用程序中，并与聚合馈（syndication feeds）配合。本章的最后部分是关于使用高级抽象软件开发包`Live SDK`将你的应用程序集成到微软的在线服务中。
 
 # 与操作系统和其他应用程序集成
 
@@ -12786,21 +12401,20 @@ Windows 只是一个提供允许你使用 PC 或平板电脑的核心功能的�
 
 许多应用程序需要访问以存储或删除文件。联系人信息等资源也是如此。
 
-选择器可以是旧对话框的后代。如果你熟悉 `OpenFileDialog`，就能很快理解选择器。然而，选择器与旧对话框有所不同。它们不是窗口化的；而是全屏的。利用这种大空间的机会，当前的 UI 选择器针对触摸进行了优化。
+选择器可以是旧对话框的后代。如果你熟悉`OpenFileDialog`，就能很快理解选择器。然而，选择器与旧对话框有所不同。它们不是窗口化的；而是全屏的。利用这种大空间的机会，当前的 UI 选择器针对触摸进行了优化。
 
 常见对话框的另一个巨大改进是，应用程序可以通过合约标识它们提供了选择器可以扩展某些功能。你可以在后面的章节中阅读更多关于此功能的介绍。
 
 最后，选择器使对受限资源的访问保持一致。当应用程序延迟打开文件或联系选择器时，所有应用程序都呈现出已知的 UI。
 
-对于本章而言，你需要了解四种选择器：`FileOpenPicker`、`FileSavePicker`、`FolderPicker` 和 `ContactPicker`。前三个位于 `Windows.Storage` 命名空间。位于 `Windows.ApplicationModel.Contacts` 命名空间。所有的都可以使用 `new` 关键字立即实例化，并提供异步方法以便它们完成工作。
+对于本章而言，你需要了解四种选择器：`FileOpenPicker`、`FileSavePicker`、`FolderPicker`和`ContactPicker`。前三个位于`Windows.Storage`命名空间。位于`Windows.ApplicationModel.Contacts`命名空间。所有的都可以使用`new`关键字立即实例化，并提供异步方法以便它们完成工作。
 
-下面的代码示例显示了如何使用 `FileOpenPicker` 打开文件并将其内容加载到 `StorageFile` 对象：
+下面的代码示例显示了如何使用`FileOpenPicker`打开文件并将其内容加载到`StorageFile`对象：
 
 ```
 async void OpenFile(object sender, RoutedEventArgs e)
 {
     FileOpenPicker fPicker = new FileOpenPicker();
-
     StorageFile file = await fPicker.PickSingleFileAsync();
     if (file != null)
     {
@@ -12809,19 +12423,17 @@ async void OpenFile(object sender, RoutedEventArgs e)
 }
 ```
 
+
+
 `FileOpenPicker` 用于打开一个或多个文件——即使是由于安全规定应用程序无法访问的位置。表 11-1 描述了 `FileOpenPicker` 的关键属性。其中一些属性与 `FileSavePicker` 类共享。
 
-
-
-
-
-# 表 11-1：FileOpenPicker 类的重要属性
+## 表 11-1：`FileOpenPicker` 类的重要属性
 
 | 属性 | 说明 |
 | --- | --- |
-| ViewMode | 定义选择器显示文件的方式。你可以将其设置为 Thumbnail（缩略图）或 List（列表）。 |
-| FileTypeFilter | 设置用户在想要筛选文件时，供其选择的文件类型。 |
-| SuggestedStartLocation | 这是选择器显示时打开的位置。你可以使用已知位置（如桌面、文档库、图片库或视频库）。 |
+| `ViewMode` | 定义选择器显示文件的方式。你可以将其设置为 `Thumbnail`（缩略图）或 `List`（列表）。 |
+| `FileTypeFilter` | 设置用户在想要筛选文件时，供其选择的文件类型。 |
+| `SuggestedStartLocation` | 这是选择器显示时打开的位置。你可以使用已知位置（如桌面、文档库、图片库或视频库）。 |
 
 在将其属性设置为所需的值后，你将调用这两个方法中的某一个来选取合适的文件。正如其名称所示，`PickSingleFileAsync` 用于打开单个文件。该方法的返回类型为 `IAsyncOperation<StorageFile>`，但通过使用 `await` 关键字，它表面上会返回一个 `StorageFile` 对象，因此你不需要等待后台处理（`IAsyncOperation`）完成；在此之后，提取出的操作结果（即 `StorageFile`）可以用于读取和操作用户所选文件的属性和内容。但请记住，如果应用程序使用 `FileOpenPicker` 从受限位置打开了文件，则在不使用 `FileSavePicker` 的情况下，无法对该文件保存更改。
 
@@ -12829,14 +12441,14 @@ async void OpenFile(object sender, RoutedEventArgs e)
 
 图 11-1 显示了 `FileOpenPicker` 如何保存到用户选择的位置和名称。此外，它与 `FileOpenPicker` 类共享了 `SuggestedStartLocation` 属性。表 11-2 显示了 `FileSavePicker` 的其他关键属性。
 
-# 表 11-2：FileSavePicker 类的重要属性
+## 表 11-2：`FileSavePicker` 类的重要属性
 
 | 属性 | 说明 |
 | --- | --- |
-| DefaultFileExtension | FileSavePicker 在保存文件时附加到文件名上的默认扩展名字符串。 |
-| FileChoices | 包含可能的文件类型和扩展名选项的列表。 |
-| SuggestedFileName | 用户打开选择器后可以覆盖的默认文件名。
-| SuggestedSaveFile | 通过此属性，你可以让选择器向用户建议一个现有文件，而不仅仅是名称和扩展。 |
+| `DefaultFileExtension` | `FileSavePicker` 在保存文件时附加到文件名上的默认扩展名字符串。 |
+| `FileChoices` | 包含可能的文件类型和扩展名选项的列表。 |
+| `SuggestedFileName` | 用户打开选择器后可以覆盖的默认文件名。 |
+| `SuggestedSaveFile` | 通过此属性，你可以让选择器向用户建议一个现有文件，而不仅仅是名称和扩展。 |
 
 # 与操作系统和其他应用程序集成
 
@@ -12846,13 +12458,11 @@ async void OpenFile(object sender, RoutedEventArgs e)
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_422_0.png)
 
-**图 11-1：** Mail 应用打开的 FileOpenPicker
+**图 11-1：** Mail 应用打开的 `FileOpenPicker`
 
 第三个值得提及的选择器类是 `FolderPicker`。通过此类，你可以让用户选择文件，也可以选择整个文件夹。你可以在之前的选择器类中找到它所有的重要属性。要使用它，在创建 `FolderPicker` 对象并设置其属性后，调用 `PickSingleFolderAsync` 方法。当你 `await` 关键字时，它返回一个 `StorageFile` 对象。这可以用于访问关于目录及其内部的所有数据：名称、创建日期、属性以及文件中的子项。
 
 最后一个选择器是 `ContactPicker`，它与之前的三个有所不同。它允许你访问当前用户的联系人。当应用程序使用 `ContactPicker` 时，它可以读取联系人、作为联系人选择器或引导用户进入另一个应用程序——每台 Windows 8 机器上预装的 Contacts Windows 8 风格应用就是默认的联系人选择应用程序。如果你不想创建自定义 UI 来选择联系人，可以依靠联系人应用。
-
-# 396 第 11 章 构建连接应用程序
 
 使用 `ContactPicker` 比使用文件或文件夹选择器更加简单。在创建 `ContactPicker` 对象并设置其属性后，你可以调用 `PickSingleContactAsync` 或 `PickMultipleContactsAsync`。当你使用 `await` 关键字时，前者返回一个代表你所选联系人的 `ContactInformation` 对象；后者返回一个 `ContactInformation` 对象只读列表。
 
@@ -12866,23 +12476,19 @@ async void OpenFile(object sender, RoutedEventArgs e)
 
 要查看如何使用选择器打开联系人和保存文件，请按照以下步骤操作：
 
-- 1. 打开 `Chapter11.zip` 文件中的 `PickerSample\End` 解决方案（你可以从 www.wrox.com 下载）。熟悉 UI。
-- 2. 通过双击打开 `MainPage.xaml.cs`。在页面顶部插入以下指令：
-- 3. 在 `MainPage` 类中添加 `ContactInformation` 对象列表。
-- 4. 在 `MainPage.xaml` 中，找到按钮的声明，并为两个事件添加事件处理器订阅。
-- 5. 在 `MainPage.xaml.cs` 中，创建 `OpenContacts` 方法。
-- 6. 创建 `SaveContactsToFile` 方法。目前它将保持为空。
-- 7. 按 F6 键或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现错误窗口显示代码中有错误，请按照上述窗口的建议解决。如果有错误，打开配套代码中的 `PickerSample\End` 解决方案，并将你的代码与工作解决方案中的代码进行比较。启动应用程序，测试第一个按钮是否正常工作。点击它，选择几个联系人，然后点击 OK 按钮。图 11-2 显示了选择两个联系人后的应用程序界面。
+1. 打开 `Chapter11.zip` 文件中的 `PickerSample\End` 解决方案（你可以从 www.wrox.com 下载）。熟悉 UI。
+2. 通过双击打开 `MainPage.xaml.cs`。在页面顶部插入以下指令：
+3. 在 `MainPage` 类中添加 `ContactInformation` 对象列表。
+4. 在 `MainPage.xaml` 中，找到按钮的声明，并为两个事件添加事件处理器订阅。
+5. 在 `MainPage.xaml.cs` 中，创建 `OpenContacts` 方法。
+6. 创建 `SaveContactsToFile` 方法。目前它将保持为空。
+7. 按 F6 键或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现错误窗口显示代码中有错误，请按照上述窗口的建议解决。如果有错误，打开配套代码中的 `PickerSample\End` 解决方案，并将你的代码与工作解决方案中的代码进行比较。启动应用程序，测试第一个按钮是否正常工作。点击它，选择几个联系人，然后点击 OK 按钮。图 11-2 显示了选择两个联系人后的应用程序界面。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_424_0.png)
 
-图 11-2：选取的两个联系人
+**图 11-2：** 选取的两个联系人
 
-
-
-
-
-## 8. 在之前创建的 SaveContactsToFile 方法中添加代码以使用 SaveFilePicker。后续代码中的差异已用加粗显示：
+8. 在之前创建的 `SaveContactsToFile` 方法中添加代码以使用 `SaveFilePicker`。后续代码中的差异已用加粗显示：
 
 ```csharp
 async void SaveContactsToFile(object sender, RoutedEventArgs e)
@@ -12902,7 +12508,7 @@ async void SaveContactsToFile(object sender, RoutedEventArgs e)
 }
 ```
 
-## 9. 修改 SaveContactsToFile 方法的代码以执行实际的文件写入操作。你需要的代码已用加粗显示：
+9. 修改 `SaveContactsToFile` 方法的代码以执行实际的文件写入操作。你需要的代码已用加粗显示：
 
 ```csharp
 async void SaveContactsToFile(object sender, RoutedEventArgs e)
@@ -12931,22 +12537,25 @@ async void SaveContactsToFile(object sender, RoutedEventArgs e)
 }
 ```
 
-10. 使用 F6 或点击 Visual Studio 主菜单上的“生成解决方案（Build Solution）”来生成应用程序。错误（Errors）窗口会出现并显示代码中存在错误。如果你无法解决这些错误，请打开示例解决方案并将你的代码与示例进行对比。
 
-11. 按 F5 运行应用程序，像在第 7 步中那样选择几个联系人。具体视图取决于内容，但图 11-3 显示了你应该看到的内容。注意 FileSavePicker 的底部部分。
+
+10. 使用`F6`或点击 Visual Studio 主菜单上的“生成解决方案（Build Solution）”来生成应用程序。错误（Errors）窗口会出现并显示代码中存在错误。如果你无法解决这些错误，请打开示例解决方案并将你的代码与示例进行对比。
+
+11. 按`F5`运行应用程序，像在第 7 步中那样选择几个联系人。具体视图取决于内容，但图 11-3 显示了你应该看到的内容。注意`FileSavePicker`的底部部分。
 
 ## 与操作系统和其他应用程序集成
 
 你可以设置想要保存的文件名称和类型，并检查它是否已在所选择的位置被创建。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_426_0.png)
-**图 11-3:** FileSavePicker，显示的内容
+
+**图 11-3:** `FileSavePicker`，显示的内容
 
 ### 工作原理
 
-你添加到 MainPage.xaml.cs 中的 Windows.ApplicationModel.Contacts 命名空间包含了你在第 2 步中使用的 ContactPicker 类。在调用第 5 步中的中的 PickMultipleContacts 方法后，结果被保存到 contacts 字段中，并添加到了 ListBox 中。
+你添加到`MainPage.xaml.cs`中的`Windows.ApplicationModel.Contacts`命名空间包含了你在第 2 步中使用的`ContactPicker`类。在调用第 5 步中的`PickMultipleContacts`方法后，结果被保存到`contacts`字段中，并添加到了`ListBox`中。
 
-将联系人保存到文件中要稍微复杂一些。在第 8 步中，你创建了 FileSavePicker，设置了它在打开时显示给用户，设置了将附加到文件名后的默认扩展名“.txt”，并将视图过滤为仅限纯文本文件。之后，你在第 8 步中调用了 PickSaveFileAsync 方法向用户显示 FileSavePicker。第 9 步中添加的代码负责实际写入用户选择的文件。WriteLinesAsync 接收一个用于写入的 StorageFile 对象以及一个字符串的可枚举（列表或数组）。第 9 步中对 FileFileManager 类的两次调用（WriteLinesAsync 和 CompleteUpdatesAsync）是为了确保不会因同时对文件进行多次更新而导致冲突。
+将联系人保存到文件中要稍微复杂一些。在第 8 步中，你创建了`FileSavePicker`，设置了它在打开时显示给用户，设置了将附加到文件名后的默认扩展名`.txt`，并将视图过滤为仅限纯文本文件。之后，你在第 8 步中调用了`PickSaveFileAsync`方法向用户显示`FileSavePicker`。第 9 步中添加的代码负责实际写入用户选择的文件。`WriteLinesAsync`接收一个用于写入的`StorageFile`对象以及一个字符串的可枚举（列表或数组）。第 9 步中对`FileFileManager`类的两次调用（`WriteLinesAsync`和`CompleteUpdatesAsync`）是为了确保不会因同时对文件进行多次更新而导致冲突。
 
 ## 理解合约（Contracts）的概念
 
@@ -12954,11 +12563,11 @@ Windows 8 高度依赖应用程序，这些程序运行在某种沙箱环境中�
 
 合约的概念是，应用程序在相互通信或联系操作系统以选择功能时，必须保持分离。当一个应用程序尝试向另一个应用程序发送数据或从其接收数据时，它不需要了解另一个应用程序内部机制的细节。相反，应用程序必须知道操作系统提供的全局连接点。通过这一点，所有应用程序都可以协同工作，而不仅仅是那些程序化相互彼此的程序。
 
-当应用程序尝试与操作系统集成时，它应该以受管理的方式——即不依赖 P/Invoke 等技术——使用一个统一的全局连接点，该点应提前向操作系统和用户指示意图（用户在安装应用之前会自动收到该意图通知）。
+当应用程序尝试与操作系统集成时，它应该以受管理的方式——即不依赖`P/Invoke`等技术——使用一个统一的全局连接点，该点应提前向操作系统和用户指示意图（用户在安装应用之前会自动收到该意图通知）。
 
 存在许多此类全局连接点，每个连接点都有一个对应的合约，你的应用程序必须声明该合约以交换数据、文件等。
 
-例如，如果使用如 SkyDrive 之类的应用程序来访问文件，它可以声明这种能力，当另一个应用程序使用 FilePicker 访问文件时，选择器会将 SkyDrive 应用程序列为打开文件的可能来源。另一个应用程序不需要了解 SkyDrive 或 SkyDrive 应用程序，因为这两个应用程序仅通过 Windows Runtime 提供的 API 进行通信。
+例如，如果使用如 SkyDrive 之类的应用程序来访问文件，它可以声明这种能力，当另一个应用程序使用`FilePicker`访问文件时，选择器会将 SkyDrive 应用程序列为打开文件的可能来源。另一个应用程序不需要了解 SkyDrive 或 SkyDrive 应用程序，因为这两个应用程序仅通过 Windows Runtime 提供的 API 进行通信。
 
 另一个例子是：当应用程序可以使用某种类型的数据（纯文本、URL 等），并且为了指示这些数据可以来自其他应用程序时，使用合约可以让操作系统介入并将此应用程序与其他所有可以提供数据的应用程序连接起来。
 
@@ -12968,23 +12577,19 @@ Windows 8 高度依赖应用程序，这些程序运行在某种沙箱环境中�
 
 你可以通过完成几个步骤来使任何应用程序可用。
 
-首先，你必须向操作系统表明你的应用程序想要与其他应用程序或操作系统本身参与通信。你可以通过编辑每个 Windows 8 风格应用程序默认拥有的 Package.manifest 文件来完成。通过“声明（Declarations）”选项卡，你可以声明应用程序想要使用的合约。
+首先，你必须向操作系统表明你的应用程序想要与其他应用程序或操作系统本身参与通信。你可以通过编辑每个 Windows 8 风格应用程序默认拥有的`Package.manifest`文件来完成。通过“声明（Declarations）”选项卡，你可以声明应用程序想要使用的合约。
 
 ## 与操作系统和其他应用程序集成
 
 在声明应用程序可以参与由特定合约所描述的数据或功能交换后，你必须响应若干生命周期事件，或者用与合约对应的新组件扩展应用程序。例如，如果你声明你的应用程序可以作为联系人选择器，你就可以为应用程序添加一个联系人选择页面，该页面将显示给任何尝试使用你的应用选择合约的应用程序。
 
-图 11-4 显示了 Windows 8 风格应用程序的“声明（Declarations）”选项卡。你可以在“可用时间（Available Times）”下选择添加声明。某些声明在应用程序中可以使用一次；某些可以使用不同的设置添加多次。你可以在“支持的声明（Supported Declarations）”列表下查看、编辑和删除声明。图 11-4 所示的应用程序声明它遵循“文件保存选择器”合约。这意味着应用程序符合合约规范，并且当其他 Windows 8 风格应用程序尝试通过 FileSavePicker 保存文件时，它会出现在其中。
-
-
-
-
+图 11-4 显示了 Windows 8 风格应用程序的“声明（Declarations）”选项卡。你可以在“可用时间（Available Times）”下选择添加声明。某些声明在应用程序中可以使用一次；某些可以使用不同的设置添加多次。你可以在“支持的声明（Supported Declarations）”列表下查看、编辑和删除声明。图 11-4 所示的应用程序声明它遵循“文件保存选择器”合约。这意味着应用程序符合合约规范，并且当其他 Windows 8 风格应用程序尝试通过`FileSavePicker`保存文件时，它会出现在其中。
 
 # 402 | 第 11 章 构建连接应用程序
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_429_0.png)
 
-**图 11-5:** 在 FileSavePicker UI 中显示的 SkyDrive
+**图 11-5:** 在`FileSavePicker`UI 中显示的 SkyDrive
 
 接下来的章节将介绍你可能经常使用的合约：搜索（Search）和共享（Share）。
 
@@ -12994,47 +12599,48 @@ Windows 8 高度依赖应用程序，这些程序运行在某种沙箱环境中�
 
 但该合约不仅于此。例如，当用户尝试查找某些内容时，你的应用程序将被列为搜索提供者。这样，用户就可以从外部搜索应用程序的内容（当然，技术上讲，实际搜索是委托给你的代码的）。此外，当用户在搜索框中输入时，应用可以提供帮助搜索建议。
 
-集成搜索功能的基础操作相对简单。在声明应用使用 Search 合约后，它必须响应与用户在 Windows 中搜索某些内容相对应的生命周期事件。你可以通过重写 Application 类的 `SearchActivated` 方法来实现。若要访问 Search 合约的高级功能，你可以使用 `SearchPane` 类。
+集成搜索功能的基础操作相对简单。在声明应用使用 Search 合约后，它必须响应与用户在 Windows 中搜索某些内容相对应的生命周期事件。你可以通过重写`Application`类的`SearchActivated`方法来实现。若要访问 Search 合约的高级功能，你可以使用`SearchPane`类。
 
 # 与操作系统和其他应用集成
 
 在下一个练习中，你将学习如何通过实现 Search 合约为应用添加搜索功能。
 
-> 注意：你可以在本书的配套网站 www.wrox.com 的 `ContractsSample\SearchEnd` 文件夹中（直到 Chapter11.zip 下载）找到此练习的完整代码。
+> 注意：你可以在本书的配套网站 www.wrox.com 的`ContractsSample\SearchEnd`文件夹中（直到 Chapter11.zip 下载）找到此练习的完整代码。
 
 ## 尝试一下
 
-- 1. 打开来自 Chapter11.zip 中配套代码的 `ContractsSample\Begin` 应用。（你可以从 www.wrox.com 下载。）熟悉其 UI，并注意某些功能（如添加或删除备注）尚未实现。先不要尝试构建或运行项目，因为在执行完此练习中的步骤之前，它将无法工作。
+- 1. 打开来自 Chapter11.zip 中配套代码的`ContractsSample\Begin`应用。（你可以从 www.wrox.com 下载。）熟悉其 UI，并注意某些功能（如添加或删除备注）尚未实现。先不要尝试构建或运行项目，因为在执行完此练习中的步骤之前，它将无法工作。
 
-- 2. 在解决方案管理器中双击 `Package.appmanifest`。在编辑器窗口中，点击 `Declarations` 选项卡，并在 `Supported Declarations` 中添加 `Search` 合约。保存项目并关闭编辑器窗口。
+- 2. 在解决方案管理器中双击`Package.appmanifest`。在编辑器窗口中，点击`Declarations`选项卡，并在`Supported Declarations`中添加`Search`合约。保存项目并关闭编辑器窗口。
 
-- 3. 打开 `MainPage.xaml.cs`，在其他指令下方添加以下使用 指令：`using Windows.ApplicationModel.Search;`
+- 3. 打开`MainPage.xaml.cs`，在其他指令下方添加以下使用指令：`using Windows.ApplicationModel.Search;`
 
-- 4. 在 `MainPage` 类中创建两个字段——一个 `SearchPane` 和一个 `NoteItems` 列表。添加以下粗体代码来实现此：
+- 4. 在`MainPage`类中创建两个字段——一个`SearchPane`和一个`NoteItems`列表。添加以下粗体代码来实现此：
+
 ```csharp
 public partial class MainPage : Page
 {
     SearchPane sp = null;
     List<NoteItem> notes = null;
-
     public MainPage()
-{
+    {
         this.InitializeComponent();
     }
 }
 ```
 
-- 5. 在构造函数中创建 `SearchPane` 实例。仅添加以下粗体代码：
+- 5. 在构造函数中创建`SearchPane`实例。仅添加以下粗体代码：
+
 ```csharp
 public MainPage()
 {
     this.InitializeComponent();
-
     sp = SearchPane.GetCurrentView();
 }
 ```
 
-- 6. 打开 `App.xaml.cs`，并在类中添加以下方法：
+- 6. 打开`App.xaml.cs`，并在类中添加以下方法：
+
 ```csharp
 protected override void OnSearchActivated(SearchActivatedEventArgs args)
 {
@@ -13043,7 +12649,7 @@ protected override void OnSearchActivated(SearchActivatedEventArgs args)
 }
 ```
 
-- 7. 保存并关闭此文件，切换回 `MainPage.xaml.cs`。通过向 `MainPage` 类添加以下代码来实现你在上一步中调用的方法：
+- 7. 保存并关闭此文件，切换回`MainPage.xaml.cs`。通过向`MainPage`类添加以下代码来实现你在上一步中调用的方法：
 
 ```csharp
 internal void ShowSearchResults(string searchText)
@@ -13059,14 +12665,14 @@ internal void ShowSearchResults(string searchText)
 }
 ```
 
-- 8. 在 `MainPage.xaml` 中，找到按钮 `btnRemoveFilter`，并通过添加以下粗体标记为其 `Click` 事件添加订阅：
+- 8. 在`MainPage.xaml`中，找到按钮`btnRemoveFilter`，并通过添加以下粗体标记为其`Click`事件添加订阅：
 
 ```xml
 <Button Name="btnRemoveFilter" HorizontalAlignment="Stretch" IsEnabled="False"
 Click="RemoveFilter">Remove filter</Button>
 ```
 
-- 9. 在 `MainPage.xaml.cs` 中，通过向类添加以下代码创建 `RemoveFilter` 方法：
+- 9. 在`MainPage.xaml.cs`中，通过向类添加以下代码创建`RemoveFilter`方法：
 
 ```csharp
 void RemoveFilter(object sender, RoutedEventArgs args)
@@ -13078,7 +12684,7 @@ void RemoveFilter(object sender, RoutedEventArgs args)
 }
 ```
 
-- 10. 重写 `MainPage` 类的 `OnNavigatedTo` 和 `OnNavigatedFrom` 方法。添加以下代码：
+- 10. 重写`MainPage`类的`OnNavigatedTo`和`OnNavigatedFrom`方法。添加以下代码：
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -13094,7 +12700,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
 }
 ```
 
-- 11. 添加 `sp_SuggestionsRequested` 方法以完成该类，如下所示：
+- 11. 添加`sp_SuggestionsRequested`方法以完成该类，如下所示：
 
 ```csharp
 void sp_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEventArgs args)
@@ -13108,10 +12714,6 @@ void sp_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEv
   }
 }
 ```
-
-
-
-
 
 # 与操作系统及其他应用集成 | 407
 
@@ -13128,7 +12730,7 @@ void sp_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEv
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_434_0.png)
 
-**图 11-8：** 应用中显示过滤内容的 ListBox
+**图 11-8：** 应用中显示过滤内容的`ListBox`
 
 ## 共享目标合约 (Share Target Contract)
 
@@ -13136,7 +12738,7 @@ void sp_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEv
 
 Windows 8 风格的应用程序使用 Windows Runtime 中的全局连接点来共享数据。当应用程序尝试与其他程序共享某些数据时，Windows 会查找所有声明了遵循“共享目标”合约的 Windows 8 风格的应用程序。
 
-将应用程序变为共享目标相对简单，因为 Visual Studio 提供了一个模板，你可以使用它为应用程序添加所有需要的组件。关键点是重写 `Application` 类的 `OnShareTargetActivated` 方法。当应用程序尝试向你的应用程序共享信息时，Windows Runtime 会调用此方法。你可以从方法的第二个参数获取共享数据，该参数是 `ShareTargetActivatedEventArgs` 的实例。然后你就可以对这些数据进行任何操作。
+将应用程序变为共享目标相对简单，因为 Visual Studio 提供了一个模板，你可以使用它为应用程序添加所有需要的组件。关键点是重写`Application`类的`OnShareTargetActivated`方法。当应用程序尝试向你的应用程序共享信息时，Windows Runtime 会调用此方法。你可以从方法的第二个参数获取共享数据，该参数是`ShareTargetActivatedEventArgs`的实例。然后你就可以对这些数据进行任何操作。
 
 408 | 第 11 章 构建连接的应用程序
 
@@ -13144,20 +12746,20 @@ Windows 8 风格的应用程序使用 Windows Runtime 中的全局连接点来�
 
 在练习中，你将学习如何将一个应用程序变为共享目标。
 
-> 注意：你可以在本书的配套网站 www.wrox.com 上的 Chapter11.zip 下载包中的 `ContractsSample\ShareEnd` 文件夹中找到此练习的完整下载代码。
+> 注意：你可以在本书的配套网站 www.wrox.com 上的 Chapter11.zip 下载包中的`ContractsSample\ShareEnd`文件夹中找到此练习的完整下载代码。
 
 ## 尝试使用共享目标合约
 
 要查看如何使用共享目标合约使你的应用程序能够通过 Windows 8 的共享磁贴（Share charm）接收并处理来自其他应用程序的数据，请按照以下步骤操作：
 
-- 1. 打开你在上一个“尝试”（使用搜索合约）中开发的 `ContractsSample` 应用。如果你还没有完成，可以只打开 Wrox 网站配套代码中 `ContractsSample\Search` 目录下的解决方案。
-- 2. 在解决方案资源管理器中右键点击项目节点 (ContractsSample)，并选择“添加项”。在“添加新项”对话框中，选择“共享目标”合约模板。在“名称”文本框中输入 `ShareTargetPage.xaml`，如图 11-9 所示。点击“添加”按钮，让 Visual Studio 添加应用程序所需的所有文件和引用。添加文件后，你可以打开项目的 `Package.appmanifest` 文件。如你所所的，Visual Studio 已经将共享目标合约添加到了声明（declarations）中。
+- 1. 打开你在上一个“尝试”（使用搜索合约）中开发的`ContractsSample`应用。如果你还没有完成，可以只打开 Wrox 网站配套代码中`ContractsSample\Search`目录下的解决方案。
+- 2. 在解决方案资源管理器中右键点击项目节点 (`ContractsSample`)，并选择“添加项”。在“添加新项”对话框中，选择“共享目标”合约模板。在“名称”文本框中输入`ShareTargetPage.xaml`，如图 11-9 所示。点击“添加”按钮，让 Visual Studio 添加应用程序所需的所有文件和引用。添加文件后，你可以打开项目的`Package.appmanifest`文件。如你所所的，Visual Studio 已经将共享目标合约添加到了声明（declarations）中。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_435_0.png)
 
 图 11-9：为应用程序添加共享目标合约
 
-- 3. 打开 `MainPage.xaml.cs`，添加一个名为 `AddNote` 的方法，该方法可以创建一个 `NoteItem` 并将其添加到现有的笔记集合中。在类中插入以下代码：
+- 3. 打开`MainPage.xaml.cs`，添加一个名为`AddNote`的方法，该方法可以创建一个`NoteItem`并将其添加到现有的笔记集合中。在类中插入以下代码：
 
 ```cs
 public async void AddNote(string title, DateTime createdAt, string text)
@@ -13180,7 +12782,9 @@ public async void AddNote(string title, DateTime createdAt, string text)
 }
 ```
 
-- 4. 打开新添加的 `ShareTarget.xaml`，找到模板包含的唯一文本框。通过修改此处加粗所示的代码，将其 `Text` 属性的绑定（Binding）设为 `TwoWay`：
+
+
+- 4. 打开新添加的`ShareTarget.xaml`，找到模板包含的唯一文本框。通过修改此处加粗所示的代码，将其`Text`属性的绑定（Binding）设为`TwoWay`：
 
 ```xml
 <TextBox
@@ -13193,26 +12797,23 @@ public async void AddNote(string title, DateTime createdAt, string text)
 />
 ```
 
-- 5. 切换到代码文件 `ShareTarget.xaml`，并将以下代码插入 `ShareButton_Click` 方法中：
+- 5. 切换到代码文件`ShareTarget.xaml`，并将以下代码插入`ShareButton_Click`方法中：
 
 ```cs
 async void ShareButton_Click(object sender, EventArgs args)
 {
     this.DefaultViewModel("Sharing") = true;
     this._shareOperation.ReportStarted();
-
     var url = await _shareOperation.Data.GetUriAsync();
-
     ((App)Application.Current).Page.AddNote((string)DefaultViewModel("Comment",
     DateTime.Now, url.AbsoluteUri);
-
     this._shareOperation.ReportCompleted();
 }
 ```
 
 - 6. 大搞定！按下 F6 键或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来编译应用程序。如果出现“错误”窗口，请检查错误。如果编译成功，你可以通过以下步骤测试：在 Internet Explorer 中打开一个网页，然后点击共享。你的应用程序应该会列为共享目标，如图 11-10 所示。
 
-- 7. 选择 `ContractsSample` 应用作为目标。在页面中（如图 11-11 所示）输入一个标题。
+- 7. 选择`ContractsSample`应用作为目标。在页面中（如图 11-11 所示）输入一个标题。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_437_0.png)
 
@@ -13224,7 +12825,7 @@ async void ShareButton_Click(object sender, EventArgs args)
 
 与操作系统及其他应用集成 | 411
 
-- 8. 回到 Internet Explorer 中的 `ContractsSample` 应用，确保笔记已添加，如图 11-12 所示。
+- 8. 回到 Internet Explorer 中的`ContractsSample`应用，确保笔记已添加，如图 11-12 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_438_0.png)
 
@@ -13234,15 +12835,11 @@ async void ShareButton_Click(object sender, EventArgs args)
 
 在步骤 2 中，你为应用程序添加了一个页面。这反过来为应用程序添加了一些额外的资源文件，更重要的是向操作系统指示你的应用程序可以通过共享功能接收某些类型的数据。这导致当用户尝试共享某些内容时，你的应用程序作为可能的共享目标出现。你可以通过打开清单并点击声明标签页来查看（修改）接受的数据格式。
 
-在步骤 4 中将 TextBox 的绑定设置为 `TwoWay` 是重要的，因为你想保存用户在 TextBox 中输入的状态。双向绑定使 TextBox 更新底层对象，在本例中存储数据（这被称为 ViewModel）。
+在步骤 4 中将`TextBox`的绑定设置为`TwoWay`是重要的，因为你想保存用户在`TextBox`中输入的状态。双向绑定使`TextBox`更新底层对象，在本例中存储数据（这被称为 ViewModel）。
 
-你在步骤 5 中在 `ShareButton_Click` 方法中编写的几行代码负责从 Windows 获取数据（这反过来来自源应用程序），并将其发送到应用程序的其他部分进行处理，即调用 `AddNote` 方法。在这里，假设数据是一个 URI（统一资源标识符）。这就是调用 `GetUriAsync` 的原因。应用程序可以共享许多其他类型的数据，因此良好的习惯是不只获取一种格式，而是检查它是否为正确格式。
+你在步骤 5 中在`ShareButton_Click`方法中编写的几行代码负责从 Windows 获取数据（这反过来来自源应用程序），并将其发送到应用程序的其他部分进行处理，即调用`AddNote`方法。在这里，假设数据是一个 URI（统一资源标识符）。这就是调用`GetUriAsync`的原因。应用程序可以共享许多其他类型的数据，因此良好的习惯是不只获取一种格式，而是检查它是否为正确格式。
 
-你在步骤 3 中添加的 `AddNote` 方法可以接受组成 `NoteItem` 的三个部分。然后它将新笔记添加到后台集合和 ListBox 中。由于此方法（并且将会）从 Page 的 UI 外部调用，并且它对 UI 进行了修改，因此务必确保它能够成功执行操作。你可以通过检查其对 UI 的访问权限（`HasThreadAccess`）来做到，当没有权限时，通过 Dispatcher 执行代码。
-
-
-
-
+你在步骤 3 中添加的`AddNote`方法可以接受组成`NoteItem`的三个部分。然后它将新笔记添加到后台集合和`ListBox`中。由于此方法（并且将会）从`Page`的 UI 外部调用，并且它对 UI 进行了修改，因此务必确保它能够成功执行操作。你可以通过检查其对 UI 的访问权限（`HasThreadAccess`）来做到，当没有权限时，通过`Dispatcher`执行代码。
 
 # 访问互联网
 
@@ -13254,30 +12851,30 @@ Windows 8 风格的应用程序能够连接到底层操作系统和其他应用�
 
 在构建使用互联网的应用程序时，首要且最重要的任务是让应用程序能够检测设备是否在线，并让应用能够识别连接状态的变化。
 
-Windows Runtime 通过静态类 `NetworkInformation` 提供了关于当前连接状态（或缺失状态）的所有基本信息供访问。该类型位于 `Windows.Networking.Connectivity` 命名空间中。
+Windows Runtime 通过静态类`NetworkInformation`提供了关于当前连接状态（或缺失状态）的所有基本信息供访问。该类型位于`Windows.Networking.Connectivity`命名空间中。
 
-通过订阅该类的唯一事件 `NetworkStatusChanged`，你可以在网络连接发生变化时获取自动更新。然而，该事件本身不会向你发送网络状态或属性的信息。你可以通过调用同一类上的 `GetConnectionProfile` 方法查询当前网络的配置来获取当前网络信息。这将返回一个 `ConnectionProfile` 对象。如果没有活动连接，返回值将为 `null`。
+通过订阅该类的唯一事件`NetworkStatusChanged`，你可以在网络连接发生变化时获取自动更新。然而，该事件本身不会向你发送网络状态或属性的信息。你可以通过调用同一类上的`GetConnectionProfile`方法查询当前网络的配置来获取当前网络信息。这将返回一个`ConnectionProfile`对象。如果没有活动连接，返回值将为`null`。
 
-`ConnectionProfile` 对象允许你获取当前网络连接的详细信息。例如，你可以识别网络、获取可用的连接级别，并查询网络（网络）的安全设置。
+`ConnectionProfile`对象允许你获取当前网络连接的详细信息。例如，你可以识别网络、获取可用的连接级别，并查询网络（网络）的安全设置。
 
 在下面的练习中，你将学习如何在你的 Windows 8 风格应用程序中读取连接信息。
 
-> 注意：你可以在书籍的配套网站 www.wrox.com 中 `Chapter11.zip` 下载包的 `NetworkSample\NetInfoEnd` 文件夹中找到此练习的完整代码。
+> 注意：你可以在书籍的配套网站 www.wrox.com 中`Chapter11.zip`下载包的`NetworkSample\NetInfoEnd`文件夹中找到此练习的完整代码。
 
 # 尝试一下：获取网络信息
 
 要查看如何使用网络信息 API 读取当前连接信息，并确保你的应用程序在网络状态变化时得到更新，请遵循以下步骤：
 
-- 1. 打开你在第 11 节配套资源的 `NetworkSample\NetInfoBegin` 目录下找到解决方案。快速熟悉 UI。你将在下一个“尝试一下”练习中也会此应用程序。实际上，你在本次练习中唯一使用的 UI 元素是应用程序左下角名为 `tbkNetStatus` 的 `TextBlock`。
+- 1. 打开你在第 11 节配套资源的`NetworkSample\NetInfoBegin`目录下找到解决方案。快速熟悉 UI。你将在下一个“尝试一下”练习中也会此应用程序。实际上，你在本次练习中唯一使用的 UI 元素是应用程序左下角名为`tbkNetStatus`的`TextBlock`。
 
-- 2. 打开 `MainPage.xml.cs`，在代码中已有的语句下方添加以下 `using` 语句：
+- 2. 打开`MainPage.xml.cs`，在代码中已有的语句下方添加以下`using`语句：
 
 ```csharp
 using Windows.Networking.Connectivity;
 using System.Text;
 ```
 
-- 3. 通过向 `MainPage` 类添加以下代码重写 `OnNavigatedTo` 和 `OnNavigatedFrom` 方法：
+- 3. 通过向`MainPage`类添加以下代码重写`OnNavigatedTo`和`OnNavigatedFrom`方法：
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -13286,6 +12883,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
     NetworkInformation.NetworkStatusChanged;
     RefreshNetworkInfo();
 }
+
 protected override void OnNavigatedFrom(NavigationEventArgs e)
 {
     NetworkInformation.NetworkStatusChanged -=
@@ -13293,7 +12891,7 @@ protected override void OnNavigatedFrom(NavigationEventArgs e)
 }
 ```
 
-- 4. 创建你在上一步中使用的 `NetworkInformation_NetworkStatusChanged` 方法：
+- 4. 创建你在上一步中使用的`NetworkInformation_NetworkStatusChanged`方法：
 
 ```csharp
 void NetworkInformation_NetworkStatusChanged(object sender)
@@ -13302,14 +12900,13 @@ void NetworkInformation_NetworkStatusChanged(object sender)
 }
 ```
 
-- 5. 通过向类中添加以下代码创建 `RefreshNetworkInfo` 方法：
+- 5. 通过向类中添加以下代码创建`RefreshNetworkInfo`方法：
 
 ```csharp
 async void RefreshNetworkInfo()
 {
     ConnectionProfile profile = NetworkInformation.GetInternetConnectionProfile();
     StringBuilder sb = new StringBuilder();
-
     if (profile != null)
     {
         sb.Append("Connected to ");
@@ -13319,13 +12916,12 @@ async void RefreshNetworkInfo()
         sb.Append(".");
     }
     else sb.Append("Disconnected.");
-
     await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
     () => tbkNetworkStatus.Text = sb.ToString());
 }
 ```
 
-- 6. 按 F6 按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中有错误，请参考配套代码中的 `NetworkSample\End` 解决方案解决这些错误，并将你的代码与工作解决方案中的代码进行比较。
+- 6. 按 F6 按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中有错误，请参考配套代码中的`NetworkSample\End`解决方案解决这些错误，并将你的代码与工作解决方案中的代码进行比较。
 
 - 7. 运行应用程序。注意，在左下角，网络状态在打开页面后立即出现。图 11-13 显示了设备连接到名为 SubCommSatFour 的网络且可以访问 Internet 的状态。（当然，如果设备没有网络连接，你将看到“Disconnected”。）
 
@@ -13339,11 +12935,11 @@ async void RefreshNetworkInfo()
 
 - 8. 尝试关闭并重新开启 Wi-Fi 连接，查看 UI 如何相应更新。
 
-- 9. 保存 `NetworkSample` 项目；你将在下一个“尝试一下”练习中需要它。
+- 9. 保存`NetworkSample`项目；你将在下一个“尝试一下”练习中需要它。
 
 ### 工作原理
 
-执行主要工作的是你在第 6 中添加的方法：`RefreshNetworkInfo`。调用它时，它通过调用 `GetInternetConnectionProfile` 方法获取当前网络的配置信息。如果为 `null`，则意味着没有活动连接。如果有连接，该方法会查询其名称和连接级别（是否有访问 Internet）。
+执行主要工作的是你在第 6 中添加的方法：`RefreshNetworkInfo`。调用它时，它通过调用`GetInternetConnectionProfile`方法获取当前网络的配置信息。如果为`null`，则意味着没有活动连接。如果有连接，该方法会查询其名称和连接级别（是否有访问 Internet）。
 
 # 访问互联网
 
@@ -13366,17 +12962,13 @@ async void RefreshNetworkInfo()
 - RSS http://www.rssboard.org/rss-specification/
 - Atom http://www.atomabled.org/developers/syndication/
 
-
-
-
-
 # 第11 章 构建连接型应用程序
 
-此部分负责连接服务器、检索请求的馈并对其进行处理。在这里，处理意味着解析——将检索到的 XML 转换为可管理的业务对象。当你使用 `SyndicationClient` 的 `RetrieveFeedAsync` 方法执行此操作时，如果你使用 `await` 关键字（换句话说，即在方法调用前使用 `await`），该方法将返回一个 `SyndicationFeed` 对象。`SyndicationFeed` 包含 RSS 或 Atom 馈的所有数据，包括标题、作者列表以及项目。
+此部分负责连接服务器、检索请求的馈并对其进行处理。在这里，处理意味着解析——将检索到的 XML 转换为可管理的业务对象。当你使用`SyndicationClient`的`RetrieveFeedAsync`方法执行此操作时，如果你使用`await`关键字（换句话说，即在方法调用前使用`await`），该方法将返回一个`SyndicationFeed`对象。`SyndicationFeed`包含 RSS 或 Atom 馈的所有数据，包括标题、作者列表以及项目。
 
-你可以通过 `Items` 属性访问馈项目。该列表包含 `FeedItem` 实例。每个 `FeedItem` 对象对应一个博客文章或论坛帖子，取决于馈的主题。要访问项目的内容，你可以使用 `FeedItem` 的属性，如 `Authors`、`Title`、`PublishedDate` 或 `Content`。请注意，在进行某些额外处理之前，这些属性中的某些并不是核心对象（如 `string`、`DateTime` 等）。
+你可以通过`Items`属性访问馈项目。该列表包含`FeedItem`实例。每个`FeedItem`对象对应一个博客文章或论坛帖子，取决于馈的主题。要访问项目的内容，你可以使用`FeedItem`的属性，如`Authors`、`Title`、`PublishedDate`或`Content`。请注意，在进行某些额外处理之前，这些属性中的某些并不是核心对象（如`string`、`DateTime`等）。
 
-连接服务器和下载数据被认为是用户必须感知的的操作，因此在构建与分发馈协作的应用程序时，务必确保在 `Package.appmanifest` 中启用了“Client”能力。
+连接服务器和下载数据被认为是用户必须感知的的操作，因此在构建与分发馈协作的应用程序时，务必确保在`Package.appmanifest`中启用了“Client”能力。
 
 在下一次练习中，你将扩展你在之前的“尝试”练习中开发的应用程序，使其具备读取馈的能力。
 
@@ -13386,18 +12978,18 @@ async void RefreshNetworkInfo()
 
 要查看如何使用 Syndication API 为你的应用程序添加对 RSS 和 Atom 馈的支持，请遵循以下步骤：
 
-- 1. 打开上一个“尝试”练习（“获取网络信息”）中的 `NetworkSample` 解决方案。如果你尚未操作，可以从 wrox.com 上配套代码的 `NetworkSample\NetInfo` 文件夹打开该解决方案。
+- 1. 打开上一个“尝试”练习（“获取网络信息”）中的`NetworkSample`解决方案。如果你尚未操作，可以从 wrox.com 上配套代码的`NetworkSample\NetInfo`文件夹打开该解决方案。
 
-- 2. 在解决方案管理器中双击 `Package.appmanifest` 文件打开打开程序编辑器。点击 `Capabilities` 选项卡，并确保勾选“Internet (Client)”能力，如图 11-14 所示。保存并关闭编辑器。
+- 2. 在解决方案管理器中双击`Package.appmanifest`文件打开打开程序编辑器。点击`Capabilities`选项卡，并确保勾选“Internet (Client)”能力，如图 11-14 所示。保存并关闭编辑器。
 
-- 3. 打开 `MainPage.xml.cs`，在其他指令之后添加以下指令：
+- 3. 打开`MainPage.xml.cs`，在其他指令之后添加以下指令：
 
 ```
 using Windows.Web.Syndication;
 using Windows.UI.Popups;
 ```
 
-- 4. 到 `MainPage.xml`。找到内容为“Get feed”的按钮，通过插入以下粗体标记的标记向其 `Click` 事件添加事件处理程序：
+- 4. 到`MainPage.xml`。找到内容为“Get feed”的按钮，通过插入以下粗体标记的标记向其`Click`事件添加事件处理程序：
 
 ```
 <Button Click="GetFeed" HorizontalAlignment="Stretch" Content="Get feed" />
@@ -13430,7 +13022,7 @@ using Windows.UI.Popups;
 
 图 11-14：清单编辑器的“能力”面板
 
-# 5. 回到 `MainPage.xml.cs` 并创建 `GetFeed` 方法。将以下代码添加到类中：
+# 5. 回到`MainPage.xml.cs`并创建`GetFeed`方法。将以下代码添加到类中：
 
 ```csharp
 async void GetFeed(object sender, RoutedEventArgs e)
@@ -13441,30 +13033,45 @@ async void GetFeed(object sender, RoutedEventArgs e)
         SyndicationClient client = new SyndicationClient();
         try
         {
+```
+
+
+
+```
             tbFeedStatus.Text = "Downloading feed";
+
             var feed = await client.RetrieveFeedAsync(new Uri(tbFeedUrl.Text.Trim()), UriKind.Absolute);
 
             tbFeedStatus.Text = "Feed downloaded";
+
             lbFeedPosts.Items.Clear();
+
             foreach (var item in feed.Items) lbFeedPosts.Items.Add(item);
+
         }
+
         catch (Exception ex)
+
         {
+
             tbFeedStatus.Text = "Error: " + ex.Message;
+
         }
+
     }
+
 }
 ```
 
 # 第11 章 构建连接型应用程序
 
-6. 回到 `MainPage.xml`。找到文件中的 `ListBox` 并为其 `SelectionChanged` 事件订阅处理程序方法。
+6. 回到`MainPage.xml`。找到文件中的`ListBox`并为其`SelectionChanged`事件订阅处理程序方法。
 
 ```xml
 <ListBox Row="1" Name="lbxPosts" DisplayMemberPath="Title.Text" MaxWidth="350" SelectionChanged="lbxPosts_SelectionChanged" />
 ```
 
-7. 回到 `MainPage.xml.cs` 并创建 `lbxPosts_SelectionChanged` 方法。将以下代码添加到类中：
+7. 回到`MainPage.xml.cs`并创建`lbxPosts_SelectionChanged`方法。将以下代码添加到类中：
 
 ```csharp
 void lbxPosts_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -13479,13 +13086,9 @@ void lbxPosts_SelectionChanged(object sender, SelectionChangedEventArgs e)
 }
 ```
 
-8. 生成应用程序。如果出现错误，请遵循 `NetworkSample` 中的建议。9. 运行应用程序。在 `TextBox` 中输入地址并点击馈 按钮。下载完成后，项目将显示在 `ListBox` 中。`WebView` 显示选中项目的内容，如图 11-15 所示。
+8. 生成应用程序。如果出现错误，请遵循`NetworkSample`中的建议。9. 运行应用程序。在`TextBox`中输入地址并点击馈 按钮。下载完成后，项目将显示在`ListBox`中。`WebView`显示选中项目的内容，如图 11-15 所示。
 
 图 11-15：一个显示馈的应用程序
-
-
-
-
 
 # 访问 Windows Live
 
@@ -13505,17 +13108,17 @@ Windows Live 是微软的一个品牌，用于标识该公司免费向所有人�
 
 当然，这些资源可能会受到严格限制——用户可能不希望与应用程序共享这些。使用这些资源的授权包含两个步骤。
 
-首先，你必须在 Windows Live 上注册你的应用程序。你将获得一个标识符，Windows Live 用它识别哪个应用程序尝试与其联系。你可以通过访问 https://manage.dev.live.com/，点击“我的应用程序”链接，使用微软账户登录并创建一个应用程序来注册你的应用程序。之后，你可以为你的应用程序请求一个标识符以便能够联系 Live Connect 服务。该标识符是一个包名，你必须在应用程序的 `Package.appxmanifest` 中将其与原始包名交换。
+首先，你必须在 Windows Live 上注册你的应用程序。你将获得一个标识符，Windows Live 用它识别哪个应用程序尝试与其联系。你可以通过访问 https://manage.dev.live.com/，点击“我的应用程序”链接，使用微软账户登录并创建一个应用程序来注册你的应用程序。之后，你可以为你的应用程序请求一个标识符以便能够联系 Live Connect 服务。该标识符是一个包名，你必须在应用程序的`Package.appxmanifest`中将其与原始包名交换。
 
 授权的第二个步骤由用户完成。当你构建一个必须连接到 Windows Live 的应用程序时，你需要指定应用程序想要使用的用户数据部分——联系人、文件、日历等。当用户首次启动应用程序并连接到 Windows Live 时，Live Connect 会要求他或她确认该应用程序是否可以访问其想要使用的资源。如果用户同意，则不需要进一步的登录或确认。下次，Windows Live 就会知道这个特定的应用程序已启用了这组特定的资源。当然，用户可以随时撤销这些权限。
 
-适用于 Windows 8 风格应用程序的 Live SDK 自带有一个控制按钮 `signButton`。此按钮可以放置在应用程序的 UI 上，让用户登录或注销微软在线服务。范围（应用程序想要访问的 Live 配置文件的部分）可以通过此按钮进行管理。此外，它的 `SessionChanged` 事件可以向应用程序信号用户已选择登录或注销。
+适用于 Windows 8 风格应用程序的 Live SDK 自带有一个控制按钮`signButton`。此按钮可以放置在应用程序的 UI 上，让用户登录或注销微软在线服务。范围（应用程序想要访问的 Live 配置文件的部分）可以通过此按钮进行管理。此外，它的`SessionChanged`事件可以向应用程序信号用户已选择登录或注销。
 
-当用户连接时，应用程序可以创建一个 `LiveClient`，它可以用于管理会话并检索或修改 Live 服务中的数据和文件。这些操作是在用户同意的情况下进行的。Windows Live 只允许用户（在首次尝试连接微软在线服务时）让应用程序运行。
+当用户连接时，应用程序可以创建一个`LiveClient`，它可以用于管理会话并检索或修改 Live 服务中的数据和文件。这些操作是在用户同意的情况下进行的。Windows Live 只允许用户（在首次尝试连接微软在线服务时）让应用程序运行。
 
 在下一次练习中，你将学习如何创建一个可以连接到 Windows Live 并检索用户名称和 Live 头图片的 Windows 8 风格应用程序。此外，你将看到如何访问 SkyDrive 并向其上传文件。这个练习可能比通常要长一点，但不要担心。执行起来并不困难。
 
-> 注意：你可以在书籍的配套网站 www.wrox.com 的 `LiveSample\EndChapter11.zip` 文件夹中找到此练习的完整代码下载。但是，缺少包名——如果你尝试使用该应用程序，必须手动创建一个。
+> 注意：你可以在书籍的配套网站 www.wrox.com 的`LiveSample\EndChapter11.zip`文件夹中找到此练习的完整代码下载。但是，缺少包名——如果你尝试使用该应用程序，必须手动创建一个。
 
 # 将你的应用程序与 Windows Live 服务集成
 
@@ -13523,17 +13126,14 @@ Windows Live 是微软的一个品牌，用于标识该公司免费向所有人�
 
 - 1. 下载并安装适用于 Windows 8 风格应用程序的 Live SDK。访问 http://msdn.microsoft.com/en-us/。
 - 2. 使用空白模板创建一个 C# Windows 8 应用程序。将其命名为 LiveSample。
-- 3. 双击打开 `package.manifest`。
+- 3. 双击打开`package.manifest`。
 - 4. 回到浏览器并注册你的应用程序。
 - 5. 你的应用程序现在已注册。
 - 6. 将 Live SDK 添加到你的项目中。
-- 7. 在项目的 `Common` 文件夹中添加一个新类 `LiveItemInfo`。
-- 8. 打开 `MainPage.xaml`，通过添加以下加粗行来修改 `<Page>` 标签。
+- 7. 在项目的`Common`文件夹中添加一个新类`LiveItemInfo`。
+- 8. 打开`MainPage.xaml`，通过添加以下加粗行来修改`<Page>`标签。
 
-
-
-
-9. 删除起始和结束 Page 标签（<Page...> 和 </Page>）之间的所有内容，并向 Page 标签中添加标记标记：
+9. 删除起始和结束 Page 标签（`<Page...>`和`</Page>`）之间的所有内容，并向 Page 标签中添加标记标记：
 
 ```xml
 <Grid Background={StaticResource ApplicationBackgroundBrush}>
@@ -13562,7 +13162,7 @@ Windows Live 是微软的一个品牌，用于标识该公司免费向所有人�
 </Grid>
 ```
 
-10. 在 UI 上的第一个按钮（btnGetFolder）之前，通过向文件中添加以下**粗体**标记来添加一个 SignInButton。保存并关闭文件：
+10. 在 UI 上的第一个按钮（`btnGetFolder`）之前，通过向文件中添加以下**粗体**标记来添加一个`SignInButton`。保存并关闭文件：
 
 ```xml
 </Grid.ColumnDefinitions>
@@ -13570,7 +13170,7 @@ Windows Live 是微软的一个品牌，用于标识该公司免费向所有人�
 <Button Name="btnGetFolder" Content="read root folder" Click="btnGet_Click" Grid.Column="1" />
 ```
 
-11. 在 MainPage.xaml.cs 中，向文件中添加以下 using 指令：
+11. 在`MainPage.xaml.cs`中，向文件中添加以下`using`指令：
 
 ```csharp
 using Microsoft.Live.Common;
@@ -13580,7 +13180,7 @@ using Windows.Storage.Packages;
 using Windows.Storage;
 ```
 
-12. 通过将以下**粗体**代码复制到文件中，为 MainPage 页面添加 LiveConnectClient 客户端：
+12. 通过将以下**粗体**代码复制到文件中，为`MainPage`页面添加`LiveConnectClient`客户端：
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -13590,8 +13190,8 @@ public sealed partial class MainPage : Page
 ```csharp
 }
 LiveConnectClient client = null;
-
 public MainPage() ..
+```
 
 ## 13. 向类中添加以下方法：
 
@@ -13608,7 +13208,7 @@ void SignButton_SessionChanged(object sender,
 }
 ```
 
-## 14. 上一个方法调用了 LoadProfile 方法，该方法并不存在。在此所示将其添加到类中：
+## 14. 上一个方法调用了`LoadProfile`方法，该方法并不存在。在此所示将其添加到类中：
 
 ```csharp
 async void LoadProfile()
@@ -13621,7 +13221,7 @@ async void LoadProfile()
 }
 ```
 
-## 15. 通过向类中添加以下代码创建 btnGet_Click 方法：
+## 15. 通过向类中添加以下代码创建`btnGet_Click`方法：
 
 ```csharp
 async void btnGet_Click(object sender, RoutedEventArgs e)
@@ -13639,7 +13239,7 @@ async void btnGet_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 16. 添加最后一个方法 btnUpload_Click(object sender, RoutedEventArgs e)
+## 16. 添加最后一个方法`btnUpload_Click(object sender, RoutedEventArgs e)`
 
 ```csharp
 {
@@ -13663,9 +13263,9 @@ if (file != null) {
 }
 ```
 
-17. 按 F6 键或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中有错误，请尝试按照上述窗口中的建议来解决它们。你也可以将你的代码与工作解决方案中的代码进行比较。请注意，尽管示例应用程序没有错误，但除非安装了适用于 Windows 8 风格应用程序的 Live SDK、添加了 DLL 的引用，并按照步骤 1 和步骤 2 中的说明将包名替换为从 Live 开发中心 获取的名称，否则将无法编译。
+17. 按`F6`键或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中有错误，请尝试按照上述窗口中的建议来解决它们。你也可以将你的代码与工作解决方案中的代码进行比较。请注意，尽管示例应用程序没有错误，但除非安装了适用于 Windows 8 风格应用程序的 Live SDK、添加了 DLL 的引用，并按照步骤 1 和步骤 2 中的说明将包名替换为从 Live 开发中心 获取的名称，否则将无法编译。
 
-18. 启动应用程序，等待 SignInButton 启用。点击或触摸登录。如图 18 所示。
+18. 启动应用程序，等待`SignInButton`启用。点击或触摸登录。如图 18 所示。
 
 ![imgProfile](link_to_image)
 
@@ -13681,24 +13281,27 @@ if (file != null) {
 
 首先，你接触了选择器（pickers）的概念。通过这些类，应用程序在用户尝试访问资源（例如打开文件或联系人、保存图像等）时可以保持统一的设计和界面。
 
+
+
 合约（Contracts）是为了让 Windows 8 能够了解应用程序的一些重要信息，例如通过编程访问用户的特定文件夹（文档、音乐等）、运行后台任务或与文件类型关联。除此之外，合约还声明了与操作系统和其他应用程序的集成——例如，应用程序可以在 Windows 8 的搜索页面上显示，可以作为源或目标，并且可以通过上述选择器和相应的合约声明为其他应用程序提供打开或保存文件的能力。
 
 ## 总结
 
 在本章中，你学习了如何将应用程序与周围的生态系统连接起来。
 
-
-
-
 本章的最后一部分介绍了 Live SDK。通过这个可下载的扩展，你可以将应用程序集成到微软的在线生态系统中。你的应用程序可以使用存储在云端的用户数据，甚至可以操作这些数据。
 
 ## 练习
 
-- 1. 选择器（pickers）的目的是什么？
-- 2. 如何在应用程序中构建易于使用的搜索功能？
-- 3. 将应用程序准备为共享目标（share target）的最简单方法是什么？
-- 4. 如何将网络源转换为业务对象？
-- 5. 应用程序如何请求 Windows Live 权限以访问 Windows Live 服务中的应用程序用户数据？
+1. 选择器（pickers）的目的是什么？
+
+2. 如何在应用程序中构建易于使用的搜索功能？
+
+3. 将应用程序准备为共享目标（share target）的最简单方法是什么？
+
+4. 如何将网络源转换为业务对象？
+
+5. 应用程序如何请求 Windows Live 权限以访问 Windows Live 服务中的应用程序用户数据？
 
 > **注意** 你可以在附录 A 中找到练习题的答案。
 
@@ -13712,9 +13315,7 @@ if (file != null) {
 | Windows Live | 这是微软免费在线服务的品牌名称。这些包括电子邮件、即时消息（IM）、日历和基于云的文件存储。 |
 | Live SDK | 这是一个可以免费下载的应用程序扩展，使其能够连接 Windows Live、检索并处理用户数据，或上传（或修改）数据。 |
 
-## 12
-
-## 利用平板电脑功能
+# 12 利用平板电脑功能
 
 你将在本章中学到：
 
@@ -13722,9 +13323,9 @@ if (file != null) {
 - 将位置、移动和设备姿态数据整合到应用程序中
 - 使用 Windows Runtime API 通过感官输入增强用户体验
 
-本章 WROX.COM 代码下载
+## 本章 WROX.COM 代码下载
 
-你可以在 www.wrox.com/remitle.cgi?isbn=012680 的“Download Code”选项卡上找到本章的 wrox.com 代码下载。代码位于 Chapter12.zip 下载包中，并根据相应练习题的单独命名。
+你可以在 `www.wrox.com/remitle.cgi?isbn=012680` 的“Download Code”选项卡上找到本章的 wrox.com 代码下载。代码位于 `Chapter12.zip` 下载包中，并根据相应练习题的单独命名。
 
 运行 Windows 操作系统的计算机传统上是配备鼠标和键盘的桌面式或笔记本式设备。因此，每个为在 Windows 上运行而编写的应用程序都针对这类输入设备进行了优化。
 
@@ -13771,57 +13372,54 @@ Windows 8 在以下情况下会启动 GPS 芯片（如果存在的话）：
 
 或者，如果你不想持续跟踪用户的位置，可以调用 geolocator 的 `GetGeolocationAsync` 方法。该方法返回一个 `Geolocation` 类的实例。
 
-
-
-
-
 ![](img/4ba176960f93c5e0483da4464a3d695f_461_0.png)
 
 **图 12-1:** 一个请求读取位置信息的应用程序
 
-该类包含两个重要的属性：Coordinate（坐标）和 CivicAddress（市政地址）。Coordinate 属性是 `Geocordinate` 类的的一个实例，它包含了表 12-1 中描述的属性。
+该类包含两个重要的属性：`Coordinate`（坐标）和 `CivicAddress`（市政地址）。`Coordinate` 属性是 `Geocordinate` 类的的一个实例，它包含了表 12-1 中描述的属性。
 
-**表 12-1:** Geocordinate 类的实例属性
+**表 12-1:** `Geocordinate` 类的实例属性
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |
-| Latitude | double | 获取以度为单位的坐标纬度 |
-| Longitude | double | 获取以度为单位的坐标经度 |
-| Accuracy | double | 获取纬度和经度的最大误差（米） |
-| Altitude | double? | 如果存在，则获取以米为单位的位置高度 |
-| AltitudeAccuracy | double? | 获取高度读数的最大误差（米） |
-| Heading | double? | 表示朝向地理北极的航向（度） |
-| Speed | double? | 如果存在，则获取设备以米秒为单位的速度 |
-| Timestamp | DateTimeOffset | 获取计算位置的时间 |
+| `Latitude` | `double` | 获取以度为单位的坐标纬度 |
+| `Longitude` | `double` | 获取以度为单位的坐标经度 |
+| `Accuracy` | `double` | 获取纬度和经度的最大误差（米） |
+| `Altitude` | `double?` | 如果存在，则获取以米为单位的位置高度 |
+| `AltitudeAccuracy` | `double?` | 获取高度读数的最大误差（米） |
+| `Heading` | `double?` | 表示朝向地理北极的航向（度） |
+| `Speed` | `double?` | 如果存在，则获取设备以米秒为单位的速度 |
+| `Timestamp` | `DateTimeOffset` | 获取计算位置的时间 |
 
-# 构建位置感知型应用程序
+## 构建位置感知型应用程序
 
-> 注意：在表 12-1 中，你会看到一个名为 "double" 的类型和另一个名为 "double?" 的类型。它们不是同一种类型。`double` 是双精度浮点数，这意味着意味着它可以包含很大范围内的任何数字（整数或分数）。当你看到一个值类型名称后面带有一个问号时，它是一个可空类型（nullable type）。可空类型的实例可以包含原始类型可以的任何值，此外它们还可以被赋值为 `null`，表示它们没有任何定义的值。像 `double` 这样的普通值类型不能为空；它们必须始终有一个值。你可以在 http://msdn.microsoft.com/en-us/library/it3y8s4s(v-vs-10).aspx 了解更多关于可空类型的信息。
+> 注意：在表 12-1 中，你会看到一个名为 `double` 的类型和另一个名为 `double?` 的类型。它们不是同一种类型。`double` 是双精度浮点数，这意味着意味着它可以包含很大范围内的任何数字（整数或分数）。当你看到一个值类型名称后面带有一个问号时，它是一个可空类型（nullable type）。可空类型的实例可以包含原始类型可以的任何值，此外它们还可以被赋值为 `null`，表示它们没有任何定义的值。像 `double` 这样的普通值类型不能为空；它们必须始终有一个值。你可以在 `http://msdn.microsoft.com/en-us/library/it3y8s4s(v-vs-10).aspx` 了解更多关于可空类型的信息。
 
-`Civic` 类是 `CivicAddress` 属性的类型，它持有一个 `DateTimeOffset` 实例，目的与 `Geolocation` 类中的 `Timestamp` 相同，并具有许多易于理解的名称：City（城市）、Country（国家）、Postalcode（邮政编码）和 State（州）。
+`Civic` 类是 `CivicAddress` 属性的类型，它持有一个 `DateTimeOffset` 实例，目的与 `Geolocation` 类中的 `Timestamp` 相同，并具有许多易于理解的名称：`City`（城市）、`Country`（国家）、`Postalcode`（邮政编码）和 `State`（州）。
 
 > 注意：Microsoft 目前没有通过 Location API 提供市政地址，因为这些应该是空字符串。稍后可能会包含市政地址，但在那时，如果你想在应用程序中使用市政地址，你应该依赖第三方服务根据坐标计算地址。
 
 在接下来的练习中，你将学习如何结合使用 Location API 和 Windows 模拟器来构建和测试位置感知应用程序。然而，目前的 Windows 模拟器在模拟位置变化方面的能力相当有限，如果可能，在将它们发送到 Windows Store 之前，在真实的平板板设备上运行位置感知型应用程序。
 
-> 注意：你可以在本书的配套网站 www.wrox.com 的 Chapter12.zip 下载包的 GeoLocSample\End 文件夹中找到此练习的完整代码。
+> 注意：你可以在本书的配套网站 `www.wrox.com` 的 `Chapter12.zip` 下载包的 `GeoLocSample\End` 文件夹中找到此练习的完整代码。
 
-# 尝试使用 Location API
+## 尝试使用 Location API
 
 要查看如何使用 Location API 将位置感知集成到 Windows 8 风格的应用程序中，请遵循以下步骤：
 
-- 1. 从 Wrox 网站（www.wrox.com）本章的可下载副本下载并打开 `Chi2-GeoLoc-Begin` 项目。快速熟悉应用程序的用户界面（UI）。这是你将添加功能部分的骨架。
-- 2. 在解决方案管理器中双击 `Package.appmanifest` 文件，打开清单的编辑器窗口。如果你没有看到解决方案管理器，可以从“视图”菜单打开它。图 12-2 显示了解决方案管理器。
+1. 从 Wrox 网站（`www.wrox.com`）本章的可下载副本下载并打开 `Chi2-GeoLoc-Begin` 项目。快速熟悉应用程序的用户界面（UI）。这是你将添加功能部分的骨架。
+
+2. 在解决方案管理器中双击 `Package.appmanifest` 文件，打开清单的编辑器窗口。如果你没有看到解决方案管理器，可以从“视图”菜单打开它。图 12-2 显示了解决方案管理器。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_462_0.png)
 
-图 12-2: 解决方案管理器中的 Package.appmanifest 文件
+图 12-2: 解决方案管理器中的 `Package.appmanifest` 文件
 
-- 3. 在清单编辑器窗口中，切换到 Capabilities（功能）选项卡，并确保功能列表中的 Location（位置）已勾选，如图 12-3 所示。
+3. 在清单编辑器窗口中，切换到 Capabilities（功能）选项卡，并确保功能列表中的 Location（位置）已勾选，如图 12-3 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_463_0.png)
 
-- 4. 打开 `MainPage.xaml.cs` 文件查看 C# 后代码。在文件顶部已有的 `using` 语句下方添加以下行：
+4. 打开 `MainPage.xaml.cs` 文件查看 C# 后代码。在文件顶部已有的 `using` 语句下方添加以下行：
 
 ```
 using Windows.Devices.Geolocation;
@@ -13829,20 +13427,20 @@ using Windows.UI.Core;
 using System.Threading.Tasks;
 ```
 
-- 5. 在 `MainPage` 类声明的起始大括号下方添加以下行：
+5. 在 `MainPage` 类声明的起始大括号下方添加以下行：
 
 ```
 Geolocation locator = null;
 ```
 
-- 6. 在构造函数中，调用 `InitializeComponent()` 之后添加以下行：
+6. 在构造函数中，调用 `InitializeComponent()` 之后添加以下行：
 
 ```
 locator = new Geocator();
 locator.StatusChanged += locator_StatusChanged;
 ```
 
-- 7. 向类中添加以下方法：
+7. 向类中添加以下方法：
 
 ```cs
 async void locator_StatusChanged(Geolocation locator, StatusChangedEventArgs args)
@@ -13854,25 +13452,21 @@ async void locator_StatusChanged(Geolocation locator, StatusChangedEventArgs arg
 }
 ```
 
-- 8. 在 `MainPage.xml` 文件中找到名为 `tsLocationTracking` 和 `tsAccuracy` 的切换开关（Switch），并为 `Toggled` 事件添加事件处理程序。此外，找到 XAML 中唯一的按钮（Button）。为其 `Click` 事件订阅一个方法。你需要添加的标记为粗体部分。
+8. 在 `MainPage.xml` 文件中找到名为 `tsLocationTracking` 和 `tsAccuracy` 的切换开关（Switch），并为 `Toggled` 事件添加事件处理程序。此外，找到 XAML 中唯一的按钮（Button）。为其 `Click` 事件订阅一个方法。你需要添加的标记为粗体部分。
 
-**<ToggleSwitch x:Name="tsLocationTracking" Header="Automatic"** **HorizontalAlignment="Left" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Toggled="tsLocationTracking_Toggled" />**
+```xml
+<ToggleSwitch x:Name="tsLocationTracking" Header="Automatic" HorizontalAlignment="Left" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Toggled="tsLocationTracking_Toggled" />
+<ToggleSwitch x:Name="tsAccuracy" Header="High" HorizontalAlignment="Left" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Toggled="tsAccuracy_Toggled" />
+```
 
-**<ToggleSwitch x:Name="tsAccuracy" Header="High"** **HorizontalAlignment="Left" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Toggled="tsAccuracy_Toggled" />**
-
-- 9. 在 `MainPage.xaml.cs` 文件中找到对应的切换开关，并为 `Toggled` 事件添加事件处理程序。此外，找到 XAML 中唯一的按钮。为其 `Click` 事件订阅一个方法。你需要添加的标记为粗体部分。
+9. 在 `MainPage.xaml.cs` 文件中找到对应的切换开关，并为 `Toggled` 事件添加事件处理程序。此外，找到 XAML 中唯一的按钮。为其 `Click` 事件订阅一个方法。你需要添加的标记为粗体部分。
 
 （注：此处原文描述存在部分描述重复和错乱，翻译时已根据逻辑进行了整理和对齐）
 
-
-
-
-
+```csharp
 PositionAccuracy.High : PositionAccuracy.Default;
-
 }
 
-```c
 void tsLocationTracking_Toggled(object sender, RoutedEventArgs args)
 {
     if (tsLocationTracking.IsOn)
@@ -13909,11 +13503,13 @@ async void RefreshData(object sender, RoutedEventArgs e)
 }
 ```
 
-- 11. 按 F6 键或点击 Visual Studio 主菜单上的“生成 - 解决方案”来编译应用程序。如果出现“错误”窗口并显示代码中存在错误，请尝试按照上述窗口中的建议来解决它们。如果你无法解决错误，请使用辅助代码中的 GeoLocSample 解决方案，并将你的代码与工作解决方案中的代码进行比较。
+11. 按 F6 键或点击 Visual Studio 主菜单上的“生成 - 解决方案”来编译应用程序。如果出现“错误”窗口并显示代码中存在错误，请尝试按照上述窗口中的建议来解决它们。如果你无法解决错误，请使用辅助代码中的 GeoLocSample 解决方案，并将你的代码与工作解决方案中的代码进行比较。
+
+
 
 - 12. 运行应用程序。当你启用自动跟踪功能时，应用会自动更新屏幕（或者如果没有启用，则每隔 60 秒更新一次）。如果禁用了高精度（High Accuracy），你可能需要移动位置。此外，请记住，如果你在 Windows 模拟器上运行程序，可以向其提供模拟位置数据而无需实际移动。应用程序的外应该应该图 12-4 所示。注意，在没有 GPS 的情况下，准确性是有限的。
 
-## 第 12 章利用平板电脑功能
+## 第 12 章 利用平板电脑功能
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_467_0.png)
 
@@ -13923,15 +13519,15 @@ async void RefreshData(object sender, RoutedEventArgs e)
 
 在第 3 步中，你首先指示你的应用程序希望从操作系统接收设备位置数据。这是重要的，因为如果没有这一点，应用程序将无法正常运行。
 
-在第 4 和第 5 步添加了必要的命名空间并为类创建 `Geolocator` 类型后，你在第 6 步实例化了一个 `Geolocator` 并订阅了它的 `StatusChanged` 事件。你在第 7 步中添加的事件处理方法在页面底部写入位置服务的当前状态。
+在第 4 和第 5 步添加了必要的命名空间并为类创建`Geolocator`类型后，你在第 6 步实例化了一个`Geolocator`并订阅了它的`StatusChanged`事件。你在第 7 步中添加的事件处理方法在页面底部写入位置服务的当前状态。
 
-在第 8 步中，你就两个 `ToggleSwitch` 控件事件订阅了两个事件处理方法。
+在第 8 步中，你就两个`ToggleSwitch`控件事件订阅了两个事件处理方法。
 
-你在第 9 步中添加到第一个 `ToggleSwitch` 事件处理程序（tsLocationTracking_Toggled）中的代码，使得每当位置服务报告当前地理位置时，页面中间的 TextBlocks 就会刷新内容。这是通过在 `ToggleSwitch` 开启时订阅 `Geolocator` 的 `PositionChanged` 事件的方法实现的。
+你在第 9 步中添加到第一个`ToggleSwitch`事件处理程序（`tsLocationTracking_Toggled`）中的代码，使得每当位置服务报告当前地理位置时，页面中间的`TextBlocks`就会刷新内容。这是通过在`ToggleSwitch`开启时订阅`Geolocator`的`PositionChanged`事件的方法实现的。
 
-你在第 9 步中添加到第二个 `ToggleSwitch` 中的代码仅负责向位置服务请求更低或更高的精确度。
+你在第 9 步中添加到第二个`ToggleSwitch`中的代码仅负责向位置服务请求更低或更高的精确度。
 
-你在第 10 步中添加的最后几行代码使得“立即刷新！”按钮在点击或触摸时通过调用 `Geolocator` 的 `GetGePositionAsync` 方法来刷新屏幕内容。这不会让位置服务“重新读取”位置——它只是接收上次读取的值。
+你在第 10 步中添加的最后几行代码使得“立即刷新！”按钮在点击或触摸时通过调用`Geolocator`的`GetGePositionAsync`方法来刷新屏幕内容。这不会让位置服务“重新读取”位置——它只是接收上次读取的值。
 
 ## 使用传感器
 
@@ -13976,35 +13572,31 @@ Windows 8 深度基于平板设备。将传感器输入引导到应用程序现�
 
 这些值已根据地球重力进行了归一化，因此如果你将设备放在平坦的水平面上，这三个值将告诉你地面的方向（即 Z 轴上约为 -1，另外两个轴为 0）。
 
-你可以通过 `Windows Sensors` 命名空间中的 `Accelerometer` 类来使用加速度计。你无法实例化它，但它有一个静态方法 `GetDefault`。该方法返回一个 `Accelerometer` 实例。如果没有此类硬件，该方法将返回 `null`。
+你可以通过`Windows Sensors`命名空间中的`Accelerometer`类来使用加速度计。你无法实例化它，但它有一个静态方法`GetDefault`。该方法返回一个`Accelerometer`实例。如果没有此类硬件，该方法将返回`null`。
 
-Accelerometer 有两个属性：
+`Accelerometer`有两个属性：
 
-- ReportInterval 允许你设置或获取读取更新的间隔（毫秒）。加速度计将按照此频率报告加速度的变化（如果存在变化的话）。如果你想监控宽泛的（精度很重要），请将此属性设置为较大的值。当你想要更准确地分析加速度的变化时，将 ReportInterval 设置为较小的值。
-
-- MinimumReportInterval 表示硬件在两次状态更新之间可以承受的最小时间（毫秒），不要将 ReportInterval 设置为小于此值的数字。
-
-
-
+- `ReportInterval`允许你设置或获取读取更新的间隔（毫秒）。加速度计将按照此频率报告加速度的变化（如果存在变化的话）。如果你想监控宽泛的（精度很重要），请将此属性设置为较大的值。当你想要更准确地分析加速度的变化时，将`ReportInterval`设置为较小的值。
+- `MinimumReportInterval`表示硬件在两次状态更新之间可以承受的最小时间（毫秒），不要将`ReportInterval`设置为小于此值的数字。
 
 你可以通过两种方式获取加速度读取值：
 
-- 如果你想获知设备加速度的任何变化，请订阅 `ReadingChanged` 事件。
-- 如果你想知道在特定时刻设备的即时加速度，可以随时调用 `GetCurrentReading` 方法。（当然，如果两次调用之间的时间间隔小于 `MinimumUpdateInterval`，你将不会看到数据的任何变化。）
+- 如果你想获知设备加速度的任何变化，请订阅`ReadingChanged`事件。
+- 如果你想知道在特定时刻设备的即时加速度，可以随时调用`GetCurrentReading`方法。（当然，如果两次调用之间的时间间隔小于`MinimumUpdateInterval`，你将不会看到数据的任何变化。）
 
-事件和方法都为你提供了一个 `AccelerometerReading` 对象。该对象包含三个 `double` 类型的值，指定了设备的当前加速度：`AccelerationX`、`AccelerationY` 和 `AccelerationZ`。此外，该对象包含一个名为 `Timestamp` 的属性（作为 `DateTimeOffset` 的实例），指示读取读取的精确时间。
+事件和方法都为你提供了一个`AccelerometerReading`对象。该对象包含三个`double`类型的值，指定了设备的当前加速度：`AccelerationX`、`AccelerationY`和`AccelerationZ`。此外，该对象包含一个名为`Timestamp`的属性（作为`DateTimeOffset`的实例），指示读取读取的精确时间。
 
-`Accelerometer` 提供了另一个名为 `Shaken` 的事件。订阅此事件允许你处理用户快速移动并改变方向的事件。在事件处理方法中，除了传感器对象（`Accelerometer`）之外，获取的所有参数都是 `AccelerometerShakenEventArgs` 实例，它可以告诉你设备被抖动的精确时间（通常的 `Timestamp` 属性）。处理此事件相当简单，因为事件参数中没有关于设备是如何被抖动的额外信息。因此，你不需要（实际上也无法）处理任何更多数据。
+`Accelerometer`提供了另一个名为`Shaken`的事件。订阅此事件允许你处理用户快速移动并改变方向的事件。在事件处理方法中，除了传感器对象（`Accelerometer`）之外，获取的所有参数都是`AccelerometerShakenEventArgs`实例，它可以告诉你设备被抖动的精确时间（通常的`Timestamp`属性）。处理此事件相当简单，因为事件参数中没有关于设备是如何被抖动的额外信息。因此，你不需要（实际上也无法）处理任何更多数据。
 
 在本练习中，你将学习如何使用 PC 或平板设备上的加速度计。
 
-> 注意：你可以在书籍的配套网站 www.wrox.com 在 `Chapter12.zip` 下载包的 `AccelGyroSampleEndAccelerometer` 文件夹中找到此练习的代码。
+> 注意：你可以在书籍的配套网站 www.wrox.com 在`Chapter12.zip`下载包的`AccelGyroSampleEndAccelerometer`文件夹中找到此练习的代码。
 
 # 尝试使用加速度计
 
 要查看如何使用加速度计让 Windows 8 风格的界面监听并响应设备加速度的变化，请遵循以下步骤：
 
-- 1. 从 www.wrox.com 下载 `Chapter12.zip`，并打开 `AccelGyroSampleBeginAccelerometer` 下的解决方案。这是你将用来以测试加速度计和陀螺仪功能的应用程序。
+- 1. 从 www.wrox.com 下载`Chapter12.zip`，并打开`AccelGyroSampleBeginAccelerometer`下的解决方案。这是你将用来以测试加速度计和陀螺仪功能的应用程序。
 - 2. 打开标记文件（`MainPage.xaml`），并找到前两个按钮。通过向两个按钮添加以下折叠状态的事件订阅来修改标记：
 
 ```xml
@@ -14016,7 +13608,7 @@ IsEnabled="Binding ElementName=w, Path=AcIsEnabled">
 <Current accelerometer readings/></Button>
 ```
 
-- 3. 在解决方案管理器窗口中双击其名称打开 `MainPage.xaml`。在文件顶部已有的指令下方添加以下指令：
+- 3. 在解决方案管理器窗口中双击其名称打开`MainPage.xaml`。在文件顶部已有的指令下方添加以下指令：
 
 ```csharp
 using Windows.Devices.Sensors;
@@ -14025,7 +13617,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 ```
 
-- 4. 通过向类定义添加以下粗体代码，在 `MainPage` 类中创建一个 `Accelerometer` 字段：
+- 4. 通过向类定义添加以下粗体代码，在`MainPage`类中创建一个`Accelerometer`字段：
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -14033,7 +13625,7 @@ public sealed partial class MainPage : Page
     Accelerometer acm = null;
 ```
 
-- 5. 在构造函数中、调用 `InitializeComponent()` 的下方添加以下粗体代码：
+- 5. 在构造函数中、调用`InitializeComponent()`的下方添加以下粗体代码：
 
 ```csharp
 public MainPage()
@@ -14094,7 +13686,7 @@ AccelerometerChangedEventArgs args)
 }
 ```
 
-现在 `MainPage.xaml` 的内容看起来应该是这样的：
+现在`MainPage.xaml`的内容看起来应该是这样的：
 
 ```csharp
 using Windows.UI;
@@ -14106,6 +13698,8 @@ using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 ```
+
+
 
 ```csharp
 namespace AccelGyroSample
@@ -14184,7 +13778,7 @@ namespace AccelGyroSample
 }
 ```
 
-- 8. 按 F6 按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”编译应用程序。如果错误窗口出现显示代码中有错误，请按照上述窗口中的建议尝试解决。如果你无法解决错误，请使用配套代码中的 `AccelSync\EndAccelerometer` 解决方案，并将代码与工作解决方案中的代码进行比较。
+- 8. 按 F6 按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”编译应用程序。如果错误窗口出现显示代码中有错误，请按照上述窗口中的建议尝试解决。如果你无法解决错误，请使用配套代码中的`AccelSync\EndAccelerometer`解决方案，并将代码与工作解决方案中的代码进行比较。
 
 - 9. 在平板设备上运行程序，点击启用加速度跟踪的按钮，移动设备根据三个轴上的当前移动更改左侧方形的大小。图 12-6 显示了你应该看到的内容。
 
@@ -14194,47 +13788,46 @@ namespace AccelGyroSample
 
 图 12-6：在平板电脑上读取加速度数据
 
-
-
-
-
 ### 工作原理
 
 在第 3 到 5 步中，你创建了使用加速度计的基础设施。
 
-你在第 6 步中添加第一个方法（btnEnableDisableAccelerometer_Click）测试 PC 中是否存在加速度计，如果有，它会将你在第 7 步中添加的方法订阅到它的 `ReadingChanged` 事件。每当设备在某个方向上改变加速度时，该事件就会触发（屏幕随之更新）。
+你在第 6 步中添加第一个方法（`btnEnableDisableAccelerometer_Click`）测试 PC 中是否存在加速度计，如果有，它会将你在第 7 步中添加的方法订阅到它的`ReadingChanged`事件。每当设备在某个方向上改变加速度时，该事件就会触发（屏幕随之更新）。
 
 X 轴加速度会让正方形水平方向增长。Y 轴加速度会让正方形垂直方向增长，Z 轴加速度会改变正方形的颜色。
 
-在 `cm_ReadingChanged` 中，你应该通过 `Dispatcher` 运行实际代码。这是因为该方法会在后台线程上调用，禁止从该线程更改 UI。Dispatcher 负责将代码运行回 UI 线程以避免此类错误。
+在`cm_ReadingChanged`中，你应该通过`Dispatcher`运行实际代码。这是因为该方法会在后台线程上调用，禁止从该线程更改 UI。`Dispatcher`负责将代码运行回 UI 线程以避免此类错误。
 
-你在第 6 步中添加的第二个方法（btnReadAccelerometer_Click）在点击或触摸第二个按钮时调用。它会等待秒，然后获取加速度计的当前读取值（这样你就不需要在抖动设备时点击或触摸按钮）。
+你在第 6 步中添加的第二个方法（`btnReadAccelerometer_Click`）在点击或触摸第二个按钮时调用。它会等待秒，然后获取加速度计的当前读取值（这样你就不需要在抖动设备时点击或触摸按钮）。
 
-# 使用陀螺仪
+## 使用陀螺仪
 
 尽管加速度计可以通过感知作用于平板电脑的运动力来告诉你设备在空间中的运动，但它无法告诉你设备是如何旋转的。加速度计在 X 轴上的某些运动可能意味着设备正在从桌子上推开，也可能意味着它正在向下坠，这取决于设备的旋转。旋转速度可以通过连续读取和处理加速度计的数据来估算，但这是一个相当繁琐的计算，你不能真正依赖它的准确性。平板设备配备了另一种名为陀螺仪（通常缩写为 gyro）的传感器硬件，它可以告诉你设备在 3-D 空间中的精确旋转速度。
 
-使用陀螺仪类似于使用加速度计；两者的 API 非常相似。你可以通过 `Windows.Sensors` 命名空间下的 `Gyrometer` 类访问陀螺仪。禁止实例化，但你可以通过调用该类的静态方法 `GetDefault` 来获取 `Gyrometer`。`Test` 返回 `null` 以检查设备是否包含任何陀螺仪。
+使用陀螺仪类似于使用加速度计；两者的 API 非常相似。你可以通过`Windows.Sensors`命名空间下的`Gyrometer`类访问陀螺仪。禁止实例化，但你可以通过调用该类的静态方法`GetDefault`来获取`Gyrometer`。`Test`返回`null`以检查设备是否包含任何陀螺仪。
 
-当你拥有 `Gyrometer` 对象后，可以使用 `ReportInterval` 属性设置两次读取之间的最小间隔（毫秒）。`MinimumReportInterval` 属性告诉你陀螺仪支持的两次读取之间的绝对最小间隔。
+当你拥有`Gyrometer`对象后，可以使用`ReportInterval`属性设置两次读取之间的最小间隔（毫秒）。`MinimumReportInterval`属性告诉你陀螺仪支持的两次读取之间的绝对最小间隔。
 
-要读取旋转速度，可以订阅 `ReadingChanged` 事件（当陀螺仪有新读取值时持续更新），或者调用 `GetCurrentReading` 方法（它可以为你提供当前的旋转速度）。
+要读取旋转速度，可以订阅`ReadingChanged`事件（当陀螺仪有新读取值时持续更新），或者调用`GetCurrentReading`方法（它可以为你提供当前的旋转速度）。
 
-该事件有一个参数化的 `GyrometerReadingChangedEventArgs`，它包含一个名为 `Reading` 的 `GyrometerReading` 对象。这与你调用 `GetCurrentReading` 方法时得到的对象类型相同。
+该事件有一个参数化的`GyrometerReadingChangedEventArgs`，它包含一个名为`Reading`的`GyrometerReading`对象。这与你调用`GetCurrentReading`方法时得到的对象类型相同。
 
-`GyrometerReading` 包含四个属性。`Timestamp` 是 `DateTimeOffset` 的实例，它提供了陀螺仪报告当前读取值的时间。其他三个属性是 `AngularVelocityX`、`AngularVelocityY` 和 `AngularVelocityZ`。这三个 `double` 值告诉你每秒弧度的旋转速度。如果设备处于静止状态（未移动），所有值都应该为零。
+`GyrometerReading`包含四个属性。`Timestamp`是`DateTimeOffset`的实例，它提供了陀螺仪报告当前读取值的时间。其他三个属性是`AngularVelocityX`、`AngularVelocityY`和`AngularVelocityZ`。这三个`double`值告诉你每秒弧度的旋转速度。如果设备处于静止状态（未移动），所有值都应该为零。
 
 在接下来的练习中，你将通过继续上一个练习的应用程序来学习如何使用陀螺仪。再次记住，当前的 Windows 模拟器无法向你的应用提供合成传感器读取值，因此为了看到此示例运行，你应该在实际设备上进行测试。
 
-> 注意 你可以在此书配套网站 www.wrox.com 的 `Chapter12.zip` 下载包中的 `AccelGyroSample\EndGyroscope` 文件夹找到此练习的完整代码下载。
+> 注意 你可以在此书配套网站 www.wrox.com 的`Chapter12.zip`下载包中的`AccelGyroSample\EndGyroscope`文件夹找到此练习的完整代码下载。
 
-# 尝试使用陀螺仪
+## 尝试使用陀螺仪
 
 要查看如何使用陀螺仪让 Windows 8 风格的列表监听并响应设备旋转速度的变化，请遵循以下步骤：
 
-- 1. 打开上一个名为“使用加速度计”的“尝试”（Try Out）练习中的 `AccelGyroSample`。如果你还没有完成，可以从 www.wrox.com 提供的配套代码打开 `AccelGyroSample\EndAccelerometer` 解决方案。
-- 2. 打开 `MainPage.xml`，并编辑与陀螺仪相关的两个按钮（btnEnableDisableGyroscope 和 btnReadGyro）。为这两个按钮的 `Click` 事件添加事件处理程序，如下如下文代码块所示：
-- 3. 打开 `MainPage.xaml.cs` 文件，在 `MainPage` 的类定义中、`Accelerometer` 字段下方添加一个 `Gyrometer` 字段（**此处加粗**）：
+- 1. 打开上一个名为“使用加速度计”的“尝试”（Try Out）练习中的`AccelGyroSample`。如果你还没有完成，可以从 www.wrox.com 提供的配套代码打开`AccelGyroSample\EndAccelerometer`解决方案。
+
+- 2. 打开`MainPage.xml`，并编辑与陀螺仪相关的两个按钮（`btnEnableDisableGyroscope`和`btnReadGyro`）。为这两个按钮的`Click`事件添加事件处理程序，如下如下文代码块所示：
+
+- 3. 打开`MainPage.xaml.cs`文件，在`MainPage`的类定义中、`Accelerometer`字段下方添加一个`Gyrometer`字段（**此处加粗**）：
+
 - 4. 在构造函数中添加以下加粗代码：
 
 ```xml
@@ -14331,7 +13924,7 @@ async void gyro_ReadingChanged(Gyrometer sender, GyrometerReadingChangedEventArg
 }
 ```
 
-`MainPage.xaml` 的内容应该是：
+`MainPage.xaml`的内容应该是：
 
 ```csharp
 using Windows.UI;
@@ -14342,6 +13935,8 @@ using System;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 ```
+
+
 
 ```csharp
 namespace AccelGyroSample
@@ -14369,8 +13964,7 @@ namespace AccelGyroSample
 }
 ```
 
-
-```c
+```csharp
 {
     this.InitializeComponent();
 
@@ -14464,7 +14058,7 @@ async void gyro_ReadingChanged(Gyrometer sender, GyrometerReadingChangedEventArg
 
 # 使用传感器 | 453
 
-- 7. 按 F6 按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中存在错误，请尝试按照上述窗口中的建议解决这些问题。如果您无法解决错误，请解析辅助代码中的 AccelGyroSample\EndGyroscope 解决方案，并将您的代码与工作解决方案中的代码进行比较。
+- 7. 按`F6`按钮或点击 Visual Studio 主菜单上的“生成 - 生成解决方案”来生成应用程序。如果出现“错误”窗口并显示代码中存在错误，请尝试按照上述窗口中的建议解决这些问题。如果您无法解决错误，请解析辅助代码中的`AccelGyroSample\EndGyroscope`解决方案，并将您的代码与工作解决方案中的代码进行比较。
 
 - 8. 在平板设备上运行程序，并旋转设备以观察右侧的正方形如何根据绕三个轴的当前旋转改变大小（以及颜色）。点击（或触摸）“当前陀螺仪读数”按钮查看当前旋转数据。图 12-7 和 12-8 显示了您将看到的用户界面变化。注意右侧矩形大小的差异。
 
@@ -14478,7 +14072,7 @@ async void gyro_ReadingChanged(Gyrometer sender, GyrometerReadingChangedEventArg
 
 图 12-8：陀螺仪
 
-它是如何工作的
+## 它是如何工作的
 
 在之前的练习中，硬件运动传感器（加速度计和陀螺仪）在你发现自己需要感知方向或旋转信息时非常有用。但大多数情况下，你并不想向用户提供这些信息的反馈——你只是想知道用户是如何持有设备的。从多个运动传感器读数中计算这些看似简单的数据可能非常困难。因此，微软在传感器 API 之上创建了一个更高级抽象层，它可以回答关于设备姿态和角度的常见问题。这就是传感器融合 API。
 
@@ -14490,24 +14084,21 @@ async void gyro_ReadingChanged(Gyrometer sender, GyrometerReadingChangedEventArg
 - 倾斜仪
 - 两个设备方向传感器
 
-
-
-
 ## 通过指南针使用磁力计
 
 某些应用程序需要关于北极方向的信息。例如，如果你构建了一个包含地图的应用程序，你可能希望以始终指向正北的方式向用户展示地图，这样用户在遵循地图上的指示时，就能感知到自己的航向。为此，平板设备包含一个磁力计传感器，它可以告知设备周围磁场的强度。
 
 磁力计没有像加速度计或陀螺仪那样的低级 API，因此你无法使用磁力计来实际测量上述磁场的强度。然而，Sensor Fusion API 允许你使用指南针。通过该类，你可以读取所有必要的硬件传感器的读取值计算出的指向磁北极和地理北极的航向。
 
-在熟悉加速度计或陀螺仪 API 后，使用指南针非常简单。你可以通过调用 Compass 类上的 `GetDefault` 方法来访问 Compass。如果返回为 null，则设备中没有指南针。
+在熟悉加速度计或陀螺仪 API 后，使用指南针非常简单。你可以通过调用`Compass`类上的`GetDefault`方法来访问`Compass`。如果返回为`null`，则设备中没有指南针。
 
-获取 Compass 对象后，你可以设置 `ReportInterval` 来指示你希望多频繁地获取北极方向变化的通知。`MinimumReportInterval` 提供了毫秒单位的最小值。
+获取`Compass`对象后，你可以设置`ReportInterval`来指示你希望多频繁地获取北极方向变化的通知。`MinimumReportInterval`提供了毫秒单位的最小值。
 
-如果你订阅了 `ReadingChanged` 事件，每当指南针有新航向时，你都会收到通知。如果你调用 `GetCurrentReadings` 方法，你将获得调用时刻的当前航向。
+如果你订阅了`ReadingChanged`事件，每当指南针有新航向时，你都会收到通知。如果你调用`GetCurrentReadings`方法，你将获得调用时刻的当前航向。
 
-`ReadingChanged` 有一个类型为 `CompassReadingEventArgs` 的参数，其 `Reading` 属性包含一个 `CompassReading` 对象。`GetCurrentReadings` 返回一个 `CompassReading` 值。
+`ReadingChanged`有一个类型为`CompassReadingEventArgs`的参数，其`Reading`属性包含一个`CompassReading`对象。`GetCurrentReadings`返回一个`CompassReading`值。
 
-Compass 指定了三个实用的属性。其中一个是常用的 `Timestamp`，它提供读取时的精确时间。另外两个包含实际指南针数据。`MagneticNorth` 是一个双精度值，提供设备相对于磁北极的角度。`HeadingTrue` 是一个可空值，提供设备相对于真实地理北极的角度。如果 Sensor Fusion API 无法确定地理北极的位置，此属性将读取为 null。
+`Compass`指定了三个实用的属性。其中一个是常用的`Timestamp`，它提供读取时的精确时间。另外两个包含实际指南针数据。`MagneticNorth`是一个双精度值，提供设备相对于磁北极的角度。`HeadingTrue`是一个可空值，提供设备相对于真实地理北极的角度。如果 Sensor Fusion API 无法确定地理北极的位置，此属性将读取为`null`。
 
 ## 使用倾角仪
 
@@ -14523,21 +14114,21 @@ Compass 指定了三个实用的属性。其中一个是常用的 `Timestamp`，
 
 图 12-9：平板设备上的 pitch、roll 和 yaw
 
-使用倾角仪的方法与处理传感器数据非常相似——只是数据可能更有用。你可以通过调用 Inclinometer 类上的 `Default` 来获取 Inclinometer 对象。要指定你获取状态更新的最小间隔，另一个双精度类型的属性 `MinimumReportInterval` 提供了你可以为 `ReportInterval` 设置的绝对最小值。在加速度计等其他传感器上设置 `ReportInterval` 对倾角仪没有影响。
+使用倾角仪的方法与处理传感器数据非常相似——只是数据可能更有用。你可以通过调用`Inclinometer`类上的`Default`来获取`Inclinometer`对象。要指定你获取状态更新的最小间隔，另一个双精度类型的属性`MinimumReportInterval`提供了你可以为`ReportInterval`设置的绝对最小值。在加速度计等其他传感器上设置`ReportInterval`对倾角仪没有影响。
 
-订阅 `ReadingChanged` 事件让你能够获得设备姿态发生变化时接收自动更新的选项。该事件的事件处理方法参数类型为 `InclinometerReadingChangedEventArgs`。此类类型的实例在 `Reading` 属性中包含一个 `InclinometerReading` 对象，该对象持有价值数据。
+订阅`ReadingChanged`事件让你能够获得设备姿态发生变化时接收自动更新的选项。该事件的事件处理方法参数类型为`InclinometerReadingChangedEventArgs`。此类类型的实例在`Reading`属性中包含一个`InclinometerReading`对象，该对象持有价值数据。
 
-获取 `InclinometerReading` 的另一种方法是在任何时候调用 Inclinometer 的 `GetCurrentReading`。这会返回一个 `InclinometerReading`。
+获取`InclinometerReading`的另一种方法是在任何时候调用`Inclinometer`的`GetCurrentReading`。这会返回一个`InclinometerReading`。
 
-Inclinometer 持有四个属性：`PitchDegrees`、`RollDegrees` 和 `YawDegrees` 分别表示设备在三个轴（分别为 X、Y 和 Z））上的角度偏移。`Timestamp` 是一个 `DateTimeOffset`，保存了读取时间。
+`Inclinometer`持有四个属性：`PitchDegrees`、`RollDegrees`和`YawDegrees`分别表示设备在三个轴（分别为 X、Y 和 Z）上的角度偏移。`Timestamp`是一个`DateTimeOffset`，保存了读取时间。
 
 ## 简单地检测设备方向
 
-在计算设备姿态时，倾角仪可以极大地简化你的工作。但许多应用程序需要更精确且详尽的信息。当你想要知道设备是朝上还是朝下时（意味着它是背朝上放还是屏幕朝上放），处理所有的倾角仪数据就过剩了。为了在这种情况下解决这个问题，微软创建了另一个逻辑传感器，称为 SimpleOrientation 传感器。
+在计算设备姿态时，倾角仪可以极大地简化你的工作。但许多应用程序需要更精确且详尽的信息。当你想要知道设备是朝上还是朝下时（意味着它是背朝上放还是屏幕朝上放），处理所有的倾角仪数据就过剩了。为了在这种情况下解决这个问题，微软创建了另一个逻辑传感器，称为`SimpleOrientation`传感器。
 
-`SimpleOrientation` 类位于 `Windows.Sens` 命名空间中。你可以通过调用它的 `Default` 方法来获取该类的实例。获取 `SimpleOrientationSensor` 后，你可以订阅 `OrientationChanged` 事件或调用 `GetCurrentOrientation` 方法。事件处理程序的第二个参数将是一个 `SimpleOrientationSensorOrientationChangedEventArgs` 。（不，这不是 Windows Runtime 中最长的类名。）此对象包含一个 `Timestamp`——用于指定方向改变精确时间的常用 `DateTimeOffset`——以及一个名为 `Orientation` 的属性。它的类型是 `SimpleOrientationSensorOrientation`。
+`SimpleOrientation`类位于`Windows.Sens`命名空间中。你可以通过调用它的`Default`方法来获取该类的实例。获取`SimpleOrientationSensor`后，你可以订阅`OrientationChanged`事件或调用`GetCurrentOrientation`方法。事件处理程序的第二个参数将是一个`SimpleOrientationSensorOrientationChangedEventArgs`。（不，这不是 Windows Runtime 中最长的类名。）此对象包含一个`Timestamp`——用于指定方向改变精确时间的常用`DateTimeOffset`——以及一个名为`Orientation`的属性。它的类型是`SimpleOrientationSensorOrientation`。
 
-表 12-2：SimpleOrientation 的值
+表 12-2：`SimpleOrientation`的值
 
 | 名称 | 描述 |
 | :--- | :--- |
@@ -14552,23 +14143,24 @@ Inclinometer 持有四个属性：`PitchDegrees`、`RollDegrees` 和 `YawDegrees
 
 构建实时应用可能是困难的，因此 Windows Runtime 提供了一个逻辑传感器，它汇总了几乎所有传感器的数据，并以一种通用的格式呈现。这被称为方向传感器。
 
-
-
-
-
 > 注意：你可以在附录 A 中找到练习题答案。
 
 # 本章你学了什么
 
 | 主题 | 核心概念 |
 | :--- | :--- |
+
+
+
 | 位置或地理位置 (Location or geolocation) | 这是一个通过使用多种技术确定设备位置的概念，包括 IP 定位、根据基站距离进行三角测量、Wi-Fi 热点或通过 GPS 确定。 |
+| --- | --- |
 | 感知位置的应用 (Location-aware app) | 这是一种使用 Location API 获取设备当前位置数据并根据该位置定制其服务的应用程序。 |
 | 传感器 (Sensors) | 这些是 PC（或平板电脑）中的硬件部分，用于提供设备环境的数据（如光照条件、磁场强度、运动和姿态或朝向）。 |
 | 原始传感器数据 (Raw sensor data) | 这些是来自物理传感器的数据。在 Windows Runtime 中，这些包括加速度计、陀螺仪和环境光传感器。 |
 | 传感器融合 API (Sensor Fusion API) | 此应用程序编程接口定义了逻辑传感器并允许你访问来自它们的数据。这些逻辑传感器根据来自物理传感器的数据计算读数，并以不同的方式呈现这些数据，从而让你无需编写算法来完成这些繁重的工作。 |
 
 # 第三部分
+
 迈向专业的 Windows 8 开发
 
 - 第 13 章：使用 C++ 创建 Windows 8 风格应用程序
@@ -14588,7 +14180,7 @@ Inclinometer 持有四个属性：`PitchDegrees`、`RollDegrees` 和 `YawDegrees
 
 本章 WROX.COM 代码下载
 
-你可以在 www.wrox.com/remitle.cgi?isbn=012680 的“Download Code”选项卡中找到本章的 wrox.com 下载内容。代码位于 Chapter13.zip 下载包中，并根据相应练习题的描述进行了单独命名。
+你可以在 www.wrox.com/remitle.cgi?isbn=012680 的“Download Code”选项卡中找到本章的 wrox.com 下载内容。代码位于 `Chapter13.zip` 下载包中，并根据相应练习题的描述进行了单独命名。
 
 尽管本章标题可能暗示它只适用于 C++ 开发者，但事实并非如此。事实上，如果你是 C#、Visual Basic 或 JavaScript 开发者，你将学习在哪些场景下 C++ 是所有可用 Windows 8 语言中的最佳选择。如果你过去有 C++ 经验（即使曾让你感到沮丧），本章将证明 C++ 已经成为一种现代、快速、简洁且安全的语言，并且是 Windows 8 风格开发中的一等公民。
 
@@ -14604,7 +14196,7 @@ Inclinometer 持有四个属性：`PitchDegrees`、`RollDegrees` 和 `YawDegrees
 
 为什么会这样？微软不相信它的托管运行时环境（.NET Framework），这就是为什么它不使用它吗？微软不想（或无法）利用 .NET 的生产力优势吗？不是！C++ 提供了两项挑战托管语言的任务：性能和对系统资源的细粒度控制。
 
-当你与 .NET Framework 的托管语言工作时，编译器执行包含微软中间语言 (MSIL) 代码或来自中间语言的指令的程序。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。当该程序运行时，MSIL 指令会被编译为特定 for CPU 的指令。当该程序运行时，MSMS 指令会被会被为特定特定 CPU 的 的。。该程序程序，MSMS 指令会被会被为特定特定特定 CPU 的 的。。。程序程序运行时，MSMS 指令会被会被为特定特定特定 CPU 的 的 的。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定 CPU 的 的 的。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定特定 CPU 的 的 的。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定特定特定 CPU 的 的。。。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定特定特定特定 CPU 的 的。。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定特定特定特定特定 CPU 的 的。。。。程序程序运行时，MSMS 指令会被会被为特定特定特定特定特定特定特定特定 CPU CPU 的 的。。++。。程序程序运行时，MSMS 指令会被会被为特定特定特定++特定 ++++++   的 C++ 。。。。。。。。。。。。。。。。。。。。。。。++。。。。。++++。。。。++。。。。。。。。。。。。++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+当你与 .NET Framework 的托管语言工作时，编译器执行包含微软中间语言 (MSIL) 代码或来自中间语言的指令的程序。当该程序运行时，MSIL 指令会被编译为特定于 CPU 的指令。
 
 # 纯净且安全
 
@@ -14614,7 +14206,7 @@ Inclinometer 持有四个属性：`PitchDegrees`、`RollDegrees` 和 `YawDegrees
 
 C++ 编程语言是由 Bjarne Stroustrup 在 1979 年开发的。当时它被命名为“带有类的 C”。该语言在 1998 年（C++98）经历了第一次标准化过程，随后在 2003 年（C++03）通过。该标准的最新重大修订是 C++11，由国际标准组织/国际电工委员会（ISO/IEC）于 2011 年 8 月 12 日批准。
 
-为了理解哪些功能使得 C++ 比以前任何时候都更高效，让我们看看用 C++03（C 标准的上一个版本）编写的代码文件，如列表 13-1：LegacyCpp\LegacyCpp.cpp 所示。
+为了理解哪些功能使得 C++ 比以前任何时候都更高效，让我们看看用 C++03（C 标准的上一个版本）编写的代码文件，如列表 13-1：`LegacyCpp\LegacyCpp.cpp` 所示。
 
 # 列表 13-1：简单的 C++ — 使用旧样式
 
@@ -14626,10 +14218,6 @@ for (int i = 1; i <= 10; i++)\\{
 }
 // --- 这是我们正在寻找的矩形
 ```
-
-
-
-
 
 ## 列表 13-1（续）
 
@@ -14654,16 +14242,16 @@ for (vector<rectangle>::iterator i = shapes.begin(); i != shapes.end(); i++)
 delete searchFor;
 ```
 
-此程序创建了一个包含十个矩形对象的 vector，然后在循环中绘制它们，并检查这些矩形中是否有一个与 `searchFor` 变量中存储的匹配。以下几点为这个简单的任务增加了复杂度：
+此程序创建了一个包含十个矩形对象的 `vector`，然后在循环中绘制它们，并检查这些矩形中是否有一个与 `searchFor` 变量中存储的匹配。以下几点为这个简单的任务增加了复杂度：
 
-- `shapes` 变量是一个指向矩形对象指针的 vector。第一个从 1 到 10 的循环创建了矩形对象并将其附加到 `shapes` 中。程序员必须记住，这些对象必须在程序的某个点被释放。最后一个带有 `delete i` 体的循环执行了此清理工作。
+- `shapes` 变量是一个指向矩形对象指针的 `vector`。第一个从 1 到 10 的循环创建了矩形对象并将其附加到 `shapes` 中。程序员必须记住，这些对象必须在程序的某个点被释放。最后一个带有 `delete i` 体的循环执行了此清理工作。
 - `searchFor` 变量持有一个指向矩形对象的指针。该对象在最后一行通过 `delete searchFor` 语句被释放。
-- 两个循环使用迭代器对象来遍历 vector 的元素。虽然这段代码的意图非常清晰，但表达意图的代码看起来有点冗长。
+- 两个循环使用迭代器对象来遍历 `vector` 的元素。虽然这段代码的意图非常清晰，但表达意图的代码看起来有点冗长。
 - `*i && **i == *searchFor` 条件表达式虽然简单，但很难解码。在这里，`i` 是一个迭代器，`*i` 代表它当前指向的矩形迭代器的指针；`**i` 是它所指向的矩形迭代器，而 `*searchFor` 是它正在寻找的矩形对象。该条件表示，如果迭代器指向一个矩形对象，且该矩形的值与要搜索的矩形相同，则为匹配。虽然对于经验丰富的 C++ 开发者来说，其意义显而易见，但读起来仍然很困难。
 
-此类程序的一个潜在陷阱是，程序员应该对存储矩形对象的堆进行完全控制。并不总是清楚谁负责管理存储在 `shapes` 中的矩形对象。在列表 13-1 中，这是很清楚的，因为代码释放了它们。但如果你只看到分配这些对象的 for 循环，意图一点也不简单。
+此类程序的一个潜在陷阱是，程序员应该对存储矩形对象的堆进行完全控制。并不总是清楚谁负责管理存储在 `shapes` 中的矩形对象。在列表 13-1 中，这是很清楚的，因为代码释放了它们。但如果你只看到分配这些对象的 `for` 循环，意图一点也不简单。
 
-使用现在 Visual Studio 2012 中可用的新 C++ 语言，此程序可以用更优雅的方式编写，如列表 13-2 所示（代码文件：ModernCpp\ModernCpp.cpp）。
+使用现在 Visual Studio 2012 中可用的新 C++ 语言，此程序可以用更优雅的方式编写，如列表 13-2 所示（代码文件：`ModernCpp\ModernCpp.cpp`）。
 
 ## 列表 13-2：简单的 C++ 程序 — 使用新风格
 
@@ -14689,14 +14277,13 @@ for_each(shapes.begin(), shapes.end(), [&](shared_ptr<rectangle>& rect)
 });
 ```
 
-
 现在，Windows Runtime 使用了新版本的 COM，该版本不需要接口和对象注册，并提供了一种透明的方法来管理引用计数——正如你将在下一节中学到的。
 
 ## 在 C++ 中管理 Windows Runtime 对象
 
 在 Visual Studio 2012 中，微软为 C++ 添加了新功能，用于管理 Windows Runtime 对象，其便利性与开发者在 C# 和 Visual Basic 中处理 .NET Framework 对象一样易用。这组新的语言扩展被称为 C++ for Windows Runtime（Windows Runtime 版 C++）。
 
-Windows Runtime 对象是强类型的，并实现了自动引用计数。你不再需要使用 HRESULT 值，而是可以使用结构化异常处理来捕获和管理操作失败。Windows Runtime 对象与 STL 深度集成，因此 STL 中实现的所有函数、集合和算法仍然可以与 Windows Runtime 类型协同工作。Windows Runtime 与外部世界之间存在一个边界；新版本的 COM 是这两个领域之间定义良好的二进制契约。这引发了一些显而易见的问题。
+Windows Runtime 对象是强类型的，并实现了自动引用计数。你不再需要使用 `HRESULT` 值，而是可以使用结构化异常处理来捕获和管理操作失败。Windows Runtime 对象与 STL 深度集成，因此 STL 中实现的所有函数、集合和算法仍然可以与 Windows Runtime 类型协同工作。Windows Runtime 与外部世界之间存在一个边界；新版本的 COM 是这两个领域之间定义良好的二进制契约。这引发了一些显而易见的问题。
 
 C++ 程序员应该何时以及如何使用这些语言扩展？他们应该在每个 Windows 8 应用程序都使用这些新类型吗？旧式的 C++ 类型和 STL 又该如何使用？
 
@@ -14715,7 +14302,11 @@ C++ 程序员应该何时以及如何使用这些语言扩展？他们应该在�
 | 类型 | 描述 |
 | --- | --- |
 | 值类型 (Value types) | 值实例始终存储在调用栈或应用程序的静态数据中。使用 `value struct` 关键字声明的只包含公开字段。使用 `value class` 关键字声明的较少使用，包含公开字段和方法。 |
+
+
+
 | 引用类型 (Reference types) | 引用实例始终在应用程序的内存空间分配（并释放）。`ref class` 关键字声明的类可以公共、保护和私有函数；数据成员；甚至是嵌套类。`ref struct` 关键字声明的结构与 `ref class` 相同，但默认具有访问权限限制。 |
+| --- | --- |
 | 接口类 (Interface classes) | 使用 `interface class` 关键字声明的类与原生 C++ 接口非常相似。然而，它们有一些特性： |
 | 泛型类型 (Generic types) | 你可以在 C++ 中使用泛型接口，其语义与 .NET 中的泛型类型相同。使用 `generic<typename Ti, ...>` 构造声明。不支持非类型参数。 |
 | 属性 (Properties) | 标准 C++ 不支持属性。通过 C++/CX 的 `property` 关键字，现在你可以定义与 .NET 语言相同的 GET/SET 语义的属性。 |
@@ -14743,7 +14334,7 @@ Map<String^, int> MainPage::CreateMap() {
 
 在这里，`CreateMap` 方法创建了一个以字符串为键的整数关联字典。`Map` 和 `String` 都是运行时类型。方法返回指向 `Map` 的引用指针，因此使用了 `ref new` 运算符，返回值带有 `^` 符号。此外，映射的键使用指向 `String` 的引用指针，因此这些被声明为 `String^`。
 
-> 注意：^ 符号和 ref 关键字是简单的编译器技巧。没有这些符号，程序员必须手动增减 COM（Windows Runtime）对象的引用计数。现在，通过这些扩展，编译器承担了所有挑战并生成了相应的代码。注意，你不能对 Windows Runtime 对象使用 `*`（指针）符号。如果你尝试这样做，编译器将抛出错误信息。
+> 注意：`^` 符号和 `ref` 关键字是简单的编译器技巧。没有这些符号，程序员必须手动增减 COM（Windows Runtime）对象的引用计数。现在，通过这些扩展，编译器承担了所有挑战并生成了相应的代码。注意，你不能对 Windows Runtime 对象使用 `*`（指针）符号。如果你尝试这样做，编译器将抛出错误信息。
 
 ## 定义运行时类
 
@@ -14794,28 +14385,24 @@ Customer^ myCustomer = ref new Customer("John", "Doe");
 
 Windows Runtime 使用 COM，但现在它也允许结构化异常处理。你不再需要直接处理 HRESULT，而是可以捕获并处理表示 HRESULT 代码的异常。表 13-2 显示了这些特定的 COM 异常类型及其代表的 HRESULT 代码。
 
-
-
-
-
-# 表 13-2：带有相关 HRESULT 代码的 Windows Runtime 异常
+### 表 13-2：带有相关 HRESULT 代码的 Windows Runtime 异常
 
 | 异常类型 | HRESULT 代码 |
 | --- | --- |
-| InvalidArgumentException | E_INVALIDARG |
-| NotImplementedException | E_NOTIMPL |
-| AccessDeniedException | E_ACCESSDENIED |
-| NullReferenceException | E_POINTER |
-| InvalidCastException | E_NOINTERFACE |
-| FailureOfBoundsException | E_FAIL |
-| OutOfBoundsException | E_BOUNDS |
-| ChangedStateException | E_CHANGED_E_CLASS |
-| ClassNotRegisteredException | REGDB_E_CLASSNOTREG |
-| DisconnectedException | E_DISCONNECTED |
-| OperationCException | E_ABORT |
-| OutOfMemoryException | E_OUTOFMEMORY |
+| `InvalidArgumentException` | `E_INVALIDARG` |
+| `NotImplementedException` | `E_NOTIMPL` |
+| `AccessDeniedException` | `E_ACCESSDENIED` |
+| `NullReferenceException` | `E_POINTER` |
+| `InvalidCastException` | `E_NOINTERFACE` |
+| `FailureOfBoundsException` | `E_FAIL` |
+| `OutOfBoundsException` | `E_BOUNDS` |
+| `ChangedStateException` | `E_CHANGED_E_CLASS` |
+| `ClassNotRegisteredException` | `REGDB_E_CLASSNOTREG` |
+| `DisconnectedException` | `E_DISCONNECTED` |
+| `OperationCException` | `E_ABORT` |
+| `OutOfMemoryException` | `E_OUTOFMEMORY` |
 
-> 注意：你可以在 Platform 命名空间中找到所有这些异常。
+> 注意：你可以在 `Platform` 命名空间中找到所有这些异常。
 
 你不需要关心 HRESULT 代码是如何被封装成异常的；运行时环境会为你完成这一切。如果你想使用 Windows Runtime 对象处理潜在问题，可以遵循以下模式：
 
@@ -14850,7 +14437,7 @@ void MyWindowsRTOperation(String^ parameter1, int parameter2)
 }
 ```
 
-前两个 `catch` 块处理特定的 COM 异常。第三个 `catch` 块接收 `COMException` 实例的指针。由于表 13-2 中的所有异常类型都派生自 `COMException`，所以除了 NotImplementedException 和 InvalidArgumentException（这两个异常由之前的 `catch` 块处理了）之外，所有异常都会在此处捕获。在此块中，你可以使用异常实例的 `HResult` 属性来决定如何继续。第四个 `catch` 块捕获所有其他异常。在这种模式中，你可以看到最具体的异常总是先被捕获，而最通用的异常放在最后。
+前两个 `catch` 块处理特定的 COM 异常。第三个 `catch` 块接收 `COMException` 实例的指针。由于表 13-2 中的所有异常类型都派生自 `COMException`，所以除了 `NotImplementedException` 和 `InvalidArgumentException`（这两个异常由之前的 `catch` 块处理了）之外，所有异常都会在此处捕获。在此块中，你可以使用异常实例的 `HResult` 属性来决定如何继续。第四个 `catch` 块捕获所有其他异常。在这种模式中，你可以看到最具体的异常总是先被捕获，而最通用的异常放在最后。
 
 由于这些异常派生自 `COMException`，你可能想通过从 `COMException` 派生新类来创建一个带有你自己的失败代码的 COM 特有异常。然而，由于内部实现细节的原因，这是不可行的。在这种情况下，你你需要抛出一个 `COMException` 并将 HRESULT 代码传递给构造函数，如代码段所示：
 
@@ -14902,60 +14489,53 @@ catch (COMException^ ex)
 
 你现在已经学习了足够 C++ 和 Windows 8 应用的知识。是时候用 Visual Studio 尝试这些功能了。
 
-# 使用 Visual Studio 发现 C++ 特性
+## 使用 Visual Studio 发现 C++ 特性
 
 Visual Studio 为 C++ 提供了极好的支持。你可以像其他编程语言一样，在 IDE 中找到所有重要的生产力增强工具。在本节中，你将学习关于创建和编辑 C++ 应用的一些知识。你还将了解一些新的 C++ 特性。
 
 在之前的章节中，你学习了关于创建 Windows 8 应用 UI 的重要知识，因此在本节中，你将从准备好的示例开始，并在每个练习中向应用程序添加新的代码段。在开始操作示例之前，让我们先看看如何创建 C++ 项目。
 
-# 创建 C++ 项目
+## 创建 C++ 项目
 
-你可以像之前学的那样，使用“文件->新建项目”命令（Ctrl+Shift+N）在 Visual Studio 中创建 C++ 程序。当然，你需要在“模板”下选择 Visual C++ 节点，如图 13-3 所示。在该图中间你可以看到 Visual Studio 2012 Express for Windows 8 支持的 Windows 8 风格模板类型。
+你可以像之前学的那样，使用“文件->新建项目”命令（`Ctrl+Shift+N`）在 Visual Studio 中创建 C++ 程序。当然，你需要在“模板”下选择 Visual C++ 节点，如图 13-3 所示。在该图中间你可以看到 Visual Studio 2012 Express for Windows 8 支持的 Windows 8 风格模板类型。
 
 > 注意：Visual Studio 2012 的其他（非免费）版本包含额外的 C++ 项目模板，用于创建桌面应用程序和组件。
 
-# 使用 Visual Studio 发现 C++ 特性
-
 C++ 支持与其它语言相同的标准 Windows 8 模板（空白应用、网格应用和拆分应用），以及此处描述的几类额外模板：
 
-- 空白动态链接库：使用此项目类型创建 .dll 文件。
-- 空白静态库：使用此项目类型创建 .lib 文件。
+- 空白动态链接库：使用此项目类型创建 `.dll` 文件。
+- 空白静态库：使用此项目类型创建 `.lib` 文件。
 - 单元测试：顾名思，此项目类型创建单元测试。
-- WinRT 组件：此项目类型创建 .winmd 文件。
+- WinRT 组件：此项目类型创建 `.winmd` 文件。
 - Direct2D 应用：这些模板帮助你使用 Direct2D 技术。
 - Direct3D 应用：这些模板帮助你使用 Direct3D 技术。
 
 在指定项目属性时，“新建项目”对话框提供了与其他语言相同的选项（例如位置、创建模式）。
 
-# C++ 项目的元素
+## C++ 项目的元素
 
 C++ 项目的结构与 C# 非常相似。然而也存在细微差异，你将在下一个练习中学习。
 
-# 尝试 C++ 项目的元素
+## 尝试 C++ 项目的元素
 
 要检查简单的项目，请遵循以下步骤：
 
-1. 使用“文件->打开项目”（Ctrl+Shift+O）打开 CDemo.sln 文件。几秒后解决方案加载，其结构显示在解决方案管理器中，如图 13-4 所示。
-2. 在 CDemo节点下，你会找到 CDemo 项目节点（此解决方案只有一个项目）。点击 Assets 文件夹左侧的小三角形展开它。你可以在 Assets 中看到四个文件，它们代表应用程序图标和启动屏幕。
-3. 展开 Common 文件夹。它包含了 Windows 8 应用程序骨架的各种 C++ 文件和头文件。其中一个 Styles.xaml 文件包含了应用程序使用的基础 XAML 资源。
+1. 使用“文件->打开项目”（`Ctrl+Shift+O`）打开 `CDemo.sln` 文件。几秒后解决方案加载，其结构显示在解决方案管理器中，如图 13-4 所示。
+2. 在 `CDemo` 节点下，你会找到 `CDemo` 项目节点（此解决方案只有一个项目）。点击 `Assets` 文件夹左侧的小三角形展开它。你可以在 `Assets` 中看到四个文件，它们代表应用程序图标和启动屏幕。
+3. 展开 `Common` 文件夹。它包含了 Windows 8 应用程序骨架的各种 C++ 文件和头文件。其中一个 `Styles.xaml` 文件包含了应用程序使用的基础 XAML 资源。
 4. 展开 外部依赖节点。它包含了一百多个直接或间接使用的头文件和项目引用。折叠此节点。
-5. 展开 MainPage.xaml 文件。与其他语言一样，此 XAML 文件嵌套了代码后台 MainPage.xaml，其使用 C++ 编写。这里还有另一个嵌套文件 MainPage.xaml.h，它包含了 MainPage.xaml 中的类型定义。
-6. 双击 MainPage.xaml.cpp 文件打开它。在编辑器中，你会看到几个空方法和一个以“Feature”开头的注释行。这些是你将在后续练习中编写的代码占位符。
-7. 双击 MainPage.xaml.h 文件打开它。在编辑器中，点击 #include "MainPage.xaml.h" 行并按 Ctrl+Shift+G。打开的 MainPage.g h 文件显示了 MainPage.xaml 文件中描述的对象定义。
-8. 使用“转调试调试启动”（Ctrl+F5）命令立即启动应用程序。编译和链接项目文件需要几秒钟，然后应用程序启动并显示如图 13-5 所示的屏幕。
+5. 展开 `MainPage.xaml` 文件。与其他语言一样，此 XAML 文件嵌套了代码后台 `MainPage.xaml`，其使用 C++ 编写。这里还有另一个嵌套文件 `MainPage.xaml.h`，它包含了 `MainPage.xaml` 中的类型定义。
+6. 双击 `MainPage.xaml.cpp` 文件打开它。在编辑器中，你会看到几个空方法和一个以“Feature”开头的注释行。这些是你将在后续练习中编写的代码占位符。
+7. 双击 `MainPage.xaml.h` 文件打开它。在编辑器中，点击 `#include "MainPage.xaml.h"` 行并按 `Ctrl+Shift+G`。打开的 `MainPage.g.h` 文件显示了 `MainPage.xaml` 文件中描述的对象定义。
+8. 使用“转调试调试启动”（`Ctrl+F5`）命令立即启动应用程序。编译和链接项目文件需要几秒钟，然后应用程序启动并显示如图 13-5 所示的屏幕。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_506_0.png)
 
-FIGURE 13-3：Windows 8 模板
+图 13-3：Windows 8 模板
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_507_0.png)
 
-FIGURE 13-4：解决方案管理器中的 CDemo 项目
-
-
-
-
-## 使用 Visual Studio 发现 C++ 特性
+图 13-4：解决方案管理器中的 CDemo 项目
 
 ## Windows Runtime C++ 演示
 
@@ -14964,36 +14544,41 @@ FIGURE 13-4：解决方案管理器中的 CDemo 项目
 ![](img/4ba176960f93c5e0483da4464a3d695f_508_0.png)
 
 此演示显示了平台特定类型（Platform-specific type）是 STL 类型之上的层。此演示后的代码段在使用封化（Marshalling）和写入类型时会返回你的名字。
+
 输入你的名字：
 
-图 13-5：运行中的 CppDemo 
+图 13-5：运行中的 CppDemo
 
-- 9. 你现在可以从列表中选择项目，在列表右侧显示指定场景的输入面板。在项目的初始版本中，所有按钮都是不可用的。
-- 10. 按 Alt+4 关闭应用程序。
+9. 你现在可以从列表中选择项目，在列表右侧显示指定场景的输入面板。在项目的初始版本中，所有按钮都是不可用的。
+10. 按 `Alt+4` 关闭应用程序。
 
 ### 工作原理
 
-在检查 CppDemo 项目时，你可能会发现它与用编程语言创建的项目非常相似，尽管文件夹名称不同。
+在检查 `CppDemo` 项目时，你可能会发现它与用编程语言创建的项目非常相似，尽管文件夹名称不同。
 
-C++ 与 XAML 有非常紧密的集成。正如你在第 5 步中发现的，MainPage.xml 拥有后代码文件。MainPage.xml 代码文件用于你创建代码，而每当你修改并保存 MainPage.xml 文件时，都会自动生成 MainPage.g.h。在后台，IDE 会生成一个 MainPage.xml.hpp 文件，在构造 MainPage 对象时初始化你的组件。
+C++ 与 XAML 有非常紧密的集成。正如你在第 5 步中发现的，`MainPage.xml` 拥有后代码文件。`MainPage.xml` 代码文件用于你创建代码，而每当你修改并保存 `MainPage.xml` 文件时，都会自动生成 `MainPage.g.h`。在后台，IDE 会生成一个 `MainPage.xml.hpp` 文件，在构造 `MainPage` 对象时初始化你的组件。
 
-当你在第 9 步构建并启动 CppDemo 应用程序时，IDE 还创建了应用的部署包（使用 Package.appmanifest 文件）并安装了它，就像你在之前章节的练习中其他应用程序中所体验的那样。
+当你在第 9 步构建并启动 `CppDemo` 应用程序时，IDE 还创建了应用的部署包（使用 `Package.appmanifest` 文件）并安装了它，就像你在之前章节的练习中其他应用程序中所体验的那样。
 
 你现在准备好修改这个简单的 C++ 了。
 
 ## 使用 Platform::String 类型
 
-为了提供一种向 Windows Runtime 组件传递字符字符串并从 Windows Runtime 操作检索字符串的方法，微软创建了一个位于 Windows 命名空间的新型 String 类型。这种新类型是一个非常薄的封装器，允许通过少数操作构建不可变字符串对象。这种类型的很棒之处在于它能与 STL 的写入类型完全协作，正如你将在下一个练习中学到的那样。
 
-> 注意：如果你不是 C++ 程序员，你应该知道 C++ 使用作用域解析运算符（`::`）来分隔命名空间和类型元素。因此，Windows Runtime String 类的限定类型是 Platform::String，因为它是在 Platform 命名空间中声明的。
+
+为了提供一种向 Windows Runtime 组件传递字符字符串并从 Windows Runtime 操作检索字符串的方法，微软创建了一个位于 Windows 命名空间的新型 `String` 类型。这种新类型是一个非常薄的封装器，允许通过少数操作构建不可变字符串对象。这种类型的很棒之处在于它能与 STL 的写入类型完全协作，正如你将在下一个练习中学到的那样。
+
+> 注意：如果你不是 C++ 程序员，你应该知道 C++ 使用作用域解析运算符（`::`）来分隔命名空间和类型元素。因此，Windows Runtime `String` 类的限定类型是 `Platform::String`，因为它是在 `Platform` 命名空间中声明的。
 
 ## 尝试：使用 Platform::String 类型
 
-为了熟悉 Platform::String 类型，请遵循以下步骤：
+为了熟悉 `Platform::String` 类型，请遵循以下步骤：
 
-- 1. 从 CppDemo Start 文件夹打开 CppDemo 解决方案，除非它已在 Visual Studio IDE 中打开。
-- 2. 在解决方案管理器中，双击 MainPage.xaml.cpp 文件（如果 MainPage.xaml 节点折叠，请展开它），并找到体为空的 ReverseStringButton_Tapped 方法。
-- 3. 在方法体中插入以下粗体代码：
+1. 从 `CppDemo Start` 文件夹打开 `CppDemo` 解决方案，除非它已在 Visual Studio IDE 中打开。
+
+2. 在解决方案管理器中，双击 `MainPage.xaml.cpp` 文件（如果 `MainPage.xaml` 节点折叠，请展开它），并找到体为空的 `ReverseStringButton_Tapped` 方法。
+
+3. 在方法体中插入以下粗体代码：
 
 ```cpp
 void MainPage::ReverseStringButton_Tapped(Object^ sender, TRoutedEventArgs^ e)
@@ -15007,20 +14592,23 @@ void MainPage::ReverseStringButton_Tapped(Object^ sender, TRoutedEventArgs^ e)
 }
 ```
 
-在此代码中，`yourName` 是一个引用计数指针（用 `^` 表示），它设置为 Name 文本框的内容。由于 String 类处理了 `+` 运算符，你可以使用此变量与字符串字面量拼接，并设置 FeatureConsoleText 块的 `Text` 属性。
+在此代码中，`yourName` 是一个引用计数指针（用 `^` 表示），它设置为 `Name` 文本框的内容。由于 `String` 类处理了 `+` 运算符，你可以使用此变量与字符串字面量拼接，并设置 `FeatureConsoleText` 块的 `Text` 属性。
 
-- 4. 按 Ctrl+F5 运行应用程序。在功能列表中，选择了第一个项目。在文本框中输入你的名字（或其他任何文本）并点击 Reverse 按钮。功能输出将反序写入该文本。例如：
+4. 按 `Ctrl+F5` 运行应用程序。在功能列表中，选择了第一个项目。在文本框中输入你的名字（或其他任何文本）并点击 `Reverse` 按钮。功能输出将反序写入该文本。例如：
 
+```
 Your name: My nickname is DeepDiver
-Reversed: reviDpeed si emankcin ym
 
-- 5. 关闭应用程序。
+Reversed: reviDpeed si emankcin ym
+```
+
+5. 关闭应用程序。
 
 ### 工作原理
 
-你可以直接与其他 Windows Runtime 类型（包括 XAML 控件）一起使用 String 类型。这就是 String 代码段获取 FeatureConsoleText 变量内容的方式。然而，String 仅实现了少数操作。每当你想要执行更复杂的操作时，可以使用 STL 连接。要设置其初始内容，上一个代码段中的 `inputString`（它是一个 wstring）使用 `String::Data()` 方法来获取指向 C++ 终止字符串的指针。
+你可以直接与其他 Windows Runtime 类型（包括 XAML 控件）一起使用 `String` 类型。这就是 `String` 代码段获取 `FeatureConsoleText` 变量内容的方式。然而，`String` 仅实现了少数操作。每当你想要执行更复杂的操作时，可以使用 STL 连接。要设置其初始内容，上一个代码段中的 `inputString`（它是一个 `wstring`）使用 `String::Data()` 方法来获取指向 C++ 终止字符串的指针。
 
-在下一行中，`reverseString` 使用遍历字符范围的 wstring 构造函数来创建它。感谢 `rbegin()` 和 `rend()` 方法，此迭代器从字符串的最后一个字符遍历到第一个字符，因此它构建了原始字符串的反转。要将反转后的字符串写回输出，你需要一个 `String^` 实例（使用 `ref new` 运算符），`yourReversedName` 实例化一个新的 String（使用 `c_str()` 方法获取 `reverseString` 变量的内容）。
+在下一行中，`reverseString` 使用遍历字符范围的 `wstring` 构造函数来创建它。感谢 `rbegin()` 和 `rend()` 方法，此迭代器从字符串的最后一个字符遍历到第一个字符，因此它构建了原始字符串的反转。要将反转后的字符串写回输出，你需要一个 `String^` 实例（使用 `ref new` 运算符），`yourReversedName` 实例化一个新的 `String`（使用 `c_str()` 方法获取 `reverseString` 变量的内容）。
 
 这种 Windows Runtime 类型与 STL 类型之间的协作是一种常见模式。你可以以类似的方式将 Windows Runtime 集合与 STL 集合一起使用，正如你将在下一个练习中学到的那样。
 
@@ -15028,18 +14616,15 @@ Reversed: reviDpeed si emankcin ym
 
 C++ STL 定义了许多相关操作。此外，正如你之前从表 13-1 中学到的，C++11 引入了新的集合。这种 Windows Runtime 类型与 STL 类型之间的协作是一种常见模式。你可以以类似的方式将 Windows Runtime 集合与 STL 集合一起使用，正如你将在下一个练习中学到的那样。
 
-
-
-
 # 异步写入文件
 
 要异步创建一个带有短文本消息的简单文本文件，请按照以下步骤操作：
 
-- 1. 从 CppDemo 文件夹打开 CppDemo 解决方案，除非它已经在 Visual Studio IDE 中打开。
+1. 从 `CppDemo` 文件夹打开 `CppDemo` 解决方案，除非它已经在 Visual Studio IDE 中打开。
 
-- 2. 在解决方案管理器（Solution Explorer）中，双击 `MainPage.xml` 文件，并找到 `WriteFileButton_Tapped` 方法。
+2. 在解决方案管理器（Solution Explorer）中，双击 `MainPage.xml` 文件，并找到 `WriteFileButton_Tapped` 方法。
 
-- 3. 将以下加粗代码插入到方法体中：
+3. 将以下加粗代码插入到方法体中：
 
 ```cpp
 void MainPage::WriteFileButton_Tapped(Object sender, TappedRoutedEventArgs e) 
@@ -15061,13 +14646,13 @@ void MainPage::WriteFileButton_Tapped(Object sender, TappedRoutedEventArgs e)
 
 此代码段链了两个异步操作：`createTask` 创建 `MySample.txt` 文件，而 `writeTask` 输出用户指定的消息。每个任务都使用其方法的 lambda 表达式来定义特定任务的后续操作。
 
-- 4. 按 Ctrl+F5 运行应用程序。在功能列表中，选择 Asynchronous Method Invocation（异步方法调用）项。在文本框中输入消息，点击（或触摸）“Write Message to File”（将消息写入文件）按钮。
+4. 按 `Ctrl+F5` 运行应用程序。在功能列表中，选择 Asynchronous Method Invocation（异步方法调用）项。在文本框中输入消息，点击（或触摸）“Write Message to File”（将消息写入文件）按钮。
 
-- 6. 在输出面板中，程序将显示几行输出，告诉文件已创建并写入。
+5. 在输出面板中，程序将显示几行输出，告诉文件已创建并写入。
 
-- 7. 启动 Windows 资源管理器并选择库下的 Documents（文档）节点。找到 `MySample.txt` 文件并双击打开它。你可以检查消息是否已写入。
+6. 启动 Windows 资源管理器并选择库下的 Documents（文档）节点。找到 `MySample.txt` 文件并双击打开它。你可以检查消息是否已写入。
 
-- 8. 返回 CppDemo 应用程序并将其关闭。
+7. 返回 `CppDemo` 应用程序并将其关闭。
 
 ### 工作原理
 
@@ -15079,7 +14664,7 @@ void MainPage::WriteFileButton_Tapped(Object sender, TappedRoutedEventArgs e)
 
 你可以看到后续方法中的 lambda 表达式捕获了指针，因此它们可以访问所有 UI 元素。这就是我们向输出面板写入消息的方式。
 
-> 注意：在 C++ 中可以使用多种异步模式。更多信息请参阅 http://msdn.microsoft.com/en-us/library/windows/apps/hh780559.aspx。
+> 注意：在 C++ 中可以使用多种异步模式。更多信息请参阅 `http://msdn.microsoft.com/en-us/library/windows/apps/hh780559.aspx`。
 
 # 使用加速大规模并行 (AMP)
 
@@ -15091,7 +14676,7 @@ Direct2D 和 Direct3D 技术使用 GPU 渲染复杂图形。GPU 的架构可以�
 
 在下一个练习中，你将分别使用传统的顺序算法和 C++ AMP 实现此操作。
 
-> 注意：可以通过阅读 http://en.wikipedia.org/wiki/Matrix_multiplication 的文章来复习你的矩阵乘法知识。
+> 注意：可以通过阅读 `http://en.wikipedia.org/wiki/Matrix_multiplication` 的文章来复习你的矩阵乘法知识。
 
 # 使用 Visual Studio 发现 C++ 特性
 
@@ -15099,8 +14684,9 @@ Direct2D 和 Direct3D 技术使用 GPU 渲染复杂图形。GPU 的架构可以�
 
 要比较顺序和 C++ AMP 乘法算法，请遵循以下步骤：
 
-- 1. 从 CppDemo Start 文件夹打开 CppDemo 解决方案，除非它已经在 Visual Studio IDE 中打开。
-- 2. 在解决方案管理器中，双击 `MainPage.xaml.cpp` 文件，并用以下加粗代码填充 `CalculateSerialButton_Tapped` 方法的主体：
+1. 从 `CppDemo Start` 文件夹打开 `CppDemo` 解决方案，除非它已经在 Visual Studio IDE 中打开。
+
+2. 在解决方案管理器中，双击 `MainPage.xaml.cpp` 文件，并用以下加粗代码填充 `CalculateSerialButton_Tapped` 方法的主体：
 
 ```cpp
 void MainPage::CalculateSerialButton_Tapped(Object^ sender)
@@ -15119,7 +14705,7 @@ void MainPage::CalculateSerialButton_Tapped(Object^ sender)
 }
 ```
 
-- 3. 将以下代码复制到 `CalculateAMP_Tapped` 方法体中：
+3. 将以下代码复制到 `CalculateAMP_Tapped` 方法体中：
 
 ```cpp
 void MainPage::CalculateAMPButton_Tapped(Object^ sender)
@@ -15138,7 +14724,7 @@ void MainPage::CalculateAMPButton_Tapped(Object^ sender)
 }
 ```
 
-- 4. 在解决方案管理器，双击 `MatrixOperation.cpp` 文件，并用以下顺序代码填充 `MultiplySequential` 方法：
+4. 在解决方案管理器，双击 `MatrixOperation.cpp` 文件，并用以下顺序代码填充 `MultiplySequential` 方法：
 
 ```cpp
 void MatrixOperation::MultiplySequential(vector<float>& vC,
@@ -15158,7 +14744,7 @@ void MatrixOperation::MultiplySequential(vector<float>& vC,
 }
 ```
 
-- 5. 将以下代码复制到 `MultiplyAMP` 的 `vector<float>` 方法中：
+5. 将以下代码复制到 `MultiplyAMP` 的 `vector<float>` 方法中：
 
 ```cpp
 void MatrixOperation::MultiplyAMP(vector<float>& VC,
@@ -15181,10 +14767,6 @@ void MatrixOperation::MultiplyAMP(vector<float>& VC,
     });
 }
 ```
-
-
-
-
 
 # 总结 | 489
 
@@ -15209,7 +14791,9 @@ concurrency::parallel_for_each(c.extent,
 [=](concurrency::index<2> idx) restrict (amp) {
 ```
 
-它声明此并行循环将遍历 `c` 矩阵的所有单元格（`c.extent`），在循环体内，当前单元格通过 `idx` 标识，`idx` 具有两个维度（矩阵的行和列索引）。`restrict(amp)` 子句告诉编译器两点：首先，循环体应被编译为可以在 AMP 兼容硬件上运行的代码（例如带有 DirectX 11 驱动程序的 GPU）。其次，循环体内只允许使用那些可以被 AMP 管理的语句和结构。例如，你不能在循环体内打开文件，因为该操作在 GPU 上不是易失的。循环体仅用于计算由 `idx` 引的单元格值。
+
+
+它声明此并行循环将遍历`c`矩阵的所有单元格（`c.extent`），在循环体内，当前单元格通过`idx`标识，`idx`具有两个维度（矩阵的行和列索引）。`restrict(amp)`子句告诉编译器两点：首先，循环体应被编译为可以在 AMP 兼容硬件上运行的代码（例如带有 DirectX 11 驱动程序的 GPU）。其次，循环体内只允许使用那些可以被 AMP 管理的语句和结构。例如，你不能在循环体内打开文件，因为该操作在 GPU 上不是易失的。循环体仅用于计算由`idx`引的单元格值。
 
 很棒的一点是，这种并行结构让 DirectX11 驱动程序和 GPU 决定并发级别。例如，如果 GPU 支持 128 个独立处理通道，则可以同时计算 128 个单元格值。
 
@@ -15237,15 +14821,10 @@ C++ 在 Windows 8 应用开发中具有独特特性。它可以使用 DirectX �
 | 主题 | 核心概念 |
 | --- | --- |
 | C++11 | C++ 标准的最新主要修订是 C++11，由 ISO/IEC 于 2011 年 8 月 12 日批准。 |
-| auto 关键字 | C++11 的这一新功能实现了自动类型推导，前提是给出显式初始化。编译器从初始化值推断变量的类型。 |
-| C++11 中的智能指针 | C++11 弃用了 `auto_ptr`，引入了三种智能指针：`unique_ptr`（对象的唯一所有权）、`shared_ptr`（对象的共享所有权）和 `weak_ptr`（对象的非所有权引用）。 |
-| 右值引用 | C++11 使用 `&&` 符号将右值（右侧值）绑定到标识符。 |
+| `auto`关键字 | C++11 的这一新功能实现了自动类型推导，前提是给出显式初始化。编译器从初始化值推断变量的类型。 |
+| C++11 中的智能指针 | C++11 弃用了`auto_ptr`，引入了三种智能指针：`unique_ptr`（对象的唯一所有权）、`shared_ptr`（对象的共享所有权）和`weak_ptr`（对象的非所有权引用）。 |
+| 右值引用 | C++11 使用`&&`符号将右值（右侧值）绑定到标识符。 |
 | 移动语义 | C++11 引入了移动语义，以提高在调用者和被调用者之间需要拷贝大量数据的情况下的性能。移动语义允许移动数据。 |
-
-*(注：由于原文表格部分内容与后文存在重复描述，此处已根据要求完成对应对应翻译)*
-
-
-
 
 Windows 8 支持许多输入设备。一个优秀的应用程序应该准备好根据输入设备的可用性、设备功能以及用户的选择来使用不同的输入设备。在本章中，你将学习如何查询设备能力，以便在你的应用程序中提供最佳的用户体验。
 
@@ -15253,31 +14832,11 @@ Windows 8 支持许多输入设备。一个优秀的应用程序应该准备好�
 
 在之前的章节中，你已经学习了 Windows 8 中每种编程语言的特殊之处。你已经知道 HTML 和 JavaScript 是利用现有 Web 编程知识的绝佳工具。C# 和 Visual Basic 与 XAML 配合非常出色，特别是如果你已经拥有 Silverlight 或 Windows Presentation Foundation (WPF) 的经验。而 C++ 则侧重于性能和对系统资源的直接访问。
 
-当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以你可以查询设备设备，，在你的应用程序中中最佳最佳体验。。准备设计设计并并准备开发项目，，你最重要的决策之一就是编程语言。。通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的体验。
-
-[content]
-Windows 8 支持许多输入设备。一个优秀的应用程序应该准备好根据输入设备的可用性、设备功能以及用户的选择来使用不同的输入设备。在本章中，你将学习如何查询设备。
-
-# 使用多种语言构建解决方案
-
-在之前的章节中，你已经学习了 Windows 8 中每种编程语言的特殊之处。你已经知道 HTML 和 JavaScript 是利用你现有 Web 编程知识的绝佳工具。C# 和 Visual Basic 与 XAML 配合非常出色，特别是如果你已经拥有 Silverlight 或 Windows Presentation Foundation (WPF) 的经验。C++ 则侧重于性能和对系统资源的直接访问。
-
-当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。
-
-（注：由于提供的待翻译文本存在大量重复的句子，此处已根据指令“一定不要重复输出原文”的原则，仅翻译并整理了核心内容。）
-
-抱歉，由于你提供的待翻译文本中存在大量重复的段落，为了符合“一定不要重复输出原文”的指令，以下是精简并翻译后的核心译文：
-
-[content]
-Windows 8 支持许多输入设备。一个优秀的应用程序应该准备好根据输入设备的可用性、设备功能以及用户的选择来使用不同的输入设备。在本章中，你将学习如何查询设备能力，以便在你的应用程序中提供最佳的用户体验。
-
-# 使用多种语言构建解决方案
-
-在之前的章节中，你已经学习了 Windows 8 中每种编程语言的特殊之处。你已经知道 HTML 和 JavaScript 是利用你现有 Web 编程知识的绝佳工具。C# 和 Visual Basic 与 XAML 配合非常出色，特别是如果你已经拥有 Silverlight 或 Windows Presentation Foundation (WPF) 的经验。而 C++ 则侧重于性能和对系统资源的直接访问。
-
 当你准备设计应用程序并准备开发项目时，你最重要的决策之一就是编程语言的选择。你可以通过查询设备能力，以便在你的应用程序中提供最佳的用户体验。
 
 # 混合解决方案
+
+
 
 使用多种语言的解决方案通常被称为混合解决方案。Visual Studio 允许你创建一个：
 
@@ -15286,14 +14845,11 @@ Windows 8 支持许多输入设备。一个优秀的应用程序应该准备好�
 - 数据层 — 负责数据处理。
 - 设备访问层 — 负责与硬件交互。
 
-
-
-
 # 创建和使用 Windows Runtime 组件
 
 Windows Runtime 组件可以从任何 Windows 8 语言进行调用。因此，如果你想创建可重用的构件，以便它们在不取决于实现特定应用程序的编程语言的情况下被任何 Windows 8 应用使用，请将它们实现为 Windows Runtime 组件。你可以使用 C++、C# 和 Visual Basic 实现此目的，但由于其特性，你无法在 JavaScript 中创建这些组件。
 
-Windows Runtime 组件被编译为 .dll 文件，而构建过程始终生成一个 .winmd（元数据）库，该库公开了有关组件库中公共类型的信息。虽然你可以在 Windows Runtime 组件项目中的任何时候在内部使用它，但对于你打算发布的类型和成员存在某些限制。
+Windows Runtime 组件被编译为`.dll`文件，而构建过程始终生成一个`.winmd`（元数据）库，该库公开了有关组件库中公共类型的信息。虽然你可以在 Windows Runtime 组件项目中的任何时候在内部使用它，但对于你打算发布的类型和成员存在某些限制。
 
 这些限制特定于实现组件时所使用的编程语言。然而，最重要的规则是：公共类型及其成员（包括字段、属性、参数和返回值）必须是 Windows Runtime 类型 —— 而且这与所使用的语言无关。
 
@@ -15301,16 +14857,14 @@ Windows Runtime 组件被编译为 .dll 文件，而构建过程始终生成一�
 
 幸运的是，当你尝试在 Windows Runtime 组件的公共接口上公开无效的类型或成员时，构建过程始终会报错错误。如果你发现某些原本（编译为非 Windows Runtime 组件时）不会产生错误的代码遇到了异常的错误和警告，那么很有可能是你违反了某些限制。
 
-在接下来的练习中，你将实现在上一个练习中准备的 PrimeNumbers 组件。
+在接下来的练习中，你将实现在上一个练习中准备的`PrimeNumbers`组件。
 
 # 尝试用 C++ 实现 Windows Runtime 组件
 
-要用 C++ 实现 PrimeNumbers 组件，请按照以下步骤操作：
+要用 C++ 实现`PrimeNumbers`组件，请按照以下步骤操作：
 
-- 1. 在 Visual Studio 中，打开 CSharpHybrid 解决方案，直到它打开。
-- 2. 在解决方案管理器中，展开 PrimeNumbers 节点，并双击 WinRTComponent.h 文件打开它。在代码编辑器中，输入以下**粗体代码**来创建质数集合算法的定义。
-
-# 使用多种语言构建解决方案
+1. 在 Visual Studio 中，打开`CSharpHybrid`解决方案，直到它打开。
+2. 在解决方案管理器中，展开`PrimeNumbers`节点，并双击`WinRTComponent.h`文件打开它。在代码编辑器中，输入以下代码来创建质数集合算法的定义。
 
 ```cpp
 #pragma once
@@ -15325,7 +14879,7 @@ namespace PrimeNumbers {
 }
 ```
 
-打开 WinRTComponent.cpp 文件。删除其内容并输入以下代码来实现该算法：
+3. 打开`WinRTComponent.cpp`文件。删除其内容并输入以下代码来实现该算法：
 
 ```cpp
 #include "pch.h"
@@ -15338,32 +14892,34 @@ Prime::Prime() {}
 
 Windows::Foundation::Collections::IVectorView<unsigned long long>^
 Prime::GetPrimes(int upperBound) {
- //DH- 创建一个位数组并将所有位初始化为 1
-int length = upperBound/8 + 1;
-char* numberFlags = new char[length];
-for (int i = 0; i < length; i++) numberFlags[i] = (char)0xff;
+    // 创建一个位数组并将所有位初始化为 1
+    int length = upperBound/8 + 1;
+    char* numberFlags = new char[length];
+    for (int i = 0; i < length; i++) numberFlags[i] = (char)0xff;
 
- //DH- 使用埃拉托尼筛
-int seekLimit = (int)sqrt(upperBound);
-for (int i = 1; i <= seekLimit; i++) {
-    if (numberFlags[i>>3] & (0x80 >> i % 8)) {
-        for (int j = i + i; j < upperBound; j += i) {
-            numberFlags[j>>3] &= ~(0x80 >> j % 8);
+    // 使用埃拉托尼筛
+    int seekLimit = (int)sqrt(upperBound);
+    for (int i = 1; i <= seekLimit; i++) {
+        if (numberFlags[i>>3] & (0x80 >> i % 8)) {
+            for (int j = i + i; j < upperBound; j += i) {
+                numberFlags[j>>3] &= ~(0x80 >> j % 8);
+            }
         }
     }
+
+    // 收集质数
+    std::vector<unsigned long long> primeNumbers;
+
+    for (int i = 2; i < upperBound; i++)
+    {
+        if (numberFlags[i>>3] & (0x80 >> i % 8)) primeNumbers.push_back(i);
+    }
+    return (ref Platform::Collections::Vector<unsigned long long>(primeNumbers))->GetView();
 }
+```
 
-DH- 收集质数
-std::vector<unsigned long long> primeNumbers;
-
-for (int i = 2; i < upperBound; i++)
-{
-    if (numberFlags[i>>3] & (0x80 >> i % 8)) primeNumbers.push_back(i);
-}
-return (ref Platform::Collections::Vector<unsigned long long>(primeNumbers))->GetView();
-
-- 4. 按 F7 构建解决方案。现在，PrimeNumbers Windows Runtime 组件就可以被调用了。
-- 5. 在解决方案管理器中，展开 CSharpHybrid 项目并打开 MainPage.cs 文件。在代码编辑器中，将以下**粗体代码**粘贴到此处：
+4. 按`F7`构建解决方案。现在，`PrimeNumbers`Windows Runtime 组件就可以被调用了。
+5. 在解决方案管理器中，展开`CSharpHybrid`项目并打开`MainPage.cs`文件。在代码编辑器中，将以下代码粘贴到此处：
 
 ```csharp
 using Windows.UI.Xaml.Controls;
@@ -15385,37 +14941,44 @@ namespace CSharpHybrid
             var builder = new StringBuilder("Prime numbers between 1 and 5000:\n");
             var primes = new Prime().GetPrimes(5000);
             bool appendComma = false;
+
             foreach (var prime in primes)
             {
                 if (appendComma) builder.Append(", ");
                 builder.Append(prime);
                 appendComma = true;
             }
+
             OutputText.Text = builder.ToString();
         }
     }
 }
 ```
-- 6. 按 Ctrl+F5 构建并运行项目。点击 Numbers 按钮，你将立即看到如图 14-6 所示的结果。
-- 7. 关闭应用程序。
 
-> 注意，可以在本书配套网站 CSharpHybrid 文件夹中找到此练习的完整代码。
+6. 按`Ctrl+F5`构建并运行项目。点击 Numbers 按钮，你将立即看到如图 14-6 所示的结果。
+7. 关闭应用程序。
+
+> 注意，可以在本书配套网站`CSharpHybrid`文件夹中找到此练习的完整代码。
 
 ### 工作原理
 
-在步骤 2 中，你将集合算法声明为 `public ref class Prime`。在此声明中，`public ref class` 编译器该类应该在组件上公开。`sealed` 修饰符是为了你可以从 C# 使用它。`GetPrimes` 方法接受的参数不是 Windows 类型，但 C++ 编译器通常将其封装为 Windows Runtime 的 long 以跨越边界。
+在步骤 2 中，你将集合算法声明为`public ref class Prime`。在此声明中，`public ref class`编译器该类应该在组件上公开。`sealed`修饰符是为了你可以从 C# 使用它。`GetPrimes`方法接受的参数不是 Windows 类型，但 C++ 编译器通常将其封装为 Windows Runtime 的`long`以跨越边界。
 
 # C++/混合应用程序
 
 此示例应用程序演示了如何在 C++ 中创建质数生成器并从 C# 调用该生成器。
 
 输出：
+
 ```
 Prime numbers between 1 and 5000:
+
 2, 3, 5, 7, 11, 13, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503
 ```
 
-你在步骤 3 中指定的 C++ 算法使用 char 数组，其中每个位代表一个数字。埃拉托尼筛使用该数组，并在最后通过 `GetView` 方法返回留在筛向量中的数字。
+
+
+你在步骤 3 中指定的 C++ 算法使用 `char` 数组，其中每个位代表一个数字。埃拉托尼筛使用该数组，并在最后通过 `GetView` 方法返回留在筛向量中的数字。
 
 `DisplayPrimesButton_Tapped` 方法使用 `StringBuilder` 并遍历结果，以通过算法显示每个数字。
 
@@ -15424,9 +14987,6 @@ Prime numbers between 1 and 5000:
 # 后台任务
 
 正如你在第 9 章中所学习的，Windows 8 引入了一种新的应用程序行为模型。Windows 8 应用在用户与其交互时处于以前台，它们获得系统资源以提供具有持续响应能力的极佳用户体验。然而，当应用程序不再以前台时，它会被挂起，并且无法运行任何代码。当用户将应用程序带以前台时，应用程序可以继续其工作。在某些情况下，由于系统资源有限，挂起的应用程序会被终止。
-
-
-
 
 Windows 服务在它们各自的领地内称王者，尽管操作系统对它们拥有完全控制权，但它们会消耗系统资源。它们的存在是为了执行沉型的后台处理任务，例如解析和执行 SQL 查询、压缩文件、提供 Web 服务器等。
 
@@ -15446,24 +15006,24 @@ Windows 服务在它们各自的领地内称王者，尽管操作系统对它们
 
 当然，操作系统必须知道某个应用程序拥有一个或多个后台任务，并且它必须知道特定任务绑定的触发器和条件。与操作系统协商涉及其自身后台任务的场景是应用程序的责任。如图 14-7 所示，整个过程分为以下步骤：
 
-- 1. 包含后台任务的应用程序注册关于启动该后台任务的触发器详细信息。在这种特定情况下，应用程序注册了 `UserPresent` 触发器，这是一个系统事件触发器。
-- 2. 应用程序注册到实现后台任务的系统基础设施类。在此阶段，应用程序传递上一步中指定的触发器详细信息。
+1. 包含后台任务的应用程序注册关于启动该后台任务的触发器详细信息。在这种特定情况下，应用程序注册了 `UserPresent` 触发器，这是一个系统事件触发器。
+2. 应用程序注册到实现后台任务的系统基础设施类。在此阶段，应用程序传递上一步中指定的触发器详细信息。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_531_0.png)
 
 图 14-7：注册并触发后台任务
 
-- 3. 当事件被触发时（在本例中，为 `UserPresent` 事件），系统会通知后台任务基础设施。
-- 4. 基础设施知道在特定事件发生时应该启动的所有后台类（因为已经注册了），并通过通过实例化指定的后台任务类来启动恰当的任务。
+3. 当事件被触发时（在本例中，为 `UserPresent` 事件），系统会通知后台任务基础设施。
+4. 基础设施知道在特定事件发生时应该启动的所有后台类（因为已经注册了），并通过通过实例化指定的后台任务类来启动恰当的任务。
 
 ## 触发器事件与任务条件
 
 Windows 8 后台任务基础设施定义了十多个触发器事件。其中大多数是系统事件触发器。以下是其中几个：
 
-- **UserAway**（用户离开）——用户离开了（例如，他在喝咖啡休息时离开了计算机）。
-- **UserPresent**（用户存在）——用户在（例如，他从咖啡休息回来，解锁设备并恢复工作）。
-- **TimeZoneChange**（时区更改）——设备上的时区变化（例如，系统为夏令时调整时，或用户在控制面板中更改当前时间）。
-- **NetworkStatusChange**（网络状态更改）——发生网络变化，如费用变化（例如，从无线运营商网络到付费蜂窝网络）或连接性的变化（例如，互联网不可用）。
+- `UserAway`（用户离开）——用户离开了（例如，他在喝咖啡休息时离开了计算机）。
+- `UserPresent`（用户存在）——用户在（例如，他从咖啡休息回来，解锁设备并恢复工作）。
+- `TimeZoneChange`（时区更改）——设备上的时区变化（例如，系统为夏令时调整时，或用户在控制面板中更改当前时间）。
+- `NetworkStatusChange`（网络状态更改）——发生网络变化，如费用变化（例如，从无线运营商网络到付费蜂窝网络）或连接性的变化（例如，互联网不可用）。
 
 > 注意 你可以从 http://msdn.microsoft.com/en-us/library/windows/apps/windows/applicationmodel.background.systemtriggertype.aspx 获取 Windows 8 支持的系统事件触发器的完整列表。
 
@@ -15473,10 +15033,10 @@ Windows 8 后台任务基础设施定义了十多个触发器事件。其中大�
 
 | 触发器名称 | 描述 |
 | --- | --- |
-| TimeTrigger | 代表触发后台任务启动的时间事件。 |
-| PushNotificationTrigger | 代表在响应收到原始通知（即不涉及 UI 的推送通知）时调用应用程序的后台任务项的事件。 |
-| ControlChannelTrigger | 允许在几种网络传输中接收实时通信，主要是 Windows .Networking. Sockets 命名空间中的传输。 |
-| MaintenanceTrigger | 操作系统定期执行维护任务，前提是系统处于交流电源状态。当应启动此类后台任务时会触发此事件。 |
+| `TimeTrigger` | 代表触发后台任务启动的时间事件。 |
+| `PushNotificationTrigger` | 代表在响应收到原始通知（即不涉及 UI 的推送通知）时调用应用程序的后台任务项的事件。 |
+| `ControlChannelTrigger` | 允许在几种网络传输中接收实时通信，主要是 `Windows.Networking.Sockets` 命名空间中的传输。 |
+| `MaintenanceTrigger` | 操作系统定期执行维护任务，前提是系统处于交流电源状态。当应启动此类后台任务时会触发此事件。 |
 
 在注册触发器时，你可以选择性添加添加，如表 14-2 所示。
 
@@ -15484,12 +15044,12 @@ Windows 8 后台任务基础设施定义了十多个触发器事件。其中大�
 
 | 条件名称 | 何时满足条件 |
 | --- | --- |
-| InternetAvailable | 互联网可用。 |
-| InternetNotAvailable | 互联网不可用。 |
-| SessionConnected | 会话已连接。 |
-| SessionDisconnected | 会话已断开。 |
-| UserNotPresent | 用户不在。 |
-| UserPresent | 用户在。 |
+| `InternetAvailable` | 互联网可用。 |
+| `InternetNotAvailable` | 互联网不可用。 |
+| `SessionConnected` | 会话已连接。 |
+| `SessionDisconnected` | 会话已断开。 |
+| `UserNotPresent` | 用户不在。 |
+| `UserPresent` | 用户在。 |
 
 ## 锁界面与后台任务
 
@@ -15503,7 +15063,7 @@ Windows 8 后台任务基础设施定义了十多个触发器事件。其中大�
 
 如前所述，后台任务在宿主应用程序未运行时也可以被触发。这意味着任务应该以这种方式托管，以便操作系统独立于其所有应用程序进行管理（换句话说，为它们服务）。
 
-后台任务在类库中实现，此类库可以运行在其主应用程序内部，也可以运行在系统提供的可执行文件 BackgroundTask.exe 中。当你创建应用程序时，必须在包文件中声明主机以让系统知道你的意图。然而，后台任务类型和主机进程存在若干规则：
+后台任务在类库中实现，此类库可以运行在其主应用程序内部，也可以运行在系统提供的可执行文件 `BackgroundTask.exe` 中。当你创建应用程序时，必须在包文件中声明主机以让系统知道你的意图。然而，后台任务类型和主机进程存在若干规则：
 
 - 注册了 `TimeTrigger`、`SystemTrigger` 或 `MaintenanceTrigger` 的任务必须托管在 `BackgroundTask.exe` 中。
 - 使用 `ControlChannel` 监听的任务只能在托管应用程序中运行。
@@ -15521,9 +15081,6 @@ Windows 8 后台任务基础设施定义了十多个触发器事件。其中大�
 这两种机制都假设主应用程序在前台运行；否则，来自后台任务的通知无法被主程序捕获。这些通知是以事件的形式实现的，因此在前台应用程序中使用事件处理程序来响应它们。这些事件处理程序通常用于更新 UI。
 
 由于后台任务在前台应用程序终止时可能仍在运行，因此在前台应用程序启动时有一种机制可以重建事件处理程序。前台应用程序可以查询它自己的后台任务并重新关联完成和进度事件处理程序。
-
-
-
 
 # 取消后台任务
 
@@ -15545,36 +15102,31 @@ Windows 8 后台任务基础设施定义了十多个触发器事件。其中大�
 
 # 创建简单的后台任务
 
-在接下来的练习中，你将学习创建和使用后台任务的基础知识。你将创建一个在 Internet 连接可用时触发的任务，并将其报告给前台应用程序。要实现此任务，你将使用 `InternetStatusTaskSample - Start` 解决方案，你可以在 Chapter14.zip 下载包中找到它。
+在接下来的练习中，你将学习创建和使用后台任务的基础知识。你将创建一个在 Internet 连接可用时触发的任务，并将其报告给前台应用程序。要实现此任务，你将使用 `InternetStatusTaskSample - Start` 解决方案，你可以在 `Chapter14.zip` 下载包中找到它。
 
 > 尝试：创建一个后台任务
 
 要创建一个与主应用程序通信的后台任务，请按照以下步骤操作：
 
-- 1. 使用打开项目 (Ctrl+Shift+O) 命令，打开本章下载的 `InternetStatusTaskSample - Start` 文件夹中的 `InternetStatusTaskSample-sln` 文件。几秒钟后解决方案将加载到 IDE 中。
-- 2. 在解决方案管理器中，选择 Solution 节点，并使用 `File Add New Project` 命令向解决方案添加一个 C# Windows Runtime 项目。将此项目命名为 `InternetStatusTask`。
-- 3. 展开 `InternetStatusTask` 节点，并从项目中删除 `Class.cs`。
-- 4. 在解决方案管理器中，双击 `Package.appxmanifest` 文件。在清单编辑器中，点击 `Declarations` 选项卡，从 `Available Declarations` 组合框中选择 `Background Tasks`。点击 `Add` 按钮。
-- 5. 在 `Supported Types` 下，勾选“System event”复选框。在“Entry point”框中输入 `InternetStatusTaskWatcher`，如图 14-8 所示。
+1. 使用打开项目 (`Ctrl+Shift+O`) 命令，打开本章下载的 `InternetStatusTaskSample - Start` 文件夹中的 `InternetStatusTaskSample-sln` 文件。几秒钟后解决方案将加载到 IDE 中。
+2. 在解决方案管理器中，选择 Solution 节点，并使用 `File Add New Project` 命令向解决方案添加一个 C# Windows Runtime 项目。将此项目命名为 `InternetStatusTask`。
+3. 展开 `InternetStatusTask` 节点，并从项目中删除 `Class.cs`。
+4. 在解决方案管理器中，双击 `Package.appxmanifest` 文件。在清单编辑器中，点击 `Declarations` 选项卡，从 `Available Declarations` 组合框中选择 `Background Tasks`。点击 `Add` 按钮。
+5. 在 `Supported Types` 下，勾选“System event”复选框。在“Entry point”框中输入 `InternetStatusTaskWatcher`，如图 14-8 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_535_0.png)
 
 图 14-8：后台任务清单属性
 
-- 6. 在解决方案管理器中，选择 `InternetStatusTaskSample` 项目并添加 `InternetStatusTask` 项目的引用。
-- 7. 在 `InternetStatusTask` 项目中添加新代码文件，并将其命名为 `StatusWatcherTask.cs`。在此输入以下代码：
+6. 在解决方案管理器中，选择 `InternetStatusTaskSample` 项目并添加 `InternetStatusTask` 项目的引用。
+7. 在 `InternetStatusTask` 项目中添加新代码文件，并将其命名为 `StatusWatcherTask.cs`。在此输入以下代码：
 
 ```csharp
 using System;
 using System.Diagnostics;
 using Windows.ApplicationModel.Background;
-```
-
-# 后台任务 | 509
-
 using Windows.Storage;
 
-```csharp
 namespace InternetStatusTask
 {
     public sealed class StatusWatcherTask : IBackgroundTask
@@ -15585,13 +15137,12 @@ namespace InternetStatusTask
             var key = taskInstance.Task.TaskId.ToString();
             settings.Values[key] = string.Format(
                 "StatusWatcherTask invoked at ({0})", DateTime.Now);
-            );
         }
     }
 }
 ```
 
-- 8. 打开 `MainPage.xaml` 文件，输入以下加粗代码：
+8. 打开 `MainPage.xaml` 文件，输入以下加粗代码：
 
 ```csharp
 using System;
@@ -15607,14 +15158,12 @@ namespace InternetStatusTaskSample
     public sealed partial class MainPage : Page
     {
         private CoreDispatcher StatusDispatcher;
-
         public MainPage()
         {
             this.InitializeComponent();
             StatusDispatcher = Window.Current.CoreWindow.Dispatcher;
             RegisterTaskButton.IsEnabled = false;
         }
-
         private void RegisterTask_Tapped(object sender, RoutedEventArgs e)
         {
             var builder = new BackgroundTaskBuilder();
@@ -15627,7 +15176,6 @@ namespace InternetStatusTaskSample
             UnregisterTaskButton.IsEnabled = true;
             OutputText.Text += "StatusWatcherTask registered.\n";
         }
-
         private void UnregisterTask_Tapped(object sender, RoutedEventArgs e)
         {
             foreach (var cur in BackgroundTaskRegistration.AllTasks)
@@ -15639,22 +15187,23 @@ namespace InternetStatusTaskSample
                 }
             }
         }
-
         private async void OnCompleted(BackgroundTaskRegistration task, BackgroundTaskEventArgs args)
         {
-            await StatusDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
-                // Handle completion
-            });
-        }
-    }
-}
+```
+
+
+
+```csharp
+await StatusDispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+{
+    // Handle completion
+});
 ```
 
 - 9. 拔掉网线取消 Internet。按 F5 运行。
 - 10. 插回网线连接 Internet。
 - 11. 点击 Register Task 按钮。
-- 12. 点击 Unregister 。
+- 12. 点击 Unregister。
 - 13. 关闭应用程序。
 
 > 注意：你可以在本书网站的 InternetSample 文件夹找到完整代码。
@@ -15664,6 +15213,7 @@ namespace InternetStatusTaskSample
 此示例应用程序启动了一个在 Internet 不可用时通知的后台任务。后台任务向应用程序报告状态。
 
 输出：
+
 ```
 Register Task Success
 StatusWatcherTask registered.
@@ -15674,7 +15224,9 @@ StatusWatcherTask unregistered.
 
 图 14-9：运行中的 TasksSample 应用程序
 
-# 工作原理正如你所学习的，后台任务是以 Windows Runtime 类实现的。在第 4 步中，当你更改项目输出类型为 WinMD 文件时，你声明了想要创建一个 Windows Runtime DLL 并添加了 .winmd 文件。你在第 6 步中输入的代码实现了 `IBackgroundTask` 接口的 `Run` 方法。它简单地将 Internet 不用的事实保存到应用程序设置中。
+# 工作原理
+
+正如你所学习的，后台任务是以 Windows Runtime 类实现的。在第 4 步中，当你更改项目输出类型为 WinMD 文件时，你声明了想要创建一个 Windows Runtime DLL 并添加了 `.winmd` 文件。你在第 6 步中输入的代码实现了 `IBackgroundTask` 接口的 `Run` 方法。它简单地将 Internet 不用的事实保存到应用程序设置中。
 
 注册后台任务需要几个步骤：
 
@@ -15702,10 +15254,6 @@ foreach (var cur in BackgroundTaskRegistration.AllTasks)
 }
 ```
 
-
-
-
-
 # 512 | 第 14 章 高级编程概念
 
 `OnCompleted` 方法看起来有点长。然而，它并不复杂。最的一点是它使用了一个名为 `StatusDispatcher` 的 `CoreDispatcher` 通过 `invokeAsync` 来异步执行事件处理程序。这是必要的，因为报告完成的线程不是 UI 线程，因此它无法访问 UI 元素。`StatusDispatcher` 在 UI 线程上执行 Lambda 方法。
@@ -15728,7 +15276,7 @@ Output.Text = settings[key].ToString() + "\n";
 
 要向 `StatusWatcherTask` 添加进度报告和取消管理，请遵循以下步骤：
 
-- 1. 从 `InternetStatusTaskSample Start` 文件夹打开 `InternetStatusTask` ，除非它在 Visual Studio IDE 中已打开。
+- 1. 从 `InternetStatusTaskSample Start` 文件夹打开 `InternetStatusTask`，除非它在 Visual Studio IDE 中已打开。
 - 2. 打开 `StatusWatcherTask.cs` 文件，并将现有代码替换为以下内容：
 
 ```csharp
@@ -15746,8 +15294,7 @@ namespace InternetStatusTask
         private BackgroundTaskDeferral _taskDeferral = null;
         uint _progress = 0;
         ThreadPoolTimer _timer = null;
-IBackgroundTaskInstance _instance;
-
+        IBackgroundTaskInstance _instance;
 ```
 
 ```csharp
@@ -15817,13 +15364,9 @@ private async void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskPr
 ```
 
 - 5. 按 Ctrl+F5 应用程序。点击 Register Background Task（注册后台任务）按钮。
-
 - 6. 通过移除电脑上的网络线或使用 Windows 8 中的设置小磁贴来断开互联网连接。应用程序开始每 2 秒显示一次进度消息。等待直到所有状态消息显示完毕（即进度达到 100%）。
-
 - 7. 点击 Unregister Background Task（注销后台任务）按钮。你的应用程序应该显示消息，如图 14-10 所示。
-
 - 8. 通过将网络线重新插回电脑或使用设置小磁贴连接到相应的无线网络来连接互联网。
-
 - 9. 点击 Register Background Task 按钮并断开互联网连接。当进度消息开始显示时，点击 Unregister Background Task 按钮。几秒钟后，任务被取消，如图 14-11 所示。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_541_0.png)
@@ -15844,9 +15387,9 @@ private async void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskPr
 
 | 类型 | 描述 |
 | :--- | :--- |
-| KeyboardCapabilities | 你可以使用此类类确定任何连接的硬件键盘的能力，包括有线和无线键盘。 |
-| MouseCapabilities | 你可以使用此类类查询任何连接鼠标的能力。 |
-| TouchCapabilities | 你可以使用此类类确定任何连接的触摸数字器的能力。 |
+| `KeyboardCapabilities` | 你可以使用此类类确定任何连接的硬件键盘的能力，包括有线和无线键盘。 |
+| `MouseCapabilities` | 你可以使用此类类查询任何连接鼠标的能力。 |
+| `TouchCapabilities` | 你可以使用此类类确定任何连接的触摸数字器的能力。 |
 
 每个类都有一组用于访问设备能力信息的属性。使用这些属性，你可以获取有关设备的所有信息。
 
@@ -15854,15 +15397,13 @@ private async void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskPr
 
 `KeyboardCapabilities` 类有一个名为 `KeyboardPresent` 的单个整数属性。当该整数值为 0 时，表示电脑没有连接硬件键盘；否则，则有。从上讲，你可以向电脑连接多个键盘，但从输入能力的角度来看，只要至少连接了一个，数量就并不重要。
 
-这段代码片段显示了使用 `KeyboardCapabilities` 是很容易的。（此代码可以在 InputDevices\MainPage.xaml.cs 可下载代码文件中找到）。
+这段代码片段显示了使用 `KeyboardCapabilities` 是很容易的。（此代码可以在 `InputDevices\MainPage.xaml.cs` 可下载代码文件中找到）。
 
 ```csharp
 var output = new StringBuilder();
 // ...
 output.Append("\nDH- Querying keyboard capabilities\n");
 ```
-
-
 
 ```cs
 var keyboardCaps = new KeyboardCapabilities();
@@ -15875,19 +15416,19 @@ outputText.Text = output.ToString();
 
 # 鼠标能力
 
-MouseCapabilities 类具有几个属性，如表 14-4 所示。
+`MouseCapabilities` 类具有几个属性，如表 14-4 所示。
 
-表 14-4：MouseCapabilities 属性
+表 14-4：`MouseCapabilities` 属性
 
 | 属性名称 | 描述 |
 |---|---|
-| MousePresent | 此属性获取一个整数值，指示计算机上是否存在鼠标。值为 0 表示计算机未连接到鼠标。值为 1 表示至少连接了一个鼠标。该值并不表示存在的鼠标数量。 |
-| NumberOfButtons | 此属性获取一个代表鼠标按钮数量的值。如果存在多个鼠标，它将返回按钮数量最多的鼠标的按钮数。某些鼠标具有可编程的按钮。此属性仅获取由鼠标驱动程序报告的按钮数量，这与物理按钮的实际数量不同。 |
-| SwapButtons | 此属性获取一个值，表示连接到计算机的任何鼠标是否交换了左键和右键。左手用户通常会交换鼠标按钮。 |
-| HorizontalWheelPresent | 此属性的值表示连接到计算机的任何鼠标是否具有水平滚轮。 |
-| VerticalWheelPresent | 此属性的值表示连接到计算机的任何鼠标是否具有垂直滚轮。 |
+| `MousePresent` | 此属性获取一个整数值，指示计算机上是否存在鼠标。值为 0 表示计算机未连接到鼠标。值为 1 表示至少连接了一个鼠标。该值并不表示存在的鼠标数量。 |
+| `NumberOfButtons` | 此属性获取一个代表鼠标按钮数量的值。如果存在多个鼠标，它将返回按钮数量最多的鼠标的按钮数。某些鼠标具有可编程的按钮。此属性仅获取由鼠标驱动程序报告的按钮数量，这与物理按钮的实际数量不同。 |
+| `SwapButtons` | 此属性获取一个值，表示连接到计算机的任何鼠标是否交换了左键和右键。左手用户通常会交换鼠标按钮。 |
+| `HorizontalWheelPresent` | 此属性的值表示连接到计算机的任何鼠标是否具有水平滚轮。 |
+| `VerticalWheelPresent` | 此属性的值表示连接到计算机的任何鼠标是否具有垂直滚轮。 |
 
-此代码片段展示了使用 MouseCapabilities 的简单示例。（此代码可以在 InputDevices\MainPage.xaml 可下载代码文件中找到。）
+此代码片段展示了使用 `MouseCapabilities` 的简单示例。（此代码可以在 `InputDevices\MainPage.xaml` 可下载代码文件中找到。）
 
 ```cs
 var output = new StringBuilder();
@@ -15915,125 +15456,160 @@ out.Append(mouseCaps.HorizontalWheelPresent == 0
 OutputText.Text = output.ToString();
 ```
 
+
+
 # 触摸设备能力
 
-TouchCapabilities 类仅有两个属性，如表 14-5 所示。
+`TouchCapabilities`类仅有两个属性，如表 14-5 所示。
 
-表 14-5：TouchCapabilities 属性
+表 14-5：`TouchCapabilities`属性
 
 | 属性名称 | 描述 |
 |---|---|
-| TouchPresent | 此属性指示计算机上是否有任何触摸数字化设备（手写笔或手指触摸）。任何非零值都意味着至少连接了一个触摸数字化设备。 |
-| Contacts | 此属性获取所有触摸设备支持的最小接触点数。在大多数情况下，此属性返回值 1，即使设备允许多指触摸，因为通常手写笔设备也会被启用，而这些设备只支持一个接触点。 |
+| `TouchPresent` | 此属性指示计算机上是否有任何触摸数字化设备（手写笔或手指触摸）。任何非零值都意味着至少连接了一个触摸数字化设备。 |
+| `Contacts` | 此属性获取所有触摸设备支持的最小接触点数。在大多数情况下，此属性返回值 1，即使设备允许多指触摸，因为通常手写笔设备也会被启用，而这些设备只支持一个接触点。 |
 
-这里有一个简短的代码片段，演示了 TouchCapabilities 的用法。（此代码可以在 InputDevices\MainPage.xaml 可下载文件中。）
+这里有一个简短的代码片段，演示了`TouchCapabilities`的用法。（此代码可以在`InputDevices\MainPage.xaml`可下载文件中。）
 
 ```cs
 var output = new StringBuilder();
+
 // ...
+
 out.Append("- Querying touch capabilities\n");
+
 var touchCaps = new TouchCapabilities();
+
 out.Append(touchCaps.TouchPresent == 0
+
 ? "No touch device is present.\n"
+
 : "There is a touch device present.\n");
+
 out.AppendFormat("The touch device supports {0} contacts\n",
+
 touchCaps.Contacts);
+
 // ...
+
 OutputText.Text = output.ToString();
 ```
 
 # 查询指针设备信息
 
-您的计算机可能有一个或多个指针设备。在许多应用程序中，知道哪些设备可用是非常重要的。Windows.Devices.Input 命名空间有一个名为 PointerDevice 的类，可以使用它来查询指针设备信息。您可以调用静态方法 GetPointerDevices() 来枚举系统上安装的所有指针设备。该类的用法通过此代码片段解释最为清楚。（此代码可以在 InputDevices\MainPage.xaml 可下载代码文件中。）
+您的计算机可能有一个或多个指针设备。在许多应用程序中，知道哪些设备可用是非常重要的。`Windows.Devices.Input`命名空间有一个名为`PointerDevice`的类，可以使用它来查询指针设备信息。您可以调用静态方法`GetPointerDevices()`来枚举系统上安装的所有指针设备。该类的用法通过此代码片段解释最为清楚。（此代码可以在`InputDevices\MainPage.xaml`可下载代码文件中。）
 
 ```cs
 var output = new StringBuilder();
+
 // ...
+
 output.Append("\n- Querying device information\n");
+
 var index = 0;
+
 foreach (var device in PointerDevice.GetPointerDevices())
+
 {
+
     string deviceType;
+
     switch (device.PointerType)
+
     {
+
         case PointerType.Mouse:
+
             deviceType = "mouse";
+
             break;
+
         case PointerType.Pen:
+
             deviceType = "pen";
+
             break;
+
         case PointerType.Touch:
+
             deviceType = "touch";
+
             break;
+
         default:
+
             deviceType = "unknown";
+
             break;
+
     }
+
     var rect = device.PhysicalDeviceRect;
+
     output.AppendFormat("Device {0} is an {1} {2} device.\n",
+
         index, device.IsIntegrated ? "internal" : "external", deviceType);
+
     output.AppendFormat("Device {0} supports [{1},{2},{3},{4}]\n",
+
         index, rect.Left, rect.Top, rect.Right, rect.Bottom);
+
     index++;
+
 }
+
 OutputText.Text = output.ToString();
 ```
 
 
 
+# 总结
 
+虽然挂起的 Windows 8 应用程序不会获得操作系统的资源，但通过后台任务，你可以在应用程序不在前台时执行活动。后台任务只能使用有限的 CPU 时间，而且当计算机使用电池运行时，其网络吞吐量会受到限制。因此，它们适用于轻量级任务，例如检查电子邮件、下载小段数据、管理即时消息等。重型任务（如图片的后台处理或进行 CPU 密集型计算）不适用于 Windows 8 后台任务。在这种情况下，你应该使用 Windows 服务。
 
-# 总结 | 521
+后台任务被分配给触发器，例如用户出现、互联网可用、时区更改等。当你注册一个后台任务时，该任务始终与一个触发器以及可选条件相关联。后台任务可以添加到锁定屏幕上（假设它们与特定的触发器相关联），这些任务拥有的资源与不在锁定屏幕上的后台任务大致相等。前台应用程序可以订阅`OnCompleted`和`OnProgress`事件，因此它们有方法与之通信。
 
-虽然挂起的的 Windows 8 应用程序不会获得操作系统的资源，但通过后台任务，你可以在应用程序不在前台时执行活动。后台任务只能使用有限的 CPU 时间，而且当计算机使用电池运行时，其网络吞吐量会受到限制。因此，它们适用于轻量级任务，例如检查电子邮件、下载小段数据、管理即时消息等。重型任务（如图片的后台处理或进行 CPU 密集型计算）不适用于 Windows 8 后台任务。在这种情况下，你应该使用 Windows 服务。
-
-后台任务被分配给触发器，例如用户出现、互联网可用、时区更改等。当你注册一个后台任务时，该任务始终与一个触发器以及可选条件相关联。后台任务可以添加到锁定屏幕上（假设它们与特定的触发器相关联），这些任务拥有的资源与不在锁定屏幕上的后台任务大致相等。前台应用程序可以订阅 `OnCompleted` 和 `OnProgress` 事件，因此它们有方法与之通信。
-
-根据外形因子，Windows 8 计算机可以拥有许多输入设备（鼠标、硬件键盘、笔和触摸设备）。为了获得最佳的用户体验，你的应用程序应该使用最适合特定应用程序功能的输入设备（或其组合）。`Windows.Devices.Input` 命名空间提供了许多类来查询输入设备能力，例如 `KeyboardCapabilities`、`MouseCapabilities`、`TouchCapabilities` 和 `PointerDevice` 类。
+根据外形因子，Windows 8 计算机可以拥有许多输入设备（鼠标、硬件键盘、笔和触摸设备）。为了获得最佳的用户体验，你的应用程序应该使用最适合特定应用程序功能的输入设备（或其组合）。`Windows.Devices.Input`命名空间提供了许多类来查询输入设备能力，例如`KeyboardCapabilities`、`MouseCapabilities`、`TouchCapabilities`和`PointerDevice`类。
 
 在第 15 章，你将学习一些实用的测试和调试技术，这些是创建 Windows 8 应用程序的绝佳工具，也能帮助你排除故障。
 
-# 练习
+## 练习
 
-- 1. 你应该如何设置 C# 类库，使其被其他编程语言中的任何项目引用？
-- 2. 当使用后台任务时，哪些系统资源受到限制？
-- 3. 后台任务如何与前台应用程序通信？
-- 4. 后台任务的运行时间可以超过 1 分钟吗？
-- 5. 为什么查询输入设备能力很重要？
+1. 你应该如何设置 C# 类库，使其被其他编程语言中的任何项目引用？
+2. 当使用后台任务时，哪些系统资源受到限制？
+3. 后台任务如何与前台应用程序通信？
+4. 后台任务的运行时间可以超过 1 分钟吗？
+5. 为什么查询输入设备能力很重要？
 
-> 注意 你可以在附录 A 中找到练习的答案。
+> 注意：你可以在附录 A 中找到练习的答案。
 
-# 本章所学
+## 本章所学
 
 | 主题 | 核心概念 |
 | --- | --- |
 | 混合解决方案 | Visual Studio 中的一种解决方案，包含一组使用不同编程语言的项目。例如，此解决方案中的前台应用程序项目可以用 C# 实现，而嵌入式运行时组件可以用 C++ 实现。 |
 | Windows 运行时组件库 | 包含可重用 Windows Runtime 对象的项目。此类组件库的主要目标是产生无论使用什么编程语言都能在 Windows 8 应用程序使用的对象。 |
-| 使用 C# 和 Visual Basic 创建 Windows 运行时组件库 | 使用 `New Project` 命令，在 `New Project` 对话框中选择 C# 或 Visual Basic，然后选择 Windows Runtime Component 模板。 |
-| 使用 C++ 创建 Windows 运行时组件库 | 使用 `New Project` 命令，在 `New Project` 对话框中选择 Visual C++ 并选择 WinRT DLL 组件。 |
+| 使用 C# 和 Visual Basic 创建 Windows 运行时组件库 | 使用`New Project`命令，在`New Project`对话框中选择 C# 或 Visual Basic，然后选择 Windows Runtime Component 模板。 |
+| 使用 C++ 创建 Windows 运行时组件库 | 使用`New Project`命令，在`New Project`对话框中选择 Visual C++ 并选择 WinRT DLL 组件。 |
 | 后台任务 | Windows 8 后台任务的概念，允许挂起（或终止）应用程序执行轻量级活动（例如检查电子邮件、下载小数据包等）。后台任务可以使用有限的 CPU 时间，当它们在电池上运行时，其网络吞吐量受到限制。 |
 | 触发器事件 | 后台任务响应触发事件而被激活（例如用户出现/离开、互联网可用/不可用、特定时间过期、时区更改等）。 |
-| 任务条件 | 后台任务除了触发器外，可能还有可选的启动条件。例如，一个任务可以分配给“时间更改”触发器并带有“互联网可用”条件。只有在时区更改且互联网变得可用后，该任务才会启动。 |
+| 任务条件 | 后台任务除了触发器外，可能还有可选的启动条件。例如，一个任务可以分配给"时间更改"触发器并带有"互联网可用"条件。只有在时区更改且互联网变得可用后，该任务才会启动。 |
 | 锁定屏幕应用程序 | 应用程序可以分配到锁定屏幕。这些应用程序的后台任务的资源消耗可以是非锁定屏幕应用程序后台任务的两倍。 |
-| 与前台应用程序通信 | 前台任务可以订阅其注册的后台任务的 `OnCompleted` 和 `OnProgress` 事件，分别管理任务何时完成或报告进度。在 `CoreDispatcher` 实例的帮助下，可以从这些事件处理程序刷新 UI。 |
+| 与前台应用程序通信 | 前台任务可以订阅其注册的后台任务的`OnCompleted`和`OnProgress`事件，分别管理任务何时完成或报告进度。在`CoreDispatcher`实例的帮助下，可以从这些事件处理程序刷新 UI。 |
 
 ## 总结
 
 | 主题 | 核心概念 |
 | --- | --- |
 | 取消后台任务 | 后台任务可以在启动后被操作系统取消（例如当用户出现时）。 |
-| 查询输入设备 | `Windows.Devices.Input` 命名空间提供了许多类来查询输入设备能力，例如 `KeyboardCapabilities`、`MouseCapabilities`、`TouchCapabilities` 和 `PointerDevice` 类。 |
-
-
-
-
+| 查询输入设备 | `Windows.Devices.Input`命名空间提供了许多类来查询输入设备能力，例如`KeyboardCapabilities`、`MouseCapabilities`、`TouchCapabilities`和`PointerDevice`类。 |
 
 # 在调试模式下控制程序流
 
 当你处于调试模式时，可以输入各种命令来单步执行代码。
 
-- 逐过程执行（Step Over）——这意味着调试器应该步进到下一行代码。当调试器所在的行是一个方法时，“逐过程执行”意味着不进入该方法的主体，而是直接跳过它。你可以按 F10 逐过程执行代码。
-- 逐步进入（Step Into）——这意味着调试器应该步进到下一行代码。当调试器所在的行是一个方法时，“逐步进入”意味着进入该方法的主体并调查其中的代码行。你可以按 F11 逐步进入方法主体。
+- 逐过程执行（Step Over）——这意味着调试器应该步进到下一行代码。当调试器所在的行是一个方法时，"逐过程执行"意味着不进入该方法的主体，而是直接跳过它。你可以按 F10 逐过程执行代码。
+- 逐步进入（Step Into）——这意味着调试器应该步进到下一行代码。当调试器所在的行是一个方法时，"逐步进入"意味着进入该方法的主体并调查其中的代码行。你可以按 F11 逐步进入方法主体。
 - 逐行跳出（Step Out）——如果你进入了方法的主体但不想继续调查它，只想返回到调用点，可以按 Shift+F11 逐行跳出方法主体。
 - 继续（Continue）——如果你切换到了调试模式并想继续正常运行，只需按 F5 即可。
 - 停止（Stop）——如果你已经完成了对应用的调试和运行，只需按 Shift+F5 停止应用程序并返回到 Visual Studio 的设计模式。
@@ -16046,7 +15622,7 @@ OutputText.Text = output.ToString();
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_555_0.png)
 
-FIGURE 15-2: Visual Studio 2012 调试工具栏
+图 15-2：Visual Studio 2012 调试工具栏
 
 # 监控与编辑变量
 
@@ -16054,87 +15630,87 @@ FIGURE 15-2: Visual Studio 2012 调试工具栏
 
 几个工具可以帮助你监控变量、调用栈、不同线程或在活动上下运行代码。在本节中，你将学习最重要的几个。
 
-# 本窗口（Locals Window）
+## 本地窗口（Locals Window）
 
 图 15-3 显示的本地窗口是调试中最实用的窗口之一。它显示当前上下文中的局部变量。上下文取决于你正在调试哪个方法主体。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_555_1.png)
 
-FIGURE 15-3: 调试模式下的本地窗口
+图 15-3：调试模式下的本地窗口
 
 如你所示，你可以观察任何深度局部变量。如果对象的属性是可编辑的，你甚至可以更改它的当前值，改变程序流。
 
-# 监视窗口（Watch Window）
+## 监视窗口（Watch Window）
 
 图 15-4 显示的监视窗口与本地窗口几乎相同，细微不同。本地窗口显示所有局部值（有很多）。使用监视窗口，你可以指定你真正感兴趣的变量。监视窗口的功能与本地窗口相同。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_556_0.png)
 
-FIGURE 15-4: 调试模式下的监视窗口
+图 15-4：调试模式下的监视窗口
 
-你也可以通过在代码编辑器右键点击变量并选择“监视”，将变量添加到监视窗口。你也可以通过右键点击变量并选择“监视”，使用本地窗口来查看变量。
+你也可以通过在代码编辑器右键点击变量并选择"监视"，将变量添加到监视窗口。你也可以通过右键点击变量并选择"监视"，使用本地窗口来查看变量。
 
-# 立即窗口（Immediate Window）
+## 立即窗口（Immediate Window）
 
 图 15-5 显示的立即窗口是 Visual Studio 2012 中令人兴奋的窗口。当你单步执行代码时，可以决定停止并通过立即窗口输入 C# 代码进行进一步调查。代码将被执行并求值。例如，如果你想用不同的值调用方法以查看工作情况，或者检查全局对象的值，可以使用立即窗口。你也可以更改代码中的变量值。当你更改变量时，应用程序将在运行时使用新值。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_556_1.png)
 
-FIGURE 15-5: 立即窗口
+图 15-5：立即窗口
 
-# 断点窗口
+## 断点窗口
 
-你可能会在代码中设置许多断点，但你并不总是希望调试器命中这些断点，也不想移除它们。你可以通过选择“调试 -> 断点”菜单项在调试模式下激活断点窗口。然后你可以使用图 15-6 显示的断点窗口列出所有断点。你可以随时启用或禁用它们，也可以跳转到相关代码。这是对你断点的一个非常好的概述。
+你可能会在代码中设置许多断点，但你并不总是希望调试器命中这些断点，也不想移除它们。你可以通过选择"调试 -> 断点"菜单项在调试模式下激活断点窗口。然后你可以使用图 15-6 显示的断点窗口列出所有断点。你可以随时启用或禁用它们，也可以跳转到相关代码。这是对你断点的一个非常好的概述。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_557_0.png)
 
-FIGURE 15-6: 断点窗口
+图 15-6：断点窗口
 
 在下一个练习中，使用 Visual Studio 2012 调试器调查并修复 bug。
 
-# 尝试使用调试器查找 bug
+## 尝试使用调试器查找 bug
 
 要使用调试器查找代码错误，请遵循以下步骤：
 
-1. 运行 Visual Studio 2012 并打开 RotatingPanel3D 项目。你可以下载 Chapter15.zip 获取项目。
+1. 运行 Visual Studio 2012 并打开`RotatingPanel3D`项目。你可以下载`Chapter15.zip`获取项目。
 2. 按 F5 运行项目。你可以看到如果在未勾选复选框的情况下点击 Start 按钮，动画运行。这不是你想实现的行为。因此必须修复这个 bug。
-3. 打开 MainPage.cs 并找到 startButton_Click 事件处理程序。
-4. 点击 startButton_Click 方法，然后按 F9（或点击代码编辑器侧边缘）。这将添加一个断点。
+3. 打开`MainPage.cs`并找到`startButton_Click`事件处理程序。
+4. 点击`startButton_Click`方法，然后按 F9（或点击代码编辑器侧边缘）。这将添加一个断点。
 5. 按 F5 运行应用程序。
 6. 点击 Start 按钮。调试器在断点处停止。
-7. 按 F10 直到光标位于 if 语句上（光标是代码编辑器左侧的黄色箭头）。
-8. 将鼠标悬停在 Checked 属性上并读取工具提示中的值。你应该看到该值为 False。
+7. 按 F10 直到光标位于`if`语句上（光标是代码编辑器左侧的黄色箭头）。
+8. 将鼠标悬停在`Checked`属性上并读取工具提示中的值。你应该看到该值为`False`。
 9. 现在选择 Visual Studio 2012 底部的本地窗口。
-10. 打开此复选框 / Checked。你可以看到值被设置为 False。
-11. 双击 False 值并将其更改为 True。
+10. 打开此复选框 / `Checked`。你可以看到值被设置为`False`。
+11. 双击`False`值并将其更改为`True`。
 12. 按 F5 让应用程序继续运行。现在显示动画。
 13. 停止应用程序。
-14. 将 if 语句改为 true 而不是 false。
+14. 将`if`语句改为`true`而不是`false`。
 15. 按 F5 运行应用程序。应用程序现在应该可以工作了。
 
-# 运行原理
+## 运行原理
 
 在第 4 步中，你在按钮事件处理程序内部添加了断点。这足以调试器知道在命中时必须停止。
 
-在第 8 步中，使用本地窗口调查代码问题。结果证明 Checked 的布尔值是 False。
+在第 8 步中，使用本地窗口调查代码问题。结果证明`Checked`的布尔值是`False`。
 
 在第 11 步中，使用立即窗口更改状态。
 
-# 在调试时修改代码
+## 在调试时修改代码
 
-毫无疑问，调试器的最佳功能是在调试时修改代码。当你遇到异常时，调试器提供了选项让你修改并运行。这被称为“编辑并继续”。
+毫无疑问，调试器的最佳功能是在调试时修改代码。当你遇到异常时，调试器提供了选项让你修改并运行。这被称为"编辑并继续"。
 
-图 15-7 显示了“编辑并继续”对话框。在你修复了代码后，可以按 F5 继续运行。
+图 15-7 显示了"编辑并继续"对话框。在你修复了代码后，可以按 F5 继续运行。
 
-> 注意 你无法执行“编辑并继续”。这取决于调用栈、语言以及调试器在不损坏状态的情况下更改状态的能力。与其分析是否可以执行，不如直接尝试它。
+> 注意：你无法执行"编辑并继续"。这取决于调用栈、语言以及调试器在不损坏状态的情况下更改状态的能力。与其分析是否可以执行，不如直接尝试它。
 
 # Windows 8 风格特定场景
 
 Windows 8 风格应用程序有一些该技术的独特概念，例如生命周期事件、特殊传感器（如 GPS 或陀螺仪跟踪）、平板硬件特性（如不同的分辨率和宽高比）等。本节探索帮助你测试和调试这些场景的技术。
 
-# 调试应用程序生命周期事件
+## 调试应用程序生命周期事件
 
-Windows 8 风格应用程序有特殊的生命周期管理。如果你首次启动应用程序，将通过 Launched 事件激活应用。然而，通过任务切换，你不确定这是否会触发。测试其他生命周期事件（如 Suspend 或 Resume）并不容易，因为它们何时运行是不确定的，这使得调试非常困难。
+Windows 8 风格应用程序有特殊的生命周期管理。如果你首次启动应用程序，将通过`Launched`事件激活应用。然而，通过任务切换，你不确定这是否会触发。测试其他生命周期事件（如`Suspend`或`Resume`）并不容易，因为它们何时运行是不确定的，这使得调试非常困难。
 
 幸运的是，在 Visual Studio 2012 中，你有手动触发这些事件的选项，以确保应用程序完全按照预期的方式运行。
 
@@ -16142,55 +15718,43 @@ Windows 8 风格应用程序有特殊的生命周期管理。如果你首次启�
 
 | Suspend | Thread (14) | Name |
 |---|---|---|
-| Suspend | Resume | | Suspend and shutdown |
+| Suspend | Resume | Suspend and shutdown |
 
-FIGURE 15-8: 用于暂停应用程序的调试位置选项
+图 15-8：用于暂停应用程序的调试位置选项
 
-
-
-
-
-# 熟悉调试 | 533
+# 熟悉调试
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_560_0.png)
 
-**图 15-9:** Visual Studio 2012 中的模拟器
+图 15-9：Visual Studio 2012 中的模拟器
 
 模拟器是一个在运行 Windows 8 风格应用程序时模拟环境的桌面应用程序。使用模拟器，你可以指定许多不同的因素：
 
-- **鼠标模式 (Mouse mode)** — 这将交互模式设置为鼠标手势（如点击、右键点击和鼠标拖拽）。
-
-- **基础触摸模式 (Basic touch mode)** — 这将交互模式设置为单触摸模式。这包括点击、滑动和拖拽。你可以使用鼠标模拟触摸输入。
-
-- **捏指/缩放触摸模式 (Pinch/Zoom touch mode)** — 这将交互模式设置为支持捏指和缩放手势。你可以使用鼠标模拟触摸输入。如果你没有支持触摸的设备，这非常有用。
-
-- **旋转触摸模式 (Rotation touch mode)** — 这将交互模式设置为模拟使用双指进行旋转。你可以使用鼠标模拟触摸输入。
-
-- **方向 (Orientation)** — 模拟顺时针和反时针旋转。这对于测试在不同显示尺寸和分辨率下的用户界面 (UI) 和布局非常有帮助。
-
-- **更改分辨率 (Change resolution)** — 这设置屏幕分辨率和大小。使用此选项，你可以测试在不同显示尺寸和分辨率下的用户界面 (UI) 和布局。
-
-- **设置位置 (Set location)** — 这为位置 API 指定 GPS 坐标。如果你的设备没有内置 GPS，这是一个测试 GPS 使用的极选项。
+- 鼠标模式（Mouse mode）——这将交互模式设置为鼠标手势（如点击、右键点击和鼠标拖拽）。
+- 基础触摸模式（Basic touch mode）——这将交互模式设置为单触摸模式。这包括点击、滑动和拖拽。你可以使用鼠标模拟触摸输入。
+- 捏指/缩放触摸模式（Pinch/Zoom touch mode）——这将交互模式设置为支持捏指和缩放手势。你可以使用鼠标模拟触摸输入。如果你没有支持触摸的设备，这非常有用。
+- 旋转触摸模式（Rotation touch mode）——这将交互模式设置为模拟使用双指进行旋转。你可以使用鼠标模拟触摸输入。
+- 方向（Orientation）——模拟顺时针和反时针旋转。这对于测试在不同显示尺寸和分辨率下的用户界面（UI）和布局非常有帮助。
+- 更改分辨率（Change resolution）——这设置屏幕分辨率和大小。使用此选项，你可以测试在不同显示尺寸和分辨率下的用户界面（UI）和布局。
+- 设置位置（Set location）——这为位置 API 指定 GPS 坐标。如果你的设备没有内置 GPS，这是一个测试 GPS 使用的极选项。
 
 使用模拟器，你可以轻松测试你的 Windows 8 风格应用程序，以确定它在平板电脑上是否正常工作，而无需实际设备。然而，模拟器并不是一个隔离的环境。通过你的应用程序对系统进行的更改也会影响你的标准 Windows 环境。因此，请务必小心操作。
 
-> 注意：到为止，你已经介绍了两个部署目标：本地机器和模拟器。还有第三种选项：远程机器。使用远程选项，你可以在通过电缆或网络连接到计算机的远程机器上运行和调试你的应用程序。设置远程调试环境不在本书的范围内，但你可以在 http://msdn.microsoft.com/en-us/library/windows/apps/hh441469=vvs.aspx 了解更多。
+> 注意：到目前为止，你已经介绍了两个部署目标：本地机器和模拟器。还有第三种选项：远程机器。使用远程选项，你可以在通过电缆或网络连接到计算机的远程机器上运行和调试你的应用程序。设置远程调试环境不在本书的范围内，但你可以在`http://msdn.microsoft.com/en-us/library/windows/apps/hh441469=vvs.aspx`了解更多。
 
 # 软件测试简介
 
 你现在已经学习了如何生产高质量的软件，在本章到目前为止，你已经学习了在遇到 Bug 时如何修复它。但你的主要目标始终应该是尽可能减少 Bug 的数量。这就是软件测试的应用工具和技术提供帮助的地方。
 
-软件测试一直是专业软件开发不可或缺的一部分。然而，在专业团队中，你有专门的测试人员通过运行手动和自动测试来确保你的软件保持高质量。你可能需要自己戴上帽子执行一些这些测试。虽然测试人员在非常严格的环境工作，使用测试计划、脚本和不同的工具，但你可能不需要所有这些。如果不是一个大型应用程序，彻底的“看看它是否可行”的方法以及几个小时的手动测试和对应用程序的使用同样有效。
+软件测试一直是专业软件开发不可或缺的一部分。然而，在专业团队中，你有专门的测试人员通过运行手动和自动测试来确保你的软件保持高质量。你可能需要自己戴上帽子执行一些这些测试。虽然测试人员在非常严格的环境工作，使用测试计划、脚本和不同的工具，但你可能不需要所有这些。如果不是一个大型应用程序，彻底的"看看它是否可行"的方法以及几个小时的手动测试和对应用程序的使用同样有效。
 
 ## 单元测试简介
 
 软件测试和开发中有一个重要部分对你也有用，它被称为单元测试（Unit Testing）。编写单元不是测试人员的任务；而是开发者的责任。单元测试是一种运行代码部分、并根据不同的输入观察代码的输出和行为的方法。如果执行正确，单元测试提供以下益处：
 
-- **更好的质量** — 单元测试也使用标准的规格和测试用例。这可以帮助确保你的代码不会失败，并正确处理意外输入。
-
-- **回归测试 (Regression Tests)** — 如果你对早期编写的代码应用更改，你将确保它没有破坏代码，并且在引入新代码时它仍然以相同的方式工作。这被称为*回归测试*。没有现有的单元测试，无法确保你的代码仍然正确。如果你有覆盖这些部分的单元测试，并且在修改后这些测试仍然运行成功，那么你的代码极有可能没有被破坏，并且仍然运行良好。
-
-- **重构 (Refactoring)** — 当你想让你的软件具有可测试性时，你应该专注于创建可以作为孤立单元测试的独立组件。这将提高代码的质量。此外，在创建单元测试时，它真的可以指出你代码中设计得好的部分。如果它们有复杂的 API，就无法轻松测试，或者太多的部分相互依赖。这意味着单元测试指出了重构你代码的需求。这个过程被称为*重构*。
+- 更好的质量——单元测试也使用标准的规格和测试用例。这可以帮助确保你的代码不会失败，并正确处理意外输入。
+- 回归测试（Regression Tests）——如果你对早期编写的代码应用更改，你将确保它没有破坏代码，并且在引入新代码时它仍然以相同的方式工作。这被称为回归测试。没有现有的单元测试，无法确保你的代码仍然正确。如果你有覆盖这些部分的单元测试，并且在修改后这些测试仍然运行成功，那么你的代码极有可能没有被破坏，并且仍然运行良好。
+- 重构（Refactoring）——当你想让你的软件具有可测试性时，你应该专注于创建可以作为孤立单元测试的独立组件。这将提高代码的质量。此外，在创建单元测试时，它真的可以指出你代码中设计得好的部分。如果它们有复杂的 API，就无法轻松测试，或者太多的部分相互依赖。这意味着单元测试指出了重构你代码的需求。这个过程被称为重构。
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_561_0.png)
 
@@ -16198,32 +15762,27 @@ FIGURE 15-8: 用于暂停应用程序的调试位置选项
 
 如你所见，单元测试提供了许多益处，同时也为你的项目增加了更多工作，但这些额外的工作将在开发过程的后期获得回报。
 
-在 Visual Studio 2012 中，有一个用于测试 Windows 8 风格应用程序的新项目模板。它被称为单元测试库（Windows 8 风格应用）。单元测试库可以包含许多测试类。测试类用 `TestClass` 标记。测试类包含测试方法、初始化代码和清理代码。
+在 Visual Studio 2012 中，有一个用于测试 Windows 8 风格应用程序的新项目模板。它被称为单元测试库（Windows 8 风格应用）。单元测试库可以包含许多测试类。测试类用`TestClass`标记。测试类包含测试方法、初始化代码和清理代码。
 
-- **测试方法 (Test method)** — 测试方法用 `TestMethod` 特性标记标记。
+- 测试方法（Test method）——测试方法用`TestMethod`特性标记。
+- 初始化（Initialization）——每个测试类都有一个被`TestInitialize`装饰的方法。该方法在每个测试方法之前运行。
+- 清理（Cleanup）——每个测试类都有一个被`TestCleanup`装饰的方法。该方法在每个测试方法之后运行。
 
-- **初始化 (Initialization)** — 每个测试类都有一个被 `TestInitialize` 装饰的方法。该方法在每个测试方法之前运行。
+## 尝试对 Calculator 类进行单元测试
 
-- **清理 (Cleanup)** — 每个测试类都有一个被 `TestCleanup` 装饰的方法。该方法在每个测试方法之后运行。
+要对`Calculator`类进行单元测试，请按照以下步骤操作：
 
-# 尝试对 Calculator 类进行单元测试
-
-要对 Calculator 类进行单元测试，请按照以下步骤操作：
-
-1. 运行 Visual Studio 2012 并打开 CalculatorDemo 项目。你可以通过下载 Chapter15.zip 获取项目。解压缩存档并找到 CalculatorDemo 项目。
-
-
-
-
-3. 选择单元测试库（Unit Test Library）项目模板。将项目命名为 CalculatorTests。
-
-4. 右键点击 UnitTest1.cs 文件并选择重命名。将新名称设置为 CalculatorTests.cs。Visual Studio 2012 会弹出一个对话框，询问你是否要同时重命名类名和文件名。选择“是”。
-
-5. 右键点击 CalculatorTests 项目的引用（References）节点。选择添加引用（Add Reference）。在弹出的对话框中，选择解决方案（Solution）节点下的项目（Project），并选择 CalculatorDemo 项目。点击“确定”。
-
-6. 打开 CalculatorTest.cs 并找到 CalculatorTest 类。用以下代码片段替换它：
+1. 运行 Visual Studio 2012 并打开`CalculatorDemo`项目。你可以通过下载`Chapter15.zip`获取项目。解压缩存档并找到`CalculatorDemo`项目。
+2. 选择单元测试库（Unit Test Library）项目模板。将项目命名为`CalculatorTests`。
+3. 右键点击`UnitTest1.cs`文件并选择重命名。将新名称设置为`CalculatorTests.cs`。Visual Studio 2012 会弹出一个对话框，询问你是否要同时重命名类名和文件名。选择"是"。
+4. 右键点击`CalculatorTests`项目的引用（References）节点。选择添加引用（Add Reference）。在弹出的对话框中，选择解决方案（Solution）节点下的项目（Project），并选择`CalculatorDemo`项目。点击"确定"。
+5. 打开`CalculatorTest.cs`并找到`CalculatorTest`类。用以下代码片段替换它：
 
 ```
+
+
+
+```csharp
 [TestClass]
 public class CalculatorTest
 {
@@ -16238,12 +15797,11 @@ public class CalculatorTest
 
     [TestMethod]
     public void AddTest()
-{
+    {
         double a = 2;
         double b = 3;
         double expected = 5;
         double result = calculator.Add(a, b);
-
         Assert.AreEqual(expected, result, string.Format("Result should be\n(0)!, expected));
     }
 }
@@ -16255,7 +15813,7 @@ public class CalculatorTest
 
 9. 在测试资源管理器窗口中点击“运行所有”（Run All）。你会看到测试失败了。
 
-10. 打开 CalculatorTest.cs 并定位到 Add 方法。将 a 和 b 之间的操作从减法改为加法。
+10. 打开`CalculatorTest.cs`并定位到`Add`方法。将`a`和`b`之间的操作从减法改为加法。
 
 11. 在测试资源管理器窗口中点击“运行所有”。
 
@@ -16263,9 +15821,9 @@ public class CalculatorTest
 
 ### 工作原理
 
-在步骤 4 中，你创建了一个新的单元测试项目。它允许你创建新的单元测试。默认情况下，新项目对 CalculatorDemo 项目一无所。这就是为什么你必须向它添加引用。
+在步骤 4 中，你创建了一个新的单元测试项目。它允许你创建新的单元测试。默认情况下，新项目对`CalculatorDemo`项目一无所。这就是为什么你必须向它添加引用。
 
-在步骤 6 中，该代码示例创建了一个新的 Calculator 对象，你也可以在随后的测试中使用它。你使用值 2 和 3 调用 add 方法，并期望结果为 5。`Assert.AreEqual()` 方法检查预期值和实际结果是否相等。如果不相等，则会显示字符串消息。
+在步骤 6 中，该代码示例创建了一个新的`Calculator`对象，你也可以在随后的测试中使用它。你使用值 2 和 3 调用`add`方法，并期望结果为 5。`Assert.AreEqual()`方法检查预期值和实际结果是否相等。如果不相等，则会显示字符串消息。
 
 在步骤 10 修复 bug 后，新的测试运行将变为绿色，因为测试通过了。
 
@@ -16290,9 +15848,6 @@ Visual Studio 2012 集成的调试器（Debugger）工具为你提供了许多�
 - 它的功能有哪些？
 - 什么是单元测试（unit tests）？
 
-
-
-
 ## 水果忍者
 
 概览 详情 评价
@@ -16316,7 +15871,7 @@ Visual Studio 2012 集成的调试器（Debugger）工具为你提供了许多�
 尝试所有不同的模式吧！
 
 > 描述
-在屏幕上滑动手指，像真正的忍者大师一样切开并粉碎水果。水果在被触碰时会爆炸，你将结束你的冒险之旅！水果忍者包含经典版、禅意模式以及全新的街机模式！你的成功也将令智者感到高兴。
+> 在屏幕上滑动手指，像真正的忍者大师一样切开并粉碎水果。水果在被触碰时会爆炸，你将结束你的冒险之旅！水果忍者包含经典版、禅意模式以及全新的街机模式！你的成功也将令智者感到高兴。
 
 了解更多
 
@@ -16354,25 +15909,25 @@ Visual Studio 2012 集成的调试器（Debugger）工具为你提供了许多�
 
 ## 创建试用版本
 
-许可状态存储在 Windows `.ApplicationModel.Store.CurrentApp` 对象的 `LicenseInformation` 属性中。在开发过程中，该对象的问题是它要求应用部署在 Windows Store 中。这使得测试变得困难。
+许可状态存储在`Windows.ApplicationModel.Store.CurrentApp`对象的`LicenseInformation`属性中。在开发过程中，该对象的问题是它要求应用部署在 Windows Store 中。这使得测试变得困难。
 
 你可以使用另一个 API 进行测试。
 
-> 注意：许可状态存储在 Windows `.ApplicationModel.Store.CurrentApp` 对象的 `LicenseInformation` 属性中。在开发过程中，该对象的问题是它要求应用部署在 Windows Store 中。这使得测试变得困难。
+> 注意：许可状态存储在`Windows.ApplicationModel.Store.CurrentApp`对象的`LicenseInformation`属性中。在开发过程中，该对象的问题是它要求应用部署在 Windows Store 中。这使得测试变得困难。
 
-`LicenseInformation` 类提供了许多可以帮助你的属性。
+`LicenseInformation`类提供了许多可以帮助你的属性。
 
-表 16-1：LicenseInformation 属性
+表 16-1：`LicenseInformation`属性
 
 | 属性名称 | 描述 |
 | :--- | :--- |
-| ExpirationDate | 获取许可的过期日期 |
-| IsActive | 表示许可是否处于激活状态 |
-| IsTrial | 表示许可是否为试用版 |
-| ProductLicenses | 提供许可列表 |
-| LicenseChanged | 当许可状态更改时引发此事件 |
+| `ExpirationDate` | 获取许可的过期日期 |
+| `IsActive` | 表示许可是否处于激活状态 |
+| `IsTrial` | 表示许可是否为试用版 |
+| `ProductLicenses` | 提供许可列表 |
+| `LicenseChanged` | 当许可状态更改时引发此事件 |
 
-以下代码段演示了 `LicenseInformation` 的用法：
+以下代码段演示了`LicenseInformation`的用法：
 
 ```csharp
 void EvaluateLicense()
@@ -16399,7 +15954,7 @@ void EvaluateLicense()
 
 内购基本上是功能和物品购买。为了识别内购项目，你必须为每个内购设置一个唯一的令牌。在编写代码时，为其一个有意义的名字以便识别功能。
 
-你可以通过 `LicenseInformation` 类的 `ProductLicenses` 属性访问内购许可。以下代码段演示了如何检查内购的许可：
+你可以通过`LicenseInformation`类的`ProductLicenses`属性访问内购许可。以下代码段演示了如何检查内购的许可：
 
 ```csharp
 void CheckInAppPurchaseLicense()
@@ -16415,9 +15970,9 @@ void CheckInAppPurchaseLicense()
 }
 ```
 
-此代码示例检查用户是否已经通过内购购买了 `MyFeatureName`。你可以通过所选产品许可的 `IsActive` 属性做出此判断。
+此代码示例检查用户是否已经通过内购购买了`MyFeatureName`。你可以通过所选产品许可的`IsActive`属性做出此判断。
 
-现在，让我们更改之前的代码，如果用户之前没有购买该功能，则为其显示内购对话框。这需要更改 `else` 部分，如下：
+现在，让我们更改之前的代码，如果用户之前没有购买该功能，则为其显示内购对话框。这需要更改`else`部分，如下：
 
 ```csharp
 void CheckInAppPurchaseLicense()
@@ -16430,8 +15985,6 @@ void CheckInAppPurchaseLicense()
 }
 ```
 
-
-
 ```csharp
 else
 {
@@ -16440,7 +15993,6 @@ else
     // show the purchase dialog.
     await Windows.ApplicationModel.Store.CurrentAppSimulator
       .RequestProductPurchaseAsync("MyFeatureName");
-
     // The in-app purchase was successful
   } catch (Exception)
 {
@@ -16478,11 +16030,11 @@ else
 
 要为你的应用添加试用并提供内购支持，请按照以下步骤操作：
 
-- 1. 打开 Visual Studio 2012 并打开 LicensingDemo.zip 项目。你可以通过下载 chapter16.zip 获取此项目。解压压缩包即可获得 LicensingDemo 项目。
+- 1. 打开 Visual Studio 2012 并打开`LicensingDemo.zip`项目。你可以通过下载`chapter16.zip`获取此项目。解压压缩包即可获得`LicensingDemo`项目。
 
-- 2. 创建名为 Data 的新文件夹。
+- 2. 创建名为`Data`的新文件夹。
 
-- 3. 在 Data 文件夹内添加一个名为 trial.xml 的 XML 文件，内容如下：
+- 3. 在`Data`文件夹内添加一个名为`trial.xml`的 XML 文件，内容如下：
 
 ```xml
 <xml version="1.0" encoding="utf-16" ?>
@@ -16511,9 +16063,9 @@ else
 </CurrentApp>
 ```
 
-- 4. 打开 MainPage.xaml.cs 并找到 NavigatedTo 方法。
+- 4. 打开`MainPage.xaml.cs`并找到`NavigatedTo`方法。
 
-- 5. 替换 `override void OnNavigatedTo(NavigationEventArgs e)` 覆盖方法：
+- 5. 替换`override void OnNavigatedTo(NavigationEventArgs e)`覆盖方法：
 
 ```csharp
 protected void OnNavigatedTo(NavigationEventArgs e)
@@ -16523,38 +16075,42 @@ protected void OnNavigatedTo(NavigationEventArgs e)
     Package.Current.InstalledLocation.GetFolderAsync("*data");
     var proxyFile = await proxyDataFolder.GetFileAsync("trial.xml");
     await CurrentAppSimulator.ReloadSimulatorAsync(proxyFile);
-
     // 获取许可证信息
     var licenseInfo = CurrentAppSimulator.LicenseInformation;
-
     // 刷新 UI
     RefreshLicenseDisplayInfo(licenseInfo);
 }
 
 private void RefreshLicenseDisplayInfo(LicenseInformation licenseInfo)
 {
-    if (licenseInfo.IsActive && licenseInfo.IsTrial) // 是试用版
-    {
-        txtLicenseStatus.Text = "Trial expires on " +
+```
+
+
+
+```csharp
+if (licenseInfo.IsActive && licenseInfo.IsTrial) // 是试用版
+{
+    txtLicenseStatus.Text = "Trial expires on " +
         CurrentAppSimulator.LicenseInformation.ExpirationDate;
-        btnBuyApp.Visibility = Visibility.Visible;
-    } else if (licenseInfo.IsActive && !licenseInfo.IsTrial) // 是完整版许可证
-    {
-        txtLicenseStatus.Text = "Full featured app";
-        btnBuyApp.Visibility = Visibility.Collapsed;
-    } else // 发生错误或试用过期
-    {
-        txtLicenseStatus.Text = "Trial expired";
-        btnBuyApp.Visibility = Visibility.Visible;
-    }
+    btnBuyApp.Visibility = Visibility.Visible;
+}
+else if (licenseInfo.IsActive && !licenseInfo.IsTrial) // 是完整版许可证
+{
+    txtLicenseStatus.Text = "Full featured app";
+    btnBuyApp.Visibility = Visibility.Collapsed;
+}
+else // 发生错误或试用过期
+{
+    txtLicenseStatus.Text = "Trial expired";
+    btnBuyApp.Visibility = Visibility.Visible;
 }
 ```
 
-- 6. 按 F5 运行应用程序。如你所见，文本显示显示处于试用状态。
+6. 按`F5`运行应用程序。如你所见，文本显示显示处于试用状态。
 
-- 7. 停止应用。打开 MainPage.xaml.cs 并定位到 btnBuyApp_Click 事件程序。
+7. 停止应用。打开`MainPage.xaml.cs`并定位到`btnBuyApp_Click`事件程序。
 
-- 8. 将事件程序替换为以下代码：
+8. 将事件程序替换为以下代码：
 
 ```csharp
 private async void btnBuyApp_Click_1(object sender, RoutedEventArgs e)
@@ -16563,7 +16119,7 @@ private async void btnBuyApp_Click_1(object sender, RoutedEventArgs e)
 }
 ```
 
-- 9. 在 NavigatedTo 方法末尾添加以下代码：
+9. 在`NavigatedTo`方法末尾添加以下代码：
 
 ```csharp
 // 订阅许可证更改
@@ -16575,11 +16131,9 @@ licenseInfo.LicenseChanged += () =>
 };
 ```
 
-- 10. 按 F5 运行应用程序。当你点击购买按钮时，选择 S_OK。点击确定。你的应用现在显示为全功能应用。
 
 
-
-
+- 10. 按`F5`运行应用程序。当你点击购买按钮时，选择`S_OK`。点击确定。你的应用现在显示为全功能应用。
 
 发行者显示名称 — 这是您的应用程序在 Windows Store 中列出的名称。客户在购买和浏览您的应用时将看到此名称。请确保发行者名称不属于他人。如果违反了商标或版权，您的账户可能会被关闭。
 
@@ -16639,7 +16193,7 @@ licenseInfo.LicenseChanged += () =>
 
 在认证过程中，您的应用将根据应用程序要求进行验证。这些要求是一系列规则，旨在保障客户的舒适和利益，并鼓励您创建具有吸引力的、高质量的应用程序。
 
-> 注意：您可以在 http://msdn.microsoft.com/en-us/library/windows/apps/hh694083.aspx 阅读 Windows 8 应用认证要求。在开始开发应用程序之前，您应该花些时间阅读认证要求，因为它们可能会显著影响您的应用程序和内容。
+> 注意：您可以在`http://msdn.microsoft.com/en-us/library/windows/apps/hh694083.aspx`阅读 Windows 8 应用认证要求。在开始开发应用程序之前，您应该花些时间阅读认证要求，因为它们可能会显著影响您的应用程序和内容。
 
 确保您的应用程序符合认证要求的最简单方法是在本地运行 Windows 应用认证套件。这是提交过程中运行的相同工具。但是，您应该知道，即使在本地通过了测试，在服务器上也可能会失败。在提交过程中，测试在不同的情况下以不同的选项运行。尽管如此，在本地运行测试是非常好的主意，可以减少失败的可能性。
 
@@ -16673,16 +16227,13 @@ licenseInfo.LicenseChanged += () =>
 | 全功能应用程序 | 全功能应用程序没有限制。它们可以是付费或免费应用。 |
 | 应用内购买 | 通过应用内购买，您可以为应用程序销售额外功能。 |
 | 试用应用程序 | 对于付费应用程序，免费试用期最合适。客户可以下载您的应用并在范围内使用。限制可以基于时间或功能。 |
-| CurrentAppSimulator | 使用 CurrentApp 类可以获取许可状态信息。然而，CurrentApp 仅在部署到 Windows Store 时有效。CurrentAppSimulator 设计用于开发期间工作。 |
-| LicenseInformation | 使用此类可以获取有关许可状态、过期日期和试用模式的详细信息。 |
+| `CurrentAppSimulator` | 使用`CurrentApp`类可以获取许可状态信息。然而，`CurrentApp`仅在部署到 Windows Store 时有效。`CurrentAppSimulator`设计用于开发期间工作。 |
+| `LicenseInformation` | 使用此类可以获取有关许可状态、过期日期和试用模式的详细信息。 |
 | 认证要求 | 在将应用程序提交到 Windows Store 后，它将通过认证过程。在此过程中，将检查您的应用程序是否违反了任何认证要求。这些要求是保护客户利益的规则集合。 |
 | Windows 应用认证套件 | 认证过程可能持续几天，因此确保（或至少尽力确保）您的应用在此过程中被拒绝是非常重要的。使用 Windows 应用认证套件，您可以预先测试您的应用程序。 |
 
-
-
-
-
 # 第四部分
+
 附录
 
 - 附录 A：练习答案
@@ -16783,7 +16334,7 @@ Windows Store 是一项在线服务。应用程序开发者可以上传他们的
 
 # 问 2 的答案
 
-你可以从 MSDN Samples Gallery (http://code.msdn.microsoft.com/) 下载应用程序。在这里，你可以根据技术、编程语言、Visual Studio 版本和其他类别来浏览示例。
+你可以从 MSDN Samples Gallery (`http://code.msdn.microsoft.com/`) 下载应用程序。在这里，你可以根据技术、编程语言、Visual Studio 版本和其他类别来浏览示例。
 
 如果你在 Visual Studio IDE 中，则不需要访问此网站，因为示例库已集成在“新建项目”调试对话框中。只需选择“在线”选项卡，当 IDE 列出在线库时，选择“示例”选项卡即可浏览可用示例。
 
@@ -16793,7 +16344,7 @@ Windows Store 是一项在线服务。应用程序开发者可以上传他们的
 
 # 问 4 的答案
 
-你可以通过两个命令从 Visual Studio 启动应用程序。“带调试启动”命令 (F5) 会在调试模式下启动你的应用程序。在此模式下，应用程序会在每个断点处停止，你可以分析它的执行情况。“不带调试启动”命令 (Ctrl+F5) 会在 IDE 之外启动应用程序。在这种情况下，你无法对其进行调试。
+你可以通过两个命令从 Visual Studio 启动应用程序。“带调试启动”命令 (`F5`) 会在调试模式下启动你的应用程序。在此模式下，应用程序会在每个断点处停止，你可以分析它的执行情况。“不带调试启动”命令 (`Ctrl+F5`) 会在 IDE 之外启动应用程序。在这种情况下，你无法对其进行调试。
 
 # 问 5 的答案
 
@@ -16825,7 +16376,7 @@ Windows Store 是一项在线服务。应用程序开发者可以上传他们的
 
 # 问 4 的答案
 
-C# 5.0 有两个新关键字 `async` 和 `await`，你可以用它们创建异步逻辑。通过 `async` 关键字，你可以将方法标记为异步；通过 `await` 关键字，你可以在保持线性控制流的同时创建异步代码。
+C# 5.0 有两个新关键字`async`和`await`，你可以用它们创建异步逻辑。通过`async`关键字，你可以将方法标记为异步；通过`await`关键字，你可以在保持线性控制流的同时创建异步代码。
 
 # 问 5 的答案
 
@@ -16843,10 +16394,6 @@ Promise（承诺）是一个 JavaScript 对象，它在未来的某个时间返�
 - 多媒体元素
 - 表单元素和输入类型
 - 绘图
-
-
-
-
 
 # 问题 2 回答
 
@@ -16870,27 +16417,27 @@ Windows 8 Animation库是 WinJS 的组成部分，包含了 Windows 8 风格应�
 
 # 问题 1 回答
 
-使用 Resources 集合，你可以将 Brush 放置在任何地方。为了确保资源在实体可用，你应该将 Brush 添加到 Application.Resources 中，这样你就可以在任何地方作为 StaticResource 引用它。
+使用`Resources`集合，你可以将`Brush`放置在任何地方。为了确保资源在实体可用，你应该将`Brush`添加到`Application.Resources`中，这样你就可以在任何地方作为`StaticResource`引用它。
 
 # 问题 2 回答
 
-包含 source 属性的对象必须实现 `INotifyPropertyChanged` 接口。在 source 属性的 setter 中，你应该始终触发 `PropertyChanged` 事件，以便当属性被设置时，绑定始终通过此收到通知。
+包含`source`属性的对象必须实现`INotifyPropertyChanged`接口。在`source`属性的 setter 中，你应该始终触发`PropertyChanged`事件，以便当属性被设置时，绑定始终通过此收到通知。
 
 # 问题 3 回答
 
-Canvas 面板没有自动布局策略。对于内部的元素，你可以设置 `Canvas.Left` 和 `Canvas.Top` 属性以确保将元素放置在正确的位置。
+`Canvas`面板没有自动布局策略。对于内部的元素，你可以设置`Canvas.Left`和`Canvas.Top`属性以确保将元素放置在正确的位置。
 
 # 问题 4 回答
 
-StackPanel 水平或垂直排列其元素。默认情况下，元素之间没有间距。但通过设置内部元素的 `Margin` 属性，你可以确保元素之间留有空白。如果 `Orientation` 属性设置为 `Horizontal`，你应该设置左或右边距；否则，设置上或下边距应能完成任务。
+`StackPanel`水平或垂直排列其元素。默认情况下，元素之间没有间距。但通过设置内部元素的`Margin`属性，你可以确保元素之间留有空白。如果`Orientation`属性设置为`Horizontal`，你应该设置左或右边距；否则，设置上或下边距应能完成任务。
 
 # 问题 5 回答
 
-就像简单对象一样，集合也必须通知绑定器更改。你可以使用 `INotifyCollectionChanged` 接口来实现。每当集合更改时，必须触发 `CollectionChanged` 事件。因此，你必须使用实现此接口的集合。`ObservableCollection` 类可能是一个选择。
+就像简单对象一样，集合也必须通知绑定器更改。你可以使用`INotifyCollectionChanged`接口来实现。每当集合更改时，必须触发`CollectionChanged`事件。因此，你必须使用实现此接口的集合。`ObservableCollection`类可能是一个选择。
 
 # 问题 6 回答
 
-通过设置绑定本身上的 `BindingMode`，你可以控制绑定的方向。如果设置为 `TwoWay`，任何端的更改都会自动反映在绑定的另一侧。
+通过设置绑定本身上的`BindingMode`，你可以控制绑定的方向。如果设置为`TwoWay`，任何端的更改都会自动反映在绑定的另一侧。
 
 # 第 8 章练习题答案
 
@@ -16906,19 +16453,19 @@ StackPanel 水平或垂直排列其元素。默认情况下，元素之间没有
 
 # 问题 3 回答
 
-每个 UI 都有一个 `RenderTransform` 属性，允许你应用任何所需的变换。它之所以被称为 `RenderTransform`，是因为变换发生在渲染之前，且在布局计算执行之后。这意味着渲染变换不会影响布局。
+每个 UI 都有一个`RenderTransform`属性，允许你应用任何所需的变换。它之所以被称为`RenderTransform`，是因为变换发生在渲染之前，且在布局计算执行之后。这意味着渲染变换不会影响布局。
 
 # 问题 4 回答
 
-在控件模板中，你可以应用 `TemplateBinding` 将控件的属性绑定到模板控件本身上定义的属性。
+在控件模板中，你可以应用`TemplateBinding`将控件的属性绑定到模板控件本身上定义的属性。
 
 # 问题 5 回答
 
-`CollectionViewSource` 提供了一个项目集合的视图。该视图支持分组、排序和过滤，且不会影响底层集合。这是将集合绑定到复杂控件的一种快速且安全的方法。
+`CollectionViewSource`提供了一个项目集合的视图。该视图支持分组、排序和过滤，且不会影响底层集合。这是将集合绑定到复杂控件的一种快速且安全的方法。
 
 # 问题 6 回答
 
-`SemanticZoom` 为同一组数据提供了两个级别的视图。通过缩放和捏合手势，你可以在缩放级别之间切换。
+`SemanticZoom`为同一组数据提供了两个级别的视图。通过缩放和捏合手势，你可以在缩放级别之间切换。
 
 # 第 9 章练习题答案
 
@@ -16930,7 +16477,7 @@ StackPanel 水平或垂直排列其元素。默认情况下，元素之间没有
 
 # 问题 2 回答
 
-你可以使用 Windows+Z 组合键显示应用栏。在许多应用程序中，你也可以右键点击应用屏幕显示应用栏。在触摸屏上，你可以从屏幕的顶部或底部滑动手指来显示应用栏。
+你可以使用`Windows+Z`组合键显示应用栏。在许多应用程序中，你也可以右键点击应用屏幕显示应用栏。在触摸屏上，你可以从屏幕的顶部或底部滑动手指来显示应用栏。
 
 # 问题 3 回答
 
@@ -16938,7 +16485,7 @@ StackPanel 水平或垂直排列其元素。默认情况下，元素之间没有
 
 # 问题 4 回答
 
-该对象是定义在 `Windows.UI.Notifications` 命名下的 `TileUpdateManager`。使用 `TileUpdateManager.CreateTileUpdaterForApplication()` 方法获取一个负责管理应用程序磁贴通知更新的对象。使用该对象的 `Update()` 方法更改启动屏幕上的磁贴通知。
+该对象是定义在`Windows.UI.Notifications`命名下的`TileUpdateManager`。使用`TileUpdateManager.CreateTileUpdaterForApplication()`方法获取一个负责管理应用程序磁贴通知更新的对象。使用该对象的`Update()`方法更改启动屏幕上的磁贴通知。
 
 # 第 10 章练习题答案
 
@@ -16950,15 +16497,19 @@ StackPanel 水平或垂直排列其元素。默认情况下，元素之间没有
 
 # 问题 2 回答
 
-这是 `Frame` 属性，它持有 `Frame` 对象的实例。`Frame` 对象控制页的内容，并提供导航相关的操作和事件。
+这是`Frame`属性，它持有`Frame`对象的实例。`Frame`对象控制页的内容，并提供导航相关的操作和事件。
 
 # 问题 3 回答
 
-你可以调用页面 `Frame` 属性的 `Navigate` 方法，并传递你打算跳转的页面类型，如下所示：
+你可以调用页面`Frame`属性的`Navigate`方法，并传递你打算跳转的页面类型，如下所示：
 
 ```
-Frame.Navigate(typeof(NextTabPage))
-```
+
+
+
+# 问题 4 回答
+
+`Frame.Navigate(typeof(NextTabPage))`
 
 你也可以传递第二个可选参数，该参数可以在目标页面上使用，如下所示：
 
@@ -16966,25 +16517,19 @@ Frame.Navigate(typeof(NextTabPage))
 Frame.Navigate(typeof(NextTabPage), "Page Title")
 ```
 
-# 问题 4 回答
-
-你必须重写页面的 `OnNavigatingFrom` 方法（或订阅 `NavigatingFrom` 事件）。该（事件处理程序）方法有一个 `NavigationCancelEventArgs` 参数。通过该参数的 `Cancel` 属性防止离开当前页面。
+你必须重写页面的`OnNavigatingFrom`方法（或订阅`NavigatingFrom`事件）。该（事件处理程序）方法有一个`NavigationCancelEventArgs`参数。通过该参数的`Cancel`属性防止离开当前页面。
 
 # 问题 5 回答
 
-这是 `LayoutAware` 类（位于 `Common` 文件夹中），它是拆分应用程序和网格应用程序模板中页面的通用基类。一旦页面（派自 `LayoutAwarePage`）加载，它就会订阅当前窗口的 `SizeChanged` 事件。当此事件触发时，`LayoutAwarePage`会自动将页面移动到相应的视觉状态。
+这是`LayoutAware`类（位于`Common`文件夹中），它是拆分应用程序和网格应用程序模板中页面的通用基类。一旦页面（派自`LayoutAwarePage`）加载，它就会订阅当前窗口的`SizeChanged`事件。当此事件触发时，`LayoutAwarePage`会自动将页面移动到相应的视觉状态。
 
 # 第 11 章练习题答案
 
 以下是第 11 章练习题的答案。
 
-# 问题 1 回答
+## 问题 1 回答
 
 选择器（Pickers）为每个应用程序访问受限的资源提供了统一的 UI。此外，某些选择器支持应用集成。应用程序可以将自己包含在选择器中，其他应用程序也可以使用其功能。
-
-
-
-
 
 ## 问题 2 的答案
 
@@ -16996,11 +16541,13 @@ Frame.Navigate(typeof(NextTabPage), "Page Title")
 
 ## 问题 4 的答案
 
-虽然你有多种方法可以实现（包括手动解析 XML），但将 XML 馈转换为对象最直接、高效的方法是使用 Syndication API 的 `SyndicationClient` 类。
+虽然你有多种方法可以实现（包括手动解析 XML），但将 XML 馈转换为对象最直接、高效的方法是使用 Syndication API 的`SyndicationClient`类。
 
 ## 问题 5 的答案
 
 你的应用程序可以使用 Live SDK。然后，当它连接到微软在线服务时，它应该声明想要使用的用户数据的“范围”（scopes）。
+
+# 第 12 章练习题答案
 
 以下是第 12 章练习题的答案。
 
@@ -17022,9 +16569,9 @@ Frame.Navigate(typeof(NextTabPage), "Page Title")
 
 ## 问题 5 的答案
 
-当你想知道用户如何持握设备时，应该使用 `SimpleOrientationSensor`。当你对精确的姿角度不感兴趣，而更想知道设备是躺在桌子上，还是处于横屏或竖屏模式，以及旋转了大约 90、180 或 270 度时，请使用此类。
+当你想知道用户如何持握设备时，应该使用`SimpleOrientationSensor`。当你对精确的姿角度不感兴趣，而更想知道设备是躺在桌子上，还是处于横屏或竖屏模式，以及旋转了大约 90、180 或 270 度时，请使用此类。
 
-## 第 13 章练习题答案
+# 第 13 章练习题答案
 
 以下是第 13 章练习题的答案。
 
@@ -17038,15 +16585,17 @@ C++ 中的 Lambda 表达式（C++11 的新功能）为你提供了匿名函数�
 
 ## 问题 3 的答案
 
-`^`（hat）运算符标记引用计数指针，用于保留对 Windows Runtime 引用。当你使用 `^` 时，编译器会生成代码自动跟踪指向对象的引用，并在引用计数器归零时释放该对象。
+`^`（hat）运算符标记引用计数指针，用于保留对 Windows Runtime 引用。当你使用`^`时，编译器会生成代码自动跟踪指向对象的引用，并在引用计数器归零时释放该对象。
 
 ## 问题 4 的答案
 
-这是 `ref new` 运算符。你可以使用它来实例化被引用的 Windows Runtime 对象。你可以将此运算符与 `^` 运算符配合使用，如下例：
+这是`ref new`运算符。你可以使用它来实例化被引用的 Windows Runtime 对象。你可以将此运算符与`^`运算符配合使用，如下例：
 
 ```
 Vector<int>^ numbers = ref Vector<int>(myNumbers);
 ```
+
+
 
 ## 问题 5 的答案
 
@@ -17132,10 +16681,6 @@ Windows Store 是微软的私人应用商店，你可以在那里发布、销售
 
 使用 `CurrentApp` 类，你可以获取许可证状态的信息。然而，`CurrentApp` 仅在应用程序部署到 Windows Store 时有效。`CurrentAppSimulator` 设计用于开发期间。
 
-
-
-
-
 ## 有用链接
 
 到本书为止，你已经学习了 Windows 8 风格应用开发的基础。本书中介绍的主题以及相关练习为你提供了这种新类型应用程序的概述和初步体验，你现在应该理解了创建这些应用的精髓。你可以找到许多方法来增强和完善你的知识，本附录提供了网页和文章的有用链接，其中包含了关于 Windows 8 应用开发的更多详细信息。
@@ -17148,9 +16693,9 @@ Windows Store 是微软的私人应用商店，你可以在那里发布、销售
 
 | 链接 | 描述 |
 | --- | --- |
-| http://code.msdn.microsoft.com/ | 这是 MSDN 开发者代码示例的首页页。在这里，你可以根据平台、Visual Studio 版本、编程语言、标签和其他属性浏览示例。 |
-| http://code.msdn.microsoft.com/Windows-8-Modern-Style-App-Samples | 此链接包含所有 Windows 8 风格应用包的下载。你可以根据你偏好的编程语言单独下载这些示例，或者在一个包中全部下载。 |
-| http://code.msdn.microsoft.com/windowsapps/XAML-controls-sample-pack-7ae99c5 | 此代码示例演示了如何使用预定义的 Windows 8 控件。你可以根据你偏好的编程语言单独下载这些示例，或者在一个包中全部下载。 |
+| `http://code.msdn.microsoft.com/` | 这是 MSDN 开发者代码示例的首页页。在这里，你可以根据平台、Visual Studio 版本、编程语言、标签和其他属性浏览示例。 |
+| `http://code.msdn.microsoft.com/Windows-8-Modern-Style-App-Samples` | 此链接包含所有 Windows 8 风格应用包的下载。你可以根据你偏好的编程语言单独下载这些示例，或者在一个包中全部下载。 |
+| `http://code.msdn.microsoft.com/windowsapps/XAML-controls-sample-pack-7ae99c5` | 此代码示例演示了如何使用预定义的 Windows 8 控件。你可以根据你偏好的编程语言单独下载这些示例，或者在一个包中全部下载。 |
 
 ## 指南原则
 
@@ -17160,12 +16705,12 @@ Windows Store 是微软的私人应用商店，你可以在那里发布、销售
 
 | 链接 | 描述 |
 | --- | --- |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh464920.aspx | 这篇文章概述了是什么让你的 Windows 8 风格应用变得优秀。这里讨论的原则可以帮助你理解 Windows 8 设计的精髓。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465427.aspx | 这篇文章提供了一个指南，帮助你规划 Windows 8 风格应用——从决定你的应用擅长到验证你的设计。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465424.aspx | 使用此链接作为理解体验模式和原则的起始中心。它收集了所有用户体验指南的链接，这些指南在为应用设计用户界面 (UI) 和用户交互时是必不可少的。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465415.aspx | Windows 8 非常关注触摸屏设备。这篇文章解释了触摸交互设计的基础知识。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh452681(v=win10).aspx | 这两个链接提供了指南，帮助你在应用中设计和实现无障碍功能，分别使用 HTML/JavaScript 和 C#/Visual Basic。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465413.aspx | 此链接指向 Windows 8 风格应用白皮书的索引。访问这些文章可以获取开发应用的实用指南和提示。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh464920.aspx` | 这篇文章概述了是什么让你的 Windows 8 风格应用变得优秀。这里讨论的原则可以帮助你理解 Windows 8 设计的精髓。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465427.aspx` | 这篇文章提供了一个指南，帮助你规划 Windows 8 风格应用——从决定你的应用擅长到验证你的设计。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465424.aspx` | 使用此链接作为理解体验模式和原则的起始中心。它收集了所有用户体验指南的链接，这些指南在为应用设计用户界面 (UI) 和用户交互时是必不可少的。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465415.aspx` | Windows 8 非常关注触摸屏设备。这篇文章解释了触摸交互设计的基础知识。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh452681(v=win10).aspx` | 这两个链接提供了指南，帮助你在应用中设计和实现无障碍功能，分别使用 HTML/JavaScript 和 C#/Visual Basic。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465413.aspx` | 此链接指向 Windows 8 风格应用白皮书的索引。访问这些文章可以获取开发应用的实用指南和提示。 |
 
 ## WINDOWS RUNTIME
 
@@ -17175,10 +16720,10 @@ Windows Runtime 是 Windows 8 风格应用开发的基石。表 B-3 总结的链
 
 | 链接 | 描述 |
 | --- | --- |
-| http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx | 此链接是 Windows 8 风格应用的 Windows Runtime API 参考索引。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/br230301(v=vs.110).aspx | 通过 Visual Studio，你可以开发自己的 Windows Runtime 组件。这些链接分别帮助你使用 C#/ Visual Basic 和 C++ 进行组件开发。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh441569(v=vs.110).aspx | 从这篇文章中，你可以学习 Windows 8 风格应用可以使用哪些特性，以及可以使用哪些 API 作为那些无法使用的 API 的替代方案。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh464945.aspx | |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/br211377.aspx` | 此链接是 Windows 8 风格应用的 Windows Runtime API 参考索引。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/br230301(v=vs.110).aspx` | 通过 Visual Studio，你可以开发自己的 Windows Runtime 组件。这些链接分别帮助你使用 C#/ Visual Basic 和 C++ 进行组件开发。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh441569(v=vs.110).aspx` | 从这篇文章中，你可以学习 Windows 8 风格应用可以使用哪些特性，以及可以使用哪些 API 作为那些无法使用的 API 的替代方案。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh464945.aspx` | |
 
 ## 语言引用
 
@@ -17188,10 +16733,10 @@ Windows Runtime 是 Windows 8 风格应用开发的基石。表 B-3 总结的链
 
 | 链接 | 描述 |
 | --- | --- |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh698871.aspx | Visual C++ 语言引用（组件扩展, C++/CX） |
-| http://msdn.microsoft.com/library/618ayhy6(VS.110).aspx | C# 语言引用 |
-| http://msdn.microsoft.com/library/25kad608(VS.110).aspx | Visual Basic 语言引用 |
-| http://msdn.microsoft.com/library/700351(VS.110).aspx | JavaScript 语言引用 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh698871.aspx` | Visual C++ 语言引用（组件扩展, C++/CX） |
+| `http://msdn.microsoft.com/library/618ayhy6(VS.110).aspx` | C# 语言引用 |
+| `http://msdn.microsoft.com/library/25kad608(VS.110).aspx` | Visual Basic 语言引用 |
+| `http://msdn.microsoft.com/library/700351(VS.110).aspx` | JavaScript 语言引用 |
 
 ## 控件
 
@@ -17201,17 +16746,14 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
 
 | 链接 | 描述 |
 | --- | --- |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465351(v=win10).aspx | 这些链接列出了所有 Windows 8 风格可用的控件。第一个使用了 C#、Visual Basic 和 JavaScript。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465381(v=win10).aspx | 这些链接列出了所有 Windows 8 风格可用的控件。第二个分别使用了 C#、Visual Basic 和 JavaScript。 |
-| http://msdn.microsoft.com/en-us/library/windows/apps/hh465498(v=win10).aspx | 这些链接列出了所有 Windows 8 风格可用的控件。第三个分别使用了 C#、Visual Basic 和 JavaScript。 |
-
-
-
-
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465351(v=win10).aspx` | 这些链接列出了所有 Windows 8 风格可用的控件。第一个使用了 C#、Visual Basic 和 JavaScript。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465381(v=win10).aspx` | 这些链接列出了所有 Windows 8 风格可用的控件。第二个分别使用了 C#、Visual Basic 和 JavaScript。 |
+| `http://msdn.microsoft.com/en-us/library/windows/apps/hh465498(v=win10).aspx` | 这些链接列出了所有 Windows 8 风格可用的控件。第三个分别使用了 C#、Visual Basic 和 JavaScript。 |
 
 # 应用 – 异步编程
 
 应用程序 (2017)
+
 - Direct2D, 49
 - Direct3D, 49
 - 已安装的选择器
@@ -17225,14 +16767,14 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
   - 坐标类, 434
   - 地理位置, 333
   - 地位置类, 333–434
-  - GetPositionAsync 方法, 333–434
+  - `GetPositionAsync` 方法, 333–434
   - 位置 API, 335–536
 - 登录启动界面, 347–349
   - 管理, 64–63
   - 原生, 64–65
 - 包
   - 创建, 223–325
-  - Package_manifest, 326–327
+  - `Package_manifest`, 326–327
   - 选择器, 392–393
     - 对话框, 393
     - RSS 馈源, 392
@@ -17267,8 +16809,8 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
   - 试用模式, 448–550
   - 试用版本, 544–545
   - 上传, 533
-- AppLifeCycle, 318
-- app.Activated, 159
+- `AppLifeCycle`, 318
+- `app.Activated`, 159
 - 界面, 35–37
 - AR (增强现实), 459
 - 架构
@@ -17277,38 +16819,38 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
   - .NET Framework 4.5, 安装模型, 80–81
   - Windows 运行时, 68–70
   - 参数, 导航事件, 366–367
-  - Assert 类, 535–536
-    - Assert.AreEqual( ) 方法, 535
-    - Assert.InstanceOf( ) 方法, 535
-    - Assert.Is( ) 方法, 535
-- async 关键字, 144–145
-- async 方法, 138
+  - `Assert` 类, 535–536
+    - `Assert.AreEqual()` 方法, 535
+    - `Assert.InstanceOf()` 方法, 535
+    - `Assert.Is()` 方法, 535
+- `async` 关键字, 144–145
+- `async` 方法, 138
 - 异步编程, 122–134
   - APM (异步编程模型), 135
-  - C# async 关键字, 127
-  - async 方法, 138
+  - C# `async` 关键字, 127
+  - `async` 方法, 138
   - 异步回调, 142–144
   - 异步关键字, 144–146
-  - await 关键字, 127
+  - `await` 关键字, 127
   - 取消, 146–149
-    - CancellationTokenSource, 149
-    - DownloadString 方法, 142
-    - DownloadStringAsync 方法, 144
-    - DownloadStringCompleted 事件, 142
-    - DownloadStringTaskAsync 方法, 149
-    - DoWork 方法, 146
+    - `CancellationTokenSource`, 149
+    - `DownloadString` 方法, 142
+    - `DownloadStringAsync` 方法, 144
+    - `DownloadStringCompleted` 事件, 142
+    - `DownloadStringTaskAsync` 方法, 149
+    - `DoWork` 方法, 146
     - 关键字, 144–146
-    - DownloadCompleted 方法, 144
+    - `DownloadCompleted` 方法, 144
     - 同步代码写入, 139–142
-- TaskCanceledException, 149
-  - Write 方法, 140
+- `TaskCanceledException`, 149
+  - `Write` 方法, 140
 - C++ 操作, 484–486
 - 开发平台, 131–132
 - EAP (基于事件的异步模式), 135
 - JavaScript promises, 153–154
 - 应用初始化, 158–159
   - 编码, 160–163
-  - onSearchButtonClicked 事件, 158
+  - `onSearchButtonClicked` 事件, 158
   - Twitter 客户端创建, 154–158
 
 # 异步 – C++
@@ -17323,21 +16865,21 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
 - 附加属性, 238–239
 - 属性语法, XAML, 263
 - 音频元素, 167
-- auto 关键字, 469
-- <AutomationProperties.AutomationID-元素, 334
-- await 关键字, 137, 144–145
+- `auto` 关键字, 469
+- `<AutomationProperties.AutomationID>` 元素, 334
+- `await` 关键字, 137, 144–145
 - 轴, 加速度计, 442
   - 亮度图标 (设置栏), 55
-  - btnEnableDisableGyroscope_Click 方法, 455
-  - btnRemoveFilter, 404
-  - btnStart_Click 事件程序, 143, 148
+  - `btnEnableDisableGyroscope_Click` 方法, 455
+  - `btnRemoveFilter`, 404
+  - `btnStart_Click` 事件程序, 143, 148
   - 错误, 参见调试
-- Button 控件, 256
+- `Button` 控件, 256
   - 禁用状态, 287
-  - HorizontalContentAlignment, 286
+  - `HorizontalContentAlignment`, 286
   - 正常状态, 287
   - 按下状态, 287
-  - VerticalContentAlignment, 286
+  - `VerticalContentAlignment`, 286
   - 支持的视觉状态, 286
 - 后台任务, 42, 502
   - 应用更新, 507
@@ -17351,27 +16893,27 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
   - Playback Manager, 502
   - 报告, 512–515
   - 系统资源和, 503
-- BackgroundTaskBuilder, 511
-- BackgroundTaskHost.exe, 506
+- `BackgroundTaskBuilder`, 511
+- `BackgroundTaskHost.exe`, 506
 - 后向导航, 363–366
-- BeginGetResponse 方法, 135
-- BindingBase.cs 文件, 379
+- `BeginGetResponse` 方法, 135
+- `BindingBase.cs` 文件, 379
 - 空应用模板, 301
-- Boolean 类型 (JavaScript), 181
-- BooleanToConverter.cs 文件, 379 (已修正)
-- Border 类, 252–253
-- Border 元素, 253
-- Bottom.Page, 309
+- `Boolean` 类型 (JavaScript), 181
+- `BooleanToConverter.cs` 文件, 379 (已修正)
+- `Border` 类, 252–253
+- `Border` 元素, 253
+- `Bottom.Page`, 309
 - 调试中的断点, 526–527
 - 断点窗口 (调试器), 305
 - C# 异步回调, 142–144
 - 取消, 146–149
-- CancellationSource, 149
-- DownloadString, 142
-- DownloadStringAsync, 146
-- DownloadStringTaskAsync, 149
-- DoWork, 146
-- OnDownloadCompleted, 144
+- `CancellationSource`, 149
+- `DownloadString`, 142
+- `DownloadStringAsync`, 146
+- `DownloadStringTaskAsync`, 149
+- `DoWork`, 146
+- `OnDownloadCompleted`, 144
 - C++, 124
 - 异步操作, 486
 - 组件扩展 (C++/CX), 472–473
@@ -17383,89 +16925,89 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
 
 # C++ 类
 
-- ApplicationData, 333–346
-- Assert, 535–536
-- BackgroundTaskBuilder, 511
-- Binding, 260–261
-- Border, 252–253
-- Calculator, 536–538
-- CalculatorTest, 537
-- CircularPanel, 239
-- CollectionViewSource, 300–301
-- Compass, 457
-- ContactPicker, 393
-- DependencyObject, 238, 260
-- FileIO, 190
-- FileOpenPicker, 190, 393
-- FileSavePicker, 190, 394
-- FolderPicker, 235
-- FrameworkElement, 248
-- Geocoder, 434
-- Geolocation, 333
-- GePosition, 333–434
-- Gyrometer, 448–455
-- GyrometerReading, 448–455
-- Inclinometer, 458
-- KeyboardCapabilities, 516–517
-- Launcher, 375–377
-- LayoutsPage, 384–386
-- LicenseInformation, 544–545
-- LightSensor, 455–456
-- ListViewBase, 298–299
-- MatrixOperation, 489
-- MessageDialog, 337–338
-- MouseCapabilities, 516–518
-- NetworkInformation, 412
-- OrientationSensor, 460
-- Page, 362
+- `ApplicationData`, 333–346
+- `Assert`, 535–536
+- `BackgroundTaskBuilder`, 511
+- `Binding`, 260–261
+- `Border`, 252–253
+- `Calculator`, 536–538
+- `CalculatorTest`, 537
+- `CircularPanel`, 239
+- `CollectionViewSource`, 300–301
+- `Compass`, 457
+- `ContactPicker`, 393
+- `DependencyObject`, 238, 260
+- `FileIO`, 190
+- `FileOpenPicker`, 190, 393
+- `FileSavePicker`, 190, 394
+- `FolderPicker`, 235
+- `FrameworkElement`, 248
+- `Geocoder`, 434
+- `Geolocation`, 333
+- `GePosition`, 333–434
+- `Gyrometer`, 448–455
+- `GyrometerReading`, 448–455
+- `Inclinometer`, 458
+- `KeyboardCapabilities`, 516–517
+- `Launcher`, 375–377
+- `LayoutsPage`, 384–386
+- `LicenseInformation`, 544–545
+- `LightSensor`, 455–456
+- `ListViewBase`, 298–299
+- `MatrixOperation`, 489
+- `MessageDialog`, 337–338
+- `MouseCapabilities`, 516–518
+- `NetworkInformation`, 412
+- `OrientationSensor`, 460
+- `Page`, 362
 
 # C++ (续)
 
-- CheckBox 控件, 257
-- CircularPanel 类, 239
-- CivicAddress 类, 435
-- CivicAddress, 435
+- `CheckBox` 控件, 257
+- `CircularPanel` 类, 239
+- `CivicAddress` 类, 435
+- `CivicAddress`, 435
 - 组件实现, C++ AMP (加速并行), 487
 - C++ 用于 Windows 运行时, 管理, 472–474
 - 编程语言, 10–12
-- CalculateButtonTapped, 487
-- CalculateWithTapped 方法, 478–488
-- Calculator 类, 单元测试, 536–538
-- CalculatorTest, 537
+- `CalculateButtonTapped`, 487
+- `CalculateWithTapped` 方法, 478–488
+- `Calculator` 类, 单元测试, 536–538
+- `CalculatorTest`, 537
 - Calendar View, 32
 - 日历, 同步, 32
 - 完成, 158
 - 错误, 158
 - 取消, C# 5.0, 146–149
-- CancellationTokenSource, 147–149
+- `CancellationTokenSource`, 147–149
 - 绘制, 218–221
 - 图形, Windows 8 样式应用, 217–221
 - 栅化图像, 218
-- ChangedException, 476
-- Canvas.Zindex 属性, 240
-- CaptureWindow, 71
+- `ChangedException`, 476
+- `Canvas.Zindex` 属性, 240
+- `CaptureWindow`, 71
 - Windows Store 过程, 553
 - 设备, 55–545
 - 搜索位, 51–55
 - 设置按钮, 55–56
 - 分享, 52–54
 - 开始 按钮, 50–51
-- PointerDevice, 518
-- Popup, 329
-- ResourceDictionary, 248
-- DataSource, 130, 383
-- SettingsPane, 340–341, 340–342
-- SimpleOrientationSensor, 458–459
-- StorageFile, 394
-- syndicationClient, 415–419
-- TextBlock, 254
+- `PointerDevice`, 518
+- `Popup`, 329
+- `ResourceDictionary`, 248
+- `DataSource`, 130, 383
+- `SettingsPane`, 340–341, 340–342
+- `SimpleOrientationSensor`, 458–459
+- `StorageFile`, 394
+- `syndicationClient`, 415–419
+- `TextBlock`, 254
 
 # ClassRegisteredException - Converter属性
 
-- ClassRegisteredException, 476
+- `ClassRegisteredException`, 476
 - Windows 运行时和 C++, 474–475
-- Windows.UI.Popups.MessageDialog, 153
-- ClearAsync 方法, 344
+- `Windows.UI.Popups.MessageDialog`, 153
+- `ClearAsync` 方法, 344
 - 点击事件程序, 187
 - 客户端代码, JavaScript, 184–187
 - 云, 参见 SkyDrive CLR (公共语言运行时)
@@ -17474,35 +17016,31 @@ Windows 8 控件是每个应用的构建模块。表 B-5 总结的链接提供�
 - 代码开始, 216
 - 数据绑定, 264–268
 - Windows 运行时, 483–484
-- CollectionViewSource, 300–301
+- `CollectionViewSource`, 300–301
 - 着色, 280
-- Grid 网格, 241–242
+- `Grid` 网格, 241–242
 - 文本列, 385–386
 - COM (复杂对象模型), 15, 71
 - C++ 和 Windows 运行时, 471–472
 - 运行时异常, 476
-- ComException, 477–468
+- `ComException`, 477–468
 - 命令, 上下文, 329–331
 - Common JS 原始类型建议, 154
-- Compass 类, 457
-- CompassReading 对象, 457
-- CompassReadingChangedEventArgs, 457
+- `Compass` 类, 457
+- `CompassReading` 对象, 457
+- `CompassReadingChangedEventArgs`, 457
 - 完成回调, 158
-
-
-
-
 
 # CppDemo 解决方案 – 直接导航
 
-CppDemo Start 解决方案, 480–481
-createFileSync 函数, 162
-CreateRandomVector(), 484
-CreateTileUpdateForApplication()
-方法, 351
-CreateWindow 方法, 122
+`CppDemo Start` 解决方案, 480–481
+`createFileSync` 函数, 162
+`CreateRandomVector()`, 484
+`CreateTileUpdateForApplication()` 方法, 351
+`CreateWindow` 方法, 122
 
 命令, 527
+
 - 调试器工具栏, Visual Studio 2012, 527–528
 - 编辑并继续 (Edit and Continue), 531–532
 - 立即窗口 (Immediate window), 529
@@ -17511,13 +17049,14 @@ CreateWindow 方法, 122
 - 变量, 528–531
 - 监窗口 (Watch window), 529
 
-CSharpybrid 项目, 495–497
-CSharpybrid 解决方案, 495
+`CSharpybrid` 项目, 495–497
+`CSharpybrid` 解决方案, 495
 CSS (层叠样式表), 172–173
+
 - 类选择器, 175
 - 声明, 173
 - 设计与, 178–181
-- display::none, 226
+- `display::none`, 226
 - 外部样式表, 174
 - id-选择器, 176
 - 重要类, 176–177
@@ -17525,27 +17064,32 @@ CSS (层叠样式表), 172–173
 - 布局与, 178–181
 - 规则, 175
 - 后代选择器, 177
-- style 属性, 174
+- `style` 属性, 174
 - 样式块, 174
-ctsev(函数, 321)
+
+`ctsev()` 函数, 321
 当前方法, 344
 
 调试
+
 - 断点, 526–527
 - 概述, 526–527
 - Windows 8 风格应用程序, 应用程序生命周期事件, 532
 - 声明标签页, 401
 - 声明式绑定, 195
 - 深度链接 (deeplinking), 39
-- DefaultCOMIndex 属性, 337
+- `DefaultCOMIndex` 属性, 337
 
 Delphi, 15
 依赖属性
+
 - 数据绑定与, 260–262
 - XAML, 238
-- DependencyObject 类, 238, 260
+- `DependencyObject` 类, 238, 260
 - 依赖动画, 272
+
 设计
+
 - 图标化风格设计, 122
 - 信息图设计风格, 122
 - 语言, 122–123
@@ -17555,26 +17099,30 @@ Delphi, 15
 - 桌面, 25。另请参桌面应用
 - 应用程序, 63–65
 - 程序间切换, 57
+
 桌面应用
+
 - 数据绑定, 195–196。另请参模板绑定
 - 集合与, 264–268
-- DataContext 属性, 262–263
+- `DataContext` 属性, 262–263
 - 依赖属性, 260–260
 - 显示与, 259
-- Gridview, 299–300
+- `Gridview`, 299–300
 - HTML5 中的列表绑定, 199–201
 - 模式, 262
 - 通知与, 260–262
 - HTML5 中的简单绑定, 196–198
 - UI (用户界面)与, 19
 - 值转换器 (valueconverters)与, 263–264
-data 数据, 绑定, 259
+
+`data` 数据, 绑定, 259
 数据管理
+
 - 数据绑定, 195–196
 - 数据源更新, 201–204
-- data.avatarUrl 属性, 196
-- DataChanged 方法, 344
-- DataContext 属性, 262–263
+- `data.avatarUrl` 属性, 196
+- `DataChanged` 方法, 344
+- `DataContext` 属性, 262–263
 - DCOM (分布式对象模型), 471
 - 介绍, 56–57
 - 程序间切换, 57
@@ -17583,8 +17131,10 @@ data 数据, 绑定, 259
 - 开发者注册 (Windows Store), 550–551
 - 开发工具, 9–19
 - 选择, 83–85
+
 设备
 调试器
+
 - 断点窗口, 530
 - 调试时更改代码, 531–532
 - GUIs (图形用户界面), 26–297
@@ -17603,43 +17153,48 @@ data 数据, 绑定, 259
 
 Direct2D 应用程序, 479
 Direct3D 应用程序, 479
-- 指令, using, 140
+
+- 指令, `using`, 140
 - DirectX 技术, C++ 以及 471
-- disconnectedException, 476
-- DisplayApplicationPicker, 377
-- display:none, 226
-- DisplayButton_Tapped, 301
-- 元素, data-win-options 属性, 201
-- Div.log 文件, 362–366
+- `disconnectedException`, 476
+- `DisplayApplicationPicker`, 377
+- `display:none`, 226
+- `DisplayButton_Tapped`, 301
+- 元素, `data-win-options` 属性, 201
+- `Div.log` 文件, 362–366
 - DLLs (动态链接库), 71
 - WinRT 组件 DLL, 479
-- DOctype, 171
+- `DOctype`, 171
 
-<!DOCTYPE html>, 102
+`<!DOCTYPE html>`, 102
+
 - 文档大纲标题, 362
-- document.getElementByIdByFunction, 194
-- Double.name, 280, 285
-- DownloadMethod, 142
-- DownloadStringAsync, 144
-- DownloadCompleted 事件, 142
-- DownloadStringAsync, 147, 149
-- DoWork, 140, 146
+- `document.getElementByIdByFunction`, 194
+- `Double.name`, 280, 285
+- `DownloadMethod`, 142
+- `DownloadStringAsync`, 144
+- `DownloadCompleted` 事件, 142
+- `DownloadStringAsync`, 147, 149
+- `DoWork`, 140, 146
 - 绘制, canvas, 218–221
 - 持续时间属性, 285
 - 动态语言, 182
+
 事件
-- DownloadStringCompleted, 142
+
+- `DownloadStringCompleted`, 142
 - 按键, 187
 - 导航, 366–369
 - 无事件, 316
-- OnLaunched, 316
-- PointerPressed, 275
-- PropertyChanged, 433
-- ReadingChanged, 443
-- Suspending, 316
-- ExpirationDate 属性, 545
+- `OnLaunched`, 316
+- `PointerPressed`, 275
+- `PropertyChanged`, 433
+- `ReadingChanged`, 443
+- `Suspending`, 316
+- `ExpirationDate` 属性, 545
 
 Expression Blend
+
 - 面板, 292
 - 设计师表面, 293
 - 设备面板, 292
@@ -17651,12 +17206,15 @@ Expression Blend
 - 工具栏, 290–291
 
 Expression Blend for Visual Studio 2012, 108
+
 - 动画对象, 111–115
 - 解决方案, 109–111
 - 外部样式表 (CSS), 174
 
 E
+
 EAP-(异步模式), 135
+
 - 属性, 260
 - 元素 (HTML), 168
 - 尖括号, 168
@@ -17667,24 +17225,29 @@ EAP-(异步模式), 135
 - 开启标签, 168
 - 重叠, 168–169
 - 自闭合标签, 168
-- ClassName 方法, 135
-- EntranceTransition, 273, 274
-- errorHandler 参数, 154
+- `ClassName` 方法, 135
+- `EntranceTransition`, 273, 274
+- `errorHandler` 参数, 154
+
 事件处理器
-- btnStart_Click, 143, 148
+
+- `btnStart_Click`, 143, 148
 - 点击, 187
 - JavaScript, 186
-- ListViewControl, 203
-- onSearchButtonClicked, 158
-- SettingsRequested, 342
+- `ListViewControl`, 203
+- `onSearchButtonClicked`, 158
+- `SettingsRequested`, 342
 - 事件处理器, 代码 (Visual Studio IDE), 97–99
 
 F
-- FadeInThemeAnimation, 275, 277
-- FadeOutThemeAnimation, 275, 277
-- FailureException, 476
-- FeedItem, 416
+
+- `FadeInThemeAnimation`, 275, 277
+- `FadeOutThemeAnimation`, 275, 277
+- `FailureException`, 476
+- `FeedItem`, 416
+
 馈
+
 - Atom, 415
 - RSS (Really Simple), 415
 - ication API, 416–419
@@ -17692,12 +17255,14 @@ F
 - XML (扩展标记语言), 615
 - File Picker, 150–153
 - 文件, 190
-- FileIO (Windows.Storage 命名空间), 190
-- FileOpenPicker 类, 190, 393
-- FileTypeFilter 属性, 394
-- suggestedStartPosition 属性, 394
-- ViewMode 属性, 394
+- `FileIO` (`Windows.Storage` 命名空间), 190
+- `FileOpenPicker` 类, 190, 393
+- `FileTypeFilter` 属性, 394
+- `suggestedStartPosition` 属性, 394
+- `ViewMode` 属性, 394
+
 文件
+
 - 启动, 375–377
 - 元数据, 72–74
 
@@ -17705,82 +17270,87 @@ F
 
 # FileSavePicker – Hello World
 
-FileSavePicker 类, 190, 393, 394
-FileTypeFilter, 394
+`FileSavePicker` 类, 190, 393, 394
+`FileTypeFilter`, 394
+
 - 应用程序, 48
--  LinearGradientBrush, 233
-- FlipView , 304–305
-- FlyRectangle 类, 112–113
-- FilePicker 类, 333, 395
+- `LinearGradientBrush`, 233
+- `FlipView`, 304–305
+- `FlyRectangle` 类, 112–113
+- `FilePicker` 类, 333, 395
 - 文件夹, 图片库, 198
-- foreach 函数, 201
+- `foreach` 函数, 201
 - 表单元素 (HTML), 172
 - 前导航, 363–366
-- Frame 控制, 237
-- Frame.Navigate 方法, 368
-- FrameworkElement 类, 248
+- `Frame` 控制, 237
+- `Frame.Navigate` 方法, 368
+- `FrameworkElement` 类, 248
 - 样本免费用版, 344
-- fulfilledHandler, 154
+- `fulfilledHandler`, 154
 - 函数类型 (JavaScript), 181
-函数
-- addEventListener, 194
-- app.onActivated, 159
-- createFile, 216
-- ctx.save(), 221
-- document.getElementById, 194
-- foreach, 201
-- getItemsAsync, 201
-- onBtnHideClicked, 227
-- onBtnNextClicked, 227
-- onOpenButtonClick, 194
-- onSearchButtonClick, 160–161
-- 作为参数传递, 183–184
-- singleFileAsync, 194
-- quadraticCurveTo, 221
-- 刷新, 213
-- then, 154
-- Win.UI.processAll, 159, 194, 197
-- writeTextAsync, 163, 195
 
-GetInternetConnectionProfile
-方法, 412, 414
-- getItemsAsync 函数, 201
-- GetPointerDevices() 方法, 518
-- GetPrimes 方法, 501
-- GotoState, 276
+函数
+
+- `addEventListener`, 194
+- `app.onActivated`, 159
+- `createFile`, 216
+- `ctx.save()`, 221
+- `document.getElementById`, 194
+- `foreach`, 201
+- `getItemsAsync`, 201
+- `onBtnHideClicked`, 227
+- `onBtnNextClicked`, 227
+- `onOpenButtonClick`, 194
+- `onSearchButtonClick`, 160–161
+- 作为参数传递, 183–184
+- `singleFileAsync`, 194
+- `quadraticCurveTo`, 221
+- 刷新, 213
+- `then`, 154
+- `Win.UI.processAll`, 159, 194, 197
+- `writeTextAsync`, 163, 195
+
+`GetInternetConnectionProfile` 方法, 412, 414
+
+- `getItemsAsync` 函数, 201
+- `GetPointerDevices()` 方法, 518
+- `GetPrimes` 方法, 501
+- `GotoState`, 276
 - GPS (全球定位系统), 30
 - 表格与, 431
 - Windows Runtime, 78
+
 图形
+
 - canvas, Windows 8 风格应用程序, 217–221
 - 矢量图形, 233
-- GreetMe, 234–237
+- `GreetMe`, 234–237
 - 模板, 377–382
-- GroupDetailPage.xml, 381
-- GroupedItemsPage.xml, 380
+- `GroupDetailPage.xml`, 381
+- `GroupedItemsPage.xml`, 380
 - 基础文件, 379–380
-- ItemDetailPage.xml, 381
+- `ItemDetailPage.xml`, 381
 - 丰富列, 383–386
-- Grid 面板, 241–248
-- Grid.ColumnSpan 属性, 243
-- Grid.RowSpan 属性, 243
-- GridView
+- `Grid` 面板, 241–248
+- `Grid.ColumnSpan` 属性, 243
+- `Grid.RowSpan` 属性, 243
+- `GridView`
 - 数据绑定, 299–300
 - 数据分组, 300–301
-- ItemsControl, 299–300
+- `ItemsControl`, 299–300
 - 视觉组, 301–302
-- GroupDetailPage.xml, 130
-- GroupedItemsPage.xml, 130
-- GridView, 300–301
+- `GroupDetailPage.xml`, 130
+- `GroupedItemsPage.xml`, 130
+- `GridView`, 300–301
 - 视觉组, 301–302
 - Live Tiles
 - 创建, 43
 - 管理, 44–46
 - GUIs (图形用户界面), 设备, 26–27
-- Getrometer 类, 448–455
-- GetReading, 448–455
+- `Getrometer` 类, 448–455
+- `GetReading`, 448–455
 - 陀螺仪, 30, 455
-- GameCompleted 方法, 339
+- `GameCompleted` 方法, 339
 - 鼠标, 26
 - 能力, 517–518
 - 多点触摸, 27–28
@@ -17790,92 +17360,101 @@ GetInternetConnectionProfile
 # 层级导航 – JavaScript
 
 - 层次级导航, 359–360
-- HorizontalAlignment, 239
-- HorizontalContentAlignment, 286
-- HorizontalVisibility, 257
-- HorizontalWheelPresent, 517
+- `HorizontalAlignment`, 239
+- `HorizontalContentAlignment`, 286
+- `HorizontalVisibility`, 257
+- `HorizontalWheelPresent`, 517
 
 HTAs (超应用程序), 65
+
 - HTML (超标记语言), 166
 - 安装, Visual Studio 2012 Express
 - Windows 8, 91–93
+
 已安装应用程序
-<!DOCTYPE html>, 171
+
+`<!DOCTYPE html>`, 171
+
 - 元素, 168–169
 - HTML5, 工作草稿, 166
-- style 属性, CSS 以及, 174
+- `style` 属性, CSS 以及, 174
 
 浏览, 34–39
 搜索, 34–39
 接口
+
 - 数据绑定
 - 列表绑定, 199–201
 - 简单绑定, 196–198
-<!DOCTYPE html>, 171
+
+`<!DOCTYPE html>`, 171
+
 - 绘制在, 167
-- IAOperation, 153
-- IAOperation<StorageFile>, 153
-- IBackgroundSource, 507
-- INotifyPropertyChanged, 261
+- `IAOperation`, 153
+- `IAOperation<StorageFile>`, 153
+- `IBackgroundSource`, 507
+- `INotifyPropertyChanged`, 261
 - 交互性, 变化检测, 412–414
-- InternetAvailable 条件, 505
-InternetAvailable 条件, 505
+- `InternetAvailable` 条件, 505
+
+`InternetAvailable` 条件, 505
 新元素, 167
+
 - 网页创建, 169–172
 - Windows Runtime, 188
 - WinJS, 188–358
-- InvalidCastException, 476
-- ISActiveproperty, 545
-- IsProperty, 258
+- `InvalidCastException`, 476
+- `ISActiveproperty`, 545
+- `IsProperty`, 258
 
 工作草稿, 166
+
 - Hub 导航, 358
 - Hub 页面, 123–127
 - 混合解决方案, 494–495
 - C++, 495–496
-- IStateSaved 方法, 346
-- IStorageFile, 190
-- ISTrial 属性, 545
-- itemClickEventsArgs, 308
-- itemDataSourceProperty, 201, 212
-- itemDetailProperty, 130, 308
-- itemControl, 252, 299–300
-- itemTemplate, 201, 212
-- IValueConverter, 263
-IAoperation, 153
-- IAOperation<StorageFile>, 153
-- IBackgroundSource, 507
+- `IStateSaved` 方法, 346
+- `IStorageFile`, 190
+- `ISTrial` 属性, 545
+- `itemClickEventsArgs`, 308
+- `itemDataSourceProperty`, 201, 212
+- `itemDetailProperty`, 130, 308
+- `itemControl`, 252, 299–300
+- `itemTemplate`, 201, 212
+- `IValueConverter`, 263
+
+`IAoperation`, 153
+
+- `IAOperation<StorageFile>`, 153
+- `IBackgroundSource`, 507
 - 图标化设计风格, 122
 - IDE (集成开发环境), 14–15
 - ILDasm 实用程序, 73–74
-- IDListDataSource, 201
+- `IDListDataSource`, 201
 
 图像元素, 253
+
 - 搜索枚举值, 263
-- gImages, Live Tiles, 195
+- `gImages`, Live Tiles, 195
 - 立即字 (调试器), 529
 - 重要类, 176–177
-- Imports 关键字 (Visual Basic), 76
-- inclinometerclass, 457–458
-- inclinometer 类, 458
+- `Imports` 关键字 (Visual Basic), 76
+- `inclinometerclass`, 457–458
+- `inclinometer` 类, 458
 - 依赖应用程序, 272
 - 信息图设计风格, 122
 - 蓝色样式, 174
-- INotifyPropertyChanged 接口, 261
+- `INotifyPropertyChanged` 接口, 261
 - 输入设备, 30
 - 键盘, 26
 - 能力, 516–517
 
 ![](img/4ba176960f93c5e0483da4464a3d695f_611_0.png)
 
-
-
-
-
 # JavaScript - ListViewBase 类
 
 JavaScript (续)
-string 类型, 181
+`string` 类型, 181
 变量
 声明, 182
 值测试, 183
@@ -17899,9 +17478,9 @@ StackPanel, 240–241
 VariableSizedGrid, 243–244
 web页面, CSS, 178–181
 布局 UI, (用户界面) 和, 188
-LayoutAwarePage 类, 384–386
-LayoutAwarePage.cs 文件, 380
-lbxItems_SelectionChanged 方法, 418
+`LayoutAwarePage` 类, 384–386
+`LayoutAwarePage.cs` 文件, 380
+`lbxItems_SelectionChanged` 方法, 418
 库
 
 动画, 276–277, 280
@@ -17922,19 +17501,19 @@ WinJS (Windows for JavaScript), 188–189
 能力, 116–517
 软件, 29–30
 键盘本地图标 (设置栏), 56
-KeyboardCapabilities 类, 516–517
-keykeypress 事件, 187
+`KeyboardCapabilities` 类, 516–517
+`keykeypress` 事件, 187
 关键字
-async, 144–145, 144
+`async`, 144–145, 144
 异步, C#, 144–160
-auto, 469
-await, 144–145, 144
-public, 475
+`auto`, 469
+`await`, 144–145, 144
+`public`, 475
 Visual Basic, 导入, 376
 
-LicensedProperty, 545
-LicenseInformation 类, 545–546
-LicenseInformation 属性, 544
+`LicensedProperty`, 545
+`LicenseInformation` 类, 545–546
+`LicenseInformation` 属性, 544
 Windows 8 生命周期
 调试事件, 532
 退出, 316–322
@@ -17950,88 +17529,88 @@ Windows 8 生命周期
 笔记本电脑, 26
 较大的按钮 (活动磁贴), 40
 最后日期属性, 434
-Launcher 类, 375–377
-LaunchFileSync 方法, 375
+`Launcher` 类, 375–377
+`LaunchFileSync` 方法, 375
 启动
 文件, 375–377
 web页面, 375–377
-LaunchUriSync 方法, 375
+`LaunchUriSync` 方法, 375
 层
 桌面应用程序, 64–65
 分离, 494
 
-LightSource 类, 455–456
+`LightSource` 类, 455–456
 lib 绑定, 195
 HTML, 199–201
 列表控件, 开始屏幕, 33
-ListBox 控制, 302–304
-ListView 控制
+`ListBox` 控制, 302–304
+`ListView` 控制
 事件处理程序, 203
-itemDataSource 属性, 201, 212
-itemTemplate 属性, 201, 212
-layout 属性, 212
-ListBox 控制和, 302–304
+`itemDataSource` 属性, 201, 212
+`itemTemplate` 属性, 201, 212
+`layout` 属性, 212
+`ListBox` 控制和, 302–304
 Pictures 库, 200
 刷新函数, 213
-ListView 类, 298–299
+`ListView` 类, 298–299
 控件
-AppBar, 309
-FlipView, 304–305
-GridView, 299-302
-ListView, 302-304
-SemanticZoom, 305-306
+`AppBar`, 309
+`FlipView`, 304–305
+`GridView`, 299-302
+`ListView`, 302-304
+`SemanticZoom`, 305-306
 
-MaintenanceTrigger 事件, 505
+`MaintenanceTrigger` 事件, 505
 托管应用程序, 64–65
 托管环境 (.NET), 16
 托管语言 (.NET), 16
-Margin 属性, 239
-MatrixOperation 类, 489
+`Margin` 属性, 239
+`MatrixOperation` 类, 489
 媒体元素, UI (用户界面) 和
 媒体查询, 213
 菜单, 上键菜单, 329–331
 消息对话框, 337
 添加到应用, 338–340
-MessageBox 类, 337–339
+`MessageBox` 类, 337–339
 Messaging Live Tile, 332
 元数据, Windows Runtime, 70–71
 格式, 71–72
 nospaces, 75–76
 方法
-AddNote, 411
-appendLinesAsync, 190
-appendTextAsync, 190
-AssertAreEqual( ), 535
-Assert.InstanceOfOf( ), 535
-Assert.IsTrue( ), 535
-async, 138
-BeginNextResponse, 135
-BeginIterationName, 335
-btnEnableGyroscope.Click, 455
-CalculatedWithSize_Button, 487
-CalculateWithButton_Tapped, 487–488
-CancelAfter, 179
-CancellationTokenSource, 146–149
-ClearSearchAsync, 334
-ToggleButtonForApplication( ), 351
-CreateClearRow, 102
-Current, 334
-DataChanged, 344
-DisplayButton_Tapped, 501
-DownloadString, 142
-DownloadStringAsync, 144
-DownloadStringTaskAsync, 147, 149
-DoWork, 140, 166
-EndPoint, 135
-Frame.Navigate, 368
-GameCompleted, 339
-GetCurrentReading, 443
-GetDefault, 448
-Deferral( ), 515
-GetFeed, 419
-GetGeoPositionAsync, 433–334
-GetInternetProfile, 412, 414
-GetPointerDevices( ), 518
+`AddNote`, 411
+`appendLinesAsync`, 190
+`appendTextAsync`, 190
+`AssertAreEqual()`, 535
+`Assert.InstanceOfOf()`, 535
+`Assert.IsTrue()`, 535
+`async`, 138
+`BeginNextResponse`, 135
+`BeginIterationName`, 335
+`btnEnableGyroscope.Click`, 455
+`CalculatedWithSize_Button`, 487
+`CalculateWithButton_Tapped`, 487–488
+`CancelAfter`, 179
+`CancellationTokenSource`, 146–149
+`ClearSearchAsync`, 334
+`ToggleButtonForApplication()`, 351
+`CreateClearRow`, 102
+`Current`, 334
+`DataChanged`, 344
+`DisplayButton_Tapped`, 501
+`DownloadString`, 142
+`DownloadStringAsync`, 144
+`DownloadStringTaskAsync`, 147, 149
+`DoWork`, 140, 166
+`EndPoint`, 135
+`Frame.Navigate`, 368
+`GameCompleted`, 339
+`GetCurrentReading`, 443
+`GetDefault`, 448
+`Deferral()`, 515
+`GetFeed`, 419
+`GetGeoPositionAsync`, 433–334
+`GetInternetProfile`, 412, 414
+`GetPointerDevices()`, 518
 Live in, 31
 Live ID, 参见 Microsoft Accounts
 Live Tiles, 332
@@ -18054,153 +17633,152 @@ updating, 350–351
 wide, 351
 number on, 336
 recording, 42–43
-LoadUserProfile, 428
+`LoadUserProfile`, 428
 local resources, 249
-LocalFolder method, 344
+`LocalFolder` method, 344
 Local window (Debugger), 528
-LocalSettings method, 344
+`LocalSettings` method, 344
 Location API, 435–441
 location-aware applications, 332–333
-CivicAddress 类, 335
-Geolocation class, 334
-Geocator class, 433
-Geolocation position, 433
-GetGeoPositionAsync method, 333–434
+`CivicAddress` 类, 335
+`Geolocation` class, 334
+`Geocator` class, 433
+`Geolocation` position, 433
+`GetGeoPositionAsync` method, 333–434
 Location API, 435–441
 lock screen, background tasks and, 505–506
 Microsoft Accounts and, 30–31
 logical pages, templates, 385
-Longitude property, 434
+`Longitude` property, 434
 
 magnetometer, 320
-Compass 类, 457
-MainRightTapped 方法, 331
-MainPage.xml 文件, 361
-MainPage.xaml.cs, 98
+`Compass` 类, 457
+`MainRightTapped` 方法, 331
+`MainPage.xml` 文件, 361
+`MainPage.xaml.cs`, 98
 
 # 方法 - 命名空间
 
 方法 (续)
-GoToState, 276
-IsSavedState, 352
-LaunchFileAsync, 375
-LaunchAsync, 375
-IbPosts_SelectionChanged, 418
-LoadFile, 428
-LocalFolder, 344
-LocalSettings, 344
-MainRightTapped, 331
-Multiply, 488
-MultiplySequential, 488
-Navigate, 366
-NewGameTapped, 338
-NextButtonClicked, 364
-OnCompleted, 512
-DownloadCompleted, 444
-OnLaunched, 237
-OnNavigatedFrom, 368
-OnNavigatedTo, 278, 366–367
-OnNavigatingFrom, 368
-OnProgress, 515
-Resuming, 319
-ShareTargetActivated, 407
-OnSuspended, 312
-OpenContacts, 396–397
-OperationName, 135
-PickMultipleFileAsync, 394
-PickSingleFileAsync, 153, 394
-readbufferAsync, 190
-readLinesAsync, 190
-readTextAsync, 190
-RectangleTapped, 98
-RefreshDate, 318
-RefreshNetworkInfo, 413–414
-Register( ), 511
-RegisterClass, 102
-RemoveFolder, 404
-RemovePuzzleState, 346
-ResetGameButtonTapped, 338
-RestorePuzzleState, 346
-RetrieveFileAsync, 416
-RoamingFolder, 344
-RoamingSettings, 344
-RoamingStorageQuota, 394
-SaveContactsToFile, 398
-SavePuzzleState, 346
-SetTrigger( ), 511
-ShareButton_Click, 411
-showAsync, 195
-ShowForSelectionAsync, 331
-ShowWindow, 122
-Sp_SuggestionsRequested, 404
+`GoToState`, 276
+`IsSavedState`, 352
+`LaunchFileAsync`, 375
+`LaunchAsync`, 375
+`IbPosts_SelectionChanged`, 418
+`LoadFile`, 428
+`LocalFolder`, 344
+`LocalSettings`, 344
+`MainRightTapped`, 331
+`Multiply`, 488
+`MultiplySequential`, 488
+`Navigate`, 366
+`NewGameTapped`, 338
+`NextButtonClicked`, 364
+`OnCompleted`, 512
+`DownloadCompleted`, 444
+`OnLaunched`, 237
+`OnNavigatedFrom`, 368
+`OnNavigatedTo`, 278, 366–367
+`OnNavigatingFrom`, 368
+`OnProgress`, 515
+`Resuming`, 319
+`ShareTargetActivated`, 407
+`OnSuspended`, 312
+`OpenContacts`, 396–397
+`OperationName`, 135
+`PickMultipleFileAsync`, 394
+`PickSingleFileAsync`, 153, 394
+`readbufferAsync`, 190
+`readLinesAsync`, 190
+`readTextAsync`, 190
+`RectangleTapped`, 98
+`RefreshDate`, 318
+`RefreshNetworkInfo`, 413–414
+`Register()`, 511
+`RegisterClass`, 102
+`RemoveFolder`, 404
+`RemovePuzzleState`, 346
+`ResetGameButtonTapped`, 338
+`RestorePuzzleState`, 346
+`RetrieveFileAsync`, 416
+`RoamingFolder`, 344
+`RoamingSettings`, 344
+`RoamingStorageQuota`, 394
+`SaveContactsToFile`, 398
+`SavePuzzleState`, 346
+`SetTrigger()`, 511
+`ShareButton_Click`, 411
+`showAsync`, 195
+`ShowForSelectionAsync`, 331
+`ShowWindow`, 122
+`Sp_SuggestionsRequested`, 404
 
-StartNew, 336
-SumVectorButton_Tapped, 483
-TemporaryFolder, 344
-enthen, 190
-TileUpdateManager.
-GetTemplateContent( ), 350
-TimeCallback, 515
-Version, 344
-Write, 140, 141
-writeBufferAsync, 190
-writeBytesAsync, 190
-writeLinesAsync, 190
-writeTextAsync, 190
+`StartNew`, 336
+`SumVectorButton_Tapped`, 483
+`TemporaryFolder`, 344
+`enthen`, 190
+`TileUpdateManager.GetTemplateContent()`, 350
+`TimeCallback`, 515
+`Version`, 344
+`Write`, 140, 141
+`writeBufferAsync`, 190
+`writeBytesAsync`, 190
+`writeLinesAsync`, 190
+`writeTextAsync`, 190
 MFC (Microsoft Foundation Classes), 65
 Visual Studio and, 90
 Microsoft, C++ and, 366–470
 Microsoft Accounts, 30–318
-MinimumInterval property, 442
+`MinimumInterval` property, 442
 Mobile World Connect, 6–7
-mode property, 260
+`mode` property, 260
 mouse, 236
 capabilities, 517–518
-MouseCapabilities 类, 516, 517–518
-MouseEllipse, 219
-MousePresent, 517
+`MouseCapabilities` 类, 516, 517–518
+`MouseEllipse`, 219
+`MousePresent`, 517
 MS-DS, Hello World, 10–11
 MSIL (Microsoft Intermediate Language), 15, 466
 multiple programming, hybrid, 494
 C#, 495–496
 C++, 495–496
-Multiply, 488
-MultiSequential, 488
+`Multiply`, 488
+`MultiSequential`, 488
 multithreading, 132
 gestures, 26–28
 MVVM (Model-ViewModel) 设计, 381
 namespaces, 75–76
-Platform:Collections, 483–484
-xmlns:prefix, 234
-Windows.ApplicationModel.Background, 507
-Windows.ApplicationModel.Contacts, 399
-Windows.Devices.Geolocation, 433
-Windows.Devices.Sensors, 448
-Windows.Networking.Connectivity, 412
-Windows.Storage.FileIO, 190
+`Platform:Collections`, 483–484
+`xmlns:prefix`, 234
+`Windows.ApplicationModel.Background`, 507
+`Windows.ApplicationModel.Contacts`, 399
+`Windows.Devices.Geolocation`, 433
+`Windows.Devices.Sensors`, 448
+`Windows.Networking.Connectivity`, 412
+`Windows.Storage.FileIO`, 190
 
 # 原生应用程序 – 方向
 
-Windows.Storage.Pickers
-OpenFilePicker 类, 190
-Windows.UI.ApplicationSettings, 340–341
-Windows.Web.Syndication, 415
-WinJS.Binding, 196
-XML, GetMe 应用, 234–337
+`Windows.Storage.Pickers`
+`OpenFilePicker` 类, 190
+`Windows.UI.ApplicationSettings`, 340–341
+`Windows.Web.Syndication`, 415
+`WinJS.Binding`, 196
+XML, `GetMe` 应用, 234–337
 native applications, 64–65
 native languages, 16
 nav bar, 125
-Navigate 方法, 366
-NextButtonClicked 方法, 364
+`Navigate` 方法, 366
+`NextButtonClicked` 方法, 364
 No 事件, 316
 应用程序未运行状态, 314
 data binding, 260–362
 Live Tiles, 350–351
 Notifications 图 (设置栏), 55–56
-NotImplementedException, 476
-NullReferenceException, 476
+`NotImplementedException`, 476
+`NullReferenceException`, 476
 number type (JavaScript), 181
-NumberOfButtons 属性, 517
+`NumberOfButtons` 属性, 517
 
 app bars, 375
 away from pages, 368–369
@@ -18208,18 +17786,18 @@ backward, 363–366
 direct navigation, 359
 events, 366–367
 forward, 363–366
-Frame.Native 方法, 368
+`Frame.Native` 方法, 368
 hierarchical, 359
 hub navigation, 358
-NavigationEventArgs 参数, 366–367
-OnNavigatedTo 方法, 366
-Page 类, 362
+`NavigationEventArgs` 参数, 366–367
+`OnNavigatedTo` 方法, 366
+`Page` 类, 362
 pages, 363–366
 Navigation Mode Label, 368
-NavigationCancellationEventArgs 参数, 366–367
-NavigationEventEventArgs 参数, 366–367
+`NavigationCancellationEventArgs` 参数, 366–367
+`NavigationEventEventArgs` 参数, 366–367
 properties, 362
-NavigationMode 属性, 367
+`NavigationMode` 属性, 367
 .NET 类库, 82
 .NET Framework, 15–17
 apps, 40
@@ -18230,68 +17808,64 @@ Windows Runtime, 81–82
 WPF (Windows Presentation Foundation), 232–233
 Network 图 (设置栏), 55
 网络信息获取, 412–414
-NetworkInformation 类, 412
-NetworkStatusChange 事件触发器, 504
-NewGameTapped 方法, 338
+`NetworkInformation` 类, 412
+`NetworkStatusChange` 事件触发器, 504
+`NewGameTapped` 方法, 338
 
 ![](img/4ba176960f93ce0483da4464a3d695f_616_0.png)
 
 + Object Parcel, 65
 object type (JavaScript), 181
-ObjectAnimation, 281
-objects, IStorageFile, 190
-OffContent 属性, 258
+`ObjectAnimation`, 281
+objects, `IStorageFile`, 190
+`OffContent` 属性, 258
 element (HTML), 172
 OLE (对象链接与嵌入), 15, 471
-OnMouseClicked 函数, 227
-OnShellPanelClicked 函数, 227
-OnBtnNextClicked 函数, 227
-OnBtnShowPanelClicked 函数, 227
-OnCompleted 方法, 512
-OnContent 属性, 258
-OnDownloadedCompleted 方法, 144
-OneTime binding 方法, 262
-OneWay 方法, 316
-OnLaunched 事件, 316
-OnLoaded 方法, 237
-OnNavigatedFrom 方法, 368
-OnNavigatedTo 方法, 278–366
-OnNavigating 方法, 368
-OnButtonClick 方法, 194
-OnProgress 方法, 515
-OnResuming 方法, 319
-OnSearchButtonClick 事件处理程序, 138
+`OnMouseClicked` 函数, 227
+`OnShellPanelClicked` 函数, 227
+`OnBtnNextClicked` 函数, 227
+`OnBtnShowPanelClicked` 函数, 227
+`OnCompleted` 方法, 512
+`OnContent` 属性, 258
+`OnDownloadedCompleted` 方法, 144
+`OneTime` binding 方法, 262
+`OneWay` 方法, 316
+`OnLaunched` 事件, 316
+`OnLoaded` 方法, 237
+`OnNavigatedFrom` 方法, 368
+`OnNavigatedTo` 方法, 278–366
+`OnNavigating` 方法, 368
+`OnButtonClick` 方法, 194
+`OnProgress` 方法, 515
+`OnResuming` 方法, 319
+`OnSearchButtonClick` 事件处理程序, 138
 160–161
-OnShareTargetActivated 方法, 407
-OnSuspending 方法, 318, 322
+`OnShareTargetActivated` 方法, 407
+`OnSuspending` 方法, 318, 322
 OPC (对象封装规范), 323
 Open file location button, 40
 Open window button, 40
-OpenContacts 方法, 396–397
+`OpenContacts` 方法, 396–397
 operating system, 132
-OperationCException, 476
-OperationName 方法, 135
+`OperationCException`, 476
+`OperationName` 方法, 135
 
 + detecting, 459–460
 simple orientation sensor, 458–459
 
-
-
-
-
 # 取向传感器 – 项目
 
 取向传感器, 460
-OrientationSensor 类, 460
-OutOfBoundsException, 476
-OutOfMemoryException, 476
+`OrientationSensor` 类, 460
+`OutOfBoundsException`, 476
+`OutOfMemoryException`, 476
 
-FolderPicker, 393, 395
-PickSingleFileAsync 方法, 394
+`FolderPicker`, 393, 395
+`PickSingleFileAsync` 方法, 394
 using, 396–399
-PickMultipleFileAsync 方法, 394
--PickSingleFileAsync 方法, 194
-PickSingleFileAsync 方法, 153, 194
+`PickMultipleFileAsync` 方法, 394
+`PickSingleFileAsync` 方法, 194
+`PickSingleFileAsync` 方法, 153, 194
 图片艺术, 331
 图片库文件夹, 198
 PIN 密码, 31
@@ -18299,31 +17873,33 @@ PIN 密码, 31
 捏缩手势, 28–29
 固定到开始 屏幕, 如 35–39
 从 Start 开始固定/取消固定, 39
-PlaneProjections, 283–285
-Platform:Collections 命名空间, 483–484
-Platform:String 类型, 481–483
+`PlaneProjections`, 283–285
+`Platform:Collections` 命名空间, 483–484
+`Platform:String` 类型, 481–483
 播放管理器, 502
 指针设备，提供信息 518–520
-PointerDevice 类, 518
-PointerOver 状态, 289
-PointerEntered 事件, 275
-PopInThemeAnimation, 275
-PopupOutThemeAnimation, 275
-PopupMenu 类, 329
-Position 属性, 433
-PositionChanged 事件, 433
+`PointerDevice` 类, 518
+`PointerOver` 状态, 289
+`PointerEntered` 事件, 275
+`PopInThemeAnimation`, 275
+`PopupOutThemeAnimation`, 275
+`PopupMenu` 类, 329
+`Position` 属性, 433
+`PositionChanged` 事件, 433
 电源选项图标（设置栏）, 56
 PPL（并行模式库）, 484–485
 抢占式多任务, 5
-PrimeNumbers 节点, 498–501
-ProductLicenses 属性, 545
+`PrimeNumbers` 节点, 498–501
+`ProductLicenses` 属性, 545
 程序化绑定, 196
 异步, 132–134
 模型, 134
 同步, 132
 任务, 132–133
 线程，阻塞, 133
+
 ## 编程语言
+
 C, 10–12
 C++, 12–14
 动态, 182
@@ -18333,41 +17909,41 @@ C++, 12–14
 选择, 85
 Windows Runtime, 76–78
 进度回调, 158
-ProgressBar 控制, 255–256
-ProgressRing 控制, 255–256
-Projection 属性, 285
+`ProgressBar` 控制, 255–256
+`ProgressRing` 控制, 255–256
+`Projection` 属性, 285
 项目，SimpleRectangles, 100
 
 P
-<element (HTML), 172
-Package.appmanifest, 402–407
+`<element>` (HTML), 172
+`Package.appmanifest`, 402–407
 页面
 创建, 323–325
-Package.appmanifest, 326–327
-Padding 属性, 239
-Page 类, 361
+`Package.appmanifest`, 326–327
+`Padding` 属性, 239
+`Page` 类, 361
 页面资源, 249
-Page.Resources 节, 251
-PageRoot 元素, 366
-Main.Page.xml, 361
+`Page.Resources` 节, 251
+`PageRoot` 元素, 366
+`Main.Page.xml`, 361
 导航离开, 368–369
 之间的导航, 363–366
-Panel 类, 238
+`Panel` 类, 238
 面板
 Canvas, 240
 Grid 控制，在 242–243
 StackPanel, 243–244
 VariableSizedWrapGrid, 214–215
-Parameter 属性, 367
+`Parameter` 属性, 367
 参数
 导航, 367–368
 作为……的功能, 183–184
 解析, 416
-PasswordField 控制, 255
+`PasswordField` 控制, 255
 单词
 图片, 31
 PIN 密码, 31
-Path 属性, 260
+`Path` 属性, 260
 导航模式
 直接导航, 359
 分级导航, 359–360
@@ -18377,10 +17953,10 @@ Path 属性, 260
 持久化应用程序数据, 343
 应用程序数据存储器, 343
 选择器, 392–393
-ContactPicker, 393, 395
+`ContactPicker`, 393, 395
 对话框比较, 393
-FileOpenPicker, 393
-SavePicker, 393, 394
+`FileOpenPicker`, 393
+`SavePicker`, 393, 394
 
 # promises – ResourceDictionary 类
 
@@ -18390,98 +17966,100 @@ promises (JavaScript), 153–154
 Common JS Promises/A 提议, 154
 Twitter 客户端, 154–158
 属性
-- Accuracy, 434
-- Altitude, 434
-- AltitudeAccuracy, 274
+
+- `Accuracy`, 434
+- `Altitude`, 434
+- `AltitudeAccuracy`, 274
 - 附加属性, 238–239
 - 绑定类, 260
-- BorderThickness, 253
-- CancelCommandIndex, 337
-- Canvas.Index, 240
-- Content, 367
-- Converter, 260
-- CornerRadius, 253
-- binding, DataContext, 262–263
-- data, avatarUrl, 196
-- DefaultCommandIndex, 337
+- `BorderThickness`, 253
+- `CancelCommandIndex`, 337
+- `Canvas.Index`, 240
+- `Content`, 367
+- `Converter`, 260
+- `CornerRadius`, 253
+- binding, `DataContext`, 262–263
+- data, `avatarUrl`, 196
+- `DefaultCommandIndex`, 337
 - 依赖属性, 238
-- DisplayApplicationPicker, 377
-- Duration, 285
-- ElementName, 260
-- ExpirationDate, 545
-- FileTypeError, 394
-- Fill,GradientBrush, 233
-- Grid.panel, 241–242
-- Grid.ColumnSpan, 243
-- Grid.RowSpan, 243
-- Heading, 434
-- HorizontalContentAlignment, 286
-- HorizontalScrollVisibility, 257
-- IsActive, 545
-- IsEnabled, 366
-- Itf, 543
-- itemDataSource, 201, 212
-- itemTemplate, 201, 212
-- Latitude, 434
-- LicenseChanged, 545
-- LicenseInformation, 544
-- Longitude, 434
-- MinimumInterval, 442
-- Mode, 260
-- NavigationEventArgs, 367
-- NavigationMode, 367
-- Parameter, 367
-- Path, 260
-- Position, 433
-- ProductLicenses, 545
-- Projection, 285
-- RenderTransformOrigin, 282
-- ReportInterval, 442
-- SlotIndex, 238–239
-- Source, 260
-- SourceType, 367
-- Speed, 434
-- SuggestedLocation, 394
-- Template, 286
-- TextBlock 类, 254
-- Timestamp, 434
-- Uri, 36
-- VerticalContentAlignment, 286, 297
-- VerticalScrollVisibility, 257
-- ViewMode, 394
-- PropertyChanged, 261
-- protected 方法, Windows 3.1, 4
-- public 关键字, 475
-- PushNotificationTrigger, 505
-- quadraticCurve 函数, 221
+- `DisplayApplicationPicker`, 377
+- `Duration`, 285
+- `ElementName`, 260
+- `ExpirationDate`, 545
+- `FileTypeError`, 394
+- `Fill`, `GradientBrush`, 233
+- `Grid.panel`, 241–242
+- `Grid.ColumnSpan`, 243
+- `Grid.RowSpan`, 243
+- `Heading`, 434
+- `HorizontalContentAlignment`, 286
+- `HorizontalScrollVisibility`, 257
+- `IsActive`, 545
+- `IsEnabled`, 366
+- `Itf`, 543
+- `itemDataSource`, 201, 212
+- `itemTemplate`, 201, 212
+- `Latitude`, 434
+- `LicenseChanged`, 545
+- `LicenseInformation`, 544
+- `Longitude`, 434
+- `MinimumInterval`, 442
+- `Mode`, 260
+- `NavigationEventArgs`, 367
+- `NavigationMode`, 367
+- `Parameter`, 367
+- `Path`, 260
+- `Position`, 433
+- `ProductLicenses`, 545
+- `Projection`, 285
+- `RenderTransformOrigin`, 282
+- `ReportInterval`, 442
+- `SlotIndex`, 238–239
+- `Source`, 260
+- `SourceType`, 367
+- `Speed`, 434
+- `SuggestedLocation`, 394
+- `Template`, 286
+- `TextBlock` 类, 254
+- `Timestamp`, 434
+- `Uri`, 36
+- `VerticalContentAlignment`, 286, 297
+- `VerticalScrollVisibility`, 257
+- `ViewMode`, 394
+- `PropertyChanged`, 261
+- `protected` 方法, Windows 3.1, 4
+- `public` 关键字, 475
+- `PushNotificationTrigger`, 505
+- `quadraticCurve` 函数, 221
+
 img/4ba176960f93c5e483da446a3d618_0.png
 RAD（快速应用开发）, 15
-radiusControl, 257
+`radiusControl`, 257
 raster images, 218
-bufferAsync 方法, 190
-Changed 事件, 443
-readlinesAsync 方法, 190
-Readme.txt 文件, 380
-TypeText 方法, 190
-RectangleTapped 方法, 968
-引用命名空间, xmlns:prefix, 234
-refresh 函数, 213
-RefreshMetadata, 438
-RefreshNetworkInfo 方法, 413–414
-Register 方法, 511
-Register 类, 312
+`bufferAsync` 方法, 190
+`Changed` 事件, 443
+`readlinesAsync` 方法, 190
+`Readme.txt` 文件, 380
+`TypeText` 方法, 190
+`RectangleTapped` 方法, 968
+引用命名空间, `xmlns:prefix`, 234
+`refresh` 函数, 213
+`RefreshMetadata`, 438
+`RefreshNetworkInfo` 方法, 413–414
+`Register` 方法, 511
+`Register` 类, 312
 registration（Windows Store）, 550–551
 regression tests, 534
-RemoveFile 方法, 404
-RemovePuzzleState 方法, 346
+`RemoveFile` 方法, 404
+`RemovePuzzleState` 方法, 346
 render transformations, 281–282
-RenderTransformOrigin 属性, 282
-RemoveThemeTransition, 274
-ReportInterval 属性, 442
-RepositionThemeTransition, 274
-ResetGameButtonTapped 方法, 338
+`RenderTransformOrigin` 属性, 282
+`RemoveThemeTransition`, 274
+`ReportInterval` 属性, 442
+`RepositionThemeTransition`, 274
+`ResetGameButtonTapped` 方法, 338
 resolution, Live Tiles, 数量 33
-ResourceDictionary 类, 248, 249
+`ResourceDictionary` 类, 248, 249
 
 # resources – 软件键盘
 
@@ -18495,59 +18073,58 @@ page, 249
 simple orientation sensor, 458–459
 XAML, 248–251
 gyroscope, 448–555
-Resources , 248
-Gyrometer 类, 448–455
-ResumePuzzle 方法, 346
-GyrometerReading 类, 448–555
-Resuming 事件, 316, 378
+`Resources`, 248
+`Gyrometer` 类, 448–455
+`ResumePuzzle` 方法, 346
+`GyrometerReading` 类, 448–555
+`Resuming` 事件, 316, 378
 orientation sensor, 460
-RetrieveAsync 方法, 416
+`RetrieveAsync` 方法, 416
 tablets, 432
 text columns, 385–386
-SessionConnected, 505
-RichTextColumns.cs 文件, 380
-SessionDisconnected, 505
-RoamingFolder, 344
+`SessionConnected`, 505
+`RichTextColumns.cs` 文件, 380
+`SessionDisconnected`, 505
+`RoamingFolder`, 344
 Settings bar
-RoamingSettings 方法, 344
+`RoamingSettings` 方法, 344
 Brightness icon, 55
-RoamingStorage 方法, 344
+`RoamingStorage` 方法, 344
 Keyboard locale icon, 156
 rotate gesture, 28–229
 Network icon, 55
-rotateStoryboard, 285
+`rotateStoryboard`, 285
 Notifications icon, 55–56
-RotateTransform , 282
+`RotateTransform`, 282
 Power options icon, 56
-RotateInline3D 项目, 530–531
+`RotateInline3D` 项目, 530–531
 Volume icon, 55
 rows, Grid 面, 241–242
 Settings button, charm bar, 55–56
 RSS feeds（简单信息源聚合）, 392
 settings charm, 340–342
 Run as Administrator 按钮, 40
-SettingsCommand, 342
+`SettingsCommand`, 342
 running state of application, 314
-SettingsCommandsRequested-handler
+`SettingsCommandsRequested-handler` method, 342
 Runtime, 64
-method, 342
-SettingsPage, 340–341, 340–341
-Setter_r( ) 方法, 511
+`SettingsPage`, 340–341, 340–341
+`Setter_r()` 方法, 511
 Share button, charm, 52–54
-SampleDataSource, 130, 383
+`SampleDataSource`, 130, 383
 Target chart, 407–411
-SampleDataSource.cs 文件, 380, 382–383
-ShareButton_Click 方法, 41
+`SampleDataSource.cs` 文件, 380, 382–383
+`ShareButton_Click` 方法, 41
 sandbox, 78–79, 323
-TargetPage.xaml, 409
-SaveContactsToFile 方法, 398
-showAsync 方法, 195
-PuzzleState 方法, 346
-ShowForSelection 方法, 331
-ScaleTransformation, 282
-ShowWindow 方法, 312
+`TargetPage.xaml`, 409
+`SaveContactsToFile` 方法, 398
+`showAsync` 方法, 195
+`PuzzleState` 方法, 346
+`ShowForSelection` 方法, 331
+`ScaleTransformation`, 282
+`ShowWindow` 方法, 312
 screen:
-SignInButton, 421
+`SignInButton`, 421
 resolution, Live Tiles, 数量 33
 Silverlight, 18
 Start screen, 7–8, 31
@@ -18556,10 +18133,10 @@ list controls, 33
 simple data binding, 195
 scrolling, 213–217
 HTML, 196–458
-ScrollViewer, 257
+`ScrollViewer`, 257
 simple orientation sensor, 458–459
 Search button, charm bar, 51–52
-simpleOrientationSensor 类, 458–559
+`simpleOrientationSensor` 类, 458–559
 Search request, 402–407
 searches
 apps, installed, 34–39
@@ -18569,20 +18146,20 @@ Windows 8 apps, 51–52
 Simulator（Visual Studio）, 533–534
 security, sandbox, 78–79, 323
 select keyboard, 138
-Changed-event, 384
+`Changed-event`, 384
 semantic zoom, 361
-3Zoom, 305–306
+`3Zoom`, 305–306
 Skymap apps, 460
 Sensor API, 456–459
 slates
 sensors, 30, 441
 slide gesture, 28–29
-Accelerometer, 442–448
+`Accelerometer`, 442–448
 accelerometers, 442–448
 amient light sensor, 455–460
 fusion data, 456–460
 gyrometer class, 448–555
-GyrometerReading class, 448–555
+`GyrometerReading` class, 448–555
 gyruscope, 448–458
 inclinometer, 457–458
 magnetometer, 457
@@ -18590,19 +18167,19 @@ orientation sensors, 460
 sample orientation sensor, 458–459
 tap hold gesture, 28–29
 tap gesture, 28–29
-TapDownThemeAnimation, 275
-TapUpThemeAnimation, 275
-TaskCanceledException, 149
+`TapDownThemeAnimation`, 275
+`TapUpThemeAnimation`, 275
+`TaskCanceledException`, 149
 programming, 132–133
 template, 287
-Template property, 286
+`Template` property, 286
 application layout, 378
 Blank Application, 361
 C++ and, 479
 Expression Blend, 290–298
 Grid Application, 377
 infrastructure files, 379–380
-ILayoutAwarePage 类, 384–386
+`ILayoutAwarePage` 类, 384–386
 logical pages, 385
 navigation support, 378
 rich text columns, 385–386
@@ -18611,9 +18188,10 @@ sample data, 378
 managing, 382–384
 
 # software testing – templates
+
 software testing, unit testing, 534–355
 Solution Explorer, 130
-Standard-Styles.xml 文件, 380
+`Standard-Styles.xml` 文件, 380
 star value, 241–442
 Start button, 57–58
 char bar, 50–51
@@ -18622,27 +18200,27 @@ apps, pinning, 35–39
 Calendar Live,, 32
 list controls, 303
 starting apps, Live Lines, 39
-StartNew Method, 336
-StaticResource markup extension, 248
-StartDispatcher object, 015–516
-StorageFileclass, 394
+`StartNew` Method, 336
+`StaticResource` markup extension, 248
+`StartDispatcher` object, 015–516
+`StorageFileclass`, 394
 stories, 274–276
-Stretch enumeration values, 253
-Stretch values, 253
+`Stretch` enumeration values, 253
+`Stretch` values, 253
 string type (JavaScript), 181
 Strout, Bjarne, 12
-style attribute (HTML), CSS, and 174
+`style` attribute (HTML), CSS, and 174
 style blocks (CSS), 174
 styles
 UI（user interface), and, 18
 WPF（Windows Presentation Foundation), 233
 stylus, 30
-SuggestedStartLocation property, 394
-SumaVector..Tapped 方法, 483
+`SuggestedStartLocation` property, 394
+`SumaVector..Tapped` 方法, 483
 suspended state of application, 314
-Suspending event, 316–317
-SuspensionManager.cs 文件, 380
-Swatbuttons property, 517
+`Suspending` event, 316–317
+`SuspensionManager.cs` 文件, 380
+`Swatbuttons` property, 517
 swipe gesture, 28–29
 swipe from edge, 28–29
 switching between programs, 157
@@ -18650,30 +18228,26 @@ synchronous programming, 122
 C# 5.0, 139–142
 Syndication API, 416–419
 syndication formats, feeds, 415
-SyndicationClient 类, 415–419
+`SyndicationClient` 类, 415–419
 system resource, 250
 background tasks and, 503
 tablets, 27
 accommodating, 432
 gPS and, 431
 location-aware applications, 432–433
-CivicAddress 类, 435
-Geocordinate 类, 434
-Geolocation 类, 433
-Geposition 类, 433–434
-GetPositionAsync 方法, 433–434
+`CivicAddress` 类, 435
+`Geocordinate` 类, 434
+`Geolocation` 类, 433
+`Geposition` 类, 433–434
+`GetPositionAsync` 方法, 433–434
 Location API, 435–441
 sensors, 442
-Accelerometer 类, 442–448
+`Accelerometer` 类, 442–448
 accelerometers, 442–448
 amient light sensor, 455–460
 fusion data, 456–460
 gyrometer class, 448–555
-GyrometerReading class, 448–555
-
-
-
-
+`GyrometerReading` class, 448–555
 
 # 模板 - Uls
 
@@ -18683,7 +18257,7 @@ GyrometerReading class, 448–555
 UI（用户界面）和, 18
 Visual Studio, 130
 WPF (Windows Presentation Foundation), 233
-TemporaryFolder 方法, 344
+`TemporaryFolder` 方法, 344
 应用程序的终止状态, 314
 测试
 
@@ -18691,29 +18265,32 @@ TemporaryFolder 方法, 344
 - 单元测试, 534–535
 - Windows 8 风格应用, 535–538
 - 文本块 (text blocks), Expression Blend for Visual 2012, 111–115
-textarea 元素, 194
-TextBlock 类, 254
-TextControl, 属性, 254–255
+
+`textarea` 元素, 194
+`TextBlock` 类, 254
+`TextControl`, 属性, 254–255
 
 - 主题动画 (Animation Library), 273
-- FadeInThemeAnimation, 275
-- FadeOutThemeAnimation, 275
-- PopInThemeAnimation, 275
-- PopOutThemeAnimation, 275
+- `FadeInThemeAnimation`, 275
+- `FadeOutThemeAnimation`, 275
+- `PopInThemeAnimation`, 275
+- `PopOutThemeAnimation`, 275
 - 故事板 (storyboards), 274–276
-- TapDownThemeAnimation, 275
-- TapUpThemeAnimation, 275
-- ThemeAnimations (Animation Library), 273–274
-- AddDeleteThemeTransition, 274
-- ContentThemeTransition, 274
-- EntranceThemeTransition, 273
-- ReorderThemeTransition, 274
-- RepositionThemeTransition, 274
+- `TapDownThemeAnimation`, 275
+- `TapUpThemeAnimation`, 275
+- `ThemeAnimations` (Animation Library), 273–274
+- `AddDeleteThemeTransition`, 274
+- `ContentThemeTransition`, 274
+- `EntranceThemeTransition`, 273
+- `ReorderThemeTransition`, 274
+- `RepositionThemeTransition`, 274
 
-- then 函数, 154
-then 方法, 190
+- `then` 函数, 154
+
+`then` 方法, 190
 线程 (threads), 132–138
 磁贴 (tiles). 另参见 Live Tiles
+
 - 日历 Live 磁贴, 32
 - 额外功能, 352
 - 图像, 352
@@ -18728,43 +18305,48 @@ then 方法, 190
 - 人 Live 磁贴 (People Live Tile), 32
 - 天气 Live 磁贴 (Weather Live Tile), 32
 
-TileTokenType 枚举值, 350
-TileUpdater.GetTemplateContent() 方法, 350
-TimeCallback 方法, 515
+`TileTokenType` 枚举值, 350
+`TileUpdater.GetTemplateContent()` 方法, 350
+`TimeCallback` 方法, 515
 
-Timestamp 属性, 434
-TimeTrigger 事件, 505
-TimeZoneChange 系统事件触发器, 504
-ToggleSwitch 控件, 258–259
-TopAppBar, 309
+`Timestamp` 属性, 434
+`TimeTrigger` 事件, 505
+`TimeZoneChange` 系统事件触发器, 504
+`ToggleSwitch` 控件, 258–259
+`TopAppBar`, 309
 触摸屏, 多点手势, 26
-TouchCapacities 类, 516, 518
+`TouchCapacities` 类, 516, 518
 触摸中心化应用 (touch-center apps), 28
-TouchPresent 属性, 519
+`TouchPresent` 属性, 519
 TPL (任务并行库), 136
-track 元素 (track element), 167
+`track` 元素 (track element), 167
 变换 (transformations), 281–282
+
 - 3D 空间, 282–283
 - 中心点, 282–283
 - 多个, 283
 
-TransformGroup, 283
+`TransformGroup`, 283
 过渡 (transitions), 273–274
-- EntranceThemeTransition, 273
+
+- `EntranceThemeTransition`, 273
 - 视觉状态 (visual states), 276–280
 - 视觉过渡 (visual transitions), 276–277
-TranslateTransform 变换, 282
+
+`TranslateTransform` 变换, 282
 应用程序的测试事件, 544
-ControlCenter.Trigger
-- NetworkStatusChange, 504
-- PushNotificationTrigger, 505
-- TimeTrigger, 505
-- TimeZoneChange, 504
-- UserArray, 504
-- UserPresent, 504
-try-catch 块, 148
-sAccuracy, 437
-sLocationTracking, 437
+`ControlCenter.Trigger`
+
+- `NetworkStatusChange`, 504
+- `PushNotificationTrigger`, 505
+- `TimeTrigger`, 505
+- `TimeZoneChange`, 504
+- `UserArray`, 504
+- `UserPresent`, 504
+
+`try-catch` 块, 148
+`sAccuracy`, 437
+`sLocationTracking`, 437
 开启/关闭 Live 按钮 (Live Tiles), 40
 双向绑定方法, 262
 
@@ -18772,18 +18354,19 @@ sLocationTracking, 437
 
 UI 层, 64
 UI（用户界面）技术, 17–19
-UICommand 对象, 331
-UICommandSeparator 对象, 331
-UIElement, 282
+`UICommand` 对象, 331
+`UICommandSeparator` 对象, 331
+`UIElement`, 282
 UI（用户界面）
+
 - 构建, 258–259
 - 控件, 259
 - 桌面, 25
-Windows 8 风格, 25
-XAML 和, 232–234
-布局管理系统, 237–248
+- Windows 8 风格, 25
+- XAML 和, 232–234
+- 布局管理系统, 237–248
 
-ul 元素 (ul element), 172
+`ul` 元素 (ul element), 172
 
 卸载按钮 (Live Tiles), 40
 
@@ -18807,35 +18390,35 @@ Expression Blend, 和 99–111
 工具窗口, 106–167
 Visual Studio 扩展管理器, 103–105
 视觉过渡, 276–277
-VisualStateGroups, 276
+`VisualStateGroups`, 276
 音量图标 (Volume icon), 55
 单元测试, 533–535
 Windows 8 风格应用, 535–538
 
-VBA 属性, 367
+`VBA` 属性, 367
 用户事件触发, 504
-UserPresent 条件, 505
-UserPresent 条件, 505
+`UserPresent` 条件, 505
+`UserPresent` 条件, 505
 系统事件触发器, 504
-using 指令, 命名空间 (C++), 76
-TileIDRM, 73–74
+`using` 指令, 命名空间 (C++), 76
+`TileIDRM`, 73–74
 值转换器, 数据绑定, 263–264
 变量, 调试, 528–531
-VariableGrid 面板, 243–244
-Orientation 属性, 243
+`VariableGrid` 面板, 243–244
+`Orientation` 属性, 243
 Visual Basic 运行时, 65
 矢量图形, 233
-Version 方法, 344
-VerticalAlignment 属性, 239
-ContentAlignment 属性, 286–297
-VerticalScroll 属性, 257
-VerticalWheel 属性, 167
-ViewMode, 394
-Imports 关键字, 76
+`Version` 方法, 344
+`VerticalAlignment` 属性, 239
+`ContentAlignment` 属性, 286–297
+`VerticalScroll` 属性, 257
+`VerticalWheel` 属性, 167
+`ViewMode`, 394
+`Imports` 关键字, 76
 Visual Component Library (VCL) for Delphi, 65
 视觉外观, 285–298
 状态, 280
-ToMethod, 276
+`ToMethod`, 276
 视觉过渡, 276–297
 Visual Studio, 144
 Expression Blend for Visual Studio 2012, 108
@@ -18893,7 +18476,7 @@ Windows 8 风格应用, 8
 添加到屏幕, 322–333
 响应事件, 335–336
 应用标题, 通知, 349–353
-ApplicationData 类, 343–346
+`ApplicationData` 类, 343–346
 Chrome (chromes), 343–346
 Visual Studio 2012, 部署目标, 532–534
 Windows App Kit, 55
@@ -18934,14 +18517,14 @@ DLLs (动态链接库), 71
 .NET Framework, 76
 .NET Framework 4.5, 82
 Windows Runtime, 62
-Windows.Storage.FileIO 类, 190
-Windows.UI.Popups.InputDialog, 349
-Windows.UI.Web.Syndication 命名空间, 415
+`Windows.Storage.FileIO` 类, 190
+`Windows.UI.Popups.InputDialog`, 349
+`Windows.UI.Web.Syndication` 命名空间, 415
 WinJS 库, 188–189
-WinJS.Binding 命名空间, 196
-WinJS.Binding.Template, 201
-WinJS.UI.ListView, 212
-WinJS.UI.processAll() 函数, 159, 194, 197
+`WinJS.Binding` 命名空间, 196
+`WinJS.Binding.Template`, 201
+`WinJS.UI.ListView`, 212
+`WinJS.UI.processAll()` 函数, 159, 194, 197
 WinRT 组件 DLL, 479
 WPF (Windows Presentation Foundation), 17, 18–19, 232–233
 
@@ -18956,7 +18539,7 @@ Hello World, 178
 布局管理系统, 237–248
 标记扩展, 234
 命名空间, 创建我的应用, 234–237
-Panel 类, 238
+`Panel` 类, 238
 属性语法, 233
 资源
 层级, 249
@@ -18967,11 +18550,7 @@ using, 250–251
 UI（用户界面）和, 232–234
 Xerox PARC, 122
 XML (可扩展标记语言), 17
-xmlns:prefix 属性, 234
-
-
-
-
+`xmlns:prefix` 属性, 234
 
 # 免费试用 Safari Books Online 15 天 + 前 12 个月享 85 折*
 
@@ -18988,7 +18567,7 @@ xmlns:prefix 属性, 234
 - 预出版的 Rough Cuts 手稿稿
 
 立即开始您的免费试用！
-访问 www.safariboonline.com/wrox57 开始。
+访问 `www.safariboonline.com/wrox57` 开始。
 
 * 适用于新订阅者。折扣适用于 Safari Library，并在前 12 个连续月计费周期有效。Safari Library 并非在所有国家可用。
 
@@ -18997,27 +18576,32 @@ xmlns:prefix 属性, 234
 # 相关 Wrox 书籍
 
 ## 专业 Windows 8编程：应用程序开发
+
 结合 HTML 5、CSS 3 和 JavaScript
 ISBN: 978-1-118-20570-9
 
 Windows 8 允许您利用现有的网络编程概念（如 HTML、CSS 和 JavaScript）来创建功能齐全的 Windows 应用程序。这本必读书籍将带您深入探索 Windows 8 平台的所有开发功能，让您从今天就开始开始开发应用。
 
 ## 专业 C# 2012 和 .NET 4.5
+
 ISBN: 978-1-118-31442-5
 
 在快速回顾 C# 基础后，作者梦之团队将为您提供语言和框架的细节，包括 LINQ、LINQ to SQL、LINQ to XML、WCF、WPF、Workflow 和泛型。内容还包括使用 C# 进行 ASP.NET 编程、在 Visual Studio 2012 中工作 C# 等。
 
 ## 初学者 Microsoft Visual C# 2012
+
 ISBN: 978-1-118-31441-8
 
 通过本书，您将首先涵盖变量、流程控制面向对象编程等基础，并逐步建立 Web 和 Windows 编程、Windows Forms 和数据访问的技能。分步骤说明将引导您完成各项流程，并在每个阶段邀请您“尝试一下”。到最后，您将能够根据在这本详实实用的书中学到的步骤编写实用的编程代码。如果您想精通 Visual C# 编程，这本书是完美的一站式资源。
 
 ## Ivor Horton 初学者 Visual C++ 2012
+
 ISBN: 978-1-118-36808-4
 
 Ivor Horton 对标准 C++ 语言和 Visual C++ 都提供了全面的介绍，并提供分步骤的编程练习、示例和解决方案，巧妙地引导初学者掌握 C++ 开发的奥秘。
 
 ## 专业 Visual Studio 2012
+
 ISBN: 978-1-118-33770-7
 
 这本书是您快速上手 Visual Studio 2012 所需的读物。由一位微软 C# MVP 编写，引导您熟悉集成开发环境 (IDE)，向您展示如何最大化每个工具和功能的价值。
@@ -19059,4 +18643,3 @@ Wrox 初学者指南旨在让学习语言和技术比您想象的更容易，提
 # 阅读更多
 
 查找数百种书籍的文章、电子书、示例章节和目录，以及关于您关心的编程主题的更多参考资源。
-

@@ -1,346 +1,234 @@
+
 # WPF 程序员参考指南：CA 2010 和 .NET 4 的 Windows Presentation Foundation
 
+## 从 wrox.com 获取更多内容
 
+### 互动
+通过参与 `@p2p.wrox.com` 的 P2P 论坛，在网上发挥积极作用
 
+### 加入社区
+在 `newsletter.wrox.com` 订阅我们的免费每月新闻邮件
 
+### Wrox 在线图书馆
+我们的数百种书籍已通过 `Books24x7.com` 可提供
 
-
-
-
-
-
-# 从 wrox.com 获取更多内容
-
-# 互动
-
-通过参与 @p2p.wrox.com 的 P2P 论坛，在网上发挥积极作用
-
-# 加入社区
-
-在 newsletter.wrox.com 订阅我们的免费每月新闻邮件
-
-# Wrox 在线图书馆
-
-我们的数百种书籍已通过 Books24x7.com 可提供
-
-# 浏览
-
+### 浏览
 准备好学习 Wrox 吗？我们提供了关于 .NET、SQL Server、Java、XML、Visual Basic、C#/ C++ 及等领域的书籍和电子书！
 
-# Wrox Blox
-
+### Wrox Blox
 下载简短的信息片段和代码，让您与时同步并避免陷阱！
 
-# 联系我们
+### 联系我们
+我们总是欢迎来自读者的反馈。有书的书的想法吗？需要社区支持吗？请发送电子邮件至 `wrox-partnerwithus@wrox.com` 告诉我们
 
-我们总是欢迎来自读者的反馈。有书的书的想法吗？需要社区支持吗？请发送电子邮件至 wrox-partnerwithus@wrox.com 告诉我们
+书号: `978-0-470-47722-9`
 
+## 关于作者
 
+`ROD STEPHENS` 在 MIT 求读期间开始一名数学家，他发现了编程的乐趣，从那以后一直从事专业编程。在职业生涯中，他参与了多个领域的应用，如电话交换、计费、维修调度、税务处理、废水处理、演唱会门票销售、地图绘制以及职业运动员的训练。
 
+`Rod` 是微软 Visual Basic 最优秀专业人士 (MVP) 和 ITT 兼职教师。他编写了 20 多本书，这些书籍已被翻译成全球各种语言，并发表了 250 多篇涵盖 Visual Basic、C#、VBA、Delphi 和 Java 的杂志文章。他是 `DevX` (`www.DevX.com`) 的定期贡献者。
 
+`Rod` 著名的 VB Helper 网站 `www.vb-helper.com` 每月拥有数百万访问量，包含了数千页针对 Visual Basic 程序员的提示、技巧和示例代码，以及本书的示例代码。
 
-
-
-
-
-
-
-
-
-书号: 978-0-470-47722-9
-
-
-
-
-
-
-
-
-
-
-
-# 关于作者
-
-
-ROD STEPHENS 在 MIT 求读期间开始一名数学家，他发现了编程的乐趣，从那以后一直从事专业编程。在职业生涯中，他参与了多个领域的应用，如电话交换、计费、维修调度、税务处理、废水处理、演唱会门票销售、地图绘制以及职业运动员的训练。
-
-Rod 是微软 Visual Basic 最优秀专业人士 (MVP) 和 ITT 兼职教师。他编写了 20 多本书，这些书籍已被翻译成全球各种语言，并发表了 250 多篇涵盖 Visual Basic、C#、VBA、Delphi 和 Java 的杂志文章。他是 DevX (www.DevX.com) 的定期贡献者。
-
-Rod 著名的 VB Helper 网站 www.vb-helper.com 每月拥有数百万访问量，包含了数千页针对 Visual Basic 程序员的提示、技巧和示例代码，以及本书的示例代码。
-
-# 鸣谢
+## 鸣谢
 
 执行编辑
-Bob Elliott
+`Bob Elliott`
 
-副总裁及
-执行集团出版经理
-Richard Swadle
+副总裁及执行集团出版经理
+`Richard Swadle`
 
 高级项目编辑
-Adaobi Obi Tuton
+`Adaobi Obi Tuton`
 
-副总裁及
-执行出版经理
-Barry Pruett
+副总裁及执行出版经理
+`Barry Pruett`
 
 技术编辑
-John Mueller
+`John Mueller`
 
 助理出版
-Jim Minateli
+`Jim Minateli`
 
 高级制作编辑
-Debra Banninger
+`Debra Banninger`
 
 封面协调员
-Lynsey Stanford
+`Lynsey Stanford`
 
 拷贝
-Cate Caffery
+`Cate Caffery`
 
 排版
-James D. Kramer, Happenstance Type-O-Ramer
+`James D. Kramer, Happenstance Type-O-Ramer`
 
 编辑总监
-Robyn B. Siesky
+`Robyn B. Siesky`
 
 校对
-Nancy Carrasco
+`Nancy Carrasco`
 
 编辑经理
-Mary Beth Wakefield
+`Mary Beth Wakefield`
 
 索引
-J & J Indexing
+`J & J Indexing`
 
 营销经理
-Ashley Zurcher
+`Ashley Zurcher`
 
 封面设计师
-Michael E. Trent
+`Michael E. Trent`
 
 制作经理
-Tim Tate
+`Tim Tate`
 
 封面图片
 © Ben Blankenburg / istockphoto
 
-# 致谢
+## 致谢
 
-**感谢** Bob Elliott、Adaobi Obi Tulton、Kristin Vorce、Cate Caffrey 以及所有为本书这本书付出巨大努力的人。
+感谢 `Bob Elliott`、`Adaobi Obi Tulton`、`Kristin Vorce`、`Cate Caffery` 以及所有为本书这本书付出巨大努力的人。
 
-同样感谢 John Mueller 为我提供了另一个视角以及他丰富的专业知识。访问 www.mwt.net/~mueller 了解 John 的书籍并订阅他的免费邮件 .NET Tips, Trends & Technology eEXTRA。
-
-
+同样感谢 `John Mueller` 为我提供了另一个视角以及他丰富的专业知识。访问 `www.mwt.net/~mueller` 了解 John 的书籍并订阅他的免费邮件 .NET Tips, Trends & Technology eEXTRA。
 
 - 新控件 17
-
-
-
-
-
-- 分隔符 (Separator) 97
-
-
-
-- 矩形 (Rectangle) 151
-
-
+- 分隔符 (`Separator`) 97
+- 矩形 (`Rectangle`) 151
 + 第 11 章：事件与后台代码 179
 - 示例代码 181
 
-
-
-
-
-
-
-
-
-
-
-
-# 第 19 章：控制 347
-
+## 第 19 章：控制 347
 控制概念 348
 带操作的预定义命令 349
 不带操作的预定义命令 352
 自定义命令 355
 总结 358
 
-# 第 20 章：变换与效果 359
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 第 20 章：变换与效果 359
 总结 416
-
-
-DockPanel 附加属性 423
-
-
-GroupBox 431
-
-
-
-
-
-
-
-
+`DockPanel` 附加属性 423
+`GroupBox` 431
 线性渐变画刷 500
-SolidBrush 502
-
-
-
+`SolidBrush` 502
 选择表达式 516
 显示表达式 517
-
-
 + 绑定组件 519
-绑定到 RelativeSource 520
+绑定到 `RelativeSource` 520
 绑定到 XAML 代码中的类 521
 XAML 代码中的集合 522
 后台代码中的集合 522
-
-
-
-ComponentCommands 526
+`ComponentCommands` 526
 编辑命令 527
-MediaCommands 530
+`MediaCommands` 530
 导航命令 531
 XAML 中的命令 531
 后台代码中的命令 532
-
-
 命名样式 535
 未命名样式 536
-
-
-CheckBox 540
-RadioButton 541
+`CheckBox` 540
+`RadioButton` 541
 定向进度条 542
 修改的滚动条 445
 
-
-
-
-
 # 引言
 
-WINDOWS PRESENTATION Foundation (WPF) 是微软在用户界面 (UI) 开发方面的下一步。虽然 WPF 允许开发者像多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。WPF 允许你像开发者多年来那样投放控件，但 WPF 提供了一次跨越式的飞跃。
+`WINDOWS PRESENTATION Foundation` (`WPF`) 是微软在用户界面 (`UI`) 开发方面的下一步。虽然 `WPF` 允许开发者像多年来那样投放控件，但 `WPF` 提供了一次跨越式的飞跃。
 
-*(注：由于原文中存在大量重复的句子，此处遵循指令要求“不要重复输出原文”)*
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
-
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
-
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and content, as shown in Figure 0-1.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to rearrange their content, and needed, as shown in Figure 0-2.
+`WPF` allows you to rearrange their content, and needed, as shown in Figure 0-2.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 such- and effects, as shown in Figure 0-3.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and effects, as shown in Figure 0-4.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and effects, as shown in Figure 0-5.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and- effects, as shown in Figure 0-6.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and- effects, as shown in Figure 0-7.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-WPF allows you to drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` allows you to drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
 and- effects, as shown in Figure 0-8.
 
-WPF lets you drop controls as developers have been doing for years, but WPF provides a quantum leap.
+`WPF` lets you drop controls as developers have been doing for years, but `WPF` provides a quantum leap.
 
-[content]
+Unfortunately, to use `WPF`, you must overcome a steep learning curve. Many of the fundamental concepts in modern UI design are different from those used by `WPF`. Concepts as basic as how events are handled and how program code is attached to the user interface are different in `WPF`. Many of these new concepts are unified, elegant, and simple. Such as declarative building an interface in Extensible Markup Language (`XAML`), value inheritance, and allowing controls to contain any type of content make it simple yet powerful.
 
-Unfortunately, to use WPF, you must overcome a steep learning curve. Many of the fundamental concepts in modern UI design are different from those used by WPF. Concepts as basic as how events are handled and how program code is attached to the user interface are different in WPF. Many of these new concepts are unified, elegant, and simple. Such as declarative building an interface in Extensible Markup Language (XAML), value inheritance, and allowing controls to contain any type of content make it simple yet powerful.
+This book provides an introduction to `WPF` development. It explains fundamental concepts so you can start applications quickly and easily. As it progresses, the book covers more complex topics, explaining how to handle the extras and shortcuts built into `WPF`.
 
-This book provides an introduction to WPF development. It explains fundamental concepts so you can start applications quickly and easily. As it progresses, the book covers more complex topics, explaining how to handle the extras and shortcuts built into WPF.
+The book finishes with a series of appendices summarizing `WPF` concepts and syntax for easy reference. You can use these appendices to refresh your memory of `WPF`'s intricate and sometimes intuitive syntax.
 
-The book finishes with a series of appendices summarizing WPF concepts and syntax for easy reference. You can use these appendices to refresh your memory of WPF's intricate and sometimes intuitive syntax.
+Of course, many future applications will be written without `WPF`. Many will be written using clunky old technologies like command-line interfaces and pure HTML. Others will be written with competing technologies like Java and Flash. Finally, developers will continue using old familiar Windows Forms in C# or Visual Basic. There's a lot to be said for sticking with what you know, but the future of development in the Windows environment is `WPF`.
 
-Of course, many future applications will be written without WPF. Many will be written using clunky old technologies like command-line interfaces and pure HTML. Others will be written with competing technologies like Java and Flash. Finally, developers will continue using old familiar Windows Forms in C# or Visual Basic. There's a lot to be said for sticking with what you know, but the future of development in the Windows environment is WPF.
+## 谁适合这本书
 
-# 谁适合这本书
-
-This book is for anyone who wants to use or better understand WPF. In particular, it is intended for:
+This book is for anyone who wants to use or better understand `WPF`. In particular, it is intended for:
 
 - Specialized UI designers who build user interfaces but don't write program code
 - Programmers who write the code behind the user interface
 - Jack-of-all-trades developers who create user interfaces and write the code behind them
-- Web developers who want to learn how to use WPF in loose web pages, browser-applications, and Silverlight applications
-- Project managers who want a better understanding of what WPF is and what kinds of features it can provide
+- Web developers who want to learn how to use `WPF` in loose web pages, browser-applications, and Silverlight applications
+- Project managers who want a better understanding of what `WPF` is and what kinds of features it can provide
 
+## 引言
 
-
-
-
-# 引言
-
-几十年来，优秀的开发者一直将 UI 构建与用户界面背后的代码（code behind）分开。保持这种分离有利于在不同的开发者之间分配工作，并更便于独立地构建每个部分。WPF 延续了这一哲学，它让用户界面与后台代码之间的分离比以往任何时候都更加清晰。
+几十年来，优秀的开发者一直将 UI 构建与用户界面背后的代码（code behind）分开。保持这种分离有利于在不同的开发者之间分配工作，并更便于独立地构建每个部分。`WPF` 延续了这一哲学，它让用户界面与后台代码之间的分离比以往任何时候都更加清晰。
 
 事实上，微软最初的愿景是：由专业的图形设计师构建用户界面，而程序员则完全负责添加后台代码。
 
 虽然许多开发项目无法负担同时雇佣独立图形设计师和程序员的费用，但将这两项任务分开仍然很有价值。本书专门为负责其中任一任务的人士而编写。
 
-本书提供了对 WPF 的介绍，不需要你具备任何相关经验。事实上，它甚至不需要你具备任何先前的编程或 UI 设计经验。
+本书提供了对 `WPF` 的介绍，不需要你具备任何相关经验。事实上，它甚至不需要你具备任何先前的编程或 UI 设计经验。
 
 > 我不想收到一大堆抱怨某些内容太基础的“喷火式”邮件，所以我现在就警告你！如果你对入门级材料感到受到了极大的冒犯，欢迎跳过前几章，直接阅读更高级的内容。
 
 尽管本书不需要先前的编程经验，但它涵盖了大量内容，并涉及了一些高级主题。当你读完这本书时，无论你开始时的经验如何，都应该学到很多。
 
-# 本书涵盖的内容（以及未涵盖的内容）
+## 本书涵盖的内容（以及未涵盖的内容）
 
-本书解释了 WPF 开发。它解释了如何使用微软的 Expression Blend 工具、Visual Studio 和 XAML 语言来构建用户界面。它还解释了如何使用 Visual Studio 将代码附加到界面。
+本书解释了 `WPF` 开发。它解释了如何使用微软的 `Expression Blend` 工具、`Visual Studio` 和 `XAML` 语言来构建用户界面。它还解释了如何使用 `Visual Studio` 将代码附加到界面。
 
-WPF 是一个非常灵活的工具，你可以用它制作出惊叹的用户界面。遗憾的是，它通常也很复杂，有时令人困惑，有时又令人生畏。你可以利用它完成非凡的 UI 幻术，但这样做可能是一场充满实验和浏览的英雄式冒险。
+`WPF` 是一个非常灵活的工具，你可以用它制作出惊叹的用户界面。遗憾的是，它通常也很复杂，有时令人困惑，有时又令人生畏。你可以利用它完成非凡的 UI 幻术，但这样做可能是一场充满实验和浏览的英雄式冒险。
 
 这种开发行为违背了微软的愿景——即由专业图形设计师构建用户界面，然后由程序员将其附加到代码中。我可能混错了圈子，但我遇到的设计师并没有技能或兴趣花费时间去构建复杂的 UI 界面。相反，他们更关注界面的外观和易用性。
 
-本书的哲学是：用户界面是应用程序的前端，而不是应用程序本身。构建一个数据输入表单不需要多年的经验和 WPF 博士学位。
+本书的哲学是：用户界面是应用程序的前端，而不是应用程序本身。构建一个数据输入表单不需要多年的经验和 `WPF` 博士学位。
+
+
 
 如果需要大量的花哨技巧才能让程序执行某些奇特的动作，那么本书并不涵盖这些内容。对于更复杂的情况，本书会在用户界面和其后台代码之间自由切换。例如，如果某个动画用纯 WPF 很难控制，但使用后台代码很容易控制，我每次都会选择后者。
 
@@ -356,52 +244,9 @@ WPF 是一个非常灵活的工具，你可以用它制作出惊叹的用户界�
 
 如果你知道自己不会使用 Expression Blend 或 Visual Studio，你可能想跳过相应的章节。例如，如果你知道自己将使用 Visual Studio 而不是 Expression Blend，那么你可能想跳过第 3 章。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 引言
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 如何使用本书
+## 如何使用本书
 
 有几种方法可以构建和查看 WPF 应用程序以及 XAML 文件，每种方法都有不同的要求。
 
@@ -413,96 +258,88 @@ WPF 是一个非常灵活的工具，你可以用它制作出惊叹的用户界�
 
 请注意，Windows Vista 预装了 .NET Framework 3.0，所以如果你正在运行 Vista，你可能已经好了。你可以在 Windows XP 中安装 .NET Framework 3 及更高版本，但在更早版本的 Windows 中不行。据我所知，你无法在 UNIX 或 Macintosh 操作系统上运行 WPF。
 
-
-
-
 为了利用编辑器的色彩，书中的代码列表使用了与您在 Visual Studio 或 Expression Blend 屏幕上类似的颜色进行着色。为了优化清晰度，某些颜色在打印时的色调与您在屏幕上看到的略有不同。书书中所有代码的颜色都应该与 Visual Studio 的默认颜色足够接近，以便为您提供准确的颜色呈现。
 
-# 源代码
+## 源代码
 
 在学习本书中的示例时，您可以选择手动输入所有代码，也可以使用随书附带的源代码文件。许多示例仅显示了与当前主题相关的代码，可能缺少了使示例正常运行所需的某些详细信息。
 
-书书中使用的所有源代码均可在 www.wrox.com 下载。进入该网站后，只需找到书名（使用搜索框或标题列表之一），然后点击书籍详情页上的“下载代码”（Download Code）链接，即可获取该书的所有源代码。
+书书中使用的所有源代码均可在 `www.wrox.com` 下载。进入该网站后，只需找到书名（使用搜索框或标题列表之一），然后点击书籍详情页上的“下载代码”`Download Code` 链接，即可获取该书的所有源代码。
 
-> 许多书籍的标题非常相似，您可能会发现通过 ISBN 搜索最为方便；本书的 ISBN 是 978-0-470-47722-9。
+> 许多书籍的标题非常相似，您可能会发现通过 ISBN 搜索最为方便；本书的 ISBN 是 `978-0-470-47722-9`。
 
-下载代码后，请使用您喜欢的压缩工具对其进行解压。或者，您可以访问 Wrox 代码下载主页 www.wrox.com/dynamic/books/download.aspx 查看适用于本书及所有其他 Wrox 书籍的代码。
+下载代码后，请使用您喜欢的压缩工具对其进行解压。或者，您可以访问 Wrox 代码下载主页 `www.wrox.com/dynamic/books/download.aspx` 查看适用于本书及所有其他 Wrox 书籍的代码。
 
-您还可以从我们 VB Helper 网站 www.vb-helper.com/wpf.htm 上的网页下载本书的源代码。该页面允许您一次性下载书籍的所有代码、单独下载 C# 或 Visual Basic 泛型，或者按每个章节下载。
+您还可以从我们 VB Helper 网站 `www.vb-helper.com/wpf.htm` 上的网页下载本书的源代码。该页面允许您一次性下载书籍的所有代码、单独下载 C# 或 Visual Basic 泛型，或者按每个章节下载。
 
-# 勘误 (ERRATA)
+## 勘误 ERRATA
 
 我们尽全力确保文本或代码中没有错误。然而，没有人是完美的，错误在所难免。如果您在我们的某本书中发现任何错误（例如拼写错误或错误的代码），我们将非常感谢您的反馈。通过发送勘误，您可以为另一位读者节省数小时的挫败感，同时帮助我们提供更高质量的信息。
 
-要找到本书的勘误页面，请访问 www.wrox.com 并使用搜索框或标题列表找到标题。然后，在书籍详情页上，点击“书籍勘误”（Book errata）链接。在此页面上，您可以查看所有提交给本书并由 Wrox 编辑者发布的勘误。在 www.wrox.com/misc-pages/booklist.shtml 还可以查看完整的书籍列表，其中包含每本书勘误的链接。
+要找到本书的勘误页面，请访问 `www.wrox.com` 并使用搜索框或标题列表找到标题。然后，在书籍详情页上，点击“书籍勘误”`Book errata` 链接。在此页面上，您可以查看所有提交给本书并由 Wrox 编辑者发布的勘误。在 `www.wrox.com/misc-pages/booklist.shtml` 还可以查看完整的书籍列表，其中包含每本书勘误的链接。
 
-# 引言 (INTRODUCTION)
+## 引言 INTRODUCTION
 
-如果您在书籍勘误页面上没有发现“您的”错误，请访问 www.wrox.com/contact/techsupport.shtml 并填写表单向我们发送您发现的错误。我们将检查这些信息，并在适当的情况下向书籍勘误页发布消息，并在书籍后续版本中修复问题。
+如果您在书籍勘误页面上没有发现“您的”错误，请访问 `www.wrox.com/contact/techsupport.shtml` 并填写表单向我们发送您发现的错误。我们将检查这些信息，并在适当的情况下向书籍勘误页发布消息，并在书籍后续版本中修复问题。
 
-# P2P.WROX.COM
+## P2P.WROX.COM
 
-如需作者和同行讨论，请加入 p2p.wrox.com 的 P2P 论坛。论坛是一个基于 Web 的系统，您可以在此发布 Wrox 书籍及相关技术的消息，并与其他读者和其他技术用户进行互动。论坛提供订阅功能，当论坛发布新帖子时，可以通过电子邮件发送给您或其他感兴趣的人。Wrox 的作者、编辑、其他行业人士以及您的读者都活跃在这些论坛中。
+如需作者和同行讨论，请加入 `p2p.wrox.com` 的 P2P 论坛。论坛是一个基于 Web 的系统，您可以在此发布 Wrox 书籍及相关技术的消息，并与其他读者和其他技术用户进行互动。论坛提供订阅功能，当论坛发布新帖子时，可以通过电子邮件发送给您或其他感兴趣的人。Wrox 的作者、编辑、其他行业人士以及您的读者都活跃在这些论坛中。
 
-在 http://p2p.wrox.com 您将找到许多不同的论坛，它们不仅能帮助您阅读本书，还能帮助您开发自己的应用程序。要加入论坛，请遵循以下步骤：
+在 `http://p2p.wrox.com` 您将找到许多不同的论坛，它们不仅能帮助您阅读本书，还能帮助您开发自己的应用程序。要加入论坛，请遵循以下步骤：
 
-- 1. 访问 p2p.wrox.com 并点击“注册”（Register）链接。
-- 2. 阅读使用条款并点击“同意”（Agree）。
-- 3. 完成加入所需信息以及您希望提供的任何可选信息，并点击“提交”（Submit）。
+- 1. 访问 `p2p.wrox.com` 并点击“注册”`Register` 链接。
+- 2. 阅读使用条款并点击“同意”`Agree`。
+- 3. 完成加入所需信息以及您希望提供的任何可选信息，并点击“提交”`Submit`。
 - 4. 您将收到一封电子邮件，其中包含了如何验证账户和完成加入过程的信息。
 
 > 您可以在不加入 P2P 的情况下阅读论坛消息，但为了发布自己的消息，必须加入。
 
-一旦加入，您就可以发布新消息并回复其他用户发布的消息。您可以随时在 Web 上阅读消息。如果您希望将特定论坛的新消息邮件给您，请点击论坛列表中论坛名称旁的“订阅此论坛”（Subscribe to this Forum）图标。
+一旦加入，您就可以发布新消息并回复其他用户发布的消息。您可以随时在 Web 上阅读消息。如果您希望将特定论坛的新消息邮件给您，请点击论坛列表中论坛名称旁的“订阅此论坛”`Subscribe to this Forum` 图标。
 
-有关如何使用 Wrox P2P 的更多信息，请务必阅读常见问题解答（FAQs），以获得有关论坛如何运作以及针对 Wrox 书籍常见问题的答案。使用论坛可以让其他读者从您的问题和任何答案中受益。
+有关如何使用 Wrox P2P 的更多信息，请务必阅读常见问题解答`FAQs`，以获得有关论坛如何运作以及针对 Wrox 书籍常见问题的答案。使用论坛可以让其他读者从您的问题和任何答案中受益。
 
-如果您有不想发布在论坛上的意见、建议或问题，请随时邮件至 Stephens@vb-helper.com 并附上您的意见、建议或问题。我无法解决每一个问题，但如果可以，我会尽力为您提供帮助。
+如果您有不想发布在论坛上的意见、建议或问题，请随时邮件至 `Stephens@vb-helper.com` 并附上您的意见、建议或问题。我无法解决每一个问题，但如果可以，我会尽力为您提供帮助。
 
 # WPF 概述
 
-本章解释了 Windows Presentation Foundation (WPF) 的基本概念。通常情况下，如果这是一本菜谱，那么这一章显然是我解释并告诉您为什么它很重要（“所以别饿死”）的地方。在这种情况下，我鼓励您在深入学习之前至少浏览一下这一章。WPF 的许多部分是令人困惑且似乎不一致的。本章提供了关于 WPF 是什么（这比您想象的要多）、WPF 的目标以及 WPF 使用底层架构的一些有用背景。这些碎片信息将为您理解 WPF 的怪癖和特性提供有用的视角。例如，这些信息会让您说出“哦，WPF 是那样做的”，从而为我少敲几次键。除了这些背景之外，本章还描述了 WPF 项目的基本类型。最后，本章可以帮助您理解后续章节中包含的内容。本章将简要定义资源、样式、控制模板以及在后面描述得更详细的术语。现在对这些术语进行快速介绍将帮助您知道以后应该读哪些章节。
+本章解释了 Windows Presentation Foundation `WPF` 的基本概念。通常情况下，如果这是一本菜谱，那么这一章显然是我解释并告诉您为什么它很重要（“所以别饿死”）的地方。在这种情况下，我鼓励您在深入学习之前至少浏览一下这一章。WPF 的许多部分是令人困惑且似乎不一致的。本章提供了关于 WPF 是什么（这比您想象的要多）、WPF 的目标以及 WPF 使用底层架构的一些有用背景。这些碎片信息将为您理解 WPF 的怪癖和特性提供有用的视角。例如，这些信息会让您说出“哦，WPF 是那样做的”，从而为我少敲几次键。除了这些背景之外，本章还描述了 WPF 项目的基本类型。最后，本章可以帮助您理解后续章节中包含的内容。本章将简要定义资源、样式、控制模板以及在后面描述得更详细的术语。现在对这些术语进行快速介绍将帮助您知道以后应该读哪些章节。
 
-# WPF 简览 (WPF IN NUTSHELL)
+# WPF 简览 WPF IN NUTSHELL
 
 WPF 已经存在了一段时间，但仍然有很多人并不真正了解它。我听过有人声称它从一组控件到 XAML 无所不是。事实上，这些态度中的每一个都包含一丝真理。WPF 确实包含了一组取代 Windows Forms 控件的新控件。运行 WPF 应用程序所需的库由 Vista 和 Windows 7 安装，因此它算是一种某种东西，尽管您可以在 Windows XP 中以及未来的 WPF 版本中（甚至是今天）运行 WPF 应用程序。WPF 应用程序可以使用 XAML 构建界面，而 XAML 是您编写网页时真正需要的全部；但 WPF 不仅仅是 XAML。
 
-再次，真理位于这两个极端之间。您可以滥用 WPF 构建出完全不可用的界面，其中充满了跳动的按钮、拉伸的标签、俗艳的颜色和旋转的三维 (3D) 图形。您可以为控件添加动画，使其看起来像视频游戏而不是业务应用程序。
+再次，真理位于这两个极端之间。您可以滥用 WPF 构建出完全不可用的界面，其中充满了跳动的按钮、拉伸的标签、俗艳的颜色和旋转的三维 `3D` 图形。您可以为控件添加动画，使其看起来像视频游戏而不是业务应用程序。
 
 图 1-1 显示了 Clutter 示例程序，发票在视图内部旋转时显示一系列旋转的图像。该程序演示了一些有趣的技术，但在冗余动画上做得过头，显示了旋转的发票区域、动画按钮和音效。
 
-
-
-# 示例 (SAMPLE EXAMPLES)
+## 示例 SAMPLE EXAMPLES
 
 所有可在书籍网站下载的示例程序均可用。例如，图 1-1 显示了 Clutter 程序，其标题与章节对应。
 
-如果您在书中看到图片并想找到相应的示例程序，请参阅引言中的“源代码”（Source Code）部分。
+如果您在书中看到图片并想找到相应的示例程序，请参阅引言中的“源代码”`Source Code` 部分。
 
 如果您能保持克制并遵循设计原则，可以使用 WPF 构建更具视觉吸引力和吸引力的界面。您可以使用动画来隐藏和显示信息以减少杂乱，并提示用户数据去了哪里，以便以后找到。
-
-
-
 
 WPF 还包含许多新对象，用于管理动画、资源、事件、样式、面板以及其他新的 WPF 特性。
 
 你的应用程序使用这些对象的组合来构建用户界面。
 
-## 什么是 XAML？
+### 什么是 XAML？
 
 XAML（读音为 *zammel*）代表“可扩展应用程序标记语言”。它是 XML（可扩展标记语言）的扩展。微软发明 XAML 是为了以静态的方式表示 WPF 界面，这与代表网页内容的 HTML形成对比。它定义了特殊的元素来渲染窗口、控件、资源、样式以及其他 WPF 对象。
 
-程序可以使用包含 XAML 代码的文件来加载用户界面。例如，网络浏览器可以加载包含 XAML 代码的文件并显示用户界面 (UI)。如果你使用 Blend 或 Visual Studio 创建 WPF 应用程序，它会自动为你加载 XAML，你不需要自己编写代码来实现。
+程序可以使用包含 XAML 代码的文件来加载用户界面。例如，网络浏览器可以加载包含 XAML 代码的文件并显示用户界面 `UI`。如果你使用 Blend 或 Visual Studio 创建 WPF 应用程序，它会自动为你加载 XAML，你不需要自己编写代码来实现。
 
 > 不需要 XAML
 
-注意，制作 WPF 并不需要 XAML。程序可以通过代码构建所需的所有对象。例如，与其在 XAML 文件中放置一个 *Label* 对象，程序可以创建一个 *Label* 类的实例并使用它。XAML 的存在是为了让你构建和存储界面更加方便。
+注意，制作 WPF 并不需要 XAML。程序可以通过代码构建所需的所有对象。例如，与其在 XAML 文件中放置一个 *Label* 对象，程序可以创建一个 `Label` 类的实例并使用它。XAML 的存在是为了让你构建和存储界面更加方便。
 
-所有的 XML 规则都适用于 XAML 文件。特别是，XAML 文件必须有一个包含文件中所有其他元素的根元素。使用哪个元素作为根元素取决于你正在构建的项目类型。例如，在编译后的应用程序中，根元素是显示在桌面上的 *Window*。相反，XAML 页面显示在网络浏览器中，在这种情况下，根元素通常是如 *Grid* 或 *StackPanel* 之容器控件，它可以包含所有其他元素。
+所有的 XML 规则都适用于 XAML 文件。特别是，XAML 文件必须有一个包含文件中所有其他元素的根元素。使用哪个元素作为根元素取决于你正在构建的项目类型。例如，在编译后的应用程序中，根元素是显示在桌面上的 `Window`。相反，XAML 页面显示在网络浏览器中，在这种情况下，根元素通常是如 `Grid` 或 `StackPanel` 之容器控件，它可以包含所有其他元素。
 
-## 控件预览
+### 控件预览
 
-后面的章节将详细描述这些控件，但现在请知道 *Grid* 按行列排列控件，而 *StackPanel* 则以垂直或水平方式排列控件。
+后面的章节将详细描述这些控件，但现在请知道 `Grid` 按行列排列控件，而 `StackPanel` 则以垂直或水平方式排列控件。
 
 每个起始元素必须对应一个具有相同名称的结束元素。例如，以下代码定义了一个 StackPanel：
 
@@ -557,7 +394,7 @@ Margin="5">
 
 图 1-2
 
-## 对象树
+### 对象树
 
 构成用户界面（如图 1-2所示）的控件形成了一个层级结构，其中控件包含其他控件，而这些控件可能还会包含更多。图 1-4 以图形形式显示了该程序的控件层级。
 
@@ -565,7 +402,7 @@ Margin="5">
 
 WPF 有两种表示结构的树：逻辑树和视觉树。它们表示的结构类似于图 1-4 所示的。
 
-### 逻辑树
+#### 逻辑树
 
 逻辑树由界面中对象之间的关系定义。例如，一个滚动条包含一个滑块、两端的箭头和可点击区域。这些每一个部分都是逻辑树的一部分。
 
@@ -577,7 +414,7 @@ FontSize="22" FontWeight="Bold" FontFamily="Comic Sans"
 
 这些属性通过逻辑树继承，因此树底部的 Labels 将使用这些字体。
 
-### 视觉树
+#### 视觉树
 
 另一种树是视觉树。视觉树代表了组件的结构。例如，滚动条包含一个可拖动的滑块、两端的箭头。
 
@@ -587,7 +424,7 @@ FontSize="22" FontWeight="Bold" FontFamily="Comic Sans"
 
 图 1-4
 
-## 非树形结构
+### 非树形结构
 
 由于构成此类用户界面的控件自然地形成了包含结构，因此可以很好地映射到 XML 中。遗憾的是，界面中的某些部分并不完全符合树形结构。
 
@@ -599,12 +436,9 @@ FontSize="22" FontWeight="Bold" FontFamily="Comic Sans"
 
 同样，此示例为它的 Label 控件定义了一个样式，赋予它们阴影、设为黄色并更改文本。遗憾的是，这些样式每一个都适用于逻辑层级结构中的多个控件，并且错过了图 1-4 所示的良好的树形结构。
 
-
-
-
 无论如何，XAML 仍然使用分级 XML 结构，尽管像本例这样的某些场景需要以非分级的方式引用其他元素。这种方式可行，但正如你将在后面的章节中看到的，它大大完善了 XAML 语法。
 
-## 什么是 Silverlight？
+### 什么是 Silverlight？
 
 Silverlight（以前称为 WPF/，其中 e 代表“everyone”）是 WPF 的受限版本，旨在浏览器中安全地运行，同时提供丰富的用户界面。它运行在大多数主流浏览器上，包括 Firefox、Microsoft Internet Explorer 和 Apple Safari。
 
@@ -612,52 +446,58 @@ Silverlight（以前称为 WPF/，其中 e 代表“everyone”）是 WPF 的受
 
 WPF 和 Silverlight 之间存在若干差异，但到目前为止微软尚未发布权威列表。以下是 Silverlight 的一些限制：
 
+
+
 ### 稍后理解（DEFERRED UNDERSTANDING）
-这些功能中的某些现在对来说可能没有意义。但我希望，当你读完这本书时，它们会变得清晰。现在，只需记住 Silverlight 无法做到 WPF 能做的一切即可。
+
+这些功能中的某些现在对来说可能没有意义。但我希望，当你读完这本书时，它们会变得清晰。现在，只需记住 `Silverlight` 无法做到 `WPF` 能做的一切即可。
 
 - 一旦分配，你就无法更改控件的样式。
 - 你必须显式地为每个控件分配样式。你不能创建一个适用于给定类型所有控件（例如按钮）的样式。
 - 一个样式不能继承另一个样式。
-- 你不能在样式和模板中放置触发器（triggers）。
+- 你不能在样式和模板中放置触发器（`triggers`）。
 - 你不能使用动态资源。所有资源都是静态的。
-- Silverlight 有更严格的数据绑定。
+- `Silverlight` 有更严格的数据绑定。
 - 对 Windows API 函数的访问有限。
-- 你不能在 Silverlight 中使用命令（commands）。
-- Silverlight 不支持 3D 图形和图形硬件。
-- Silverlight 不包含预览（隧道）事件。
+- 你不能在 `Silverlight` 中使用命令（`commands`）。
+- `Silverlight` 不支持 3D 图形和图形硬件。
+- `Silverlight` 不包含预览（隧道）事件。
 
-此列表会随时间变化（当你读到这里时，它可能已经过时）。微软正尝试在 Silverlight 中包含尽可能 WPF 功能，同时保持必要的库尽可能小。
+此列表会随时间变化（当你读到这里时，它可能已经过时）。微软正尝试在 `Silverlight` 中包含尽可能 `WPF` 功能，同时保持必要的库尽可能小。
 
 ## 项目类型
 
-> 这不是一本关于 Silverlight 的书，因此它没有详细介绍 Silverlight。你可以在这些网页上了解更多关于 Silverlight 的信息：
-
-> Silverlight 概述：mdn.microsoft.com/bb404700(VS.95).aspx
-> Silverlight 主页：www.microsoft.com/Silverlight
-> Silverlight 常见问题解答：www.microsoft.com/silverlight/resources/faq/default.aspx
-> WPF 和 Silverlight 的差异：mdn.microsoft.com/cc903925(VS.95).aspx
+> 这不是一本关于 `Silverlight` 的书，因此它没有详细介绍 `Silverlight`。你可以在这些网页上了解更多关于 `Silverlight` 的信息：
+>
+> `Silverlight` 概述：`mdn.microsoft.com/bb404700(VS.95).aspx`
+>
+> `Silverlight` 主页：`www.microsoft.com/Silverlight`
+>
+> `Silverlight` 常见问题解答：`www.microsoft.com/silverlight/resources/faq/default.aspx`
+>
+> `WPF` 和 `Silverlight` 的差异：`mdn.microsoft.com/cc903925(VS.95).aspx`
 
 ## WPF 类型
 
-WPF 允许你构建三种主要的应用程序：独立应用程序、XAML 浏览器应用程序和松散 XAML 页面。
+`WPF` 允许你构建三种主要的应用程序：独立应用程序、`XAML` 浏览器应用程序和松散 `XAML` 页面。
 
-独立应用程序被编译并在用户的计算机上本地运行，就像任何其他独立应用程序运行一样。这种类型的应用程序以完全信任模式运行，并可以访问计算机。它可以读取和写入文件、修改系统注册表，并可以执行几乎任何用 C# 或 Visual Basic 程序能完成的操作。
+独立应用程序被编译并在用户的计算机上本地运行，就像任何其他独立应用程序运行一样。这种类型的应用程序以完全信任模式运行，并可以访问计算机。它可以读取和写入文件、修改系统注册表，并可以执行几乎任何用 `C#` 或 `Visual Basic` 程序能完成的操作。
 
-XAML 浏览器应用程序（XBAP——发音为 ex-b）是一种运行在浏览器内部的编译应用程序。出于安全考虑，它运行在 Internet 区域（Internet Zone），因此它不具有完全信任，无法访问独立应用程序可以访问的所有计算机部分。XBAP 只能在支持它们的浏览器（目前为 Internet Explorer 和 Firefox）中运行，并且要求用户计算机安装了 .NET Framework 版本 3。
+`XAML` 浏览器应用程序（`XBAP`——发音为 ex-b）是一种运行在浏览器内部的编译应用程序。出于安全考虑，它运行在 Internet 区域（Internet Zone），因此它不具有完全信任，无法访问独立应用程序可以访问的所有计算机部分。`XBAP` 只能在支持它们的浏览器（目前为 Internet Explorer 和 Firefox）中运行，并且要求用户计算机安装了 `.NET Framework` 版本 3。
 
-松散 XAML 页面仅仅是在网络浏览器中显示的 XAML 文件。它们可以被任何理解 XAML 的网络浏览器查看。松散 XAML 页面不需要在用户计算机上安装 .NET Framework，因此它们可以在无法安装 .NET Framework 的操作系统上运行，例如 Macintosh 和 UNIX 系统。松散 XAML 页面不能使用脚本、C# 或 Visual basic 代码，但它们可以显示有趣的图形，并允许用户通过 XAML 动画操作显示内容，但它们不具备其他类型应用程序的力量。
+松散 `XAML` 页面仅仅是在网络浏览器中显示的 `XAML` 文件。它们可以被任何理解 `XAML` 的网络浏览器查看。松散 `XAML` 页面不需要在用户计算机上安装 `.NET Framework`，因此它们可以在无法安装 `.NET Framework` 的操作系统上运行，例如 Macintosh 和 UNIX 系统。松散 `XAML` 页面不能使用脚本、`C#` 或 `Visual basic` 代码，但它们可以显示有趣的图形，并允许用户通过 `XAML` 动画操作显示内容，但它们不具备其他类型应用程序的力量。
 
-除了这些不同类型的应用程序外，WPF 还为独立应用程序和 XBAP 提供了几种导航方法。它可以提供类似于 Windows Forms 应用程序使用的导航工具。按钮、链接和其他基于代码的机制可以显示其他页面和窗口。
+除了这些不同类型的应用程序外，`WPF` 还为独立应用程序和 `XBAP` 提供了几种导航方法。它可以提供类似于 Windows Forms 应用程序使用的导航工具。按钮、链接和其他基于代码的机制可以显示其他页面和窗口。
 
 ## 目标与优势
 
-WPF 还提供了浏览器风格的导航，允许用户在以前访问过的窗口历史中前进和后退。Frame 和 NavigationWindow 类可以提供与浏览器类似的这种导航。
+`WPF` 还提供了浏览器风格的导航，允许用户在以前访问过的窗口历史中前进和后退。`Frame` 和 `NavigationWindow` 类可以提供与浏览器类似的这种导航。
 
-PageFunction 类还支持特殊形式的导航。它允许一个页面将另一个页面视为被调用。第一个页面可以调用第二个页面，并向其传递输入参数。当被调用的页面完成后，第一个页面将收到来自被调用页面的“返回结果”（return result）。
+`PageFunction` 类还支持特殊形式的导航。它允许一个页面将另一个页面视为被调用。第一个页面可以调用第二个页面，并向其传递输入参数。当被调用的页面完成后，第一个页面将收到来自被调用页面的“返回结果”（`return result`）。
 
 后续章节将对使用这些不同形式的导航进行更多介绍。
 
-WPF 有几个重要目标，包括：
+`WPF` 有几个重要目标，包括：
 
 - 更好地利用图形硬件
 - 属性绑定以提供动画
@@ -665,23 +505,23 @@ WPF 有几个重要目标，包括：
 - 样式
 - 模板
 - 一致的控件包含
-- 分离用户界面和后台代码（code-behind）
+- 分离用户界面和后台代码（`code-behind`）
 - 新控件
 - 声明式编程
 
-以下章节将详细描述这些目标以及 WPF 如何实现它们。
+以下章节将详细描述这些目标以及 `WPF` 如何实现它们。
 
 ## 更好地利用图形硬件
 
-Windows Forms 控件是使用 GDI（图形设备接口）和 GDI+（GDI 的 .NET 版本）编程接口构建的。这些原生 (.NET) API 为绘制提供了更灵活、更强大的功能，但它们已变得有些过时。特别是，GDI 和 GDI+ 没有利用现代计算机图形中提供的巨大力量。现代桌面系统比 GDI 创建时要强大得多。
+Windows Forms 控件是使用 `GDI`（图形设备接口）和 `GDI+`（`GDI` 的 `.NET` 版本）编程接口构建的。这些原生（`.NET`）API 为绘制提供了更灵活、更强大的功能，但它们已变得有些过时。特别是，`GDI` 和 `GDI+` 没有利用现代计算机图形中提供的巨大力量。现代桌面系统比 `GDI` 创建时要强大得多。
 
-WPF 基于最新的 DirectX 库，而不是 GDI 或 GDI+。DirectX 还提供了许多附带收益，包括多媒体支持。
+`WPF` 基于最新的 `DirectX` 库，而不是 `GDI` 或 `GDI+`。`DirectX` 还提供了许多附带收益，包括多媒体支持。
 
 ## 更好的多媒体支持
 
-DirectX 包含了高效播放多媒体文件的程序。WPF 利用这些中的某些程序使多媒体文件变得快速简单。
+`DirectX` 包含了高效播放多媒体文件的程序。`WPF` 利用这些中的某些程序使多媒体文件变得快速简单。
 
-例如，下面的 XAML 代码段使窗口中的所有按钮在点击时播放声音文件：
+例如，下面的 `XAML` 代码段使窗口中的所有按钮在点击时播放声音文件：
 
 ```
 <RoutedTrigger RoutedEvent="ButtonBase.Click">
@@ -689,24 +529,21 @@ DirectX 包含了高效播放多媒体文件的程序。WPF 利用这些中的�
 </RoutedTrigger>
 ```
 
-MediaElement 控件几乎就可以播放视频。在 XAML 代码中，你可以将 Source 设置要播放的文件。运行时，控件提供了 Play、Pause、Stop 和 Position 方法来控制视频播放。
+`MediaElement` 控件几乎就可以播放视频。在 `XAML` 代码中，你可以将 `Source` 设置要播放的文件。运行时，控件提供了 `Play`、`Pause`、`Stop` 和 `Position` 方法来控制视频播放。
 
-图 1-6 显示了一个播放三个视频的小应用程序。按钮使用 MediaElement 方法和属性控制视频。程序还使用之前的 XAML 代码段在点击按钮时播放声音。
+图 1-6 显示了一个播放三个视频的小应用程序。按钮使用 `MediaElement` 方法和属性控制视频。程序还使用之前的 `XAML` 代码段在点击按钮时播放声音。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_48_0.png)
 
 ## 变换
 
-DirectX 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的方法。WPF 让你可以使用这些方法，因此你可以轻松转换你绘制的任何图形。事实上，你还可以将这些变换应用于 WPF 绘制的对象，例如 Label、TextBox 和 Button。
+`DirectX` 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的方法。`WPF` 让你可以使用这些方法，因此你可以轻松转换你绘制的任何图形。事实上，你还可以将这些变换应用于 `WPF` 绘制的对象，例如 `Label`、`TextBox` 和 `Button`。
 
-图 1-7 显示了一个程序在左侧显示了旋转 90 度的 Label。
+图 1-7 显示了一个程序在左侧显示了旋转 90 度的 `Label`。
 
-你可以变换 MediaElement，它将显示经过拉伸、倾斜和旋转的视频！图 1-8 显示了一个程序在 MediaElement 中显示了三个分别经过旋转、倾斜和拉伸的视频。顶部的三个按钮也是被倾斜的。
+你可以变换 `MediaElement`，它将显示经过拉伸、倾斜和旋转的视频！图 1-8 显示了一个程序在 `MediaElement` 中显示了三个分别经过旋转、倾斜和拉伸的视频。顶部的三个按钮也是被倾斜的。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_48_1.png)
-
-
-
 
 ## 第1 章 | WPF 概述
 
@@ -714,17 +551,17 @@ DirectX 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的
 
 ## 3D 图形
 
-许多现代计算机都包含支持 3D 图形的图形硬件，DirectX（特别是 DirectX 中的 Direct3D 部分）利用了这种支持。而 WPF 则使用 Direct3D 为 3D 图形提供支持。
+许多现代计算机都包含支持 3D 图形的图形硬件，`DirectX`（特别是 `DirectX` 中的 `Direct3D` 部分）利用了这种支持。而 `WPF` 则使用 `Direct3D` 为 3D 图形提供支持。
 
-如果你的程序直接使用 Direct3D，你需要编写大量的代码来处理初始化 Direct3D、发现计算机上可用的硬件、处理设备错误以及其他管理性工作。WPF 为你处理了这些细节，因此在与 Direct3D 配合时，使用 WPF 构建 3D 场景变得更加容易。
+如果你的程序直接使用 `Direct3D`，你需要编写大量的代码来处理初始化 `Direct3D`、发现计算机上可用的硬件、处理设备错误以及其他管理性工作。`WPF` 为你处理了这些细节，因此在与 `Direct3D` 配合时，使用 `WPF` 构建 3D 场景变得更加容易。
 
-除了可以避免一些烦人的细节外，使用 WPF 产生 3D 图形还带给你一种希望：当新版本的 Direct3D 发布时，你的应用程序仍然可以工作。当以前某些版本的 Direct3D 发布时，程序员必须修改他们的程序以适应新版本。如果你使用 WPF 制作 3D 程序，WPF 应该能够适应未来的任何 Direct3D 变化。
+除了可以避免一些烦人的细节外，使用 `WPF` 产生 3D 图形还带给你一种希望：当新版本的 `Direct3D` 发布时，你的应用程序仍然可以工作。当以前某些版本的 `Direct3D` 发布时，程序员必须修改他们的程序以适应新版本。如果你使用 `WPF` 制作 3D 程序，`WPF` 应该能够适应未来的任何 `Direct3D` 变化。
 
 仍然有大量工作要做。构建 3D 场景需要你创建光、材料和表面。根据项目的不同，可能需要你定义纹理坐标和表面法线（指示远离表面方向的向量），以指示表面的取向。
 
-事实上，在 WPF 的帮助下，构建复杂场景已经足够困难了，你可能想要使用代码而不是 XAML 来完成，但至少这是可能的。
+事实上，在 `WPF` 的帮助下，构建复杂场景已经足够困难了，你可能想要使用代码而不是 `XAML` 来完成，但至少这是可能的。
 
-图 1-9 中的 Gasket3D 示例程序使用 WPF 显示了一个旋转的空心立方体。该程序绘制了许多复杂的形状并使用了大量资源，因此如果你将 Level 设置为大于 2，可能无法获得良好的性能。
+图 1-9 中的 `Gasket3D` 示例程序使用 `WPF` 显示了一个旋转的空心立方体。该程序绘制了许多复杂的形状并使用了大量资源，因此如果你将 `Level` 设置为大于 2，可能无法获得良好的性能。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_49_1.png)
 
@@ -732,17 +569,17 @@ DirectX 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的
 
 当你在表单上放置控件时，控件会在需要时绘制自己。如果你用另一个窗口覆盖表单然后再次显示表单，控件会重新绘制自己。
 
-与 Windows Forms 不同，WPF 为所有可见对象都提供了这种能力，而不仅仅是控件。你的代码创建了弧和多边形等对象，它们会在需要时随时绘制自己。
+与 Windows Forms 不同，`WPF` 为所有可见对象都提供了这种能力，而不仅仅是控件。你的代码创建了弧和多边形等对象，它们会在需要时随时绘制自己。
 
 此外，如果你需要移动一个对象，只需更改其坐标，它就会相应地重新绘制自己。
 
-下面的 XAML 代码定义了一个绘制星形的 Polygon 对象。当窗口重绘时，程序不需要任何代码来重新绘制星形。Polygon 对象会自动完成这一点。
+下面的 `XAML` 代码定义了一个绘制星形的 `Polygon` 对象。当窗口重绘时，程序不需要任何代码来重新绘制星形。`Polygon` 对象会自动完成这一点。
 
 ```
 <Polygon Stroke="Red" StrokeThickness="5" Points="20,20 120,40 30,70 80,10 110,90" />
 ```
 
-图 1-10 显示了显示此对象的 Star 示例程序。
+图 1-10 显示了显示此对象的 `Star` 示例程序。
 
 ## 高分辨率矢量图形
 
@@ -750,9 +587,9 @@ DirectX 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的
 
 如果你只需要按原始大小显示图像，这种方法是有效的，但如果你对位图进行缩放、旋转或以其他方式进行变换，结果通常是模糊且充满像素颗粒的。
 
-为了避免这些问题，WPF 采取了不同的方法。它不是绘制基于位图的图形，而是使用矢量图形。矢量绘图系统存储的是绘制图片所需的数据（点、线段和其他绘图形状），而不是原始图片的位图图像。如果图片需要进行变换，图形系统会转换绘图数据然后重新绘制图片，无论绘图如何变换，都能得到高分辨率的结果。
+为了避免这些问题，`WPF` 采取了不同的方法。它不是绘制基于位图的图形，而是使用矢量图形。矢量绘图系统存储的是绘制图片所需的数据（点、线段和其他绘图形状），而不是原始图片的位图图像。如果图片需要进行变换，图形系统会转换绘图数据然后重新绘制图片，无论绘图如何变换，都能得到高分辨率的结果。
 
-图 1-11 所示的 Zoom 示例程序演示了光栅和矢量图形之间的区别。程序使用 XAML 对象（椭圆和用于嘴部的椭圆弧）在不同比例下绘制精确的笑脸。在最后一行，程序以不同比例绘制了最小脸脸的位图。当你放大时，你可以看到结果变得多么模糊。
+图 1-11 所示的 `Zoom` 示例程序演示了光栅和矢量图形之间的区别。程序使用 `XAML` 对象（椭圆和用于嘴部的椭圆弧）在不同比例下绘制精确的笑脸。在最后一行，程序以不同比例绘制了最小脸脸的位图。当你放大时，你可以看到结果变得多么模糊。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_50_0.png)
 
@@ -768,9 +605,9 @@ DirectX 提供了可以让你轻松地移动、拉伸、倾斜和旋转图形的
 
 ## 通过属性绑定证明动画
 
-除了 DirectX，WPF 的另一个根本性变化是它处理属性的方式。WPF 属性最初看起来与传统的 Windows Forms 属性相似，在许多情况下，你可以类似地对待它们。
+除了 `DirectX`，`WPF` 的另一个根本性变化是它处理属性的方式。`WPF` 属性最初看起来与传统的 Windows Forms 属性相似，在许多情况下，你可以类似地对待它们。
 
-例如，要在代码中设置属性，你只需创建属性应具有的值并将其赋值给属性。下面的代码创建了一个从白色到绿色的渐变 LinearGradientBrush。
+例如，要在代码中设置属性，你只需创建属性应具有的值并将其赋值给属性。下面的代码创建了一个从白色到绿色的渐变 `LinearGradientBrush`。
 
 ```
 LinearGradientBrush bg =
@@ -778,13 +615,13 @@ LinearGradientBrush bg =
 grmMain.Background = bg;
 ```
 
-然而，在背后，WPF 属性与程序通常赋予创建类的简单属性非常不同。WPF 使用依赖属性，这是一种在 WPF 属性系统中注册的特殊属性。依赖属性支持普通属性不具备的若干功能，包括默认值、继承（在下一节中进一步描述）、WPF 风格的数据绑定和属性更改通知。
+然而，在背后，`WPF` 属性与程序通常赋予创建类的简单属性非常不同。`WPF` 使用依赖属性，这是一种在 `WPF` 属性系统中注册的特殊属性。依赖属性支持普通属性不具备的若干功能，包括默认值、继承（在下一节中进一步描述）、`WPF` 风格的数据绑定和属性更改通知。
 
-更改通知允许 WPF 系统注意到属性何时发生变化，并在必要时采取行动。WPF 风格的数据绑定允许属性的值绑定到其他某些值。这两个功能允许程序对任何定义其界面外观的属性执行动画。
+更改通知允许 `WPF` 系统注意到属性何时发生变化，并在必要时采取行动。`WPF` 风格的数据绑定允许属性的值绑定到其他某些值。这两个功能允许程序对任何定义其界面外观的属性执行动画。
 
-例如，图 1-12 所示的 GrowingButtons 程序定义了几个缩放为其正常大小 75% 的按钮。当鼠标移动到按钮上时，按钮的 IsMouseOver 值从 False 变为 True。程序检测到该变化并开始动画，将按钮的缩放增加到 150%。当鼠标离开按钮时，属性值变为 False，程序使用另一个动画将按钮的缩放再次缩小到 75%。
+例如，图 1-12 所示的 `GrowingButtons` 程序定义了几个缩放为其正常大小 75% 的按钮。当鼠标移动到按钮上时，按钮的 `IsMouseOver` 值从 `False` 变为 `True`。程序检测到该变化并开始动画，将按钮的缩放增加到 150%。当鼠标离开按钮时，属性值变为 `False`，程序使用另一个动画将按钮的缩放再次缩小到 75%。
 
-通过提供更改通知并支持动画类型的数据绑定，WPF 属性使动画成为可能。
+通过提供更改通知并支持动画类型的数据绑定，`WPF` 属性使动画成为可能。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_51_0.png)
 
@@ -792,11 +629,11 @@ grmMain.Background = bg;
 
 ## 属性继承
 
-WPF 控件继承包含它的控件的属性值。例如，如果你将按钮放置在具有定义了字体的 Grid 上，那么按钮就会继承这些属性。
+`WPF` 控件继承包含它的控件的属性值。例如，如果你将按钮放置在具有定义了字体的 `Grid` 上，那么按钮就会继承这些属性。
 
-> 一种不同的继承：属性继承的概念与面向对象编程 (OOP) 中使用的普通继承概念不同。在 OOP 中，派生类继承父类的属性、方法和事件定义，但子类中的对象并不从父类继承属性值。在 WPF 中，控件继承包含它的控件的某些属性值。
+> 一种不同的继承：属性继承的概念与面向对象编程 (`OOP`) 中使用的普通继承概念不同。在 `OOP` 中，派生类继承父类的属性、方法和事件定义，但子类中的对象并不从父类继承属性值。在 `WPF` 中，控件继承包含它的控件的某些属性值。
 
-控件的属性值实际上取决于一系列可能的源，这些源按照特定的优先级顺序应用。例如，按钮可能会继承自包含它的 Grid 的属性，但按钮自身的属性可以覆盖这些值。
+控件的属性值实际上取决于一系列可能的源，这些源按照特定的优先级顺序应用。例如，按钮可能会继承自包含它的 `Grid` 的属性，但按钮自身的属性可以覆盖这些值。
 
 下面的列表显示了属性获取其值的最简单位置的优先级。顶部的项目具有最高优先级，例如，按钮自身的属性（本地）会覆盖继承值，但动画可以覆盖本地值，至少在动画运行时如此。
 
@@ -806,92 +643,91 @@ WPF 控件继承包含它的控件的属性值。例如，如果你将按钮放�
 4. 继承
 5. 默认值
 
-有关属性可以获取值的更完整列表，请参阅 mdn.microsoft.com/ms743230.aspx。
+有关属性可以获取值的更完整列表，请参阅 `mdn.microsoft.com/ms743230.aspx`。
 
 ## 样式
 
-样式允许你定义一组属性值供以后使用。例如，样式可以为按钮的 Width、Height、BitmapEffect 和 Background 属性定义值。以后，你可以将样式应用到按钮上赋予赋予这些值。
+样式允许你定义一组属性值供以后使用。例如，样式可以为按钮的 `Width`、`Height`、`BitmapEffect` 和 `Background` 属性定义值。以后，你可以将样式应用到按钮上赋予赋予这些值。
 
 样式让你能够轻松为一组控件定义公共外观。以后，如果你想更改应用程序的外观，只需修改样式，你使用的所有控件都会自动拾取变化。这使得维护复杂的用户界面和为控件提供相似外观变得容易得多。
 
-
-
-
-你可以将样式（style）作为另一种样式的起点。例如，你可以创建一个定义整个应用程序通用背景（Background）的样式。然后你可以创建更精细的样式来确定按钮（Buttons）、标签（Labels）和其他类型控件的外。
+你可以将样式（`style`）作为另一种样式的起点。例如，你可以创建一个定义整个应用程序通用背景（`Background`）的样式。然后你可以创建更精细的样式来确定按钮（`Buttons`）、标签（`Labels`）和其他类型控件的外。
 
 ## 有争议的继承
 
-某些控件会阻止继承。例如，Button 和 ListBox 控件不继承 Background 属性的值。
+某些控件会阻止继承。例如，`Button` 和 `ListBox` 控件不继承 `Background` 属性的值。
 
 ## 模板
 
-WPF 有几种种的模板。
+`WPF` 有几种种的模板。
 
-控件模板（control template）允许你通过确定组成控件的物体及其行为来自定义控件的行为。
+控件模板（`control template`）允许你通过确定组成控件的物体及其行为来自定义控件的行为。
 
-例如，普通按钮会显示一个具有特定外观（包括中间部分）的圆矩形。如果你愿意，可以定义一个控件模板，让 Button 以宽度向左和右侧延伸的方式绘制自身。然后，你可以定义控件在发生重大事件（如鼠标悬停在按钮上、按下按钮、按钮禁用等）时所执行的操作。
+例如，普通按钮会显示一个具有特定外观（包括中间部分）的圆矩形。如果你愿意，可以定义一个控件模板，让 `Button` 以宽度向左和右侧延伸的方式绘制自身。然后，你可以定义控件在发生重大事件（如鼠标悬停在按钮上、按下按钮、按钮禁用等）时所执行的操作。
 
-第二种模板是数据模板（data template）。数据模板允许你定义数据绑定的控件如何显示其数据。例如，假设你想在 ListBox 中显示学生数据。你可以使用数据模板让 ListBox 将每个项目显示为一个 StackPanel，该 StackPanel 包含一张学生照片，随后是学生的姓名和联系信息。
+第二种模板是数据模板（`data template`）。数据模板允许你定义数据绑定的控件如何显示其数据。例如，假设你想在 `ListBox` 中显示学生数据。你可以使用数据模板让 `ListBox` 将每个项目显示为一个 `StackPanel`，该 `StackPanel` 包含一张学生照片，随后是学生的姓名和联系信息。
 
-样式（Styles）允许你修改控件外观。模板（Templates）允许你修改控件的结构和行为。
+样式（`Styles`）允许你修改控件外观。模板（`Templates`）允许你修改控件的结构和行为。
 
 ## 一致的控件包含
 
-许多类型的 Windows Forms 控件只包含单一内容。例如，TextBox、Label、Button 和 GroupBox 控件都有一个 Text 属性，决定控件显示的文本。
+许多类型的 Windows Forms 控件只包含单一内容。例如，`TextBox`、`Label`、`Button` 和 `GroupBox` 控件都有一个 `Text` 属性，决定控件显示的文本。
 
-相比之下，许多 WPF 控件可以直接或间接地包含任何任何内容。例如，一个 Button 可以包含单个对象。通常该对象是字符串，但也可以是像 StackPanel 之类的东西。StackPanel 然后可以包含你喜欢的任何内容。
+相比之下，许多 `WPF` 控件可以直接或间接地包含任何任何内容。例如，一个 `Button` 可以包含单个对象。通常该对象是字符串，但也可以是像 `StackPanel` 之类的东西。`StackPanel` 然后可以包含你喜欢的任何内容。
 
-图 1-13 显示了一个显示三个 Button 的程序。每个 Button 都包含一个 StackPanel，其中包含一个 Image 和一个 Label。
+图 1-13 显示了一个显示三个 `Button` 的程序。每个 `Button` 都包含一个 `StackPanel`，其中包含一个 `Image` 和一个 `Label`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_53_0.png)
 
 图 1-13
 
-控件这种能力使得 WPF 控件比 Windows Forms 控件灵活得多。
+控件这种能力使得 `WPF` 控件比 Windows Forms 控件灵活得多。
 
 ## 分离用户界面与后置代码
 
-WPF 的最大目标之一是将用户界面与其背后的代码分离。使用 XAML 定义用户界面并使用 C# 或 Visual Basic 提供应用程序功能，使界面构建和编程这两项任务分离。
+`WPF` 的最大目标之一是将用户界面与其背后的代码分离。使用 `XAML` 定义用户界面并使用 `C#` 或 `Visual Basic` 提供应用程序功能，使界面构建和编程这两项任务分离。
 
-在理论上，使用 Expression Blend 的图形设计师可以在不需要了解任何编程的情况下构建界面。程序员可以使用 Visual Studio 添加额外的代码。
+在理论上，使用 `Expression Blend` 的图形设计师可以在不需要了解任何编程的情况下构建界面。程序员可以使用 `Visual Studio` 添加额外的代码。
 
-在实践中，并不是每家公司都负担得起专门的图形设计师和 Expression Blend。在这种情况下，同一种人最终可能通过 Expression Blend 和 Visual Studio 的结合，或仅使用 Visual Studio 来构建用户界面及其后置代码。然而，在这种情况下，将用户界面与后置代码分离会让这两部分工作变得更简单。
+在实践中，并不是每家公司都负担得起专门的图形设计师和 `Expression Blend`。在这种情况下，同一种人最终可能通过 `Expression Blend` 和 `Visual Studio` 的结合，或仅使用 `Visual Studio` 来构建用户界面及其后置代码。然而，在这种情况下，将用户界面与后置代码分离会让这两部分工作变得更简单。
 
 | 良好的旧观念 |
 | :--- |
-| 多年来，优秀的开发者一直在分离 UI 开发和后置代码。在 Windows Forms 应用程序中，一个开发者可以构建用户界面，而其他人编写代码来执行应用程序任务。然后你可以将两者缝合在一起。<br>使用 XAML 使这种分离变得更加严格，因此它提供了额外的收益。<br>Windows Forms 开发者通常让附着到用户界面上的代码尽可能精简，编写简单的事件处理程序，调用其他模块中的程序来完成所有重量工作。这种策略对于 WPF 应用程序仍然有效。 |
+| 多年来，优秀的开发者一直在分离 UI 开发和后置代码。在 Windows Forms 应用程序中，一个开发者可以构建用户界面，而其他人编写代码来执行应用程序任务。然后你可以将两者缝合在一起。<br>使用 `XAML` 使这种分离变得更加严格，因此它提供了额外的收益。<br>Windows Forms 开发者通常让附着到用户界面上的代码尽可能精简，编写简单的事件处理程序，调用其他模块中的程序来完成所有重量工作。这种策略对于 `WPF` 应用程序仍然有效。 |
 
 “分离设计师”理论的另一个缺点是，由于图形设计师可以在不需要了解很多编程的情况下构建你需要的界面。不幸的是
 
-这导致了我的非纯粹派 WPF 哲学。在 XAML 中做任何合理的事。如果某些事情在代码中处理起来更容易，就用代码处理。
+这导致了我的非纯粹派 `WPF` 哲学。在 `XAML` 中做任何合理的事。如果某些事情在代码中处理起来更容易，就用代码处理。
 
 ## 新控件
 
-WPF 带有几种新控件用于排列子控件。例如，StackPanel 在单行或单列中排列其子控件，DockPanel 将子控件附加到其边缘，WrapPanel 将子控件排列在行或列中并在必要时换到新的行或列，而 Grid 在行和列中排列其子控件。
+`WPF` 带有几种新控件用于排列子控件。例如，`StackPanel` 在单行或单列中排列其子控件，`DockPanel` 将子控件附加到其边缘，`WrapPanel` 将子控件排列在行或列中并在必要时换到新的行或列，而 `Grid` 在行和列中排列其子控件。
+
+
 
 ## 对旧控件的新看法
 
-这些控件中的某些以其他形式存在了一段时间。例如，FlowLayoutPanel 的作用大致与新的 WrapPanel ，而旧的 TableLayoutPanel 与 Grid 有类似的用途，尽管它并不灵活。
+这些控件中的某些以其他形式存在了一段时间。例如，`FlowLayoutPanel`的作用大致与新的`WrapPanel`，而旧的`TableLayoutPanel`与`Grid`有类似的用途，尽管它并不灵活。
 
-有人声称，这些排列控件应该改变你设计界面的方式，让你充分利用表单上的任何可用空间。优秀的开发者已经在使用 FlowLayoutPanel 等 Windows Forms 控件和 Anchor 等属性来实现这一点，所以这不是一个革命性的新概念，尽管新控件确实为你提供了一些新选择。
+有人声称，这些排列控件应该改变你设计界面的方式，让你充分利用表单上的任何可用空间。优秀的开发者已经在使用`FlowLayoutPanel`等`Windows Forms`控件和`Anchor`等属性来实现这一点，所以这不是一个革命性的新概念，尽管新控件确实为你提供了一些新选择。
 
-一个值得特别提到的新控件是 FlowDocument。FlowDocument 是一个灵活的文档对象，可以像网页一样包含内容。它可以包含按段落分组的各种样式文本。它可以包含表格、列表和图像。它可以包含环绕文本流的图形和浮动对象（floaters）。FlowDocument 可以包含 Button、TextBox 和 3D 图等 WPF 控件。它甚至可以在文档中的插图中运行 WPF 动画。
+一个值得特别提到的新控件是`FlowDocument`。`FlowDocument`是一个灵活的文档对象，可以像网页一样包含内容。它可以包含按段落分组的各种样式文本。它可以包含表格、列表和图像。它可以包含环绕文本流的图形和浮动对象（floaters）。`FlowDocument`可以包含`Button`、`TextBox`和`3D`图等`WPF`控件。它甚至可以在文档中的插图中运行`WPF`动画。
 
-WPF 带有三种查看 FlowDocuments 的控件：
+`WPF`带有三种查看`FlowDocuments`的控件：
 
-- FlowDocumentScrollViewer 在长垂直滚动页面中显示 FlowDocument，类似于网页浏览器显示页的方式。
-- FlowDocumentPageView 每次显示页。它提供了滚动和缩放功能，用户可以看到整个文档。
-- FlowDocumentReader 可以以三种方式之一显示内容：像 FlowDocumentScrollViewer，像 FlowDocumentPageView，或者以一次显示两个文档页面的双页模式。
+- `FlowDocumentScrollViewer`在长垂直滚动页面中显示`FlowDocument`，类似于网页浏览器显示页的方式。
+- `FlowDocumentPageView`每次显示页。它提供了滚动和缩放功能，用户可以看到整个文档。
+- `FlowDocumentReader`可以以三种方式之一显示内容：像`FlowDocumentScrollViewer`，像`FlowDocumentPageView`，或者以一次显示两个文档页面的双页模式。
 
-图 1-14 显示了一个显示 FlowDocument 的 FlowDocumentPageView，该文档包含文本、表格、列表、形状甚至一个 Button 控件。右侧的浮动对象包含一个多边形和一个 3 视口，显示正在三维空间旋转的 VB Helper。FlowDocumentPageView 正在以双页模式显示文档，因此它并排显示文档的两页。
+图 1-14 显示了一个显示`FlowDocument`的`FlowDocumentPageView`，该文档包含文本、表格、列表、形状甚至一个`Button`控件。右侧的浮动对象包含一个多边形和一个 3 视口，显示正在三维空间旋转的 VB Helper。`FlowDocumentPageView`正在以双页模式显示文档，因此它并排显示文档的两页。
 
 ## 声明式编程
 
-许多开发者认为声明式编程是使用 XAML 的优势。直觉上这很有道理。如果用户界面停在那里，那么实现它的代码也应该是声明式的并停放在那里，这是合理的。
+许多开发者认为声明式编程是使用`XAML`的优势。直觉上这很有道理。如果用户界面停在那里，那么实现它的代码也应该是声明式的并停放在那里，这是合理的。
 
-当然，WPF 用户界面不仅仅是停在那里。一旦你开始添加触发器（triggers）、故事板（storyboards）、模板和样式，界面所做的就比停在那里多得多。在某些情况下，仅用 XAML 构建的界面比在关键点使用少量代码的界面更难理解。
+当然，`WPF`用户界面不仅仅是停在那里。一旦你开始添加触发器（triggers）、故事板（storyboards）、模板和样式，界面所做的就比停在那里多得多。在某些情况下，仅用`XAML`构建的界面比在关键点使用少量代码的界面更难理解。
 
-声明式编程是 XAML 的一个很好的特性，但并不清楚它本身是否是一个优势。
+声明式编程是`XAML`的一个很好的特性，但并不清楚它本身是否是一个优势。
 
 ## 缺点 | 19
 
@@ -901,26 +737,23 @@ WPF 带有三种查看 FlowDocuments 的控件：
 
 ## 缺点
 
-尽管有所有优势，WPF 确实有一些缺点，其中最大的是其陡峭的学习曲线。使用 WPF 构建一个填充 Label、TextBox 和简单形状的简单表单很容易，但要利用它所提供的所有功能是很的。
+尽管有所有优势，`WPF`确实有一些缺点，其中最大的是其陡峭的学习曲线。使用`WPF`构建一个填充`Label`、`TextBox`和简单形状的简单表单很容易，但要利用它所提供的所有功能是很的。
 
-WPF 包含了许多作为属性继承异常的不一致之处。XAML 使用分级格式存储非分级信息的事实意味着它必须包含一些令人困惑的语法。
+`WPF`包含了许多作为属性继承异常的不一致之处。`XAML`使用分级格式存储非分级信息的事实意味着它必须包含一些令人困惑的语法。
 
-虽然 WPF 包含了 Windows Forms 没有的新控件，但也缺少一些控件，如 DatePicker、MonthCalendar、PropertyGrid 和 BackgroundWorker。
+虽然`WPF`包含了`Windows Forms`没有的新控件，但也缺少一些控件，如`DatePicker`、`MonthCalendar`、`PropertyGrid`和`BackgroundWorker`。
 
-WPF 相对较新，这意味着它比更成熟的 Windows Forms 不稳定。希望是向好的，变化是不可避免的。
+`WPF`相对较新，这意味着它比更成熟的`Windows Forms`不稳定。希望是向好的，变化是不可避免的。
 
-最后，Expression Blend 和 Visual Studio XAML 编辑器不尽人意。它们都无法处理 WPF 提供的所有灵活性，并且它们生成的 XAML 代码非常繁琐，你可能需要手动修复。IntelliSense（智能感知）对 XAML 编辑的支持也很好，特别是在为属性输入值值时提供帮助。
+最后，`Expression Blend`和`Visual Studio XAML`编辑器不尽人意。它们都无法处理`WPF`提供的所有灵活性，并且它们生成的`XAML`代码非常繁琐，你可能需要手动修复。`IntelliSense`（智能感知）对`XAML`编辑的支持也很好，特别是在为属性输入值值时提供帮助。
 
-尽管如此，WPF 提供了许多优势，对于简单界面来说它足够容易。你可以轻松地在窗口上放置 TextBox 和 Label。在你消化它们并决定它们对你的应用程序是必要的之后，可以添加更复杂的动画和特殊效果。
-
-
-
+尽管如此，`WPF`提供了许多优势，对于简单界面来说它足够容易。你可以轻松地在窗口上放置`TextBox`和`Label`。在你消化它们并决定它们对你的应用程序是必要的之后，可以添加更复杂的动画和特殊效果。
 
 ## 摘要
 
-WPF 包含了各种用于构建用户界面的对象。XAML 是一种基于 XML 的语言，你可以用它来指定 WPF 对象。在运行时，程序可以读取 XAML 文件来创建用户界面。
+`WPF`包含了各种用于构建用户界面的对象。`XAML`是一种基于`XML`的语言，你可以用它来指定`WPF`对象。在运行时，程序可以读取`XAML`文件来创建用户界面。
 
-WPF 具有许多优势，包括：
+`WPF`具有许多优势，包括：
 
 - 能够更好地利用图形硬件
 - 用于动画的属性绑定
@@ -932,49 +765,49 @@ WPF 具有许多优势，包括：
 - 新控件
 - 声明式编程
 
-它也有一些缺点，其中最大的三个是：学习曲线较陡、成本增加（如果你想使用 Expression Blend 工具），以及在设计工具 Expression Blend 和 Visual Studio 中的支持平庸。
+它也有一些缺点，其中最大的三个是：学习曲线较陡、成本增加（如果你想使用`Expression Blend`工具），以及在设计工具`Expression Blend`和`Visual Studio`中的支持平庸。
 
-然而，如果你不需要它所有的高级功能，WPF 的使用也足够简单。你可以使用 WPF 制作包含文本框、标签和基本装饰作为框架的简单表单。然后，当你决定需要时，可以添加样式、模板和动画等更高级的功能。
+然而，如果你不需要它所有的高级功能，`WPF`的使用也足够简单。你可以使用`WPF`制作包含文本框、标签和基本装饰作为框架的简单表单。然后，当你决定需要时，可以添加样式、模板和动画等更高级的功能。
 
-只要你不过度沉溺于动画、音效和其他有趣但分散注意力的功能，就可以使用 WPF 构建出引人入胜、响应式的界面，让用户保持兴趣并让他们完成工作。
+只要你不过度沉溺于动画、音效和其他有趣但分散注意力的功能，就可以使用`WPF`构建出引人入胜、响应式的界面，让用户保持兴趣并让他们完成工作。
 
-现在你已经了解了 WPF 是什么及其优缺点，准备好开始构建 WPF 应用了。接下来的章节将介绍构建这些应用程序的两个主要工具：Visual Studio 和 Expression Blend。
+现在你已经了解了`WPF`是什么及其优缺点，准备好开始构建`WPF`应用了。接下来的章节将介绍构建这些应用程序的两个主要工具：`Visual Studio`和`Expression Blend`。
 
 # 2
 
 ## 在 Visual Studio 中的 WPF
 
-Visual Studio 提供了构建 WPF 应用所需的所有内容。它有一个 WYSIWYG（所见即所得）窗口设计器，让你能够通过向窗口上拖放控件来创建 XAML（可扩展标记语言）界面。如果你跳过了第 1 章，并想了解更多关于 XAML 的详细信息，请参阅第 1 章中的“什么是 XAML？”部分。它的代码编辑器允许你编写 C# 或 Visual Basic 代码来位于用户界面（UI）之后。它还可以运行你正在构建的 WPF 应用，以便你看到它的运行效果。
+`Visual Studio`提供了构建`WPF`应用所需的所有内容。它有一个`WYSIWYG`（所见即所得）窗口设计器，让你能够通过向窗口上拖放控件来创建`XAML`（可扩展标记语言）界面。如果你跳过了第 1 章，并想了解更多关于`XAML`的详细信息，请参阅第 1 章中的“什么是`XAML`？”部分。它的代码编辑器允许你编写`C#`或`Visual Basic`代码来位于用户界面（UI）之后。它还可以运行你正在构建的`WPF`应用，以便你看到它的运行效果。
 
-本章解释了你如何使用 Visual Studio 构建 WPF 应用。它并没有解释如何完整地使用 Visual Studio。Visual Studio 是一个巨大的应用程序，具有许多强大功能，用于使用 C#、Visual Basic、Visual C++ 和其他语言编写程序，而本书仅涵盖了使用 Visual Studio 构建 WPF 应用所需的极少内容。关于在其他语言中编程的更多信息，请参阅涵盖这些主题的书。
+本章解释了你如何使用`Visual Studio`构建`WPF`应用。它并没有解释如何完整地使用`Visual Studio`。`Visual Studio`是一个巨大的应用程序，具有许多强大功能，用于使用`C#`、`Visual Basic`、`Visual C++`和其他语言编写程序，而本书仅涵盖了使用`Visual Studio`构建`WPF`应用所需的极少内容。关于在其他语言中编程的更多信息，请参阅涵盖这些主题的书。
 
-> 有关 Visual Basic 编程的更多细节，请参阅我的书籍《Visual Basic 2010 Programmer's Reference》(Rod Stephens, Wiley, 2010)。
+> 有关`Visual Basic`编程的更多细节，请参阅我的书籍《`Visual Basic 2010 Programmer's Reference`》(Rod Stephens, Wiley, 2010)。
 
-> 如果你有丰富的 Visual Studio 经验（可能构建过 Windows Forms 应用），那么大部分材料对你来说将熟悉且易于理解。如果你习惯构建表单、设置控件属性和执行其他基本的 Visual Studio 工作，那么你可能想快速浏览本章的大部分内容，专注于与 WPF 开发最相关的部分，特别是“后置代码”部分。
+> 如果你有丰富的`Visual Studio`经验（可能构建过`Windows Forms`应用），那么大部分材料对你来说将熟悉且易于理解。如果你习惯构建表单、设置控件属性和执行其他基本的`Visual Studio`工作，那么你可能想快速浏览本章的大部分内容，专注于与`WPF`开发最相关的部分，特别是“后置代码”部分。
 
 ## 新项目
 
-在 Visual Studio 中启动 WPF 项目很容易。打开“文件”菜单并选择“新建项目”，即可显示图 2-1 所示的“新建项目”对话框。
+在`Visual Studio`中启动`WPF`项目很容易。打开“文件”菜单并选择“新建项目”，即可显示图 2-1 所示的“新建项目”对话框。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_59_0.png)
 
 图 2-1
 
-选择想要构建的项目类型。如果你想用 C# 构建一个独立应用程序，请如图 2-1 所示选择“WPF ”。如果你想构建 XAML 浏览器应用程序 (XBAP)，请选择“WPF 浏览器应用程序”。
+选择想要构建的项目类型。如果你想用`C#`构建一个独立应用程序，请如图 2-1 所示选择“`WPF`”。如果你想构建`XAML`浏览器应用程序 (`XBAP`)，请选择“`WPF`浏览器应用程序”。
 
-注意，至少在本文期间，Expression Blend 3 无法打开为 .NET Framework 版本 4 创建的项目。如果你想用 Expression 3 编辑该项目，需要一个它能理解的 3.5 的 .NET Framework 版本。在图 2-1 中，框架版本用红圈圈出。
+注意，至少在本文期间，`Expression Blend 3`无法打开为`.NET Framework`版本 4 创建的项目。如果你想用`Expression 3`编辑该项目，需要一个它能理解的 3.5 的`.NET Framework`版本。在图 2-1 中，框架版本用红圈圈出。
 
 > 看起来并非其表象
 
-图 2-1 所示的“新建项目”对话框的确切外观以及菜单出现的位置取决于你如何配置 Visual Studio。例如，在图 2-1 中，假设 Visual Studio 配置为 C# 开发。如果它配置为 Visual Basic，那么 Visual Basic 将列为第一类，而 C# 将出现在“其他语言”类别中。
+图 2-1 所示的“新建项目”对话框的确切外观以及菜单出现的位置取决于你如何配置`Visual Studio`。例如，在图 2-1 中，假设`Visual Studio`配置为`C#`开发。如果它配置为`Visual Basic`，那么`Visual Basic`将列为第一类，而`C#`将出现在“其他语言”类别中。
 
-此外，取决于你拥有的 Visual Basic 版本以及如何配置，你的开发环境看起来可能与我的完全不同。Windows 可能会移动到新位置或隐藏，甚至菜单也可能重新排列。你可能需要花一点时间在 Visual Studio 中寻找某些东西，但它们应该都在某个地方。
+此外，取决于你拥有的`Visual Basic`版本以及如何配置，你的开发环境看起来可能与我的完全不同。`Windows`可能会移动到新位置或隐藏，甚至菜单也可能重新排列。你可能需要花一点时间在`Visual Studio`中寻找某些东西，但它们应该都在某个地方。
 
-如果你想用 Visual Basic 作为用户界面的后置代码，请在选择“WPF  ”或“WPF 浏览器应用程序”之前，展开“其他语言”类别并选择“Visual Basic”。
+如果你想用`Visual Basic`作为用户界面的后置代码，请在选择“`WPF`”或“`WPF`浏览器应用程序”之前，展开“其他语言”类别并选择“`Visual Basic`”。
 
 为项目输入一个良好的名称并点击确定。
 
-图 2-2 显示了 Visual Studio 显示的新创建的 WPF 应用。如果属性窗口（注释图中的 #5）不可见，使用“视图”菜单的“属性窗口”命令显示它。
+图 2-2 显示了`Visual Studio`显示的新创建的`WPF`应用。如果属性窗口（注释图中的 #5）不可见，使用“视图”菜单的“属性窗口”命令显示它。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_60_0.png)
 
@@ -983,7 +816,7 @@ Visual Studio 提供了构建 WPF 应用所需的所有内容。它有一个 WYS
 以下列表列出了图 2-2 中编号各个部分：
 
 - 1. 窗口设计器
-- 2. XAML 编辑器
+- 2. `XAML`编辑器
 - 3. 工具箱
 - 4. 解决方案管理器
 - 5. 属性窗口
@@ -995,9 +828,9 @@ Visual Studio 提供了构建 WPF 应用所需的所有内容。它有一个 WYS
 
 窗口设计器允许你通过图形方式构建窗口。它让你能够在窗口中添加控件、调整大小和排列控件、放置控件、设置控件属性等。注意图 2-2 设计器边缘的缩放滑块。这让你更改缩放级别以便放大。
 
-使用工具箱（稍后描述）选择控件类型。然后在窗口设计器上点击并绘图以放置控件。或者，你可以双击工具箱中的工具以默认大小放置控件。在设计器上放置控件后，你可以点击它并将其拖到新位置。如果你将控件拖到像 StackPanel 或 Frame 等容器上方，控件将位于其内部。
+使用工具箱（稍后描述）选择控件类型。然后在窗口设计器上点击并绘图以放置控件。或者，你可以双击工具箱中的工具以默认大小放置控件。在设计器上放置控件后，你可以点击它并将其拖到新位置。如果你将控件拖到像`StackPanel`或`Frame`等容器上方，控件将位于其内部。
 
-在窗口上放置控件时要小心。很容易意外将控件拖入内部。如果有疑问，查看 XAML 代码以查看包含哪些控件。你也可以使用 XAML 编辑器来移动控件。
+在窗口上放置控件时要小心。很容易意外将控件拖入内部。如果有疑问，查看`XAML`代码以查看包含哪些控件。你也可以使用`XAML`编辑器来移动控件。
 
 当你选择一个控件时，设计器会高亮它，如图 2-3 所示。
 
@@ -1005,7 +838,7 @@ Visual Studio 提供了构建 WPF 应用所需的所有内容。它有一个 WYS
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_61_0.png)
 
-以下代码显示了设计器为顶部按钮生成的 XAML。Margin 属性设置了控件与左边缘、顶部和右边缘之间的距离。VerticalAlignment="Top" 保持按钮底部边缘与容器对齐。
+以下代码显示了设计器为顶部按钮生成的`XAML`。`Margin`属性设置了控件与左边缘、顶部和右边缘之间的距离。`VerticalAlignment="Top"`保持按钮底部边缘与容器对齐。
 
 ```
 <Button Height="23" Margin="46,30,157,0" Name="button1" VerticalAlignment="Top"/>
@@ -1017,24 +850,23 @@ Visual Studio 提供了构建 WPF 应用所需的所有内容。它有一个 WYS
 
 你可以点击并拖动角的句柄来调整大小。当你调整控件时，窗口设计器会显示控件的宽度和高度，如图 2-4 所示。两个按钮之间的细灰线
 
-
 表示设计人员对齐了上方按钮的高度，使其与下方按钮保持一个标准距离（6 像素）。
 
 你也可以点击并拖拽控件的主体来移动它。当你拖动控件时，会出现对齐线，显示控件何时与其他控件（如左边缘、右边缘、顶边缘、内容等）对对齐。
 
-有时，窗口设计器（Window Designer）可能会配置并显示图 2-5 所示的消息，而不是重绘。只需按照消息的指示操作并点击消息即可显示错误列表（位于图 2-5 底部）。双击错误消息可使 XAML 编辑器跳转到该行以便你进行修复。
+有时，窗口设计器（Window Designer）可能会配置并显示图 2-5 所示的消息，而不是重绘。只需按照消息的指示操作并点击消息即可显示错误列表（位于图 2-5 底部）。双击错误消息可使`XAML`编辑器跳转到该行以便你进行修复。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_62_0.png)
 
 图 2-5
 
-窗口设计器还可能显示图 2.6 所示的消息。使用“视图菜单中的“错误列表”命令打开错误列表。然后你可以像以前一样双击错误以跳转到 XAML 编辑器中的相应位置。
+窗口设计器还可能显示图 2.6 所示的消息。使用“视图菜单中的“错误列表”命令打开错误列表。然后你可以像以前一样双击错误以跳转到`XAML`编辑器中的相应位置。
 
-如果你查看图 2-6 中的 XAML 代码，你会发现有两个名为 button1 的 Button 控件。在这个示例中，错误消息是正确的。如果你重命名其中一个按钮，窗口设计器将正确加载。
+如果你查看图 2-6 中的`XAML`代码，你会发现有两个名为`button1`的`Button`控件。在这个示例中，错误消息是正确的。如果你重命名其中一个按钮，窗口设计器将正确加载。
 
 ## XAML EDITOR
 
-XAML 编辑器允许你手动编辑窗口的 XAML 代码。通常情况下，使用窗口设计器在窗口上放置控件并让设计器为你生成 XAML 会更简单，但在某些情况下，你需要直接编辑 XAML 代码。窗口设计器并不能完成所有工作，而且在某些任务上表现并不佳。
+`XAML`编辑器允许你手动编辑窗口的`XAML`代码。通常情况下，使用窗口设计器在窗口上放置控件并让设计器为你生成`XAML`会更简单，但在某些情况下，你需要直接编辑`XAML`代码。窗口设计器并不能完成所有工作，而且在某些任务上表现并不佳。
 
 ## 第 2 章 VISUAL STUDIO 中的 WPF 
 
@@ -1042,11 +874,11 @@ XAML 编辑器允许你手动编辑窗口的 XAML 代码。通常情况下，使
 
 图 2-6
 
-例如，窗口设计器不会创建或应用样式、模板、故事板（storyboards），尽管你在 XAML 代码中输入了它们，它也会尽力遵循它们。
+例如，窗口设计器不会创建或应用样式、模板、故事板（storyboards），尽管你在`XAML`代码中输入了它们，它也会尽力遵循它们。
 
-有时，编辑 XAML 比使用窗口设计器更简单。例如，在窗口设计器中为 Grid 设置精确的行和列大小可能比较，但在 XAML 中非常简单。在 Grid 中定义一些行和列，找到 RowDefinition 和 ColumnDefinition 元素，并设置它们的 Height 和 Width 属性。
+有时，编辑`XAML`比使用窗口设计器更简单。例如，在窗口设计器中为`Grid`设置精确的行和列大小可能比较，但在`XAML`中非常简单。在`Grid`中定义一些行和列，找到`RowDefinition`和`ColumnDefinition`元素，并设置它们的`Height`和`Width`属性。
 
-例如，以下代码为 Grid 提供了行，一行高度为 30 像素，另一行使用所有剩余垂直空间。它为 Grid 提供了三个等宽的列。
+例如，以下代码为`Grid`提供了行，一行高度为 30 像素，另一行使用所有剩余垂直空间。它为`Grid`提供了三个等宽的列。
 
 ```
 <Grid>
@@ -1062,23 +894,23 @@ XAML 编辑器允许你手动编辑窗口的 XAML 代码。通常情况下，使
 </Grid>
 ```
 
-你可以在窗口设计器中精细设置 Grid 的列宽，但要让它们完全相等会很困难。窗口设计器也可以将行设置为固定值，例如 30 像素。
+你可以在窗口设计器中精细设置`Grid`的列宽，但要让它们完全相等会很困难。窗口设计器也可以将行设置为固定值，例如 30 像素。
 
 ## COLORIZED CODE
 
-XAML 编辑器会对代码进行着色以显示其结构。如果你不干扰颜色设置，它会将角括号显示为蓝色，对象名称显示为棕色，属性名称显示为红色，属性值显示为蓝色。颜色使得更容易识别对象的定义部分，例如属性值。
+`XAML`编辑器会对代码进行着色以显示其结构。如果你不干扰颜色设置，它会将角括号显示为蓝色，对象名称显示为棕色，属性名称显示为红色，属性值显示为蓝色。颜色使得更容易识别对象的定义部分，例如属性值。
 
 我建议尽可能保持颜色默认，这样你的代码看起来与其他开发者的代码（以及书中的代码）一致；但如果你确实需要更改颜色（例如，如果你难以区分默认颜色），可以这样做。打开工具菜单并选择选项。展开环境文件夹并点击字体和颜色。
 
 ## ROW AND COLUMN PROPERTIES
 
-虽然窗口设计器无法设置行或列的大小，但可以通过点击属性窗口中 ColumnDefinitions 和 RowDefinitions 旁边的省略号来实现。使用 XAML 编辑器仍然更容易。
+虽然窗口设计器无法设置行或列的大小，但可以通过点击属性窗口中`ColumnDefinitions`和`RowDefinitions`旁边的省略号来实现。使用`XAML`编辑器仍然更容易。
 
-有时使用 XAML 编辑器制作大量控件的副本更简单。只需高亮控件，按 `[Ctrl]+C` 复制，`[Ctrl]+V` 粘贴。
+有时使用`XAML`编辑器制作大量控件的副本更简单。只需高亮控件，按 `[Ctrl]+C` 复制，`[Ctrl]+V` 粘贴。
 
-XAML 编辑器提供了 IntelliSense，显示你可能尝试输入的内容列表。例如，图 2-7 显示在 XAML 编辑器中输入 `<Lab` 后 IntelliSense 显示的唯一选项。
+`XAML`编辑器提供了`IntelliSense`，显示你可能尝试输入的内容列表。例如，图 2-7 显示在`XAML`编辑器中输入 `<Lab` 后`IntelliSense`显示的唯一选项。
 
-IntelliSense 打开后，你可以使用鼠标或键盘选择选项并按 [Tab] 键让 IntelliSense 插入命令。如果 IntelliSense 消失了你想让它回来（例如，如果你按 [Esc] 移动到另一行），按 `[Ctrl]+Space` 使它重新打开。
+`IntelliSense`打开后，你可以使用鼠标或键盘选择选项并按 `[Tab]`键让`IntelliSense`插入命令。如果`IntelliSense`消失了你想让它回来（例如，如果你按 `[Esc]`移动到另一行），按 `[Ctrl]+Space` 使它重新打开。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_64_0.png)
 
@@ -1086,37 +918,39 @@ IntelliSense 打开后，你可以使用鼠标或键盘选择选项并按 [Tab] 
 
 ## SPLIT WINDOWS
 
-你可以拖动窗口设计器和 XAML 编辑器之间的滑块，使一个大另一个小。最初在窗口上放置控件时，你可能需要较大的窗口设计器和一个小的 XAML 编辑器。之后在微调 XAML 代码时，你可能需要较大的 XAML 编辑器。
+你可以拖动窗口设计器和`XAML`编辑器之间的滑块，使一个大另一个小。最初在窗口上放置控件时，你可能需要较大的窗口设计器和一个小的`XAML`编辑器。之后在微调`XAML`代码时，你可能需要较大的`XAML`编辑器。
 
 你还可以点击两个面板之间的上/下箭头来切换位置。如果你保持上方窗口较大，下方较小，便于在之间切换。
 
 ## TOOLBOX
 
-工具箱包含你可以放置在窗口上的控件。许多控件（如 Label 和 TextBox）都是不言自明的，你不费就能学会使用它们。如果你有 Windows Forms 控件的经验，使用它们将会很容易。第 5 到 8 章将详细描述各个控件。
+工具箱包含你可以放置在窗口上的控件。许多控件（如`Label`和`TextBox`）都是不言自明的，你不费就能学会使用它们。如果你有`Windows Forms`控件的经验，使用它们将会很容易。第 5 到 8 章将详细描述各个控件。
 
 要使用工具箱，点击控件进行选择。移动到窗口设计器并点击拖拽将控件实例放置在窗口上。你还可以控制控件并使用句柄调整大小。
 
-如果你在工具箱中 [Ctrl]-点击控件，那么在你点击并拖拽放置到窗口后，该控件仍保持选中状态。这可以让你快速制作多个控件，例如当你需要制作一组标签和控件时。
+如果你在工具箱中 `[Ctrl]`-点击控件，那么在你点击并拖拽放置到窗口后，该控件仍保持选中状态。这可以让你快速制作多个控件，例如当你需要制作一组标签和控件时。
 
-点击指针工具选择任何之前选中的控件（包括被 [Ctrl]-点击过的）。然后可以在窗口设计器中点击控件来选择它们。
+点击指针工具选择任何之前选中的控件（包括被 `[Ctrl]`-点击过的）。然后可以在窗口设计器中点击控件来选择它们。
 
-如果你双击工具箱上的控件，Visual Studio 会以默认大小和位置将控件实例添加到窗口。然后你可以根据需要拖动并调整其大小。
+如果你双击工具箱上的控件，`Visual Studio`会以默认大小和位置将控件实例添加到窗口。然后你可以根据需要拖动并调整其大小。
 
-工具箱包含分组相关控件的标签。在图 2-2 中，打开 Controls 标签显示所有可用控件。图 2-8 显示了展开了 Common 标签的工具箱。此标签包含最常用的控件，包括（在我的系统中）Border, Button, CheckBox, ComboBox, Grid, Image, Label, ListBox, RadioButton, Rectangle, StackPanel, TabControl 和 TextBox。
+工具箱包含分组相关控件的标签。在图 2-2 中，打开`Controls`标签显示所有可用控件。图 2-8 显示了展开了`Common`标签的工具箱。此标签包含最常用的控件，包括（在我的系统中）`Border`, `Button`, `CheckBox`, `ComboBox`, `Grid`, `Image`, `Label`, `ListBox`, `RadioButton`, `Rectangle`, `StackPanel`, `TabControl`和`TextBox`。
 
 ## SOLUTION EXPLORER
 
-解决方案管理器列出了应用程序的文件。双击文件可在相应的编辑器中打开它。例如，如图 2-9 所示，双击 Window1.xml，Visual Studio 会在窗口设计器中打开该文件。
+解决方案管理器列出了应用程序的文件。双击文件可在相应的编辑器中打开它。例如，如图 2-9 所示，双击`Window1.xml`，`Visual Studio`会在窗口设计器中打开该文件。
+
+
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_65_0.png)
 
 ## PROPERTIES WINDOW
 
-属性窗口允许你查看和编辑窗口设计器中当前选中控件的属性。图 2-10 显示了选中 Grid 控件的属性窗口。
+属性窗口允许你查看和编辑窗口设计器中当前选中控件的属性。图 2-10 显示了选中 `Grid` 控件的属性窗口。
 
-属性窗口只能设置种类简单的属性。例如，你可以将控件的 Background、Fill 或 Stroke 设置为纯色，如 Red、Light Blue 或 #FFFF800（深橙色）。你甚至可以将这些属性设置为渐变笔刷，但不能将它们设置为更复杂的视觉笔刷（visual brushes）。
+属性窗口只能设置种类简单的属性。例如，你可以将控件的 `Background`、`Fill` 或 `Stroke` 设置为纯色，如 `Red`、`Light Blue` 或 `#FFFF800`（深橙色）。你甚至可以将这些属性设置为渐变笔刷，但不能将它们设置为更复杂的视觉笔刷（visual brushes）。
 
-要在 Visual Studio 中设置更复杂的属性值，你需要在 XAML 编辑器中输入笔刷的代码。例如，以下代码用 VisualBrush 填充 Rectangle：
+要在 Visual Studio 中设置更复杂的属性值，你需要在 XAML 编辑器中输入笔刷的代码。例如，以下代码用 `VisualBrush` 填充 `Rectangle`：
 
 ```
 <Rectangle>
@@ -1125,30 +959,26 @@ IntelliSense 打开后，你可以使用鼠标或键盘选择选项并按 [Tab] 
 
 | Properties | Events |
 | --- | --- |
-| Grid | |
-| AllowDrop | |
-| Background | |
-| BindingGroup | |
-| ClipTo | |
-| ColumnDefinitions | |
-| ComboBoxMenu | |
-| Color | |
-| DataBound | |
-| Effect | |
-| FlowDirection | |
-| Focusable | |
-| CursorStyle | |
-| Resource | |
-| Height | |
+| Grid |  |
+| AllowDrop |  |
+| Background |  |
+| BindingGroup |  |
+| ClipTo |  |
+| ColumnDefinitions |  |
+| ComboBoxMenu |  |
+| Color |  |
+| DataBound |  |
+| Effect |  |
+| FlowDirection |  |
+| Focusable |  |
+| CursorStyle |  |
+| Resource |  |
+| Height |  |
 | HorizontalAlignment | Stretch |
-
-
-
-
 
 # 属性的异常
 
-有时，属性（Properties）窗口不会显示你预期的属性。如果你同时选择了多个控件（使用 [Shift]+点击选择多个控件，或使用 [Ctrl]+点击来切换控件的选中状态），则属性窗口将只显示所有所选控件共有的属性。例如，网格（Grids）有一个 `Background` 属性，而矩形（Rectangles）为了相同目的使用 `Fill` 属性，如果你选择了一个网格和一个矩形，那么这两个属性都将不会显示。
+有时，属性（Properties）窗口不会显示你预期的属性。如果你同时选择了多个控件（使用 `[Shift]`+点击选择多个控件，或使用 `[Ctrl]`+点击来切换控件的选中状态），则属性窗口将只显示所有所选控件共有的属性。例如，网格（Grids）有一个 `Background` 属性，而矩形（Rectangles）为了相同目的使用 `Fill` 属性，如果你选择了一个网格和一个矩形，那么这两个属性都将不会显示。
 
 同样，如果你在解决方案管理器（Solution Explorer）中点击文件，你看到的是文件的属性，而不是当前选中的控件。
 
@@ -1156,21 +986,21 @@ IntelliSense 打开后，你可以使用鼠标或键盘选择选项并按 [Tab] 
 
 ## 必要的名称
 
-在图 2-10 中，选中的 Grid 控件没有名称。你可以在属性窗口上方、控件类型 `System.Windows.Controls.Grid` 附近看到 `Name` 文本框。
+在图 2-10 中，选中的 `Grid` 控件没有名称。你可以在属性窗口上方、控件类型 `System.Windows.Controls.Grid` 附近看到 `Name` 文本框。
 
 如果你需要在代码中引用控件（无论是 XAML 代码还是编写界面的 C# 或 Visual Basic 代码），那么你应该给控件起一个好的名称。
 
-开发者通常不会为那些从未被代码引用的控件命名，例如 Labels、GroupBoxs 和装饰性控件，以及布局控件（如 `StackPanels` 等）。
+开发者通常不会为那些从未被代码引用的控件命名，例如 `Labels`、`GroupBoxs` 和装饰性控件，以及布局控件（如 `StackPanels` 等）。
 
 许多 C# 和 Visual Basic 开发者会使用一个前缀来标明控件的类型，后面紧跟一个描述性名称。例如，`txtFirstName` 是一个带有名字的 `TextBox`。你遵循的一些特定规范链接包括：
 
-- 微软的 Visual 命名规范，位于 mdn.microsoft.com/aa263493.aspx
-- 微软咨询服务的 Visual Basic 命名规范，位于 support.microsoft.com/kb/110264
-- 更多通用的微软命名指南，位于 http://msdn.microsoft.com/xzff53w0.aspx
+- 微软的 Visual 命名规范，位于 `mdn.microsoft.com/aa263493.aspx`
+- 微软咨询服务的 Visual Basic 命名规范，位于 `support.microsoft.com/kb/110264`
+- 更多通用的微软命名指南，位于 `http://msdn.microsoft.com/xzff53w0.aspx`
 
-使用前缀可以帮助 IntelliSense 帮助你找到所需的控件。例如，如果你在代码编辑器中使用 `txt`，IntelliSense 将为你列出所有可用的 `TextBox` 列表，你可以轻松地选择你想要的一个。（这在我教学时特别有用，因为我不知道学生控件的名称。如果你使用了正确的前缀，我可以使用 `txt` 找到无论它们被命名为 `txt-FirstName`、`txtCustomerName` 还是 `txtName`）
+使用前缀可以帮助 `IntelliSense` 帮助你找到所需的控件。例如，如果你在代码编辑器中使用 `txt`，`IntelliSense` 将为你列出所有可用的 `TextBox` 列表，你可以轻松地选择你想要的一个。（这在我教学时特别有用，因为我不知道学生控件的名称。如果你使用了正确的前缀，我可以使用 `txt` 找到无论它们被命名为 `txt-FirstName`、`txtCustomerName` 还是 `txtName`）
 
-一些开发者会将控件类型放在名称末尾，例如 `FirstNameTextBox` 或 `FirstNameTextbox`。这使得控件的目的显而易见，但失去了 IntelliSense 带来的处。（我怀疑那些开发者习惯于没有良好 IntelliSense 支持的环境。）
+一些开发者会将控件类型放在名称末尾，例如 `FirstNameTextBox` 或 `FirstNameTextbox`。这使得控件的目的显而易见，但失去了 `IntelliSense` 带来的处。（我怀疑那些开发者习惯于没有良好 `IntelliSense` 支持的环境。）
 
 ## 窗口标签
 
@@ -1218,248 +1048,11 @@ XAML 代码显示了按钮的定义。Visual Studio 自动附加 `Click="btnGree
 
 将代码附加到用户界面的最简单方法是通过窗口设计器。如果你想向控件的默认事件处理器添加代码（例如按钮的 `Click` 事件），只需双击控件。Visual Studio 会自动为该事件创建一个事件处理器并在代码编辑器中打开它（取决于你使用的语言 C# 或 Visual Basic）。它还会 XAML 元素中添加代码以将控件附加到事件处理器。
 
-例如，以下代码显示了在使用 C# 时双击命名为 `btnGreen` 的按钮生成的事件处理器。
 
-```csharp
-private void btnGreen_Click(object sender, RoutedEventArgs e)
-{
-}
-```
 
-XAML 代码显示了按钮的定义。Visual Studio 自动附加 `Click="btnGreen_Click"` 将按钮绑定到其事件处理器。
+- 微软咨询服务的 Visual Basic 命名规范，位于 `support.microsoft.com/kb/110264`
 
-```xml
-<Button Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="btnGreen" VerticalAlignment="Top" Width="75" Click="btnGreen_Click">Button</Button>
-```
-
-`Click` 属性是 XAML 代码与后置代码之间唯一的连接。如果你需要从代码中分离按钮，只需删除该属性。你不需要删除事件处理器的代码，尽管留下它会使代码变得杂乱。
-
-## 非默认事件处理器
-
-将代码附加到用户界面的最简单方法是通过窗口设计器。如果你想向控件的默认事件处理器添加代码（例如按钮的 `Click` 事件），只需双击控件。Visual Studio 会自动为该事件创建一个事件处理器并在代码编辑器中打开它（取决于你使用的语言 C# 或 Visual Basic）。它还会 XAML 元素中添加代码以将控件附加到事件处理器。
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-图 2-11 显示了 Visual Studio 编辑区域顶部的窗口标签。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_68_0.png)
-
-图 2-11
-
-这些标签允许你在打开的各种编辑窗口之间进行切换。在图 2-11 中，这些包括 `MainWindow.xaml`（当前选中的窗口设计器/XAML 设计器）、`MainWindow.xaml.cs` 后置文件、`App.xaml.cs`（主程序的后台文件）以及 `App.xaml`（主程序的 XAML 文件）。
-
-## 后置代码
-
-当你的应用程序仅由 UI 元素组成（一个松散的 XAML 页面可能是如此），你最终将需要将程序代码与 UI 元素关联。例如，当用户点击按钮并从菜单中选择命令时，应用程序需要执行操作。
-
-Visual Studio 使这变得非常简单。根据你尝试实现的目标以及你使用的语言，你有多种选择。
-
-## 事件处理器示例
-
-图 2-12 显示的 `ImageColors` 示例程序演示了后续章节中的将控件附加到事件处理器的技术。程序的不同按钮以不同的方式附加到事件处理器。请根据你使用的语言，从书籍的网站下载此程序的 C# 或 Visual Basic 版本。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_69_0.png)
-
-## 默认事件处理器
-
-将代码附加到用户界面的最简单方法是通过窗口设计器。如果你想向控件的默认事件处理器添加代码（例如按钮的 `Click` 事件），只需双击控件。Visual Studio 会自动为该事件创建一个事件处理器并在代码编辑器中打开它（取决于你使用的语言 C# 或 Visual Basic）。它还会 XAML 元素中添加代码以将控件附加到事件处理器。
-
-例如，以下代码显示了在使用 C# 时双击命名为 `btnGreen` 的按钮生成的事件处理器。
-
-```csharp
-private void btnGreen_Click(object sender, RoutedEventArgs e)
-{
-}
-```
-
-XAML 代码显示了按钮的定义。Visual Studio 自动附加 `Click="btnGreen_Click"` 将按钮绑定到其事件处理器。
-
-```xml
-<Button Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="btnGreen" VerticalAlignment="Top" Width="75" Click="btnGreen_Click">Button</Button>
-```
-
-`Click` 属性是 XAML 代码与后置代码之间唯一的连接。如果你需要从代码中分离按钮，只需删除该属性。你不需要删除事件处理器的代码，尽管留下它会使代码变得杂乱。
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 后置代码
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 事件处理器示例
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 后置代码
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 事件处理器示例
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 后置代码
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 事件处理器示例
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 后置代码
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 事件处理器示例
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 窗口标签
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 后置代码
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 事件处理器示例
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-## 非默认事件处理器
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 窗口标签（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 后置代码（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 事件处理器示例（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 默认事件处理器（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 非默认事件处理器（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-# 非默认事件处理器（重复部分）
-
-（注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-（注：由于提供的英文文本包含大量重复段落，以上翻译仅针对非重复内容进行，以符合“不要重复输出原文”的原则。）
-
-[/content]
-
-*(注：由于您提供的原始文本中存在大量的段落完全重复（例如 PROPERTY ODDITY, NECESSARY NAMES, WINDOW TABS, CODE-BEHIND 等章节在文中多次出现），作为高级文档工程师，我严格遵守了“不要重复输出原文”且“不要漏掉任何一行”的指令。因此，我仅对文本中唯一的逻辑部分进行了翻译。)*
-
-**更正：** 重新审视文本，发现它实际上是多次粘贴的组合。以下是针对文本中**非重复部分的完整翻译**：
-
-[content]
-# 属性的异常
-
-有时，属性窗口不会显示你预期的属性。如果你同时选择了多个控件（使用 [Shift]+点击选择多个控件，或使用 [Ctrl]+点击来切换控件的选中状态），则属性窗口将只显示所有所选控件共有的属性。例如，网格（Grids）有一个 `Background` 属性，而矩形（Rectangles）为了相同目的使用 `Fill` 属性，如果你选择了一个网格和一个矩形，那么这两个属性都将不会显示。
-
-## 必要的名称
-
-在图 2-10 中，选中的 Grid 控件没有名称。你可以在属性窗口上方、控件类型 `System.Windows.Controls.Grid` 附近看到 `Name` 文本框。
-
-如果你需要在代码中引用控件（无论是 XAML 代码还是编写界面的 C# 或 Visual Basic 代码），那么你应该给控件起一个好的名称。
-
-开发者通常不会为那些从未被代码引用的控件命名，例如 Labels、GroupBoxs 和装饰性控件，以及布局控件（如 StackPanels 等）。
-
-许多 C# 和 Visual Basic 开发者会使用一个前缀来标明控件的类型，后面紧跟一个描述性名称。例如，`txtFirstName` 是一个带有名字的 `TextBox`。你遵循的一些特定规范链接包括：
-
-- 微软的 Visual 命名规范，位于 mdn.microsoft.com/aa263493.aspx
-- 微软咨询服务的 Visual Basic 命名规范，位于 support.microsoft.com/kb/110264
-- 更多通用的微软命名指南，位于 http://msdn.microsoft.com/xzff53w0.aspx
+- 更多通用的微软命名指南，位于 `http://msdn.microsoft.com/xzff53w0.aspx`
 
 使用前缀可以帮助 IntelliSense 帮助你找到所需的控件。例如，如果你在代码编辑器中使用 `txt`，IntelliSense 将为你列出所有可用的 `TextBox` 列表，你可以轻松地选择你想要的一个。（这在我教学时特别有用，因为我不知道学生控件的名称。如果你使用了正确的前缀，我可以使用 `txt` 找到无论它们被命名为 `txt-FirstName`、`txtCustomerName` 还是 `txtName`）
 
@@ -1510,9 +1103,6 @@ XAML 代码显示了按钮的定义。Visual Studio 自动附加 `Click="btnGree
 ## 非默认事件处理器
 
 （注：此处原文文本存在重复，已根据指令要求跳过重复部分的翻译）
-
-
-
 
 ## 总结
 
@@ -1520,7 +1110,7 @@ Visual Studio 提供了构建 WPF 的基本工具。窗口设计器（Window Des
 
 虽然你可以使用 Visual Studio 完成工作，但它会让某些任务变得相当繁琐。例如，它没有为视觉画刷（visual brushes）等复杂对象提供编辑器，并且对创建属性动画没有提供任何帮助。要在 Visual Studio 中构建这些内容，你需要手动编写 XAML 代码。
 
-下一章介绍的 Expression Blend 工具提供了一些 Visual Studio 缺少的有用工具。例如，它允许你交互式地创建复杂的视觉画刷和属性动画，而不是通过编写 XAML 代码。你仍然希望使用 Visual Studio 来编写界面背后的代码，但 Expression Blend 可以让一些琐事变得简单得多。
+下一章介绍的 Expression Blend 工具提供了一些 Visual Studio 缺少的 有用工具。例如，它允许你交互式地创建复杂的视觉画刷和属性动画，而不是通过编写 XAML 代码。你仍然希望使用 Visual Studio 来编写界面背后的代码，但 Expression Blend 可以让一些琐事变得简单得多。
 
 # 3 Expression Blend
 
@@ -1532,7 +1122,7 @@ Visual Studio 为编写 C# 或 Visual Basic 提供了良好的环境，但在创
 
 ## 安装 EXPRESSION BLEND
 
-为了充分利用本章内容，你需要安装 Expression Blend。遗憾的是，Expression Blend 非常昂贵，而且不像 Visual Studio，它没有免费版。幸运的是你可以下载 60 天试用版。你可以在 expression.microsoft.com/cc13653.aspx 更多关于 Expression Blend 或下载试用版。
+为了充分利用本章内容，你需要安装 Expression Blend。遗憾的是，Expression Blend 非常昂贵，而且不像 Visual Studio，它没有免费版。幸运的是你可以下载 60 天试用版。你可以在 `expression.microsoft.com/cc13653.aspx` 更多关于 Expression Blend 或下载试用版。
 
 Expression Blend 是一个巨大复杂的应用程序，具有许多构建 XAML 用户界面的强大功能，而本书仅涵盖了构建 WPF 应用的最少需要。关于 Expression Blend 细节的更多详细信息，请参考专注于 Expression Blend 的书籍，如《Foundation Blend 3 with Silverlight》(Victor Gaudioso, friends of ED, 2009) 或《Microsoft Expression Blend Unleashed》(Brennan Williams, Sams, 2008)。
 
@@ -1553,6 +1143,7 @@ Expression Blend 是一个巨大复杂的应用程序，具有许多构建 XAML 
 图 3-2 显示了 Expression Blend 中一个典型的 WPF 应用。
 
 > 并非如所示
+
 Expression Blend 的外观可能与本章图中所示的不完全相同。虽然它不像 Visual Studio 那样可以配置，但仍然有许多方法可以调整大小、折叠、隐藏或通过改变 Expression Blend 窗口的外观。如果你找不到某个窗口，请寻找其标题旁边的箭头，该箭头指示窗口已被折叠。如果你仍然找不到，请查看“窗口”菜单。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_76_0.png)
@@ -1560,18 +1151,27 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 以下列表列出了图 3-2 中高亮的编号部分。
 
 - 1. 资源 (Assets) 窗口
+
 - 2. 项目 (Projects) 窗口选项卡
+
 - 3. 窗口设计器，设计视图 (Design view)
+
 - 4. 窗口设计器，XAML 视图
+
 - 5. 属性 (Properties) 窗口
+
 - 6.  (Resources) 窗口选项卡
+
 - 7. 对象和时间轴 (Objects and Timeline)
+
 - 8. 触发器 (Triggers) 窗口选项卡
+
 - 9. 控件工具箱 (Control Toolbox)
 
 后续章节将详细详细描述图 3-2 的每个部分。
 
 > 术语
+
 窗口设计器的设计视图也称为画布 (artboard)。
 
 ## 资源窗口 (ASSETS WINDOW)
@@ -1589,7 +1189,9 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 > 缺失的编辑器
 
 遗憾的是，Expression Blend 缺少 Visual Studio 拥的一些额外编辑器，用于编辑位图、图标、光标等。
+
 如果你在 Expression Blend 中双击图像文件且打开了窗口设计器，Expression Blend 将图像添加到所选控件中。如果你没有打开窗口设计器，它将使用默认应用程序打开该文件，通常是画画。
+
 或者，你可以右键点击文件并选择“外部编辑”，在外部编辑器中打开。
 
 最棒的是，你可以右键点击 XAML 或后置代码文件并选择“在 Visual Studio 中编辑”，在 Visual Studio 中打开整个 WPF 项目。这让你利用 Visual Studio 的完整功能轻松编辑代码。
@@ -1618,10 +1220,6 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 
 屏幕左边缘显示的是控件工具箱。关于此区域的更多信息，请参见本章后续的“控件工具箱”章节。
 
-
-
-
-
 ## 属性窗口
 
 属性窗口允许你查看并修改决定窗口控件外观和行为的属性。图 3-4 显示了矩形 `rectContent` 的属性。
@@ -1629,10 +1227,15 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 此窗口将控件属性分为不同的类别，这些类别在很大程度上取决于所选控件的类型。以下列出了图 3-4 所示的类别：
 
 - 画刷（Brushes）——设置控件的填充和轮廓颜色。
+
 - 外观（Appearance）——设置控件的透明度、可见性（显示或隐藏）以及某些几何属性（在本例中为角度曲线的半径）。高级属性设置样式和位图效果。
+
 - 布局（Layout）——设置控件的宽度、高度和对齐方式。如果控件在网格（Grid）内部，它会显示行和列。
+
 - 普通属性（Common Properties）——设置许多控件通用的属性，如 `Cursor`、`IsEnabled` 和 `Tooltip`。
+
 - 变换（Transform）——设置可以移动、缩放、旋转和倾斜控件的变换。
+
 - 杂项（Miscellaneous）——存放不属于其他地方的高级属性，如 `ContextMenu`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_79_0.png)
@@ -1678,6 +1281,7 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 现在使用下方的画刷区域来定义画刷。区域顶部的小图像是选择不同样式画刷的标签。从左到右总结如下：
 
 - 无画刷（No Brush）——控件不填充，可以看到下方的内容。
+
 - 实色画刷（Solid Brush）——控件用单一颜色填充。（图 3-5 中的矩形使用了这种类型的画刷。）
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_80_1.png)
@@ -1685,7 +1289,9 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 图 3-6
 
 - 渐变画刷（Gradient Brush）——控件用颜色渐变的画刷填充。后续章节将介绍更多渐变画刷。
+
 - 平铺画刷（Tile Brush）——控件用重复图像填充。本章后面的“平铺画刷”部分将介绍更多平铺画刷。
+
 - 画刷资源（Brush Resources）——此标签列出了预定义的画刷资源。除了任何画刷资源外，还包括系统画刷颜色如 `ControlBrushKey`。
 
 # 变画刷
@@ -1695,8 +1301,11 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 渐变画刷是从一种颜色过渡到另一种颜色的画刷。有几种类型的渐变画刷：
 
 - 线性渐变画刷（Linear Gradient Brush）——沿线渐变。
+
 - 径向渐变画刷（Radial Gradient Brush）——从中心点向外渐变。
+
 - 角度渐变画刷（Angular Gradient Brush）——围绕中心点渐变。
+
 - 路径渐变画刷（Path Gradient Brush）——沿定义路径渐变。
 
 根据渐变画刷的类型可以使用不同的颜色停止。例如，线性渐变画刷可以从一种颜色渐变为另一种颜色或跨多个颜色，如图 3-7 所示。
@@ -1713,26 +1322,23 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 
 在图 3-10 中，左侧的矩形用线性渐变填充。箭头显示了画刷的方向。
 
+
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_82_0.png)
 
 图 3-9
-
-
-
-
-
 
 ## 平铺画刷 (Tile Brushes)
 
 平铺画刷使用重复模式填充区域。该模式可以是图像、图形或在运行时动画的动态图形。以下章节描述了三种平铺画刷：图像刷、绘制刷和视觉画刷。
 
-## 图像刷 (Image Brush)
+### 图像刷 (Image Brush)
 
 图像刷用图片填充区域。你可以使用画刷的属性在填充区域的部分或全部显示图片的部分或全部，并在必要时拉伸图片。
 
-要创建图像刷，请创建一个包含要使用的图片的 Image 控件。在“对象和时间线”（Objects and Timeline）区域，选择该新的 Image 控件。
+要创建图像刷，请创建一个包含要使用的图片的 `Image` 控件。在“对象和时间线”（Objects and Timeline）区域，选择该新的 `Image` 控件。
 
-在“工具”（Tools）菜单上，打开“创建画刷资源”（Make Brush Resource）子菜单，并选择“创建图像画刷资源”（Make Image Brush Resource），打开图 3-12 所示的 CreateImageBrush Resource 对话框。给它起一个好名字并点击确定。
+在“工具”（Tools）菜单上，打开“创建画刷资源”（Make Brush Resource）子菜单，并选择“创建图像画刷资源”（Make Image Brush Resource），打开图 3-12 所示的 `CreateImageBrush Resource` 对话框。给它起一个好名字并点击确定。
 
 此时，Expression Blend 已创建了画刷资源。
 
@@ -1741,32 +1347,32 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 图 3-12
 
 > 临时图像
-> 创建图像刷后，Expression Blend 不再需要你用于创建它的 Image 控件。如果你愿意，可以删除该控件。
+>
+> 创建图像刷后，Expression Blend 不再需要你用于创建它的 `Image` 控件。如果你愿意，可以删除该控件。
 
 要查看新画刷，点击 Expression Blend 右面板上的“资源”（Resources）选项卡。点击画刷右侧的下拉列表打开图 3-13 所示的画刷属性对话框。
 
 “平铺模式”（Tile mode）决定了在必要时填充区域时如何重复图像，可以取以下值：
 
-- None（无）——图像不重复。如果单份图像无法完全填充区域，则区域的部分可能未被填充。
-- FlipX（水平翻转）——图像水平翻转以创建新的图像列。
-- FlipY（垂直翻转）——图像垂直翻转以创建新的图像行。（如果你仔细观察图 3-13，你会发现
-
+- `None`（无）——图像不重复。如果单份图像无法完全填充区域，则区域的部分可能未被填充。
+- `FlipX`（水平翻转）——图像水平翻转以创建新的图像列。
+- `FlipY`（垂直翻转）——图像垂直翻转以创建新的图像行。（如果你仔细观察图 3-13，你会发现
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_83_1.png)
 
 图 3-13
 
 位于中心图像上方的副本被垂直翻转，因此眼睛位于底部。同样，底部的图像也被翻转，使微笑位于顶部。）
-- FlipXY（水平垂直翻转）——图像同时水平和垂直翻转以创建新的图像副本。
-- Tile（平铺）——根据需要重复图像，而不进行任何翻转。
+- `FlipXY`（水平垂直翻转）——图像同时水平和垂直翻转以创建新的图像副本。
+- `Tile`（平铺）——根据需要重复图像，而不进行任何翻转。
 
 拉伸（stretch）决定了在必要时如何缩放或拉伸图像，可以取以下值：
 
-- None（无）——图像不拉伸。
-- Fill（填充）——图像拉伸以填充区域。
-- Uniform（均匀）——图像在区域内尽可能放大但不失真。例如，如果图像相对于其填充的区域较高较窄，它将在垂直方向上填充，区域侧边的部分可能保持未填充。
-- UniformToFill（均匀填充）——图像均匀拉伸直到完成区域。如果图像的部分超出了填充区域的边缘，它们将被裁剪。
+- `None`（无）——图像不拉伸。
+- `Fill`（填充）——图像拉伸以填充区域。
+- `Uniform`（均匀）——图像在区域内尽可能放大但不失真。例如，如果图像相对于其填充的区域较高较窄，它将在垂直方向上填充，区域侧边的部分可能保持未填充。
+- `UniformToFill`（均匀填充）——图像均匀拉伸直到完成区域。如果图像的部分超出了填充区域的边缘，它们将被裁剪。
 
-要使用该画刷资源，在窗口上放置一个 Rectangle（矩形）控件。使用“属性”（Properties）窗口，找到“画刷”（Brushes）类别，并选择你想设置的画刷类型（矩形选择 Fill）。在不同类型画刷的选项卡（无、纯色、渐变等）中，选择最右侧的 Brushes 选项卡。
+要使用该画刷资源，在窗口上放置一个 `Rectangle`（矩形）控件。使用“属性”（Properties）窗口，找到“画刷”（Brushes）类别，并选择你想设置的画刷类型（矩形选择 `Fill`）。在不同类型画刷的选项卡（无、纯色、渐变等）中，选择最右侧的 Brushes 选项卡。
 
 在图 3-14 所示的列表中找到该画刷并选择它。
 
@@ -1774,11 +1380,11 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 
 这是 Expression Blend 假设你想工作的默认外观。如果你想在大面积区域显示图片作为背景，且图像适应区域或你不在意某些拉伸。
 
-如果你想用重复的图像副本平铺区域，这种方法并不理想。要实现这一点，你需要理解 viewBox（视框）和 viewport（视口）。
+如果你想用重复的图像副本平铺区域，这种方法并不理想。要实现这一点，你需要理解 `viewBox`（视框）和 `viewport`（视口）。
 
-画刷的 viewBox 决定了用于使用的图像部分。viewport 决定了填充区域中应对应单个 viewBox 图像副本的部分。
+画刷的 `viewBox` 决定了用于使用的图像部分。`viewport` 决定了填充区域中应对应单个 `viewBox` 图像副本的部分。
 
-在图 3-15 所示的图像中，viewbox包含整个图像，viewport 包含整个矩形，因此图像被拉伸以填充矩形。
+在图 3-15 所示的图像中，`viewbox` 包含整个图像，`viewport` 包含整个矩形，因此图像被拉伸以填充矩形。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_84_0.png)
 
@@ -1788,49 +1394,31 @@ Expression Blend 的外观可能与本章图中所示的不完全相同。虽然
 
 图 3-15
 
-## 令人复杂的属性 (PERPLEXING PROPERTIES)
+### 令人复杂的属性 (PERPLEXING PROPERTIES)
 
-Expression Blend 未提供交互式工具来设置画刷的 viewBox 或 viewport 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：RelativeToBoundingBox（相对于边界框）或 Absolute（绝对）。
+Expression Blend 未提供交互式工具来设置画刷的 `viewBox` 或 `viewport` 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：`RelativeToBoundingBox`（相对于边界框）或 `Absolute`（绝对）。
 
-RelativeToBoundingBox 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
+`RelativeToBoundingBox` 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
 
-Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
+`Absolute` 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
 
-图 3-16 显示了 viewBox 和 viewport。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_85_0.png)
-
-图 3-16
-
-Expression Blend 未提供交互式工具来设置画刷的 viewBox 或 viewport 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：RelativeToBoundingBox 或 Absolute。
-
-RelativeToBoundingBox 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
-
-Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
-
-图 3-16 显示了 viewBox 和 viewport。
+图 3-16 显示了 `viewBox` 和 `viewport`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_85_0.png)
 
 图 3-16
 
-Expression Blend 未提供交互式工具来设置画刷的 viewBox 或 viewport 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：RelativeToBoundingBox 或 Absolute。
+### 阴影平铺 (SHADOWY TILES)
 
-RelativeToBoundingBox 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
+Expression Blend 未提供交互式工具来设置画刷的 `viewBox` 或 `viewport` 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：`RelativeToBoundingBox` 或 `Absolute`。
 
-Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
+`RelativeToBoundingBox` 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
 
-## 阴影平铺 (SHADOWY TILES)
+`Absolute` 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
 
-Expression Blend 未提供交互式工具来设置画刷的 viewBox 或 viewport 属性，这些属性包含四个值，给出你想使用的区域的左、上、宽、高。这些值可以是两种坐标系之一：RelativeToBoundingBox 或 Absolute。
+### 真正的平铺 (TRUE TILING)
 
-RelativeToBoundingBox 坐标是按相关区域大小的比例测量的。例如，将值设置为 0 并将宽度设置为 0.5 将选择区域的左半部分。
-
-Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽管你需要知道图像的确切尺寸才能使一切完美。
-
-## 真正的平铺 (TRUE TILING)
-
-图 3-16 显示的技术对于平铺区域非常有用。将 viewBox 设置为 0, 1。然后将 ViewportUnits 设置为 Absolute，使 Viewport 值为像素。
+图 3-16 显示的技术对于平铺区域非常有用。将 `viewBox` 设置为 0, 1。然后将 `ViewportUnits` 设置为 `Absolute`，使 `Viewport` 值为像素。
 
 以下片段显示了图 3-16 中使用的画刷。注意它只显示了画刷，而不是 XAML 代码。
 
@@ -1842,9 +1430,6 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 <ImageBrush Stretch="Uniform" TileMode="Tile" ImageSource="Smiley.bmp" Viewbox="0,0,1" Viewport="0,0,50,50" ViewportUnits="Absolute"/>
 ```
 
-
-
-
 # 第 3 章 Expression Blend
 
 ## 已删除的绘图
@@ -1852,6 +1437,7 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 在创建画刷后，Expression Blend 不再需要你创建它时所使用的绘图。如果你愿意，可以删除你使用的控件。
 
 图 3-17 显示了一个填充了绘图画刷的矩形。
+
 该画刷包含一个居中的图像和四个旋转并对齐到画刷侧边的标签。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_87_0.png)
@@ -1881,9 +1467,10 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 请查看前面的章节“Image Brush”以获取更多关于修改画刷的信息。特别是你可能需要查看如何设置画刷的视图（view）和视口（viewport）。
 
 > 保留控件
-
-与图像画刷和绘图画刷的情况不同，你不能删除定义视觉画刷的控件。WPF 在运行时使用这些控件来构建画刷使用的图像；因此，如果你删除了这些控件，它就无法生成画刷图像。
-如果你不想让视觉画刷的控件可见，可以将它们隐藏在另一个控件后面。
+>
+> 与图像画刷和绘图画刷的情况不同，你不能删除定义视觉画刷的控件。WPF 在运行时使用这些控件来构建画刷使用的图像；因此，如果你删除了这些控件，它就无法生成画刷图像。
+>
+> 如果你不想让视觉画刷的控件可见，可以将它们隐藏在另一个控件后面。
 
 图 3-18 显示了一个使用视觉画刷的程序。左上角的网格包含一个径向渐变背景和一个使用属性动画连续旋转的标签。右侧的矩形由视觉画刷填充，该画刷使用此网格作为视觉源。当网格中的标签旋转时，矩形中显示的副本也随旋转。（注意，这将是一个非常烦人的界面！）
 
@@ -1896,10 +1483,10 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 运行时，当你在文本框中输入内容时，相应的视觉画刷也会更新，下方的矩形显示更新后的反射。在图 3-19 中，你甚至可以看到第一个文本框中光标的反射。
 
 > 猜猜看
-
-图 3-19 中显示的所有矩形都是使用相同的技术绘制的。为什么中间矩形中的文字没有像其他那样倒过来呢？请看脚注获取答案。
-
-中间文本框中的文字恰好包含了一些倒过来看起来也相同的字母，至少在那种字体中是这样。
+>
+> 图 3-19 中显示的所有矩形都是使用相同的技术绘制的。为什么中间矩形中的文字没有像其他那样倒过来呢？请看脚注获取答案。
+>
+> 中间文本框中的文字恰好包含了一些倒过来看起来也相同的字母，至少在那种字体中是这样。
 
 # 第 3 章 Expression Blend
 
@@ -1919,9 +1506,6 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 
 定义带有 `Stroke` 词的画笔画刷并包含 `StrokeThickness`、`StrokeDashArray`、`StrokeDashCap`、`StrokeDashJoin` 和 `StrokeLineCap` 的 WPF 属性是：
 
-
-
-
 背景资源。你可以使用样式来让按钮共享共同背景、宽度、高度和其他属性。
 
 要为一组按钮创建样式，请先创建一个包含你想要在样式中设置属性的按钮。然后选择该按钮，打开“对象”（Object）菜单，展开“编辑样式”（Edit Style）子菜单，并选择“编辑副本”（Edit a Copy）。
@@ -1933,6 +1517,7 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 注意，Expression Blend 只会将样式应用于与定义样式时使用的的对象的对象。例如，如果你定义了一个按钮（Button）样式，则无法将其应用于标签（Label）。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_91_0.png)
+
 图 3-24
 
 ## 编辑样式
@@ -1940,6 +1525,7 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 - 如果你需要编辑样式，打开“资源”（Resources）窗口，找到你想编辑的样式，点击其右侧的“编辑资源”（Edit Resource）按钮。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_91_1.png)
+
 图 3-25
 
 ## 资源窗口
@@ -1951,118 +1537,124 @@ Absolute 坐标以像素为单位。它们对于平铺图像通常有用，尽�
 资源窗口提供了其他值的编辑器。如果你点击资源右侧的彩色区域，将出现一个类似于你在属性窗口中用于定义画笔时使用的编辑区域。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_91_2.png)
+
 图 3-26
 
 ## 对象和时间线
 
 图 27 显示的“对象和时间线”（Objects and Timeline）区域允许你编辑对象和故事板（storyboards）。通常你使用此区域选择控件，以便在属性窗口中更改它们的属性。
 
-当它显示窗口控件时，此区域显示控件的层级结构。例如，图 27 显示窗口包含一个名为 OuterGrid 的网格（Grid），它包含两个名为 InnerGrid 和 InnerGrid 的网格。这些控件又包含其他控件（控件周围的正方框表示它没有子项）。
+当它显示窗口控件时，此区域显示控件的层级结构。例如，图 27 显示窗口包含一个名为 `OuterGrid` 的网格（Grid），它包含两个名为 `InnerGrid` 和 `InnerGrid` 的网格。这些控件又包含其他控件（控件周围的正方框表示它没有子项）。
 
 该区域最令人困惑的用法之一是如何选择控件。如果你点击一个控件，它会变成灰色并选中用于属性编辑，这样你就可以将属性应用于控件。在图 27 中，标签（Label）被选中用于属性编辑。
 
-如果你点击的控件是一个容器，它也会用蓝色框高亮显示。如果控件不是容器，则它的容器会被高亮。在图 27 中，包含标签的 StackPanel 被高亮了。
+如果你点击的控件是一个容器，它也会用蓝色框高亮显示。如果控件不是容器，则它的容器会被高亮。在图 27 中，包含标签的 `StackPanel` 被高亮了。
 
-如果你在工具箱中双击控件，该控件的新实例将被高亮显示。在图 27 中，如果你双击按钮（Button），一个新按钮将添加到 StackPanel 中。
+如果你在工具箱中双击控件，该控件的新实例将被高亮显示。在图 27 中，如果你双击按钮（Button），一个新按钮将添加到 `StackPanel` 中。
 
 对象和时间线区域在每个项目右侧有两个实用的图标。第一个看起来像眼睛，它让你让控件可见或不可见。即使你想让某个控件可见，在设计时隐藏它有时是有用的，这样可以减少杂乱，让你更容易看到控件。
 
 第二个图标看起来像一把挂锁，取决于你是否点击了它。当挂锁可见时，控件的属性被锁定，这样你就不会通过在窗口设计器上拖动控件来意外更改它们。
 
-对象和时间线区域还有许多其他功能。你可以点击并拖动控件到新位置。例如，这将重新排列 StackPanel 中的控件。
+对象和时间线区域还有许多其他功能。你可以点击并拖动控件到新位置。例如，这将重新排列 `StackPanel` 中的控件。
 
-还有一个值得提的技巧。如果你选择一组控件，对它们点击右键并选择“成组为”（Group Into），然后 Expression Blend 允许你选择一个容器，如 Grid 或 StackPanel。当你选择容器时，Expression Blend 会将控件移动到容器的新实例中。
+还有一个值得提的技巧。如果你选择一组控件，对它们点击右键并选择“成组为”（Group Into），然后 Expression Blend 允许你选择一个容器，如 `Grid` 或 `StackPanel`。当你选择容器时，Expression Blend 会将控件移动到容器的新实例中。
 
 ## 故事板
 
 除了允许编辑控件外，对象和时间线区域还允许你构建故事板来控制动画。要创建故事板，点击区域顶部的加号。给故事板一个描述性名称并点击确定。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_92_0.png)
+
 图 3-27
 
 ## 第3 章 EXPRESSION BLEND
 
-图 28 显示了正在编辑名为 SpinButton 的故事板的对象和时间线区域。
+图 28 显示了正在编辑名为 `SpinButton` 的故事板的对象和时间线区域。
 
 要编辑故事板，将时间线指示器拖到某个时间点。在图 28 中，指示器设置为 0.5 秒。现在更改你想制作动画的控件属性。Expression Blend 会创建一个故事板，在选定时间将属性设置为所需的值。
 
 你可以使用时间线区域顶部的视频控制按钮来测试动画。例如，点击播放按钮（►）运行动画。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_93_0.png)
+
+
+
 图 3-28
 
 ## 暂停时间
 
-当你编辑故事板时，窗口设计器会用红色框勾勒，并在顶部显示“时间线录制已开启”（Timeline recording is on）的标签。点击此标签旁边的红点关闭录制。然后你可以修改控件属性，而更改不会成为故事板的一部分。
+当你编辑故事板时，窗口设计器会用红色框勾勒，并在顶部显示“时间线录制已开启”（`Timeline recording is on`）的标签。点击此标签旁边的红点关闭录制。然后你可以修改控件属性，而更改不会成为故事板的一部分。
 
-图 28 显示了 Spinning 程序中 SpinButton 故事板的时间线。故事板在 0 秒时将按钮的旋转角度设置为 0 度，并在 0.5 秒时将旋转角度设置为 360 度。这使得按钮在半秒内完成一个完整的旋转。
+图 28 显示了 `Spinning` 程序中 `SpinButton` 故事板的时间线。故事板在 0 秒时将按钮的旋转角度设置为 0 度，并在 0.5 秒时将旋转角度设置为 360 度。这使得按钮在半秒内完成一个完整的旋转。
 
 ## 触发器
 
-设计好故事板后，你可以确定哪些事件触发它。Expression Blend 将故事板挂接到窗口的加载（Loaded）事件上，因此故事板事件会在程序启动时执行。
+设计好故事板后，你可以确定哪些事件触发它。`Expression Blend` 将故事板挂接到窗口的 `Loaded` 事件上，因此故事板事件会在程序启动时执行。
 
-你可以通过使用图 29 中的触发器（Triggers）区域来更改此行为。
+你可以通过使用图 29 中的触发器（`Triggers`）区域来更改此行为。
 
-点击“当”（When）字右侧的下拉菜单，选择应触发故事板的控件。在图 29 中，这被设置为名为 btnSpinMe 的按钮（Button）。
+点击“当”（`When`）字右侧的下拉菜单，选择应触发故事板的控件。在图 29 中，这被设置为名为 `btnSpinMe` 的按钮（`Button`）。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_93_1.png)
+
 图 3-29
 
 ## 控件混乱
 
 控件下拉列表仅列出当前到故事板的控件以及当前在对象和时间线区域选中的控件。下拉列表没有显示你想显示的控件；请确保它已在对象和时间线区域中选中。
 
-接下来，使用第二个下拉列表选择应触发故事板的控件事件。在图 29 中，这是按钮的点击（Click）事件。
+接下来，使用第二个下拉列表选择应触发故事板的控件事件。在图 29 中，这是按钮的点击（`Click`）事件。
 
-在下拉菜单中，你可以选择你想用触发器控制的故事板，以及你想让故事板执行的操作。在图 29 中，SpinButton 故事板开始。
+在下拉菜单中，你可以选择你想用触发器控制的故事板，以及你想让故事板执行的操作。在图 29 中，`SpinButton` 故事板开始。
 
 ## 控件工具箱
 
-图 30 显示的控件工具箱（Control Toolbox）允许你控制窗口。在对象和时间线区域中双击控件以选择它。然后，你可以双击工具箱中的控件，将该控件的新实例放入所选控件中。
+图 30 显示的控件工具箱（`Control Toolbox`）允许你控制窗口。在对象和时间线区域中双击控件以选择它。然后，你可以双击工具箱中的控件，将该控件的新实例放入所选控件中。
 
 工具箱一次只显示几个控件。如果你没有看到想要的控件，则需要采取行动让它出现。
 
-如果该控件是常用控件之一，你可以在工具箱的分组中找到它。例如，图 30 从上往下数第三个控件代表网格（Grid）控件。如果你想要其他控件，可以右键点击此控件，并从下拉列表中选择 Canvas、StackPanel 或其他控件。这将用你选择的控件替换网格，以便你可以使用它。
+如果该控件是常用控件之一，你可以在工具箱的分组中找到它。例如，图 30 从上往下数第三个控件代表网格（`Grid`）控件。如果你想要其他控件，可以右键点击此控件，并从下拉列表中选择 `Canvas`、`StackPanel` 或其他控件。这将用你选择的控件替换网格，以便你可以使用它。
 
-如果控件不在任何控件组中，或者你就是找不到它，请点击工具箱底部的双箭头打开资产库（Asset Library），如图 31 所示。
+如果控件不在任何控件组中，或者你就是找不到它，请点击工具箱底部的双箭头打开资产库（`Asset Library`），如图 31 所示。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_94_0.png)
+
 图 3-30
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_94_1.png)
+
 图 3-31
 
-资产库包含许多控件；如果你没有立即看到想要的控件，在顶部的搜索框中输入其名称的一部分。在图 31 中，搜索框包含文本 Item，因此资产库显示了名称中包含 Item 字样的控件。
+资产库包含许多控件；如果你没有立即看到想要的控件，在顶部的搜索框中输入其名称的一部分。在图 31 中，搜索框包含文本 `Item`，因此资产库显示了名称中包含 `Item` 字样的控件。
 
-
-
-
-当你选择一个控件时，Control Toolbox 会将该控件添加到“最近使用的的控件”组的底部。在图 3-30 中，该区域在双箭头下方显示了 Border（边界）控件。
+当你选择一个控件时，`Control Toolbox` 会将该控件添加到“最近使用的的控件”组的底部。在图 3-30 中，该区域在双箭头下方显示了 `Border`（边界）控件。
 
 ## 后台代码 (CODE-BEHIND)
 
-Expression Blend 并不是编程工具，它的真实目的并不是用于编辑用户界面的后台代码。
+`Expression Blend` 并不是编程工具，它的真实目的并不是用于编辑用户界面的后台代码。
 
-要向窗口添加代码，请打开“项目”窗口。右键点击应该包含代码的 XAML 文件，并选择“在 Visual Studio 中编辑”。编辑代码，然后关闭 Visual Studio 返回 Expression Blend。
+要向窗口添加代码，请打开“项目”窗口。右键点击应该包含代码的 `XAML` 文件，并选择“在 `Visual Studio` 中编辑”。编辑代码，然后关闭 `Visual Studio` 返回 `Expression Blend`。
 
 > **同步秘密技巧**
-> 当你在 Expression Blend 和 Visual Studio 之间切换时，这两个应用程序需要确保你所修改的文件是同步的。例如，如果你启动 Expression Blend，移动到 Visual Basic，修改一个文件，然后返回 Expression Blend，Expression Blend 会询问你是否想要重新加载修改后的文件以获取你做的更改。
-
-这很有道理，但有一种情况可能会让人困惑。如果你打开 Expression Blend，修改一个文件，然后打开 Visual Studio，你在 Expression Blend 中对文件的更改不会先自动保存，因此 Visual Studio 无法看到这些更改。如果你在 Visual Studio 中编辑该文件并保存更改，你可能会有两个版本的文件在运行，其中一个被 Expression Blend 使用，另一个被 Visual Studio 使用。如果你保存了这两个版本，取决于你先保存哪一个，你会丢失其中一个。
-
-为了避免混淆，在两个应用程序之间切换之前，请务必保存所有更改。
+>
+> 当你在 `Expression Blend` 和 `Visual Studio` 之间切换时，这两个应用程序需要确保你所修改的文件是同步的。例如，如果你启动 `Expression Blend`，移动到 `Visual Basic`，修改一个文件，然后返回 `Expression Blend`，`Expression Blend` 会询问你是否想要重新加载修改后的文件以获取你做的更改。
+>
+> 这很有道理，但有一种情况可能会让人困惑。如果你打开 `Expression Blend`，修改一个文件，然后打开 `Visual Studio`，你在 `Expression Blend` 中对文件的更改不会先自动保存，因此 `Visual Studio` 无法看到这些更改。如果你在 `Visual Studio` 中编辑该文件并保存更改，你可能会有两个版本的文件在运行，其中一个被 `Expression Blend` 使用，另一个被 `Visual Studio` 使用。如果你保存了这两个版本，取决于你先保存哪一个，你会丢失其中一个。
+>
+> 为了避免混淆，在两个应用程序之间切换之前，请务必保存所有更改。
 
 ## 总结
 
-本章介绍了 Expression Blend 的基础知识。Expression Blend 是一个用于构建 XAML 界面的工具。它提供了许多编辑器用于创建和使用属性、资源、样式和故事板（storyboards）。
+本章介绍了 `Expression Blend` 的基础知识。`Expression Blend` 是一个用于构建 `XAML` 界面的工具。它提供了许多编辑器用于创建和使用属性、资源、样式和故事板（`storyboards`）。
 
-虽然 Expression Blend 不像 Visual Studio 那样是免费，但它提供了许多 Visual Studio 中缺失的有用编辑器。例如，Expression Blend 提供了一个易用的编辑器来指定渐变背景，它比 Visual Studio 中提供的更强大。
+虽然 `Expression Blend` 不像 `Visual Studio` 那样是免费，但它提供了许多 `Visual Studio` 中缺失的有用编辑器。例如，`Expression Blend` 提供了一个易用的编辑器来指定渐变背景，它比 `Visual Studio` 中提供的更强大。
 
-在 Visual Studio 中手动创建故事板是很困惑的，因为如果你进行大量的属性动画，仅靠 Expression Blend 的故事板系统可能效率不高。在 expression.microsoft.com/cc136530.aspx 下载 Expression Blend 的试用版，看看它的收益是否大于成本。
+在 `Visual Studio` 中手动创建故事板是很困惑的，因为如果你进行大量的属性动画，仅靠 `Expression Blend` 的故事板系统可能效率不高。在 `expression.microsoft.com/cc136530.aspx` 下载 `Expression Blend` 的试用版，看看它的收益是否大于成本。
 
-Expression Blend 不是编程工具，所以它对你将 C# 或 Visual Basic 代码附加到界面上没有太大帮助。但由于 Visual Studio 提供了你完成此操作所需的工具，Expression Blend 和 Visual Studio 是一个强大的组合。
+`Expression Blend` 不是编程工具，所以它对你将 `C#` 或 `Visual Basic` 代码附加到界面上没有太大帮助。但由于 `Visual Studio` 提供了你完成此操作所需的工具，`Expression Blend` 和 `Visual Studio` 是一个强大的组合。
 
-本章和上一章描述了构建 WPF 程序的两个主要工具：Visual Studio 和 Expression Blend。阅读这些章节后，你应该能够创建一个新项目并添加控件来构建用户界面。然而，除非你了解可用控件以及它们能做什么，否则很难为特定任务选择合适的控件。
+本章和上一章描述了构建 `WPF` 程序的两个主要工具：`Visual Studio` 和 `Expression Blend`。阅读这些章节后，你应该能够创建一个新项目并添加控件来构建用户界面。然而，除非你了解可用控件以及它们能做什么，否则很难为特定任务选择合适的控件。
 
 接下来的章节将描述不同类型的控件并讨论它们的功能。在阅读这些章节后，你将知道在不同情况下应该使用哪些控件。
 
@@ -2070,37 +1662,39 @@ Expression Blend 不是编程工具，所以它对你将 C# 或 Visual Basic 代
 
 ## 通用属性
 
-所有的 WPF 控件类都继承自 Control 类，这种共同的祖先关系让它们拥有许多共同属性。例如，大多数控件都具有决定其尺寸和位置、前景和背景颜色、变换以及字体属性的属性。
+所有的 `WPF` 控件类都继承自 `Control` 类，这种共同的祖先关系让它们拥有许多共同属性。例如，大多数控件都具有决定其尺寸和位置、前景和背景颜色、变换以及字体属性的属性。
 
 本章描述了许多控件共享的一些属性。随后的章节在这些属性特别相关时会再次提到其中一些属性，但如果你现在学习了它们，你对后续章节中描述的控件已经有了很多了解。
 
-下一节描述了一个特别重要且令人困惑的话题：尺寸和位置属性。每个 WPF 开发者都必须理解这些属性，以便有效地排列控件。
+下一节描述了一个特别重要且令人困惑的话题：尺寸和位置属性。每个 `WPF` 开发者都必须理解这些属性，以便有效地排列控件。
 
 ## 尺寸和位置
 
-尺寸和位置属性可能会非常困惑，因为控件的几何形状取决于多个不同的属性、这些属性相互作用的方式，甚至是控件的容器。例如，同一个 Button 放在 Grid、StackPanel 或 Canvas 中看起来都非常不同。
+尺寸和位置属性可能会非常困惑，因为控件的几何形状取决于多个不同的属性、这些属性相互作用的方式，甚至是控件的容器。例如，同一个 `Button` 放在 `Grid`、`StackPanel` 或 `Canvas` 中看起来都非常不同。
 
-下一节描述了决定控件尺寸和位置最重要的属性——它的对齐属性（alignment properties）。下一节将描述了一些也会影响控件尺寸和位置的较简单属性。
+下一节描述了决定控件尺寸和位置最重要的属性——它的对齐属性（`alignment properties`）。下一节将描述了一些也会影响控件尺寸和位置的较简单属性。
 
 ## 对齐 (Alignment)
 
-决定控件尺寸的四个最重要属性是 Width（宽度）、Height（高度）、HorizontalAlignment（水平对齐）和 VerticalAlignment（垂直对齐）。
+决定控件尺寸的四个最重要属性是 `Width`（宽度）、`Height`（高度）、`HorizontalAlignment`（水平对齐）和 `VerticalAlignment`（垂直对齐）。
 
 | 各种对齐方式 |
+
 | :--- |
-| 不要将 HorizontalAlignment 和 VerticalAlignment 与 HorizontalContentAlignment 和 VerticalContentAlignment 混淆。前者决定内容的对齐方式，而后者决定内容本身的对齐。 |
+
+| 不要将 `HorizontalAlignment` 和 `VerticalAlignment` 与 `HorizontalContentAlignment` 和 `VerticalContentAlignment` 混淆。前者决定内容的对齐方式，而后者决定内容本身的对齐。 |
 
 ## 第 4 章通用属性
 
-Width 和 Height 属性是不言自明的。它们直接决定了控件的尺寸。
+`Width` 和 `Height` 属性是不言自明的。它们直接决定了控件的尺寸。
+
 通常，你并不想显式地设置控件尺寸。相反，让控件在某些空间内调整大小以适应其内容或包含它的区域会更好。这让控件能够尽可能使用空间，或充分利用可用空间。
 
-这就是 HorizontalAlignment 和 VerticalAlignment 属性发挥作用的地方。HorizontalAlignment 可以取 Left、Right、Center 和 Stretch 的值。VerticalAlignment 可以取 Left、Top、Bottom、Center 和 Stretch 的值。
+这就是 `HorizontalAlignment` 和 `VerticalAlignment` 属性发挥作用的地方。`HorizontalAlignment` 可以取 `Left`、`Right`、`Center` 和 `Stretch` 的值。`VerticalAlignment` 可以取 `Left`、`Top`、`Bottom`、`Center` 和 `Stretch` 的值。
 
-Left、Right、Top 和 Center 值决定了控件的位置。Stretch 值比较不直观。通常情况下，它意味着填充容器。例如，如果容器是 Grid，控件会填充；相反，如果容器是垂直的 StackPanel，控件会填充宽度。
+`Left`、`Right`、`Top` 和 `Center` 值决定了控件的位置。`Stretch` 值比较不直观。通常情况下，它意味着填充容器。例如，如果容器是 `Grid`，控件会填充；相反，如果容器是垂直的 `StackPanel`，控件会填充宽度。
 
-图 4-1 中的 SizeInContainers 示例展示了在在不同类型容器中的效果。![](img/c9b2d394f4fc2f7e276f6a0afa9c2f6_99.png)
-
+图 4-1 中的 `SizeInContainers` 示例展示了在在不同类型容器中的效果。![](img/c9b2d394f4fc2f7e276f6a0afa9c2f6_99.png)
 
 ```xml
 <StackPanel>
@@ -2108,27 +1702,27 @@ Left、Right、Top 和 Center 值决定了控件的位置。Stretch 值比较不
 </StackPanel>
 ```
 
-SizeInSingleChildContainers
+`SizeInSingleChildContainers`
 
-注意，StackPanel 的大小并没有在 XAML 代码中设置。由于 HorizontalAlignment（水平对齐）和 VerticalAlignment（垂直对齐）属性默认值为 Stretch（拉伸），因此 StackPanel 会拉伸以填充 Border 和 ScrollViewer。
+注意，`StackPanel` 的大小并没有在 `XAML` 代码中设置。由于 `HorizontalAlignment`（水平对齐）和 `VerticalAlignment`（垂直对齐）属性默认值为 `Stretch`（拉伸），因此 `StackPanel` 会拉伸以填充 `Border` 和 `ScrollViewer`。
 
-在 Viewbox 中，StackPanel 在保持其内容的同时尽可能保持较小尺寸。Viewbox 的工作是拉伸其内容以填充自身，这样它就不会为 StackPanel 提供一个可以拉伸的目标区域。StackPanel 保持较小，然后 Viewbox 会拉伸以填充 Viewbox。
+在 `Viewbox` 中，`StackPanel` 在保持其内容的同时尽可能保持较小尺寸。`Viewbox` 的工作是拉伸其内容以填充自身，这样它就不会为 `StackPanel` 提供一个可以拉伸的目标区域。`StackPanel` 保持较小，然后 `Viewbox` 会拉伸以填充 `Viewbox`。
 
 ## 剧烈拉伸
 
-> 默认情况下，Viewbox 均匀地拉伸其内容，使其在适应 Viewbox 内部的同时尽可能大。你可以通过设置 Viewbox 的 Stretch 属性来更改此行为。有关 Viewbox 控件的更多信息，请参阅第 6 章。
-
-> 当大小和位置属性与不同容器结合用时，确实非常困惑。我强烈建议你从书籍网站下载 SizeInContainers 和 SizeInSingleChildContainers 示例程序，并进行实验，以更好地理解这些属性的工作原理。
+> 默认情况下，`Viewbox` 均匀地拉伸其内容，使其在适应 `Viewbox` 内部的同时尽可能大。你可以通过设置 `Viewbox` 的 `Stretch` 属性来更改此行为。有关 `Viewbox` 控件的更多信息，请参阅第 6 章。
+>
+> 当大小和位置属性与不同容器结合用时，确实非常困惑。我强烈建议你从书籍网站下载 `SizeInContainers` 和 `SizeInSingleChildContainers` 示例程序，并进行实验，以更好地理解这些属性的工作原理。
 
 # 其他大小和位置属性
 
-虽然 Width（宽度）、Height（高度）、HorizontalAlignment（水平对齐）和 VerticalAlignment（垂直对齐）在确定控件大小方面起着主要作用，但其他几个属性的作用较小。
+虽然 `Width`（宽度）、`Height`（高度）、`HorizontalAlignment`（水平对齐）和 `VerticalAlignment`（垂直对齐）在确定控件大小方面起着主要作用，但其他几个属性的作用较小。
 
-Margin（外边距）属性决定了控件周围额外的空间。它影响控件的位置，如果控件正在拉伸以填充容器，就会缩小控件的大小。
+`Margin`（外边距）属性决定了控件周围额外的空间。它影响控件的位置，如果控件正在拉伸以填充容器，就会缩小控件的大小。
 
-Margin 可以取一个、两个或四个数字的形式。如果值包含单个数字，控件的所有四个边缘都会获得该额外空间。如果值包含两个数字，第一个给出左、右边距，第二个给出上、下边距。如果值包含四个数字，它们分别给出左、上、右、下边距。
+`Margin` 可以取一个、两个或四个数字的形式。如果值包含单个数字，控件的所有四个边缘都会获得该额外空间。如果值包含两个数字，第一个给出左、右边距，第二个给出上、下边距。如果值包含四个数字，它们分别给出左、上、右、下边距。
 
-图 4-3 显示的 Margins 示例程序显示了在 Grid 控件中具有不同 Margin 值的按钮。
+图 4-3 显示的 `Margins` 示例程序显示了在 `Grid` 控件中具有不同 `Margin` 值的按钮。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_101_0.png)
 
@@ -2136,21 +1730,21 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 ## 完美的内边距
 
-某些控件如 Border、Button 和 TextBox 提供了 Padding（内边距）属性。该属性的语法与 Margin 类似，但它指定了在控件内部内容周围添加内边距。例如，设置 Padding = "10" 会在 TextBox 文本周围添加 10 像素的额外空间。
+某些控件如 `Border`、`Button` 和 `TextBox` 提供了 `Padding`（内边距）属性。该属性的语法与 `Margin` 类似，但它指定了在控件内部内容周围添加内边距。例如，设置 `Padding = "10"` 会在 `TextBox` 文本周围添加 10 像素的额外空间。
 
-其他影响控件大小的属性是 MaxWidth（最大宽度）、MaxHeight（最大高度）、MinWidth（最小宽度）和 MinHeight（最小高度）。正如你从它们的名称中猜到的样，它们决定了当内容调整大小及其属性使其调整大小时。
+其他影响控件大小的属性是 `MaxWidth`（最大宽度）、`MaxHeight`（最大高度）、`MinWidth`（最小宽度）和 `MinHeight`（最小高度）。正如你从它们的名称中猜到的样，它们决定了当内容调整大小及其属性使其调整大小时。
 
-图 4-4 显示的 MaxMinSizes 示例程序显示了两个圆角矩形。Label 显示了 MinHeight 和 MaxHeight 值。
+图 4-4 显示的 `MaxMinSizes` 示例程序显示了两个圆角矩形。`Label` 显示了 `MinHeight` 和 `MaxHeight` 值。
 
-第一个矩形的 Height 设置为 75，因此它始终具有该高度。
+第一个矩形的 `Height` 设置为 75，因此它始终具有该高度。
 
-第二个矩形的 MaxHeight 值设置为 100。窗口足够大，可以让矩形比这个值更高，但它的 Max:Height 值限制了它。
+第二个矩形的 `MaxHeight` 值设置为 100。窗口足够大，可以让矩形比这个值更高，但它的 `Max:Height` 值限制了它。
 
-第三个矩形的 MinHeight 值设置为 150。这太高了，无法完全放入窗口，因此该矩形被裁剪了。
+第三个矩形的 `MinHeight` 值设置为 150。这太高了，无法完全放入窗口，因此该矩形被裁剪了。
 
-最后一个矩形没有任何 MinHeight 或 MaxHeight 值，因此它会增大和缩小以适应它在窗口中的部分。
+最后一个矩形没有任何 `MinHeight` 或 `MaxHeight` 值，因此它会增大和缩小以适应它在窗口中的部分。
 
-你可能需要花几分钟从书籍网站下载 MaxMinSizes 示例程序并运行它，看看在运行时更改窗口大时矩形会发生什么变化。
+你可能需要花几分钟从书籍网站下载 `MaxMinSizes` 示例程序并运行它，看看在运行时更改窗口大时矩形会发生什么变化。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_102_0.png)
 
@@ -2158,25 +1752,25 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 ## 字体
 
-显示像 Label 和 TextBox 这样的控件会提供让你确定文本外观的属性，这是合理的。不太明显的是，某些不显示文本的控件也提供了相同的属性。
+显示像 `Label` 和 `TextBox` 这样的控件会提供让你确定文本外观的属性，这是合理的。不太明显的是，某些不显示文本的控件也提供了相同的属性。
 
-例如，Menu、ListBox 和 Window 类即使不直接显示文本，也提供了这些属性。这些对象通常包含显示文本的控件。（菜单通常包含 MenuItems，ListBox 通常包含 ListBoxItems，而窗口可以包含任何内容。）这些 Font 属性允许它们包含的控件继承这些值，从而更容易为所有控件设置相同的字体。
+例如，`Menu`、`ListBox` 和 `Window` 类即使不直接显示文本，也提供了这些属性。这些对象通常包含显示文本的控件。（菜单通常包含 `MenuItems`，`ListBox` 通常包含 `ListBoxItems`，而窗口可以包含任何内容。）这些 `Font` 属性允许它们包含的控件继承这些值，从而更容易为所有控件设置相同的字体。
 
 以下总结了最有用的字体属性：
 
-- *FontFamily* — 决定文本的字体类型。一些常用值如 Segoe（读音为 see-go，这是微软 Windows Vista 的首选字体）、Times New Roman、Courier New、Arial。它也是书中许多插图的 Comic Sans MS。
+- `FontFamily` — 决定文本的字体类型。一些常用值如 `Segoe`（读音为 see-go，这是微软 Windows Vista 的首选字体）、`Times New Roman`、`Courier New`、`Arial`。它也是书中许多插图的 `Comic Sans MS`。
 
 ## 第 4 章 常用属性
 
-- *FontSize* 决定以像素为单位的字体大小。这提供了字符的大小，不包括可能在文本行上下绘制的行间和内部空间。你可以添加单位指定的 'px' 或 'pt' 来表示像素或打印机磅（1/7 英寸）。例如，值 '20pt' 文本应为 20 磅。
+- `FontSize` 决定以像素为单位的字体大小。这提供了字符的大小，不包括可能在文本行上下绘制的行间和内部空间。你可以添加单位指定的 'px' 或 'pt' 来表示像素或打印机磅（1/7 英寸）。例如，值 '20pt' 文本应为 20 磅。
 
-- *TextStyle* 决定文本的样式。该属性可以取 Normal（正常）和 Italic（斜体）值。
+- `TextStyle` 决定文本的样式。该属性可以取 `Normal`（正常）和 `Italic`（斜体）值。
 
-- *FontWeight* 决定文本的密度（是否加粗）。该属性可以取以下值（按密度递增顺序排列）：Thin、ExtraLight、Light、Normal、Medium、SemiBold、Bold、ExtraBold 和 ExtraBlack。图 4-5 显示的 FontProperties 程序
+- `FontWeight` 决定文本的密度（是否加粗）。该属性可以取以下值（按密度递增顺序排列）：`Thin`、`ExtraLight`、`Light`、`Normal`、`Medium`、`SemiBold`、`Bold`、`ExtraBold` 和 `ExtraBlack`。图 4-5 显示的 `FontProperties` 程序
 
 ## 颜色
 
-几个属性决定了控件的外观。对于 Ellipse、Rectangle 和 Path 等绘制控件，stroke 属性决定用于绘制轮廓的画笔，Fill 属性决定形状如何填充。对于 Label、TextBox 和 StackPanel 等非绘制控件，Background 属性决定其内部如何填充，Foreground 属性决定其上方对象的显示方式。![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_103_0.png)
+几个属性决定了控件的外观。对于 `Ellipse`、`Rectangle` 和 `Path` 等绘制控件，`stroke` 属性决定用于绘制轮廓的画笔，`Fill` 属性决定形状如何填充。对于 `Label`、`TextBox` 和 `StackPanel` 等非绘制控件，`Background` 属性决定其内部如何填充，`Foreground` 属性决定其上方对象的显示方式。![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_103_0.png)
 
 图 4-5
 
@@ -2186,13 +1780,13 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 # 不需要的不一致
 
-是的，如果这些对象使用 Foreground/Background 可能很好——但这不是 WPF 的工作。
+是的，如果这些对象使用 `Foreground/Background` 可能很好——但这不是 `WPF` 的工作。
 
-例如，GroupBox 的 Foreground 属性决定其标题文本的颜色，Background 属性决定其客户区域如何填充。
+例如，`GroupBox` 的 `Foreground` 属性决定其标题文本的颜色，`Background` 属性决定其客户区域如何填充。
 
-图 4-7 显示的 GroupBoxColors 示例程序显示 Foreground = Green，Background = LightBlue。注意属性值被某些控件（TextBlock）继承，但另一些控件（Label）。
+图 4-7 显示的 `GroupBoxColors` 示例程序显示 `Foreground = Green`，`Background = LightBlue`。注意属性值被某些控件（`TextBlock`）继承，但另一些控件（`Label`）。
 
-以下 XAML 代码显示了 GroupBox 如何创建它的控件：
+以下 `XAML` 代码显示了 `GroupBox` 如何创建它的控件：
 
 ```xml
 <GroupBox Background="LightBlue" Foreground="Green" Header="GroupBox">
@@ -2211,9 +1805,9 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 ## 图像形状
 
-通常 Image 是矩形的，因为它显示的图片是矩形的，但你有方法可以让 Image 控件（或任何控件）具有另一种形状。
+通常 `Image` 是矩形的，因为它显示的图片是矩形的，但你有方法可以让 `Image` 控件（或任何控件）具有另一种形状。
 
-更改控件形状的一种方法是将其 OpacityMask 属性设置为透明度掩罩。透明度掩罩是一个决定控件部分透明度的画笔。
+更改控件形状的一种方法是将其 `OpacityMask` 属性设置为透明度掩罩。透明度掩罩是一个决定控件部分透明度的画笔。
 
 注意，透明度掩罩使用的红、绿、蓝颜色分是无关的。只有像素的 Alpha 通量（它决定像素的透明度）是重要的。这个 Alpha 值可以在 0（透明）到 255（不透明）之间。
 
@@ -2221,16 +1815,15 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 # 渐变透明度掩罩
 
-图 4-8 显示的 GradientOpacityMask 示例程序使用径向画笔作为透明度掩罩。
+图 4-8 显示的 `GradientOpacityMask` 示例程序使用径向画笔作为透明度掩罩。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_104_2.png)
 
 图 4-8
 
+以下代码显示了程序如何使用 `OpacityMask`（不透明度罩）：
 
 
-
-以下代码显示了程序如何使用 OpacityMask（不透明度罩）：
 
 ```
 <Image Margin="0" Source="Flowers.jpg" Stretch="None">
@@ -2246,11 +1839,11 @@ Margin 可以取一个、两个或四个数字的形式。如果值包含单个�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_105_0.png)可在 Wrox.com 下载
 
-GradientOpacityMask
+`GradientOpacityMask`
 
-代码显示了不透明度如何显示控件。Image.OpacityMask 属性定义了图像的不透明度罩。
+代码显示了不透明度如何显示控件。`Image.OpacityMask` 属性定义了图像的不透明度罩。
 
-Image.OpacityMask 元素包含一个 RadialGradientBrush。该画笔的 `GradientStops`（渐变停止点）定义了画笔使用的颜色。
+`Image.OpacityMask` 元素包含一个 `RadialGradientBrush`。该画笔的 `GradientStops`（渐变停止点）定义了画笔使用的颜色。
 
 第一个 `GradientStop` 的 `Offset = 0`，其不透明度为 255（第一个颜色分量的 FF 等于十进制 255），画笔的颜色是不透明的（记住其他颜色分量是无关的）。当用作不度罩时，这意味着图像的内容位于中心。
 
@@ -2264,13 +1857,13 @@ Image.OpacityMask 元素包含一个 RadialGradientBrush。该画笔的 `Gradien
 
 首先，创建一个定义其像素不透明度的掩码图像。如果你想让结果中的像素是透明的，请将对应掩码的 alpha 值设置为 0。如果你想让它不透明，则将相应的 alpha 值设置为 255。（与之前一样，其他颜色分量是无关的）。对于部分透明像素，使用 0 到 255 之间的值。
 
-接下来，在你的 WPF 中，无论是在 XAML 还是程序代码中，都使用掩码图像来创建一个 ImageBrush。
+接下来，在你的 WPF 中，无论是在 XAML 还是程序代码中，都使用掩码图像来创建一个 `ImageBrush`。
 
-> 第 3 章中的“Image Brush”部分解释了如何在 Expression Blend 中创建 ImageBrush。第 10 章对 ImageBrush 以及通用的 Brush（Brush）有更多介绍。
+> 第 3 章中的“Image Brush”部分解释了如何在 Expression Blend 中创建 `ImageBrush`。第 10 章对 `ImageBrush` 以及通用的 `Brush`（Brush）有更多介绍。
 
 最后，将原始图像或控件的 `OpacityMask` 设置为此画笔。
 
-图 4-9 所示的 ImageOpacityMask 示例程序演示了这种技术。
+图 4-9 所示的 `ImageOpacityMask` 示例程序演示了这种技术。
 
 顶行左侧的图片是原始图像。
 
@@ -2304,7 +1897,7 @@ WPF 控件和对象共享许多其他属性，我不想花费大量空间来详�
 
 `Name` 属性用于 XAML 代码以及 C# 或后台代码来标识控件。你不需要获取控件名称，但如果你计划在代码中使用它，就应该这样做。
 
-`Parent` 属性返回控件的逻辑父级。例如，如果你将一个 Button 放置在 Grid 内部，那么 Button 的父级就是 Grid。你可以使用此属性遍历应用程序的逻辑树并了解它的结构。
+`Parent` 属性返回控件的逻辑父级。例如，如果你将一个 `Button` 放置在 `Grid` 内部，那么 `Button` 的父级就是 `Grid`。你可以使用此属性遍历应用程序的逻辑树并了解它的结构。
 
 # 名字意味着什么？ (WHAT'S IN A NAME?)
 
@@ -2312,9 +1905,9 @@ WPF 控件和对象共享许多其他属性，我不想花费大量空间来详�
 
 使用 `Parent` 属性的一个有用技巧是从其父级复制控件的属性值，使其保持匹配。
 
-`Tag` 属性可以包含任意对象，你可以将其用于用途。例如，你可以在这里存储数字或字符串来标识控件（如果控件是 MenuItem 或 ListBoxItem，它可能指示项目在菜单或列表框中的位置）。
+`Tag` 属性可以包含任意对象，你可以将其用于用途。例如，你可以在这里存储数字或字符串来标识控件（如果控件是 `MenuItem` 或 `ListBoxItem`，它可能指示项目在菜单或列表框中的位置）。
 
-你可以使用后台代码在 `Tag` 属性中存储对象。例如，你可能构建一个 ListBox 显示员工名称，并将每个 ListBoxItem 的 `Tag` 属性指向相应的员工对象。
+你可以使用后台代码在 `Tag` 属性中存储对象。例如，你可能构建一个 `ListBox` 显示员工名称，并将每个 `ListBoxItem` 的 `Tag` 属性指向相应的员工对象。
 
 `ContextMenu` 属性定义了用户在控件上点击右键时显示的上下文菜单。你可以使用右键菜单为应用程序用户界面的特定部分提供合理的操作。
 
@@ -2324,9 +1917,9 @@ WPF 控件和对象共享许多其他属性，我不想花费大量空间来详�
 
 ## 启用组 (ENABLING GROUPS)
 
-如果你将 StackPanel 或 GroupBox 等容器的 `IsEnabled` 设置为 True 或 False，则容器的所有子元素都将继承该值。这使得能够快速方便地启用或禁用一组相关的控件。
+如果你将 `StackPanel` 或 `GroupBox` 等容器的 `IsEnabled` 设置为 True 或 False，则容器的所有子元素都将继承该值。这使得能够快速方便地启用或禁用一组相关的控件。
 
-但注意，容器本身可能不会以禁用状态显示。例如，无论 `IsEnabled` 是 True 还是 False，GroupBox 看起来都是是一样的。
+但注意，容器本身可能不会以禁用状态显示。例如，无论 `IsEnabled` 是 True 还是 False，`GroupBox` 看起来都是是一样的。
 
 `Visibility` 属性决定控件是否在屏幕上可见。该属性可以取三个值：`Visible`（按通常显示）、`Hidden`（控件不可见，但窗口布局为其留了空间）和 `Collapsed`（控件不可见，且窗口布局不包含其空间）。
 
@@ -2337,9 +1930,6 @@ WPF 控件共享许多其他属性。大多数时候你可以忽略它们，但�
 本章描述了这些常用属性中最重要的部分，并有助于消除尺寸和定位属性的含义。后续章节在深入介绍特定属性时将提供更多细节。
 
 本章涵盖了适用于所有控件的属性。后续章节将转向特定的控件组。它们描述了你可以用于显示信息、排列其他控件、与用户交互以及绘制形状的控件。这些章节将描述特定的控件并讨论了它们的功能。
-
-
-
 
 # 属性、方法和事件
 
@@ -2355,13 +1945,13 @@ WPF 控件共享许多其他属性。大多数时候你可以忽略它们，但�
 <Button Name="btnClear" Content="Button" Click="btnClear_Click" />
 ```
 
-请注意，本书没有涵盖 WPF 提供的每一个控件和对象。WPF 包含大量的对象，其中许多你将不会用到。例如，用于 TextBox 控件 ToolTip 属性的 ToolTip 对象：
+请注意，本书没有涵盖 WPF 提供的每一个控件和对象。WPF 包含大量的对象，其中许多你将不会用到。例如，用于 `TextBox` 控件 `ToolTip` 属性的 `ToolTip` 对象：
 
 ```
 <TextBox ToolTip="The customer's ZIP code." />
 ```
 
-下面的代码使用单独的 ToolTip 对象实现了相同的功能。你认为哪种更容易？
+下面的代码使用单独的 `ToolTip` 对象实现了相同的功能。你认为哪种更容易？
 
 ```
 <TextBox>
@@ -2373,9 +1963,9 @@ WPF 控件共享许多其他属性。大多数时候你可以忽略它们，但�
 </TextBox>
 ```
 
-图 5-1 显示了运行时的 ToolTip。
+图 5-1 显示了运行时的 `ToolTip`。
 
-由于第一种方法更容易，本书仅简要介绍或完全不介绍第二种方法使用的 ToolTip 等对象。
+由于第一种方法更容易，本书仅简要介绍或完全不介绍第二种方法使用的 `ToolTip` 等对象。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_111_0.png)
 
@@ -2415,24 +2005,24 @@ WPF 控件共享许多其他属性。大多数时候你可以忽略它们，但�
 
 # Image
 
-Image 控件显示图形图像。
+`Image` 控件显示图形图像。
 
-为了方便使用 Image 控件，请先将文件添加到项目中。在 Expression Blend 或 Visual Studio 中，打开项目菜单，选择“添加现有项”，找到文件并点击打开。
+为了方便使用 `Image` 控件，请先将文件添加到项目中。在 Expression Blend 或 Visual Studio 中，打开项目菜单，选择“添加现有项”，找到文件并点击打开。
 
-现在创建 Image 控件两个最实用的属性是 Stretch（拉伸）和 StretchDirection（拉伸方向）。Stretch 可以取以下值：
+现在创建 `Image` 控件两个最实用的属性是 `Stretch`（拉伸）和 `StretchDirection`（拉伸方向）。`Stretch` 可以取以下值：
 
 - *None — 图片不拉伸。按原始大小显示。
-- * Fill — 图片被拉伸以填充 Image 控件，可能会导致图片变形。
-- *Uniform — 图片在垂直和水平方向上以相同的比例拉伸，以在保持填充 Image 控件的同时尽可能变大。
-- *UniformToFill — 图片在垂直和水平方向上以相同的比例拉伸，直到完全填充 Image 控件。如果图片的宽高比与 Image 控件不相同，图片的某些部分将超出控件边缘并被裁剪。
+- * Fill — 图片被拉伸以填充 `Image` 控件，可能会导致图片变形。
+- *Uniform — 图片在垂直和水平方向上以相同的比例拉伸，以在保持填充 `Image` 控件的同时尽可能变大。
+- *UniformToFill — 图片在垂直和水平方向上以相同的比例拉伸，直到完全填充 `Image` 控件。如果图片的宽高比与 `Image` 控件不相同，图片的某些部分将超出控件边缘并被裁剪。
 
-StretchDirection 属性决定了图片是否可以放大或缩小以满足 Stretch 属性的要求。StretchDirection 可以取以下值：
+`StretchDirection` 属性决定了图片是否可以放大或缩小以满足 `Stretch` 属性的要求。`StretchDirection` 可以取以下值：
 
 - *UpOnly — 图片只能被拉伸以变大。
 - *DownOnly — 图片只能被缩小以变小。
 - *Both — 图片可以被拉伸或缩小。
 
-下面的 XAML 代码创建了图 5-2 所示的 Image：
+下面的 XAML 代码创建了图 5-2 所示的 `Image`：
 
 ```
 <Image Width="Auto" Height="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="Flat.jpg"/>
@@ -2444,11 +2034,11 @@ StretchDirection 属性决定了图片是否可以放大或缩小以满足 Stret
 
 ## MediaElement
 
-MediaElement 控件播放音频或视频文件。设计时，控件最重要的属性是 Source，它指定了要播放的文件。
+`MediaElement` 控件播放音频或视频文件。设计时，控件最重要的属性是 `Source`，它指定了要播放的文件。
 
-默认情况下，控件加载时会开始播放媒体。除非你想让播放某种启动内容，否则可能不是你想要的。相反，你可能希望由程序控制媒体。将控件的 LoadBehavior 属性设置为 Manual。
+默认情况下，控件加载时会开始播放媒体。除非你想让播放某种启动内容，否则可能不是你想要的。相反，你可能希望由程序控制媒体。将控件的 `LoadBehavior` 属性设置为 `Manual`。
 
-接下来编写代码来控制媒体。下面的 XAML 定义了两个 MediaElement 控件，一个播放 .wmv 视频文件，另一个播放 wav 文件。注意 LoadBehavior 为 Manual。
+接下来编写代码来控制媒体。下面的 XAML 定义了两个 `MediaElement` 控件，一个播放 .wmv 视频文件，另一个播放 wav 文件。注意 `LoadBehavior` 为 `Manual`。
 
 ```
 <MediaElement x:Name="Julia" Source="Evolving.wmv" LoadBehavior="Manual" Margin="283.5,24.0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="88" />
@@ -2462,16 +2052,13 @@ MediaElement 控件播放音频或视频文件。设计时，控件最重要的�
 
 ## 怪异尺寸
 
-在编写程序时，我将 Image 控件的 Stretch 属性设置为 None，结果（相当大的）图片缩小到了邮票大小。我重新分配了图片并得到了相同的结果。我在 Microsoft Paint 中打开文件，它是正常大小，但在 Image 控件中打开它时，它变得很小。
+在编写程序时，我将 `Image` 控件的 `Stretch` 属性设置为 `None`，结果（相当大的）图片缩小到了邮票大小。我重新分配了图片并得到了相同的结果。我在 Microsoft Paint 中打开文件，它是正常大小，但在 `Image` 控件中打开它时，它变得很小。
 
-事实证明这张照片是用数字相机拍摄的。随附成像软件预计我在打印机上打印图像，因此将图像分辨率设置为 480 dpi（每英寸点），这远高于屏幕的分辨率。Image 控件足够聪明（或者足够笨），意识到图像旨在显示更高的像素密度，因此据此调整了图像。
+事实证明这张照片是用数字相机拍摄的。随附成像软件预计我在打印机上打印图像，因此将图像分辨率设置为 480 dpi（每英寸点），这远高于屏幕的分辨率。`Image` 控件足够聪明（或者足够笨），意识到图像旨在显示更高的像素密度，因此据此调整了图像。
 
 我通过在 Paint 中打开文件、选择所有像素、复制并粘贴到新图像中解决了这个问题。更高级的图像处理应用程序如 Paint Shop Pro 也可以设置图像的 dpi 设置。
 
-
-
-
-以下代码显示了 UseMediaElement 示例程序如何控制视频：
+以下代码显示了 `UseMediaElement` 示例程序如何控制视频：
 
 ```cs
 // 播放视频文件。
@@ -2499,17 +2086,19 @@ private void btnRewindVideo_Click(object sender, RoutedEventArgs e)
 
 ## UseMediaElement
 
-图 5-3 显示了 UseMediaElement 程序的动作。
+图 5-3 显示了 `UseMediaElement` 程序的动作。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_115_0.png)
 
 图 5-3
 
-遗憾的是，MediaElement 控件没有提供任何允许 XAML 文件控制其播放的依赖属性。例如，它没有提供可以让 XAML 代码设置以控制播放或暂停的 `IsPlaying` 或 `State` 属性。这意味着你必须编写后台代码来控制媒体。
+遗憾的是，`MediaElement` 控件没有提供任何允许 XAML 文件控制其播放的依赖属性。例如，它没有提供可以让 XAML 代码设置以控制播放或暂停的 `IsPlaying` 或 `State` 属性。这意味着你必须编写后台代码来控制媒体。
 
 然而，XAML 确实包含一个 `SoundPlayerAction` 命令，允许你播放音频文件到末尾而不暂停或停止。你可以编写 XAML 触发器在事件发生时调用此命令。
 
-以下 XAML 代码定义了一个触发器，当 `btnSoundPlayerAction` 按钮触发 Click 事件时执行。当代码执行时，SoundPlayerAction 会播放 `notify.wav` 文件。
+以下 XAML 代码定义了一个触发器，当 `btnSoundPlayerAction` 按钮触发 `Click` 事件时执行。当代码执行时，`SoundPlayerAction` 会播放 `notify.wav` 文件。
+
+
 
 ```xml
 <Window.Triggers>
@@ -2522,19 +2111,19 @@ private void btnRewindVideo_Click(object sender, RoutedEventArgs e)
 
 ## 媒体操作
 
-由于 MediaElement 没有任何让 XAML 代码控制媒体的属性，这似乎是一个奇怪的遗漏。如果你在网上搜索，可以发现一些人们编写了封装 MediaElement 的控件，并提供了你需要的属性。微软可能会在某时刻为 MediaElement 添加这些属性。
+由于 `MediaElement` 没有任何让 `XAML` 代码控制媒体的属性，这似乎是一个奇怪的遗漏。如果你在网上搜索，可以发现一些人们编写了封装 `MediaElement` 的控件，并提供了你需要的属性。微软可能会在某时刻为 `MediaElement` 添加这些属性。
 
 ## 文本控件
 
-文本控件主要处理文本显示。虽然你可以在其中一些控件内部放置其他内容，但它们通常被用于显示文本。例如，你可以在 Label 内部放置一个 Button，但通常 Label 显示的是文本。
+文本控件主要处理文本显示。虽然你可以在其中一些控件内部放置其他内容，但它们通常被用于显示文本。例如，你可以在 `Label` 内部放置一个 `Button`，但通常 `Label` 显示的是文本。
 
-FixedDocument 可以包含图片、表格和控件等各种内容，而是文本；它们基本上是为了显示以各种方式格式化的文本。我将它们在这里进行了分组。
+`FixedDocument` 可以包含图片、表格和控件等各种内容，而是文本；它们基本上是为了显示以各种方式格式化的文本。我将它们在这里进行了分组。
 
 ## DocumentViewer
 
-FlowDocument 对象（在本章稍后部分描述）显示可以根据需要运行时重新排列的信息。就像在浏览器中显示的网页在浏览器调整大大时可以重流文本和控件一样，FlowDocument 在调整大时也可以重新排列其内容。
+`FlowDocument` 对象（在本章稍后部分描述）显示可以根据需要运行时重新排列的信息。就像在浏览器中显示的网页在浏览器调整大大时可以重流文本和控件一样，`FlowDocument` 在调整大时也可以重新排列其内容。
 
-相比之下，DocumentViewer 显示的是固定内容，在运行时不会重流。DocumentViewer 中的内容是固定的，每个项目的位置都与用户看到的完全一致，就像 PDF 文件的内容是固定的一样。
+相比之下，`DocumentViewer` 显示的是固定内容，在运行时不会重流。`DocumentViewer` 中的内容是固定的，每个项目的位置都与用户看到的完全一致，就像 PDF 文件的内容是固定的一样。
 
 ```xml
 <DocumentViewer Width="600" Height="Auto"
@@ -2583,11 +2172,11 @@ FlowDocument 对象（在本章稍后部分描述）显示可以根据需要运�
 
 ### UseDocumentViewer
 
-代码开始于一个包含 FixedDocument 的 DocumentViewer。FixedDocument 对象包含两个 PageContent 对象，代表程序的两个页面。
+代码开始于一个包含 `FixedDocument` 的 `DocumentViewer`。`FixedDocument` 对象包含两个 `PageContent` 对象，代表程序的两个页面。
 
-每个 PageContent 对象持有一个 FixedPage，该页面中包含了创建实际内容的其他 WPF 控件。
+每个 `PageContent` 对象持有一个 `FixedPage`，该页面中包含了创建实际内容的其他 WPF 控件。
 
-图 5-4 显示了结果。DocumentViewer 允许用户放大和缩小，并显示两个页面（如图 5-4 所示）。
+图 5-4 显示了结果。`DocumentViewer` 允许用户放大和缩小，并显示两个页面（如图 5-4 所示）。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_117_0.png)
 
@@ -2595,33 +2184,38 @@ FlowDocument 对象（在本章稍后部分描述）显示可以根据需要运�
 
 ## FlowDocument
 
-FlowDocument 控件包含文档的对象。这些对象可能包括：
+`FlowDocument` 控件包含文档的对象。这些对象可能包括：
 
 - 段落
 - 表格
 - 列表
 - 浮动元素
 - 图片
-- 三维 (3D) 对象
+- 三维 `3D` 对象
 
-关于构建 FlowDocument 的更多信息，请参见第 21 章。
-以下三个部分描述了以不同样式显示 FlowDocument 的控件。如果你将 FlowDocument 直接放在 Window 中，那么该控件的作用就像它是一个 FlowDocumentReader 一样。请查看描述控件的章节以获取其行为的信息。
+关于构建 `FlowDocument` 的更多信息，请参见第 21 章。
+
+以下三个部分描述了以不同样式显示 `FlowDocument` 的控件。如果你将 `FlowDocument` 直接放在 `Window` 中，那么该控件的作用就像它是一个 `FlowDocumentReader` 一样。请查看描述控件的章节以获取其行为的信息。
 
 ## FlowDocumentPageView
 
-FlowDocumentPageView 以分页查看模式显示 FlowDocument。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
-页面的大小和查看器显示的内容由 FlowDocument 的 PageHeight 和 PageWidth 属性以及查看器的大小决定。
-默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 PageHeight 和 PageWidth 属性，查看器可能会将文档控制为更多或更少的值。
+`FlowDocumentPageView` 以分页查看模式显示 `FlowDocument`。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
 
-图 5-5 显示了一个显示 FlowDocument 的 FlowDocument。查看器底部中间的箭头允许你滚动查看。
+页面的大小和查看器显示的内容由 `FlowDocument` 的 `PageHeight` 和 `PageWidth` 属性以及查看器的大小决定。
+
+默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 `PageHeight` 和 `PageWidth` 属性，查看器可能会将文档控制为更多或更少的值。
+
+图 5-5 显示了一个显示 `FlowDocument` 的 `FlowDocument`。查看器底部中间的箭头允许你滚动查看。
 
 ## FlowDocumentReader
 
-FlowDocumentReader 以分页查看模式显示 FlowDocument。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
-页面的大小和查看器显示的内容由 FlowDocument 的 PageHeight 和 PageWidth 属性以及查看器的大小决定。
-默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 PageHeight 和 PageWidth 属性，查看器可能会将文档控制为更多或更少的值。
+`FlowDocumentReader` 以分页查看模式显示 `FlowDocument`。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
 
-图 5-6 显示了一个显示 FlowDocument 的 FlowDocument。查看器底部中间的箭头允许你滚动查看。
+页面的大小和查看器显示的内容由 `FlowDocument` 的 `PageHeight` 和 `PageWidth` 属性以及查看器的大小决定。
+
+默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 `PageHeight` 和 `PageWidth` 属性，查看器可能会将文档控制为更多或更少的值。
+
+图 5-6 显示了一个显示 `FlowDocument` 的 `FlowDocument`。查看器底部中间的箭头允许你滚动查看。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_118_0.png)
 
@@ -2629,36 +2223,35 @@ FlowDocumentReader 以分页查看模式显示 FlowDocument。在这种模式下
 
 ## FlowDocumentViewer
 
-FlowDocumentViewer 以分页查看模式显示 FlowDocument。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
-页面的大小和查看器显示的内容由 FlowDocument 的 PageHeight 和 PageWidth 属性以及查看器的大小决定。
-默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 PageHeight 和 PageWidth 属性，查看器可能会将文档控制为更多或更少的值。
+`FlowDocumentViewer` 以分页查看模式显示 `FlowDocument`。在这种模式下，用户一次看到一个页面，查看器底部的控件允许用户移动到其他页面。
 
-图 5-7 显示了一个显示 FlowDocument 的 FlowDocument。查看器底部中间的箭头允许你滚动查看。
+页面的大小和查看器显示的内容由 `FlowDocument` 的 `PageHeight` 和 `PageWidth` 属性以及查看器的大小决定。
+
+默认情况下，控件缩放到查看器的宽度。页面的定义取决于在该宽度下查看器垂直方向可以容纳多少文档。如果你设置了文档的 `PageHeight` 和 `PageWidth` 属性，查看器可能会将文档控制为更多或更少的值。
+
+图 5-7 显示了一个显示 `FlowDocument` 的 `FlowDocument`。查看器底部中间的箭头允许你滚动查看。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_119_0.png)
 
-图 5-7 FlowDocumentViewer
+图 5-7 `FlowDocumentViewer`
 
 ...（注：后续文本存在大量重复段落，已按要求完成翻译逻辑并保持格式）
 
-
-
-
 # 第5章 内容控件
 
-下表描述了决定弹出窗口（Popup）在可见时显示的属性：
+下表描述了决定弹出窗口（`Popup`）在可见时显示的属性：
 
 | 属性 | 目的 |
 | --- | --- |
-| PlacementTarget | 相对于 Popup 放置位置的对象。通常，这是一个控件，Popup 放置在它旁边。在 XAML 代码中，它可能像这样：`PlacementTarget="Binding ElementName=image"`。如果你省略了此属性，则 Popup 将相对于其容器进行定位。 |
-| Placement | 决定 Popup 相对于 PlacementTarget 对象的定位方式。请见下文。 |
-| PlacementRectangle | 如果包含此属性，它将确定 PlacementTarget 内部的一个矩形，Popup 相对于该矩形进行定位。 |
-| HorizontalOffset | 为 Popup 的定位设置水平偏移量。 |
-| VerticalOffset | 为 Popup 的定位设置垂直偏移量。 |
+| `PlacementTarget` | 相对于 `Popup` 放置位置的对象。通常，这是一个控件，`Popup` 放置在它旁边。在 `XAML` 代码中，它可能像这样：`PlacementTarget="Binding ElementName=image"`。如果你省略了此属性，则 `Popup` 将相对于其容器进行定位。 |
+| `Placement` | 决定 `Popup` 相对于 `PlacementTarget` 对象的定位方式。请见下文。 |
+| `PlacementRectangle` | 如果包含此属性，它将确定 `PlacementTarget` 内部的一个矩形，`Popup` 相对于该矩形进行定位。 |
+| `HorizontalOffset` | 为 `Popup` 的定位设置水平偏移量。 |
+| `VerticalOffset` | 为 `Popup` 的定位设置垂直偏移量。 |
 
-图5-9 所示的 Use 示例程序演示了 `PlacementTarget` 和 `IsOpen` 属性。当鼠标进入示例图片时，程序的后置代码（code-behind）使用这些属性在 Popup 中显示较大的图片。
+图5-9 所示的 Use 示例程序演示了 `PlacementTarget` 和 `IsOpen` 属性。当鼠标进入示例图片时，程序的后置代码（code-behind）使用这些属性在 `Popup` 中显示较大的图片。
 
-以下 XAML 代码显示了程序如何创建其界面：
+以下 `XAML` 代码显示了程序如何创建其界面：
 
 ```
 <StackPanel Orientation="Horizontal" Height="35" Margin="4">
@@ -2681,13 +2274,13 @@ FlowDocumentViewer 以分页查看模式显示 FlowDocument。在这种模式下
 
 可在 Wrox.com 下载。
 
-窗口包含一个 StackPanel，其中包含了一系列水平的 StackPanel。每个 StackPanel 都包含一个 Label 和一个显示小预览图的 Image。
+窗口包含一个 `StackPanel`，其中包含了一系列水平的 `StackPanel`。每个 `StackPanel` 都包含一个 `Label` 和一个显示小预览图的 `Image`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_121_1.png)
 
-在水平条目之后，主 StackPanel 包含一个包含 Image 的 Popup 控件。
+在水平条目之后，主 `StackPanel` 包含一个包含 `Image` 的 `Popup` 控件。
 
-程序使用以下代码来显示和隐藏其 Popup 控件：
+程序使用以下代码来显示和隐藏其 `Popup` 控件：
 
 ```
 // 鼠标进入图片。显示弹出窗口。
@@ -2707,22 +2300,22 @@ private void imgMouseLeave(object sender, MouseEventArgs e)
 }
 ```
 
-当鼠标进入 Image 控件时，`img_MouseEnter` 事件处理程序会找到是哪个 Image 触发了事件。它将 Popup 的 Image 控件设置为显示与小预览控件相同的图像，但按全比例显示。它将 Popup 的 PlacementTarget 设置为触发事件的控件，并将 `IsOpen` 设置为 True。
+当鼠标进入 `Image` 控件时，`img_MouseEnter` 事件处理程序会找到是哪个 `Image` 触发了事件。它将 `Popup` 的 `Image` 控件设置为显示与小预览控件相同的图像，但按全比例显示。它将 `Popup` 的 `PlacementTarget` 设置为触发事件的控件，并将 `IsOpen` 设置为 True。
 
-当鼠标离开图片时，`img_MouseLeave` 事件处理程序简单地将 Popup 的 `IsOpen` 属性设置为 False。
+当鼠标离开图片时，`img_MouseLeave` 事件处理程序简单地将 `Popup` 的 `IsOpen` 属性设置为 False。
 
 下表描述了 `Placement` 属性可以取的值：
 
 | 值 | 相对于...的位置 |
 | --- | --- |
-| Absolute | 屏幕的左上角。如果窗口无法容纳，它将移动到屏幕边缘。 |
-| Relative | PlacementTarget 的左上角 |
-| Bottom | PlacementTarget 的下边缘 |
-| Center | PlacementTarget 的中心 |
-| Right | PlacementTarget 的右边缘 |
-| AbsolutePoint | 屏幕的左上角。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
-| RelativePoint | PlacementTarget 的左上角。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
-| Mouse | 鼠标的位置 |
+| `Absolute` | 屏幕的左上角。如果窗口无法容纳，它将移动到屏幕边缘。 |
+| `Relative` | `PlacementTarget` 的左上角 |
+| `Bottom` | `PlacementTarget` 的下边缘 |
+| `Center` | `PlacementTarget` 的中心 |
+| `Right` | `PlacementTarget` 的右边缘 |
+| `AbsolutePoint` | 屏幕的左上角。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
+| `RelativePoint` | `PlacementTarget` 的左上角。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
+| `Mouse` | 鼠标的位置 |
 
 # 第5章 内容控件
 
@@ -2730,23 +2323,23 @@ private void imgMouseLeave(object sender, MouseEventArgs e)
 
 | 值 | 相对于： |
 | --- | --- |
-| MousePoint | 鼠标的位置。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
-| Left | PlacementTarget 的左边缘 |
-| Top | PlacementTarget 的上边缘 |
-| Custom | 由 `CustomPlacementCallback` 指定的位置 |
+| `MousePoint` | 鼠标的位置。如果窗口无法容纳，它将根据 `HorizontalOffset` 或 `VerticalOffset` 定义的轴扩展。 |
+| `Left` | `PlacementTarget` 的左边缘 |
+| `Top` | `PlacementTarget` 的上边缘 |
+| `Custom` | 由 `CustomPlacementCallback` 指定的位置 |
 
-图5-10 所示的 PopupPlacement 展示了最常用的值。所有 Popup 的 `PlacementTarget` 值都设置为 Image 控件。
+图5-10 所示的 `PopupPlacement` 展示了最常用的值。所有 `Popup` 的 `PlacementTarget` 值都设置为 `Image` 控件。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_123_0.png)
 
 图5-10
 
 > 悬浮在应用程序之上。如果你移动应用程序，它们将留在原有位置不随之移动。
-> 事实上，弹出窗口往往悬浮在所有其他应用程序之上。如果你切换到另一个程序，弹出窗口保持可见并悬浮。默认情况下，弹出窗口在 `IsOpen` 属性设置为 False 之前是不可见的。如果你将控件的 `StayOpen` 属性设置为 False，当 Popup 外部发生鼠标事件时，会自动捕捉并隐藏。这里提到的最后一个属性是 PopupAnimation。你可以将此属性设置为 `None`（弹出窗口直接出现）、`Fade`（弹出窗口淡入淡出）、`Scroll`（弹出窗口从左上角滚动）以及 `Slide`（如果无法适应，弹出窗口从顶部或底部滑动）。要使用 `None` 以外的任何这些值，必须将控件的 `AllowsTransparency` 属性设置为 True。
+> 事实上，弹出窗口往往悬浮在所有其他应用程序之上。如果你切换到另一个程序，弹出窗口保持可见并悬浮。默认情况下，弹出窗口在 `IsOpen` 属性设置为 False 之前是不可见的。如果你将控件的 `StayOpen` 属性设置为 False，当 `Popup` 外部发生鼠标事件时，会自动捕捉并隐藏。这里提到的最后一个属性是 `PopupAnimation`。你可以将此属性设置为 `None`（弹出窗口直接出现）、`Fade`（弹出窗口淡入淡出）、`Scroll`（弹出窗口从左上角滚动）以及 `Slide`（如果无法适应，弹出窗口从顶部或底部滑动）。要使用 `None` 以外的任何这些值，必须将控件的 `AllowsTransparency` 属性设置为 True。
 
 ## TextBlock
 
-TextBlock 与 Label 一样显示只读文本，但灵活性更大。TextBlock 具有额外功能，允许你：
+`TextBlock` 与 `Label` 一样显示只读文本，但灵活性更大。`TextBlock` 具有额外功能，允许你：
 
 - 通过变为**粗体**、*斜体*或下划线更改某些文本的显示。
 - 添加换行。
@@ -2756,27 +2349,27 @@ TextBlock 与 Label 一样显示只读文本，但灵活性更大。TextBlock �
 - 应用删除线、基线和轮廓。
 - 使用上标和下标
 
-下表总结了 TextBlock 类提供的一些实用属性。
+下表总结了 `TextBlock` 类提供的一些实用属性。
 
 | 属性 | 目的 |
 |---|---|
-| LineHeight | 决定行间距。 |
-| LineStackingStrategy | 可以是 BlockHeight（行高由 Line 决定）或 maxHeight（每行的高度适应内容） |
-| TextTrimming | 决定 TextBlock 如何处理不适应的单词。可以是 `None`（截断）、`WordEllipse`（在单词边界断开并替换为省略号）或 `CharacterEllipse`（在字符边界断开并替换为省略号）。见图5-11。 |
-| TextWrapping | 决定文本在 TextBox 末尾如何换行。可以是 `No`、`Wrap` 或 `WrapOverflow`。如果文本包含长单词且字符无法确定如何分行，`WrapOverflow` 可能会让字符串超出 TextBlock 的边缘（并切掉），而 `Wrap` 将折单词并在下一行继续。 |
+| `LineHeight` | 决定行间距。 |
+| `LineStackingStrategy` | 可以是 `BlockHeight`（行高由 Line 决定）或 `maxHeight`（每行的高度适应内容） |
+| `TextTrimming` | 决定 `TextBlock` 如何处理不适应的单词。可以是 `None`（截断）、`WordEllipse`（在单词边界断开并替换为省略号）或 `CharacterEllipse`（在字符边界断开并替换为省略号）。见图5-11。 |
+| `TextWrapping` | 决定文本在 `TextBox` 末尾如何换行。可以是 `No`、`Wrap` 或 `WrapOverflow`。如果文本包含长单词且字符无法确定如何分行，`WrapOverflow` 可能会让字符串超出 `TextBlock` 的边缘（并切掉），而 `Wrap` 将折单词并在下一行继续。 |
 
 图5-11 中的每一行都演示了不同的 `TextTrimming` 值。右侧的文本包含 `CProgramFiles\CoolApplications` 且 `Wrapping` 属性设置为 `Wrap`。当 `TextTrimming` 为 `CharacterEllipse` 时，控件在最后一个的字符处结束并以省略号结尾。当 `TextTrimming` 为 `WordEllipse` 时，控件在最后一个断点处结束并以省略号结尾。当 `TextTrimming` 为 `None` 时，控件简单截断文本。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_124_0.png)
 
-除了普通文本，TextBlock 还可以包含内联元素（inlines），即改变文本外观的对象。下表总结了最实用的内联元素。
+除了普通文本，`TextBlock` 还可以包含内联元素（inlines），即改变文本外观的对象。下表总结了最实用的内联元素。
 
 | 内联元素 | 目的 |
 |---|---|
-| Bold | 使包围文本变为**粗体**。 |
-| Hyperlink | 将文本显示为超链接。如果包含在 NavigationWindow 等导航宿主中，可以触发 Click 事件并自动导航。 |
+| `Bold` | 使包围文本变为**粗体**。 |
+| `Hyperlink` | 将文本显示为超链接。如果包含在 `NavigationWindow` 等导航宿主中，可以触发 `Click` 事件并自动导航。 |
 
-例如，以下 XAML 代码将单词设置为斜体：
+例如，以下 `XAML` 代码将单词设置为斜体：
 
 ```
 <TextBlock>
@@ -2785,9 +2378,11 @@ TextBlock 与 Label 一样显示只读文本，但灵活性更大。TextBlock �
 </TextBlock>
 ```
 
-TextBlock 可以直接包含某些控件，将其包含在文本流中。
+`TextBlock` 可以直接包含某些控件，将其包含在文本流中。
 
-以下 XAML 代码演示了许多 TextBlock 功能。结果如图5-12 所示。
+
+
+以下 `XAML` 代码演示了许多 `TextBlock` 功能。结果如图 5-12 所示。
 
 ```
 <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -2804,10 +2399,6 @@ LineStackingStrategy="BlockHeight">
   <Button Content="Buttons"/>
 </TextBlock>
 ```
-
-
-
-
 
 # 空间控件 | 89
 
@@ -2831,11 +2422,11 @@ and <Run BaselineAlignment="Subscript">
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_126_0.png)
 
-# 提示框 (ToolTip)
+## 提示框 (ToolTip)
 
-ToolTip 为另一个对象显示工具提示框。图 5-13 显示了一个程序为位于鼠标下的“First Name”（名字）文本框显示工具提示框。
+`ToolTip` 为另一个对象显示工具提示框。图 5-13 显示了一个程序为位于鼠标下的“First Name”（名字）文本框显示工具提示框。
 
-虽然你可以通过构建 ToolTip 对象来提供控件工具提示，但更简单的方法是像下面直接设置控件的 ToolTip 属性：
+虽然你可以通过构建 `ToolTip` 对象来提供控件工具提示，但更简单的方法是像下面直接设置控件的 `ToolTip` 属性：
 
 ```xml
 <TextBox Margin="80,10,12,0" VerticalAlignment="Top"
@@ -2853,7 +2444,7 @@ Name="txtFirstName" Height="21.96" />
 
 # 空间控件 (SPATIAL CONTROLS)
 
-空间控件具有重要的空间组件。某些控件，如 BulletDecorator 和 GroupBox，为其他控件提供空间布局和装饰。其他的控件，如 ListView 和 ListView，则使用空间定位来显示对象之间的关系。
+空间控件具有重要的空间组件。某些控件，如 `BulletDecorator` 和 `GroupBox`，为其他控件提供空间布局和装饰。其他的控件，如 `ListView` 和 `ListView`，则使用空间定位来显示对象之间的关系。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_126_4.png)
 
@@ -2861,11 +2452,11 @@ Name="txtFirstName" Height="21.96" />
 
 ## 边框 (Border)
 
-Border 用于控制边框或背景。从某种意义上说它是空间控件，因为它创建了一个容纳子元素的空间。虽然这似乎是一项小成就，但在窗口上创建单独区域对于定义控件组非常有用。例如，如果窗口包含许多单选按钮或复选框，用 Border 将它们分组可以使窗口更容易阅读和理解。
+`Border` 用于控制边框或背景。从某种意义上说它是空间控件，因为它创建了一个容纳子元素的空间。虽然这似乎是一项小成就，但在窗口上创建单独区域对于定义控件组非常有用。例如，如果窗口包含许多单选按钮或复选框，用 `Border` 将它们分组可以使窗口更容易阅读和理解。
 
-该控件只能有一个小的子元素，但该元素可以是像 Grid 或 StackPanel这样的容器，因此这并没太大限制。
+该控件只能有一个小的子元素，但该元素可以是像 `Grid` 或 `StackPanel` 这样的容器，因此这并没太大限制。
 
-下表总结了 Border 最常用的属性：
+下表总结了 `Border` 最常用的属性：
 
 | 属性 | 用途 |
 | --- | --- |
@@ -2874,7 +2465,7 @@ Border 用于控制边框或背景。从某种意义上说它是空间控件，�
 | BorderThickness | 决定边框边缘的厚度。如果这是一个值，则所有四边都使用相同的厚度 |
 | CornerRadius | 决定边框圆角的曲半径。如果这是一个值，则所有角都使用相同的半径。正角默认为 0。 |
 
-以下 XAML 代码创建了图 5-14 所示的 Border：
+以下 `XAML` 代码创建了图 5-14 所示的 `Border`：
 
 ```xml
 <Border HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -2901,11 +2492,11 @@ Border 用于控制边框或背景。从某种意义上说它是空间控件，�
 
 ## 项目符号装饰器 (BulletDecorator)
 
-BulletDecorator 在项目符号列表中显示一个项目和符号。该控件只能有一个子元素（符号除外），但该元素可以是像 Grid 或 StackPanel 这样的容器，因此这并不是真正的限制。
+`BulletDecorator` 在项目符号列表中显示一个项目和符号。该控件只能有一个子元素（符号除外），但该元素可以是像 `Grid` 或 `StackPanel` 这样的容器，因此这并不是真正的限制。
 
-BulletDecorator 最重要的属性是 Bullet，它应该包含用作项目符号的对象。通常，这应该是看起来像符号的东西，例如小图像或字符，但在理论上，它可以是像 label 或 border 之其他内容。
+`BulletDecorator` 最重要的属性是 `Bullet`，它应该包含用作项目符号的对象。通常，这应该是看起来像符号的东西，例如小图像或字符，但在理论上，它可以是像 label 或 border 之其他内容。
 
-以下 XAML 代码创建了图 5-15 所示项目符号列表中的第一个项目。三个 BulletDecorator 控件包含在一个 StackPanel 中以形成列表。
+以下 `XAML` 代码创建了图 5-15 所示项目符号列表中的第一个项目。三个 `BulletDecorator` 控件包含在一个 `StackPanel` 中以形成列表。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_128_0.png)
 
@@ -2928,16 +2519,16 @@ BulletDecorator 最重要的属性是 Bullet，它应该包含用作项目符号
 
 ## 分组框 (GroupBox)
 
-GroupBox 显示标题和环绕子元素的边框。就像 Border 一样，GroupBox 用于在窗口中创建不同的区域。GroupBox 的 Foreground 属性用于绘制标题文本，Background 属性用于填充 GroupBox。
+`GroupBox` 显示标题和环绕子元素的边框。就像 `Border` 一样，`GroupBox` 用于在窗口中创建不同的区域。`GroupBox` 的 `Foreground` 属性用于绘制标题文本，`Background` 属性用于填充 `GroupBox`。
 
 | 边框 (BORDERS) |
 | --- |
-| 因为某些原因，如果 BorderThickness 大于 2，GroupBox 会被填充 |
-| 注意可以通过设置 BorderThickness 来隐藏边框 |
+| 因为某些原因，如果 `BorderThickness` 大于 2，`GroupBox` 会被填充 |
+| 注意可以通过设置 `BorderThickness` 来隐藏边框 |
 
 第 5 章 内容控件 (CONTENT CONTROLS)
 
-以下 XAML 代码创建了图 5-16 所示的 GroupBox。GroupBox 包含了 Label 和 TextBox 控件。
+以下 `XAML` 代码创建了图 5-16 所示的 `GroupBox`。`GroupBox` 包含了 `Label` 和 `TextBox` 控件。
 
 ```xml
 <GroupBox Header="Customer" Margin="5" BorderBrush="#D5EE">
@@ -2951,13 +2542,13 @@ GroupBox 显示标题和环绕子元素的边框。就像 Border 一样，GroupB
 
 ## 列表 (ListView)
 
-ListView 在具有可调整列的布局中显示一组数据。最常见的布局是图 5-17 所示的视图。
+`ListView` 在具有可调整列的布局中显示一组数据。最常见的布局是图 5-17 所示的视图。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_129_1.png)
 
 图 5-17
 
-在网格布局中显示一组数据有时有用，ListView 的真正威力在于它可以从数据库或列表等源显示数据。数据将在第 18 章详细介绍；C# 代码显示了 ListView 如何定义 BookInfo 类。这里显示了 Author 属性的代码。
+在网格布局中显示一组数据有时有用，`ListView` 的真正威力在于它可以从数据库或列表等源显示数据。数据将在第 18 章详细介绍；`C#` 代码显示了 `ListView` 如何定义 `BookInfo` 类。这里显示了 `Author` 属性的代码。
 
 ```csharp
 public class BookInfo
@@ -2984,7 +2575,7 @@ public class BookInfo
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_130_0.png)
 
-当程序启动时，它使用以下代码创建一个包含显示数据的 BookInfo ObservableCollection。将 ListView 控件的 DataContext 属性设置为集合，以便控件访问所有数据。
+当程序启动时，它使用以下代码创建一个包含显示数据的 `BookInfo` `ObservableCollection`。将 `ListView` 控件的 `DataContext` 属性设置为集合，以便控件访问所有数据。
 
 ```csharp
 // 创建书籍列表
@@ -2999,7 +2590,7 @@ books.Add(new BookInfo("Tom Holt", "You Don't Have to Ever Work Here, but it Hel
 lvbooks.DataContext = books;
 ```
 
-除了为 ListView 分配 Name 和 Background 等属性外，XAML 代码必须告诉它显示哪些数据。以下 XAML 代码创建了图 5-7 所示的 ListView：
+除了为 `ListView` 分配 `Name` 和 `Background` 等属性外，`XAML` 代码必须告诉它显示哪些数据。以下 `XAML` 代码创建了图 5-7 所示的 `ListView`：
 
 ```xml
 <ListView Name="lvwPeople"
@@ -3010,8 +2601,6 @@ ItemsSource="{Binding}">
         DisplayMemberBinding="{Binding Path=Author}"/>
         <GridColumn Header="Title" Width="300">
 ```
-
-
 
 ```xml
 <DisplayMemberBinding="(Binding Path=Title)"/>
@@ -3025,7 +2614,7 @@ ItemsSource="{Binding}">
 </ListView>
 ```
 
-在此代码中，ListView 的 `ItemsSource` 属性被设置为 `(Binding)`。这告诉控件应该使用它所绑定的所有数据。在这个示例中，这意味着它应该确保由代码创建并附加到控件 `DataContent` 属性的 `ObservableCollection`。
+在此代码中，`ListView` 的 `ItemsSource` 属性被设置为 `(Binding)`。这告诉控件应该使用它所绑定的所有数据。在这个示例中，这意味着它应该确保由代码创建并附加到控件 `DataContent` 属性的 `ObservableCollection`。
 
 `ListView` 属性（代码中的 `ListView View` 元素）描述了如何显示控件的数据。`GridView` 属性产生了如图 5-17 所示的网格状布局。
 
@@ -3035,9 +2624,9 @@ ItemsSource="{Binding}">
 
 其他 `GridViewColumns` 也以类似的方式定义。回看图 5-17 以查看结果。
 
-`ListView` 控件非常强大，通过 XAML 控件和后置代码，它可以提供许多功能，例如多视图、格式化单元格（在这种情况下，如果将 `Year` 和 `Price` 列向右对齐可能会很好）、根据内容值显示不同的颜色、可编辑数据等。
+`ListView` 控件非常强大，通过 `XAML` 控件和后置代码，它可以提供许多功能，例如多视图、格式化单元格（在这种情况下，如果将 `Year` 和 `Price` 列向右对齐可能会很好）、根据内容值显示不同的颜色、可编辑数据等。
 
-遗憾的是，这些功能中的许多项都相当复杂，因此本章没有提到它们。关于十几个个“如何操作”示例的列表，请参阅微软的网页 msdn.microsoft.com/ms752071.aspx。
+遗憾的是，这些功能中的许多项都相当复杂，因此本章没有提到它们。关于十几个个“如何操作”示例的列表，请参阅微软的网页 `msdn.microsoft.com/ms752071.aspx`。
 
 ## ProgressBar
 
@@ -3047,11 +2636,11 @@ ItemsSource="{Binding}">
 
 # Spatial Controls（空间控件）
 
-遗憾的是在 WPF 中，情况并没有那么简单。当进度在处理文件时，它没有给 CPU 足够的时间让 `ProgressBar` 在屏幕上刷新自身，因此用户看不到控件状态的任何变化。
+遗憾的是在 `WPF` 中，情况并没有那么简单。当进度在处理文件时，它没有给 `CPU` 足够的时间让 `ProgressBar` 在屏幕上刷新自身，因此用户看不到控件状态的任何变化。
 
 解决此问题的方法是在另一个线程上执行耗时任务。线程就像一个可以独立于主用户界面运行的轻量级进程。现在当线程工作时，它可以更新 `ProgressBar` 的 `Value` 属性。由于 `ProgressBar` 运行在不同的线程，它可以独立于耗时任务进行更新。
 
-遗憾的是，这种更复杂的方法并不听起来那么简单。在 WPF（以及 Windows Forms 编程中）中，控件只能由创建它的相同线程访问。控件和文件处理代码无法直接更新 `ProgressBar`，因为它们运行在单独线程中。
+遗憾的是，这种更复杂的方法并不听起来那么简单。在 `WPF`（以及 `Windows Forms` 编程中）中，控件只能由创建它的相同线程访问。控件和文件处理代码无法直接更新 `ProgressBar`，因为它们运行在单独线程中。
 
 接近最终的解决方案是让文件处理使用 `Dispatcher` 在需要时在界面线程上调用代码。
 
@@ -3059,7 +2648,9 @@ ItemsSource="{Binding}">
 
 `BackgroundWorker` 类可以自动在单独的线程上执行任务，并在需要时向界面线程提供通知。在后台，`BackgroundWorker` 处理了所有关于在新建线程上启动自身、使用 `Dispatcher` 在界面线程上调用代码等所有细节，所有细节都已为你处理好了。
 
-`UseProgressBar` 示例演示了在模拟耗时任务时如何显示进度。C# 代码展示了进度是如何工作的：
+`UseProgressBar` 示例演示了在模拟耗时任务时如何显示进度。`C#` 代码展示了进度是如何工作的：
+
+
 
 ```csharp
 // 将执行耗时任务的 BackgroundWorker。
@@ -3089,7 +2680,7 @@ private void btnDoSomething_Click(object sender, EventArgs e)
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_132_0.png)
 
-btnDoSomething.Visibility = Visibility.Hidden;
+`btnDoSomething.Visibility = Visibility.Hidden;`
 
 ```csharp
 // 异步启动执行
@@ -3140,10 +2731,6 @@ System.ComponentModel.RunCompletedEventArgs e)
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_134_0.png)
 
-
-
-
-
 # 第 5 章 内容控件
 
 ```
@@ -3172,15 +2759,15 @@ System.ComponentModel.RunCompletedEventArgs e)
 
 ## TreeView
 
-TreeView 显示分层级数据。例如，图 5-20 中的 UseTreeView 示例程序显示了一家虚拟公司的组织架构图。董事会、总裁/CEO 以及其他项目旁深色三角形表示这些项目已展开，显示了它们包含的子项目。首席财务官（CFO）项目旁边的浅灰色三角形表示该 CFO 项目已折叠，隐藏了其子项目。
+`TreeView` 显示分层级数据。例如，图 5-20 中的 `UseTreeView` 示例程序显示了一家虚拟公司的组织架构图。董事会、总裁/CEO 以及其他项目旁深色三角形表示这些项目已展开，显示了它们包含的子项目。首席财务官（CFO）项目旁边的浅灰色三角形表示该 CFO 项目已折叠，隐藏了其子项目。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_135_0.png)
 
-TreeView 对象持有在控件上显示的值。TreeItem 可以包含其他对象，但如果你只想像图 5-20 那样显示文本，可以将 TreeView 的 Header 属性设置为你想要显示的文本。
+`TreeView` 对象持有在控件上显示的值。`TreeItem` 可以包含其他对象，但如果你只想像图 5-20 那样显示文本，可以将 `TreeView` 的 `Header` 属性设置为你想要显示的文本。
 
-你通过将 TreeItems 放在其他 TreeViews 内部来为 TreeView 提供分层级结构。
+你通过将 `TreeItems` 放在其他 `TreeViews` 内部来为 `TreeView` 提供分层级结构。
 
-以下 XAML 代码展示了 UseTreeView 程序如何构建其 TreeView 控件：
+以下 XAML 代码展示了 `UseTreeView` 程序如何构建其 `TreeView` 控件：
 
 ```
 <TreeView Margin="5">
@@ -3209,21 +2796,21 @@ TreeView 对象持有在控件上显示的值。TreeItem 可以包含其他对�
       <TreeView Header="Advertising
 ```
 
-与 ListView 控件一样，TreeView 控件具有高级数据绑定能力。第 18 章将解释了一些 TreeView 数据绑定技术。
+与 `ListView` 控件一样，`TreeView` 控件具有高级数据绑定能力。第 18 章将解释了一些 `TreeView` 数据绑定技术。
 
 ## 总结
 
 本章涵盖了 WPF 最实用的内容控件。这些控件是程序用于向用户显示内容而非用于修改或操纵内容的控件。
 
-本章提供了这些控件的简要概述，并提供了足够的细节让你开始使用它们。然而，某些控件极其复杂。例如，ListView 和 TreeView 控件提供了各种功能，让你自定义它们绑定和显示的方式。只要投入足够的工作，你可以自定义这些控件到让它们几乎无法认知的程度。
+本章提供了这些控件的简要概述，并提供了足够的细节让你开始使用它们。然而，某些控件极其复杂。例如，`ListView` 和 `TreeView` 控件提供了各种功能，让你自定义它们绑定和显示的方式。只要投入足够的工作，你可以自定义这些控件到让它们几乎无法认知的程度。
 
-遗憾的是，单本书不足以涵盖所有这些高级技术。关于特定控件的更多信息，请参阅微软的文档：mdn.microsoft.com/ms752324.aspx。
+遗憾的是，单本书不足以涵盖所有这些高级技术。关于特定控件的更多信息，请参阅微软的文档：`mdn.microsoft.com/ms752324.aspx`。
 
 下一章将描述另一组控件：布局控件（layout controls）。
 
 # 6 布局控件
 
-布局控件主要用于布局。它们是像 Grid 和 StackPanel 这样的控件，通过排列子控件来帮助你设计界面。布局控件并不是完全相同的容器，它们通过排列子控件来帮助你设计界面。布局控件的设计初衷是排列子控件。通常情况下，布局控件会决定子控件的大小。布局控件并不是完全相同的容器，布局控件的设计初衷是是排列子控件。
+布局控件主要用于布局。它们是像 `Grid` 和 `StackPanel` 这样的控件，通过排列子控件来帮助你设计界面。布局控件并不是完全相同的容器，它们通过排列子控件来帮助你设计界面。布局控件的设计初衷是排列子控件。通常情况下，布局控件会决定子控件的大小。布局控件并不是完全相同的容器，布局控件的设计初衷是是排列子控件。
 
 ## 概述
 
@@ -3245,7 +2832,7 @@ TreeView 对象持有在控件上显示的值。TreeItem 可以包含其他对�
 
 ## CANVAS
 
-Canvas 允许你通过定义控件相对于左、右、上下边缘的距离来精确放置控件。例如，以下代码创建了一个距离边缘 20 像素的 Canvas。图 6-1 显示了结果。
+`Canvas` 允许你通过定义控件相对于左、右、上下边缘的距离来精确放置控件。例如，以下代码创建了一个距离边缘 20 像素的 `Canvas`。图 6-1 显示了结果。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_139_0.png)
 
@@ -3262,23 +2849,23 @@ Canvas 允许你通过定义控件相对于左、右、上下边缘的距离来�
 </Canvas>
 ```
 
-UseCanvas
+`UseCanvas`
 
-Canvas 总是给子控件提供它们想要的空间。如果子控件选择了 Left 和 Right 或 Top 和 Bottom 附加属性，Left 或 Top 值具有优先，而 Right 或 Bottom 值会被忽略。
+`Canvas` 总是给子控件提供它们想要的空间。如果子控件选择了 `Left` 和 `Right` 或 `Top` 和 `Bottom` 附加属性，`Left` 或 `Top` 值具有优先，而 `Right` 或 `Bottom` 值会被忽略。
 
 ## EFFECTS
 
-由于附加属性的作用，Canvas 子控件在 Canvas 调整大小时会固定在其边缘并保持原始大小。如果你希望子控件在容器调整大小时进行伸缩，请考虑不同的容器，如 Grid。
+由于附加属性的作用，`Canvas` 子控件在 `Canvas` 调整大小时会固定在其边缘并保持原始大小。如果你希望子控件在容器调整大小时进行伸缩，请考虑不同的容器，如 `Grid`。
 
 ## DOCKPAN
 
-DockPanel 将子控件固定到其边缘。该控件定义了附加属性 Dock，它可以取 Left、Right、Top 和 Bottom 等值。
+`DockPanel` 将子控件固定到其边缘。该控件定义了附加属性 `Dock`，它可以取 `Left`、`Right`、`Top` 和 `Bottom` 等值。
 
-在布局期间，DockPanel 循环遍历其子控件并检查它们的 Dock 值。它将每个子控件附加到 DockPanel 中当前未使用的区域边缘。
+在布局期间，`DockPanel` 循环遍历其子控件并检查它们的 `Dock` 值。它将每个子控件附加到 `DockPanel` 中当前未使用的区域边缘。
 
-如果 DockPanel 的 LastChildFill 属性为 True，那么它会让最后一个子控件填充剩余空间。
+如果 `DockPanel` 的 `LastChildFill` 属性为 `True`，那么它会让最后一个子控件填充剩余空间。
 
-例如，以下代码创建了一系列固定到 DockPanel 边缘 Border 控件：
+例如，以下代码创建了一系列固定到 `DockPanel` 边缘 `Border` 控件：
 
 ```
 <DockPanel LastChildFill="True">
@@ -3296,10 +2883,6 @@ DockPanel 将子控件固定到其边缘。该控件定义了附加属性 Dock�
 </Border>
 </DockPanel>
 ```
-
-
-
-
 
 # 第 6 章 布局控件
 
@@ -3320,11 +2903,11 @@ DockPanel 将子控件固定到其边缘。该控件定义了附加属性 Dock�
 </Border></DockPanel>
 ```
 
-DockPanel 会考虑它的第一个子元素。该控件的 Dock 值为 Top（顶部），因此 DockPanel 将其附加到区域的顶部。
+`DockPanel` 会考虑它的第一个子元素。该控件的 `Dock` 值为 `Top`（顶部），因此 `DockPanel` 将其附加到区域的顶部。
 
-接下来 DockPanel 考虑它的第二个子元素。它的 Dock 值为 Left（左侧），因此 DockPanel将其附加到未被第一个子元素占据的空间左边缘。
+接下来 `DockPanel` 考虑它的第二个子元素。它的 `Dock` 值为 `Left`（左侧），因此 `DockPanel` 将其附加到未被第一个子元素占据的空间左边缘。
 
-DockPanel 继续对它的子元素进行定位，直到达到最后一个。如果控件的 LastChildFill 属性为 True（默认值如此），则控件将使它的最后一个子元素填充剩余空间。
+`DockPanel` 继续对它的子元素进行定位，直到达到最后一个。如果控件的 `LastChildFill` 属性为 `True`（默认值如此），则控件将使它的最后一个子元素填充剩余空间。
 
 图 6-2 显示了结果。
 
@@ -3332,19 +2915,19 @@ DockPanel 继续对它的子元素进行定位，直到达到最后一个。如�
 
 ## 尺寸规格
 
-默认情况下，DockPanel 尝试拉伸其子控件，使其覆盖它们所附加的边缘。例如，在图 6-2 中，它拉伸了 Border 以填充整个 DockPanel 的整个宽度。
+默认情况下，`DockPanel` 尝试拉伸其子控件，使其覆盖它们所附加的边缘。例如，在图 6-2 中，它拉伸了 `Border` 以填充整个 `DockPanel` 的整个宽度。
 
-同时，DockPanel 允许控件在另一个维度上尝试增长到其自然尺寸。图 6-2 中顶部的 Border 高约约 37 像素，因为那是它想要达到的高度。
+同时，`DockPanel` 允许控件在另一个维度上尝试增长到其自然尺寸。图 6-2 中顶部的 `Border` 高约约 37 像素，因为那是它想要达到的高度。
 
-你可以通过显式设置其 Width 和 Height 属性来覆盖任何子元素的尺寸。
+你可以通过显式设置其 `Width` 和 `Height` 属性来覆盖任何子元素的尺寸。
 
 ## EXPANDER（折叠控件）
 
-Expander 控件显示一个标题和一个图标，用户可以点击它们来显示或隐藏子控件。
+`Expander` 控件显示一个标题和一个图标，用户可以点击它们来显示或隐藏子控件。
 
-图 6-3 显示了四个带有“个人信息”、“地址”、“设备统计”和“医疗信息”的 Expander。第一个 Expander 处于展开状态，显示了它包含的 Grid 以及 Grid 内部的其它控件（一个 Image、三个 Label 和两个 TextBox）。
+图 6-3 显示了四个带有“个人信息”、“地址”、“设备统计”和“医疗信息”的 `Expander`。第一个 `Expander` 处于展开状态，显示了它包含的 `Grid` 以及 `Grid` 内部的其它控件（一个 `Image`、三个 `Label` 和两个 `TextBox`）。
 
-下表总结了 Expander 最有用的属性。
+下表总结了 `Expander` 最有用的属性。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_142_0.png)
 
@@ -3352,23 +2935,23 @@ FIGURE 6-3
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | Expander 任何暴露部分的颜色，包括标题区域。在图 6-3 中，背景包括蓝色标题和细蓝色边框。浅深蓝色的阴影区域是 Expander 内部的 Grid。 |
-| BorderBrush | 整个 Expander 周围边框的颜色（图 6-3 中为白色） |
-| BorderThickness | 整个 Expander 周围绘制的边框的厚度（图 6-3 中为 2 像素） |
-| ExpandDirection | 决定 Expander 展开其内容的方向。可以是 Down（下）、Left（左）、Right（右）和 Up（上）（图 6-3 为 Down）。 |
-| Foreground | Expander 标题文本的颜色（图 6-3 中为黄色） |
-| Header | Expander 显示的文本（图 6.3 中第一个 Expander 为“个人信息”） |
-| IsExpanded | 决定 Expander 当前是否处于展开状态。 |
+| Background | `Expander` 任何暴露部分的颜色，包括标题区域。在图 6-3 中，背景包括蓝色标题和细蓝色边框。浅深蓝色的阴影区域是 `Expander` 内部的 `Grid`。 |
+| BorderBrush | 整个 `Expander` 周围边框的颜色（图 6-3 中为白色） |
+| BorderThickness | 整个 `Expander` 周围绘制的边框的厚度（图 6-3 中为 2 像素） |
+| ExpandDirection | 决定 `Expander` 展开其内容的方向。可以是 `Down`（下）、`Left`（左）、`Right`（右）和 `Up`（上）（图 6-3 为 `Down`）。 |
+| Foreground | `Expander` 标题文本的颜色（图 6-3 中为黄色） |
+| Header | `Expander` 显示的文本（图 6.3 中第一个 `Expander` 为“个人信息”） |
+| IsExpanded | 决定 `Expander` 当前是否处于展开状态。 |
 
 # GRID（网格）
 
-Grid 按行和列排列其子元素。
+`Grid` 按行和列排列其子元素。
 
-Grid 的 ColumnDefinitions 属性是 ColumnDefinition 对象集合，决定了 Grid 列的宽度。同样，Grid 的 RowDefinitions 属性是 RowDefinition 对象集合，决定了 Grid 行的高度。
+`Grid` 的 `ColumnDefinitions` 属性是 `ColumnDefinition` 对象集合，决定了 `Grid` 列的宽度。同样，`Grid` 的 `RowDefinitions` 属性是 `RowDefinition` 对象集合，决定了 `Grid` 行的高度。
 
-ColumnDefinition 和 RowDefinition 对象具有确定其尺寸的属性（列使用 Width，行使用 Height）。
+`ColumnDefinition` 和 `RowDefinition` 对象具有确定其尺寸的属性（列使用 `Width`，行使用 `Height`）。
 
-这些 Width 和 Height 属性接受绝对值或比例值。要使用绝对像素值，你可以直接使用数字。例如，如果列的 Width 属性设置为 50，那么该列的宽度为 50 像素。
+这些 `Width` 和 `Height` 属性接受绝对值或比例值。要使用绝对像素值，你可以直接使用数字。例如，如果列的 `Width` 属性设置为 50，那么该列的宽度为 50 像素。
 
 你可以在数字后包含单位指示器以使用像素以外的单位。表列出了你可以使用的单位指示器：
 
@@ -3379,7 +2962,9 @@ ColumnDefinition 和 RowDefinition 对象具有确定其尺寸的属性（列使
 | cm | 厘米 | 96/2.54 * 37 像素 |
 | pt | 磅 | 1/72 英寸 |
 
-要使用比例宽度或高度，请为属性分配一个数字后跟一个星号 (**)（值 * 等于 1*）。Grid 计算它未被绝对值占据的空间量，并将其分配给具有比例尺寸的行或列，根据它们的数值值对它们进行加权。
+
+
+要使用比例宽度或高度，请为属性分配一个数字后跟一个星号（`(**)`）（值`*`等于`1*`）。`Grid`计算它未被绝对值占据的空间量，并将其分配给具有比例尺寸的行或列，根据它们的数值值对它们进行加权。
 
 例如，以下 XAML 代码定义了一个具有三列两行的网格。
 
@@ -3397,11 +2982,11 @@ ColumnDefinition 和 RowDefinition 对象具有确定其尺寸的属性（列使
 </Grid>
 ```
 
-第一列的宽度为 0.75 in = 72 像素，因此它占据了 Grid 中最左侧的 72 像素。第二列和第三列被设置为 2* 和 1*，因此第二列的宽度是最后一列的两倍。换句话说，第二列获得了 Grid 中剩余宽度的 2/(2+1) = 2/3，最后一列获得了剩余宽度的 1/(2+1) = 1/3。
+第一列的宽度为`0.75 in` = 72 像素，因此它占据了`Grid`中最左侧的 72 像素。第二列和第三列被设置为`2*`和`1*`，因此第二列的宽度是最后一列的两倍。换句话说，第二列获得了`Grid`中剩余宽度的`2/(2+1) = 2/3`，最后一列获得了剩余宽度的`1/(2+1) = 1/3`。
 
-第一行的高度为 30 像素。第二行的高度设置为 *，因此它获得了 Grid 中所有的剩余高度。
+第一行的高度为 30 像素。第二行的高度设置为`*`，因此它获得了`Grid`中所有的剩余高度。
 
-按照惯例，开发者设置比例值使其总和为 100 或 1。这允许你将这些值视为剩余空间的百分比。例如，在以下 XAML 代码中，前两列各使用 Grid 宽度的 25%，第三列使用 Grid 宽度剩余的 50%。
+按照惯例，开发者设置比例值使其总和为 100 或 1。这允许你将这些值视为剩余空间的百分比。例如，在以下 XAML 代码中，前两列各使用`Grid`宽度的 25%，第三列使用`Grid`宽度剩余的 50%。
 
 ```xml
 <Grid Margin="5">
@@ -3413,36 +2998,36 @@ ColumnDefinition 和 RowDefinition 对象具有确定其尺寸的属性（列使
 </Grid>
 ```
 
-为了让你你能够在行和列中放置子控件，Grid 控件定义了 Row 和 Column 附加属性。例如，以下 XAML 代码创建了一个 Label 并将其放置在 Grid 的第 0 行第 2 列。
+为了让你能够在行和列中放置子控件，`Grid`控件定义了`Row`和`Column`附加属性。例如，以下 XAML 代码创建了一个`Label`并将其放置在`Grid`的第 0 行第 2 列。
 
 ```xml
 <Grid Row="0" Grid.Column="2" Content="Hello!"/>
 ```
 
-Grid 还定义了 RowSpan 和 ColumnSpan 附加属性，你可以让子元素跨越多个行或列。例如，设置 RowSpan = 2 可使子元素跨越 2 行。
+`Grid`还定义了`RowSpan`和`ColumnSpan`附加属性，你可以让子元素跨越多个行或列。例如，设置`RowSpan = 2`可使子元素跨越 2 行。
 
-图 6-4 显示了一个包含 Borders 和 Labels 的 Grid，演示了不同的 Row、Column、RowSpan 和 ColumnSpan 值。该 Grid 包含了展示各种值的边框和标签。由于 Grid 的 ShowLines 属性设置为 True，它显示了行和列之间的虚线。从书的网站下载示例可以看到。
+图 6-4 显示了一个包含`Borders`和`Labels`的`Grid`，演示了不同的`Row`、`Column`、`RowSpan`和`ColumnSpan`值。该`Grid`包含了展示各种值的边框和标签。由于`Grid`的`ShowLines`属性设置为`True`，它显示了行和列之间的虚线。从书的网站下载示例可以看到。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_144_png)
 
 # SCROLLVIEWER（滚动视图）
 
-ScrollView 控件在可滚动区域内显示其子元素。它最重要的属性是 HorizontalVisibility 和 VerticalVisibility。这些接受以下值：
+`ScrollView`控件在可滚动区域内显示其子元素。它最重要的属性是`HorizontalVisibility`和`VerticalVisibility`。这些接受以下值：
 
-- Auto — 需要时显示滚动条，否则隐藏。
-- Visible — 始终显示滚动条。
-- Disabled — 即使在需要也不显示滚动条。子元素的大小被设置为 ScrollViewer 的大小。
-- Hidden — 即使在需要也不显示滚动条。如果子元素超出 ScrollViewer 的边界，它将保持原始大小。
+- `Auto` — 需要时显示滚动条，否则隐藏。
+- `Visible` — 始终显示滚动条。
+- `Disabled` — 即使在需要也不显示滚动条。子元素的大小被设置为`ScrollViewer`的大小。
+- `Hidden` — 即使在需要也不显示滚动条。如果子元素超出`ScrollViewer`的边界，它将保持原始大小。
 
-图 6-5 说明了 Disabled 和 Hidden 值的区别。该程序包含一个持有两个元素的 StackPanel。每个 ScrollViewer 包含一个具有相等行和列的 Grid。Grid 的 ShowLines 属性设置为 True。
+图 6-5 说明了`Disabled`和`Hidden`值的区别。该程序包含一个持有两个元素的`StackPanel`。每个`ScrollViewer`包含一个具有相等行和列的`Grid`。`Grid`的`ShowLines`属性设置为`True`。
 
 ![](img/cd394f4fc2f7e276f6a0a6fa9c2f6_144_1)
 
-由于上方的 ScrollViewer 的 HorizontalVisibility 属性设置为 Disabled，水平滚动条不会显示，Grid 被缩放以适应。大按钮不适应 Grid，因此被截断了。
+由于上方的`ScrollViewer`的`HorizontalVisibility`属性设置为`Disabled`，水平滚动条不会显示，`Grid`被缩放以适应。大按钮不适应`Grid`，因此被截断了。
 
-下方的 ScrollViewer 的 HorizontalVisibility 属性设置为 Hidden。这次，由于 Grid 没有缩放以适应，它保持足够大以显示按钮。第一个按钮适应 ScrollViewer，但第二个不适应。
+下方的`ScrollViewer`的`HorizontalVisibility`属性设置为`Hidden`。这次，由于`Grid`没有缩放以适应，它保持足够大以显示按钮。第一个按钮适应`ScrollViewer`，但第二个不适应。
 
-ScrollView 示例程序使用以下代码演示了最典型的用法：让用户对过大的内容进行滚动。
+`ScrollView`示例程序使用以下代码演示了最典型的用法：让用户对过大的内容进行滚动。
 
 ```xml
 <ScrollView
@@ -3452,10 +3037,7 @@ ScrollView 示例程序使用以下代码演示了最典型的用法：让用户
 </ScrollView>
 ```
 
-
-
-
-以下 XAML 代码显示了程序如何构建包含蓝色按钮的 StackPanel。（现在不用担心 Content。它只是用来设置按钮的大小、颜色和外边距。）
+以下 XAML 代码显示了程序如何构建包含蓝色按钮的`StackPanel`。（现在不用担心`Content`。它只是用来设置按钮的大小、颜色和外边距。）
 
 ```xml
 <StackPanel Orientation="Horizontal">
@@ -3468,17 +3050,17 @@ ScrollView 示例程序使用以下代码演示了最典型的用法：让用户
 
 ## 状态栏 (STATUSBAR)
 
-StatusBar 控件在窗口底部创建一个区域，你可以在该区域向用户显示状态信息。理想情况下，StatusBar 应该包含相对简单的只读信息，如标签、图标和进度条，尽管它们其中也可以包含一些按钮、组合框、菜单以及各种其他内容。
+`StatusBar`控件在窗口底部创建一个区域，你可以在该区域向用户显示状态信息。理想情况下，`StatusBar`应该包含相对简单的只读信息，如标签、图标和进度条，尽管它们其中也可以包含一些按钮、组合框、菜单以及各种其他内容。
 
-图 6-8 显示了显示状态栏的 UseStatusBar 示例。在后置代码中，更新了状态图标、进度和颜色。
+图 6-8 显示了显示状态栏的`UseStatusBar`示例。在后置代码中，更新了状态图标、进度和颜色。
 
-StatusBar 应该包含 StatusBarItem 对象来存放状态项。StatusBarItem 只能包含一个子元素，但该子元素可以是 Grid 或 StackPanel 等容器，因此你可以显示任何想要的内容。
+`StatusBar`应该包含`StatusBarItem`对象来存放状态项。`StatusBarItem`只能包含一个子元素，但该子元素可以是`Grid`或`StackPanel`等容器，因此你可以显示任何想要的内容。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_146_0.png)
 
 图 6-8
 
-以下 XAML 片段显示了 UseStatusBar 如何为 StatusBar 着色并制作其标签。后置代码在程序启动时将日期设为当前日期。
+以下 XAML 片段显示了`UseStatusBar`如何为`StatusBar`着色并制作其标签。后置代码在程序启动时将日期设为当前日期。
 
 ```xml
 <StatusBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
@@ -3497,41 +3079,43 @@ StatusBar 应该包含 StatusBarItem 对象来存放状态项。StatusBarItem �
 
 # 选项页控件 (TABCONTROL)
 
-TabControl 显示一系列标签，用户可以通过点击标签来选择控件的子元素。
+`TabControl`显示一系列标签，用户可以通过点击标签来选择控件的子元素。
 
 控件 控件
-是的，这被称为 TabControl，而不是简单的 Tab、TabContainer 或其他好听的名字。这可能会导致诸如“在此处插入一个 TabControl 控件”之类的尴尬短语。
+
+是的，这被称为`TabControl`，而不是简单的`Tab`、`TabContainer`或其他好听的名字。这可能会导致诸如“在此处插入一个`TabControl`控件”之类的尴尬短语。
+
 出于某种原因，似乎总有一两个名称中带有“control”字样的控件会漏掉，也许是因为历史原因。
 
-TabControl 对象包含 TabItem 对象，用于承载控件的内容。TabItem 只能包含一个子元素，但该子元素可以是 Grid 或 Panel 等容器，因此你可以在 TabItem 内部放入任何想要的内容。
+`TabControl`对象包含`TabItem`对象，用于承载控件的内容。`TabItem`只能包含一个子元素，但该子元素可以是`Grid`或`Panel`等容器，因此你可以在`TabItem`内部放入任何想要的内容。
 
-图 6-9 显示了带有第一个选中标签的 UseTabControl 示例程序。将此界面与图 6-3 中的展开器（Expanders）进行对比。
+图 6-9 显示了带有第一个选中标签的`UseTabControl`示例程序。将此界面与图 6-3 中的展开器（`Expanders`）进行对比。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_147_0.png)
 
-下表总结了 TabControl 最常用的属性：
+下表总结了`TabControl`最常用的属性：
 
 | 属性 | 用途 |
 | :--- | :--- |
-| BorderBrush | 设置控件边框的颜色（图 6-9 中红色）。 |
-| BorderThickness | 设置边框的厚度（图 6-9 中为 3 像素）。 |
-| Selectedindex | 当前选中标签的索引（图 6-9 中为 0） |
-| SelectedItem | 选中的对象（通常是一个 TabItem 对象） |
-| TabStripPlacement | 确定控件放置标签的位置。Tab 可以取 Left、Right、Top（默认）或 Bottom。 |
+| `BorderBrush` | 设置控件边框的颜色（图 6-9 中红色）。 |
+| `BorderThickness` | 设置边框的厚度（图 6-9 中为 3 像素）。 |
+| `Selectedindex` | 当前选中标签的索引（图 6-9 中为 0） |
+| `SelectedItem` | 选中的对象（通常是一个`TabItem`对象） |
+| `TabStripPlacement` | 确定控件放置标签的位置。`Tab`可以取`Left`、`Right`、`Top`（默认）或`Bottom`。 |
 
 图 6-9
 
-TabItem 的 Foreground（前景）和 Background（背景）属性决定了绘制项目标签时使用的颜色。在图 6-9 中，这些分别是黄色和蓝色。从浅到深的蓝色阴影区域是包含在 TabItem 内部的 Grid。
+`TabItem`的`Foreground`（前景）和`Background`（背景）属性决定了绘制项目标签时使用的颜色。在图 6-9 中，这些分别是黄色和蓝色。从浅到深的蓝色阴影区域是包含在`TabItem`内部的`Grid`。
 
-通常 TabItem 的 Header 属性简单的字符串，但如果你想在标签中放置复杂的内容，可以通过属性元素语法来实现。
+通常`TabItem`的`Header`属性简单的字符串，但如果你想在标签中放置复杂的内容，可以通过属性元素语法来实现。
 
 ## 糟糕的背景 (BAD BACKGROUNDS)
 
-当你点击 TabControl 的标签时，控件会改变该标签的背景颜色，以显示其被选中。在图 6-9 中，你可以看到第一个背景与其他标签的背景有所不同。
+当你点击`TabControl`的标签时，控件会改变该标签的背景颜色，以显示其被选中。在图 6-9 中，你可以看到第一个背景与其他标签的背景有所不同。
 
 如果你更改了标签的颜色，请确保你将使用的前景颜色与选中标签的背景颜色形成对比，否则结果可能难以阅读。
 
-例如，在以下 XAML 片段中，Header 属性包含一个水平 StackPanel，其中包含一个 Ellipse 和一个 Label。TabItem 的主体包含一个可以包含其他控件的 Grid。
+例如，在以下 XAML 片段中，`Header`属性包含一个水平`StackPanel`，其中包含一个`Ellipse`和一个`Label`。`TabItem`的主体包含一个可以包含其他控件的`Grid`。
 
 ```xml
 <TabItem>
@@ -3550,33 +3134,33 @@ TabItem 的 Foreground（前景）和 Background（背景）属性决定了绘�
 
 # 工具栏与工具栏托盘 (TOOLBAR AND TOOLBRAY)
 
-ToolBar 控件显示一个区域，你可以在其中放置按钮、组合框和其他用户容易找到的工具。
+`ToolBar`控件显示一个区域，你可以在其中放置按钮、组合框和其他用户容易找到的工具。
 
-为了给用户完整的 ToolBar 体验，请将一个或多个 ToolBars 放置在 ToolBarTray 中。ToolBarTray 会排列 ToolBars 并允许用户在托盘内拖动它们。
+为了给用户完整的`ToolBar`体验，请将一个或多个`ToolBars`放置在`ToolBarTray`中。`ToolBarTray`会排列`ToolBars`并允许用户在托盘内拖动它们。
 
-在完成按钮、TextBox、组合框后，在 ToolBar 内部放置你需要的其他工具。
+在完成按钮、`TextBox`、组合框后，在`ToolBar`内部放置你需要的其他工具。
 
-ToolBarTray 定义了附加属性，用于控制 ToolBars 的排列：Band 和 BandIndex。
+`ToolBarTray`定义了附加属性，用于控制`ToolBars`的排列：`Band`和`BandIndex`。
 
-Band 是一个数字，决定了 ToolBars 在行中的顺序。ToolBarTray 使用 Band 值进行排序，但它并不关心它们是 0、1 还是其他，或者是否是连续的。
+`Band`是一个数字，决定了`ToolBars`在行中的顺序。`ToolBarTray`使用`Band`值进行排序，但它并不关心它们是 0、1 还是其他，或者是否是连续的。
 
 # 6 布局控件 (LAYOUT CONTROLS)
 
-图 6-10 显示了带有三个 ToolBars 的 UseToolBar 程序。第一个 ToolBar 包含搜索相关的按钮，Band = 1，BandIndex = 1，位于第一个行带。
+图 6-10 显示了带有三个`ToolBars`的`UseToolBar`程序。第一个`ToolBar`包含搜索相关的按钮，`Band = 1`，`BandIndex = 1`，位于第一个行带。
 
-第二个 ToolBar 包含各种按钮，Band = 1，BandIndex = 2，位于第一个行带。
+第二个`ToolBar`包含各种按钮，`Band = 1`，`BandIndex = 2`，位于第一个行带。
 
-最后一个 ToolBar 包含杂杂按钮，Band = 2，BandIndex = 1，位于第二个行带。
+最后一个`ToolBar`包含杂杂按钮，`Band = 2`，`BandIndex = 1`，位于第二个行带。
 
-等等，文字说：图 6-11 显示了 UseToolBar 程序，这次带有溢出区域。该区域的项 OverflowMode 为 Always，因此它们会出现在溢出区域。
+等等，文字说：图 6-11 显示了`UseToolBar`程序，这次带有溢出区域。该区域的项`OverflowMode`为`Always`，因此它们会出现在溢出区域。
 
 ![](img/c9b2d34f4fc2f7e276f6a0a6fa9c2f6_149_0.png)
 
 图 6-10
 
-第一个 ToolBar 的项 OverflowMode 为 Never，因此它们永远不会移动到溢出区域。如果你把窗口调得太窄，会被裁剪。
+第一个`ToolBar`的项`OverflowMode`为`Never`，因此它们永远不会移动到溢出区域。如果你把窗口调得太窄，会被裁剪。
 
-以下 XAML 代码显示了 UseToolBar 如何构建 ToolBars 的部分：
+以下 XAML 代码显示了`UseToolBar`如何构建`ToolBars`的部分：
 
 ```xml
 <ToolBarTray VerticalAlignment="Top" HorizontalAlignment="Stretch">
@@ -3606,31 +3190,29 @@ Band 是一个数字，决定了 ToolBars 在行中的顺序。ToolBarTray 使�
 </ToolBarTray>
 ```
 
-ToolBar 控件在此值得这里的一个属性：Orientation。你可以将此属性设置为 Horizontal 或 Vertical，以决定托盘是垂直还是水平排列其 ToolBars。
+`ToolBar`控件在此值得这里的一个属性：`Orientation`。你可以将此属性设置为`Horizontal`或`Vertical`，以决定托盘是垂直还是水平排列其`ToolBars`。
 
-图 6-12 显示了一个垂直排列 ToolBarTray 的程序。程序的 XAML 代码使用 LayoutTransform 旋转 ToolBar 的流区域使其水平打开，尽管 ToolBar 本身是垂直排列的。
+图 6-12 显示了一个垂直排列`ToolBarTray`的程序。程序的 XAML 代码使用`LayoutTransform`旋转`ToolBar`的流区域使其水平打开，尽管`ToolBar`本身是垂直排列的。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_150_0.png)
 
 ## 均匀网格 (UNIFGRID)
 
-UniformGrid 控件在网格中显示项目，网格中所有行和所有列的大小都相同。你将控件的 Rows 和 Columns 属性设置为所需的行数和列数。控件将它的区域平分给
+`UniformGrid`控件在网格中显示项目，网格中所有行和所有列的大小都相同。你将控件的`Rows`和`Columns`属性设置为所需的行数和列数。控件将它的区域平分给
 
 该控件将其子元素放置在生成的网格单元中。如果子元素太大到无法放入单元，则会在单元边界处裁剪。
 
+在某些方面，`UniformGrid`的作用类似于`WrapPanel`。它们都会按行排列子元素，直到空间用尽，然后就会开始新的一的一行。然而，这两种控件之间有两个巨大的区别。
+
+首先，`WrapPanel`赋予每行中的每个项目以相同的高度，但不同行之间的项目可能有不同的宽度，因此它们并不一定按列对齐。相比之下，`UniformGrid`使每个项目在相对垂直和水平方向上具有相同的大小。
+
+其次，`WrapPanel`具有一个`Orientation`（方向）属性，用于决定它是按行还是按列排列子元素。而`UniformGrid`总是按行优先的顺序排列子元素。
+
+图 6-3 显示了`UseUniformGrid`示例，展示了三行四列。按钮伸伸以适应其单元格，且大小相同，但即使所有子元素的大小不同，该控件也能同样良好工作。
+
+接下来的 XAML 代码片段显示了`UseUniformGrid`程序的关键部分。为了节省空间，我省略了`UniformGrid`的背景定义：
 
 
-
-
-在某些方面，UniformGrid 的作用类似于 WrapPanel。它们都会按行排列子元素，直到空间用尽，然后就会开始新的一的一行。然而，这两种控件之间有两个巨大的区别。
-
-首先，WrapPanel 赋予每行中的每个项目以相同的高度，但不同行之间的项目可能有不同的宽度，因此它们并不一定按列对齐。相比之下，UniformGrid 使每个项目在相对垂直和水平方向上具有相同的大小。
-
-其次，WrapPanel 具有一个 `Orientation`（方向）属性，用于决定它是按行还是按列排列子元素。而 UniformGrid 总是按行优先的顺序排列子元素。
-
-图 6-3 显示了 UseUniformGrid 示例，展示了三行四列。按钮伸伸以适应其单元格，且大小相同，但即使所有子元素的大小不同，该控件也能同样良好工作。
-
-接下来的 XAML 代码片段显示了 UseUniformGrid 程序的关键部分。为了节省空间，我省略了 UniformGrid 的背景定义：
 
 ```
 <UniformGrid Columns="4" Rows="3">
@@ -3654,6 +3236,7 @@ UniformGrid 控件在网格中显示项目，网格中所有行和所有列的�
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_151_0.png)
 
 图 6-3
+
 UseUniformGrid
 
 ## VIEWBOX
@@ -3675,7 +3258,7 @@ Viewbox 的 `Stretch` 属性决定了它如何拉伸子元素。`Stretch` 属性
 
 图 6-14
 
-# WINDSOWFORMSHOST
+### WINDSOWFORMSHOST
 
 WindowsFormsHost 控件可以处理 Windows Forms 控件。这让你在没有相应的 WPF 版本时可以使用 Windows Forms 控件。（它甚至可以托管旧的 COM 控件，尽管这里没有显式介绍。）
 
@@ -3732,11 +3315,12 @@ UseFormsHost
 1. 添加 WindowsIntegration 的引用。在 Visual Studio 中，你可以打开“项目（Project）”菜单，选择“添加引用（Add Reference）”，并在 NET 选项卡中选择该库。在 Expression Blend 中，你可以使用“添加引用”命令。
 2. 添加 System.Forms 的引用。同样，在 Visual Studio 中，你可以使用“项目”菜单中的“添加引用”并选择该库。在 Expression Blend 中，你可以再次使用“添加引用”命令。
 3. 在 XAML文件的顶部为 Forms 命名空间添加命名空间声明。声明应如下：
-xmlns:wf="clr-namespace:System.Forms;assembly=System.Forms"
+
+`xmlns:wf="clr-namespace:System.Forms;assembly=System.Forms"`
 
 这使得 `wf` 成为命名空间的缩写，因此你可以通过 `wf:` 引用 Forms 控件：
 
-# HOST HINTS
+### HOST HINTS
 
 Visual Studio 显示 WindowsFormsHost 控件的效果似乎比 Expression Blend 更好，至少在我使用的版本中是这样。Visual Studio 似乎足够理解 Windows Forms 控件，以计算宿主机的大小。Expression Blend 似乎没有查看宿主机内部，因此它猜测宿主机的大小。
 
@@ -3762,10 +3346,6 @@ WrapPanel 控件的工作方式与 StackPanel 类似，都是按行排列控件�
 
 接下来的章节将介绍另一组控件：用户交互控件。这些是诸如 TextBox、Button 和 Menu 等控件，用户通过它们输入数据、执行代码并其他控制应用程序。
 
-
-
-
-
 # 用户交互控件
 
 前两个章节描述了两类 WPF 控件：内容控件和布局控件。本章将描述第三类：用户交互控件。
@@ -3774,9 +3354,9 @@ WrapPanel 控件的工作方式与 StackPanel 类似，都是按行排列控件�
 
 用户向程序提供的信息类型包括：
 
--   文本框中输入的文本值
--   从列表框、组合框、单选按钮、复选框等从中选择的内容
--   从滑块或数值增减按钮等数值选择控件中选取的值
+- 文本框中输入的文本值
+- 从列表框、组合框、单选按钮、复选框等从中选择的内容
+- 从滑块或数值增减按钮等数值选择控件中选取的值
 
 用户还通过点击按钮和选择菜单项来告诉程序何时执行操作。
 
@@ -3848,7 +3428,7 @@ CheckBox 还可以在三态模式下运行，它可以被选中、未选中，�
 
 图 7-2
 
-# INDETERMINATE CONFUSION（不确定状态的疑惑）
+## INDETERMINATE CONFUSION（不确定状态的疑惑）
 
 许多用户并不理解三态 CheckBox，因为它们的用法并不常见，且未确定状态的意思并没有真正的标准。某些程序使用此状态表示选项的部分内容被选中。例如，在选择要安装的代码库时，你可能会选择全部（选中）、不选（未选中）或选择部分（未确定）。在这种情况下，程序需要某种方法让用户指定哪些项目应该被选中，这进一步增加了界面的复杂性。
 
@@ -3906,8 +3486,6 @@ HorizontalAlignment="Center" />
 </ComboBox>
 ```
 
-
-
 ```xml
 <Label Content="Mercury" HorizontalAlignment="Center"
     Foreground="Green"/>
@@ -3923,33 +3501,35 @@ ComboBox 的 `Background` 属性设置 ComboBox 自身使用的背景，而不�
 
 ComboBoxItem 的 `Background` 属性设置 ComboBoxItem 使用的背景。例如，在图 7-4 中，你可以看到地球、木星和土星项目后面的背景是黑色的。
 
-注意图 7-4 中，当鼠标悬停在下拉列表中的项目上时（图 7-3 和 7-4 中的火星），火星的背景变为蓝色，ComboBox 会更改其背景颜色，以便户户看到它被选中。
 
-ComboBox 只能更改其未被内容覆盖的项目的背景颜色。例如，在之前的代码中，如果你将 ComboBoxItem 的 `StackPanel` 的 `Background` 属性设置为蓝色，那么所有下拉项目都具有蓝色背景。ComboBox 只能更改下拉项目左右两个小切块的颜色，因此用户在项目被选中时线索非常少。
+
+注意图 7-4 中，当鼠标悬停在下拉列表中的项目上时（图 7-3 和 7-4 中的火星），火星的背景变为蓝色，`ComboBox` 会更改其背景颜色，以便户户看到它被选中。
+
+`ComboBox` 只能更改其未被内容覆盖的项目的背景颜色。例如，在之前的代码中，如果你将 `ComboBoxItem` 的 `StackPanel` 的 `Background` 属性设置为蓝色，那么所有下拉项目都具有蓝色背景。`ComboBox` 只能更改下拉项目左右两个小切块的颜色，因此用户在项目被选中时线索非常少。
 
 这个故事的道理是不要尝试完全填充下拉列表，而是要确保某些背景显示出来。
 
-下表总结了 ComboBox 最常用的属性：
+下表总结了 `ComboBox` 最常用的属性：
 
 | 属性 | 用途 |
 | --- | --- |
-| Background | 用于绘制 ComboBox 自身的背景 |
-| IsEditable | 决定用户是否可以在 ComboBox 中输入新值。（如果项目是像图 7-3 左侧那样的纯文本值，效果最好。） |
-| MaxDropdownHeight | 下拉列表的最大高度 |
-| SelectedIndex | 当前选中项目的索引 |
-| SelectedItem | 当前选中的 ComboBoxItem |
+| `Background` | 用于绘制 `ComboBox` 自身的背景 |
+| `IsEditable` | 决定用户是否可以在 `ComboBox` 中输入新值。（如果项目是像图 7-3 左侧那样的纯文本值，效果最好。） |
+| `MaxDropdownHeight` | 下拉列表的最大高度 |
+| `SelectedIndex` | 当前选中项目的索引 |
+| `SelectedItem` | 当前选中的 `ComboBoxItem` |
 
-# CONTEXTMENU（右键菜单）
+### CONTEXTMENU（右键菜单）
 
-ContextMenu 控制与控件关联的弹出菜单。例如，图 7-5 所示的 ContextMenu 示例包含一个关联 ContextMenu 的 ListBox。当你右键点击 ListBox 时，ContextMenu 会自动出现，如图所示。
+`ContextMenu` 控制与控件关联的弹出菜单。例如，图 7-5 所示的 `ContextMenu` 示例包含一个关联 `ContextMenu` 的 `ListBox`。当你右键点击 `ListBox` 时，`ContextMenu` 会自动出现，如图所示。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_161_0.png)
 
 图 7-5
 
-奇怪的是，Expression Blend 或 Visual Studio 的控件工具箱中都没有 ContextMenu。幸运的是，为 XAML 构建 ContextMenu  {简单。
+奇怪的是，Expression Blend 或 Visual Studio 的控件工具箱中都没有 `ContextMenu`。幸运的是，为 XAML 构建 `ContextMenu` {简单。
 
-以下 XAML 代码显示了 UseContextMenu 程序如何构建其 ListBox 和 ContextMenu。在 ListBox 的 `Background` 元素之后，`ListBox.ContextMenu` 元素定义了 ContextMenu。每个必须包含一个包含 MenuItem 对象的 ContextMenu 对象。
+以下 XAML 代码显示了 `UseContextMenu` 程序如何构建其 `ListBox` 和 `ContextMenu`。在 `ListBox` 的 `Background` 元素之后，`ListBox.ContextMenu` 元素定义了 `ContextMenu`。每个必须包含一个包含 `MenuItem` 对象的 `ContextMenu` 对象。
 
 ```xml
 <ListBox Name="WebSites" Grid.Row=1 HorizontalAlignment="Stretch" Width="Auto" IsSynchronizedWithCurrentItem="True" Margin="5">
@@ -3975,7 +3555,7 @@ ContextMenu 控制与控件关联的弹出菜单。例如，图 7-5 所示的 Co
 </ListBox>
 ```
 
-你可以通过在其他 MenuItem 内部添加 MenuItem 来轻松地在 ContextMenu 中创建子菜单。例如，以下 ContextMenu 包含一个带有复制、剪切和粘贴项目的子菜单：
+你可以通过在其他 `MenuItem` 内部添加 `MenuItem` 来轻松地在 `ContextMenu` 中创建子菜单。例如，以下 `ContextMenu` 包含一个带有复制、剪切和粘贴项目的子菜单：
 
 ```xml
 <ContextMenu>
@@ -3989,43 +3569,43 @@ ContextMenu 控制与控件关联的弹出菜单。例如，图 7-5 所示的 Co
 </ContextMenu>
 ```
 
-# HANDLING MENUITEMS（处理菜单项）
+### HANDLING MENUITEMS（处理菜单项）
 
-当用户选择一个项目时，MenuItem 对象会像 Button 一样引发 `Click` 事件。你可以捕获并以相同的方式处理它。
+当用户选择一个项目时，`MenuItem` 对象会像 `Button` 一样引发 `Click` 事件。你可以捕获并以相同的方式处理它。
 
-ContextMenus 是 Menu 对象的一种。本章后面的“Menu”部分将会有更多关于 Menu 和 MenuItem 对象的介绍。
+`ContextMenus` 是 `Menu` 对象的一种。本章后面的“Menu”部分将会有更多关于 `Menu` 和 `MenuItem` 对象的介绍。
 
-# FRAME（框架）
+### FRAME（框架）
 
-Frame 控件显示内容并提供了一个简单的导航模型。它可以显示网页或 XAML 文件，并遵循这些文件中的链接。
+`Frame` 控件显示内容并提供了一个简单的导航模型。它可以显示网页或 XAML 文件，并遵循这些文件中的链接。
 
-控件的 `Source` 属性决定了应该显示的网页或 XAML 文件。程序也可以调用控件的 `Navigate` 方法来使其显示新页面。例如，C# 代码让名为 `fraGo` 的 Frame 打开了网页 www.vb-helper.com/index_categories.html：
+控件的 `Source` 属性决定了应该显示的网页或 XAML 文件。程序也可以调用控件的 `Navigate` 方法来使其显示新页面。例如，C# 代码让名为 `fraGo` 的 `Frame` 打开了网页 `www.vb-helper.com/index_categories.html`：
 
 ```csharp
 fraGo.Navigate(new Uri("http://www.vb-helper.com/index_categories.html"));
 ```
 
-当 Frame 导航到新页面时，由于其 `Source` 改变或程序调用了 `Navigate` 方法，Frame 将其之前的位置存储在导航历史中。用户可以点击控件的前进和后退按钮在历史中移动。
+当 `Frame` 导航到新页面时，由于其 `Source` 改变或程序调用了 `Navigate` 方法，`Frame` 将其之前的位置存储在导航历史中。用户可以点击控件的前进和后退按钮在历史中移动。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_163_0.png)
 
-图 7-6 所示的 UseFrame 示例程序包含一个 ComboBox 和一个 Frame。当你从 ComboBox 中选择一个网页时，控件会显示该页面。
+图 7-6 所示的 `UseFrame` 示例程序包含一个 `ComboBox` 和一个 `Frame`。当你从 `ComboBox` 中选择一个网页时，控件会显示该页面。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_163_1.png)
 
-在图 7-6 中，你可以看到 Frame 控件左上角的导航。如果你点击按钮右侧的小箭头，控件将显示导航历史中的页面列表，以便你可以快速跳转到其中某一个。
+在图 7-6 中，你可以看到 `Frame` 控件左上角的导航。如果你点击按钮右侧的小箭头，控件将显示导航历史中的页面列表，以便你可以快速跳转到其中某一个。
 
-# GRIDSPLITTER（网格拆分器）
+### GRIDSPLITTER（网格拆分器）
 
-GridSplitter 控件允许用户调整 Grid 中行和列的宽度。要使用 GridSplitter，你将其添加到 Grid 的单元格中。此时，用户可以抓取 GridSplitter 并拖动它来调整行或列的大小。
+`GridSplitter` 控件允许用户调整 `Grid` 中行和列的宽度。要使用 `GridSplitter`，你将其添加到 `Grid` 的单元格中。此时，用户可以抓取 `GridSplitter` 并拖动它来调整行或列的大小。
 
-图 7-7 显示了 GridSplitter。
+图 7-7 显示了 `GridSplitter`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_164_0.png)
 
-GridSplitter 控件允许用户调整 Grid 中行和列的宽度。要使用 GridSplitter，你将其添加到 Grid 的单元格中。此时，用户可以抓取 GridSplitter 并拖动它来调整行或列的大小。
+`GridSplitter` 控件允许用户调整 `Grid` 中行和列的宽度。要使用 `GridSplitter`，你将其添加到 `Grid` 的单元格中。此时，用户可以抓取 `GridSplitter` 并拖动它来调整行或列的大小。
 
-以下 XAML 代码显示了 UseSplitter 程序如何创建其 GridSplitter：
+以下 XAML 代码显示了 `UseSplitter` 程序如何创建其 `GridSplitter`：
 
 ```xml
 <GridSplitter Column="1" RowSpan="2"
@@ -4038,15 +3618,15 @@ GridSplitter 控件允许用户调整 Grid 中行和列的宽度。要使用 Gri
 
 以下列表解释了每个属性值：
 
-- Column="1" — 在第 1 列的 GridSplitter。
-- RowSpan="2" — 这使得 GridSplitter 跨越两行。
-- HorizontalAlignment="Left" — 将 GridSplitter 放在左侧。
-- VerticalAlignment="Stretch" — 使控件垂直方向拉伸。
-- Background="Blue" — 使控件突出。
-- ShowsPreview="False" — 如果此为 True，用户在拖动时会显示控件的影子。如果为 False，控件调整列宽。
-- Width="5" — 决定控件的宽度。
+- `Column="1"` — 在第 1 列的 `GridSplitter`。
+- `RowSpan="2"` — 这使得 `GridSplitter` 跨越两行。
+- `HorizontalAlignment="Left"` — 将 `GridSplitter` 放在左侧。
+- `VerticalAlignment="Stretch"` — 使控件垂直方向拉伸。
+- `Background="Blue"` — 使控件突出。
+- `ShowsPreview="False"` — 如果此为 `True`，用户在拖动时会显示控件的影子。如果为 `False`，控件调整列宽。
+- `Width="5"` — 决定控件的宽度。
 
-要创建一个让用户调整行而不是列的 GridSplitter，请交换行和列的角色以及垂直和水平对齐。以下 XAML 代码显示了 Splitter 程序如何创建其 GridSplitter：
+要创建一个让用户调整行而不是列的 `GridSplitter`，请交换行和列的角色以及垂直和水平对齐。以下 XAML 代码显示了 `Splitter` 程序如何创建其 `GridSplitter`：
 
 ```xml
 <GridSplitter Row="1" ColumnSpan="2"
@@ -4063,14 +3643,11 @@ GridSplitter 控件允许用户调整 Grid 中行和列的宽度。要使用 Gri
 
 # 128 | CHAPTER 7 USER INTERACTION CONTLS
 
-
-
-
 另一个有用的属性是 `HorizontalContentAlignment` 和 `VerticalContentAlignment`，它们允许你控制列表中项的对齐方式。
 
-图 7-8 中的 UseBox 示例程序包含一个 `ListBox`，其 `SelectionMode` 设置为 `Extended`，并且选择了第三、第五和第六个项。
+图 7-8 中的 `UseBox` 示例程序包含一个 `ListBox`，其 `SelectionMode` 设置为 `Extended`，并且选择了第三、第五和第六个项。
 
-每个 `ListItem` 必须包含一个子元素，但该子元素可以是像 `Grid`这样的容器，这可以有效地在列表中放置你想要的任何内容。
+每个 `ListItem` 必须包含一个子元素，但该子元素可以是像 `Grid` 这样的容器，这可以有效地在列表中放置你想要的任何内容。
 
 下面的 XML 代码显示了程序如何构建此 `ListBox`。“Mountain Uncycling”项使用一个 `StackPanel` 来包含一个 `Text` 和一个 `Image`。
 
@@ -4100,15 +3677,15 @@ SelectionMode="Extended">
 
 图 7-8
 
-# 颜色注意事项
+### 颜色注意事项
 
 `ListBox` 控制控制项在被选中时颜色如何变化。为了确保用户在项被选中时能够选中它，不要用显式设置了前景颜色和背景颜色的控件来覆盖整个项。
 
-例如，在之前的代码中，如果你将 `StackPanel` 的 `Background` 设置为红色，并将 `TextBlock` 的 `Foreground` 设置为黑色，那么当 Mountain Unycycling 项被选中时将很难分辨。
+例如，在之前的代码中，如果你将 `StackPanel` 的 `Background` 设置为红色，并将 `TextBlock` 的 `Foreground` 设置为黑色，那么当 `Mountain Unycycling` 项被选中时将很难分辨。
 
 为了让 `ListBox` 更容易更改项的颜色，控件不会从其容器继承背景颜色。
 
-## 菜单 (MENU)
+### 菜单 (MENU)
 
 `Menu` 控件为窗口显示主菜单。`Menu` 可以提供子菜单、快捷键（例如用于打开命令的 [Ctrl]+O）和加速器（例如，当按下 [Alt]+F 时打开“文件”菜单）。
 
@@ -4118,7 +3695,7 @@ SelectionMode="Extended">
 
 `MenuItem` 的 `Header` 属性决定了它的显示内容。`Header` 值是简单的文本。在你想要让 `MenuItem` 用作加速器的 `Header` 字母前面放置一个 ampersand（&）。例如，如果你将 `Header` 设置为 File，那么 `MenuItem` 将显示 File（注意这与 Windows Forms 处理此问题的方式不同。在 Windows Forms 中，你需要在菜单中想要带有下划线的字符前面放置一个 ampersand）。
 
-# 激活加速器 (ACTIVATING ACCELERATORS)
+### 激活加速器 (ACTIVATING ACCELERATORS)
 
 在最近的 Windows 操作系统中，加速字符通常在用户按下 [Alt] 键之前不会带有下划线。随后加速字符会出现下划线，用户可以按下相应的键来触发它。
 
@@ -4136,7 +3713,7 @@ SelectionMode="Extended">
 
 图 7-9
 
-下面的 XAML 代码构建了图 7-9所示所示所示。注意“另存为（Save As）”和 `Alignment="Top"` 之间的 `Separator` 对象。
+下面的 XAML 代码构建了图 7-9 所示所示所示。注意“另存为（Save As）”和 `Alignment="Top"` 之间的 `Separator` 对象。
 
 ```
 <Menu VerticalAlignment="Top">
@@ -4162,6 +3739,8 @@ SelectionMode="Extended">
 
 下面的代码显示了如何构建图 7-10 所示的“Drop Shadow” `MenuItem`：
 
+
+
 ```
 <MenuItem IsCheckable="True" IsChecked="True">
   <MenuItem.Header>
@@ -4181,11 +3760,11 @@ SelectionMode="Extended">
 
 # 无限制勾选 (UNLIMITED FREE CHECKING)
 
-WPF 对可勾选项的支持几乎是自动的。如果 `MenuItem` 的 `IsCheckable` 为 True，那么当用户点击时，程序会自动选中该项。`MenuItem` 提供了 `Checked` 和 `Unchecked` 事件让程序知道发生了什么。
+WPF 对可勾选项的支持几乎是自动的。如果 `MenuItem` 的 `IsCheckable` 为 `True`，那么当用户点击时，程序会自动选中该项。`MenuItem` 提供了 `Checked` 和 `Unchecked` 事件让程序知道发生了什么。
 
 如果你只需要项，你就完成了。如果你需要菜单项是互斥的（例如，你希望图 7-10 所示的项中只有一个被选中），你需要添加额外的代码，在某一项被选中时取消其他项的选中。
 
-# 随处可见的菜单 
+# 随处可见的菜单
 
 普通的菜单横跨应用程序顶部，但并没有阻止你将其放在其他地方。例如，你可以在 `GroupBox` 内部或 `TabControl` 的页中添加菜单，以提供仅适用于这些控件的命令。你甚至可以对菜单应用变换使其旋转或倾斜。
 
@@ -4197,12 +3776,7 @@ WPF 对可勾选项的支持几乎是自动的。如果 `MenuItem` 的 `IsChecka
 
 `PasswordBox` 是一种相对简单的文本框，它将用户输入的字符替换为点（•）或屏幕上的其他特殊字符。在内部，控件会跟踪输入的内容，但防止用户看到它。简单来说，它防止了恶作剧的 Phil 从用户肩膀偷窥密码。
 
-图 7-11 所示的 UsePasswordBox 示例程序演示了 `PasswordBox`。输入用户名和密码。当你输入密码时，`PasswordBox` 显示一系列点。当你点击 OK 按钮时，程序将显示你输入的用户名和密码。
-
-
-
-
-[content]
+图 7-11 所示的 `UsePasswordBox` 示例程序演示了 `PasswordBox`。输入用户名和密码。当你输入密码时，`PasswordBox` 显示一系列点。当你点击 OK 按钮时，程序将显示你输入的用户名和密码。
 
 程序可以使用控件的 `Password` 属性来查看控件中存储了什么密码。以下代码显示了 `UsePassword` 程序是如何显示你输入的用户名和密码的：
 
@@ -4253,6 +3827,7 @@ private void btnOK_Click(object sender, EventArgs e)
 `IsChecked` 属性决定控件是否被选中。如果控件的 `IsThreeState` 属性为 `True`，`IsChecked` 可以为 `True`、`False` 或 `null`，表示控件处于已选中、未选中或不确定状态（既未选中也非未选中）。
 
 > 困惑的状态
+>
 > 三态 `RadioButton` 比三态 `CheckBox` 更让用户感到困惑。从视觉上看，选中状态和不确定状态之间的区别非常小。为了避免混淆，你可能最好不要使用三态 `RadioButton`。请参阅本章前面的“不确定困惑”提示以获得关于不确定状态的更多讨论。
 
 `RadioButton` 最实用的两个事件是 `Checked` 和 `Unchecked`，它们分别在用户选择或取消选择控件时触发。`Click` 事件在用户选择和取消选择控件时都会触发。
@@ -4316,10 +3891,6 @@ Command="EditingCommands.AlignLeft"/>
 
 第 21 章将更多关于文档的内容。`RichTextBox` 是一个非常复杂的控件，包含许多属性和方法，让你控制其行为和内容的格式。以下章节介绍了 `RichTextBox` 控件最实用的功能。
 
-
-
-
-
 # RichTextBox | 137
 
 | 命令名称 | 快捷键 |
@@ -4331,9 +3902,9 @@ Command="EditingCommands.AlignLeft"/>
 
 OpenBracket（左括号）、CloseBracket（右括号）和 OemPlus（加号）键是 OEM（原始设备制造商）[] 字符。这些键通常放置在小键盘区域，取决于你的键盘硬件，键盘其他部分的类似按键可能无法工作。例如，小键盘区域的 `+` 键可能有效，但数字键区域侧的 `+` 键可能无效。
 
-有关编辑命令的更多信息和更完整的列表，请参阅 msdn.microsoft.com/system.windows.documents.editingcommands.aspx。
+有关编辑命令的更多信息和更完整的列表，请参阅 `msdn.microsoft.com/system.windows.documents.editingcommands.aspx`。
 
-# # 拼写检查
+## 拼写检查
 
 RichTextBox 控制最令人兴奋的功能之一是支持拼写检查。如果你将控件的 `SpellCheck.IsEnabled` 属性设置为 `True`，则控件会自动高亮可能的错误。
 
@@ -4345,9 +3916,9 @@ RichTextBox 控制最令人兴奋的功能之一是支持拼写检查。如果�
 
 图 7-14
 
-# # 撤销和重做
+## 撤销和重做
 
-RichTextBox 控件自动提供撤销和重做功能。每当用户按下 [Ctrl]+Z` 时，控件就会撤销最近的更改。每当用户按下 [Ctrl]+Y` 时，控件就会重新应用最近被撤销的更改。
+RichTextBox 控件自动提供撤销和重做功能。每当用户按下 `[Ctrl]+Z` 时，控件就会撤销最近的更改。每当用户按下 `[Ctrl]+Y` 时，控件就会重新应用最近被撤销的更改。
 
 控件还提供了你可以通过编程方式管理撤销栈的工具。`CanUndo` 和 `CanRedo` 属性指示控件是否有可以撤销或重做的操作。`Undo` 和 `Redo` 方法调用撤销或重做操作。
 
@@ -4380,14 +3951,14 @@ private void mnuEditRedo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-# 其他功能
+## 其他功能
 
 RichTextBox 控件提供了许多其他功能，无法在此处全部列出。在继续之前，下表总结了一些关键的 RichTextBox 属性。
 
 | 属性 | 用途 |
 |---|---|
-| AcceptsReturn | 决定 [Enter] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 [Enter] 将触发该按钮。 |
-| AcceptsTab | 决定 [Tab] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 [Tab] 将焦点移动到窗口的下一个控件。 |
+| AcceptsReturn | 决定 `[Enter]` 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 `[Enter]` 将触发该按钮。 |
+| AcceptsTab | 决定 `[Tab]` 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 `[Tab]` 将焦点移动到窗口的下一个控件。 |
 | HorizontalScrollBarVisibility | 决定水平滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）、Hidden（隐藏）或 Visible（可见）。 |
 | IsEnabled | 决定控件是否会与用户交互。如果此项为 `False`，用户可以看到内容但不能更改、高亮或滚动控件的内容。 |
 | IsReadOnly | 决定用户是否可以修改控件的内容。如果 `IsReadOnly` 为 `True`，用户仍然可以滚动控件内容、选择文本并将文本复制到剪贴板。如果你想显示用户无法更改的内容，通常设置 `IsReadOnly = True` 比设置 `IsEnabled = False` 更好。 |
@@ -4396,18 +3967,24 @@ RichTextBox 控件提供了许多其他功能，无法在此处全部列出。�
 UseRichText 示例程序演示了其他简单的格式命令，允许你更改：
 
 字体 字体样式（粗体、斜体、下划线）
+
 - 字体大小（小、中等、大）
+
 - 文本颜色
+
 - 背景颜色
+
 - 字体族（例如 Times New Roman, Arial, Courier New）
+
 - 带项目符号和编号的段落
+
 - 段落对齐
 
 查看 [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 以获取更多关于编辑命令的信息和更完整的列表。（注：此处根据原文逻辑翻译了链接内容）
 
-- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 
+- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx)
 
-# # 拼写检查
+## 拼写检查
 
 RichTextBox 控件最令人兴奋的功能之一是支持拼写检查。如果你将控件的 `SpellCheck.IsEnabled` 属性设置为 `True`，则控件会自动高亮可能的错误。
 
@@ -4419,15 +3996,17 @@ RichTextBox 控件最令人兴奋的功能之一是支持拼写检查。如果�
 
 图 7-14
 
-# # 撤销和重做
+## 撤销和重做
 
-RichTextBox 控件自动提供撤销和重做功能。每当用户按下 [Ctrl]+Z` 时，控件就会撤销最近的更改。每当用户按下 [Ctrl]+Y` 时，控件就会重新应用最近被撤销的更改。
+
+
+RichTextBox 控件自动提供撤销和重做功能。每当用户按下 `Ctrl+Z` 时，控件就会撤销最近的更改。每当用户按下 `Ctrl+Y` 时，控件就会重新应用最近被撤销的更改。
 
 控件还提供了你可以通过编程方式管理撤销栈的工具。`CanUndo` 和 `CanRedo` 属性指示控件是否有可以撤销或重做的操作。`Undo` 和 `Redo` 方法调用撤销或重做操作。
 
 RichTextBox 程序的编辑（Edit）菜单包含撤销（Undo）和重做（Redo）命令。当用户打开编辑菜单时，以下代码检查 RichTextBox 控件的 `CanUndo` 和 `CanRedo` 属性，以确定哪些菜单项应该启用。例如，如果用户最近没有撤销过命令，则 `CanUndo` 返回 `False` 且 `mnuEditRedo` 菜单被禁用。
 
-```
+``` 
 // 启用或禁用撤销和重做命令。
 private void mnuEditSubmenuOpened(object sender, RoutedEventArgs e)
 {
@@ -4436,9 +4015,9 @@ private void mnuEditSubmenuOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-以下代码显示了程序如何调用控件的 Undo 和 Redo 方法。
+以下代码显示了程序如何调用控件的 `Undo` 和 `Redo` 方法。
 
-```
+``` 
 // Undo.
 private void mnuEditUndo_Click(object sender, RoutedEventArgs e)
 {
@@ -4446,7 +4025,7 @@ private void mnuEditUndo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-```
+``` 
 // Redo.
 private void mnuEditRedo_Click(object sender, RoutedEventArgs e)
 {
@@ -4460,14 +4039,14 @@ RichTextBox 控件提供了许多其他功能，无法在此处全部列出。�
 
 | 属性 | 用途 |
 |---|---|
-| AcceptsReturn | 决定 [Enter] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 [Enter] 将触发该按钮。 |
-| AcceptsTab | 决定 [Tab] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 [Tab] 将焦点移动到窗口的下一个控件。 |
-| HorizontalScrollBarVisibility | 决定水平滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）、Hidden（隐藏）或 Visible（可见）。 |
-| IsEnabled | 决定控件是否会与用户交互。如果此项为 `False`，用户可以看到内容但不能更改、高亮或滚动控件的内容。 |
-| IsReadOnly | 决定用户是否可以修改控件的内容。如果 `IsReadOnly` 为 `True`，用户仍然可以滚动控件内容、选择文本并将文本复制到剪贴板。如果你想显示用户无法更改的内容，通常设置 `IsReadOnly = True` 比设置 `IsEnabled = False` 更好。 |
-| VerticalScrollBarVisibility | 决定垂直滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）或 Visible（可见）。 |
+| `AcceptsReturn` | 决定 `Enter` 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 `Enter` 将触发该按钮。 |
+| `AcceptsTab` | 决定 `Tab` 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 `Tab` 将焦点移动到窗口的下一个控件。 |
+| `HorizontalScrollBarVisibility` | 决定水平滚动条是否可见。它可以是 `Auto`（自动）、`Disabled`（禁用）、`Hidden`（隐藏）或 `Visible`（可见）。 |
+| `IsEnabled` | 决定控件是否会与用户交互。如果此项为 `False`，用户可以看到内容但不能更改、高亮或滚动控件的内容。 |
+| `IsReadOnly` | 决定用户是否可以修改控件的内容。如果 `IsReadOnly` 为 `True`，用户仍然可以滚动控件内容、选择文本并将文本复制到剪贴板。如果你想显示用户无法更改的内容，通常设置 `IsReadOnly = True` 比设置 `IsEnabled = False` 更好。 |
+| `VerticalScrollBarVisibility` | 决定垂直滚动条是否可见。它可以是 `Auto`（自动）、`Disabled`（禁用）或 `Visible`（可见）。 |
 
-UseRichText 示例程序演示了其他简单的格式命令，允许你更改：
+`UseRichText` 示例程序演示了其他简单的格式命令，允许你更改：
 
 - 字体样式（粗体、斜体、下划线）
 - 字体大小（小、中等、大）
@@ -4479,83 +4058,9 @@ UseRichText 示例程序演示了其他简单的格式命令，允许你更改�
 
 查看 [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 以获取更多关于编辑命令的信息和更完整的列表。（注：此处根据原文逻辑翻译了链接内容）
 
-- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 
+- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx)
 
-# # 拼写检查
-
-RichTextBox 控件最令人兴奋的功能之一是支持拼写检查。如果你将控件的 `SpellCheck.IsEnabled` 属性设置为 `True`，则控件会自动高亮可能的错误。
-
-默认情况下，RichTextBox 控件提供一个包含复制、剪切和粘贴的右菜单。如果启用了拼写检查并且你在拼写错误的单词上左单击，则右菜单还会包含一个可能的纠正列表和一个“忽略所有”（Ignore All）命令。如果你选择其中一个建议，控件会将拼写错误的版本替换为你选择的内容。如果你选择“忽略所有”，控件会将该拼写错误单词的所有出现视为拼写正确。
-
-图 7-14 显示了 UseRichTextBox 程序显示其右菜单。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_174_0.png)
-
-图 7-14
-
-# # 撤销和重做
-
-RichTextBox 控件自动提供撤销和重做功能。每当用户按下 [Ctrl]+Z` 时，控件就会撤销最近的更改。每当用户按下 [Ctrl]+Y` 时，控件就会重新应用最近被撤销的更改。
-
-控件还提供了你可以通过编程方式管理撤销栈的工具。`CanUndo` 和 `CanRedo` 属性指示控件是否有可以撤销或重做的操作。`Undo` 和 `Redo` 方法调用撤销或重做操作。
-
-RichTextBox 程序的编辑（Edit）菜单包含撤销（Undo）和重做（Redo）命令。当用户打开编辑菜单时，以下代码检查 RichTextBox 控件的 `CanUndo` 和 `CanRedo` 属性，以确定哪些菜单项应该启用。例如，如果用户最近没有撤销过命令，则 `CanUndo` 返回 `False` 且 `mnuEditRedo` 菜单被禁用。
-
-```
-// 启用或禁用撤销和重做命令。
-private void mnuEditSubmenuOpened(object sender, RoutedEventArgs e)
-{
-    mnuUndo.IsEnabled = (richTextBox.CanUndo);
-    mnuEditRedo.IsEnabled = (richTextBox.CanRedo);
-}
-```
-
-以下代码显示了程序如何调用控件的 Undo 和 Redo 方法。
-
-```
-// Undo.
-private void mnuEditUndo_Click(object sender, RoutedEventArgs e)
-{
-    richTextBox.Undo();
-}
-```
-
-```
-// Redo.
-private void mnuEditRedo_Click(object sender, RoutedEventArgs e)
-{
-    richTextBox.Redo();
-}
-```
-
-# 其他功能
-
-RichTextBox 控件提供了许多其他功能，无法在此处全部列出。在继续之前，下表总结了一些关键的 RichTextBox 属性。
-
-| 属性 | 用途 |
-|---|---|
-| AcceptsReturn | 决定 [Enter] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 [Enter] 将触发该按钮。 |
-| AcceptsTab | 决定 [Tab] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 [Tab] 将焦点移动到窗口的下一个控件。 |
-| HorizontalScrollBarVisibility | 决定水平滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）、Hidden（隐藏）或 Visible（可见）。 |
-| IsEnabled | 决定控件是否会与用户交互。如果此项为 `False`，用户可以看到内容但不能更改、高亮或滚动控件的内容。 |
-| IsReadOnly | 决定用户是否可以修改控件的内容。如果 `IsReadOnly` 为 `True`，用户仍然可以滚动控件内容、选择文本并将文本复制到剪贴板。如果你想显示用户无法更改的内容，通常设置 `IsReadOnly = True` 比设置 `IsEnabled = False` 更好。 |
-| VerticalScrollBarVisibility | 决定垂直滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）或 Visible（可见）。 |
-
-UseRichText 示例程序演示了其他简单的格式命令，允许你更改：
-
-- 字体 样式（粗体、斜体、下划线）
-- 字体大小（小、中等、大）
-- 文本颜色
-- 背景颜色
-- 字体族（例如 Times New Roman, Arial, Courier New）
-- 带项目符号和编号的段落
-- 段落对齐
-
-查看 [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 以获取更多关于编辑命令的信息和更完整的列表。（注：此处根据原文逻辑翻译了链接内容）
-
-- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 
-
-# # 拼写检查
+## 拼写检查
 
 RichTextBox 控件最令人兴奋的功能之一是支持拼写检查。如果你将控件的 `SpellCheck.IsEnabled` 属性设置为 `True`，则控件会自动高亮可能的错误。
 
@@ -4567,15 +4072,15 @@ RichTextBox 控件最令人兴奋的功能之一是支持拼写检查。如果�
 
 图 7-14
 
-# # 撤销和重做
+## 撤销和重做
 
-RichTextBox 控件自动提供撤销和重做功能。每当用户按下 [Ctrl]+Z` 时，控件就会撤销最近的更改。每当用户按下 [Ctrl]+Y` 时，控件就会重新应用最近被撤销的更改。
+RichTextBox 控件自动提供撤销和重做功能。每当用户按下 `Ctrl+Z` 时，控件就会撤销最近的更改。每当用户按下 `Ctrl+Y` 时，控件就会重新应用最近被撤销的更改。
 
 控件还提供了你可以通过编程方式管理撤销栈的工具。`CanUndo` 和 `CanRedo` 属性指示控件是否有可以撤销或重做的操作。`Undo` 和 `Redo` 方法调用撤销或重做操作。
 
 RichTextBox 程序的编辑（Edit）菜单包含撤销（Undo）和重做（Redo）命令。当用户打开编辑菜单时，以下代码检查 RichTextBox 控件的 `CanUndo` 和 `CanRedo` 属性，以确定哪些菜单项应该启用。例如，如果用户最近没有撤销过命令，则 `CanUndo` 返回 `False` 且 `mnuEditRedo` 菜单被禁用。
 
-```
+``` 
 // 启用或禁用撤销和重做命令。
 private void mnuEditSubmenuOpened(object sender, RoutedEventArgs e)
 {
@@ -4584,9 +4089,9 @@ private void mnuEditSubmenuOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-以下代码显示了程序如何调用控件的 Undo 和 Redo 方法。
+以下代码显示了程序如何调用控件的 `Undo` 和 `Redo` 方法。
 
-```
+``` 
 // Undo.
 private void mnuEditUndo_Click(object sender, RoutedEventArgs e)
 {
@@ -4594,396 +4099,72 @@ private void mnuEditUndo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-```
+``` 
 // Redo.
 private void mnuEditRedo_Click(object sender, RoutedEventArgs e)
 {
     richTextBox.Redo();
 }
 ```
-
-# 其他功能
-
-（此处注：由于提供的文本中存在重复段落，从“RichTextBox 控件提供了许多其他功能...”之后开始的重复内容已根据要求“不要重复输出原文”进行过滤，但原始文本存在重复部分）
-
-RichTextBox 控件提供了许多其他功能，无法在此处全部列出。在继续之前，下表总结了一些关键的 RichTextBox 属性。
-
-| 属性 | 用途 |
-|---|---|
-| AcceptsReturn | 决定 [Enter] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsReturn` 为 `False` 且窗口包含一个 `IsDefault` 为 `True` 的按钮，则在控件内按下 [Enter] 将触发该按钮。 |
-| AcceptsTab | 决定 [Tab] 键击是放置在控件的内容中，还是发送到窗口。如果 `AcceptsTab` 为 `False`，则按下 [Tab] 将焦点移动到窗口的下一个控件。 |
-| HorizontalScrollBarVisibility | 决定水平滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）、Hidden（隐藏）或 Visible（可见）。 |
-| IsEnabled | 决定控件是否会与用户交互。如果此项为 `False`，用户可以看到内容但不能更改、高亮或滚动控件的内容。 |
-| IsReadOnly | 决定用户是否可以修改控件的内容。如果 `IsReadOnly` 为 `True`，用户仍然可以滚动控件内容、选择文本并将文本复制到剪贴板。如果你想显示用户无法更改的内容，通常设置 `IsReadOnly = True` 比设置 `IsEnabled = False` 更好。 |
-| VerticalScrollBarVisibility | 决定垂直滚动条是否可见。它可以是 Auto（自动）、Disabled（禁用）或 Visible（可见）。 |
-
-UseRichText 示例程序演示了其他简单的格式命令，允许你更改：
-
-- 字体 样式（粗体、斜体、下划线）
-- 字体大小（小、中等、大）
-- 文本颜色
-- 背景颜色
-- 字体族（例如 Times New Roman, Arial, Courier New）
-- 带项目符号和编号的段落
-- 段落对齐
-
-查看 [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 以获取更多关于编辑命令的信息和更完整的列表。（注：此处根据原文逻辑翻译了链接内容）
-
-- [RichTextBox 命令](https://msn.microsoft.com/system.windows.documents.editingcommands.aspx) 
-
-# # 拼写检查
-
-（由于原文存在重复，此处仅保留未重复的逻辑部分）
-
-如果你将控件的 `SpellCheck.IsEnabled` 属性设置为 `True`，则控件会自动高亮可能的错误。
-
-默认情况下，RichTextBox 控件提供一个包含复制、剪切和粘贴的右菜单。如果启用了拼写检查并且你在拼写错误的单词上左单击，则右菜单还会包含一个可能的纠正列表和一个“忽略所有”（Ignore All）命令。如果你选择其中一个建议，控件会将拼写错误的版本替换为你选择的内容。如果你选择“忽略所有”，控件会将该拼写错误单词的所有出现视为拼写正确。
-
-
-
-
 
 # 142 | 第 7 章 用户交互控件
 
-(续)
+（续）
 
 | 属性 | 目的 |
 |---|---|
-| Ticks | 应放置刻度线的数值位置的显式列表。例如，值“0, 16, 128, 255”会在数值 0, 16, 128 和 255 处放置刻度线。 |
+| `Ticks` | 应放置刻度线的数值位置的显式列表。例如，值“0, 16, 128, 255”会在数值 0, 16, 128 和 255 处放置刻度线。 |
 
 | 刻度问题 |
 |---|---|
-| 如果你指定了 Ticks 属性但未将其包含最小值和最大值，用户可能无法通过点击滑块（Slider）的主体来跳转到这些值。这是一个微要的问题，但你完全可以通过在 Ticks 属性中包含最小值和最大值来避免这个问题。 |
+| 如果你指定了 `Ticks` 属性但未将其包含最小值和最大值，用户可能无法通过点击滑块（Slider）的主体来跳转到这些值。这是一个微要的问题，但你完全可以通过在 `Ticks` 属性中包含最小值和最大值来避免这个问题。 |
 
 ## TextBox（文本框）
 
-TextBox 控件允许用户输入不带特殊格式的文本。如果你需要从用户获取普通的文本输入，而不需要多种字体、样式、颜色等，那么 TextBox 控件是一个很好的选择。
+`TextBox` 控件允许用户输入不带特殊格式的文本。如果你需要从用户获取普通的文本输入，而不需要多种字体、样式、颜色等，那么 `TextBox` 控件是一个很好的选择。
 
-TextBox 控件提供了类似于 RichTextBox 控件的一些功能，但它不具备强大的格式化能力。TextBox 中的所有文本必须使用相同的字体（Times New Roman、Arial、Courier New）、字体大小、样式（斜体、粗体、下划线）和颜色。
-如果控件的 AcceptsReturn 属性为 True，用户可以在控件中输入回车来创建段落，但控件不会对段落进行特定的格式化。它无法创建带有悬挂缩进、项目符号或编号列表的段落。控件可以对文本进行两端对齐或左对齐、右对齐，但对齐应用于所有文本——而不是单个段落。
+`TextBox` 控件提供了类似于 `RichTextBox` 控件的一些功能，但它不具备强大的格式化能力。`TextBox` 中的所有文本必须使用相同的字体（Times New Roman、Arial、Courier New）、字体大小、样式（斜体、粗体、下划线）和颜色。
 
-TextBox 与 RichTextBox 共享的功能包括：
+如果控件的 `AcceptsReturn` 属性为 `True`，用户可以在控件中输入回车来创建段落，但控件不会对段落进行特定的格式化。它无法创建带有悬挂缩进、项目符号或编号列表的段落。控件可以对文本进行两端对齐或左对齐、右对齐，但对齐应用于所有文本——而不是单个段落。
+
+`TextBox` 与 `RichTextBox` 共享的功能包括：
 
 - 拼写检查
 - 包含复制、剪切、粘贴命令以及拼写建议的右键菜单
 - 撤销和重做
-- 属性：AcceptsReturn, AcceptsTab, HorizontalScrollBarVisibility, IsEnabled, IsReadOnly, VerticalScrollBarVisibility
+- 属性：`AcceptsReturn`, `AcceptsTab`, `HorizontalScrollBarVisibility`, `IsEnabled`, `IsReadOnly`, `VerticalScrollBarVisibility`
 
 详情请参阅早之前“RichTextBox”节中对这些功能的描述。
 
-TextBox 控件不提供 RichTextBox 支持的编辑命令。（当然，这意味着它不支持让用户在运行时应用这些命令的快捷键。）
+`TextBox` 控件不提供 `RichTextBox` 支持的编辑命令。（当然，这意味着它不支持让用户在运行时应用这些命令的快捷键。）
 
-UseTextBox 示例程序与 UseRichTextBox 程序类似，不同在于它演示的是 TextBox 控件而不是 RichTextBox 控件。它的菜单允许你更改所有控件文本的属性，而像程序 UseRichTextBox 那样只更改选中的文本。由于 TextBox 不支持项目符号或编号段落，UseTextBox 程序的段菜单不提供这些命令。
 
-图 7-17 显示了 UseTextBox 程序的运行情况。注意字体样式、颜色和对齐是如何应用于控件的，而不只是文本的部分。
 
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_180_0.png)
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-图 7-17
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-## 总结
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-本章介绍了 WPF 最实用的用户交互控件。这些是允许用户控制并向程序提供输入的控件。
-
-本章提供了控件的简要概述，并提供了足够的细节让你开始使用它们。然而，某些控件相当复杂。RichTextBox 控件异常复杂，提供了多种格式化选项和编辑命令。你将花一些时间实验 RichTextBox 控件，然后才能充分利用它的功能。
-
-本章以及之前的两个章节描述了 WPF 控件的主要类别。第 5 章描述了内容控件——用于显示输出供用户查看的控件。下一章将提供有关特定类型控件的更多细节：即产生二维形状的控件。这些包括 Line、Ellipse、Rectangle、Polygon、Polyline 和 Path。虽然许多应用程序主要依赖于 Labels 和 TextBoxes 等文本控件，但这些绘制控件对于数据可视化非常有用。
-
-# 8
-# 二维绘图控件
-
-第 5 章“内容控件”描述了向用户显示信息的控件。这些控件中的大多数显示文本数据或图像。
-
-本章描述了显示更多图形化输出的控件：二维（2D）绘图控件。这些控件绘制线、椭圆、曲线和其他二维形状。
-
-本章还描述了 Path 微型语言，你可以使用它简洁地让 Path 对象产生复杂的绘图。
-
-## 控件概述
-
-下表列出了本章描述的控件及其目的。你可以此表帮助判断使用哪个控件来满足你的需求。
-
-| 控件 | 目的 |
-| --- | --- |
-| Ellipse | 绘制椭圆。 |
-| Line | 绘制一条线。 |
-| Path | 绘制一系列线和曲线。 |
-| Polygon | 绘制连接一系列点的线段序列。通过连接最后一点到第一点来完成。 |
-| Polyline | 绘制连接一系列点的线段序列。 |
-| Rectangle | 绘制矩形。 |
-
-# 描边属性（STROKE PROPERTIES）
-
-本章描述的控件绘制线性特征。无论它们绘制的是单个线段、闭合椭圆还是复杂的曲线、线条多边形序列，它们本质上都是绘制线条。
-
-WPF 提供了一组特殊的属性来控制这些线条的绘制方式。这些属性控制线条的颜色、样式和厚度。
-
-下表总结了这些控件最重要的绘制属性：
-
-| 属性 | 目的 |
-|---|---|
-| Fill | 控件的填充刷（类似于许多其他控件使用的 Background 属性）。 |
-| Stroke | 线的颜色、样式和厚度。 |
-| StrokeArray | 划线和间隙的模式。 |
-| StrokeDashOffset | 从线起始距离。 |
-| StrokeEndCap | 线终点的形状。 |
-| StrokeLineJoin | 相邻线条连接的方式。 |
-| StrokeStartCap | 线起点的形状。 |
-| StrokeThickness | 线的宽度。 |
-
-以下 XAML 代码创建了 8-1 所示的椭圆和线条：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-<Ellipse Width="100" Height="50"
-    Stroke="Blue" StrokeThickness="5" Fill="Cyan"
-    HorizontalAlignment="Left" VerticalAlignment="Top"
-    Margin="10,10,0,0" />
-
-<Line X1="200" Y1="20" X2="50" Y2="100" Stroke="Red" StrokeThickness="5"
-    StrokeDashArray="3,3" />
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
 
-
-
-# Path 微语言
-
-要使用 Path 微语言，你需要控制 `Data` 属性。该属性包含一系列单字母缩写的绘图命令，命令之间穿插着决定绘制位置的点坐标。
-
-图 8-2 显示了一个绘制 Path、Polygon（多边形）和 Polyline（折线）的程序，它们都使用了相同的点坐标数据。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_185_0.png)
-
-下面的 XAML 代码显示了程序如何绘制其 Path。`Data` 属性包含了路径微语言中的系列命令。`M1,3` 命令将绘制位置移动到点 (4, 3)。`L` 后面跟着一系列坐标，绘制一系列连接的线。
-
-```
-<Path Margin="15" HorizontalAlignment="Center"
-Alignment="Top" Width="Auto" Height="Auto"
-Fill="#FF0000" Stroke="#F00000" StrokeThickness="5"
-Data="M1,3 L2,70 78,32 31,59 64,41.3"/>
-```
-
-许多路径语言命令后面都跟着一个或多个作为参数的点。使用逗号或空格来分隔点，或点内部的坐标。为了使代码更易读，我使用逗号来分隔点的 X 和 Y 坐标，使用空格来分隔不同的点。
-
-几个微语言命令有大写和小写两种版本。大写版本意味着随后的点是绝对坐标的，而小写版本意味着随后的点相对于上一个点。
-
-下表描述了 Path 微语言的命令：
-
-| 命令 | 含义 |
-|--- |--- |
-| F0 | 使用奇偶性填充规则（参见图 8-3）。 |
-| F1 | 使用非零填充规则（参见图 8-3）。 |
-| M 或 m | 移动到下一个点。 |
-| L 或 l | 向下一个点绘制直线。 |
-| H 或 h | 在给定的 X 坐标处绘制水平线。 |
-| V 或 v | 在给定的 Y 坐标处绘制垂直线。 |
-| C 或 c | 绘制三次贝塞尔曲线。此命令接受三个点作为参数：两个控制点和一个端点。曲线从当前点开始向第一个控制点移动，并在端点处远离第二个控制点的方向结束。（参见图 8-4。） |
-
-# 命令 含义
-
-S s 绘制平滑贝塞尔曲线。此命令接受两个点作为参数：一个控制点和一个端点。该曲线通过反射上一个 `s` 命令的最后一个控制点来定义一个初始控制点。它使用新定义的控制点和两个参数绘制三次贝塞尔曲线。这使得第二条曲线与前一个曲线平滑地衔接。（参见图 8-4。）
-
-Q q 绘制二次贝塞尔曲线。此命令接受两个点作为参数：一个控制点和一个端点。曲线从当前点开始向控制点移动，并在端点处远离控制点的方向结束。（参见图 8-4。）
-
-T t 绘制由单点定义的平滑贝塞尔曲线。此命令接受一个点作为参数，并并向该点绘制平滑曲线。它通过反射上一个 `T` 命令的控制点，以为新的曲线段定义一个控制点并绘制二次贝塞尔曲线。其结果是一条通过连续发送给 `T` 的点的平滑曲线。（参见图 8-4。）
-
-+   A a 绘制从当前点开始并由五个参数定义的弧：
-- size — 弧的 X 和 Y 半径
-- rotation_angle — 椭圆旋转的角度（度为单位）
-- large_angle — 如果弧跨越超过180度则为 0；如果跨越 180度或更多则为 1
-- sweep_direction — 逆时针为 0；顺时针为 1
-- end_point — 弧结束的点
-
-Z z 通过从当前点到第一个点绘制一条直线来闭合图形。
-
-图 8-3 显示了奇偶性规则和非零填充规则之间的区别。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_186_0.png)
-
-图 8-4 中的 PathBezier 示例演示了 Path 微语言的贝塞尔曲线命令。程序用粗蓝线绘制每条曲线，然后在曲线上绘制黑色线段，连接到其控制点所在的位置。
-
-## 包含对象的 Path
-
-Path 微语言不是绘制 Path 对象的唯一方法。你不仅不使用微语言，还可以在 Path 对象内部放置其他对象来表示形状。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_186_1.png)
-
-图 8-4
-
-图 8-3
-
-图 8-5 显示的 PathObjects 示例程序使用以下 XAML 代码绘制两条曲线。代码首先使用 Path 微语言绘制曲线，然后通过在 Path 控件内部放置对象来绘制相同的曲线。
-
-```
-<!-- 使用 Path 微语言绘制。 -->
-<Path Stroke="Red" StrokeThickness="5">
-<Path Data="60,20 Q140,150 150,140 0,30/100"/>
-
-<!-- 使用对象绘制。 -->
-<Path Stroke="Red" StrokeThickness="5">
-<Path.Data>
-  <Geometry>
-  <FigureCollection>
-    <PathFigure>
-      <PathFigure StartPoint="60,20">
-      <Segments>
-      <PathSegmentCollection>
-        <QuadraticBezierSegment Points="140,150 150,140 0,30/100"/>
-      </PathSegmentCollection>
-      </Segments>
-    </PathFigure>
-  </FigureCollection>
-  </Geometry>
-</Path.Data>
-</Path.>
-</Path>
-```
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_187_0.png)
-
-两种方法产生相同的输出，但 Path 微语言要简单且简洁得多。
-
-## POLYGON（多边形）
-
-Polygon 对象绘制连接一系列点的线。它通过连接第一个点和最后一个点来完成绘制。
-
-下面的 XAML 代码绘制了图 8-2 所示的多边形。末尾的 `Points` 属性包含了多边形的坐标。
-
-```
-<Polygon Margin="15" HorizontalAlignment="Center"
-Alignment="Top" Width="Auto" Height="Auto"
-Fill="#FF0000" Stroke="#F00000" StrokeThickness="5"
-Data="M1,3 L2,70 78,32 31,59 64,41.3"/>
-```
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_187_1.png)
-
-## Polyline（折线）
-
-Polyline 对象绘制连接一系列点的线。与 Polygon 对象不同，它不会通过连接第一个点和最后一个点来完成绘制。
-
-事实上，即使你在末尾重复该点，得到的结果也与 Polygon 对象不完全相同。
-
-图 8-6 中的 PolygonPolylineDifference 示例程序绘制了一个多边形和一个折线。对于 Polyline 来说，第一条和最后一条线是相同的，因此它闭合了形状。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_188_0)
-
-如果你观察图 8-6，你会发现左侧用 Polygon 绘制的点与右侧用 Polyline 绘制的点并不完全相同。Polyline 将此连接处视为角，因此它获得了一个完美的点。
-
-图 8-6
-
-下面的 XAML 代码显示了 PolylelineDifference 程序如何绘制其多边形和折线：
-
-```
-<StackPanel Orientation="Horizontal">
-  <Polygon Margin="15,5,0,0"
-           HorizontalAlignment="Center" VerticalAlignment="Top"
-           Fill="Yellow" Stroke="Black" StrokeThickness="10"
-           Points="50,100 100,100 100,100"/>
-  <Label HorizontalAlignment="Center" Content="Polygon"/>
-</StackPanel>
-<StackPanel>
-  <Polyline Margin="25,5,0,0"
-           HorizontalAlignment="Center" VerticalAlignment="Top"
-           Fill="Yellow" Stroke="Black" StrokeThickness="10"
-           Points="50,100 100,100 150,100"/>
-  <Label HorizontalAlignment="Center" Content="Polyline"/>
-</StackPanel>
-```
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_188_1.png)
-
-## RECTANGLE（矩形）
-
-Rectangle 控件绘制一个不能包含任何子元素的简单矩形。控件的位置和布局与 Ellipse 类似。Rectangle的大小由其 Width 和 Height 属性决定，其位置由其容器以及其 Margin、HorizontalAlignment 和 VerticalAlignment 属性决定。
-
-
-
-
-图 8-7 所示的 Rectangle 程序使用了以下 XAML 代码来绘制两个矩形（Rectangle）：
-
-```
-<Rectangle Width="Auto" Height="Auto" Margin="10"
-  Stroke="Red" StrokeThickness="10"
-  StrokeDashArray="3,3" StrokeCap="Round"/>
-```
-
-```
-<Rectangle Width="100" Height="50"
-  Stroke="Blue" StrokeThickness="5" Fill="Cyan"
-  HorizontalAlignment="Center" VerticalAlignment="Center"/>
-```
-
-在第一个矩形中，Width 和 Height 被设置为 Auto，控件的 Margin 属性决定了控件的大小和位置。由于此示例中的 Margin 为 10，因此矩形的位置使其其边缘距离包含它的 Grid 边缘 10 像素。
-
-在第二个矩形中，Width 和 Height 被显式地设置。由于控件的 HorizontalAlignment 和 VerticalAlignment 属性都被设置为 Center，因此控件被赋予了指定的尺寸并在其容器中居中。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa92f6_189_0.png)
-
-图 8-7
-
-## 总结
-
-本章描述了 WPF 的 2D 绘制控件。这些控件允许你绘制椭圆、直线、矩形和其他 2D 形状。尽管这些控件绘制的形状非常不同，但它们有很多共同点，例如它们的 Stroke 和 Fill 属性。
-
-这些控件大部分相对简单，尽管带有专用语言的 Path 控件可能非常复杂。事实上，它是如此复杂以至于你可能只用它处理相对简单的形状。对于复杂的形状，你可能希望使用程序代码来生成 Path 的绘制命令。
-
-本章结束了 WPF 控件的描述。第 5 至第 8 章描述的控件应该能满足你大多数日常编程需求。
-
-接下来的章节将转向特定的控件，讨论更通用的问题。第 9 章“属性（Properties）”通俗地解释了 XAML 代码如何设置控件属性。由于本书到为止的示例已经广泛使用了属性，你可能已经知道如何为简单属性设置值。第 9 章提供了更多背景，并解释了如何设置取值本身是对象的属性。
-
-## 属性
-
-本书之前的章节包含了近 100 个示例，演示了 WPF 提供的各种控件属性、方法、事件和其他功能。为了保持这些示例尽可能简单且自包含，我有时会略过代码中使用的某些技术，并将它们推迟到后面的章节。
-
-本章涵盖了这些主题之一：属性是直观的，XAML、C# 和 Visual Basic 可以很容易地与它们配合。
-
-然而，其他属性则更令人困惑。某些属性接收的值没有 Integer 或 String 这样的简单数据类型，使用它们可能会令人困惑，特别是在 XAML 代码中。
-
-本章描述了 WPF 属性。它解释了你如何在 XAML、C# 和 Visual Basic 代码中设置甚至是复杂的属性值。
-
-## 属性基础
-
-属性的概念相当简单：属性是属于对象的值，它决定了对象的行为、外观或它所代表的数据。
-
-例如，如果你创建一个 Person 类，它可能具有 FirstName、LastName 和 StreetAddress 等属性，这些属性定义了 Person 所代表的数据。
-
-使用这种简单属性很容易。例如，下面的 C# 代码创建了一个 Person 对象并设置了它的 FirstName 和 LastName 属性：
-
-```csharp
-// 创建一个新的 Person 对象。
-Person author = new Person();
-
-// 设置 Person 的名称属性。
-author.FirstName = "Rod";
-author.LastName = "Stephens";
-```
-
-# 154 | 第 9 章 属性
-
-XAML 代码也能轻松地处理这些简单值属性。下面的 XAML 代码将 Label 控件的 Background 属性设置为黄色：
-
-```xml
-<Label Content="Hello" Background="Yellow"/>
-```
-
-在你的代码中使用这种简单属性很容易，但在幕后，WPF 正在的工作比你想象的要多。为了在后台将 XAML 值转换为可理解的内容，WPF 使用了类型转换器（type converters）。
-
-## 类型转换器
-
-虽然你的 XAML 代码简单地将 Label 控件的 Background 属性设置为字符串 "Yellow"，但 Background 属性并不是一个简单的字符串。它实际上是 System.Windows.Media.Brush 类的实例。
-
-下面的 C# 代码设置了 grdMain 控件的 Background 属性。注意，代码没有将属性设置为字符串值；而是使用了由 Brushes 类提供的静态值。该类的 Yellow 属性返回一个颜色为黄色的 SolidColorBrush（它是 Brush 的一种类型）。
+下面的 C# 代码设置了 `grdMain` 控件的 `Background` 属性。注意，代码没有将属性设置为字符串值；而是使用了由 `Brushes` 类提供的静态值。该类的 `Yellow` 属性返回一个颜色为黄色的 `SolidColorBrush`（它是 `Brush` 的一种类型）。
 
 ```csharp
 grdMain.Background = Brushes.Yellow;
 ```
 
-幸运的是，WPF 提供了一了一类型转换器，可以将像 "Yellow" 这样的字符串转换为画笔等对象。
+幸运的是，WPF 提供了一了一类型转换器，可以将像 `"Yellow"` 这样的字符串转换为画笔等对象。
 
-XAML 为许多简单属性类型提供了类型转换器，例如数字（Width, Height）、点、点数组（Polygon 的 Points 属性）、数值数组（DashArray）、字符串（设置为字符串时的 Content 属性）、简单颜色数组（Background, Stroke, Fill）、布尔值（IsChecked, IsEnabled）、简单画笔（Button.BorderBrush）以及许多其他类型。
+XAML 为许多简单属性类型提供了类型转换器，例如数字（`Width`, `Height`）、点、点数组（`Polygon` 的 `Points` 属性）、数值数组（`DashArray`）、字符串（设置为字符串时的 `Content` 属性）、简单颜色数组（`Background`, `Stroke`, `Fill`）、布尔值（`IsChecked`, `IsEnabled`）、简单画笔（`Button.BorderBrush`）以及许多其他类型。
 
-XAML 甚至有一个类型转换器，可以将 Path 语言中复杂的命令序列翻译成一系列绘制线条、弧和曲线的对象。例如，该 XAML 代码绘制了图 9-1 所示的形状。类型转换器将 Path Data 属性中复杂的弧命令序列翻译为图中所示的曲线。（有关 Path Data 的更多信息，请参阅“Path Data”）。
+XAML 甚至有一个类型转换器，可以将 Path 语言中复杂的命令序列翻译成一系列绘制线条、弧和曲线的对象。例如，该 XAML 代码绘制了图 9-1 所示的形状。类型转换器将 `Path` `Data` 属性中复杂的弧命令序列翻译为图中所示的曲线。（有关 `Path Data` 的更多信息，请参阅“Path Data”）。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa92f6_191_0.png)
 
@@ -4996,13 +4177,13 @@ XAML 甚至有一个类型转换器，可以将 Path 语言中复杂的命令序
 
 ## 属性元素语法
 
-遗憾的是，XAML 没有为复杂的属性提供类型转换器。例如，使用 Yellow、LightGreen 或 #FF00CC 等字符串描述单颜色 Brush 很容易。但如果你想让 Grid 填充图 9-2 所示的画笔，将这个复杂的对象表示为简单的字符串就很困难。
+遗憾的是，XAML 没有为复杂的属性提供类型转换器。例如，使用 `Yellow`、`LightGreen` 或 `#FF00CC` 等字符串描述单颜色 `Brush` 很容易。但如果你想让 `Grid` 填充图 9-2 所示的画笔，将这个复杂的对象表示为简单的字符串就很困难。
 
 要在 XAML 中使用复杂对象，你需要构建实际的对象而不是用字符串描述它们。可以通过属性元素语法（property element syntax）来实现。
 
-属性元素语法允许 XAML 代码将属性作为一个独立的元素，并在对象内部拥有自己的起始结束标签。例如，Grid 包含一个定义背景的新元素。
+属性元素语法允许 XAML 代码将属性作为一个独立的元素，并在对象内部拥有自己的起始结束标签。例如，`Grid` 包含一个定义背景的新元素。
 
-属性名由控件类型（Grid）、点（.）以及属性名称（Background）组成；因此在这种情况下，元素的名称是 Grid.Background。
+属性名由控件类型（`Grid`）、点（`.`）以及属性名称（`Background`）组成；因此在这种情况下，元素的名称是 `Grid.Background`。
 
 在这个属性元素内部，XAML 代码定义了画笔如何显示图 9-2 所示的背景：
 
@@ -5024,7 +4205,7 @@ XAML 甚至有一个类型转换器，可以将 Path 语言中复杂的命令序
 
 图 9-2
 
-Grid.Background 元素是 Grid 的背景属性。它包含一个 GradientBrush 对象。该对象包含五个停止，指示了画笔在不同位置使用的颜色。GradientStop 对象的 Color 和 Offset 属性是简单的值（简单颜色），它们被表示为 XAML 类型转换器可以处理的属性。
+`Grid.Background` 元素是 `Grid` 的背景属性。它包含一个 `GradientBrush` 对象。该对象包含五个停止，指示了画笔在不同位置使用的颜色。`GradientStop` 对象的 `Color` 和 `Offset` 属性是简单的值（简单颜色），它们被表示为 XAML 类型转换器可以处理的属性。
 
 ```csharp
 GradientBrush br = new RadialGradientBrush();
@@ -5047,17 +4228,17 @@ grdGradientBackground.Background = br;
 
 属性元素（Property elements）允许您在 XAML 代码中构建复杂对象。之前的示例中使用的其他常见属性元素包括：
 
-- Grid.ColumnDefinitions：`ColumnDefinition` 对象的集合，决定了 Grid 列的宽度。
-- Grid.RowDefinitions：`RowDefinition` 对象的集合，决定了 Grid 行的高度。
-- BitmapEffect：控件的 `Bitmap` 属性决定控件是否显示阴影、浮雕表面、斜角或其他特殊效果。`BitmapEffect` 必须是一个对象，因此 XAML 代码必须将其设置为属性元素。
+- `Grid.ColumnDefinitions`：`ColumnDefinition` 对象的集合，决定了 `Grid` 列的宽度。
+- `Grid.RowDefinitions`：`RowDefinition` 对象的集合，决定了 `Grid` 行的高度。
+- `BitmapEffect`：控件的 `Bitmap` 属性决定控件是否显示阴影、浮雕表面、斜角或其他特殊效果。`BitmapEffect` 必须是一个对象，因此 XAML 代码必须将其设置为属性元素。
 
 ## 高效效果
 
-> Microsoft 本可以为 `BitmapEffect` 定义一个简单的类型转换器。例如，它可以将字符串 "Bevel" 转换为 `BevelBitmapEffect` 对象。遗憾的是，他们没有这样做，你只能使用属性元素。
+> Microsoft 本可以为 `BitmapEffect` 定义一个简单的类型转换器。例如，它可以将字符串 `"Bevel"` 转换为 `BevelBitmapEffect` 对象。遗憾的是，他们没有这样做，你只能使用属性元素。
 
-- Header：项在 `MenuItem` 中的显示、作为 `GroupBox` 的标题或在 `TabItem` 标签上由 `Header` 属性定义。如果您想使用属性将 `Header` 设置为字符串值；如果您想显示其他内容（如 `Image` 或 `StackPanel`），则您需要使用属性元素。
-- ContextMenu：控件的 `ContextMenu` 属性定义了右键点击时出现的菜单。在对象上，您必须使用属性元素来定义它。
-- LayoutTransform：控件的 `LayoutTransform` 属性决定控件在布局和绘制之前如何移动、拉伸或旋转。这些变换是复杂的对象，您必须使用属性元素来定义它们。
+- `Header`：项在 `MenuItem` 中的显示、作为 `GroupBox` 的标题或在 `TabItem` 标签上由 `Header` 属性定义。如果您想使用属性将 `Header` 设置为字符串值；如果您想显示其他内容（如 `Image` 或 `StackPanel`），则您需要使用属性元素。
+- `ContextMenu`：控件的 `ContextMenu` 属性定义了右键点击时出现的菜单。在对象上，您必须使用属性元素来定义它。
+- `LayoutTransform`：控件的 `LayoutTransform` 属性决定控件在布局和绘制之前如何移动、拉伸或旋转。这些变换是复杂的对象，您必须使用属性元素来定义它们。
 
 ## 属性元素语法 157
 
@@ -5152,14 +4333,12 @@ grdGradientBackground.Background = br;
 
 *(注：原文后续存在大量重复和 OCR 错误，此处已合并核心内容并进行翻译)*
 
-
-
-
 这种方法可能行得通（你可以将属性放在 `Control` 类中并让所有其他类继承它们），但还有许多其他属性可能需要类似的处理。例如，`DockPanel` 控件需要知道如何停齐子元素；`Canvas` 控件需要知道子元素的 `Top`、`Left` 以及其他位置属性；而 `Toolbar` 需要知道对包含的项使用何种 `OverflowMode`。
 
 将所有这些属性都添加到 `Control` 类中不会让类变得臃肿，但它也不会为你提供一个通用的解决方案。如果你创建一个需要了解其他控件信息的新控件（例如，你创建了一个需要知道如何排列子元素的新容器类），你就需要重新构建 `Control` 基类以适应新控件。我怀疑微软是否可能为了协调 WPF 库并发布一个特殊的构建版本来添加你的属性。
 
 > 面向对象的反对意见
+
 将所有这些属性都添加到 `Control` 类中还会破坏类的封装性。这会使 `Control` 类了解过多关于其他类的信息，而这在本质上是不应该的。面向对象的纯主义者会认为，这种方法从一开始就是不合格的。
 
 相反，WPF 采取了不同的方法，允许控件提供一个附加属性（attached property）供其他控件使用。例如，`Grid` 控件实际上实现了 `Grid.Row` 和 `Grid.Column` 附加属性，其他控件可以使用它们。
@@ -5167,6 +4346,7 @@ grdGradientBackground.Background = br;
 附加属性的语法是属性提供者的名称，后跟一个点，然后是属性名称。例如，`Grid` 控件的 `Row` 属性被称为 `Grid.Row`。
 
 > 无限制的属性
+
 提供附加属性的控件不会检查该属性在上下文中是否合理。例如，你可以给 `TextBox` 控件赋予一个 `Grid.Row`，即使它没有包含在 `Grid` 中。在这种情况下，该属性会被忽略。
 
 遗憾的是，附加属性的语法与属性元素（property element）的语法非常相似。例如，图 9-5 显示的 `AttachedProperties` 示例使用了以下 XAML 代码。这段代码包含了几个附加属性和属性元素。
@@ -5218,6 +4398,8 @@ Grid.Row="1" Grid.Column="1"/>
 </Grid>
 ```
 
+
+
 `Grid` 控件包含三个元素属性：`Grid.Background`、`Grid.RowDefinitions` 和 `Grid.ColumnDefinitions`。这些描述了 `Grid` 控件的必须具有对象作为值的属性。
 
 第一个 `Label` 有三个属性：`Grid.Row`、`Grid.Column` 和 `Grid.ColumnSpan`。这些属性由 `Grid` 提供，并告诉 `Grid` 如何定位它。
@@ -5260,7 +4442,7 @@ Grid.Row="1" Grid.Column="1"/>
 
 笔有几个不同的属性——都以单词 *stroke* 开头——决定了它的颜色和几何形状。
 
-## 近距离观察
+### 近距离观察
 
 许多 *stroke* 属性除非你绘制的线性特征很粗，否则没有巨大差异。例如，`StrokeDashCap` 决定线端是矩形的、圆形的还是三角形的。如果线条只有 1 像素，你将无法区分。
 
@@ -5279,7 +4461,7 @@ StrokeDashArray="3" StrokeDashCap="Triangle"/>
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_203_1.png)
 
-## Stroke
+### Stroke
 
 `Stroke` 属性决定线性特征的颜色。你可以通过两种方式指定颜色。WPF 理解 Red、Chartreuse、LavenderBlush 以及其他约 150 种颜色。以下 XAML 显示了 PensAndBrushes 示例如何绘制图 10-1 所示的椭圆。`Stroke` 属性使椭圆的边界变为紫色。
 
@@ -5289,10 +4471,6 @@ Margin="0" StrokeThickness="10" StrokeDashArray="2,"/>
 ```
 
 指定实色的第二种方法是给出其 `color components`。在两种情况下，RR、GG 和 BB 部分都包含两个十六进制数字，给出颜色、红色、绿色和蓝色组件（范围在 00 到 FF (255) 之间）。例如，值 `#FF0000` 是红色，而值 `#FFF00` 是黄色（红色和绿色部分相等）。
-
-
-
-
 
 在第二种颜色组件格式中，AA 表示颜色的 alpha 值或透明度。这也是一个位于 00 到 FF 之间的两位十六进制值，其中 00 表示颜色完全透明，FF 表示完全不透明。
 
@@ -5327,15 +4505,16 @@ Canvas 控件包含一个 Label 以及红、绿、蓝色的椭圆，这些椭圆
 
 图 10-4
 
-## StrokeThickness
+### StrokeThickness
 
-StrokeThickness 属性是笔属性中最简单的一个。它决定了线条以像素为单位的厚度。例如，图 10-4 中绘制的形状的 `StrokeThickness` 都设置为 10。
+`StrokeThickness` 属性是笔属性中最简单的一个。它决定了线条以像素为单位的厚度。例如，图 10-4 中绘制的形状的 `StrokeThickness` 都设置为 10。
 
-## StrokeDashArray
+### StrokeDashArray
 
-StrokeDashArray 属性是一个值数组，表示应该绘制和跳过绘制的笔单位数。一个笔单位等于由 `StrokeThickness` 属性决定的线性特征的厚度。
+`StrokeDashArray` 属性是一个值数组，表示应该绘制和跳过绘制的笔单位数。一个笔单位等于由 `StrokeThickness` 属性决定的线性特征的厚度。
 
 例如，假设有一条 Line 的 `StrokeThickness = 10`。
+
 那么 `StrokeDashArray` "2,2,4,2" 将绘制 20 像素、20 像素、40 像素、跳过 20 像素，并根据需要重复该 Line。
 
 图 10-5 显示了 StrokeDashArray 示例程序，展示了各种虚线模式。左侧的标签指示线条的 `StrokeDashArray` 值。前两条线宽为 1 像素，而其他线宽为 10 像素。如果你仔细观察，你会看到 `StrokeThickness` 值如何帮助确定虚线的大小。
@@ -5344,37 +4523,39 @@ StrokeDashArray 属性是一个值数组，表示应该绘制和跳过绘制的�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_205_0.png)
 
-## StrokeDashCap
+### StrokeDashCap
 
-StrokeDashCap 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 等值。图 10-6 显示了这些值的结果。
+`StrokeDashCap` 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 等值。图 10-6 显示了这些值的结果。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_205_1.png)
 
 图 10-6
 
-## StrokeDashOffset
+### StrokeDashOffset
 
-StrokeDashOffset 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
+`StrokeDashOffset` 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
 
-# 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。左侧的标签指示 `StrokeDashOffset` 值。
+图 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。左侧的标签指示 `StrokeDashOffset` 值。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_205_2.png)
 
 图 10-7
 
-# StrokeEndLineCap# StrokeStartLineCap
+### StrokeEndLineCap
 
-StrokeStartLineCap 和 StrokeEndLineCap 属性决定了线条开头和结尾的绘制方式。与 StrokeDashCap 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
+### StrokeStartLineCap
+
+`StrokeStartLineCap` 和 `StrokeEndLineCap` 属性决定了线条开头和结尾的绘制方式。与 `StrokeDashCap` 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_205_3.png)
 
 图 10-8
 
-## StrokeLineJoin
+### StrokeLineJoin
 
-StrokeLineJoin 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
+`StrokeLineJoin` 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
 
-## FLAT AND SQUARE
+#### FLAT AND SQUARE
 
 注意 Flat 和 Square 线端不会重叠。例如，Flat 端在线条末尾结束，而 Square 端向外延伸半个厚度。Round 端是半圆，而 Triangle 端是三角形。图 10-9 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
 
@@ -5382,54 +4563,55 @@ StrokeLineJoin 属性决定了矩形、折线、多边形和其他绘制连接�
 
 图 10-9
 
-## END OF LINE
+#### END OF LINE
 
-StrokeDashCap 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 值。图 10-6 显示了这些值的结果。
+`StrokeDashCap` 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 值。图 10-6 显示了这些值的结果。
 
-## START OF LINE
+#### START OF LINE
 
-StrokeDashOffset 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
+`StrokeDashOffset` 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
 
- 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。
+图 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。
 
-# OVERLAPPING
+#### OVERLAPPING
 
-StrokeStartLineCap 和 StrokeEndLineCap 属性决定了线条开头和结尾的绘制方式。与 StrokeDashCap 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
+`StrokeStartLineCap` 和 `StrokeEndLineCap` 属性决定了线条开头和结尾的绘制方式。与 `StrokeDashCap` 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
 
-## JOINED LINES
+#### JOINED LINES
 
-StrokeLineJoin 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
+`StrokeLineJoin` 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
 
-## LINE THICKNESS
+#### LINE THICKNESS
 
-StrokeThickness 属性是笔属性中最简单的一个。它决定了线条以像素为单位的厚度。例如，图 10-4 中绘制的形状的 `StrokeThickness` 都设置为 10。
+`StrokeThickness` 属性是笔属性中最简单的一个。它决定了线条以像素为单位的厚度。例如，图 10-4 中绘制的形状的 `StrokeThickness` 都设置为 10。
 
-## DASH PATTERN
+#### DASH PATTERN
 
-StrokeDashArray 属性是一个值数组，表示应该绘制和跳过绘制的笔单位数。一个笔单位等于由 `StrokeThickness` 属性决定的线性特征的厚度。
+`StrokeDashArray` 属性是一个值数组，表示应该绘制和跳过绘制的笔单位数。一个笔单位等于由 `StrokeThickness` 属性决定的线性特征的厚度。
 
 例如，假设有一条 Line 的 `StrokeThickness = 10`。
+
 那么 `StrokeDashArray` "2,2,4,2" 将绘制 20 像素、20 像素、40 像素、跳过 20 像素，并根据需要重复该 Line。
 
 图 10-5 显示了 StrokeDashArray 示例程序，展示了各种虚线模式。左侧的标签指示线条的 `StrokeDashArray` 值。前两条线宽为 1 像素，而其他线宽为 10 像素。如果你仔细观察，你会看到 `StrokeThickness` 值如何帮助确定虚线的大小。
 
-## DASH END
+#### DASH END
 
-StrokeDashCap 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 值。图 10-6 显示了这些值的结果。
+`StrokeDashCap` 属性决定了虚线端的绘制方式。该属性可以取 Flat、Square 和 Triangle 值。图 10-6 显示了这些值的结果。
 
-## DASH START
+#### DASH START
 
-StrokeDashOffset 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
+`StrokeDashOffset` 属性决定了第一个虚线段从何处开始绘制。该属性的值是以笔单位为单位的距离（即线条的厚度）。
 
- 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。 左侧的标签指示 `StrokeDashOffset` 值。
+图 10-7 所示的 StrokeDashOffsets 示例程序显示了具有各种 `StrokeDashOffset` 值的 Line 控件。左侧的标签指示 `StrokeDashOffset` 值。
 
-## LINE END
+#### LINE END
 
-StrokeStartLineCap 和 StrokeEndLineCap 属性决定了线条开头和结尾的绘制方式。与 StrokeDashCap 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
+`StrokeStartLineCap` 和 `StrokeEndLineCap` 属性决定了线条开头和结尾的绘制方式。与 `StrokeDashCap` 属性一样，这些属性可以取 Flat、Square 和 Triangle 值。图 10-8 所示的 StrokeLineCaps 示例程序显示了这些值的结果。
 
-## LINE JOIN
+#### LINE JOIN
 
-StrokeLineJoin 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
+`StrokeLineJoin` 属性决定了矩形、折线、多边形和其他绘制连接线段的形状中线条的连接方式。该属性可以取 Miter、Bevel 和 Round 值。
 
 ## BRUSHES
 
@@ -5466,29 +4648,27 @@ Canvas 控件包含一个 Label 以及红、绿、蓝色的椭圆，这些椭圆
 
 图 10-4
 
-
-
-
-
-## FILLRULE 详情
+### FILLRULE 详情
 
 为了更好地理解 FillRule 的工作原理及其取值的含义，请在图 10-12 中任意选择一个点，并在脑中从该点向右侧无限延伸一条射线（在本示例中，超出页面就足够远了）。
 
-对于**奇偶规则（EvenOdd rule）**，计算射线与形状线段交叉的次数。如果交叉次数为奇数，则该点位于“形状内部并填充颜色”。如果交叉次数为偶数，则该点位于形状的“外部”且不填充颜色。
+对于`奇偶规则（EvenOdd rule）`，计算射线与形状线段交叉的次数。如果交叉次数为奇数，则该点位于“形状内部并填充颜色”。如果交叉次数为偶数，则该点位于形状的“外部”且不填充颜色。
 
-对于**非零规则（Nonzero rule）**，你需要考虑形状线段跨越射线的方向。每当线段从左到右跨越射线（从射线的视角）时，计数器加 1。每当线段从右到左跨越射线时，计数器减 1。完成后，如果计数器不为零，则该点位于形状“内部”并填充颜色。如果计数器为零，则该点位于形状的“外部”且不填充颜色。
+对于`非零规则（Nonzero rule）`，你需要考虑形状线段跨越射线的方向。每当线段从左到右跨越射线（从射线的视角）时，计数器加 1。每当线段从右到左跨越射线时，计数器减 1。完成后，如果计数器不为零，则该点位于形状“内部”并填充颜色。如果计数器为零，则该点位于形状的“外部”且不填充颜色。
 
 尝试图 10-12 中形状内部和外部的后续点，观察会发生什么。
 
-图 10-13 的 SpreadMethods 示例演示了使用三种 SpreadMethod 取值的线性渐变画刷（LinearGradientBrushes）和径向渐变画刷（RadialGradientBrushes）。注意当 SpreadMethod 为 Repeat 时颜色发生的突变。
+
+
+图 10-13 的 `SpreadMethods` 示例演示了使用三种 `SpreadMethod` 取值的线性渐变画刷（`LinearGradientBrushes`）和径向渐变画刷（`RadialGradientBrushes`）。注意当 `SpreadMethod` 为 `Repeat` 时颜色发生的突变。
 
 ## SolidColorBrush（单色画刷）
 
-SolidBrush 类表示单一的纯色。在 XAML 中，你可以通过名称（例如 Red 或 HotPink）或十六进制值（例如 #FFF0000 或 #FFF69B4）来指定画刷的颜色。
+`SolidBrush` 类表示单一的纯色。在 XAML 中，你可以通过名称（例如 `Red` 或 `HotPink`）或十六进制值（例如 `#FFF0000` 或 `#FFF69B4`）来指定画刷的颜色。
 
-通常使用颜色的名称更容易，你也可以根据需要显式地构建一个 SolidColorBrush 对象。
+通常使用颜色的名称更容易，你也可以根据需要显式地构建一个 `SolidColorBrush` 对象。
 
-UseColorBrush 示例使用以下 XAML 代码演示了两种方法。首先，它使用颜色 Margin 绘制了一个蓝色椭圆。然后它绘制了第二个椭圆，并用显式创建的 SolidColorBrush 进行填充。
+`UseColorBrush` 示例使用以下 XAML 代码演示了两种方法。首先，它使用颜色 `Margin` 绘制了一个蓝色椭圆。然后它绘制了第二个椭圆，并用显式创建的 `SolidColorBrush` 进行填充。
 
 ```xml
 <Ellipse Margin="10,20" StrokeThickness="5" Stroke="Black"
@@ -5502,15 +4682,15 @@ UseColorBrush 示例使用以下 XAML 代码演示了两种方法。首先，它
 
 ## LinearGradientBrush（线性渐变画刷）
 
-LinearGradientBrush 使用一系列颜色填充区域，这些颜色在线性方向上从一种平滑地过渡到另一种。例如，画刷在左侧可能是蓝色，向右侧逐渐变为白色。
+`LinearGradientBrush` 使用一系列颜色填充区域，这些颜色在线性方向上从一种平滑地过渡到另一种。例如，画刷在左侧可能是蓝色，向右侧逐渐变为白色。
 
-LinearGradientBrush 的 StartPoint 和 EndPoint 属性决定了渐变的开始和结束。这些点的坐标使用比例放值，其中 (0, 0) 是画刷的左上角，(1, 1) 是右下角。
+`LinearGradientBrush` 的 `StartPoint` 和 `EndPoint` 属性决定了渐变的开始和结束。这些点的坐标使用比例放值，其中 `(0, 0)` 是画刷的左上角，`(1, 1)` 是右下角。
 
-画刷包含一个 GradientStop 对象的集合，决定了它如何填充区域。GradientStop 的 Color 属性定义了画刷在特定点应使用的颜色。其 Offset 属性决定了该颜色在画刷从 StartPoint 到 EndPoint 之间的位置（0 到 1 比例放值）。
+画刷包含一个 `GradientStop` 对象的集合，决定了它如何填充区域。`GradientStop` 的 `Color` 属性定义了画刷在特定点应使用的颜色。其 `Offset` 属性决定了该颜色在画刷从 `StartPoint` 到 `EndPoint` 之间的位置（0 到 1 比例放值）。
 
-画刷可以包含许多 GradientStop 对象来定义渐变中的中间颜色。
+画刷可以包含许多 `GradientStop` 对象来定义渐变中的中间颜色。
 
-图 10-14 的 LinearGradientBrush 示例程序使用以下代码绘制其矩形：
+图 10-14 的 `LinearGradientBrush` 示例程序使用以下代码绘制其矩形：
 
 ```xml
 <Rectangle Margin="5" Width="100" Height="100" Stroke="Black">
@@ -5555,35 +4735,41 @@ FIGURE 10-14
 </Rectangle.Fill>
 ```
 
-第一个矩形从顶部 (0.5, 0) 垂直渐变到底部 (0.5, 1)。
+第一个矩形从顶部 `(0.5, 0)` 垂直渐变到底部 `(0.5, 1)`。
 
-第二个矩形添加了一个额外的 GradientStop 对象，使渐变在通过画刷一半之前保持白色后再变为蓝色。
+第二个矩形添加了一个额外的 `GradientStop` 对象，使渐变在通过画刷一半之前保持白色后再变为蓝色。
 
-第三个矩形的画刷使用不同的 StartPoint 和 Endpoint 值，使渐变从左上角 (0, 0) 移动到右下角 (1, 1)。它使用 GradientStop 对象使颜色从蓝色混合到绿色。
+第三个矩形的画刷使用不同的 `StartPoint` 和 `Endpoint` 值，使渐变从左上角 `(0, 0)` 移动到右下角 `(1, 1)`。它使用 `GradientStop` 对象使颜色从蓝色混合到绿色。
 
-最后一个矩形的画刷 Endpoint 为 (0.25, 0.5)，因此画刷只覆盖了矩形的四分之一。画刷的 SpreadMethod 设置为 Reflect，以便画刷反射覆盖矩形的剩余部分。
+最后一个矩形的画刷 `Endpoint` 为 `(0.25, 0.5)`，因此画刷只覆盖了矩形的四分之一。画刷的 `SpreadMethod` 设置为 `Reflect`，以便画刷反射覆盖矩形的剩余部分。
 
 ## RadialGradientBrush（径向渐变画刷）
 
-RadialGradientBrush 使用从中心点发散颜色填充区域。画刷不使用 StartPoint 和 Endpoint，而是使用 GradientOrigin、RadiusX 和 RadiusY。
+`RadialGradientBrush` 使用从中心点发散颜色填充区域。画刷不使用 `StartPoint` 和 `Endpoint`，而是使用 `GradientOrigin`、`RadiusX` 和 `RadiusY`。
 
-GradientOrigin 决定颜色发散点。默认是 (0.5, 0.5)，因此颜色从画刷的中心 (0, 0) 发散到 (1, 1)。
+`GradientOrigin` 决定颜色发散点。默认是 `(0.5, 0.5)`，因此颜色从画刷的中心 `(0, 0)` 发散到 `(1, 1)`。
 
-RadiusX 和 RadiusY 决定了画刷从中心水平和垂直方向延伸的距离，使用的是 (0, 0) 到 (1, 1) 坐标系。
+`RadiusX` 和 `RadiusY` 决定了画刷从中心水平和垂直方向延伸的距离，使用的是 `(0, 0)` 到 `(1, 1)` 坐标系。
 
 记住半径（RADIUS）
 
-记住矩形的宽度是圆的两倍，因此 RadiusX 和 RadiusY 值为 0.5 会使渐变填充整个画刷。注意 0.5 值使得渐变只到达画刷的侧边。这意味着例如，矩形的角没有被渐变覆盖，它们如何填充取决于 SpreadMethod 属性。
+记住矩形的宽度是圆的两倍，因此 `RadiusX` 和 `RadiusY` 值为 `0.5` 会使渐变填充整个画刷。注意 `0.5` 值使得渐变只到达画刷的侧边。这意味着例如，矩形的角没有被渐变覆盖，它们如何填充取决于 `SpreadMethod` 属性。
 
-图 10-15 的 RadialGradientBrush 示例绘制了几个填充了 RadialGradientBrush 的矩形。从左到右、从上到下，这些画刷具有以下属性：
+图 10-15 的 `RadialGradientBrush` 示例绘制了几个填充了 `RadialGradientBrush` 的矩形。从左到右、从上到下，这些画刷具有以下属性：
 
 - 从白色到红色的默认渐变
-- RadiusX = 0.25 RadiusY = 0.25
-- RadiusX = 0.5 RadiusY = 0.25
-- 一个额外的 GradientStop 对象，使画刷在通过画刷一半之前保持白色-GradientOrigin = 0.25, 0.25
-- 一个额外的 GradientStop 对象，使画刷从红色到白色渐变
-- RadiusX = 0.1, RadiusY = 0.1, SpreadMethod = Reflect
-- SpreadMethod = Repeat（你可以看到渐变没有到达矩形的角）
+
+- `RadiusX` = `0.25` `RadiusY` = `0.25`
+
+- `RadiusX` = `0.5` `RadiusY` = `0.25`
+
+- 一个额外的 `GradientStop` 对象，使画刷在通过画刷一半之前保持白色-`GradientOrigin` = `0.25, 0.25`
+
+- 一个额外的 `GradientStop` 对象，使画刷从红色到白色渐变
+
+- `RadiusX` = `0.1`, `RadiusY` = `0.1`, `SpreadMethod` = `Reflect`
+
+- `SpreadMethod` = `Repeat`（你可以看到渐变没有到达矩形的角）
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_211_0.png)
 
@@ -5591,13 +4777,13 @@ FIGURE 10-15
 
 ## TileBrush（平画刷）
 
-TileBrush 是一个基类，表示用重复图案填充区域的画刷。ImageBrush、DrawingBrush 和 VisualBrush 子类分别用图片、图形和用户界面元素填充区域。第 3 章中的“Tile Brushes”部分及其后续章节描述了你可以用于定义这些类型画刷的属性。后续章节提供了更多关于其中一些画刷的信息。
+`TileBrush` 是一个基类，表示用重复图案填充区域的画刷。`ImageBrush`、`DrawingBrush` 和 `VisualBrush` 子类分别用图片、图形和用户界面元素填充区域。第 3 章中的“Tile Brushes”部分及其后续章节描述了你可以用于定义这些类型画刷的属性。后续章节提供了更多关于其中一些画刷的信息。
 
 ## ImageBrush（图像画刷）
 
-ImageBrush 类用图片填充区域。请参见第 3 章中的“Image Brush”，获取该类属性的通用描述以及在 Expression Blend 中构建 ImageBrush 的说明。
+`ImageBrush` 类用图片填充区域。请参见第 3 章中的“Image Brush”，获取该类属性的通用描述以及在 Expression Blend 中构建 `ImageBrush` 的说明。
 
-图 10-16 的 ImageBrushModes 示例程序演示了控件的 TileMode 属性值。该属性决定了画刷必要时如何重复，类似于 SpreadMethod 属性决定渐变画刷如何填充它们未覆盖的区域的方式。
+图 10-16 的 `ImageBrushModes` 示例程序演示了控件的 `TileMode` 属性值。该属性决定了画刷必要时如何重复，类似于 `SpreadMethod` 属性决定渐变画刷如何填充它们未覆盖的区域的方式。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_211_1.png)
 
@@ -5605,19 +4791,17 @@ FIGURE 10-16
 
 ## DrawingBrush（图形画刷）
 
-DrawingBrush 类用图形填充区域。图形可能包含标签、线条、多边形或其他。不幸的是，在 XAML 代码中绘制 DrawingBrush 是相当困难的。画刷应该包含一个定义图形的 Drawing 元素。Drawing 元素可以包含图形对象，如 GeometryDrawing、GlyphRunDrawing 或 ImageDrawing。这些对象定义了它们包含对象的属性。例如，GeometryBrush 和 Pen 属性适用于任何你绘制的对象。
+`DrawingBrush` 类用图形填充区域。图形可能包含标签、线条、多边形或其他。不幸的是，在 XAML 代码中绘制 `DrawingBrush` 是相当困难的。画刷应该包含一个定义图形的 `Drawing` 元素。`Drawing` 元素可以包含图形对象，如 `GeometryDrawing`、`GlyphRunDrawing` 或 `ImageDrawing`。这些对象定义了它们包含对象的属性。例如，`GeometryBrush` 和 `Pen` 属性适用于任何你绘制的对象。
 
-如果你想包含多个对象，可以绘制 DrawingGroup 子，它可以包含其他图形对象，如 GeometryDrawing、GlyphRunDrawing 或 ImageDrawing。
+如果你想包含多个对象，可以绘制 `DrawingGroup` 子，它可以包含其他图形对象，如 `GeometryDrawing`、`GlyphRunDrawing` 或 `ImageDrawing`。
 
-在 DrawingBrush 中创建复杂的图片是一项辛苦工作。事实上，它是如此困难，以至于你可能会怀疑为什么不使用简单的 ImageBrush。但 DrawingBrush 的优势在于它定义了其命令，因此当你放大 DrawingBrush 时，仍然能看到平滑的曲线。相反，如果你放大 ImageBrush，画刷会变得像素化并模糊。
+在 `DrawingBrush` 中创建复杂的图片是一项辛苦工作。事实上，它是如此困难，以至于你可能会怀疑为什么不使用简单的 `ImageBrush`。但 `DrawingBrush` 的优势在于它定义了其命令，因此当你放大 `DrawingBrush` 时，仍然能看到平滑的曲线。相反，如果你放大 `ImageBrush`，画刷会变得像素化并模糊。
 
-图 10-17 的 MagnifiedDrawing 程序显示了一系列用相同 DrawingBrush 填充的矩形。每个矩形都显示在一个 Viewbox 内部，Viewbox 会拉伸其内容，以便你以不同的比例查看画刷。
+图 10-17 的 `MagnifiedDrawing` 程序显示了一系列用相同 `DrawingBrush` 填充的矩形。每个矩形都显示在一个 `Viewbox` 内部，`Viewbox` 会拉伸其内容，以便你以不同的比例查看画刷。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_212_0.png)
 
 FIGURE 10-17
-
-
 
 ```xml
 <GeometryDrawing.Pen>
@@ -5666,25 +4850,25 @@ FIGURE 10-17
 </DrawingBrush.Drawing>
 ```
 
-正如你所看到的，手动构建即使是简单的 DrawingBrush 并不是容易的。开发者使用的大多数 DrawingBrush 要么非常简单，要么是由像 Expression Blend 自动化工具定义的。
+正如你所看到的，手动构建即使是简单的 `DrawingBrush` 并不是容易的。开发者使用的大多数 `DrawingBrush` 要么非常简单，要么是由像 Expression Blend 自动化工具定义的。
 
 ## 放大绘图画刷 (MagnifiedDrawingBrush)
 
-关于如何让 Expression Blend 为你创建 DrawingBrush 的说明，请参阅第 3 章中的“画刷（Drawing Brush）”部分。
+关于如何让 Expression Blend 为你创建 `DrawingBrush` 的说明，请参阅第 3 章中的“画刷（Drawing Brush）”部分。
 
 ## 视觉画刷 (VisualBrush)
 
-VisualBrush 类使用用户界面元素控件来填充区域。该元素可以包含其他控件，如线条（Lines）、标签（Labels）、文本框（TextBoxs）、多边形（Polygons）以及你想添加的任何内容。
+`VisualBrush` 类使用用户界面元素控件来填充区域。该元素可以包含其他控件，如线条（`Lines`）、标签（`Labels`）、文本框（`TextBoxs`）、多边形（`Polygons`）以及你想添加的任何内容。
 
-事实上，如果你用控件定义的 VisualBrush 填充区域，且该控件在运行时发生变化，那么画刷会自动更新以匹配控件的外观。
+事实上，如果你用控件定义的 `VisualBrush` 填充区域，且该控件在运行时发生变化，那么画刷会自动更新以匹配控件的外观。
 
-遗憾的是，当你选择定义画刷时，它不能是隐藏，因为画刷需要使用它的绘图，如果 Visibility 属性未设置为 Visible（可见），则图像将不存在。这意味着你不能让控件完全隐藏然后仅用它来填充屏幕上的区域。
+遗憾的是，当你选择定义画刷时，它不能是隐藏，因为画刷需要使用它的绘图，如果 `Visibility` 属性未设置为 `Visible`（可见），则图像将不存在。这意味着你不能让控件完全隐藏然后仅用它来填充屏幕上的区域。
 
 不过，你可以将控件放在另一个控件之前，或者在它不在程序运行状态时移动它。
 
-MagnifiedVisualBrush 示例程序使用 VisualBrush 执行的结果，与 MagnifiedDrawingBrush 程序使用 VisualBrush 代替 DrawingBrush 的效果完全相同。
+`MagnifiedVisualBrush` 示例程序使用 `VisualBrush` 执行的结果，与 `MagnifiedDrawingBrush` 程序使用 `VisualBrush` 代替 `DrawingBrush` 的效果完全相同。
 
-以下 XAML 代码显示了 MagnifiedVisualBrush 程序如何构建定义其 VisualBrush 的控件。请注意代码如何设置 Canvas 的 Margin（外边距）属性来移动运行时不可见的控件的左边缘“-120,0,0,0”。
+以下 XAML 代码显示了 `MagnifiedVisualBrush` 程序如何构建定义其 `VisualBrush` 的控件。请注意代码如何设置 `Canvas` 的 `Margin`（外边距）属性来移动运行时不可见的控件的左边缘“-120,0,0,0”。
 
 ```xml
 <Canvas HorizontalAlignment="Left" Margin="-120,0,0,0">
@@ -5705,13 +4889,14 @@ MagnifiedVisualBrush 示例程序使用 VisualBrush 执行的结果，与 Magnif
   </Rectangle>
 </Canvas>
 ```
+
 ![](img/c9b2d39f4fc2f276f6a9c2f214_0.png)
 
-这个版本有 22 行，比上一版本定义 Geometry（几何图形）使用的行数要短（如果你删除在这个较简单版本中不重要的注释，只有 16 行）。
+这个版本有 22 行，比上一版本定义 `Geometry`（几何图形）使用的行数要短（如果你删除在这个较简单版本中不重要的注释，只有 16 行）。
 
 ## 放大视觉画刷 (MagnifiedVisualBrush)
 
-这个版本也使用了更容易理解的简单控件。在为画刷构建了控件后，MagnifiedVisualBrush 程序仍然需要实际创建它。
+这个版本也使用了更容易理解的简单控件。在为画刷构建了控件后，`MagnifiedVisualBrush` 程序仍然需要实际创建它。
 
 ```xml
 <VisualBrush x:Key="Brush" ElementName="Face" StretchMode="Tile" Viewbox="0,0,50,50" Viewport="Absolute" />
@@ -5719,33 +4904,35 @@ MagnifiedVisualBrush 示例程序使用 VisualBrush 执行的结果，与 Magnif
 
 ## 轻松使用放大绘图画刷
 
-我不知道你们怎么想，我觉得 VisualBrush 比 DrawingBrush 容易得多得多。除非我画的是非常简单的图形，否则我都会使用它。
+
+
+我不知道你们怎么想，我觉得 `VisualBrush` 比 `DrawingBrush` 容易得多得多。除非我画的是非常简单的图形，否则我都会使用它。
 
 ## 总结 (SUMMARY)
 
-画笔（Pens）和画刷（Brushes）决定了你的 WPF 绘制的所有内容的外观。画笔决定了如何绘制线条，而画刷决定了如何填充区域。本章描述了画笔和画刷。它解释了 Pen 和 Brush 类，包括 SolidColorBrush、LinearGradientBrush、RadialGradientBrush、ImageBrush、DrawingBrush 和 VisualBrush。
+画笔（`Pens`）和画刷（`Brushes`）决定了你的 WPF 绘制的所有内容的外观。画笔决定了如何绘制线条，而画刷决定了如何填充区域。本章描述了画笔和画刷。它解释了 `Pen` 和 `Brush` 类，包括 `SolidColorBrush`、`LinearGradientBrush`、`RadialGradientBrush`、`ImageBrush`、`DrawingBrush` 和 `VisualBrush`。
 
 通过这些属性和画刷，你可以创作出你想象的任何图形。WPF 开发涉及两个不同的步骤：创建用户界面和编写位于其后的代码。本书到目前为止的大多数章节都解释了如何构建用户界面。下一章将解释另一部分内容：如何在控件后面编写代码。
 
 ## 事件与后台代码 (Events and Code-Behind)
 
-除非你的应用程序完全由用户界面 (UI) 元素组成，否则你最终需要将代码与 UI 元素关联。例如，当用户点击按钮、选择菜单项和点击工具栏中的工具时，程序需要采取行动。在 WPF 中，位于用户界面之后、响应控件事件并执行其他处理的代码被称为后台代码（code-behind）。Studio 让编写后台代码变得简单。本章将解释如何编写处理事件的代码，以便应用程序能够在运行时对用户做出响应。
+除非你的应用程序完全由用户界面 (`UI`) 元素组成，否则你最终需要将代码与 UI 元素关联。例如，当用户点击按钮、选择菜单项和点击工具栏中的工具时，程序需要采取行动。在 WPF 中，位于用户界面之后、响应控件事件并执行其他处理的代码被称为后台代码（`code-behind`）。`Studio` 让编写后台代码变得简单。本章将解释如何编写处理事件的代码，以便应用程序能够在运行时对用户做出响应。
 
 取决于你想要实现什么以及你使用的语言，你有以下几种方法将 XAML 对象连接到后台代码：
 
 - 在 XAML 中使用属性
 - 在运行时添加事件处理器
-- 使用 Handles 子句（仅限 Visual Basic）
+- 使用 `Handles` 子句（仅限 Visual Basic）
 
 后续章节将描述这些选项并提供示例。在学习如何创建事件处理程序之前，值得花一点时间了解一下后台文件。
 
 ## 后台文件 (Code-Behind Files)
 
-每当你向项目添加窗口时，Expression Blend 或 Visual Studio 都会添加对应的后台文件。该文件名与 XAML 文件相同，扩展名为 .cs（针对 C#）或 .vb（针对 Visual Basic）。例如，当你使用 C# 创建 WPF 项目时，项目包含初始窗口 Window1.xaml 和对应的后台文件 Window1.cs。
+每当你向项目添加窗口时，Expression Blend 或 Visual Studio 都会添加对应的后台文件。该文件名与 XAML 文件相同，扩展名为 `.cs`（针对 C#）或 `.vb`（针对 Visual Basic）。例如，当你使用 C# 创建 WPF 项目时，项目包含初始窗口 `Window1.xaml` 和对应的后台文件 `Window1.cs`。
 
 如果你使用的是 Visual Studio，那么你可以编辑后台文件并充分利用 Visual Studio 的功能。
 
-如果你使用的是 Expression Blend，你有两种方法可以编辑后台文件。首先，可以在项目列表中右键点击文件并选择“外部编辑”。这将使用系统关联的该类型应用程序打开文件进行编辑。例如，如果你使用 C# 没有安装 Visual Studio，系统可能会用 Notepad 打开文件。如果你使用这种方法用 Notepad 打开文件，你就无法获得 Visual Studio 的任何优势。你可以输入并编辑文件，但你必须自己正确完成所有输入，而没有 IntelliSense 的帮助。（有一些第三方代码编辑器，如 Aninus C# Editor。访问 www.c-point.com/c_sharp_editor.php 获取更多信息。）
+如果你使用的是 Expression Blend，你有两种方法可以编辑后台文件。首先，可以在项目列表中右键点击文件并选择“外部编辑”。这将使用系统关联的该类型应用程序打开文件进行编辑。例如，如果你使用 C# 没有安装 Visual Studio，系统可能会用 `Notepad` 打开文件。如果你使用这种方法用 `Notepad` 打开文件，你就无法获得 Visual Studio 的任何优势。你可以输入并编辑文件，但你必须自己正确完成所有输入，而没有 IntelliSense 的帮助。（有一些第三方代码编辑器，如 `Aninus C# Editor`。访问 `www.c-point.com/c_sharp_editor.php` 获取更多信息。）
 
 编辑后台文件的第二种方法是右键点击它并选择“在 Visual Studio 中编辑”。用 Visual Studio 打开整个项目以便可以使用所有功能。你在 Visual Studio 和 Expression Blend 之间切换时，应用程序会同步你的更改以保持更新。
 
@@ -5753,19 +4940,15 @@ MagnifiedVisualBrush 示例程序使用 VisualBrush 执行的结果，与 Magnif
 
 > 在切换之前，保存你所做的所有更改，以便另一个应用程序可以看到它们。例如，如果你在 Visual Studio 中做了更改并在未保存的情况下切换到 Expression Blend，Expression Blend 将看不到这些更改。如果你在 Expression Blend 中进行了更多更改，两个程序对项目的视图将不一致。结果可能会非常困惑，并可能导致某些更改丢失。通过在切换应用程序之前始终保存可以避免这种情况。
 
-
-
-
-
 ## 示例代码
 
-本章的源代码可以在书籍网站 www.wrox.com 下载，其中包含了几个示例应用程序，这些程序执行相同的功能，但使用了不同的技术将后台代码（code-behind）附加到用户界面。
+本章的源代码可以在书籍网站 `www.wrox.com` 下载，其中包含了几个示例应用程序，这些程序执行相同的功能，但使用了不同的技术将后台代码（`code-behind`）附加到用户界面。
 
 图 11-1 显示了其中一个运行程序。你可以拖动滚动条或在文本框中输入蓝色值来设置右侧显示颜色的红、绿、蓝分量。如果你点击应用（Apply）按钮，程序会将窗口背景颜色设置为与当前样本匹配。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_218_0.png)
 
-图 11-2 显示的 ImageColors 示例程序演示了在一个程序中附加后台代码的所有不同技术。程序中的不同按钮以不同的方式附加到事件处理程序。请从书籍网站下载此程序的 C# 或 Visual Basic 版本以查看详情。
+图 11-2 显示的 `ImageColors` 示例程序演示了在一个程序中附加后台代码的所有不同技术。程序中的不同按钮以不同的方式附加到事件处理程序。请从书籍网站下载此程序的 C# 或 Visual Basic 版本以查看详情。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_218_1.png)
 
@@ -5773,7 +4956,7 @@ MagnifiedVisualBrush 示例程序使用 VisualBrush 执行的结果，与 Magnif
 
 将后台代码附加到控件事件的第一种方法是在 XAML 代码中使用一种属性。该属性的名称与你想要捕获的事件相同。它的值是后台代码中事件处理程序的名称。
 
-例如，以下 XAML 代码定义了一个名为 `btnApply` 的 Button。`Click` 属性表明 `btnApply_Click` 程序捕获了控件的 Click 事件处理程序。
+例如，以下 XAML 代码定义了一个名为 `btnApply` 的 `Button`。`Click` 属性表明 `btnApply_Click` 程序捕获了控件的 `Click` 事件处理程序。
 
 ```
 <Button Content="Apply" IsDefault="True"
@@ -5784,28 +4967,32 @@ Name="btnApply" Click="btnApply_Click"/>
 
 ## 匿名控件
 
-你并不真的需要给控件命名来赋予它事件处理程序。例如，上代码中的 Button 不需要命名为 `btnApply` 或任何名称。`Click` 属性告诉程序要执行哪个事件处理程序。如果你永远不在代码中引用该 Button（例如为了启用或禁用它），那么你可以省略名称。
+你并不真的需要给控件命名来赋予它事件处理程序。例如，上代码中的 `Button` 不需要命名为 `btnApply` 或任何名称。`Click` 属性告诉程序要执行哪个事件处理程序。如果你永远不在代码中引用该 `Button`（例如为了启用或禁用它），那么你可以省略名称。
+
 然而，某些开发项目对控件命名有标准，某些项目可能坚持任何带有事件处理程序的控件都必须有名称。
 
 ## 不再分离
 
 程序在没有事件处理程序的情况下无法运行这一事实凸显了 UI 构建与后台代码之间分离的严重崩溃。这意味着在事件处理程序存在之前，UI 设计师无法测试界面，但事件处理程序界面的一部分，因此它们本不属于界面设计师的职责范畴。你可以认为程序员应该在写完事件处理程序后再在 XAML 代码中编写事件名称属性，但程序员不需要接触界面。
+
 在实践中，这可能并不是一个大问题——它意味着界面设计师和程序员需要相互交流。
+
 本章后面提到的附加后台代码的技术——在运行时添加事件处理程序以及使用 `Handles` 子句（Visual Basic）——避免了这个问题。
 
 以下 C# 代码处理了上一个 XAML 代码中定义的事件：
 
-```sharp
+```csharp
 private void btnApply_Click(object sender, RoutedEventArgs e)
 {
 this.Background = borSample.Background;
 }
 ```
 
-这段代码捕获了 `btnApply` 的 Click 事件，并根据 `borSample.Background` 属性使用的值设置窗口的 `Background` 属性（更多细节请见此文）。
+这段代码捕获了 `btnApply` 的 `Click` 事件，并根据 `borSample.Background` 属性使用的值设置窗口的 `Background` 属性（更多细节请见此文）。
+
 你的代码不需要做任何操作来连接事件处理程序以捕获事件——Expression Blend 和 Visual Studio 会为你处理这些。
 
-# 事件名称属性 | 183
+### 事件名称属性 | 183
 
 以下 XAML 片段显示了 `EventNameAttributes` 示例程序如何确定哪个事件处理由程序按钮、控制红色分量的滚动条和文本框引发的按键事件。其他滚动条和文本框的代码是类似的。
 
@@ -5847,9 +5034,6 @@ private void txtRed_TextChanged(object sender, TextChangedEventArgs e)
     }
 }
 ```
-
-
-
 
 图 11-3 显示了显示滚动条控件 `scrGreen` 事件的 Visual Studio 窗口。在此图中，该控件 `ValueChanged` 事件的下拉列表列出了具有 `ValueChanged` 事件正确签名的后置代码方法。（注意那个闪电按钮，它可以让窗口显示属性的事件）。
 
@@ -5938,13 +5122,9 @@ Private Sub txtRed_Changed()
     Dim value As Integer
 ```
 
-
-
-
-
 ## 摘要
 
-大多数应用程序在用户界面背后都有代码（code-behind）。这些代码对控件生成的事件做出响应，执行计算并使用控件显示结果。
+大多数应用程序在用户界面背后都有代码（`code-behind`）。这些代码对控件生成的事件做出响应，执行计算并使用控件显示结果。
 
 WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码中使用事件名称属性、在运行时将事件处理程序绑定到事件，以及（如果你使用的是 Visual Basic）使用 `Handles` 子句。这些技术让你在易用性（事件名称属性易于使用）和界面设计与后台代码之间的分离（在运行时绑定事件处理程序可以保持它们更高的独立性）之间进行权衡。
 
@@ -5958,13 +5138,15 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 任何类型编程中最重要的概念之一就是代码复用。子程序、函数、脚本、类、继承、循环以及许多其他编程结构都让你能够以某种方式复用代码。例如，如果你的程序需要在许多地方执行相同的任务，你可以创建一个执行该任务的子程序，然后在这些地方调用它。
 
+
+
 这种代码复用有几个优点：
 
--   你只需要编写和调试一次代码。
--   如果你以后需要修改代码以进行更改或修复错误，你只需要在一个地方进行操作。
--   当你修复错误或对代码进行其他更改时，你不需要担心保持代码中多个部分更改的同步。
--   如果你需要在另一个程序中执行类似的操作，你可能复制执行该操作的例程。
--   你编写的代码更少，这使得程序更易读、更可靠，从而降低成本。
+- 你只需要编写和调试一次代码。
+- 如果你以后需要修改代码以进行更改或修复错误，你只需要在一个地方进行操作。
+- 当你修复错误或对代码进行其他更改时，你不需要担心保持代码中多个部分更改的同步。
+- 如果你需要在另一个程序中执行类似的操作，你可能复制执行该操作的例程。
+- 你编写的代码更少，这使得程序更易读、更可靠，从而降低成本。
 
 正如例程和函数让你在 C# 和 Visual Basic 等语言中复用代码一样，资源让你让你复用 XAML 代码。它们允许你定义值，然后可以在 XAML 文件的许多地方使用这些值。
 
@@ -5988,11 +5170,12 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 创建和使用简单的资源非常容易。（事实上，从示例中理解比从描述中理解更容易，所以，如果你在理解下面的解释有困难，请查看示例文本然后阅读解释。）
 
-要定义资源，请向 Window、Grid 或其他容器等对象添加 `Resources` 属性元素。在该元素内部，放置你以后要使用的资源。每个资源都是一个对象的元素（例如 `LinearGradientBrush`、`Thickness` 或 `Label`）或简单值（例如字符串或整数）。
+要定义资源，请向 `Window`、`Grid` 或其他容器等对象添加 `Resources` 属性元素。在该元素内部，放置你以后要使用的资源。每个资源都是一个对象的元素（例如 `LinearGradientBrush`、`Thickness` 或 `Label`）或简单值（例如字符串或整数）。
 
 你必须为每个资源提供一个唯一的 `x:Key` 属性值来标识它。
 
 > 强制键
+>
 > `Resources` 元素定义了一个资源字典（resource dictionary），这是一个允许对象根据键搜索项的列表。资源字典要求每个项目都有一个键（此处未涵盖的少数特殊情况外），所以你必须给每个资源一个键。
 
 例如，以下 XAML 代码定义了一个 `Resources` 元素，其中包含名为 `bButton` 的 `RadialGradientBrush` 和名为 `bmeButton` 的 `BitmapEffectGroup`。该 `Resources` 包含在 `Window` 文件中（因此标签为 `Window.Resources`）。
@@ -6012,7 +5195,7 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 ## ButtonResources
 
-持有 `Resources` 的对象中的任何对象（直接或间接）都可以作为资源使用。在之前的代码中，Window 包含了 `Resources` 元素，因此 Window 中的任何对象可以使用它的资源。
+持有 `Resources` 的对象中的任何对象（直接或间接）都可以作为资源使用。在之前的代码中，`Window` 包含了 `Resources` 元素，因此 `Window` 中的任何对象可以使用它的资源。
 
 在你定义了一个像这样的简单属性资源后，你可以使用属性语法来使用它。当你提供属性时，格式应为 `(StaticResource resource_name)`，其中你用资源的名称替换 `resource_name`。
 
@@ -6066,11 +5249,7 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 资源可以是 XAML 代码可以理解的任何数据类型。资源可以拥有的三类特别感兴趣的数据类型是“普通”属性值、控件和简单数据类型。
 
-
-
-
-
-## 普通属性值
+### 普通属性值
 
 如前面的示例所示，你可以创建作为 `LinearGradientBrushes`、`RadialGradientBrushes` 和 `BitmapEffectGroups` 的资源。你还可以创建 `SolidColorBrushes`、`Thicknesses`（用于 Margin）、`DashStyles` 和 `Colors`（尽管这并没有你想象的那么有用——你可能想要 `Brush`、`FontFamilies`、`FontStyles` 以及你想使用的任何其他属性类型）。
 
@@ -6080,9 +5259,9 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 上一节的示例演示了这种简单的属性类型。
 
-## 控件
+### 控件
 
-资源通常包含“普通”属性值，但也可以包含控件。例如，下面的 XAML 控件定义了一个 TextBox，它内部以两种不同的样式包含了一些文本：
+资源通常包含“普通”属性值，但也可以包含控件。例如，下面的 XAML 控件定义了一个 `TextBlock`，它内部以两种不同的样式包含了一些文本：
 
 ```xml
 <TextBlock x:Key="txtName" TextAlignment="Center">
@@ -6100,7 +5279,7 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_234_2.png)
 
-`ContentResource` 程序使用以下代码将 Button 的 `Content` 属性设置为 `TextBlock` 资源，以便其显示：
+`ContentResource` 程序使用以下代码将 `Button` 的 `Content` 属性设置为 `TextBlock` 资源，以便其显示：
 
 ```xml
 <Button Width="125" Height="75" Content="{StaticResource txtButton}"/>
@@ -6108,7 +5287,7 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 
 图 12-3 显示
 
-在这个示例中，将 TextBox 设为资源并不能节省多少麻烦。它所需的代码量与你在 Button 中定义内容时的代码相差不多，而且你不可能拥有许多具有相同内容的按钮，因此你可能不会使用资源来减少重复。
+在这个示例中，将 `TextBox` 设为资源并不能节省多少麻烦。它所需的代码量与你在 `Button` 中定义内容时的代码相差不多，而且你不可能拥有许多具有相同内容的按钮，因此你可能不会使用资源来减少重复。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_234_3.png)
 
@@ -6131,7 +5310,7 @@ WPF 提供了几种方法将代码附加到用户界面，包括在 XAML 代码�
 </Window.Resources>
 ```
 
-以下代码显示了 Image 如何使用这些资源：
+以下代码显示了 `Image` 如何使用这些资源：
 
 ```xml
 <Image Name="imgClaude" Width="100" Height="100" Stretch="Uniform"
@@ -6141,11 +5320,13 @@ BitmapEffect="{StaticResource bmePerson}"
 ContextMenu="{StaticResource ctxPerson}"/>
 ```
 
-一系列 Button 可以使用相似的代码显示相同的 `ContextMenu`。
-程序使用代码绑定来响应用户选择菜单项 MenuItem 的操作。
-不幸的是，MenuItem 触发的 `Click` 事件处理程序不知道用户点击了哪个 Image 控件。MenuItem 的参数告诉我们点击的是哪个 MenuItem，但并没有说明哪个 Image 显示了上下文。
+一系列 `Button` 可以使用相似的代码显示相同的 `ContextMenu`。
 
-确定哪个 Image 显示了菜单的一种方法是在显示菜单时保存 Image 的引用。`ContextMenuResource` 示例程序为其所有 Image 控件的 `MouseDown` 事件处理程序分配了以下处理程序。如果用户在 Image 上按下右键，代码将保存该 Image 控件的引用，以便用户选择菜单项时使用。
+程序使用代码绑定来响应用户选择菜单项 `MenuItem` 的操作。
+
+不幸的是，`MenuItem` 触发的 `Click` 事件处理程序不知道用户点击了哪个 `Image` 控件。`MenuItem` 的参数告诉我们点击的是哪个 `MenuItem`，但并没有说明哪个 `Image` 显示了上下文。
+
+确定哪个 `Image` 显示了菜单的一种方法是在显示菜单时保存 `Image` 的引用。`ContextMenuResource` 示例程序为其所有 `Image` 控件的 `MouseDown` 事件处理程序分配了以下处理程序。如果用户在 `Image` 上按下右键，代码将保存该 `Image` 控件的引用，以便用户选择菜单项时使用。
 
 ```csharp
 // 记住被点击的图片。
@@ -6159,7 +5340,73 @@ private void img_MouseDown(Object sender, MouseButtonArgs e)
 }
 ```
 
-## 资源类型
+### 简单数据类型
+
+讽刺的是，在知道技巧之前，最简单的类型（如字符串、整数和双点数）在存储在资源时是最令人困惑的。问题在于 XAML 文件只认识 XAML 类型（如 `SolidColorBrush`），而不认识 `Double` 和 `Int32` 等系统类型。为了让文件理解这些类型，你需要给它一个命名空间属性，告诉它在哪个命名空间查找这些类型。例如，下面的 XAML 显示了一个 `Window` 元素。命名空间属性引用了在 `mscorlib` 中定义的数据类型。
+
+```xml
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        x:Class="Window"
+        Title="ResourceHierarchy"
+        Width="350" Height="180"
+        FontSize="16" FontWeight="Bold">
+```
+
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_236_2.png)
+
+ResourceHierarchy
+
+现在下面的代码定义了两个 `Double` 类型的资源。注意代码如何使用 `sys` 前缀来指示 `Double` 类型定义的位置。
+
+```xml
+<Window.Resources>
+  <sys:Double x:Key="dblRadX">5</sys:Double>
+  <sys:Double x:Key="dblRadY">20</sys:Double>
+</Window.Resources>
+```
+
+下面的代码显示 `Rectangle` 可能会使用这些资源作为其 `RadiusX` 和 `RadiusY` 属性：
+
+```xml
+<Rectangle Margin="5" Width="175" Height="60"
+Fill="Red" Stroke="Black" StrokeThickness="5"
+RadiusX={StaticResource dblRadX}
+RadiusY={StaticResource dblRadY}/>
+```
+
+这些简单数据类型允许你在资源中放置特定值。例如，你可以构建一个资源字典，包含应用程序用于标签、按钮和其他控件的所有字符串。对于不同的按钮（尽管你可能希望按钮和菜单项具有相同的文本），将这些值放在资源中会更便于更改。
+
+图 12-5 中的 `DataTypes` 程序显示了 `mscorlib` 中定义的每个简单类型的资源。
+
+| Byte | Object | Char |
+
+| :--- | :--- | :--- |
+
+| 255 | | -128 |
+
+| Char | DateTime | 4/1/2010 |
+
+| Decimal | 7.922816852842637893845903 | String | Any text value |
+
+| Double | 1.797693148623187 | UInt16 | 6553 |
+
+| Int16 | 32767 | UInt32 | 429497295 |
+
+| Int32 | 2147483647 | UInt64 | 1844674403709551615 |
+
+| Int64 | 9223372036854775807 |
+
+> 发现数据类型
+>
+> 在 Visual Studio 中，你可以使用对象浏览器查看 `mscorlib` 等库中可用的数据类型。
+
+你可以创建多个包含相同资源的资源字典，然后在它们之间轻松切换。第 16 节的“皮肤 (Skins)”部分对此技术有更多介绍。
+
+## 资源层次结构
+
+在 WPF 树中，许多对象可能有资源字典。当控件使用资源时，WPF 会向上遍历树，直到找到按名称定义的对象。
 
 ```csharp
 // 显示被点击人物详情。
@@ -6180,85 +5427,22 @@ ContextMenuResource
 
 图 12-4
 
-## 简单数据类型
 
-讽刺的是，在知道技巧之前，最简单的类型（如字符串、整数和双点数）在存储在资源时是最令人困惑的。问题在于 XAML 文件只认识 XAML 类型（如 `SolidColorBrush`），而不认识 `Double` 和 `Int32` 等系统类型。为了让文件理解这些类型，你需要给它一个命名空间属性，告诉它在哪个命名空间查找这些类型。例如，下面的 XAML 显示了一个 `Window` 元素。命名空间属性引用了在 mscorlib 中定义的数据类型。
 
-```xml
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        x:Class="Window"
-        Title="ResourceHierarchy"
-        Width="350" Height="180"
-        FontSize="16" FontWeight="Bold">
-```
+例如，假设一个 `Window` 包含一个带有 `Label` 的 `StackPanel`，而 `Label` 使用了名为 `LabelValue` 的资源。当它构建 `Label` 时，WPF 首先检查 `Label` 的资源字典（如果存在）以寻找 `LabelValue`。如果没找到，WPF 将移动到 `StackPanel` 并搜索其资源。如果仍然找不到，WPF 将继续向上到 `Window` 并检查其资源。
 
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_236_2.png)
-
-ResourceHierarchy
-
-# 
-
-现在下面的代码定义了两个 `Double` 类型的资源。注意代码如何使用 `sys` 前缀来指示 `Double` 类型定义的位置。
-
-```xml
-<Window.Resources>
-  <sys:Double x:Key="dblRadX">5</sys:Double>
-  <sys:Double x:Key="dblRadY">20</sys:Double>
-</Window.Resources>
-```
-
-下面的代码显示 Rectangle 可能会使用这些资源作为其 `RadiusX` 和 `RadiusY` 属性：
-
-```xml
-<Rectangle Margin="5" Width="175" Height="60"
-Fill="Red" Stroke="Black" StrokeThickness="5"
-RadiusX={StaticResource dblRadX}
-RadiusY={StaticResource dblRadY}/>
-```
-
-这些简单数据类型允许你在资源中放置特定值。例如，你可以构建一个资源字典，包含应用程序用于标签、按钮和其他控件的所有字符串。对于不同的按钮（尽管你可能希望按钮和菜单项具有相同的文本），将这些值放在资源中会更便于更改。
-
-图 12-5 中的 `DataTypes` 程序显示了 mscorlib 中定义的每个简单类型的资源。
-
-| Byte | Object | Char |
-| :--- | :--- | :--- |
-| 255 | | -128 |
-| Char | DateTime | 4/1/2010 |
-| Decimal | 7.922816852842637893845903 | String | Any text value |
-| Double | 1.797693148623187 | UInt16 | 6553 |
-| Int16 | 32767 | UInt32 | 429497295 |
-| Int32 | 2147483647 | UInt64 | 1844674403709551615 |
-| Int64 | 9223372036854775807 |
-
-> 发现数据类型
-> 在 Visual Studio 中，你可以使用对象浏览器查看 mscorlib 等库中可用的数据类型。
-
-你可以创建多个包含相同资源的资源字典，然后在它们之间轻松切换。第 16 节的“皮肤 (Skins)”部分对此技术有更多介绍。
-
-## 资源层次结构
-
-在 WPF 树中，许多对象可能有资源字典。当控件使用资源时，WPF 会向上遍历树，直到找到按名称定义的对象。
-
-例如，假设一个 Window 包含一个带有 Label 的 StackPanel，而 Label 使用了名为 `LabelValue` 的资源。当它构建 Label 时，WPF 首先检查 Label 的资源字典（如果存在）以寻找 `LabelValue`。如果没找到，WPF 将移动到 StackPanel 并搜索其资源。如果仍然找不到，WPF 将继续向上到 Window 并检查其资源。
-
-如果在逻辑树顶部的 Window 中仍未找到 `LabelValue` 资源，WPF 将检查 App.xaml 文件查看其是否定义了该资源。
+如果在逻辑树顶部的 `Window` 中仍未找到 `LabelValue` 资源，WPF 将检查 `App.xaml` 文件查看其是否定义了该资源。
 
 如果经过这一切之后 WPF 仍然找不到该资源，应用程序将以多种方式失败。例如，Expression Blend 窗口设计器不会渲染需要资源的控件，如果你尝试运行应用程序，它会失败。相反，Visual Studio 的窗口设计器会显示错误消息且不绘制任何控件。
 
-
-
-
-
 ## 20 | 第 12 章：资源
 
-ResourceHierarchy 示例程序演示了资源的查找。下面的代码显示了程序的 App.xaml 文件。该文件定义了名为 String1、String2、String3 和 String4 的字符串资源。
+`ResourceHierarchy` 示例程序演示了资源的查找。下面的代码显示了程序的 `App.xaml` 文件。该文件定义了名为 `String1`、`String2`、`String3` 和 `String4` 的字符串资源。
 
 ```xml
 <Application
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     x:Class="App"
     StartupUri="Window.xaml">
@@ -6279,7 +5463,7 @@ ResourceHierarchy 示例程序演示了资源的查找。下面的代码显示�
 ```xml
 <Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     x:Name="Window"
     Title="ResourceHierarchy"
@@ -6319,19 +5503,19 @@ ResourceHierarchy 示例程序演示了资源的查找。下面的代码显示�
 </Window>
 ```
 
-ResourceHierarchy
+`ResourceHierarchy`
 
-在这段代码中，Window 定义了资源 String2、String3 和 String4；StackPanel 定义了资源 String3 和 String4；而最后一个 Label 定义了资源 String4。
+在这段代码中，`Window` 定义了资源 `String2`、`String3` 和 `String4`；`StackPanel` 定义了资源 `String3` 和 `String4`；而最后一个 `Label` 定义了资源 `String4`。
 
-第一个 Label 使用了资源 String1。WPF 采样了逻辑树，在包含它的 StackPanel 或 Window 中没有找到名为 String1 的资源。它最终在 App.xaml 的应用程序资源字典中找到了该资源。
+第一个 `Label` 使用了资源 `String1`。WPF 采样了逻辑树，在包含它的 `StackPanel` 或 `Window` 中没有找到名为 `String1` 的资源。它最终在 `App.xaml` 的应用程序资源字典中找到了该资源。
 
-同样，第二个 Label 在 Window 的资源中找到了它的资源 String2，而第三个 Label 在 StackPanel 的资源中找到了它的资源 String3。
+同样，第二个 `Label` 在 `Window` 的资源中找到了它的资源 `String2`，而第三个 `Label` 在 `StackPanel` 的资源中找到了它的资源 `String3`。
 
-第四个 Label 略有不同，因为它定义了自己的 String4 资源。它的内容被设置为一个 StaticResource 对象，该对象提供了资源的键 String4。
+第四个 `Label` 略有不同，因为它定义了自己的 `String4` 资源。它的内容被设置为一个 `StaticResource` 对象，该对象提供了资源的键 `String4`。
 
 ## 缺失的属性
 
-在在下面的代码中，使用属性而不是 StaticResource 的内容是很有诱惑力的：
+在在下面的代码中，使用属性而不是 `StaticResource` 的内容是很有诱惑力的：
 
 ```xml
 <Label Content="{StaticResource String4}">
@@ -6343,17 +5527,17 @@ ResourceHierarchy
 </Label>
 ```
 
-遗憾的是，当 WPF 读取 Label 的 Content 属性时，Label 的资源字典尚未准备绪。Expression Blend 的 Window 设计器似乎能正确找到该值，但在运行时和 Visual Studio 设计器中，Label 无法找到它自己的资源，并向上逻辑树移动到 StackPanel 版本的 String4。
+遗憾的是，当 WPF 读取 `Label` 的 `Content` 属性时，`Label` 的资源字典尚未准备绪。Expression Blend 的 Window 设计器似乎能正确找到该值，但在运行时和 Visual Studio 设计器中，`Label` 无法找到它自己的资源，并向上逻辑树移动到 `StackPanel` 版本的 `String4`。
 
 ## 合并资源字典
 
-合并资源字典允许多个控件、窗口或应用程序共享相同的值。要合并字典，请创建一个以 ResourceDictionary 对象为根元素的 XML 文件。像处理 Window 一样给该元素添加命名空间属性，并将资源放在字典内部。
+合并资源字典允许多个控件、窗口或应用程序共享相同的值。要合并字典，请创建一个以 `ResourceDictionary` 对象为根元素的 XML 文件。像处理 `Window` 一样给该元素添加命名空间属性，并将资源放在字典内部。
 
 ## 准备就绪字典
 
-你可以将 Window 的命名空间声明复制并粘贴到资源字典中。Visual Studio 和 Expression Blend 可以添加带有默认命名空间声明的资源字典。在 Visual Studio 中，打开“项目”菜单，选择“新建项”命令，选择“资源字典”命令并点击“添加”。在 Expression Blend 中，打开“文件”菜单，选择“新建项”命令，选择“资源字典”项并点击“确定”。
+你可以将 `Window` 的命名空间声明复制并粘贴到资源字典中。Visual Studio 和 Expression Blend 可以添加带有默认命名空间声明的资源字典。在 Visual Studio 中，打开“项目”菜单，选择“新建项”命令，选择“资源字典”命令并点击“添加”。在 Expression Blend 中，打开“文件”菜单，选择“新建项”命令，选择“资源字典”项并点击“确定”。
 
-下面的代码显示了一个名为 RectangleResources.xaml 的资源字典。该文件定义了 MultiWindow 示例程序使用的资源（为了节省空间，我省略了一些资源）。
+下面的代码显示了一个名为 `RectangleResources.xaml` 的资源字典。该文件定义了 `MultiWindow` 示例程序使用的资源（为了节省空间，我省略了一些资源）。
 
 ```xml
 <ResourceDictionary
@@ -6369,9 +5553,9 @@ ResourceHierarchy
 </ResourceDictionary>
 ```
 
-MultiWindowResources
+`MultiWindowResources`
 
-下面的代码显示了 MultiWindow 程序如何使用此字典。Window XAML 文件使用了 ResourceDictionary.MergedDictionaries 元素，该元素包含了对字典文件的引用。
+下面的代码显示了 `MultiWindow` 程序如何使用此字典。`Window` XAML 文件使用了 `ResourceDictionary.MergedDictionaries` 元素，该元素包含了对字典文件的引用。
 
 ```xml
 <Window.Resources>
@@ -6383,7 +5567,7 @@ MultiWindowResources
 </Window.Resources>
 ```
 
-下面的代码显示了 Window 如何使用这些资源。此代码创建了一个引用外部字典中资源的 Rectangle。
+下面的代码显示了 `Window` 如何使用这些资源。此代码创建了一个引用外部字典中资源的 `Rectangle`。
 
 ```xml
 <Grid MouseDown="AddUser_MouseDown">
@@ -6406,29 +5590,31 @@ MultiWindowResources
 </Grid>
 ```
 
-MultiWindowResources
+`MultiWindowResources`
 
-MultiWindowResources 示例使用类似的代码在其四个窗口 中包含资源字典。由于每个表单都引用相同的资源，它们具有共同的外。如果你决定更改外观，只需修改资源字典，所有表单都会自动更新。
+`MultiWindowResources` 示例使用类似的代码在其四个窗口 中包含资源字典。由于每个表单都引用相同的资源，它们具有共同的外。如果你决定更改外观，只需修改资源字典，所有表单都会自动更新。
 
-图 12-8 显示了 MultiWindowResources 程序显示了几个类似按钮的表单。除了允许多个表单或应用程序共享资源外，合并字典允许单个窗口加载多个资源字典。如果你希望分开字典来存储资源组，这将非常有用。例如，你可能会分开字典来存储按钮资源、标签资源列表资源。
+图 12-8 显示了 `MultiWindowResources` 程序显示了几个类似按钮的表单。除了允许多个表单或应用程序共享资源外，合并字典允许单个窗口加载多个资源字典。如果你希望分开字典来存储资源组，这将非常有用。例如，你可能会分开字典来存储按钮资源、标签资源列表资源。
 
 ## 被覆盖的资源
 
 当程序加载资源字典时，它的值将覆盖从其他资源字典加载的同名资源，因此最后加载的值是控件使用的值。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_239_0.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_241_0.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_241_1.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_242_0.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_242_1.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_243_0.png)
 
+由于加载了 `ResRed.xml` 文件，该中的资源值具有优先级。图 12-9 显示了 `ResourceDictionaries` 程序使用了该资源字典中的值。
 
-
-
-由于加载了 ResRed.xml 文件，该中的资源值具有优先级。图 12-9 显示了 ResourceDictionaries 程序使用了该资源字典中的值。
-
-通过简单地切换这些资源字典的顺序，你就可以完全改变应用程序的外观。图 12-10 显示了 ResourceDictionaries 程序使用了 ResBlue.xaml 资源字典中的值。
+通过简单地切换这些资源字典的顺序，你就可以完全改变应用程序的外观。图 12-10 显示了 `ResourceDictionaries` 程序使用了 `ResBlue.xaml` 资源字典中的值。
 
 第 16 章中的“Skins”节解释了如何以类似的方式在运行时切换应用程序的外观。
 
@@ -6444,7 +5630,7 @@ MultiWindowResources 示例使用类似的代码在其四个窗口 中包含资�
 
 为止，本章只使用了静态资源。如果 WPF 遇到 XAML 文件，它会查找资源的值并将其赋值给当前正在读取的属性。一旦属性值被设置，WPF 就不会再次查找。
 
-这就是为什么本章较早“资源层次结构”节中描述的后续代码不起作用。属性 `Content="StaticResource String4"` 位于 Label 资源之前，当需要该资源时，资源尚未准备绪。
+这就是为什么本章较早“资源层次结构”节中描述的后续代码不起作用。属性 `Content="StaticResource String4"` 位于 `Label` 资源之前，当需要该资源时，资源尚未准备绪。
 
 ```xml
 <Label Content="StaticResource String4">
@@ -6458,7 +5644,7 @@ MultiWindowResources 示例使用类似的代码在其四个窗口 中包含资�
 
 动态资源与静态资源类似，不同在于它不是在第一次遇到时就读取。WPF 并不是立即设置属性的值，而是等待并在实际需要时再查找属性的值。
 
-例如，以下代码（使用 DynamicLabelResource 示例程序）可以正常工作。代码记录了 Content 使用资源值 `String4` 的事实，但在准备渲染 Label 之前不会查找值。到那时，资源已经存在了。
+例如，以下代码（使用 `DynamicLabelResource` 示例程序）可以正常工作。代码记录了 `Content` 使用资源值 `String4` 的事实，但在准备渲染 `Label` 之前不会查找值。到那时，资源已经存在了。
 
 ```xml
 <Label Content="DynamicResource String4">
@@ -6480,17 +5666,19 @@ MultiWindowResources 示例使用类似的代码在其四个窗口 中包含资�
 </Label>
 ```
 
-DynamicLabelResource
+`DynamicLabelResource`
 
-对于 WPF 来说，实现动态资源比实现静态资源要得多；因此，通常情况下，在可行的情况下最好使用静态资源。在上一个示例中，你可以在 Label 的容器而不是 Label 中使用 `String4` 资源。这样你就可以使用静态资源而不是动态资源了。
+对于 WPF 来说，实现动态资源比实现静态资源要得多；因此，通常情况下，在可行的情况下最好使用静态资源。在上一个示例中，你可以在 `Label` 的容器而不是 `Label` 中使用 `String4` 资源。这样你就可以使用静态资源而不是动态资源了。
 
-除了延迟查找外，WPF 还准备了动态资源，以便能够检测其值的变化。例如，如果上一个示例中的资源 `String` 在程序运行时发生了变化，WPF 将检测到该变化并更新 Label 以显示新值。
+除了延迟查找外，WPF 还准备了动态资源，以便能够检测其值的变化。例如，如果上一个示例中的资源 `String` 在程序运行时发生了变化，WPF 将检测到该变化并更新 `Label` 以显示新值。
 
 这种检测能力通常用于系统定义的资源，如系统颜色。如果用户打开系统配置应用程序并更改系统颜色，程序会自动重新加载任何修改过的资源。
 
-SimpleClock 示例演示了两种变化的资源——由程序更改的资源和更改的系统颜色。
+`SimpleClock` 示例演示了两种变化的资源——由程序更改的资源和更改的系统颜色。
 
-程序使用以下资源声明创建一个名为 TimeNow 的简单字符串：
+程序使用以下资源声明创建一个名为 `TimeNow` 的简单字符串：
+
+
 
 ```xml
 <Window.Resources>
@@ -6498,7 +5686,7 @@ SimpleClock 示例演示了两种变化的资源——由程序更改的资源�
 </Window.Resources>
 ```
 
-它随后使用以下代码定义两个 Label：
+它随后使用以下代码定义两个 `Label`：
 
 ```xml
 <Label Margin="5" HorizontalAlignment="Stretch"
@@ -6530,9 +5718,9 @@ Content={DynamicResource TimeNow}"/>
 
 ## 动态资源 | SimpleClock
 
-SimpleClock 示例演示了两种变化的资源——由程序更改的资源和更改的系统颜色。
+`SimpleClock` 示例演示了两种变化的资源——由程序更改的资源和更改的系统颜色。
 
-程序使用以下资源声明创建一个名为 TimeNow 的简单字符串：
+程序使用以下资源声明创建一个名为 `TimeNow` 的简单字符串：
 
 ```xml
 <Window.Resources>
@@ -6540,10 +5728,11 @@ SimpleClock 示例演示了两种变化的资源——由程序更改的资源�
 </Window.Resources>
 ```
 
-它随后使用以下代码定义两个 Label：
+它随后使用以下代码定义两个 `Label`：
+
 （代码如上所示）
 
-SimpleClock 使用以下逻辑：
+`SimpleClock` 使用以下逻辑：
 
 ```csharp
 public Window()
@@ -6564,30 +5753,27 @@ private void Update(object sender, EventArgs e)
 }
 ```
 
-
-
-
 # 13
 
 ## 样式与属性触发器
 
-第 12 章解释了资源（resources）——即分配给控件的命名属性值，用于赋予它们共同的外观和行为。
+第 12 章解释了资源 `resources`——即分配给控件的命名属性值，用于赋予它们共同的外观和行为。
 
 不幸的是，资源通常会导致代码冗长且复杂。如果一组控件共享许多属性值，那么将这些属性转换为资源就需要使用冗长的 `StaticResource` 或 `DynamicResource` 关键字进行大量重复。
 
-样式（Style）是一种特殊的资源，它允许你提取这些冗余并对其进行个性化，就像其他方式允许你对属性值进行个性化一样。样式允许你定义一组属性值，并一次性应用于控件，而不是一个接一个为控件应用单个资源值。
+样式 `Style` 是一种特殊的资源，它允许你提取这些冗余并对其进行个性化，就像其他方式允许你对属性值进行个性化一样。样式允许你定义一组属性值，并一次性应用于控件，而不是一个接一个为控件应用单个资源值。
 
 本章将解释样式，并展示如何使用它们来为控件提供相似的外观和行为。
 
-## 简化属性
+### 简化属性
 
-资源让一组控件具有一致的外观变得更容易。图 13-1 中的 `ButtonValues`示例程序显示了五个包含文本的类按钮矩形。它单独设置了每个按钮的属性，因此修改代码是重复的且有些复杂的。如果你不以相同的方式更改每个按钮的代码，它们将不再具有共同的外观。
+资源让一组控件具有一致的外观变得更容易。图 13-1 中的 `ButtonValues` 示例程序显示了五个包含文本的类按钮矩形。它单独设置了每个按钮的属性，因此修改代码是重复的且有些复杂的。如果你不以相同的方式更改每个按钮的代码，它们将不再具有共同的外观。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_250_0.png)
 
 图 13-1
 
-`ButtonResources`示例程序使用资源来显示一组相似的按钮。资源使得可以一次更改所有按钮的外观，但代码冗长且混乱。
+`ButtonResources` 示例程序使用资源来显示一组相似的按钮。资源使得可以一次更改所有按钮的外观，但代码冗长且混乱。
 
 以下代码显示了程序如何定义其资源：
 
@@ -6623,9 +5809,9 @@ private void Update(object sender, EventArgs e)
 </Resources>
 ```
 
-ButtonResources
+`ButtonResources`
 
-以下代码显示了 `ButtonResources` 程序如何定义其 File 按钮。其他按钮也类似：
+以下代码显示了 `ButtonResources` 程序如何定义其 `File` 按钮。其他按钮也类似：
 
 ```
 <-- File --
@@ -6650,17 +5836,17 @@ ButtonResources
 </Grid>
 ```
 
-虽然资源让修改所有按钮的外观变得更容易，但它们可能会导致代码冗长且混乱。因为所有按钮具有相同的基础外观，代码中包含了大量冗余，每个 `Button` 的代码都重复了 Width、Height、Margin、Fill 等其他属性。
+虽然资源让修改所有按钮的外观变得更容易，但它们可能会导致代码冗长且混乱。因为所有按钮具有相同的基础外观，代码中包含了大量冗余，每个 `Button` 的代码都重复了 `Width`、`Height`、`Margin`、`Fill` 等其他属性。
 
-样式将一组作为整体设置的属性值集合在一起。它始于资源字典中的一个 Style 元素。根据你希望它的作用范围大小，可以将样式放在任何资源字典中。例如，如果你想让样式对整个项目可见，请将其放在 App.xaml 文件的 `Application.Resources` 部分；如果你想让样式对某个控件可见，请将其放在 `Window.Resources` 部分；如果你只想让它对 `StackPanel` 内部的控件可见，请将其放在 `StackPanel.Resources` 部分。
+样式将一组作为整体设置的属性值集合在一起。它始于资源字典中的一个 `Style` 元素。根据你希望它的作用范围大小，可以将样式放在任何资源字典中。例如，如果你想让样式对整个项目可见，请将其放在 `App.xaml` 文件的 `Application.Resources` 部分；如果你想让样式对某个控件可见，请将其放在 `Window.Resources` 部分；如果你只想让它对 `StackPanel` 内部的控件可见，请将其放在 `StackPanel.Resources` 部分。
 
-## 样式范围
+### 样式范围
 
-假设你有一个包含一组 Labels 的 Grid。你可以使用在 `Window.Resources` 中定义的样式来赋予它们相似的外观，但如果你想给另一个 Grid 中的其他 Labels 赋予不同的外观，可能会导致问题。在这种情况下，你必须定义多个样式（命名的未命名的），这将使代码变得复杂。
+假设你有一个包含一组 `Labels` 的 `Grid`。你可以使用在 `Window.Resources` 中定义的样式来赋予它们相似的外观，但如果你想给另一个 `Grid` 中的其他 `Labels` 赋予不同的外观，可能会导致问题。在这种情况下，你必须定义多个样式（命名的未命名的），这将使代码变得复杂。
 
 最好在完成工作的同时，给样式尽可能有限的范围。使用未命名的样式来简化代码。
 
-样式可以有一个 `x:Key` 属性来命名，并有一个 `TargetType` 属性来指定适用的控件类型。在 Style 元素内部，`Setter` 和 `EventSetter` 分别定义属性值和事件处理器。`Setter` 设置属性的值，它接受两个属性——Property 和 Value，即要设置的属性以及它应该持有的值。Value 可以是一个简单值如 Red，也可以是一个指定了更复杂内容的元素。
+样式可以有一个 `x:Key` 属性来命名，并有一个 `TargetType` 属性来指定适用的控件类型。在 `Style` 元素内部，`Setter` 和 `EventSetter` 分别定义属性值和事件处理器。`Setter` 设置属性的值，它接受两个属性——`Property` 和 `Value`，即要设置的属性以及它应该持有的值。`Value` 可以是一个简单值如 `Red`，也可以是一个指定了更复杂内容的元素。
 
 ```
 <Style xKey="RedRectStyle" TargetType="Rectangle">
@@ -6679,9 +5865,9 @@ ButtonResources
 </Style>
 ```
 
-你可以像使用其他资源一样使用样式。只需将 "Style" 设置为样式的键即可。
+你可以像使用其他资源一样使用样式。只需将 `Style` 设置为样式的键即可。
 
-RedRectangles示例程序使用以下代码显示三个使用 RedRectStyle 的矩形：
+`RedRectangles` 示例程序使用以下代码显示三个使用 `RedRectStyle` 的矩形：
 
 ```
 <StackPanel Orientation="Horizontal">
@@ -6693,25 +5879,22 @@ RedRectangles示例程序使用以下代码显示三个使用 RedRectStyle 的�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_253_0.png)
 
-注意这个样式如何简化了内容。如果没有样式，每个 Rectangle 都需要自己的 Stroke、StrokeThickness、Width、Height、Margin 和 Fill 属性。
+注意这个样式如何简化了内容。如果没有样式，每个 `Rectangle` 都需要自己的 `Stroke`、`StrokeThickness`、`Width`、`Height`、`Margin` 和 `Fill` 属性。
 
-## 所有类型
+### 所有类型
 
-x:Type 扩展允许你将类型传递到 TargetType 等属性中。例如，以下两个 Style 标签的作用相同：
+`x:Type` 扩展允许你将类型传递到 `TargetType` 等属性中。例如，以下两个 `Style` 标签的作用相同：
 
 ```
 <Style x:Key="RedRectStyle" TargetType="Rectangle">
 <Style x:Key="RedRectStyle" TargetType="(x:Type Rectangle)"
 ```
 
-有时你可能需要使用 x:Type 语法将类型名称传递到无法从简单字符串转换为类型对象的属性中，但到目前为止，我一直能够使用更简单的语法。
+有时你可能需要使用 `x:Type` 语法将类型名称传递到无法从简单字符串转换为类型对象的属性中，但到目前为止，我一直能够使用更简单的语法。
 
+图 13-2 显示了 `RedRectangles` 程序的运行情况。
 
-
-
-图 13-2 显示了 RedRectangles程序的运行情况。
-
-ButtonStyles 示例程序显示了类似于 ButtonValues 和 ButtonResources 程序中显示的按钮状圆角（参见图 13-1），但它使用了样式（styles）来简化代码。该程序对其 Grid、Rectangle 和 TextBlock 控件使用了以下 XAML：
+`ButtonStyles` 示例程序显示了类似于 `ButtonValues` 和 `ButtonResources` 程序中显示的按钮状圆角（参见图 13-1），但它使用了样式 `styles` 来简化代码。该程序对其 `Grid`、`Rectangle` 和 `TextBlock` 控件使用了以下 XAML：
 
 ```
 <Resources>
@@ -6757,9 +5940,9 @@ ButtonStyles 示例程序显示了类似于 ButtonValues 和 ButtonResources 程
 
 图 13-2
 
-样式定义包含在 Window.Resources 元素中与其他资源定义一起。该程序包含了与 ButtonResources 程序使用的类似的资源定义（Width、Height、RadiusX、FontFamily 等），但为了节省空间，此处未显示。
+样式定义包含在 `Window.Resources` 元素中与其他资源定义一起。该程序包含了与 `ButtonResources` 程序使用的类似的资源定义（`Width`、`Height`、`RadiusX`、`FontFamily` 等），但为了节省空间，此处未显示。
 
-以下代码显示了 ButtonStyles 程序如何使用这些样式来显示其 File 按钮：
+以下代码显示了 `ButtonStyles` 程序如何使用这些样式来显示其 `File` 按钮：
 
 ```
 <!-- File
@@ -6770,15 +5953,17 @@ ButtonStyles 示例程序显示了类似于 ButtonValues 和 ButtonResources 程
 </Grid>
 ```
 
-ButtonStyles
+`ButtonStyles`
 
-这个版本比上一个短得多，与 ButtonResources 程序使用的 21 行代码（不计注释）相比，仅使用了 6 行代码。
+这个版本比上一个短得多，与 `ButtonResources` 程序使用的 21 行代码（不计注释）相比，仅使用了 6 行代码。
 
-这个版本也更容易理解。例如，Grid 的代码使用了 btnGridStyle，它定义了任何对 Grid 的适当属性。当你阅读这段代码时，你真的不需要知道那些值是什么，只需要知道它们对 Grid 来说是有意义的。这让你能够专注于 Grid、Rectangle 和 TextBlock 的布局，而不会被属性值分散注意力。
+这个版本也更容易理解。例如，`Grid` 的代码使用了 `btnGridStyle`，它定义了任何对 `Grid` 的适当属性。当你阅读这段代码时，你真的不需要知道那些值是什么，只需要知道它们对 `Grid` 来说是有意义的。这让你能够专注于 `Grid`、`Rectangle` 和 `TextBlock` 的布局，而不会被属性值分散注意力。
 
-ButtonStyles 程序显示五个函数，因此代码行数和复杂性的节省累积成多。按钮定义代码仅占 30 行，而 ButtonResources 程序占了 105 行。
+`ButtonStyles` 程序显示五个函数，因此代码行数和复杂性的节省累积成多。按钮定义代码仅占 30 行，而 `ButtonResources` 程序占了 105 行。
 
 ## 编程旁插
+
+
 
 当你使用 C# 或 Visual Basic 编写 Windows Forms 程序时，Visual Studio 允许你在设计时设置控件属性，因此你的代码只需要处理在运行时更改的属性。
 
@@ -6792,13 +5977,13 @@ ButtonStyles 程序显示五个函数，因此代码行数和复杂性的节省�
 
 ## 键和目标类型
 
-元素的 x:Key 和 TargetType 属性有助于识别何时以及何地可以使用样式。至少有三种特别有趣且实用的使用这些属性的方法：非特定目标类型、多个目标类型和未命样式。
+元素的 `x:Key` 和 `TargetType` 属性有助于识别何时以及何地可以使用样式。至少有三种特别有趣且实用的使用这些属性的方法：非特定目标类型、多个目标类型和未命样式。
 
-## 非特定目标类型
+### 非特定目标类型
 
-TargetType 决定了你可以使用样式的控件级别。虽然你需要以某种方式提供此信息，但不一定需要具体的。
+`TargetType` 决定了你可以使用样式的控件级别。虽然你需要以某种方式提供此信息，但不一定需要具体的。
 
-例如，由于样式的 TargetType 被设置为 Button，因此两个按钮都可以此样式：
+例如，由于样式的 `TargetType` 被设置为 `Button`，因此两个按钮都可以此样式：
 
 ```
 <Style Key="OrangeButtonStyle" TargetType="Button">
@@ -6807,13 +5992,13 @@ TargetType 决定了你可以使用样式的控件级别。虽然你需要以某
 </Style>
 ```
 
-OrangeStyle
+`OrangeStyle`
 
-但如果你想将该样式用于 Label，则需要创建第二个样式。如果你以后更改了样式的属性，你需要更新两个样式。
+但如果你想将该样式用于 `Label`，则需要创建第二个样式。如果你以后更改了样式的属性，你需要更新两个样式。
 
-另一种方法是将 TargetType 设置为两个控件共同祖先的类。Button 和 Label 都继承自 Control，所以如果你将 TargetType 设置为 Control，该样式就可以应用于两者。
+另一种方法是将 `TargetType` 设置为两个控件共同祖先的类。`Button` 和 `Label` 都继承自 `Control`，所以如果你将 `TargetType` 设置为 `Control`，该样式就可以应用于两者。
 
-以下代码显示了新样式，它包含了之前的 Setters 以及针对 Label 属性的 Setter：
+以下代码显示了新样式，它包含了之前的 Setters 以及针对 `Label` 属性的 Setter：
 
 ```
 <Style Key="OrangeStyle" TargetType="Control">
@@ -6825,7 +6010,7 @@ OrangeStyle
 </Style>
 ```
 
-到目前为止良好，但如果你想为一个没有这些属性的控件指定值呢？例如，Label 有 BorderBrush 和 BorderThickness 属性。Button 没有这些属性，因此你需要将它们添加到样式中。幸运的是，控件会忽略它任何不理解的属性。
+到目前为止良好，但如果你想为一个没有这些属性的控件指定值呢？例如，`Label` 有 `BorderBrush` 和 `BorderThickness` 属性。`Button` 没有这些属性，因此你需要将它们添加到样式中。幸运的是，控件会忽略它任何不理解的属性。
 
 以下代码显示了新样式：
 
@@ -6841,7 +6026,7 @@ OrangeStyle
 </Style>
 ```
 
-图 13-3 所示的 ControlExample 使用以下代码显示两个按钮和一个 Label。上方的按钮使用 OrangeButtonStyle；下方的按钮和 Label 都使用 OrangeStyle。
+图 13-3 所示的 `ControlExample` 使用以下代码显示两个按钮和一个 `Label`。上方的按钮使用 `OrangeButtonStyle`；下方的按钮和 `Label` 都使用 `OrangeStyle`。
 
 ```
 <StackPanel VerticalAlignment="Center">
@@ -6851,23 +6036,19 @@ OrangeStyle
 </StackPanel>
 ```
 
-## 多个目标类型
+### 多个目标类型
 
-上一节介绍了如何通过将样式的 TargetType 设置为共同祖先类来构建可以影响两个控件类型（Button 和 Label）的样式。（Button 和 Label 都继承自 Control。）
+上一节介绍了如何通过将样式的 `TargetType` 设置为共同祖先类来构建可以影响两个控件类型（`Button` 和 `Label`）的样式。`Button` 和 `Label` 都继承自 `Control`。
 
-但如果你还想让样式影响 Rectangle：Button 和 Label 有 Control 类共同祖先，但 Rectangle 继承自 Shape 类而不是 Control。如果你在继承层次结构向上爬一点，你会发现 Control 和 Shape 都继承自 FrameworkElement，所以你可能认为自己自由了。你可以简单创建一个 TargetType 为 FrameworkElement 的样式并按 usual构建 Setter。
+但如果你还想让样式影响 `Rectangle`：`Button` 和 `Label` 有 `Control` 类共同祖先，但 `Rectangle` 继承自 `Shape` 类而不是 `Control`。如果你在继承层次结构向上爬一点，你会发现 `Control` 和 `Shape` 都继承自 `FrameworkElement`，所以你可能认为自己自由了。你可以简单创建一个 `TargetType` 为 `FrameworkElement` 的样式并按 usual构建 Setter。
 
-但遗憾的是，FrameworkElement 不支持所有属性。例如，如果你尝试将样式的 TargetType 更改为 FrameworkElement，Expression Blend 会 Background、Foreground、BorderBrush 和 BorderThickness 属性上标记错误。
+但遗憾的是，`FrameworkElement` 不支持所有属性。例如，如果你尝试将样式的 `TargetType` 更改为 `FrameworkElement`，Expression Blend 会 `Background`、`Foreground`、`BorderBrush` 和 `BorderThickness` 属性上标记错误。
 
-问题在于 Button、Label 和 Rectangle 的第一个共同祖先不支持你想要使用的所有属性。幸运的是，还有另一种方法来指定提供样式属性的对象。
+问题在于 `Button`、`Label` 和 `Rectangle` 的第一个共同祖先不支持你想要使用的所有属性。幸运的是，还有另一种方法来指定提供样式属性的对象。
 
-不要在 Style 元素的 TargetType 属性中指示类，而是在 Setter 的 Property 属性中指示它。
+不要在 `Style` 元素的 `TargetType` 属性中指示类，而是在 `Setter` 的 `Property` 属性中指示它。
 
-
-
-
-
-以下样式与之前的相似，但它使用了这种新技术来增加对 Rectangle（矩）控件的支持（并更改了某些 setter（设置器）属性）：
+以下样式与之前的相似，但它使用了这种新技术来增加对 `Rectangle`（矩）控件的支持（并更改了某些 setter（设置器）属性）：
 
 ```xml
 <Style x:Key="VioletStyle">
@@ -6884,11 +6065,11 @@ OrangeStyle
 </Style>
 ```
 
-LabelAndRectStyle
+`LabelAndRectStyle`
 
-FrameworkElement 类提供了 Width 和 Height 属性，以及该类对应的 Setters。由于 Control 类支持 Background、Foreground 和 Margin，因此用于 Label 和 Rectangle 属性的 Setters 引用了这些类。
+`FrameworkElement` 类提供了 `Width` 和 `Height` 属性，以及该类对应的 Setters。由于 `Control` 类支持 `Background`、`Foreground` 和 `Margin`，因此用于 `Label` 和 `Rectangle` 属性的 Setters 引用了这些类。
 
-图 13-4 显示的 LabelAndRectExample 程序使用以下代码绘制了一个按钮、一个标签和一个矩形，它们都使用共同的公共样式：
+图 13-4 显示的 `LabelAndRectExample` 程序使用以下代码绘制了一个按钮、一个标签和一个矩形，它们都使用共同的公共样式：
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_258_0.png)
 
@@ -6903,13 +6084,13 @@ HorizontalAlignment="Center" VerticalAlignment="Center">
 </StackPanel>
 ```
 
-LabelAndRectStyle
+`LabelAndRectStyle`
 
-## 未命名样式
+### 未命名样式
 
 在之前描述的所有样式中，元素通过 `x:Key` 属性引入以给出一个样式名称。控件使用 `StaticResource` 关键字来引用该名称。
 
-相比之下，如果你省略了该属性和 TargetType，则生成的无命名样式将应用于样式作用范围内的所有 TargetType 控件。例如，以下 Style 适用于样式作用范围内的每个 Button，因此每个 Button 都有黄色背景和红色前景色：
+相比之下，如果你省略了该属性和 `TargetType`，则生成的无命名样式将应用于样式作用范围内的所有 `TargetType` 控件。例如，以下 `Style` 适用于样式作用范围内的每个 `Button`，因此每个 `Button` 都有黄色背景和红色前景色：
 
 ```xml
 <Style TargetType="Button">
@@ -6918,23 +6099,26 @@ LabelAndRectStyle
 </Style>
 ```
 
-## 聪明的类
+### 聪明的类
 
-Setters 的 property 属性中使用的类必须支持它们的属性，但样式并不要求使用它们的控件必须来自该类。
+`Setters` 的 `property` 属性中使用的类必须支持它们的属性，但样式并不要求使用它们的控件必须来自该类。
 
-例如，之前的样式设置了 FrameworkElement.Width 和 FrameworkElement.Height 属性。FrameworkElement 类拥有 Width 和 Height 属性，因此 WPF 可以使用其定义来理解如何设置这些值。如果你将 Width 属性更改为 Red（红色），WPF 将报错，因为 FrameworkElement.Width 不能为颜色。
+例如，之前的样式设置了 `FrameworkElement.Width` 和 `FrameworkElement.Height` 属性。`FrameworkElement` 类拥有 `Width` 和 `Height` 属性，因此 WPF 可以使用其定义来理解如何设置这些值。如果你将 `Width` 属性更改为 `Red`（红色），WPF 将报错，因为 `FrameworkElement.Width` 不能为颜色。
 
-虽然该类定义了属性，但样式并不要求使用它的控件拥有这些类。在这个示例中，如果你将 FrameworkElement 更改为 Button，样式仍然可以工作。Button 类也拥有 Width 和 Height 属性，因此它可以定义它们；Label 和 Rectangle 仍然可以使用这些属性，尽管它们并不是 Button 的后代类。
+虽然该类定义了属性，但样式并不要求使用它的控件拥有这些类。在这个示例中，如果你将 `FrameworkElement` 更改为 `Button`，样式仍然可以工作。`Button` 类也拥有 `Width` 和 `Height` 属性，因此它可以定义它们；`Label` 和 `Rectangle` 仍然可以使用这些属性，尽管它们并不是 `Button` 的后代类。
 
-事实上，如果你回看样式的定义和图 13-4 中的结果，你会发现 Rectangle 使用与 Button 和 Rectangle 相同的 Margin 值，即使该属性是用 Control 类指定的，而 Rectangle 并不是 Control 的后代。
+事实上，如果你回看样式的定义和图 13-4 中的结果，你会发现 `Rectangle` 使用与 `Button` 和 `Rectangle` 相同的 `Margin` 值，即使该属性是用 `Control` 类指定的，而 `Rectangle` 并不是 `Control` 的后代。
 
 这个故事的道理是，使用哪种类并不重要——只要它们定义了这些属性即可。
 
-图 13-5 显示的 UnnamedStyles 程序定义了四个无命名样式。列表描述了它们为所属类设置的样式：
+图 13-5 显示的 `UnnamedStyles` 程序定义了四个无命名样式。列表描述了它们为所属类设置的样式：
 
- - Width = 100, Height = 100, Stretch = Uniform, BitmapFactory = drop shadow（投影投影）
+- Width = 100, Height = 100, Stretch = Uniform, BitmapFactory = drop shadow（投影投影）
+
 - Label - FontFamily = Comic Sans MS, FontSize = 18, FontWeight = bold（粗体），HorizontalAlignment = center, BitmapFactory = light blue outer（浅蓝色外）
+
 - Button - FontFamily = Arial, FontSize = 12, Height = 20, Background = blue and white linear gradient
+
 - StackPanel — Margin = S
 
 以下代码显示了程序如何定义图片的样式。你可以从网站下载示例以查看如何定义其他样式。
@@ -6954,9 +6138,9 @@ Setters 的 property 属性中使用的类必须支持它们的属性，但样�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_260_0.png)
 
-所有样式都定义在 XAML 代码的 Window.Resources 部分，因此它们适用于窗口上的每个控件。
+所有样式都定义在 XAML 代码的 `Window.Resources` 部分，因此它们适用于窗口上的每个控件。
 
-由于有了这些样式，程序只需创建 Images、Buttons、Labels 和 StackPanel，并让样式生效即可。
+由于有了这些样式，程序只需创建 `Images`、`Buttons`、`Labels` 和 `StackPanel`，并让样式生效即可。
 
 以下代码段显示了程序如何创建它的前两组控件。其他的控件定义方式类似。
 
@@ -6975,51 +6159,57 @@ Setters 的 property 属性中使用的类必须支持它们的属性，但样�
 
 可在 W.com 下载。
 
-## 带有作用范围的样式
+### 带有作用范围的样式
 
-无命名样式应用于其 TargetType 的所有对象，但仅限于其作用范围。如果你想修改整个应用程序中的每个 Label，请在 Application.Resources 中定义样式。如果你想修改窗口中的 Label，在 Window.Resources 中定义样式。如果你想修改 Grid、StackPanel 或容器中的 Label，请在相应的 Resources（Grid.Resources、StackPanel.Resources 等）中定义样式。
+无命名样式应用于其 `TargetType` 的所有对象，但仅限于其作用范围。如果你想修改整个应用程序中的每个 `Label`，请在 `Application.Resources` 中定义样式。如果你想修改窗口中的 `Label`，在 `Window.Resources` 中定义样式。如果你想修改 `Grid`、`StackPanel` 或容器中的 `Label`，请在相应的 `Resources`（`Grid.Resources`、`StackPanel.Resources` 等）中定义样式。
 
-## 属性值优先级
+### 属性值优先级
 
-书中的大多数示例都以直接、无歧的方式设置属性值。例如，UnnamedStyles 使用无命名样式设置属性值。它设置了其他几个属性（例如，Button 或 Label 的 Content），但它没有在样式和元素属性中设置相同的属性。
+书中的大多数示例都以直接、无歧的方式设置属性值。例如，`UnnamedStyles` 使用无命名样式设置属性值。它设置了其他几个属性（例如，`Button` 或 `Label` 的 `Content`），但它没有在样式和元素属性中设置相同的属性。
 
 事实上，有许多方法可以为相同的属性设置值。如果你以多种方式设置了属性值，WPF 将使用属性优先级来决定使用哪个值。例如，如果你在样式中设置了属性值，同时在控件属性中设置了它，则属性中的值具有优先级。
 
 以下列表显示了属性值应用于控件的部分排序。你可以认为这些值是顺序应用的的，因此较晚的优先级更高，并覆盖前面的值。
 
-- 1. 容器继承——控件可能会从其容器继承属性。例如，如果 Window 定义了 FontFamily，那么窗口内的 Labels 就会继承该字体。（注意，某些控件会阻止属性继承。）
-- 2. 默认样式——默认样式定义控件的“自然”外观，除非你通过设置其他属性来修改。例如，Buttons 有典型的默认外观，除非你覆盖它。
-- 3. 无命名样式——无命名样式优先级高于默认样式。如果有多个无命名样式应用于控件，则作用范围最小的具有优先级。例如，假设一个 Window 包含一个 Grid 都都了无无命名样式。Grid 内的 Label 将使用 Grid 的版本。
+- 1. 容器继承——控件可能会从其容器继承属性。例如，如果 `Window` 定义了 `FontFamily`，那么窗口内的 `Labels` 就会继承该字体。（注意，某些控件会阻止属性继承。）
+
+- 2. 默认样式——默认样式定义控件的“自然”外观，除非你通过设置其他属性来修改。例如，`Buttons` 有典型的默认外观，除非你覆盖它。
+
+- 3. 无命名样式——无命名样式优先级高于默认样式。如果有多个无命名样式应用于控件，则作用范围最小的具有优先级。例如，假设一个 `Window` 包含一个 `Grid` 都都了无无命名样式。`Grid` 内的 `Label` 将使用 `Grid` 的版本。
 
 > 样式不妥协
+
 如果两个样式为不同的属性设置值，则它们不共享控件的属性。其中一个样式将设置控件的属性，另一个则没有影响。
+
 如果两个无命名样式应用于控件，则作用范围更小的那个具有唯一控制权。
+
 - 4. 命名样式——命名样式的优先级高于无命名样式。与无命名样式一样，如果有多个命名样式应用于控件，则作用范围最小的具有优先级。
+
 - 5. 本地值——通过属性属性或属性元素语法设置的属性值，其优先级高于之前的所有类型值。
-- 6. 激活动画——如果动画正在运行，它可能会修改当前的属性值。（第 14 章详细介绍了动画。）
 
+- 6. 激活动画——如果动画正在运行，它可能会修改当前的属性值。第 14 章详细介绍了动画。
 
+此列表并未涵盖属性值可能更改的所有方式，但它涵盖了最直观和实用的方式。其他方式超出了本章的范围。关于属性值优先级的更多信息，请参阅微软的“依赖属性值优先级” `Dependency Property Value Precedence` 网页 `mdn.microsoft.com/ms743230.aspx`。
 
+### 无样式 (NO STYLE)
 
-此列表并未涵盖属性值可能更改的所有方式，但它涵盖了最直观和实用的方式。其他方式超出了本章的范围。关于属性值优先级的更多信息，请参阅微软的“依赖属性值优先级”（Dependency Property Value Precedence）网页 mdn.microsoft.com/ms743230.aspx。
-
-## 无样式 (NO STYLE)
-
-假设你定义了一个无名的样式，但不想让该样式应用于特定类型的控件。此时，你可以将 Style 设置为特殊值 (x:Null)，以表示它不应该有任何样式。例如，以下代码创建了一个没有样式的 Label：
+假设你定义了一个无名的样式，但不想让该样式应用于特定类型的控件。此时，你可以将 `Style` 设置为特殊值 `x:Null`，以表示它不应该有任何样式。例如，以下代码创建了一个没有样式的 `Label`：
 
 ```xml
 <Label Style="x:Null" Content="Test" />
 ```
 
-## 样式继承 (STYLE INHERITANCE)
+### 样式继承 (STYLE INHERITANCE)
 
 你将相同的属性值应用到多个控件的资源。样式允许你将资源分组包，从而更容易地为控件提供共同的外观。
 
 样式继承允许你基于另一个样式构建一个样式。这使得为控件提供共同外观变得更加容易，即使它们没有共享相同的最终样式。
 
-子元素继承父样式定义的所有 Setters 和其他值。然后，你可以根据需要覆盖其中的某些值。
+子元素继承父样式定义的所有 `Setters` 和其他值。然后，你可以根据需要覆盖其中的某些值。
 
-要让一个样式继承另一个样式，请在其起始元素上添加 `BasedOn` 属性，并将该属性的值设置为父 Style。注意，Style 是在资源字典中定义的对象，因此你应该使用 `StaticResource` 语句来设置它。
+
+
+要让一个样式继承另一个样式，请在其起始元素上添加 `BasedOn` 属性，并将该属性的值设置为父 `Style`。注意，`Style` 是在资源字典中定义的对象，因此你应该使用 `StaticResource` 语句来设置它。
 
 例如，以下代码为样式定义了两个渐变画刷：
 
@@ -7069,27 +6259,27 @@ Setters 的 property 属性中使用的类必须支持它们的属性，但样�
 
 代码定义了一个名为 `GreenBrush` 的线性渐变画刷，它从绿色渐变到青绿色再到透明。它还创建了一个名为 `BlueBrush` 的画刷，它从蓝色渐变到白色。
 
-接下来的代码为 Rectangle 定义了一个无名样式。它基于 `SizeStyle`，并设置了尺寸和对齐属性。新样式为 Rectangle 的属性 `Fill`（使用 `BlueBrush` 资源）、`RadiusX` 和 `RadiusY` 添加了值。
+接下来的代码为 `Rectangle` 定义了一个无名样式。它基于 `SizeStyle`，并设置了尺寸和对齐属性。新样式为 `Rectangle` 的属性 `Fill`（使用 `BlueBrush` 资源）、`RadiusX` 和 `RadiusY` 添加了值。
 
-随后代码段定义了 Label 的无名样式。该样式继承了 `SizeStyle` 的大小和对齐属性，并添加了一个新的 `FontWeight` Setter。
+随后代码段定义了 `Label` 的无名样式。该样式继承了 `SizeStyle` 的大小和对齐属性，并添加了一个新的 `FontWeight` `Setter`。
 
-最后，代码定义了 Button 的无名样式。该样式设置了 `Background`、`Margin` 和 `FontWeight` 属性。在此中，无名的 Button 覆盖了它从 `SizeStyle` 继承的 `Margin` 和 `Width` 值。
+最后，代码定义了 `Button` 的无名样式。该样式设置了 `Background`、`Margin` 和 `FontWeight` 属性。在此中，无名的 `Button` 覆盖了它从 `SizeStyle` 继承的 `Margin` 和 `Width` 值。
 
-图 13-6 所示的 InheritedStyles 示例使用了这些样式在 Grid 顶部显示 Rectangle、Label 和 Button。Rectangle 太大无法放入 Grid 单元格，因此它们的圆角在顶部被截断了。Button 使用了 `GreenBrush` 背景，因此它们从绿色渐变到透明，允许窗口的浅绿色背景在它们的右边缘显示出来。
+图 13-6 所示的 `InheritedStyles` 示例使用了这些样式在 `Grid` 顶部显示 `Rectangle`、`Label` 和 `Button`。`Rectangle` 太大无法放入 `Grid` 单元格，因此它们的圆角在顶部被截断了。`Button` 使用了 `GreenBrush` 背景，因此它们从绿色渐变到透明，允许窗口的浅绿色背景在它们的右边缘显示出来。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_263_0.png)
 
 图 13-6
 
-在此示例中，无名的 Rectangle 和 Label 样式从 `SizeStyle` 继承了定位属性，因此它们对齐正常。
+在此示例中，无名的 `Rectangle` 和 `Label` 样式从 `SizeStyle` 继承了定位属性，因此它们对齐正常。
 
-注意，你只能使用 TargetType 为新样式基类的另一个样式来作为基类。例如，在上一个示例中，无名的 Rectangle、Label 和 Button 样式都是基于 TargetType 为 `FrameworkElement` 的样式。这之所以有效，是因为 Rectangle、Label 和 Button 都继承自 `FrameworkElement`。
+注意，你只能使用 `TargetType` 为新样式基类的另一个样式来作为基类。例如，在上一个示例中，无名的 `Rectangle`、`Label` 和 `Button` 样式都是基于 `TargetType` 为 `FrameworkElement` 的样式。这之所以有效，是因为 `Rectangle`、`Label` 和 `Button` 都继承自 `FrameworkElement`。
 
-相比之下，你不能将 Button 样式基于 Label 样式，因为 Button 并不继承自 Label。
+相比之下，你不能将 `Button` 样式基于 `Label` 样式，因为 `Button` 并不继承自 `Label`。
 
 ## 混合继承 (MIXED ANCESTRY)
 
-然而，例如，以下代码定义了样式 `lblStyle`。此样式实际上用于 Label，但它没有 `TargetType`，因此 WPF 不会强制执行该意图。`btnStyle` 是 Button 并不继承自 Label，尽管 `btnStyle` 的：
+然而，例如，以下代码定义了样式 `lblStyle`。此样式实际上用于 `Label`，但它没有 `TargetType`，因此 `WPF` 不会强制执行该意图。`btnStyle` 是 `Button` 并不继承自 `Label`，尽管 `btnStyle` 的：
 
 ```xml
 <Style X:Key="lblStyle">
@@ -7103,7 +6293,7 @@ Setters 的 property 属性中使用的类必须支持它们的属性，但样�
 </Style>
 ```
 
-你可以使用继承来实现跨窗口的一致性。例如，你可以在 App.xaml 中定义全局样式。这些样式可能会定义你想要的颜色、字体和尺寸。
+你可以使用继承来实现跨窗口的一致性。例如，你可以在 `App.xaml` 中定义全局样式。这些样式可能会定义你想要的颜色、字体和尺寸。
 
 ## 触发器 (TRIGGERS)
 
@@ -7111,31 +6301,31 @@ Setters 的 property 属性中使用的类必须支持它们的属性，但样�
 
 到目前为止描述的样式总是将它们的属性值应用到控件上。
 
-样式还可以定义触发器，即在特定条件下允许使用 setter 的对象。例如，一个触发器可能会更改 Label 的颜色。
+样式还可以定义触发器，即在特定条件下允许使用 setter 的对象。例如，一个触发器可能会更改 `Label` 的颜色。
 
-WPF 提供了几种触发器，包括属性触发器、事件触发器和数据触发器。本节介绍属性触发器。事件触发器与动画紧密相关，因此在第 14 章中描述。数据触发器在此未介绍，尽管它们与数据绑定密切相关，数据绑定将在第 18 章中解释。
+`WPF` 提供了几种触发器，包括属性触发器、事件触发器和数据触发器。本节介绍属性触发器。事件触发器与动画紧密相关，因此在第 14 章中描述。数据触发器在此未介绍，尽管它们与数据绑定密切相关，数据绑定将在第 18 章中解释。
 
-属性触发器当特定属性具有特定值时执行其操作。例如，如果 TextBox 的属性值为 Test，属性触发器可以调用一个或多个 Setter。（它们被称为属性触发器，是因为属性值触发了操作。）
+属性触发器当特定属性具有特定值时执行其操作。例如，如果 `TextBox` 的属性值为 `Test`，属性触发器可以调用一个或多个 `Setter`。（它们被称为属性触发器，是因为属性值触发了操作。）
 
-当属性不再具有触发值时，触发器将失效并返回原始属性值。例如，当用户鼠标移出 Label 时，Label 返回到原始的颜色、字体和大小。
+当属性不再具有触发值时，触发器将失效并返回原始属性值。例如，当用户鼠标移出 `Label` 时，`Label` 返回到原始的颜色、字体和大小。
 
 这种在运行时响应属性变化的能力赋予了控件新的行为，使应用程序对用户的响应更加敏感。
 
 要制作属性触发器，创建一个样式并赋予一个 `Style.Triggers` 属性元素。在 `Style.Triggers` 部分，你可以添加 `Trigger` 元素。
 
-使用每个 Trigger 的 `Property` 和 `Value` 属性来指示激活触发器的属性值。在 Trigger 元素内部，放置你想让触发器执行的任何 Setters。
+使用每个 `Trigger` 的 `Property` 和 `Value` 属性来指示激活触发器的属性值。在 `Trigger` 元素内部，放置你想让触发器执行的任何 `Setters`。
 
 > 触发器位置
 
-你必须将属性触发器放在样式内部——而不是框架元素的 Triggers 区域。例如，你不能将属性触发器放置在 Window.Triggers 或 Grid.Triggers 中。IntelliSense 会假装这是可行的，但实际上，这些部分只能包含事件触发器（在下一章中描述）。
+你必须将属性触发器放在样式内部——而不是框架元素的 `Triggers` 区域。例如，你不能将属性触发器放置在 `Window.Triggers` 或 `Grid.Triggers` 中。`IntelliSense` 会假装这是可行的，但实际上，这些部分只能包含事件触发器（在下一章中描述）。
 
 始终将属性触发器放在样式中。
 
 以下章节提供了一些实用的触发器示例。
 
-# 文本触发器 (Text Triggers)
+### 文本触发器 (Text Triggers)
 
-以下 XAML 代码定义了两个无名样式，一个用于 TextBox，一个用于 ComboBox：
+以下 `XAML` 代码定义了两个无名样式，一个用于 `TextBox`，一个用于 `ComboBox`：
 
 ```xml
 <Style TargetType=TextBox>
@@ -7145,7 +6335,6 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
   <Style.Triggers>
     <Trigger Property="Text" Value="">
 ```
-
 
 ```xml
 <Setter Property="Background" Value="Yellow" />
@@ -7161,25 +6350,25 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 </Style>
 ```
 
-# TextTriggers（文本触发器）
+### TextTriggers（文本触发器）
 
-这些 Style 中的每一个都定义了一个 Style.Triggers 部分，其中包含一个 Trigger，当控件的 Text 属性为空时，它会执行操作。当这种情况发生时，Style 的 Setter 会将控件的 Background 设置为黄色，以指示该值是必的。
+这些 `Style` 中的每一个都定义了一个 `Style.Triggers` 部分，其中包含一个 `Trigger`，当控件的 `Text` 属性为空时，它会执行操作。当这种情况发生时，`Style` 的 `Setter` 会将控件的 `Background` 设置为黄色，以指示该值是必的。
 
-图 13-7 中的 TextTriggers 示例程序使用此代码来标记带有值的必填字段。如果必填字段为空，其背景颜色将变为黄色。（在图 13-7 中，奥巴马先生尚未填写信息，因此城市、州、邮政编码、电话和电子邮件字段显示为黄色，以标记它们为缺失。）
+图 13-7 中的 `TextTriggers` 示例程序使用此代码来标记带有值的必填字段。如果必填字段为空，其背景颜色将变为黄色。（在图 13-7 中，奥巴马先生尚未填写信息，因此城市、州、邮政编码、电话和电子邮件字段显示为黄色，以标记它们为缺失。）
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_266_0.png)
 
 图 13-7
 
-# 仅限精确匹配
+### 仅限精确匹配
 
-遗憾的是，触发器只能检测属性的精确匹配，无法处理范围、不同的大小写情况或更复杂的情况。例如，你无法使用简单的触发器根据 TextBox 包含的值为它们设置不同的颜色（例如，负值显示为红色，0 到 10 之间的值显示为黄色，较大的值显示为绿色）。XAML 并不具备表示此类测试的表达能力。
+遗憾的是，触发器只能检测属性的精确匹配，无法处理范围、不同的大小写情况或更复杂的情况。例如，你无法使用简单的触发器根据 `TextBox` 包含的值为它们设置不同的颜色（例如，负值显示为红色，0 到 10 之间的值显示为黄色，较大的值显示为绿色）。`XAML` 并不具备表示此类测试的表达能力。
 
-# IsMouseOver Triggers（鼠标悬停触发器）
+### IsMouseOver Triggers（鼠标悬停触发器）
 
-一种常见的触发器类型是在用户鼠标移动到某个物体上方时执行操作。这些触发器在 IsMouseOver 属性为 True 时执行其 Setters。
+一种常见的触发器类型是在用户鼠标移动到某个物体上方时执行操作。这些触发器在 `IsMouseOver` 属性为 `True` 时执行其 `Setters`。
 
-以下 XAML 代码定义了一个未命名的 Button Style。它设置了一些基本值，并定义了一个在 IsMouseOver 属性为 True 时执行的 Trigger。当鼠标移动到 Button 上时，Trigger 会改变 Button 并使其字体更大、加粗。
+以下 `XAML` 代码定义了一个未命名的 `Button` `Style`。它设置了一些基本值，并定义了一个在 `IsMouseOver` 属性为 `True` 时执行的 `Trigger`。当鼠标移动到 `Button` 上时，`Trigger` 会改变 `Button` 并使其字体更大、加粗。
 
 ```xml
 <Style TargetType="Button">
@@ -7202,17 +6391,17 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_267_0.png)
 
-图 13-8 所示的 IsMouseOverTriggers 示例使用此代码在鼠标悬停在按钮上时提供反馈。
+图 13-8 所示的 `IsMouseOverTriggers` 示例使用此代码在鼠标悬停在按钮上时提供反馈。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_267_1.png)
 
 图 13-8
 
-# 设置 Transform 和 BitmapEffect（变换与位图效果）
+### 设置 Transform 和 BitmapEffect（变换与位图效果）
 
-之前的 Trigger 为激活的 Button 提供了新的 Height 和 FontSize，使按钮变大。MenuMouseOverTriggers 示例以另一种方式实现了的效果。与其单独设置这些属性，不如使用一个 Setter 给激活的控件一个可以缩放控件的 LayoutTransform。
+之前的 `Trigger` 为激活的 `Button` 提供了新的 `Height` 和 `FontSize`，使按钮变大。`MenuMouseOverTriggers` 示例以另一种方式实现了的效果。与其单独设置这些属性，不如使用一个 `Setter` 给激活的控件一个可以缩放控件的 `LayoutTransform`。
 
-以下代码显示了程序如何在鼠标悬停在 MenuItem 上时放大它：
+以下代码显示了程序如何在鼠标悬停在 `MenuItem` 上时放大它：
 
 ```xml
 <Resources>
@@ -7231,32 +6420,33 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 <Window.Resources>
 ```
 
-首先，程序定义了一个 ScaleTransform 资源和一个 OuterGlowBitmapEffect 资源。这些值是 Trigger 用来设置 MenuItem 属性的值。
+首先，程序定义了一个 `ScaleTransform` 资源和一个 `OuterGlowBitmapEffect` 资源。这些值是 `Trigger` 用来设置 `MenuItem` 属性的值。
 
-程序定义了 MenuItem Style。Trigger 设置了 MenuItem 的 FontWeight 和 Foreground 简单属性。它还将控件的 LayoutTransform 和 BitmapEffect 属性 设置为之前定义的资源。
+程序定义了 `MenuItem` `Style`。`Trigger` 设置了 `MenuItem` 的 `FontWeight` 和 `Foreground` 简单属性。它还将控件的 `LayoutTransform` 和 `BitmapEffect` 属性 设置为之前定义的资源。
 
 图 13-9 显示了结果。
 
-你可以使用类似的技术来处理修改 LayoutTransform 和 BitmapEffect 属性的控件。
+你可以使用类似的技术来处理修改 `LayoutTransform` 和 `BitmapEffect` 属性的控件。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_268_0.png)
 
 图 13-9
 
 > 按钮背景
-> 不要费力在鼠标悬停在按钮或 MenuItem 上时尝试更改它们的背景。Button 和 MenuItem 控件对于鼠标悬停时应该看起来什么样有非常明确的观点——用户看不到它们的颜色，或者在控件的自然行为接管并替换它们之前，可能会看到颜色短暂闪烁。
 
-你可以更改这些控件在不同时间点的外观，但最好使用模板（Templates）而不是触发器（Triggers）。第 15 章详细解释了模板。
+> 不要费力在鼠标悬停在按钮或 `MenuItem` 上时尝试更改它们的背景。`Button` 和 `MenuItem` 控件对于鼠标悬停时应该看起来什么样有非常明确的观点——用户看不到它们的颜色，或者在控件的自然行为接管并替换它们之前，可能会看到颜色短暂闪烁。
 
-# 设置 Opacity（透明度）
+你可以更改这些控件在不同时间点的外观，但最好使用模板（`Templates`）而不是触发器（`Triggers`）。第 15 章详细解释了模板。
 
-图 13-10 所示的 ImageTriggers 示例程序使用 Triggers 来高亮图像。
+### 设置 Opacity（透明度）
+
+图 13-10 所示的 `ImageTriggers` 示例程序使用 `Triggers` 来高亮图像。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_268_1.png)
 
 图 13-10
 
-这里的触发器是由于让程序变得更简单。如果你喜欢，可以从书下载下载示例。。触发器设置了  。。。 StackPanel 包含一个 Image 和一个 Label。代码代码显示了鼠标 的控件：
+这里的触发器是由于让程序变得更简单。如果你喜欢，可以从书下载下载示例。。触发器设置了  。。。 `StackPanel` 包含一个 `Image` 和一个 `Label`。代码代码显示了鼠标 的控件：
 
 ```xml
 <StackPanel Style="DepartmentStyle">
@@ -7267,7 +6457,9 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_269_0.png)
 
-精确匹配时，Style 触发器是以下代码：
+精确匹配时，`Style` 触发器是以下代码：
+
+
 
 ```xml
 <ScaleTransform Key="BigScale" ScaleX="1.1" ScaleY="1.1"/>
@@ -7286,27 +6478,28 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_269_1.png)
 
-与之前的示例一样，此代码定义了 ScaleTransform。DepartmentPanel Style 设置了 Margin。它将 Opacity 设置为 0.5，因此控件是淡化的。接下来，Style 将 Background 设置为 Transparent。
+与之前的示例一样，此代码定义了 `ScaleTransform`。`DepartmentPanel` `Style` 设置了 `Margin`。它将 `Opacity` 设置为 `0.5`，因此控件是淡化的。接下来，`Style` 将 `Background` 设置为 `Transparent`。
 
 # 透明 Null
-透明背景与透明相同。然而，如果鼠标悬停在控件上，IsMouseOver 会改变。
 
-如果你想通过 MouseOver 属性来实现透明，请确保控件的背景不是透明的。DepartmentPanel Style 定义了它的 MouseOver Trigger。当 MouseOver 为 True 时，Trigger 设置了 Opacity，因此控件是完全不透明的。
+透明背景与透明相同。然而，如果鼠标悬停在控件上，`IsMouseOver` 会改变。
+
+如果你想通过 `MouseOver` 属性来实现透明，请确保控件的背景不是透明的。`DepartmentPanel` `Style` 定义了它的 `MouseOver` `Trigger`。当 `MouseOver` 为 `True` 时，`Trigger` 设置了 `Opacity`，因此控件是完全不透明的。
 
 # IsActiveAndFocused Triggers（激活与焦点触发器）
 
-之前的几个触发器在 MouseOver 属性为 True 时执行操作。MouseOver 属性是一个很好的选择，因为你可以为任何属性编写触发器的良好的视觉反馈。
+之前的几个触发器在 `MouseOver` 属性为 `True` 时执行操作。`MouseOver` 属性是一个很好的选择，因为你可以为任何属性编写触发器的良好的视觉反馈。
 
-图 13-11 所示的 ActiveTrigger 示例程序演示了监控 Window 的 IsActive 属性和 TextBox 的 IsFocused 属性的两个触发器。
+图 13-11 所示的 `ActiveTrigger` 示例程序演示了监控 `Window` 的 `IsActive` 属性和 `TextBox` 的 `IsFocused` 属性的两个触发器。
 
 这些触发器提供了两种效果：
 
-- 第一，当另一个应用程序拥有焦点时，程序将其 Title 更改为 Inactive。
-- 第二，包含插入光标的 TextBox 显示为红色。
+- 第一，当另一个应用程序拥有焦点时，程序将其 `Title` 更改为 `Inactive`。
+- 第二，包含插入光标的 `TextBox` 显示为红色。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_270_0.png)
 
-在窗口标签 <Window> 之后，Style 元素定义了窗口的 Style。此示例直接定义 Style，而不是在资源中定义以便稍后引用，部分原因由于文件中只有一个 Window 对象。
+在窗口标签 `<Window>` 之后，`Style` 元素定义了窗口的 `Style`。此示例直接定义 `Style`，而不是在资源中定义以便稍后引用，部分原因由于文件中只有一个 `Window` 对象。
 
 ```xml
 <Style>
@@ -7325,10 +6518,7 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_270_2.png)
 
-此 Style 的唯一技巧是它设置了窗口的 Title 属性。当 IsActive 属性为 False 时，Trigger 尝试将 Title 属性 设置为 Inactive。如果 Window 元素在属性中显式设置了 Title 的值，那么 Trigger 将无法覆盖该值。
-
-
-
+此 `Style` 的唯一技巧是它设置了窗口的 `Title` 属性。当 `IsActive` 属性为 `False` 时，`Trigger` 尝试将 `Title` 属性 设置为 `Inactive`。如果 `Window` 元素在属性中显式设置了 `Title` 的值，那么 `Trigger` 将无法覆盖该值。
 
 以下代码显示了程序用于在文本框周围显示红色发光效果的资源：
 
@@ -7347,7 +6537,7 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_271_0.png)
 
-代码首先创建了一个 `OuterGlowBitmapEffect` 资源。它定义了一个 `TextBox` 样式，包含一个在 `IsFocused` 属性为 `True` 时激活的触发器。该触发器仅地将 TextBox 的 `BitmapEffect` 设置为之前定义的发光效果。
+代码首先创建了一个 `OuterGlowBitmapEffect` 资源。它定义了一个 `TextBox` 样式，包含一个在 `IsFocused` 属性为 `True` 时激活的触发器。该触发器仅地将 `TextBox` 的 `BitmapEffect` 设置为之前定义的发光效果。
 
 ## 总结
 
@@ -7357,13 +6547,11 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 属性触发器（Property triggers）允许你定义当控件的属性取某个特定值时可以执行的简单行为。例如，你可以使用属性触发器提供额外的反馈，也许当用户将鼠标悬停在按钮上时，可能会更改按钮的字体、大小或颜色。
 
-虽然属性触发器可以让控件采取行动，但它们仍然是局部的，并且旨在作用于定义它们的控件本身。例如，如果一个样式应用于 `Button`，那么它的属性可以影响该 Button 的属性，但它们并不打算修改 Button 旁边的 `Label`、包含 Button 的 `Grid` 或容载整个内容的 `Window`。
+虽然属性触发器可以让控件采取行动，但它们仍然是局部的，并且旨在作用于定义它们的控件本身。例如，如果一个样式应用于 `Button`，那么它的属性可以影响该 `Button` 的属性，但它们并不打算修改 `Button` 旁边的 `Label`、包含 `Button` 的 `Grid` 或容载整个内容的 `Window`。
 
 事件触发器（Event triggers）将在下一章解释，它们提供了一种绕过这种限制的方法。虽然你可以在样式内部定义事件触发器，但也可以在更全局的级别定义它们，这样在处理多个控件时更容易操作。例如，你可以在 `Button` 上定义一个事件触发器，改变另一个 `Button`、包含这些按钮的 `Grid` 或 `Window` 整体的颜色。
 
-# 14
-
-# 事件触发器与动画
+# 14 事件触发器与动画
 
 上一章描述的属性触发器允许你检测特定的属性值并相应地更改某些属性的值。例如，按钮可以检测到 `IsMouseOver` 是否为 `True`，并更改其缩放以使按钮在鼠标悬停在其上方时变大；目前没有属性可以直接为事件提供反馈。
 
@@ -7386,7 +6574,7 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
   <Style.Triggers>
 ```
 
-# 第 14 章 事件触发器与动画
+### 第 14 章 事件触发器与动画
 
 ```
 <Trigger Property="IsMouseOver" Value="True">
@@ -7437,18 +6625,19 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 
 可在 Wx.com 下载。
 
-## GrowingButtons
+### GrowingButtons
 
-## 事件触发器
+### 事件触发器
 
 `BeginStoryboard` 对象的 `Storyboard` 属性提供了要执行的故事板。此示例使用 `StaticResource` 来运行窗口中定义的故事板。
 
-## BEGINSTORYBOARD 是什么意思？
+### BEGINSTORYBOARD 是什么意思？
 
 每当我看到 `BeginStoryboard` 元素时，我都会认为“这是故事板定义的开始”，并期望后续代码定义故事板。不幸的是，这并不是 `BeginStoryboard` 的意思。正如前面的示例所示，`BeginStoryboard` 元素不需要包含对故事板引用之外的任何内容。
+
 `beginStoryboard` 真正的意思是“执行”或“运行”，所以当你看到这个元素时，你应该认为是“运行这个故事板”。如果微软将此元素命名为 `RunStoryboard`（至少对我来说）可能就不会那么困惑。
 
-# 事件触发器位置
+## 事件触发器位置
 
 放置事件触发器最明显的地方是引发事件的控件。例如，下面的代码定义了一个在点击时运行 `sbSpin` 故事板的 `Button`：
 
@@ -7464,22 +6653,19 @@ WPF 提供了几种触发器，包括属性触发器、事件触发器和数据�
 </Button>
 ```
 
-`sbSpin` 故事板将按钮旋转 360 度。图 14-1 显示了故事板刚开始时的 SpinButton 示例。
+`sbSpin` 故事板将按钮旋转 360 度。图 14-1 显示了故事板刚开始时的 `SpinButton` 示例。
+
 之前的代码已经使用了一些技术使得按钮代码更易读。一个未命名的样式设置了按钮的 `Width` 和 `Height`。它还将按钮的 `RenderTransform` 设置为 `RotateTransform` 对象，以便故事板可以旋转按钮。
 
 图 14-1
 
+### 变换技巧
 
+`Storyboard` 可以更改变换的属性，但它不能从零开始创建一个新的变换。在旋转按钮的示例中，`Storyboard` 可以更改 `RenderTransform` 的旋转角度，但它不能凭空产生 `RenderTransform`，因此 `Button Style` 创建了一个初始的 `RenderTransform`，将按钮旋转 0 度。
 
+在通常情况下，如果你想旋转、拉伸或其他更改控件的变换，你必须为它提供一个初始变换，以便 `Storyboard` 进行修改。
 
-
-# 变换技巧
-
-Storyboard 可以更改变换的属性，但它不能从零开始创建一个新的变换。在旋转按钮的示例中，Storyboard 可以更改 `RenderTransform` 的旋转角度，但它不能凭空产生 `RenderTransform`，因此 Button Style 创建了一个初始的 `RenderTransform`，将按钮旋转 0 度。
-
-在通常情况下，如果你想旋转、拉伸或其他更改控件的变换，你必须为它提供一个初始变换，以便 Storyboard 进行修改。
-
-`sbSpin` Storyboard 也被定义为资源以进一步简化 Button 的代码。你甚至可以在 Button Style 中定义 `EventTrigger`，使 Button 的代码变得非常简单。在某些情况下，定义相同或相似的触发器是有意义的：例如，考虑图 14-2 所示的 `CentralizedTriggers` 示例程序。该程序在左侧显示了一系列缩略图。当你点击其中一张时，图像会展开并移动以填充右侧区域。
+`sbSpin` `Storyboard` 也被定义为资源以进一步简化 `Button` 的代码。你甚至可以在 `Button Style` 中定义 `EventTrigger`，使 `Button` 的代码变得非常简单。在某些情况下，定义相同或相似的触发器是有意义的：例如，考虑图 14-2 所示的 `CentralizedTriggers` 示例程序。该程序在左侧显示了一系列缩略图。当你点击其中一张时，图像会展开并移动以填充右侧区域。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_275_0.png)
 
@@ -7515,6 +6701,8 @@ Storyboard 可以更改变换的属性，但它不能从零开始创建一个新
 定义其他 Storyboards
 </Canvas.Resources>
 ```
+
+
 
 ```
 <!-- 处理 MouseLeftDown 事件。 -->
@@ -7553,19 +6741,19 @@ Storyboard 可以更改变换的属性，但它不能从零开始创建一个新
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_276_0.png)
 
-`Canvas.Resources` 部分定义了一个未命名的 Style（Width, Height, Stretch 等）以及链接并移动缩略图以填充视图区域的 storyboards。
+`Canvas.Resources` 部分定义了一个未命名的 `Style`（`Width`, `Height`, `Stretch` 等）以及链接并移动缩略图以填充视图区域的 `storyboards`。
 
-`Canvas.Triggers` 部分定义了 Images 的 EventTriggers。之前的代码只详细显示了第一个触发器。它的 `SourceName` 和 `RoutedEvent` 属性指示该触发器捕获由名为 img1 的 Image 控件引发的 `MouseLeftDown` 事件。
+`Canvas.Triggers` 部分定义了 `Images` 的 `EventTriggers`。之前的代码只详细显示了第一个触发器。它的 `SourceName` 和 `RoutedEvent` 属性指示该触发器捕获由名为 `img1` 的 `Image` 控件引发的 `MouseLeftDown` 事件。
 
-`Trigger.Actions` 部分使用 `Remove` 对象来取消任何之前正在运行的 Storyboards，将缩略图恢复到原始位置。（本章稍后的“控制 Storyboards”部分将介绍更多关于 `RemoveStoryboard` 等对象的内容。）它随后使用 `BeginStoryboard` 运行 `sbImg` Storyboard，将 Image 控件 img1 移动到视图区域。
+`Trigger.Actions` 部分使用 `Remove` 对象来取消任何之前正在运行的 `Storyboards`，将缩略图恢复到原始位置。（本章稍后的“控制 Storyboards”部分将介绍更多关于 `RemoveStoryboard` 等对象的内容。）它随后使用 `BeginStoryboard` 运行 `sbImg` `Storyboard`，将 `Image` 控件 `img1` 移动到视图区域。
 
-定义了资源和触发器后，定义 Image 控件的程序代码非常简单且于理解。
+定义了资源和触发器后，定义 `Image` 控件的程序代码非常简单且于理解。
 
 将触发器与引发事件的控件放在一起通常是有意义的，但有时将代码段组合在一起会使代码更易读。这使得各个代码部分（样式、storyboard、触发器、控件）更容易理解。
 
 ## 属性元素中的 Storyboards
 
-代码不需要引用资源中定义的 storyboard，可以直接在 `BeginStoryboard` 元素内部包含一个 storyboard。以下代码显示了一个包含 storyboard 的 Button：
+代码不需要引用资源中定义的 storyboard，可以直接在 `BeginStoryboard` 元素内部包含一个 storyboard。以下代码显示了一个包含 storyboard 的 `Button`：
 
 ```
 <Button Width="100" Height="50" Content="Click Me">
@@ -7583,9 +6771,9 @@ Storyboard 可以更改变换的属性，但它不能从零开始创建一个新
 </Button>
 ```
 
-#  中的 Storyboards
+### 中的 Storyboards
 
-在控件中构建 storyboard 会导致定义非常长且需要一些嵌套元素，因此你可能希望在资源中定义它们。例如，以下代码定义了一个包含事件触发器的 Button Style：
+在控件中构建 storyboard 会导致定义非常长且需要一些嵌套元素，因此你可能希望在资源中定义它们。例如，以下代码定义了一个包含事件触发器的 `Button Style`：
 
 ```
 <Style x:Key="btnEventSize" TargetType="Button">
@@ -7608,28 +6796,25 @@ Storyboard 可以更改变换的属性，但它不能从零开始创建一个新
 
 程序可以使用以下代码定义使用该样式的按钮：
 
-<Button Style="StaticResource btnEventSize" Content="New Size"/>
+`<Button Style="StaticResource btnEventSize" Content="New Size"/>`
 
 # 属性触发器动画
 
 通常，属性触发器使用 setter 来立即更改属性值，但你可以使用属性触发器来运行 storyboard。属性触发器应用 storyboard 的方式与其应用 setter 的方式不同，因为它们的目的不同。
 
-setter 在另一个属性具有特定值时更改属性。例如，只要该属性为 True，Setter 会将 Width 更改为 150。如果 MouseOver 不再为 True，Setter 返回到正常尺寸，例如 100。在这里，Setter 在 IsMouseOver 为 True 时将 Width 属性设置为 150。
+`setter` 在另一个属性具有特定值时更改属性。例如，只要该属性为 `True`，`Setter` 会将 `Width` 更改为 `150`。如果 `MouseOver` 不再为 `True`，`Setter` 返回到正常尺寸，例如 `100`。在这里，`Setter` 在 `IsMouseOver` 为 `True` 时将 `Width` 属性设置为 `150`。
 
-相比之下，动画随时间平滑地从一个值变为另一个值。例如，动画可能会让 Button 的 Width 在 1 秒内从原始值 100 变化到 150。在这种情况下，只要 IsMouseOver 属性为 True 就运行动画是没有意义的。即使 IsMouseOver 持续了 10 分钟，动画也会在 1 秒内完成。现在动画会反复播放，但在本示例中这可能有点奇怪。
+相比之下，动画随时间平滑地从一个值变为另一个值。例如，动画可能会让 `Button` 的 `Width` 在 `1` 秒内从原始值 `100` 变化到 `150`。在这种情况下，只要 `IsMouseOver` 属性为 `True` 就运行动画是没有意义的。即使 `IsMouseOver` 持续了 `10` 分钟，动画也会在 `1` 秒内完成。现在动画会反复播放，但在本示例中这可能有点奇怪。
 
-为了合理地应用动画，属性触发器除了普通的 setter 之外还提供了两个可以执行动画的额外部分：EnterActions 和 ExitActions。
+为了合理地应用动画，属性触发器除了普通的 setter 之外还提供了两个可以执行动画的额外部分：`EnterActions` 和 `ExitActions`。
 
-
-
-
-与之前一样，Setter（设置器）会立即采取行动。
+与之前一样，`Setter`（设置器）会立即采取行动。
 
 当属性值变为目标值时，动画包含 `EnterActions` 部分。在上一个示例中，它们会在 `Button` 的 `MouseOver` 属性值变为 `True` 时执行。
 
 当属性值从目标值更改到另一个值时，动画包含 `ExitActions` 部分。在上一个示例中，它们会在 `Button` 的 `MouseOver` 属性从 `True` 变为 `False` 时执行。
 
-以下代码显示了一个使用属性触发器（property trigger）来同时调用 Setter 和 Storyboard（故事板）的 Button 样式：
+以下代码显示了一个使用属性触发器（property trigger）来同时调用 `Setter` 和 `Storyboard`（故事板）的 `Button` 样式：
 
 ```xml
 <Style x:Key="btnStyle" TargetType="Button">
@@ -7649,23 +6834,23 @@ setter 在另一个属性具有特定值时更改属性。例如，只要该属�
 </Style>
 ```
 
-可在 Wrox.com 下载。
+可在 `Wrox.com` 下载。
 
 ## PropertyTriggerButton 示例
 
-当 `Button` 的 `MouseOver` 属性变为 `True` 时，Setter 立即将 `Button` 的 `FontStyle` 改为 `Italic`（斜体）。
+当 `Button` 的 `MouseOver` 属性变为 `True` 时，`Setter` 立即将 `Button` 的 `FontStyle` 改为 `Italic`（斜体）。
 
-当 `Image` 的 `MouseOver` 属性变为 `True` 时，`EnterActions` 执行，启动名为 `sbBigSize` 的 Storyboard。Storyboard 动画化 Button 的 `Width` 和 `Height`，在 0.2 秒内变为 150 和 75。
+当 `Image` 的 `MouseOver` 属性变为 `True` 时，`EnterActions` 执行，启动名为 `sbBigSize` 的 `Storyboard`。`Storyboard` 动画化 `Button` 的 `Width` 和 `Height`，在 `0.2` 秒内变为 `150` 和 `75`。
 
-当 `Image` 的 `MouseOver` 属性变为 `False` 时，`ExitActions` 执行，启动名为 `sbSmallSize` 的 Storyboard。Storyboard 动画化 Button 的 `Width` 和 `Height`，在 0.2 秒内变为 100 和 50。
+当 `Image` 的 `MouseOver` 属性变为 `False` 时，`ExitActions` 执行，启动名为 `sbSmallSize` 的 `Storyboard`。`Storyboard` 动画化 `Button` 的 `Width` 和 `Height`，在 `0.2` 秒内变为 `100` 和 `50`。
 
-图 14-3 所示的 `PropertyTriggerButton` 示例使用此代码使按钮在鼠标滑过时放大和缩小。在图 14-3 中，鼠标位于中间按钮上，因此该按钮具有斜体文本。`sbBigSize` Storyboard 已运行完毕，因此按钮处于较大的尺寸。
+图 14-3 所示的 `PropertyTriggerButton` 示例使用此代码使按钮在鼠标滑过时放大和缩小。在图 14-3 中，鼠标位于中间按钮上，因此该按钮具有斜体文本。`sbBigSize` `Storyboard` 已运行完毕，因此按钮处于较大的尺寸。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_279_0.png)
 
 图 14-3
 
-图 14-4 所示的 `GrowingButtons` 示例程序演示了触发器类型与触发动作的三种组合：带有 Setter 的属性触发器、带有 Storyboard 的属性触发器以及带有 Storyboard 的事件触发器。
+图 14-4 所示的 `GrowingButtons` 示例程序演示了触发器类型与触发动作的三种组合：带有 `Setter` 的属性触发器、带有 `Storyboard` 的属性触发器以及带有 `Storyboard` 的事件触发器。
 
 第一行的按钮更改了尺寸，它们变得更大，但文本保持不变。底行的按钮更改了缩放变换，因此它们的文本随之增大。
 
@@ -7675,91 +6860,41 @@ setter 在另一个属性具有特定值时更改属性。例如，只要该属�
 
 # STORYBOARDS（故事板）
 
-现在你已经了解如何启动一个 storyboard，是时候学习如何构建它了。Storyboard 是一个为一个或多个动画定义时间线的对象。
+现在你已经了解如何启动一个 storyboard，是时候学习如何构建它了。`Storyboard` 是一个为一个或多个动画定义时间线的对象。
 
 动画管理属性从一个值到另一个值的时间转换。一个动画可以包含一个开始时间（start time），指示转换何时应该开始，以及一个持续时间（duration），指示动画应该持续多长时间。
 
-动画通过处理许多非常棘手的细节，使动画的制作变得简单。例如，假设你想在 1 秒的间隔内将一个控件的 `Width` 从 50 变化到 200。为了做到这一点，你需要知道在 1 秒内你可以有效显示多少值。你显示的帧数取决于你计算机的速度、窗口的复杂度（增大控件可能会强制其他控件也增大，例如，如果它们在 `StackPanel` 中）以及你无法控制的其他因素。如果有足够的时间和精力，你可能会算出并得出一个合理的方案；但是，除非你的应用程序只负责显示动画，否则你可能更好地关注程序的其他部分。
+动画通过处理许多非常棘手的细节，使动画的制作变得简单。例如，假设你想在 `1` 秒的间隔内将一个控件的 `Width` 从 `50` 变化到 `200`。为了做到这一点，你需要知道在 `1` 秒内你可以有效显示多少值。你显示的帧数取决于你计算机的速度、窗口的复杂度（增大控件可能会强制其他控件也增大，例如，如果它们在 `StackPanel` 中）以及你无法控制的其他因素。如果有足够的时间和精力，你可能会算出并得出一个合理的方案；但是，除非你的应用程序只负责显示动画，否则你可能更好地关注程序的其他部分。
 
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
-
-（注：由于原文中存在大量重复，已根据指令处理并翻译核心逻辑）
+动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 `3` 秒内变为某个特定值，动画类就会找出如何实现它。
 
 # ANIMATION PERFORMANCE（动画性能）
 
 为了获得动画的最佳性能，请尝试减少对控件的影响。例如，当你使用一个动画来改变 `Button` 时，如果它在 `StackPanel` 中，那么动画可能会影响布局。
 
-动画类没有自己的 `Duration` 属性，但它们会继承 `Storyboard` 的。例如，`0:0:10` 意味着在 10 秒内完成。
+动画类没有自己的 `Duration` 属性，但它们会继承 `Storyboard` 的。例如，`0:0:10` 意味着在 `10` 秒内完成。
 
-当你设计动画时，其 `RepeatBehavior` 属性可以决定动画的重复次数。该属性可以是三种形式之一：重复次数（`2x` 表示重复两次，`5x` 表示重复五次），或关键字 `Forever`（`0:0:10` 表示在经过 10 秒后重复）。
+当你设计动画时，其 `RepeatBehavior` 属性可以决定动画的重复次数。该属性可以是三种形式之一：重复次数（`2x` 表示重复两次，`5x` 表示重复五次），或关键字 `Forever`（`0:0:10` 表示在经过 `10` 秒后重复）。
 
-动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 3 秒内变为某个特定值，动画类就会找出如何实现它。
+动画类允许你指定想要执行的操作，而忽略具体的实现方式。你只需属性在接下来的 `3` 秒内变为某个特定值，动画类就会找出如何实现它。
 
 # Storyboard and Animation Properties（故事板与动画属性）
 
 动画类具有许多决定动画行为的属性。例如，`Duration` 决定了动画需要多长时间才能完成。
 
-Storyboard 类提供了许多相同的属性，它包含的动画可以继承。例如，`Storyboard` 有一个 `0:0:2` 的属性，` ，动画动画设置 `Duration` 属性，它们将在 2 秒 秒运行。
+`Storyboard` 类提供了许多相同的属性，它包含的动画可以继承。例如，`Storyboard` 有一个 `0:0:2` 的属性，动画设置 `Duration` 属性，它们将在 `2` 秒 秒运行。
 
 以下列表列了最实用的动画和故事板属性：
 
-
-
-图 14-5 显示的 AccDecelRatios 示例程序演示了 `AccelerationRatio` 和 `DecelerationRatio` 属性。当你点击 Go 按钮时，程序会启动一个故事板，让两个图像跨越窗口移动。第一张图像在整个动画过程中以匀速移动。第二个图像的 `AccelerationRatio` = 0.4 且 `DecelerationRatio` = 0.2，因此它需要一段时间时间来加速，然后在接近目的地时减速。（我猜他动作比较慢，在结束时显得有点瘸脚。）
+图 14-5 显示的 `AccDecelRatios` 示例程序演示了 `AccelerationRatio` 和 `DecelerationRatio` 属性。当你点击 `Go` 按钮时，程序会启动一个故事板，让两个图像跨越窗口移动。第一张图像在整个动画过程中以匀速移动。第二个图像的 `AccelerationRatio` = `0.4` 且 `DecelerationRatio` = `0.2`，因此它需要一段时间时间来加速，然后在接近目的地时减速。（我猜他动作比较慢，在结束时显得有点瘸脚。）
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_283_0.png)
 
+
+
 图 14-5
 
-以下代码显示了 AccDecelRatios 程序使用的故事板：
+以下代码显示了 `AccDecelRatios` 程序使用的故事板：
 
 ```
 <Storyboard>
@@ -7774,17 +6909,17 @@ Storyboard 类提供了许多相同的属性，它包含的动画可以继承。
 </Storyboard>
 ```
 
-动画类添加了一些它们没有继承自 Storyboard 类的额外属性。其中最重要的三个是 `From`、`To` 和 `By`：
+动画类添加了一些它们没有继承自 `Storyboard` 类的额外属性。其中最重要的三个是 `From`、`To` 和 `By`：
 
-- From: 指明动画开始的值。在之前的代码中，`DoubleAnimations` 的 `From = 5`，因此 `Canvas.Left` 属性从值 5 开始进行动画。
-- To: 指明动画的最终属性值。在上一个示例中，`Canvas.Left` 的范围从 5 到 500。
-- By: 指明动画在在此值加上属性的原始值之和的处结束。例如，如果 `From` 是 10 且 `By` 是 100，那么最终值就是 10 + 100 = 110。
+- `From`：指明动画开始的值。在之前的代码中，`DoubleAnimations` 的 `From = 5`，因此 `Canvas.Left` 属性从值 5 开始进行动画。
+- `To`：指明动画的最终属性值。在上一个示例中，`Canvas.Left` 的范围从 5 到 500。
+- `By`：指明动画在此值加上属性的原始值之和处结束。例如，如果 `From` 是 10 且 `By` 是 100，那么最终值就是 10 + 100 = 110。
 
 如果你没有为 `From` 属性指定值，动画将从该属性的当前值开始。这可能是控件的原始属性值，也可能是上一个动画的结果。
 
 事实上，如果一个动画正在运行但在新动画开始时尚未完成，当前值可能处于上一个动画的中间位置。
 
-例如，假设你有有两个按钮可以让控件向右或向左移动。如果你点击“向右移动”按钮，然后在第一个动画完成之前点击“向左移动”按钮，控件将立即开始向左移动。
+例如，假设你有两个按钮可以让控件向右或向左移动。如果你点击“向右移动”按钮，然后在第一个动画完成之前点击“向左移动”按钮，控件将立即开始向左移动。
 
 ## 从哪里开始？ (FROM WHERE?)
 
@@ -7794,7 +6929,7 @@ Storyboard 类提供了许多相同的属性，它包含的动画可以继承。
 
 ## 动画类型 (Animation Types)
 
-WPF 提供了许多类用于对不同数据类型的属性进行动画。下表列出了具有相应动画类的数据类型。例如，你可以使用 `Int32Animation` 类来对 32 位整数进行动画。
+`WPF` 提供了许多类用于对不同数据类型的属性进行动画。下表列出了具有相应动画类的数据类型。例如，你可以使用 `Int32Animation` 类来对 32 位整数进行动画。
 
 | Boolean | Int16 | Point3D | String |
 | :--- | :--- | :--- | :--- |
@@ -7802,7 +6937,7 @@ WPF 提供了许多类用于对不同数据类型的属性进行动画。下表�
 | Char | Int64 | Rect | Vector |
 | Color | Matrix | Rotation3D | Vector3D |
 | Decimal | Object | Single | |
-| Double | Point | Size | | |
+| Double | Point | Size | |
 
 这些数据类型中的大多数都有两类动画类。第一类带有 `Animation` 后缀，并对属性的值进行简单的线性插值，使得属性的值根据所过的时间在起始值和结束值之间按比例设置。当 `Duration` 过了时长的 1/4 时，该值将是起始值和结束值之间四分之一处的位置。
 
@@ -7816,7 +6951,7 @@ WPF 提供了许多类用于对不同数据类型的属性进行动画。下表�
 
 线性动画以简单的方式将属性的值从一个值变为另一个。
 
-例如，图 14-5 显示的 AccelDecRatios 示例程序使用以下 Storyboard 来移动它的两个图像：
+例如，图 14-5 显示的 `AccelDecRatios` 示例程序使用以下 `Storyboard` 来移动它的两个图像：
 
 ```
 <Storyboard>
@@ -7831,234 +6966,7 @@ WPF 提供了许多类用于对不同数据类型的属性进行动画。下表�
 </Storyboard>
 ```
 
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500.
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500. (Wait,我发现原文文本中出现了大量重复的 AccelDecRatios 描述，根据指令“不要重复输出原文”，我将保持核心逻辑的翻译翻译。)
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-(由于提供的待翻译文本包含大量重复的段落，我将按照高级文档工程师的逻辑，仅翻译核心内容并确保格式不冗余。)
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-(注：原文文本确实存在严重的重复错误，我已根据“不要重复输出原文”的原则进行了去重处理。)
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-(非常抱歉，由于您提供的输入文本中存在大量重复的 AccelDecRatios 文本，我已严格遵循指令，仅翻译并输了非非重复部分。)
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-(由于输入文本存在异常重复，此处为核心内容的完整翻译。)
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-AccelDecRatios:
-
-画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
-
-(此处已完成所有非重复内容的翻译。)
-
-
-
+`AccelDecRatios`：画布中的两个 `DoubleAnimation` 对象都让 `Canvas.Left` 属性在 2 秒内从 5 移动到 500。
 
 如果你使用脊线键（spine key），该属性将遵循类似于图 14-7 所示的橙色脊线的路径。在这个示例中，在图表的左侧，值随着时间的推移变化很小；在图表中间，值变化很快；在图右侧，值再次减少。结果是，值开始缓慢移动，加速，最后在达到最终值之前减速。
 
@@ -8067,6 +6975,8 @@ AccelDecRatios:
 `RovingButtonWithSplines` 示例使用以下代码使其 `Button` 遵循 `RovingButton` 和 `RovingButtonWithKeyFrames` 的矩形路径。程序是相同的，但 `Button` 移动的速度不同。在之前的程序中，`Button` 以恒速越过 `Rectangle` 的每一边。在这个程序中，这实际上是一个非常棒的效果。从书的网站下载程序并亲眼观察吧。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_287_0.png)
+
+
 
 ```
 <Storyboard X:Key="moveButton" RepeatBehavior="Forever">
@@ -8091,11 +7001,11 @@ AccelDecRatios:
 </Storyboard>
 ```
 
-RovingButtonWithSplines
+# `RovingButtonWithSplines`
 
 ## 离散关键帧
 
-线性关键帧和脊线关键帧将属性连续从一个值移动到另一个值。离散关键帧（discrete key frame）使属性突然从一个值跳跃到另一个值。
+线性关键帧和脊线关键帧将属性连续从一个值移动到另一个值。离散关键帧（`discrete key frame`）使属性突然从一个值跳跃到另一个值。
 
 `RovingButtonDiscrete` 示例使用以下代码来此此 `Button`：
 
@@ -8162,11 +7072,11 @@ RovingButtonWithSplines
 </Storyboard>
 ```
 
-`RovingButtonWithPath` 代码创建了一个 `PathGeometry` 对象来定义路径。然后 `sbMoveButton` Storyboard 的第一个 `DoubleAnimationUsingPath` 随着动画进行将 `Button` 的 `Canvas.Left` 属性设置为路径的 X 坐标。同样，第二个 `DoubleAnimationUsingPath` 对象随着动画进行将 `Button` 的 `Canvas.Top` 属性匹配路径的 Y 坐标。最后一个动画对象旋转 `Button` 90 度。
+`RovingButtonWithPath` 代码创建了一个 `PathGeometry` 对象来定义路径。然后 `sbMoveButton` `Storyboard` 的第一个 `DoubleAnimationUsingPath` 随着动画进行将 `Button` 的 `Canvas.Left` 属性设置为路径的 X 坐标。同样，第二个 `DoubleAnimationUsingPath` 对象随着动画进行将 `Button` 的 `Canvas.Top` 属性匹配路径的 Y 坐标。最后一个动画对象旋转 `Button` 90 度。
 
 # 混合与匹配关键帧
 
-之前的关键帧示例都使用单一类型的关键帧，但你可以对它们进行混合和匹配。例如，单个 storyboard 可以包含线性关键帧和离散关键帧。Storyboard 甚至包含路径动画。图 14-9 所示的 `RovingButtonKeyFrames` 示例演示了线性、离散以及路径动画的混合。当你点击按钮时，`Button` 沿黑色绘制的路线移动。
+之前的关键帧示例都使用单一类型的关键帧，但你可以对它们进行混合和匹配。例如，单个 `storyboard` 可以包含线性关键帧和离散关键帧。`Storyboard` 甚至包含路径动画。图 14-9 所示的 `RovingButtonKeyFrames` 示例演示了线性、离散以及路径动画的混合。当你点击按钮时，`Button` 沿黑色绘制的路线移动。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_289_0.png)
 
@@ -8221,24 +7131,27 @@ RovingButtonWithSplines
 
 # 特殊情况
 
-WPF 为大多数数据类型提供了以下动画类型：
+`WPF` 为大多数数据类型提供了以下动画类型：
 
 - 简单（线性）
+
 - 带线性帧的关键帧动画
+
 - 带脊线帧的关键帧动画
+
 - 带离散帧的关键帧动画
 
 它还为 `Double`、`Matrix` 和 `Point` 提供了路径动画。少数类型不提供标准的动画类型，通常是因为这些动画类型没有意义。例如，使用线性插值或脊线来动画 `String` 并没有真正的意义。你会如何定义位于“Time”和“banana”中间的字符串？
 
-对于 `String`、`Boolean` 和 `Char` 数据类型，WPF 只提供离散动画。
+对于 `String`、`Boolean` 和 `Char` 数据类型，`WPF` 只提供离散动画。
 
-图 14-10 所示的 `AnimatedText` 示例演示了字符串动画。当你点击 Quote 按钮时，程序逐逐字母显示引言文本。引言出现后，温斯顿·丘吉会逐渐消失。
+图 14-10 所示的 `AnimatedText` 示例演示了字符串动画。当你点击 `Quote` 按钮时，程序逐逐字母显示引言文本。引言出现后，温斯顿·丘吉会逐渐消失。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_291_0.png)
 
 图 14-10
 
-以下代码显示了 `AnimatedText` 程序用于显示引言和属性的 Storyboard：
+以下代码显示了 `AnimatedText` 程序用于显示引言和属性的 `Storyboard`：
 
 ```
 <Storyboard x:Key="sbShowQuote">
@@ -8260,8 +7173,6 @@ WPF 为大多数数据类型提供了以下动画类型：
 </Storyboard>
 ```
 
-
-
 ```xml
 </StringAnimationUsingKeyFrames>
 
@@ -8272,21 +7183,25 @@ Storyboard.TargetProperty="Opacity"/>
 </Storyboard>
 ```
 
-AnimatedText
+`AnimatedText`
 
 `DiscreteKeyFrame` 类易于使用，尽管你需要单独指定 `String` 的每一个变化，这确实相当繁琐。
 
 ## 控制 STORYBOARDS
 
-除了用于启动 Storyboard 运行的 `BeginStoryboard` 类外，WPF 还提供了几个对象来控制 Storyboard。这些类中最实用的是：
+除了用于启动 `Storyboard` 运行的 `BeginStoryboard` 类外，`WPF` 还提供了几个对象来控制 `Storyboard`。这些类中最实用的是：
 
-- PauseStoryboard — 暂停一个 Storyboard。
-- ResumeStoryboard — 恢复已暂停的 Storyboard。
-- SeekStoryboard — 将 Storyboard 移动到其时间线上的特定位置。
-- StopStoryboard — 停止 Storyboard。这会将属性重置为原始值。
-- RemoveStoryboard — 停止 Storyboard 并释放其资源。
+- `PauseStoryboard` — 暂停一个 `Storyboard`。
 
-本章中的许多示例都演示了大部分这些类。例如，图 14-9 中的 `RunningButtonMixedKeyFrames` 示例程序提供了启动、暂停、恢复、停止和移除按钮来控制你的 Storyboard。
+- `ResumeStoryboard` — 恢复已暂停的 `Storyboard`。
+
+- `SeekStoryboard` — 将 `Storyboard` 移动到其时间线上的特定位置。
+
+- `StopStoryboard` — 停止 `Storyboard`。这会将属性重置为原始值。
+
+- `RemoveStoryboard` — 停止 `Storyboard` 并释放其资源。
+
+本章中的许多示例都演示了大部分这些类。例如，图 14-9 中的 `RunningButtonMixedKeyFrames` 示例程序提供了启动、暂停、恢复、停止和移除按钮来控制你的 `Storyboard`。
 
 以下代码显示了这些示例如何管理它们的按钮：
 
@@ -8307,11 +7222,13 @@ AnimatedText
 </EventTrigger>
 ```
 
+
+
 ```xml
 <EventTrigger RoutedEvent="Button.Click" SourceName="btnResume">
 <EventTrigger.Actions>
 <ResumeStoryboard BeginStoryboardName="begSbMoveButton"/>
-<EventTrigger.Actions>
+</EventTrigger.Actions>
 </EventTrigger>
 ```
 
@@ -8340,13 +7257,13 @@ AnimatedText
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_293_0.png)
 
-当你点击启动（Start）按钮时，程序使用 `BeginStoryboard` 对象来启动名称为 `begSbMoveButton` 的 Storyboard 对象。其他对象使用此名称来控制 Storyboard。
+当你点击启动（Start）按钮时，程序使用 `BeginStoryboard` 对象来启动名称为 `begSbMoveButton` 的 `Storyboard` 对象。其他对象使用此名称来控制 `Storyboard`。
 
-当你点击暂停（Pause）按钮时，程序使用 `PauseStoryboard` 对象，并传递 `BeginStoryboard` 的名称，以便它知道要暂停哪一个 Storyboard 实例。其他按钮原理类似。
+当你点击暂停（Pause）按钮时，程序使用 `PauseStoryboard` 对象，并传递 `BeginStoryboard` 的名称，以便它知道要暂停哪一个 `Storyboard` 实例。其他按钮原理类似。
 
 ## 媒体与时间线
 
-`BeginStoryboard`、`PauseStoryboard` 以及其他 Storyboard 控制类恰好是包装器——即执行操作的对象，而不是代表按钮、标签和网格等“物理”对象。另一个实用的包装器是 `SoundPlayerAction`，它可以播放音频文件。
+`BeginStoryboard`、`PauseStoryboard` 以及其他 `Storyboard` 控制类恰好是包装器——即执行操作的对象，而不是代表按钮、标签和网格等“物理”对象。另一个实用的包装器是 `SoundPlayerAction`，它可以播放音频文件。
 
 `SoundEvents` 示例程序在以下代码中使用 `SoundPlayerAction` 对象，当用户点击一个按钮或悬停在另一个按钮上时播放声音：
 
@@ -8375,9 +7292,9 @@ AnimatedText
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_293_2.png)
 
-你也可以在 Storyboard 内部播放声音。要这样做，请向窗口添加一个 `MediaElement` 控件。然后在 Storyboard 内部添加一个 `MediaTimeline` 对象，将其 `Storyboard.TargetName` 属性设置为 `MediaElement`，并将 `Source` 属性设置为你想要播放的声音名称。
+你也可以在 `Storyboard` 内部播放声音。要这样做，请向窗口添加一个 `MediaElement` 控件。然后在 `Storyboard` 内部添加一个 `MediaTimeline` 对象，将其 `Storyboard.TargetName` 属性设置为 `MediaElement`，并将 `Source` 属性设置为你想要播放的声音名称。
 
-`RepeatingSound` 示例程序使用以下 Storyboard 在每次按钮通过时播放声音。`MediaTimeline` 对象使用名为 `medBinding` 的 `MediaElement` 播放 `WindowsDefault.wav`。
+`RepeatingSound` 示例程序使用以下 `Storyboard` 在每次按钮通过时播放声音。`MediaTimeline` 对象使用名为 `medBinding` 的 `MediaElement` 播放 `WindowsDefault.wav`。
 
 ```xml
 <Storyboard x:Key="mdnButton" RepeatBehavior="Forever">
@@ -8402,15 +7319,15 @@ Storyboard.TargetProperty="Canvas.Top">
 
 ## 多声音
 
-我曾尝试在 Storyboard 中播放多个声音。多个时间线似乎会相互干扰。这是媒体层的问题。如果你成功了，请邮件给 RodStephens@vb-helper.com 并告诉我。
+我曾尝试在 `Storyboard` 中播放多个声音。多个时间线似乎会相互干扰。这是媒体层的问题。如果你成功了，请邮件给 RodStephens@vb-helper.com 并告诉我。
 
-遗憾的是，我们无法在设置了 `AutoReverse=True` 的 Storyboard 中播放媒体文件。（W WPF 不反转媒体文件。）
+遗憾的是，我们无法在设置了 `AutoReverse=True` 的 `Storyboard` 中播放媒体文件。（W WPF 不反转媒体文件。）
 
-绕过此问题的方法是构建一个显式反转其执行操作的 Storyboard，以便它可以反转动画而不尝试反转媒体文件。
+绕过此问题的方法是构建一个显式反转其执行操作的 `Storyboard`，以便它可以反转动画而不尝试反转媒体文件。
 
-另一种方法是在同一个 Storyboard 中创建两个 Storyboard 或两个时间线。多个时间线允许 Storyboard 的不同部分独立运行并相互叠加。
+另一种方法是在同一个 `Storyboard` 中创建两个 `Storyboard` 或两个时间线。多个时间线允许 `Storyboard` 的不同部分独立运行并相互叠加。
 
-图 14-1 所示的 `BouncingBall` 示例程序使用以下 Storyboard 使红球上下跳动，并在击中“地面”时播放音效。
+图 14-1 所示的 `BouncingBall` 示例程序使用以下 `Storyboard` 使红球上下跳动，并在击中“地面”时播放音效。
 
 ```xml
 <!-- 统治一切的 Storyboard -->
@@ -8421,12 +7338,12 @@ Storyboard.TargetProperty="Canvas.Top">
 <Storyboard.TargetName="medBinding"/>
 ```
 
-```
-
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_294_1.png)
 
 ```xml
-<!-- </ParallelTimeline>
+</ParallelTimeline>
+```
+
 ```xml
 <!-- 移动球及其阴影。 -->
 <ParallelTimeline BeginTime="0:0:0" AutoReverse="True">
@@ -8448,30 +7365,25 @@ Value="1"/>
 </Storyboard>
 ```
 
-RepeatingSound
+`RepeatingSound`
 
 ## 糟糕的跳动
 
 记住，没有设置 `From` 属性的动画将从其属性当前值（无论该值是什么）开始动画。这可能会导致一些意想不到且有趣的效果。
 
-
-
-
-（上上）
-
-例如，运行 BouncingBall 程序并点击开始（Start）”按钮。当球几乎到达“地面”时，点击暂停（Pause）按钮以冻结动画。如果你现在点击恢复（Resume）按钮，球将像往常一样继续下降。然而，如果你点击开始（Start）”按钮，动画将从球当前的位置开始。由于动画没有设置它们的起始（From）值，动画将让球从你暂停时所在的任何位置开始上下跳动。其结果是一系列非常缓慢、微小的跳动。（你可以点击停止（Stop）按钮来重置程序。）
+例如，运行 `BouncingBall` 程序并点击开始（Start）”按钮。当球几乎到达“地面”时，点击暂停（Pause）按钮以冻结动画。如果你现在点击恢复（Resume）按钮，球将像往常一样继续下降。然而，如果你点击开始（Start）”按钮，动画将从球当前的位置开始。由于动画没有设置它们的起始（From）值，动画将让球从你暂停时所在的任何位置开始上下跳动。其结果是一系列非常缓慢、微小的跳动。（你可以点击停止（Stop）按钮来重置程序。）
 
 你应该始终检查你的动画，看看它们在被中断时会发生什么，并决定结果是否可以接受。
 
 ## 无故事板的动画（ANIMATION WITHOUT STORYBOARDS）
 
-XAML 代码只能通过故事板（storyboards）运行动画，但后台代码（code-behind）可以使用没有故事板的动画。基本思想是创建一个动画对象，并根据需要设置其属性或为其提供帧（frames）。然后使用控制的 BeginAnimation 方法，传递你想要动画的属性和该动画对象。
+XAML 代码只能通过故事板（storyboards）运行动画，但后台代码（code-behind）可以使用没有故事板的动画。基本思想是创建一个动画对象，并根据需要设置其属性或为其提供帧（frames）。然后使用控制的 `BeginAnimation` 方法，传递你想要动画的属性和该动画对象。
 
-图 14-12 所示的 AnimationWithoutStoryboards 示例程序使用代码构建的动画来显示球在墙上弹跳的效果。点击球（或按 [Alt]+F）关闭程序。
+图 14-12 所示的 `AnimationWithoutStoryboards` 示例程序使用代码构建的动画来显示球在墙上弹跳的效果。点击球（或按 [Alt]+F）关闭程序。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_296_0.png)
 
-AnimationWithoutStoryboards 程序使用 C# 代码来构建和启动它的动画。（你可以在书籍网站上下载此程序或 Visual Basic 版本。）
+`AnimationWithoutStoryboards` 程序使用 C# 代码来构建和启动它的动画。（你可以在书籍网站上下载此程序或 Visual Basic 版本。）
 
 图 14-12
 
@@ -8552,19 +7464,19 @@ ellBall.Begin(Canvas.LeftProperty, x_animation);
 ellBall.Begin(Canvas.TopProperty, y_animation);
 ```
 
-代码首先收集几何形状信息。然后给球在 Canvas 上设置一个随机位置。（注意程序如何使用 Canvas 的 SetLeft 和 SetTop 方法来设置球的 Canvas.Left 和 Canvas.Top 附加属性。）
+代码首先收集几何形状信息。然后给球在 `Canvas` 上设置一个随机位置。（注意程序如何使用 `Canvas` 的 `SetLeft` 和 `SetTop` 方法来设置球的 `Canvas.Left` 和 `Canvas.Top` 附加属性。）
 
-接下来，程序创建了一个 DoubleUsingKeyframes 对象来管理球的 X 坐标，并将其 RepeatBehavior 设置为 Forever。它将计算从初始位置向左向右移动所需的时间。代码创建了 LinearDoubleKeyframe 对象让球移动到右边缘、回到左边缘并回到起始位置。（注意关键帧时间是累积的，例如，关键帧时间可能是 0:0:0.25、0:0:1.25 和 0:0:2）。
+接下来，程序创建了一个 `DoubleUsingKeyframes` 对象来管理球的 X 坐标，并将其 `RepeatBehavior` 设置为 `Forever`。它将计算从初始位置向左向右移动所需的时间。代码创建了 `LinearDoubleKeyframe` 对象让球移动到右边缘、回到左边缘并回到起始位置。（注意关键帧时间是累积的，例如，关键帧时间可能是 0:0:0.25、0:0:1.25 和 0:0:2）。
 
 代码重复这些步骤以为球的 Y 坐标制作动画。
 
-最后，代码调用了球的 EllipseAnimation 方法，传递了它应该动画化的属性和相应的动画对象。注意代码如何使用 Canvas 的 LeftProperty 和 TopProperty 值来识别椭圆的附加 Canvas.Left 和 Canvas.Top 属性。
+最后，代码调用了球的 `EllipseAnimation` 方法，传递了它应该动画化的属性和相应的动画对象。注意代码如何使用 `Canvas` 的 `LeftProperty` 和 `TopProperty` 值来识别椭圆的附加 `Canvas.Left` 和 `Canvas.Top` 属性。
 
 通过使用动画、故事板、游戏帧等，你的后台代码可以构建出任何你使用 XAML 制作的动画。
 
 ## 简单动画（EASY ANIMATIONS）
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
+构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，`JumpingButton` 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
 ```xml
 <Button Contents="Jump!" Width="100" Height="40">
@@ -8585,67 +7497,39 @@ ellBall.Begin(Canvas.TopProperty, y_animation);
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_298_0.png)
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
+构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，`JumpingButton` 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
+构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，`JumpingButton` 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
+构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，`JumpingButton` 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
 
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。
-
-（由于原始文本中部分内容出现了大量重复，此处已根据“不要重复输出原文”的原则，仅对核心内容进行翻译。）
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。例如，JumpingButton 示例程序使用以下代码来构建最简单的动画之一，通过修改单个属性让按钮向上移动并回到起始位置。
-
-构建动画可能是一项乏味的工作。即使是简单的动画，代码也很长且嵌套深。
-
-（注：此处翻译已根据要求去除了重复部分。）
-
-内饰以及车牌（例如，WPF FAN）。它的模板定义了组成它的部分——例如，它的底盘、门和引擎。
+内饰以及车牌（例如，`WPF FAN`）。它的模板定义了组成它的部分——例如，它的底盘、门和引擎。
 
 然而，无论你选择什么属性和组件的组合，它都具有某些标准的汽车特征，如启动、加速、减速、关闭以及价格极其昂贵。当你开车在街道上行驶时，你会看到成百上千种组合，但它们都能被轻易识别为汽车。
 
-[好吧，可能有几个很难一眼看出是 MULE 机器人车辆 (www.botmag.com/articles/mule.shtml)、Terrafugia Transition 飞行汽车/陆地飞机 (www.register.co.uk/2008/07/29/terrafugia_transition_on_show_oshkook.html) 或丰田 PM (www.toyota.com/concept-vehicles/pm.html)，后者看起来像像《星球大战》中的星际赛车一样的汽车，但我还没有在道路上见过任何一个]
+[好吧，可能有几个很难一眼看出是 `MULE` 机器人车辆 (`www.botmag.com/articles/mule.shtml`)、`Terrafugia Transition` 飞行汽车/陆地飞机 (`www.register.co.uk/2008/07/29/terrafugia_transition_on_show_oshkook.html`) 或丰田 `PM` (`www.toyota.com/concept-vehicles/pm.html`)，后者看起来像像《星球大战》中的星际赛车一样的汽车，但我还没有在道路上见过任何一个]
 
 请注意，组件会影响汽车的行为。混合动力汽车效率极高但加速较慢，而 12 缸跑车加速极快但耗油大。同样，组成控件的组件也会改变它的行为方式。
 
-因为模板中的控件决定了控件的外观，所以 WPF 控件有时被称为无样式（lookless）。通过为现有的 Button 或 CheckBox 控件创建自己的模板，你可以赋予控件新的外观和行为。
+因为模板中的控件决定了控件的外观，所以 WPF 控件有时被称为无样式（lookless）。通过为现有的 `Button` 或 `CheckBox` 控件创建自己的模板，你可以赋予控件新的外观和行为。
 
 > 正在进行 中
-> 构建模板可能是一项工作量巨大的任务。构建模板时，你对控件的行为负责。你不能只制作一个菱形的 Button 表面，就指望它能自动完成普通 Button 的的所有工作。如果你决定为一个菱形 Button 制作模板，那么你就需要自己构建更多 Button 的行为。
-> Button 提供了一些非常基础的功能，例如在用户点击它时触发 `Click` 事件，但你需要处理诸如鼠标悬停在上面时、用户按下鼠标时、鼠标移出时等情况。
+
+> 构建模板可能是一项工作量巨大的任务。构建模板时，你对控件的行为负责。你不能只制作一个菱形的 `Button` 表面，就指望它能自动完成普通 `Button` 的的所有工作。如果你决定为一个菱形 `Button` 制作模板，那么你就需要自己构建更多 `Button` 的行为。
+
+> `Button` 提供了一些非常基础的功能，例如在用户点击它时触发 `Click` 事件，但你需要处理诸如鼠标悬停在上面时、用户按下鼠标时、鼠标移出时等情况。
 
 ## CONTENTPRESENTER
 
-如果你正在从自己选择的组件组装一个新的控件，你如何处理控件的核心功能？例如，如果你正在为 Label 控件构建模板，也许是在带有模糊边缘的 Border 中显示文本，你想要如何显示文本呢？
+如果你正在从自己选择的组件组装一个新的控件，你如何处理控件的核心功能？例如，如果你正在为 `Label` 控件构建模板，也许是在带有模糊边缘的 `Border` 中显示文本，你想要如何显示文本呢？
 
 答案是 `ContentProvider`。`ContentProvider` 是 WPF 提供的一个对象，用于显示控件应该显示的任何内容。你可以将 `ContentProvider` 放置在你为模板构建的任何控件层次结构中，它将显示内容。
 
 ## 模板绑定 | 265
 
-示例中，下面的代码显示了一个极其简单的 Label 模板：
+示例中，下面的代码显示了一个极其简单的 `Label` 模板：
 
 ```
 <Window.Resources>
@@ -8657,9 +7541,9 @@ ellBall.Begin(Canvas.TopProperty, y_animation);
 </Window.Resources>
 ```
 
-SimpleLabelTemplate
+`SimpleLabelTemplate`
 
-模板的名为 `temSimpleLabel`，它适用于 Label 控件。模板包含一个 `Border` 控件，用于显示红色边框并持有 `ContentPresenter`。
+模板的名为 `temSimpleLabel`，它适用于 `Label` 控件。模板包含一个 `Border` 控件，用于显示红色边框并持有 `ContentPresenter`。
 
 下面的代码显示了如何编写此模板：这段代码创建了一个 `Label`。它的最后一个属性将控件的 `Template` 属性设置为之前创建的模板。
 
@@ -8673,9 +7557,9 @@ Background="StaticResource brBackground"
 Template="StaticResource temBorderLabel"/>
 ```
 
-SimpleLabelTemplate
+`SimpleLabelTemplate`
 
-图 15-2 中的 SimpleLabelTemplate 示例显示了两个 `Label`。左侧的一个没有使用模板，而右侧的使用了 `temSimpleLabel` 模板。
+图 15-2 中的 `SimpleLabelTemplate` 示例显示了两个 `Label`。左侧的一个没有使用模板，而右侧的使用了 `temSimpleLabel` 模板。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_302_0.png)
 
@@ -8683,7 +7567,7 @@ SimpleLabelTemplate
 
 ## 模板绑定
 
-如果你比较图 15-2 中的 Label，你会发现这个示例存在一些潜在问题。模板中的 `Border` 控件对其 `BorderBrush` 和 `BorderThickness` 属性包含了显式值，这会覆盖创建 `Label` 的代码中设置的任何值。`Border` 控件也没有设置 `Background`，因此它使用了默认的透明背景。
+如果你比较图 15-2 中的 `Label`，你会发现这个示例存在一些潜在问题。模板中的 `Border` 控件对其 `BorderBrush` 和 `BorderThickness` 属性包含了显式值，这会覆盖创建 `Label` 的代码中设置的任何值。`Border` 控件也没有设置 `Background`，因此它使用了默认的透明背景。
 
 这意味着模板化控件没有显示圆角或边框。它也没有遵循所请求的 `HorizontalContentAlignment` 和 `VerticalContentAlignment` 值。
 
@@ -8697,7 +7581,7 @@ Background={TemplateBinding Background}"
 
 模板绑定允许模板在适当的情况下尊重为控件设置的值，通过覆盖其他值来实现你所需的外观。
 
-下面的代码显示了 Label 模板的一个更佳版本，它尊重了控件的几个背景和前景属性：
+下面的代码显示了 `Label` 模板的一个更佳版本，它尊重了控件的几个背景和前景属性：
 
 ```
 <Control x:Key="betterLabel" TargetType="Label">
@@ -8717,7 +7601,7 @@ Background={TemplateBinding Background}"
 
 在 ways模板中，`Border` 控件模拟了客户端的 `Background`、`BorderBrush` 和 `BorderThickness`。`ContentPresenter` 设置了它的 `HorizontalAlignment` 和 `VerticalAlignment`，以便结果对齐。
 
-图 15-2 中显示的 BetterTemplate 示例显示了两个 `Label`。左侧的一个没有使用模板，而右侧的使用了 `temSimpleLabel` 模板。
+图 15-2 中显示的 `BetterTemplate` 示例显示了两个 `Label`。左侧的一个没有使用模板，而右侧的使用了 `temSimpleLabel` 模板。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_303_1.png)
 
@@ -8750,7 +7634,7 @@ Background={TemplateBinding Background}"
 
 当然，你并不总是希望你的模板完全匹配控件的外观。如果不这样做，你何费力制作模板呢。
 
-你的模板将覆盖属性，实现新的行为，并从原始控件的其他控件构建模板。图 15-4 中显示的 InterestingLabelTemplates 示例展示两个模板。第一个在文本周围绘制了双层边框。第二个可以跨行显示文本。
+你的模板将覆盖属性，实现新的行为，并从原始控件的其他控件构建模板。图 15-4 中显示的 `InterestingLabelTemplates` 示例展示两个模板。第一个在文本周围绘制了双层边框。第二个可以跨行显示文本。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_303_2.png)
 
@@ -8758,7 +7642,7 @@ Background={TemplateBinding Background}"
 
 ## 修改控件外观 | 267
 
-下面的代码显示了 InterestingLabel 程序如何带有双层边框显示其 `Label`：
+下面的代码显示了 `InterestingLabel` 程序如何带有双层边框显示其 `Label`：
 
 ```
 <ControlTemplate x:Key="TemplateBorderLabel" TargetType="Label">
@@ -8776,12 +7660,9 @@ Background={TemplateBinding Background}"
 </ControlTemplate>
 ```
 
-
-
-
 # 第 15 章模板
 
-请注意，这仅在 ContentPresenter 尝试显示文本时才有效。例如，如果你像代码所示构建 Label 控件并使其包含一个 Button，那么 TextBlock 将不会显示：
+请注意，这仅在 `ContentPresenter` 尝试显示文本时才有效。例如，如果你像代码所示构建 `Label` 控件并使其包含一个 `Button`，那么 `TextBlock` 将不会显示：
 
 ```xml
 <Label Margin="Right"
@@ -8795,19 +7676,19 @@ Background={TemplateBinding Background}"
 </Label>
 ```
 
-有趣的 Label 模板
+有趣的 `Label` 模板
 
 ## 模板事件
 
-在过程中使用的 Label 控件是最简单的控件之一。它大部分时候只是静止地在那里保持美观，而不与用户进行交互。
+在过程中使用的 `Label` 控件是最简单的控件之一。它大部分时候只是静止地在那里保持美观，而不与用户进行交互。
 
-但像 Button、CheckBox、Slider 这样更复杂的控件必须在鼠标在它们上方移动、按下、拖拽和释放时执行各种动作。
+但像 `Button`、`CheckBox`、`Slider` 这样更复杂的控件必须在鼠标在它们上方移动、按下、拖拽和释放时执行各种动作。
 
 要让模板控件对事件做出响应，你可以像在第 13 和第 14 章中向样式添加触发器一样，向模板中添加属性触发器和事件触发器。
 
-除了移动或按下鼠标等用户操作引起的事件外，控件还必须对状态的变化做出响应。例如，尽管 Label 大多数时间闲置，但当它被禁用时，它也应该改变外观。如果你需要显示复杂的动画，那么简单地通过属性触发器中的 Sets 在当 Enabled 属性为 False 时做出响应即可。
+除了移动或按下鼠标等用户操作引起的事件外，控件还必须对状态的变化做出响应。例如，尽管 `Label` 大多数时间闲置，但当它被禁用时，它也应该改变外观。如果你需要显示复杂的动画，那么简单地通过属性触发器中的 `Sets` 在当 `Enabled` 属性为 `False` 时做出响应即可。
 
-DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
+`DisabledLabel` 示例程序显示了禁用的 `Label` 具有独特的视觉。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_305_0.png)
 
@@ -8830,6 +7711,8 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 </Grid>
 <Canvas Name="canDisabled" Opacity="0">
 ```
+
+
 
 ```xml
 <Canvas.Background>
@@ -8854,41 +7737,37 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 </Grid>
 ```
 
-此版本的模板包含一个 Grid，禁用的 label 和 Canvas。Canvas 填充了渐变画刷，且初始透明度为 0。模板的触发器部分当 IsEnabled 属性为 False 时会被激活。它会将 Canvas 的 Opacity 设置为 0.5，从而部分遮挡控件内容。它还将 TextBlock 的 Foreground 设置为 Gray。
+此版本的模板包含一个 `Grid`，禁用的 label 和 `Canvas`。`Canvas` 填充了渐变画刷，且初始透明度为 0。模板的触发器部分当 `IsEnabled` 属性为 `False` 时会被激活。它会将 `Canvas` 的 `Opacity` 设置为 0.5，从而部分遮挡控件内容。它还将 `TextBlock` 的 `Foreground` 设置为 `Gray`。
 
 ## 模板技巧 1
 
-使用 Opacity = 0 的控件是一种常用且实用的模板技巧。模板它可以显示新内容、覆盖某些内容，或者在示例中，部分遮挡它背后的内容。
+使用 `Opacity = 0` 的控件是一种常用且实用的模板技巧。模板它可以显示新内容、覆盖某些内容，或者在示例中，部分遮挡它背后的内容。
 
 你可以使用透明白色冲淡背后的内容，使用透明黑色加深背后的内容，或者使用不透明控件完全覆盖背景。
 
 ## 模板技巧 2
 
-如果你为这些对象命名，触发器更容易操作模板和其他对象。在示例中，TextBlock 被命名为 txtbContent，透明 Canvas 被命名为 canDisabled，因此触发器很容易控制它们。如果你需要对其进行动画，请给它命名。
+如果你为这些对象命名，触发器更容易操作模板和其他对象。在示例中，`TextBlock` 被命名为 `txtbContent`，透明 `Canvas` 被命名为 `canDisabled`，因此触发器很容易控制它们。如果你需要对其进行动画，请给它命名。
 
-后续章节描述了一些改变 Button 工作方式的复杂模板。
+后续章节描述了一些改变 `Button` 工作方式的复杂模板。
 
 # 玻璃按钮
 
-图 15-6 所示的 GlassButton 示例程序使用模板赋予按钮玻璃质外观。
+图 15-6 所示的 `GlassButton` 示例程序使用模板赋予按钮玻璃质外观。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_307_0.png)
 
 图 15-6
 
-左侧禁用的按钮看起来褪色且没有响应。标记 Default 的第二个按钮与其他按钮的边框不同。当用户按下 Enter 键时，如果没有其他按钮拥有焦点，则该按钮将触发 Click 事件。在图 15-6 中，TextBox 拥有焦点，因此按下 Enter 键将触发默认按钮。
+左侧禁用的按钮看起来褪色且没有响应。标记 `Default` 的第二个按钮与其他按钮的边框不同。当用户按下 `Enter` 键时，如果没有其他按钮拥有焦点，则该按钮将触发 `Click` 事件。在图 15-6 中，`TextBox` 拥有焦点，因此按下 `Enter` 键将触发默认按钮。
 
 ## 指定默认
 
-> 仅仅因为按钮的 IsDefault 属性为 True，并不意味着该按钮在用户按下 Enter 时总是会触发。如果焦点在另一个按钮上，则 Enter 键将触发该按钮而不是默认按钮。
+> 仅仅因为按钮的 `IsDefault` 属性为 `True`，并不意味着该按钮在用户按下 `Enter` 时总是会触发。如果焦点在另一个按钮上，则 `Enter` 键将触发该按钮而不是默认按钮。
 
 此外，当默认按钮拥有焦点时，它的行为与其他任何拥有焦点的按钮一样，因此并没有作为默认按钮运行。
 
 默认按钮的外观在鼠标悬停上方时会改变。默认按钮的外观在被按下时也会改变。默认按钮的外观在被禁用时也会改变。当它拥有焦点时，外观也会改变。当它被禁用时，外观也会改变。当它拥有焦点时，外观也会改变。当它被禁用时，外观也会改变。当它拥有焦点时，外观也会改变。当它被禁用时，外观也会改变。
-
-
-
-
 
 ```xml
 <LinearStop Color="LightGreen" Offset="1"/>
@@ -8925,15 +7804,15 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 </Style>
 ```
 
-第一个 Style 是一个基础样式，设置了 Rectangle 的 `RadiusX`、`RadiusY` 和 `StrokeThickness` 属性。这些属性对于 Button 的所有状态都是相同的。由于 Button 的“普通”状态是一个未命名的 Rectangle Style，因此它总是会有其他 Style 覆盖它。它将 `Fill` 属性设置为一个 `LinearGradientBrush`，其颜色呈现从深绿色到浅绿色的渐变。然后，该 Style 将 `Stroke` 属性设置为一个产生相反效果的画刷：从浅绿色到深绿色的渐变。（这种极其简单的技术让 Button 具有了易读的 3D 外观）。
+第一个 `Style` 是一个基础样式，设置了 `Rectangle` 的 `RadiusX`、`RadiusY` 和 `StrokeThickness` 属性。这些属性对于 `Button` 的所有状态都是相同的。由于 `Button` 的“普通”状态是一个未命名的 `Rectangle Style`，因此它总是会有其他 `Style` 覆盖它。它将 `Fill` 属性设置为一个 `LinearGradientBrush`，其颜色呈现从深绿色到浅绿色的渐变。然后，该 `Style` 将 `Stroke` 属性设置为一个产生相反效果的画刷：从浅绿色到深绿色的渐变。（这种极其简单的技术让 `Button` 具有了易读的 3D 外观）。
 
-“默认” Style 使用相同的 `Fill` 属性，但让 `Stroke` 笔刷呈现从深绿色到黑色的渐变。（这种差异非常微妙。你可能想尝试更大的变化，也许添加一个完全黑色的轮廓）。
+“默认” `Style` 使用相同的 `Fill` 属性，但让 `Stroke` 笔刷呈现从深绿色到黑色的渐变。（这种差异非常微妙。你可能想尝试更大的变化，也许添加一个完全黑色的轮廓）。
 
-“禁用” Style 将 Rectangle 的 `Opacity` 属性设置为 0.75，使其变为半透明。它还更改了 Rectangle 的 `Fill` 和 `Stroke` 属性，使其在灰色和白色之间渐变。
+“禁用” `Style` 将 `Rectangle` 的 `Opacity` 属性设置为 0.75，使其变为半透明。它还更改了 `Rectangle` 的 `Fill` 和 `Stroke` 属性，使其在灰色和白色之间渐变。
 
-## 玻璃按钮触发器 (Glass Button Triggers)
+## 玻璃按钮触发器
 
-以下代码显示了模板的触发器（Trigger）。响应事件和控件属性的变化，触发器会设置新的属性值并应用样式。
+以下代码显示了模板的触发器（`Trigger`）。响应事件和控件属性的变化，触发器会设置新的属性值并应用样式。
 
 ```xml
 <!-- 鼠标悬停 -->
@@ -8962,33 +7841,34 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 </Trigger>
 ```
 
-当控件的 `IsMouseOver` 属性为 True 时，第一个触发器将 Grid 的 `Opacity` 属性设置为 0.75。这比原始的 0.5 值要大，因此控件变得更不透明了。
+当控件的 `IsMouseOver` 属性为 `True` 时，第一个触发器将 `Grid` 的 `Opacity` 属性设置为 0.75。这比原始的 0.5 值要大，因此控件变得更不透明了。
 
-当控件接收焦点时，第二个触发器也会将 Grid 的 `Opacity` 属性设置为 0.75。
+当控件接收焦点时，第二个触发器也会将 `Grid` 的 `Opacity` 属性设置为 0.75。
 
-当控件的 `IsDefaulted` 属性为 True 时，下一个触发器会将 Rectangle 的 `Style` 设置为“默认”样式。
+当控件的 `IsDefaulted` 属性为 `True` 时，下一个触发器会将 `Rectangle` 的 `Style` 设置为“默认”样式。
 
-当 `IsPressed` 属性为 True 时，接的触发器将 Grid 的 `Opacity` 设置为 1，使其完全不透明。
+当 `IsPressed` 属性为 `True` 时，接的触发器将 `Grid` 的 `Opacity` 设置为 1，使其完全不透明。
 
-最后，当控件的 `IsEnabled` 属性为 False 时，最后一个触发器会将 Rectangle 的 `Style` 设置为“禁用”样式。Button 控件会自动停止与用户交互，因此你不需要担心这一点。
+最后，当控件的 `IsEnabled` 属性为 `False` 时，最后一个触发器会将 `Rectangle` 的 `Style` 设置为“禁用”样式。`Button` 控件会自动停止与用户交互，因此你不需要担心这一点。
 
-## 重要顺序 (IMPORTANT ORDER)
+## 重要顺序
 
 注意，模板触发器的顺序非常重要。后定义的触发器会被后应用——如果两个触发器同时激活，第二个将覆盖第一个。
 
-在这个示例中，`IsPressed` 触发器必须在 `MouseOver` 触发器之后。否则，当用户按下按钮时，`IsPressed` 触发器会先发生。但此时，由于鼠标正位于 Button 之上，`MouseOver` 触发器也会应用并覆盖 `IsPressed` 触发器，导致用户永远看不到按钮被按下的状态。
+在这个示例中，`IsPressed` 触发器必须在 `MouseOver` 触发器之后。否则，当用户按下按钮时，`IsPressed` 触发器会先发生。但此时，由于鼠标正位于 `Button` 之上，`MouseOver` 触发器也会应用并覆盖 `IsPressed` 触发器，导致用户永远看不到按钮被按下的状态。
 
 同样，`IsEnabled` 触发器位于最后，因此它会覆盖所有其他触发器。如果按钮被禁用，它不应该显示任何其他外观。
 
-## 椭圆按钮 (ELLIPSE BUTTON)
+# 椭圆按钮
 
-图 15-9 所示的 EllipseButton 示例程序使用模板制作了一个椭圆按钮，这与上一节描述的玻璃按钮非常不同。
+图 15-9 所示的 `EllipseButton` 示例程序使用模板制作了一个椭圆按钮，这与上一节描述的玻璃按钮非常不同。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_312_0.png)
 
 图 15-9
 
 左侧的禁用按钮比其他按钮颜色淡，且不对用户做出响应。
+
 默认按钮比其他按钮亮，并沿边框显示黄色高亮。
 
 图 15-10 显示了鼠标悬停在按钮 3 上时的程序。鼠标下的按钮比默认按钮更亮，并在边缘处显示黄色高亮。
@@ -8999,9 +7879,9 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 这很难察觉，但图 15-10 中鼠标下的按钮在数字 3 上显示了一个额外的白色高亮。每秒，该高亮绕按钮圆周移动，以吸引用户的注意力。这是一个微小的高亮，所以效果非常微妙。
 
-## 动画建议 (ANIMATION ADVICE)
+## 动画建议
 
-动态是可以添加到程序中最吸引眼球的效果之一，但也可能是最分散注意力且令人烦人的效果。鼠标悬停时闪烁颜色或不断改变尺寸的按钮会干扰用户。EllipseButton 程序显示的移动高亮很微妙，或者只触发一次——例如当鼠标进入按钮时，所以不要让你的用户抓狂。在极端情况下，快速闪烁的光灯会导致某些人产生癫痫，特别是在 2 到 55 Hz 的频率之间。更好的做法是给用户禁用此类动画的方法。此外请注意，有特殊需求（如色盲或视觉障碍）的用户可能无法很好或完全看到微妙动画。不要仅仅依赖微妙动画来向用户提供信息。
+动态是可以添加到程序中最吸引眼球的效果之一，但也可能是最分散注意力且令人烦人的效果。鼠标悬停时闪烁颜色或不断改变尺寸的按钮会干扰用户。`EllipseButton` 程序显示的移动高亮很微妙，或者只触发一次——例如当鼠标进入按钮时，所以不要让你的用户抓狂。在极端情况下，快速闪烁的光灯会导致某些人产生癫痫，特别是在 2 到 55 Hz 的频率之间。更好的做法是给用户禁用此类动画的方法。此外请注意，有特殊需求（如色盲或视觉障碍）的用户可能无法很好或完全看到微妙动画。不要仅仅依赖微妙动画来向用户提供信息。
 
 图 15-11 显示了用户按下按钮时的程序。
 
@@ -9015,7 +7895,7 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 以下部分描述模板。内表面（Inner surface）由一个呈现从深绿色到浅绿色渐变的画刷填充。外边缘（Outer edge）是一个椭圆，其 `Stroke` 属性设置为一个呈现从浅绿色到深绿色的渐变的画刷。
 
-## 椭圆按钮控件 (Ellipse Button Controls)
+## 椭圆按钮控件
 
 图 15-12 显示了鼠标悬停在按钮 3 上时的程序。鼠标下的按钮比默认按钮亮，并在文字下方显示黄色光晕。
 
@@ -9023,17 +7903,13 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 | Grid | 外边缘 | 内表面 | 边缘高亮 |
 |---|---|---|---|
-| | 上高亮 | 下高亮 | ContentPresenter |
-
-
-
-
+|  | 上高亮 | 下高亮 | ContentPresenter |
 
 ## 椭圆按钮触发器
 
-当事件发生时，模板的触发器（triggers）会对控件的外观做出相应的更改。这些通常涉及改变不透明（Opacity）值，使某些控件更可见，同时隐藏其他控件。
+当事件发生时，模板的触发器（triggers）会对控件的外观做出相应的更改。这些通常涉及改变不透明（`Opacity`）值，使某些控件更可见，同时隐藏其他控件。
 
-后续代码所示的 IsMouseOver 属性是该面板触发器中最感兴趣的：
+后续代码所示的 `IsMouseOver` 属性是该面板触发器中最感兴趣的：
 
 ```
 <Trigger Property="IsMouseOver" Value="True">
@@ -9071,19 +7947,23 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_315_0.png)
 
-此代码使用简单的 Setter（setters）在启动时立即执行以下操作：
+此代码使用简单的 `Setter`（setters）在启动时立即执行以下操作：
 
 - 将左上角的高亮变为完全不透明而非半透明。
+
 - 将降低其他控件的浅灰色变为透明，以便所有其他控件都恢复完全亮度。
-- 将 ContentProperty 变为完全不透明而非半透明。
 
-为 ContentPresenter 提供一个 OuterGlowmapEffect（定义在模板的 Resources 部分）。将白色闪烁高亮的 Opacity 设置为 0.75 以可见。这使得左边缘比右侧高亮亮，并为后续描述的闪烁动画做好准备。
+- 将 `ContentProperty` 变为完全不透明而非半透明。
 
-触发器的 EnterActions 在 MouseOver 属性变为 True 时发生。此代码启动了一个 Storyboard，它使用 DoubleAnimationUsingKeyFrames 对象来对闪烁高亮画刷进行动画处理。画刷使用名为 sparkle 的 RotateTransform，其初始 Angle 为 0，因此画刷没有旋转。动画使 Angle 在 1 秒内从 0 度扫描到 360 度，并无限循环。
+为 `ContentPresenter` 提供一个 `OuterGlowmapEffect`（定义在模板的 `Resources` 部分）。将白色闪烁高亮的 `Opacity` 设置为 0.75 以可见。这使得左边缘比右侧高亮亮，并为后续描述的闪烁动画做好准备。
 
-触发器的 ExitActions 在 MouseOver 属性不再为 True（换句话说变为 False）时发生。当发生这种情况时，代码停止动画闪烁的 Storyboard。
+触发器的 `EnterActions` 在 `MouseOver` 属性变为 `True` 时发生。此代码启动了一个 `Storyboard`，它使用 `DoubleAnimationUsingKeyFrames` 对象来对闪烁高亮画刷进行动画处理。画刷使用名为 `sparkle` 的 `RotateTransform`，其初始 `Angle` 为 0，因此画刷没有旋转。动画使 `Angle` 在 1 秒内从 0 度扫描到 360 度，并无限循环。
 
-模板的其他触发器要简单得多。以下代码显示了用户按下按钮时执行的 IsPressed 属性：
+触发器的 `ExitActions` 在 `MouseOver` 属性不再为 `True`（换句话说变为 `False`）时发生。当发生这种情况时，代码停止动画闪烁的 `Storyboard`。
+
+模板的其他触发器要简单得多。以下代码显示了用户按下按钮时执行的 `IsPressed` 属性：
+
+
 
 ```
 <Trigger IsPressed="True">
@@ -9097,11 +7977,11 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 ### EllipseButton (椭圆按钮)
 
-此代码使用一些 Setter 执行以下操作：
+此代码使用一些 `Setter` 执行以下操作：
 
-- 通过设置 Opacity = 0 隐藏左上角高亮。
-- 通过设置 Opacity = 0.75 显示右下角高亮。
-- 为 ContentPresenter 提供名为 bmePressed 的 OuterGlowmapEffect，该效果定义在模板的 Resources 部分，它比 MouseOver 效果具有更大的光晕（Glow），因此 ContentPresenter 的光晕更大。对比图 15-10 和 15-11 就可以看到差异。
+- 通过设置 `Opacity = 0` 隐藏左上角高亮。
+- 通过设置 `Opacity = 0.75` 显示右下角高亮。
+- 为 `ContentPresenter` 提供名为 `bmePressed` 的 `OuterGlowmapEffect`，该效果定义在模板的 `Resources` 部分，它比 `MouseOver` 效果具有更大的光晕（Glow），因此 `ContentPresenter` 的光晕更大。对比图 15-10 和 15-11 就可以看到差异。
 
 后续代码中模板的其他触发器工作原理类似：
 
@@ -9131,41 +8011,37 @@ DisabledLabel 示例程序显示了禁用的 Label 具有独特的视觉。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_317_0.png)
 
-这些触发器非常直观，为控件提供新的 Stroke（描边）值并调整 Opacity（不透明度）值。
+这些触发器非常直观，为控件提供新的 `Stroke`（描边）值并调整 `Opacity`（不透明度）值。
 
 ## 模板技巧 3-
 
-- 使用 BlurEffect 使对象看起来具有三维感（带有模糊高亮的边缘）
-- 使用 Opacity 0 使半透明高亮
+- 使用 `BlurEffect` 使对象看起来具有三维感（带有模糊高亮的边缘）
+- 使用 `Opacity 0` 使半透明高亮
 - 使用颜色变为透明的画刷使高亮消失
 - 使用从透明变为颜色的画刷使其在多处可见
 - 为不同状态使用不同的画刷（普通与默认的高亮）
-- 为不同状态使用不同的 BitmapEffects（MouseOver 的较小光晕和 Pressed 的较大光晕）
+- 为不同状态使用不同的 `BitmapEffects`（`MouseOver` 的较小光晕和 `Pressed` 的较大光晕）
 - 对画刷变换进行动画处理
 
 ## 研究模板
 
 为了有效地构建模板，你需要了解控件为你提供了什么，以及你需要为其提供什么。你还需要确定控件提供了哪些事件，以便知道如何让它采取行动。
 
-例如，WPF 提供了一系列事件，包括 MouseEnter、MouseOver、MouseLeftDown、Pressed 和 Click。如果你正在编写按钮模板，可以使用哪些事件来更改按钮的外观？按钮为你提供了哪些属性，哪些是你需要实现的？
+例如，WPF 提供了一系列事件，包括 `MouseEnter`、`MouseOver`、`MouseLeftDown`、`Pressed` 和 `Click`。如果你正在编写按钮模板，可以使用哪些事件来更改按钮的外观？按钮为你提供了哪些属性，哪些是你需要实现的？
 
-之前的节描述的按钮模板使用了 MouseOver、IsPressed、IsEnabled、IsFocused 和 IsDefault 属性。无论向模板中添加什么控件，Button 类都定义了基本的按钮行为。
+之前的节描述的按钮模板使用了 `MouseOver`、`IsPressed`、`IsEnabled`、`IsFocused` 和 `IsDefault` 属性。无论向模板中添加什么控件，`Button` 类都定义了基本的按钮行为。
 
-正如本章前面的“模板绑定”部分所述，模板还可以读取底层控件提供的某些属性值。例如，Button 类提供了 Background、BorderBrush 和 BorderThickness 属性，模板可以通过模板绑定读取这些属性。Button 还继承了 Width 和 Height 等属性，你也可以通过模板绑定读取。
+正如本章前面的“模板绑定”部分所述，模板还可以读取底层控件提供的某些属性值。例如，`Button` 类提供了 `Background`、`BorderBrush` 和 `BorderThickness` 属性，模板可以通过模板绑定读取这些属性。`Button` 还继承了 `Width` 和 `Height` 等属性，你也可以通过模板绑定读取。
 
 那么，如何学习可用的属性和模板？
 
-很好的来源是微软的“Control Styles and Templates”网页（mdn.microsoft.com/cc2875(vs.9).aspx）。该页面提供了指向其他描述可用功能的链接。
+很好的来源是微软的“Control Styles and Templates”网页（`mdn.microsoft.com/cc2875(vs.9).aspx`）。该页面提供了指向其他描述可用功能的链接。
 
-例如，“Button Styles and Templates”页面列出了按钮的状态和属性，并告诉如何获取它们。例如，Pressed 状态（可以通过 IsPressed 属性读取）告诉我们按钮何时被按下。
+例如，“Button Styles and Templates”页面列出了按钮的状态和属性，并告诉如何获取它们。例如，`Pressed` 状态（可以通过 `IsPressed` 属性读取）告诉我们按钮何时被按下。
 
 这些网页还显示了控件使用的默认模板。按钮控件的默认模板有 84 行，且相当复杂。有些则更长、复杂得多。
 
-
-
-
-
-ShowTemplate 程序使用以下代码来显示 Target 控制的模板：
+`ShowTemplate` 程序使用以下代码来显示 `Target` 控制的模板：
 
 ```csharp
 private void btnTemplate_Click(object sender, RoutedEventArgs e)
@@ -9183,7 +8059,7 @@ private void btnTemplate_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-ShowTemplate
+`ShowTemplate`
 
 这段代码的关键在于 `XmlWriter` 类，它的方法可以从像控件或模板这样的 WPF 对象中提取 XAML。
 
@@ -9191,9 +8067,9 @@ ShowTemplate
 
 程序随后创建了一个 `StringBuilder` 来存储结果文本。它使用写入器设置来创建一个附加到 `StringBuilder` 的 `XmlWriter`。
 
-代码调用 `XmlWriter` 类的静态 `Save` 方法，将 Target 控件 `Template` 属性的 XAML 表示写入 `StringBuilder`。
+代码调用 `XmlWriter` 类的静态 `Save` 方法，将 `Target` 控件 `Template` 属性的 XAML 表示写入 `StringBuilder`。
 
-程序最后通过在其 TextBox `txtResult` 中显示结果而结束。
+程序最后通过在其 `TextBox` `txtResult` 中显示结果而结束。
 
 在找到控件的默认模板后，你可以修改它以创建你自己的模板，从而更改控件的外观。这让你的模板行为与默认模板完全相同，但在你想要更改的地方除外。
 
@@ -9213,7 +8089,7 @@ WPF 允许你构建具有引人注目的、独特外观的应用程序。通过�
 
 属性允许你更改控件的外观。它们允许你更改视觉特征，如控件的颜色、大小、位置和内容。资源和样式允许你封装这些更改，以便你将它们同时应用于许多控件。
 
-模板允许你通过更改构成控件的部件来改变控件的行为。它们允许你从根本上更改按钮、ListBox、菜单和其他控件的外观和行为，同时允许它们执行其核心功能。
+模板允许你通过更改构成控件的部件来改变控件的行为。它们允许你从根本上更改按钮、`ListBox`、菜单和其他控件的外观和行为，同时允许它们执行其核心功能。
 
 主题和皮肤将所有想法整合在一起，允许你轻松地更改整个应用程序的外观和行为，以适应用户的需求和心情。
 
@@ -9221,26 +8097,26 @@ WPF 允许你构建具有引人注目的、独特外观的应用程序。通过�
 
 有些开发者交替使用主题和皮肤，但我做的区分是：皮肤适用于单个应用程序（或应用程序的一部分），而主题则适用于多个应用程序。
 
-更准确地说，主题是一个统一的方案，有助于确定多个应用程序的外观和行为。最常见的主题是由 Windows提供的。Windows 7 提供了以下主题：
+更准确地说，主题是一个统一的方案，有助于确定多个应用程序的外观和行为。最常见的主题是由 Windows 提供的。Windows 7 提供了以下主题：
 
-- Aero
-- Classic
-- Luna（包含 Homestead, Metallic 和 Normal 版本）
-- Royale
+- `Aero`
+- `Classic`
+- `Luna`（包含 `Homestead`, `Metallic` 和 `Normal` 版本）
+- `Royale`
 
-## 使用系统主题
+### 使用系统主题
 
-图 16-1 所示的 ShowThemes 示例程序显示了使用 Windows 7 自带主题的控件。差异非常微妙，你需要仔细观察才能看到每个主题中的变化。
+图 16-1 所示的 `ShowThemes` 示例程序显示了使用 Windows 7 自带主题的控件。差异非常微妙，你需要仔细观察才能看到每个主题中的变化。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_321_0.png)
 
 图 16-1
 
-如果你不使用属性、样式或模板来更改控件的外观或行为，它将使用系统当前主题定义的值。在图 16-1 中，你可以看到“默认”组中的控件与使用 Aero 主题的控件具有相同的外观。这是因为在我运行程序时，系统选择了 Aero。
+如果你不使用属性、样式或模板来更改控件的外观或行为，它将使用系统当前主题定义的值。在图 16-1 中，你可以看到“默认”组中的控件与使用 `Aero` 主题的控件具有相同的外观。这是因为在我运行程序时，系统选择了 `Aero`。
 
 要更改 Windows 7 中的系统主题，请打开“控制面板”。在“外观和个性化”下点击“更改主题”。在图 16-2 所示的对话框中，点击你想要的主题。
 
-在截取图 16-1 的屏幕后，我按照这些步骤在不关闭 ShowThemes 程序的情况下将系统主题更改为 Windows Classic。程序自动检测到系统主题的变化，并相应地重绘了自己。
+在截取图 16-1 的屏幕后，我按照这些步骤在不关闭 `ShowThemes` 程序的情况下将系统主题更改为 Windows Classic。程序自动检测到系统主题的变化，并相应地重绘了自己。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_321_1.png)
 
@@ -9256,18 +8132,21 @@ FIGURE 16-2
 
 如果你仔细比较 16-1 和 16-3，你会发现即使是默认主题，程序看起来也略有不同。
 
-## 使用特定主题
+### 使用特定主题
 
 通常，你不需要使用属性、样式或模板来更改控件的外观或行为，它会使用系统当前主题的值。
 
 > 更改主题
+>
 > 这种技术在测试应用程序在特定主题下的外观时，可能比强制用户使用主题更有用。
+>
 > 用户用户可能由于某些原因选择特定主题。例如，视力受损的用户可能会选择高对比度主题来让程序更容易看。
+>
 > 如果你更改主题，他们可能无法使用你的应用程序。
 
-要在 Visual Studio 中使用特定主题，请新建 WPF 项目。在引用选项卡上选择你想使用的的主题并点击确定。图 16-4 显示了选择了 Aero、Classic、Luna 和 Royale 主题的引用对话框。
+要在 Visual Studio 中使用特定主题，请新建 WPF 项目。在引用选项卡上选择你想使用的的主题并点击确定。图 16-4 显示了选择了 `Aero`、`Classic`、`Luna` 和 `Royale` 主题的引用对话框。
 
-接下来，在资源字典中使用 MergedDictionaries 对象来加载主题。该主题将适用于任何应该修改的控件。
+接下来，在资源字典中使用 `MergedDictionaries` 对象来加载主题。该主题将适用于任何应该修改的控件。
 
 # 286 | 第16 章 主题与皮肤
 
@@ -9275,7 +8154,7 @@ FIGURE 16-2
 
 FIGURE 16-4
 
-例如，下面的代码显示了程序如何使用 Luna Metallic 主题。 16-1 和 16-3 中的每组控件都包含在 StackPanel 中。每个 StackPanel 一个加载其主题的 ResourceDictionary。
+例如，下面的代码显示了程序如何使用 `Luna Metallic` 主题。 16-1 和 16-3 中的每组控件都包含在 `StackPanel` 中。每个 `StackPanel` 一个加载其主题的 `ResourceDictionary`。
 
 ```xml
 <StackPanel>
@@ -9295,23 +8174,19 @@ FIGURE 16-4
 
 可在 Wprox.com 下载
 
-ShowThemes
+`ShowThemes`
 
-注意 ResourceDictionary.Source 属性的特殊语法。PresentationFramework Luna 是包含库的 WPF，而 Source 的其余部分给出了库中的主题。
+注意 `ResourceDictionary.Source` 属性的特殊语法。`PresentationFramework Luna` 是包含库的 WPF，而 `Source` 的其余部分给出了库中的主题。
 
-
-
-
-
-# 主题限制
+### 主题限制
 
 我在让 Expression Blend 使用特定主题方面一直不太顺利。它似乎在寻找 `ResourceDictionary` 的 `Source` 属性所使用的 DLL 文件时遇到困难。我在运行编译后的可执行文件也同样不太顺利。
 
-这些问题可能会在后续版本中得到修复，但目前我使用这种技术在带有 Visual Studio 的程序中查看程序在不同主题下的外观。如果你发现了如何让这些在 Expression Blend 中运行的方法，请发送邮件至 RodStephens@vb-helper.com，我会将你的解决方案发布在书籍的网页上。
+这些问题可能会在后续版本中得到修复，但目前我使用这种技术在带有 Visual Studio 的程序中查看程序在不同主题下的外观。如果你发现了如何让这些在 Expression Blend 中运行的方法，请发送邮件至 `RodStephens@vb-helper.com`，我会将你的解决方案发布在书籍的网页上。
 
 ## 皮肤 (SKINS)
 
-主题允许程序自动更改以匹配系统其他部分的显示。选择特定主题可以让程序刻意地改变其外观，但通常这是没有必要的。Luna Metallic 和 Aero Normal 主题之间的差异非常微小，如果可以让程序使用系统默认主题，就没有理由强迫用户使用其中一个。
+主题允许程序自动更改以匹配系统其他部分的显示。选择特定主题可以让程序刻意地改变其外观，但通常这是没有必要的。`Luna Metallic` 和 `Aero Normal` 主题之间的差异非常微小，如果可以让程序使用系统默认主题，就没有理由强迫用户使用其中一个。
 
 皮肤要有趣得多。皮肤是一套封装好的外观和行为，可以为应用程序（或应用程序的部分）提供独特的外观，同时允许其提供核心功能。
 
@@ -9332,10 +8207,12 @@ ShowThemes
 接下来的章节将描述皮肤，并解释了在 WPF 中实现它们的几种方法。
 
 > **工作量警告**
+>
 > 请注意，制作皮肤是一项工作量的工作！取决于你使用的技术，它可能并不复杂，但可能会非常耗时。
+>
 > WPF 提供了许多工具来创建吸引人的用户界面，人们很容易花费几个小时反复调整控件属性和布局，试图构建世界上最美的界面。现在将这种工作量倍增以提供多种皮肤，你可能会在一个窗口上花费几天时间，而不是“仅仅”几个小时。
 
-# 皮肤的用途
+### 皮肤的用途
 
 通常，皮肤大部分是装饰性的，改变应用程序的颜色、按钮形状、表单设计、背景图片等。图 16-5 和 16-6 所示的皮肤看起来非常不同，但仅在表面如此。它们在相同的位置使用了相同的控件。
 
@@ -9358,6 +8235,8 @@ ShowThemes
 图 16-7
 
 以下 XML 代码展示了 `OrderTracking` 程序的工作原理：
+
+
 
 ```xml
 <Window
@@ -9385,13 +8264,9 @@ ResizeMode="NoResize">
 </Window>
 ```
 
-
-
-
-
 代码使用资源来设置窗口背景画刷、字体和标题。为不同的皮肤设置不同的背景和标题，可以一眼一眼看出皮肤。
 
-接下来，代码定义了一个包含一系列按钮（Buttons）的 `StackPanel`。按钮的 `Visibility`（可见性）属性使用皮肤资源字典中定义的资源进行设置。基础字典 `resBasics.xaml` 将所有按钮的 `Visibility` 设置为 `Collapsed`（折叠）。其他字典会覆盖这些设置，以显示相应的按钮。例如，在订单输入字典 `resOrder.xaml` 中，`CreateOrder` 和 `TrackOrder` 的值被设置为 `Visible`（可见），因此在订单输入中显示“创建订单”和“跟踪订单”按钮。
+接下来，代码定义了一个包含一系列按钮（`Buttons`）的 `StackPanel`。按钮的 `Visibility`（可见性）属性使用皮肤资源字典中定义的资源进行设置。基础字典 `resBasics.xaml` 将所有按钮的 `Visibility` 设置为 `Collapsed`（折叠）。其他字典会覆盖这些设置，以显示相应的按钮。例如，在订单输入字典 `resOrder.xaml` 中，`CreateOrder` 和 `TrackOrder` 的值被设置为 `Visible`（可见），因此在订单输入中显示“创建订单”和“跟踪订单”按钮。
 
 以下代码显示了 `resBasics.xaml` 资源字典，它定义了所有皮肤的通用值。它包含了窗口的字体和字符样式。它还添加了帮助：
 
@@ -9461,7 +8336,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 与其为每种类型的用户创建独立的程序版本，你可以在运行时加载相应的皮肤。以下章节描述了在 WPF 中构建可皮肤应用程序的三种方法，所有方法都允许程序在运行时更改皮肤。
 
-# 资源皮肤
+## 资源皮肤
 
 图 16-5 和 16-6 所示的 `ResourceDictionaries` 程序使用两个不同的资源集在设计时更改外观。
 
@@ -9478,7 +8353,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 </Window>
 ```
 
-# ResourceDictionary
+## ResourceDictionary
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_329_0.png)
 
@@ -9488,7 +8363,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 `Skins` 示例程序与 `ResourceDictionaries` 程序非常相似，不同在于它可以运行时更改皮肤。为了实现这一点，它的大部分资源都是动态的而不是静态的。程序还包含了两个新的用户界面元素：`Image`（图像）和 `Label`（标签）。
 
-# 限制性皮肤
+## 限制性皮肤
 
 如果你为不同类型的用户使用不同的皮肤（例如上一节描述的订单录入员和发货员），你将限制每个用户可以加载的皮肤。例如，你可能不希望发货员能够加载账单员员的皮肤并查看客户的信用卡信息。
 
@@ -9535,11 +8410,11 @@ Clicks="ctxSkin_Click" Tag=ResBlue.xml/>
 </Label>
 ```
 
-Skins
+`Skins`
 
 这段代码包含四个关注点：
 
-1. 首先，Label 的 `MouseDown` 事件触发了 `Options_MouseDown` 事件。下所示的例程通过设置 `ContextMenu.IsOpen` 属性来显示右菜单：
+1. 首先，`Label` 的 `MouseDown` 事件触发了 `Options_MouseDown` 事件。下所示的例程通过设置 `ContextMenu.IsOpen` 属性来显示右菜单：
 
 ```
 // 显示选项菜单
@@ -9551,7 +8426,7 @@ private void Options_MouseDown(object sender, RoutedEventArgs e)
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_331_)
 
-2. 其次，Label 的 `Visibility` 属性设置为蓝色资源的值。该资源在蓝色字典中为 `True`，在红色字典中为 `False`。这意味着 Label 仅在蓝色界面上可见。界面切换图像使用了类似的 `visRed` 资源，该资源在红色界面上为 `True`。
+2. 其次，`Label` 的 `Visibility` 属性设置为蓝色资源的值。该资源在蓝色字典中为 `True`，在红色字典中为 `False`。这意味着 `Label` 仅在蓝色界面上可见。界面切换图像使用了类似的 `visRed` 资源，该资源在红色界面上为 `True`。
 
 3. 第三，菜单项的 `Tag` 属性匹配它们加载的 XAML 资源文件。例如，蓝色菜单项的 `Tag` 设置为 `ResBlue.xaml`。程序使用 `Tag` 属性在用户选择菜单项时确定加载的文件。
 
@@ -9580,12 +8455,9 @@ private void ctxSkin_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-
-
-
 这段代码获取触发事件的菜单项，并查看该条目的的 `Tag` 属性以确定要加载哪个资源文件。它创建了一个从文件中加载的 `ResourceDictionary` 对象，从应用程序的 `MergedDictionaries` 集合中移除旧的资源字典，并添加新字典。
 
-## 已移除的资源 REDUCX
+### 已移除的资源 REDUCX
 
 程序没有移除第一个资源字典，这样 WPF 就不会因为缺少资源而产生困惑并发出大量的警告。有关更多信息，请参阅第 12 章“动态资源”部分中的“已移除的资源”注释。
 
@@ -9606,7 +8478,9 @@ XAML 文件允许你定义触发器来启动代表属性的故事板（storyboar
 当你点击相应的控件时，触发器会启动一个故事板，执行以下操作：
 
 - 调整主窗口的大小并更改其背景画刷（Background brush）。
+
 - 隐藏和显示右上角的蓝色或绿色椭圆（你通过点击这些椭圆来切换皮肤）。
+
 - 移动标签（Labels）。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_332_0.png)
@@ -9618,9 +8492,13 @@ XAML 文件允许你定义触发器来启动代表属性的故事板（storyboar
 图 16-10
 
 - 调整作为按钮的矩形的大小、移动并更改其圆角半径。
+
 - 更改伪装按钮的矩形的填充（Fill）和描边（Stroke）画刷。
+
 - 更改标签（Labels）中显示的文本。
+
 - 移动并调整图像（Image）的大小。
+
 - 更改背景和前景颜色。
 
 图 16-11 显示了程序从绿色切换到蓝色的过一半状态。在图中，你可以看到颜色正在从绿色变为蓝色，标签正在移动，矩形按钮有了新的位置、大小、标题和圆角。
@@ -9631,7 +8509,7 @@ XAML 文件允许你定义触发器来启动代表属性的故事板（storyboar
 
 图 16-11
 
-## 酷的代价
+### 酷的代价
 
 你可能会认为，在许多应用程序中，酷炫并不是真正的重点，你完全是正确的；但编写皮肤的程序员通常并不关注如何用最少的工作完成任务。很难说对于除了美学目的之外的任何服务来说，只要你付出了额外精力提供皮肤，就说动画皮肤带来的额外酷炫不值得这些付出就是完全公平的。同样，你也可以认为你甚至不应该使用 WPF 而是坚持使用 Windows 编程，这通常很简单。
 
@@ -9642,6 +8520,8 @@ XAML 文件允许你定义触发器来启动代表属性的故事板（storyboar
 ## 动态加载的皮肤
 
 之前的皮肤技术的一个缺点是它们只修改现有的对象。它们可以显示椭圆、按钮或标签，具有不同的属性。例如，你无法提供一个带有按钮的皮肤，另一个带有菜单的皮肤，第三个带有标签的皮肤。
+
+
 
 解决此问题的常用方法是在每个皮肤中包含所有控件，并隐藏你不需要的控件。例如，按钮型皮肤会隐藏菜单和标签，菜单型皮肤会隐藏按钮和标签，标签型皮肤会隐藏按钮和菜单。
 
@@ -9668,8 +8548,8 @@ WPF 并不擅长处理这一点。如果你加载带有事件器的 XAML 文件�
 图 16-13
 
 | 红色皮肤 | | | | 蓝色皮肤 | | |
-|---|---|---|---|---|---|
-| 目的 | 控件 | 事件 | | | |
+|---|---|---|---|---|---|---|
+| 目的 | 控件 | 事件 | | | | |
 | 切换皮肤 | 多边形 | MouseDown | 椭圆 | MouseDown |
 | 移动表单 | 矩形 | MouseDown | 椭圆 | MouseDown |
 | 退出 | 网格（包含矩形和文本块） | MouseDown | 网格（包含椭圆和文本块） | MouseDown |
@@ -9678,8 +8558,6 @@ WPF 并不擅长处理这一点。如果你加载带有事件器的 XAML 文件�
 | 格式化磁盘 | 按钮 | Click | 网格（包含椭圆和文本块） | MouseDown |
 
 当程序加载 XAML 文件时，它会遍历新控件并为需要它们的控件附加事件器。
-
-
 
 为了在 XAML 文件与后台代码（code-behind）之间实现分离，程序使用了一组独立的程序来执行实际工作。事件处理程序捕获控件事件并调用这些程序。
 
@@ -9762,41 +8640,7 @@ private void LoadSkin(string skin_file)
 }
 ```
 
-皮肤接口（SkinInterfaces）
-
-代码首先使用 WPF 组件方法加载所需的 XAML 皮肤文件。它将窗口的主内容设置为来自文件的根元素，以便显示控件。
-
-接下来，代码检查新加载元素的 `Tag` 属性，以查看它现在显示的是红色皮肤还是蓝色皮肤。根据加载了哪种皮肤，代码会在皮肤中寻找特定的控件并连接它们的的事件处理程序。
-
-例如，如果红色皮肤可见，代码将使用 `FindName` 定位 `btnRepairDisk` 按钮，并将 `btnRepairDisk_Click` 事件处理程序添加到其 `Click` 事件中。
-
-之前的代码省略了绝大多数连接到事件处理程序的控件代码。然而，它确实展示了代码如何找到 `ellSkin`（“切换皮肤”圆形）并将其 `pgnSkin_MouseDown` 添加到其 `MouseDown` 事件中。
-
-此处未显示用于绑定控件的代码。
-
-程序的最后一部分在窗口的构造函数中，如下代码所示。在窗口初始化后，代码调用 `LoadSkin` 以从红色皮肤开始。
-
-```csharp
-public Window()
-{
-    this.InitializeComponent();
-
-    // 在此点下方插入对象创建时所需的代码。
-
-    // 从红色皮肤开始。
-    LoadSkin("Red.xaml");
-}
-```
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_338_0.png)
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_338_1.png)
-
-这就完成了程序的生命周期。当程序启动时，它调用 `LoadSkin` 加载红色皮肤。`LoadSkin` 加载控件并绑定它们的事件处理程序。特别是，它为 `pgnSkin` “切换皮肤”控件的 `MouseDown` 事件挂载了事件处理程序。当你点击多边形时，`pgnSkin_MouseDown` 事件执行并调用 `LoadSkin` 重新开始该过程。
-
-[/content]
-
-皮肤接口（SkinInterfaces）
+### 皮肤接口（SkinInterfaces）
 
 代码首先使用 WPF 组件方法加载所需的 XAML 皮肤文件。它将窗口的主内容设置为来自文件的根元素，以便显示控件。
 
@@ -9821,119 +8665,6 @@ public Window()
     LoadSkin("Red.xaml");
 }
 ```
-（注：由于用户提供的待翻译文本包含重复段落，根据指令“一定不要重复输出原文”的原则，此处译文应仅翻译一次内容。以下为重新整理的最终译文：）
-
----
-
-**抱歉，上述回复在处理重复时出现了逻辑混乱。以下是针对您提供文本的正确唯一译文：**
-
-[content]
-为了在 XAML 文件与后台代码之间实现分离，程序使用了一组独立的程序来执行实际工作。事件处理程序捕获控件事件并调用这些程序。
-
-以下代码展示了“蓝色皮肤”如何在表单顶部侧定义其红色开关皮肤：
-
-```xml
-<Grid
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  Tag="Blue">
-
-  <!-- 省略大量代码 -->
-
-  <Ellipse Name="Skin" Width="10" Height="10"
-           Canvas.Left="70" Canvas.Top="13"
-           Cursor="Cross" Tooltip="Change Skin"
-           Fill="HotPink" Stroke={StaticResource brRedStroke}
-           StrokeThickness="2" Tag="Red.xaml" />
-
-  <!-- 省略大量代码 -->
-</Grid>
-```
-
-代码片段以 `Grid` 控件作为根元素。（可以使用其他控件作为文件的根元素，但使用 `Grid` 非常方便，因为 Visual Studio WPF 窗口设计器知道当根元素为 `Grid` 时如何显示皮肤。）根元素的 `Tag` 属性被设置为它的名称，在本例中为 `Blue`。
-
-显示的代码省略了所有其他控件，只保留了名称 `ellSkin` 和它的 `Tag` `Red.xaml`。`Tag` 属性用于在点击圆形时查找要加载哪个 XAML 文件。
-
-暂忽略这是如何由其事件处理程序控制的，以下代码显示了控件执行的事件处理程序。由于此事件由该控件和红色皮肤的“切换皮肤”多边形（左上角的三角形）共享，因此它命名为 `pSkin.MouseDown`。
-
-```csharp
-private void MouseDown(object sender, MouseEventArgs e)
-{
-  FrameworkElement element = (FrameworkElement)sender;
-  LoadSkin(element.Tag.ToString());
-}
-```
-
-这段代码获取触发事件的元素（可以是蓝色皮肤的 `Ellipse` 或红色皮肤的 `Polygon`），读取该元素的 `Tag` 属性以查看要加载哪个 XAML 文件，并将文件名传递给函数 `LoadSkin`。
-
-`LoadSkin` 函数使用以下代码加载 XAML 皮肤文件。为了节省空间，代码仅展示了部分控制控件到其事件处理程序的语句。
-
-```csharp
-// 加载皮肤文件并绑定事件处理程序。
-private void LoadSkin(string skin_file)
-{
-    // 加载控件。
-    FrameworkElement element =
-        (FrameworkElement)Application.LoadComponent(
-            new Uri(skin_file, UriKind.Relative));
-    this.Content = element;
-
-    // 绑定事件处理程序。
-    Button btn;
-    Polygon pgn;
-    Rectangle rect;
-    Grid grd;
-    Ellipse ell;
-
-    switch (element.ToString())
-    {
-        case "Red":
-            btn = (Button)element.FindName("btnRepairDisk");
-            btn.Click += new RoutedEventHandler(btnRepairDisk_Click);
-
-            // 省略其他控件的代码
-            break;
-        case "Blue":
-            // 省略大量代码
-
-            // 使用与 rectMove 相同的事件处理程序。
-            ell = (Ellipse)element.FindName("ellMove");
-            ell.MouseDown += new System.Windows.Input.MouseEventHandler(
-                rectMove_MouseDown);
-
-            grd = (Grid)element.FindName("grdExit");
-            grd.MouseDown += new System.Windows.Input.MouseEventHandler(
-                grdExit_MouseDown);
-            break;
-    }
-}
-```
-
-皮肤接口（SkinInterfaces）
-
-代码首先使用 WPF 组件方法加载所需的 XAML 皮肤文件。它将窗口的主内容设置为来自文件的根元素，以便显示控件。
-
-接下来，代码检查新加载元素的 `Tag` 属性，以查看它现在显示的是红色皮肤还是蓝色皮肤。根据加载了哪种皮肤，代码会在皮肤中寻找特定的控件并连接它们的的事件处理程序。
-
-例如，如果红色皮肤可见，代码将使用 `FindName` 定位 `btnRepairDisk` 按钮，并将 `btnRepairDisk_Click` 事件处理程序添加到其 `Click` 事件中。
-
-之前的代码省略了绝大多数连接到事件处理程序的控件代码。然而，它确实展示了代码如何找到 `ellSkin`（“切换皮肤”圆形）并将其 `pgnSkin_MouseDown` 添加到其 `MouseDown` 事件中。
-
-此处未显示用于绑定控件的代码。
-
-程序的最后一部分在窗口的构造函数中，如下代码所示。在窗口初始化后，代码调用 `LoadSkin` 以从红色皮肤开始。
-
-```csharp
-public Window()
-{
-    this.InitializeComponent();
-
-    // 在此点下方插入对象创建时所需的代码。
-
-    // 从红色皮肤开始。
-    LoadSkin("Red.xaml");
-}
-```
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_338_0.png)
 
@@ -9943,6 +8674,7 @@ public Window()
 
 
 
+这就完成了程序的生命周期。当程序启动时，它调用 `LoadSkin` 加载红色皮肤。`LoadSkin` 加载控件并绑定它们的事件处理程序。特别是，它为 `pgnSkin` “切换皮肤”控件的 `MouseDown` 事件挂载了事件处理程序。当你点击多边形时，`pgnSkin_MouseDown` 事件执行并调用 `LoadSkin` 重新开始该过程。
 
 # 304 | 第 17 章 打印
 
@@ -9950,17 +8682,17 @@ public Window()
 
 图 17-1
 
-# 文档图片
+## 文档图片
 
 为了显示本章中的文档图片，我选择了 Microsoft XPS Writer 将输出保存为 XPS 文件。然后，我在 Internet Explorer 中打开了该文件（如图 17-1 所示），或使用 XPS Viewer 打开（如图 17-4 所示）。
 
 遗憾的是，Internet Explorer 和 XPS Viewer 并不总是显示与打印机产生的相同结果。在整个章节中，当打印结果与插图显著不同时，我会注明。
 
-# 打印视觉对象
+## 打印视觉对象
 
 WPF 打印的核心类之一是 `PrintDialog`。该类提供了相关方法，允许用户选择打印机、与打印队列交互，并将输出发送到打印机。
 
-# 复习你的编程技能
+### 复习你的编程技能
 
 WPF 不包含一个可以放置在窗口中的 `PrintDialog` 控件，XAML 代码也无法操作它。对于面向打印机的任务，你必须编写一些后台代码（code-behind）。
 
@@ -9978,7 +8710,7 @@ WPF 不包含一个可以放置在窗口中的 `PrintDialog` 控件，XAML 代�
 
 接下来的章节将介绍两种打印视觉对象（Visual objects）的方法。第一简单但效果平平；第二种工作量较大，但输出结果好得多。
 
-## 使用 PrintVisual 进行简单打印
+### 使用 PrintVisual 进行简单打印
 
 `SimplePrintWindow` 示例程序使用以下代码执行这三个步骤：
 
@@ -10004,13 +8736,14 @@ SimplePrintWindow
 这非常简单，但有一个遗憾的缺点：WPF 尝试将视觉内容绘制在纸张的左上角。由于打印机通常无法打印到纸张边缘，结果会被裁切。
 
 > 比打印更好
+>
 > 如果你选择 Microsoft XPS Document Writer 作为打印机，结果与你从打印机出来的看到的内容不同。页面大小将适应视觉对象，由于 Document Writer 可以打印到其逻辑纸张的边缘，因此结果不会被裁切。
 
 `PrintVisual` 方法极其简单，但不会产生非常理想的结果。它在顶部和左边缘被裁切，并且无法对其进行旋转、缩放或居中。
 
 接下来的章节描述了一种更灵活的打印方法。
 
-## 使用 PrintVisual 进行高级打印
+### 使用 PrintVisual 进行高级打印
 
 `PrintVisual` 方法将一个 `PrintVisual` 对象发送到打印机，但它不会对对象进行缩放、旋转或居中。坦率地说，这些是由你的程序完成的工作。
 
@@ -10030,8 +8763,6 @@ using System.Windows.Media.Effects;
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_343_0.png)
 
 图 17-3
-
-# 打印视觉对象 | 307
 
 程序的 Visual Basic 版本包含以下 `Imports` 语句：
 
@@ -10125,7 +8856,6 @@ String title, Thickness margin)
 }
 ```
 
-
 接下来，代码将一个 Viewbox 居中放在 Grid 内部。记住，Viewbox 的作用是以各种方式拉伸其单个子元素。
 
 如果例的 `margin` 参数为 `null`，代码应以正常比例显示窗口；它会将 Viewbox 的 `Stretch` 属性设置为 `None`。
@@ -10133,11 +8863,13 @@ String title, Thickness margin)
 如果例的 `margin` 参数不为 `null`，代码应该放大窗口。它将 Viewbox 的 `Margin` 属性设置为 `margin` 参数，使 Viewbox 扩展以填充 Grid（除边距以外的部分）。它还将 Viewbox 的 `Stretch` 属性设置为 `Uniform`，以便其在不改变纵横比（宽高比）的情况下尽可能地放大其子控件。
 
 接下来，代码创建一个 `VisualBrush`，其中包含要打印的窗口图像。
+
 它创建一个与窗口大小相同的 `Rectangle`，用 `VisualBrush` 填充该矩形，并将 `Rectangle` 放置在 Viewbox 中。Viewbox 会在合适拉伸 `Rectangle`。
 
 接下来，代码调用 Grid 的 `Arrange` 方法。Grid 会递归地排列子元素并渲染它们。如果你省略了此调用，代码会运行，但打印结果将是空白。
 
 最后，代码调用 `PrintDialog` 的 `PrintVisual` 方法来打印 Grid 及其内容。
+
 如果用户点击对话框的“首选项”按钮并将打印机方向改为横向，`PrintDialog` 的 `PrintableAreaWidth` 和 `PrintableAreaHeight` 会自动切换，以便控件能够正确排列。
 
 图 17-4 显示了当程序窗口被拉伸并使用 Microsoft XPS Document Writer 打印，且首选项设置为横向并在 XPS Viewer 中显示时的结果。
@@ -10178,11 +8910,13 @@ private void btnPrintShapes_Click(object sender, RoutedEventArgs args) {
 
 PrintShapes
 
-# 快速打印，第二部分
+## 快速打印，第二部分
 
 如果你在不显示对话框的情况下调用 `PrintDocument`，则打印输出将立即发送到默认打印机。
 
 以下代码片段显示了 `ShapesPaginator` 类的关键部分：
+
+
 
 ```csharp
 class ShapesPaginator : DocumentPaginator {
@@ -10266,7 +9000,7 @@ public override IDocumentaginatorSource Source
 
 以下章节将解释如何打印 `FlowDocuments` 和 `FixedDocuments`。
 
-# 打印 FlowDocuments
+## 打印 FlowDocuments
 
 与其构建复杂的分页器来产生输出，你可以构建一个 `FlowDocument` 并将段落、表格和其他元素放入其中。`FlowDocument` 会自动排列内容以利用可用空间。
 
@@ -10297,9 +9031,6 @@ private void mnFilePrint_Click(object sender, RoutedEventArgs e) {
     }
 }
 ```
-
-
-
 
 最后，代码使用 `XpsDocumentWriter` 的 `Write` 方法将文档的分页器写入打印队列。
 
@@ -10339,7 +9070,7 @@ private void mnFilePrint_Click(object sender, RoutedEventArgs e) {
 
 如果你更改了控件的缩放级别或查看模式，它会刷新，，一切正常。
 
-## FixedDocuments
+### FixedDocuments
 
 图 17-10 中的 `PrintFixedDocument` 示例程序在 `DocumentViewer` 控件中显示 `FixedDocument`。
 
@@ -10364,6 +9095,7 @@ WPF 的 `PrintDialog` 类提供了访问打印系统的便捷方法。它的 `Pr
 接下来的章节将描述 WPF 数据绑定方法，这些方法允许你将控件的属性附加到资源以外的对象，包括值数组、其他控件的属性以及其他类型对象的属性。
 
 # 18
+
 ## 数据绑定
 
 WPF 数据绑定允许你绑定到数据源，以便目标自动显示数据源中的值。例如，这允许你：
@@ -10377,7 +9109,7 @@ WPF 数据绑定允许你绑定到数据源，以便目标自动显示数据源�
 
 本章将介绍 WPF 中的数据绑定。它解释了如何通过绑定来关联对象，以及如何使用绑定让控件使用由其他控件、XAML 资源和后台代码中创建的对象提供的值。
 
-## 绑定基础
+### 绑定基础
 
 数据绑定包含以下四个基本部分：
 
@@ -10397,7 +9129,7 @@ WPF 数据绑定允许你绑定到数据源，以便目标自动显示数据源�
 
 图 18-1 中的 TextBoxToLabel 示例程序演示了这种简单的绑定概念。当你在 TextBox 中输入时，标签。
 
-## 目标与目标属性
+### 目标与目标属性
 
 目标和目标属性是绑定中最容易理解的部分。目标是包含绑定的控件，目标属性是被设置的属性。在下面的代码中，Label 控件是目标，其 `Content` 属性是目标属性：
 
@@ -10405,7 +9137,7 @@ WPF 数据绑定允许你绑定到数据源，以便目标自动显示数据源�
 <Label ... />
 ```
 
-## 这一切取决于
+### 这一切取决于
 
 绑定的目标属性必须是一个依赖属性。幸运的是，你最可能绑定的属性都是依赖属性。
 
@@ -10415,27 +9147,23 @@ WPF 数据绑定允许你绑定到数据源，以便目标自动显示数据源�
 
 该示例的简单解释是，目标属性是 ListBox 的 `ItemsSource` 属性。本章后面的“绑定集合”部分解释了 ListBox 如何将绑定到 `ItemsSource` 属性的内容转换为字段显示。
 
-## 绑定源
+### 绑定源
 
 绑定的源是获取值的对象。该对象可以是 WPF 控件、XML 数据或程序代码中定义的对象。
 
 你可以通过设置绑定的 `ElementName`、`Source` 或 `RelativeSource` 属性来指定源。
 
-## 选择其一
+#### 选择其一
 
 一次只能指定 `ElementName`、`Source` 或 `RelativeSource` 属性之一。
 
-## ElementName
+#### ElementName
 
 绑定的 `ElementName` 属性给出控件的名称。之前的 TextBoxToLabel 示例使用 `ElementName` 来识别绑定应作为源的 TextBox。
 
-## Source
+#### Source
 
 绑定的 `Source` 属性标识作为绑定源的对象。通常，程序使用 `StaticResource` 来定义此对象。
-
-
-
-
 
 图 18-2 显示的 PersonSource 示例程序使用其 Source 属性的绑定来显示关于 Person 对象的信息。
 
@@ -10472,11 +9200,13 @@ xmlns:local=clr-namespace:PersonSource
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_357_1.png)
 
-## RelativeSource (相对源)
+#### RelativeSource (相对源)
 
 绑定的 `RelativeSource` 属性允许你通过其与目标控件的关系来指定源对象。这种情况下用场景之一是你想绑定同一个控件上的两个属性。
 
-图 18-3 显示的 TypeColor 示例程序将 TextBox 的 `Background` 属性与其 `Text` 属性绑定，因此当你输入颜色名称时，控件会以该颜色作为背景。
+
+
+图 18-3 显示的 `TypeColor` 示例程序将 `TextBox` 的 `Background` 属性与其 `Text` 属性绑定，因此当你输入颜色名称时，控件会以该颜色作为背景。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_357_2.png)
 
@@ -10484,7 +9214,7 @@ xmlns:local=clr-namespace:PersonSource
 
 绑定在运行时不会报告错误。如果绑定的值没有任何意义——例如，如果你将 `Width` 设置为 `Color`——则什么都不会发生。在 `TypeAColor` 程序中，如果你输入某些不是颜色名称的文本，什么都不会发生，程序会继续正常运行。
 
-以下代码显示了 TypeAColor 程序如何将 TextBox 的 `Background` 属性绑定到它的 `Text` 属性：
+以下代码显示了 `TypeAColor` 程序如何将 `TextBox` 的 `Background` 属性绑定到它的 `Text` 属性：
 
 ```xml
 <TextBox Margin="10" Height="30" VerticalAlignment="Top" Background="{Binding RelativeSource={RelativeSource Self}, Path=Text}"/>
@@ -10498,9 +9228,9 @@ xmlns:local=clr-namespace:PersonSource
 
 你还可以使用字符串 `TemplatedParent`、`FindAncestor` 或 `PreviousData` 来构建 `RelativeSource` 对象。
 
-`TemplatedParent` 设置使用对应用模板的对象的引用。图 18-4 显示的 `TemplatedParent` 示例程序显示了一个带有模板的 Label，该模板显示 Label 沿边缘的外边距。该 Label 的 `Margin` 属性被设置为 10, 20, 30, 40。
+`TemplatedParent` 设置使用对应用模板的对象的引用。图 18-4 显示的 `TemplatedParent` 示例程序显示了一个带有模板的 `Label`，该模板显示 `Label` 沿边缘的外边距。该 `Label` 的 `Margin` 属性被设置为 10, 20, 30, 40。
 
-以下代码显示了 Label 模板中显示 Label 顶部外边距的部分。绑定使用其 `RelativeSource` 属性来查找模板所在的 Label。`Path Margin.Top` 的值使绑定获取该 Label 的 `Margin` 并使用其 `Top` 值。
+以下代码显示了 `Label` 模板中显示 `Label` 顶部外边距的部分。绑定使用其 `RelativeSource` 属性来查找模板所在的 `Label`。`Path Margin.Top` 的值使绑定获取该 `Label` 的 `Margin` 并使用其 `Top` 值。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_2.png)
 
@@ -10514,7 +9244,7 @@ xmlns:local=clr-namespace:PersonSource
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_4.png)
 
-`RelativeSource` 值 `FindAncestor` 允许你查找特定类型的目标控件祖先。图 18-5 显示的 `ColumnWidth` 示例程序使用这种绑定让 Label 显示包含它们的 Grid 列的宽度。
+`RelativeSource` 值 `FindAncestor` 允许你查找特定类型的目标控件祖先。图 18-5 显示的 `ColumnWidth` 示例程序使用这种绑定让 `Label` 显示包含它们的 `Grid` 列的宽度。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_5.png)
 
@@ -10522,17 +9252,17 @@ xmlns:local=clr-namespace:PersonSource
 
 ## 322 | 第 18 章 绑定 (BINDING)
 
-`RelativeSource` 值 `FindAncestor` 允许你查找目标控件特定类型的祖先。`ColumnWidth` 示例程序使用这种绑定让 Label 显示包含它们的 Grid 列的宽度。
+`RelativeSource` 值 `FindAncestor` 允许你查找目标控件特定类型的祖先。`ColumnWidth` 示例程序使用这种绑定让 `Label` 显示包含它们的 `Grid` 列的宽度。
 
 `RelativeSource=(RelativeSource Self)` 将绑定的 `RelativeSource` 属性设置为由字符串 `Self` 构建的新型 `RelativeSource` 对象。
 
 你还可以使用字符串 `TemplatedParent`、`FindAncestor` 或 `PreviousData` 来构建 `RelativeSource` 对象。
 
-[注：此处关于 RelativeSource, TemplatedParent 和 Path 描述已已翻译。]
+[注：此处关于 `RelativeSource`, `TemplatedParent` 和 `Path` 描述已已翻译。]
 
-`TemplatedParent` 设置使用对应用模板的对象的引用。图 18-4 显示的 `TemplatedParent` 示例程序显示了一个带有模板的 Label，该模板显示 Label 沿边缘的外边距。该 Label 的 `Margin` 属性被设置为 10, 20, 30, 40。
+`TemplatedParent` 设置使用对应用模板的对象的引用。图 18-4 显示的 `TemplatedParent` 示例程序显示了一个带有模板的 `Label`，该模板显示 `Label` 沿边缘的外边距。该 `Label` 的 `Margin` 属性被设置为 10, 20, 30, 40。
 
-以下代码显示了 Label 模板中显示 Label 顶部外边距的部分。绑定使用其 `RelativeSource` 属性来查找模板所在的 Label。`Path Margin.Top` 的值使绑定获取该 Label 的 `Margin` 并使用其 `Top` 值。
+以下代码显示了 `Label` 模板中显示 `Label` 顶部外边距的部分。绑定使用其 `RelativeSource` 属性来查找模板所在的 `Label`。`Path Margin.Top` 的值使绑定获取该 `Label` 的 `Margin` 并使用其 `Top` 值。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_2.png)
 
@@ -10546,7 +9276,7 @@ xmlns:local=clr-namespace:PersonSource
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_4.png)
 
-`RelativeSource` 值 `FindAncestor` 允许你查找目标控件特定类型的祖先。`ColumnWidth` 示例程序使用这种绑定让 Label 显示包含它们的 Grid 列的宽度。
+`RelativeSource` 值 `FindAncestor` 允许你查找目标控件特定类型的祖先。`ColumnWidth` 示例程序使用这种绑定让 `Label` 显示包含它们的 `Grid` 列的宽度。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_358_5.png)
 
@@ -10554,21 +9284,16 @@ xmlns:local=clr-namespace:PersonSource
 
 [注：由于原文文本存在大量重复和错乱，译文已根据逻辑对核心内容进行了整理和翻译。]
 
-
-
-
-
 ## 另一个示例
 
-DockPanelView 示例程序使用了 `TargetType = Label` 的样式，使得包含在 DockPanel 中的 Label 显示它们的 `DockPanel.Dock` 附加属性值。
+`DockPanelView` 示例程序使用了 `TargetType = Label` 的样式，使得包含在 `DockPanel` 中的 `Label` 显示它们的 `DockPanel.Dock` 附加属性值。
 
-- 如果某个值提供了索引，请在方括号中包含该索引。例如，本章之前描述的 ColumnWidths 示例使用了如 `ColumnDefinitions[2].Width` 格式的路径来描述网格的列宽。
+- 如果某个值提供了索引，请在方括号中包含该索引。例如，本章之前描述的 `ColumnWidths` 示例使用了如 `ColumnDefinitions[2].Width` 格式的路径来描述网格的列宽。
+- 如果绑定的源是一个集合，你可以使用斜杠（`/`）来引用集合的当前项。
 
-- 如果绑定的源是一个集合，你可以使用斜杠（/）来引用集合的当前项。
+图 18-7 显示的 `ColorList` 示例程序演示了 `Source = /` 的绑定：左侧是 `List`，右侧的 `Label` 显示所选颜色的名称及其对应的背景。
 
-图 18-7 显示的 ColorList 示例程序演示了 `Source = /` 的绑定：左侧是 List，右侧的 Label 显示所选颜色的名称及其对应的背景。
-
-ColorList 程序使用以下代码来定义其 List 和 Label：
+`ColorList` 程序使用以下代码来定义其 `List` 和 `Label`：
 
 ```
 <Grid Margin="10">
@@ -10603,25 +9328,25 @@ Content="Binding Path/" />
 
 图 18-7
 
-代码从 Grid 控件开始。它将该控件的 DataContext 设置为包含颜色名称的字符串数组。
+代码从 `Grid` 控件开始。它将该控件的 `DataContext` 设置为包含颜色名称的字符串数组。
 
-在定义了两个网格列后，代码创建了一个 ListBox。它的 `ItemsSource` 属性被设置为不寻的值 `{Binding}`，表示该属性应该被设置为控件继承的 DataContext 值。
+在定义了两个网格列后，代码创建了一个 `ListBox`。它的 `ItemsSource` 属性被设置为不寻的值 `{Binding}`，表示该属性应该被设置为控件继承的 `DataContext` 值。
 
-Label 的 `Content` 和 `Background` 属性都被设置为 `{Binding Path/}`；因此它们的绑定源是控件继承的 DataContext，而它们的绑定路径是数组的选中值。
+`Label` 的 `Content` 和 `Background` 属性都被设置为 `{Binding Path/}`；因此它们的绑定源是控件继承的 `DataContext`，而它们的绑定路径是数组的选中值。
 
 ## 绑定集合
 
-某些控件（如 Button、TextBox 和 Label）被视为内容控件。它们旨在将部分数据显示为文本或包含其他控件的网格。
+某些控件（如 `Button`、`TextBox` 和 `Label`）被视为内容控件。它们旨在将部分数据显示为文本或包含其他控件的网格。
 
-其他控件（如 ListBox、ComboBox、TreeView）被视为项目控件。这些控件显示存储在集合、数组、树或其他重复结构中的重复值序列。这些值可以是简单的数字或字符串，也可以是复杂的对象，例如 `Order` 或 `Employee` 类的实例。
+其他控件（如 `ListBox`、`ComboBox`、`TreeView`）被视为项目控件。这些控件显示存储在集合、数组、树或其他重复结构中的重复值序列。这些值可以是简单的数字或字符串，也可以是复杂的对象，例如 `Order` 或 `Employee` 类的实例。
 
 绑定控件相对直观。设置绑定、目标属性、源和路径；就完成了。
 
 从表面上看，绑定项目控件同样简单。只需将控件的 `ItemsSource` 属性设置为某种持有重复值的集合即可。如果这些值是简单的数字或字符串，那么这种……
 
-图 18-8 显示的 NumberList 示例程序就是这样运行的。
+图 18-8 显示的 `NumberList` 示例程序就是这样运行的。
 
-NumberList 示例程序定义了一个整数数组。为了使用 `Int32` 数据类型定义数字，程序包含了以下命名空间声明：
+`NumberList` 示例程序定义了一个整数数组。为了使用 `Int32` 数据类型定义数字，程序包含了以下命名空间声明：
 
 ```
 xmlns:sys="clr-namespace:System;assembly=mscorlib
@@ -10643,23 +9368,23 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_362.png) 图 18-8
 
-最后，我们使用以下代码将数组绑定到 ListBox：
+最后，我们使用以下代码将数组绑定到 `ListBox`：
 
 ```
 <ListBox ItemsSource={StaticResource numbers} Background="Transparent">
 ```
 
-正如图 18-8 所示，ListBox 会自动显示数组中的值。
+正如图 18-8 所示，`ListBox` 会自动显示数组中的值。
 
 ## 第18 章 数据绑定
 
-遗憾，如果将 ListBox 绑定到复杂对象，情况就会变得复杂。为了确定显示某个项的内容，控件会调用项的 `ToString` 方法。对于数字和字符串等简单项，`ToString` 返回项的文本表示。
+遗憾，如果将 `ListBox` 绑定到复杂对象，情况就会变得复杂。为了确定显示某个项的内容，控件会调用项的 `ToString` 方法。对于数字和字符串等简单项，`ToString` 返回项的文本表示。
 
-对于像 `Person` 对象这样更复杂的项，`ToString` 返回类的名称。在 PersonList 示例中，ListBox 为每个项显示 `PersonList.Person`。
+对于像 `Person` 对象这样更复杂的项，`ToString` 返回类的名称。在 `PersonList` 示例中，`ListBox` 为每个项显示 `PersonList.Person`。
 
 解决这个问题的一种方法是让类重写 `ToString` 方法以返回更有用的内容。
 
-图 18-9 中的 PersonList 示例显示了两个类：`Person` 和 `Person2`。`Person` 类使用它的 `ToString` 方法，而 `Person2` 类重写了它的 `ToString` 方法。
+图 18-9 中的 `PersonList` 示例显示了两个类：`Person` 和 `Person2`。`Person` 类使用它的 `ToString` 方法，而 `Person2` 类重写了它的 `ToString` 方法。
 
 `Person2` 类使用以下代码重写它的 `ToString` 方法：
 
@@ -10680,7 +9405,7 @@ XAML 代码可以使用你在代码后台中定义的类。为了实现这一点
 xmlns:local="clr-namespace:PersonList"
 ```
 
-现在 XAML 代码可以使用类作为数据类型。例如，PersonList 程序使用以下代码来映射它的 `Person` 对象数组：
+现在 XAML 代码可以使用类作为数据类型。例如，`PersonList` 程序使用以下代码来映射它的 `Person` 对象数组：
 
 ```
 <x:Array x:Key="people" Type="local:Person">
@@ -10691,17 +9416,17 @@ xmlns:local="clr-namespace:PersonList"
 
 注意，该类必须有一个空构造函数（不接受参数的构造函数）供 XAML 代码使用。
 
-重写的 `ToString` 方法使得 ListBox 显示的结果更有用。ListBox 的功能不仅限于显示字符串。它具有用于确定项显示方式的 `ItemTemplates`。
+重写的 `ToString` 方法使得 `ListBox` 显示的结果更有用。`ListBox` 的功能不仅限于显示字符串。它具有用于确定项显示方式的 `ItemTemplates`。
 
 ## ListBox 和 ComboBox 模板
 
-ListBox 和 ComboBox 有一个决定每个项显示的 `ItemTemplate` 属性。这些模板在第15章中描述。
+`ListBox` 和 `ComboBox` 有一个决定每个项显示的 `ItemTemplate` 属性。这些模板在第15章中描述。
 
-图 18-10 显示的 Planets 示例在左侧的 ListBox 和右侧的 ComboBox 中显示了 `Planet` 对象数组。
+图 18-10 显示的 `Planets` 示例在左侧的 `ListBox` 和右侧的 `ComboBox` 中显示了 `Planet` 对象数组。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_364.png) 图 18-10
 
-以下代码显示了 ListBox 使用的 `ItemTemplate`：
+以下代码显示了 `ListBox` 使用的 `ItemTemplate`：
 
 ```
 <ListBox.ItemTemplate>
@@ -10739,17 +9464,19 @@ ListBox 和 ComboBox 有一个决定每个项显示的 `ItemTemplate` 属性。�
 </ListBox.ItemTemplate>
 ```
 
-Planets
+`Planets`
 
 大部分代码使用样式为显示项数据的控件定义属性。结尾的 `StackPanel` 包含了这些控件。实际显示数据的控件有：
 
-- 一个绑定到 Planet 项 `Name` 的 TextBlock
-- 一个绑定到 Planet `Picture` 属性的图像
-- 一个绑定到 Planet `Stats` 属性的 TextBox
+- 一个绑定到 `Planet` 项 `Name` 的 `TextBlock`
+- 一个绑定到 `Planet` `Picture` 属性的图像
+- 一个绑定到 `Planet` `Stats` 属性的 `TextBox`
 
-除了 `ItemTemplate` 属性外，ListBox 和 ComboBox 控件提供了 `ItemsPanel` 属性，用于定义布局项的面板控件。默认情况下，ListBox 和 ComboBox 使用垂直方向的 `StackPanel` 作为它们的 `ItemsPanel`，以便项单列显示，但你可以更改这一点。
+除了 `ItemTemplate` 属性外，`ListBox` 和 `ComboBox` 控件提供了 `ItemsPanel` 属性，用于定义布局项的面板控件。默认情况下，`ListBox` 和 `ComboBox` 使用垂直方向的 `StackPanel` 作为它们的 `ItemsPanel`，以便项单列显示，但你可以更改这一点。
 
-Planets 示例程序使用以下代码使其 ListBox 使用 `WrapPanel` 而不是 `StackPanel` 来排列项：
+`Planets` 示例程序使用以下代码使其 `ListBox` 使用 `WrapPanel` 而不是 `StackPanel` 来排列项：
+
+
 
 ```
 <ListBox.ItemsPanel>
@@ -10761,10 +9488,7 @@ Planets 示例程序使用以下代码使其 ListBox 使用 `WrapPanel` 而不�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_365.png)
 
-
-
-
-图 18-11 显示了 PlanetsPanel 程序的运行情况。如果你加宽 `ListBox`，它用于排列项目的 `DockPanel` 也会随之增大。如果你将 `Window` 调得足够宽，`DockPanel` 将有空间在每行放置另一个项目，因此它将以三列显示项目，而不是图中所示列。
+图 18-11 显示了 `PlanetsPanel` 程序的运行情况。如果你加宽 `ListBox`，它用于排列项目的 `DockPanel` 也会随之增大。如果你将 `Window` 调得足够宽，`DockPanel` 将有空间在每行放置另一个项目，因此它将以三列显示项目，而不是图中所示列。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_366_0.png)
 
@@ -10778,38 +9502,53 @@ Planets 示例程序使用以下代码使其 ListBox 使用 `WrapPanel` 而不�
 
 例如，考虑一个组织结构图，它列出了包含部门的各个区域，而部门又包含员工。当 `TreeView` 到达部门节点时，你的程序必须告诉它显示什么（例如部门名称）以及如何深入树树（通过列出部门的员工）。
 
-图 18-12 中的 OrgTreeView 示例程序显示了公司组织结构图，部门按经理或项目显示。为了更容易理解这些项目，区域名称为红色，部门名称为蓝色并以“department”一词结尾，经理名称在蓝色框内，项目名称在金黄色框内，员工名称为纯黑色文本。
+图 18-12 中的 `OrgTreeView` 示例程序显示了公司组织结构图，部门按经理或项目显示。为了更容易理解这些项目，区域名称为红色，部门名称为蓝色并以“department”一词结尾，经理名称在蓝色框内，项目名称在金黄色框内，员工名称为纯黑色文本。
 
 左侧的 `TreeView` 显示区域、每个区域的部门、每个部门的经理以及每个经理的直接下属员工。右侧的 `TreeView` 显示区域、每个区域的部门、项目以及每个项目的团队成员。
 
 下表描述了程序后台代码（code-behind）中定义的类以及这些类拥属性：
 
 | 类 | 属性 | 数据类型 |
+
 | --- | --- | --- |
+
 | Region | RegionName | String |
+
 | | Departments | List of Department |
+
 | Department | Name | String |
+
 | | | List of Manager |
+
 | | | List of Project |
+
 | Manager | Title | String |
+
 | | | List of Employee |
+
 | Project | Name | String |
+
 | | Description | String |
+
 | | TeamLead | Employee |
+
 | | TeamMembers | List of Employee |
+
 | Employee | FirstName | String |
+
 | | LastName | String |
+
 | | Extension | String |
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_367_0.png)
 
 图 18-12
 
-## 绑定集合 | 331
+### 绑定集合 | 331
 
-Manager 类派生自 Employee 类，因此它也继承了 Employee 类的 `FirstName`、`LastName` 和 `Extension` 属性。
+`Manager` 类派生自 `Employee` 类，因此它也继承了 `Employee` 类的 `FirstName`、`LastName` 和 `Extension` 属性。
 
-生成这些显示的 View 控件在它们的 `Resources` 部分包含了 `HierarchicalDataTemplate` 对象，用于描述控件在每个节点上执行的操作。例如，以下代码显示了控件如何处理 Region 对象：
+生成这些显示的 View 控件在它们的 `Resources` 部分包含了 `HierarchicalDataTemplate` 对象，用于描述控件在每个节点上执行的操作。例如，以下代码显示了控件如何处理 `Region` 对象：
 
 ```
 <HierarchicalDataTemplate
@@ -10829,9 +9568,9 @@ ItemsSource="Binding Path=RegionName">
 
 `HierarchicalDataTemplate` 有三个关键属性：
 
-- 第一，它的 `DataType` 属性告诉我们此模板持有的内容。当 `TreeView` 在其数据中遇到 Region 对象时，之前的模板就会激活。
-- 第二，模板的 `ItemsSource` 属性告诉 `TreeView` 应该查找此项的子项。之前的代码表明 Region 对象拥有名为 Departments 的子项。你可以使用 `ItemsSource` 属性让树（Tree）沿着数据层级结构中的路径。
-- 第三，`HierarchicalDataTemplate` 提供了显示每个节点数据的模板。此示例在 `TextBlock` 中显示了 Region 的 `RegionName` 属性。
+- 第一，它的 `DataType` 属性告诉我们此模板持有的内容。当 `TreeView` 在其数据中遇到 `Region` 对象时，之前的模板就会激活。
+- 第二，模板的 `ItemsSource` 属性告诉 `TreeView` 应该查找此项的子项。之前的代码表明 `Region` 对象拥有名为 `Departments` 的子项。你可以使用 `ItemsSource` 属性让树（Tree）沿着数据层级结构中的路径。
+- 第三，`HierarchicalDataTemplate` 提供了显示每个节点数据的模板。此示例在 `TextBlock` 中显示了 `Region` 的 `RegionName` 属性。
 
 图 18-2 左侧的 `TreeView` 使用以下 `HierarchicalDataTemplate` 来显示部门对象的数据：
 
@@ -10867,17 +9606,17 @@ ItemsSource="Binding Path=Projects">
 
 ## 绑定主从详情数据
 
-图 18-12 显示的 OrgChartTreeView 示例以树形格式显示了分级数据，但还有其他显示此类数据的方法。
+图 18-12 显示的 `OrgChartTreeView` 示例以树形格式显示了分级数据，但还有其他显示此类数据的方法。
 
-例如，图 18-13 显示的 OrgChartMasterDetail 示例在左上角的 `ListBox` 中列出了区域列表。当你点击其中一个时，程序会显示该区域的部门列表。当你选择一个部门时，程序会显示该部门的经理列表。当你选择一个经理时，程序会显示汇报给该经理的员工列表。右侧的 `ListBox` 显示相同的数据，只是它们遵循部门项目。
+例如，图 18-13 显示的 `OrgChartMasterDetail` 示例在左上角的 `ListBox` 中列出了区域列表。当你点击其中一个时，程序会显示该区域的部门列表。当你选择一个部门时，程序会显示该部门的经理列表。当你选择一个经理时，程序会显示汇报给该经理的员工列表。右侧的 `ListBox` 显示相同的数据，只是它们遵循部门项目。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_369_0.png)
 
 图 18-13
 
-OrgChartMasterDetail 程序在左上角的 `ListBox` 中列出了区域列表。当你点击其中一个时，程序会显示该区域的部门列表。当你选择一个部门时，程序会显示该部门的经理列表。当你选择一个经理时，程序会显示汇报给该经理的员工列表。右侧的 `ListBox` 显示相同的数据，只是它们遵循部门项目。
+`OrgChartMasterDetail` 程序在左上角的 `ListBox` 中列出了区域列表。当你点击其中一个时，程序会显示该区域的部门列表。当你选择一个部门时，程序会显示该部门的经理列表。当你选择一个经理时，程序会显示汇报给该经理的员工列表。右侧的 `ListBox` 显示相同的数据，只是它们遵循部门项目。
 
-OrgChartMasterDetail 程序构建了区域、部门、项目和员工对象，这 ` `TreeView` 程序使用的。。代码代码 ` ``  使用作为 `DataContext` 的值。
+`OrgChartMasterDetail` 程序构建了区域、部门、项目和员工对象，这 ` `TreeView` 程序使用的。。代码代码 ` ``  使用作为 `DataContext` 的值。
 
 ```
 spManager.DataContext = regions;
@@ -10905,13 +9644,13 @@ Effect
 >
 ```
 
-## 绑定 XAML | 331
+### 绑定 XAML | 331
 
-Manager 类派生自 Employee 类，因此它也继承了 Employee 类的 `FirstName`、`LastName` 和 `Extension` 属性。
+`Manager` 类派生自 `Employee` 类，因此它也继承了 `Employee` 类的 `FirstName`、`LastName` 和 `Extension` 属性。
 
-生成这些显示的 View 控件在它们的 `Resources` 部分包含了 `HierarchicalDataTemplate` 对象，用于描述控件在每个节点上执行的操作。例如，以下代码显示了控件如何处理 Region 对象：
+生成这些显示的 View 控件在它们的 `Resources` 部分包含了 `HierarchicalDataTemplate` 对象，用于描述控件在每个节点上执行的操作。例如，以下代码显示了控件如何处理 `Region` 对象：
 
-## OrgChartDetail
+### OrgChartDetail
 
 这里的惊喜是 `ItemsSource` 值（Binding）。该值让控件从 `DataContext` 构建项。
 
@@ -10934,7 +9673,7 @@ ItemsSource="Binding ElementName=lstManagerRegion, Path=SelectedItems.Department
 
 其他主从关系（部门/经理、经理/员工、部门/项目、项目/员工）的绑定工作类似。`ListBox` 拥有 `ItemsSource` 属性，使用带有 `ElementName` 的绑定来主 `ListBox`，并将 `Path` 设置为选中项目的适当属性。
 
-图 18-12 显示的 ChartTreeView 视图和图 18-13 显示的 OrgChartMasterDetail 程序在代码中构建数据。程序的 `Window_Loaded` 事件处理器创建表示组织结构图的对象。以下代码显示了这些程序共享的一部分代码：
+图 18-12 显示的 `ChartTreeView` 视图和图 18-13 显示的 `OrgChartMasterDetail` 程序在代码中构建数据。程序的 `Window_Loaded` 事件处理器创建表示组织结构图的对象。以下代码显示了这些程序共享的一部分代码：
 
 ```
 private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -10947,9 +9686,6 @@ private void Window_Loaded(object sender, RoutedEventArgs e)
 ```
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_370_1.png)
-
-
-
 
 ```csharp
 // 定义 Managers。
@@ -10975,9 +9711,9 @@ trvByProject.ItemsSource = regions;
 
 ## OrgChartTreeView 和 OrgChartMasterDetail
 
-代码开始创建 TreeView 显示的各个。例如，之前的代码显示了程序如何创建 Employee 和 Manager 对象，并将一个 Employee 添加到 Manager 的 Reports 列表中。同样地，代码创建了 Project、Department 和 Region 对象，通过将它们添加到每个对象的各个属性中，将所有对象连接起来。
+代码开始创建 `TreeView` 显示的各个。例如，之前的代码显示了程序如何创建 `Employee` 和 `Manager` 对象，并将一个 `Employee` 添加到 `Manager` 的 `Reports` 列表中。同样地，代码创建了 `Project`、`Department` 和 `Region` 对象，通过将它们添加到每个对象的各个属性中，将所有对象连接起来。
 
-代码最后完成了工作，是创建一个包含它已创建的两个 Region 对象的列表，并将 TreeView 控件的 ItemsSource 属性设置为该列表。
+代码最后完成了工作，是创建一个包含它已创建的两个 `Region` 对象的列表，并将 `TreeView` 控件的 `ItemsSource` 属性设置为该列表。
 
 其余代码虽然很长，但相当直观。可以从书籍网站下载示例程序以查看详情。
 
@@ -10989,7 +9725,7 @@ trvByProject.ItemsSource = regions;
 xmlns:local=clr-namespace:OrgChartTreeView
 ```
 
-现在，XAML 代码可以使用 code-bind 类作为数据类型来定义你需要的数据。例如，OrgChart 示例演示了这种方法。例如，XAML 代码显示了一个 Manager 对象：
+现在，XAML 代码可以使用 code-bind 类作为数据类型来定义你需要的数据。例如，`OrgChart` 示例演示了这种方法。例如，XAML 代码显示了一个 `Manager` 对象：
 
 ```xml
 <Manager FirstName="Mindy" LastName="Most" Extension="0001"
@@ -11007,11 +9743,11 @@ xmlns:local=clr-namespace:OrgChartTreeView
 
 ## 绑定 XML
 
-代码从一个 `local:Manager` 元素开始，使用属性对应对象的 FirstName、LastName、Extension 和 Title 属性。
+代码从一个 `local:Manager` 元素开始，使用属性对应对象的 `FirstName`、`LastName`、`Extension` 和 `Title` 属性。
 
-Manager 类有一个 Reports 属性，包含一个 Employee 对象的数组（XAML 不支持 `List<Employee>` 数据类型，因此为了此示例，我将后台代码定义转换为了数组）。XAML 代码使用 `local:Manager.Reports` 属性指向 Employee 对象的数组。
+`Manager` 类有一个 `Reports` 属性，包含一个 `Employee` 对象的数组（XAML 不支持 `List<Employee>` 数据类型，因此为了此示例，我将后台代码定义转换为了数组）。XAML 代码使用 `local:Manager.Reports` 属性指向 `Employee` 对象的数组。
 
-OrgChart 程序使用它的 Windows.Resources 创建了一个包含两个 `local:Region` 对象的数组。在后续代码中，很容易此数组作为程序 TreeView 控件的数据源：
+`OrgChart` 程序使用它的 `Windows.Resources` 创建了一个包含两个 `local:Region` 对象的数组。在后续代码中，很容易此数组作为程序 `TreeView` 控件的数据源：
 
 ```xml
 <TreeView Name="trvByManager" Background="Transparent"
@@ -11023,18 +9759,23 @@ Grid.Row="1" Column="0" ItemsSource={StaticResource regions}">
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_372_1.png)
 
-其余代码虽然很长，但并不简单。程序中的 HierarchicalDataTemplates 与 OrgChartTreeView 程序中使用的完全相同。你可以从项目网站下载它以查看剩余细节。
+其余代码虽然很长，但并不简单。程序中的 `HierarchicalDataTemplates` 与 `OrgChartTreeView` 程序中使用的完全相同。你可以从项目网站下载它以查看剩余细节。
 
 > 不完全相同
-> 尽管 OrgChartTreeView 和 OrgChartXml 看起来产生了相同的结果，但实际数据略有不同。OrgChartTreeView 程序多次复用了相同的对象。例如，员工 Alice 出现在两个 Manager 的 Reports 控件中，既是 ACROBAT 项目的 TeamLead，也是该项目的 TeamMember。OrgChartTreeView 程序创建了一个 Employee 对象来表示 Alice，然后将其添加到所有这些位置。
-> 在 OrgChartXml 程序中，我无法以这种方式在多个处使用同一个 Employee。这种显而易见的方法是创建一个代表 Alice 的 Employee 资源，并在适当的地方使用它。遗憾的是，如果你尝试这样做，XAML 会声你正试图向一个应该包含 Employees 的数组添加 StaticResourceExtension 对象。为了避免这个问题，程序使用了多个包含 Alice 值的 Employee 对象。
-> 如果你发现了如何以这种方式共享对象，请通过 RodStephens@vb-helper.com 告诉我。
+
+> 尽管 `OrgChartTreeView` 和 `OrgChartXml` 看起来产生了相同的结果，但实际数据略有不同。`OrgChartTreeView` 程序多次复用了相同的对象。例如，员工 `Alice` 出现在两个 `Manager` 的 `Reports` 控件中，既是 `ACROBAT` 项目的 `TeamLead`，也是该项目的 `TeamMember`。`OrgChartTreeView` 程序创建了一个 `Employee` 对象来表示 `Alice`，然后将其添加到所有这些位置。
+
+
+
+> 在 `OrgChartXml` 程序中，我无法以这种方式在多个处使用同一个 `Employee`。这种显而易见的方法是创建一个代表 `Alice` 的 `Employee` 资源，并在适当的地方使用它。遗憾的是，如果你尝试这样做，`XAML` 会声你正试图向一个应该包含 `Employees` 的数组添加 `StaticResourceExtension` 对象。为了避免这个问题，程序使用了多个包含 `Alice` 值的 `Employee` 对象。
+
+> 如果你发现了如何以这种方式共享对象，请通过 `RodStephens@vb-helper.com` 告诉我。
 
 ## 绑定 XML
 
-前两个部分解释了如何从后台代码定义的类中构建对象，并将它们绑定到 TreeView 等控件上。第三种方法是将对象构建为完全存储在 XAML 代码中的 XML 数据。
+前两个部分解释了如何从后台代码定义的类中构建对象，并将它们绑定到 `TreeView` 等控件上。第三种方法是将对象构建为完全存储在 `XAML` 代码中的 `XML` 数据。
 
-当你使用这种方法时，你只需通过输入元素及其属性来定义数据，并在在此过程中构思它们的名称。例如，以下代码定义了一个包含两个 Employee 对象的 Manager 对象：
+当你使用这种方法时，你只需通过输入元素及其属性来定义数据，并在在此过程中构思它们的名称。例如，以下代码定义了一个包含两个 `Employee` 对象的 `Manager` 对象：
 
 ```xml
 <Manager Name="Mindy" LastName="Most" Extension="0001" Title="Manager of OR">
@@ -11045,11 +9786,11 @@ Grid.Row="1" Column="0" ItemsSource={StaticResource regions}">
 
 ## OrgChartXml
 
-代码从 `local:Manager` 元素开始，使用属性对应对象的 FirstName、LastName、Extension 和 Title 属性。
+代码从 `local:Manager` 元素开始，使用属性对应对象的 `FirstName`、`LastName`、`Extension` 和 `Title` 属性。
 
-Manager 类有一个 Reports 属性，由于（XAML 并不支持 `List<Employee>` 数据类型，为了此示例，我将后台代码定义转换为了数组），XAML 代码使用 `local:Manager.Reports` 属性指向 Employee 对象的数组。
+`Manager` 类有一个 `Reports` 属性，由于（`XAML` 并不支持 `List<Employee>` 数据类型，为了此示例，我将后台代码定义转换为了数组），`XAML` 代码使用 `local:Manager.Reports` 属性指向 `Employee` 对象的数组。
 
-OrgChart 程序使用它的 Windows.Resources 创建了一个包含两个 `local:Region` 对象的数组。在后续代码中，很容易此数组作为程序 TreeView 控件的数据源：
+`OrgChart` 程序使用它的 `Windows.Resources` 创建了一个包含两个 `local:Region` 对象的数组。在后续代码中，很容易此数组作为程序 `TreeView` 控件的数据源：
 
 ```xml
 <TreeView Name="trvByManager" Background="Transparent"
@@ -11058,12 +9799,14 @@ Grid.Row="1" Column="0" ItemsSource={StaticResource regions}">
 ```
 
 > 糟糕类型
-> 在输入 XML 数据时要小心。如果你拼写了元素的名称，WPF 仅仅创建一个拼写错误的元素。例如，如果你不小心创建了 元素，WPF 会创建一个拼写错误的元素。其次，由于 XML 对象是 XmlElements 而不是 code-bind 类，你应该使用 XPath 而不是 Path 语法。
+
+> 在输入 `XML` 数据时要小心。如果你拼写了元素的名称，`WPF` 仅仅创建一个拼写错误的元素。例如，如果你不小心创建了 元素，`WPF` 会创建一个拼写错误的元素。其次，由于 `XML` 对象是 `XmlElements` 而不是 code-bind 类，你应该使用 `XPath` 而不是 `Path` 语法。
 
 > 注意：
-> 这种 XML 元素的索引从 1 开始而不是 0，所以 Region[2] 是第二个元素，而不是第三个。
 
-## 元素。
+> 这种 `XML` 元素的索引从 1 开始而不是 0，所以 `Region[2]` 是第二个元素，而不是第三个。
+
+## 元素
 
 ```xml
 <XmlDataProvider Key="regions" XPath="Regions">
@@ -11080,28 +9823,28 @@ Grid.Row="1" Column="0" ItemsSource={StaticResource regions}">
 
 ## OrgXml
 
-XmlDataProvider 的 XPath 属性定义了应该作为 provider 根元素的 XPath。
+`XmlDataProvider` 的 `XPath` 属性定义了应该作为 provider 根元素的 `XPath`。
 
-然而，如果你只想使用部分数据，你可以更改 XPath。例如，Regions[2]
+然而，如果你只想使用部分数据，你可以更改 `XPath`。例如，`Regions[2]`
 
-XData 内部的 XML 元素可以重新定义 命名空间，但通常是将所有元素的命名空间重置为空字符串，你不需要担心。
+`XData` 内部的 `XML` 元素可以重新定义 命名空间，但通常是将所有元素的命名空间重置为空字符串，你不需要担心。
 
 ## 外部 XML
 
-你也可以使用 XmlDataProvider 指向一个包含数据的独立文件，如下：
+你也可以使用 `XmlDataProvider` 指向一个包含数据的独立文件，如下：
 
 ```xml
 <XmlDataProvider Key="OrgChartData" Source="orgchart.xml"
 XPath="Regions/">
 ```
 
-当你以此方式将视图和控件绑定到 XML 数据时，必须对引用数据的方式进行一些重大更改。
+当你以此方式将视图和控件绑定到 `XML` 数据时，必须对引用数据的方式进行一些重大更改。
 
-首先，由于 XML 代码定义了自己的数据类型，你不需要使用命名空间前缀引用 code-bind 中的类。
+首先，由于 `XML` 代码定义了自己的数据类型，你不需要使用命名空间前缀引用 code-bind 中的类。
 
-其次，由于 XML 对象是 XmlElements 而不是 code-bind 中的类，你应该使用 XPath 而不是 Path 语法。
+其次，由于 `XML` 对象是 `XmlElements` 而不是 code-bind 中的类，你应该使用 `XPath` 而不是 `Path` 语法。
 
-例如，以下代码显示了 OrgChart 程序用于 Regions 的 HierarchicalDataTemplate：
+例如，以下代码显示了 `OrgChart` 程序用于 `Regions` 的 `HierarchicalDataTemplate`：
 
 ```xml
 <HierarchicalDataTemplate
@@ -11117,14 +9860,13 @@ ItemsSource="Binding XPath=@RegionName">
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_374_0.png)
 
-在这个模板中，DataType 是简单的 Region 而不是更复杂的 local: Region。
+在这个模板中，`DataType` 是简单的 `Region` 而不是更复杂的 `local: Region`。
 
-ItemsSource 使用 XPath 值 *，表示节点的子节点应该包含当前节点的所有节点。
+`ItemsSource` 使用 `XPath` 值 `*`，表示节点的子节点应该包含当前节点的所有节点。
 
-最后，TextBlock 的 Text 绑定到 @RegionName。当之前的程序引用 Region 对象时，该对象的名称存储在它的 RegionName 属性中。
+最后，`TextBlock` 的 `Text` 绑定到 `@RegionName`。当之前的程序引用 `Region` 对象时，该对象的名称存储在它的 `RegionName` 属性中。
 
-
-由于 XML 版本将此值存储在属性中，因此 XPath 语法必须使用 @ 符号来访问属性值。
+由于 `XML` 版本将此值存储在属性中，因此 `XPath` 语法必须使用 `@` 符号来访问属性值。
 
 将前面的代码与以下 `HierarchicalDataTemplate` 进行比较，它是本章早期程序所使用的：
 
@@ -11144,33 +9886,33 @@ ItemsSource 使用 XPath 值 *，表示节点的子节点应该包含当前节�
 
 ## 绑定数据库对象
 
-本章早前的[部分]解释了如何将控件绑定到代码后台（code-behind）中创建的对象、XAML 代码中定义的对象以及由 XML 代码定义的对象。这些场景都是很有用的，但许多应用程序将其数据存储在关系型数据库中。
+本章早前的[部分]解释了如何将控件绑定到代码后台（code-behind）中创建的对象、`XAML` 代码中定义的对象以及由 `XML` 代码定义的对象。这些场景都是很有用的，但许多应用程序将其数据存储在关系型数据库中。
 
-ADO.NET提供了与关系型数据库交互的对象。因为它们是对象，所以你可以像绑定本章前面描述的对象一样，将它们绑定到控件。由于这些对象比你通常构建的对象更复杂，因此绑定也稍微复杂一些。
+`ADO.NET`提供了与关系型数据库交互的对象。因为它们是对象，所以你可以像绑定本章前面描述的对象一样，将它们绑定到控件。由于这些对象比你通常构建的对象更复杂，因此绑定也稍微复杂一些。
 
-基本策略是在代码后台中打开数据，就像处理任何其他 ADO.NET 程序一样。将数据加载到 DataSet、DataTable 和其他 ADO.NET 对象中，并将它们绑定到应用程序的控件上。
+基本策略是在代码后台中打开数据，就像处理任何其他 `ADO.NET` 程序一样。将数据加载到 `DataSet`、`DataTable` 和其他 `ADO.NET` 对象中，并将它们绑定到应用程序的控件上。
 
-你可以将 DataTable 视为类似于 DataRow 对象的集合，将 DataSet 视为类似于 DataTables 对象的集合；因此，绑定语法并不陌生。
+你可以将 `DataTable` 视为类似于 `DataRow` 对象的集合，将 `DataSet` 视为类似于 `DataTables` 对象的集合；因此，绑定语法并不陌生。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_375_1.png)
 
-图 18-14 显示的 StudentData 示例程序演示了 ADO.NET 绑定。该程序从 StudentData-db Microsoft Access 数据库加载数据。
+图 18-14 显示的 `StudentData` 示例程序演示了 `ADO.NET` 绑定。该程序从 `StudentData-db` `Microsoft Access` 数据库加载数据。
 
-左侧的 ListBox 列出了 Students 表中的学生。当你点击某个学生时，中间的控件会显示学生的地址和电话号码，右侧的 ListBox 显示来自 TestScores 表的相应分数数据。
+左侧的 `ListBox` 列出了 `Students` 表中的学生。当你点击某个学生时，中间的控件会显示学生的地址和电话号码，右侧的 `ListBox` 显示来自 `TestScores` 表的相应分数数据。
 
 图 18-14
 
-> 注意，你不需要在计算机上安装 Access 即可在程序中使用 Access 数据库。你只需要一个可以打开数据库的数据库引擎，例如 Jet 数据库引擎。
+> 注意，你不需要在计算机上安装 `Access` 即可在程序中使用 `Access` 数据库。你只需要一个可以打开数据库的数据库引擎，例如 `Jet` 数据库引擎。
 
-如果你修改了中间的任何学生值，控件会自动更新相应的 ADO.NET 对象。如果你使用数据“保存更改”（Save Changes）命令，程序会将这些更改写回数据库。（此示例未提供添加或删除学生，或添加或修改学生考试的方法。）
+如果你修改了中间的任何学生值，控件会自动更新相应的 `ADO.NET` 对象。如果你使用数据“保存更改”（`Save Changes`）命令，程序会将这些更改写回数据库。（此示例未提供添加或删除学生，或添加或修改学生考试的方法。）
 
-数据库还有第三张名为 States 的表，列出了美国各州（以及华盛顿特区）及其缩写。程序使用其用作查找表。Students 表包含每个学生的州（以缩写形式）。当显示该值时，窗口中间的 ComboBox 使用 States 表将缩写转换为州的全名。
+数据库还有第三张名为 `States` 的表，列出了美国各州（以及华盛顿特区）及其缩写。程序使用其用作查找表。`Students` 表包含每个学生的州（以缩写形式）。当显示该值时，窗口中间的 `ComboBox` 使用 `States` 表将缩写转换为州的全名。
 
 接下来的章节将解释该程序如何执行其主要任务。
 
 ## 加载数据
 
-以下代码显示了 StudentData 程序如何从数据库加载数据：
+以下代码显示了 `StudentData` 程序如何从数据库加载数据：
 
 ```csharp
 OleDbDataAdapter m_daUsers;
@@ -11268,6 +10010,7 @@ using System.Data.OleDb;
 代码[定义]了这些。
 
 程序的以下[部分]需要 `using` 语句：
+
 ```csharp
 using System.Data;
 using System.Data.OleDb;
@@ -11275,8 +10018,9 @@ using System.Data.OleDb;
 
 ## 保存更改
 
-代码[显示]了 System.Data;
-using System.Data.OleDb. 是数据库。
+代码[显示]了 `System.Data`;
+
+`using System.Data.OleDb.` 是数据库。
 
 以下代码显示了程序如何将更改保存到数据库：
 
@@ -11297,7 +10041,7 @@ private void DataSaveChanges(object sender, RoutedEventArgs e)
 
 ## 绑定学生列表 ListBox
 
-以下代码显示了程序如何将图 18-14 左侧的学生姓名 ListBox 绑定到 Students 数据：
+以下代码显示了程序如何将图 18-14 左侧的学生姓名 `ListBox` 绑定到 `Students` 数据：
 
 ```xml
 <ListBox Grid.Row="0" Grid.Column="0" Margin="10" Name="Students"
@@ -11318,22 +10062,21 @@ private void DataSaveChanges(object sender, RoutedEventArgs e)
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_379_0.png)
 
-StudentData
+`StudentData`
 
-代码将控件的 DataContext 属性设置为名为 Students 的项。记住，此时窗口的 DataContext 属性指向 DataSet。DataSet 拥有一个 Tables 属性，该属性包含了指向 DataTable 对象的引用。语法 `Tables[Students]` 在此处显示了指向名为 Students 的表的引用。
+代码将控件的 `DataContext` 属性设置为名为 `Students` 的项。记住，此时窗口的 `DataContext` 属性指向 `DataSet`。`DataSet` 拥有一个 `Tables` 属性，该属性包含了指向 `DataTable` 对象的引用。语法 `Tables[Students]` 在此处显示了指向名为 `Students` 的表的引用。
 
-这里使用的 Students 是 DataSet 的名称，而不是数据库中表的名称。为了便于理解，数据库代码通常会给 DataTable 一个与其代表的表相同的名称，但这不是必须的。DataTable 是调用数据适配器的 Fill 方法时设置的。
-
-
-
+这里使用的 `Students` 是 `DataSet` 的名称，而不是数据库中表的名称。为了便于理解，数据库代码通常会给 `DataTable` 一个与其代表的表相同的名称，但这不是必须的。`DataTable` 是调用数据适配器的 `Fill` 方法时设置的。
 
 该代码将 `ListBox.ItemsSource` 属性设置为 `{Binding}`。这种相当奇特的语法使控件绑定到其 `DataContext` 中的任何内容。在这种情况下，这意味着绑定到 `StudentsDataTable`。
 
-`ListBox.ItemTemplate` 属性元素定义了在显示 `DataContext` 中的项时使用的模板。在示例中，它仅显示了由空格分隔的 `FirstName`（名）和 `LastName`（姓）字段。（注意，绑定源仅仅是数据库字段的。WPF 中有很多困难的内容，但这部分很容易。）
+`ListBox.ItemTemplate` 属性元素定义了在显示 `DataContext` 中的项时使用的模板。在示例中，它仅显示了由空格分隔的 `FirstName`（名）和 `LastName`（姓）字段。（注意，绑定源仅仅是数据库字段的。`WPF` 中有很多困难的内容，但这部分很容易。）
 
 ## 显示学生详情
 
 当你点击学生列表中的某一项时，程序会在移动端控件中显示相应的地址和电话数据。
+
+
 
 在 `TextBox` 中显示数据非常简单。记住 `TextBox` 继承自窗口的 `DataContext`，因此它们的 `DataContext` 也映射到 `DataSet`。所有 `TextBox` 只需要绑定到 `StudentsDataTable` 中相应的字段即可。
 
@@ -11414,9 +10157,13 @@ SelectedValue={Binding Path=Tables[Students]/State}/>
 WPF 为数据绑定提供了非常强大的模型。它允许你将控件的属性绑定到：
 
 - 另一个控件的属性
+
 - 后台代码中定义的对象
+
 - XAML 代码中构建的对象
+
 - 由 XML 代码定义的对象
+
 - 数据库对象，如 ADO.NET `DataSet` 和 `DataTable` 对象
 
 绑定允许你在列表、分级显示和主从显示中显示存储在数组、集合和其他数据结构中的许多项。
@@ -11424,13 +10171,17 @@ WPF 为数据绑定提供了非常强大的模型。它允许你将控件的属�
 第 19 章解释了另一种类型的绑定。它解释了你如何将命令绑定到程序行为上。例如，它展示了当用户执行“保存”操作时，无论用户是通过菜单命令、快捷键、工具栏按钮还是任何其他方法调用该操作，程序如何做出响应。
 
 # 19
+
 ## 命令（Commanding）
 
 许多应用程序提供了多种方法来执行相同的功能。例如，在许多应用程序中，你可以通过以下任何操作复制文本框中选中的文本：
 
-- 按 [Ctrl]+C。
+- 按 `Ctrl+C`。
+
 - 在文本框上右键点击并选择上下文菜单中的“复制”命令。
+
 - 打开“编辑”菜单并选择“复制”。
+
 - 点击工具栏上的“复制”按钮。在所有这些情况下，程序都执行相同的操作并复制选中的文本。
 
 与其使用不同的代码段为每种输入场景执行相同的操作，良好的应用程序会调用同一个代码来为这些输入场景执行相同的操作。这种命令的引入减少了重复代码，从而意味着更易于编写、调试和维护。
@@ -11454,21 +10205,24 @@ WPF 正化了这种通过命令提供集中操作的想法。命令将操作逻�
 命令基于四个关键概念：
 
 - **命令（Command）** — 该对象代表应该执行的逻辑操作。该操作是某种概念性的，如复制文本、打开文档或打印。
+
 - **命令源（Command Source）** — 这是调用命令的对象。它可以是菜单项或键序列。
+
 - **命令目标（Command Target）** — 这是执行命令所在的对象。例如，复制命令可能在 `TextBox` 上执行。
+
 - **命令绑定（Command Binding）** — 这是将命令映射到命令的对象。
 
 例如，假设你的程序允许用户通过选择“新建文件”命令来启动新文档（文本文件、绘图等）。在例例中：
 
 - *命令*是启动新文档的概念。
+
 - *命令源*是“新建文件”菜单项。
+
 - *命令目标*是创建新文档的对象，可能是持有它的窗口。
+
 - *命令绑定*将菜单项映射到命令目标类中创建新文档的代码。
 
-
-
-
-使用命令模式（Commanding）不仅能让代码在集中的地方处理操作，命令对象还为启用和禁用触发它的控件提供了一个中心点。例如，考虑一个复制命令。如果没有选择任何可以复制的文本，那么命令对象就可以禁用 [Ctrl]+C、右键菜单、“编辑：复制”以及任何触发复制的其它操作。
+使用命令模式（Commanding）不仅能让代码在集中的地方处理操作，命令对象还为启用和禁用触发它的控件提供了一个中心点。例如，考虑一个复制命令。如果没有选择任何可以复制的文本，那么命令对象就可以禁用 `Ctrl+C`、右键菜单、“编辑：复制”以及任何触发复制的其它操作。
 
 WPF 定义了许多命令对象，你可以将它们绑定到控件上以定义操作。某些命令与其他控件具有特殊关系，因此可以根据你的需要自动执行操作。最后，你可能需要定义新的命令对象来处理 WPF 未预料的其他操作。
 
@@ -11560,19 +10314,18 @@ TextBoxCommands
 ```
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_388_0.png)
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_388_1.png)
 
 
 
+程序的 `New`（新建）、`Open`（打开）、`Save`（保存）、`Save As`（另存为）和 `Close`（关闭）命令的工作方式很大程度上符合你的预期。例如，如果你打开一个文档并在上面画一个矩形，那么 `Save` 和 `Save As` 命令就会启用，这样你就可以保存更改。
 
+图 19-4 所示的图形是一个尚未保存的新图形。因为它没有文件名，`Save` 命令处于禁用状态，而 `Save As` 命令则处于启用状态。
 
-程序的 New（新建）、Open（打开）、Save（保存）、Save As（另存为）和 Close（关闭）命令的工作方式很大程度上符合你的预期。例如，如果你打开一个文档并在上面画一个矩形，那么 Save 和 Save As 命令就会启用，这样你就可以保存更改。
+该程序的一个在文档编辑器中并不常见的特性是：如果你不使用 `New` 或 `Open` 命令，当前文档中将存在未被使用的的更改。许多其他程序允许你调用 `New` 或 `Open`，但当当前文档有未保存的更改时，`Document DocumentCommands` 程序会在执行 `New` 或 `Open` 之前要求你保存或关闭文档（我这样做是为了让命令变得更有趣）。
 
-图 19-4 所示的图形是一个尚未保存的新图形。因为它没有文件名，Save 命令处于禁用状态，而 Save As 命令则处于启用状态。
-
-该程序的一个在文档编辑器中并不常见的特性是：如果你不使用 New 或 Open 命令，当前文档中将存在未被使用的的更改。许多其他程序允许你调用 New 或 Open，但当当前文档有未保存的更改时，Document DocumentCommands 程序会在执行 New 或 Open 之前要求你保存或关闭文档（我这样做是为了让命令变得更有趣）。
-
-接下来的 XML 代码显示了程序如何将 New、Open、Save 和 Save 命令绑定到代码绑定（code-bind）上。代码-bind 还创建了 Close 命令的绑定，以展示在代码中是如何实现它的。
+接下来的 XML 代码显示了程序如何将 `New`、`Open`、`Save` 和 `Save` 命令绑定到代码绑定（code-bind）上。代码-bind 还创建了 `Close` 命令的绑定，以展示在代码中是如何实现它的。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_390_0.png)
 
@@ -11597,11 +10350,11 @@ TextBoxCommands
 
 ## DocumentCommands
 
-Window.Bindings 包含这些绑定。注意，你可以将绑定放在更窄的范围域内，例如在 Grid 或 StackPanel 中，但通常在全局级别处理命令是最合理的的。如果某些命令只在用户界面的某些部分可用，这会让人感到困惑。
+`Window.Bindings` 包含这些绑定。注意，你可以将绑定放在更窄的范围域内，例如在 `Grid` 或 `StackPanel` 中，但通常在全局级别处理命令是最合理的的。如果某些命令只在用户界面的某些部分可用，这会让人感到困惑。
 
-每个 CommandBinding 定义了它所绑定的命令。CanExecute 属性提供了决定哪个命令应该启用的函数名称。Executed 属性提供了执行命令时要运行的例程名称。
+每个 `CommandBinding` 定义了它所绑定的命令。`CanExecute` 属性提供了决定哪个命令应该启用的函数名称。`Executed` 属性提供了执行命令时要运行的例程名称。
 
-接下来的代码显示了 New 命令的代码-绑定：
+接下来的代码显示了 `New` 命令的代码-绑定：
 
 ```csharp
 // 如果我们可以执行 New 动作，返回 True。
@@ -11624,15 +10377,17 @@ private void DocumentNew(Object sender, ExecutedRoutedArgs e)
 
 ## DocumentCommands
 
-如果程序允许 New 命令，DocumentAllowed 例程会将 e.CanExecute 设置为 True。当此函数将 e.CanExecute 设置为 False 时，命令对象将拒绝该的项目和工具栏按钮。如果 m_IsDirty 标志为 False，该函数简单返回 True。
+如果程序允许 `New` 命令，`DocumentAllowed` 例程会将 `e.CanExecute` 设置为 `True`。当此函数将 `e.CanExecute` 设置为 `False` 时，命令对象将拒绝该的项目和工具栏按钮。如果 `m_IsDirty` 标志为 `False`，该函数简单返回 `True`。
 
 > **向下且脏（DOWN AND DIRTY）**
-> 在不详细介绍程序工作原理的情况下，当图形有未保存的更改时，m_IsDirty 会被设置为 True。当用户点击并拖拽创建一个新矩形时，该变量被设置为 True。当用户打开现有文件、创建新文件或保存更改时，程序会将 m_IsDirty 设置为 False。
 
-DocumentNew 例程会移除图形画布 Drawing 上的任何矩形子项。它确保包含画布的 Border 是可见的，并将 m_FileName 设置为 null，以表示新图形还没有文件名。
+> 在不详细介绍程序工作原理的情况下，当图形有未保存的更改时，`m_IsDirty` 会被设置为 `True`。当用户点击并拖拽创建一个新矩形时，该变量被设置为 `True`。当用户打开现有文件、创建新文件或保存更改时，程序会将 `m_IsDirty` 设置为 `False`。
+
+`DocumentNew` 例程会移除图形画布 `Drawing` 上的任何矩形子项。它确保包含画布的 `Border` 是可见的，并将 `m_FileName` 设置为 `null`，以表示新图形还没有文件名。
 
 > **安全第一（SAFETY FIRST）**
-> 注意，此代码不需要任何逻辑来判断创建新文档是否安全。例如，它没有检查是否存在具有未保存更改的现有文档。DocumentAllowed 例程仅在创建新文档是安全的时才启用 New 命令，因此 DocumentNew 例程只在安全安全时执行。
+
+> 注意，此代码不需要任何逻辑来判断创建新文档是否安全。例如，它没有检查是否存在具有未保存更改的现有文档。`DocumentAllowed` 例程仅在创建新文档是安全的时才启用 `New` 命令，因此 `DocumentNew` 例程只在安全安全时执行。
 
 这是使用 WPF 命令机制的用处之一。将“允许”逻辑移动到单独的例程中，可以简化执行动作的代码。
 
@@ -11642,19 +10397,19 @@ WPF 提供了约 150 个预定义命令，因此在许多情况下，你可以�
 
 偶尔，你可能想要定义一个其他程序中不常见且 WPF 未定义命令类的命令。在这种情况下，你可以定义自己的命令对象。你可以采取两种基本方法来定义新的命令对象。
 
-首先，你可以构建一个实现 ICommand 接口的类。这并不难，但比另一种方法困难，所以这里不讨论。
+首先，你可以构建一个实现 `ICommand` 接口的类。这并不难，但比另一种方法困难，所以这里不讨论。
 
-其次，你可以创建一个 RoutedCommand 或 RoutedUI 类的实例。这些类大部分相同，但 RoutedUI 类有一个 RoutedCommand 类欠缺的 Text 属性。如果你想在按钮和菜单项中显示命令的文本，那么 RoutedUI 是更好的选择。
+其次，你可以创建一个 `RoutedCommand` 或 `RoutedUI` 类的实例。这些类大部分相同，但 `RoutedUI` 类有一个 `RoutedCommand` 类欠缺的 `Text` 属性。如果你想在按钮和菜单项中显示命令的文本，那么 `RoutedUI` 是更好的选择。
 
-构建自定义 RoutedCommand 对象的的基本步骤并不复杂，但理解其运行原理可能会很困难。
+构建自定义 `RoutedCommand` 对象的的基本步骤并不复杂，但理解其运行原理可能会很困难。
 
 你定义的命令必须是共享的（在窗口之间共享），因为窗口的所有实例都共享同一个实例。由于窗口的所有实例共享同一个命令，你可能会怀疑它会启用或禁用所有命令。
 
-幸运的是并非如此。CanExecute 和 Executed 例程并不是。WPF 查询每个窗口以决定是否允许其命令。
+幸运的是并非如此。`CanExecute` 和 `Executed` 例程并不是。WPF 查询每个窗口以决定是否允许其命令。
 
-图 19-5 中的 ImageColors 示例演示了自定义命令。注意顶部窗口的命令是启用的，底部窗口的命令是禁用的。点击 New 按钮创建一个新窗口。
+图 19-5 中的 `ImageColors` 示例演示了自定义命令。注意顶部窗口的命令是启用的，底部窗口的命令是禁用的。点击 `New` 按钮创建一个新窗口。
 
-那么你需要做什么来创建一个命令对象？首先，将对象声明为静态的。WPF 不需要设置对象的值，如果你喜欢可以声明为只读。以下代码显示了 ImageColors 如何声明其 Invert 命令：
+那么你需要做什么来创建一个命令对象？首先，将对象声明为静态的。WPF 不需要设置对象的值，如果你喜欢可以声明为只读。以下代码显示了 `ImageColors` 如何声明其 `Invert` 命令：
 
 ```csharp
 public readonly static RoutedUICommand Invert;
@@ -11666,7 +10421,7 @@ public readonly static RoutedUICommand Invert;
 
 图 19-5
 
-接下来，编写代码初始化对象。因为它是静态的，程序只能在静态构造函数中初始化对象。以下代码显示了 ImageColors 程序如何初始化 Invert 命令：
+接下来，编写代码初始化对象。因为它是静态的，程序只能在静态构造函数中初始化对象。以下代码显示了 `ImageColors` 程序如何初始化 `Invert` 命令：
 
 ```csharp
 static Window() {
@@ -11679,19 +10434,17 @@ static Window() {
 
 其他命令的代码省略
 
-ImageColors
+`ImageColors`
 
-当代码创建 RoutedUICommand 时，在命令加速键之前添加了一个下划线。如果你仔细观察图 19-5，你会发现 Invert 按钮和菜单项中的 I 是带有下划线的。
+当代码创建 `RoutedUICommand` 时，在命令加速键之前添加了一个下划线。如果你仔细观察图 19-5，你会发现 `Invert` 按钮和菜单项中的 `I` 是带有下划线的。
 
-这段代码还为命令添加了 [Alt+I] 手势。图 19-5 中所示菜单项会自动在右侧显示手势。
+这段代码还为命令添加了 `[Alt+I]` 手势。图 19-5 中所示菜单项会自动在右侧显示手势。
 
 > **大量的静态（LOTS OF STATIC）**
-> 如果你尝试在非静态构造函数中初始化命令对象，Visual Studio 在设计时报错。如果你尝试在窗口的 Loaded 事件处理程序中初始化命令对象，程序将在运行时失败。
 
+> 如果你尝试在非静态构造函数中初始化命令对象，Visual Studio 在设计时报错。如果你尝试在窗口的 `Loaded` 事件处理程序中初始化命令对象，程序将在运行时失败。
 
-
-
-现在在代码后置（code-behind）中使用相应的 `CanExecute` 和 `Exec` 例程。ImageColors 程序对所有命令都使用以下 `CanExecute` 程序，因此当窗口的复选框被选中时，所有命令都处于启用状态：
+现在在代码后置（code-behind）中使用相应的 `CanExecute` 和 `Exec` 例程。`ImageColors` 程序对所有命令都使用以下 `CanExecute` 程序，因此当窗口的复选框被选中时，所有命令都处于启用状态：
 
 ```
 // 如果 CheckBox 被勾选，则返回 True。
@@ -11705,9 +10458,9 @@ private void CanExecuteChecked(Object sender, CanExecuteRoutedEventArgs e)
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_394_1.png)
 
-Invert 命令的 `Exec` 方法很有意思，但与此讨论无关，因此在此不再显示。从书籍网站开发示例命令以查看其工作原理。
+`Invert` 命令的 `Exec` 方法很有意思，但与此讨论无关，因此在此不再显示。从书籍网站开发示例命令以查看其工作原理。
 
-在接下来的 XML 代码中，添加命令绑定（command bindings）以告诉程序使用哪些例程来处理命令的 `CanExecute` 和 `Exec` 属性。以下代码显示 ImageColors 程序如何绑定其 Invert 命令：
+在接下来的 XML 代码中，添加命令绑定（command bindings）以告诉程序使用哪些例程来处理命令的 `CanExecute` 和 `Exec` 属性。以下代码显示 `ImageColors` 程序如何绑定其 `Invert` 命令：
 
 ```
 <Window.CommandBindings>
@@ -11725,13 +10478,13 @@ Invert 命令的 `Exec` 方法很有意思，但与此讨论无关，因此在�
 
 最后，添加 XAML 代码来显示按钮、菜单项以及调用命令的控件。
 
-以下代码显示 ImageColors 程序如何显示其 Invert 菜单项。MenuItem 控件会自动获取命令的 `Text` 属性以显示其标题。它使用命令的输入手势（input gesture）显示快捷键 [Alt+I]。
+以下代码显示 `ImageColors` 程序如何显示其 `Invert` 菜单项。`MenuItem` 控件会自动获取命令的 `Text` 属性以显示其标题。它使用命令的输入手势（input gesture）显示快捷键 `[Alt+I]`。
 
 ```
 <MenuItem Command="{x:Static local:Window1.CommandImageInvert}" />
 ```
 
-以下代码显示程序如何显示其 Invert 按钮。与相应的菜单项不同，按钮不会自动从命令对象获取标题，因此 XAML 代码必须使用按钮的标题。
+以下代码显示程序如何显示其 `Invert` 按钮。与相应的菜单项不同，按钮不会自动从命令对象获取标题，因此 XAML 代码必须使用按钮的标题。
 
 ```
 <Button Name="btnInvert"
@@ -11744,15 +10497,15 @@ Invert 命令的 `Exec` 方法很有意思，但与此讨论无关，因此在�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_394_5.png)
 
-现在解释代码如何将按钮的 `Content` 绑定到命令对象的 `Text` 属性。由于代码后置为对象的文本添加了下划线，当按下 [Alt] 键时，按钮会自动为加速键下划线，并响应 [Alt]+I 键序列。
+现在解释代码如何将按钮的 `Content` 绑定到命令对象的 `Text` 属性。由于代码后置为对象的文本添加了下划线，当按下 `[Alt]` 键时，按钮会自动为加速键下划线，并响应 `[Alt]+I` 键序列。
 
-这个过程看起来很复杂并涉及许多步骤，但如果逐个执行，步骤其实非常简单。我鼓励你从书籍网站下载 Image-Colors 示例程序并查看代码，看看它们是如何组合的。
+这个过程看起来很复杂并涉及许多步骤，但如果逐个执行，步骤其实非常简单。我鼓励你从书籍网站下载 `Image-Colors` 示例程序并查看代码，看看它们是如何组合的。
 
 ## 总结
 
 本章描述了 WPF 命令对象，它们提供了多处好处。它们让程序能够轻松启用和禁用任意数量的按钮、菜单项和其他调用它们的控件；它们允许你挂载输入手势，让用户能够通过键盘序列调用命令；并且它们能够自动在菜单项上显示这些手势。
 
-WPF 提供了约 150 个预定义的命令对象，你可以使用它们来表示应用程序中的逻辑操作。某些命令（如复制、剪切、粘贴）甚至被 TextBox 等控件支持。请参阅附录 X 获取预定义命令对象的列表。
+WPF 提供了约 150 个预定义的命令对象，你可以使用它们来表示应用程序中的逻辑操作。某些命令（如复制、剪切、粘贴）甚至被 `TextBox` 等控件支持。请参阅附录 X 获取预定义命令对象的列表。
 
 如果预定义命令不能满足你的所有需求，你也可以创建自己的命令。
 
@@ -11764,9 +10517,9 @@ WPF 命令机制是一种在相当抽象的层面上控制逻辑操作的通用�
 
 # 变换与效果
 
-正如第 1 章提到的，WPF 使用 DirectX 作为其渲染引擎。DirectX 提供了对系统上任何高性能图形硬件的访问，因此它可以相对快速且容易地产生惊人的效果。
+正如第 1 章提到的，WPF 使用 `DirectX` 作为其渲染引擎。`DirectX` 提供了对系统上任何高性能图形硬件的访问，因此它可以相对快速且容易地产生惊人的效果。
 
-本章介绍了 WPF 作为使用 DirectX 收益的两种有用技术：变换和位图效果。合理使用这些技术可以使应用程序更易用、更具吸引力。
+本章介绍了 WPF 作为使用 `DirectX` 收益的两种有用技术：变换和位图效果。合理使用这些技术可以使应用程序更易用、更具吸引力。
 
 ## 变换
 
@@ -11777,8 +10530,11 @@ WPF 在内部使用 3x3 矩阵表示变换，并用线性代数对其进行操�
 WPF 提供了四种基本的变换，通过以下 XAML 元素表示：
 
 - *RotateTransform*：此变换旋转对象。`Angle` 属性决定对象顺时针旋转的度数。
+
 - *ScaleTransform*：此变换缩放对象。`ScaleX` 和 `ScaleY` 属性分别决定水平和垂直缩放因子。
+
 - *SkewTransform*：此变换通过 `SkewX` 和 `SkewY` 属性指定的角度倾斜对象。
+
 - *TranslateTransform*：此变换移动对象。`X` 和 `Y` 属性决定对象在水平和垂直方向上移动的距离。
 
 ## 第20 章变换与效果
@@ -11787,7 +10543,7 @@ WPF 提供了四种基本的变换，通过以下 XAML 元素表示：
 
 要对对象应用变换，给该对象添加一个 `LayoutTransform` 或 `RenderTransform` 元素，其中包含一种基本变换。当你使用 `LayoutTransform` 时，WPF 在布局控件之前修改内容。当你使用 `RenderTransform` 时，WPF 先布局再修改内容。本章中的“布局与渲染变换”章节将向你展示这两个元素的区别。
 
-例如，以下代码创建了一个 `Label`。`Label.LayoutTransform` 元素包含的 `RotateTransform` 会将 Label 旋转 45 度。
+例如，以下代码创建了一个 `Label`。`Label.LayoutTransform` 元素包含的 `RotateTransform` 会将 `Label` 旋转 45 度。
 
 ```
 <Canvas Left="140" Canvas.Top="50"
@@ -11799,7 +10555,7 @@ Content="Rotate 45 degrees">
 </Label>
 ```
 
-除了四种基本变换外，WPF 还提供了 `MatrixTransform` 类，它将旋转、缩放、倾斜和平移的任意组合表示为矩阵。使用它比使用四种基本变换复杂，且如果没有覆盖的情况，它也不会提供额外的灵活性。更多信息，请参阅 mdn.microsoft.com/system.windows.media.matrixtransform.aspx 中的 MatrixTransform 类在线帮助。
+除了四种基本变换外，WPF 还提供了 `MatrixTransform` 类，它将旋转、缩放、倾斜和平移的任意组合表示为矩阵。使用它比使用四种基本变换复杂，且如果没有覆盖的情况，它也不会提供额外的灵活性。更多信息，请参阅 `mdn.microsoft.com/system.windows.media.matrixtransform.aspx` 中的 `MatrixTransform` 类在线帮助。
 
 图 20-1 所示的变换示例程序展示了各种变换。
 
@@ -11809,11 +10565,11 @@ Content="Rotate 45 degrees">
 
 以下列表提到了图 20-1 中的一些显著特征：
 
-- 顶部较大的黄色 Label 在水平方向缩放了 5 倍，垂直方向 1 倍。
-- 中间较小的白色 Label 在水平方向缩放了 -1 倍。
-- 橙色平移 Label 位于蓝色画布内部，因此其平移相对于画布的左上角的。
+- 顶部较大的黄色 `Label` 在水平方向缩放了 5 倍，垂直方向 1 倍。
 
+- 中间较小的白色 `Label` 在水平方向缩放了 -1 倍。
 
+- 橙色平移 `Label` 位于蓝色画布内部，因此其平移相对于画布的左上角的。
 
 各种旋转标签都是围绕其左上角旋转的。
 
@@ -11824,6 +10580,8 @@ Content="Rotate 45 degrees">
 你可以使用旋转、缩放、倾斜和平移变换的任意组合来变换任何对象。要创建一个组合变换，请使用 `TransformGroup` 而不是单个变换对象。在组内部，你可以按照任何顺序放置其他变换。
 
 例如，以下代码显示了一个用于 `Grid` 控件的 `TransformGroup`，它包含一个平移后跟一个旋转：
+
+
 
 ```
 <Grid.RenderTransform>
@@ -11844,7 +10602,7 @@ Content="Rotate 45 degrees">
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_398_1.png)
 
-由于对象包含在画布（canvas）内部，且画布填充了边框，因此对象的起点位于边框的左上角。
+由于对象包含在画布（`canvas`）内部，且画布填充了边框，因此对象的起点位于边框的左上角。
 
 白色对象 0 是经过变换的对象。蓝色对象 1 经过了平移，蓝色对象 2 经过平移后进行了旋转。
 
@@ -11853,6 +10611,7 @@ Content="Rotate 45 degrees">
 标记为 2 的两个对象使用了相同的旋转和平移，但顺序不同，产生了截然不同的结果。
 
 > 中心化建议
+>
 > 从创建一个以原点为中心的对象开始，构建你所需的变换是最简单的。这样在将其平移到最终位置之前，你可以轻松地围绕其中心进行缩放、旋转或倾斜。
 
 ## 布局变换与渲染变换
@@ -11866,11 +10625,12 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 然而，如果控件的容器不使用控件的大小来排列子控件，`RenderTransforms` 就能良好工作。例如，`Canvas` 不使用控件的大小来排列控件，因此 `RenderTransforms` 在那里可以正常工作。
 
 > 平移的复杂性
+>
 > 根据控件容器的不同，变换有时会产生意料之外的结果，或者可能没有明显的效果。
-
-例如，假设你在 `Grid` 内部放置一个 `Label` 并给它一个变换。WPF 平移了该 `Label`，但将其在 `Grid` 中居中，因此它显示的位置与你没有特意平移时的位置一样。
-
-在这种情况下，使用 `RenderTransform` 而不是 `LayoutTransform`，或者将控件移动到 `Canvas` 中更容易得到结果。
+>
+> 例如，假设你在 `Grid` 内部放置一个 `Label` 并给它一个变换。WPF 平移了该 `Label`，但将其在 `Grid` 中居中，因此它显示的位置与你没有特意平移时的位置一样。
+>
+> 在这种情况下，使用 `RenderTransform` 而不是 `LayoutTransform`，或者将控件移动到 `Canvas` 中更容易得到结果。
 
 图 20-3 显示的 `LayoutVsRender` 示例程序演示了 `LayoutTransform` 和 `RenderTransform` 属性之间的区别。
 
@@ -11892,7 +10652,7 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 变换会修改对象的几何形状，而位图效果（bitmap effects）则修改对象绘制的方式。
 
-要向对象添加效果，请给它提供一个包含效果元素的 `BitmapEffect` 属性元素。例如，以下代码定义了一个包含椭圆（Ellipse）和路径（Path）的 `Canvas`。
+要向对象添加效果，请给它提供一个包含效果元素的 `BitmapEffect` 属性元素。例如，以下代码定义了一个包含椭圆（`Ellipse`）和路径（`Path`）的 `Canvas`。
 
 ```
 <Canvas Width="100" Height="100">
@@ -11910,14 +10670,18 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 由于变换修改了对象的几何形状，位图效果修改了对象绘制的方式。
 
-要向对象添加效果，请给它提供一个包含效果元素的 `BitmapEffect` 属性元素。例如，以下代码定义了一个包含椭圆和路径的 `Canvas`。 (此处为重复翻译内容，根据逻辑处理)
+要向对象添加效果，请给它提供一个包含效果元素的 `BitmapEffect` 属性元素。例如，以下代码定义了一个包含椭圆和路径的 `Canvas`。
 
 以下列表总结了 WPF 的位图效果类：
 
 - **Bevel**（倒角）：添加边缘。该效果具有几个重要属性。`BorderWidth` 决定倒角边缘。`LightAngle` 决定光线照射倒角边缘的角度。`Relief` 决定凹凸。`Smoothness` 决定平滑度。
+
 - **Blur**（模糊）：模糊对象。`Radius` 决定模糊范围。
+
 - **DropShadow**（投影投影）：在对象后面添加阴影。该效果最有用的属性是 `Color`（决定阴影颜色）和 `Direction`（决定阴影方向）。`ShadowDepth` 决定阴影深度。
+
 - **Emboss**（浮雕）：在对象周围添加光。
+
 - **OuterGlow**（外光）：在对象周围添加光。`GlowSize` 决定光的大小。`GlowColor` 决定光的颜色。
 
 如果你想同时使用多个效果，请使用一个包含 `BitmapGroup` 的 `BitmapEffect` 元素。在 `BitmapGroup` 内部放置使用的效果。例如，以下代码使用了 `EmbossBitmapEffect` 后跟 `BevelBitmapEffect`。
@@ -11941,7 +10705,7 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 图 20-4 所示的 `Effects` 示例显示了一个未修改的对象以及使用五种基础位图效果的相同对象。右下方的两个版本显示了组合效果的对象。
 
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_401_1.png) (此处重复)
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_401_1.png)
 
 `BevelBitmapEffect` 类的 `EdgeProfile` 属性决定倒角边缘的精确形状。图 20-5 所示的 `BevelEffects` 示例演示了该属性的所有可能值。
 
@@ -11951,10 +10715,12 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 图 20-5
 
-所有的位图效果仅作用于可见的像素。如果某个区域未填充或填充颜色为透明（Transparent），则该效果将忽略该区域。
+所有的位图效果仅作用于可见的像素。如果某个区域未填充或填充颜色为透明（`Transparent`），则该效果将忽略该区域。
 
 > 填充内容
+>
 > 要让一个区域未填充，通常只需不填充即可。例如，如果不指定 `Ellipse` 的 `Fill` 属性，那么 `Ellipse` 就是未填充的。
+>
 > 要显式地让一个区域未填充，请在 XAML 代码中使用 `(x:Null)`，在 C# 中使用 `null`，在 Visual Basic 中使用 `Nothing`。
 
 图 20-6 所示的 `TransparentEffects` 示例程序绘制的笑脸与 `Effects` 程序绘制的相似，只是主椭圆是透明的而不是黄色。
@@ -11965,9 +10731,6 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 图 20-6 所示的效果仅使用实际绘制的像素。这对于模糊、投影投影和外光效果看起来是合理的，但对于倒角和浮雕效果看起来并不那么好。倒角和浮雕效果需要填充区域来发挥作用，在此示例中作用不大。（你仍然可以在眼睛和鼻子处看到它们的效果，因为它们是填充的。）
 
-
-
-
 ## 总结
 
 变换和位图效果可以为应用程序增加一些额外的趣味和精致感，而无需强制你编写大量的额外代码。本章中的大多数示例都过于花哨，因为它们演示的是特定的技术，而不是为了产生美观的结果。通常情况下，你可以并且应该更多地使用此类效果。
@@ -11976,7 +10739,7 @@ WPF 在控件安排之后、绘制之前应用 `RenderTransform`。这在排列�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_403_0.png)
 
-WPF 的大多数容器控件都以相当简单的方式排列子元素。例如，StackPanel、WrapPanel、Grid 和 UniformGrid 控件在不重叠的矩形区域内排列子元素。
+WPF 的大多数容器控件都以相当简单的方式排列子元素。例如，`StackPanel`、`WrapPanel`、`Grid` 和 `UniformGrid` 控件在不重叠的矩形区域内排列子元素。
 
 这些控件易于使用，但有时你可能并不希望采用这种简单的布局。相反，你可能希望让文本和其他对象环绕包含图像、表格或其他项目的区域进行流动。下一章将解释如何使用文档来实现这一点。
 
@@ -11987,9 +10750,9 @@ WPF 文档可以包含各种对象，例如：
 - 段落
 - 表格
 - 列表
-- 浮动元素 (Floaters)
+- 浮动元素 (`Floaters`)
 - 图像
-- 如 Button 和 TextBox 等用户界面元素
+- 如 `Button` 和 `TextBox` 等用户界面元素
 - 三维对象
 
 WPF 有两种不同的文档：固定文档和流式文档。本文描述了这两种文档。它解释了每种文档可以包含的对象，以及它们必须如何排列以产生有效的结果。
@@ -12002,7 +10765,7 @@ WPF 有两种不同的文档：固定文档和流式文档。本文描述了这�
 
 ## 构建 XPS 文档
 
-定义固定文档时，微软还定义了 XML Paper Specification (XPS) 文件。XPS 文件是以特殊格式保存的固定文档，可以由 Internet Explorer 中的查看器等特定程序读取和显示。
+定义固定文档时，微软还定义了 XML Paper Specification (`XPS`) 文件。`XPS` 文件是以特殊格式保存的固定文档，可以由 Internet Explorer 中的查看器等特定程序读取和显示。
 
 制作 XPS 文档最好的方法之一是使用 Microsoft Word。只需创建一个包含你想要的任何文本、图形、列表或其他内容的 Word 文档，并将其导出为 XPS 文档即可。
 
@@ -12011,6 +10774,7 @@ Microsoft Word 2007 可以以 XPS（或 PDF）格式导出文件，但你需要�
 安装插件后，只需点击 Word 左上角的 Windows 图标展开主菜单。点击“另存为”命令旁边的箭头，并选择“PDF 或 XPS”项。
 
 > 警告
+>
 > 尽管 Word 可以导出 XPS 格式的文件，但它无法完全读取 XPS 文件，至少在我目前正在使用的版本中（Word 2007 SP1）。请务必在导出的同时也将你的文档保存为普通文档，以便以后重新加载。
 
 某些第三方产品也可以将 XPS 文档转换为 Word 文档。例如，请参见 www.investintech.com/xpscentral/xpsstword。
@@ -12029,7 +10793,7 @@ Microsoft XPS Viewer 默认安装在 Windows 7 并集成到 Internet Explorer 6.
 
 你可以在 www.microsoft.com/whdc/xps/xxps.mspx 下载 Microsoft XPS Viewer 或 Microsoft XPS Essentials Pack（包含一个独立查看器）。
 
-最后，你可以让 WPF 应用程序在 DocumentViewer 控件内部显示 XPS 文件。要实现这一点，首先要添加 ReachFramework 库引用。
+最后，你可以让 WPF 应用程序在 `DocumentViewer` 控件内部显示 XPS 文件。要实现这一点，首先要添加 ReachFramework 库引用。
 
 在 Expression Blend 中，使用 Project 菜单并选择“Add Reference”（添加引用）。浏览到 ReachFramework DLL（在你的系统中，路径为 @Program Files\Reach Assemblies\Microsoft\Framework\v3.0\ReachFramework.dll）并点击确定。
 
@@ -12039,31 +10803,29 @@ Microsoft XPS Viewer 默认安装在 Windows 7 并集成到 Internet Explorer 6.
 
 使用 Microsoft Word、WordPad 或某些外部程序构建 XPS 文档很容易，但有时在 XAML 或后台代码中构建更为方便。例如，你可能希望程序在运行时生成报告并显示它。
 
-在 XAML 中构建固定文档并不复杂，尽管由于格式冗长，工作量很大。从创建一个 Document 来承载文档开始。赋予它所需的任何属性和资源（如背景），并在内部放置一个 FixedDocument。
+在 XAML 中构建固定文档并不复杂，尽管由于格式冗长，工作量很大。从创建一个 `Document` 来承载文档开始。赋予它所需的任何属性和资源（如背景），并在内部放置一个 `FixedDocument`。
 
-FixedDocument 对象应该包含一个或多个 PageContent 对象来定义其页面。
+`FixedDocument` 对象应该包含一个或多个 `PageContent` 对象来定义其页面。
 
 ## 页面
 
-> 如果你不想在代码中构建页面，可以设置 PageContent 对象的 Source 属性为它应该显示的页面的统一资源标识符 (URI)。
+> 如果你不想在代码中构建页面，可以设置 `PageContent` 对象的 `Source` 属性为它应该显示的页面的统一资源标识符 (`URI`)。
 
-你可以设置每个 PageContent 对象的 Width 和 Height 属性来确定页面的大小。
+你可以设置每个 `PageContent` 对象的 `Width` 和 `Height` 属性来确定页面的大小。
 
-在 PageContent 内部，放置一个 FixedDocument 来定义页面内容。
+在 `PageContent` 内部，放置一个 `FixedDocument` 来定义页面内容。
 
-在 FixedPage 内部，你可以控制 StackPanel、Grid、TextBlock 和 Border 等控件来创建页面内容。
+在 `FixedPage` 内部，你可以控制 `StackPanel`、`Grid`、`TextBlock` 和 `Border` 等控件来创建页面内容。
 
 ## 继承
 
-> FixedPage 对象似乎不继承未命名的样式，因此，你无法在 Window.Resources 中定义的未命名样式设置设置 Label属性。你需要在 FixedPage 内部定义样式，或使用命名样式。
+> `FixedPage` 对象似乎不继承未命名的样式，因此，你无法在 `Window.Resources` 中定义的未命名样式设置设置 `Label`属性。你需要在 `FixedPage` 内部定义样式，或使用命名样式。
 
-图 21-2 所示的 SimpleFixedDocument 示例程序绘制了四个包含简单形状和标签的页面。
-
-
-
-
+图 21-2 所示的 `SimpleFixedDocument` 示例程序绘制了四个包含简单形状和标签的页面。
 
 # 固定文档 | 371
+
+
 
 ```xml
 <PageContent Width="850" Height="1100">
@@ -12097,7 +10859,7 @@ Points="325.0,650.0 325,900.0 0,450.0" />
 
 ## SimpleFixedDocument
 
-可以看出这段代码相对直观，它包含了嵌套对象：DocumentViewer、FixedDocument、PageContent、FixedPage 以及其他对象。它非常简单但相当冗长，使用 50 行代码就绘制了四个简单的形状。
+可以看出这段代码相对直观，它包含了嵌套对象：`DocumentViewer`、`FixedDocument`、`PageContent`、`FixedPage` 以及其他对象。它非常简单但相当冗长，使用 50 行代码就绘制了四个简单的形状。
 
 ## 保存 XPS 文件
 
@@ -12160,7 +10922,7 @@ WPF 程序在三种查看器之一中显示文档：`FlowDocumentPageView`、`Fl
 
 以下章节提供了这些类的更多细节。它们还展示了 `ShowDocument` 示例程序中用于演示每个类的代码，并包含了显示结果的图。
 
-## BlockUIContainer
+### BlockUIContainer
 
 `BlockUIContainer` 可以包含单个用户界面 (UI) 作为子元素。例如，它可以包含 `Button`、`CheckBox`、`StackPanel` 或 `Grid`。如果你想让控件持有多个元素，请将 `StackPanel` 或 `Grid` 等容器放在控件内部，并向容器添加其他控件。
 
@@ -12187,7 +10949,7 @@ WPF 程序在三种查看器之一中显示文档：`FlowDocumentPageView`、`Fl
 
 图 21-3
 
-## List
+### List
 
 `List` 对象包含 `ListItem` 对象。每个 `ListItem` 应该包含如 `Paragraph` 之类的块元素。
 
@@ -12211,7 +10973,7 @@ WPF 程序在三种查看器之一中显示文档：`FlowDocumentPageView`、`Fl
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_411_0.png)
 
-## Paragraph
+### Paragraph
 
 `Paragraph` 将内容分组为段。`Paragraph` 在自身与前一个元素之间添加一些垂直空间。`Paragraph` 通常包含内联元素，包括：
 
@@ -12219,9 +10981,6 @@ WPF 程序在三种查看器之一中显示文档：`FlowDocumentPageView`、`Fl
 - Bold — 使其文本加粗
 - Figure — 在 `ParagraphUIContainer` 中嵌入一个区域，你可以在其中放置块元素。`Anchor` 和 `offset` 属性允许你确定 Figure 在段中的位置。
 - Floater — 与 Figure 相似，但你无法控制位置。相反，FlowDocument 将 Floater 移动到合适的位置。
-
-# 流式文档 | 375
-
 - Hyperlink — 显示链接。`NavigateUri` 属性持有要跳转的 URI。只有当它位于 NavigationWindow、Frame 或浏览器等宿主机中时，Hyperlink 才能自动跳转。
 - InlineUIContainer — 可以包含 Buttons、CheckBox 和 RadioButtons。
 - Italic — 使倾斜
@@ -12259,19 +11018,15 @@ E=MC<Run BaselineAlignment="Superscript">2</Run> 和 C<Run BaselineAlignment="Su
 
 ShowFlowDocument
 
+### 奇特的格式
 
-
-
-
-## 奇特的格式
-
-咖啡因公式 $C_8H_{10}N_4O_2$ 的 XAML 代码格式化有些奇怪，在 `Run` 元素内部包含换行符。如果将 `Runs` 放置在不同的行，WPF 会在它们周围添加一些空间，使公式分散开并看起来很奇怪。这还允许 `FlowDocument` 在公式中间断行。
+咖啡因公式 `$C_8H_{10}N_4O_2$` 的 XAML 代码格式化有些奇怪，在 `Run` 元素内部包含换行符。如果将 `Runs` 放置在不同的行，WPF 会在它们周围添加一些空间，使公式分散开并看起来很奇怪。这还允许 `FlowDocument` 在公式中间断行。
 
 这种不寻常格式将文本在 XAML 代码中保持在同一逻辑行上，使得公式的片段保持在一起。
 
 （更令人混乱的是，如果你在 Visual Studio 中复制并粘贴公式的 XAML 代码，编辑器会重新格式化代码将每个 `Run` 放置在单独行，导致结果再次变得难看。）
 
-## Section
+### Section
 
 `Section` 组了其他块级元素，如段落（Paragraph）、列表和表格。`Section` 在其内容周围添加了一些额外的空间，你可以用它来分隔文档的不同部分。
 
@@ -12279,7 +11034,7 @@ ShowFlowDocument
 
 `Section` 还可以通过设置其 `Background`、`Foreground`、`FontSize`、`BorderBrush` 和其他属性来改变其包含的对象的观。
 
-## Table
+### Table
 
 `Table` 以行列的形式显示其内容。`Table.Columns` 元素属性指定列的宽度。例如，以下代码片段定义了五列。第一列宽度为 100 像素，其他列平均分配剩余宽度。
 
@@ -12340,6 +11095,8 @@ ShowFlowDocument
 </TableRow>
 ```
 
+
+
 ```
 <!-- The planets. -->
 <TableRow Background="LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
@@ -12367,20 +11124,27 @@ ShowFlowDocument
 ```
 </TableCell>
 ```
+
 ... Lots of code omitted
+
 ```
 </TableRowGroup>
 ```
 
-ShowFlowDocument
+`ShowFlowDocument`
 
 代码从 `TableRow` 开始，定义了表格的标题和列头。除了文本对齐等常用属性外，此处未显示样式。代码以第一个 `TableRow` 结束，并开始第二个来持有行星数据。此组使用数据后面的渐变背景。代码随后创建了 `TableCell`，包括第一个行星水星。其他行星的单元格和行与此处代码类似。你可以从书籍网站下载示例以查看所有细节。
 
 | Name | Picture | Dist. to Sun | Year | Mass |
+
 |---|---|---|---|---|
+
 | Mercury | | 0.39 AU | 88 days | 0.05 Earth |
+
 | Venus | | 0.72 AU | 225 days | 0.81 Earth |
+
 | Earth | | 1.0 AU | 365 days | 1 Earth |
+
 | Mars | | 1.5 AU | 687 days | 1 Earth |
 
 FIGURE 21-6
@@ -12395,9 +11159,9 @@ FIGURE 21-6
 
 使用类网页导航并不意味着不能提供其他移动方式。“上一个”和“下一个”按钮旨在帮助用户回到之前的地方，但应用程序应该提供更快的移动方式。例如，Windows 管理器提供了许多导航目录的方法。你可以双击文件夹打开它，点击当前路径（程序顶部）中的目录以向上移动目录，点击路径右侧输入新路径，并打开路径旁边的下拉列表从最近的位置中选择。“上一个”和“下一个”按钮很方便，但是导航中最薄弱的方法之一。WPF 包含了使这种导航样式轻松添加到应用程序中的工具和类。本章介绍了这些工具，并展示了如何使用它们构建自己的基于导航的应用程序。
 
-# PAGE
+## PAGE
 
-`Page` 对象类似于 `Window` 对象，因为它是用于构建该样式应用程序的顶级容器。然而，与 `Window` 不同，`Page` 必须包含在导航主机（如网络浏览器、NavigationWindow 或 Frame）中。这些主机支持到 Page 的前后导航。你的程序通过代码或使用 Page 内的超链接移动 Page 对象，剩下的剩下的。
+`Page` 对象类似于 `Window` 对象，因为它是用于构建该样式应用程序的顶级容器。然而，与 `Window` 不同，`Page` 必须包含在导航主机（如网络浏览器、`NavigationWindow` 或 `Frame`）中。这些主机支持到 `Page` 的前后导航。你的程序通过代码或使用 `Page` 内的超链接移动 `Page` 对象，剩下的剩下的。
 
 由于它是程序的顶级容器，`Page` 包含了与 `Window` 类似的命名空间和声明。
 
@@ -12439,24 +11203,21 @@ FIGURE 22-1
 
 PageBorder
 
-
-
-
-
 # 超链接导航 | 38
 
-Width 和 Height 属性决定了页面（Page）在其容器内的大小。WindowWidth 和 WindowHeight 属性决定了容器初始的大小。
-未命名的 Border Style（边框样式）会修改页面，使其显示其粗红色边框。
+`Width` 和 `Height` 属性决定了页面（`Page`）在其容器内的大小。`WindowWidth` 和 `WindowHeight` 属性决定了容器初始的大小。
 
-# 不需要导航
+未命名的 `Border` Style（边框样式）会修改页面，使其显示其粗红色边框。
 
-如果你运行一个使用 Page 作为启动对象的应用程序，程序将在 NavigationWindow 中显示该 Page，该窗口提供了“返回”（Back）和“前进”（Next）按钮。通常情况下，你要么通过这种方式显示 Page，要么将其放在 Frame 控件内部。
+## 不需要导航
 
-# 超链接导航
+如果你运行一个使用 `Page` 作为启动对象的应用程序，程序将在 `NavigationWindow` 中显示该 `Page`，该窗口提供了“返回”（Back）和“前进”（Next）按钮。通常情况下，你要么通过这种方式显示 `Page`，要么将其放在 `Frame` 控件内部。
 
-在 Page 中进行导航的一种简单方法是在文档中包含超链接。超链接可以自动在应用程序的 Page 之间跳转，甚至跳转到 Web 上的外部位置。
+## 超链接导航
 
-图 2-2 显示的 PageDocument 示例程序包含两个 Page。每个 Page 都显示一个 FlowDocument，其中包含一系列超链接，允许您在站点之间导航。每个 Page 底部的链接指向另一个 Page。
+在 `Page` 中进行导航的一种简单方法是在文档中包含超链接。超链接可以自动在应用程序的 `Page` 之间跳转，甚至跳转到 Web 上的外部位置。
+
+图 2-2 显示的 `PageDocument` 示例程序包含两个 `Page`。每个 `Page` 都显示一个 `FlowDocument`，其中包含一系列超链接，允许您在站点之间导航。每个 `Page` 底部的链接指向另一个 `Page`。
 
 图 22-2 显示了导航下拉菜单打开并显示程序的导航历史。当我启动程序时，它显示了“写作链接”（Writing Links）。我使用超链接导航到“地图链接”（Map Links）页面（在下拉菜单中显示为“当前页面”），然后跳转到 Google Maps。接着，我点击“返回”按钮回到“地图链接”页面并打开下拉菜单。鼠标悬停在“写作链接”页面上，它被高亮并显示一个左箭头。图 22-2。（在这种情况下，如 Google Maps 这样的“未来”页面将显示右箭头）。第二个页面也是类似的。
 
@@ -12513,31 +11274,31 @@ NavigateUri="Page2.xml*">Map Links</HyperLink>
 
 PageDocument
 
-Page 持有一个 FlowDocument 对象，该对象包含所有其他内容。文档包含一个段落，随后是一个列表。
+`Page` 持有一个 `FlowDocument` 对象，该对象包含所有其他内容。文档包含一个段落，随后是一个列表。
 
-每个项目包含一个带有 Hyperlink 对象的段落。Hyperlink 的 NavigateUri 属性告诉 Page 当用户点击链接时应该跳转到何处。
+每个项目包含一个带有 `Hyperlink` 对象的段落。`Hyperlink` 的 `NavigateUri` 属性告诉 `Page` 当用户点击链接时应该跳转到何处。
 
-大多数链接指向 Web 地址，但最后一个链接的 NavigateUri 设置为 "Page2.xml"。当用户点击此超链接时，程序会创建一个新的 Page2.xml 对象并导航过去。
+大多数链接指向 Web 地址，但最后一个链接的 `NavigateUri` 设置为 "Page2.xml"。当用户点击此超链接时，程序会创建一个新的 `Page2.xml` 对象并导航过去。
 
-## 重用旧对象
+### 重用旧对象
 
-> 注意，重要的是导航到 Page 的新实例，而不是重用任何现有的 Page 对象。相比之下，如果你点击“返回”或“前进”移动到之前查看过的 Page，程序将重绘它之前显示的对象。
+> 注意，重要的是导航到 `Page` 的新实例，而不是重用任何现有的 `Page` 对象。相比之下，如果你点击“返回”或“前进”移动到之前查看过的 `Page`，程序将重绘它之前显示的对象。
 
-例如，程序的第一个 Page 包含一个 TextBox。你向其中输入文本并点击超链接移动到第二个 Page。现在，如果你点击“返回”按钮，你将看到第一个 Page 上的文本。然而，如果你点击另一个超链接回到第一个 Page，你将看到一个带有空白文本框的新对象。
+例如，程序的第一个 `Page` 包含一个 `TextBox`。你向其中输入文本并点击超链接移动到第二个 `Page`。现在，如果你点击“返回”按钮，你将看到第一个 `Page` 上的文本。然而，如果你点击另一个超链接回到第一个 `Page`，你将看到一个带有空白文本框的新对象。
 
-如果你想允许这种导航但让超链接指向原始的 Page 对象，将需要使用一些后置代码（code-behind），而不是让超链接为你自动导航。
+如果你想允许这种导航但让超链接指向原始的 `Page` 对象，将需要使用一些后置代码（code-behind），而不是让超链接为你自动导航。
 
-## 导航服务
+### 导航服务
 
-除了使用超链接外，应用程序的后置代码还可以使用 NavigationService 进行导航。NavigationService 对象允许应用程序后置代码控制容器如何导航。
+除了使用超链接外，应用程序的后置代码还可以使用 `NavigationService` 进行导航。`NavigationService` 对象允许应用程序后置代码控制容器如何导航。
 
-图 22-3 显示的 PageApp 示例程序使用 NavigationService 在其页面之间移动。
+图 22-3 显示的 `PageApp` 示例程序使用 `NavigationService` 在其页面之间移动。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_420_0.png)
 
 图 22-3
 
-当你点击图 22-3 显示的按钮之一时，程序使用 NavigationService 的 Navigate 方法打开新页面。以下代码显示了程序如何移动到图 22-4 所示的“添加客户”页面：
+当你点击图 22-3 显示的按钮之一时，程序使用 `NavigationService` 的 `Navigate` 方法打开新页面。以下代码显示了程序如何移动到图 22-4 所示的“添加客户”页面：
 
 ```
 private void btnAddCustomer_click(object sender, RoutedEventArgs e)
@@ -12545,8 +11306,9 @@ private void btnAddCustomer_click(object sender, RoutedEventArgs e)
     NavigationService.Navigate(new pagAddCustomer());
 ```
 
-此代码调用了 NavigationService 的 Navigate 方法，传递了新的 pagAddCustomer Page 对象。
-除了显示 Page 对象外，Navigate 方法还可以显示网页。如果你点击图 22-3 右下角的帮助图标，将执行以下代码。该代码导航到网页 www.vb-helper.com/wpf.htm。
+此代码调用了 `NavigationService` 的 `Navigate` 方法，传递了新的 `pagAddCustomer` `Page` 对象。
+
+除了显示 `Page` 对象外，`Navigate` 方法还可以显示网页。如果你点击图 22-3 右下角的帮助图标，将执行以下代码。该代码导航到网页 `www.vb-helper.com/wpf.htm`。
 
 ```
 // 转到帮助网站。
@@ -12562,7 +11324,7 @@ private void Help_Click(object sender, RoutedEventArgs e)
 
 图 22-4
 
-NavigationService 对象除了 Navigate 方法外还提供了其他属性和方法。以下代码显示了程序在图 22-4 所示的“添加客户”页面中返回：
+`NavigationService` 对象除了 `Navigate` 方法外还提供了其他属性和方法。以下代码显示了程序在图 22-4 所示的“添加客户”页面中返回：
 
 ```
 // 返回到主页。
@@ -12577,32 +11339,28 @@ if (NavigationService.CanBack)
 
 PageApp
 
-此代码首先显示一个消息框。然后它检查 NavigationService 的 CanBack 属性以判断用户是否可以返回。如果 CanBack 为 True，代码将调用 NavigationService 的 Navigate 方法，传递一个新的 Page 对象。
+此代码首先显示一个消息框。然后它检查 `NavigationService` 的 `CanBack` 属性以判断用户是否可以返回。如果 `CanBack` 为 True，代码将调用 `NavigationService` 的 `Navigate` 方法，传递一个新的 `Page` 对象。
 
-以下列表总结了 NavigationService 最实用的属性和方法：
+以下列表总结了 `NavigationService` 最实用的属性和方法：
 
-- AddBackEntry: 添加包含自定义状态对象的导航项。
-- CanGoBack: 如果 NavigationService 可以返回，则为 True。
-- CanGoForward: 如果 NavigationService 可以前进，则为 True。
-- GoBack: 如果存在之前的页面，则跳转到该页面。
-- GoForward: 如果存在后续的页面，则跳转到该页面。
-- Navigate: 显示 Page 或 URI。
-- RemoveBackEntry: 移除最近的导航项。
-- Source: 获取或设置显示的 URI。通常在后置代码中，你会使用 Navigate 方法打开源，但你可以在 XAML 中设置此属性来打开 Page。
-
-
-
-
+- `AddBackEntry`: 添加包含自定义状态对象的导航项。
+- `CanGoBack`: 如果 `NavigationService` 可以返回，则为 True。
+- `CanGoForward`: 如果 `NavigationService` 可以前进，则为 True。
+- `GoBack`: 如果存在之前的页面，则跳转到该页面。
+- `GoForward`: 如果存在后续的页面，则跳转到该页面。
+- `Navigate`: 显示 `Page` 或 URI。
+- `RemoveBackEntry`: 移除最近的导航项。
+- `Source`: 获取或设置显示的 URI。通常在后置代码中，你会使用 `Navigate` 方法打开源，但你可以在 XAML 中设置此属性来打开 `Page`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_423_0.png)
 
 图 22-5
 
-如果你不介意这种重新排列，可以省略 Frame 的高度，让它根据其包含的 Pages 自动决定大小。如果你不希望像 Window 底部的 Label 这样的控件移动，请给 Frame 设置一个固定的高度。
+如果你不介意这种重新排列，可以省略 `Frame` 的高度，让它根据其包含的 `Pages` 自动决定大小。如果你不希望像 `Window` 底部的 `Label` 这样的控件移动，请给 `Frame` 设置一个固定的高度。
 
 ## 总结
 
-通过使用 Pages，你可以为应用程序添加一种类似网络浏览的导航模型。包含 Pages 的网页浏览器（NavigationWindow）或框架（Frame）会自动允许用户在导航历史中向后或向前移动。
+通过使用 `Pages`，你可以为应用程序添加一种类似网络浏览的导航模型。包含 `Pages` 的网页浏览器（`NavigationWindow`）或框架（`Frame`）会自动允许用户在导航历史中向后或向前移动。
 
 这种导航风格并不能替代其他方法（如菜单和按钮）来打开新内容（原文此处漏词）。它只是为你返回之前访问过的地方提供了一个新选项。
 
@@ -12633,8 +11391,9 @@ WPF 依赖微软的 DirectX 技术来提供高质量的多媒体支持。DirectX
 你需要考虑的其余因素包括：
 
 - 几何体（Geometry）：决定了场景中有什么种对象以及它们所在的位置。这是许多人认为的 3D 图形部分。它定义了 3D 空间中的场景，即你将要显示的建筑、死星和外星人。
-
 - 相机（Camera）：相机的作用就像你在电影中预期的那样，决定了你查看场景的位置和观察的方向。它还决定了用于将 3D 模型转换到你的 2D 计算机屏幕上的投影类型。
+
+
 
 - 光照（Lighting）：如果没有光，你在现实世界或 3D 图形中什么都看不见。光照对象决定了场景中使用的光照颜色和类型。
 
@@ -12654,22 +11413,17 @@ WPF 依赖微软的 DirectX 技术来提供高质量的多媒体支持。DirectX
 
 每个 `Geometry3D` 对象可以定义任意数量的三角形，因此单个 `Geometry3D` 对象就可以产生非常复杂的场景。由于三角形甚至不需要相互连接，一个 `Geometry3D` 就可以定义几个物理对象。难点在于单个 `Geometry3D` 只能有一种材料，因此任何独立的对象将具有相似的外观。
 
-（注：此处后续原文内容似乎存在大量乱码/重复，已根据上下文逻辑识别为后续对相机、光照、材料的详细描述，但由于原文输入本身为乱码，翻译部分已根据指令要求尽可能处理，此处由于原文乱码严重停止翻译）
-
-
-
-
 为了理解为什么这是合理的，假设一个三角形是 3D 物体（如四面体）的一部分。如果三角形的朝向正确，那么它的外向法线就会指向四面体外部。如果法线指向相机，那么相机就能看到这个三角形（前提没有其他东西遮挡视线）。
 
 然而，如果外向法线背向相机，那么三角形位于四面体的远端，因此相机看不到它。Direct3D 甚至不会懒得绘制这个三角形，因为它是不可视的。
 
-## 背面移除 (BACKFACE REMOVAL)
+### 背面移除 (BACKFACE REMOVAL)
 
 移除背向相机的三角形称为背面移除（backface removal）。有时它也被称为*剔除*（culling），尽管它也可以指任何快速从考虑范围中移除三角形的方法。例如，如果你能识别出相机背后的三角形，它们也可以被剔除。
 
 注意，这仅对闭合实体有效，开放表面无法从两个侧都正常显示。例如，假设相机从顶部观察一个没有盖子的鞋盒。在这个位置上，相机看到的是三角形的内侧，因此，如果它们是向外朝的，Direct3D 将不会绘制它们。要解决这个问题，你可以在程序几何结构中包含每个三角形两次，每个朝向包含一次。
 
-## 法线 (Normals)
+### 法线 (Normals)
 
 正如你在本章稍后的“光照”节中看到的，三角形的法线不仅决定了它是否可见，还有助于确定三角形的颜色。这意味着更准确的法线会带来更准确的颜色。
 
@@ -12677,145 +11431,31 @@ WPF 依赖微软的 DirectX 技术来提供高质量的多媒体支持。DirectX
 
 对于由立方体、八面体和其他多面体等平面表面定义的物体，这种方法是有效的。但对于球体、圆柱体和扭环（甜圈）等平滑表面，效果并不理想，因为物体表面上三角形某一点的法线方向与其他点的法线方向略有不同。如果你将三角形做得足够小，这种差异就变得明显，但如果三角形很大，在整个三角形表面上使用相同的法线会导致结果看起来像是有许多切面的。
 
-MeshGeometry3D 的 *Normals* 属性告诉你对于 *Positions* 定义的点，应该使用什么几何法线。引擎仍然使用计算出的法线来决定是否绘制三角形，但它使用你提供的法线来为三角形着色。
+`MeshGeometry3D` 的 `Normals` 属性告诉你对于 `Positions` 定义的点，应该使用什么几何法线。引擎仍然使用计算出的法线来决定是否绘制三角形，但它使用你提供的法线来为三角形着色。
 
-例如，假设你正在构建一个球体。在每情况下，MeshGeometry3D 对象点都在球面上。球面上点 (x, y, z) 处的表面法线从球心指向该点。如果球体中心位于原点，则法线向量简单为 <x, y, z>。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
+例如，假设你正在构建一个球体。在每情况下，`MeshGeometry3D` 对象点都在球面上。球面上点 `(x, y, z)` 处的表面法线从球心指向该点。如果球体中心位于原点，则法线向量简单为 `<x, y, z>`。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
 
-## 有这个点吗？ (IS THERE A POINT?)
+### 有这个点吗？ (IS THERE A POINT?)
 
-标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 <1, 0> 表示一个平行于 X 轴的方向。
+标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 `<1, 0>` 表示一个平行于 X 轴的方向。
 
-图 23-3 所示的 SpheresWithNormals 示例程序演示了这种技术。所有的球体都是使用每个三角形使用单独的 MeshGeometry3D 对象绘制的。右侧的球体与左侧的相同，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_429_0.png)
-
-在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 MeshGeometry3D 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
-
-对于球体，相邻的三角形在每个点周围以度量方式汇合，因此平均后的法线如预期的那样背离球心，结果非常平滑。
-
-SingleMesh 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 MeshGeometry3D 对象中。尽管程序没有显式指定法线，但结果非常平滑。
-
-此程序比 SpheresWithNormals 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 MeshGeometry3D 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 SingleMesh 能跟得更好。）
-
-## 共享法线 (SHARING NORMALS)
-
-Normals 属性指定的是一点的法线，而不是针对特定三角形的法线。这意味着如果两个三角形共享同一个点，它们就共享相同的法线。如果两个三角形共享相同点，它们为 Mesh Mesh3DDD法线。你可以你可以结果整个平平整个整个，，整个，每个，Direct3D 绘制使用使用你法法法来三角形着三角形。
-
-例如，假设你正在构建一个球体。在每情况下，MeshGeometry3D 对象的点都在球面上。球面上点 (x, y, z) 处的表面法线从球心指向该点。如果球体中心位于原点，法线向量简单为 <x, y, z>。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
-
-## 有这个点吗？ (IS THERE A POINT?)
-
-标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 <1, 0> 表示一个平行于 X 轴的方向。
-
-The SpheresWithNormals 示例程序（图 23-3）所示了这种技术。所有的球体都是都是每个三角形使用单独的 Mesh Mesh3D 对象绘制的。右侧的球体与左侧的相同，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
+图 23-3 所示的 `SpheresWithNormals` 示例程序演示了这种技术。所有的球体都是使用每个三角形使用单独的 `MeshGeometry3D` 对象绘制的。右侧的球体与左侧的相同，它们为每个 `MeshGeometry3D` 对象指定了法线。你可以看到结果平滑得多。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_429_0.png)
 
-在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 MeshGeometry3D 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
+在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 `MeshGeometry3D` 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
 
 对于球体，相邻的三角形在每个点周围以度量方式汇合，因此平均后的法线如预期的那样背离球心，结果非常平滑。
 
-SingleMesh 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 MeshGeometry3D 对象中。尽管程序没有显式指定法线，但结果非常平滑。
+`SingleMesh` 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 `MeshGeometry3D` 对象中。尽管程序没有显式指定法线，但结果非常平滑。
 
-此程序比 SpheresWithNormals 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 MeshGeometry3D 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 SingleMesh 能跟得更好。）
+此程序比 `SpheresWithNormals` 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 `MeshGeometry3D` 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 `SingleMesh` 能跟得更好。）
 
-## 共享法线 (SHARING NORMALS)
+### 共享法线 (SHARING NORMALS)
 
-Normals 属性指定的是一点的法线，而不是针对特定三角形的法线。这意味着如果两个三角形共享同一个点，它们就共享相同的法线。如果两个三角形共享相同点，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
+`Normals` 属性指定的是一点的法线，而不是针对特定三角形的法线。这意味着如果两个三角形共享同一个点，它们就共享相同的法线。
 
-包含每个，每个朝向包含一次，Direct3D 绘制使用你提供的法线来为三角形着色。
-
-例如，假设你正在构建一个球体。在每情况下，MeshGeometry3D 对象的点都在球面上。球面上点 (x, y, z) 处的表面法线从球心指向该点。如果球体中心位于原点，法线向量简单为 <x, y, z>。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
-
-## 有这个点吗？ (IS THERE A POINT?)
-
-标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 <1, 0> 表示一个平行于 X 轴的方向。
-
-The SpheresWithNormals 示例程序（图 23-3）所示了这种技术。所有的球体都是使用每个三角形使用单独的 MeshGeometry3D 对象绘制的。右侧的球体与左侧的相同，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_429_0.png)
-
-在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 MeshGeometry3D 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
-
-对于球体，相邻的三角形在每个点周围以度量方式汇合，因此平均后的法线如预期的那样背离球心，结果非常平滑。
-
-SingleMesh 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 MeshGeometry3D 对象中。尽管程序没有显式指定法线，但结果非常平滑。
-
-此程序比 SpheresWithNormals 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 MeshGeometry3D 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 SingleMesh 能跟得更好。）
-
-## 共享法线 (SHARING NORMALS)
-
-Normals 属性指定的是一点的法线，而不是针对特定三角形的法线。这意味着如果两个三角形共享同一个点，它们就共享相同的法线。如果两个三角形共享相同点，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-包含每个，每个朝向包含一次，Direct3D 绘制使用你提供的法线来为三角形着色。
-
-例如，假设你正在构建一个球体。在每情况下，MeshGeometry3D 对象的点都在球面上。球面上点 (x, y, z) 处的表面法线从球心指向该点。如果球体中心位于原点，法线向量简单为 <x, y, z>。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
-
-## 有这个点吗？ (IS THERE A POINT?)
-
-标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 <1, 0> 表示一个平行于 X 轴的方向。
-
-The SpheresWithNormals 示例程序（图 23-3）所示了这种技术。所有的球体都是使用每个三角形使用单独的 MeshGeometry3D 对象绘制的。右侧的球体与左侧的相同，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_429_0.png)
-
-在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 MeshGeometry3D 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
-
-对于球体，相邻的三角形在每个点周围以度量方式汇合，因此平均后的法线如预期的那样背离球心，结果非常平滑。
-
-SingleMesh 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 MeshGeometry3D 对象中。尽管程序没有显式指定法线，但结果非常平滑。
-
-此程序比 SpheresWithNormals 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 MeshGeometry3D 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 SingleMesh 能跟得更好。）
-[/content]
-
-*(注：由于提供的待文本存在大量重复和乱码，我已根据逻辑对内容进行了去重并翻译。以下是基于原文内容的规范翻译译文：)*
-
-[content]
-为了理解为什么这是合理的，假设一个三角形是 3D 物体（如四面体）的一部分。如果三角形的朝向正确，那么它的外向法线就会指向四面体外部。如果法线指向相机，那么相机就能看到这个三角形（前提没有其他东西遮挡视线）。
-
-然而，如果外向法线背向相机，那么三角形位于四面体的远端，因此相机看不到它。Direct3D 甚至不会绘制这个三角形，因为它是不可视的。
-
-## 背面移除 (BACKFACE REMOVAL)
-
-移除背向相机的三角形称为背面移除。有时它也被称为*剔除*（culling），尽管它也可以指任何快速从考虑范围中移除三角形的方法。例如，如果你能识别出相机背后的三角形，它们也可以被剔除。
-
-注意，这仅对闭合实体有效，开放表面无法从两个侧都正常显示。例如，假设相机从顶部观察一个没有盖子的鞋盒。在这个位置上，相机看到的是三角形的内侧，因此，如果它们是向外朝的，Direct3D 将不会绘制它们。要解决这个问题，你可以在程序几何结构中包含每个三角形两次，每个朝向包含一次。
-
-## 法线 (Normals)
-
-正如你在本章稍后的“光照”节中看到的，三角形的法线不仅决定了它是否可见，还有助于确定三角形的颜色。这意味着更准确的法线会带来更准确的颜色。
-
-在自动处理的情况下，Direct3D 通过对定义三角形的顶点进行某些计算来寻找三角形的法线（它将自己的虚拟手指对齐到右手法则）。生成的点垂直于三角形。
-
-对于由立方体、八面体和其他多面体等平面表面定义的物体，这种方法是有效的。但对于球体、圆柱体和扭环（甜圈）等平滑表面，效果并不理想，因为物体表面上三角形某一点的法线方向与其他点的法线方向略有不同。如果你将三角形做得足够小，这种差异就变得明显，但如果三角形很大，在整个三角形表面上使用相同的法线会导致结果看起来是有许多切面的。
-
-MeshGeometry3D 的 *Normals* 属性告诉你对于 *Positions* 定义的点，应该使用什么几何法线。引擎仍然使用计算出的法线来决定是否绘制三角形，但它使用你提供的法线来为三角形着色。
-
-例如，假设你正在构建一个球体。在每情况下，MeshGeometry3D 对象点都在球面上。球面上点 (x, y, z) 处的表面法线从球心指向该点。如果球体中心位于原点，则法线向量简单为 <x, y, z>。如果你将每个点的法线设置为对应的值，那么 Direct3D 就可以使用
-
-## 有这个点吗？ (IS THERE A POINT?)
-
-标准记法用尖括号包围向量的分量。向量表示方向而不是位置。例如，向量 <1, 0> 表示一个平行于 X 轴的方向。
-
-The SpheresWithNormals 示例程序（图 23-3）所示了这种技术。所有的球体都是使用每个三角形使用单独的 MeshGeometry3D 对象绘制的。右侧的球体与左侧的相同，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_429_0.png)
-
-在本节前面的部分，我说过如果你不提供法线，Direct3D 会为三角形创建法线。实际上，这有点是简化了。如果一个点被 MeshGeometry3D 对象中的多个三角形使用，Direct3D 会将该点的法线设置为相邻三角形在该点法线的平均值。结果介于各个三角形的法线之间，因此结果通常更平滑。
-
-对于球体，相邻的三角形在每个点周围以度量方式汇合，因此平均后的法线如预期的那样背离球心，结果非常平滑。
-
-SingleMesh 示例程序绘制的球体，其中球体中的每个三角形都包含同一个 MeshGeometry3D 对象中。尽管程序没有显式指定法线，但结果非常平滑。
-
-此程序比 SpheresWithNormals 示例快得多。对于 Direct3D 来说，绘制许多个三角形比绘制一个包含许多三角形的 MeshGeometry3D 对象要耗费多得多。（尝试运行这两个程序并快速拖动它们的滑块。你会发现 SingleMesh 能跟得更好。）
-
-## 共享法线 (SHARING NORMALS)
-
-Normals 属性指定的是一点的法线，而不是针对特定三角形的法线。这意味着如果两个三角形共享同一个点，它们就共享相同的法线。如果两个三角形共享相同点，它们为每个 MeshGeometry3D 对象指定了法线。你可以看到结果平滑得多。
-
-
-
-图 23-6 所示的 CameraTypes 示例程序使用两种相机显示了同一场景的图像。
+图 23-6 所示的 `CameraTypes` 示例程序使用两种相机显示了同一场景的图像。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_432_0.png)
 
@@ -12827,6 +11467,8 @@ Normals 属性指定的是一点的法线，而不是针对特定三角形的法
 
 以下代码显示了 `CameraType` 参数如何定义其透视相机。`FieldOfView` 参数决定了相机以度为单位的视场。值越大，相机看到的两侧范围就越大，因此相机必须缩小其结果以适应其可用区域。
 
+
+
 ```
 <PerspectiveCamera
 Position="0, 0, 8"
@@ -12836,9 +11478,9 @@ FieldOfView="60">
 
 可在 Wrox.com 下载。
 
-CameraTypes
+`CameraTypes`
 
-以下代码显示了 CameraTypes 程序如何定义其正交相机。`Width` 参数决定了相机在场景坐标系中看到的宽度。该参数大致相当于透视相机的 `FieldOfView` 参数的正交等价。
+以下代码显示了 `CameraTypes` 程序如何定义其正交相机。`Width` 参数决定了相机在场景坐标系中看到的宽度。该参数大致相当于透视相机的 `FieldOfView` 参数的正交等价。
 
 ```
 <OrthographicCamera
@@ -12850,7 +11492,7 @@ Width="8">
 
 可在 Wrox.com 下载。
 
-CameraTypes
+`CameraTypes`
 
 ## 灯光
 
@@ -12863,6 +11505,7 @@ CameraTypes
 其他的颜色组合可能会更令人困惑。例如，如果你在绿球上投射蓝光，你会看到黑色。绿球只反射绿光，而蓝光中不包含绿光，因此球体没有任何东西可反射。
 
 > 许多光
+
 如果你使用某种灰色的光（包括白色，即最明亮的灰色），所有颜色的物体都至少会在某种程度上被照亮。
 
 WPF 提供了几种具有不同效果的光。以下列表总结了这些光：
@@ -12873,6 +11516,7 @@ WPF 提供了几种具有不同效果的光。以下列表总结了这些光：
 - 聚光灯（Spot Light）—— 这种光向场景投射出一个锥形。锥体正方的物体接收完全的光，而侧面较远的物体接收的光较少。
 
 > 高效照明
+
 环境光和方向光的效率比点光和聚光灯高。
 
 23-7 所示的示例程序演示了不同类型的光。每个场景显示了一个由许多小三角形组成的黄色正方形（角被视口边缘剪裁了）。
@@ -12925,14 +11569,11 @@ WPF 提供了几种具有不同效果的光。以下列表总结了这些光：
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_435_0.png)
 
-# 物极不及
+### 物极不及
 
 光是累加的，所以两束光照射在同一个点可以使该点变得非常亮。如果过多的光照射在场景大部分区域，场景中的许多物体将达到饱和并显示出颜色的最亮版本（红色、绿色或其他）。如果太多物体具有相同的饱和颜色，你就会再次遇到它们混合在一起的问题。
 
 为了防止这个问题，通常你需要在添加新光时降低现有光的亮度。光越多，它们必须越暗。
-
-
-
 
 ## 材质
 
@@ -13034,10 +11675,6 @@ private void MakeRectangle(Model3D model, ref MeshGeometryD mesh, Material mater
 }
 ```
 
-
-
-
-
 # 构建复杂场景 | 403
 
 图 23-11 和 23-12 分别显示的 BarChart 和 Graph 示例程序使用了之前描述的相同 `MakeRectangle` 例程来绘制柱状图和带状图。
@@ -13084,6 +11721,8 @@ BarChart 程序绘制的柱体的顶部和底部的纹理坐标被设置为相�
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_441_0.png)
 
+
+
 ```
 // 在指定位置绘制一个水平标签。
 private void MakeLabel(Model3Group chart_model, double wid, double hgt, string txt,
@@ -13111,19 +11750,19 @@ private void MakeLabel(Model3Group chart_model, double wid, double hgt, string t
 
 图 23-13
 
-此代码非常直接。它首先创建一个 Label，设置其属性使用指定的字体显示文本。它使用 Label 创建 Brush，然后使用 Brush 创建 DiffuseMaterial。最后，它使用新材质创建一个矩形。
+此代码非常直接。它首先创建一个 `Label`，设置其属性使用指定的字体显示文本。它使用 `Label` 创建 `Brush`，然后使用 `Brush` 创建 `DiffuseMaterial`。最后，它使用新材质创建一个矩形。
 
 ## 表面
 
-图 23-14 显示的 MakeSurface 示例程序是另一个从数据运行时生成 3D 场景的应用程序。它显示由方程生成的表面：
+图 23-14 显示的 `MakeSurface` 示例程序是另一个从数据运行时生成 3D 场景的应用程序。它显示由方程生成的表面：
 
 ```
 y = Cos(x^2 + z^2)/(x^2 + z^2)
 ```
 
-和 BarChart、Graph 示例程序一样，MakeSurface 程序使用渐变纹理，用较暖的颜色（黄色和红色）绘制较大的 Y 值，用较凉的颜色（绿色和蓝色）绘制较小的 Y 值。
+和 `BarChart`、`Graph` 示例程序一样，`MakeSurface` 程序使用渐变纹理，用较暖的颜色（黄色和红色）绘制较大的 Y 值，用较凉的颜色（绿色和蓝色）绘制较小的 Y 值。
 
-MakeSurface 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计算相应的 Y 值并构建三角形来表示结果。详情请参见书籍网页上的示例程序。
+`MakeSurface` 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计算相应的 Y 值并构建三角形来表示结果。详情请参见书籍网页上的示例程序。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_0)
 
@@ -13134,7 +11773,9 @@ MakeSurface 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计�
 关于使用 WPF 3D 能力的更多讨论和示例，请参阅 DevX 上的文章：
 
 - www.devx.com/dotnet/Article/42370
+
 - www.devx.com/dotnet/Article/42450
+
 - www.devx.com/dotnet/Article/42497
 
 特别是第二和第三篇文章提供了关于构建画刷和材质以及使用 3D 变换的深入讨论。
@@ -13144,8 +11785,11 @@ MakeSurface 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计�
 尽管 WPF 的 3D 工具有很多优点，但也有一些缺点：
 
 - 没有阴影——虽然光的位置会改变物体的外观，但物体不会阻挡光或产生阴影。
+
 - 没有反射——你无法拥有反射周围环境的镜子或铬球。
+
 - 没有折射——光穿过透明或半透明材料时不会发生弯曲，因此当你透过水杯观察时，无法获得正确的畸变。
+
 - 性能并非最优——如果你使用 Direct3D 而不是 WPF，可以获得更好的性能。
 
 我怀疑阴影计算最终将图形硬件提供，并流向 Direct3D，最后进入 WPF——但这可能需要一段时间。我怀疑这些其他问题对微软和硬件供应商来说的优先级较低，所以我并不抱太大期望。
@@ -13167,17 +11811,14 @@ MakeSurface 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计�
 你可以查看以下几个地方来了解 WPF 和不同版本 Silverlight 之间的差异：
 
 - Silverlight 概述 — msdn.microsoft.com/library/bb404700(VS.95).aspx
+
 - Windows 和 Macintosh 上的差异 — msdn.microsoft.com/library/cc838247(VS.95).aspx
-
-
-
-
 
 ## 408 | 第 24 章 SILVERLIGHT
 
 由于 Silverlight 旨在在用户的浏览器中运行。
 
-虽然 WPF 和 Silverlight 应用之间存在某些差异，但你所了解的大部分内容适用于 Silverlight。特别是，你可以使用 Expression Blend 或 Visual Studio 使用熟悉的控件来构建用户界面。Silverlight 并没有提供 WPF 的全部控件，但它包含了基础控件，如 Button、TextBox、StackPanel、Grid 等。
+虽然 WPF 和 Silverlight 应用之间存在某些差异，但你所了解的大部分内容适用于 Silverlight。特别是，你可以使用 Expression Blend 或 Visual Studio 使用熟悉的控件来构建用户界面。Silverlight 并没有提供 WPF 的全部控件，但它包含了基础控件，如 `Button`、`TextBox`、`StackPanel`、`Grid` 等。
 
 ## 颜色选择示例
 
@@ -13199,13 +11840,13 @@ MakeSurface 程序没有惊喜。它只是遍历区域中的 X 和 Z 值，计�
 
 图 24-2
 
-图 24-3 显示了新项目。如果你仔细观察，你会发现 Visual Studio 创建了一个名为 MainPage.xaml 的对象。
+图 24-3 显示了新项目。如果你仔细观察，你会发现 Visual Studio 创建了一个名为 `MainPage.xaml` 的对象。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_446_0.png)
 
 图 24-3
 
-Visual Studio 的中间部分显示了一个设计表面，类似于你用于制作 WPF 应用时使用的界面。以下代码显示了 Visual Studio 为新项目的 MainPage.xaml 创建的 XAML 代码。
+Visual Studio 的中间部分显示了一个设计表面，类似于你用于制作 WPF 应用时使用的界面。以下代码显示了 Visual Studio 为新项目的 `MainPage.xaml` 创建的 XAML 代码。
 
 ```
 <UserControl x:Class="SelectColor.MainPage"
@@ -13221,11 +11862,11 @@ xmlns:mc="http://schemas.microsoft.com/openxmlformats/org/markup-compatibility/2
 </UserControl>
 ```
 
-这段代码是新 WPF 项目使用的代码，除了它的顶层对象是 UserControl 而不是 Window。这类应用程序都以 Grid 控件作为顶层对象，用于存放你可能添加的任何控件。
+这段代码是新 WPF 项目使用的代码，除了它的顶层对象是 `UserControl` 而不是 `Window`。这类应用程序都以 `Grid` 控件作为顶层对象，用于存放你可能添加的任何控件。
 
 你可以使用工具箱在设计表面上放置控件，并使用属性窗口设置属性，就像在 WPF 应用中执行的一样。主要区别之一是 WPF 工具箱包含的控件比 Silver 工具箱多。
 
-此示例显示了在 Mozilla Firefox 浏览器中运行的图 24-4 所示的颜色选择工具。当你更改滚动条（ScrollBars）的值时，程序会在右侧的 TextBlocks 中显示它们的新值。它还使用这些值作为颜色的红、绿、蓝组件，并在最右的 Grid 中显示该颜色的样本。
+此示例显示了在 Mozilla Firefox 浏览器中运行的图 24-4 所示的颜色选择工具。当你更改滚动条（ScrollBars）的值时，程序会在右侧的 `TextBlocks` 中显示它们的新值。它还使用这些值作为颜色的红、绿、蓝组件，并在最右的 `Grid` 中显示该颜色的样本。
 
 ## 410 | 第 24 章 SILVERLIGHT
 
@@ -13297,9 +11938,9 @@ Text="{Binding ElementName=scrBlue, Path=Value}"/>
 </Grid>
 ```
 
-如果你观察右侧的 TextBlocks，它们被绑定到相应的滚动条，因此它们会自动更新为选中的值。程序剩下的任务是显示颜色。
+如果你观察右侧的 `TextBlocks`，它们被绑定到相应的滚动条，因此它们会自动更新为选中的值。程序剩下的任务是显示颜色。
 
-要创建此事件处理程序，选择一个滚动条，点击属性按钮，并双击 Scroll 事件。这会打开 Scroll 事件的代码编辑器。以下代码显示了事件如何工作：
+要创建此事件处理程序，选择一个滚动条，点击属性按钮，并双击 `Scroll` 事件。这会打开 `Scroll` 事件的代码编辑器。以下代码显示了事件如何工作：
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_448_0.png)
 
@@ -13324,17 +11965,19 @@ private void scr_Scroll(object sender, System.Windows.EventArgs e)
 
 ## 一个滚动的球
 
-在构建 XAML 并编写后台代码后，只需按 F5 或打开“调试”菜单并选择“开始调试”即可在默认浏览器中启动应用程序。
+在构建 XAML 并编写后台代码后，只需按 `F5` 或打开“调试”菜单并选择“开始调试”即可在默认浏览器中启动应用程序。
 
-图 24-5 所示的 BouncingBalls 示例使用计时器在浏览器中显示多个跳动的球。此示例演示了 Silver 控件与后台代码更紧密结合的代码。
+图 24-5 所示的 `BouncingBalls` 示例使用计时器在浏览器中显示多个跳动的球。此示例演示了 Silver 控件与后台代码更紧密结合的代码。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_449_0.png)
 
 图 24-5
 
-以下 XAML 代码显示了程序如何创建控件。程序简单显示了一个包含 Canvas 的 Border。
+以下 XAML 代码显示了程序如何创建控件。程序简单显示了一个包含 `Canvas` 的 `Border`。
 
-```
+
+
+```xml
 <UserControl x:Class="BouncingBalls.MainPage"
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -13351,13 +11994,11 @@ d:DesignHeight="300" d:DesignWidth="400">
 </UserControl>
 ```
 
-XAML 代码中只有两个有趣的点。首先，Canvas 有一个名称，后台代码可以引用它。其次，Canvas 有一个 SizeChanged 事件处理程序。
+# XAML 代码
 
+XAML 代码中只有两个有趣的点。首先，`Canvas` 有一个名称，后台代码可以引用它。其次，`Canvas` 有一个 `SizeChanged` 事件处理程序。
 
-
-
-
-当 `canField` Canvas 控件调整大同时，会执行以下 `SizeChanged` 事件处理器。这发生在控件首次创建时，以及用户通过调整浏览器大小来调整控件时。
+当 `canField` `Canvas` 控件调整大同时，会执行以下 `SizeChanged` 事件处理器。这发生在控件首次创建时，以及用户通过调整浏览器大小来调整控件时。
 
 ```csharp
 private DateTime LastUpdate;
@@ -13394,9 +12035,9 @@ Clock.Start();
 
 ## 弹跳球
 
-程序声明了类级变量，用于存储球最后更新的时间，以及一个提供 `Tick` 事件的 DispatcherTimer 对象的引用。
+程序声明了类级变量，用于存储球最后更新的时间，以及一个提供 `Tick` 事件的 `DispatcherTimer` 对象的引用。
 
-`SizeChanged` 事件处理器简单地调用了 `GetReady()`。该函数会移除 Canvas 中当前的椭圆（Ellipses）。（尝试注释掉这一步以查看有趣的运行。）
+`SizeChanged` 事件处理器简单地调用了 `GetReady()`。该函数会移除 `Canvas` 中当前的椭圆（Ellipses）。（尝试注释掉这一步以查看有趣的运行。）
 
 接下来，代码使用 `Random` 函数创建了五个 `Ball` 对象，并将它们存储在 `Balls` 列表中。`Ball` 类用于跟踪屏幕上移动的球的尺寸、位置和速度，将在后文中进行描述。
 
@@ -13491,7 +12132,7 @@ Transform.X = x;
 Transform.Y = y;
 ```
 
-`MyShape` 属性持有 `Ball` 所代表的 Silverlight Shape（在本例中为椭圆）的引用。`Transform` 属性持有应用到 Shape 上的 `TranslateTransform` 对象引用。要移动它，`Ball` 会更新此属性。
+`MyShape` 属性持有 `Ball` 所代表的 Silverlight `Shape`（在本例中为椭圆）的引用。`Transform` 属性持有应用到 `Shape` 上的 `TranslateTransform` 对象引用。要移动它，`Ball` 会更新此属性。
 
 `Vx` 和 `Vy` 属性提供了球速度的 X 和 Y 分量，单位为像素/秒。`Bounds` 属性是一个 `Rect`，决定了球允许区域。
 
@@ -13505,15 +12146,15 @@ Transform.Y = y;
 
 在互联网上有许多地方可以获取信息。以下列表描述了一些你在学习 Silverlight 时可能会发现的链接：
 
-- Silverlight 首页 (msdn.microsoft.com/library/ee65672)：此页面提供了指向特定 Silverlight 版本页面的链接。目前包括 Silverlight 4 Beta 和 Silverlight 3。例如，如果 Silverlight 4 的链接失效了，你应该在这里找到最新的 Silverlight 4 信息。
-- Silverlight 4 首页 (mmsdn.microsoft.com/library/cc838158)：指向关于 Silverlight 4 的完整信息。主题包括概述、控件、输入、打印、图形、动画、通信、性能、部署等。
-- Silverlight 3 首页 (msdn.microsoft.com/library/cc83815)：与之前的页面类似，但适用于 Silverlight 3。
-- 开始构建 Silverlight  (silverlight.net/getstarted)：这是 Silverlight 官方的入门网页。它包含了许多有用链接以及 Silverlight 经理 Tim Heuer 编写的逐步教程，他带你通过一个使用 Twitter 搜索的示例。
-- Silverlight 4 Beta — 新功能指南 (timheur.com/blog/archive/2009/11/18/whats-new-in-silverlight-4-complete-guide-new-features.aspx)：Tim Heuer 的一篇长博客文章，描述了 Silverlight 4 的工具、资源和新功能。
+- Silverlight 首页 (`msdn.microsoft.com/library/ee65672`)：此页面提供了指向特定 Silverlight 版本页面的链接。目前包括 Silverlight 4 Beta 和 Silverlight 3。例如，如果 Silverlight 4 的链接失效了，你应该在这里找到最新的 Silverlight 4 信息。
 
+- Silverlight 4 首页 (`mmsdn.microsoft.com/library/cc838158`)：指向关于 Silverlight 4 的完整信息。主题包括概述、控件、输入、打印、图形、动画、通信、性能、部署等。
 
+- Silverlight 3 首页 (`msdn.microsoft.com/library/cc83815`)：与之前的页面类似，但适用于 Silverlight 3。
 
+- 开始构建 Silverlight (`silverlight.net/getstarted`)：这是 Silverlight 官方的入门网页。它包含了许多有用链接以及 Silverlight 经理 Tim Heuer 编写的逐步教程，他带你通过一个使用 Twitter 搜索的示例。
 
+- Silverlight 4 Beta — 新功能指南 (`timheur.com/blog/archive/2009/11/18/whats-new-in-silverlight-4-complete-guide-new-features.aspx`)：Tim Heuer 的一篇长博客文章，描述了 Silverlight 4 的工具、资源和新功能。
 
 ## 通用属性
 
@@ -13523,7 +12164,7 @@ Transform.Y = y;
 
 表 A-1 总结了适用于许多控件的通用属性。注意，并非所有属性都适用于所有控件类型。
 
-表 A-1：通用属性
+### 表 A-1：通用属性
 
 | 属性 | 用途 |
 |---|---|
@@ -13533,7 +12174,7 @@ Transform.Y = y;
 | BorderBrush | 决定控件边框的颜色。注意，在看到边框之前，你必须将 BorderBrush 设置为可见颜色，并将 BorderThickness 设置为大于 0 的值。 |
 | BorderThickness | 决定控件边框的厚度。注意，在看到边框之前，你必须将 BorderBrush 设置为可见颜色，并将 BorderThickness 设置为大于 0 的值。 |
 
-## 表 A-1（继续）
+### 表 A-1（继续）
 
 | 属性 | 用途 |
 | --- | --- |
@@ -13547,8 +12188,6 @@ Transform.Y = y;
 | HorizontalContentAlignment | 决定内容在控件内部如何水平对齐。例如，你可以使用此属性对齐 Label 内部的文本。 |
 | HorizontalScrollVisibility | 决定水平滚动条是否可见。此属性具有 Auto（需要时显示）、Disabled（不显示）、Hidden（不显示）和 Visible（始终显示）值。 |
 | IsEnabled | 决定控件是否响应用户操作。 |
-
-## 通用属性
 
 | 属性 | 用途 |
 | --- | --- |
@@ -13578,329 +12217,161 @@ Transform.Y = y;
 
 表 A-2 总结了字体属性。这些对于显示文本的控件以及可能包含显示文本控件的容器非常有用。特别是，你可以为 Window 设置这些属性，Window 内的所有控件都会使用它们。
 
-表 A-2：字体属性
+### 表 A-2：字体属性
 
 | 属性 | 用途 |
 | --- | --- |
 | FontFamily | 字体族，如 Times New Roman 或 Arial。Microsoft Vista 应用的首选字体是 Segoe（读作 see-go）。 |
 | FontSize | 字体大小，默认为像素。附加 cm、px 或 pt 以指定厘米、英寸、像素（默认）或磅（1/72 英寸），例如 "0.25in" 或 "12pt"。 |
-| FontStyle | 字体的样式。可以是 Normal（正常）、Italic（斜体）或 Oblique（倾斜，对于没有斜体样样的字体模拟斜体）。 |
 
 
 
-
+| `FontStyle` | 字体的样式。可以是 `Normal`（正常）、`Italic`（斜体）或 `Oblique`（倾斜，对于没有斜体样样的字体模拟斜体）。 |
 
 # 表 A-2（续）
 
 | 属性 | 用途 |
 |---|---|
-| FontWeight | 字体的“密度”。它可以是一个数字，或者是 Thin、ExtraLight、Light、Normal、Medium、SemiBold、Bold、ExtraBold、Black 或 ExtraBlack 中的值之一，尽管许多字体在这些许多值上的视觉效果是完全相同的。 |
+| `FontWeight` | 字体的“密度”。它可以是一个数字，或者是 `Thin`、`ExtraLight`、`Light`、`Normal`、`Medium`、`SemiBold`、`Bold`、`ExtraBold`、`Black` 或 `ExtraBlack` 中的值之一，尽管许多字体在这些许多值上的视觉效果是完全相同的。 |
 
 ## 绘图属性 (DRAWING PROPERTIES)
 
 表 A-3 总结了决定图形对象外观的属性。
 
-### 表 A-3: |
+### 表 A-3
 
 | 属性 | 用途 |
 |---|---|
-| Fill | 控件的背景颜色，通常用于圆形（Ellipse）和矩形（Rectangle）等绘制控件 |
-| Stroke | 控件的前景色，通常用于圆形（Ellipse）和矩形（Rectangle）等绘制控件中的线条和曲线 |
-| StrokeDashArray | 这是一个值数组，表示在制作虚线时绘制和跳过的线宽数量 |
-| StrokeDashCap | 虚线段端点使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeDashOffset | 线条从其虚线模式中开始的距离 |
-| StrokeEndLineCap | 线条结尾使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeLineJoin | 用于连接系列段之间拐处的样式，例如在多边形（Polygon）或折线形（Polyline）中。可以是 Bevel（斜角）、Miter（尖角）或 Round（圆角）。 |
-| StrokeMiterLimit | 将进行斜角的最大尺寸。如果角太尖，则该角将变为斜角。 |
-| StrokeStartLineCap | 线条起点使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeThickness | 绘制控件产生的线条和曲线的宽度 |
+| `Fill` | 控件的背景颜色，通常用于圆形（`Ellipse`）和矩形（`Rectangle`）等绘制控件 |
+| `Stroke` | 控件的前景色，通常用于圆形（`Ellipse`）和矩形（`Rectangle`）等绘制控件中的线条和曲线 |
+| `StrokeDashArray` | 这是一个值数组，表示在制作虚线时绘制和跳过的线宽数量 |
+| `StrokeDashCap` | 虚线段端点使用的样式。可以是 `Flat`（平直）、`Round`（圆角）、`Square`（方方形）或 `Triangle`（三角形）。 |
+| `StrokeDashOffset` | 线条从其虚线模式中开始的距离 |
+| `StrokeEndLineCap` | 线条结尾使用的样式。可以是 `Flat`（平直）、`Round`（圆角）、`Square`（方方形）或 `Triangle`（三角形）。 |
+| `StrokeLineJoin` | 用于连接系列段之间拐处的样式，例如在多边形（`Polygon`）或折线形（`Polyline`）中。可以是 `Bevel`（斜角）、`Miter`（尖角）或 `Round`（圆角）。 |
+| `StrokeMiterLimit` | 将进行斜角的最大尺寸。如果角太尖，则该角将变为斜角。 |
+| `StrokeStartLineCap` | 线条起点使用的样式。可以是 `Flat`（平直）、`Round`（圆角）、`Square`（方方形）或 `Triangle`（三角形）。 |
+| `StrokeThickness` | 绘制控件产生的线条和曲线的宽度 |
 
 ## 位图效果属性 (BITMAP EFFECT PROPERTIES)
 
 表 A-4 总结了位图效果属性。
 
-表 A-4: |
+### 表 A-4
+
 | 属性 | 用途 |
 |---|---|
-| BevelBitmapEffect | 给控件添加斜角边缘。 |
-| BlurBitmapEffect | 使控件变得模糊。 |
-| DropShadowBitmapEffect | 在控件后面添加阴影。 |
-| EmbossBitmapEffect | 给控件浮雕外观。 |
-| OuterGlowBitmapEffect | 在控件后面添加发光。 |
+| `BevelBitmapEffect` | 给控件添加斜角边缘。 |
+| `BlurBitmapEffect` | 使控件变得模糊。 |
+| `DropShadowBitmapEffect` | 在控件后面添加阴影。 |
+| `EmbossBitmapEffect` | 给控件浮雕外观。 |
+| `OuterGlowBitmapEffect` | 在控件后面添加发光。 |
 
 ## 网格附加属性 (GRID ATTACHED PROPERTIES)
 
-当你将控件放置在网格（Grid）内部时，可以使用由 Grid 定义的附加属性来确定控件的位置。表 A-5 总结了 Grid 附加属性。
+当你将控件放置在网格（`Grid`）内部时，可以使用由 `Grid` 定义的附加属性来确定控件的位置。表 A-5 总结了 `Grid` 附加属性。
 
-表 A-5: |
+### 表 A-5
+
 | 属性 | 用途 |
 |---|---|
-| Grid.Column | 确定包含控件的列。 |
-| Grid.ColumnSpan | 确定控件跨越的列数。 |
-| Grid.Row | 确定包含控件的行。 |
-| Grid.RowSpan | 确定控件跨越的行数。 |
+| `Grid.Column` | 确定包含控件的列。 |
+| `Grid.ColumnSpan` | 确定控件跨越的列数。 |
+| `Grid.Row` | 确定包含控件的行。 |
+| `Grid.RowSpan` | 确定控件跨越的行数。 |
 
-使用 Grid 的 Grid.ColumnDefinitions 和 Grid.RowDefinitions 属性元素来定义网格的行和列的大小。
+使用 `Grid` 的 `Grid.ColumnDefinitions` 和 `Grid.RowDefinitions` 属性元素来定义网格的行和列的大小。
 
 ## 停靠面板附加属性 (DOCKPANEL ATTACHED PROPERTIES)
 
-当你将控件放置在停靠面板（DockPanel）内部时，可以使用 `DockPanel.Dock` 附加属性来确定控件在 DockPanel 中的位置。该属性可以取 Left（左）、Right（右）、Top（上）和 Bottom（下）值。
+当你将控件放置在停靠面板（`DockPanel`）内部时，可以使用 `DockPanel.Dock` 附加属性来确定控件在 `DockPanel` 中的位置。该属性可以取 `Left`（左）、`Right`（右）、`Top`（上）和 `Bottom`（下）值。
 
-例如，如果你将 Label 的 `DockPanel.Dock` 属性设置为 Left，那么 Label 将填充控件中剩余空间的左侧边缘。
+例如，如果你将 `Label` 的 `DockPanel.Dock` 属性设置为 `Left`，那么 `Label` 将填充控件中剩余空间的左侧边缘。
 
-如果 DockPanel 的 `LastChildFill` 属性为 True——默认情况下是如此——那么控件将使其最后一个子填充任何剩余空间。
+如果 `DockPanel` 的 `LastChildFill` 属性为 `True`——默认情况下是如此——那么控件将使其最后一个子填充任何剩余空间。
 
 ## 画布附加属性 (CANVAS ATTACHED PROPERTIES)
 
-当你将控件放置在画布（Canvas）内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
+当你将控件放置在画布（`Canvas`）内部时，可以使用由 `Canvas` 定义的附加属性来确定控件的位置。表 A-6 总结了 `Canvas` 附加属性。
 
-表 A-6: |
-
-| 属性 | 用途 |
-| --- | --- |
-| Canvas.Bottom | 确定控件底部边缘的位置。 |
-| Canvas.Left | 确定控件左侧边缘的位置。 |
-| Canvas.Right | 确定控件右侧边缘的位置。 |
-| Canvas.Top | 确定控件顶部边缘的位置。 |
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-（由于原文中 Canvas 附加属性部分存在大量重复，此处仅根据翻译逻辑进行处理。）
-
-**抱歉，由于原始文本中 Canvas 附加属性部分存在大量重复内容，导致输出也变得冗长。根据您的“不要重复输出原文”的要求，为您重新提供从 TABLE A-2 到结束的完整逻辑翻译：**
-
-[content]
-# 表 A-2（续）
+### 表 A-6
 
 | 属性 | 用途 |
 |---|---|
-| FontWeight | 字体的“密度”。它可以是一个数字，或者是 Thin、ExtraLight、Light、Normal、Medium、SemiBold、Bold、ExtraBold、Black 或 ExtraBlack 中的值之一，尽管许多字体在这些许多值上的视觉效果是完全相同的。 |
+| `Canvas.Bottom` | 确定控件底部边缘的位置。 |
+| `Canvas.Left` | 确定控件左侧边缘的位置。 |
+| `Canvas.Right` | 确定控件右侧边缘的位置。 |
+| `Canvas.Top` | 确定控件顶部边缘的位置。 |
 
-## 绘图属性 (DRAWING PROPERTIES)
 
-表 A-3 总结了决定图形对象外观的属性。
 
-### 表 A-3:
+例如，如果你将 `Label` 的 `DockPanel.Dock` 属性设置为 `Left`，那么 `Label` 将填充控件中剩余空间的左侧边缘。
 
-| 属性 | 用途 |
-|---|---|
-| Fill | 控件的背景颜色，通常用于圆形（Ellipse）和矩形（Rectangle）等绘制控件 |
-| Stroke | 控件的前景色，通常用于圆形（Ellipse）和矩形（Rectangle）等绘制控件中的线条和曲线 |
-| StrokeDashArray | 这是一个值数组，表示在制作虚线时绘制和跳过的线宽数量 |
-| StrokeDashCap | 虚线段端点使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeDashOffset | 线条从其虚线模式中开始的距离 |
-| StrokeEndLineCap | 线条结尾使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeLineJoin | 用于连接系列段之间拐处的样式，例如在多边形（Polygon）或折线形（Polyline）中。可以是 Bevel（斜角）、Miter（尖角）或 Round（圆角）。 |
-| StrokeMiterLimit | 将进行斜角的最大尺寸。如果角太尖，则该角将变为斜角。 |
-| StrokeStartLineCap | 线条起点使用的样式。可以是 Flat（平直）、Round（圆角）、Square（方方形）或 Triangle（三角形）。 |
-| StrokeThickness | 绘制控件产生的线条和曲线的宽度 |
-
-## 位图效果属性 (BITMAP EFFECT PROPERTIES)
-
-表 A-4 总结了位图效果属性。
-
-表 A-4:
-| 属性 | 用途 |
-|---|---|
-| BevelBitmapEffect | 给控件添加斜角边缘。 |
-| BlurBitmapEffect | 使控件变得模糊。 |
-| DropShadowBitmapEffect | 在控件后面添加阴影。 |
-| EmbossBitmapEffect | 给控件浮雕外观。 |
-| OuterGlowBitmapEffect | 在控件后面添加发光。 |
-
-## 网格附加属性 (GRID ATTACHED PROPERTIES)
-
-当你将控件放置在网格（Grid）内部时，可以使用由 Grid 定义的附加属性来确定控件的位置。表 A-5 总结了 Grid 附加属性。
-
-表 A-5: |
-| 属性 | 用途 |
-|---|---|
-| Grid.Column | 确定包含控件的列。 |
-| Grid.ColumnSpan | 确定控件跨越的列数。 |
-| Grid.Row | 确定包含控件的行。 |
-| Grid.RowSpan | 确定控件跨越的行数。 |
-
-使用 Grid 的 Grid.ColumnDefinitions 和 Grid.RowDefinitions 属性元素来定义网格的行和列的大小。
-
-## 停靠面板附加属性 (DOCKPANEL ATTACHED PROPERTIES)
-
-当你将控件放置在停靠面板（DockPanel）内部时，可以使用 `DockPanel.Dock` 附加属性来确定控件在 DockPanel 中的位置。该属性可以取 Left（左）、Right（右）、Top（上）和 Bottom（下）值。
-
-例如，如果你将 Label 的 `DockPanel.Dock` 属性设置为 Left，那么 Label 将填充控件中剩余空间的左侧边缘。
-
-如果 DockPanel 的 `LastChildFill` 属性为 True——默认情况下是如此——那么控件将使其最后一个子填充任何剩余空间。
+如果 `DockPanel` 的 `LastChildFill` 属性为 `True`——默认情况下是如此——那么控件将使其最后一个子填充任何剩余空间。
 
 ## 画布附加属性 (CANVAS ATTACHED PROPERTIES)
 
-当你将控件放置在画布（Canvas）内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
+当你将控件放置在画布（`Canvas`）内部时，可以使用由 `Canvas` 定义的附加属性来确定控件的位置。表 A-6 总结了 `Canvas` 附加属性。
 
-表 A-6: |
+表 A-6:
 
 | 属性 | 用途 |
 | --- | --- |
-| Canvas.Bottom | 确定控件底部边缘的位置。 |
-| Canvas.Left | 确定控件左侧边缘的位置。 |
-| Canvas.Right | 确定控件右侧边缘的位置。 |
-| Canvas.Top | 确定控件顶部边缘的位置。 |
+| `Canvas.Bottom` | 确定控件底部边缘的位置。 |
+| `Canvas.Left` | 确定控件左侧边缘的位置。 |
+| `Canvas.Right` | 确定控件右侧边缘的位置。 |
+| `Canvas.Top` | 确定控件顶部边缘的位置。 |
 
-当你将控件放置在 Canvas 内部时，可以使用由 Canvas 定义的附加属性来确定控件的位置。表 A-6 总结了 Canvas 附加属性。
-
-（注：原文此处 Canvas 部分存在大量重复，翻译已按要求去重并保留核心内容）
-
-内容控件 (CONTENT CONTLS)
+### 内容控件 (CONTENT CONTLS)
 
 本附录简要概述了用于内容的控件。
 
-边框 (BORDER)
+#### 边框 (BORDER)
 
-Border 绘制控件周围的边框。Border 属性总结了这些内容。Border 的重要属性请见表 B-1。
+`Border` 绘制控件周围的边框。`Border` 属性总结了这些内容。`Border` 的重要属性请见表 B-1。
 
 表 B-1:
+
 | 属性 | 用途 |
 |---|---|
-| Background | 控件的背景颜色 |
-| BorderBrush | 边框的颜色 |
-| BorderThickness | 边框的厚度 |
-| CornerRadius | 角的圆角半径 |
+| `Background` | 控件的背景颜色 |
+| `BorderBrush` | 边框的颜色 |
+| `BorderThickness` | 边框的厚度 |
+| `CornerRadius` | 角的圆角半径 |
 
-网格 (GRID)
+#### 网格 (GRID)
 
-Grid 允许创建网格布局。Grid 的属性总结了这些内容。
+`Grid` 允许创建网格布局。`Grid` 的属性总结了这些内容。
 
 表 B-2:
+
 | 属性 | 用途 |
 |---|---|
-| ColumnDefinitions | 定义列的集合 |
-| RowDefinitions | 定义行的集合 |
+| `ColumnDefinitions` | 定义列的集合 |
+| `RowDefinitions` | 定义行的集合 |
 
-装饰器 (DECORATOR)
+#### 装饰器 (DECORATOR)
 
-BulletDecorator 在文本左侧显示项目符号。BulletDecorator 属性总结了这些装饰内容。
+`BulletDecorator` 在文本左侧显示项目符号。`BulletDecorator` 属性总结了这些装饰内容。
 
 表 B-3:
+
 | 属性 | 用途 |
 |---|---|
-| Bullet | 作为项目符号显示的对象 |
-| Child | 位于装饰器内部的内容 |
-
-
-
+| `Bullet` | 作为项目符号显示的对象 |
+| `Child` | 位于装饰器内部的内容 |
 
 ## 428 | 附录 B 内容
 
-# 表格 B-3 (续)
+### 表格 B-3 (续)
 
 | 对象 | 目的 |
 |---|---|
 | 图形 (Figure) | 在带有周围文本的独立区域显示内容。你可以设置其在流式内容中的对齐方式，它可以跨越多个列。 |
-| 用户界面元素 | 位于 `FlowDocument` 中的文本框（TextBox）、按钮（Button）和其他元素。 |
+| 用户界面元素 | 位于 `FlowDocument` 中的文本框（`TextBox`）、按钮（`Button`）和其他元素。 |
 | 三维对象 | 显示 3D 输出。 |
 
-# FlowDocument 对象示例
+### FlowDocument 对象示例
 
 以下 XML 包含了 `FlowDocument` 中最常见对象的简单示例：
 
@@ -14006,7 +12477,7 @@ BulletDecorator 在文本左侧显示项目符号。BulletDecorator 属性总结
 
 `FlowDocumentViewer` 在页面模式下显示 `FlowDocument`。在这种模式下，它看到单页，并使用属性来决定。
 
-示例 FlowDocumentViewer
+### 示例 FlowDocumentViewer
 
 要使用 `FlowDocumentViewer`，请将 `FlowDocument` 放入其中：
 
@@ -14022,17 +12493,17 @@ BulletDecorator 在文本左侧显示项目符号。BulletDecorator 属性总结
 
 `FlowDocumentReader` 在 `Page`、`Scroll` 或 `TwoPage` 模式下显示 `FlowDocument`。
 
-模式值
+### 模式值
 
 表格 B-4：模式
 
 | 模式 | 含义 |
 | --- | --- |
-| Page | 像页 |
-| Scroll | 滚动 |
-| TwoPage | 像双页 |
+| `Page` | 像页 |
+| `Scroll` | 滚动 |
+| `TwoPage` | 像双页 |
 
-示例 FlowDocumentReader
+### 示例 FlowDocumentReader
 
 要使用 `FlowDocumentReader`，请将 `FlowDocument` 放入其中：
 
@@ -14044,11 +12515,11 @@ BulletDecorator 在文本左侧显示项目符号。BulletDecorator 属性总结
 
 关于 `FlowDocument` 的信息。
 
-# FLOWDOCUMENTSCROLLER
+## FLOWDOCUMENTSCROLLER
 
 `FlowDocumentScrollView` 在滚动模式下显示 `FlowDocument`。在这种模式下，它看到单页，并使用属性来决定。
 
-示例 FlowDocumentScrollView
+### 示例 FlowDocumentScrollView
 
 ```
 <FlowDocumentScrollView Mode="Scroll">
@@ -14066,13 +12537,13 @@ BulletDecorator 在文本左侧显示项目符号。BulletDecorator 属性总结
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | 填充控件的颜色 |
-| BorderBrush | 控件边缘的颜色 |
-| BorderThickness | 控件边缘的厚度 |
-| Foreground | 显示文本的颜色 |
-| Header | 顶部的文本 |
+| `Background` | 填充控件的颜色 |
+| `BorderBrush` | 控件边缘的颜色 |
+| `BorderThickness` | 控件边缘的厚度 |
+| `Foreground` | 显示文本的颜色 |
+| `Header` | 顶部的文本 |
 
-示例 GroupBox 和 "Grid"
+### 示例 GroupBox 和 "Grid"
 
 以下代码定义了一个包含 `Grid` 的简单 `GroupBox`：
 
@@ -14093,10 +12564,10 @@ Header="Customer Address" BorderBrush="Red" Foreground="Blue">
 
 | 属性 | 目的 |
 |---|---|
-| Source | 存储的位置。可以是文件名或绝对路径。 |
-| Stretch | 如何拉伸。可以是 None、Uniform。 |
+| `Source` | 存储的位置。可以是文件名或绝对路径。 |
+| `Stretch` | 如何拉伸。可以是 None、Uniform。 |
 
-示例加载图像
+### 示例加载图像
 
 以下代码创建了两个 `Image`。第一个从项目加载图像。第二个从网络地址加载。
 
@@ -14112,17 +12583,17 @@ Header="Customer Address" BorderBrush="Red" Foreground="Blue">
 表格 B-7：Label 的属性
 
 | 属性 | 目的 |
-| Background | 文本后的颜色 |
-| BorderBrush | 控件边缘的颜色 |
-| BorderThickness | 控件边缘的厚度 |
-| Content | 控件的内容，通常是简单文本 |
-| FontFamily | 字体族名称，如 Times Roman、Arial 或 Segoe（读作 go） |
-| FontSize | 文本的大小。附加 cm、in、px 或 pt 来指定厘米、英寸、像素（默认）或磅（1/72 英寸），例如 "0.25in" 或 "12pt"。 |
-| TextStyle | 可以是 Normal、Italic 或 Oblique（模拟没有斜体的字字体）。 |
-| FontWeight | 文本的粗细。可以是 Thin、ExtraLight、Light、Normal、Medium、SemiBold、Bold、ExtraBold、Black 和 ExtraBlack。 |
-| Foreground | 用于绘制文本的颜色 |
+| `Background` | 文本后的颜色 |
+| `BorderBrush` | 控件边缘的颜色 |
+| `BorderThickness` | 控件边缘的厚度 |
+| `Content` | 控件的内容，通常是简单文本 |
+| `FontFamily` | 字体族名称，如 Times Roman、Arial 或 Segoe（读作 go） |
+| `FontSize` | 文本的大小。附加 cm、in、px 或 pt 来指定厘米、英寸、像素（默认）或磅（1/72 英寸），例如 "0.25in" 或 "12pt"。 |
+| `TextStyle` | 可以是 Normal、Italic 或 Oblique（模拟没有斜体的字字体）。 |
+| `FontWeight` | 文本的粗细。可以是 Thin、ExtraLight、Light、Normal、Medium、SemiBold、Bold、ExtraBold、Black 和 ExtraBlack。 |
+| `Foreground` | 用于绘制文本的颜色 |
 
-示例简单 Label
+### 示例简单 Label
 
 以下代码创建了一个简单的 `Label`：
 
@@ -14138,22 +12609,18 @@ Header="Customer Address" BorderBrush="Red" Foreground="Blue">
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | 文本后的颜色 |
-| BorderBrush | 控件边缘的颜色 |
-| BorderThickness | 控件边缘的厚度 |
+| `Background` | 文本后的颜色 |
+| `BorderBrush` | 控件边缘的颜色 |
+| `BorderThickness` | 控件边缘的厚度 |
 
-
-
-
-
-# 表 B-8（续）
+### 表 B-8（续）
 
 | 属性 | 目的 |
 |---|---|
-| ItemsSource | 用于生成控件内容的集合 |
-| View | 定义数据的显示方式。最常见的视图是 GridView。 |
+| `ItemsSource` | 用于生成控件内容的集合 |
+| `View` | 定义数据的显示方式。最常见的视图是 GridView。 |
 
-# 示例 ListView 绑定
+### 示例 ListView 绑定
 
 以下代码定义了一个显示书籍信息的 ListView：
 
@@ -14176,38 +12643,40 @@ ItemsSource="{Binding}">
 </ListView>
 ```
 
-该控件绑定到在后台代码中创建的 BookInfo 对象的 ObservableCollection。
+该控件绑定到在后台代码中创建的 `BookInfo` 对象的 `ObservableCollection`。
 
-每个 GridView 的 DisplayMemberBinding 属性给出了相应 BookInfo 对象中该列应显示的属性名称。例如，第一列显示 BookInfo 对象的属性。
+每个 `GridView` 的 `DisplayMemberBinding` 属性给出了相应 `BookInfo` 对象中该列应显示的属性名称。例如，第一列显示 `BookInfo` 对象的属性。
 
-请查看第5章中的 ListView 以获取有关此控件的更多信息。
+请查看第5章中的 `ListView` 以获取有关此控件的更多信息。
 
 ## MEDIAELEMENT
 
-MediaElement 显示音频或视频媒体。关于 MediaElement 的更多信息请参见附录 E。
+`MediaElement` 显示音频或视频媒体。关于 `MediaElement` 的更多信息请参见附录 E。
 
 ## POPUP
 
-Popup 在窗口上方显示一个浮动区域。ContextMenu 和 ToolTip 控件显示类似的浮动区域。关键属性参见表 B-9。
+`Popup` 在窗口上方显示一个浮动区域。`ContextMenu` 和 `ToolTip` 控件显示类似的浮动区域。关键属性参见表 B-9。
 
-# 轻松使用 POP-UPS
+### 轻松使用 POP-UPS
 
-如果你需要上下文菜单或提示框，请使用 ContextMenu 或 ToolTip 控件，而不是使用 Popup 构建。没必要让事情变得那么复杂。
+如果你需要上下文菜单或提示框，请使用 `ContextMenu` 或 `ToolTip` 控件，而不是使用 `Popup` 构建。没必要让事情变得那么复杂。
 
-# 表 B-9：
+### 表 B-9：
 
 | 属性 | 目的 |
 | --- | --- |
-| HorizontalOffset | 确定目标与 Popup 原点之间的水平偏移。 |
-| IsOpen | 确定 Popup 是否可见。设置为 True 可在后台代码中打开 Popup。 |
-| Placement | 确定 Popup 相对于 PopupTarget 的定位方式。可以是 Absolute、Relative、Bottom、Center、Right、AbsolutePoint、RelativePoint、Mouse、MousePoint、Left、Top 和 Custom。 |
-| PlacementRectangle | 确定 Popup 所在的区域。 |
-| PlacementTarget | 确定 Popup 相对于哪个控件定位。 |
-| VerticalOffset | 确定目标与 Popup 原点之间的垂直偏移。 |
+| `HorizontalOffset` | 确定目标与 Popup 原点之间的水平偏移。 |
+| `IsOpen` | 确定 Popup 是否可见。设置为 True 可在后台代码中打开 Popup。 |
+| `Placement` | 确定 Popup 相对于 PopupTarget 的定位方式。可以是 Absolute、Relative、Bottom、Center、Right、AbsolutePoint、RelativePoint、Mouse、MousePoint、Left、Top 和 Custom。 |
+| `PlacementRectangle` | 确定 Popup 所在的区域。 |
+| `PlacementTarget` | 确定 Popup 相对于哪个控件定位。 |
+| `VerticalOffset` | 确定目标与 Popup 原点之间的垂直偏移。 |
 
-# 示例 Button 和 Popup
+### 示例 Button 和 Popup
 
-以下代码创建了一个 Button。然后创建了一个出现在按钮右侧 5 像素处的 Popup。该 Popup 包含一个 Label。
+以下代码创建了一个 `Button`。然后创建了一个出现在按钮右侧 5 像素处的 `Popup`。该 `Popup` 包含一个 `Label`。
+
+
 
 ```
 <Button Name="btnClickMe" Content="Click Me" Width="75" Height="30"/>
@@ -14220,9 +12689,9 @@ PlacementTarget="{Binding Element=btnClickMe}">
 </Popup>
 ```
 
-## PROGRESSBAR
+# PROGRESSBAR
 
-ProgressBar 向用户显示进度信息。关键属性参见表 B-10。
+`ProgressBar` 向用户显示进度信息。关键属性参见表 B-10。
 
 | 属性 | 目的 |
 | --- | --- |
@@ -14233,19 +12702,19 @@ ProgressBar 向用户显示进度信息。关键属性参见表 B-10。
 
 ## 定义一个 ProgressBar
 
-以下代码创建了一个简单的 ProgressBar，可以显示 0 到 100 之间的值，并且当前显示值为 60：
+以下代码创建了一个简单的 `ProgressBar`，可以显示 0 到 100 之间的值，并且当前显示值为 60：
 
 ```
 <ProgressBar Height="15" Width="200" Minimum="0" Maximum="100" Value="60"/>
 ```
 
-## SEPARATOR
+# SEPARATOR
 
-Separator 在菜单中显示简单的水平分隔线，或在工具栏中显示垂直分隔线。
+`Separator` 在菜单中显示简单的水平分隔线，或在工具栏中显示垂直分隔线。
 
-# 使用分隔符
+## 使用分隔符
 
-以下代码创建了一个包含 Separator 的菜单（Menu）和工具栏（ToolBar）：
+以下代码创建了一个包含 `Separator` 的菜单（`Menu`）和工具栏（`ToolBar`）：
 
 ```
 <Menu>
@@ -14267,9 +12736,9 @@ Separator 在菜单中显示简单的水平分隔线，或在工具栏中显示�
 </ToolBar>
 ```
 
-## TextBlock
+# TextBlock
 
-TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体文本等额外功能（参见表 B-11）。TextBlock 用于显示几行文本。对于更复杂的文档，请考虑使用 FlowDocument。（参见本附录早前的“FlowDocument”部分。）
+`TextBlock` 像 `Label` 一样显示只读文本，但具有换行、斜体和粗体文本等额外功能（参见表 B-11）。`TextBlock` 用于显示几行文本。对于更复杂的文档，请考虑使用 `FlowDocument`。（参见本附录早前的“FlowDocument”部分。）
 
 你可以使用特殊的内联标签或内联元素来给文本部分赋予特殊样式，如粗体或斜体。例如，以下代码文本以粗体显示文本：
 
@@ -14277,7 +12746,7 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 <TextBlock>A TextBlock can display <Bold>bold</Bold> text.</TextBlock>
 ```
 
-# 表 B-11：TextBlock 的关键属性
+## 表 B-11：TextBlock 的关键属性
 
 | 属性 | 目的 |
 | --- | --- |
@@ -14293,7 +12762,7 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 | TextTrimming | 确定文本如果不适应容器时如何裁剪。可以是 None（文本被截断）、CharacterEllipsis（文本裁剪到最近的字符并跟省略号）或 WordEllipsis（文本裁剪到最近的单词并跟上省略号）。 |
 | TextWrapping | 确定控件是否跨多行。可以是 Wrap、NoWrap 或 WrapWithOverflow |
 
-# 表 B-11（续）
+## 表 B-11（续）
 
 | 属性 | 目的 |
 |---|---|
@@ -14306,37 +12775,41 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 | Span | 分组其他内联元素。Span 可以包含 Bold、Figure、Floater、Hyperlink、InlineUIContainer、Italic、LineBreak、Run、Span 和 Underline。 |
 | Underline | 使包含的文本变为下划线。 |
 
-表 B-12 总结了 TextBlock 支持的最常用内联元素。
+表 B-12 总结了 `TextBlock` 支持的最常用内联元素。
 
 # 示例 带有内联元素的 TextBlock 示例
 
-以下代码创建了一个演示各种内联元素的 TextBlock：
+以下代码创建了一个演示各种内联元素的 `TextBlock`：
 
 ```
 <TextBlock Grid.Row="0" Grid.Column="0" Background="White" HorizontalAlignment="Stretch" TextWrapping="NoWrap" TextAlignment="Left">
 ```
 
-
-
-
-
 这一行长文本包含了<b>粗体文本</b>，<i>斜体文本</i>以及<u>下划线文本</u>。
+
 <LineBreak/>
 
 这里这是一个按钮：
+
 <InlineUIContainer>
+
 <Button Content="点击我"/></n</InlineUIContainer>
+
 你甚至为它提供了一个 Click 事件处理器。
+
 <LineBreak/>
 
 这是一个非常 <Run FontSize="20" FontWeight="Bold">大</Run> 的单词。
+
 <LineBreak/>
 
 此超链接指向 
+
 <Hyperlink NavigateUrl="http://www.vb-helper.com">VB Helper 站点</Hyperlink>
+
 尽管除非你在导航主机或代码后文件中运行它，否则它将无法工作。</TextBlock>
 
-示例程序 UseTextBlock 使用此代码在**图 B-1**中右侧生成 TextBlock。左侧的 TextBlock 显示相同的内容，但其 TextWrapping 属性被设置为 NoWrap。
+示例程序 `UseTextBlock` 使用此代码在**图 B-1**中右侧生成 `TextBlock`。左侧的 `TextBlock` 显示相同的内容，但其 `TextWrapping` 属性被设置为 NoWrap。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_476_0.png)
 
@@ -14344,11 +12817,11 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 
 # TOOLTIP（工具提示）
 
-正如你可能猜到的，ToolTip 显示一个工具提示（参见图 B-13）。通常，直接设置控件的 ToolTip 属性比创建一个 ToolTip 对象要简单。你可能想要将 ToolTip 制作成独立对象的情况，是你想更改它的属性时。
+正如你可能猜到的，`ToolTip` 显示一个工具提示（参见图 B-13）。通常，直接设置控件的 `ToolTip` 属性比创建一个 `ToolTip` 对象要简单。你可能想要将 `ToolTip` 制作成独立对象的情况，是你想更改它的属性时。
 
 # CONSISTENT TIPS（一致性提示）
 
-如果你更改了 ToolTip 的属性，它看起来将与其他应用程序的工具提示不同。虽然这会让你的程序与系统的其余部分的一致性降低，但只要你不过过头（例如，使用 60 磅字体显示工具提示），就不会太太分扰用户。
+如果你更改了 `ToolTip` 的属性，它看起来将与其他应用程序的工具提示不同。虽然这会让你的程序与系统的其余部分的一致性降低，但只要你不过过头（例如，使用 60 磅字体显示工具提示），就不会太太分扰用户。
 
 # 表格 B-13:
 
@@ -14363,9 +12836,9 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 | FontStyle | 可以是 Normal、*Italic* 或 *Oblique*（对于没有斜体样式的字体模拟斜体） |
 | FontWeight | 文本的粗细。这可以是 *Thin*、*ExtraLight*、*Light*、*Normal*、*Medium*、*SemiBold*、*Bold*、*ExtraBold*、*Black* 和 *ExtraBlack*，尽管许多字体对其中许多值看起来是相似的。 |
 
-# 使用 ToolTips 的示例
+## 使用 ToolTips 的示例
 
-以下代码创建了两个 ToolTip。第一个使用元素语法定义 ToolTip 并设置了它所有的属性值。第二个使用更简单的 ToolTip 属性语法并使用默认属性值。
+以下代码创建了两个 `ToolTip`。第一个使用元素语法定义 `ToolTip` 并设置了它所有的属性值。第二个使用更简单的 `ToolTip` 属性语法并使用默认属性值。
 
 ```
 <Button Content="New">
@@ -14383,9 +12856,9 @@ TextBlock 像 Label 一样显示只读文本，但具有换行、斜体和粗体
 
 # TREEVIEW（树形视图）
 
-TreeView 以树状格式显示分级数据，类似于 Windows 资源管理器显示目录结构的方式。它应该包含表示条目的 TreeButtonItem 对象。
+`TreeView` 以树状格式显示分级数据，类似于 Windows 资源管理器显示目录结构的方式。它应该包含表示条目的 `TreeButtonItem` 对象。
 
-请参阅第 18 章获取有关将 TreeView 控件绑定到数据源的信息。TreeView 的关键属性在表 B-14 中。
+请参阅第 18 章获取有关将 `TreeView` 控件绑定到数据源的信息。`TreeView` 的关键属性在表 B-14 中。
 
 # 表格 B-14:
 
@@ -14400,13 +12873,15 @@ TreeView 以树状格式显示分级数据，类似于 Windows 资源管理器�
 | FontWeight | 文本的粗细。可以是 Thin、ExtraLight、Light、Normal、Medium、SemiBold、ExtraBold 和 ExtraBlack，尽管许多字体对于其中许多值看起来是相同的 |
 | Padding | 控件边缘与其内容之间的额外空间 |
 
-TreeButtonItem 提供了与 TreeView 控件相同的关键属性。
+`TreeButtonItem` 提供了与 `TreeView` 控件相同的关键属性。
 
 > ITEM INHERITANCE（项目继承）
-注意，TreeItem 的子项目会继承字体属性。例如，如果你将一个项目加粗，那么树中它的所有后代项目也会被加粗。
 
-使用 TreeView 的示例
-以下代码构建了一个列出大联盟棒球（MLB）球队的 TreeView。美国联盟和国家联盟的两个顶部节点使用属性元素语法，在显示文本外还显示棒球球队。分区和球队项目仅显示文本。代码仅完整显示了前两个分区。为了节省空间，省略了其他球队。
+注意，`TreeItem` 的子项目会继承字体属性。例如，如果你将一个项目加粗，那么树中它的所有后代项目也会被加粗。
+
+## 使用 TreeView 的示例
+
+以下代码构建了一个列出大联盟棒球（MLB）球队的 `TreeView`。美国联盟和国家联盟的两个顶部节点使用属性元素语法，在显示文本外还显示棒球球队。分区和球队项目仅显示文本。代码仅完整显示了前两个分区。为了节省空间，省略了其他球队。
 
 ```
 <TreeView>
@@ -14443,9 +12918,6 @@ TreeButtonItem 提供了与 TreeView 控件相同的关键属性。
 <TreeWidgetItem Header="西部" IsExpanded="True">
 ```
 
-
-
-
 ### 表 C-4：DockPanel 的关键附加属性
 
 | 属性 | 目的 |
@@ -14457,7 +12929,7 @@ TreeButtonItem 提供了与 TreeView 控件相同的关键属性。
 
 ## 使用 Dock示例
 
-以下代码创建了一个包含 Menu（菜单）和 Grid（网格）的 DockPanel。正如通常预期的那样，Menu 靠在 DockPanel 的顶部。Grid 占据 DockPanel 的其余部分，可以包含你想在窗口上显示的任何内容。
+以下代码创建了一个包含 `Menu`（菜单）和 `Grid`（网格）的 `DockPanel`。正如通常预期的那样，`Menu` 靠在 `DockPanel` 的顶部。`Grid` 占据 `DockPanel` 的其余部分，可以包含你想在窗口上显示的任何内容。
 
 ```
 <DockPanel LastChildFill="True">
@@ -14470,9 +12942,9 @@ TreeButtonItem 提供了与 TreeView 控件相同的关键属性。
 </DockPanel>
 ```
 
-## EXPANDER（折叠控件）
+# EXPANDER（折叠控件）
 
-Expander 显示一个标题和一个图标，你可以点击它来显示或隐藏单个子元素。Expander 的关键属性见表 C-5。
+`Expander` 显示一个标题和一个图标，你可以点击它来显示或隐藏单个子元素。`Expander` 的关键属性见表 C-5。
 
 ### 表 C-5：Expander 的关键属性
 
@@ -14496,13 +12968,16 @@ Expander 显示一个标题和一个图标，你可以点击它来显示或隐�
 | Foreground | 用于绘制 Expander Header（标题）的颜色 |
 | Header | 显示在 Expander 顶部、展开/隐藏按钮旁边的文本 |
 | HorizontalContentAlignment | 决定内容在控件内的水平对齐方式。可以是 Center（居中）、Left（左）、Right（右）或 Stretch（拉伸）。 |
-| IsExpanded | 决定控件是否展开以显示其子元素。 |
-| Padding | 在控件边缘与其内容之间添加额外空间 |
-| VerticalContentAlignment | 决定内容在控件内的垂直对齐方式。可以是 Bottom（底部）、Center（居中）、Stretch（拉伸）或 Top（顶部）。 |
+
+
+
+| `IsExpanded` | 决定控件是否展开以显示其子元素。 |
+| `Padding` | 在控件边缘与其内容之间添加额外空间 |
+| `VerticalContentAlignment` | 决定内容在控件内的垂直对齐方式。可以是 `Bottom`（底部）、`Center`（居中）、`Stretch`（拉伸）或 `Top`（顶部）。 |
 
 ## 使用 Expander示例
 
-以下代码创建一个包含 StackPanel 的 Expander。StackPanel 将包含 Expander 可以显示和隐藏的其他控件。
+以下代码创建一个包含 `StackPanel` 的 `Expander`。`StackPanel` 将包含 `Expander` 可以显示和隐藏的其他控件。
 
 ```
 <Expander Header="Details" IsExpanded="True" BorderBrush="Blue">
@@ -14514,30 +12989,30 @@ Expander 显示一个标题和一个图标，你可以点击它来显示或隐�
 
 ## EXPRESSION BLEND示例
 
-Expression Blend 属性选项卡使用 Expander 让你能够显示和隐藏不同的属性组，如画刷（Brushes）、外观（Appearance）、布局（Layout）等。
+Expression Blend 属性选项卡使用 `Expander` 让你能够显示和隐藏不同的属性组，如画刷（Brushes）、外观（Appearance）、布局（Layout）等。
 
 ## GRID
 
-作为强大且实用的布局控件之一，Grid 允许你按行和列排列子元素。Grid 的关键属性见表 C-6。
+作为强大且实用的布局控件之一，`Grid` 允许你按行和列排列子元素。`Grid` 的关键属性见表 C-6。
 
-### 表 C-6：
-
-| 属性 | 目的 |
-| --- | --- |
-| Background | 用于填充控件内部的颜色 |
-| ColumnDefinitions | 此属性元素包含定义列宽的 ColumnDefinition 对象 |
-| RowDefinitions | 此属性元素包含定义行高的 RowDefinition 对象 |
-
-子元素可以使用这些属性来告诉 Grid 如何定位自己。Grid 的关键附加属性见表 C-7。
-
-### 表 C-7：
+### 表 C-6
 
 | 属性 | 目的 |
 | --- | --- |
-| Grid.Column | 包含子元素的列 |
-| Grid.ColumnSpan | 子元素占据的列数 |
-| Grid.Row | 包含子元素的行 |
-| Grid.RowSpan | 子元素占据的行数 |
+| `Background` | 用于填充控件内部的颜色 |
+| `ColumnDefinitions` | 此属性元素包含定义列宽的 `ColumnDefinition` 对象 |
+| `RowDefinitions` | 此属性元素包含定义行高的 `RowDefinition` 对象 |
+
+子元素可以使用这些属性来告诉 `Grid` 如何定位自己。`Grid` 的关键附加属性见表 C-7。
+
+### 表 C-7
+
+| 属性 | 目的 |
+| --- | --- |
+| `Grid.Column` | 包含子元素的列 |
+| `Grid.ColumnSpan` | 子元素占据的列数 |
+| `Grid.Row` | 包含子元素的行 |
+| `Grid.RowSpan` | 子元素占据的行数 |
 
 ## 创建数据网格示例
 
@@ -14560,24 +13035,24 @@ Expression Blend 属性选项卡使用 Expander 让你能够显示和隐藏不�
 
 ### SCROLLVIEWER（滚动器）
 
-ScrollView 在滚动区域内显示单个子元素。ScrollView 的关键属性见表 C-8。
+`ScrollView` 在滚动区域内显示单个子元素。`ScrollView` 的关键属性见表 C-8。
 
 ### 表 C-8：ScrollView 的关键属性
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | 用于填充控件内部的颜色 |
-| HorizontalContentAlignment | 决定内容在控件内的水平对齐方式。可以是 Center、Left、Right 或 Stretch。 |
-| VerticalContentAlignment | 决定内容在控件内的垂直对齐方式。可以是 Bottom、Center、Stretch 或 Top。 |
-| HorizontalVisibility | 决定水平滚动条是否显示。可以是 Auto。 |
-| VerticalVisibility | 决定垂直滚动条是否显示。可以是 Auto。 |
-| Padding | 在控件边缘与其内容之间添加额外空间 |
+| `Background` | 用于填充控件内部的颜色 |
+| `HorizontalContentAlignment` | 决定内容在控件内的水平对齐方式。可以是 `Center`、`Left`、`Right` 或 `Stretch`。 |
+| `VerticalContentAlignment` | 决定内容在控件内的垂直对齐方式。可以是 `Bottom`、`Center`、`Stretch` 或 `Top`。 |
+| `HorizontalVisibility` | 决定水平滚动条是否显示。可以是 `Auto`。 |
+| `VerticalVisibility` | 决定垂直滚动条是否显示。可以是 `Auto`。 |
+| `Padding` | 在控件边缘与其内容之间添加额外空间 |
 
 ### SILLY SCROLLBARS（奇怪的滚动条）
 
-使用 ScrollViewer
+使用 `ScrollViewer`
 
-以下代码创建了一个包含大图片的 ScrollViewer。当窗口足够小时，滚动条会出现。
+以下代码创建了一个包含大图片的 `ScrollViewer`。当窗口足够小时，滚动条会出现。
 
 ```
 <Grid>
@@ -14590,20 +13065,20 @@ ScrollView 在滚动区域内显示单个子元素。ScrollView 的关键属性�
 </Grid>
 ```
 
- STACKPANEL（栈面板）
+## STACKPANEL（栈面板）
 
-StackPanel 是最实用的布局控件之一。它以垂直或水平方式排列子元素。如果控件空间不足，它会裁剪任何子元素。StackPanel 的关键属性见表 C-9。
+`StackPanel` 是最实用的布局控件之一。它以垂直或水平方式排列子元素。如果控件空间不足，它会裁剪任何子元素。`StackPanel` 的关键属性见表 C-9。
 
 ### 表 C-9：StackPanel 的关键属性
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | 用于填充控件内部的颜色 |
-| Orientation | 决定控件是按行（Orientation = Horizontal）还是按列（Orientation = Vertical）排列子元素 |
+| `Background` | 用于填充控件内部的颜色 |
+| `Orientation` | 决定控件是按行（`Orientation = Horizontal`）还是按列（`Orientation = Vertical`）排列子元素 |
 
 ### 使用 StackPanel示例
 
-以下代码创建了按列排列的三个按钮。StackPanel 的 Resource 部分创建了一个未命样式，为按钮提供了一致的 Margin、Width 和 Height 属性。
+以下代码创建了按列排列的三个按钮。`StackPanel` 的 Resource 部分创建了一个未命样式，为按钮提供了一致的 `Margin`、`Width` 和 `Height` 属性。
 
 ```
 <StackPanel>
@@ -14620,25 +13095,21 @@ StackPanel 是最实用的布局控件之一。它以垂直或水平方式排列
 </StackPanel>
 ```
 
- STATUSBAR（状态栏）
+## STATUSBAR（状态栏）
 
-StatusBar 创建了一个区域（通常在窗口底部），你可以在那里向用户状态信息。你可以在 StatusBar 中放置 StatusBarItems、Button、ComboBox 以及其他控件。StatusBar 的关键属性见表 C-10。
+`StatusBar` 创建了一个区域（通常在窗口底部），你可以在那里向用户状态信息。你可以在 `StatusBar` 中放置 `StatusBarItems`、`Button`、`ComboBox` 以及其他控件。`StatusBar` 的关键属性见表 C-10。
 
 ### 表 C-10：StatusBar 的关键属性
 
 | 属性 | 目的 |
 | --- | --- |
-| Background | 填充控件内部的颜色 |
-| BorderBrush | 控件边缘的颜色 |
-| BorderThickness | 控件的厚度 |
+| `Background` | 填充控件内部的颜色 |
+| `BorderBrush` | 控件边缘的颜色 |
+| `BorderThickness` | 控件的厚度 |
 
-你可以将 Label 和 Button 直接放置在 StatusBar 中，但将 StatusBarItems 放置在 StatusBar 内部可以获得更好的效果。在这种情况下，StatusBar 的行为就像一个水平的 StackPanel，会拉伸最后一个子元素以填充可用空间。如果你直接将控件放置在 StatusBar 中，它不会拉伸最后一个控件。
+你可以将 `Label` 和 `Button` 直接放置在 `StatusBar` 中，但将 `StatusBarItems` 放置在 `StatusBar` 内部可以获得更好的效果。在这种情况下，`StatusBar` 的行为就像一个水平的 `StackPanel`，会拉伸最后一个子元素以填充可用空间。如果你直接将控件放置在 `StatusBar` 中，它不会拉伸最后一个控件。
 
-
-
-
-
-以下代码构建了一个 DockPanel，其顶部显示一个 Menu，底部显示一个 StatusBar，中间部分显示一个 Grid：
+以下代码构建了一个 `DockPanel`，其顶部显示一个 `Menu`，底部显示一个 `StatusBar`，中间部分显示一个 `Grid`：
 
 ```xml
 <DockPanel>
@@ -14667,47 +13138,47 @@ StatusBar 创建了一个区域（通常在窗口底部），你可以在那里�
 </DockPanel>
 ```
 
-StatusBar 包含一对带有 Label 的 StatusItems。第三个 StatusItem 设置了 HorizontalAlignment = Right，因此该项被移动到 StatusBar 的右边缘。
+`StatusBar` 包含一对带有 `Label` 的 `StatusItems`。第三个 `StatusItem` 设置了 `HorizontalAlignment = Right`，因此该项被移动到 `StatusBar` 的右边缘。
 
 ## TABCONTROL（选项卡控件）
 
-TabControl 显示了一系列选项卡，你可以在其中放置不同的信息组。该控件应包含一系列 TabItems，每个 TabItem 包含一个项目（通常是一个容器，如 Grid）。TabControl 的属性见表 C-11。
+`TabControl` 显示了一系列选项卡，你可以在其中放置不同的信息组。该控件应包含一系列 `TabItems`，每个 `TabItem` 包含一个项目（通常是一个容器，如 `Grid`）。`TabControl` 的属性见表 C-11。
 
-**表格 C-11：TabControl 的关键属性**
+### 表格 C-11：TabControl 的关键属性
 
 | 属性 | 用途 |
 | --- | --- |
-| Background | 用于填充选项卡内容内部区域的颜色。此颜色不填充头部区域。 |
-| BorderBrush | 选项卡内容边缘的颜色。这不包含头部区域。 |
+| `Background` | 用于填充选项卡内容内部区域的颜色。此颜色不填充头部区域。 |
+| `BorderBrush` | 选项卡内容边缘的颜色。这不包含头部区域。 |
 
 #### 表格 C-11（续）
 
 | 属性 | 用途 |
 |---|---|
-| BorderThickness | 内容区域的边框厚度。这不包含头部区域。 |
-| FlowDirection | 决定选项卡是从右到左还是从左到右排列。 |
-| FontFamily | 字体族名称，如 Times New Roman、Arial 或 Segoe |
-| FontSize | 文本的字体大小。后附加 cm、in、px 或 pt 以指定厘米、英寸（默认值）或磅（1/72 英寸），例如 "0.25inch" 或 "12"。 |
-| FontStyle | 可以是 Normal（正常）、Italic（斜体）或 Oblique（对于没有斜体样式的字体模拟斜体） |
-| FontWeight | 文本的粗细。可以是 Thin、ExtraLight、Light、Normal、Medium、Semibold、Bold、ExtraBold、Black，尽管许多字体在这些值下看起来是相同的。 |
-| Padding | 控件边缘与选项卡内容之间添加的额外空间。不包含头部区域。 |
-| SelectedIndex | 当前选中选项卡的从 0 开始的索引。 |
-| TabStripPlacement | 决定条的位置。可以是 Bottom（底部）、Left（左侧）、Right（右侧）或 Top（顶部）。 |
+| `BorderThickness` | 内容区域的边框厚度。这不包含头部区域。 |
+| `FlowDirection` | 决定选项卡是从右到左还是从左到右排列。 |
+| `FontFamily` | 字体族名称，如 `Times New Roman`、`Arial` 或 `Segoe` |
+| `FontSize` | 文本的字体大小。后附加 `cm`、`in`、`px` 或 `pt` 以指定厘米、英寸（默认值）或磅（1/72 英寸），例如 `"0.25inch"` 或 `"12"`。 |
+| `FontStyle` | 可以是 `Normal`（正常）、`Italic`（斜体）或 `Oblique`（对于没有斜体样式的字体模拟斜体） |
+| `FontWeight` | 文本的粗细。可以是 `Thin`、`ExtraLight`、`Light`、`Normal`、`Medium`、`Semibold`、`Bold`、`ExtraBold`、`Black`，尽管许多字体在这些值下看起来是相同的。 |
+| `Padding` | 控件边缘与选项卡内容之间添加的额外空间。不包含头部区域。 |
+| `SelectedIndex` | 当前选中选项卡的从 0 开始的索引。 |
+| `TabStripPlacement` | 决定条的位置。可以是 `Bottom`（底部）、`Left`（左侧）、`Right`（右侧）或 `Top`（顶部）。 |
 
-表 C-12 总结了放在 TabControl 内部的 Tab 对象最重要的属性。
+表 C-12 总结了放在 `TabControl` 内部的 `Tab` 对象最重要的属性。
 
 ## 表格 C-12：TabItem 对象的关键属性
 
 | 属性 | 用途 |
 |---|---|
-| Foreground | 用于绘制头部文本的颜色 |
-| Header | 标签上显示的内容。通常是纯文本。 |
-| IsSelected | 决定此选项卡当前是否被选中。 |
-| Padding | 头部区域边缘与头部控件之间添加的额外空间 |
+| `Foreground` | 用于绘制头部文本的颜色 |
+| `Header` | 标签上显示的内容。通常是纯文本。 |
+| `IsSelected` | 决定此选项卡当前是否被选中。 |
+| `Padding` | 头部区域边缘与头部控件之间添加的额外空间 |
 
 ## 示例 使用 TabControl
 
-以下代码创建了一个 TabControl，其中包含三个头部分别为 Customers（客户）、Products（产品）和 Employees（员工）的 TabItems：
+以下代码创建了一个 `TabControl`，其中包含三个头部分别为 Customers（客户）、Products（产品）和 Employees（员工）的 `TabItems`：
 
 ```xml
 <TabControl>
@@ -14731,7 +13202,7 @@ TabControl 显示了一系列选项卡，你可以在其中放置不同的信息
 
 ## 示例 使用旋转的 TabControl
 
-以下代码与上一个示例相似，区别在于将选项卡放置在 TabControl 的左侧。代码使用 styTabHeader 样式将头部旋转 -90 度，这样它们就不会占用巨大的空间。
+以下代码与上一个示例相似，区别在于将选项卡放置在 `TabControl` 的左侧。代码使用 `styTabHeader` 样式将头部旋转 -90 度，这样它们就不会占用巨大的空间。
 
 ```xml
 <TabControl StripPlacement="Left">
@@ -14778,29 +13249,29 @@ TabControl 显示了一系列选项卡，你可以在其中放置不同的信息
 
 ## TOOL AND TOOLRAY（工具栏与工具托）
 
-Toolbar 显示了一系列按钮、组合框和其他工具。ToolTray 包含一个或多个带。关键属性见表 C-13。
+`Toolbar` 显示了一系列按钮、组合框和其他工具。`ToolTray` 包含一个或多个带。关键属性见表 C-13。
 
-#### 表格 C-13：
+#### 表格 C-13
 
 | 属性 | 用途 |
 |---|---|
-| Background | 用于填充工具栏内部 |
-| FlowDirection | 决定带是从右到左还是从左到右排列。 |
-| IsLocked | 如果为 True，用户无法移动带。 |
-| Orientation | 决定带的方向 |
+| `Background` | 用于填充工具栏内部 |
+| `FlowDirection` | 决定带是从右到左还是从左到右排列。 |
+| `IsLocked` | 如果为 `True`，用户无法移动带。 |
+| `Orientation` | 决定带的方向 |
 
 #### 表格 C-14：Toolbar 的属性
 
 | 属性 | 用途 |
 |---|---|
-| Background | 用于填充工具栏内部的颜色 |
-| Band | 决定 Toolbar 占据的带 |
-| BorderBrush | 工具栏边缘的颜色 |
-| BorderThickness | 工具栏的厚度 |
+| `Background` | 用于填充工具栏内部的颜色 |
+| `Band` | 决定 `Toolbar` 占据的带 |
+| `BorderBrush` | 工具栏边缘的颜色 |
+| `BorderThickness` | 工具栏的厚度 |
 
 ## 示例 使用 Toolbars
 
-图 C-2 所示工具栏使用以下代码创建一个带有 Toolbar 和 StatusBar 的窗口。Toolbar 包含位于两个带中的三个。
+图 C-2 所示工具栏使用以下代码创建一个带有 `Toolbar` 和 `StatusBar` 的窗口。`Toolbar` 包含位于两个带中的三个。
 
 ```xml
 <DockPane.Dock="Top" Background="LightGray">
@@ -14841,18 +13312,17 @@ Toolbar 显示了一系列按钮、组合框和其他工具。ToolTray 包含一
 
 ## UNIFORMGRID（均匀网格）
 
-UniformGrid 将其子项在均匀大小的行和列中排列。UniformGrid 的关键属性见表 C-15。
+`UniformGrid` 将其子项在均匀大小的行和列中排列。`UniformGrid` 的关键属性见表 C-15。
 
-表格 C-15：
+表格 C-15
 
 | 属性 | 用途 |
+
+
+
 | --- | --- |
 | Background | 用于填充控件内部的颜色 |
 | Columns | 指明网格中的列数。 |
-
-
-
-
 
 # Viewbox | 457
 
@@ -14864,7 +13334,7 @@ UniformGrid 将其子项在均匀大小的行和列中排列。UniformGrid 的�
 
 ## 使用 UniformGrid 的示例
 
-以下代码定义了一个显示此类按钮（Buttons）的 UniformGrid：
+以下代码定义了一个显示此类按钮（`Buttons`）的 `UniformGrid`：
 
 ```
 <UniformGrid Rows="2" Columns="3">
@@ -14877,24 +13347,24 @@ UniformGrid 将其子项在均匀大小的行和列中排列。UniformGrid 的�
 </UniformGrid>
 ```
 
-另见本附录末描述的 WrapPanel 控件。
+另见本附录末描述的 `WrapPanel` 控件。
 
 ## VIEWBOX
 
-Viewbox 根据其 `Stretch` 属性设置为 Fill（填充）、None（无）、Uniform（均匀）或 UniformToFill（均匀填充），以多种方式之一之一拉伸其单个子元素。
+`Viewbox` 根据其 `Stretch` 属性设置为 Fill（填充）、None（无）、Uniform（均匀）或 UniformToFill（均匀填充），以多种方式之一之一拉伸其单个子元素。
 
-通常，你不需要使用 Viewbox 来拉伸图像，因为 Image 控件有自己的 `Stretch` 属性。Viewbox 更适用于拉伸那些通常不会自我拉伸的控件，例如 Labels、Buttons 或包含更多控件的 Grids。Viewbox 的关键属性如表 C-16 所示。
+通常，你不需要使用 `Viewbox` 来拉伸图像，因为 `Image` 控件有自己的 `Stretch` 属性。`Viewbox` 更适用于拉伸那些通常不会自我拉伸的控件，例如 `Labels`、`Buttons` 或包含更多控件的 `Grids`。`Viewbox` 的关键属性如表 C-16 所示。
 
-表 C-16：Viewbox 的关键属性
+表 C-16：`Viewbox` 的关键属性
 
 | 属性 | 目的 |
 | --- | --- |
-| Stretch | 决定控件如何拉伸其内容。可以是 Fill（填充 Viewbox 即使这会导致内容失真）、None（无）、Uniform（在不失真的情况下使内容尽可能大）或 UniformToFill（在不失真的情况下放大内容，直到其填充 Viewbox，即使部分内容会被裁剪）。 |
+| Stretch | 决定控件如何拉伸其内容。可以是 Fill（填充 `Viewbox` 即使这会导致内容失真）、None（无）、Uniform（在不失真的情况下使内容尽可能大）或 UniformToFill（在不失真的情况下放大内容，直到其填充 `Viewbox`，即使部分内容会被裁剪）。 |
 | StretchDirection | 决定控件是否可以放大或缩小其内容，或两者兼有。可以是 Both（放大或缩小）、DownOnly（仅缩小）或 UponOnly（仅放大）。 |
 
 ## 使用 Viewbox 的示例
 
-以下代码创建了一个包含 Grid 的 Viewbox。该 Grid 包含多个 Labels 和 TextBoxes。Viewbox 拉伸 Grid 及其内容以适应空间，可能会挤压或拉伸控件。
+以下代码创建了一个包含 `Grid` 的 `Viewbox`。该 `Grid` 包含多个 `Labels` 和 `TextBoxes`。`Viewbox` 拉伸 `Grid` 及其内容以适应空间，可能会挤压或拉伸控件。
 
 ```
 <Viewbox Stretch="Fill" Margin="10">
@@ -14917,21 +13387,23 @@ Viewbox 根据其 `Stretch` 属性设置为 Fill（填充）、None（无）、U
 
 ## WINDFORMSHOST
 
-WindowsFormsHost 允许将 Windows Forms 控件放在 WPF 应用程序中。
+`WindowsFormsHost` 允许将 Windows Forms 控件放在 WPF 应用程序中。
 
-在使用 WindowsFormsHost 之前，你必须：
+在使用 `WindowsFormsHost` 之前，你必须：
 
-1. 添加 WindowsFormsIntegration 库的引用。
-2. 添加 System.Windows.Forms.dll 库的引用。
+1. 添加 `WindowsFormsIntegration` 库的引用。
+2. 添加 `System.Windows.Forms.dll` 库的引用。
 3. 在 XAML 文件中添加如下命名空间声明：
 
+```
 xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+```
 
 最后一步允许你的 XAML 代码通过前缀 `wf` 来控制 Windows 库中的控件。
 
 # 使用 WindowsFormsHost 的示例
 
-以下代码创建了一个包含 DatePicker 的 WindowsFormsHost：
+以下代码创建了一个包含 `DatePicker` 的 `WindowsFormsHost`：
 
 ```
 <WindowsFormsHost Margin="5" x:Name="wfhtApp">
@@ -14941,13 +13413,14 @@ xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
 </WindowsFormsHost>
 ```
 
-请参第 6 章中的“WindowsFormsHost”节以获取更多细节和更完整的示例。
+请参第 6 章中的“`WindowsFormsHost`”节以获取更多细节和更完整的示例。
 
 ## WRAPPANEL
 
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
+`WrapPanel` 以行或列显示其子元素，需要时换到新行或新列。`WrapPanel` 的关键属性如表 C-17 所示。
 
 ### 表 C-17：WrapPanel 属性
+
 | 属性 | 目的 |
 |---|---|
 | Background | 用于填充控件内部的颜色 |
@@ -14958,7 +13431,7 @@ WrapPanel 以行或列显示其子元素，需要时换到新行或新列。Wrap
 
 ## 使用 WrapPanel 的示例
 
-以下代码创建了一个包含五个按钮的 WrapPanel，按列排列：
+以下代码创建了一个包含五个按钮的 `WrapPanel`，按列排列：
 
 ```
 <WrapPanel Orientation="Vertical">
@@ -14972,123 +13445,7 @@ WrapPanel 以行或列显示其子元素，需要时换到新行或新列。Wrap
 
 ## 用户交互
 
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行。（等待，OCR 文本变得重复/损坏）
-
-用户交互
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行。（等待，OCR 文本变得重复/损坏）
-
-用户交互：
-
-用户交互
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-用户交互：Viewbox 控件根据其 `Stretch` 属性设置为 Fill、None、Uniform 或 UniformToFill，以多种方式之一之一拉伸其单个子元素。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-用户交互：Viewbox 控件根据其 `Stretch` 属性设置为 Fill、None、Uniform 或 UniformToFill，以多种方式之一之一拉伸其单个子元素。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-用户交互：Viewbox 控件根据其 `Stretch` 属性设置为 Fill、None、Uniform 或 UniformToFill，以多种方式之一之一拉伸其单个子元素。
-
-WrapPanel 以行或列显示其子元素，需要时换到新行或新列。WrapPanel 的关键属性如表 C-17 所示。
-
-用户交互：Viewbox 控件根据其 `Stretch` 属性设置为 Fill、None、Uniform 或 UniformToFill，以多种方式之一之一拉伸其单个子元素。
-
-（由于原文中存在大量重复和OCR损坏内容，上述翻译已根据核心逻辑进行了清理并去除了冗余部分）
-
-
-
-
+`WrapPanel` 以行或列显示其子元素，需要时换到新行或新列。`WrapPanel` 的关键属性如表 C-17 所示。
 
 # 464 | 附录 D 用户交互控件
 
@@ -15100,7 +13457,7 @@ WrapPanel 以行或列显示其子元素，需要时换到新行或新列。Wrap
 | DropDownOpened | 当控件打开下拉列表时发生。 |
 | SelectionChanged | 当用户更改选择时发生。 |
 
-ComboBoxItem 对象还提供一些用的事件（见表 D-6）。
+`ComboBoxItem` 对象还提供一些用的事件（见表 D-6）。
 
 ## 表 D-6：ComboBoxItem 对象的关键事件
 
@@ -15129,7 +13486,7 @@ ComboBoxItem 对象还提供一些用的事件（见表 D-6）。
 
 ## 右键菜单 (CONTEXTMENU)
 
-右键菜单显示与另一个控件相关的弹出菜单（见表 D-7）。右键菜单应该包含像其他 MenuItem 一样作用的 MenuItem。
+右键菜单显示与另一个控件相关的弹出菜单（见表 D-7）。右键菜单应该包含像其他 `MenuItem` 一样作用的 `MenuItem`。
 
 ## 表 D-7：ContextMenu 的关键属性
 
@@ -15137,7 +13494,7 @@ ComboBoxItem 对象还提供一些用的事件（见表 D-6）。
 | - | - |
 | IsOpen | 决定右键菜单是否显示。你可以使用此属性通过程序显示菜单。 |
 
-通常，你只需对右键菜单内部 MenuItem 触发的事件做出响应，也可以响应以下事件（见表 D-8）。
+通常，你只需对右键菜单内部 `MenuItem` 触发的事件做出响应，也可以响应以下事件（见表 D-8）。
 
 ## 表 D-8：ContextMenu 的关键事件
 
@@ -15148,9 +13505,11 @@ ComboBoxItem 对象还提供一些用的事件（见表 D-6）。
 
 ## 示例 使用 ContextMenu
 
-以下代码构建了两个带有 ContextMenu 的矩形 (Rectangle)：
+以下代码构建了两个带有 `ContextMenu` 的矩形 (`Rectangle`)：
 
-```
+
+
+```xml
 <StackPanel>
   <StackPanel.Resources>
     <ContextMenu x:Key="ctxColor">
@@ -15173,55 +13532,55 @@ ComboBoxItem 对象还提供一些用的事件（见表 D-6）。
 </StackPanel>
 ```
 
-该代码定义了一个名为 ctxColors 的 ContextMenu 资源，显示 Red、Green 和 Blue 选项。它创建了一个新的矩形，并将矩形的 ContextMenu 属性设置为该资源。
+该代码定义了一个名为 `ctxColors` 的 `ContextMenu` 资源，显示 `Red`、`Green` 和 `Blue` 选项。它创建了一个新的矩形，并将矩形的 `ContextMenu` 属性设置为该资源。
 
-接下来，代码创建了一个橙色矩形。它为新矩形提供了一个 ContextMenu 属性，该属性包含 Orange、Yellow 和 Purple 菜单。
+接下来，代码创建了一个橙色矩形。它为新矩形提供了一个 `ContextMenu` 属性，该属性包含 `Orange`、`Yellow` 和 `Purple` 菜单。
 
 ## 框架 (FRAME)
 
-Frame 显示 Web 或 XAML 内容，并提供导航按钮（见表 D-9 到 D-1）。
+`Frame` 显示 Web 或 XAML 内容，并提供导航按钮（见表 D-9 到 D-1）。
 
-## 表 D-9：
-
-| 属性 (PROPERTY) | 用途 (PURPOSE) |
-| - | - |
-| CanGoBack | 表示控件是否可以在导航历史中向后移动。 |
-| CanGoForward | 表示控件是否可以在导航历史中向前移动。 |
-| Source | Frame 应该显示的网页或 XAML 文件的位置。 |
-
-## 表 D-10：
+### 表 D-9
 
 | 属性 (PROPERTY) | 用途 (PURPOSE) |
 | - | - |
-| GoBack | 如果导航历史中存在记录，则移动到上一个记录。 |
-| GoForward | 如果导航历史中存在记录，则移动到下一个记录。 |
-| Navigate | 移动到新的 Source。 |
-| Refresh | 重新加载当前 Source。 |
+| `CanGoBack` | 表示控件是否可以在导航历史中向后移动。 |
+| `CanGoForward` | 表示控件是否可以在导航历史中向前移动。 |
+| `Source` | `Frame` 应该显示的网页或 XAML 文件的位置。 |
 
-## 表 D-11：
+### 表 D-10
+
+| 属性 (PROPERTY) | 用途 (PURPOSE) |
+| - | - |
+| `GoBack` | 如果导航历史中存在记录，则移动到上一个记录。 |
+| `GoForward` | 如果导航历史中存在记录，则移动到下一个记录。 |
+| `Navigate` | 移动到新的 `Source`。 |
+| `Refresh` | 重新加载当前 `Source`。 |
+
+### 表 D-11
 
 | 事件 (EVENT) | 用途 (PURPOSE) |
 | - | - |
-| Contented | 在 Frame 完成内容显示后发生 |
-| LoadCompleted | 在 Source 加载且开始渲染后发生。 |
-| Loaded | 在 Source 加载并渲染完成，且控件准备好与用户交互后发生。 |
-| Navigated | 当找到内容并可以通过 Content 属性可用但可能尚未显示时发生。 |
-| Navigating | 当控件开始新导航时发生。 |
-| NavigationFailed | 当导航失败时发生。 |
-| NavigationProgress | 在导航期间发生以提供进度。 |
-| NavigationStopped | 因为调用 Frame 的 Loading 方法或开始新导航导致导航停止时。 |
+| `Contented` | 在 `Frame` 完成内容显示后发生 |
+| `LoadCompleted` | 在 `Source` 加载且开始渲染后发生。 |
+| `Loaded` | 在 `Source` 加载并渲染完成，且控件准备好与用户交互后发生。 |
+| `Navigated` | 当找到内容并可以通过 `Content` 属性可用但可能尚未显示时发生。 |
+| `Navigating` | 当控件开始新导航时发生。 |
+| `NavigationFailed` | 当导航失败时发生。 |
+| `NavigationProgress` | 在导航期间发生以提供进度。 |
+| `NavigationStopped` | 因为调用 `Frame` 的 `Loading` 方法或开始新导航导致导航停止时。 |
 
-## 示例 使用 Frame
+### 示例 使用 Frame
 
-以下简单的 XAML 示例创建了一个加载 www.frame.com 的 Frame：
+以下简单的 XAML 示例创建了一个加载 `www.frame.com` 的 `Frame`：
 
 ```xml
 <Frame Source="http://www.frame.com"/>
 ```
 
-## 示例 使用绑定到 ComboBox 的 Frame
+### 示例 使用绑定到 ComboBox 的 Frame
 
-更有趣的 XAML 代码创建一个包含 ComboBox 和 Frame 的 Grid。当您从 ComboBox 选择新条目时，Frame 的 Source 属性绑定到 ComboBox 的 SelectedItem 值，Frame 将显示相应的网页。
+更有趣的 XAML 代码创建一个包含 `ComboBox` 和 `Frame` 的 `Grid`。当您从 `ComboBox` 选择新条目时，`Frame` 的 `Source` 属性绑定到 `ComboBox` 的 `SelectedItem` 值，`Frame` 将显示相应的网页。
 
 ```
 <Grid>
@@ -15242,48 +13601,46 @@ Frame 显示 Web 或 XAML 内容，并提供导航按钮（见表 D-9 到 D-1）
 </Frame>
 ```
 
-以下 C# 代码让名为 fraGo 的 Frame 导航到 http://amazon.com/helper/about：
+以下 C# 代码让名为 `fraGo` 的 `Frame` 导航到 `http://amazon.com/helper/about`：
+
 ```csharp
 fraGo.Navigate(new Uri("http://.."));
+```
 
 ## 网格分割器 (GRIDSPLITTER)
 
-GridSplit 让用户调整 Grid 中相邻的行或列（见表 D-12）。要使用垂直 GridSplit，在 Grid 的第一行添加一个，并设置其 RowSpan 属性使其跨越所有行。接下来，设置其 HorizontalAlignment 属性为 Left 或 Right。这决定了 GridSplit 附在哪一侧。为了创建一个水平 GridSplit，交换 Grid 行和列的角色，使用 GridSplit 的 VerticalAlignment 属性，并将其 Height 设置合理的值。
+`GridSplit` 让用户调整 `Grid` 中相邻的行或列（见表 D-12）。要使用垂直 `GridSplit`，在 `Grid` 的第一行添加一个，并设置其 `RowSpan` 属性使其跨越所有行。接下来，设置其 `HorizontalAlignment` 属性为 `Left` 或 `Right`。这决定了 `GridSplit` 附在哪一侧。为了创建一个水平 `GridSplit`，交换 `Grid` 行和列的角色，使用 `GridSplit` 的 `VerticalAlignment` 属性，并将其 `Height` 设置合理的值。
 
-## 表 D-12：
+### 表 D-12
 
 | 属性 (PROPERTY) | 用途 (PURPOSE) |
 | - | - |
-| Grid.Column | 分割器开始的 Grid 单元。对于水平分割器，设置为 0。 |
-| Grid.ColumnSpan | 对于水平分割器，设置使其跨越所有列。 |
-| Grid.Row | 分割器开始的 Grid 单元。对于垂直分割器，设置为 0。 |
-| Grid.RowSpan | 对于垂直分割器，设置使其跨越所有行。 |
-| HorizontalAlignment | 对于垂直分割器，决定分割器附在列的哪一侧并调整。 |
-| ShowsPreview | 决定在拖动时是调整 Grid 的行或列，还是通过显示移动的 GridSplit 来显示预览。如果 ShowsPreview 为 False，控件调整行或列。如果 ShowsPreview 为 True，控件显示灰色分割器，并在释放鼠标时调整行或列。（如果行或列的内容重绘需要很长时间，预览更高效） |
-| VerticalAlignment | 对于水平分割器，决定分割器附在列的哪一侧并调整。 |
+| `Grid.Column` | 分割器开始的 `Grid` 单元。对于水平分割器，设置为 0。 |
+| `Grid.ColumnSpan` | 对于水平分割器，设置使其跨越所有列。 |
+| `Grid.Row` | 分割器开始的 `Grid` 单元。对于垂直分割器，设置为 0。 |
+| `Grid.RowSpan` | 对于垂直分割器，设置使其跨越所有行。 |
+| `HorizontalAlignment` | 对于垂直分割器，决定分割器附在列的哪一侧并调整。 |
+| `ShowsPreview` | 决定在拖动时是调整 `Grid` 的行或列，还是通过显示移动的 `GridSplit` 来显示预览。如果 `ShowsPreview` 为 `False`，控件调整行或列。如果 `ShowsPreview` 为 `True`，控件显示灰色分割器，并在释放鼠标时调整行或列。（如果行或列的内容重绘需要很长时间，预览更高效） |
+| `VerticalAlignment` | 对于水平分割器，决定分割器附在列的哪一侧并调整。 |
 
-通常 Grid 及其控件在用户拖动 GridSplitter 时可以重新排列，但如果需要，以下事件允许你在拖动期间采取行动（见表 D13）。
+通常 `Grid` 及其控件在用户拖动 `GridSplitter` 时可以重新排列，但如果需要，以下事件允许你在拖动期间采取行动（见表 D13）。
 
-## 表 D-13：
+### 表 D-13
 
 | 事件 (EVENT) | 用途 (PURPOSE) |
 |---|---|
-| DragCompleted | 用户完成拖动控件后发生。 |
-| DragDelta | 用户在拖动期间移动分割器时发生。 |
-| DragStarted | 用户开始拖动控件后发生。 |
+| `DragCompleted` | 用户完成拖动控件后发生。 |
+| `DragDelta` | 用户在拖动期间移动分割器时发生。 |
+| `DragStarted` | 用户开始拖动控件后发生。 |
 
-## 示例 使用 GridSplitter
+### 示例 使用 GridSplitter
 
-以下代码创建了一个三行三列的 Grid。它在中间 Grid 单元格内放置了 GridSplitter。第一个分割器的 HorizontalAlignment 设置为 Left，允许用户调整左侧和中间列。第二个分割器的 HorizontalAlignment 设置为 Right，允许用户调整中间列和右侧列。
+以下代码创建了一个三行三列的 `Grid`。它在中间 `Grid` 单元格内放置了 `GridSplitter`。第一个分割器的 `HorizontalAlignment` 设置为 `Left`，允许用户调整左侧和中间列。第二个分割器的 `HorizontalAlignment` 设置为 `Right`，允许用户调整中间列和右侧列。
 
 ```
 <Grid>
   <Grid.ColumnDefinitions>
 ```
-
-
-
-
 
 # GridSplitter 46
 
@@ -15312,7 +13669,7 @@ Width="5" />
 </Grid>
 ```
 
-以下代码为上一个示例中使用的 Grid 创建了水平的 GridSplitters：
+以下代码为上一个示例中使用的 `Grid` 创建了水平的 `GridSplitters`：
 
 ```xml
 <Grid>
@@ -15344,41 +13701,41 @@ Height="5" />
 
 ## 留出空间
 
-在 Grid 内部放置其他对象时，务必为拆分器留出空间。例如，如果你在第二列的左边缘放置一个 5 像素宽的 GridSplitter，那么该列中的任何其他控件都应该具有至少 5 像素的左边距，以免它们与拆分器重叠。
+在 `Grid` 内部放置其他对象时，务必为拆分器留出空间。例如，如果你在第二列的左边缘放置一个 5 像素宽的 `GridSplitter`，那么该列中的任何其他控件都应该具有至少 5 像素的左边距，以免它们与拆分器重叠。
 
 ## LISTBOX
 
-ListBox 显示项目列表并允许用户选择一个或多个。
+`ListBox` 显示项目列表并允许用户选择一个或多个。
 
-该控件应包含持有选项的 ListBoxItems。SelectedIndex、SelectedItem 和 SelectedValue 属性允许你获取和设置当前选的项目。
+该控件应包含持有选项的 `ListBoxItems`。`SelectedIndex`、`SelectedItem` 和 `SelectedValue` 属性允许你获取和设置当前选的项目。
 
-**表格 D-14**: ListBox的关键属性
+**表格 D-14**: `ListBox` 的关键属性
 
 | 属性 | 用途 |
 | --- | --- |
-| HorizontalContentAlignment | 决定 ListboxItems 的对齐方式。可以是 Center（居中）、Left（左对）、Right（右对）或 Stretch（拉伸）。 |
-| SelectedIndex | 决定当前选中项目的索引。 |
-| SelectedItems | 返回当前选的项目。（如果选中多个项目，无法使用 SelectedIndex、SelectedItem 或选择属性来查看哪些项目被选中。） |
-| SelectionMode | 决定用户可以选择多少项目。可以是 Single（单选，仅限一项）、Multiple（多选，可以通过单独点击选择多个项目）或 Extended（扩展，可以使用 [Shift]+点击和 [Ctrl]+点击选择多个项目）。 |
+| `HorizontalContentAlignment` | 决定 `ListboxItems` 的对齐方式。可以是 `Center`（居中）、`Left`（左对）、`Right`（右对）或 `Stretch`（拉伸）。 |
+| `SelectedIndex` | 决定当前选中项目的索引。 |
+| `SelectedItems` | 返回当前选的项目。（如果选中多个项目，无法使用 `SelectedIndex`、`SelectedItem` 或选择属性来查看哪些项目被选中。） |
+| `SelectionMode` | 决定用户可以选择多少项目。可以是 `Single`（单选，仅限一项）、`Multiple`（多选，可以通过单独点击选择多个项目）或 `Extended`（扩展，可以使用 `[Shift]+点击` 和 `[Ctrl]+点击` 选择多个项目）。 |
 
-**表格 D-15**: ListBox 的关键事件
+**表格 D-15**: `ListBox` 的关键事件
 
 | 事件 | 用途 |
 | --- | --- |
-| SelectionChanged | 当选中项发生变化时触发。 |
+| `SelectionChanged` | 当选中项发生变化时触发。 |
 
-ListBox 内部的 ListBox 对象还提供了一些实用的事件（参见表 D-16）。
+`ListBox` 内部的 `ListBox` 对象还提供了一些实用的事件（参见表 D-16）。
 
-# 表格 D-16:
+### 表格 D-16
 
 | 事件 | 用途 |
 |---|---|
-| Selected | 当项目被选中时触发。 |
-| Unselected | 当项目被取消选中时触发。 |
+| `Selected` | 当项目被选中时触发。 |
+| `Unselected` | 当项目被取消选中时触发。 |
 
-## 使用 ListBox 的示例
+### 使用 ListBox 的示例
 
-以下 XML 代码构建了一个 ListBox，列出太阳系行星名称。它还显示了一个 Label，显示当前选中行星的名称。
+以下 XML 代码构建了一个 `ListBox`，列出太阳系行星名称。它还显示了一个 `Label`，显示当前选中行星的名称。
 
 ```xml
 <StackPanel>
@@ -15399,39 +13756,41 @@ ListBox 内部的 ListBox 对象还提供了一些实用的事件（参见表 D-
 
 ## MENU
 
-Menu 为窗口显示菜单。虽然你可以在 Menu 中放置 Labels、Buttons 和 TextBoxes 等控件，但 Menu 通常包含 MenuItem 对象，这些对象包含窗口的顶层菜单（参见表 D-17 到 D-19）。
+`Menu` 为窗口显示菜单。虽然你可以在 `Menu` 中放置 `Labels`、`Buttons` 和 `TextBoxes` 等控件，但 `Menu` 通常包含 `MenuItem` 对象，这些对象包含窗口的顶层菜单（参见表 D-17 到 D-19）。
 
-MenuItem 的 Header 属性决定了它的显示内容。MenuItem 可以包含其他 MenuItem 以构建菜单层次结构。
+`MenuItem` 的 `Header` 属性决定了它的显示内容。`MenuItem` 可以包含其他 `MenuItem` 以构建菜单层次结构。
 
-# 表格 D-17:
+### 表格 D-17
 
 | 属性 | 用途 |
 |---|---|
-| IsMainMenu | 决定该控件是否为主菜单。如果一个窗口包含多个菜单，所有其他菜单都应将此设置为 False，这样当用户按下 [Alt] 键或 [F10] 时，它们就不会收到通知。 |
+| `IsMainMenu` | 决定该控件是否为主菜单。如果一个窗口包含多个菜单，所有其他菜单都应将此设置为 `False`，这样当用户按下 `[Alt]` 键或 `[F10]` 时，它们就不会收到通知。 |
 
-# 附录 D 用户交互控件
+### 附录 D 用户交互控件
 
-表格 D-18:
+### 表格 D-18
+
 | 属性 | 用途 |
 |---|---|
-| Command | 决定与菜单项相关的命令。 |
-| CommandParameter | 决定传递给 Command 的参数。 |
-| CommandTarget | 决定引发 Command 的对象。 |
-| IsCheckable | 决定菜单项是否可以被勾选。如果为 True，则该项会自动勾选和取消勾选。 |
-| IsChecked | 决定控件当前是否被勾选。 |
-| IsSubOpen | 决定菜单是否打开。 |
+| `Command` | 决定与菜单项相关的命令。 |
+| `CommandParameter` | 决定传递给 `Command` 的参数。 |
+| `CommandTarget` | 决定引发 `Command` 的对象。 |
+| `IsCheckable` | 决定菜单项是否可以被勾选。如果为 `True`，则该项会自动勾选和取消勾选。 |
+| `IsChecked` | 决定控件当前是否被勾选。 |
+| `IsSubOpen` | 决定菜单是否打开。 |
 
-表格 D-19:
+### 表格 D-19
+
 | 事件 | 用途 |
 |---|---|
-| Checked | 当控件被勾选时触发。 |
-| Click | 当控件被点击时触发。 |
-| SubmenuOpened | 当子菜单打开时触发。 |
-| Unchecked | 当控件被取消勾选时触发。 |
+| `Checked` | 当控件被勾选时触发。 |
+| `Click` | 当控件被点击时触发。 |
+| `SubmenuOpened` | 当子菜单打开时触发。 |
+| `Unchecked` | 当控件被取消勾选时触发。 |
 
-## 使用 Menu 的示例
+### 使用 Menu 的示例
 
-以下 XML 代码构建了一个带有若干 MenuItem 的 Menu。
+以下 XML 代码构建了一个带有若干 `MenuItem` 的 `Menu`。
 
 ```xml
 <Menu>
@@ -15446,27 +13805,29 @@ MenuItem 的 Header 属性决定了它的显示内容。MenuItem 可以包含其
 </Menu>
 ```
 
+
+
 ## PASSDBOX
 
-PasswordBox 是一个隐藏文本的文本框，显示点、星号或其他字符（参见表 21）。
+`PasswordBox` 是一个隐藏文本的文本框，显示点、星号或其他字符（参见表 21）。
 
-表格 D-20: PasswordBox 的关键属性
+表格 D-20: `PasswordBox` 的关键属性
 
 | 属性 | 用途 |
 |---|---|
-| Password | 以明文确定当前密码。 |
-| PasswordChar | 决定输入时显示的字符。 |
-| SecurePassword | 以 SecureString 返回当前密码。 |
+| `Password` | 以明文确定当前密码。 |
+| `PasswordChar` | 决定输入时显示的字符。 |
+| `SecurePassword` | 以 `SecureString` 返回当前密码。 |
 
-表格 D-21: PasswordBox 的关键事件
+表格 D-21: `PasswordBox` 的关键事件
 
 | 事件 | 用途 |
 |---|---|
-| PasswordChanged | 当密码变化时触发。 |
+| `PasswordChanged` | 当密码变化时触发。 |
 
 ## 使用 Password 的示例
 
-以下代码创建两个 PasswordBox。第一个使用默认字体和 PasswordChar，因此显示圆圈。第二个使用 Wingdings 字体和 PasswordChar="N"。
+以下代码创建两个 `PasswordBox`。第一个使用默认字体和 `PasswordChar`，因此显示圆圈。第二个使用 `Wingdings` 字体和 `PasswordChar="N"`。
 
 ```xml
 <PasswordBox Password="Secret" />
@@ -15475,90 +13836,84 @@ PasswordBox 是一个隐藏文本的文本框，显示点、星号或其他字�
 
 ## RADIOBUTTON
 
-RadioButton 允许用户从一组互斥选项中选择一个（参见表 D-22）。当用户选择一个 RadioButton 时，同一容器内的其他选项都会取消。（对比 CheckBox，可以同时选择多个。）
+`RadioButton` 允许用户从一组互斥选项中选择一个（参见表 D-22）。当用户选择一个 `RadioButton` 时，同一容器内的其他选项都会取消。（对比 `CheckBox`，可以同时选择多个。）
 
-ComboBox 也允许用户从一系列选择中选择一个，因此你可以考虑使用 ComboBox 而不是 RadioButton，特别是当你节省空间时。
+`ComboBox` 也允许用户从一系列选择中选择一个，因此你可以考虑使用 `ComboBox` 而不是 `RadioButton`，特别是当你节省空间时。
 
-可以通过将它们放在不同的容器中或使用 GroupName 属性创建多个 RadioButton 组。
+可以通过将它们放在不同的容器中或使用 `GroupName` 属性创建多个 `RadioButton` 组。
 
 表格 D-22:
 | 属性 | 用途 |
 |---|---|
-| IsChecked | 决定控件当前是否被选中。 |
-| GroupName | 定义 RadioButton 组。共享非空 GroupName 值的 RadioButton 属于同一组，即使它们位于不同的容器中。 |
-| IsThreeState | 决定控件是否在三个值之间循环——选中（IsChecked = True）、未选中（IsChecked = False）和不确定（IsChecked = null）。 |
+| `IsChecked` | 决定控件当前是否被选中。 |
+| `GroupName` | 定义 `RadioButton` 组。共享非空 `GroupName` 值的 `RadioButton` 属于同一组，即使它们位于不同的容器中。 |
+| `IsThreeState` | 决定控件是否在三个值之间循环——选中（`IsChecked` = True）、未选中（`IsChecked` = False）和不确定（`IsChecked` = null）。 |
 
-只有代码可以将 RadioButton 设置为不确定状态。用户只能选中或取消选中 radioButton。
-当 RadioButton 处于不确定状态时，如果用户选择了组内的另一个 RadioButton，它不会取消选中（参见表 D-23）。
+只有代码可以将 `RadioButton` 设置为不确定状态。用户只能选中或取消选中 `radioButton`。
+当 `RadioButton` 处于不确定状态时，如果用户选择了组内的另一个 `RadioButton`，它不会取消选中（参见表 D-23）。
 
 表格 D-23:
 | 事件 | 用途 |
 |---|---|
-| Checked | 当控件被选中时触发。 |
-| Unchecked | 当控件被取消选中时触发。 |
-| Click | 当控件被选中或取消选中时触发。 |
-
-
-
-
+| `Checked` | 当控件被选中时触发。 |
+| `Unchecked` | 当控件被取消选中时触发。 |
+| `Click` | 当控件被选中或取消选中时触发。 |
 
 ## 使用 RadioButton 的示例
 
-以下代码创建了 GroupBox（分组），允许用户选择 T 恤的颜色、尺寸和设计。每个 GroupBox 包含一个 RadioButton（单选按钮）组。
+以下代码创建了 `GroupBox`（分组），允许用户选择 T 恤的颜色、尺寸和设计。每个 `GroupBox` 包含一个 `RadioButton`（单选按钮）组。
 
 ```xml
 <GroupBox Header="Color">
   <StackPanel>
-  <RadioButton Content="Bisque"/>
-  <RadioButton Content="BlanchedAlmond"/>
-  <RadioButton Content="Teal"/>
-  <RadioButton Content="Thistle"/>
+    <RadioButton Content="Bisque"/>
+    <RadioButton Content="BlanchedAlmond"/>
+    <RadioButton Content="Teal"/>
+    <RadioButton Content="Thistle"/>
   </StackPanel>
 </GroupBox>
 <GroupBox Header="Size">
   <StackPanel>
-  <RadioButton Content="Small"/>
-  <RadioButton Content="Medium"/>
-  <RadioButton Content="Large"/>
+    <RadioButton Content="Small"/>
+    <RadioButton Content="Medium"/>
+    <RadioButton Content="Large"/>
   </StackPanel>
 </GroupBox>
 <GroupBox Header="Design">
   <StackPanel>
-  <RadioButton Content="Smiley"/>
-  <RadioButton Content="Heart"/>
-  <RadioButton Content="VB"/>
-  <RadioButton Content="C#"/>
+    <RadioButton Content="Smiley"/>
+    <RadioButton Content="Heart"/>
+    <RadioButton Content="VB"/>
+    <RadioButton Content="C#"/>
   </StackPanel>
 </GroupBox>
 ```
 
 ## REPEATBUTTON
 
-RepeatButton 的作用类似于普通 Button，但只要用户按住，它就会重复触发其 Click 事件（见表 D-24 和 D-25）。
+`RepeatButton` 的作用类似于普通 `Button`，但只要用户按住，它就会重复触发其 `Click` 事件（见表 D-24 和 D-25）。
 
-表 D-24: RepeatButton 的关键属性
+表 D-24: `RepeatButton` 的关键属性
 
 | PROPERTY | PURPOSE |
 | --- | --- |
-| Delay | 确定按下按钮后开始重复事件之前的间隔时间（毫秒）。 |
-| Interval | 确定重复 Click 事件之间的时间间隔时间（毫秒）。 |
+| `Delay` | 确定按下按钮后开始重复事件之前的间隔时间（毫秒）。 |
+| `Interval` | 确定重复 `Click` 事件之间的时间间隔时间（毫秒）。 |
 
-表 D-25: RepeatButton 的关键事件
+表 D-25: `RepeatButton` 的关键事件
 
 | EVENT | PURPOSE |
 | --- | --- |
-| Click | 当控件首次被按下以及发生重复点击时触发。 |
+| `Click` | 当控件首次被按下以及发生重复点击时触发。 |
 
 ## 使用 RepeatButton 的示例
 
-以下代码创建了一个 Rectangle（矩形）和两个 RepeatButton。btnWider Click 和 btnThinner Click 事件处理器处理按钮的 Click 事件。
+以下代码创建了一个 `Rectangle`（矩形）和两个 `RepeatButton`。`btnWider Click` 和 `btnThinner Click` 事件处理器处理按钮的 `Click` 事件。
 
 ```xml
 <Rectangle Name="rect" Fill="Red" Width="100" Height="100"/>
-<RepeatButton Content="Wider" Delay="250" Interval="50"
-Clicks="btnWider_Click" />
-<RepeatButton Content="Thinner" Delay="250" Interval="50"
-Clicks="btnThinner_Click" />
+<RepeatButton Content="Wider" Delay="250" Interval="50" Clicks="btnWider_Click" />
+<RepeatButton Content="Thinner" Delay="250" Interval="50" Clicks="btnThinner_Click" />
 ```
 
 以下 C# 代码显示了事件处理程序：
@@ -15569,7 +13924,6 @@ private void btnWider_Click(object sender, RoutedEventArgs e)
 {
     rectColor.Width += 10;
 }
-
 // 让矩形变窄
 private void btnThinner_Click(object sender, RoutedEventArgs e)
 {
@@ -15577,85 +13931,84 @@ private void btnThinner_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-当你按下 Wider 按钮时，事件会立即让矩形宽 10 像素。四分之一秒（250 毫秒）后，发生第一次点击，事件处理程序再次加宽矩形。释放鼠标后每隔 50 毫秒，Click 事件就会再次触发，事件处理程序智能地控制控件。
+当你按下 `Wider` 按钮时，事件会立即让矩形宽 10 像素。四分之一秒（250 毫秒）后，发生第一次点击，事件处理程序再次加宽矩形。释放鼠标后每隔 50 毫秒，`Click` 事件就会再次触发，事件处理程序智能地控制控件。
 
-Thinner 按钮的工作原理类似。
+`Thinner` 按钮的工作原理类似。
 
 ## RICHTEXTBOX
 
-RichTextBox 允许用户输入格式化文本（见表 D-26）。在 RichTextBox 内部放置带有格式的 FlowDocument。有关 FlowDocuments 的更多信息，请参阅附录 B 中的“FlowDocument”章节。
+`RichTextBox` 允许用户输入格式化文本（见表 D-26）。在 `RichTextBox` 内部放置带有格式的 `FlowDocument`。有关 `FlowDocuments` 的更多信息，请参阅附录 B 中的“FlowDocument”章节。
 
-表 D-26: RichTextBox 的关键属性
+表 D-26: `RichTextBox` 的关键属性
 
 | PROPERTY | PURPOSE |
 |---|---|
-| AcceptsReturn | 决定控件是否接受 [Return] 回车键并创建新行。 |
-| AcceptsTab | 决定控件是否接受 [Tab] 键或该键是否将焦点移动到另一个控件。 |
-| AutoWordSelection | 决定当用户鼠标拖过单词时，控件是否自动选择整个单词。 |
+| `AcceptsReturn` | 决定控件是否接受 `[Return]` 回车键并创建新行。 |
+| `AcceptsTab` | 决定控件是否接受 `[Tab]` 键或该键是否将焦点移动到另一个控件。 |
+| `AutoWordSelection` | 决定当用户鼠标拖过单词时，控件是否自动选择整个单词。 |
 
-# RichTextBox | 477
+### RichTextBox | 477
 
 | PROPERTY | PURPOSE |
 | --- | --- |
-| CanRedo | 如果控件有可以重做的操作（已撤销的操作），则返回 True。 |
-| CanUndo | 如果控件有可以撤销的操作，则返回 True。 |
-| CaretPosition | 获取或设置当前的插入位置。 |
-| Document | 获取或设置控件显示的 FlowDocument。 |
-| IsReadOnly | 决定控件是否可以与用户交互。 |
-| Selection | 返回一个表示当前选择内容的 Selection 对象。该对象的属性会返回纯文本。 |
-| SpellCheck | 返回一个管理控件拼写检查的 SpellCheck 对象。其 IsEnabled 属性决定控件是否高亮拼写错误的单词。 |
-| SpellCheck.IsEnabled | 启用或禁用拼写检查。 |
-| UndoLimit | 决定存储在撤销队列中的操作数。 |
+| `CanRedo` | 如果控件有可以重做的操作（已撤销的操作），则返回 True。 |
+| `CanUndo` | 如果控件有可以撤销的操作，则返回 True。 |
+| `CaretPosition` | 获取或设置当前的插入位置。 |
+| `Document` | 获取或设置控件显示的 `FlowDocument`。 |
+| `IsReadOnly` | 决定控件是否可以与用户交互。 |
+| `Selection` | 返回一个表示当前选择内容的 `Selection` 对象。该对象的属性会返回纯文本。 |
+| `SpellCheck` | 返回一个管理控件拼写检查的 `SpellCheck` 对象。其 `IsEnabled` 属性决定控件是否高亮拼写错误的单词。 |
+| `SpellCheck.IsEnabled` | 启用或禁用拼写检查。 |
+| `UndoLimit` | 决定存储在撤销队列中的操作数。 |
 
-TextBox 有许多你可能需要使用的重要方法（见表 D-27 和 D-28）。
-
-| METHOD | PURPOSE |
-| --- | --- |
-| AppendText | 在控件内容的末尾添加文本。 |
-| BeginChange | 开始向 DeclareChangeBlock 创建的更改块中添加更改。 |
-| Copy | 将控件的当前选择复制到剪贴板。 |
-| Cut | 将控件的当前选择剪切到剪贴板。 |
-| DeclareChangeBlock | 创建更改块，将随后的更改分组为一个整体，以便进行撤销和重做。 |
-| EndChange | 停止向 DeclareChangeBlock 创建的更改块中添加更改。 |
-| GetNextSpellingError | 返回表示下一个拼写错误位置的 TextPointer。 |
-| GetSpellingError | 为给定点的任何拼写错误返回 SpellingError 对象。 |
-| GetSpellingErrorRange | 为给定点的任何拼写错误返回 TextRange 对象。 |
-
-# 表 D-27（续）
+`TextBox` 有许多你可能需要使用的重要方法（见表 D-27 和 D-28）。
 
 | METHOD | PURPOSE |
 | --- | --- |
-| LineDown | 将控件的内容向下滚动一行。 |
-| LineLeft | 将控件的内容向左滚动一行。 |
-| LineRight | 将控件的内容向右滚动一行。 |
-| LineUp | 将控件的内容向上滚动一行。 |
-| PageDown | 将控件的内容向下滚动一页。 |
-| PageLeft | 将控件的内容向左滚动一页。 |
-| PageRight | 将控件的内容向右滚动一页。 |
-| PageUp | 将控件的内容向上滚动一页。 |
-| Paste | 将剪贴板的内容粘贴到当前选择处。 |
-| Redo | 重做最近一次撤销的操作。 |
-| ScrollToEnd | 滚动到内容的末尾。 |
-| ScrollToHome | 滚动到内容的开头。 |
-| SelectAll | 选择控件的所有内容。 |
-| Undo | 撤销最近执行的操作。 |
+| `AppendText` | 在控件内容的末尾添加文本。 |
+| `BeginChange` | 开始向 `DeclareChangeBlock` 创建的更改块中添加更改。 |
+| `Copy` | 将控件的当前选择复制到剪贴板。 |
+| `Cut` | 将控件的当前选择剪切到剪贴板。 |
+| `DeclareChangeBlock` | 创建更改块，将随后的更改分组为一个整体，以便进行撤销和重做。 |
+| `EndChange` | 停止向 `DeclareChangeBlock` 创建的更改块中添加更改。 |
+| `GetNextSpellingError` | 返回表示下一个拼写错误位置的 `TextPointer`。 |
+| `GetSpellingError` | 为给定点的任何拼写错误返回 `SpellingError` 对象。 |
+| `GetSpellingErrorRange` | 为给定点的任何拼写错误返回 `TextRange` 对象。 |
 
-# 表 D-28:
+### 表 D-27（续）
+
+| METHOD | PURPOSE |
+| --- | --- |
+| `LineDown` | 将控件的内容向下滚动一行。 |
+| `LineLeft` | 将控件的内容向左滚动一行。 |
+| `LineRight` | 将控件的内容向右滚动一行。 |
+| `LineUp` | 将控件的内容向上滚动一行。 |
+| `PageDown` | 将控件的内容向下滚动一页。 |
+| `PageLeft` | 将控件的内容向左滚动一页。 |
+| `PageRight` | 将控件的内容向右滚动一页。 |
+| `PageUp` | 将控件的内容向上滚动一页。 |
+| `Paste` | 将剪贴板的内容粘贴到当前选择处。 |
+| `Redo` | 重做最近一次撤销的操作。 |
+| `ScrollToEnd` | 滚动到内容的末尾。 |
+| `ScrollToHome` | 滚动到内容的开头。 |
+| `SelectAll` | 选择控件的所有内容。 |
+| `Undo` | 撤销最近执行的操作。 |
+
+### 表 D-28:
 
 | EVENT | PURPOSE |
 | --- | --- |
-| Changed | 当内容更改时触发。 |
+| `Changed` | 当内容更改时触发。 |
 
 ## 使用 RichTextBox 的示例
 
-以下代码显示了用户选择字体时 RichTextBox 如何响应。例如，如果用户选择字体，代码会让字体名称显示为 Arial。
+以下代码显示了用户选择字体时 `RichTextBox` 如何响应。例如，如果用户选择字体，代码会让字体名称显示为 Arial。
 
 ```csharp
 // 显示选择的属性。
 private void rchNotes.SelectionChanged(object sender, RoutedEventArgs e)
 {
   if (rchNotes == null) return;
-
   // 字体族。
   FontFamily font_family = rchNotes.Selection.GetPropertyValue(TextElement.FontFamily) as FontFamily;
   if (font_family == null)
@@ -15664,10 +14017,8 @@ private void rchNotes.SelectionChanged(object sender, RoutedEventArgs e)
   } else
     cbo.Text = font_family.Source;
   }
-
   // 字号。
   cbo.Text = rchNotes.Selection.GetPropertyValue(TextElement.FontSize).ToString();
-
   // 颜色。
   SolidColorBrush br = rchNotes.Selection.GetPropertyValue(TextElement.ForegroundProperty) as SolidColorBrush;
   if (br == null)
@@ -15689,11 +14040,7 @@ private void rchNotes.SelectionChanged(object sender, RoutedEventArgs e)
 }
 ```
 
-
-
-
-
-```
+```csharp
 {
   case "#FF000000":
     cboColor.Text = "Black";
@@ -15710,6 +14057,9 @@ private void rchNotes.SelectionChanged(object sender, RoutedEventArgs e)
 }
 ```
 
+
+
+```
 // Weight.
 cboWeight.Text = rchNodes.Selection.GetPropertyValue(
 TextElement.FWeightProperty).ToString();
@@ -15717,78 +14067,79 @@ TextElement.FWeightProperty).ToString();
 // Style.
 cboStyle.Text = rchNodes.Selection.GetPropertyValue(
 TextElement.FFontStyleProperty).ToString();
+```
 
-SimpleRichEditor
+`SimpleRichEditor`
 
-代码首先获取字体族（FontFamily）属性值。它将字体组合框（ComboBox）的文本为空字符串。否则，它将 ComboBox 的文本设置为族名。
+代码首先获取字体族（`FontFamily`）属性值。它将字体组合框（`ComboBox`）的文本为空字符串。否则，它将 `ComboBox` 的文本设置为族名。
 
-接下来，代码获取选内容的字体大小，将其转换为字符串，并在大小 ComboBox 中显示该值。这里有一个技巧：如果当前选包含包含不同字体大小的不同文本，则对 GetPropertyValue 的调用将不会返回大小。相反，它返回一个具有特殊值 UnsetValue 的 NamedObject。对 ToString 的调用返回 "DependencyPropertyValue"，代码尝试让大小 ComboBox 显示该值。由于 ComboBox 不具备该项，因此它不显示任何内容。
+接下来，代码获取选内容的字体大小，将其转换为字符串，并在大小 `ComboBox` 中显示该值。这里有一个技巧：如果当前选包含包含不同字体大小的不同文本，则对 `GetPropertyValue` 的调用将不会返回大小。相反，它返回一个具有特殊值 `UnsetValue` 的 `NamedObject`。对 `ToString` 的调用返回 `"DependencyPropertyValue"`，代码尝试让大小 `ComboBox` 显示该值。由于 `ComboBox` 不具备该项，因此它不显示任何内容。
 
-在获取字体名称和颜色后，代码获取了前景画刷（ForegroundBrush）。Brush 的 ToString 返回一个代表红、绿、蓝分量的十六进制值。代码使用 switch 语句确定它是哪种颜色，并显示相应的的结果。
+在获取字体名称和颜色后，代码获取了前景画刷（`ForegroundBrush`）。`Brush` 的 `ToString` 返回一个代表红、绿、蓝分量的十六进制值。代码使用 `switch` 语句确定它是哪种颜色，并显示相应的的结果。
 
 最后，代码显示选内容的字重和样式属性值。
 
-RichTextBox 中包含的 FlowDocument 可以提供比此简单编辑器演示更多的功能。例如，它提供了列表、浮动元素、图形和其他 RichTextBox 特别不编辑的更高级的功能。要创建和编辑更复杂的文档，你可能应该使用如 Microsoft Word 等其他工具。
+`RichTextBox` 中包含的 `FlowDocument` 可以提供比此简单编辑器演示更多的功能。例如，它提供了列表、浮动元素、图形和其他 `RichTextBox` 特别不编辑的更高级的功能。要创建和编辑更复杂的文档，你可能应该使用如 Microsoft Word 等其他工具。
 
 ## SCROLLBAR（滚动条）
 
-ScrollBar（滚动条）允许用户从一系列值中选择数值（见表 D-29 和 D-30）。通常情况下，程序使用该值来调整某些参数或滚动某些对象（如图像或绘图）。
+`ScrollBar`（滚动条）允许用户从一系列值中选择数值（见表 D-29 和 D-30）。通常情况下，程序使用该值来调整某些参数或滚动某些对象（如图像或绘图）。
 
-> 通常，你可以通过 ScrollViewer 避免使用滚动条来滚动图像等对象。ScrollViewer 会自动提供滚动条并根据需要滚动其内容。
+> 通常，你可以通过 `ScrollViewer` 避免使用滚动条来滚动图像等对象。`ScrollViewer` 会自动提供滚动条并根据需要滚动其内容。
 
 表 D-29:
 
 | 属性 | 目的 |
 | :--- | :--- |
-| LargeChange | 用户点击控件滑块和箭头之间时，Value 的变化量 |
+| LargeChange | 用户点击控件滑块和箭头之间时，`Value` 的变化量 |
 | Maximum | 控件允许的最大值 |
 | Minimum | 控件允许的最小值 |
 | Orientation | 水平或垂直 |
-| SmallChange | 用户点击控件一端的一处箭头时，Value 的变化量 |
+| SmallChange | 用户点击控件一端的一处箭头时，`Value` 的变化量 |
 | Value | 控件的当前值 |
 
 表 D-30:
 
 | 事件 | 目的 |
 | :--- | :--- |
-| Scroll | 当用户更改滚动条的 Value 时发生。 |
-| ValueChanged | 当滚动条的 Value 通过程序更改或因用户更改时发生。 |
+| Scroll | 当用户更改滚动条的 `Value` 时发生。 |
+| ValueChanged | 当滚动条的 `Value` 通过程序更改或因用户更改时发生。 |
 
 ## SLIDER（滑块）
 
-与 ScrollBar 一样，Slider（滑块）允许用户从表 D-31 和 D-32 中的值范围中选择数值。
+与 `ScrollBar` 一样，`Slider`（滑块）允许用户从表 D-31 和 D-32 中的值范围中选择数值。
 
-表 D-31: Slider 的关键属性
+表 D-31: `Slider` 的关键属性
 
 | 属性 | 目的 |
 | :--- | :--- |
-| IsSnapToTickEnabled | 如果为 True，Slider 的滑块将吸附到最近的刻度。 |
-| LargeChange | 用户点击控件滑块和箭头之间时，Value 的变化 |
+| IsSnapToTickEnabled | 如果为 True，`Slider` 的滑块将吸附到最近的刻度。 |
+| LargeChange | 用户点击控件滑块和箭头之间时，`Value` 的变化 |
 | Maximum | 控件允许的最大值 |
 | Minimum | 控件允许的最小值 |
 | Orientation | 水平或垂直 |
 | SelectionEnd | 决定控件当前范围选择的最大值。 |
 | SelectionStart | 决定控件当前范围选择的最小值。 |
-| SmallChange | 用户点击控件一端的一处箭头时，Value 的 |
+| SmallChange | 用户点击控件一端的一处箭头时，`Value` 的 |
 | TickFrequency | 决定刻度之间的距离。 |
-| TickPlacement | 决定刻度的位置。可以是 Both（水平 Slider 的顶部和底部，垂直 Slider 的左侧和右侧）、BottomRight（水平 Slider 的底部，垂直 Slider 的右侧）、None（无）或 TopLeft（水平 Slider 的顶部，垂直 Slider 的左侧）。 |
+| TickPlacement | 决定刻度的位置。可以是 Both（水平 `Slider` 的顶部和底部，垂直 `Slider` 的左侧和右侧）、BottomRight（水平 `Slider` 的底部，垂直 `Slider` 的右侧）、None（无）或 TopLeft（水平 `Slider` 的顶部，垂直 `Slider` 的左侧）。 |
 
-表 D-32: Slider 的关键事件
+表 D-32: `Slider` 的关键事件
 
 | 事件 | 目的 |
 | :--- | :--- |
-| ValueChanged | 当滚动条的 Value 通过程序更改或因用户更改时发生。 |
+| ValueChanged | 当滚动条的 `Value` 通过程序更改或因用户更改时发生。 |
 
 ## TEXTBOX（文本框）
 
-TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 RichTextBox 不同，TextBox 只能显示一种样式（字体、大小、颜色等）的文本。
+`TextBox`（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 `RichTextBox` 不同，`TextBox` 只能显示一种样式（字体、大小、颜色等）的文本。
 
-表 D-33: TextBox 的关键属性
+表 D-33: `TextBox` 的关键属性
 
 | 属性 | 目的 |
 | :--- | :--- |
-| AcceptsReturn | 决定控件是否接受 [Return] 键并换行。 |
-| AcceptsTab | 决定控件是否接受 [Tab] 键，或该键是否将焦点到另一个控件。 |
+| AcceptsReturn | 决定控件是否接受 `[Return]` 键并换行。 |
+| AcceptsTab | 决定控件是否接受 `[Tab]` 键，或该键是否将焦点到另一个控件。 |
 | AutoWordSelection | 决定如果用户拖动鼠标经过条目，控件是否自动选择。 |
 | CanRedo | 如果控件有可以重做的操作，则返回 True。 |
 | CanUndo | 如果控件有可以撤销的操作，则返回 True。 |
@@ -15847,13 +14198,9 @@ TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 R
 | :--- | :--- |
 | TextChanged | 当控件内容发生变化时发生。 |
 
-
-
-
-
 ## MediaElement 控制
 
-本附录总结了 MediaElement 最常用的属性、方法和事件。
+本附录总结了 `MediaElement` 最常用的属性、方法和事件。
 请注意，表 E-1 到 E-3 中显示的许多属性是只读的。
 
 ## 表 E-1：媒体的关键属性
@@ -15869,7 +14216,7 @@ TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 R
 | IsBuffering | 如果控件正在缓冲媒体，则返回 True。 |
 | IsMuted | 如果已静音，则返回 True。 |
 | LoadedBehavior | 确定控件加载时的行为。这可以是 Manual（代码中的 "manually"）、Play（当有有效媒体时播放）、Close（关闭并释放所有内存）、Pause（准备播放然后暂停）或 Stop（准备播放然后停止）。 |
-| NaturalDuration | 返回媒体的自然时长。这可以是 TimeSpan（使用 NaturalDuration.HasTimeSpan）、Automatic 或 Forever。 |
+| NaturalDuration | 返回媒体的自然时长。这可以是 `TimeSpan`（使用 `NaturalDuration.HasTimeSpan`）、Automatic 或 Forever。 |
 | NaturalVideoHeight | 返回视频的高度。 |
 | NaturalVideoWidth | 返回视频的宽度。 |
 | Position | 确定播放位置。 |
@@ -15882,7 +14229,7 @@ TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 R
 
 | 方法 (METHODS) | 用途 (PURPOSE) |
 | --- | --- |
-| Pause | 暂停媒体播放。使用 Play 方法重新播放。 |
+| Pause | 暂停媒体播放。使用 `Play` 方法重新播放。 |
 | Play | 开始媒体播放。 |
 | Stop | 停止媒体播放并将控件重置为从开始播放。 |
 
@@ -15898,7 +14245,7 @@ TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 R
 
 ## 示例 控制媒体
 
-图 E-1 中的 ControlMedia 示例程序使用 MediaElement 播放视频。从左到右的按钮允许你后退 5 秒、播放、暂停、停止 5 秒并向 ListBox 中添加书签。如果你点击书签项，控件将跳转到视频中的该位置。底部的滚动条允许你查看并更改播放位置。
+图 E-1 中的 `ControlMedia` 示例程序使用 `MediaElement` 播放视频。从左到右的按钮允许你后退 5 秒、播放、暂停、停止 5 秒并向 `ListBox` 中添加书签。如果你点击书签项，控件将跳转到视频中的该位置。底部的滚动条允许你查看并更改播放位置。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_526_0.png)
 
@@ -15912,6 +14259,7 @@ TextBox（文本框）允许用户输入文本（见表 D-33 至 D-35）。与 R
 private DispatcherTimer tmrProgress = new DispatcherTimer();
 
 // 准备计时器。
+
 private void WindowLoaded(object sender, RoutedEventArgs e) {
     tmrProgress = new DispatcherTimer();
     tmrProgress.Tick += tmrProgress.Tick;
@@ -15937,10 +14285,12 @@ private void btnForward_Click(object sender, RoutedEventArgs e)
 {
     mmBear.Position = mmBear.Position.Add(new TimeSpan(0, 0, 5));
 }
+
 private void btnBookmark_Click(object sender, RoutedEventArgs e)
 {
     lstBookmarks.Items.Add(mmBear.Position);
 }
+
 // 跳转到此书签。
 private void SelectionChanged(object sender, SelectionEventArgs e)
 {
@@ -15951,11 +14301,13 @@ private void SelectionChanged(object sender, SelectionEventArgs e)
     scrProgress.Value = mmBear.Position.TotalSeconds;
     lstBookmarks.SelectedIndex = -1;
 }
+
 // 显示媒体的进度。
 private void tmProgress_Tick(Object sender, System.EventArgs e)
 {
     scrProgress.Value = mmBear.Position.TotalSeconds;
 }
+
 // 准备进度滚动条。
 private void MediaOpened(System.Object sender, System.Windows.RoutedEventArgs e)
 {
@@ -15969,81 +14321,50 @@ private void MediaOpened(System.Object sender, System.Windows.RoutedEventArgs e)
         scrProgress.Visibility = Visibility.Hidden;
     }
 }
+
 // 转到选定的位置。
 private void scr_Scroll(object sender, System.Windows.Primitives.ScrollEventArgs e)
 {
     mmBear.Position = TimeSpan.FromSeconds(e.NewValue);
 ```
 
+
+
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_527_0.png)
 
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
+当窗口加载时，程序创建一个新的 `DispatcherTimer` 并注册 `tmProgress_Tick` 事件处理器以接收计时器的 `Tick` 事件。
 
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
+程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 `MediaElement` 对应的方法。
 
-书签按钮的事件处理器添加 MediaControl 的位置。
+书签按钮的事件处理器添加 `MediaControl` 的位置。
 
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
+## Pens
 
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
+本附录总结了 `Pens`。`Pen` 定义了线条、路径和边缘的颜色和几何形状。
 
-书签按钮的事件处理器添加 MediaControl 的位置。
-
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
-
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
-
-书签按钮的事件处理器添加 MediaControl 的位置。
-
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
-
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
-
-书签按钮的事件处理器添加 MediaControl 的位置。
-
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
-
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
-
-书签按钮的事件处理器添加 MediaControl 的位置。
-
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
-
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
-
-书签按钮的事件处理器添加 MediaControl 的位置。
-
-当窗口加载时，程序创建一个新的 DispatcherTimer 并注册 tmProgress_Tick 事件处理器以接收计时器的 Tick 事件。
-
-程序的后退、播放、暂停、停止和向前事件处理器是直观的。它们简单地调用了 MediaElement 对应的方法。
-
-Pens
-
-本附录总结了 Pens。Pen 定义了线条、路径和边缘的颜色和几何形状。
-
-通常 通常由 Pen 以外的其他元素提供。例如，Ellipse 定义了边界。
+通常通常由 `Pen` 以外的其他元素提供。例如，`Ellipse` 定义了边界。
 
 ```xml
 <Ellipse Width="200" Height="100"
 ```
 
-表 F-1：Pen的关键属性
+表 F-1：`Pen` 的关键属性
 
 | 属性 (PROPERTY) | 用途 (PURPOSE) |
 | --- | --- |
-| Stroke | 确定 Pen 的画笔。可以是纯色或如 LinearGradientBrush 等元素。 |
-| StrokeDashArray | 确定以画笔宽度为单位的 Pen 模式。例如，3,1 表示“绘制三笔，跳过一笔”。 |
-| StrokeDashCap | 决定每个虚线的端点。可以是 Flat、Round 或 Square。 |
+| Stroke | 确定 `Pen` 的画笔。可以是纯色或如 `LinearGradientBrush` 等元素。 |
+| StrokeDashArray | 确定以画笔宽度为单位的 `Pen` 模式。例如，3,1 表示“绘制三笔，跳过一笔”。 |
+| StrokeDashCap | 决定每个虚线的端点。可以是 `Flat`、`Round` 或 `Square`。 |
 | StrokeDashOffset | 决定第一条虚线的起始偏移。 |
-| StrokeEndLineCap | 决定 Pen 的结束形状。可以是 Flat、Round 或 Square。 |
-| StrokeLineJoin | 决定 Pen 如何绘制转角。可以是 Bevel、Miter 或 Round。 |
-| StrokeMiterLimit | 当两个段像 Polygon 那样连接时，决定角可以有多尖。 |
-| StrokeStartLineCap | 决定 Pen 的起始端形状。可以是 Flat、Round 或 Square。 |
-| StrokeThickness | 决定 Pen 的厚度。 |
+| StrokeEndLineCap | 决定 `Pen` 的结束形状。可以是 `Flat`、`Round` 或 `Square`。 |
+| StrokeLineJoin | 决定 `Pen` 如何绘制转角。可以是 `Bevel`、`Miter` 或 `Round`。 |
+| StrokeMiterLimit | 当两个段像 `Polygon` 那样连接时，决定角可以有多尖。 |
+| StrokeStartLineCap | 决定 `Pen` 的起始端形状。可以是 `Flat`、`Round` 或 `Square`。 |
+| StrokeThickness | 决定 `Pen` 的厚度。 |
 
-## 示例 StrokeMiterLimit
+### 示例 StrokeMiterLimit
 
-图 F-1 中的 StrokeMiterLimit 示例程序使用以下代码绘制其形状。该示例使用包含 RadialGradientBrush 的元素定义 Pen 的 Stroke 属性。它还设置 StrokeMiterLimit 为 3，因为右下角的尖锐角是可见的。
+图 F-1 中的 `StrokeMiterLimit` 示例程序使用以下代码绘制其形状。该示例使用包含 `RadialGradientBrush` 的元素定义 `Pen` 的 `Stroke` 属性。它还设置 `StrokeMiterLimit` 为 3，因为右下角的尖锐角是可见的。
 
 ```xml
 <Polygon Points="100.3,30.2,250.0,30.7,200.5,75,170*" StrokeThickness="20"
@@ -16060,19 +14381,15 @@ Pens
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_531_0.png)
 
-图 F-2 中的 Dashes 示例程序演示了 StrokeStartLineCap、StrokeEndLineCap 和 StrokeDash 值。
+图 F-2 中的 `Dashes` 示例程序演示了 `StrokeStartLineCap`、`StrokeEndLineCap` 和 `StrokeDash` 值。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_531_1.png)
-
-
-
-
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_532_0.png)
 
 # 画笔 (Brushes)
 
-本附录总结了画笔。画笔定义了用于填充区域（如矩形或椭圆）的颜色。画笔还定义了许多控件的前景（Foreground）和背景（Background）属性所使用的颜色。
+本附录总结了画笔。画笔定义了用于填充区域（如矩形或椭圆）的颜色。画笔还定义了许多控件的前景 `Foreground` 和背景 `Background` 属性所使用的颜色。
 
 接下来的章节简要介绍了每种可用画笔类型。后续章节将详细描述每种画笔类型。
 
@@ -16082,14 +14399,14 @@ Pens
 
 | 画笔类名 | 用途 |
 | --- | --- |
-| DrawingBrush | 使用绘制对象（Drawing）填充区域。 |
-| ImageBrush | 使用一个或多个图像副本填充区域。 |
-| LinearGradientBrush | 使用线性方向上两个或多个颜色之间的颜色渐变填充区域。 |
-| RadialGradientBrush | 使用径向的两个或多个颜色之间的颜色渐变填充区域。 |
-| SolidColorBrush | 使用纯色填充区域。 |
-| VisualBrush | 使用视觉对象（visual）填充区域。（广义地说，visual 是一个为 WPF 提供渲染支持的对象。它基本上是可以自己绘制的东西，例如控件。） |
+| `DrawingBrush` | 使用绘制对象 `Drawing` 填充区域。 |
+| `ImageBrush` | 使用一个或多个图像副本填充区域。 |
+| `LinearGradientBrush` | 使用线性方向上两个或多个颜色之间的颜色渐变填充区域。 |
+| `RadialGradientBrush` | 使用径向的两个或多个颜色之间的颜色渐变填充区域。 |
+| `SolidColorBrush` | 使用纯色填充区域。 |
+| `VisualBrush` | 使用视觉对象 `visual` 填充区域。（广义地说，visual 是一个为 WPF 提供渲染支持的对象。它基本上是可以自己绘制的东西，例如控件。） |
 
-图 G-1 所示的 Brushes 示例程序演示了这些画笔。SolidColorBrush 用深灰色填充其椭圆，LinearGradientBrush 从顶部白色到部的渐变，而 RadialGradientBrush 从中间的白色到边缘的黑色渐变。
+图 G-1 所示的 `Brushes` 示例程序演示了这些画笔。`SolidColorBrush` 用深灰色填充其椭圆，`LinearGradientBrush` 从顶部白色到部的渐变，而 `RadialGradientBrush` 从中间的白色到边缘的黑色渐变。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_533_0.png)
 
@@ -16097,39 +14414,39 @@ Pens
 
 # DRAWINGBRUSH (绘制画笔)
 
-DrawingBrush 使用 Drawing 对象填充区域。
+`DrawingBrush` 使用 `Drawing` 对象填充区域。
 
-表 G-2 总结了 DrawingBrush 最重要的属性。
+表 G-2 总结了 `DrawingBrush` 最重要的属性。
 
 表 G-2:
 
 | 属性名 | 用途 |
 | --- | --- |
-| AlignmentX | 当 `Stretch` 属性设置为 None 时，决定画笔的水平对齐方式，使其不拉伸填充区域 |
-| AlignmentY | 当 `Stretch` 属性设置为 None 时，决定画笔的垂直对齐方式，使其不拉伸填充区域 |
+| AlignmentX | 当 `Stretch` 属性设置为 `None` 时，决定画笔的水平对齐方式，使其不拉伸填充区域 |
+| AlignmentY | 当 `Stretch` 属性设置为 `None` 时，决定画笔的垂直对齐方式，使其不拉伸填充区域 |
 | Drawing | 画笔的内容 |
 | Stretch | 决定画笔如何拉伸以填充其瓷砖。可以是 `None`（按原始大小使用）、`Uniform`（将绘制拉伸至瓷砖内尽可能大）、`UniformToFill`（将绘制均匀拉伸以填充瓷砖）以及 `Fill`（如果会扭真绘制，则将其拉伸以填充瓷砖） |
-| TileMode | 决定在需要填充区域时如何重复瓷砖。可以是 `None`（剩余区域不填充）、`Tile`（重复瓷砖）、`FlipX`（在 X 方向上每隔一个瓷砖进行水平翻转）、`FlipY`（在 Y 方向上每隔一个瓷砖垂直翻转）以及 `FlipXY`（同时进行 FlipX 和 FlipY）。这仅在 `Viewport` 小于填充区域时才有效。 |
+| TileMode | 决定在需要填充区域时如何重复瓷砖。可以是 `None`（剩余区域不填充）、`Tile`（重复瓷砖）、`FlipX`（在 X 方向上每隔一个瓷砖进行水平翻转）、`FlipY`（在 Y 方向上每隔一个瓷砖垂直翻转）以及 `FlipXY`（同时进行 `FlipX` 和 `FlipY`）。这仅在 `Viewport` 小于填充区域时才有效。 |
 | Viewbox | 定义用于画笔的内容部分。 |
-| ViewboxUnits | 定义 Viewbox 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（其中 (0, 0) 是左上角，(1, 1) 是右下角）。 |
+| ViewboxUnits | 定义 `Viewbox` 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（其中 (0, 0) 是左上角，(1, 1) 是右下角）。 |
 | Viewport | 定义填充区域中被单个瓷砖覆盖的部分。 |
-| ViewportUnits | 定义 Viewport 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（其中 (0, 0) 是左上角，(1, 1) 是右下角）。 |
+| ViewportUnits | 定义 `Viewport` 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（其中 (0, 0) 是左上角，(1, 1) 是右下角）。 |
 
 # 绘制类型 (Drawing Types)
 
-表 G-3 列出了可以用于创建 DrawingBrush 的各种绘制对象类型。
+表 G-3 列出了可以用于创建 `DrawingBrush` 的各种绘制对象类型。
 
 | 绘制类型 | 用途 |
 | --- | --- |
-| DrawingGroup | 包含其他 Drawing 组。 |
-| GeometryDrawing | 绘制形状。 |
-| GlyphDrawing | 绘制文本。 |
-| ImageDrawing | 绘制图像。 |
-| VideoDrawing | 绘制视频文件。 |
+| `DrawingGroup` | 包含其他 `Drawing` 组。 |
+| `GeometryDrawing` | 绘制形状。 |
+| `GlyphDrawing` | 绘制文本。 |
+| `ImageDrawing` | 绘制图像。 |
+| `VideoDrawing` | 绘制视频文件。 |
 
 > 示例 使用画笔
 
-以下代码展示了图 G-1 中的 Brushes 程序如何创建其 DrawingBrush：
+以下代码展示了图 G-1 中的 `Brushes` 程序如何创建其 `DrawingBrush`：
 
 ```xml
 <Ellipse Grid.Row="0" Grid.Column="0" Stroke="Black">
@@ -16161,43 +14478,39 @@ DrawingBrush 使用 Drawing 对象填充区域。
 </Ellipse>
 ```
 
-该代码启动了一个 Ellipse 对象并在 Ellipse.Fill 元素属性中创建了画笔。画笔使用 `TileMode = Tile`，因此根据需要进行重复。
+该代码启动了一个 `Ellipse` 对象并在 `Ellipse.Fill` 元素属性中创建了画笔。画笔使用 `TileMode = Tile`，因此根据需要进行重复。
 
 属性 `Viewbox = 0,0,1,1` 使画笔使用整个绘制区域作为内容。（默认情况下，`ViewboxUnits = RelativeToBoundingBox`。）
 
 代码设置 `Viewport = 0,0,0.3,0.5` 和 `ViewportUnits = RelativeToBoundingBox`，使瓷砖填充了椭圆面积的三分之一。
 
-
-
-
-
 # LINEARGRADIENTBRUSH (线性渐变画刷)
 
-LinearGradientBrush 使用在方向方向上两种或多种颜色之间的颜色渐变填充区域。
+`LinearGradientBrush` 使用在方向方向上两种或多种颜色之间的颜色渐变填充区域。
 
-表 G-5 总结了 LinearGradientBrush 最重要的属性。
+表 G-5 总结了 `LinearGradientBrush` 最重要的属性。
 
-表格 G-5：LinearGradientBrush 的关键属性
+表格 G-5：`LinearGradientBrush` 的关键属性
 
 | PROPERTY | PURPOSE |
 | --- | --- |
 | EndPoint | 渐变结束的点 |
 | GradientStops | 一组对象集合，用于确定画刷在渐变不同部分的颜色 |
-| MappingMode | 决定如何将 StartPoint 和 Endpoint 映射到画刷上。可以是 Absolute（点坐标单位为像素）或 RelativeToBoundingBox [点 (0, 0) 是画刷的左上角，(1, 1) 是右下角]。 |
+| MappingMode | 决定如何将 `StartPoint` 和 `Endpoint` 映射到画刷上。可以是 `Absolute`（点坐标单位为像素）或 `RelativeToBoundingBox` [点 (0, 0) 是画刷的左上角，(1, 1) 是右下角]。 |
 
-SpreadMethod 决定了当画刷没有完全覆盖某个区域时，如何填充该区域。它可以是 Pad（填充）、Reflect（反射）或 Repeat（重复）。
+`SpreadMethod` 决定了当画刷没有完全覆盖某个区域时，如何填充该区域。它可以是 `Pad`（填充）、`Reflect`（反射）或 `Repeat`（重复）。
 
-StartPoint：渐变开始的点。
+`StartPoint`：渐变开始的点。
 
-图 G-2 所示的 SpreadMethods 示例程序演示了不同的 SpreadMethod 值。
+图 G-2 所示的 `SpreadMethods` 示例程序演示了不同的 `SpreadMethod` 值。
 
-LinearGradientBrush 应该包含一系列 GradientStop 对象，用于定义沿渐变方向的颜色。这些对象的顺序并不重要。
+`LinearGradientBrush` 应该包含一系列 `GradientStop` 对象，用于定义沿渐变方向的颜色。这些对象的顺序并不重要。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_537_0.png)
 
-表 G-6 总结了 GradientStop 对象两个实用的属性。
+表 G-6 总结了 `GradientStop` 对象两个实用的属性。
 
-表格 G-6：GradientStop 的关键属性
+表格 G-6：`GradientStop` 的关键属性
 
 | PROPERTY | PURPOSE |
 | --- | --- |
@@ -16206,7 +14519,7 @@ LinearGradientBrush 应该包含一系列 GradientStop 对象，用于定义沿�
 
 # 示例 使用 LinearGradientBrushes
 
-以下代码显示了图 G-1 所示的 Brushes 程序如何创建其 LinearGradientBrush：
+以下代码显示了图 G-1 所示的 `Brushes` 程序如何创建其 `LinearGradientBrush`：
 
 ```
 <Ellipse Grid.Row="0" Grid.Column="2" Stroke="Black">
@@ -16221,31 +14534,31 @@ LinearGradientBrush 应该包含一系列 GradientStop 对象，用于定义沿�
 
 # RADIALGRADIENTBRUSH (径向渐变画刷)
 
-RadialGradientBrush 使用径向方向上两种或多种颜色之间的颜色渐变填充区域。
+`RadialGradientBrush` 使用径向方向上两种或多种颜色之间的颜色渐变填充区域。
 
-表 G-7 总结了 RadialGradientBrush 最重要的属性。
+表 G-7 总结了 `RadialGradientBrush` 最重要的属性。
 
-# 表格 G-7：RadialGradientBrush 的关键属性
+# 表格 G-7：`RadialGradientBrush` 的关键属性
 
 | PROPERTY | PURPOSE |
-|---|---|---|
+|---|---|
 | Center | 渐变填充的椭圆中心 |
 | GradientOrigin | 渐变开始的点 |
 | GradientStops | 一组对象集合，用于定义画刷在渐变不同部分的颜色 |
-| MappingMode | 决定如何将 StartPoint 和 Endpoint 映射到画刷上。可以是 Absolute（点坐标单位为像素）或 RelativeToBoundingBox[点 (0, 0) 是画刷的左上角，(1, 1) 是右下角]。 |
+| MappingMode | 决定如何将 `StartPoint` 和 `Endpoint` 映射到画刷上。可以是 `Absolute`（点坐标单位为像素）或 `RelativeToBoundingBox`[点 (0, 0) 是画刷的左上角，(1, 1) 是右下角]。 |
 | RadiusX | 渐变填充的外圆的 X 轴半径（半宽） |
 | RadiusY | 渐变填充的外圆的 Y 轴半径（半高） |
-| SpreadMethod | 决定了当画刷没有完全覆盖某个区域时，如何填充该区域。它可以是 Pad（填充）、Reflect（反射）或 Repeat（重复）。 |
+| SpreadMethod | 决定了当画刷没有完全覆盖某个区域时，如何填充该区域。它可以是 `Pad`（填充）、`Reflect`（反射）或 `Repeat`（重复）。 |
 
-渐变从对象的 GradientOrigin 点开始，并向以 Center 为中心的椭圆边缘延伸。
+渐变从对象的 `GradientOrigin` 点开始，并向以 `Center` 为中心的椭圆边缘延伸。
 
 # 502 | 附录 G BRUSHES (画刷)
 
-LinearGradientBrush 应该包含一系列 GradientStop 对象，用于定义沿渐变方向的颜色。这些对象的顺序并不重要。
+`LinearGradientBrush` 应该包含一系列 `GradientStop` 对象，用于定义沿渐变方向的颜色。这些对象的顺序并不重要。
 
-表 G-8 总结了 GradientStop 对象两个实用的属性。
+表 G-8 总结了 `GradientStop` 对象两个实用的属性。
 
-# 表格 G-8：GradientStop 的关键属性
+# 表格 G-8：`GradientStop` 的关键属性
 
 | PROPERTY | PURPOSE |
 | --- | --- |
@@ -16254,30 +14567,38 @@ LinearGradientBrush 应该包含一系列 GradientStop 对象，用于定义沿�
 
 # 示例 使用 Brushes
 
-以下代码显示了图 G-1 所示的 Brushes 程序如何创建其 RadialGradientBrush：
+以下代码显示了图 G-1 所示的 `Brushes` 程序如何创建其 `RadialGradientBrush`：
+```
 
-```
+
+
 <Ellipse Grid="*" Grid.Column="0" Stroke="Black">
+
   <Ellipse.Fill>
+
     <RadialGradientBrush>
+
       <GradientStop Offset="0" Color="White"/>
+
       <GradientStop Offset="1" Color="Black"/>
+
     </RadialGradientBrush>
+
   </Ellipse.Fill>
+
 </Ellipse>
-```
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_539_0.png)
 
-图 G-3 所示的 RadialCenter 示例演示了 RadialGradientBrush 一些复杂的属性。渐变从 GradientOrigin 属性指定的点（左上角）填充到虚圆边缘。RadiusX 和 RadiusY 属性决定虚圆的大小。Center 属性决定该虚圆的中心位置。
+图 G-3 所示的 RadialCenter 示例演示了 `RadialGradientBrush` 一些复杂的属性。渐变从 `GradientOrigin` 属性指定的点（左上角）填充到虚圆边缘。`RadiusX` 和 `RadiusY` 属性决定虚圆的大小。`Center` 属性决定该虚圆的中心位置。
 
-![](img/c9b2d394f4fc2f7e276f6a_539_1.png)
+![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_539_1.png)
 
 # SOLIDCOLORBRUSH (纯色画刷)
 
-SolidColorBrush 只有一个属性：Color。你可以使用元素属性创建 SolidColorBrush，但通常直接使用画刷设置控件的属性更简单。
+`SolidColorBrush` 只有一个属性：`Color`。你可以使用元素属性创建 `SolidColorBrush`，但通常直接使用画刷设置控件的属性更简单。
 
-例如，以下代码创建了两个填充为绿色的椭圆。第一个使用了元素属性，而第二个只是设置了 Ellipse 的 Fill 属性。
+例如，以下代码创建了两个填充为绿色的椭圆。第一个使用了元素属性，而第二个只是设置了 `Ellipse` 的 `Fill` 属性。
 
 ```
 <Ellipse Stroke="Black">
@@ -16293,20 +14614,20 @@ SolidColorBrush 只有一个属性：Color。你可以使用元素属性创建 S
 
 # VISUALBRUSH (视觉画刷)
 
-VisualBrush 使用视觉对象（如控件）填充区域。
+`VisualBrush` 使用视觉对象（如控件）填充区域。
 
-表 G-9 总结了 VisualBrush 最重要的属性。
+表 G-9 总结了 `VisualBrush` 最重要的属性。
 
 表格 G-9：VisualBrush 的关键属性
 
 | PROPERTY | PURPOSE |
 |---|---|
-| AlignmentX | 当 Stretch 属性设置为 None 时，决定画刷的对齐方式以便不拉伸区域。 |
-| AlignmentY | 当 Stretch 属性设置为 None 时，决定画刷的对齐方式以便不拉伸区域。 |
-| Stretch | 决定画刷如何拉伸以填充瓷。可以是 None（按原始尺寸使用）、Uniform（在瓷内均匀拉伸）、UniformToFill（均匀拉伸以填充瓷）以及 Fill（拉伸绘制以填充瓷）。 |
-| Tile | 决定瓷如何重复以填充区域。可以是 None（其余区域留空）、Tile（重复瓷）、FlipX（每隔一个瓷在 X 方向上翻转）、FlipY（每隔一个瓷在 Y 方向上翻转）以及 FlipXY（同时 FlipX 和 FlipY）。如果 Viewport 小于填充区域，则会有效果。 |
+| AlignmentX | 当 `Stretch` 属性设置为 `None` 时，决定画刷的对齐方式以便不拉伸区域。 |
+| AlignmentY | 当 `Stretch` 属性设置为 `None` 时，决定画刷的对齐方式以便不拉伸区域。 |
+| Stretch | 决定画刷如何拉伸以填充瓷。可以是 `None`（按原始尺寸使用）、`Uniform`（在瓷内均匀拉伸）、`UniformToFill`（均匀拉伸以填充瓷）以及 `Fill`（拉伸绘制以填充瓷）。 |
+| Tile | 决定瓷如何重复以填充区域。可以是 `None`（其余区域留空）、`Tile`（重复瓷）、`FlipX`（每隔一个瓷在 X 方向上翻转）、`FlipY`（每隔一个瓷在 Y 方向上翻转）以及 `FlipXY`（同时 `FlipX` 和 `FlipY`）。如果 `Viewport` 小于填充区域，则会有效果。 |
 | Viewbox | 定义用于画刷的内容部分。 |
-| ViewboxUnits | 定义 Viewbox 使用的单位。可以是 Absolute（像素）或 RelativeToBoundingBox（(0, 0) 是左上角，(1, 1) 是右下角）。 |
+| ViewboxUnits | 定义 `Viewbox` 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（`(0, 0)` 是左上角，`(1, 1)` 是右下角）。 |
 | Viewport | 定义填充区域中被瓷覆盖的部分。 |
 
 # 504 | 附录 G BRUSHES (画刷)
@@ -16315,12 +14636,12 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 | PROPERTY | PURPOSE |
 |---|---|
-| ViewportUnits | 定义 Viewport 使用的单位。可以是 Absolute（像素）或 RelativeToBoundingBox（(0, 0) 是左上角，(1, 1) 是右下角）。 |
+| ViewportUnits | 定义 `Viewport` 使用的单位。可以是 `Absolute`（像素）或 `RelativeToBoundingBox`（`(0, 0)` 是左上角，`(1, 1)` 是右下角）。 |
 | Visual | 决定画刷的内容。可以是对现有视觉对象的引用，也可以是新的。 |
 
 # 示例 使用 Brushes
 
-以下代码显示了图 G-1 所示的 Brushes 程序如何创建其 VisualBrush 显示垂直翻转的文本 Normal：
+以下代码显示了图 G-1 所示的 Brushes 程序如何创建其 `VisualBrush` 显示垂直翻转的文本 Normal：
 
 ```
 <Ellipse Grid.Row="0" Grid.Column="2" Stroke="Black">
@@ -16336,9 +14657,9 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 </Ellipse>
 ```
 
-画刷的 Visual 属性是一个元素属性，它定义了一个包含画刷内容的新 Label。
+画刷的 `Visual` 属性是一个元素属性，它定义了一个包含画刷内容的新 `Label`。
 
-图 G-4 所示的 Reflections 示例程序演示了一个使用现有视觉对象的 VisualBrush。在顶部，它显示了一个包含 TextBox、Image 和 Button 的水平 StackPanel。在底部，它绘制了一个填充了 StackPanel 反射图像的矩形。视觉甚至会在运行时更新，因此如果你在 TextBox 中输入内容，反射会立即更新以匹配。
+图 G-4 所示的 Reflections 示例程序演示了一个使用现有视觉对象的 `VisualBrush`。在顶部，它显示了一个包含 `TextBox`、`Image` 和 `Button` 的水平 `StackPanel`。在底部，它绘制了一个填充了 `StackPanel` 反射图像的矩形。视觉甚至会在运行时更新，因此如果你在 `TextBox` 中输入内容，反射会立即更新以匹配。
 
 ```
 <StackPanel Margin="10">
@@ -16353,8 +14674,6 @@ VisualBrush 使用视觉对象（如控件）填充区域。
   </TextBox>
 </StackPanel>
 ```
-
-
 
 ```xml
 </TextBox>
@@ -16377,31 +14696,31 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 </StackPanel>
 ```
 
-程序的半部分非常直观，创建了第一个 StackPanel 及其对应的 TextBox、Image 和 Button。
+程序的半部分非常直观，创建了第一个 `StackPanel` 及其对应的 `TextBox`、`Image` 和 `Button`。
 
-代码的后半部分创建了一个由 VisualBrush 填充的 Rectangle。注意画刷（Brush）的 Visual 属性引用了之前定义的 StackPanel。
+代码的后半部分创建了一个由 `VisualBrush` 填充的 `Rectangle`。注意画刷（Brush）的 `Visual` 属性引用了之前定义的 `StackPanel`。
 
-画刷的 RelativeTransform 属性通过将 Y 坐标乘以因子 -1，实现了画刷的垂直方向反射。
+画刷的 `RelativeTransform` 属性通过将 Y 坐标乘以因子 `-1`，实现了画刷的垂直方向反射。
 
 ## 反映回顾（REFLECTION REVIEWED）
 
-反射实际上将结果移动到了 X 轴下方，因此默认视口（0, 0）不包含任何图像。画刷的 TileMode 属性设置为 Tile，这样画刷根据需要重复其图像并正确填充 Rectangle。
+反射实际上将结果移动到了 X 轴下方，因此默认视口（0, 0）不包含任何图像。画刷的 `TileMode` 属性设置为 `Tile`，这样画刷根据需要重复其图像并正确填充 `Rectangle`。
 
-或者，你可以在 ScaleTransform 之后跟随一个 TranslateTransform，在 Y 方向上平移距离 1，以便将图像移回可见区域。
+或者，你可以在 `ScaleTransform` 之后跟随一个 `TranslateTransform`，在 Y 方向上平移距离 1，以便将图像移回可见区域。
 
 ## 视口与视框（VIEWPORTS AND VIEWBOXES）
 
-平铺画刷背后最令人困惑的两个概念是视口（viewport）和视框（viewbox）。简单来说，viewbox 定义了画刷内容用于填充区域的部分。viewport 定义了输出区域中应该填充一个画刷磁格的部分。
+平铺画刷背后最令人困惑的两个概念是视口（viewport）和视框（viewbox）。简单来说，`viewbox` 定义了画刷内容用于填充区域的部分。`viewport` 定义了输出区域中应该填充一个画刷磁格的部分。
 
 图 G-5 显示的 ViewportsAndViewboxes 示例程序演示了视口和视框。
 
-在左侧的图中，较浅的区域了由属性值 Viewbox = 0.5,0.0,0.5,0.5 定义的视框。这些数字代表用于绘制画刷内容的左、上、宽、高。在这个示例中，坐标是相对于左上角的，左上角位于 (0, 0)，右下角位于 (1, 1)。
+在左侧的图中，较浅的区域了由属性值 `Viewbox = 0.5,0.0,0.5,0.5` 定义的视框。这些数字代表用于绘制画刷内容的左、上、宽、高。在这个示例中，坐标是相对于左上角的，左上角位于 `(0, 0)`，右下角位于 `(1, 1)`。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_543_0.png)
 
-图 G-5 的中间显示了一个被视口 0.0,0.25,0.25 填充为白色的 Rectangle。这些值也代表区域的左、上、宽、高，并且是相对坐标。
+图 G-5 的中间显示了一个被视口 `0.0,0.25,0.25` 填充为白色的 `Rectangle`。这些值也代表区域的左、上、宽、高，并且是相对坐标。
 
-图 G-5 的右侧显示了结果。左侧由视框定义的区域被拉伸以填充中间定义的视口。该结果被平铺以填充 Rectangle。
+图 G-5 的右侧显示了结果。左侧由视框定义的区域被拉伸以填充中间定义的视口。该结果被平铺以填充 `Rectangle`。
 
 以下代码显示了程序如何绘制最终的矩形：
 
@@ -16417,7 +14736,7 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 ## H Path 微语言（Path Mini-Language）
 
-本附录总结了 Path 微语言（或标记语法），你可以用它简洁地定义 Path 对象绘制的线条和曲线。将微语言命令放在 Path 控件的 Data 属性中。
+本附录总结了 Path 微语言（或标记语法），你可以用它简洁地定义 `Path` 对象绘制的线条和曲线。将微语言命令放在 `Path` 控件的 `Data` 属性中。
 
 表 H-1 Path 微语言命令。大写版本使用绝对坐标，而小写版本使用相对于上一个点的坐标。
 
@@ -16461,7 +14780,7 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 图-3
 
-关于 Path 的更多信息，请参见第 8 章的“Path”部分。
+关于 `Path` 的更多信息，请参见第 8 章的“Path”部分。
 
 ## XPath
 
@@ -16469,9 +14788,9 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 ## XAML 中的 XML
 
-要在 XAML 中包含 XML 数据，请构建包含 x:XData 对象的 XmlDataProvider。在该内部放置良好的 XML 数据。XmlDataProvider 的 XPath 属性给出根元素的名称。后续代码可以引用此根。
+要在 XAML 中包含 XML 数据，请构建包含 `x:XData` 对象的 `XmlDataProvider`。在该内部放置良好的 XML 数据。`XmlDataProvider` 的 `XPath` 属性给出根元素的名称。后续代码可以引用此根。
 
-以下 XML 定义了附录后续示例使用的数据。根元素名为 Customers。该元素包含一系列 Customer 对象，每个 Customer 对象持有 Item 对象。Item 对象的值提供了其描述。属性提供了对象类型的信息。
+以下 XML 定义了附录后续示例使用的数据。根元素名为 Customers。该元素包含一系列 Customer 对象，每个 Customer 对象持有 Item 对象。`Item` 对象的值提供了其描述。属性提供了对象类型的信息。
 
 ```xml
 <XmlDataProvider Key="customers" XPath="Customers">
@@ -16499,10 +14818,6 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_548_0.png)
 
-
-
-
-
 ## 512 | 附录 I XPATH
 
 ```xml
@@ -16524,7 +14839,9 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 </Customer>
 ```
 
-图 1 中的 `CustomerOrders` 示例使用 ListBox 来显示数据的不同视图。
+
+
+图 1 中的 `CustomerOrders` 示例使用 `ListBox` 来显示数据的不同视图。
 
 ### 绑定到 XML 数据
 
@@ -16548,19 +14865,19 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 </ListBox>
 ```
 
-`CustomerOrders` 的 `ListBox.ItemsSource` 属性告诉控件从 `StaticResource` customers 获取数据。XPath 值 "Order" 告诉控件选择数据中的所有项。`ListBox.ItemTemplate` 告诉控件如何显示它选择的对象。此模板包含一个包含多个 `TextBlock` 的 `StackPanel`。第一个 `TextBlock` 包含一个显示为 "Ordered on " 的简单字符串。第二个 `TextBlock` 使用绑定从所选的 Order 对象中提取数据：`@OrderDate` 属性。第三个 `TextBlock` 显示文本 "by "。最后一个 `TextBlock` 使用绑定 `../CustomerName` 从 Order 的父节点（即 Customer）中选择 `CustomerName` 属性。接下来的章节描述了 XPath 的两种用法：用于选择数据对象，以及用于确定对象显示的内容。
+`CustomerOrders` 的 `ListBox.ItemsSource` 属性告诉控件从 `StaticResource` `customers` 获取数据。`XPath` 值 `"Order"` 告诉控件选择数据中的所有项。`ListBox.ItemTemplate` 告诉控件如何显示它选择的对象。此模板包含一个包含多个 `TextBlock` 的 `StackPanel`。第一个 `TextBlock` 包含一个显示为 `"Ordered on "` 的简单字符串。第二个 `TextBlock` 使用绑定从所选的 `Order` 对象中提取数据：`@OrderDate` 属性。第三个 `TextBlock` 显示文本 `"by "`。最后一个 `TextBlock` 使用绑定 `../CustomerName` 从 `Order` 的父节点（即 `Customer`）中选择 `CustomerName` 属性。接下来的章节描述了 `XPath` 的两种用法：用于选择数据对象，以及用于确定对象显示的内容。
 
 ### 选择
 
-要在 XML 中选择节点，您需要构建一个类似于目录的路径，该路径从根节点开始穿过数据。例如，在之前的数据中，路径 `/Customers/Order/Item` 意味着从根元素开始路径，进入 Customer 对象，进入 Order 对象，最后选择 Item 对象。表 I-1 总结了 XPath 符号。
+要在 XML 中选择节点，您需要构建一个类似于目录的路径，该路径从根节点开始穿过数据。例如，在之前的数据中，路径 `/Customers/Order/Item` 意味着从根元素开始路径，进入 `Customer` 对象，进入 `Order` 对象，最后选择 `Item` 对象。表 I-1 总结了 `XPath` 符号。
 
-#### 表 I-1:
+#### 表 I-1
 
 | 符号 | 用途 |
 | :--- | :--- |
 | node_name | 选择具有给定名称的子节点。 |
-| / | 在 XPath 的开头，选择根节点。在 XPath 中间，分隔节点名称。 |
-| // | 匹配任意数量的节点。例如，`//Item` 匹配数据中所有的所有 Item 节点。 |
+| / | 在 `XPath` 的开头，选择根节点。在 `XPath` 中间，分隔节点名称。 |
+| // | 匹配任意数量的节点。例如，`//Item` 匹配数据中所有的所有 `Item` 节点。 |
 | . | 匹配当前节点。 |
 | .. | 移动到父节点。 |
 | @ | 选择属性。 |
@@ -16569,13 +14886,13 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 ### 谓词
 
-谓词放在 XPath 的方括号中，用于限制选择。谓词通常引用节点值或属性。例如，以下 XPath 匹配所有 `UnitPrice` 属性大于 5.00 的 Item 节点：
+谓词放在 `XPath` 的方括号中，用于限制选择。谓词通常引用节点值或属性。例如，以下 `XPath` 匹配所有 `UnitPrice` 属性大于 5.00 的 `Item` 节点：
 
 ```xpath
 //Item[@UnitPrice>5.00]
 ```
 
-您可以使用 `|` 符号组合多个选择语句。例如，以下绑定选择了父节点为 Customer 且其 `CustName` 属性等于 'Bob Farkle' 或 'Emily Pickle' 的 Order 对象。（请注意，空格会被忽略，因此此示例在 `Source="StaticResource customers"` 中使用了额外的空间以便排版整齐。）
+您可以使用 `|` 符号组合多个选择语句。例如，以下绑定选择了父节点为 `Customer` 且其 `CustName` 属性等于 `'Bob Farkle'` 或 `'Emily Pickle'` 的 `Order` 对象。（请注意，空格会被忽略，因此此示例在 `Source="StaticResource customers"` 中使用了额外的空间以便排版整齐。）
 
 ```xml
 <Binding Source="StaticResource customers"
@@ -16584,7 +14901,7 @@ VisualBrush 使用视觉对象（如控件）填充区域。
 
 ### 约束函数
 
-XPath 提供了几种函数，您可以在谓词中使用它们来限制结果。例如，`contains` 函数在第一个参数包含第二个参数作为子字符串时选择节点。以下 XPath 语句选择了项的值（由符号 `.` 指定）包含字符 `p` 的 Item 节点：
+`XPath` 提供了几种函数，您可以在谓词中使用它们来限制结果。例如，`contains` 函数在第一个参数包含第二个参数作为子字符串时选择节点。以下 `XPath` 语句选择了项的值（由符号 `.` 指定）包含字符 `p` 的 `Item` 节点：
 
 ```xpath
 //Item[contains(.,'p')]
@@ -16592,14 +14909,14 @@ XPath 提供了几种函数，您可以在谓词中使用它们来限制结果�
 
 表 I-2 总结了最有用的约束函数。
 
-#### 表 I-2:
+#### 表 I-2
 
 | 函数 | 用途 |
 | :--- | :--- |
 | ceiling | 返回大于或等于输入参数的最小整数 |
 | concat | 连接两个或多个字符串。 |
 | contains | 如果第一个参数包含第二个作为子字符串，则返回 True。注意比较是大小敏感的。 |
-| count | 返回参数的计数。例如，XPath 语句 `//Order[count()>2]` 选择具有两个以上项的 Order。 |
+| count | 返回参数的计数。例如，`XPath` 语句 `//Order[count()>2]` 选择具有两个以上项的 `Order`。 |
 | floor | 返回小于或等于输入参数的最大整数 |
 | name | 返回节点的名称。 |
 | normalize-space | 移除字符串前后的空格。 |
@@ -16612,27 +14929,21 @@ XPath 提供了几种函数，您可以在谓词中使用它们来限制结果�
 | text | 选择文本节点。 |
 | translate | 根据映射替换字符串中的字符。 |
 
-
-
-
-
-# 约束函数 | 517
-
 ```
-//Item[Quantity * @UnitPrice > 5] — Quantity 属性乘以 UnitPrice 属性大于 5 的 Item 节点——换句话说，即价格大于 5 的 Items
+//Item[Quantity * @UnitPrice > 5] — `Quantity` 属性乘以 `UnitPrice` 属性大于 5 的 `Item` 节点——换句话说，即价格大于 5 的 `Items`
 ```
 
-> 用于选择节点的算术表达式无法显示值。例如，你不能将 TextBlock 的 Property 绑定到算术表达式的结果。你可以通过类型转换器（type converters）来规避这个问题，但我不知道纯粹的 XAML 解决方案。
+> 用于选择节点的算术表达式无法显示值。例如，你不能将 `TextBlock` 的 `Property` 绑定到算术表达式的结果。你可以通过类型转换器（`type converters`）来规避这个问题，但我不知道纯粹的 XAML 解决方案。
 
 ```
-//Item[floor(@Quantity * @UnitPrice) > 8] — Quantity 属性大于 8 的 Item 节点。（记住 floor 返回大于或等于输入的最大整数。）
-//Item[contains(translate(.,'P','p'))] — 值中包含 p 或 P 的 Item 节点。translate 调用获取当前节点的值（由 "." 指定）并将 'P' 替换为 'p'。然后判断结果是否包含 p。结果包含值为 Pencils（铅笔）、Napkins（餐巾）和 Duct Tape（防水胶带）的 Items。
-//Order[count(Item)>2 — 包含两个以上 Item 节点的 Order 节点
+//Item[floor(@Quantity * @UnitPrice) > 8] — `Quantity` 属性大于 8 的 `Item` 节点。（记住 `floor` 返回大于或等于输入的最大整数。）
+//Item[contains(translate(.,'P','p'))] — 值中包含 `p` 或 `P` 的 `Item` 节点。`translate` 调用获取当前节点的值（由 `"."` 指定）并将 `'P'` 替换为 `'p'`。然后判断结果是否包含 `p`。结果包含值为 `Pencils`（铅笔）、`Napkins`（餐巾）和 `Duct Tape`（防水胶带）的 `Items`。
+//Order[count(Item)>2 — 包含两个以上 `Item` 节点的 `Order` 节点
 ```
 
 # 显示表达式
 
-这些表达式从特定节点开始查找要显示的数据。例如，下面的代码显示当前选中了一个 Order 节点。第一个绑定选择了节点的 OrderDate 属性，第二个绑定选择了该节点父节点的 CustName 属性。（在本例中，该节点的父节点是 Customer。）
+这些表达式从特定节点开始查找要显示的数据。例如，下面的代码显示当前选中了一个 `Order` 节点。第一个绑定选择了节点的 `OrderDate` 属性，第二个绑定选择了该节点父节点的 `CustName` 属性。（在本例中，该节点的父节点是 `Customer`。）
 
 ```
 <ListBox.ItemTemplate>
@@ -16646,20 +14957,20 @@ XPath 提供了几种函数，您可以在谓词中使用它们来限制结果�
 </ListBox.ItemTemplate>
 ```
 
-接下来的章节包含列表，总结了 XmlCustomerOrder 程序在选择不同类型节点时所使用的显示 XPath 表达式。例如，之前的代码假设选中了 Order 节点。
+接下来的章节包含列表，总结了 `XmlCustomerOrder` 程序在选择不同类型节点时所使用的显示 `XPath` 表达式。例如，之前的代码假设选中了 `Order` 节点。
 
-# 选中 Order 节点
+## 选中 Order 节点
 
-- @OrderDate — OrderDate 属性
-- ../CustName — Order 的父节点的 CustName 属性。在这些数据中，Order 的父节点是 Customer 节点。
+- `@OrderDate` — `OrderDate` 属性
+- `../CustName` — `Order` 的父节点的 `CustName` 属性。在这些数据中，`Order` 的父节点是 `Customer` 节点。
 
-# 选中 Item 节点
+## 选中 Item 节点
 
-- @Quantity — Item 的 Quantity 属性
-- @UnitPrice — Item 的 UnitPrice 属性
-- . — Item 的值
-- ../OrderDate — Item 的父节点的 OrderDate 属性。在这些数据中，Item 的父节点是 Order 节点。
-- ../../CustName — Item 的祖父节点的 CustName 属性。在这些数据中，Item 的祖父节点是 Customer 节点。
+- `@Quantity` — `Item` 的 `Quantity` 属性
+- `@UnitPrice` — `Item` 的 `UnitPrice` 属性
+- `.` — `Item` 的值
+- `../OrderDate` — `Item` 的父节点的 `OrderDate` 属性。在这些数据中，`Item` 的父节点是 `Order` 节点。
+- `../../CustName` — `Item` 的祖父节点的 `CustName` 属性。在这些数据中，`Item` 的祖父节点是 `Customer` 节点。
 
 ## 数据绑定
 
@@ -16669,14 +14980,14 @@ XPath 提供了几种函数，您可以在谓词中使用它们来限制结果�
 
 数据绑定包含四个基本部分：
 
-- Target（目标）——将使用绑定结果的对象
-- Target Property（目标属性）——目标对象结果的属性
-- Source（源）——为目标对象提供值的对象
-- Path（路径）——在源对象中定位值的路径
+- `Target`（目标）——将使用绑定结果的对象
+- `Target Property`（目标属性）——目标对象结果的属性
+- `Source`（源）——为目标对象提供值的对象
+- `Path`（路径）——在源对象中定位值的路径
 
 # 通过名称绑定到元素
 
-下面的代码将 Label 绑定到 TextBox，以便显示你在 TextBox 中输入的任何内容。此版本在 TextBlock 内部放置了一个独立的 Binding 对象来定义其内容。
+下面的代码将 `Label` 绑定到 `TextBox`，以便显示你在 `TextBox` 中输入的任何内容。此版本在 `TextBlock` 内部放置了一个独立的 `Binding` 对象来定义其内容。
 
 ```
 <TextBox Name="txtTypeHere" Margin="5" Height="30"
@@ -16704,18 +15015,18 @@ VerticalAlignment="Top" Text="Type here!"/>
 
 # 绑定资源
 
-绑的 RelativeSource 属性允许你通过其与目标控件的关系指定源对象。有时这对于将同一个控件的两个属性相互绑定非常有用。
+绑的 `RelativeSource` 属性允许你通过其与目标控件的关系指定源对象。有时这对于将同一个控件的两个属性相互绑定非常有用。
 
-例如，下面的代码将 TextBox 的 Background 属性绑定到它的 Text 属性。当你在 TextBox 中输入颜色名称时，控件将该颜色作为其背景。
+例如，下面的代码将 `TextBox` 的 `Background` 属性绑定到它的 `Text` 属性。当你在 `TextBox` 中输入颜色名称时，控件将该颜色作为其背景。
 
 ```xml
 <TextBox Margin="10" Height="30" VerticalAlignment="Top"
 Background="{Binding RelativeSource={RelativeSelf}, Path=Text}"/>
 ```
 
-相对源还可以是 TemplatedParent（正在应用模板的对象）、FindAncestor（包含控件的祖先）或 PreviousData（引用 ListBox 或其他显示控件上一个项目）。
+相对源还可以是 `TemplatedParent`（正在应用模板的对象）、`FindAncestor`（包含控件的祖先）或 `PreviousData`（引用 `ListBox` 或其他显示控件上一个项目）。
 
-下面的代码将 Label 绑定到它包含的网格宽度。列是有编号的，因此“2”意味着第三列。
+下面的代码将 `Label` 绑定到它包含的网格宽度。列是有编号的，因此 `"2"` 意味着第三列。
 
 ```xml
 <Label Grid.Column="2"
@@ -16725,15 +15036,15 @@ Path=ColumnDefinitions[2].Width}}"/>
 
 # 在代码中绑定类
 
-假设 PersonList 定义了一个具有 FirstName 和 LastName 属性的 Person 类。（注意，类必须有一个空构造函数，XAML 才能创建实例。）
+假设 `PersonList` 定义了一个具有 `FirstName` 和 `LastName` 属性的 `Person` 类。（注意，类必须有一个空构造函数，XAML 才能创建实例。）
 
-主 Element 内部的命名空间声明允许 XAML 代码引用 Person 类以及 PersonList 中定义的其他类：
+主 `Element` 内部的命名空间声明允许 XAML 代码引用 `Person` 类以及 `PersonList` 中定义的其他类：
 
 ```xml
 xmlns:local="clr-namespace:PersonList"
 ```
 
-现在，XAML 可以像这样定义一个 Person 对象：
+现在，XAML 可以像这样定义一个 `Person` 对象：
 
 ```xml
 <Window.Resources>
@@ -16748,7 +15059,7 @@ xmlns:local="clr-namespace:PersonList"
 <Label Content="{Binding Source={StaticResource perAuthor}, Path=LastName}"/>
 ```
 
-你可以通过重写类的默认 ToString 方法来显示整个姓名。以下版本返回连接后的 First和 lastName：
+你可以通过重写类的默认 `ToString` 方法来显示整个姓名。以下版本返回连接后的 `First` 和 `lastName`：
 
 ```csharp
 public override string ToString()
@@ -16757,7 +15068,7 @@ public override string ToString()
 }
 ```
 
-现在，如果 XAML 代码在没有 Path 参数的情况下引用该对象，绑定将返回对象的默认值，即 ToString。
+现在，如果 XAML 代码在没有 `Path` 参数的情况下引用该对象，绑定将返回对象的默认值，即 `ToString`。
 
 ```xml
 <Label Content="{Binding Source={StaticResource perAuthor}}"/>
@@ -16765,13 +15076,13 @@ public override string ToString()
 
 # 在 XAML 代码中绑定类
 
-假设 PersonSource 定义了一个具有 FirstName 和 LastName 属性的 Person 类，以及一个返回连接后的姓名的重写 ToString 方法，如前文所述。
+假设 `PersonSource` 定义了一个具有 `FirstName` 和 `LastName` 属性的 `Person` 类，以及一个返回连接后的姓名的重写 `ToString` 方法，如前文所述。
 
-现在假设你希望程序的后台代码创建一个 Person 对象数组，并让 XAML 绑定到 ListBox。
+现在假设你希望程序的后台代码创建一个 `Person` 对象数组，并让 XAML 绑定到 `ListBox`。
 
 # 数据集合
 
-由于 ListBox、ComboBox 和 TreeView 等控件显示一组项目，因此绑定到这些控件的数据应该包含一组值是合理的。接下来的章节将解释如何绑定在 XAML 和后台代码中定义的集合。
+由于 `ListBox`、`ComboBox` 和 `TreeView` 等控件显示一组项目，因此绑定到这些控件的数据应该包含一组值是合理的。接下来的章节将解释如何绑定在 XAML 和后台代码中定义的集合。
 
 # XAML 代码中的集合
 
@@ -16781,7 +15092,7 @@ public override string ToString()
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-现在你可以使用 x:Array 创建一个对象数组。下面的代码定义了一个字符串数组：
+现在你可以使用 `x:Array` 创建一个对象数组。下面的代码定义了一个字符串数组：
 
 ```xml
 <Window.Resources>
@@ -16795,7 +15106,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </Window.Resources>
 ```
 
-现在你可以将数组绑定到项目控件。下面的语句使 ListBox 从 names 数组获取项目：
+现在你可以将数组绑定到项目控件。下面的语句使 `ListBox` 从 `names` 数组获取项目：
 
 ```xml
 <ListBox ItemsSource="{StaticResource names}"/>
@@ -16803,9 +15114,9 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 # 后台代码中的集合
 
-假设 PersonSource 定义了一个具有 FirstName 和 LastName 属性的 Person 类，以及一个返回连接后的姓名的重写 ToString 方法，如前面的章节所述。
+假设 `PersonSource` 定义了一个具有 `FirstName` 和 `LastName` 属性的 `Person` 类，以及一个返回连接后的姓名的重写 `ToString` 方法，如前面的章节所述。
 
-现在假设你希望程序的后台代码创建一个 Person 对象数组，并让 XAML 绑定到 ListBox。
+现在假设你希望程序的后台代码创建一个 `Person` 对象数组，并让 XAML 绑定到 `ListBox`。
 
 在后台代码中，添加代码来创建数组并创建一个返回该数组的属性：
 
@@ -16824,21 +15135,19 @@ public Person[] m_People {
 
 
 
-
-
 # 使用 TreeViewTemplates | 523
 
-注意，主 Window 元素也通过 `Name` 或 `x:Name` 属性指定窗口的名称。XAML 代码可以使用元素名称来引用运行该代码的窗口。它可以引用返回 `Person` 对象数组的 Window 属性。
+注意，主 `Window` 元素也通过 `Name` 或 `x:Name` 属性指定窗口的名称。XAML 代码可以使用元素名称来引用运行该代码的窗口。它可以引用返回 `Person` 对象数组的 `Window` 属性。
 
-以下代码将 `ListBox` 绑定到 Window 的 `People` 属性返回的数组。
+以下代码将 `ListBox` 绑定到 `Window` 的 `People` 属性返回的数组。
 
-```
+```xml
 <ListBox ItemsSource={Binding ElementName=TheWindow, Path=ThePeople} />
 ```
 
 # 使用 LISTBOX 和 COMBOBOX 模板
 
-之前的章节解释了如何创建项目并为每个绑定到 ListBox 的项目提供数据。绑定 ComboBox 也是类似的。请查看这些章节以获取更多关于基础绑定的信息。
+之前的章节解释了如何创建项目并为每个绑定到 `ListBox` 的项目提供数据。绑定 `ComboBox` 也是类似的。请查看这些章节以获取更多关于基础绑定的信息。
 
 这些控件还使用 `DataTemplate` 来决定控件如何显示每个项目。
 
@@ -16846,7 +15155,7 @@ public Person[] m_People {
 
 以下代码将 `ListBox` 绑定到上一节描述的名为 `People` 的数组。`DataTemplate` 让控件通过第三个沙盒在两个 `TextBlock` 中显示项目。
 
-```
+```xml
 <ListBox ItemsSource={Binding ElementName=TheWindow, Path=ThePeople}>
 <ListBox.ItemTemplate>
 <DataTemplate>
@@ -16860,47 +15169,46 @@ public Person[] m_People {
 </ListBox>
 ```
 
-ComboBox 的代码也类似。
+`ComboBox` 的代码也类似。
 
 # 使用 TREEVIEW 模板
 
-要让 TreeView 显示层级数据，您必须执行以下三项任务：
+要让 `TreeView` 显示层级数据，您必须执行以下三项任务：
 
 - 构建层级类。
 - 创建层级数据。
 - 定义 `HierarchicalDataTemplate` 元素。
-- 将 TreeView 附加到数据。
+- 将 `TreeView` 附加到数据。
 
 层级类定义了数据。它们应该提供返回层级结构下一层对象集合的属性。例如，代表公司部门的 `Department` 类可能具有 `Managers` 和 `Projects` 属性，分别返回 `Manager` 和 `Project` 对象的列表。
 
 要构建层级数据，请创建类的实例。初始化它们的集合属性，以便它们能够正确表示层级结构。
 
-要告诉 TextView 如何显示数据以及如何遵循层级结构，请在 `Resources` 部分放置一个或多个 `HierarchicalDataTemplate` 元素。`DataType` 属性告诉程序由哪个对象模板处理。`ItemsSource` 属性告诉 TextView 在处理完当前项目后应该使用哪个属性进一步进入数据层级结构。`HierarchicalDataTemplate` 的内容应该定义控件为当前对象应显示的值。通常，这包括 `Label`、`TextBlock` 以及内容绑定到当前层级对象的控件。
+要告诉 `TextView` 如何显示数据以及如何遵循层级结构，请在 `Resources` 部分放置一个或多个 `HierarchicalDataTemplate` 元素。`DataType` 属性告诉程序由哪个对象模板处理。`ItemsSource` 属性告诉 `TextView` 在处理完当前项目后应该使用哪个属性进一步进入数据层级结构。`HierarchicalDataTemplate` 的内容应该定义控件为当前对象应显示的值。通常，这包括 `Label`、`TextBlock` 以及内容绑定到当前层级对象的控件。
 
-以下代码片段显示了一个处理 `Department` 对象的 `HierarchicalDataTemplate`。`TextBlock` 显示当前 `Department` 对象的 `Name` 属性。`ItemsSource` 属性随后引用 Department 的 `Managers` 属性。
+以下代码片段显示了一个处理 `Department` 对象的 `HierarchicalDataTemplate`。`TextBlock` 显示当前 `Department` 对象的 `Name` 属性。`ItemsSource` 属性随后引用 `Department` 的 `Managers` 属性。
 
-```
-<HierarchicalDataTemplate DataType="x:local:Department"
-ItemsSource="{Binding Path=Managers}">
+```xml
+<HierarchicalDataTemplate DataType="x:local:Department" ItemsSource="{Binding Path=Managers}">
 <TextBlock Text="{Binding Path=Name}" Foreground="Blue"/>
 </HierarchicalDataTemplate>
 ```
 
-有几种方法可以将 TextView 附加到层级数据。首先，您可以让控件的 `ItemsSource` 指向表单定义的属性。该属性可以返回一个持有顶层数据项的集合。
+有几种方法可以将 `TextView` 附加到层级数据。首先，您可以让控件的 `ItemsSource` 指向表单定义的属性。该属性可以返回一个持有顶层数据项的集合。
 
-以下 XAML 代码将 TextView 附加到 MainWindow 对象的 `TopLevelData` 属性。有关将属性绑定到 Window 的更多信息，请参阅本附录前面的“Collections in Code-Bind”章节。
+以下 XAML 代码将 `TextView` 附加到 `MainWindow` 对象的 `TopLevelData` 属性。有关将属性绑定到 `Window` 的更多信息，请参阅本附录前面的“Collections in Code-Bind”章节。
 
-```
+```xml
 <TreeView ItemsSource="{Binding ElementName=MainWindow, Path=TopLevelData}">
 ```
 
-另一种方法是让 TextView 后面的代码绑定到数据。以下代码片段显示了名为 `trvParts` 的 TextView 绑定到列出的部件：
+另一种方法是让 `TextView` 后面的代码绑定到数据。以下代码片段显示了名为 `trvParts` 的 `TextView` 绑定到列出的部件：
 
-```
+```csharp
 trvParts.ItemsSource = parts;
 ```
 
-有关将 TextView 控件绑定到数据的更多信息，请查看第 18 章中的“TreeView Templates”。
+有关将 `TextView` 控件绑定到数据的更多信息，请查看第 18 章中的“TreeView Templates”。
 
 # 绑定到 XML 数据
 
@@ -16945,7 +15253,7 @@ trvParts.ItemsSource = parts;
 
 # 组件类
 
-有几种方法可以将 TextView 附加到层级数据。首先，您可以让控件的 `ItemsSource` 指向表定义的属性。该属性可以返回一个持有顶层数据项的集合。
+有几种方法可以将 `TextView` 附加到层级数据。首先，您可以让控件的 `ItemsSource` 指向表定义的属性。该属性可以返回一个持有顶层数据项的集合。
 
 组件类定义了用于应用程序的命令。许多命令处理组件。表格 K-2 显示了命令。
 
@@ -17039,13 +15347,9 @@ trvParts.ItemsSource = parts;
 | ToggleSuperscript | [Ctrl]+[Shift]+OemPlus |
 | ToggleUnderline | [Ctrl]+U |
 
-
-
-
-
 # MEDIACOMMANDS
 
-MediaCommands 类定义了适用于音频和视频等不同媒体类型的命令。这些命令中没有预定义的手势。表 K-4 显示了这些命令。
+`MediaCommands` 类定义了适用于音频和视频等不同媒体类型的命令。这些命令中没有预定义的手势。表 K-4 显示了这些命令。
 
 **表 K-4:** MediaCommands 命令
 
@@ -17078,7 +15382,7 @@ MediaCommands 类定义了适用于音频和视频等不同媒体类型的命令
 
 # NAVIGATIONCOMMANDS
 
-NavigationCommands 类定义了适用于遵循 Web 导航模型的应用程序的命令。表 K-5 显示了这些命令及其键盘手势。
+`NavigationCommands` 类定义了适用于遵循 Web 导航模型的应用程序的命令。表 K-5 显示了这些命令及其键盘手势。
 
 表 K-5：
 
@@ -17103,9 +15407,9 @@ NavigationCommands 类定义了适用于遵循 Web 导航模型的应用程序�
 
 # COMMANDS IN XAML
 
-要在 XAML 中使用命令，只需将控件的 Command 属性设置为适当的对象。例如，以下代码定义了编辑（Edit）菜单中的若干项，并设置了它们的 Command 属性：
+要在 XAML 中使用命令，只需将控件的 `Command` 属性设置为适当的对象。例如，以下代码定义了编辑（Edit）菜单中的若干项，并设置了它们的 `Command` 属性：
 
-```
+```xml
 <MenuItem Header="Edit">
 <!-- 调用默认命令的菜单项。 -->
   <MenuItem Command="ApplicationCommands.Copy"/>
@@ -17117,40 +15421,49 @@ NavigationCommands 类定义了适用于遵循 Web 导航模型的应用程序�
 </MenuItem>
 ```
 
-使用 CommandTarget 属性使命令适用于特定的代码。以下代码创建了一个按钮，该按钮对名为 txtTop 的 TextBox 应用 ApplicationCommands.Cut 命令：
+使用 `CommandTarget` 属性使命令适用于特定的代码。以下代码创建了一个按钮，该按钮对名为 `txtTop` 的 `TextBox` 应用 `ApplicationCommands.Cut` 命令：
 
-```
+```xml
 <Button Row="0" Column="1" Margin="2"
 Content="Binding RelativeSource={RelativeSource}, Command=Text}"
 Command="ApplicationCommands.Cut"
 CommandTarget="{Binding ElementName=txtTop}"/>
 ```
 
+
+
 # COMMANDS IN-BEHIND
 
-某些命令（例如 Edit 命令）具有预定义的行为。对于其他命令，你需要定义行为。
+某些命令（例如 `Edit` 命令）具有预定义的行为。对于其他命令，你需要定义行为。
 
-以下代码显示了程序如何定义命令绑定（command bindings）。这些绑定将 New 等命令与代码事件处理程序绑定，以便命令在需要确定何时可用以及应该执行什么操作。
+以下代码显示了程序如何定义命令绑定（command bindings）。这些绑定将 `New` 等命令与代码事件处理程序绑定，以便命令在需要确定何时可用以及应该执行什么操作。
 
-```
+```xml
 <Window.CommandBindings>
+
 <CommandBinding Command="New"
 CanExecute="DocumentNewAllowed" Exec="DocumentNew"/>
+
 <CommandBinding Command="Open"
 CanExecute="DocumentOpenAllowed" Exec="DocumentOpen"/>
+
 <CommandBinding Command="Save"
 CanExecute="DocumentSaveAllowed" Exec="DocumentSave"/>
+
 <CommandBinding Command="SaveAs"
 CanExecute="DocumentSaveAsAllowed" Exec="DocumentSaveAs"/>
+
 <!-- Close 绑定定义在代码中
     仅为了如何操作。 -->
+
 <CommandBinding Command="Close"
 CanExecute="DocumentCloseAllowed" Exec="DocumentClose"/>
+
 -->
 </Window.CommandBindings>
 ```
 
-以下 C# 代码显示了 New 命令的后台代码（code-behind）：
+以下 `C#` 代码显示了 `New` 命令的后台代码（code-behind）：
 
 ```sharp
 // 如果我们可以执行 New 操作，则返回 true。
@@ -17158,6 +15471,7 @@ private void DocumentNewAllowed(Object sender, ExecuteRoutedEventArgs e)
 {
     e.CanExecute = (!m_IsDirty);
 }
+
 // 执行 New 操作。
 private void DocumentNew(Object sender, ExecutedRoutedEventArgs e)
 {
@@ -17175,19 +15489,19 @@ private void DocumentNew(Object sender, ExecutedRoutedEventArgs e)
 
 | 效果类 | 结果 |
 |---|---|
-| BevelBitmapEffect | 斜角外观 |
-| BlurBitmapEffect | 模糊外观 |
-| DropShadowBitmapEffect | 对象后的阴影 |
-| EmbossBitmapEffect | 浮雕外观 |
-| OuterGlowBitmapEffect | 对象后的发光 |
+| `BevelBitmapEffect` | 斜角外观 |
+| `BlurBitmapEffect` | 模糊外观 |
+| `DropShadowBitmapEffect` | 对象后的阴影 |
+| `EmbossBitmapEffect` | 浮雕外观 |
+| `OuterGlowBitmapEffect` | 对象后的发光 |
 
-图 L-1 显示的 BitmapEffects 程序演示了位图效果类。
+图 L-1 显示的 `BitmapEffects` 程序演示了位图效果类。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_570_0.png)
 
 图 L-1
 
-以下 XAML 代码显示了程序 BitmapEffects 如何显示阴影。其他位图效果类也类似。
+以下 XAML 代码显示了程序 `BitmapEffects` 如何显示阴影。其他位图效果类也类似。
 
 ```xml
 <stackPanel>
@@ -17206,11 +15520,11 @@ private void DocumentNew(Object sender, ExecutedRoutedEventArgs e)
 
 # Styles
 
-Style（样式）允许你定义一组属性，并在多个控件之间共享。通常，Style 包含定义特定值的 Setter 对象。你可以创建两种样式：命名的非命名的。
+`Style`（样式）允许你定义一组属性，并在多个控件之间共享。通常，`Style` 包含定义特定值的 `Setter` 对象。你可以创建两种样式：命名的非命名的。
 
-# 命名的样式
+## 命名的样式
 
-要创建一个命名的样式，请给它一个 x:Name 属性。之后你可以通过 StaticResource 引用样式。以下 XAML 代码定义并使用了名为 stubButton 的样式：
+要创建一个命名的样式，请给它一个 `x:Name` 属性。之后你可以通过 `StaticResource` 引用样式。以下 XAML 代码定义并使用了名为 `stubButton` 的样式：
 
 ```xml
 <StackPanel Orientation="Horizontal">
@@ -17230,9 +15544,9 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 </StackPanel>
 ```
 
-# 非命名的样式
+## 非命名的样式
 
-要创建一个非命名的样式，简化 x:Name 属性。非命名样式适用于范围内的所有相应对象。例如，如果你在 StackPanel 的资源部分定义了 Button 样式，那么 StackPanel 内的任何 Button 都会使用它。
+要创建一个非命名的样式，简化 `x:Name` 属性。非命名样式适用于范围内的所有相应对象。例如，如果你在 `StackPanel` 的资源部分定义了 `Button` 样式，那么 `StackPanel` 内的任何 `Button` 都会使用它。
 
 以下代码定义了一个与上一节描述类似的非命名样式：
 
@@ -17255,23 +15569,19 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 </StackPanel>
 ```
 
+### 目标类型
 
+在未命名的 `Style` 中，`TargetType` 属性是必需的，但它不需要是一个特定的控件类型。例如，你可以设置 `TargetType = Control` 以使该 适用于适用于控件。
 
+在这种情况下，该 `Style` 只能指定 `Control` 类可用的属性和事件。例如，它不能指定 `Click` 事件处理程序，因为 `Control` 类没有定义 `Click` 事件。
 
+### 继承样式
 
-## 目标类型
+你可以通过设置 `BasedOn` 属性让一个 `Style` 继承另一个 `Style`。第二个 `Style` 可以添加新属性或覆盖由第一个 `Style` 定义的值。
 
-在未命名的 Style 中，`TargetType` 属性是必需的，但它不需要是一个特定的控件类型。例如，你可以设置 `TargetType = Control` 以使该 适用于适用于控件。
+虽然父级 `Style` 必须有一个名称，但你可以基于命名的 `Style` 定义一个未命名的 `Style`。
 
-在这种情况下，该 Style 只能指定 `Control` 类可用的属性和事件。例如，它不能指定 `Click` 事件处理程序，因为 `Control` 类没有定义 `Click` 事件。
-
-## 继承样式
-
-你可以通过设置 `BasedOn` 属性让一个 Style 继承另一个 Style。第二个 Style 可以添加新属性或覆盖由第一个 Style 定义的值。
-
-虽然父级 Style 必须有一个名称，但你可以基于命名的 Style 定义一个未命名的 Style。
-
-以下代码创建了一个名为 `styleAllButtons` 的 Style。然后创建了另一个基于它的名为 `styleMainButtons` 的 Style。接下来的代码定义了一个基于 `styleAllButtons x Button` 的未命名 Style，它没有设置显式的 `styleAllButtons` 样式。
+以下代码创建了一个名为 `styleAllButtons` 的 `Style`。然后创建了另一个基于它的名为 `styleMainButtons` 的 `Style`。接下来的代码定义了一个基于 `styleAllButtons x Button` 的未命名 `Style`，它没有设置显式的 `styleAllButtons` 样式。
 
 ```xml
 <StackPanel Orientation="Horizontal">
@@ -17304,7 +15614,7 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 
 以下部分显示了不同控件的简单模板示例。我们可以将这些作为模板的起点。
 
-## LABEL（标签）
+### LABEL（标签）
 
 以下模板让 `Label` 控件在 `TextBlock` 中显示其内容。它提供了一个 `Trigger`，当 `IsEnabled=False` 时将内容变灰并用条纹覆盖控件。
 
@@ -17345,7 +15655,7 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 
 简单的 Label 示例
 
-## CHECKBOX（复选框）
+### CHECKBOX（复选框）
 
 以下模板让 `CheckBox` 控件显示不同的外观。`CheckBox` 显示一个灰色的 `Border`。当 `CheckBox` 被选中、未取消或处于确定状态时，内部的 `Border` 会改变颜色。
 
@@ -17379,7 +15689,7 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 
 你可以添加其他 `Trigger`，例如当 `IsEnabled` 为 `False` 时改变控件外观的触发器
 
-## RADIOBUTTON（单选按钮）
+### RADIOBUTTON（单选按钮）
 
 以下模板让 `RadioButton` 控件显示不同的外观。当控件被选中时，模板会显示一个 `X`。
 
@@ -17397,12 +15707,20 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 </ControlTemplate>
 <ControlTemplate.Triggers>
   <Trigger Property="IsChecked" Value="True">
-  <Setter TargetName="pathChecked" Property="Stroke" Value="Green"/>
+
+
+
+## RadioButton 示例
+
+```xml
+<Setter TargetName="pathChecked" Property="Stroke" Value="Green"/>
 </Trigger>
-  <Trigger Property="IsChecked" Value="False">
+
+<Trigger Property="IsChecked" Value="False">
   <Setter TargetName="pathChecked" Property="Opacity" Value="0"/>
 </Trigger>
-  <Trigger Property="IsChecked" Value="(x:Null)">
+
+<Trigger Property="IsChecked" Value="(x:Null)">
   <Setter TargetName="pathChecked" Property="Stroke" Value="Gray"/>
 </Trigger>
 </ControlTemplate.Triggers>
@@ -17427,7 +15745,7 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
 </ControlTemplate>
 ```
 
-简单的 ProgressBar 
+简单的 ProgressBar
 
 模板使用 `Border` 绘制控件的背景区域。特殊名称 `PART_Track` 告诉底层的 `ProgressBar` 使用哪个控件作为背景。
 
@@ -17455,10 +15773,6 @@ Style（样式）允许你定义一组属性，并在多个控件之间共享。
   </Trigger>
 </ControlTemplate.Triggers>
 ```
-
-
-
-
 
 # 带有标签的进度条
 
@@ -17508,14 +15822,14 @@ LabeledProgressBar 示例程序演示了此模板。
 
 重复按钮可以通过执行以下命令使控件执行正常的滚动动作：
 
-- ScrollBar.LineLeftCommand
-- ScrollBar.PageLeftCommand
-- ScrollBar.PageRightCommand
-- ScrollBar.LineRightCommand
-- ScrollBar.LineUpCommand
-- ScrollBar.PageUpCommand
-- ScrollBar.PageDownCommand
-- ScrollBar.LineDownCommand
+- `ScrollBar.LineLeftCommand`
+- `ScrollBar.PageLeftCommand`
+- `ScrollBar.PageRightCommand`
+- `ScrollBar.LineRightCommand`
+- `ScrollBar.LineUpCommand`
+- `ScrollBar.PageUpCommand`
+- `ScrollBar.PageDownCommand`
+- `ScrollBar.LineDownCommand`
 
 以下代码显示了 ScrollBar 模板的布局部分：
 
@@ -17643,48 +15957,8 @@ BareBonesScrollBar 示例程序演示了此模板。
     <Track.DecreaseRepeatButton>
       <RepeatButton Name="btnDecrease" Command="ScrollBar.PageLeftCommand" Template="{StaticResource temLargeChangeButtons}" />
     </Track.DecreaseRepeatButton>
-    <Track.IncreaseRepeatButton>
-      <RepeatButton Name="btnIncrease" Command="ScrollBar.PageRightCommand" Template="{StaticResource temLargeChangeButtons}" />
-    </Track.IncreaseRepeatButton>
-    <Track.Thumb>
-      <Thumb Background="Blue" Template="{StaticResource temThumb}" />
-    </Track.Thumb>
-  </Track>
-  <RepeatButton Name="btnScrollUp" Grid.Column="2" Command="ScrollBar.LineRightCommand" Template="{StaticResource temLargeChangeButtons}">
-    <Path Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-      <Path Data="M2,3 L10,6 M2,3 L6,0" Stroke="Yellow" StrokeThickness="3" StrokeStartLineCap="Round" StrokeEndCap="Round" />
-    </Path>
-  </RepeatButton>
-</Grid>
-</ControlTemplate>
-```
 
 
-
-```xml
-</Grid>
-<ControlTemplate.Triggers>
-  <Trigger Property="Orientation" Value="Horizontal">
-    ... Some Setters omitted ...
-    <Setter TargetName="btnDecrease" Property="Template">
-      Value="StaticResource temLargeChangeButtonsH"/>
-    </Setter>
-    <Setter TargetName="btnIncrease" Property="Template">
-      Value="StaticResource temLargeChangeButtonsH"/>
-    </Setter>
-  </Trigger>
-  <Trigger Property="Orientation" Value="Vertical">
-    ... Some Setters omitted ...
-    <Setter TargetName="btnDecrease" Property="Template">
-      Value="StaticResource temLargeChangeButtonsV"/>
-    </Setter>
-    <Setter TargetName="btnIncrease" Property="Template">
-      Value="StaticResource temLargeChangeButtonsV"/>
-    </Setter>
-  </Trigger>
-</ControlTemplate.Triggers>
-</ControlTemplate>
-```
 
 修改后的 ScrollScrollBar
 
@@ -17717,7 +15991,7 @@ BareBonesScrollBar 示例程序演示了此模板。
 
 ![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_584_0.png)
 
-# 548 | 附录 N 模板 (TEMPLATES)
+### 548 | 附录 N 模板 (TEMPLATES)
 
 ```xml
 <Setter Property="Fill" Value="Lime"/>
@@ -17729,7 +16003,6 @@ BareBonesScrollBar 示例程序演示了此模板。
 <Setter Property="Fill" Value="Yellow"/>
 </Style>
 </ControlTemplate.Resources>
-
 <!-- 构成按钮的组件 -->
 <Grid Name="gradMain" ClipToBounds="True"
 Width="TemplateBinding Width"
@@ -17738,7 +16011,6 @@ Height="TemplateBinding Height">
   <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
 </Rectangle>
 </Grid>
-
 <!-- 行为 (Behaviors) -->
 <ControlTemplate.Triggers>
 <Trigger Property="MouseOver" Value="True">
@@ -17775,11 +16047,11 @@ Value="StaticResource isDisabled"/>
 
 将所有细节保留在样式中，使得模板比将所有属性设置直接包含在触发器中更易读。在这个示例中，属性设置代码非常简单，因此差异很小。在使用了大量装饰性控件和动画的更复杂的示例中，这种差异可能是巨大的。
 
-# 触发器与动画 (Triggers and Animation)
+## 触发器与动画 (Triggers and Animation)
 
 本附录总结了触发器和动画。更多详细信息，请参阅第 14 章。
 
-# 事件触发器 (EVENTTRIGGERS)
+### 事件触发器 (EVENTTRIGGERS)
 
 你可以将 `EventTrigger` 放在控件的 `Triggers` 部分，以便在事件发生时采取操作。在 `EventTrigger` 内部，你可以放置事件发生时应该执行的操作。
 
@@ -17789,11 +16061,11 @@ Value="StaticResource isDisabled"/>
 
 这些操作中最用的包括：
 
-- *PauseStoryboard — 解析故事板 (Storyboard)。
-- *ResumeStoryboard — 恢复已暂停的故事板。
-- *SeekStoryboard — 将故事板移动到其时间线上的特定位置。
-- *StopStoryboard — 停止故事板。它将属性重置为原始值。
-- *RemoveStoryboard — 停止故事板并释放其资源。 |
+- `PauseStoryboard` — 解析故事板 (`Storyboard`)。
+- `ResumeStoryboard` — 恢复已暂停的故事板。
+- `SeekStoryboard` — 将故事板移动到其时间线上的特定位置。
+- `StopStoryboard` — 停止故事板。它将属性重置为原始值。
+- `RemoveStoryboard` — 停止故事板并释放其资源。
 
 以下代码为按钮提供了一个 `EventTrigger`。当按钮引发其 `Click` 事件时，`EventTrigger` 开始一个故事板，在 0.5 秒内将按钮的 `Canvas.Left` 属性更改为 300。`AutoReverse` 属性为 `True`，因此动画完成后完成后它会将 `Canvas.Left` 属性改回原始值。
 
@@ -17815,7 +16087,7 @@ Value="StaticResource isDisabled"/>
 </Button>
 ```
 
-# 属性触发器 (PROPERTY TRIGGERS)
+### 属性触发器 (PROPERTY TRIGGERS)
 
 虽然你可以将事件触发器放在控件的 `Triggers` 部分，但你也可以将其添加到样式中，然后将其应用于控件的 `Triggers` 部分。以下代码定义了一个名为 `growButton` 的样式：
 
@@ -17866,6 +16138,8 @@ Value="StaticResource isDisabled"/>
 </Style>
 ```
 
+
+
 与事件触发器不同，属性触发器在属性不再具有目标值时不会撤销它们的更改。在这个示例中，按钮将保持宽度100，无论其初始宽度如何。
 
 # 故事板属性 (STORYBOARD PROPERTIES)
@@ -17882,13 +16156,9 @@ Value="StaticResource isDisabled"/>
 | RepeatBehavior | 决定故事板是否重复以及重复多少。这可以是迭代次数（2x 或 10x）、故事板应该重复的持续时间（0:0:0:2.5），或单词 Forever。 |
 | SpeedRatio | 决定故事板相对于其父级的速度。0 到 1 之间的值会让故事板变慢。大于 1 的值会让故事板变快。 |
 
-
-
-
-
 ## 动画类
 
-WPF 提供了许多可以在 Storyboard 中使用的动画类。对于这些类动画的每种数据类型，都有可能的动画类型。
+WPF 提供了许多可以在 `Storyboard` 中使用的动画类。对于这些类动画的每种数据类型，都有可能的动画类型。
 
 基础动画（Basic animation）以简单的方式将属性从一个值移动到另一个值。这些动画类的名称以 `Animation` 结尾。例如，用于 Double 数据类型的动画类是 `DoubleAnimation`。
 
@@ -18022,10 +16292,6 @@ WPF 提供了许多可以在 Storyboard 中使用的动画类。对于这些类�
 - UseToolTip — 显示如何使用 `ToolTip` 属性和独立的 `ToolTip` 对象创建工具提示。图 5-13。[第 89 页]。
 - UseTreeView — 展示 `TreeNode` 控件。图 5-20。[第 98 页]。
 
-
-
-
-
 # 第 7 章 | 559
 
 - UseTabControl — 展示 TabControl 控件。图 6-9。[第 110 页]。
@@ -18126,69 +16392,67 @@ WPF 提供了许多可以在 Storyboard 中使用的动画类。对于这些类�
 - SimpleClock — 通过显示由后置代码更改的资源以及随时间变化的系统控件，演示了静态和动态资源。图 12-11。[第 211 页]。
 - SysDataTypes — 显示 mscorlib 中定义的示例数据类型的示例。图 12-5。[第 200 页]。
 
-
-
-
 # 第 13 章
 
 第 13 章包含以下示例程序：
 
--   ButtonResources — 显示类似按钮的矩形，与 ButtonValues 程序显示的类似，但它使用了 Resources 来使代码更具一致性。类似于图 13-1。[第第 213-215 页]。
--   ButtonStyles — 显示类似按钮的矩形，与 ButtonValues 程序显示的类似，但它使用了 Styles 来使代码更加简单且易于维护。类似于图 13-1。[第第 220, 221, 226, 229 页]。
--   Values — 通过为每个按钮选择单独的属性值来显示类似按钮的矩形。图 13-1。[第 213 页]。
--   ControlStyle — 使用各种 Styles 的两个 Buttons 和一个 Label。一个 Button 和 Label 共享相同的 Style。图 13-3。[第 220 页]。
--   ImageTriggers — 显示一组 Opacity = 0.5 的 Images 和 Labels。当 IsMouseOver 为 True 时，触发器会将 Opacity 更改为 1，并将控件的 LayoutTransform 属性设置为一个 ScaleTransform 对象，以放大控件。图 13-10。[第 231 页]。
--   InheritedStyles — 演示使用 BasedOn 关键字相互继承的 Styles。图 13-6。[第 226 页]。
--   IsActiveTrigger — 在 Window 的 IsActive 属性和 TextBox 的 Focused 属性上使用 Triggers。图 13-11。[第 233 页]。
--   MouseOverTriggers — 演示在 Button MouseOver 属性上使用 Triggers，以便在鼠标悬停时时放大 Button。图 13-8。[第 230 页]。
--   LabelAndRectangle — 显示共享相同 Style 的 Button、Label 和 Rectangle。图 13-4。[第 221 页]。
--   MenuMouseOverTriggers — 使用 MenuItem MouseOver 触发器来更改 MenuItem 的 LayoutTransform 和 BitmapEffect 属性。图 13-9。[第 231 页]。
--   RedRectangles — 使用命名样式来设置矩形的属性。图 13-2。[第 217 页]。
--   TextTriggers — 演示 TextBox 和 ComboBox Text 属性上的 Triggers 以高
--   AnimatedText — 演示使用 StringUsingKeyFrames 对象使文本一次出现几个字符。图 14-10。[第 254 页]。
--   AnimationWithoutStories — 使用后台代码（code-behind）来动画 Ell 的 Canvas.Left 和 Canvas.Top 属性。图 14-12。[第 259 页]。
--   BouncingBall — 显示一个在接触“地面”时播放声音的跳球。演示了样曲线关键帧和 ParallelTimeline 对象以播放带有声音的反向动画。图 14-11。[第 258 页]。
--   CentralizedTriggers — 使用集中在 Canvas 中的 EventTriggers 来处理 Canvas 中控件发起的 MouseLeftButton 事件。图 14-2。[第 238 页]。
--   GrowingButtons — 演示了带有 Setters 的属性触发器、带有 Storyboards 的属性触发器以及带有 Storyboards 的事件触发器这三者的组合。图 14-4。[第 243 页]。
--   JumpingButton — 显示了一个动画单个控件属性的非常简单的 Storyboard 代码是有多复杂。[第 261 页]。
--   ToggleButton — 演示了一个在 EnterActions 和 ExitActions 部分中执行 Storyboards 的属性触发器。图 14-3。[第 242 页]。
--   RepeatingSound — 运行一个播放声音的动画。[第 257 页]。
--   RovingButton — 显示一个遵循矩形路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-6。[第 248 页]。
--   RovingDiscrete — 显示一个离散跳转遵循矩形路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。类似于图 14-6。[第 251 页]。
--   RovingMixedKeyFrames — 使用线性关键帧、离散关键帧、路径动画和简单的线性动画使 Button 遵循路径。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-9。[第 252 页]。
--   RovingWithKeyFrames — 使用带有线性关键帧的 DoubleAnimationUsingKeyFrames 对象使按钮遵循矩形路径。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。类似于图 14-6。[第 249 页]。
--   RovingWithPath — 显示一个遵循路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-8。[第 251 页]。
--   RovingWithSplines — 使用带有样条关键帧的 DoubleAnimationUsingKeyFrames 对象使按钮遵循矩形路径。按钮在跨越路径的每一侧时缓慢开始、加速，然后在角处减速。类似于图 14-6。[第 250 页]。
--   SoundEvents — 用户点击按钮或鼠标悬停在第二个按钮上时播放声音。[第 256 页]。
--   SpinButton — 使按钮在点击时旋转 360 度。演示了作为资源的 Storyboard。图 14-1。[第 237 页]。
--   SplineGraph — 显示带有控制点的样条曲线图。图 14-7。[第 249 页]。
+- ButtonResources — 显示类似按钮的矩形，与 ButtonValues 程序显示的类似，但它使用了 Resources 来使代码更具一致性。类似于图 13-1。[第第 213-215 页]。
+- ButtonStyles — 显示类似按钮的矩形，与 ButtonValues 程序显示的类似，但它使用了 Styles 来使代码更加简单且易于维护。类似于图 13-1。[第第 220, 221, 226, 229 页]。
+- Values — 通过为每个按钮选择单独的属性值来显示类似按钮的矩形。图 13-1。[第 213 页]。
+- ControlStyle — 使用各种 Styles 的两个 Buttons 和一个 Label。一个 Button 和 Label 共享相同的 Style。图 13-3。[第 220 页]。
+- ImageTriggers — 显示一组 Opacity = 0.5 的 Images 和 Labels。当 IsMouseOver 为 True 时，触发器会将 Opacity 更改为 1，并将控件的 LayoutTransform 属性设置为一个 ScaleTransform 对象，以放大控件。图 13-10。[第 231 页]。
+- InheritedStyles — 演示使用 BasedOn 关键字相互继承的 Styles。图 13-6。[第 226 页]。
+- IsActiveTrigger — 在 Window 的 IsActive 属性和 TextBox 的 Focused 属性上使用 Triggers。图 13-11。[第 233 页]。
+- MouseOverTriggers — 演示在 Button MouseOver 属性上使用 Triggers，以便在鼠标悬停时时放大 Button。图 13-8。[第 230 页]。
+- LabelAndRectangle — 显示共享相同 Style 的 Button、Label 和 Rectangle。图 13-4。[第 221 页]。
+- MenuMouseOverTriggers — 使用 MenuItem MouseOver 触发器来更改 MenuItem 的 LayoutTransform 和 BitmapEffect 属性。图 13-9。[第 231 页]。
+- RedRectangles — 使用命名样式来设置矩形的属性。图 13-2。[第 217 页]。
+- TextTriggers — 演示 TextBox 和 ComboBox Text 属性上的 Triggers 以高
+
+# 第 14 章
+
+第 14 章包含以下示例程序：
+
+- AnimatedText — 演示使用 StringUsingKeyFrames 对象使文本一次出现几个字符。图 14-10。[第 254 页]。
+- AnimationWithoutStories — 使用后台代码（code-behind）来动画 Ell 的 Canvas.Left 和 Canvas.Top 属性。图 14-12。[第 259 页]。
+- BouncingBall — 显示一个在接触“地面”时播放声音的跳球。演示了样曲线关键帧和 ParallelTimeline 对象以播放带有声音的反向动画。图 14-11。[第 258 页]。
+- CentralizedTriggers — 使用集中在 Canvas 中的 EventTriggers 来处理 Canvas 中控件发起的 MouseLeftButton 事件。图 14-2。[第 238 页]。
+- GrowingButtons — 演示了带有 Setters 的属性触发器、带有 Storyboards 的属性触发器以及带有 Storyboards 的事件触发器这三者的组合。图 14-4。[第 243 页]。
+- JumpingButton — 显示了一个动画单个控件属性的非常简单的 Storyboard 代码是有多复杂。[第 261 页]。
+- ToggleButton — 演示了一个在 EnterActions 和 ExitActions 部分中执行 Storyboards 的属性触发器。图 14-3。[第 242 页]。
+- RepeatingSound — 运行一个播放声音的动画。[第 257 页]。
+- RovingButton — 显示一个遵循矩形路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-6。[第 248 页]。
+- RovingDiscrete — 显示一个离散跳转遵循矩形路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。类似于图 14-6。[第 251 页]。
+- RovingMixedKeyFrames — 使用线性关键帧、离散关键帧、路径动画和简单的线性动画使 Button 遵循路径。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-9。[第 252 页]。
+- RovingWithKeyFrames — 使用带有线性关键帧的 DoubleAnimationUsingKeyFrames 对象使按钮遵循矩形路径。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。类似于图 14-6。[第 249 页]。
+- RovingWithPath — 显示一个遵循路径的 Button。演示了启动、暂停、恢复、停止和移除 Storyboard 的方法。图 14-8。[第 251 页]。
+- RovingWithSplines — 使用带有样条关键帧的 DoubleAnimationUsingKeyFrames 对象使按钮遵循矩形路径。按钮在跨越路径的每一侧时缓慢开始、加速，然后在角处减速。类似于图 14-6。[第 250 页]。
+- SoundEvents — 用户点击按钮或鼠标悬停在第二个按钮上时播放声音。[第 256 页]。
+- SpinButton — 使按钮在点击时旋转 360 度。演示了作为资源的 Storyboard。图 14-1。[第 237 页]。
+- SplineGraph — 显示带有控制点的样条曲线图。图 14-7。[第 249 页]。
 
 # 第 15 章
 
 第 15 章包含以下示例程序：
 
--   BetterLabelTemplate — 演示尊重客户端 Background、BorderBrush、BorderThickness、HorizontalAlignment 和 VerticalContentAlignment 属性的 Label 温度。图 15-3。[第 266 页]。
--   DisabledLabelTemplate — 演示当 Label 禁用时显示多行文本和独特外观的 Label 温度。图 15-5。[第 268 页]。
--   EllipseButton — 演示对正常、禁用默认按钮使用不同外观的椭圆形 Button。鼠标悬停在按钮上时使用动画显示“闪烁”高亮。图 15-9 到 15-12。[第 275–277 页]。
--   GlassButton — 演示对正常、禁用和默认按钮使用不同外观的半透明 Button。图 15-6 到 15-8。[第 270–271 页]。
--   InterestingLabelTemplates — 演示两个 Label 温度——一个显示边框，另一个显示多行文本。图 15-4。[第 266 页]。
--   ShowTemplate — 显示控件默认模板的 XAML 代码。图 15-13。[第 281 页]。
--   SimpleLabelTemplate — 演示带有预设画刷的简单 Label 温度。图 15-2。[第 265 页]。
--   SliderParts — 此程序仅显示一个 Slider，很容易看到它的部分。图 15-1。[第 263 页]。
+- BetterLabelTemplate — 演示尊重客户端 Background、BorderBrush、BorderThickness、HorizontalAlignment 和 VerticalContentAlignment 属性的 Label 温度。图 15-3。[第 266 页]。
+- DisabledLabelTemplate — 演示当 Label 禁用时显示多行文本和独特外观的 Label 温度。图 15-5。[第 268 页]。
+- EllipseButton — 演示对正常、禁用默认按钮使用不同外观的椭圆形 Button。鼠标悬停在按钮上时使用动画显示“闪烁”高亮。图 15-9 到 15-12。[第 275–277 页]。
+- GlassButton — 演示对正常、禁用和默认按钮使用不同外观的半透明 Button。图 15-6 到 15-8。[第 270–271 页]。
+- InterestingLabelTemplates — 演示两个 Label 温度——一个显示边框，另一个显示多行文本。图 15-4。[第 266 页]。
+- ShowTemplate — 显示控件默认模板的 XAML 代码。图 15-13。[第 281 页]。
+- SimpleLabelTemplate — 演示带有预设画刷的简单 Label 温度。图 15-2。[第 265 页]。
+- SliderParts — 此程序仅显示一个 Slider，很容易看到它的部分。图 15-1。[第 263 页]。
 
 # 第 16 章
 
 第 16 章包含以下示例程序：
 
--   AnimatedSkins — 通过动画属性值让用户切换皮肤，使用户看到一种皮肤变成另一种。图 16-9 到 16-11。[第 295-296 页]。
--   OrderTracking — 使用资源字典为不同的用户显示三种皮肤之一。图 16-7。[第 289 页]。
--   ShowThemes — 使用 RelativeSource = FindAncestor 的绑定显示 Aero、Luna 和 Royale 主题。图 16-1 和 16-3。[第 284 页]。
--   SkinInterfaces — 让用户在运行时加载 XAML 来切换皮肤。图 16-12。[第 298 页]。
--   Skins — 让用户在运行时加载资源文件来切换皮肤。图 16-8。[第 293 页]。
-
-
-
-
+- AnimatedSkins — 通过动画属性值让用户切换皮肤，使用户看到一种皮肤变成另一种。图 16-9 到 16-11。[第 295-296 页]。
+- OrderTracking — 使用资源字典为不同的用户显示三种皮肤之一。图 16-7。[第 289 页]。
+- ShowThemes — 使用 RelativeSource = FindAncestor 的绑定显示 Aero、Luna 和 Royale 主题。图 16-1 和 16-3。[第 284 页]。
+- SkinInterfaces — 让用户在运行时加载 XAML 来切换皮肤。图 16-12。[第 298 页]。
+- Skins — 让用户在运行时加载资源文件来切换皮肤。图 16-8。[第 293 页]。
 
 PersonSource2 — 使用了将 DataContext 设置为 Person 对象的绑定，以便控件共享该上下文。Person 类定义在后置代码中，并在 XAML 代码中创建。类似于图 18-2。[第 323 页]。
 
@@ -18213,11 +16477,8 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 19 章包含以下示例：
 
 - CommandTarget — 展示了具有特定命令目标的命令对象。图 19-3。[第 351 页]。
-
 - DocumentCommands — 展示了预定义的面向文档的命令对象 `New`、`Open`、`SaveAs` 和 `Close`。图 19-4。[第 353 页]。
-
 - ImageControls — 展示了自定义 `UICommand` 对象。图 19-5。[第 356 页]。
-
 - TextBoxCommands — 展示了 TextBox 控件支持的预定义命令：`Copy`、`Paste`、`Undo` 和 `Redo`。图 19-2。[第 349 页]。
 
 ## 第 20 章
@@ -18225,17 +16486,11 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 20 章包含以下示例：
 
 - BevelEffects — 展示了 `BitmapEffect` 样式。图 20-5。[第 364 页]。
-
 - CombinedTransformations — 展示了组合的旋转和变换，并说明了变换顺序的重要性。图 20-2。[第 361 页]。
-
 - Effects — 展示了位图效果。图 20-4。[第 364 页]。
-
 - Games — 展示了变换以及比本章其他示例更有用的细微位图效果。图 20-7。[第 365 页]。
-
 - LayoutVsRender — 展示了 `LayoutTransform` 和 `RenderTransform` 属性之间的区别。图 20-3。[第 362 页]。
-
 - Transformations — 展示了旋转、缩放、平移和矩阵渲染变换。图 20-1。[第 360 页]。
-
 - TransparentEffects — 展示了未填充对象上的位图效果。图 20-6。[第 365 页]。
 
 ## 第 21 章
@@ -18243,11 +16498,8 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 21 章包含以下示例程序：
 
 - SimpleFixedDocument — 绘制一个包含四页形状的简单 `FixedDocument`。图 21-2。[第 371 页]。
-
 - SaveFixedDocument — 类似于 `SimpleFixedDocument` 程序，绘制一个简单的 `FixedDocument` 并将其保存为 XPS 文件。[第 372 页]。
-
 - ShowDocument — 绘制一个 `FlowDocument`，展示了许多流文档对象，包括 `BlockContainer`、`List`、`Paragraph`、`Figure`、`Floater`、`Run`、`Span` 和 `Table`。图 21-3 至 21-6。[第 373-375, 378 页]。
-
 - ViewFixedDocument — 加载在 Microsoft Word、WordPad 或其他应用程序外部创建的 XPS 文件。图 21-1。[第 369 页]。
 
 ## 第 22 章
@@ -18255,11 +16507,8 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 22 章包含以下示例程序：
 
 - FrameApp — 在 `Frame` 内部显示 `Page` 对象。图 22-5。[第 386 页]。
-
 - PageApp — 显示 `Pages`。后置代码使用 `NavigationService` 的 `Navigate` 方法在页面之间跳转并到 Web URL。图 22-3 和 22-4。[第 383, 384 页]。
-
 - PageBorder — 显示一个带有 `Border` 控件样式的 `Page`，以证明 `Page` 可以显示 `Border`。图 22-1。[第 380 页]。
-
 - PageDocument — 显示包含使用链接导航的 `FlowDocument` 的 `Pages`。图 22-2。[第 381 页]。
 
 ## 第 23 章
@@ -18267,29 +16516,17 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 23 章包含以下示例程序：
 
 - BarChart — 绘制一个三维柱状图。图 23-11。[第 403 页]。
-
 - CameraTypes — 使用透视正交相机显示同一个场景。图 23-6。[第 395 页]。
-
 - RibbonGraph — 绘制一个三维丝带图。图 23-12。[第 403 页]。
-
 - LabeledBarChart — 绘制一个每个柱体末端带有标签的三维柱状图。图 23-13。[第 404 页]。
-
 - Lights — 展示了 `AmbientLight`、`DirectionalLight`、`PointLight` 和 `Spotlight` 之间的区别。图 23-7。[第 397 页]。
-
 - MakeSurface — 绘制一个三维表面。图 23-14。[第 405 页]。
-
 - Materials — 展示了漫反射、高光和发光材质类型。图 23-9。[第 399 页]。
-
 - RectanglesAndBoxes — 展示了构建纹理矩形、箱体、圆柱和球体的后置代码例程。图 23-10。[第 401 页]。
-
 - SingleMeshSpheres — 绘制球体，使每个球体由单个 `MeshGeometry3D` 对象定义。图 23-4。[第 393 页]。
-
 - SpheresWithNormals — 绘制球体，其中每个球体都是独立的 `MeshGeometry3D` 对象，且没有显式法线。图 23-3。[第 392 页]。
-
 - Tetrahedrons — 展示了为什么需要许多光源才能产生真实的结果。图 23-8。[第 398 页]。
-
 - TexturedBlock — 绘制一个带有纹理的三维块。图 23-1。[第 387 页]。
-
 - TextureCoordinates — 展示了如何将坐标映射到 `MeshGeometry3D`。图 23-5。[第 393 页]。
 
 ## 第 24 章
@@ -18297,7 +16534,6 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 第 24 章包含以下示例：
 
 - BouncingBalls — 展示了变换以及本章其他示例更有用的细微位图效果。图 24-5。[第 412 页]。
-
 - SelectColor — 展示了未填充对象的位图效果。图 24-4。[第 410 页]。
 
 ## 附录 A
@@ -18311,7 +16547,6 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 附录 B 包含以下示例：
 
 - RotatedTabs — 显示带有旋转边的 `TabControl`。图 B-1。[第 454 页]。
-
 - ToolBars — 显示包含两个带的 `ToolBar`。图 B-2。[第 456 页]。
 
 ## 附录 C
@@ -18319,7 +16554,6 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 附录 C 包含以下示例：
 
 - SimpleRichEditor — 展示一个 `RichTextBox`，允许更改选定文本、大小和颜色。图 C-1。[第 479 页]。
-
 - UseFrame — 使用 `Frame` 在多个站点之间提供导航。[第 467 页]。
 
 ## 附录 D
@@ -18331,24 +16565,15 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 附录 E 包含以下示例：
 
 - StrokeDashes — 展示了 `StrokeDash` 值。图 E-2。[第 494 页]。
-
 - StrokeMiterLimit — 绘制一个定义了其 `StrokeMiter` 属性的 `Polygon`。图 E-1。[第 494 页]。## 附录 F
 
 附录 F 包含以下示例：
 
 - Brushes — 展示实色、线性渐变和径向渐变画刷。图 F-1。[第 496 页]。
-
 - RadialCenter — 展示了 `RadialGradientBrush` 的 `Center` 和 `GradientOrigin` 属性。图 F-3。[第 502 页]。
-
 - Reflections — 展示一个 `VisualBrush`，用于显示包含其他控件的 `StackPanel` 的反射。图 F-4。[第 504 页]。
-
 - SpreadMethods — 展示了不同的 `SpreadMethod` 值。图 F-2。[第 500 页]。
-
 - ViewportsAndViewboxes — 展示了被平铺画刷使用的 `viewport` 和 `viewbox`。图 F-5。[第 506 页]。
-
-
-
-
 
 - BareBonesLabel — 使用一种模板使 Label 包裹其文本，并在 IsEnabled 为 False 时显示不同的外观。[第 539–540 页]。
 - BareBonesProgressBar — 使用一种更改 ProgressBar 外观的模板。[第 541 页]。
@@ -18574,10 +16799,6 @@ TypeColor — 使用 `RelativeSource = Self` 的绑定让 TextBox 使用其内�
 - 名称属性大小和位置 (name attributes size and position): Size/position
 - 松弛和去抖 (Relaxed and Debounced), 186–189
 
-
-
-
-
 # 内容控制 – DirectX
 
 内容控制（续）
@@ -18665,8 +16886,7 @@ ListView, 92–94
 到 RelativeSource, 520
 源, 319–323
 目标和目标属性, 318–319
-使用 ListView/ComboBox
-模板, 523
+绑定模板, 523
 使用 TreeView 模板, 523–524
 XAML, 333–335
 XML, 335–338
@@ -18869,10 +17089,6 @@ Foreground 属性, 105
 GetPage, 311–312
 Glassbox 程序, 270
 Styles, 272–273
-
-
-
-
 
 # 图表 (graphs) – LabelAndRectStyle 属性
 
@@ -19122,14 +17338,14 @@ N
 - 基于导航的应用程序
 - 在 Expression Blend 中, 52–53
 - 322–333
-- 概述, 165
+- 概述, 379
 - 超链接, 381–382
 - OrgTreeView 属性, 329–392
 - 属性, 493–494
 - NavigationService, 382
 - OrgChartXML 属性, 334–355
 - Stroke, 166–167
-- 概述, 379
+- 概述, 367
 - OrgChartXML 属性, 336–337
 - DashArray, 169
 - Page 对象, 380–381
@@ -19161,13 +17377,11 @@ N
 - Z 索引, 170
 - 普通属性值,
 - PlacementTarget 属性, 84
-- 类型, 195
 - Plants 属性, 327–328
 - Normal Style, 272–273
 - PlantsLand 属性, 328–329
 - Normals 属性
 - PointLight, 398–396
-- MeshGeometry3D 以及, 391–393
 - Polygon
 - 向外方向以及, 389–391
 - 2D 绘图控制, 150
@@ -19183,9 +17397,6 @@ N
 - Popup 控制
 - ListNumber 属性, 325
 - 概述, 433–434
-
-
-
 
 # 定义命令 – 资源
 
@@ -19544,10 +17755,6 @@ in GradientOpacity Mask, 698–582
 - 总结, 234
 - 未命名的, 221–223, 224–536
 
-
-
-
-
 # 四面体程序 – 统一值
 
 ComboBox, 327–329, 523
@@ -19805,7 +18012,7 @@ Value属性, 140
 矢量图形, 13
 VerticalAlignment属性
 控制的, 61–64
-![](img/c9b2d394ff2f7e2766a0afa9c2f_623_0.png)
+![](img/c9b2d394ff2f7e276f6a0afa9c2f_623_0.png)
 
 非默认/手工事件处理器, 33
 概述, 21
@@ -19879,11 +18086,7 @@ FlowDocumentWriter类打印和, 311–315
 保存FixedDocuments, 372
 X:Type标记扩展, 216
 
-
-
-
-
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_625_0.png)
+![](img/c9b2d394f4fc2f7e276f6a0afa9c2f6_625_0.png)
 
 # 让您的书库随身携带。
 
@@ -19905,7 +18108,7 @@ X:Type标记扩展, 216
 - Web
 - XML
 
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_625_1.png)
+![](img/c9b2d394f4fc2f7e276f6a0afa9c2f6_625_1.png)
 
 www.wrox.com
 
@@ -19960,7 +18163,7 @@ Rod Stephens 是一位专业软件开发人员，在职业生涯中开发了各�
 
 Wrox 指南旨在让学习编程语言和技术比您想象的更简单。这些指南由程序员为程序员编写，提供了结构化的教程格式，引导您掌握所有的技术。
 
-![](img/c9b2d394f4fc2f7e276f6a0a6fa9c2f6_627_0.png)
+![](img/c9b2d394f4fc2f7e276f6a0afa9c2f6_627_0.png)
 
 # wrox.com.
 
@@ -19976,3 +18179,4 @@ Wrox 指南旨在让学习编程语言和技术比您想象的更简单。这些
 
 查找数百本书的文章、电子书、示例章节和目录，以及您关心的编程主题的更多参考资源。
 
+```

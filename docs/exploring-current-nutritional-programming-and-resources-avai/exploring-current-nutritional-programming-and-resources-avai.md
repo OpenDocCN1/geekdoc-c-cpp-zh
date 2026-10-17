@@ -1,15 +1,5 @@
+
 # 探索加拿大艾滋病毒或艾滋病患者可用的当前营养项目和资源：范围综述
-
-
-
-
-
-
-
-
-
-
-
 
 ## 摘要
 
@@ -57,9 +47,7 @@ HIV 治疗的基石是医疗营养治疗 (MNT)，该治疗已被加拿大营养�
 
 HIV 对“国内和全球健康、社会、政治和经济结果”产生了“重大影响”。2019 年加拿大报告了 2122 例新发 HIV 病例。此外，加拿大营养师协会和营养与饮食学会报告称，病毒病例在那些持续面临医疗护理获取障碍的人群中最高：30% (n = 626) 为移民，56% (n = 1193) 为 gbMSM，而约 25% (n = 531) 的新病例为原住民。值得注意的是，原住民占加拿大 2021 年总人口（约 3700 万）的 5% (n = 1,807,250)。
 
-Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全的食物的获取有限或不确定，或以社会可接受的方式获取可接受食物的能力有限或不确定。” 在加拿大和美国等高收入、高资源环境中，49% 至 71% (62,050 人中的 30,404 至 44,055 人) 的艾滋病毒感染者 (PLWH) 经历粮食不安全，这在很大程度上归因于社会经济地位。此外，PLWH 可能因其病理本身而经历一系列营养素缺乏，包括贫血、抗氧化剂耗竭或蛋白质-能量营养不良，直接影响营养状况和充足性，从而影响其粮食安全。例如，充足的热量、微量营养素和蛋白质摄入是管理症状的关键
-
-
+Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全的食物的获取有限或不确定，或以社会可接受的方式获取可接受食物的能力有限或不确定。” 在加拿大和美国等高收入、高资源环境中，49% 至 71% (62,050 人中的 30,404 至 44,055 人) 的艾滋病毒感染者 (PLWH) 经历粮食不安全，这在很大程度上归因于社会经济地位。此外，PLWH 可能因其病理本身而经历一系列营养素缺乏，包括贫血、抗氧化剂耗竭或蛋白质-能量营养不良，直接影响营养状况和充足性，从而影响其粮食安全。例如，充足的热量、微量营养素和蛋白质摄入是管理症状的关键。
 
 该人群营养相关免疫功能障碍的情况因人而异，且具有患者或个案特异性。¹ 落实到实践中，这可能意味着需要更高的热量和营养需求，而有限的收入或食物获取途径可能无法满足这些需求。
 
@@ -106,15 +94,13 @@ Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全�
 
 范围综述中纳入的64条结果的详细信息见附录IV。研究特征根据其与研究目标的关系进行记录，并包括完整引文。纳入结果的发表时间介于1993年至2021年之间。四条结果没有可用日期。按十年计，其余60条结果的发表年份分布如下：1990–1999年（n = 4；6.7%），2000–2009年（n = 5；8.3%），2010–2019年（n = 24；40%），以及2020–2021年（n = 27；45%）。如纳入标准所述，数据/证据项必须基于加拿大，并描述/讨论营养
 
-
-
 ![](img/8203ec9d73e5fc99da4150af520dc6ba_7_0.png)
 
 **图 2：加拿大各城市中已识别的针对艾滋病毒感染者的营养和食品项目及可用资源所在地图表（n = 25）**
 
 和针对 PLWH 的食品项目或资源。纳入的以下类型的数据/证据包括：服务提供者网站（n = 30；46.9%）、省和地区政府网站（n = 13；20.3%）、定性研究（包括队列和参与式研究；n = 6；9.4%）、叙述性综述和总结（n = 6；9.4%）、健康服务网站（包括健康诊所；n = 4；6.3%）、非随机实验研究（n = 2；3.1%）、横断面研究（n = 2；3.1%）以及需求评估论文（n = 1；1.6%）。我们已根据本次范围综述的目标对研究结果进行组织：i) 人群：PLWH，ii) 背景：加拿大，iii) 概念：可用的营养和食品项目。
 
-## *综述结果*
+## 综述结果
 
 ### 人群
 
@@ -132,6 +118,8 @@ Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全�
 
 结果显示，关于加拿大 PLWH 可用营养和食品项目的同行评审文献缺乏，因为大多数结果来自灰色文献（n = 47/64；73.4%）。这凸显了开展范围综述的重要性，因为许多政策制定者认为系统性范围综述提供了最强有力的证据。⁴⁵ 此外，政策制定者，如公共卫生部门和联邦政府，在收集政策相关证据时最常参考同行评审文献和原始研究。⁴⁵ 为了在政策层面做出任何干预，需要更多关于该主题的同行评审研究。灰色文献的结果表明，虽然加拿大各组织提供的项目在为 PLWH 提供营养和食品项目方面没有标准方法，但各省的方法和提供的支持之间存在相似之处。确定了四个关于已知服务的未来研究领域：i) 针对性项目有限，ii) 资源地理分布，iii) 提供的资源类型，iv) 资源/项目有效性与其对个体体验的关系。
 
+
+
 首先，已识别的项目中设计用于多元亚人群的数量有限。例如，许多妇女和儿童；原住民；跨性别和性别多元人群；以及黑人、非洲和加勒比人群有不同的需求需要解决。生活在 HIV 感染下的顺性别和跨性别女性，例如，需要创伤知情和性别安全的空间来获取食品服务。¹⁷ 黑人、非洲和加勒比人，如黑人艾滋病预防联盟（Black CAP）的客户，需要考虑种族主义、同性恋恐惧症和贫困等社会障碍的项目。⁴⁶ 尽管需求存在差异，只有 36% 的结果提供了针对性项目。这使得许多遭受边缘化的人群无法获得他们需要的特定资源。例如，本综述中识别的资源中只有 3% 针对原住民，尽管该人群在 2019 年占新 HIV 病例的近 25%。³ 多伦多的 Black CAP 是针对性资源的例子。他们的项目专注于为多伦多低收入黑人、非洲和加勒比家庭提供文化特定的基本食品。⁴⁶ 多伦多还设有安大略原住民 HIV/AIDS 策略（OAHAS），为安大略省城市的原住民、因纽特人、梅蒂斯人和无地位社区团体/组织/机构、学校和个人提供获取食物和住所的帮助。⁴⁷ OAHAS 在街道、社区、活动、战舞、机构进行外展，在矫正设施、医院、医疗中心和学校进行内展。这也表明大多数针对性项目是在大城市提供的。
 
 其次，大城市，如温哥华（n = 11/18；不列颠哥伦比亚省结果的 61%）和多伦多（n = 7/14；安大略省结果的 50%），被确定为其省份大部分资源所在地（见图 2 和图 3），这导致推测农村地区提供的资源可能较少。总体而言，这些地区识别出的项目涵盖了 PLWH 的广泛需求，为针对性人群提供不同资源。发现的资源大多由非营利组织、私人（营利）诊所和省级政府提供。例如，在不列颠哥伦比亚省，我们识别出 18 项结果，涵盖全部 6 个类别的项目，而在马尼托巴省我们识别出 2 项结果，涵盖 6 个类别中的 3 个，即慈善食品供应、营养护理和经济援助。由 Nine Circles 社区健康中心（非营利组织）、7th Street Access Centre（省级运营健康诊所）和温尼伯健康科学中心（省级医院）运营的马尼托巴 HIV 项目提供慈善食品供应和营养护理。⁴⁸ 虽然马尼托巴省识别出的资源不多，但 Nine Circles 等组织提供多种类型的项目（例如，紧急食品供应、营养师营养教育），可能能够针对需求不同的 PLWH。⁴⁸ 然而，仍有许多地区没有任何服务可用。资源较少难以覆盖大量受影响人群，可能导致项目资源紧张，无法满足需求。
@@ -141,10 +129,6 @@ Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全�
 ![](img/8203ec9d73e5fc99da4150af520dc6ba_8_0.png)
 
 **图 3：加拿大各省和地区可供艾滋病毒感染者使用的已识别营养和食品项目及资源图表（n = 76）**
-
-
-
-
 
 常见资源类型（10/76；13.2%）为食物和营养专业知识，其中包括为 PLWH 提供的营养指南和建议的 PDF 文件等项目（例如，能量消耗、微量营养素、膳食补充剂）。识别出的最不常见的资源是人群健康促进（9/76；11.8%），它将分享食物的社交方面与学习食物技能相结合，例如提供烹饪课程或社区晚餐。
 
@@ -170,8 +154,6 @@ Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全�
 
 在本范围综述的创建中，有几个优势值得注意。首先，我们拥有一个动态的研究团队，其背景包括但不限于营养学、应用人类营养学、护理学、人类学、2SLGBTQIA+ 营养与健康，以及黑人、原住民或有色人种研究。这种多重视角为综述提供了可能在研究团队仅限于一个研究领域时无法获得的深度。通过 DJM 技术进行的社区咨询也为本综述提供了来自与 PLWH 合作的社区成员和服务提供者的额外反馈层，使综述能够更全面地报告加拿大 PLWH 可用的食物和营养资源。研究团队和社区投入到本综述中的时间和关怀
 
-
-
 加拿大营养和食物资源可用性对话的前沿。这超出了研究范畴，延伸到实践中。包容性且承认该患者群体及其需求多样性的咨询和沟通至关重要。
 
 审查结果的传播一直是形成性的（例如，社区会议、咨询）并且将继续如此。结果被用于构建后续的 3 个 FoodNOW 项目阶段，这些阶段已通过传统学术渠道传播，包括会议、论文和报告。创新方法，例如信息图表和短视频，根据受众（例如，资助者、学者、政府、PLWH、服务提供者）而定，也可能被采用。例如，我们已在整合知识转化（iKT）的背景下，通过 2022 年春季 KT Canada 科学会议的海报展示呈现了初步研究成果。⁵³ 我们还于 2023 年春季 KT 科学会议上以海报和口头报告的形式呈现了研究结果的需求评估摘要。⁵⁴ 与 PLWH 和其他社区成员分享本项目的学习成果以及数据将如何被使用/实施的计划，仍然是我们 iKT 目标的关键优先事项。
@@ -182,8 +164,6 @@ Anderson 对 *粮食不安全* 的广泛接受定义为“营养充足和安全�
 
 Erna-Snelgrove Clarke，Queen’s University 健康科学学院 JBI 培训师，JBI 综合系统评价培训项目，为 SG、MR、JM 和 YZ 提供了培训。Peter Stilwell，McGill University，对方案和检索策略提出了意见。
 
-
-
 ## 作者贡献
 
 SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检索策略。MR 和 SG 监督了 JM 和 YZ 的范围审查培训。所有作者都对审查提供了反馈。
@@ -191,62 +171,115 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 ## 参考文献
 
 - 1. Fields-Gardner C, Fergusson P. Position of the American Dietetic Association and Dietitians of Canada: nutrition intervention in the care of persons with human immunodeficiency virus infection. J Am Diet Assoc 2004;104(9):1425–41.
+
 - 2. Challacombe L. The epidemiology of HIV in Canada [internet]. Canadian AIDS Treatment Information Exchange (CATIE); 2021 [cited 2021 Jun 30]. Available from: https://www.catie.ca/the-epidemiology-of-hiv-in-canada.
+
 - 3. Haddad N, Robert A, Weeks A, Popovic N, Siu W, Archibald C. HIV in Canada—surveillance report, 2018. Can Commun Dis Rep 2019;45(12):304–12.
+
 - 4. Raymond J, Morrow K. Krause and Mahan’s food and the nutrition care process, 15th ed. Elsevier; 2021.
+
 - 5. HIV.gov. HIV care continuum [internet]. HIV.gov; 2022 [cited 2022 Nov 16]. Available from: https://www.hiv.gov/federal-response/policies-issues/hiv-aids-care-continuum.
+
 - 6. Statistics Canada. Indigenous population continues to grow and is much younger than the non-Indigenous population, although the pace of growth has slowed [internet]. Statistics Canada; 2022 [cited 2022 Nov 10]. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921a-eng.htm.
+
 - 7. Anderson SA, editor. Core indicators of nutritional state for difficult-to-sample populations. J Nutr 1990;120(Suppl 11):1555–598.
+
 - 8. Bekele T, Globerman J, Watson J, Jose-Boebridge M, Kennedy R, Hambly K, et al. Prevalence and predictors of food insecurity among people with HIV affiliated with AIDS service organizations in Ontario, Canada. AIDS Care 2018;30(5):663–71.
+
 - 9. Slater J, Qadar Z, Bewza J. Review of food and nutrition services provided by community-based organizations serving people with HIV in Canada. Can J Diet Pract Res 2015;76(2):97–9.
+
 - 10. Crenshaw K. On intersectionality: essential writings. The New Press; 2017.
-- 11. Nova Scotia Advisory Commission on AIDS, Collective Wisdom Solutions. Nova Scotia Advisory Commission on AIDS. Review of Nova Scotia Strategy on HIV/AIDS: looking back and moving forward full report [internet]. Nova Scotia Canada; 2014. Available from: https://novascotia.ca/aids/documents/Review-of-Nova-Scotia-Strategy-on-HIV-AIDS-Full-Report.pdf.
-- 12. Giliauskas D, Gogolishvili D. Rapid response service. Nutrition and HIV [internet]. The Ontario HIV Treatment Network 2018. Available from: https://www.ohtn.ca/?s=Rapid+response+service.+Nutrition+and+HIV+
+
+
+
+- 11. Nova Scotia Advisory Commission on AIDS, Collective Wisdom Solutions. Nova Scotia Advisory Commission on AIDS. Review of Nova Scotia Strategy on HIV/AIDS: looking back and moving forward full report [internet]. Nova Scotia Canada; 2014. Available from: `https://novascotia.ca/aids/documents/Review-of-Nova-Scotia-Strategy-on-HIV-AIDS-Full-Report.pdf`.
+
+- 12. Giliauskas D, Gogolishvili D. Rapid response service. Nutrition and HIV [internet]. The Ontario HIV Treatment Network 2018. Available from: `https://www.ohtn.ca/?s=Rapid+response+service.+Nutrition+and+HIV+`
+
 - 13. Miewald C, McCann E, Temenos C, McIntosh A. “I do my best to eat while I’m using”: mapping the foodscapes of people living with HIV/AIDS who use drugs. Soc Sci Med 2019;226:96–103.
+
 - 14. Miewald C, McCann E, McIntosh A, Temenos C. Food as harm reduction: barriers, strategies, and opportunities at the intersection of nutrition and drug-related harm. Crit Public Health 2018;28(5):586–95.
+
 - 15. O’Brien N, Palmer AK, Zhang W, Michelow W, Shen A, Roth E, et al. Social–structural factors associated with supportive service use among a cohort of HIV-positive individuals on antiretroviral therapy. AIDS Care 2013;25(8):937–47.
+
 - 16. Collins A, Parashar S, Hogg R, Fernando S, Worthington C, McDougall P, et al. Integrated HIV care and service engagement among people living with HIV who use drugs in a setting with a community-wide treatment-as a prevention initiative: a qualitative study in Vancouver, Canada. J Int AIDS Soc 2017;20:21407.
+
 - 17. Sernick A, Shannon K, Ranville F, Arora K, Magagula P, Shoveller J, et al. In the midst of plenty: experiences of food insecurity amongst women living with HIV in Vancouver, Canada. Health Soc Care Community 2022;30(1):e138–47.
+
 - 18. Roncarlo F, Adam C, Bisset S, Potvin L. Traditional and alternative community food security interventions in Montréal, Québec: different practices, different people. J Community Health 2014;40(2):199–207.
+
 - 19. Miewald C, Ibanez-Carrasco F, Turner S. Negotiating the local food environment: the lived experience of food access for low-income people living with HIV/AIDS. J Hunger Environ Nutr 2010;5(4):510–25.
+
 - 20. Tarasuk V, Eakin JM. Charitable food assistance as symbolic gesture: an ethnographic study of food banks in Ontario. Soc Sci Med 2003;56(7):1505–15.
-- 21. Tarasuk V, Mitchell A, Tarasuk V, Mitchell A. Household food insecurity in Canada, 2017-18 [internet]. Toronto: research to identify policy options to reduce food insecurity (PROOF). PROOF; 2020. Available from: https://proof.utoronto.ca/resource/household-food-insecurity-in-canada-2017-2018/.
+
+- 21. Tarasuk V, Mitchell A, Tarasuk V, Mitchell A. Household food insecurity in Canada, 2017-18 [internet]. Toronto: research to identify policy options to reduce food insecurity (PROOF). PROOF; 2020. Available from: `https://proof.utoronto.ca/resource/household-food-insecurity-in-canada-2017-2018/`.
+
 - 22. Tarasuk V, Fafard St. Germain A, Loopstra R. The relationship between food banks and food insecurity: insights from Canada. Int J Volunt Nonprofit Org 2019;31:841–52.
-- 23. Academy of Nutrition and Dietetics. The nutrition care process (NCP) [internet]. Electronic nutrition care process terminology. eNCPT; 2022 [cited 2021 Jul 15]. Available from: https://www.ncpro.org/nutrition-care-process.
-- 24. Government of Canada. About the Non-Insured Health Benefits program [internet]. Government of Canada; 2021 [cited 2021 Oct 4]. Available from: https://www.sac-isc.gc.ca/eng/1576790320164/1576790364553.
-- 25. Government of Canada. Canada’s health care system [internet]. Government of Canada; n.d. [cited 2021 Sep 28]. Available from: https://www.canada.ca/en/health-canada/services/health-care-system/reports-publications/health-care-system/canada.html.
+
+- 23. Academy of Nutrition and Dietetics. The nutrition care process (NCP) [internet]. Electronic nutrition care process terminology. eNCPT; 2022 [cited 2021 Jul 15]. Available from: `https://www.ncpro.org/nutrition-care-process`.
+
+- 24. Government of Canada. About the Non-Insured Health Benefits program [internet]. Government of Canada; 2021 [cited 2021 Oct 4]. Available from: `https://www.sac-isc.gc.ca/eng/1576790320164/1576790364553`.
+
+- 25. Government of Canada. Canada’s health care system [internet]. Government of Canada; n.d. [cited 2021 Sep 28]. Available from: `https://www.canada.ca/en/health-canada/services/health-care-system/reports-publications/health-care-system/canada.html`.
+
 - 26. Mckay F, Lippi K, Dunn M. Investigating responses to food insecurity among HIV positive people in resource rich settings: a systematic review. J Community Health 2017;42(5):1062–8.
+
 - 27. Fielden S, Anema A, Fergusson P, Muldoon K, Grede N, De Pee S. Measuring food and nutrition security: tools and considerations for use among people living with HIV. AIDS Behav 2014;18(S5):490–504.
+
 - 28. Holmes K, Bertozzi B, Bloom B, Prabhat J. Major infectious diseases Disease control priorities, 3rd ed. Vol 6. Washington, DC: World Bank; 2017.
-- 29. Technical Working Group on Human Resources for Health (HRH) and Universal Access (UA) Global Health Workforce Alliance (GHWA). Will we achieve universal access to HIV/AIDS services with the health workforce we have? A snapshot from five countries [internet]. Global Health Workforce Alliance; 2010 [cited 2021 Sep 28]. Formerly available from: https://www.who.int/workforcealliance/about/taskforces/access/universalaccesslitrev_en.pdf?ua=1.
+
+- 29. Technical Working Group on Human Resources for Health (HRH) and Universal Access (UA) Global Health Workforce Alliance (GHWA). Will we achieve universal access to HIV/AIDS services with the health workforce we have? A snapshot from five countries [internet]. Global Health Workforce Alliance; 2010 [cited 2021 Sep 28]. Formerly available from: `https://www.who.int/workforcealliance/about/taskforces/access/universalaccesslitrev_en.pdf?ua=1`.
+
 - 30. Israel B, Coombe C, Cheezum R, Schulz A, McGranaghan R, Lichtenstein R, et al. Community-based participatory research: a capacity-building approach for policy advocacy aimed at eliminating health disparities. Am J Public Health 2010;100(11):2094–102.
-- 31. Activating Change Together for Community Food Security: Knowledge Mobilization Working Group. Knowledge mobilization in participatory action research: a synthesis of the literature [internet]. FoodARC Mount Saint Vincent University; 2014 [cited 2021 Nov 9]. Available from: https://foodarc.ca/wp-content/uploads/2014/09/ACT-for-CFS-Knowledge-Mobilization-in-PAR-Jan-2014.pdf.
+
+- 31. Activating Change Together for Community Food Security: Knowledge Mobilization Working Group. Knowledge mobilization in participatory action research: a synthesis of the literature [internet]. FoodARC Mount Saint Vincent University; 2014 [cited 2021 Nov 9]. Available from: `https://foodarc.ca/wp-content/uploads/2014/09/ACT-for-CFS-Knowledge-Mobilization-in-PAR-Jan-2014.pdf`.
+
 - 32. Graham I, Logan J, Harrison M, Straus S, Tetroe J, Caswell W, et al. Lost in knowledge translation: time for a map? J Contin Educ Health Prof 2006;26(1):13–24.
+
 - 33. Peters MDJ, Godfrey C, McInerney P, Munn Z, Tricco A, Khalil H. Chapter 11: Scoping Reviews. In: Aromataris E, Munn Z, editors. JBI Manual for Evidence Synthesis.
 
-
-
-
 - 34. Peters MDJ, Marnie C, Tricco A, Pollock D, Munn Z, Alexander L, *等*. 范围综述实施的最新方法学指导. JBI Evid Synth 2020;18(10):2119–26.
+
 - 35. Tricco A, Lillie E, Zarin W, O’Brien K, Colquhoun H, Levac D, *等*. 范围综述的PRISMA扩展（PRISMA-ScR）：清单与说明. Ann Intern Med 2018;169(7):467–73.
+
 - 36. Mannette J, Zhang Y, Rothfus M, Purdy C, Tesfatsion W, Lynch M, *等*. 探讨加拿大HIV/AIDS感染者可获得的最新营养方案与资源：范围综述方案. JBI Evid Synth 2022;20(11):2781–9.
+
 - 37. Page M, McKenzie J, Bossuyt P, Boutron I, Hoffmann T, Mulrow C, *等*. PRISMA 2020声明：报告系统评价的最新指南. BMJ 2021;372:n71.
+
 - 38. Arksey H, O’Malley L. 范围研究：迈向方法学框架. Int J Soc Res Methodol 2005;8(1):19–32.
+
 - 39. Pollock D, Alexander L, Munn Z, Peters MDJ, Khalil H, Godfrey CM, *等*. 在范围综述中从咨询转变为与知识用户共同创造：JBI范围综述方法学组的指导. JBI Evid Synth 2022;20(4):969–79.
+
 - 40. Joseph R, Joseph C. 与土著人民有效合作（第4版）. Indigenous Relations Press; 2017.
+
 - 41. McKenna H. 德尔菲法：一种值得采用的护理研究方法？. J Adv Nurs 1994;19(6):1221–5.
+
 - 42. Green R. 教育研究中的德尔菲法. SAGE Open 2014;4(2).
+
 - 43. Hemming J, Lordly D, Granville T, Corby L, Thirsk J. 制定访谈指南以评估营养学实践证据：德尔菲法的应用. Can J Diet Pract Res 2011;72(4):186–90.
+
 - 44. Williams P, Webb C. 德尔菲法：一种适应性研究工具. Br J Occup Ther 1994;61(4):153–6.
+
 - 45. Brownson R, Chriqui J, Stamatakis K. 理解基于证据的公共卫生政策. Am J Public Health 2009;99(9):1576–83.
-- 46. Black Coalition for AIDS Prevention (Black CAP). AYA项目 [互联网]. Black CAP; 2021 [引用日期：2021年8月24日]. 获取网址：https://blackcap.ca/programs-services/the-aya-project/.
-- 47. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). 外展与支持服务 [互联网]. OAHAS; 2019 [引用日期：2021年8月24日]. 获取网址：https://www.oahas.org/outreach-support-services.html.
-- 48. Manitoba HIV Program: Nine Circles Community Health Centre. 马尼托巴省HIV项目 [互联网]. Nine Circles Community Health Clinic; 2021 [引用日期：2021年8月24日]. 获取网址：https://mbhiv.ca/.
-- 49. AIDS Committee of Toronto (ACT). HIV [互联网]. ACT; 2021 [引用日期：2021年8月24日]. 获取网址：https://www.actoronto.org/health-information/hiv?resourceID=84.
-- 50. HIV/AIDS Resources and Community Health (ARCH). 支持服务概览 [互联网]. ARCH; 2021 [引用日期：2021年8月24日]. 获取网址：https://archguelph.ca/.
-- 51. Partnership for Dietetic Education and Practice (PDEP). 饮食学教育与实践的整合能力（ICDEP） [互联网]. The Alliance of Canadian Regulatory Bodies, Dietitians of Canada and Canadian academic and practicum dietetic education programs; 2020 [引用日期：2021年11月9日]. 获取网址：https://www.pdep.ca/library/PDEP-Policies/Integrated-Competencies-For-Dietetic-Education-And.aspx.
-- 52. Statistics Canada. 图4：新斯科舍省在各省中15至34岁人群的性别多样性最高 [互联网]. Statistics Canada; 2022 [引用日期：2022年11月14日]. 获取网址：https://www150.statcan.gc.ca/n1/daily-quotidien/2024/27/cg-b004-eng.htm.
+
+- 46. Black Coalition for AIDS Prevention (Black CAP). AYA项目 [互联网]. Black CAP; 2021 [引用日期：2021年8月24日]. 获取网址：`https://blackcap.ca/programs-services/the-aya-project/`.
+
+- 47. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). 外展与支持服务 [互联网]. OAHAS; 2019 [引用日期：2021年8月24日]. 获取网址：`https://www.oahas.org/outreach-support-services.html`.
+
+- 48. Manitoba HIV Program: Nine Circles Community Health Centre. 马尼托巴省HIV项目 [互联网]. Nine Circles Community Health Clinic; 2021 [引用日期：2021年8月24日]. 获取网址：`https://mbhiv.ca/`.
+
+- 49. AIDS Committee of Toronto (ACT). HIV [互联网]. ACT; 2021 [引用日期：2021年8月24日]. 获取网址：`https://www.actoronto.org/health-information/hiv?resourceID=84`.
+
+- 50. HIV/AIDS Resources and Community Health (ARCH). 支持服务概览 [互联网]. ARCH; 2021 [引用日期：2021年8月24日]. 获取网址：`https://archguelph.ca/`.
+
+- 51. Partnership for Dietetic Education and Practice (PDEP). 饮食学教育与实践的整合能力（ICDEP） [互联网]. The Alliance of Canadian Regulatory Bodies, Dietitians of Canada and Canadian academic and practicum dietetic education programs; 2020 [引用日期：2021年11月9日]. 获取网址：`https://www.pdep.ca/library/PDEP-Policies/Integrated-Competencies-For-Dietetic-Education-And.aspx`.
+
+
+
+- 52. Statistics Canada. 图4：新斯科舍省在各省中15至34岁人群的性别多样性最高 [互联网]. Statistics Canada; 2022 [引用日期：2022年11月14日]. 获取网址：`https://www150.statcan.gc.ca/n1/daily-quotidien/2024/27/cg-b004-eng.htm`.
+
 - 53. Mannette J, Zhang Y, Rothfus M, Purdy C, Lynch M, Hamilton-Hinch B, *等*. FoodNOW项目：探讨加拿大HIV/AIDS感染者可获得的最新营养方案与资源. KT Canada Scientific Meeting; 2022.
+
 - 54. Grant S, Mannette J, Acholonu GC, Clarke A, Purdy C, Zhang Y, *等*. 新斯科舍省HIV/AIDS感染者可获得的营养与食品项目现在需要我们提供更多：FoodNOW项目结题需求评估摘要. KT Canada Scientific Meeting; 2023.
 
 ## 附录I：检索策略
@@ -256,109 +289,174 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 检索日期：2021年7月14日
 
 | 序号 | 检索式 | 检索结果 |
+
 |---:|---|---:|
-| 1 | (MH "Human Immunodeficiency Virus") OR (MH "HIV Education") OR (MH "HIV-Positive Persons+") | 23,987 |
-| 2 | TI ("human immunodeficiency virus" OR "HIV") OR AB ("human immunodeficiency virus" OR "HIV") | 98,009 |
-| 3 | (MH "Acquired Immunodeficiency Syndrome") | 17,195 |
-| 4 | TI ("Acquired Immunodeficiency Syndrome" OR "AIDS") OR AB ("Acquired Immunodeficiency Syndrome" OR "AIDS") | 46,939 |
-| 5 | (MH "Food Assistance") | 1,489 |
-| 6 | (MH "Food Security") | 3,629 |
-| 7 | (MH "Nutrition") | 29,177 |
-| 8 | (MH "Food Habits") | 14,576 |
-| 9 | (MH "Diet") | 58,747 |
-| 10 | (MH "Education") OR (MH "Patient Education") | 78,446 |
-| 11 | (MH "Teaching") OR (MH "Seminars and Workshops") | 26,457 |
-| 12 | (MH "Pamphlets") | 3,513 |
-| 13 | (MH "Webinars") | 1,416 |
-| 14 | (MH "Information Resources") | 80,628 |
-| 15 | TI ((food OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop* OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR advice OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource* OR intervention*)) OR AB ((food OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop* OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource* OR intervention*)) | 91,181 |
-| 16 | (MH "Nutrition Services+") OR (MH "Nutrition Education") | 12,114 |
-| 17 | (MH "Canada+") | 106,068 |
-| 18 | TX (Canada OR Canadian* OR Newfoundland* OR Labrador* OR "Nova Scotia*" OR "New Brunswick*" OR "Prince Edward Island*" OR "PEI" OR Quebec* OR Ontari* OR Manitoba* OR Saskatchewan OR Alberta* OR "British Columbia*" OR "BC" OR Yukon OR "Northwest Territories" OR "NWT" OR Nunavut) | 546,164 |
-| 19 | 1 OR 2 OR 3 OR 4 | 128,881 |
-| 20 | 5 OR 6 OR 7 OR 8 OR 9 | 96,853 |
-| 21 | 10 OR 11 OR 12 OR 13 OR 14 | 184,316 |
-| 22 | 20 AND 21 | 3,872 |
-| 23 | 15 OR 16 OR 22 | 99,321 |
-| 24 | 17 OR 18 | 546,164 |
-| 25 | 19 AND 23 AND 24 | 128 |
+
+| 1 | `(MH "Human Immunodeficiency Virus") OR (MH "HIV Education") OR (MH "HIV-Positive Persons+")` | 23,987 |
+
+| 2 | `TI ("human immunodeficiency virus" OR "HIV") OR AB ("human immunodeficiency virus" OR "HIV")` | 98,009 |
+
+| 3 | `(MH "Acquired Immunodeficiency Syndrome")` | 17,195 |
+
+| 4 | `TI ("Acquired Immunodeficiency Syndrome" OR "AIDS") OR AB ("Acquired Immunodeficiency Syndrome" OR "AIDS")` | 46,939 |
+
+| 5 | `(MH "Food Assistance")` | 1,489 |
+
+| 6 | `(MH "Food Security")` | 3,629 |
+
+| 7 | `(MH "Nutrition")` | 29,177 |
+
+| 8 | `(MH "Food Habits")` | 14,576 |
+
+| 9 | `(MH "Diet")` | 58,747 |
+
+| 10 | `(MH "Education") OR (MH "Patient Education")` | 78,446 |
+
+| 11 | `(MH "Teaching") OR (MH "Seminars and Workshops")` | 26,457 |
+
+| 12 | `(MH "Pamphlets")` | 3,513 |
+
+| 13 | `(MH "Webinars")` | 1,416 |
+
+| 14 | `(MH "Information Resources")` | 80,628 |
+
+| 15 | `TI ((food OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop* OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR advice OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource* OR intervention*)) OR AB ((food OR nutrit* OR nutrient* OR eat* OR diet* OR grocer* OR meal* OR breakfast* OR lunch* OR dinner* OR supper* OR snack*) N5 (servic* OR educat* OR teach* OR learn* OR program* OR pamphlet* OR brochure* OR website* OR handout* OR instruct* OR session* OR class* OR info* OR workshop* OR discuss* OR poster* OR conversat* OR meet* OR webinar* OR module* OR seminar* OR tutor* OR advis* OR advice OR guid* OR initiative* OR scheme* OR strateg* OR plan* OR project* OR presentation* OR counsel* OR direct* OR instruct* OR suggest* OR recommend* OR help* OR resource* OR intervention*))` | 91,181 |
+
+| 16 | `(MH "Nutrition Services+") OR (MH "Nutrition Education")` | 12,114 |
+
+| 17 | `(MH "Canada+")` | 106,068 |
+
+| 18 | `TX (Canada OR Canadian* OR Newfoundland* OR Labrador* OR "Nova Scotia*" OR "New Brunswick*" OR "Prince Edward Island*" OR "PEI" OR Quebec* OR Ontari* OR Manitoba* OR Saskatchewan OR Alberta* OR "British Columbia*" OR "BC" OR Yukon OR "Northwest Territories" OR "NWT" OR Nunavut)` | 546,164 |
+
+| 19 | `1 OR 2 OR 3 OR 4` | 128,881 |
+
+| 20 | `5 OR 6 OR 7 OR 8 OR 9` | 96,853 |
+
+| 21 | `10 OR 11 OR 12 OR 13 OR 14` | 184,316 |
+
+| 22 | `20 AND 21` | 3,872 |
+
+| 23 | `15 OR 16 OR 22` | 99,321 |
+
+| 24 | `17 OR 18` | 546,164 |
+
+| 25 | `19 AND 23 AND 24` | 128 |
 
 ### MEDLINE (Ovid)
 
 检索日期：2021年7月14日
 
 | 序号 | 检索式 | 检索结果 |
+
 |---:|---|---:|
-| 1 | exp HIV/ | 102,232 |
-| 2 | exp HIV Infections/ | 293,942 |
-| 3 | (Human Immunodeficiency Virus or "HIV" or Acquired Immunodeficiency Syndrome or "AIDS").ab,kf,kw,ti. | 427,815 |
-| 4 | Food Security/ | 148 |
-| 5 | Food Assistance/ | 1,351 |
-| 6 | Diet/ or Diet, Healthy/ | 172,961 |
-| 7 | education/ or teaching/ | 70,154 |
-| 8 | Patient Education as Topic/ | 87,067 |
-| 9 | pamphlets/ or teaching materials/ | 10,090 |
-| 10 | ((food or nutrit* or nutrient* or eat* or diet* or grocer* or meal* or breakfast* or lunch* or dinner* or supper* or snack*) adj6 (servic* or educat* or teach* or learn* or program* or pamphlet* or brochure* or website* or handout* or instruct* or session* or class* or info* or workshop* or discuss* or poster* or conversat* or meet* or webinar* or module* or seminar* or tutor* or advis* or advice or advice or guid* or initiative* or scheme* or strateg* or plan* or project* or presentation* or counsel* or direct* or instruct* or suggest* or recommend* or help* or resource* or intervention*)).ab,kf,kw,ti. | 237,902 |
-| 11 | exp Nutrition Therapy/ | 105,780 |
-| 12 | exp Canada/ | 166,900 |
-| 13 | (Canada or Canadian* or Newfoundland* or Labrador* or "Nova Scotia*" or "New Brunswick*" or "Prince Edward Island*" or "PEI" or Quebec* or Ontario* or Manitoba* or Saskatchewan or Alberta* or "British Columbia*" or "BC" or Yukon or "Northwest Territories" or "NWT" or Nunavut).ab,ja,jw,kf,kw,npl,ti. | 434,612 |
-| 14 | 1 or 2 or 3 | 464,639 |
-| 15 | 4 or 5 or 6 | 174,065 |
-| 16 | 7 or 8 or 9 | 161,844 |
-| 17 | 15 and 16 | 1,496 |
-| 18 | 10 or 11 or 17 | 325,585 |
-| 19 | 12 or 13 | 477,462 |
-| 20 | 14 and 18 and 19 | 75 |
 
+| 1 | `exp HIV/` | 102,232 |
 
+| 2 | `exp HIV Infections/` | 293,942 |
 
+| 3 | `(Human Immunodeficiency Virus or "HIV" or Acquired Immunodeficiency Syndrome or "AIDS").ab,kf,kw,ti.` | 427,815 |
 
-*学术搜索 Premier (EBSCO)*
+| 4 | `Food Security/` | 148 |
+
+| 5 | `Food Assistance/` | 1,351 |
+
+| 6 | `Diet/ or Diet, Healthy/` | 172,961 |
+
+| 7 | `education/ or teaching/` | 70,154 |
+
+| 8 | `Patient Education as Topic/` | 87,067 |
+
+| 9 | `pamphlets/ or teaching materials/` | 10,090 |
+
+| 10 | `((food or nutrit* or nutrient* or eat* or diet* or grocer* or meal* or breakfast* or lunch* or dinner* or supper* or snack*) adj6 (servic* or educat* or teach* or learn* or program* or pamphlet* or brochure* or website* or handout* or instruct* or session* or class* or info* or workshop* or discuss* or poster* or conversat* or meet* or webinar* or module* or seminar* or tutor* or advis* or advice or advice or guid* or initiative* or scheme* or strateg* or plan* or project* or presentation* or counsel* or direct* or instruct* or suggest* or recommend* or help* or resource* or intervention*)).ab,kf,kw,ti.` | 237,902 |
+
+| 11 | `exp Nutrition Therapy/` | 105,780 |
+
+| 12 | `exp Canada/` | 166,900 |
+
+| 13 | `(Canada or Canadian* or Newfoundland* or Labrador* or "Nova Scotia*" or "New Brunswick*" or "Prince Edward Island*" or "PEI" or Quebec* or Ontario* or Manitoba* or Saskatchewan or Alberta* or "British Columbia*" or "BC" or Yukon or "Northwest Territories" or "NWT" or Nunavut).ab,ja,jw,kf,kw,npl,ti.` | 434,612 |
+
+| 14 | `1 or 2 or 3` | 464,639 |
+
+| 15 | `4 or 5 or 6` | 174,065 |
+
+| 16 | `7 or 8 or 9` | 161,844 |
+
+| 17 | `15 and 16` | 1,496 |
+
+| 18 | `10 or 11 or 17` | 325,585 |
+
+| 19 | `12 or 13` | 477,462 |
+
+| 20 | `14 and 18 and 19` | 75 |
+
+### 学术搜索 Premier (EBSCO)
+
 检索日期：2021年7月14日
 
 |  | 检索式 | 检索结果数 |
-|---:|---|---:|
-| 1 | DE “HIV 感染” OR DE “艾滋病” OR DE “HIV” | 113,780 |
-| 2 | TI ((“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) OR AB (“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”)) | 247,440 |
-| 3 | (((DE “食品银行”) AND (DE “食品救济” OR DE “食品券” OR DE “施食处”) OR (DE “食物保障”)) AND (DE “营养” OR DE “饮食” OR DE “饮食习惯” OR DE “饥饿”)) | 1,390 |
-| 4 | (((((DE “教育” OR DE “健康教育”) AND (DE “教具” OR DE “教育资源” OR DE “健康教育辅助设备” OR DE “媒体节目（教育）” OR DE “印刷材料”) OR (DE “患者教育”)) OR (DE “小册子”)) OR (DE “网络研讨会”)) OR DE “成人教育研讨会”) | 38,590 |
-| 5 | TI (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) N5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 顾问 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) OR AB (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) N5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 顾问 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) | 277,296 |
-| 6 | DE “营养服务” | 500 |
-| 7 | DE “加拿大省份” | 623 |
-| 8 | TX (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特) | 2,433,126 |
-| 9 | 1 OR 2 | 260,461 |
-| 10 | 3 AND 4 | 6 |
-| 11 | 5 OR 6 OR 10 | 277,460 |
-| 12 | 7 OR 8 | 2,433,126 |
-| 13 | 9 AND 11 AND 12 | 210 |
 
-## Scopus
+|---:|---|---:|
+
+| 1 | `DE “HIV 感染” OR DE “艾滋病” OR DE “HIV”` | 113,780 |
+
+| 2 | `TI ((“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) OR AB (“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”))` | 247,440 |
+
+| 3 | `(((DE “食品银行”) AND (DE “食品救济” OR DE “食品券” OR DE “施食处”) OR (DE “食物保障”)) AND (DE “营养” OR DE “饮食” OR DE “饮食习惯” OR DE “饥饿”))` | 1,390 |
+
+| 4 | `(((((DE “教育” OR DE “健康教育”) AND (DE “教具” OR DE “教育资源” OR DE “健康教育辅助设备” OR DE “媒体节目（教育）” OR DE “印刷材料”) OR (DE “患者教育”)) OR (DE “小册子”)) OR (DE “网络研讨会”)) OR DE “成人教育研讨会”)` | 38,590 |
+
+| 5 | `TI (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) N5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 顾问 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) OR AB (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) N5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 顾问 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*))` | 277,296 |
+
+| 6 | `DE “营养服务”` | 500 |
+
+| 7 | `DE “加拿大省份”` | 623 |
+
+| 8 | `TX (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特)` | 2,433,126 |
+
+| 9 | `1 OR 2` | 260,461 |
+
+| 10 | `3 AND 4` | 6 |
+
+| 11 | `5 OR 6 OR 10` | 277,460 |
+
+| 12 | `7 OR 8` | 2,433,126 |
+
+| 13 | `9 AND 11 AND 12` | 210 |
+
+### Scopus
+
 检索日期：2021年7月14日
 
 | 检索式 | 检索结果数 |
-|---|---|
-| (TITLE-ABS (“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) AND TITLE-ABS (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) W/5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) AND AFFIL (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特) OR TITLE-ABS (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特)) | 223 |
 
-## 社会服务摘要 (ProQuest)
+|---|---|
+
+| `(TITLE-ABS (“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) AND TITLE-ABS (((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) W/5 (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) AND AFFIL (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特) OR TITLE-ABS (加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特))` | 223 |
+
+### 社会服务摘要 (ProQuest)
+
 检索日期：2021年7月14日
 
 |  | 检索式 | 检索结果数 |
+
 |---:|---|---:|
-| 1 | MAINSUBJECT.EXACT.EXPLODE(“获得性免疫缺陷综合征” OR ab(“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) OR ti(“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”)) | 23,878 |
-| 2 | (MAINSUBJECT.EXACT(“饮食”) OR MAINSUBJECT.EXACT(“饥饿”) OR MAINSUBJECT.EXACT(“营养”) OR MAINSUBJECT.EXACT(“食物”) AND MAINSUBJECT.EXACT(“教学”) OR MAINSUBJECT.EXACT(“学习”) OR MAINSUBJECT.EXACT(“知识”) OR MAINSUBJECT.EXACT(“教育”)) | 90 |
-| 3 | ti((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) AND (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) OR ab((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) AND (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) | 6786 |
-| 4 | 加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特 | 36,101 |
-| 5 | 2 OR 3 | 6799 |
-| 6 | 1 AND 4 AND 5 | 60 |
+
+| 1 | `MAINSUBJECT.EXACT.EXPLODE(“获得性免疫缺陷综合征” OR ab(“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”) OR ti(“人类免疫缺陷病毒” OR “HIV” OR “获得性免疫缺陷综合征” OR “艾滋病”))` | 23,878 |
+
+
+
+| 2 | `(MAINSUBJECT.EXACT(“饮食”) OR MAINSUBJECT.EXACT(“饥饿”) OR MAINSUBJECT.EXACT(“营养”) OR MAINSUBJECT.EXACT(“食物”) AND MAINSUBJECT.EXACT(“教学”) OR MAINSUBJECT.EXACT(“学习”) OR MAINSUBJECT.EXACT(“知识”) OR MAINSUBJECT.EXACT(“教育”))` | 90 |
+| 3 | `ti((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) AND (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*)) OR ab((食物 OR 营养* OR 营养素* OR 进食* OR 膳食* OR 杂货* OR 餐* OR 早餐* OR 午餐* OR 晚餐* OR 晚饭* OR 零食*) AND (服务* OR 教育* OR 教学* OR 学习* OR 项目* OR 小册子* OR 宣传册* OR 网站* OR 讲义* OR 指导* OR 课程* OR 课堂* OR 信息* OR 工作坊* OR 讨论* OR 海报* OR 对话* OR 会议* OR 网络研讨会* OR 模块* OR 研讨会* OR 辅导* OR 建议* OR 建议 OR 建议 OR 指南* OR 倡议* OR 方案* OR 策略* OR 计划* OR 项目* OR 演示* OR 咨询* OR 引导* OR 指导* OR 建议* OR 推荐* OR 帮助* OR 资源* OR 干预*))` | 6786 |
+| 4 | `加拿大 OR 加拿大* OR 纽芬兰* OR 拉布拉多* OR “新斯科舍*” OR “新不伦瑞克*” OR “爱德华王子岛*” OR “PEI” OR 魁北克* OR 安大略* OR 马尼托巴* OR 萨斯喀彻温 OR 阿尔伯塔* OR “不列颠哥伦比亚*” OR “BC” OR 育空 OR “西北地区” OR “NWT” OR 努纳武特` | 36,101 |
+| 5 | `2 OR 3` | 6799 |
+| 6 | `1 AND 4 AND 5` | 60 |
 
 | 日期 | 灰色文献数据库名称与网址 | 检索策略/检索词，包括（如适用）条目的筛选方式 | 检索到的条目数/检索结果数 | 纳入综述的条目数 |
 |---|---|---|---|---|
-| 2021年8月24日 | Google.com（高级搜索） | **用于检索的布尔短语：** “（人类免疫缺陷病毒）” OR (“HIV”) OR (“获得性免疫缺陷综合征”) OR (“艾滋病”) OR (“HIV 感染者”) OR (“食品援助”) OR (“食品计划”) OR (“食物保障”) OR (“营养”) OR (“饮食习惯”) OR (“膳食”) OR (“研讨会”) OR (“教育”)<br>**选择地区：** 加拿大<br>**检索策略：** 导入前 12 页结果中列出的所有结果<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 143 条已检索并筛选 | 29 |
-| 2021年10月5日 | Google.com | **使用的检索词：** “新斯科舍省 HIV/艾滋病特殊膳食津贴”<br>**检索策略：** 手工检索以获取新斯科舍省遗漏的结果。已检索网站：<br>https://novascotia.ca<br>https://nshealth.ca/<br>https://steppingstones.ca/<br>https://nechc.com<br>https://nhnsociety.ca<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 6 条已筛选 | 6 |
-| 2021年10月15日 | Google.com | **使用的检索词：** “[省/地区] 收入补助特殊膳食津贴”<br>**检索策略：** 手工检索以获取省级政府网站的结果。已检索网站：<br>www.gov.nl.ca<br>www.princeedwardisland.ca<br>www2.gnb.ca<br>https://www.quebec.ca/<br>www.mcss.gov.on.ca<br>www.gov.mb.ca<br>www.saskdisc.ca<br>www.humanservices.alberta.ca<br>www2.gov.bc.ca<br>www.ece.gov.nt.ca<br>www.gov.nu.ca<br>https://laws.yukon.ca/cms/<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 12 条已筛选 | 12 |
-
-
-
+| 2021年8月24日 | Google.com（高级搜索） | **用于检索的布尔短语：** `“（人类免疫缺陷病毒）” OR (“HIV”) OR (“获得性免疫缺陷综合征”) OR (“艾滋病”) OR (“HIV 感染者”) OR (“食品援助”) OR (“食品计划”) OR (“食物保障”) OR (“营养”) OR (“饮食习惯”) OR (“膳食”) OR (“研讨会”) OR (“教育”)`<br>**选择地区：** 加拿大<br>**检索策略：** 导入前 12 页结果中列出的所有结果<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 143 条已检索并筛选 | 29 |
+| 2021年10月5日 | Google.com | **使用的检索词：** `“新斯科舍省 HIV/艾滋病特殊膳食津贴”`<br>**检索策略：** 手工检索以获取新斯科舍省遗漏的结果。已检索网站：<br>`https://novascotia.ca`<br>`https://nshealth.ca/`<br>`https://steppingstones.ca/`<br>`https://nechc.com`<br>`https://nhnsociety.ca`<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 6 条已筛选 | 6 |
+| 2021年10月15日 | Google.com | **使用的检索词：** `“[省/地区] 收入补助特殊膳食津贴”`<br>**检索策略：** 手工检索以获取省级政府网站的结果。已检索网站：<br>`www.gov.nl.ca`<br>`www.princeedwardisland.ca`<br>`www2.gnb.ca`<br>`https://www.quebec.ca/`<br>`www.mcss.gov.on.ca`<br>`www.gov.mb.ca`<br>`www.saskdisc.ca`<br>`www.humanservices.alberta.ca`<br>`www2.gov.bc.ca`<br>`www.ece.gov.nt.ca`<br>`www.gov.nu.ca`<br>`https://laws.yukon.ca/cms/`<br>**筛选：** 检索到的所有结果均由 2 名评审员进行相关性审查。 | 12 条已筛选 | 12 |
 
 ## 附录二：全文审查后不符合纳入标准的文献
 
@@ -374,11 +472,11 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 
 *排除原因：* 未聚焦于HIV感染者群体
 
-- 4. Apple. Apple扩大与RED的合作以抗击HIV/AIDS和COVID-19 [互联网]. Apple Newsroom; 2020 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.apple.com/ca/newsroom/2020/12/apple-expands-partnership-with-red-to-combat-hiv-aids-and-covid-19/.
+- 4. Apple. Apple扩大与RED的合作以抗击HIV/AIDS和COVID-19 [互联网]. Apple Newsroom; 2020 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.apple.com/ca/newsroom/2020/12/apple-expands-partnership-with-red-to-combat-hiv-aids-and-covid-19/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 5. AVI Health and Community Services. HIV/AIDS [互联网]. AVI Health and Community Services; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: http://avi.org.
+- 5. AVI Health and Community Services. HIV/AIDS [互联网]. AVI Health and Community Services; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `http://avi.org`.
 
 *排除原因：* 重复
 
@@ -386,19 +484,19 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 7. BC Centre for Disease Control. 人类免疫缺陷病毒（HIV） [互联网]. BCCDC; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: http://www.bccdc.ca/health-professionals/clinical-resources/case-definitions/human-immunodeficiency-virus-(hiv).
+- 7. BC Centre for Disease Control. 人类免疫缺陷病毒（HIV） [互联网]. BCCDC; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `http://www.bccdc.ca/health-professionals/clinical-resources/case-definitions/human-immunodeficiency-virus-(hiv)`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 8. BC Centre for Excellence in HIV/AIDS. 关于我们 [互联网]. BC Centre for Excellence in HIV/AIDS; 2009 [引用日期 2021年8月24日]. 可从以下网址获取: http://bccef.ca/about-us.
+- 8. BC Centre for Excellence in HIV/AIDS. 关于我们 [互联网]. BC Centre for Excellence in HIV/AIDS; 2009 [引用日期 2021年8月24日]. 可从以下网址获取: `http://bccef.ca/about-us`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 9. Bergeron-Oliver A, Jones AM. 尽管有有效的治疗方案，污名仍然围绕着HIV/AIDS [互联网]. CTV News; 2019 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.ctvnews.ca/health/stigma-still-surrounds-hiv-aids-despite-effective-treatment-options-1.4710834.
+- 9. Bergeron-Oliver A, Jones AM. 尽管有有效的治疗方案，污名仍然围绕着HIV/AIDS [互联网]. CTV News; 2019 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.ctvnews.ca/health/stigma-still-surrounds-hiv-aids-despite-effective-treatment-options-1.4710834`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 10. Boklaschuk S. 萨省大学教授发表加拿大首部关于家庭生活与HIV/AIDS的全长民族志 [互联网]. University of Saskatchewan; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://news.usask.ca/articles/colleges/2021/usask-professor-publishes-first-full-length-ethnography-on-family-life-and-hivaids-in-canada.php.
+- 10. Boklaschuk S. 萨省大学教授发表加拿大首部关于家庭生活与HIV/AIDS的全长民族志 [互联网]. University of Saskatchewan; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://news.usask.ca/articles/colleges/2021/usask-professor-publishes-first-full-length-ethnography-on-family-life-and-hivaids-in-canada.php`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
@@ -410,216 +508,181 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 13. Canada Helps. 向AIDS/HIV慈善机构和基金会捐款 [互联网]. Canada Helps; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.canadahelps.org/en/explore/charities/category/health/sub-category/aids-hiv/
+- 13. Canada Helps. 向AIDS/HIV慈善机构和基金会捐款 [互联网]. Canada Helps; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.canadahelps.org/en/explore/charities/category/health/sub-category/aids-hiv/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 14. Canadian Aboriginal AIDS Network (CAAN). 共同终结加拿大的HIV：我们准备好了！ [互联网]. CAAN; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://caan.ca/events-and-workshops-calendar/ending-hiv-in-canada-together-were-ready/.
+- 14. Canadian Aboriginal AIDS Network (CAAN). 共同终结加拿大的HIV：我们准备好了！ [互联网]. CAAN; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://caan.ca/events-and-workshops-calendar/ending-hiv-in-canada-together-were-ready/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 15. Canadian Association for HIV Research. CAHR 2022 [互联网]. CAHR; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.cahr-acrv.ca/conference/.
+- 15. Canadian Association for HIV Research. CAHR 2022 [互联网]. CAHR; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.cahr-acrv.ca/conference/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 16. Canadian Association of Social Workers. HIV/AIDS中的社会工作实践 [互联网]. CASW; 2011 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.casw-acts.ca/en/social-work-practice-hivaids.
+- 16. Canadian Association of Social Workers. HIV/AIDS中的社会工作实践 [互联网]. CASW; 2011 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.casw-acts.ca/en/social-work-practice-hivaids`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 17. Canadian Association of University Teachers. 人类免疫缺陷病毒（HIV）/获得性免疫缺陷综合征（AIDS） [互联网]. CAUT; 2011 [修订于2021；引用日期 2021年8月24日]. 可从以下网址获取: https://www.caut.ca/about-us/caut-policy/lists/caut-policy-statements/policy-statement-on-human-immunodeficiency-virus-%28hiv%29-acquired-immunodeficiency-syndrome-%28aids%29.
+- 17. Canadian Association of University Teachers. 人类免疫缺陷病毒（HIV）/获得性免疫缺陷综合征（AIDS） [互联网]. CAUT; 2011 [修订于2021；引用日期 2021年8月24日]. 可从以下网址获取: `https://www.caut.ca/about-us/caut-policy/lists/caut-policy-statements/policy-statement-on-human-immunodeficiency-virus-%28hiv%29-acquired-immunodeficiency-syndrome-%28aids%29`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 18. Canadian Blood Services. 背景资料：献血者检测 - 人类免疫缺陷病毒（HIV） [互联网]. Canadian Blood Services; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.blood.ca/en/about-us/media/hiv/backgrounder-donor-testing-human-immunodeficiency-virus-hiv.
+- 18. Canadian Blood Services. 背景资料：献血者检测 - 人类免疫缺陷病毒（HIV） [互联网]. Canadian Blood Services; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.blood.ca/en/about-us/media/hiv/backgrounder-donor-testing-human-immunodeficiency-virus-hiv`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 19. Canadian Cancer Society. 人类免疫缺陷病毒（HIV） [互联网]. Canadian Cancer Society; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.cancer.ca/en/prevention-and-screening/reduce-cancer-risk/make-informed-decisions/get-vaccinated/human-immunodeficiency-virus-hiv/?region=sk.
+- 19. Canadian Cancer Society. 人类免疫缺陷病毒（HIV） [互联网]. Canadian Cancer Society; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.cancer.ca/en/prevention-and-screening/reduce-cancer-risk/make-informed-decisions/get-vaccinated/human-immunodeficiency-virus-hiv/?region=sk`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 20. Canadian Centre for Occupational Health and Safety. 工作场所中的HIV/AIDS：职业安全与健康解答 [互联网]. Government of Canada; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.ccohs.ca/oshanswers/diseases/aids/aids.html.
+- 20. Canadian Centre for Occupational Health and Safety. 工作场所中的HIV/AIDS：职业安全与健康解答 [互联网]. Government of Canada; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.ccohs.ca/oshanswers/diseases/aids/aids.html`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 21. Canadian Foundation for AIDS Research. HIV/AIDS的历史 [互联网]. CANFAR; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://canfar.com/awareness/about-hiv-aids/history-of-hiv-aids/.
+- 21. Canadian Foundation for AIDS Research. HIV/AIDS的历史 [互联网]. CANFAR; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://canfar.com/awareness/about-hiv-aids/history-of-hiv-aids/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 22. Canadian HIV and Viral Hepatitis Pharmacists Network. 概述 [互联网]. CHAP; 2017 [引用日期 2021年8月24日]. 可从以下网址获取: https://hivclinic.ca/chap/.
+- 22. Canadian HIV and Viral Hepatitis Pharmacists Network. 概述 [互联网]. CHAP; 2017 [引用日期 2021年8月24日]. 可从以下网址获取: `https://hivclinic.ca/chap/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 57. Government of Ontario. HIV和AIDS [互联网]. Government of Ontario, Ministry of Health and Long-Term Care; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.health.gov.on.ca/en/pro/programs/hivaids/.
+- 57. Government of Ontario. HIV和AIDS [互联网]. Government of Ontario, Ministry of Health and Long-Term Care; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.health.gov.on.ca/en/pro/programs/hivaids/`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 58. Government of Ontario. HIV/AIDS检测与治疗 [互联网]. Government of Ontario; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.ontario.ca/page/hivaids-tests-and-treatment.
+- 58. Government of Ontario. HIV/AIDS检测与治疗 [互联网]. Government of Ontario; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.ontario.ca/page/hivaids-tests-and-treatment`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 59. Government of Quebec. HIV/AIDS. Government of Quebec; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.itss.gouv.qc.ca/hiv-aids.html.
+- 59. Government of Quebec. HIV/AIDS. Government of Quebec; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.itss.gouv.qc.ca/hiv-aids.html`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 60. Government of Saskatchewan. HIV检测、治疗和支持 [互联网]. Government of Saskatchewan; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing.
+- 60. Government of Saskatchewan. HIV检测、治疗和支持 [互联网]. Government of Saskatchewan; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing`.
 
 *排除原因：* 重复
 
-- 61. Groupe Proxim. HIV AIDS [互联网]. Groupe Proxim; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.groupeproxim.ca/en/article/hiv-aids.
+- 61. Groupe Proxim. HIV AIDS [互联网]. Groupe Proxim; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.groupeproxim.ca/en/article/hiv-aids`.
 
 *排除原因：* 未聚焦于营养和食品项目
 
-- 62. Haregu TN, Setswe G, Elliott J, Oldenburg B. 发展中国家对HIV/AIDS和非传染性疾病的国家应对：战略相似性与差异性的分析 [互联网]. Longwoods; 2014 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.longwoods.com/content/24033/national-responses-to-hiv-aids-and-non-communicable-diseases-in-developing-countries-analysis-of-st.
 
-*排除原因：* 不属于加拿大背景
 
+- 62. Haregu TN, Setswe G, Elliott J, Oldenburg B. 发展中国家对HIV/AIDS和非传染性疾病的国家应对：战略相似性与差异性的分析 [互联网]. Longwoods; 2014 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.longwoods.com/content/24033/national-responses-to-hiv-aids-and-non-communicable-diseases-in-developing-countries-analysis-of-st`.
+
+  *排除原因：* 不属于加拿大背景
 - 63. Haregu TN, Setswe G, Elliott J, Oldenburg B. 发展中国家对HIV/AIDS和非传染性疾病的国家应对：战略相似性与差异性的分析. J Public Health Res. 2014;3(1):99.
 
-*排除原因：* 重复
-
+  *排除原因：* 重复
 - 64. Hatsu I, Hadee E, Campa A. 粮食安全状况与HIV感染者的心理健康生活质量相关. AIDS Behav. 2017;21(3):745–53.
 
-*排除原因：* 不属于加拿大背景
+  *排除原因：* 不属于加拿大背景
+- 65. Healing Our Nation. HIV/AIDS [互联网]. HON; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: `https://hon93.ca/hiv-aids/`.
 
-- 65. Healing Our Nation. HIV/AIDS [互联网]. HON; 无日期 [引用日期 2021年8月24日]. 可从以下网址获取: https://hon93.ca/hiv-aids/.
+  *排除原因：* 未聚焦于营养和食品项目
+- 66. Health Research BC. British Columbia Centre for Excellence in HIV/AIDS [互联网]. Health Research BC; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://www.msfhr.org/1/partner/bc-centre-for-excellence-in-hiv-aids`.
 
-*排除原因：* 未聚焦于营养和食品项目
+  *排除原因：* 重复
+- 67. Health Sciences North. HAVEN [互联网]. Health Sciences North; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: `https://hsnsudbury.ca/en/Services-and-Specialties/HAVEN`.
 
-- 66. Health Research BC. British Columbia Centre for Excellence in HIV/AIDS [互联网]. Health Research BC; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://www.msfhr.org/1/partner/bc-centre-for-excellence-in-hiv-aids.
+  *排除原因：* 重复
+- 116. Queen’s University. HIV/AIDS [internet]. Queen’s University; n.d. [cited 2021 Aug 24]. Available from: `https://www.queensjournal.ca/tags/hivaids/`. [No longer available]
 
-*排除原因：* 重复
+  *排除原因：* 未聚焦于营养和食物项目
+- 117. Regional HIV/AIDS Connection. Get the facts about HIV/AIDS and hepatitis C [internet]. Regional HIV/AIDS Connection; n.d [cited 2021 Aug 24]. Available from: `https://www.hivaidsconnection.ca/get-facts-about-hivaids-and-hepatitis-c`.
 
-- 67. Health Sciences North. HAVEN [互联网]. Health Sciences North; 2021 [引用日期 2021年8月24日]. 可从以下网址获取: https://hsnsudbury.ca/en/Services-and-Specialties/HAVEN.
+  *排除原因：* 未聚焦于营养和食物项目
+- 118. Saskatchewan Prevention Institute. HIV/AIDS [internet]. Saskatchewan Prevention Institute; n.d. [cited 2021 Aug 24]. Available from: `https://skprevention.ca/sexual-health/hiv-aids/`.
 
-*排除原因：* 重复
+  *排除原因：* 未聚焦于营养和食物项目
+- 119. Saskatoon Tribal Council. SHARP – Saskatoon HIV / AIDS Reduction (in harm) Program [internet]. STC; n.d. [cited 2021 Aug 24]. Available from: `https://www.stc.sk.ca/programs-services/health/stc-health-centre-services/sharp-saskatoon-hiv-aids-reduction-in-harm-program/`. [No longer available]
 
+  *排除原因：* 未聚焦于营养和食物项目
+- 120. Saudny-Unterberg H, Gary-Donald K. RD intervention improved nutritional status. J Am Dietetic Assoc. 1995;95(4):412.
 
+  *排除原因：* 未聚焦于营养和食物项目
+- 121. Schulich School of Medicine and Dentistry. World AIDS Day: top 5 myths about HIV/AIDS [internet]. Schulich School of Medicine and Dentistry; n.d. [cited 2021 Aug 24]. Available from: `https://www.schulich.uwo.ca/about/news/2017/december/world_aids_day_top_5_myths_about_hivaids.html`.
 
+  *排除原因：* 未聚焦于营养和食物项目
+- 122. Seek and Treat for Optimal Prevention (STOP). About us [internet]. STOP; n.d. [cited 2021 Aug 24]. Available from: `https://stophivaids.ca/`.
 
-116. Queen’s University. HIV/AIDS [internet]. Queen’s University; n.d. [cited 2021 Aug 24]. Available from: https://www.queensjournal.ca/tags/hivaids/. [No longer available]
+  *排除原因：* 未聚焦于营养和食物项目
+- 123. Segal-Isaacson CJ, Tobin JN, Weiss SM, Brondolo E, Vaughn A, Wang C, et al. Improving dietary habits in disadvantaged women with HIV/AIDS: The SMART/EST women’s project. AIDS Behav. 2006;10(6):659-70.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 不在加拿大背景内
+- 124. Sex and U. HIV [internet]. Sex & U; 2021 [cited 2021 Aug 24]. Available from: `https://www.sexandu.ca/stis/hiv/`.
 
-117. Regional HIV/AIDS Connection. Get the facts about HIV/AIDS and hepatitis C [internet]. Regional HIV/AIDS Connection; n.d [cited 2021 Aug 24]. Available from: https://www.hivaidsconnection.ca/get-facts-about-hivaids-and-hepatitis-c.
+  *排除原因：* 未聚焦于营养和食物项目
+- 125. Sexual Health Ontario. HIV and AIDS [internet]. Sexual Health Ontario; 2021 [cited 2021 Aug 24]. Available from: `https://sexualhealthontario.ca/en/hiv-aids`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 未聚焦于营养和食物项目
+- 127. Simcoe Muskoka Health Stats. HIV/AIDS [internet]. Simcoe Muskoka Health Stats; 2021 [cited 2021 Aug 24]. Available from: `https://www.simcoemuskokahealthstats.org/topics/infectious-diseases/a-h/hiv-aids`.
 
-118. Saskatchewan Prevention Institute. HIV/AIDS [internet]. Saskatchewan Prevention Institute; n.d. [cited 2021 Aug 24]. Available from: https://skprevention.ca/sexual-health/hiv-aids/.
+  *排除原因：* 未聚焦于营养和食物项目
+- 128. Simcoe Muskoka Health. Acquired immunodeficiency syndrome (AIDS/HIV) [internet]. Simcoe Muskoka Health; 2017 [cited 2021 Aug 24]. Available from: `https://www.simcoemuskokahealth.org/JFY/HPPortal/PCPCategories/InfectiousDiseases/Disease-of-Public-Health-Significance/Acquired-Immunodeficiency-Syndrome-(AIDS-HIV)`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 重复
+- 129. Singer A, Weiser SD, Mccoy SI. Dose food insecurity undermine adherence to antiretroviral therapy? A systematic review. AIDS Behav. 2015;19(5):1510-26.
 
-119. Saskatoon Tribal Council. SHARP – Saskatoon HIV / AIDS Reduction (in harm) Program [internet]. STC; n.d. [cited 2021 Aug 24]. Available from: https://www.stc.sk.ca/programs-services/health/stc-health-centre-services/sharp-saskatoon-hiv-aids-reduction-in-harm-program/. [No longer available]
+  *排除原因：* 未聚焦于营养和食物项目
+- 130. Singhal N, Austin J. A clinical review of micronutrients in HIV infection. J Int Assoc Phys AIDS Care. 2002;1(2):63-75.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 不在加拿大背景内
+- 131. Smithson SL, Snider JJ, Krentz HB, Gill MJ. Initiatives implemented to improve the utilization of nutrition services by HIV-infected patients followed at a regional HIV center. J Am Dietetic Assoc Suppl. 2007;107:A33.
 
-120. Saudny-Unterberg H, Gary-Donald K. RD intervention improved nutritional status. J Am Dietetic Assoc. 1995;95(4):412.
+  *排除原因：* 会议摘要
+- 132. Stradling C, Yen-Fu C, Russell T, Connock M, Thomas G, Taheri S. The effects of dietary intervention on HIV dyslipidaemia: a systematic review and meta-analysis. PLoS ONE. 2012;7(6):e38121.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 不在加拿大背景内
+- 133. Strike C, Rudzinski K, Patterson J, Millson M. Frequent food insecurity among injection drug users: correlates and concerns. BMC Public Health. 2012;12(1):1058.
 
-121. Schulich School of Medicine and Dentistry. World AIDS Day: top 5 myths about HIV/AIDS [internet]. Schulich School of Medicine and Dentistry; n.d. [cited 2021 Aug 24]. Available from: https://www.schulich.uwo.ca/about/news/2017/december/world_aids_day_top_5_myths_about_hivaids.html.
+  *排除原因：* 未聚焦于PLWH或AIDS人群
+- 134. The Communication Initiative Network. HIV/AIDS [internet]. The Communication Initiative Network; n.d. [cited 2021 Aug 24]. Available from: `https://www.comminit.com/hiv-aids/category/sites/global/hiv-aids`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 不在加拿大背景内
+- 135. The Conversation. Articles on HIV/AIDS [internet]. The Conversation; 2021 [cited 2021 Aug 24]. Available from: `https://theconversation.com/ca/topics/hiv-aids-11623`.
 
-122. Seek and Treat for Optimal Prevention (STOP). About us [internet]. STOP; n.d. [cited 2021 Aug 24]. Available from: https://stophivaids.ca/.
+  *排除原因：* 不在加拿大背景内
+- 136. The Windsor-Essex County Health Unit. HIV (AIDS) [internet]. The Windsor-Essex County Health Unit; 2021 [cited 2021 Aug 24]. Available from: `https://www.wechu.org/sexual-health/hiv-aids`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 未聚焦于营养和食物项目
+- 137. Thomas A. CRACKCast E132 – HIV Infection and AIDS [internet]. 2017 [cited 2021 Aug 24]. (CRACKCast). Available from: `https://canadiem.org/crackcast-episode-132-hiv-aids/`.
 
-123. Segal-Isaacson CJ, Tobin JN, Weiss SM, Brondolo E, Vaughn A, Wang C, et al. Improving dietary habits in disadvantaged women with HIV/AIDS: The SMART/EST women’s project. AIDS Behav. 2006;10(6):659-70.
+  *排除原因：* 未聚焦于营养和食物项目
+- 139. Trellis HIV and Community Care. Get involved with Trellis HIV and Community Care [internet]. Trellis HIV and Community Care; 2021 [cited 2021 Aug 24]. Available from: `https://hars.ca/get-involved/`.
 
-*排除原因：* 不在加拿大背景内
+  *排除原因：* 未聚焦于营养和食物项目
+- 140. UNICEF Canada. HIV and AIDS [internet]. UNICEF Canada; n.d. [cited 2021 Aug 24]. Available from: `https://www.unicef.ca/en/blog/tags/hiv-aids`.
 
-124. Sex and U. HIV [internet]. Sex & U; 2021 [cited 2021 Aug 24]. Available from: https://www.sexandu.ca/stis/hiv/.
+  *排除原因：* 不在加拿大背景内
+- 141. University of Manitoba. New project to look at ethics behind epidemiological tools to curb HIV transmissions [internet]. University of Manitoba; n.d. [cited 2021 Aug 24]. Available from: `https://news.umanitoba.ca/new-project-to-look-at-ethics-behind-epidemiological-tools-to-curb-hiv-transmissions/`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 未聚焦于营养和食物项目
+- 142. Weiler AM, Hergesheimer C, Brisbois B, Wittman H, Yassi A, Spiegel JM. Food sovereignty, food security and health equity: a meta-narrative mapping exercise. Health Policy Planning. 2015;30(8):1078-92.
 
-125. Sexual Health Ontario. HIV and AIDS [internet]. Sexual Health Ontario; 2021 [cited 2021 Aug 24]. Available from: https://sexualhealthontario.ca/en/hiv-aids.
+  *排除原因：* 未聚焦于PLWH人群
+- 143. Where to. Positive Haven – Surrey HIV/AIDS Centre – HIV 411 [internet]. Where to; n.d. [cited 2021 Aug 24]. Available from: `https://whereto.catie.ca/listing/positive-haven-surrey-hivaids-centre`.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 重复
+- 144. White M, Conner KL. In utero HIV exposure and the early nutritional environment influence infant neurodevelopment: findings from an evidenced review and meta-analysis. Nutrients. 2020;12(1):1-28.
 
-127. Simcoe Muskoka Health Stats. HIV/AIDS [internet]. Simcoe Muskoka Health Stats; 2021 [cited 2021 Aug 24]. Available from: https://www.simcoemuskokahealthstats.org/topics/infectious-diseases/a-h/hiv-aids.
+  *排除原因：* 不在加拿大背景内
+- 145. Wing RR, Becofsky K, Wing EJ, McCaffery J, Boudreau M, Whitney E, et al. Behavioral and cardiovascular weight loss program for people living with HIV. AIDS Behav. 2020;24(2):1032-41.
 
-*排除原因：* 未聚焦于营养和食物项目
+  *排除原因：* 不在加拿大背景内
+- 146. Winick M, Andrassy RJ, Armstrong D, Bryan MA, Chandra RK, Kotler DP, et al. Guidelines for nutrition support in AIDS; task force on nutrition support in AIDS. Gastroenterol Nurs. 1989;12(1):28-36.
 
-128. Simcoe Muskoka Health. Acquired immunodeficiency syndrome (AIDS/HIV) [internet]. Simcoe Muskoka Health; 2017 [cited 2021 Aug 24]. Available from: https://www.simcoemuskokahealth.org/JFY/HPPortal/PCPCategories/InfectiousDiseases/Disease-of-Public-Health-Significance/Acquired-Immunodeficiency-Syndrome-(AIDS-HIV).
+  *排除原因：* 不在加拿大背景内
+- 147. Women and HIV/AIDS Initiative (WHAI). Welcome to WHAI [internet]. WHAI Toronto; 2020 [cited 2021 Aug 24]. Available from: `https://whai.ca/`.
 
-*排除原因：* 重复
+  *排除原因：* 未聚焦于营养和食物项目
+- 148. Women’s College Hospital. Women’s Health Matters - HIV/AIDS [internet]. Women’s College Hospital; n.d. [cited 2021 Aug 24]. Available from: `https://www.womenshealthmatters.ca/health-centres/sexual-health/infections-and-safer-sex/infections/hiv-aids`. [No longer available]
 
-129. Singer A, Weiser SD, Mccoy SI. Dose food insecurity undermine adherence to antiretroviral therapy? A systematic review. AIDS Behav. 2015;19(5):1510-26.
+  *排除原因：* 未聚焦于营养和食物项目
 
-*排除原因：* 未聚焦于营养和食物项目
 
-130. Singhal N, Austin J. A clinical review of micronutrients in HIV infection. J Int Assoc Phys AIDS Care. 2002;1(2):63-75.
-
-*排除原因：* 不在加拿大背景内
-
-131. Smithson SL, Snider JJ, Krentz HB, Gill MJ. Initiatives implemented to improve the utilization of nutrition services by HIV-infected patients followed at a regional HIV center. J Am Dietetic Assoc Suppl. 2007;107:A33.
-
-*排除原因：* 会议摘要
-
-132. Stradling C, Yen-Fu C, Russell T, Connock M, Thomas G, Taheri S. The effects of dietary intervention on HIV dyslipidaemia: a systematic review and meta-analysis. PLoS ONE. 2012;7(6):e38121.
-
-*排除原因：* 不在加拿大背景内
-
-133. Strike C, Rudzinski K, Patterson J, Millson M. Frequent food insecurity among injection drug users: correlates and concerns. BMC Public Health. 2012;12(1):1058.
-
-*排除原因：* 未聚焦于PLWH或AIDS人群
-
-134. The Communication Initiative Network. HIV/AIDS [internet]. The Communication Initiative Network; n.d. [cited 2021 Aug 24]. Available from: https://www.comminit.com/hiv-aids/category/sites/global/hiv-aids.
-
-*排除原因：* 不在加拿大背景内
-
-135. The Conversation. Articles on HIV/AIDS [internet]. The Conversation; 2021 [cited 2021 Aug 24]. Available from: https://theconversation.com/ca/topics/hiv-aids-11623.
-
-*排除原因：* 不在加拿大背景内
-
-136. The Windsor-Essex County Health Unit. HIV (AIDS) [internet]. The Windsor-Essex County Health Unit; 2021 [cited 2021 Aug 24]. Available from: https://www.wechu.org/sexual-health/hiv-aids.
-
-*排除原因：* 未聚焦于营养和食物项目
-
-137. Thomas A. CRACKCast E132 – HIV Infection and AIDS [internet]. 2017 [cited 2021 Aug 24]. (CRACKCast). Available from: https://canadiem.org/crackcast-episode-132-hiv-aids/.
-
-*排除原因：* 未聚焦于营养和食物项目
-
-139. Trellis HIV and Community Care. Get involved with Trellis HIV and Community Care [internet]. Trellis HIV and Community Care; 2021 [cited 2021 Aug 24]. Available from: https://hars.ca/get-involved/.
-
-*排除原因：* 未聚焦于营养和食物项目
-
-140. UNICEF Canada. HIV and AIDS [internet]. UNICEF Canada; n.d. [cited 2021 Aug 24]. Available from: https://www.unicef.ca/en/blog/tags/hiv-aids.
-
-*排除原因：* 不在加拿大背景内
-
-141. University of Manitoba. New project to look at ethics behind epidemiological tools to curb HIV transmissions [internet]. University of Manitoba; n.d. [cited 2021 Aug 24]. Available from: https://news.umanitoba.ca/new-project-to-look-at-ethics-behind-epidemiological-tools-to-curb-hiv-transmissions/.
-
-*排除原因：* 未聚焦于营养和食物项目
-
-142. Weiler AM, Hergesheimer C, Brisbois B, Wittman H, Yassi A, Spiegel JM. Food sovereignty, food security and health equity: a meta-narrative mapping exercise. Health Policy Planning. 2015;30(8):1078-92.
-
-*排除原因：* 未聚焦于PLWH人群
-
-143. Where to. Positive Haven – Surrey HIV/AIDS Centre – HIV 411 [internet]. Where to; n.d. [cited 2021 Aug 24]. Available from: https://whereto.catie.ca/listing/positive-haven-surrey-hivaids-centre.
-
-*排除原因：* 重复
-
-144. White M, Conner KL. In utero HIV exposure and the early nutritional environment influence infant neurodevelopment: findings from an evidenced review and meta-analysis. Nutrients. 2020;12(1):1-28.
-
-*排除原因：* 不在加拿大背景内
-
-145. Wing RR, Becofsky K, Wing EJ, McCaffery J, Boudreau M, Whitney E, et al. Behavioral and cardiovascular weight loss program for people living with HIV. AIDS Behav. 2020;24(2):1032-41.
-
-*排除原因：* 不在加拿大背景内
-
-146. Winick M, Andrassy RJ, Armstrong D, Bryan MA, Chandra RK, Kotler DP, et al. Guidelines for nutrition support in AIDS; task force on nutrition support in AIDS. Gastroenterol Nurs. 1989;12(1):28-36.
-
-*排除原因：* 不在加拿大背景内
-
-147. Women and HIV/AIDS Initiative (WHAI). Welcome to WHAI [internet]. WHAI Toronto; 2020 [cited 2021 Aug 24]. Available from: https://whai.ca/.
-
-*排除原因：* 未聚焦于营养和食物项目
-
-148. Women’s College Hospital. Women’s Health Matters - HIV/AIDS [internet]. Women’s College Hospital; n.d. [cited 2021 Aug 24]. Available from: https://www.womenshealthmatters.ca/health-centres/sexual-health/infections-and-safer-sex/infections/hiv-aids. [No longer available]
-
-*排除原因：* 未聚焦于营养和食物项目
 
 149. World Health Organization. World health assembly adopts landmark strategies on diet and physical activity, and reproductive health. Bull World Health Org. 2004;82(4):478.
 
@@ -629,123 +692,143 @@ SG 主导了本文稿的撰写。JM 和 YZ 撰写了手稿并共同制定了检�
 
 *排除原因：* 不在加拿大背景内
 
-
-
-
 ## 附录 III：德尔菲法流程
 
 | 协调员 | 第 1 步 → | 专家 | 第 2 步 → ← 第 3 步 → 第 4 步 → ← 第 5 步 → 第 6 步 → | 协调员 | 第 7 步 → | 最终报告 |
+
 |---|---|---|---|---|---|---|
-| **在会议前 1 周提供**范围综述的摘要供小组审阅 |  | **评论他们对**研究结果实际应用的看法，以及所包含和/或排除的材料 |  | **汇总**反馈形成匿名汇总报告并传回专家审阅<br>*可能需要多个周期 |  | **协调员**根据专家的回应撰写报告并指出异常值<br>*回应和反馈将有助于完善传播计划 |
+
+| 在会议前 1 周提供范围综述的摘要供小组审阅 |  | 评论他们对研究结果实际应用的看法，以及所包含和/或排除的材料 |  | 汇总反馈形成匿名汇总报告并传回专家审阅<br>*可能需要多个周期 |  | 协调员根据专家的回应撰写报告并指出异常值<br>*回应和反馈将有助于完善传播计划 |
 
 改编自 Green.⁴²
 
 ## 附录 IV：纳入来源的特征
 
 | 引用 | 背景 | 概念 | 人群 | 关注的现象（概念细节） | 条目来源设计 | 条目目的 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | 1. Fields-Gardner C, Ayoob KT. Position of Dietitians of Canada and the American Dietetic Association: nutrition intervention in the care of persons with human immunodeficiency virus infection. Can J Diet Pract Res. 2000;61:77–87. | 加拿大和美国 | 营养护理 | PLWH | MNT 和营养相关教育应成为为 PLWH 提供的整体医疗保健的组成部分。 | 叙述性综述 | 说明加拿大营养师协会和美国营养学会对 PLWH 的 MNT 立场 | 加拿大营养师协会和美国营养学会 |
+
 | 2. Fields-Gardner C, Ferguson P. Position of the American Dietetic Association and Dietitians of Canada: nutrition intervention in the care of persons with human immunodeficiency virus infection. J Am Diet Assoc. 2004;104(9):1425–41. | 加拿大和美国 | 营养护理 | PLWH | MNT 可提高生活质量、协助症状管理、支持药物治疗，并提高抵抗感染和并发症的能力。倡导为 PLWH 提供食物和营养安全保障，以及医疗服务中的营养教育。 | 叙述性综述 | 说明加拿大营养师协会和美国营养学会对 PLWH 的食物安全和营养教育立场 | 加拿大营养师协会和美国营养学会 |
+
 | 3. Fields-Gardner, C. Position of the Canadian Dietetic Association and the American Dietetic Association: nutrition intervention in the care of persons with human immunodeficiency virus infection. J Can Diet Assoc. 1994;55(3):129–35. | 加拿大和美国 | 营养护理 | PLWH | MNT 有助于早期评估和治疗营养不良，维持和恢复瘦体重，并为 PLWH 的日常生活活动和生活质量提供支持。 | 叙述性综述 | 说明加拿大营养师协会（现称加拿大营养师协会）和美国营养学会对 PLWH 的 MNT 立场 | 加拿大营养师协会和美国营养学会 |
+
 | 4. Kent H. Family-friendly HIV and AIDS care the goal at Vancouver’s Oak Tree Clinic. Can Med Assoc J. 1996;154(9):1407–9. | 加拿大不列颠哥伦比亚省温哥华 | 营养护理 | PLWH，包括妇女和儿童 | 为生活在 HIV 或 AIDS 的妇女和儿童提供营养师服务，从而改善其生活质量。 | 叙述性摘要 | 调查温哥华 Oak Tree Clinic 提供的服务 | Oak Tree Clinic |
+
 | 11. Rachlis A, Gill J, Baril J, LeBlanc R, Trottier B, Macleod J, et al. Effectiveness of step-wise intervention plan for managing nelfinavir-associated diarrhea: a pilot study. HIV Clin Trials. 2005;6(4):203–12. | 加拿大 | 食物和营养专业知识 | 正在接受 ART 的 PLWH，包括那些出现奈非那韦相关腹泻者 | 阶梯式方法（包括膳食补充剂洋车前子、碳酸钙和洛哌丁胺）导致排便频率的统计学和临床显著减少，并改善了粪便性状。 | 非随机实验研究 | 评估阶梯式腹泻管理策略对 PLWH 奈非那韦相关腹泻的有效性 | N/A |
+
 | 12. Collins AB, Parashar S, Hogg RS, Fernando S, Worthington C, McDougall P, et al. Integrated HIV care and service engagement among people living with HIV who use drugs in a setting with a community-wide treatment as a prevention initiative: a qualitative study in Vancouver, Canada. J Int AIDS Soc. 2017;20(1):1–10. | 加拿大不列颠哥伦比亚省温哥华 | i) 慈善食品供应；和 ii) 健康促进 | 使用毒品的 PLWH | TasP（治疗即预防）是一项旨在扩大 HIV 检测、提供免费高效抗逆转录病毒治疗并将 PLWH 与 HIV 和 AIDS 护理联系起来的倡议。该综合护理模式的一个方面是为客户提供营养密集型餐食作为食品服务的一部分。这是所有参与者中最常使用的服务。这些低门槛和综合服务可以减轻保留 HIV 护理的社会结构性障碍，支持治疗即预防倡议，并解决使用毒品的结构性脆弱人群的健康不平等问题。 | 定性队列研究 | 调查针对使用毒品的 PLWH 需求量身定制的综合 HIV 护理服务模式的参与情况和影响 | Dr. Peters Centre |
+
 | 13. Renouf LS, Sheps S, Hubley A, Pick N, Johansen D, Tyndall MW. The role of diet in predicting iron deficiency anemia in HIV-positive women. Can J Diet Pract Res. 2012;73(3):128–33. | 加拿大不列颠哥伦比亚省温哥华 | 食物和营养专业知识 | PLWH，包括妇女 | 建议定期使用含铁的多维生素补充剂、支持性营养项目和常规筛查，以预防和管理 HIV 阳性妇女的缺铁性贫血。 | 横断面研究 | 评估医疗、社会和营养因素与大温哥华地区生活在 HIV/AIDS 的成年妇女缺铁性贫血之间的关联 | N/A |
+
 | 14. Sernick A, Shannon K, Ranville F, Arora K, Magagula P, Shoveller J, et al. In the midst of plenty: experiences of food insecurity amongst women living with HIV in Vancouver, Canada. Health Soc Care Community. 2022;30(1):e138–47. | 加拿大不列颠哥伦比亚省温哥华 | 慈善食品供应 | PLWH，包括 i)顺性别妇女；和 ii)跨性别妇女 | 食品服务可能有助于支持粮食安全；然而，它们营业时间有限且营养选择有限，这表明需要通过增加社会救助、残疾津贴、失业保险或有保障的生活收入来增加个人经济来源。一些支持性住房环境提供膳食准备项目。“我们环境中主要面向顺性别和跨性别妇女的 HIV 支持服务，该服务已为温哥华市中心 WLWH [生活在 HIV 的妇女] 提供妇女特定支持超过 25 年，包括午餐和杂货项目，于 2017 年 4 月因资金丧失而关闭。”(p.6) | 定性研究 | 了解高收入国家中生活在 HIV 的顺性别和跨性别妇女的粮食不安全影响 | SHAWNA（性健康和 HIV/AIDS：妇女纵向需求评估）研究；城市中未命名的项目 |
+
 | 15. Sharkey SJ. An assessment of the need for a dietitian in an out-patient HIV clinic. J Can Diet Assoc. 1993;54(4):202–7. | 加拿大阿尔伯塔省卡尔加里 | 营养护理 | PLWH，包括 i) gbMSM；和 ii) 妇女 | 中心为 PLWH 提供营养师服务。其他服务包括“小组演讲、传单和教育辅助工具开发或专业发展，例如员工会议、在职培训、统计汇编和诊所运营，包括文书工作和与同事的联络。”(p.205) 结果表明所有 PLWH 都将从营养咨询中受益。 | 需求评估 | 评估 HIV 诊所对营养师的需求 | 南阿尔伯塔诊所 |
 
-
-
-
-
 | 引文 | 背景 | 概念 | 人群 | 关注现象（概念详情） | 项目来源设计 | 项目目的 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | *（续）* |  |  |  |  |  |  |  |
+
 | 16. Slater J, Qadar Z, Bewza J. 加拿大社区组织为HIV感染者提供的食品与营养服务回顾. Can J Diet Pract Res. 2015;76(2):97-9. | 加拿大 | i) 慈善食品供应；ii) 人群健康促进；iii) 营养护理 | HIV感染者 | 大多数组织都有改善客户食物获取渠道的项目，例如通过餐食和食物银行提供食物、开设社区厨房、烹饪课程、食品券、菜园，以及通过街头餐车分发食物。近一半的组织提供由注册营养师或护士提供的营养咨询服务，并转介至其他食品和营养服务。一些组织还提供大宗食品采购计划和餐饮服务。然而，由于资源限制，这些组织在提供食品和营养计划方面的能力和基础设施有限。 | 横断面研究 | 评估加拿大社区HIV组织中食品和营养计划的现状 | 未命名的项目<br>地点：<br>安大略省 = 30<br>草原省份 = 14<br>魁北克省 = 11<br>不列颠哥伦比亚省 = 10<br>大西洋省份 = 8<br>资源网络、艾滋病网络、特蕾莎小组、多伦多艾滋病患者基金会、女性健康掌握在女性手中<br>社区餐食：非洲人抗击艾滋病伙伴关系、剑桥、基奇纳和滑铁卢地区艾滋病委员会、伦敦艾滋病委员会、渥太华艾滋病委员会 |
+
 | 17. Turner MJ, Angel JB, Woodend AK, Giguere P. 碳酸钙治疗HIV感染者中蛋白酶抑制剂诱导的持续性腹泻的疗效. HIV Clin Trials. 2004;5(1):19-24. | 加拿大安大略省渥太华 | 食品与营养专业知识 | 接受抗逆转录病毒治疗的HIV感染者，包括出现蛋白酶抑制剂诱导的持续性腹泻者 | 碳酸钙可有效减轻HIV患者中蛋白酶抑制剂诱导的持续性腹泻。 | 非随机实验研究 | 评估碳酸钙治疗HIV感染者中蛋白酶抑制剂诱导的持续性腹泻的疗效 | 不适用 |
 
 | 引文 | 背景 | 概念 | 人群 | 关注现象（概念详情） | 项目来源设计 | 项目目的 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | 20. AIDS Vancouver. 补充食品杂货项目 [互联网]. AIDS Vancouver; 2021 [引用日期 2021年8月24日]. 来源：https://www.aidsvancouver.org/ | 加拿大不列颠哥伦比亚省温哥华 | i) 慈善食品供应；ii) 人群健康促进 | HIV感染者 | 温哥华艾滋病援助会的补充食品杂货项目为温哥华的HIV感染者提供健康食品杂货，旨在促进营养健康。提供一个“安全且受尊重的空间。”（第2段）可在组织开放时间内领取食品杂货，并设有“仅限女性”时段。提供加拿大营养师协会关于“增加能量饮食：增加能量和蛋白质摄入的饮食指南”和“健康饮食提示：添加糖；健康饮食提示”的文件。还提供由营养师编制的“疫情期间健康饮食”食品获取资源清单。 | 服务提供者网站 | 为温哥华的HIV感染者提供社区服务，包括补充食品杂货项目 | 温哥华艾滋病援助会 |
 
 | 引文 | 背景 | 概念 | 人群 | 关注现象（概念详情） | 项目来源设计 | 项目目的 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | 21. HIV/AIDS Resources and Community Health (ARCH). 支持服务概述 [互联网]. ARCH; 2021 [引用日期 2021年8月24日]. 来源：https://archguelph.ca/ | 加拿大安大略省圭尔夫 | 慈善食品供应 | HIV感染者，包括跨性别医疗保健支持 | 服务旨在将有食物不安全问题的个人与当地食物银行联系起来。还提供价值10美元的杂货店礼品卡（每月一次）。全年特别活动包括夏季烧烤和节日餐饮派对。 | 服务提供者网站 | 通过赋权和能力建设为HIV感染者提供服务。“ARCH提供可及、具有文化响应性和整体性的支持服务与项目。”（第3段） | HIV/AIDS资源与社区健康中心 |
+
 | 22. Black Coalition for AIDS Prevention (Black CAP). AYA项目 [互联网]. Black CAP; 2021 [引用日期 2021年8月24日]. 来源：https://blackcap.ca/programs-services/the-aya-project/ | 加拿大安大略省多伦多 | 慈善食品供应 | 非洲、加勒比和黑人HIV感染者 | 提供具有文化针对性的基本食品（提供家庭和个人包装），可供使用2周。 | 服务提供者网站 | 为多伦多感染HIV/AIDS的非洲、加勒比和黑人社区提供支持 | 黑人艾滋病预防联盟（Black CAP） |
+
 | 23. Bruce House. 外展与支持（REST项目） [互联网]. Bruce House; 2021 [引用日期 2021年8月24日]. 来源：https://brucehouse.ca/programs/supportive-services/ | 加拿大安大略省渥太华 | i) 慈善食品供应；ii) 人群健康促进 | HIV感染者 | 食物银行/食品储藏室、集体烹饪课程、社区晚餐、杂货礼品卡（慈善食品供应）：REST项目（外展与支持）：为HIV感染者提供服务和支援，改善他们的健康和生活技能，并增加他们的社区参与。该项目为他们的日常需求、短期和长期目标以及突发事件危机提供支持。包括杂货交通、杂货店礼品卡、每月社区厨房和晚餐社交活动等。社区厨房：客户以小组形式准备餐食，学习营养和烹饪技能，并可带走大量剩菜。 | 服务提供者网站 | Bruce House的客户有机会参加各种补充项目，旨在减少社会孤立、改善生活技能并提升整体健康状况。 | Bruce House |
 
 | 引文 | 背景 | 概念 | 人群 | 关注现象（概念详情） | 项目来源设计 | 项目目的 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | 25. Canadian AIDS Treatment Information Exchange (CATIE). HIV感染者营养实用指南 [互联网]. CATIE; 2007 [重印于2012年，引用日期 2021年8月24日]. 来源：https://sagecollection.ca/wp-content/uploads/2013/12/a-practical-guide-to-nutrition-english_0.pdf. 之前可从以下网址获取：https://www.catie.ca/en/practical-guides/nutrition | 加拿大 | i) 食品与营养专业知识；ii) 人群健康促进 | HIV感染者 | 描述健康饮食提示并促进营养教育。健康饮食与烹饪、维生素、补充剂，以及营养建议——用于治疗某些问题的维生素/矿物质。 | 服务提供者网站；在线书籍 | 研究HIV感染者的营养指南；为HIV感染者提供营养教育资源 | CATIE |
-| 26. Central East Healthline. HIV/AIDS-中东部 [互联网]. Central East Healthline; 2021 [引用日期 2021年8月24日]. 来源：https://www.centraleasthealthline.ca/listservices.aspx?id=10263 | 加拿大安大略省多伦多地区 | 二级来源链接（慈善食品供应和营养护理） | HIV感染者 | 阳性护理诊所：营养师药剂师支持，提供个体化评估和后续护理、营养和药物咨询。PARN——您的社区艾滋病资源网络：为使用PARN服务的人提供现场食物银行储物柜，以及营养师药剂师。 | 健康服务网站 | HIV/AIDS服务目录，其中一些提供食品服务 | Central East Healthline。二级来源：阳性护理诊所、PARN——您的社区艾滋病资源网络 |
+
+
+
+| 引用 | 背景 | 概念 | 目标人群 | 关注现象（概念细节） | 资料来源类型 | 项目目的 | 组织/倡议（如适用） |
+|---|---|---|---|---|---|---|---|
+| 26. Central East Healthline. HIV/AIDS-中东部 [互联网]. Central East Healthline; 2021 [引用日期 2021年8月24日]. 来源：`https://www.centraleasthealthline.ca/listservices.aspx?id=10263` | 加拿大安大略省多伦多地区 | 二级来源链接（慈善食品供应和营养护理） | HIV感染者 | 阳性护理诊所：营养师药剂师支持，提供个体化评估和后续护理、营养和药物咨询。PARN——您的社区艾滋病资源网络：为使用PARN服务的人提供现场食物银行储物柜，以及营养师药剂师。 | 健康服务网站 | HIV/AIDS服务目录，其中一些提供食品服务 | Central East Healthline。二级来源：阳性护理诊所、PARN——您的社区艾滋病资源网络 |
 |  |  |  |  |  |  |  | Yellowhead Society、阿尔伯塔中部Turning Point Society、Shining Mountains Living Community Services、萨斯喀彻温省南部艾滋病项目、Carmichael Outreach、Prairie Harm Reduction、OUTSaskatoon Inc.、萨斯喀彻温省艾滋病患者网络、Nine Circles社区健康中心；魁北克：Bureau Régional d’Action sida（乌塔韦）、蒙特利尔艾滋病社区关怀组织、魁北克聋人艾滋病联盟 |
+| 27. Centre Francophone du Grand Toronto. 艾滋病毒/艾滋病项目 [互联网]. Centre Francophone du Grand Toronto; 2020年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.centrefranco.org/programme-vih-sida` | 加拿大安大略省多伦多 | 慈善食品供应 | 讲法语的艾滋病病毒感染者 | 提供一系列服务，包括艾滋病毒/艾滋病项目。虽然没有专门为艾滋病病毒感染者列出营养/食品服务，但该中心的所有客户均可获得紧急食品援助。 | 服务提供者网站 | 该中心致力于法语社区的福祉，并提供社区和多学科方法。该中心为多伦多及周边地区的整个法语社区提供各种服务（健康、就业、家庭），从而满足其多样化需求。 | Centre Francophone du Grand Toronto |
+| 28. Fraser Health. 艾滋病毒咨询与支持 [互联网]. Fraser Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.fraserhealth.ca/health-topics-a-to-z/sexual-health/hiv/hiv-counselling-and-supports` | 加拿大不列颠哥伦比亚省温哥华 | 指向次要来源的链接（慈善食品供应和营养护理） | 艾滋病病毒感染者 | CATIE：包括食品/营养教育；AIDS Vancouver：食品支持；Lookout Housing & Health Society：食品银行；SARA for Women HIV support services：食品银行（食品篮）；Oak Tree Clinic——妇女和家庭艾滋病毒护理：营养师服务 | 服务提供者网站 | Fraser Health为艾滋病病毒感染者提供咨询和支持。“服务包括专业艾滋病毒护理、药物管理、营养指导、咨询、其他感染检测和社区资源转介。”（第4段） | Fraser Health 次要来源：CATIE、AIDS Vancouver、Lookout Housing & Health Society、SARA for Women HIV Support Services、Oak Tree Clinic——妇女和家庭艾滋病毒护理 |
+| 29. 萨斯喀彻温省政府。艾滋病毒检测、治疗与支持 [互联网]. Saskatchewan: 萨斯喀彻温省政府; 2019年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing` | 加拿大萨斯喀彻温省 | 指向次要来源的链接（慈善食品供应） | 艾滋病病毒感染者 | Persons Living with AIDS Network of Saskatchewan Inc.：提供免费每日午餐 | 健康服务网站：政府 | 提供关于检测、治疗、咨询的信息以及服务组织目录。 | 萨斯喀彻温省政府。次要来源：Persons Living with AIDS Network of Saskatchewan Inc. |
+| 30. Health Sciences North. 欢迎了解HAVEN项目 [互联网]. Health Sciences North; 2013年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.hsnsudbury.ca/portalen/haven` | 加拿大安大略省萨德伯里 | 营养护理 | 艾滋病病毒感染者，包括孕妇 | HAVEN项目：饮食与营养咨询 | 服务提供者网站 | 为艾滋病病毒感染者及受艾滋病毒/艾滋病影响的人（伴侣/家庭成员等）提供一系列服务。 | Health Sciences North |
+| 31. Island Health. 艾滋病毒与艾滋病 [互联网]. Island Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.islandhealth.ca/learn-about-health/hiv-aids/hiv-aids` | 加拿大不列颠哥伦比亚省维多利亚 | 指向次要来源的链接 | 艾滋病病毒感染者 | CATIE为艾滋病病毒感染者提供的指南 | 服务提供者网站 | 为居民、客户和患者提供健康服务。 | Island Health. 次要来源：CATIE |
+| 32. Island Sexual Health Community Healthcare Centre. 艾滋病毒症状、预防与治疗 [互联网]. Island Sexual Health Community Healthcare Centre; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.islandsexualhealth.org/infections/hiv-aids/` | 加拿大不列颠哥伦比亚省维多利亚 | 指向次要来源的链接（提供更多次要来源的网站链接） | 艾滋病病毒感染者 | HealthLink BC：次要来源链接；CATIE：营养教育；AIDS Vancouver：慈善食品供应；AVI：次要来源链接；Island Health Authority：慈善食品供应（食品券）；Oak Tree Clinic：营养师服务；Fraser Health Authority：次要来源链接；North Health Authority：次要来源链接 | 服务提供者网站 | 提供有关艾滋病毒/艾滋病症状、治疗、防护的信息。提供不列颠哥伦比亚省艾滋病毒/艾滋病服务目录。 | Island Sexual Health Community Healthcare Centre. 次要来源：HealthLink BC、CATIE、AIDS Vancouver、AVI、Island Health Authority、Oak Tree Clinic、Fraser Health Authority、North Health Authority |
+| 33. Healthwise工作人员. 艾滋病毒（人类免疫缺陷病毒）感染 [互联网]. My Health Alberta; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://myhealth.alberta.ca/Health/pages/conditions.aspx?hwid=hw191097&lang=en-ca#hw191097-sec` | 加拿大艾伯塔省 | 食品与营养专业知识 | 艾滋病病毒感染者 | 提倡有益心脏健康的饮食。“吃有营养、均衡的饮食是治疗艾滋病毒的重要组成部分。良好的营养可以帮助您的免疫系统保持强壮，从而可能帮助您的身体抵抗艾滋病毒。了解滋养身体的最佳方法将有助于保持身体强壮，并使您的艾滋病毒药物有效发挥作用。”（第1段）还提供如何正确处理食物以避免食源性疾病的信息。 | 健康服务网站：政府 | 提供关于艾滋病毒和艾滋病是什么、它如何影响身体、病因和治疗、支持、营养建议、药物等信息。 | My Health Alberta |
+| 34. Manitoba HIV Program: Nine Circles Community Health Centre. 马尼托巴艾滋病毒项目 [互联网]. Winnipeg: Nine Circles Community Health Clinic; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://ninecircles.ca/programs-services/clinic-services/` | 加拿大马尼托巴省 | i) 慈善食品供应；ii) 营养护理 | 艾滋病病毒感染者 | 食品银行：为艾滋病病毒感染者提供慈善食品。营养师服务为艾滋病病毒感染者提供营养教育，包括个人和小组会议。“小组会议包括诸如与艾滋病毒共存、糖尿病管理和心脏健康饮食等主题。”（第5段） | 服务提供者网站 | 提供支持性和非评判性的护理和治疗，鼓励客户通过了解信息和提问来积极参与自己的护理。 | Manitoba HIV Program: Nine Circles Community Health Centre |
+| 35. Northern Health. 艾滋病毒与丙型肝炎 [互联网]. Northern Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.northernhealth.ca/health-information/hiv-and-hepatitis-c` | 加拿大不列颠哥伦比亚省乔治王子城 | 食品与营养专业知识 | 艾滋病病毒感染者 | 在饮食中添加卡路里和蛋白质（PDF）：阿尔伯塔卫生服务；易于咀嚼的饮食（PDF）：阿尔伯塔卫生服务；慢性肝炎的健康饮食（PDF）：HealthLink BC；健康生活：CATIE；成人健康零食（PDF）：HealthLink BC；艾滋病毒：为什么健康饮食很重要：HealthLink BC；控制恶心和呕吐（PDF）：阿尔伯塔卫生服务；免疫功能低下者的安全食品处理（PDF）：加拿大卫生部 | 服务提供者网站 | “了解您需要了解的关于艾滋病毒和丙型肝炎的一切。了解在您的社区哪里可以接受检测，有哪些治疗选择，以及在哪里可以找到支持服务。”（第2段） | Northern Health |
+| 36. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). 外展与支持服务 [互联网]. OAHAS; 2019年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.oahas.org/outreach-support-services.html` | 加拿大安大略省多伦多 | i) 慈善食品供应（援助）；ii) 指向次要来源的链接 | 原住民艾滋病病毒感染者，包括安大略省的城市第一民族、因纽特人、梅蒂人以及无身份社区团体/组织/机构、学校和个人 | 支持服务：协助获取食物、衣物和住所。次要来源：CATIE网站链接 | 服务提供者网站 | OAHAS在街头、社区、活动、帕瓦仪式、机构开展外展活动，并在惩教机构、医院、医疗中心、学校等地进行探访，包括“支持服务”下的食品支持。 | Ontario Aboriginal HIV/AIDS Strategy. 次要来源：CATIE |
+| 37. Giliauskas, Danielle. 营养与艾滋病毒 [互联网]. 多伦多：The Ontario HIV Treatment Network Rapid Response Service; 2018年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.ohtn.on.ca/rapid-response-nutrition-and-hiv/` | 加拿大安大略省多伦多 | 食品与营养专业知识 | 艾滋病病毒感染者 | 营养建议，包括能量消耗、微量营养素、宏量营养素、葡萄糖和脂质代谢、益生菌和膳食补充剂。 | 服务提供者网站；报告 | 本综述介绍了针对艾滋病病毒感染者的营养信息，包括各国际组织的指南，并综合了评论和研究中的研究证据。此外，还探讨了与艾滋病毒和抗逆转录病毒治疗相关的各种健康挑战在营养干预背景下的问题。 | The Ontario HIV Treatment Network Rapid Response Service |
+| 38. The Persons Living With AIDS Network of Saskatchewan. 艾滋病毒支持服务 [互联网]. PLWA Network of Saskatchewan; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：`https://www.aidsnetworksaskatoon.ca/services.html` | 加拿大萨斯喀彻温省萨斯卡通 | i) 慈善食品供应；ii) 营养护理 | 原住民艾滋病病毒感染者 | 免费每日午餐、小组会议热餐、多种维生素计划 | 服务提供者网站 | 该网络“为艾滋病病毒感染者提供支持、护理和教育服务……”；HIV/AIDS. Special attention is given to fostering positive attitudes and hope for individuals and their families. | The Persons Living With AIDS Network of Saskatchewan |
 
 
 
-
-| 引用 | 背景 | 概念 | 目标人群 | 关注现象（概念细节） | 资料来源类型 | 项目目的 | 组织/倡议（如适用） |
-|---|---|---|---|---|---|---|---|
-| 27. Centre Francophone du Grand Toronto. 艾滋病毒/艾滋病项目 [互联网]. Centre Francophone du Grand Toronto; 2020年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.centrefranco.org/programme-vih-sida | 加拿大安大略省多伦多 | 慈善食品供应 | 讲法语的艾滋病病毒感染者 | 提供一系列服务，包括艾滋病毒/艾滋病项目。虽然没有专门为艾滋病病毒感染者列出营养/食品服务，但该中心的所有客户均可获得紧急食品援助。 | 服务提供者网站 | 该中心致力于法语社区的福祉，并提供社区和多学科方法。该中心为多伦多及周边地区的整个法语社区提供各种服务（健康、就业、家庭），从而满足其多样化需求。 | Centre Francophone du Grand Toronto |
-| 28. Fraser Health. 艾滋病毒咨询与支持 [互联网]. Fraser Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.fraserhealth.ca/health-topics-a-to-z/sexual-health/hiv/hiv-counselling-and-supports | 加拿大不列颠哥伦比亚省温哥华 | 指向次要来源的链接（慈善食品供应和营养护理） | 艾滋病病毒感染者 | CATIE：包括食品/营养教育；AIDS Vancouver：食品支持；Lookout Housing & Health Society：食品银行；SARA for Women HIV support services：食品银行（食品篮）；Oak Tree Clinic——妇女和家庭艾滋病毒护理：营养师服务 | 服务提供者网站 | Fraser Health为艾滋病病毒感染者提供咨询和支持。“服务包括专业艾滋病毒护理、药物管理、营养指导、咨询、其他感染检测和社区资源转介。”（第4段） | Fraser Health 次要来源：CATIE、AIDS Vancouver、Lookout Housing & Health Society、SARA for Women HIV Support Services、Oak Tree Clinic——妇女和家庭艾滋病毒护理 |
-
-| 引用 | 背景 | 概念 | 目标人群 | 关注现象（概念细节） | 资料来源类型 | 项目目的 | 组织/倡议（如适用） |
-|---|---|---|---|---|---|---|---|
-| 29. 萨斯喀彻温省政府。艾滋病毒检测、治疗与支持 [互联网]. Saskatchewan: 萨斯喀彻温省政府; 2019年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.saskatchewan.ca/residents/health/diseases-and-conditions/human-immunodeficiency-virus-hiv/hiv-testing | 加拿大萨斯喀彻温省 | 指向次要来源的链接（慈善食品供应） | 艾滋病病毒感染者 | Persons Living with AIDS Network of Saskatchewan Inc.：提供免费每日午餐 | 健康服务网站：政府 | 提供关于检测、治疗、咨询的信息以及服务组织目录。 | 萨斯喀彻温省政府。次要来源：Persons Living with AIDS Network of Saskatchewan Inc. |
-| 30. Health Sciences North. 欢迎了解HAVEN项目 [互联网]. Health Sciences North; 2013年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.hsnsudbury.ca/portalen/haven | 加拿大安大略省萨德伯里 | 营养护理 | 艾滋病病毒感染者，包括孕妇 | HAVEN项目：饮食与营养咨询 | 服务提供者网站 | 为艾滋病病毒感染者及受艾滋病毒/艾滋病影响的人（伴侣/家庭成员等）提供一系列服务。 | Health Sciences North |
-| 31. Island Health. 艾滋病毒与艾滋病 [互联网]. Island Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.islandhealth.ca/learn-about-health/hiv-aids/hiv-aids | 加拿大不列颠哥伦比亚省维多利亚 | 指向次要来源的链接 | 艾滋病病毒感染者 | CATIE为艾滋病病毒感染者提供的指南 | 服务提供者网站 | 为居民、客户和患者提供健康服务。 | Island Health. 次要来源：CATIE |
-| 32. Island Sexual Health Community Healthcare Centre. 艾滋病毒症状、预防与治疗 [互联网]. Island Sexual Health Community Healthcare Centre; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.islandsexualhealth.org/infections/hiv-aids/ | 加拿大不列颠哥伦比亚省维多利亚 | 指向次要来源的链接（提供更多次要来源的网站链接） | 艾滋病病毒感染者 | HealthLink BC：次要来源链接；CATIE：营养教育；AIDS Vancouver：慈善食品供应；AVI：次要来源链接；Island Health Authority：慈善食品供应（食品券）；Oak Tree Clinic：营养师服务；Fraser Health Authority：次要来源链接；North Health Authority：次要来源链接 | 服务提供者网站 | 提供有关艾滋病毒/艾滋病症状、治疗、防护的信息。提供不列颠哥伦比亚省艾滋病毒/艾滋病服务目录。 | Island Sexual Health Community Healthcare Centre. 次要来源：HealthLink BC、CATIE、AIDS Vancouver、AVI、Island Health Authority、Oak Tree Clinic、Fraser Health Authority、North Health Authority |
-
-| 引用 | 背景 | 概念 | 目标人群 | 关注现象（概念细节） | 资料来源类型 | 项目目的 | 组织/倡议（如适用） |
-|---|---|---|---|---|---|---|---|
-| 33. Healthwise工作人员. 艾滋病毒（人类免疫缺陷病毒）感染 [互联网]. My Health Alberta; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://myhealth.alberta.ca/Health/pages/conditions.aspx?hwid=hw191097&lang=en-ca#hw191097-sec | 加拿大艾伯塔省 | 食品与营养专业知识 | 艾滋病病毒感染者 | 提倡有益心脏健康的饮食。“吃有营养、均衡的饮食是治疗艾滋病毒的重要组成部分。良好的营养可以帮助您的免疫系统保持强壮，从而可能帮助您的身体抵抗艾滋病毒。了解滋养身体的最佳方法将有助于保持身体强壮，并使您的艾滋病毒药物有效发挥作用。”（第1段）还提供如何正确处理食物以避免食源性疾病的信息。 | 健康服务网站：政府 | 提供关于艾滋病毒和艾滋病是什么、它如何影响身体、病因和治疗、支持、营养建议、药物等信息。 | My Health Alberta |
-| 34. Manitoba HIV Program: Nine Circles Community Health Centre. 马尼托巴艾滋病毒项目 [互联网]. Winnipeg: Nine Circles Community Health Clinic; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://ninecircles.ca/programs-services/clinic-services/ | 加拿大马尼托巴省 | i) 慈善食品供应；ii) 营养护理 | 艾滋病病毒感染者 | 食品银行：为艾滋病病毒感染者提供慈善食品。营养师服务为艾滋病病毒感染者提供营养教育，包括个人和小组会议。“小组会议包括诸如与艾滋病毒共存、糖尿病管理和心脏健康饮食等主题。”（第5段） | 服务提供者网站 | 提供支持性和非评判性的护理和治疗，鼓励客户通过了解信息和提问来积极参与自己的护理。 | Manitoba HIV Program: Nine Circles Community Health Centre |
-| 35. Northern Health. 艾滋病毒与丙型肝炎 [互联网]. Northern Health; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.northernhealth.ca/health-information/hiv-and-hepatitis-c | 加拿大不列颠哥伦比亚省乔治王子城 | 食品与营养专业知识 | 艾滋病病毒感染者 | 在饮食中添加卡路里和蛋白质（PDF）：阿尔伯塔卫生服务；易于咀嚼的饮食（PDF）：阿尔伯塔卫生服务；慢性肝炎的健康饮食（PDF）：HealthLink BC；健康生活：CATIE；成人健康零食（PDF）：HealthLink BC；艾滋病毒：为什么健康饮食很重要：HealthLink BC；控制恶心和呕吐（PDF）：阿尔伯塔卫生服务；免疫功能低下者的安全食品处理（PDF）：加拿大卫生部 | 服务提供者网站 | “了解您需要了解的关于艾滋病毒和丙型肝炎的一切。了解在您的社区哪里可以接受检测，有哪些治疗选择，以及在哪里可以找到支持服务。”（第2段） | Northern Health |
-
-| 引用 | 背景 | 概念 | 目标人群 | 关注现象（概念细节） | 资料来源类型 | 项目目的 | 组织/倡议（如适用） |
-|---|---|---|---|---|---|---|---|
-| 36. Ontario Aboriginal HIV/AIDS Strategy (OAHAS). 外展与支持服务 [互联网]. OAHAS; 2019年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.oahas.org/outreach-support-services.html | 加拿大安大略省多伦多 | i) 慈善食品供应（援助）；ii) 指向次要来源的链接 | 原住民艾滋病病毒感染者，包括安大略省的城市第一民族、因纽特人、梅蒂人以及无身份社区团体/组织/机构、学校和个人 | 支持服务：协助获取食物、衣物和住所。次要来源：CATIE网站链接 | 服务提供者网站 | OAHAS在街头、社区、活动、帕瓦仪式、机构开展外展活动，并在惩教机构、医院、医疗中心、学校等地进行探访，包括“支持服务”下的食品支持。 | Ontario Aboriginal HIV/AIDS Strategy. 次要来源：CATIE |
-| 37. Giliauskas, Danielle. 营养与艾滋病毒 [互联网]. 多伦多：The Ontario HIV Treatment Network Rapid Response Service; 2018年 [引用日期：2021年8月24日]. 可从以下网址获取：https://www.ohtn.on.ca/rapid-response-nutrition-and-hiv/ | 加拿大安大略省多伦多 | 食品与营养专业知识 | 艾滋病病毒感染者 | 营养建议，包括能量消耗、微量营养素、宏量营养素、葡萄糖和脂质代谢、益生菌和膳食补充剂。 | 服务提供者网站；报告 | 本综述介绍了针对艾滋病病毒感染者的营养信息，包括各国际组织的指南，并综合了评论和研究中的研究证据。此外，还探讨了与艾滋病毒和抗逆转录病毒治疗相关的各种健康挑战在营养干预背景下的问题。 | The Ontario HIV Treatment Network Rapid Response Service |
-| 38. The Persons Living With AIDS Network of Saskatchewan. 艾滋病毒支持服务 [互联网]. PLWA Network of Saskatchewan; 2021年 [引用日期：2021年8月24日]. 可从以下网址获取： | 加拿大萨斯喀彻温省萨斯卡通 | i) 慈善食品供应；ii) 营养护理 | 原住民艾滋病病毒感染者 | 免费每日午餐、小组会议热餐、多种维生素计划 | 服务提供者网站 | 该网络“为艾滋病病毒感染者提供支持、护理和教育服务……” | The Persons Living With AIDS Network of Saskatchewan |
-
-
-
-
-
-| 引用 | 背景 | 概念 | 人群 | 感兴趣的现象（概念细节） | 项目来源设计 | 项目目标 | 组织/倡议（如适用） |
-|---|---|---|---|---|---|---|---|
-| Available from: https://www.aidsnetworksaskatoon.ca/services.html |  |  |  |  |  | HIV/AIDS. Special attention is given to fostering positive attitudes and hope for individuals and their families. |  |
-| **39.** Lookout Housing + Health Society. Djaef Mahler Food Bank [internet]. Lookout Housing + Health Society; 2017 [cited 2017 Aug 24]. Available at: https://lookoutsociety.ca/project/djaef-mahler-food-bank/ | New Westminster, British Columbia, Canada | Charitable food provision | PLWH | “The Djaef Mahler Food Bank is a high-protein food bank that supports individuals and families living with HIV and/or Hep C.” | Service provider website | A peer-driven support lounge for members who are HIV-positive. Services include advocacy, education, treatment information, a resource library, housing worker, nutrition intake and assessment, support groups, social activities, and an HIV high-protein food bank (Djaef Mahler Grocery) | Lookout Housing + Health Society |
 | **40.** Simcoe Muskoka District Health Unit. Acquired Immunodeficiency syndrome (AIDS/HIV) [Internet]. Simcoe Muskoka District Health Unit; 2017 [cited 2021 Aug 24]. Available at: https://www.simcoemuskokahealth.org/JFY/HPPortal/PCPCategories/InfectiousDiseases/Disease-of-Public-Health-Significance/Acquired-Immunodeficiency-Syndrome-(AIDS-HIV) | Simcoe Muskoka, Ontario, Canada | Links to secondary sources | PLWH | Provides links for:<br>• Public Health Agency of Canada: Canadian guidelines on sexually transmitted infections, evergreen edition<br>• CATIE: Canada’s source for HIV and hepatitis C information<br>• Canadian AIDS Society publication: HIV transmission: factors that affect biological risk (2013)<br>• AMMI Canada: the use of early ART in HIV-infected Persons | Service provider website | To offer information about HIV including virus description, diagnosis, treatment; to provide links to service organizations in Canada | Simcoe Muskoka District Health Unit<br>Secondary sources:<br>Public Health Agency of Canada, CATIE, Canadian AIDS Society publication, Association of Medical Microbiology and Infectious Disease Canada, Muskoka HealthSTATS |
 
 | 引用 | 背景 | 概念 | 人群 | 感兴趣的现象（概念细节） | 项目来源设计 | 项目目标 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | 44. AVI Health and Community Services. Our services/ Comox Valley [internet]. AVI Health and Community Services; 2021 [cited 2021 Aug 24]. Available from: https://avi.org/our-services/comox-valley | British Columbia, Canada | Population health promotion | PLWH | Comox Valley location provides “non-judgmental education and support for nutrition.” | Service provider website | The mission of AVI “is to promote health, dignity, and well-being for all people affected by HIV, HCV (hepatitis C), and substance use by delivering sex-positive and harm reduction based education, prevention, and support service.” | AVI Health and Community Services |
+
 | 45. AIDS Coalition of Nova Scotia (ACNS). Newsletter Winter 2020. ACNS; 2020 [cited 2021 Aug 24]. [No longer available online] | Halifax, Nova Scotia, Canada | Population health promotion | PLWH | Cooking and recipe education. Affordable Eats program offers free cooking sessions. Article also notifies that ACNS will be providing free copies of *Affordable Eats* cookbook to those who are interested. Recipes include healthy and price-friendly options, and ingredient pricing is listed for budget planning. | Service provider website: newsletter article | To provide updates on ACNS activities and connected resources, including “Affordable” Eats project | AIDS Coalition of Nova Scotia |
 
 | 引用 | 背景 | 概念 | 人群 | 感兴趣的现象（概念细节） | 项目来源设计 | 项目目标 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | **46. Nova Scotia Advisory Commission on AIDS (The Commission).** *Information for Persons Living with HIV/AIDS about Income Assistance in Nova Scotia* [internet]. The Commission; 2013 [cited 2021 Oct 5]. Available from: https://novascotia.ca/aids/documents/Income-Assistance-Information-for-Persons-Living-with-HIV-AIDS.pdf | Nova Scotia, Canada | Financial aid (provincial government) | PLWH | Income assistance allowance: $225<br>Special dietary allowance: $150<br>Special dietary or nutritional needs allowance: Special diets that qualify for the extra amount include:<br>• modified fat diet, such as low-fat diet or low-cholesterol diet<br>• low-salt diet<br>• nutrition supplements, such as Ensure, Boost, and Pediasure<br>• calorie supplement<br>• diabetic, dialysis, or gluten-free diet<br>• maternal nutritional allowance for pregnant women and women with children under the age of 1 | Service provider website: information booklet (PDF) | “The need for this booklet emerged from research for the report *Income Support and HIV/AIDS: The Experiences of Persons Living with HIV/AIDS in Nova Scotia* (2007) prepared for the NS Advisory Commission on AIDS by Carolyn Marshall, Marshall Consulting. The factsheet explains benefits under the ESIA program to which people living with HIV/AIDS may be entitled based on their medical or disability status.” | Government of Nova Scotia |
+
 | **47. QEII Health Sciences Centre (QEII).** *Patient and Family Guide: HIV Clinic* [internet]. QEII; 2021 [cited 2021 Oct 5]. Available from: http://www.nshealth.ca/sites/nshealth.ca/files/patientinformation/0430.pdf | Halifax, Nova Scotia, Canada | Nutrition care | PLWH | Dietitian services for PLWH. Dietitians can help clients fill out forms to apply for special diet allowance, and social assistance. | Health services website: information pamphlet | To provide an overview of services offered to PLWH at the QEII HIV Clinic | QEII Halifax Infirmary: HIV Clinic |
+
 | **48. Stepping Stone.** *Community Drop-In* [internet]. Stepping Stone; 2021 [cited 2021 Oct 5]. Available from: https://steppingstones.ca/community-drop-in/ | Dartmouth, Nova Scotia, Canada | i) Charitable food provision; and ii) food and nutrition expertise | PLWH, including sex workers and those at risk of entering the sex trade or being sex trafficked | The organization offers snacks, a daily food delivery by Feed Nova Scotia, and a monthly food order. A street outreach program is also in operation which gives out snacks. Services include availability for PLWH. Food and nutrition education: “The aim of the Health Bodies, Healthy Lives program is to increase program users’ | Service provider website | To provide information on available resources and programming offered, as well as information on sex work and sex trafficking | Stepping Stone |
 
 | 引用 | 背景 | 概念 | 人群 | 感兴趣的现象（概念细节） | 项目来源设计 | 项目目标 | 组织/倡议（如适用） |
+
 |---|---|---|---|---|---|---|---|
+
 | *(Continued)* |  |  |  | awareness, knowledge, access and skill around nutrition and healthy, affordable food choices. The program is designed to encourage program users to engage with food in meaningful ways at both an individual and community level. The activities and opportunities offered include:<br>- How to shop healthy<br>- How to cook healthy<br>- Nutrition workshops & collective kitchens<br>- Information on growing, harvesting and preserving food.⁽ᵖᵃʳᵃ.⁶⁾ |  |  |  |
+
 | 49. North End Community Health Centre (NECHC). Nutrition Services [internet]. NECHC; 2020 [cited 2021 Oct 5]. Available from: https://nechc.com/services/nutrition-services/ | Halifax, Nova Scotia, Canada | Nutrition care | PLWH, including populations who have been marginalized | Dietitian services available for PLWH. | Service provider website | To provide information on available resources and services offered | North End Community Health Centre (NECHC) |
+
 | 50. Northern Healthy Connections Society (NHCS). Services [internet]. NHCS; 2021 [cited 2021 Oct 5]. Available from: https://nhcsociety.ca/services/ | Truro, Nova Scotia, Canada | Charitable food provision | PLWH | The support coordinator can provide information on food banks and soup kitchens/church suppers. | Service provider website | To provide information on available resources and services offered | Northern Healthy Connections Society (NHCS) |
+
 | 51. Government of Nova Scotia. Employment Support and Income Assistance [internet]. Government of Nova Scotia; 2016 [cited 2021 Oct 5]. Available from: https://novascotia.ca/coms/employment/index.html | Nova Scotia, Canada | Financial aid (provincial government) | PLWH | Special diet rates: HIV/AIDS (high protein, high calorie diet):<br>3000 calories $66<br>3250 calories $88<br>3500 calories $101<br>Oral nutritional supplements (such as, but not limited to, Ensure, Boost, Essentials, Advera, Pediasure): Actual costs up to $150 per month. A time frame for a | Provincial government website (PDF) | To provide information on available resources and services offered | Government of Nova Scotia |
 
-
-
-
 | 引文 | 背景 | 概念 | 人群 | 感兴趣的现象（概念详情） | 项目来源设计 | 项目目的 | 组织/倡议（如适用） |
-| 57. 马尼托巴省政府。第18节——基本援助费率和具体项目指南 [互联网]。马尼托巴省政府；无日期 [引用日期：2021年10月15日]。可获取自：https://www.gov.mb.ca/fs/eia_manual/18.html#1842 | 加拿大马尼托巴省 | 财政援助（省级政府） | PLWH | 特殊饮食：如果执业医师为某人规定了特殊饮食，则表1、2或3中适用于基本必需品的津贴可在部长批准的金额范围内增加（基本收入援助（IA）为$195–$274.80）。根据注册营养师所规定的饮食类型，个人可能有资格获得：<br>- 高热量/高蛋白 $136.93<br>- 慢性病 $81.63<br><br>对于居住在北部和偏远社区并领取北方津贴的参与者，特殊饮食费率应增加：<br>- 在汤普森、弗林弗伦或帕斯，或半径16公里内，增加40%<br>- 在拥有全天候公路、铁路或水路交通的偏远地区，增加55%<br>- 在没有全天候公路、铁路或水路交通的偏远地区，增加105%。<br><br>*供医疗保健提供者（支持）填写的表格：https://professionals.wrha.mb.ca/old/extranet/nutrition/files/Forms-InstructionsforEIA.pdf | 省级政府网站 | 提供有关可用资源和服务的信息 | 马尼托巴省政府 |
-| 58. 萨斯喀彻温省政府。萨斯喀彻温省残疾保障收入（SAID）：DISC指南 [互联网]。萨斯喀彻温省政府；2017年 [引用日期：2021年10月15日]。可获取自：https://www.aussiervices.ca/auto/uploads/2020/04/DISC-SAID-Guidebook-April-2020.pdf | 加拿大萨斯喀彻温省 | 财政援助（省级政府） | PLWH | 特殊饮食费率：“HIV或艾滋病（含营养补充）：您可以选择$140.00，或者让您的Ensure/Boost全额报销。”（第21页）<br><br>医疗出租车：在紧急情况下，或当您无法为医疗约诊找到其他交通工具时，您的工作人员可为您安排医疗出租车。（未列出具体金额） | 省级政府网站（PDF） | 提供有关可用资源和服务的信息 | 萨斯喀彻温省政府 |
-| 59. 艾伯塔省政府。《收入与就业支持政策手册》[互联网]。艾伯塔省政府；2020年 [引用日期：2021年10月15日]。可获取自：http://www.humanservices.alberta.ca/AWOnline/AISH/8899.html | 加拿大艾伯塔省 | 财政援助（省级政府） | PLWH | HIV/艾滋病特殊饮食津贴：每月$37（在享受HIV/艾滋病费率时，每次只能获得一种特殊饮食费率，即不能与高热量、高蛋白饮食费率叠加） | 省级政府网站 | 提供有关可用资源和服务的信息 | 艾伯塔省政府 |
-| 60. 不列颠哥伦比亚省政府。《健康补充剂与项目费率表》[互联网]。不列颠哥伦比亚省政府；2017年 [引用日期：2021年10月15日]。可获取自：https://www2.gov.bc.ca/gov/content/governments/policies-for-government/bcea-policy-and-procedure-manual/bc-employment-and-assistance-rate-tables/health-supplements-and-programs-rate-table | 加拿大不列颠哥伦比亚省 | 财政援助（省级政府） | PLWH | - 膳食补充剂：高蛋白饮食：每个日历月$40，外加$30用于购买搅拌机<br>- 营养补充剂：食品类：每个日历月最高$165<br>- 维生素和矿物质：每个日历月最高$40<br>- 医疗交通补贴：与车辆交通相关的出行津贴：每公里$0.20<br>- 在情况确实需要餐费津贴的特殊情况下，每餐补贴$4 | 省级政府网站 | 提供有关可用资源和服务的信息 | 不列颠哥伦比亚省政府 |
-| 61. 西北地区政府。《收入援助手册》[互联网]。西北地区政府；2019年 [引用日期：2021年10月15日]。可获取自：https://www.ece.gov.nt.ca/sites/ece/files/resources/income_assistance_handbook_-_aug_2019.pdf | 加拿大西北地区 | 财政援助（省级政府） | PLWH | 未找到具体的食品补贴标准。食品补贴包含在“基本需求”项下，但未发现“特殊饮食”（或类似内容）的提及。 | 省级政府网站（PDF手册） | 提供有关可用资源和服务的信息 | 西北地区政府 |
-| 62. 努纳武特政府。《收入援助（IA）》[互联网]。努纳武特政府；无日期 [引用日期：2021年10月15日]。可获取自：https://www.gov.nu.ca/family-services/programs-services/income-assistance-ia | 加拿大努纳武特地区 | 财政援助（省级政府） | PLWH | 有食品补贴，但未找到具体的补贴金额。 | 省级政府网站 | 提供有关可用资源和服务的信息 | 努纳武特政府 |
-| 63. 育空地区政府。《社会援助法》[互联网]。育空地区政府；2012年 [引用日期：2021年10月15日]。可获取自：https://laws.yukon.ca/cms/images/LEGISLATION/regs/oic2012_083.pdf | 加拿大育空地区 | 财政援助（省级政府） | PLWH | 每人每月$232基本食品补贴，另加每月$32特殊食品补贴 | 省级政府网站（PDF） | 提供有关可用资源和服务的信息 | 育空地区政府 |
-| 64. 温哥华沿岸卫生局。《HIV/艾滋病服务与检测》[互联网]。温哥华沿岸卫生局；2020年 [引用日期：2021年8月24日]。可获取自：http://www.vch.ca/locations-services/results?res_id=1348 | 加拿大不列颠哥伦比亚省 | 食品与营养专业知识 | PLWH | HIV护理与治疗，包括初级保健、强化个案管理、抗逆转录病毒药物管理、营养咨询，以及转介至HIV/艾滋病支持组织和专家 | 服务提供者网站 | 为居住在温哥华沿岸卫生局所服务地理区域内的居民提供HIV/艾滋病检测、预防、护理、治疗和社区支持 | 温哥华沿岸卫生局 |
+
+
+
+| 57. 马尼托巴省政府。第18节——基本援助费率和具体项目指南 [互联网]。马尼托巴省政府；无日期 [引用日期：2021年10月15日]。可获取自：`https://www.gov.mb.ca/fs/eia_manual/18.html#1842` | 加拿大马尼托巴省 | 财政援助（省级政府） | PLWH | 特殊饮食：如果执业医师为某人规定了特殊饮食，则表1、2或3中适用于基本必需品的津贴可在部长批准的金额范围内增加（基本收入援助（IA）为$195–$274.80）。根据注册营养师所规定的饮食类型，个人可能有资格获得：<br>- 高热量/高蛋白 $136.93<br>- 慢性病 $81.63<br><br>对于居住在北部和偏远社区并领取北方津贴的参与者，特殊饮食费率应增加：<br>- 在汤普森、弗林弗伦或帕斯，或半径16公里内，增加40%<br>- 在拥有全天候公路、铁路或水路交通的偏远地区，增加55%<br>- 在没有全天候公路、铁路或水路交通的偏远地区，增加105%。<br><br>*供医疗保健提供者（支持）填写的表格：`https://professionals.wrha.mb.ca/old/extranet/nutrition/files/Forms-InstructionsforEIA.pdf` | 省级政府网站 | 提供有关可用资源和服务的信息 | 马尼托巴省政府 |
+
+| 58. 萨斯喀彻温省政府。萨斯喀彻温省残疾保障收入（SAID）：DISC指南 [互联网]。萨斯喀彻温省政府；2017年 [引用日期：2021年10月15日]。可获取自：`https://www.aussiervices.ca/auto/uploads/2020/04/DISC-SAID-Guidebook-April-2020.pdf` | 加拿大萨斯喀彻温省 | 财政援助（省级政府） | PLWH | 特殊饮食费率：“HIV或艾滋病（含营养补充）：您可以选择$140.00，或者让您的Ensure/Boost全额报销。”（第21页）<br><br>医疗出租车：在紧急情况下，或当您无法为医疗约诊找到其他交通工具时，您的工作人员可为您安排医疗出租车。（未列出具体金额） | 省级政府网站（PDF） | 提供有关可用资源和服务的信息 | 萨斯喀彻温省政府 |
+
+| 59. 艾伯塔省政府。《收入与就业支持政策手册》[互联网]。艾伯塔省政府；2020年 [引用日期：2021年10月15日]。可获取自：`http://www.humanservices.alberta.ca/AWOnline/AISH/8899.html` | 加拿大艾伯塔省 | 财政援助（省级政府） | PLWH | HIV/艾滋病特殊饮食津贴：每月$37（在享受HIV/艾滋病费率时，每次只能获得一种特殊饮食费率，即不能与高热量、高蛋白饮食费率叠加） | 省级政府网站 | 提供有关可用资源和服务的信息 | 艾伯塔省政府 |
+
+| 60. 不列颠哥伦比亚省政府。《健康补充剂与项目费率表》[互联网]。不列颠哥伦比亚省政府；2017年 [引用日期：2021年10月15日]。可获取自：`https://www2.gov.bc.ca/gov/content/governments/policies-for-government/bcea-policy-and-procedure-manual/bc-employment-and-assistance-rate-tables/health-supplements-and-programs-rate-table` | 加拿大不列颠哥伦比亚省 | 财政援助（省级政府） | PLWH | - 膳食补充剂：高蛋白饮食：每个日历月$40，外加$30用于购买搅拌机<br>- 营养补充剂：食品类：每个日历月最高$165<br>- 维生素和矿物质：每个日历月最高$40<br>- 医疗交通补贴：与车辆交通相关的出行津贴：每公里$0.20<br>- 在情况确实需要餐费津贴的特殊情况下，每餐补贴$4 | 省级政府网站 | 提供有关可用资源和服务的信息 | 不列颠哥伦比亚省政府 |
+
+| 61. 西北地区政府。《收入援助手册》[互联网]。西北地区政府；2019年 [引用日期：2021年10月15日]。可获取自：`https://www.ece.gov.nt.ca/sites/ece/files/resources/income_assistance_handbook_-_aug_2019.pdf` | 加拿大西北地区 | 财政援助（省级政府） | PLWH | 未找到具体的食品补贴标准。食品补贴包含在“基本需求”项下，但未发现“特殊饮食”（或类似内容）的提及。 | 省级政府网站（PDF手册） | 提供有关可用资源和服务的信息 | 西北地区政府 |
+
+| 62. 努纳武特政府。《收入援助（IA）》[互联网]。努纳武特政府；无日期 [引用日期：2021年10月15日]。可获取自：`https://www.gov.nu.ca/family-services/programs-services/income-assistance-ia` | 加拿大努纳武特地区 | 财政援助（省级政府） | PLWH | 有食品补贴，但未找到具体的补贴金额。 | 省级政府网站 | 提供有关可用资源和服务的信息 | 努纳武特政府 |
+
+| 63. 育空地区政府。《社会援助法》[互联网]。育空地区政府；2012年 [引用日期：2021年10月15日]。可获取自：`https://laws.yukon.ca/cms/images/LEGISLATION/regs/oic2012_083.pdf` | 加拿大育空地区 | 财政援助（省级政府） | PLWH | 每人每月$232基本食品补贴，另加每月$32特殊食品补贴 | 省级政府网站（PDF） | 提供有关可用资源和服务的信息 | 育空地区政府 |
+
+| 64. 温哥华沿岸卫生局。《HIV/艾滋病服务与检测》[互联网]。温哥华沿岸卫生局；2020年 [引用日期：2021年8月24日]。可获取自：`http://www.vch.ca/locations-services/results?res_id=1348` | 加拿大不列颠哥伦比亚省 | 食品与营养专业知识 | PLWH | HIV护理与治疗，包括初级保健、强化个案管理、抗逆转录病毒药物管理、营养咨询，以及转介至HIV/艾滋病支持组织和专家 | 服务提供者网站 | 为居住在温哥华沿岸卫生局所服务地理区域内的居民提供HIV/艾滋病检测、预防、护理、治疗和社区支持 | 温哥华沿岸卫生局 |
 
 AIDS，获得性免疫缺陷综合征；ART，抗逆转录病毒治疗；AVI，AVI健康与社区服务；CATIE，加拿大艾滋病治疗信息交流中心；HIV，人类免疫缺陷病毒；gbMSM，男同性恋、双性恋和其他男男性行为者；MNT，医学营养治疗；N/A，不适用；PLWH，HIV感染者。

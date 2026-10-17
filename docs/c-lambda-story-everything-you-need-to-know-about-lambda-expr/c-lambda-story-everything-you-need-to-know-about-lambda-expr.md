@@ -1,91 +1,81 @@
+
 # C++ Lambda 故事：现代 C++ 中 Lambda 表达式的一切知识！
 
-
-
-
-
-
-
-
-
-
-
-
 ![](img/7cb35845bb98e3b897191af3bab607e2_1_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```
 Replacing std::bind1 and std::bind2 with Lambdas
 ```
+
 使用现代 C++ 技术
+
 函数组合
 
-
 配合 `std::function`
+
 内部 Lambda 与泛型参数
+
 更多技巧
+
 递归 lambda 是最佳的替代方案吗？
 
-
 ## Lambda 语法更新
+
 `constexpr` Lambda 表达式
+
 示例
+
 变量捕获
+
 `constexpr` 总结：
 
 部分指南
 
 继承自多个 Lambda
+
 自定义模板参数推导规则
+
 对聚合初始化（Aggregate Initialisation）的扩展
+
 使用 `std::variant` 和 `std::visit` 的示例
 
 使用 Lambda 进行并发执行
+
 配合 `std::thread` 的 Lambda
+
 配合 `std::async` 的 Lambda
+
 C++17 中的 Lambda 与并行算法
+
 Lambda 与异步 - 总结
 
-
 # 5. C++20 中的 Lambdas
+
 更改快速概览
+
 `consteval` Lambda
+
 捕获参数包
+
 模板 Lambda
+
 概念（Concepts）与 Lambda
 
 对无状态 Lambda 的更改
-即使在未求值的上下文中也是
-Lambda 与 `constexpr` 算法
-C++20 对重载模式的更新
-总结
 
+即使在未求值的上下文中也是
+
+Lambda 与 `constexpr` 算法
+
+C++20 对重载模式的更新
+
+总结
 
 1. Lambda 让代码更具可读性
 2. Lambda 提高了代码的局部性
 3. Lambda 允许轻松存储状态
 4. Lambda 允许方便地存储
 5. Lambda 使代码更灵活
-
 
 # Notes
 
@@ -96,40 +86,59 @@ C++20 对重载模式的更新
 ## 本书的起源
 
 关于 C++98/03 中的可调用对象
+
 仿函数的问题
+
 使用函数式辅助工具组合
+
 新功能的动机
 
 C++11 中的 Lambdas
+
 Lambda 表达式的语法
+
 Lambda 表达式的示例
+
 编译器展开
 
 Lambda 表达式的类型
+
 构造函数与拷贝
 
 调用运算符
+
 重载
+
 其他修饰
 
 捕获
+
 `mutable` 关键字
+
 调用计数器 - 捕获全局变量示例
+
 捕获全局变量
+
 捕获静态变量
+
 捕获类成员和 `this` 指针
+
 仅移动对象
+
 保留 `const`
 
 捕获参数包
 
 返回类型
+
 尾返回类型语法
 
 转换为函数指针
+
 一个复杂的案例
 
 II FFE - 立即调用函数表达式
+
 关于可读性的一点说明
 
 继承自 Lambda
@@ -139,80 +148,120 @@ II FFE - 立即调用函数表达式
 总结
 
 C++14 中的 Lambdas
+
 Lambda 的默认参数
+
 返回类型
+
 带初始化列表的捕获
+
 局限性
+
 针对现有问题的改进
+
 泛型 Lambda
+
 变长泛型参数
+
 使用泛型 Lambda 进行完美转发
+
 推导正确类型
 
 ```
 Replacing std::bind1 and std::bind2 with Lambdas
 ```
+
 使用现代 C++ 技术
+
 函数组合
 
 使用 lambdas 进行 LIFT 操作
 
 递归 Lambdas
+
 配合 `std::function`
+
 内部 Lambda 与泛型参数
+
 更多技巧
+
 递归 lambda 是最佳的替代方案吗？
 
 总结
 
 C++17 中的 Lambdas
+
 Lambda 语法更新
+
 类型系统中的异常规范
+
 `constexpr` Lambda 表达式
+
 示例
+
 变量捕获
+
 `constexpr` 总结：
 
 对 *this* 的捕获
+
 部分指南
 
 对 I FFE 的更新
+
 变长泛型 Lambda 的更新
+
 继承自多个 Lambda
+
 自定义模板参数推导规则
+
 对聚合初始化的扩展
+
 使用 `std::variant` 和 `std::visit` 的示例
 
 使用 Lambda 进行并发执行
+
 配合 `std::thread` 的 Lambda
+
 配合 `std::async` 的 Lambda
+
 C++17 中的 Lambda 与并行算法
+
 Lambda 与异步 - 总结
 
 C++20 中的 Lambdas
+
 Lambda 语法更新
+
 更改快速概览
+
 `consteval` Lambda
+
 捕获参数包
+
 模板 Lambda
+
 概念（Concepts）与 Lambda
 
 对无状态 Lambda 的更改
+
 即使在未求值的上下文中也是
+
 Lambda 与 `constexpr` 算法
+
 C++20 对重载模式的更新
+
 总结
 
 附录 A - 技术列表
 
 附录 B - C++ Lambda 表达式五大优势
+
 1. Lambda 让代码更具可读性
 2. Lambda 提高了代码的局部性
 3. Lambda 允许轻松存储状态
 4. Lambda 允许方便地存储
 5. Lambda 使代码更灵活
-
-
 
 关于书
 
@@ -221,40 +270,59 @@ C++20 对重载模式的更新
 本书的起源
 
 C++98/03 中的可调用对象
+
 仿函数的问题
+
 使用函数式辅助工具组合
+
 新功能的动机
 
 C++11 中的 Lambdas
+
 Lambda 表达式的语法
+
 Lambda 表达式的示例
+
 编译器展开
 
 Lambda 表达式的类型
+
 构造函数与拷贝
 
 调用运算符
+
 重载
+
 其他修饰
 
 捕获
+
 `mutable` 关键字
+
 调用计数器 - 捕获全局变量示例
+
 捕获全局变量
+
 捕获静态变量
+
 捕获类成员和 `this` 指针
+
 仅移动对象
+
 保留 `const`
 
 捕获参数包
 
 返回类型
+
 尾返回类型语法
 
 转换为函数指针
+
 一个复杂的案例
 
 II FFE - 立即调用函数表达式
+
 关于可读性的一点说明
 
 继承自 Lambda
@@ -264,85 +332,118 @@ II FFE - 立即调用函数表达式
 总结
 
 C++14 中的 Lambdas
+
 Lambda 的默认参数
+
 返回类型
+
 带初始化列表的捕获
+
 局限性
+
 针对现有问题的改进
+
 泛型 Lambda
+
 变长泛型参数
+
 使用泛型 Lambda 进行完美转发
+
 推导正确类型
 
 ```
 Replacing std::bind1 and std::bind2 with Lambdas
 ```
+
 使用现代 C++ 技术
+
 函数组合
 
 使用 lambdas 进行 LIFT 操作
 
 递归 Lambdas
+
 内部 Lambda 与泛型参数
+
 递归 lambda 是最佳的替代方案吗？
 
 总结
+
 C++17 中的 Lambdas
+
 类型系统中的异常规范
+
 `constexpr` Lambda 表达式
+
 示例
+
 变量捕获
+
 `constexpr` 总结：
 
 对 *this* 的捕获
+
 部分指南
 
 对 I FFE 的更新
+
 变长泛型 Lambda 的更新
+
 继承自多个 Lambda
+
 自定义模板参数推导规则
+
 对聚合初始化的扩展
+
 使用 `std::variant` 和 `std::visit` 的示例
 
 使用 Lambda 进行并发执行
+
 配合 `std::thread` 的 Lambda
+
 配合 `std::async` 的 Lambda
 
 C++20 中的 Lambdas
+
 Lambda 语法更新
+
 更改快速概览
+
 `consteval` Lambda
+
 捕获参数包
+
 模板 Lambda
+
 概念（Concepts）与 Lambda
 
 对无状态 Lambda 的更改
+
 即使在未求值的上下文中也是
+
 Lambda 与 `constexpr` 算法
+
 C++20 对重载模式的更新
+
 总结
 
 附录 A - 技术列表
 
 附录 B - C++ Lambda 表达式五大优势
+
 1. Lambda 让代码更具可读性
 2. Lambda 提高了代码的局部性
 3. Lambda 允许轻松存储状态
 4. Lambda 允许方便地存储
 5. Lambda 使代码更灵活
 
-
-
 关于书
 
 关于现代 C++ 中 Lambda 表达式，你所需要的一切！从 C++98 到 C++20
 
-
-
 （图片）
 
 这是一本 Leanpub 上的电子书。Leanpub 通过“轻量级出版”（Lean Publishing）流程为作者和出版社提供支持。轻量级出版是指使用轻量工具和多次迭代来发布进行中的电子书，以获取读者反馈，不断调整直到写出合适的书籍，并在获得进展后建立影响力。
-
 
 关于本书
 
@@ -358,23 +459,21 @@ C++20 对重载模式的更新
 
 致谢
 
-
-
-
-
-
 - 仅移动对象
 - 保留 `const`
 
 捕获参数包
 
 返回类型
+
 尾返回类型语法
 
 转换为函数指针
+
 一个复杂的案例
 
 II FFE - 立即调用函数表达式
+
 关于可读性的一点说明
 
 继承自 Lambda
@@ -384,90 +483,124 @@ II FFE - 立即调用函数表达式
 总结
 
 # 3. C++14 中的 Lambdas
+
 ## Lambda 的默认参数
+
 ## 返回类型
+
 ## 带初始化列表的捕获
+
 ## 局限性
+
 ## 针对现有问题的改进
+
 ## 泛型 Lambda
+
 变长泛型参数
+
 使用泛型 Lambda 进行完美转发
+
 推导正确类型
 
 ```
 Replacing std::bind1 and std::bind2 with Lambdas
 ```
+
 使用现代 C++ 技术
+
 函数组合
 
 使用 lambdas 进行 LIFT 操作
 
 递归 Lambdas
+
 配合 `std::function`
+
 内部 Lambda 与 泛型参数
+
 更多技巧
+
 递归 lambda 是最佳的替代方案吗？
 
 总结
 
 ## Lambda 语法更新
+
 ## 类型系统中的异常规范
+
 `constexpr` Lambda 表达式
+
 示例
+
 变量捕获
+
 `constexpr` 总结：
 
 对 *this* 的捕获
+
 部分指南
 
 对 I FFE 的更新
+
 变长泛型 Lambda 的更新
+
 继承自多个 Lambda
+
 自定义模板参数推导规则
+
 对聚合初始化的扩展
+
 使用 `std::variant` 和 `std::visit` 的示例
 
 使用 Lambda 进行并发执行
+
 配合 `std::thread` 的 Lambda
+
 配合 `std::async` 的 Lambda
+
 C++17 中的 Lambda 与并行算法
+
 Lambda 与异步 - 总结
 
 总结
 
 Lambda 语法更新
+
 更改快速概览
+
 `consteval` Lambda
+
 捕获参数包
+
 模板 Lambda
+
 概念（Concepts）与 Lambda
 
 对无状态 Lambda 的更改
+
 即使在未求值的上下文中也是
+
 Lambda 与 `constexpr` 算法 
+
 C++20 对重载模式的更新
+
 总结
 
 附录 A - 技术列表
 
 附录 B - C++ Lambda 表达式五大优势
+
 1. Lambda 让代码更具可读性
 2. Lambda 提高了代码的局部性
 3. Lambda 允许轻松存储状态
 4. Lambda 允许方便地存储
 5. Lambda 使代码更灵活
 
-
-
 关于书
 
 关于现代 C++ 中 Lambda 表达式，你所需要的一切！从 C++98 到 C++20
 
 （注：由于原文中存在大量重复内容，译文已根据指令“不要重复输出原文”的原则进行了去重处理和整合翻译。）
-
-
-
-
 
 - * C++ Insights - 一个基于 Clang 的源到转换工具。它展示了编译器如何看待代码，例如通过展开 lambda、auto、结构化绑定、模板推导、变长参数包或基于范围的 for 循环。
 
@@ -503,7 +636,6 @@ Tomek 在我们克拉科夫当地的 C++ 用户小组了一场关于 lambda “�
 
 最后，我收到了来自博客读者、Patreon 论坛以及 C++ Polska 讨论的许多反馈和评论。感谢大家！
 
-
 - 2019年3月25日 - 第一版发布！
 - 2020年1月5日 - 语法、更好的示例、用词、IIFE 章节、C++20 更新。
 - 2020年4月17日 - 重写了 C++20 章节，优化了语法、用词和布局。
@@ -525,7 +657,6 @@ Tomek 在我们克拉科夫当地的 C++ 用户小组了一场关于 lambda “�
     - 尽可能在较长的示例中使用 `const` 和 `noexcept`，
     - 全书大量小改、改进和布局调整。
 
-
 作为开始，为我们的主主题建立一些背景是很好的。为此此，我们将回到过去，查看不使用任何现代 C++ 技术的代码。
 
 在本章中，你将学习：
@@ -534,7 +665,6 @@ Tomek 在我们克拉科夫当地的 C++ 用户小组了一场关于 lambda “�
 - 函数对象和函数指针的局限性。
 - 为什么函数式助手不够用。
 - C++0x/C++11 新功能的动机。
-
 
 标准库的核心思想之一是，像 `std::sort`、`std::for_each`、`std::transform` 等算法可以接受任何可调用对象并在输入容器的元素上调用它。然而，在 C++98/03 中，我们只能使用函数指针或函数对象。
 
@@ -586,6 +716,8 @@ int main() {
 
 等等，上面的示例使用了 lambda 表达式，这是 C++11 引入的。在 C++98/03 中，我们必须写成：
 
+
+
 ```cpp
 #include <algorithm>
 #include <iostream>
@@ -604,7 +736,7 @@ int main() {
 }
 ```
 
-这种方法的问题是，为使用的每个函数对象都要定义一个新类。这非常繁琐并会让代码混乱。Lambda 在 C++11 中的引入是为了解决这个问题。它们允许我们就地定义定义函数对象。
+这种方法的问题是，为使用的每个函数对象都要定义一个新类。这非常繁琐并会让代码混乱。`Lambda` 在 `C++11` 中的引入是为了解决这个问题。它们允许我们就地定义定义函数对象。
 
 ```cpp
 #include <algorithm>
@@ -620,7 +752,7 @@ int main() {
 }
 ```
 
-Lambda 还可以捕获作用域变量。例如：
+`Lambda` 还可以捕获作用域变量。例如：
 
 ```cpp
 #include <algorithm>
@@ -639,7 +771,7 @@ int main() {
 }
 ```
 
-`[threshold]` 按值捕获变量，而 `[&]` 按引用捕获所有变量。我们按引用捕获特定变量。在 C++17 中，我们有了更强大的捕获功能，例如初始化捕获。
+`[threshold]` 按值捕获变量，而 `[&]` 按引用捕获所有变量。我们按引用捕获特定变量。在 `C++17` 中，我们有了更强大的捕获功能，例如初始化捕获。
 
 ```cpp
 #include <algorithm>
@@ -657,10 +789,6 @@ int main() {
 }
 ```
 
-
-
-
-
 ```cpp
 int main () {
   struct PrintFunctor {
@@ -673,7 +801,7 @@ int main () {
 }
 ```
 
-尝试使用 `-std=c++98` 编译它，你会在 GCC 上看到以下错误：
+尝试使用 `-std=c++98` 编译它，你会在 `GCC` 上看到以下错误：
 
 ```text
 error: template argument for
@@ -682,15 +810,15 @@ std::for_each(__Iter, __Iter, __Funct)
 uses local type 'Main::PrintFunctor'
 ```
 
-基本上，在 C++98/03 中，你不能使用局部类型实例化模板。
+基本上，在 `C++98/03` 中，你不能使用局部类型实例化模板。
 
-一旦认识并理解了这些局限性，C++ 程序员就找到了绕过 C++98/03 问题的方法。一种解决方案是准备一组辅助函数。
+一旦认识并理解了这些局限性，`C++` 程序员就找到了绕过 `C++98/03` 问题的方法。一种解决方案是准备一组辅助函数。
 
 # 使用函数式辅助函数进行组合
 
-使用一些辅助函数和预定义的函数对象（functors）怎么样？
+使用一些辅助函数和预定义的函数对象（`functors`）怎么样？
 
-如果你检查标准库中的 `<functional>` 头文件，你会发现许多可以立即用于标准算法（alg）的类型和函数。
+如果你检查标准库中的 `<functional>` 头文件，你会发现许多可以立即用于标准算法（`alg`）的类型和函数。
 
 例如：
 
@@ -704,7 +832,7 @@ uses local type 'Main::PrintFunctor'
 
 让我们写一些受益于这些辅助函数的代码：
 
-使用旧的 C++98/03 函数式辅助函数。在线代码见 @Wandbox
+使用旧的 `C++98/03` 函数式辅助函数。在线代码见 `@Wandbox`
 
 ```cpp
 #include <algorithm>
@@ -729,11 +857,11 @@ int main() {
 return x < 5;
 ```
 
-如果你想要现即用的辅助函数，你也可以查看 boost 库，例如 `boost::bind`。
+如果你想要现即用的辅助函数，你也可以查看 `boost` 库，例如 `boost::bind`。
 
 遗憾的是，这种方法的主要问题是复杂性和难以学习的语法。例如编写组合两个或多个函数的代码并不直观。请看下文：
 
-组合函数式辅助函数。在线代码 @Wandbox
+组合函数式辅助函数。在线代码 `@Wandbox`
 
 ```cpp
 std::vector<int> v;
@@ -750,7 +878,7 @@ const size_t val = std::count_if(v.begin(), v.end(),
 // _1 来自 std::placeholder 命名空间
 ```
 
-该组合使用了 `std::bind`（来自 C++11，所以我们稍微作了点弊，它不是 ++98/03）配合 `std::greater` 和 `std::less_equal`，通过 `std::logical_and` 连接起来。此外，代码使用了 `_1`，它是第一个输入参数的占位符。
+该组合使用了 `std::bind`（来自 `C++11`，所以我们稍微作了点弊，它不是 ++98/03）配合 `std::greater` 和 `std::less_equal`，通过 `std::logical_and` 连接起来。此外，代码使用了 `_1`，它是第一个输入参数的占位符。
 
 虽然上面的代码可以工作，但你可以局部定义它，你可能同意这种语法复杂且不自然。需要提到的是这种组合只表示了一个简单的条件：
 
@@ -762,39 +890,38 @@ return x > 2 && x <= 6 ;
 
 ## 新特性的动机
 
-正如你所见，在 C++98/03 中，有多种方法向标准库的算法和工具声明并传递可调用对象。然而，所有这些选项都有些局限。例如，你不能声明局部函数对象对象，或者将函数与函数式辅助对象组合非常复杂。
+正如你所见，在 `C++98/03` 中，有多种方法向标准库的算法和工具声明并传递可调用对象。然而，所有这些选项都有些局限。例如，你不能声明局部函数对象对象，或者将函数与函数式辅助对象组合非常复杂。
 
-幸运的是，有了 C++11，我们终于看到了许多改进！
+幸运的是，有了 `C++11`，我们终于看到了许多改进！
 
-首先，C++ 委员会取消了带有局部类型的模板实例化限制。现在你可以在需要它们的地方局部编写函数对象。
+首先，`C++` 委员会取消了带有局部类型的模板实例化限制。现在你可以在需要它们的地方局部编写函数对象。
 
-此外，C++11 还实现了一个另一个理念：如果编译器能为开发者“编写”这些短小的函数对象呢？这意味着通过一些新语法，我们可以“就地”创建函数对象，并为更简洁紧凑的语法打开大门。
+此外，`C++11` 还实现了一个另一个理念：如果编译器能为开发者“编写”这些短小的函数对象呢？这意味着通过一些新语法，我们可以“就地”创建函数对象，并为更简洁紧凑的语法打开大门。
 
-这就是“Lambda 表达式”（lambda expressions）的诞生！
+这就是“`Lambda` 表达式”（`lambda expressions`）的诞生！
 
-如果我们看 N3337 —— C++11 的最终草稿，我们可以看到一个专门针对 lambda 的章节：[expr.prim.lambda]。
+如果我们看 `N3337` —— `C++11` 的最终草稿，我们可以看到一个专门针对 `lambda` 的章节：`[expr.prim.lambda]`。
 
 让我们在下一章来看看这个新特性。
 
 # 2. C++11 中的 Lambdas
 
-万岁！C++ 委员会听取了开发者的声音，从 C++11 开始，我们得到了许多改进！
+万岁！`C++` 委员会听取了开发者的声音，从 `C++11` 开始，我们得到了许多改进！
 
-Lambdas 很快变得非常流行。在 N3337 - C++11 的最终草稿中，我们可以看到一个专门针对 lambda 的章节：[expr.prim.lambda]。
+`Lambdas` 很快变得非常流行。在 `N3337 - C++11` 的最终草稿中，我们可以看到一个专门针对 `lambda` 的章节：`[expr.prim.lambda]`。
 
 让我们在下一章来看看这个新特性。
 
-
 在本章，你将学习：
 
-- Lambda 的基本语法。
-- 捕获（capture）。
+- `Lambda` 的基本语法。
+- 捕获（`capture`）。
 - 返回类型。
 - 修饰符。
-- Lambda 如何转换为函数指针。
-- IIFE（立即调用函数表达式）。
+- `Lambda` 如何转换为函数指针。
+- `IIFE`（立即调用函数表达式）。
 
-Lambda 的语法图如下：
+`Lambda` 的语法图如下：
 
 ```
 [] () -> ret {code }
@@ -804,7 +931,7 @@ Lambda 的语法图如下：
 | optional capture list
 ```
 
-上面的示例显示了在 Lambda 体之前可以使用其他修饰符。
+上面的示例显示了在 `Lambda` 体之前可以使用其他修饰符。
 
 ## Lambda 表达式的一些示例
 
@@ -813,7 +940,7 @@ Lambda 的语法图如下：
 [] {};
 ```
 
-在第一个示例中，你可以看到一个简单的 lambda 表达式。它只需要 `[]` 然后是函数体的 `{}`。参数列表 `()` 是可选的，在这种情况下不需要。
+在第一个示例中，你可以看到一个简单的 `lambda` 表达式。它只需要 `[]` 然后是函数体的 `{}`。参数列表 `()` 是可选的，在这种情况下不需要。
 
 ```cpp
 // 2. 带有两个参数：
@@ -828,7 +955,7 @@ Lambda 的语法图如下：
 [](MyClass t) -> int { auto a = t.compute(a); print(a); return a; };
 ```
 
-在上面的示例中，我们显式设置了返回类型。尾返回类型从 C++11 起也适用于函数声明。
+在上面的示例中，我们显式设置了返回类型。尾返回类型从 `C++11` 起也适用于函数声明。
 
 ```cpp
 // 4. 额外的修饰符：
@@ -837,29 +964,25 @@ Lambda 的语法图如下：
 [x](int a, int b) mutable noexcept { return a < b; };
 ```
 
-最后一个示例显示在 Lambda 体之前可以使用其他修饰符。在代码中，我们使用了 `mutable`（以便修改捕获的变量）和 `noexcept`。第三个 lambda 使用了 `mutable` 和 `noexcept`，它们必须按此顺序出现。
+最后一个示例显示在 `Lambda` 体之前可以使用其他修饰符。在代码中，我们使用了 `mutable`（以便修改捕获的变量）和 `noexcept`。第三个 `lambda` 使用了 `mutable` 和 `noexcept`，它们必须按此顺序出现。
 
+类似于 `C++17` 和 `C++20` 中的 `constexpr` 或 `constval`。
 
-
-类似于 C++17 和 C++20 中的 `constexpr` 或 `constval`。
-
-
-Lambda 的语法也允许使用以 `[[attr_name]]` 形式引入的属性。然而，如果你对 lambda 应用属性，它将作用于调用运算符的类型，而不是作用于运算符本身。这就是为什么目前（甚至在 C++20 中）没有任何可以放在 lambda 上的属性是有意义的。大多数大多数编译器都会报告错误。如果我们取一个 C++17 属性并尝试在表达式中使用它：
+`Lambda` 的语法也允许使用以 `[[attr_name]]` 形式引入的属性。然而，如果你对 `lambda` 应用属性，它将作用于调用运算符的类型，而不是作用于运算符本身。这就是为什么目前（甚至在 `C++20` 中）没有任何可以放在 `lambda` 上的属性是有意义的。大多数大多数编译器都会报告错误。如果我们取一个 `C++17` 属性并尝试在表达式中使用它：
 
 ```cpp
 auto myLambda = [](int a) [[nodiscard]] { return a * a; };
 ```
 
-在 Clang 上会产生以下错误（参见代码 @Sandbox）：
+在 `Clang` 上会产生以下错误（参见代码 `@Sandbox`）：
 
 ```
 error: 'nodiscard' attribute cannot be applied to types
 ```
 
+总而言之，这里有一个基础的示例，展示了如何编写一个 `lambda` 表达式并将其传递给 `std::for_each`。作为对比，代码还说明了相应的仿函数类型：
 
-总而言之，这里有一个基础的示例，展示了如何编写一个 lambda 表达式并将其传递给 `std::for_each`。作为对比，代码还说明了相应的仿函数类型：
-
-第一个 Lambda 和对应的仿函数。在线代码 @Wandbox
+第一个 `Lambda` 和对应的仿函数。在线代码 `@Wandbox`
 
 ```cpp
 #include <algorithm>
@@ -896,13 +1019,13 @@ struct {
 } someInstance;
 ```
 
-翻译或“展开”的过程可以很容易在 C++ Insights 上查看，这是一个在线工具，接受有效的 C++ 代码并生成编译器生成的源码版本：例如 lambda 的匿名仿函数、模板实例化以及许多其他 C++ 特性。
+翻译或“展开”的过程可以很容易在 `C++ Insights` 上查看，这是一个在线工具，接受有效的 `C++` 代码并生成编译器生成的源码版本：例如 `lambda` 的匿名仿函数、模板实例化以及许多其他 `C++` 特性。
 
-在接下来的章节中，我们将深入探讨 lambda 表达式的各个部分。
+在接下来的章节中，我们将深入探讨 `lambda` 表达式的各个部分。
 
 ## Lambda 表达式的类型 (The Type of a Lambda Expression)
 
-由于编译器为每个 lambda 生成唯一的名称（闭包类型），无法提前“写出”它。
+由于编译器为每个 `lambda` 生成唯一的名称（闭包类型），无法提前“写出”它。
 
 这就是为什么你必须使用 `auto`（或 `decltype`）来推导类型。
 
@@ -910,14 +1033,14 @@ struct {
 auto myLambda = [](int a) -> double { return a * a };
 ```
 
-更重要的是，如果你有两个看起来相同的 lambda：
+更重要的是，如果你有两个看起来相同的 `lambda`：
 
 ```cpp
 auto firstLam = [](int x) { return x * 2; }
 auto secondLam = [](int x) { return x * 2; };
 ```
 
-即使“背后的代码”是相同的，它们的类型也是不同的！编译器会被为每个 lambda 声明两个未命类型。
+即使“背后的代码”是相同的，它们的类型也是不同的！编译器会被为每个 `lambda` 声明两个未命类型。
 
 我们可以通过以下代码证明这一属性：
 
@@ -936,12 +1059,13 @@ int main() {
 
 上面的示例验证了 `oneLam` 和 `twoLam` 的闭包类型是不相同的。
 
-在 C++17 中，我们可以使用不带信息的 `static_assert` 以及辅助变量模板用于类型特性的 `is_same_v`：
+在 `C++17` 中，我们可以使用不带信息的 `static_assert` 以及辅助变量模板用于类型特性的 `is_same_v`：
+
 ```cpp
 static_assert(std::is_same_v<double, decltype(baz(10)));
 ```
 
-然而，虽然不知道名称，你可以写出 lambda 的签名并将其存储在 `std::function` 中。通常情况下，使用 `auto` 定义的 lambda 无法做，如果 lambda 使用 `std::function<>` 类型就可以做到。例如，之前的 lambda 签名是 `double(int)`，因为它接受一个输入参数并返回 `double`。我们可以通过以下方式创建 `std::function` 对象：
+然而，虽然不知道名称，你可以写出 `lambda` 的签名并将其存储在 `std::function` 中。通常情况下，使用 `auto` 定义的 `lambda` 无法做，如果 `lambda` 使用 `std::function<>` 类型就可以做到。例如，之前的 `lambda` 签名是 `double(int)`，因为它接受一个输入参数并返回 `double`。我们可以通过以下方式创建 `std::function` 对象：
 
 ```cpp
 std::function<double (int)> MyFunc = [](int a) -> double { return 2.0 * a };
@@ -967,26 +1091,24 @@ int main() {
     std::cout << sizeof(MyFunc) << std::endl;
 }
 ```
-（注：此处由于输入原文后续似乎存在乱码或重复，翻译已根据上下文进行了逻辑修正）
 
-*注：原文提供的文本从此处开始出现了大量重复和无意义的字符，翻译已根据 C++ 逻辑进行了完整性处理。*
-
+*注：原文提供的文本从此处开始出现了大量重复和无意义的字符，翻译已根据 `C++` 逻辑进行了完整性处理。*
 
 
 
-我们在 C++98/03 章节中也为 PrintFunctor 做过类似的操作。在那个类中，我们添加了一个成员变量 `std::string strText`，并在构造函数中对其进行了初始化。成员变量允许我们在可调用对象中存储状态。
+我们在 C++98/03 章节中也为 `PrintFunctor` 做过类似的操作。在那个类中，我们添加了一个成员变量 `std::string` `strText`，并在构造函数中对其进行了初始化。成员变量允许我们在可调用对象中存储状态。
 
 捕获的语法：
 
 - `[&]` 按引用捕捕获作用域内声明的所有自动存储时期变量。
 - `[=]` 按值捕获（创建副本）作用域内声明的所有自动存储时期变量。
-- `[x, &]` 显式地按值捕获 x 并按引用捕获 y。
+- `[x, &]` 显式地按值捕获 `x` 并按引用捕获 `y`。
 - `[args...]` - 捕获模板参数包，全部按值。
 - `[&args...]` - 捕获模板参数包，全部按引用。
 
 以及带有示例的总结：
 
-```
+```cpp
 int x = 2, y = 3;
 const auto l1 = [&](){ return 1; }; // 无捕获
 const auto l12 = [=](){ return x; }; // 全部按值（拷贝）
@@ -1006,24 +1128,24 @@ const auto l18 = [&, y](){ return x - y; }; // y 是引用
 
 ## 捕获变量
 
-```
+```cpp
 std::string str("Hello World");
 auto foo = [str]() { return std::cout << str << '\n'; };
 foo();
 ```
 
-对于这个 lambda，str 是按值捕获的（即被拷贝了）。编译器将生成局部仿函数：
+对于这个 lambda，`str` 是按值捕获的（即被拷贝了）。编译器将生成局部仿函数：
 
 ## 一个可能的编译器生成的仿函数，单变量
 
-```
+```cpp
 struct _unnamedLambda {
 _unnamedLambda(std::string s) : str(s) {} // 拷贝
 ```
 
 ![](img/7cb35845bb98e3b897191af3bab607e2_30_0.png)
 
-```
+```cpp
 void operator () const {
     std::cout << str << '\n';
 }
@@ -1034,15 +1156,15 @@ std::string str;
 
 变量被传入构造函数，在概念上是在 lambda 声明的“位置”完成的。
 
-准确来说，标准在 [expr.prim.lambda#21] 中提到：
+准确来说，标准在 `[expr.prim.lambda#21]` 中提到：
 
 > 当求值 lambda表达式时，按拷贝捕获的实体用于直接初始化结果闭包对象的每个对应的非静态数据成员。
 
-我上面展示的可能的构造函数 (_unnamedLambda) 仅用于演示，编译器可能会以不同的方式实现它且不会将其暴露。
+我上面展示的可能的构造函数 (`_unnamedLambda`) 仅用于演示，编译器可能会以不同的方式实现它且不会将其暴露。
 
 ## 按引用捕获两个变量
 
-```
+```cpp
 int x = 1, y = 1;
 std::cout << x << " " << y << std::endl;
 const auto foo = [&x, &y](() noexcept { ++ x; ++ y; };
@@ -1052,7 +1174,7 @@ std::cout << x << " " << y << std::endl;
 
 对于上面的 lambda，编译器可能会生成以下局部仿函数：
 
-```
+```cpp
 一个可能的生成的构造仿函数，两个引用。Live code @Wandbox
 struct _unnamedLambda{
     _unnamedLambda(int &a, int &b) : x(a), y(b) {}
@@ -1066,7 +1188,7 @@ struct _unnamedLambda{
 };
 ```
 
-由于我们按引用捕获了 x 和 y，闭包类型将包含同样为引用的成员变量。
+由于我们按引用捕获了 `x` 和 `y`，闭包类型将包含同样为引用的成员变量。
 
 > 值捕获变量的值是在 lambda 定义时的值——而不是使用时的值！按引用捕获变量的值是在 lambda 使用时的值——而不是定义时的值。
 
@@ -1082,14 +1204,14 @@ struct _unnamedLambda{
 
 如果你想改变这种行为，需要在参数列表后添加 `mutable` 关键字。这种语法实际上从闭包类型的调用运算符声明中删除了 `const` 修饰符。如果你有一个带有 `mutable` 的简单 lambda 表达式：
 
-```
+```cpp
 int x = 1;
 auto foo = [x]() mutable { ++ x; };
 ```
 
 它将被“展开”为以下函数：
 
-```
+```cpp
 struct _lambda_x1 {
     void operator() { ++ x; }
     int x;
@@ -1122,15 +1244,14 @@ int main() {
 输出：
 
 in main(): 1 1
+
 in foo(): 2 2
+
 in main(): 1 1
 
-在上面的示例中，我们可以更改 x 和 y 的值。由于这些只是闭包作用域内 x 和 y 的拷贝，我们在调用 foo 后没有看到它们的新值。
+在上面的示例中，我们可以更改 `x` 和 `y` 的值。由于这些只是闭包作用域内 `x` 和 `y` 的拷贝，我们在调用 `foo` 后没有看到它们的新值。
 
 另一方面，如果你按引用捕获，则就不需要对 lambda 应用 `mutable` 来修改值。这是因为被捕获的成员变量是引用，不能在 `const` 成员函数中绑定。
-
-
-
 
 与捕获全局变量类似，你在静态对象上也会遇到相同的问题：
 
@@ -1199,7 +1320,9 @@ int main () {
 该代码尝试捕获 `s`，它是一个成员变量。但编译器会抛出错误信息：
 
 在成员函数 'void Baz::foo()' 中
+
 error: 捕获了非变量 'Baz::s'
+
 error: 此 lambda 表达式未捕获 'this'
 
 要解决这个问题，你必须捕获 `this` 指针。这样你就可以访问成员变量了。
@@ -1391,10 +1514,7 @@ str += "driver"; // 正常工作
 
 请注意我们现在必须移除 `noexcept`，因为 `std::string` 的创建可能会抛出异常。
 
-作为顺带，你还可以使用命名空间 `std::string_literals;`，然后你可以返回 `"you're a regular"s 来指示 `std::string` 类型。
-
-
-
+作为顺带，你还可以使用命名空间 `std::string_literals;`，然后你可以返回 `"you're a regular"s` 来指示 `std::string` 类型。
 
 如果你的 lambda 没有捕获任何变量，那么编译器可以将其转换为普通的函数指针。请参考标准库 `expr.prim.lambda6` 中的以下描述：
 
@@ -1403,9 +1523,20 @@ str += "driver"; // 正常工作
 为了说明 lambda 如何支持这种转换，让我们考虑下面的示例。它定义了一个趣对象 `baz`，该对象显式地定义了转换运算符：
 
 转换为函数指针。Live code @Sandbox line-numbers-on
+
 #include <iostream>
 
-```
+
+
+如果你的 lambda 没有捕获任何变量，那么编译器可以将其转换为普通的函数指针。请参考标准库 `expr.prim.lambda6` 中的以下描述：
+
+> 无捕获的 lambda 表达式的闭包类型有一个公共的、虚的、非显式的 `const` 转换函数，可以转换为指针，该指针的参数类型和返回类型与闭包类型的函数调用运算符相同。该转换函数返回的值应为函数的地址，该函数在被调用时，其效果与调用闭包类型的函数调用运算符的效果相同。
+
+为了说明 lambda 如何支持这种转换，让我们考虑下面的示例。它定义了一个趣对象 `baz`，该对象显式地定义了转换运算符：
+
+转换为函数指针。Live code @Sandbox line-numbers-on
+
+```cpp
 void callWith10(void (* bar)(int)) {
   bar(10);
 }
@@ -1426,177 +1557,7 @@ callWith10([baz](int x) { std::cout << x << '\n'; });
 }
 ```
 
-在前面的程序中，有一个接收函数指针的函数 `callWith10`。然后我们用两个参数调用了它（第 18 行和第 19 行）：第一个使用 `baz`，`baz` 是一个包含必要转换运算符的趣对象 - 它被转换为 `f_ptr`，这与 `callWith10` 的输入参数相同。稍后，我们使用 lambda 进行调用。在这种情况下，编译器在底层执行了所需的转换。
-
-当你需要调用一个需要回调函数的 C 风格函数时，这种转换可能非常有用。例如，在下面你可以找到调用 C 库中的 `qsort` 并使用 lambda 逆序排序元素的代码：
-
-调用 C 风格函数。Live code @Wandbox
-
-```cpp
-#include <cstdlib>
-#include <iostream>
-
-int main() {
-    int values[] = { 8, 9, 2, 5, 1, 4, 7, 3, 6 };
-    constexpr size_t nElements = sizeof(values)/ sizeof(values[]);
-
-    std::qsort(values, nElements, sizeof(int),
-        [](const void * a, const void * b) noexcept {
-            return (*(int *)b - (*(int *)a);
-        });
-
-    for (const auto &val : values) {
-        std::cout << val << ", ";
-    }
-}
-```
-
-如你在代码示例所示，`qsort` 只接受函数指针作为比较器。编译器可以对我们传递的无状态 lambda 进行隐式转换。
-
-## 一个棘手的情况
-
-在进入另一个主题之前，还有一个可能具有分析价值的案例：
-
-加号与 lambda。Live code @Wandbox
-
-```cpp
-#include <type_traits>
-int main() {
-    auto funcPtr = +[](){};
-    static_assert(std::is_same<decltype(funcPtr), void (*)()>::value);
-}
-```
-
-请注意带有 `+` 的奇怪语法。如果你移除加号，`static_assert` 就会失败。这是为什么？
-
-为了理解它的工作原理，我们可以查看 C++ Insights 生成的输出。查看这个工作示例：
-
-```
-using FuncPtr_4 = void (*()();
-FuncPtr_4 funcPtr = 
-    + static_cast<void (*)()>(_{__la::operator la::__la::retType_4_18()});
-/* PASSED: static_assert(std::integral_constant<bool, 1>::value); */
-```
-
-```
-// la 是 cppinnights 中的 _lambda_4_18
-```
-
-代码使用了 `+`，这是一个一元运算符。该运算符可以作用指针，因此编译器将我们的无状态 lambda 转换为函数指针并将其赋值给 `funcPtr`。相反，如果你移除加号，`funcPtr` 就是一个普通的闭包对象，这就是为什么 `static_assert` 失败了。
-
-虽然使用 `"+"` 编写这种语法可能不是主主意，但如果你写 `static_cast`，效果是相同的。在你不希望编译器创建过多函数实例化的情况下，可以使用这种技术。例如：
-
-转换为函数指针。Live code @CppInsights
-
-```cpp
-template <typename F>
-void call_function(F f) {
-  f(10);
-}
-
-int main() {
-  call_function(static_cast<int (*) (int)> ([])(int x){
-    return x * 2;
-  });
-  call_function(static_cast<int (*) (int)> ([])(int x){
-    return x * 2;
-  });
-}
-```
-
-在上面的示例中，编译器只创建了一个单一实例化。编译器可以对我们传递的无状态 lambda 进行隐式转换（此处修正翻译应为：在上面的示例中，编译器只创建了一个单一实例化。编译器可以对我们传递的无状态 lambda 进行隐式转换。*注：原文为 In the above example the compiler has create only a single function instantiations. The compiler can do an implicit conversion of the stateless lambda that we pass.*） 修正为：在上面的示例中，编译器只创建了一个单一函数实例化。编译器可以对我们传递的无状态 lambda 进行隐式转换。
-
-## 一个棘手的情况
-
-在进入另一个主题之前，还有一个可能具有分析价值的案例：
-
-加号与 lambda。Live code @Wandbox
-
-```cpp
-#include <type_traits>
-int main() {
-    auto funcPtr = +[](){};
-    static_assert(std::is_same<decltype(funcPtr), void (*)()>::value);
-}
-```
-
-请注意带有 `+` 的奇怪语法。如果你移除加号，`static_assert` 就会失败。这是为什么？
-
-为了理解它的工作原理，我们可以查看 C++ Insights 生成的输出。查看这个工作示例：
-
-```
-using FuncPtr_4 = void (*()();
-FuncPtr_4 funcPtr = 
-    + static_cast<void (*)()>(_{__la::operator la::__la::retType_4_18()});
-/* PASSED: static_assert(std::integral_constant<bool, 1>::value); */
-```
-
-```
-// la 是 cppinnights 中的 _lambda_4_18
-```
-
-代码使用了 `+`，这是一个一元运算符。该运算符可以作用指针，因此编译器将我们的无状态 lambda 转换为函数指针并将其赋值给 `funcPtr`。相反，如果你移除加号，`funcPtr` 就是一个普通的闭包对象，这就是为什么 `static_assert` 失败了。
-
-虽然使用 `"+"` 编写这种语法可能不是主主意，但如果你写 `static_cast`，效果是相同的。在你不希望编译器创建过多函数实例化的情况下，可以使用这种技术。例如：
-
-转换为函数指针。Live code @CppInsights
-
-```cpp
-template <typename F>
-void call_function(F f) {
-  f(10);
-}
-
-int main() {
-  call_function(static_cast<int (*) (int)> ([])(int x){
-    return x * 2;
-  });
-  call_function(static_cast<int (*) (int)> ([])(int x){
-    return x * 2;
-  });
-}
-```
-
-在上面的示例中，编译器只创建了一个单一函数实例化。编译器可以对我们传递的无状态 lambda 进行隐式转换。
-
-（注：由于原文文本中存在重复段落，根据“一定不要重复输出原文”的原则，此处已按逻辑合并翻译，确保内容连贯且不重复。）
-
----
-
-**重新整理完整翻译如下（去重复）：**
-
-[content]
-如果你的 lambda 没有捕获任何变量，那么编译器可以将其转换为普通的函数指针。请参考标准库 `expr.prim.lambda6` 中的以下描述：
-
-> 无 捕获的 lambda 表达式的闭包类型有一个公共的、虚的、非显式的 `const` 转换函数，可以转换为指针，该指针的参数类型和返回类型与闭包类型的函数调用运算符相同。该转换函数返回的值应为函数的地址，该函数在被调用时，其效果与调用闭包类型的函数调用运算符的效果相同。
-
-为了说明 lambda 如何支持这种转换，让我们考虑下面的示例。它定义了一个趣对象 `baz`，该对象显式地定义了转换运算符：
-
-转换为函数指针。Live code @Sandbox line-numbers-on
-#include <iostream>
-
-```
-void callWith10(void (* bar)(int)) {
-  bar(10);
-}
-
-int main () {
-  struct {
-    using f_ptr = void (*)(int);
-
-    void operator()(int s) const { return call(s); }
-    operator f_ptr() const { return &call; }
-
-  private:
-    static void call(int s) { std::cout << s << '\n'; };
-  } baz;
-
-callWith10(baz);
-callWith10([baz](int x) { std::cout << x << '\n'; });
-}
-```
-
-在前面的程序中，有一个接收函数指针的函数 `callWith10`。然后我们用两个参数调用了它（第 18 行和第 19 行）：第一个使用 `baz`，`baz` 是一个包含必要转换运算符的趣对象 - 它被转换为 `f_ptr`，这与 `callWith10` 的输入参数相同。稍后，我们使用 lambda 进行调用。在这种情况下，编译器在底层执行了所需的转换。
+在前面的程序中，有一个接收函数指针的函数 `callWith10`。然后我们用两个参数调用了它：第 18 行和第 19 行：第一个使用 `baz`，`baz` 是一个包含必要转换运算符的趣对象 - 它被转换为 `f_ptr`，这与 `callWith10` 的输入参数相同。稍后，我们使用 lambda 进行调用。在这种情况下，编译器在底层执行了所需的转换。
 
 当你需要调用一个需要回调函数的 C 风格函数时，这种转换可能非常有用。例如，在下面你可以找到调用 C 库中的 `qsort` 并使用 lambda 逆序排序元素的代码：
 
@@ -1698,8 +1659,6 @@ int main() {
 
 在上面的示例中，`html` 是一个字符串，它是通过 lambda 立即调用的结果。
 
- 。
-
 ## 继承 lambda
 
 可能让你惊讶的是，你也可以继承 lambda！
@@ -1731,7 +1690,7 @@ int main() {
 }
 ```
 
-在示例中，有一个 `ComplexFunctor` 类继承自 `Callable`，`Callable` 是一个模板参数。如果我们需要继承 lambda，就需要一点技巧，除非我们无法写出闭包类型的精确类型（除非将其封装在 `std::function` 中）。这就是为什么我们需要 `MakeComplexFunctor` 函数来执行模板参数推导并获取 lambda 闭包的类型。
+在示例中，有一个 `ComplexFunctor` 类继承自 `Callable`，`Callable` 是一个模板参数。如果我们需要继承 lambda，就需要一点技巧，除非我们无法写出闭包类型的精确类型。除非将其封装在 `std::function` 中。这就是为什么我们需要 `MakeComplexFunctor` 函数来执行模板参数推导并获取 lambda 闭包的类型。
 
 例如，我们可以扩展上面的代码并使其继承自两个 lambda，创建一个重载集合：
 
@@ -1823,21 +1782,20 @@ error: request for member 'Func' is ambiguous
 例如：
 
 将 Lambda 存储为函数指针。Wandbox 实时代码
+
+```cpp
 #include <iostream>
 #include <vector>
 
 int main () {
   using TFunc = void (*)(int &);
   std::vector<TFunc> ptrFuncVec;
-
   ptrFuncVec.push_back([](int &x) { std::cout << x << '\n'; });
   ptrFuncVec.push_back([](int &x) { x *= 2; });
-  ptrFuncVec.push_back(ptrFuncVec[0]); // 再次打印；
-
-```cpp
-int x = 10;
-for (const auto &entry : ptrFuncVec)
-    entry(x);
+  ptrFuncVec.push_back(ptrFuncVec[0]);
+  int x = 10;
+  for (const auto &entry : ptrFuncVec)
+      entry(x);
 }
 ```
 
@@ -1851,7 +1809,7 @@ for (const auto &entry : ptrFuncVec)
 
 为了解决这个问题，我们可以求助于强大的辅助工具：`std::function`。为了让示例更有趣，我们从简单的整数切换到了使用 `std::string` 对象的 lambda：
 
-将 Lambda 存储为 std::function。Wandbox 实时代码
+将 Lambda 存储为 `std::function`。Wandbox 实时代码
 
 ```cpp
 #include <algorithm>
@@ -1862,21 +1820,19 @@ for (const auto &entry : ptrFuncVec)
 
 int main() {
     std::vector<std::function<void(std::string&)>> funcVec;
-
     funcVec.push_back([](std::string& s) { std::cout << s << '\n'; });
     funcVec.push_back([](std::string& s) { s += " modified"; });
-
     std::string str = "hello";
     funcVec[0](str);
     funcVec[1](str);
     funcVec[0](str);
 }
 ```
+
 *(注：后续 OCR 文本存在大量重复和碎片，已根据题目提供的逻辑流进行处理。)*
 
-
-
 函数签名和 C++ 包含了一些额外的头文件 `<functional>`。
+
 如果你还记得 C++11 章节的内容，`std::function` 是一个沉重的对象（在 GCC 9 中 `sizeof` 显示为 32 字节），它需要一些高级的内部机制来处理任何可调用对象。
 
 得益于 C++14 的改进，我们现在可以大幅简化代码：
@@ -1910,7 +1866,6 @@ int main() {
 
 ```
 #include <iostream>
-
 int main () {
     int x = 30;
     int y = 12;
@@ -1938,7 +1893,6 @@ struct __unnamedLambda {
     void operator()() const {
         std::cout << z << '\n';
     }
-
     int z;
 } someInstance;
 ```
@@ -1988,7 +1942,7 @@ int main() {
 template <class... Args>
 auto captureTest(Args... args) {
     return lambda = [...capturedArgs] = std::move(args)(){};
-    // ...
+}
 ```
 
 然而，这种语法在 C++20 中是可能的，参见本节。
@@ -2008,7 +1962,6 @@ auto captureTest(Args... args) {
 ```cpp
 #include <iostream>
 #include <memory>
-
 int main() {
     std::unique_ptr<int> p(new int{10});
     const auto bar = [ptr=move(p)] {
@@ -2048,27 +2001,21 @@ std::function<void()> fn = [ptr=move(p)] {};
 #include <iostream>
 #include <string>
 #include <vector>
-
 int main() {
   using namespace std::string_literals;
   std::vector<std::string> vs = {"apple", "orange", "foobar", "lemon"};
-
   const auto prefix = "foo" s;
-
   auto result = std::find_if(vs.begin(), vs.end(),
       [&prefix](const std::string& s) {
         return s == prefix + "bar" s;
       });
-
   if (result != vs.end()) {
     std::cout << prefix << "-found! \n";
   }
-
   result = std::find_if(vs.begin(), vs.end(),
     [savingString=prefix + "bar" s](const std::string& s) {
       return s == savingString;
     });
-
   if (result != vs.end()) {
     std::cout << prefix << "-found! \n";
   }
@@ -2087,9 +2034,7 @@ struct Baz {
     return [s = s](){ std::cout << s << std::endl; }
   }
 }
-
 std::string s;
-
 int main () {
   const auto f1 = Baz{"abc"}.foo();
   const auto f2 = Baz{"xyz"}.foo();
@@ -2100,9 +2045,7 @@ int main () {
 
 在 `foo()` 中，我们通过将其拷贝到闭包类型来捕获成员变量。此外，我们成员函数的返回类型使用了 `auto`。作为备注，在 C++11 中，我们必须使用 `std::function`。
 
-当我们使用像 `[s = s]` 这样奇怪的语法时可能会令人惊讶，当
-
-声明 lambda。这段代码能够运行，是因为捕获的变量在闭包类型的范围内，而不是在外部范围内。这就是为什么这里没有冲突。
+当我们使用像 `[s = s]` 这样奇怪的语法时可能会令人惊讶，当声明 lambda。这段代码能够运行，是因为捕获的变量在闭包类型的范围内，而不是在外部范围内。这就是为什么这里没有冲突。
 
 ## 泛型 Lambda
 
@@ -2151,6 +2094,8 @@ struct {
 #include <iostream>
 ```
 
+
+
 ```cpp
 #include <string>
 
@@ -2173,11 +2118,14 @@ int main () {
 ## 输出：
 
 Calling foo on: Hello World
+
 foo(const std::string&)
+
 Calling foo on: Hello World Ref
+
 foo(std::string&&)
 
-示例代码为 `std::string` 的 const 和右值引用定义了两个函数重载。`callFoo` lambda 使用了一个通用引用（universal reference）作为泛型参数。如果你想将此 lambda 重写为普通的函数模板，它看起来可能是这样：
+示例代码为 `std::string` 的 `const` 和右值引用定义了两个函数重载。`callFoo` `lambda` 使用了一个通用引用（universal reference）作为泛型参数。如果你想将此 `lambda` 重写为普通的函数模板，它看起来可能是这样：
 
 ```cpp
 template < typename T>
@@ -2187,17 +2135,17 @@ void callFooFunc(T&& str) {
 }
 ```
 
-如泛型 Lambda 所示，你有更多的选项来编写局部匿名函数。
+如泛型 `Lambda` 所示，你有更多的选项来编写局部匿名函数。
 
 但不仅如此。
 
 ## 推导正确的类型
 
-此外，当类型推导很复杂时，泛型 Lambda 可能会非常有帮助。
+此外，当类型推导很复杂时，泛型 `Lambda` 可能会非常有帮助。
 
 例如：
 
-map 迭代的正确类型。实时代码 @Wandbox
+`map` 迭代的正确类型。实时代码 @Wandbox
 
 ```cpp
 #include <algorithm>
@@ -2219,9 +2167,9 @@ int main() {
 }
 ```
 
-## 我在这里写错了吗？entry 的类型正确吗？
+### 我在这里写错了吗？entry 的类型正确吗？
 
-这是一个错误，因为 map 的值类型是 `std::pair<const Key, T>`，而不是 `const std::pair<const std::string, int>`。在我们的案例中，由于 `std::pair<const std::string, int>` 和 `const std::pair<std::string, int>&` 之间的转换（即 `const std::string` 转换为 `std::string`），代码执行了拷贝：
+这是一个错误，因为 `map` 的值类型是 `std::pair<const Key, T>`，而不是 `const std::pair<const std::string, int>`。在我们的案例中，由于 `std::pair<const std::string, int>` 和 `const std::pair<std::string, int>&` 之间的转换（即 `const std::string` 转换为 `std::string`），代码执行了拷贝：
 
 ## 使用 auto 可以修复
 
@@ -2232,11 +2180,11 @@ std::for_each(std::begin(numbers), std::end(numbers),
     });
 ```
 
-现在模板推导将充分地获取 entry 的正确类型，并且不会创建额外的拷贝。更不用说代码更易读、更更短了。
+现在模板推导将充分地获取 `entry` 的正确类型，并且不会创建额外的拷贝。更不用说代码更易读、更更短了。
 
-查看完整示例，示例中还包含了打印 entry 地址的代码：
+查看完整示例，示例中还包含了打印 `entry` 地址的代码：
 
-map 迭代的正确类型，实时代码 @Wandbox
+`map` 迭代的正确类型，实时代码 @Wandbox
 
 ```cpp
 #include <algorithm>
@@ -2272,18 +2220,16 @@ int main() {
 这里有一个可能的输出：
 
 1 0x165dc40, 0x165dc60
+
 2 0x165dce0, 0x165dd00
+
 3 0x165dc90
-
-
-
-
 
 ```cpp
 std::cout << lamOnePlus(10) << " " << lamMinusOne(10) << '\n';
 ```
 
-Lambda 版本要更加简洁且更具可读性。在下面更复杂的示例中，这一点会更加明显。
+`Lambda` 版本要更加简洁且更具可读性。在下面更复杂的示例中，这一点会更加明显。
 
 ## 函数组合
 
@@ -2309,7 +2255,7 @@ int main() {
 
 你能立即看懂那里发生了什么吗？
 
-现在，让我们用一个简单的 lambda 表达式重写这个复杂的组合：
+现在，让我们用一个简单的 `lambda` 表达式重写这个复杂的组合：
 
 ```cpp
 std::vector<int> v { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -2319,7 +2265,7 @@ const auto more2less6 = std::count_if(v.begin(), v.end(),
 
 这不是更好吗？
 
-> 你可以在以下资源中了解更多关于 std::bind 和 lambdas 使用的指南：“Effective Modern C++”，第 34 节：优先使用 lambdas 而非 std::bind，以及 Google Abseil 博客上的：Tip of the Week #108：避免 std::bind。
+> 你可以在以下资源中了解更多关于 `std::bind` 和 `lambdas` 使用的指南：“Effective Modern C++”，第 34 节：优先使用 `lambdas` 而非 `std::bind`，以及 Google Abseil 博客上的：Tip of the Week #108：避免 `std::bind`。
 
 ## 使用 lambda 进行 LIFTing
 
@@ -2343,7 +2289,7 @@ int main() {
 }
 ```
 
-在上面的示例中，我们尝试使用 int 和 float 的两个重载并将它们传递给 for_each。遗憾的是，我们从 GCC 9 (trunk) 处收到了以下错误：
+在上面的示例中，我们尝试使用 `int` 和 `float` 的两个重载并将它们传递给 `for_each`。遗憾的是，我们从 `GCC 9` (trunk) 处收到了以下错误：
 
 ```cpp
 error: no matching function for call to
@@ -2353,9 +2299,9 @@ std::for_each(vi.begin(), vi.end(), foo);
                        ^^^^
 ```
 
-主要问题在于，编译器将 foo 视为一个模板参数，它需要解析它的类型。但要这样做，它必须检查 foo 接受什么类型，这是不可能的。
+主要问题在于，编译器将 `foo` 视为一个模板参数，它需要解析它的类型。但要这样做，它必须检查 `foo` 接受什么类型，这是不可能的。
 
-然而，有一个技巧，我们可以使用 lambda，然后调用所需的函数重载。
+然而，有一个技巧，我们可以使用 `lambda`，然后调用所需的函数重载。
 
 对于简单值类型的基本形式，对于我们的两个函数，我们可以写以下代码：
 
@@ -2363,7 +2309,7 @@ std::for_each(vi.begin(), vi.end(), foo);
 std::for_each(vi.begin(), vi.end(), [](auto x) { return foo(x); });
 ```
 
-现在，我们有一个包装器（一个泛型 lambda），它处理重载解析并调用 foo() 的适当重载。
+现在，我们有一个包装器（一个泛型 `lambda`），它处理重载解析并调用 `foo()` 的适当重载。
 
 我们可以通过完美转发（perfect forwarding）来改进它：
 
@@ -2402,8 +2348,10 @@ int main() {
 看起来很复杂，对吧？让我们尝试解析它。它有三个部分：
 
 - `return foo(std::forward<decltype(args)>(args)...)` - 这是完美转发。
-- `noexcept(foo(args)...)` - 使用 noexcept 运算符检查可调用对象的异常说明。根据结果，它将产生 true 或 false。
-- `decltype(foo(args)...)` - 用于推导包装 lambda 的返回类型。LIFT 被定义为宏，否则你每次想创建这样的 lambda 都要写这段代码。
+
+- `noexcept(foo(args)...)` - 使用 `noexcept` 运算符检查可调用对象的异常说明。根据结果，它将产生 `true` 或 `false`。
+
+- `decltype(foo(args)...)` - 用于推导包装 `lambda` 的返回类型。`LIFT` 被定义为宏，否则你每次想创建这样的 `lambda` 都要写这段代码。
 
 ## 递归 Lambda
 
@@ -2421,9 +2369,9 @@ int main() {
 }
 ```
 
-然而，使用 lambda 直接是不可能的：
+然而，使用 `lambda` 直接是不可能的：
 
-递归 Lambda 的错误：
+递归 `Lambda` 的错误：
 
 ```cpp
 int main() {
@@ -2434,11 +2382,11 @@ int main() {
 }
 ```
 
-这段代码无法编译！这里是 GCC 的错误：
+这段代码无法编译！这里是 `GCC` 的错误：
 
 `error: use of 'factorial' before deduction of 'auto'`
 
-这是因为我们无法在 lambda 体内部访问 factorial，因为它还没有完全求值。为了说明这个问题，我们可以代码“展开”为简化的函数对象（functor）：
+这是因为我们无法在 `lambda` 体内部访问 `factorial`，因为它还没有完全求值。为了说明这个问题，我们可以代码“展开”为简化的函数对象（functor）：
 
 ```cpp
 struct fact {
@@ -2447,14 +2395,16 @@ struct fact {
     };
 };
 ```
-如你所见，在 `operator()` 内部没有访问函数对象类型的方法。如果你需要递归调用 lambda，至少可以使用两个技巧：
 
-- 使用 std::function 并将其捕获。
-- 使用内部 lambda 并将其作为泛型参数。
+如你所见，在 `operator()` 内部没有访问函数对象类型的方法。如果你需要递归调用 `lambda`，至少可以使用两个技巧：
+
+- 使用 `std::function` 并将其捕获。
+
+- 使用内部 `lambda` 并将其作为泛型参数。
 
 ### 使用 std::function
 
-主要思想是将 lambda 赋值给 std::function，然后将其捕获到 lambda 体中。
+主要思想是将 `lambda` 赋值给 `std::function`，然后将其捕获到 `lambda` 体中。
 
 ```cpp
 #include <functional>
@@ -2466,11 +2416,11 @@ int main() {
 }
 ```
 
-在之前的代码中，内部是一个捕获的 std::function 对象。这个对象是完全定义的，这就是为什么编译器在访问和调用它时没有问题。如果你只想使用无状态的 lambda，你甚至可以使用函数指针而不是 std::function，因为它的内存消耗低。
+在之前的代码中，内部是一个捕获的 `std::function` 对象。这个对象是完全定义的，这就是为什么编译器在访问和调用它时没有问题。如果你只想使用无状态的 `lambda`，你甚至可以使用函数指针而不是 `std::function`，因为它的内存消耗低。
 
 ### 内部 lambda 和泛型参数
 
-使用 C++14 可以使用以下替代方案：
+使用 `C++14` 可以使用以下替代方案：
 
 ```cpp
 int main() {
@@ -2482,41 +2432,44 @@ int main() {
     };
 ```
 
-这次我们创建了一个执行主要处理（f_impl）的内部 lambda。稍后，我们传递一个泛型参数（const auto& impl）。这个参数是一个我们可以递归调用的可调用对象。感谢 C++14 的泛型 lambda，我们可以避免 std::function 的开销并依赖 auto 类型推导。
+这次我们创建了一个执行主要处理（`f_impl`）的内部 `lambda`。稍后，我们传递一个泛型参数（`const auto& impl`）。这个参数是一个我们可以递归调用的可调用对象。感谢 `C++14` 的泛型 `lambda`，我们可以避免 `std::function` 的开销并依赖 `auto` 类型推导。
 
 ## 更多技巧
 
 如果你想看更多技巧，也可以查看以下资源：
 
 - c++ - Recursive lambda functions in C++11 - Stack Overflow
+
 - Recursive lambdas in C++(14) - Pedro Melendez
 
 ## 递归 lambda 是最佳替代方案吗？
 
-在本节中，你可以看到一些关于 lambda 表达式的技巧。尽管如此，这些技术的复杂性远高于只有递归函数调用的简单解决方案。这就是为什么在某些情况下，递归 lambda 不是最佳且最直接的选择。另一方面，复杂的递归 lambda 的优点是它的局部性以及接受 auto 参数的能力。
-
-
-
-
+在本节中，你可以看到一些关于 `lambda` 表达式的技巧。尽管如此，这些技术的复杂性远高于只有递归函数调用的简单解决方案。这就是为什么在某些情况下，递归 `lambda` 不是最佳且最直接的选择。另一方面，复杂的递归 `lambda` 的优点是它的局部性以及接受 `auto` 参数的能力。
 
 # 4. C++17 中的 Lambdas
 
-C++17 为 lambda 表达式增加了两项重大增强：
+`C++17` 为 `lambda` 表达式增加了两项重大增强：
 
-- `constexpr` lambda
+- `constexpr` `lambda`
+
 - 捕获 `this`
 
-新的 C++17 还更新了类型系统 - 它现在包含了异常规范（exception specification），这与 lambda 表达式也相关。你可以在 N65（发布前）和 lambda 章节看到与 lambda 相关的规范。此外，你将学习以下内容：
+新的 `C++17` 还更新了类型系统 - 它现在包含了异常规范（exception specification），这与 `lambda` 表达式也相关。你可以在 N65（发布前）和 `lambda` 章节看到与 `lambda` 相关的规范。此外，你将学习以下内容：
 
-- 如何在 C++17 中改进 IIFE 模式。
-- 如何使用折叠表达式（fold expressions）改进变变泛 lambda。
-- 如何从多个 lambda 派生（derive from）。
+
+
+# 如何在 C++17 中改进 IIFE 模式
+
+# 如何使用折叠表达式（fold expressions）改进变变泛 lambda
+
+# 如何从多个 lambda 派生（derive from）
 
 ## Lambda 语法
 
 在 C++17 中，lambda 的语法发生了几处变化：
 
 - 你现在可以在参数列表后添加 `constexpr`。
+
 - 动态异常规范在 C++11 中被弃用，并在 C++17 中删除，因此在实践中，你应该只使用 `noexcept`。
 
 ```cpp
@@ -2610,13 +2563,21 @@ lamEx with x = 20
 换句话说，如果 lambda 体体符合 `constexpr` 函数的规则，那么闭包类型的 `operator()` 就会被隐式定义为 `constexpr`。回想，在 C++17 中，`constexpr` 函数遵循以下规则：
 
 - 它不应该是虚函数；
+
 - 它的返回类型应当是字面量类型（literal type）；
+
 - 它的每个参数类型都应该是字面量类型；
+
 - 它的函数体应该是 `delete`、`default` 或复合语句，且不包含：
+
     - asm 定义，
+
     - 一个 goto 语句，
+
     - 一个标识符标签，
+
     - 一个 try 块，或
+
 - 一个非字面量类型或静态或线程存储持续期的变量定义，且未进行任何初始化。
 
 ## 例如：
@@ -2699,13 +2660,10 @@ constexpr auto lam = [&](int n) { return n + x; };
 
 warning: lambda capture ‘x’ is not required to be captured for this use
 
-
-
-
 按值传递参数：
 
 ```cpp
-constexpr int add (int t, int u) { return t + u };
+constexpr int add (int t, int u) { return t + u; }
 ```
 
 这是因为如果我们依赖常量表达式，编译器可以优化掉变量，特别是对于那些在编译时我们就知道值的内置类型。
@@ -2713,13 +2671,14 @@ constexpr int add (int t, int u) { return t + u };
 这里是来自 cpppreference 的额外描述：
 
 - 如果变量具有 `const-volatile` 整数型或枚举类型，并且用常量表达式初始化，则 Lambda 表达式可以在不捕获变量的情况下读取其值；或者
+
 - 变量是 `constexpr` 且没有 `mutable` 成员。
 
 欲了解更多信息，你可以阅读标准中的这部分：C++ draft - basic.def.odr#4。
 
 在第一个 `add()` 示例中，它通过引用传递变量，我们强制编译器创建一个可以绑定到该引用的闭包成员。假设 `add()` 函数返回参数的地址，并将它与 `x` 进行比较，那么：
 
-``````cpp
+```cpp
 int const * address (int const & x) {
 return &x;
 }
@@ -2739,6 +2698,7 @@ return p == &x; // 这些需要为真
 `constexpr` Lambda 允许你与模板编程相结合，并可能产生更短的代码。
 
 > > 为未来做好准备：
+
 > 在 C++20 中，我们有了大量的 `constexpr` 标准算法和容器，如 `std::vector` 和 `std::string`，因此 `constexpr` Lambda 在这种背景下非常有用。你的代码在运行时版本和 `constexpr`（编译时）版本中看起来是一样的！
 
 现在让我们转向自 C++17 起提供的第二个重要特性：
@@ -2819,7 +2779,7 @@ const auto var = std::invoke([&] {
 
 如你所示，不需要在表达式末尾写 `()`，现在很清楚代码调用了某些东西。
 
-std::invoke()` 位于 `<functional>` 头文件中。
+`std::invoke()` 位于 `<functional>` 头文件中。
 
 ## 可变泛型 Lambda 的更新
 
@@ -2839,7 +2799,6 @@ int main() {
 }
 ```（注：由于提供的 OCR 文本较为破碎，此处已根据提供的片段进行整理翻译。）
 
-
 ```cpp
 const auto test = overloaded{
 [](const int & i) { std::cout << "int " << i << '\n'; };
@@ -2857,7 +2816,9 @@ test("10.0f");
 这些代码行受益于 C++17 以来即可提供的三个特性：
 
 - `using` 声明中的包展开（Pack expansions）——变长模板的简短且紧凑的语法。
+
 - 自定义模板参数推导规则——它允许将 lambda 对象列表转换为 `overloaded` 类的基类列表。（注意：C++20 中不需要）。
+
 - 聚合初始化的扩展——在 C++17 之前，你无法聚合初始化派自其他类型的类型。
 
 在 C++11 章节中，我们已经涵盖了对 `using` 声明的需求。这对于将调用运算符引入 `overloaded` 结构的相同作用域非常重要。C++17 为我们提供了支持变长模板的语法，这在语言之前的修订版本中是不可能的。
@@ -2868,7 +2829,9 @@ test("10.0f");
 
 我们派自 lambda，然后像我们在上一节看到的那样暴露它们的 `operator()`。但我们如何创建这种重载类型的对象呢？
 
-如你所知，无法提前知道 lambda 的类型，因为编译器必须为每个 lambda 生成某些唯一的类型名称。例如，我们不能直接写：
+
+
+如你所知，无法提前知道 `lambda` 的类型，因为编译器必须为每个 `lambda` 生成某些唯一的类型名称。例如，我们不能直接写：
 
 ```cpp
 overload< LambdaType1, LambdaType2> myOverload { ... } // ???
@@ -2913,13 +2876,13 @@ array test{1, 2, 3, 4, 5};
 template <class... Ts> overloaded(Ts...) -> overloaded<Ts...>;
 ```
 
-现在，当我们用两个 lambda 初始化一个重载时：
+现在，当我们用两个 `lambda` 初始化一个重载时：
 
 ```cpp
 overloaded myOverload{ [](int) { }, [](double) { } };
 ```
 
-`overload` 的模板参数将正确正确推导。在我们的情况下，编译器知道两个 lambda 的类型，因此它可以解析 `overload` 继承自类型。
+`overload` 的模板参数将正确正确推导。在我们的情况下，编译器知道两个 `lambda` 的类型，因此它可以解析 `overload` 继承自类型。
 
 查看新标准中的 C++20 章节，类模板参数推导（CTAD）得到了改进！对于 `overloaded` 模式，这意味着我们不再需要自定义推导引导了！
 
@@ -2930,9 +2893,13 @@ overloaded myOverload{ [](int) { }, [](double) { } };
 此功能相对直观：我们现在可以聚合初始化派自其他类型的类型。根据规范 `dcl.init.aggr`：
 
 > 聚合体（aggregate）是一个数组或具有以下特征的类：
+
 - 没有用户提供的、显式的或继承的非静态构造函数
+
 - 没有私有或保护的非静态数据成员
+
 - 没有虚函数，且
+
 - 没有虚的、私有的或保护的基类
 
 例如（节选自规范草案）：
@@ -2966,9 +2933,7 @@ struct overloaded : Fs {
 
 *(注：提供的 OCR 文本从第 89 页开始严重重复/损坏。我已经清理了重复噪声并根据可读片段重建了连贯的结构。)*
 
-
-
-需要记住的关键点是，虽然 lambda 让创建线程变得简单方便，但它仍然是异步执行的。闭包（Closures）并不“特殊”，它们同样容易受到所有竞态条件和阻塞的影响。
+需要记住的关键点是，虽然 `lambda` 让创建线程变得简单方便，但它仍然是异步执行的。闭包（Closures）并不“特殊”，它们同样容易受到所有竞态条件和阻塞的影响。
 
 这在下面的示例中是可见：
 
@@ -3038,13 +3003,13 @@ int main() {
 
 上面的代码运行符合预期，因为递增和递减操作现在是原子的。这意味着该操作无法被中断。同步化使得代码更安全，但是以性能为代价的。不过，这是一个值得进一步讨论的话题。解决该问题的另一个方案是在每个线程中拥有一个进行计算的局部变量。然后在线程结束之前，我们可以更新全局值。
 
-在 C++20 中，正如我们所见，使用 lambda 表达式创建线程是非常方便的。它是线程线程本地的，你可以像使用普通函数或对象一样执行一切。
+在 C++20 中，正如我们所见，使用 `lambda` 表达式创建线程是非常方便的。它是线程线程本地的，你可以像使用普通函数或对象一样执行一切。
 
 ### 配合 std::async 使用 Lambda
 
-利用多线程的第二种方法是通过 `std::async`。这是一个层级 API，你可以设置它并以惰性或完全异步的方式调用它。结合 C++11 中的线程，我们依赖于 `std::future` 机制。这是一个处理同步的对象，并保证当我们通过 `.get()` 请求结果时，结果是可用的。在我们的案例中，我们通过 `std::async` 调度 lambda 的执行，然后我们需要调用 `.get()` 来完成阻塞的计算。
+利用多线程的第二种方法是通过 `std::async`。这是一个层级 API，你可以设置它并以惰性或完全异步的方式调用它。结合 C++11 中的线程，我们依赖于 `std::future` 机制。这是一个处理同步的对象，并保证当我们通过 `.get()` 请求结果时，结果是可用的。在我们的案例中，我们通过 `std::async` 调度 `lambda` 的执行，然后我们需要调用 `.get()` 来完成阻塞的计算。
 
-让我们将带有 iota 的示例转换为异步调用：
+让我们将带有 `iota` 的示例转换为异步调用：
 
 ```cpp
 #include <iostream>
@@ -3073,7 +3038,7 @@ int main() {
 }
 ```
 
-然而，上面的代码有点“作弊”，我们使用了 `future<void>` 且 `vector` 仍然通过 lambda 捕获的引用传递。作为替代方案，你可能想创建 `std::future<std::vector<int>>`，以便我们通过 future 机制传递：
+然而，上面的代码有点“作弊”，我们使用了 `future<void>` 且 `vector` 仍然通过 `lambda` 捕获的引用传递。作为替代方案，你可能想创建 `std::future<std::vector<int>>`，以便我们通过 `future` 机制传递：
 
 ```cpp
 std::future<std::vector<int>> iotaFuture = std::async(std::launch::async, []() {
@@ -3088,15 +3053,21 @@ auto vec = iotaFuture.get(); // 确保我们得到了结果...
 多年来，`std::async/std::future` 似乎获得了一个褒誉参半的评价。看起来功能实现得有些仓促。它对于相对简单的情况有效，但在以下场景中表现不佳：
 
 - 连续
+
 - 合并
+
 - 不取消
+
 - 某些类型
+
 - 某些其他问题
 
 如果你想了解更多，可以参考以下资源：
 
 - There is a Future - Felix Petric
+
 - Core C++ Concurrency - Sean Parent
+
 - Building efficient I/O with Seastar
 
 # Lambda 与并行算法
@@ -3113,15 +3084,21 @@ std::sort(std::execution::par, myVec.begin(), myVec.end());
 还有其他选项：
 
 | 策略名称 | 描述 |
+
 |---|---|
+
 | sequenced_policy | 一种执行策略，用于区分重载算法，并要求算法的执行不并行。 |
+
 | parallel_policy | 一种执行策略，用于区分重载算法，并要求算法的执行可以并行。 |
+
 | parallel_unenced_policy | 一种执行策略，用于区分重载算法，并要求算法的执行可以并行。 |
 
 执行策略的声明和全局对象位于 `<execution>` 头文件中。对于每个策略，我们都有预定义的实例：
 
 - `std::execution::par`
+
 - `std::execution::seq`
+
 - `std::execution::par_unseq`
 
 在 C++20 中，还有一种执行策略：`unenced_policy`，配合全局实例 `std::execution::unseq`。它用于启用单线程上的向量化执行。
@@ -3150,11 +3127,9 @@ int main() {
 }
 ```
 
-通过将 lambda 传递给 `std::for_each`，我们需要记住执行并不是在单线程上本地发生的。这里可能会使用多个线程，例如使用线程池解决方案。这就是为什么访问共享输出 `vector` 不是好主意。你不仅可能会以错误的顺序插入元素，而且如果多个线程尝试更改 vector，它可能会崩溃。
+通过将 `lambda` 传递给 `std::for_each`，我们需要记住执行并不是在单线程上本地发生的。这里可能会使用多个线程，例如使用线程池解决方案。这就是为什么访问共享输出 `vector` 不是好主意。你不仅可能会以错误的顺序插入元素，而且如果多个线程尝试更改 `vector`，它可能会崩溃。
 
-
-
-我们可以通过使用互斥锁并在每次调用 `push_back` 之前对其加锁来解决同步问题。但这种代码仍然高效吗？如果过滤条件非常简单且执行速度快，那么你的性能可能比串行版本 (seq) 还要慢。
+我们可以通过使用互斥锁并在每次调用 `push_back` 之前对其加锁来解决同步问题。但这种代码仍然高效吗？如果过滤条件非常简单且执行速度快，那么你的性能可能比串行版本 `seq` 还要慢。
 
 更不用说，通过并行运行它，你无法确定输出向量中被复制元素的顺序。
 
@@ -3177,21 +3152,30 @@ int main() {
 在本章中，你将看到：
 
 - C++20 中的哪些变化。
+
 - 捕获 `this` 指针的新选项。
+
 - 模板 Lambda。
+
 - 如何使用概念（concepts）改进通用 Lambda。
+
 - 如何将 Lambda 与 `constexpr` 算法结合。
+
 - 如何让重载模式更短。
 
-你可以在 N4861（当前的 C++20 草案，拉格版本之后）以及 lambda 章节：`[expr.prim.lambda]` 中查看与 lambda 规范。
+你可以在 N4861（当前的 C++20 草案，拉格版本之后）以及 `lambda` 章节：`[expr.prim.lambda]` 中查看与 `lambda` 规范。
 
 ## Lambda 语法更新
 
 在 C++20 中，我们关于 Lambda 表达式的语法有了更多变化：
 
 - 你现在可以在参数列表后添加 `consteval`。
+
 - 有一个指定模板尾部（template tail）的选项。
+
 - 在尾部返回之后你可以放置 `requires` 声明。
+
+
 
 ```
 <params> () specifiers exception attr - -> requires { /code; /* */
@@ -3254,9 +3238,9 @@ warning: implicit capture of 'this' ['=] is deprecated in C++20
 
 在快速回顾后，让我们看看 C++20 中与 Lambda 相关的更显著特性。
 
-## consteval Lambda
+### consteval Lambda
 
-虽然 C++11 的 `constexpr` 允许在编译阶段执行函数，但在运行时运行这些函数也是可能的。似乎在某些情况下，将功能仅限制在编译时是最好的。这就是为什么在 C++20 中，我们有一个新的关键字，它可以创建符合 `constexpr` 函数规则但只能在编译时评估的函数。这类函数也称为“立即函数”（immediate functions）。
+虽然 C++11 的 `constexpr` 允许在编译阶段执行函数，但在运行时运行这些函数也是可能的。似乎在某些情况下，将功能仅限制在编译时是最好的。这就是为什么在 C++20 中，我们有一个新的关键字，它可以创建符合 `constexpr` 函数规则但只能在编译时评估的函数。这类函数也称为“立即函数”。
 
 这个新关键字也可以应用于 Lambda。让我们查看一个简单的示例：
 
@@ -3274,7 +3258,7 @@ int main() {
 
 默认情况下，如果 Lambda 遵循 `constexpr` 函数规则，编译器会将其标记为隐式。对于 `consteval` 则并非如此。你可以在提案中找到该特性的完整规范：P1073R3。
 
-## 捕获参数包
+### 捕获参数包
 
 C++20 获得的一个改进是捕获中的包展开：
 
@@ -3314,6 +3298,7 @@ int main() {
 输出：
 
 0xf06cb20, 2, 3, 4
+
 a, b
 
 在示例中，我们使用了一个打印对象，与我们在 C11 章节中编写的代码相似，但这次我们捕获变量而不是而不是作为 Lambda 参数传递它们。
@@ -3375,6 +3360,7 @@ void operator() (std::vector<T> const & s) { ... }
 模板参数位于捕获列表 `[]` 之后。
 
 如果你用 `int` 调用它（`foo(10)`），你将得到一个更友好的信息：
+
 注意：类型不匹配 'const std::vector<T>' 和 'int'
 
 在 @Wandbox 上尝试代码
@@ -3436,7 +3422,7 @@ auto ForwardToTestFunc = []<typename... T>(T&& ...args) {
 
 但不仅如此！你还可以在 lambda 中使用概念（concepts）！请参阅下一节。
 
-# 概念与 lambda
+## 概念与 lambda
 
 概念是是编写模板的一种革命性方法！它们允许你对模板参数设置约束，从而提高代码的可读性，可能会加快编译速度，并提供更好的错误信息。
 
@@ -3454,7 +3440,7 @@ void signedIntOnly(T val) { }
 
 在上面的代码中，我们创建了一个描述有符号整数类型的概念。请注意，我们可以使用现有的特征（traits）。稍后，使用它来定义一个只支持匹配概念的类型的模板函数。在这里我们没有使用 `typename`，但我们可以引用该名称。好了，这与 lambda 表达式有关吗？
 
-# 简化与简洁语法
+## 简化与简洁语法
 
 这里的关键在于简洁的语法和受约束的 `auto`。得益于简洁的概念语法，你还可以编写不带 `template<typename>` 部分的模板。
 
@@ -3521,7 +3507,7 @@ int main () {
 
 在上面的示例中，`RenderCaller` 是一个泛型 lambda，它可以支持满足 `Renderable` 概念的类型。
 
-# 无状态 lambda 的变化
+## 无状态 lambda 的变化
 
 你可能记得在 C++11 章节中提到过，无状态 lambda 是不可构造的。然而，这一限制在 C++20 中被消除了。
 
@@ -3569,6 +3555,8 @@ stl_set.h:244:29: error: use of deleted function
 
 但在 C++20 中，你可以存储无状态 lambda 甚至复制它们：
 
+
+
 ```cpp
 template < typename F>
 struct Product {
@@ -3588,28 +3576,28 @@ int main() {
 
 # 未值上下文中的更多变化
 
-还有一些与未值上下文（unvaluated contexts）等高级用相关的更改。结合默认构造的 lambda，我们现在可以写出：
-
-
+还有一些与未值上下文（`unvaluated contexts`）等高级用相关的更改。结合默认构造的 lambda，我们现在可以写出：
 
 ```cpp
 std::map<int, int, decltype(([](int x, int y) { return x > y; })> map;
 ```
 
-如你所见，现在可以在 map 容器内部指定 lambda。它可以被用作比较仿函数对象。此类“未求值上下文”（unevaluated contexts）对于高级模板元编程特别有用。例如，在该特性的提案中，作者提到了使用 lambda 谓词在编译时对 tuple 对象进行排序。
+如你所见，现在可以在 `map` 容器内部指定 lambda。它可以被用作比较仿函数对象。此类“未求值上下文”（`unevaluated contexts`）对于高级模板元编程特别有用。例如，在该特性的提案中，作者提到了使用 lambda 谓词在编译时对 `tuple` 对象进行排序。
 
-更多推理请参阅 P0315R2。
+更多推理请参阅 `P0315R2`。
 
 # Lambda 与 constexpr 算法
 
-如果你还记得上一章，自 C++17 起，我们可以使用带有 constexpr 的 lambda。通过此功能，你可以将 lambda 传递给编译时求值的函数。在 C++20 中，大多数标准算法现在都标记了 `constexpr` 关键字，这使得 constexpr lambda 变得更加方便！
+如果你还记得上一章，自 C++17 起，我们可以使用带有 `constexpr` 的 lambda。通过此功能，你可以将 lambda 传递给编译时求值的函数。在 C++20 中，大多数标准算法现在都标记了 `constexpr` 关键字，这使得 `constexpr` lambda 变得更加方便！
 
 让我们来看几个例子。
 
 下面你可以找到在数组上运行 `std::accumulate` 的代码，并使用了自定义的 lambda：
 
-> 使用自定义的 constexpr lambda 使用 std::accumulate。在线代码 @Compiler Explorer
+> 使用自定义的 `constexpr` lambda 使用 `std::accumulate`。在线代码 @Compiler Explorer
+
 #include <array>
+
 #include <numeric>
 
 ```cpp
@@ -3626,9 +3614,9 @@ int main() {
 
 在 `std::accumulate` 的示例中，我们使用了 lambda，它实际上是 `std::plus` 操作。
 
-在下一个示例中，有一个 constexpr 函数接收用于 `count_if` 算法的比较器/谓词：
+在下一个示例中，有一个 `constexpr` 函数接收用于 `count_if` 算法的比较器/谓词：
 
-将 constexpr lambda 传递给自定义函数。在线代码 @Compiler Explorer
+将 `constexpr` lambda 传递给自定义函数。在线代码 @Compiler Explorer
 
 ```cpp
 #include <array>
@@ -3646,17 +3634,17 @@ int main () {
 }
 ```
 
-- 哪些标准算法是 constexpr 的？`<algorithm>`、`<utility>` 和头文件中的所有算法现在都标记为 constexpr，除了 `shuffle`、`sample`、`stable_sort`、`stable_partition`、`inplace_merge` 以及接受执行策略（Execution Policy）参数的重载。更多信息请阅读论文 P0202 和 P1645。
+- 哪些标准算法是 `constexpr` 的？`<algorithm>`、`<utility>` 和头文件中的所有算法现在都标记为 `constexpr`，除了 `shuffle`、`sample`、`stable_sort`、`stable_partition`、`inplace_merge` 以及接受执行策略（`Execution Policy`）参数的重载。更多信息请阅读论文 `P0202` 和 `P1645`。
 
 # C++20 对重载模式（Overloaded Pattern）的更新
 
 在上一章中，你学习了如何继承多个 lambda 表达式并通过重载模式将其暴露出来。这种技术对于 `std::variant` 访问非常有用。
 
-得益于 C++20 类模板参数推导（CTAD）的更新，我们现在可以拥有更短的语法！
+得益于 C++20 类模板参数推导（`CTAD`）的更新，我们现在可以拥有更短的语法！
 
 为什么？
 
-因为在 C++20 中 CTAD 有了扩展，并且聚合体会被自动处理。这意味着不需要编写自定义推导指南。
+因为在 C++20 中 `CTAD` 有了扩展，并且聚合体会被自动处理。这意味着不需要编写自定义推导指南。
 
 对于简单类型：
 
@@ -3679,15 +3667,15 @@ C++20 中的重载模式现在只需为：
 template < class... > struct overload: Ts... { using Ts::operator (().); };
 ```
 
-该特性的提案可用于 P1021 以及 P1816（措辞）。
+该特性的提案可用于 `P1021` 以及 `P1816`（措辞）。
 
-> GCC10 未能实现此提案，但它对于带有继承的高级情况无效，因此我们必须等待完全符合标准。
+> `GCC10` 未能实现此提案，但它对于带有继承的高级情况无效，因此我们必须等待完全符合标准。
 
 # 总结
 
 在本章中，我们回顾了 C++20 带来的变化。
 
-首先，我们有一些澄清和改进：例如对 `this` 的捕获、捕获结构化绑定，以及能够默认构造无状态 lambda 的能力。此外，还有更重要的新增！现在一个显著的特性是模板 lambda 和概念（concepts）——这让你对泛型 lambda 拥有更多的控制权。
+首先，我们有一些澄清和改进：例如对 `this` 的捕获、捕获结构化绑定，以及能够默认构造无状态 lambda 的能力。此外，还有更重要的新增！现在一个显著的特性是模板 lambda 和概念（`concepts`）——这让你对泛型 lambda 拥有更多的控制权。
 
 总之，有了 C++20 及其所有特性，lambda 变得更加强大的工具！
 
@@ -3718,10 +3706,6 @@ template < class... > struct overload: Ts... { using Ts::operator (().); };
 
 - 替换 `std::bind1`、`std::bind2nd` - 如何使用现代 C++ 替换已弃用的功能。
 - 得益于带初始化器的捕获的优化。
-
-
-
-
 
 # 2. Lambda 提升了代码的局部性
 
@@ -3798,9 +3782,10 @@ struct PrintVisitor {
 };
 ```
 
-此外，还可以为 variant 类型编写一个的泛型 Lambda。这支持基于 `std::variant` 的运行时多态。
+此外，还可以为 `variant` 类型编写一个的泛型 Lambda。这支持基于 `std::variant` 的运行时多态。
 
-基于 std::variant/std::visit 的运行时多态。实时代码 @Compiler Explorer
+基于 `std::variant`/`std::visit` 的运行时多态。实时代码 @Compiler Explorer
+
 ```cpp
 #include <variant>
 
@@ -3816,7 +3801,7 @@ int main() {
 }
 ```
 
-这种技术是基于虚函数的运行时多态的替代方案。在这里我们可以处理无关的类型。不需要公共基类。你可以在我的博客文章中学习这种方法：使用 std::variant 和 std::visit 实现运行时多态。
+这种技术是基于虚函数的运行时多态的替代方案。在这里我们可以处理无关的类型。不需要公共基类。你可以在我的博客文章中学习这种方法：使用 `std::variant` 和 `std::visit` 实现运行时多态。
 
 # 5. Lambda 随着 C++ 版本的更新不断改进
 
@@ -3826,12 +3811,11 @@ int main() {
 
 ### C++17
 
-- constexpr Lambda - 在 C++17 中，你的 Lambda 可以在 `constexpr` 上下文中工作。
-- 捕获 this 的改进 - 在 C++17 之前，该指针仅作为指针捕获，可能会导致悬空问题。在 C++17 中，你可以捕获由 *this* 表示的对象的拷贝。
+- `constexpr` Lambda - 在 C++17 中，你的 Lambda 可以在 `constexpr` 上下文中工作。
+- 捕获 `this` 的改进 - 在 C++17 之前，该指针仅作为指针捕获，可能会导致悬空问题。在 C++17 中，你可以捕获由 *this* 表示的对象的拷贝。
 - 折叠表达式
 
 ### C++20
 
 - 模板 Lambda - 在 C++20 中，你可以在 Lambda 中直接使用模板参数。
-- 概念（Concepts） - 你可以使用概念来约束 Lambda 参数。
-
+- 概念（`Concepts`） - 你可以使用概念来约束 Lambda 参数。

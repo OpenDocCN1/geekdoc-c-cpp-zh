@@ -1,121 +1,151 @@
-# Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2
 
 
+# Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Objective-C，Swift 2
 
 ![](img/00084.jpeg)
 
+由 David Francis Curran 编写，旨在让 C 和 C++ 程序员在尽可能少学习 Objective-C 的情况下理解 Swift。
 
-由 David Francis Curran 编写，旨在让 C 和 C++ 程序员在尽可能少学习 Object-C 的情况下理解 Swift。
+本书的初衷是为具有某些 C 和 C++ 背景的人士设计的。它并不是真正为编程完全初学者设计的。如果你想理解 Swift，我强烈建议你在学习 Swift 之前先学习 C 和/或 C++ 或其他语言。
 
-本书的初初衷是为具有某些 C 和 C++ 背景的人士设计的。它并不是真正为编程完全初学者设计的。如果你想理解 Swift，我强烈建议你在学习 Swift 之前先学习 C 和/或 C++ 或其他语言。
-
-为了将我的程序从 C 和 C++ 迁移到 Mac 和 iPad 上运行，我不得不学习 Object-C。Swift 让你了一个机会在很大程度上跳过 Object-C。这一系列书籍的目的是帮助你弥补这一鸿沟，而无需花费大量时间学习 Object-C。在随后的章节中，我们将讨论如何将 C 或 C++ 包含到 Swift 项目中。这种包含将涉及一些 Object-C。但我希望让你能够编写 Swift 代码，从而让你决定使用 Swift 而不是 C 或 C++。
+为了将我的程序从 C 和 C++ 迁移到 Mac 和 iPad 上运行，我不得不学习 Objective-C。Swift 让你有机会在很大程度上跳过 Objective-C。这一系列书籍的目的是帮助你弥补这一鸿沟，而无需花费大量时间学习 Objective-C。在随后的章节中，我们将讨论如何将 C 或 C++ 包含到 Swift 项目中。这种包含将涉及一些 Objective-C。但我希望让你能够编写 Swift 代码，从而让你决定使用 Swift 而不是 C 或 C++。
 
 多年前，我曾认为我在数学理解上有问题。显然，许多富有想象力的人都有这个问题。我曾让数学的想法压倒了我。后来，我在夏天参加的一门微积分课上，一位非常好的老师在课开始时解释，他将告诉我们已知宇宙中关于数学的所有知识。他说：
 
 一加一等于二：这是加法。
+
 二减一等于一：这是减法。
+
 二乘二等于四：这是乘法。
+
 四除以二等于二：这是除法。
 
 这就是全部了。我们在小学学到的数学的复杂部分。每个数学公式都可以拆解为这四个简单部分的组合。
 
 我不知道你对编程 C 或 C++ 了解或记得多少，也不知道你已经对 Swift 了解了多少。正因为我不知道你了解什么，我将解释这些基础部分。
 
-本书旨在作为一种程序化教学。我将尝试为你的大脑编程以掌握 Swift 语言这一主题。希望你回答每个章节末尾的所有测验题。我在那里隐藏了一些小贴士，通过解决这些问题可以增加你的知识。例如，“常量与变量”章节中的第 7 题包含一个我们在文中未涵盖的转换方法。仅仅因为主题没有被涵盖，并不意味着它不起作用。书中也解释了如何在 `xCode` 参考中找到此类内容。在你的 playground（练习）中评估内容时不要担心错误。（尽管在继续之前，你需要删除它们或将它们注释掉。错误将停止 playground 你输入内容的能力。）记住，最好的程序员是那些犯过最多错误并从中学习的人。
+本书旨在作为一种程序化教学。我将尝试为你的大脑编程以掌握 Swift 语言这一主题。希望你回答每个章节末尾的所有测验题。我在那里隐藏了一些小贴士，通过解决这些问题可以增加你的知识。例如，“常量与变量”章节中的第 7 题包含一个我们在文中未涵盖的转换方法。仅仅因为主题没有被涵盖，并不意味着它不起作用。书中也解释了如何在 `Xcode` 参考中找到此类内容。在你的 playground（练习）中评估内容时不要担心错误。（尽管在继续之前，你需要删除它们或将它们注释掉。错误将停止 playground 你输入内容的能力。）记住，最好的程序员是那些犯过最多错误并从中学习的人。
 
-注意：作品《Understanding Swift for C and C++ programmers》分章节出版，其原因有两个：
-1) 尝试跟上 Swift 的变化。
-2) 允许尽可能多的图像，而无需由于文件大小限制（在 Kindle 上的上传限制）而限制它们。
+> 注意：作品《Understanding Swift for C and C++ programmers》分章节出版，其原因有两个：
+>
+> 1. 尝试跟上 Swift 的变化。
+> 2. 允许尽可能多的图像，而无需由于文件大小限制（在 Kindle 上的上传限制）而限制它们。
 
-我希望你喜欢这这本书，就像我编写它时一样喜欢。
+我希望你喜欢这本书，就像我编写它时一样喜欢。
 
-书中的项目代码可以在线获取：[`geniusat.work/swift.php`](http://geniusat.work/swift.php)。对于 playground 代码，只需从页面上复制代码并将其粘贴到你的 playground 中即可。单个 playground 代码没有在线上的原因是我们会频繁地更改代码，例如，为了强调错误而更改  中的单行代码，因此包含所有可能的 playground 代码将变得臃肿且混乱。
+书中的项目代码可以在线获取：[`geniusat.work/swift.php`](http://geniusat.work/swift.php)。对于 playground 代码，只需从页面上复制代码并将其粘贴到你的 playground 中即可。单个 playground 代码没有在线上的原因是我们会频繁地更改代码，例如，为了强调错误而更改其中的单行代码，因此包含所有可能的 playground 代码将变得臃肿且混乱。
 
-## 第一
+## 第一章
+
 ### 下载程序
+
 要在你的 Mac 上运行 Swift，你需要下载最新版本。操作系统要求——（即，你运行最新版本的 `Xcode` 需要什么种版本的 Mac OS X）将在那里进行说明。`Xcode` 是免费的。你只需要付费成为一名 Mac 开发者。但如果你只是在学习编程，或者只是从 C 或 C++ 转型到 Swift，你暂时不需要担心这个。
 
 注意，可能有新的测试版本可用。例如（图 1.1），有一个 6.4 beta 2，它为 Apple Watch 提供了编程支持。目前，我建议坚持使用当前版本。所以请下载，并在运行起 `Xcode` 后回来。
 
 ![图像](img/00001.jpeg)
+
 图 1.1 Apple 的 Xcode 下载页面
 
-## 第二
+## 第二章
+
 ### 让我们开始编程
+
 如果你对下面的任何术语感到陌生，不要担心。随着我们的学习，你将了解更多关于它们的内容。
 
 通过 Swift，你可以设置一个“可执行程序”，也可以设置一个“playground”。你可以设置一个“Cocoa 应用程序”或“命令行应用程序”。你甚至可以在“终端（terminal）”中运行 Swift。
 
-* 一个 Cocoa 应用程序是运行在带有按钮和文本字段的窗口中的应用程序，你的代码根据你输入的输入进行操作。你的结果显示在图形用户界面中。（图 2.1）
+- 一个 Cocoa 应用程序是运行在带有按钮和文本字段的窗口中的应用程序，你的代码根据你输入的输入进行操作。你的结果显示在图形用户界面中。（图 2.1）
 
 ![图像](img/00002.jpeg)
+
 图 2.1 iPad IOS 应用程序的图形界面。
 
-* 命令行应用程序（我们将很快就会演示的）是一个你输入文本并看到输出而不是图形的应用程序。
+- 命令行应用程序（我们将很快就会演示的）是一个你输入文本并看到输出而不是图形的应用程序。
 
-* 命令行应用程序（我们将很快就会演示的）是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过 如果你对其进行调试（即，你的代码中没有错误），它将执行。（图 2.1）你的结果将显示在 Debug Area 窗口中。
+- 命令行应用程序（我们将很快就会演示的）是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过命令行应用程序（我们将很快就会演示的），它是一个你输入文本并看到输出而不是图形的应用程序。通过如果你对其进行调试（即，你的代码中没有错误），它将执行。（图 2.1）你的结果将显示在 Debug Area 窗口中。
 
 ![图像](img/00003.jpeg)
+
 图 2.2 运行执行文件。
 
 ![图像](img/00004.jpeg)
+
 图 2.3 结果显示在 Debug Area 窗口中。
 
 `println` 在 `Xcode` 7.1 中被 `print` 替换。
 
-* 通过 Swift playground，你编写代码并在 gutter 中看到代码的即时反馈。它是测试代码的极佳方法。（图 2.6）这里 gutter 重复了你的字符串。
+- 通过 Swift playground，你编写代码并在 gutter 中看到代码的即时反馈。它是测试代码的极佳方法。（图 2.6）这里 gutter 重复了你的字符串。
 
 ![图像](img/00005.jpeg)
+
 图 2.4 通过 File -> New -> Playground 打开。
 
 ![图像](img/00006.jpeg)
-图 2.5 MySwiftPlayground. 使用 OS
+
+图 2.5 MySwiftPlayground。使用 OS
 
 ![图像](img/00007.jpeg)
+
 图 2.6 你的 playground。
 
 你已经准备好学习代码了。
 
-章节问题
-1) Cocoa 应用程序具有
-A. 文本界面。
-B. 图形界面。
-C. 有趣界面。
-B. 同时具有文本和图形界面。
+### 章节问题
 
-2) 可执行程序
-A. 与 playground 没有区别。
-B. 比 playground 优越。
-C. 当你运行时它执行。
-D. 自动运行。
+1. Cocoa 应用程序具有
 
-3) 可执行程序打印其结果
-A. 在互联网上。
-B. 在 playground 中。
-C. 在 Debug Area 窗口中。
-D. 在电视上。
+   A. 文本界面。
 
-4) playground 输入的反馈出现在
-A. 在 Debug Area 窗口中。
-B. gutter 中。
-C. 在互联网上。
-D. 图形界面中。
+   B. 图形界面。
 
-## 三
-### 
-一些介绍说明。
+   C. 有趣界面。
+
+   B. 同时具有文本和图形界面。
+
+2. 可执行程序
+
+   A. 与 playground 没有区别。
+
+   B. 比 playground 优越。
+
+   C. 当你运行时它执行。
+
+   D. 自动运行。
+
+3. 可执行程序打印其结果
+
+   A. 在互联网上。
+
+   B. 在 playground 中。
+
+   C. 在 Debug Area 窗口中。
+
+   D. 在电视上。
+
+4. playground 输入的反馈出现在
+
+   A. 在 Debug Area 窗口中。
+
+   B. gutter 中。
+
+   C. 在互联网上。
+
+   D. 图形界面中。
+
+## 第三章
+
+### 一些介绍说明
 
 你可以通过以下地址下载 playground 和项目：
+
 [`geniusat.work/SwiftForC_CplusplusCode.sitx`](http://geniusat.work/SwiftForC_CplusplusCode.sitx)
-或
+
+或：
+
 [`geniusat.work/SwiftForC_CplusplusCode.zip`](http://geniusat.work/SwiftForC_CplusplusCode.zip)
 
 playground 或项目章节包含了你可以粘贴到 Swift 中的文本。只需删除你选择的阅读器可能附加的任何作者注释即可。
-
-
-
-
 
 ### 注释包含
 
@@ -135,7 +165,7 @@ playground 或项目章节包含了你可以粘贴到 Swift 中的文本。只�
 
 `int bananas = 5;`
 
-以及
+以及：
 
 `int grapes = 6;`
 
@@ -144,13 +174,13 @@ playground 或项目章节包含了你可以粘贴到 Swift 中的文本。只�
 ```swift
 var bananas = 5  // 注意这里以前末尾没有 `()`，但现在已经更改了。
 
-var grapes = 6 
+var grapes = 6
 
-/* 注意这里以前末尾没有 `()` 
+/* 注意这里以前末尾没有 `()`
 现在已经更改了。 */
 ```
 
-### print 取代了 println
+### `print` 取代 `println`
 
 当 Swift 出现时，`println()` 是向某些地方打印内容的方法。苹果将其更改为了 `print()`。但你仍可以将其视为 `println`，因为它会打印一行并在结尾包含一个换行符 `\n`。你很快就会看到它的用法。要在 `print()` 语句中打印变量或常量，可以使用类似 `print("We have \(grapes) grapes and \(bananas) bananas")` 的语句。
 
@@ -170,15 +200,15 @@ print(" and \(pears) pears")
 
 ![Image](img/00008.jpeg)
 
-( 图 3.1 使用带不带 terminator 的 `print()` )
+（图 3.1 使用带不带 `terminator` 的 `print()`）
 
 当行尾设置为空字符串 `""` 时，两个 `print` 命令在打印时会合并在同一行。这在我们以后想要让不同类型的连续循环在同一行上合并数据时将非常有帮助。
 
-**不要忘记 terminator 后的 `:`！**
+**不要忘记 `terminator:` 后的 `:`！**
 
 这个 `print-function(something to print, terminator: "")` 是 Objective-C 的遗留物。
 
-### 最后：
+### 最后
 
 在示例游乐场或项目中，我可能会有这样一行代码：
 
@@ -188,7 +218,7 @@ let diamonds = 5
 //diamonds = 7 // 取消注释以查看错误
 ```
 
-这意味着移除该行前两个 `//`
+这意味着移除该行前两个 `//`：
 
 ```swift
 diamonds = 7  // 取消注释以查看错误
@@ -206,11 +236,11 @@ var howManyBananas = 3
 
 ### 数学运算符
 
-- `=` 将一个值赋给另一个
-- `+` 将一个值加另一个值上
-- `-` 从另一个值减去一个值
+- `=` 将一个值赋给另一个。
+- `+` 将一个值加到另一个值上。
+- `-` 从另一个值减去一个值。
 - `*` 将一个值乘以另一个值。然而，它并不表示指针。Swift 中没有指针。
-- `/` 将一个值除以另一个值
+- `/` 将一个值除以另一个值。
 
 ```swift
 var addition = xInt + yInt
@@ -219,19 +249,19 @@ var multiplication = addition * addition
 
 var subtraction = multiplication - yInt
 
-var division = (subtraction * multiplication)/addition
+var division = (subtraction * multiplication) / addition
 ```
 
 `%` 模运算符在一个值被除以另一个值时给出余数。然而在 Swift 中，你可以获取一个 `Double` 除以 `Double` 的余数作为 `Double`。而在 C 和 C++ 中，余数始终是整数。这意味着你需要小心，比如当你正使用模运算符来判断结果是偶数还是奇数。
 
 ![Image](img/00009.jpeg)
 
-( 图 4.1 在 double 上使用模运算。 )
+（图 4.1 在 `double` 上使用模运算。）
 
 - `+=` 将左项加到右项。
 - `-=` 从右项减去左项。
 - `++` 在变量末尾使其增加 1。它等同于 `var negtiveItem += positiveItem`（仅限整数。尝试对 `Double` 这样做。）
-- `--` 在变量末尾使其减少 1。它等同于 `var negtiveItem -=negtiveItem`（仅限整数。尝试对 `Double` 这样做。）
+- `--` 在变量末尾使其减少 1。它等同于 `var negtiveItem -= negtiveItem`（仅限整数。尝试对 `Double` 这样做。）
 
 ```swift
 var xInt = 1
@@ -242,13 +272,18 @@ print(--xInt) // 在打印前减 1
 
 print(yInt--) // 在打印后减 1
 
-print(yInt)  // 显示减去 后的值
+print(yInt)  // 显示减去后的值
 ```
 
-输出
+输出：
+
+```text
 0
+
 1
+
 0
+```
 
 你自己检查一下，如果在上述操作之后添加：
 
@@ -260,29 +295,37 @@ print(yInt++)
 print(yInt)
 ```
 
-输出
+输出：
+
+```text
 1
+
 0
+
 1
+```
 
- 应用于布尔结果的逻辑运算符
+### 应用于布尔结果的逻辑运算符
 
-- `||` OR（或）运算符，两者中必须有一个符合预期
-- `&&` AND（与）运算符，两者都必须符合预期
+- `||` OR（或）运算符，两者中必须有一个符合预期。
+- `&&` AND（与）运算符，两者都必须符合预期。
 
 ### 返回布尔值的比较运算符
 
-- `==` 一个值等于另一个值
-- `>=` 左侧对象小于或等于右侧
-- `<=` 左侧对象大于或等于右侧
-- `!=` 它们之间不相等
+- `==` 一个值等于另一个值。
+- `>=` 左侧对象小于或等于右侧。
+- `<=` 左侧对象大于或等于右侧。
+- `!=` 它们之间不相等。
 
-### 新运算符（位置非常特殊，将在稍后讨论）
+### 新运算符
+
+（位置非常特殊，将在稍后讨论。）
 
 - `?` 表示项尚未赋值。这被称为可选值（optional value）。
 - `!` 与 `?` 类似，但表示该可选值在赋值后永远不会为 nil。
 
-Swift 还有范围运算符。
+Swift 还有范围运算符：
+
 - `...` 是闭区间运算符，包含右侧。
 - `..<` 是半区间运算符，不包含右侧。
 
@@ -294,7 +337,7 @@ Swift 还有范围运算符。
 
 `let` 创建一个常量，即一个不能改变的值。例如 `let myConstX = 5` 类似于 `const int ConstX = 5`。
 
-`var` 创建一个值可以改变的变量。类似于 `int x = 5`。例如 `var x = 5`  own `int x = 5;`。
+`var` 创建一个值可以改变的变量。类似于 `int x = 5`。例如 `var x = 5` 相当于 `int x = 5;`。
 
 ```swift
 import Cocoa
@@ -314,24 +357,21 @@ var myDoubleX = 5.0000001
 var mySmallDouble = .69
 ```
 
-
-
-
 Swift 将 `x` 和 `myConstX` 识别为 `Int`。（使用大写 `I` 而不是 `C` 或 `C++` 中的小写 `i`。正如你将看到的，`Int` 与 `int` 并不完全相同。）
 
 顺便说一下，如果你输入两次相同的变量名将会得到错误。Swift 像 `C` 和 `C++` 一样，只允许变量的一个实例。（作用域异常除外。）
 
-我们将在本书的后部分讨论 `switch` 语句。它们的工作方式存在一些差异，例如不需要 `break`；目前，我只想展示作用域的差异，这种差异允许我们声明一个新的 `var x`。（并不建议这样做。）使用上面的 `x` 和 `y`，将以下内容输入你的播放（（playground）。
+我们将在本书的后部分讨论 `switch` 语句。它们的工作方式存在一些差异，例如不需要 `break`；目前，我只想展示作用域的差异，这种差异允许我们声明一个新的 `var x`。（并不建议这样做。）使用上面的 `x` 和 `y`，将以下内容输入你的 playground。
 
 ```swift
-switch(y){
-case  0:
-  var x = 3  //这个 x 与上面的 x 在不同的作用域内
-case  1:
+switch (y) {
+case 0:
+  var x = 3  // 这个 x 与上面的 x 在不同的作用域内
+case 1:
   print(x)
 default:
   print(y)
-  print(x) 
+  print(x)
 }
 ```
 
@@ -339,12 +379,12 @@ default:
 
 （图 5.3 具有同名变量的作用域异常示例。尝试将 `switch` 语句中的值 `y` 改为其他值会发生什么。）
 
-如果这看起来和 `C` 和 `C++` 一样，那它其实并不是。`Int` 不是 `int`。`Double` 也 `double`。事实上，`Int` 和 `Double` 都是类。它们各有一个多个属性。（顺便说一下，Swift 在这里将 `x` 和 `y` 都指定为 `Double` 而不是 `Float`。因为它无法判断你的意图，所以采取了谨慎的做法，将 `x` 和 `y` 分别设为 `Double`。关于 `Double` 和 `Float` 的更多内容稍后可见。）
+如果这看起来和 `C` 和 `C++` 一样，那它其实并不是。`Int` 不是 `int`。`Double` 也不是 `double`。事实上，`Int` 和 `Double` 都是类。它们各有多个属性。（顺便说一下，Swift 在这里将 `x` 和 `y` 都指定为 `Double` 而不是 `Float`。因为它无法判断你的意图，所以采取了谨慎的做法，将 `x` 和 `y` 分别设为 `Double`。关于 `Double` 和 `Float` 的更多内容稍后可见。）
 
-`Bool(s)` 基本上如你预期的那样。（并不是 `bool`，因为它也是一个类。）我们稍后会使用它们。
+`Bool` 基本上如你预期的那样。（并不是 `bool`，因为它也是一个类。）我们稍后会使用它们。
 
 ```swift
-let j:Bool = true
+let j: Bool = true
 var B = false
 ```
 
@@ -357,14 +397,19 @@ var B = false
 ```swift
 var zPlusY = z + y
 ```
+
 在侧栏中给了我们 `10.1`。
 
 ```swift
-var xTimesMyConstX = x*myConstX
+var xTimesMyConstX = x * myConstX
 ```
+
 你应该在侧栏看到 `25`。
 
-但如果你尝试写入（即更改 `myConstX` 的值）
+
+
+
+但如果你尝试写入（即更改`myConstX`的值）：
 
 ```swift
 myConstX = 7
@@ -374,7 +419,7 @@ myConstX = 7
 
 ![Image](img/00013.jpeg)
 
-（图 5.4 错误。你不能更改用 `let` 创建的值。）
+（图 5.4 错误。你不能更改用`let`创建的值。）
 
 点击带有感叹号的红点将弹出消息。（见图 5.5）
 
@@ -382,9 +427,9 @@ myConstX = 7
 
 （图 5.5 尝试更改常量的值会导致错误。）
 
-使用双斜杠 `//` 注释掉错误。
+使用双斜杠`//`注释掉错误。
 
-你也可以像在 `C/C++` 中一样使用 `/* */`。
+你也可以像在`C/C++`中一样使用`/* */`。
 
 现在尝试乘以这些：
 
@@ -393,11 +438,11 @@ var yTimesZ = z*y
 var MyConstXTimesZ = myConstX*z 
 ```
 
-前者可以。一个 `Double` 乘以一个 `Double` 得到一个 `Double`。但后者（图 5.6）失败了，因为 `Int` 无法直接乘以 `Double`。
+前者可以。一个`Double`乘以一个`Double`得到一个`Double`。但后者（图 5.6）失败了，因为`Int`无法直接乘以`Double`。
 
 ![Image](img/00015.jpeg)
 
-（图 5.6 `Int` 乘以 `Double` 在 Swift 中会失败，但两个 `Double` 可以相乘。）
+（图 5.6 `Int`乘以`Double`在 Swift 中会失败，但两个`Double`可以相乘。）
 
 注释掉错误。不这样做会导致播放器卡住。
 
@@ -405,7 +450,7 @@ var MyConstXTimesZ = myConstX*z
 //var MyConstXTimesZ = myConstX*z
 ```
 
-你否以某种方式将 `Int` 转换为 `Double` 然后再相乘？可以。尝试：
+你否以某种方式将`Int`转换为`Double`然后再相乘？可以。尝试：
 
 ```swift
 //let myConstX = 5
@@ -413,15 +458,15 @@ var MyConstXTimesZ = myConstX*z
 var myConstXTimesZInt = myConstX* Int(z)
 ```
 
-侧栏中应该出现 `25`。而在使用
+侧栏中应该出现`25`。而在使用：
 
 ```swift
 var zTimesMyConstXDouble = Double(myConstX)* z
 ```
 
-我承认，当我第一次看 Swift 时，我以为它们简单地反转了 `C/C++` 的转换格式 `(int)someFloat` 或 `(float)someInt`。但！`Double()` 或 `Int()` 实际上是函数，而不仅仅是简单的转换。你现在不需要知道它们是如何工作的。就像你从未真正需要知道 `C/C++` 中的 `strlen(word)` 是如何工作一样。（在 Swift 中是 `o = strlen("Me")`。并且注意直引号。）
+我承认，当我第一次看 Swift 时，我以为它们简单地反转了`C/C++`的转换格式`(int)someFloat`或`(float)someInt`。但！`Double()`或`Int()`实际上是函数，而不仅仅是简单的转换。你现在不需要知道它们是如何工作的。就像你从未真正需要知道`C/C++`中的`strlen(word)`是如何工作一样。（在 Swift 中是`o = strlen("Me")`。并且注意直引号。）
 
-`25.05` 将出现。添加以下内容，我们将查看结果（图 5.7）
+`25.05`将出现。添加以下内容，我们将查看结果（图 5.7）：
 
 ```swift
 var myConstXTimesYInt = myConstX * Int(y)
@@ -433,11 +478,11 @@ var zTimesMyConstXDouble3 = Double(myConstX) * myDoubleX
 
 ![Image](img/00016.jpeg)
 
-图 5.7 在 `myConstXTimesZInt` 中，结果被转换为 `Int`。但在所有其他情况下，值都是 `Double`。即使对于 `var zTimesMyConstXDouble = Double(myConstX) * z` 也是如此。答案显示为 `25`，没有小数点或零。但那个 `25` 是一个 `double`。只是没有显著小数，所以没有显示。
+图 5.7 在`myConstXTimesZInt`中，结果被转换为`Int`。但在所有其他情况下，值都是`Double`。即使对于`var zTimesMyConstXDouble = Double(myConstX) * z`也是如此。答案显示为`25`，没有小数点或零。但那个`25`是一个`double`。只是没有显著小数，所以没有显示。
 
 ### 显式与隐式转换
 
-你可以显式地转换变量或常量。只需引入你的变量或常量，后面跟着一个冒号，然后是你希望它变成的类型。尝试
+你可以显式地转换变量或常量。只需引入你的变量或常量，后面跟着一个冒号，然后是你希望它变成的类型。尝试：
 
 ```swift
 let f:Float = 9.99
@@ -448,25 +493,27 @@ var dl = d*1.0002
 var el = e*1.0002
 ```
 
-结果出来了（见图 5.8）。注意精度的差异。`dl` 在侧栏中有更多的小数位。`el` 具有相同的结果，说明 Swift 确实将 `e` 解析为 `Double`。
+结果出来了（见图 5.8）。注意精度的差异。`dl`在侧栏中有更多的小数位。`el`具有相同的结果，说明 Swift 确实将`e`解析为`Double`。
 
 ![Image](img/00017.jpeg)
 
-（图 5.8 `Double` 的精度就是为什么 Swift 除非另有说明，否则会转换为 `Double` 的原因。）
+（图 5.8 `Double`的精度就是为什么 Swift 除非另有说明，否则会转换为`Double`的原因。）
 
+## 8) 选择题
 
-
-
-## 8) 如果图 5.3 中 `y` 的值在进入 switch 语句之前被改为 1.0，导致执行了默认语句。那么 `print(x)` 会打印什么值。
+如果图 5.3 中`y`的值在进入`switch`语句之前被改为 1.0，导致执行了默认语句。那么`print(x)`会打印什么值？
 
 a. 5.0
+
 b. 3
+
 c. 3.0
+
 d. 5.01
 
 **六**
 
-## 布尔值游戏 (Bool Play)
+## 布尔值游戏（Bool Play）
 
 在你的 playground（练习）中输入：
 
@@ -479,31 +526,31 @@ print(red)
 
 ![Image](img/00018.jpeg)
 
-（图 6.1 注意，如果你点击屏幕右侧的按钮，值也会出现在赋值语句下方。同时请注意，当 `print()` 用于常量或变量时，它会带引号打印。）再次强调，命令 `println` 已更改为 `print.`。
+（图 6.1 注意，如果你点击屏幕右侧的按钮，值也会出现在赋值语句下方。同时请注意，当`print()`用于常量或变量时，它会带引号打印。）再次强调，命令`println`已更改为`print.`。
 
-现在在上面，我们将一个 `Bool` 类型 `blue` 转换成了 `Int`。并发现它的值为 1。让我们反过来试一次。
+现在在上面，我们将一个`Bool`类型`blue`转换成了`Int`。并发现它的值为 1。让我们反过来试一次。
 
 ```swift
 let one = 1
 let boolOne = Bool(one)
 ```
 
-在上面 `boolOne` 等于 `true`。但如果是 
+在上面`boolOne`等于`true`。但如果是：
 
 ```swift
 let boolSeven = Bool(7)
 ```
 
-这同样等于 `true`。
+这同样等于`true`。
 
 ```swift
 var boolSeven = true
 let notBoolSeven = !boolSeven
 ```
 
-在这里 `notBoolSeven` 将是 `false`。
+在这里`notBoolSeven`将是`false`。
 
-按住你的 Apple 键并点击上面的 `Bool` 单词。会出现 `Bool` 类的实例和方法。我们调用了一个函数 `Bool(7)` 来返回 `boolSeven` 的值 "true"。你可以以同样的方法检查 `Int`、`Float`、`Double` 等。
+按住你的 Apple 键并点击上面的`Bool`单词。会出现`Bool`类的实例和方法。我们调用了一个函数`Bool(7)`来返回`boolSeven`的值 "true"。你可以以同样的方法检查`Int`、`Float`、`Double`等。
 
 尝试输入：
 
@@ -514,7 +561,7 @@ var zero = Bool(0)
 
 （我们将在下面的问题中使用上述内容。）
 
-怎样才能让 `Bool` 变量和常量得到 `false` 的值？插入 `Bool()` 的负值是 true 还是 false？
+怎样才能让`Bool`变量和常量得到`false`的值？插入`Bool()`的负值是`true`还是`false`？
 
 布尔值在比较中非常有用。就像在 C 和 C++ 中一样。
 
@@ -532,66 +579,77 @@ resultOfComparison = big <= little  //false
 
 ## Questions
 
-1) 如果我们在 playground 中输入，将得到什么结果：
+1. 如果我们在 playground 中输入，将得到什么结果：
 
-`zero.description`
+   `zero.description`
 
-A. 一个错误
-B. "false"
-C. 与 `petite.description` 相同
-D. 0
+   A. 一个错误
 
-2) 这里的 `var turtles` 结果是什么：
+   B. "false"
 
-```swift
-var turtles = Bool(-1)
-```
+   C. 与`petite.description`相同
 
-A. 我们没有乌龟。
-B. false
-C. true
-D. 我们少于一只乌龟
+   D. 0
 
-3) `var liar = false` 以下哪项是等价。
+2. 这里的`var turtles`结果是什么：
 
-A. `var liar = Bool(28)`
-B. `var liar = Book(-21)`
-C. `var liar = Bool(2.444)`
-D. `var liar = Bool(0)`
+   ```swift
+   var turtles = Bool(-1)
+   ```
 
-4) `var truly = true; var falsely = false` `var whichIsIt = truly && falsely`
+   A. 我们没有乌龟。
 
-A. whichIsIt 是 true
-B. whichIsIt 是 false
+   B. false
 
-5) `var truly = true; var falsely = false` `var whichIsIt = truly || falsely`
+   C. true
 
-A. whichIsIt 是 true
-B. whichIsIt 是 false
+   D. 我们少于一只乌龟
+
+3. `var liar = false`以下哪项是等价。
+
+   A. `var liar = Bool(28)`
+
+   B. `var liar = Book(-21)`
+
+   C. `var liar = Bool(2.444)`
+
+   D. `var liar = Bool(0)`
+
+4. `var truly = true; var falsely = false` `var whichIsIt = truly && falsely`
+
+   A. `whichIsIt`是 true
+
+   B. `whichIsIt`是 false
+
+5. `var truly = true; var falsely = false` `var whichIsIt = truly || falsely`
+
+   A. `whichIsIt`是 true
+
+   B. `whichIsIt`是 false
 
 **七**
 
-## 数组 (Arrays)
+## 数组（Arrays）
 
 因为我有 C 和 C++ 的背景，当我想到数组时，我首先想到的是一个字符串。
 
-在 Swift 中创建一个新的 playground，但这次选择 IOS 而不是 OS X。此时唯一的区别将是你看到看到 `import UIKIT` 而不是 `import Cocoa`
+在 Swift 中创建一个新的 playground，但这次选择 IOS 而不是 OS X。此时唯一的区别将是你看到`import UIKIT`而不是`import Cocoa`。
 
 ```swift
 import UIKit
 var str = "Hello, playground"
-char dave = "Dave"; // `dave[4]` 为 '\0'
+char dave = "Dave"; // `dave[4]`为'\0'
 ```
 
-尝试在你的 playground 中输入 `var dave = '\0'`。
+尝试在你的 playground 中输入`var dave = '\0'`。
 
 ![Image](img/00019.jpeg)
 
-（图 7.1 `'\0'` 是一个无效字符。）
+（图 7.1 `'\0'`是一个无效字符。）
 
-抱歉，Swift 中没有 `'\0'`。注意：我没有忘记上面 `'\0'` 中的第一个 `'`。Swift 有一个箭头指向它的位置，并建议在该处进行更改。
+抱歉，Swift 中没有`'\0'`。注意：我没有忘记上面`'\0'`中的第一个`'`。Swift 有一个箭头指向它的位置，并建议在该处进行更改。
 
-有一个 `String` 类型的 "\0"，如果将其转换为数字，它们将等于 nil。还有一个 `Character` 类型的 "\0"，它必须先转换为 `String` 才能转换为数字 nil。但它们与 C 和 C++ 中的 `'\0'` 并不完全相同。
+有一个`String`类型的"\0"，如果将其转换为数字，它们将等于 nil。还有一个`Character`类型的"\0"，它必须先转换为`String`才能转换为数字 nil。但它们与 C 和 C++ 中的`'\0'`并不完全相同。
 
 你不能像在 C 和 C++ 中那样在 Swift 中创建字符串。
 
@@ -599,7 +657,7 @@ char dave = "Dave"; // `dave[4]` 为 '\0'
 var dave = "Dave" 
 ```
 
-隐式地创建一个名为 `dave` 的 `String`。
+隐式地创建一个名为`dave`的`String`。
 
 但你**不能**像在 C 或 C++ 中那样访问字符：
 
@@ -612,15 +670,15 @@ var dave = ['D','a','v','e'] // 产生下面的错误
 
 （图 7.2 单引号在 Swift 中不起作用。）
 
-`'` 并没有缺失。Xcode 当它指向它所占据的空间时会将其移除，建议用 `"` 替换。**不允许使用单引号，也不允许使用大括号引号！**
+`'`并没有缺失。Xcode 当它指向它所占据的空间时会将其移除，建议用`"`替换。**不允许使用单引号，也不允许使用大括号引号！**
 
-所有的 `'` 都必须替换为 `"` 才能获得有效的数组声明。
+所有的`'`都必须替换为`"`才能获得有效的数组声明。
 
 ```swift
 var dave = ["D","a","v","e"] 
 ```
 
-此时 `dave` 将不是一个 `String`。它将是一个字符字符串的数组。这在我们学习字符串时会变得更清晰。目前，我们只讨论数组，它们与 C 和 C++ 不同之处在于它们不能是字符串。
+此时`dave`将不是一个`String`。它将是一个字符字符串的数组。这在我们学习字符串时会变得更清晰。目前，我们只讨论数组，它们与 C 和 C++ 不同之处在于它们不能是字符串。
 
 如果我们在 C 或 C++ 中创建一个整数数组，可以这样声明：
 
@@ -634,13 +692,13 @@ int anArrayOfInts[10];
 anArrayOfInts[2] = 7;
 ```
 
-而不会得到任何投诉。但如果我尝试向 `anArrayOfInts[11]` 放入一个额外的整数，区别就重要了：
+而不会得到任何投诉。但如果我尝试向`anArrayOfInts[11]`放入一个额外的整数，区别就重要了：
 
 ```cpp
 anArrayOfInts[11] = 2;
 ```
 
-因为没有 `anArrayOfInts[11]`，这可能会导致我的程序崩溃。在 Swift 中，数组的工作方式完全不是这样的！而且我们最好从头开始思考。把 Swift 中的数组（注意大写的 A）想象成火车车厢，可以装满你想要的任何东西。至于字符串，它们的思考方式与数组完全不同，我们稍后会介绍字符串。
+因为没有`anArrayOfInts[11]`，这可能会导致我的程序崩溃。在 Swift 中，数组的工作方式完全不是这样的！而且我们最好从头开始思考。把 Swift 中的数组（注意大写的 A）想象成火车车厢，可以装满你想要的任何东西。至于字符串，它们的思考方式与数组完全不同，我们稍后会介绍字符串。
 
 首先，数组中只允许一种类型的元素。
 
@@ -650,9 +708,6 @@ var biElementArray = ["Mom", 7]
 
 这是一个错误！但它不会被识别为错误！
 
-
-
-
 ```swift
 var aNewStringArray = Array<String>()
 
@@ -661,92 +716,122 @@ var anotherNewStringArray = [Array]()
 
 ![Image](img/00024.jpeg)
 
-(图 7.6 在添加 `aNewStringArray[0] = "me"` 后，`aNewStringArray` 看起来是什么样？）
+（图 7.6 在添加`aNewStringArray[0] = "me"`后，`aNewStringArray`看起来是什么样？）
 
-在你的 playground 中尝试一下。点击 `Array<Int>()` 中的 `Array` 单词，查看使用新数组的可能方法。下面是一些示例：
+在你的 playground 中尝试一下。点击`Array<Int>()`中的`Array`单词，查看使用新数组的可能方法。下面是一些示例：
 
 ```swift
 var kot = Array<String>()
 kot = ["What","is"]
 ```
 
-按住苹果 键并将光标停在 `Array` 上，你会看到可用的扩展
+按住苹果键并将光标停在`Array`上，你会看到可用的扩展。
 
 ![Image](img/00025.jpeg)
 
-(图 7.7 从数组中添加和删除项目的方法。）
+（图 7.7 从数组中添加和删除项目的方法。）
 
-`kot.count` 告诉我们数组中有多少项目。我们将在循环部分使用它。
+`kot.count`告诉我们数组中有多少项目。我们将在循环部分使用它。
 
 当我们谈到循环时，将讨论如何遍历和打印数组。
 
-**问题：** 按住 command 键并将光标停在 `Array` 上，并在扩展中找到这些问题的答案。
+**问题：**按住 command 键并将光标停在`Array`上，并在扩展中找到这些问题的答案。
 
-1. 这里的 result 是什么？
+1. 这里的`result`是什么？
+
    ```swift
    var result = kot + aStringArray
    ```
+
    a. "Fee Fi Fo Fum"
+
    b. ["ma","my","mo","What", "is", "your", "name"]
+
    c. ERROR
+
    d. ["What", "is", "your", "name", "me", "my", "mo","mum"]
 
-2. 对于上面的 `aNewIntArray`，`aNewIntArray.isEmpty` 会返回什么。
+2. 对于上面的`aNewIntArray`，`aNewIntArray.isEmpty`会返回什么。
+
    a. true
+
    b. false
+
    c. nil
 
-3. 对于 `aNewIntArray` 类型：
+3. 对于`aNewIntArray`类型：
+
    ```swift
    aNewIntArray.insert(-1, atIndex: 0)
    ```
-   现在如果你尝试
+
+   现在如果你尝试：
+
    ```swift
    aNewIntArray.popLast()
    ```
-   将返回什么
+
+   将返回什么：
+
    a. -1
+
    b. 4
+
    c. 10
+
    d. 1
 
-4. 你会在你的 playground 中中使用这个 `Array` 扩展？
+4. 你会在你的 playground 中使用这个`Array`扩展？
+
    ```swift
    public init(count: Int, repeatedValue: Element)
    ```
 
-5. 从你的 `kot` 数组中删除所有内容的简单方法是？
+5. 从你的`kot`数组中删除所有内容的简单方法是？
+
    a. `kot.removeAll()`
+
    b. `kot.capacity = 0`
+
    c. `kot = nil`
 
 6. 数组可以包含不同类型的元素吗？
+
    a. 是
+
    b. 不
+
    c. 取决于情况
 
 7. `var someElementTypeArray:[这里填写什么使其成为有效的 Array] = ["My", "Mom"]`
 
 **答案：**
+
 1. d
+
 2. b. false
+
 3. c. 10
+
 4. `var list = Array<Int>(count: 4, repeatedValue: 6)`
+
    `var list2 = Int`
+
 5. a. `kot.removeAll()`
+
 6. b. 数组元素必须全部相同。
 
 ### 八
 
 ### If else
 
-在 `if` 语句中真的不需要提到 `then`。因此 Swift 并没有 `then`，甚至不需要 `()`。由于 `if` 语句的工作方式与 `C` 和 `C++` 类似，仅有细微差异，我们将快速过一遍这些差异。
+在`if`语句中真的不需要提到`then`。因此 Swift 并没有`then`，甚至不需要`()`。由于`if`语句的工作方式与`C`和`C++`类似，仅有细微差异，我们将快速过一遍这些差异。
 
-`if` 语句包含一个条件语句，如果该语句解析为 `true`，它将执行返回“真”的指令。
+`if`语句包含一个条件语句，如果该语句解析为`true`，它将执行返回“真”的指令。
 
-（* 注意：我没有说 "is" true，因为那意味着你的数据等等是正确的。）
+（*注意：我没有说"is" true，因为那意味着你的数据等等是正确的。）
 
-Swift 中的 `if` 语句后面总是跟着括号：
+Swift 中的`if`语句后面总是跟着括号：
 
 ```swift
 if (true)
@@ -755,7 +840,7 @@ if (true)
 }
 ```
 
-在下面我们可以买糖果。如果有其他可能，我们可以添加一个 `else` 语句。**不同于** `C` 和 `C++`，你必须使用括号。
+在下面我们可以买糖果。如果有其他可能，我们可以添加一个`else`语句。**不同于**`C`和`C++`，你必须使用括号。
 
 ```swift
 var pennies = 5
@@ -781,33 +866,36 @@ if pennies >= enoughToBuyCandy{
 
 我们得到：We go home candy less 1 penny short
 
-正如在 `C` 和 `C++` 中一样，我们可以有一个 `else if`。
+正如在`C`和`C++`中一样，我们可以有一个`else if`。
+
+
+
 
 ```swift
 pennies = 7
 
-if enoughToBuyCandy - pennies == 1{
+if enoughToBuyCandy - pennies == 1 {
   numberOfPenniesString = "penny"
 }
 
-if pennies == enoughToBuyCandy{
+if pennies == enoughToBuyCandy {
   print("We may buy candy!")
 } else if pennies > enoughToBuyCandy {
-  print("We may get \(  pennies - enoughToBuyCandy) pennies worth more of candy.")
-}else{
+  print("We may get \(pennies - enoughToBuyCandy) pennies worth more of candy.")
+} else {
   print("We go home candy less \(enoughToBuyCandy - pennies) \(numberOfPenniesString) short.")
 }
 ```
 
-我们得到：We may get 2 pennies worth more of candy.
+我们得到：`We may get 2 pennies worth more of candy.`
 
 ![Image](img/00026.jpeg)
 
-（图 8.1 使用 if else 操作的硬币。）
+（图 8.1 使用 `if else` 操作的硬币。）
 
-### 九
+## 九
 
-### 可选类型 (Optionals)
+### 可选类型（Optionals）
 
 什么是可选类型？在你的 playground 中输入：
 
@@ -823,9 +911,9 @@ limes = nil
 peaches = nil
 ```
 
-最后一个项目 `peaches = nil` 将产生一个 `ERROR`。只有条件可以有 `nil` 值。也就是说 `nil` 根本没有值。
+最后一个项目 `peaches = nil` 将产生一个 `ERROR`。只有可选类型可以有 `nil` 值。也就是说，`nil` 根本没有值。
 
-与其他语言不同，Swift 中的 `nil` 并不是指向一个不存在对象的指针。也就是说，我们可以把 `C` 和 `C++` 中的指针想象成索引卡片。想象一个图书馆，你有一组卡片——就像旧时代按字母顺序排列的抽屉列出了书的位置。而书在按杜伊分类法组织的书架上。一个指针就像一张索引卡片，它指向书的位置。书就是该位置的值。
+与其他语言不同，Swift 中的 `nil` 并不是指向一个不存在对象的指针。也就是说，我们可以把 `C` 和 `C++` 中的指针想象成索引卡片。想象一个图书馆，你有一组卡片——就像旧时代按字母顺序排列的抽屉，列出了书的位置。而书在按杜威分类法组织的书架上。一个指针就像一张索引卡片，它指向书的位置。书就是该位置的值。
 
 在真实的图书馆中，卡片还在，书可能已经没了。在 `C` 和 `C++` 中，一张填写好的卡片**必须**指向书架上的某个位置，且书必须在那里，否则就会导致灾难。
 
@@ -833,7 +921,7 @@ peaches = nil
 
 ![Image](img/00027.jpeg)
 
-（图 9.1 一旦设置了值，peaches 就不能为 nil）
+（图 9.1 一旦设置了值，`peaches` 就不能为 `nil`。）
 
 如果你熟悉 `C` 或 `C++` 并且清楚指针如何导致崩溃，你可以跳到下一章。否则，请享受这个复习。
 
@@ -843,7 +931,7 @@ peaches = nil
 
 （图 9.2 设置指针。）
 
-`var lemons = Int?()`...你可以随心所命名。
+`var lemons = Int?()`……你可以随心所欲地命名。
 
 ![Image](img/00029.jpeg)
 
@@ -859,24 +947,20 @@ using namespace std;
 然后删除高亮部分：
 
 ```cpp
-  int book = 999334;
-  int *libraryCardPtr = &book;
+int book = 999334;
+int *libraryCardPtr = &book;
 ```
-
-
-
-
 
 ```cpp
 cout << "Now we free( intBlockPt\n\n"; //我们已经删除了架子和地板
 
 free(intBlockPtr);
 
-cout << " intBlockPtr = "<< intBlockPtr << "\n\n"; //指针仍然指向该位置
+cout << " intBlockPtr = " << intBlockPtr << "\n\n"; //指针仍然指向该位置
 
 //但编译器认为该块已经释放了。这里有一个小程序，下面的一行可能仍然有效。然而，编译器可能会在该处写入其他内容，导致灾难性的结果。
 
-cout << " *intBlockPtr = "<< *intBlockPtr << "\n\n";
+cout << " *intBlockPtr = " << *intBlockPtr << "\n\n";
 
 ///////////////////////////////////////////////////
 
@@ -887,29 +971,31 @@ return 0;
 
 在已经被擦除的位置请求书籍会导致错误。
 
-指向一个在内存中已被释放的地方就像是让某人去图书馆的索引卡位置，但那里的架子已经消失了，他们会掉进地板。
+指向一个在内存中已被释放的地方，就像是让某人去图书馆的索引卡位置，但那里的架子已经消失了，他们会掉进地板。
 
-在 C 和 C++ 中，每本书书都需要一张索引卡和空间架子空间。在我们的类比中，两者都占用内存。
+在 `C` 和 `C++` 中，每本书都需要一张索引卡和架子上的空间。在我们的类比中，两者都占用内存。
 
-但在 Swift 中，一个设置为 `nil` 的 `var` 变量意味着它目前还没有**任何类型**的数值。Swift 没有指针。它就像完全没有图书馆索引卡一样。`Nil` 告诉你书籍不存在，仅此为止。
+但在 Swift 中，一个设置为 `nil` 的 `var` 变量意味着它目前还没有**任何类型**的数值。Swift 没有指针。它就像完全没有图书馆索引卡一样。`nil` 告诉你书籍不存在，仅此而已。
 
-那常量值呢？尝试设置 `let` dogs = `Int()` 看看会发生什么。当你尝试将 `dogs` 设置为某个真实值时，会出现一个带有解决方案的小红色错误圈，并且 `let` 会自动为你更改为 `var`。常量不能是可选的（optionals）。
+那常量值呢？尝试设置 `let dogs = Int()`，看看会发生什么。当你尝试将 `dogs` 设置为某个真实值时，会出现一个带有解决方案的小红色错误圈，并且 `let` 会自动为你更改为 `var`。常量不能是可选的（optionals）。
 
 让我们玩玩可选类型。引用一个 `nil` 值会导致问题。我们能如何使用可选类型来防止这种情况？这里有很多内容需要理解，所以如果你在结束之前有疑问，请耐心听听。
 
-让我们想象一下在你开始时不知道某个值是什么。你有 1 美元，但不知道用这 1 美元可以买多少个苹果。
+让我们想象一下，在你开始时不知道某个值是什么。你有 1 美元，但不知道用这 1 美元可以买多少个苹果。
 
 ```swift
 var apples = Int?() //注意，这末尾以前没有 ()，但现在已经更改了。
 
-if  apples >= 1{
+if apples >= 1 {
   print("我们有 \(apples)")
 } else {
   print("我们今天没有苹果！")
 }
 ```
 
-![Image](img/00031.jpeg)(图 9.4 避免等于 nil 的值。)
+![Image](img/00031.jpeg)
+
+（图 9.4 避免等于 `nil` 的值。）
 
 注意在侧边栏中的 `var apples` 被赋予了 `nil` 值。并且 `if else` 知道 `nil` 不大于或等于 1。
 
@@ -918,34 +1004,40 @@ if  apples >= 1{
 ```swift
 let applesPerCrate = 20
 
-var appleCratesNeeded = apples/applesPerCrate
+var appleCratesNeeded = apples / applesPerCrate
 ```
 
-![Image](img/00032.jpeg)(图 9.5 Swift 对未解包的值表示不满。)
+![Image](img/00032.jpeg)
 
-我们得到了一个错误。中间带有圆点的圆圈（错误标记）表示如果我们点击它，它将向我们显示错误的可能的修复方法。这与圆圈中间的感叹号不同，后者不提供可能的更改建议。
+（图 9.5 Swift 对未解包的值表示不满。）
 
-![Image](img/00033.jpeg)(图 9.6 点击红圈以获取更多信息。)
+我们得到了一个错误。中间带有圆点的圆圈（错误标记）表示如果我们点击它，它将向我们显示错误的可能修复方法。这与圆圈中间的感叹号不同，后者不提供可能的更改建议。
+
+![Image](img/00033.jpeg)
+
+（图 9.6 点击红圈以获取更多信息。）
 
 如果我们点击下方带有白色点的圆圈，上方会呈现一个解决方案。
 
-![Image](img/00034.jpeg) (图 9.7 进一步探索错误。)
+![Image](img/00034.jpeg)
+
+（图 9.7 进一步探索错误。）
 
 点击蓝色的 Fix-it Solution（修复解决方案）将导致该行变为：
 
 ```swift
-var appleCratesNeeded = apples!/applesPerCrate
+var appleCratesNeeded = apples! / applesPerCrate
 ```
 
 注意在 `apples` 之后、除斜符号 `/` 之前插入了一个 `!`。这被称为强制解包（forced unwrapping）。然而，像这样写（因为 `apples` 是 `nil`）同样会导致致命的崩溃。
 
-当程序说说“可选类型 'Int?' 的值未解包”时意味着什么？非常简单：
+当程序说“可选类型 `Int?` 的值未解包”时意味着什么？非常简单：
 
 ```swift
 var potatoes = 1
 ```
 
-隐式地将 `potatoes` 转换为 `Int`。也就是说程序假设 `potatoes` 是一个 `Int`。
+隐式地将 `potatoes` 转换为 `Int`。也就是说，程序假设 `potatoes` 是一个 `Int`。
 
 ```swift
 var motatoes = Double(1)
@@ -960,200 +1052,89 @@ var apples = Int?()
 显式地将 `apples` 转换为 `Int`，但 `apples` 的值尚未被解包。
 
 ```swift
-var appleCratesNeeded = apples/applesPerCrate
+var appleCratesNeeded = apples / applesPerCrate
 ```
 
 在上面，`apples` 没有被解包。但它需要被解包，所以 Swift 在上方询问你是否要解包 `apples`。
 
-![Image](img/00035.jpeg) (图 9.8 你被询问是否要解包 apples。)
+![Image](img/00035.jpeg)
+
+（图 9.8 你被询问是否要解包 `apples`。）
 
 要这样做，你可以这样写：
 
 ```swift
-var appleCratesNeeded = apples!/applesPerCrate
+var appleCratesNeeded = apples! / applesPerCrate
 ```
 
 ```swift
-var pears = Int!() 
+var pears = Int!()
 ```
 
 显式地声明 `pears` 是一个“已解包”的 `Int`。因为它是显式解包，你可以写：
 
 ```swift
-var pearCratesNeeded = pears/applesPerCrate
+var pearCratesNeeded = pears / applesPerCrate
 ```
 
 不需要在 `pears` 之后加感叹号。
 
 我们很快就会向你展示如何让强制解包工作。首先，我想展示一下 Swift 在各种情况下会做什么。
 
-![Image](img/00036.jpeg) (图 9.9 apples 已解包，但它的解包值在哪里？）
+![Image](img/00036.jpeg)
+
+（图 9.9 `apples` 已解包，但它的解包值在哪里？）
 
 所以让我们重新开始。使用橙子 `var oranges = Int!()`。在这里我们使用了 `!` 而不是 `?`。
 
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
+这意味着 `oranges` 被显式声明为 `Int`，并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
 ```swift
 var pennies = 21
 ```
 
-![Image](img/00037.jpeg) (图 9.10 如果 oranges 是 nil，程序会崩溃。)
+![Image](img/00037.jpeg)
 
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
+（图 9.10 如果 `oranges` 是 `nil`，程序会崩溃。）
 
-```swift
-var pennies = 21
-```
-
-![Image](img/00038.jpeg) (图 9.11 这里的 oranges 是未解包。)
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
+这意味着 `oranges` 被显式声明为 `Int`，并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
 ```swift
 var pennies = 21
 ```
 
-![Image](img/00039.jpeg) (图 9.12 这里的 oranges 是未解包。)
+![Image](img/00038.jpeg)
 
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
+（图 9.11 这里的 `oranges` 是未解包的。）
 
-```swift
-var pennies = 21
-```
-
-![Image](img/00040.jpeg) (图 9.13 apples 已解包，程序会崩溃。)
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
+这意味着 `oranges` 被显式声明为 `Int`，并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
 ```swift
 var pennies = 21
 ```
 
-抱歉，我发现上述翻译过程中出现了逻辑重复和内容混乱。我将为您重新提供一份干净、准确的完整翻译：
+![Image](img/00039.jpeg)
 
-[content]
+（图 9.12 这里的 `oranges` 是未解包的。）
 
-```cpp
-cout << "Now we free( intBlockPt\n\n"; //我们已经删除了架子和地板
-
-free(intBlockPtr);
-
-cout << " intBlockPtr = "<< intBlockPtr << "\n\n"; //指针仍然指向该位置
-
-//但编译器认为该块已经释放了。这里有一个小程序，下面的一行可能仍然有效。然而，编译器可能会在该处写入其他内容，导致灾难性的结果。
-
-cout << " *intBlockPtr = "<< *intBlockPtr << "\n\n";
-
-///////////////////////////////////////////////////
-
-return 0;
-
-///////////////////////////////////////////////////
-```
-
-在已经被擦除的位置请求书籍会导致错误。
-
-指向一个在内存中已被释放的地方就像是让某人去图书馆的索引卡位置，但那里的架子已经消失了，他们会掉进地板。
-
-在 C 和 C++ 中，每本书都需要一张索引卡和空间架子空间。在我们的类比中，两者都占用内存。
-
-但在 Swift 中，一个设置为 `nil` 的 `var` 变量意味着它目前还没有**任何类型**的数值。Swift 没有指针。它就像完全没有图书馆索引卡一样。`Nil` 告诉你书籍不存在，仅此为止。
-
-那常量值呢？尝试设置 `let` dogs = `Int()` 看看会发生什么。当你尝试将 `dogs` 设置为某个真实值时，会出现一个带有解决方案的小红色圈，并且 `let` 会自动为你更改为 `var`。常量不能是可选的。
-
-让我们玩玩可选类型。引用一个 `nil` 值会导致问题。我们能如何使用可选类型来防止这种情况？这里有很多内容需要理解，所以如果你在结束之前有疑问，请耐心听听。
-
-让我们想象一下在你开始时不知道某个值是什么。你有 1 美元，但不知道用这 1 美元可以买多少个苹果。
+这意味着 `oranges` 被显式声明为 `Int`，并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
 ```swift
-var apples = Int?() //注意，这末尾以前没有 ()，但现在已经更改了。
-
-if  apples >= 1{
-  print("我们有 \(apples)")
-} else {
-  print("我们今天没有苹果！")
-}
+var pennies = 21
 ```
 
-![Image](img/00031.jpeg)(图 9.4 避免等于 nil 的值。)
+![Image](img/00040.jpeg)
 
-注意在侧边栏中的 `var apples` 被赋予了 `nil` 值。并且 `if else` 知道 `nil` 不大于或等于 1。
+（图 9.13 `apples` 已解包，程序会崩溃。）
 
-但如果从那里继续添加：
 
-```swift
-let applesPerCrate = 20
 
-var appleCratesNeeded = apples/applesPerCrate
-```
-
-![Image](img/00032.jpeg)(图 9.5 Swift 对未解包的值表示不满。)
-
-我们得到了一个错误。中间带有圆点的圆圈（错误标记）表示如果我们点击它，它将向我们显示错误的可能的修复方法。这与圆圈中间的感叹号不同，后者不提供可能的更改建议。
-
-![Image](img/00033.jpeg)(图 9.6 点击红圈以获取更多信息。)
-
-如果我们点击下方带有白色点的圆圈，上方会呈现一个解决方案。
-
-![Image](img/00034.jpeg) (图 9.7 进一步探索错误。)
-
-点击蓝色的 Fix-it Solution 将导致该行变为：
-
-```swift
-var appleCratesNeeded = apples!/applesPerCrate
-```
-
-注意在 `apples` 之后、除斜符号 `/` 之前插入了一个 `!`。这被称为强制解包（forced unwrapping）。然而，像这样写（因为 `apples` 是 `nil`）同样会导致致命的崩溃。
-
-当程序说“可选类型 'Int?' 的值未解包”时意味着什么？非常简单：
-
-```swift
-var potatoes = 1
-```
-
-隐式地将 `potatoes` 转换为 `Int`。也就是说程序假设 `potatoes` 是一个 `Int`。
-
-```swift
-var motatoes = Double(1)
-```
-
-显式地将 `potatoes` 转换为 `Double`。
-
-```swift
-var apples = Int?()
-```
-
-显式地将 `apples` 转换为 `Int`，但 `apples` 的值尚未被解包。
-
-```swift
-var appleCratesNeeded = apples/applesPerCrate
-```
-
-在上面，`apples` 没有被解包。但它需要被解包，所以 Swift 在上方询问你是否要解包 `apples`。
-
-![Image](img/00035.jpeg) (图 9.8 你被询问是否要解包 apples。)
-
-要这样做，你可以这样写：
-
-```swift
-var appleCratesNeeded = apples!/applesPerCrate
-```
-
-```swift
-var pears = Int!() 
-```
-
-显式地声明 `pears` 是一个“已解包”的 `Int`。因为它是显式解包，你可以写：
-
-```swift
-var pearCratesNeeded = pears/applesPerCrate
-```
-
-不需要在 `pears` 之后加感叹号。
 
 我们很快就会向你展示如何让强制解包工作。首先，我想展示一下 Swift 在各种情况下会做什么。
 
-![Image](img/00036.jpeg) (图 9.9 apples 已解包，但它的解包值在哪里？）
+![Image](img/00036.jpeg)
+
+（图 9.9 `apples` 已解包，但它的解包值在哪里？）
 
 所以让我们重新开始。使用橙子 `var oranges = Int!()`。在这里我们使用了 `!` 而不是 `?`。
 
@@ -1163,7 +1144,9 @@ var pearCratesNeeded = pears/applesPerCrate
 var pennies = 21
 ```
 
-![Image](img/00037.jpeg) (图 9.10 如果 oranges 是 nil，程序会崩溃。)
+![Image](img/00037.jpeg)
+
+（图 9.10 如果 `oranges` 是 `nil`，程序会崩溃。）
 
 这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
@@ -1171,7 +1154,9 @@ var pennies = 21
 var pennies = 21
 ```
 
-![Image](img/00038.jpeg) (图 9.11 这里的 oranges 是未解包。)
+![Image](img/00038.jpeg)
+
+（图 9.11 这里的 `oranges` 是未解包。）
 
 这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
@@ -1179,7 +1164,9 @@ var pennies = 21
 var pennies = 21
 ```
 
-![Image](img/00039.jpeg) (图 9.12 这里的 oranges 是未解包。)
+![Image](img/00039.jpeg)
+
+（图 9.12 这里的 `oranges` 是未解包。）
 
 这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
 
@@ -1187,53 +1174,9 @@ var pennies = 21
 var pennies = 21
 ```
 
-![Image](img/00040.jpeg) (图 9.13 apples 已解包，程序会崩溃。)
+![Image](img/00040.jpeg)
 
-*(抱歉，由于原文文本存在大量重复和乱码，上述翻译已根据上下文逻辑进行了清理和对齐。)*
-[/content]对不起，由于你提供的原文文本中存在大量的重复和逻辑混乱（例如 `var pennies = 21` 重复了多次），作为高级文档工程师，我为你进行了逻辑清理。以下是修正后、流畅的翻译版本：
-
-[content]
-...
-我们很快就会向你展示如何让强制解包工作。首先，我想展示一下 Swift 在各种情况下会做什么。
-
-![Image](img/00036.jpeg) (图 9.9 apples 已解包，但它的解包值在哪里？）
-
-所以让我们重新开始。使用橙子 `var oranges = Int!()`。在这里我们使用了 `!` 而不是 `?`。
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
-
-```swift
-var pennies = 21
-```
-
-![Image](img/00037.jpeg) (图 9.10 如果 oranges 是 nil，程序会崩溃。)
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
-
-```swift
-var pennies = 21
-```
-
-![Image](img/00038.jpeg) (图 9.11 这里的 oranges 是未解包。)
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
-
-```swift
-var pennies = 21
-```
-
-![Image](img/00039.jpeg) (图 9.12 这里的 oranges 是未解包。)
-
-这意味着 `oranges` 被显式声明为 `Int` 并且显式声明为已解包的可选类型。假设我们声明 `pennies` 为：
-
-```swift
-var pennies = 21
-```
-
-![Image](img/00040.jpeg) (图 9.13 apples 已解包，程序会崩溃。)
-
-
-
+（图 9.13 `apples` 已解包，程序会崩溃。）
 
 ```c
 printf("We are on the verge of breakthrough%d!\n",x); // 执行我们需要的操作。
@@ -1243,9 +1186,9 @@ x++; // 为我们提供了退出循环的方法。
 }
 ```
 
+```c
 // 或者用于 do-while 循环
 
-```c
 x = 100;
 
 do{
@@ -1267,7 +1210,7 @@ while x < 6 {
 }
 ```
 
-// 以及
+以及：
 
 ```swift
 x = 100
@@ -1283,15 +1226,15 @@ repeat { // 在 Swift 中现在用 repeat 代替了 do
 
 ![Image](img/00041.jpeg)
 
-（图 11.1 使用 while 循环。）
+（图 11.1 使用 `while` 循环。）
 
 注意这里的 `repeat{…..}while` 循环只运行了一次。无论设置了什么条件，`repeat` 循环至少都会运行一次。取决于设置的条件，`while` 可能一次都不运行。
 
-### 十二
+## 十二
 
 ### Switches（切换）
 
-C 或 C++ 中的 switch 语句与 Swift 中的非常相似，某些约定略有不同。
+C 或 C++ 中的 `switch` 语句与 Swift 中的非常相似，某些约定略有不同。
 
 ```c
 int dog = 5;
@@ -1323,9 +1266,9 @@ default:
 printf("\n\n");
 ```
 
-将输出 "Unknown Mutt"。
+将输出 `"Unknown Mutt"`。
 
-在 Swift 中，switch 语句必须是穷尽的（exhaustive）。你并不总是需要 `default:`，但你确实需要在 switch 语句中有一个穷尽的列表。
+在 Swift 中，`switch` 语句必须是穷尽的（exhaustive）。你并不总是需要 `default:`，但你确实需要在 `switch` 语句中有一个穷尽的列表。
 
 考虑：
 
@@ -1340,11 +1283,11 @@ case false:
 }
 ```
 
-这是穷尽的。true 和 false 是唯一可能的 Bool 返回值，且都被涵盖了，所以它确实有效。
+这是穷尽的。`true` 和 `false` 是唯一可能的 `Bool` 返回值，且都被涵盖了，所以它确实有效。
 
 ![Image](img/00042.jpeg)
 
-（图 12.1 一个穷尽的 switch，没有其他可能的回复，因此它是穷尽的。）
+（图 12.1 一个穷尽的 `switch`，没有其他可能的回复，因此它是穷尽的。）
 
 那么以下呢？
 
@@ -1363,9 +1306,9 @@ case "false":
 
 ![Image](img/00043.jpeg)
 
-（图 12.2 我们不知道 blue 是 true 还是 false，所以搜索不是穷尽的。）
+（图 12.2 我们不知道 `blue` 是 `true` 还是 `false`，所以搜索不是穷尽的。）
 
-我们实际上收到一个警告，说明我们的 switch 不是穷尽的。
+我们实际上收到一个警告，说明我们的 `switch` 不是穷尽的。
 
 ```swift
 var trueOrFalse = "blue"
@@ -1386,11 +1329,11 @@ default:
 
 （图 12.3 我们有默认，所以搜索是穷尽的。）
 
-所以使用 Swift 中的 switch 时，如果你的回复列表已经是穷尽的，就不需要 `default`。
+所以使用 Swift 中的 `switch` 时，如果你的回复列表已经是穷尽的，就不需要 `default`。
 
-正如在 C 和 C++ 中，switch 语句比长长的 if else 组合更容易编写和阅读。
+正如在 C 和 C++ 中，`switch` 语句比长长的 `if else` 组合更容易编写和阅读。
 
-如果你的用户输入是 `String`，switch 语句可以让可能的答案更容易处理。
+如果你的用户输入是 `String`，`switch` 语句可以让可能的答案更容易处理。
 
 创建一个新的 Swift 控制台项目而不是 playground（播放场）
 
@@ -1406,15 +1349,13 @@ default:
 
 点击 Next，确保它位于你想要所在的文件中并点击 create。
 
-然后打开 `main.swift` 文件
+然后打开 `main.swift` 文件。
 
 ![Image](img/00047.jpeg)
 
-（图 12.6 打开 main.swift.）
+（图 12.6 打开 `main.swift`。）
 
 输入下面的代码。在名称和版权信息注释掉之后。我将 `var reply` 设为一个强制解包的条件 `String`。然后使用了空值合并运算符（coalescing operator），以防没有输入任何内容。我们还没有讨论过函数，所以那部分稍后会讨论。现在只需使用这里的代码。
-
-——————————————————————————
 
 ```swift
 //
@@ -1448,10 +1389,6 @@ default:
 }
 ```
 
-
-
-
-
 ## 引言
 
 然而，Apple 为其新的 `enum` 制定规则确实有其合理的理由。新的 `enum` 比旧的 C `enum` 具有多得的功能。由于旧的 C `enum` 的值只能是 `ints`，因此类型安全性并不是问题。但 Apple 新的 `enum` 在 `Swift` 中不必仅仅是 `Int`。
@@ -1482,7 +1419,7 @@ enum Numbers { //注意每个值之前的单词大小写。这可以通过不同
 
 这建立了一个名为 `Numbers` 的 `enum`，但它没有值。Apple 喜欢称它们为 `rawValues`。简单来说，`rawValues` 是赋予 `enum` 的值。
 
-在 `Swift` 中，"Numbers" 现在是一个类型，尝试像在 `C` 或 `C++` 中那样写写 `enum Numbers` 将导致错误。显式转换可以运行，但它的写法不像在 `C` 或 `C++` 中那样。
+在 `Swift` 中，`Numbers` 现在是一个类型，尝试像在 `C` 或 `C++` 中那样写写 `enum Numbers` 将导致错误。显式转换可以运行，但它的写法不像在 `C` 或 `C++` 中那样。
 
 ```swift
 var count: enum Numbers = .EIGHT //会给你返回一个错误 ERROR
@@ -1497,7 +1434,9 @@ var count = Numbers.EIGHT
 
 注意，要将变量或常量设置为我们 `Numbers` 中的其中一个值，你需要在值之前使用点符号。如上面的 `.EIGHT` 所示。但我们的 `enum` `Numbers` 不会在你的 playground 中显示任何值。
 
-![Image](img/00053.jpeg) (图 13.3 在 Swift 中，枚举的值在你像像上面的 `count` 和 `count1` 那样使用它们之前，不会显示在 playground 中。)
+![Image](img/00053.jpeg)
+
+（图 13.3 在 Swift 中，枚举的值在你像上面的 `count` 和 `count1` 那样使用它们之前，不会显示在 playground 中。）
 
 如你所见，侧边栏中只显示了 `EIGHT`。如果你喜欢，可以添加 `print(count1)`！
 
@@ -1544,7 +1483,7 @@ case .pies:
 enum Numbers:Int {
 ```
 
-这实际上会将 `enum` 从未指定的类型更改为 `Int` 类型。它还会为每个 case 提供一个从零开始的 `Int` 值。如果你将 `enum` `Numbers` 包含 `:Int`，它看起来和上面的图形没有区别，除了包含了 `:Int`。
+这实际上会将 `enum` 从未指定的类型更改为 `Int` 类型。它还会为每个 `case` 提供一个从零开始的 `Int` 值。如果你将 `enum` `Numbers` 包含 `:Int`，它看起来和上面的图形没有区别，除了包含了 `:Int`。
 
 ### Playground 中有“幽灵”
 
@@ -1582,9 +1521,11 @@ if  time == .FIVE {
 }
 ```
 
-![Image](img/00054.jpeg) (图 13.4 在 Swift 中，编号的默认值为 0，在本例中为 `ZERO`。)
+![Image](img/00054.jpeg)
 
-注意上面的 case `"theTime"` 是一个等于 5 的常量 `Int`。它不是 `enum` `Numbers` 的实例。
+（图 13.4 在 Swift 中，编号的默认值为 0，在本例中为 `ZERO`。）
+
+注意上面的 `theTime` 是一个等于 5 的常量 `Int`。它不是 `enum` `Numbers` 的实例。
 
 在上面的示例中，每行都有一个 `case`，但你不需要为 `enum` 中的每个新值都使用 `case` 单词。下面的代码如下：
 
@@ -1597,9 +1538,6 @@ enum MyInt: Int {
 ```
 
 （注：提供的文本在结尾处中断；我已根据可用片段格式化了逻辑。）
-
-
-
 
 ```swift
 var someOtherVariable = Name_Of_Enum(rawValue: Some_Int_Included_In_Name_Of_Enum)(! needed)
@@ -1649,31 +1587,28 @@ enum myCountingString: String {
 }
 ```
 
-```swift
-var countTwo = myCountingString.two.rawValue
 
-countTwo == "Two"
-```
 
-本节的最后一个注意事项。请记住以下者之间的区别：
+# 枚举
+
+本节的最后一个注意事项。请记住以下两者之间的区别：
 
 ```swift
-enum MyIntToo: Int{
+enum MyIntToo: Int {
   case a, b, c, d
 }
 ```
 
 ```swift
 let ace = MyIntToo.a
-
 let doc = MyIntToo.a.rawValue
 ```
 
-在这里 `ace == a`，它是 `MyIntToo` 的一个实例，但 `doc == 0` 仅仅是一个 `Int`。没有 `doc.a`、`doc.b` 或 `doc.c` 或 `doc.d`。
+在这里 `ace == a`，它是 `MyIntToo` 的一个实例，但 `doc == 0` 仅仅是一个 `Int`。没有 `doc.a`、`doc.b`、`doc.c` 或 `doc.d`。
 
 枚举的第一节就此结束。在涵盖另外几个主题后，我们将在第二书中回到它们。关于枚举我们还可以做更多事情。
 
-### 问题
+## 问题
 
 1) 给定：
 
@@ -1683,29 +1618,39 @@ enum An_ENUM: Int {
 }
 ```
 
+```swift
 var Y = Int!()
 var X = An_ENUM(rawValue: Y)
+```
 
-a. `var z = An_ENUM.a`
-`z` 将等于 `2` (`z == 2`)
+a. `var z = An_ENUM.a`，`z` 将等于 `2`（`z == 2`）
+
 b. `var Y = Int!()` 会导致致命错误
-c. `var X An_ENUM(rawValue: Y)` 会导致致命错误
+
+c. `var X = An_ENUM(rawValue: Y)` 会导致致命错误
+
 d. `var X` 将为 `nil`
 
 2) 给定：
 
 ```swift
 enum aLittleEnum: Int {
-  case a = 15 ,b,c,d,e,f,g
+  case a = 15, b, c, d, e, f, g
 }
 ```
 
+```swift
 var w = aLittleEnum.c
+```
 
 `w.rawValue` 将是什么？
+
 a. 2
+
 b. 3
+
 c. 17
+
 d. 18
 
 3) 给定：
@@ -1716,19 +1661,23 @@ enum MyFloatEnum: Float {
 }
 ```
 
+```swift
 var f = MyFloatEnum.e
+```
 
 `f.rawValue` 将是什么？
+
 a. nil
-b. 致命错误 (FATAL ERROR)
+
+b. 致命错误（FATAL ERROR）
+
 c. 3.0
+
 d. 5.0
 
-**十四**
+# 字典（Dictionaries）
 
-## 字典 (Dictionaries)
-
-当我用 C 或 C++ 工作时，我有时会创建数组数组：
+当我用 C 或 C++ 工作时，我有时会创建数组的数组：
 
 ```cpp
 int myArrayOfArrays[10][10];
@@ -1746,36 +1695,31 @@ int myArrayOfArraysOfArrays[10][10][10]; // 依此类推
 var aThousandIntArray = Int
 ```
 
-然后对其中的值进行操作。但点始终是以我们我们需要的方式收集数据。Swift 确实给了我们在所谓的字典（dictionary）中收集数据的机会。它并不像 `int myArrayOfArrays[10][10];`；但你可以创建一个相似的东西。
+然后对其中的值进行操作。但数据始终是以我们需要的方式收集的。Swift 确实给了我们在所谓的字典（dictionary）中收集数据的机会。它并不像 `int myArrayOfArrays[10][10];`，但你可以创建一个相似的东西。
 
-假设我们创建了一个包含 100 个值的 `myArrayOfArrays`，并说 `myArrayOfArrays[0][0] = 5;` `myArrayOfArrays[0][1] = 7;` `myArrayOfArrays[0][2] = 9;` 直到 `myArrayOfArrays[10][10] = 122;`
-
-```swift
-var A_DICTIONARY_NAME:[Int : Int] = [ 0 : 5, 1: 7, 2 : 9]
-```
-
-相反 Swift 使用的是字典。每个字典条目由两个项目组成，第一个是键（key），第二个是值（value）。这里有一个键值都是字符串的字典：
+假设我们创建了一个包含 100 个值的 `myArrayOfArrays`，并说 `myArrayOfArrays[0][0] = 5;`、`myArrayOfArrays[0][1] = 7;`、`myArrayOfArrays[0][2] = 9;` 直到 `myArrayOfArrays[10][10] = 122;`
 
 ```swift
-var myExampleDictionary: [ String : String] = ["Key" : "Value"]
+var A_DICTIONARY_NAME: [Int : Int] = [0 : 5, 1: 7, 2 : 9]
 ```
 
-`Dictionary` 中的项目在哈希表中按其键排序，用户永远看不到这个哈表。Swift 在后台处理了排序。简单来说，Swift 接收你的 `Key`，将其拆分为可排序的代码并在你需要时找到你的 `Key`。键可以是任何类型，`Int`、`Double`、`String`，只要可以转换为哈希值进行存储即可。值可以是任何类型。
+相反，Swift 使用的是字典。每个字典条目由两个项目组成，第一个是键（key），第二个是值（value）。这里有一个键值都是字符串的字典：
+
+```swift
+var myExampleDictionary: [String : String] = ["Key" : "Value"]
+```
+
+`Dictionary` 中的项目在哈希表中按其键排序，用户永远看不到这个哈希表。Swift 在后台处理了排序。简单来说，Swift 接收你的 `Key`，将其拆分为可排序的代码并在你需要时找到你的 `Key`。键可以是任何类型，`Int`、`Double`、`String`，只要可以转换为哈希值进行存储即可。值可以是任何类型。
 
 可以显式创建一个字典：
 
-`var or let dictionaryName(colon:) [ type name for key (colon:) type name for value] = [key of specified type (colon:) value of specified type (如果需要，用逗号分隔) …. key of specified type (colon:) value of specified type ]`
+`var` 或 `let` `dictionaryName`（冒号）`[` 键的类型名（冒号）值的类型名 `]` = `[` 指定类型的键（冒号）指定类型的值（如果需要，用逗号分隔）…. 指定类型的键（冒号）指定类型的值 `]`
 
 你可以使用字典来收集姓和名，名字按姓氏排序：
 
 ```swift
-var myDictionary:[ String : String] = ["LastNameOne":"David", "LastNameTwo": "Two"]
+var myDictionary: [String : String] = ["LastNameOne" : "David", "LastNameTwo" : "Two"]
 ```
-
-（注：原文提供的文本包含大量重复和混乱的内容，此处翻译已进行清理并保留核心逻辑。）
-
-
-
 
 `myDictionaryTenTen.count` // 仍然等于 101
 
@@ -1803,21 +1747,21 @@ myDictionaryTenTen.count
 
 ![Image](img/00065.jpeg)
 
-(图 14.3 显示使用 `.count` 和 `.removeValueForKey()` 的结果)
+（图 14.3 显示使用 `.count` 和 `.removeValueForKey()` 的结果）
 
 注意，尽管我们的字典中有 101 个项目，但键 100 显示为 `nil`。移除键 199 的值后，它也被显示为 `nil`。
 
 另外请注意，`myDictionaryTenTen.removeValueForKey(199)` 给了我们被移除的值：
 
-222 
+222
 
-正如我们在 For-In-循环中学学习的，我们可以使用 For-In-循环来遍历字典。为了好玩，让我们把键 199 的值放回去。
+正如我们在 For-In 循环中学到的，我们可以使用 For-In 循环来遍历字典。为了好玩，让我们把键 199 的值放回去。
 
 ```
 myDictionaryTenTen[199] = 1000
 
-for(whoCaresWhatICallTheKey, whoCaresWhatICallTheValue) in myDictionaryTenTen {
-  print( "\(whoCaresWhatICallTheKey):\(whoCaresWhatICallTheValue)")
+for (whoCaresWhatICallTheKey, whoCaresWhatICallTheValue) in myDictionaryTenTen {
+  print("\(whoCaresWhatICallTheKey):\(whoCaresWhatICallTheValue)")
 }
 ```
 
@@ -1843,35 +1787,41 @@ for SomeSillyValue in myDictionaryTenTen.values {
 我们得到：
 
 55
+
 99
-33 
-66
-110
-88
+
 33
+
+66
+
+110
+
+88
+
+33
+
 77
+
 44
 
 `.keys` 和 `.values` 告诉 Swift 单独提取键或值。
 
-fifteen
-
-## 处理字符串
+# 处理字符串
 
 字符串在 Swift 中略有不同。在 C 和 C++ 中，字符串是填充了字符的字符数组。
 
-而不是 
+而不是
 
 `char aLetter = 'a';`
 
-我们使用的是 
+我们使用的是
 
 ```swift
 var aLetter = "o";
 var anotherletter: Character = "k"
 ```
 
-注意，我们对 Characters 使用双引号 [永远不要使用智能引号]。现在，只需记住有 Characters 即可。
+注意，我们对 Characters 使用双引号（永远不要使用智能引号）。现在，只需记住有 Characters 即可。
 
 我们如何知道这些确实是 Characters 而不是 Strings？
 
@@ -1881,7 +1831,7 @@ var anotherletter: Character = "k"
 var word = aLetter + anotherLetter
 ```
 
-![Image](img/00066.jpeg)(图 15.1 Swift 中的 Characters 不能简单地相加来形成 Strings。)
+![Image](img/00066.jpeg)（图 15.1 Swift 中的 Characters 不能简单地相加来形成 Strings。）
 
 因此上面的代码会给我们一个错误信息。我们不能直接相加 Characters。稍后我们会看到可以将一个 Character 追加到单词中，但那需要小心。
 
@@ -1895,11 +1845,11 @@ var myFinalWord = myWord1 + myWord2
 
 ![Image](img/00067.jpeg)
 
-(图 15.2 如果你可以将两个单字符变量或常量相加，它们是 Strings 而不是 Characters。)
+（图 15.2 如果你可以将两个单字符变量或常量相加，它们是 Strings 而不是 Characters。）
 
 你可以看到 Swift 将 `myWord1` 和 `myWord2` 解释为 Strings 而不是 Characters。
 
-Characters 必须 必须显式声明。
+Characters 必须显式声明。
 
 所以当我查看 Swift 中的 Strings 时，我的第一个问题是如何访问单个 Characters？让我们尝试访问我们的 "Hello, playground" `str` 中的一个字符。
 
@@ -1909,7 +1859,7 @@ var aThirdLetter: Character = str[0] // 崩溃
 
 ![Image](img/00068.jpeg)
 
-(图 15.3 你不能通过使用 Int 指向字符串中的位置来为 Character 赋值。)
+（图 15.3 你不能通过使用 Int 指向字符串中的位置来为 Character 赋值。）
 
 我们如何获取 Swift 在我们打开 playground 时提供的如 `str` 字符串中的单个字符，即 `var str = "Hello, playground"`？
 
@@ -1917,32 +1867,48 @@ var aThirdLetter: Character = str[0] // 崩溃
 
 ![Image](img/00069.jpeg)
 
-(图 15.4 这种方法不再起作用。)
+（图 15.4 这种方法不再起作用。）
 
 现在实现此的一种方法是在字符串末尾追加 `.characters`。
 
 ```swift
-for myCharacter in str.characters{
-  print (myCharacter)
+for myCharacter in str.characters {
+  print(myCharacter)
 }
 ```
 
-//结果为
+// 结果为
+
 H
+
 e
+
 l
+
 l
+
 o
+
 ，
+
 p
+
 l
+
 a
+
 y
+
 g
+
 r
+
 o
+
 u
+
 n
+
 d
 
 另一种稍有不同的方法是：
@@ -1959,37 +1925,35 @@ for index in str.characters.indices {
 var myOtherCharacter = str[index]
 ```
 
-
-
-
-
 `myString[myString.endIndex.predecessor().predecessor().predecessor().predecessor().predecessor()]` 将带我们一直回到 "D"
 
-但那是一种相当笨拙的移动方式。如果我们多加了一个 `.predecessor()`，就会导致致命性错误。因此 Swift 也也给了我们 `.successor()`。
+但那是一种相当笨拙的移动方式。如果我们多加了一个 `.predecessor()`，就会导致致命性错误。因此 Swift 也给了我们 `.successor()`。
 
 ```swift
-myString.startIndex.successor() //工作方式与 .predecessor() 类似，只是 successor() 会向前移动。
+myString.startIndex.successor() // 工作方式与 .predecessor() 类似，只是 successor() 会向前移动。
 ```
 
-![Image](img/00073.jpeg) 
-(图 15.8 使用 `.startIndex` 移动。使用 `.successor()` 并添加额外的 `.successor()`。)
+![Image](img/00073.jpeg)
+
+（图 15.8 使用 `.startIndex` 移动。使用 `.successor()` 并添加额外的 `.successor()`。）
 
 不要访问不存在的索引的 `Character`。
 
 ```swift
-myString.endIndex.predecessor().successor() // 结果为 5，正如你所看到的，它并不存在，尝试访问这里的 `Character` 将导致错误。
+myString.endIndex.predecessor().successor() // 结果为 5，正如你所看到的，它并不存在，尝试访问这里的 Character 将导致错误。
 ```
 
 不要访问不存在的索引。
 
 ```swift
-myString.startIndex.predecessor() 
+myString.startIndex.predecessor()
 ```
 
-![Image](img/00074.jpeg) 
-(图 15.9 然而，就像在 C 和 C++ 中一样，你无法到达不存在的位置。`.startIndex`.`.predecessor()` 失败。)
+![Image](img/00074.jpeg)
 
-`.advanceBy()` 实际上接受一个 `int` 作为参数。它需要像 `startIndex` 的起始位置。
+（图 15.9 然而，就像在 C 和 C++ 中一样，你无法到达不存在的位置。`.startIndex`.`.predecessor()` 失败。）
+
+`.advancedBy()` 实际上接受一个 `Int` 作为参数。它需要像 `startIndex` 的起始位置。
 
 ```swift
 myString.startIndex.advancedBy(2) // 得到 2
@@ -1999,9 +1963,9 @@ myString[myString.startIndex.advancedBy(2)] // 得到 "V"
 在 `advancedBy()` 中达到 `myString.characters.count` 或其等价 `myString.endIndex` 会导致错误。`advancedBy()` 为我们提供了另一种打印 `String` 中字符的方法。在你的 playground 中尝试一下。
 
 ```swift
-var counter = 0  //counter 必须设置为 int 而不是索引
+var counter = 0  // counter 必须设置为 int 而不是索引
 while counter < str.characters.count { // str.characters.count 确实返回一个 Int。
-  print(str[str.startIndex.advancedBy(counter)]) //advancedBy 接收 Int 参数。
+  print(str[str.startIndex.advancedBy(counter)]) // advancedBy 接收 Int 参数。
   counter++
 }
 ```
@@ -2010,11 +1974,11 @@ while counter < str.characters.count { // str.characters.count 确实返回一�
 
 ```swift
 var countOfCharacters = str.characters.count  // str.characters.count 返回一个 int
-str.endIndex  //记得我们不能使用它，它是一个索引而不是 int。
+str.endIndex  // 记得我们不能使用它，它是一个索引而不是 int。
 var counterNeg = countOfCharacters
-str.endIndex.advancedBy( -counterNeg)
+str.endIndex.advancedBy(-counterNeg)
 while counterNeg > 0 {
-  print( str[str.endIndex.advancedBy( -counterNeg)] )
+  print(str[str.endIndex.advancedBy(-counterNeg)])
   counterNeg--
 }
 ```
@@ -2034,34 +1998,37 @@ myString.removeAtIndex(myString.endIndex.predecessor().predecessor()) // 删除�
 print(myString)
 ```
 
-```
-![Image](img/00075.jpeg) 
-(图 15.10 使用 `.insert` 和 `.removeAtIndex` 更改 String。注意 String 索引不是 Int。)
+![Image](img/00075.jpeg)
+
+（图 15.10 使用 `.insert` 和 `.removeAtIndex` 更改 String。注意 String 索引不是 Int。）
 
 对于我们的 `String` 甚至有一个 `.removeRange(_:)` 方法。注意，当 Apple 用 `_` 表示某项内容时：该值将直接插入，无需任何其他指令。
 
 ```swift
 var aRange = str.startIndex.advancedBy(7)...str.startIndex.advancedBy(10)
-//让我们添加一些必要的标点符号。
+
+// 让我们添加一些必要的标点符号。
 str.insert(".", atIndex: str.endIndex)
-//那个伞没打开的跳伞兵说了什么？
+
+// 那个伞没打开的跳伞兵说了什么？
 str.removeRange(aRange)
 ```
 
-sixteen
+# String 额外扩展
 
-### String 额外扩展
-
-Unicode 标量（Unicode scalars）被视为单词，可以简单地添加，例如，技能和交叉骨的代码是 `"\u{2620}"`。输入：
+Unicode 标量（Unicode scalars）被视为单词，可以简单地添加，例如，骷髅和交叉骨的代码是 `"\u{2620}"`。输入：
 
 ```swift
 var myFavoriteFlag = "My favorite flag is "
+
 myFavoriteFlag += "\u{2620}"
+
 print(myFavoriteFlag)
 ```
 
-![Image](img/00076.jpeg) 
-(图 16.1 尽管海盗旗是一个字符，但在这里添加时它是一个单词。)
+![Image](img/00076.jpeg)
+
+（图 16.1 尽管海盗旗是一个字符，但在这里添加时它是一个单词。）
 
 我们可以在我们的字符串中找到一个 `String`。让我们用 `myString` 试试（DAVE!）
 
@@ -2073,29 +2040,47 @@ myString.containsString("AV") // 得到 true
 
 ```swift
 myString.hasPrefix("DA") // 得到 true，这是前缀
-myString.hasSuffix("VE") // 得到 false，这不是后缀
-myString.hasSuffix("E!") // 得到 true，这是后缀。
-print( "myString has \(myString.characters.count) characters.")
-// 得到 "myString has 5 characters.\n"
 ```
+
+
+
+`myString.hasSuffix("VE")` // 得到 false，这不是后缀
+
+`myString.hasSuffix("E!")` // 得到 true，这是后缀。
+
+```swift
+print("myString has \(myString.characters.count) characters.")
+```
+
+// 得到 "myString has 5 characters.\n"
 
 `myString.isEmpty` // 将得到 false，因为那里有字符。
 
 ```swift
 var aBlankString = ""  //将其为空字符串
+
 var anotherBlankSting = String() //将其为空字符串
+
 aBlankString.isEmpty  // 得到 true
+
 anotherBlankSting.isEmpty  // 得到 true
+
 aBlankString = myString
+
 if( aBlankString == myString){
+
   print("These two Strings are equal")
+
 } else {
+
   print("\u{2620}")
+
 }
 ```
 
-![Image](img/00077.jpeg) 
-(图 16.2 hasPrefix, hasSuffix)
+![Image](img/00077.jpeg)
+
+（图 16.2 hasPrefix, hasSuffix）
 
 seventeen
 
@@ -2105,11 +2090,17 @@ seventeen
 
 ```swift
 struct businessCard {
+
   var firstName: String?
+
   var middleName: String?
+
   var surName: String?
+
   var age: Int
+
   var isFemale: Bool
+
 }
 ```
 
@@ -2117,10 +2108,15 @@ struct businessCard {
 
 ```swift
 var myCard = businessCard()
+
 myCard.firstName = "Bob"
+
 myCard.middleName = "David"
+
 myCard.surName = "Cats"
+
 myCard.age = 33
+
 myCard.isFemale = false
 ```
 
@@ -2128,6 +2124,7 @@ myCard.isFemale = false
 
 ```swift
 var businessCardDictionary: [Int: businessCard] = [:]
+
 businessCardDictionary[0] = myCard
 ```
 
@@ -2135,7 +2132,9 @@ businessCardDictionary[0] = myCard
 
 ```swift
 if let card = businessCardDictionary[0] {
+
   print(card.firstName)
+
 }
 ```
 
@@ -2143,7 +2142,9 @@ if let card = businessCardDictionary[0] {
 
 ```swift
 if let card = businessCardDictionary[0] {
+
   print(card.middleName)
+
 }
 ```
 
@@ -2151,15 +2152,23 @@ if let card = businessCardDictionary[0] {
 
 ```swift
 struct businessCard {
+
   var firstName: String?
+
   var middleName: String?
+
   var surName: String?
+
   var age: Int
+
   var isFemale: Bool
 
   func printName() {
+
     print("\(firstName ?? "") \(middleName ?? "")")
+
   }
+
 }
 ```
 
@@ -2197,7 +2206,7 @@ int main(int argc, const  char * argv[]) {
 }
 ```
 
-但尽管我总是给函数和变量命名，以便它们能被理解和记住，但别人不喜欢人们像这样写函数。 
+但尽管我总是给函数和变量命名，以便它们能被理解和记住，但别人不喜欢人们像这样写函数。
 
 ```swift
 int doIt( int forbar[], int foo){
@@ -2205,17 +2214,13 @@ int doIt( int forbar[], int foo){
   int w = 0;
 
   for( int x = 0; x < foo; x++ ){
-```
 
+    w += forbar[x];
 
+  }
 
+  return w;
 
-
-```swift
-w += forbar[x];
-}
-
-return w;
 }
 ```
 
@@ -2229,11 +2234,17 @@ return w;
 var listOfNumbers = [11,14,56,61,4,2]
 
 func giveMeTheAverageMileage(listOfNumbers: Array<Int>) -> Int{
+
   var total = 0
+
   for var i = 0; i < listOfNumbers.count; i++ { //我们不需要知道我们的数组有多少个元素 //Swift 会帮我们处理这些。
+
     total += listOfNumbers[i]
+
   }
+
   return total
+
 }
 
 print(giveMeTheAverageMileage(listOfNumbers))
@@ -2267,25 +2278,41 @@ print(giveMeTheAverageMileage(listOfNumbers))
 var str = "Hello, playground"
 
 func returnPrefix(wordToPrefix:String, lengthOfPrefixToReturn: Int) ->String {
+
   if lengthOfPrefixToReturn == 0 {
+
     return ""
+
   }
+
   var nextIndexMarker = 1
+
   //设置一个字符数组
+
   var aPrefix:[Character] = [wordToPrefix[wordToPrefix.startIndex]]
 
   lengthOfPrefixToReturn
+
   nextIndexMarker
+
   wordToPrefix.characters.count
+
   while nextIndexMarker < wordToPrefix.characters.count && lengthOfPrefixToReturn > nextIndexMarker {
+
     aPrefix.append(wordToPrefix[wordToPrefix.startIndex.advancedBy(nextIndexMarker)])
+
     nextIndexMarker++
+
   }
+
   let result:String = String(aPrefix)
+
   return(result)
+
 }
 
 var myPrefixString = returnPrefix(str,lengthOfPrefixToReturn: 3)
+
 print(myPrefixString)
 ```
 
@@ -2305,9 +2332,13 @@ print(myPrefixString)
 
 ```swift
 func upDateMyCardAge( myCard: businessCard, NewValueForAge: Int)->businessCard{
+
   var newAgeCard = myCard
+
   newAgeCard.age = NewValueForAge
+
   return newAgeCard
+
 }
 
 myBusinessCardDictionary.updateValue(upDateMyCardAge( myCard, NewValueForAge: 27), forKey: 5555551212)
@@ -2327,18 +2358,27 @@ Swift 在理解给定的 switch 是否穷尽方面表现如何？让我们测试
 
 ```swift
 func SOMEFUNC(anIntValue:Int)->Int{
+
   //在这里写下你的代码
+
 }
 
 var valueToSwitchOn = 5
 
 switch(valueToSwitchOn){
+
   case 1:
+
     print("Opps")
+
   case 2:
+
     print("Whoops")
+
   case SOMEFUNC(valueToSwitchOn):
+
     print("如果 Swift 不要求默认值则成功。")
+
 }
 ```
 
@@ -2360,14 +2400,11 @@ import Cocoa
 var str = "Hello, playground"
 
 var bananas = 5
+
 var grapes = 6
 
 print("We have \(grapes) grapes and ")
 ```
-
-
-
-
 
 ```swift
 //anArrayOfInts[11] = 5  //因为没有索引 11，所以会崩溃。索引 10 处的值是 11。
@@ -2479,6 +2516,7 @@ let enoughToBuyCandy = 5
 if  pennies >= enoughToBuyCandy{
 
   print("我们可以买糖果了!")
+
 }
 
 var numberOfPenniesString = "pennies"
@@ -2488,14 +2526,17 @@ pennies = 4
 if  enoughToBuyCandy - pennies == 1{
 
   numberOfPenniesString = "penny"
+
 }
 
 if  pennies >= enoughToBuyCandy{
 
   print("我们可以买糖果了!")
+
 } else {
 
   print("我们回家吧，糖果少了 \(enoughToBuyCandy - pennies) \(numberOfPenniesString)。")
+
 }
 
 pennies = 7
@@ -2503,17 +2544,21 @@ pennies = 7
 if  enoughToBuyCandy - pennies == 1{
 
   numberOfPenniesString = "penny"
+
 }
 
 if  pennies == enoughToBuyCandy{
 
   print("我们可以买糖果了!")
+
 } else  if  pennies > enoughToBuyCandy {
 
   print("我们可以多买 \(  pennies - enoughToBuyCandy) 分钱价值的糖果。")
+
 }else{
 
   print("我们回家吧，糖果少了 \(enoughToBuyCandy - pennies) \(numberOfPenniesString)。")
+
 }
 
 //: 第 9 章 Playground - 名词：人们可以玩的地方
@@ -2543,13 +2588,19 @@ var apples = Int? //注意这里用于结尾的 () 已经更改。
 if  apples >= 1{
 
   print("我们有苹果)")
+
 } else { //涵盖了 nil
 
   print("我们今天没有苹果!")
+
 }
 
 let applesPerCrate = 20
+```
 
+
+
+```swift
 //varCratesNeeded = apples/applesCrate //取消注释查看错误和建议的修正
 
 var potatoes = 1
@@ -2560,8 +2611,7 @@ var oranges = Int!()
 
 var pennies = 21
 
-if  pennies >= 100 {
-
+if pennies >= 100 {
   oranges = 5
 }
 
@@ -2569,42 +2619,37 @@ var today = "Tuesday"
 
 var plums = Int?
 
-if  today == "Tuesday" {
-
+if today == "Tuesday" {
   plums = 8
 }
 
-var plumsPerDay = plums! * 1  //! 是必要的
+var plumsPerDay = plums! * 1 //! 是必要的
 
 var cuties = Int!() //用于结尾的 () 已经更改。
 
-var numberOfCuties = cuties ?? 0  //在这里我们将 cuties 设置为 0，如果 cuties 为 nil。
+var numberOfCuties = cuties ?? 0 //在这里我们将 cuties 设置为 0，如果 cuties 为 nil。
 
 print(numberOfCuties)
 
-if  cuties >= 1{
-
+if cuties >= 1 {
   print("我们有糖果)")
 } else {
-
   print("我们今天没有糖果!")
 }
 
 //也可以用 if else 这样做
 
-if  cuties != nil {
-
+if cuties != nil {
   print("我们有糖果)")
 } else {
-
   print("我们今天没有糖果!")
 }
 
 var bananas = Int? //显式为 Int 但不会强制解包。
 
-bananas = Int(random_uniform(12)+1) //将 bananas 设置为一到十二之间的随机数。
+bananas = Int(random_uniform(12) + 1) //将 bananas 设置为一到十二之间的随机数。
 
-print("我们有 \(bananas!) 糖果，是 \((Double(bananas!)/12.0*100))% 一打")
+print("我们有 \(bananas!) 糖果，是 \((Double(bananas!) / 12.0 * 100))% 一打")
 
 //: 第 10 章 Playground - 名词：人们可以玩的地方
 
@@ -2612,17 +2657,15 @@ import Cocoa
 
 var str = "Hello, playground"
 
-for  var i = 4; i < 7; i++ {
-
+for var i = 4; i < 7; i++ {
   print(i)
 }
 
 print("i \n")
 
-var x:double = 0
+var x: double = 0
 
-for( x = 0; x < 4; x++){
-
+for (x = 0; x < 4; x++) {
   print(x)
 }
 
@@ -2630,31 +2673,27 @@ for i in 4 ..< 7 // 使用开区间
 
 for j in 7...10 // 使用闭区间运算符
 
-  print("\(i) \(j)")
+print("\(i) \(j)")
 
-var myLoopArray = ["My","very", "eager","mother","just","up","nine","pies"]
+var myLoopArray = ["My", "very", "eager", "mother", "just", "up", "nine", "pies"]
 
-var y = 0  //隐式定义为 Int
+var y = 0 //隐式定义为 Int
 
-for( y = 0; y < myLoopArray.count; y++){
-
+for (y = 0; y < myLoopArray.count; y++) {
   print(myLoopArray[y])
 }
 
 myLoopArray.count
 
-for( y = 0; y < myLoopArray.count; y++) {
-
+for (y = 0; y < myLoopArray.count; y++) {
   print(myLoopArray[y])
 }
 
 for planet in myLoopArray.enumerate() {
-
   print(planet)
 }
 
 for planet in myLoopArray {
-
   print(planet)
 }
 
@@ -2665,7 +2704,6 @@ for planet in myLoopArray {
 ///////////////////////
 
 for indice in 4...7 {
-
   print(indice)
 }
 
@@ -2677,36 +2715,27 @@ var str = "Hello, playground"
 
 var x = 6
 
-while( x > -1){ // 断言一个条件被满足
+while (x > -1) { // 断言一个条件被满足
+  if (x != 0) {
+    print("离突破还有 \(x) 分钟") // 执行我们需要的事情。
+  } else {
+    print("我们正在取得突破")
+  }
 
-  if( x != 0) {
-
-  print("离突破还有 \(x) 分钟"); // 执行我们需要的事情。
-
-else {
-
-  print("我们正在取得突破")
- }
-
-  x--; //给了我们退出循环的方法。
+  x-- //给了我们退出循环的方法。
 }
 
 while x < 6 {
-
   print("我们正处于 \(x)")
-
   x++
 }
 
 x = 100
 
 repeat { // 在 SWIFT 中 repeat 现在代替了 do
-
   print("我们正处于 \(x)")
-
   x += 100
-
-}while x < 8 //我们需要让 while 循环在某个时候结束。
+} while x < 8 //我们需要让 while 循环在某个时候结束。
 
 //: 第 12 章 Playground - 名词：人们可以玩的地方
 
@@ -2716,43 +2745,31 @@ var str = "Hello, playground"
 
 //这与 C++ 版本略有不同。因为不需要 break，运行结果是不同的。
 
-var dog = 5;
+var dog = 5
 
-switch(dog)
-{
-
+switch dog {
 case 0:
-
-  print("Boxer"); // break 是不必要的
-
+  print("Boxer") // break 是不必要的
 case 2:
-
   print("Irish Setter")
 case 3:
-
   print("Doberman")
 case 4:
-
-  print("Springer Spaniel");
-case 5,6: // 在一起的项目是这样处理的
-
-  print("Unknown ");
+  print("Springer Spaniel")
+case 5, 6: // 在一起的项目是这样处理的
+  print("Unknown ")
 default:
-
-  print("Mutt");
+  print("Mutt")
 }
 
-print("\n\n");
+print("\n\n")
 
 var trueOrFalse = true
 
-switch(trueOrFalse){
-
+switch trueOrFalse {
 case true:
-
   print("true")
 case false:
-
   print("false")
 }
 
@@ -2763,8 +2780,7 @@ import Cocoa
 var str = "Hello, playground"
 
 enum Numbers { // 注意每个值前面的 case。。可以以不同的方式进行，但没有 case 就无法拥有原始值——某种一致类型的值。
-
-case ZERO
+  case ZERO
   case ONE
   case TWO
   case THREE
@@ -2779,7 +2795,7 @@ case ZERO
 
 //var count: enum Numbers = .EIGHT //会给你一个错误
 
-var count1: Numbers = .EIGHT  //可以工作
+var count1: Numbers = .EIGHT //可以工作
 
 //隐式转换也可以工作。
 
@@ -2793,41 +2809,30 @@ enum PlantsNameHint {
 
 var aPlanet = PlantsNameHint.served
 
-switch(aPlanet){
-
+switch aPlanet {
 case .my:
-
-  print( "Mercury ")
+  print("Mercury ")
 case .very:
-
-  print( "Venus ")
+  print("Venus ")
 case .eager:
-
-  print( "Earth ")
+  print("Earth ")
 case .mother:
-
-  print( "Mars ")
+  print("Mars ")
 case .just:
-
-  print( "Jupiter ")
+  print("Jupiter ")
 case .served:
-
-  print( "Saturn ")
+  print("Saturn ")
 case .up:
-
-  print( "Uranus ")
+  print("Uranus ")
 case .nine:
-
-  print( "Neptune ")
+  print("Neptune ")
 case .pies:
-
-  print( "Poor Pluto ")
+  print("Poor Pluto ")
 }
 
 //我在 Numbers 下方添加了一个 x (xNumbers) 以避免重复名称错误
 
-enum xNumbers:Int { // 注意每个值前面的 case。
-
+enum xNumbers: Int { // 注意每个值前面的 case。
   case ZERO
   case ONE
   case TWO
@@ -2839,16 +2844,9 @@ enum xNumbers:Int { // 注意每个值前面的 case。
   case EIGHT
   case NINE
   case TEN
-}
-
-
-
-
-
-```swift
 } // 不需要分号
 
-var time:xNumbers = .FIVE
+var time: xNumbers = .FIVE
 
 if time == .FIVE {
   print(time.rawValue)
@@ -2943,9 +2941,9 @@ import Cocoa
 var aThousandIntArray = Int
 let Mom = 4 // 一个隐式创建的 Int
 
-var myExampleDictionary: [String : String] = ["Key" : "Value"]
-var myDictionary: [String : String] = ["LastNameOne":"David", "LastNameTwo": "Lee", "LastNameThree":"Pat", "LastNameFour":"Sean"]
-let Pap = ["Dad" , 7]
+var myExampleDictionary: [String: String] = ["Key": "Value"]
+var myDictionary: [String: String] = ["LastNameOne": "David", "LastNameTwo": "Lee", "LastNameThree": "Pat", "LastNameFour": "Sean"]
+let Pap = ["Dad", 7]
 
 print(Pap)
 
@@ -2953,9 +2951,9 @@ for (surname, familyName) in myDictionary {
   print("\(surname) \(familyName)")
 }
 
-var myDictionary2: Dictionary<String , String> = ["LastNameOne":"David", "LastNameTwo": "Lee", "LastNameThree":"Pat", "LastNameFour":"Sean"]
-var myDictionary3 = ["LastNameOne":"David", "LastNameTwo": "Lee", "LastNameThree":"Pat", "LastNameFour":"Sean"]
-var myFunFile = ["Dave": 11,"Pat" :12, "Sean" : 14.01]
+var myDictionary2: Dictionary<String, String> = ["LastNameOne": "David", "LastNameTwo": "Lee", "LastNameThree": "Pat", "LastNameFour": "Sean"]
+var myDictionary3 = ["LastNameOne": "David", "LastNameTwo": "Lee", "LastNameThree": "Pat", "LastNameFour": "Sean"]
+var myFunFile = ["Dave": 11, "Pat": 12, "Sean": 14.01]
 
 for (key, value) in myFunFile {
   print("\(value * 0.202)")
@@ -2967,7 +2965,7 @@ print(myNameNumber! * 0.202) // 我们需要 ! 因为 myNameNumber 是一个可�
 
 // var myNameNumber = myDictionary2["LastNameOne"]?[1] as? String
 
-var myDictionaryTenTen: [Int : Int] = [0 : 5, 1 : 7, 2 : 9]
+var myDictionaryTenTen: [Int: Int] = [0: 5, 1: 7, 2: 9]
 
 for var i = 3; i < 100; i++ {
   myDictionaryTenTen[i] = (i + (i % 10) * 2) + 5
@@ -2984,18 +2982,15 @@ myDictionaryTenTen[199] = (199 + (199 % 10) * 2) + 5
 myDictionaryTenTen.count
 myDictionaryTenTen[099] = (099 + (099 % 10) * 2) + 5
 myDictionaryTenTen.count
-myDictionaryTenTen[3*33] = (3*33 + (3*33 % 10) * 2) + 5
+myDictionaryTenTen[3 * 33] = (3 * 33 + (3 * 33 % 10) * 2) + 5
 myDictionaryTenTen.count
 myDictionaryTenTen[100]
 myDictionaryTenTen[199]
 myDictionaryTenTen.count
 ```
 
-
-
-
 ```swift
-print( "myString has \(myString.characters.count) characters.")
+print("myString has \(myString.characters.count) characters.")
 ```
 
 var aRange = str.startIndex.advancedBy(7)...str.startIndex.advancedBy(10)
@@ -3033,32 +3028,35 @@ myString.hasSuffix("OG") // 返回 false，这不是后缀
 myString.hasSuffix("ER") // 返回 true，这是后缀。
 
 ```swift
-print( "myString has \(myString.characters.count) characters.")
+print("myString has \(myString.characters.count) characters.")
 ```
 
 // 我们得到了 "myString has 10 characters.\n"
 
-myString.isEmpty  // 返回 false，因为那里有字符。
+myString.isEmpty // 返回 false，因为那里有字符。
 
-var aBlankString = ""  //将其设置为空字符串
+var aBlankString = "" //将其设置为空字符串
 
 var anotherBlankSting = String() //将其设置为空字符串
 
-aBlankString.isEmpty  // 返回 true
+aBlankString.isEmpty // 返回 true
 
-anotherBlankSting.isEmpty  // 返回 true
+anotherBlankSting.isEmpty // 返回 true
 
 aBlankString = myString
 
-if( aBlankString == myString){
+if aBlankString == myString {
   print("这两个字符串相等")
 } else {
   print("\u{2620}")
 }
 ```
 
-//: 第 17 章 Playground - 名词：人们可以玩的地方
 
+
+# 第 17 章 Playground - 名词：人们可以玩的地方
+
+```swift
 import Cocoa
 
 var str = "Hello, playground"
@@ -3126,24 +3124,33 @@ myBusinessCardDictionary.updateValue(upDateMyCardAge( myCard, NewValueForAge: 27
 print(myBusinessCardDictionary)
 ```
 
-//: 第 18 章 Playground - 名词：人们可以玩的地方
+# 第 18 章 Playground - 名词：人们可以玩的地方
 
+```swift
 import Cocoa
 
 var str = "Hello, playground"
+```
 
-//: Playground - 名词：人们可以玩的地方
+# Playground - 名词：人们可以玩的地方
 
+```swift
 import Cocoa
 
 var listOfNumbers = [11,14,56,61,4,2]
 
 func giveMeTheAverageMileage(listOfNumbers: Array<Int>) -> Int{
+
   var total = 0
+
   for  var i = 0; i < listOfNumbers.count; i++ { // 我们不需要知道数组中有多少个项目 //Swift 会帮我们处理这些。
+
     total += listOfNumbers[i]
+
   }
+
   return total
+
 }
 
 print(giveMeTheAverageMileage(listOfNumbers))
@@ -3151,23 +3158,33 @@ print(giveMeTheAverageMileage(listOfNumbers))
 // 这是我的函数，它接收一个字符串并返回指定长度的前缀。
 
 func returnPrefix(wordToPrefix:String, lengthOfPrefixToReturn: Int) ->String {
+
   // 检查要返回的长度是否大于 0
+
   if lengthOfPrefixToReturn == 0 {
+
     return  ""
+
   }
+
   // 隐式创建一个 Int 类型的计数器
+
   var nextIndexMarker = 1
+
   // 设置一个 Characters 数组并用字符串中的第一个字符初始化它
+
   var aPrefix:[Character] = [wordToPrefix[wordToPrefix.startIndex]]
+
   // 下面的三行仅用于向你展示在使用它们之前的值
+
   lengthOfPrefixToReturn
+
   nextIndexMarker
+
   wordToPrefix.characters.count
+
 }
 ```
-
-
-
 
 ```cpp
 intBlockPtr += 10000789; //我们已经创建了书架空间并添加了书籍 10000789
@@ -3185,9 +3202,9 @@ cout << " intBlockPtr = "<< intBlockPtr << "\n\n"; // 指针仍然指向一个�
 cout << *intBlockPtr << " = intBlockPtr\n\n";
 
 return 0;
-
-}
 ```
+
+# main.c - 第 12 章 Switch
 
 ```c
 // main.c
@@ -3196,31 +3213,57 @@ return 0;
 // Copyright © 2016 David Francis Curran. 保留所有。
 
 #include <stdio.h>
+
 int main(int argc, const char * argv[]) {
+
   int dog = 5;
+
   switch(dog)
+
   {
+
   case 0:
+
     printf("Boxer");
+
     break; // 每个 case 后面都必须加 break，除非你想让它们一起执行
+
   case 2:
+
     printf("Irish Setter");
+
     break;
+
   case 3:
+
     printf("Doberman");
+
     break;
+
   case 4:
+
     printf("Springer Spaniel");
+
     break;
+
   case 5:
+
     printf("Unknown "); // 没有 break，这些会合并执行
+
   default:
+
     printf("Mutt");
+
   }
+
   printf("\n\n");
+
   return 0;
+
 }
 ```
+
+# main.swift - 第十二章 SwitchSwift
 
 ```swift
 // main.swift
@@ -3229,8 +3272,11 @@ int main(int argc, const char * argv[]) {
 // Copyright © 2016 David Francis Curran. 保留所有。
 
 import Foundation
+
 print("Hello, World!")
 ```
+
+# main.swift - 根据输入的字符串进行 switch
 
 ```swift
 // main.swift
@@ -3239,26 +3285,45 @@ print("Hello, World!")
 // Copyright © 2015 David Francis Curran. 保留所有。
 
 import Foundation
+
 func userEnteredData() -> String{
+
   let userTypedIn = NSFileHandle.fileHandleWithStandardInput()
+
   let myEnteredString = userTypedIn.availableData
+
   return NSString(data: myEnteredString, encoding:NSUTF8StringEncoding) as! String
+
 }
 
 print("Please enter your gender")
+
 var reply = String!()
+
 reply = userEnteredData()
+
 var replyForSwitch = reply ?? "Error "  // 使用空值合并运算符防止错误。
+
 switch(replyForSwitch){
+
 case "Error":
+
   print("There has been a ERROR please try again!")
+
 // 下面是修正后的 case
+
 case "Male\n","M\n","MALE\n","m\n","male\n":
+
   print( "Thank you sir!")
+
 default: // 如果不是男性的话……
+
   print( "Thank you ma'am'!")
+
 }
 ```
+
+# main.c - 枚举测试
 
 ```c
 // main.c
@@ -3267,19 +3332,33 @@ default: // 如果不是男性的话……
 // Copyright © 2015 David Francis Curran. 保留所有。
 
 #include <stdio.h>
+
 int main(int argc, const char * argv[]) {
+
   enum Numbers {
+
   ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN
+
   };
+
   enum Numbers nowTime = THREE;
+
   printf("\nnowTime is == %d and THREE is == %d\n", nowTime,THREE);
+
   nowTime = TEN;
+
   printf("\nnowTime is == %d and TEN is == %d\n", nowTime,TEN);
+
   nowTime = 15;
+
   printf("\nnowTime is == %d and 15 is == %d\n", nowTime,15);
+
   return 0;
+
 }
 ```
+
+# main.c - 第 15.7 章 C 语言越界
 
 ```c
 // main.c
@@ -3288,12 +3367,19 @@ int main(int argc, const char * argv[]) {
 // Copyright © 2016 David Francis Curran. 保留所有。
 
 #include <stdio.h>
+
 int main(int argc, const char * argv[]) {
+
   char name[] = "Dave";
+
   printf("%c\n", name[5]);
+
   return 0;
+
 }
 ```
+
+# main.cpp - 第 18 章 函数示例
 
 ```cpp
 // main.cpp
@@ -3302,27 +3388,46 @@ int main(int argc, const char * argv[]) {
 // Copyright © 2016 David Francis Curran. 保留所有。
 
 #include <iostream>
-using namespace std;
-int giveMeTheAverageMileage( int myMileArray[], int entriesTotal){
-  int result = 0;
-  for( int x = 0; x < entriesTotal; x++ ){
-    result += myMileArray[x];
-  }
-  return result;
-}
-int doIt( int forbar[], int foo){
-  int w = 0;
-  for( int x = 0; x < foo; x++ ){
-    w += forbar[x];
-  }
-  return w;
-}
-int main(int argc, const char * argv[]) {
-  int distance[6] = {11,14,56,61,4,2};
-  cout << "Average milage == " << giveMeTheAverageMileage(distance, 6) << "\n\n";
-  cout << "Average milage is also == " << doIt(distance, 6) << "\n\n";
-  return 0;
-}
-```
-```
 
+using namespace std;
+
+int giveMeTheAverageMileage( int myMileArray[], int entriesTotal){
+
+  int result = 0;
+
+  for( int x = 0; x < entriesTotal; x++ ){
+
+    result += myMileArray[x];
+
+  }
+
+  return result;
+
+}
+
+int doIt( int forbar[], int foo){
+
+  int w = 0;
+
+  for( int x = 0; x < foo; x++ ){
+
+    w += forbar[x];
+
+  }
+
+  return w;
+
+}
+
+int main(int argc, const char * argv[]) {
+
+  int distance[6] = {11,14,56,61,4,2};
+
+  cout << "Average milage == " << giveMeTheAverageMileage(distance, 6) << "\n\n";
+
+  cout << "Average milage is also == " << doIt(distance, 6) << "\n\n";
+
+  return 0;
+
+}
+```

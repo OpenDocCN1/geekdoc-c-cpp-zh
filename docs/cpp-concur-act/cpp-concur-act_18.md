@@ -1,18 +1,19 @@
+
 # 资源
 
 ## 打印资源
 
-Cargill, Tom, “Exception Handling: A False Sense of Security,” in C++ Report 6, no. 9,(November-December 1994). Also available at [`www.informit.com/content/images/020163371x/supplements/Exception_Handling_Article.html`](http://www.informit.com/content/images/020163371x/supplements/Exception_Handling_Article.html).
+Cargill, Tom, “Exception Handling: A False Sense of Security,” in `C++ Report` 6, no. 9, (November-December 1994). Also available at [`www.informit.com/content/images/020163371x/supplements/Exception_Handling_Article.html`](http://www.informit.com/content/images/020163371x/supplements/Exception_Handling_Article.html).
 
-Hoare, C.A.R., Communicating Sequential Processes (Prentice Hall International, 1985),ISBN 0131532898\. Also available at [`www.usingcsp.com/cspbook.pdf`](http://www.usingcsp.com/cspbook.pdf).
+Hoare, C.A.R., `Communicating Sequential Processes` (Prentice Hall International, 1985), ISBN 0131532898. Also available at [`www.usingcsp.com/cspbook.pdf`](http://www.usingcsp.com/cspbook.pdf).
 
-Michael, Maged M., “Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes” in PODC ’02: Proceedings of the Twenty-first Annual Symposium on Principles of Distributed Computing (2002), ISBN 1-58113-485-1.
+Michael, Maged M., “Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes” in `PODC ’02: Proceedings of the Twenty-first Annual Symposium on Principles of Distributed Computing` (2002), ISBN 1-58113-485-1.
 
 > ———. U.S. Patent and Trademark Office application 20040107227, “Method for efficient implementation of dynamic lock-free data structures with safe memory reclamation.”
 
-Sutter, Herb, Exceptional C++: 47 Engineering Puzzles, Programming Problems, and Solutions (Addison Wesley Professional, 1999), ISBN 0-201-61562-2.
+Sutter, Herb, `Exceptional C++: 47 Engineering Puzzles, Programming Problems, and Solutions` (Addison Wesley Professional, 1999), ISBN 0-201-61562-2.
 
-> ———. “The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software,” in Dr. Dobb’s Journal 30, no. 3 (March 2005). Also available at [`www.gotw.ca/publications/concurrency-ddj.htm`](http://www.gotw.ca/publications/concurrency-ddj.htm).
+> ———. “The Free Lunch Is Over: A Fundamental Turn Toward Concurrency in Software,” in `Dr. Dobb’s Journal` 30, no. 3 (March 2005). Also available at [`www.gotw.ca/publications/concurrency-ddj.htm`](http://www.gotw.ca/publications/concurrency-ddj.htm).
 
 ## 在线资源
 
@@ -34,7 +35,7 @@ IBM Statement of Non-Assertion of Named Patents Against OSS, [`www.ibm.com/ibm/l
 
 Intel Building Blocks for Open Source, [`threadingbuildingblocks.org/`](http://threadingbuildingblocks.org/)
 
-The just::thread Implementation of the C++ Standard Thread Library, [`www.stdthread.co.uk`](http://www.stdthread.co.uk)
+The `just::thread` Implementation of the C++ Standard Thread Library, [`www.stdthread.co.uk`](http://www.stdthread.co.uk)
 
 Message Passing Interface Forum, [`www.mpi-forum.org/`](http://www.mpi-forum.org/)
 

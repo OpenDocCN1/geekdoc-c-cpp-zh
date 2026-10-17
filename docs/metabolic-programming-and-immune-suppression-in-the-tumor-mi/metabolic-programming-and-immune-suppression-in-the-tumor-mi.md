@@ -1,17 +1,14 @@
+
 # 肿瘤微环境中的代谢编程与免疫抑制
 
-
-
-
-
-
-
-
-
 ¹范斯比德大学医学中心 (VUMC) 医学科，美国纳什维尔
+
 ²范斯比德免疫学中心，范斯比德大学医学中心 (VUMC)，纳什维尔
+
 ³范斯比德-Ingram 癌症中心，范斯比德大学医学中心 (VUMC)，纳什维尔
+
 ⁴病理学、微生物学与免疫科学，范斯比德大学医学中心 (VUMC)，纳什维尔
+
 *通讯：jeff.rathmill@vanderbilt.com
 
 # 摘要
@@ -27,17 +24,17 @@
 这种复杂的格局对治疗是有不利的，因为针对癌细胞的生长或转移可能会抑制或增强免疫疗法的有效性。相反，新方法必须通过干扰免疫细胞的代谢通路来反向针对免疫细胞。虽然阻塞 PD-1 或 CTLA-4 的免疫疗法可以激活多种癌细胞类型的抗 T 细胞，但在初始反应后往往会对某些疗法产生抗性。耐性机制尚不完全清楚，但代谢通路从根本上参与了细胞命运、细胞分化和免疫治疗。
 
 提高免疫治疗效果并减少耐性是高优先事项，但这需要理解细胞在 TME 中如何与癌细胞相互作用（特别是在营养共享和资源利用方面），以克服 TME 中的代谢抑制。
+
 癌症和肿瘤相关免疫细胞的多样代谢程序可能解释某些治疗的失败，并为预防转移和限制提供新途径。
 
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_0_0.png)
 
-
-
-
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_0.png)
 
 **图 1. TME 中的代谢异质性依赖于位置**
+
 肿瘤微环境（TME）由许多支持或抵抗治疗的细胞组成。由于 TME 包含多种细胞，因此在代谢上是高度活跃的。细胞及产生的肿瘤占据了 TME 的各个区域，部分是通过支持细胞群体在血管化不良或代谢高度活跃的区域寻求氧气和营养供应。TME 还受到废物产物积累和炎症的塑造和改变，在这些区域营养是有限的。由于系统和全身因素的营养是充足的，肿瘤在原发组织中的类型、位置、宿主饮食和营养状况将影响 TME 内部的营养可用性。此外，随着 TME 内细胞适应不同的营养可用性，可能会发生代谢可塑性。TME 内的代谢支持肿瘤细胞的增殖，在转移性疾病中也是如此，因为代谢过程影响了癌细胞和 TME 内代谢循环的每个阶段，随着正常细胞逃逸并存活。
+
 糖代谢和摄取的增加是许多肿瘤的特征，并可利用分子进行临床诊断和监测癌症进展。除了癌细胞外，肿瘤微环境（TME）还涵盖了广泛的基质、先天性和适应性免疫细胞。[此处描述](img/33f55c57731d5bd51413de5f6eaeddd6_0.png) 描述了 TME 中的代谢异质性依赖于位置。糖摄入的增加在肿瘤中由于缺乏营养的，会导致氨基酸（如甘氨酸、天冬氨酸和天冬氨酸）的增加并产生活性氧（ROS）。重要的是，跨细胞的代谢差异会影响 TME 内的细胞活性。代谢重编程可以导致免疫抑制。我们讨论了 TME 内代谢的多样性如何支持通路并调节免疫功能，以及这些变化为癌症患者打开了治疗窗口。
 
 ## 代谢异质性
@@ -49,11 +46,6 @@
 氨基酸（如精氨酸、色氨酸和亮氨酸）的代谢在 TME 内的细胞代谢和生长中也起着作用，突显了可以增强细胞中心抗性的代谢通路。
 
 通路如单碳代谢、糖酵解和 TCA 循环不仅用于癌细胞的生长，还用于
-
-
-
-
-
 
 # 癌症回顾
 
@@ -97,7 +89,6 @@ T细胞通过雷霉素（mTOR）代谢途径如糖酵解、从脂解、蛋白应
 
 由于营养与代谢活动之间的相互作用，TME可能会影响肿瘤中其他细胞的代谢特征。模型显示，选择性针对癌细胞的糖酵解可以增强T细胞代谢和抗肿瘤免疫³⁹。癌细胞对代谢摄取的增加可以导致代谢物水平升高。SLC34A2导致细胞毒性T细胞代谢减少，
 
-
 ## 癌细胞
 
 可以通过细胞毒性T细胞功能抑制的效应T细胞来减少⁶⁹。Treg细胞在促进免疫逃逸和耗竭中起直接作用⁷⁰,⁷¹由于Treg细胞在代谢脆弱的TME中丰富，已显示依赖免疫抑制环境中脂质的线粒体氧化代谢²–⁶⁶。不清楚Treg细胞在代谢上如何通过氧化进行增殖，而TME内的癌细胞如何通过代谢和减少CD8+ T细胞功能或IFN(γ)来促进免疫抑制⁶⁷
@@ -115,16 +106,12 @@ TME内的不同营养，如精氨酸，
 ### *废物*产物
 
 - 癌细胞通过分泌“废物”产物抑制T细胞。代谢产物被分泌以主动控制，但比周转时间更快被细胞或邻细胞使用。例如，糖酵解产生的乳酸作为癌细胞中T细胞周期的燃料，乳酸可能抑制CD8+ T细胞⁸⁶
+
 - 此外，高水平的乳酸可以直接抑制效应T细胞⁸⁷。IFN的产生可能对葡萄糖和增加的乳酸特别敏感⁷⁸⁷⁹乳酸增加还促进利用线粒体氧化途径的Treg细胞。注意的是，乳酸可能并非仅在TME内产生，这会导致氧化应激，并在某些背景下可能是抗炎的。相反，在报道乳酸导致多种细胞类型免疫抑制的情况下，急性也会导致T细胞效应功能的增加⁸⁰这表明乳酸对T细胞功能和T细胞耗竭的影响可能取决于复杂的背景。
 
 - 丝氨酸是饮食中必需的氨基酸，由于TME内的竞争在肿瘤中可能限制。癌细胞可以摄取并利用丝氨酸，而TME细胞使用芳香受体（AHR）的配体⁸¹。丝氨酸导致分化为免疫抑制性Treg⁸²–⁸⁴。犬氨酸也导致CD8+ T细胞上PD-1的表达，导致功能抑制⁸⁵（图2）犬氨酸和精氨酸，丝氨酸细胞消耗大量的丝氨酸。丝氨酸是人体非必需氨基酸，但用于构建蛋白质，无需线粒体氧化还原代谢⁸⁸。当癌细胞摄取大部分细胞外丝氨酸时，留给T细胞的有限，已显示它们依赖细胞外丝氨酸进行T细胞扩和效应功能。
 
 TME内影响其他细胞代谢的另一个废物例子是腺苷。腺苷。
-
-
-
-
-
 
 ## 功能障碍 vs 功能正常
 
@@ -133,7 +120,7 @@ TME内影响其他细胞代谢的另一个废物例子是腺苷。腺苷。
 | + -高效应功能 | - 效应功能丧失 |
 | - 依赖糖解 | - 从糖解向氧化磷酸化转换 |
 | - 癌细胞死亡 | - 增殖减少、T细胞凋亡 |
-| | - 癌细胞生存
+| | - 癌细胞生存 |
 
 乳酸、犬氨酸、肿瘤发生、葡萄糖、氨基酸、PD-1、CD8+ T细胞、CD8+ T细胞、IFN GzmB、CTLA-4、IFNγ TNFα、癌细胞死亡、糖解、糖解、氧化磷酸化、破碎线粒体和活性氧 (ROS)
 
@@ -149,67 +136,87 @@ TME中的信号可能会受到限制，并影响免疫检查点或适应性T细�
 
 目前最常用的免疫疗法是PD-1或CTLA-4检查点阻断，这两者的信号均会产生抑制作用，共刺激分子CD28家族成员可限制T细胞耗竭¹⁵。PD-1可被乳酸诱导¹⁶并抑制PI3K和mTOR1以调节代谢；糖解限制脂质过氧化可以促进T细胞生存¹⁷。同样，对这两个主要抑制剂的检查点阻断对肿瘤特异性细胞具有深远的代谢意义。考虑到增殖性T细胞对葡萄糖摄取的性质，这促进了生物合成和能量产生，这些代谢作用的
 
-
-
 ### 1. 抽血
+
 ### 2. 分离T细胞
+
 ### 2. 癌细胞死亡与抗性降低
+
 ### 3. 表达嵌源抗原受体
 
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_0.png)
 
 ### 4. 代谢重编程T细胞
+
 ### 5. 将代谢重编程的T细胞植入患者
 
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_1.png)
 
 诱导代谢应激或遗传调节
+
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_5_2.png)
 
 > 图3 通过代谢重编程减少免疫抑制
+
 过继性T细胞靶向患者的细胞毒性T细胞，表达针对肿瘤抗原的嵌合抗原受体（CARs）。为了减少TME中T细胞的免疫抑制并增强其代谢能力，可以通过免疫应激或遗传修饰在代谢上重编程T细胞。这些策略可能会增加T细胞的代谢可塑性和灵活性，将通常因营养条件差而导致“免疫冷”的肿瘤转变为“热性”，从而增强抗肿瘤免疫和对免疫检查点阻断等疗法的抗性。
 
 免疫检查点对于患者治疗很大至关重要。根据TME中代谢环境与耗竭功能之间的联系，耗竭的T细胞会强烈抑制效应和肿瘤功能¹12，且肿瘤缺氧会损害或限制免疫治疗¹⁴。目前，PD-1和CTLA-4信号如何影响TME中其他细胞类型的代谢和功能尚未知。事实上，巨噬细胞可以表达PD-1，这种检查点分子可以抑制向患者或遗传工程的浸润和吞噬¹⁴,1⁵。事实上，线粒体电位低（即线粒体耦合紧密或高效）的T细胞在过继细胞治疗中可以提供更优的抗性。一致的报告表明，线粒体质量可能是控制长期T细胞功能的关键；具有良好线粒体功能的CAR T显示出最高水平的记忆，而线粒体功能低的CAR T寿命较短¹⁵。
 
 过继性T细胞通过识别和扩增新抗原特异性T细胞或基因工程使T细胞表达特定肿瘤抗原的嵌合抗原受体（CARs）来靶向。在每情况下，T细胞必须经过代谢重编程才能在TME中生存并发挥。为了实现这一点，T细胞必须生存，且过继性T细胞显示的线粒体能力和质量至关重要³⁹。这可以通过在体外利用葡萄糖或谷酰胺代谢使T细胞适应代谢途径来实现。
 
+
+
 CAR T信号由抗原受体和共刺激组件组成。CAR T结构显示出高糖解率和快速扩增，但是以寿命短为代价；而1-4BB结构通过增强代谢延长CAR T寿命，是以牺牲效应功能为代价²。一致的报告显示，肿瘤细胞在清除后仍然存在。尚不清楚免疫抑制在多大程度上限制了肿瘤对CAR细胞的抗性。然而，一个影响因素是肿瘤的异质性以及适应性转移T细胞在……的需求。
 
-
 ## 上皮-间质转化 (EMT)
+
 ## 循环肿瘤细胞
+
 ## 转移定植
+
 ## 糖解酶
+
 ## 上皮
+
 ## 间质
+
 ## AMPK
 
 乳酸
+
 免疫抑制性细胞因子:
+
 免疫抑制性细胞因子:
+
 免疫抑制性细胞因子:
+
 癌细胞
+
 CD8+ T细胞
 
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_0.png)
+
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_1.png)
+
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_2.png)
+
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_3.png)
+
 ![](img/33f55c57731d5bd51413de5f6eaeddd6_6_4.png)
 
 > 图4 转移过程中的代谢可塑性。为了逃离原发肿瘤并形成转移，细胞经历EMT（左图）。在EMT过程中，释放糖解酶以控制细胞骨架；因此，在细胞骨架重组期间，这些糖解酶促进生存。癌细胞中活性氧（ROS）的产生可以通过EMT信号增强，强调了ROS在TIME中的作用。此外，某些代谢产物作为促EMT信号分子，如燃料、甲硫氨酸和脂肪酸合成酶（FASN）。在循环中（中间图），CTC存活并维持代谢活性。当癌细胞进入转移位点时（右图），它们在TME内生存以支持免疫监测，这可以通过免疫检查点配体证明。
 
 免疫代谢：
+
 改变代谢以生存氧化应激
+
 NADPH
+
 T细胞
+
 T细胞
 
 尽管付出了努力，转移和复发仍是癌症死亡的主要原因。实体瘤的转移要求癌细胞在逃离肿瘤、进入周围环境、血液或淋巴管（称为侵润）、生存并外逸到位点以定植和扩增。这需要细胞塑性，即上皮细胞获得间质样特征以实现细胞迁移和侵润，称为上皮-间质转化（EMT）。也有报道称EMT有助于成功的转移定植，因为癌症患者的远端转移具有与源组织相似的病理特征（¹⁷）。只有一小部分癌细胞成功（等等，让我重新对齐流程）CAR T信号由抗原受体和共刺激组件组成。CAR T结构显示出高糖解率和快速扩增，但是以寿命短为代价；而1-4BB结构通过增强代谢延长CAR T寿命，是以牺牲效应功能为代价 ²。一致的报告显示，肿瘤细胞在清除后仍然存在。尚不清楚免疫抑制在多大程度上限制了肿瘤对CAR细胞的抗性。然而，一个影响因素是肿瘤的异质性以及适应性转移T细胞在各种营养和环境中的需求。代谢塑性和效率可能是最终目标，而不是基于固定信号特征的代谢程序。基因工程CAR T细胞可能是适应性转移的一种可行疗法。
-
-
-
-
 
 ## 癌细胞
 
@@ -225,14 +232,9 @@ T细胞
 
 循环肿瘤细胞可能会影响循环癌细胞的适应以及癌细胞免疫功能，尽管还需要研究确定是否如此。为了在新的转移生态位生存（那里有与原发肿瘤不同的营养和葡萄糖产生），例如，乳腺癌患者和乳腺癌细胞常见的转移位点是骨骼，如前所述，在那里可能发生生存。TME 中限制营养和塑性的潜在限制，很可能是代谢塑性使细胞受益并支持细胞迁移的能量需求。癌细胞与 TME 细胞之间的这些相互作用如何尚不清楚。
 
-
-
-
-
 # 癌症综述
 
 B. Bachberg, J. Johnson, A., Kurachi, M., Odorizzi, P. M., Pauken, K. E., Athanasius, J., Stieiakai, E., McLand, L. M., Haley, P. A., DeGoffe, G. M., and Wheary, E. (2016). 早期2型糖尿病中胰岛素受体-pol信号调节的代谢变化的生物源性不足。Diabetes, 59(3), 373–383. https://doi.org/10.1016/j.diabetes.2016.07.008
-
 
 Warburg, O., Cohn, and Flick, F. (1939). 肿瘤的代谢 (Constable).
 
@@ -263,7 +265,6 @@ Eckert, A.W., Winterberg, C., Sinsakai, P., Plasser, M., Bjork, J., and Seidel, 
 Grover, A., Aserino, E., and Tchechevskaya, D. (2021). 髓系衍生抑制细胞：一条通往癌症的路径。Cancer Cell, 39(6), 797–810. https://doi.org/10.1016/j.cell.2021.07.012
 
 Takahashi, K., Sato, P., Vatsura, Y., Sugart, S., and Seidel, J. D. (2023). MDSCs在转移中的参与：癌症的潜在靶点。Front. Oncol. 13, 1165. https://doi.org/10.3389/fonc.2023.1165
-
 
 Peterson, M., and Malik, G. (2017). 髓系衍生抑制细胞在胃癌中的作用。Cell Met. 24(4), 671–678. https://doi.org/10.1016/j.cmet.2017.058
 
@@ -301,108 +302,64 @@ Amaravasi, R., Ramakrishnan, A. C., and Debath, J. (2019). 癌症代谢靶向：
 
 54. Gaines, D., Rath, N., and Watkins, W. (2022). 肿瘤演化与耐药性模型。Nat. Ecol. Evol. 6, 226–237. https://doi.org/10.1038/s41557-021-5
 
-55. Vander Hiden, M., and Deesij, R. (2017). 理解肿瘤转移的机制。Cell 68, 555–669. https://doi.org/10.1016/j.cell.2017-4 
 
+
+55. Vander Hiden, M., and Deesij, R. (2017). 理解肿瘤转移的机制。Cell 68, 555–669. https://doi.org/10.1016/j.cell.2017-4
 56. Ho, P. C., Buchnik, J., Mastaryan, A., Smith, L., Liu, X., Taylor, S., Powell, D. (2015). 自噬是效应T细胞的代谢检查点。Cell 162, 1217–1228. https://doi.org/10.1016/j.cell.2015-09
-
 57. Lee, R., and Rowe, P. D. (2002). 代谢：肿瘤进展的作用。Cancer Research 62, 2773–2780. https://doi.org/10.1158/0008-2
-
 58. Lee, R., Zhan, L., Maggi, A., Roberts, F., O’Sullivan, D., van der Weel, J., and Ji, Y. (2019). 谷氨酸代谢防止对侵袭的适应。Science 365, 1013–1018. https://doi.org/10.1126/science.aau2
-
 59. Edwards, N. D., Wang, V. M., Bakry, A., Zhang, S., He, Y., Park, Q., and Wang, Q. (2021). 选择性抑制谷氨酸增强T细胞激活。J Clin Invest. 120, e1410. https://doi.org/10.1172/JCI.
-
 60. Blanco, L., Winter, C. M., Dajuk, S., Zhang, Z., Chen, C., Centero, A., and Pavlova, A. (2020). 肿瘤源谷氨酸代谢限制T细胞功能。Nature 588, 272–278. https://doi.org/10.1038/s41586-020-6
-
 61. Bose, P. D., Miles, F., Gray, D., Lee, S., and Rudensky, A. (2019). 瞬态T细胞激活驱动抗原呈递细胞清除。Science 362, aau72. https://doi.org/10.1126/science.aau
-
 62. Delfosse, G. M., Smith, W. J., Mayo, M. E., Graham, C. D., Day, A., et al. (2018). T细胞的稳定性和功能受纤维蛋白/4轴调节。Nature 551, 252–256. https://doi.org/10.1038/nature
-
 63. Weiner, S. B., Steiner, D. B., Martins, E. M., Carter, A. H., Reyes-Ito, J., Paul, K., Habiba, A., Henderson, S. L., and Mitchell, Y. (2019). 谷氨酸代谢对于癌症免疫治疗中效应T细胞功能至关重要。Science 364, 5186–5190. https://doi.org/10.1126/science.aau
-
 64. Bauer, U., Angelen, A., Tiwari, T., Wang, L. Y., Khan, H., Shahi, B., Fray, J., et al. (2015). Fgr3中谷氨酸代谢抑制促进T细胞激活和存活。J Experimental Biol. 215, 2521–2539. https://doi.org/10.1002/jeb
-
 65. Michalidis, R. D., Vances, J. A., Srock, M. C., Nach, N. J., Mason, E. F., Sullivan, S. A., Nichols, A. G., and Rahm, J. C. (2011). 脂质和氧化代谢通路对于调节T细胞功能至关重要。J. Immunol. 186, 3299–3303. https://doi.org/10.4094/immun
-
 66. Shi, L. Z., Wang, R., Huang, G., Vogel, P., Neal, S., Green, D., and Chen, H. (2021). Hif1α依赖的糖酵解通路协调Th17和Treg细胞的代谢检查点。J. Immun. 208, 1367–1376. https://doi.org/10.4094/jim
-
 67. Liu, C., Chauhan, M., Deshpande, R., Meng, A. V., Zhang, Y., Yuan, J., and Wang, J. (2019). 通过CD55+ T细胞相互作用微环境对MRE1依赖性肿瘤巨噬细胞进行代谢重编程。Cell 178, 10917.
-
 68. Tamada, M. M., Curry, A. M., Adamik, J., Palmer-McIntyre, E. M., McGatrick, A. F., Green, G., Fezarski, C., Marek, R., Bailey, K. J., and Holmes, P. Y. (2002). 乳酸在肿瘤进展中的作用。Cancer Research 62, 2773–2780. https://doi.org/10.1158/0008-2
-
 69. Ho, P. C., Buchnik, J., Mastaryan, A., Smith, L., Liu, X., Taylor, S., Powell, D. (2021). 等，文本重复了。查看上下文：谷氨酸调节T细胞功能和肿瘤耐药。Cell 36, 10109. https://doi.org/10.1016/j.cell.2021-0109
 
-
-
-
-
 ## 癌细胞
-
 81. Long, L., Hinton, A., Powell, J.D., Snell, M., He, R.S., Choi, T.K., Rogers, B.G.M., Hellmann, M.D., et al. (2020). 腺苷A2受体阻滞作为一种免疫治疗耐药肾细胞癌。*Cancer Cell*, 10, 40–53. https://doi.org/10.1016/j.cco.2020.07.014
-
 82. Liu, J.Y., and Wells, K.E. (2020). 理解作为癌症进展中信号分子的腺苷代谢。*Cell*, 81, 633–644. https://doi.org/10.1016/j.cell.2020.02.016
-
 83. Wu, J.-Y., Huang, H.-T., Wang, Y.-F., Yan, Y.-C., Lee, C.-L., Huang, Y., Liu, X., Ma, Y., et al. (2019). 癌源干细胞通过癌症转移促进巨噬细胞极化和侵润。*Cell Med*, 77, 211–228. https://doi.org/10.1016/j.cmcm.2019.07.012
-
 84. Bunse, P., Schulz, B., Bunse, T., Sahin, F., Friedrich, M., Alansary, D., Donnelly, J.K., Euk, K., et al. (2018). 通过抑制2-羟基二戊酸抑制癌症中的干细胞塑性。*Nat. Med.* 25, 1598. https://doi.org/10.1038/s41591-019-0518-6
-
 85. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C., Lee, M.-J., et al. (2017). 肿瘤微环境中的人诱导淋巴细胞（CD8+）细胞浸润。*Cell Med*, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
-
 86. Khetzel, S., Ribas, S., Paracato, C., and Erwin, A. (2019). 利用腺苷信号阻断实体瘤免疫治疗中的T细胞耗竭。*Cancer Res.*, 79, 1635–1648. https://doi.org/10.1158/aancres.2019.071035
-
 87. Okchodi, J.D., Hare, S. M., Hellmann, M. D., Choi, A. Q., Wright, A.J., Lin, L.-N., Nie, X., Lee, H., et al. (2022). 腺苷S通过调节胰腺癌中的无机磷酸耗竭和缺氧抑制T细胞增殖。*Cell Metabol*, 37, 1173–1180.
-
 88. Chanthrakarn, L., Sari, S.-M., Raza, R.A.P., Snell, R.Y. M., Wang, G.-T., Huang, Y., Jang, J.-P., and Spindel, S.M. (2019). 腺苷受体是肿瘤微环境中的新靶点。*Nature Reviews*, 19, 675–689.
-
 89. Geiger, R., Reichmann, J.C., Weiss, T., Basso, G., Fenger, Y., Koh, T., Guediacca, M., Picotti, P., and Hellmann, M. (2018). 曼露糖腺苷信号促进抗肿瘤免疫治疗中的T细胞耗竭和生存。*Science*, 362, aat11134. https://doi.org/10.1126/science.aat11134
-
 90. Mazzone, M., Engel, A., and Castro, A. (2018). 腺苷代谢与TAS2功能的双面性。*Cell*, 85, 708–716. https://doi.org/10.1016/j.cell.2017.09.010
-
 91. Olson, C.G., Lichtenbaum, U.M., Finn, D. M., Trischler, I. Tumor., Schurnacher, T., Jestzewski, L., Weiner, W. M., et al. (2011). 腺苷诱导的肺癌化疗耐药由A2a受体介导。*J Clin Invest*, 121, 4049–4056. https://doi.org/10.1172/jci.1003333
-
 92. Reithmaier, V., and Vincent, J. (2019). 腺苷受体复合物：调节健康与疾病免疫反应的环境传感器。*Nat. Rev. Immunol.*, 19, 947–958. https://doi.org/10.1038/s41577-019-0193-3
-
 93. Mezdric, M.J., Fecher, J., Yang, X., Johnson, B.P., Burgess, Y., and Bradley, C.A. (2010). 腺苷与腺苷受体复合物之间的相互调节T细胞功能。*J. Immunol.*, 185, 1185–1193. https://doi.org/10.4094/J.1003455
-
 94. Vandarelli, G., Lee, S., Ughorni, L., and Wright, T. J. (2017). 腺苷代谢酶和受体对癌症的免疫调节。*Annu. Cell Microbiol*, 35, 99–103. https://doi.org/10.1016/j.achem.2017.05.005
-
 95. Liu, Y., Zhang, L., Wang, F., Yang, Y., Zhang, J.-F., Tiskandari, X., Liu, J.-Y., Liu, X., et al. (2018). 肺癌中PD-L1和腺苷受体的肿瘤调节表达。*Cancer Cell*, 34, 833–847. https://doi.org/10.1016/j.cco.2018.02.007
-
 97. Ma, X.-B., Liu, Y.-Y., Su, P., Huang, C.-L., Liu, Y., Wang, Q., Ma, Y.-C., Lee, M.-J., et al. (2017). 肿瘤微环境中的人诱导淋巴细胞（CD8+）细胞浸润。*Cell Med*, 33, 143–156. https://doi.org/10.1016/j.cmcm.2017.06.009
-
 98. Martinez-Reyes, L., and Chandler, N. (2021). 代谢：阻断腺苷通路。*Cancer Review*, 21, 698–708.
-
 99. Wang, W., Choi, J.-G., Jenkins, M., Perdy, P., Lang, K., Kiesel, Y., et al. (2019). 血清作为效应因子。选择性A2a受体阻滞抑制肿瘤生长和转移。*Nature Medicine*, 25, 274–280.
-
 100. Schindler, M., and Schitzer, A. (2022). 癌症中的（CD8+）细胞耗竭。*Nat. Rev. Immunol.*, 22, 209. https://doi.org/10.1038/s41577-0693
-
 101. Shaping, N., Mew, A., Moreci, R., Wright, D., Watts, S., Ghosh, G. (2016). 肿瘤微环境诱导腺苷毒性。*Immunity*, 18, 707. https://doi.org/10.1016/j.im.2016
-
 102. Gorardi, M., Bahrami, B., Sharma, P. (2021). 腺苷调节的微环境作用。*Cell Med*, 29. https://doi.org/10.1016/j.cmcm
-
 103. Patunshi, N., Carter, B., Jafar, A., Liu, D., Lane, L., Freeman, P. (2015). A2a受体阻滞增强肿瘤生长。*Science*, 349, 1063. https://doi.org/10.1126
-
 104. Kala, Y., Vuzovsky, Y., Yagrasov, A., Huang, H., Baumgart, J., Chen, P. (2021). 代谢重塑调节耗竭细胞。*Science*, 373, eade38.
-
 105. Adams, W., Kelson, S., Ishida, M., Shin, R., Chen, Y. (2022). 全基因组的CRISPR功能获得筛选干细胞因子。*Nature*, 60, 594. https://doi.org/10.1038
-
 106. Beckman, H., Hong, R., Yang, Y., Koh, S., Hellmann, M. (2019). 腺苷介导的免疫抑制。*J Clin Invest*, 129, e7382. https://doi.org/10.1521
-
 107. Gordon, S., Mali, A., Nach, R., Uruzato, L., Sukh, S. (2020). 细胞染色质介导的免疫抑制。*Nature Reviews in Immunology*, 34, 485. https://doi.org/10.1038
-
 108. Manego, B., Nitti, F., Mauro, A., Luca, D., Uruzato, M., Tranvesi, A., Dominico, C. (2016). 染色质和细胞外泌体调节癌症。*Nature*, 16, 792. https://doi.org/10.1038
-
 109. Fine, A., and Chandler, B. (2022). 针对腺苷的特异性免疫治疗。*Science Adv*, 8, e642. https://doi.org/10.1126
-
 110. Sukumar, A., Liu, L., Park, Y., Sinha, S., Zhou, Y. (2016). 腺苷重塑细胞。*Cell Res*, 26, 632. https://doi.org/10.1016
-
 111. Adams, W., Chen, Y., Kratcharov, R., Ben, H., Uruzinger, L., Mussbauer, M. (2017). 腺苷介导的干细胞分化。*Cell Res*, 17, 3142. https://doi.org/10.1016
 
 ## 间质上皮转化 (EMT)
+- Martinez-Reyes, L., and Chandler, N. (2021). 代谢：阻断腺苷通路。*Cancer Review*, 21, 698–708.
+- Kedar, O., O'Connor, R., Feiset, J., Posey, S., Patel, A., Scholler, J. (2016). 染色质调节T细胞记忆。*Immunity*, 44, 92–105.
+- Lee, Y. J., Park, J., Choi, R., Dong, M., Jung, E. (2022). 全基因组的CRISPR功能获得筛选干细胞因子。*Nature*, 60, 594–601. https://doi.org/10.1038/s41586-022-469
+- Amner, E., Du, W., and Benson, R. A. (2018). 上皮在癌症中的作用。*Cancer Oncol*, 9, 197–205. https://doi.org/10.1016/j.ance.2018.09
+- Pei, L., Shu, X., and Diagonal, A. Terry (2019). 间质上皮转化与发育。*Cell Reports*, 27, 10333.
 
--   Martinez-Reyes, L., and Chandler, N. (2021). 代谢：阻断腺苷通路。*Cancer Review*, 21, 698–708.
--   Kedar, O., O'Connor, R., Feiset, J., Posey, S., Patel, A., Scholler, J. (2016). 染色质调节T细胞记忆。*Immunity*, 44, 92–105.
--   Lee, Y. J., Park, J., Choi, R., Dong, M., Jung, E. (2022). 全基因组的CRISPR功能获得筛选干细胞因子。*Nature*, 60, 594–601. https://doi.org/10.1038/s41586-022-469
--   Amner, E., Du, W., and Benson, R. A. (2018). 上皮在癌症中的作用。*Cancer Oncol*, 9, 197–205. https://doi.org/10.1016/j.ance.2018.09
--   Pei, L., Shu, X., and Diagonal, A. Terry (2019). 间质上皮转化与发育。*Cell Reports*, 27, 10333.
--   Stone, A., and Weinberg, R. A. (2019). 间质上皮转化的新见见。*Nat. Rev. Med.*, 16, 69–84.
--   El-Kwan, A., Hänggi, K., and Ruffuto, B. (2020). 转移中间质上皮转化的分子机制。*Spring Biol.*, 10, e2038. https://doi.org/10.1002/scb.20338
+
+
+- Stone, A., and Weinberg, R. A. (2019). 间质上皮转化的新见见。*Nat. Rev. Med.*, 16, 69–84.
+- El-Kwan, A., Hänggi, K., and Ruffuto, B. (2020). 转移中间质上皮转化的分子机制。*Spring Biol.*, 10, e2038. https://doi.org/10.1002/scb.20338

@@ -1,111 +1,39 @@
+
 # Heston 模型及其在 Matlab 和 C# 中的扩展，附网站
-
-
-
-
-
-
-
-
-
 
 FABRICE DOUGLAS ROUAH
 
-
-
-
-
-
-
-
-
-
-
-
 Rouah, France, 1964-
 
-
-
-
-
 前序 ix xi
+
 致谢 xiii
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 前言
 
 我很高兴介绍由 Fabrice Rouah 的《Matlab 与 C# 中的 Heston 模型及其扩展》（The Heston Model and Its Extensions in Matlab and C#）。尽管对他之前的著作《使用 Excel/VBA 的期权定价模型》已非常熟悉，但我惊喜地发现，他专门写了一本书，致力于介绍我在 1993 年开发的模型，以及自该模型引入以来二十年间对原始模型所作的许多改进。显然，这种关注使得这本书比他之前的作品更具专业性。事实上，它包含了详细的分析和广泛的计算机实现，将吸引严谨且感兴趣的读者。这本书将引起广泛从业者和学术者的兴趣，包括研究生、交易交易柜台和风险管理部门的量化师、期权定价和金融工程领域的研究人员。
 
-目前已经存在计算期权价格的程序，例如 Rouah 之前的书中程序或 Bloomberg 系统中提供的程序。但这本书提供了更多内容。特别是，它包含了详细的理论分析，还提供了用于实现的实用 Matlab 和 C# 代码，不仅涵盖了原始模型，还包含了学者和从业者专门针对该模型开发的许多扩展。书中分析了数值积分、希腊字母（Greeks）的计算、美式期权、许多基于模拟的定价方法、有限差数值方案，以及近期进展，如引入时间相关参数和双模型版本。书中涵盖的方法之广泛，为需要快速且可靠计算的从业者和实证研究人员提供了全面的支持。
+目前已经存在计算期权价格的程序，例如 Rouah 之前的书中程序或 Bloomberg 系统中提供的程序。但这本书提供了更多内容。特别是，它包含了详细的理论分析，还提供了用于实现的实用 `Matlab` 和 `C#` 代码，不仅涵盖了原始模型，还包含了学者和从业者专门针对该模型开发的许多扩展。书中分析了数值积分、希腊字母（Greeks）的计算、美式期权、许多基于模拟的定价方法、有限差数值方案，以及近期进展，如引入时间相关参数和双模型版本。书中涵盖的方法之广泛，为需要快速且可靠计算的从业者和实证研究人员提供了全面的支持。
 
 书中涵盖的方法不仅限于期权定价的具体应用。这些技术适用于许多期权和金融工程模型。书中还阐述了看似直观的数学模型的实现如何引发许多问题。例如，一位同事注意到，Heston 形式中的一个常见问题是如何在保证期权模型产生实值的同时计算复对数的。显然，虚数（imaginary）期权价值在实践中会导致问题！这本书解决了许多困难，并将用清晰的答案和实用的解决方案回馈专注的读者。我希望你们阅读这本书时像我一样喜欢。
 
 Steven L. Heston 教授
+
 马里兰大学罗伯特·H·史商学院
+
 2013年1月3日
 
 # 序言
-
-在 1993 年引入后的二十年里，Heston 模型已成为当时革命性的期权定价方法——随机波动率建模中最重要的模型之一，如果不是唯一的模型模型。为了理解为什么这个模型变得如此重要，我们必须重新回顾一次震惊全球金融市场的事件：1987 年 10 月的股市崩盘及其对期权定价的数学模型的后续影响。
-
-崩盘导致的隐含波动率曲面上微笑曲线（smiles）和偏斜（skews）的加剧，使 Black-Scholes 模型在新的波动率偏斜格局下提供足够的能力受到质疑，并凸显了连续复合股票收益呈正态分布且具有恒定波动率的非现实假设。1987 年崩盘以来，大量的实证研究表明，这一假设在股票市场已不再是这些市场的一种特征事实（stylized fact）：收益率分布不是正态的。收益率表现出偏态和峰度（肥尾），这是正态性无法解释的。波动率随时间变化并非恒定，而是与价格成反比，高股价通常显示出比低股价低的波动率。许多研究人员不得不在他们的模型中消除这一假设，允许波动率随时间变化。
-
-允许波动率随时间变化的一种流行方法是规定波动率由其随机过程驱动。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是除 Heston 模型之外最重要的随机波动率模型。Heston 模型并非首次引入期权定价问题的随机波动率模型，但它已成为最重要的模型，并现在作为许多其他波动率模型比较的基准。
-
-允许非正态性可以通过规定波动率受其随机过程驱动来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。Heston 模型不是第一个引入期权定价问题的随机波动率模型，但它已成为最最重要的模型，并现在作为许多其他波动率模型比较的基准。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型（de-Heston model）。
-
-（注：由于原文中存在大量重复段落，已根据要求进行去重并逻辑翻译）
 
 在 1993 年引入后的二十年里，Heston 模型已成为当时革命性的期权定价方法——随机波动率建模中最重要的模型之一，如果不是唯一的模型。为了理解为什么这个模型变得如此重要，我们必须重新回顾一次震惊全球金融市场的事件：1987 年 10 月的股市崩盘及其对期权定价的数学模型的后续影响。
 
 崩盘导致的隐含波动率曲面上微笑曲线和偏斜的加剧，使 Black-Scholes 模型在新的波动率偏斜格局下提供足够的能力受到质疑，并凸显了连续复合股票收益呈正态分布且具有恒定波动率的非现实假设。1987 年崩盘以来，大量的实证研究表明，这一假设在股票市场已不再是这些市场的一种特征事实：收益率分布不是正态的。收益率表现出偏态和峰度（肥尾），这是正态性无法解释的。波动率随时间变化并非恒定，而是与价格成反比，高股价通常显示出比低股价低的波动率。许多研究人员不得不在他们的模型中消除这一假设，允许波动率随时间变化。
 
-允许波动率随时间变化的一种流行方法是规定波动率由其随机过程驱动。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型。Heston 模型并非首次引入期权定价问题的随机波动率模型，但它已成为最重要的模型，并现在作为许多其他波动率模型比较的基准。
+允许波动率随时间变化的一种流行方法是规定波动率由其随机过程驱动。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。`Hull and White (1987)`、`Scott (1987)`、`Wiggins (1987)`、`Cheney and Scott (1989)` 以及 `Stein and Stein (1991)` 的模型是最重要的随机波动率模型。Heston 模型并非首次引入期权定价问题的随机波动率模型，但它已成为最重要的模型，并现在作为许多其他波动率模型比较的基准。
 
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型。
-
-允许非正态性可以通过规定波动率受其随机过程来实现。使用这种方法的模型，包括 Heston (1993) 模型，被称为随机波动率模型。Hull and White (1987)、Scott (1987)、Wiggins (1987)、Cheney and Scott (1989) 以及 Stein and Stein (1991) 的模型是最重要的随机波动率模型，它们提供了去 Heston 模型。
-
-（此处省略后续重复段落的翻译，以保持核心内容完整）
-
-我想感谢 Steve Heston，不仅是因为他将他的模型赐予金融工程界，还为本书撰写了前言，并感谢 Leif B.G. Andersen、Marco Avellaneda、Peter Christoffersen、Jim Gatheral、Espen Gaard Hauger、Andrew Lesniewski 和 Alan Lewis 的慷慨支持。通过我的 团队——Bill Falloon、Meg Freeborn、Steven Kyrytz’tz 和 Tiffany Charbonier——谢谢你们。我也感谢 Gilles Gheerbrant 令人惊叹的设计。
+我想感谢 Steve Heston，不仅是因为他将他的模型赐予金融工程界，还为本书撰写了前言，并感谢 Leif B.G. Andersen、Marco Avellaneda、Peter Christoffersen、Jim Gatheral、Espen Gaard Hauger、Andrew Lesniewski 和 Alan Lewis 的慷慨支持。通过我的团队——Bill Falloon、Meg Freeborn、Steven Kyrytz’tz 和 Tiffany Charbonier——谢谢你们。我也感谢 Gilles Gheerbrant 令人惊叹的设计。
 
 特别感谢一组对书中的材料提供精神支持、建议和技术评审的人：Amir Atya, Sébastien Bossu, Carl Chiarella, Elton Daal, Redouane El-Kamhi, Judith Farer, Jacqueline Gheerbrant, Emmanuel Gobet, Greg N. Gregoriou, Antoine Jacquier, Dominique Legros, Pierre Leignadier, Alexey Medvedev, Sanjay K. Nawalka, Razvan Pascalau, Jean Rouah, Olivier Scaillet, Martin Schmelzle 和 Giovanna Sestito。最后，特别提到 Sapient Global Markets 的 Kevin Sambornat 对他的帮助和支持。
-
-
-
-
-
-
 
 ### 摘要
 
@@ -113,39 +41,39 @@ Steven L. Heston 教授
 
 ## 模型动力学
 
-Heston 模型假设标的股票价格 $S_t$ 遵循 Black-Scholes 类型的随机过程，但其随机方差 $v_t$ 遵循 Cox, Ingersoll 和 Ross (1985) 过程。因此，Heston 模型由以下二元随机微分方程（SDE）系统表示：
+Heston 模型假设标的股票价格 `$S_t$` 遵循 Black-Scholes 类型的随机过程，但其随机方差 `$v_t$` 遵循 Cox, Ingersoll 和 Ross (1985) 过程。因此，Heston 模型由以下二元随机微分方程（SDE）系统表示：
 
 ```
 $dS_t = \mu S_t dt + \sqrt{v_t} S_t dW_{1,t} \quad (1.1)$
 ```
 
-$E^0[dW_{1,t}dW_{2,t}] = \rho dt$。为了方便起见，我们有时会省略时间索引，写作 $S = S_t, v = v_t, W_1 = W_{1,t}$ 和 $W_2 = W_{2,t}$。模型的参数为：
+`$E^0[dW_{1,t}dW_{2,t}] = \rho dt$`。为了方便起见，我们有时会省略时间索引，写作 `S = S_t, v = v_t, W_1 = W_{1,t}` 和 `W_2 = W_{2,t}`。模型的参数为：
 
-- $\mu$ 股票过程的漂移率；
-- $\kappa > 0$ 方差的均回归速度；
-- $\theta > 0$ 方差的均回归水平；
-- $\sigma > 0$ 方差的波动率；
-- $v_0 > 0$ 方差的初始（时间零时刻）水平；
+- `$\mu$` 股票过程的漂移率；
+- `$\kappa > 0$` 方差的均回归速度；
+- `$\theta > 0$` 方差的均回归水平；
+- `$\sigma > 0$` 方差的波动率；
+- `$v_0 > 0$` 方差的初始（时间零时刻）水平；
+- `$\rho \in [-1, 1]$` 为两个布朗运动 `W_1` 和 `W_2` 之间的相关性；
+- `$\lambda$` 为波动率风险参数。我们将在下一节中定义该参数，并解释为什么将其设为零。
 
-$\rho \in [-1, 1]$ 为两个布朗运动 $W_1$ 和 $W_2$ 之间的相关性；$\lambda$ 为波动率风险参数。我们将在下一节中定义该参数，并解释为什么将其设为零。
+我们将在第 2 章中看到，这些参数以直观的方式影响终期股票价格的分布。某些作者将 `$v_0$` 视为一个不可观测的初始状态变量，而不是参数。由于波动率无法观测只能估计，且 `$v_0$` 代表该变量在时间零时刻的值，这种表述是合理的。然而，为了估计，许多作者将 `$v_0$` 视为与其他任何参数类似的参数。参数估计将在第 6 章介绍。
 
-我们将在第 2 章中看到，这些参数以直观的方式影响终期股票价格的分布。某些作者将 $v_0$ 视为一个不可观测的初始状态变量，而不是参数。由于波动率无法观测只能估计，且 $v_0$ 代表该变量在时间零时刻的值，这种表述是合理的。然而，为了估计，许多作者将 $v_0$ 视为与其他任何参数类似的参数。参数估计将在第 6 章介绍。
-
-注意的是，波动率 $\sqrt{v_t}$ 在 Heston 模型中并非直接建模，而是通过方差 $v_t$ 建模。方差过程源于波动率 $b_t = \sqrt{v_t}$ 的 Ornstein-Ulenbeck 过程，形式如下：
+注意的是，波动率 `$\sqrt{v_t}$` 在 Heston 模型中并非直接建模，而是通过方差 `$v_t$` 建模。方差过程源于波动率 `$b_t = \sqrt{v_t}$` 的 Ornstein-Ulenbeck 过程，形式如下：
 
 ```
 $db_t = -\beta b_t dt + \delta dW_{2,t} \quad (1.2)$
 ```
 
-应用 Itô 引理，$v_t$ 遵循以下过程：
+应用 Itô 引理，`$v_t$` 遵循以下过程：
 
 ```
 $dv_t = (\delta^2 - 2\beta v_t)dt + 2\delta\sqrt{v_t}dW_{2,t} \quad (1.3)$
 ```
 
-通过定义 $\kappa = 2\beta, \theta = \delta^2/(2\beta)$ 和 $\sigma = 2\delta$，可以将方程 (1.1) 中的 $dv_t$ 表达式为 (1.3)。
+通过定义 `$\kappa = 2\beta, \theta = \delta^2/(2\beta)$` 和 `$\sigma = 2\delta$`，可以将方程 (1.1) 中的 `$dv_t$` 表达式为 (1.3)。
 
-股票价格和波动率在历史测度 $\mathbb{P}$（即物理测度）下遵循方程 (1.1) 中的过程。然而，为了定价，我们需要风险中性测度 $\mathbb{Q}$ 下 $(S_t, v_t)$ 的过程。在 Heston 模型中，通过分别应用 Girsanov 定理修改方程 (1.1) 中的每个 SDE 来实现。股票价格的风险中性过程为：
+股票价格和波动率在历史测度 `$\mathbb{P}$`（即物理测度）下遵循方程 (1.1) 中的过程。然而，为了定价，我们需要风险中性测度 `$\mathbb{Q}$` 下 `($S_t, v_t$)` 的过程。在 Heston 模型中，通过分别应用 Girsanov 定理修改方程 (1.1) 中的每个 SDE 来实现。股票价格的风险中性过程为：
 
 ```
 $dS_t = rS_t dt + \sqrt{v_t}S_t d\widetilde{W}_{1,t} \quad (1.4)$
@@ -169,10 +97,9 @@ $dln S_t = \left(\mu - \frac{1}{2}\right)dt + \sqrt{v_t}dW_{1,t}$.
 $dln S_t = \left(r - \frac{1}{2}\right)dt + \sqrt{v_t}d\widetilde{W}_{1,t} \quad (1.5)$
 ```
 
-如果股票支付连续股息率 $q$，则在方程 (1.4) 和 (1.5) 中将 $r$ 替换为 $r-q$。
+如果股票支付连续股息率 `q`，则在方程 (1.4) 和 (1.5) 中将 `r` 替换为 `r-q`。
 
-
-方差的风险中性过程通过在方程 (1.1) 的 $v_t$ 漂移项中引入函数 $\lambda(S, v_t, t)$ 来处理，如下：
+方差的风险中性过程通过在方程 (1.1) 的 `$v_t$` 漂移项中引入函数 `$\lambda(S, v_t, t)$` 来处理，如下：
 
 ```
 $dv_t = [\kappa(\theta - v_t) - \lambda(S, v_t, t)]dt + \sigma\sqrt{v_t}d\widetilde{W}_{2,t}$
@@ -184,13 +111,15 @@ $dv_t = [\kappa(\theta - v_t) - \lambda(S, v_t, t)]dt + \sigma\sqrt{v_t}d\wideti
 $\widetilde{W}_{2,t} = \left(W_{2,t} + \frac{\lambda(S, v_t, t)}{\sigma\sqrt{v_t}}\right)$
 ```
 
-函数 $\lambda(S,v,t)$ 被称为波动率风险。正如 Heston (1993) 所解释，Breeden (1979) 得与方差成正比的溢价，使得 $\lambda(S,v_t) = \lambda v_t$，其中 $\lambda$ 是常数。在方程 (1.1) 中替换 $\lambda v_t$，得到方差过程的风险中性版本：
+函数 `$\lambda(S,v,t)$` 被称为波动率风险。正如 Heston (1993) 所解释，Breeden (1979) 得与方差成正比的溢价，使得 `$\lambda(S,v_t) = \lambda v_t$`，其中 `$\lambda$` 是常数。在方程 (1.1) 中替换 `$\lambda v_t$`，得到方差过程的风险中性版本：
 
 ```
 $dv_t = \kappa^*(\theta^* - v_t) + \sigma\sqrt{v_t}d\widetilde{W}_{2,t}$
 ```
 
-其中 $\kappa^* = \kappa + \lambda$ 和 $\theta^* = \kappa\theta/(\kappa + \lambda)$ 是方差过程的风险中性参数。总结来说，风险中性过程为：
+其中 `$\kappa^* = \kappa + \lambda$` 和 `$\theta^* = \kappa\theta/(\kappa + \lambda)$` 是方差过程的风险中性参数。总结来说，风险中性过程为：
+
+
 
 ```
 $dS_t = rS_t dt + \sqrt{v_t}d\widetilde{W}_{1,t}$
@@ -199,26 +128,24 @@ $dv_t = \kappa^*(\theta^* - v_t) + \sigma\sqrt{v_t}d\widetilde{W}_{2,t}$
 
 其中 $\mathbb{E}[d\widetilde{W}_{1,t}d\widetilde{W}_{2,t}] = \rho dt$ 是风险中性测度。注意，当 $\lambda=0$ 时，$\kappa^* = \kappa$ 且 $\theta^* = \theta$，因为这些参数在物理风险中性测度下相等。在书中我们将 $\lambda=0$，但这并非必须。事实上，$\lambda$ 嵌入在风险中性参数 $\kappa^*$ 和 $\theta^*$ 中。因此，估计风险中性参数进行定价是一项研究课题，例如 Bollers 等 (2011)。为了符号简单，当显然处理的是风险中性测度时，我们在书中省略参数上的星号和布朗运动上的波浪号。
 
-
-$v_t$ 的性质由 Cox, Ingersoll 和 Ross (1985) 以及 Brigo 和 Mercurio (2006) 等人描述。众周知，在 $v_s$ 的实现值条件下，过程 $v_t$ 服从非中心卡方分布，自由度为 $d=4\kappa\theta/\sigma^2$，非中心参数为 $2c_se^{-\kappa(t-s)}$，其中：
+`v_t` 的性质由 Cox, Ingersoll 和 Ross (1985) 以及 Brigo 和 Mercurio (2006) 等人描述。众周知，在 `v_s` 的实现值条件下，过程 `v_t` 服从非中心卡方分布，自由度为 `d=4\kappa\theta/\sigma^2`，非中心参数为 `2c_se^{-\kappa(t-s)}`，其中：
 
 ```
 $c = \frac{2\kappa}{1 - e^{-\kappa(t-s)}}$
 ```
 
-且 $t > s$。给定值 $v_s$ 时，$v_t$ 的均值和方差分别为：
+且 `t > s`。给定值 `v_s` 时，`v_t` 的均值和方差分别为：
 
 ```
 $m = E[v_t|v_s] = \theta + (v_s - \theta)e^{-\kappa(t-s)}$,
 $S^2 = Var[v_t|v_s] = \frac{\sigma^2 e^{-\kappa(t-s)}}{\kappa}(1 - e^{-\kappa(t-s)}) + \frac{\theta\sigma^2}{2\kappa}(1 - e^{-2\kappa(t-s)})^2$.
 ```
 
-均回归 $\kappa$ 对矩的影响是直观的，并在 Cox, Ingersoll 和 Ross (1985) 中进行了解释。当 $\kappa \to \infty$ 时，均值 $m$ 趋于均回归率 $\theta$，方差 $S_t^2$ 趋于零。当 $\kappa \to 0$ 时，均值趋于当前方差水平 $v_t$，方差趋于 $\sigma^2v_t(t-s)$。
+均回归 `kappa` 对矩的影响是直观的，并在 Cox, Ingersoll 和 Ross (1985) 中进行了解释。当 `kappa -> infinity` 时，均值 `m` 趋于均回归率 `theta`，方差 `S_t^2` 趋于零。当 `kappa -> 0` 时，均值趋于当前方差水平 `v_t`，方差趋于 `sigma^2 v_t (t-s)`。
 
-如果条件 $2\kappa\theta > \sigma^2$ 成立，则漂移足够大，保证方差过程为为零。这一条件被称为 Feller 条件。
+如果条件 `2 kappa theta > sigma^2` 成立，则漂移足够大，保证方差过程为为零。这一条件被称为 Feller 条件。
 
-
-在本节中，我们展示了 Heston 模型中的看涨价格可以以类似于 Black-Scholes 模型中看涨价格的方式表示，我们在方程 (1.76) 中给出了。作者有时将这种看涨价格表征称为“类 Black-Scholes”或“Black-Scholes 风格”。对于现价为 $S_t$ 的不付股息股票，行权价为 $K$，到期时间为 $\tau$ 的欧洲看涨期权的 $t$ 时刻价格为风险中性测度下收益的折现期望值：
+在本节中，我们展示了 Heston 模型中的看涨价格可以以类似于 Black-Scholes 模型中看涨价格的方式表示，我们在方程 (1.76) 中给出了。作者有时将这种看涨价格表征称为“类 Black-Scholes”或“Black-Scholes 风格”。对于现价为 `S_t` 的不付股息股票，行权价为 `K`，到期时间为 `tau` 的欧洲看涨期权的 `t` 时刻价格为风险中性测度下收益的折现期望值：
 
 ```
 $C(K) = e^{-r\tau}E^Q[(S_\tau - K)^+$
@@ -226,19 +153,19 @@ $= e^{-r\tau}E^Q[S_\tau1_{S_\tau>K} - Ke1_{S_\tau>K}]$
 $= S_nP_1 - Ke^{-r\tau}P_2 \quad (1.12)$
 ```
 
-其中 1 是指示函数。(1.12) 的最后一行是“类 Black-Scholes”看涨价格公式，其中 $P_1$ 替换了 $\Phi(d_1)$，$P_2$ 替换 Black-Scholes 看涨价格 (1.76) 中的 $\Phi(d_2)$。在本节中，我们解释如何从第三行推导出最后一行。$P_1$ 和 $P_2$ 分别代表在给定值 $S_t$ 和 $t$ 时刻方差 $v_t$ 条件下的期权实值概率：
+其中 1 是指示函数。(1.12) 的最后一行是“类 Black-Scholes”看涨价格公式，其中 `P_1` 替换了 `Phi(d_1)`，`P_2` 替换 Black-Scholes 看涨价格 (1.76) 中的 `Phi(d_2)`。在本节中，我们解释如何从第三行推导出最后一行。`P_1` 和 `P_2` 分别代表在给定值 `S_t` 和 `t` 时刻方差 `v_t` 条件下的期权实值概率：
 
 ```
 $P_j = Pr(\ln S_t > \ln K) \quad (1.13)$
 ```
 
-对于 $j=1, 2$。这些概率是在不同的概率测度下获得的。在方程 (1.12) 中，期望 $E^Q[1_{S_\tau>K}]$ 是在使 $W_t$ 和 $W_t^*$ 为方程 (1.11) 中风险中性测度布朗运动的测度 $Q$ 下的实值概率。我们可以写为：
+对于 `j=1, 2`。这些概率是在不同的概率测度下获得的。在方程 (1.12) 中，期望 `E^Q[1_{S_\tau>K}]` 是在使 `W_t` 和 `W_t^*` 为方程 (1.11) 中风险中性测度布朗运动的测度 `Q` 下的实值概率。我们可以写为：
 
 ```
 $E^Q[1_{S_\tau>K}] = Q(S_t > K) = Q(\ln S_t > \ln K) = P_2.$
 ```
 
-计算 (1.12) 中的 $e^{-r\tau}E^Q[1_{S_\tau>K}]$ 需要将原始测度变为另一个测度 $Q^S$。考虑拉东-尼科姆导数：
+计算 (1.12) 中的 `e^{-r\tau}E^Q[1_{S_\tau>K}]` 需要将原始测度变为另一个测度 `Q^S`。考虑拉东-尼科姆导数：
 
 ```
 $\frac{dQ}{dQ^S} = \frac{B_t/B_0}{S_t/S_0} = \frac{E^Q[e^{rt}]}{e^{rt}} \quad (1.14)$
@@ -250,12 +177,7 @@ $\frac{dQ}{dQ^S} = \frac{B_t/B_0}{S_t/S_0} = \frac{E^Q[e^{rt}]}{e^{rt}} \quad (1
 $B_t = \exp(\left(\int_0^t rdu\right) = e^{rt}.$
 ```
 
-
-
-
-
-
-在 (1.14) 中，我们写下 $S_te^{r(T-t)} = E^Q[S_T]$，因为资产以无风险利率 $r$ 增长。因此，(1.12)第三行的第一个期望可以写为
+在 (1.14) 中，我们写下 `S_te^{r(T-t)} = E^Q[S_T]`，因为资产以无风险利率 `r` 增长。因此，(1.12)第三行的第一个期望可以写为
 
 ```
 $e^{-r(T-t)}E^Q[S_T\mathbb{1}_{S_T>K}] = S_tE^Q[\frac{S_T}{S_t}\mathbb{1}_{S_T>K}] = S_tE^Q[\frac{S_T/S_t}{B_T/B_t}\mathbb{1}_{S_T>K}\frac{dQ}{dQ^S}]$$\n= S_tE^Q[\mathbb{1}_{S_T>K}] = S_tQ^S(S_T > K) = S_tP_1$.
@@ -267,10 +189,9 @@ $e^{-r(T-t)}E^Q[S_T\mathbb{1}_{S_T>K}] = S_tE^Q[\frac{S_T}{S_t}\mathbb{1}_{S_T>K
 $C(K) = S_tQ^S(S_T > K) - Ke^{-rt}Q(S_T > K)$.
 ```
 
-测度 $Q$ 使用债券 $B_t$ 作为计性货币，而测度 $Q^S$ 使用股票价格 $S$。Bakshi 和 Madan (2000) 给出了以 (1.16) 形式表示的看涨价格推导，但是在通用设定下的。正如他们的论文所示，导致 (1.16) 的测度变换适用于许多模型，包括 Black-Scholes 模型和 Heston 模型。我们将在本章后面的部分看到，$S_t$ 遵循 Black-Scholes 模型指定的对数正分布，则 $Q^S(S_T > K) = \Phi(d_1)$ 且 $Q(S_T > K) = \Phi(d_2)$。因此，由 Heston (1993) 开创的期权定价特征函数方法适用于
+测度 `Q` 使用债券 `B_t` 作为计性货币，而测度 `Q^S` 使用股票价格 `S`。Bakshi 和 Madan (2000) 给出了以 (1.16) 形式表示的看涨价格推导，但是在通用设定下的。正如他们的论文所示，导致 (1.16) 的测度变换适用于许多模型，包括 Black-Scholes 模型和 Heston 模型。我们将在本章后面的部分看到，`S_t` 遵循 Black-Scholes 模型指定的对数正分布，则 `Q^S(S_T > K) = Phi(d_1)` 且 `Q(S_T > K) = Phi(d_2)`。因此，由 Heston (1993) 开创的期权定价特征函数方法适用于
 
-
-在本节中，我们将解释如何推导出 Heston 模型的偏微分方程（PDE）。该推导是通用随机波动模型 PDE 的特例，这些模型在 Gatheral (2006)、Lewis (2000)、Musiela 和 Rutkowski (2011)、Joshi (2008) 等人的著作中有所描述。该逻辑与使用单一衍生品推导出 Black-Scholes PDE 的对冲逻辑相似。在 Black-Scholes 模型中，投资组合由标的股票和一个用于对冲股票的单一衍生品组成，使组合无风险。然而，在 Heston 模型中，组合中需要一个额外的衍生品来对冲波动。在这里，我们构建了一个由一个期权 $V(S,v,t)$、$\Delta$ 份股票和用于波动对冲的 $\varphi$ 单位另一个单位 $U(S,v,t)$ 组成的组合。组合价值为
+在本节中，我们将解释如何推导出 Heston 模型的偏微分方程（PDE）。该推导是通用随机波动模型 PDE 的特例，这些模型在 Gatheral (2006)、Lewis (2000)、Musiela 和 Rutkowski (2011)、Joshi (2008) 等人的著作中有所描述。该逻辑与使用单一衍生品推导出 Black-Scholes PDE 的对冲逻辑相似。在 Black-Scholes 模型中，投资组合由标的股票和一个用于对冲股票的单一衍生品组成，使组合无风险。然而，在 Heston 模型中，组合中需要一个额外的衍生品来对冲波动。在这里，我们构建了一个由一个期权 `V(S,v,t)`、 `Delta` 份股票和用于波动对冲的 `varphi` 单位另一个单位 `U(S,v,t)` 组成的组合。组合价值为
 
 ```
 $\Pi = V + \Delta S + \varphi U$
@@ -280,16 +201,15 @@ $\Pi = V + \Delta S + \varphi U$
 $d\Pi = dV + \Delta dS + \varphi dU$.
 ```
 
-该策略类似于 Black-Scholes 情况。我们应用 Ito 引理得到 $U$ 和 $V$ 的过程，从而允许我们找到 $\Pi$ 的过程。然后我们找到使组合无风险的 $\Delta$ 和 $\varphi$ 值，并利用该结果推导出 Heston PDE。
+该策略类似于 Black-Scholes 情况。我们应用 Ito 引理得到 `U` 和 `V` 的过程，从而允许我们找到 `Pi` 的过程。然后我们找到使组合无风险的 `Delta` 和 `varphi` 值，并利用该结果推导出 Heston PDE。
 
-
-为了形成对冲投资组合，首先对第一个衍生品的价值 $V(S,v,t)$ 应用 Ito 引理。我们必须对变量 $t, S, v$ 对 $V$ 求导，并进行二阶泰勒级数展开。结果是 $dV$ 遵循过程
+为了形成对冲投资组合，首先对第一个衍生品的价值 `V(S,v,t)` 应用 Ito 引理。我们必须对变量 `t, S, v` 对 `V` 求导，并进行二阶泰勒级数展开。结果是 `dV` 遵循过程
 
 ```
 $dV = \frac{\partial V}{\partial t}dt+\frac{\partial V}{\partial S}dS+\frac{\partial V}{\partial v}dv+\frac{1}{2}\frac{\partial^2 V}{\partial S^2}dS^2+\frac{1}{2}\frac{\partial^2 V}{\partial v^2}dv^2+\rho sv\frac{\partial^2 V}{\partial S\partial v}dt$.
 ```
 
-我们使用了 $(dS)^2 = (dW_t)^2 = S^2dt$，且 $\langle dS, dv \rangle = \sigma^2dt$，以及 $dsv = \sigma v dW_t, dW_2 = \rho svdt$。我们还有 $(dt)^2 = 0$ 且 $dW_t^2 = dt$。对第二个衍生品 $U(S,v,t)$ 应用 Ito 引理产生与 (1.18) 相同的表达式。通过将这些表达式代入 (1.17)，投资组合价值可以为
+我们使用了 `(dS)^2 = (dW_t)^2 = S^2dt`，且 `langle dS, dv rangle = sigma^2dt`，以及 `dsv = sigma v dW_t, dW_2 = rho svdt`。我们还有 `(dt)^2 = 0` 且 `dW_t^2 = dt`。对第二个衍生品 `U(S,v,t)` 应用 Ito 引理产生与 (1.18) 相同的表达式。通过将这些表达式代入 (1.17)，投资组合价值可以为
 
 ```
 $d\pi = dV + \Delta S + \varphi U$
@@ -304,20 +224,20 @@ $$\left[\frac{\partial V}{\partial t} + \frac{1}{2}\frac{\partial^2 V}{\partial 
 $\varphi = -\frac{\partial V}{\partial v}\frac{\partial U}{\partial v}, \quad \Delta = -\varphi\frac{\partial V}{\partial S}\frac{\partial U}{\partial S}$.
 ```
 
-将这些 $\varphi$ 和 $\Delta$ 值代入 (1.19)，得到
+将这些 `varphi` 和 `Delta` 值代入 (1.19)，得到
 
 ```
 $d\pi = \left[\frac{\partial V}{\partial t} + \frac{1}{2}\frac{\partial^2 V}{\partial S^2} + \rho sv\frac{\partial^2 V}{\partial S\partial v} + \frac{1}{2}\sigma^2\frac{\partial^2 V}{\partial v^2}\right]dt$
 +\varphi\left[\frac{\partial U}{\partial t} + \frac{1}{2}\frac{\partial^2 U}{\partial S^2} + \rho sv\frac{\partial^2 U}{\partial S\partial v} + \frac{1}{2}\sigma^2\frac{\partial^2 U}{\partial v^2}\right]dt$.
 ```
 
-组合获得无风险利率 $r$ 的条件意味着组合价值的变化为 $d\pi = rdt$。方程 (1.17) 变为
+组合获得无风险利率 `r` 的条件意味着组合价值的变化为 `d\pi = rdt`。方程 (1.17) 变为
 
 ```
 $d\pi = r(V + \Delta S + \varphi U)dt$.
 ```
 
-现在将方程 (1.22) 与 (21) 相等，代入 $\varphi$ 和 $\Delta$，去掉 $dt$ 项并重新整理。得到欧式期权的 Heston 模型
+现在将方程 (1.22) 与 (21) 相等，代入 `varphi` 和 `Delta`，去掉 `dt` 项并重新整理。得到欧式期权的 Heston 模型
 
 $$\frac{\partial V}{\partial t} + \frac{1}{2}v^2\frac{\partial^2 V}{\partial S^2} + \rho sv\frac{\partial^2 V}{\partial S\partial v} + \frac{1}{2}\sigma^2\frac{\partial^2 V}{\partial v^2} - rV + rS\frac{\partial V}{\partial S} \quad (1.23)$$
 
@@ -325,36 +245,35 @@ $$\frac{\partial U}{\partial t} + \frac{1}{2}v^2\frac{\partial^2 U}{\partial S^2
 
 我们在下一节中利用这一点。
 
-
-方程 (1.23) 的左侧是 $v$ 的函数，右侧是 $U$ 的函数。这意味着两边都可以写成函数 $f(S, v, t)$。遵循 Heston (1993)，指定此函数为
+方程 (1.23) 的左侧是 `v` 的函数，右侧是 `U` 的函数。这意味着两边都可以写成函数 `f(S, v, t)`。遵循 Heston (1993)，指定此函数为
 
 ```
 $f(S, v, t) = -\kappa(\theta - v) + \lambda(S, v)$
 ```
 
-其中 $\lambda(S, v, t)$ 是波动率。Breeden (1979) 的应用产生关于波动率的线性函数，$\lambda$ 是一个常数。在方程 (1.23) 的左侧代入 $f(S, v, t)$
+其中 `lambda(S, v, t)` 是波动率。Breeden (1979) 的应用产生关于波动率的线性函数，`lambda` 是一个常数。在方程 (1.23) 的左侧代入 `f(S, v, t)`
 
 ```
 $-\kappa(\theta - v) + \lambda(S, v)$
 ```
-重新整理得到关于 $S$ 的 Heston PDE
+
+重新整理得到关于 `S` 的 Heston PDE
 
 ```
 $$\frac{\partial U}{\partial t} + \frac{1}{2}v^2\frac{\partial^2 U}{\partial S^2} + \rho sv\frac{\partial^2 U}{\partial S\partial v} + \frac{1}{2}\sigma^2\frac{\partial^2 U}{\partial v^2} - rU + rS\frac{\partial U}{\partial S} + [\kappa(\theta - v) - \lambda(S, v)]\frac{\partial U}{\partial v} = 0.$$
 ```
 
-这是 Heston (1993) 的方程 (6)。方程 (1.24) 中的以下边界条件适用于到期日为 $T$、执行价为 $K$ 的欧式看涨期权。在到期日，期权价值等于其内在价值
+这是 Heston (1993) 的方程 (6)。方程 (1.24) 中的以下边界条件适用于到期日为 `T`、执行价为 `K` 的欧式看涨期权。在到期日，期权价值等于其内在价值
 
 ```
 $U(S, v, t) = \max(0, S - K)$.
 ```
 
-当股票价格为零时，期权毫无价值。随着股票价格上涨，$\delta$ 趋于一，当波动率增加时，看涨期权等于股票价格。这意味着以下边界条件
+当股票价格为零时，期权毫无价值。随着股票价格上涨，`delta` 趋于一，当波动率增加时，看涨期权等于股票价格。这意味着以下边界条件
 
 ```
 $U(0, v, t) = 0, \frac{\partial U}{\partial S}(\infty, t) = 1, U(S, \infty, t) = S.$
 ```
-
 
 最后，注意 PDE (1.24) 可以写成
 
@@ -362,7 +281,7 @@ $U(0, v, t) = 0, \frac{\partial U}{\partial S}(\infty, t) = 1, U(S, \infty, t) =
 $$\frac{\partial U}{\partial t} + \mathcal{A}U - rU \quad (1.27)$$
 ```
 
-其中 $\mathcal{A}$ 是生成子。(1.27) 中的行是 Lewis (2000) 解释的 Black-Scholes 模型生成子。我们可以定义对数价格 $x = \ln S$，用 $(x,t)$ 代替 $(S,t)$ 表示 PDE。这导致了一个不出现现价 $S$ 的更简单形式的 PDE。这需要
+其中 `mathcal{A}` 是生成子。(1.27) 中的行是 Lewis (2000) 解释的 Black-Scholes 模型生成子。我们可以定义对数价格 `x = \ln S`，用 `(x,t)` 代替 `(S,t)` 表示 PDE。这导致了一个不出现现价 `S` 的更简单形式的 PDE。这需要
 
 ```
 $\frac{\partial U}{\partial x} = \frac{1}{S}\frac{\partial U}{\partial S}, \quad \frac{\partial^2 U}{\partial x^2} = \frac{1}{S^2}\frac{\partial^2 U}{\partial S^2} - \frac{1}{S^2}\frac{\partial U}{\partial S} \text{ (no, it is } \frac{\partial^2 U}{\partial x^2} = \frac{1}{S^2}\frac{\partial^2 U}{\partial S^2} + \frac{1}{S^2}\frac{\partial U}{\partial S})$
@@ -376,7 +295,9 @@ $\frac{\partial^2 U}{\partial x^2} = \frac{1}{S^2}\frac{\partial^2 U}{\partial S
 
 等等，正确的变换是 $\frac{\partial^2 U}{\partial x^2} = \frac{1}{S^2}\frac{\partial^2 U}{\partial S^2} + \frac{1}{S}\frac{\partial U}{\partial S}$。让我们重新评估。
 
-将这些表达式代入 Heston PDE (1.29)。所有的 $S$ 项都抵消了，我们得到 Heston PDE
+将这些表达式代入 Heston PDE (1.29)。所有的 `S` 项都抵消了，我们得到 Heston PDE
+
+
 
 ```
 $$\frac{\partial U}{\partial t} + \frac{1}{2}v^2\frac{\partial^2 U}{\partial x^2} + (r - \frac{1}{2}v)\frac{\partial U}{\partial x} + \rho\sigma v\frac{\partial^2 U}{\partial x\partial v} + \frac{1}{2}\sigma^2\frac{\partial^2 U}{\partial v^2} - rU + [k(\theta - v) - \lambda v]\frac{\partial U}{\partial v} = 0.$$
@@ -385,17 +306,10 @@ $$\frac{\partial U}{\partial t} + \frac{1}{2}v^2\frac{\partial^2 U}{\partial x^2
 其中我们代入了 $\lambda(S,v,t) = \lambda v$。获取 PDE (1.29) 的现代方法是应用 Feynman-Kac 定理，我们将在 Christoffersen (2009) 的双 Heston 模型第12章中遇到它。
 
 # $P_1$ 和 $P_2$ 的 PDE
+
 ```
 $C(K) = e^{-rT}P_1 - Ke^{-rT}P_2 \quad (1.30)$
 ```
-
-
-
-
-
-
-[content]
-
 
 该 PDE，并用 $P_1$ 和 $P_2$ 表示该 PDE。$C(K)$ 对 $t$ 的导数为：
 
@@ -461,7 +375,6 @@ $$\frac{\partial P_1}{\partial t} + \rho\sigma v\frac{\partial^2 P_1}{\partial x
 
 对于 $j=1, 2$ 且 $u_1=1, u_2=-\frac{1}{2}, a=\theta, b_1=\kappa+\lambda, b_2=\kappa$。这是 Heston (1993) 的方程 (2)。
 
-
 当特征函数 $f(\phi; x)$ 已知时，值概率 $P_j$ 可以通过 Gil-Peston (1991) 反演定理从特征函数恢复：
 
 ```
@@ -482,7 +395,6 @@ $$P_j = \mathbf{1}_{x_T=\ln K}$$
 $$f_j(\phi; x, v_t) = \exp(C(\tau, \phi) + D_j(\tau, \phi)v_t + i\phi x)$$
 ```
 
-
 其中 $i = \sqrt{-1}$ 是虚数单位，$C$ 和 $D_j$ 是系数，$\tau = T - t$ 是到期时间。
 
 特征函数 $f_j$ 将遵循方程 (1.40) 中的 PDE。这是 Feynman-Kac 定理的结果，该定理规定如果 Heston 二元随机微分方程 $x_t = (x_t, v_t) = (\ln S_t, v_t)$ 的函数 $f(x, t)$ 满足 PDE $\partial f/\partial t - rf + \mathcal{A}f = 0$，其中 $\mathcal{A}$ 是来自 (1.28) 的 Heston 生成子，那么 $f(x, t)$ 的解为条件期望：
@@ -502,6 +414,7 @@ $$f(x_t, t) = E[e^{i\phi \ln S_T} | v_t]$$
 ```
 -\frac{\partial f_j}{\partial \tau} + \rho\sigma v \frac{\partial^2 f_j}{\partial x \partial v} + \frac{1}{2}v \frac{\partial^2 f_j}{\partial x^2} + \frac{1}{2}\sigma^2 \frac{\partial^2 f_j}{\partial v^2} + (r+u_v v)\frac{\partial f_j}{\partial x} + (a-b_v v)\frac{\partial f_j}{\partial v} = 0. \quad (1.44)$$
 ```
+
 注意从 $t$ 到 $\tau$ 的变换，这导致了 PDE (1.44) 第一项前的负号。评估 (1.44) 需要以下导数：
 
 ```
@@ -530,13 +443,6 @@ $$\frac{\partial D_j}{\partial \tau} = \rho\sigma \phi D_j - \frac{1}{2}\phi^2 +
 $$\frac{\partial C_j}{\partial \tau} = ri\phi + aD_j.$$
 ```
 
-[/content]
-
-
-
-
-
-
 这些是 Heston (1993) 中的方程 (A7)。方程 (1.47) 中的第一个方程是关于 $D_t$ 的 Riccati 方程，而第二个是关于 $C_t$ 的常导数，一旦获得 $D_t$，即可通过简单的积分进行求解。求解这些方程需要两个初始条件。回想 (1, $\phi$)，特征函数为
 
 ```
@@ -545,11 +451,9 @@ $f(\phi; x_t, v_t) = E[e^{i\phi x_t}] = \exp(C(\tau, \phi) + D(\tau, \phi)v_t + 
 
 在到期时 ($\tau = 0$)，$x_t = \ln S_t$ 的值是知的，因此右侧将简化为 $\exp(i\phi x_t)$。这意味着到期时的初始条件为 $D_t(0, \phi) = 0$ 且 $C_t(0, \phi) = 0$。
 
-最后，当我们计算特征函数时，使用 $x_t$ 作为底层资产的对数价格，$v_t$ 作为其未观测的初始方差。这最后一个量是本章之前描述的参数 $(x_0, v_0)，必须进行估计。我们有时写作 $(x_t, v_t)$，简单写作 $(x, v)$。
-
+最后，当我们计算特征函数时，使用 $x_t$ 作为底层资产的对数价格，$v_t$ 作为其未观测的初始方差。这最后一个量是本章之前描述的参数 $(x_0, v_0)$，必须进行估计。我们有时写作 $(x_t, v_t)$，简单写作 $(x, v)$。
 
 在本节中，我们将解释如何求解方程 (1.47) 中的表达式以得到所谓的价格。首先，我们引入 Riccati 方程并解释如何获得它的解。该解可以在许多微分方程教科书中找到，例如 Zwillinger (1997) 的著作。
-
 
 系数为 $P(t)$、$Q(t)$ 和 $R(t)$ 的 $y(t)$ Riccati 方程定义为
 
@@ -566,25 +470,28 @@ $w'' - [\frac{P'}{P} + Q]w' + PRw = 0$
 这可以写为 $w'' + bw' + cw = 0$。方程 (1.49) 的解为
 
 $y(t) = \frac{w'(t)}{w(t)R(t)}$.
+
 ```
 
 (1.50) 中的 ODE可以通过辅助方程 $r^2 + br + c = 0$ 求解，该方程有两个解 $\alpha$ 和 $\beta$，由如下给出
 
 ```
+
 $\alpha = \frac{-b + \sqrt{b^2 - 4c}}{2}, \beta = \frac{-b - \sqrt{b^2 - 4c}}{2}$
+
 ```
 
 (1.50) 中二阶 ODE 的解为
 
 ```
+
 $w(t) = Me^{\alpha t} + Ne^{\beta t}$
-```
 
 
-其中 M 和 N 是常数。因此，Riccati 方程的解为
+
+其中 `M` 和 `N` 是常数。因此，Riccati 方程的解为
 
 $y(t) = \frac{M\alpha e^{\alpha t} + N\beta e^{\beta t}}{M e^{\alpha t} + N e^{\beta t}} R(t)$
-
 
 从方程 (1.47) 出，Heston Riccati 方程可以写为
 
@@ -608,6 +515,7 @@ $w'' + Q_jw' + P_iRw = 0$
 
 ```
 $$\alpha_j = \frac{-Q_j + \sqrt{Q_j^2 - 4PR_j}}{2} = \frac{-Q_j + d_j}{2}$
+
 $\beta_j = \frac{-Q_j - \sqrt{Q_j^2 - 4PR_j}}{2} = \frac{-Q_j - d_j}{2}$
 ```
 
@@ -622,7 +530,7 @@ $d_j = \alpha_j - \beta_j = \sqrt{Q_j^2 - 4PR_j}$ (1.54)
 $D_i = -\frac{w'}{w} = -\frac{1}{R}(\frac{M\alpha e^{\alpha t} + N\beta e^{\beta t}}{Me^{\alpha t} + Ne^{\beta t}})$ (1.55)
 ```
 
-其中 $K=M/N$。初始条件 $D_i(0, \phi)$ 意味着当 $\tau=0$ 代入 (1.55) 时，分子 $K\alpha + \beta = 0$，得到 $K=-\beta/\alpha$。$D_j$ 的解变为
+其中 `K=M/N`。初始条件 `D_i(0, \phi)` 意味着当 `\tau=0` 代入 (1.55) 时，分子 `K\alpha + \beta = 0`，得到 `K=-\beta/\alpha`。`D_j` 的解变为
 ```
 $D_j = -\frac{\beta}{R}(\frac{-e^{d_j\tau}}{-e^{d_j\tau}+e^{\tau}}) = \frac{Q_j+d_j}{2R}(\frac{1-e^{d_j\tau}}{1-g_j\tau})$ (1.56)
 ```
@@ -632,19 +540,20 @@ $D_j = -\frac{\beta}{R}(\frac{-e^{d_j\tau}}{-e^{d_j\tau}+e^{\tau}}) = \frac{Q_j+
 ```
 $g_i = -K = \frac{\beta}{\alpha} \frac{b_i - \rho\sigma\phi + d_i}{b_i - \rho\sigma\phi - d_i} \frac{Q_i - d_i}{1}.$ (1.57)
 ```
-$D_i$ 的解可以写为
+
+`$D_i$` 的解可以写为
 
 ```
 $D_i(\tau, \phi) = \frac{b_i - \rho\sigma\phi + d_i}{\sigma^2} \left( \frac{1 - e^{d_i\tau}}{1 - g_i\tau} \right). (1.58)
 ```
 
-$C_i$ 的解通过对 (1.47) 中的第二个方程积分得到
+`$C_i$` 的解通过对 (1.47) 中的第二个方程积分得到
 
 ```
 $C_i = \int_0^\tau i\phi d\tau + a \left( \frac{Q_i + d_i}{\sigma^2} \right) \int_0^\tau \left( \frac{1 - e^{d_i\tau}}{1 - g_i\tau} \right) d\tau + K_1$ (1.59)
 ```
 
-其中 $K_1$ 是常数，第一个积分是 $i\phi$，第二个积分可以通过代换法找到，使用 $x = d_i\tau$，其中 $dx = d_i d\tau$ 且 $dy = dx/(x)$。方程 (1.59) 变为
+其中 `K_1` 是常数，第一个积分是 `i\phi`，第二个积分可以通过代换法找到，使用 `x = d_i\tau`，其中 `dx = d_i d\tau` 且 `dy = dx/(x)`。方程 (1.59) 变为
 
 ```
 $C_i = i\phi\tau + a \left( \frac{Q_i + d_i}{\sigma^2} \right) \int_1^{\exp(d_i\tau)} \left( \frac{1 - x}{1 - g_ix} \right) dx + K_1.$ (1.60)
@@ -656,49 +565,45 @@ $C_i = i\phi\tau + a \left( \frac{Q_i + d_i}{\sigma^2} \right) \int_1^{\exp(d_i\
 $\int_0^{\exp(d_i\tau)} \frac{1 - x}{x(1 - g_ix)} dx = \int_1^{\exp(d_i\tau)} \frac{1 - g_i}{x - g_ix} dx = [\ln x + \frac{1}{g_i} \ln(1 - g_ix)]_1^{\exp(d_i\tau)} = [d_i\tau + \frac{1}{g_i} \ln(1 - g_i e^{d_i\tau})]_1^{\exp(d_i\tau)}.$ (1.61)
 ```
 
-代回 (1.60)，并代入 $d_i, Q_i$ 和 $g_i$，得到 $C_i$ 的解
+代回 (1.60)，并代入 `d_i, Q_i` 和 `g_i`，得到 `C_i` 的解
 
 ```
 $C_i(\tau, \phi) = i\phi\tau + \frac{a}{\sigma^2} (b_i - \rho\sigma\phi + d_i)\tau - 2 \ln \left( \frac{1 - g_i e^{d_i\tau}}{1 - g_i\tau} \right). (1.62)
 ```
-其中 $a = \kappa\theta$。注意我们使用了初始条件 $C_i(0, \phi) = 0$，导致 $K_i=0$。这完成了 Heston 模型的原始推导。
 
-我们在 Matlab 中使用两个函数来实现该模型，HestonProb.m 返回积分函数的实部。该函数允许使用 Albrecher 等人 (2007) 的特征函数的“Little Trap”表述，这在第 2 章中介绍。这些函数允许为看涨或看跌期权，并允许考虑股息率，如下节所示。为了节省空间，省略了函数的部分。
+其中 `a = \kappa\theta`。注意我们使用了初始条件 `C_i(0, \phi) = 0`，导致 `K_i=0`。这完成了 Heston 模型的原始推导。
 
+我们在 Matlab 中使用两个函数来实现该模型，`HestonProb.m` 返回积分函数的实部。该函数允许使用 Albrecher 等人 (2007) 的特征函数的“Little Trap”表述，这在第 2 章中介绍。这些函数允许为看涨或看跌期权，并允许考虑股息率，如下节所示。为了节省空间，省略了函数的部分。
 
+### Heston 特征函数代码
 
-
-
-
-某些应用需要用于 Heston 特征函数的 Matlab 代码。`HestonProb.m` 函数可以被修改，以返回特征函数本身，而不是被积函数。在某些情况下，$P_l$ 的被积函数
+某些应用需要用于 Heston 特征函数的 Matlab 代码。`HestonProb.m` 函数可以被修改，以返回特征函数本身，而不是被积函数。在某些情况下，`$P_l$` 的被积函数
 
 ```
 $Re = \frac{e^{-i\phi \ln K} f_l(\phi; \mathbf{x}, v)}{i\phi} \quad (1.63)$
 ```
 
-具有良好的性质，因为它在数值积分中不会产生剧烈震荡。这意味着被积函数衰减很快，因此在数值积分时不需要较大的上限，且不包含过陡的部分。在其他情况下，被积函数的性质并不良好，数值积分会丢失精度。为了说明，我们绘制了方程 (1.63) 中的第二个被积函数（$j=2$），设置为 $S=7, K=10$ 和 $r=q=0$，参数值为 $\kappa=10, v_0=0.07, \sigma=0.3$ 且 $\rho=-0.9$。该图使用了 $-\phi<50$，且期限从 1 周到 3 个月不等。该图见于 1.1。被积函数在 $\phi=0$ 处有一个不连续点，但在图中并未显示。
+具有良好的性质，因为它在数值积分中不会产生剧烈震荡。这意味着被积函数衰减很快，因此在数值积分时不需要较大的上限，且不包含过陡的部分。在其他情况下，被积函数的性质并不良好，数值积分会丢失精度。为了说明，我们绘制了方程 (1.63) 中的第二个被积函数（`j=2`），设置为 `S=7, K=10` 和 `r=q=0`，参数值为 `\kappa=10, v_0=0.07, \sigma=0.3` 且 `\rho=-0.9`。该图使用了 `-\phi<50`，且期限从 1 周到 3 个月不等。该图见于 1.1。被积函数在 `\phi=0` 处有一个不连续点，但在图中并未显示。
 
 该图显示被积函数具有相当大的震荡，特别是在短期内，并且在原点附近非常陡峭。在第 2 章中，我们将研究 Heston 被积函数可能出现的其他问题。
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_28_0.png)
 
-
-
 ### 股息率与看跌价格
 
-如果假设股息支付是连续收益率 $q$，那么将股息纳入模型是非常直接的。在这种情况下，方程 (1.4) 中股票过程的 $r$ 被替换为 $r-q$
+如果假设股息支付是连续收益率 `q`，那么将股息纳入模型是非常直接的。在这种情况下，方程 (1.4) 中股票过程的 `r` 被替换为 `r-q`
 
 ```
 $dS_t = (r-q)S_td + \sqrt{v_t}S_tdW_{1,t},$
 ```
 
-方程 (1.62) 中 $C$ 的解变为
+方程 (1.62) 中 `C` 的解变为
 
 ```
 $C_i = (r-q)\phi + \frac{\theta}{\sigma^2} \left[b_i - \rho\sigma i\phi - \frac{1-e^{-b_i\tau}}{b_i}\right].$
 ```
 
-要获得欧洲看跌期权的 $P(K)$，首先获得欧洲看涨期权的 $C(K)$，对方程 (1.12) 进行微调以包含股息率的项 $e^{-q\tau}$，正如 Wang (2006) 所述：
+要获得欧洲看跌期权的 `P(K)`，首先获得欧洲看涨期权的 `C(K)`，对方程 (1.12) 进行微调以包含股息率的项 `e^{-q\tau}`，正如 Wang (2006) 所述：
 
 ```
 $C(K) = S_e^{-q\tau}P_1 - e^{-r\tau}P_2.$
@@ -716,22 +621,22 @@ $P(K) = C(K)e^{r\tau} - S_e^{-q\tau}.$
 $P(K) = Ke^{-r\tau}P_2 - S_e^{-q\tau}P_1.$
 ```
 
-当 $S_T < K$ 时，看跌期权到期时处于实值。(1.68) 中的实值概率是 (1.41) 中概率的补集
+当 `S_T < K` 时，看跌期权到期时处于实值。(1.68) 中的实值概率是 (1.41) 中概率的补集
 ```
 $P_t = \text{Pr}(S_t < K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty}\text{Re}\left[\frac{e^{-i\phi}f(\phi;x,v)}{i\phi}\right]d\phi.$
 ```
 
-证明方程 (1.67) 和 (1.68) 的等价性是直接。通过应用 Feynman-Kac 定理，$x = \ln S$ 的偏微分方程 (PDE) 将第 2 章中引入
+证明方程 (1.67) 和 (1.68) 的等价性是直接。通过应用 Feynman-Kac 定理，`x = \ln S` 的偏微分方程 (PDE) 将第 2 章中引入
 
 ```
 $\frac{\partial U}{\partial t} + \frac{1}{2}\frac{\partial^2 U}{\partial x^2} + (r-q-\frac{1}{2}v)\frac{\partial U}{\partial x} + \rho\sigma v\frac{\partial^2 U}{\partial x\partial v} + \frac{1}{2}\sigma^2 v\frac{\partial^2 U}{\partial v^2} - rU + [\kappa(\theta-v)-\lambda v]\frac{\partial U}{\partial v} = 0.$
 ```
-方程 (1.70) 仅仅是 (1.29)，但第三项中的 $(r-v/2)$ 被替换为 $(r-q-v/2)$。
 
+方程 (1.70) 仅仅是 (1.29)，但第三项中的 `(r-v/2)` 被替换为 `(r-q-v/2)`。
 
 ### 整合积分
 
-可以将概率 $P_1$ 和 $P_2$ 的积分重新组合为单个积分，这将加速计算看涨价格所需的数值积分。通过将方程 (1.41) 中 $P$ 的表达式代入 (1.66) 中的看涨价格并进行重新排列，可以得到：
+可以将概率 `P_1` 和 `P_2` 的积分重新组合为单个积分，这将加速计算看涨价格所需的数值积分。通过将方程 (1.41) 中 `P` 的表达式代入 (1.66) 中的看涨价格并进行重新排列，可以得到：
 
 ```
 $C(K) = \frac{1}{2}S_e^{-qt} - \frac{1}{2}Ke^{-rt} + \int_{0}^{\infty} \text{Re} \left[ e^{\frac{-i\phi \ln K}{i\phi}} (S_e^{-qt} f_1(\phi; x, v) - Ke^{-rt} f_2(\phi; x, v)) \right] d\phi. \quad (71)$
@@ -754,19 +659,18 @@ HestonC = (1/2)*S*exp(-q*T) - (1/2)*K*exp(-r*T) + I/phi;
 HestonP = HestonC - S*exp(-q*T) + K*exp(-r*T);
 ```
 
+通过简单的推导，很容易证明 Black-Scholes 模型嵌套在 Heston 模型中。Black-Scholes 模型假设标的资产 `S` 的动力学在风险中性测度 `Q` 下为
 
-通过简单的推导，很容易证明 Black-Scholes 模型嵌套在 Heston 模型中。Black-Scholes 模型假设标的资产 $S$ 的动力学在风险中性测度 $Q$ 下为
-
-$dS_t = rS_dt + \sigma_{BS}S_td_t$，在许多书中（如 Hull (1996) 或 Chriss (1996)）可以通过两个步骤求解现价 $S_t$：首先，应用 Ito 引理得到 $d\ln S_t$ 的过程，它不再是一个随机微分方程，因为漂移和波动率不再依赖于 $S_t$。其次，积分该过程得到
-
-```
-$S_t = S_0 \exp\left((r - \frac{1}{2}\sigma_{BS}^2)t + \sigma_{BS}W_t\right)$.
-```
-
-这意味着在时间 $t$ 时，到期股票价格 $S_T$ 的对数服从正态分布，均值为 $\ln S_t + (r - \frac{1}{2}\sigma_{BS}^2)\tau$，方差为 $\sigma_{BS}^2\tau$，其中 $\tau=T-t$ 是到期时间。因此，Black-Scholes 模型中 $\ln S_T$ 的特征函数为
+`dS_t = rS_dt + \sigma_{BS}S_td_t`，在许多书中（如 Hull (1996) 或 Chriss (1996)）可以通过两个步骤求解现价 `S_t`：首先，应用 Ito 引理得到 `d\ln S_t` 的过程，它不再是一个随机微分方程，因为漂移和波动率不再依赖于 `S_t`。其次，积分该过程得到
 
 ```
-$E[e^{i\phi\ln S_T}] = \exp\left(i\phi[\ln S_t + (r - \frac{1}{2}\sigma_{BS}^2)\tau] - \frac{1}{2}\phi^2\sigma_{BS}^2\tau\right).
+$S_t = S_0 \exp\left((r - \frac{1}{2}\sigma_{BS}^2)t + \sigma_{BS}W_t\right).$
+```
+
+这意味着在时间 `t` 时，到期股票价格 `S_T` 的对数服从正态分布，均值为 `\ln S_t + (r - \frac{1}{2}\sigma_{BS}^2)\tau`，方差为 `\sigma_{BS}^2\tau`，其中 `\tau=T-t` 是到期时间。因此，Black-Scholes 模型中 `\ln S_T` 的特征函数为
+
+```
+$E[e^{i\phi\ln S_T}] = \exp\left(i\phi[\ln S_t + (r - \frac{1}{2}\sigma_{BS}^2)\tau] - \frac{1}{2}\phi^2\sigma_{BS}^2\tau\right).$
 ```
 
 Black-Scholes 价格给出：
@@ -774,43 +678,39 @@ Black-Scholes 价格给出：
 ```
 $\frac{\partial U}{\partial t} + \frac{1}{2}\sigma_{BS}^2\frac{\partial^2 U}{\partial S^2} + rS\frac{\partial U}{\partial S} - rU = 0.$
 ```
+
 Black-Scholes 看涨价格给出：
 
 ```
-$C_{BS}(S,t) = S\Phi(d_1) - Ke^{-r\tau}\Phi(d_2)
+$C_{BS}(S,t) = S\Phi(d_1) - Ke^{-r\tau}\Phi(d_2)$
 ```
 
 其中
 
 ```
-d_1 = \frac{\ln(S/K) + (r + \frac{1}{2}\sigma_{BS}^2)\tau}{\sigma_{BS}\sqrt{\tau}}, d_2 = \frac{\ln(S/K) + (r - \frac{1}{2}\sigma_{BS}^2)\tau}{\sigma_{BS}\sqrt{\tau}} = d_1 - \sigma_{BS}\sqrt{\tau}
+$d_1 = \frac{\ln(S/K) + (r + \frac{1}{2}\sigma_{BS}^2)\tau}{\sigma_{BS}\sqrt{\tau}}, d_2 = \frac{\ln(S/K) + (r - \frac{1}{2}\sigma_{BS}^2)\tau}{\sigma_{BS}\sqrt{\tau}} = d_1 - \sigma_{BS}\sqrt{\tau}$
 ```
 
-其中 $\Phi(x)$ 是标准正态分布函数。波动率 $\sigma_{BS}$ 被假设为常数。如果我们将 $\sigma=0$（Heston 模型中的波动率参数），方程 (1.11) 中方差过程的布朗分将消失。因此，从 (1.11) 我们得到随时间变化的确定的波动率。如果进一步设置 $\theta = v_0$，那么根据 (1.11) 
+其中 `\Phi(x)` 是标准正态分布函数。波动率 `\sigma_{BS}` 被假设为常数。如果我们将 `\sigma=0`（Heston 模型中的波动率参数），方程 (1.11) 中方差过程的布朗分将消失。因此，从 (1.11) 我们得到随时间变化的确定的波动率。如果进一步设置 `\theta = v_0`，那么根据 (1.11) 
 
-$E[v_t|v_0]=v_0$，这与时间无关。这将产生恒定的波动率。然而，在 Heston 模型中设置 $\sigma=0$ 和 $\theta=v_0$ 导致我们期望得到与 Black-Scholes 模型产生的相同价格，其中 $\sigma_{BS}=\sqrt{v_0}$ 作为 Black-Scholes 隐含波动率。事实上，将 $\sigma=0$ 和 $\theta=v_0$ 代入 $\lambda=0$ 的 Heston PDE (1.24) 产生 (1.75) 中的 Black-Scholes PDE，其中 $\sigma_{BS}=\sqrt{v_0}$。因此，这些参数值下的 Heston 价格将是 Black-Scholes 模型。
+`E[v_t|v_0]=v_0`，这与时间无关。这将产生恒定的波动率。然而，在 Heston 模型中设置 `\sigma=0` 和 `\theta=v_0` 导致我们期望得到与 Black-Scholes 模型产生的相同价格，其中 `\sigma_{BS}=\sqrt{v_0}` 作为 Black-Scholes 隐含波动率。事实上，将 `\sigma=0` 和 `\theta=v_0` 代入 `\lambda=0` 的 Heston PDE (1.24) 产生 (1.75) 中的 Black-Scholes PDE，其中 `\sigma_{BS}=\sqrt{v_0}`。因此，这些参数值下的 Heston 价格将是 Black-Scholes 模型。
 
-为了将 Black-Scholes 模型实现 Heston 模型的一种特例，我们不能简单地在定价函数中替换 $\sigma=0$，会导致方程 (1.62) 中 $C_t(\tau,\phi)$ 和方程 (1.58) 中 $D_t(\tau,\phi)$ 的表达式出现除以零。相反，我们必须从 (1.47) 的方程组开始。当 $\sigma=0$ 时，(1.51) 中的 Riccati 方程简化为常阶微分
+为了将 Black-Scholes 模型实现 Heston 模型的一种特例，我们不能简单地在定价函数中替换 `\sigma=0`，会导致方程 (1.62) 中 `C_t(\tau,\phi)` 和方程 (1.58) 中 `D_t(\tau,\phi)` 的表达式出现除以零。相反，我们必须从 (1.47) 的方程组开始。当 `\sigma=0` 时，(1.51) 中的 Riccati 方程简化为常阶微分
 
 ```
-
 $\frac{\partial D_i}{\partial \tau} = P_i - Q_i D_i$
 ```
 
-其中 $P_i = u_i\phi - \phi^2$ 且 $Q_i = b_i$。D_i$ 的解为
+其中 `P_i = u_i\phi - \phi^2` 且 `Q_i = b_i`。`D_i$` 的解为
 
 ```
 $D(\tau)$
 ```
 
-对于一般情况 $\sigma > 0$，将 (1.78) 代入 (1.47) 第二个方程中 $C_t$ 的表达式并积分得到
+对于一般情况 `\sigma > 0`，将 (1.78) 代入 (1.47) 第二个方程中 `C_t` 的表达式并积分得到
 
 ```
 $C_t(\tau,\phi) = \rho\tau\phi + a \int_0^{\tau} \frac{(u\phi - \phi^2)(1 - e^{-b_i\tau'})}{b_i} d\tau' + K_1 = \rho\tau\phi + a \frac{(u\phi - \phi^2)}{b_i} \left[ \tau - \frac{1 - e^{-b_i\tau}}{b_i} \right] \quad (1.79)$
-```
-
-
-
 
 
 
@@ -844,11 +744,15 @@ $C(K) = S_0Q^S(S_T > K) - Ke^{-r\tau}Q^S(S_T > K)$。
 
 函数 `HestonProbSigma.sigma` 用于将 Black-Scholes 模型作为 Heston 模型的特殊特例进行实现（当 $\sigma=0$ 时）。为了节省空间，仅展示该函数的关键部分。
 
-```
+``` 
 function y = HestonProbZeroSigma(phi,Pnum)
+
 D = (u*i*phi - phi/2)*(1-exp(-b*tau))/b;
+
 C = (r-q)*i*phi+tau + a*(u*i*phi-0.5*phi^2)/b * ... ;
+
 f = exp(C+D*theta + i*phi*x);
+
 y = real(exp(-i*phi*log(K))*f/i/phi);
 ```
 
@@ -887,203 +791,153 @@ $P_t = Pr(\ln S_t > \ln K) = \frac{1}{2} + \frac{1}{\pi} \int_0^{\infty} Re\left
 
 在第 1 章中，已说明权概率 $P_1$ 和 $P_2$ 是通过特征函数 $f_1$ 和 $f_2$ 的逆傅里叶变换得到的。由于是在不同的测度下，Heston 模型关联两个特征函数 $f_1$ 和 $f_2$ 是合理的。另一方面，似乎应该只有一个特征函数，因为模型中只有一个标的价格。事实上，一些作者用单个特征函数 $f(\phi)$ 来表示 $P_1$ 和 $P_2$。
 
-
-
-
-
 # 26 MATLAB 和 C# 中的 Heston 模型及其扩展
 
-```
 $P_2 = 2 + \frac{1}{\pi} \int_{0}^{\infty} \text{Re} \left[ \frac{e^{-i\phi} f(\phi)}{i\phi} \right] d\phi \quad (2.3)$
-```
 
 这表明 $f_2(\phi) = f(\phi)$ 且 $f_1(\phi) = f(\phi - i)/f(-i)$。在本节中，将展示方程 (2.2) 和 (2.3) 中 $P_i$ 的表达式与 (2.1) 相同。这在 Bakshi 和 Madan (2000) 中得到了解释，以下是他们结果的简化版本。
 
 首先，注意方程 (2.3) 中的 $P_2$ 与 $j=2$时的 (2.1) 相同，但 $P_1$ 与 $j=1$时的 (2.1) 并不相同。“真实的”特征函数是 $f_2$，因为它与概率测度 $Q$ 相关，该测度使得 $W_{1,t}$ 和 $W_{2,t}$ 成为 $S_t$ 和 $v_t$ 的风险中性随机微分方程 (SDE)，且债券作为计价货币。因此，在看涨期权中
 
-```
 $C(K) = S_tP_1 - e^{-rt}KP_2$
-```
 
 我们可以使用 $\ln S_t$ 的概率密度函数 $q(x)$ 来写作：
 
-```
 $P_2 = Q(S_t > \ln K) = \int_{\ln K}^{\infty} q(x)dx$
-```
 
 其中 $x_t = \ln S_t$。
 
 为了评估 $P_2$，用特征函数 $f(\phi)$ 表示累积分布函数 $Q(x_t < x)$
 
-```
 $Q(x_t < x) = \frac{1}{2} - \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{e^{-i\phi}f(\phi)}{i\phi} d\phi. \quad (2.4)$
-```
 
 密度 $q(x)$ 通过对 $x$ 求导得到：
 
-```
 $q(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i\phi}f(\phi)d\phi$.
-```
 
 众周知，特征函数 $f(\phi)$ 的实部是偶函数，虚部是奇函数。这一事实意味着，当在整个直线上积分时，$e^{-i\phi}f(\phi)$ 的虚部将抵消，这在任何 $q(x)$ 为实数的地方都会发生。我们可以直接对实部进行积分，由于实部是偶函数，因此 $(0, \infty)$ 上的积分等于 $(-\infty, 0)$ 上的积分。这意味着密度可以写为：
 
-```
 $q(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \text{Re} [e^{-i\phi}f(\phi)] d\phi = \frac{1}{\pi} \int_{0}^{\infty} \text{Re} [e^{-i\phi}f(\phi)] d\phi \quad (2.5)$
-```
 
 并且 $Q(x_t < x)$ 可以根据方程 (2.4) 写为：
 
-```
 $Q(x_t < x) = \frac{1}{2} - \frac{1}{\pi} \int_{0}^{\infty} \text{Re} \left[ \frac{e^{-i\phi}f(\phi)}{i\phi} \right] d\phi. \quad (2.6)$
-```
 
 ### 积分问题、参数影响与方差建模
 
 实值概率 $P_2$ 是 (2.6) 的补数，在 $\ln K$ 处取值
 
-```
 $P_2 = Q(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi} \right] d\phi \quad (2.7)$
-```
 
 这与方程 (2.3) 相同。为了获得 $P_1$，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数
 
-```
 $\frac{dQ^S}{dQ} = \frac{S_T}{S_0} = \frac{e^{rT}}{\mathbb{E}^Q[e^{rT}]} \quad (2.8)$
-```
 
 我们可以写 $S_t e^{r(T-t)} = \mathbb{E}^Q[S_t]$，在风险中性测度 $Q$ 下，股票价格以无风险利率 $r$ 增长。(2.8) 表明应该通过 Radon-Nikodym 导数从 $q(x)$ 定义一个新密度 $q^s(x)$：
 
-```
-$q^s(x) = \frac{e^x}{\mathbb{E}^Q[e^{x}]}q(x).
-```
+$q^s(x) = \frac{e^x}{\mathbb{E}^Q[e^{x}]}q(x)$.
 
 因此，$q^s$ 的特征函数为：
 
-```
 $\mathbb{E}^Q[e^{i\phi}] = \int_{-\infty}^{\infty} e^{i\phi x} q^s(x)dx = \frac{1}{\mathbb{E}^Q[e^{x}]} \int_{-\infty}^{\infty} e^{i\phi x} q(x)dx. \quad (9)$
-```
 
 注意 $\mathbb{E}^Q[e^{x}]$ 是一个常数，可以从积分中提取。同样注意由于 $x_t$ 的特征函数是 $\mathbb{E}^Q[e^{i\phi}] = f(\phi)$（此处修正逻辑），最后方程 (9) 右侧的积分可以在 $\phi - i$ 处取值：
 
-```
-$\int_{-\infty}^{\infty} e^{i(\phi-i)x} q(x)dx = \mathbb{E}^Q[e^{i(\phi-i)x_T}].
-```
+$\int_{-\infty}^{\infty} e^{i(\phi-i)x} q(x)dx = \mathbb{E}^Q[e^{i(\phi-i)x_T}]$.
 
 最后表达式是 $x_T$ 在 $\phi - i$ 处的特征函数。因此，密度 $q^s(x)$ 的特征函数可以用 $q(x)$ 在 $\phi - i$ 处的特征函数表示：
 
-```
 $\mathbb{E}^Q[e^{i\phi}] = \frac{f(-i)}{S_0 e^{r(T-t)}} \dots$
-```
 
 当股票支付连续股息 $q$ 时，(10) 的分母变为 $e^{(r-q)(T-t)}S_0$。在第 1 章中显示：
 
-```
-$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K).
-```
+$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K)$.
 
 为了证明 $Q^S(x_T > \ln K)$ 可以用方程 (2.2) 的形式表示，对 (10) 中的特征函数应用逆变换：
 
-```
 $P_1 = Q^S(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi} \right] d\phi \quad (11)$
-```
 
 这与方程 (2.2) 相同。仍然需要证明的是 $q^s(x)$ 可以作为密度函数，这要求 $q^s(x) \geq 0$ 且 $q^s(x)$ 积分为 1。要满足第一个要求，从方程 (2.8) 注意：
 
-```
-$q^s(x) = \frac{S_t}{S_0}q(x) > 0.
-```
+$q^s(x) = \frac{S_t}{S_0}q(x) > 0$.
 
 现在考虑 $q^s(x)$ 在 $(0, \infty)$ 上的积分：
 
-```
 $\int_0^{\infty} q^s(x)dx = \frac{\int_0^{\infty} e^{x_T}dx}{E[e^{x_T}]} = \frac{E[e^{x_T}]}{E[e^{x_T}]} = 1.$
-```
 
 结果是看涨价格可以写为：
 
-```
-$C(K) = S_tP_1 - e^{-r(T-t)}KP_2
-```
+$C(K) = S_tP_1 - e^{-r(T-t)}KP_2$
 
 其中方程 (11) 中的 $P_1$ 和方程 (2.7) 中的 $P_2$ 分别从 $x_T = \ln S_T$ 的特征函数获得。这是一个适用于许多模型的通用设置，而 Heston 模型，如 Bakshi 和 Madan (2000) 所示。通常被称为期权定价的特征函数法。为了说明，在 Black-Scholes 模型中，$x_T$ 服从正态分布，均值为 $\ln(S_t) + (r - \frac{\sigma_{BS}^2}{2})\tau$，方差为 $\sigma_{BS}^2 \tau$，因此 $x_T$ 的特征函数为：
 
-```
-$f(\phi) = \exp\left(i\phi [\ln S_t + (r - \frac{\sigma_{BS}^2}{2})\tau] - \frac{1}{2}\sigma_{BS}^2 \tau \phi^2\right).
-```
+$f(\phi) = \exp\left(i\phi [\ln S_t + (r - \frac{\sigma_{BS}^2}{2})\tau] - \frac{1}{2}\sigma_{BS}^2 \tau \phi^2\right)$.
 
 密度 $q(x)$ 通过对 $x$ 求导得到：
 
-```
 $q(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-i\phi}f(\phi)d\phi$.
-```
 
 众周知，特征函数 $f(\phi)$ 的实部是偶函数，虚部是奇函数。这一事实意味着，当在整个直线上积分时，$e^{-i\phi}f(\phi)$ 的虚部将抵消，这在任何 $q(x)$ 为实数的地方都会发生。我们可以直接对实部进行积分，由于实部是偶函数，因此 $(0, \infty)$ 上的积分等于 $(-\infty, 0)$ 上的积分。这意味着密度可以写为：
 
-```
 $q(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \text{Re} [e^{-i\phi}f(\phi)] d\phi = \frac{1}{\pi} \int_{0}^{\infty} \text{Re} [e^{-i\phi}f(\phi)] d\phi \quad (2.5)$
-```
 
 并且 $Q(x_t < x)$ 可以根据方程 (2.4) 写为：
 
-```
 $Q(x_t < x) = \frac{1}{2} - \frac{1}{\pi} \int_{0}^{\infty} \text{Re} \left[ \frac{e^{-i\phi}f(\phi)}{i\phi} \right] d\phi. \quad (2.6)$
-```
 
 实值概率 $P_2$ 是 (2.6) 的补数，在 $\ln K$ 处取值：
 
-```
 $P_2 = Q(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi} \right] d\phi \quad (2.7)$
-```
 
 这与方程 (2.3) 相同。为了获得 $P_1$，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数：
 
-```
 $\frac{dQ^S}{dQ} = \frac{S_T}{S_0} = \frac{e^{rT}}{\mathbb{E}^Q[e^{rT}]} \quad (2.8)$
-```
 
-我们可以写 $S_t e^{r(T-t)} = \mathbb{E}^Q[S_t]$，在风险中性测度 $Q$ 下，股票价格以无风险利率 $r$ 增长。(2.8) 表明应该通过 Radon-Nikodym 导数从 $q(x)$ 定义一个新密度 $q^s(x)$：
+
+
+我们可以写 `$S_t e^{r(T-t)} = \mathbb{E}^Q[S_t]$`，在风险中性测度 `$Q$` 下，股票价格以无风险利率 `$r$` 增长。`(2.8)` 表明应该通过 Radon-Nikodym 导数从 `$q(x)$` 定义一个新密度 `$q^s(x)$`：
 
 ```
 $q^s(x) = \frac{e^x}{\mathbb{E}^Q[e^{x}]}q(x).
 ```
 
-因此，$q^s$ 的特征函数为：
+因此，`$q^s$` 的特征函数为：
 
 ```
 $\mathbb{E}^Q[e^{i\phi}] = \int_{-\infty}^{\infty} e^{i\phi x} q^s(x)dx = \frac{1}{\mathbb{E}^Q[e^{x}]} \int_{-\infty}^{\infty} e^{i\phi x} q(x)dx. \quad (9)$
 ```
 
-注意 $\mathbb{E}^Q[e^{x}]$ 是一个常数，可以从积分中提取。同样注意由于 $x_t$ 的特征函数是 $\mathbb{E}^Q[e^{i\phi}] = f(\phi)$，最后方程 (9) 右侧的积分可以在 $\phi - i$ 处取值：
+注意 `$\mathbb{E}^Q[e^{x}]$` 是一个常数，可以从积分中提取。同样注意由于 `$x_t$` 的特征函数是 `$\mathbb{E}^Q[e^{i\phi}] = f(\phi)$`，最后方程 `(9)` 右侧的积分可以在 `$\phi - i$` 处取值：
 
 ```
 $\int_{-\infty}^{\infty} e^{i(\phi-i)x} q(x)dx = \mathbb{E}^Q[e^{i(\phi-i)x_T}].$
 ```
 
-最后表达式是 $x_T$ 在 $\phi - i$ 处的特征函数。因此，密度 $q^s(x)$ 的特征函数可以用 $q(x)$ 在 $\phi - i$ 处的特征函数表示：
+最后表达式是 `$x_T$` 在 `$\phi - i$` 处的特征函数。因此，密度 `$q^s(x)$` 的特征函数可以用 `$q(x)$` 在 `$\phi - i$` 处的特征函数表示：
 
 ```
 $\mathbb{E}^Q[e^{i\phi}] = \frac{f(-i)}{S_0 e^{r(T-t)}} \dots (10)$
 ```
 
-当股票支付连续股息 $q$ 时，(10) 的分母变为 $e^{(r-q)(T-t)}S_0$。在第 1 章中显示：
+当股票支付连续股息 `$q$` 时，`(10)` 的分母变为 `$e^{(r-q)(T-t)}S_0$`。在第 1 章中显示：
 
 ```
-$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K).
+$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K).$
 ```
 
-为了证明 $Q^S(x_T > \ln K)$ 可以用方程 (2.2) 的形式表示，对 (10) 中的特征函数应用逆变换：
+为了证明 `$Q^S(x_T > \ln K)$` 可以用方程 `(2.2)` 的形式表示，对 `(10)` 中的特征函数应用逆变换：
 
 ```
 $P_1 = Q^S(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi f(-i)} \right] d\phi \quad (11)$
 ```
 
-这与方程 (2.2) 相同。仍然需要证明的是 $q^s(x)$ 可以作为密度函数，这要求 $q^s(x) \geq 0$ 且 $q^s(x)$ 积分为 1。要满足第一个要求，从方程 (2.8) 注意：
+这与方程 `(2.2)` 相同。仍然需要证明的是 `$q^s(x)$` 可以作为密度函数，这要求 `$q^s(x) \geq 0$` 且 `$q^s(x)$` 积分为 1。要满足第一个要求，从方程 `(2.8)` 注意：
 
 ```
-$q^s(x) = \frac{S_t}{S_0}q(x) > 0.
+$q^s(x) = \frac{S_t}{S_0}q(x) > 0.$
 ```
 
-现在考虑 $q^s(x)$ 在 $(0, \infty)$ 上的积分：
+现在考虑 `$q^s(x)$` 在 `$(0, \infty)$` 上的积分：
 
 ```
 $\int_0^{\infty} q^s(x)dx = \frac{\int_0^{\infty} e^{x_T}dx}{E[e^{x_T}]} = \frac{E[e^{x_T}]}{E[e^{x_T}]} = 1.$
@@ -1092,72 +946,72 @@ $\int_0^{\infty} q^s(x)dx = \frac{\int_0^{\infty} e^{x_T}dx}{E[e^{x_T}]} = \frac
 结果是看涨价格可以写为：
 
 ```
-$C(K) = S_tP_1 - e^{-r(T-t)}KP_2
+$C(K) = S_tP_1 - e^{-r(T-t)}KP_2$
 ```
 
-其中方程 (11) 中的 $P_1$ 和方程 (2.7) 中的 $P_2$ 分别从 $x_T = \ln S_T$ 的特征函数获得。这是一个适用于许多模型的通用设置，而非 Heston 模型，如 Bakshi 和 Madan (2000) 所示。通常被称为期权定价的特征函数法。为了说明，在 Black-Scholes 模型中，$x_T$ 服从正态分布，均值为 $\ln(S_t) + (r - \frac{\sigma_{BS}^2}{2})\tau$，方差为 $\sigma_{BS}^2 \tau$，因此 $x_T$ 的特征函数为：
+其中方程 `(11)` 中的 `$P_1$` 和方程 `(2.7)` 中的 `$P_2$` 分别从 `$x_T = \ln S_T$` 的特征函数获得。这是一个适用于许多模型的通用设置，而非 Heston 模型，如 Bakshi 和 Madan `(2000)` 所示。通常被称为期权定价的特征函数法。为了说明，在 Black-Scholes 模型中，`$x_T$` 服从正态分布，均值为 `$\ln(S_t) + (r - \frac{\sigma_{BS}^2}{2})\tau$`，方差为 `$\sigma_{BS}^2 \tau$`，因此 `$x_T$` 的特征函数为：
 
 ```
-$f(\phi) = \exp\left(i\phi [\ln S_t + (r - \frac{\sigma_{BS}^2}{2})\tau] - \frac{1}{2}\sigma_{BS}^2 \tau \phi^2\right).
+$f(\phi) = \exp\left(i\phi [\ln S_t + (r - \frac{\sigma_{BS}^2}{2})\tau] - \frac{1}{2}\sigma_{BS}^2 \tau \phi^2\right).$
 ```
 
 ### 积分问题、参数影响与方差建模
 
-实值概率 $P_2$ 是 (2.6) 的补数，在 $\ln K$ 处取值：
+实值概率 `$P_2$` 是 `(2.6)` 的补数，在 `$\ln K$` 处取值：
 
 ```
 $P_2 = Q(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi} \right] d\phi \quad (2.7)$
 ```
 
-这与方程 (2.3) 相同。为了获得 $P_1$，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数：
+这与方程 `(2.3)` 相同。为了获得 `$P_1$`，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数：
 
 ```
 $\frac{dQ^S}{dQ} = \frac{S_T}{S_0} = \frac{e^{rT}}{\mathbb{E}^Q[e^{rT}]} \quad (2.8)$
 ```
 
-我们可以写 $S_t e^{r(T-t)} = \mathbb{E}^Q[S_t]$，在风险中性测度 $Q$ 下，股票价格以无风险利率 $r$ 增长。(2.8) 表明应该通过 Radon-Nikodym 导数从 $q(x)$ 定义一个新密度 $q^s(x)$：
+我们可以写 `$S_t e^{r(T-t)} = \mathbb{E}^Q[S_t]$`，在风险中性测度 `$Q$` 下，股票价格以无风险利率 `$r$` 增长。`(2.8)` 表明应该通过 Radon-Nikodym 导数从 `$q(x)$` 定义一个新密度 `$q^s(x)$`：
 
 ```
-$q^s(x) = \frac{e^x}{\mathbb{E}^Q[e^{x}]}q(x).
+$q^s(x) = \frac{e^x}{\mathbb{E}^Q[e^{x}]}q(x).$
 ```
 
-因此，$q^s$ 的特征函数为：
+因此，`$q^s$` 的特征函数为：
 
 ```
 $\mathbb{E}^Q[e^{i\phi}] = \int_{-\infty}^{\infty} e^{i\phi x} q^s(x)dx = \frac{1}{\mathbb{E}^Q[e^{x}]} \int_{-\infty}^{\infty} e^{i\phi x} q(x)dx. \quad (9)$
 ```
 
-注意 $\mathbb{E}^Q[e^{x}]$ 是一个常数，可以从积分中提取。同样注意由于 $x_t$ 的特征函数是 $\mathbb{E}^Q[e^{i\phi}] = f(\phi)$，最后方程 (9) 右侧的积分可以在 $\phi - i$ 处取值：
+注意 `$\mathbb{E}^Q[e^{x}]$` 是一个常数，可以从积分中提取。同样注意由于 `$x_t$` 的特征函数是 `$\mathbb{E}^Q[e^{i\phi}] = f(\phi)$`，最后方程 `(9)` 右侧的积分可以在 `$\phi - i$` 处取值：
 
 ```
 $\int_{-\infty}^{\infty} e^{i(\phi-i)x} q(x)dx = \mathbb{E}^Q[e^{i(\phi-i)x_T}].$
 ```
 
-最后表达式是 $x_T$ 在 $\phi - i$ 处的特征函数。因此，密度 $q^s(x)$ 的特征函数可以用 $q(x)$ 在 $\phi - i$ 处的特征函数表示：
+最后表达式是 `$x_T$` 在 `$\phi - i$` 处的特征函数。因此，密度 `$q^s(x)$` 的特征函数可以用 `$q(x)$` 在 `$\phi - i$` 处的特征函数表示：
 
 ```
 $\mathbb{E}^Q[e^{i\phi}] = \frac{f(-i)}{S_0 e^{r(T-t)}} \dots (10)$
 ```
 
-当股票支付连续股息 $q$ 时，(10) 的分母变为 $e^{(r-q)(T-t)}S_0$。在第 1 章中显示：
+当股票支付连续股息 `$q$` 时，`(10)` 的分母变为 `$e^{(r-q)(T-t)}S_0$`。在第 1 章中显示：
 
 ```
-$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K).
+$e^{rt} \mathbb{E}^Q[S_t 1_{S_T>K}] = S_0 Q^S(S_T > K).$
 ```
 
-为了证明 $Q^S(x_T > \ln K)$ 可以用方程 (2.2) 的形式表示，对 (10) 中的特征函数应用逆变换：
+为了证明 `$Q^S(x_T > \ln K)$` 可以用方程 `(2.2)` 的形式表示，对 `(10)` 中的特征函数应用逆变换：
 
 ```
 $P_1 = Q^S(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi f(-i)} \right] d\phi \quad (11)$
 ```
 
-这与方程 (2.2) 相同。仍然需要证明的是 $q^s(x)$ 可以作为密度函数，这要求 $q^s(x) \geq 0$ 且 $q^s(x)$ 积分为 1。要满足第一个要求，从方程 (2.8) 注意：
+这与方程 `(2.2)` 相同。仍然需要证明的是 `$q^s(x)$` 可以作为密度函数，这要求 `$q^s(x) \geq 0$` 且 `$q^s(x)$` 积分为 1。要满足第一个要求，从方程 `(2.8)` 注意：
 
 ```
-$q^s(x) = \frac{S_t}{S_0}q(x) > 0.
+$q^s(x) = \frac{S_t}{S_0}q(x) > 0.$
 ```
 
-现在考虑 $q^s(x)$ 在 $(0, \infty)$ 上的积分：
+现在考虑 `$q^s(x)$` 在 `$(0, \infty)$` 上的积分：
 
 ```
 $\int_0^{\infty} q^s(x)dx = \frac{\int_0^{\infty} e^{x_T}dx}{E[e^{x_T}]} = \frac{E[e^{x_T}]}{E[e^{x_T}]} = 1.$
@@ -1165,27 +1019,23 @@ $\int_0^{\infty} q^s(x)dx = \frac{\int_0^{\infty} e^{x_T}dx}{E[e^{x_T}]} = \frac
 
 ### 被积函数的问题
 
-实值概率 $P_2$ 是 (2.6) 的补数，在 $\ln K$ 处取值：
+实值概率 `$P_2$` 是 `(2.6)` 的补数，在 `$\ln K$` 处取值：
 
 ```
 $P_2 = Q(x_T > \ln K) = \frac{1}{2} - \frac{1}{\pi}\int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f(\phi)}{i\phi} \right] d\phi \quad (2.7)$
 ```
 
-这与方程 (2.3) 相同。为了获得 $P_1$，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数：
+这与方程 `(2.3)` 相同。为了获得 `$P_1$`，调用计价货币转换。回顾第 1 章中的 Radon-Nikodym 导数：
 
 ```
 $\frac{dQ^S}{dQ} = \frac{S_T}{S_0} = \frac{e^{rT}}{\mathbb{E}^Q[e^{rT}]} \quad (2.8)$
 ```
 
-第一个问题是被积函数在点 0 处定义，尽管积分范围是 $[0, \infty)$。为了避免原点引起的误差，积分必须从靠近零的小点开始。第二个问题是被积函数可能包含间断点。为了说明，图 2.1 显示了 $\phi \in (0,10]$ 范围内 $f_1$ 的两个被积函数。第一个被积函数的到期时间为 $\tau=3$，标准差为 $\sigma=0.75$，第二个为 $\tau=1$，$\sigma=0.09$。积分使用 $k=10$，$\tau=0.03$，$\rho=-0.9$，$r=0$，现价 $S_0=100$，执行价 $K=100$。
+第一个问题是被积函数在点 `0` 处定义，尽管积分范围是 `[0, \infty)`。为了避免原点引起的误差，积分必须从靠近零的小点开始。第二个问题是被积函数可能包含间断点。为了说明，图 2.1 显示了 `$\phi \in (0,10]$` 范围内 `$f_1$` 的两个被积函数。第一个被积函数的到期时间为 `$\tau=3$`，标准差为 `$\sigma=0.75$`，第二个为 `$\tau=1$`，`$\sigma=0.09$`。积分使用 `$k=10$`，`$\tau=0.03$`，`$\rho=-0.9$`，`$r=0$`，现价 `$S_0=100$`，执行价 `$K=100$`。
 
-第一个被积函数是平滑的，没有数值不稳定性。另一方面，第二个被积函数在 $\phi=1.7$ 和 $\phi=5$ 附近有间断点，且非常陡峭。在随后的章节中，我们介绍了 Albrecher 等人 (2007) 对被积函数的简单修改，这有效地消除了这些间断点。
+第一个被积函数是平滑的，没有数值不稳定性。另一方面，第二个被积函数在 `$\phi=1.7$` 和 `$\phi=5$` 附近有间断点，且非常陡峭。在随后的章节中，我们介绍了 Albrecher 等人 `(2007)` 对被积函数的简单修改，这有效地消除了这些间断点。
 
-最后，可能出现的第三个问题是被积函数剧烈震荡。在图 2.2 中，第一个被积函数的到期时间为 $\tau=1/52$ 年，标准差为 $\sigma=0.175$；第二个为 $\tau=1$ 年，标准差为 $\sigma=0.09$，现价 $S_0=10$。图表范围积分范围 $\phi \in (0, 100]$。第一个被积函数（黑线）显示出震荡，这还没有被抑制，数值积分需要延伸得远得多。
-
-
-
-
+最后，可能出现的第三个问题是被积函数剧烈震荡。在图 2.2 中，第一个被积函数的到期时间为 `$\tau=1/52$` 年，标准差为 `$\sigma=0.175$`；第二个为 `$\tau=1$` 年，标准差为 `$\sigma=0.09$`，现价 `$S_0=10$`。图表范围积分范围 `$\phi \in (0, 100]$`。第一个被积函数（黑线）显示出震荡，这还没有被抑制，数值积分需要延伸得远得多。
 
 ### 30 MATLAB 和 C# 中的 Heston 模型及其扩展
 
@@ -1197,13 +1047,13 @@ $\frac{dQ^S}{dQ} = \frac{S_T}{S_0} = \frac{e^{rT}}{\mathbb{E}^Q[e^{rT}]} \quad (
 
 图 2.2 Heston 被积函数中的震荡
 
-直到 $\phi = 100$ 才能收敛。此外，被积函数在原点附近非常陡峭，这要求数值积分使用非常细的网格。第二个被积函数（红线）表现良好，不会产生数值上的困难。它没有震荡，在任何地方都不陡峭，并且从 $\phi = 10$ 开始迅速衰减至零。被积函数的高震荡通常与短期期权有关。
+直到 `$\phi = 100$` 才能收敛。此外，被积函数在原点附近非常陡峭，这要求数值积分使用非常细的网格。第二个被积函数（红线）表现良好，不会产生数值上的困难。它没有震荡，在任何地方都不陡峭，并且从 `$\phi = 10$` 开始迅速衰减至零。被积函数的高震荡通常与短期期权有关。
 
 ### 小 Heston 陷阱 (THE LITTLE HESTON TRAP)
 
-Albrecher 等人 (2007) 解释道，关于 Heston 模型的学术文献体现了 Heston 特征函数的两种不同公式。第一种是 Heston (1993) 的原始公式，而第二种的形式略有不同。Albrecher 等人 (2007) 显示这两种公式是等价的，但第二种导出的特征函数性质更好，且更适用于数值积分。
+Albrecher 等人 `(2007)` 解释道，关于 Heston 模型的学术文献体现了 Heston 特征函数的两种不同公式。第一种是 Heston `(1993)` 的原始公式，而第二种的形式略有不同。Albrecher 等人 `(2007)` 显示这两种公式是等价的，但第二种导出的特征函数性质更好，且更适用于数值积分。
 
-Heston 特征函数的原始公式是在第 1 章中推导的。要推导第二种公式，首先注意到第 1 章中 $D$ 的解在分子和分母中可以乘以 $\exp(-d\tau)$，这导致等价的：
+Heston 特征函数的原始公式是在第 1 章中推导的。要推导第二种公式，首先注意到第 1 章中 `$D$` 的解在分子和分母中可以乘以 `$\exp(-d\tau)$`，这导致等价的：
 
 ```
 $D_j = \frac{b_j - \rho\sigma\varphi + d_j}{g_j\sigma^2} \left( \frac{1 - e^{-d_j,\tau}}{1 - e^{-d_j,\tau}/g_j} \right) - \frac{b_j - \rho\sigma\varphi - d_j}{\sigma^2} \left( \frac{1 - e^{-d_j,\tau}}{1 - c_j e^{-d_j,\tau}} \right)$ (2.14)
@@ -1211,13 +1061,11 @@ $D_j = \frac{b_j - \rho\sigma\varphi + d_j}{g_j\sigma^2} \left( \frac{1 - e^{-d_
 
 其中
 
-
-
 ```
 $c_j = \frac{1}{g_j} \frac{b_j - \rho\sigma\varphi - d_j}{b_j - \rho\sigma\varphi + d_j}$ (2.15)
 ```
 
-$C$ 解中的对数可以写为：
+`$C$` 解中的对数可以写为：
 
 ```
 $d_j\tau - 2\ln \left[ \frac{1 - g^{d_j,\tau}}{1 - g_j} \right] = d_j\tau - 2\ln \left[ \frac{e^{d_j,\tau}}{1 - g_j} \right]$
@@ -1225,7 +1073,7 @@ $= d_j\tau - 2d_j\tau - 2\ln \left[ \frac{e^{-d_j,\tau}}{1 - g_j} \right]$
 $= -d_j\tau - 2\ln \left[ \frac{1 - c_j e^{-d_j,\tau}}{1 - c_j} \right]$ (2.16)
 ```
 
-这意味着 $C_j$ 可以写成等价的形式：
+这意味着 `$C_j$` 可以写成等价的形式：
 
 ```
 $C_j = ri\varphi\tau + \frac{K\theta}{\sigma^2} \left((b_j - \rho\sigma\varphi - d_j), \tau - 2\ln \left( \frac{1 - c_j e^{-d_j,\tau}}{1 - c_j} \right) \right)$ (2.17)
@@ -1233,10 +1081,11 @@ $C_j = ri\varphi\tau + \frac{K\theta}{\sigma^2} \left((b_j - \rho\sigma\varphi -
 
 ### 32 MATLAB 和 C# 中的 Heston 模型及其扩展
 
-实现此函数非常简单，只需将 $C$ 和 $D$ 替换为方程 (2.17) 和 (2.14) 中的略有不同的形式。随后的 HestonIntegrand 函数使用原始 Heston (1993) 公式和 Albrecher 等人 (2007) 的“Little Trap”公式计算特征函数。该函数部分如下：
+实现此函数非常简单，只需将 `$C$` 和 `$D$` 替换为方程 `(2.17)` 和 `(2.14)` 中的略有不同的形式。随后的 `HestonIntegrand` 函数使用原始 Heston `(1993)` 公式和 Albrecher 等人 `(2007)` 的“Little Trap”公式计算特征函数。该函数部分如下：
 
 ```matlab
 function y = HestonIntegrand(phi,..., Trap)
+
 d = sqrt(rho*sigma*phi + i)^2 - a ...
 g = (b - rho*sigma*phi + d) / ...;
 if Trap=1
@@ -1252,11 +1101,12 @@ elif Trap=0
     D = (b - rho*sigma*phi + d)/sigma^2 * ...;
 end
 f = exp(C + D*v0 + i*phi);
-return real(-i*phi+log(K))*f/i/phi);```
+return real(-i*phi+log(K))*f/i/phi);
+```
 
-C# 中的实现使用 HestonProb() 函数完成且非常相似，因此此处给出 C# 代码。Albrecher 等人 (2007) 解释道，尽管 Heston 的原始公式和他们的公式是相同的，但通过绘制下图特征函数 $f_t$ 来说明模型的实现：![](img/bc3df3b6c26c2272307f56b6cf75ef87_43_0.png)。使用了 Albrecher 等人 (2007) 相同的参数值：均值 $\kappa=1.5678$、$\sigma=0.5751$、$\rho=-0.5711$、$\theta=0.0398$ 以及 $v_0=0.0175$。此外，我们使用 $S=K=100$ 和到期时间 $\tau=5$。图 2.3 被积函数使用积分范围 $\phi=[0, 10]$。原始 Heston (1993) 公式（黑线）在 $\phi\approx 3.5$ 处显示出不连续性，这通过红线的 Albrecher 等人 (2007) 公式得到了修正。
+C# 中的实现使用 `HestonProb()` 函数完成且非常相似，因此此处给出 C# 代码。Albrecher 等人 `(2007)` 解释道，尽管 Heston 的原始公式和他们的公式是相同的，但通过绘制下图特征函数 `$f_t$` 来说明模型的实现：![](img/bc3df3b6c26c2272307f56b6cf75ef87_43_0.png)。使用了 Albrecher 等人 `(2007)` 相同的参数值：均值 `$\kappa=1.5678$`、`$\sigma=0.5751$`、`$\rho=-0.5711$`、`$\theta=0.0398$` 以及 `$v_0=0.0175$`。此外，我们使用 `$S=K=100$` 和到期时间 `$\tau=5$`。图 2.3 被积函数使用积分范围 `$\phi=[0, 10]$`。原始 Heston `(1993)` 公式（黑线）在 `$\phi\approx 3.5$` 处显示出不连续性，这通过红线的 Albrecher 等人 `(2007)` 公式得到了修正。
 
-积分问题、参数影响和方差建模![](img/bc3df3b6c26c2272307f56b6cf75ef87_44_0.png) **图 2.3** $f_2$ 的被积函数，原始与 Little Trap 公式
+积分问题、参数影响和方差建模![](img/bc3df3b6c26c2272307f56b6cf75ef87_44_0.png) **图 2.3** `$f_2$` 的被积函数，原始与 Little Trap 公式
 
 ```matlab
 phi = 0.0001:.01:10;
@@ -1274,50 +1124,46 @@ AlbrecherP2(x) = HestonIntegrand(phi(x), ..., Pnum, 1);
 end;
 ```
 
+
+
 最后，可以使用 Kahl 和 Jäckel (2005) 的旋转算法来克服原始 Heston 公式带来的不连续性。我们在书中没有介绍旋转算法，但建议感兴趣的读者参考 Kahl 和 Jäckel (2005)，以及参考 Zhu (2010) 的书籍获取替代算法。然而，由于“Little Trap”公式始终有效，这些其他算法已有些过时。
 
-### 34 MATLAB 和 C# 中的 Heston 模型及其扩展
+# MATLAB 和 C# 中的 Heston 模型及其扩展
 
-### Heston 参数的影响
+## Heston 参数的影响
 
 ### Heston 终端价格
 
-在 Heston 模型下，到期日的对数价格分布 $ln S_T$ 可以根据参数设置表现出偏度和超额峰度。在接下来的章节中，研究了相关性 $\rho$ 和方差率 $\sigma$ 对 $ln S_T$ 分布的影响。
+在 Heston 模型下，到期日的对数价格分布 `$ln S_T$` 可以根据参数设置表现出偏度和超额峰度。在接下来的章节中，研究了相关性 `$\rho$` 和方差率 `$\sigma$` 对 `$ln S_T$` 分布的影响。
 
 ### 相关性和方差率的影响
 
-相关性参数 $\rho$ 控制 $ln S_T$ 密度以及 $[0, T]$ 上连续收益率 $ln(S_T/S_0)$ 的偏度。当 $\rho > 0$ 时，概率密度将为正偏；当 $\rho < 0$ 时，密度将为负偏。本节中的图使用 Heston (1993) 表 1 中的参数设置来证明这一点：$v_0 = 0.01, \kappa = 2, \theta = 0$ 且 $\sigma = 0.1$。$ln S_T$ 的密度可以通过反转其特征函数 $f_t(\phi)$（如方程 2.5 所示）来恢复。这些图使用了 Albrecher 等人 (2007) 相同的参数值：$\rho = -0.8, \rho = 0$ 和 $\rho = 0.8$。图 2.3 代表了文章中的 $f_2$ 图。被积函数使用积分范围 $\phi=[0, 10]$。原始 Heston (1993) 公式（黑线）在 $\phi\approx 3.5$ 处显示出不连续性，这通过红线的 Albrecher 等人 (2007) 公式得到了修正。
+相关性参数 `$\rho$` 控制 `$ln S_T$` 密度以及 `[0, T]` 上连续收益率 `$ln(S_T/S_0)$` 的偏度。当 `$\rho > 0$` 时，概率密度将为正偏；当 `$\rho < 0$` 时，密度将为负偏。本节中的图使用 Heston (1993) 表 1 中的参数设置来证明这一点：`$v_0 = 0.01, \kappa = 2, \theta = 0$` 且 `$\sigma = 0.1$`。`$ln S_T$` 的密度可以通过反转其特征函数 `$f_t(\phi)$`（如方程 2.5 所示）来恢复。这些图使用了 Albrecher 等人 (2007) 相同的参数值：`$\rho = -0.8, \rho = 0$` 和 `$\rho = 0.8$`。图 2.3 代表了文章中的 `$f_2$` 图。被积函数使用积分范围 `$\phi=[0, 10]$`。原始 Heston (1993) 公式（黑线）在 `$\phi\approx 3.5$` 处显示出不连续性，这通过红线的 Albrecher 等人 (2007) 公式得到了修正。
 
-正如 Heston (1993) 所解释的，正相关性意味着股价上涨时方差也会增加。这具有加厚右尾的![](img/bc3df3b6c26c2272307f56b6cf75ef87_45_0.png) **图 2.4** 相关性对密度分布的影响，以及变薄左尾的效果。当相关性为负时，情况相反。在下一节中将证明，负相关会导致深度实值期权在 Heston 模型中的定价比 Black-Scholes 模型高。
+正如 Heston (1993) 所解释的，正相关性意味着股价上涨时方差也会增加。这具有加厚右尾的 **图 2.4** 相关性对密度分布的影响，以及变薄左尾的效果。当相关性为负时，情况相反。在下一节中将证明，负相关会导致深度实值期权在 Heston 模型中的定价比 Black-Scholes 模型高。
 
-方差率参数 $\sigma$ 控制峰度。当 $\sigma$ 较高时，方差过程离散程度很高，因此预期收益分布在 $\sigma$ 较小时具有更高的峰度和更厚的尾部。这在图 2.5 中所示（对于 $\sigma \approx 0, 0.2, 0.4$）。该图类似于 Heston (1993) 的图 3。
+方差率参数 `$\sigma$` 控制峰度。当 `$\sigma$` 较高时，方差过程离散程度很高，因此预期收益分布在 `$\sigma$` 较小时具有更高的峰度和更厚的尾部。这在图 2.5 中所示（对于 `$\sigma \approx 0, 0.2, 0.4$`）。该图类似于 Heston (1993) 的图 3。
 
 ### 与 Black-Scholes 价格的比较
 
-图 2.4 和 2.5 的结果表明，由于 Heston 模型产生的收益偏度，Black-Scholes 模型生成的期权价格是合理的。在这个意义上，我们研究了相关性参数 $\rho$ 和方差率参数 $\sigma$ 对看涨价格的影响。
-
-
-
-
+图 2.4 和 2.5 的结果表明，由于 Heston 模型产生的收益偏度，Black-Scholes 模型生成的期权价格是合理的。在这个意义上，我们研究了相关性参数 `$\rho$` 和方差率参数 `$\sigma$` 对看涨价格的影响。
 
 ## 表 2.1 不同相关性下的价格对比
 
-| | ρ > 0 | ρ < 0 |
+| | `$\rho > 0$` | `$\rho < 0$` |
 |---|---|---|
 | 外值看权 (OTM Calls) | Heston > BS | Heston < BS |
 | 实值看权 (ITM Calls) | Heston < BS | Heston > BS |
 
-当 $\rho < 0$ 时，$\ln S_t$ 的分布呈现负偏态，情况则相反：左尾分配的权重更多，右尾的权重较少。这意味着 Heston 模型生成的深度实值看权价格应该比 Black-Scholes 模型生成的看权更贵，而深度外值看权价格则应该更便宜。表 2.1 总结了这些观察结果。
+当 `$\rho < 0$` 时，`$\ln S_t$` 的分布呈现负偏态，情况则相反：左尾分配的权重更多，右尾的权重较少。这意味着 Heston 模型生成的深度实值看权价格应该比 Black-Scholes 模型生成的看权更贵，而深度外值看权价格则应该更便宜。表 2.1 总结了这些观察结果。
 
-图 2.6 重现了 Heston (1993) 中的图 2。它绘制了两种模型之间看权价格的差值（Heston 价格减去 Black-Scholes 价格），随着现货价格从 $70 变化到 $140。我们使用了本节之前示例中相同的参数设置，对应于 Heston (1993) 的表 1。然而，为了 Heston 和 Black-Scholes 的价格对比有效，Black-Scholes 波动率必须匹配 Heston 价格。这可以通过定义收益率分布 $\ln(S_t/S_0)$ 标准差的 Black-Scholes 波动率 $\sigma_{BS}$ 来完成。收益率的矩可以从
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_47_0.png)
+图 2.6 重现了 Heston (1993) 中的图 2。它绘制了两种模型之间看权价格的差值（Heston 价格减去 Black-Scholes 价格），随着现货价格从 `$70` 变化到 `$140`。我们使用了本节之前示例中相同的参数设置，对应于 Heston (1993) 的表 1。然而，为了 Heston 和 Black-Scholes 的价格对比有效，Black-Scholes 波动率必须匹配 Heston 价格。这可以通过定义收益率分布 `$\ln(S_t/S_0)$` 标准差的 Black-Scholes 波动率 `$\sigma_{BS}$` 来完成。收益率的矩可以从
 
 图 2.6 相关性对 Heston 价格相对于 Black-Scholes 的影响
 
 ### 积分问题、参数影响与方差建模
 
-通过 $x_T = \ln S_T$ 的矩获得，这些矩可以通过对特征函数 $f_T(\phi)$ 求导得到：
+通过 `$x_T = \ln S_T$` 的矩获得，这些矩可以通过对特征函数 `$f_T(\phi)$` 求导得到：
 
 ```
 $E[x_T^n] = i^n \left[ \frac{d^n}{d\phi^n} f_2(\phi) \right]_{\phi=0} \quad (2.18)$
@@ -1327,54 +1173,67 @@ Matlab 文件 `MomentMatching.m` 使用有限差分法近似 (2.18)。
 
 ```matlab
 rho = [-0.5 0.0 0.5];
+
 dphi = 1e-4;
+
 for k=1:3
+
 param.rho = rho(k);
+
 dfp = HestonCF(+dphi,param,tau,S,r,q,trap);
+
 dfm = HestonCF(-dphi,param,tau,S,r,q,trap);
+
 df = (dfp - dfm)/2;
+
 EX = df/i;
+
 dffpp = HestonCF(*2*dphi,param,tau,S,r,q,trap);
+
 dffmm = HestonCF(-2*dphi,param,tau,S,r,q,trap);
+
 dff1 = (dff - dffm)/dphi;
+
 dff2 = (dff - dff2)/3/dphi;
+
 EX2 = dd2/i2;
+
 var = EX2;
+
 BSVol(k) = sqrt(var);
 ```
 
-近似结果表明，当 $\rho = -0.5$ 时，我们使用 $\sigma_{BS} = \sqrt{2} * 0.0710$ 来生成 Black-Scholes 价格，当 $\rho = +0.5$ 时，我们使用 $\sigma_{BS} = \sqrt{2} * 0.0704$。
+近似结果表明，当 `$\rho = -0.5$` 时，我们使用 `$\sigma_{BS} = \sqrt{2} * 0.0710$` 来生成 Black-Scholes 价格，当 `$\rho = +0.5$` 时，我们使用 `$\sigma_{BS} = \sqrt{2} * 0.0704$`。
 
-图 2.6 的左部分对应于低股价和外值看权，右部分对应于高股价和实值看权。显然，当相关性为正时，外值看权比 Black-Scholes 外值看权贵，这是因为 Heston 模型生成的 $\ln S_T$ 分布其右尾较厚。当相关性为负时，实值看权的差值相对于 Black-Scholes 实值看权为正，这是因为 Heston 模型生成的 $\ln S_T$ 分布左尾较厚。对于负差值也有类似的论点。增加 $\sigma$ 的影响是增加峰度。这是合理的，因为高波动率会增加普通期权的价格范围。这在图 2.7 中所示，该图比较了 $\rho = 0$ 且 $\sigma = 0.1$ 和 $\sigma = 0.2$ 时 Heston 与 Black-Scholes 看权的差值。这表明在实值和外值区域 Heston 价格高于 Black-Scholes 价格，但在平值区域较低。这两个观察结果与 Heston 模型生成的 $\ln S_T$ 分布的厚尾特征一致。惊讶的是，当 $\sigma$ 较高时差异更为显著。图 2.7 与 Heston (1993) 的图 4 相似。
+图 2.6 的左部分对应于低股价和外值看权，右部分对应于高股价和实值看权。显然，当相关性为正时，外值看权比 Black-Scholes 外值看权贵，这是因为 Heston 模型生成的 `$\ln S_T$` 分布其右尾较厚。当相关性为负时，实值看权的差值相对于 Black-Scholes 实值看权为正，这是因为 Heston 模型生成的 `$\ln S_T$` 分布左尾较厚。对于负差值也有类似的论点。增加 `$\sigma$` 的影响是增加峰度。这是合理的，因为高波动率会增加普通期权的价格范围。这在图 2.7 中所示，该图比较了 `$\rho = 0$` 且 `$\sigma = 0.1$` 和 `$\sigma = 0.2$` 时 Heston 与 Black-Scholes 看权的差值。这表明在实值和外值区域 Heston 价格高于 Black-Scholes 价格，但在平值区域较低。这两个观察结果与 Heston 模型生成的 `$\ln S_T$` 分布的厚尾特征一致。惊讶的是，当 `$\sigma$` 较高时差异更为显著。图 2.7 与 Heston (1993) 的图 4 相似。
 
 ## Heston 模型及其在 MATLAB 和 C# 中的扩展
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_49_0.png)
 
 **图 2.7** 波动率对 Heston 价格相对于 Black-Scholes 的影响
 
 ### 隐含波动率
 
-Heston 模型的另一个特征是从期权价格提取的隐含波动率会呈现出微笑曲线或偏斜。偏斜形状由参数驱动。相关性参数 $\rho > 0$ 对应正斜率，$\rho < 0$ 对应负斜率。这在图 2.8 的第一个面板中通过使用 $S=100, r=0.05, \tau=0.25, \kappa=2, \theta=0.01, \sigma=0, v_0=0.01$ 以及 $95$ 到 $105$ 的执行价范围生成波动率来展示。股票期权通常显示出负斜率。惊讶的是，当使用其他数据估计 Heston 模型参数时，大多数情况下相关性为负。
+Heston 模型的另一个特征是从期权价格提取的隐含波动率会呈现出微笑曲线或偏斜。偏斜形状由参数驱动。相关性参数 `$\rho > 0$` 对应正斜率，`$\rho < 0$` 对应负斜率。这在图 2.8 的第一个面板中通过使用 `$S=100, r=0.05, \tau=0.25, \kappa=2, \theta=0.01, \sigma=0, v_0=0.01$` 以及 `$95$` 到 `$105$` 的执行价范围生成波动率来展示。股票期权通常显示出负斜率。惊讶的是，当使用其他数据估计 Heston 模型参数时，大多数情况下相关性为负。
 
-增加波动率 $\sigma$ 会增加微笑曲线的曲率。这在图 2.8 的第二个面板中所示，使用了相同的 $\rho=0$ 设置。最后，参数 $\kappa,\theta$ 和 $v_0$ 控制微笑曲线的水平，如图 2.8 的其余面板所示。均值回归速度 $\kappa$ 在某种程度上也控制曲率，较高的 $\kappa$ 值会使隐含波动率平坦。
+增加波动率 `$\sigma$` 会增加微笑曲线的曲率。这在图 2.8 的第二个面板中所示，使用了相同的 `$\rho=0$` 设置。最后，参数 `$\kappa,\theta$` 和 `$v_0$` 控制微笑曲线的水平，如图 2.8 的其余面板所示。均值回归速度 `$\kappa$` 在某种程度上也控制曲率，较高的 `$\kappa$` 值会使隐含波动率平坦。
 
-为了生成隐含波动率，我们首先使用 Matlab 函数 `HestonPriceGauss` 在执行价 $K$ 范围内创建 Heston 价格。该函数使用 Gauss-Laguerre 积分进行数值积分，我们在第 5 章中介绍。
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_50_0.png)
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_50_1.png)
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_50_2.png)
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_50_3.png)
+为了生成隐含波动率，我们首先使用 Matlab 函数 `HestonPriceGauss` 在执行价 `$K$` 范围内创建 Heston 价格。该函数使用 Gauss-Laguerre 积分进行数值积分，我们在第 5 章中介绍。
 
 图 2.8 Heston 参数对隐含波动率的影响
 
 ```matlab
 sigma = [0.35 0.55 0.80];
+
 for j=1:length(sigma)
+
   for i=1:length(K)
+
     HestonPriceGaussLaguerre(i, j) = (K(i),sigma(j));
+
   end
+
   IV(i, j) = BisecIV(Calls(i,j));
+
 end
 ```
 
@@ -1384,40 +1243,52 @@ end
 
 ```matlab
 function y = BisecIV(MktPrice,Tol,Maxiter)
+
   % Black Scholes call
+
   BSC = (S,K,rf,T) *normcdf((log(S/K) + ...
+
   lowDiff = MktPrice - BSC(S,K,q,T)
+
   highDiff = MktPrice - BSC(S,K,b,T)
+
   if lowDiff+highDiff > 0
+
     y = -1;
+
     for x=1:Maxiter
+
       midP = (a+b)/2;
+
       midDiff = MktPrice - BSC(S,K,rf,q,midP,T)
+
       if abs(midDiff)<Tol
+
         break;
+
         if midDiff>0 a = midP;
+
         else b = midP;
+
       end
+
     end
+
   end
+
   y = midP;
 ```
 
 C# 中的二分法算法与 `normcdf` 非常相似，不同在于我们需要创建一个 `normcdf` 函数来计算标准正分布。
 
-
-
-
-
 # MATLAB 和 C# 中的 Heston 模型及其扩展
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_53_0.png)
 
 **图 2.9** Heston 隐含波动率面与局部波动率面
 
 ```matlab
 for t=1:NT;
 for k=1:NK
+
   % Heston 定价
   Price = HestonCallGaussLaguerre(K(k),T(t),...);
   % 隐含波动率
@@ -1434,8 +1305,10 @@ for k=1:NK
   % 局部波动率
   IV(k,t) = sqrt(LocalVar);
 end
+
 % 隐含波动率的透明网格
 mesh(IV)
+
 % 局部波动率面图
 hold on
 surf(LV)
@@ -1453,31 +1326,31 @@ surf(LV)
 $dv_t = \kappa(\theta - v_t)dt + \alpha\sqrt{v_t}dW_{2,t}$
 ```
 
-因此，在给定 $v_s$ ($s < t$) 的条件下，$v_t$ 的期望值为：
+因此，在给定 `$v_s$` (`$s < t$`) 的条件下，`$v_t$` 的期望值为：
 
 ```
 $E[v_t|v_s] = v_s e^{-\kappa(t-s)} + \theta(1 - e^{-\kappa(t-s)}) = (v_s - \theta)e^{-\kappa(t-s)} + \theta., \quad (2.19)$
 ```
 
-在下一节中，我们将使用 $s = 0$ 的 $E[v_t|v_s]$。将其标记为 $\hat{v}_t$ 是很有用的：
+在下一节中，我们将使用 `$s = 0$` 的 `$E[v_t|v_s]$`。将其标记为 `$\hat{v}_t$` 是很有用的：
 
 ```
 $\hat{v}_t = E[v_t|v_s] = (v_0 - \theta)e^{-\kappa t}.$
 ```
 
-定义（积分）差 $\hat{w}_t$ 也是很有用的：
+定义（积分）差 `$\hat{w}_t$` 也是很有用的：
 
 ```
 $\hat{w}_t = \int_0^t \hat{v}_s ds = \int_0^t (v_0 - \theta)\frac{1 - e^{-\kappa s}}{\kappa} + \theta t., \quad (2.21)$
 ```
 
-正如 Gatheral (2006) 所出的，方差掉期需要对 $(0,T)$ 时间内的未来差进行估计。这可以作为差的条件期望来获得。因此，总差的公平估计为：
+正如 Gatheral (2006) 所出的，方差掉期需要对 `$(0,T)$` 时间内的未来差进行估计。这可以作为差的条件期望来获得。因此，总差的公平估计为：
 
 ```
 $E[\int_0^T v_t dt|v_0] = \int_0^T E[v_t|v_0] dt = \int_0^T [\theta + (v_0 - \theta)e^{-\kappa t}] dt = (v_0 - \theta)\frac{1 - e^{-\kappa T}}{\kappa} + \theta T, \quad (2.22)$
 ```
 
-这简单等于 $\hat{w}_T$。由于它代表 $(0,T)$ 上的总差，因此为了代表年化差的公平估计，必须除以 $T$（假设 $T$ 以年表示）。因此，方差掉期的执行权方差 $K_{var}^2$ 通过将此最后一个表达式除以 $T$ 得到的：
+这简单等于 `$\hat{w}_T$`。由于它代表 `$(0,T)$` 上的总差，因此为了代表年化差的公平估计，必须除以 `$T$`（假设 `$T$` 以年表示）。因此，方差掉期的执行权方差 `$K_{var}^2$` 通过将此最后一个表达式除以 `$T$` 得到的：
 
 ```
 $K_{var}^2 = \frac{\hat{w}_T}{T} = (v_0 - \theta)\frac{1 - e^{-\kappa T}}{\kappa} + \theta., \quad (2.23)$
@@ -1493,6 +1366,7 @@ Matlab 文件 `VarianceSwap.m` 实现了 Demeterfi (1999) 的复制算法。该�
 
 ```matlab
 function y = VarianceSwap(KCI, CallVI, PutVI,S,T,rf)
+
   Sb = S % 取 ATM 为边界
   f = @(S, Sb) 2/T*((S - Sb) / log(S/Sb));
   % 看涨期
@@ -1512,110 +1386,10 @@ function y = VarianceSwap(KCI, CallVI, PutVI,S,T,rf)
   % 看跌期
   n = length(PutVI);
   KPI = flipud(KCI);
-  PutVI = flipud(PutVI);
-  for i=1:n-1
-    Temp(i) = f(KPI(i+1),Sb,T) - f(KPI(i),Sb,T) / ...;
-    if i=1
-      PutWeight(i) = 1;
-    end
-    PutValue(i) = BSC(S,KPI(i),rf,0,PutVI);
-    if i>1
-      PutWeight(i) = Temp(i) - Temp(i-1);
-    end
-    PutContrib(i) = PutValue(i)*PutWeight(i);
-  end
-  Pi2 = sum(PutContrib);
-  Pi_CP = Pi1 + Pi2;
-  Kvar = 2/T*(rf*T - (S/Sb*exp(rf*T) - 1));
-  y = Kvar;
 ```
 
-Demeterfi (1999) 的复制算法在 C# 函数中编码。代码与此非常相似，但未给出。感谢 Jim 指出。
 
-### 积分问题、参数影响和差建模
 
-`VarianceSwap()` 函数需要一个 C# 函数来进行线性插值。这通过 `interp1()` 函数实现。
-
-```csharp
-static double interp1(double[] X, double[] Y, double xi) {
-  int x1 = 0;
-  int x2 = 0;
-  double yi = 0.0;
-  // 在端点寻找 xi
-  if(xi <= X[0]) yi = Y[0];
-  else if (xi <= X[X.Length-1]) yi = Y[X.Length-1];
-  else
-    for (int i=0; i<X.Length-1; i++) {
-      if((xi <= X[i]) && (xi < X[i+1])) {
-        x1 = i;
-        x2 = i+1;
-        double p = (xi - X[x1]) / (X[x2] - X[x1]);
-        yi = (1-p)*Y[x1] + p*Y[x2];
-      }
-    }
-  return yi;
-}
-```
-
-为了说明，我们使用一组到期为 15 天的道 Jones ETF 期权，并获得参数 $\kappa=3.000$、$\theta=0.063$、$\sigma=0.502$、$v_0=0.104$ 和 $\rho=-0.901$。参数估计将在第 6 节介绍。使用公式 (2.23)，我们获得 $K_{var}^2=0.01$；使用市场报价的复制算法，我们获得 $K_{var}^2=0.85$。
-
-### Dupire 局部波动率
-
-Dupire (1994) 的局部波动率公式为：
-
-$$\sigma_t(K,T) = \sqrt{\frac{\frac{\partial C}{\partial T}}{\frac{\partial^2 C}{\partial K^2}}}$$
-
-其中 $C(K)$ 是执行权为 $K$、到期为 $T$ 的价格。公式 (24) 规定，给定一组期权，执行权为 $K$、到期为 $T$ 的局部波动率是通过看涨价格的一二阶导数得到的。这些导数可以通过有限差分获得，但计算量大且数值不稳定。在 Heston 模型中，我们在下一节中给出。有限差分法评估 (24) 所需的导数可以通过解析微分法获得。记得 Heston 价格为：
-
-$C(K) = S_tP_1 - Ke^{-rT}P_2$。
-
-关于这些导数的更多信息，请参见第 11 节，“Heston Greeks”。
-
-```
-$$\frac{\partial P_2}{\partial K} + K\frac{\partial^2 P_2}{\partial K^2} = \int_0^{\infty} \text{Re} \left[\dots\right] d\phi. \quad (2.33)$$
-```
-
-[/]
-
-### 积分问题、参数影响和差建模
-
-注意，通过这种方法得到的 $\partial^2C/\partial K^2$ 与有限差分相比节省了计算时间。如果使用 Albrecher 等（2007）对于 $C_i$ 和 $D_j$ 的“Little Trap”公式，则：
-
-```
-$$\frac{\partial C}{\partial T} = \kappa(\theta - v_t)dt + \alpha\sqrt{v_t}dW_{2,t}$$
-```
-
-其他导数相同，$C_i$ 和 $D_j$ 采用了“Little Trap”公式。Matlab 函数 `dpdjT.m` 实现了用于从公式 (27) 获取公式 (26) 中导数 $\partial f_i/\partial T$ 的积分函数。它允许在 (2.17)、(2.14) 和 (2.35) 中使用“Little Trap”。为了节省空间，省略了函数的某些。
-
-```matlab
-function y = dpdjT(Pnum...)
-if Trap
-    % Little Trap 公式
-    c = 1/g;
-    expT = exp(-dT);
-    ddT = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
-    dcdT = rf*i*phi + kappa*theta/sigma*2 * ...;
-    G = (i - g*exp(dT))/(1-g));
-    D = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
-    C = rf*i*phi + kappa*theta/sigma*2 * ...;
-else
-    ddT = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
-    dcdT = rf*i*phi + kappa*theta/sigma*2 * ...;
-    G = (i - g*exp(dT));
-    C = rf*i*phi + kappa*theta/sigma*2 * ...;
-    D = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
-end
-dfT = exp(C + D*v0 + i*phi*x)*(dcdT + ddT*v0);
-y = real(K(-i*phi)*dfT/i);
-```
-
-该函数传递给 Matlab 函数 `dCdT.m` 用于实现公式 (2.25) 中的导数 $\partial C/\partial T$，在这种情况下，分别使用向量 x 和 w 的高斯-Laguerre 权重和横坐标。
-
-[/content] (注：由于你提供的文本中存在多处重复的段落（如标题和代码块），我已根据逻辑进行了去重并翻译。) 
-
-抱歉，由于你提供的原始中存在大量重复内容，我已按照要求进行了翻译，并保持了 Markdown 格式。
-
-[content]
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_53_0.png)
@@ -1660,31 +1434,31 @@ surf(LV)
 $dv_t = \kappa(\theta - v_t)dt + \alpha\sqrt{v_t}dW_{2,t}$
 ```
 
-因此，在给定 $v_s$ ($s < t$) 的条件下，$v_t$ 的期望值为：
+因此，在给定 `v_s` (`s < t`) 的条件下，`v_t` 的期望值为：
 
 ```
 $E[v_t|v_s] = v_s e^{-\kappa(t-s)} + \theta(1 - e^{-\kappa(t-s)}) = (v_s - \theta)e^{-\kappa(t-s)} + \theta., \quad (2.19)$
 ```
 
-在下一节中，我们将使用 $s = 0$ 的 $E[v_t|v_s]$。将其标记为 $\hat{v}_t$ 是很有用的：
+在下一节中，我们将使用 `s = 0` 的 `E[v_t|v_s]`。将其标记为 `\hat{v}_t` 是很有用的：
 
 ```
 $\hat{v}_t = E[v_t|v_s] = (v_0 - \theta)e^{-\kappa t}.$
 ```
 
-定义（积分）差 $\hat{w}_t$ 也是很有用的：
+定义（积分）差 `\hat{w}_t` 也是很有用的：
 
 ```
 $\hat{w}_t = \int_0^t \hat{v}_s ds = \int_0^t (v_0 - \theta)\frac{1 - e^{-\kappa s}}{\kappa} + \theta t., \quad (2.21)$
 ```
 
-正如 Gatheral (2006) 所出的，方差掉期需要对 $(0,T)$ 时间内的未来差进行估计。这可以作为差的条件期望来获得。因此，总差的公平估计为：
+正如 Gatheral (2006) 所出的，方差掉期需要对 `(0,T)` 时间内的未来差进行估计。这可以作为差的条件期望来获得。因此，总差的公平估计为：
 
 ```
 $E[\int_0^T v_t dt|v_0] = \int_0^T E[v_t|v_0] dt = \int_0^T [\theta + (v_0 - \theta)e^{-\kappa t}] dt = (v_0 - \theta)\frac{1 - e^{-\kappa T}}{\kappa} + \theta T, \quad (2.22)$
 ```
 
-这简单等于 $\hat{w}_T$。由于它代表 $(0,T)$ 上的总差，因此为了代表年化差的公平估计，必须除以 $T$（假设 $T$ 以年表示）。因此，方差掉期的执行权方差 $K_{var}^2$ 通过将此最后一个表达式除以 $T$ 得到的：
+这简单等于 `\hat{w}_T`。由于它代表 `(0,T)` 上的总差，因此为了代表年化差的公平估计，必须除以 `T`（假设 `T` 以年表示）。因此，方差掉期的执行权方差 `K_{var}^2` 通过将此最后一个表达式除以 `T` 得到的：
 
 ```
 $K_{var}^2 = \frac{\hat{w}_T}{T} = (v_0 - \theta)\frac{1 - e^{-\kappa T}}{\kappa} + \theta., \quad (2.23)$
@@ -1814,8 +1588,33 @@ dfT = exp(C + D*v0 + i*phi*x)*(dcdT + ddT*v0);
 y = real(K(-i*phi)*dfT/i);
 ```
 
+该函数传递给 Matlab 函数 `dCdT.m` 用于实现公式 (2.25) 中的导数 $\partial C/\partial T$，在这种情况下，分别使用向量 x 和 w 的高斯-Laguerre 权重和横坐标。
 
 
+
+其他导数相同，$C_i$ 和 $D_j$ 采用了“Little Trap”公式。Matlab 函数 `dpdjT.m` 实现了用于从公式 (27) 获取公式 (26) 中导数 $\partial f_i/\partial T$ 的积分函数。它允许在 (2.17)、(2.14) 和 (2.35) 中使用“Little Trap”。为了节省空间，省略了函数的某些。
+
+```matlab
+function y = dpdjT(Pnum...)
+if Trap
+    % Little Trap 公式
+    c = 1/g;
+    expT = exp(-dT);
+    ddT = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
+    dcdT = rf*i*phi + kappa*theta/sigma*2 * ...;
+    G = (i - g*exp(dT))/(1-g));
+    D = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
+    C = rf*i*phi + kappa*theta/sigma*2 * ...;
+else
+    ddT = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
+    dcdT = rf*i*phi + kappa*theta/sigma*2 * ...;
+    G = (i - g*exp(dT));
+    C = rf*i*phi + kappa*theta/sigma*2 * ...;
+    D = (b - rho*sigma*i*phi - d)/sigma*2 * ...;
+end
+dfT = exp(C + D*v0 + i*phi*x)*(dcdT + ddT*v0);
+y = real(K(-i*phi)*dfT/i);
+```
 ```matlab
 function y = dCdT(...)
 for k=1:length(x)
@@ -1906,7 +1705,6 @@ CT_1 = HestonCallLaguerre(S,K,T-dt,w);
 CTL = HestonCallLaguerre(S,K,T+dt,w);
 dCdT = (CTL - CT) / (2*dt);
 ```
-
 ```csharp
 CK_1 = HestonCallLaguerre(S,K-dK,w);
 CK0 = HestonCallLaguerre(S,K,w);
@@ -1981,21 +1779,16 @@ C 代码非常相似，因此不再列出。
 
 我们使用一组到期日为 222 天的看跌期权来演示 Heston 模型中的局部波动率，此时现价为 $S=30.67$。Heston 参数估计为 $\theta=0.007$、$\kappa=6.45 \times 10^{-6}$、$\sigma=0.639$、$v_0=0.579$ 以及 $\rho=-0.085$。我们使用解析导数有限差分法获取 (2.24) 中的局部波动率 $\sigma_l(K, T)$，并获取了 Gatheral (2006) (2.44) 中的近似局部波动率，对应 $T=222/365$，行权价从 $K=15$ 到 $K=65$。我们还添加了生成的 Heston 看跌期权的隐含波动率。结果如图 2.10 所示。图 2.10 展示了 Gatheral (2006) 的观察，即局部波动率的近似形式（红线）往往比精确形式不弯。图中显示使用解析公式（实线）和有限差分法[黑色圆圈]产生的局部波动率几乎相同。最后，局部波动率的斜率平均约为隐含波动率的 1.9 倍，这与 Derman 等人 (1995) 的经验法则一致，即局部波动率的幅度约为隐含波动率的两倍。图 2.10 使用以下代码生成，该代码使用了本节之前的函数。
 
-
-
-
-
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_64_0.png)
 
 图 2.10 Heston 局部波动率与隐含波动率
 
 ```matlab
 % 局部波动率
- k=1:length(K)
+k=1:length(K)
 LVFD(k) = HestonLVFD(K(k),...,dt,dK);
 LVAN(k) = HestonLVAnalytic(K(k),...);
 LVAP(k) = HestonLVapprox(K(k),...);
-
 end
 % 隐含波动率
 PutCall = '';
@@ -2007,135 +1800,9 @@ IV(k) = BisecBSIV(K(k),ModelPrice(k),...);
 end
 ```
 
-我们还可以将局部波动率的三种估计值（解析和有限差分）应用于方程 (2.24)，并对 (2.44) 中的近似值应用于 SPX 期权数据。这在图 2.11 中所示。
 
-## MATLAB 和 C# 中的 HESTON 模型及其扩展
 
-到期 7 天
-
-到期 15 天
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_65_0.png)
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_65_1.png)
-
-到期 43 天
-
-到期 71 天
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_65_2.png)
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_65_3.png)
-
-图 2.11 市场隐含波动率与 Heston 波动率，标普 500 指数
-
-正如预期，且与图 2.10 一致，局部波动率通常比隐含波动率更陡峭且波动更大。对局部波动率的近似保留了更陡的斜率，但没有保留这种波动行为。解析和有限差分的局部波动率非常接近，71 天到期的除除外，有限差分近似略有失效。
-
-### 隐含波动率
-
-我们在本章较早提到，使用 Heston 模型获得的期权价格具有内置的隐含波动率，从意义上说，从这些价格中提取的隐含波动率将表现出隐含波动率特征。此外，从从中提取的参数 $\rho$ 和 $\sigma$ 对模型的陡峭度和光滑度有影响。在实践中，从 Heston 模型中提取的波动率在匹配短期隐含波动率时有时拟合效果较差。对于长期期权，拟合效果更好。我们通过对道琼斯工业平均指数 ETF（代码 DIA）的四种到期日（37、72、135 和 226 天）的看跌期权来说明。DIA 的收盘价为 \$129.14。我们列出了参数估计值 $\kappa = 0.8799, \sigma = 3.6706, v_{0} = 0.0435,$ 和 $\rho = -0.4171$。Heston 模型参数估计方法在第 6 章中有详细讨论。为了
-
-### 积分问题、参数影响与方差建模
-
-简单，我们设置 $r=0$。图 2.12 展示了来自 DIA 的市场隐含波动率，以及使用二分算法根据之前生成的 Heston 价格得到的隐含波动率。
-
-图 2.12 清楚地表明，在短期，Heston 隐含波动率与市场隐含波动率的拟合效果很差。对于长期，Heston 模型提供了非常好的拟合。
-
-使用二分算法来获取市场和 Heston 隐含波动率。本章之前介绍了用于该算法的 Matlab 函数 `BiscBIV.m` 和 C 函数 `BiscBIV()`。该算法通过寻找市场价格与 Black-Scholes 价格之间差值的零点来确定隐含波动率。使用该算法的优点是，只要函数是连续的，且选择的区间两个初始端点使得一个值产生负差，另一个值产生正差——即区间内存在根——就能始终找到解。由于期权价格随波动率单调递增，我们始终可以使用小值作为第一个端点（例如 0.1%），并在第二个端点使用非常大的值（例如 500%）。
-
-我们使用了以下 Matlab 代码生成了图 2.12。我们硬编码了参数值，这些值是从第 6 章的 Matlab 代码中获得的。
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_66_0.png)
-
-图 2.12 DIA 看跌期权的市场与 Heston 隐含波动率
-
-```matlab
-param = [8.8799, 0.0674, 3.6706, 0.0435, -0.4171];
-for k=1:NK
-  t=1:NT
-    CallPrice = HestonCallGaussLaguerre(K(k),T(t),...)
-    ModelPrice(k,t) = CallPrice - S0 + exp(-rf*T(t))*K(k);
-for k=1:NK
-  t=1:NT
-    IVm(k,t) = BisecBSIV(K(k),T(t),ModelPrice(k,t),...);
-for t=1:NT
-  subplot(2,2,t);
-  plot(K,IV(:,t),KIVm(:,t));
-```
-
-### 矩量爆炸
-
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-```：
-
-使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-（注：由于原文中存在大量重复的句子，翻译时已根据“不要重复输出原文”的原则进行了精简，保留了核心逻辑和数学公式。）
-
----
-
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-（注：原文文本中存在严重的重复段落，翻译时已根据指令“不要重复输出原文”进行了去重，仅保留有效信息内容。）
-
----
-
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-（注：原文文本中存在严重的重复段落，翻译时已根据指令“不要重复输出原文”进行了去重，仅保留有效信息内容。）
-
-**（由于您提供的原始文本包含大量非意义的重复句子，作为高级文档工程师，我已在翻译过程中进行了去重处理，以确保文档的专业性和逻辑性，符合“不要重复输出原文”的要求。）**
-
----
-
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。
-
-（注：此处为演示翻译逻辑，实际输出将严格遵循您的去重指令。）
-
----
-
-**最终有效翻译内容（已去重）：**
-
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-使用他们关于时间的解析表达式来寻找 $E[S_T^\omega]$ 对于所有 $T$ 保持有限的 $\omega > 1$ 的值。
-
-（注：由于原始输入存在大量重复内容，译文已保留核心学术信息。）
-
----
-
-**抱歉，由于您提供的待翻译文本包含大量完全重复的句子，为了遵守“绝对不要重复输出原文”的指令，我在生成翻译时进行了去重处理。以下是去重后的专业翻译：**
-
-[content]
-
-![](img/bc3df3b6c26c2272307f56b6cf75ef87_64_0.png)
-
-图 2.10 Heston 局部波动率与隐含波动率
-
-```matlab
-% 局部波动率
- k=1:length(K)
-LVFD(k) = HestonLVFD(K(k),...,dt,dK);
-LVAN(k) = HestonLVAnalytic(K(k),...);
-LVAP(k) = HestonLVapprox(K(k),...);
-
-end
-% 隐含波动率
-PutCall = '';
-a = 0.001; b = 10; Tol = 1e-10; MaxIter = 1000;
-for k=1:length(K)
-CallPrice(k) = HestonCallGaussLaguerre(K(k),...);
-ModelPrice(k) = CallPrice - S0 + exp(-rf*T)*K(k);
-IV(k) = BisecBSIV(K(k),ModelPrice(k),...);
-end
-```
-
-我们还可以将局部波动率的三种估计值（解析和有限差分）应用于方程 (2.24)，并对 (2.44) 中的近似值应用于 SPX 期权数据。这在图 2.11 中所示。
+我们还可以将局部波动率的三种估计值（解析和有限差分）应用于方程 `(2.24)`，并对 `(2.44)` 中的近似值应用于 SPX 期权数据。这在图 2.11 中所示。
 
 ## MATLAB 和 C# 中的 HESTON 模型及其扩展
 
@@ -2161,13 +1828,11 @@ end
 
 ### 隐含波动率
 
-我们在本章较早提到，使用 Heston 模型获得的期权价格具有内置的隐含波动率，从意义上说，从这些价格中提取的隐含波动率将表现出隐含波动率特征。此外，从从中提取的参数 $\rho$ 和 $\sigma$ 对模型的陡峭度和光滑度有影响。在实践中，从 Heston 模型中提取的波动率在匹配短期隐含波动率时有时拟合效果较差。对于长期期权，拟合效果更好。我们通过对道琼斯工业平均指数 ETF（代码 DIA）的四种到期日（37、72、135 和 226 天）的看跌期权来说明。DIA 的收盘价为 \$129.14。我们列出了参数估计值 $\kappa = 0.8799, \sigma = 3.6706, v_{0} = 0.0435,$ 和 $\rho = -0.4171$。Heston 模型参数估计方法在第 6 章中有详细讨论。为了，$r=0。图 2.12 展示了来自 DIA 的市场隐含波动率，以及使用二分算法根据之前生成的 Heston 价格得到的隐含波动率。
+我们在本章较早提到，使用 Heston 模型获得的期权价格具有内置的隐含波动率，从意义上说，从这些价格中提取的隐含波动率将表现出隐含波动率特征。此外，从从中提取的参数 `$\rho$` 和 `$\sigma$` 对模型的陡峭度和光滑度有影响。在实践中，从 Heston 模型中提取的波动率在匹配短期隐含波动率时有时拟合效果较差。对于长期期权，拟合效果更好。我们通过对道琼斯工业平均指数 ETF（代码 DIA）的四种到期日（37、72、135 和 226 天）的看跌期权来说明。DIA 的收盘价为 `$129.14`。我们列出了参数估计值 `$\kappa = 0.8799, \sigma = 3.6706, v_{0} = 0.0435,$` 和 `$\rho = -0.4171$`。Heston 模型参数估计方法在第 6 章中有详细讨论。为了简单，我们设置 `r=0`。图 2.12 展示了来自 DIA 的市场隐含波动率，以及使用二分算法根据之前生成的 Heston 价格得到的隐含波动率。
 
 图 2.12 清楚地表明，在短期，Heston 隐含波动率与市场隐含波动率的拟合效果很差。对于长期，Heston 模型提供了非常好的拟合。
 
-使用二分算法来获取市场和 Heston 隐含波动率。本章之前介绍了用于该算法的 Matlab 函数 `BiscBIV.m` 和 C 函数 `BiscBIV()`。该算法通过寻找市场价格与 Black-Scholes 价格之间差值的零点来确定隐含波动率。使用该算法的优点是，只要函数是连续的，且选择的区间两个初始端点使得一个值产生负差，另一个值产生正差——即区间内存在根。由于期权价格随波动率单调递增，我们始终可以使用小值作为第一个端点（例如 0.1%），并在第二个端点使用非常大的值（例如 500%）。
-
-（此处省略重复部分）
+使用二分算法来获取市场和 Heston 隐含波动率。本章之前介绍了用于该算法的 Matlab 函数 `BiscBIV.m` 和 C 函数 `BiscBIV()`。该算法通过寻找市场价格与 Black-Scholes 价格之间差值的零点来确定隐含波动率。使用该算法的优点是，只要函数是连续的，且选择的区间两个初始端点使得一个值产生负差，另一个值产生正差——即区间内存在根——就能始终找到解。由于期权价格随波动率单调递增，我们始终可以使用小值作为第一个端点（例如 0.1%），并在第二个端点使用非常大的值（例如 500%）。
 
 我们使用了以下 Matlab 代码生成了图 2.12。我们硬编码了参数值，这些值是从第 6 章的 Matlab 代码中获得的。
 
@@ -2177,6 +1842,7 @@ end
 
 ```matlab
 param = [8.8799, 0.0674, 3.6706, 0.0435, -0.4171];
+
 for k=1:NK
   t=1:NT
     CallPrice = HestonCallGaussLaguerre(K(k),T(t),...)
@@ -2191,11 +1857,7 @@ for t=1:NT
 
 ### 矩量爆炸
 
-Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 $E[S_T^\omega]$ 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 $\omega > 1$ 的值，使得 $E[S_T^\omega]$ 对于所有 $T$ 保持有限。
-
-（此处省略重复部分）
-
-
+Andersen 和 Piterburg (2007) 推导了终端股票价格矩量 `$E[S_T^\omega]$` 在有限时间内发生爆炸（变为无穷大）的条件。他们论文的结果可以用于寻找 `$\omega > 1$` 的值，使得 `$E[S_T^\omega]$` 对于所有 `T` 保持有限。使用他们关于时间的解析表达式来寻找 `$E[S_T^\omega]$` 对于所有 `T` 保持有限的 `$\omega > 1$` 的值。
 
 ```matlab
 UpperAP = W(j);
@@ -2251,26 +1913,18 @@ BL = 2 - 4*(sqrt(q^2 + q) - q);
 
 ## MATLAB 和 C# 中的 HESTON 模型及其扩展
 
-C# 代码与之类似，此处不再给出。为了说明，我们使用了道道琼斯工业指数（DJIA）到期日为37 天的看跌期权的参数估计。现价为 $129.14$。参数估计值为 $\kappa = 4.52$，$\sigma = 2.11$，$\rho = -0.27$。上部矩边界为 $\hat{\rho} = 3.6842$，因此 $\hat{p} = 2.6842$。下部矩边界为 $-1.3376$，因此 $\hat{q} = 1.3376$。我们将 $\hat{p}$ 和 $\hat{q}$ 的值代入方程 (2.48) 和 (2.51)，得到极限斜率系数 $\beta_p = 0.2773$ 和 $\beta_q = 0.1580$。
+
+
+# MATLAB 和 C# 中的 HESTON 模型及其扩展
+
+C# 代码与之类似，此处不再给出。为了说明，我们使用了道道琼斯工业指数（DJIA）到期日为 37 天的看跌期权的参数估计。现价为 $129.14$。参数估计值为 $\kappa = 4.52$，$\sigma = 2.11$，$\rho = -0.27$。上部矩边界为 $\hat{\rho} = 3.6842$，因此 $\hat{p} = 2.6842$。下部矩边界为 $-1.3376$，因此 $\hat{q} = 1.3376$。我们将 $\hat{p}$ 和 $\hat{q}$ 的值代入方程 (2.48) 和 (2.51)，得到极限斜率系数 $\beta_p = 0.2773$ 和 $\beta_q = 0.1580$。
 
 我们使用这些斜率系数来寻找这些 DJIA 37 天到期看跌期权在极端行权处的隐含波动率斜率。如图 2.13 所示。
 
-观察到的行权价范围为 $[124, 136]$，增量为 $1$，现价 $S_0 = 129.14$，对数收益率（log-moneyness）的范围为 $[-0.0406, 0.0518]$。我们将 Heston 模型拟合到扩展的行权价范围 $[120, 140]$，对应的对数收益率范围为 $[-0.0734, 0.0807]$，并从这些价格中提取隐含波动率。最后，我们从这些价格中提取隐含波动率（注：此处对应原文逻辑重复，已按要求翻译）。由于原文在最后一段存在多处重复描述，翻译文已根据逻辑进行了处理。
+观察到的行权价范围为 $[124, 136]$，增量为 $1$，现价 $S_0 = 129.14$，对数收益率（log-moneyness）的范围为 $[-0.0406, 0.0518]$。我们将 Heston 模型拟合到扩展的行权价范围 $[120, 140]$，对应的对数收益率范围为 $[-0.0734, 0.0807]$，并从这些价格中提取隐含波动率。
 
-*注：根据提供的原文，最后部分翻译如下：*
+## 矩边界计算
 
-- 最后，该函数的最后部分返回了波动率斜率的 Lee (2004b) 边界。
-- **MATLAB 和 C# 中的 HESTON 模型及其扩展**
-- C# 代码与之类似，此处不再给出。为了说明，我们使用了从道道琼斯工业指数（DJIA）到期日为37 天的看跌期权的参数估计。现价为 $129.14$。参数估计值为 $\kappa = 4.52$，$\sigma = 2.11$，$\rho = -0.27$。上部矩边界为 $\hat{\rho} = 3.6842$，因此 $\hat{p} = 2.6842$。下部矩边界为 $-1.3376$，因此 $\hat{q} = 1.3376$。我们将 $\hat{p}$ 和 $\hat{q}$ 的值代入方程 (2.48) 和 (2.51)，得到极限斜率系数 $\beta_p = 0.2773$ 和 $\beta_q = 0.1580$。
-- 我们使用这些斜率系数来寻找用于生成这些期权的 DJIA 37 天到期看跌期权在极端行权处的隐含波动率斜率。如图 2.13 所示。
-- 观察到的行权价范围为 $[124, 136]$，增量为 $1$，现价 $S_0 = 129.14$，对数收益率（log-moneyness）的范围为 $[-0.0406, 0.0518]$。我们将 Heston 模型拟合到扩展的行权价范围 $[120, 140]$，对应的对数收益率范围为 $[-0.0734, 0.0807]$，并从这些价格中提取隐含波动率。最后，我们从这些价格中提取隐含波动率。
-
-*(由于原文后半部分包含大量重复的占位符和错误文本，为遵循“不要重复输出原文”的原则，此处仅对核心逻辑部分进行了翻译。)*
-
----
-**更正：** 提供的原文后半部分从“Finally, the last part...”开始出现了严重的乱码和重复内容。作为高级文档工程师，我将为您提供**逻辑通且干净**的译文：
-
-[content]
 ```matlab
 UpperAP = W(j);
 % 矩下界
@@ -2289,7 +1943,7 @@ end
 LowerAP = W(j);
 ```
 
-为了使用特征函数寻找矩边界，我们循环遍历 omega 的值，直到特征函数返回一个复值。这是通过 `FindLeeBounds.m` 函数的中间部分实现的。
+为了使用特征函数寻找矩边界，我们循环遍历 `omega` 的值，直到特征函数返回一个复值。这是通过 `FindLeeBounds.m` 函数的中间部分实现的。
 
 ```matlab
 % 上部矩。循环直到遇到虚部imag(CF)
@@ -2323,19 +1977,9 @@ BR = 2 - 4*(sqrt(p^2 + p) - p);
 BL = 2 - 4*(sqrt(q^2 + q) - q);
 ```
 
-## MATLAB 和 C# 中的 HESTON 模型及其扩展
+## 使用傅里叶变换的推导
 
-C# 代码与之类似，此处不再给出。为了说明，我们使用了从道道琼斯工业指数（DJIA）到期日为 37 天的看跌期权的参数估计。现价为 $129.14$。参数估计值为 $\kappa = 4.52$,$\sigma = 2.11$,$\rho = -0.27$。上部矩边界为 $\hat{\rho} = 3.6842$，因此 $\hat{p} = 2.6842$。下部矩边界为 $-1.3376$，因此 $\hat{q} = 1.3376$。我们将 $\hat{p}$ 和 $\hat{q}$ 的值代入方程 (2.48) 和 (2.51)，得到极限斜率系数 $\beta_p = 0.2773$ 和 $\beta_q = 0.1580$。
-
-我们使用这些斜率系数来寻找用于生成这些期权的 DJIA 37 天到期看跌期权在极端行权处的隐含波动率斜率。如图 2.13 所示。
-
-观察到的行权价范围为 $[124, 136]$，增量为 $1$，现价 $S_0 = 129.14$，对数收益率（log-moneyness）的范围为 $[-0.0406, 0.0518]$。我们将 Heston 模型拟合到扩展的行权价范围 $[120, 140]$，对应的对数收益率范围为 $[-0.0734, 0.0807]$，并从这些价格中提取隐含波动率。
-
-
-
-### 使用傅里叶变换的推导
-
-## 使用 GIL-PELAEZ 傅里叶反演恢复概率
+### 使用 GIL-PELAEZ 傅里叶反演恢复概率
 
 回顾第 1 章和第 2 章，实值概率（in-the-money probabilities）为：
 
@@ -2367,7 +2011,7 @@ $Pr(\ln S_t > k) = \int_{-\infty}^{\infty} f(x)dx = \frac{1}{2\pi} \int_{-\infty
 
 ## 来自傅里叶变换的推导
 
-## GATHER (2006) 的推导
+### GATHER (2006) 的推导
 
 Gatheral (2006) 通过处理远期价格的对数收益 $x_i = \ln(F_{i,T}/K)$，提供了 Albrecher 等人 (2007) 关于 Heston (1993) 特征函数的公式，其中 $K$ 是期权的执行价格，$F_{i,T} = S_i e^{r(T-t)}$ 是股票的远期价格。他的推导与 Heston (1993) 有不同，因为 Gatheral 直接处理实值概率 $P_1$ 和 $P_2$ 的傅里叶变换。
 
@@ -2424,19 +2068,16 @@ $v(\alpha_i - \beta_iD_i + \gamma D_i^2) + aD_i - [\frac{\partialC_i}{\partial\t
 这意味着必须满足这两个方程，它们出现在 Gather (2006) 的方程 (2.11) 中：
 
 $\frac{\partialC_i}{\partial\tau} = \kappa D_i$
+
 $\frac{\partialD_i}{\partial\tau} = \alpha_i - \beta_iD_i + \gamma D_i^2 (3.25)$
 
 第一个方程成立是因为 $\alpha = \kappa$。第二个方程与第 1 章中的 Riccati 方程相同。该二次方程的两个根 $r_l^i$ 和 $r_h^i$ 为：
 
 $r_l^i = \frac{\beta_i \pm \sqrt{\beta_i^2 - 4\alpha_i\gamma}}{2}$
 
-
-
-
-
-# MATLAB 和 C# 中的 Heston 模型及其扩展
-
 由于 $e^{q(x)} > 0$ 且 $0 \le \Pi_1 \le 1$，则 $e^{q(x)} = p(x)$ 可以被视为密度函数。$q(x)$ 的特征函数记为 $\varphi_q(u)$，$p(x)$ 的特征函数记为 $\varphi_p(u)$。利用特征函数的定义并进行所需的积分，得到 $\varphi_p(u) = \varphi_q(u - i)$。
+
+
 
 $$\varphi_p(u) = \int_{-\infty}^{\infty} e^{iux} p(x) dx = \int_{-\infty}^{\infty} e^{iux} e^{q(x)} dx = \int_{-\infty}^{\infty} e^{(iu-i)x} q(x) dx = \varphi_q(u - i). \quad (3.30)$$
 
@@ -2451,6 +2092,7 @@ $$\Pi_1 = \frac{1}{2\pi} \int_{-\infty}^{\infty} \varphi_2(u) \left( \int_{\ell}
 这是 Attari (2004) 的方程 (8)。现在像在 (3.14) 中所做，计算方程 (3.32) 中的内部积分。
 
 $$\Pi_1 = \frac{1}{2\pi} \int_{-\infty}^{\infty} \varphi_2(u) \frac{e^{-iu(u+i)}}{i(u+i)} du - \frac{1}{2\pi} \lim_{R\to\infty} \int_{-R}^{\infty} \varphi_2(u) \frac{e^{-iu(u+i)}}{i(u+i)} du \quad (3.33)$$
+
 $$I_1 = I_1 - I_2.$$
 
 第二个积分是一个在 $u = -i$ 处有极点的复积分。因此，留数为 $\varphi_2(-i)/i$。应用留数定理，我们得到：
@@ -2472,6 +2114,7 @@ $$\Pi_2 = \frac{1}{2} + \frac{1}{2\pi} \int_{-\infty}^{\infty} \varphi_2(u) \fra
 将 $\Pi_1$ 和 $\Pi_2$ 代入计算看涨期价格的方程 (3.28) 的最后一行：
 
 $$C(K) = S_t \left[ 1 + \frac{1}{2\pi} \int_{-\infty}^{\infty} \varphi_2(u) \frac{e^{-int}}{i(u+i)} du \right] - Ke^{-rt} \left[ \frac{1}{2\pi} \int_{-\infty}^{\infty} \varphi_2(u) \frac{e^{-int}}{iu} du \right]$$
+
 $$= S_t - \frac{1}{2}Ke^{-rt} \int_0^{\infty} \text{Re} \left[ \varphi_2(u) \frac{e^{-int}}{i(u+i)} \right] du. \quad (3.37)$$
 
 我们已经代入了 $l = Ke^{-rt}/S$，因此只需要考虑积分的实部。在 (3.37) 的最后一个括号项中，将分式的分子分母同时乘以 $u-i$。积分函数变为：
@@ -2520,10 +2163,6 @@ int1(k) = w(k) * AttariProb(x(k));
 end
 HestonC = S*exp(-q*T) - K*exp(-r*T) * sum(int1)/pi;
 ```
-
-
-
-
 
 ## 74 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
@@ -2618,7 +2257,9 @@ $$y_{\pm} = \frac{\sigma-2\kappa\rho\pm\sqrt{\sigma^2-4\kappa\rho\sigma+4\kappa^
 
 ## 最优阻尼因子
 
-虽然 $(\alpha_{\min}, \alpha_{\max})$ 了一个允许范围，但并没有指示哪个 $\alpha$ 值是最优的，最优值意味着 (3.44) 中的被积函数震荡尽可能少。回顾 Carr 和 Madan (1999) 的看涨期权表示为：
+
+
+虽然$(\alpha_{\min}, \alpha_{\max})$了 一个允许范围，但并没有指示哪个$\alpha$值是最优的，最优值意味着(3.44)中的被积函数震荡尽可能少。回顾 Carr 和 Madan (1999)的看涨期权表示为：
 
 ```
 $C(k) = \int_{0}^{\infty} e^{-\alpha k} \psi(v, \alpha)dv
@@ -2631,21 +2272,17 @@ $$\psi(v, \alpha) = Re[e^{-ivk} \tilde{\psi}(v)]$$
 $$= Re[e^{-ivk} e^{-\tau v} \varphi(v-(\alpha+1)i)}{\alpha^2 + \alpha v - v^2 + iv(2\alpha+1)}. (3.47)$$
 ```
 
-Lord 和 Kohl (2007) 认为最优的 $\alpha^*$ 是减少积分域 $[0, \infty)$ 上被积函数 $\psi(v, \alpha)$ 方差的。假设 $\psi(v, \alpha)$ 在 $[0, \infty)$ 上关于 $v$ 是单调的，他们证明最优 $\alpha$ 由下给出：
+Lord 和 Kohl (2007)认为最优的$\alpha^*$是减少积分域$[0, \infty)$上被积函数$\psi(v, \alpha)$方差的。假设$\psi(v, \alpha)$在$[0, \infty)$上关于$v$是单调的，他们证明最优$\alpha$由下给出：
 
 ```
 $$\alpha^* = \arg_{min_{\alpha_{\min} \le \alpha \le \alpha_{\max}}} [-\alpha k + \frac{1}{2}\ln(\psi(v, \alpha)^2)] (3.48)$$
 ```
 
-他们将其定义为函数 $\Psi(k)$。使用上一节的示例并运行等式 (3.48) 的优化产生了 $\alpha^*=6.6233$。注意这个最优值在上节得到的允许范围内 $(-3.3068, 9.0600)$。
-
-
-
-
+他们将其定义为函数$\Psi(k)$。使用上一节的示例并运行等式(3.48)的优化产生了$\alpha^*=6.6233$。注意这个最优值在上节得到的允许范围内$(-3.3068, 9.0600)$。
 
 # 78 MATLAB 和 C# 中的 Heston 模型及其扩展
 
-Matlab 函数 `RogerLeeGExpD` 定义了一个由方程 (3.45) 两侧差值平方构成的目标函数。
+Matlab 函数`RogerLeeGExpD`定义了一个由方程(3.45)两侧差值平方构成的目标函数。
 
 ```matlab
 y = RogerLeeGExpD(phi,kappa,rho,sigma,tau)
@@ -2657,7 +2294,7 @@ E = real(g*exp(d*tau))
 y = (E - 1)*2;
 ```
 
-Matlab 中的 `fminsearch` 函数用于寻找 $y^- = -2.3069$ 和 $y^+ = 10.6000$。
+Matlab 中的`fminsearch`函数用于寻找$y^- = -2.3069$和$y^+ = 10.6000$。
 
 ```matlab
 % 寻找 y-
@@ -2670,14 +2307,14 @@ AlphaMax = ypos + 1;
 AlphaMin = yneg - 1;
 ```
 
-将返回的值 $\alpha_{\min} = -3.3060$ 和 $\alpha_{\max} = 9.0600$ 的平均值作为寻找最优阻尼因子 $\alpha^*$ 的起始值。
+将返回的值$\alpha_{\min} = -3.3060$和$\alpha_{\max} = 9.0600$的平均值作为寻找最优阻尼因子$\alpha^*$的起始值。
 
 ```matlab
 start = (AlphaMin + AlphaMax)/2
 [aopt, eval] = fminsearch(@(alpha) LordKahlFindAlpha(alpha,...), ...)
 ```
 
-上述代码段在方程 (3.48) 的最小化过程中使用了该目标函数。
+上述代码段在方程(3.48)的最小化过程中使用了该目标函数。
 
 ```matlab
 y = LordKahlFindAlpha(alpha,...)
@@ -2685,7 +2322,7 @@ PSI = HestonPsi(0,alpha,...)
 y = -alpha*log(K) + (1/2)*log(PSI^2);
 ```
 
-最优 $\alpha^* = 6.6233$。在图 3.2 中，我们绘制了最优 alpha 函数 $\Psi(\alpha, k)$ 及其导数，并直观地识别出 $\Psi(\alpha, k)$ 的局部最小值。图 3.2 是以下代码生成的。第一部分定义了 $\alpha$ 的允许范围，并使用中心差分生成了 $\Psi(\alpha,k)$ 函数及其导数。
+最优$\alpha^* = 6.6233$。在图3.2中，我们绘制了最优 alpha 函数$\Psi(\alpha, k)$及其导数，并直观地识别出$\Psi(\alpha, k)$的局部最小值。图3.2是以下代码生成的。第一部分定义了$\alpha$的允许范围，并使用中心差分生成了$\Psi(\alpha,k)$函数及其导数。
 
 ### 使用傅里叶变换的推导
 
@@ -2707,7 +2344,7 @@ end
 der = der(2:N-1);
 ```
 
-第二部分通过寻找 $\alpha$ 轴上导数符号切换的点，找到 $\Psi(\alpha, k)$ 的局部最小值。
+第二部分通过寻找$\alpha$轴上导数符号切换的点，找到$\Psi(\alpha, k)$的局部最小值。
 
 ```matlab
 % 寻找导数符号切换的点。
@@ -2726,7 +2363,7 @@ AlphaoptimalSet = px;
 
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
-最后，一部分绘制了 $\Psi(\alpha, k)$、其导数以及图 3.2 中用圆圈标出的最优点。
+最后，一部分绘制了$\Psi(\alpha, k)$、其导数以及图3.2中用圆圈标出的最优点。
 
 ```matlab
 zeros(length(A),1);
@@ -2734,7 +2371,7 @@ plot(A, f, 'k-',A(1:N-2),der,'r-',px,'bo',A,'k')
 axis([A(1)] A(end) -8 5])
 ```
 
-图 3.2 中所示的函数 $\Psi(\alpha, k)$ 在 $\alpha = -2.5194$、$\alpha = -0.4778$ 和 $\alpha = 6.6233$（用圆圈指示）处三个局部最小值。Lord 和 Kahl (2007) 解释说，当 $\alpha = -1$ 或 $0$ 时，$\Psi(\alpha, k)$ 会发散，这在图 3.2 中有所反映；它在 $(\alpha_{\min}, -1)$ 和 $(0, \alpha_{\max})$ 区间具有局部最小值。由于我们的允许范围 $\alpha \in (-3.3060, 9.0600)$，具有最优 $\alpha$ 的积分震荡较少，在原点处平坦，且收敛速度至少与其他快。
+图3.2中所示的函数$\Psi(\alpha, k)$在$\alpha = -2.5194$、$\alpha = -0.4778$和$\alpha = 6.6233$（用圆圈指示）处三个局部最小值。Lord 和 Kahl (2007)解释说，当$\alpha = -1$或$0$时，$\Psi(\alpha, k)$会发散，这在图3.2中有所反映；它在$(\alpha_{\min}, -1)$和$(0, \alpha_{\max})$区间具有局部最小值。由于我们的允许范围$\alpha \in (-3.3060, 9.0600)$，具有最优$\alpha$的积分震荡较少，在原点处平坦，且收敛速度至少与其他快。
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_90.png)
 
@@ -2742,9 +2379,9 @@ axis([A(1)] A(end) -8 5])
 
 ### 使用傅里叶变换的推导
 
-Lee (2004b) 也建议通过最小化程序来选择阻尼因子。在他的方法中，$\alpha$ 的选择通过同时最小化方程 (44) 计算时产生的误差：截断误差（由于积分上限是的）和采样误差（由于积分仅在网格点上计算）。详情请参考论文。
+Lee (2004b)也建议通过最小化程序来选择阻尼因子。在他的方法中，$\alpha$的选择通过同时最小化方程(44)计算时产生的误差：截断误差（由于积分上限是的）和采样误差（由于积分仅在网格点上计算）。详情请参考论文。
 
-最后，寻找 $A = (a^-, a^+)$ 和 $\alpha^*$ 的 C# 代码与 Matlab 代码类似。我们调用两次 Nelder-Mead 算法：一次基于方程 (45) 寻找 $a^-$，另一次基于方程 (48) 寻找 $\alpha^*$。在 C# 中，我们需要以下代码来选择目标函数，并将其传递给 Nelder-Mead：
+最后，寻找$A = (a^-, a^+)$和$\alpha^*$的 C# 代码与 Matlab 代码类似。我们调用两次 Nelder-Mead 算法：一次基于方程(45)寻找$a^-$，另一次基于方程(48)寻找$\alpha^*$。在 C# 中，我们需要以下代码来选择目标函数，并将其传递给 Nelder-Mead：
 
 ```csharp
 // 目标函数是 RogerLeeExpD(d) 函数
@@ -2758,7 +2395,7 @@ static double f(double[] x, double[] param) {
 }
 ```
 
-我们选择 Lee 的 (2004a) 作为目标函数，并通过代码获取 $A = (a^-, a^+)$：
+我们选择 Lee 的 (2004a)作为目标函数，并通过代码获取$A = (a^-, a^+)$：
 
 ```csharp
 // 选择 Lee 函数作为目标函数
@@ -2769,7 +2406,7 @@ double[] AxLo = NelderMead(f,s1);
 double[] AxHi = NelderMead(f,s2);
 ```
 
-接下来，我们选择 Lord 和 Kahl 的 (2007) 作为目标函数，并通过代码寻找 $\alpha^*$：
+接下来，我们选择 Lord 和 Kahl 的 (2007)作为目标函数，并通过代码寻找$\alpha^*$：
 
 ```csharp
 // 选择 Kahl 函数作为目标函数
@@ -2778,23 +2415,23 @@ GlobalVars.ObjFunction = "LordKahl";
 double[] AlphaOptimal = NelderMead(f,s3);
 ```
 
-使用本节开始的设置，C# 返回相同的最优值 $\alpha^* = 6.6233$。
+使用本节开始的设置，C# 返回相同的最优值$\alpha^* = 6.6233$。
 
 # 看权的 Carr-Madan 表示法
 
-我们可以始终使用看期平价来寻找看权价值，也可以对看权价格应用阻尼因子并找到看权本身的表示法。看权价格 $P(k)$ 为：
+我们可以始终使用看期平价来寻找看权价值，也可以对看权价格应用阻尼因子并找到看权本身的表示法。看权价格$P(k)$为：
 
 $$P(k) = e^{-rt}\mathbb{E}^q[(K - S_{\tau})^+] = e^{-rt}\int_{-\infty}^{k} (e^k - e^x)q(x) \, dx \quad (3.49)$$
 
-由于它不是 $L^1$，因此没有傅里叶变换。事实上，
+由于它不是$L^1$，因此没有傅里叶变换。事实上，
 
 $$\lim_{k\to+\infty} P(k) = \lim_{k\to+\infty} e^{-rt}\int_{-\infty}^{k} (e^k - e^x)q(x) \, dx = \infty.$$
 
-注意，由于上限是 $+\infty$，我们需要一个带有负指数的阻尼因子。Schmelze (2010) 使用修改后的价格：
+注意，由于上限是$+\infty$，我们需要一个带有负指数的阻尼因子。Schmelze (2010)使用修改后的价格：
 
 $$p(k) = e^{-ak}P(k)$$
 
-它是 $L^1$ 的是因为：
+它是$L^1$的因为：
 
 $$\lim_{k\to+\infty} p(k) = \lim_{k\to+\infty} e^{-rt}\int_{-\infty}^{k} (e^{-(a+1)x})q(x) \, dx < \infty.$$
 
@@ -2806,100 +2443,99 @@ $$\hat{p}(\omega) = \int_{-\infty}^{\infty} e^{-i\omega k} p(k) \, dk.$$
 
 $$P(k) = \frac{e^{ak}}{\pi} \text{Re} \left[ \int_{0}^{\infty} e^{-i\omega k} \frac{\phi(\omega - i(a+1))}{a^2 + a - \omega^2 + 2ia\omega} \, d\omega \right]$$
 
-其中 $\phi$ 是资产价格的特征函数。
+其中$\phi$是资产价格的特征函数。
 
-
-
-
-使用本章之前示例中的相同设置，我们通过 Heston 形式得到认权价格为 5.9085，通过 Carr-Madan 形式得到 5.9083。实现 Heston Carr 和 Madan (2009) 认权定价的 C# 代码与 Matlab 代码类似，此处不再给出。
+使用本章之前示例中的相同设置，我们通过 Heston 形式得到认权价格为 5.9085，通过 Carr-Madan 形式得到 5.9083。实现 Heston Carr 和 Madan (2009)认权定价的 C# 代码与 Matlab 代码类似，此处不再给出。
 
 ## 价外（OTM）期权的表示方法
 
-Carr 和 Madan (1999) 强调，对于短期限期，看涨价值趋向于其内在价值 $(S_t - K)^+$，这导致方程 (3.44) 中傅里叶反演的被积函数高度震荡性，因此难以积分。这在第1和第2章的图中得到了说明。Carr 和 Madan (1999) 将 $z(k)$ 定义为执行价为 $K = e^k$ 的价外（OTM）看涨和看跌 $t-\tau$ 价格。为了方便起见，他们假设 $S_t = 1$，但他们的论证很容易推广到其他 $S_t$ 取值，如下节所示。区域 $K < S_t$ 和 $K > S_t$ 分别对应价外看跌期权和价外看涨期权。因此，价格为：
+Carr 和 Madan (1999)强调，对于短期限期，看涨价值趋向于其内在价值$(S_t - K)^+$，这导致方程(3.44)中傅里叶反演的被积函数高度震荡性，因此难以积分。这在第1和第2章的图中得到了说明。Carr 和 Madan (1999)将$z(k)$定义为执行价为$K = e^k$的价外（OTM）看涨和看跌$t-\tau$价格。为了方便起见，他们假设$S_t = 1$，但他们的论证很容易推广到其他$S_t$取值，如下节所示。区域$K < S_t$和$K > S_t$分别对应价外看跌期权和价外看涨期权。因此，价格为：
 
 $$z(k) = \begin{cases} \text{当 } k < 0 \text{ 时为价外看跌价格 \\ \text{当 } k > 0 \text{ 时为价外看涨价格 \end{cases} = e^{-r\tau} \int_{-\infty}^{\infty} [(e^k - e^x)^+ + (e^x - e^k)^+] q(x) dx \quad (3.51)$$
+
 $$= e^{-r\tau} \int_{-\infty}^{0} (e^k - e^x)\mathbf{1}_{k<0} q(x) dx + e^{-r\tau} \int_{0}^{\infty} (e^x - e^k)\mathbf{1}_{k>0} q(x) dx$$
 
 其傅里叶变换为
 
 $$\hat{z}(v) = e^{-r\tau} \int_{-\infty}^{\infty} e^{ivk} z(k) dk = e^{-r\tau} \int_{-\infty}^{0} e^{ivk} (e^k - e^x)\mathbf{1}_{k<0} q(x) dxdk$$
+
 + e^{-r\tau} \int_{0}^{\infty} e^{ivk} (e^x - e^k)\mathbf{1}_{k>0} q(x) dxdk = e^{-r\tau} \int_{-\infty}^{0} e^{ivk} (e^k - e^x)q(x)dx + e^{-r\tau} \int_{0}^{\infty} e^{ivk} (e^x - e^k)q(x)dx. \ (3.52)$$
 
-现在，反转 (3.52) 中的积分顺序以得到：
+现在，反转(3.52)中的积分顺序以得到：
 
 $$\hat{z}(v) = e^{-r\tau} \int_{-\infty}^{\infty} q(x) \int_{-\infty}^{x} e^{iv(k+x)} dkdx + e^{-r\tau} \int_{0}^{\infty} q(x) \int_{x}^{\infty} e^{iv(k+x)} dkdx. \ (3.53)$$
 
-显易看出，3.53) 中的两个积分（以 $k$ 为积分变量）除了符号相反外是完全相同的。事实上，我们可以反转第二个内部积分的积分限并进行变换，这将产生第一个内部积分。我们可以定义并重组两个外部积分以得到：
+显易看出，3.53)中的两个积分（以$k$为积分变量）除了符号相反外是完全相同的。事实上，我们可以反转第二个内部积分的积分限并进行变换，这将产生第一个内部积分。我们可以定义并重组两个外部积分以得到：
 
 $$\hat{z}(v) = e^{-rt} \int_{-\infty}^{\infty} \left( e^{iw(v+1)k} - e^{ik+x} \right) dk \ q(x) dx. \quad (3.54)$$
 
-(3.54) 中的内部积分结果为：
+(3.54)中的内部积分结果为：
 
 $$\frac{e^{iw(v+1)}}{iw(v+1)} - \frac{e^{iv}}{iv} + \frac{1}{iv+1}$$
 
-因此，(3.54) 中的傅里叶变换可以用风险中性密度 $q(x)$ 下的期望来表示：
+因此，(3.54)中的傅里叶变换可以用风险中性密度$q(x)$下的期望来表示：
 
 $$\hat{z}(v) = e^{-rt} \left( \frac{E[e^{iw(v+1)}]}{iw(v+1)} - \frac{E[e^{iv}]}{iv} + \frac{1}{iv+1} \right)$$
 
-由于特征函数 $\psi(v) = E[e^{iv}]$，我们有 $E[e^{iw(v+1)}] = \psi(v-i)$。此外，$q(x)$ 是 $x = \ln S_T$ 的风险中性密度，由于我们假设 $S_0 = 1$，所以有 $E[e^x] = e^{rt}$。这意味着 $\hat{z}(k)$ 的傅里叶变换可以写为：
+由于特征函数$\psi(v) = E[e^{iv}]$，我们有$E[e^{iw(v+1)}] = \psi(v-i)$。此外，$q(x)$是$x = \ln S_T$的风险中性密度，由于我们假设$S_0 = 1$，所以有$E[e^x] = e^{rt}$。这意味着$\hat{z}(k)$的傅里叶变换可以写为：
 
 $$\hat{z}(v) = e^{-rt} \left( \frac{1}{iv+1} + \frac{\psi(v-i)}{iv} \right). \quad (3.55)$$
 
-最后，执行价为 $K = e^k$ 的价外期权价格 $z(k)$ 通过傅里叶变换获得，其方法类似于方程 (3.44) 中的看涨期权和方程 (3.50) 中的看跌期权：
+最后，执行价为$K = e^k$的价外期权价格$z(k)$通过傅里叶变换获得，其方法类似于方程(3.44)中的看涨期权和方程(3.50)中的看跌期权：
 
 $$z(k) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-ikv}\hat{z}(v)dv = \frac{1}{\pi} \int_{-\infty}^{\infty} e^{-ikv}\hat{z}(v) dv. \quad (3.56)$$
 
-Carr 和 Madan (1999) 发现对于短期限和 $k \approx 0$，被积函数 $\hat{z}(v)$ 会变得高度震荡。Carr 和 Madan 不再基于 $z(k)$ 进行推导，而是基于 $y(k)=z(k)\sinh(\alpha k)$，这通过双曲正弦 $\sinh(x)=\frac{1}{2}(e^x-e^{-x})$ 使用阻尼因子 $\alpha$。$y(k)$ 的傅里叶变换为：
+Carr 和 Madan (1999)发现对于短期限和$k \approx 0$，被积函数$\hat{z}(v)$会变得高度震荡。Carr 和 Madan 不再基于$z(k)$进行推导，而是基于$y(k)=z(k)\sinh(\alpha k)$，这通过双曲正弦$\sinh(x)=\frac{1}{2}(e^x-e^{-x})$使用阻尼因子$\alpha$。$y(k)$的傅里叶变换为：
 
 $$\hat{y}(v) = \int_{-\infty}^{\infty} e^{ivk}y(k) = \int_{-\infty}^{\infty} e^{ivk} \left( \frac{e^{\alpha k}-e^{-\alpha k}}{2} \right) z(k) dk$$
+
 $$\frac{1}{2}\int_{-\infty}^{\infty} e^{iv(v+\alpha)}z(k)dk-\frac{1}{2}\int_{-\infty}^{\infty} e^{iv(v-\alpha)}z(k)dk.$$
 
 记得：
 
 $$\hat{z}(v) = \int_{-\infty}^{\infty} e^{ivk}z(k).$$
 
-因此，我们可以用 $\tilde{z}(v)$ 表示 $\tilde{y}(v)$：
+因此，我们可以用$\tilde{z}(v)$表示$\tilde{y}(v)$：
+
+
 
 $$\tilde{y}(v) = \frac{\tilde{z}(v-\alpha) - \tilde{z}(v+\alpha)}{2} \quad (3.57)$$
 
-随后，价外价格通过傅里叶反演获得，类似于方程 (3.56)：
+随后，价外价格通过傅里叶反演获得，类似于方程 `(3.56)`：
 
 $$z(k) = \frac{1}{\sinh(\alpha k)} y(k) = \frac{1}{2\pi\sinh(\alpha k)} \int_{-\infty}^{\infty} e^{-ikv} \tilde{y}(v) dv. \quad (3.58)$$
 
-阻尼被积函数 $\tilde{y}(v)$ 和普通的 $\tilde{z}(v)$ 分别如图 3.4 所示，再现了 Carr 和 Madan (1999) 中的图。我们使用的设置为 $S_t = 1, K = 0.96$，期限为 1 到 4 周，$r = 0.03, \kappa = 2, \theta = 0.25, \sigma = 0.3, v_0 = 0.05$ 以及 $\rho = -0.8$，且 $\alpha = 1$。$\tilde{z}(v)$ 的被积函数使用方程 (3.60)，而 $\tilde{y}(v)$ 的阻尼被积函数使用来自 (3.60) 的 (3.57)（此处修正）。
+阻尼被积函数 $\tilde{y}(v)$ 和普通的 $\tilde{z}(v)$ 分别如图 3.4 所示，再现了 Carr 和 Madan (1999) 中的图。我们使用的设置为 `S_t = 1, K = 0.96`，期限为 1 到 4 周，`r = 0.03, \kappa = 2, \theta = 0.25, \sigma = 0.3, v_0 = 0.05` 以及 `\rho = -0.8`，且 `\alpha = 1`。`\tilde{z}(v)` 的被积函数使用方程 `(3.60)`，而 `\tilde{y}(v)` 的阻尼被积函数使用来自 `(3.60)` 的 `(3.57)`（此处修正）。
 
 ### 使用傅里叶变换的推导
 
 阻尼被积函数由图 3.4 中的平表面表示，未阻尼被积函数由彩色表面表示。显然，添加阻尼因子会导致被积函数的震荡大大减少，从而更容易应用数值积分。
 
-方程 (3.56) 和 (3.58) 中的价外期权价格仅针对 $S_i = 1$ 设计。希望针对任何 $S_i > 0$ 的值获得这些公式。这是下一节的主题。
+方程 `(3.56)` 和 `(3.58)` 中的价外期权价格仅针对 `S_i = 1` 设计。希望针对任何 `S_i > 0` 的值获得这些公式。这是下一节的主题。
 
 ## 价外表示的推广
 
-将价外表示推广到任何 $S_i > 0$ 的值是简单的，因为这仅涉及改变所需积分的限。对于 $S_i > 0$，方程 (3.51) 中的指示函数基于价外截断点 $x_i = \ln S_i$，使得 $z(k)$ 为：
+将价外表示推广到任何 `S_i > 0` 的值是简单的，因为这仅涉及改变所需积分的限。对于 `S_i > 0`，方程 `(3.51)` 中的指示函数基于价外截断点 `x_i = \ln S_i`，使得 `z(k)` 为：
 
 $$z(k) = e^{-rt} \int_{-\infty}^{\infty} (e^x - e^k)\mathbf{1}_{k<x_i} q(x) dx + e^{-rt} \int_{-\infty}^{\infty} (e^x - e^k)\mathbf{1}_{k>x_i} q(x) dx.$$
 
-使用 (3.52)， $z(k)$ 的傅里叶变换形式为：
+使用 `(3.52)`，`z(k)` 的傅里叶变换形式为：
 
 $$\tilde{z}(v) = e^{-rt} \int_{-\infty}^{\infty} e^{ivk} \int_{-\infty}^{k} (e^x - e^k)q(x)dxk + e^{rt} \int_{x_i}^{\infty} \int_{k}^{\infty} (e^x - e^k)q(x)dxdk.$$
 
-我们完全以相同的方式进行：重组积分顺序，注意到内部积分是相同的，并重组两个外部积分。结果是方程 (3.54) 的推广：
+我们完全以相同的方式进行：重组积分顺序，注意到内部积分是相同的，并重组两个外部积分。结果是方程 `(3.54)` 的推广：
 
 $$\tilde{z}(v) = e^{-rt} \int_{-\infty}^{\infty} \left(\int_{-\infty}^{x_i} e^{i(v+1)k} dk - \int_{x_i}^{\infty} e^{i(v-1)k} dk\right) q(x) dx. \quad (3.59)$$
 
-唯一改变的是内部积分的上限，它变为 $k=x_i$ 而不是 $k=0$。内部积分为：
+唯一改变的是内部积分的上限，它变为 `k=x_i` 而不是 `k=0`。内部积分为：
 
 $$\frac{e^{i(v+1)x_i}}{iv+1} - \frac{e^{i(v-1)x_i}}{iv-1}$$
 
-再次，我们用特征函数表示 $\tilde{z}(v)$：
+再次，我们用特征函数表示 `\tilde{z}(v)`：
 
 $$\tilde{z}(v) = e^{-rt} \left( \frac{S_i+1}{iv+1} + \frac{\psi(v-i)}{v^2-iv} \right). \quad (3.60)$$
 
-为了获得通用 $S_i$ 的价外期权价格，我们将 (3.60) 代入方程 (3.56) 并应用数值积分技术。
-
-
-
+为了获得通用 `S_i` 的价外期权价格，我们将 `(3.60)` 代入方程 `(3.56)` 并应用数值积分技术。
 
 ### 使用傅里叶变换的推导
 
@@ -2907,17 +2543,17 @@ $$\tilde{z}(v) = e^{-rt} \left( \frac{S_i+1}{iv+1} + \frac{\psi(v-i)}{v^2-iv} \r
 
 | | 虚外看跌 (OTM Put) | 虚外看涨 (OTM Call) |
 |---|---|---|
-| $S_t = 1$ | $K = 0.95$ | $K = 1.05$ |
+| `S_t = 1` | `K = 0.95` | `K = 1.05` |
 | Heston | 0.1170 | 0.1485 |
 | Carr-Madan | 0.1175 | 0.1473 |
 | Carr-Madan 阻尼 | 0.1108 | 0.1575 |
-| $S_t = 25$ | $K = 20$ | $K = 30$ |
+| `S_t = 25` | `K = 20` | `K = 30` |
 | Carr-Madan | 1.4944 | 2.3819 |
 | Carr-Madan | 1.4888 | 2.4166 |
 
 使用阻尼和未阻尼的 Carr 和 Madan (1999) 积分函数对虚外看涨和看跌期权定价的 C# 代码与 Matlab 代码非常相似，在此处给出。
 
-我们展示了现货价格 $S_t = 1$、到期时间 $\tau = 1$ 的虚外期权定价，使用的参数 $r = 0.03, \kappa = 2, \theta = 0.25, v_0 = 0.05, \rho = -0.8, \alpha = 1.1$。看跌行权价 $K = 0.95$，对于现货价格 $S_t$，我们使用相同的参数和期权设置，但设置 $S_t = 25$ 并将权价更改为 $K = 20$ 和 $K = 30$。这通过以下代码实现。结果如表 3.1 所示。所有积分均使用 32 点高斯-盖尔（Gauss-Laguerre）积分完成。
+我们展示了现货价格 `S_t = 1`、到期时间 `\tau = 1` 的虚外期权定价，使用的参数 `r = 0.03, \kappa = 2, \theta = 0.25, v_0 = 0.05, \rho = -0.8, \alpha = 1.1`。看跌行权价 `K = 0.95`，对于现货价格 `S_t`，我们使用相同的参数和期权设置，但设置 `S_t = 25` 并将权价更改为 `K = 20` 和 `K = 30`。这通过以下代码实现。结果如表 3.1 所示。所有积分均使用 32 点高斯-盖尔（Gauss-Laguerre）积分完成。
 
 ```c
 S = 25;
@@ -2954,36 +2590,34 @@ CarrMadanOTMCall = HestonPriceGaussLaguerre('CarrMadan', ...);
 - 1. 给定期权的收益变换，它是模型无关的，不依赖于基础变换。
 - 2. 给定模型的基础变换，它是模型相关的，类似于特征函数。
 
-Lewis (2000) 对期权价值的基础变换方法所需的第一个元素是时间 $t$ 处导数值 $f(x,t)$ 的广义傅里叶变换 $f(k,t)$：
+Lewis (2000) 对期权价值的基础变换方法所需的第一个元素是时间 `t` 处导数值 `f(x,t)` 的广义傅里叶变换 `f(k,t)`：
 
 $$\hat{f}(k,t) = \int_{-\infty}^{\infty} e^{kx} f(x,t) \, dx \quad (4.1)$$
 
-其中 $x = \ln S$，因为我们处于时间 $t$。方程 (4.1) 与傅里叶变换相同，但参数 $k$ 允许为复，使得 $k = k + i_k$，其中 $k$ 和 $i_k$ 为实数。$f(k,t)$ 的简单解是针对到期时间 $T$ 的欧洲收益，此时收益 $f(x,T)$ 是已知的。
+其中 `x = \ln S`，因为我们处于时间 `t`。方程 `(4.1)` 与傅里叶变换相同，但参数 `k` 允许为复，使得 `k = k + i_k`，其中 `k` 和 `i_k` 为实数。`f(k,t)` 的简单解是针对到期时间 `T` 的欧洲收益，此时收益 `f(x,T)` 是已知的。
 
-例如，看涨期权的收益为 $f(x,T) = (e^x - K)^+$，所以：
+例如，看涨期权的收益为 `f(x,T) = (e^x - K)^+`，所以：
 
 $$\hat{f}(k,T) = \int_{-\infty}^{\infty} e^{kx} (e^x - K)^+ \, dx \quad (4.2)$$
 
-Lewis' (2000) 对期权价值的方法所需的第二个元素是时间 $t$ 处导数值 $f(x,t)$ 的广义傅里叶变换 $f(k,t)$。
+Lewis' (2000) 对期权价值的方法所需的第二个元素是时间 `t` 处导数值 `f(x,t)` 的广义傅里叶变换 `f(k,t)`。
 
 # 基础变换与期权价格
 
 Lewis' (2000) 基础变换定价方法所需的第二个元素是基础变换本身。在本节中，我们说明了 Lewis 如何推导出基础变换，并介绍了他获取期权价格的配方。
 
+为了评估 `(4.5)`，采用分部积分法并忽略边界项。
 
-
-
-为了评估 (4.5)，采用分部积分法并忽略边界项。
 例如：
 
 ```
 $$\int_{-\infty}^{\infty} e^{ikx}\frac{\partial\tilde{U}}{\partial x}dx=e^{ikx}U(x,t)|_{x=-\infty}^{x=\infty} - ik\int_{-\infty}^{\infty} e^{ikx}U(x,t)dx = -ik\tilde{U}(x,t)$ (4.6)
 ```
 
-其中边界项 $e^{ikx}U(x,t)$ 被设为零。Lewis (2000) 解释了为什么会这样。方程 (4.5) 中的其他项以类似的方式求值。我们得到：
+其中边界项 `e^{ikx}U(x,t)` 被设为零。Lewis (2000) 解释了为什么会这样。方程 `(4.5)` 中的其他项以类似的方式求值。我们得到：
 
 ```
-$$\int_{-\infty}^{\infty} e^{ikx}\frac{\partial^2\tilde{U}}{\partial x^2}=-k^2\tilde{U}(x,t),$
+$$\int_{-\infty}^{\infty} e^{ikx}\frac{\partial^2\tilde{U}}{\partial x^2}=-k^2\tilde{U}(x,t),$$
 ```
 
 显然：
@@ -2992,19 +2626,19 @@ $$\int_{-\infty}^{\infty} e^{ikx}\frac{\partial^2\tilde{U}}{\partial x^2}=-k^2\t
 $$\int_{-\infty}^{\infty} e^{ikx}\frac{\partial\tilde{U}}{\partial v}dx=\frac{\partial\tilde{U}}{\partial v}, \int_{-\infty}^{\infty} e^{ikx}\frac{\partial^2\tilde{U}}{\partial v^2}dx=\frac{\partial^2\tilde{U}}{\partial v^2}$$
 ```
 
-将这些导数代入 (4.5) 得到关于 $\tilde{U}$ 的偏微分方程 (PDE)：
+将这些导数代入 `(4.5)` 得到关于 `\tilde{U}` 的偏微分方程 (PDE)：
 
 ```
 $$\frac{\partial\tilde{U}}{\partial t}=[-r-ik(r-q)]\tilde{U}-\frac{1}{2}v(k^2-ik)\tilde{U}+[\kappa(\theta-v)-\lambda v-ik\rho\sigma v]\frac{\partial\tilde{U}}{\partial v}-\frac{1}{2}\frac{\partial^2\tilde{U}}{\partial v^2}$$ (4.7)
 ```
 
-在 Lewis (2000) 的方程 (2.2.6) 中，(4.1) 中的变换写写形式：
+在 Lewis (2000) 的方程 `(2.2.6)` 中，`(4.1)` 中的变换写写形式：
 
 ```
-$$\tilde{U}(k,t)=exp([-r-ik(r-q)]\tau) \times \tilde{H}(k,v,\tau) (4.8)
+$$\tilde{U}(k,t)=exp([-r-ik(r-q)]\tau) \times \tilde{H}(k,v,\tau) (4.8)$$
 ```
 
-其中 $\tau=T-t$ 是到期时间。函数 $\tilde{H}$ 是通过对方程 (4.8) 求导构造出的 PDE 的解。因此，我们需要以下导数：
+其中 `\tau=T-t` 是到期时间。函数 `\tilde{H}` 是通过对方程 `(4.8)` 求导构造出的 PDE 的解。因此，我们需要以下导数：
 
 ```
 $$\frac{\partial\tilde{U}}{\partial t}=\frac{\partial\tilde{U}}{\partial \tau}=[-r-ik(r-q)]e^{[-r-ik(r-q)]\tau}\tilde{H}(k,v,\tau)+e^{[-r-ik(r-q)]\tau}\frac{\partial\tilde{H}}{\partial \tau}$$
@@ -3016,7 +2650,7 @@ $$\frac{\partial\tilde{U}}{\partial t}=\frac{\partial\tilde{U}}{\partial \tau}=[
 $$\frac{\partial\tilde{U}}{\partial v}=e^{[-r-ik(r-q)]\tau}\frac{\partial\tilde{H}}{\partial v},e^{[-r-ik(r-q)]\tau}\frac{\partial^2\tilde{H}}{\partial v^2}$$
 ```
 
-将这些用 $\tilde{H}$ 表示的 $\tilde{U}$ 导数代入方程 (4.7) 并消去项，得到关于 $\tilde{H}$ 的 PDE：
+将这些用 `\tilde{H}` 表示的 `\tilde{U}` 导数代入方程 `(4.7)` 并消去项，得到关于 `\tilde{H}` 的 PDE：
 
 ```
 $$\frac{\partial\tilde{H}}{\partial \tau}=-\frac{1}{2}\sigma^2v\frac{\partial^2\tilde{H}}{\partial v^2}+[\kappa(\theta-v)-\lambda v-ik\rho\sigma v]\frac{\partial\tilde{H}}{\partial v}-vc\tilde{H}(k,v,\tau)$$ (4.9)
@@ -3024,11 +2658,11 @@ $$\frac{\partial\tilde{H}}{\partial \tau}=-\frac{1}{2}\sigma^2v\frac{\partial^2\
 
 ### 用于期权定价的基础变换
 
-其中 $c(k) = \frac{1}{2}(k^2 - ik)$。方程 (4.9) 是 Lewis (2000) 中针对 Heston 模型的方程 (2.2.7)。Lewis 解释说，只需要收益赔为 1 的特殊情况，即 $\hat{H}(k,v,0)=1$。所有其他收益赔都可以通过将 $\hat{H}(k,v,0)$ 乘以适当的收益赔变换来处理。满足初始条件 $\hat{H}(k,v,0)=1$ 的方程 (4.9) 中 PDE 的解 $H(k,v,\tau)$ 被称为基础变换。如果基础变换在带状 $\alpha < k < \beta$ 内关于 $k$ 是正则的（其中 $k_i = Im[k]$ 是 $k$ 的虚部），则该基础变换是正则的。一旦通过求解方程 (4.9) 找到基础变换，Lewis (2000) 计算期权价格是非常简单的。只需要知道收益赔变换，例如 (4.2) 中的欧式看涨。示例如下：
+其中 `c(k) = \frac{1}{2}(k^2 - ik)`。方程 `(4.9)` 是 Lewis (2000) 中针对 Heston 模型的方程 `(2.2.7)`。Lewis 解释说，只需要收益赔为 1 的特殊情况，即 `\hat{H}(k,v,0)=1`。所有其他收益赔都可以通过将 `\hat{H}(k,v,0)` 乘以适当的收益赔变换来处理。满足初始条件 `\hat{H}(k,v,0)=1` 的方程 `(4.9)` 中 PDE 的解 `H(k,v,\tau)` 被称为基础变换。如果基础变换在带状 `\alpha < k < \beta` 内关于 `k` 是正则的（其中 `k_i = Im[k]` 是 `k` 的虚部），则该基础变换是正则的。一旦通过求解方程 `(4.9)` 找到基础变换，Lewis (2000) 计算期权价格是非常简单的。只需要知道收益赔变换，例如 `(4.2)` 中的欧式看涨。示例如下：
 
-- 将基础变换 $\hat{H}(k,v,\tau)$ 乘以收益赔变换 $\hat{f}(k,T)$。收益赔变换取决于顺序考虑，但基础变换不取决于。
-- 将结果乘以项 $\exp(-r(T-\tau)-q\tau)$。
-- 通过方程 (4.3) 中的反演公式处理表达式并计算积分，注意遵守正则带状。
+- 将基础变换 `\hat{H}(k,v,\tau)` 乘以收益赔变换 `\hat{f}(k,T)`。收益赔变换取决于顺序考虑，但基础变换不取决于。
+- 将结果乘以项 `exp(-r(T-\tau)-q\tau)`。
+- 通过方程 `(4.3)` 中的反演公式处理表达式并计算积分，注意遵守正则带状。
 
 回一下，在第3章涵盖的 Carr 和 Madan (1999) 方法中，需要导数的傅里叶变换。我们需要定价的每类期权。为了进一步增加困难，价格的傅里叶变换可能非常复杂。Lewis (2000) 方法的优势在于，一旦获得了基础变换，由于基础变换依赖于模型而不依赖于收益，相同的基础变换可以应用于不同的欧式期权；此外，由于收益赔在合约中是指定的，它们的傅里叶变换比期权价格傅里叶变换更容易获得。
 
@@ -3036,13 +2670,13 @@ $$\frac{\partial\tilde{H}}{\partial \tau}=-\frac{1}{2}\sigma^2v\frac{\partial^2\
 
 ## Heston 模型的基础变换
 
-根据方程 (4.9)，使用 $\lambda = 0$ 关于 $\hat{H}(k,v,\tau)$ 的 PDE 为：
+根据方程 `(4.9)`，使用 `\lambda = 0` 关于 `\hat{H}(k,v,\tau)` 的 PDE 为：
 
 ```
 $$\frac{\partial\hat{H}}{\partial \tau} = \frac{1}{2}\sigma^2 v \frac{\partial^2\hat{H}}{\partial v^2} + [\kappa(\theta-v) - ik\rho\sigma]\frac{\partial\hat{H}}{\partial v} - cv. (4.10)$$
 ```
 
-该 PDE 必须转换为与 Riccati 方程类似的形式。遵循 Lewis (2000) 的第一章，定义 $t=\sigma^2/2$，使得：
+该 PDE 必须转换为与 Riccati 方程类似的形式。遵循 Lewis (2000) 的第一章，定义 `t=\sigma^2/2`，使得：
 
 ```
 $$\frac{\partial\hat{H}}{\partial \tau} = \frac{2}{\sigma^2} \frac{\partial\hat{H}}{\partial t}$$
@@ -3050,11 +2684,12 @@ $$\frac{\partial\hat{H}}{\partial \tau} = \frac{2}{\sigma^2} \frac{\partial\hat{
 
 ## Heston 模型及其在 MATLAB 中的扩展
 
-方程 (4.10) 变为：
+方程 `(4.10)` 变为：
 
 ```
 $$\frac{\partial\hat{H}}{\partial t} = v\frac{\partial^2\hat{H}}{\partial v^2} + \frac{2}{\sigma^2}[\kappa(\theta-v) - ik\rho\sigma]\frac{\partial\hat{H}}{\partial v} - \frac{2c(k)}{\sigma^2}v. (4.11)$$
 ```
+
 （注：OCR 合并了行，根据上下文重建）
 
 其中：
@@ -3062,24 +2697,28 @@ $$\frac{\partial\hat{H}}{\partial t} = v\frac{\partial^2\hat{H}}{\partial v^2} +
 ```
 $$\tilde{\kappa} = \frac{2(\kappa + ik\rho)}{\sigma^2}, \quad \tilde{v} = \frac{\theta}{\kappa + ik}$$
 ```
-$\tilde{c}(k) = 2c(k)/\sigma^2 = (k^2 - ik)/\sigma^2$。(4.11) 中的第二个方程是关于 $v$ 的抛物方程，且具有形式为：
+
+`\tilde{c}(k) = 2c(k)/\sigma^2 = (k^2 - ik)/\sigma^2`。`(4.11)` 中的第二个方程是关于 `v` 的抛物方程，且具有形式为：
+
+
 
 ```
 $$f(v,t) = \exp(C(t) + D(t)v)$$
 ```
-带有初始条件 $C(0) = D(0) = 0$。对 $f(v,t)$ 求导，代入 (4.11)，并消去两边的 $f$。这产生了：
+
+带有初始条件 `$C(0) = D(0) = 0$`。对 `$f(v,t)$` 求导，代入 `(4.11)`，并消去两边的 `$f$`。这产生了：
 
 ```
 $$\frac{\partial D}{\partial t} + \frac{\partial C}{\partial t}v = D^2 + \tilde{\kappa}D - \tilde{c}$$
 ```
 
-现在对应 $v$ 项，得到一组方程：
+现在对应 `$v$` 项，得到一组方程：
 
 ```
 $$\frac{\partial D}{\partial t} = D^2 - \tilde{c}, \quad \frac{\partial C}{\partial t} = \tilde{\kappa}D. (4.12)$$
 ```
 
-求解这些方程的方法与第1章涵盖的原始 Heston (1993) 完全相同。(4.12) 中的第一个方程是 Riccati 方程，其中 $P(t)=-\tilde{c}, Q(t)=-\tilde{\kappa}, R(t)=1$。为了求解它，我们应用相同的程序。建立二阶 ODE：
+求解这些方程的方法与第1章涵盖的原始 `Heston (1993)` 完全相同。`(4.12)` 中的第一个方程是 `Riccati` 方程，其中 `$P(t)=-\tilde{c}, Q(t)=-\tilde{\kappa}, R(t)=1$`。为了求解它，我们应用相同的程序。建立二阶 `ODE`：
 
 ```
 $$w'' + \tilde{\kappa}w - \tilde{c} = 0$$
@@ -3091,13 +2730,13 @@ $$w'' + \tilde{\kappa}w - \tilde{c} = 0$$
 $$\alpha = \frac{\tilde{\kappa}+d}{2}, \quad \beta = \frac{\tilde{\kappa}-d}{2}$$
 ```
 
-其中 $d = \sqrt{\tilde{\kappa}^2 + 4\tilde{c}}$。因此，4.12) 中 Riccati 方程的解为：
+其中 `$d = \sqrt{\tilde{\kappa}^2 + 4\tilde{c}}$`。因此，`4.12)` 中 `Riccati` 方程的解为：
 
 ```
 $$D = \frac{1}{R}\frac{\alpha e^{\alpha t} - \beta e^{\beta t}}{e^{\alpha t} - e^{\beta t}}$$
 ```
 
-初始条件 $D(0)=0$ 意味着通过在分子中令 $t=0$，我们得到 $K=-\beta/\alpha = (\tilde{\kappa}-d)/(\tilde{\kappa}+d)$。这产生了：
+初始条件 `$D(0)=0$` 意味着通过在分子中令 `$t=0$`，我们得到 `$K=-\beta/\alpha = (\tilde{\kappa}-d)/(\tilde{\kappa}+d)$`。这产生了：
 
 ```
 $$D(t) = \frac{\tilde{\kappa}+d}{2} \left( \frac{1-e^{\beta t}}{1-e^{\alpha t}} \right) (4.13)$$
@@ -3105,102 +2744,103 @@ $$D(t) = \frac{\tilde{\kappa}+d}{2} \left( \frac{1-e^{\beta t}}{1-e^{\alpha t}} 
 
 ### 用于期权定价的基础变换
 
-其中 $g = -K = (\tilde{k} + d)/(\tilde{k} - d)$ 且 $\alpha - \beta = d$。$C(t)$ 的解通过积分找到。$D(t)$ 的积分是：
+其中 `$g = -K = (\tilde{k} + d)/(\tilde{k} - d)$` 且 `$\alpha - \beta = d$`。`$C(t)$` 的解通过积分找到。`$D(t)$` 的积分是：
 
 ```
 $$\int_0^t D(y)dy = \frac{\tilde{k}+d}{2}\int_0^t \left( \frac{1-e^{dy}}{1-ge^{dy}} \right)dy + K_1 = \frac{\tilde{k}+d}{2}[dt + \frac{1}{g}\ln\left( \frac{1-ge^{dt}}{1-g} \right)] + K_1 = \left[ \frac{\tilde{k}+d}{2}t - \ln\left( \frac{1-ge^{dt}}{1-g} \right) \right] + K_1$$
 ```
-其中 $K_1$ 是积分常数。因此：
+
+其中 `$K_1$` 是积分常数。因此：
 
 ```
 left[ \frac{\tilde{k}+d}{2}t - \ln\left( \frac{1-ge^{dt}}{1-g} \right) \right] + K_1 \right
 ```
-其中我们应用了初始条件 $C(0)=0$：
+
+其中我们应用了初始条件 `$C(0)=0$`：
 
 ```
 C(t) = \frac{\tilde{k}+d}{2}t - \ln\left( \frac{1-ge^{dt}}{1-g} \right) + K_1
 ```
-(4.14)
 
-其中我们得到了 Heston 模型的基础变换：
+`(4.14)`
+
+其中我们得到了 `Heston` 模型的基础变换：
 
 ```
 $$C(t) = \exp(C(t) + D(t)v)
 ```
-(4.15)
 
-其中 $v=v_0$ 是初始方差。(4.15) 中的基础变换与第1章推导的相同，符号 $C(t)$ 和 $D(t)$ 分别代表 $C(\tau,\phi)$ 和 $D(\tau,\phi)$。Lewis (2000) 第2.4节描述了 $\hat{H}(k,v,\tau)$ 是解析函数的条件。
+`(4.15)`
+
+其中 `$v=v_0$` 是初始方差。`(4.15)` 中的基础变换与第1章推导的相同，符号 `$C(t)$` 和 `$D(t)$` 分别代表 `$C(\tau,\phi)$` 和 `$D(\tau,\phi)$`。`Lewis (2000)` 第2.4节描述了 `$\hat{H}(k,v,\tau)$` 是解析函数的条件。
 
 ## 使用基础变换计算价格
 
-回一下 Lewis 方法需要定价期权的收益赔变换。将 Lewis 方法应用于欧式看涨价格，我们使用 (4.2) 中得到的收益赔变换。需要求解的积分是：
+回一下 `Lewis` 方法需要定价期权的收益赔变换。将 `Lewis` 方法应用于欧式看涨价格，我们使用 `(4.2)` 中得到的收益赔变换。需要求解的积分是：
 
 ```
 $$C_t(K) = \frac{1}{2\pi}\int_{i\infty}^{i\infty} e^{-ikx} e^{-l(r-ik)^2t} \hat{H}(k,v,\tau) \times \frac{-K^{ik+1}}{k^2-ik} dk (4.16)$$
 ```
 
-其中 $x$ 是 $S_t$。定义 $X = \ln(S_t/K) + (r-q)\tau$，看涨价格可以写为 Lewis (2000) 中方程 (2.2.8)的形式：
+其中 `$x$` 是 `$S_t$`。定义 `$X = \ln(S_t/K) + (r-q)\tau$`，看涨价格可以写为 `Lewis (2000)` 中方程 `(2.2.8)` 的形式：
 
 ```
 $$C_t(K) = -\frac{Ke^{-rt}}{2\pi}\int_{i\infty}^{i\infty} e^{-ikX} \frac{\hat{H}(k,v,\tau)}{k^2-ik} dk (4.17)$$
 ```
 
-其中积分在 $1 < k < \beta$ 内定义。$H(k,v,\tau)$ 的正则带是 $\alpha < k < \beta$，收益赔变换的正则带是 $k_i > 1$。因此，$C_t(K)$ 定义在这两个带的交集上，即 $1 < k_i < \beta$。
-
-
-
+其中积分在 `$1 < k < \beta$` 内定义。`$H(k,v,\tau)$` 的正则带是 `$\alpha < k < \beta$`，收益赔变换的正则带是 `$k_i > 1$`。因此，`$C_t(K)$` 定义在这两个带的交集上，即 `$1 < k_i < \beta$`。
 
 # 98 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
-方程 (4.17) 和 (4.19) 的看涨期权价格依赖于基础变换 $H(k, v, \tau)$ 的解析形式，因此它们适用于包括 Heston 模型在内的一系列模型。Lewis (2000) 为多个模型（包括我们在上一节介绍过的 Heston 模型）推导了 $H(k, v, \tau)$ 的解析表达式。
+方程 `(4.17)` 和 `(4.19)` 的看涨期权价格依赖于基础变换 `$H(k, v, \tau)$` 的解析形式，因此它们适用于包括 `Heston` 模型在内的一系列模型。`Lewis (2000)` 为多个模型（包括我们在上一节介绍过的 `Heston` 模型）推导了 `$H(k, v, \tau)$` 的解析表达式。
 
-Lewis (2000) 还基于看跌期权平价和备兑看涨期权（covered call）发现了 (4.17) 中看涨期权价格的另一种解，该期权的收益为 $\min(S_T, K)$。该解在较简单的限制 $0 < k_j < 1$ 下有效。备兑看涨期权的收益为：
+`Lewis (2000)` 还基于看跌期权平价和备兑看涨期权（`covered call`）发现了 `(4.17)` 中看涨期权价格的另一种解，该期权的收益为 `$\min(S_T, K)$`。该解在较简单的限制 `$0 < k_j < 1$` 下有效。备兑看涨期权的收益为：
 
 ```
 $$\min(S_T, K) = K - (K - S_T)^+$$
 ```
 
-对两边取期望并进行折现，备兑看涨期权的 $t$ 时刻价格为：
+对两边取期望并进行折现，备兑看涨期权的 `$t$` 时刻价格为：
 
 ```
 $e^{-r\tau} E[\min(S_T, K)] = Ke^{-r\tau} - P(K)$
 ```
 
-其中 $P(K)$ 是执行价为 $K$ 的欧式看跌期权的 $t$ 时刻价值。看跌看涨平价：
+其中 `$P(K)$` 是执行价为 `$K$` 的欧式看跌期权的 `$t$` 时刻价值。看跌看涨平价：
 
 ```
-$C(K, T) = S_t e^{rt} - [Ke^{-r\tau} - P(K)] \quad (4.18)
+$C(K, T) = S_t e^{rt} - [Ke^{-r\tau} - P(K)] \quad (4.18)$
 ```
 
-意味着看涨期权价格可以用现价和备兑看涨期权来表示。因此，对于第二解，我们需要将 Alan Lewis 的方法应用于备兑看涨期权，其收益变换为：
+意味着看涨期权价格可以用现价和备兑看涨期权来表示。因此，对于第二解，我们需要将 `Alan Lewis` 的方法应用于备兑看涨期权，其收益变换为：
 
 ```
 $$\hat{f}(k, T) = \int_{-\infty}^{\ln K} e^{ikx}[K - (K - e^x)^+]dx = \int_{-\infty}^{\ln K} e^{ikx}dx - \int_{\ln K}^{\infty} e^{i(k+1)x}dx\n= K\left(\int_{-\infty}^{\ln K} e^{ikx}dx + \int_{\ln K}^{\infty} e^{i(k+1)x}dx\right) = \frac{Ke^{ikK}}{ik} + \frac{Ke^{i(k+1)K}}{i+1} = \frac{K^{k+1}}{k^2-ik}$$
 ```
 
-其中积分区间为 $0 < k_j < 1$，因为第一个积分要求 $k_j > 0$，而第二个积分也要求。备兑看涨期权的收益变换与看涨期权的变换相同，仅缺少一个负号，且 $0 < k < 1$ 在比看涨期权限制 $k_j > 1$ 的情况下更容易推导。将 Lewis (2000) 的方法应用于备兑看涨期权并使用方程 (4.18) 中的看跌看涨平价，解为：
+其中积分区间为 `$0 < k_j < 1$`，因为第一个积分要求 `$k_j > 0$`，而第二个积分也要求。备兑看涨期权的收益变换与看涨期权的变换相同，仅缺少一个负号，且 `$0 < k < 1$` 在比看涨期权限制 `$k_j > 1$` 的情况下更容易推导。将 `Lewis (2000)` 的方法应用于备兑看涨期权并使用方程 `(4.18)` 中的看跌看涨平价，解为：
 
 ```
-$C_2(K) = S_t e^{-r\tau} - \frac{Ke^{-r\tau}}{2\pi} \int_{k_j}^{\infty} \frac{e^{ikx}}{k^2-ik} H(k, v, \tau) dk \quad (4.19)
+$C_2(K) = S_t e^{-r\tau} - \frac{Ke^{-r\tau}}{2\pi} \int_{k_j}^{\infty} \frac{e^{ikx}}{k^2-ik} H(k, v, \tau) dk \quad (4.19)$
 ```
 
-其中 $\max(0,\alpha) < k < \min(1,\beta)$。值 $C_2(K)$ 与 (4.17) 中的 $C_1(K)$ 相同，仅在于存在项 $S_t e^{-r\tau}$ 且区间不同。事实上，备兑看涨期权变换 $\hat{f}(k,T)$ 的区间为 $0 < k_j < 1$，而 $\hat{H}(k,v,\tau)$ 的区间为 $\alpha < k_j < \beta$。因此，$C_2(K)$ 定义在这两个区间的交集上。
+其中 `$\max(0,\alpha) < k < \min(1,\beta)$`。值 `$C_2(K)$` 与 `(4.17)` 中的 `$C_1(K)$` 相同，仅在于存在项 `$S_t e^{-r\tau}$` 且区间不同。事实上，备兑看涨期权变换 `$\hat{f}(k,T)$` 的区间为 `$0 < k_j < 1$`，而 `$\hat{H}(k,v,\tau)$` 的区间为 `$\alpha < k_j < \beta$`。因此，`$C_2(K)$` 定义在这两个区间的交集上。
 
 ### 用于期权定价的基础变换
 
-max(0,\alpha) < k < \min(1,\beta)$。方程 (4.19) 的看涨期权价格比 (4.17) 更处理，因为在 (4.19) 中我们可以简单地选择 $k_t = 1/2$。方程 (4.19) 是 Lewis (2000) 中的 (2.10)。对于 (4.17) 中的看涨期权积分 $C_1(K)$ 或 (4.19) 中的 $C_2(K)$，通过注意到被积函数在实部为偶函数、在虚部为奇函数可以简化。因此，看涨期权的表达式为：
+`max(0,\alpha) < k < \min(1,\beta)$`。方程 `(4.19)` 的看涨期权价格比 `(4.17)` 更处理，因为在 `(4.19)` 中我们可以简单地选择 `$k_t = 1/2$`。方程 `(4.19)` 是 `Lewis (2000)` 中的 `(2.10)`。对于 `(4.17)` 中的看涨期权积分 `$C_1(K)$` 或 `(4.19)` 中的 `$C_2(K)$`，通过注意到被积函数在实部为偶函数、在虚部为奇函数可以简化。因此，看涨期权的表达式为：
 
 ```
 $C_1(K) = -\frac{Ke^{-rt}}{\pi} \int_0^{\infty} \text{Re}\left[\frac{e^{ikX}}{k^2 - ik} \hat{H}(k, v, \tau)\right] dk \eqno(4.20)$
 ```
 
-其中 $1 < k_t < \beta$，
+其中 `$1 < k_t < \beta$`，
 
 ```
 $C_2(K) = S_0 e^{-rt} \frac{1}{\pi} \int_0^{\infty} \text{Re}\left[\frac{e^{ikX}}{k^2 - ik} \hat{H}(k, v, \tau)\right] dk \eqno(4.21)$
 ```
 
-其中 $\max(0,\alpha) < k < \min(1,\beta)$ 且 $X=\ln(S/K)+(r-q)$。方程 (4.20) 和 (4.21) 中的解是相同的，除了 $C_2(K)$ 的表达式包含了项 $S_0 e^{-rt}$ 而 $C_1(K)$ 则没有。记住，积分区间是不同的。在 $C_2(K)$ 中我们可以取 $k_t=1/2$，但在 $C_1(K)$ 中必须取 $k_t > 1$。这意味着积分值不同；最终结果是 $C_1(K)=C_2(K)$。当数值积分方案应用于 (4.20) 和 (4.21) 中的积分时，它们通常会被截断并替换为一个大数。Lewis 使用范围 $(0, k_{max})$，其中 $k_{max}=\max(1000,10/\sqrt{\tau})$。这个问题将在第5章讨论。Matlab 函数 `Lewisand(k,X)` 实现了方程 (4.15) 的基础变换 $\hat{H}(k,v,\tau)$。
+其中 `$\max(0,\alpha) < k < \min(1,\beta)$` 且 `$X=\ln(S/K)+(r-q)$`。方程 `(4.20)` 和 `(4.21)` 中的解是相同的，除了 `$C_2(K)$` 的表达式包含了项 `$S_0 e^{-rt}$` 而 `$C_1(K)$` 则没有。记住，积分区间是不同的。在 `$C_2(K)$` 中我们可以取 `$k_t=1/2$`，但在 `$C_1(K)$` 中必须取 `$k_t > 1$`。这意味着积分值不同；最终结果是 `$C_1(K)=C_2(K)$`。当数值积分方案应用于 `(4.20)` 和 `(4.21)` 中的积分时，它们通常会被截断并替换为一个大数。`Lewis` 使用范围 `$(0, k_{max})$`，其中 `$k_{max}=\max(1000,10/\sqrt{\tau})$`。这个问题将在第5章讨论。`Matlab` 函数 `Lewisand(k,X)` 实现了方程 `(4.15)` 的基础变换 `$\hat{H}(k,v,\tau)$`。
 
 ```matlab
 function y = Lewisand(k,X)
@@ -3218,17 +2858,17 @@ H = exp(A + B*t);
 y = real(exp(-i*k*t)/(k^2 - i*k)*H);
 ```
 
-该函数随后用于调用 `HestonCallPrice` 函数，该函数计算 (4.21) 中的 $C_1(K)$ 或 $C_2(K)$。该函数可以使用梯形积分规则或高斯-勒加积分。
+该函数随后用于调用 `HestonCallPrice` 函数，该函数计算 `(4.21)` 中的 `$C_1(K)$` 或 `$C_2(K)$`。该函数可以使用梯形积分规则或高斯-勒加积分。
 
 ## 表 4.1 看涨价格比较
 
 | 看涨价格公式 | 积分规则 | 看涨价格 |
 | :--- | :--- | :--- |
 | 原始 Heston 公式 | 高斯-勒加 | 4.939490 |
-| $C_1(K)$ (4.20) | 梯形法 | 4.932314 |
-| $C_2(K)$ (4.20) | 高斯-勒加 | 4.934282 |
-| $C_1(K)$ (4.21) | 梯形法 | 4.932314 |
-| $C_2(K)$ (4.21) | 高斯-勒加 | 4.928201 |
+| `$C_1(K)$` (4.20) | 梯形法 | 4.932314 |
+| `$C_2(K)$` (4.20) | 高斯-勒加 | 4.934282 |
+| `$C_1(K)$` (4.21) | 梯形法 | 4.932314 |
+| `$C_2(K)$` (4.21) | 高斯-勒加 | 4.928201 |
 
 ```matlab
 function y = HestonCallPrice(...)
@@ -3258,60 +2898,58 @@ end
 
 ## 使用帕塞瓦恒等式进行期权定价
 
-在其书籍的后续论文中，Lewis (2001) 利用帕塞瓦恒等式对于任何满足以下特征的莱维过程获得期权价格：这种
+在其书籍的后续论文中，`Lewis (2001)` 利用帕塞瓦恒等式对于任何满足以下特征的莱维过程获得期权价格：这种
 
-帕塞瓦恒等式是傅里叶变换的一个关键恒等式。可以参考 Beerends 等人 (2003) 的第 7.2.5 节。
+帕塞瓦恒等式是傅里叶变换的一个关键恒等式。可以参考 `Beerends` 等人 `(2003)` 的第 7.2.5 节。
 
-如果我们需要广义变换，允许 $k$ 取复值，使得 $k = k_r + ik_i$，则方程 (4.22) 中的帕塞瓦恒等式变为：
+如果我们需要广义变换，允许 `$k$` 取复值，使得 `$k = k_r + ik_i$`，则方程 `(4.22)` 中的帕塞瓦恒等式变为：
 
 ```
 $$\f(x,t) = \frac{e^{-rt}}{2\pi} \int_{-ik_i}^{ik_i} \tilde{w}(k)\varphi(k) dk.$ (4.24)$
 ```
 
-
-
-
-
 ## Heston 模型的 Parseval 等式
 
-Lewis (2001) 在股票价格的一般设定下推出了期权定价公式。假设时刻 $T$ 时的股票价格 $S_T$ 从 $t=0$ 时的 $S_0$ 演变如下：
+`Lewis (2001)` 在股票价格的一般设定下推出了期权定价公式。假设时刻 `$T$` 时的股票价格 `$S_T$` 从 `$t=0$` 时的 `$S_0$` 演变如下：
 
 ```
 $S_T = S_0 e^{(r-q)T+X_T} \quad (4.25)$
 ```
 
-其中 $T$ 是期权的行权时间，$r$ 是无风险利率，$q$ 是股息收益率，$X_T$ 是一个 Lévy 过程，满足 $E[e^{ikX_T}]=1$。在某些正则性条件下，$t=0$ 时的期权价格 $U(S_0)$ 为：
+其中 `$T$` 是期权的行权时间，`$r$` 是无风险利率，`$q$` 是股息收益率，`$X_T$` 是一个 `Lévy` 过程，满足 `$E[e^{ikX_T}]=1$`。在某些正则性条件下，`$t=0$` 时的期权价格 `$U(S_0)$` 为：
 
 ```
 $U(S_0) = \frac{e^{-rT}}{2\pi} \int_{-\infty}^{+\infty} e^{-ikY}\varphi(-k)\hat{w}(k) dk \quad (4.26)$
 ```
 
-其中 $Y = \ln S_0+(r-q)T$，$\hat{w}(k)$ 是收益函数 $w(x_T)$ 的傅里叶变换，$\varphi(k)$ 是 Lévy 过程 $X_T$ 在复数 $k=k+ik_i$ 处的特征函数。Lewis 假设 $\varphi(k)$ 在带带 $S_X=\{k: a < k_i < b\}$ 内正则正则，其中 $a<-1$ 且 $b=0$。为了展示方程 (4.26) 的推导过程，(4.3) 中收益的逆变换 $w(x,t)$ 以及对于 $f(x,t)$ 的 $\hat{w}(k)$：
+其中 `$Y = \ln S_0+(r-q)T$`，`$\hat{w}(k)$` 是收益函数 `$w(x_T)$` 的傅里叶变换，`$\varphi(k)$` 是 `Lévy` 过程 `$X_T$` 在复数 `$k=k+ik_i$` 处的特征函数。`Lewis` 假设 `$\varphi(k)$` 在带带 `$S_X=\{k: a < k_i < b\}$` 内正则正则，其中 `$a<-1$` 且 `$b=0$`。为了展示方程 `(4.26)` 的推导过程，`(4.3)` 中收益的逆变换 `$w(x,t)$` 以及对于 `$f(x,t)$` 的 `$\hat{w}(k)$`：
 
 ```
 $w(x) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} e^{-ikx}\hat{w}(k) dk = \frac{1}{2\pi} \int_{-\infty}^{+\infty} S_T^{-ik} \hat{w}(k) dk \quad (4.27)$
 ```
 
-因为 $x=\ln S_T$。期权的无套利价格为：
+因为 `$x=\ln S_T$`。期权的无套利价格为：
 
 ```
 $U(S_0) = \frac{e^{-rT}}{2\pi} \int_{-\infty}^{+\infty} E^{ikY}(S_0e^{(r-q)T+X_T})^{-ik}\hat{w}(k) dk \\
 = \frac{e^{-rT}}{2\pi} \int_{-\infty}^{+\infty} e^{-ikY}E[e^{-ikX_T}]\hat{w}(k) dk \\n= \frac{e^{-rT}}{2\pi} \int_{-\infty}^{+\infty} e^{-ikY}\varphi(-k)\hat{w}(k) dk \quad\quad (4.28)$
 ```
 
-其中 $\varphi(-k)=E[e^{-ikX_T}]$ 是 $X_T$ 的特征函数在 $-k$ 处的取值。注意，在 (4.28) 的一行中，项 $e^{-ikY}E[e^{-ik\ln S_T}] = f_2(-k)$ 是 Heston (1993) 关于 $\ln S_T$ 的特征函数在 $-k$ 处的取值。
+其中 `$\varphi(-k)=E[e^{-ikX_T}]$` 是 `$X_T$` 的特征函数在 `$-k$` 处的取值。注意，在 `(4.28)` 的一行中，项 `$e^{-ikY}E[e^{-ik\ln S_T}] = f_2(-k)$` 是 `Heston (1993)` 关于 `$\ln S_T$` 的特征函数在 `$-k$` 处的取值。
 
 ```
 $e^{-ikY}\varphi(-k) = E[e^{-ik(Y+\ln S_T)}] = f_2(-k) \quad\quad (4.29)$
 ```
 
-定价公式 (4.28) 是 Lewis (2001) 中的方程 (3.5)，也是该论文的主要结果。Lewis (2000) 解释说 (4.28) 适用于广泛的模型，包括方差 Gamma 模型、Heston 模型以及许多其他模型。只需要特征函数及其正则带即可。
+定价公式 `(4.28)` 是 `Lewis (2001)` 中的方程 `(3.5)`，也是该论文的主要结果。`Lewis (2000)` 解释说 `(4.28)` 适用于广泛的模型，包括方差 `Gamma` 模型、`Heston` 模型以及许多其他模型。只需要特征函数及其正则带即可。
+
+
 
 变换 $\hat{w}(k)$ 定义在区域 $S_w$ 中，对于看涨期权，我们有 $S_w^{call}=\{k: k_i > 1\}$，对于看跌期权，我们有 $S_w^{put}=\{k: k_i < 0\}$，如下文所示
 
 # 期权定价的基本变换
 
-### 103
+## 103
 
 $k = \text{Im}[k]$
 
@@ -3327,7 +2965,7 @@ $\hat{q}(k|s_0) = \int_{ik_{-\infty}}^{ik_{\infty}} e^{iks_T} q(s_T|s_0) ds_T = 
 
 此外，我们可以写为 $\hat{q}(k|s_0) = e^{ikY}\varphi(k)$，因为 $\hat{p}(k)$ 是 $X_T$ 的特征函数，我们记为 $\varphi(k)$。注意 $\hat{q}(k|s_0)$ 是 $s_T = \ln S_T$ 的特征
 
-### MATLAB 和 C 中的 Heston 模型及其扩展
+## MATLAB 和 C 中的 Heston 模型及其扩展
 
 ### 104
 
@@ -3345,10 +2983,7 @@ $C(S_0) = \frac{e^{-rT}}{2\pi} \int_{ik_0}^{ik_{\infty}} e^{-ikY}\varphi(-k)\hat
 
 （注：此处根据上下文逻辑补全了原文截断的公式含义，但严格遵循指令不翻译代码块，仅翻译描述部分。由于原文文本在输入处被截断，翻译也随在提供的文本处结束。）
 
-
-
-
-# 106 HESTON 模型及其在 MATLAB 中的扩展
+## 106 HESTON 模型及其在 MATLAB 中的扩展
 
 最后，Lewis (201) 显示，如果将积分路径移动到 $v_t \in (\alpha, 0)$，且 $\alpha < 0$，则两个极点都被包含在内，如图4 中的 $\mathcal{C}$ 所示。再次应用留数定理，$C(S_0)$ 等于沿新路径的积分减去 $2\pi$ 乘以留数之和。
 
@@ -3358,13 +2993,18 @@ $$\hat{u}(k) = \frac{K^{k+1}}{k^2-ik}$$
 
 ```text
 这与看权公式相同，只是允许区域为 $k<0$。因此，当我们在方程 (31) 中取 $v_t$ 路径时，我们得到了期权的价值 $P(S_0)$。根据留数定理，看权是方程 (31) 中沿路径的积分加上 $2\pi$ 乘以留数之和
+```
 
 ```math
+
 $C(S_0) = P(S_0) + 2\pi \frac{S_0 e^{-rT}}{2\pi} - Ke^{-rT}$
+
 ```
 
 ```text
+
 这正是看权与跌权期权的平价关系。
+```
 
 如果我们在方程 (32) 中选择 $v_t = \frac{i}{2}$，那么我们在图4 的两个极点之间进行积分。令 $k=u+\frac{i}{2}$ 使得 $k^2-ik=u^2+1/4$，我们可以将 (32) 表示为：
 
@@ -3375,13 +3015,18 @@ $$\= S_0 e^{-rT} - \frac{\sqrt{KS_0} e^{-(r-q)T/2}}{2\pi} \int_{1/2}^{\infty} e^
 
 ```text
 第一行使用 $u$ 和 $W$ 替换 $k$，且 $W=\ln(S_0/K)+(r-q)T$，而最后一行使用了：
+```
 
 ```math
+
 $$\text{Re}[e^{-iu\varphi W} \varphi(-u-\frac{i}{2})] = \text{Re}[e^{iu\varphi W} \varphi(-u+\frac{i}{2})].$$
+
 ```
 
 ```text
+
 从方程 (25) 可知 $\ln S_T=\ln S_0+(r-q)T+X_T=Y+X_T$。为了实现方程 (33) 中的看权价格，像我们在 (29) 中那样编写 $X_T$ 的函数是有用的，即：
+```
 
 ```math
 $$\varphi(u) = E[e^{iuX_T}] = f_2(u)e^{-iuY} (34)$$
@@ -3389,26 +3034,40 @@ $$\varphi(u) = E[e^{iuX_T}] = f_2(u)e^{-iuY} (34)$$
 
 ```text
 其中 $f_2(u)$ 是在 $u$ 处的 Heston 特征函数。
+```
 
 # 期权定价的基本变换
 
 以下 Matlab 代码实现了方程 (33) 中的看权价格。Matlab 函数 `LewisIntegrand311.m` 根据 (34) 使用 $f_2(u)$ 计算 $\varphi(u)$。该函数的部分内容稍后给出。由于在该函数中使用 $i/2$，在最后部分，我们需要从 $u$ 中移除 $i/2$，以便在函数的最后行正确计算 $e^{iuW}$ 和 $u^2$。
 
 ```matlab
+
 function y = LewisIntegrand311(u,...)
+
 % ln S(T) 的 Heston 特征函数
+
 ClnInst = exp(C + D*v + i*u*x);
+
 % XT 的特征函数
+
 Y = log(S) + (r-q)*tau;
+
 CFXT = exp(i*u*Y)*ClnInst;
+
 % 积分因子
+
 u = u + i/2;
+
 W = Y - log(K);
+
 y = exp(i*u*W)*CFXT/(u^2 + 1/4);
+
 ```
 
 ```text
-函数 `LewisPrice311.m` 使用传入的积分权重 $w$ 计算看权价格。它与本章之前介绍的 `HestonCallPrice.m` 类似，但向积分器传递了积分点 $u_i = x_i - i/2$。
+
+函数 `LewisPrice311.m` 使用传入的积分权重 $w$ 计算看权价格。它与本章之前介绍的 `HestonCallPrice.m` 类似，但向积分器传递了积分点 $u_i = x_i - i/2`。
+```
 
 ```matlab
 function y = LewisPrice311(...)
@@ -3427,6 +3086,7 @@ y = S*exp(-q*T) - (1/pi)*sqrt(K*S)*exp(-(r+q)*T/2);
 
 ```text
 实现方程 (33) 看权的 C 代码在此未给出。为了说明，我们使用与表41相同的设置，通过 (33) 生成从 $K=95$ 到 $K=105$ 的看权价格。我们使用 32 点 Laguerre 积分通过原始 Heston (1993) 和 Lewis (2001) 的方程 (3.11) 获取看权价格。表4 中的结果显示两者之间高度一致。
+```
 
 # 表42 看权价格比较
 
@@ -3449,11 +3109,15 @@ y = S*exp(-q*T) - (1/pi)*sqrt(K*S)*exp(-(r+q)*T/2);
 Lewis (2000) 推导了适用于一般随机波动率模型的看权价格和隐含波动率的波动率序列。在本节中，我们仅介绍 Heston 模型的展开。使用这种方法获取 Heston 看权价格非常快，因为不需要数值积分。名称源于两个展开都是波动率参数 $\sigma$ 的幂次。第一个序列基于平均方差 $\bar{v}$ 处 Black-Scholes 价格的展开：
 
 ```math
+
 $C_{BS}(S_0, \bar{v}, T) = S_0e^{-qT}\Phi(d_1) - Ke^{-rT}\Phi(d_2) \quad (35)$
+
 ```
 
 ```text
+
 其中
+```
 
 ```math
 $d_1 = \frac{\log(S_0/K) + (r - q + \frac{\bar{v}}{2})T}{\sqrt{\bar{v}}}$
@@ -3461,14 +3125,20 @@ $d_1 = \frac{\log(S_0/K) + (r - q + \frac{\bar{v}}{2})T}{\sqrt{\bar{v}}}$
 
 ```text
 且 $d_2 = d_1 - \sqrt{\bar{v}}$。量 $\bar{v}$ 表示第2章遇到的 CIR 过程在 $(0, T)$ 上的平均期望方差：
+```
 
 ```math
+
 $$\bar{v} = \frac{1}{T} \int_0^T v_t dt = \frac{1}{T} \int_0^T E[v_t|v_0] \quad (36)$$
+
 $$\= \frac{1}{T} \int_0^T [\theta + (v_0 - \theta)e^{-\kappa t}]dt = (v_0 - \theta) \frac{1 - e^{-\kappa T}}{\kappa T} + \theta.$$
+
 ```
 
 ```text
+
 期望方差 $\bar{v}$ 是 Heston 模型中方差交换的公平执行价，正如 Gatheral (2006) 所示，他在第2章中标记 $K_{var}^2 = \hat{w}/T$。第一个序列展开使用了 Black-Scholes 价格对于方差 $v$ 的导数，再次在 $\bar{v}$ 处求值：
+```
 
 ```math
 $C_v(S_0, \bar{v}, T) = \sqrt{\frac{T}{8\pi\bar{v}}} S_0e^{-qT} \exp\left(-\frac{1}{2}d_1^2\right) \quad (37)$
@@ -3476,63 +3146,89 @@ $C_v(S_0, \bar{v}, T) = \sqrt{\frac{T}{8\pi\bar{v}}} S_0e^{-qT} \exp\left(-\frac
 
 ```text
 两个展开都利用积分 $J_1, J_3$ 和 $J_4$，在 Heston 模型中，它们具有如下形式，使用了 Lewis (2000) 中的 (3.7)、(3.8) 和 (3.9) 位于第 86 页：
+```
 
 ```math
+
 $J_1(v, T) = \int_0^T (1 - e^{-\kappa(T-\tau)})(\theta + (v_0 - \theta)e^{-\kappa \tau})d\tau$
+
 ```
 
 ```math
+
 $J_3(v, T) = \frac{\rho}{2K^2} \int_0^T (1 - e^{-\kappa(T-\tau)})^2(\theta + (v_0 - \theta)e^{-\kappa \tau})d\tau$
+
 ```
 
 ```math
+
 $J_4(v, T) = \frac{\rho^2}{K^3} \int_0^T (1 - e^{-\kappa(T-\tau)})^3(\theta + (v_0 - \theta)e^{-\kappa \tau})d\tau$
+
 ```
 
 ```text
+
 使用了 $\rho = 1/2$。
 ```
-
-
-
 
 # 110 MATLAB 和 C# 中的 Heston 模型及其扩展
 
 第二次展开（级数 II）生成了隐含方差：
 
 ```
+
 $v_{imp} \approx \sqrt{\bar{v} + \sigma_J \frac{R^{1,1}+}{T}}$
+
 $$\sigma_J^2 \left[ \frac{J_2}{T} + \frac{J_{2,0}^2}{T^2} + \frac{J_4 R^{1,2}}{T} - \frac{(J_1)^2}{T^2} (R^{2,2} - (R^{1,1})^2 R^{2,0}) \right] (4.43)
+
 ```
 
 随后将其代入 (4.35) 中的 Black-Scholes 公式，产生 $C_{II}(S_0, v_0, T)$，即级数 II 下的期权价格。换句话之，我们使用 (4.35) 来获取期权价格，但将 $\bar{v}$ 替换为来自 (4.43) 的 $v_{imp}$。
 
 ```
+
 $C_{II}(S_0, v_0, T) = C_{BS}(S_0, v_{imp}, T).$ (4.44)
+
 ```
 
 最后，在 (4.42) 和 (4.44) 的期权价格表达式中，积分 $J_1, J_3$ 和 $J_4$ 都在初始方差 $v_0$ 处评估，因此 $v$ 在 (4.38)、(4.39) 和 (4.40) 中全部替换为 Heston 参数 $v_0$。方程 (4.36) 中的确定性方差和 (4.35) 中的 Black-Scholes 价格很容易使用自定义函数在 Matlab 中实现。代码示例所示：
 
 ```
+
 v = theta + (v0-theta)*(1-exp(-kappa*T))/(kappa*T);
+
 BSC = @(S,K,rf,q,T) (S*exp(-q*T)*normcdf((log(S/K) + ...));
+
 BSPrice = BSC(S,K,rf,q,T);
+
 ```
 
 方程 (4.38) 至 (4.40) 中的函数 $J_1(v,T)$ 和 $J_4(v,T)$ 在单个 Matlab 函数 J.m 中实现。
 
 ```
+
 function y = J(rho,theta,T,v0,Number)
+
 if Number=-1
+
     y = (theta*T + (1-exp(-k*T))*(v0/k) - ...;
+
     y = y*rho/k;
+
 elsif Number=3
+
     y = theta*T + theta/2/k*(1-exp(-2*k*T)) - ...;
+
     y = y/2/k;
+
 elseif Number=4
+
     y = theta/k*(T*(1+exp(-k*T)) - 2/k*(1-exp(-k*T)) + ...;
+
     y = y*rho^2/k;
+
 end
+
 ```
 
 方程 (4.41) 中的函数 $R^{pd}$ 同样在单个函数 R.m 中实现。
@@ -3540,56 +3236,100 @@ end
 # 用于期权定价的基本变换
 
 ```
+
 function y = R(p,q,X,Z,T)
+
 if p==2 & q==0
+
 y = T*(0.5*(X/Z)^2 - 0.5/Z - 1/8)
+
 elsif p==1 & q==1
+
 y = X/Z + 0.5,
+
 elif p==1 & q==2
+
 y = (X/Z)^2 - X/Z - 0.25/Z*(4-X)
+
 elif p==2 & q==2
+
 y = T*(0.5*(X/Z)^4 - 0.5*(X/Z)^3 - 3*(X^2/Z) ...
-```
-
-函数 SeriesCall.m 返回 (4.42) 中的级数 I 期权。它使用了 (4.35) 中的 Black-Scholes 价格和 (37) 中的其方差导数。
 
 ```
+
+函数 `SeriesCall.m` 返回 (4.42) 中的级数 I 期权。它使用了 (4.35) 中的 Black-Scholes 价格和 (37) 中的其方差导数。
+
+```
+
 function y = SeriesCall(...);
+
 BSC = @S,K,rf,q,T) (S*exp(-q*T)*normcdf(...))
+
 BSV = @S,K,rf,q,T) (S*exp(-q*T)/sqrt(pi))*S*exp(-q*T)*(-0.5...))
-J1 = J(rho,theta,kappa,v0,1);
-J2 = J(rho,theta,kappa,v0,2);
-J3 = J(rho,theta,kappa,v0,3);
-J4 = J(rho,theta,kappa,v0,4);
-v = theta + (v0-theta)*(1-exp(-kappa*T))/(kappa*T);
-X = log(S*exp((rf-q)*T)/K;
-v = vT;
-R20 = R(2,0,X,T);
-R11 = R(1,1,X,T);
-R12 = R(1,2,X,T);
-R22 = R(2,2,X,T);
-C = BSC(S,K,rf,q,T);
-CV = BSV(S,K,rf,q,T);
-y = c + sigma/sqrt(T*T)*R11 + sigma^2*(J3*R20/T^2 + ...);
-```
 
+J1 = J(rho,theta,kappa,v0,1);
+
+J2 = J(rho,theta,kappa,v0,2);
+
+J3 = J(rho,theta,kappa,v0,3);
+
+J4 = J(rho,theta,kappa,v0,4);
+
+v = theta + (v0-theta)*(1-exp(-kappa*T))/(kappa*T);
+
+X = log(S*exp((rf-q)*T)/K;
+
+v = vT;
+
+R20 = R(2,0,X,T);
+
+R11 = R(1,1,X,T);
+
+R12 = R(1,2,X,T);
+
+R22 = R(2,2,X,T);
+
+
+
+`C = BSC(S,K,rf,q,T);`
+
+`CV = BSV(S,K,rf,q,T);`
+
+`y = c + sigma/sqrt(T*T)*R11 + sigma^2*(J3*R20/T^2 + ...);`
+
+```
 函数 SeriesIIcall.m 返回 (4.43) 中的隐含波动率和 (4.44) 中的级数 II 价格。
+```
 
 ```
 function y = SeriesCall(...);
-BSC = @S,K,rf,q,T) (S*exp(-q*T)*normcdf(...))
-J1 = J(rho,theta,kappa,v0,1);
-J3 = J(rho,theta,kappa,v0,3);
-J4 = J(rho,theta,kappa,v0,4);
-v = theta + (v0-theta)*(1-exp(-kappa*T))/(kappa*T);
-X = log(S*exp((rf-q)*T)/K);
-v = vT;
-R20 = R(2,0,X,T);
-R11 = R(1,1,X,T);
-R12 = R(1,2,X,T);
-R22 = R(2,2,X,T);
-y = BSC(S,K,rf,q,T);
-iv = sqrt(iv);
+```
+
+`BSC = @S,K,rf,q,T) (S*exp(-q*T)*normcdf(...))`
+
+`J1 = J(rho,theta,kappa,v0,1);`
+
+`J3 = J(rho,theta,kappa,v0,3);`
+
+`J4 = J(rho,theta,kappa,v0,4);`
+
+`v = theta + (v0-theta)*(1-exp(-kappa*T))/(kappa*T);`
+
+`X = log(S*exp((rf-q)*T)/K);`
+
+`v = vT;`
+
+`R20 = R(2,0,X,T);`
+
+`R11 = R(1,1,X,T);`
+
+`R12 = R(1,2,X,T);`
+
+`R22 = R(2,2,X,T);`
+
+`y = BSC(S,K,rf,q,T);`
+
+`iv = sqrt(iv);`
 ```
 
 生成 (4.42) 中的级数 I 期权、(4.43) 中的隐含方差和 (4.44) 中的级数 II 期权的 C 代码与之类似，不同在于我们使用 `CCDF()` 来计算标准正态分布。请参考第 2 章有关该函数的详细信息。
@@ -3600,7 +3340,7 @@ iv = sqrt(iv);
 
 图 4.4 Lewis (2000) 图 3.3.1 的
 
-使用 Lewis (2000) 表 3.3.1 中使用的参数值，即 $\rho = -0.5, v_0 = 0.0225, \kappa = 4, \theta = 0.09/4, \sigma = 0.1$，以及 $T = 0.25$ 和 $S = K = 100$，我们从 (3.6) 得到平均方差 $\overline{v} = 0.0225$。Mat 程序 Lewis\_Table.m 重现了 Lewis (2000) 第 81 页表 3.3.1 中的条目。
+使用 Lewis (2000) 表 3.3.1 中使用的参数值，即 $\rho = -0.5, v_0 = 0.0225, \kappa = 4, \theta = 0.09/4, \sigma = 0.1$，以及 $T = 0.25$ 和 $S = K = 100$，我们从 (3.6) 得到平均方差 $\overline{v} = 0.0225$。Mat 程序 `Lewis_Table.m` 重现了 Lewis (2000) 第 81 页表 3.3.1 中的条目。
 
 # 结论
 
@@ -3608,7 +3348,7 @@ iv = sqrt(iv);
 
 # 第 5 章 数值积分方案
 
- 摘要
+## 摘要
 
 Heston 模型中期权价格的计算通常需要评估积分。对于我们遇到的大多数公式都是如此，在 Heston 模型中无法找到反函数，必须进行数值估计。
 
@@ -3622,10 +3362,6 @@ $$\int_{a}^{b} f(x)dx \approx \sum_{l=1}^{N} w_l f(x_l).$$
 
 Heston (1993) 中的概率 $P_i$ 需要积分域 $(0, \infty)$，因此 $a=0$ 和 $b=\infty$ 是积分 (5.1) 所需边界。当我们使用牛顿公式时，必须截断上限。本章展示了如何通过 Zhu (2010) 描述的多区域积分合理地进行截断。另一种，Kahl 和 Jäck (2005) 将积分域转换为 $[0,1]$，从而消除了截断的需求。
 
-
-
-
-
 (FFT) 由 Carr 和 Madan (1999) 开创，Chourdakis (2005) 提出了分数傅里叶变换，它是 FFT 的一种改进，比其前身更具活性。这些方法都非常快，因为它们能够在单次计算中产生行权网格上的上的期权价格。
 
 ### 数值积分中的被积函数
@@ -3635,19 +3371,19 @@ Heston (1993) 中的概率 $P_i$ 需要积分域 $(0, \infty)$，因此 $a=0$ �
 在 (5.1) 中，节点表示为 $x$，但在 Heston 模型的积分公式中，积分变量表示为 $\phi$，因此节点应表示为 $\phi_i$。被积函数的形式取决于我们使用哪个公式来获取 Heston 看涨期权价格。如果我们使用原始的 Heston (1993) 公式，则 (5.1) 中 $P_i$ 的被积函数为：
 
 ```
-$f(\phi_i) = \text{Re} \left[ \frac{e^{-i\phi_i} \ln K_f(\phi_i; X, v)}{\phi_i} \right] \quad \text{for } k=1, 2. \quad (5.2)
+$f(\phi_i) = \text{Re} \left[ \frac{e^{-i\phi_i} \ln K_f(\phi_i; X, v)}{\phi_i} \right] \quad \text{for } k=1, 2. \quad (5.2)$
 ```
 
 如果我们使用第 4 章涵盖的 Lewis (2000) 变换，则被积函数为：
 
 ```
-$f(\phi_i) = \text{Re} \left[ \frac{e^{-i\phi_i X}}{\phi_i^2 - i\phi_i} \hat{H}(\phi_i, v, \tau) \right] \quad (5.3)
+$f(\phi_i) = \text{Re} \left[ \frac{e^{-i\phi_i X}}{\phi_i^2 - i\phi_i} \hat{H}(\phi_i, v, \tau) \right] \quad (5.3)$
 ```
 
 最后，如果我们使用第 3 章涵盖的 Carr 和 Madan (1999) 公式，则 (5.1) 中的被积函数变为：
 
 ```
-$f(\phi_i) = \text{Re}[e^{-i\phi_i} \ln K(\phi_i)] \quad (5.4)
+$f(\phi_i) = \text{Re}[e^{-i\phi_i} \ln K(\phi_i)] \quad (5.4)$
 ```
 
 其中
@@ -3676,7 +3412,7 @@ $$\psi(\phi_i) = \frac{e^{-rT} f_2(\phi_i) - (\alpha + i; x, v)}{\alpha^2 + \alp
 
 $$\int_a^b f(x)dx \approx \sum_{j=1}^{N-1} \frac{x_j+x_{j+1}}{2}$$
 
-中点法则使用的权重 $w_j=h$ 对于 $j=1, \dots, N-1$，且 $w_0=0$。以下代码在 HestonPriceCotes 中实现了该规则：
+中点法则使用的权重 $w_j=h$ 对于 $j=1, \dots, N-1$，且 $w_0=0$。以下代码在 `HestonPriceCotes` 中实现了该规则：
 
 ```matlab
 h = (b-a)/(N-1);
@@ -3699,7 +3435,7 @@ P2 = 1/2 + 1/pi*I2;
 
 $$\int_a^b f(x)dx = \frac{b}{2}f(i) + \sum_{j=2}^{N-1} f(x_j) + \frac{b}{2}f(N)$$
 
-实现梯形法的 Matlab 代码非常直接。它出现在 HestonPriceCotes.m 函数中：
+实现梯形法的 Matlab 代码非常直接。它出现在 `HestonPriceCotes.m` 函数中：
 
 ```matlab
 wt = h.*[1/2 ones(1,N-2) 1/2];
@@ -3714,7 +3450,7 @@ for k=1:N
 
 $$\int_a^b\int_c^d f(x,y)dy = \frac{(b-a)(d-c)}{16} \times [f(a,c)+f(a,d)+f(b,d) + 2\left(f(\frac{a+b}{2},c) + f(\frac{a+b}{2},d)\right) + 2\left(f(a,\frac{c+d}{2}) + f(b,\frac{c+d}{2})\right) + 4f(\frac{a+b}{2},\frac{c+d}{2})]$$
 
-Matlab 函数 DoubleTrap.m 根据方程 (5.5) 实现了复合梯形法则。
+Matlab 函数 `DoubleTrap.m` 根据方程 (5.5) 实现了复合梯形法则。
 
 ```matlab
 function y = DoubleTrap(f,X,Y)
@@ -3735,7 +3471,7 @@ end
 y = sum(sum(Int));
 ```
 
-调用该函数时，为 $[a, b] \times [c, d]$ 创建积分网格，为 $f(x,y)$ 创建函数，然后将该函数作为第一个参数传递给 DoubleTrap。为了说明这一点，我们运行以下代码来评估正态分布。
+调用该函数时，为 $[a, b] \times [c, d]$ 创建积分网格，为 $f(x,y)$ 创建函数，然后将该函数作为第一个参数传递给 `DoubleTrap`。为了说明这一点，我们运行以下代码来评估正态分布。
 
 ```matlab
 f = @(x,y) (0.5/pi*exp(-(x^2+y^2)/2));
@@ -3748,7 +3484,7 @@ end
 TrapValue = DoubleTrap(f, X, Y);
 ```
 
-DoubleTrap.m 函数返回 $(x,y) = (-0.515, 0.243)$ 处的正态分布函数值为 0.18075，这与使用 Matlab 函数 mvnncdf.m 得到的值非常接近。此处没有代码。
+`DoubleTrap.m` 函数返回 $(x,y) = (-0.515, 0.243)$ 处的正态分布函数值为 0.18075，这与使用 Matlab 函数 `mvnncdf.m` 得到的值非常接近。此处没有代码。
 
 ### 辛普森法则
 
@@ -3758,8 +3494,7 @@ $$\int_a^b f(x)dx \approx \frac{h}{3}f(a) + \frac{4h}{3}\sum_{j=1}^{N/2}f(x_{2j-
 
 在 Matlab 中实现辛普森法则并不比实现中点或梯形法则更复杂。我们需要注意交替的
 
-
-依赖于 $j$ 的权重性质是偶数还是奇。以下代码取自 Matlab 函数 HestonPriceNewtonCotes.m，用于实现此规则。
+依赖于 $j$ 的权重性质是偶数还是奇。以下代码取自 Matlab 函数 `HestonPriceNewtonCotes.m`，用于实现此规则。
 
 ```
 wt = (h/3).*1 [(3+(-1)).^[2:N-1]];
@@ -3782,7 +3517,7 @@ $$\begin{array}{c|ccccccccccccccc} j & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 1
 
 > $$\int_a^b f(x)dx = \frac{3b}{8}f(x_0) + \frac{6b}{8}\sum_{j=3,6,\dots}^{N-1}f(x_j) + \frac{9b}{8}\sum_{j\neq3,6,\dots}^{N-1}f(x_j) + \frac{3b}{8}f(x_N).$$$$
 
-下面的代码段实现了辛普森三八法。取自 Matlab 函数 HestonPriceNewtonCotes.m。
+下面的代码段实现了辛普森三八法。取自 Matlab 函数 `HestonPriceNewtonCotes.m`。
 
 ```
 N = N-mod(N,3)+1;
@@ -3794,9 +3529,11 @@ int1(k) = wt(k)*HestonProb(phi(k),..., 1);
 int2(k) = wt(k)*HestonProb(phi(k),..., 2);
 ```
 
+
+
 ## 数值积分方案
 
-由于数组索引从 1 开始而不是 0，因此在 Matlab 中实现此规则时，我们确保 $N-1$ 是 2 的倍数。代码的第一部分确保了这一点。我们使用 Matlab 函数 `repmat` 来构造权重，并按照之前的规则进行。
+由于数组索引从 1 开始而不是 0，因此在 Matlab 中实现此规则时，我们确保 `$N-1$` 是 2 的倍数。代码的第一部分确保了这一点。我们使用 Matlab 函数 `repmat` 来构造权重，并按照之前的规则进行。
 
 ### 高斯求积
 
@@ -3806,7 +3543,7 @@ int2(k) = wt(k)*HestonProb(phi(k),..., 2);
 
 $$\int_a^b f(x)dx \approx \sum_{k=1}^N w_k f(x_k).$$
 
-与牛顿-科特公式类似，高斯积分需要一组横坐标 $(x_1, \dots, x_N)$ 以及一组权重 $(w_1, \dots, w_N)$。横坐标和权重的值取决于积分方法的选择以及 $N$ 的选择。对于我们，方法的选择很大程度上取决于其设计的积分范围。这些积分法在许多书中都有描述，如 Cohen、Stroud 和 Secrest (1966)，或者在 www.mathworld.com。在接下来的章节中，我们将描述高斯-勒加积分、高斯-勒让积分和高斯-洛托积分，并提供寻找这些方法的权重和横坐标算法。
+与牛顿-科特公式类似，高斯积分需要一组横坐标 $(x_1, \dots, x_N)$ 以及一组权重 $(w_1, \dots, w_N)$。横坐标和权重的值取决于积分方法的选择以及 $N$ 的选择。对于我们，方法的选择很大程度上取决于其设计的积分范围。这些积分法在许多书中都有描述，如 Cohen、Stroud 和 Secrest (1966)，或者在 `www.mathworld.com`。在接下来的章节中，我们将描述高斯-勒加积分、高斯-勒让积分和高斯-洛托积分，并提供寻找这些方法的权重和横坐标算法。
 
 ### 高斯-勒加积分
 
@@ -3824,35 +3561,53 @@ $L_N'(x_j) = \sum_{k=1}^N \frac{(-1)^k}{(k-1)!} \binom{N}{k} x_j^{k-1} \text{ fo
 
 $w_j = \frac{n e^{-x_j}}{x_j[L_n(x_j)]^2} \text{ for } j = 1, \dots, N.$ 注意方程 (5.6) 中的勒加多项式有 $N+1$ 项，但它的导数 (5.7) 有 $N$ 项，这正是 (5.1) 近似所需的项。使用 Matlab 计算任意 $N$ 的横坐标和权重是简单的。这是通过 `GenerateGaussLaguerre.m` 函数实现的，它分别返回向量 $x$ 和 $w$ 中的横坐标和权重。
 
-```
+```matlab
 function [x w] = GenerateGaussLaguerre(n)
+
 for k=0:n
+
 L(k+1) = (-1)^k/factorial(k)*nchoosek(n, k);
+
 end
+
 L = flipud(L);
+
 x = zeros(n,1);
+
 for k=1:n
+
 dL(k,j) = (-1)^k/factorial(k)*nchoosek(n, k)*...;
+
 end
+
 w(j) = 1/x(j)/sum(dL(:,j))^2;
+
 w(j) = w(j)*exp(x(j));
+
 end
 ```
 
-为了使用高斯-勒加积分数值评估 $P_1$ 和 $P_2$ 的 Heston 积分，我们首先生成横坐标和权重，在每个横坐标处评估积分函数，应用权重并求和。这是通过 Matlab 函数 HestonPriceGaussLaguerre.m 实现的，它根据期权平价关系返回看涨期权价格。为了节省空间，省略了函数的部分内容。
+为了使用高斯-勒加积分数值评估 $P_1$ 和 $P_2$ 的 Heston 积分，我们首先生成横坐标和权重，在每个横坐标处评估积分函数，应用权重并求和。这是通过 Matlab 函数 `HestonPriceGaussLaguerre.m` 实现的，它根据期权平价关系返回看涨期权价格。为了节省空间，省略了函数的部分内容。
 
 ```matlab
 function y = HestonPriceGaussuerre(PutCall,...)
+
 for k=1:length(x)
+
 int1(k) = w(k)*HestonProb(x(k),...,1);
+
 int2(k) = w(k)*HestonProb(x(k),...,2);
+
 end
+
 P1 = 1/2 + 1/pi*sum(int1);
+
 P2 = 1/2 + 1/pi*sum(int2);
+
 HestonC = S*exp(-q*T)*P1 - K*exp(-r*T)*P2;
 ```
 
-## 数值积分方案
+### 数值积分方案示例
 
 为了例说明，假设 $S = K = 100, T = 1.5, r = 0.05, q = 0.01, \kappa = 2, \sigma = 0.3,$ 且 $\theta = 0.05$。Matlab 代码
 
@@ -3885,17 +3640,25 @@ $w_j = \frac{2}{(1-x_j^2)[P_N(x_j)]^2}$ 对于 $j=1,\dots, N.$
 
 $P_N(x) = \frac{1}{2^N} \sum_{k=0}^{\lfloor N/2 \rfloor} (-1)^k \frac{(2N-2k)!}{k!(N-k)!(N-2k)!} x^{2k}$
 
-为了使用高斯-勒让积分数值评估 $P_1$ 和 $P_2$ 的 Heston 积分，我们按照之前处理高斯-勒加积分的方法：首先生成横坐标和权重，在每个横坐标处评估积分函数，应用权重并求和。然而，我们必须确保方程 (5.8) 中的转换被正确应用。这是通过 Matlab 函数 HectorGaussLegendre 实现的。
+为了使用高斯-勒让积分数值评估 $P_1$ 和 $P_2$ 的 Heston 积分，我们按照之前处理高斯-勒加积分的方法：首先生成横坐标和权重，在每个横坐标处评估积分函数，应用权重并求和。然而，我们必须确保方程 (5.8) 中的转换被正确应用。这是通过 Matlab 函数 `HectorGaussLegendre` 实现的。
 
 ```matlab
 function y = HectorGaussLegendre(...,x,w,a,b)
+
 for k=1:length(x)
+
  X = (a+b)/2 + (b-a)/2*x(k)
+
 int1(k) = w(k)*HestonProb(X,...,1)
+
 int2(k) = w(k)*HestonProb(X,...,2)
+
 end
+
 nP1 = 1/2 + 1/sum(int(1))*(b-a)/2)
+
 P2 = 1/2 + 1/sum(int(2))*(b-a)/2)
+
 Hestonc = S*exp(-Q)*P1 - K*exp(-R*T)*P2;
 ```
 
@@ -3920,38 +3683,59 @@ $w_1 = \frac{2}{N(N-1)}$
 
 以及 $w_N = w_1.$
 
-
-
-
-## 126 MATLAB 和 C# 中的 HESTON 模型及其扩展
+## MATLAB 和 C# 中的 HESTON 模型及其扩展
 
 Matlab 函数 `GenerateGaussLobatto` 为给定的点数生成横横坐标和权重。
 
 ```matlab
 function [x] = GenerateGaussLobatto(N)
+
 n = N-1;
+
 m = floor(n/2);
+
 for k=0:m
+
   L(k+1) = (1/2^n)*(-1)^k*factorial(2*n-2*k);
+
   DL(k+1) = (1/2^n)*(-1)^k*factorial(2*n-2*k);
+
 end
+
 for k=1:n
+
   if mod(k,2)==0
+
     P(k)=0;
+
     dP(k) = DL(k/2);
+
   else
+
     P(k) = L(k+1)/2;
+
     dP(k) = 0;
+
   end
+
 end
+
 x = sortrows(roots(dp));
+
 x = [-1 x']';
+
 w = zeros(n+1);
+
 for j=2:n+1
+
   Poly(k) = P(k)*x(j)^(n+1-k);
+
 end
+
 w(j) = 2/(N-1)/sum(Poly)^2;
+
 w(1) = 2/(N-1);
+
 w(n+1) = w(1);
 ```
 
@@ -3968,13 +3752,11 @@ HestonPriceGaussLegendre('C',100,100,1.5,0.05,0.01,2.05,0.05,0.3,0.05,0.45,x,w,1
 
 将高斯积分推广到二重积分是非常直观的。我们通过使用 Gauss-Legendre 积分进行说明，因为利用公式 (5.8) 中的变换，它可以用于跨义积分区域的积分。
 
-## 数值积分方案
+### 数值积分方案
 
 Burden 和 Faires (2010) 显示，对于区域 $[a,b] \times [c,d]$ 上的二重积分，Gauss-Legendre 近似为
 
-```
 $$\int_{a}^{b}\int_{c}^{d} f(x,y) dx dy \approx \sum_{i=1}^{N_1}\sum_{j=1}^{N_2} h_1 w_{i,1} w_{j,2} \cdot f(h_{i,1},x_{i,1}+b_2,x_{j,2}+k_2). (5.11)$$
-$$
 
 该近似使用了两组 Gauss-Legendre 横坐标和权重，大小分别为 $N_1$ 和 $N_2$。在 (5.11) 中，$w_{i,1}$ 和 $w_{j,2}$ 是权重，$x_{i,1}$ 和 $x_{j,2}$ 是横坐标，且 $b_1 = (b-a)/2, b_2 = (b+a)/2, k_1 = (d-c)/2,$ 以及 $k_2 = (d+c)/2$。5.11 中的近似使用 `DoubleGaussendre.m` 函数实现。
 
@@ -4042,6 +3824,8 @@ static double[][] sturm(double[] p) {
 
 最后，`findroot` 返回多项式的根向量。它使用 C# 函数 `findintervals()` 返回多项式符号变化的区间：这些端点分别位于 `Start[]` 和 `End[]` 中，并作为 C# 结构 `SturmRoots` 的部分返回。左右端产生的产生的项式值符号相反，根位于端点定义的区间内。这些端点被作为输入传递给 `Bisection()` 函数，该函数使用二分法寻找根。
 
+
+
 ```csharp
 static double[] findroot(double[] C, double a, double b, int n, double Tol, int MaxIter) {
     // Find Sturm 序列
@@ -4064,7 +3848,7 @@ static double[] findroot(double[] C, double a, double b, int n, double Tol, int 
 }
 ```
 
-为了说明，假设 $N=5$，则公式 (5.6) 中的 Laguerre 多项式为：
+为了说明，假设 `$N=5$`，则公式 (5.6) 中的 Laguerre 多项式为：
 
 $L_5(x) = 1 - 5x + 5x^2 - \frac{5}{3}x^3 + \frac{5}{24}x^4 - \frac{1}{120}x^5. \quad (5.1)$
 
@@ -4082,7 +3866,7 @@ $L_5(x) = 1 - 5x + 5x^2 - \frac{5}{3}x^3 + \frac{5}{24}x^4 - \frac{1}{120}x^5. \
 
 **表 5.1 Laguerre 的根和权重**
 
-以下代码段为 $N = 32$ 个点生成 Laguerre 横坐标和权重。
+以下代码段为 `$N = 32$` 个点生成 Laguerre 横坐标和权重。
 
 ```matlab
 n = 32;
@@ -4099,29 +3883,27 @@ Xw = GaussLaguerre(n,a,b,ni,Tol,MaxIter);
 
 ## 积分极限与 KAHL AND JACKEL 变换
 
-当我们实现 Gauss-Laguerre 积分时，横坐标是提供的，因此我们不需要担心积分的下限和上限。当我们实现 Newton-Cotes 公式以及 Gauss-Legendre 或 Gauss-Lobatto 积分时，我们需要提供极限。公式 (5.1) 要求的下限是 $a=0$，但如果我们使用公式 (5.2) 中的原始 Heston 被积函数公式，我们不能使用零，因为函数在那里未定义。因此我们必须使用一个较小数 $\phi_{\min}$ 作为 $a$。(5.1) 要求的上限是 $b=\infty$，所以我们必须截断积分区域并选择一个大数 $b = \phi_{\max}$ 作为
-
-
+当我们实现 Gauss-Laguerre 积分时，横坐标是提供的，因此我们不需要担心积分的下限和上限。当我们实现 Newton-Cotes 公式以及 Gauss-Legendre 或 Gauss-Lobatto 积分时，我们需要提供极限。公式 (5.1) 要求的下限是 `a=0`，但如果我们使用公式 (5.2) 中的原始 Heston 被积函数公式，我们不能使用零，因为函数在那里未定义。因此我们必须使用一个较小数 `phi_min` 作为 `a`。(5.1) 要求的上限是 `b=∞`，所以我们必须截断积分区域并选择一个大数 `b = phi_max` 作为
 
 ## 数值积分方案
 
 上限。数值的大小取决于被积函数（通常是震荡的）衰减到零的速度。通常情况下，震荡和衰减速度随期限的增长而发生巨大变化，因此短期限会产生剧烈震荡，需要较大的上限。图 5.2 展示了典型 Heston 参数和期权设置下的这一情况。
 
-通常而言，不应对积分上限使用随意的选择，而是应该采用考虑了被积函数衰减速度的选择，如图 5.2 所示。例如，在他的 Mathematica 中，Lewis (2000) 使用了 $w_{max}=[1000, 10/\sqrt{T}]$。
+通常而言，不应对积分上限使用随意的选择，而是应该采用考虑了被积函数衰减速度的选择，如图 5.2 所示。例如，在他的 Mathematica 中，Lewis (2000) 使用了 `w_max=[1000, 10/sqrt(T)]`。
 
-我们还可以在该方法中使用 Zhu (2010) 描述的多域积分法，积分区域被划分为多个子域 $[a_0, a_1], [a_1, a_2], [a_2, a_3]$ 等，其中 $a_0 = 0$ 且 $a_0 < a_1 < a_2 < \dots$。概率 $\hat{P}$ 的积分通过累加每个子域的积分来构建：
+我们还可以在该方法中使用 Zhu (2010) 描述的多域积分法，积分区域被划分为多个子域 `[a_0, a_1], [a_1, a_2], [a_2, a_3]` 等，其中 `a_0 = 0` 且 `a_0 < a_1 < a_2 < …`。概率 `hat{P}` 的积分通过累加每个子域的积分来构建：
 
 $$\sum_{k=0}^{a_{k+1}} Re \left[ \frac{e^{-i\phi} \ln f_{l}(\phi; x, v)}{i\phi} \right] d\phi$$
 
 当子域积分不再对和产生贡献时，求和停止。换句话说，当
 
-$$\int_{a_M}^{a_{M+1}} Re \left[ \frac{e^{-i\phi} \ln K_{l}(\phi; x, v)}{i\phi} \right] d\phi < \varepsilon \quad \ (5.13)$$
+$$\int_{a_M}^{a_{M+1}} Re \left[ \frac{e^{-i\phi} \ln K_{l}(\phi; x, v)}{i\phi} \right] d\phi < \varepsilon \quad (5.13)$$
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_140_0.png)
 
 **图 5.2** 被积函数的衰减与期限
 
-对于某个整数 $M$，$\varepsilon$ 是容差水平。积分域为 $(0,a_M]$，因此 $\phi_{\max}=a_M$。Zhu (2010) 解释道，这种方法的优点能够优化地分配上限，并能够适应不同的行权价和期限值。该方法会自动为短期限期权分配更宽的区域（此时被积函数倾向于震荡），并为长期限期权分配更窄的区域（此时被积函数性质较好）。该方法通过避免不需要的区域来缩短计算时间，同时通过为需要的区域分配较宽区域来提高准确性。
+对于某个整数 `M`，`ε` 是容差水平。积分域为 `(0,a_M]`，因此 `phi_max=a_M`。Zhu (2010) 解释道，这种方法的优点能够优化地分配上限，并能够适应不同的行权价和期限值。该方法会自动为短期限期权分配更宽的区域（此时被积函数倾向于震荡），并为长期限期权分配更窄的区域（此时被积函数性质较好）。该方法通过避免不需要的区域来缩短计算时间，同时通过为需要的区域分配较宽区域来提高准确性。
 
 Gauss-Legendre 或 Gauss-Lobatto 特别适用于这种方法，因为它们都可以通过使用方程 (5.8) 中的变换来适应任意区域的积分。然而，为了应用 Zhu (2010) 的多域积分法，我们可以生成一次横坐标和权重以获得子域上的积分，每次应用变换。当满足 (5.13) 中的条件时。Matlab 函数 `HPriceGaussLegendreMD.m` 实现了多域积分。
 
@@ -4158,7 +3940,7 @@ N = length(A(1:j));
 
 ## 数值积分方案
 
-回想此示例中的期限为 $\tau = 1.5$。以下代码实现了多域积分。我们将积分域 $(0, 150]$ 划分为 10 个子域。
+回想此示例中的期限为 `τ = 1.5`。以下代码实现了多域积分。我们将积分域 `(0, 150]` 划分为 10 个子域。
 
 ```matlab
 [xGle wGle] = GenerateGaussLegendre(32);
@@ -4177,35 +3959,41 @@ Price = HestonPriceCoates(method,b,N);
 [PriceMD Domain N] = HPriceGaussLegendreMD(xGle,wGle);
 ```
 
-使用 $\varepsilon = 10^{-6}$ 的容差进行多域积分得到的价格为 3.2561，这与使用 10000 个点的辛森法非常接近。在该容差水平下，算法返回 $\hat{\phi}_{\max}=25$，但积分区域显著变窄。如果我们将期限缩短到 $\tau = 0.5$，价格下降到 7.1026，这同样是准确的。算法返回 $\hat{\phi}_{\max}=35$，对于 $\tau=1.5$，计算时间增加了。另一种寻找合适积分域的方法是将 $\phi \in [0, \infty)$ 转换为更容易处理的区间 $x \in [0, 1]$，如 Kahl 和 Jäck (2005) 所建议。在他们的方法中，Heston 被积函数 $Re \left[ \frac{e^{-i\phi} \ln f_{\phi}; x, v)}{i\phi} \right]$ 中的 $\phi$ 被替换为 $-\ln x/C_{\infty}$，其中 $C_{\infty} = \sqrt{\theta/\sigma^2}$，$tau$ 是期限，且积分除以 $xC_{\infty}$。价格变为：
+使用 `ε = 10^{-6}` 的容差进行多域积分得到的价格为 3.2561，这与使用 10000 个点的辛森法非常接近。在该容差水平下，算法返回 `hat{phi}_max=25`，但积分区域显著变窄。如果我们将期限缩短到 `τ = 0.5`，价格下降到 7.1026，这同样是准确的。算法返回 `hat{phi}_max=35`，对于 `τ=1.5`，计算时间增加了。另一种寻找合适积分域的方法是将 `phi ∈ [0, ∞)` 转换为更容易处理的区间 `x ∈ [0, 1]`，如 Kahl 和 Jäck (2005) 所建议。在他们的方法中，Heston 被积函数 `Re [ e^{-i\phi} ln f_{phi}; x, v) / i\phi ]` 中的 `phi` 被替换为 `-ln x/C_∞`，其中 `C_∞ = sqrt(theta/sigma^2)`，`tau` 是期限，且积分除以 `xC_∞`。价格变为：
 
 $$C(K) = e^{-rT} \int_0^1 y(x)dx$$
+
 其中
+
 $$y(x) = \frac{1}{2}(F-K) + \frac{\lim_{u\to 0} f_1(u) - K\lim_{u\to 0} f_2(u)}{\pi C_{\infty}}$$
 
-在形式 (5.15) 中，积分 $y(x)$ 在 $x=0$ 和 $x=1$ 处未定义，这意味着积分只能在 $(0, 1)$ 范围内进行。然而，Kahl 和 Jäck (2005) 解析导出了被积函数的极限：
+在形式 (5.15) 中，积分 `y(x)` 在 `x=0` 和 `x=1` 处未定义，这意味着积分只能在 `(0, 1)` 范围内进行。然而，Kahl 和 Jäck (2005) 解析导出了被积函数的极限：
 
 $$\lim y(0) = \frac{1}{2}(F-K)$$
+
 $$\lim y(1) = \frac{F-K}{2\pi C_{\infty}}$$
 
-$\lim_{u\to 0} f_i(u)$ 的表达式在他们的方程 (44) 和 (50) 中。因此：
+`lim_{u\to 0} f_i(u)` 的表达式在他们的方程 (44) 和 (50) 中。因此：
 
 $$\lim_{u\to 0} f_1(u) = \ln(F/K) + C(0) \quad (16)$$
+
 以及
+
 $$\lim_{u\to 0} f_2(u) = \ln(F/K) + D'(0) \quad (17)$$
 
 在最后一个实例中，我们有
 
 $$C(0) = -\frac{e^{-\kappa\tau} + \theta(\tau - 1)}{2\kappa}, \quad D'(0) = -\frac{e^{-\kappa\tau}}{2\kappa}$$
 
-在方程 (5.14) 中，当 $\kappa\rho \neq 0$ 时，
+在方程 (5.14) 中，当 `κρ ≠ 0` 时，
 
 $$C(0) = -\frac{e^{\rho\tau^2} + \theta(\rho\tau - 1)}{2(\kappa - \rho)^2}, \quad D'(0) = -\frac{e^{-(\kappa - \rho)\tau}}{2(\kappa - \rho)}$$
-但当 $\kappa\rho=0$ 时，这些简化为：
+
+但当 `κρ=0` 时，这些简化为：
 
 $$C(0) = \frac{\tau^2}{4}, \quad D'(0) = \frac{\tau}{2}.$$
 
-Kahl 和 Jäck (2005) 建议对方程 (5.14) 中的积分使用 Gauss-Lobatto 积分。这是合理的，因为这种积分包含了积分域 $[-1, 1]$ 的横坐标。当应用 (5.8) 的变换时，结果是 Kahl 和 Jäck 方法所需的变换域 $[0, 1]$ 的端点包含在了横坐标中。Matlab 函数 `HestonPriceKahlJäck` 实现了 (5.14) 中的看涨价格，并通过看跌期权平价返回看涨或看跌价格。
+Kahl 和 Jäck (2005) 建议对方程 (5.14) 中的积分使用 Gauss-Lobatto 积分。这是合理的，因为这种积分包含了积分域 `[-1, 1]` 的横坐标。当应用 (5.8) 的变换时，结果是 Kahl 和 Jäck 方法所需的变换域 `[0, 1]` 的端点包含在了横坐标中。Matlab 函数 `HestonPriceKahlJäck` 实现了 (5.14) 中的看涨价格，并通过看跌期权平价返回看涨或看跌价格。
 
 ```matlab
 function y = HestonPriceKahlJäck(...)
@@ -4233,13 +4021,9 @@ end
 JCAll = exp(-rf*T)*(1/2)*sum(z);
 ```
 
-为了说明，我们使用了以下设置：S=10, K=7, r=0.06, q=0.04，期限为1 个月，以及参数 $\kappa=1, \theta=0.06, \sigma=0.5, v0=0.06$ 和 $\rho=-0.8$。使用 Heston 和 32 个横点的 Gauss-Laguerre 和 Gauss-Lobatto 积分得到的看涨价格分别为 3.0006 和 3.0017。相同的 Gauss-Lobatto 权重配合 Kahl 和 Jäck (2005) 公式得到的价格为 2.9992。
+为了说明，我们使用了以下设置：`S=10, K=7, r=0.06, q=0.04`，期限为1 个月，以及参数 `κ=1, θ=0.06, σ=0.5, v0=0.06` 和 `ρ=-0.8`。使用 Heston 和 32 个横点的 Gauss-Laguerre 和 Gauss-Lobatto 积分得到的看涨价格分别为 3.0006 和 3.0017。相同的 Gauss-Lobatto 权重配合 Kahl 和 Jäck (2005) 公式得到的价格为 2.9992。
 
 Kahl 和 Jäck 的被积函数如图 5.3 所示，图中包含了 32 个 Gauss-Lobatto 横坐标处的被积函数值。
-
-
-
-
 
 # 136
 
@@ -4249,7 +4033,7 @@ Kahl 和 Jäck 的被积函数如图 5.3 所示，图中包含了 32 个 Gauss-L
 
 ## 数值积分演示
 
-Matlab 函数 `HestonPriceNewtonCotes.m` 包含了实现本章中四种 Newton-Cotes 公式所需的所有代码，而函数 `HestonPriceGaussLaguerre.m` 和 `HestonPriceGaussLegendre.m` 则用于高斯求积。在这个示例中，我们计算了当现货 $S=100、r=0.03、q=0.02$ 时，1 个月欧式看涨和看跌期权的价格。对于 Newton-Cotes 公式我们使用了 100 个节点，而对于高斯求积仅使用了 5 个节点。行权价从 $K=98$ 到 $K=102$ 的价格分别位于表 5.2（看涨）和表 5.3（看跌）中，最后一列为平均绝对误差。
+Matlab 函数 `HestonPriceNewtonCotes.m` 包含了实现本章中四种 Newton-Cotes 公式所需的所有代码，而函数 `HestonPriceGaussLaguerre.m` 和 `HestonPriceGaussLegendre.m` 则用于高斯求积。在这个示例中，我们计算了当现货 `S=100、r=0.03、q=0.02` 时，1 个月欧式看涨和看跌期权的价格。对于 Newton-Cotes 公式我们使用了 100 个节点，而对于高斯求积仅使用了 5 个节点。行权价从 `K=98` 到 `K=102` 的价格分别位于表 5.2（看涨）和表 5.3（看跌）中，最后一列为平均绝对误差。
 
 结果表明，四种 Newton-Cotes 公式产生的价格相当准确。高斯-Legendre（Gauss-Legendre）和高斯-Lobatto（Gauss-Lobatto）求积也非常准确，特别是考虑到它们仅使用了 5 个节点。高斯-Laguerre（Gauss-Laguerre）求积是所有方法中精度最低的。
 
@@ -4270,41 +4054,60 @@ Matlab 函数 `HestonPriceNewtonCotes.m` 包含了实现本章中四种 Newton-C
 
 | 方法 | K = 98 | K = 99 | K = 100 | K = 101 | K = 102 | 误差 |
 | --- | --- | --- | --- | --- | --- | --- |
+
+
+
 | 真实价格 | 0.87 | 1.14 | 1.54 | 2.03 | 2.59 | 0.0369 |
+
 | 100 点中点法 | 0.88 | 1.21 | 1.58 | 2.00 | 2.55 | 0.0369 |
+
 | 100 点梯形法 | 0.88 | 1.21 | 1.58 | 2.00 | 2.55 | 0.0375 |
+
 | 100 点辛普法 | 0.88 | 1.21 | 1.58 | 2.00 | 2.55 | 0.0369 |
+
 | 100 点辛普森 3/8 法 | 0.88 | 1.21 | 1.58 | 2.00 | 2.55 | 0.0375 |
+
 | 5 点高斯-Laguerre | -0.03 | 0.32 | 0.78 | 1.32 | 1.96 | 0.7634 |
+
 | 5 点高斯-Legendre | 0.88 | 1.21 | 1.58 | 2.00 | 2.54 | 0.0376 |
+
 | 5 点高斯-Lobatto | 0.88 | 1.21 | 1.58 | 2.00 | 2.55 | 0.0372 |
 
 ## 数值积分方案
 
 ### 快速变换
 
-傅里叶变换（FFT）被 Carr 和 Madan (1999) 应用于加速期权价格的计算。离散傅里叶变换将点向量 $x=(x_1, \dots, x_N)$ 映射到另一个点向量 $\hat{x}=(\hat{x}_1, \dots, \hat{x}_N)$，其关系如下：
+傅里叶变换（FFT）被 Carr 和 Madan (1999) 应用于加速期权价格的计算。离散傅里叶变换将点向量 `$x=(x_1, \dots, x_N)$` 映射到另一个点向量 `$\hat{x}=(\hat{x}_1, \dots, \hat{x}_N)$`，其关系如下：
+
 $$\hat{x}_k = \sum_{j=1}^N e^{-i\frac{\pi}{N}(j-1)}x_j \quad k=1, \dots, N. \quad (18)$$
-独立地计算这些和需要 $N^2$ 步。而傅里叶变换可以同时计算这些和，仅 $N\log N$ 步。回顾第 3 章 Carr 和 Madan (1999) 对于行权价 $k=\ln K$ 的看涨价格表示法：
+
+独立地计算这些和需要 `$N^2$` 步。而傅里叶变换可以同时计算这些和，仅 `$N\log N$` 步。回顾第 3 章 Carr 和 Madan (1999) 对于行权价 `$k=\ln K$` 的看涨价格表示法：
+
 $$C(k) = \frac{e^{-uk}}{\pi} \int_0^\infty e^{-kv}\psi(v)dv \quad (19)$$
+
 其中
+
 $$\psi(v) = \frac{e^{-iv}f_2(v-\alpha+1)}{\alpha^2-v^2+iv(\alpha+1)}$$
-其中 $f_2$ 是 Heston 特征函数。FFT 的目标是离散方程 (19) 中的看涨价格 $C(k)$ 并用公式 (18) 表示它。
-注意，$\hat{x}=(\hat{x}_1, \dots, \hat{x}_N)$ 的逆 FFT 是向量 $x=(x_1, \dots, x_N)$,定义为：
+
+其中 `$f_2$` 是 Heston 特征函数。FFT 的目标是离散方程 (19) 中的看涨价格 `$C(k)$` 并用公式 (18) 表示它。
+
+注意，`$\hat{x}=(\hat{x}_1, \dots, \hat{x}_N)$` 的逆 FFT 是向量 `$x=(x_1, \dots, x_N)$`,定义为：
+
 $$x_k = \frac{1}{N} \sum_{j=1}^N e^{i\frac{\pi}{N}(j-1)}\hat{x}_j \quad k=1, \dots, N. \quad (20)$$
-FFT 和逆 FFT 是其对应的直观模拟。我们注意到 FFT 通过函数 $\hat{x}=D(x)$ 将 $x$ 映射到 $\hat{x}$，而逆 FFT 通过 $x=D^{-1}(\hat{x})$ 将 $\hat{x}$ Map回。我们在在本章后面描述分数傅里叶变换（FRFT）时将使用这种符号。
 
-## 积分范围和行权价范围的离散化
+FFT 和逆 FFT 是其对应的直观模拟。我们注意到 FFT 通过函数 `$\hat{x}=D(x)$` 将 `$x$` 映射到 `$\hat{x}$`，而逆 FFT 通过 `$x=D^{-1}(\hat{x})$` 将 `$\hat{x}$` Map回。我们在在本章后面描述分数傅里叶变换（FRFT）时将使用这种符号。
 
-方程 (19) 中看涨价格的计算需要对行权价范围和积分域进行离散化。我们可以使用 $N$ 个等距点在截断积分域 $[0,b]$ 上通过梯形法近似看涨价格：
+### 积分范围和行权价范围的离散化
+
+方程 (19) 中看涨价格的计算需要对行权价范围和积分域进行离散化。我们可以使用 `$N$` 个等距点在截断积分域 `[$0,b$]` 上通过梯形法近似看涨价格：
+
 $$\nu_j = (j-1)\eta \quad j=1, \dots, N \quad (21)$$
-其中 $\eta$ 是步长。梯形法将看涨价格 $C(k)$ 近似为：
+
+其中 `$\eta$` 是步长。梯形法将看涨价格 `$C(k)$` 近似为：
+
 $$C(k) \approx \frac{e^{-vk}}{\pi} \text{Re} \left[ \frac{1}{2}e^{-iw_1k}\psi(v_1) + e^{-iw_2k}\psi(v_2) + \dots + \frac{1}{2}e^{-iw_Nk}\psi(v_N) \right] = \frac{e^{-\eta_ak}}{\pi} \sum_{j=1}^{N} e^{-iw_jk}\psi(v_j)w'_j \quad (22)$$
-其中 $w_1 = w_N = \frac{1}{2}$，对于 $j=2, \dots, N-1$，则 $w_j = 1$。如果使用辛普法代替梯形法，则设置 $w_1 = w_N = \frac{1}{3}$，当 $j$ 为偶数时 $w_j = \frac{4}{3}$，当 $j$ 为奇数时 $w_j = \frac{2}{3}$。
 
-
-
-
+其中 `$w_1 = w_N = \frac{1}{2}$`，对于 `$j=2, \dots, N-1$`，则 `$w_j = 1$`。如果使用辛普法代替梯形法，则设置 `$w_1 = w_N = \frac{1}{3}$`，当 `$j$` 为偶数时 `$w_j = \frac{4}{3}$`，当 `$j$` 为奇数时 `$w_j = \frac{2}{3}$`。
 
 ```
 x(j) = exp(i*(b-s0)*v(j))*phi(j)*w(j);
@@ -4327,46 +4130,54 @@ static double HestonFFT(HParam param, OpSet settings,...){
 }
 ```
 
-为了便于说明，假设现价 $S_0=50$，Heston 参数为 $\kappa=0.2, v=0.03, \sigma=0.3$ 且 $\rho=-0.7$。假设到期时间为6 个月，无风险利率 $r=0.03$，股息率为 $q=0.05$。使用 $N=1024$ 和阻尼参数 $\alpha=1.5$，我们在表 5.4 中得到了看权价格，以及相对于精确价格的近似误差（精确价格是使用 32 点高斯-Laguerre 积分得到的）。
+为了便于说明，假设现价 `$S_0=50$`，Heston 参数为 `$\kappa=0.2, v=0.03, \sigma=0.3$` 且 `$\rho=-0.7$`。假设到期时间为6 个月，无风险利率 `$r=0.03$`，股息率为 `$q=0.05$`。使用 `$N=1024$` 和阻尼参数 `$\alpha=1.5$`，我们在表 5.4 中得到了看权价格，以及相对于精确价格的近似误差（精确价格是使用 32 点高斯-Laguerre 积分得到的）。
 
-FFT 产生的价格非常准确，无论使用辛普森法则还是梯形法则。事实上，当 $N=1,024$ 时，辛普森法则和梯形法则的平均绝对误差均为 0.0394%。在这种情况下，积分步增量 $\eta=0.0977$，行权价步增量 $\lambda=0.0628$。
+FFT 产生的价格非常准确，无论使用辛普森法则还是梯形法则。事实上，当 `$N=1,024$` 时，辛普森法则和梯形法则的平均绝对误差均为 0.0394%。在这种情况下，积分步增量 `$\eta=0.0977$`，行权价步增量 `$\lambda=0.0628$`。
 
-## 表 5.4 Heston 看权价格比较
+### 表 5.4 Heston 看权价格比较
 
 | 行权价 | 精确价格 | 梯形 FFT 价格 | 辛普森 FFT 价格 | 梯形误差 | 辛普森误差 |
+
 |---|---|---|---|---|---|
+
 | 41402 | 8.6378 | 8.6368 | 8.6381 | 0.0010 | 0.0040 |
+
 | 44956 | 6.4765 | 6.4761 | 6.4771 | -0.0072 | -0.0072 |
+
 | 46953 | 4.4453 | 4.4454 | 4.4454 | 0.0014 | 0.0014 |
+
 | 50000 | 2.6778 | 2.6782 | 2.6792 | 0.0118 | 0.0118 |
+
 | 532424 | 1.3269 | 1.3267 | 1.3267 | -0.0152 | -0.0152 |
+
 | 566950 | 0.5020 | 0.5018 | 0.5018 | -0.0421 | -0.0421 |
+
 | 603716 | 0.1421 | 0.1424 | 0.1424 | 0.0198 | 0.0198 |
 
-数值积分方案
+## 数值积分方案
 
-## 分数快速傅里叶变换 (FRFT)
+### 分数快速傅里叶变换 (FRFT)
 
-分数快速傅里叶变换 (FRFT) 由 Chourdakis (2005) 应用于期权定价。FRFT 是 FFT 的一种改进，它放宽了网格参数上 $\lambda\eta = 2\pi/N$ 的限制条件，使得快速傅里叶变换指数中的项 $1/N$ 被替换为通用项 $\beta$。因此，方程 (5,27)：
+分数快速傅里叶变换 (FRFT) 由 Chourdakis (2005) 应用于期权定价。FRFT 是 FFT 的一种改进，它放宽了网格参数上 `$\lambda\eta = 2\pi/N$` 的限制条件，使得快速傅里叶变换指数中的项 `$1/N$` 被替换为通用项 `$\beta$`。因此，方程 (5,27)：
 
 ```
 $$\hat{x}_u = \frac{e^{-i\alpha u}}{\pi} \sum_{j=1}^{N} Re [e^{-i2\pi\beta(j-1)(u-1)} x_j] \quad \text{for } u=1, \dots, N. \quad (5,28)$$
 ```
 
-网格大小参数 $\lambda$ 和 $\eta$ 的关系意味着 $\lambda\eta = 2\pi\beta$。然后我们可以自由选择这些网格参数，并设置：
+网格大小参数 `$\lambda$` 和 `$\eta$` 的关系意味着 `$\lambda\eta = 2\pi\beta$`。然后我们可以自由选择这些网格参数，并设置：
 
 ```
 $$\beta = \frac{\lambda\eta}{2\pi}.$$
 ```
 
-当 $\beta=1/N$ 时，FFT 成为一个特例。要在点集 $x_1, \dots, x_N$ 上实现 FRFT，首先定义向量 $y$ 和 $z$，它们的维度均为 $2N$：
+当 `$\beta=1/N$` 时，FFT 成为一个特例。要在点集 `$x_1, \dots, x_N$` 上实现 FRFT，首先定义向量 `$y$` 和 `$z$`，它们的维度均为 `$2N$`：
 
 ```
 $y = \left[e^{-i\pi(j-1)^2\beta} x_j\right]_{j=1}^{N}, \quad \{0\}_{1}^{N}$
 $z = \left[e^{i\pi(j-1)^2\beta} x_j\right]_{j=1}^{N}$
 ```
 
-接下来，对 $y$ 和 $z$ 取 FFT 得到向量 $\hat{y}$ 和 $\hat{z}$，产生维度为 $2N$ 的向量 $\hat{h} = \hat{y} \odot \hat{z}$。现在对 $\hat{h}$ 取逆 FFT 得到维度为 $2N$ 的向量 $D^{-1}(\hat{h})$。最后通过与向量 $e$ 相乘得到：
+接下来，对 `$y$` 和 `$z$` 取 FFT 得到向量 `$\hat{y}$` 和 `$\hat{z}$`，产生维度为 `$2N$` 的向量 `$\hat{h} = \hat{y} \odot \hat{z}$`。现在对 `$\hat{h}$` 取逆 FFT 得到维度为 `$2N$` 的向量 `$D^{-1}(\hat{h})$`。最后通过与向量 `$e$` 相乘得到：
 
 $$ \hat{x} = e \odot D^{-1}(\hat{h}) $$
 
@@ -4374,11 +4185,11 @@ $$ \hat{x} = e \odot D^{-1}(\hat{h}) $$
 
 $$ \hat{x} = e \odot D^{-1}(y \odot z) $$
 
-$\hat{x}$ 的前 $N$ 个元素被保留，其余 $N$ 个元素被丢弃。注意，与 FFT 类似，FRFT 需要 $2N$ 维向量 $y$ 和 $z$，并计算两次 FFT。然而，两次 FFT 带来的计算时间增加通过选择较小积分网格带来的精度提高来抵消。
+`$\hat{x}$` 的前 `$N$` 个元素被保留，其余 `$N$` 个元素被丢弃。注意，与 FFT 类似，FRFT 需要 `$2N$` 维向量 `$y$` 和 `$z$`，并计算两次 FFT。然而，两次 FFT 带来的计算时间增加通过选择较小积分网格带来的精度提高来抵消。
 
-## Heston 模型及其在 MATLAB 和 C# 中的扩展
+### Heston 模型及其在 MATLAB 和 C# 中的扩展
 
-实现 FRFT 时，选择任意数量的点 $N$、积分增量 $\eta$ 和行权价增量 $\lambda$。我们设置 $\beta = \lambda\eta/(2\pi)$ 并按照本节描述进行。对于方程 (5,29) 中出现在向量 $z$ 中的点 $x$，我们使用与 (5,26) 相同的点 $x_i = \exp(v_i)$。最后，积分网格 $[v_n]$ 和行权价网格 $[k_n]_{n=1}^N$ 按照 (5,21) 和 (5,23) 构建，其中 $b = N\lambda/2$，因为 Matlab 函数接收输入向量 $x$ 和参数 $\beta$，并返回来自 (5,30) 的 $\hat{x}$：
+实现 FRFT 时，选择任意数量的点 `$N$`、积分增量 `$\eta$` 和行权价增量 `$\lambda$`。我们设置 `$\beta = \lambda\eta/(2\pi)$` 并按照本节描述进行。对于方程 (5,29) 中出现在向量 `$z$` 中的点 `$x$`，我们使用与 (5,26) 相同的点 `$x_i = \exp(v_i)$`。最后，积分网格 `[$v_n$]` 和行权价网格 `[$k_n]_{n=1}^N$` 按照 (5,21) 和 (5,23) 构建，其中 `$b = N\lambda/2$`，因为 Matlab 函数接收输入向量 `$x$` 和参数 `$\beta$`，并返回来自 (5,30) 的 `$\hat{x}$`：
 
 ```matlab
 function xhat = FRFT(x,beta)
@@ -4469,41 +4280,47 @@ static Complex[] IFFT(Complex[] x) {
 }
 ```
 
-
-
-
-
 ## 数值积分方案
 
-# 表 5.6 FRFT 认权价格比较，小行权网格
+### 表 5.6 FRFT 认权价格比较，小行权网格
 
 | 行权价 | 精确价格 | 梯形 FRFT 价格 | 辛普森 FRFT 价格 | 梯形误差 | 辛普森误差 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | 49.9329 | 2.7118 | 2.7123 | 2.7123 | 0.0199 | 0.0199 |
+
 | 49.9553 | 2.7004 | 2.7010 | 2.7010 | 0.0197 | 0.0197 |
+
 | 49.9776 | 2.6891 | 2.6897 | 2.6897 | 0.0195 | 0.0195 |
+
 | 50.0000 | 2.6778 | 2.6784 | 2.6784 | 0.0193 | 0.0193 |
+
 | 50.0224 | 2.6666 | 2.6671 | 2.6671 | 0.0191 | 0.0191 |
+
 | 50.0488 | 2.6553 | 2.6558 | 2.6558 | 0.0189 | 0.0189 |
+
 | 50.0672 | 2.6441 | 2.6442 | 2.6446 | 0.0187 | 0.0187 |
 
-与表 5.3 中的价格相比，FRFT 的增量要粗得多，大约为 $3.00$。此外，在相同点数 $N = 2^n$ 的情况下，FRFT 的速度比 FFT 快得多。
+与表 5.3 中的价格相比，FRFT 的增量要粗得多，大约为 `$3.00$`。此外，在相同点数 `$N = 2^n$` 的情况下，FRFT 的速度比 FFT 快得多。
 
-FRFT 的另一个优势是我们可以限制应用算法的行权价范围。假设我们希望行权价范围从 $K'$ 开始。根据方程 (5.23)，选择对数行权增量 $\lambda$ 为：
+FRFT 的另一个优势是我们可以限制应用算法的行权价范围。假设我们希望行权价范围从 `$K'$` 开始。根据方程 (5.23)，选择对数行权增量 `$\lambda$` 为：
 
 $$ \lambda = \frac{2}{N}\log(S/K')$ (5.31) $$
 
-这将保证第一个行权价为 $k_1 = \log S/K'$，最后一个行权价约为 $k_n \approx S'/K'$。通过选择 $K'$ 接近 $S$，我们可以让 $\lambda$ 变得任意足够小，并为行权价获得一个非常窄的离散化范围。然后我们为积分网格大小 $\eta$ 选择任意值。如表 5.6 所示，我们使用了 $K=20$（回 $\hat{S}=30$）。FRFT 在平值区域以大约 $0.02$ 的增量构建行权网格。
+这将保证第一个行权价为 `$k_1 = \log S/K'$`，最后一个行权价约为 `$k_n \approx S'/K'$`。通过选择 `$K'$` 接近 `$S$`，我们可以让 `$\lambda$` 变得任意足够小，并为行权价获得一个非常窄的离散化范围。然后我们为积分网格大小 `$\eta$` 选择任意值。如表 5.6 所示，我们使用了 `$K=20$`（回 `$\hat{S}=30$`）。FRFT 在平值区域以大约 `$0.02$` 的增量构建行权网格。
 
-我们也可以将方程 (5.31) 用于为 FFT 本身构建窄的行权价范围，但由于我们受限于 $\lambda$ 和 $\eta$ 之间的关系，这将导致 $\eta$ 值很大，且积分网格非常粗糙。
+我们也可以将方程 (5.31) 用于为 FFT 本身构建窄的行权价范围，但由于我们受限于 `$\lambda$` 和 `$\eta$` 之间的关系，这将导致 `$\eta$` 值很大，且积分网格非常粗糙。
 
 # 结论
 
-在本章中，我们介绍了多种数值积分方法，它们的工作效果都相当良好。牛顿-科特（Newton-Cotes）公式易于理解和实现，但与高斯求积相比，它们需要更多的节点，因此需要更多的计算时间。这些方法中，高斯-拉日求积适用于 Heston 模型，但对于 Kahl 和 Jackel (2005) 的积分域变换效果良好。在 $C\#$ 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 $C\#$ 多项式根函数。在 $C\#$ 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 $C\#$ 多项式根函数。在 $C\#$ 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 $C\#$ 。函数。通过快速傅里叶变换（FFT）和分数傅里叶变换（FRFT），我们展示了这些方法在实际应用中的表现。
+
+
+在本章中，我们介绍了多种数值积分方法，它们的工作效果都相当良好。`Newton-Cotes`公式易于理解和实现，但与高斯求积相比，它们需要更多的节点，因此需要更多的计算时间。这些方法中，高斯-拉日求积适用于 Heston 模型，但对于 Kahl 和 Jackel (2005) 的积分域变换效果良好。在 `$C\#$` 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 `$C\#$` 多项式根函数。在 `$C\#$` 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 `$C\#$` 多项式根函数。在 `$C\#$` 中实现高斯求积比在 Matlab 中复杂，因为我们必须创建 `$C\#$` 。函数。通过快速傅里叶变换（FFT）和分数傅里叶变换（FRFT），我们展示了这些方法在实际应用中的表现。
 
 # 第 6 章 参数估计
 
-### 摘要
+## 摘要
 
 所有的定价方法目前都假设参数是给定的。在这一章中，我们将介绍如何估计这些参数。首先，我们介绍基于价格的估计方法。然后，我们将介绍基于隐含波动率的估计方法。
 
@@ -4513,41 +4330,37 @@ $$ \lambda = \frac{2}{N}\log(S/K')$ (5.31) $$
 
 $$ \frac{1}{N} \sum_{t,k} (C_{ik} - C_{ik}^{\Theta})^2 \ (6.1) $$
 
-或者，我们可以使用绝对值定义误差，即 $|C_{ik} - C_{ik}^{\Theta}|$，并建立损失函数：
+或者，我们可以使用绝对值定义误差，即 `|C_{ik} - C_{ik}^{\Theta}|`，并建立损失函数：
 
 $$ \frac{1}{N} \sum_{t,k} |C_{ik} - C_{ik}^{\Theta}| \ (6.2) $$
 
-均方误差（MSE）损失函数的一个已知缺点是虚值期权对 (6.2) 的贡献较大。因此，估计倾向于拟合值期权，而损害了其他期权。一种补救方法是只使用值期权，因此在 (6.2) 中，对于小于现价的行权价使用看涨期权，对于大于现价的行权价使用看跌期权。另一种补救方法是使用 RMSE (6.3)。然而，RMSE 的问题是发生了相反的效果。事实上，由于分母中存在 $C_{ik}$，低市场价值的期权会对 (6.3) 过度贡献。然而，过度贡献和贡献不足可以通过为选择分配权重 $w_{ik}$ 来减轻。
+均方误差（MSE）损失函数的一个已知缺点是虚值期权对 (6.2) 的贡献较大。因此，估计倾向于拟合值期权，而损害了其他期权。一种补救方法是只使用值期权，因此在 (6.2) 中，对于小于现价的行权价使用看涨期权，对于大于现价的行权价使用看跌期权。另一种补救方法是使用 RMSE (6.3)。然而，RMSE 的问题是发生了相反的效果。事实上，由于分母中存在 `C_{ik}`，低市场价值的期权会对 (6.3) 过度贡献。然而，过度贡献和贡献不足可以通过为选择分配权重 `w_{ik}` 来减轻。
 
 第二类损失函数是最小化报价与模型隐含波动率之间的误差。同样，误差通常定义为报价与隐含波动率之间的平方差、绝对差或相对差。这类损失函数是灵敏的，因为期权通常以隐含波动率的形式进行报价，且模型的拟合程度通常通过比较报价和模型隐含波动率来评估。例如，隐含波动率均方误差（IVMSE）参数估计基于：
 
 $$ \frac{1}{N} \sum_{t,k} w_{ik}(IV_{ik} - IV_{ik}^{\Theta})^2 \ (6.4) $$
 
-其中 $IV_{ik} = IV(\tau_k, K_k)$  $IV_{ik}^{\Theta} = IV(\tau_k, K_k; \Theta)$ 分别是报价和模型隐含波动率。相对版本和绝对版本也可以使用。
-
-
-
-
+其中 `IV_{ik} = IV(\tau_k, K_k)` `IV_{ik}^{\Theta} = IV(\tau_k, K_k; \Theta)` 分别是报价和模型隐含波动率。相对版本和绝对版本也可以使用。
 
 ## 参数估计
 
-方程 (6.4) 的主要缺点是它是计算密集型的。事实上，在优化的每次迭代中，我们必须首先获得 Heston $C_{ik}$，然后应用如二分法等寻根算法从 $C_{ik}$ 中提取隐含波动率 $IV_{ik}$，以便构建标量 $(IV_{ik} - IV_{ik}^*)^2$。另一种解决办法是使用第 4 节中描述的 Lewis (2000) 二级展开的近似隐含波动率，来代替 $IV_{ik}$。这允许我们完全跳过二分法算法。另一种解决方法是使用 Christoffersen 等人 (2009) 描述的损失函数，该函数作为 (6.4) 中 IVMSE 的近似。它使用 Black-Scholes vega 的平方倒数作为 (6.2) 中的权重。因此，他们方法的参数估计是基于损失函数：
+方程 (6.4) 的主要缺点是它是计算密集型的。事实上，在优化的每次迭代中，我们必须首先获得 Heston `C_{ik}`，然后应用如二分法等寻根算法从 `C_{ik}` 中提取隐含波动率 `IV_{ik}`，以便构建标量 `(IV_{ik} - IV_{ik}^*)^2`。另一种解决办法是使用第 4 节中描述的 Lewis (2000) 二级展开的近似隐含波动率，来代替 `IV_{ik}`。这允许我们完全跳过二分法算法。另一种解决方法是使用 Christoffersen 等人 (2009) 描述的损失函数，该函数作为 (6.4) 中 IVMSE 的近似。它使用 Black-Scholes vega 的平方倒数作为 (6.2) 中的权重。因此，他们方法的参数估计是基于损失函数：
 
 ```
 $$\sum_{i,k} \frac{(C_{ik} - C_{ik}^*)^2}{BSVega_{ik}^2} = (6.5)$$
 ```
 
-其中 BSVega 是期权价格相对于市场隐含波动率 $IV_{ik}$ 的 Black-Scholes 敏感度，在到期日 $\tau$ 和执行价格 $K$ 处求值如下：
+其中 `BSVega` 是期权价格相对于市场隐含波动率 `IV_{ik}` 的 Black-Scholes 敏感度，在到期日 `\tau` 和执行价格 `K` 处求值如下：
 
 ```
 $d_{ik} = \frac{\log(S/K_k) + (r - q + IV_{ik}^2/2)\tau}{IV_{ik}\sqrt{\tau}}$
 ```
 
-并且 $n(x) = \exp(-x^2/2)/\sqrt{2\pi}$ 是标准正态密度。基于 Lewis (2000) 或 Christoffersen 等人 (2009) 近似的损失函数的主要优势是节省了大量的计算时间，尽管是以牺牲参数估计精度为代价的。
+并且 `n(x) = \exp(-x^2/2)/\sqrt{2\pi}` 是标准正态密度。基于 Lewis (2000) 或 Christoffersen 等人 (2009) 近似的损失函数的主要优势是节省了大量的计算时间，尽管是以牺牲参数估计精度为代价的。
 
 估计 Heston 参数已被 Bakshi、Cao 和 Chen (1997)、Bams 等人 (2009)、Christoffersen 和 Jacobs (2004)、Mikhailov 和 Nogel (2003) 等许多人使用。关于哪种损失函数最好尚没有共识，但 Christoffersen 和 Jacobs (2004) 指出，同一个损失函数可以用于参数估计和模型拟合评估。
 
-Matlab 函数 HestonObjFun.m 实现了本节涵盖的损失函数。如果我们设置 Method=2，则直接从 Lewis (2000) 的近似值获得隐含波动率，因此我们不需要使用二分法计算波动率。该函数可以很容易修改以添加更多函数。
+Matlab 函数 `HestonObjFun.m` 实现了本节涵盖的损失函数。如果我们设置 `Method=2`，则直接从 Lewis (2000) 的近似值获得隐含波动率，因此我们不需要使用二分法计算波动率。该函数可以很容易修改以添加更多函数。
 
 ```matlab
 function y = HestonObjFun(ObjFun,...);
@@ -4558,7 +4371,7 @@ for k=1:NK
             CallPrice = HestonPriceGaussLaguerre(K(k),T(t),...);
 ```
 
-## MATLAB 和 C# 中的 HESTON 模型及其扩展
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
 ```matlab
 elseif Method=2
@@ -4593,7 +4406,7 @@ end
 y = sum(sum(error)) / (NT*NK);
 ```
 
-为了获得参数估计，我们将 HestonObjFun.m 传递给 Matlab 函数 fmincon。该 Matlab 函数允许满足 (6.1) 条件的受约束优化。
+为了获得参数估计，我们将 `HestonObjFun.m` 传递给 Matlab 函数 `fmincon`。该 Matlab 函数允许满足 (6.1) 条件的受约束优化。
 
 ```matlab
 e = 1e-5;
@@ -4602,7 +4415,7 @@ ub = [100 10 10 10 .999] % 估计的上界
 [param fval] = fmincon(@p) HestonObjFun(...),lb,ub);
 ```
 
-实现这些函数的 C# 代码与 Matlab 代码类似，将在下一节中给出。一个关键区别是，当使用函数 (6.5) 时，必须计算标准正态密度。这通过以下代码段中的 C# 变量 NormPDF 完成。
+实现这些函数的 C# 代码与 Matlab 代码类似，将在下一节中给出。一个关键区别是，当使用函数 (6.5) 时，必须计算标准正态密度。这通过以下代码段中的 C# 变量 `NormPDF` 完成。
 
 ## 参数估计
 
@@ -4615,13 +4428,13 @@ Error = Math.Pow(MktPrice[k,t] - MktPrice[k,t],2)/Vega/TN;
 break;
 ```
 
-另一个区别是，当目标函数中使用隐含波动率时，必须使用第 2 节中的 C# 函数 NormCDF() 计算标准正态分布。请参考第 2 节获取 NormCDF 函数的描述。
+另一个区别是，当目标函数中使用隐含波动率时，必须使用第 2 节中的 C# 函数 `NormCDF()` 计算标准正态分布。请参考第 2 节获取 `NormCDF` 函数的描述。
 
-为了估计，使用了 2012 年 4 月 13 日收集的 Heston 参数，对应四个期限：45、98、261 和 348 天，以及从 120 到 150 间隔为 5 的五个执行价格。我们使用 32 点高斯-Laguerre 积分获取模型，并报告 Christoffersen (2009) (6.5) 之间的 IVMSE。隐含波动率图表明，长期拟合效果略优于短期。参数估计存在差异，正如我们所说，$\theta$ 为负值。隐含波动率的结果如图 6.1 所示。
+为了估计，使用了 2012 年 4 月 13 日收集的 Heston 参数，对应四个期限：45、98、261 和 348 天，以及从 120 到 150 间隔为 5 的五个执行价格。我们使用 32 点高斯-Laguerre 积分获取模型，并报告 Christoffersen (2009) (6.5) 之间的 IVMSE。隐含波动率图表明，长期拟合效果略优于短期。参数估计存在差异，正如我们所说，`$\theta$` 为负值。隐含波动率的结果如图 6.1 所示。
 
 表 6.1 中的 Heston 参数是使用无风险利率和股息率得到的。详见 Shim (1993)。Nelder-Mead 算法适用于无约束优化，然而，可以使用惩罚函数将其用于受约束优化。
 
-| 损失函数 | IVMSE | $\hat{\kappa}$ | $\hat{\theta}$ | $\hat{\alpha}$ | $\hat{v}$ |
+| 损失函数 | IVMSE | `$\hat{\kappa}$` | `$\hat{\theta}$` | `$\hat{\alpha}$` | `$\hat{v}$` |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | MSE (6,2) | 0.0006 | 1.9214 | 0.0904 | 0.0344 | -0.7799 |
 | RMSE (6,3) | 0.0005 | 1.9931 | 0.0571 | 0.0405 | -0.7899 |
@@ -4635,35 +4448,34 @@ FIGURE 6.1 使用 MSE 估计的 S&P500 市场和隐含波动率
 - 261 天
 - 348 天
 
-
-
-
-
 ## 参数估计
 
-**步骤 2.** 扩展规则。如果 $f(\mathbf{x}_k) \le f(\mathbf{x}_0)$，则扩展扩展点
+**步骤 2.** 扩展规则。如果 `f(\mathbf{x}_k) \le f(\mathbf{x}_0)`，则扩展扩展点
 
-$\mathbf{x}_e = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$
+`$\mathbf{x}_e = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$`
 
-如果 $f(\mathbf{x}_e) \le f(\mathbf{x}_n)$，将 $\mathbf{x}_n$ 替换为 $\mathbf{x}_e$ 并进入步骤 0 的下一次迭代。如果 $f(\mathbf{x}_e) > f(\mathbf{x}_n)$，则用反射点 $\mathbf{x}_r$ 替换并进入下一次迭代。
-如果 $f(\mathbf{x}_r) > f(\mathbf{x}_0)$，继续执行步骤 3。
+如果 `f(\mathbf{x}_e) \le f(\mathbf{x}_n)`，将 `$\mathbf{x}_n$` 替换为 `$\mathbf{x}_e$` 并进入步骤 0 的下一次迭代。如果 `f(\mathbf{x}_e) > f(\mathbf{x}_n)`，则用反射点 `$\mathbf{x}_r$` 替换并进入下一次迭代。
+
+如果 `f(\mathbf{x}_r) > f(\mathbf{x}_0)`，继续执行步骤 3。
 
 **步骤 3.** 外部收缩规则。计算外部收缩点
 
-$\mathbf{x}_{ic} = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$
+`$\mathbf{x}_{ic} = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$`
 
-如果 $f(\mathbf{x}_{n-1}) \le f(\mathbf{x}_n)$ 且 $f(\mathbf{x}_{ic}) < f(\mathbf{x}_n)$，将 $\mathbf{x}_n$ 替换为 $\mathbf{x}_{ic}$ 并进入步骤 0 的下一次迭代。否则，继续执行步骤 4。
+如果 `f(\mathbf{x}_{n-1}) \le f(\mathbf{x}_n)` 且 `f(\mathbf{x}_{ic}) < f(\mathbf{x}_n)`，将 `$\mathbf{x}_n$` 替换为 `$\mathbf{x}_{ic}$` 并进入步骤 0 的下一次迭代。否则，继续执行步骤 4。
 
 **步骤 4.** 内部收缩规则。计算内部收缩点
 
-$\mathbf{x}_{ic} = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$
+`$\mathbf{x}_{ic} = \bar{x} + \gamma(\mathbf{x}_n - \bar{x})$`
 
-如果 $f(\mathbf{x}_n) \le f(\mathbf{x}_i)$ 且 $f(\mathbf{x}_{ic}) < f(\mathbf{x}_{n-1})$，将 $\mathbf{x}_n$ 替换为 $\mathbf{x}_{ic}$ 并进入步骤 0 的下一次迭代。否则，继续执行步骤 5。
+如果 `f(\mathbf{x}_n) \le f(\mathbf{x}_i)` 且 `f(\mathbf{x}_{ic}) < f(\mathbf{x}_{n-1})$，将 `$\mathbf{x}_n$` 替换为 `$\mathbf{x}_{ic}$` 并进入步骤 0 的下一次迭代。否则，继续执行步骤 5。
 
-**步骤 5.** 收缩。对于 $i = 1, \dots, n$，将 $\mathbf{x}_n$ 替换为 $\mathbf{x}_n + \sigma(\mathbf{x}_i - \mathbf{x}_n)$。注意，最佳点 $\mathbf{x}_n$ 不进行收缩。
+**步骤 5.** 收缩。对于 `i = 1, \dots, n`，将 `$\mathbf{x}_n$` 替换为 `$\mathbf{x}_n + \sigma(\mathbf{x}_i - \mathbf{x}_n)$`。注意，最佳点 `$\mathbf{x}_n$` 不进行收缩。
 
-上述步骤中系数的标准值为：反射的 $\rho = 2$，收缩的 $\gamma = 1/2$，以及收缩的 $\sigma = 1/2$。
-当迭代次数达到指定值，或者最佳与最差函数值之间的差值 $f(\mathbf{x}_n) - f(\mathbf{x}_i)$ 达到指定水平时，Nelder-Mead 算法运行。
+上述步骤中系数的标准值为：反射的 `$\rho = 2$`，收缩的 `$\gamma = 1/2$`，以及收缩的 `$\sigma = 1/2$`。
+
+当迭代次数达到指定值，或者最佳与最差函数值之间的差值 `f(\mathbf{x}_n) - f(\mathbf{x}_i)` 达到指定水平时，Nelder-Mead 算法运行。
+
 该算法使用 C# 实现，使用了 `NelderMead` 函数。以下代码段包含了之前描述的步骤 1 到 5。反射、扩展以及内部和外部收缩点在函数早些时候已计算，此处未列出。函数的最后部分返回参数估计、目标函数值以及使用的迭代次数。
 
 ```csharp
@@ -4700,58 +4512,79 @@ for(i=0;i<=N-1;i++) outvec[i] = x[i];
 outvec[N] = f1;
 outvec[N+1] = NumIters;
 return outvec; }
+```
+
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
-为了使用 Nelder-Mead 算法寻找参数估计，我们通过通过定义 `f()` 函数来创建目标函数，该函数返回损失函数。通常情况下，省略了该函数的部分。由于 Nelder-Mead 函数是设计用于无约束优化的，因此在函数的第一部分包含了一个惩罚机制，当遇到不可接受的参数值时返回一个极大（$10^{30}$）。有效的参数是指落在 (6.1) 中定义的参数边界范围内的值。
+为了使用 Nelder-Mead 算法寻找参数估计，我们通过通过定义 `f()` 函数来创建目标函数，该函数返回损失函数。通常情况下，省略了该函数的部分。由于 Nelder-Mead 函数是设计用于无约束优化的，因此在函数的第一部分包含了一个惩罚机制，当遇到不可接受的参数值时返回一个极大（`$10^{30}$`）。有效的参数是指落在 (6.1) 中定义的参数边界范围内的值。
 
 ```csharp
 static double f(double[] param, double offset) {
-// 对不可接受参数值的惩罚
-if((param[0]<=kappaLB) || (param[1]>=thetaUB)) {
-  Error = 1e50;
-}else {
-  for(int k=0; k<K; k++) {
-    for(int t=0; t<T; t++) {
-      ModelPrice(k,t) = HestonPriceGauss(K[k],T]),
-      switch (LossFunction) {
-        case 1: // MSE 损失函数
-          Error += Math.Pow(ModelPrice[k,t] - MktPrice[k,t], 2);
-        case 2: // RMSE 损失函数
-          Error += Math.Pow(ModelPrice[k,t] - MktPrice[k,t], 2);
-          break;
+  // 对不可接受参数值的惩罚
+  if((param[0]<=kappaLB) || (param[1]>=thetaUB)) {
+    Error = 1e50;
+  }else {
+    for(int k=0; k<K; k++) {
+      for(int t=0; t<T; t++) {
+        ModelPrice(k,t) = HestonPriceGauss(K[k],T]),
+        switch (LossFunction) {
+          case 1: // MSE 损失函数
+            Error += Math.Pow(ModelPrice[k,t] - MktPrice[k,t], 2);
+          case 2: // RMSE 损失函数
+            Error += Math.Pow(ModelPrice[k,t] - MktPrice[k,t], 2);
+            break;
+        }
       }
     }
   }
-}
-return Error; }
+  return Error; }
 ```
 
 Heston 参数估计通过以下 C# 代码获得。第一部分使用初始值和随机增量创建初始值（顶点）。最后部分调用 `NelderMead` 函数。
 
 ```csharp
 double kappaS = 9.00;
+```
+
+
+
+```csharp
 double thetaS = 0.05;
+
 double sigmas = 0.30;
+
 double vOS = 0.05;
+
 double rhoS = -0.80;
+
 int N = settings.N;
+
 double[,] s = new double[N,N+1];
+
 for(int j=0; j<N; j++) {
+
     s[0,j] = kappaS + RandomNum(-0.01,0.01);
+
     s[1,j] = thetaS + RandomNum(-0.01,0.01);
+
     s[2,j] = sigmas + RandomNum(-0.01,0.01);
+
     s[3,j] = vOS + RandomNum(-0.01,0.01);
+
     s[4,j] = rhoS + RandomNum(-0.01,0.01);
+
 }
+
 // 优化参数估计
+
 double[,] B = NelderMead(f,settings,s);
 ```
 
-在 Nelder-Mead 算法的 C# 代码中，我们创建了一系列结构，允许以更紧凑的形式传递输入。这些结构包含了 Nelder-Mead 算法设置、目标函数、Heston 参数以及期权价格。C# 代码还使用了向量加减函数以及获取向量平均值的函数。这些结构和函数在此未出现，但在 C# 代码中包含了。
+在 `Nelder-Mead` 算法的 `C#` 代码中，我们创建了一系列结构，允许以更紧凑的形式传递输入。这些结构包含了 `Nelder-Mead` 算法设置、目标函数、Heston 参数以及期权价格。`C#` 代码还使用了向量加减函数以及获取向量平均值的函数。这些结构和函数在此未出现，但在 `C#` 代码中包含了。
 
 ## 初始值
 
-记得 Heston 参数的约束 (6.1) 为 $\kappa > 0, \theta > 0, \sigma > 0, \nu > 0$ 以及 $|\rho| \le 1$。如本章前面所述，我们使用 Matlab `fmincon` 在约束下最小化目标函数，这需要参数边界。该函数使用了多种约束优化方法，这些方法在 MathWorks 网站（www.mathworks.com）上有解释。我们也可以使用 Matlab `fminsearch` 来最小化目标函数，但该函数使用的是 Nelder-Mead 算法，且仅设计用于无约束优化。引入约束的一种简单方法是实施惩罚，正如我们在上一节 C# 代码中所做样。
+记得 Heston 参数的约束 `(6.1)` 为 $\kappa > 0, \theta > 0, \sigma > 0, \nu > 0$ 以及 $|\rho| \le 1$。如本章前面所述，我们使用 Matlab `fmincon` 在约束下最小化目标函数，这需要参数边界。该函数使用了多种约束优化方法，这些方法在 MathWorks 网站（`www.mathworks.com`）上有解释。我们也可以使用 Matlab `fminsearch` 来最小化目标函数，但该函数使用的是 `Nelder-Mead` 算法，且仅设计用于无约束优化。引入约束的一种简单方法是实施惩罚，正如我们在上一节 `C#` 代码中所做样。
 
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
@@ -4772,31 +4605,29 @@ double[,] B = NelderMead(f,settings,s);
 > ^d$Bakshi, Cao, and Chen (1997)
 > ^e/f$ not applicable
 
-
-
-
-
 ## 参数估计
 
-这些导数的的公式在第 9 章中给出。公式 (6.7) 中系数所需的其他数量，即 $m_0, p_0, p_1, q_0, q_1, r_0$ 和 $r_1$，可以在 Gauthier 和 Rivaille (2009) 或 Benhamou 等人 (2010) 中找到。
+这些导数的的公式在第 9 章中给出。公式 `(6.7)` 中系数所需的其他数量，即 `m0, p0, p1, q0, q1, r0` 和 `r1`，可以在 Gauthier 和 Rivaille (2009) 或 Benhamou 等人 (2010) 中找到。
 
-Gauthier 和 Rivaille 的方法基于这样一个观点：给定具有相同期限 $T$ 的报价看跌期权，即行权为 $K_1$ 的 $P(K_1)$ 和行权为 $K_2$ 的 $P(K_2)$，我们可以建立如下两个方程组成的方程组：
+Gauthier 和 Rivaille 的方法基于这样一个观点：给定具有相同期限 `T` 的报价看跌期权，即行权为 `K1` 的 `P(K1)` 和行权为 `K2` 的 `P(K2)`，我们可以建立如下两个方程组成的方程组：
 
 ```
 $P(K_1) = A(K_1) + B(K_1)\sigma^2 + C(K_1)\rho\sigma + D(K_1)\rho^2\sigma^2$
+
 $P(K_2) = A(K_2) + B(K_2)\sigma^2 + C(K_2)\rho\sigma + D(K_2)\rho^2\sigma^2$
 ```
 
-并求解 $(\rho, \sigma)$。为了实现这一点，我们固定系数中 $\kappa$、$\theta$ 和 $v_0$ 的值。我们可以通过 Matlab 的符号工具求解 $(\rho, \sigma)$。通常情况下，会产生所有解，但只有一个是允许的（即满足 $|\rho| \le 1$ 且 $\sigma > 0$）。
+并求解 `(\rho, \sigma)`。为了实现这一点，我们固定系数中 `\kappa`、`\theta` 和 `v0` 的值。我们可以通过 Matlab 的符号工具求解 `(\rho, \sigma)`。通常情况下，会产生所有解，但只有一个是允许的（即满足 `|\rho| \le 1` 且 `\sigma > 0`）。
 
-或者，我们可以固定使目标函数最小化的 $\rho$ 值：
+或者，我们可以固定使目标函数最小化的 `\rho` 值：
 
 ```
 $f(\rho, \sigma) = (A(K_1) + B(K_1)\sigma^2 + C(K_1)\rho\sigma + D(K_1)\rho^2\sigma^2 - P(K_1))^2$
+
 +(A(K_2) + B(K_2)\sigma^2 + C(K_2)\rho\sigma + D(K_2)\rho^2\sigma^2 - P(K_2))^2$
 ```
 
-在 Matlab 中实现这一点非常简单。Matlab 文件 BlackSchDerivatives.m 包含了方程 (6.7) 中系数的导数。该函数被传递给 Gauthiercoefficients.m，由它计算 (6.7) 中的系数。
+在 Matlab 中实现这一点非常简单。Matlab 文件 `BlackSchDerivatives.m` 包含了方程 `(6.7)` 中系数的导数。该函数被传递给 `Gauthiercoefficients.m`，由它计算 `(6.7)` 中的系数。
 
 ```matlab
 function [A B C D] = Gauthiercoefficients(...);
@@ -4811,7 +4642,7 @@ C = (v0 + theta*rt1)*P21 + 0.5*(v0*g0 + theta*rt1)^2*P22;
 D = ...;
 ```
 
-最后，这些系数被传递给 GetGauthierValues 函数，该函数通过两种方法计算 sigma 和 rho：使用 Matlab 符号计算器获取闭式解值，或者使用方程 (6.9) 中的目标函数。
+最后，这些系数被传递给 `GetGauthierValues` 函数，该函数通过两种方法计算 `sigma` 和 `rho`：使用 Matlab 符号计算器获取闭式解值，或者使用方程 `(6.9)` 中的目标函数。
 
 ```matlab
 function [sigma rho] = GetGauthierValues(K1,K2,Put1,Put2,...,method);
@@ -4840,7 +4671,7 @@ elif method==2,
 end
 ```
 
-(6.9) 中的目标函数是使用 GauthierObjFun 函数实现的。
+`(6.9)` 中的目标函数是使用 `GauthierObjFun` 函数实现的。
 
 ```matlab
 function y = GauthierObjFun(param, Coeff1, Coeff2, Put1, Put2)
@@ -4852,17 +4683,17 @@ y = (A1 + B1*sigma^2 + C1*rho*sigma + D1*rho^2*sigma^2
 - Put2^2);
 ```
 
-实现“智能”方法的 C 代码与之前的代码非常相似，此处未列出。Gauthier (2009) 的区别在于，由于 C 中没有符号计算器，代码仅使用目标函数 (6.9) 来寻找 $(\rho, \sigma)$。
+实现“智能”方法的 C 代码与之前的代码非常相似，此处未列出。Gauthier (2009) 的区别在于，由于 C 中没有符号计算器，代码仅使用目标函数 `(6.9)` 来寻找 `(\rho, \sigma)`。
 
 ## 加速估计
 
-函数估计的一个缺点是可能耗时，特别是当使用许多期限和行权时。Gauthier (2007) 建议了一种非常简单的技巧来加速优化。记住对于平值概率 $j = 1, 2$ 的积分：
+函数估计的一个缺点是可能耗时，特别是当使用许多期限和行权时。Gauthier (2007) 建议了一种非常简单的技巧来加速优化。记住对于平值概率 `j = 1, 2` 的积分：
 
 $$Re\left[ \frac{e^{-i\phi} f(\phi)}{i} \right]$$
 
-Gauthier (2007) 指特征函数 $f(\phi)$ 不依赖于行权 $K$，但依赖于期限 $T$。这意味着在优化过程中，每个期限只需计算一次 $f_1$ 和 $f_2$ 的值并缓存起来，供不同的行权重复使用。这是重要的，因为 $f(\phi)$ 项在被积函数中包含了大量的复数运算、幂运算和根号。Zhu (2010) 参考了 Gauthier 的行权向量计算，Schouten (2010) 指出，为了使其工作，外层循环必须针对期限，内层循环针对行权。通过与定价公式（如第一所示）结合或将积分合并为单个积分，缓存技术可以显著减少估计。
+Gauthier (2007) 指特征函数 `f(\phi)` 不依赖于行权 `K`，但依赖于期限 `T`。这意味着在优化过程中，每个期限只需计算一次 `f1` 和 `f2` 的值并缓存起来，供不同的行权重复使用。这是重要的，因为 `f(\phi)` 项在被积函数中包含了大量的复数运算、幂运算和根号。Zhu (2010) 参考了 Gauthier 的行权向量计算，Schouten (2010) 指出，为了使其工作，外层循环必须针对期限，内层循环针对行权。通过与定价公式（如第一所示）结合或将积分合并为单个积分，缓存技术可以显著减少估计。
 
-Matlab 文件 HestonObjSVC 使用 Gauthier (2007) 的 Gauss-Laguerre 积分方法。为了节省空间，该函数的部分代码已被移除。该函数允许原始 Heston (1993) 的特征函数表述。在每个行权循环的开始处，我们在 Gauss-Laguerre 节点 $\phi$ 上计算特征函数 $f_1$ 和 $f_2$ 的值。然后我们保留这些值，对每个行权的积函数进行积分并计算看跌价格。
+Matlab 文件 `HestonObjSVC` 使用 Gauthier (2007) 的 Gauss-Laguerre 积分方法。为了节省空间，该函数的部分代码已被移除。该函数允许原始 Heston (1993) 的特征函数表述。在每个行权循环的开始处，我们在 Gauss-Laguerre 节点 `\phi` 上计算特征函数 `f1` 和 `f2` 的值。然后我们保留这些值，对每个行权的积函数进行积分并计算看跌价格。
 
 ```matlab
 function y = HestonObjSVC(param,...,x,w,CF)
@@ -4915,11 +4746,7 @@ end
 
 生成 Gauthier (2007) 行权向量计算目标函数的 C 代码在上面的 Matlab 代码中，此处未给出。我们 6.3 中看到，行权向量计算显著减少了校准计算时间，对参数估计的影响很小。
 
-提高估计速度的一个近期趋势是减少待估计参数集。例如，Heston 期权价格对 $k$ 变化的敏感性很低。在这里我们可以将 $k$ 固定为任意合理的值。在他们带有时间相关参数的 Heston 模型版本中（我们在第 9 章中介绍），Benhamou 等人 (2010) 允许参数为分段常数，但限制 $k$ 为单一值。Air-Sahalia 和 Kimmel (2007) 使用短期（30天）平值（ATM）隐含波动率，Janek (2010) 和 Zhu 计算 $v_0$ 以模拟外汇市场中的瞬时波动率，并建议 $k$ 足够大以满足 Feller 条件 $2\theta > \sigma^*$。这仅剩下参数 $(\theta, \sigma)$ 待估计，Guaitan 和 Schouten (2012) 校准 VIX 的 $v_0$ 和 $\theta$，并估计 $(\kappa, \sigma, \rho)$。
-
-
-
-
+提高估计速度的一个近期趋势是减少待估计参数集。例如，Heston 期权价格对 `k` 变化的敏感性很低。在这里我们可以将 `k` 固定为任意合理的值。在他们带有时间相关参数的 Heston 模型版本中（我们在第 9 章中介绍），Benhamou 等人 (2010) 允许参数为分段常数，但限制 `k` 为单一值。Air-Sahalia 和 Kimmel (2007) 使用短期（30天）平值（ATM）隐含波动率，Janek (2010) 和 Zhu 计算 `v0` 以模拟外汇市场中的瞬时波动率，并建议 `k` 足够大以满足 Feller 条件 `2\theta > \sigma^*`。这仅剩下参数 `(\theta, \sigma)` 待估计，Guaitan 和 Schouten (2012) 校准 VIX 的 `v0` 和 `\theta`，并估计 `(\kappa, \sigma, \rho)`。
 
 ## 参数估计 161
 
@@ -4944,6 +4771,8 @@ for t=1:NT
     end
 Y = sum(sum(error)) / (NK);
 ```
+
+
 
 在代码中，我们使用了自定义的线性插值函数 `LinearInterpolate`，它的运行速度比 Matlab 内置函数 `interp1.m` 快。
 
@@ -4992,72 +4821,118 @@ $R$ 是从 1 到 $S$ 随机选择的整数，$CR$ 是交叉率。使用 $R$ 确�
 - 步骤 4。候选者的选择。将成员 $x_i$ 及其候选者 $u_i$ 输入目标函数 $f(x)$。如果候选者的值小于成员，则候选者替换种群 $P$ 中的第 $i$ 个成员。规则如下：
 
 ```matlab
-$P = \begin{cases} (x_1, \dots, u_i, \dots, x_{N_p}) & \text{如果 } f(u_i) < f(x_i) \\ (x_1, \dots, x_i, \dots, x_{N_p}) & \text{否则}\end{cases}$```
+$P = \begin{cases} (x_1, \dots, u_i, \dots, x_{N_p}) & \text{如果 } f(u_i) < f(x_i) \\ (x_1, \dots, x_i, \dots, x_{N_p}) & \text{否则}\end{cases}$
+```
 当所有成员都接受处理后，更新种群并重新从步骤 2 开始。然后算法运行 $N_G$ 代。参数估计选择最后一代种群中 $f(x)$ 值最小的成员。
 
 差分演化算法通过 `HestonDE.mem` 实现。函数的第一部分创建成员种并在循环下生成随机数。在变异和重组步骤中，函数验证候选者 $(P_{new})$ 是否在接受的参数范围内。如果不是，则创建一个新的候选者。如果适用，用候选者更新种群。最后，返回目标函数值最小的成员。注意，在每个循环开始时，候选者 $P_{new}$ 被设置为确保整个循环执行一次。
 
 ```matlab
 function y = HestonDE(NG, NP, CR, F, Hi, Lo, S, ...)
-% Step1. 生成随机参数种群
-P = [kappaL + (kappa-kappaAL)*rand(1,NP); ...
-thetaL = (theta-UTheta)*rand(1,NP); ...
-```
 
+% Step1. 生成随机参数种群
+
+P = [kappaL + (kappa-kappaAL)*rand(1,NP); ...
+
+thetaL = (theta-UTheta)*rand(1,NP); ...
+
+```
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
 ```matlab
 sigMAL + (sigMAU-sigMAL)*rand(1,NP); ...
+
 v0L + (v0U-v0L)*rand(1,NP); ...
+
 rHO + (rHOU-rHO)*rand(1,NP); ...
+
 % 在循环外生成随机数
+
 u = rand(0,NP);
+
 for i=1:NG
+
     % 选择种群中的第 $i$ 个成员
+
     Po = P(i,:);
+
     Pnew = ones(1,5);
+
     Condition = sum(Lo) < Pnew & Pnew < Hi;
+
     while Condition < 5
+
         % 选择随机索引
+
         I = randperm(NP);
+
         I = find(I~=i);
+
         R = I(1:3);
+
         % 三个不同的成员
+
         Pr1 = P(:,R(1));
+
         Pr2 = P(:,R(2));
+
         Pr3 = P(:,R(3));
+
         R = randperm(5);
+
 P = zeros(1,5);
+
         % 步骤 2 和 3. 变异与组合
+
         for j=1:5
+
             Ri = R(1);
+
             u = U(j,k);
+
             if u<CR || j=Ri
+
                 Pnew(j) = Pr1(j) + F*(Pr2(j) - Pr3(j))
+
             else
+
                 Pnew(j) = P0(j);
+
             end
+
         end
+
     Condition = sum(Lo) < Pnew & Pnew < Hi;
+
 end
+
 % 步骤 4. 选择
+
 fo = HestonObjFunFRFT(P0, ...);
+
 fnew = HestonObjFunFRFT(Pnew, ...);
+
 % 验证候选者是否替换
+
 if fnew < fo
+
     P(i,:) = Pnew;
+
 end
+
 for i=1:NP
+
 f(i) = HestonObjFunFRFT(P(:,), ...);
+
 end
+
 % 找到目标函数最小的成员
+
 J = find(f=min(f));
+
 y = P(J,:);
+
 ```
-
-
-
-
 
 ## 参数估计 165
 
@@ -5119,6 +4994,8 @@ public static int[] RemoveIndex(int[] a,int position) {
 }
 ```
 
+
+
 ## 表 6.4 估计方法的比较
 
 | 估计方法 | IVMSE | $k$ | $\hat{\theta}$ | $\hat{\alpha}$ | $\hat{\mu}_0$ | $\hat{\rho}$ | 估计时间 (sec) |
@@ -5126,100 +5003,45 @@ public static int[] RemoveIndex(int[] a,int position) {
 | FRFT | $9.57 \times 10^{-6}$ | 1.6691 | 0.0932 | 0.9076 | 0.0339 | -0.8013 | 1.88 |
 | DE | $5.95 \times 10^{-6}$ | 1.6167 | 0.0969 | 0.9665 | 0.0345 | -0.7734 | 120.36 |
 
-当初始值较差时，差分进化（Differential Evolution）算法特别有用。然而，即使取值不好，算法也会收敛到全局最优解，尽管需要多次迭代。我们在用于创建表 6.1 的 S&P500 数据上运行了 HestonDem 函数，并使用 MSE 损失函数。根据 Vollrath 和 Wendland (2009) 方法，我们将种群参数设置为参数数量的 15 倍，使得 $N_p = 75$，交叉率设置为 $CR = 0.5$，变异因子设置为 $F = 0.8$，代数数量设置为 $N_g = 200$。我们将所有参数的初始值均设为 1。我们将 DE 的参数估计值与表 6.4 中获得的结果进行比较。如预期的那样，DE 方法比使用 FRFT 的估计慢得多。然而，DE 的参数估计更准确，因为它们的 IVMSE 更小。此外，它们与表 6.1 中的估计值保持一致。
+当初始值较差时，差分进化（Differential Evolution）算法特别有用。然而，即使取值不好，算法也会收敛到全局最优解，尽管需要多次迭代。我们在用于创建表 6.1 的 S&P500 数据上运行了 `HestonDem` 函数，并使用 `MSE` 损失函数。根据 Vollrath 和 Wendland (2009) 方法，我们将种群参数设置为参数数量的 15 倍，使得 `$N_p = 75$`，交叉率设置为 `$CR = 0.5$`，变异因子设置为 `$F = 0.8$`，代数数量设置为 `$N_g = 200$`。我们将所有参数的初始值均设为 1。我们将 `DE` 的参数估计值与表 6.4 中获得的结果进行比较。如预期的那样，`DE` 方法比使用 `FRFT` 的估计慢得多。然而，`DE` 的参数估计更准确，因为它们的 `IVMSE` 更小。此外，它们与表 6.1 中的估计值保持一致。
 
 ## 最大似然估计
 
-当存在一组期权价格或隐含波动率的流动性市场报价时，通过损失函数进行估计是可行的。如果没有此类报价，则必须使用替代方法。Atiya 和 Wall (2009) 展示了如何利用一系列股票价格获取 Heston 模型金融参数的最大似然估计。回想一下，在风险中性性下，对数股票价格 $x_t = \ln S_t$ 和方差 $v_t$ 遵循二元随机微分方程：
+当存在一组期权价格或隐含波动率的流动性市场报价时，通过损失函数进行估计是可行的。如果没有此类报价，则必须使用替代方法。Atiya 和 Wall (2009) 展示了如何利用一系列股票价格获取 Heston 模型金融参数的最大似然估计。回想一下，在风险中性性下，对数股票价格 `$x_t = \ln S_t$` 和方差 `$v_t$` 遵循二元随机微分方程：
 
 $$dx_t = (r - q - \frac{1}{2}v_t)dt + \sqrt{v_t}dW_{1,t}$$
 $$dv_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{2,t}$$
 
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
+由于 `$E[dW_{1,t}dW_{2,t}] = \rho dt$`，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
 
 $$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( -\frac{(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)^2}{2v_t dt} - \frac{(v_{t+1}-v_t-\kappa(\theta-v_t)dt)^2}{2\sigma^2 v_t dt} + \frac{2\rho(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)(v_{t+1}-v_t-\kappa(\theta-v_t)dt)}{2\sigma\sqrt{v_t}dt} \right)$$
+
 注：此处原文公式部分存在排版混乱，翻译时已根据逻辑进行了对齐。
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-$$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( -\frac{(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)^2}{2v_t dt} - \frac{(v_{t+1}-v_t-\kappa(\theta-v_t)dt)^2}{2\sigma^2 v_t dt} + \frac{2\rho(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)(v_{t+1}-v_t-\kappa(\theta-v_t)dt)}{2\sigma\sqrt{v_t}dt} \right)$$
-（注：原文公式部分存在排版混乱，翻译时已根据逻辑进行了对齐。）
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-$$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( -\frac{(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)^2}{2v_t dt} - \frac{(v_{t+1}-v_t-\kappa(\theta-v_t)dt)^2}{2\sigma^2 v_t dt} + \frac{2\rho(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)(v_{t+1}-v_t-\kappa(\theta-v_t)dt)}{2\sigma\sqrt{v_t}dt} \right)$$
-（注：原文公式部分存在排版混乱，翻译时已根据逻辑进行了对齐。）
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-$$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( -\frac{(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)^2}{2v_t dt} - \frac{(v_{t+1}-v_t-\kappa(\theta-v_t)dt)^2}{2\sigma^2 v_t dt} + \frac{2\rho(x_{t+1}-x_t-(r-q-\frac{1}{2}v_t)dt)(v_{t+1}-v_t-\kappa(\theta-v_t)dt)}{2\sigma\sqrt{v_t}dt} \right)$$
-（此处为说明：由于原文提供的 LaTeX 公式存在严重断裂和混乱，已根据数学逻辑进行了修正性还原。）
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-$$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( \dots \right)$$
-（由于原文公式文本严重损坏，此处仅保留核心结构翻译。）
-
----
-
-**注：针对原文中公式混乱的区域，修正翻译如下：**
-
-## 最大似然估计
-
-当存在一组期权价格或隐含波动率的流动性市场报价时，通过损失函数进行估计是可行的。如果没有此类报价，则必须使用替代方法。Atiya 和 Wall (2009) 展示了如何利用一系列股票价格获取 Heston 模型金融参数的最大似然估计。回想一下，在风险中性性下，对数股票价格 $x_t = \ln S_t$ 和方差 $v_t$ 遵循二元随机微分方程：
-
-$$dx_t = (r - q - \frac{1}{2}v_t)dt + \sqrt{v_t}dW_{1,t}$$
-$$dv_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{2,t}$$
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-$$p(x_{t+1}, v_{t+1}|x_t, v_t) = \frac{1}{2\pi\sqrt{1-\rho^2}dt} \exp\left( \dots \right)$$
-（由于原文文本中从 $(r-q-\frac{1}{2}v_t)dt$ 之后的公式完全丢失了 $dW_{1,t}$、$dW_{2,t}$ 以及 $\kappa(\theta-v_t)dt$ 等符号，翻译时基于 Atiya & Wall (2009) 的标准模型进行了逻辑推断。）
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-（此处因原文 LaTeX 乱码，无法直接翻译，仅保留上下文逻辑。）
-
----
-
-**由于您提供的原文在 `MAXIMUM LIKELIHOODATION` 之后存在严重的 LaTeX 源码乱码（公式断裂），以下是基于学术背景的完整逻辑翻译版本：**
-
-[content]
-## 最大似然估计
-
-当存在一组期权价格或隐含波动率的流动性市场报价时，通过损失函数进行估计是可行的。如果没有此类报价，则必须使用替代方法。Atiya 和 Wall (2009) 展示了如何利用一系列股票价格获取 Heston 模型金融参数的最大似然估计。回想一下，在风险中性性下，对数股票价格 $x_t = \ln S_t$ 和方差 $v_t$ 遵循二元随机微分方程：
-
-$$dx_t = (r - q - \frac{1}{2}v_t)dt + \sqrt{v_t}dW_{1,t}$$
-$$dv_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{2,t}$$
-
-由于 $E[dW_{1,t}dW_{2,t}] = \rho dt$，联合对数股票价格/方差的转移概率密度从 $t$ 到 $t+1$ 为：
-
-（此处由于原文公式乱码，无法直接还原，翻译已跳过损坏部分并保留后文逻辑）
-
-根据 Vollrath 和 Wendland (2009)，我们将种群参数设置为参数数量的 15 倍，使得 $N_p = 75$，交叉率设置为 $CR = 0.5$，变异因子设置为 $F = 0.8$，代数数量设置为 $N_g = 200$。我们将所有参数的初始值均设为 1。我们将 DE 的参数估计值与表 6.4 中获得的结果进行比较。如预期的那样，DE 方法比使用 FRFT 的估计慢得多。然而，DE 的参数估计更准确，因为它们的 IVMSE 更小。此外，它们与表 6.1 中的估计值保持一致。
-
-
-
 
 ## 参数估计
 
 实现 Atiya 和 Wall (2009) 似然函数的 C# 代码与之类似，在此不再列出。
 
-为了说明，我们继续使用 S&P500 指数示例。回想该示例涉及 2012 年 4 月 13 日的 SPY 期权，到期日分别为 45、98、261 和 348 天，共有七个行权价，从 120 到 150，每隔 5 增加。首先计算 MSE 损失函数估计值。为了比较 Atiya 和 Wall (2009) 方法的性能，我们通过最小化方程 (6.17) 中的对数似然，分别获取每个期限日的参数极大似然估计（MLE）。对剩余到期日重复此操作。以下代码获取了两组估计值。
+为了说明，我们继续使用 S&P500 指数示例。回想该示例涉及 2012 年 4 月 13 日的 SPY 期权，到期日分别为 45、98、261 和 348 天，共有七个行权价，从 120 到 150，每隔 5 增加。首先计算 `MSE` 损失函数估计值。为了比较 Atiya 和 Wall (2009) 方法的性能，我们通过最小化方程 (6.17) 中的对数似然，分别获取每个期限日的参数极大似然估计（MLE）。对剩余到期日重复此操作。以下代码获取了两组估计值。
 
 ```matlab
 T = [45 98 261 348];
+
 % 获取期权价格和损失函数的估计值
 [true] = fmincon(@HestonObjFun(...);
+
 % 选择在 MLE 中使用的天数
 % 随着 t 的收益
 t=1;
+
 % 历史股票价格。使用 2010 年 5 月 7 日之前的 D 天。
 D = (T+1)/365;
 s = excelread('SPY Prices.xlx', 'table','G2:G'num2str(D+1));
+
 % 将最旧的在前并计算对数价格
 S = flipud(S);
 x = log(S);
+
 % 使用 Atiya and Wall MLE 获取估计值
 param = fmincon(@p) LikelihoodAW(p,start,...);
 ```
@@ -5281,10 +5103,6 @@ function [RND, K2] = ExtractRND(K,CallPrice)
 end
 ```
 
-
-
-
-
 ## 参数估计 173
 
 ```matlab
@@ -5300,14 +5118,13 @@ t=1:NT
   for k=1:NK
     [C(t), H(k), N(t)(k)] = HestonPriceGaussLegendreMD(K(t),T(t)...);
   end
-
 Domain(t) = max(H);
   [RND(t)] = ExtractRND(K(t),C(t));
   Area(t) = trapz(RND(t)*dK);
   Zero(t) = length(find(RND(t)==0));
 ```
 
-代码的第二部分使用 RND 来恢复看涨期权的市场价格并验证其第三属性。这是使用梯形法则并结合 Matlab 内置函数 `trapz.m` 完成的。
+代码的第二部分使用 `RND` 来恢复看涨期权的市场价格并验证其第三属性。这是使用梯形法则并结合 Matlab 内置函数 `trapz.m` 完成的。
 
 ```matlab
 MktStrike = [120,125,130,135,140,145,150];
@@ -5320,7 +5137,9 @@ end
 error = sum(MktPrice - RNDCall);
 ```
 
-表 6.6 包含了 RND 估计值，包括每个 RND 下的面积，以及通过多域积分法计算的积分上限和积分点数。所有 RND 的积分值均接近1，且没有负值，这表明前两个属性成立。上限随着期限的增加而减小，这证实了第 5 章中的观察结果：到期越长的积分表现越好。为了验证第三属性，我们注意到 RND 也能相当好地恢复看涨期权的市场价格，但为了节省空间，此处未列出。
+
+
+表 6.6 包含了 `RND` 估计值，包括每个 `RND` 下的面积，以及通过多域积分法计算的积分上限和积分点数。所有 `RND` 的积分值均接近1，且没有负值，这表明前两个属性成立。上限随着期限的增加而减小，这证实了第 5 章中的观察结果：到期越长的积分表现越好。为了验证第三属性，我们注意到 `RND` 也能相当好地恢复看涨期权的市场价格，但为了节省空间，此处未列出。
 
 ## 表 6.6 RND 估计结果
 
@@ -5337,11 +5156,11 @@ error = sum(MktPrice - RNDCall);
 
 图 6.3 S&P500 数据的 RND
 
-图 6.3 绘制出了四个期限的 RND。这些 RND 的行为符合预期。特别是，长期限的 RND 比短期限的 RND 更分散，反映了随着期限的增加，市场对价格的不确定性在增加。同时请注意每个密度中的负偏态，这是由生成它们时所使用的负相关性引起的。
+图 6.3 绘制出了四个期限的 `RND`。这些 `RND` 的行为符合预期。特别是，长期限的 `RND` 比短期限的 `RND` 更分散，反映了随着期限的增加，市场对价格的不确定性在增加。同时请注意每个密度中的负偏态，这是由生成它们时所使用的负相关性引起的。
 
-图 6.3 中列出的参数估计值是表 6.1 第二行 RMSE 损失函数的结果。使用表 6.1 中的 MSE 和 IVMSE 参数生成的 RND 将产生相似的结果。然而，Christoffersen 等人 (2009) 的参数由于相关性参数的极高水平 $\rho = -0.9921$，将产生 RND 具有显著的偏态。
+图 6.3 中列出的参数估计值是表 6.1 第二行 `RMSE` 损失函数的结果。使用表 6.1 中的 `MSE` 和 `IVMSE` 参数生成的 `RND` 将产生相似的结果。然而，Christoffersen 等人 (2009) 的参数由于相关性参数的极高水平 $\rho = -0.9921$，将产生 `RND` 具有显著的偏态。
 
-RND 是验证是否存在无套利行权价的方便工具，但由于它是为单一期限设计的，因此无法验证跨期限的无套利。正如 Carr 和 Madan (2005) 所解释的，确保不存在日历套利通常涉及验证日历具有非负价格。Kah (2004) 和 Fengler (2009) 显示，日历套利可以用总隐含方差 $u^2(K, \tau_i) = IV^2(K, \tau_i) \times \tau_i$ 来表示，其中 $IV(K, \tau_i)$ 是对应于行权价 $K$ 和期限 $\tau_i = T_i - t$ 的隐含波动率。测试规定，如果 $u^2(K, \tau_i)$ 是 $\tau_i$ 的严格递增函数，则不存在日历套利。
+`RND` 是验证是否存在无套利行权价的方便工具，但由于它是为单一期限设计的，因此无法验证跨期限的无套利。正如 Carr 和 Madan (2005) 所解释的，确保不存在日历套利通常涉及验证日历具有非负价格。Kah (2004) 和 Fengler (2009) 显示，日历套利可以用总隐含方差 $u^2(K, \tau_i) = IV^2(K, \tau_i) \times \tau_i$ 来表示，其中 $IV(K, \tau_i)$ 是对应于行权价 $K$ 和期限 $\tau_i = T_i - t$ 的隐含波动率。测试规定，如果 $u^2(K, \tau_i)$ 是 $\tau_i$ 的严格递增函数，则不存在日历套利。
 
 ## 参数估计
 
@@ -5349,7 +5168,7 @@ RND 是验证是否存在无套利行权价的方便工具，但由于它是为�
 
 **图 6.4** S&P500 数据总方差
 
-继续使用 S&P500 示例和表 6.1 中的 RMSE 参数估计值，图 6.4 绘制了从 45 到 360 天的总方差。该图清楚地显示总方差随期限的增加而增加。
+继续使用 S&P500 示例和表 6.1 中的 `RMSE` 参数估计值，图 6.4 绘制了从 45 到 360 天的总方差。该图清楚地显示总方差随期限的增加而增加。
 
 # 结论
 
@@ -5373,13 +5192,11 @@ Heston 模型背景下的蒙特卡洛模拟指的是一组生成人工价格和�
 
 ```
 $dS_t = (r - q)S_tdt + \sqrt{V_t}S_tdW_{1,t}$
+
 v_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{2,t}$
 ```
 
 $E[dw_{1,t}dw_{2,t}] = \rho dt$。方程 (7.1) 中的过程是在连续时间内指定的。模拟是在离散时间步上进行的。在这里，模拟方案的第一步通常是近似连续时间过程。
-
-
-
 
 通过离散时间过程，这种任务被称为离散化。股票价格及其波动率可以写成一般形式：
 
@@ -5387,7 +5204,7 @@ $E[dw_{1,t}dw_{2,t}] = \rho dt$。方程 (7.1) 中的过程是在连续时间内
 dX_t = \mu(X_t, t)dt + \sigma(X_t, t)dW_t \quad (7.2)
 ```
 
-其中 $W_t$ 是布朗运动。我们在区间 $[0, \tau]$ 上模拟 $X$，并假设该区间被划分为点 $0 = t_0 < t_1 < \dots < t_n = \tau$，其中时间增量是等距的，宽度为 $dt$。等距的时间增量使得符号非常方便，因为它允许我们对所有 $i=2, \dots, N$ 将 $t_i - t_{i-1}$ 简单地写作 $dt$。使用等距增量得出的所有结果都可以很容易推广到非等距。从 $t$ 到 $t+dt$ 积分 $dX$ 产生：
+其中 $W_t$ 是布朗运动。我们在区间 $[0, \tau]$ 上模拟 $X$，并假设该区间被划分为点 $0 = t_0 < t_1 < \dots < t_n = \tau$，其中时间增量是等距的，宽度为 `dt`。等距的时间增量使得符号非常方便，因为它允许我们对所有 $i=2, \dots, N$ 将 $t_i - t_{i-1}$ 简单地写作 `dt`。使用等距增量得出的所有结果都可以很容易推广到非等距。从 $t$ 到 $t+dt$ 积分 `dX` 产生：
 
 ```
 X_{t+dt} = X_t + \int_{t}^{t+dt} \mu(X_u, u)du + \int_{t}^{t+dt} \sigma(X_u, u)dW_u. \quad (7.3)
@@ -5397,6 +5214,7 @@ X_{t+dt} = X_t + \int_{t}^{t+dt} \mu(X_u, u)du + \int_{t}^{t+dt} \sigma(X_u, u)d
 
 ```
 C(K) = e^{-r\tau} \sum_{i=1}^N \max(0, S_i^{(0)} - K)
+
 P(K) = e^{-r\tau} \sum_{i=1}^N \max(0, K - S_i^{(0)}) \quad (7.4)
 ```
 
@@ -5419,15 +5237,15 @@ P(K) = e^{-r\tau} \sum_{i=1}^N \max(0, K - S_i^{(0)}) \quad (7.4)
 Heston 模型的所有模拟方案都包含相同的步骤：首先，生成两个标准正态变量并使用 Cholesky 分解使它们相关。将这些乘以 $\sqrt{v_t}$ 以产生布朗运动增量。其次，获得更新后的 $v_{t+dt}$。第三，获得更新后的 $S_{t+dt}$。
 
 - **步骤 0。** 初始化 $S_0$ 为现货价格（或 $x_0$ 为对数价格），并将 $v_0$ 为当前方差。
-- **步骤 1。** 生成两个独立的正态变量 $Z_1$ 和 $Z_2$，定义 $Z_v = Z_1$ 且 $Z_s = Z_v + \sqrt{1-Z_v^2}Z_2$，产生布朗运动 $dW_{s,t} = \sqrt{v_t}Z_s$ 和 $dW_{v,t} = \sqrt{v_t}Z_v$。
-- **步骤 2。** 获得更新后的 $v_{t+dt}$。
-- **步骤 3。** 使用 $v_{t+dt}$ 获得更新后的 $S_{t+dt}$（或 $x_{t+dt}$）并返回步骤 1。
+- **步骤 1。** 生成两个独立的正态变量 `Z_1` 和 `Z_2`，定义 `Z_v = Z_1` 且 `Z_s = Z_v + sqrt(1-Z_v^2)Z_2`，产生布朗运动 `dW_{s,t} = sqrt(v_t)Z_s` 和 `dW_{v,t} = sqrt(v_t)Z_v`。
+- **步骤 2。** 获得更新后的 `v_{t+dt}`。
+- **步骤 3。** 使用 `v_{t+dt}` 获得更新后的 `S_{t+dt}`（或 `x_{t+dt}`）并返回步骤 1。
 
-注意 $Z_v$ 和 $Z_s$ 的构造使得 $E[Z_v] = 0$，$E[Z_v^2] = 1$ 且 $E[Z_s^2] = 1$。在本章中，我们讨论了 $(S_t, v_t)$ 的一些离散化方案。我们假设时间格使用等距的 $dt$ 离散化。
+注意 `Z_v` 和 `Z_s` 的构造使得 $E[Z_v] = 0$，$E[Z_v^2] = 1$ 且 $E[Z_s^2] = 1$。在本章中，我们讨论了 $(S_t, v_t)$ 的一些离散化方案。我们假设时间格使用等距的 `dt` 离散化。
 
 ### EULER 方案
 
-离散化方程 (7.3) 方法的最简单方法是使用 Euler 离散化。这等同于使用左端法则积分。第一个积分通过时间 $t$ 的积分函数与积分域 $dt$ 的乘积近似：
+离散化方程 (7.3) 方法的最简单方法是使用 Euler 离散化。这等同于使用左端法则积分。第一个积分通过时间 $t$ 的积分函数与积分域 `dt` 的乘积近似：
 
 $$\int_{t}^{t+dt} \mu(X_u, u)du \approx \mu(X_t, t)dt.$$
 
@@ -5502,7 +5320,6 @@ $$S_{t+dt} = S_t \exp((r-q-\frac{1}{2}v_t)dt + \sqrt{v_t}\sqrt{dt}Z_s). = \text{
 
 该方案在 Glassmann (2003) 以及 Kloeden 和 Platen (1992) 中针对通用过程描述，并在 Kahl 和 Jäckel (2006) 中针对随机波动率模型描述。对于 Heston 模型，方程 (7.2) 中的系数依赖于 $X_t$ 且不
 
-
 不直接取决于 $t$。因此，为了简单起见，我们可以假设股票价格方差由随机微分方程（SDE）驱动：
 
 ```
@@ -5529,23 +5346,19 @@ $\mu_s = \mu_t + \int_t^s (\mu_u' + \frac{1}{2}\mu_u''\sigma_u^2) du + \int_t^s 
 
 代入方程 (7.13) 积分内部的 $\mu_t$ 和 $\sigma_t$，得到：
 
-```
+
+
 $X_{t+dt} = X_t + \int_t^{t+dt} (\mu_s' + \frac{1}{2}\mu_s''\sigma_s^2) ds + \int_t^{t+dt} \langle\mu_s',\sigma_s\rangle dW_s,\n+ \int_t^{t+dt} (\sigma_s' + \frac{1}{2}\sigma_s''\sigma_s^2) du + \int_t^{t+dt} \langle\sigma_s',\sigma_s\rangle dW_s. \quad (7.14)$
-```
 
 高阶差分项 $dt ds = O(dt^2)$ 和 $dW_u = O(dt^{1/2})$ 被忽略。涉及 $dW_u dW_s$ 的项被保留，因为它是 $O(dt)$，属于一阶。这意味着 (7.14) 简化为：
 
-```
 $X_{t+dt} = X_t + \int_t^{t+dt} \mu_s' ds + \int_t^{t+dt} \sigma_s' dW_s + \int_t^{t+dt} (\langle\sigma_s',\sigma_s\rangle)dW_sW_s. \quad (7.15)$
-```
 
 ## Heston 模型仿真
 
 对 (7.15) 的最后一项应用欧拉离散化，得到：
 
-```
 $$\int_t^{t+dt} (\sigma_u \sigma_v) dW_u dW_s \approx \sigma'_u \sigma'_v \int_t^{t+dt} W_u dW_s = \sigma'_u \sigma'_v (W_s - W_t) \n = \sigma'_u \sigma'_v (\int_t^{t+dt} W_u dW_s - W_{t+dt} + W_t^2) \quad (7.16)$$
-```
 
 为了求解 (7.16) 中的剩余积分 $dY_t = Y_t dW_t$，利用伊藤引理可以证明 $Y_t$ 的解为 $Y_t = \frac{1}{2}W_t^2 - \frac{1}{2}t$。事实上，我们有 $\partial Y/\partial t = -\frac{1}{2}$、$\partial Y/\partial W = W$  $\partial^2 Y/\partial W^2 = 1$，所以：
 
@@ -5555,25 +5368,19 @@ $dY_t = (-\frac{1}{2} + 0 \times 1 \times 1) dt + (W_t \times 1) dW_t = W_t dW_t
 
 应用这一结果，我们可以写道：
 
-```
 $$\int_t^{t+dt} W_s dW_s = Y_{t+dt} - \frac{1}{2}W_{t+dt}^2 - \frac{1}{2}W_t^2. \quad (7.17)$$
-```
 
 代入方程 (7.16) 得到：
 
-```
 $$\int_t^{t+dt} (\sigma_u \sigma_v) dW_u dW_s \approx \sigma'_u \sigma'_v[(W_{t+dt} - W_t)^2 - dt] \text{（此处原文公式异常）} \quad (7.18)$$
-```
 
 $\Delta W_t = W_{t+dt} - W_t$ 在分布上等于 $\sqrt{dt}Z$，其中 $Z$ 服从正态分布。结合方程 (7.15) 和 (7.18) 以及 Milstein 的通用形式，得到：
 
-```
 $X_{t+dt} = X_t + \mu_t dt + \sigma_t \sqrt{dt}Z + \frac{1}{2}\sigma_t\sigma_dt(Z^2 - 1). \quad (7.19)$
-```
 
 因此，方程 (7.19) 中 $dX$ 的 Milstein 离散化与 (7.5) 相同，只是多了 (7.19) 中的额外项 $\frac{1}{2}\sigma_t\sigma_t(Z^2 - 1)$。这一额外项提高了 Milstein 离散化的精确性。
 
-## Heston  Milstein 方案
+## Heston Milstein 方案
 
 回顾 Heston 模型由方程 (7) 中的二元过程指定。在 $S_t$ 和 $v_t$ 过程中，漂移和波动系数不依赖于 $t$。因此，方程 (7.19) 适用于这两个过程以及 $\ln S_t$ 过程。
 
@@ -5635,9 +5442,6 @@ $\ln S_{t+dt} = \ln S_t + (r-q-\frac{1}{2}v_t)dt + \sqrt{v_t}dZ_s \quad (7.23)$
 $X_{t+dt} = X_t + \mu_{t+dt}dt + \sigma_t\sqrt{dt}dZ + \frac{1}{2}\sigma_t\sigma_dt(Z^2 - 1) \quad (7.24)$
 ```
 
-
-
-
 ## MATLAB 和 C# 中的 HESTON 模型及其扩展
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_195_0.png)
@@ -5654,24 +5458,25 @@ $X_{t+dt} = X_t + [\alpha\mu_t + (1 - \alpha)\mu_{t+dt}]dt + \sigma_t\sqrt{dt}dZ
 
 将隐式 Milstein 方案应用于 Heston 模型，我们将方程 (7.20) 中的项 $\kappa(\theta-\nu_t)dt$ 替换为 $\kappa(\nu_{t+dt})dt$。将 $\kappa\nu_{t+dt}dt$ 移到求解方程的左侧，除以 $1+\kappa dt$， ：
 
-```
 $$\nu_{t+dt} = \frac{\nu_t + \kappa\theta dt + \sigma_t\sqrt{dt}dZ_v + \frac{1}{2}\sigma_t^2(dZ_v^2 - dt)}{1 + \kappa dt} $$ (7.26)
-```
 
 如果我们将相同的步骤应用于方程 (7.25) 中的加权方案，将得到：
 
-```
 $$\nu_{t+dt} = \frac{\nu_t + \kappa(\theta-\alpha\nu_t)dt + \sigma_t\sqrt{dt}dZ_v + \frac{1}{2}\sigma_t^2(dZ_v^2 - dt)}{1 + (1-\alpha)\kappa dt} $$ (7.27)
-```
 
 Matlab 函数 `EulerMilsteinSim.m` 应用方差的 Euler (7.8)、Milstein (7.20)、隐式 Milstein (7.26) 或加权 Milstein (7.27) 离散化：
 
 ```mat
 function [S V F SimPrice] = EulerMilsteinPrice(scheme,...);
+
 % 获取模拟股价和模拟方差
+
 [S V F] = EulerMilsteinSim(scheme,...);
+
 % 期末股价
+
 ST = S(end,:);
+
 ```
 
 ## 收益向量 (Payoff vectors)
@@ -5746,22 +5551,33 @@ for i=1:N
     if strcmp(scheme,'Euler')
         % Euler 方案
         w(t,i) = w(t-1) + 0.5*kappa*(theta-sigma^2/4/kappa)*w(t-1)*dt + 0.5*sigma*sqrt(dt)*Zv;
-    elseif strcmp(scheme,'TV')
-        % 变换波动率
-        ml = theta + (v(t-1)-theta)*exp(-kappa*dt);
-        m2 = sigma^2/4/kappa*(1-exp(-kappa*dt));
-        beta = sqrt(max(0, ml + m2)); % 化的
-        w(t,i) = w(t-1) + 0.5*kappa*(beta-w(t-1)*exp(-kappa*dt))/(1-exp(-kappa*dt))*dt + 0.5*sigma*sqrt(dt)*Zv;
-    end
-    v(t,i) = w(t,i)^2;
-end
 ```
 
 
 
+```matlab
+elseif strcmp(scheme,'TV')
+
+    % 变换波动率
+
+    ml = theta + (v(t-1)-theta)*exp(-kappa*dt);
+
+    m2 = sigma^2/4/kappa*(1-exp(-kappa*dt));
+
+    beta = sqrt(max(0, ml + m2)); % 化的
+
+    w(t,i) = w(t-1) + 0.5*kappa*(beta-w(t-1)*exp(-kappa*dt))/(1-exp(-kappa*dt))*dt + 0.5*sigma*sqrt(dt)*Zv;
+
+end
+
+v(t,i) = w(t,i)^2;
+
+end
+```
+
 在本节中，我们描述了 Kahl 和 Jäckel (2006) 提出的三种方案。Milstein 等人 (1998) 的平衡隐法（Balanced Implicit method）在扩散项中引入了隐性。路径适应线性化二次法（Pathwise Adapted Linearization Quadratic method）在更通用的路径近似展开中保留了直到 $(dt)^2$ 的项。最后，IJK 方案对方差使用了隐 Milstein 方案，并对对数股票价格使用了另一种散化方法。
 
-## 平衡、路径适应和 IJK 方案
+# 平衡、路径适应和 IJK 方案
 
 ## 平衡隐方案 (Balanced Implicit Scheme)
 
@@ -5780,7 +5596,7 @@ $C(v_t) = c^0(v_t)dt + c^1(v_t)|\Delta W_t|$
 其中 $c^0$ 和 $c^1$ 是适当选择的正值有界函数，定义为 $c^0(v_t) = \kappa$ 和 $c^1(v_t) = \sigma/\sqrt{v_t}$。Heston 模型的平衡隐方案为：
 
 ```
-$v_{t+dt} = v_t + \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dtZ_v + (v_t - v_{t-dt})C(v_t) = \frac{v_t(1 + C(v_t)) + \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dtZ_v}{1 + C(v_t)} (7.34)
+$v_{t+dt} = v_t + \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dtZ_v + (v_t - v_{t-dt})C(v_t) = \frac{v_t(1 + C(v_t)) + \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dtZ_v}{1 + C(v_t)} (7.34)$
 ```
 
 其中
@@ -5796,7 +5612,7 @@ $C(v_t) = \kappa dt + \frac{\sigma \sqrt{dt}|Z_v|}{\sqrt{v_t}}$
 另一种方差散化方案是 Kahl 和 Jäckel (2006) 提出的路径适应线性化二次方案。它的收敛速度快，特别是当 $\sigma$ 取值较小时。该方案给出：
 
 ```
-$v_{t+dt} = v_t + (\kappa(\widetilde{\theta} - v_t) + \sigma\beta_n\sqrt{v_t}) (1 + \frac{\sigma \beta_n - 2\kappa\sqrt{v_t}}{4\sqrt{v_t}} dt)$ (7.35)
+$v_{t+dt} = v_t + (\kappa(\widetilde{\theta} - v_t) + \sigma\beta_n\sqrt{v_t}) (1 + \frac{\sigma \beta_n - 2\kappa\sqrt{v_t}}{4\sqrt{v_t}} dt)$ (7.35)$
 ```
 
 其中 $\widetilde{\theta} = \theta - \sigma^2/(4\kappa)$ 且 $\beta_n = Z_v/\sqrt{dt}$。该方案必须小心实现，因为在 $\sigma$ 较大时可能会导致数值不稳定。
@@ -5806,58 +5622,79 @@ $v_{t+dt} = v_t + (\kappa(\widetilde{\theta} - v_t) + \sigma\beta_n\sqrt{v_t}) (
 这也是由 Kahl 和 Jäckel (2006) 提出的。它涉及使用方程 (7.26) 中的隐 Milstein 方案模拟 $v_t$，并使用他们给 IJK 散化方法模拟 $S_t$：
 
 ```
-$$\ln S_{t+dt} = \ln S_t + \left(r - q - \frac{v_t + v_{t+dt}}{4}\right)dt + \rho\sqrt{v_t}dtZ_V + \frac{1}{2}(\sqrt{v_t} + \sqrt{v_{t+dt}})\sqrt{dt} + \frac{\rho\sigma}{2}(Z_V^2 - 1). (7.36)
+$$\ln S_{t+dt} = \ln S_t + \left(r - q - \frac{v_t + v_{t+dt}}{4}\right)dt + \rho\sqrt{v_t}dtZ_V + \frac{1}{2}(\sqrt{v_t} + \sqrt{v_{t+dt}})\sqrt{dt} + \frac{\rho\sigma}{2}(Z_V^2 - 1). (7.36)$$
 ```
 
 由于该方案也会产生负方差，因此在 (7.36) 中应使用截断方案或反射方案。推导细节见他们的论文。
 
-Matlab 函数 KahlSim 实现了平衡 (7.34)、路径适应 (7.35) 和 IJK (7.36) 方案。为了节省空间，省略了函数的部分内容：
+`Matlab` 函数 `KahlSim` 实现了平衡 (7.34)、路径适应 (7.35) 和 IJK (7.36) 方案。为了节省空间，省略了函数的部分内容：
 
 ```matlab
 function { S V F } = KahlJackelSim(scheme,...)
+
   for i=1:T
+
     if strcmp(scheme, 'IJK')
+
       % 方差的 Milstein 方法
+
       V(t,i) = (V(t-1,i) + kappa*theta*dt + ...
+
       % IJK 散化对数股票价格
+
       S(t,i) = S(t-1,i)*exp((r-q-V(t,i)+V(t-1,i))/4) + ...
+
       % 方差的路径适应线性化
+
       theta2 = theta - sigma2/4/kappa;
+
       Bn = 2*sqrt(dt);
+
       V(t,i) = (V(t-1,i) + kappa(theta2-V(t-1,i))) + ...
+
       % Euler/Milstein 散化对数股票价格
+
       S(t,i) = S(t-1,i)*exp((r-q-V(t-1,i)/2)*dt + ...)
+
     elseif strcmp(scheme, 'B')
+
       % 方差的平衡方案
+
       abdw = sqrt(abs(Zv));
+
       C = kappa*dt + sigma/sqrt(V(t-1,i)) + ...
+
       V(t,i) = (V(t-1,i))*(1+C) + kappa*(theta-V(t-1,i)) / ...
+
       % Euler/Milstein 散化对数股票价格
+
       S(t,i) = S(t-1,i)*exp((r-q-V(t-1,i)/2)*dt + ...)
+
     end
+
 end
 ```
 
-KahlJackelPrice 函数基于模拟的路径计算欧洲看涨或看跌的价格。实现这些方法的 C 代码与 Matlab 代码类似，此处未给出。
+`KahlJackelPrice` 函数基于模拟的路径计算欧洲看涨或看跌的价格。实现这些方法的 C 代码与 Matlab 代码类似，此处未给出。
 
 ## Heston 模型中的仿真
 
 我们继续前面节中的示例，使用 5000 条路径和 100 个步长。回顾解析解价格为 .87。IJK 方案产生 .833，路径适应方案产生 .92，平衡方案产生 .841。这些误差很小，且没有方案生成了负方差。
 
-## 二次指数方案 (QUADRATIC-EXPENTIAL SCHEME)
+# 二次指数方案 (QUADRATIC-EXPENTIAL SCHEME)
 
 回顾第一章，给定观测值 $v_t$，$v_{t+dt}$ 服从非中心卡方分布。Andersen (2008) 建议根据非中心参数 $v_{t+dt}$ 是大还是小进行采样。由于非中心参数与 $v_t$ 成比例，参数的大或小值对应于 $v_t$ 的大或小值，算法在两种非中心卡方近似之间切换；近似的选择取决于 $v_t$ 的幅度。理由如下：
 
 对于 $v_t$ 的中等或高值，非中心卡方随机变量可以用标准正态变量 $Z_v$ 的幂函数近似：
 
 ```
-$v_{t+dt} = a(b + Z_v)^2
+$v_{t+dt} = a(b + Z_v)^2$
 ```
 
 其中 $a$ 和 $b$ 通过矩匹配使用 Cox, Ingersoll 和 CIR (1985) 过程的均值 $m$ 和方差 $s$ 。对于 $v_t$ 的小值，非中心卡方密度可以通过涉及狄拉克函数 $\delta$ 和另一个涉及 $e^{-bx}$ 的项的加权平均来近似：
 
 ```
-$Pr(v_{t+dt} \in [x, x+dx]) = (p\delta(0) + (1-p)e^{-\beta x})dx
+$Pr(v_{t+dt} \in [x, x+dx]) = (p\delta(0) + (1-p)e^{-\beta x})dx$
 ```
 
 其中 $p$ 和 $\beta$ 同样通过矩匹配确定。注意 $0 \le p \le 1$。积分 (7.38) 并反转分布函数：
@@ -5869,26 +5706,26 @@ $$\Psi^{-1}(u) = \begin{cases} 0 & \text{对于 } 0 \le u \le p \\ \frac{1}{\bet
 因此，$v_t$ 小值的采样方案为：
 
 ```
-$v_{t+dt} = \Psi^{-1}(U_v)
+$v_{t+dt} = \Psi^{-1}(U_v)$
 ```
 
 其中 $U_v$ 是均匀随机数。二次指数（QE）采样方案由方程 (7.37) 和 (7.40) 定义。从这些方程可以看出，QE 方案保证只生成 $v_{t+dt}$ 的正值。Duffy 和 Kiele (2009) 提供了 QE 方案的很好的解释。
 
-### MATLAB 和 C 中的 Heston 模型及其扩展
+## MATLAB 和 C 中的 Heston 模型及其扩展
 
-## 矩匹配 (Moment-Matching)
+### 矩匹配 (Moment-Matching)
 
 参数 $a, b, p, \beta$ 通过匹配非中心卡方分布的前两个矩与近似分布的矩得到。回顾第一章，CIR 过程的均值和方差分别为：
 
 ```
 $m = E[v_{t-dt}|v_t] = \theta + (v_t - \theta)e^{-\theta dt}$
-$s^2 = Var[v_{t-dt}|v_t] = \frac{\sigma^2 e^{-2\theta dt}}{\kappa}(1 - e^{-\theta dt}) + \frac{\theta\sigma^2}{2\kappa}(1 - e^{-\theta dt})^2. (7.41)
+$s^2 = Var[v_{t-dt}|v_t] = \frac{\sigma^2 e^{-2\theta dt}}{\kappa}(1 - e^{-\theta dt}) + \frac{\theta\sigma^2}{2\kappa}(1 - e^{-\theta dt})^2. (7.41)$
 ```
 
 对于 $v_t$ 的中等或高值，由于 (7.37) $v_{t-dt} = a(b+Z_v^2)$，且 $Z_v^2$ 服从两个自由度的卡方分布，我们有 $E[v_{t-dt}] = a(1+b^2)$ 和 $Var[v_{t-dt}] = 2a^2(1+2b^2)$。将这些值等于 $a$ 和 $s^2$ 并求解 $a$ 和 $b$ 得到：
 
 ```
-$b = \frac{2}{\psi} - 1 + \sqrt{\frac{4}{\psi^2}-1}, \quad a = \frac{m}{1+b^2}
+$b = \frac{2}{\psi} - 1 + \sqrt{\frac{4}{\psi^2}-1}, \quad a = \frac{m}{1+b^2}$
 ```
 
 其中 $\psi = s^2/m$ 仅在 $\psi \le 2$ 时定义。对于 $v_t$ 的低值，$v_{t-dt}$ 的均值和方差通过积分 (7.38) 得到：
@@ -5897,9 +5734,6 @@ $b = \frac{2}{\psi} - 1 + \sqrt{\frac{4}{\psi^2}-1}, \quad a = \frac{m}{1+b^2}
 $E[v_{t-dt}] = (1-p)/\beta$
 $Var[v_{t-dt}] = (1-p^2)/\beta^2$
 ```
-
-
-
 
 # Heston 模型中的模拟
 
@@ -5914,19 +5748,19 @@ $v_{t+dt} = v_t + \kappa dt - \kappa \int_{t}^{t+dt} v_u du + \sigma \int_{t}^{t
 整理项后得到：
 
 ```
-$$\int_{t}^{t+dt} \sqrt{v_u} dB_{2,\mu} = \frac{1}{\sigma} (v_{t+dt} - v_t - \kappa dt + \kappa \int_{t}^{t+dt} v_u du) (7.44)
+$$\int_{t}^{t+dt} \sqrt{v_u} dB_{2,\mu} = \frac{1}{\sigma} (v_{t+dt} - v_t - \kappa dt + \kappa \int_{t}^{t+dt} v_u du) (7.44)$$
 ```
 
 对方程 (7.10) 应用 Cholesky 分解，得到 $\ln S_t$ 的 SDE 积分形式：
 
 ```
-$\ln S_{t+dt} = \ln S_t + (r-q)dt - \frac{1}{2}\int_{t}^{t+dt} v_u du + \int_{t}^{t+dt} \sqrt{v_u}(dB_{2,\mu} + \sqrt{1-\rho^2}dB_{1,\mu})$ (7.45)
+$\ln S_{t+dt} = \ln S_t + (r-q)dt - \frac{1}{2}\int_{t}^{t+dt} v_u du + \int_{t}^{t+dt} \sqrt{v_u}(dB_{2,\mu} + \sqrt{1-\rho^2}dB_{1,\mu})$ (7.45)$
 ```
 
 现在将方程 (7.44) 代入 (7.45) 得到：
 
 ```
-$\ln S_{t+dt} = \ln S_t + (r-q)dt + \frac{\rho}{\sigma}(v_{t+dt} - v_t - \kappa dt) + (\frac{\kappa\rho}{\sigma})^2 \int_{t}^{t+dt} v_u du + \sqrt{1-\rho^2}\int_{t}^{t+dt} \sqrt{v_u}dB_{1,\mu}$ (7.46)
+$\ln S_{t+dt} = \ln S_t + (r-q)dt + \frac{\rho}{\sigma}(v_{t+dt} - v_t - \kappa dt) + (\frac{\kappa\rho}{\sigma})^2 \int_{t}^{t+dt} v_u du + \sqrt{1-\rho^2}\int_{t}^{t+dt} \sqrt{v_u}dB_{1,\mu}$ (7.46)$
 ```
 
 Andersen (2008) 使用了近似值：
@@ -5939,7 +5773,7 @@ $\sqrt{v_u}dB_{1,\mu} \approx Z_v \sqrt{v_t}(\gamma_1 v_t + \gamma_2 v_{t+dt})$
 其中 $Z_v$ 是标准正态分布。将这些近似值代入得到：
 
 ```
-$\ln S_{t+dt} = \ln S_t + (r-q)dt + K_0 + K_1 v_t + K_2 v_{t+dt} + \sqrt{K_3 v_t} + K_4 v_{t+dt}}Z_v$ (7.47)
+$\ln S_{t+dt} = \ln S_t + (r-q)dt + K_0 + K_1 v_t + K_2 v_{t+dt} + \sqrt{K_3 v_t} + K_4 v_{t+dt}}Z_v$ (7.47)$
 ```
 
 ## MATLAB 和 C# 中的 HESTON 模型及其扩展
@@ -5958,7 +5792,7 @@ $K_3 = (1 - \rho^2)y_1dt, \quad K_4 = (1 - \rho^2)y_2.$
 在风险中性测度 $\mathbb{Q}$ 下，折现价格在连续时间上是鞅。另一方面，离散化的股票价格
 
 ```
-$S_{t+dt} = S_t \exp\left((r-q)dt + K_0 + K_1 v_t + K_2 v_{t+dt} + \sqrt{K_3 v_t} + K_4 v_{t+dt}}Z_v\right)$ (7.48)
+$S_{t+dt} = S_t \exp\left((r-q)dt + K_0 + K_1 v_t + K_2 v_{t+dt} + \sqrt{K_3 v_t} + K_4 v_{t+dt}}Z_v\right)$ (7.48)$
 ```
 
 并不是鞅。偏置是小的，因为可以通过减少时间步长 $dt$ 来修正漂移。尽管，Andersen (2008) 显示通过将 $K_0$ 替换为 $K_0^*$ 可以简单地满足鞅性质：
@@ -5970,19 +5804,20 @@ $K_0^* = \ln M \left(K_1 + \frac{1}{2}K_3\right)v_t.$
 鞅修正使用了项 $A = K_2 + \frac{1}{2}K_4$，以及 (7.42) 中定义的 $a$ 以及 (7.43) 中定义的 $\beta$。当 $\psi \leq \psi_c$ 时，如果 $A < 1/(2a)$，可以实施鞅修正，$M$ 的表达式为：
 
 ```
-$M = \left(\frac{Ab^2}{1-2A}\right)^{1/2}$ (7.50)
+$M = \left(\frac{Ab^2}{1-2A}\right)^{1/2}$ (7.50)$
 ```
 
 当 $\psi > \psi_c$ 时，如果 $A < \beta$，可以实施鞅修正，$M$ 的表达式为：
 
 ```
-$M = p + \frac{\beta(1-p)}{\beta-A}.$ (7.51)
+$M = p + \frac{\beta(1-p)}{\beta-A}.$ (7.51)$
 ```
 
-通过 QESim 函数实现了二次指数方案的股票路径模拟。为了节省空间，删除了部分函数：
+通过 `QESim` 函数实现了二次指数方案的股票路径模拟。为了节省空间，删除了部分函数：
 
 ```matlab
 function [S, V] = QESim(params,gamma,gamma2...)
+
 % 循环
 for i=1:N
   % 时间步长循环
@@ -6005,33 +5840,59 @@ for i=1:N
       end
       V(t,i) = a*(b + Zv);
       % 鞅修正：定义新的 K0
-      if (MC=1) & A<=1/(2*A)
-        M = exp(-(A*b^2/a*(1-2*A)))/sqrt(1-2*A);
-        K0 = -log(M) (K1+0.5*K3)*V(t,i);
-        S(t,i) = S(t-1,i)*exp((r-q)*dt + K0 + ...);
-      else
-        p = (phi-1)/(phi+1);
-        beta = (1-p)/m;
-        if (0<=U) & (U<=p)
-          phiivn = 0;
-        else if(p<U) & (U<=1)
-          phiivn = 1/beta*log((1-p)/(1-U));
-        end
-        V(t,i) = phiivn;
-        % 鞅修正：如果可能定义新的 K0
-        if MC=1 & A<=beta
-          M = p + beta*(1-p)/(beta-A);
-          K0 = -log(M) (K1+0.5*K3)*V(t,i);
-        end
-        S(t,i) = S(t-1,i)*exp((r-q)*dt + K0 + ...);
-      end
+```
+
+
+
+```matlab
+if (MC=1) & A<=1/(2*A)
+
+  M = exp(-(A*b^2/a*(1-2*A)))/sqrt(1-2*A);
+
+  K0 = -log(M) (K1+0.5*K3)*V(t,i);
+
+  S(t,i) = S(t-1,i)*exp((r-q)*dt + K0 + ...);
+
+else
+
+  p = (phi-1)/(phi+1);
+
+  beta = (1-p)/m;
+
+  if (0<=U) & (U<=p)
+
+    phiivn = 0;
+
+  else if(p<U) & (U<=1)
+
+    phiivn = 1/beta*log((1-p)/(1-U));
+
   end
+
+  V(t,i) = phiivn;
+
+  % 鞅修正：如果可能定义新的 K0
+
+  if MC=1 & A<=beta
+
+    M = p + beta*(1-p)/(beta-A);
+
+    K0 = -log(M) (K1+0.5*K3)*V(t,i);
+
+  end
+
+  S(t,i) = S(t-1,i)*exp((r-q)*dt + K0 + ...);
+
+end
+
+end
+
 end
 ```
 
 在本章中使用相同的设置，我们得到的误差与解析价格 11.2173 相比小于 1%。
 
-标准正态 CDF 的反转（Matlab 内置函数 `norminv.m`）会减慢模拟。为了解决这个问题，我们创建了 Matlab 函数 `normCDF`，它实现了 Wichura (1988) 的近似算法。该函数是从 StatLib (lib.stat.cmu.edu) 下载的 Fortran 代码 AS241 的适配，该库是由卡内基梅隆大学统计系托管的软件和数据仓库。在 QESim Matlab 函数中，我们将 "icdf" 参数设置为 2，这替换了 matlab 函数：
+标准正态 CDF 的反转（Matlab 内置函数 `norminv.m`）会减慢模拟。为了解决这个问题，我们创建了 Matlab 函数 `normCDF`，它实现了 Wichura (1988) 的近似算法。该函数是从 StatLib (`lib.stat.cmu.edu`) 下载的 Fortran 代码 AS241 的适配，该库是由卡内基梅隆大学统计系托管的软件和数据仓库。在 QESim Matlab 函数中，我们将 `"icdf"` 参数设置为 2，这替换了 matlab 函数：
 
 ```
 Zv = norminv (U);
@@ -6045,43 +5906,73 @@ Zv = normICDF (U);
 
 这使得模拟时间减少了超过 50%。对 $\Phi^{-1}$ 的近似考虑了三种情况。第一种是 $p \approx 0$，第二种是 $p$ 接近 0.5，第三种是 $p \approx 1$。
 
-
-
-
-
 ```matlab
 function newV = Alfonsiv(param,vt,dt);
+
 phi = (1-exp(-kappa*dt/2))/kappa;
+
 S = (sigma^2/4 - theta*kappa);
+
 E = exp(kappa*dt/2);
+
 if sigma^2 > 4*kappa*theta
+
 K2 = (S+phi) + (sqrt(E*S*phi)) + sigma ...
+
 else
+
 K2 = 0;
+
 end
+
 if vt =
+
     u = rand(1);
+
 if U <= 1/6
+
     Y = sqrt(3);
+
     if U <= 1/3
+
     nY = -sqrt(3);
+
     else
+
     Y = 0;
+
     end
+
     phi = (1-exp(-kappa*dt/2))/kappa;
+
     S = (theta*kappa - sigma^2/4);
+
     E = exp(-kappa*dt/2);
+
     newV = E*(S+phi) + E*vt + sigma/2 ...
+
 else
+
     [ul u2] = CIRments(param,vt,dt);
+
     Pi = 0.5 - 0.5*sqrt(1-ul^2/u2);
+
     u = rand(1);
+
 if U < Pi
+
 newV = ul2/Pi;
+
 else U > Pi
+
 newV = ul2/(1-Pi);
+
 end
+
 end
+
+end
+
 end
 ```
 
@@ -6110,7 +6001,6 @@ V(t,i) = Alfonsiv(params,V(t-1,i),dt);
 B = randn(1);
 logS = log(exp(-r*dt)*S(t-1,i)) + KO - ...
 S(t,i) = exp(logS)*exp(r*(t+1)*dt);
-
 end
 ```
 
@@ -6210,12 +6100,8 @@ end
 令 $C(\omega, s; t)$ 为沿股票路径 $\omega$ 由期权产生的现金流集合，前提是期权在时间 $t$ 未被执行，且持有人在所有时刻 $s \leq T$ 遵循最优策略。Longstaff 和 Schwartz (2001) 假设美式期权只能在 $K$ 个离散时间 $0 < t_1 \leq \dots \leq t_K = T$ 执行，其中 $T$ 是到期时间。在 $t_s$，继续持有期权而非立即行权的价值 $F(\omega, t_s)$ 是所有股票价格路径和风险中性测度 $Q$ 下剩余现金流的折现期望。假设利率为 $r$，延续价值为：
 
 ```
-$F(\omega, t_k) = e^{-r(T-t_k)} \mathbb{E}^Q \left[ \sum_{j=k+1}^K C(\omega, t_j; t_k, T) | \mathcal{F}_k \right] \quad (8.1)
+$F(\omega, t_k) = e^{-r(T-t_k)} \mathbb{E}^Q \left[ \sum_{j=k+1}^K C(\omega, t_j; t_k, T) | \mathcal{F}_k \right] \quad (8.1)$
 ```
-
-
-
-
 
 ## 206 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
@@ -6225,19 +6111,19 @@ $F(\omega, t_k) = e^{-r(T-t_k)} \mathbb{E}^Q \left[ \sum_{j=k+1}^K C(\omega, t_j
 $L_0(x) = e^{-x^2/2},$
 $L_1(x) = e^{-x^2/2}(1 - x),$
 $L_2(x) = e^{-x^2/2}(1 - 2x + x^2/2), \dots$
-$L_M(x) = e^{-x^2/2} \frac{(-1)^M}{r!} \left( M \right)^r x'.\hfill (8.2)
+$L_M(x) = e^{-x^2/2} \frac{(-1)^M}{r!} \left( M \right)^r x'.\hfill (8.2)$
 ```
 
 使用前 $M$ 个基函数，$F(\omega, t_k)$ 可以近似为：
 
 ```
-$F(\omega, t_k) = \sum_{j=0}^M a_j L_j(S_k) \hfill (8.3)
+$F(\omega, t_k) = \sum_{j=0}^M a_j L_j(S_k) \hfill (8.3)$
 ```
 
 其中 $S_k = S_k(\omega)$ 是沿价格路径 $\omega$ 在时刻 $t_k$ 的标的股票价格值。系数 $a_j$ 使用最小二乘法估算。方程 (8.3) 可以写成矩阵形式，即 $F = \mathbf{La}$：
 
 ```
-$$\mathbf{F}_{K+1} = \begin{pmatrix} F(\omega, t_1) \\ F(\omega, t_2) \\ \vdots \\ F(\omega, t_K) \end{pmatrix}, \mathbf{L}_{K:N} = \begin{pmatrix} L_0(S_1) & L_1(S_1) & \dots & L_M(S_1) \\ L_0(S_2) & L_1(S_2) & \dots & L_M(S_2) \\ \vdots & \vdots & \ddots & \vdots \\ L_0(S_K) & L_1(S_K) & \dots & L_M(S_K) \end{pmatrix}, \mathbf{a} = \begin{pmatrix} a_0 \\ a_1 \\ \vdots \\ a_M \end{pmatrix} \hfill (8.4)
+$$\mathbf{F}_{K+1} = \begin{pmatrix} F(\omega, t_1) \\ F(\omega, t_2) \\ \vdots \\ F(\omega, t_K) \end{pmatrix}, \mathbf{L}_{K:N} = \begin{pmatrix} L_0(S_1) & L_1(S_1) & \dots & L_M(S_1) \\ L_0(S_2) & L_1(S_2) & \dots & L_M(S_2) \\ \vdots & \vdots & \ddots & \vdots \\ L_0(S_K) & L_1(S_K) & \dots & L_M(S_K) \end{pmatrix}, \mathbf{a} = \begin{pmatrix} a_0 \\ a_1 \\ \vdots \\ a_M \end{pmatrix} \hfill (8.4)$$
 ```
 
 带有 $N+1$。Longstaff 和 Schwartz (2001) 强调也可以使用其他基函数，即使是 $S_k$ 的简单幂也能对美式期权价格产生准确的近似。
@@ -6245,22 +6131,24 @@ $$\mathbf{F}_{K+1} = \begin{pmatrix} F(\omega, t_1) \\ F(\omega, t_2) \\ \vdots 
 时刻 $t_k$ 的现金流取决于在 $t_{k+1}$ 是否发生行权。如果发生了行权，未来的现金流将发生变化。因此，无法通过正向推导确定 $t_k$ 的现金流。因此，Longstaff 和 Schwartz (2001) 应用 LSM 算法从 $t_{T-1}$ 到 $t_1$ 反向估算现金流。在时刻 $t=T$ 时，现金流为简单的期权收益。在每个时刻 $t_k$ ($2 \le k \le K-1$)，我们找到所有处于实值（in-the-money）的股票价格路径，并将 $t_{k+1}$ 的现金流折现一个周期。然后我们通过在设计矩阵中使用基函数进行回归，估计方程 (8.3) 的 $M+1$ 个系数 $a_0, \dots, a_M$，因此单周期的回归估计值为：
 
 ```
-$\hat{\mathbf{a}} = (L^T L)^{-1} L^T F. \hfill (8.5)
+$\hat{\mathbf{a}} = (L^T L)^{-1} L^T F. \hfill (8.5)$
 ```
 
 例如，Kner 等人 (2004)。接下来，我们通过拟合回归来构建预测的延续价值 $F(\omega, t_{k-1})$：
 
 ```
-$\hat{F}(\omega, t_{k-1}) = \hat{a}_0 L_0(S_{k-1}) + \hat{a}_1 L_1(S_{k-1}) + \dots + \hat{a}_M L_M(S_{k-1}) \hfill (8.6)
+$\hat{F}(\omega, t_{k-1}) = \hat{a}_0 L_0(S_{k-1}) + \hat{a}_1 L_1(S_{k-1}) + \dots + \hat{a}_M L_M(S_{k-1}) \hfill (8.6)$
 ```
+
+
 
 ### 美式期权
 
-我们将预测的延续价值 $F(\omega, t_{k-1})$ 与行权价值进行比较，并在行权是最的路径上替换 $t_{k-1}$ 的当前现金流。我们重复此过程直到时刻 $t_k$，通过折现 $t_k$ 的现金流来形成美式期权的价值。为了通过一个简单的例子来说，假设我们有六个股票价格。行权价为 $K=10$，我们希望对一个美式期权定价。在时刻 $t=6$ 有三条实值路径：3，4 和 6。
+我们将预测的延续价值 `$F(\omega, t_{k-1})$` 与行权价值进行比较，并在行权是最的路径上替换 `$t_{k-1}$` 的当前现金流。我们重复此过程直到时刻 `$t_k$`，通过折现 `$t_k$` 的现金流来形成美式期权的价值。为了通过一个简单的例子来说，假设我们有六个股票价格。行权价为 `$K=10$`，我们希望对一个美式期权定价。在时刻 `$t=6$` 有三条实值路径：3，4 和 6。
 
 **图 8.1 LSM 算法插图**
 
-## 208 MATLAB 和 C# 中的 HESTON 模型及其扩展
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
 | 路径 | | | | | | |
 |---|---|---|---|---|---|
@@ -6294,73 +6182,108 @@ $\hat{F}(\omega, t_{k-1}) = \hat{a}_0 L_0(S_{k-1}) + \hat{a}_1 L_1(S_{k-1}) + \d
 | 预测现金流 | | | | | 0.8003 | 0.9191 | 0.5980 | 0.9503 |
 | 即时行权 | | | | | 0.4751 | 0.6950 | 0.7527 |
 
-美式期权的定价准确性可以通过控制变量技术来提高。该技术背后的思想是，如果我们假设使用 LSM 对美式期权相对于真实价值的误差与使用 LSM 对欧式期权相对于真实价值的误差相同，那么我们可以写道：
+美式期权的定价准确性可以通过控制变量技术来提高。该技术背后的思想是，如果我们假设使用 `LSM` 对美式期权相对于真实价值的误差与使用 `LSM` 对欧式期权相对于真实价值的误差相同，那么我们可以写道：
 
-American Error = European Error
-American Price_{True} - American Price_{LSM} = European Price_{True} — European Price_{LSM}.
+`American Error = European Error`
+`American Price_{True} - American Price_{LSM} = European Price_{True} — European Price_{LSM}.`
 
-在方程 (8.7) 中，我们使用了 LSM 算法得到的美式和欧式价格，并使用了通过 32 点高斯 Laguerre 积分得到的原始 Heston (1993) 公式的闭式解。注意 (8.7) 等同于将 LSM 算法估算的早期溢价加到闭式欧式价格上。关于控制技术的讨论，参考 Hull 和 White (1998)。
+在方程 `(8.7)` 中，我们使用了 `LSM` 算法得到的美式和欧式价格，并使用了通过 32 点高斯 Laguerre 积分得到的原始 `Heston (1993)` 公式的闭式解。注意 `(8.7)` 等同于将 `LSM` 算法估算的早期溢价加到闭式欧式价格上。关于控制技术的讨论，参考 `Hull` 和 `White (1998)`。
 
-Matlab 函数 LSM.M 实现了 Longstaff 和 Schwartz (2001) 算法并返回美式和欧式价格。该函数需要一个 Heston 股票价格矩阵作为输入，以及一个设计矩阵的函数句柄。在本小节随后的示例中，我们使用第 7 章提出的矩匹配算法来存储股票价格。下面的代码片段展示了仅针对看跌期权的 LSM 函数简化版：
+`Matlab` 函数 `LSM.M` 实现了 `Longstaff` 和 `Schwartz (2001)` 算法并返回美式和欧式价格。该函数需要一个 `Heston` 股票价格矩阵作为输入，以及一个设计矩阵的函数句柄。在本小节随后的示例中，我们使用第 7 章提出的矩匹配算法来存储股票价格。下面的代码片段展示了仅针对看跌期权的 `LSM` 函数简化版：
 
-```
+```matlab
 function [EuroPrice Amer] = LSM(...,PutCall,XmatrixHandle)
+
 % 初始化现金流并将最后一个 CF 设置为内在价值
+
 CF = zeros(NS,NT);
 ```
 
-
-
-
 ### 美式期权
 
-```cpp
+```matlab
 CF(.,NT) = max(K - S(.,NT), 0);
+
 % 欧式价格
+
 EuroPrice = exp(-r*T)*mean(CF(.,NT));
+
 % 逆向回溯股票价格直到时间 t=2。
+
 for t = NT-1:2
+
  % t 时刻处于实值的股票路径
+
  I = find(S(:,t) < K);
+
 X = S(:,t);
+
  % t+1 时刻的现金流，折现一个周期
+
 Y = CF(:,t+1)*exp(-r*dt);
+
  % 回归以预测现金流
+
 for k=1:NX
+
  zeros(z, k) = feval(matrixHandle{k}, X);
+
 end
+
 beta = Z\Y;
+
 PredCF = Z*beta;
+
  % 立即行权最优的股票路径索引
+
 J = max(K - X, 0) > PredCF;
+
 Ex = I(J);
+
  % 其他股票路径索引 --> 继续持有最优
+
 Co = setdiff((1:NS),Ex);
+
  % 在行权最优处将现金流替换为行权价值
+
 CF(Ex,t) = max(K - X, 0);
+
  % 继续的现金流折回一个周期。
+
 CF(Co,t) = exp(-r*dt)*CF(Co,t+1);
+
 % 美式期权价格
+
 AmerPrice = exp(-r*dt)*mean(CF(.,2));
 ```
 
-实现 Longstaff-Schwartz (2001) 算法的 C# 代码非常复杂，因为我们没有函数来识别实值的股票价格路径，并产生方程 (8.5) 中的回归估计值。在 Matlab LSM.m 的代码中，我们使用 Matlab 内置函数来识别实值路径。在 C# 中，我们使用索引来识别路径，然后使用 Linq 中的 `List<>` 将实值路径排列成矩阵。`List<>` 非常方便，它的动态性质可以适应在每个时间点和每次模拟中不同数量的实值路径。以下片段是 C# 代码 `HestonLSTM()` 的提取：
+实现 `Longstaff-Schwartz (2001)` 算法的 C# 代码非常复杂，因为我们没有函数来识别实值的股票价格路径，并产生方程 `(8.5)` 中的回归估计值。在 `Matlab LSM.m` 的代码中，我们使用 `Matlab` 内置函数来识别实值路径。在 C# 中，我们使用索引来识别路径，然后使用 `Linq` 中的 `List<>` 将实值路径排列成矩阵。`List<>` 非常方便，它的动态性质可以适应在每个时间点和每次模拟中不同数量的实值路径。以下片段是 C# 代码 `HestonLSTM()` 的提取：
 
 ```csharp
 // t 时刻处于实值的股票路径索引
+
 int[] I = new int[NS];
+
 for(int s=0;s<NS-1; s++) {
+
  I[s] = 0;
+
  if((PutCall == "P" & (S[s,t] < K)) | (PutCall == "C" &
+
  (S[s,t] > K))) {
+
  I[s] = 1;
+
 }
+
 }
+
 // t 时刻处于实值的股票路径
+
 int NI = 0;
 ```
 
-# MATLAB 和 C# 中的 Heston 模型及其扩展
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
 ```csharp
 List<double> X = new List<double>();
@@ -6374,7 +6297,7 @@ for(int i=0;i<=NS-1;i++) {
 }
 ```
 
-在 C# 中估估计 (8.5) 中的系数需要一种矩阵求逆的方法。一种流行的方法是 LU 分解，正如 Burden 和 Faires (2010) 以及 Press 等人 (2007) 所描述的。假设我们想要获得方矩阵 A 的逆。LU 分解要求 A 被分解为下三角矩阵 L 和上三角矩阵 U 的积，使得 A = LU。那么 A 的逆为 A⁻¹ = U⁻¹L⁻¹。该方法需要的计算很少，因为三角矩阵的逆可以快速获得。C# 函数 `LU()` 执行 LU 分解并将上、下三角矩阵返回到 `LUStruct` 中。
+在 C# 中估估计 `(8.5)` 中的系数需要一种矩阵求逆的方法。一种流行的方法是 `LU` 分解，正如 `Burden` 和 `Faires (2010)` 以及 `Press` 等人 `(2007)` 所描述的。假设我们想要获得方矩阵 `A` 的逆。`LU` 分解要求 `A` 被分解为下三角矩阵 `L` 和上三角矩阵 `U` 的积，使得 `A = LU`。那么 `A` 的逆为 `A⁻¹ = U⁻¹L⁻¹`。该方法需要的计算很少，因为三角矩阵的逆可以快速获得。C# 函数 `LU()` 执行 `LU` 分解并将上、下三角矩阵返回到 `LUStruct` 中。
 
 ```csharp
 static LUStruct LU(double[,] A) {
@@ -6403,7 +6326,7 @@ static LUStruct LU(double[,] A) {
 }
 ```
 
-C# 函数 `MatUpTriangleInv()` 和 `MatLowTriangleInv()` 分别返回上、三角矩阵的逆。这些算法在 Burden 和 Faires (2010) 中描述。
+C# 函数 `MatUpTriangleInv()` 和 `MatLowTriangleInv()` 分别返回上、三角矩阵的逆。这些算法在 `Burden` 和 `Faires (2010)` 中描述。
 
 ### 美式期权
 
@@ -6422,6 +6345,7 @@ static double[,] MatUpTriangleInv(double[,] U) {
   }
   return V;
 }
+
 // 下三角矩阵的逆
 static double[,] MatLowTriangleInv(double[,] L) {
   int N = L.GetLength(0);
@@ -6454,7 +6378,7 @@ static double[,] MinVLU(double[,] A) {
 }
 ```
 
-最后，使用 C# 的 `Beta()` 获取 (8.5) 中的回归系数估计值。
+最后，使用 C# 的 `Beta()` 获取 `(8.5)` 中的回归系数估计值。
 
 ```csharp
 // 回归参数
@@ -6466,16 +6390,17 @@ static double[] Beta(double[,] X, double[] y) {
 }
 ```
 
-# MATLAB 和 C# 中的 Heston 模型及其扩展
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
 C# 函数 `MTrans()`、`MMUlt()` 和 `MVMult()` 分别用于寻找矩阵的转置、矩阵与矩阵相乘以及矩阵与向量相乘。这三个函数未给出。
 
-为了说明，我们实现了 Clarke 和 Parrot (1999) 的示例，该示例使用了 $K=10, r=0.1, T=0.2$ 年，参数值为 $5, \theta=0.16, \sigma=0.9, \rho=0.1$ 以及 $v_0=0.0625$，现价为 8, 9, 10 和 12。我们使用了 Ikonen 和 Toivanen (2008) 计算的美国式价格：2.0000、1.107641、0.213668 和 0.82036。以下 C# 代码用于使用第 7 章的矩匹配方法实现 LSM 算法以模拟一组价格路径。相关随机变量的值生成一次，并将相同的值输入矩匹配和 LSM 算法以获得每个美式价格。我们使用 5000 条股票路径，每条路径 1000 步。我们还使用通过 32 点 Gauss-Laguerre 得到的闭式欧式价格计算了变动价格。
+为了说明，我们实现了 `Clarke` 和 `Parrot (1999)` 的示例，该示例使用了 `$K=10, r=0.1, T=0.2$` 年，参数值为 `$5, \theta=0.16, \sigma=0.9, \rho=0.1$` 以及 `$v_0=0.0625$`，现价为 8, 9, 10 和 12。我们使用了 `Ikonen` 和 `Toivanen (2008)` 计算的美国式价格：2.0000、1.107641、0.213668 和 0.82036。以下 C# 代码用于使用第 7 章的矩匹配方法实现 `LSM` 算法以模拟一组价格路径。相关随机变量的值生成一次，并将相同的值输入矩匹配和 `LSM` 算法以获得每个美式价格。我们使用 5000 条股票路径，每条路径 1000 步。我们还使用通过 32 点 Gauss-Laguerre 得到的闭式欧式价格计算了变动价格。
 
 ```csharp
 // 模拟设置
 int NS = 5000;
 int NT = 1000;
+
 // 生成相关随机变量
 for(int t=0; t<NT-1; t++) {
     for(int s=0; s<NS-1; s++) {
@@ -6483,32 +6408,31 @@ for(int t=0; t<NT-1; t++) {
         Zs[t,s] = rho*Zv[t,s] + Math.Sqrt(1-rho)*RandomNorm();
     }
 }
+
 // LSM 欧式和美式价格
 settings.S = Spot[k];
 LSMPrice = HestonLSM(MMSim(param, settings, Zv, Zs));
 LSEuro[k] = LSMPrice[0];
 LSMAmerker[k] = LSMPrice[1];
+
 // 闭式欧式价格
 ClosedEuro[k] = HestonPriceLaguerre(param, settings, X);
+
 // 控制变体价格
 CAver[k] = ClosedEuro[k] + (LSMAmerker[k] - LSEuro[k]);
 ```
 
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
-
-
-
-# 214 MATLAB 和 C# 中的 Heston 模型及其扩展
-
-这对于 $v$ 方向上的所有点 $j=0, \dots, N_v$ 都是相同的。然后我们连续获得 $U_{ij}^1, U_{ij}^2, \dots$， 直到达到最后一个到期点，该点代表到期时间为零。为了给美式看跌期权定价，我们在每个时间步加入行权条件：
+这对于 `$v$` 方向上的所有点 `$j=0, \dots, N_v$` 都是相同的。然后我们连续获得 `$U_{ij}^1, U_{ij}^2, \dots$`， 直到达到最后一个到期点，该点代表到期时间为零。为了给美式看跌期权定价，我们在每个时间步加入行权条件：
 
 ```
 $U_{ij}^{n+1} = \max(K - S_n, U_{ij}^{n+1}) \quad j=0, \dots, N_v. \quad (8.11)$
 ```
 
-最后，为了给期权定价，我们需要 $S$ 和 $v$ 最大值最小值的边界条件。这些边界条件请参考第 10 章。Matlab 函数 HestonExplicitPDENonUniformGrid.m 使用显式法和非均匀网格计算美式看涨或看跌期权的 Heston 。为了节省空间，省略了函数的部分内容。函数的第一部分定义了期权到期时的收益。
+最后，为了给期权定价，我们需要 `$S$` 和 `$v$` 最大值最小值的边界条件。这些边界条件请参考第 10 章。`Matlab` 函数 `HestonExplicitPDENonUniformGrid.m` 使用显式法和非均匀网格计算美式看涨或看跌期权的 `Heston` 。为了节省空间，省略了函数的部分内容。函数的第一部分定义了期权到期时的收益。
 
-```
+```matlab
 function U = HestonExplicitPDENonUniformGrid(params,...,EuroAM)
 % Temporary grid for first time steps, NV
 u = zeros(NS, NV)
@@ -6522,9 +6446,9 @@ end
 end
 ```
 
-函数的中间部分循环时间步，并根据方程 (8.9) 更新期权价值，其导数使用有限差分法近似。
+函数的中间部分循环时间步，并根据方程 `(8.9)` 更新期权价值，其导数使用有限差分法近似。
 
-```
+```matlab
 for t=1:NT-1
 U(1,:) = 0;
 % Boundary condition for Vmin.
@@ -6537,25 +6461,51 @@ U(:,NV) = max(0, K-S);
 end
 % Update the temporary grid u(s,t)
 u = U;
+```
+
+
+
 % Boundary condition for Vmin.
+
+```
 for s=2:NS-1
+
 derV = (u(s,2) - u(s,1)) / (V(2)-V(1));
+
 derS = (u(s+1,1) - u(s-1,1)) / (S(s+1)-S(s-1));
+
 LHS = r*u(s,1) + (r-q)*S(s)*derS + ...
+
 U(s,1) = LHS*dt + u(s,1);
+
 end
+
 u = U;
+```
+
 % Interest points of the grid
+
+```
 for s=2:NS-1
+
  for v=2:NV-1
+
   derS = (u(s+1,v) - u(s-1,v)) / (S(s+1)-S(s-1));
+
   derV = (u(s,v+1) - u(s,v-1)) / (V(v+1)-V(v-1));
+
   derSS = ((u(s+1,v) - u(s,v)) / ...;
+
   derVV = ((u(s,v+1) - u(s,v)) / ...) / ...;
+
   derSV = (u(s+1,v+1) - u(s-1,v-1)) / ...;
+
   L = 0.5*V(v)*S(s)^2*derSS + rho*sigma*V(v)*S(s);
+
   U(s,v) = L*dt + u(s,v);
+
 end
+
 end
 ```
 
@@ -6563,44 +6513,76 @@ end
 
 ```
 if strcmp(BeroAmer,'A')
+
 for s=1:NS
+
   if strcmp(PutCall,'C')
+
     U(s,:) = max(U(s,:), S(s));
+
   elseif strcmp(PutCall,'P')
+
     U(s,:) = max(U(s,:), K-S(s));
+
 end
 ```
 
-该函数进入网格矩阵，对于 $i=0, \dots, N_s$ 和 $j=0, \dots, N_v$，即 $N_{ij}^t$。Matlab 函数 interp2m 采用二维插值来获取位于网格点之间的 $(S, v)$ 值的的期权价格。
-实现显式法的 C# 代码非常相似，此处未给出。然而，我们需要一个用于二维线性插值的函数。这通过 C# 函数 interp2() 完成。
+该函数进入网格矩阵，对于 $i=0, \dots, N_s$ 和 $j=0, \dots, N_v$，即 $N_{ij}^t$。Matlab 函数 `interp2m` 采用二维插值来获取位于网格点之间的 $(S, v)$ 值的的期权价格。
+实现显式法的 C# 代码非常相似，此处未给出。然而，我们需要一个用于二维线性插值的函数。这通过 C# 函数 `interp2()` 完成。
 
 ```
 static double interp2(double[] X, double[] Y, double[] Z, Z... ) {
+
   // Find the index for x
+
 if(xi == X[0]) {xi = 0; xflag = 1};
+
 else if (xi == X[NX-1]) {xi = NX-1; xflag = 1};
+
 else
+
   for(int i=1;i<=NX-1;i++)
+
     if(X[i-1] <= xi && (xi < X[i])) {x1 = i-1; x2 = i};
+
   // Find the index for y
+
 if(yi == Y[0]) {yi = 0; yflag = 1};
+
 else if (yi == Y[NY-1]) {yi = NY-1; yflag = 1};
+
 else
+
   for(int i=1;i<=NY-1;i++)
+
     if(Y[i-1] <= yi && (yi < Y[i])) {y1 = i-1; y2 = i};
+
 // Interpolation
+
 if (xflag == 1 && yflag == 1) {
+
   result = Z[x1,y1];
+
 } else if (xflag == 1 && yflag == 0) {
+
   result = Z[x1,y1] + (Z[x1,y2] - Z[x1,y1]) * (yi - Y[y1]) / (Y[y2] - Y[y1]);
+
 } else if (xflag == 0 && yflag == 1) {
+
   result = Z[x1,y1] + (Z[x2,y1] - Z[x1,y1]) * (xi - X[x1]) / (X[x2] - X[x1]);
+
 } else {
+
   result = Z[x1,y1] + (Z[x2,y1] - Z[x1,y1]) * (xi - X[x1]) / (X[x2] - X[x1]) +
+
                  (Z[x1,y2] - Z[x1,y1]) * (yi - Y[y1]) / (Y[y2] - Y[y1]) +
+
                  (Z[x2,y2] - Z[x1,y2] - Z[x2,y1] + Z[x1,y1]) * (xi - X[x1]) / (X[x2] - X[x1]) * (yi - Y[y1]) / (Y[y2] - Y[y1]);
+
 }
+
 return result;
+
 }
 ```
 
@@ -6608,8 +6590,11 @@ return result;
 
 ```
 U = HestonPDENonUniformGrid(...);
+
 for k=1:length(Spot)
+
 S0 = Spot(k);
+
 AmerPrice(k) = interp2(V,U,S0);
 ```
 
@@ -6620,37 +6605,37 @@ AmerPrice(k) = interp2(V,U,S0);
 Beliaeva 和 Nawalkha (2010) 为 Heston 模型开发了路径无关的二元树。在他们的方法中，价格和方差树是独立构造的，然后重新合并。这需要对 $S_t$ 进行变换，使得 $Y_t$ 和 $v_t$ 独立。回想 Heston 模型由随机微分方程 (SDEs) 定义：
 
 ```
-$dS_t = rS_td + \sqrt{v_t}dW_{t,1},dv_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{t,2}.$ (12)
+$dS_t = rS_td + \sqrt{v_t}dW_{t,1},dv_t = \kappa(\theta - v_t)dt + \sigma\sqrt{v_t}dW_{t,2}. (12)$
 ```
 
 $E^Q[dW_{t,1}dW_{t,2}] = \rho$ 是方程之间的相关性。$S_t$ 的变换定义为：
 
 ```
-$Y_t = \ln S_t - \frac{\rho}{\sigma}v_t$ (13)
+$Y_t = \ln S_t - \frac{\rho}{\sigma}v_t$ (13)$
 ```
 
 其中
 
 ```
-$h_t = (r - \frac{\rho\theta}{\sigma})t.$ (14)
+$h_t = (r - \frac{\rho\theta}{\sigma})t.$ (14)$
 ```
 
 应用 Ito 引理产生 $Y_t$ 的 SDE：
 
 ```
-$dY_t = \mu_y(t)dt + \sigma_y(t)dW_{t,1}^* (15)
+$dY_t = \mu_y(t)dt + \sigma_y(t)dW_{t,1}^* (15)$
 ```
 
 其中漂移和波动率给出：
 
 ```
-$\mu_y(t) = (\frac{\rho}{\sigma} - \frac{1}{2})v_t$, $\sigma_y(t) = \sqrt{1-\rho^2}\sqrt{v_t}.$ (16)
+$\mu_y(t) = (\frac{\rho}{\sigma} - \frac{1}{2})v_t$, $\sigma_y(t) = \sqrt{1-\rho^2}\sqrt{v_t}.$ (16)$
 ```
 
 方程 (15) 中的随机项是：
 
 ```
-$dW_{t,1}^* = \frac{dW_{t,1}-dW_{t,2}}{\sqrt{1-\rho^2}}$ (17)
+$dW_{t,1}^* = \frac{dW_{t,1}-dW_{t,2}}{\sqrt{1-\rho^2}}$ (17)$
 ```
 
 由于 $E^Q[dW_{t,1}dW_{t,2}] = 0$，二元过程 $(Y_t)$ 是不相关的。这意味着 $Y_t$ 的概率可以使用三叉树近似。给定值 $Y_t$，可以通过反推 (13) 恢复股票价格：
@@ -6664,7 +6649,7 @@ $S_t = \exp(Y_t + h_t).$
 Beliaeva 和 Nawalkha (2010) 为变换后的方差 $x_t$ 构建了三叉树，定义为：
 
 ```
-$x_t = \frac{2v_t}{\sigma} (19)
+$x_t = \frac{2v_t}{\sigma} (19)$
 ```
 
 他们通过变换恢复方差 $v_t$：
@@ -6696,10 +6681,6 @@ $x_{t+dt}^+ = x_t + b(j+1)\sqrt{dt},\nx_{t+dt}^m = x_t + bj\sqrt{dt},\nx_{t+dt}^
 ```
 $P_v^u = \frac{1}{2b^2} - \frac{j}{2} + \frac{1}{2b}\mu(x_t, t)\sqrt{dt},\nP_v^m = 1 - \frac{1}{b^2},\nP_v^d = \frac{1}{2b^2} + \frac{j}{2b}\mu(x_t, t)\sqrt{dt}. (8.23)$
 ```
-
-
-
-
 
 # 案例 2. 如果 $x_i = 0$，则 $x_i^{v+dt}$ 的定义与方程 (8.22) 相同，向下移动为 $x_{i+dt}^d = 0$，中间移动 $x_{i+dt}^m$ 不被使用。
 在这种情况下，概率为：
@@ -6734,8 +6715,6 @@ $x_i$ 和 $v_i$ 的三项叉树均在零以下被截断（也可以在任意值�
 
 在方程 (8.13) 定义的变换后股票价格 $Y_i$ 的三项叉树中，允许跨越多个节点的跳转。$v_i$ 的高值会导致 $Y_i$ 跳跨越多个节点向上或向下，而 $v_i$ 的低值仅允许跨越单个节点。Beliaeva 和 Nawalka (2010) 将节点跨度定义为 $k\sigma_v(0)\sqrt{dt}$，它代表了当过程处于节点 $Y_i$ 时，$Y_{i+dt}$ 取值的节点之间的距离。$k_i = 1$ 代表跨越单个节点的跳转，而 $k_i > 1$ 代表跨越多个节点的跳转。该参数定义为
 
-
-
 ```
 $k_i = \begin{cases} \text{Ceiling}(\sqrt{v_i/v_0}) & \text{if } v_i > 0 \\ 1 & \text{otherwise.} \end{cases} \quad (8.28)$
 ```
@@ -6767,15 +6746,8 @@ $\frac{\mu_y(t)\sqrt{dt}}{k_t\sigma_y(0)}$
 $P_y^u = \frac{1 \sigma_y^2(t)dt + e_u e_d}{2(k_t\sigma_y(0))^2dt}, P_y^m = \frac{\sigma_y^2(t)dt + e_u e_d}{2(k_t\sigma_y(0))^2dt}$,
 $P_y^d = \dots$ (此处原文原文未写全，按逻辑保留)
 ```
-（注：原文中 $P_y^d$ 处的公式截断了，此处翻译保持对应结构）
 
 $Y_i$ 的多次跳转如图 8.2 所示...（此处省略重复翻译，遵循不重复原文原则）
-
-（由于用户提供的原始文本中存在大量重复段落和截断，上述翻译已根据您的指令进行了清理和处理）
-
-
-
-
 
 ## 224
 MATLAB 和 C# 中的 Heston 模型及其扩展
@@ -6839,45 +6811,79 @@ numY = [1 3];
 umV = [1 3];
 umRows = [1 9];
 for t=3:NT
-    numY(t) = numY(t-1) + 2*maxK(t);
-    numV(t) = 2*t - 1;
-    numRows(t) = numV(t)*numY(t);
-end
-NR = max(numRows);
 ```
 
+
+
+`numY(t) = numY(t-1) + 2*maxK(t);`
+
+`numV(t) = 2*t - 1;`
+
+`numRows(t) = numV(t)*numY(t);`
+
+end
+
+`NR = max(numRows);`
+
+```
 该函数的下部分寻找每个节点的九个分支索引，并将它们存储在 Matlab 代码中。这些索引取决于 $Y_i$ 和 $k_i$ 的当前值。例如，在 Beliaeva 和 Nalwalkha (2010) 的表11 中，第一步的顶部节点（在图中标记为 $V_{11}, Y_{11}$）的跳跃大小 $k_{11}=2$。该节点分支到 $V_{21}$ 的节点 1, 3, 5，$V_{22}$ 的节点 8, 10, 12，以及 $V_{23}$ 的节点 15, 17, 19。这些节点间隔两个时间步。第一步的最后一个节点（标记为 $V_{13}, Y_{13}$）的跳跃大小 $k_{11}=1$。该节点分支到节点 17, 18, 19，节点 25, 26, 27 以及节点 32, 33, 34。这些节点间隔一个时间步。
+```
 
 ```matlab
 Branch = cell(numRows(NT-1),NT-1);
+
 Branch(1,1) = {[1:9]};
+
 B = zeros(numV(NT-1)*numY(NT-1), 9);
+
 % To Branches
+
 for t=2:NT
+
 nY = numY(t);
+
 First = max(K(t-1));
+
 for n=1:numRows(t)
+
     a = cell(n-1,nY);
+
     b = mod(n-1,nY);
+
     % Find the-to-middle branches
+
     B(n,2) = First + (a-1)*numY(t) + b;
+
     B(n,5) = B(n,2) + numY(t);
+
     B(n,8) = B(n,2) + 2*numY(t);
+
     % Find the rest of branches
+
     B(n,1) = B(n,2) - a;
+
     B(n,4) = B(n,5) - a;
+
     B(n,6) = B(n,5) + a;
+
     B(n,7) = B(n,8) - a;
+
     B(n,9) = B(n,8) + a;
+
     Branch(n,t) = {B(n,:)};
+
 end
 ```
 
 ```matlab
 clear B;
+
 % Adjust the last branch upward
+
 for t=ColChange:NT-1
+
 for j=7:9
+
  Branch(numRows(t),j) = Branch(t-1,j);
 ```
 
@@ -6885,45 +6891,81 @@ for j=7:9
 
 ```matlab
 % Log stock tree (Yt), (St), and (Prob)
+
 Yt = zeros(NR, NT);
+
 Y0 = log(S0) - rho*V0/sigma;
+
 Yt(1,1) = Y0;
+
 Prob = cell(numRows(NT-1),NT-1);
+
 X0 = X(M,1);
+
 for t=1:NT-1
+
  j = 0;
+
  j=(t-1):(t-1);
+
  for j=1:numV(t)
+
  for r=1:numY
+
  n = r*Y;
+
  Vt = V(M,t);
+
  Xt = X(M-j), t);
+
  Kt = k*M(j,t);
+
 NewBranch = cell2mat(n,t);
+
 muy = (rho*kappa/sigma - 0.5)*Vt;
+
  I = round(muy/K/sigym0*sqrt(dt));
+
  if Yt(n,t) > 0
+
  for s=1:9
+
  iff s=5 || s=8 || Middle node
+
  Yt(NewBranch(s),t+1) = Yt(n,t) + (I+0)...
+
  elseif s=1 || s=4 || s=7 % Up node
+
  Yt(NewBranch(s),t+1) = Yt(n,t) + (I+1)...
+
  elseif s=3 || s=6 || s=9 % Down node
+
  Yt(NewBranch(s),t+1) = Yt(n,t) + (I-1)...
+
  end
+
 end
+
 end
 ```
 
 ```matlab
 Branch(n,t) = {{['No branch from ('...)]};
+
 end
+
 if Yt(n,t) == 0;
+
     Prob(n,t) = {zeros(1,9)};
+
 else
+
     [pvm pvmd] = probV(Vt,X0,...);
+
     [pyu pymd] = probY(Vt,V0,...);
+
     Prob(n,t) = {pvm*pvmd, pyu*pymd};
+
 end
 ```
 
@@ -6932,10 +6974,6 @@ end
 Medvedev 和 Scaillet (2010) 开发了一种方法，可以将美式看跌价格作为渐近展开进行解析表示。他们的方法适用于这类随机波动模型。在本节中，我们首先介绍了 Black-Scholes 模型下美式看跌期权的方法，然后给出了 Heston 模型的展开。他们方法的优点是美式看跌价格可以通过仅解析项的展开获得。因此，该方法能够快速地生成 Black-Scholes 和 Heston 期权价格。
 
 为了说明，我们重现了 Clarke 和 Parrot (1999) 以及 Ikonen 和 Toivaren (2008) 的美式价格。使用 50 个时间步和控制变量技术，我们获得了 1.96724、1.105853、0.519488、0.213408 和 0.081948，其中精度小于一个美分。
-
-
-
-
 
 ### 美式期权
 
@@ -7064,88 +7102,147 @@ $C_n[p_n^n(\Phi) + q_n^n(\phi) + p_n^n(\tilde{\theta}) + q_n^n(\tilde{\theta})] 
 $C_1 = \frac{K\sigma}{\Phi(\theta) + \phi(\theta)} \quad (8.52)$
 ```
 
-
-
-
-
 ## 234 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
 ```matlab
 for i=1:N
+
 for k=1:N-i+2
+
     pi(i,k) = 0;
+
 end
+
 j = N-i+3;
+
 k = 1;
+
 while j<=N+1
+
     pi(i,j) = pis(i,k);
+
     k = k+1;
+
     j = j+2;
+
 end
 
 n = dot(pi(n,:),'theta);
+
 % 生成多式 qln
+
 syms qill12 qill13 qill14 qill15 qill16 qill17; % 根据需要添加更多
+
 qis = [qill12 qill13 qill14 qill15 qill16 qill17]; ...
+
 syms qi
+
 for i=1:N
+
 for k=1:N-i+3
-    qi(i,k) = 0;
+```
+
+
+
+```matlab
+qi(i,k) = 0;
+
 end
+
 j = N-i+4;
+
 k = 1;
+
 while j<=N+1
+
     qi(i,j) = qis(i,k);
+
     k = k+1;
+
     j = j+2;
+
 end
+
 qi = qi(:,1:N);
+
 qln = dot(qi(n,:),'theta);
+
 % 生成过去的多式 p0n-1 和 p0n-2，
+
 if n>3
+
 p0n_1 = dot(pp(n-1),'theta);
+
 q0n_1 = dot(qq(n-1),'theta);
+
 pln_1 = dot(pi(n-1),'theta);
+
 qlin_1 = dot(qi(n-1),'theta);
+
 else
+
 p0n_1 = 0; q0n_1 = 0;
+
 pln_1 = 0; qlin_1 = 0;
+
 end
+
 if n>3
+
 p0n_2 = dot(pp(n-2),'theta);
+
 q0n_2 = dot(qq(n-2),'theta);
+
 pln_2 = dot(pi(n-2),'theta);
+
 qlin_2 = dot(qi(n-2),'theta);
+
 else
+
 p0n_2 = 0; q0n_2 = 0;
+
 pln_2 = 0; qlin_2 = 0;
+
 end
+
 % 创建导数
+
 dplin = diff(pln_1,theta); dplin2 = diff(pln_2,theta);
+
 dp0n_1 = diff(p0n_1,theta); dp0n_2 = diff(p0n_2,theta);
+
 dqlin = diff(qlin_1,theta); dqlin_2 = diff(qlin_2,theta);
+
 dq0n_1 = diff(q0n_1,theta); dq0n_2 = diff(q0n_2,theta);
 ```
 
 ### 美式期权
 
-PQ.m 函数用于 GeneratePQ.m 文件，通过求解方程 (8.50) 生成式 $p_i^n$ 和 $q_i^n$ 的符号表示，并通过 (8.51) 生成系数 $C_n$ 的表示。对于 $n=1$ 的多式是通过调用 PQ.m 函数生成的。
+`PQ.m` 函数用于 `GeneratePQ.m` 文件，通过求解方程 (8.50) 生成式 $p_i^n$ 和 $q_i^n$ 的符号表示，并通过 (8.51) 生成系数 $C_n$ 的表示。对于 $n=1$ 的多式是通过调用 `PQ.m` 函数生成的。
 
 ```matlab
 n = 1;
+
 [p0n, q0n, dq0n_1, dqln_1] = PQ(n,N,p0,q0);
+
 p01 = p0n;
+
 p11 = p0n;
+
 q01 = q0n;
+
 q11 = q0n;
 ```
 
-这生成了 $p_i^n = \theta, q_i^n = 1$ 和 $p_i^n = 0$。代码对于高阶项变得复杂。对于 $n=2$，我们直接从 PQ.m 函数获得 $p_i^n = \theta^2+1$，并根据方程 (8.46) 知 $q_i^2=0$。为了得到未知系数 $\pi_{21}$，我们对第一个 PDE 进行求解。对于更高阶的 $n$，代码涉及从 Matlab 输出窗口的剪切。多式 $p_i^n$ 和 $q_i^n$ 是通过 PQ.m 函数生成的，如下所示（$n=5$）：
+这生成了 $p_i^n = \theta, q_i^n = 1$ 和 $p_i^n = 0$。代码对于高阶项变得复杂。对于 $n=2$，我们直接从 `PQ.m` 函数获得 $p_i^n = \theta^2+1$，并根据方程 (8.46) 知 $q_i^2=0$。为了得到未知系数 $\pi_{21}$，我们对第一个 PDE 进行求解。对于更高阶的 $n$，代码涉及从 Matlab 输出窗口的剪切。多式 $p_i^n$ 和 $q_i^n$ 是通过 `PQ.m` 函数生成的，如下所示（$n=5$）：
 
 ```matlab
 n = 5;
+
 [p0n, q0n, dq0n_1, dqln_1] = PQ(n,N,p0,q0);
+
 p05 = p0n;
+
 q05 = q0n;
 ```
 
@@ -7155,37 +7252,57 @@ q05 = q0n;
 
 ```matlab
 % 求解第一个 PDE C3 C4
+
 syms qi51
+
 PDE1 = d2pln + theta*dn - n*plan + sigma_*C4*dp0n_1;
+
 PDE1 = subs(PDE1,theta);
+
 collect(PDE1,theta);
+
 qi51 = solve('-2*pi51+2*C3+C4*(sigma-2*mu)', 'pi51');
+
 qi52 = solve('pi51-4*pi52+2*r*(-C2*sigma^2)', 'pi52');
+
 qi52 = simplify(qi52);
+
 qi51 = simplify(qi51*theta+theta);
 ```
 
-寻找 $q_1^1$ 的方法采用的方法。我们从方程 (8.46) 知 $q_1^1 = \theta + q_1^2$。我们使用 `collect` 函数替换 (8.50) 中第二个 PDE 的所有系数值，并粘贴到代码中，求解得到的 $q_1^1$ 和 $q_1^2$。
+寻找 $q_1^1$ 的方法采用的方法。我们从方程 (8.46) 知 $q_1^1 = \theta + q_1^2$。我们使用 `collect` 函数替换 (8.50) 中第二个 PDE 的所有系数值，并粘贴到代码中，求解得到的 $q_1^1$ 和 $q_1^2`。
 
 ```matlab
 % 求解第二个 PDE qi51
+
 syms qi51
+
 PDE2 = -(n+1)*qln*theta*dqln + d2qln + sigma_*C4*p0n_1;
+
 PDE2 = subs(PDE2,theta);
+
 collect(PDE2,theta);
+
 qi51 = solve('1/48*sigma-2/24*mu)/sigma', 'qi51');
+
 qi52 = solve('-6*C3*sigma^2-12/24*mu', 'qi52');
+
 qi51 = simplify(qi51);
+
 qi52 = simplify(qi52);
+
 qi51 = qi51*theta^2 + qi52;
 ```
 
-最后，GeneratePQ.m 函数的最后一部分寻找 (8.51) 中的 $C_n$ 系数。例如，当 $n=2$ 时，代码为：
+最后，`GeneratePQ.m` 函数的最后一部分寻找 (8.51) 中的 $C_n$ 系数。例如，当 $n=2$ 时，代码为：
 
 ```matlab
 Exp2 = -sigma^2*y/2;
+
 C2 = (Exp2 - p12*cdf - q12*pdf)/(p02*cdf + q02*pdf);
+
 C2 = subs(C2,theta,y);
+
 C2 = simplify(C2);
 ```
 
@@ -7193,33 +7310,53 @@ C2 = simplify(C2);
 
 注意，我们确实需要调用 `solve` 函数来获取 $C_n$，因为它从方程 (8.51) 可以很容易获得。代码产生了系数 $$C_2 = \frac{C_1\Phi_0\sigma^2 - 2C_1\Phi_0\mu + K\sigma^3}{2\sigma(\Phi_y)^2 + \Phi_0}$$
 
-GeneratePQ.m 函数是所有所需系数的列表，允许将 (8.40) 中的 $P(\theta, \tau)$ 扩展到 $n=5$ 的项。该输出如下片段所示（$n=3$）：
+`GeneratePQ.m` 函数是所有所需系数的列表，允许将 (8.40) 中的 $P(\theta, \tau)$ 扩展到 $n=5$ 的项。该输出如下片段所示（$n=3$）：
 
 ```matlab
 % 设置 1 多式
+
 p01 = theta;
+
 p11 = 0;
+
 q01 = 1;
+
 q11 = 0;
+
 % 设置 2 多式
+
 p12 的形式为 $p12 = \pi_{21}$
+
 p02 = theta*2;
+
 p12 = -1/2(-sigma*C2+2*mu+r*sigma);
+
 q02 = theta;
+
 q12 = 0;
+
 % 设置 3 多式
+
 p13 的形式为 $p13 = \pi_{31}\theta$
+
 q13 的形式为 $q13 = q_{31}$
+
 p03 = theta*3*theta;
+
 p13 = -(-sigma*C2+2*mu+r*C1*sigma)/sigma;
+
 q03 = theta*2;
+
 q13 = -1/8(-C2*sigma^3+16*C2*mu);
 ```
 
 ```matlab
 % "C"
+
 C1 = sigma*K/(y*cdf(pdf));
+
 C2 = -1/2(cdf*sigma^2-2*mu*cdf+sigma^3*y^2);
+
 C3 = 1/24(-24+y*cdf*sigma^3*C2*mu);
 ```
 
@@ -7227,9 +7364,13 @@ C3 = 1/24(-24+y*cdf*sigma^3*C2*mu);
 
 ```matlab
 function Price = MPutBS(y,theta,K,sigma,r,T)
+
 mu = r-q;
+
 % "C" 在 theta = y 处的取值
+
 cdf = normcdf(y);
+
 pdf = normpdf(y);
 ```
 
@@ -7237,33 +7378,55 @@ pdf = normpdf(y);
 
 ```matlab
 C1 = sigma*Y/(y*cdf+pdf);
+
 C2 = -1/2*(C1*cdf*sigma^2-2*mu*cdf+sigma^3*y^2);
+
 % 设置 1 多式
+
 p01 = theta;
+
 p11 = 0;
+
 q01 = 1;
+
 q11 = 0;
+
 % 设置 2 多式
+
 p02 = theta^2+1;
+
 p12 = -1/2*C1*(sigma+mu)/sigma;
+
 q02 = theta;
+
 q12 = 0;
+
 % Black-Scholes 近似
+
 cdf = normpdf(theta);
+
 pdf = normpdf(theta);
+
 Price = (C1*p01+q01*pdf) + p11*cdf+q11*pdf)*T^(1/2) + (C2*p02+q02*pdf) + p12*cdf+q12*pdf)*T^(1/2);
 ```
 
-我们不需要代码来获取 (8.53) 中的多式及其导数，因为它有一个允许我们求解 PDE 的计算器。然而，我们创建了 MSPutBS 函数，它与之前代码中的 MSPutBS 函数非常相似。
+我们不需要代码来获取 (8.53) 中的多式及其导数，因为它有一个允许我们求解 PDE 的计算器。然而，我们创建了 `MSPutBS` 函数，它与之前代码中的 `MSPutBS` 函数非常相似。
 
 ```matlab
 function [Price, theta] = MSPriceBS(S,K,T,sigma,r)
+
 % 收益值优化设置
+
 theta = log(S)/sigma/sqrt(T);
+
 start = 2;
+
 options = optset('LargeScale','off');
+
 % 寻找边界
+
 [yval] = fmincon(@p-MSutBS,start,theta);
+
 Price = MSPutBS(y,theta,K,sigma);
 ```
 
@@ -7271,22 +7434,31 @@ Price = MSPutBS(y,theta,K,sigma);
 
 ```matlab
 static double MSPutdiff(y,mssettings,dy)
+
   return (MSPutBS(y+dy,mssettings) - MSPutBS((y-dy,mssettings))/2.0/dy;
+
 }
 ```
 
 ## 247 美式期权
 
-二分函数（已给出）在第二章中很容易找到，用于寻找该目标函数的零，此处未给出。美式看跌期权的价格使用 MSRPBS() 函数生成。
+二分函数（已给出）在第二章中很容易找到，用于寻找该目标函数的零，此处未给出。美式看跌期权的价格使用 `MSRPBS()` 函数生成。
 
 ```java
 static double MSPriceBS(S, K, T) {
+
     mssettings.theta = Math.Log(K/S)/Math.Sqrt(T);
+
     double a = 0.5*mssettings.theta;
+
     double y = Bisection(mssettings,a,b,Tol,MaxIter,dt);
+
     if(y<mssettings.theta)
+
         y = mssettings.theta;
+
     return MSPutBS(y,mssettings);
+
 }
 ```
 
@@ -7294,12 +7466,19 @@ static double MSPriceBS(S, K, T) {
 
 ```matlab
 % Black Schwarz 欧洲价格
+
 BSP = (s,K,rf,q,T)*(K*exp(-r*T))*normcdf(-(log(s/K) + ...);
+
 % 寻找表 2 的树形和 M-S 价格
+
 K = [35 40];
+
 for i=1:9
+
     BSPut(k, i) = BSPut(S,K(k),r,q,sigma(i),T(i));
+
     MSPut(k, i) = MSPriceBS(S,K(k),T(i),sigma(i),r,q);
+
     BTPut(k, i) = TrinomialTree(S,K(k),r,q,sigma(i),T(i));
 ```
 
@@ -7313,10 +7492,6 @@ Medvedev 和 Scaillet (2010) 表 2 中 $K=45$ 的部分重现在表 8.3 中。�
 | M-S. | 5,000 | 5,085 | 5,261 | 5,059 | 5,702 | 6,237 | 5,286 | 6,506 | 7,377 |
 | Tree | 5,000 | 5,088 | 5,267 | 5,060 | 5,706 | 6,243 | 5,287 | 6,510 | 7,383 |
 
-
-
-
-
 ## 240 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
 以及与 Scaillet (2010) 的五项展开。表 8.3 中的结果与作者在表 2 中得到的结论几乎相同。
@@ -7325,30 +7500,55 @@ Medvedev 和 Scaillet (2010) 表 2 中 $K=45$ 的部分重现在表 8.3 中。�
 
 ```matlab
 function y = TrinomialTree(Spot,K,r,q,v,T,N,PutCall,EuroAmer)
+
 % 三元树参数和概率
+
 dt = T/N;
+
 u = exp(sqrt(2*dt));
+
 d = 1/u;
+
 pu = (exp((r-q)*dt/2) - exp(-v*sqrt(dt/2)))/2;
+
 pmu = exp(v*sqrt(dt/2));
+
 pd = (exp(v*sqrt(dt/2)) - exp((r-q)*dt/2)))/2;
+
 pmm = 1 - pu - pd;
+
 % 计算所有股票价格。
+
 S = zeros(N+1,1);
+
 S(1,1) = Spot;
+
 for j=2:N-1
+
     for i=N-j+2:N
+
         S(i,j) = Spot*u^(N+1-i);
+
     end
+
 % 计算期末期权价格。
+
 V = zeros(N+1,1);
+
 V(:,N+1) = max(K - S(:,N+1), 0);
+
 % 计算剩余条目
+
 for j=N-1:1
+
     for i=N-j+2:N
+
         V(i,j) = max(K - S(i,j), exp(-r*dt)*(pu*V(i,j+1) + pm*V(i,j+1) + ...));
+
     end
+
 % 期权价格位于第一个节点。
+
 y = V(1,1);
 ```
 
@@ -7368,7 +7568,7 @@ $$P(\theta, \tau, v) = \sum_{n=1}^{\infty} P_n(\theta, v)r^{n/2}. \quad (8.54)$$
 
 ```math
 $P_n(\theta, v) = C_n(v)[p_n^\theta(\theta)\Phi(v) + q_n^\theta(\theta)\phi(\theta)] + p_n^v(\theta, v)\Phi(v) + q_n^v(\theta, v)\phi(v)$
-$= C_n(v)P_n^\theta(\theta) + P_n^v(\theta, v). (8.55)
+$= C_n(v)P_n^\theta(\theta) + P_n^v(\theta, v). (8.55)$
 ```
 
 注意，上标为 1 的多项式不仅取决于 $v$ 也取决于 $\theta$，且 $C_n$ 系数取决于 $v$。为了简化符号，我们写作 $p_n'^\theta = p_n^\theta(v)$，$q_n'^\theta = q_n^\theta(v)$，$p_n'^v = p_n^v(v)$，$q_n'^v = q_n^v(v)$ 以及 $C_n' = C_n(v)$。
@@ -7376,13 +7576,13 @@ $= C_n(v)P_n^\theta(\theta) + P_n^v(\theta, v). (8.55)
 回顾第 1 章中的 Heston PDE，此处使用 Medvedev 和 Schweizer (2010) 的符号，并使用 $\theta$ 定义方差过程的均值回归
 
 ```math
-$P_t + (r-q)SP_S + \frac{1}{2}vS^2P_{SS} - rP + \mu vSP_{sv} + \frac{1}{2}\sigma^2vP_{vv} + \kappa(\bar{\theta}-v)P_v = 0$. (8.56)
+$P_t + (r-q)SP_S + \frac{1}{2}vS^2P_{SS} - rP + \mu vSP_{sv} + \frac{1}{2}\sigma^2vP_{vv} + \kappa(\bar{\theta}-v)P_v = 0$. (8.56)$
 ```
 
 重新定义归一化资金为
 
 ```math
-$$\theta = \frac{\ln(K/S)}{\sqrt{v}} (8.57)
+$$\theta = \frac{\ln(K/S)}{\sqrt{v}} (8.57)$$
 ```
 
 并考虑从 $P(S,v,t)$ 到 $P(\theta,v,t)$ 的变换。我们需要以下导数，通过全导数和应用链式法则获得：
@@ -7392,9 +7592,13 @@ $P_t = \frac{\theta}{2\tau}P_\theta - P_\tau$,
 $P_S = P_\theta = \frac{-1}{S\sqrt{v}}P_\theta$,
 $P_{SS} = P_{\theta\theta}\theta^2 + P_{\theta v}S = \frac{1}{S^2v}P_{\theta\theta} + \frac{1}{\sqrt{v}}P_{\theta v}$,$
 $P_v = P_v + P_{\theta\theta v} = P_v - \frac{\theta}{v}P_\theta$,
-$P_{vs} = P_{\theta v} - \frac{2\theta}{v}(P_{\theta\theta}\theta + P_{\theta v}) = \frac{-1}{S\sqrt{v}}P_{\theta v} + \frac{2\theta}{2v^{3/2}}\sqrt{\theta}P_{\theta\theta}$,$
-$P_{vv} = P_{vv} - \frac{\theta}{v^2}P_v + \frac{\theta^2}{4v^2}P_\theta$. (8.58)
 ```
+
+
+
+$P_{vs} = P_{\theta v} - \frac{2\theta}{v}(P_{\theta\theta}\theta + P_{\theta v}) = \frac{-1}{S\sqrt{v}}P_{\theta v} + \frac{2\theta}{2v^{3/2}}\sqrt{\theta}P_{\theta\theta}$,$
+
+$P_{vv} = P_{vv} - \frac{\theta}{v^2}P_v + \frac{\theta^2}{4v^2}P_\theta$. (8.58)
 
 我们使用了以下 $\theta$ 的导数：
 
@@ -7403,7 +7607,6 @@ $$\theta_S = \frac{-1}{S\sqrt{v}}$, $\theta_{SS} = \frac{1}{S^2v\sqrt{v}}$,$
 $\theta_{Sv} = \frac{1}{2v^{3/2}}$,$
 $\theta_v = \frac{-\theta}{2v}$, $\theta_{vv} = \frac{-\theta-\theta_v}{v^2}$. (8.59)
 ```
-
 ## 242 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
 将方程 (8.58) 中的导数代入 (8.56) 的 Heston PDE 中，乘以 $2\tau$，并将共同项按 $\sqrt{\tau}$ 和 $\tau$ 归类，得到：
@@ -7436,21 +7639,17 @@ $P_n(\theta,v) = p_n^p(\theta,v)\Phi(\theta) + q_n^q(\theta,v)\Phi(\theta). (8.6
 
 我们需要通过链式法则得到 $P_n(\theta,v)$ 的以下导数：
 
-
-
-
-
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
 注意，方程 (8.65) 和 (8.66) 的齐次部分与 Black-Scholes 情况相同，将这两部分结合就得到了上一节中的方程 (8.48)。
 
-方程 (8.65) 和 (8.66) 构成了需要求解的方程组，其求解方法类似于求解 (8.50) 中 Black-Scholes 美式看跌期权的两个方程的方法。对于每个 $\pi_n$，在所有其他量已知的情况下，求解 (8.65) 中的 PDE 以得到 $p_n^a$。同样，在所有其他量已知的情况下，求解 (8.66) 中的 PDE 以得到 $q_n^a$。多项式 $p_n^a$ 和 $q_n^a$ 通过递归获得，分别与表 8.1 和 8.2 中的项相同。多项式 $p_n^*$ 与 (8.46) 中的相同，为了方便起见，在此重新构建。
+方程 (8.65) 和 (8.66) 构成了需要求解的方程组，其求解方法类似于求解 (8.50) 中 Black-Scholes 美式看跌期权的两个方程的方法。对于每个 $\pi_n$，在所有其他量已知的情况下，求解 (8.65) 中的 PDE 以得到 `p_n^a`。同样，在所有其他量已知的情况下，求解 (8.66) 中的 PDE 以得到 `q_n^a`。多项式 `p_n^a` 和 `q_n^a` 通过递归获得，分别与表 8.1 和 8.2 中的项相同。多项式 `p_n^*` 与 (8.46) 中的相同，为了方便起见，在此重新构建。
 
 ```
 $p_n^\theta(\theta, v) = \pi_n^\theta + \pi_n^{\theta-2} + \pi_n^{\theta-4} + \dots \quad (8.67)$
 ```
 
-另一方面，多项式 $q_n^\theta$ 现在采用以下形式：
+另一方面，多项式 `q_n^\theta` 现在采用以下形式：
 
 ```
 $q_n^\theta(\theta, v) = x_{n1}^1\theta^{3n-5} + x_{n2}^2\theta^{3n-7} + x_{n3}^3\theta^{3n-9} + x_{n4}^4\theta^{3n-11} + \dots \quad (0.68)$
@@ -7459,44 +7658,44 @@ $q_n^\theta(\theta, v) = x_{n1}^1\theta^{3n-5} + x_{n2}^2\theta^{3n-7} + x_{n3}^
 例如：
 
 ```
-$q_4^a = x_{41}^1\theta^{10} + x_{42}^2\theta^8 + x_{43}^3\theta^6 + x_{44}^4\theta^4,
+$q_4^a = x_{41}^1\theta^{10} + x_{42}^2\theta^8 + x_{43}^3\theta^6 + x_{44}^4\theta^4,$
 q_5^a = x_{51}^1\theta^{12} + x_{52}^2\theta^{10} + x_{53}^3\theta^8 + x_{54}^4\theta^6 + x_{55}^5\theta^2.$
 ```
 
-一旦获得了多项式 $p_n^a$、$q_n^a$ 和 $q_n^\theta$，就可以通过在 $\theta = y$ 处评估方程 (8.55) 并对 $\exp(\sqrt{v}y)$ 代入泰勒级数展开来构造系数 $C_n(v)$。在两边消去 $\tau^{n/2}$ 后，产生方程，并很容易求出 $C_n$：
+一旦获得了多项式 `p_n^a`、`q_n^a` 和 `q_n^\theta`，就可以通过在 $\theta = y$ 处评估方程 (8.55) 并对 $\exp(\sqrt{v}y)$ 代入泰勒级数展开来构造系数 `C_n(v)`。在两边消去 $\tau^{n/2}$ 后，产生方程，并很容易求出 `C_n`：
 
 ```
 $C_n(v)[p_n^a(y)\Phi_0 + q_n^a(y)\Phi_0] + p_n^\theta(y,v)\Phi_0 + q_n^\theta(y,v)\Phi_0 = \frac{(-1)^{n+1}K}{n!}\tau^{n/2}y^n. \quad (8.69)$
 ```
 
-在 Black-Scholes 情况，系数 $C_n$ 在 $\theta = y$ 处取值。为了获得美式看跌期权价格 $P(\theta, \tau, v)$，我们首先找到多项式 $p_n^0$、$q_n^0、p_n^*$ 和 $q_n^*$ 以及系数 $C_n(v)$。然后我们找到障碍值 $\tilde{y}$：
+在 Black-Scholes 情况，系数 `C_n` 在 $\theta = y$ 处取值。为了获得美式看跌期权价格 `P(\theta, \tau, v)`，我们首先找到多项式 `p_n^0`、`q_n^0、p_n^*` 和 `q_n^*` 以及系数 `C_n(v)`。然后我们找到障碍值 `\tilde{y}`：
 
 ```
 $\tilde{y} = \arg\max_{y\geq 0} P(\theta, \tau, v, y) \quad (8.70)$
 ```
 
-其中 $P(\theta, \tau, v)$ 是方程 (8.54) 中的 $P(\theta, \tau, v)$，但带有额外的参数以强调 $P(\theta, \tau, v)$ 对 $y$ 的依赖性（通过 $C_n$）。由 $p_n^0$、$q_n^0,p_n^*,q_n^*$ 和 $C_n$ 给出的 Medvedev 和 Scailier (2010) 对美式看跌期权价格 $P(\theta, \tau, v)$ 的第一次近似与 Black-Scholes 情况类似。
+其中 `P(\theta, \tau, v)` 是方程 (8.54) 中的 `P(\theta, \tau, v)`，但带有额外的参数以强调 `P(\theta, \tau, v)` 对 `y` 的依赖性（通过 `C_n`）。由 `p_n^0`、`q_n^0,p_n^*,q_n^*` 和 `C_n` 给出的 Medvedev 和 Scailier (2010) 对美式看跌期权价格 `P(\theta, \tau, v)` 的第一次近似与 Black-Scholes 情况类似。
 
 近似 1：
-- 使用 (8.54) 和 $C_n = C_n(v, y)$ 构造 $P(\theta, \tau, v)$。
-- 在 $\tilde{y} \geq \theta$ 的约束下使用 (8.70) 找到 $\tilde{y}$。
-- 在 $P(\theta, \tau, v)$ 中使用 $C_n = C_n(y)$。
+- 使用 (8.54) 和 `C_n = C_n(v, y)` 构造 `P(\theta, \tau, v)`。
+- 在 `\tilde{y} \geq \theta` 的约束下使用 (8.70) 找到 `\tilde{y}`。
+- 在 `P(\theta, \tau, v)` 中使用 `C_n = C_n(y)`。
 
-Medvedev 和 Scailier (2010) 指出，无限障碍 $\tilde{y} = \infty$ 的情况对应欧式看跌期权。他们建议使用解析式（如第 1、3 或 4 章所示）获取美式看跌期权价格，因此他们美式期权的第二次近似是控制价格。
+Medvedev 和 Scailier (2010) 指出，无限障碍 `\tilde{y} = \infty` 的情况对应欧式看跌期权。他们建议使用解析式（如第 1、3 或 4 章所示）获取美式看跌期权价格，因此他们美式期权的第二次近似是控制价格。
 
 近似 2：
-- 使用解析式找到欧式看跌期权价格 $P(K)$。
-- 按照第一次近似找到 $\tilde{y}$。
-- 获取提前行溢价 $\varepsilon = P(\theta, \tau, v, \tilde{y}) - P(\theta, \tau, v, \infty)$。
-- 获取美式看跌期权价格 $P_A(K) = P(K) + \varepsilon$。
+- 使用解析式找到欧式看跌期权价格 `P(K)`。
+- 按照第一次近似找到 `\tilde{y}`。
+- 获取提前行溢价 `\varepsilon = P(\theta, \tau, v, \tilde{y}) - P(\theta, \tau, v, \infty)`。
+- 获取美式看跌期权价格 `P_A(K) = P(K) + \varepsilon`。
 
-我们通过绘制不同 $y$ 值下的 $P(\theta, \tau, v)$ 在图 8.3 中说明方程 (8.70) 中的极大问题，使用了 Carver (1999) 对于价格 8、9和11 的设置。最优值 $\tilde{y}$ 用虚线表示，位于 $y \approx 2$ 附近。曲线已经过缩放。在本节的剩余部分，我们提供了 Heston 模型下 Medvedev 和 Scailier (2010) 美式看跌期权近似的 Matlab 代码。
+我们通过绘制不同 `y` 值下的 `P(\theta, \tau, v)` 在图 8.3 中说明方程 (8.70) 中的极大问题，使用了 Carver (1999) 对于价格 8、9和11 的设置。最优值 `\tilde{y}` 用虚线表示，位于 `y \approx 2` 附近。曲线已经过缩放。在本节的剩余部分，我们提供了 Heston 模型下 Medvedev 和 Scailier (2010) 美式看跌期权近似的 Matlab 代码。
 
 ![](img/bc3df6c26c2730f56b6cf75ef87_0.png)
 
 ## Heston 模型及其扩展
 
-Matlab 函数 `PQHeston` 以上一节中处理 Black-Scholes 模型的 `PQ.m` 函数的方式创建多项式 $p_n, q_n, p_n^a, q_n^a$。它与 `PQ.m` 几乎相同，同样需要来自表 8.1 和 8.2 的 $p_0$ 和 $q_0$ 系数作为输入。
+Matlab 函数 `PQHeston` 以上一节中处理 Black-Scholes 模型的 `PQ.m` 函数的方式创建多项式 `p_n, q_n, p_n^a, q_n^a`。它与 `PQ.m` 几乎相同，同样需要来自表 8.1 和 8.2 的 `p0` 和 `q0` 系数作为输入。
 
 ```matlab
 function [p0 q0 pn qn] = PQHeston(n,N,p0,q0)
@@ -7512,9 +7711,9 @@ pn = dot(pp(n),theta);
 qn = dot(qq(n),theta);
 ```
 
-`PQHeston.m` 函数用于 `GeneratePQHeston.m` 文件。该文件类似于上一节出的 Black-Scholes 模型 `GeneratePQ.m` 文件。代码通过求解方程 (8.65) 和 (8.66) 生成多项式 $p_n^a$ 和 $q_n^a$ 的符号表示，并通过求解 (8.69) 生成系数 $C_n$。对于每个 $n$，代码的工作方式与 Black-Scholes 情况相同：使用 `PQHeston.m` 函数生成多项式的符号表示，形成两个 PDE，收集 $\theta$ 幂次的共同项，并求解 $p_n^*, q_n^*$ 和 $C_n$。这需要将 `collect.m` 函数的输出剪切并粘贴到 Matlab 文件 `GeneratePQHeston.m` 中。
+`PQHeston.m` 函数用于 `GeneratePQHeston.m` 文件。该文件类似于上一节出的 Black-Scholes 模型 `GeneratePQ.m` 文件。代码通过求解方程 (8.65) 和 (8.66) 生成多项式 `p_n^a` 和 `q_n^a` 的符号表示，并通过求解 (8.69) 生成系数 `C_n`。对于每个 `n`，代码的工作方式与 Black-Scholes 情况相同：使用 `PQHeston.m` 函数生成多项式的符号表示，形成两个 PDE，收集 `\theta` 幂次的共同项，并求解 `p_n^*, q_n^*` 和 `C_n`。这需要将 `collect.m` 函数的输出剪切并粘贴到 Matlab 文件 `GeneratePQHeston.m` 中。
 
-为了说明，展示了 `GeneratePQHeston` 中 $n=4$ 部分。代码的第一部分使用 `PQHeston.m` 函数生成多项式 $p_n^a$ 和 $q_n^a$ 的符号表示，还生成了多项式所需的阶、二阶导数。
+为了说明，展示了 `GeneratePQHeston` 中 `n=4` 部分。代码的第一部分使用 `PQHeston.m` 函数生成多项式 `p_n^a` 和 `q_n^a` 的符号表示，还生成了多项式所需的阶、二阶导数。
 
 ```matlab
 n = 4;
@@ -7526,7 +7725,7 @@ qin_1 = diff(q1_theta,theta); % q(n-1) 对 theta 的导数
 d2plivt_1 = diff(dp1_1,v);
 ```
 
-代码的第二部分设置 $C_{n-1} = C_1$ 和 $C_{n-2} = C_2$，通过 (8.67) 得到第一个 PDE，并通过 `collect.m` 函数收集 $\theta$ 的幂次项，求解 $p_n^*, q_n^*$ 和 $C_n根据 (8.68) 求解 $C_n$。
+代码的第二部分设置 `C_{n-1} = C_1` 和 `C_{n-2} = C_2`，通过 (8.67) 得到第一个 PDE，并通过 `collect.m` 函数收集 `\theta` 的幂次项，求解 `p_n^*, q_n^*` 和 `C_n根据 (8.68) 求解 C_n`。
 
 ```matlab
 Cn_1 = C1;
@@ -7541,7 +7740,7 @@ pi42 = solve('(rho*sigma/v (1/2)',pi42);
 p14 = pi41*theta^2 + pi42;
 ```
 
-同样，代码的后续部分定义第二个 PDE 并扩展 $\theta$。通过 `collect.m` 函数收集这些项以求出 $x_{41}^s, x_{42}^s$，且 $q_4^s$ 形成为 $q_{41}^s(\theta, v) = x_{41}^7+x_{42}^5+x_{43}^3+x_{44}^0$，符合 (8.68)。
+同样，代码的后续部分定义第二个 PDE 并扩展 `\theta`。通过 `collect.m` 函数收集这些项以求出 `x_{41}^s, x_{42}^s`，且 `q_4^s` 形成为 `q_{41}^s(\theta, v) = x_{41}^7+x_{42}^5+x_{43}^3+x_{44}^0`，符合 (8.68)。
 
 ```matlab
 syms q41 q42 q43 q44
@@ -7554,7 +7753,7 @@ q44 = solve('(6*q44+3/4*sigma^2/v)',q44);
 q14 = q41*theta^7+q42*theta^5+q43*theta^3+q44*theta;
 ```
 
-$n=4$ 的代码最后部分使用 $p_0^s, p_4^s$ 和 $q_4^s$ 来获得系数 $C_4$，符合 (8.69)。注意代码使用 `subs.m` 函数替换了 $\theta$。
+`n=4` 的代码最后部分使用 `p_0^s, p_4^s` 和 `q_4^s` 来获得系数 `C_4`，符合 (8.69)。注意代码使用 `subs.m` 函数替换了 `\theta`。
 
 ```matlab
 syms C4
@@ -7566,10 +7765,9 @@ C4 = subs(C4, theta, y);
 
 `GenerateQHeston.m` 文件中的代码生成到 n=5 的多项式和系数。这些量的表达式被省略。
 
-
 并从 Matlab 输出屏幕到函数 `MSputHeston.m`，该函数与定价章节中定义的 `MSputBS.m` 函数类似，后者用于在 Black-Scholes 模型下对美式看跌期权。该函数可以容纳高达五阶的展开，也可以将其减少到三阶或四阶以缩短计算时间。
 
-```mat
+```matlab
 function Price = MSputHeston(y,theta, K,params, r, q, T,NumTerms)
 cdf = normcdf(y)
 pdf = normpdf(y)
@@ -7609,21 +7807,35 @@ Price = Price + (C4*(p04*cdf+q04*pdf)+p14*cdf
 + q15*pdf)*T^(5/2));
 ```
 
+
+
 Matlab 函数 `MSPrice.m` 返回了 Medvedev 和 Scaillet (2010) 对美式看跌期权回的第二次近似。该近似利用展开来寻找提前行权溢价（EEP），并根据提前行权溢价的闭式解获得的看跌期权价格作为美式期权价格。使用内置的 Matlab 单变量边界优化函数 `fminbd.m` 来从方程 (8.70) 寻找 $\hat{y}$，使用 `max($\theta,2,3)` 作为边界。
 
-```mat
+```matlab
 function [EuroPutClosed AmerPutMS AmerPut EEP the y] = MSPrice(...);
+
 // 闭式欧式看跌期权
+
 EuroPutClosed = HestonPriceNewtonCoates('P',...);
+
 // 寻找边界水平 y
+
 theta = max(2,theta);
+
 lo = max(Strike(S)/sqrt(v0)/sqrt(T));
+
 fminbd(@p MSHeston(p,...,NumTerms),lo,3);
+
 // 使用 MS 展开计算欧式和美式看跌期权以及提前行权溢价
+
 EuroPutMS = MSPutHeston(y,...,NumTerms);
+
 AmerPutMS = MSPutHeston(y, ...NumTerms);
+
 EEP = AmerPutMS EuroPutMS;
+
 // 使用近似 2 计算美式期权项
+
 AmerPut = EuroPutClosed + EEP;
 ```
 
@@ -7692,10 +7904,6 @@ end
 相比显式法或二叉树，但它比其他方法生成价格快得多。
 
 ### 美式期权
-
-
-
-
 
 ### 美式期权
 
@@ -7766,9 +7974,6 @@ $$C(x_0, v_0, \tau) = C(x_0, v_0, \tau) + V(x_0, v_0, \tau)$$
 
 计算欧式期权的积分时，我们使用标准方法。计算美式期权的积分时，我们使用行权溢价公式。（实现细节见代码部分）。
 
-
-
-
 使用 Chiarella 和 Ziogas (2006) 方法计算美式看涨权的 C# 代码简单，但此处未给出。
 
 ## 估计提前行权边界
@@ -7823,61 +8028,107 @@ function b = CZNewton(v0, v1, b0, B1, gNum,...)
   B = mat;
 % Newton's method
   while abs(diff) > tol
-    if gNum == 1
-      % 第一组函数和导数
-      [CallAi] = CZAmerCall(exp(B + b*v0),B0,b);
-      g0 = (logCall1 + K) - B0/v0 - b;
-      CallA1 = CZAmerCall(exp(B + b*v0),B0,b);
-      g = (logCall1 + K) - B0/v0 - b;
-      CallA1 = CZAmerCall(exp(B + b*v0),B0,b);
-      g = (logCall1 + K) - B0/v0 - b;
-
-% 第二组导数
-      CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
-      g0 = (logCallA0 + K) - B1/v1 - b;
-      CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
-      g = (logCallA0 + K) - B1/v1 - b;
-      CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
-      g = (logCallA0 + K) - B1/v1 - b;
-
-% 有限差分导数
-      dg = (g - g)/2;
-% 牛顿法
-      b_new = b - b0/dg;
-      diff = b - b_new;
 ```
 
-`findb` 函数遍历时间步，并在每个时间步调整迭代过程到 $g_0$ 和 $g_1$。它返回对于 $n = 0,\dots,N$ 的向量 $b^n$ 和 $b_i^n$。
+
+
+```matlab
+if gNum == 1
+
+  % 第一组函数和导数
+
+  [CallAi] = CZAmerCall(exp(B + b*v0),B0,b);
+
+  g0 = (logCall1 + K) - B0/v0 - b;
+
+  CallA1 = CZAmerCall(exp(B + b*v0),B0,b);
+
+  g = (logCall1 + K) - B0/v0 - b;
+
+  CallA1 = CZAmerCall(exp(B + b*v0),B0,b);
+
+  g = (logCall1 + K) - B0/v0 - b;
+
+% 第二组导数
+
+  CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
+
+  g0 = (logCallA0 + K) - B1/v1 - b;
+
+  CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
+
+  g = (logCallA0 + K) - B1/v1 - b;
+
+  CallA0 = CZAmerCall(exp(B + b*v1),B1,b);
+
+  g = (logCallA0 + K) - B1/v1 - b;
+
+% 有限差分导数
+
+  dg = (g - g)/2;
+
+% 牛顿法
+
+  b_new = b - b0/dg;
+
+  diff = b - b_new;
+
+```
+`findb` 函数遍历时间步，并在每个时间步调整迭代过程到 `$g_0$` 和 `$g_1$`。它返回对于 `n = 0,\dots,N` 的向量 `b^n` 和 `b_i^n`。
 
 ```matlab
 function [b0] = findb(a,b,c,d,DoubleType)
+
 % 方差的条件期望和时间增量
+
 EV = (Vt,theta,kappa,t) (theta + (Vt - theta) * ...
+
 ddtau = ddtau;
+
 tau = tau/d;
+
 for n=2:N
+
   % 到期
+
   mat = n*ddtau;
+
   Evt = Ev + sigma/sqrt(kappa*tau);
+
   v0(n) = Ev - sigma/sqrt(kappa*tau);
+
   v1(n) = Ev - sigma/sqrt(kappa*tau);
+
   % 牛顿法的起始值
+
   b0k = b0(n-1);
+
   b1k = b1(n-1);
+
    设置计数器和初始差
+
   diff0 = 1*tol;
+
   diff1 = 1*tol;
+
 % 循环直到牛顿法返回 bk 和 bk
+
   while (diff0>tol) && (diff1>tol)
+
     b1k = CZNewton(v0(n),v1(n),b1k,B1,1,...);
+
     b0k = CZNewton(v0(n),v1(n),b0k,B1,0,...);
+
     diff0 = abs(b0k - b0k);
+
     diff1 = abs(b1k - b1k);
+
   end
+
 end
 ```
 
-C# 代码非常相似，但此处未给出。为了说明，我们使用设置 $S=100$，到期时间为3个月，$r=0.01，$q=0.12$，以及参数值 $\kappa=4$，$\theta=0.9$，$\sigma=0.1，$v_0=0.04$。`findb.m` 函数返回 $b_1(t)=4.7237，$b_0(t)=1.674$，使用这些值定价的美式看涨权为3.6256，这小于显式法产生的 3.7301。Heston (1993) 的欧式看跌权价格为3.5058。
+C# 代码非常相似，但此处未给出。为了说明，我们使用设置 `S=100`，到期时间为3个月，`r=0.01`，`q=0.12`，以及参数值 `κ=4`，`θ=0.9`，`σ=0.1`，`v_0=0.04`。`findb.m` 函数返回 `b_1(t)=4.7237`，`b_0(t)=1.674`，使用这些值定价的美式看涨权为3.6256，这小于显式法产生的 3.7301。Heston (1993) 的欧式看跌权价格为3.5058。
 
 在本章中，我们介绍了几种美式期权定价的方法。最小二乘蒙特卡洛 (LSM) 算法也可此类模型，将在第12章中展示，Christoffersen等人 (2009) 的双Heston 模型也是如此。显式法将在第10章介绍，也可以很容易地用于处理美式期权。
 
@@ -7889,13 +8140,13 @@ Heston 模型有时无法很好地拟合短期隐含波动率。解决这一问�
 
 ### Riccati 方程的推广
 
-回想第1章，$D(\phi, \tau)$ 的 Riccati 方程通解为：
+回想第1章，`D(φ, τ)` 的 Riccati 方程通解为：
 
 ```
 $D(\phi, \tau) = \frac{2}{\sigma^2}\frac{K_ie^{\phi_i\tau} + \beta_ie^{\tau}}{K_i + e^{\phi_i\tau}}$
 ```
 
-同样记得初始条件 $D_i(\phi,0)=0$ 在到期 $\tau=0$ 时产生 $K_i=-\beta_i/\alpha_i$，且 $D_j$ 的解为：
+同样记得初始条件 `D_i(φ,0)=0` 在到期 `τ=0` 时产生 `K_i=-β_i/α_i`，且 `D_j` 的解为：
 
 ```
 $D_j(\phi, \tau) = \frac{1}{\sigma^2}\frac{b_j - \rho_j\phi + d_j}{1 - e^{\phi_j\tau}}$
@@ -7907,131 +8158,130 @@ $D_j(\phi, \tau) = \frac{1}{\sigma^2}\frac{b_j - \rho_j\phi + d_j}{1 - e^{\phi_j
 $d_i = \sqrt{(\rho_i\phi - b_i)^2 - \sigma^2(2u_i\phi - \phi^2)}, \quad g_i = \frac{b_i - \rho_i\phi + d_i}{b_i - \rho_i\phi - d_i} = \frac{\beta_i}{\alpha_i}$
 ```
 
-
-
-
 # 264 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
-同样，$C_i(\phi, \tau)$ 的通用解为：
+同样，`C_i(φ, τ)` 的通用解为：
 
 ```
-$C_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{d_i} \left( \frac{O_i+d_i}{\sigma_i^2} \right)^{\exp(d_i, \tau)} \left( \frac{1-x}{1-g_ix} \right)^{\frac{1}{x}}dx + k_i \quad (9.4)
+$C_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{d_i} \left( \frac{O_i+d_i}{\sigma_i^2} \right)^{\exp(d_i, \tau)} \left( \frac{1-x}{1-g_ix} \right)^{\frac{1}{x}}dx + k_i \quad (9.4)$
 ```
 
-对于常数 $k_i$。初始条件 $C_i(\phi, 0) = 0$ 产生 $k_i = 0$，且 $C_i(\phi, \tau)$ 的解为：
+对于常数 `k_i`。初始条件 `C_i(φ, 0) = 0` 产生 `k_i = 0`，且 `C_i(φ, τ)` 的解为：
 
 ```
-$C_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{\sigma_i^2} \left[ (b_i - \rho\sigma\phi + d_i)\tau - 2\ln \left( \frac{1-g_ie^{d_i\tau}}{1-g_i} \right) \right] \quad (9.5)
+$C_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{\sigma_i^2} \left[ (b_i - \rho\sigma\phi + d_i)\tau - 2\ln \left( \frac{1-g_ie^{d_i\tau}}{1-g_i} \right) \right] \quad (9.5)$
 ```
 
-假设我们使用的不是是 $C_i(\phi, 0) = D_i(\phi, 0) = 0$，而是通用的非零初始条件：
+假设我们使用的不是是 `C_i(φ, 0) = D_i(φ, 0) = 0`，而是通用的非零初始条件：
 
 ```
-$C_i(\phi, 0) = C_i^0, \quad D_i(\phi, 0) = D_i^0. \quad (9.6)
+$C_i(\phi, 0) = C_i^0, \quad D_i(\phi, 0) = D_i^0. \quad (9.6)$
 ```
 
-这种泛化由 Mikhailov 和 Nögel (2003) 给出说明，通过在方程 (9.1) 中令 $\tau=0$，将结果等于初始条件 $D_i^0$，并解出 $K_i$：
+这种泛化由 Mikhailov 和 Nögel (2003) 给出说明，通过在方程 (9.1) 中令 `τ=0`，将结果等于初始条件 `D_i^0`，并解出 `K_i`：
 
 ```
-$\tilde{K}_i = -\hat{K}_i = \begin{cases} \frac{2b_i + D_i\sigma^2}{2\alpha_i + D_i^2} \ \frac{b_i - \rho\sigma\phi + d_i - D_i^0\sigma^2}{b_i - \rho\sigma\phi - d_i} \end{cases} \quad (9.7)
+$\tilde{K}_i = -\hat{K}_i = \begin{cases} \frac{2b_i + D_i\sigma^2}{2\alpha_i + D_i^2} \ \frac{b_i - \rho\sigma\phi + d_i - D_i^0\sigma^2}{b_i - \rho\sigma\phi - d_i} \end{cases} \quad (9.7)$
 ```
 
-现在定义 $\hat{g}_i$。将 $\hat{K}_i$ 代回 (9.1)，很容易看出 $D_i(\phi, \tau)$ 的解满足 (9.6) 中的非零初始条件：
+现在定义 `$\hat{g}_i$`。将 `$\hat{K}_i$` 代回 (9.1)，很容易看出 `D_i(φ, τ)` 的解满足 (9.6) 中的非零初始条件：
 
 ```
-$\tilde{D}_i(\phi, \tau) = \frac{(b_i - \rho\sigma\phi + d_i) - (b_i - \rho\sigma\phi - d_i)\hat{g}_ie^{d_i\tau}}{\sigma^2(1-\hat{g}_ie^{d_i\tau})} \quad (9.8)
+$\tilde{D}_i(\phi, \tau) = \frac{(b_i - \rho\sigma\phi + d_i) - (b_i - \rho\sigma\phi - d_i)\hat{g}_ie^{d_i\tau}}{\sigma^2(1-\hat{g}_ie^{d_i\tau})} \quad (9.8)$
 ```
 
-符号 $\tilde{D}_i(\phi, \tau)$ 用于区别于它于其时间静态的对应项 $D_i(\phi, \tau)$。通用条件 $C_i(\phi, 0) = C_i^0$ 产生 $k_i = C_i^0$，且 $C_i(\phi, \tau)$ 的解为：
+符号 `$\tilde{D}_i(\phi, \tau)$` 用于区别于它于其时间静态的对应项 `D_i(φ, τ)`。通用条件 `C_i(φ, 0) = C_i^0` 产生 `k_i = C_i^0`，且 `C_i(φ, τ)` 的解为：
 
 ```
-$\tilde{C}_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{\sigma_i^2} \left[ (b_i - \rho\sigma\phi + d_i)\tau - 2\ln \left( \frac{1-\hat{g}_ie^{d_i\tau}}{1-\gamma_i} \right) \right] + C_i^0. \quad (9.9)
+$\tilde{C}_i(\phi, \tau) = (r-q)\phi\tau + \frac{a}{\sigma_i^2} \left[ (b_i - \rho\sigma\phi + d_i)\tau - 2\ln \left( \frac{1-\hat{g}_ie^{d_i\tau}}{1-\gamma_i} \right) \right] + C_i^0. \quad (9.9)$
 ```
 
-注意，$\tilde{C}_i(\phi, \tau)$ 的解与 $C_i(\phi, \tau)$ 相同，仅 $g_i$ 被替换为 $\hat{g}_i$，且 $k_i=0$ 被替换为 $C_i^0$。同样注意在方程 (9.8) 和 (9.9) 中设置 $C_i^0=D_i^0$ 会将 $\tilde{C}_i(\phi, \tau)$ 和 $\tilde{D}_i(\phi, \tau)$ 分别还原为原始的 Heston (1993) 形式 $C_i(\phi, \tau)$ 和 $D_i(\phi, \tau)$。
+注意，`$\tilde{C}_i(\phi, \tau)$` 的解与 `C_i(φ, τ)` 相同，仅 `g_i` 被替换为 `$\hat{g}_i$`，且 `k_i=0` 被替换为 `C_i^0`。同样注意在方程 (9.8) 和 (9.9) 中设置 `C_i^0=D_i^0` 会将 `$\tilde{C}_i(\phi, \tau)$` 和 `$\tilde{D}_i(\phi, \tau)$` 分别还原为原始的 Heston (1993) 形式 `C_i(φ, τ)` 和 `D_i(φ, τ)`。
 
 ## 二元特征函数
 
-在第一章中，已经证明了到期对数资产价格特征函数 $x_T = \ln S_T$ 具有如下形式（为了符号方便，去掉了 $f_j$、$C(\tau, \phi)$ 和 $D_i(\tau, \phi)$ 的下标 $j$）：
+在第一章中，已经证明了到期对数资产价格特征函数 `x_T = ln S_T` 具有如下形式（为了符号方便，去掉了 `f_j`、`C(τ, φ)` 和 `D_i(τ, φ)` 的下标 `j`）：
 
-$f(\tau, x_t, v_t) = \text{E}[exp(i\phi x_t)] = \exp(C(\tau, \phi) + D(\tau, \phi)v_t). \quad (10)$
+`f(τ, x_t, v_t) = E[exp(iφ x_t)] = exp(C(τ, φ) + D(τ, φ)v_t).  (10)`
 
-记得初始条件 $C(0, \phi) = D(0, \phi) = 0$ 用于基于 Riccati 方程寻找 $C(\tau, \phi)$ 和 $D$ 的解析。
+记得初始条件 `C(0, φ) = D(0, φ) = 0` 用于基于 Riccati 方程寻找 `C(τ, φ)` 和 `D` 的解析。
 
-在本节中，推导了联合过程 $(x_t, v_t)$ 的二元特征函数。该函数定义为：
+在本节中，推导了联合过程 `(x_t, v_t)` 的二元特征函数。该函数定义为：
 
-$f(\phi_1, \phi_2; x_t, v_t) = \text{E}[exp(i\phi_1 x_t + i\phi_2 v_t)]. \quad (11)$
+`f(φ1, φ2; x_t, v_t) = E[exp(iφ1 x_t + iφ2 v_t)].  (11)`
 
-Duffie, Pan 和 Singleton (2000) 显示，这类多元仿模型（Heston 模型是特例）的特征函数具有对数线性形式，并且作为 Riccati 方程的解得到。Singleton 用 Heston 模型说明了这在 $(x, v_t)$ 上是仿的。Heston 模型可以用两个布朗运动 $B_{1,t}$ 和 $B_{2,t}$ 写入：
+Duffie, Pan 和 Singleton (2000) 显示，这类多元仿模型（Heston 模型是特例）的特征函数具有对数线性形式，并且作为 Riccati 方程的解得到。Singleton 用 Heston 模型说明了这在 `(x, v_t)` 上是仿的。Heston 模型可以用两个布朗运动 `B_{1,t}` 和 `B_{2,t}` 写入：
 
-$dx_t = \mu(x_t)dt + \sigma(x_t)dB_t. \quad (12)$
-
-其中
-
-$\mu_t = \begin{pmatrix} r - \frac{1}{2}v_t \\ \kappa(\theta - v_t) \end{pmatrix}, \quad \sigma(x_t) = \begin{pmatrix} \sqrt{v_t} & 0 \\ \rho\sqrt{v_t} & \sqrt{(1-\rho^2)v_t} \end{pmatrix}, \quad dB_t = \begin{pmatrix} dB_{1,t} \\ dB_{2,t} \end{pmatrix}. \quad (13)$
-
-Heston 模型中的漂移 $\mu$ 和矩阵 $\sigma^T$ 均可以写入仿形式：
-
-$\mu(x_t) = K_0 + K_1x_t + K_2v_t, \quad \sigma(x_t)^T = H_0 + H_1x_t + H_2v_t. \quad (14)$
+`dx_t = μ(x_t)dt + σ(x_t)dB_t.  (12)`
 
 其中
 
-$K_0 = \begin{pmatrix} r \\ \kappa\theta \end{pmatrix}, \quad K_1 = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad K_2 = \begin{pmatrix} -1/2 \\ -\kappa \end{pmatrix},$
-$H_0 = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, \quad H_2 = \begin{pmatrix} 1 & \rho \\ \rho & 1-\rho^2 \end{pmatrix}.$
+`μ_t = \begin{pmatrix} r - \frac{1}{2}v_t \\ \kappa(\theta - v_t) \end{pmatrix}, \quad σ(x_t) = \begin{pmatrix} \sqrt{v_t} & 0 \\ ρ\sqrt{v_t} & \sqrt{(1-ρ^2)v_t} \end{pmatrix}, \quad dB_t = \begin{pmatrix} dB_{1,t} \\ dB_{2,t} \end{pmatrix}.  (13)`
+
+Heston 模型中的漂移 `μ` 和矩阵 `σ^T` 均可以写入仿形式：
+
+`μ(x_t) = K0 + K1x_t + K2v_t, \quad σ(x_t)^T = H0 + H1x_t + H2v_t.  (14)`
+
+其中
+
+`K0 = \begin{pmatrix} r \\ κθ \end{pmatrix}, \quad K1 = \begin{pmatrix} 0 \\ 0 \end{pmatrix}, \quad K2 = \begin{pmatrix} -1/2 \\ -κ \end{pmatrix},`
+`H0 = \begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, \quad H2 = \begin{pmatrix} 1 & ρ \\ ρ & 1-ρ^2 \end{pmatrix}.`
 
 Duffie, Pan 和 Singleton (2000) 的结果是，特征函数具有对数线性形式：
 
-$f(\phi_1, \phi_2; x_t, v_t) = \exp(A(\tau, \phi_1, \phi_2) + B(\tau, \phi_1, \phi_2)x_t + C(\tau, \phi_1, \phi_2)v_t) \quad (15)$
+`f(φ1, φ2; x_t, v_t) = exp(A(τ, φ1, φ2) + B(τ, φ1, φ2)x_t + C(τ, φ1, φ2)v_t)  (15)`
 
-其中 $\tau = T - t$ 是到到期的时间。此外，特征函数的系数可以通过求解 Riccati 方程组得到：
-
-```
-$\frac{\partial A}{\partial t} = -K_0^T\beta - \frac{1}{2}\beta^T H_0$
-$\frac{\partial B}{\partial t} = -K_1^T\beta - \frac{1}{2}\beta^T H_1$
-$\frac{\partial C}{\partial t} = -K_2^T\beta - \frac{1}{2}\beta^T H_2$
-```
-
-受边界条件 $B(0) = i\phi_1,C(0) = i\phi_2$ 和 $A(0) = 0$，其中 $\beta = (B, C)^T$ 约束。代入后产生微分方程组：
+其中 `τ = T - t` 是到到期的时间。此外，特征函数的系数可以通过求解 Riccati 方程组得到：
 
 ```
-$\frac{\partial A}{\partial t} = rB + \kappa C$
-$\frac{\partial B}{\partial t} = 0$
-$\frac{\partial C}{\partial t} = -\frac{1}{2}\sigma^2 C - (\rho\sigma B - \kappa)C - \frac{1}{2}B^2$
+∂A/∂t = -K0^Tβ - 1/2 β^T H0
+∂B/∂t = -K1^Tβ - 1/2 β^T H1
+∂C/∂t = -K2^Tβ - 1/2 β^T H2
 ```
 
-对于 Heston 模型，直接不使用 Duffie, Pan 和 Singleton (2000) 找到 (17) 中的方程及其边界条件是简单的。首先，注意在单变量情况下，到期时 $(\tau=0)$ 方程 (11) 中的期望出现，因为 $(x_T, v_T)$ 是已知的。因此，在到期时，15) 中的 $f(\phi_1, \phi_2; x, v)$ 必须等于：
+受边界条件 `B(0) = iφ1,C(0) = iφ2` 和 `A(0) = 0`，其中 `β = (B, C)^T` 约束。代入后产生微分方程组：
 
 ```
-$f(\phi_1, \phi_2; x, v) = \exp(i\phi_1 x_T + i\phi_2 v_T). \quad (18)$
+∂A/∂t = rB + κC
+∂B/∂t = 0
+∂C/∂t = -1/2 σ^2 C - (ρσ B - κ)C - 1/2 B^2
+```
+
+对于 Heston 模型，直接不使用 Duffie, Pan 和 Singleton (2000) 找到 (17) 中的方程及其边界条件是简单的。首先，注意在单变量情况下，到期时 `(τ=0)` 方程 (11) 中的期望出现，因为 `(x_T, v_T)` 是已知的。因此，在到期时，15) 中的 `f(φ1, φ2; x, v)` 必须等于：
+
+```
+f(φ1, φ2; x, v) = exp(iφ1 x_T + iφ2 v_T).  (18)
 ```
 
 这意味着以下初始条件：
 
 ```
-$A(0, \phi_1, \phi_2) = 0, B(0, \phi_1, \phi_2) = i\phi_1, C(0, \phi_1, \phi_2) = i\phi_2. \quad (19)$
+A(0, φ1, φ2) = 0, B(0, φ1, φ2) = iφ1, C(0, φ1, φ2) = iφ2.  (19)
 ```
 
-回想第一章中第二个特征函数 $f_2$ 的偏微分方程 (PDE)，我们将其简记为 $f$：
+回想第一章中第二个特征函数 `f2` 的偏微分方程 (PDE)，我们将其简记为 `f`：
 
 ```
-$\frac{\partial f}{\partial \tau}+\rho\sigma v\frac{\partial f}{\partial x}+\frac{1}{2}\frac{\partial^2 f}{\partial x^2}+\frac{1}{2}\sigma^2 v^2\frac{\partial^2 f}{\partial v^2}+\left(-\frac{1}{2}v\right)\frac{\partial f}{\partial x}+\kappa(\theta-v)\frac{\partial f}{\partial v} = 0. \quad (20)$
+∂f/∂τ + ρσ v ∂f/∂x + 1/2 ∂²f/∂x² + 1/2 σ² v² ∂²f/∂v² + (-1/2 v) ∂f/∂x + κ(θ-v) ∂f/∂v = 0.  (20)
 ```
 
-注意我们代入了 $u_2 = -1/2, a = \kappa\theta$， 以及 $b_2 = \kappa + \lambda$，其中 $\lambda = 0$。(20) 中的 PDE 是二元特征函数。我们按照第一章的方法，通过将 (15) 中的 $f(\phi_1, \phi_2; x, v)$ 代入 (20) 并对 $\tau$ 求导，消去两侧的 $f$，从而得到：
+注意我们代入了 `u2 = -1/2, a = κθ`， 以及 `b2 = κ + λ`，其中 `λ = 0`。(20) 中的 PDE 是二元特征函数。我们按照第一章的方法，通过将 (15) 中的 `f(φ1, φ2; x, v)` 代入 (20) 并对 `τ` 求导，消去两侧的 `f`，从而得到：
 
 ```
-$\frac{\partial A}{\partial t} = -K_0^T\beta - \frac{1}{2}\beta^T H_0$
-$\frac{\partial B}{\partial t} = -K_1^T\beta - \frac{1}{2}\beta^T H_1$
-$\frac{\partial C}{\partial t} = -K_2^T\beta - \frac{1}{2}\beta^T H_2$
+∂A/∂t = -K0^Tβ - 1/2 β^T H0
+∂B/∂t = -K1^Tβ - 1/2 β^T H1
+∂C/∂t = -K2^Tβ - 1/2 β^T H2
 ```
 
-受边界条件 $B(0) = i\phi_1, C(0) = i\phi_2$ 和 $A(0) = 0$ 约束，其中 $\beta = (B, C)^T$。代入后，产生微分方程组：
+受边界条件 `B(0) = iφ1, C(0) = iφ2` 和 `A(0) = 0` 约束，其中 `β = (B, C)^T`。代入后，产生微分方程组：
 
 ```
-$\frac{\partial A}{\partial t} = rB + \kappa C$
-$\frac{\partial B}{\partial t} = 0$
-$\frac{\partial C}{\partial t} = -\frac{1}{2}\sigma^2 C - (\rho\sigma B - \kappa)C - \frac{1}{2}B^2$
+∂A/∂t = rB + κC
+∂B/∂t = 0
+∂C/∂t = -1/2 σ² C - (ρσ B - κ)C - 1/2 B²
 ```
+
+
 
 对于 Heston 模型，直接找到 (17) 中的方程及其边界条件是简单的，不需要使用 Duffie, Pan 和 Singleton (2000)。首先，注意在单变量情况下，到期时 $(\tau=0)$ 方程 (11) 中的期望值出现，因为 $(x_T, v_T)$ 是已知的。因此，在到期时，15) 中的 $f(\phi_1, \phi_2; x, v)$ 必须等于：
 
@@ -8045,11 +8295,7 @@ $f(\phi_1, \phi_2; x, v) = \exp(i\phi_1 x_T + i\phi_2 v_T). \quad (18)$
 $A(0, \phi_1, \phi_2) = 0, B(0, \phi_1, \phi_2) = i\phi_1, C(0, \phi_1, \phi_2) = i\phi_2. \quad (19)$
 ```
 
-
-
-
-
-# 268 MATLAB 和 C# 中的 HESTON 模型及其扩展
+# 268 MATLAB 和 C# 中的 Heston 模型及其扩展
 
 这是不同的。因此，为了在双元特征函数中求解 $v_t$ 系数，我们首先在方程 (9.1) 的通用解中设置 $\tau=0$ 并令 $C(0,\phi_1,\phi_2) = i\phi_2$，得到：
 
@@ -8089,9 +8335,9 @@ $A(\tau,\phi_1,\phi_2) = (r-q)i\phi_1\tau+\frac{\kappa\theta}{\sigma^2}\left[(\k
 
 最后，我们注意到 $A(\tau,\phi_1,\phi_2)$ 等于方程 (9.9) 中的 $\widetilde{C}_1(\phi,\tau)$，但 $C_0^i=0$ 且 $D_0^i=i\phi_2$。
 
-# 随时间变化的 Heston 模型
+## 随时间变化的 Heston 模型
 
-# 关联双元特征函数与通用 Riccati 方程
+### 关联双元特征函数与通用 Riccati 方程
 
 Heston 模型中 $x_\tau$ 的单元特征函数为方程 (9.10)：
 
@@ -8151,10 +8397,6 @@ if trap=1
 
 该模型通过允许参数分段常数在 Heston 模型中引入了依赖性。该模型使用了之前章节介绍的 Riccati 方程通用解。我们标记特征函数的系数为 $\tilde{C}_i(\phi,\tau)$ 和 $\tilde{D}_i(\phi,\tau)$。假设有 $0 < T_1 < T_2 < \dots < T_N$。将时间轴 $[0, T_N]$ 分为到期间隔 $\tau_1, \tau_2, \dots, \tau_N$，其中 $\tau_k = T_k - T_{k-1}$（对于 $k=2, \dots, N$），$\tau_1 = T_1$。其目的是获得 $\tilde{C}_i, \tilde{D}_i$。在第一次估计中，使用初始条件 $C^0=0$ 和 $D^0=0$（如 Heston 模型所示）得到 $\tilde{C}_1(\phi,\tau_1,\Theta)$ 和 $\tilde{D}_1(\phi,\tau_1,\Theta)$，对应第一个到期日 $\tau_1$。由此产生了第一组参数 $\Theta_1 = (\kappa^{(1)},\theta^{(1)},\sigma^{(1)},\rho^{(1)})$。在随后的步骤中，通过使用 $C^i=0$ 和 $D^i=0$ 来修改估计。此外，在第二次估计中，将 $\Theta_1$ 代入 $\tilde{C}_i, \tilde{D}_i$ 的表达式中，产生第二组初始条件 $C^1$ 和 $D^1$。
 
-
-
-
-
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
 $v_{0}^{(1)}, \rho^{(1)}$ 是到期期限 $\tau_1$ 的参数估计集。在第一步中，$\Theta$ 的估计与普通 Heston 模型的估计相同，使用到期期限 $\tau_1$。
@@ -8179,7 +8421,7 @@ $$f_j(\phi, x, \nu_0) = \exp(\tilde{C}_k(\phi, \tau_k; \Theta_k) + \tilde{D}_j(\
 
 $$f_j(\phi, x, \nu_0) = \exp(\tilde{C}_k(\phi, \tau_k; \Theta_k) + \tilde{D}_j(\phi, \tau_k; \Theta_k)\nu_0 + i\phi x). \quad (9.40)$$
 
-我们使用该特征函数形成概率 $P_1$ 和 $P_2$ 的被积函数，并获得到期期限为 $\tau_k$ 的 Heston 价格。注意步骤 $k \geq 2$ 的估计是针对当前参数集 $\Theta$ 的。来自上迭代的参数集 $\Theta_{k-1}$ 是固定的，并在初始条件 $\tilde{C}_{k-1}$ 和 $D^{k-1}_j$ 中使用。在这里，初始条件不影响 $\Theta$ 的估计；尽管初始条件是当前参数集 $\Theta$，但它们是变量 $\phi$ 的函数。为了积分，初始条件不能视为常量。注意公式 (9.38) 中的 $\tilde{D}_j(\phi, \tau_k; \Theta_k)$ 通过 $\tilde{g}_j$ 依赖于 $D^{k-1}_j$，而 (9.39) 中的 $\tilde{C}_k(\phi, \tau_k; \Theta_k)$ 也通过 $\tilde{g}_j$ 依赖于 $D^{k-1}_j$。MatLAB 函数 MNProb.m 实现了 Mikhailov 和 Noël 的随时间变化的 Heston 模型。它接受之前步骤获得的估计向量，存储在矩阵 `param` 中，最近的估计在顶部，最旧的在底部。它还接受到期期限向量 (tau0)，最近的到期期限在 tau，最旧在底部。该函数返回概率 $P_1$ 和 $P_2$ 的被积函数：
+我们使用该特征函数形成概率 $P_1$ 和 $P_2$ 的被积函数，并获得到期期限为 $\tau_k$ 的 Heston 价格。注意步骤 $k \geq 2$ 的估计是针对当前参数集 $\Theta$ 的。来自上迭代的参数集 $\Theta_{k-1}$ 是固定的，并在初始条件 $\tilde{C}_{k-1}$ 和 $D^{k-1}_j$ 中使用。在这里，初始条件不影响 $\Theta$ 的估计；尽管初始条件是当前参数集 $\Theta$，但它们是变量 $\phi$ 的函数。为了积分，初始条件不能视为常量。注意公式 (9.38) 中的 $\tilde{D}_j(\phi, \tau_k; \Theta_k)$ 通过 $\tilde{g}_j$ 依赖于 $D^{k-1}_j$，而 (9.39) 中的 $\tilde{C}_k(\phi, \tau_k; \Theta_k)$ 也通过 $\tilde{g}_j$ 依赖于 $D^{k-1}_j$。MatLAB 函数 `MNProb.m` 实现了 Mikhailov 和 Noël 的随时间变化的 Heston 模型。它接受之前步骤获得的估计向量，存储在矩阵 `param` 中，最近的估计在顶部，最旧的在底部。它还接受到期期限向量 (tau0)，最近的到期期限在 tau，最旧在底部。该函数返回概率 $P_1$ 和 $P_2$ 的被积函数：
 
 ```matlab
 function y = MNPrf(phi,param0,tau,tau0)
@@ -8203,17 +8445,29 @@ D = Dt(phi,C0,D0);
 end
 % 单一到期期限的 Cj 和 Dj 值
 if N=0
-D0 = 0; C0 = 0;
-else
-D0 = D; C0 = C;
-end
-C = Ct(phi,C0,D0);
-D = Dt(phi,C0,D0);
-f = exp(C + D*v0 + i*phi*x);
-y = real(exp(-i*phi*log(K))*f);
 ```
 
+
+
+`D0 = 0; C0 = 0;`
+
+`else`
+
+`D0 = D; C0 = C;`
+
+`end`
+
+`C = Ct(phi,C0,D0);`
+
+`D = Dt(phi,C0,D0);`
+
+`f = exp(C + D*v0 + i*phi*x);`
+
+`y = real(exp(-i*phi*log(K))*f);`
+
+```
 使用的 MATLAB 函数 Cr.m 和 Dr.m 分别从 (9.38) 构建 $\bar{C}(\phi_i, \tau_i)$ 和 $\bar{D}(\phi_i, \tau_i)$：
+```
 
 ```matlab
 function C = Ct(phi,C0,D0)
@@ -8221,7 +8475,6 @@ d = sqrt(rho*sigma*i*phi + d)^2 - sigma^2;
 g = (b - rho*sigma*i*phi + d - D*sigma^2);
 G = (1 - g*exp(d*T))/(1-g);
 C = (rf-q)*i*phi*T - kappa*theta*sigma^2;
-
 function D = Dt(phi,C0,D0)
 d = sqrt(rho*sigma*i*phi + d)^2 - sigma^2;
 g = (b - rho*sigma*i*phi + d - D*sigma^2);
@@ -8229,7 +8482,7 @@ G = (1 - g*exp(d*T))/(1-g);
 D = ((b - rho*sigma*i*phi)*(1-exp(d*T)) + ...;
 ```
 
-在本节中，我们使用函数来估计 Mikhailov 和 Noël (2003) 模型的时间相关参数。MatLAB 函数 MNObjFun.m 允许分段常数参数，并适应 MSE、RMSE 以及 Christoffersen, H 和 Jacobs (2009) 的代理 IVMSE 三种损失函数。
+在本节中，我们使用函数来估计 Mikhailov 和 Noël (2003) 模型的时间相关参数。`MatLAB` 函数 `MNObjFun.m` 允许分段常数参数，并适应 MSE、RMSE 以及 Christoffersen, H 和 Jacobs (2009) 的代理 IVMSE 三种损失函数。
 
 ## 表 8.1 Mikhailov 和 Nogel (2003) 表 1 的复制
 
@@ -8258,10 +8511,6 @@ end
 y = sum(error);
 ```
 
-
-
-
-
 # 时变性 Heston 模型
 
 **表格 9.2** Mikhailov 和 Nogel (2003) 模型估计值，DIA 数据
@@ -8274,10 +8523,10 @@ y = sum(error);
 | 226 | 1.9887 | 0.0194 | 1.1452 | 0.0837 | -0.5347 | |
 | 所有 | 1.9967 | 0.0942 | 1.2056 | 0.0314 | -0.4695 | $2.02 \times 10^{-5}$ |
 
-我们利用 2012 年 5 月 10 日的琼斯工业平均 ETF (DIA) 看跌期权，说明了 Mikhailov 和 Nogel (2003) 模型中时变参数的估计。现价为 $S = 129.14$，行权价范围从 $K = 124$ 到 $K = 136$，增量为 $1$，共有四个存续期。我们使用以下公式评估估计误差：
+我们利用 2012 年 5 月 10 日的琼斯工业平均 ETF (`DIA`) 看跌期权，说明了 Mikhailov 和 Nogel (2003) 模型中时变参数的估计。现价为 `S = 129.14`，行权价范围从 `K = 124` 到 `K = 136`，增量为 `1`，共有四个存续期。我们使用以下公式评估估计误差：
 
 ```
-$$\frac{1}{\sqrt{N}} \sum_{t,k} (IV_{tk} - IV_{tk}^0)^2 \quad (9.41)
+$$\frac{1}{\sqrt{N}} \sum_{t,k} (IV_{tk} - IV_{tk}^0)^2 \quad (9.41)$$
 ```
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef.png)
@@ -8286,46 +8535,40 @@ $$\frac{1}{\sqrt{N}} \sum_{t,k} (IV_{tk} - IV_{tk}^0)^2 \quad (9.41)
 
 ## MATLAB 中的 Heston 模型及其扩展
 
-其中 $N$ 是用于估计的报价波动率 数量，$IV_{it}$ 是第 $k$ 个行权价的报价波动率，$IV_{it}$ 是使用分段常数参数估计得到的隐含波动率。从时变模型得到的 MSE 和从静态模型得到的 MSE 如表 9.2 所示，并附有估计误差。对于每个存续期，我们在两种模型下拟合了 Heston 模型，这些波动率绘制在图 9.1 中。表格和图形都显示，时变模型比静态模型能很好地拟合市场波动率，尤其是在短期存续期。
+其中 `N` 是用于估计的报价波动率 数量，`IV_{it}` 是第 `k` 个行权价的报价波动率，`IV_{it}` 是使用分段常数参数估计得到的隐含波动率。从时变模型得到的 MSE 和从静态模型得到的 MSE 如表 9.2 所示，并附有估计误差。对于每个存续期，我们在两种模型下拟合了 Heston 模型，这些波动率绘制在图 9.1 中。表格和图形都显示，时变模型比静态模型能很好地拟合市场波动率，尤其是在短期存续期。
 
-Mikhailov 和 Nogel (2003) 的时变模型都对二元特征函数使用递归计算，然而，这种计算在 Kahl 和 Lord (2010) 中描述得更清楚。回顾方程 $(x_t, \nu_t)$：
+Mikhailov 和 Nogel (2003) 的时变模型都对二元特征函数使用递归计算，然而，这种计算在 Kahl 和 Lord (2010) 中描述得更清楚。回顾方程 `(x_t, \nu_t)`：
 
 ```
 $f(\phi_1, \phi_2, \tau, x_t, \nu_t) = E[\exp(i\phi_1 x_t + i\phi_2 \nu_t)|F_t] = \exp(A(\tau, \phi_1, \phi_2) + C(\tau, \phi_1, \phi_2)\nu_t)$
 ```
 
-其中 $\tau = T - t$ 是存续期。在此，已知 $0 < T_1 < T_2 < ... < T_N < \infty$，且时间轴 $[0, T_N]$ 被分为增量 $\tau_1, \tau_2, ..., \tau_N$，其中 $\tau_k = T_k - T_{k-1}$（对于 $k = 2, ..., N$）。定义 $x_t, \nu_t$ 代表在每个 $T_k$ 处评估的状态。Kahl 和 Lord (2010) 通过对 $T_{N-1}$ 处的信息进行条件期望，以获得 $x_N$ 的特征函数：
+其中 `\tau = T - t` 是存续期。在此，已知 `0 < T_1 < T_2 < ... < T_N < \infty`，且时间轴 `[0, T_N]` 被分为增量 `\tau_1, \tau_2, ..., \tau_N`，其中 `\tau_k = T_k - T_{k-1}`（对于 `k = 2, ..., N`）。定义 `x_t, \nu_t` 代表在每个 `T_k` 处评估的状态。Kahl 和 Lord (2010) 通过对 `T_{N-1}` 处的信息进行条件期望，以获得 `x_N` 的特征函数：
 
 ```
-$E[\exp(i\phi_1 x_N)] = E[\exp(i\phi_1 x_N)|F_{N-1}] = E[\exp(i\phi_1 x_{N-1} + i\phi_N^2 \nu_{N-1})] = E[A(\tau_{N-1}, \phi_N, 0) + C(\tau_{N-1}, \phi_N, 0)\nu_{N-1}] \quad (9.43)
+$E[\exp(i\phi_1 x_N)] = E[\exp(i\phi_1 x_N)|F_{N-1}] = E[\exp(i\phi_1 x_{N-1} + i\phi_N^2 \nu_{N-1})] = E[A(\tau_{N-1}, \phi_N, 0) + C(\tau_{N-1}, \phi_N, 0)\nu_{N-1}] \quad (9.43)$
 ```
 
-$\phi_{N-1}^2 = -iC(\tau_{N-1}, \phi_1, 0)$。识别出二元特征函数的第二个参数可以写成这种形式是使递归计算可能的技巧。现在应用期望律以获得 (9.43) 中方程的最后一项，针对 $F_{N-2}$。我们得到：
+`\phi_{N-1}^2 = -iC(\tau_{N-1}, \phi_1, 0)`。识别出二元特征函数的第二个参数可以写成这种形式是使递归计算可能的技巧。现在应用期望律以获得 (9.43) 中方程的最后一项，针对 `F_{N-2}`。我们得到：
 
 ```
 $E[\exp(i\phi_1 x_N)] = \exp(A(\tau_{N-1}, \phi_N, 0))E[E[\exp(i\phi_1 x_{N-1} + i\phi_N^2 \nu_{N-1})|F_{N-2}]]$
 $= \exp(A(\tau_{N-1}, \phi_N, 0) + C(\tau_{N-1}, \phi_N, 0)\nu_{N-1}) \dots$
 （省略此处中间中间)
-
-
 -phi} + \phiphi_phi-1 \phi_phiphiphiphiphiphiphiphiphiphiphiphiphiphiphiphi_phi_phiphiphiphi_N_1_phi_phiphiphi_phiphiphiphiphiphi_phiphiphi_phiphiphi_phi_phiphi_{_{N_0, v_{N-2}$
-
 phi_{N-22 = =iC(\tau_{N-1}, \phi_1, 1)$。以这种方式继续，重复应用迭代期望律，$x_N$ 的特征函数可以写为：
+```
 
 ```
 $f(\phi_1, x_0, v_0) = E[\exp(i\phi_1 x_N)]$
-$= \exp\left(\sum_{k=0}^{N-1} A(\tau_{N-k}, \phi_1, \phi_k^2; \Theta_{N-k})\right)\times \exp(i\phi_1x_0 + C(\tau_1, \phi_1, \phi_1^2; \Theta_1)v_0) \quad (9.44)
+$= \exp\left(\sum_{k=0}^{N-1} A(\tau_{N-k}, \phi_1, \phi_k^2; \Theta_{N-k})\right)\times \exp(i\phi_1x_0 + C(\tau_1, \phi_1, \phi_1^2; \Theta_1)v_0) \quad (9.44)$
 ```
 
 （注：由于原文文本存在部分公式重复和逻辑断裂，译文已根据上下文进行了平滑处理，以确保逻辑连贯。）
 
-
-
-
-
 ## 282 MATLAB 和 C# 中的 Heston 模型及其扩展
 
-Ellices.m 函数使用特征函数生成具有时间依赖参数 Heston 看涨或看跌价格。当前参数存储在向量 `param` 中，来自之前阶段的固定参数存储在矩阵 `paramfixed` 中。
+`Ellices.m` 函数使用特征函数生成具有时间依赖参数 Heston 看涨或看跌价格。当前参数存储在向量 `param` 中，来自之前阶段的固定参数存储在矩阵 `paramfixed` 中。
 
 ```matlab
 function y = ElicesPrice(...,param,paramfixed)
@@ -8351,7 +8594,7 @@ else
 end
 ```
 
-最后，ElicesObjFun.m 函数使用目标函数对时间依赖参数进行损失估计。注意，估计是针对单个到期日进行的，在每个到期步上，该函数仅包含一个针对执行权的循环。
+最后，`ElicesObjFun.m` 函数使用目标函数对时间依赖参数进行损失估计。注意，估计是针对单个到期日进行的，在每个到期步上，该函数仅包含一个针对执行权的循环。
 
 ```matlab
 function y = ElicesObjFun(param,paramfixed,v0,MktPrice,MktIV)
@@ -8381,7 +8624,8 @@ y = sum(error);
 ```
 
 实现 Elices (2009) 时间依赖模型的 C# 代码与 Matlab 代码类似，此处未列出。
-为了说明 Elices (2009) 模型中的分段常数参数估计，我们使用相同的道琼工业平均指数（DJIA）数据为 Mikhailov 和 Noël (2003) 生成表 9.2。该代码通过以下片段完成：第一部分定义了初始值和损失函数，并获得了跨所有到期日的 Heston (1993) 静态参数估计，以便与分段常数估计进行比较。代码使用第一部分的市场数据估计参数 $v_0$。
+
+为了说明 Elices (2009) 模型中的分段常数参数估计，我们使用相同的道琼工业平均指数（DJIA）数据为 Mikhailov 和 Noël (2003) 生成表 9.2。该代码通过以下片段完成：第一部分定义了初始值和损失函数，并获得了跨所有到期日的 Heston (1993) 静态参数估计，以便与分段常数估计进行比较。代码使用第一部分的市场数据估计参数 `v0`。
 
 ```csharp
 // 参数估计，价格和隐含波动率
@@ -8440,16 +8684,18 @@ end
 ## 表 9.3 来自 Elices (2009) 参数估计，DJIA 数据
 
 | 到期日（天） | $\kappa$ | $\theta$ | $\sigma$ | $v_0$ | $\rho$ | 估计误差 |
+
 |---|---|---|---|---|---|---|
+
 | 37 | 5.8947 | 0.0067 | 1.0246 | 0.0341 | -0.2686 | $1.14 \times 10^{-6}$ |
+
 | 72 | 5.3900 | 0.1736 | 3.7798 | 0.0341 | -0.6429 | |
+
 | 135 | 4.1022 | 0.1544 | 5.9139 | 0.0341 | -0.4599 | |
+
 | 226 | 3.7900 | 0.1760 | 5.8142 | 0.0341 | -0.5475 | |
+
 | 全部 | 1.8887 | 0.1065 | 1.4756 | 0.0341 | |
-
-
-
-
 
 # 与时间相关的 Heston 模型
 
@@ -8458,6 +8704,8 @@ end
 ```
 $a_{1,T} = \int_0^T e^{t} \rho_{\sigma}v_{0,j} \left(\int_0^t e^{-u} du\right) dt, \quad (9.51)$
 ```
+
+
 
 ```
 $a_{2,T} = \int_0^T e^{t} \rho_{\sigma}v_{0,j} \left(\int_0^t \rho_{\sigma} \left(e^{-u} du\right)\right) ds, \quad (9.52)$
@@ -8471,16 +8719,16 @@ $b_{0,T} = \int_0^T e^{2t}\sigma_s^2v_{0,j} \left(\int_0^t e^{-k_s} \left(e^{-u}
 $b_{2,T} = \frac{a_{1,T}^2}{2}. \quad (9.54)$
 ```
 
-注意所有参数 $\theta$、$\sigma$ 和 $\rho$ 允许变化；$\kappa$ 假设为常数，而 $v_0$ 是一个未观测的状态变量。
+注意所有参数 `$\theta$`、`$\sigma$` 和 `$\rho$` 允许变化；`$\kappa$` 假设为常数，而 `$v_0$` 是一个未观测的状态变量。
 
 ### 常数参数
 
-如果假设参数为常数，则 $\theta=\theta$，$\sigma=\sigma$ 且 $\rho=\rho$。将这些参数移出积分之外并计算 (9.51) 到 (9.53) 中的积分，得到以下表达式，它们出现在 Benhamou 等人 (2010) 的命题 2.4 中：
+如果假设参数为常数，则 `$\theta=\theta$`，`$\sigma=\sigma$` 且 `$\rho=\rho$`。将这些参数移出积分之外并计算 `(9.51)` 到 `(9.53)` 中的积分，得到以下表达式，它们出现在 Benhamou 等人 (2010) 的命题 2.4 中：
 
 ```
 $a_{1,T} = \frac{\rho\sigma e^{-\kappa T}}{\kappa^2} [V_0 (\kappa T + e^{\kappa T} - 1) + (\kappa T + e^{\kappa T})(\kappa T - 2)]\
 a_{2,T} = \frac{\rho^2\sigma e^{-\kappa T}}{\kappa^3} V_0 (-4\kappa T e^{\kappa T} + 2e^{\kappa T} - 2)\
-b_{0,T} = \frac{\sigma^2 e^{-\kappa T}}{4\kappa^3} [V_0 (-4\kappa T e^{\kappa T} + 2e^{\kappa T} - 2) + \theta (2e^{\kappa T}(\kappa T - 3) + \kappa T (\kappa T + 4))]\
+b_{0,T} = \frac{\sigma^2 e^{-\kappa T}}{4\kappa^3} [V_0 (-4\kappa T e^{\kappa T} + 2e^{\kappa T} - 2) + \theta (2e^{\kappa T}(\kappa T - 3) + \kappa T (\kappa T + 4)))\
 b_{2,T} = \frac{a_{1,T}^2}{2}. \quad (9.55)$
 ```
 
@@ -8490,15 +8738,15 @@ b_{2,T} = \frac{a_{1,T}^2}{2}. \quad (9.55)$
 $v_{0,T} = \theta + (\theta - v_0)e^{-\kappa T}, \quad \hat{w}_T = (v_0 - \theta) \frac{1 - e^{-\kappa T}}{\kappa} + \theta T. \quad (9.56)$
 ```
 
-使得 $\hat{w}_T$ 简化为第 2 章中遇到的形式。为了获得认权价格，将方程 (9.55) 中的系数代入 (9.48)，并使用本章末尾出的 Black-Scholes 衍生品。看权价格通过看跌期权平价获得。
+使得 `$\hat{w}_T$` 简化为第 2 章中遇到的形式。为了获得认权价格，将方程 `(9.55)` 中的系数代入 `(9.48)`，并使用本章末尾出的 Black-Scholes 衍生品。看权价格通过看跌期权平价获得。
 
 正如 Benhamou 等人 (2010) 所述，常数参数下的价格展开等同于 Lewis (2000) 在第 4 章中涵盖的波动率展开。事实上，很容易验证：
 
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
-$a_{1,T}=\sigma_1^2(v, T), a_{2,T}=\sigma_2^2(v, T),$ 且 $b_{0,T}=\sigma^2J_1(v, T)$，并产生了相同的价格。
+`$a_{1,T}=\sigma_1^2(v, T), a_{2,T}=\sigma_2^2(v, T),$` 且 `$b_{0,T}=\sigma^2J_1(v, T)$`，并产生了相同的价格。
 
-Matlab 函数 `BGMAproxPrice.m` 实现了假设常数参数的 Heston 认权 (94) 近似。为了节省空间，省略了函数的某些内容。该函数还通过看跌期权平价返回看权价格。
+Matlab 函数 `BGMAproxPrice.m` 实现了假设常数参数的 Heston 认权 `(94)` 近似。为了节省空间，省略了函数的某些内容。该函数还通过看跌期权平价返回看权价格。
 
 ```matlab
 function y = BGMAproxPrice(params,S,K,rf,q,T,trap,PutCall)
@@ -8520,11 +8768,11 @@ ny = Put - K*exp(-rf*T) + S*exp(-q*T);
 end
 ```
 
-在常数参数下实现模型的 C# 代码非常相似，此处未给出。为了说明，我们在表 9.4 中重现了表 4 和表 3 中的看权价格和隐含波动率（$\kappa=3, \sigma=0.3,$ 且 $\rho=0$）。为了节省空间，表 9.4 仅展示了 $S=100, \theta=0.06$ 和平值（at-the-money）列。对于每一项，隐含波动率和看权价格都是使用带有 32 点 Gauss-Laguerre 积分的闭式 Heston 模型以及方程 (9.48) 中的近似得到的。表 9.4 中的数据与 Benhamou 等人 (2010) 从表 9.3 和 9.4 得到的相同。
+在常数参数下实现模型的 C# 代码非常相似，此处未给出。为了说明，我们在表 9.4 中重现了表 4 和表 3 中的看权价格和隐含波动率（`$\kappa=3, \sigma=0.3,$` 且 `$\rho=0$`）。为了节省空间，表 9.4 仅展示了 `$S=100, \theta=0.06$` 和平值（at-the-money）列。对于每一项，隐含波动率和看权价格都是使用带有 32 点 Gauss-Laguerre 积分的闭式 Heston 模型以及方程 `(9.48)` 中的近似得到的。表 9.4 中的数据与 Benhamou 等人 (2010) 从表 9.3 和 9.4 得到的相同。
 
 # 分段常数参数
 
-假设 $0 < T_1 < T_2 < \dots < T_N < \infty$。Benhamou 等人 (2010) 假设 $\kappa$ 和 $v_0$ 在 $[0, T_N]$ 上常数，$\theta, \sigma$ 和 $\rho$ 在区间 $[T_i, T_{i+1}]$ 上分别具有分段常数值 $\theta_i, \sigma_i$ 和 $\rho_i$。他们通过分离 (9.51) 到 (9.53) 的区域，为价格系数 $a_{1,T}, a_{2,T}$ 和 $b_{0,T}$ 提供了递归表达式。注意表 3 和 4 中的价格是看权而非看跌。感谢 Emmanuel 指出。
+假设 `$0 < T_1 < T_2 < \dots < T_N < \infty$`。Benhamou 等人 (2010) 假设 `$\kappa$` 和 `$v_0$` 在 `[0, T_N]` 上常数，`$\theta, \sigma$` 和 `$\rho$` 在区间 `[T_i, T_{i+1}]` 上分别具有分段常数值 `$\theta_i, \sigma_i$` 和 `$\rho_i$`。他们通过分离 `(9.51)` 到 `(9.53)` 的区域，为价格系数 `$a_{1,T}, a_{2,T}$` 和 `$b_{0,T}$` 提供了递归表达式。注意表 3 和 4 中的价格是看权而非看跌。感谢 Emmanuel 指出。
 
 # 与时间相关的 Heston 模型
 
@@ -8541,45 +8789,41 @@ end
 | 7Y | 25.14 | 25.14 | 5.23 | 5.22 |
 | 10Y | 29.92 | 29.92 | 0.30 | 0.30 |
 
-$(T_i, T_{i+1})$ 和 $(T_j, T_{j+1})$。因此，对于 $a_{T_i,T_{i+1}}$，根据 (9.51) 和 Benhamou 等人 (2010) 的命题 2.5：
+`$(T_i, T_{i+1})$` 和 `$(T_j, T_{j+1})$`。因此，对于 `$a_{T_i,T_{i+1}}$`，根据 `(9.51)` 和 Benhamou 等人 (2010) 的命题 2.5：
 
 ```
 $a_{T_i,T_{i+1}} = \int_{T_i}^{T_{i+1}} e^{t\rho\sigma_{v_{0,t}}} \left(\int_{T_i}^{t} e^{-u} du\right) dt + \int_{T_i}^{T_{i+1}} e^{t\rho\sigma_{v_{0,t}}} \left(\int_{t}^{T_{i+1}} e^{-u} du\right) dt. \quad (9.57)$
 ```
 
-(9.57) 的第二行可以通过将内积分区域 $(t, T_{i+1})$ 分为 $(T_i, t)$ 和 $(t, T_{i+1})$ 来分为两部分：
+`(9.57)` 的第二行可以通过将内积分区域 `$(t, T_{i+1})$` 分为 `$(T_i, t)$` 和 `$(t, T_{i+1})$` 来分为两部分：
 
 ```
 $\int_{T_i}^{t} e^{t\rho\sigma_{v_{0,t}}} \left(\int_{T_i}^{t} e^{-u} du\right) dt + \int_{t}^{T_{i+1}} e^{t\rho\sigma_{v_{0,t}}} \left(\int_{t}^{T_{i+1}} e^{-u} du\right) dt. \quad (9.58)$
 ```
 
-(9.58) 中的第一项是 $a_{T_i,T_{i+1}}$。这意味着我们可以将 $a_{T_i,T_{i+1}}$ 写为：
+`(9.58)` 中的第一项是 `$a_{T_i,T_{i+1}}$`。这意味着我们可以将 `$a_{T_i,T_{i+1}}$` 写为：
 
 ```
 $a_{T_i,T_{i+1}} = a_{1,T} + \sum_{j=T_i}^{T_{i+1}} \rho_j \sigma_j v_{0,j} \left(\int_{T_j}^t e^{-u} du\right) dt. \quad (9.59)$
 ```
 
-由于参数在 $(T_i, T_{i+1})$ 上是分段常数的，我们需要划分区域 $(T_i, T_{i+1})$。因此 (9.59) 变为：
+由于参数在 `$(T_i, T_{i+1})$` 上是分段常数的，我们需要划分区域 `$(T_i, T_{i+1})$`。因此 `(9.59)` 变为：
 
 ```
 $a_{T_i,T_{i+1}} = a_{1,T} + \sum_{j=T_i}^{T_{i+1}} \rho_j \sigma_j v_{0,j} \left(\int_{T_j}^t e^{-u} du\right) dt. \quad (9.60)$
 ```
 
-由于参数在 $(T_i, T_{i+1})$ 上是分段常数的，我们需要划分区域 $(T_i, T_{i+1})$。因此 (9.60) 变为：
+由于参数在 `$(T_i, T_{i+1})$` 上是分段常数的，我们需要划分区域 `$(T_i, T_{i+1})$`。因此 `(9.60)` 变为：
 
 ```
 $a_{T_i,T_{i+1}} = a_{1,T} + \sum_{j=T_i}^{T_{i+1}} \rho_j \sigma_j v_{0,j} \left(\int_{T_j}^t e^{-u} du\right) dt. \quad (9.61)$
 ```
 
-由于参数在 $(T_i, T_{i+1})$ 上是分段常数的，我们需要划分区域 $(T_i, T_{i+1})$。因此 (9.61) 变为：
+由于参数在 `$(T_i, T_{i+1})$` 上是分段常数的，我们需要划分区域 `$(T_i, T_{i+1})$`。因此 `(9.61)` 变为：
 
 ```
 $a_{T_i,T_{i+1}} = a_{1,T} + \sum_{j=T_i}^{T_{i+1}} \rho_j \sigma_j v_{0,j} \left(\int_{T_j}^t e^{-u} du\right) dt. \quad (9.62)$
 ```
-
-
-
-
 
 ## 时间依赖型 Heston 模型
 
@@ -8601,19 +8845,19 @@ f3 = int(exp(kappa*t)*v0)
 * int(exp(-kappa*u),u,Ti,Tj,s,Tj,t,Tj);
 ```
 
-代码运行后，必须使用文字处理器的查找和替换功能将符号项在适用的情况下转换为 Matlab 数组。例如，$T_j$ 必须更改为 $T(j)$，$T_{i1}$ 更改为 $T(i+1)$。获取剩余系数的代码也类似。
+代码运行后，必须使用文字处理器的查找和替换功能将符号项在适用的情况下转换为 Matlab 数组。例如，`$T_j$` 必须更改为 `$T(j)$`，`$T_{i1}$` 更改为 `$T(i+1)$`。获取剩余系数的代码也类似。
 
-为了计算分段参数下的看跌期价格，我们首先使用方程 (9.55) 和参数 $\kappa, v_0, \theta_i, \sigma_i, \rho_i$ 来计算 $a_{1,T_i}, a_{2,T_i}, b_{0,T_i}$ 和 $b_{2,T_i}$。然后我们使用方程 (9.60) 和参数 $\kappa, v_0, \theta_i, \sigma_i, \rho_i$ 计算 $a_{1,T_{i+1}}, a_{2,T_{i+1}}, b_{0,T_{i+1}}$ 和 $b_{2,T_{i+1}}$，并继续应用方程 (9.60) 到 (9.64)，直到达到最后一个矩阵 $T_N$，并将 $a_{1,T_N}, a_{2,T_N}, b_{0,T_N}$ 和 $b_{2,T_N}$ 代入方程 (9.48) 以得到看跌期价格。
+为了计算分段参数下的看跌期价格，我们首先使用方程 `(9.55)` 和参数 `$\kappa, v_0, \theta_i, \sigma_i, \rho_i$` 来计算 `$a_{1,T_i}, a_{2,T_i}, b_{0,T_i}$` 和 `$b_{2,T_i}$`。然后我们使用方程 `(9.60)` 和参数 `$\kappa, v_0, \theta_i, \sigma_i, \rho_i$` 计算 `$a_{1,T_{i+1}}, a_{2,T_{i+1}}, b_{0,T_{i+1}}$` 和 `$b_{2,T_{i+1}}$`，并继续应用方程 `(9.60)` 到 `(9.64)`，直到达到最后一个矩阵 `$T_N$`，并将 `$a_{1,T_N}, a_{2,T_N}, b_{0,T_N}$` 和 `$b_{2,T_N}$` 代入方程 `(9.48)` 以得到看跌期价格。
 
-回想起参数 $\kappa$ 和 $\omega$ 对于所有矩阵都是固定的，但 $\theta_i, \sigma_i$ 和 $\rho$ 允许变化。因此，如果有 $N$ 个矩阵，则有 $2+3N$ 个参数。将这些参数堆叠在向量中是方便的。我们在前两个位置使用 $\kappa$ 和 $v_0$，在剩余位置使用 $\theta_i, \sigma_i$ 和 $\rho_i$（按此顺序）。例如，对于三个矩阵，该向量为：
+回想起参数 `$\kappa$` 和 `$\omega$` 对于所有矩阵都是固定的，但 `$\theta_i, \sigma_i$` 和 `$\rho$` 允许变化。因此，如果有 `$N$` 个矩阵，则有 `$2+3N$` 个参数。将这些参数堆叠在向量中是方便的。我们在前两个位置使用 `$\kappa$` 和 `$v_0$`，在剩余位置使用 `$\theta_i, \sigma_i$` 和 `$\rho_i$`（按此顺序）。例如，对于三个矩阵，该向量为：
 
-$$\kappa,v_0,\theta_1,\sigma_1,\rho_1,\theta_2,\sigma_2,\rho_2,\theta_3,\sigma_3,\rho_3$$
+`$$\kappa,v_0,\theta_1,\sigma_1,\rho_1,\theta_2,\sigma_2,\rho_2,\theta_3,\sigma_3,\rho_3$$`
 
-在 Matlab 中实现定价时，将 $a_{1,T_{i+1}}$ 和 $b_{0,T_{i+1}}$ 表达式中的求和拆分为求和的第一项和剩余项是比较方便的。例如，方程 (9.61) 中的 $a_{1,T_{i+1}}$ 写为：
+在 Matlab 中实现定价时，将 `$a_{1,T_{i+1}}$` 和 `$b_{0,T_{i+1}}$` 表达式中的求和拆分为求和的第一项和剩余项是比较方便的。例如，方程 `(9.61)` 中的 `$a_{1,T_{i+1}}$` 写为：
 
-$$a_{1,T_{i+1}} = a_{1,T_i} + \rho_i \int_{T_i}^{T_{i+1}} e^{v_0\sigma_i t} (e^{-\sigma_i t}) dt + \sum_{j=2}^{i} \rho_j \sigma_j \int_{T_{j-1}}^{T_j} e^{v_0\sigma_j t} dt + \rho_{i+1} \int_{T_i}^{T_{i+1}} e^{v_0\sigma_{i+1} t} (e^{-\sigma_{i+1} t}) dt.$$
+`$$a_{1,T_{i+1}} = a_{1,T_i} + \rho_i \int_{T_i}^{T_{i+1}} e^{v_0\sigma_i t} (e^{-\sigma_i t}) dt + \sum_{j=2}^{i} \rho_j \sigma_j \int_{T_{j-1}}^{T_j} e^{v_0\sigma_j t} dt + \rho_{i+1} \int_{T_i}^{T_{i+1}} e^{v_0\sigma_{i+1} t} (e^{-\sigma_{i+1} t}) dt.$$`
 
-`BGMAApproxTD` 函数计算分段到期日的近似看跌价值。我们通过方程 (9.66) 中的系数 $a_{i,T}$ 代码来说明该函数。其他系数的代码与 (9.65) 指定的顺序相同，并计算对应于第一个时间步的系数的第一部分。该第一部分是使用 (9.55) 得到的。
+`BGMAApproxTD` 函数计算分段到期日的近似看跌价值。我们通过方程 `(9.66)` 中的系数 `$a_{i,T}$` 代码来说明该函数。其他系数的代码与 `(9.65)` 指定的顺序相同，并计算对应于第一个时间步的系数的第一部分。该第一部分是使用 `(9.55)` 得到的。
 
 ```matlab
 function y = BGMAApproxPriceTD(param,T,S,rf,q)
@@ -8634,7 +8878,7 @@ b0T(1) = -1/4*sigma(1)^2*(5+theta(1)*exp(kappa*T(1))) + ...;
 b2T(1) = al1(1)^2;
 ```
 
-第二部分计算系数的剩余部分。项 $A_1$ 对应于 (9.66) 中的积分，顺序相同。
+第二部分计算系数的剩余部分。项 `$A_1$` 对应于 `(9.66)` 中的积分，顺序相同。
 
 ```matlab
 % 剩余系数组
@@ -8652,7 +8896,7 @@ for t=1:NT-1
 end
 ```
 
-第三也是最后一部分保留系数数组的最后一个元素，计算所需的导数，并计算 (9.48) 中的看跌期价格。该函数通过期权平价关系返回看涨期价格。
+第三也是最后一部分保留系数数组的最后一个元素，计算所需的导数，并计算 `(9.48)` 中的看跌期价格。该函数通过期权平价关系返回看涨期价格。
 
 ```matlab
 % 展开式的系数是最后几个
@@ -8684,6 +8928,10 @@ end
 ```
 
 第二段代码构建 Benamou 等人 (2010) 的价格，在每一步将参数向量与分段参数拼接。
+
+
+
+### BGM (2010) 模型价格
 
 ```matlab
 % BGM (2010) 模型价格
@@ -8739,13 +8987,9 @@ ClosedAvg(t) = HestonPriceGaussLaguerre(T(t),theta(t));
 | 7.0 | 22.13 | 22.16 | 21.99 | 22.15 |
 | 10.0 | 27.14 | 27.17 | 27.17 | 27.17 |
 
+## MATLAB 和 C# 中的 Heston 模型及其扩展
 
-
-
-
-## 296 MATLAB 和 C# 中的 Heston 模型及其扩展
-
-为了说明，我们使用了一组 DJIA 指数认跌期权，这些期权用于生成 Mikhail 和 Noël (2003) 在表 9.2 中使用的时间依赖参数估计。为了估计静态参数，我们使用了常用的 HestonObjFun.m 目标函数，并使用相同的起始值生成表 9.3。
+为了说明，我们使用了一组 DJIA 指数认跌期权，这些期权用于生成 Mikhail 和 Noël (2003) 在表 9.2 中使用的时间依赖参数估计。为了估计静态参数，我们使用了常用的 `HestonObjFun.m` 目标函数，并使用相同的起始值生成表 9.3。
 
 ```matlab
 % Starting values
@@ -8761,7 +9005,7 @@ ub = [20 10 10 .999]; % 估计的上界
 ParamTI = fmincon(@p) HestonObjFun(p, start, lb, ub);
 ```
 
-为了估计分段常数参数，我们使用 HestonBGMObjFunTD.m 目标函数，并将静态参数估计作为起始值。
+为了估计分段常数参数，我们使用 `HestonBGMObjFunTD.m` 目标函数，并将静态参数估计作为起始值。
 
 ```matlab
 % Starting Values
@@ -8779,7 +9023,7 @@ estates
 paramTD = fmincon(@p) HestonBGMObjFun(p, start,...,lb,ub);
 ```
 
-我们将分段常数参数分到不同的向量，并获得了两组价格和隐含波动率。参数估计存储在向量 paramTD 和矩阵 ParamTD 中。最短到期日的参数估计堆叠在上方，最长到期日的堆叠在底部。
+我们将分段常数参数分到不同的向量，并获得了两组价格和隐含波动率。参数估计存储在向量 `paramTD` 和矩阵 `ParamTD` 中。最短到期日的参数估计堆叠在上方，最长到期日的堆叠在底部。
 
 ```matlab
 % 时间依赖参数的数量
@@ -8839,6 +9083,7 @@ for(int k=0; k<NK;k++) {
   ModelPrice[k,t] = BGMApproxPriceTD(offset, K[k],...);
   ModelIV[k,t] = BsecBSIV(ModelPrice[k,t],...);
   Error = Math.Pow(ModelIV[k,t]-MktIV);
+```
 
 ### 表 9.6 分段常数和静态参数
 
@@ -8880,15 +9125,13 @@ $\Phi(f)_{x,x} = \frac{1}{2}[y^{-2}\phi_y-2y^{-3}\phi(2f+g-f^2)+y^{-2}\Phi(2f_x+
 $\Phi(g)_{x,y} = \frac{1}{2}y^{-2}\Phi(2g+f-g^2)$,
 ```
 
+
+
 # 结论
 
 在本章中，我们展示了 $x_\tau$ 的单变量特征函数和对于 $(x_\tau, v_\tau)$ 的二元特征函数在形式上是相同的，系数除外。这些系数的区别仅在于 Riccati 方程的初始条件。我们还展示了单变量特征函数是二元特征函数的一个特例。接下来，我们介绍了 Mikhailov 和 Elices (2009) 的时间依赖模型。这两个模型都依赖 Sahbi 和 Lord (2010) 出的二元特征函数的递归关系。最后，我们介绍了 Bahadorzadeh 等 (2010) 的模型，该模型依赖解析展开来获取期权价格。因此，它的计算速度比其他两个时间依赖模型快得多。然而，我们检查的所有时间依赖参数模型的拟合效果都优于此前涵盖的常数参数模型。
 
 在第 8 章中，我们引入了显式法，并解释了它是用有限差法近似 Heston 偏微分方程 (PDE) 的示例。我们在该章中也看到，这些方法在股票价格和波动率的二维网格上产生一组期权价格，而不仅仅是单一的股票价格和波动率值。
-
-
-
-
 
 # 第 10 章
 
@@ -8921,23 +9164,23 @@ $$L = \frac{1}{2}vS^2\frac{\partial^2}{\partial S^2}+\frac{1}{2}\sigma^2v\frac{\
 
 均匀网格是指两个状态变量具有等间距增量的网格。这些网格有两个优点：第一，易于构建；第二，由于增量相等，PDE 中导数的有限差分近似形式简单。非均匀网格的构建更为复杂，但它们可以在某些点周围变得更精细，特别是在通常需要期权价格 $(S,v)=(K,0)$ 区域。因此，非均匀网格可以用更少的网格点提供更准确的近似，从而减少计算时间。
 
-我们将 $S$、$v$ 和 $t$ 的最大值标记为 $S_{max}$、$v_{max}$ 和 $t_{max}=\tau$（到期时间），最小值标记为 $S_{min}$、$v_{min}$ 和 $t_{min}=0$。我们定义 $U_{ij}^k=U(S,v,t)$ 为时间 $t$，股票价格为 $S$，波动率为 $v$ 时欧式看涨期权的价值。股票价格使用 $N_S+1$ 个点，波动率使用 $N_v+1$ 个点，到期时间使用 $N_t+1$ 个点。为了简洁起见，有时我们将 $U(S,v)$ 写为 $U_{ij}^k$。
+我们将 $S$、$v$ 和 $t$ 的最大值标记为 `S_max`、`v_max` 和 `t_max=tau`（到期时间），最小值标记为 `S_min`、`v_min` 和 `t_min=0`。我们定义 `U_{ij}^k=U(S,v,t)` 为时间 `t`，股票价格为 `S`，波动率为 `v` 时欧式看涨期权的价值。股票价格使用 `N_S+1` 个点，波动率使用 `N_v+1` 个点，到期时间使用 `N_t+1` 个点。为了简洁起见，有时我们将 `U(S,v)` 写为 `U_{ij}^k`。
 
-使用最小值 $S_{min}=v_{min}=0$ 作为 $(S,v,t)$ 的均匀网格，可以构建为：
+使用最小值 `S_min=v_min=0` 作为 $(S,v,t)$ 的均匀网格，可以构建为：
 
 $$S_i=i\times ds, \quad i=0,\dots,N_S$$
 $$v_j=j\times dv, \quad j=0,\dots,N_v$$
 $$t_n=n\times dt, \quad n=0,\dots,N_t$$
 
-其中增量为 $ds=(S_{max}-S_{min})/N_S$，$dv=(v_{max}-v_{min})/N_v$，且 $dt=(t_{max}-t_{min})/N_t$。因此，最大值为 $S_{max}=N_Sds$ 和 $v_{max}=N_vd$。在 Clarke 和 Pratt (1999) 以及 Kluge (2002) 工作的基础上，Hout 和 Foulon (2010) 描述了一种在执行价 $K$ 和现货波动率 $v=0$ 周围更精细的非均匀网格。其大小为 $N_S+1$ 的价格网格为：
+其中增量为 `ds=(S_max-S_min)/N_S`，`dv=(v_max-v_min)/N_v`，且 `dt=(t_max-t_min)/N_t`。因此，最大值为 `S_max=N_S ds` 和 `v_max=N_v d`。在 Clarke 和 Pratt (1999) 以及 Kluge (2002) 工作的基础上，Hout 和 Foulon (2010) 描述了一种在执行价 `K` 和现货波动率 `v=0` 周围更精细的非均匀网格。其大小为 `N_S+1` 的价格网格为：
 
 $$S_i = K + c \sinh(\xi_i), \quad i = 0, \dots, N_S$$
 
-其中他们选择 $c = K$，且 $\xi_i = \sinh^{-1}(-K/c) + i\Delta\xi$，其中
+其中他们选择 `c = K`，且 `\xi_i = \sinh^{-1}(-K/c) + i\Delta\xi`，其中
 
 $$\Delta\xi = \frac{1}{N_S} \left[ \sinh^{-1}\left(\frac{S_{max}-K}{c}\right) - \sinh^{-1}\left(-\frac{K}{c}\right) \right].$$
 
-大小为 $N_v+1$ 的波动率网格为：
+大小为 `N_v+1` 的波动率网格为：
 
 $$v_j = d \sinh(j\eta), \quad j = 0, \dots, N_v$$
 
@@ -8945,17 +9188,17 @@ $$v_j = d \sinh(j\eta), \quad j = 0, \dots, N_v$$
 
 $$\Delta\eta = \frac{1}{N_v} \sinh^{-1}\left(\frac{v_{max}}{d}\right).$$
 
-Hout 和 Foulon (2010) 使用 $d = v_{max}/50$，并对 $t$ 使用均匀网格。图10.1展示了使用他们设置的非均匀网格，其中 $N_S=70$，$N_v=50$ 且 $K=10$。价格网格由蓝线表示，波动率由红线表示。注意在价格维度上，网格在执行价周围最精细，而在波动率维度上，网格向零推进变得更精细。
+Hout 和 Foulon (2010) 使用 `d = v_max/50`，并对 `t` 使用均匀网格。图10.1展示了使用他们设置的非均匀网格，其中 `N_S=70`，`N_v=50` 且 `K=10`。价格网格由蓝线表示，波动率由红线表示。注意在价格维度上，网格在执行价周围最精细，而在波动率维度上，网格向零推进变得更精细。
 
 ### 导数的有限差分近似
 
-回顾我们使用符号 $U_{ij}^n, U(S,v,t_n)$ 表示时间 $t_n$，价格为 $S$，波动率为 $v$ 时欧式看涨的价值。当网格是均匀时，导数的有限差分近似是简单的。推广到非均匀网格是直接的，但近似要复杂一些。在本书任何地方，我们都对 PDE (10.1) 中 $S$ 和 $v$ 方向的一阶和二阶导数使用中心差分近似。通常，$(S,v)$ 处的一阶和二阶导数可以用 $(S,v)$ 相邻点的 $U$ 值表示。接下来的段落中，我们假设使用非均匀网格并将导数的中心差分近似简化为更简单的形式。本节的剩余部分，我们分别处理 PDE 内部点和边界点的近似。![](img/bc3df3b6c26227307f56b75ef87311_0.png) 图 10.1 非均匀网格
+回顾我们使用符号 `U_{ij}^n, U(S,v,t_n)` 表示时间 `t_n`，价格为 `S`，波动率为 `v` 时欧式看涨的价值。当网格是均匀时，导数的有限差分近似是简单的。推广到非均匀网格是直接的，但近似要复杂一些。在本书任何地方，我们都对 PDE (10.1) 中 `S` 和 `v` 方向的一阶和二阶导数使用中心差分近似。通常，$(S,v)$ 处的一阶和二阶导数可以用 $(S,v)$ 相邻点的 `U` 值表示。接下来的段落中，我们假设使用非均匀网格并将导数的中心差分近似简化为更简单的形式。本节的剩余部分，我们分别处理 PDE 内部点和边界点的近似。![](img/bc3df3b6c26227307f56b75ef87311_0.png) 图 10.1 非均匀网格
 
-内部点位于网格内部，因此它们远离边界。一阶导数对于内部点 $(S_i, v_j)$ 由 $2ds$ 近似：
+内部点位于网格内部，因此它们远离边界。一阶导数对于内部点 $(S_i, v_j)$ 由 `2ds` 近似：
 
 $$\frac{\partial U}{\partial S}(S_i, v_j) = \frac{U_{i+1,j} - U_{i-1,j}}{S_{i+1} - S_{i-1}}, \quad \frac{\partial U}{\partial v}(S_i, v_j) = \frac{U_{i,j+1} - U_{i,j-1}}{v_{j+1} - v_{j-1}} \quad (10.5)$$
 
-当使用均匀网格时，中心差分分别被 $2ds$ 和 $2dv$ 替换。二阶中心差分位于 Kluge (2002) 的表 4 以及 Hout 和 Foulon (2010) 中。这些是：
+当使用均匀网格时，中心差分分别被 `2ds` 和 `2dv` 替换。二阶中心差分位于 Kluge (2002) 的表 4 以及 Hout 和 Foulon (2010) 中。这些是：
 
 $$\frac{\partial^2 U}{\partial S^2}(S_i, v_j) = \frac{\frac{U_{i+1,j} - U_{i,j}}{S_{i+1} - S_i} - \frac{U_{i,j} - U_{i-1,j}}{S_i - S_{i-1}}}{ds}$$
 $$\frac{\partial^2 U}{\partial v^2}(S_i, v_j) = \frac{\frac{U_{i,j+1} - U_{i,j}}{v_{j+1} - v_j} - \frac{U_{i,j} - U_{i,j-1}}{v_j - v_{j-1}}}{dv}$$
@@ -8970,113 +9213,96 @@ $$\frac{\partial^2 U}{\partial S \partial v}(S_i, v_j) = a_{1,1}U_{i+1,j+1} + a_
 $$a_{1,1} = \frac{1}{4ds dv}, \quad a_{1,-1} = -\frac{1}{4ds dv}, \quad a_{-1,1} = -\frac{1}{4ds dv}, \quad a_{-1,-1} = \frac{1}{4ds dv},$$
 $$a_{1,0} = -\frac{1}{4dv}, \quad a_{-1,0} = \frac{1}{4dv}, \quad a_{0,1} = -\frac{1}{4ds}, \quad a_{0,-1} = \frac{1}{4ds}.$$
 
+在这些系数中，增量为 `\Delta S_i = S_i - S_{i-1}` 和 `\Delta v_j = v_j - v_{j-1}`。这些二阶导数简化的表达方式也有效，但准确性不够。
 
-
-
-在这些系数中，增量为 $\Delta S_i = S_i - S_{i-1}$ 和 $\Delta v_j = v_j - v_{j-1}$。这些二阶导数简化的表达方式也有效，但准确性不够。
-
-```
 $$\frac{\partial^2 U}{\partial S^2}(S_i, v_j) = \left(\frac{U_{i+1,j}^n - U_{i,j}^n}{S_{i+1} - S_i} - \frac{U_{i,j}^n - U_{i-1,j}^n}{S_i - S_{i-1}}\right) \frac{1}{S_{i+1} - S_{i-1}}$$
 
 $$\frac{\partial^2 U}{\partial v^2}(S_i, v_j)) = \left(\frac{U_{i,j+1}^n - U_{i,j}^n}{v_{j+1} - v_j} - \frac{U_{i,j}^n - U_{i,j-1}^n}{v_j - v_{j-1}}\right) \frac{1}{v_{j+1} - v_{j-1}}$$
 
 $$\frac{\partial^2 U}{\partial S\partial v}(S_i, v_j) = \frac{U_{i+1,j+1}^n - U_{i,j+1}^n - U_{i+1,j}^n + U_{i,j}^n}{(S_{i+1} - S_i)(v_{j+1} - v_j)}$$
-```
 
 当使用网格时，方程 (10.6) 中的混合导数简化为：
 
-```
 $$\frac{\partial^2 U}{\partial S\partial v}(S_i, v_j) = \frac{U_{i+1,j+1}^n - U_{i,j+1}^n - U_{i+1,j}^n + U_{i,j}^n}{4 \Delta ds \Delta dv}} \quad (10.6)$$
-```
 
-无论使用均匀网格还是非均匀网格，点 $(S, v)$ 处的所有导数都可以用涉及在 $(S, v)$ 相邻点求值的 $U$ 及其系数的和来表示，如：
+无论使用均匀网格还是非均匀网格，点 $(S, v)$ 处的所有导数都可以用涉及在 $(S, v)$ 相邻点求值的 `U` 及其系数的和来表示，如：
 
-```
 $$\sum_{k,l} a_{k,l} U_{k,l}^n$$
-```
 
 详情见 Kluge (2002) 或 Burden and Ferreira (2010)。微分方程 (PDE) 的边界点（在本章稍后定义）需要使用不涉及网格外点的近似。因此，我们可以使用前向或后向差分。例如，对于第一个 S 导数，差分值为：
 
-```
 $$\frac{\partial U}{\partial S}(S_i, v_j) = \frac{U_{i+1,j}^n - U_{i,j}^n}{S_{i+1} - S_i}, \frac{\partial U}{\partial v}(S_i, v_j) = \frac{U_{i,j+1}^n - U_{i,j}^n}{v_{j+1} - v_j}} \quad (10.8)$$
-```
 
 Duffy (2006) 的教材也是期权定价背景下 PDE 有限差分近似的极佳参考。
 
 ## 加权方法
 
-这是一种将其他有限差分方案纳入特例例方法。记得 $U_{i,j}^n$ 表示欧式看涨在网格点 $(S, v)$ 和到期日 $t_n$ 处的值。由于 $(S, v)$ 的二维网格大小为 $N=(N_S+1)(N_v+1)$，在每个 $t_n$ 时，$U_{i,j}^n$ 有 $N$ 种可能的值。
+这是一种将其他有限差分方案纳入特例例方法。记得 `U_{i,j}^n` 表示欧式看涨在网格点 $(S, v)$ 和到期日 `t_n` 处的值。由于 $(S, v)$ 的二维网格大小为 `N=(N_S+1)(N_v+1)`，在每个 `t_n` 时，`U_{i,j}^n` 有 `N` 种可能的值。
 
-为了应用加权方法，必须构造一个大小为 $N$ 的向量 $U^n$，这些值可以任意排列。我们选择将图 10.2 中的 $N_v$ 个列向量 $u_0, u_1, \dots, u_{N_v}$ 堆叠，使得 $U^0 = (u_0^0, u_1^0, \dots, u_{N_v}^0)$ 为其向量。因此，$U^n$ 的项对应于以下 $(S_i, v_j)$ 点：
+为了应用加权方法，必须构造一个大小为 `N` 的向量 `U^n`，这些值可以任意排列。我们选择将图 10.2 中的 `N_v` 个列向量 `u_0, u_1, \dots, u_{N_v}` 堆叠，使得 `U^0 = (u_0^0, u_1^0, \dots, u_{N_v}^0)` 为其向量。因此，`U^n` 的项对应于以下 $(S_i, v_j)$ 点：
 
 $$(S_0, v_0), (S_1, v_0), \dots, (S_{N_s}, v_0), (S_0, v_1), (S_1, v_1), \dots, (S_{N_s}, v_1), \dots, (S_0, v_{N_v}-1), (S_1, v_{N_v}-1), \dots, (S_{N_s}, v_{N_v}-1), (S_0, v_{N_v}), (S_1, v_{N_v}), \dots, (S_{N_s}, v_{N_v}). \quad (10.9)$$
 
-| | $v_0$ | $v_1$ | ... | $v_{N_v}$ |
+| | `v_0` | `v_1` | ... | `v_{N_v}` |
 |---|---|---|---|---|
-| $S_0$ | $U^0_{0,0}$ | $U^0_{0,1}$ | | $U^0_{0,N_v}$ |
-| $S_1$ | $U^0_{1,0}$ | $U^0_{1,1}$ | | $U^0_{1,N_v}$ |
+| `S_0` | `U^0_{0,0}` | `U^0_{0,1}` | | `U^0_{0,N_v}` |
+| `S_1` | `U^0_{1,0}` | `U^0_{1,1}` | | `U^0_{1,N_v}` |
 | : | : | : | : |
-| $S_{N_s}$ | $U^0_{N_s,0}$ | $U^0_{N_s,1}$ | | $U^0_{N_s,N_v}$ |
+| `S_{N_s}` | `U^0_{N_s,0}` | `U^0_{N_s,1}` | | `U^0_{N_s,N_v}` |
 
 **图 10.2** 股票价格和波动率网格上的欧式看涨价值
 
-加权方法也称为 $\theta$ 方法，通过以下关系定义：
+加权方法也称为 `\theta` 方法，通过以下关系定义：
 
-```
 $$\frac{U^{n+1} - U^n}{dt} = L U^{n+1} + (1 - \theta)U^n \quad (10.10)$$
-```
 
-其中 $L$ 是基于 (10.3) 定义算子的 $N \times N$ 稀疏矩阵。初始条件 $U^0$ 是已知的，因为它代表到期时的价值。在这里，我们可以从到期开始，从初始值 $U^0$ 开始使用 $L$ 获取 $U^1, U^2$，直到达到 $U^{N_v}$。这是通过每步求解方程实现的：
+其中 `L` 是基于 (10.3) 定义算子的 `N \times N` 稀疏矩阵。初始条件 `U^0` 是已知的，因为它代表到期时的价值。在这里，我们可以从到期开始，从初始值 `U^0` 开始使用 `L` 获取 `U^1, U^2`，直到达到 `U^{N_v}`。这是通过每步求解方程实现的：
 
-```
 $$(I - \theta dtL)U^{n+1} = (I + \theta dt)U^n \quad (10.11)$$
-```
 
-其中 $I$ 是大小为 $N$ 的单位矩阵。该方程可以通过取左侧矩阵的逆来求解，使得：
+其中 `I` 是大小为 `N` 的单位矩阵。该方程可以通过取左侧矩阵的逆来求解，使得：
 
-```
 $$U^{n+1} = (I - \theta dtL)^{-1}(I + \theta dt)U^n. \quad (10.12)$$
-```
 
-已经提出了几种算法来利用 $L$ 的稀疏性以加速求。参考 Duffy (2006)。向量 $U^0$ 取于定价。对于看涨期权，它在 $U$ 中对应 $S > K$ 的部分包含 $S-K$，在对应 $S < K$ 的部分包含零。这些项在向量中出现的顺序取决于 $U$ 组件的排列。
 
-若干有限差分方案根据 $\theta$ 的值产生方程 (10.11) 的特例。设置 $\theta=0$ 产生显式方案，$\theta=1/2$ 产生 Crank-Nicolson 方案，$\theta=1$ 产生隐式方案。见 Kluge (2002) 关于加权方法的通用开发以及当 $N$ 很大时可能出现的数值问题的讨论。显式方案在数值上最易处理；当我们在 (10.12) 中设置 $\theta=0$ 时，不再需要矩阵逆。$L$ 是一个维度为 $N=(N_s+1)(N_v+1)$ 的方阵，其行和列取决于向量 $U^v$ 如何构造。通过堆叠图 10.2 中的 $N_v$ 个列向量 $u_0,u_1,\dots,u_{N_v}$，$L$ 的行和列对应于 (10.9) 中向量 $U^v$ 的项。
 
-我们通过将 $L$ 中的 $\partial/\partial v$ 替换为两个部分来修改方程 (10.3) 中算子的 $L$：
+已经提出了几种算法来利用 `$L$` 的稀疏性以加速求。参考 `Duffy (2006)`。向量 `U^0` 取于定价。对于看涨期权，它在 `U` 中对应 `S > K` 的部分包含 `S-K`，在对应 `S < K` 的部分包含零。这些项在向量中出现的顺序取决于 `U` 组件的排列。
+
+若干有限差分方案根据 `theta` 的值产生方程 `(10.11)` 的特例。设置 `theta=0` 产生显式方案，`theta=1/2` 产生 `Crank-Nicolson` 方案，`theta=1` 产生隐式方案。见 `Kluge (2002)` 关于加权方法的通用开发以及当 `N` 很大时可能出现的数值问题的讨论。显式方案在数值上最易处理；当我们在 `(10.12)` 中设置 `theta=0` 时，不再需要矩阵逆。`L` 是一个维度为 `N=(N_s+1)(N_v+1)` 的方阵，其行和列取决于向量 `U^v` 如何构造。通过堆叠图 `10.2` 中的 `N_v` 个列向量 `u_0,u_1,...,u_{N_v}`，`L` 的行和列对应于 `(10.9)` 中向量 `U^v` 的项。
+
+我们通过将 `L` 中的 `partial/partial v` 替换为两个部分来修改方程 `(10.3)` 中算子的 `L`：
 
 ```
 $$L = \frac{1}{2}vS^2\frac{\partial^2}{\partial S^2} + \frac{1}{2}\sigma^2\frac{\partial^2}{\partial v^2} + \rho vS\frac{\partial^2}{\partial S\partial v} + (r-q)S\frac{\partial}{\partial S} + \theta\frac{\partial}{\partial \theta} - \dots$$
 ```
 （注：由于原文文本在此处中断，此处根据提供的文本内容翻译至此）
 
+`U^n` 中的点 `(S_i, v_{j-1})` 和 `(S_i, v_{j+1})` 分别位于 `(S_i, v_j)` 上、下方 `N_V+1` 个位置，如方程 `(10.16)` 所示。
 
-
-$U^n$ 中的点 $(S_i, v_{j-1})$ 和 $(S_i, v_{j+1})$ 分别位于 $(S_i, v_j)$ 上、下方 $N_V+1$ 个位置，如方程 (10.16) 所示。
-
-| | $u_0$ | 列向量 0 |
+| | `u_0` | 列向量 0 |
 |---|---|---|
 | | ... | |
 | | : | |
-| $U^n_{i,j-1}$ | 列向量 $j-1$ | $r-N_S-1$ |
+| `U^n_{i,j-1}` | 列向量 `j-1` | `r-N_S-1` |
 | | : | |
 | | : | |
-| $\mathbf{U}^n$ = $U^n_{i,j}$ | 列向量 $j$ | $r$ (10.16) |
+| `U^n` = `U^n_{i,j}` | 列向量 `j` | `r` (10.16) |
 | | : | |
 | | : | |
-| $U^n_{i,j+1}$ | 列向量 $j+1$ | $r+N_S+1$ |
+| `U^n_{i,j+1}` | 列向量 `j+1` | `r+N_S+1` |
 | | : | |
 | | : | |
-| $\mathbf{u}_{NV}$ | 列向量 $N_V$ | |
+| `u_{NV}` | 列向量 `N_V` | |
 
-因此，$L_{\mu 2}$ 的元素如下所示：
+因此，`L_{\mu 2}` 的元素如下所示：
 
-$L_{\mu 2}(r-N_S-1, c) = \frac{-1}{2dv} \times v_i$
-$L_{\mu 2}(r, c) = 0$ (10.17)
-$L_{\mu 2}(r+N_S+1, c) = \frac{1}{2dv} \times v_j$。
+`L_{\mu 2}(r-N_S-1, c) = \frac{-1}{2dv} \times v_i`
+`L_{\mu 2}(r, c) = 0` (10.17)
+`L_{\mu 2}(r+N_S+1, c) = \frac{1}{2dv} \times v_j`。
 
-当使用非均匀网格时，(10.17) 分母中的 $2dv$ 被替换为 $(v_{i+1}-v_{j-1})$。
-Matlab 函数 `BuildDerivatives.m` 是一个创建 $L$ 子矩阵的程序。它需要三个网格作为输入：分别对应股价、波动率和到期日。它假设这些网格是使用均匀网格构建的。为了节省空间，我们仅展示最核心部分。
-第一部分识别了 $U$ 中对应于 $S$ 和 $v$ 边界点的元素。
+当使用非均匀网格时，(10.17) 分母中的 `2dv` 被替换为 `(v_{i+1}-v_{j-1})`。
+`Matlab` 函数 `BuildDerivatives.m` 是一个创建 `L` 子矩阵的程序。它需要三个网格作为输入：分别对应股价、波动率和到期日。它假设这些网格是使用均匀网格构建的。为了节省空间，我们仅展示最核心部分。
+第一部分识别了 `U` 中对应于 `S` 和 `v` 边界点的元素。
 
 ```matlab
 function [derS ... derS RV] = BuildDerivatives(S,V,T)
@@ -9102,7 +9328,7 @@ for i = 1:N
 end
 ```
 
-第二部分识别了非边界点，并确定 $U$ 的哪些元素接收前向、后向或中心差分。
+第二部分识别了非边界点，并确定 `U` 的哪些元素接收前向、后向或中心差分。
 
 ```matlab
 NB = zeros(N,1);
@@ -9155,7 +9381,6 @@ ders2(I(k),I(k)-1) = -1/2/ds * Si(I(k))
 ders2(I(k),I(k)) = -2/ds * Si(I(k))
 ders2(I(k),I(k)+1) = 1/2/ds * Si(I(k))
 end
-
 I = find(Cv=1)
 for k=1:length(I)
 % 创建 V 导数矩阵
@@ -9168,7 +9393,6 @@ dver2(I(k),I(k)+NS) = 1/2/dv * Vi(I(k))
 dver3(I(k),I(k)-NS) = -2/dv^2 * Vi(I(k))
 dver3(I(k),I(k)+NS) = 1/dv^2 * Vi(I(k))
 end
-
 I = find(Sv=1)
 for k=1:length(I)
 % 创建 SV 导数矩阵
@@ -9179,7 +9403,7 @@ dsv2(I(k),I(k)-NS-1) = -1/(4*ds*dv) * Vi(I(k))
 end
 ```
 
-`BuildDerivatives` 函数用于 `WeightedMethod` 中，它应用方程 (10.12) 并每一步更新 $U$。通过在目标点 $(S_0, v_0)$ 处对 $U$ 进行插值返回导数值。
+`BuildDerivatives` 函数用于 `WeightedMethod` 中，它应用方程 `(10.12)` 并每一步更新 `U`。通过在目标点 `(S_0, v_0)` 处对 `U` 进行插值返回导数值。
 
 ```matlab
 function WPrice = WeightedMethod(...
@@ -9205,7 +9429,7 @@ end
 U = reshape(U,NS,NV); interp2(V,S,U,V0,S0);
 ```
 
-为了说明加权方法，我们使用 Foulon (2010) Case 1 中定义的参数值：$\kappa = 1.5, \theta = 0.04, \sigma = 0.3, \rho = -0.9, r = 0.02, \lambda = 0.05$，以及行权价 $K = 100$。此外，我们使用 $v_0 = 0.05$，到期时间 $\tau = 0.15$ 年。我们希望在波动率 $v = 0.05412$ 时获得现价 $S = 101.52$ 处的价格。以下 Matlab 代码构建了 $40 \times 40$ 的均匀网格并使用 20 个时间步。它从同一个 `WeightedMethod.m` 函数获取显式、隐式和 Crank-Nicolson 方案的价格，但参数 $\theta$ 的设置不同。
+为了说明加权方法，我们使用 `Foulon (2010)` Case 1 中定义的参数值：`kappa = 1.5, theta = 0.04, sigma = 0.3, rho = -0.9, r = 0.02, lambda = 0.05`，以及行权价 `K = 100`。此外，我们使用 `v_0 = 0.05`，到期时间 `tau = 0.15` 年。我们希望在波动率 `v = 0.05412` 时获得现价 `S = 101.52` 处的价格。以下 `Matlab` 代码构建了 `40 × 40` 的均匀网格并使用 20 个时间步。它从同一个 `WeightedMethod.m` 函数获取显式、隐式和 `Crank-Nicolson` 方案的价格，但参数 `theta` 的设置不同。
 
 ```matlab
 nS = 39; % 股价
@@ -9223,50 +9447,46 @@ inA = inv(A);
 Price = WeightedMethod(the,S0,V0,K,S,V,T,A,invA,B);
 ```
 
-在这个示例中，使用 Heston 解析解得的精确价格为 4.1086。显式方案价格为 4.1679，正如预期，由于步数较少，近似效果较。隐式和 Crank-Nicolson 方案分别产生了 4.1023 和 4.1350，两者都更准确。
+在这个示例中，使用 `Heston` 解析解得的精确价格为 4.1086。显式方案价格为 4.1679，正如预期，由于步数较少，近似效果较。隐式和 `Crank-Nicolson` 方案分别产生了 4.1023 和 4.1350，两者都更准确。
 
-Matlab 函数 `BuildDerivativesNonUniform.m` 是 `BuildDerivatives.m` 函数的一个版本，它接受非均匀网格并返回 $L$ 的子矩阵。
+`Matlab` 函数 `BuildDerivativesNonUniform.m` 是 `BuildDerivatives.m` 函数的一个版本，它接受非均匀网格并返回 `L` 的子矩阵。
 
 ```matlab
 function [derS derV1 derV2 derVV derSV] = BuildDerivativesNonUniform(S,V,T)
 % (函数实现略)
 ```
 
-
-
-
-
 # 316 MATLAB 和 C# 中的 HESTON 模型及其扩展
 
-我们可以对 $\partial U/\partial S$ 使用中心差分：
+我们可以对 `partial U/partial S` 使用中心差分：
 
 ```
 $\frac{\partial U}{\partial S}(S_i, 0, t_n) = \frac{U_{i+1,0}^n - U_{i-1,0}^n}{S_{i+1} - S_{i-1}}$
 ```
 
-但对于 $\partial U/\partial v$，我们必须使用前向差分，例如简单形式：
+但对于 `partial U/partial v`，我们必须使用前向差分，例如简单形式：
 
 ```
 $\frac{\partial U}{\partial v}(S_i, 0, t_n) = \frac{U_{i,1}^n - U_{i,0}^n}{v_1 - 0}$
 ```
 
-因为 $v_0 = 0$。请记住，在此语境下，我们使用 $v_0$ 表示方差网格上的第一个点，而不是现量波动的 Heston 参数。子矩阵 $L_{S,S}, L_{S,v}$ 和 $L_{v,v}$ 在边界点处值为零。
+因为 `v_0 = 0`。请记住，在此语境下，我们使用 `v_0` 表示方差网格上的第一个点，而不是现量波动的 `Heston` 参数。子矩阵 `L_{S,S}, L_{S,v}` 和 `L_{v,v}` 在边界点处值为零。
 
 ## 显式格式 (EXPLICIT SCHEME)
 
-当网格均匀时，显式格式对产生产生一个非常简单的 PDE 表达式。它是加权平均法的一种特例，通过在方程 (10.11) 中设置 $\theta=0$ 得到：
+当网格均匀时，显式格式对产生产生一个非常简单的 PDE 表达式。它是加权平均法的一种特例，通过在方程 `(10.11)` 中设置 `theta=0` 得到：
 
 ```
 $U^{n+1} = (I + dtL)U^n$.
 ```
 
-给定矩阵 $L_i$，我们可以直接从 $U^n$ 获得 $U^{n+1}$，而不需要矩阵逆。$U^{n+1}$ 中对应于 $U_{i,j}^n$ 的元素为：
+给定矩阵 `L_i`，我们可以直接从 `U^n` 获得 `U^{n+1}`，而不需要矩阵逆。`U^{n+1}` 中对应于 `U_{i,j}^n` 的元素为：
 
 ```
 $U_{i,j}^{n+1} = U_{i,j}^n + dt \left[ \frac{1}{2}S_i^2 \frac{\partial^2 U}{\partial S^2} + \frac{1}{2}\sigma_j^2 \frac{\partial^2 U}{\partial v^2} + \rho v_j S_i \frac{\partial^2 U}{\partial S \partial v} + (r-q)S_i \frac{\partial U}{\partial S} + \kappa(\theta - v_j) \frac{\partial U}{\partial v} \right] U_{i,j}^n$
 ```
 
-这是使用显式格式为美式期权的示例。我们在第 8 章遇到过，当我们使用显式格式时，为了实现这一点，必须代入导数的有限差分近似。当对 $(S_j, v_j)$ 使用均匀网格时，会出现最简单的实现方式。在这种情况下，$U_{i,j}^n$ 的表达式可以简化为仅包含参数、索引值、与 $U_{i,j}^n$ 相邻的点以及增量的简单表达式。我们将均匀网格下的导数近似值代入，得到：
+这是使用显式格式为美式期权的示例。我们在第 8 章遇到过，当我们使用显式格式时，为了实现这一点，必须代入导数的有限差分近似。当对 `(S_j, v_j)` 使用均匀网格时，会出现最简单的实现方式。在这种情况下，`U_{i,j}^n` 的表达式可以简化为仅包含参数、索引值、与 `U_{i,j}^n` 相邻的点以及增量的简单表达式。我们将均匀网格下的导数近似值代入，得到：
 
 ```
 $U_{i,j}^{n+1} = U_{i,j}^n + dt \left[ \frac{1}{2}S_i^2 \frac{U_{i+1,j}^n - 2U_{i,j}^n + U_{i-1,j}^n}{(dS)^2} + \frac{1}{2}\sigma_j^2 \frac{U_{i,j+1}^n - 2U_{i,j}^n + U_{i,j-1}^n}{(dv)^2} + \rho v_j S_i \frac{U_{i+1,j+1}^n - U_{i+1,j-1}^n - U_{i-1,j+1}^n + U_{i-1,j-1}^n}{4 ds dv} \right] + \rho v_j S_i \frac{U_{i,j+1}^n - U_{i,j-1}^n}{2 dv} + \frac{1}{2}\sigma^2 v_j \frac{U_{i+1,j}^n - U_{i-1,j}^n}{2 ds} + \kappa(\theta - v_j) \frac{U_{i,j+1}^n - U_{i,j-1}^n}{2 dv} ] U_{i,j}^n$
@@ -9274,13 +9494,13 @@ $U_{i,j}^{n+1} = U_{i,j}^n + dt \left[ \frac{1}{2}S_i^2 \frac{U_{i+1,j}^n - 2U_{
 
 ## 有限差分方法
 
-合并同项并简化，注意 $S_i = i \times ds$ 且 $v_j = j \times dv$，可以得到：
+合并同项并简化，注意 `S_i = i × ds` 且 `v_j = j × dv`，可以得到：
 
 ```
-$U_{i,j}^{n+1} = \left[ 1 - dt (\rho jdv + \frac{\sigma_j^2}{dv} + r) \right] U_{i,j}^n + \left[ \frac{dt}{2} (ijdv - r + q) \right] U_{i-1,j}^n + \left[ \frac{dt}{2} (ijdv + r - q) \right] U_{i+1,j}^n + \left[ \frac{dt}{2dv} (\sigma_j^2 - \kappa(\theta - idv)) \right] U_{i,j-1}^n + \left[ \frac{dt}{2dv} (\sigma_j^2 + \kappa(\theta - idv)) \right] U_{i,j+1}^n + \frac{ijt\sigma}{4} (U_{i-1,j+1}^n + U_{i+1,j-1}^n - U_{i-1,j-1}^n - U_{i+1,j+1}^n). (10.20)
+$U_{i,j}^{n+1} = \left[ 1 - dt (\rho jdv + \frac{\sigma_j^2}{dv} + r) \right] U_{i,j}^n + \left[ \frac{dt}{2} (ijdv - r + q) \right] U_{i-1,j}^n + \left[ \frac{dt}{2} (ijdv + r - q) \right] U_{i+1,j}^n + \left[ \frac{dt}{2dv} (\sigma_j^2 - \kappa(\theta - idv)) \right] U_{i,j-1}^n + \left[ \frac{dt}{2dv} (\sigma_j^2 + \kappa(\theta - idv)) \right] U_{i,j+1}^n + \frac{ijt\sigma}{4} (U_{i-1,j+1}^n + U_{i+1,j-1}^n - U_{i-1,j-1}^n - U_{i+1,j+1}^n). (10.20)$
 ```
 
-Matlab 函数 `HestonExplicitPDE` 返回包含所有 $U_{i,j}$ 的矩阵。所有 $t < N$ 的中间值 $U_{i,j}$ 都被丢弃。该函数需要 $S, v$ 网格作为输入。为了节省某些步骤，函数已被移除：
+`Matlab` 函数 `HestonExplicitPDE` 返回包含所有 `U_{i,j}` 的矩阵。所有 `t < N` 的中间值 `U_{i,j}` 都被丢弃。该函数需要 `S, v` 网格作为输入。为了节省某些步骤，函数已被移除：
 
 ```matlab
 function U = HestonExplicitPDE(params,...)
@@ -9305,77 +9525,112 @@ for t=1:NT-1
   u = U;
   for v=2:NV-1
     A = (1/2*dt*(s-1)^2*(v-1)/dv - sigma^2*dv);
-    B = (1/2*dt*(s+1)^2*(v-1)/dv - 1/2*dt*(r-q));
-    C = (1/2*dt*(s+1)^2*(v-1)/dv + 1/2*dt*(r+q));
-    D = (1/2*dt*sigma^2*(v-1)/dv - 1/2*dt*kappa);
-    E = (1/2*dt*sigma^2*(v-1)/dv + 1/2*dt*kappa);
-    F = 1/4*dt*sigma*(s-1)*(v-1);
-    U(s,v) = A*u(s,v) + B*u(s-1,v) + C*u(s+1,v);
-  end
-end
 ```
 
-当使用非均匀网格时，方程 (10.19) 到 (10.20) 的简化是不可能的，我们直接处理 (10.19)。这通过 Matlab 函数 `HestonExplicitUniformGrid` 进行说明。同样，只保留了 $U$ 的终端值。
+
+
+`B = (1/2*dt*(s+1)^2*(v-1)/dv - 1/2*dt*(r-q));`
+
+`C = (1/2*dt*(s+1)^2*(v-1)/dv + 1/2*dt*(r+q));`
+
+`D = (1/2*dt*sigma^2*(v-1)/dv - 1/2*dt*kappa);`
+
+`E = (1/2*dt*sigma^2*(v-1)/dv + 1/2*dt*kappa);`
+
+`F = 1/4*dt*sigma*(s-1)*(v-1);`
+
+`U(s,v) = A*u(s,v) + B*u(s-1,v) + C*u(s+1,v);`
+
+end
+
+end
+
+当使用非均匀网格时，方程 (10.19) 到 (10.20) 的简化是不可能的，我们直接处理 (10.19)。这通过 Matlab 函数 `HestonExplicitUniformGrid` 进行说明。同样，只保留了 `$U$` 的终端值。
 
 ```matlab
 function U = HestonExplicitUniformGrid(params,...)
+
 for s=1:NS
+
   for v=1:NV
+
     U(s,v) = max(S - K, 0);
+
   end
+
 for t=1:NT-1
+
   for v=1:NV
+
     U(s,v) = 0;
+
     U(NS,v) = max(0, Smax - K);
+
   end
+
   for s=1:NS
+
     U(s,v) = max(0, S(s) - K);
+
   end
+
   u = U;
+
   for s=2:NS-1
+
     derV = (u(s,2) - u(s,1)) / (V(2)-V(1));
+
     derS = (u(s+1,s) - u(s-1,s-1)) / (S(s+1)-S(s-1));
+
     LHS = r*u(s,1) + (r-q)*S(s)*derS + kappa*theta*derV;
+
     U(s,1) = LHS*dt + u(s,1);
+
   end
+
   u = U;
+
   for v=2:NV-1
+
     derS = (u(s+1,v) - u(s-1,v)) / (S(s+1)-S(s-1));
+
     derV = (u(s,v+1) - u(s,v-1)) / (V(v+1)-V(v-1));
+
     derSS = (u(s+1,v) - u(s,v)) / (S(s+1)-S(s));
+
     derVV = (u(s,v+1) - u(s,v-1)) / (V(v+1)-V(v-1));
+
     derSV = (u(s+1,v) - u(s-1,v-1)) - U(s+1,v-1);
+
     U(s,v) = 0.5*V(v)*S(s)*2*derSS + rho*sigma*V(v)*S(s) - ...;
+
   end
+
 end
 ```
 
-我们可以将非均匀网格与均匀网格配合使用，为均匀网格的函数速度更快。`HExplicitPDonUniformGrid` 返回终端值 $U$，对应于沿网格的 $S$ 和 $v_i$ 值。为了获得 $U$ 的值，我们应用 Matlab 函数 `interp2.m` 进行二维插值。
+我们可以将非均匀网格与均匀网格配合使用，为均匀网格的函数速度更快。`HExplicitPDonUniformGrid` 返回终端值 `$U$`，对应于沿网格的 `$S$` 和 `$v_i$` 值。为了获得 `$U$` 的值，我们应用 Matlab 函数 `interp2.m` 进行二维插值。
 
 使用均匀和非均匀网格实现显式方法的 C# 代码与 Matlab 代码相似。
 
 ## 误差分析
 
 研究股票价格和波动率网格点数增加时显式格式对真实价格的收敛性是有益的。我们使用与上一节相同的设置，使用均匀和非均匀网格来说这一点。
-使用 Heston 闭式解计算欧式看权的精确价格，我们检查 PDE 网格向真实价格的收敛性，其中股票价格网格点数 $N_s$ 从 20 到 40（步长为 5），且波动率网格点数 $N_v$ 从 10 到 40（步长为 5）。我们设置时间点数 $N_t = 1,000$。
-
-
-
-
+使用 Heston 闭式解计算欧式看权的精确价格，我们检查 PDE 网格向真实价格的收敛性，其中股票价格网格点数 `$N_s$` 从 20 到 40（步长为 5），且波动率网格点数 `$N_v$` 从 10 到 40（步长为 5）。我们设置时间点数 `$N_t = 1,000$`。
 
 ## 有限差分方法
 
-通常情况下，最好不要使用三维数组 $U(S,v,t)$ 实现欧式期权的显式方案，因为这需要大量的内存分配。本中的 Matlab 和 C# 代码都使用二维数组 $U(S,v)$，并通过覆盖 $U(S,v)$ 的连续值，仅保留到期日 $t_{\max}$ 的值。除非需要期日值来为欧式期权，否则在中间步骤存储 $U_{t_n}$ 的值是浪费的。
+通常情况下，最好不要使用三维数组 `U(S,v,t)` 实现欧式期权的显式方案，因为这需要大量的内存分配。本中的 Matlab 和 C# 代码都使用二维数组 `U(S,v)`，并通过覆盖 `U(S,v)` 的连续值，仅保留到期日 `$t_{\max}$` 的值。除非需要期日值来为欧式期权，否则在中间步骤存储 `U_{t_n}` 的值是浪费的。
 
 ## ADI 方案
 
-交替方向隐式（ADI）方案具有稳定且在时间点较少时具有良好收敛性的优点。回想在加权方法中，我们根据对应一阶和二阶导数的分量构造了矩阵 $L$。我们还利用图 10.2 所示网格上的 $U_n^*$ 分量构造了向量 $U^*$。ADI 方案的核心思想是分别处理 $L$ 的分量，某些分量采用显式处理，而另一些采用隐式处理。我们将 $L$ 分为三个大小为 $N \times N$ 的矩阵 $A_0$、$A_1$ 和 $A_2$，使得
+交替方向隐式（ADI）方案具有稳定且在时间点较少时具有良好收敛性的优点。回想在加权方法中，我们根据对应一阶和二阶导数的分量构造了矩阵 `L`。我们还利用图 10.2 所示网格上的 `U_n^*` 分量构造了向量 `U^*`。ADI 方案的核心思想是分别处理 `L` 的分量，某些分量采用显式处理，而另一些采用隐式处理。我们将 `L` 分为三个大小为 `$N \times N$` 的矩阵 `A_0`、`A_1` 和 `A_2`，使得
 
 ```
 $L = A_0 + A_1 + A_2$
 ```
 
-其中，$A_0$ 包含所有对应混合导数 $\partial^2U/\partial S\partial v$ 的 $L$，$A_1$ 包含所有对应 $\partial U/\partial S$ 和 $\partial^2U/\partial S^2$ 的条目，$A_2$ 包含所有对应 $\partial U/\partial v$ 和 $\partial^2U/\partial v^2$ 的条目$L$ 的条目分布在 $A_1$ 和 $A_2$ 之间。因此，我们构造矩阵如下：
+其中，`A_0` 包含所有对应混合导数 `$\partial^2U/\partial S\partial v$` 的 `L`，`A_1` 包含所有对应 `$\partial U/\partial S$` 和 `$\partial^2U/\partial S^2$` 的条目，`A_2` 包含所有对应 `$\partial U/\partial v$` 和 `$\partial^2U/\partial v^2$` 的条目 `L` 的条目分布在 `A_1` 和 `A_2` 之间。因此，我们构造矩阵如下：
 
 ```
 $A_0 = \rho v S \frac{\partial U}{\partial S\partial v}_{N\times N}$
@@ -9389,65 +9644,72 @@ $A_2 = \kappa(\theta-v)\frac{\partial U}{\partial v}_{N\times N} + \frac{1}{2}\s
 $U'(t) = LU(t)$.
 ```
 
-该系统可以使用各种迭代工作的 ADI 方案进行求解，通过将给定的 $U_{t-1} = \bar{U}(t-1)$ 更新为新值 $U_t = U(t)$。所有方案都需要一个初始值 $U_0$。对于看涨期权，该初始值与本章之前的节相同。用 $I$ 表示维度为 $N$ 的单位矩阵。这些方案由 In'T Hout 和 Foulon (2010) 描述。
+该系统可以使用各种迭代工作的 ADI 方案进行求解，通过将给定的 `U_{t-1} = \bar{U}(t-1)` 更新为新值 `U_t = U(t)`。所有方案都需要一个初始值 `U_0`。对于看涨期权，该初始值与本章之前的节相同。用 `I` 表示维度为 `N` 的单位矩阵。这些方案由 In'T Hout 和 Foulon (2010) 描述。
 
 ## Douglas 方案
 
-这是所考虑的最简单 ADI 方案。给定 $U_{t-1}$，我们通过以下步骤更新到 $U_t$：
+这是所考虑的最简单 ADI 方案。给定 `U_{t-1}`，我们通过以下步骤更新到 `U_t`：
 
-- 步骤 1. $Y_0 = [I + dtL]U_{r-1}$。
-- 步骤 2. $Y_k = [I - \theta dtA_k]^{-1}[Y_0 - \theta dtA_k U_{r-1}]$ 对于 $k = 1, 2$。
-- 步骤 3. 设置 $U_t = Y_2$。
+- 步骤 1. `Y_0 = [I + dtL]U_{r-1}`。
+- 步骤 2. `Y_k = [I - \theta dtA_k]^{-1}[Y_0 - \theta dtA_k U_{r-1}]` 对于 `k = 1, 2`。
+- 步骤 3. 设置 `U_t = Y_2`。
 
 ### Craig-Sneyd 方案
 该方案与 Douglas 方案相似，增加了两个额外的步骤。
 
-- 步骤 1. $Y_0 = [I + dtL]U_{r-1}$。
-- 步骤 2. $Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]$ 对于 $k = 1, 2$。
-- 步骤 3. $\hat{Y}_0 = Y_0 + \frac{1}{2}dt[A_0Y_2 - A_0U_{r-1}]$。
-- 步骤 4. $\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1} - \theta dtA_k U_{r-1}]$。
-- 步骤 5. 设置 $U_t = Y_2$。
+- 步骤 1. `Y_0 = [I + dtL]U_{r-1}`。
+- 步骤 2. `Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]` 对于 `k = 1, 2`。
+- 步骤 3. `\hat{Y}_0 = Y_0 + \frac{1}{2}dt[A_0Y_2 - A_0U_{r-1}]`。
+- 步骤 4. `\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1} - \theta dtA_k U_{r-1}]`。
+- 步骤 5. 设置 `U_t = Y_2`。
 
 ### Modified Craig-Sneyd 方案
 
-- 步骤 1. $Y_0 = [I + dtL]U_{r-1}$。
-- 步骤 2. $Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]$。
-- 步骤 3. $\hat{Y}_0 = Y_0 + \theta dt[A_0Y_2 - A_0U_{r-1}]$。
-- 步骤 4. $\hat{Y}_0 = Y_0 + (\frac{1}{2} - \theta)dt[LY_2 - LU_{r-1}]$。
-- 步骤 5. $\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1} - \theta dtA_k U_{r-1}]$。
-- 步骤 6. 设置 $U_t = Y_2$。
+- 步骤 1. `Y_0 = [I + dtL]U_{r-1}`。
+- 步骤 2. `Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]`。
+- 步骤 3. `\hat{Y}_0 = Y_0 + \theta dt[A_0Y_2 - A_0U_{r-1}]`。
+- 步骤 4. `\hat{Y}_0 = Y_0 + (\frac{1}{2} - \theta)dt[LY_2 - LU_{r-1}]`。
+- 步骤 5. `\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1} - \theta dtA_k U_{r-1}]`。
+- 步骤 6. 设置 `U_t = Y_2`。
 
 ### Douglas-Snewer 方案
 
-- 步骤 1. $Y_0 = [I + dtL]U_{r-1}$。
-- 步骤 2. $Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]$。
-- 步骤 3. $\hat{Y}_0 = Y_0 + \frac{1}{2}dt[LY_2 - LU_{r-1}]$。
-- 步骤 4. $\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1}]$。
-- 步骤 5. 设置 $U_t = \hat{Y}_2$。
-- 步骤 6. 设置 $U_t = Y_2$。
+- 步骤 1. `Y_0 = [I + dtL]U_{r-1}`。
+- 步骤 2. `Y_k = [I - \theta dtA_k]^{-1}[Y_{k-1} - \theta dtA_k U_{r-1}]`。
+- 步骤 3. `\hat{Y}_0 = Y_0 + \frac{1}{2}dt[LY_2 - LU_{r-1}]`。
+- 步骤 4. `\hat{Y}_k = [I - \theta dtA_k]^{-1}[\hat{Y}_{k-1}]`。
+- 步骤 5. 设置 `U_t = \hat{Y}_2`。
+- 步骤 6. 设置 `U_t = Y_2`。
 
-参数 $\theta$ 正如加权方法所示控制类型。因此，$\theta = 0$ 产生显式方案，$\theta = 1/2$ 产生 Crank-Nicolson 方案。ADI 方案由方案本身和参数 $\theta$ 指定。一旦矩阵 $L$ 构造完成，实现 ADI 方案是直接的。这通过 `ADIPrice` 函数完成。函数的第一部分构建所需的导数矩阵，可以使用均匀或非均匀网格构造。构造矩阵的函数与本章之前的相同。
+参数 `\theta` 正如加权方法所示控制类型。因此，`\theta = 0` 产生显式方案，`\theta = 1/2` 产生 Crank-Nicolson 方案。ADI 方案由方案本身和参数 `\theta` 指定。一旦矩阵 `L` 构造完成，实现 ADI 方案是直接的。这通过 `ADIPrice` 函数完成。函数的第一部分构建所需的导数矩阵，可以使用均匀或非均匀网格构造。构造矩阵的函数与本章之前的相同。
 
 ## 有限差分方法
 
-```
+```matlab
 function y = ADIPrice(scheme,GridType)
-if strcmp(GridType,'NonUniform')
-  [derS,derSV] = BuildDerivativesUniform(S,V);
-else
-  [derS,derSV] = BuildDerivatives(S,V);
-end
-``` 第二部分使用导数构造矩阵 $A_0, A_1$，从网格创建价格向量，并将 $U^0$ 初始化为到日的欧式期权值。
 
+if strcmp(GridType,'NonUniform')
+
+  [derS,derSV] = BuildDerivativesUniform(S,V);
+
+else
+
+  [derS,derSV] = BuildDerivatives(S,V);
+
+end
 ```
+第二部分使用导数构造矩阵 `A_0, A_1`，从网格创建价格向量，并将 `U^0` 初始化为到日的欧式期权值。
+
+```matlab
 A0 = rho.*derSV
 A1 = (r-q).*derS + (1/2).*derSS - r/2;
 A2 = kappa.*derV - kappa.*derV;
 S1 = repmat(S,NV,1)
 U = max(0, S1, K);
-``` 最后，函数的最后部分遍历时间并应用 ADI 方案。它将向量 $U^0$ 重新排列为矩阵，并插值矩阵以找到 $S_0$ 和 $V_0$ 处的欧式看权价格。
-
 ```
+最后，函数的最后部分遍历时间并应用 ADI 方案。它将向量 `U^0` 重新排列为矩阵，并插值矩阵以找到 `S_0` 和 `V_0` 处的欧式看权价格。
+
+```matlab
 for t=2:NT
 u = U;
 Y0 = (I + dt.*(A0+A1+A2)).*u;
@@ -9469,6 +9731,7 @@ elseif strcmp(scheme,'HV')
 end
 ```
 ```
+
 end = reshape(U,NS,NV)
 y = interp2(V,S,U,V0,S0);
 ```
@@ -9477,7 +9740,7 @@ y = interp2(V,S,U,V0,S0);
 
 实现 ADI 方案的 C# 代码与 Matlab 代码非常相似，在此未给出。然而，根据加权方法的 C# 代码，我们需要 C# 函数 `MinVLU()` 和 `interp2()` 用于矩阵逆和二维插值。我们还需要向量矩阵操作的函数。`ADIPrice()` 函数在选定的 ADI 方案下计算期权价格。以下代码段包含 `ADIPrice()` 函数中 Hausdorff-Verwer 方案的部分。
 
-```
+```csharp
 self(scheme == "HV")
   { // Hausdorfer-Verwer ADI 方案
     double[ A0Y2 ] = Mul(A0, Y2);
@@ -9489,30 +9752,29 @@ self(scheme == "HV")
   }
 ```
 
-我们继续本章之前的示例，使用 $N_t = 20$ 步和均匀网格 $N_x = 40$。精确价格为 4.1086。
 
-## 表 10.2 均匀网格下的 ADI 价格，大小 40 × 40
+
+我们继续本章之前的示例，使用 `$N_t = 20$` 步和均匀网格 `$N_x = 40$`。精确价格为 4.1086。
+
+### 表 10.2 均匀网格下的 ADI 价格，大小 40 × 40
 
 | Scheme | Explicit | Error | Implicit | Error | C.-N. | Error |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | Douglas C.S. | 4.1467 | 0.038 | 4.0928 | -0.016 | 4.1197 | 0.011 |
 | | 4.1400 | 0.031 | 4.0864 | -0.022 | 4.1132 | 0.005 |
 | M.C.S. H.V. | 4.1123 | 0.004 | 4.1124 | 0.004 | 4.1132 | 0.005 |
 | | 4.1123 | 0.004 | 4.1124 | 0.004 | 4.1132 | 0.005 |
 
-## 表 10.3 非均匀网格下的 ADI 价格，大小 20 × 20
+### 表 10.3 非均匀网格下的 ADI 价格，大小 20 × 20
 
 | Scheme | Explicit | Error | Implicit | Error | C.-N. | Error |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | Douglas C.S. | 4.2133 | 0.015 | 4.1042 | -0.004 | 4.1582 | 0.050 |
 | | 4.1946 | 0.086 | 4.0856 | -0.023 | 4.1395 | 0.031 |
 | M.C.S. H.V. | 4.1363 | 0.028 | 4.1360 | 0.028 | 4.1395 | 0.031 |
-| | 4.1363 | 0.028 | 4.1357 | 0.027 | 4.1395 | 0.031 | |
+| | 4.1363 | 0.028 | 4.1357 | 0.027 | 4.1395 | 0.031 |
 
-
-
-
-准确率约为 1 分钱。如果使用非均匀网格，网格大小可以缩小到 $20 \times 20$，时间步可以减少到 10。这产生的结果在准确性上相当，但所需的计算时间要少得多。完整结果见表 10.2（均匀网格）和表 10.3（非均匀网格）。
+准确率约为 1 分钱。如果使用非均匀网格，网格大小可以缩小到 `$20 \times 20$`，时间步可以减少到 10。这产生的结果在准确性上相当，但所需的计算时间要少得多。完整结果见表 10.2（均匀网格）和表 10.3（非均匀网格）。
 
 # 结论
 
@@ -9531,151 +9793,161 @@ self(scheme == "HV")
 
 Heston 模型中的欧式看涨和看跌期权价格有闭形式。因此，可以对看涨或看跌价格进行求导，并获得大部分希腊字母的解析表达式。回想看涨和看跌价格分别为：
 
-$C(K) = S_0e^{-rt}P_1 - Ke^{-rt}P_2, \quad P(K) = C(K) + Ke^{-rt} - S_0e^{-rt} \quad (11.1)$
+`$C(K) = S_0e^{-rt}P_1 - Ke^{-rt}P_2, \quad P(K) = C(K) + Ke^{-rt} - S_0e^{-rt} \quad (11.1)$`
 
 其中
 
-$P_j = \frac{1}{2} + \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f_j(\phi; x_t, v_t)}{i\phi} \right] d\phi. \quad (11.2)$
+`$P_j = \frac{1}{2} + \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K} f_j(\phi; x_t, v_t)}{i\phi} \right] d\phi. \quad (11.2)$`
 
-因此，看涨和看跌期权对参数或阶数的敏感性通常涉及实值概率 $P_j$ 的一阶和二阶导数
+因此，看涨和看跌期权对参数或阶数的敏感性通常涉及实值概率 `$P_j$` 的一阶和二阶导数
 
-$\frac{\partial P_j}{\partial y} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{\partial f_j}{\partial y} e^{-i\phi \ln K}}{i\phi} \right] d\phi, \quad \frac{\partial^2 P_j}{\partial y^2} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{\partial^2 f_j}{\partial y^2} e^{-i\phi \ln K}}{i\phi} \right] d\phi. \quad (11.3)$
+`$\frac{\partial P_j}{\partial y} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{\partial f_j}{\partial y} e^{-i\phi \ln K}}{i\phi} \right] d\phi, \quad \frac{\partial^2 P_j}{\partial y^2} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{\partial^2 f_j}{\partial y^2} e^{-i\phi \ln K}}{i\phi} \right] d\phi. \quad (11.3)$`
 
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
-在接后的子节中，我们使用 (11.3) 推导出大多数常用的常用一阶和二阶希腊字母的解析表达式。
+在接后的子节中，我们使用 `(11.3)` 推导出大多数常用的常用一阶和二阶希腊字母的解析表达式。
 
 ### Delta, Gamma, Rho, Theta 和 Vega
 
-Delta, gamma, rho 和 theta 通过对等式 (11.1) 求导并在需要时应用 (11.3) 得到。Vega 则更具任意性，因为 Heston 模型中有多个参数影响波动率微笑。二阶波动率 vanna 和 volga 将在下一节中涵盖。
+Delta, gamma, rho 和 theta 通过对等式 `(11.1)` 求导并在需要时应用 `(11.3)` 得到。Vega 则更具任意性，因为 Heston 模型中有多个参数影响波动率微笑。二阶波动率 vanna 和 volga 将在下一节中涵盖。
 
 正如 Bakshi、Cao 和 Chen (1997)、Reiss 和 Wystup (2000) 以及 Bakshi 和 Madan (2000) 等人解释，看涨和看跌期权的 delta 分别可以给出
 
-$\Delta_{C} = \frac{\partial C}{\partial S}=e^{-q\tau}P_{1}$ 和 $\Delta_{P} = \frac{\partial P}{\partial S}=e^{-q\tau}(P_{1}-1). \quad (11.4)$
+`$\Delta_{C} = \frac{\partial C}{\partial S}=e^{-q\tau}P_{1}$ 和 $\Delta_{P} = \frac{\partial P}{\partial S}=e^{-q\tau}(P_{1}-1). \quad (11.4)$`
 
-Gamma 通过对 delta 求导得到。根据定义，看涨和看跌期权的 Gamma 是相同的。在等式 (11.3) 中使用 $\partial f_{1}/\partial S=i\phi f_{1}/S$ 获得 $\partial P_{1}/\partial S$，可以恢复 gamma
+Gamma 通过对 delta 求导得到。根据定义，看涨和看跌期权的 Gamma 是相同的。在等式 `(11.3)` 中使用 `$\partial f_{1}/\partial S=i\phi f_{1}/S$` 获得 `$\partial P_{1}/\partial S$`，可以恢复 gamma
 
-$\Gamma = \frac{\partial^{2}C}{\partial S^{2}}=e^{-2q\tau}\frac{\partial^{2}P_{1}}{\partial S^{2}}-\pi P_{1}\text{Re}[e^{-i\phi \ln K}f_{1}]. \quad (11.5)$
+`$\Gamma = \frac{\partial^{2}C}{\partial S^{2}}=e^{-2q\tau}\frac{\partial^{2}P_{1}}{\partial S^{2}}-\pi P_{1}\text{Re}[e^{-i\phi \ln K}f_{1}]. \quad (11.5)$`
 
-Rho 通过对 (11.1) 关于无利率 $r$ 求导得到。看涨和看跌期权的 rho 为
+Rho 通过对 `(11.1)` 关于无利率 `$r$` 求导得到。看涨和看跌期权的 rho 为
 
-$\rho_{C} = \frac{\partial C}{\partial r}=Ke^{-q\tau}P_{2}$ 和 $\rho_{P} = \frac{\partial P}{\partial r}=Ke^{-q\tau}(P_{2}-1). \quad (11.6)$
+`$\rho_{C} = \frac{\partial C}{\partial r}=Ke^{-q\tau}P_{2}$ 和 $\rho_{P} = \frac{\partial P}{\partial r}=Ke^{-q\tau}(P_{2}-1). \quad (11.6)$`
 
-Theta 是对到期日 $\tau$ 的负导。对于看涨和看跌期权，theta 为
+Theta 是对到期日 `$\tau$` 的负导。对于看涨和看跌期权，theta 为
 
-$\Theta_{C} = \frac{\partial C}{\partial \tau}=-S_{1}e^{-q\tau}(-qP_{1}+\frac{\partial P_{1}}{\partial \tau})+Ke^{-q\tau}(-rP_{2}+\frac{\partial P_{2}}{\partial \tau}) \quad (11.7)$
-
-以及
-
-$\Theta_{P} = \frac{\partial P}{\partial \tau}=\Theta_{C}+Cre^{-q\tau}-qS_{1}e^{-q\tau}$ 其中
-
-$\frac{\partial f_{i}}{\partial \tau}=\exp(C+D_{i}\phi)(\frac{\partial C_{i}}{\partial \tau}) \quad (11.8)$
+`$\Theta_{C} = \frac{\partial C}{\partial \tau}=-S_{1}e^{-q\tau}(-qP_{1}+\frac{\partial P_{1}}{\partial \tau})+Ke^{-q\tau}(-rP_{2}+\frac{\partial P_{2}}{\partial \tau}) \quad (11.7)$`
 
 以及
 
-$\frac{\partial C_{i}}{\partial \tau}=(r-q)\phi+\frac{\kappa}{\sigma^{2}}[b_{i}-\rho\sigma\phi+d_{i}+\frac{g_{i}e^{d\tau}}{1-g_{i}}] \quad (11.9)$
+`$\Theta_{P} = \frac{\partial P}{\partial \tau}=\Theta_{C}+Cre^{-q\tau}-qS_{1}e^{-q\tau}$ 其中`
 
-$\frac{\partial D_{i}}{\partial \tau}=\frac{b_{i}-\rho\sigma\phi+d_{i}}{\sigma^{2}}\times\frac{(g_{i}-1)d_{i}e^{d\tau}}{(1-g_{i}e^{d\tau})^{2}}$
+`$\frac{\partial f_{i}}{\partial \tau}=\exp(C+D_{i}\phi)(\frac{\partial C_{i}}{\partial \tau}) \quad (11.8)$`
+
+以及
+
+`$\frac{\partial C_{i}}{\partial \tau}=(r-q)\phi+\frac{\kappa}{\sigma^{2}}[b_{i}-\rho\sigma\phi+d_{i}+\frac{g_{i}e^{d\tau}}{1-g_{i}}] \quad (11.9)$`
+
+`$\frac{\partial D_{i}}{\partial \tau}=\frac{b_{i}-\rho\sigma\phi+d_{i}}{\sigma^{2}}\times\frac{(g_{i}-1)d_{i}e^{d\tau}}{(1-g_{i}e^{d\tau})^{2}}$`
 
 ## Heston 希腊字母
 
-在等式 (11.8) 中，$x_t = \ln S_t$ 是对数价格，$v_t$ 是初始波动率，它是观测并估计为 $v_0$。量 $b_j, g_j$ 和 $d_j$ 在第 1 章中给出，$j=1, 2$。
+在等式 `(11.8)` 中，`$x_t = \ln S_t$` 是对数价格，`$v_t$` 是初始波动率，它是观测并估计为 `$v_0$`。量 `$b_j, g_j$` 和 `$d_j$` 在第 1 章中给出，`$j=1, 2$`。
 
-Vega 是看涨和看跌价格对隐含波动率的导数。在 Black-Scholes 模型中，隐含波动率由波动率参数 $\sigma_{BS}$ 表示，因此看涨期权的 vega 很容易获得为 $\partial C_{BS}/\partial \sigma_{BS}$，其中 $C_{BS}$ 是 Black-Scholes 价格。回 Heston 模型中隐含波动率面由驱动波动率的参数决定，即回归速度 $\kappa$、回归水平 $\theta$、初始波动率 $v_0$ 和相关系数 $\rho$，这些都是初始和长期波动率的参数。Zhu (2010) 建议基于这两个参数建立vega。这两个参数代表波动率，因此我们创建了波动率敏感性度量，Zhu (2010) 定义了两个，一个基于 $\sqrt{v_0}$，另一个基于 $\omega = \theta$。看涨期权的 vegas 是导数
+Vega 是看涨和看跌价格对隐含波动率的导数。在 Black-Scholes 模型中，隐含波动率由波动率参数 `$\sigma_{BS}$` 表示，因此看涨期权的 vega 很容易获得为 `$\partial C_{BS}/\partial \sigma_{BS}$`，其中 `$C_{BS}$` 是 Black-Scholes 价格。回 Heston 模型中隐含波动率面由驱动波动率的参数决定，即回归速度 `$\kappa$`、回归水平 `$\theta$`、初始波动率 `$v_0$` 和相关系数 `$\rho$`，这些都是初始和长期波动率的参数。Zhu (2010) 建议基于这两个参数建立vega。这两个参数代表波动率，因此我们创建了波动率敏感性度量，Zhu (2010) 定义了两个，一个基于 `$\sqrt{v_0}$`，另一个基于 `$\omega = \theta$`。看涨期权的 vegas 是导数
 
-$\mathcal{V}_1 = \frac{\partial C}{\partial v} \frac{\partial C}{\partial v_0}2\sqrt{v_0} \text{ 和 } \mathcal{V}_2 = \frac{\partial C}{\partial \omega} \frac{\partial C}{\partial \theta}2\sqrt{\theta}. \quad (11.10)$
+`$\mathcal{V}_1 = \frac{\partial C}{\partial v} \frac{\partial C}{\partial v_0}2\sqrt{v_0} \text{ 和 } \mathcal{V}_2 = \frac{\partial C}{\partial \omega} \frac{\partial C}{\partial \theta}2\sqrt{\theta}. \quad (11.10)$`
 
 第一个 vega
 
-$\mathcal{V}_1 = e^{-q\tau} \frac{\partial P_1}{\partial v_0}2\sqrt{v_0} - Ke^{-r\tau} \frac{\partial P_2}{\partial v_0}2\sqrt{v_0}. \quad (11.11)$
+`$\mathcal{V}_1 = e^{-q\tau} \frac{\partial P_1}{\partial v_0}2\sqrt{v_0} - Ke^{-r\tau} \frac{\partial P_2}{\partial v_0}2\sqrt{v_0}. \quad (11.11)$`
 
 其中
 
-$\frac{\partial P_1}{\partial v_0} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K}(\phi; x_t, v_t)} D_j(\tau, \phi)}{i\phi} \right] d\phi. \quad (11.12)$
+`$\frac{\partial P_1}{\partial v_0} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K}(\phi; x_t, v_t)} D_j(\tau, \phi)}{i\phi} \right] d\phi. \quad (11.12)$`
 
 第二个 vega
 
-$\mathcal{V}_2 = e^{-q\tau} \frac{\partial P_1}{\partial \theta}2\sqrt{\theta} - Ke^{-r\tau} \frac{\partial P_2}{\partial \theta}2\sqrt{\theta}. \quad (11.13)$
+`$\mathcal{V}_2 = e^{-q\tau} \frac{\partial P_1}{\partial \theta}2\sqrt{\theta} - Ke^{-r\tau} \frac{\partial P_2}{\partial \theta}2\sqrt{\theta}. \quad (11.13)$`
 
 其中
 
-$\frac{\partial P_1}{\partial \theta} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K}(\phi; x_t, v_t)}{i\phi} \frac{\partial C_l}{\partial \theta} \right] d\phi. \quad (11.14)$
+`$\frac{\partial P_1}{\partial \theta} = \frac{1}{\pi} \int_0^{\infty} \text{Re} \left[ \frac{e^{-i\phi \ln K}(\phi; x_t, v_t)}{i\phi} \frac{\partial C_l}{\partial \theta} \right] d\phi. \quad (11.14)$`
 
 以及
 
-$\frac{\partial C_l}{\partial \theta} = \frac{\kappa}{\sigma^2}} \left( (b_j - \rho\sigma\phi + d_j) \tau - 2\ln \left( \frac{1-g_je^{d_j\tau}}{1-g_j} \right) \right). \quad (11.15)$
+`$\frac{\partial C_l}{\partial \theta} = \frac{\kappa}{\sigma^2}} \left( (b_j - \rho\sigma\phi + d_j) \tau - 2\ln \left( \frac{1-g_je^{d_j\tau}}{1-g_j} \right) \right). \quad (11.15)$`
 
-通过检查等式 (11.1)，很容易验证看跌期权的 $\mathcal{V}_1$ 和 $\mathcal{V}_2$ 与看涨期权的相同。
-
-
-
-
+通过检查等式 `(11.1)`，很容易验证看跌期权的 `$\mathcal{V}_1$` 和 `$\mathcal{V}_2$` 与看涨期权的相同。
 
 # Vanna, Volga 以及其他希腊字母
 
-最常用的二阶希腊字母是 vanna（即 vega 对现货价格的导数）以及 vega 对波动率的导数。在小节中，我们只关注方程 (11.11) 中的一阶导数 $\nu_1$。因此，vanna 和 volga 为
+最常用的二阶希腊字母是 vanna（即 vega 对现货价格的导数）以及 vega 对波动率的导数。在小节中，我们只关注方程 `(11.11)` 中的一阶导数 `$\nu_1$`。因此，vanna 和 volga 为
 
-$$Vanna = \frac{\partial^2 C}{\partial \nu\partial S} \frac{\partial^2 C}{\partial \nu^2} 2\sqrt{v_0} \text{ 和 } Volga = \frac{\partial^2 C}{\partial \nu^2} (11.16)$$
+`$$Vanna = \frac{\partial^2 C}{\partial \nu\partial S} \frac{\partial^2 C}{\partial \nu^2} 2\sqrt{v_0} \text{ 和 } Volga = \frac{\partial^2 C}{\partial \nu^2} (11.16)$$`
 
-其中 $\nu = \sqrt{v_0}$。同样，很容易验证 vanna 和 volga 是相同的。Vanna 可以由 delta 得到：
+其中 `$\nu = \sqrt{v_0}$`。同样，很容易验证 vanna 和 volga 是相同的。Vanna 可以由 delta 得到：
 
-$$Vanna = \frac{\partial}{\partial \nu}\frac{\partial (C)}{\partial S} = 2e^{-r\tau}\sqrt{v_0}\frac{\partial P_1}{\partial v_0} (11.17)$$
+`$$Vanna = \frac{\partial}{\partial \nu}\frac{\partial (C)}{\partial S} = 2e^{-r\tau}\sqrt{v_0}\frac{\partial P_1}{\partial v_0} (11.17)$$`
 
-这里我们使用了 (11.12) 中的导数。Volga 可以通过 (11.10) 从 vega 得到：
+这里我们使用了 `(11.12)` 中的导数。Volga 可以通过 `(11.10)` 从 vega 得到：
 
-$$Volga = \frac{\partial \nu_1}{\partial \nu} = Se^{-r\tau}\frac{\partial^2 P_1}{\partial \nu^2} - Ke^{-r\tau}\frac{\partial^2 P_2}{\partial \nu^2} (11.18)$$
+`$$Volga = \frac{\partial \nu_1}{\partial \nu} = Se^{-r\tau}\frac{\partial^2 P_1}{\partial \nu^2} - Ke^{-r\tau}\frac{\partial^2 P_2}{\partial \nu^2} (11.18)$$`
 
 其中
 
-$$\frac{\partial^2 P_j}{\partial \nu^2} = 4(\frac{\partial^2 P_j}{\partial v_0^2} + \frac{1}{2}\frac{\partial P_j}{\partial v_0}) (11.19)$$
-$$\frac{1}{\pi}\int_{-\infty}^{\infty} Re \left[ \frac{e^{-i\phi}\ln K}{i\phi} 2D_j(\tau, \phi; x_t, v_t)(2D_j(\tau, \phi)v_0 + 1)\right] d\phi.$$
+`$$\frac{\partial^2 P_j}{\partial \nu^2} = 4(\frac{\partial^2 P_j}{\partial v_0^2} + \frac{1}{2}\frac{\partial P_j}{\partial v_0}) (11.19)$$`
+`$$\frac{1}{\pi}\int_{-\infty}^{\infty} Re \left[ \frac{e^{-i\phi}\ln K}{i\phi} 2D_j(\tau, \phi; x_t, v_t)(2D_j(\tau, \phi)v_0 + 1)\right] d\phi.$$`
 
 等价地：
 
-$$Volga = \frac{\partial \nu_1}{\partial v_0}\sqrt{v_0} = 4\sqrt{v_0}(\frac{\partial^2 C}{\partial v_0^2} + \frac{\nu_1}{4v_0}) = 4(\frac{\partial^2 C}{\partial v_0^2} + \frac{1}{2}\frac{\partial C}{\partial v_0}) (11.20).$$
+`$$Volga = \frac{\partial \nu_1}{\partial v_0}\sqrt{v_0} = 4\sqrt{v_0}(\frac{\partial^2 C}{\partial v_0^2} + \frac{\nu_1}{4v_0}) = 4(\frac{\partial^2 C}{\partial v_0^2} + \frac{1}{2}\frac{\partial C}{\partial v_0}) (11.20).$$`
 
 我们需要二阶导数：
 
-$$\frac{\partial^2 C}{\partial v_0^2} = Se^{-r\tau}\frac{\partial^2 P_1}{\partial v_0^2} - Ke^{-r\tau}\frac{\partial^2 P_2}{\partial v_0^2} (11.21).$$
+`$$\frac{\partial^2 C}{\partial v_0^2} = Se^{-r\tau}\frac{\partial^2 P_1}{\partial v_0^2} - Ke^{-r\tau}\frac{\partial^2 P_2}{\partial v_0^2} (11.21).$$`
 
-结合方程 (11.12)：
+结合方程 `(11.12)`：
 
-$$\frac{\partial^2 P_j}{\partial v_0^2} = \frac{1}{\pi}\int_{-\infty}^{\infty} Re \left[ \frac{e^{-i\phi}\ln K}{i\phi} D_j(\tau, \phi; x_t, v_t)^2\right] d\phi. (11.22)$$
+`$$\frac{\partial^2 P_j}{\partial v_0^2} = \frac{1}{\pi}\int_{-\infty}^{\infty} Re \left[ \frac{e^{-i\phi}\ln K}{i\phi} D_j(\tau, \phi; x_t, v_t)^2\right] d\phi. (11.22)$$`
 
-我们已经将 vega $(\nu_1)$、vanna 和 volga 都用现货波动率 $v = \sqrt{v_0}$ 来定义。另一方面，我们在第一章中遇到的期权价格 $U(S_t, v_t, t)$ 的 Heston PDE 包含了用方差 $v_0$ 表示的导数。如果我们用 $v_0$ 代替 $v$ 来重新定义 vega、vanna 和 volga，那么我们就可以这些希腊字母代入 PDE 并证明它是满足的。因此，我们得到：
+我们已经将 vega `($\nu_1$)`、vanna 和 volga 都用现货波动率 `$v = \sqrt{v_0}$` 来定义。另一方面，我们在第一章中遇到的期权价格 `$U(S_t, v_t, t)$` 的 Heston PDE 包含了用方差 `$v_0$` 表示的导数。如果我们用 `$v_0$` 代替 `$v$` 来重新定义 vega、vanna 和 volga，那么我们就可以这些希腊字母代入 PDE 并证明它是满足的。因此，我们得到：
 
-$$\Theta = \frac{1}{2}v_0^2S_0\Gamma + (r-q)S_0\Delta - rU$$
+`$$\Theta = \frac{1}{2}v_0^2S_0\Gamma + (r-q)S_0\Delta - rU$$`
 
-$$\rho v_0 S_0 \text{Vanna} + \frac{1}{2}\sigma^2 v_0 \text{Volga} + \kappa(\theta - v_0)\text{Vega} = 0 \quad (11.23)$$
+`$$\rho v_0 S_0 \text{Vanna} + \frac{1}{2}\sigma^2 v_0 \text{Volga} + \kappa(\theta - v_0)\text{Vega} = 0 \quad (11.23)$$`
 
-其中我们 $\lambda(S,v,t)=0$ 且 $S_0$ 是现货价格。(11.23) 的第一行是 Black-Scholes PDE，第二行按照 Heston 模型指定的添加了针对随机波动率的修正项。很容易验证，只要 vega、vanna 和 volga 是基于方差而非波动率构建的，那么带有希腊字母的 PDE 对于 Black-Scholes 和 Heston 模型均成立。这通过以下代码片段实现，该代码使用了 `Hestonreeks.m` 函数，我们将在本章稍后介绍。
+其中我们 `$\lambda(S,v,t)=0$` 且 `$S_0$` 是现货价格。`(11.23)` 的第一行是 Black-Scholes PDE，第二行按照 Heston 模型指定的添加了针对随机波动率的修正项。很容易验证，只要 vega、vanna 和 volga 是基于方差而非波动率构建的，那么带有希腊字母的 PDE 对于 Black-Scholes 和 Heston 模型均成立。这通过以下代码片段实现，该代码使用了 `Hestonreeks.m` 函数，我们将在本章稍后介绍。
 
 ```matlab
-%mat
+```
+
+
+
+```mat
 Price = HestonPriceGaussLaguerre(...);
+
 Delta = HestonGreeks(..., 'Delta');
+
 Gamma = HestonGreeks(..., 'Gamma');
+
 Theta = HestonGreeks(..., 'Theta');
+
 Vega = HestonGreeks(..., 'Vega') / (2*sqrt(v0));
+
 Vanna = HestonGreeks(..., 'Vanna') / (2*sqrt(v0));
+
 Volga = HestonGreeks(..., 'Volga');
+
 Volga = (1/4)/sqrt(v0) * Vega/2/sqrt(v0);
+
 Theta = Theta + 0.5*v0^2*Gamma + (r-q)*S0*Delta;
+
 % Black Greeks
+
 Theta = BSGreeks(PutCall,S0,r,sigma, 'Theta');
+
 Gamma = BSGreeks(PutCall,S0,r,sigma, 'Gamma');
+
 Delta = BSGreeks(PutCall,S0,r,sigma, 'Delta');
+
 Price = BSPrice(PutCall,S0,r,sigma);
+
 BS = Theta + 0.5*sigma^2*Gamma + (r-q)*S0*Delta;
 ```
 
 在上面的片段中，我们反转了 (11.10)、(11.16) 和 (11.18) 以用 $v$ 表示导数，而不是将这些导数代入 Heston PDE。关于带有希腊字母的 Heston PDE 的进一步讨论，请参见 Zhu (2010)。正如第二章提到的，相关性 $\rho$ 和方差的波动率 $\sigma$ 分别控制隐含波动率的斜率和曲率，而 $\kappa$ 控制回归均值水平 $\theta$ 的速度。当 $\rho<0$ 时，隐含波动率的斜率受 $\rho$ 控制；当 $\rho>0$ 时，曲率受 $\sigma$ 控制。当 $\sigma$ 增加时，隐含波动率的曲率会增加。期权价格对 $\sigma$ 的敏感度为：
 
 $$\frac{\partial C}{\partial \sigma} = Se^{-r\tau}\frac{\partial P_1}{\partial \sigma} - Ke^{-r\tau}\frac{\partial P_2}{\partial \sigma} (11.24)$$
-
-
-
-
 
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
@@ -9795,10 +10067,6 @@ Heston 希腊的代码类似但未给出。唯一的区别在于，在 $C$ 中�
 
 这三组希腊都非常接近，这表明解析式和有限差分等价物是等价的。生成 Vega 时，解析式和有限差分等价物是等价的。
 
-
-
-
-
 ## Heston 希腊字母
 
 # 339
@@ -9820,6 +10088,8 @@ $C(K) = S_t - \frac{1}{2}Ke^{-rt} - \frac{Ke^{-rt}}{\pi} \int_{0}^{\infty} A(u)d
 ```
 $A(u) = \frac{R_2 + \frac{I_2}{u}}\cos(\ell u) + \left(I_2 - \frac{R_2}{u}\right)\sin(\ell u)}{1+u^2} \frac{F(u)\cos(\ell u) + G(u)\sin(\ell u)}{1+u^2} \quad (11.31)$
 ```
+
+
 
 # 340 MATLAB 和 C# 中的 Heston 模型及其扩展
 
@@ -9859,8 +10129,11 @@ Matlab 函数 `AttariProbreeks.m` 计算方程 (11.34) 和 (11.36) 中 delta 和
 
 ```
 function A = AttariProbreeks(u,...,Greek)
+
 % Attari 和 L 函数的特征函数
+
 f = exp(C + D*v0 - i*u*tau);
+
 l = log(exp(-r*tau)*K/S0);
 ```
 
@@ -9886,18 +10159,24 @@ l = log(exp(-r*tau)*K/S0);
 ```
 
 ### 系数
+
 F = (real(f) + imag(f)/u);
+
 G = (imag(f) - real(f)/u);
+
 % 返回所选希腊字母的被积函数
+
 if strcmp(Greek, 'Delta'):
+
     A = (F*sin(L) - G*cos(L)) * u/S0/(1+u^2)
+
 elseif strcmp(Greek, 'Gamma'):
+
     A = (-F*cos(L) + G*sin(L)) * u/S0/(1+u^2)
+
 ```
 
 *(注：由于提供的文本中存在大量重复和断层，上述译文已根据逻辑进行了整理，以确保翻译的连贯性)*
-
-[content]
 
 ## Heston 希腊字母
 
@@ -9959,8 +10238,11 @@ $\frac{\partial^2 A(u)}{\partial S^2} = \frac{-F(u)(\cos(\ell u)+\sin(\ell u)) +
 
 ```
 function A = AttariProbreeks(u,...,Greek)
+
 % Attari 和 L 函数的特征函数
+
 f = exp(C + D*v0 - i*u*tau);
+
 l = log(exp(-r*tau)*K/S0);
 ```
 
@@ -9974,11 +10256,8 @@ elseif strcmp(Greek, 'Gamma'):
     A = (-F*cos(L) + G*sin(L)) * u/S0/(1+u^2)
 ```
 
-
-
-
-
 # 344
+
 # MATLAB 和 C# 中的 Heston 模型及其扩展
 
 ```matlab
@@ -10009,6 +10288,7 @@ end
 ```
 
 该函数被传递给 Matlab 函数 `LewisGreekPrice.m`。C# 代码类似，此处未给出。
+
 Lewis (2001) 推导出的期权价格 $C(S)$ 也使用了第 4 章涵盖的 Parseval 等等式。使用 $k=1/2$ 的公式是 Lewis (2001) 中的方程 (3.11)。
 
 > $C(S_i) = S_i e^{-qt} - \int_{0}^{\infty} \frac{\sqrt{S_i e^{-qt}+r\tau/2}}}{\pi} \text{Re} \left[ e^{ix\mu} \left( u - \frac{1}{2i} \right) \right] \frac{1}{u^2+4} du \n= S_i e^{-qt} \int_{0}^{\infty} \text{Re} \left[ K^{iu-e^{-r\tau f_2}} \left( u - \frac{1}{2i} \right) \right] \frac{1}{u^2+4} du$
@@ -10022,13 +10302,21 @@ Lewis (2001) 推导出的期权价格 $C(S)$ 也使用了第 4 章涵盖的 Pars
 ## 表 11.3 各种形式下的闭式希腊字母
 
 | | Heston (1993) | Attari (2004) | Carr and Madan (1999) | Lewis (2000) | Lewis (2001) |
+
 |---|---|---|---|---|---|
+
 | 价格 Delta (Price Delta) | 0.5836 | 0.5836 | 0.5083 | 0.5666 | 0.5837 |
+
 | Gamma | 0.0347 | 0.0347 | 0.0347 | 0.0353 | 0.0347 |
+
 | Theta | -11.3995 | | -11.4094 | -11.3464 | -11.4009 |
+
 | Rho | 13.3128 | | 13.3127 | 12.8696 | 13.3133 |
+
 | Vega 1 | 15.3911 | | 15.3909 | 15.4812 | 15.3915 |
+
 | Vanna | -0.1257 | | -0.1257 | 0.0516 | -0.1257 |
+
 | Volga | 15.5081 | | 15.4273 | 15.7285 | 15.4054 |
 
 ### 使用 FFT 和 FRFT 的希腊字母
@@ -10046,6 +10334,8 @@ $\psi(v_j) = \frac{e^{-v_j^2} f_2(v_j) - (\alpha + i)}{\alpha^2 + v_j^2} \quad (
 ```
 
 替换为使用 $f_2$ 导数的修改版本，例如方程 (38) 中的 theta。使用 FFT 实现希腊字母需要对第 5 章提出的代码进行轻微修改。Matlab 函数 `HestonCallFFreek.m` 与该章节的 `HestonCallFFT` 几乎相同，不同在于它使用了 `HestonGreeks.m` 函数。它通过额外参数返回特征函数或其导数：
+
+
 
 ```matlab
 function [CallFFT, lambda] = HestonCallFFreek(..., Greek)
@@ -10081,7 +10371,7 @@ for j=1:8
   error(j) = sum(GreeksCM(:) - Greeks(:,j));
 ```
 
-使用 FFT 和 FRT 实现希腊字母的代码在此未给出。为了说明，我们使用现价 $S_0=100$ 和 6 个月的期限运行 FRT。结果在表 11.4 中，包含了来自 Carr and Madan (1999) 公式的真实值误差。表格表明通过分数 FFT 获得的希腊字母是准确的。虽然 FFT 本身没有给出，但它们也非常准确。
+使用 FFT 和 FRT 实现希腊字母的代码在此未给出。为了说明，我们使用现价 `$S_0=100$` 和 6 个月的期限运行 FRT。结果在表 11.4 中，包含了来自 Carr and Madan (1999) 公式的真实值误差。表格表明通过分数 FFT 获得的希腊字母是准确的。虽然 FFT 本身没有给出，但它们也非常准确。
 
 ### 使用模拟的美式希腊字母
 
@@ -10090,19 +10380,28 @@ for j=1:8
 ## 表 14 分数傅里叶变换的希腊字母
 
 | 执行权 (Strike) | 价格 (Price) | Delta | Gamma | Rho | Vega | Vanna |
+
 |---|---|---|---|---|---|---|---|
+
 | 98.02 | 9.21 | 0.649 | 0.021 | -9.25 | 27.85 | 16.63 | -0.188 | 27.77 |
+
 | 98.51 | 8.93 | 0.638 | 0.021 | -9.27 | 27.46 | 16.60 | -0.163 | 27.44 |
+
 | 99.00 | 8.66 | 0.628 | 0.022 | -9.28 | 27.06 | 16.96 | -0.137 | 27.14 |
+
 | 99.50 | 8.39 | 0.617 | 0.022 | -9.29 | 26.64 | 17.11 | -0.111 | 26.88 |
+
 | 100.00 | 8.12 | 0.606 | 0.022 | -9.29 | 26.23 | 17.25 | -0.084 | 26.66 |
+
 | 100.50 | 7.86 | 0.595 | 0.022 | -9.29 | 25.80 | 17.37 | -0.056 | 26.49 |
+
 | 101.01 | 7.61 | 0.573 | 0.023 | -9.28 | 25.36 | 17.48 | -0.028 | 26.36 |
+
 | 误差 (Error) | $4.5 \times 10^{-6}$ | $5.2 \times 10^{-6}$ | $5.2 \times 10^{-7}$ | $1.8 \times 10^{-4}$ | $4.5 \times 10^{-6}$ | $5.2 \times 10^{-6}$ | $1.8 \times 10^{-4}$ |
 
 该算法可以修改以计算美式希腊字母。此外，为了确保希腊字母准确，我们必须存储生成股票价格和波动率路径的角随机变量值，并在对输入偏移值生成路径时应用相同的随机变量。这确保了原始路径与偏移路径之间的任何差异都是由偏移本身引起的，而不是模拟噪声。
 
-修改第 7 章的函数以使用 LSM 算法获取美式希腊字母是简单的。第一个任务是在函数外部创建相关随机变量矩阵，并将这些矩阵作为函数参数。`MMSim.m` 函数是第 7 章中 Andersen 和 Brotherton-Ratcliffe (2005) 矩匹配模拟的简单修改版本。唯一的区别是相关随机变量 $Z_s$ 和 $Z_v$ 在函数外部，并作为参数传递给函数。
+修改第 7 章的函数以使用 LSM 算法获取美式希腊字母是简单的。第一个任务是在函数外部创建相关随机变量矩阵，并将这些矩阵作为函数参数。`MMSim.m` 函数是第 7 章中 Andersen 和 Brotherton-Ratcliffe (2005) 矩匹配模拟的简单修改版本。唯一的区别是相关随机变量 `$Z_s$` 和 `$Z_v$` 在函数外部，并作为参数传递给函数。
 
 ```matlab
 function [S V] = MMSim(params,...,Zv, Zs)
@@ -10121,10 +10420,6 @@ for i=1:N
 end
 end
 ```
-
-
-
-
 
 # 348 MATLAB 和 C# 中的 Heston 模型及其扩展
 
@@ -10161,10 +10456,14 @@ end
 `LSMGreeks.m` 函数用于以下代码，它仅生成 delta 和 gamma。
 
 - * 相关 N(0,1) 随机变量矩阵
-Zv = randn(NT,NS);
-Zs = rho*Zv + sqrt(1-rho^2).*randn(NT,NS);
-[EuroDelta Amer] = LSMGreeks(...,,'delta');
-[EuroGammaGamma] = LSMGreeks(...,,'gamma');
+
+`Zv = randn(NT,NS);`
+
+`Zs = rho*Zv + sqrt(1-rho^2).*randn(NT,NS);`
+
+`[EuroDelta Amer] = LSMGreeks(...,,'delta');`
+
+`[EuroGammaGamma] = LSMGreeks(...,,'gamma');`
 
 使用 Longstaff 和 Schwartz (2001) 的 LSM 算法获取美式看跌期权 Greeks 的 C 代码非常相似，此处不再给出。区别在于我们需要为回归参数估计和生成随机数创建 C 函数。这些函数与第 8 章中的函数相同，它们在 LSM 算法中被用于生成美式期权的价格。
 
@@ -10175,21 +10474,33 @@ Zs = rho*Zv + sqrt(1-rho^2).*randn(NT,NS);
 **表 11.5** 美式看跌期权的价格和 Greeks，LSM 算法
 
 | 现价 (Spot) | 价格 (Price) | Delta | Gamma | Theta | Rho | Vega1 | Vanna |
+
 |---|---|---|---|---|---|---|---|
+
 | 8 | 2.000 | -0.999 | 0.006 | 0.006 | 0.005 | -0.005 | -0.480 |
+
 | 9 | 1.111 | -0.731 | 0.056 | -0.835 | -1.094 | 0.848 | 1.227 |
+
 | 10 | 0.537 | -0.431 | 0.255 | -1.255 | -0.726 | 0.983 | -0.465 |
+
 | 11 | 0.225 | -0.211 | 0.168 | -1.026 | -0.427 | 0.675 | -0.481 |
+
 | 12 | 0.080 | -0.086 | 0.089 | -0.575 | -0.240 | 0.317 | -0.462 |
 
 **表 11.6** 欧式看跌期权的价格和 Greeks，LSM 算法
 
 | 现价 (Spot) | 闭式价格 (Closed Price) | LSM 价格 | 闭式 Delta (Closed Delta) | LSM Delta | 闭式 Gamma (Closed Gamma) | LSM Gamma | 闭式 Vega1 (Closed Vega1) | LSM Vega1 |
+
 |---|---|---|---|---|---|---|---|---|
+
 | 8 | 1.839 | 1.834 | -0.880 | -0.875 | 0.139 | 0.174 | 0.358 | 0.367 |
+
 | 9 | 1.048 | 1.057 | -0.681 | -0.663 | 0.253 | 0.252 | 0.857 | 0.729 |
+
 | 10 | 0.502 | 0.522 | -0.411 | -0.409 | 0.264 | 0.241 | 0.857 | 0.859 |
+
 | 11 | 0.225 | 0.221 | -0.193 | -0.206 | 0.164 | 0.165 | 0.662 | 0.693 |
+
 | 12 | 0.080 | 0.078 | -0.083 | -0.085 | 0.074 | 0.085 | 0.383 | 0.415 |
 
 为了评估通过这种方法计算的 Greeks 的准确性，我们使用 LSM 算法为欧式看跌期权定价，使用与表 11.5 相同的设置，并将 LSM 算法得到的 Greeks 与闭式解 Greeks 进行比较。表 11.6 显示的结果表明，在 LSM 算法下计算的 Greeks 相当接近。
@@ -10229,7 +10540,7 @@ dc2 = (V1 - 2*PDEPrice + D2)/dV^2*sqrt(V0);
 VolgaPDE = 4*sqrt(V0) * (dc2 + VegaPDE);
 ```
 
-Theta 的获取可以通过识别 `HestonUniformGrid` 函数返回上一步的 $U(S,v,t)$ 和 $U(S,v,t-dt)$ 直到到期值，这提供了有限差法所需的 theta 时间偏移值。
+Theta 的获取可以通过识别 `HestonUniformGrid` 函数返回上一步的 `$U(S,v,t)$` 和 `$U(S,v,t-dt)$` 直到到期值，这提供了有限差法所需的 theta 时间偏移值。
 
 ```matlab
 [U] = HestonUniformGrid(...);
@@ -10239,7 +10550,7 @@ T2 = interp2(V,S,U0,S0); // 获取 U(S,v,T-dt)
 ThetaPDE = -(T1 - T2)/dt;
 ```
 
-注意，在第一行中，函数被修改为返回 $U(S,v,r)$ 和 $U(S,v,r-dt)$，而不仅仅是 $U(S,v,t)$。在 C# 中，区别在于我们创建了用于二维插值的 `interp2()` 函数。
+注意，在第一行中，函数被修改为返回 `$U(S,v,r)$` 和 `$U(S,v,r-dt)$`，而不仅仅是 `$U(S,v,t)$`。在 C# 中，区别在于我们创建了用于二维插值的 `interp2()` 函数。
 
 ```csharp
 public struct Uu
@@ -10272,7 +10583,7 @@ for(int k=0; k<=N-1; k++)
 }
 ```
 
-使用显式法生成美式期权 Greeks 的 C 代码非常相似，并使用了第 10 章引入的 `HestonExplicitUniformGrid()` 函数来近似 PDE。该函数必须修改为返回 $U(S,v,\tau)$ 和 $U(S,v,\tau-dt)$。显式法也可以用于获取 Clarke 和 Parrott (1999) 的美式看跌期权价格和 Greeks。为每个现价构建了一个独立的非均匀网格，并围绕现价中心。
+使用显式法生成美式期权 Greeks 的 C 代码非常相似，并使用了第 10 章引入的 `HestonExplicitUniformGrid()` 函数来近似 PDE。该函数必须修改为返回 `$U(S,v,\tau)$` 和 `$U(S,v,\tau-dt)$`。显式法也可以用于获取 Clarke 和 Parrott (1999) 的美式看跌期权价格和 Greeks。为每个现价构建了一个独立的非均匀网格，并围绕现价中心。
 
 ```matlab
 S0 = [8 9 10 11 12];
@@ -10281,6 +10592,8 @@ for s=1:length(S0)
 c = S0(s)/s; % 代替 K/5
 dz = 1/ns*(asinh((Smax-S0(s))/c - asinh(-S0(s))/c); % 代替 K/c
 ```
+
+
 
 ```matlab
 for i=1:S+1;
@@ -10330,10 +10643,6 @@ ThetaPrice(s) = -(T1 - T2)/dt;
 
 ### 表 11.7 美式看跌期权的 Greeks，显式法
 
-
-
-
-
 ## Heston 希腊字母
 
 ## 353
@@ -10377,6 +10686,7 @@ end
 ```
 
 用于 Medvedev 和 Scaillet (2010) 美式期权希腊字母的 C 代码虽然简单，但并未给出。
+
 为了说明，我们使用了 Clarke 和 Parrot (1999) 的设置，这些设置生成了表 11.6 和 11.7。展开式使用了四项。结果见表 11.8。
 
 ## 表 11.8 美式期权的希腊字母，Medvedev-Scaillet 展开
@@ -10412,22 +10722,35 @@ Heston (1993) 模型并不总是很好地拟合隐含波动率。表明 Heston �
 ### 多维 Feynman-Kac 定理
 
 在本节中，我们给出 Feynman-Kac 定理的二维版本。假设 $x$ 遵循以下 $n$ 维布朗运动过程：
+
 ```
 dx_t = \mu(x,t)dt + \sigma(x,t)dB_t
 ```
+
 其中 $B_t$ 是 $m$ 维布朗运动，$\sigma(x,t)$ 是 $n \times m$ 矩阵。Feynman-Kac 定理的维维版本指出，对于函数 $f(x,t)$：
+
 $$
+
 \frac{\partial f}{\partial t} + \mathcal{A}f(x,t) - r(x,t)f(x,t) = 0 \quad (12.4)
+
 $$
+
 类似于单变量情况，算子 $\mathcal{A}$ 定义为：
+
 $$
+
 \mathcal{A} = \sum_{i=1}^n \mu_i\frac{\partial}{\partial x_i} + \frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n (\sigma\sigma^T)_{ij}\frac{\partial^2}{\partial x_i\partial x_j} \quad (12.3)
+
 $$
+
 为了符号方便，$\mu = \mu(x,t)$，$\sigma = \sigma(x,t)$，$(\sigma\sigma^T)_{ij}$ 是 $n \times n$ 矩阵的元素。
 
 Heston-Kac 定理的多维版本指出，对于边界条件 $f(x_T, T)$，解为：
+
 $$
+
 f(x,t) = \mathbb{E}^Q\left[\exp\left(-\int_t^T r(x_u) du\right) f(x_T, T) |\mathcal{F}_t\right]
+
 $$
 
 我们继续使用 Clarke 和 Parrot (1999) 的设置来生成第一个 Vega ($\mathcal{V}$) 的曲面。该图如图 11.3 所示。Medvedev 和 Scaillet (2010) 的展开式使用了三项。
@@ -10435,12 +10758,15 @@ $$
 ## 双 Heston 看权价格
 
 由 Christoffersen 等 (2009) 提出的双 Heston 模型引入了第二个波动率因子，由自身的 $S$ 驱动：
+
 ```
 dS = (r-q)Sdt + \sqrt{v_1}SdW_1 + \sqrt{v_2}SdW_2
 dv_1 = \kappa_1(\theta_1-v_1)dt + \sigma_1\sqrt{v_1}dZ_1
 dv_2 = \kappa_2(\theta_2-v_2)dt + \sigma_2\sqrt{v_2}dZ_2 \quad (12.5)
 ```
+
 指定了以下相关结构：
+
 ```
 E[dW_1dZ_1] = \rho_{11}dt
 E[dW_2dZ_2] = \rho_{22}dt
@@ -10448,8 +10774,6 @@ E[dW_1dZ_2] = E[dZ_1dW_2] = 0. \quad (12.6)
 ```
 
 注意，为了符号简单，我们省略了项下标。多因子模型思想是额外的波动率因子为波动率曲面提供了更多的灵活性。回顾第 2 章，收益率与其方差之间的相关性 $(\rho)$ 控制着波动率微笑。当 $\rho\approx0$ 时，微笑是对称的，但随着它向 $\pm1$ 移动，微笑变得极不对称，$\rho\approx-1$ 对应负斜率，$\rho\approx+1$ 对应正斜率。在单因子 Heston 模型中，$\rho$ 随期限保持不变，这意味着该模型在微笑斜率随期限剧烈变化时，难以提供足够的拟合，尽管它
-
-
 
 ## 双 Heston 模型
 
@@ -10504,6 +10828,10 @@ $\sigma(\mathbf{x})\sigma(\mathbf{x})^T = \mathbf{H}_0 + \mathbf{H}_1\mathbf{x} 
 
 其中
 
+
+
+## 双 Heston 模型
+
 ```
 $\mathbf{K}_0 = \begin{pmatrix} \frac{\tau-q}{\kappa_{\theta_1}} \\ \kappa_{2} \end{pmatrix}, \mathbf{K}_1 = \begin{pmatrix} 0 \\ 0 \\ 0\end{pmatrix}, \mathbf{K}_2 = \begin{pmatrix} -\frac{1}{2} \\ -\kappa_{v_1} \\ 0 \end{pmatrix}, \mathbf{K}_3 = \begin{pmatrix} \frac{1}{2} \\ 0 \\ -\kappa_{v_2} \end{pmatrix}$
 ```
@@ -10511,7 +10839,7 @@ $\mathbf{K}_0 = \begin{pmatrix} \frac{\tau-q}{\kappa_{\theta_1}} \\ \kappa_{2} \
 以及
 
 ```
-$\mathbf{H}_0 = \mathbf{H}_1 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \mathbf{H}_2 = \begin{pmatrix} 1 & \sigma_{h_1} & 0 \\ \sigma_{h_1} & \sigma_{v_1}^2 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \mathbf{H}_3 = \begin{pmatrix} 1 & 0 & \sigma_{h_2} \\ 0 & 0 & \sigma_{h_2} \\ 0 & \sigma_{v_2}^2 \end{pmatrix}
+$\mathbf{H}_0 = \mathbf{H}_1 = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \mathbf{H}_2 = \begin{pmatrix} 1 & \sigma_{h_1} & 0 \\ \sigma_{h_1} & \sigma_{v_1}^2 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \mathbf{H}_3 = \begin{pmatrix} 1 & 0 & \sigma_{h_2} \\ 0 & 0 & \sigma_{h_2} \\ 0 & \sigma_{v_2}^2 \end{pmatrix}$
 ```
 
 我们可以利用 Duffie 等人 (2000) 的结果，即 $(x_T, v_{1,T}, v_{2,T})$ 的特征函数具有对形式
@@ -10558,6 +10886,7 @@ $$g_i = \frac{\kappa_i - \rho_i\sigma_i\phi + d_i}{\sigma_i}, \quad d_i = \sqrt{
 
 ```
 $$A(\tau, \phi) = (r-q)i\phi_0 + \sum_{j=1}^2 \frac{2\kappa_j\theta_j}{\sigma_j} \left( (\kappa_j - \rho_j\sigma_j\phi + d_j)\tau - 2\ln\left( \frac{1-e^{d_j\tau}}{1-c_je^{-d_j\tau}} \right)\right)$$
+```
 
 通过定义 $c_i=1/g_i$，也可以使用 Albrecher 等人 (2007) 的 "Little Trap" 方法，将特征函数的系数用 $\exp(-d_i\tau)$ 而非 $\exp(d_i\tau)$ 表示，如 Gatherie 和 Schamai (2010) 所示。这产生了系数的另一种形式
 
@@ -10611,12 +10940,6 @@ y = exp(A + i*phi*x0 + B1*v01 + B2*v02);
 ```
 
 以下函数使用梯形法则计算权价格，并返回认权价格或通过看跌期权平等等式。
-
-
-
-
-
-## 双 Heston 模型
 
 ## 表 12.1 双 Heston 涨期期权
 
@@ -10694,6 +11017,8 @@ $$\frac{\partial P_2}{\partial \nu_0} = \frac{1}{\pi} \int_0^{\infty} \text{Re} 
 $$\nu_1 = Se^{-r\tau} \frac{\partial P_1}{\partial \nu_0} - Ke^{-r\tau} \frac{\partial P_2}{\partial \nu_0}, \quad (12.17)$$
 ```
 
+
+
 对于 $j=1, 2$。同样，两个 Vega 通过 $\partial^2 f/\partial v_j^2 = f \times B_j^2$ 得到。使用第 11 章的关系，$\partial^2 P_j/\partial \nu_j^2$：
 
 ```
@@ -10710,43 +11035,75 @@ $$\text{Volga} = Se^{-r\tau} \frac{\partial^2 P_1}{\partial \nu_0^2} - Ke^{-r\ta
 
 # 365 有两个基于 $v_1$ 和 $v_2$ 的 vanna
 
-$Vanna_j = 2e^{-q\tau} \frac{\partial P_j}{\partial v_j} \quad (12.19)$
+`Vanna_j = 2e^{-q\tau} \frac{\partial P_j}{\partial v_j} \quad (12.19)`
 
 Matlab 函数 `DoubleHeston` 计算双 Heston 模型的希腊字母。该函数调用 `B.m` 函数计算 Vega、vanna 和 Volga 所的 $B_1(\tau,\phi)$ 和 $B_2(\tau,\phi)$，并调用 `DiffTau` 计算 $A(\tau,\phi)$、$B_1(\tau,\phi)$ 和 $B_2(\tau,\phi)$ 的 $\tau$ 导数。为了节省空间，省略了函数的大部分。函数的第一部分计算所选希腊字母的积分。
 
 ```matlab
 function y = DoubleHestonGreeks(..., Greek)
+
 for k=1:N
+
   u = x(k);
+
   f2 = DoubleHestonCF(u, ...);
+
   f1 = DoubleHestonCF(u, ...);
+
   if strcmp(Greek, 'Price')
+
     int2(k) = w(k) * real(exp(-u*log(K))/f2;
+
     int1(k) = w(k) * real(exp(-u*log(K))/i;
+
   elseif strcmp(Greek, 'Gamma')
+
     int2(k) = w(k) * real(exp(-u*log(K))/exp((r-q)*T)...
+
   elseif strcmp(Greek, 'Vega')
+
     int2(k) = w(k) * real(exp(-u*log(K))/i/ || strcmp(Greek, 'Vega2')
+
     vochoice = 1;
+
   else
+
     B1 = (u-i,T,vochoice);
+
     B2 = (u,T,vochoice);
+
     f1 = B1;
+
     f2 = B2;
+
     int2(k) = w(k) * real(exp(-u*log(K))/i/f2);
+
     int1(k) = w(k) * real(exp(-u*log(K))/i/...
+
   elseif strcmp(Greek, 'Theta')
+
     int2(k) = w(k) * real(exp(-u*log(K))/i/f2);
+
     int1(k) = w(k) * real(exp(-u*log(K))/i/...
+
   v0 = 4;
+
   v2 = 9;
+
   [dA1 db21] = DiffTau(u-i,T,S,rf);
+
   df1 = f1+dA1*db21*v2 - (rf-q)*f1;
+
   [dA2 db22] = DiffTau(u,T,S,rf);
+
   df2 = f2+dA2*db22*v2 - (rf-q)*f1;
+
   int2(k) = w(k) * real(exp(-u*log(K))/i/f2);
+
   int1(k) = w(k) * real(exp(-u*log(K))/i/...
+
 end
+
 end
 ```
 
@@ -10754,8 +11111,11 @@ end
 
 ```matlab
 if strcmp(Greek, 'Price')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
@@ -10763,63 +11123,83 @@ if strcmp(Greek, 'Price')
 
 ```matlab
 if strcmp(Greek, 'Gamma')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Vega')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Vega2')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Theta')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Vanna')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Vanna2')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Volga')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
 
 ```matlab
 if strcmp(Greek, 'Rho')
+
   P1 = 1/2 + 1/pi*sum(int1);
+
   P2 = 1/2 + 1/pi*sum(int2);
+
   y = S*exp(-rf*T)*P1 - K*P2;
 ```
-
-
-
-
 
 ## 双 Heston 模型
 
@@ -10827,9 +11207,13 @@ if strcmp(Greek, 'Rho')
 
 ```c
 end
+
 if j==1
+
   y = B1;
+
 else
+
   y = B2;
 ```
 
@@ -10839,11 +11223,13 @@ else
 
 我们在第 11 章中看到，只要希腊满足单变量 Heston 模型的偏微分方程（PDE），前提是 PDE 用 $S$ 而非 $x = \ln S$ 表示的，且 $v$、vanna 和 volga 是用方差 $v_0$ 而非波动率 $\nu = \sqrt{v_0}$ 表示的。对于双 Heston 模型的 PDE，证明这一点也是显而易见的。使用方程 (12.8) 中仅针对 $S$ 的生成器结合 (12.4)，得到关于 $S$、$v_{01}$ 和 $v_{02}$ 的导数及其产生的 PDE 的希腊：
 
+```
 $$\Theta + (r - q)S_0\Delta + \kappa_1(\theta_1 - v_{01})Vga_1 + \kappa_2(\theta_2 - v_{02})Vga_2$$
 
 $$\frac{1}{2}(v_{01} + v_{02})S_0\Gamma + \rho_1\sigma_1v_{01}S_0Vanna_1 + \rho_2\sigma_2v_{02}S_0Vanna_2$$
 
 $$\frac{1}{2}\sigma_{01}^2Vga_1 + \frac{1}{2}\sigma_{02}^2Vga_2 - rC = 0.$$
+```
 
 ## 表 12.2 双 Heston 希腊
 
@@ -10865,21 +11251,37 @@ $$\frac{1}{2}\sigma_{01}^2Vga_1 + \frac{1}{2}\sigma_{02}^2Vga_2 - rC = 0.$$
 
 ```c
 Vega1p = Vega1 / (2*sqrt(v01));
+
 Vega2p = Vega2 / (2*sqrt(v02));
+
 Vanna1p = Vanna1 / (2*sqrt(v01));
+
 Vanna2p = Vanna2 / (2*sqrt(v02));
+
 Volgalp = Volgalp/2/sqrt(v01) /sqrt(v01);
+
 (1/4/sqrt(v01))*Volgalp
+
 Volga2p = (1/4/sqrt(v02))*Volga2 - Volga2p/2/sqrt(v02)) /sqrt(v02);
+
 * The Double Heston PDE
+
 A = (rf-q)*S*Delta
+
 + kappa1*(theta1-v01)*Vega1
+
 + kappa2*(theta2-v02)*Vega2
+
 + 0.5*sigma1^2*v01^2*Gamma
+
 rho1*sigma1*v01*Vanna1
+
 rho2*sigma2*v02*Vanna2
+
 + 0.5*sigma1^2*v1*Volgalp
+
 + 0.5*sigma2^2*v2*Volga2;
+
 PDE = Theta + A - rf*;
 ```
 
@@ -10891,30 +11293,45 @@ Christoffen 等人 (2009) 以年度为估计波动率参数 $v_{01}$ 和 $v_{02}
 
 在本节中，我们采用 $v_{01}$ 和 $v_{02}$ 作为参数的方法，类似于第 6 章中单变量 Heston 模型的做法。回想该章，有许多损失函数可以用于估计，但如果意图是最小化隐含波动率，那么一个例子是 MSE 损失函数：
 
+```
 $$\frac{1}{N}\sum_{t,k} w_{tk}(IV_{t,k} - IV_{t,k}^*)^2$$
+```
 
 正如第 6 章中提到的，使用 RMSE 和其他目标函数的问题是隐含波动率 $IV_{ik}$ 必须在每次迭代中获取，这是计算密集型的。为了解决这个问题，我们在第 6 章引入了 Christoffen 等人 (2009) 的函数：
 
+```
 $$\frac{1}{N} \sum_{i,k} w_{ik} \frac{C_{ik} - C_{ik}^{BS}}{Vega_{ik}}^2$$
+```
 
 其中 $C_{ik}$ 和 $C_{ik}^{BS}$ 分别是市场价格和看涨价格，$Vega_{ik}$ 是在执行价 $K$、期限 $\tau_k$ 下使用隐含波动率 $IV_{ik}$ 作为输入计算的 Black-Scholes Vega。其给出为：
 
+```
 $$Vega_{ik} = S \exp(-q\tau_k)d_{ik}$$
+```
 
 其中
 
+```
 $$d_{ik} = \frac{\ln(S/K) + (r-q+IV_{ik}^2/2)\tau_k}{IV_{ik}}\sqrt{\tau_k}}$$
+```
 
 以及 $n(x) = \exp(-x^2/2)/\sqrt{2\pi}$ 是标准正态密度。方程 (12.22) 中的损失函数通过 Matlab 函数 `DoubleHestonObjFun` 实现。
 
 ```matlab
 function y = DoubleHestonObjFun(...)
+
 for t=1:NT
+
   for k=1:NK
+
     MP(k,t) = DoubleHestonPriceGaussLaguerre(K(k),T(t),...)
+
     BSVega(k,t) = BSV(K(k),MktIV(k,t),T(t),...)
+
     error(k,t) = (MP(k,t) - MktPrice(k,t))^2 ...;
+
   end
+
 ```end
 ```
 
@@ -10941,10 +11358,6 @@ for t=1:NT
         ModelPrice(k,t) = CallPrice - S*exp(-q(T))*P1 + K*exp(-r(T))*P2;
 ```
 
-
-
-
-
 ## 双 Heston 模型
 
 表 12.3 单变量与双 Heston 参数估计，DJIA 数据
@@ -10955,14 +11368,16 @@ for t=1:NT
 | 双 Heston | 3.0590 | 0.0317 | 1.9850 | 0.0258 | 0.0643 | $1.56 \times 10^{-4}$ | 41.5$^a$ |
 | | 1.8467 | 0.0605 | 0.7149 | 0.0092 | -0.9750 | | 5.0$^b$ |
 
-$^a$普通估计方法
-$^b$使用向量计算方法
+
+
+# 普通估计方法
+# 使用向量计算方法
 
 单变量 Heston 模型。这在图 12.1 中也有说明，该图绘制了市场隐含波动率以及从每个模型中提取的隐含波动率。最后，使用目标函数中普通求和和 SVC 方法产生的估计值是相同的，但后者减少了近 90% 的估计时间。
 
 使用第 2 章提出的有限差分近似法得到的隐含波动率面和局部波动率面如图 12.2 所示。该图使用了表 12.3 中双 Heston 模型的参数估计。正如预期，局部波动率的波动性比隐含波动率大得多。
 
-我们还可以从使用表 12.3 中估计参数生成的 Heston 看涨权价格中提取风险中性密度 (RND)。这些密度出现在图 12.3 中。
+我们还可以从使用表 12.3 中估计参数生成的 Heston 看涨权价格中提取风险中性密度 `RND`。这些密度出现在图 12.3 中。
 
 ![](img/bc3df3b6c26c2272307f56b6cf75ef87_376_0.png)
 
@@ -11004,67 +11419,65 @@ end
 
 ### 股价的仿真
 
-Gauthier 和 Possamai (2010) 建议仿真 $S_t$ 中的对数价格不如仿真折现后的对数价格 $e^{-rt}S_t$ 并应用预测-修正方案。该方案以两个布朗运动 $W_{1,t}$ 和 $W_{2,t}$ 给出：
+Gauthier 和 Possamai (2010) 建议仿真 `S_t` 中的对数价格不如仿真折现后的对数价格 `e^{-rt}S_t` 并应用预测-修正方案。该方案以两个布朗运动 `W_{1,t}` 和 `W_{2,t}` 给出：
 
-$ln(e^{-r(t+dt)}S_{t+dt}) = ln(e^{-rt}S_t) + K_0 dt + K_1 \sqrt{v_{1,t}} dW_{1,t} + K_2 \sqrt{v_{2,t}} dW_{2,t}$
+`ln(e^{-r(t+dt)}S_{t+dt}) = ln(e^{-rt}S_t) + K_0 dt + K_1 sqrt(v_{1,t}) dW_{1,t} + K_2 sqrt(v_{2,t}) dW_{2,t}`
 
-其中 $W_{1,t}, W_{2,t}$ 是独立的。然后通过对结果进行指数化得到股价。
+其中 `W_{1,t}, W_{2,t}` 是独立的。然后通过对结果进行指数化得到股价。
 
 ### MATLAB 和 C 中的 Heston 模型及其扩展
 
-其中常数对于 $j = 1, 2$ 为：
+其中常数对于 `j = 1, 2` 为：
 
-$K_0 = \theta_j dt$, $K'_0 = \frac{dt}{2}(\frac{\kappa_j}{\sigma_j^2} - 1)$
-$K_j = \sigma_j \sqrt{dt}(\frac{\kappa_j}{\sigma_j^2} - 1)$, $K'_j = \sigma_j \sqrt{dt}$
+`K_0 = theta_j dt`, `K'_0 = dt/2 (kappa_j/sigma_j^2 - 1)`
+
+`K_j = sigma_j sqrt(dt) (kappa_j/sigma_j^2 - 1)`, `K'_j = sigma_j sqrt(dt)`
 
 ### 方差的 Euler 方案
 
-这是单变量情况的直观扩展。在全截断方案下，每个方差 $v_{t+dt}$ 使用当前值 $v_t$ 独立生成：
+这是单变量情况的直观扩展。在全截断方案下，每个方差 `v_{t+dt}` 使用当前值 `v_t` 独立生成：
 
-$v_{t+dt} = v_t + \kappa_j(\theta_j - v_t)dt + \sigma_j\sqrt{v_t}\sqrt{dt}Z_j$
+`v_{t+dt} = v_t + kappa_j(theta_j - v_t)dt + sigma_j sqrt(v_t) sqrt(dt) Z_j`
 
-对于 $j=1$，其中 $Z_j$ 是独立的布朗运动。当前值和更新后的值 $v_t$ 和 $v_{t+dt}$ 被馈系统。注意 $v_t^* = \max(0, v_t)$ 以避免负方差。也可以使用反射方案，用 $|v_t|$ 替换 $v_t^*$。
+对于 `j=1`，其中 `Z_j` 是独立的布朗运动。当前值和更新后的值 `v_t` 和 `v_{t+dt}` 被馈系统。注意 `v_t^* = max(0, v_t)` 以避免负方差。也可以使用反射方案，用 `|v_t|` 替换 `v_t^*`。
 
 ### 方差的 Alfonsi 方案
 
-Gauthier 和 Possamai (2010) 将 Alfonsi 的二阶离散化方案引入双 Heston 模型。为了符号简洁，我们去掉了所有参数和方差的下标 "$j$"。如第 7 章所示，定义：
+Gauthier 和 Possamai (2010) 将 Alfonsi 的二阶离散化方案引入双 Heston 模型。为了符号简洁，我们去掉了所有参数和方差的下标 "`j`"。如第 7 章所示，定义：
 
-$\Psi = \frac{1-\exp(-\kappa dt)}{\kappa}$
+`Psi = (1 - exp(-kappa dt))/kappa`
 
-并定义常数 $K_2$ 为：
+并定义常数 `K_2` 为：
 
-$K_2 = \exp(\kappa dt/2)(\frac{\sigma^2}{4} - \theta)\Psi + \frac{\sigma}{2}\sqrt{3dt}$ 当 $\sigma^2 > 4\kappa$，而当 $\sigma^2 \le 4\kappa$ 时，为 $0$。
+`K_2 = exp(kappa dt/2)(sigma^2/4 - theta)Psi + sigma/2 sqrt(3dt)` 当 `sigma^2 > 4kappa`，而当 `sigma^2 <= 4kappa` 时，为 `0`。
 
-在每个仿真步骤中，我们将 $v_t$ 与 $K_2$ 进行比较，根据结果得到不同的更新值 $v_{t+dt}$。因此，在该方案中单独考虑两种情况，与第 7 章相同。
+在每个仿真步骤中，我们将 `v_t` 与 `K_2` 进行比较，根据结果得到不同的更新值 `v_{t+dt}`。因此，在该方案中单独考虑两种情况，与第 7 章相同。
 
-情况 1：$v_t > K_2$
+情况 1：`v_t > K_2`
 
-更新 $v_{t+dt}$ 需要两个步骤。第一步中，我们仿真离散随机变量 $Y \in \{0, \sqrt{3}, -\sqrt{3}\}$，概率分别为 2/3、1/6 和 1/6。第二步中，我们更新 $v_{t+dt}$：
+更新 `v_{t+dt}` 需要两个步骤。第一步中，我们仿真离散随机变量 `Y in {0, sqrt(3), -sqrt(3)}`，概率分别为 2/3、1/6 和 1/6。第二步中，我们更新 `v_{t+dt}`：
 
-$v_{t+dt} = \exp(-\kappa dt/2) (\kappa \theta - \frac{\sigma^2}{4})\Psi + e^{-\kappa dt/2} v_t + \frac{\sigma}{2} \sqrt{dt} Y + (\kappa \theta - \frac{\sigma^2}{4})\Psi$
+`v_{t+dt} = exp(-kappa dt/2) (kappa theta - sigma^2/4)Psi + e^{-kappa dt/2} v_t + sigma/2 sqrt(dt) Y + (kappa theta - sigma^2/4)Psi`
 
-情况 2：$v_t \le K_2$
+情况 2：`v_t <= K_2`
 
-用以下符号表示 $v_{t+dt}$ 的条件分布 的前两个矩：
+用以下符号表示 `v_{t+dt}` 的条件分布 的前两个矩：
 
-$u_1 = E[v_{t+dt}|v_t]$, $u_2 = E[v_{t+dt}^2|v_t]$
+`u_1 = E[v_{t+dt}|v_t]`, `u_2 = E[v_{t+dt}^2|v_t]`
 
-定义量 $\pi$：
+定义量 `pi`：
 
-$\pi = \frac{1}{2} - \frac{1}{2} \sqrt{1 - \frac{u_1^2}{u_2}}$
+`pi = 1/2 - 1/2 sqrt(1 - u_1^2/u_2)`
 
-在第一步中，我们仿真 (0,1) 上的均匀随机变量 $U$。在第二步中，通过比较 $U$ 和 $\pi$ 来更新 $v_{t+dt}$：
+在第一步中，我们仿真 `(0,1)` 上的均匀随机变量 `U`。在第二步中，通过比较 `U` 和 `pi` 来更新 `v_{t+dt}`：
 
-$v_{t+dt} = \frac{u_1}{2\pi} \quad 若 U \le \pi$
-$v_{t+dt} = \frac{u_2}{2\pi} \quad 若 U > \pi$
+`v_{t+dt} = u_1/(2pi) 若 U <= pi`
 
-
-
-
+`v_{t+dt} = u_2/(2pi) 若 U > pi`
 
 ## 双 Heston 模型
 
-对于 $j = 1, 2,$，
+对于 `j = 1, 2,`
 
 ```
 $$\theta_j^* = \frac{\beta_j - \omega_{j}, \exp(-\kappa dt/2)}{1 - \exp(-\kappa dt/2)}$$
@@ -11076,7 +11489,7 @@ $$\theta_j^* = \frac{\beta_j - \omega_{j}, \exp(-\kappa dt/2)}{1 - \exp(-\kappa 
 $$\beta_j = \sqrt{(\theta_j + (v_{j} - \theta_j)e^{-\kappa dt}) \frac{\sigma_j^2}{4\kappa_j}(1 - e^{-\kappa dt})^{+}}$$
 ```
 
-为双 Heston 模型实现变换波动率方案并不比第 7 章描述的单变量情况复杂。这通过 `DHTTransVolSim.m` 函数实现，该函数使用方程 (12.26) 和 (12.33) 中的预测-修正法模拟股票价格值。需要注意的是，必须使用初始方差参数的平方根来初始化波动率，并且在过程结束将波动率输入股票价格过程之前，必须对其平方。为了节省空间，省略了函数的部分代码。
+为双 Heston 模型实现变换波动率方案并不比第 7 章描述的单变量情况复杂。这通过 `DHTTransVolSim.m` 函数实现，该函数使用方程 `(12.26)` 和 `(12.33)` 中的预测-修正法模拟股票价格值。需要注意的是，必须使用初始方差参数的平方根来初始化波动率，并且在过程结束将波动率输入股票价格过程之前，必须对其平方。为了节省空间，省略了函数的部分代码。
 
 ```matlab
 function [S..., Price] = DHTTransVolSim(scheme,...)
@@ -11110,7 +11523,7 @@ C# 代码类似，因此在此不再列出。
 
 ## 二次指数方案
 
-本章涵盖的最后一个模拟方案是 Andersen (2008) 开发的二次指数（QE）方案，并由 Guthier 和 Possamai (2010) 适配于双 Heston 方案。它的实现方式与第 7 章描述的单变量情况相同。记条件均 $m_j = E[v_{i,j+dt}|v_{i,j}]$ 以及条件方差 $s_j^2 = Var[v_{i,j+dt}|v_{i,j}]$。同时，记比例 $\psi_j =$
+本章涵盖的最后一个模拟方案是 Andersen (2008) 开发的二次指数（QE）方案，并由 Guthier 和 Possamai (2010) 适配于双 Heston 方案。它的实现方式与第 7 章描述的单变量情况相同。记条件均 `m_j = E[v_{i,j+dt}|v_{i,j}]` 以及条件方差 `s_j^2 = Var[v_{i,j+dt}|v_{i,j}]`。同时，记比例 `psi_j =`
 
 ```
 $$b_j = \frac{2}{\psi_j} - 1 + \sqrt{\frac{2}{\psi_j}\left(\frac{2}{\psi_j}-1\right)}, \quad a_j = \frac{m_j}{1+b_j^2}, \quad (12.34)$$
@@ -11125,12 +11538,12 @@ $$\psi_j^{-1}(u) = \begin{cases} 0 & \text{for } 0 \le u \le p_j \\ \beta_j \ln(
 
 该方案步骤如下：
 
--   给定 $m_j$ 和 $s_j^2$，定义 $\psi_j = s_j^2/m_j^2$。
--   抽取随机数 $U_V \in [0,1]$。
--   如果 $\psi_j < 1$，定义 $Z_V = \Phi^{-1}(U_V)$ 并定义 $v_{i,j+dt} = a_j(b_j+Z_V)^2$。
--   如果 $\psi_j \ge 1$，定义 $v_{i,j+dt} = \psi_j^{-1}(U_V)$。
+- 给定 `m_j` 和 `s_j^2`，定义 `psi_j = s_j^2/m_j^2`。
+- 抽取随机数 `U_V in [0,1]`。
+- 如果 `psi_j < 1`，定义 `Z_V = Phi^{-1}(U_V)` 并定义 `v_{i,j+dt} = a_j(b_j+Z_V)^2`。
+- 如果 `psi_j >= 1`，定义 `v_{i,j+dt} = psi_j^{-1}(U_V)`。
 
-与单变量情况一样，使用 Andersen (2008) 建议的 $\psi_j=1.5$。双 Heston 模型的 QE 模拟方案使用 DHQExpSim Matlab 函数实现。该函数调用 `normICDFm` 函数进行标准正态分布函数的反函数，该函数应用了 Wichura (1984) 的算法，显著减少了模拟时间。
+与单变量情况一样，使用 Andersen (2008) 建议的 `psi_j=1.5`。双 Heston 模型的 QE 模拟方案使用 `DHQExpSim` Matlab 函数实现。该函数调用 `normICDFm` 函数进行标准正态分布函数的反函数，该函数应用了 Wichura (1984) 的算法，显著减少了模拟时间。
 
 ```matlab
 function {S, Price} = DHQExpSim(params,...)
@@ -11207,19 +11620,15 @@ True = DoubleHestonPriceGauss(...);
 
 图 12.4 双 Heston 模型模拟股票价格和方差。如预期，Euler 方案是方案中准确性最低的。其他方案表现良好，在例子中，Zhu (2010) 的变换波动率方案最为准确。
 
-绘制双方差对单个模拟股票路径的影响很有启发性。如图 12.4 所示。股票价格从 $S_0 = 100$ 开始，由黑线表示。高方差路径（绿线）使用 $\sigma = 0.3$，$\rho = -0.9$，并从 $v_{hi} = 0.05$，而低方差路径（红线）使用 $\sigma = 0.1$，$\rho = 0.9$，并从 $v_{lo} = 0.03$ 开始。相关性对价格-波动率关系的影响显而易见。
+绘制双方差对单个模拟股票路径的影响很有启发性。如图 12.4 所示。股票价格从 `S0 = 100` 开始，由黑线表示。高方差路径（绿线）使用 `sigma = 0.3`，`rho = -0.9`，并从 `v_hi = 0.05`，而低方差路径（红线）使用 `sigma = 0.1`，`rho = 0.9`，并从 `v_lo = 0.03` 开始。相关性对价格-波动率关系的影响显而易见。
 
 ## 双 Heston 模型中的美式期权
 
 在前面的章节中，我们涵盖了由 Gauthier 和 Possamaï (2010) 适配双 Heston 模型的多种模拟方案。这些这些这些结合 Longstaff 和 Schwartz (2001) 的最小二乘蒙特卡洛（LSM）算法来获取美式期权价格，就像第 8 章应用于单变量 Heston (1993) 模型一样。我们还可以应用 Hull 和 White (1988) 的控制变量技术，该技术被 Beliaeva 和 Nawalka (2010) 在他们的二叉树中使用过，这是我们在第 8 章遇到过的。控制变量美式期权价格为：
 
-$Put_{True} = European Put_{True} + (American Put_{LSM} - European Put_{LSM})$
+`Put_True = European Put_True + (American Put_LSM - European Put_LSM)`
 
-
-
-
-
-# 表 12.5 美式看跌期权的双 Heston 
+# 表 12.5 美式看跌期权的双 Heston
 
 | 方法 | 价格 | 行权溢价 |
 | --- | --- | --- |
@@ -11229,6 +11638,8 @@ $Put_{True} = European Put_{True} + (American Put_{LSM} - European Put_{LSM})$
 | Zhu-Euler | 17.8068 | 0.1824 |
 | Zhu 变换波动 (Zhu Transformed Vol) | 17.8372 | 0.2128 |
 | 二次指数 (Quadratic Exponential) | 17.8185 | 0.1941 |
+
+
 
 闭式欧式价格为 17.6244，在本章涵盖的模拟方案下获得的美式价格如表 12.5 所示。所有方案表明，使用控制变量技术的的美式期权其行权溢价约为 $0.20，价格约为 $17.82。
 
@@ -11256,7 +11667,7 @@ Alonsi, A. (2010). "CIR 过程的高阶离散方案：在仿射结构和 Heston 
 
 Andersen, L. (2008). "Heston 随机波动率模型的有效模拟." Journal of Computational Finance, 11(3):41–142.
 
-Andersen, L.G., and R. Baas-Rathiff. (2005), "带有随机波动的扩展 Libor 市场模型." Journal of Financial Economics, 9(1):1–40.
+Andersen, L.G., and R. Baas-Rathiff. (2005), "带有随机波动的扩展 Libor 市场模型." Journal of Financial Economics, 9(1):1–.
 
 Andersen, L.G., and V.V. Peterberg. (2007). "动量爆炸." Finance and Stastics, 11(1):29–50.
 
@@ -11328,11 +11739,7 @@ Chiarella, C., and A. Ziogas. (2006). "随机波动率下的美式期权定价."
 
 Chourdakis, K. (2005). "利用分傅里叶变换进行期权定价." Journal of Computational Finance, 8(2):1–18.
 
-
-
-
-
-## 参考文献
+### 参考文献（续）
 
 Chriss, N.A. (1996). Black-Scholes and Beyond: Option Pricing Models. New York, NY: McGraw-Hill.
 
@@ -11379,6 +11786,10 @@ Fengler, M. (2009). "Arbitrage-Smoothing of the Implied Volatility Surface." Qua
 Forde, M., and A. Jacquier. (2009). "Small-Time Asymptotics for Implied Volatility Under the Helmet Model." International Journal of Theoretical and Applied Finance, 12(6):861–876.
 
 Forde, M., Jacquier, A., and A. Mijatovic. (2010). "Asymptotic Formula for Implied Volatility in the Helmet Model." Proceedings of the Royal Society, 466(2124):3593–.
+
+
+
+# References
 
 Galiatos, V. (2008). "Stochastic Volatility and the Smile." Working Paper, Department of Mathematics, Uppsala University.
 
@@ -11466,10 +11877,6 @@ Nykvist, J. (2009). "Time Consistency in Option Pricing Models." Doctoral Thesis
 
 Pan, J. (2002). "The Jump-Risk Premium Implicit in Options: From an Integrated Time-Series." Journal of Financial Economics, 63(1):3–50.
 
-
-
-
-
 - Platen, E., and D. Heath, (2009). 《定量金融的基准方法》，第13卷. New York, NY: Springer.
 
 - Press, W.H., Teukolsky, S.A., Vetterling, W.T., and B.P. Flannery, (2007). 《数值算法第三版：科学计算的艺术》. New York, NY: Cambridge University Press.
@@ -11524,286 +11931,36 @@ Pan, J. (2002). "The Jump-Risk Premium Implicit in Options: From an Integrated T
 
 - 翻译员和文档工程师，请参考下面的注意事项了解 Markdown 文档的格式。
 
-## 注意事项
 
-- 粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
-- 内联代码（`code`）和代码块不需要翻译。
-- 链接（[link](https://example.org)）需要翻译其内容，但保留网址。
-- 列表，表格，引用块保留格式，翻译内容
-- 原文可能有多行，不要漏掉任何一行，并注意一定不要重复输出原文！！！
-- 输出应包含在“[content]...[/content]中
 
-## 示例
-
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
-
-1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-译文：
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-## 以下是需要翻译的文本
-
-[content]
-
-Platen, E., and D. Heath, (2009). 《定量金融的基准方法》，第13卷. New York, NY: Springer.
-
-Press, W.H., Teukolsky, S.A., Vetterling, W.T., and B.P. Flannery, (2007). 《数值算法第三版：科学计算的艺术》. New York, NY: Cambridge University Press.
-
-Raible, S (2000). “金融中的列维过程：理论、数值与实证事实.” 博士论文，弗赖堡阿尔伯特·路德维大学，
-
-Reiss, O., and U Wystup (2000). “通过齐次和其他技巧高效计算期权价格敏感度.” 论文，Comerbank 银行。
-
-Ruckdeshel, P., Sayer, T., and A. Azimayer (2013). “Heston模型中的美式期权定价：相关性的深度探讨.” 《衍生品期刊》，
-
-Rubin, W (1986). 《实变与复分析》. 第三版. New York, NY: McGraw-Hill,
-
-Schmelze, M. (2010). 《利用傅里叶变换进行期权定价及应用》，www.pfadintegral.com.
-
-Schouts, W., Simons, O., and J. Tistaert (2004). “完美的校准！现在怎么办？”《Willbrand杂志》，2004年3月:66–7.
-
-Scott, L.O. (1987). “当方差随机变化时的期权定价：估计与应用.” 《金融与定量分析杂志》，22:41–38,
-
-Shepard, N.G. (1991). “从特征函数到分布：理论的简单框架.” 《经济理论》，7:51–29.
-
-Shimko, D. (1993) 概率界限. 《风险》，6:34–53,
-
-Singleton, K.J. (2001). “利用经验特征函数估计仿射定价模型.” 《计量经济学杂志》，102(1):111–41,
-
-Smith, R.D (2007). “Heston模型的精确模拟方法.” 《计算金融杂志》，11(1):11–5,
-
-Stin, E.M., and J.C. Stein, (1993). “具有随机波动率的股票价格：一种分析方法.” 《金融研究评论》，6:427–52,
-
-Storn, R., and K. Price. (1997). “差分进化——一种用于连续表面全局优化的简单高效的启发式算法.” 《全局优化杂志》，11:341–59,
-
-Shroud A.H., and D. Secrest (1996) 《高斯积分公式》. Upper Saddle River, NJ: Prentice-Hall.
-
-Stulz, R.A. (2010). 《肯德尔高级统计理论》，三卷本.Hoboken, NJ: John Wiley & Sons.
-
-Tapella, D., and C. Randall. (2000). 《金融工具定价：有限差分法》. New York, NY: John Wiley & Sons.
-
-Tavalis, E., and S. Wang. (2003). “随机波动率下的美式期权定价：一种利用切比雪夫项式近似早期行边界的新方法.” 工作论文 488，伦敦皇后玛大学。
-
-Van Haassecht, A., and A. Pelsser, (2010). “Heston随机波动率模型的高效精确模拟.” 《国际理论与应用金融杂志》，13(1):1–43.
-
-Vellekoop, M., and H. Nieuwenuis. (2009). “一种基于树的Heston模型美式期权定价方法.” 《计算金融杂志》，13(1):1–21,
-
-Vollrath, I., and J. (2009). “一种在Heston模型中为美式期权定价的树方法.” 《计算金融杂志》，Comerbank 银行。
-
-Whaley, R.E. (2009). 《期权定价、波动率校准与风险》.Hoboken, NJ: John Wiley & Sons.
-
-Wichura, M. (1988). “当方差随机变化时的期权定价：正态分布的傅里叶变换.” 《金融工程杂志》，37:84.
-
-Wu, L. (2008). “利用傅里叶变换估计列维过程.” 《金融杂志》，Amsterdam.
-
-Zwinger, D. (1997). 《傅里叶变换的应用》.Orlando, FL: Academic Press.
-
-[content]
 - Platen, E., and D. Heath, (2009). 《定量金融的基准方法》，第13卷. New York, NY: Springer.
-
 - Press, W.H., Teukolsky, S.A., Vetterling, W.T., and B.P. Flannery, (2007). 《数值算法第三版：科学计算的艺术》. New York, NY: Cambridge University Press.
-
 - Raible, S (2000). “金融中的列维过程：理论、数值与实证事实.” 博士论文，弗赖堡阿尔伯特·路德维大学，
-
 - Reiss, O., and U Wystup (2000). “通过齐次和其他技巧高效计算期权价格敏感度.” 论文，Comerbank 银行。
-
 - Ruckdeshel, P., Sayer, T., and A. Azimayer (2013). “Heston模型中的美式期权定价：相关性的深度探讨.” 《衍生品期刊》，
-
 - Rubin, W (1986). 《实变与复分析》. 第三版. New York, NY: McGraw-Hill,
-
 - Schmelze, M. (2010). 《利用傅里叶变换进行期权定价及应用》，www.pfadintegral.com.
-
 - Schouts, W., Simons, O., and J. Tistaert (2004). “完美的校准！现在怎么办？”《Willbrand杂志》，2004年3月:66–7.
-
 - Scott, L.O. (1987). “当方差随机变化时的期权定价：估计与应用.” 《金融与定量分析杂志》，22:41–38,
-
 - Shepard, N.G. (1991). “从特征函数到分布：理论的简单框架.” 《经济理论》，7:51–29.
-
 - Shimko, D. (1993) 概率界限. 《风险》，6:34–53,
-
 - Singleton, K.J. (2001). “利用经验特征函数估计仿射定价模型.” 《计量经济学杂志》，102(1):111–41,
-
 - Smith, R.D (2007). “Heston模型的精确模拟方法.” 《计算金融杂志》，11(1):11–5,
-
 - Stin, E.M., and J.C. Stein, (1993). “具有随机波动率的股票价格：一种分析方法.” 《金融研究评论》，6:427–52,
-
 - Storn, R., and K. Price. (1997). “差分进化——一种用于连续表面全局优化的简单高效的启发式算法.” 《全局优化杂志》，11:341–59,
-
 - Shroud A.H., and D. Secrest (1996) 《高斯积分公式》. Upper Saddle River, NJ: Prentice-Hall.
-
 - Stulz, R.A. (2010). 《肯德尔高级统计理论》，三卷本.Hoboken, NJ: John Wiley & Sons.
-
 - Tapella, D., and C. Randall. (2000). 《金融工具定价：有限差分法》. New York, NY: John Wiley & Sons.
-
 - Tavalis, E., and S. Wang. (2003). “随机波动率下的美式期权定价：一种利用切比雪夫项式近似早期行边界的新方法.” 工作论文 488，伦敦皇后玛大学。
-
 - Van Haassecht, A., and A. Pelsser, (2010). “Heston随机波动率模型的高效精确模拟.” 《国际理论与应用金融杂志》，13(1):1–43.
-
 - Vellekoop, M., and H. Nieuwenuis. (2009). “一种基于树的Heston模型美式期权定价方法.” 《计算金融杂志》，13(1):1–21,
-
 - Vollrath, I., and J. (2009). “一种在Heston模型中为美式期权定价的树方法.” 《计算金融杂志》，Comerbank 银行。
-
 - Whaley, R.E. (2009). 《期权定价、波动率校准与风险》.Hoboken, NJ: John Wiley & Sons.
-
 - Wichura, M. (1988). “当方差随机变化时的期权定价：正态分布的傅里叶变换.” 《金融工程杂志》，37:84.
-
 - Wu, L. (2008). “利用傅里叶变换估计列维过程.” 《金融杂志》，Amsterdam.
-
 - Zwinger, D. (1997). 《傅里叶变换的应用》.Orlando, FL: Academic Press.
 
-[/content] (注：由于您提供的“需要翻译的文本”是参考文献列表，且按照学术规范，作者名、年份、出版地通常不翻译，但根据您“翻译所有内容”的要求，我已对标题及描述进行了中文化处理。)
 
-**抱歉，我似乎误解了您的指令。您在“以下是需要翻译的文本”部分提供的其实是指令的重复和示例，而不是您想要我翻译的实际文本。但根据您最后的内容，您是需要翻译的是从“假设你是一个高级文档工程师...”开始的内容。**
-
-如果您是想让我翻译那段**参考文献**，请告知；如果您是想让我翻译那段**指令文本**，请看下文：
-
-**以下是针对您最后提供的“以下是需要翻译的文本”部分（实际上是指令部分）的翻译：**
-
-[content]
-假设你是一个高级文档工程师和翻译员，请参考下面的注意事项了解 Markdown 文档的格式，然后参考示例，将给定英文文本翻译成中文。
-
-## 注意事项
-
-- 粗体（**bold**）和斜体（*itatic*）需要翻译翻译内容并保留符号。
-- 内联代码（`code`）和代码块不需要翻译。
-- 链接（[link](https://example.org)）需要翻译其内容，但保留网址。
-- 列表，表格，引用块保留格式，翻译内容
-- 原文可能有多行，不要漏掉任何一行，并注意一定不要重复输出原文！！！
-- 输出应包含在“[content]...[/content]中
-
-## 示例
-
-原文：
-
-[content]
--   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
-
-1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-译文：
-
-[content]
--   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
-
-1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
-
-```
-if (condVar > someVal) {console.log("xxx")}
-```
-[/content]
-
-## 以下是需要翻译的文本
-
-[content]
-
-（此处应为您想要翻译的实际文本）
-
-
-
-
-# 394
-
-# 关于网站
-
-# 章节
-
-# 代码功能
-
-## 7. Heston 模型中的模拟
-- 生成市场与模型隐含波动率对比的图表；风险中性密度；以及总波动率（仅限 Matlab）
-- 在各种模拟方案下获取 Heston 价格，包括 Euler、Milstein、Kahl and Jackel、二次指数（Quadratic Exponential）、矩匹配匹配（Moment Matching）和变换波动率。
-- 计算逆标准正态分布；生成均匀分布和标准正态分布数（仅限 C#）
-- 生成用于说明模拟股票价格路径和波动率的图表（仅限 Matlab）
-
-## 8. 美式期权
-- 使用 Longstaff-Schwartz LSM 算法在 Heston 模型下获取美式期权价格；Beliaeva-Nawalka 二元树；Medvedev-Scaillet 展开以及显式有限差分法。
-- 使用 Medvedev-Scaillet 展开和三叉树在 Black-Scholes 模型下获取美式期权价格
-- 求解 Medvedev-Scaillet PDE 并寻找展开项的符号代码（仅限 Matlab）
-- 使用 Chiaarella 和 Ziogas 算法获取美式看涨期价格
-- 使用 Medvedev-Scaillet 展开和美式期权市场价格估计 Heston 模型参数
-- 计算两个维度上的线性插值值（仅限 C#）
-- 实现线性回归和使用 LU 分解进行矩阵求逆（仅限 C#）
-- 生成用于 LSM 算法说明的图表；Medvedev-Scaillet 展开优化优化估计值与市场隐含波动率的对比；以及 Chiaarella 和 Ziogas 的方差收敛（仅限 Matlab）
-
-## 9. 时变性 Heston 模型
-- 在 Mikhailov 和 Nagel 随时间变化的 Heston 模型下获取参数估计和价格
-- 在 Elices 随时间变化的 Heston 模型下获取参数估计和价格
-
-# 关于网站
-
-# 395
-
-# 代码功能
-
-# 章节
-
-- 在 Benhamou, Gobet 和 Miri 随时间变化的模型下获取参数估计和价格
-
-- 获取 Benhamou, Gobet 和 Miri 模型系数的符号代码（仅限 Matlab）
-
-- 阐述单变量特征函数如何作为二变量特征函数的特例出现
-
-- 生成用于比较市场隐含波动率与随时间变化模型隐含波动率的图表（仅限 Matlab）
-
-## 10. 有限差分方法
-- 使用显式、交替方向隐式（ADI）和加权方法获取 Heston 价格，包括将隐式和 Crank-Nicolson 方法作为特例；获取 ADI 和加权方法所需的 Heston 生成器矩阵；均匀和非均匀网格；用于非均匀网格和显式方法精度分析的图表（仅限 Matlab）
-
-## 11. Heston 字母
-- 在显式方法、Longstaff-Schwartz 方法和 Medvedev-Scaillet 方法下获取美式希腊
-- 使用解析形式和有限差分近似，在原始 Heston、Attari、Carr Madan FFT 和 FRFT 以及 Lewis 公式下获取欧式希腊
-- 生成希腊字母的图表（仅限 Matlab）
-
-## 12. 双 Heston 模型
-- 在双 Heston 模型下获取价格
-- 使用 Gauthier 和 Poissonamai 的模拟方案在双 Heston 模型下获取价格
-- 使用损失函数和 Kiln 的行权向量计算修正来估计模型参数
-- 使用 Longstaff-Schwartz 算法在双 Heston 模型下获取美式期权价格
-- 使用解析形式和有限差分获取双 Heston 模型下的希腊
-
-396
-
-关于网站
-
-# 章节
-# 代码功能
-
-- 从双 Heston 看涨期权价格中提取风险中性密度
-- 从双 Heston 模型获取局部和隐含波动率
-- 生成对比市场与估计波动率；局部波动率；风险中性密度以及模拟股票价格和方差的图表（仅限 Matlab）
-
-# 代码访问与文件格式
-
-访问代码请前往 www.wiley.com/go/hestonmodel/（密码：rou13）。代码排列在对应章节的目录中。文件随后位于对应分析类型的子目录中。某些文件在多个章节中使用，因此在目录中出现了多次。
-
-要访问 Matlab 文件，请导航到所需的子目录并下载。要访问 C# 文件，请导航到所需的子目录，有两种方式：1. 仅下载源代码文件（包括 .sln 文件、.csproj 文件、.cs 以及 .txt 文件）到计算机；2. 下载包含 \bin、\obj 和 \Properties 的整个子目录，并将其复制到计算机。双击 .sln 文件用 C# 运行。
-
-# 索引
-
-横坐标（Abscissa），107, 115–127, 130, 132, 134–136, 145, 159, 171
-
-Alfani, S., 278
-
-Air-Sahalia, Y., 156, 160, 175–176
 
 Albrecher, H., 14, 25, 29, 31–32, 47, 61, 67, 269, 337, 361
 
@@ -11890,19 +12047,18 @@ Black-Scholes 希腊，335
 Black-Scholes 模型，237
 
 看涨期权，218, 253
+
 看涨定价，214, 237, 254, 258, 261
+
 118, 205, 214–263
 
 Chiaarella 和 Ziogas，253
+
 显式方法，213
 
 Benhamou-Miri-Gobet 模型（续）
 - 参数估计，295–298
 - 分段常数参数，288–295
-
-
-
-
 
 # 索引
 
@@ -12122,10 +12278,6 @@ Benhamou-Miri-Gobet 模型（续）
     - 二元 CF 与广义 Ricatti 方程的联系, 269–271
     - 二元特征函数 (CF), 264–268
 
-
-
-
-
 # 索引 403
 
 Ikonen, S., 212–213, 216, 250, 325, 348, 352
@@ -12157,6 +12309,8 @@ Joshi, M., 5, 203, 354
 隐式波动率模型, 38–55, 57, 61–148, 151, 170, 175–276, 355, 368–369, 371
 
 Kalahé, N., 174
+
+
 
 Kahl, C., 33, 74, 77, 80–81, 115, 133–135, 147, 181, 191–192, 203, 269–270, 300
 
@@ -12840,10 +12994,6 @@ Heston 字母, 324, 340
 
 Heston 字母, 324, 340
 
-
-
-
-
 # 索引
 
 ## 407
@@ -12882,6 +13032,11 @@ Heston 字母, 324, 340
 - 多变量仿射, 265
 - 期权价格, 146
 - 期权价格源于, 35
+
+
+
+# 索引
+
 - 期权估值, 176
 - 虚外 (OTM) 看权, 35
 - 参数估计方法, 54
@@ -13003,24 +13158,24 @@ Heston 字母, 324, 340
     - 概率, 8–10
     - 算子中的, 301–302
     - 收益变换, 91–92, 95–97, 104, 106
-    - Pelser, A., 177, 203
-    - Pitterberg, V. V., 25, 56, 58
-    - Platen, E., 181, 186
-    - Possam, D., 361, 363, 374, 376, 380
-    - 预测值, 206
-    - Price, K., 162
-    - Radon-Nikodym 导数, 4, 21, 27
-    - 方差相对平均, Raible, S., 76
-    - Reiss, O., 328
-    - 剩余定理, 70, 104–106
-    - Ricarti, 12, 11–24, 60, 263–267, 271, 360
-    - 风险中性, 2–3
-    - 风险中性密度 (RND), 371
-    - RMSE 损失, 148, 151, 174, 252, 368–369
-    - RMSE 参数, 175
-    - Ross, S. A., 1, 3–4, 19
-    - Rudin, W., 101
-    - Russo, E., 382
+- Pelser, A., 177, 203
+- Pitterberg, V. V., 25, 56, 58
+- Platen, E., 181, 186
+- Possam, D., 361, 363, 374, 376, 380
+- 预测值, 206
+- Price, K., 162
+- Radon-Nikodym 导数, 4, 21, 27
+- 方差相对平均, Raible, S., 76
+- Reiss, O., 328
+- 剩余定理, 70, 104–106
+- Ricarti, 12, 11–24, 60, 263–267, 271, 360
+- 风险中性, 2–3
+- 风险中性密度 (RND), 371
+- RMSE 损失, 148, 151, 174, 252, 368–369
+- RMSE 参数, 175
+- Ross, S. A., 1, 3–4, 19
+- Rudin, W., 101
+- Russo, E., 382
 - Rutkowski, M., 5
 - Sayer, T., 261
 - Scailiet, O., 205, 228–232, 239–241, 244–245, 248–252, 261, 327, 352–354
@@ -13061,12 +13216,9 @@ Heston 字母, 324, 340
 - 二次指数 (QE) 方案, 378–380
 - 标的价格中的, 373–382
 
-
-
-
 # 索引
 
-# 411
+## 411
 
 - 波动率 (Volatility)
   - 行为, 184
@@ -13115,4 +13267,3 @@ Heston 字母, 324, 340
 - Zhu, J., 17, 33, 63, 115, 131–132, 159–160, 177, 189–190, 329, 331, 339, 364, 376, 380
 - Zhylevsky, O., 261
 - Zhiogas, A., 118, 205, 253–255, 258–259, 261
-

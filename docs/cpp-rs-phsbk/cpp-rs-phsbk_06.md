@@ -1,3 +1,5 @@
+
+
 # 三/五/零规则
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/constructors/rule_of_three_five_zero.html`](https://cel.cs.brown.edu/crp/idioms/constructors/rule_of_three_five_zero.html)
@@ -18,8 +20,9 @@ C++ 中的五条规则指出，如果一个类型需要用户定义的复制构�
 
 零规则指出，具有用户定义的复制/移动构造函数、赋值运算符和析构函数的类应仅处理所有权，其他类不应有这些构造函数或析构函数。在实践中，大多数类应使用 STL（`shared_ptr`、`vector` 等）中的类型来处理所有权问题，这样隐式定义的复制和移动构造函数就足够了。
 
-在 Rust 中，情况也是如此。请参阅 Rust 类型等价列表，以了解 C++ 智能指针类型 和 C++ 容器类型 的等价类型。
+在 Rust 中，情况也是如此。请参阅 Rust 类型等价列表，以了解 C++ 智能指针类型和 C++ 容器类型的等价类型。
 
-在应用零规则时，C++ 和 Rust 之间有一个区别是，在 C++ 中 `std::unique_ptr` 可以接受自定义的删除器，这使得可以使用 `std::unique_ptr` 来包装需要自定义销毁逻辑的原始指针。在 Rust 中，`Box` 类型不是以相同的方式进行参数化的。为了达到相同的目标，必须定义一个新的类型，并实现用户定义的 `Drop`，正如在复制和移动构造函数章节中的示例中所做的那样。
+在应用零规则时，C++ 和 Rust 之间有一个区别是，在 C++ 中，`std::unique_ptr` 可以接受自定义的删除器，这使得可以使用 `std::unique_ptr` 来包装需要自定义销毁逻辑的原始指针。在 Rust 中，`Box` 类型不是以相同的方式进行参数化的。为了达到相同的目标，必须定义一个新的类型，并实现用户定义的 `Drop`，正如在复制和移动构造函数章节中的示例中所做的那样。
 
 <link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Rule of three/five/zero)
+

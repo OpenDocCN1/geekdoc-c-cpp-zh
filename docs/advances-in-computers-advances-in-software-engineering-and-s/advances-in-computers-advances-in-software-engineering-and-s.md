@@ -1,28 +1,16 @@
-# [计算机进展] ｜｜ 软件工程与软件保证进展
 
+# [计算机进展] || 软件工程与软件保证进展
 
+## 通知
 
+- 出版社：Zoe Kruze
+- 采购编辑：Zoe Kruze
+- 编辑项目经理：Sarah Lay
+- 制作项目经理：Surya Narayanan Jayachandran
+- 封面设计：Victoria Pearson
+- 排版：SPi Global, India
 
-
-
-
-
-
-# 通知
-
-
-
-
-
-
-出版社：Zoe Kruze
-采购编辑：Zoe Kruze
-编辑项目经理：Sarah Lay
-制作项目经理：Surya Narayanan Jayachandran
-封面设计：Victoria Pearson
-排版：SPi Global, India
-
-# 前言
+## 前言
 
 传统上，《计算机进展》（Advances in Computers）作为记录计算快速演变的最老系列，每年出版几卷，每卷通常包含四到八章，描述计算理论和应用的新进展。本第 102 卷的主题灵感源于信息技术的进步。本书涉及了广泛的话题，从软件工程的历史性进展、移动健康（mHealth）系统的隐私挑战、网络物理关键系统的数据清洗技术到移动对象的索引技术。该卷由四章组成，这些章节是邀请领域专家撰写的，他们对该主题具有独特的视角。
 
@@ -36,23 +24,15 @@
 
 我们希望您对这些文章感兴趣，并在您的教学、研究和其他专业活动中发现它们的价值。我们欢迎对本书的反馈以及对未来卷的建议。
 
-A.R. HURSON
-密苏里立科技大学，Rolla, MO, 美国
+- A.R. HURSON，密苏里立科技大学，Rolla, MO, 美国
+- M. GOUDARZI，谢拉夫科技大学，德黑兰，伊朗
 
-M. GOUDARZI
-谢拉夫科技大学，德黑兰，伊朗
-
-# 软件工程与软件保障
+## 软件工程与软件保障
 
 D. Shoemaker*, C. Wody†, N.R. Mead†
-*底特律慈父大学网络安全中心，底特律, MI, 美国
-†卡内基·梅隆大学软件工程研究所，匹兹堡, PA, 美国
 
-
-
-
-
-
+* 底特律慈父大学网络安全中心，底特律, MI, 美国
+† 卡内基·梅隆大学软件工程研究所，匹兹堡, PA, 美国
 
 教育通过在工业界和学术界开发教育计划（包括本科和硕士学位课程）支持了这种剧变的环境。软件工程（SE）对技术的进步做出了，产生了一个全新的职业。软件应用（SwA）教育对工业界未能开发出高质量软件的问题做出了响应，包括随着技术的使用和利用而出现的安全挑战。
 
@@ -76,13 +56,13 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 目标是证明这一通用假设：实践将随着技术的进步而出现和增长。图 1 显示了一个时间线。因此，讨论将随着历史事件而演变并受其驱动。对于每个发生的事件，我们将描述在现有技术水平下发生了什么。然后，我们将描述被开发和实施的响应。最后，我们将尝试将该响应置于我们论点的更大框架内，即技术演迁。
 
-# 2. 结构化编程：新纪元的黎明
+## 2. 结构化编程：新纪元的黎明
 
 结构化编程可以被认为是技术进步导致的软件工程重大变革的第一个范例。事实上，严格来说，“结构化编程”一词出现早于“软件工程”一词。
 
 结构化编程的概念最早由 Bohm 和 Jacini 在 1966 年发表于 ACM 上的一篇论文中引入 [2]。“软件工程”一词首次出现在北西洋条约组织（NATO）科学委员会赞助的会议标题中，该会议于 1968 年在德国加尼斯-帕滕基希辛举行 [3]。
 
-## 2.1 GOTO 语句
+### 2.1 GOTO 语句
 
 结构化编程定理由 Cohn 和 Jacini 首次提出，基于对三种标准控制结构的利用：“序列”、“选择”和“迭代”。简单来说，未能正确记录由 GOTO 语句产生的跳转会导致代码过度复杂且纠结。这种混乱导致了
 
@@ -96,21 +76,17 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 图 1. 软件工程版时间线。
 
-
-
-
-
 负面影响了商业程序的可理解性、维护性和有效性 [4]。这个问题导致埃德斯格·迪克斯斯特拉（Edsger Dijkstra）推测，当时过程化语言中的 GOTO 语句导致了糟糕的编程实践。本质上，过度使用跳转语句作为改变顺序的手段，导致许多商业程序陷入了不可维护的应用程序和死胡同的“乱麻”。迪克斯斯特拉最初的想法在 1968 年发表于《ACM 通报》的一封信件中 [4]。
 
-## 2.2 作为解决方案的结构化编程
+### 2.2 作为解决方案的结构化编程
 
 迪克斯斯特拉的思想促进了概念的演变，即结构化编程定理是解决“面条代码”问题的解决方案。结构化编程定理提出的控制机制允许程序员更轻松、更有效地编写和执行子程序，并创建块编程结构 [2]。结构化编程的目标是通过将实际编程规范化为标准子程序来提高对代码结构的理解。其观点是，结构化编程通过将程序执行简化为执行三种控制结构的子程序：顺序、选择和迭代，既能提高质量又能降低开发成本 [2]。
 
-## 2.3 IBM 培训
+### 2.3 IBM 培训
 
 结构化编程的优势对 IBM 的哈兰·米尔斯（Harlan Mills）来说显而易见。他说服 IBM 系统部门主席约翰·杰克逊（John Jackson）提供一系列名为“结构化编程研讨会”、以及最后的“高级设计研讨会”（亲称为 SPW、SDW 和 ADW])[1]。W 和 SDW 包含了决定参加者是否通过课程的考试。SPW 不仅强调结构化编程，还强调形式正确性证明。该部门的每个程序都要参加 SPW，这是一门为期 2 周的课程，之前需要进行逻辑自学和考试。首席程序员要参加 SDW，侧重于使用状态模型来表达抽象，而精英人员最终将参加 ADW。ADW 关注并发和及时性问题，由状态机网络及相关操作来表示。最终，这些课程还补充了
 
-## 表 1 IBM 软件工程课程大受众
+#### 表 1 IBM 软件工程课程大受众
 
 | 逻辑表达式（前提条件） | 程序员和软件经理 |
 | --- | --- |
@@ -144,9 +120,6 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 ……（省略了部分文本）……它还提供了递归调用的便利。
 
-
-
-
 结构化编程以及相关数学正确性证明的后续发展是洁净室软件（Cleanroom SE）流程 [12]，其重点是通过严谨的软件开发方法来预防缺陷。洁净室的大多数现实和原型工作由 Rick Linger 在 IBM 联邦系统公司领导，并与 Harlan Mills 合作。除了严谨的数学证明和形式审查外，统计测试也是开发零缺陷软件的方法之一。
 
 ### 3.5 工程教育
@@ -159,7 +132,7 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 传输数据的概念比互联网早了 150 年。在内战之前，美国人就已经在使用塞缪尔·莫斯（Samuel Morse）的简单电报了。在那场战争中，现代黑客使用的一些技术（例如“中间人攻击”）首次出现。尽管如此，网络化传输计算机传输的底层概念在 Lickider 的一篇论文 [14] 中得到了巩和普及。
 
-## 4.1 SAGE 和 SABRE 网络
+### 4.1 SAGE 和 SABRE 网络
 
 我们最终称为商业“网络”的东西出现在 20 世纪 60 年代初。稍早一点的是军事用网络，主要是 SAGE 网络 [15]。SAGE 网络实际上促成了一次偶然的对话，谈话双方是美国航空的一位高管和当时的 IBM 总裁 Thomas J. Watson。他们恰好在同一班班机上坐在一起。
 
@@ -167,13 +140,13 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 美国航空的 SABRE 是美国首个日常运行的网络。它每天处理 83,000 次请求，远超过了其他航空公司使用的手动系统的能力。在成立之初，SABRE 是一个经典的硬线物理网络，依赖铜线传输信息。
 
-## 4.2 ARPANET
+### 4.2 ARPANET
 
 在 SABRE 开始使用的同时，美国国防高级研究计划局（DARPA）启动了一个项目，旨在将其跨越美国的主要计算机互联（谢延山、战略空司令部总部和五角大楼）。Lickerider 是那项努力的领导者 [17]。他们的产品于 1968 年作为高级研究计划网络（ARPANET）推出。现有领域的许多知名人物参与了初始开发，但保· Baran（Paul Baran）的包交换概念是构建 ARPANET 的核心 [18]。
 
 最初，ARPANET 和其他开性的分组交换网络在普通用途中的足迹非常微小。ARPANET 首先连接了两个节点（1969 年 10 月），然后是四个节点（1969 年 12 月）[18]。尽管如此，商业世界的成就在 20 世纪 70 年代初已经实现。完成互联网基础所需的所有工作就是 1975 年创建 TCP/IP [19]。
 
-## 4.3 犯罪与计算机
+### 4.3 犯罪与计算机
 
 在开发基础的同时，20 世纪 60 年代还见证了一场革命性的文化。这种文化的一个子集“嬉皮士”（Yippies）在 20 世纪 60 年代后期出版了一份简报，主要针对电话破解（phreaking），但具有明显的黑客基调。与此同时，约翰·德拉（John Draper，又名“脆饼队长”）的被捕让电子通信世界中的犯罪概念赢得了主流的关注。
 
@@ -181,13 +154,13 @@ D. Shoemaker*, C. Wody†, N.R. Mead†
 
 Saltzer 和 Schroeder 随后引用了 SABRE 的具体案例作为潜在攻击目标之一，他们首次普及了信息的机密性、完整性和可用性问题，这些问题在公共和私营部门中持续受到日益增长的关注。
 
-## 4.4 数据保护策略
+### 4.4 数据保护策略
 
 他们的关键性论文首次发表在第四届 ACM 操作系统原理研讨会上（1973 年 10 月），随后在《ACM 出版物》中进行了修订并发表 [20]。他们提出了保护计算机信息的八项原则。这八项原则构成了计算机访问控制和计算机安全整体调控的大部分基础。计算机安全文献大多源于这些基本原则 [21]。
 
-Saltzer 和 Schroeder 的原则确实证明了其重要性，而我们在这里感兴趣的是它们的**时机**。当他们的论文首次发表时（1973 年），人们已经承认计算机处理的信息是有价值的，并且必须受到保护 [20]。与此同时，技术的发展已经进步到这种程度：信息不再仅仅是科学实验。
+Saltzer 和 Schroeder 的原则确实证明了其重要性，而我们在这里感兴趣的是它们的时机。当他们的论文首次发表时（1973 年），人们已经承认计算机处理的信息是有价值的，并且必须受到保护 [20]。与此同时，技术的发展已经进步到这种程度：信息不再仅仅是科学实验。
 
-## 4.5 技术与威胁的汇合
+### 4.5 技术与威胁的汇合
 
 在 1972 年，IBM 已经完全实现了其航空公司预订系统的商业化。此外，基于 X.25 标准的数据网络在欧洲和美国占据主导。然而，尚未成熟的是对网络信息的保护。
 
@@ -199,25 +172,23 @@ Saltzer 和 Schroeder 的原则确实证明了其重要性，而我们在这里�
 
 大众媒体对电话破解的痴迷提供了火花。电话破解在 1971 年风盛靡的反文化运动中是一个热点新闻。尽管它所关注的网络自亚历山大·格拉汉发明以来就存在了，但破解是有相关的。尽管如此，考虑到 20 世纪 70 年代网络的脆弱性和某些无政府主义时代，像 Saltzer 和 Schroeder 这样的著作是渴望出版的。
 
-## 4.6 互联网之前
+### 4.6 互联网之前
 
 然而，在当时，汇聚在一起制定最终产品——互联网的社区仅在朝着各自独立的目标努力。虽然一个技术因素——分布式网络的发展，暗示了另一个需求——常见的、可互操作的数据传输方法，但将这两者结合成强大的力量仍然在遥远的未来。
 
 时间证明了 Saltzer 和 Schroeder 所提原则的价值和用处；然而，应当考虑到这些原则是在莫里斯蠕虫（Morris Worm）之前开发的，该蠕虫在 11 月 2 日通过通过感染超过 6000 台 UNIX 机器产生了大规模的拒绝服务。
 
-
-
-
-
 1988. 为了提供技术背景，请考虑 IBM System 360 在 1964 年至 1978 年间在使用，而 IBM System 370 则于 1972 年上市。先进的操作系统 MVS（多重虚拟存储）于 1974 年 3 月发布。
 
-Saltzer 和 Schroeder 发表其材料时，尚未识别出如今软件产品中存在的超过 66,900 个可被利用的软件漏洞和暴露，这些漏洞在 http://cve.cmit.org/ 上的常见漏洞与暴露（CVE）数据库中有所描述。
+Saltzer 和 Schroeder 发表其材料时，尚未识别出如今软件产品中存在的超过 66,900 个可被利用的软件漏洞和暴露，这些漏洞在 `http://cve.cmit.org/` 上的常见漏洞与暴露（CVE）数据库中有所描述。
 
 在这些原则被制定时，“缓冲区溢出”、“恶意代码”、“跨站脚本”和“零日漏洞”还不是运维支持人员的日常词汇。当时的补丁程序经过仔细测试并按计划发布，以最大限度地减少对业务的影响，而不是为了减少攻击向量而直接将其推送到运行环境中。
 
 虽然这些原则在今天对于单个技术的安全方面仍然适用，但它们已不足以应对其运行环境的复杂性和精密性。我们必须拓宽视野，考虑大规模、高度网络化、依赖软件的系统——从手机到电力、水务，以及我们的银行、医疗和零售等关键基础设施。
 
-## 4.7 软件保障
+### 4.7 软件保障
+
+
 
 “软件保障”（Software Assurance, SwA）是一个广泛用于描述这一更广泛背景的术语。国家安全系统委员会（CNSS）对 SwA 的定义如下：
 
@@ -271,9 +242,6 @@ Saltzer 和 Schroeder 发表其材料时，尚未识别出如今软件产品中�
 
 在原型互联网发展的那个节点，编写这类法律可能是不可避免的。TCP/IP 在 1982 年就拥有了联网标准 [31]，随着 1985 年 NSFNET 的实施，所有碎片都汇成了我们今天在现代互联网上看到的大规模通信 [32]。就这方面而言，需要某种形式的监管，因为技术已经达到了必须采取严厉措施以确保其用户和新兴基础设施安全的程度。
 
-
-
-
 软件工程与软件保障进展 19
 
 《计算机欺诈与滥用法》（CFAA）进一步禁止未经授权或欺诈性访问计算机。它专门禁止带有欺诈意图的访问，并禁止故意侵入——这是“黑客行为”的法律术语。该法案的限制范围限于“联邦利益计算机”，但其范围并不像看起来那么窄 [30]。
@@ -320,8 +288,6 @@ PC 的最早版本（当时被称为微型计算机）出现在 1973 年。直�
 
 向低成本“购买”而非“制造”决策的趋势创造了我们今天所知的商业软件市场。结果代码的商业化意味着客户完全依赖供应商对产品质量和保证。不幸的是，供应商并没有买家那样的保证，这在 20 世纪 90 年代初成为许多问题的根源。
 
-
-
 在功能方面，44% 的项目逾期、预算超支，且功能少于需求，而 24% 的项目在完成前被取消，或交付后从未被使用过 [37]。卡珀·琼斯（Capers Jones）一直发现，根据项目的大小，在25% 到 50% 的项目会失败，其中“失败”意味着项目被取消或严重超过了时间进度估计 [38]。
 
 在我们考虑的这段时期的一项研究发现，交付给联邦政府的软件完全三分之二从未被使用，另有 29% 根本没有交付。好消息是，3% 在更改后可用，2% 可以交付。因此，据估计在整个 20 世纪 80 年代，联邦政府在无用软件上的花费超过了 1500 亿美元 [39]。
@@ -347,9 +313,6 @@ CMU MSE 在 1991 年毕业了第一批学生。MSE 项目的数量迅速增长�
 在那两部著作中奠定的能力成熟度框架将被修订为能力成熟度模型（CMM v1.1），它在接下来的20年里本质上指导了软件实践，并塑造了世界对如何在开发、维护和获取软件中实施良好实践的看法。CMM 作为一组最佳实践于 1995 年被发布 [45]。
 
 尽管如此，直到推动这一突破的技术和社交因素进步到普遍公认的最佳实践需要进入主流的程度，这种突破才可能发生。并不是因为 SE 被作为一门学科来实践，而是大多数 SE 工作都是在太空计划等高级环境中进行的。是个人电脑等技术突破和商用软件行业等商业现象，使 SE 成为世界上的一股主要力量。
-
-
-
 
 ## 7.2 计算机安全与不断增长的互联网
 
@@ -387,24 +350,23 @@ CERT/CC开发的理念是以定义的、完整记录的策略以及一系列端�
 
 ### 7.6.1 构建安全性
 
-由于对无缺陷软件需求的强调，“构建安全倡议”（Build Security Initiative, BSI）网站于2005年启动 [62,63]。BSI软件倡议试图改变软件开发方式，使其不易受到攻击，并从一开始就“构建”安全性。作为该倡议的一部分，BSI内容目录已发布在 https://buildsecurity.us-cert.gov。该目录旨在为软件开发人员和开发组织提供有关如何生产安全软件的信息和实践指导。目录包含了广泛的信息和工具。
+
+
+由于对无缺陷软件需求的强调，“构建安全倡议”（Build Security Initiative, BSI）网站于 2005 年启动 [62,63]。BSI 软件倡议试图改变软件开发方式，使其不易受到攻击，并从一开始就“构建”安全性。作为该倡议的一部分，BSI 内容目录已发布在`https://buildsecurity.us-cert.gov`。该目录旨在为软件开发人员和开发组织提供有关如何生产安全软件的信息和实践指导。目录包含了广泛的信息和工具。
 
 ### 7.6.2 CWE 项目
 
-BSI倡议产生了一系列关键成果，包括Mitre的常见弱性枚举（CWE）项目 [64]。Mitre建立了一个分类中心，用于识别和分类任何可识别的缺陷（CWE）、漏洞（CVE）或攻击（CAPEC）。该项目对公众开放，其使命是持续跟踪和记录出现的实体。随着对信息物理系统的攻击增加，扩大信息收集的工作正在进行中。
+BSI 倡议产生了一系列关键成果，包括 Mitre 的常见弱性枚举（CWE）项目 [64]。Mitre 建立了一个分类中心，用于识别和分类任何可识别的缺陷（CWE）、漏洞（CVE）或攻击（CAPEC）。该项目对公众开放，其使命是持续跟踪和记录出现的实体。随着对信息物理系统的攻击增加，扩大信息收集的工作正在进行中。
 
 ## 7.7 总结
 
-BSI和CWE项目是有价值的倡议，因为许多连接互联网的组织需要关于可能被攻击缺陷的信息。由于计算机可以从任何地方访问，这些攻击被利用到了指数级水平。因此，CERT/CC、BSI和CWE项目的倡议建立在技术发展的金字塔之上，从早期编程和通信网络，到互联网等开放平台上大量缺陷软件的出现。
-
-
-
+BSI 和 CWE 项目是有价值的倡议，因为许多连接互联网的组织需要关于可能被攻击缺陷的信息。由于计算机可以从任何地方访问，这些攻击被利用到了指数级水平。因此，CERT/CC、BSI 和 CWE 项目的倡议建立在技术发展的金字塔之上，从早期编程和通信网络，到互联网等开放平台上大量缺陷软件的出现。
 
 应对由技术变化引发的威胁的需求。它还正式承认了信息安全对美国经济和国家安全利益的重要性。
 
-## 8.2 联邦信息安全管理法 (FISMA)
+## 8.2 联邦信息安全管理法（FISMA）
 
-与我们的讨论相关，44 U.S.C. § 3541（即 FISMA）作为《电子政府法案》的第三部分颁布。FISMA 要求每个联邦机构制定、记录并实施一项全机构范围的政策，以就支持该机构运营和资产的信息及信息系统提供信息安全[66]。FISMA 的涵盖范围包括由其他机构、承包商或其他来源提供或管理的系统，并强调“基于风险的、成本效益型安全策略”。
+与我们的讨论相关，`44 U.S.C. § 3541`（即 FISMA）作为《电子政府法案》的第三部分颁布。FISMA 要求每个联邦机构制定、记录并实施一项全机构范围的政策，以就支持该机构运营和资产的信息及信息系统提供信息安全[66]。FISMA 的涵盖范围包括由其他机构、承包商或其他来源提供或管理的系统，并强调“基于风险的、成本效益型安全策略”。
 
 根据 FISMA 的要求，机构官员、首席信息官和监察长（IGs）会对联邦机构的信息安全计划进行年度审查，并将结果报告给管理和预算局（OMB）[63]。这些信息由 OMB 作为其监督职责的一部分进行评估，包括 OMB 向国会提交的关于机构该法案执行情况的年度报告。
 
@@ -415,6 +377,7 @@ FISMA 为联邦机构、美国国家标准与技术研究院（NIST）和 OMB �
 正如 FISMA 所记录的，信息安全意味着保护信息和信息系统免受未经授权的访问、使用、披露、中断、修改或破坏，以提供完整性、机密性和可用性[66]。为了根据 FISMA 为所有机构运营提供充分的安全保障，NIST 负责制定[66] 以下内容：
 
 #### 标准
+
 - 指南
 - 相关的方法和技术
 
@@ -428,13 +391,13 @@ FISMA 定义了一个基于标准的流程管理信息安全的框架。所有�
 
 ### 8.2.2 安全要求
 
-联邦信息系统必须满足最低安全要求。这些要求定义在强制性的 FISMA 立法——《联邦信息系统最低安全要求》中[67]。组织必须通过选择 NIST 特别出版物 800-53（《联邦系统推荐的安全控制措施））中描述的适当控制措施和保证措施来满足最低安全要求。为信息系统选择适当控制措施和保证要求以实现充分安全的过程，是一个多维的、基于风险的评估。它涉及组织内部的管理和运营人员。机构在根据特别出版物 800-53 提供的指南应用基线安全控制方面具有灵活性，这允许机构调整安全控制，以更好地适应其任务和运营环境[68]。
+联邦信息系统必须满足最低安全要求。这些要求定义在强制性的 FISMA 立法——《联邦信息系统最低安全要求》中[67]。组织必须通过选择 NIST 特别出版物 800-53（《联邦系统推荐的安全控制措施》）中描述的适当控制措施和保证措施来满足最低安全要求。为信息系统选择适当控制措施和保证要求以实现充分安全的过程，是一个多维的、基于风险的评估。它涉及组织内部的管理和运营人员。机构在根据特别出版物 800-53 提供的指南应用基线安全控制方面具有灵活性，这允许机构调整安全控制，以更好地适应其任务和运营环境[68]。
 
-### 8.3 总结
+## 8.3 总结
 
 所选或计划的控制措施必须记录在《安全计划》中[67]。FISMA 和 NIST 特别出版物 800-53 的结合要求所有联邦信息系统具备基础的安全水平[67]。机构的风险评估验证了安全控制集，并决定是否需要额外的控制来保护机构运营（包括任务、功能、资产、个人、组织或国家）[68]。所得的结果为联邦机构及其承包商建立了一个安全尽职的水平。
 
-目前已有多次尝试加强对网络空间对国家福祉构成威胁的响应。这些尝试包括《网络安全法案》（2010年）、《国际网络犯罪报告与合作法案》（2010年）以及《保护空间法案》（2010年）。尽管如此，FISMA 仍然是应对互联网技术出现引发的问题和担忧的主要指令。
+目前已有多次尝试加强对网络空间对国家福祉构成威胁的响应。这些尝试包括《网络安全法案》（2010 年）、《国际网络犯罪报告与合作法案》（2010 年）以及《保护空间法案》（2010 年）。尽管如此，FISMA 仍然是应对互联网技术出现引发的问题和担忧的主要指令。
 
 尽管 FISMA 目前仅适用于联邦范围内的系统，但其基于风险和最佳实践的方法已成为应对互联网技术带来的日益增长的威胁的许多其他响应措施的基础。
 
@@ -448,9 +411,6 @@ FISMA 定义了一个基于标准的流程管理信息安全的框架。所有�
 
 我们现在面临的最重要问题可能是，我们为了满足大多数社会需求而采用的大规模程序日益增长的规模和复杂度，以及我们构建它们所采用的过程。简单来说，今天大多数复杂应用程序并不是被“构建”的，而是被“集成”到高度复杂的模块化安排中的，这种安排与人类创造的最复杂的事物并美。
 
-
-
-
 ## 9.2 组件复杂性与虚拟化
 
 组件的复杂性和虚拟化产生了一个问题，即构建技术的组件无法在现实中被监控和控制。因此，我们只能将“信任”作为保障的唯一替代方案。
@@ -463,15 +423,21 @@ FISMA 定义了一个基于标准的流程管理信息安全的框架。所有�
 
 ### 9.3.1 关键基础设施的风险
 
-此外，由于供应链的复杂性，没有人能确切知道我们关键基础设施的部件 (1) 是否都是其预期的状态，(2) 否是伪品，或者 (3) 是否包含被恶意插入的物体 [74]。国会成员认定 [75]，如果我们想确保对手无法“由于不安全的 ICT 供应链而产生漏洞，就必须解决这些漏洞，否则他们可能会破坏电网、水务和卫生服务；引发洪水；释放放射性物质；或通过向构成我们基础设施的 (ICT) 组件中插入恶意物体使任何企业破产” [76]。
+此外，由于供应链的复杂性，没有人能确切知道我们关键基础设施的部件：
 
-鉴于不安全的供应链对美国基础设施的潜在影响，ICT 供应链风险管理（SCRM）已被列入年度“关键问题、高风险”清单（2013年）[77]。对供应链风险日益关注的一个主要原因是，如今大多数系统都是由现有元素集成的（例如：遗留系统、现成通用软件 COTS、开源和免费软件）。这种集成是合理的，因为只需花费自建成本的 10 分钱美元就能获得相同的功能。这些部件是通过庞大的全球 ICT 供应链获得的。事实上，我们的大部分产品由来自世界各地的物品组成：软件来自印度，芯片和程序逻辑来自韩国，小型组件来自越南和中国。管理不当的 ICT 供应链对国家基础设施构成了重大安全威胁 [77]。
+1. 是否都是其预期的状态；
+2. 是否是伪品；
+3. 是否包含被恶意插入的物体 [74]。
+
+国会成员认定 [75]，如果我们想确保对手无法“由于不安全的 ICT 供应链而产生漏洞，就必须解决这些漏洞，否则他们可能会破坏电网、水务和卫生服务；引发洪水；释放放射性物质；或通过向构成我们基础设施的 ICT 组件中插入恶意物体使任何企业破产” [76]。
+
+鉴于不安全的供应链对美国基础设施的潜在影响，ICT 供应链风险管理（SCRM）已被列入年度“关键问题、高风险”清单（2013 年）[77]。对供应链风险日益关注的一个主要原因是，如今大多数系统都是由现有元素集成的（例如：遗留系统、现成通用软件 COTS、开源和免费软件）。这种集成是合理的，因为只需花费自建成本的 10 分钱美元就能获得相同的功能。这些部件是通过庞大的全球 ICT 供应链获得的。事实上，我们的大部分产品由来自世界各地的物品组成：软件来自印度，芯片和程序逻辑来自韩国，小型组件来自越南和中国。管理不当的 ICT 供应链对国家基础设施构成了重大安全威胁 [77]。
 
 其核心挑战在于确保异构对象从低层构建移动到高层集成过程中的完整性。供应链涉及多个层级的父子关系，这些关系的数量取决于产品的复杂性 [73]。尽管如此，供应链中的每个元素都必须满足定义其在开发层级中位置的明确目的 [73]。
 
-### 9.3.2 供应链风险管理 (SCRM)
+### 9.3.2 供应链风险管理（SCRM）
 
-2010 年，美国政府通过制定 NIST 标准，建立了一套正式 SCRM 的最佳实践（NIST SP 800–161）。该标准是耗时两年的努力，通过 NIST、DHA 和 DoD 的协作汇总了联邦 SCRM 知识，并设计了一种方法，让员工了解什么是正确的 SCRM 实践 [78]。确保像供应链这样复杂的分布式过程需要一套协调的、一致执行的标准活动，以对该过程实施必要的可见性和控制。在这方面，SCRM 的控制中心在于过程而非产品本身，因为实际产品要么过于复杂，要么是虚拟 [79]。然而，由于开发过程通常在多个全球地点同时进行，很难达到所需的理解和控制水平 [79]。
+2010 年，美国政府通过制定 NIST 标准，建立了一套正式 SCRM 的最佳实践（NIST SP 800-161）。该标准是耗时两年的努力，通过 NIST、DHA 和 DoD 的协作汇总了联邦 SCRM 知识，并设计了一种方法，让员工了解什么是正确的 SCRM 实践 [78]。确保像供应链这样复杂的分布式过程需要一套协调的、一致执行的标准活动，以对该过程实施必要的可见性和控制。在这方面，SCRM 的控制中心在于过程而非产品本身，因为实际产品要么过于复杂，要么是虚拟 [79]。然而，由于开发过程通常在多个全球地点同时进行，很难达到所需的理解和控制水平 [79]。
 
 因此，目标是通过“为开发产品提供一个一致、纪律的环境，识别过程中可能出现什么问题（即设定风险）、确定要解决哪些风险（即设定优先级）、实施行动来解决高优先级风险并将这些风险控制在容差范围内”来解决供应链保障问题 [80]。在 NIST 800-53 的最新修订版（修订 4 版）中（该标准名为《联邦信息系统和组织的安全与隐私控制》，首次发布于 2012 年 2 月 28 日），现有的安全控制得到了扩展，在适当的情况下包含了 SCRM。由于这是一个全球性问题，许多大型商业组织担心他们在开展业务的每个国家将面临不同的合规要求。这种担忧通过制定国际标准 ISO/IEC 27036《供应商关系信息安全》得到了解决。NIST 800-161 的创建者对这项国际努力的开发和定稿做出了大量贡献。
 
@@ -481,170 +447,187 @@ FISMA 定义了一个基于标准的流程管理信息安全的框架。所有�
 
 对不安全供应链的响应产生了采购和设计中对 SwA（系统安全）的需求。计算量现在已对我们社会的每个方面至关重要。必须解决供应链中的漏洞，以确保对手无法破坏关键基础设施。
 
-## 10 现状
+## 10. 现状
 
 正如过去 50 年的情况一样，计算科学作为一个领域和职业的进步将产生一种需求，即确保不安全的技术进步不会成为我们灭亡的根源。
-
-
 
 软件工程与软件保障的进展，包括劳动力开发与教育，以及公众意识与准备工作。
 
 《关键代码：国防软件的可生产性》报告也指出，缺乏具备软件专业知识的人才，以满足任务关键型软件密集型计划的需求 [89]。据报道，国际范围内软件开发人员的人才也处于短缺状态 [92]。联邦机构通过 CE21 等计划 [93] 应对这一需求，其目标是：
 
-- 增加在各种语境下开发和实践计算能力的 K-14 阶段学生和教师的人数和多样性
+- 增加在各种语境下开发和实践计算能力的 K-14 阶段学生和教师的人数和多样性。
 - 增加早期高等教育学生的人数和多样性，使其参与并具备必要的计算背景，以充分追求计算相关及计算密集型研究领域的学位。
 
 遗憾的是，目前还没有同等的教育努力来应对网络安全问题。目前没有联邦计划资助增加网络安全教育，软件开发人员也不被要求达到任何网络安全专业知识水平来创建和实施更新后的软件。结果，事态的发展似乎将遵循过去 30 年的轨迹。也就是说，某些技术突破将引发整个社会（特别是政府）的大规模反应，政府将寻求确保这些进展能够为了人类的利益得到适当关注。
 
 # 致谢
 
-本材料基于国防部根据合同号 FA8721-05-C-0003 的资助和支持，由卡内基梅隆大学（CMU）运营软件研究所（SEI），这是一个联邦研究开发中心。
+本材料基于国防部根据合同号 `FA8721-05-C-0003` 的资助和支持，由卡内基梅隆大学（CMU）运营软件研究所（SEI），这是一个联邦研究开发中心。
 
 # 参考文献
 
-- [1] N.R. Mead, Software engineering education: how we vary and how we have to go, J. Syst. Softw. 82 (4) (2009) 571–575, http://dx.doi.org/10.1016/j.jsse2008.12.038, http://www.sciencedirect.com/article/pi/S016412120802756 访问于2015年8月。
+- [1] N.R. Mead, Software engineering education: how we vary and how we have to go, J. Syst. Softw. 82 (4) (2009) 571–575, `http://dx.doi.org/10.1016/j.jsse2008.12.038`, `http://www.sciencedirect.com/article/pi/S016412120802756`，访问于 2015 年 8 月。
 - [2] C. Boh, J. Jacopini, Flow diagrams, turning machines and languages with only two function rules, Commun. ACM 9 (5) (1966) 366–371.
 - [3] P. Naur, B. Randell, Report on a conference sponsored by the NATO Science Committee, (October 1968) Garmish, Germany.
 - [4] E.W. Dijkstra, Letters to the editor: go to statement considered harmful, Commun ACM 11 (3) (1968) 147–148.
 - [5] R.C. Linger, H.D. Mills, B.I. Witt, Structured Programming: Theory and Practice, Addison-Wesley, Reading, 1979.
 - [6] J. Backus, The History of FORTRAN I, II, and III, History of Programming Languages, Association for Computing Machinery, New York, NY, 1981.
-- [7] J.W. Backus, F.L. Bauer, J. Green, C. Katz, J. McCarthy, P. Naur, A.J. Perlis, H. Rustaan, K. Samuelson, B. Bousquois, J.H. Westein, A. van Wijngaarden, M. Wooded, Report on the Algorithmic Language 60, IFIP TC 20 on Programming Languages (August 1962)
+- [7] J.W. Backus, F.L. Bauer, J. Green, C. Katz, J. McCarthy, P. Naur, A.J. Perlis, H. Rustaan, K. Samuelson, B. Bousquois, J.H. Westein, A. van Wijngaarden, M. Wooded, Report on the Algorithmic Language 60, IFIP TC 20 on Programming Languages (August 1962).
 - [8] P. Naur, On the algorithmic language ALGOL 60, ACM 3 (5) (1960) 299–314.
-- [9] A. Ferguson, A History of Computer Programming Languages, Brown University, New York, NY, 2004. http://brown.edu/~adf/programming-languages.html 访问于2015年8月。
+- [9] A. Ferguson, A History of Computer Programming Languages, Brown University, New York, NY, 2004. `http://brown.edu/~adf/programming-languages.html`，访问于 2015 年 8 月。
 - [10] McGraw-Hill Staff, McGraw-Hill Encyclopedia of Science and Technology, 2009. p.454. New York, NY.
 - [11] E.D. Riley, Milestones in Computer Science and Information Technology, Greenwood Publishing Group, Westport, CT, 1998-1-57356-521-9, 2003, p. 156–157.
-- [12] R. Cammell, Classroom software engineering research, Technical Report CMU/SE-96–02, Software Engineering Institute, Carnegie Mellon University, August 1996. http://resources.cmu.edu/library/asset-view.cfm?AssetId=12635.
+- [12] R. Cammell, Classroom software engineering research, Technical Report CMU/SE-96–02, Software Engineering Institute, Carnegie Mellon University, August 1996. `http://resources.cmu.edu/library/asset-view.cfm?AssetId=12635`.
 - [13] R.E. Fairley, Software Engineering Concepts, McGraw-Hill, New York, NY, 1984.
 - [14] J.C. Rlick, Man-Computer Interaction, IEEE Trans. Hum. Factors Electron. HFE-1 (1960) 4–11.
-- [15] L. Earnest, J. Wong, P. Edwards, Vigilance and Vacuum Tubes: The SAGE System 1956–63, Transform of public lecture given on May 19, 1998. The Museum History Center, Moffett Field, Mountain View, CA, 1998. 访问于2015年8月, http://eden.org/Sage-Talk.html.
+- [15] L. Earnest, J. Wong, P. Edwards, Vigilance and Vacuum Tubes: The SAGE System 1956–63, Transform of public lecture given on May 19, 1998. The Museum History Center, Moffett Field, Mountain View, CA, 1998. 访问于 2015 年 8 月，`http://eden.org/Sage-Talk.html`.
 - [16] R. Searling, E. Martin/Mark, New York, NY, 1985, p. 347.
+
+
+
 - [17] J.C. Rlick, Memorandum for Members and Affates of the Intergalactic Computer Network, Kurzweil Technologies, Wellesley, MA, 2001. http://www.kurzweil.net/memorandum-for-members-and-affates-of-intergalactic-computer-network. 访问于2016年。
+
 - [18] B.M. Weiner, V.G. Cerf, D.D. Clark, L. Kleinrock, D.C. Lynch, J. Postel, S. Wolff, A History of the Internet, Internet Society, Wellesley, MA, 2003. http://www.internetsociety.org/internet/brief-history-internet. 访问于2016年。
+
 - [19] J.H. Saltzer, M.D. Schroeder, The protection of information in computer systems, IEEE 6 (9) (1975) 1278–1308. http://cite.psu.edu/summary/?doi=10.1109/9257.
+
 - [20] R. Smith, A contemporary look at Saltzer and Schroeder's 1975 design principles, IEEE Proc. 10 (6) (2012) 21–25.
+
 - [21] D. Price, Blind whistling and the FBI's historical release on phone tap, CounterPunch 30 (2008). http://www.counterpunch.org/2008/06/blind-whistling-and-fbi-historical-release-on-phone-tap.
+
 - [22] Committee on National Security, Information assurance (IA) glossary, CNSS No. 4009, April 26, 2010. National Intelligence and Security Center, Washington, D.C. https://www.nist.gov/docs/CNSSI-4009-_Information.pdf.
+
 - [24] N. Mead, D. Shoemaker, Foundations for Software Assurance, in Proceedings of 45th IEEE International Conference on Systems (HICSS), 2012, Pittsburgh, PA, 5368–5374. http://resources.semi.edu/library/asset-view.cfm?AssetId=7563.
+
 - [25] E.E. Keet, A professional recollection of software's early days (1960–1979), IEEE Ann. Hist. 24 (October/December 2005) 31–45. Los Alamitos, CA. http://www.vanguard.com/Annals.pdf.
+
 - [26] E. Nash, The evolution of cyberpunk, New York Times 8 (1993). http://www.nytimes.com/1993/08/08/evolution-of-cyberpunk.html.
+
 - [27] F. Cohen, Computer Viruses: Theories and Experiments; Global Challenge, Proceedings of the II International Conference on Computer Security (2006) 143–158. Kluwer, Boston, MA, http://www.facweb.org/ernet.net/~shamik/2006/papers/ComputerVirusesAndExperiments.pdf.
+
 - [28] Security News, What is a Virus in the Wild?; Symatec Corporation, Mountain View, CA, https://www.petocools.com/security-in-the-wild.html.
+
 - [29] Eugene Sphart, The Inworm program, an analysis, Purdue Technical Report CS-823, Purdue University, 1988. http://www.purdue.edu/tech-reps/823.pdf.
+
 - [30] S. Ellington, Prosecuting Computer Crimes, Division of Legal Education, Executive Office for United States, 2013. http://www.justice.gov/sites/default/files/criminal/2015/01/manual.pdf.
+
 - [31] H. Rauben, From the ARPANET to the Internet, TCP IP (UCEP) (2015). http://www.columbia.edu/~rh120/tcpip_paper.txt.
+
 - [32] NSFNET, The Partnership that Changed the World An Event Celebrating 20 Years of Internet Innovation and Prosperity, National Science Foundation, Arlington, VA, 2007. November 29–30. http://www.nsfnet-legacy.org/NSFNET_Program.pdf.
+
 - [33] U. Peth, 25 years of cyber (in) SE, Web Standards, Software Engineering Institute, Carnegie Mellon University, Pittsburgh, PA, 2013. http://www.semi.edu/webinars/semi-webinar?webid=59067.
+
 - [34] J.P. Fridli, CCAMP: the missing link in the PC's past? PC Mag. 2 (6) (1983) 190–191.
+
 - [35] R. Opie (Editor-in-Chief), Fusion transfusion or future directions in computer entertainment, Computer Gathering World 77, (December 1990) 26–28. http://www.cgforum.com/galleries/issues/cgw_77.pdf.
+
 - [36] Gartner Inc., Gartner Says Worldwide Software Market Growth 4.8 Percent in 2013, Gartner Inc., Stanford, CT, 2013. http://www.gartner.com/newsroom/id/2966317.
+
 - [37] Standish Group, The Standish Group Report. CHAOS. Project Smart, The Standish Group, Boston, MA (2014). https://www.projectsmart.com/white-papers/chaos-report.pdf.
+
 - [38] C. Jones, Software Quality in 2013: A survey of Namcook Analytics, LLC, Naragansett, RI, 2013. http://www.namcookanalytics.com/wp-content/uploads/2013/10/SQA2013Long.pdf.
+
 - [39] W. Humphrey, A Discipline for Software Engineering, Addison-Wesley, Boston, MA, 1994.
+
 - [40] Software Engineering, Statistics and History, Carnegie Mellon University, Pittsburgh, PA. http://www.semi.edu/about/statistics_history.html.
 
+- [41] N. Hall, J. Miklos, 软件生命周期中的正式教育，收于 R. Fairley, P. Freeman (编),《软件工程教育问题》，Springer-Verlag, 纽约, NY, 1989。
+
+- [42] D.J. Bagert, X. Mu, 美国软件工程硕士学位项目的现状，收于第35届教育前沿会议（Frontiers in Education Conference），IEEE Computer Society Press, 2005年10月22日–FIG-1-FIG-6, http://ieee.org/stamp.php?arnumber=161026. 访问于 2016年5月。
+
+- [43] W.S. Humphrey, 软件过程表征：一个成熟度框架。技术报告 CMU/SEI-87-TR-11, 1987年6月, (2015) http://www.sei.cmu.edu/reports/870r11.pdf. 访问于 2015年。
+
+- [44] W.S. Humphrey, 《管理软件过程》，Addison-Wesley, 波士顿, MA, 1989。
+
+- [45] M.C. Paul, C.V. Weber, B. Curtis, M.B. Crisis, 《能力成熟度模型：改进软件过程的指南》，软件工程SEI系列，Addison-Wesley, 丁, MA, 1995。
+
+- [47] M. Lutz, RIT提供其首个软件工程本科学位，《软件工程进展论坛》 6 (14) (1996)。 http://tab.computer.org/fase-archive/v6n14.txt. 访问于 2015年8月。
+
+- [48] IEEE计算机学会, 《SWEBOK 概览》，IEEE计算机学会, 洛杉矶, CA, 2008. SE Online.
+
+- [49] IEEE计算机学会, 《软件工程的伦理与专业实践》，IEEE计算机学会, 洛杉矶, CA, 1999。 http://www.acm.org/about-se.code. 访问于 2015年8月。
+
+- [50] N.R. Mead, 软件工程师执业与认证的问题；收于：第10届软件工程教育与培训会议论文，IEEE计算机学会出版社, 洛杉矶, CA, 1997, pp. 158–163。
+
+- [52] N.R. A, J. Turner, 与软件工程相关的当前认证、鉴定和许可活动，《软件工程年》 6 (1998) 167–180。
+
+- [53] IEEE计算机学会, CSDP: 认证软件开发专业人员，IEEE计算机学会, 洛杉矶, CA, 2008。 http://www.computer.org/portal/web/certification/about. 访问于 2015年8月。
+
+- [54] E. Gerich, RFC 1366. 《IP地址空间指南》，MERIT Systems, 互联网任务组, 互联网协会, 雷斯顿, VA, http://www.rfc-ietf.org/rfc/rfc1366.txt. 访问于 2015年8月。
+
+- [55] 国家电信和信息管理局, 互联网名称与域名管理，《联邦公报》63 (111) (1998) 31741-31571。http://www.nist.gov/doc/publications/6.html. 访问于 2015年8月。
+
+- [56] T. Bern-Lee, L. Fischetti, Hewitt, 《阅读网页：万维网原始设计与终极形态》，加州, 纽约, NY, 1999。http://www.w3.com/Berners-Lee/Web/Overview.html. 访问于 2015年8月。
+
+- [57] B. Fraser, 《计算机安全事件与漏洞威胁》，CERT, 软件工程研究所, 卡内基·梅隆大学, 匹堡, PA, 1999。www.stonesoup.org/9905/secorg.org/fraser.pdf. 访问于 2015年8月。
+
+- [58] G. Killreece, 事件管理，《内置安全》，卡内基·梅隆大学, 匹堡, PA, 2013。https://buildsecurityin.us-cert.gov/best-practices/incident-management/incident-management#footnote1-738px. 访问于 2015年8月。
+
+## 软件工程进展与软件保障
+
+- [59] 美国国土安全部, US-CERT 事实表版本2，https://www.uscert.sites/default/files/infoshheet-US-CERT_v2.pdf. 访问于 2015年8月。
+
+- [60] Techernms, 恶意软件，http://www.techernms.com/definition/malware. 访问于 2015年8月。
+
+- [61] 联邦贸易委员会, 消费者信息, 恶意软件，http://www.consumer.gov/articles/0011-malware. 访问于 2014年。
+
+- [62] 美国国土安全部，http://buildsecurity.us-cert.gov. 访问于 2015年8月。
+
+- [63] G. McGraw, 《软件安全：内置安全》，软件安全，Addison-Wesley, 波士顿, MA, 2006。
+
+- [64] Mitre公司, 常见弱性枚举，http://www.mitre.org, 2015. 访问于 2015年8月。
+
+- [65] 美国政府, 《2000年电子政府法》，2002。http://www.ginfo.gov/pkg/PLAW-107pub34/html。
+
+- [66] 国家标准与技术研究院 (NIST), FISMA 详细概述，http://csrc.nist.gov/groups/sma/overview, 更新2014年。
+
+- [67] 国家标准与技术研究院, NIST 特别出版 800-53 第4版，系统的安全与隐私控制，2013）http://csrc.nist.gov/publications/fips200-final.pdf。
+
+- [68] 计算机安全，信息技术实验室, NIST 特别出版 800-53 系统的安全与隐私控制，国家标准，2006年3月）http://csrc.nist.gov/publications/fips200-final.pdf。
+
+- [69] D. Shoemaker, B.D. Kennedy, 犯罪分析与网络调查，收于 M. Pittaro, F. Schneider (编），《互联网犯罪》，Prentice-Hall, 上萨德河, NJ, 2009, pp. 456–476。
+
+- [70] I. Vanossi, 深入风暴内部，风险管理从产品到系统，http://www.cnet.com/news/looking-inside-the-worm/2008。
+
+- [71] R. Ellison, C. Albers, R. Crefol, A. Woody, 供应链管理从产品到系统，SEM-210-26，软件工程研究所，大学，2010。sei.cse.edu/library/assetID=9377。
+
+- [72] Wikipedia, Heartbleed，http://en.wikipedia.org/Heartbleed. 访问于 2015年。
+
+- [73] 美国问责署, IT供应链：与安全相关的风险，GAO 国会报告，2012年3月23日。
+
+- [74] D. Goldman, 伪造技术渗透了美国政府，CNN Money (2012) http://money.cnn.com/2012/11/08/technology/counterfeit-tech/index.html。
+
+- [75] 议院第112届会，能源与商务委员会，调查小组听证会，IT供应链安全：政府与行业的努力，政府印刷局，2012。
+
+- [76] R.A. Clark, H.A. Schmidt, 《网络安全战略》，总统基础设施保护委员会，华盛顿，DC, 2003。https://www.uscert.gov/sites/default/files/publications/cyberpace_strategy.pdf. 访问于 2015年8月。
+
+- [77] GAO, Key高风险列表，2013。http://www.gao.gov/highrisk/overview. 访问于 2015年8月。
+
+- [78] J. Boyens, C. Paulsen, R. Moorthy, N. Bartol, S.A. Shanks, NIST 特别出版 800-161：信息系统的组织的供应链风险管理实践，计算机安全部门，信息技术实验室，2013。
 
 
 
+[79] I. Shoemaker, N. Mead. 构建ICT供应链风险管理知识库，《软件工程杂志》16 (2013)。`https://buildsecurity.us-cert.gov/software-assurance-education/body-knowledge-ict-supply-chain-risk-management.` 访问于 2015年8月。
 
-[41] N. Hall, J. Miklos, 软件生命周期中的正式教育，收于 R. Fairley, P. Freeman (编),《软件工程教育问题》，Springer-Verlag, 纽约, NY, 1989。
+[80] A. Doree, C. Woody, C. Alberts, R. Creel, R.J. Ellis, 评估供应链的系统性方法，卡内基·梅隆大学，2014。`https://buildsecurity.us-cert.gov/best-practices/acquisition/a-systemic-approach-assessing-supply-chain-risk.` 访问于 2015年8月。
 
-[42] D.J. Bagert, X. Mu, 美国软件工程硕士学位项目的现状，收于第35届教育前沿会议（Frontiers in Education Conference），IEEE Computer Society Press, 2005年10月22日–FIG-1-FIG-6, http://ieee.org/stamp.php?arnumber=161026. 访问于 2016年5月。
-
-[43] W.S. Humphrey, 软件过程表征：一个成熟度框架。技术报告 CMU/SEI-87-TR-11, 1987年6月, (2015) http://www.sei.cmu.edu/reports/870r11.pdf. 访问于 2015年。
-
-[44] W.S. Humphrey, 《管理软件过程》，Addison-Wesley, 波士顿, MA, 1989。
-
-[45] M.C. Paul, C.V. Weber, B. Curtis, M.B. Crisis, 《能力成熟度模型：改进软件过程的指南》，软件工程SEI系列，Addison-Wesley, 丁, MA, 1995。
-
-[47] M. Lutz, RIT提供其首个软件工程本科学位，《软件工程进展论坛》 6 (14) (1996)。 http://tab.computer.org/fase-archive/v6n14.txt. 访问于 2015年8月。
-
-[48] IEEE计算机学会, 《SWEBOK 概览》，IEEE计算机学会, 洛杉矶, CA, 2008. SE Online.
-
-[49] IEEE计算机学会, 《软件工程的伦理与专业实践》，IEEE计算机学会, 洛杉矶, CA, 1999。 http://www.acm.org/about-se.code. 访问于 2015年8月。
-
-[50] N.R. Mead, 软件工程师执业与认证的问题；收于：第10届软件工程教育与培训会议论文，IEEE计算机学会出版社, 洛杉矶, CA, 1997, pp. 158–163。
-
-[52] N.R. A, J. Turner, 与软件工程相关的当前认证、鉴定和许可活动，《软件工程年》 6 (1998) 167–180。
-
-[53] IEEE计算机学会, CSDP: 认证软件开发专业人员，IEEE计算机学会, 洛杉矶, CA, 2008。 http://www.computer.org/portal/web/certification/about. 访问于 2015年8月。
-
-[54] E. Gerich, RFC 1366. 《IP地址空间指南》，MERIT Systems, 互联网任务组, 互联网协会, 雷斯顿, VA, http://www.rfc-ietf.org/rfc/rfc1366.txt. 访问于 2015年8月。
-
-[55] 国家电信和信息管理局, 互联网名称与域名管理，《联邦公报》63 (111) (1998) 31741-31571。http://www.nist.gov/doc/publications/6.html. 访问于 2015年8月。
-
-[56] T. Bern-Lee, L. Fischetti, Hewitt, 《阅读网页：万维网原始设计与终极形态》，加州, 纽约, NY, 1999。http://www.w3.com/Berners-Lee/Web/Overview.html. 访问于 2015年8月。
-
-[57] B. Fraser, 《计算机安全事件与漏洞威胁》，CERT, 软件工程研究所, 卡内基·梅隆大学, 匹堡, PA, 1999。www.stonesoup.org/9905/secorg.org/fraser.pdf. 访问于 2015年8月。
-
-[58] G. Killreece, 事件管理，《内置安全》，卡内基·梅隆大学, 匹堡, PA, 2013。https://buildsecurityin.us-cert.gov/best-practices/incident-management/incident-management#footnote1-738px. 访问于 2015年8月。
-
-软件工程进展与软件保障
-
-[59] 美国国土安全部, US-CERT 事实表版本2，https://www.uscert.sites/default/files/infoshheet-US-CERT_v2.pdf. 访问于 2015年8月。
-
-[60] Techernms, 恶意软件，http://www.techernms.com/definition/malware. 访问于 2015年8月。
-
-[61] 联邦贸易委员会, 消费者信息, 恶意软件，http://www.consumer.gov/articles/0011-malware. 访问于 2014年。
-
-[62] 美国国土安全部，http://buildsecurity.us-cert.gov. 访问于 2015年8月。
-
-[63] G. McGraw, 《软件安全：内置安全》，软件安全，Addison-Wesley, 波士顿, MA, 2006。
-
-[64] Mitre公司, 常见弱性枚举，http://www.mitre.org, 2015. 访问于 2015年8月。
-
-[65] 美国政府, 《2000年电子政府法》，2002。http://www.ginfo.gov/pkg/PLAW-107pub34/html。
-
-[66] 国家标准与技术研究院 (NIST), FISMA 详细概述，http://csrc.nist.gov/groups/sma/overview, 更新2014年。
-
-[67] 国家标准与技术研究院, NIST 特别出版 800-53 第4版，系统的安全与隐私控制，2013）http://csrc.nist.gov/publications/fips200-final.pdf。
-
-[68] 计算机安全，信息技术实验室, NIST 特别出版 800-53 系统的安全与隐私控制，国家标准，2006年3月）http://csrc.nist.gov/publications/fips200-final.pdf。
-
-[69] D. Shoemaker, B.D. Kennedy, 犯罪分析与网络调查，收于 M. Pittaro, F. Schneider (编），《互联网犯罪》，Prentice-Hall, 上萨德河, NJ, 2009, pp. 456–476。
-
-[70] I. Vanossi, 深入风暴内部，风险管理从产品到系统，http://www.cnet.com/news/looking-inside-the-worm/2008。
-
-[71] R. Ellison, C. Albers, R. Crefol, A. Woody, 供应链管理从产品到系统，SEM-210-26，软件工程研究所，大学，2010。sei.cse.edu/library/assetID=9377。
-
-[72] Wikipedia, Heartbleed，http://en.wikipedia.org/Heartbleed. 访问于 2015年。
-
-[73] 美国问责署, IT供应链：与安全相关的风险，GAO 国会报告，2012年3月23日。
-
-[74] D. Goldman, 伪造技术渗透了美国政府，CNN Money (2012) http://money.cnn.com/2012/11/08/technology/counterfeit-tech/index.html。
-
-[75] 议院第112届会，能源与商务委员会，调查小组听证会，IT供应链安全：政府与行业的努力，政府印刷局，2012。
-
-[76] R.A. Clark, H.A. Schmidt, 《网络安全战略》，总统基础设施保护委员会，华盛顿，DC, 2003。https://www.uscert.gov/sites/default/files/publications/cyberpace_strategy.pdf. 访问于 2015年8月。
-
-[77] GAO, Key高风险列表，2013。http://www.gao.gov/highrisk/overview. 访问于 2015年8月。
-
-[78] J. Boyens, C. Paulsen, R. Moorthy, N. Bartol, S.A. Shanks, NIST 特别出版 800-161：信息系统的组织的供应链风险管理实践，计算机安全部门，信息技术实验室，2013。
-
-[79] I. Shoemaker, N. Mead. 构建ICT供应链风险管理知识库，《软件工程杂志》16 (2013)。https://buildsecurity.us-cert.gov/software-assurance-education/body-knowledge-ict-supply-chain-risk-management. 访问于 2015年8月。
-
-[80] A. Doree, C. Woody, C. Alberts, R. Creel, R.J. Ellis, 评估供应链的系统性方法，卡内基·梅隆大学，2014。https://buildsecurity.us-cert.gov/best-practices/acquisition/a-systemic-approach-assessing-supply-chain-risk. 访问于 2015年8月。
-
-[81] S. Redwine, 软件保障：开发、维护和获取软件的通用知识体系，构建安全，2007。https://buildsecurity.us-cert.gov/dhs-software-assurance-resources/software-assurance-cbk-principles-organization. 访问于 2015年8月。
+[81] S. Redwine, 软件保障：开发、维护和获取软件的通用知识体系，构建安全，2007。`https://buildsecurity.us-cert.gov/dhs-software-assurance-resources/software-assurance-cbk-principles-organization.` 访问于 2015年8月。
 
 [82] N.R. Mead, J. Allen, M. Ardis, T. Hillburn, A. Konecki, R. Linger, J. McDonald, 软件保障课程卷I：软件保障硕士课程，CMU/SEI-2010-005，软件工程研究所，卡内基·梅隆大学, 匹堡, PA。
 
 [83] N.R. Mead, T. Hillburn, R. Linger, 软件保障课程卷II：本科课程，CMU/SEI-2010-019，软件工程研究所，卡内基·梅隆大学, 匹堡, PA, 2010。
 
-[84] N.R. Mead, M. Ardis, E. Hawthorne, 软件保障课程卷IV：社区学院，CMU/SEI-2011-017，软件工程研究所，卡内基·梅隆大学, 匹堡, PA。http://resources.sei.cmu.edu/library/assetID=10099. 访问于 2015年8月。
+[84] N.R. Mead, M. Ardis, E. Hawthorne, 软件保障课程卷IV：社区学院，CMU/SEI-2011-017，软件工程研究所，卡内基·梅隆大学, 匹堡, PA。`http://resources.sei.cmu.edu/library/assetID=10099.` 访问于 2015年8月。
 
-[85] N.R. Mead, J. Allen, T. Hillburn, A. Konecki, R. Linger, 软件保障课程卷III：软件保障课程大纲，CMU/SEI-2011-013，软件工程研究所，卡内基·梅隆大学, 匹堡, PA, 2011。http://resources.sei.cmu.edu/library/assetID=9981. 访问于 2015年8月。
+[85] N.R. Mead, J. Allen, T. Hillburn, A. Konecki, R. Linger, 软件保障课程卷III：软件保障课程大纲，CMU/SEI-2011-013，软件工程研究所，卡内基·梅隆大学, 匹堡, PA, 2011。`http://resources.sei.cmu.edu/library/assetID=9981.` 访问于 2015年8月。
 
-[86] D. Shoemaker, N.R. Mead, J. Ingalse, 将软件保障参考课程集成到信息系统研究生学位指南中，CMU/SEI-2011-TN-004，软件工程研究所，卡内基·梅隆大学, 匹堡, PA, 2011。http://resources.sei.cmu.edu/library/assetID=9791。
+[86] D. Shoemaker, N.R. Mead, J. Ingalse, 将软件保障参考课程集成到信息系统研究生学位指南中，CMU/SEI-2011-TN-004，软件工程研究所，卡内基·梅隆大学, 匹堡, PA, 2011。`http://resources.sei.cmu.edu/library/assetID=9791`。
 
-[87] S. Deffree, 东北部停电导致5000万人断电，2003。http://www.dhs.gov/electronics-blackouts/blog-news/4394019/Northeast-blackout-leaves-50M-people-without-power-August-14-2003. 访问于 2015年。
+[87] S. Deffree, 东北部停电导致5000万人断电，2003。`http://www.dhs.gov/electronics-blackouts/blog-news/4394019/Northeast-blackout-leaves-50M-people-without-power-August-14-2003.` 访问于 2015年。
 
-[88] 关键基础设施保护伙伴关系与信息共享，http://www.dhs.gov/critical-infrastructure-protection-partnerships-and-information-sharing. 访问于 2015年8月。
+[88] 关键基础设施保护伙伴关系与信息共享，`http://www.dhs.gov/critical-infrastructure-protection-partnerships-and-information-sharing.` 访问于 2015年8月。
 
 [89] 计算机科学与通信委员会 (STCB), 《关键代码：国防软件概率》，国家科学院出版社，华盛顿，DC, 2010, p. 19。
-
-
-
-
 
 # 作者简介
 
@@ -663,9 +646,8 @@ Mead 是软件工程研究所（SEI）的会士兼首席研究员。Mead 同时�
 F. Rahman*, I.D. Addo*, S.I. Ahamed*, J.-J. Yang†, Q. Wang†
 
 **美国威斯康星州密尔沃基马奎特大学
+
 †*中国北京清华大学信息技术研究院
-
-
 
 # 摘要
 
@@ -682,9 +664,6 @@ F. Rahman*, I.D. Addo*, S.I. Ahamed*, J.-J. Yang†, Q. Wang†
 在易受安全和隐私威胁的系统中引入大量传感器面临着挑战。在某些类型的系统中，传感器通常是 mHealth 链路的发起者，其中嵌入体参数（例如：心率、血氧水平、血糖水平）被捕获、数字化，并使用以下一种或多种网络通信技术（例如：蓝牙、低功耗蓝牙 (BT-LE) 和“ZigBee”）传输到手机上 [2]。一个固有的挑战是对敏感数据的保护。
 
 在图 1 所示场景中，mHealth 系统利用各种技术捕获并处理患者数据。本章的重点是研究在数据收集和传输到云存储时确保隐私的挑战和目标。
-
-
-
 
 移动健康系统中的隐私挑战与目标 51
 
@@ -711,8 +690,11 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 与 RFID 部署相关的一些主要挑战如下：
 
 - 短距离可访问。
+
 - 攻击者试图在无线信道中访问信息。
+
 - 暴露给未经授权的人员。
+
 - 名字被夺取或劫持。
 
 ### 3.2 基于手机服务的隐私挑战
@@ -720,8 +702,6 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 在使用基于手机服务的背景下，我们通常识别出三个主要目标：隐私、完整性和可用性。在考虑娱乐性用途时，某些内容的可用性似乎并不是严格的要求。在社交网络中，这种可用性必须包括对审查的鲁棒性以及防止名字劫持。
 
 个人敏感信息可能通过分析共享数据被泄露。研究表明，通过检查某些数据集中的特定人口统计组合数据（如年龄和性别），可以识别出患者详情 [7]。
-
-
 
 移动健康（mHealth）系统中的隐私挑战与目标
 
@@ -733,7 +713,7 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 
 移动健康应用可能存在各种隐私和安全问题。网站可能维护一个庞大的用户配置信息库。用户越来越多地在这些网站上分享他们的私人细节，对于某些人来说，隐私位居希望这种交换能帮助他们找到更好的治疗方法、管理自己的病情或改善整体健康的愿望之后。一些人为了公共利益而公开其健康数据。
 
-医疗专业人员还会发布关于其患者、社区和组织的敏感数据，以分享关于临床情况或实践管理的建议。一些专业人士甚至愿意提供个人数据以换取服务的实用性以及网站提供的偶尔奖励。然而，一旦用户与网站共享他们的健康数据，他们通常对数据的留存期或将永久维护的关联元数据没有控制权。用户产生的内容可能会暴露给预期和非预期的观众。由于任何人都可以注册网站，任何人都可以查看网站上的内容。例如，任何个人或实体都可以创建假账户从毫无防备的用户那里获取数据。另一个相关问题是网站在没有明确同意的情况下与第三方交换数据。例如，checkMD (http://www.checkMD.com) 等网站向其业务伙伴和其他方披露用户的个人信息。网站还允许用户整合第三方创建的功能，并让用户使用其配置数据登录第三方网站，这意味着受保护网站内的可用健康数据可能会泄露到网上 [13]。因此，健康数据可能会在用户不知情的情况下暴露给各种数据接收者。
+医疗专业人员还会发布关于其患者、社区和组织的敏感数据，以分享关于临床情况或实践管理的建议。一些专业人士甚至愿意提供个人数据以换取服务的实用性以及网站提供的偶尔奖励。然而，一旦用户与网站共享他们的健康数据，他们通常对数据的留存期或将永久维护的关联元数据没有控制权。用户产生的内容可能会暴露给预期和非预期的观众。由于任何人都可以注册网站，任何人都可以查看网站上的内容。例如，任何个人或实体都可以创建假账户从毫无防备的用户那里获取数据。另一个相关问题是网站在没有明确同意的情况下与第三方交换数据。例如，`checkMD` (`http://www.checkMD.com`) 等网站向其业务伙伴和其他方披露用户的个人信息。网站还允许用户整合第三方创建的功能，并让用户使用其配置数据登录第三方网站，这意味着受保护网站内的可用健康数据可能会泄露到网上 [13]。因此，健康数据可能会在用户不知情的情况下暴露给各种数据接收者。
 
 积累的健康数据可能被滥用和各种非医疗用途。某些移动健康应用是商业公司，其业务模式基于收集健康数据以用于商业和专利目的。它们可能会将健康数据发布给不同的接收者，包括医生、制药和医疗设备公司、研究人员和非营组织。聚合的健康数据对商业公司（如药物和医疗设备制造商）非常有价值。创新的数据挖掘和健康信息技术可以将来自不同来源的数据连接起来，产生有用的个人数据聚合或数字档案。
 
@@ -741,12 +721,7 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 
 ## 5. 通过各种方法解决隐私问题
 
-由于数据隐私，用户在将敏感私人数据存储并处理到云端或其他任何平台之前，对其进行加密是至关重要的。然而，传统的加密状况仍存在一些缺点。当密钥所有者想要查找存储云存储中的某些数据时，他/她需要下载所有数据并解密，以便对它们进行任何类型的搜索或处理。如果加密数据量巨大或客户端是移动用户，那么效率将非常低且不可行。否则，他/她必须向服务器发送密钥，再由服务器执行解密和搜索程序。“可证明数据占有”（Provable Data Possession）模型确保了不可信存储上的数据所有权。它使用Rivest-Shamir-Adleman 同态线性身份验证器进行数据外包，但该模型会将数据泄露给外部审计员，因此无法证明是保护隐私的。Jules 等人描述了抽检的方法。该模型确保了不可信存储上的数据所有权。它使用Rivest-Shamir-Adleman 同态线性身份验证器进行数据外包，但该模型会将数据泄露给外部审计员，因此无法证明是保护隐私的。Jules 等人描述了抽检的方法。（注：原文此处存在内容重复，译文已按要求去重确保不重复）
-
-（注：由于原文中存在段落重复，译文已已进行逻辑翻译）
-
-
-
+由于数据隐私，用户在将敏感私人数据存储并处理到云端或其他任何平台之前，对其进行加密是至关重要的。然而，传统的加密状况仍存在一些缺点。当密钥所有者想要查找存储云存储中的某些数据时，他/她需要下载所有数据并解密，以便对它们进行任何类型的搜索或处理。如果加密数据量巨大或客户端是移动用户，那么效率将非常低且不可行。否则，他/她必须向服务器发送密钥，再由服务器执行解密和搜索程序。“可证明数据占有”（Provable Data Possession）模型确保了不可信存储上的数据所有权。它使用`Rivest-Shamir-Adleman` 同态线性身份验证器进行数据外包，但该模型会将数据泄露给外部审计员，因此无法证明是保护隐私的。Jules 等人描述了抽检的方法。（注：原文此处存在内容重复，译文已按要求去重确保不重复）
 
 隐私保护、批量审计以及轻量化。它依赖于第三方审计员并使用昂贵的模幂运算操作，这导致了服务器的存储开销和额外的通信成本。Gellman [17] 为云端数据集成提出了一种高效的审计外包服务。该服务基于交互式数据保护（PDP）的创建以防止已验证数据的泄露。它描述了为了提高审计服务性能的定期验证。在这里，该方法采用了采样验证的方式。该方案不仅能够防止云存储提供者的欺骗和伪造，还能防止验证过程中的外包数据泄露。它支持自适应参数选择。该系统显示出较低的计算成本以及更短的额外存储，且由于碎片结构，方案的复杂性较低。它实现了无需下载审计、验证正确性、隐私保护和高性能。
 
@@ -757,50 +732,93 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 # 参考文献
 
 - [1] Adibi, Link technologies and Blackberry mobile health (mHealth) solutions for a review, IEEE Trans. Technol. Biomed. 14 (4) (2012) 586–597.
+
 - [2] Adibi, Biomedical sensing analytics (BSA) for Mobile-Health (mHealth)-LTE, Special Issue on Emerging Technologies in Communications—mHealth (Healthcare Based on Mobile Phone Technology), IEEE Journal of Selected Areas in Communications (ISAC)—Area 1: e-Health, paper # :156978555, March 2012.
-- [3] HIPAA-一般信息. http://www.cms.gov/HIPAAGen/.
+
+- [3] HIPAA-一般信息. `http://www.cms.gov/HIPAAGen/`.
+
 - [4] B.C.M. Fung, K. Wang, R. Chen, P.S. Yu, Privacy-preserving data publishing: a survey on recent developments, ACM Comput. Surf. 42 (4) (2010) 1–53.
+
 - [5] C.C. Aggarwal, P.S. Yu, A general survey of privacy-preserving data mining models and algorithms, in: The Kluwer International Series on Advances in Database Systems, vol. 34, Springer, USA, 2008, pp. 11–52.
+
+
+
 - [6] E. Harry, A. Smith, Context-Based Access Control Model for HIPAA Privacy and Security, SANS Institute, USA, 2001.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [S. Pearson, Account of privacy when designing cloud computing services, in: in of ICSE-09. Vancouver, 2009.
+
 - [C. Wang, Q. Wang, K. Ren, W. Lou, Privacy-preserving auditing for data storage in cloud computing, in: Proceedings of INFOCOM’10, 2010, pp. 1–9.
+
 - [W. Itani, A. Kayssi, A. Chehab, Privacy as a service: privacy-aware data storage in processing in cloud computing architectures, in: Proceeding of DASC’09, 2009, pp. 711–716.
+
 - [I.L. Juan, D.C. Wyld, Would you like chips with that? Consumer perspectives of RFID, Manage. Res. 27 (11) (2004) 29–44.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R.S. Pearson, Account of privacy when designing cloud computing services, in: in of ICSE-09. Vancouver, 2009.
+
 - [C. Wang, Q. Wang, K. Ren, W. Lou, Privacy-preserving auditing for data storage in cloud computing, in: Proceedings of INFOCOM’10, 2010, pp. 1–9.
+
 - [W. Itani, A. Kayssi, A. Chehab, Privacy as a service: privacy-aware data storage in processing in cloud computing architectures, in: Proceeding of DASC’09, 2009, pp. 711–716.
+
 - [I.L. Juan, D.C. Wyld, Would you like chips with that? Consumer perspectives of RFID, Manage. Res. 27 (11) (2004) 29–44.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
-- [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
-- [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
-- [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
+
+
+
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
 - [R. Lilian, Y. Nytr, Personalized access control for a personally controlled health record, in: Proceedings of the 2nd ACM Workshop on Computer Security Architectures, Alexandria, Virginia, USA, 2008, pp. 9–16.
@@ -850,11 +868,9 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 - [C. Wang, Q. Wang, K. Ren, W. Lou, Privacy-preserving auditing for data storage in cloud computing, in: Proceedings of INFOCOM’10, 2010, pp. 1–9.
 - [W. Itani, A. Kayssi, A. Chehab, Privacy as a service: privacy-aware data storage in processing in cloud computing architectures, in: Proceeding of DASC’09, 2009, pp. 711–716.
 - [I.L. Juan, D.C. Wyld, Would you like chips with that? Consumer perspectives of RFID, Manage. Res. 27 (11) (2004) 29–44.
-[/content]
 
-注：由于您提供的文本中包含大量重复的参考文献和不完整的条目，我已根据您的格式要求对正文部分进行了完整翻译。以下是对应的译文：
 
-[content]
+
 隐私保护、批量审计以及轻量化。它依赖于第三方审计员并使用昂贵的模幂运算操作，这导致了服务器的存储开销和额外的通信成本。Gellman [17] 为云端数据集成提出了一种高效的审计外包服务。该服务基于交互式数据保护（PDP）的创建以防止已验证数据的泄露。它描述了为了提高审计服务性能的定期验证。在这里，该方法采用了采样验证的方式。该方案不仅能够防止云存储提供者的欺骗和伪造，还能防止验证过程中的外包数据泄露。它支持自适应参数选择。该系统显示出较低的计算成本以及更短的额外存储，且由于碎片结构，方案的复杂性较低。它实现了无需下载审计、验证正确性、隐私保护和高性能。
 
 ## 6. 结论
@@ -875,12 +891,12 @@ RFID 的使用引入了一系列新风险。安全风险与 RFID 系统在各种
 - [W. Itani, A. Kayssi, A. Chehab, Privacy as a service: privacy-aware data storage in processing in cloud computing architectures, in: Proceeding of DASC’09, 2009, pp. 711–716.
 - [I.L. Juan, D.C. Wyld, Would you like chips with that? Consumer perspectives of RFID, Manage. Res. 27 (11) (2004) 29–44.
 
-
-
-
 ## 8. 结论 105
+
 术语表 105
+
 参考文献 106
+
 作者简介 109
 
 # 摘要
@@ -930,10 +946,6 @@ ITS 技术还包括无人车辆技术，包括自动驾驶车辆和自动泊车�
 
 智能车辆是具有 V2V 或 V2I 通信能力且人类驾驶的车辆。这些车辆配备了车载传感器套，用于监控周围车辆的位置和动作，并检测障碍和状况。这些车辆利用车载处理和存储系统分析收集的数据。收集的信息通过路侧单元 (RSU) 与周围车辆或 ITS 基础设施通信。无线通信能力根据目标接收分为两类。短距离通信使用 IEEE 802.11p 协议与相邻车辆和 RSU 通信，这
 
-
-
-
-
 ![](img/257e93db1726e97e2d89292b09ddfad7_71_0.png)
 
 图 3 ITS 的信息层与物理层。
@@ -966,9 +978,6 @@ ITS 允许比传统交通信号更先进的交通控制系统 [19]。一种控�
 
 为了讨论错误的来源，有必要对容错和可靠性术语进行概述。更详细的讨论在 Aviziis 等人 [27] 中。在容错和可靠性中，根据系统提供服务的能力，描述系统在干扰事件存在时的特定状态。描述系统运行威胁的术语是错误和故障。系统故障是不符合系统规范的状态。错误是可能引发故障的系统状态。具体来说，当错误导致系统服务、持久性、活动和意图发生改变时，就会故障。损坏或错误数据取决于其在系统中的位置，可能是故障、错误或故障。产生损坏数据；处理损坏数据是系统错误；接受损坏数据作为输入是系统故障。错误数据可以通过故意和无意的手段在系统内部创建。
 
-
-
-
 74 M. Woodard 等人
 
 技术资产。系统的输入数据可能是错误的，正如 Aggarwal 等人 [31] 所讨论的，有必要对传感器读数进行数据清洗。传感器读数通常是由将测量量（电压）转换为另一种测量量（如温度）的固有噪声过程产生的。此外，外部条件、传感器老化、校准错误或传感器间歇性故障也可能引入错误。然而，在许多大型分布式系统中，错误数据的原因很难确定，无论数据错误的来源如何，都可能使用相同的数据清洗技术。
@@ -977,11 +986,14 @@ ITS 允许比传统交通信号更先进的交通控制系统 [19]。一种控�
 
 如上所述，数据错误可能产生于多种，包括校准错误或故障的传感器硬件，以及处理、存储和通信中的错误。数据清洗的检测阶段是识别潜在错误。通常，这是通过定位系统中的异常来实现的。Rajasegarar 等人 [32] 讨论了传感器网络中异常检测的重要性和通用挑战，这涉及到故障诊断、入侵检测和监控应用。开发任何异常检测算法的主要挑战在于，传感器网络具有高度的应用相关性和依赖性。Yin 等人 [33] 提出了领域特定技术，他们对风力涡轮数据进行了建模；Freeman 等人 [34] 则对飞机飞行员静压探数据数据建模。这两种异常检测技术都能检测具有显著测量噪声和未知分布的数据中的异常。然而，这些技术不适用于其他领域，且无法扩展到信息物理系统（CPS）的规模。CPS 数据损坏检测中的另一个主要问题是确定异常数据何时为真实的数据错误。Tang 等人 [35] 研究了传感器数据的可靠性，并提出了一种 True-Alarm 方法，通过过滤噪声和虚假信息来消除误报，构建告警图并基于图连接进行可靠性推理。
 
+
+
 检测技术可以根据检测潜在数据错误的方法分类。Zhang 等人 [36]、Chandola 等人 [37] 以及 Fang 等人 [38] 提供了异常检测技术的全面概述。表 1 是这些方法以及异常检测最新进展的总结。这些方法包括统计检测方法和行为检测方法。统计检测方法可以进一步分类为基于估计、基于规则和基于学习的检测方法以及混合方法。
 
 # 信息物理系统关键基础设施系统数据清洗技术综述
 
 | 表 1 统计异常检测方法总结 |
+| --- |
 | 检测 | 描述 |
 | --- | --- |
 | 基于规则 | 基于规则的检测方法为数据值设置可接受的限制。这些限制可以从离群集中确定或使用统计推理确定。 |
@@ -1009,10 +1021,7 @@ ITS 允许比传统交通信号更先进的交通控制系统 [19]。一种控�
 
 基于学习的统计方法利用数据挖掘、聚类和分类算法根据数据相似性对数据进行分组 [38]。当数据不属于某组时，即可检测异常。这些技术具有较高的检测率，但需要额外的处理和存储硬件。
 
-Rajasegarar 等人 [43] 提出了一种去中心化的聚类异常检测方法。该方法专为层次结构（基于树）的网络设计。叶节点获取传感器读数并将其聚合成固定宽度的类。树中的每个节点对其子节点进行聚类并合并。异常检测在根节点进行，通过寻找距离其他类超过平均类距离一个标准差的类。Chang 等人 [44] 使用回声状态网络（ESN，一种所有神经元都相互连接的神经网络）来执行异常检测。ESN 在节点部署之前经过训练，因此它们并不非常灵活。它们的工作方式与贝叶斯网络类似，将传感器值与 ESN 预测的值进行比较。在这种情况下，使用神经网络的优势是比贝叶斯网络所需的 CPU 和 RAM 少。Obst [45] 对这种方法提出了改进。不是预先构建递归神经网络，而是每个节点与其直接邻居通信以构建一个
-
-
-其传感器观测到的值的模型。该模型随后用于估计读取数中的异常情况。
+Rajasegarar 等人 [43] 提出了一种去中心化的聚类异常检测方法。该方法专为层次结构（基于树）的网络设计。叶节点获取传感器读数并将其聚合成固定宽度的类。树中的每个节点对其子节点进行聚类并合并。异常检测在根节点进行，通过寻找距离其他类超过平均类距离一个标准差的类。Chang 等人 [44] 使用回声状态网络（ESN，一种所有神经元都相互连接的神经网络）来执行异常检测。ESN 在节点部署之前经过训练，因此它们并不非常灵活。它们的工作方式与贝叶斯网络类似，将传感器值与 ESN 预测的值进行比较。在这种情况下，使用神经网络的优势是比贝叶斯网络所需的 CPU 和 RAM 少。Obst [45] 对这种方法提出了改进。不是预先构建递归神经网络，而是每个节点与其直接邻居通信以构建一个其传感器观测到的值的模型。该模型随后用于估计读取数中的异常情况。
 
 分类方法使用学习模型将数据组织成类别；在这种情况下，即为正常或异常。一种分类方法使用贝叶斯网络来监控传感器值，并预测值何时出现异常 [38]。Mayfield 等人 [46] 开发了一种名为 ACER 的工具，它利用关系依赖网络来修正异常数据并填补缺失数据。该工具运行在传感器网络基站上，并建立传感器数据的线性模型，考虑了来自其他节点和邻居节点的读取数。另一个使用贝叶斯网络的示例是文献 [47]，该研究监测矿井大气中气体的浓度。网络监控随时间变化的传感器值以及传感器之间的物理关系。系统学习了矿井气体浓度的基准，并能适应气体浓度的自然波动。它可以检测单传感器异常，也可以检测多节点异常和事件。
 
@@ -1039,17 +1048,20 @@ Ni 等人 [48] 提出了一种分层贝叶斯时空模型来检测值得关注�
 Gantay 等人 [58] 对缺失或不完整数据的研究进行了综述。使用了多种技术生成预测值。许多方法与异常检测技术非常相似。以下是缓解缺失和损坏数据的方法：
 
 - 填充：该技术根据数据流的概率模型估计缺失数据。
+
 - 预测值填充：该技术根据数据集估计值来填充缺失数据。估计方法的复杂度从均值或众值到基于训练数据的复杂估计不等。
+
 - 基于分布的填充：该技术使用分类算法填充数据数据。在遇到缺失值时创建每个伪实例。对每个伪实例进行测试。使用加权比较选择替换值。
+
 - 唯一值填充：该技术通过历史信息进行简单替换填充缺失值。
+
 - 替换缺失数据：该技术使用与当前数据集相似的测试用例值替换缺失数据。
+
 - 粗集：该技术使用下近似和上近似来确定替换值。该技术的优点是不需要关于数据的初步或额外信息。
+
 - 相似关系：该技术在对整个数据集做出泛化决策后替换缺失数据。
 
 这些技术可以用于替换损坏的数据，以确保正确执行。
-
-
-
 
 # 4. 基于异常类型的技术的分类
 
@@ -1061,9 +1073,10 @@ Jurdak 等人 [59] 将数据异常分为三大类：时间性、空间性和时�
 
 时间性异常局限于单个传感器节点，可以通过观察随时间变化的传感器值以及观察若干个指示误差的属性来检测。这些属性包括后续传感器读数的高变异性或缺乏变异性、读数的逐渐偏移，或超出范围的极端读数。导致此类异常的故障示例如下：传感器可能会进入锁定状态，或无法获取新样本，导致传感器在很一段时间内保持不变。另一个例子是传感器丢失了校准，其数据值偏离真实值，导致传感器读数逐渐偏移。传感器的主要故障可能会产生物理上不可能的越界读数。最后，传感器读数的高变异性可能由传感器电压波动引起。然而，高变异性也可能由于感知环境的许多变化。
 
-表 2 数据异常类型总结
+| 表 2 数据异常类型总结 |
+| --- |
 | 数据异常类型 | 说明 |
-|---|---|
+| --- | --- |
 | 时间性 | 传感器读数中的时间异常表现为后续读数具有高变异性、读数缺乏变化、读数逐渐偏移或越界读数。 |
 | 空间性 | 传感器读数中的空间异常与周围节点的读数显著不同。 |
 | 时空 | 时空异常表现出时间性和空间异常属性的结合。这些异常很少见，但难以检测。 |
@@ -1078,7 +1091,8 @@ Jurdak 等人 [59] 将数据异常分为三大类：时间性、空间性和时�
 
 第 3 节介绍的各种技术可用于检测上述每种异常。表 3 包含了按可检测异常分类的清洗技术总结。
 
-表 3 基于异常类型的清洗方法分类
+| 表 3 基于异常类型的清洗方法分类 |
+| --- |
 | 清洗方法 | 可检测的异常 |
 | --- | --- |
 | 基于规则 | 如果在最近值的滑动窗口上进行分析，则可以检测时间异常。如果使用来自相邻节点的数据进行分析，则可以检测空间异常。由于数据维度，无法检测时空异常。 |
@@ -1104,12 +1118,8 @@ Jurdak 等人 [59] 将数据异常分为三大类：时间性、空间性和时�
 
 基于学习的统计方法利用各种数据挖掘聚类和分类算法对数据进行分组以进行比较，对所有类型的异常检测率都很高。例如，可以使用 Chang 等人 [44] 描述的神经网络 ESN 技术以及 Ni 等人 [48] 提出的贝叶斯时空模型检测时间和空间异常。在这两种情况下，网络模型预测一个数据值用于比较。网络模型捕捉了数据的变化和空间变异。另一个更详细的时间异常检测方法的示例是 Xie 等人 [51] 提出的 MSPCA。该技术可以检测渐进的时间性异常（如校准漂移）和具有不同时频特征的持续异常。可以使用 Chitradevi 等人 [50] 提出的 PCA 检测方法检测时空异常。该技术使用 PCA 通过谱分解降低数据的维度。
 
-
-
-
-
-# 表 4 ITS 静态基础设施的数据异常
-
+| 表 4 ITS 静态基础设施的数据异常 |
+| --- |
 | ITS 元素 | 数据异常类型 |
 | :--- | :--- |
 | 路侧单元 | 需要检测时间性和空间异常，以确保清洁数据存储在数据库中，供控制元素使用。 |
@@ -1130,13 +1140,15 @@ RSU 作为传感器和数据库节点运行，交通系统中的控制元素和�
 
 ### 4.3.3 中央交通管理
 
-中央交通管理可以分为自主控制元素和半自动控制元素。自主元素将控制一段道路或子区域的多个信号灯和动态车道。这种视角要求在时间和空间异常检测外，还需要检测基础的时空异常。通过对趋势进行检测和清洗，以更好地适应控制决策。一个例子是高峰拥堵期间的风暴或洪水，以及由于停电导致的 RSU、交通灯故障。随着风暴横跨整个区域，需要时空异常检测来发现故障。控制决策的自主性和直接性限制了时空异常检测的复杂性。
+
+
+中央交通管理可以分为自主控制元素和半自动控制元素。自主元素将控制一段道路或子区域的多个信号灯和动态车道。这种视角要求在时间和空间异常检测外，还需要检测基础的时空异常。通过对趋势进行检测和清洗，以更好地适应控制决策。一个例子是高峰拥堵期间的风暴或洪水，以及由于停电导致的`RSU`、交通灯故障。随着风暴横跨整个区域，需要时空异常检测来发现故障。控制决策的自主性和直接性限制了时空异常检测的复杂性。
 
 自主控制元素处于更高水平，且人类在环。在这一层，路网的广泛视角和高级控制需要更先进的时空异常检测。这种类型控制元素的责任是检测趋势以告知专家。这种检测对于人类对自主控制的干预，以及作为设计周期的一部分的长期控制决策和修改至关重要。
 
 ## 4.4 ITS 车辆移动元素
 
-在本节将使用第 2 节描述的示例 ITS 系统的移动元素，演示可能会遇到不同类型的数据异常，以及针对这些异常的适当清洗技术（表 5）。
+在本节将使用第 2 节描述的示例`ITS`系统的移动元素，演示可能会遇到不同类型的数据异常，以及针对这些异常的适当清洗技术（表 5）。
 
 ### 4.4.1 车辆运行
 
@@ -1154,7 +1166,7 @@ RSU 作为传感器和数据库节点运行，交通系统中的控制元素和�
 
 ### 4.4.2 导航
 
-导航层面的异常影响导航设备提供有用建议的能力。GPS 数据中的错误非常常见。导航设备应该能够检测时间错误，即 GPS 传感器报告位置的突然远距离变化。在 V2V 环境中，车辆可以协作以提高位置准确性。如果周围车辆指示其位置不同，则可以检测并缓解空间异常。虽然导航可能出现时空异常，但发生的概率较低，且不会投入资源来识别或缓解它们。
+导航层面的异常影响导航设备提供有用建议的能力。`GPS`数据中的错误非常常见。导航设备应该能够检测时间错误，即`GPS`传感器报告位置的突然远距离变化。在`V2V`环境中，车辆可以协作以提高位置准确性。如果周围车辆指示其位置不同，则可以检测并缓解空间异常。虽然导航可能出现时空异常，但发生的概率较低，且不会投入资源来识别或缓解它们。
 
 ### 4.4.3 驾驶员
 
@@ -1162,13 +1174,13 @@ RSU 作为传感器和数据库节点运行，交通系统中的控制元素和�
 
 ## 5. 基于需求和约束的技术分类
 
-在本节中，我们将根据系统各种元素的约束对第 3 节提出的清洗技术进行分类（表 6）。使用这种分类，我们将讨论 ITS 清洗技术在何处最合适。
+在本节中，我们将根据系统各种元素的约束对第 3 节提出的清洗技术进行分类（表 6）。使用这种分类，我们将讨论`ITS`清洗技术在何处最合适。
 
 ## 5.1 系统约束的类型
 
-网络系统的硬件约束可以从两个视角进行评估。第一个视角是节点的硬件资源。计算资源有限的节点（包括移动设备）无法执行与强大节点相同的算法。这些节点可能缺乏执行算法所需的内存或磁盘空间，或者可能缺乏在合理时间内获得结果所需的 CPU 速度。此外，某些节点的能量资源受限，这进一步限制了计算能力。计算密集型算法会增加能量消耗并以更快的速度消耗能量资源。
+网络系统的硬件约束可以从两个视角进行评估。第一个视角是节点的硬件资源。计算资源有限的节点（包括移动设备）无法执行与强大节点相同的算法。这些节点可能缺乏执行算法所需的内存或磁盘空间，或者可能缺乏在合理时间内获得结果所需的`CPU`速度。此外，某些节点的能量资源受限，这进一步限制了计算能力。计算密集型算法会增加能量消耗并以更快的速度消耗能量资源。
 
-第二个视角是由网络引入的约束。低带宽或易出错的网络增加了时间和能量
+第二个视角是由网络引入的约束。低带宽或易出错的网络增加了时间和能量。
 
 # 表 6 资源约束总结
 
@@ -1179,20 +1191,17 @@ RSU 作为传感器和数据库节点运行，交通系统中的控制元素和�
 | 通信约束 | 对网络需求的约束。具体而言，这些约束指的是执行清洗技术所需的其他系统组件数据的可用性。 |
 | 能量约束 | 对数据清洗技术可能消耗能量的约束。处理和通信任务都可能对节点的总能耗做出贡献。 |
 
-
-
-
 从一个节点传输数据到另一个节点时所花费的时间。此外，网络通信可能会导致数据损坏。针对通过网络接收的数据，选择的清洗技术可能取决于网络的性质。
 
 ### 5.1.1 硬件资源限制
 
 Vyas 等人 [60] 讨论了控制系统和传感器处理的各种硬件架构引入的限制。评估硬件架构主要涉及读取传感器、执行控制算法的精度，以及执行控制算法和通过执行器执行动作的时间。
 
-作者提出了一种架构，其中传感器处理单元（SPU）能够自主执行某些计算，并将数据通信给主处理器以处理更复杂的任务。SPU 被配置为持续执行用户定义的函数，这些函数可以从传感器读取数据并进行少量计算。根据需要，传感器节点上的主 CPU 可以从 SPU 获取输出用于其他任务。与主 CPU 相比，SPU 的能力是有限的。简单任务（如读取数据和执行数据融合）可以通过 SPU 完成。然而，更复杂的任务需要主 CPU 的介入。
+作者提出了一种架构，其中传感器处理单元（`SPU`）能够自主执行某些计算，并将数据通信给主处理器以处理更复杂的任务。`SPU`被配置为持续执行用户定义的函数，这些函数可以从传感器读取数据并进行少量计算。根据需要，传感器节点上的主`CPU`可以从`SPU`获取输出用于其他任务。与主`CPU`相比，`SPU`的能力是有限的。简单任务（如读取数据和执行数据融合）可以通过`SPU`完成。然而，更复杂的任务需要主`CPU`的介入。
 
-为了能量资源有限的设备，CPU 支持低功耗模式。当不需要主 CPU 时，传感器节点可以进入低功耗模式以节省能量。当需要时，SPU 可以向主 CPU 发出中断，以便 CPU 可以执行传感器设备无法独立完成的计算。
+为了能量资源有限的设备，`CPU`支持低功耗模式。当不需要主`CPU`时，传感器节点可以进入低功耗模式以节省能量。当需要时，`SPU`可以向主`CPU`发出中断，以便`CPU`可以执行传感器设备无法独立完成的计算。
 
-低功耗模式可能会减少传感器节点的能量消耗，从而延长电池寿命；但无论在有无低功耗模式的情况下，节点主 CPU 都会运行复杂的数据清洗算法，人们可能倾向于使用需求更低的数据清洗技术来提高传感器节点的电池寿命。如果数据清洗技术足够简单，可以通过 SPU 执行，从而进一步允许主 CPU 保持在低功耗状态。
+低功耗模式可能会减少传感器节点的能量消耗，从而延长电池寿命；但无论在有无低功耗模式的情况下，节点主`CPU`都会运行复杂的数据清洗算法，人们可能倾向于使用需求更低的数据清洗技术来提高传感器节点的电池寿命。如果数据清洗技术足够简单，可以通过`SPU`执行，从而进一步允许主`CPU`保持在低功耗状态。
 
 ### 5.1.2 网络引入的限制
 
@@ -1208,13 +1217,14 @@ Zhang 等人 [61] 讨论了网络化控制系统中由网络引入的限制。�
 
 ### 2.2.1 基于规则的检测
 
-由于其简单性，基于规则的清洗技术适用于资源受限设备上的执行。异常检测规则是预先定义的。只需将这些规则应用于数据项，以确定数据项是否符合数据预期或是否存在异常。此外，异常数据的检测完全基于规则集，而不依赖于构建模型。与其他技术相比，基于规则的方法需要较少的 CPU 和存储资源。因此，能量消耗可能低于需要更复杂算法的技术。然而，随着异常检测规则数量和复杂性的增加，存储、处理或能量限制可能会变成问题。
+由于其简单性，基于规则的清洗技术适用于资源受限设备上的执行。异常检测规则是预先定义的。只需将这些规则应用于数据项，以确定数据项是否符合数据预期或是否存在异常。此外，异常数据的检测完全基于规则集，而不依赖于构建模型。与其他技术相比，基于规则的方法需要较少的`CPU`和存储资源。因此，能量消耗可能低于需要更复杂算法的技术。然而，随着异常检测规则数量和复杂性的增加，存储、处理或能量限制可能会变成问题。
 
 如果检测规则依赖于邻居节点的值，通信和能量开可能会大幅增加。从邻居节点收集的原始数据可以作为异常检测过程的一部分。然而，基于规则的技术不维护被视为正常的数据模型。因此，识别邻居感知值异常的节点可能会产生高昂的通信成本。匹配从邻居聚合的数据在计算上是很便宜的，但收集这些数据可能需要大量的通信开销以及增加的能量消耗。
 
 节点维护的历史也可能影响基于规则清洗技术的资源需求。存储长期原始数据以进行规则匹配的节点比处理原始数据的节点需要更多存储空间。需要存储邻居节点原始数据的规则加剧了这一问题。除了存储需求外，更长的数据历史需要更长的处理时间来获得结果，并可能增加能量消耗。
 
-| 表 7 基于系统限制的清洗方法分类 |
+# 表 7 基于系统限制的清洗方法分类
+
 | 方法 | 资源限制 |
 | :--- | :--- |
 | 基于规则 | 规则规则简单时，处理和存储需求较低。如果规则依赖于从邻居节点收集的数据，则通信成本较高。节点不开发模型，依赖原始数据进行异常检测。 |
@@ -1240,30 +1250,27 @@ Zhang 等人 [61] 讨论了网络化控制系统中由网络引入的限制。�
 
 ### 5.2.4 基于行为的检测
 
-基于行为的检测依赖于检查之前的系统状态以识别异常状态。维护历史数据随着历史增长会产生更大的存储成本。然而，基于行为的技术
-
-
-适用于 CPS（信息物理系统）中的更高层次，这些节点更有可能拥有合理的计算和存储资源。这些节点从系统中的其他组件聚合系统状态信息。从其他系统组件检索的信息有助于以处理和通信为代价构建系统级视图。
+基于行为的检测依赖于检查之前的系统状态以识别异常状态。维护历史数据随着历史增长会产生更大的存储成本。然而，基于行为的技术适用于`CPS`（信息物理系统）中的更高层次，这些节点更有可能拥有合理的计算和存储资源。这些节点从系统中的其他组件聚合系统状态信息。从其他系统组件检索的信息有助于以处理和通信为代价构建系统级视图。
 
 ## 5.3 ITS 基础设施的静态元素
 
-在本节中，将使用第 2 节描述的 ITS 系统静态元素，说明在 CPS 的何种部分硬件限制将决定清洗技术（表 8）。
+在本节中，将使用第 2 节描述的`ITS`系统静态元素，说明在`CPS`的何种部分硬件限制将决定清洗技术（表 8）。
 
 ### 5.3.1 路侧单元
 
-RSU 部署在整个网络中，使得成本成为限制因素。RSU 的传感器数据库网络需要中等规模的存储，以便存储本地和邻近传感器的原始数据。然而，系统的数据留存策略将决定存储的大小。RSU 对于车辆和控制元件访问数据的通信需求非常高。RSU 的处理需求非常低，因为其主要功能是传感、存储和通信。能效是一个考虑因素，因为安装可能由太阳能/电池供。高通信需求要求限制节点的处理能力以满足能量限制。
+`RSU`部署在整个网络中，使得成本成为限制因素。`RSU`的传感器数据库网络需要中等规模的存储，以便存储本地和邻近传感器的原始数据。然而，系统的数据留存策略将决定存储的大小。`RSU`对于车辆和控制元件访问数据的通信需求非常高。`RSU`的处理需求非常低，因为其主要功能是传感、存储和通信。能效是一个考虑因素，因为安装可能由太阳能/电池供。高通信需求要求限制节点的处理能力以满足能量限制。
 
-表 8：ITS 静态基础设施的资源限制
+# 表 8：ITS 静态基础设施的资源限制
 
 | ITS 元素 | 硬件限制 |
-|---|---|
+| :--- | :--- |
 | 路侧单元 | 由于部署和成本，受到高度限制。需要中等存储、低处理能力、高通信和高能效。 |
-| 交通控制 | 由于控制的安全关键性，成本限制较少。存储和通信与 RSU 相似。需要更高的处理能力来执行控制算法。能效不是问题。 |
+| 交通控制 | 由于控制的安全关键性，成本限制较少。存储和通信与`RSU`相似。需要更高的处理能力来执行控制算法。能效不是问题。 |
 | 中央交通管理 | 由于这些是大型投资，成本限制较少。执行控制算法需要极高的存储和处理能力。通信取决于所收集数据的粒度。能效不是问题。 |
 
 ### 5.3.2 交通信号灯和动态车道
 
-由于其运行的安全关键性，交通信号灯和动态车道的成本限制比 RSU 小。交通信号灯和动态车道的存储需求将与 RSU 相似。然而，交通信号灯和动态车道的处理和通信需求将高于 RSU。交通信号灯和动态车道使用的控制算法需要处理和通信来协作决策。控制循环需要更快的处理，因为交通信号灯利用基础设施电源，并在停电时有电池备用。
+由于其运行的安全关键性，交通信号灯和动态车道的成本限制比`RSU`小。交通信号灯和动态车道的存储需求将与`RSU`相似。然而，交通信号灯和动态车道的处理和通信需求将高于`RSU`。交通信号灯和动态车道使用的控制算法需要处理和通信来协作决策。控制循环需要更快的处理，因为交通信号灯利用基础设施电源，并在停电时有电池备用。
 
 ### 5.3.3 中央交通管理
 
@@ -1271,25 +1278,25 @@ RSU 部署在整个网络中，使得成本成为限制因素。RSU 的传感器
 
 ## 5.4 ITS 车辆的移动元素
 
-在本节中，将使用第 2 节描述的示例 ITS 系统移动元素，说明在 CPS 的何种部分资源限制将决定清洗技术（表 9）。
+在本节中，将使用第 2 节描述的示例`ITS`系统移动元素，说明在`CPS`的何种部分资源限制将决定清洗技术（表 9）。
 
 ### 5.4.1 车辆运行
 
-车辆运行的传感器通常是嵌入式系统，不像车辆的其他组件那样具有计算复杂性。尽管它们的处理能力可能较低，但这些组件仍然能够非常快速地清洗数据项。简单的数据清洗技术（基于规则的算法）可以在较短的执行时间内对数据进行某种清洗，而不需要更先进的 CPU。由于设备距离接近，这些元件的通信是短距离的。
+车辆运行的传感器通常是嵌入式系统，不像车辆的其他组件那样具有计算复杂性。尽管它们的处理能力可能较低，但这些组件仍然能够非常快速地清洗数据项。简单的数据清洗技术（基于规则的算法）可以在较短的执行时间内对数据进行某种清洗，而不需要更先进的`CPU`。由于设备距离接近，这些元件的通信是短距离的。
 
-表 9：ITS 移动基础设施的资源限制
+# 表 9：ITS 移动基础设施的资源限制
 
 | ITS 元素 | 资源限制 |
-| --- | --- |
+| :--- | :--- |
 | 车辆运行 | 受限的处理和存储资源。有限的、短程通信。取决于位置，能量资源有限。 |
-| 导航 | 限制较少，尽管处理和存储仍受限。具有更强的 V2V 或 V2I 通能力。 |
+| 导航 | 限制较少，尽管处理和存储仍受限。具有更强的`V2V`或`V2I`通能力。 |
 | 驾驶员 | 限制较少，尽管处理仍受限。安全关键决策需要快速响应。对于全自动车辆协调可能包含沉重的通信负载。 |
 
 ### 5.4.2 导航
 
-导航设备往往比负责感知车辆状态的嵌入式设备强大。这些设备必须能够与人类用户交互，有时接近 PC 级的用户体验。它们的设计配备了大量的磁盘空间和快速处理器。在需要 V2V 通信的应用中，通信可能是沉重的。
+导航设备往往比负责感知车辆状态的嵌入式设备强大。这些设备必须能够与人类用户交互，有时接近`PC`级的用户体验。它们的设计配备了大量的磁盘空间和快速处理器。在需要`V2V`通信的应用中，通信可能是沉重的。
 
-由于可以访问更强大的计算资源，导航设备可以执行更复杂的清洗技术。基于学习的技术可以用于检测 GPS 数据中的异常 [62]，这可以由导航设备完成。
+由于可以访问更强大的计算资源，导航设备可以执行更复杂的清洗技术。基于学习的技术可以用于检测`GPS`数据中的异常 [62]，这可以由导航设备完成。
 
 ### 5.4.3 驾驶员
 
@@ -1297,11 +1304,11 @@ RSU 部署在整个网络中，使得成本成为限制因素。RSU 的传感器
 
 对于全自动车辆，通信也可能是沉重的。车辆在准备做出控制决策时，可能会考虑从邻近车辆收集的信息。
 
-> 6. 基于数据类型的技术分类
+## 6. 基于数据类型的技术分类
 
 在本节中，我们将根据每种方法可以清洗的数据类型，对第 3 节提出的数据清洗技术进行分类。
 
-使用这种分类，我们将讨论在 ITS 的何种位置每种清洗技术最合适。
+使用这种分类，我们将讨论在`ITS`的何种位置每种清洗技术最合适。
 
 ## 6.1 数据类型
 
@@ -1317,21 +1324,17 @@ RSU 部署在整个网络中，使得成本成为限制因素。RSU 的传感器
 
 ### 6.2.1 基于规则和估计的检测
 
-基于规则和估计的检测方法足够相似，从数据类型的角度来看可以将它们视为同一类。只有最简单的规则检测方法适用于分类数据。这种检测可能包括检查描述状态的输入数据
-
-
-
-
+基于规则和估计的检测方法足够相似，从数据类型的角度来看可以将它们视为同一类。只有最简单的规则检测方法适用于分类数据。这种检测可能包括检查描述状态的输入数据。
 
 # 表 10 基于数据类型的数据清洗方法分类
 
 | 清洗方法 | 适用数据类型 |
-|---|---|
+| :--- | :--- |
 | 基于规则和估算 | 适用于纯数值型数据。无法检测基于规则方法的最简单有效性检查之外的分类数据中的异常。 |
 | 基于学习 | 理想情况下适用于纯数值型数据以及分类与数值型数据的组合。无法检测纯分类数据中的异常。 |
 | 基于行为 | 能够检测从系统日志中提取的数值型数据中的异常。对于使用状态分析的系统状态分类数据是理想的。 |
 
-...的相邻系统处于可接受状态，例如，“蓝色”不是交通灯的状态。除了这种简单的检测外，基于规则或估算的方法无法检测分类数据中的异常。这是因为这两者都需要相对距离来比较数据值。系统状态的均值和方差与此无关。然而，没有任何顺序/排序的纯分类数据对于 CPS（信息物理物理系统）控制系统来说并不是一个现实场景。相反，数值型数据正是这些检测技术专门设计的对象。
+...的相邻系统处于可接受状态，例如，“蓝色”不是交通灯的状态。除了这种简单的检测外，基于规则或估算的方法无法检测分类数据中的异常。这是因为这两者都需要相对距离来比较数据值。系统状态的均值和方差与此无关。然而，没有任何顺序/排序的纯分类数据对于`CPS`（信息物理物理系统）控制系统来说并不是一个现实场景。相反，数值型数据正是这些检测技术专门设计的对象。
 
 ### 6.2.2 基于学习的检测
 
@@ -1347,18 +1350,20 @@ RSU 部署在整个网络中，使得成本成为限制因素。RSU 的传感器
 
 ## 6.3 ITS 基础设施的静态元素
 
-在本节中，将使用 2 节描述的示例 ITS 系统的静态元素，演示 CPS 中每种数据类型何时遇到，从而决定清洗技术（表 11）。
+在本节中，将使用第 2 节描述的示例`ITS`系统的静态元素，演示`CPS`中每种数据类型何时遇到，从而决定清洗技术（表 11）。
 
 ### 6.3.1 路侧单元
 
+
+
 RSU 处理的主要数据类型是数值型数据。RSU 使用的传感器示例包括线圈检测器计数、交通视频、声学传感器和路面磁传感器。在所有情况下，都会提取数值型数据以捕感应区域交通的状态。
 
-RSU 也会收集分类数据，例如车辆识别码（VIN）或标签。这些标签可以由车辆传输到 RSU，也可以从空中收集，例如通过通过车辆中的手机传输的蓝牙包。通过 RSU 之间的协作，可以从分类数据中提取数值型数据，例如通过比较路段上连续 RSU 的时间戳来检测速度。数值型数据是 RSU 收集和存储的主要数据类型。
+RSU 也会收集分类数据，例如车辆识别码（VIN）或标签。这些标签可以由车辆传输到 RSU，也可以从空中收集，例如通过车辆中的手机传输的蓝牙包。通过 RSU 之间的协作，可以从分类数据中提取数值型数据，例如通过比较路段上连续 RSU 的时间戳来检测速度。数值型数据是 RSU 收集和存储的主要数据类型。
 
 表 11 ITS 静态基础设施的数据类型
 
 | ITS 元素 | 数据类型 |
-|---|---|
+| --- | --- |
 | 路侧单元 | 主要是数值型数据和从分类数据中提取的数值型数据。 |
 | 交通控制 | 主要是数值型数据，加上相邻控制器的状态分类数据。 |
 | 中央交通管理 | 从 RSU、交通信号和动态车道收集的数值型和分类数据。 |
@@ -1384,7 +1389,7 @@ RSU 也会收集分类数据，例如车辆识别码（VIN）或标签。这些�
 导航设备也依赖于数值值。GPS 数据（如时间、经度和纬度）可以被检索和清洗。拥堵数据可以从 I2V 或 V2V 通信中获取，并表示为通过路段的流量测量值。分类测量不适用于此领域。
 
 | ITS 元素 | 数据异常类型 |
-|---|---|
+| --- | --- |
 | 车辆运行 | 数值型 |
 | 导航 | 数值型 |
 | 驾驶员 | 数值型和分类 |
@@ -1403,100 +1408,91 @@ ITS 元素可以根据它们在整体层次中的位置进行分类。传感器�
 
 传感器层是层次结构的基础，因为它为层次结构其他级别的自主控制决策提供了基础。该层的成员（如 RSU）能够从本地传感器收集数据并分发给其他。由于其作用简单，传感器级设备可以使用简单的数据清洗技术。例如，基于规则的技术很容易应用，并删除明显错误的数据项。取决于所测的数据，基于估算的技术也可能适用。
 
-
-
-
-
 在执行器层级，本地传感器被用于辅助控制决策。例如，交通灯可能会使用路面传感器或交通摄像头来控制交叉路口的交通流量。由于这些设备对基础设施具有一定的控制权，它们应该是比传感器级设备更具能力且拥有更多资源的机器。由于拥有了比传感器级设备更好的资源，传感器执行器可以使用更复杂的数据清洗技术。
 
-例如，基于估计的技术比基于规则的技术更复杂，但它们仍然适用于依赖于短执行时间的场景。基于学习的技术在传感器执行器上也可能是是切实可行的。更强大的硬件允许运行更先进的算法（例如，机器学习），为了实现更准确的异常检测，这些额外的成本投入可能是值得的。传感器执行器还可能使用基于行为的方法来验证其行为，并检查其控制是否导致了可接受的状态。
+例如，基于估计的技术比基于规则的技术更复杂，但它们仍然适用于依赖于短执行时间的场景。基于学习的技术在传感器执行器上也可能是切实可行的。更强大的硬件允许运行更先进的算法（例如，机器学习），为了实现更准确的异常检测，这些额外的成本投入可能是值得的。传感器执行器还可能使用基于行为的方法来验证其行为，并检查其控制是否导致了可接受的状态。
 
 控制级设备使用来自传感器和传感器执行器的数据，对可能包含多个交通灯或动态车线的整个路段做出控制决策。这些设备的责任范围更大。因此，更复杂的方法更为合适。异常检测数据清洗应该是准确的，以确保决策是基于准确的数据做出的。基于行为和基于学习的方法似乎是最合适的。基于估计的方法可能也适用，前提是有一个完善的高级模型来识别异常数据。控制级设备的影响范围更广。因此，它们有更多的时间分析数据并做出决策。
 
 层级结构的顶端是监管级，包括一个带有人类操作员/监督者的中央办公室。在此级做出的决策会影响系统状态，以及未来的设计周期决策。数据可能由人类解释以辅助设计过程。最复杂的清洗技术，即基于学习和基于行为的方法适用于这一级。虽然数据可能由人类解释，但考虑到决策在此层级产生的广泛影响，结果的准确至关重要。
 
-## 7.2 技术分类
+### 7.2 技术分类
 
-### 7.2.1 ITS 基础设施的静态元素
+#### 7.2.1 ITS 基础设施的静态元素
 
 在本节中，将使用第 2 节描述的示例系统的静态元素，演示在 CPS（网络物理系统）中层级位置如何决定清洗技术（表 13）。
 
-# 网络物理关键基础设施系统数据清洗技术综述
-
 表 13 ITS 静态基础设施的层级位置
+
 | ITS 元素 | 层级位置 |
-| :--- | :--- |
+| --- | --- |
 | 路侧单元 | 在传感器级运行，对系统状态没有直接影响。 |
 | 交通控制 | 在传感器执行器级运行，具有感知环境并影响道路或交通灯处交通状态的能力。 |
 | 中央交通管理 | 自主交通管理单元在控制级运行。在环中的高级半自动交通管理单元在监管级运行。 |
 
-### 7.2.1.1 路侧单元
+##### 7.2.1.1 路侧单元
 
 路侧单元（RSU）在传感器级运行，对感知区域没有直接影响。RSU 传输的数据可以影响利用 V2V（车对车）通信的智能车辆的决策。然而，这不被视为环境执行，因为车辆并不由 RSU 直接控制。
 
-### 7.2.1.2 交通信号和动态车道
+##### 7.2.1.2 交通信号和动态车道
 
 除了局部区域感知能力外，交通信号和动态车道对车道或交叉路口具有直接控制权。这意味着交通信号和动态车道在传感器执行器级运行。
 
-### 7.2.1.3 中央交通管理
+##### 7.2.1.3 中央交通管理
 
 中央交通管理单元在控制级和监管级运行。中间自主交通管理单元在控制级运行。自主交通管理单元对交通信号和动态车道具有控制权，但并不直接控制状态。一个示例是，通过引导进入拥堵区域的动态车道和交通信号来减缓进入流量，从而缓解该区域的交通拥堵。这种级别的交通管理并不直接控制交通灯切换。它具有更高层级的控制权。
 
 最高级别的控制是运行在监管级的人类在环半自动交通管理单元。这种运行模式更侧重于长期控制和设计周期，而不是即时控制决策。然而，在紧急情况下，监管控制可以直接接管低级控制系统以减轻故障影响。
 
-## 7.3 ITS 车辆移动元素
+### 7.3 ITS 车辆移动元素
 
 在本节中，将使用第 2 节描述的 ITS 系统的移动元素，演示在 CPS 中层级位置如何决定清洗技术（表 14）。
 
-### 7.3.1 车辆运行
+#### 7.3.1 车辆运行
 
 支持车辆运行的传感器位于传感器级。例如，轮胎压力传感器可以报告轮胎状态，但无法根据状态执行任何操作。相反，雨水传感器和光传感器能够感知状况并执行相应的动作，即启动雨刮器或开启大灯。
 
-### 7.3.2 导航
+#### 7.3.2 导航
 
 在自动驾驶车辆中，导航系统在车辆的行驶决策中起着重要作用。对于这类车辆，导航系统充当传感器的角色，因为它确定了其当前位置。然而，导航建议被用于控制行驶的路线。在某种程度上，导航系统也充当了传感器执行器。它的建议可以被视为前往特定目的地的行驶指令。
 
 半自动车辆可能具有避障系统或其他行驶控制系统。在这种情况下，导航系统在监管级运行。司机根据导航系统的建议做出更改导航的决策。
 
 表 14 ITS 移动基础设施的层级位置
+
 | ITS 元素 | 组件位置 |
-| :--- | :--- |
+| --- | --- |
 | 车辆运行 | 在传感器执行器级进行。某些设备收集数据，另一些能够根据感知信息采取行动。 |
 | 导航 | 在监管级进行。自动车辆使用导航信息直接控制行为，其他车辆将导航数据传输给人类。 |
 | 司机 | 在控制级进行。自动车辆使用传感器数据直接控制路径，而其他车辆依赖司机解释并采取。 |
 
-### 7.3.3 司机
+#### 7.3.3 司机
 
 对于自动车辆，人类乘客干预驾驶的能力有限。他们与车辆交互的能力严格限于监管级。车辆可能会告知诊断问题，但控制权最终交给车辆。相反，半自动车辆允许人类驾驶。尽管某些自动化系统（如避障）可以临时干预并接管控制，但司机是车辆的控制者。在这种情况下，避障系统在控制级运行以避免危险情况。
 
-## 8. 结论
+## 8 结论
 
 现代基础设施网络物理系统的设计旨在满足非常高的性能标准。这只有通过极端依赖数据的智能自主控制系统才能实现。因此，为控制系统提供准确数据至关重要。当这些系统部署在极不可预测的环境中时，使用数据清洗来减少由于控制系统处理错误数据而可能导致的故障是必要的。
 
 本文综述讨论了损坏数据的来源以及各种数据清洗技术，包括检测和缓解方法。我们根据这些技术对 CPS 的适用性对其进行了分类，特别讨论了可以检测的异常、CPS 内各个节点的硬件限制、处理的数据类型以及在 CPS 中的层级位置。理解各种数据清洗技术的局限性对于设计容错和生存性 CPS 至关重要。我们正在模拟数据错误在系统中的传播范围，特别是系统内数据清洗的影响。这些信息对于设计稳健的 CPS 至关重要。
 
-# 术语表
+## 术语表
 
-+   - CPS 关键基础设施网络物理系统
-- ESN 回声状态网络
-- I2V 基础设施到车辆通信
-- IDS 入侵检测系统
+- `CPS`：关键基础设施网络物理系统
+- `ESN`：回声状态网络
+- `I2V`：基础设施到车辆通信
+- `IDS`：入侵检测系统
+- `ITS`：智能交通系统
+- `MSPCA`：多尺度主成分分析
+- `PCA`：主成分分析
+- `pdf`：概率密度函数
+- `RSU`：路侧单元
+- `TQDM`：总质量数据管理
+- `V2I`：车与路侧通信
+- `V2V`：车与车通信
+- `V2X`：车与一切通信
 
-
-
-
-
-ITS 智能交通系统
-MSPCA 多尺度主成分分析
-PCA 主成分分析
-pdf 概率密度函数
-RSU 路侧单元
-TQDM 总质量数据管理
-V2I 车与路侧通信
-V2V 车与车通信
-V2X 车与一切通信
-
-# 参考文献
+## 参考文献
 
 - [1] P. Derler, E.A. Lee, A.S. Vincentelli, Modeling cyber-physical systems, Proc. IEEE 100 (1) (2012) 13–28.
 - [2] D.E. Bakken, A. Bose, C.H. Hauser, D.E. Whitehead, G.C. Zweigle, Smart generation and transmission with coherent, real-time data, Proc. IEEE 99 (6) (2011) 928–951.
@@ -1514,9 +1510,6 @@ V2X 车与一切通信
 - [14] I.F. Akkiyidiz, W. Su, Y. Sankarayaramana, E. Cayiri, A survey on sensor networks, IEEE Commun. Mag. 40 (8) (2002) 102–114.
 - [15] A.R. Huron, Y. Jiao, Database system architecture—a walk through from centralized platform to mobile computing-keynote address, Advanced Distributed Systems, Springer, Guadalajara, Mexico, 2005, pp. 1–9.
 - [16] P. Bonnet, J. Gehrke, P. Seshadri, Torrents database systems, in: Mobile Data Management, Springer, Hong Kong, China, 2001, pp. 3–14.
-
-# 信息物理基础设施系统数据清洗技术综述
-
 - [17] N. Tsiftes, A. Dunikis, A database in every sensor, in: Proceedings of the 9th ACM Conference on Embedded Networked Sensor Systems, ACM, New York, USA, 2011, pp. 316–332.
 - [18] G. Dimitropoulos, P. Demestichakas, Intelligent transportation systems, Vehicular Technol. Mag. IEEE 5 (1) (2010) 77–84.
 - [19] L. Li, D. Wen, D. Yao, A survey of traffic control with vehicular communications, IEEE Trans. Intell. Syst. 15 (1) (2014) 425–432.
@@ -1525,6 +1518,9 @@ V2X 车与一切通信
 - [22] J. Milet, A. Marcus, Data cleansing: beyond integrity, in: IQ, 2000, pp. 200–209.
 - [23] L. Bertolosi, S. Kolahi, L. Lakshman, Data cleansing and querying with matching dependencies, Theory Comput. Syst. 52 (3) (2013) 441–482.
 - [24] R. Wang, A perfect perspective on data quality management, ACM 41 (2) (1998) 58–65.
+
+
+
 - [25] M. Mallchasha, E. Eldawy, M. Ouzani, NADEE: a data cleansing system, in: Proceedings of 2013 ACM SIGMOD International Conference on Management of Data, New York, NY, 2013, pp. 541–555.
 - [26] M. Budka, G. Eastwood, P. Kadlec, S. Schwab, M. Salvador, From sensor to readers: the process of developing soft sensors, Advances in Intelligent Data Analysis, Springer, Leuven, Belgium, 2014, pp. 49–60.
 - [27] A. Avizien, J.-C. Laurie, B. Randell, C. Landwehr, Basic concepts and taxonomy of secure computing, IEEE Trans. Secure. Comput. 1 (1) (2004) 11–33.
@@ -1558,10 +1554,6 @@ V2X 车与一切通信
 - [55] R. Mitchell, I–R. Chen, A survey of intrusion detection techniques for cyber-physical systems, ACM Comput. Surv. (CSUR) 46 (4) (2014) 55.
 - [56] M. Mezzanzanca, R. Boselli, M. Cesarini, F. Mercorio, A model-based approach for develop learning solutions, J. Data Info. 5 (4) (2015) 13.
 
-
-
-
-
 # 赛物理关键基础设施系统的数据清洗技术综述
 
 - [57] T. Gschwandter, W. Aigner, S. Miksch, J. Gärtner, S. Kriglstein, M. Pohl, N. Suchy, TimeCleaner: a visual analytics approach for data cleaning of time-oriented data, and Data-driven Business, in: Proceedings of the 14th International Conference on Knowledge Technologies and Data-driven Business, ACM, Atlanta, 2014, p. 18.
@@ -1586,33 +1578,33 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 
 密苏里州理工大学，美国密苏里州罗拉
 
-# 目录
+## 目录
 
 - 1. 引言 112
-2. 作为 CPS 的地面交通系统 115
-   2.1 GTS 基础设施 115
-   2.2 CPS 中的基础设施表示 116
-   2.3 指向信息系统的操作/请求流 116
-   2.4 位置相关查询分类法 116
-   2.5 性能指标与挑战 118
-3. 移动对象 (MOs) 索引 120
-   3.1 欧几里得空间中的移动对象索引 120
-   3.2 路网上的移动对象索引 130
-4. 查询处理 138
-   4.1 基于信息的查询 138
-   4.2 基于频率的查询 143
-5. 路网约束下交通预测查询的性能 151
-   5.1 快照查询算法 151
-   5.2 持续查询算法 157
-6. 结论与未来工作 164
-参考文献 166
-作者简介 169
+- 2. 作为 CPS 的地面交通系统 115
+  - 2.1 GTS 基础设施 115
+  - 2.2 CPS 中的基础设施表示 116
+  - 2.3 指向信息系统的操作/请求流 116
+  - 2.4 位置相关查询分类法 116
+  - 2.5 性能指标与挑战 118
+- 3. 移动对象 (MOs) 索引 120
+  - 3.1 欧几里得空间中的移动对象索引 120
+  - 3.2 路网上的移动对象索引 130
+- 4. 查询处理 138
+  - 4.1 基于信息的查询 138
+  - 4.2 基于频率的查询 143
+- 5. 路网约束下交通预测查询的性能 151
+  - 5.1 快照查询算法 151
+  - 5.2 持续查询算法 157
+- 6. 结论与未来工作 164
+- 参考文献 166
+- 作者简介 169
 
-# 摘要
+## 摘要
 
 位置相关查询是一种使用户能够获取移动对象实时相关信息的的服务。此类服务面临底层数据规模和波动性的挑战。这种挑战产生了对新方法的需求，允许使用户高效地访问、检索和更新易变对象数据。基于这种必要性，本章探索并讨论了关于移动数据索引和查询的挑战与问题。针对路网约束下移动对象的预测查询支持是目前研究的一个主要缺陷。本章还展示了路网约束下某些解决方案的性能评估。
 
-# 缩写词
+## 缩写词
 
 - AN-tree 自适应 R 树
 - AU 自适应单元
@@ -1636,10 +1628,13 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 - RKNNQ K-最近邻域查询
 - RQ 范围查询
 - R-tree 带更新 R 树
-- SO 单独对象
-- SQM 空间查询
-- STRIPES 预测位置的可扩展轨迹索引
-- TPR-tree 时间参数
+
+
+
+- `SO` 单独对象
+- `SQM` 空间查询
+- `STRIPES` 预测位置的可扩展轨迹索引
+- `TPR-tree` 时间参数
 
 ## 1. 引言
 
@@ -1658,10 +1653,6 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 这些特征体现在解决数据存储高效访问的频繁更新以及赛基础设施技术限制的解决方案中。后者不在本章的范围之内。本章讨论了既有技术的适应以及引入了缓解地面交通系统建模复杂度的新技术。
 
 用户通过查询访问数据库。用户查询的位置属性要求数据库回答与位置相关的请求。
-
-
-
-
 
 位置相关的请求也称为位置感知查询（location aware queries, LAQs）。例如，“寻找芝加哥最好的五家餐厅”和“寻找距离我当前位置最近的餐厅”就是两种 LAQ。仔细观察这两个示例可以发现它们之间存在一种细微但根本的区别。第一个查询的结果集与用户的位置无关，而第二个查询并非如此。换句话说，无论用户位于何处，第一个查询的结果对任何用户都是相同的。对于第二个查询，结果集将根据用户的地理位置而变化。第二个查询是位置相关查询（location-dependent query, LDQ）的一个示例。LDQ 是 LAQ 的子类。由于依赖于查询用户的位置，高效处理 LDQ 比其他类型的 LAQ 更具挑战性。当查询对象被认为是移动的时（例如寻找距离我当前位置最近的五辆出租车），挑战更大。
 
@@ -1683,9 +1674,9 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 
 ### 2.2 CPS 中的基础设施表示
 
-路网和对象的信息被存储在基站（BS）处。路网被表示并存储为图 G(E, V)，其中 E 是边集，V 是顶点集。每条边 $e \in E$ 代表网络中的一个段，$e=v1, v2$，其中 $v1, v2 \in V$；$v1$ 和 $v2$ 分别是该路段的起始节点和结束节点。边可以是无交叉的的段 [9,13]，也可以是可以表示为直线的段 [14]。网络上的顶点代表两个段的交汇点。
+路网和对象的信息被存储在基站（BS）处。路网被表示并存储为图 `G(E, V)`，其中 `E` 是边集，`V` 是顶点集。每条边 `e ∈ E` 代表网络中的一个段，`e = v1, v2`，其中 `v1, v2 ∈ V`；`v1` 和 `v2` 分别是该路段的起始节点和结束节点。边可以是无交叉的段 [9,13]，也可以是可以表示为直线的段 [14]。网络上的顶点代表两个段的交汇点。
 
-如果可用，顶点和边（段）都与一组属性相关。边长度和最大路速是两个常见属性。关于 MOs 的信息相对于网络进行存储。例如，一个封装了对象信息的元组将包含标识符、当前位置坐标、当前路段（即图 $G$ 中的一条边）、下一段路段、更新的时间戳和速度。
+如果可用，顶点和边（段）都与一组属性相关。边长度和最大路速是两个常见属性。关于 MOs 的信息相对于网络进行存储。例如，一个封装了对象信息的元组将包含标识符、当前位置坐标、当前路段（即图 `G` 中的一条边）、下一段路段、更新的时间戳和速度。
 
 ### 2.3 到查询系统的操作/请求流
 
@@ -1698,18 +1689,21 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 图 2 位置相关查询。(A) 基于信息的分类。(B) 基于频率的分类。
 
 基于信息的分类下，一些常见的查询类型包括：
+
 - 快照查询（Snapshot）
 - 连续查询（Continuous）
 
 基于频率的分类下的查询类别包括快照查询和连续查询。如果查询结果每次请求仅提供一次，则该查询被识别为快照查询。这种查询在产生结果后过期。连续查询持续处理结果，通知用户结果的变化。连续查询不会在首次响应后过期。相反，当请求者对特定查询不再感兴趣时才会撤销。
 
 位置相关查询（LDQ）是移动对象数据上要求最高的查询类型之一。它可以根据其提供的信息（图 2A）或根据其响应频率（图 2B）分为几类子查询类型。常见的查询类型包括：
+
 - 范围查询（RQ）
 - K 近邻查询（KNNQ）
 - 反向 K 近邻查询（RKNNQ）
 - 预测线查询（PLQ）
 
 上述每个查询类型都可以与一个时间参数相关。在这种情况下，查询旨在预测特定时间戳的位置。例如，RQ 的扩展包括：
+
 - 预测切片查询
 - 窗口查询
 - 移动查询
@@ -1722,14 +1716,11 @@ L. Heendaliya, M. Wisely, D. Lin, S. Sedgh Sarvestani, A. Hurson
 
 用户期望 LDQ 服务提供者提供准确性、短的响应时间和信息隐私。本章关注响应时间和准确性。信息隐私超出了本研究的范围。
 
-
-
-
 查询响应的准确性受多个参数的影响，包括信息的实时性、对象的移动性、响应延迟以及网络限制。为了确保查询响应的准确，信息的实时性至关重要。然而，由于对象的移动性，保持信息的更新具有挑战性。每个移动对象定期发送消息以更新其信息。假设更新间隔为 120 秒，一个拥有 100 万个移动对象（MO）的系统每小时产生 3000 万条更新消息 [18]。更新技术必须足够高效，以便在下一次查询时提供当前的信息。
 
-除了前面讨论的影响外，对象的移动性也会影响响应的相关性。考虑图 3 所示的场景。图 3A 和 B 显示了在两个时间戳 $t_0$ 和 $t_1$ 处的对象快照。无论如何，在 $t_1$ 时在点 $A$ 处执行 KNNQ 应该接收响应 $\{O_6, O_1, O_4\}$（图中的实心圆）。然而，由于用户的移动性，相应的响应可能直到 $t_1$ 才能接收到，此时对象已经到达了点 $B$。此时，根据他/她的当前位置，该结果不再与用户相关（见图 3B）。当响应进一步延迟时，这种影响会更加糟糕。更大的延迟将导致与原始位置产生更大的偏差，最终导致其失效。
+除了前面讨论的影响外，对象的移动性也会影响响应的相关性。考虑图 3 所示的场景。图 3A 和 B 显示了在两个时间戳 `t_0` 和 `t_1` 处的对象快照。无论如何，在 `t_1` 时在点 `A` 处执行 KNNQ 应该接收响应 `{O_6, O_1, O_4}`（图中的实心圆）。然而，由于用户的移动性，相应的响应可能直到 `t_1` 才能接收到，此时对象已经到达了点 `B`。此时，根据他/她的当前位置，该结果不再与用户相关（见图 3B）。当响应进一步延迟时，这种影响会更加糟糕。更大的延迟将导致与原始位置产生更大的偏差，最终导致其失效。
 
-智能服务提供商会考虑对象的移动性，并预测其在 $t_1$ 时的未来位置。然后它可以据此生成点 $B$ 处的问题结果：$\{O_5, O_7, O_8\}$。如果没有考虑路网限制，这些信息可能是无效的。例如，在考虑路网限制（如单行道）时，从点 $B$ 到达对象 $O_5$ 可能是不可行的。
+智能服务提供商会考虑对象的移动性，并预测其在 `t_1` 时的未来位置。然后它可以据此生成点 `B` 处的问题结果：`{O_5, O_7, O_8}`。如果没有考虑路网限制，这些信息可能是无效的。例如，在考虑路网限制（如单行道）时，从点 `B` 到达对象 `O_5` 可能是不可行的。
 
 响应可能出现的无关性主要是由于对象的移动性。由于移动性特征，数据库中的信息（包括 MO 的位置和移动速度）以及查询响应都经常过时。高效的更新技术解决了与保持数据库更新相关的问题。
 
@@ -1741,10 +1732,10 @@ MO 数据库的索引技术主要分为两大类：在欧几里得空间中移�
 
 ### 3.1 在欧几里得空间中索引 MO
 
-在欧几里得空间中索引 MO 已有大量工作 [4,5,24,25]。这些方法大多数将对象的移动性建模为时间的线性函数，其中任何给定时间 $t$ 的位置表示为 $x(t)$，可以定义为 (1)。在这里，$x_{ref}$ 代表时间 $t_{ref}$ 时的参考位置（$t_{ref} < t$）。速度由 $v$ 表示：
+在欧几里得空间中索引 MO 已有大量工作 [4,5,24,25]。这些方法大多数将对象的移动性建模为时间的线性函数，其中任何给定时间 `t` 的位置表示为 `x(t)`，可以定义为 (1)。在这里，`x_ref` 代表时间 `t_ref` 时的参考位置（`t_ref < t`）。速度由 `v` 表示：
 
 ```
-$x(t) = x_{ref} + v(t - t_{ref})$
+x(t) = x_ref + v(t - t_ref)
 ```
 
 MO 的线性表示使得预测对象的未来位置既简单又在时间上是恒定的。因此，预计移动对象产生的更新消息会较少。更新消息的减少又降低了更新成本。然而，这种优势是以牺牲准确性为代价的。
@@ -1759,19 +1750,17 @@ R-tree 是一种高度平衡的树结构。R-tree 的叶节点维护移动对象
 
 这种速度信息传播到直到树根的每一个 MBR。考虑图 4A；图中的灰色矩形（a, b, c, 和 d）代表叶节点 MBR，白色矩形（g 和 h）代表叶节点父节点的 MBR。叶节点的方向为：
 
-图 3 随着时间的推移，KNNQ 响应失效。(A) 在时间 $t_0$ 签出的查询。(B) 在时间 $t_1$ 接收到的答案。
+图 3 随着时间的推移，KNNQ 响应失效。(A) 在时间 `t_0` 签出的查询。(B) 在时间 `t_1` 接收到的答案。
 
-图 4 时间参数化 MBR 中的问题。(A) $t_0$ 时的 MBR：紧凑且无重叠。(B) $t_1$ 时的 MBR：松散且重叠。
+图 4 时间参数化 MBR 中的问题。(A) `t_0` 时的 MBR：紧凑且无重叠。(B) `t_1` 时的 MBR：松散且重叠。
 
 这种方法的主要缺点是 MBR 随时间的推移发生无条件的扩张。MBR 可能不再存在，并可能出现大量的重叠。MBR 的重叠增加了搜索成本 [4,5]。
 
-另一个针对 TPR-tree 的缺点源于其维护函数（即插入和删除）的设计。这些函数是对 R*-tree 的直接、简单的修改，后者是为了存储静态数据而开发的。由于由于原因，它在 TPR-tree 的动态无法无法无法预期性能。上述索引对象（移动）与支持函数（静态）之间的行为不匹配，在 TPR*-tree 中通过改进 TPR-tree 的插入和删除函数得到了解决。
+另一个针对 TPR-tree 的缺点源于其维护函数（即插入和删除）的设计。这些函数是对 R*-tree 的直接、简单的修改，后者是为了存储静态数据而开发的。由于这个原因，它在 TPR-tree 的动态无法无法无法预期性能。上述索引对象（移动）与支持函数（静态）之间的行为不匹配，在 TPR*-tree 中通过改进 TPR-tree 的插入和删除函数得到了解决。
 
 在插入函数中，当节点插入到 TPR*-tree 时，树从根节点遍历到可以方便新条目的最佳叶节点。根据惩罚指标的最小值（即周长大小和重叠面积）选择子树。当两个或多个子树产生相同的惩罚值时，会进一步探索每个子树，直到一个选择占据主导地位。本质上，TPR*-tree 内部这种扩展搜索会导致额外的搜索成本。然而，查询性能补偿了这种开销 [5]。研究表明，与完整路径（使用建议的方法）相关的开销是微小的 [5]。
 
-如果选定的节点已满，某些选定的条目将被移除并重新插入树中。这样做会暴露其他可以方便移除条目同时保持树相似结构的节点（即那些有助于形成 MBR 边缘的条目将被移除）。在移除这些之后，节点的 MBR 会缩小，产生一个更紧凑的 MBR，此前
-
-包含了条目。在重插入过程中，任何溢出的节点都会被分割。引入 TPR*-tree 的每种优化方法都使 TPR*-tree 在查询性能方面优于 TPR–tree [5]。
+如果选定的节点已满，某些选定的条目将被移除并重新插入树中。这样做会暴露其他可以方便移除条目同时保持树相似结构的节点（即那些有助于形成 MBR 边缘的条目将被移除）。在移除这些之后，节点的 MBR 会缩小，产生一个更紧凑的 MBR，此前包含了条目。在重插入过程中，任何溢出的节点都会被分割。引入 TPR*-tree 的每种优化方法都使 TPR*-tree 在查询性能方面优于 TPR–tree [5]。
 
 TPR–tree 和 TPR*-tree 都面临 MBR 无条件扩张的困扰。这个问题在随后的几项研究 [24, 25] 中得到了解决。Papadopoulos 等人 [24] 提议根据速度单独处理 MOS（移动对象序列）。Saltenis 和 Jensen [25] 为参数引入了过期时间。
 
@@ -1791,137 +1780,146 @@ Saltenis 和 Jensen [25] 提出的索引技术被称为 REXP-tree。该树将过
 
 ### 3.1.2 基于 B+-Tree 的索引
 
-通常，基于 B+-tree 的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在 $B^+$-tree 中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
+通常，基于 B+-tree 的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在 `B^+-tree` 中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
 
 | 表 1 欧几里得空间中移动对象的基于 R-Tree 的索引方案 |
+
 | 名称 | 支持的查询 | 优点 | 缺点 |
+
 | :--- | :--- | :--- | :--- |
-| TPR-tree [4] | 时间分片、窗口和移动 | 在 R* 中引入移动对象的索引 | 维护函数不与 MO 的无条件扩张兼容 |
-| TPR*-tree [5] | 窗口 | 改进 TPR*-tree 的维护函数 | 无条件扩张 |
+
+| `TPR-tree` [4] | 时间分片、窗口和移动 | 在 R* 中引入移动对象的索引 | 维护函数不与 MO 的无条件扩张兼容 |
+
+| `TPR*-tree` [5] | 窗口 | 改进 TPR*-tree 的维护函数 | 无条件扩张 |
+
 | 双空间 [24] | 窗口 | 解决无条件扩张问题并提高查询性能 | 空间利用率低（过期条目） |
-| REXPtree [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| RUM-tree [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| L-tree [17] | 范围 | |（未提供内容） |
 
-上述所有 MBR 构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
+| `REXPtree` [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
 
-带有更新备忘的 R 树（RUM-tree） [3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当 R-tree 的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
+| `RUM-tree` [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
 
-在另一种减少重构开销的方法中，Kwon 等人 [17] 提出了 L-tree，该树审查了在当前 MBR 内容纳 MO 新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前 MBR 内，该方法不需要对 MBR 进行任何重构。
+| `L-tree` [17] | 范围 | |（未提供内容） |
 
-如果新对象的位置落在当前 MBR 之外，则使用以下方法之一：传统删除、MBR 扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（MBR 扩展）维持较大的 MBR。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
+
+
+上述所有`MBR`构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
+
+带有更新备忘的`R`树（`RUM-tree`）[3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当`R-tree`的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
+
+在另一种减少重构开销的方法中，`Kwon`等人 [17] 提出了`L-tree`，该树审查了在当前`MBR`内容纳`MO`新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前`MBR`内，该方法不需要对`MBR`进行任何重构。
+
+如果新对象的位置落在当前`MBR`之外，则使用以下方法之一：传统删除、`MBR`扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（`MBR`扩展）维持较大的`MBR`。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
 
 表 1 给出了这些方法的总结。该总结包含了之前讨论的每种索引结构的查询类型、优点和缺点。
 
 ### 3.1.2 基于 B+-Tree 的索引
 
-通常，基于 B+-tree 的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在 $B^+$-tree 中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
+通常，基于`B+-tree`的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在`$B^+$-tree`中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
 
 | 表 1 欧几里得空间中移动对象的基于 R-Tree 的索引方案 |
+| --- |
 | 名称 | 支持的查询 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- |
-| TPR-tree [4] | 时间分片、窗口和移动 | 在 R* 中引入移动对象的索引 | 维护函数不与 MO 的无条件扩张兼容 |
-| TPR*-tree [5] | 窗口 | 改进 TPR*-tree 的维护函数 | 无条件扩张 |
+| `TPR-tree` [4] | 时间分片、窗口和移动 | 在`R*`中引入移动对象的索引 | 维护函数不与`MO`的无条件扩张兼容 |
+| `TPR*-tree` [5] | 窗口 | 改进`TPR*-tree`的维护函数 | 无条件扩张 |
 | 双空间 [24] | 窗口 | 解决无条件扩张问题并提高查询性能 | 空间利用率低（过期条目） |
-| REXPtree [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| RUM-tree [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| L-tree [17] | 范围 | |（未提供内容） |
+| `REXPtree` [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `RUM-tree` [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `L-tree` [17] | 范围 | |（未提供内容） |
 
-上述所有 MBR 构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
+上述所有`MBR`构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
 
-带有更新备忘的 R 树（RUM-tree） [3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当 R-tree 的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
+带有更新备忘的`R`树（`RUM-tree`）[3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当`R-tree`的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
 
-在另一种减少重构开销的方法中，Kwon 等人 [17] 提出了 L-tree，该树审查了在当前 MBR 内容纳 MO 新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前 MBR 内，该方法不需要对 MBR 进行任何重构。
+在另一种减少重构开销的方法中，`Kwon`等人 [17] 提出了`L-tree`，该树审查了在当前`MBR`内容纳`MO`新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前`MBR`内，该方法不需要对`MBR`进行任何重构。
 
-如果新对象的位置落在当前 MBR 之外，则使用以下方法之一：传统删除、MBR 扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（MBR 扩展）维持较大的 MBR。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
+如果新对象的位置落在当前`MBR`之外，则使用以下方法之一：传统删除、`MBR`扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（`MBR`扩展）维持较大的`MBR`。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
 
 表 1 给出了这些方法的总结。该总结包含了之前讨论的每种索引结构的查询类型、优点和缺点。
 
 ### 3.1.2 基于 B+-Tree 的索引
 
-通常，基于 B+-tree 的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在 $B^+$-tree 中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
+通常，基于`B+-tree`的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在`$B^+$-tree`中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
 
 | 表 1 欧几里得空间中移动对象的基于 R-Tree 的索引方案 |
+| --- |
 | 名称 | 支持的查询 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- |
-| TPR-tree [4] | 时间分片、窗口和移动 | 在 R* 中引入移动对象的索引 | 维护函数不与 MO 的无条件扩张兼容 |
-| TPR*-tree [5] | 窗口 | 改进 TPR*-tree 的维护函数 | 无条件扩张 |
+| `TPR-tree` [4] | 时间分片、窗口和移动 | 在`R*`中引入移动对象的索引 | 维护函数不与`MO`的无条件扩张兼容 |
+| `TPR*-tree` [5] | 窗口 | 改进`TPR*-tree`的维护函数 | 无条件扩张 |
 | 双空间 [24] | 窗口 | 解决无条件扩张问题并提高查询性能 | 空间利用率低（过期条目） |
-| REXPtree [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| RUM-tree [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| L-tree [17] | 范围 | |（未提供内容） |
+| `REXPtree` [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `RUM-tree` [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `L-tree` [17] | 范围 | |（未提供内容） |
 
-上述所有 MBR 构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
+上述所有`MBR`构造方法均未在对象过期时删除它们。删除操作需要对树进行重构，这为树的维护带来了开销。相反，每次将信息从内存写回辅助磁盘时，过期的对象会被删除。这可能导致节点利用不足，因为节点容量由过期和活跃条目共享。延迟数据删除以空间利用率降低为代价降低了树的维护成本。
 
-带有更新备忘的 R 树（RUM-tree） [3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当 R-tree 的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
+带有更新备忘的`R`树（`RUM-tree`）[3] 也解决了树结构的重构开销。它将更新消息处理为插入后删除。插入在接收到更新消息后立即执行。然而，删除会导致对象的多个版本。这些旧的、不需要的版本通过被称为“垃圾清理”的过程被移除。当`R-tree`的内存使用即将溢出时，激活垃圾收集。这些方法的优点之一是过期对象删除的透明性。
 
-在另一种减少重构开销的方法中，Kwon 等人 [17] 提出了 L-tree，该树审查了在当前 MBR 内容纳 MO 新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前 MBR 内，该方法不需要对 MBR 进行任何重构。
+在另一种减少重构开销的方法中，`Kwon`等人 [17] 提出了`L-tree`，该树审查了在当前`MBR`内容纳`MO`新位置的可能性。它是遵循典型的更新技术（先删除后插入）来实现的，这可能会创建不必要的划分。此外，如果对象的位置落在当前`MBR`内，该方法不需要对`MBR`进行任何重构。
 
-如果新对象的位置落在当前 MBR 之外，则使用以下方法之一：传统删除、MBR 扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（MBR 扩展）维持较大的 MBR。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
+如果新对象的位置落在当前`MBR`之外，则使用以下方法之一：传统删除、`MBR`扩展或重新插入到父节点。第一种方法（传统删除和插入）是显而易见的。第二种方法（`MBR`扩展）维持较大的`MBR`。这种扩展更适用于对象沿边界道路呈之字运动的情况。在重新插入方法中，更新的对象被插入到父节点中。如果找到了直接父节点，过程将向上传播到根节点，直到找到合适的候选者。
 
 表 1 给出了这些方法的总结。该总结包含了之前讨论的每种索引结构的查询类型、优点和缺点。
 
 ### 3.1.2 基于 B+-Tree 的索引
 
-通常，基于 B+-tree 的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在 $B^+$-tree 中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
+通常，基于`B+-tree`的索引结构将对象的二维位置转换为一维位置。这种转换是通过空间填充曲线（希尔伯特曲线或皮诺曲线）完成的。在转换过程中，空间被视为二维网格。网格中的每个单元只被访问一次。然后为每个单元分配一个序列值。该序列值是在在`$B^+$-tree`中对单元中的对象进行索引时使用的键。[图. 5](#) 展示了基于皮诺空间填充曲线的序列值分配。每个单元中的数字代表该特定单元的序列号。
 
 | 表 1 欧几里得空间中移动对象的基于 R-Tree 的索引方案 |
+| --- |
 | 名称 | 支持的查询 | 优点 | 缺点 |
 | :--- | :--- | :--- | :--- |
-| TPR-tree [4] | 时间分片、窗口和移动 | 在 R* 中引入移动对象的索引 | 维护函数不与 MO 的无条件扩张兼容 |
-| TPR*-tree [5] | 窗口 | 改进 TPR*-tree 的维护函数 | 无条件扩张 |
+| `TPR-tree` [4] | 时间分片、窗口和移动 | 在`R*`中引入移动对象的索引 | 维护函数不与`MO`的无条件扩张兼容 |
+| `TPR*-tree` [5] | 窗口 | 改进`TPR*-tree`的维护函数 | 无条件扩张 |
 | 双空间 [24] | 窗口 | 解决无条件扩张问题并提高查询性能 | 空间利用率低（过期条目） |
-| REXPtree [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| RUM-tree [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
-| L-tree [17] | 范围 | |（未提供内容） |
-
-
-
-
+| `REXPtree` [25] | 时间窗口窗口 | 解决无条件扩张问题，减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `RUM-tree` [3] | 范围 | 减少树重构开销 | 树结构中的过期条目降低了空间利用率和性能 |
+| `L-tree` [17] | 范围 | |（未提供内容） |
 
 # 表 2 欧几里得空间中移动对象的 R-Tree 索引方案
 
 | 名称 | 查询 | 优点 | 缺点 |
-|---|---|---|---|
-| $B^+$-tree [18] | 范围、KNN、连续范围和 KNN | 解决无条件扩张问题 | 对倾斜数据的全局速度敏感 |
-| $B^{dual}$-tree [19] | 范围和 KNN | 解决全局考虑问题 | 对倾斜数据敏感 |
-| $ST^2B$-tree [12] | 范围和地址 | 在倾斜数据中的敏感性 | 自调优需要额外的在线处理和存储 |
+| --- | --- | --- | --- |
+| `$B^+$-tree` [18] | 范围、`KNN`、连续范围和`KNN` | 解决无条件扩张问题 | 对倾斜数据的全局速度敏感 |
+| `$B^{dual}$-tree` [19] | 范围和`KNN` | 解决全局考虑问题 | 对倾斜数据敏感 |
+| `$ST^2B$-tree` [12] | 范围和地址 | 在倾斜数据中的敏感性 | 自调优需要额外的在线处理和存储 |
 
 ![](img/257e93db1726e97e30)
 
-**图 6** quadtree 的一个示例。(A) quadtree 的空间划分。(B) quadtree 的树结构。重叠。如前所述，quadtree 不需要显式地定义 MBR（最小矩形框），仅作为点。这种点表示法处理 MBR 更加容易。
+**图 6** `quadtree`的一个示例。(A) `quadtree`的空间划分。(B) `quadtree`的树结构。重叠。如前所述，`quadtree`不需要显式地定义`MBR`（最小矩形框），仅作为点。这种点表示法处理`MBR`更加容易。
 
-针对移动对象数据库的可扩展性轨迹索引 (STRIPES) [16] 将 quadtree 扩展到移动对象。STRIPES 分别考虑每个移动维度，对每个维度应用双重变换。对象的移动表示随后从线变为点 ($v, x_{ref}$)，其中 $v$ 和 $x_{ref}$ 分别代表对象在 $t_{ref}$ 时的速度和参考位置 ($t_{ref} < t$)。这些点存储在 quadtree 中 [30]。
+针对移动对象数据库的可扩展性轨迹索引 (`STRIPES`) [16] 将`quadtree`扩展到移动对象。`STRIPES`分别考虑每个移动维度，对每个维度应用双重变换。对象的移动表示随后从线变为点 (`$v, x_{ref}$`)，其中`$v$`和`$x_{ref}$`分别代表对象在`$t_{ref}$`时的速度和参考位置 (`$t_{ref} < t$`)。这些点存储在`quadtree`中 [30]。
 
-STRIPES 维护两个连续时期的 quadtree 结构。这些结构在未来时期交替使用，为下一个时期刷新旧信息。因此，更新对象与查询处理完全隔离。结果是维护成本可以忽略。
+`STRIPES`维护两个连续时期的`quadtree`结构。这些结构在未来时期交替使用，为下一个时期刷新旧信息。因此，更新对象与查询处理完全隔离。结果是维护成本可以忽略。
 
 ## 3.1.4 混合索引结构
 
-Q+R*-tree [28] 是一种结合了 quadtree 与快速 R*-tree 的混合结构。每个树单独构建的。quadtree 存储快速移动对象，而 R*-tree 维护慢对象。快速和慢对象的定义主要基于它们运动的区域。例如，停车场和办公室周围被视为运动区域。这些区域可以根据地图或历史数据进行识别。
+`Q+R*-tree` [28] 是一种结合了`quadtree`与快速`R*-tree`的混合结构。每个树单独构建的。`quadtree`存储快速移动对象，而`R*-tree`维护慢对象。快速和慢对象的定义主要基于它们运动的区域。例如，停车场和办公室周围被视为运动区域。这些区域可以根据地图或历史数据进行识别。
 
-与传统的 R*-tree 相比，Q+R*-tree 对叶节点中存储的对象既没有下限也没有上限。相反，它在 MBR 中的一个区域内存储所有对象。这种方法没有以传统方式使用 R*-tree，文献也没有清楚解释使用 R*-tree 的原因。然而，该索引性能优于单个 quadtree 或 R*-tree。
+与传统的`R*-tree`相比，`Q+R*-tree`对叶节点中存储的对象既没有下限也没有上限。相反，它在`MBR`中的一个区域内存储所有对象。这种方法没有以传统方式使用`R*-tree`，文献也没有清楚解释使用`R*-tree`的原因。然而，该索引性能优于单个`quadtree`或`R*-tree`。
 
-Q+R*-tree 与上述方法不同，因为它不依赖对象的线性表示。更新位置信息。
+`Q+R*-tree`与上述方法不同，因为它不依赖对象的线性表示。更新位置信息。
 
 ## 3.1.5 总结
 
-本节讨论了最近在欧几里得空间中索引移动对象的结构。结构根据其基础结构进行了分类。最常见的基础结构包括 R-tree、B+-tree 和 quadtree。除了索引结构外，还讨论了基础结构的某些混合版本。它们的特征以及对索引（括号内）的影响在表 3 中进行了比较。
+本节讨论了最近在欧几里得空间中索引移动对象的结构。结构根据其基础结构进行了分类。最常见的基础结构包括`R-tree`、`B+-tree`和`quadtree`。除了索引结构外，还讨论了基础结构的某些混合版本。它们的特征以及对索引（括号内）的影响在表 3 中进行了比较。
 
-由于实验环境的不一致以及缺乏共同基准，对这些方法进行比较分析是困难的。Chen 的实验研究
+由于实验环境的不一致以及缺乏共同基准，对这些方法进行比较分析是困难的。`Chen`的实验研究
 
 ## 移动对象的索引与查询技术
 
 表 3 欧几里得空间移动对象索引不同基础结构的比较
 
 | 特性 | R-Tree | B*-tree | B+-tree |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 空间划分 | 动态（处理空间升级/降低容易）可能的重叠空间（高搜索成本） | 动态平衡树（重构成本） | 静态（处理空间升级/降低需要重新设计）重叠空间 | 动态（处理空间升级/降低容易）重叠空间（低搜索成本） |
 | 树结构 | 动态平衡树（重构成本） | 静态平衡树（低重构成本） | 动态平衡树（高重构成本） |
-| MO 表示 | 附在 MBR 上的速度（引入无条件 MBR 扩张问题，但容易模拟移动） |  2D 位置转换为 1D 序列号（增加处理开销和查询执行） | 动态（处理更新消息通常需要树重构） |
+| MO 表示 | 附在`MBR`上的速度（引入无条件`MBR`扩张问题，但容易模拟移动） | 2D 位置转换为 1D 序列号（增加处理开销和查询执行） | 动态（处理更新消息通常需要树重构） |
 
-Chen 等人 [31] 比较了上述几种结构的性能。这项研究包括 TPR-tree、TPR-*、RUM-tree、STRIPES、B*-tree 和 $B^{dual}$。其中，基于 B*-tree 的索引（即 B* 和 $B^{dual}$-tree）在合理的查询成本下表现出最好的更新性能。TPR-tree 和 TPR*-tree 都以最差的更新性能为代价提供了最好的性能。在这方面，TPR-tree 和 TPR*-tree 消耗的存储量最少。B*-tree 和 $B^{dual}$ 消耗的存储接近 TPR- 和 TPR-*。
+`Chen`等人 [31] 比较了上述几种结构的性能。这项研究包括`TPR-tree`、`TPR-*`、`RUM-tree`、`STRIPES`、`B*-tree`和`$B^{dual}$`。其中，基于`B*-tree`的索引（即`B*`和`$B^{dual}$-tree`）在合理的查询成本下表现出最好的更新性能。`TPR-tree`和`TPR*-tree`都以最差的更新性能为代价提供了最好的性能。在这方面，`TPR-tree`和`TPR*-tree`消耗的存储量最少。`B*-tree`和`$B^{dual}$`消耗的存储接近`TPR-`和`TPR-*`。
 
-Chen 等人 [31] 得出结论，TPR-tree 更适用于需要更多查询少更新的环境。这一结论进一步扩展到两个环境：查询少且更新高的环境以及行为未知的环境。结果表明，B*-tree 在前者环境中更好，而 STRIPES 在未知环境中更优 [31]。
+`Chen`等人 [31] 得出结论，`TPR-tree`更适用于需要更多查询少更新的环境。这一结论进一步扩展到两个环境：查询少且更新高的环境以及行为未知的环境。结果表明，`B*-tree`在前者环境中更好，而`STRIPES`在未知环境中更优 [31]。
 
 欧几里得空间的移动表示主要适用于对象具有随机行为的情况（例如，动物和移动传感器）。然而，随机运动对于所有类型的对象来说都是实际的。例如，车辆受限于底层路网。因此，这些索引可能无法在网络限制下有效支持移动索引。
 
@@ -1929,220 +1927,241 @@ Chen 等人 [31] 得出结论，TPR-tree 更适用于需要更多查询少更新
 
 知道对象的移动性受限于底层基础设施，允许服务器为移动用户提供更精确的信息 [13,32,33]。然而，路网限制使得在欧几里得空间中假设的移动模式失效。
 
-
-
-
-
 ![](img/257e93db1726e97e2d89292b09ddfad7_133_0.png)
 
 **图. 7** 复合结构的示例。
 
-路网被索引在 R-tree 族索引中（例如 R-tree 或 R*-tree）。当一个对象从一个路段移动到另一个路段时，它会从当前路段中移除，并存储在新的路段下。强制搜索路段有两个主要缺点。首先，路段的 MBR（最小包围矩形）中存在大量的死空间。死空间是 MBR 内部但路段外部的冗余空间。这种冗余会导致 MBR 之间产生虚假重叠，从而增加了搜索成本。第二个缺点是维护更新消息所涉及搜索成本。MBR 无法捕获路段的连通性。因此，为了确定对象将要移动的下一个路段，必须对树进行搜索。为了解决这个问题，Bok 等人 [6] 和 Feng 等人 [7] 提出了两种独立（但相似的）技术来捕获路网连通性。Bok 等人 [6] 提出了面向交叉口的路网 R 树（INOR-tree）。其前提是将连接到同一个交叉口的多个边存储同一个 MBR 中。通过这样做，当对象从一条边移动到另一条边时，可以在同一个 MBR 内完成某些对象更新。Feng 等人 [7] 建议存储每个贡献边的一部分，以在 MBR 中形成一个接口。这种索引结构被称为交叉区域（CR）树。INOR-tree 和 CR-tree 之间的主要区别是，CR-tree 维护边的比例，而 INOR-tree 则在边被 MBR 边界分割的地方定义新的交叉口。然而，由于 CR-tree 同时存储了边及其对应的比例，如果边被多个 MBR 覆盖，边就会被重复。这种重复会导致空间利用率的降低。
+路网被索引在`R-tree`族索引中（例如`R-tree`或`R*-tree`）。当一个对象从一个路段移动到另一个路段时，它会从当前路段中移除，并存储在新的路段下。强制搜索路段有两个主要缺点。首先，路段的`MBR`（最小包围矩形）中存在大量的死空间。死空间是`MBR`内部但路段外部的冗余空间。这种冗余会导致`MBR`之间产生虚假重叠，从而增加了搜索成本。第二个缺点是维护更新消息所涉及搜索成本。`MBR`无法捕获路段的连通性。因此，为了确定对象将要移动的下一个路段，必须对树进行搜索。为了解决这个问题，`Bok`等人 [6] 和`Feng`等人 [7] 提出了两种独立（但相似的）技术来捕获路网连通性。`Bok`等人 [6] 提出了面向交叉口的路网`R`树（`INOR-tree`）。其前提是将连接到同一个交叉口的多个边存储同一个`MBR`中。通过这样做，当对象从一条边移动到另一条边时，可以在同一个`MBR`内完成某些对象更新。`Feng`等人 [7] 建议存储每个贡献边的一部分，以在`MBR`中形成一个接口。这种索引结构被称为交叉区域（`CR`）树。`INOR-tree`和`CR-tree`之间的主要区别是，`CR-tree`维护边的比例，而`INOR-tree`则在边被`MBR`边界分割的地方定义新的交叉口。然而，由于`CR-tree`同时存储了边及其对应的比例，如果边被多个`MBR`覆盖，边就会被重复。这种重复会导致空间利用率的降低。
 
-尽管如此，对于具有完全相同 MBR 的特定路地图，两种方法消耗的存储空间大致相同。INOR 存储了多次边，而 CR-tree 则将一条边拆分为若干子集并单独存储。如果重复边的数量和划分的数量相等，则两种方法所需的空间大约相同。
+尽管如此，对于具有完全相同`MBR`的特定路地图，两种方法消耗的存储空间大致相同。`INOR`存储了多次边，而`CR-tree`则将一条边拆分为若干子集并单独存储。如果重复边的数量和划分的数量相等，则两种方法所需的空间大约相同。
 
-CR-tree 和 INOR-tree 的缺点之一是，修改路网会对比索引结构产生负面影响。与基于路段的索引相比（确定适当的路段单元、寻找 MBR 等），两种方法的复杂性相当。这种复杂性可能是这些新型索引方案没有被广泛探索的原因之一。
+`CR-tree`和`INOR-tree`的缺点之一是，修改路网会对比索引结构产生负面影响。与基于路段的索引相比（确定适当的路段单元、寻找`MBR`等），两种方法的复杂性相当。这种复杂性可能是这些新型索引方案没有被广泛探索的原因之一。
 
 单边存储单元已用于许多复合结构。这些结构根据其存储方法可以分为几类：基于磁盘的、基于内存的基于混合的索引方案。
 
 基于磁盘的索引方案考虑了存储在辅助磁盘中的网络和信息。因此，其主要的性能指标是所需的页面访问次数。基于磁盘的索引结构的主要优点是可扩展性更高。然而，由于访问辅助存储相关的通信延迟，这些索引结构可能无法高效地处理更新。
 
-基于内存的索引结构将信息存储在内存中。它们常用的性能指标是 CPU 时间。由于内存访问比磁盘访问快，这些方法的查询处理和车辆更新处理比磁盘方法更快。然而，由于内存空间有限，它们通常表现出较低的可扩展性。
+基于内存的索引结构将信息存储在内存中。它们常用的性能指标是`CPU`时间。由于内存访问比磁盘访问快，这些方法的查询处理和车辆更新处理比磁盘方法更快。然而，由于内存空间有限，它们通常表现出较低的可扩展性。
 
-基于混合的索引结构利用辅助磁盘和内存来存储信息（因此可以使用页面访问次数和 CPU 时间来报告性能）。大多数时候，辅助存储维护路网信息，而内存维护车辆信息。利用内存维护车辆信息的混合方法也能更快地更新这些信息（类似于基于内存的方法）。此外，这些方法在网络规模上可能是扩展的，但在网络车辆数量上可能不是。
+基于混合的索引结构利用辅助磁盘和内存来存储信息（因此可以使用页面访问次数和`CPU`时间来报告性能）。大多数时候，辅助存储维护路网信息，而内存维护车辆信息。利用内存维护车辆信息的混合方法也能更快地更新这些信息（类似于基于内存的方法）。此外，这些方法在网络规模上可能是扩展的，但在网络车辆数量上可能不是。
 
 # 移动对象的索引与查询技术
 
 ### 3.2.1 基于磁盘的索引
 
-一些基于磁盘的复合结构包括 IMORS（路段移动对象索引）[32]、自适应路网 R 树（ANR-tree）[13]、R-TPR±-tree [21]、RD-tree [23] 以及 TPR^ [38]。这些结构都使用了类似于 R 的结构，叶节点指向路段。每种索引方案都展示了支持不同查询 [32]、预测范围 [13]、预测流量流 [21,23] 以及连续查询 [38] 的。
+一些基于磁盘的复合结构包括`IMORS`（路段移动对象索引）[32]、自适应路网`R`树（`ANR-tree`）[13]、`R-TPR±-tree` [21]、`RD-tree` [23] 以及`TPR^` [38]。这些结构都使用了类似于`R`的结构，叶节点指向路段。每种索引方案都展示了支持不同查询 [32]、预测范围 [13]、预测流量流 [21,23] 以及连续查询 [38] 的。
 
-IMORS 使用 R-tree 存储路网信息。树的叶节点指向在路段（路段块）上移动的移动对象列表。IMORS 使用单独的数据块来维护移动对象的信息，包括位置和速度。数据块中的每个条目与路段块中的对应对象信息双向连接。这允许用户从对象信息定位相应的路段信息，反之亦然。
-
-ANR-tree [13] 由 R-tree 和一个内存直接访问表组成。R-tree 存储路网的线段。ANR-tree 中的叶节点与 IMORS 类似，也维护相应路段上移动对象（MO）的信息。此外，ANR-tree 引入了名为自适应单元（AUs）的概念，用于路段内的对象。一个 AU 组将具有相似移动模式的对象分组。这种相似性是根据沿路段的行驶方向、速度阈值和距离阈值定义的。一个路段可以根据移动模式的存在拥有多个 AU。每个 AU 维护进入时间和预测时间（即轨迹边界）。这些时间将在查询过程中使用。每个路段的直接访问表包含速度限制、每个节点列表以及指向移动对象的指针。
-
-R-TPR±-tree [21] 也应用了与 ANR-tree 相似的概念。例如，R-TPR±-tree 使用 R-tree。它还考虑了对象的移动模式。R-TPR±tree 中的相似模式仅由它们移动的方向定义。通过这种结构，R-TPR±tree [21] 通过根据行驶方向分离对象来减少 MBR 的扩张。因此，MBR 边界的扩张不如 TPR 树那样严重。然而，路段上必须存在相当数量的移动对象才能体现 TPR 优于直接访问表等其他列表结构的优势。
-
-TPRtree [38] 由 R-tree、直接访问表和相邻列表组成。与之前讨论的对象类似，R-tree 索引路网信息。R-tree 的每个叶节点连接一个直接访问表。该表中的每个条目维护有关该路段的信息。索引结构通过相邻列表处理更新消息。TPRtree 提供几乎恒定时间的更新成本 [38]。
-
-RDtree 由 R*-tree 和一组哈希表组成。R*-tree 的叶节点也指向代表每个路段 MO 的哈希表。每个哈希表有 N 个哈桶（系统参数），每个哈希桶有两个排序列表，为对象提供更细粒的分组。具有相似行驶方向的对象哈希到同一个哈希桶中。这种观察基于两个相互靠近并向同一地理目的地移动的对象可能具有相似（或相同）的旅行路径，因为司机倾向于最短路径。方向由水平线与连接对象位置与其目的地的直线之间的角决定。图 8，对象 O相对于当前路段的行驶方向![](img/257e93db1726e97e2d89292b09ddfad7_136_0.png)
+`IMORS`使用`R-tree`存储路网信息。树的叶节点指向在路段（路段块）上移动的移动对象列表。`IMORS`使用单独的数据块来维护移动对象的信息，包括位置和速度。数据块中的每个条目与路段块中的对应对象信息双向连接。这允许用户从对象信息定位相应的路段信息，反之亦然。
 
 
 
+`ANR-tree` [13] 由 `R-tree` 和一个内存直接访问表组成。`R-tree` 存储路网的线段。`ANR-tree` 中的叶节点与 `IMORS` 类似，也维护相应路段上移动对象（`MO`）的信息。此外，`ANR-tree` 引入了名为自适应单元（`AUs`）的概念，用于路段内的对象。一个 `AU` 组将具有相似移动模式的对象分组。这种相似性是根据沿路段的行驶方向、速度阈值和距离阈值定义的。一个路段可以根据移动模式的存在拥有多个 `AU`。每个 `AU` 维护进入时间和预测时间（即轨迹边界）。这些时间将在查询过程中使用。每个路段的直接访问表包含速度限制、每个节点列表以及指向移动对象的指针。
 
+`R-TPR±-tree` [21] 也应用了与 `ANR-tree` 相似的概念。例如，`R-TPR±-tree` 使用 `R-tree`。它还考虑了对象的移动模式。`R-TPR±tree` 中的相似模式仅由它们移动的方向定义。通过这种结构，`R-TPR±tree` [21] 通过根据行驶方向分离对象来减少 `MBR` 的扩张。因此，`MBR` 边界的扩张不如 `TPR` 树那样严重。然而，路段上必须存在相当数量的移动对象才能体现 `TPR` 优于直接访问表等其他列表结构的优势。
 
-[content]
+`TPRtree` [38] 由 `R-tree`、直接访问表和相邻列表组成。与之前讨论的对象类似，`R-tree` 索引路网信息。`R-tree` 的每个叶节点连接一个直接访问表。该表中的每个条目维护有关该路段的信息。索引结构通过相邻列表处理更新消息。`TPRtree` 提供几乎恒定时间的更新成本 [38]。
 
-方向由 $\theta$ 表示，并落入哈希 $0$（其中 $N=8$）。从形式上看，对象的哈希值 $H(O)$ 为：$[\theta/(360/N)]$。对象在哈希桶中对应的列表索引同样基于其行驶方向。事实上，哈希桶对应的区域被一分为两部分，每部分都与一个链表耦合。索引根据行驶方向在子区域上的重叠情况决定，公式如下：
+`RDtree` 由 `R*-tree` 和一组哈希表组成。`R*-tree` 的叶节点也指向代表每个路段 `MO` 的哈希表。每个哈希表有 `N` 个哈桶（系统参数），每个哈希桶有两个排序列表，为对象提供更细粒的分组。具有相似行驶方向的对象哈希到同一个哈希桶中。这种观察基于两个相互靠近并向同一地理目的地移动的对象可能具有相似（或相同）的旅行路径，因为司机倾向于最短路径。方向由水平线与连接对象位置与其目的地的直线之间的角决定。图 8，对象 `O` 相对于当前路段的行驶方向![](img/257e93db1726e97e2d89292b09ddfad7_136_0.png)
+
+方向由 `$\theta$` 表示，并落入哈希 `$0$`（其中 `$N=8$`）。从形式上看，对象的哈希值 `$H(O)$` 为：`$[\theta/(360/N)]$`。对象在哈希桶中对应的列表索引同样基于其行驶方向。事实上，哈希桶对应的区域被一分为两部分，每部分都与一个链表耦合。索引根据行驶方向在子区域上的重叠情况决定，公式如下：
 
 ```
 $$\begin{cases} 0 & \text{if } 0 \le \theta - \frac{360}{N} \le \frac{360}{2N} \\ 1 & \text{if } \frac{360}{2N} \le \theta - \frac{360-H(O)}{N} \le \frac{360}{N} \end{cases}$$
 ```
 
-组更新 R 树 (GTR) [40] 和鲁棒的 GTR (RGTR) [41] 是支持通过组执行进行高效更新的索引结构。插入和删除操作都经过缓存并成组执行。它们忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。GTR 和 RGTR 的区别在于它们的数据结构。RGTR 舍弃了 GTR 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+组更新 `R` 树 (`GTR`) [40] 和鲁棒的 `GTR` (`RGTR`) [41] 是支持通过组执行进行高效更新的索引结构。插入和删除操作都经过缓存并成组执行。它们忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。`GTR` 和 `RGTR` 的区别在于它们的数据结构。`RGTR` 舍弃了 `GTR` 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
 
 表 4 展示了基于磁盘的索引方案的汇总表。
 
 ## 3.2.2 基于内存的索引
 
-提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 r 树 [43] 或 PMR 四叉树 [9,37]。
+提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 `r` 树 [43] 或 `PMR` 四叉树 [9,37]。
 
-在内存中实现 R 树族索引与基于磁盘的索引类似。然而，PMR 四叉树将整个空间组织成一个 PMR 四叉树。树的叶节点包含覆盖的边 ID。边之间的连通性在表中维护。
+在内存中实现 `R` 树族索引与基于磁盘的索引类似。然而，`PMR` 四叉树将整个空间组织成一个 `PMR` 四叉树。树的叶节点包含覆盖的边 `ID`。边之间的连通性在表中维护。
 
 上述基于内存的索引结构在表 5 中进行了比较。
 
 # 表 4 固定网络下移动对象的二级磁盘索引索引方案
 
 | 名称 | 路网 | 移动对象 | 查询类型 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| IMORS [32] | R*-tree | 每个 R-tree 叶节点的数据块 | 范围查询 | 快照 | 当前 |
-| ANR-tree [8] | R-tree | 每个 R-tree 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
-| R-TPR± [21] | R-tree | 每个 R-tree 叶子树的 TPR± | 导航 | 快照 | 预测性 |
-| TPR UV [38] | 同时包含 R-tree 和相邻列表 | 直接访问表 | KNN | 连续 | 当前 |
-| GTR [40] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| RGTR [41] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| R^D-tree [23] | R*-tree | 每个 R-tree 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
+
+| `IMORS` [32] | `R*-tree` | 每个 `R-tree` 叶节点的数据块 | 范围查询 | 快照 | 当前 |
+
+| `ANR-tree` [8] | `R-tree` | 每个 `R-tree` 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
+
+| `R-TPR±` [21] | `R-tree` | 每个 `R-tree` 叶子树的 `TPR±` | 导航 | 快照 | 预测性 |
+
+| `TPR UV` [38] | 同时包含 `R-tree` 和相邻列表 | 直接访问表 | `KNN` | 连续 | 当前 |
+
+| `GTR` [40] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `RGTR` [41] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `R^D-tree` [23] | `R*-tree` | 每个 `R-tree` 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
 
 ## 3.2.3 基于混合的索引
 
-混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 MOVNet [15]）。MOVNets 同时使用 R*-tree 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
+混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 `MOVNet` [15]）。`MOVNets` 同时使用 `R*-tree` 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
 
 | 表 5 固定网络下移动对象的基于内存索引方案 |
 
 | 名称 | 路网 | 移动对象 | 支持的查询 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| SR*-tree [42] | 同时包含 R*-tree 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
-| DLM [9] | PMR quad | 列表 | 反向 KNN | 连续 | 预测性 |
-| 预测距离表 [43] | B*-tree | 哈希表（目的地） | | 快照 | 预测性 |
-| SI and ET [37] | PMR 四叉树 | 边 ID 哈希表 (ET) | NN | 连续 | 当前 |
 
-当前位置落在该单元格内。当需要路网距离时，会访问 R*-tree。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 R*-tree 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
+| `SR*-tree` [42] | 同时包含 `R*-tree` 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
 
-移动对象可弃性索引 (DIME) [44] 侧重于降低更新开销。DIME 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，这些模型与传统的更新消息环境相比，增加了通信开销。GTR 和 RGTR 的区别在于它们的数据结构。RGTR 舍弃了 GTR 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+| `DLM` [9] | `PMR quad` | 列表 | 反向 `KNN` | 连续 | 预测性 |
+
+| 预测距离表 [43] | `B*-tree` | 哈希表（目的地） | | 快照 | 预测性 |
+
+| `SI and ET` [37] | `PMR` 四叉树 | 边 `ID` 哈希表 (`ET`) | `NN` | 连续 | 当前 |
+
+当前位置落在该单元格内。当需要路网距离时，会访问 `R*-tree`。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 `R*-tree` 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
+
+移动对象可弃性索引 (`DIME`) [44] 侧重于降低更新开销。`DIME` 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。`GTR` 和 `RGTR` 的区别在于它们的数据结构。`RGTR` 舍弃了 `GTR` 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
 
 表 4 展示了基于磁盘的索引方案的汇总表。
 
 ## 3.2.2 基于内存的索引
 
-提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 r 树 [43] 或 PMR 四叉树 [9,37]。
+提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 `r` 树 [43] 或 `PMR` 四叉树 [9,37]。
 
-在内存中实现 R 树族索引与基于磁盘的索引类似。然而，PMR 四叉树将整个空间组织成一个 PMR 四叉树。树的叶节点包含覆盖的边 ID。边之间的连通性在表中维护。
+在内存中实现 `R` 树族索引与基于磁盘的索引类似。然而，`PMR` 四叉树将整个空间组织成一个 `PMR` 四叉树。树的叶节点包含覆盖的边 `ID`。边之间的连通性在表中维护。
 
 上述基于内存的索引结构在表 5 中进行了比较。
 
 # 表 4 固定网络下移动对象的二级磁盘索引索引方案
 
 | 名称 | 路网 | 移动对象 | 查询类型 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| IMORS [32] | R*-tree | 每个 R-tree 叶节点的数据块 | 范围查询 | 快照 | 当前 |
-| ANR-tree [8] | R-tree | 每个 R-tree 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
-| R-TPR± [21] | R-tree | 每个 R-tree 叶子树的 TPR± | 导航 | 快照 | 预测性 |
-| TPR UV [38] | 同时包含 R-tree 和相邻列表 | 直接访问表 | KNN | 连续 | 当前 |
-| GTR [40] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| RGTR [41] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| R^D-tree [23] | R*-tree | 每个 R-tree 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
+
+| `IMORS` [32] | `R*-tree` | 每个 `R-tree` 叶节点的数据块 | 范围查询 | 快照 | 当前 |
+
+| `ANR-tree` [8] | `R-tree` | 每个 `R-tree` 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
+
+| `R-TPR±` [21] | `R-tree` | 每个 `R-tree` 叶子树的 `TPR±` | 导航 | 快照 | 预测性 |
+
+| `TPR UV` [38] | 同时包含 `R-tree` 和相邻列表 | 直接访问表 | `KNN` | 连续 | 当前 |
+
+| `GTR` [40] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `RGTR` [41] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `R^D-tree` [23] | `R*-tree` | 每个 `R-tree` 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
 
 ## 3.2.3 基于混合的索引
 
-混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 MOVNet [15]）。MOVNets 同时使用 R*-tree 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
+混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 `MOVNet` [15]）。`MOVNets` 同时使用 `R*-tree` 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
 
 | 表 5 固定网络下移动对象的基于内存索引方案 |
 
 | 名称 | 路网 | 移动对象 | 支持的查询 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| SR*-tree [42] | 同时包含 R*-tree 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
-| DLM [9] | PMR quad | 列表 | 反向 KNN | 连续 | 预测性 |
-| 预测距离表 [43] | B*-tree | 哈希表（目的地） | | 快照 | 预测性 |
-| SI and ET [37] | PMR 四叉树 | 边 ID 哈希表 (ET) | NN | 连续 | 当前 |
 
-当前位置落在该单元格内。当需要路网距离时，会访问 R*-tree。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 R*-tree 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
+| `SR*-tree` [42] | 同时包含 `R*-tree` 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
 
-移动对象可弃性索引 (DIME) [44] 侧重于降低更新开销。DIME 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。GTR 和 RGTR 的区别在于它们的数据结构。RGTR 舍弃了 GTR 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+| `DLM` [9] | `PMR quad` | 列表 | 反向 `KNN` | 连续 | 预测性 |
 
-[/content]
+| 预测距离表 [43] | `B*-tree` | 哈希表（目的地） | | 快照 | 预测性 |
 
-[/content]
+| `SI and ET` [37] | `PMR` 四叉树 | 边 `ID` 哈希表 (`ET`) | `NN` | 连续 | 当前 |
 
-[content]
+当前位置落在该单元格内。当需要路网距离时，会访问 `R*-tree`。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 `R*-tree` 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
 
-方向由 $\theta$ 表示，并落入哈希 $0$（其中 $N=8$）。从形式上看，对象的哈希值 $H(O)$ 为：$[\theta/(360/N)]$。对象在哈希桶中对应的列表索引同样基于其行驶方向。事实上，哈希桶对应的区域被一分为两部分，每部分都与一个链表耦合。索引根据行驶方向在子区域上的重叠情况决定，公式如下：
+移动对象可弃性索引 (`DIME`) [44] 侧重于降低更新开销。`DIME` 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。`GTR` 和 `RGTR` 的区别在于它们的数据结构。`RGTR` 舍弃了 `GTR` 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+
+方向由 `$\theta$` 表示，并落入哈希 `$0$`（其中 `$N=8$`）。从形式上看，对象的哈希值 `$H(O)$` 为：`$[\theta/(360/N)]$`。对象在哈希桶中对应的列表索引同样基于其行驶方向。事实上，哈希桶对应的区域被一分为两部分，每部分都与一个链表耦合。索引根据行驶方向在子区域上的重叠情况决定，公式如下：
 
 ```
 $$\begin{cases} 0 & \text{if } 0 \le \theta - \frac{360}{N} \le \frac{360}{2N} \\ 1 & \text{if } \frac{360}{2N} \le \theta - \frac{360-H(O)}{N} \le \frac{360}{N} \end{cases}$$
 ```
 
-组更新 R 树 (GTR) [40] 和鲁棒的 GTR (RGTR) [41] 是支持通过组执行进行高效更新的索引结构。插入和删除操作都经过缓存并成组执行。它们忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。GTR 和 RGTR 的区别在于它们的数据结构。RGTR 舍弃了 GTR 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+组更新 `R` 树 (`GTR`) [40] 和鲁棒的 `GTR` (`RGTR`) [41] 是支持通过组执行进行高效更新的索引结构。插入和删除操作都经过缓存并成组执行。它们忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。`GTR` 和 `RGTR` 的区别在于它们的数据结构。`RGTR` 舍弃了 `GTR` 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
 
 表 4 展示了基于磁盘的索引方案的汇总表。
 
 ## 3.2.2 基于内存的索引
 
-提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 r 树 [43] 或 PMR 四叉树 [9,37]。
+提高更新成本的一种常用方法包括内存型索引 [9,37,42,43] 和混合索引 [15,44]，后者利用了第 3.2.3 节中涵盖的内存。内存索引通常使用列表 [9,42] 或表 [37,43] 来维护移动对象的信息。路网可以被索引为 `r` 树 [43] 或 `PMR` 四叉树 [9,37]。
 
-在内存中实现 R 树族索引与基于磁盘的索引类似。然而，PMR 四叉树将整个空间组织成一个 PMR 四叉树。树的叶节点包含覆盖的边 ID。边之间的连通性在表中维护。
+在内存中实现 `R` 树族索引与基于磁盘的索引类似。然而，`PMR` 四叉树将整个空间组织成一个 `PMR` 四叉树。树的叶节点包含覆盖的边 `ID`。边之间的连通性在表中维护。
 
 上述基于内存的索引结构在表 5 中进行了比较。
 
 # 表 4 固定网络下移动对象的二级磁盘索引索引方案
 
 | 名称 | 路网 | 移动对象 | 查询类型 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| IMORS [32] | R*-tree | 每个 R-tree 叶节点的数据块 | 范围查询 | 快照 | 当前 |
-| ANR-tree [8] | R-tree | 每个 R-tree 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
-| R-TPR± [21] | R-tree | 每个 R-tree 叶子树的 TPR± | 导航 | 快照 | 预测性 |
-| TPR UV [38] | 同时包含 R-tree 和相邻列表 | 直接访问表 | KNN | 连续 | 当前 |
-| GTR [40] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| RGTR [41] | R-tree | R-tree 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
-| R^D-tree [23] | R*-tree | 每个 R-tree 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
+
+| `IMORS` [32] | `R*-tree` | 每个 `R-tree` 叶节点的数据块 | 范围查询 | 快照 | 当前 |
+
+| `ANR-tree` [8] | `R-tree` | 每个 `R-tree` 叶节点的自适应单元 | 范围查询 | 快照 | 预测性 |
+
+| `R-TPR±` [21] | `R-tree` | 每个 `R-tree` 叶子树的 `TPR±` | 导航 | 快照 | 预测性 |
+
+| `TPR UV` [38] | 同时包含 `R-tree` 和相邻列表 | 直接访问表 | `KNN` | 连续 | 当前 |
+
+| `GTR` [40] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `RGTR` [41] | `R-tree` | `R-tree` 每个叶节点的对象列表 | 范围查询 | 快照 | 当前 |
+
+| `R^D-tree` [23] | `R*-tree` | 每个 `R-tree` 叶节点的哈希表；根据对象地理方向分组划分的哈希桶 | 线路查询 | 快照和当前 | 当前和预测 |
 
 ## 3.2.3 基于混合的索引
 
-混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 MOVNet [15]）。MOVNets 同时使用 R*-tree 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
+混合方法通常将路网信息存储在二级磁盘上，而移动对象维护在内存中（例如，路网中的移动对象 `MOVNet` [15]）。`MOVNets` 同时使用 `R*-tree` 存储静态路网信息，并使用内存网格结构存储对象位置。网格结构将整个移动区域划分为多个单元格。每个单元格维护一个移动对象列表
 
 | 表 5 固定网络下移动对象的基于内存索引方案 |
 
 | 名称 | 路网 | 移动对象 | 支持的查询 | 连续性 | 预测性 |
+
 | --- | --- | --- | --- | --- | --- |
-| SR*-tree [42] | 同时包含 R*-tree 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
-| DLM [9] | PMR quad | 列表 | 反向 KNN | 连续 | 预测性 |
-| 预测距离表 [43] | B*-tree | 哈希表（目的地） | | 快照 | 预测性 |
-| SI and ET [37] | PMR 四叉树 | 边 ID 哈希表 (ET) | NN | 连续 | 当前 |
 
-当前位置落在该单元格内。当需要路网距离时，会访问 R*-tree。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 R*-tree 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
+| `SR*-tree` [42] | 同时包含 `R*-tree` 和表 | 对象列表 | 范围查询 | 连续 | 当前 |
 
-移动对象可弃性索引 (DIME) [44] 侧重于降低更新开销。DIME 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。GTR 和 RGTR 的区别在于它们的数据结构。RGTR 舍弃了 GTR 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
+| `DLM` [9] | `PMR quad` | 列表 | 反向 `KNN` | 连续 | 预测性 |
 
-[/content]
+| 预测距离表 [43] | `B*-tree` | 哈希表（目的地） | | 快照 | 预测性 |
 
+| `SI and ET` [37] | `PMR` 四叉树 | 边 `ID` 哈希表 (`ET`) | `NN` | 连续 | 当前 |
 
+当前位置落在该单元格内。当需要路网距离时，会访问 `R*-tree`。例如，在查询过程中，在第一个网格上执行相应的欧几里得空间查询。然后搜索 `R*-tree` 获取相应的路段。最后，在内存中构建部分地图以考虑网络距离。
 
-
+移动对象可弃性索引 (`DIME`) [44] 侧重于降低更新开销。`DIME` 管理位于二级磁盘和内存中的多个索引结构，以维护对象的位置。当二级磁盘上的对象必须更新时，会创建一个新的内存索引。该索引仅维护对象的位置。该方法忽略了恒速行驶车辆的更新。然而，用户被需要在更新消息中发送速度信息，以确定车辆自身的属性。因此，与传统的更新消息环境相比，这些模型增加了通信开销。`GTR` 和 `RGTR` 的区别在于它们的数据结构。`RGTR` 舍弃了 `GTR` 中用于跟踪更新消息的缓冲区。相反，更新是立即执行的，表现为先插入后删除。额外的成本通过引入压缩对象表示法来权衡，这使得树能够容纳更多对象。
 
 ![](img/257e93db1726e97e2d89292b09ddfad7_142_0.png)
 
-图 10 欧几里得空间中的 KNNQ。
+图 10 欧几里得空间中的 `KNNQ`。
 
-KNNQ 的处理不同于 RQ 处理，因为范围大小的上限是未知的。图 10 给出了 KNNQ 搜索区域及其结果的视觉化说明。因此，处理 KNNQ 最常用的方法是增量搜索，从查询点开始，直到找到 K 个对象 [15]。
+`KNNQ` 的处理不同于 `RQ` 处理，因为范围大小的上限是未知的。图 10 给出了 `KNNQ` 搜索区域及其结果的视觉化说明。因此，处理 `KNNQ` 最常用的方法是增量搜索，从查询点开始，直到找到 `K` 个对象 [15]。
 
-在文献 [15] 中提出的 KNNQ 算法由网格结构支持。每个单元格仅包含被该单元格覆盖的对象数量。该方法首先遍历网格结构，同时统计单元格覆盖的车辆数量。一旦计数到 K 个对象，就会报告最大欧几里得距离。相应的路段从 R-tree 中加载以形成部分图。接下来，从查询点开始遍历每个相连的路段。在次遍历过程中，会考虑道路距离。作为在线计算的距离计算会增加查询处理时间。为了缩短在线处理时间，一些方法考虑了离线网络计算。然而，离线距离计算比在线处理方法消耗更多存储。
+在文献 [15] 中提出的 `KNNQ` 算法由网格结构支持。每个单元格仅包含被该单元格覆盖的对象数量。该方法首先遍历网格结构，同时统计单元格覆盖的车辆数量。一旦计数到 `K` 个对象，就会报告最大欧几里得距离。相应的路段从 `R-tree` 中加载以形成部分图。接下来，从查询点开始遍历每个相连的路段。在次遍历过程中，会考虑道路距离。作为在线计算的距离计算会增加查询处理时间。为了缩短在线处理时间，一些方法考虑了离线网络计算。然而，离线距离计算比在线处理方法消耗更多存储。
 
 ## 4.1.3 预测线查询
 
-PLQ 允许用户查询特定路段的交通状况。查询返回用户预计旅行该路段时，指定路段的预测交通流量。其正式定义如下：
+`PLQ` 允许用户查询特定路段的交通状况。查询返回用户预计旅行该路段时，指定路段的预测交通流量。其正式定义如下：
 
 ### 定义 3. 预测线查询
 
-PLQ=$(e_q, t_q, t_i)$ 获取所有在查询时间 $t_q$（其中 $t_q > t_i$）位于查询路段 $e_q$ 上的移动对象 (MO)，$tc$ 为查询时间。环形查询 RQ=$(e_q, r_1; r_2)$ 获取当前位置位于以 $e_q$ 为中心、$r_1$ 和 $r_2$ 为半径的环形区域内的 MO，其中 $r_1 = v_{min}(t_q - t_i)$ 且 $r_2 = v_{max}(t_q - t_i)$ [23]。
 
-文献 [23] 中的工作针对 PLQ 处理提了三种基于启发式的查询算法。每个算法由两个基本阶段组成：过滤阶段和精炼阶段。过滤阶段提取具有进入查询路段可能的对象。其第一步是使用如图 11 所示的环形查询，检索潜在车辆正在行驶的路段。环的外径和内径分别代表了最新和最近的潜在车辆的当前位置。接下来，检索在这些路段上移动的车辆。这一步在三种算法中有所不同。其中一种算法（基础算法）从最多两个哈希桶中选择对象，每个桶包含两个对象链表。另一种算法被称为**增强型算法**，它也维护了这些列表，但对象根据其到目的地的距离进行了排序（降序）。搜索在目的地早于查询路段的点处停止。第三种算法（**综合算法**）保证恰好访问两个列表。
+
+`PLQ = (e_q, t_q, t_i)` 获取所有在查询时间 `t_q`（其中 `t_q > t_i`）位于查询路段 `e_q` 上的移动对象 (MO)，`tc` 为查询时间。环形查询 `RQ = (e_q, r_1; r_2)` 获取当前位置位于以 `e_q` 为中心、`r_1` 和 `r_2` 为半径的环形区域内的 MO，其中 `r_1 = v_min(t_q - t_i)` 且 `r_2 = v_max(t_q - t_i)` [23]。
+
+文献 [23] 中的工作针对 PLQ 处理提了三种基于启发式的查询算法。每个算法由两个基本阶段组成：过滤阶段和精炼阶段。过滤阶段提取具有进入查询路段可能的对象。其第一步是使用如图 11 所示的环形查询，检索潜在车辆正在行驶的路段。环的外径和内径分别代表了最新和最近的潜在车辆的当前位置。接下来，检索在这些路段上移动的车辆。这一步在三种算法中有所不同。其中一种算法（基础算法）从最多两个哈希桶中选择对象，每个桶包含两个对象链表。另一种算法被称为增强型算法，它也维护了这些列表，但对象根据其到目的地的距离进行了排序（降序）。搜索在目的地早于查询路段的点处停止。第三种算法（综合算法）保证恰好访问两个列表。
 
 ![](img/257e93db1726e97e2d89292b09ddfad7_143_0.png)
 
 图 11 使用环形查询的初始过滤。
 
-Feng 等人 [21] 提出的查询与 PLQ 相似。事实上，他们提出了一种**快照查询**来获取给定范围（即多个路段）内的预测流量。该算法检索查询范围内的所有路段（如图 9 所示的圆形范围），并将路段中的所有对象视为一个组，而不是检查单个对象以确认它们是否存在于查询组中。组间比较需要更少的页面访问，但是以准确性降低为代价的 [21]。
+`Feng` 等人 [21] 提出的查询与 PLQ 相似。事实上，他们提出了一种快照查询来获取给定范围（即多个路段）内的预测流量。该算法检索查询范围内的所有路段（如图 9 所示的圆形范围），并将路段中的所有对象视为一个组，而不是检查单个对象以确认它们是否存在于查询组中。组间比较需要更少的页面访问，但是以准确性降低为代价的 [21]。
 
-文献 [23] 对这两种方法进行了比较，结果显示文献 [23] 中的三种算法都优于 Feng 的算法 [21]；过滤阶段的查询是性能提升的贡献因素之一。
+文献 [23] 对这两种方法进行了比较，结果显示文献 [23] 中的三种算法都优于 `Feng` 的算法 [21]；过滤阶段的查询是性能提升的贡献因素之一。
 
 上述快照查询汇总在表 7 中。
 
@@ -2150,12 +2169,12 @@ Feng 等人 [21] 提出的查询与 PLQ 相似。事实上，他们提出了一�
 
 | 算法 | 查询类型 | 优缺点 |
 | :--- | :--- | :--- |
-| Prabhakar 等人 [45] | 范围 | 引入了索引查询而非对象，通过缩放区域减少了更新成本 |
-| Cai 等人 [46] | 范围 | 在客户端之间分担工作负载，放弃了服务器端处理 |
-| Cai 等人 [47] | 范围 | 改进了 [46] 以支持客户端的异构性，但工作不均匀 |
-| Hu 等人 [48] | 范围和 KNN | 安全区域减少了通信成本，更高的客户端隐私保护，在单元格上进行分组查询减少了不必要的查询考虑，从而提供了可扩展性 |
-| Wang way Zimmermann [14] | 范围 | 执行成本较低，但由于过时条目导致存储成本较高 |
-| Mouratidis 等人 [49] | KNN | 客户端工作负载较低 |
+| `Prabhakar` 等人 [45] | 范围 | 引入了索引查询而非对象，通过缩放区域减少了更新成本 |
+| `Cai` 等人 [46] | 范围 | 在客户端之间分担工作负载，放弃了服务器端处理 |
+| `Cai` 等人 [47] | 范围 | 改进了 [46] 以支持客户端的异构性，但工作不均匀 |
+| `Hu` 等人 [48] | 范围和 KNN | 安全区域减少了通信成本，更高的客户端隐私保护，在单元格上进行分组查询减少了不必要的查询考虑，从而提供了可扩展性 |
+| `Wang` way `Zimmermann` [14] | 范围 | 执行成本较低，但由于过时条目导致存储成本较高 |
+| `Mouratidis` 等人 [49] | KNN | 客户端工作负载较低 |
 
 ## 移动对象的索引与查询技术
 
@@ -2171,19 +2190,13 @@ Feng 等人 [21] 提出的查询与 PLQ 相似。事实上，他们提出了一�
 
 ### 4.2.2.1 静态查询的持续监控
 
-Prabhakar 等人 [45] 提出了一种支持欧空间移动对象静态范围查询的方法。该研究没有考虑对象索引，而是使用了查询索引 (QI)。结果是每个查询都被索引在名为 QI 的 R-树结构中。
+`Prabhakar` 等人 [45] 提出了一种支持欧空间移动对象静态范围查询的方法。该研究没有考虑对象索引，而是使用了查询索引 (QI)。结果是每个查询都被索引在名为 QI 的 R-树结构中。
 
 初始查询响应通过搜索对象位置重叠区域获得。一旦获得初始结果，维护阶段仅涉及对象与 QI 的更新。QI 根据空间接近性对这些对象进行索引，因此每个对象都会与 QI 进行比较。该过程随着查询数量的增加而扩展，但无法面对更多对象进行扩展。
 
 单个对象维护其由服务器计算的安全区域，以减少更新消息的数量。安全区域计算为对象到查询边界之间的最短距离。这种计算方法有几个缺点。首先，当安全区域较小（即密集环境）时，跟踪安全区域的优势会减小。较小区域内的对象越容易越界。这导致频繁发送更新消息。每当查询过期或接收到新查询时，必须重新评估安全区域，这增加了安全区域的维护成本。
 
-另一种方法 [22] 针对 PLQ 的持续版本 (CPLQ)，在 TPR-tree 数据结构中维护查询信息。TPR-tree 的基础结构是 R*-树（图 12）。该树允许对更新消息进行分组分析。该树为每个 PLQ 索引了一个影响区域 (IR)。影响区域是覆盖了大部分可能进入查询路段的 MO 的区域，在
-
-
-
-
-
-## 移动对象的索引与查询技术
+另一种方法 [22] 针对 PLQ 的持续版本 (CPLQ)，在 TPR-tree 数据结构中维护查询信息。TPR-tree 的基础结构是 R*-树（图 12）。该树允许对更新消息进行分组分析。该树为每个 PLQ 索引了一个影响区域 (IR)。影响区域是覆盖了大部分可能进入查询路段的 MO 的区域，在指定的未来时间。来自该区域内车辆的更新消息将被用于识别查询结果的可能变化。IR（影响范围）表示为参数化的环，其内径和外径带有移动速度。内径与指向查询路段的最小移动速度相关，而外径与指向查询路段的最大速度相关。
 
 A   B
 
@@ -2191,13 +2204,11 @@ A   B
 
 图 12 TPRQ-树的结构。(A) TPRQ-树中的叶节点。(B) 整个 TPRQ-树的概览。
 
-指定的未来时间。来自该区域内车辆的更新消息将被用于识别查询结果的可能变化。IR（影响范围）表示为参数化的环，其内径和外径带有移动速度。内径与指向查询路段的最小移动速度相关，而外径与指向查询路段的最大速度相关。
+CPLQ 算法包含两个阶段：初始阶段计算查询发布时有效的查询结果。它搜索 TPRQ-树以寻找相似的之前发布的查询。如果在 TPRQ-树中未找到相似查询，则将新查询插入树中并应用快照 PLQ 过程 [23]。维护阶段随时间推移维护查询结果。当收到来自车辆的更新消息时，服务器会根据 TPRQ-树中存储的影响范围检查更新是否影响现有查询。如果现有查询受到影响，作者 [22] 提出了三种查询维护算法：单点更新（SU）维护、单对象（SO）维护和批量对象（BO）维护算法。这些算法在 TPRQ-树中搜寻两组 CPLQ：包含对象在其上一次更新时间戳状态（标记为 `Q_old`）的集合，以及包含对象在当前时间戳更新后状态（标记为 `Q_new`）的集合。
 
-CPLQ 算法包含两个阶段：初始阶段计算查询发布时有效的查询结果。它搜索 TPRQ-树以寻找相似的之前发布的查询。如果在 TPRQ-树中未找到相似查询，则将新查询插入树中并应用快照 PLQ 过程 [23]。维护阶段随时间推移维护查询结果。当收到来自车辆的更新消息时，服务器会根据 TPRQ-树中存储的影响范围检查更新是否影响现有查询。如果现有查询受到影响，作者 [22] 提出了三种查询维护算法：单点更新（SU）维护、单对象（SO）维护和批量对象（BO）维护算法。这些算法在 TPRQ-树中搜寻两组 CPLQ：包含对象在其上一次更新时间戳状态（标记为 $Q_{old}$）的集合，以及包含对象在当前时间戳更新后状态（标记为 $Q_{new}$）的集合。
+SU 维护算法将对象信息的更新视为两个部分分别处理，并分别寻找 `Q_old` 和 `Q_new`。由于它们是对象路径上的两个连续点，在同一条更新消息中找到的对象旧新位置通常很接近。因此，对象单个更新消息中的新位置和旧位置很可能被相同或附近的 CPL 查询的影响区域所覆盖。基于这一观察，SO 维护算法在 TPRQ-树的一轮搜索中同时搜寻 `Q_new` 和 `Q_old`。另一方面，BO 算法考虑了针对 TPRQ-树的分组更新比较。其原因为可能是来自附近对象的某些更新消息可能会影响相同或附近的 CPL 查询。因此，在收到更新时，BO 算法进行两轮分组：(i) 基于它们的旧更新时间戳，(ii) 基于它们的位置优先级。将这些组与 TPRQ-树进行比较以找到 `Q_new` 和 `Q_old`。BO 算法在树算法中表现出最佳性能。
 
-SU 维护算法将对象信息的更新视为两个部分分别处理，并分别寻找 $Q_{old}$ 和 $Q_{new}$。由于它们是对象路径上的两个连续点，在同一条更新消息中找到的对象旧新位置通常很接近。因此，对象单个更新消息中的新位置和旧位置很可能被相同或附近的 CPL 查询的影响区域所覆盖。基于这一观察，SO 维护算法在 TPRQ-树的一轮搜索中同时搜寻 $Q_{new}$ 和 $Q_{old}$。另一方面，BO 算法考虑了针对 TPRQ-树的分组更新比较。其原因为可能是来自附近对象的某些更新消息可能会影响相同或附近的 CPL 查询。因此，在收到更新时，BO 算法进行两轮分组：(i) 基于它们的旧更新时间戳，(ii) 基于它们的位置优先级。将这些组与 TPRQ-树进行比较以找到 $Q_{new}$ 和 $Q_{old}$。BO 算法在树算法中表现出最佳性能。
-
-Cai 等人 [46,47] 也处理了静态竞争 RQ。该研究提出了两种方法：空间查询管理 (SQM) [46] 和监控查询管理 (MQM) [47]。这两种方法之间的区别在于移动对象的计算能力。在 SQM 下考虑的移动对象是异质的，而在 MQM 下是同质的。
+`Cai` 等人 [46,47] 也处理了静态竞争 RQ。该研究提出了两种方法：空间查询管理 (SQM) [46] 和监控查询管理 (MQM) [47]。这两种方法之间的区别在于移动对象的计算能力。在 SQM 下考虑的移动对象是异质的，而在 MQM 下是同质的。
 
 在这些方法的每中，整个空间被划分为不相交的子空间作为子域。安全区域根据这些子域定义。子域的数量各异。在 MQM 中，对象的安全区域由一个或多个子域组成。密度根据对象的计算能力决定。相反，在 SQM 中，每个对象仅被分配到一个子域。与 QI [45] 相比，计算此安全区域要简单得多。
 
@@ -2205,7 +2216,7 @@ Cai 等人 [46,47] 也处理了静态竞争 RQ。该研究提出了两种方法�
 
 维护阶段主要由查询候选者处理。这些候选者报告它们对查询结果的影响。服务器根据这些报告更新查询发布者，与文献 [45] 中的查询过程相比，服务器的负载要少得多。由于计算负载分布在移动对象之间，该方法对于大量查询和大量移动对象（MO）具有良好的扩展性。
 
-Hu 等人 [48] 提出的方法也考虑了安全区域以降低通信成本。该方法与上述方法的主要区别在于，该方法不索引对象的实际位置，而是索引每个对象的安全区域。
+`Hu` 等人 [48] 提出的方法也考虑了安全区域以降低通信成本。该方法与上述方法的主要区别在于，该方法不索引对象的实际位置，而是索引每个对象的安全区域。
 
 查询索引及其结果维护在内存查询索引中。查询索引的构建类似于 BP-tree [46,47]；整个空间被划分为不相交区域的网格。这些单元格（称为隔离区域）在查询索引中被索引。每个单元格都指向与该单元格部分重叠的查询区域信息，类似于文献 [46,47] 中的监控区域。
 
@@ -2215,7 +2226,7 @@ Hu 等人 [48] 提出的方法也考虑了安全区域以降低通信成本。�
 
 该方法的主要特征是安全区域是针对查询计算的，而不是针对移动对象的。因此，在该方法中，移动对象不需要为监控区域付出代价。然而，与移动对象维护的安全区域相比，后者更大。安全区域越大，更新消息的考虑越高。
 
-Mouratidis 等人 [49] 提出了一种处理最近邻查询的方法。在该方法中，安全区域是一个半径为 距离的圆。服务区域被视为网格。处理从包含查询点的单元格开始。它以旋转方式访问最近的单元格。一次旋转覆盖左、上、右、下的单元格。该过程重复直到达到 K（预定义数量）个对象。然后对这 K 个对象进行安全区域跨越监控。
+`Mouratidis` 等人 [49] 提出了一种处理最近邻查询的方法。在该方法中，安全区域是一个半径为距离的圆。服务区域被视为网格。处理从包含查询点的单元格开始。它以旋转方式访问最近的单元格。一次旋转覆盖左、上、右、下的单元格。该过程重复直到达到 K（预定义数量）个对象。然后对这 K 个对象进行安全区域跨越监控。
 
 额外的查询类型也被考虑用于连续静态监控，包括 Top K 查询 [37]、反向 KNN [50] 和绕路查询 [51]。这些方法都通过减少来自移动对象的更新消息数量来降低通信成本。
 
@@ -2225,18 +2236,15 @@ Mouratidis 等人 [49] 提出了一种处理最近邻查询的方法。在该方
 
 大多数在静态查询提出的方法在不进行修改（例如安全区域计算）的情况下无法支持此类查询。本节讨论了针对移动对象连续监控的方法。
 
-Stojanovic 等人 [52] 提出了一种处理动态连续范围查询的算法。该算法基于三个步骤：过滤步骤、预处理步骤和精炼步骤。过滤步骤和预处理步骤产生初始查询范围。此外，这些步骤检查每个对象路径沿查询范围的可能重叠。详细信息存储在两个表中：连续范围查询表和移动对象表。精炼步骤定期确保这些表条目的有效性。该算法的一个主要缺点是数量
+`Stojanovic` 等人 [52] 提出了一种处理动态连续范围查询的算法。该算法基于三个步骤：过滤步骤、预处理步骤和精炼步骤。过滤步骤和预处理步骤产生初始查询范围。此外，这些步骤检查每个对象路径沿查询范围的可能重叠。详细信息存储在两个表中：连续范围查询表和移动对象表。精炼步骤定期确保这些表条目的有效性。该算法的一个主要缺点是数量内存中管理着重复数据 [52]。因此，随着对象数量的增加，所提算法缺乏扩展性。
 
+`Gedik` 和 `Liu` [53] 提出了一种范围查询（RQ）的分布式方法以减少服务器负载。服务器在接收到新查询后广播查询信息。每个对象通过检查查询信息判断自己是否在查询的监控区域内。如果对象确定自己在监控区域内，移动对象将保留该查询信息。当对象移出监控区域时，该信息将被丢弃。移动对象根据接收到的查询信息（即速度、时间和位置）估计查询的位置。如果此位置与存储的地址不符，则查询结果可能发生变化。对象的最新信息会被传递给服务器。这种方法与服务器之间的选择性通信降低了通信成本。然而，它违反了发布者的机密性，因为其信息被广播了。
 
-内存中管理着重复数据 [52]。因此，随着对象数量的增加，所提算法缺乏扩展性。
+SEA-CNN（共享执行算法）[54] 和 SCBA（基于聚类的算法）[55] 都为连续查询提供了可扩展的方法。SEA-CNN 关注 KNN，而 SCU 关注 RQ。SEA-CNN 根据区域和位置对查询进行分组。因此，SCU 根据共同的空间关系对查询和移动对象进行分组。对象和查询可以包含在同一组中。当存在稳定聚类时，每个方法的性能都会提高。当聚类的成员集不频繁变化时，就会稳定聚类。这发生在对象相对速度较小时。当相对速度很高时，最初在同一组的对象可能不再处于同一组。在这种情况下，随着聚类数量的增加，聚类维护成本和查询执行都会增加。
 
-Gedik 和 Liu [53] 提出了一种范围查询（RQ）的分布式方法以减少服务器负载。服务器在接收到新查询后广播查询信息。每个对象通过检查查询信息判断自己是否在查询的监控区域内。如果对象确定自己在监控区域内，移动对象将保留该查询信息。当对象移出监控区域时，该信息将被丢弃。移动对象根据接收到的查询信息（即速度、时间和位置）估计查询的位置。如果此位置与存储的地址不符，则查询结果可能发生变化。对象的最新信息会被传递给服务器。这种方法与服务器之间的选择性通信降低了通信成本。然而，它违反了发布者的机密性，因为其信息被广播了。
+`Liu` 和 `Hua` [56] 提出了在考虑网络的情况下处理动态范围和 KNN 查询的算法。RQ 过程从在服务器上执行快照查询开始。快照查询结果中的对象会被查询信息（例如查询位置、查询范围和发布者的速度）。当对象移出查询范围时，会向服务器更新信息。在接收到对象的更新消息后，服务器相应地更新其查询结果，然后更新服务器上的对象查询列表。
 
-SEA-CNN（共享执行算法）[54] 和 SCBA（基于聚类的算法）[55] 都为连续查询提供了可扩展的方法。SEA-CNN 关注 KNN，而 SCU 关注 RQ。SEA-CNN 根据区域和位置对查询进行分组。因此，SCU 根据共同的空间关系对查询和移动对象进行分组。对象和查询可以包含在同一组中。当存在稳定聚类时，每个方法的性能都会提高。当聚类的成员集不频繁变化时，就会稳定聚类。这发生在对象相对速度较小时。当相对速度很高时，最初在同一组的对象可能不再处于同一组。在这种情况下，随着聚类数量的增加，聚类维护成本和查询执行都会都会。
-
-Liu 和 Hua [56] 提出了在考虑网络的情况下处理动态范围和 KNN 查询的算法。RQ 过程从在服务器上执行快照查询开始。快照查询结果中的对象会被查询信息（例如查询位置、查询范围和发布者的速度）。当对象移出查询范围时，会向服务器更新信息。在接收到对象的更新消息后，服务器相应地更新其查询结果，然后更新服务器上的对象查询列表。
-
-KNNQ 处理遵循与 RQ 类似的方法。KNNQ 被处理为 RQ，其中范围是**查询发布者到最远车辆的距离。如果新对象可能出现在查询结果中，则考虑上一个结果中每个对象的当前位置。然后将新车辆插入到列表的相应位置。当范围大于要发送的消息数时，这种方法的性能更好。然而，与 Stojanovic 等人 [52] 提出的方法类似，这种方法在内存中维护了大量数据。这些数据包含了对象信息的重复。例如，每个查询都维护响应中所有移动对象（MO）的列表，反之亦然。
+KNNQ 处理遵循与 RQ 类似的方法。KNNQ 被处理为 RQ，其中范围是查询发布者到最远车辆的距离。如果新对象可能出现在查询结果中，则考虑上一个结果中每个对象的当前位置。然后将新车辆插入到列表的相应位置。当范围大于要发送的消息数时，这种方法的性能更好。然而，与 `Stojanovic` 等人 [52] 提出的方法类似，这种方法在内存中维护了大量数据。这些数据包含了对象信息的重复。例如，每个查询都维护响应中所有移动对象（MO）的列表，反之亦然。
 
 ## 4.2.3 总结
 
@@ -2248,24 +2256,24 @@ KNNQ 处理遵循与 RQ 类似的方法。KNNQ 被处理为 RQ，其中范围是
 
 | 查询算法 | 类型 | 优缺点 |
 |---|---|---|
-| Stojanovic 等人 [52] | 范围 | 分布式方法减少了服务器负载。对于个体比较集，存在显著的误报，违反了单个发布者的个体机密性 |
-| Xiong 等人 [54] | KNN | 基于空间关系的分组信息提供了…… |
-| Nehme 和 Rundensteiner [55] | 范围 | 基于空间关系的分组信息提供了…… |
-| Liu 和 Hua [56] | 范围和 KNN | 由于……导致存储成本较高 |
+| `Stojanovic` 等人 [52] | 范围 | 分布式方法减少了服务器负载。对于个体比较集，存在显著的误报，违反了单个发布者的个体机密性 |
+| `Xiong` 等人 [54] | KNN | 基于空间关系的分组信息提供了…… |
+| `Nehme` 和 `Rundensteiner` [55] | 范围 | 基于空间关系的分组信息提供了…… |
+| `Liu` 和 `Hua` [56] | 范围和 KNN | 由于……导致存储成本较高 |
 
 ## 5. 道路约束下流量预测查询的性能
 
 ### 5.1 快照查询
 
-对最近的两种提供道路交通信息的算法——即基于 R-TPR+-tree 的查询算法 [21] 和基于 $R^D\text{-tree}$（也称为 $R^{DC}-tree$）的综合算法 [23] 进行了比较，以研究个体性能的影响。实验在 Brinkhoff [57] 生成的数据集上进行。生成器提供了美国真实的道路地图。数据集通过改变三个参数生成：预测长度和道路拓扑结构。表 9 显示了这些参数及其默认值。性能通过 I/O 成本、执行时间和查询准确性进行衡量。
+对最近的两种提供道路交通信息的算法——即基于 R-TPR+-tree 的查询算法 [21] 和基于 `R^D`-tree（也称为 `R^{DC}`-tree）的综合算法 [23] 进行了比较，以研究个体性能的影响。实验在 `Brinkhoff` [57] 生成的数据集上进行。生成器提供了美国真实的道路地图。数据集通过改变三个参数生成：预测长度和道路拓扑结构。表 9 显示了这些参数及其默认值。性能通过 I/O 成本、执行时间和查询准确性进行衡量。
 
 执行时间不包括地图的批量加载，仅包括查询时间。查询准确性通过比较预测结果中的对象数量与查询路段上的实际对象数量来检查。I/O 成本被测量为磁盘页面访问次数。每个测试用例运行 250 次查询并报告平均成本。
 
 | 参数 | 值 |
 |---|---|
-| 移动对象数量 | 10K, 20K, ..., **50K**, 60K, ..., 100K |
-| 预测时间长度（分钟） | 10, 20, **30**, 40, 50, 60 |
-| 道路地图 | CO, AR, NM, **CA**（加利福尼亚州） |
+| 移动对象数量 | 10K, 20K, ..., 50K, 60K, ..., 100K |
+| 预测时间长度（分钟） | 10, 20, 30, 40, 50, 60 |
+| 道路地图 | CO, AR, NM, CA（加利福尼亚州） |
 
 ### 5.1.1 移动对象（MO）数量的影响
 
@@ -2275,13 +2283,9 @@ KNNQ 处理遵循与 RQ 类似的方法。KNNQ 被处理为 RQ，其中范围是
 
 #### 5.1.1.2 准确性
 
-R-TPR±tree 的准确性与正确结果相差甚远（图 14）。$R^{DC}-tree$ 报告的流量非常接近查询段上的实际流量。事实上，$R^{DC}-tree$ 的准确性略低于实际结果。这种差异是由于 $R^{DC}-tree$ 中受限的哈希桶数量。
+R-TPR±tree 的准确性与正确结果相差甚远（图 14）。`R^{DC}-tree` 报告的流量非常接近查询段上的实际流量。事实上，`R^{DC}-tree` 的准确性略低于实际结果。这种差异是由于 `R^{DC}-tree` 中受限的哈希桶数量。
 
 图 13 移动对象数量对页面访问的影响。
-
-
-
-
 
 ## 移动对象的索引与查询技术
 
@@ -2303,11 +2307,13 @@ R-TPR±tree 的准确性与正确结果相差甚远（图 14）。$R^{DC}-tree$ 
 
 ### 5.1.2.1 页面访问
 
-**图 16** 显示了 R-TPR±-tree、$R^{DB}$-tree、$R^{DE}$-tree 和 $R^{DC}$-tree 在页面访问次数方面的性能比较。当时间增加且有更多时间可以观察未来时，$R^{DC}$-tree 和 R-TPR±-tree 访问了更多的磁盘页面。然而，R-TPR±-tree 的页面访问急剧增加，而其他三种算法仅略有增加。这是由于在 $R^{D}$-tree 查询版本使用了环形查询。当查询时间越长时，这种优势越发明显。
+**图 16** 显示了 R-TPR±-tree、`R^{DB}`-tree、`R^{DE}`-tree 和 `R^{DC}`-tree 在页面访问次数方面的性能比较。当时间增加且有更多时间可以观察未来时，`R^{DC}`-tree 和 R-TPR±-tree 访问了更多的磁盘页面。然而，R-TPR±-tree 的页面访问急剧增加，而其他三种算法仅略有增加。这是由于在 `R^{D}`-tree 查询版本使用了环形查询。当查询时间越长时，这种优势越发明显。
 
 ### 5.1.2.2 准确性
 
-**图 17** 比较了 R-TPR±-tree 和 $R^{DC}$-tree 与实际查询结果的准确性。$R^{DC}$-tree 查询算法得到的结果与实际值非常接近，且在不同查询时间下的准确性相对稳定。微小的不准确可能是由估计行驶路线与某些对象实际采取路线之间的差异造成的。R-TPR±-tree 的准确性远低于 $R^{D}$-tree。当预测时间长度极短时，R-TPR±-tree 的查询算法运行良好，因为查询范围主要覆盖路段。查询范围内的对象在查询时最多只能移动到下一个路段。当预测时间长度较长时，这种估计引入了更多的错误。
+
+
+**图 17** 比较了`R-TPR±-tree`和`$R^{DC}$-tree`与实际查询结果的准确性。`$R^{DC}$-tree`查询算法得到的结果与实际值非常接近，且在不同查询时间下的准确性相对稳定。微小的不准确可能是由估计行驶路线与某些对象实际采取路线之间的差异造成的。`R-TPR±-tree`的准确性远低于`$R^{D}$-tree`。当预测时间长度极短时，`R-TPR±-tree`的查询算法运行良好，因为查询范围主要覆盖路段。查询范围内的对象在查询时最多只能移动到下一个路段。当预测时间长度较长时，这种估计引入了更多的错误。
 
 ![](img/257e93db1726e97e2d89292b09ddfad7_157_0.png)
 
@@ -2319,7 +2325,7 @@ R-TPR±tree 的准确性与正确结果相差甚远（图 14）。$R^{DC}-tree$ 
 
 ### 5.1.2.3 执行时间
 
-R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如图 18 所示，其他算法在所有预测时间长度下的执行时间相对稳定。两种算法之间的性能差距随着预测时间长度的增加而扩大。
+`R-TPR±tree`的执行时间随预测时间长度的增加而逐渐增加。如图 18 所示，其他算法在所有预测时间长度下的执行时间相对稳定。两种算法之间的性能差距随着预测时间长度的增加而扩大。
 
 ### 5.1.3 路网拓扑的影响
 
@@ -2333,15 +2339,15 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 ### 5.1.3.1 页面访问
 
-图 19 显示了所有四种拓扑的结果。在所有情况下，$R^{DC}$-tree 显著优于 R-TPR$\pm$-tree。$R^D$-tree 的性能相对独立于路网拓扑，而当路段变短时，R-TPR$\pm$-tree 的性能较差。这可能是因为在 R-TPR$\pm$-tree 中的 TPR$\pm$-tree 在路段较长时对对象的分组效果更好。另一方面，$R^D$-tree 在路段较长时，每个哈希桶中的对象更多，这负面影响了性能。
+图 19 显示了所有四种拓扑的结果。在所有情况下，`$R^{DC}$-tree`显著优于`R-TPR±-tree`。`$R^D$-tree`的性能相对独立于路网拓扑，而当路段变短时，`R-TPR±-tree`的性能较差。这可能是因为在`R-TPR±-tree`中的`TPR±-tree`在路段较长时对对象的分组效果更好。另一方面，`$R^D$-tree`在路段较长时，每个哈希桶中的对象更多，这负面影响了性能。
 
 ### 5.1.3.2 准确性
 
-如图 20 所示，R-TPR$\pm$-tree 的查询结果包含大量的假阳性。实际值比 R-TPR$\pm$-tree 少了四分之一。但在执行时间方面，由于使用了排序列表来剪枝提前到达的车辆，$R^D$-tree 比 $R^{DB}$-tree 快得多。由于 $R^{DC}$-tree 继承了另外两种算法的所有剪枝能力，它实现了整体最佳性能。
+如图 20 所示，`R-TPR±-tree`的查询结果包含大量的假阳性。实际值比`R-TPR±-tree`少了四分之一。但在执行时间方面，由于使用了排序列表来剪枝提前到达的车辆，`$R^D$-tree`比`$R^{DB}$-tree`快得多。由于`$R^{DC}$-tree`继承了另外两种算法的所有剪枝能力，它实现了整体最佳性能。
 
 ### 5.1.3.3 执行时间
 
-如图 21 所示，R-TPR$\pm$-tree 的执行时间在 10–100K ms 之间，而 $R^D$-tree 的范围在 1–10 ms 之间。这种显著
+如图 21 所示，`R-TPR±-tree`的执行时间在 10–100K ms 之间，而`$R^D$-tree`的范围在 1–10 ms 之间。这种显著
 
 ![](img/257e93db1726e97e2d89292b09ddfad7_159_0.png)
 
@@ -2351,11 +2357,11 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 **图 21** 路网拓扑对执行时间的影响。
 
-R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如图 18 所示，其他算法在所有预测时间长度下的执行时间相对稳定。两种算法之间的性能差距随着预测时间长度的增加而扩大。
+`R-TPR±tree`的执行时间随预测时间长度的增加而逐渐增加。如图 18 所示，其他算法在所有预测时间长度下的执行时间相对稳定。两种算法之间的性能差距随着预测时间长度的增加而扩大。
 
 ## 5.2 连续查询
 
-非原生方法（de-naive）需要在每个时间戳执行每次查询，当结果没有变化时，可能会涉及重复工作。所提算法利用 TPR-tree 并同时检查所有受影响的查询。
+非原生方法（`de-naive`）需要在每个时间戳执行每次查询，当结果没有变化时，可能会涉及重复工作。所提算法利用`TPR-tree`并同时检查所有受影响的查询。
 
 作为提供连续信息（PLQ）的最先进方法之一，实验在不同的状态下进行。使用了不同的路地图生成 MO 集。评估了时间、查询数量、MO、预测长度和缓冲区大小等因素的影响。在每个 5 分钟的间隔内计算了误差率和维护成本。结果见图 22。通过改变 10 分钟到 60 分钟的长度研究了这些影响。
 
@@ -2385,9 +2391,6 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 对于包括原生方法在内的这些算法，越接近查询生命周期的结束（即查询进入查询路段的时间），通常需要的维护成本越少。这是因为随着时间的推移，影响区域在缩小，因此需要检查的对象减少了。注意 BO 方法在开始时维护成本略有增加。
 
-
-
-
 因为 BO 方法考虑了所有在同一时间戳发布的更新。当系统刚启动时，更新的数量较少，因为对象需要一些时间来提升速度。
 
 ## 5.2.2 查询数量的影响
@@ -2396,11 +2399,11 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 ### 5.2.2.1 准确性
 
-这四个算法在准确性方面均表现出稳定的性能（图 35(a)）。然而，朴素方法（naive approach）产生的错误率更高。
+这四个算法在准确性方面均表现出稳定的性能（图 35(a)）。然而，朴素方法（`naive approach`）产生的错误率更高。
 
 ### 5.2.2 页面访问
 
-如图23A 所示，无论查询数量多少，朴素方法都表现出相对稳定的性能。这意味着每个查询访问的平均页面数与执行的查询总数无关。每个查询都应用于同一个进程（$R^D$-树）。因此，成本仅取决于 $R^D$-树的大小，而与查询数量无关。然而，所提出的 SU、SO 和 BO 方法分别使用一个 $TPR^Q$-树，且存储在树中的查询数量会改变树的结构。
+如图23A 所示，无论查询数量多少，朴素方法都表现出相对稳定的性能。这意味着每个查询访问的平均页面数与执行的查询总数无关。每个查询都应用于同一个进程（`$R^D$-树`）。因此，成本仅取决于`$R^D$-树`的大小，而与查询数量无关。然而，所提出的 SU、SO 和 BO 方法分别使用一个`$TPR^Q$-树`，且存储在树中的查询数量会改变树的结构。
 
 | NAÏVE + BO | NAÏVE + BO |
 |---|---|
@@ -2416,7 +2419,7 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 | 错误率 | 页面访问（缓存） |
 
 | NAÏVE + BO |
-|---|---|
+|---|
 | 页面访问 |
 | 60 |
 | 40 |
@@ -2430,7 +2433,7 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 ## 5.2.3 缓冲区利用率的影响
 
-重复了之前节中的实验以观察缓冲区利用率的影响。使用的缓冲区具有 50 kb 容量和最久未使用（LRU）替换策略。图 23B 报告了增加缓冲区后不同查询百分比的查询成本。$^b$ 如图所示，20% 以内的查询维护成本几乎为零，其余查询集显示出查询成本的增加。增加的成本与图 23C 中的相当。比较图 23B 和 C 可以明显看出，使用缓冲区将查询性能提升了高达 20% 的水平。这是因为在 20% 以内，树结构中的节点数少于 50。因此，缓冲区可以容纳整棵树。每个树节点最多被访问一次以将节点加载到缓冲区中。一旦节点存储在树中，就不需要缓冲区替换。当树中的节点数超过缓冲区大小时，缓冲区无法同时容纳所有必要的树节点，缓冲区缺失率增加，这就是页面访问计数增加的原因。
+重复了之前节中的实验以观察缓冲区利用率的影响。使用的缓冲区具有 50 kb 容量和最久未使用（LRU）替换策略。图 23B 报告了增加缓冲区后不同查询百分比的查询成本。`$^b$` 如图所示，20% 以内的查询维护成本几乎为零，其余查询集显示出查询成本的增加。增加的成本与图 23C 中的相当。比较图 23B 和 C 可以明显看出，使用缓冲区将查询性能提升了高达 20% 的水平。这是因为在 20% 以内，树结构中的节点数少于 50。因此，缓冲区可以容纳整棵树。每个树节点最多被访问一次以将节点加载到缓冲区中。一旦节点存储在树中，就不需要缓冲区替换。当树中的节点数超过缓冲区大小时，缓冲区无法同时容纳所有必要的树节点，缓冲区缺失率增加，这就是页面访问计数增加的原因。
 
 ## 5.2.4 MO 数量的影响
 
@@ -2442,11 +2445,11 @@ R-TPR±tree 的执行时间随预测时间长度的增加而逐渐增加。如�
 
 ### 5.2.4.2 页面访问
 
-图 24B 显示了四个算法的查询成本。根据图表，所有算法的一个共同观察是，当对象数量增加时，它们都需要更多的页面访问。在朴素方法中，这是因为 RD-树扩展了对象数量，因此节点访问次数随之增加。在所提出的算法中，TPR-树结构保持不变，但与树相比，更新消息的数量增加了。另一个重要的观察是，朴素方法在对象较少时给出最差的查询成本，并在对象数量增加（约 60K）时超过了 SU 的性能。原原因是朴素方法的页面访问计数取决于两个因素：RD-树的大小和更新消息的数量。对于较大的对象数量，RD-树的扩展比较小对象数量慢。这种相同的扩展速度也将应用于页面访问计数。此外，每个更新消息搜索的更新消息数量与页面访问计数成正比，因为对每个更新消息都要搜索 RD-树。然而，SU 算法也会为每条更新消息访问 TPR-树。事实上，SU 算法为每条消息访问两次 TPR-树。
+图 24B 显示了四个算法的查询成本。根据图表，所有算法的一个共同观察是，当对象数量增加时，它们都需要更多的页面访问。在朴素方法中，这是因为`RD-树`扩展了对象数量，因此节点访问次数随之增加。在所提出的算法中，`TPR-树`结构保持不变，但与树相比，更新消息的数量增加了。另一个重要的观察是，朴素方法在对象较少时给出最差的查询成本，并在对象数量增加（约 60K）时超过了 SU 的性能。原原因是朴素方法的页面访问计数取决于两个因素：`RD-树`的大小和更新消息的数量。对于较大的对象数量，`RD-树`的扩展比较小对象数量慢。这种相同的扩展速度也将应用于页面访问计数。此外，每个更新消息搜索的更新消息数量与页面访问计数成正比，因为对每个更新消息都要搜索`RD-树`。然而，SU 算法也会为每条更新消息访问`TPR-树`。事实上，SU 算法为每条消息访问两次`TPR-树`。
 
-> $^b$ 由于准确性不受缓冲区影响，因此在本文讨论中省略。
+> `$^b$` 由于准确性不受缓冲区影响，因此在本文讨论中省略。
 
-TPR-树的优势。
+`TPR-树`的优势。
 
 | | NAÏVE + BO | NAÏVE + BO |
 |---|---|---|
@@ -2471,7 +2474,7 @@ TPR-树的优势。
 
 ### 5.2.5.2 页面访问
 
-如图 25B 所示，预测时间会影响查询成本。对于朴素方法，随着预测时间的增加，成本也会增加。这同样由于 TPR 树的优势。
+如图 25B 所示，预测时间会影响查询成本。对于朴素方法，随着预测时间的增加，成本也会增加。这同样由于`TPR`树的优势。
 
 | | NAIVE + BO |
 |---|---|
@@ -2498,16 +2501,14 @@ TPR-树的优势。
 
 交通相关查询可以提高旅行者的驾驶体验。为了给用户提供更有效高效的服务，需要解决若干研究问题。其中一个问题涉及考虑从欧几里得空间到路网的环境的变化。另一个问题是在道路网络约束内的查询类型（例如，交通相关的预测查询）。
 
+本章讨论了一种名为`$R^D$-tree`的索引结构，该结构支持对路网约束下移动对象的预测性查询。`$R^D$-tree`支持常见的空间查询类型（例如范围查询和 KNN）以及预测性查询（例如线查询）。预测性查询分两个版本进行处理：快照查询（`snapshot query`）和连续查询（`continuous query`）。通过为每个用户单独定制查询结果，查询具备了智能性。用户的个人目的地及其预测路径都被考虑在定制化范围内。具体而言，用户将仅获得与其路线相关的交通信息。因此，用户可以调整路线以规避或缓解可能发生的影响。
 
-
-
-本章讨论了一种名为 $R^D$-tree 的索引结构，该结构支持对路网约束下移动对象的预测性查询。$R^D$-tree 支持常见的空间查询类型（例如范围查询和 KNN）以及预测性查询（例如线查询）。预测性查询分两个版本进行处理：快照查询（snapshot query）和连续查询（continuous query）。通过为每个用户单独定制查询结果，查询具备了智能性。用户的个人目的地及其预测路径都被考虑在定制化范围内。具体而言，用户将仅获得与其路线相关的交通信息。因此，用户可以调整路线以规避或缓解可能发生的影响。
-
-本章还讨论了上述两种查询版本的解决方案：$R^{DB}$-tree、 $R^{BE}$-tree 和 $R^C$-tree。它们被应用于多种启发式方法，且启发式方法的强度按递增顺序排列。由于最强大的启发式方法被应用于 $R^{DC}$-tree，它表现出最佳的性能。连续版本的方法包括单独更新（SU）、单独对象（SO）和批量对象（BO）。这三种变体与一种重复执行快照线查询的朴素方法进行了对比。在这三种方法中，BO 算法在页面访问和准确性方面均报告了最佳性能。
+本章还讨论了上述两种查询版本的解决方案：`$R^{DB}$-tree`、`$R^{BE}$-tree`和`$R^C$-tree`。它们被应用于多种启发式方法，且启发式方法的强度按递增顺序排列。由于最强大的启发式方法被应用于`$R^{DC}$-tree`，它表现出最佳的性能。连续版本的方法包括单独更新（SU）、单独对象（SO）和批量对象（BO）。这三种变体与一种重复执行快照线查询的朴素方法进行了对比。在这三种方法中，BO 算法在页面访问和准确性方面均报告了最佳性能。
 
 本研究范围适用于进一步的探索和扩展。以下列出了一些潜在领域：
 
-- 本章处理的查询类型是触发查询（initiated queries）。这意味着用户指定了其感兴趣的路段。当估计该路段（针对未来时间）的交通状况时，假设所有当前报告的对象的行为均保持有效。然而，可能存在某些密集路段可能会干扰当前假设的移动模式。这导致需要开发出识别相互独立的密集路段的方法，而不仅仅是估计用户定义路段的交通状况。开发能够同时搜索时间维空间维度的有效技术将是一项有趣且具有挑战性的任务。
+- 本章处理的查询类型是触发查询（`initiated queries`）。这意味着用户指定了其感兴趣的路段。当估计该路段（针对未来时间）的交通状况时，假设所有当前报告的对象的行为均保持有效。然而，可能存在某些密集路段可能会干扰当前假设的移动模式。这导致需要开发出识别相互独立的密集路段的方法，而不仅仅是估计用户定义路段的交通状况。开发能够同时搜索时间维空间维度的有效技术将是一项有趣且具有挑战性的任务。
+
 - 本章提出的方法由一个中央服务器和一组薄客户端组成。然而，随着现代技术的发展，移动对象的计算能力已足以处理相当的工作。因此，识别移动对象可能的负载均衡方案将产生极具前景的性能提升，特别是在扩展性方面。
 
 # 参考文献
@@ -2528,11 +2529,13 @@ TPR-树的优势。
 
 [8] J. Chen, X. Meng, Update-efficient indexing of moving objects in road networks, Geformatica 13 (4) (2009) 397–424.
 
-[9] C. Guiboh, L. Yanong, J. Jianjun, L. Sun, Y. Fumin, Reverse K nearest neighbor monitoring on moving objects in road networks, in: M. Selkowitz, (Ed.), Advances in Computers, vol. 67, Elsevier, 2006, pp. 1–84. Available at: http://www.sciencedirect.com/science/article/pii/S006524850600570
+
+
+[9] C. Guiboh, L. Yanong, J. Jianjun, L. Sun, Y. Fumin, Reverse K nearest neighbor monitoring on moving objects in road networks, in: M. Selkowitz, (Ed.), Advances in Computers, vol. 67, Elsevier, 2006, pp. 1–84. Available at: `http://www.sciencedirect.com/science/article/pii/S006524850600570`
 
 [10] J. Zhang, L. Gruwald, Spacial and temporal awareness, trajectory profile based location for mobile computing, in: Proceedings of the 13th International Workshop on Event and Database Systems, 2002, pp. 716–72.
 
-[11] S. Chen, B.C. Oii, K.-L. Tan, M.A. Mansfield, STB-tree: a tunable spatio-temporal tree for moving objects; in Proceedings of the 2008 ACM SIGMOD International Conference on Management of Data, ser. SIGMOD’08. New York, pp. 29–42. Available at: http://dl.acm.org/10.1145/1507568.150763
+[11] S. Chen, B.C. Oii, K.-L. Tan, M.A. Mansfield, STB-tree: a tunable spatio-temporal tree for moving objects; in Proceedings of the 2008 ACM SIGMOD International Conference on Management of Data, ser. SIGMOD’08. New York, pp. 29–42. Available at: `http://dl.acm.org/10.1145/1507568.150763`
 
 [12] J.-D. X.-F. Meng, Indexing future trajectories of moving objects in constrained network, in: Comput. Sci. Technol. 22 (2007) 245–251.
 
@@ -2540,7 +2543,7 @@ TPR-树的优势。
 
 [14] H. Wang, R. Zimmermann, Snapshot location-query-based processing on moving objects in road networks, in Proceedings of the 16th ACM SIGSPIAL Conference on Advances in Geographic Systems, ser. GIS’08.
 
-[15] J. Patel, V. Chakra, Stripes: An efficient index for predicted trajectories, in Proceedings of the 2004 ACM SIGMOD International Conference on Management of Data, ser. SIGMOD ’04. New York, pp. 635–646. Available at: http://dl.acm.org/10.1145/1007568.100769
+[15] J. Patel, V. Chakra, Stripes: An efficient index for predicted trajectories, in Proceedings of the 2004 ACM SIGMOD International Conference on Management of Data, ser. SIGMOD ’04. New York, pp. 635–646. Available at: `http://dl.acm.org/10.1145/1007568.100769`
 
 [16] D. Ross, Lee., Indexing the current positions of moving objects using lazy R-tree, in Proceedings of the 3rd International Conference on Mobile Management, 2002, pp. 113–120.
 
@@ -2588,10 +2591,6 @@ TPR-树的优势。
 
 [39] N. Beckmann, H.-P. Kriegel, R. Schneider, B. Seeger, The R*-tree: an efficient and robust method for points and rectangles; in Proceedings of the 1990 ACM SIGMOD International Conference on Management of Data, 1990.
 
-
-
-
-
 [40] J. Le, L. Liu, Y. Guo, M. Ying. 道路网中的高更新支持方法，收录：第4届无线通信、网络与移动计算国际会议, WiCOM08, 2008.
 
 [41] H. Kejia, L. Liangxu. 道路网上对象的高效索引，收录：计算智能与软件工程国际会议, CISE 2009.
@@ -2634,9 +2633,9 @@ Michael Wisely 于2012年在密苏里州科学技术大学获得计算机科学�
 
 Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任。她于2007年在新加坡国立大学获得计算机科学博士学位，并在普渡大学担任过两年博士后研究员。她的主要研究兴趣涵盖了数据库系统和信息安全领域的多个领域。
 
-**Sahra Sedigh Sarvestani博士** 是密苏里州科学技术大学电气与计算机工程副教授，同时也是该校智能系统中心的研究员。她的研究重点是可靠系统的开发、移动对象的应用、建模以及关键基础设施。她在密苏里州科学技术大学获得了学士、硕士和博士学位。她是IEEE和ACM成员。
+Sahra Sedigh Sarvestani博士 是密苏里州科学技术大学电气与计算机工程副教授，同时也是该校智能系统中心的研究员。她的研究重点是可靠系统的开发、移动对象的应用、建模以及关键基础设施。她在密苏里州科学技术大学获得了学士、硕士和博士学位。她是IEEE和ACM成员。
 
-**A.R. Huson** 是密苏里理工的计算机科学教授。在2008年至2012年期间，他担任计算机科学系主任。他的研究涵盖数据库、分布式系统和缓存内存。他发表了超过320篇受美国科学基金会（NSF）支持的技术论文。
+A.R. Huson 是密苏里理工的计算机科学教授。在2008年至2012年期间，他担任计算机科学系主任。他的研究涵盖数据库、分布式系统和缓存内存。他发表了超过320篇受美国科学基金会（NSF）支持的技术论文。
 
 ## 作者索引
 
@@ -2647,6 +2646,9 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Banerjee, A., 74–75
 - Bartol, N., 36
 - Baskaran, K., 78–79, 85
+
+
+
 - Bayen, A.M., 73
 - Beckmann, N., 134–135
 - Bentley, J.L., 127–128
@@ -2686,10 +2688,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Dallachiesa, M., 72–73
 - Dai, J., 135, 137, 138
 
-
-
-
 ## 172
+
 ## 作者索引
 
 - De Almeida, V.T., 130
@@ -2720,12 +2720,11 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Güting, R. H., 130
 - Guttman, A., 120–121
 
-## E
+### E
+
 - Earnest, L., 11–12
 - Eastwood, M., 72–73
 - Ebaid, A., 72–73
-
-## H
 - Edwards, P., 11–12
 - Hadieletferiou, M., 142t, 148
 - Edawy, A., 72–73
@@ -2738,7 +2737,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Han, J., 74
 - Harvey, E., 51
 
-## F
+### F
+
 - Hauben, R., 18
 - Hauser, C.H., 64
 - Fairley, R., 11, 23
@@ -2767,7 +2767,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Fung, B.C., 50
 - Hurson, A.R., 65, 70, 73, 119–126
 
-## G
+### G
+
 - Ily, F., 72–73
 - Gabrys, B., 72–73
 - Ingalsbe, J., 37
@@ -2779,7 +2780,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Gehrke, J., 70
 - Gerich, E., 26
 
-## J
+### J
+
 - Jacopini, G., 6–7
 - Jensen, C.S., 114, 117, 119–123, 125–126, 125t, 128–130, 137t
 - Jeung, H., 135, 137t
@@ -2826,7 +2828,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Mutz, M., 25
 - Lynch, D., 12
 
-## K
+### K
+
 - Kadlec, P., 72–73
 - Kahn, R.E., 12
 - Kalashikov, D.V., 142, 144, 146
@@ -2856,7 +2859,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Kumar, V., 74–75
 - Kwon, D., 117, 124
 
-## M
+### M
+
 - Maletic, J.L., 72–73
 - Mamamoulos, N., 115–126, 127t, 130, 135, 147
 - Manolopoulos, Y., 130
@@ -2867,7 +2871,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Mead, N.R., 30–40
 - Meng, X.-F., 115–116, 130, 133, 136t, 139
 
-## L
+### L
+
 - La Porta, T., 74
 - Lakshmanan, L.V., 72–73
 - Landwehr, C., 73
@@ -2875,7 +2880,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Langseth, H., 64
 - Laprie, J.-C., 73
 
-## M
+### M
+
 - Merania, N., 74–76
 - Mercurio, F., 80–81
 - Metz, C., 21–22
@@ -2895,7 +2901,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Mu, X., 24
 - Mukai, N., 117, 130–134, 136, 142, 151
 
-## N
+### N
+
 - Nanopoulos, A., 135, 137t, 148–150
 - Nascimento, M.A., 115–117, 126–127
 - Nash, E., 17
@@ -2909,15 +2916,18 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Utong, S., 148
 - Nytr, Y., 51–53
 
-## P
+### P
+
 - Predic, B., 135, 137t
 - Price, D., 13–14
 - Prokopenko, M., 78
 
-## Q
+### Q
+
 - Qureshi, K.N., 67–68
 
-## R
+### R
+
 - Rahm, E., 72
 - Rahman, F., 48–59
 - Rajajan, M., 79–80, 85
@@ -2934,20 +2944,23 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Rowe, D., 65
 - Rundensteiner, E., 149, 150
 
-## O
+### O
+
 - Obst., O., 77–78, 82
 - Onieva, E., 72
 - Ooi, B.C., 115–117, 126–129, 127t
 - Opre, A., 56
 - Ouzzani, M., 72–73
 
-## P
+### P
+
 - Palisamy, V., 77–79, 85
 - Paliswami, M., 74, 77–78
 - Panda, B.S., 81
 - Panda, M., 77, 84
 
-## S
+### S
+
 - Saltenis, S., 114, 117, 120–123, 125t
 - Saltzer, J.H., 13
 - Saltador, M.M., 72–73
@@ -2989,7 +3002,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Sun, H., 114, 120, 122–123
 - Szymanski, B., 78
 
-## T
+### T
+
 - Tan, K.-L., 115–117, 125–126, 125t
 - Tang, L.-A., 74
 - Tang, N., 72–73
@@ -3006,14 +3020,16 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Tung.-Y., 79–80, 99
 - Turner, A., 26
 
-## V
+### V
+
 - Valencia, P., 82
 - Vasi, R., 33–34
 - Villagra, J., 72
 - Vincentelli, A.S., 64
 - Vyas, S., 90
 
-## W
+### W
+
 - Wang, C., 51
 - Wang, G., 74
 - Wang, H., 116–117, 135–140, 142t, 147
@@ -3031,6 +3047,9 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Wisely, M., 64–105, 112–165
 - Witt, B.I., 8
 - Witten, I.H., 97
+
+
+
 - Wolff, R., 78
 - Wolff, S., 12
 - Wong, J., 11–12
@@ -3039,6 +3058,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Wyld, D.C., 51–57
 
 ## X
+
 - Xia, T., 148
 - Xia, Y., 120–121, 128, 142t, 144, 146
 - Xiang-guang, C., 78–79, 85
@@ -3046,6 +3066,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Xu, J., 142t, 143–144, 147
 
 ## Y
+
 - Yang, J.J., 48–59
 - Yanhong, L., 115–116, 130, 135, 137t
 - Yao, D., 72
@@ -3058,11 +3079,8 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - Mukai, N., 117, 130–134, 136, 142, 151
 - Y, N., 117, 120
 
-
-
-
-
 ## 178
+
 ## 主题索引
 
 - 跨区域 (CR)树, 131–132
@@ -3081,27 +3099,30 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - 网络安全法
 
 ## F
+
 - 联邦信息安全管理法 (FISMA), 31–32
 - FORTRAN, 8–9
 - 基于频率的查询处理, 143–151
-- 连续查询, 143–150
-- 快照查询, 143
+  - 连续查询, 143–150
+  - 快照查询, 143
 
 ## G
+
 - GOTO 语句, 6–7
 - 地面交通系统 (GTS), 115–116
 - 组最近邻查询 (GNNQ), 116–118
 - 组更新时间R树 (GTR), 135
 
 ## D
+
 - 数据学习, 65
-- 异常, 82–88
-- 数据类型, 96–101
-- 错误检测, 74–75
-- 源数据, 73–74
-- 系统约束, 89–96
-- 系统层次结构, 101–105
-- 技术, 72–81
+  - 异常, 82–88
+  - 数据类型, 96–101
+  - 错误检测, 74–75
+  - 源数据, 73–74
+  - 系统约束, 89–96
+  - 系统层次结构, 101–105
+  - 技术, 72–81
 - 数据损坏, 65, 66, 74, 89–90
 - 美国高级研究计划署 (DARPA), 12
 - 基于磁盘的索引, 132–135, 136
@@ -3109,124 +3130,132 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - 分布式拒绝服务 (DDOS) 攻击, 20
 
 ## H
+
 - 黑客攻击, 13–14, 19–20
 - 健康保险流通与责任法法 (HIPAA),
 
 ## I
+
 - IBM 结构化编程, 7–8, 81
 - 事件管理, 27–28
 - 移动对象索引 (MOs) 模型
-    - 基于B树的索引, 124–126
-    - DIME, 137, 138
-    - 基于磁盘的索引, 133–135
-    - 欧几里得空间, 120–130, 129
-    - 基于内存的索引, 123–147
-    - MovNet, 136, 137, 138
-    - 基于Q+R树的索引, 126–128
-    - 道路网络, 130–137
-    - 基于R树的索引, 121–124, 125t
+  - 基于B树的索引, 124–126
+  - DIME, 137, 138
+  - 基于磁盘的索引, 133–135
+  - 欧几里得空间, 120–130, 129
+  - 基于内存的索引, 123–147
+  - MovNet, 136, 137, 138
+  - 基于Q+R树的索引, 126–128
+  - 道路网络, 130–137
+  - 基于R树的索引, 121–124, 125t
 - 道路路段移动对象索引 (IMORS), 133
 
 ## E
+
 - 回声状态网络 (ESN), 77–78, 85
 - 2002年《电子政府法》, 30–31
--加密技术, mHealth, 57
+- 加密技术, mHealth, 57
 - 估计统计方法, 75–76, 85, 92–93
 - 欧几里得空间中的 MOs, 120–130, 129
-    - 基于B树的索引, 124–126
-    - KNNQ, 140f
-    - Q+R树, 128
-    - 基于四树的索引, 121–124, 125t, 127t
+  - 基于B树的索引, 124–126
+  - KNNQ, 140f
+  - Q+R树, 128
+  - 基于四树的索引, 121–124, 125t, 127t
 - 基于信息的查询处理, 138–142
-    - KNNNQ, 139–140, 140f
-    - PLQ, 140–142
-    - 范围查询, 138–139, 139f
+  - KNNNQ, 139–140, 140f
+  - PLQ, 140–142
+  - 范围查询, 138–139, 139f
 - 信息安全, 20, 30–32
 - 智能控制系统, CPSs, 64–88
 - 智能交通系统 (ITS), 65–72
-    - 数据异常, 86–88, 86f, 88t
-    - 数据类型, 99–100, 99–100r
-    - 移动基础设施, 68–70, 87–88, 95–100, 101t
-    - 资源约束, 94–96, 94f, 96t
-    - 静态基础设施, 70–72, 86–87, 94–95, 99–100
+  - 数据异常, 86–88, 86f, 88t
+  - 数据类型, 99–100, 99–100r
+  - 移动基础设施, 68–70, 87–88, 95–100, 101t
+  - 资源约束, 94–96, 94f, 96t
+  - 静态基础设施, 70–72, 86–87, 94–95, 99–100
 - 智能供水网络, 69f
 - 国际网络安全报告与合作法, 33
 - 互联网
-    - BSI, 29–30
-    - 以及计算机安全, 14–15, 26–30
-    - CWE 项目, 29–30
-    - 事件管理, 27–28
-    - 事件响应, 27
-    - 恶意软件, 28–29
-    - 莫里斯虫 (Morris Worm), 14–15, 17
-    - 今天的概念, 26
+  - BSI, 29–30
+  - 以及计算机安全, 14–15, 26–30
+  - CWE 项目, 29–30
+  - 事件管理, 27–28
+  - 事件响应, 27
+  - 恶意软件, 28–29
+  - 莫里斯虫 (Morris Worm), 14–15, 17
+  - 今天的概念, 26
 - 相交导向网络R树 (INOR-tree), 131–132
 - 入侵检测系统 (IDS), 79–80
 
 ## K
+
 - K最近邻搜索 (KNN), 116–118, 119–130, 140, 149–150
 
 ## L
+
 - 基于学习的检测, 77–85, 93, 98
 - 位置感知查询 (LaQs), 113–114
 - 位置依赖查询 (LDQ), 113–114, 116, 117f
 
 ## M
+
 - 恶意软件, 28–29
 - 主成分工程 (MSE), 23–24
 - 基于内存的索引, 132, 135
-    - 道路网络上的最小边界矩形 (MBR) MOs, 131–132
-    - 基于四树的索引, 126–128
-    - 基于R树的索引, 121–124
-    - 时间参数化的, 121
+  - 道路网络上的最小边界矩形 (MBR) MOs, 131–132
+  - 基于四树的索引, 126–128
+  - 基于R树的索引, 121–124
+  - 时间参数化的, 121
 - 移动健康 (mHealth), , 48–59
-    - 数据异常, 87–88
-    - 数据类型, 100–101, 100t
-    - 层次化位置, 104–105, 104t
-    - 资源约束, 95–96, 96f
+  - 数据异常, 87–88
+  - 数据类型, 100–101, 100t
+  - 层次化位置, 104–105, 104t
+  - 资源约束, 95–96, 96f
 - 监控查询管理 (MQM), MOs
-    - 连续查询, 161–162
-    - 移动对象 (MOs) 模型基础设施, 115f
-    - 查询, 152–153, 152f
-    - 道路网络中的移动对象 (MOVNet), 136–137, 138
+  - 连续查询, 161–162
+  - 移动对象 (MOs) 模型基础设施, 115f
+  - 查询, 152–153, 152f
+  - 道路网络中的移动对象 (MOVNet), 136–137, 138
 - 多尺度主成分分析 (MPSCA), 78–79
 
 ## N
+
 - 国防拨款法 (NDAA), 38–39
 - 美国标准与技术研究院 (NIST), 36, 特别出版 800–53, 32–33
 - 数字数据类型, 97
 
 ## P
+
 - 个人电脑, 21–22
 - 预测性查询 (PLQ), 116–118, 140–142
-    - 长度连续查询, 163, 163f
-    - 快照查询算法, 153–155, 154–155f
+  - 长度连续查询, 163, 163f
+  - 快照查询算法, 153–155, 154–155f
 - 网络安全增强法, 38–39
 - 主成分分析 (PCA), 78–79, 85
 - 移动健康 (mHealth), 48–59
-    - 访问控制机制, 57–58
-    - 基于手机的 mHealth 服务, 53–54
-    - 加密技术, 57
+  - 访问控制机制, 57–58
+  - 基于手机的 mHealth 服务, 53–54
+  - 加密技术, 57
 - 移动健康 (mHealth) (续)
-    - 物理活动监控, 49, 49f
-    - 隐私保护数据完整性检查, 58
-    - 隐私保护公开性, 58–59
+  - 物理活动监控, 49, 49f
+  - 隐私保护数据完整性检查, 58
+  - 隐私保护公开性, 58–59
 - 可证明数据所有, 58
-    - 意义, 55–56
-    - 社交网络护理护理, 54–57
-    - 应用, 51
-    - 隐私保护数据完整性检查协议, 58
-    - 隐私保护公开性, 58–59
+  - 意义, 55–56
+  - 社交网络护理护理, 54–57
+  - 应用, 51
+  - 隐私保护数据完整性检查协议, 58
+  - 隐私保护公开性, 58–59
 - 反向K最近邻查询 (RNNQ), 116–118
 - REXP-tree, 123
-    - DIME, 137, 138
-    - 基于磁盘的索引, 132–135, 136t
-    - 基于内存的索引, 132, 135, 137t
-    - MOVNet, 136–137, 138
+  - DIME, 137, 138
+  - 基于磁盘的索引, 132–135, 136t
+  - 基于内存的索引, 132, 135, 137t
+  - MOVNet, 136–137, 138
 - 路侧单元 (RU), 71, 86, 94, 99
 - 道路拓扑
-    - 连续查询算法, 164
-    - 快照查询算法, 155–157, 156–157t
+  - 连续查询算法, 164
+  - 快照查询算法, 155–157, 156–157t
 - 鲁棒GTR (RGTR), 135
 - 基于R树的索引, 121–124, 125t, 127t
 - 带有更新记录的R树 (RM-tree), 124, 128
@@ -3236,29 +3265,32 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - 可证明数据所有, 56, 58
 
 ## Q
+
 - Q+-tree, 128
 - 基于四树的索引, 126–128
 - 查询索引 (QI), 144, 146
 - 查询处理, 138–151
-    - 基于频率的查询, 143–151
-    - 基于信息的查询, 138–142
+  - 基于频率的查询, 143–151
+  - 基于信息的查询, 138–142
 
 ## R
+
 - 射频识别 (RFID) 技术, 51–53
 - 范围查询 (RQ), 116–118, 138–139
-    - 连续查询算法, 160–162
-    - 快照查询算法, 151, 154, 156–157t
+  - 连续查询算法, 160–162
+  - 快照查询算法, 151, 154, 156–157t
 - 资源约束
-    - 基于行为的检测, 93–94
-    - 基于估计算的检测, 92–93
-    - 硬件, 90
-    - ITS, 94, 96t
-    - 基于学习的检测, 93
-    - 网络引起的, 90–91
-    - 基于规则的检测, 91–92
-    - 类型, 89–91, 89t
+  - 基于行为的检测, 93–94
+  - 基于估计算的检测, 92–93
+  - 硬件, 90
+  - ITS, 94, 96t
+  - 基于学习的检测, 93
+  - 网络引起的, 90–91
+  - 基于规则的检测, 91–92
+  - 类型, 89–91, 89t
 
 ## S
+
 - SABRE/SAGE 网络, 11–12
 - 可扩展聚类分析 (SCBA), 149
 - 移动对象的预测轨迹索引 (STRIP), 127–129
@@ -3268,51 +3300,53 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
 - 快照查询算法, 143
 - 空间查询管理 (SQM), 146
 - 静态基础设施, ITS, 70–72
-    - 数据异常, 86–88, 86f, 88t
-    - 数据类型, 99–100, 99–100r
-    - 层次化位置, 104–105, 104t
-    - 资源约束, 95–96, 96f
+  - 数据异常, 86–88, 86f, 88t
+  - 数据类型, 99–100, 99–100r
+  - 层次化位置, 104–105, 104t
+  - 资源约束, 95–96, 96f
 - 结构化设计研讨会 (SDW), 7–8
 - 结构化编程, 9
 - 结构化编程研讨会 (SPW), 7–8
 - 供应链风险管理 (SCRM), 35–37
-    - 供应链复杂度, 33–37
-    - 自下而上集成, 34
-    - 关键基础设施风险, 35–36
-    - 集成应用, 34
+  - 供应链复杂度, 33–37
+  - 自下而上集成, 34
+  - 关键基础设施风险, 35–36
+  - 集成应用, 34
 - 系统层次结构
-    - ITS基础设施, 102–105
-    - 级别, 101–102
+  - ITS基础设施, 102–105
+  - 级别, 101–102
 - 系统集成, 33
+
 ## T
+
 - 技术融合, 13–14
 - 威胁融合, 13–14
 - 时间清洗器, 80–81
 - 时间参数化R树 (TPR–tree)
-    - MBs, 121–123, 121/
+  - MBs, 121–123, 121/
 - 质量数据管理 (TQDM), 72–73
 - TPR^{tree}, 133–134
 - 交通控制, ITS, 72, 86–95
 
 ## W
+
 - 软件工程教育与培训工作组 (WGSEET), 24–25
 - 软件工程知识体系 (SWEBOOK), 25–26
 - 软件工程协调委员会 (SWECC), 工程协会 (SEI), 11, 23
 - 软件管理研讨会 (SMW), 7–8
 - 单独对象 (SO) 维护算法, 145–146, 161–162
 - 单独更新 (SU) 维护算法, 145–146, 161–162
+
 ## V
+
 - 病毒, 16–17
 - 脑启动, 17
 - “野外中”, 17
 
-
-
-
-
 ## 本系列目录
 
 ## 第 60 卷
+
 - 软件专业人员的许可与认证
   DONALD J. BAGERT
 - 认知攻击
@@ -3329,6 +3363,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   GEOFFREY ZWEIG AND MICHAEL PEICH
 
 ## 第 61 卷
+
 - 软件架构评估
   ROSBAN TERSIERO, PATRICIA COSTA, AND MIKAEL LIND
 - 高性能微处理器的高效架构设计
@@ -3341,6 +3376,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   DAVID COPE, MARK OSKIN, AND FREDERICK CHONG
 
 ## 第 62 卷
+
 - 敏捷方法导论
   DAVID COHEN, MICHAEL LIND, AND PATRICIA COSTA
 - 迭代软件开发的时间箱过程
@@ -3357,6 +3393,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   SURAJIT CHAUDHURI, UMESHWAR DAYAL, AND VENKATESH GANTI
 
 ## 第 63 卷
+
 - 超流水线的性能提升技术：超标体系
   JEAN-LUC GIGIOT, JUNG-YUP KANG, AND WON WOO
 - 片上网络：下一代片上系统的互连连接
@@ -3371,6 +3408,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   AMAR MUKHERJEE, TAO GAO, AND WEIFENG SANG
 
 ## 第 64 卷
+
 - Web 服务的自动评估
   ABIUR CHOWDHURY
 - Web 服务
@@ -3387,6 +3425,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   PETER GREGOR, DAVID SLOAN, AND ALAN F. NEWELL
 
 ## 第 65 卷
+
 - 人工智能的艺术
   ADRIAN A. HOPGOOD
 - 使用 SPIN 进行软件模型检测
@@ -3405,6 +3444,7 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   PETER B. HENDERSON
 
 ## 第 66 卷
+
 - 计算软件过程改进的投资回报
   NI VAN SOLINGEN AND DAVID RICO
 - 软件数据质量测量
@@ -3419,442 +3459,653 @@ Dan Lin 是密苏里州科学技术大学副教授兼网络安全实验室主任
   DOUGLAS E. POST, RICHARD KENDALL, AND ROBERT F. LUCAS
 
 ## 第 67 卷
+
 - 无线环境下传播公共数据的广播手段——问题与解决方案
   A. R. HURSON, Y. JIAO, AND B. A. SHIRAZ
 - 离线应用的编程模型与同步技术
-  AVHAM LEFF AND JAMES T. RAYFIELD
-- 学术电子期刊：过去、现在与未来
-  ANAT HOV AND PAUL GRAY
-- 提高可靠性的 Web 测试
-  JEFF TIAN AND LI MA
-- 无线安全问题
-  MICHAEL SHULTZ, JACOB UECKER, AND HAL BERGLM
-- 数字取证的现状
-  DARIO FORTE
-
-## 第 68 卷
-- 通过基因组重排揭示系统发育关系
-  NYING CHIH AND CHUAN YI TANG
-- 比较基因组学的模型与方法
-  GUILLAUME BOURQUE AND LOUXIN
-- 转位距离：算法与复杂度
-  USHENG WANG
-- 生命树组装中的计算挑战
-  DAVID BADER, USMAN ROSHAN, AND ALEXANDROS STATAMIS
-- 蛋白质的局部结构比较
-  JUN HUAN, JAN PRINS, AND WEI WANG
-- 串联质谱肽鉴定
-  XUE WU, NATHAN EDWARDS, AND CHAU-WEN TSENG
-
-## 第 69 卷
-- 高效多核处理架构
-  RAK KUMAR AND DEAN M. TULLSEN
-- 面向性能与功率的计算集群设计
-  KIRK W. CAMERON, RONG GE, AND XIZHOU FENG
-- 编译器辅助缓存泄漏减少
-  WEI ZANG
-- 移动游戏：挑战与机遇
-- 高性能计算的生产力
-- 压缩文本检索
-  AMAR MUKHERJEE, TAO GAO, AND WEIFENG SANG
-
-## 第 70 卷
-- 用于学习的网络化手持设备设计
-  JEREMY ROSCH, PATTON, AND TATAR
-- 信息过滤的交互式解释自然语言对话
-  JOHN ATKINSON AND ANITA FERREIRA
-- 语言定制之旅
-  COLIN ATKINSON AND THOMAS KUHNE
-- 网络鱼：攻击与防御策略
-  AL BERG, JAMES CARPINTER, AND JOHN
-- 系统可靠性的反思
-  PETER G. NEUMANN
-
-## 第 71 卷
-- 纳米技术编程：从自然学习
-  BOONSEM KAEAMNER, PETER J. BENTLEY, AND NAVNEET BHALLA
-- 纳米生物学：生物工程师
-  YI ZHAO AND XIN ZHANG
-- 纳米级传感：天然与人工鼻子作为小型高密度传感系统的模型
-  BRIGITTE M. ROLFE
-- 纳米电子系统仿真
-  UMBERTO RAVOLI
-- 社会中的纳米技术
-  CHARLES TAHAN
-- 纳米技术、政策与伦理的交叉
-  ERIK FISHER
-
-## 第 73 卷
-- 泛在系统中透明性、效率与安全的平衡
-  MARK WENSTROM, ELISAISA BENTIVEGNA, AND ALI R. HURSON
-- 使用 RFID 计算：驱动因素、技术与影响
-  GEORGE ROUSSOUS
-- 医疗机器人与计算机集成干预医学
-  RUSSELL H. TAYLOR AND PETER KAZANZAKIDIS
 
 
 
+# AVHAM LEFF AND JAMES T. RAYFIELD
 
+## 学术电子期刊：过去、现在与未来
+
+ANAT HOV AND PAUL GRAY
+
+## 提高可靠性的 Web 测试
+
+JEFF TIAN AND LI MA
+
+## 无线安全问题
+
+MICHAEL SHULTZ, JACOB UECKER, AND HAL BERGLM
+
+## 数字取证的现状
+
+DARIO FORTE
+
+# 第 68 卷
+
+## 通过基因组重排揭示系统发育关系
+
+NYING CHIH AND CHUAN YI TANG
+
+## 比较基因组学的模型与方法
+
+GUILLAUME BOURQUE AND LOUXIN
+
+## 转位距离：算法与复杂度
+
+USHENG WANG
+
+## 生命树组装中的计算挑战
+
+DAVID BADER, USMAN ROSHAN, AND ALEXANDROS STATAMIS
+
+## 蛋白质的局部结构比较
+
+JUN HUAN, JAN PRINS, AND WEI WANG
+
+## 串联质谱肽鉴定
+
+XUE WU, NATHAN EDWARDS, AND CHAU-WEN TSENG
+
+# 第 69 卷
+
+## 高效多核处理架构
+
+RAK KUMAR AND DEAN M. TULLSEN
+
+## 面向性能与功率的计算集群设计
+
+KIRK W. CAMERON, RONG GE, AND XIZHOU FENG
+
+## 编译器辅助缓存泄漏减少
+
+WEI ZANG
+
+## 移动游戏：挑战与机遇
+
+## 高性能计算的生产力
+
+## 压缩文本检索
+
+AMAR MUKHERJEE, TAO GAO, AND WEIFENG SANG
+
+# 第 70 卷
+
+## 用于学习的网络化手持设备设计
+
+JEREMY ROSCH, PATTON, AND TATAR
+
+## 信息过滤的交互式解释自然语言对话
+
+JOHN ATKINSON AND ANITA FERREIRA
+
+## 语言定制之旅
+
+COLIN ATKINSON AND THOMAS KUHNE
+
+## 网络鱼：攻击与防御策略
+
+AL BERG, JAMES CARPINTER, AND JOHN
+
+## 系统可靠性的反思
+
+PETER G. NEUMANN
+
+# 第 71 卷
+
+## 纳米技术编程：从自然学习
+
+BOONSEM KAEAMNER, PETER J. BENTLEY, AND NAVNEET BHALLA
+
+## 纳米生物学：生物工程师
+
+YI ZHAO AND XIN ZHANG
+
+## 纳米级传感：天然与人工鼻子作为小型高密度传感系统的模型
+
+BRIGITTE M. ROLFE
+
+## 纳米电子系统仿真
+
+UMBERTO RAVOLI
+
+## 社会中的纳米技术
+
+CHARLES TAHAN
+
+## 纳米技术、政策与伦理的交叉
+
+ERIK FISHER
+
+# 第 73 卷
+
+## 泛在系统中透明性、效率与安全的平衡
+
+MARK WENSTROM, ELISAISA BENTIVEGNA, AND ALI R. HURSON
+
+## 使用 RFID 计算：驱动因素、技术与影响
+
+GEORGE ROUSSOUS
+
+## 医疗机器人与计算机集成干预医学
+
+RUSSELL H. TAYLOR AND PETER KAZANZAKIDIS
 
 # 第 74 卷
 
-Windows 与 Unix 文件系统中的数据隐藏策略
+## Windows 与 Unix 文件系统中的数据隐藏策略
+
 HAL BERGHEL, DAVID HOELZER, AND MICHAEL SHULTZ
-多媒体与传感器安全
+
+## 多媒体与传感器安全
+
 ANNA HACĆ
 
-邮件垃圾过滤
+## 邮件垃圾过滤
+
 ENRIQUE PUERTAS SANZ, JOS MARÍA GÓMEZ HIDALGO, AND JOS CARLOS CORTIZ PÉREZ
 
-用于混合软件成本估计与风险分析的仿真技术
-MICHAEL KLAS, ADAM TRENDWICK, AXEL WICKENKAM, JÜRGEN MÜNCH,
-NAOMI KIRUCH, AND YASUSHI ISHAI
+## 用于混合软件成本估计与风险分析的仿真技术
 
-用于开发软件工程实验家族的环境
-LORIN HOCHSTEIN, TAIGA NAKAMURA, FOREST SHULL, NICO ZAZWORKA,
-VICTOR R. BASIL, AND MARVIN V. ZELKOWITZ
+MICHAEL KLAS, ADAM TRENDWICK, AXEL WICKENKAM, JÜRGEN MÜNCH, NAOMI KIRUCH, AND YASUSHI ISHAI
 
-全球软件开发：起源、原理与方向
+## 用于开发软件工程实验家族的环境
+
+LORIN HOCHSTEIN, TAIGA NAKAMURA, FOREST SHULL, NICO ZAZWORKA, VICTOR R. BASIL, AND MARVIN V. ZELKOWITZ
+
+## 全球软件开发：起源、原理与方向
+
 JAMES J. CUSICK, ALPANA PRASAD, AND WILLIAM M. TEPFENART
 
 # 第 75 卷
 
-英国 HPC 集成市场：基于通的集群
+## 英国 HPC 集成市场：基于通的集群
+
 CHRISTINE A. KITCHEN AND MARTYN F. GUEST
 
-高性能可重构计算的要素
+## 高性能可重构计算的要素
+
 TOM VANCOURT AND MARTIN C. HERBORDT
-能效计算的模型与指标
+
+## 能效计算的模型与指标
+
 PARTHASARATHA RAGANATHAN, SUZANE RIVOIRE, AND JUSTIN MOORE
 
-计算机性能评估的兴起格局
-JOANN M. PAUL, MUAFDAQ OTOOM, MARC SOMERS, SEAN PIEPER,
-AND MICHAEL J. SCHULTE
+## 计算机性能评估的兴起格局
 
-Web 测试的进展
+JOANN M. PAUL, MUAFDAQ OTOOM, MARC SOMERS, SEAN PIEPER, AND MICHAEL J. SCHULTE
+
+## Web 测试的进展
+
 CYTRICA EATON AND ATIF M. MEM
 
 # 第 76 卷
 
-信息共享与社交计算：为什么、是什么、何在哪里？
+## 信息共享与社交计算：为什么、是什么、何在哪里？
+
 ODED NOV
-社交网络网站：用户与用途
-MIKE THELWALL
-GRAHAM MORGAN
-高交互性在线商店
 
-社交网站的未来：带有语义的数据共享与受信应用程序
-SHEILA KENSILLA, ALEXANDRE PASSANT, JOHN G. BRELIN, STEFAN DECKER,
-AND AJIT JAKAR
+## 社交网络网站：用户与用途
 
-基于轻量级服务描述的语义网架构
-TOMAS VITIVAR, JACEK KOPECKY, JANA VISKOA, ADRIAN MOCAN, MICK KERRIGAN,
-AND DIETER FENSEL
+MIKE THELWALL, GRAHAM MORGAN
 
-Web 2.0 获取企业数据的问题与方法
+## 高交互性在线商店
+
+## 社交网站的未来：带有语义的数据共享与受信应用程序
+
+SHEILA KENSILLA, ALEXANDRE PASSANT, JOHN G. BRELIN, STEFAN DECKER, AND AJIT JAKAR
+
+## 基于轻量级服务描述的语义网架构
+
+TOMAS VITIVAR, JACEK KOPECKY, JANA VISKOA, ADRIAN MOCAN, MICK KERRIGAN, AND DIETER FENSEL
+
+## Web 2.0 获取企业数据的问题与方法
+
 RAHAM LEFF AND JAMES T. RAYFIELD
 
 # 本系列各卷目录
 
-Web 内容过滤
+## Web 内容过滤
+
 JOSÉ MARÍA GÓMEZ HIDALGO, ENRIQUE PUERTAS SANZ, FRANCISCO CARRERO GARCÍA, AND MANUEL DE BUENAGA RODRÍUEZ
 
 # 第 77 卷
 
-- 照片伪造与取证
+## 照片伪造与取证
+
 HANY FARID
-计算机显示器的进展
+
+## 计算机显示器的进展
+
 JASON LEE, ANDREW JOHNSON, AND LUC RENAMBOT
-玩转所有感官：用于游戏的人机接口
+
+## 玩转所有感官：用于游戏的人机接口
+
 JÖRN LOVISCH
-P 与 NP 问题的现状报告
+
+## P 与 NP 问题的现状报告
+
 ERIK ALLENDER
-动态类型语言
+
+## 动态类型语言
+
 LAURENCE TRATT
-影响软件开发生产力——最新现状与工业经验
+
+## 影响软件开发生产力——最新现状与工业经验
+
 ADAM TRAENDOWICZ AND JÜRGEN MÜNCH
-软件架构设计的可修改性评估
+
+## 软件架构设计的可修改性评估
+
 M. OLOMADE SALIU, GÜNTER RUHE, MIKAEL LINDVALL, AND CHRISTOP ACKERMANN
-普通法及其对互联网的影响
+
+## 普通法及其对互联网的影响
+
 ROBERT ALLEN, DAVID JAMES, PERCY POON, AND PAUL D. THISTLE
 
 # 第 78 卷
 
-- 搜索引擎优化——黑帽与白帽方法
+## 搜索引擎优化——黑帽与白帽方法
+
 ROSS A. MALAGA
-Web 搜索与浏览：多语言视角
+
+## Web 搜索与浏览：多语言视角
+
 WINGYAN CHUNG
-基于内容的音频检索特性
+
+## 基于内容的音频检索特性
+
 DALIBOR MITROVIĆ, MATTHAS ZEPPELAUZER, AND CHRISTIAN BREITENBERG
-无线移动局域网上的多媒体服务
+
+## 无线移动局域网上的多媒体服务
+
 KOSTAS PENTISKUS, JARNO PINOLA, ESA PIRI, PEDRO NEVES, AND SUSANA SARIENTO
-Web 工作量估计概述
+
+## Web 工作量估计概述
+
 EMILIA MENDES
-即性小组交互的通信媒介选择
+
+## 即性小组交互的通信媒介选择
+
 FABIO CALEFATO AND FILIPPO LANUBILE
 
 # 第 79 卷
 
-- 数据密集型计算中的应用
-ANUJ R. SHAH, JOSHUA N. ANKINS, DOUGLAS J. BAXTER, WILLIAM R. CANNON,
-DANIEL G. CHAVARRIA-MIRANDA, SUTAN CHOUDHURY, IAN GORTON,
-DEBORAH H. GRACIO, TODD D. HALTER, NAVDEEP D. JAITLY, JOHN R. JOHNSON,
-RICHARD T. KOUZES, MATTHEW C. MACDUFF, ANDRES MARQUE,
-MATTHEW E. MONROE, CHRISTOPHER S. OEHMEN, WILLIAM A. PIKE, CHAD SCHERRER, ORESTE VILLA, BOBBIE-JO WEBB-ROBERTSON, PAUL D. WHITNEY, AND NINO ZULJEVIC
+## 数据密集型计算中的应用
 
-多核编程的陷阱与问题
+ANUJ R. SHAH, JOSHUA N. ANKINS, DOUGLAS J. BAXTER, WILLIAM R. CANNON, DANIEL G. CHAVARRIA-MIRANDA, SUTAN CHOUDHURY, IAN GORTON, DEBORAH H. GRACIO, TODD D. HALTER, NAVDEEP D. JAITLY, JOHN R. JOHNSON, RICHARD T. KOUZES, MATTHEW C. MACDUFF, ANDRES MARQUE, MATTHEW E. MONROE, CHRISTOPHER S. OEHMEN, WILLIAM A. PIKE, CHAD SCHERRER, ORESTE VILLA, BOBBIE-JO WEBB-ROBERTSON, PAUL D. WHITNEY, AND NINO ZULJEVIC
+
+## 多核编程的陷阱与问题
+
 AMI Marowaka
 
-无线安全的幻象
+## 无线安全的幻象
+
 ALFRED W. LOO
 
-用于机器人和假肢设备操作的脑机接口
+## 用于机器人和假肢设备操作的脑机接口
+
 DENNIS J. McFARLAND AND JONATHAN R. WOLPAW
 
-工具视角下的软件逆向工程：需求、构建与评估
+## 工具视角下的软件逆向工程：需求、构建与评估
+
 HOLGER. M. KIENLE AND HAUSI A. MÜLLER
 
 # 第 80 卷
 
-敏捷软件开发方法与实践
+## 敏捷软件开发方法与实践
+
 LAURIE WILLIAMS
 
-基于模型的测试领域的图景：概念、技术与挑战
+## 基于模型的测试领域的图景：概念、技术与挑战
+
 ATIF M. MEON AND GUILLER H. TRAVASSOS
-下一代通信服务中三角测量的经验知识发现
+
+## 下一代通信服务中三角测量的经验知识发现
+
 JOE MAMBRETT, TOM DEFANTI, AND MAXINE BROWN
-交换、全球业务
-条码扫描的可靠性
+
+## 交换、全球业务
+
+## 条码扫描的可靠性
+
 AMIT GROVER, PAUL BRAECKE, KEVIN LINDGEN, HAL BERGHEL, AND DENNIS
-基于视频的人类活动分析进展
-PAYAN TURAGA, RAMA CELLAPPA, 
+
+## 基于视频的人类活动分析进展
+
+PAYAN TURAGA, RAMA CELLAPPA
 
 # 第 81 卷
 
-VoIP 安全：漏洞、利用与防御
+## VoIP 安全：漏洞、利用与防御
+
 XINYUAN WANG AND RUSHAN ZHANG
-电话到电话的配置
+
+## 电话到电话的配置
+
 YIU-WING LEUNG
-针对行人与应急响应场景的 SLAM
+
+## 针对行人与应急响应场景的 SLAM
+
 CARL FISCHER, KAVITH MUKHTISHAN
-感受蓝牙：从安全角度看
+
+## 感受蓝牙：从安全角度看
+
 PAUL BRAECKE
-数字封建：从权利管理到数字化
+
+## 数字封建：从权利管理到数字化
+
 SASCHA SAGLIETTI, AND W. PICKARD
-在线
-在线广告
+
+## 在线广告
+
 AVI GOLARB AND CATHERINE TUCKER
 
 # 本系列各卷目录
 
 # 第 82 卷
 
-信息市场的逻辑与原因
+## 信息市场的逻辑与原因
+
 AREEJ YASSIN AND ALAN
-技术债的测量与监控
+
+## 技术债的测量与监控
+
 CAROLYN SEAMAN AND YEUPU
-能效数据中心与云计算的分类与综述
+
+## 能效数据中心与云计算的分类与综述
+
 ANTON BELOGAZOV, RAJKUMAR BUYYA, YOUNG CHOON LEE
-移动代理在无线网络与移动计算中的应用
+
+## 移动代理在无线网络与移动计算中的应用
+
 SERGIO GONZLEZ-VALENELA, MIN CHEN, AND VICTOR C.
-广播制作的虚拟图形
+
+## 广播制作的虚拟图形
+
 GRAHAM THOMAS
-虚拟现实的高级应用
-JURGEN P. SCHULZE, HAN KIM, PHILIP WEBER, AND ANDREW PRUDHOMME,
-MAURIZIO SERACINI, AND THOMAS A.
+
+## 虚拟现实的高级应用
+
+JURGEN P. SCHULZE, HAN KIM, PHILIP WEBER, AND ANDREW PRUDHOMME, MAURIZIO SERACINI, AND THOMAS A.
 
 # 第 83 卷
 
-技术现状
+## 技术现状
+
 AMIT GROVER, HAL BERGHEL, AND DENNIS
-隐写概述
+
+## 隐写概述
+
 GARY KESSLER AND STEPSONSON
-Web 安全的人工智能应用
+
+## Web 安全的人工智能应用
+
 JOSÉ GOMEZ HIDALGO ALVAREZ
-基于视频的生物识别进展
+
+## 基于视频的生物识别进展
+
 RAMA CELLAPPA AND PAVAN
-事件驱动软件工程的平衡
+
+## 事件驱动软件工程的平衡
+
 PAULO SERGIO MEDEI SANTOS HORTA
-嵌入式系统的功能与非功能设计验证
+
+## 嵌入式系统的功能与非功能设计验证
+
 FAHRUK KHAN, CHRISTOP ACKERMANN, RANCE CLEAVAND
 
 # 第 84 卷
 
-实践中的性能与可用性结合
+## 实践中的性能与可用性结合
+
 KISHOR TRIVEDI, ERMESON ANDADE, FUMIO MACHIDA
-漏洞建模、分析与测试
+
+## 漏洞建模、分析与测试
+
 FEZZVI BELLI, MUTLU BEAZIT, ADITYA P. MATHUR
-安全系统软件设计与验证
+
+## 安全系统软件设计与验证
+
 ANCES SAGLIETTI, YVES CROUZET, KARANOUN
-系统可靠性：表征与基准测试
-可靠系统工程的实用方向
+
+## 系统可靠性：表征与基准测试
+
+## 可靠系统工程的实用方向
+
 RAYMOND A. PAUL
 
 # 第 85 卷
 
-软件组织与测试过程开发
+## 软件组织与测试过程开发
+
 JUSSI KURINEN
-基于模型的 GUI 测试：手机相机消息案例
+
+## 基于模型的 GUI 测试：手机相机消息案例
+
 RUPHE DEV, ANTTI JÄSKINEN, AND MIRA KATARA
-模型转换规范
+
+## 模型转换规范
+
 K. LANDO AND S. KOLIDHOUZ-RAIMI
-提升测试自动化的进展
+
+## 提升测试自动化的进展
+
 SUREENG XIAO, TAO XIE
-医疗信息系统的自动化互操作性测试
+
+## 医疗信息系统的自动化互操作性测试
+
 DIANA ELENA VEGA
-事件驱动的模型 GUI 测试与可靠性评估
+
+## 事件驱动的模型 GUI 测试与可靠性评估
+
 FEZI BELLI, MUTLU GÜLD, NEVIN GÜLER
-支持内部消息的可部署捕捉/响应
+
+## 支持内部消息的可部署捕捉/响应
+
 STEPHEN WAACK, STEPHEN HEROLD, UWE BUNTING, JANS GRABOW
 
 # 第 86 卷
 
-基于模型的测试：成就与未来挑战
+## 基于模型的测试：成就与未来挑战
+
 MICHAEL MLYNARSKI, BARIS GÜLDİ, GREGOR ENGELS, AND STEPHEN WEIBÜDLER
-揭秘云计算：研究格局
+
+## 揭秘云计算：研究格局
+
 MOHAMMAD HAMADAQA AND LADAN TAHILDARI
-Web 应用会话测试进展
+
+## Web 应用会话测试进展
+
 SREEVITI SAMPATH
-机器学习与事件驱动软件测试：识别不可 GUI 序列的分类器
+
+## 机器学习与事件驱动软件测试：识别不可 GUI 序列的分类器
+
 ROBERT GOVE AND JORGE FAYTON
-Web 应用配置故障检测与诊断框架
+
+## Web 应用配置故障检测与诊断框架
+
 CYNICA EATON
-基于 GUI 测试的趋势
+
+## 基于 GUI 测试的趋势
+
 STEPHAN ARULT, SIMON PAHL, CRISTIANO BERTOLINI, AND MARTIN SCHIEF
-软件产品线工程回归测试
+
+## 软件产品线工程回归测试
+
 PER RUNSON AND EMELIE ENGSTRÖM
-
-
-
 
 # 本系列卷目录
 
-面向绿色计算机和数据中心的光互连
+## 面向绿色计算机和数据中心的光互连
+
 SHINJI TSUJI AND TAKASHI TAKEMOTO
 
-可持续智能空间的能量采集
+## 可持续智能空间的能量采集
+
 NGA DANG, ELALEH BOZORKGADE, AND NALINI VENKATASUBRAMANIAN
 
 # 第 88 卷
 
-能源感知的高性能计算——综述
+## 能源感知的高性能计算——综述
+
 MICHAEL KNOBLOCH
 
-堆叠3D IC 的微流冷却：基础、建模与设计
+## 堆叠3D IC 的微流冷却：基础、建模与设计
+
 BING SHI AND ANSKUR SRIVASTAVA
 
-带有内置无线链路的可持续 DVFS 多核架构
+## 带有内置无线链路的可持续 DVFS 多核架构
+
 JACOB MURRAY, TENG LU, PARTHA, AND BEHROOZ SHIRAZI
 
-智能网格考虑：能源效率 vs 安全性
+## 智能网格考虑：能源效率 vs 安全性
+
 ANDREAS BERL, MICHAEL NIEDERMIER, AND HERMANN DEER
 
-应用程序的能源效率优化
+## 应用程序的能源效率优化
+
 KAY GROSSK AND JOIST VISSER
 
 # 第 89 卷
 
-Android 移动应用测试：挑战、策略与方法
+## Android 移动应用测试：挑战、策略与方法
+
 DOMENICO AMALFITANO, ANNA RITA FASOLINO, PORFIRIO TRAMONTANA, AND BRYAN ROBBYNS
 
-演化程序的回归测试
+## 演化程序的回归测试
+
 MARCEL BOHE, ABHIR RICOYDOUDHURY, AND BRUNO C.D.S. OLIVEIRA
 
-模型推理与测试
+## 模型推理与测试
+
 MUHAMMAD NAAEF IRAN, CATHERINE ORIARIAT, AND ROLAND GROZ
 
-可配置系统的测试
+## 可配置系统的测试
+
 XIAO QU
 
-成本效益与缺陷密度：Android 平台的案例研究
+## 成本效益与缺陷密度：Android 平台的案例研究
+
 VAHID GAROUSI, RILEY KOTCHOREK, AND MICHAEL SMITH
 
 # 第 90 卷
 
-现实传感器网络系统的进展
+## 现实传感器网络系统的进展
+
 DEBRAJ DE, WEN-CHAN SONG, MINGSEN XU, LEI SHI, AND SONG TAN
 
-基于语义的传感器网络集成新型系统架构
+## 基于语义的传感器网络集成新型系统架构
+
 ZORAN BABOVIC AND VELJAN MILUTINOVIC
 
-无线传感器网络中的移动
+## 无线传感器网络中的移动
+
 SKIRAM CHELLAPPAN AND NEELAJANA DUTTA
 
-无线传感器网络数据挖掘算法分类以及基于自然语言处理的无线传感器网络概念建模分类
+## 无线传感器网络数据挖掘算法分类以及基于自然语言处理的无线传感器网络概念建模分类
+
 STAŠA VUJIĆ STANKOVIĆ, NEMANJA KOJIĆ, GORAN RAKOČVIĆ, DUŠKO VITAS, AND MILUTINOVIC
 
 # 多主节点：全面综述
+
 BRUNO SOUSA, KOSTAS PENTIKOSIS, AND MARILIA CURADO
 
-云端高效数据分析
+## 云端高效数据分析
+
 RAJEEV GUPTA, HIMANSH GUPTA, AND MUKESH MOHANIA
 
 # 第 91 卷
 
-软件行为逆向工程
+## 软件行为逆向工程
+
 NEIL WALKINSHAW
 
-多核架构下的应用竞争与敏感性
+## 多核架构下的应用竞争与敏感性
+
 JASON MARS AND LINGJIA TANG
 
-科学计算高性能基础设施的前景
+## 科学计算高性能基础设施的前景
+
 JAD ALI AND KHALID SAFIULLAH SYED
 
-可靠容错系统的模型驱动工程——先进综述
+## 可靠容错系统的模型驱动工程——先进综述
+
 VIDAR SLATT, PETER HERRMANN, AND FRANK ALEXANDER KRAEMER
 
 # 第 92 卷
 
-推性芯片多处理器中的寄存器级通信
+## 推性芯片多处理器中的寄存器级通信
+
 MIL B. RADULOVIĆ, MILO V. TOMAŠVIĆ, AND VELJKO M. MILUTINOĆ
 
-I/O 硬件事务对延迟、吞吐量和其他因素的影响调查
+## I/O 硬件事务对延迟、吞吐量和其他因素的影响调查
+
 STEEN LARSEN AND BEN LEE
 
-硬件与应用分析工具
+## 硬件与应用分析工具
+
 TOMISAV JANUSIC AND KRISHNA KAVI
 
-基于多目标优化模型模型
+## 基于多目标优化模型模型
+
 MOHAMMED WIEM MKKAUER AND MAROUANE KESSENTINI
 
-手动并行化与先进并行技术对比：以 CPU2006 为案例研究
+
+
+# 手动并行化与先进并行技术对比：以 CPU2006 为案例研究
+
 ALEXANDAR VITOROVIĆ, MILO V. TOMAŠVIĆ, AND VELJKO M. MILUTINOVIĆ
 
-# 第 93 卷
+## 第 93 卷
 
-Web 测试的进展
+### Web 测试的进展
+
 PAOLA TONELLO, FILIPTO RICCA, AND ALESANDRO MARCHETTO
 
-软件工程中的硬件监控
+### 软件工程中的硬件监控
+
 KRISTEN R. WALCOTT-JUSTICE
 
-模型驱动安全进展
+### 模型驱动安全进展
+
 LEVI LCIÚ, QIN ZHANG, PHU NGUYEN, MOUSSA AMRANI, JACQUES KLEIN, HANS WANGHELUE, AND YEE LE TRA
 
-用于软件质量评估的多标准决策分析：当前方法与未来展望
+### 用于软件质量评估的多标准决策分析：当前方法与未来展望
+
 ADAM TRENDOWICZ AND SYLWIA POCZYZYŃSKA
 
-演化软件的影响分析
+### 演化软件的影响分析
+
 RAUL SANTELICES, YIJI ZHANG, HAIPENG CAI, AND SIYAN JIANG
 
-# 第 94 卷
+## 第 94 卷
 
-安全模型比较：攻击图与 Petri 网
+### 安全模型比较：攻击图与 Petri 网
+
 STEVEN C. WHITE AND SAHRA SEDIGH SARVESTANI
 
-零知识证明调查
+### 零知识证明调查
+
 LI FENG AND BRUCE MILLILLIN
 
-加密文档集的有有关键词搜索
+### 加密文档集的有有关键词搜索
+
 YOUSEF ELHDI, WEI JANG, AND ALIREZA HURUSON
 
-软件重构与环境的多目标优化
+### 软件重构与环境的多目标优化
+
 ALI OUNI, MAROUANE KESENTINI, AND HOARI SAHRAOI
 
-# 第 95 卷
+## 第 95 卷
 
-自动化测试用言：综述
+### 自动化测试用言：综述
+
 MAURKO PEZZE AND CHENG GHANG
 
-测试中的 GUI 模型自动提取
+### 测试中的 GUI 模型自动提取
+
 PEKKA AHO, TEEMU KASTREN, TOMI RATY, AND JUHA RONNING

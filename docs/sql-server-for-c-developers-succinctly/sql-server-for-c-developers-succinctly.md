@@ -1,37 +1,25 @@
+
 # C# 开发者的 SQL Server 精要指南
 
+## 前言：Daniel Jebaraj
 
-
-
-
-
-
-
-
-
-
-前言：Daniel Jebaraj
-
-
-
-
-
-# *Succinctly* 系列书籍背后的故事
+### *Succinctly* 系列书籍背后的故事
 
 Daniel Jebaraj，副总裁
+
 Syncfusion, Inc.
 
-# 站在技术前沿
+## 站在技术前沿
 
 正如你们的许多人所知，Syncfusion 是 Microsoft 平台的软件组件提供者。这使我们处于一个始终处于前沿的既兴奋又充满挑战的地位。
 
 每当 Microsoft 发布新的平台或工具时（现在似乎每隔两周就一次），我们必须快速地自我教育。
 
-# 信息丰富，但更难消化
+## 信息丰富，但更难消化
 
 在现实中，这转化为了大量的书籍订单、博客搜索和 Twitter 扫描。虽然互联网上的可用信息越来越多，出版的书也越来越多（即使是针对较新的话题），但一个持续限制着我们的方面是无法找到简洁的类概述类书籍。我们通常面临两种选择：阅读几本 500 多页的书，或者在网络上搜寻相关的博客文章和其他文章。正如每个有工作要做、有客户要服务一样，我们觉得这非常令人挫败。
 
-# Succinctly 系列
+## Succinctly 系列
 
 这种挫败感转化为一种强烈的愿望，即创作针对在 Microsoft 平台上工作的开发者的简洁技术书籍。
 
@@ -39,19 +27,15 @@ Syncfusion, Inc.
 
 这正是我们通过 Succinctly 系列想要实现的。。难道一切美好的事物不都是源于对改善现状的深度渴望吗？
 
-# 最顶的作者，最优质的内容
+## 最顶的作者，最优质的内容
 
 每位作者都是从与我们愿景相合的才华横溢的专家中精心挑选出来的。你手中的这本书以及该系列中的其他书籍，都是作者们不懈工作的成果。你将发现原创内容，保证让你喝几杯咖啡的时间内上手。
 
-# 永久免费
+## 永久免费
 
 Syncfusion 将致力于制作多个主题的书籍。这些书籍将永久免费。我们发布的任何更新也是免费的。
 
-
-
-
-
-## 免费？有什么猫腻吗？
+### 免费？有什么猫腻吗？
 
 这里没有任何猫腻。Syncfusion 在此方面拥有共同利益。
 
@@ -59,7 +43,7 @@ Syncfusion 将致力于制作多个主题的书籍。这些书籍将永久免费
 
 ## 让我们知道您的想法
 
-如果您有任何感兴趣的话题、想法或反馈，请随时通过 succinctly-series@syncfusion.com 向我们发送。
+如果您有任何感兴趣的话题、想法或反馈，请随时通过 `succinctly-series@syncfusion.com` 向我们发送。
 
 我们诚地希望您喜欢阅读这本书，希望它能帮助您更好地理解所学习的主题。感谢阅读。
 
@@ -97,10 +81,6 @@ Sander Rossel 是一位专业开发者，拥有 .NET (VB 和 C#)、WinForms、MV
 
 安装非常简单。在安装 Visual Studio 时，确保勾选 SQL Server Data Tools 复选框；在安装 SQL Server 时，确保勾选 Management Tools - Complete。当 SQL Server 安装程序提示输入实例名称时，选择任何你喜欢的名称，或选择默认实例（我的实例名为 SQLEXPRESS）。除外，你可以保留所有默认设置。
 
-
-
-
-
 SSMS 将自动为你的外键 `FK_Person_Gender` 命名，因此你可以忽略其他设置并保存。你现在已经告诉 SQL Server，`Person` 表中的 `Gender` 列只能包含在 `Gender` 表的 `Id` 列中存在的值。
 
 > 注意：许多人认为关系型数据库之所以被称为关系型是因为可以在表之间定义外键关系。但事实并非如此，这不仅仅是一种约束，还能保证数据完整性。关系型数据库之所以被称为关系型，是因为在数学中，“表”的术语是“关系”（relation）。一个关系是一个无序的值集合。一个值是一组唯一值的集合。SQL Server 中的一个值是一个元组（tuple），它是一组值的集合。值的唯一性由主键来保证。这意味着，任何没有唯一主键的表（或视图）实际上并不是“关系”！
@@ -114,7 +94,7 @@ SSMS 将自动为你的外键 `FK_Person_Gender` 命名，因此你可以忽略�
 | 2 | FEMALE | 女性 |
 | | NULL | NULL |
 
-| 图 5：性别
+图 5：性别
 
 现在我们还在 `Person` 表中插入一个或多个个人。
 
@@ -124,7 +104,7 @@ SSMS 将自动为你的外键 `FK_Person_Gender` 命名，因此你可以忽略�
 | 2 | Bill | Gates | 1955-10-28 | 1 |
 | * | NULL | NULL | NULL | NULL |
 
-| 图 6：人员
+图 6：人员
 
 操作就是这些：我们设置了两个表，创建了一个外键，并插入了一些数据。但我们还缺少一个……脚本！如果你想在不同的数据库（或另一个环境中的相同数据库）上执行这些步骤，你就需要脚本。幸运的是，SSMS 生成脚本有几个选项。
 
@@ -180,7 +160,7 @@ GO
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_14_0.png)
 
-| 图 7：保存更改脚本
+图 7：保存更改脚本
 
 如你所示，SQL Server 实际上创建了一个临时表，删除了原表并进行了更改。它做的比你想的要得多！你可以保存此脚本并毫不费力地（或自动地）在另一个环境中执行它。遗憾的是，删除并重建表很慢且消耗资源，你可能仍然想编写自己的脚本。你可以使用屏幕左上角的“新建查询”按钮打开新查询窗口，或使用 `Ctrl + N`。请确保在正确的数据库上执行脚本（使用“执行”按钮或 F5）——一个常见的错误是在被选为默认的 `master` 数据库上执行脚本。
 
@@ -196,10 +176,6 @@ ALTER TABLE dbo.Person ALTER COLUMN GenderId INT
 > 提示：可以在单个查询中仅执行脚本的某些部分。只需选择你想执行的查询部分并按 F5 即可。当你测试某些软件并希望检查数据、再次运行代码并重复时特别有用。当在一个窗口中存在 `SELECT` 语句和 `UPDATE/DELETE` 语句时，你可以独立地执行这两个（或多个）语句。
 
 > 提示：可以在单个查询中仅执行脚本的某些部分。只需选择你想执行的查询部分并按 F5 即可。当你测试某些软件并希望检查数据、再次运行代码并重复时特别有用。当在一个窗口中存在 `SELECT` 语句和 `UPDATE/DELETE` 语句时，你可以独立地执行这两个（或多个）语句。
-
-
-
-
 
 或者，如果你选择集成安全（integrated security），可以使用 `Trusted_Connection=True;` 或 `Integrated Security=True;` 代替 User Id 和 Password，甚至可以使用 `Integrated Security=SSPI`（它们都是相同的）。
 
@@ -271,9 +247,11 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 
 ## 构建连接字符串
 
+
+
 在某些情况下，你可能想要编辑连接字符串或从头创建它（例如，在 SSMS 登录表单中）。对于这种用例，我们可以使用 `SqlConnectionString`。`SqlConnectionString` 的功能正如其名；它使用参数创建连接字符串。让我们来看一个简单的示例。
 
-代码列表 7：SqlConnectionString
+### 代码列表 7：SqlConnectionString
 
 ```csharp
 SqlConnectionString builder = new SqlConnectionString();
@@ -284,7 +262,7 @@ builder.IntegratedSecurity = true;
 
 注意，`SqlConnectionString` 实际上使用的是 `DataSource` 而不是 `Database`。此外，我们可以使用 `SqlConnectionString` 来编辑连接字符串。构造函数是重载的，因此你可以设置。
 
-代码列表 8：编辑连接
+### 代码列表 8：编辑连接
 
 ```csharp
 string baseConnectionString =
@@ -302,9 +280,9 @@ using (SqlConnection connection = new SqlConnection(builder))
 
 ## 读取数据
 
-在 `SqlCommand` 实例上使用 `ExecuteReader` 函数时，查询被执行，我们获得一个持有检索数据的 `SqlDataReader`。`SqlDataReader` 遗憾的是很难处理。`SqlDataReader` 按行读取（正向），你也可以通过索引访问列。显然，通过索引选择并不容易，尤其是在大型查询中（谁知道索引是多少？），但按名称获取返回值对象并需要程序员进行正确的转换。然后，如果没有值（假设值为 NULL），你必须将其转换为默认值或 `null`。事实：数据库的 NULL 与 C# 中的 `null` 不同。C# 使用静态的 `DBNull.Value` 表示数据库 NULL。至少可以如此说。我们可能希望结果存储在自定义对象中，因此我们需要创建一个 Person 类。让我们看看它是那样的。
+在 `SqlCommand` 实例上使用 `ExecuteReader` 函数时，查询被执行，我们获得一个持有检索数据的 `SqlDataReader`。`SqlDataReader` 遗憾的是很难处理。`SqlDataReader` 按行读取（正向），你也可以通过索引访问列。显然，通过索引选择并不容易，尤其是在大型查询中（谁知道索引是多少？），但按名称获取返回值对象并需要程序员进行正确的转换。然后，如果没有值（假设值为 NULL），你必须将其转换为默认值或 `null`。事实：数据库的 NULL 与 C# 中的 `null` 不同。C# 使用静态的 `DBNull.Value` 表示数据库 NULL。至少可以如此说。我们可能希望结果存储在自定义对象中，因此我们需要创建一个 `Person` 类。让我们看看它是那样的。
 
-首先，让我们创建一个简单的 Person 类。
+首先，让我们创建一个简单的 `Person` 类。
 
 ```csharp
 public class Person
@@ -319,7 +297,7 @@ public class Person
 
 现在是从数据库获取所有人员的代码：
 
-代码列表 10：SqlDataReader 的用法
+### 代码列表 10：SqlDataReader 的用法
 
 ```csharp
 try
@@ -352,8 +330,6 @@ catch (Exception ex)
     Console.WriteLine($"错误：{ex.Message}");
 }
 ```
-
-
 
 ```csharp
 {
@@ -418,30 +394,30 @@ Console.ReadKey();
 
 创建 `SqlCommand` 是非常简单的。正如所言，`SqlDataReader` 处理的是表，并且一次访问一行。当调用 `SqlDataReader.Read` 时，第一行（如果有的话）将是可见的。随后的 `Read` 调用将移动到下一行。如果没有可用行，`Read` 将返回 `false`。你可以使用 `SqlDataReader.HasRows` 来检查是否有可用行。`GetOrdinal` 函数返回列的索引（名称），因为它根据数据库列命名了属性；如果其中一个列发生了变化，代码将会崩溃，但如果发生变化，代码将继续运行。
 
-在这个示例中，我们使用了 `GetInt32`、`GetString` 和 `DateTime`。还有其他类型方法，如 `GetInt64`、`GetBoolean`、`GetChar` 等。它们将 SQL 转换为相应的CLR 类型。如果值缺失，类型方法将抛出异常。对于可空字段，你需要检查 `IsDBNull`。另一种是 `GetValue`，它返回一个对象。如果你不需要值的类型，可以使用它。为了检查 NULL，使用 `DBNull.Value`。
+在这个示例中，我们使用了 `GetInt32`、`GetString` 和 `DateTime`。还有其他类型方法，如 `GetInt64`、`GetBoolean`、`GetChar` 等。它们将 SQL 转换为相应的 CLR 类型。如果值缺失，类型方法将抛出异常。对于可空字段，你需要检查 `IsDBNull`。另一种是 `GetValue`，它返回一个对象。如果你不需要值的类型，可以使用它。为了检查 NULL，使用 `DBNull.Value`。
 
-代码 11：SqlDataReader.GetValue(string)
+### 代码 11：SqlDataReader.GetValue(string)
 
 ```csharp
 object value = reader.GetValue("SomeColumn");
 bool isNull = ...;
 ```
 
-现在是另一个有趣点：如果我们想要返回多个结果集怎么办？假设我们更改查询并检索所有读者。`SqlDataReader`可以检索多个结果集并以相同的方式访问它们。读者默认是第一个结果集，但如果有后续结果集，你可以调用 `NextResult`，读者将移动到下一个结果集。你可以调用 `Read` 来移动到第一行（如果有的话）。
+现在是另一个有趣点：如果我们想要返回多个结果集怎么办？假设我们更改查询并检索所有读者。`SqlDataReader` 可以检索多个结果集并以相同的方式访问它们。读者默认是第一个结果集，但如果有后续结果集，你可以调用 `NextResult`，读者将移动到下一个结果集。你可以调用 `Read` 来移动到第一行（如果有的话）。
 
-参数化
+## 参数化
 
 在此之前，我无法告诉你使用参数有多重要。这是安全编程的实践。不幸的是，正如我所看到的，程序员仍然没有使用参数。结果就是查询缓慢，更重要的是安全漏洞和数据泄露。最糟糕的是，这种情况发生在像 Sony、Symantec 和 SAP 这样的大公司身上。存在你不想要的 SQL 注入。
 
 现在你已经知道参数化的重要性，让我们看看它到底是什么以及如何实现。通常，在处理数据库时，你并不是选择整个表。大多数情况下，你会使用某些过滤条件 `WHERE Id = x`，其中 `x` 是一个变量。根据我与你分享的知识，可能会诱按照以下方式实现 `GetPeopleByName`：
 
-代码 14：非参数化查询
+### 代码 14：非参数化查询
 
 ```csharp
 public List<Person> GetPeopleByName(string firstName)
 {
     List<Person> people = new List<Person>();
-    string connectionString = ConfigurationManager.ConnectionStrings["SuccinctlyDB"].ConnectionString;
+    string connectionString = ConfigurationManager.ConnectionStrings["SuccinctDB"].ConnectionString;
     using (SqlConnection connection = new SqlConnection(connectionString))
     using (SqlCommand command = new SqlCommand(
         "SELECT Id, FirstName, LastName, DateOfBirth, GenderId FROM dbo.Person "
@@ -462,7 +438,7 @@ public List<Person> GetPeopleByName(string firstName)
 
 所以，从数据库读取数据必须很困难吗？有一些替代方案，我们将在本书后面的部分介绍。然而，使用 `SqlDataReader` 是从数据库读取数据的性能最佳（当正确完成后）。如果你的查询返回单个值（单行一列），你可以使用 `ExecuteScalar`。它将返回一个可以转换为正确类型的对象。
 
-代码 13：ExecuteScalar 的用法
+### 代码 13：ExecuteScalar 的用法
 
 ```csharp
 public string GetPersonName(int id)
@@ -473,12 +449,12 @@ public string GetPersonName(int id)
 
 当然，这确实可以获取给定名字的人员。那么问题是什么？`firstName` 可能是用户在 Web 或桌面应用程序的某些文本字段中输入的值。所以。
 
-代码 12：带多个结果集的 SqlDataReader
+### 代码 12：带多个结果集的 SqlDataReader
 
 ```csharp
 List<Person> people = new List<Person>();
 List<Gender> genders = new List<Gender>();
-string connectionString = ConfigurationManager.ConnectionStrings["SuccinctlyDB"]?.ConnectionString;
+string connectionString = ConfigurationManager.ConnectionStrings["SuccinctDB"]?.ConnectionString;
 using (SqlConnection connection = new SqlConnection(connectionString))
 using (SqlCommand command = new SqlCommand(
     "SELECT ID, FirstName, LastName, DateOfBirth FROM dbo.Person;"
@@ -502,10 +478,6 @@ using (SqlCommand command = new SqlCommand(
 
 更危险的是用户（或者很可能是恶意黑客）`John'; USE master; DROP DATABASE SuccinctExamples; GO --`。尝试一下，砰！你的数据库消失了（是的，它没了）。这就是 SQL 注入。用户现在能够更改 SQL 语句，并借此访问或销毁这些数据。实际上有一个关于 SQL 注入的传奇漫画，我认为每个开发者都应该记在心里。
 
-
-
-
-
 ```csharp
 connection)){
     command.Parameters.AddWithValue("FirstName", firstName);
@@ -522,6 +494,8 @@ connection)){
     return people;
 }
 ```
+
+
 
 注意，查询包含一个占位符 `@FirstName`（SQL Server 中的参数以 `@` 开头），此处指定了参数名称。一个额外的好处是，我们不需要记住给它加上引号（因为它是一个字符串），因为 SQL Server 会替我们完成这一操作。`@FirstName` 的实际值被推送到 `SqlSqlCommand.command.Parameters.AddWithValue("FirstName", firstName);`（在此上下文中，参数名称中的 `@` 是可选的）。我很少看到比这更自明其懂的代码了。如果你推入一个像 `D'artagnan` 这样的值，一切都会正常运行，因为 SQL Server 知道这是一个单值，并为你进行转义。对于 `"John"` 也是一样；使用：`DROP DATABASE SuccinctlyExamples; GO "-".`
 
@@ -696,10 +670,8 @@ public string GetFirstName(int id)
 }
 ```
 
-
-
-
 存储过程可以使用输出参数，这种参数也很容易实现。
+
 假设我们为名字使用了一个输出参数。只需创建一个参数，将它的 `Direction` 设置为 `Output`，然后在执行后读取该值。
 
 ## 代码列表 23：输出参数
@@ -737,6 +709,8 @@ public string GetPersonName(int id)
 要数据库中的人员填充 `DataTable`，我们只需调用 `SqlDataAdapter` 的 `Fill` 方法并向它传递一个 `DataTable`。
 
 ## 代码列表 24：填充 DataTable
+
+
 
 ```csharp
 public DataTable GetPeople()
@@ -856,15 +830,11 @@ public void ExecInsertPeople()
 
 使用 `DataTable` 和 `DataSet` 可以很多事情，但除非绝对必要，否则我不建议使用这种技术进行数据库访问。
 
-
-
-
-
 # 第 3 章 Entity Framework 数据库优先
 
-上一章中的所有内容都涉及大量的输入，有些枯燥，而且并不容易实现。创建一个抽象层来自动将 `select` 语句中的字段映射到 C# 对象的属性并不难，但这样做看起来不会很好看。要做这类事情会困难一些，但幸运的是，这种抽象已经存在了。在本章中，我们将查看微软的 Entity Framework (EF)，它是一个对象关系映射 (ORM)，可以完成我们在上一章中做过的所有工作，但操作起来更简单。
+上一章中的所有内容都涉及大量的输入，有些枯燥，而且并不容易实现。创建一个抽象层来自动将 `select` 语句中的字段映射到 C# 对象的属性并不难，但这样做看起来不会很好看。要做这类事情会困难一些，但幸运的是，这种抽象已经存在了。在本章中，我们将查看微软的 Entity Framework `EF`，它是一个对象关系映射 `ORM`，可以完成我们在上一章中做过的所有工作，但操作起来更简单。
 
-顾如其名，ORM 将关系型数据库中的对象映射到你代码中的对象。Entity Framework 有两种开发模式。第一种（也是最传统的）是让 EF 从现有数据库生成 C# 类。第二种是你自己编写带有属性、外键和主键的类，并让 EF 为你生成数据库。这两种模式分别称为“数据库优先”（Database First）和“代码优先”（Code First）。还有第三种选择：EF 从现有数据库创建 C# 类，但伪装成你使用了“代码优先”，从而允许你在现有数据库上使用“代码优先”。在本章中，我将向你展示数据库优先和代码优先。在此基础上，使用“从现有数据库使用代码优先”的选项应该并不困难。
+顾如其名，ORM 将关系型数据库中的对象映射到你代码中的对象。Entity Framework 有两种开发模式。第一种（也是最传统的）是让 EF 从现有数据库生成 C# 类。第二种是你自己编写带有属性、外键和主键的类，并让 EF 为你生成数据库。这两种模式分别称为“数据库优先”`Database First` 和“代码优先”`Code First`。还有第三种选择：EF 从现有数据库创建 C# 类，但伪装成你使用了“代码优先”，从而允许你在现有数据库上使用“代码优先”。在本章中，我将向你展示数据库优先和代码优先。在此基础上，使用“从现有数据库使用代码优先”的选项应该并不困难。
 
 要详尽地解释 EF，我们需要并不怎么简洁的事实：我有一关于旧版本 EF 的书超过 600 页，而那时“代码优先”甚至还一个选项。再加上你可以编写的 LINQ 查询（你可以为此读另一本完全不同的书）以及 EF 使用 T4 模板技术，你会发现我在本章中真的只接触了 EF 的皮毛。本章的目标不是让你成为 EF 专家，而是将上一章的课程应用到 ORM，并介绍 EF 的一些早期“陷阱”细节，这些细节以后将帮你省去很多白头发。
 
@@ -881,10 +851,6 @@ public void ExecInsertPeople()
 图 8：Entity Framework 图
 
 注意，`Gender` 有一个 `People` 属性，而 `Person` 有一个 `Gender` 属性（如果你命名为 `GenderId`，该属性将被命名为 `Gender1`，没错！）。它们之间的线描述了这种关系。`.edmx` 文件允许你将这些关系可视化。
-
-
-
-
 
 ```csharp
 if (orderResults)
@@ -994,10 +960,11 @@ public class SuccinctlyExamplesEntities : DbContext
     public DbSet<Person> People { get; set; }
     public DbSet<Gender> Genders { get; set; }
 }
-
 ```
 
 这种查询经常会发生？这种情况下。
+
+
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1016,13 +983,8 @@ using (var context = new SuccinctlyExamplesEntities())
 }
 ```
 
-（抱歉，在翻译过程中原始文本块出现了混乱，我将重新根据您的逻辑要求，对您提供的特定文本进行清晰、标准的翻译。）
-
 *注：由于您提供的待翻译文本在中间部分出现了大量的重复和逻辑错乱（可能是由于粘贴时的错误），我将严格按照您提供的文本内容进行逐行翻译，确保不漏不重。*
 
----
-
-[content]
 ```csharp
 if (orderResults)
 {
@@ -1037,7 +999,7 @@ List<Person> women = query.ToList();
 
 这里的另一个问题是参数化。别担心，一切都很好地进行了参数化。只是在上一个示例中没有参数。我们查询 `GenderId` 为 2 的人员。值 2 是一个常量，所以我们的查询不会有任何参数。如果在代码的某处，我们查询了 `GenderId` 为 1 的人员，我们将得到一个带有新计划的新查询。假设我们想对这个查询进行参数化。我们需要做什么呢？很简单——创建一个！
 
-> 代码列表 33: 一个参数化查询
+### 代码列表 33: 一个参数化查询
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1056,11 +1018,11 @@ using (var context = new SuccinctlyExamplesEntities())
 }
 ```
 
-此外，IQueryable 也有一些缺点。你对生成的查询没有影响力。某些查询非常庞大，以至于自己编写反而更划算，而这正是 SQL 知识大显身场的地方。有时 EF 无法从你的 IQueryable 生成整洁的 SQL 查询，例如连接两个完全无关的表。EF 会生成一个查询并获取你想要的结果，但它既不快速也不优雅。提到性能，使用 EF 会带来性能开销。如果这几毫秒至关重要（而且通常是如此），请使用我们在第 2 章中讨论过的技巧。
+此外，`IQueryable` 也有一些缺点。你对生成的查询没有影响力。某些查询非常庞大，以至于自己编写反而更划算，而这正是 SQL 知识大显身场的地方。有时 EF 无法从你的 `IQueryable` 生成整洁的 SQL 查询，例如连接两个完全无关的表。EF 会生成一个查询并获取你想要的结果，但它既不快速也不优雅。提到性能，使用 EF 会带来性能开销。如果这几毫秒至关重要（而且通常是如此），请使用我们在第 2 章中讨论过的技巧。
 
-在 IQueryable 中无法做的另一件事是使用任何数据源未知的函数或属性。这是很有道理的，因为查询必须翻译成 SQL。例如，下面的代码将无法执行。
+在 `IQueryable` 中无法做的另一件事是使用任何数据源未知的函数或属性。这是很有道理的，因为查询必须翻译成 SQL。例如，下面的代码将无法执行。
 
-## 代码列表 34: 无效查询
+### 代码列表 34: 无效查询
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1071,7 +1033,7 @@ using (var context = new SuccinctlyExamplesEntities())
 
 遗憾的是，它可以正常编译。只有在运行时，当实际编译查询时，你会得到一个错误，因为你的表中没有 `FullName` 列，请务必针对你的实际数据源运行查询。你可能会惊讶地发现下面的查询将按预期工作。
 
-## 代码列表 35: 有效代码
+### 代码列表 35: 有效代码
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1086,7 +1048,7 @@ using (var context = new SuccinctlyExamplesEntities())
 
 上一个示例还有另一个陷阱。考虑以下代码。
 
-## 代码列表 36: 懒加载
+### 代码列表 36: 懒加载
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1120,9 +1082,8 @@ using (var context = new SuccinctlyExamplesEntities())
     context.People.Where(p => p.GenderId == male).ToList();
 }
 ```
+
 *(注：由于原文在后半部分存在大量重复和逻辑混乱，上述译文已根据您提供的原始文本落进行了对应翻译。)*
-
-
 
 这两种方法的区别在于参数以及返回值。`IQueryable` 接收 `Expression<Func<Person, bool>>` 作为输入并返回一个 `IQueryable`，而 `IEnumerable` 接收 `Expression<Func<Person, bool>>` 作为输入并返回一个 `Enumerable`。
 
@@ -1135,7 +1096,7 @@ peopleQuery.Where(p => p.FirstName == "Sander").ToList();
 根据谓词过滤值序列。
 ```
 
-图 10: IQueryable.Where
+图 10: `IQueryable.Where`
 
 ```
 peopleEnum.Where(p => p.FirstName == "Sander").ToList();
@@ -1146,7 +1107,7 @@ peopleEnum.Where(p => p.FirstName == "Sander").ToList();
 根据谓词过滤值序列。
 ```
 
-图 11: IEnumerable.Where
+图 11: `IEnumerable.Where`
 
 `Expression<SomeType, bool>` 基本上是将 `SomeType, bool` 作为对象图的表示。在 `IEnumerable` 中，你传递的不是一个方法，而是传递一个代表该方法的对象。在这种情况下，编译器会创建对象图，所以你不需要担心。
 
@@ -1154,7 +1115,7 @@ peopleEnum.Where(p => p.FirstName == "Sander").ToList();
 
 为了好玩，这里是编译器从该 Lambda 表达式创建的 `Expression<Person, bool>`。
 
-代码行 38：Expression<Person, bool>>
+代码行 38：`Expression<Person, bool>>`
 
 ```
 ParameterExpression parameter = Expression.Parameter(typeof(Person), "p");
@@ -1171,7 +1132,7 @@ peopleQuery.Where(lambda).ToList();
 
 如果你想在扩展方法中包含（例如）额外的选择逻辑，会发生什么？只需确保放入表达式。这样做不会产生错误或警告，但将调用 `IEnumerable` 上的方法，从而在你的操作执行之前强制进行数据库调用。
 
-## 代码列表 39：带有选择器的扩展方法
+### 代码列表 39：带有选择器的扩展方法
 
 ```sharp
 public static List<T> SelectOlderThan<T>(this IQueryable<Person> q, int
@@ -1188,7 +1149,7 @@ Expression<Func<Person, T>> selector)
 
 用法再次非常直观。
 
-## 代码列表 40：SelectOlderThan 的用法
+### 代码列表 40：SelectOlderThan 的用法
 
 ```csharp
 var people = context.People.SelectOlderThan(45, p =>
@@ -1198,11 +1159,11 @@ var people = context.People.SelectOlderThan(45, p =>
 });
 ```
 
-## CRUD（增删改查）
+### CRUD（增删改查）
 
 让我们来看看 CRUD 操作。你将不会相信这有多么简单。
 
-## 代码列表 41：CRUD 操作
+### 代码列表 41：CRUD 操作
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1236,7 +1197,7 @@ context.SaveChanges();
 
 记住我说过“SELECT * ...”对系统是非常有害的。我们现在所做的基本上就是这样。如果我们更新了模型，并且 `Person` 增加了 100 个新字段，系统突然变慢很多。我们可以使用 `Select` 来修复这个问题。
 
-## 代码列表 42：使用 Select
+### 代码列表 42：使用 Select
 
 ```csharp
 using (var context = new SuccinctlyExamplesEntities())
@@ -1261,10 +1222,7 @@ using (var context = new SuccinctlyExamplesEntities())
   }).SingleOrDefault();
 ```
 
-
-
-
-## 代码列表 49：运行 EF Code First 代码
+### 代码列表 49：运行 EF Code First 代码
 
 ```csharp
 using (CodeFirstContext context = new CodeFirstContext())
@@ -1287,7 +1245,7 @@ using (CodeFirstContext context = new CodeFirstContext())
 
 如果你查看数据库，你会发现 `dbo.People` 和 `dbo.Genders` 表并不是你的 `DbContext` 中的 `DbSet`，但它们仍然是数据库中的表。EF 通过 `Person` 推断了这一点。此外还有一个 `dbo.__MigrationHistory` 表（注意有两个下划线）；我们稍后会查看它。让我们先通过重写 `DbContext` 中的 `OnModelCreating` 来修复复数命名问题。
 
-## 代码列表 50：非复数化的 DbContext
+### 代码列表 50：非复数化的 DbContext
 
 ```csharp
 public class CodeFirstContext : DbContext
@@ -1309,7 +1267,7 @@ public class CodeFirstContext : DbContext
 
 进一步观察数据库，你会发现所有字符串属性都被翻译成了 `nvarchar(max)`。你可能并不希望这样做。此外，`FirstName` 是不可空的，所以让我们修复一下这个问题。使用数据注解（在 `System.ComponentModel.DataAnnotations` 命名空间中）这其实非常简单。只需向你的模型添加一些属性即可。
 
-## 代码列表 45：数据注解
+### 代码列表 45：数据注解
 
 ```csharp
 [Required]
@@ -1318,6 +1276,8 @@ public string FirstName { get; set; }
 [MaxLength(256)]
 public string LastName { get; set; }
 ```
+
+
 
 再次删除你的数据库并重新运行代码。这些字段现在将分别生成为 `varchar(256) not null` 和 `varchar(256) null`。你可以进行更多调整，例如不使用自动生成的键、映射到数据库中的另一个列名、更改生成的类型，或者将属性设为 `Key` 主键。
 
@@ -1359,19 +1319,19 @@ public int FullName { get; set; }
 
 你可能已经明白了 Code First 的精髓：编写代码和配置，让 EF 为你创建数据库。
 
-## 迁移 (Migrations)
+# 迁移 (Migrations)
 
-到目前，我们每次修改模型时都会删除数据库。这在现实世界中显然不可行的。EF 为数据库创建提供了几个选项：**CreateDatabaseIfNotExists**（默认）、**DropDatabaseIfModelChanges** 和 **DropDatabasealways**。这些被称为 **DatabaseInitializers**（数据库初始化器）。你可能会在使用它们时遇到一些麻烦。如果你在数据库中有数据或映射的实体，当 EF 删除数据库并重新创建它们时，你会丢失它们（想象一下在生产环境中发生这种情况）。新版本的 EF 引入了 `MigrateDatabaseToLatestVersion`。在此之前，它的效果并不理想——毕竟，当你的模型变化时，你会得到一个异常。
+到目前，我们每次修改模型时都会删除数据库。这在现实世界中显然不可行的。EF 为数据库创建提供了几个选项：`CreateDatabaseIfNotExists`（默认）、`DropDatabaseIfModelChanges` 和 `DropDatabasealways`。这些被称为 `DatabaseInitializers`（数据库初始化器）。你可能会在使用它们时遇到一些麻烦。如果你在数据库中有数据或映射的实体，当 EF 删除数据库并重新创建它们时，你会丢失它们（想象一下在生产环境中发生这种情况）。新版本的 EF 引入了 `MigrateDatabaseToLatestVersion`。在此之前，它的效果并不理想——毕竟，当你的模型变化时，你会得到一个异常。
 
-启用迁移
+## 启用迁移
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_52_0.png)
 
 > 图 12：使用 NuGet 控制台迁移
 
-你会发现系统为你创建了一个 **Configuration** 类。
+你会发现系统为你创建了一个 `Configuration` 类。
 
-代码列表 48：生成的 Configuration 类
+## 代码列表 48：生成的 Configuration 类
 
 ```csharp
 namespace CodeFirst.Migrations
@@ -1403,7 +1363,7 @@ protected override void Seed(CodeFirst.CodeFirstContext context)
 
 目前，你可能将 `AutomaticMigrationsEnabled` 设置为 `true`。
 
-代码列表 49：启用自动迁移
+## 代码列表 49：启用自动迁移
 
 ```csharp
 AutomaticMigrationsEnabled = true;
@@ -1411,7 +1371,7 @@ AutomaticMigrationsEnabled = true;
 
 接下来我们需要做的是在 `DbContext` 中进行此配置。我们可以在构造函数中设置它。
 
-代码列表 50：为迁移配置 DbContext
+## 代码列表 50：为迁移配置 DbContext
 
 ```csharp
 public class CodeFirstContext
@@ -1425,14 +1385,14 @@ public class CodeFirstContext
 
 现在添加一个新类，并...
 
-在包控制台（Package Console）中，输入 **update-database**，你的数据库将会更新。你可以针对更新后的数据库运行代码并进行查询。确保不要为两个迁移设置相同的名称，否则你会在 C# 代码中遇到名称冲突。
+在包控制台（Package Console）中，输入 `update-database`，你的数据库将会更新。你可以针对更新后的数据库运行代码并进行查询。确保不要为两个迁移设置相同的名称，否则你会在 C# 代码中遇到名称冲突。
 
-现在向 Person 类中添加一个属性，例如 `int Age`，然后运行另一个迁移 **"Add Person.Age"** 并执行 **update-database**。遗憾的是，由于某种原因，你最后的数据库更改被回滚了。幸运的是，系统生成了 Up 和 Down 方法，所以这应该很简单。要撤销迁移，只需更新到旧版本的迁移，新的迁移就会被回滚。在控制台中，输入 **"update-database -TargetMigration:Add Person.FullName"** 并运行它。Add Person.Age 将被回滚。
+现在向 `Person` 类中添加一个属性，例如 `int Age`，然后运行另一个迁移 `"Add Person.Age"` 并执行 `update-database`。遗憾的是，由于某种原因，你最后的数据库更改被回滚了。幸运的是，系统生成了 Up 和 Down 方法，所以这应该很简单。要撤销迁移，只需更新到旧版本的迁移，新的迁移就会被回滚。在控制台中，输入 `"update-database -TargetMigration:Add Person.FullName"` 并运行它。`Add Person.Age` 将被回滚。
 
-在我尝试迁移时，我创建了 FullName，然后将其删除，结果再次导致了两个 C 类 AddPersonFullName。没问题，我删除了最旧的并运行了它。然而，在回滚时，我遇到了一个冲突，因为 AddPerson.FullName 具有歧义。幸运的是，你所做的只是删除 **dbo__MigrationHistory**，然后只需运行 **"update-database -TargetMigration:201605211180341_AddPersonFullName"** 来消除歧义，而无需大量繁琐的手动操作。
+在我尝试迁移时，我创建了 `FullName`，然后将其删除，结果再次导致了两个 C 类 `AddPersonFullName`。没问题，我删除了最旧的并运行了它。然而，在回滚时，我遇到了一个冲突，因为 `AddPerson.FullName` 具有歧义。幸运的是，你所做的只是删除 `dbo__MigrationHistory`，然后只需运行 `"update-database -TargetMigration:201605211180341_AddPersonFullName"` 来消除歧义，而无需大量繁琐的手动操作。
 
 | Migration | Context | Model | ProductVersion |
-|---|---|---|---|---|
+|---|---|---|---|
 | 1 | 20160521141034_InitialCreate | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFFFF74B | 6.1-4.3002 |
 | 2 | 20160521141572_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFB1FF74B | 6.1-4.3002 |
 | 3 | 20160521141931_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE367C0FE41D3 | 6.1-4.3002 |
@@ -1443,123 +1403,24 @@ public class CodeFirstContext
 | 8 | 20160521152319_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
 | 9 | 20160521157438_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
 | 10 | 20160521180258_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 11 | 20160521180431_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED361D70D2F0D7FEB9 | 6.1-4.3002 |
+| 11 | 20160521180431_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED361D70D2F0D7FEB9 | 6.1-4.3002 |
 | 12 | 20160521189453_Add Person.Age | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED361D1FF2E69 | 6.1-4.3002 |
 
-你的另一种选择是获取生成迁移的实际 SQL 脚本。例如，我添加了 Person.FullName 并生成了脚本。你可以从包控制台使用 **update-database -Script** 来生成它。你将得到以下脚本。
+你的另一种选择是获取生成迁移的实际 SQL 脚本。例如，我添加了 `Person.FullName` 并生成了脚本。你可以从包控制台使用 `update-database -Script` 来生成它。你将得到以下脚本。
 
 图 13：生成的 SQL
+
 ```sql
 ALTER TABLE [dbo].[Person] ADD [FullName] [nvarchar](max)
 INSERT [dbo].[__MigrationHistory] ([Context], [Model], [ProductVersion])
 VALUES ('20160521141034_InitialCreate', 'CodeFirst.Migrations.Configuration', 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFFFF74B', '6.1-4.3002')
 ```
 
-## 种子数据 (Seeds)
+# 种子数据 (Seeds)
 
-CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
+CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 `Configuration` 类时已经注意到了，但代码中有一个带有示例的 `Seed` 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 `Person`。
 
-代码列表 57：Seed 方法
-```csharp
-protected override void Seed(CodeFirstContext context)
-{
-    context.Genders.AddOrUpdate(new[]
-    {
-        new Gender { Id = 0, Code = "UNKNOWN", Description = "Not saying" },
-        new Gender { Id = 1, Code = "MALE", Description = "Male" },
-        new Gender { Id = 2, Code = "FEMALE", Description = "Female" }
-    });
-    context.Person.AddOrUpdate(p =>
-    {
-        FirstName = p.FirstName,
-        LastName = p.LastName
-    },
-    new Person
-    {
-        FirstName = "Sander",
-        LastName = "Rosell",
-        GenderId = 1
-    });
-}
-```
-
-让 CodeFirst 非常酷的另一个点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。在我尝试迁移时，我创建了 FullName，然后将其删除，结果再次导致了两个 C 类 AddPersonFullName。没问题，我删除了最旧的并运行了它。然而，在回滚时，我遇到了一个冲突，因为 AddPerson.FullName 具有歧义。幸运的是，你所做的只是删除 **dbo__MigrationHistory**，然后只需运行 **"update-database -TargetMigration:201605211180341_AddPersonFullName"** 来消除歧义，而无需大量繁琐的手动操作。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库的填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。。
-
-种子种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-使用种子数据填充数据库是 CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
-
-(注：由于输入文本中存在大量重复的段落，此处已根据“不要重复输出原文”的原则在译文部分进行了去重处理，保留了核心逻辑和代码块翻译。)
+## 代码列表 57：Seed 方法
 
 ```csharp
 protected override void Seed(CodeFirstContext context)
@@ -1583,46 +1444,15 @@ protected override void Seed(CodeFirstContext context)
     });
 }
 ```
-[/content] 
 
-**非常抱歉，由于您提供的待翻译文本中包含了大量重复的段落和句子，为了遵循指令中“注意一定不要重复输出原文”的要求，我在最终译文中仅保留了唯一的逻辑内容翻译。以下是完整的去重后高质量译文：**
 
-[content]
-在包控制台（Package Console）中，输入 **update-database**，你的数据库将会更新。你可以针对更新后的数据库运行代码并进行查询。确保不要为两个迁移设置相同的名称，否则你会在 C# 代码中遇到名称冲突。
-
-现在向 Person 类中添加一个属性，例如 `int Age`，然后运行另一个迁移 **"Add Person.Age"** 并执行 **update-database**。遗憾的是，由于某种原因，你最后的数据库更改被回滚了。幸运的是，系统生成了 Up 和 Down 方法，所以这应该很简单。要撤销迁移，只需更新到旧版本的迁移，新的迁移就会被回滚。在控制台中，输入 **"update-database -TargetMigration:Add Person.FullName"** 并运行它。Add Person.Age 将被回滚。
-
-在我尝试迁移时，我创建了 FullName，然后将其删除，结果再次导致了两个 C 类 AddPersonFullName。没问题，我删除了最旧的并运行了它。然而，在回滚时，我遇到了一个冲突，因为 AddPerson.FullName 具有歧义。幸运的是，你所做的只是删除 **dbo__MigrationHistory**，然后只需运行 **"update-database -TargetMigration:201605211180341_AddPersonFullName"** 来消除歧义，而无需大量繁琐的手动操作。
-
-| Migration | Context | Model | ProductVersion |
-|---|---|---|---|---|
-| 1 | 20160521141034_InitialCreate | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFFFF74B | 6.1-4.3002 |
-| 2 | 20160521141572_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFB1FF74B | 6.1-4.3002 |
-| 3 | 20160521141931_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE367C0FE41D3 | 6.1-4.3002 |
-| 4 | 20160521142035_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 5 | 20160521142205_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE361727FF2E5A | 6.1-4.3002 |
-| 6 | 20160521144406_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 7 | 20160521151427_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE361727FF2E5A | 6.1-4.3002 |
-| 8 | 20160521152319_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 9 | 20160521157438_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 10 | 20160521180258_AutomaticMigration | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFF74B | 6.1-4.3002 |
-| 11 | 20160521180431_Add PersonFullName | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED361D70D2F0D7FEB9 | 6.1-4.3002 |
-| 12 | 20160521189453_Add Person.Age | CodeFirst.Migrations.Configuration | 0xF1B8000000000000A0D5ED64D32BED361D1FF2E69 | 6.1-4.3002 |
-
-你的另一种选择是获取生成迁移的实际 SQL 脚本。例如，我添加了 Person.FullName 并生成了脚本。你可以从包控制台使用 **update-database -Script** 来生成它。你将得到以下脚本。
-
-图 13：生成的 SQL
-```sql
-ALTER TABLE [dbo].[Person] ADD [FullName] [nvarchar](max)
-INSERT [dbo].[__MigrationHistory] ([Context], [Model], [ProductVersion])
-VALUES ('20160521141034_InitialCreate', 'CodeFirst.Migrations.Configuration', 0xF1B8000000000000A0D5ED64D32BED36BE181FFBFFFF74B', '6.1-4.3002')
-```
 
 ## 种子数据 (Seeds)
 
-CodeFirst 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 Configuration 类时已经注意到了，但代码中有一个带有示例的 Seed 方法。让我们确保我们的性别（Genders）已经就绪，并有一个用于测试的 Person。
+`CodeFirst` 非常酷的另一个特点是可以使用初始数据对数据库进行填充。你可能在我们创建 `Configuration` 类时已经注意到了，但代码中有一个带有示例的 `Seed` 方法。让我们确保我们的性别（`Genders`）已经就绪，并有一个用于测试的 `Person`。
 
-代码列表 57：Seed 方法
+代码列表 57：`Seed` 方法
+
 ```csharp
 protected override void Seed(CodeFirstContext context)
 {
@@ -1648,16 +1478,44 @@ protected override void Seed(CodeFirstContext context)
 
 
 
+```csharp
+protected override void Seed(CodeFirstContext context)
+{
+    context.Genders.AddOrUpdate(new[]
+    {
+        new Gender { Id = 0, Code = "UNKNOWN", Description = "Not saying" },
+        new Gender { Id = 1, Code = "MALE", Description = "Male" },
+        new Gender { Id = 2, Code = "FEMALE", Description = "Female" }
+    });
+    context.Person.AddOrUpdate(p =>
+    {
+        FirstName = p.FirstName,
+        LastName = p.LastName
+    },
+    new Person
+    {
+        FirstName = "Sander",
+        LastName = "Rosell",
+        GenderId = 1
+    });
+}
+```
 
-# 解决方案 'Solution1' (1 个项目)
+# 解决方案 `Solution1` (1 个项目)
 
-- Database1
-  Properties
-  References
-  dbo
-    Tables
-      Gender.sql
-      Person.sql
+- `Database1`
+
+  `Properties`
+
+  `References`
+
+  `dbo`
+
+    `Tables`
+
+      `Gender.sql`
+
+      `Person.sql`
 
 图 14：解决方案管理器中的数据库项目
 
@@ -1667,11 +1525,11 @@ protected override void Seed(CodeFirstContext context)
 
 图 15：SQL Server 数据库项目模板
 
-让我们继续处理 Database1 项目。双击表将进入设计器，它与 SSMS 的非常相似。在这里，你可以添加新列和外键、更改列等。在屏幕底部，你会看到表的 SQL 脚本；它会随着你对表的更改而变化。
+让我们继续处理 `Database1` 项目。双击表将进入设计器，它与 SSMS 的非常相似。在这里，你可以添加新列和外键、更改列等。在屏幕底部，你会看到表的 SQL 脚本；它会随着你对表的更改而变化。
 
 ## 发布
 
-在执行任何操作之前，假设 SuccinctlyExamples 数据库已准备好投入生产，因此我们想要部署它。在解决方案管理器中右键点击你的数据库项目并选择**部署**。在**发布数据库**窗口中，选择一个数据库连接。接下来的窗口有点混乱，因为它向你展示了一些连接，但隐藏了你当前的连接。要显示当前连接详细信息，点击**显示连接属性**。现在只需选择 **SuccinctlyExamples** 数据库即可。
+在执行任何操作之前，假设 `SuccinctlyExamples` 数据库已准备好投入生产，因此我们想要部署它。在解决方案管理器中右键点击你的数据库项目并选择**部署**。在**发布数据库**窗口中，选择一个数据库连接。接下来的窗口有点混乱，因为它向你展示了一些连接，但隐藏了你当前的连接。要显示当前连接详细信息，点击**显示连接属性**。现在只需选择 **SuccinctlyExamples** 数据库即可。
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_62_0.png)
 
@@ -1679,28 +1537,42 @@ protected override void Seed(CodeFirstContext context)
 
 发布数据库窗口中，选择数据库名称。我们将创建一个新数据库，所以选一个不存在的名字。我将其称为 **ProductionDb**。在实际环境中，你可能有相同的数据库名称，但在另一个服务器实例上。由于我们没有额外的服务器，我们将通过不同的数据库名称使用同一个服务器实例。你还可以选择禁用高级菜单下的许多选项，特别是如果可能丢失数据。除非你勾选**如果可能丢失数据则阻止增量部署**，否则你将无法删除包含行的表列。有许多选项无法一一讨论，但务必查看它们。
 
-现在你可以查看脚本、修改它并运行它（在左上），或者直接运行脚本。如果你直接运行脚本，它将被放置在项目的 bin 文件夹中。此外还会打开 Data Tools 操作窗口，允许你直接打开脚本。无论你选择哪种方法，现在都应该拥有一个与 SuccinctlyExamples 数据库相同的 ProductionDb 数据库。这太棒了！
+现在你可以查看脚本、修改它并运行它（在左上），或者直接运行脚本。如果你直接运行脚本，它将被放置在项目的 bin 文件夹中。此外还会打开 Data Tools 操作窗口，允许你直接打开脚本。无论你选择哪种方法，现在都应该拥有一个与 `SuccinctlyExamples` 数据库相同的 `ProductionDb` 数据库。这太棒了！
 
 ## 更新
 
 现在我们已经部署了数据库，我们将收到更改请求。让我们给 **Person** 表添加一列。在 Visual Studio 解决方案管理器中双击 **Person.sql** 脚本。你可以在表设计器的空白区域右键点击，以添加或删除设计器列，如 Length、Description 和 Identity。现在添加一列，假设命名为 Title。它也是。
 
 | 脚本文件: Person.sql |
+
 | 名称 | 数据类型 | 允许空 | 默认值 |
+
 |---|---|---|---|---|
+
 | Id | int | | | |
+
 | FirstName | varchar(256) | | | |
+
 | LastName | varchar(256) | | | |
+
 | DateOfBirth | datetime | | | |
+
 | Gender | int | | | |
+
 | Title | varchar(254) | | | |
 
 | 键 (1) |
+
 | PK_Person (主键, 聚集: Id) |
+
 | 约束 (0) |
+
 | 索引 (0) |
+
 | 外键 (1) |
+
 | FK_Person_Gender (Id) |
+
 | 触发器 (0) |
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_63_0.png)
@@ -1722,7 +1594,7 @@ CREATE TABLE [dbo].[Person (
 
 现在再次发布数据库，这次只需发布到 Succinctly 数据库。在插入 CREATE 脚本后，Visual Studio 将生成一个 ALTER 脚本。如果你运行它（直接运行或生成脚本后运行），你的数据库现在将拥有新的 **Title** 列。
 
-更新表或列——即更改它——会产生重构日志（或此类日志）。这对于 Visual Studio 确定它必须重命名表或列，而不是删除带有旧名称的表或列是必要的。一旦发布了更改，数据库上将创建一个名为 __RefactorLog 的系统表（注意有两个下划线）。该表包含一个列，用于指示架构更改已发布。
+更新表或列——即更改它——会产生重构日志（或此类日志）。这对于 Visual Studio 确定它必须重命名表或列，而不是删除带有旧名称的表或列是必要的。一旦发布了更改，数据库上将创建一个名为 `__RefactorLog` 的系统表（注意有两个下划线）。该表包含一个列，用于指示架构更改已发布。
 
 ## 比较
 
@@ -1732,15 +1604,11 @@ Data Tools 的另一个酷功能是比较数据库。我们有几个选项：将
 
 我们还可以比较项目和数据库，这基本上是部署的替代方案（只是它不会识别重命名）。它的工作原理与数据库之间的比较完全相同，只是你的源现在是一个数据库项目。当你将数据库作为源并将项目作为目标时，会有趣的事情（你可以轻松地切换它们）
 
-
-
-
-
-## 第6 章 故障排除
+# 第6 章 故障排除
 
 查询偶尔会出问题。不幸的是，这可能有许多原因。也许你的数据库已经增长到这种程度，使得以前一直运行良好的查询现在变得非常缓慢。也许你的某一个环境缺少了索引。也许一个带有缓存查询计划的查询对于当前的参数值来说并不是最优的。在本章中，我们将介绍如何识别有问题的查询以及如何解决这些问题。
 
-为了几个示例，我们需要一个稍微规模的数据库。微软提供了一个名为 Adventure Works 的示例数据库可以使用。你可以从 CodePlex 下载它。或者，你可以在 Google（或 Bing）搜索 AdventureWorks2014 看看会出现什么结果。下载 Adventure Works 2014 Full Database Backup.zip 文件并解压 .bak 文件。在 SSMS 中，在对象资源管理器中右键点击“数据库”，然后点击“还原...”。在还原窗口中，启用“设备”，点击 `...` 按钮，并添加你刚刚解压的文件。然后只需点击“确定”，数据库就可以使用了。
+为了几个示例，我们需要一个稍微规模的数据库。微软提供了一个名为 Adventure Works 的示例数据库可以使用。你可以从 CodePlex 下载它。或者，你可以在 Google（或 Bing）搜索 `AdventureWorks2014` 看看会出现什么结果。下载 `Adventure Works 2014 Full Database Backup.zip` 文件并解压 `.bak` 文件。在 SSMS 中，在对象资源管理器中右键点击“数据库”，然后点击“还原...”。在还原窗口中，启用“设备”，点击 `...` 按钮，并添加你刚刚解压的文件。然后只需点击“确定”，数据库就可以使用了。
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_66_0.png)
 
@@ -1750,7 +1618,7 @@ Data Tools 的另一个酷功能是比较数据库。我们有几个选项：将
 
 首先，我们需要知道哪些查询运行缓慢。对于此（以及许多其他情况），我们可以使用性能调优器（profiler）。我建议在开发时经常使用性能分析器，因为它能向你展示数据库中发生的所有事情。例如，你可能有一段性能良好的代码，但它之所以良好可能是因为你正在本地进行测试且数据很少。性能分析器可能会显示，你实际上正在向数据库发送成千上万次查询（因为 EF 的延迟加载，或者因为你在循环中执行查询）。我经常遇到这样的场景：在测试环境中运行得很顺畅，但在生产环境中会让数据库陷入停滞（而这永远是令人担心）。
 
-要启动性能分析器，请使用 SSMS，在菜单中转到“工具”和“SQL Server 分析器”。你也可以从开始菜单中作为独立应用程序运行它（只要你在那里安装了它）。如果你从 SSMS 启动，它会自动启动一个新的跟踪。如果你从 Windows 启动，可以在“文件”菜单下找到“新建跟踪”。接下来，你必须登录你想要跟踪的实例。在跟踪生产环境时要小心，因为它会给系统带来负载。连接到本地实例，得到一个名为“跟踪属性”的窗口。在“常规”选项卡上，你可以为跟踪命名、保存到文件或选择一个模板。我们将忽略这一点。相反，请转到“事件选择”选项卡。在此选项卡上，你可以找到由数据库触发的所有类型的事件。其中已经为你勾选了几个，但还有很多。勾选“显示事件”和“显示所有列”复选框，你就会明白我的意思了。在以下事件中：Stored Procedures -> RPC:Completed 和 SP:BatchCompleted 以及 TSQL -> SQL:BatchCompleted。现在运行它以进行跟踪。
+要启动性能分析器，请使用 SSMS，在菜单中转到“工具”和“SQL Server 分析器”。你也可以从开始菜单中作为独立应用程序运行它（只要你在那里安装了它）。如果你从 SSMS 启动，它会自动启动一个新的跟踪。如果你从 Windows 启动，可以在“文件”菜单下找到“新建跟踪”。接下来，你必须登录你想要跟踪的实例。在跟踪生产环境时要小心，因为它会给系统带来负载。连接到本地实例，得到一个名为“跟踪属性”的窗口。在“常规”选项卡上，你可以为跟踪命名、保存到文件或选择一个模板。我们将忽略这一点。相反，请转到“事件选择”选项卡。在此选项卡上，你可以找到由数据库触发的所有类型的事件。其中已经为你勾选了几个，但还有很多。勾选“显示事件”和“显示所有列”复选框，你就会明白我的意思了。在以下事件中：Stored Procedures -> `RPC:Completed` 和 `SP:BatchCompleted` 以及 TSQL -> `SQL:BatchCompleted`。现在运行它以进行跟踪。
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_67_0.png)
 
@@ -1760,22 +1628,28 @@ Data Tools 的另一个酷功能是比较数据库。我们有几个选项：将
 
 图 22：跟踪暂停和属性
 
-在“事件选择”选项卡中，转到“列筛选...”并对 Application（应用程序）如“EntityFramework”进行过滤。如果你没有在 DbContext 中手动更改 Application，你将只会看到从你的应用程序触发的查询。对 LoginName 或 NTUserName 进行过滤也大有帮助，特别是当你有数百万次查询而你只对单个用户感兴趣时。我经常使用的另一个过滤器是 Duration（持续）大于；将其设置为 5000（毫秒），你将获得所有耗时至少五秒的查询。如果某个查询频繁出现，你可能需要查看它。无论如何，在设置好 Application 过滤器后，从你的应用程序运行一些查询并在性能分析器中查找它。`context.Find(p => p.Id == 1);`
+在“事件选择”选项卡中，转到“列筛选...”并对 Application（应用程序）如“EntityFramework”进行过滤。如果你没有在 DbContext 中手动更改 Application，你将只会看到从你的应用程序触发的查询。对 `LoginName` 或 `NTUserName` 进行过滤也大有帮助，特别是当你有数百万次查询而你只对单个用户感兴趣时。我经常使用的另一个过滤器是 `Duration`（持续）大于；将其设置为 5000（毫秒），你将获得所有耗时至少五秒的查询。如果某个查询频繁出现，你可能需要查看它。无论如何，在设置好 Application 过滤器后，从你的应用程序运行一些查询并在性能分析器中查找它。`context.Find(p => p.Id == 1);`
 
 | EventClass | TextData | ApplicationName | NTUserName | CPU | Reads | Duration |
+
 |---|---|---|---|---|---|---|
+
 | SQL:BatchCompleted | select(cast(Id as int) as ...) | EntityFramework | SR | 0 | 0 | 0 |
+
 | RPC:Completed | select Statement(SQL) FROM (SELECT TOP 100 PERCENT... | EntityFramework | SR | 0 | 0 | 0 |
+
 | SP:Completed | select * FROM People where Id = ... | EntityFramework | SR | 0 | 0 | 0 |
+
 | SQL:BatchCompleted | SELECT ... (Id) AS | EntityFramework | SR | 0 | 0 | 0 |
 
 图 23：性能分析器中的查询
 
-如你所见，EF 显示了许多行，只有第五行是实际查询。通过查看列，我们可以看到数据库返回了 1 行，并花费 0 毫秒生成结果。在寻找有问题的查询时，你可能想关注这些值。这不一定是坏事，但它可能表明某些地方可以进行优化。现在我们可以复制并粘贴查询并在 SSMS 中手动运行。性能分析器可以用于许多事情，例如跟踪死锁。查看所有带有 Duration 过滤器的事件和查询证明是很有用的。有时你可能想运行一段时间跟踪。你可以设置跟踪，然后在“文件”菜单中，转到“导出”，然后选择“SQL Server 2005-2014 跟踪定义...”。将脚本保存到你想要的地方（例如 C:\MyTrace）并运行它。
+如你所见，EF 显示了许多行，只有第五行是实际查询。通过查看列，我们可以看到数据库返回了 1 行，并花费 0 毫秒生成结果。在寻找有问题的查询时，你可能想关注这些值。这不一定是坏事，但它可能表明某些地方可以进行优化。现在我们可以复制并粘贴查询并在 SSMS 中手动运行。性能分析器可以用于许多事情，例如跟踪死锁。查看所有带有 Duration 过滤器的事件和查询证明是很有用的。有时你可能想运行一段时间跟踪。你可以设置跟踪，然后在“文件”菜单中，转到“导出”，然后选择“SQL Server 2005-2014 跟踪定义...”。将脚本保存到你想要的地方（例如 `C:\MyTrace`）并运行它。
 
 现在无论性能分析器是否在运行，一切都将保存到跟踪文件中。当然，你可以使用“跟踪属性”这样做，但我也向你展示脚本。顺便说一下，如果你打开文件时遇到困难，请尝试以管理员身份运行。要查看哪些跟踪正在运行，可以使用以下命令。
 
 ### 列表 63：查看 SQL 跟踪
+
 ```sql
 SELECT * FROM fn_trace_info(default)
 ```
@@ -1783,6 +1657,7 @@ SELECT * FROM fn_trace_info(default)
 要停止、启动和删除跟踪，可以使用以下命令。
 
 ### 列表 64：停止、启动和删除跟踪
+
 ```sql
 SELECT * FROM fn_trace_info(default)
 -- 我们创建的文件包含了跟踪。
@@ -1805,28 +1680,27 @@ EXEC sp_trace_status @TraceId, 2
 现在，打开 SSMS，浏览到 AdventureWorks 数据库并打开一个新的查询窗口。右键点击空查询窗口，在菜单中勾选“包含实际执行计划”。为了获取额外信息，在查询窗口中运行以下语句。
 
 ### 列表 74：启用统计
+
 ```sql
 SET STATISTICS ON
 SET STATISTICS TIME ON
 ```
 
-这些统计将在运行查询后显示在你的“消息”选项卡中。你可以从窗口中删除这些语句；它们在该窗口中一直有效，直到你关闭它或再次显式关闭（SET STATISTICS OFF）。现在在同一个查询窗口中运行以下查询。
+这些统计将在运行查询后显示在你的“消息”选项卡中。你可以从窗口中删除这些语句；它们在该窗口中一直有效，直到你关闭它或再次显式关闭（`SET STATISTICS OFF`）。现在在同一个查询窗口中运行以下查询。
 
 ### 列表 75：带有 JOIN 的 SQL 查询
+
 ```sql
 SELECT p.FirstName + ' ' + p.LastName AS FullName
 FROM Person.Person p
 JOIN Person.EmailAddress e ON e.BusinessEntityID = p.BusinessEntityID
 ```
 
+`MERGE JOIN`（合并连接）是最快速的连接方式。它仅在两组数据以相同方式排序，且两个行必须根据某个键进行匹配时才有效。在这种情况下，两个表都根据 `BusinessEntityID` 排序。`MERGE JOIN` 从一个输入端读取一行，并将其与另一个输入端的行进行比较。如果行不匹配，则值较小的行会被丢弃，直到读取完所有行。此操作的最大读取次数是第一个输入的行数加上第二个输入的行数。
 
+替代方案有 `LOOP JOIN`（循环连接）和 `HASH JOIN`（哈希连接）。`LOOP JOIN` 遍历第二个输入的所有行直到找到匹配项。这比 `MERGE JOIN` 效率低，因为最大读取次数是输入一行数乘以输入二行数。
 
-
-MERGE JOIN（合并连接）是最快速的连接方式。它仅在两组数据以相同方式排序，且两个行必须根据某个键进行匹配时才有效。在这种情况下，两个表都根据 `BusinessEntityID` 排序。MERGE JOIN 从一个输入端读取一行，并将其与另一个输入端的行进行比较。如果行不匹配，则值较小的行会被丢弃，直到读取完所有行。此操作的最大读取次数是第一个输入的行数加上第二个输入的行数。
-
-替代方案有 LOOP JOIN（循环连接）和 HASH JOIN（哈希连接）。LOOP JOIN 遍历第二个输入的所有行直到找到匹配项。这比 MERGE JOIN 效率低，因为最大读取次数是输入一行数乘以输入二行数。
-
-HASH JOIN 在处理之前可能需要哈希表，如果遇到它，它会为较小的输入创建一个哈希表（可能写入内存），然后使用哈希函数将其与其他值进行比较。对于较小的输入，HASH JOIN 非常高效，但如果输入很大，这可能会减慢你的查询。
+`HASH JOIN` 在处理之前可能需要哈希表，如果遇到它，它会为较小的输入创建一个哈希表（可能写入内存），然后使用哈希函数将其与其他值进行比较。对于较小的输入，`HASH JOIN` 非常高效，但如果输入很大，这可能会减慢你的查询。
 
 我们可以看到，当数据量较小时，这种查询是最优的：我们拥有最优的搜索算法。
 
@@ -1847,6 +1721,8 @@ OPTION (RECOMPILE)
 
 ## 图 25：非优查询计划
 
+
+
 我们在这里看到正在执行的是 Index Scan（索引扫描），但当我们执行查询时，只得到了一个结果。这意味着我们扫描了整个表（几乎有 20,000 行）。此外注意 Key Lookup（键查找），这发生在使用的索引没有包含所有请求值时。在这种情况下，在 `IX_Person_LastName_FirstName_MiddleName` 上执行了 Index Scan，但请求的字段多于这三个，因为我们还需要 `Title`。Key Lookup 查找行并检索所有缺失字段。当然，这消耗了更多的时间资源。
 
 > 提示：查询执行缓慢的问题是它们有时运行得非常慢（可能需要一小时或更久）。在这些情况下，“包含执行计划”不是一个选项，因为你需要等待它完成，从而占用资源并可能阻塞其他查询。对于此类情况，SQL Server 在右键菜单中有一个选项为“显示执行计划”。此选项不会运行查询，仅创建估计计划。它可能不会给你实际计划，但大多数情况下相当准确，你可以至少检查计划并识别可能的瓶颈。
@@ -1865,11 +1741,11 @@ OPTION (RECOMPILE)
 
 ![](img/a56ca9d7c6fd98834c26b14abef8ccb_73_0.png)
 
-## 图 26：消除了 Key Lookup
+### 图 26：消除了 Key Lookup
 
 不幸的是，我们仍然是 Index Scan 而不是 Index Seek（索引查找）。显然我们的索引还不够。你现在可以从索引列中移除 `Title`，因为我们将创建一个完全针对此查询优化的索引。只需添加索引，并将 `MiddleName` 放在索引列中，将 `FirstName`、`LastName` 和 `Title` 放在“包含列”中。
 
-## 代码列表 66：针对 MiddleName 的索引
+### 代码列表 66：针对 MiddleName 的索引
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_Person_MiddleName
@@ -1883,11 +1759,11 @@ ON Person.Person
 
 ![](img/a56ca9d7c6fd98834c26b14abef8ccb_73_1.png)
 
-## 图 27：最优查询计划
+### 图 27：最优查询计划
 
 在某些情况下，SQL Server 可能会为你建议索引。例如，运行以下查询并检查计划。
 
-## 代码列表 67：非索引查询
+### 代码列表 67：非索引查询
 
 ```sql
 SELECT *
@@ -1899,13 +1775,10 @@ WHERE OrderDate = '2012-01-01'
 
 当查询从 C# 代码执行时有时运行非常慢，而其他时间它在几毫秒内完成。这里可能发生多种情况。首先（我们会讨论这一点）是阻塞查询。另一种可能是是参数嗅探。
 
+在处理执行计划时，你必须了解 SQL Server 的相关知识。SQL Server 内部维护着各种信息。当你准备执行此存储过程时，SQL Server 会检查 `@OrderDate` 并根据其统计信息做出一些假设。这让我们的工作变得稍微简单了一些。此时，我们知道 `OrderDate` 上没有索引。结果，由于行数很多，SQL Server 将针对我们分配给 `@OrderDate` 的每个值对表进行扫描。我们可以通过使用几个值执行此查询并检查执行计划来简单易用地测试这一点。
 
+### 代码列表 80: 针对同一查询的多个计划
 
-在处理执行计划时，你必须了解 SQL Server 的相关知识。SQL Server 内部维护着各种信息。当你准备执行此存储过程时，SQL Server 会检查 @OrderDate 并根据其统计信息做出一些假设。这让我们的工作变得稍微简单了一些。此时，我们知道 OrderDate 上没有索引。结果，由于行数很多，SQL Server 将针对我们分配给 @OrderDate 的每个值对表进行扫描。我们可以通过使用几个值执行此查询并检查执行计划来简单易用地测试这一点。
-
-```
-代码列表 80: 针对同一查询的多个计划
-```
 ```sql
 DBCC FREEPROCCCACHE
 EXECUTE GetOrdersByDate @OrderDate = '20100101'
@@ -1915,41 +1788,44 @@ DBCC FREEPROCCCACHE
 EXECUTE GetOrdersByDate @OrderDate = '20150101'
 ```
 
-DBCC FREEPROCCCACHE 清除了缓存中的所有查询，因此我们知道 SQL Server 没有复用任何计划。我们为每个参数获取了计划。
+`DBCC FREEPROCCCACHE` 清除了缓存中的所有查询，因此我们知道 SQL Server 没有复用任何计划。我们为每个参数获取了计划。
 
 查询 1：查询成本（相对于批处理）：33%
-SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate
+
+`SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate`
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_75_0.png)
 
 查询 2：查询成本（相对于批处理）：33%
-SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate
+
+`SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate`
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_75_1.png)
 
 查询 3：查询成本（相对于批处理）：35%
-SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate
+
+`SELECT * FROM Sales.SalesOrderHeader WHERE OrderDate < @OrderDate`
 
 ![](img/a56ca9d7c6fd98834c26b14a4bef8ccb_75_2.png)
 
 图 29：相同的计划
 
-这对我们的示例帮助不大。此外，@OrderDate = '20100101' 返回了 0 行，说明表扫描并不是最优的。那么让我们让 SQL Server 知道这一点。我们在 OrderDate 上建立一个索引。
+这对我们的示例帮助不大。此外，`@OrderDate = '20100101'` 返回了 0 行，说明表扫描并不是最优的。那么让我们让 SQL Server 知道这一点。我们在 `OrderDate` 上建立一个索引。
 
-```
-代码列表 81：OrderDate 上的索引
+### 代码列表 81：OrderDate 上的索引
+
 ```sql
 CREATE NONCLUSTERED INDEX IX_SalesOrderHeader_OrderDate
- Sales.SalesOrderHeader (OrderDate) ASC
+ON Sales.SalesOrderHeader (OrderDate) ASC
 ```
 
-建立此索引后，再次运行之前的查询（并带上所有的 DBCC FREEPROCCCACHE），第一个查询看起来肯定会有所不同！它现在对 IX_SalesOrderHeader_OrderDate 执行了索引查找（Index Seek），这对于这个特定查询要好得多。
+建立此索引后，再次运行之前的查询（并带上所有的 `DBCC FREEPROCCCACHE`），第一个查询看起来肯定会有所不同！它现在对 `IX_SalesOrderHeader_OrderDate` 执行了索引查找（Index Seek），这对于这个特定查询要好得多。
 
-遗憾的是，我们无法在每个查询之前都执行 DBCC FREEPROCCCACHE。事实上，除非你确定自己正在进行嗅探（sniffing），否则永远不要在生产服务器上运行 DBCC FREEPROCCCACHE。运行以下查询并检查查询计划，你将看到参数嗅探的影响。
+遗憾的是，我们无法在每个查询之前都执行 `DBCC FREEPROCCCACHE`。事实上，除非你确定自己正在进行嗅探（sniffing），否则永远不要在生产服务器上运行 `DBCC FREEPROCCCACHE`。运行以下查询并检查查询计划，你将看到参数嗅探的影响。
 
-## 代码列表 69：参数嗅探
+### 代码列表 69：参数嗅探
 
-```
+```sql
 DBCC FREEPROCCCACHE
 EXECUTE GetOrdersBy @OrderDate ='20100101'
 EXECUTE GetOrdersBy @OrderDate ='20120101'
@@ -1959,10 +1835,11 @@ EXECUTE GetOrdersBy @OrderDate ='20150101'
 现在每次执行的查询计划又变得相等了。遗憾的是，对于 2012 和 2015 年的日期来说，这远非最优。此时，你可能会想：“为什么它会使用如此次优的计划？”或“为什么我的查询这么慢？”当你悬停在查询计划中的某个节点上时，你可以看到可能有助于查明问题错误的各种统计信息。
 
 ## 索引查找 (非聚集)
+
 从非聚集索引中扫描特定范围的行。
 
 索引查找 (非聚集)
-IX_SalesOrderHeader_OrderDate
+`IX_SalesOrderHeader_OrderDate`
 Cost: 50 %
 
 | 物理操作 | 索引查找 |
@@ -1979,7 +1856,7 @@ Cost: 50 %
 | 估计树结构成本 | 0.0032831 |
 
 聚集查找 (聚集)
-PK_SalesOrderHeader
+`PK_SalesOrderHeader`
 Cost: 50 %
 
 | 执行次数 | 1 |
@@ -1992,18 +1869,15 @@ Cost: 50 %
 | 节点 ID | 3 |
 
 索引查找 (非聚集)
-IX_SalesOrderHeader_OrderDate
+`IX_SalesOrderHeader_OrderDate`
 Cost: 50 %
 
-> [AdventureWorks2014].[Sales].[SalesOrderHeader]
-[IX_SalesOrderHeader_Date]
+> `[AdventureWorks2014].[Sales].[SalesOrderHeader]`
+`[IX_SalesOrderHeader_Date]`
 
 输出列表
-[AdventureWorks2014].[Sales].[SalesOrderHeader].OrderID;
-[AdventureWorks2014].[Sales].[SalesOrderHeader].OrderDate;
-
-
-
+`[AdventureWorks2014].[Sales].[SalesOrderHeader].OrderID;`
+`[AdventureWorks2014].[Sales].[SalesOrderHeader].OrderDate;`
 
 如你所见，在 SQL Server 中工作时，参数嗅探（parameter sniffing）有一些解决方案。在 C# 中使用 ADO.NET 时也可以应用相同的方法。由于你正在构建查询，因此也可以包含如 `OPTION (RECOMPILE)`、`OPTION (OPTIMIZE FOR ...)` 或 `WITH (INDEX(...))` 等提示信息。遗憾的是，在使用 Entity Framework (EF) 时，你并没有构建自己的查询。但你有几个选择：对于棘手的查询，可以使用存储过程（事实上，有些人对所有内容都使用存储过程，但那是另一个话题）。你也可以对棘手的查询使用原生 ADO.NET。如果你受限于 EF，可以使用 EF 拦截器（EF Interceptors，仅限 EF6 及更高版本），正如下一节所讨论。
 
@@ -2019,9 +1893,9 @@ Cost: 50 %
 
 如你所见，每个方法（`SomeExecuting` 或 `SomethingExecuted`）都会获取一个可以操作的 `DbCommand` 以及一个 `DbCommandInterceptionContext`。现在我们可以简单地向任何 `SELECT` 查询拼接 `" OPTION (RECOMPILE) "`。
 
-> 代码列表 75：RecompileInterceptor
+### 代码列表 75：RecompileInterceptor
 
-```sharp
+```csharp
 public class RecompileInterceptor : DbCommandInterceptor
 {
     public override void ReaderExecuting(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
@@ -2029,13 +1903,11 @@ public class RecompileInterceptor : DbCommandInterceptor
         base.ReaderExecuting(command, interceptionContext);
         AddOptionRecompile(command, interceptionContext);
     }
-
     public override void NonQueryExecuting(DbCommand command, DbCommandInterceptionContext<int> interceptionContext)
     {
         base.NonQueryExecuting(command, interceptionContext);
         AddOptionRecompile(command, interceptionContext);
     }
-
     public override void ScalarExecuting(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
     {
         base.ScalarExecuting(command, interceptionContext);
@@ -2045,13 +1917,10 @@ public class RecompileInterceptor : DbCommandInterceptor
 ```
 
 ```csharp
-private void AddOptionRecompile<T>(DbCommand command,
-DbCommandInterceptionContext<T> interceptionContext)
+private void AddOptionRecompile<T>(DbCommand command, DbCommandInterceptionContext<T> interceptionContext)
 {
-    // DbContexts.Any 表示查询不是 EF 的开销。
     if (interceptionContext.DbContexts.Any() &&
-        command.CommandText.StartsWith("SELECT",
-StringComparison.OrdinalIgnoreCase))
+        command.CommandText.StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
     {
         command.CommandText += " OPTION (RECOMPILE)";
     }
@@ -2060,7 +1929,7 @@ StringComparison.OrdinalIgnoreCase))
 
 要使用 `DbInterceptor`，我们可以使用 `DbInterceptor` 类。遗憾的是，一旦注册，拦截器将用于应用程序中的每个查询（包括其他线程）。当然，你可以注销它们。
 
-代码行 76：添加拦截器
+### 代码行 76：添加拦截器
 
 ```csharp
 RecompileInterceptor interceptor = new RecompileInterceptor();
@@ -2078,25 +1947,26 @@ Console.ReadKey();
 
 ## 锁定与死锁
 
-另一个你在查询运行缓慢时可能面临的问题是。我曾遇到过诸如 `SELECT Field From Table WHERE Id = X` 这样的查询运行缓慢的情况。我们知道此类查询应该非常快，参数嗅探不应该是一个问题，因为对于 X 的每个值，执行计划应该是相同的。很可能是此查询之所以没有运行，是因为某个其他查询阻塞了对指定表的访问。我们可以轻松地模拟此类场景。首先，我想提醒你，在单个查询窗口中可以只运行脚本的部分。让我们模拟此类场景……（注：原文此段存在大量重复的句子，已按要求处理并避免重复输出）。
+另一个你在查询运行缓慢时可能面临的问题是。我曾遇到过诸如 `SELECT Field From Table WHERE Id = X` 这样的查询运行缓慢的情况。我们知道此类查询应该非常快，参数嗅探不应该是一个问题，因为对于 X 的每个值，执行计划应该是相同的。很可能是此查询之所以没有运行，是因为某个其他查询阻塞了对指定表的访问。我们可以轻松地模拟此类场景。首先，我想提醒你，在单个查询窗口中可以只运行脚本的部分。让我们模拟此类场景……
 
 另一个你在查询运行缓慢时可能面临的问题。我曾遇到过诸如 `SELECT Field From Table WHERE Id = X` 这样的查询运行缓慢的情况。我们知道此类查询应该非常快，参数嗅探不应该是一个问题，因为对于 X 的每个值，执行计划应该是相同的。很可能是此查询之所以没有运行，是因为某个其他查询阻塞了对指定表的访问。我们可以轻松地模拟此类场景。首先，我想提醒你，在单个查询窗口中可以只运行脚本的部分。
 
-## 代码列表 90：阻塞查询
+### 代码列表 90：阻塞查询
 
 ```sql
 BEGIN TRAN
-
 UPDATE Production.Product
 SET Name = 'Adjustable Racer'
 WHERE ProductID = 1
 ```
 
 ```sql
-
 现在打开另一个查询窗口，让它等待打开的事务，并锁定另一个资源。
+```
 
-## 代码列表 80：锁定与等待查询
+### 代码列表 80：锁定与等待查询
+
+
 
 ```sql
 BEGIN TRAN
@@ -2110,9 +1980,6 @@ FROM Production.Product
 WHERE ProductID = 1
 ```
 
-
-
-
 ## 代码列表 81：发生死锁
 
 ```sql
@@ -2121,13 +1988,13 @@ FROM Production.Location
 WHERE LocationID = 1
 ```
 
-两个查询中的其中一个应该返回错误：Msg 1205, Level 13, State 51, Line 7
+两个查询中的其中一个应该返回错误：`Msg 1205, Level 13, State 51, Line 7`
 
 事务（进程 ID 54）与另一个进程在锁资源上发生死锁，并被选为死锁受害者。正在返回该事务。
 
 该查询的事务将自动回滚。在另一个窗口中，你可以手动执行 `ROLLBACK Tran`。
 
-你可以使用 SQL Profiler 跟踪锁和死锁。打开一个新会话，取消选择所有事件，并在 `Locks` 下选择 `Deadlock graph` 事件。如果你重复之前的步骤，你将获得一个事件和一个图。它看起来应该像这样。
+你可以使用 `SQL Profiler` 跟踪锁和死锁。打开一个新会话，取消选择所有事件，并在 `Locks` 下选择 `Deadlock graph` 事件。如果你重复之前的步骤，你将获得一个事件和一个图。它看起来应该像这样。
 
 ![](img/a56ca9d7c6fd98834c26b14abef8ccb_85_0.png)
 
@@ -2139,7 +2006,7 @@ WHERE LocationID = 1
 
 ## 动态管理视图
 
-进一步了解如何控制查询、执行计划和其他数据可能会非常有用。SQL Server 拥有所谓的动态管理视图，或 DMVs。你的数据库结构、表、存储过程以及数据库中的几乎所有内容都存储在这些视图中。例如，以下查询列出了所有表（两次）。
+进一步了解如何控制查询、执行计划和其他数据可能会非常有用。SQL Server 拥有所谓的动态管理视图，或 `DMVs`。你的数据库结构、表、存储过程以及数据库中的几乎所有内容都存储在这些视图中。例如，以下查询列出了所有表（两次）。
 
 ```sql
 SELECT * FROM sys.tables
@@ -2158,15 +2025,22 @@ FROM sys.dm_exec_cached_plans
 ```
 
 | objid | userscount | size_in_pages | memory_address | cachetype | dbtype | plan_handle | plan_id | parent_plan_handle |
-|---|---|---|---|---|---|---|---|---|
-| 21915 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E76000000000000000 | 1 | NULL |
-| 4049 | 2 | 4096 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E7600000000000000 | 1 | NULL |
-| 26173 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E7600000000000000 | 1 | NULL |
-| 51723 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000004F2D1025300347640000000 | 1 | NULL |
-| 34258 | 2 | 1124 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E760000000000 | 1 | NULL |
-|  1 19 | 2 | 9 | 0000000000045A4A4 |0 | | | 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001649 | 2 | 9 | 0000000046E5A4E0 | Prepared | Prepared | 0x000000005C4D0F9357340000 | 1 | NULL |
 
-图 32：sys.dm_exec_cached_plans
+|---|---|---|---|---|---|---|---|---|
+
+| 21915 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E76000000000000000 | 1 | NULL |
+
+| 4049 | 2 | 4096 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E7600000000000000 | 1 | NULL |
+
+| 26173 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E7600000000000000 | 1 | NULL |
+
+| 51723 | 2 | 32768 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000004F2D1025300347640000000 | 1 | NULL |
+
+| 34258 | 2 | 1124 | 0000000046E5A4E0 | Compiled | Adhoc | 0x00000007B5C4C31E760000000000 | 1 | NULL |
+
+|  1 19 | 2 | 9 | 0000000000045A4A4 |0 | | | 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001649 | 2 | 9 | 0000000046E5A4E0 | Prepared | Prepared | 0x000000005C4D0F9357340000 | 1 | NULL |
+
+图 32：`sys.dm_exec_cached_plans`
 
 `plan_handle` 非常有用。现在我们有了 `plan_handle` 和 `query_plan`，我们需要实际查询。另一个名为 `sys.dm_exec_sql_text` 的函数接受 `plan_handle` 作为输入。我们通过 `DB_ID(database_name)` 获取数据库 ID。
 
@@ -2243,8 +2117,6 @@ JOIN sys.dm_exec_connections ec ON ec.session_id = owt.blocking_session_id
 JOIN sys.partitions p ON p.partition_id = tl.resource_associated_entity_id
 ```
 
-
-
 ```sql
 CROSS APPLY sys.dm_exec_sql_text(ec_waiting.most_recent_sql_handle) AS
 waiting_text
@@ -2260,7 +2132,9 @@ JOIN sys.partitions p ON p.resource_associated_entity_id
 ```
 
 | request_session_id | blocking_session_id | resource_type | WaitingType | BlockingTest | ObjectName |
+
 | --- | --- | --- | --- | --- | --- |
+
 | 54 | 52 | KEY | | SELECT * FROM [Product] ... | BEGIN TRAN UPDATE Production.Product SET Na... | Product |
 
 图 33：当前被阻塞的查询
@@ -2276,19 +2150,15 @@ EXEC sp_who2 -- 列出所有会话..
 
 *(注：由于原文从第 91 页起存在严重的 OCR 文本重复与乱码，为确保文档质量，后续部分未进行无效内容的翻译。)*
 
-
-
-
-
 ## 部署
 
 部署数据库通常是一项手动任务，数据库管理员（DBA）希望对自己的数据库保持完全控制。IT 部门不信任自动化部署，或者担心它会在错误的时间触发。他们不确定开发团队的脚本是否准备就绪，以确保自动数据库更新始终完全按照计划执行。当数据库出现问题时，让一切重新运行通常是高昂的。简而言之，自动化更新让许多人感到紧张。手动运行脚本才是正道。我们已经看到使用 Entity Framework 或数据库项目（Database Projects）进行（半）自动化部署非常简单。当使用数据库项目时，你可以使用数据层应用程序包（Data-tier application package）进行（手动）部署。
 
-尽管如此，自动化数据库部署是可能的。也许你想将其用于非关键环境，例如测试环境。Redgate 有一个很好用但昂贵的解决方案。我们已经讨论过数据库项目，所以我这里就跳过它。我想讨论的最后一点是 SQL Server 命令行工具或 `sqlcmd`。你可能需要下载它，特别是当你使用微软下载中心中的 SQL Server 命令行实用时。通过此工具，你可以从命令行、批处理以及你喜欢的 CI 工具中执行脚本。sqlcmd 工具随 SQL Server 2005 引入，它取代了功能相似的 `isql` 和 `osql` 工具。
+尽管如此，自动化数据库部署是可能的。也许你想将其用于非关键环境，例如测试环境。Redgate 有一个很好用但昂贵的解决方案。我们已经讨论过数据库项目，所以我这里就跳过它。我想讨论的最后一点是 SQL Server 命令行工具或 `sqlcmd`。你可能需要下载它，特别是当你使用微软下载中心中的 SQL Server 命令行实用时。通过此工具，你可以从命令行、批处理以及你喜欢的 CI 工具中执行脚本。`sqlcmd` 工具随 SQL Server 2005 引入，它取代了功能相似的 `isql` 和 `osql` 工具。
 
-一旦你安装了 sqlcmd：
+一旦你安装了 `sqlcmd`：
 
-> 代码列表 93：使用 sqlcmd 执行 SELECT
+代码列表 93：使用 `sqlcmd` 执行 SELECT
 
 ```
 sqlcmd -S [servername][instancename] -E -d AdventureWorks2014
@@ -2298,9 +2168,11 @@ WHERE BusinessEntityID = 1
 GO
 ```
 
+
+
 在第一行中，我们连接到数据库。构成查询的每一行都会在 `GO` 命令后执行。`-S` 参数是服务器名称，`-E` 表示我们使用受信任连接登录，`-d` 指定数据库。要使用 `sqlcmd`，你必须指定 `exit`。注意所有参数对大小大小敏感。如果你不在受信任连接上且想使用用户名和密码，可以使用以下命令。
 
-> 代码列表 94：使用 SQL Server 登录的 sqlcmd
+### 代码列表 94：使用 SQL Server 登录的 `sqlcmd`
 
 ```
 sqlcmd -S [servername][instancename] -U username -P password -d
@@ -2309,15 +2181,15 @@ AdventureWorks2014
 
 当你从命令提示符运行 `sqlcmd` 时，你可以将查询跨越多行并使用 `GO` 执行。当你不在命令提示符中时，你需要使用 `-q`（查询）或 `-Q`（查询并退出）以及单行查询语句。
 
-## 代码列表 95：使用直接查询命令的 sqlcmd
+### 代码列表 95：使用直接查询命令的 `sqlcmd`
 
 ```
 sqlcmd -S [server\instance] -E -d AdventureWorks2014 -Q "SELECT * FROM Person.Person WHERE BusinessEntityID = 1"
 ```
 
-当然，你也可以使用 `-i` 指定要运行的脚本文件。在某处创建一个文件（我把它放在了 C:\Temp），命名为某个名称（SelectPerson1.sql），然后你就可以运行以下命令。
+当然，你也可以使用 `-i` 指定要运行的脚本文件。在某处创建一个文件（我把它放在了 `C:\Temp`），命名为某个名称（`SelectPerson1.sql`），然后你就可以运行以下命令。
 
-## 代码列表 96：使用输入文件的 sqlcmd
+### 代码列表 96：使用输入文件的 `sqlcmd`
 
 ```
 sqlcmd -S [server\instance] -E -d AdventureWorks2014 -i C:\Temp\SelectPerson1.sql
@@ -2325,17 +2197,16 @@ sqlcmd -S [server\instance] -E -d AdventureWorks2014 -i C:\Temp\SelectPerson1.sq
 
 现在结果在命令提示符中可能有点难读。你也可以使用 `-o` 将它们输出到文件中。
 
-> 代码列表 97：使用输出文件的 sqlcmd
+### 代码列表 97：使用输出文件的 `sqlcmd`
 
 ```
 sqlcmd -S [server\instance] -E -d AdventureWorks2014 -i C:\Temp\SelectPerson1.sql -o C:\Temp\result.txt
 ```
 
-你可能喜欢的使用的另一个选项是 `-b`，它会在发生错误时终止作业。你可以在 sqlcmd 文中找到所有选项。
+你可能喜欢的使用的另一个选项是 `-b`，它会在发生错误时终止作业。你可以在 `sqlcmd` 文中找到所有选项。
 
-使用 `sqlcmd`，你可以通过从命令行运行来自动化某些 SQL 任务。我应该提到的是，这完全不能替代 SQL Agent，后者也可以运行自动化的 SQL 作业。问题在于，你无法从 CI 工具运行 SQL Agent，但你可以运行 `sqlcmd` 实用程序。sqlcmd 工具仍然没有自动化你的部署，但它可能对于测试开始之前或将新脚本提交到版本控制系统之后自动运行脚本有用。
+使用 `sqlcmd`，你可以通过从命令行运行来自动化某些 SQL 任务。我应该提到的是，这完全不能替代 `SQL Agent`，后者也可以运行自动化的 SQL 作业。问题在于，你无法从 `CI` 工具运行 `SQL Agent`，但你可以运行 `sqlcmd` 实用程序。`sqlcmd` 工具仍然没有自动化你的部署，但它可能对于测试开始之前或将新脚本提交到版本控制系统之后自动运行脚本有用。
 
 # 结
 
-书中介绍的工具不会让你成为最优秀的 C# 开发者，也不会教你如何成为一名出色的 DBA。它们为你提供了两者的折中方案。我见过许多缺乏基本数据库技能的开发者。SQL 注入仍然发生得频繁。由于 SQL 查询完全不理想，软件在生产一年后会变得缓慢。公司不得不投资昂贵的服务器硬件，是因为开发者在循环中放置了查询、对 ORM 的懒加载功能感到惊讶，或者仅仅是编写了极其糟糕的 SQL 查询。虽然这本书在编写查询方面对你帮助不大，但它可能帮助你对整个数据库有一个更宽广的视角。参数化你的查询，但要小心参数嗅探（parameter sniffing）。要清楚你一个运行五分钟的查询可能会阻塞整个系统。识别这些瓶颈并修复，或者防止它们发生。
-
+书中介绍的工具不会让你成为最优秀的 `C#` 开发者，也不会教你如何成为一名出色的 `DBA`。它们为你提供了两者的折中方案。我见过许多缺乏基本数据库技能的开发者。`SQL` 注入仍然发生得频繁。由于 `SQL` 查询完全不理想，软件在生产一年后会变得缓慢。公司不得不投资昂贵的服务器硬件，是因为开发者在循环中放置了查询、对 `ORM` 的懒加载功能感到惊讶，或者仅仅是编写了极其糟糕的 `SQL` 查询。虽然这本书在编写查询方面对你帮助不大，但它可能帮助你对整个数据库有一个更宽广的视角。参数化你的查询，但要小心参数嗅探（`parameter sniffing`）。要清楚你一个运行五分钟的查询可能会阻塞整个系统。识别这些瓶颈并修复，或者防止它们发生。

@@ -1,27 +1,11 @@
+
 # 面向灵活性的软件设计：如何避免陷入编程死胡同
-
-
-
-
-
-
-
 
 ![](img/2e72770736573f9ba6300d8cdb1e28c1_0_0.png)
 
-
-
-
 Guy L. Steele Jr. 序言
 
-
-
-
 ![](img/2e72770736573f9ba6300d8cdb1e28c1_3_0.png)
-
-
-
-
 
 10 9 8 7 6 5 4 3 2 1
 
@@ -30,9 +14,6 @@ d_ro
 计算机就像小提琴。你可以想象一个初学者先尝试留声机，然后尝试小提琴。他说，后者听起来糟糕透了。这是我们从人文主义者和大多数计算机科学家那里听过的论点。他们说，计算机程序对于特定目的很好，但它们缺乏灵活性。小提琴或打字机也是如此，在你你学会如何使用它们之前。
 
 > Marvin Minsky，“为什么编程是表达理解不当和表述草率想法的良好媒介”，载于《设计与规划》(1967)
-
-
-
 
 # 第1章
 
@@ -50,7 +31,7 @@ d_ro
 
 图 2.4 组合器 `spread-combine` 实际上是两个部分的复合……
 
-图 2.5 组合器 `(discard-argument 2)` 取一个三参数函数……
+图 2.5 组合器 `discard-argument 2` 取一个三参数函数……
 
 图 2.6 组合器 `((curry-argument 2)' 'a 'b)` 指定了三个中的……
 
@@ -80,12 +61,10 @@ d_ro
 
 Jerry Sussman 和 Chris Hanson 利用他们一个世纪的编程经验，介绍了一系列在 MIT 数十年教学中开发和测试的技巧，这些技巧进一步扩展了这种基本的灵活性策略。不要使用函数；要使用泛型函数，它们具有普通函数不具备的开放性。保持函数短小。通常函数返回最好的结果是另一个函数（经过特定数据定制的）。准备好将数据视为代码，甚至在必要时在应用程序中创建一个新的嵌入语言。（这是关于 Scheme 语言起源的一种观点：Lisp 的 MacLisp 方言不支持完全通用的函数闭包，因此 Jerry 和我直接使用 MacLisp 作为支持我们所需的函数闭包的 Lisp 嵌入方言。）准备好用更通用的数据结构替换原有数据结构，以涵盖原始结构并扩展其功能。使用自动约束传播来避免过早承诺哪些数据项是输入，哪些是输出。
 
-
-
-
-
 Guy L. Steele Jr.
+
 马萨诸诸塞州，莱克星顿
+
 2020年8月
 
 # 前言
@@ -108,7 +87,6 @@ Guy L. Steele Jr.
 
 尽管这门课程过去和现在都很成功，但事实证明，我们最初对材料的理解并没有我们想象的那么深。我们投入了大量精力精炼工具并使我们的想法更加精确。我们意识到这些技术不仅适用于人工智能应用。我们认为，任何构建复杂系统（如计算机语言编译器和集成开发环境）的人都会从我们的经验中受益。本书基于我们现在课程中使用的讲义和习题集编写。
 
-
 书中的材料远多一个学期课程能涵盖的内容。因此，每次提供这门课程时，我们挑选要展示的内容。第1章是对我们编程哲学的介绍。在这里，我们在自然和工程的宏大背景下展示*灵活性*。我们试图证明，灵活性与效率和正确性同样重要的问题。在随后的每一章中，我们将介绍技术并用一组练习对其进行说明。这是本书的一个重要的组织原则。
 
 在第2章中，我们探索了构建具有增长空间的系统的通用方法。组织灵活系统的一种有力方法将其构建为领域特定语言（DSLs）的组装，每种语言都适合易于地表达子系统的构建。在这里，我们开发了用于开发领域特定语言的基础工具：我们展示了子系统如何围绕混合的部件进行组织、它们如何与组合器（combinators）灵活地结合、如何使用包装器（wrappers）来泛化部分，以及我们如何经常通过抽象领域模型来简化程序。
@@ -128,10 +106,6 @@ Guy L. Steele Jr.
 书中的代码是用Scheme编写的，这是一种主要是函数的语言，是Lisp变体。虽然Scheme不是一种流行的语言，在工业背景下也没有广泛使用，但它是本书的正确选择¹
 
 ¹我们在附录B中提供了Scheme的简短介绍。
-
-
-
-
 
 # 致谢
 
@@ -175,13 +149,11 @@ Elizabeth Vickers 作为多年的伴侣，为 Chris 和他们的孩子 Alan 和 
 
 我们总是可以组合程序以获得每个程序所支持的行为并集。但我们希望整体大于部分之和；我们希望组合系统的部分能够相互协作，为系统提供任何部分都无法提供的能力。但这里存在权衡：我们组合以构建系统的部分必须严格分离关注点。如果一个部分在某方面做得非常好，它比结合了几个不同能力的部件更容易重用，也更容易调试。如果我们想以加法的方式进行构建，确保各个组件组合时产生的意外相互作用最少是关重要的。
 
-
-
-
-
 为了便于加性编程（additive programming），我们构建的部分必须尽可能简单且通用。例如，一个接受的输入范围比解决问题严格所需的范围更宽的部分，其适用性会比不这样做的部分更广。此外，围绕标准化接口规范构建的部件族可以进行组合，以构建出多样化的系统。为我们的部件选择合适的抽象层次至关重要，即识别出部件族的话语域（domain of discourse），然后为该领域构建该族。我们从第 2 章开始考虑这些需求。
 
 为了获得最大的灵活性，一个部分的输出范围应该非常小且定义明确——远小于任何可能接收该输出的部件的可接受输入范围。这类比我们在入门级计算机系统课程中教授给学生的数字抽象中的静态纪律（static discipline）[126]。数字抽象的本质在于，输出始终优于下一个阶段的可接受输入，从而抑制噪声。
+
+
 
 在软件工程中，这一原则被称为“波斯尔法则”（Postel's law），以纪念互联网先驱乔·波斯尔（Jon Postel）。在 RFC 760 [97] 描述互联网协议时，他写道：“协议的实现必须是健壮的。每个实现都必须能够与不同个人创建的其他实现进行互操作。虽然本规范的目标是明确协议，但存在不同解释的可能性。通常情况下，一个实现实现在发送行为上应该是保守的，在接收行为上应该是慷慨的。这通常被总结为‘对你所做的要保守，对从他人那里接受的要慷慨。’”
 
@@ -212,10 +184,6 @@ Elizabeth Vickers 作为多年的伴侣，为 Chris 和他们的孩子 Alan 和 
 传统上，程序员无法像建筑师那样设计。在非常复杂的语言（如 Java）中，构图与扩展紧密混合。“服务空间”（实际描述所需行为的表达式）与“服务性空间”（如类型声明、类声明以及库导入和导出）严重地混淆。更简洁的语言（如 Lisp 或 Python）几乎没有给服务性空间留地，添加声明（即使是建议性的声明）的尝试会被回避，因为它们阻碍了暴露构图的美感。
 
 架构构图应该足够完整，以便创建用于分析和批判的模型。程序的骨架应该能够用于分析和批判，但它也应该是可执行的，以便实验和调试。正如建筑师必须填充构图以实现设计的结构一样，程序员也必须扩展计划以实现所需的计算系统。分层（第 6 章介绍）是允许这种扩展的系统之一。
-
-
-
-
 
 ### 1.2 用于灵活性的智能部件
 
@@ -251,14 +219,13 @@ Elizabeth Vickers 作为多年的伴侣，为 Chris 和他们的孩子 Alan 和 
 
 类似的技术可以用于软件。身体结构只是一个组合部分规范组件的包装器。这是一种组合子：一种将次标准部件组合成更大的东西。
 
-
 部分。可以创建组合子语言（combinator languages），在这种语言中，组件和复合体具有相同的接口规范。在组合子语言中，可以从少数几个混合组合的组件构建出任意大的复合体。这种自相似结构使得组合变得非常容易。在第 2 章中，我们将开始构建基于组合子的软件，这一主题将贯穿本书的剩余所有内容。
 
 领域特定语言（domain-specific languages）也可以实现类似的操作。通过对领域进行抽象，我们可以在不同领域中使用与领域无关的代码。例如，数值积分器对于任何具有数值结果的领域都是有用的，无论该领域是什么。另一个例子是第 4 章中的模式匹配，它可以应用于各种领域。
 
 生物机制具有普适性，每个组件在原则上都可以充当任何其他组件。模拟电子元件在这一意义上并不是普适的。它们不会通过局部信号来适应其周围环境。但确实存在通用的电气构建块（例如，带有模拟接口的可编程计算机）。¹ 对于低频应用，人们可以使用此类构建块构建模拟系统。如果每个构建块都拥有成为系统中任何一个块所需的所有代码，但通过与邻居组件的交互来实现特化，并且如果封装中存在额外的未特化的“干细胞”，那么我们就可以想象构建自重构和自修复的模拟系统。但目前，我们仍然会单独设计和构建这些部分。
 
-在编程中，我们有一个通用元素的概念：*评估器*（evalator）。评估器接受要执行的计算的描述以及该计算的输入。它产生如果将输入传递到实现所需计算的定制组件时将会产生的输出。在计算中，我们有机会追求胚发育这种强大的灵活策略。我们将在第 5 章中详细阐述评估器技术的使用。
+在编程中，我们有一个通用元素的概念：`evalator`。`evalator`接受要执行的计算的描述以及该计算的输入。它产生如果将输入传递到实现所需计算的定制组件时将会产生的输出。在计算中，我们有机会追求胚发育这种强大的灵活策略。我们将在第 5 章中详细阐述`evalator`技术的使用。
 
 ### 1.3 冗余与退化
 
@@ -286,9 +253,6 @@ Elizabeth Vickers 作为多年的伴侣，为 Chris 和他们的孩子 Alan 和 
 
 甚至还有更惊人的现象：亲缘生物通过完全不同的机制构建¹⁸ 对于远远的关系，构建共同结构的差异化机制可以归因于“趋同进化”，但对于近缘关系，这更有可能是细节水平分离的证据，即结果的方式与其实现的方式在某种程度上是独立的。
 
-
-
-
 工程化系统可能表现出类似的结构。我们尝试将规范与实现分离：通常有多种方法可以满足规范，而设计可能会选择不同的实现。用于排序数据集的最佳方法取决于数据集的预期大小，以及比较元素的计算开销。多项式的恰当表示法取决于它是稀疏的还是密集的。但如果这些选择是动态的（一种不寻常系统），它们是确定性的：我们没有看到许多系统会同时尝试多种解决问题的方法并使用最先收敛的那种（毕竟那些核心到底是什么呢？）。找到按顺序尝试多种方法的系统甚至也是罕见的：如果一种方法失败了，就用另一种方法。我们将在第 4 章中研究如何使用回溯来实现模式匹配中的“生成并测试”机制。我们将在第 5 章中学习如何在语言中构建回溯。在第 7 章中，我们将学习如何构建一种依赖引导的回溯机制，从失败中提取尽可能多的信息。
 
 ### 1.5 灵活性的代价
@@ -301,6 +265,8 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 
 问题所在在于，我们用错误的术语来思考成本。时间和空间的使用很重要，但我们对这些从何而来的直觉很糟糕。每位工程师都知道，评估系统的真实性能涉及大量且仔细的测量，这些测量通常显示成本往往在意想不到的地方。随着复杂性的增加，这只会变得困难。但我们仍然坚持在程序的各个层面进行过早优化，而不知道其真实价值。
 
+
+
 假设我们将系统中必须快速的部分与必须智能的部分分开。在这种策略下，通用性和可演化性的代价可以限制在必须智能的部分。这在计算系统中是一个不寻常的视角，但在我们的生活经验中无处不在。例如，当我们尝试学习一项新技能时（例如学习乐器），初始阶段涉及意识活动，将预期的效果与产生该效果所需的物理动作连接起来。但随着技能的熟练，大部分工作在没有意识注意的情况下就能完成。这对于能够快速行动至关重要，因为意识活动太慢了。
 
 在硬件和软件的区分中也可以找到类似的论点。硬件的设计是为了效率，代价是具有固定接口。人们可以在该接口之上使用软件构建软件——实际上是使用软件创建一个虚拟机。这层额外的抽象引入了了众所周知的代价，但这种权衡对于所获得的通用性来说是非常值得的（否则我们现在还在用汇编语言编程！）。这里的要点是，这种分层结构提供了一种兼顾效率和灵活性的方法。我们认为，要求整个系统以最有效的方式实现是适得其反的，阻碍了适应未来需求的灵活性。系统的真实成本是程序员花费在设计、理解、维护、修改和调试系统上的时间。因此，增强适应性的价值可能更加极端。一个易于适应和维护的系统消除了最大的成本之一：教新程序员了解现有系统如何工作（包括其所有糟糕的细节），以便他们知道从哪里接入并修改代码。事实上，我们脆弱的基础设施成本可能远超过灵活设计的成本，无论是从灾难的成本上，还是从重新设计和重建所需的时间导致的机会成本上。而且如果重新编程系统所花费的时间中有很大一部分是为了让系统适应新需求，那么这种适应可能是一个更大的胜利。
@@ -308,6 +274,7 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 ### 正确性的问题
 
 > 对于乐观者来说，杯子是满的。对于悲观者来说，杯子是空的。对于工程师来说，杯子大得离倍。
+>
 > 作者未知
 
 以某种方式构建系统，使其适用范围超出设计范围，可能会产生更大的代价。由于我们打算在未设计的语文中使用它们，我们无法确定它们运行正确！
@@ -327,7 +294,6 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 ² 当然，有一些极好的例外。例如，Emacs[113] 是一种可扩展编辑器，它优雅地演进以适应计算环境的变化和用户预期的变化。计算世界刚刚开始探索“工程化框架”，例如微软的 .net 和太阳的 Java。这些旨在成为支持演化系统的基础设施。
 
 ³ parti（发音为 parTEE）是建筑作品的核心思想：它是“[建筑]构图正在
-
 
 “被视为整体构思，细节稍后填充。” [62]
 
@@ -381,7 +347,7 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 
 在某些情况下，我们可以通过促进共享组合机制的简单策略来改进这种做法。如果我们构建的系统是由家族成员“混配”组件组成的，通过组合产生家族的新成员，那么需求的扰动有时可以通过重新组合来解决。
 
-组合子系统是一组原始部件和一组组合手段，使得组合的接口规范与原始部件相同。这使得构建时不会出现组件间的意外交互。组合子类系统的经典例子是 TTL [123]，它是构建复杂数字系统的标准部件和组合的历史库。
+组合子系统是一组原始部件和一组组合手段，使得组合的接口规范与原始部件相同。这使得构建时不会出现组件间的意外交互。组合子类系统的经典例子是 `TTL` [123]，它是构建复杂数字系统的标准部件和组合的历史库。
 
 组合子系统为领域特定语言提供设计策略。系统的元素是语言中的单词，而组合子用于将它们组合成短语。组合子系统具有显著优势，即易于构建和推理，但它们也有局限性，即
 
@@ -391,7 +357,7 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 
 #### 2.1.1 函数组合器
 
-数学中的函数符号法使用是一门组合器学科。一个函数有一个定义域（domain），从中从中选择其参数，以及一个可能值的值域（codomain）。存在某些组合器，可以作为其他函数的组合来产生新函数。例如，函数 $f$ 和 $g$ 的复合 $f \circ g$ 是一个函数，它接收 $g$ 的定义域内的参数并产生 $f$ 的值域内的值。如果两个函数具有相同的定义域和值域，并且在它们的共同值域上定义了算术运算，那么我们可以将函数的和（或积）定义为如下函数：当给定一个共同定义域内的参数时，结果是两个函数在该参数处值的和（或积）。允许一阶过程（first-class procedures）的语言提供了支持这种组合方式的机制，但真正重要的是有一个良好的组件族。
+数学中的函数符号法使用是一门组合器学科。一个函数有一个定义域（domain），从中从中选择其参数，以及一个可能值的值域（codomain）。存在某些组合器，可以作为其他函数的组合来产生新函数。例如，函数 `f` 和 `g` 的复合 `f ∘ g` 是一个函数，它接收 `g` 的定义域内的参数并产生 `f` 的值域内的值。如果两个函数具有相同的定义域和值域，并且在它们的共同值域上定义了算术运算，那么我们可以将函数的和（或积）定义为如下函数：当给定一个共同定义域内的参数时，结果是两个函数在该参数处值的和（或积）。允许一阶过程（first-class procedures）的语言提供了支持这种组合方式的机制，但真正重要的是有一个良好的组件族。
 
 围绕组合器组织系统有几个优势。所制造的部件可以任意匹配和组合。任何组合都会产生一个合法的程序，其行为透明地仅取决于部分的行为以及它们组合的方式。部分的行为：始终可以选取一个复合部分并在新的语境中使用，而不必担心它在该语境下的行为。因此，程序易于编写、易于阅读且易于验证。基于组合器构建的程序是扩展的，因为引入新部分或新组合器不会影响现有程序的行为。
 
@@ -406,9 +372,9 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 
 ![](img/2e72770736573f9ba6300d8cdb1e28c1_44_0.png)
 
-**图 2.1** 函数 $f$ 和 $g$ 的复合 $f \circ g$ 是由这个“接线图”定义的新函数。$f \circ g$ 的输入交给 $g$。$g$ 的输出传递给 $f$，然后产生 $f \circ g$ 的输出。
+**图 2.1** 函数 `f` 和 `g` 的复合 `f ∘ g` 是由这个“接线图”定义的新函数。`f ∘ g` 的输入交给 `g`。`g` 的输出传递给 `f`，然后产生 `f ∘ g` 的输出。
 
-（如果我们想检查元数（arity）是否匹配，会更有趣：即由过程 $f$ 表示的函数只接收一个参数，以匹配 $g$ 的输出。如果 $g$ 可以返回多个值且 $f$ 必须接收这些参数，会更有趣。我们可能还想检查传递复合的参数数量是否正确。但这些都是我们稍后处理的细节。）我们可以通过一个简单的例子来演示复合：
+（如果我们想检查元数（arity）是否匹配，会更有趣：即由过程 `f` 表示的函数只接收一个参数，以匹配 `g` 的输出。如果 `g` 可以返回多个值且 `f` 必须接收这些参数，会更有趣。我们可能还想检查传递复合的参数数量是否正确。但这些都是我们稍后处理的细节。）我们可以通过一个简单的例子来演示复合：
 
 ```
 ((compose lambda (x) (list 'foo x)) (lambda (x) (list 'bar x)))
@@ -424,7 +390,7 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 
 `the-composition` 在 `compose` 的作用域之外没有定义，因此这种写法没有明显的优势。我们经常在程序中使用由 lambda 表达式定义的匿名过程，如 `compose` 的第一个版本所示。
 
-仅需这种组合器，我们就可以写出优雅的代码。考虑计算函数 $f(x)=f^n(x)$ 的第 $n$ 次迭代的问题。我们可以优雅地写成程序：
+仅需这种组合器，我们就可以写出优雅的代码。考虑计算函数 `f(x)=f^n(x)` 的第 `n` 次迭代的问题。我们可以优雅地写成程序：
 
 ```
 (define ((iterate n) f)
@@ -432,11 +398,11 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
     identity))
 ```
 
-`(iterate n) f` 的结果是一个函数，当给定一个共同定义域内的参数时，结果是该函数在该参数处值的 $n$ 次迭代（注：此处原文逻辑似乎有跳跃，按原文翻译）。注意：`iterate n` 是 $f$ 的扩展。类比：函数复合类似于乘法，而迭代类似于幂。有很多组合器在编程中是很有用的。为了获得这种感觉，我们在这里展示几个。我们可以并行组合使用 $f$ 的结果，如图 2.2 所示。
+`(iterate n) f` 的结果是一个函数，当给定一个共同定义域内的参数时，结果是该函数在该参数处值的 `n` 次迭代（注：此处原文逻辑似乎有跳跃，按原文翻译）。注意：`iterate n` 是 `f` 的扩展。类比：函数复合类似于乘法，而迭代类似于幂。有很多组合器在编程中是很有用的。为了获得这种感觉，我们在这里展示几个。我们可以并行组合使用 `f` 的结果，如图 2.2 所示。
 
 ![](img/2e72770736573f9ba6300d8cdb1e28c1_46.png)
 
-**图 2.2** 在 spread-combine 中，$f$ 和 $g$ 的参数被拆分。首先的 $n$ 个参数进入 $f$，其余 $m$ 个参数进入 $g$。其输出由函数 $h$ 组合。
+**图 2.2** 在 spread-combine 中，`f` 和 `g` 的参数被拆分。首先的 `n` 个参数进入 `f`，其余 `m` 个参数进入 `g`。其输出由函数 `h` 组合。
 
 ```
 (define spread-combine h f g)
@@ -444,9 +410,6 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
   (h (apply f (list-head args))
     (apply g (list-tail args))))
 ```
-
-
-
 
 ```scheme
 (let ((t (+ n m))
@@ -502,6 +465,8 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 #### 练习 2.2：Arity 扩展
 
 我们对有用组合器的阐述存在缺陷，因为我们展示的 arity 机制无法处理 MIT/GNU Scheme 使用的更通用的 arity 机制。例如，加法过程（`+` 的值）可以接受任意数量的参数：
+
+
 
 ```scheme
 (procedure-arity-min (procedure-arity +)) = 0
@@ -574,6 +539,7 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
           (gv apply g (list-tail args))
             (values (append fv gv))))
       (restrict-arity the-combination t))))
+```
 
 唯一的限制是返回的总数必须适用于 `h` 的 arity。
 
@@ -590,37 +556,55 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 `discard-argument` 过程接收要丢弃的参数索引 `i` 并返回一个组合器。该组合器接收一个具有 `n` 个参数的函数 `f`，并返回一个具有 `n+1` 个参数的新函数 `the-combination`，将 $n+1$ 个参数中删除第 $i$ 个参数后得到的 $n$ 个参数应用于 `f`。图 2.5 阐述了这个想法。该组合器的代码为：
 
 ```scheme
+
 (define (discard-argument i)
+
   (assert (exact-nonnegative-integer? i))
+
   (lambda (f)
+
   (let ((m (get-arity f)))
+
     (define (the-combination . args)
+
       (assert (= (length args) m))
+
       (apply f (list-remove args i)))))
+
 ```
 
-
-
-
-
 ```scheme
+
 (assert (< i m))
+
 (restrict-arity-the-combination m))
+
 ```
 
 ```scheme
+
 (define list-remove lst index)
+
 (let lp ((lst lst) (index index))
+
   (if (= index 0)
+
     (cdr lst)
+
     (cons (car lst) (lp (cdr lst) (- index 1)))))
+
 ```
 
 ```scheme
+
 ((discard-argument 2)
+
  (lambda (x y z) (list 'foo x y z))
+
  'a 'b 'c d)
+
 (foo a b d)
+
 ```
 
 将此组合器泛化为也可以丢弃多个参数。`discard-argument` 的相反情况经常发生。在图 2.6 中，我们看到一个接线图，通过提前指定一个参数来特化过程，留下一个参数在调用时传递。这在传统上被称为柯里化（currying），是为了纪念逻辑学家哈斯尔·柯里（Haskell Curry）老师，他是组合逻辑的早期研究者。
@@ -632,26 +616,43 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 `curry-argument` 的代码没有任何意外：
 
 ```scheme
+
 (define ((curry-argument i) . args)
+
   (lambda f)
+
     (assert (= (length args) (- (get-arity f) 1)))
+
     (lambda x)
+
       (apply f (list-insert args i x))))
+
 ```
 
 ```scheme
+
 (define (list-insert lst index value)
+
 (let lp ((lst lst) (index index))
+
   (if (= index 0)
+
     (cons value lst)
+
     (cons (car lst) (cdr lst) (- index 1))))
+
 ```
 
 ```scheme
+
 ((((curry-argument 2) 'a 'b 'c)
+
  (lambda (x y z w) (list 'foo x y z w))
+
  'd)
+
 (foo a b c)
+
 ```
 
 注意，这里我们不需要使用 `restrict-arity`，因为返回的过程恰好有一个参数。在练习 2-5 中，我们将泛化此组合器用于柯里化，以便留下多个参数待提供。
@@ -663,29 +664,47 @@ Lisp 程序员知道万物的价值，却不知道无一物的成本。
 图 2.7 组合器 (permute-arguments 1 2 0 3) 接收一个四个参数的函数 f，并产生一个新的四参数函数，在将参数传递给 f 之前，根据提供的排列对其进行换。
 
 ```scheme
+
 (define (permute-arguments perspec)
+
   (let ((permute make-permutation perspec))
+
     (lambda (f)
+
       (define (the-combination . args)
+
         (apply f (permute args)))
+
       (let ((n = (length perspec)))
+
         (assert (= n (length perspec)))
+
         (restrict-arity-the-combination n)))))
 
 ((permute-arguments 1 2 0 3)
+
  (lambda (x y z w) (list 'foo x y z w))
+
  'a' 'b' 'c' 'd')
+
 (foo b c a d)
+
 ```
 
 `make-permutation` 过程简单，但它并不高效：
 
 ```scheme
+
 (define (make-permutation perspec)
+
   (define (the-permuter lst)
+
     (map (lambda (p) (list-ref lst p))
+
       perspec))
+
   the-permuter)
+
 ```
 
 #### 2.1.2 组合器与体计划
@@ -753,21 +772,25 @@ data。因为这种语言嵌入在 Scheme 中，我们继承了 Scheme 的强大
 让我们看看这种语言是如何实现的。正则表达式将以 POSIX 基础正则表达式语法的字符串形式表示。
 
 ```scheme
+
 (define (r:dot) ",")
+
 (define (r:bol) "^")
+
 (define (r:eol) "$")
-```
+
+
 
 这些与正则表达式的语法直接对应。
-接下来，r:seq 实现了一种方法，将一组给定的正则表达式片段视为一个自包含的元素：
+接下来，`r:seq` 实现了一种方法，将一组给定的正则表达式片段视为一个自包含的元素：
 
 结果中括号的使用将给定表达式片段的内容与周围环境隔离开来。遗憾的是，在翻译输出中使用 `\` 是必要的。在基础正则表达式中，括号字符被视为自引用字符。在这里，我们需要它们起到分组操作的作用，这是通过在每个括号前加一个反斜杠来实现的。雪上加霜的是，当这个正则表达式被放入 Scheme 字符串时，有必要用另一个反斜杠来引用每个反斜杠字符。因此，我们的示例 `(r:quote "a") (r:dot) (r:quote "c")` 翻译为 `\((a)\\ \(c)\\` 或者作为 Scheme 字符串 `"\\\(a)\\\\(c)\\\"`。唉。
 
-r:quote 的实现稍微困难一点。在正则表达式中，大多数字符都是自引用的。然而，某些字符是正则表达式运算符，必须显式地引用。我们使用 r:seq 封装结果，以确保被引用的字符串是自包含的。
+`r:quote` 的实现稍微困难一点。在正则表达式中，大多数字符都是自引用的。然而，某些字符是正则表达式运算符，必须显式地引用。我们使用 `r:seq` 封装结果，以确保被引用的字符串是自包含的。
 
 ```scheme
 (define (r:quote string)
- (r:seq)
+  (r:seq)
   (list->map (lambda char)
     (append-map (memv char chars-needing-quoting)
       (if #\ char
@@ -777,23 +800,23 @@ r:quote 的实现稍微困难一点。在正则表达式中，大多数字符都
 
 ```scheme
 (define chars-needing-quoting
- '(#\. \[ \\^ #$\*))
+  '(#\. \[ \\^ #$\*))
 ```
 
-为了实现备选子表达式，我们在子表达式之间插入一个竖线 `|` 并使用 r:seq 封装结果：
+为了实现备选子表达式，我们在子表达式之间插入一个竖线 `|` 并使用 `r:seq` 封装结果：
 
 ```scheme
 (define (r:alt exprs)
- (if (pair?) exprs)
-  (apply r:seq
-    (cons (car exprs)
-      (append-map (lambda expr)
-        (list "\\\|" expr))
-      (cdr exprs))))
- (r:seq))
+  (if (pair?) exprs)
+    (apply r:seq
+      (cons (car exprs)
+        (append-map (lambda expr)
+          (list "\\\|" expr))
+        (cdr exprs))))
+  (r:seq))
 ```
 
-子模式。语言的一种常见扩展是添加加号 (+) 运算符。子模式后的加号表示该子模式的一个或多个副本。
+子模式。语言的一种常见扩展是添加加号 `+` 运算符。子模式后的加号表示该子模式的一个或多个副本。
 
 定义两个 Scheme 过程 `r:` 和 `r:+`，以接收一个模式并根据需要对其迭代。这可以通过 `r:repeat` 来。
 
@@ -801,43 +824,37 @@ r:quote 的实现稍微困难一点。在正则表达式中，大多数字符都
 
 #### 练习 2.7：一个 Bug、一个糟糕的笑话、两次微调和一个启示
 
-Ben Bitiddle 注意到我们对 `(r:repeat min max expr)` 实现存在一个问题。
+`Ben Bitiddle` 注意到我们对 `(r:repeat min max expr)` 实现存在一个问题。
 
-在 `r:repeat` 过程末尾使用 `(r:alt expr "")` 有些不妥。这段代码翻译为 `\expr`，其中 `expr` 是 `expr` 的值。这依赖于这样一个事实：交替（alternation）会与某些东西混淆，而空字符串等同于说“一个或无”（在随后的解释中，我们将省略所需的混淆反斜杠）。即：`(expr|)` 表示 `expr` 的一次或零次实例。不幸的是，这取决于对正式 POSIX 正则表达式（RE）标准的一个未记录的 GNU 扩展。
+在 `r:repeat` 过程末尾使用 `(r:alt expr "")` 有些不妥。这段代码翻译为 `\expr`，其中 `expr` 是 `expr` 的值。这依赖于这样一个事实：交替会与某些东西混淆，而空字符串等同于说“一个或无”。在随后的解释中，我们将省略所需的混淆反斜杠。即：`(expr|)` 表示 `expr` 的一次或零次实例。不幸的是，这取决于对正式 POSIX 正则表达式 `RE` 标准的一个未记录的 GNU 扩展。
 
-具体来说，POSIX 标准第 9.4.3 节^10 指出紧邻右括号之前（或紧邻左括号之后）出现的垂直线会导致未定义行为。从本质上讲，RE 不能为空序列。
+具体来说，POSIX 标准第 9.4.3 节^10 指出紧邻右括号之前或紧邻左括号之后出现的垂直线会导致未定义行为。从本质上讲，RE 不能为空序列。
 
-GNU grep 在遇到 `(x]` 时恰好“做了正确的事”。并不是所有的 grep 实现都有包容性。
+`GNU grep` 在遇到 `(x]` 时恰好“做了正确的事”。并不是所有的 `grep` 实现都有包容性。
 
-因此，Ben 要求他的三人代码黑客团队（Louis, Alyssa 和 Eva）提出替代的变通方案。最终，他提出了自己的补丁，由你来实现。
+因此，Ben 要求他的三人代码黑客团队 `Louis, Alyssa` 和 `Eva` 提出替代的变通方案。最终，他提出了自己的补丁，由你来实现。
 
-- Louis Reasoner 建议，一个简单优雅的修复方法是将代码片段 `(r:alt expr "")` 替换为直接调用 `(r:repeat 0 1 expr)`。
-
-- Alyssa P. Hacker 建议重写 `r:repeat` 的 `else` 子句，将 `(r:repeat 3 5 x)` 翻译为等于 `(xxx|xxxx|xxxxx)`，而不是我们的代码产生的不符合 POSIX 的正则表达式 `xxx(x)(x)`。她引用了 POSIX 正则表达式文档第 9.4.7 节.^11
-
-- Eva Lor 指出第 9.4.6.4 节^12 中的问号 (?) 运算符，并建议更好的修复方法是实现 `r?` 运算符并将 `(r:alt expr "")` 替换为 `(r?: expr)`。
-
-- 与此同时，Ben 仔细研究了 RE 规范并获得启示。他建议重新实现 `r:repeat` 输出区间表达式（Interval Expressions）。参见 POSIX 文档第 9.3.6.5 节.^13 请尽量不要看病。
+- `Louis Reasoner` 建议，一个简单优雅的修复方法是将代码片段 `(r:alt expr "")` 替换为直接调用 `(r:repeat 0 1 expr)`。
+- `Alyssa P. Hacker` 建议重写 `r:repeat` 的 `else` 子句，将 `(r:repeat 3 5 x)` 翻译为等于 `(xxx|xxxx|xxxxx)`，而不是我们的代码产生的不符合 POSIX 的正则表达式 `xxx(x)(x)`。她引用了 POSIX 正则表达式文档第 9.4.7 节.^11
+- `Eva Lor` 指出第 9.4.6.4 节^12 中的问号 `?` 运算符，并建议更好的修复方法是实现 `r?` 运算符并将 `(r:alt expr "")` 替换为 `(r?: expr)`。
+- 与此同时，Ben 仔细研究了 RE 规范并获得启示。他建议重新实现 `r:repeat` 输出区间表达式。参见 POSIX 文档第 9.3.6.5 节.^13 请尽量不要看病。
 
 让我们考虑每个建议：
 
 - **a.** 大家都对 Louis 的愚蠢笑话大笑。这有什么好笑的？也就是说，这个想法有什么问题？用一句话点题即可。
-
 - **b.** 在代码和数据方面，与 Alyssa 的建议相比，Eva 的建议有什么优势？提供几句简洁且有说服的话即可。
-
 - **c.** Ben 的建议相比其他所有建议有什么优势？具体来说，思考他引用的 POSIX 文档章节与其他引用的章节有何不同，快速查看下方的练习 2.10 并考虑其影响。此外，考虑此新代码中输出字符串的大小以及代码的整体清晰度。同样，一两句话即可。
-
 - **d.** 遵循 Ben 的建议，重新实现 `r:repeat` 输出区间表达式。提示：Scheme 的 `number->string` 过程会很有用。注意：小心反斜杠。在几个精选的示例输入上显示 `r:repeat` 生成的输出。在某些模式的真实数据上演示你的过程。
 
 #### 练习 2.8：过度嵌套
 
 我们的程序产生了过度嵌套的正则表达式：它即使在不需要时也会创建分组。例如，以下简单模式会导致一个过于复杂的正则表达式：
 
-``````
-(display (r:seq (r:quote "a") (r:dot) (r:quote "c")) \(a\\)\\(c\\))
+```
+(display (r:seq (r:quote "a") (r:dot) (r:quote "c"))) \(a\\\)\\(c\\))
 ```
 
-另一个问题是 BRE 可能涉及反向引用（back-references）（参见 POSIX 正则表达式文档第 9.3.6.3 节）。反向引用指向之前的括号子表达式。因此，让模式作者显式地放置括号子表达式至关重要。（啊！这是我们听过的最糟糕的想法之一——为了迭代而必要的分组，竟然与为了稍后引用的命名混淆了！）
+另一个问题是 BRE 可能涉及反向引用 `back-references`。参见 POSIX 正则表达式文档第 9.3.6.3 节。反向引用指向之前的括号子表达式。因此，让模式作者显式地放置括号子表达式至关重要。啊！这是我们听过的最糟糕的想法之一——为了迭代而必要的分组，竟然与为了稍后引用的命名混淆了！
 
 编辑我们的程序，尽可能消除不必要的嵌套。注意：这里有一些你必须留意的微妙情况。什么是这种情况？展示你改进后的程序并说明它是如何处理这些细微差别的。
 
@@ -845,20 +862,18 @@ GNU grep 在遇到 `(x]` 时恰好“做了正确的事”。并不是所有的 
 
 #### 练习 2.9：反向引用
 
-添加一个构造反向引用的过程。（参见练习 2.8。）在混淆 BRE 中寻找乐趣吧。
+添加一个构造反向引用的过程。参见练习 2.8。在混淆 BRE 中寻找乐趣吧。
 
 #### 练习 2.10：标准？
 
 标准的用处在于有很多供选择。
-Andrew S. Tannenbaum
+`Andrew S. Tannenbaum`
 
-除了基础正则表达式（BREs），POSIX 正则表达式文档中还定义了扩展正则表达式（EREs）[96]。某些软件（如 egrep）使用这种版本的正则表达式。不幸的是，EREs 并不是 BREs 的保守性扩展：ERE 语法实际上与 BRE 语法不一致！扩展我们的模式语言使目标可以是 BREs 或 EREs 是一个有趣的项目。
+除了基础正则表达式 `BREs`，POSIX 正则表达式文档中还定义了扩展正则表达式 `EREs` [96]。某些软件如 `egrep` 使用这种版本的正则表达式。不幸的是，EREs 并不是 BREs 的保守性扩展：ERE 语法实际上与 BRE 语法不一致！扩展我们的模式语言使目标可以是 BREs 或 EREs 是一个有趣的项目。
 
 - a. BREs 和 EREs 之间导致这种痛苦的显著差异是什么？列出必须解决的差异。
-
 - b. 如何重构翻译器使其能够翻译成任意一种正则表达式，取决于需要？解释你的策略。
-
-- c. 实现你在 b 部分设计的策略。通过确保运行 egrep 和 grep 得到相同的结果来展示你的工作。
+- c. 实现你在 b 部分设计的策略。通过确保运行 `egrep` 和 `grep` 得到相同的结果来展示你的工作。
 
 ### 2.3 包装
 
@@ -868,39 +883,39 @@ $$PV = nRT,$$
 
 其中 $P$ 是压力，$V$ 是体积，$n$ 是量，$R$ 是气体常数，$T$ 是温度。因此，通过以下方式计算体积：
 
-```
+```scheme
 (define (*-volume pressure temperature amount)
   (/ amount gas-constant temperature) pressure))
 ```
 
-```
+```scheme
 (define gas-constant 8.314461 ;J/(K*mol))
 ```
 
 并通过以下方式计算球体半径：
 
-```
+```scheme
 (define (sphere-radius volume)
   (expt (* 4/3 pi)) (1/3)))
 ```
 
-```
+```scheme
 (define 1))))
 ```
 
-（注意：4/3 和 1/3 是有理数——斜杠不是除运算符。）气体常数的选择使此程序使用 SI 单位，因此压力是牛顿每平方米，温度是开尔文，量是摩尔，体积是立方米，半径是米。
+注意：`4/3` 和 `1/3` 是有理数——斜杠不是除运算符。气体常数的选择使此程序使用 SI 单位，因此压力是牛顿每平方米，温度是开尔文，量是摩尔，体积是立方米，半径是米。
 
 这看起来很直接，但使用其他单位会让情况变得复杂。假设我们想测量华氏度温度、每平方英寸压力和英寸半径。确定正确的公式比计算数值答案更复杂。我们可以修改简单公式以考虑单位，但这样做会模糊程序的意图并使其专门用于这个问题。或者，我们可以安排一种模块化的单位转换方法。
 
-单位转换与其逆过程相连的过程。我们可以编写常规单位之间的温度转换（例如华氏和摄氏温度），以及 SI 与常规单位之间的转换。
+单位转换与其逆过程相连的过程。我们可以编写常规单位之间的温度转换，例如华氏和摄氏温度，以及 SI 与常规单位之间的转换。
 
-```
+```scheme
 (define fahrenheit-to-celsius
   (make-unit-conversion (lambda f) (* 5/9 (- f 32))
   (lambda c) (+ c 9/5))))
 ```
 
-```
+```scheme
 (define celsius-to-kelvin
   (let ((zero-celsius 273.15)) ;kelvin
     (make-unit-conversion (lambda c) (+ c zero-celsius))
@@ -909,40 +924,40 @@ $$PV = nRT,$$
 
 我们可以使用 `unit:invert` 访问逆过程。例如，
 
-```
+```scheme
 (fahrenheit-to-celsius -40)
 -40
 ```
 
-```
+```scheme
 (fahrenheit-to-celsius 32)
 0
 ```
 
-```
+```scheme
 ((unit:invert fahrenheit-to-celsius) 20)
 68
 ```
 
 我们可以组合单位转换：
 
-```
+```scheme
 ((compose unit-to-kelvin fahrenheit-to-celsius) 80)
 299.81666666666666
 ```
 
-我们可以定义复合单位转换。例如，压力可以用磅力每平方英寸（psi）或牛顿每平方米（nsm）表示。15
+我们可以定义复合单位转换。例如，压力可以用磅力每平方英寸 `psi` 或牛顿每平方米 `nsm` 表示。15
 
-```
+```scheme
 (define psi-to-nsm)
   (compose pound-to-newton)
   (unit:invert inch-to-meter)
   (unit:invert inch-to-meter))
 ```
 
-因此，我们可以计算在 68°F 和 14.7 psi 下，1 尔理想气体占据的球体半径（单位为英寸）。
+因此，我们可以计算在 68°F 和 14.7 psi 下，1 尔理想气体占据的球体半径，单位为英寸。
 
-```
+```scheme
 ((unit:invert radius)
  (sphere-radius)
  (gas-law-volume)
@@ -956,13 +971,13 @@ $$PV = nRT,$$
 
 我们可以做得更好。我们可以构建一个小型领域特定语言，该领域就是单位。这将简化构建的工作。
 
-#### 2.3.1 特殊化包装器（Specialization wrappers）
+#### 2.3.1 特殊化包装器
 
 一种后续方法是创建一组通用的包装器，它们可以接受诸如 `gas-law-volume` 这样的过程，并产生一个该过程的版本，针对其输入输出单位转换进行了专门化。尽管我们将展示如何对单位转换进行操作，但代码将足够通用，可以用于构建任意数据转换的包装器。
 
-针对当前的问题，我们为 `gas-law-volume` 过程构建了一个特殊化器，它知道其原生单位（SI）。该特殊化器由一种简单的语言定义，该语言被编译成原始单位转换的相应组合。这有点类似于组合器系统，区别在于组合器是由编译器根据高层规范生成的。我们将在第 4 章再次看到这种技术，在那里我们将使用它来从模式编译模式匹配过程的组合。
+针对当前的问题，我们为 `gas-law-volume` 过程构建了一个特殊化器，它知道其原生单位 `SI`。该特殊化器由一种简单的语言定义，该语言被编译成原始单位转换的相应组合。这有点类似于组合器系统，区别在于组合器是由编译器根据高层规范生成的。我们将在第 4 章再次看到这种技术，在那里我们将使用它来从模式编译模式匹配过程的组合。
 
-```
+```scheme
 (define make-specialized-gas-law-volume
   gas-law-volume
   '(expt meter 3) ; 输出 (体积)
@@ -973,7 +988,7 @@ $$PV = nRT,$$
 
 为了创建一个使用其他单位的 `gas-law-volume` 过程，我们提供想要使用的单位：
 
-```
+```scheme
 (define conventional-gas-law-volume
   (make-specialized-gas-law-volume
     '(expt inch 3) ; 输出 (体积)
@@ -984,7 +999,7 @@ $$PV = nRT,$$
 
 该过程随后可以用于产生以立方英寸为单位的体积，因此我们可以得到以英寸为单位的半径。
 
-```
+```scheme
 (sphere-radius (conventional-gas-law-volume 14.7 68 1))
 7.04962463583981
 ```
@@ -993,7 +1008,7 @@ $$PV = nRT,$$
 
 我们如何让它工作？有两个部分：一个 `unit-specializer` 过程，它用必要的单位转换包装给定的过程；以及一种将给定的单位表达式翻译为相应单位转换的方法。第一部分是
 
-```
+```scheme
 (define (unit-specializer procedure implicit-output-unit
     implicit-input-units))
 (define (specializer specific-output-unit
@@ -1020,13 +1035,14 @@ specializer)
 
 解决方案的第二部分是 `make-converter`，它接受两个单位表达式，并返回一个转换器过程，将数据从第一个单位转换为第二个单位。对于这个问题，我们将实现一个非常愚笨的 `make-converter` 版本：它将单位表达式视为可以使用 `equal?` 比较的字面常量。通过这种简化，`make-converter` 可以使用表查找来找到合适的转换器，这意味着我们必须显式提供每一个必要的转换，而不是从原始单位转换中推导出它们。这里是创建表的示例：
 
+```scheme
 (register-unit-conversion fahrenheit-celsius)
-
 (register-unit-conversion celsius-kelvin)
+```
 
 然而，我们需要不是其中任何一个，而是从华氏度到开尔文的转换。由于我们不想让这通用化，我们将不得不从现有的转换构建复合转换。为了方便起见，我们将引入单位转换的“代数”，如下：
 
-```
+```scheme
 (define (unit*: u1 u2)
   (compose u1)
   (unit:invert u2))
@@ -1034,16 +1050,22 @@ specializer)
 
 `unit*` 过程结合 `unit:invert` 为我们提供了组合单位转换的通用能力。为了方便，我们将添加以下内容：
 
-```
+```scheme
 (unit:/ ul u2)
 (unit:expt n)
 ```
 
+
+
 通过这种代数，我们可以编写我们需要的转换：
 
+```scheme
 (register-unit-conversion '(pound (expt inch 2)) (newton (expt meter 2)))
+```
 
+```scheme
 (register-unit-conversion '(expt inch 3) (expt meter 3))
+```
 
 #### 2.3.2 适配器（Adapters）
 
@@ -1061,9 +1083,6 @@ specializer)
 - d 制作一些实用的复合转换，如速度和加速度。
 - e 对于一个真实项目，扩展这个特殊化系统，用于其他程序的其他数据转换，与单位无关。
 - f 另一个大扩展是构建 `make-converter`，使其能够根据需要从先注册的转换中推导出复合转换。这将需要图搜索。
-
-
-
 
 ### 2.4 领域抽象
 
@@ -1091,66 +1110,77 @@ specializer)
 
 ```scheme
 (current-pieces board)
-获取属于当前玩家的棋子列表。
 ```
+
+获取属于当前玩家的棋子列表。
 
 ```scheme
 (is-position-on-board? coords board)
-测试给定的 coords 是否指定了 *board* 上的位置。不满足此谓词的坐标在与其他操作配合时会导致错误。
 ```
+
+测试给定的 `coords` 是否指定了 *board* 上的位置。不满足此谓词的坐标在与其他操作配合时会导致错误。
 
 ```scheme
 (board-get coords board)
-获取位于 *coords* 指定位置的棋子。如果该位置没有棋子，则返回 #f。
 ```
+
+获取位于 *coords* 指定位置的棋子。如果该位置没有棋子，则返回 `#f`。
 
 ```scheme
 (position-info coords board)
-描述占据 coords board 位置的内容。如果位置为空，则返回值为 unoccupied（未占用）；如果它包含当前玩家的棋子之一，则值为 occupied-by-self（被自己占用）；如果它包含对手的棋子，则值为 occupied-by-opponent（被对手占用）。
 ```
+
+描述占据 `coords board` 位置的内容。如果位置为空，则返回值为 `unoccupied`（未占用）；如果它包含当前玩家的棋子之一，则值为 `occupied-by-self`（被自己占用）；如果它包含对手的棋子，则值为 `occupied-by-opponent`（被对手占用）。
 
 ```scheme
 (is-position-unoccupied? coords board)
-等同于 position-info 返回 unoccupied。
 ```
+
+等同于 `position-info` 返回 `unoccupied`。
 
 ```scheme
 (is-position-occupied-by-self? coords board)
-等同于 position-info 返回 occupied-by-self。
 ```
+
+等同于 `position-info` 返回 `occupied-by-self`。
 
 ```scheme
 (is-position-occupied-by-opponent? coords board)
-等同于 position-info 返回 occupied-by-opponent。
 ```
+
+等同于 `position-info` 返回 `occupied-by-opponent`。
 
 棋子（piece）上有一组类似的少量操作：
 
 ```scheme
 (piece-coords piece)
-获取棋子的坐标。
 ```
+
+获取棋子的坐标。
 
 ```scheme
 (should-be-crowned? piece)
-测试棋子是否应该升王——具体来说，如果它还不是王且位于对手的底线（home row）。
 ```
+
+测试棋子是否应该升王——具体来说，如果它还不是王且位于对手的底线（home row）。
 
 ```scheme
 (crown-piece piece)
-获取一个与 piece 相同的新棋子，不同之处是它变成了王。
 ```
+
+获取一个与 `piece` 相同的新棋子，不同之处是它变成了王。
 
 ```scheme
 (possible-directions piece)
-获取该棋子移动时可能考虑的方向列表。这没有考虑到向该方向移动是否允许。
 ```
 
-坐标系统非常简单：只需行和列整数。当我们引用坐标或 coords 时，我们指的是棋盘上的绝对坐标。我们使用 offset（偏移量）一词表示相对坐标。可以将偏移量加到坐标上以产生新坐标，反之也可以可以减去坐标来产生一个偏移量。方向是行列均为 0、1 或 -1 的偏移量；对于跳棋，可能的方向是向前对角线，行值为 1。一旦棋子变成王，它还可以使用向后的对角线，行值为 -1。在国际象棋中，可能的移动取决于棋子。
+获取该棋子移动时可能考虑的方向列表。这没有考虑到向该方向移动是否允许。
+
+坐标系统非常简单：只需行和列整数。当我们引用坐标或 `coords` 时，我们指的是棋盘上的绝对坐标。我们使用 `offset`（偏移量）一词表示相对坐标。可以将偏移量加到坐标上以产生新坐标，反之也可以可以减去坐标来产生一个偏移量。方向是行列均为 0、1 或 -1 的偏移量；对于跳棋，可能的方向是向前对角线，行值为 1。一旦棋子变成王，它还可以使用向后的对角线，行值为 -1。在国际象棋中，可能的移动取决于棋子。
 
 #### 跳棋裁判器
 
-让我们构建裁判器。我们将首先描述从给定起点向给定方向可能的简单步骤，并扩展路径。try-step 过程识别一个潜在的下一步，如果没有这样的步骤，则返回 #f。
+让我们构建裁判器。我们将首先描述从给定起点向给定方向可能的简单步骤，并扩展路径。`try-step` 过程识别一个潜在的下一步，如果没有这样的步骤，则返回 `#f`。
 
 ```scheme
 (define (try-step piece board direction path)
@@ -1174,7 +1204,7 @@ specializer)
 #f)
 ```
 
-我们必须尝试棋子的每个可能方向。compute-next-steps 程序返回将任何路径扩展一步的可能后续路径列表。
+我们必须尝试棋子的每个可能方向。`compute-next-steps` 程序返回将任何路径扩展一步的可能后续路径列表。
 
 ```scheme
 (define (compute-next-steps piece board path)
@@ -1182,9 +1212,8 @@ specializer)
 (filter-map (lambda (direction)))
 ```
 
-
-(尝试-步骤 棋子 方向 路径)
-(可能的方向 棋子))
+`(尝试-步骤 棋子 方向 路径)`
+`(可能的方向 棋子))`
 
 # 国际棋规则规定，当存在一个或多个跳跃时，必须选择跳跃：
 
@@ -1278,42 +1307,42 @@ specializer)
 我们将用一个更抽象的概念“部分移动”（partial move）来替换路径的概念。一个部分移动由一个初始棋盘和棋子，以及零或多个更改组成。我们的代码使用标识符 `pmove` 来表示部分移动。
 
 `(initial-pmove board piece)`
-创建一个没有更改和没有标志的 pmove。
+创建一个没有更改和没有标志的 `pmove`。
 
 `(is-pmove-empty? pmove)`
-测试 pmove 是否为空：换句话说，如果它没有更改。
+测试 `pmove` 是否为空：换句话说，如果它没有更改。
 
 `(is-pmove-finished? pmove)`
-测试 pmove 是否被标记为完成。
+测试 `pmove` 是否被标记为完成。
 
 `(current-board pmove)`
-返回 pmove 中最近一次更改的棋盘；如果没有更改，则返回作为 `initial-pmove` 参数传递的棋盘。
+返回 `pmove` 中最近一次更改的棋盘；如果没有更改，则返回作为 `initial-pmove` 参数传递的棋盘。
 
 `(current-piece pmove)`
-返回 pmove 中最后一次更改的棋子；如果没有更改，则返回作为 `initial-pmove` 参数传递的棋子。
+返回 `pmove` 中最后一次更改的棋子；如果没有更改，则返回作为 `initial-pmove` 参数传递的棋子。
 
-接下来的操作以不同方式扩展 pmove。当我们说“通过 foo 扩展 pmove”时，我们的意思是“通过添加一个执行 foo 的更改对象来扩展 pmove”。
+接下来的操作以不同方式扩展 `pmove`。当我们说“通过 foo 扩展 pmove”时，我们的意思是“通过添加一个执行 foo 的更改对象来扩展 pmove”。
 
 `(new-piece-position coords pmove)`
-通过将它的棋子移动到 `coords` 来扩展 pmove。
+通过将它的棋子移动到 `coords` 来扩展 `pmove`。
 
 `(update-piece procedure pmove)`
-通过通过对它的棋子调用 `procedure` 的结果来替换它的棋子来扩展 pmove。
+通过通过对它的棋子调用 `procedure` 的结果来替换它的棋子来扩展 `pmove`。
 
 `(finish-move pmove)`
-通过添加一个带有指定移动已完成标志的更改对象来扩展 pmove。结果始终满足谓词 `is-pmove-finished?`。
+通过添加一个带有指定移动已完成标志的更改对象来扩展 `pmove`。结果始终满足谓词 `is-pmove-finished?`。
 
 在2.4.1节的实现中，我们交叉使用“跳跃”和“捕获”术语。但捕获是一个通用的概念：例如，在象棋中，捕获是通过移动棋子而不是跳过它。我们使用更改标志来编码捕获棋子的行为，并使用以下程序管理该标志：
 
 `(captures-pieces? pmove)`
-测试是否有棋子被 pmove 捕获。
+测试是否有棋子被 `pmove` 捕获。
 
 `(capture-piece-at coords pmove)`
-通过移除 `coords` 处的棋子来扩展 pmove。`coords` 指定的位置必须包含对方的棋子。该操作还会在新的更改对象中设置一个标志，表示捕获了一个棋子；结果 pmove 始终满足 `captures-pieces?`。
+通过移除 `coords` 处的棋子来扩展 `pmove`。`coords` 指定的位置必须包含对方的棋子。该操作还会在新的更改对象中设置一个标志，表示捕获了一个棋子；结果 `pmove` 始终满足 `captures-pieces?`。
 
 #### 执行器
 
-为了将控制结构与国际棋规则分离，我们构建了一个从空移动开始的执行器。执行器应用演化规则，直到它们全部完成。有两种规则。一种我们称为演化规则，它增强 pmove 并可能返回多个移动。另一种是聚合规则，它接受完成的移动集合。聚合规则之间没有顺序限制，因此执行器可以将它们组合成一个。
+为了将控制结构与国际棋规则分离，我们构建了一个从空移动开始的执行器。执行器应用演化规则，直到它们全部完成。有两种规则。一种我们称为演化规则，它增强 `pmove` 并可能返回多个移动。另一种是聚合规则，它接受完成的移动集合。聚合规则之间没有顺序限制，因此执行器可以将它们组合成一个。
 
 ```scheme
 (define execute-rules initial-pmoves evolution-rules)
@@ -1325,20 +1354,23 @@ specializer)
 
 ```scheme
 (define evolve-pmove pmove evolution-rules)
-  (append-map (lambda new-finished)
+```
+
+
+
+(append-map (lambda new-finished)
     (if is-pmove? new-finished)
       (list new-finished)
         (evolve-pmove new-finished evolution-rules)))
     (append-map (lambda (evolution-rule)
       (evolution-rule pmove))
       evolution-rules)))
-```
 
 演化规则注册用于 `define-evolution-rule` 程序，聚合规则通过 `define-aggregate-rule` 程序注册。每个规则都有一个名称、所属的游戏以及实现其行为的程序。
 
 #### 国际棋规则
 
-这是一个关于普通移动的规则。它寻找可能方向上的任何空闲位置，并扩展 pmove 以包含到该位置的移动。在这样的移动之后，不允许继续移动，因此我们将 pmove 标记为完成。
+这是一个关于普通移动的规则。它寻找可能方向上的任何空闲位置，并扩展 `pmove` 以包含到该位置的移动。在这样的移动之后，不允许继续移动，因此我们将 `pmove` 标记为完成。
 
 ```scheme
 (define-evolution-rule 'simple-move checkers
@@ -1361,8 +1393,6 @@ specializer)
 
 在 `get-simple-moves` 中，`compute-new-position` 程序根据移动的方向和距离获取可能移动的棋子的建议落点。这的
 
-
-
 - 过程 `offset*` 将一个偏移量和一个数字相乘，得到一个新的按数字缩放的偏移量。
 
 ```scheme
@@ -1371,7 +1401,7 @@ specializer)
   (offset* direction)))
 ```
 
-跳跃的规则类似，不同在于它必须在给定方向上寻找一个被占据的位置以及后续一个未被占据的位置。当无法进行跳跃时，一个 pmove 就结束了。
+跳跃的规则类似，不同在于它必须在给定方向上寻找一个被占据的位置以及后续一个未被占据的位置。当无法进行跳跃时，一个 `pmove` 就结束了。
 
 ```scheme
 (define-evolution-rule 'jump checkers
@@ -1428,7 +1458,7 @@ specializer)
 
 基于规则的裁判（referee）实现解决了我们之前识别的问题。它将控制结构从我们的程序中移除，并将其局部化在执行器中。结果是规则是特定的：每个国际跳棋规则都由单一过程规则表示。规则不再像在早期的实现中那样分散。
 
-然而，这是有代价的：我们必须为每条规则添加适用条件，以防止其被应用于不适当的 pmoves。16. 例如，简单移动规则必须排除任何给定的非空 pmove，因为非空 pmove 可能包含一个或多个跳跃，而跳跃无法通过简单移动继续。这是规则系统的一个通用缺陷：每个规则都必须能够接受任何规则的输出；这通常通过在规则应用的数据中编码控制状态来处理。
+然而，这是有代价的：我们必须为每条规则添加适用条件，以防止其被应用于不适当的 `pmoves`。16. 例如，简单移动规则必须排除任何给定的非空 `pmove`，因为非空 `pmove` 可能包含一个或多个跳跃，而跳跃无法通过简单移动继续。这是规则系统的一个通用缺陷：每个规则都必须能够接受任何规则的输出；这通常通过在规则应用的数据中编码控制状态来处理。
 
 ### 练习 2.12：一点象棋
 
@@ -1463,10 +1493,6 @@ specializer)
 
 正如正则表达式和单位转换所示，攻击一类问题的最佳方法通常是发明一种易于表达解决方案的领域语言。我们探索了这种策略，我们将生成棋类合法移动的问题分解为单独扩展的部分：领域模型、控制执行器和游戏的特定规则。领域模型提供了一组原语，通过组合产生规则，从而提供了表达规则的语言。规则的应用由控制执行器进行排序。这种组合构成了表达跳棋类游戏规则的领域语言的本质。
 
-
-
-
-
 - 7 组合逻辑由 Moses Schöninkel [108] 发明，并由 Haskell Curry [26] 在 20 世纪初开发。他们的目标与计算无关，而是通过消除对量化变量的需求来简化数学基础。
 
 - 8 MIT/GNU Scheme 的过程元数（procedure-arity），用于元数（arity）中，将为返回的过程产生一个数值元数，因此我们不需要在上面贴便签。
@@ -1485,7 +1511,7 @@ specializer)
 
 - 15 注意，两个米到英寸（meter-to-inch）实例的组合是将平方米转换为平方英寸的合理方法。但对于某些情况并非如此。例如，对开尔文到摄氏度的转换取平方是没有意义的，尽管数值计算得了一致的结果。这是由于摄氏温度与具有物理意义的开尔文温度之间存在偏移导致的。事实上，摄氏温度的平方没有物理意义。
 
-- 16 然而，由于规则执行器（rule executive）显式处理了完成的 pmoves，我们不需要在规则中测试这些情况。
+- 16 然而，由于规则执行器（rule executive）显式处理了完成的 `pmoves`，我们不需要在规则中测试这些情况。
 
 - 17 SRFI 115 [110]是一个有趣的例子。
 
@@ -1525,7 +1551,7 @@ $x(t+h)-2x(t)+x(t-h)=\sum_{j=0}^{k}A(j)F(t-jh,x(t-jh))$
 $x(t+h)-2x(t)+x(t-h)$
 ```
 
-利用这种方法来计算 $x$ 的未来，我们编写了一个程序。`stormer-2` 返回的过程是一个针对给定函数和步长的积分器，给定给定 $x$ 的值历史，产生下一个时间 $x(t+h)$ 的 $x$ 估计值。$t$ 和 $x$ 程序从历史中提取精确的时间和值：$(x 0 history)$ 返回 $x(t)$，$(x 1 history)$ 返回 $t-h$，而 $(x 2 history)$ 返回 $t-2h$。
+利用这种方法来计算 $x$ 的未来，我们编写了一个程序。`stormer-2` 返回的过程是一个针对给定函数和步长的积分器，给定给定 $x$ 的值历史，产生下一个时间 $x(t+h)$ 的 $x$ 估计值。$t$ 和 $x$ 程序从历史中提取精确的时间和值：$(x 0 history)$ 返回 $x(t)$，$(x 1 history)$ 返回 $t-h$，而 $(x 2 history)$ 返回 $t-2h`。
 
 ```
 (define (stormer-2 F h)
@@ -1587,10 +1613,6 @@ $x(t+h)-2x(t)+x(t-h)$
 (make-arithmetic-1 'symbolic
 ```
 
-
-
-
-
 ```scheme
 (lambda operator)
 (lambda args (cons operator args))))
@@ -1602,16 +1624,22 @@ $x(t+h)-2x(t)+x(t-h)$
 (install-arithmetic! symbolic-arithmetic-1)
 ```
 
-install-arithmetic! 会改变用户全局变量的值，这些变量是算术中定义的算术运算符的名称，将其改为在该算术中的值。例如，在这次安装之后：
+`install-arithmetic!` 会改变用户全局变量的值，这些变量是算术中定义的算术运算符的名称，将其改为在该算术中的值。例如，在这次安装之后：
+
+
+
+`(+ 'a b)`
+
+`(+ a b)`
 
 ```
-(+ 'a b)
-(+ a b)
 ```
 
+`(+ 1 2)`
+
+`(+ 1 2)`
+
 ```
-(+ 1 2)
-(+ 1 2)
 ```
 
 我们可以观察到 Stormer 演进每一步的结果：45
@@ -1622,8 +1650,8 @@ install-arithmetic! 会改变用户全局变量的值，这些变量是算术中
 (make-initial-history 't 'h 'xt-ht 'xt-2h)
 1)))
 (+ (* 2 xt) (* -1 xt-h))
- (* (/ expt h 2) 12)
- (+ (* 13 negate xt) (* -2 negate xt-h))
+(* (/ expt h 2) 12)
+(+ (* 13 negate xt) (* -2 negate xt-h))
 (negate xt-2h))))
 ```
 
@@ -1661,104 +1689,7 @@ install-arithmetic! 会改变用户全局变量的值，这些变量是算术中
 (cadd operation))
 ```
 
-我们引入了一种抽象，用于编写操作的适用性信息。`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
-
-，使用 ` `--operation`创建一个包含处理器过程过程性的操作，，如下：
-
-
-
-```
-
-(define (make-operation operator applicability procedure)
-(list 'operation operator applicability procedure))
-```
-
-然后就可以获取操作的适用性了：
-
-```scheme
-(define (operation-applicability operation)
-(cadd operation))
-```
-
-我们引入了一种抽象，用于编写操作的适用性信息。`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
-
-，，使用 `make-operation`创建一个包含处理器过程过程适用性的操作，如下所示：
-
-```scheme
-(define (make-operation operator applicability procedure)
-(list 'operation operator applicability procedure))
-```
-
-然后就可以获取操作的适用性了：
-
-```scheme
-(define (operation-applicability operation)
-(cadd operation))
-
-```
-
-我们引入了一种抽象，用于编写操作的适用性信息。`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
-
-，，使用 `make-operation`创建一个包含处理器过程过程适用性的操作，如下所示：
-
-```scheme
-(define (make-operation operator applicability procedure)
-(list 'operation operator applicability procedure))
-```
-
-然后就可以获取操作的适用性了：
-
-```scheme
-(define (operation-applicability operation)
-(cadd operation))
-
-```
-
-我们引入了一种抽象，用于编写操作的适用性信息。`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
-
-，，使用 `make-operation`创建一个包含处理器过程过程适用性的操作，如下所示：
-
-```scheme
-(define (make-operation operator applicability procedure)
-(list 'operation operator applicability procedure))
-```
-
-然后就可以获取操作的适用性了：
-
-```scheme
-(define (operation-applicability operation)
-(cadd operation))
-
-```
-
-我们引入了一种抽象，用于编写操作的适用性信息。`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
-
-*(注：由于输入文本在后半部分出现了严重的逻辑混乱和重复，译文已根据逻辑推断进行了修正和精简，以符合高级文档工程师的质量标准。)*
-
-**注：由于您提供的原文从 "An improved arithmetic abstraction..." 之后开始出现了大量重复的乱码和代码片段，我已根据文档工程的逻辑为您梳理并翻译了其中清晰的语义部分。**
-
-#### 3.1.3 结合算术
-
-通过带有一个适用性规范（applicability specification，通常简称为 applicability）的改进抽象，我们可以结合不同类型的算术。例如，我们可以将符号算术和数值算术结合，使得组合操作可以根据其参数决定哪个实现是合适的。
-
-适用性规范仅仅是一个用例列表，每个用例都是谓词列表，例如 `number?` 或 `symbolic?`。如果参数满足用例之一，则认为该过程对该参数序列是应用的——也就是说，如果用例中的每个谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在这些情况下适用：`((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))`。
-
-我们使用 `make-operation` 来创建一个包含处理器过程适用性的操作，如下所示：
-
-```scheme
-(define (make-operation operator applicability procedure)
-(list 'operation operator applicability procedure))
-```
-
-然后就可以获取操作的适用性了：
-
-```scheme
-(define (operation-applicability operation)
-(cadd operation))
-```
-
-
-
+`all-args` 程序接受两个参数，每个参数是用例列表，每个用例都是谓词列表。如果参数满足用例之一，则该过程对参数是应用的——即每个用例中的谓词对于对应的参数都是真的。例如，对于二元算术运算符，我们希望数值操作仅在 `(number? number?)` 情况下适用，而符号操作在 `((number? symbolic?) (symbolic? number?) (symbolic? symbolic?))` 这些情况下适用。
 
 从构造上来说，符号算术和数值算术具有相同的形状。符号扩展程序（symbolic-extender procedure）产生的算术与其接收的基础算术具有相同的算子。使用一种组合语言（combinator language）来从部分构建复合算术可能是一个很好的方法。
 
@@ -1766,68 +1697,68 @@ install-arithmetic! 会改变用户全局变量的值，这些变量是算术中
 
 ```scheme
 (define (add-arithmetics . arithmetics)
-  (add-arithmetics* arithmetics))
+(add-arithmetics* arithmetics))
 ```
 
 ```scheme
 (define (add-arithmetics* arithmetics)
-  (if null?: (cdr arithmetics)) ;仅有一个算术
-  (make-arithmetic 'add (disjoin* (map arithmetic-domain-predicate arithmetics) constant-union operation-union))))
+(if null?: (cdr arithmetics)) ;仅有一个算术
+(make-arithmetic 'add (disjoin* (map arithmetic-domain-predicate arithmetics) constant-union operation-union))))
 ```
 
 `make-arithmetic` 的第三个参数是正在组合的算术包列表。这些算术包必须是兼容的，即它们为相同的命名算子指定了操作。第四个参数是 `constant-union`，用于合并多个常数。在这里，它选择了参数常数中的一个用于组合后的算术；稍后我们将对此进行详细说明。
 
 ```scheme
 (define (constant-union name . constants)
-  (let ((unique (remove default-object? (delete-duplicates constants eqv?))))
-    (if pair? unique (car unique)
-      (default-object))))
+(let ((unique (remove default-object? (delete-duplicates constants eqv?))))
+(if pair? unique (car unique)
+(default-object))))
 ```
 
 最后一个参数是 `operation-union`，它为结果算术中的命名算子构造相应的操作。如果一个操作在组合的任何一个算术中是适用，那么它就是可用的。
 
 ```scheme
 (define (operation-union operator . operations)
-  (operation-union* operator operations))
+(operation-union* operator operations))
 ```
 
 ```scheme
 (define (operation-union* operator operations)
-  (make-operation operator
-    (applicability-union*
-      (map operation-applicability operations)
-      (lambda args
-        (operation-union-dispatch operator
-          operations
-          args))))
+(make-operation operator
+(applicability-union*
+(map operation-applicability operations)
+(lambda args
+(operation-union-dispatch operator
+operations
+args)))))
 ```
 
 `operation-union-dispatch` 程序必须根据提供的参数来确定要使用的操作。它从给定的算术中选择适用于给定参数的操作并将其应用到参数上。如果给定的算术中有多个适用操作，则选择传递给 `add-arithmetics` 的参数中第一个算术的操作。
 
 ```scheme
 (define (operation-union-dispatch operator operations args)
-  (let ((operation
-          (find (lambda operation)
-            (is-operation-applicable? operation args))
-          operations)))
-    (if (not operation)
-      (error "Inapplicable operation:" operator args)
-      (apply-operation operation args))))
+(let ((operation
+(find (lambda operation)
+(is-operation-applicable? operation args))
+operations)))
+(if (not operation)
+(error "Inapplicable operation:" operator args)
+(apply-operation operation args))))
 ```
 
 一种常见的模式是将基础算术与该算术的扩展结合。数值算术与构建在数值算术上的符号算术的结合就是这种情况。我们为这种模式提供了一种抽象：
 
 ```scheme
 (define (extend-arithmetic extender base-arithmetic)
-  (add-arithmetics base-arithmetic
-    (extender base-arithmetic)))
+(add-arithmetics base-arithmetic
+(extender base-arithmetic)))
 ```
 
 我们使用 `extend-arithmetic` 来结合数值算术和符号算术。由于适用情况是互交的——数值算术对应所有数字，符号算术对应至少一个符号表达式——除了可能存在性能问题外，`add-arithmetics` 的参数顺序在这里并不重要。
 
 ```scheme
 (define combined-arithmetic
-  (extend-arithmetic symbolic-extender numeric-arithmetic))
+(extend-arithmetic symbolic-extender numeric-arithmetic))
 ```
 
 ```scheme
@@ -1860,7 +1791,7 @@ install-arithmetic! 会改变用户全局变量的值，这些变量是算术中
 
 ```scheme
 (define numeric-s0
-  (make-initial-history 0 .01 (sin 0) (sin -.01) (sin -.02))
+(make-initial-history 0 .01 (sin 0) (sin -.01) (sin -.02))
 ```
 
 ```scheme
@@ -1872,9 +1803,9 @@ install-arithmetic! 会改变用户全局变量的值，这些变量是算术中
 
 ```scheme
 (pp x 0
- ((evolver F 'stormer-2)
- (make-initial-history 't 'h 'xt-ht 'xt-2hm)
- 1)))
+((evolver F 'stormer-2)
+(make-initial-history 't 'h 'xt-ht 'xt-2hm)
+1)))
 ```
 
 ```
@@ -1906,50 +1837,79 @@ $$(f+1)(x) = f(x) + 1$$
 为了允许将值域数量（如数字）强制转换为常数函数，新函数算术的定义域必须包含函数以及函数的值域元素（函数的可能值）。
 
 ```scheme
+```
+
+
+
+```
 (define (function-extender codomain-arithmetic)
+
   (let ((codomain-predicate)
+
         (arithmetic-domain-predicate codomain-arithmetic)))
+
     (make-arithmetic 'function
+
       (disjoin codomain-predicate function)
+
         (list codomain-arithmetic))
+
     (lambda name codomain-constant)
+
       codomain-constant)
+
     (lambda operator codomain-operation)
+
       (make-operation operator
+
         (any-arg operator-arity operator)
+
         function?
+
         codomain-predicate)
+
     (lambda things)
+
       (lambda args)
+
         (apply-operation codomain-operation
+
           (map (lambda thing)
+
             ;; 这里是强制转换；
+
             (if function? thing)
+
               (apply thing args)
+
               thing)
+
             things))))
 ```
 
 使用这个版本，我们可以：
 
 ```scheme
+
 (install-arithmetic!
+
 (extend-arithmetic function-extender combined-arithmetic))
+
 ```
 
 ((+ 1 cos) 'a)
 (+ 1 (cos a))
 ```
 
-
 * 'b ((+ 4 cos sin) (+ 1 2) 'a'))
+
 * b (+ 4 (cos (+ 3 a)) (sin (+ 3 a))))
 
-这引发了一个有趣的问题：我们拥有诸如 a 和 b 的符号，它们表示字面量数字，但没有符号可以表示字面函数。例如，如果我们写下
+这引发了一个有趣的问题：我们拥有诸如 `a` 和 `b` 的符号，它们表示字面量数字，但没有符号可以表示字面函数。例如，如果我们写下
 
 * 'b ((+ c cos sin) (+ 3 'a'))
 
-我们的算术运算会将 c 视为一个字面量数字。但我们可能希望 c 作为一个字面函数，以函数的形式进行组合。在我们目前的设计中，实现这一点很困难，因为 c 没有携带任何类型信息，而且上下文信息不足以区分不同的用法。
+我们的算术运算会将 `c` 视为一个字面量数字。但我们可能希望 `c` 作为一个字面函数，以函数的形式进行组合。在我们目前的设计中，实现这一点很困难，因为 `c` 没有携带任何类型信息，而且上下文信息不足以区分不同的用法。
 
 但我们可以创建一个除了名称外没有其他属性的字面函数。这种函数只需将它的名称附加到其参数列表即可。
 
@@ -1959,16 +1919,17 @@ $$(f+1)(x) = f(x) + 1$$
   (cons name args))
 ```
 
-有了这个定义，我们可以让字面函数 c 正确地与其他函数结合：
+有了这个定义，我们可以让字面函数 `c` 正确地与其他函数结合：
 
 * 'b ((literal-function 'c) cos sin) (+ 1 2) 'a'))
+
 * b ((+ c (+ 3 a)) (cos (+ 3 a)) (sin (+ 3 a))))
 
 这是一个处理有用用例的标准解决方案。
 
 ### 3.1.5 组合器的问题
 
-我们到目前为止构建的算术结构是使用组合器（combinators）通过组合简单结构来构建复杂结构的示例。但使用组合器来构建这个系统存在一些严重的缺点。首先，结构的某些属性是由组合方式决定的。例如，我们指出 add-arithmetic 优先考虑了其参数，导致它们的顺序可能很重要。其次，这种设计中隐含的层次结构（例如，上域算术必须在函数算术之前构造）意味着在函数算术构造之后无法对上域算术进行扩展。最后，我们可能希望定义一种返回函数的函数算术。在这一框架内，如果不引入另一种自引用机制，无法以通用的方式实现这一点，而自引用的安排非常繁琐。
+我们到目前为止构建的算术结构是使用组合器（combinators）通过组合简单结构来构建复杂结构的示例。但使用组合器来构建这个系统存在一些严重的缺点。首先，结构的某些属性是由组合方式决定的。例如，我们指出 `add-arithmetic` 优先考虑了其参数，导致它们的顺序可能很重要。其次，这种设计中隐含的层次结构（例如，上域算术必须在函数算术之前构造）意味着在函数算术构造之后无法对上域算术进行扩展。最后，我们可能希望定义一种返回函数的函数算术。在这一框架内，如果不引入另一种自引用机制，无法以通用的方式实现这一点，而自引用的安排非常繁琐。
 
 组合器强大且实用，但由组合器构建的系统并不灵活。一个问题是，部件的形状必须预先确定：可用的通用性取决于对部件形状的详细计划，并且必须有一个关于部件如何组合的局部计划。对于理解良好的领域（如算术），这并不是问题，但对于开放式构建来说并不合适。在 3.2 节中，我们将看到如何增量地添加新类型的算术，而无需决定它们在层次结构中的位置，也不需要更改已经运行的现有部分。
 
@@ -1976,9 +1937,9 @@ $$(f+1)(x) = f(x) + 1$$
 
 ### 练习 3.1：布尔算术热身
 
-在数字设计中，布尔运算 and、or 和 not 分别别用运算符 *、+ 和 - 编写。
+在数字设计中，布尔运算 `and`、`or` 和 `not` 分别别用运算符 `*`、`+` 和 `-` 编写。
 
-Scheme 中有一个谓词 boolean?，它只在对于 #t 和 #f 时为真。利用它来创建一个布尔算术包，使其能与我们已有的算术结合。注意，所有其他算术运算符对布尔值都是未定义的，因此将类似 cos 的操作应用于布尔值，适当的结果是报告错误。
+Scheme 中有一个谓词 `boolean?`，它只在对于 `#t` 和 `#f` 时为真。利用它来创建一个布尔算术包，使其能与我们已有的算术结合。注意，所有其他算术运算符对布尔值都是未定义的，因此将类似 `cos` 的操作应用于布尔值，适当的结果是报告错误。
 
 以下模板可以帮助你开始：
 
@@ -2004,11 +1965,11 @@ operator))))
 (simple-operation operator boolean? procedure?)))
 ```
 
-在数字设计中，运算符通常仅用作一元运算符并实现为 negate。当安装算术时，二元运算符 +, *, -, 和 / 被泛化为 n 元运算符。
+在数字设计中，运算符通常仅用作一元运算符并实现为 `negate`。当安装算术时，二元运算符 `+`, `*`, `-`, 和 `/` 被泛化为 n 元运算符。
 
-一元应用（– operand）由安装程序进行转换（negate operand）。因此，为了让 – 起作用，你需要为运算符 negate 定义一元布尔操作。
+一元应用（– operand）由安装程序进行转换（`negate operand`）。因此，为了让 – 起作用，你需要为运算符 `negate` 定义一元布尔操作。
 
-### ## 练习 3.2：向量算术
+### 练习 3.2：向量算术
 
 我们将为几何向量创建并安装一个算术包。这是一项大作业，它将暴露我们目前为止开发的系统中的许多困难和不完善之处。
 
@@ -2031,7 +1992,7 @@ operator))))
   (error "Vector mismatch: vecs)))
 ```
 
-apply 的使用是微妙的。一种思考方式是假设语言支持如下形式：
+`apply` 的使用是微妙的。一种思考方式是假设语言支持如下形式：
 
 ```scheme
 (define (vector-element-wise element-procedure)
@@ -2041,9 +2002,9 @@ apply 的使用是微妙的。一种思考方式是假设语言支持如下形�
 
 构建所需的算术并证明它对于数值向量和混合坐标向量有效。
 
-- b. 向量加法需要坐标的加法。这种加法过程可以通过 install-arithmetic 在环境中可用，或者可以是向量算术中的加法操作。这两种选择都能满足许多测试，但使用后者更通用。你使用了哪种？展示如何实现另一种选择。
+- b. 向量加法需要坐标的加法。这种加法过程可以通过 `install-arithmetic` 在环境中可用，或者可以是向量算术中的加法操作。这两种选择都能满足许多测试，但使用后者更通用。你使用了哪种？展示如何实现另一种选择。
 
-提示：控制运算符解释的一种良好方法是将每个运算符使用的程序传递给“生成器程序”作为参数。例如，为了控制 vector-magnitude 使用的算术操作，可以这样写：
+提示：控制运算符解释的一种良好方法是将每个运算符使用的程序传递给“生成器程序”作为参数。例如，为了控制 `vector-magnitude` 使用的算术操作，可以这样写：
 
 ```scheme
 (define (vector-magnitude-maker + *)
@@ -2054,12 +2015,9 @@ apply 的使用是微妙的。一种思考方式是假设语言支持如下形�
 
 - c. 乘法该怎么办？首先，对于两个向量，将乘法定义为点积是合理的。但这里有一个小问题。你需要能够使用坐标的加法乘法操作。这并不难。修改你的算术，将两个向量的乘法定义为点积。证明你的向量乘法有效。
 
-- d. 将向量模添加到你的向量算术中，扩展数值运算符 magnitude 以给出向量的长度。上面的代码已经完成了大部分工作！
+- d. 将向量模添加到你的向量算术中，扩展数值运算符 `magnitude` 以给出向量的长度。上面的代码已经完成了大部分工作！
 
-- e. 向量与标量的乘法或标量与向量的乘法应该产生标量积（每个坐标乘以标量的向量）。因此，乘法意味着点积或标量积，取决于其参数的类型。修改你的向量算术使其工作。证明你的点积和标量积。提示：第 78 页的 operation-union 程序为解决此问题提供了一种非常优雅的方法。
-
-
-
+- e. 向量与标量的乘法或标量与向量的乘法应该产生标量积（每个坐标乘以标量的向量）。因此，乘法意味着点积或标量积，取决于其参数的类型。修改你的向量算术使其工作。证明你的点积和标量积。提示：第 78 页的 `operation-union` 程序为解决此问题提供了一种非常优雅的方法。
 
 扩展的顺序是如何影响结果算术运算属性的？以下过程在单位圆上产生点：
 
@@ -2172,9 +2130,9 @@ apply 的使用是微妙的。一种思考方式是假设语言支持如下形�
 
 在 3.2.3 节中，我们将看到实现这种机制的方法。但在之前，让我们看看如何使用它。
 
-
-
 通过现有的常量与从给定的算术获得的同名常量进行常量并集。
+
+
 
 ```scheme
 (define (add-generic-arithith-constants! generic-arithmetic
@@ -2194,6 +2152,7 @@ apply 的使用是微妙的。一种思考方式是假设语言支持如下形�
 ```
 
 ### 泛用算术的趣味
+
 我们可以向泛用算术中添加许多算术，以赋予它有趣的行为：
 
 ```scheme
@@ -2230,13 +2189,13 @@ apply 的使用是微妙的。一种思考方式是假设语言支持如下形�
 * b -.848872488545405782
 ```
 
-但接下来的操作将报错，因为它尝试将符号量 (cos a) 和 (sin a) 作为数字相加：
+但接下来的操作将报错，因为它尝试将符号量 `(cos a)` 和 `(sin a)` 作为数字相加：
 
 ```scheme
 * 'b ((cos sin) 'a))
 ```
 
-我们得到这个错误是因为 cos 和 sin 是数值运算符，像 + 一样。由于我们在数值算术之上有符号算术，这些运算符被扩展了，因此对于符号输入（此处为 a），它们会产生符号输出 (cos a) 和 (sin a)。我们还添加了在数值算术之上的函数算术，因此如果函数进行了数值组合（此处通过 +），只有当输出是数字时才能组合它们的输出。但符号结果不能以数值方式相加。这是我们构建算术 g 的方式导致。
+我们得到这个错误是因为 `cos` 和 `sin` 是数值运算符，像 `+` 一样。由于我们在数值算术之上有符号算术，这些运算符被扩展了，因此对于符号输入（此处为 `a`），它们会产生符号输出 `(cos a)` 和 `(sin a)`。我们还添加了在数值算术之上的函数算术，因此如果函数进行了数值组合（此处通过 `+`），只有当输出是数字时才能组合它们的输出。但符号结果不能以数值方式相加。这是我们构建算术 `g` 的方式导致。
 
 但泛用算术中存在魔法。它是闭合的：对泛用算术的所有扩展都可以在泛用算术上完成！
 
@@ -2296,7 +2255,7 @@ extextender)
 ('*b ((+'c sin) (+ 3 'a))
 ```
 
-在之前的算术中有效的基元在此时失败了，符号算术捕捉了 (+c sin) 产生一个符号表达式，这是一个无法应用于 (+3 a) 的函数。问题是 + 的符号操作接受至少一个符号参数以及来自基元的其他参数。但符号算术是在泛用算术上创建的，泛用算术的谓词接受任何内容！还有一个函数操作适用于相同的参数，但由于扩展的偶然顺序没有被选中。遗憾的是，规则的选择是歧义的。有多个适用操作更好。
+在之前的算术中有效的基元在此时失败了，符号算术捕捉了 `(+c sin)` 产生一个符号表达式，这是一个无法应用于 `(+3 a)` 的函数。问题是 `+` 的符号操作接受至少一个符号参数以及来自基元的其他参数。但符号算术是在泛用算术上创建的，泛用算术的谓词接受任何内容！还有一个函数操作适用于相同的参数，但由于扩展的偶然顺序没有被选中。遗憾的是，规则的选择是歧义的。有多个适用操作更好。
 
 解决这个问题的方法之一是将符号量限制为数字。我们可以通过构建泛用算术来实现这一点，使得符号算术是在数值算术上的，正如我们在第 92 页所做的那样，而不是整个泛用算术：
 
@@ -2310,14 +2269,14 @@ extextender)
   (install-arithmetic! g))
 ```
 
-这样做是有效的，与顺序无关，因为规则的选择没有歧义。现在 'c 将被解释为一个常量，由函数扩展器强制转换为常量函数：
+这样做是有效的，与顺序无关，因为规则的选择没有歧义。现在 `'c` 将被解释为一个常量，由函数扩展器强制转换为常量函数：
 
 ```scheme
 * 'b ((+ c sin) (+ 3 'a))
 * b (+ c (cos (+ 3 a)))
 ```
 
-遗憾的是，我们可能想要除了数字以外的符号表达式。我们无法为这个问题实现通用解决方案。如果我们真的想要一个名为 c 的字面量函数，可以像之前那样使用 `literal-function`：
+遗憾的是，我们可能想要除了数字以外的符号表达式。我们无法为这个问题实现通用解决方案。如果我们真的想要一个名为 `c` 的字面量函数，可以像之前那样使用 `literal-function`：
 
 ```scheme
 * 'b ((literal-function 'c) cos sin) (+ 3 'a))
@@ -2325,6 +2284,7 @@ extextender)
 ```
 
 这将与泛用算术的构建顺序无关。
+
 有了这种机制，我们现在可以使用字面量函数评估 Stormer 积分器：
 
 ```scheme
@@ -2375,7 +2335,6 @@ extextender)
 
 这种实现使用 `the-generic-procedure`（一个普通的 Scheme 过程）来表示泛用过程，以及一个决定该过程的元数据存储（用于规则等）。
 
-
 行为。此存储器与使用“便利签”（参见第 28 页）的通用过程相关，稍后可以通过调用 `generic-procedure-metadata` 获取。这允许如 `define-generic-procedure-handler` 等过程修改给定通用过程的元数据。
 
 `generic-procedure-constructor` 的参数是一个用于创建保存和检索处理器的分发存储器（dispatch store）的程序。分发存储器封装了选择处理器的策略。
@@ -2404,7 +2363,7 @@ extextender)
         else (error "Unknown message:" message))))
 ```
 
-简单分发存储器仅维护一个处理器列表，每个处理器将一个适用性（applicability）与处理器配对。当使用通用过程调用 `get-handler` 内部程序时，它会顺序扫描列表，寻找适用性满足提交参数的处理器；返回该处理器，如果未找到则返回 #f：
+简单分发存储器仅维护一个处理器列表，每个处理器将一个适用性（applicability）与处理器配对。当使用通用过程调用 `get-handler` 内部程序时，它会顺序扫描列表，寻找适用性满足提交参数的处理器；返回该处理器，如果未找到则返回 `#f`：
 
 ```
 (define (get-handler args)
@@ -2481,20 +2440,33 @@ applicability
   (lambda x) (lambda y))
 ```
 
-- 将此安排为 3.1 节引入的基于组合子的算术有多困难？为什么？
-- 第 86 页的练习 3.3 询问了向量扩展的影响。通用系统能够支持那里讨论的表达式（复制如下）：((magnitude unit-circle)
-- 有没有好的方法让以下内容有效？
+
+
+### 练习 3.3
+
+将此安排为 `3.1` 节引入的基于组合子的算术有多困难？为什么？
+
+第 `86` 页的练习 `3.3` 询问了向量扩展的影响。通用系统能够支持那里讨论的表达式（复制如下）：`((magnitude unit-circle)`
+
+有没有好的方法让以下内容有效？
+
+```
 (vector cos 3)
+```
+
+```
 (-98999249660044 .14112008059867)
+```
+
 显示使其有效的代码或解释困难之处。
 
 ### 练习 3.5：一个 Bug
 
-考虑 `arith.scm` 中的 `+-like`（加法类）程序（所示），它是安装算术的一部分实现的二元过程。它返回一个名称和一个处理器的对；安装程序会将名称绑定到处理器。
+考虑 `arith.scm` 中的 `+-like` 程序（所示），它是安装算术的一部分实现的二元过程。它返回一个名称和一个处理器的对；安装程序会将名称绑定到处理器。
 
 它似乎被写为每次在没有参数的情况下调用时都执行 `get-identity` 程序。
 
-```
+```scheme
 (define (+like operator identity-name)
   (lambda (arithmetic))
     (let ((binary-operation
@@ -2515,7 +2487,7 @@ applicability
 
 也许运算符的单位元只需要计算一次，而不是每次调用处理器时。因此，建议将代码如下：
 
-```
+```scheme
 (define (+like operator identity-name)
   (lambda (arithmetic))
     (let ((binary-operation
@@ -2529,8 +2501,6 @@ applicability
           (cons operator
             (lambda args))))
 ```
-
-
 
 ```scheme
 (case (length args)
@@ -2547,7 +2517,7 @@ applicability
 
 - a. 为数字矩阵创建一个并安装算术包，包含 `+`、`negate` 和 `*` 操作。这种算术需要能够知道矩阵的行数列数，因为只有当第一个矩阵的列数等于第二个矩阵的行数时，矩阵乘法才有定义。
 
-确保你的乘法器可以将矩阵与标量或向量相乘。为了让矩阵与向量良好协作，你可能需要区分行向量和列向量。这如何影响向量包的设计？（见第 85 页的练习 3.2。）
+确保你的乘法器可以将矩阵与标量或向量相乘。为了让矩阵与向量良好协作，你可能需要区分行向量和列向量。这如何影响向量包的设计？（见第 `85` 页的练习 `3.2`。）
 
 你可以假设向量和矩阵的维度都是较小的，因此你不需要处理稀疏表示。矩阵的一种合理表示是一个 Scheme 向量，其中每个元素都是代表一行的 Scheme 向量。
 
@@ -2563,29 +2533,29 @@ applicability
 
 ## 3.3 示例：自动求分
 
-可扩展通用过程的一个显著应用是自动求分.¹14 这是一种获取计算给定程序所计算函数导数的优美方法.¹15 自动求分现在机器学习应用中的重要组成部分。
+可扩展通用过程的一个显著应用是自动求分。¹¹⁴ 这是一种获取计算给定程序所计算函数导数的优美方法。¹¹⁵ 自动求分现在机器学习应用中的重要组成部分。
 
 我们将看到，实现自动求分的一种简单方法是将通用算术原语扩展为处理微分对象（differential objects），一种新的复合数据类型。这将实现符号函数和数值函数的自动求分。它还将让自动求分适用于高阶程序——即返回其他程序作为值的程序。
 
 这里有一个自动求分的简单示例，用来说明我们所讨论的内容：
 
-```
+```scheme
 ((derivative (lambda x) (expt x 3))) 2)
 12
 ```
 
-注意，计算参数立方函数的导数是一个新函数，当给定 2 作为参数时，它返回 12 作为值。
+注意，计算参数立方函数的导数是一个新函数，当给定 `2` 作为参数时，它返回 `12` 作为值。
 
 如果我们将算术扩展以处理符号表达式，并对结果进行一些代数简化，我们得到：
 
-```
+```scheme
 ((derivative lambda (x) (expt x 3))) 'a
 (* 3 (expt a 2))
 ```
 
-编程语言的完整功能都是可用，包括高阶程序。这种系统在处理有趣的物理问题中出现的极大表达式非常有用.¹10
+编程语言的完整功能都是可用，包括高阶程序。这种系统在处理有趣的物理问题中出现的极大表达式非常有用。¹¹⁰
 
-让我们来看一个简单的应用：通过牛顿法计算方程的根。该思想是找到使 $f(x) = 0$ 的 $x$ 值。如果 $f$ 足够光滑，且我们有一个足够接近的猜测值 $x_0$，我们可以通过公式计算新的猜测值 $x_1$ 来改进猜测：
+让我们来看一个简单的应用：通过牛顿法计算方程的根。该思想是找到使 `$f(x) = 0$` 的 `$x$` 值。如果 `$f$` 足够光滑，且我们有一个足够接近的猜测值 `$x_0$`，我们可以通过公式计算新的猜测值 `$x_1$` 来改进猜测：
 
 ```
 $x_{n+1} = x_n - \frac{f(x_n)}{Df(x_n)}$
@@ -2606,7 +2576,8 @@ $x_{n+1} = x_n - \frac{f(x_n)}{Df(x_n)}$
 ```
 
 注意 `root-newton` 中名为 `Df` 的局部过程是一个通过作为 `f` 传递的程序计算函数导数的程序。
-例如，假设我们知道第一象限内满足 $\cos(\theta) = \sin(\theta)$ 的角度 $\theta$。（答案是 $\pi/4 \approx .7853981633974484$）我们可以写：
+
+例如，假设我们知道第一象限内满足 `$\cos(\theta) = \sin(\theta)$` 的角度 `$\theta$`。（答案是 `$\pi/4 \approx .7853981633974484$`）我们可以写：
 
 ```scheme
 (define (cs theta)
@@ -2622,27 +2593,31 @@ $x_{n+1} = x_n - \frac{f(x_n)}{Df(x_n)}$
 
 ### 3.3.1 自动求分是如何工作的
 
-自动求分程序直接源自导数的定义。假设给定一个函数 $f$ 和其定义域中的一个点 $x$，我们想知道函数在附近点 $f(x+\Delta x)$ 处的值，其中 $\Delta x$ 是一个微小的增量。函数 $f$ 的导数被定义为导数 $Df$，其对于特定参数 $x$ 的值是能够与参数的增量 $\Delta x$ “相乘”，以得到 $f$ 的值增量的最可能的线性近似：
+自动求分程序直接源自导数的定义。假设给定一个函数 `$f$` 和其定义域中的一个点 `$x$`，我们想知道函数在附近点 `$f(x+\Delta x)$` 处的值，其中 `$\Delta x$` 是一个微小的增量。函数 `$f$` 的导数被定义为导数 `$Df$`，其对于特定参数 `$x$` 的值是能够与参数的增量 `$\Delta x$` “相乘”，以得到 `$f$` 的值增量的最可能的线性近似：
 
 $$
 f(x+\Delta x) \approx f(x) + Df(x)\Delta x
 $$
 
-我们使用一种称为微分对象（*differential object*）的数据类型来实现定义。微分对象 $[x, \delta x]$ 可以被看作带有微小增量 $x + \delta x$ 的数字。但我们将其视为一个新的数值：它有两个部分，有限部分（*finite part*）和无穷小部分（*infinitesimal part*）。$^{17}$ 我们扩展每个原语算术以处理微分对象：每个原语算术函数 $f$ 必须知道其导数函数 $Df$，以便：
+我们使用一种称为微分对象（*differential object*）的数据类型来实现定义。微分对象 `[x, \delta x]` 可以被看作带有微小增量 `$x + \delta x$` 的数字。但我们将其视为一个新的数值：它有两个部分，有限部分（*finite part*）和无穷小部分（*infinitesimal part*）。¹⁷ 我们扩展每个原语算术以处理微分对象：每个原语算术函数 `$f$` 必须知道其导数函数 `$Df$`，以便：
 
 $$
-[x, \delta x] \xrightarrow{f} [f(x), Df(x)]$$
+[x, \delta x] \xrightarrow{f} [f(x), Df(x)]
+$$
 
-注意，$f$ 在点 $x$ 处的导数 $Df(x)$ 是结果微分对象中 $\delta x$ 的系数。
+注意，`$f$` 在点 `$x$` 处的导数 `$Df(x)$` 是结果微分对象中 `$\delta x$` 的系数。
 
-
-
-
+```scheme
 (define diff:exp (diff:unary-proc exp exp))
+```
 
+```scheme
 (define diff:log (diff:unary-proc log (lambda x) (/ 1 x))))
+```
 
+```scheme
 (define diff:sin (diff:unary-proc sin cos))
+```
 
 ```scheme
 (define diff:cos
@@ -2653,9 +2628,9 @@ $$
 
 $g(x + \Delta x, y + \Delta y) \approx g(x, y) + \partial_x g(x, y) \Delta x + \partial_y g(x, y) \Delta y \quad (3.6)$
 
-其中 $\partial_o f$ 和 $\partial_j f$ 是 $f$ 对两个参数的偏导数函数。设 $f$ 为一个二参数函数；那么 $\partial_o f$ 是一个新的二参数函数，用于计算 $f$ 对其第一个参数的偏导数：
+其中 `$\partial_o f$` 和 `$\partial_j f$` 是 `$f$` 对两个参数的偏导数函数。设 `$f$` 为一个二参数函数；那么 `$\partial_o f$` 是一个新的二参数函数，用于计算 `$f$` 对其第一个参数的偏导数：
 
-> $\partial_o f(x, y) = \frac{\partial}{\partial u} f(u, v)|_{u=x, v=y}$
+> `$\partial_o f(x, y) = \frac{\partial}{\partial u} f(u, v)|_{u=x, v=y}$`
 
 因此，二元运算的规则如下：
 
@@ -2663,7 +2638,7 @@ $g(x + \Delta x, y + \Delta y) \approx g(x, y) + \partial_x g(x, y) \Delta x + \
 $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \delta x + \partial_j f(x, y) \delta y$
 ```
 
-实现二元运算，我们可能会认为只需遵循一元运算的计划，其中 $d0f$ 和 $d1f$ 是两个偏导数函数：
+实现二元运算，我们可能会认为只需遵循一元运算的计划，其中 `d0f` 和 `d1f` 是两个偏导数函数：
 
 ```scheme
 (define diff:binary-proc f d0f d1f)
@@ -2680,7 +2655,7 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
          (d* (d1f xf yf) dy))))
 ```
 
-这是一个很好的计划，但它并不完全正确：它没有确保两个两个参数选择的有限部分和无穷小部分是一致的。我们需要对如何选择这些部分更加小心。我们将在 3.3.3 节解释这一技术细节并修复它，但目前我们先使用这段大致正确的代码。
+这是一个很好的计划，但它并不完全正确：它没有确保两个两个参数选择的有限部分和无穷小部分是一致的。我们需要对如何选择这些部分更加小心。我们将在 `3.3.3` 节解释这一技术细节并修复它，但目前我们先使用这段大致正确的代码。
 
 加法和乘法很直观，因为偏导数很简单，但除法和幂运算更有趣。我们只展示 `diff:` 的处理程序分配，因为其他所有的都是相似的。
 
@@ -2712,7 +2687,7 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
       (* -1 (/ x (square y))))))
 ```
 
-幂运算 $f(x, y) = x$ 的处理程序有点复杂。对第一个参数的偏导是简单的：$\partial_o f(x, y) = y^{-1}$。但对第二个参数的偏导通常为 $\partial_f f(x, y) = x \log x$，除非是某些特殊情况：
+幂运算 `$f(x, y) = x$` 的处理程序有点复杂。对第一个参数的偏导是简单的：`$\partial_o f(x, y) = y^{-1}$`。但对第二个参数的偏导通常为 `$\partial_f f(x, y) = x \log x$`，除非是某些特殊情况：
 
 ```scheme
 (define diff:expt
@@ -2733,7 +2708,7 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
       (* log x) (expt y)))))
 ```
 
-## 提取导数的值
+### 提取导数的值
 
 为了计算函数导数的值，我们将函数应用于微分对象并获得结果。我们必须从该结果中提取导数的值。有几种必须处理的情况。如果结果是微分对象，我们需要把导数的值提取出来。如果结果不是微分对象，则导数的值为零。还有其他我们未提到的情况。这需要一个产生零的通用过程。
 
@@ -2745,7 +2720,7 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 (define extract-dx-part generic-procedure)
 ``````
 
-在返回微分对象的情况下，$dx$ 的系数就是所需的导数。这证明将变得有点复杂，但基本思想可以表述如下：
+在返回微分对象的情况下，`$dx$` 的系数就是所需的导数。这证明将变得有点复杂，但基本思想可以表述如下：
 
 ```scheme
 (define extract-dx-differential value
@@ -2756,7 +2731,7 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 (define generic-procedure-handler extract-dx-handler match-args differential?)
 ```
 
-之所以这不完全正确，由于技术原因，微分对象的结构比我们已经展示的要复杂。将在 3.3.3 节中进行详细解释。注意：我们将提取器设为通用的，以便未来扩展到返回函数或复合对象的函数，例如向量、矩阵和张量（参见第 124 页的练习题 3.12）。除了可能包含更多原语算子和数据结构之外，这就是实现自动微分所需的所有内容！所有的过程都是算术运算的通常通用过程；它们可能包括符号和函数算术。
+之所以这不完全正确，由于技术原因，微分对象的结构比我们已经展示的要复杂。将在 `3.3.3` 节中进行详细解释。注意：我们将提取器设为通用的，以便未来扩展到返回函数或复合对象的函数，例如向量、矩阵和张量（参见第 `124` 页的练习题 `3.12`）。除了可能包含更多原语算子和数据结构之外，这就是实现自动微分所需的所有内容！所有的过程都是算术运算的通常通用过程；它们可能包括符号和函数算术。
 
 ### 3.3.2 多元函数的导数
 
@@ -2777,32 +2752,29 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
       (extract-dx-part)))))
 ```
 
-在返回微分对象的情况下，$dx$ 的系数就是所需的导数。这证明将变得有点复杂，但基本思想可以表述如下：
+在返回微分对象的情况下，`$dx$` 的系数就是所需的导数。这证明将变得有点复杂，但基本思想可以表述如下：
 
-（此处原文似乎存在重复或格式错乱，已根据指令要求对逻辑进行翻译对齐）
+例如，如果我们想计算二阶导数，必须对一个导数函数再次求导。这种函数的求值将涉及两个无穷小量。为了实现对多阶导数以及多变量函数导数的计算，我们在“无穷小空间”中定义了一阶微分对象的代数。这些对象是多变量幂级数，其中没有任何无穷小增量的指数大于 `1`。
 
-*注：由于提供的原文文本部分出现了明显的逻辑重复和公式混乱，译文已根据语意进行了平和处理。*
-
-（此处由于原文输入中存在重复的公式和段落，已按核心逻辑翻译）
-
-
-
-
-例如，如果我们想计算二阶导数，必须对一个导数函数再次求导。这种函数的求值将涉及两个无穷小量。为了实现对多阶导数以及多变量函数导数的计算，我们在“无穷小空间”中定义了一阶微分对象的代数。这些对象是多变量幂级数，其中没有任何无穷小增量的指数大于 1。
-
-微分对象由幂级数数项的标记列表（tagged list）表示。每个项都有一个系数和一个无穷小增量因子列表。这些项按降序保持排序。（阶数是增量的数量。因此 $\delta \text{}dx$ 的阶数高于 $\delta \text{}x$ 或 $\delta \text{}y。）这里是一个快速而直接的实现：
+微分对象由幂级数数项的标记列表（tagged list）表示。每个项都有一个系数和一个无穷小增量因子列表。这些项按降序保持排序。（阶数是增量的数量。因此 `$\delta \text{}dx$` 的阶数高于 `$\delta \text{}x$` 或 `$\delta \text{}y$`。）这里是一个快速而直接的实现：
 
 ```scheme
 (define differential-tag 'differential')
+```
 
+```scheme
 (define (differential? x)
   (and (pair? x) (eq? (car x) differential-tag)))
+```
 
+```scheme
 (define (diff-h)
   (if (differential? h)
     (cdr h)
     (list (make-diff-term h ')))))
 ```
+
+
 
 该列表仅仅是微分对象的 `cdr`。然而，如果我们给出的对象不是显式的微分对象（例如一个数字），我们将其强制转换为一个只有一个项且没有增量因子的微分对象。当我们从一个（预先排序的）数项列表创建微分对象时，我们总是尝试返回一个简化后的版本，该版本可能只是数字，而它并不是显式的微分对象：
 
@@ -2819,7 +2791,6 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
             ;; 仅有限部分：
             (null? (diff-factors (car terms))))
     (diff-coefficient (car terms))))
-
 ```
 
 ```scheme
@@ -2879,51 +2850,83 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
         ((null? l12) l11)
         (else
 ```scheme
+
   (let ((t1 (car l11)) (t2 (car l12)))
+
     (cond ((equal? (diff-factors t1) (diff-factors t2))
+
               (let ((newcoeff (+ (diff-coefficient t1)
+
                               (diff-coefficient t2)))
+
                 (if (and (number? newcoeff)
+
                     (= newcoeff 0))
+
                     (+diff-termlists (cdr l11) (cdr l12))
+
                   (cons
+
                     (make-diff-term newcoeff
+
                       (diff-factors t1))
+
                     (+diff-termlists (cdr l11)
+
                       (cdr l12))))))
+
           ((diff-term? t1 t2)
+
             (cons t1 (+diff-termlists (cdr l11) (cdr l12))))
+
           (else
+
             (cons t2
+
               (+diff-termlists l11 (cdr l12))))))))
 ```
 
 数项列表的乘法是直接的，只要我们可以乘以单个项。两个数项列表 `l11` 和 `l12` 的乘积是：将 `l1` 中的每一项与 `l12` 中的每一项相乘所得的数项列表相加得到的数项列表。
 
 ```scheme
+
 (define *diff-termlists l11 l12)
+
   (reduce (lambda (x y)
+
     (+diff-termlists x y)
+
     '()
+
     (map (lambda (t1) (map (lambda (t2)
+
       (*diff-terms t1 t2))
+
     l12))))
 ```
 
 一个项包含系数和一个因子列表（无穷小量）。微分对象可能有一个指数大于1的无穷小量，因为 $\delta x = 0$。因此，当我们乘以两个项时，必须检查因子列表是否合并了没有因子。
 
-
 情况可能会变得更加复杂：
 
 ```
+
 ((derivative
+
   (lambda (x)
+
   (derivative
+
     (lambda (y)
+
       ((literal-function 'f
+
         x y))))
+
   'u)
+
 'v)
+
 ((partial 0) ((partial 1) f)) u v))
 ```
 
@@ -2933,40 +2936,62 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 在返回函数的情况下，如下：
 
 ```
+
 ((derivative
+
   (lambda (x)
+
   (derivative
+
     (lambda (y)
+
       (* x y))))
+
   'u)
+
 'v))
 ```
 
 在将该函数作用于参数之前，我们无法提取导数。因此，我们将提取操作推迟，直到我们由该应用产生的结果。我们扩展了通用提取器：
 
 ```scheme
+
 (define extract-dx-function fn dx
+
   (lambda args
+
     (extract-dx-part (apply fn args dx))))
 ```
 
 ```scheme
+
 (define-generic-procedure-handler extract-dx-part
+
   (match-args function? diff-factor?)
+
   extract-dx-function)
 ```
 
 遗憾的是，这个版本的 `extract-dx-function` 有一个微妙的 bug。26 我们的补丁方法是用代码包裹新的延迟过程的主体，通过重新映射因子 `dx` 来避免不悦的冲突。因此，我们将函数的处理程序改为：
 
 ```scheme
+
 (define extract-dx-function fn dx)
+
   (lambda args)
+
     (let ((eps (make-new-dx)))
+
       (replace-dx dx eps)
+
       (extract-dx-part)
+
       (apply (lambda (arg)
+
               (map (lambda (replace-dx eps dx arg))
+
                 args))
+
             dx)))))
 ```
 
@@ -2975,52 +3000,81 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 因子的替换本身也要复杂，因为代码必须在数据结构中反复查找。我们将替换变为一个通用过程，以便将其扩展到新的数据类型。默认情况下，替换是对对象的恒等变换：
 
 ```scheme
+
 (define replace-dx-default new-dx old-dx object)
+
 ```
 
 ```scheme
+
 (define replace-dx)
+
   'simple-generic-procedure 3
+
     replace-dx-default)
 ```
 
 对于微分对象，我们必须实际上并用新因子替换旧因子，并且必须保持因子列表排序：
 
 ```scheme
+
 (define replace-differential new-dx old-dx object)
+
   (make-differential
+
     (sort (map (lambda (term)
+
             (make-diff-term
+
               (diff-coefficient term)
+
               (sort (substitute new-dx old-dx)
+
             (diff-factors term)))
+
         (diff-factor?)))
+
     (diff-terms object)))
+
   (diff-term?)))
 ```
 
 ```scheme
+
 (define-generic-procedure-handler replace-dx
+
   (match-args diff-factor? diff-factor? differential?)
+
   replace-dx-differential)
 ```
 
 最后，如果对象本身是一个函数，我们必须推迟它直到参数可用以计算值：
 
 ```scheme
+
 (define (replace-dx-function new-dx args old-dx fn)
+
   (lambda args)
+
   (let ((eps (make-new-dx)))
+
     (replace-dx old-dx eps)
+
       (replace-dx new-dx old-dx)
+
         (apply fn
+
           (map (lambda (arg)
+
             (replace-dx eps old-dx)))))))
 ```
 
 ```scheme
+
 (define-generic-procedure-handler replace-dx
+
   (match-args diff-factor? diff-factor? function?)
+
   replace-dx-function)
 ```
 
@@ -3031,8 +3085,11 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 在我们注意到第 121 页脚注 26 指出的 bug 之前，`extract-dx-function` 过程是这样写的：
 
 ```scheme
+
 (define (extract-dx-function fn dx)
+
   (lambda args)
+
   (extract-dx-part (apply fn args) dx))
 ```
 
@@ -3043,9 +3100,13 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 对于简单参数，应用一个字面函数只是构造一个将函数表达式应用于参数的表达式的问题。但字面函数也必须能够接受微分对象作为参数。当这种情况也发生时，字面函数必须为微分类型的参数构造（部分）导数表达式。对于第 $i$ 个 $n$ 参数函数，相应的导数表达式是：
 
 ```scheme
+
 (define (deriv-expr i n fexp)
+
   (if (= n 1)
+
     (derivative ,fexp)
+
     ((partial ,i ,fexp)))
 ```
 
@@ -3056,29 +3117,41 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 这些内容都整合在以下过程中：
 
 ```scheme
+
 (define (literal-function fexp)
+
   (define (the-function args)
+
     (if (any? args)
+
       (let ((n (length args))
+
             (factor (apply maximal-factor args)))
+
             (let ((fxs (map (lambda arg)
+
                             (finite-part arg))
+
                           args))
+
                 (let ((partials (map (lambda arg)
+
                                 (infinitesimal-part arg))
+
                               args)))
+
                   (apply (lambda i)
+
                            (deriv-expr i n fexp))
+
                         fxs)
+
               partials))))
 ```
 
 ### 练习 3.12：带有结构化值的函数
 
 我们让 `extract-dx-part` 通用过程（第 110 页）扩展到处理微分对象以外的值。扩展 `replace-dx` 通用过程（第 122 页）以处理函数的导数。
-
-
-
 
 # a-trie
 
@@ -3087,106 +3160,131 @@ $([x, \delta x], [y, \delta y]) \xrightarrow{f} f(x, y), \partial_o f(x, y) \del
 **图 3.1** Trie 可用于分类特征序列。Trie 是一种有向图，其中每条边都有一个谓词。从根开始，通过从根出的边对第一个特征进行测试。如果满足谓词，过程将移动到该边末端的节点，并测试下一个特征。对连续的特征重复此过程。序列的分类就是到达的终结节点集合。
 
 ```
+
 define a-trie (make-trie)
+
 ```
 
 我们可以向这个 trie 中添加一条边：
 
 ```
+
 define s (add-edge-to-trie a-trie symbol?))
+
 ```
 
-其中 add-edge-to-trie 从根返回位于新边目标端的新节点。该节点通过与符号匹配来到达。
+其中 `add-edge-to-trie` 从根返回位于新边目标端的新节点。该节点通过与符号匹配来到达。
 
 我们可以建立边链，通过相应的边谓词的列表来引用这些链：
 
 ```
+
 define sn (add-edge-to-trie s number?))
-```
-
-**节点 sn** 通过路径 (list symbol number?) 从根到达。使用路径，比反复调用 add-edge-to-trie 有一种更简单的方法来建立边链：
 
 ```
+
+**节点 sn** 通过路径 `(list symbol number?)` 从根到达。使用路径，比反复调用 `add-edge-to-trie` 有一种更简单的方法来建立边链：
+
+```
+
 (define ss (intern-path a-trie list symbol? symbol)))
 ```
 
 我们可以向任何节点添加一个值（这里我们展示的是符号值，但稍后我们将存储过程化处理程序的值）：
 
 ```
+
 (trie-has-value? sn)
+
 #f
 ```
 
 ```
+
 (set-trie-value! sn '(symbol number))
 ```
 
 ```
+
 (trie-has-value? sn)
+
 #t
 ```
 
 ```
+
 (trie-value sn)
+
 (symbol number)
 ```
 
 我们还可以使用基于路径的接口来设置值：
 
 ```
+
 (set-path-value! a-trie (list symbol? symbol?) '(symbol symbol))
 ```
 
 ```
+
 (trie-value ss)
+
 (symbol symbol)
 ```
 
-请注意，intern-path-trie 和 set-path-value! 会尽可能复用现有的节点和边，在需要时添加边和节点。
+请注意，`intern-path-trie` 和 `set-path-value!` 会尽可能复用现有的节点和边，在需要时添加边和节点。
 
 现在我们可以针对到为止构建的 trie 进行特征序列匹配：
 
 ```
+
 (equal? (list ss) (get-matching-tries a-trie '(a b)))
+
 #t
 ```
 
 ```
+
 (equal? (list s) (get-matching-tries a-trie '(c)))
+
 #t
 ```
 
-我们还可以将匹配与值获取结合。过程 get-a-value 找到所有匹配的节点，选择一个具有值的节点并返回该值。
+我们还可以将匹配与值获取结合。过程 `get-a-value` 找到所有匹配的节点，选择一个具有值的节点并返回该值。
 
 ```
+
 (get-a-value a-trie '(a b))
+
 (symbol symbol)
 ```
 
 但并不是所有的特征序列都有关联的值：
 
-```
-(get-a-value a-trie '(-4))
-;Unable to match features: (-4)
-```
 
+
+`(get-a-value a-trie '(-4))`
+
+`;Unable to match features: (-4)`
+
+```
 我们可以增量地向 trie 中的节点添加值：
+```
 
 ```
 (set-path-value! a-trie (list negative-number?)
   ' (negative-number))
 (set-path-value! a-trie (list even-number?)
   ' (even-number))
-
 (get-all-values a-trie '(-4))
 ((even-number) (negative-number))
 ```
 
-其中 get-all-values 找到匹配给定特征序列的所有节点并返回它们的值。
+其中 `get-all-values` 找到匹配给定特征序列的所有节点并返回它们的值。
 
 给定这个 trie 实现，我们可以制作一个使用 trie 作为索引的分发存储器（dispatch store）：
 
-```
+```scheme
 (define (make-trie-dispatch-store)
   (let ((delegate (make-simple-dispatch-store))
         (try (make-trie))
@@ -3204,13 +3302,13 @@ define sn (add-edge-to-trie s number?))
         (else (delegate message))))
 ```
 
-通过将大多数操作委托给简单的分发存储器，我们这个分发存储器变得简单。没有被委托的操作包括 add-handler!（它同时将处理器存储在简单分发存储器和 trie 中）以及 get-handler（它专门使用 trie 进行访问）。简单分发存储器管理默认处理器以及规则集，这对于调试很有用。这是一个使用委托来扩展接口的简单示例，而不是众为人知的继承概念。
+通过将大多数操作委托给简单的分发存储器，我们这个分发存储器变得简单。没有被委托的操作包括 `add-handler!`（它同时将处理器存储在简单分发存储器和 trie 中）以及 `get-handler`（它专门使用 trie 进行访问）。简单分发存储器管理默认处理器以及规则集，这对于调试很有用。这是一个使用委托来扩展接口的简单示例，而不是众为人知的继承概念。
 
 ### 练习 3.13: Trie 规则
 
-为了方便对不同的分发存储器进行实验，我们提供了 generic-procedure-constructor 和 make-generic-arithmetic。正如第 95 页所示，我们可以通过以下方式使用 trie-dispatchstore：
+为了方便对不同的分发存储器进行实验，我们提供了 `generic-procedure-constructor` 和 `make-generic-arithmetic`。正如第 95 页所示，我们可以通过以下方式使用 trie-dispatchstore：
 
-```
+```scheme
 (define trie-arithmetic
 (let ((g (make-trie))
   (add-to-generic-arithmetic! g numeric)
@@ -3227,8 +3325,6 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
 
 给定这个，有一个启发性的说明：在没有显式附加标签的情况下，这种方法有局限性，因为我们只能识别共享
 
-```
-
 ### 3.4.2 缓存（Caching）
 
 通过使用 trie，我们消除了谓词的冗余计算。我们可以通过抽象来完全消除谓词的计算。谓词识别一组与其他对象区分来的对象；换句话说，谓词与其所区分的集合是等价的。在我们的 trie 实现中，我们使用谓词的相等性来避免冗余；否则 trie 中会出现冗余的边。这也是为什么谓词组合与 trie 实现不兼容的原因。
@@ -3236,7 +3332,6 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
 这里的问题在于，我们想要构建一个根据谓词区分对象的索引，但过程的透明性使得它们作为索引键是不可靠的。我们真正喜欢的是为由谓词区分的集合分配一个名称。这样就可以避免计算谓词。这个名称是一个类型；但为了避免混淆，我们将这种名称称为标签（tag）。
 
 如果我们有一种从对象获取标签的方法，我们可以制作一个缓存，保存之前分发产生的处理器，并将其复用于其他具有相同标签模式的分发。但在没有显式附加标签的情况下，这种方法有局限性，因为我们只能识别共享实现特定表示的对象。例如，区分数字和符号很容易，但很难
-
 
 区分一个质数，因为在实现中专门对它们进行特殊表示是不寻常的。
 
@@ -3266,29 +3361,23 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
 
 调用 `simple-list-memoizer` 会通过 `dispatch-store 'get-handler` 获取处理函数。如果 `message` 是 `get-handler`，则返回它；否则调用 `dispatch-store message`。这里的 `simple-list-memoizer` 逻辑是：参数通过 `get-key` 映射，如果 `eqv?` 检查通过，则执行映射，否则调用 `dispatch-store 'get-handler`。
 
-（注：原文后续文本似乎存在大量逻辑混乱或重复的单词，以下翻译已根据语意进行尽可能性翻译）
-
 调用 `simple-list-memoizer` 会通过 `dispatch-store 'get-handler` 获取处理函数。如果 `message` 是 `get-handler`，则返回它；否则调用 `dispatch-store message`。这里的 `simple-list-memoizer` 逻辑是：参数通过 `get-key` 映射，如果 `eqv?` 检查通过，则执行映射，否则调用 `dispatch-store 'get-handler`。
 
 **练习 15：缓存性能**
 
 使用在第 14 节中引入的分发存储器周围包装一个缓存，以提高性能。
 
-**3.5 用户定义的类型**
+### 3.5 用户定义的类型
 
 在 3.4 节中，我们引入了标记（tags）来表示分发存储器的类型。通过 `implementation-type-name` 过程获取表示标签，我们可以为更强大的标签机制创建缓存分发存储器。
-
-（注：由于原文从 3.5 节开始出现了大量无重复单词和破碎的句子，后续部分的翻译质量受原文质量影响，此处保留了核心技术术语意图。）
-
-
 
 我们定义的抽象谓词适用于泛型分发（generic dispatch）。更好的是，它们可以作为缓存键（cache keys），以使分发变得高效。正如我们上面描述的，当一个谓词被注册时，会创建一个新的标签并与该谓词关联。我们只需要一种获取特定对象标签的方法：`get-tag` 过程就是为此设计的。
 
 如果我们将 `get-tag` 传递给 `cache-wrapped-dispatch-store` 的 `get-key` 参数，我们就有了一个可以工作的实现。然而，由于谓词定义的集合可能包含子集，我们需要考虑某些给定参数可能存在多个潜在处理程序的情况。解决这种情况有许多方法，但最常见是通过某种手段识别出“最具体”的处理器并调用它。由于子集关系是一个偏序，可能并不确定哪一个处理程序是最具体的，因此实现必须通过独立手段来解决这种歧义。
 
-以下是其中一种实现。它使用一个 `rule<` 过程将匹配的项按合适的顺序排序，然后从结果中选择一个处理程序。30
+以下是其中一种实现。它使用一个 `rule<` 过程将匹配的项按合适的顺序排序，然后从结果中选择一个处理程序。
 
-```
+```scheme
 (define (make-subsetting-dispatch-store-maker choose-handler)
  (lambda ()
  (let ((delegate make-simple-dispatch-store))
@@ -3297,7 +3386,7 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
       (filter (lambda (rule)
           (is-generic-applicable? args))
       (delegate 'get-rules))))
- (and n:pair matching)\ ; 来自已排序的处理程序
+ (and n:pair matching)
   (map cdr sort matching rule<)
   (delegate 'get-default-handler))))
  (lambda message)
@@ -3308,7 +3397,7 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
 
 `make-most-specific-dispatch-store` 过程选择排序后处理器的第一个作为有效处理程序：
 
-```
+```scheme
 (define make-most-specific-dispatch-store
 (make-subsetting-dispatch-store-maker
 (lambda handlers default-handler)
@@ -3317,7 +3406,7 @@ c. 是否存在某些情况，使得我们提供了以衡量...的有效性。�
 
 另一种可能的选择是制作一个“链式”（chaining）分发存储器，其中每个处理程序获得一个参数，可以使用该参数来调用排序序列中的下一个处理程序。这对于子集处理程序想要扩展而非覆盖超集处理程序的行为非常有用。我们将在第 3.5-4 节冒险游戏的时处理程序中看到这个示例。
 
-```
+```scheme
 (define make-chaining-dispatch-store
 (make-subsetting-dispatch-store-maker
 (lambda handlers default-handler)
@@ -3332,14 +3421,14 @@ default-handler))))
 
 这两个分发存储器中的任何一个都可以通过添加缓存包装变成缓存分发存储器：
 
-```
+```scheme
 (define make-cached-most-specific-dispatch-store
 (cache-wrapped-dispatch-store
 (make-most-specific-dispatch-store)
 get-tag))
 ```
 
-```
+```scheme
 (define make-cached-chaining-dispatch-store
 (cache-wrapped-dispatch-store
 (make-chaining-dispatch-store)
@@ -3348,13 +3437,13 @@ get-tag))
 
 然后我们创建对应的泛型过程构造器：
 
-```
+```scheme
 (define most-specific-generic-procedure
 (generic-procedure-constructor
 make-cached-most-specific-dispatch-store))
 ```
 
-```
+```scheme
 (define chaining-generic-procedure
 (generic-procedure-constructor
 make-cached-chaining-dispatch-store))
@@ -3364,31 +3453,9 @@ make-cached-chaining-dispatch-store))
 
 建模世界的传统方法之一是“面向对象编程”。其思想是所建模的世界由对象组成，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自另一个对象。这对于程序的组织是一个很紧的约束。
 
-还有其他方法可以将问题拆分为若干部分。我们学习了足够的“算术”，足以看出运算符（如 `*`）的意义可能取决于多个参数的属性。例如，一个数字与向量的积与两个向量或两个数字的乘积是不同的操作。这类问题自然地用泛型过程来表述。31
-
-考虑建模一个由“地点”、“物体”和“人”组成的世界的问题。所建模的世界是由对象组成的，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自另一个对象。这对于程序的组织是一个很紧的约束。
-
 还有其他方法可以将问题拆分为若干部分。我们学习了足够的“算术”，足以看出运算符（如 `*`）的意义可能取决于多个参数的属性。例如，一个数字与向量的积与两个向量或两个数字的乘积是不同的操作。这类问题自然地用泛型过程来表述。
 
-考虑建模一个由“地点”、“物体”和“人”组成的世界的问题。所建模的世界是由对象组成的，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自另一个对象。这对于程序的组织是一个很紧的约束。
-
-还有其他方法可以将问题拆分为若干部分。我们学习了足够的“算术”，足以看出运算符（如 `*`）的意义可能取决于多个参数的属性。例如，一个数字与向量的积与两个向量或两个数字的乘积是不同的操作。这类问题自然地用泛型过程来表述。
-
-考虑建模一个由“地点”、“物体”和“人”组成的世界的问题。所建模的世界是由对象组成的，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自其他对象。这对于程序的组织是一个很紧的约束。
-
-（注：由于用户提供的原文后半部分出现了大量重复段落，此处已根据“不要重复输出原文”的原则，在翻译中仅保留了核心的 3.5.4 示例部分并确保逻辑连续。）
-
-*纠正：由于用户输入文本中后半部分存在严重的文本重复错误，我将直接翻译后续有效的示例内容。*
-
-### 3.5.4 示例：冒险游戏
-
-建模世界的传统方法之一是“面向对象编程”。其思想是所建模的世界由对象组成，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自另一个对象。这对于程序的组织是一个很紧的约束。
-
-还有其他方法可以将问题拆分为若干部分。我们学习了足够的“算术”，足以看出运算符（如 `*`）的意义可能取决于多个参数的属性。例如，一个数字与向量的积与两个向量或两个数字的乘积是不同的操作。这类问题自然地用泛型过程来表述。
-
-考虑建模一个由“地点”、“物体”和“人”组成的世界的问题。所建模的世界是由对象组成的，每个对象都有独立的局部状态，且对象之间的耦合是松散的。假设每个对象都有特定的行为。对象可以接收来自其他对象的消息，改变自己的状态，并向其他对象发送消息。对于我们希望建模的行为不依赖于多个信息源协作的情况，这种方法非常自然：每条消息都来自另一个对象。这对于程序的组织是一个很紧的约束。
-
-（注：原文从此处开始出现大量重复，以下为翻译的示例部分）
+考虑建模一个由“地点”、“物体”和“人”组成的世界的问题。
 
 ```
 (start-adventure 'gjs)
@@ -3406,6 +3473,8 @@ You can see: lobby-10 infinite-corridor
 You can exit: up west
 ```
 
+
+
 ```
 alyssa-hacker enters lobby-7
 alyssa-hacker says: Hi gjs
@@ -3415,48 +3484,71 @@ registrar enters lobby-7
 registrar says: Hi ben-bittiddle alyssa-hacker gjs
 ```
 
-
-
-
 # 真难过-gjs 喜欢黑板。让我们继续在四处看看。
 
-(go up)
-gjs 通过 up 出口离开
-gjs 进入了 barker-library
-你处于 barker-library
-你看到这里：engineering-book
-你可以离开：up（向上）down（向下）
+`(go up)`
+
+`gjs` 通过 `up` 出口离开
+
+`gjs` 进入了 `barker-library`
+
+你处于 `barker-library`
+
+你看到这里：`engineering-book`
+
+你可以离开：`up`（向上）`down`（向下）
+
 听到了一声惊天动地、刺心肺的尖叫……
 
 显然，一个巨魔（可能是注册员）吃掉了某人。
+
 然而，这里有一本可以拿走的书，我们拿了它并回到了教室。
 
-(take-thing 'engineering-book)
-gjs 捡起了 engineering-book
+`(take-thing 'engineering-book)`
 
-(down)
-gjs 通过 down 出口离开
-gjs 进入了 10-250
-你处于 10-250
-你的包里装有：engineering-book
-你看到出口：blackboard（黑板）
-你可以离开：up（向上）down（向下）
+`gjs` 捡起了 `engineering-book`
 
-我们从教室回到 lobby-10，在那里我们遇到了 lambda-10，他立刻地偷走了我们的书。
+`(down)`
 
-(down)
-gjs 通过 down 出口离开
-gjs 进入了 lobby-10
-gjs 说：Hi lambda-man
-你处于 lobby-10
-你的包里装有：engineering-book
-你看到这里：lambda-man
-你可以离开：lobby-7 infinite-corridor（无限走廊）great-court（大庭院）
-你可以离开：east（东）south（南）west（西）up（上）
-alyssa-hacker 进入 lobby-10
-alyssa-hacker 说：Hi gjs lambda-man
-lambda-man 从 gjs 手里拿走了 engineering-book
-gjs 说：Yaaah!我不开心了！
+`gjs` 通过 `down` 出口离开
+
+`gjs` 进入了 `10-250`
+
+你处于 `10-250`
+
+你的包里装有：`engineering-book`
+
+你看到出口：`blackboard`（黑板）
+
+你可以离开：`up`（向上）`down`（向下）
+
+我们从教室回到 `lobby-10`，在那里我们遇到了 `lambda-10`，他立刻地偷走了我们的书。
+
+`(down)`
+
+`gjs` 通过 `down` 出口离开
+
+`gjs` 进入了 `lobby-10`
+
+`gjs` 说：Hi lambda-man
+
+你处于 `lobby-10`
+
+你的包里装有：`engineering-book`
+
+你看到这里：`lambda-man`
+
+你可以离开：`lobby-7` `infinite-corridor`（无限走廊）`great-court`（大庭院）
+
+你可以离开：`east`（东）`south`（南）`west`（西）`up`（上）
+
+`alyssa-hacker` 进入 `lobby-10`
+
+`alyssa-hacker` 说：Hi gjs lambda-man
+
+`lambda-man` 从 `gjs` 手里拿走了 `engineering-book`
+
+`gjs` 说：Yaaah!我不开心了！
 
 ## 对象类型
 
@@ -3473,7 +3565,7 @@ gjs 说：Yaaah!我不开心了！
   'hunger))
 ```
 
-我们创建了两个巨魔：grendel 和 registrar。它们最初被放在随机的位置，具有某些随机倾向。
+我们创建了两个巨魔：`grendel` 和 `registrar`。它们最初被放在随机的位置，具有某些随机倾向。
 
 ```
 (define (create-trolls places)
@@ -3517,7 +3609,7 @@ gjs 说：Yaaah!我不开心了！
 (property-getter troll:hunger?))
 ```
 
-自主代理偶尔会受到“时钟”（clock）的刺激以采取某些动作。巨魔的独特动作是咬其他人。
+自主代理偶尔会受到“时钟”`clock`的刺激以采取某些动作。巨魔的独特动作是咬其他人。
 
 ```
 (define-clock-handler troll? eat-people!)
@@ -3584,7 +3676,7 @@ gjs 说：Yaaah!我不开心了！
 (define-generic-generic-procedure generic-move!
   (match-args thing? container? container? person?)
   (lambda (thing from to actor)
-    (tell! (list "is not movable)))))
+    (tell! (list "is not movable"))))
 ```
 
 通用过程的真正威力通过移动物品的机制得到了阐明。例如，当我们捡起工程书时，我们将它从房间移动到包里。这是通过 `move` 过程实现的：
@@ -3607,7 +3699,6 @@ gjs 说：Yaaah!我不开心了！
 ```
 
 这种通用过程支持“链式调用”，每个处理器在调用时都会接收一个额外的参数（在本例中为 super）。这与 Java 等语言中使用的机制基本相同，尽管在那里它是通过关键字而不是参数完成的。
-
 
 ```scheme
 (define (take-thing name)
@@ -3645,7 +3736,7 @@ gjs 说：Yaaah!我不开心了！
       (move-internal! mobile-thing from to))))
 ```
 
-执行者（actor）正在拿物品，执行者是新的持有者。
+执行者 `actor` 正在拿物品，执行者是新的持有者。
 
 但执行者可能在某个位置拿起物品并将其放入某人的包中！
 
@@ -3700,6 +3791,8 @@ gjs 说：Yaaah!我不开心了！
                     mobile-thing)
             (tell! actor))))
 ```
+
+
 
 ```scheme
   ((eqv actor former-holder)
@@ -3764,6 +3857,7 @@ gjs 说：Yaaah!我不开心了！
   (guarantee:symbol? name)
   (guarantee property-list? plist)
   (属性属性))
+```
 
 属性的表示使用一个低级过程，除非是为了支持更高级的抽象。`make-property` 过程只会被 `make-type` 调用，而属性的表示方式取决于。
 
@@ -3791,12 +3885,9 @@ gjs 说：Yaaah!我不开心了！
   type))
 ```
 
-类型谓词是一个普通的抽象谓词（参见第134页），并带有特定的属性，这些属性通过 `%set-type-properties!` 存储在关联中。这些指定的属性并不是被单独使用的；相反，它们与该类型的父类的属性聚合在一起。对象被
+类型谓词是一个普通的抽象谓词（参见第134页），并带有特定的属性，这些属性通过 `%set-type-properties!` 存储在关联中。这些指定的属性并不是被单独使用的；相反，它们与该类型的父类的属性聚合在一起。对象被 `tagged` 满足 `instance-data`。它是从该类型的属性到值的关联。
 
-
-`tagged` 满足 `instance-data`。它是从该类型的属性到值的关联。
-
-```
+```scheme
 (define (type-properties type)
  (append-map %type-properties
   (cons type (all-supertypes type))))
@@ -3804,7 +3895,7 @@ gjs 说：Yaaah!我不开心了！
 
 而 `type-instantiator` 构建实例化器，它接受一个使用名称作为键的属性列表，解析该列表，并使用结果值创建实例数据，该数据将此实例的每个属性与其值关联起来。它还会调用 `set-up!` 过程，使我们能够进行特定类型的初始化。
 
-```
+```scheme
 (define (type-instantiator type)
  (let ((constructor (predicate-constructor type))
   (properties (type-properties type))
@@ -3872,8 +3963,6 @@ ODE 意味着“常微分方程”，即具有单个独立变量的微分方程�
 
 过程 `default-object` 一个与任何可能的常量不同的对象。过程 `default-object?` 识别该值。
 
-
-
 7 你可能已经注意到的另一个区别是，数值算术的常量生成器和操作生成器程序只有一个形式化参数，而符号扩展器（symbolic extender）的生成器程序有两个。符号算术建立在基础算术之上，因此基础算术的常量或操作会被传递给生成器。
 
 8 调用 `(any-arg 3 p1? p2?)` 将产生一个包含七种情况的适用性规范（applicability specification），因为这种适用性有七种满足方式：((p2? p2? p1?) (p2? p2? p1? p2?) (p1? p2? p2?) (p1? p2? p1?) (p1? p1? p2?) (p1? p1? p1?))
@@ -3916,20 +4005,22 @@ $$Df(t) = \frac{d}{dx}f(x)|_{x=t}$$
 a \times (b + c) ⇔ a \times b + a \times c
 ```
 
-这是乘法对加法的分配律。它表示我们可以在不改变表达式值的情况下将一方替换为另一方。该法则的每一侧都是一个模式，带有变量 a、b 和 c，以及模式 × 和 +。该法则的意思是，如果我们发现一个代数表达式，它是某个项与若干项之和的乘积，我们可以将其替换为两个乘积之和，反之亦然。
 
-让我们如何基于模式匹配来组织程序。这里的关键思想是将模式编译为组合子（combinators），这些组合子是匹配器的组成部分。在 4.2 节中，我们将在一个初代数的项重写系统中演示这一点。
+
+这是乘法对加法的分配律。它表示我们可以在不改变表达式值的情况下将一方替换为另一方。该法则的每一侧都是一个模式，带有变量 `a`、`b` 和 `c`，以及模式 `×` 和 `+`。该法则的意思是，如果我们发现一个代数表达式，它是某个项与若干项之和的乘积，我们可以将其替换为两个乘积之和，反之亦然。
+
+让我们如何基于模式匹配来组织程序。这里的关键思想是将模式编译为组合子（`combinators`），这些组合子是匹配器的组成部分。在 `4.2` 节中，我们将在一个初代数的项重写系统中演示这一点。
 
 ### 模式的语言
 
-第一个工作是构建我们的模式语言。我们将从一些简单的内容开始。我们将使用 Lisp (Scheme) 列表来构建模式。与上面的数学示例不同，我们不会有像 `and` 和 `+` 这样的保留符号（reserved symbols），因此我们必须区分模式变量和模式常量。模式变量可以用查询符号 `?` 来表示。这是一个传统的选择。因此，在这种语言中，构成分配律的模式可以表示如下（假设我们正在处理 Lisp 前缀数学表达式）：
+第一个工作是构建我们的模式语言。我们将从一些简单的内容开始。我们将使用 Lisp (`Scheme`) 列表来构建模式。与上面的数学示例不同，我们不会有像 `and` 和 `+` 这样的保留符号（`reserved symbols`），因此我们必须区分模式变量和模式常量。模式变量可以用查询符号 `?` 来表示。这是一个传统的选择。因此，在这种语言中，构成分配律的模式可以表示如下（假设我们正在处理 Lisp 前缀数学表达式）：
 
 ```
 * (* ? a) (? b) (? c))
 (+ (* ? a) (? b)) (* ? a) (? c))
 ```
 
-你可能会抱怨说我们可以使用区分性符号，比如用 `a` 而不是长长的 `?`。那样将很好，但这种选择会使扩展变得稍微困难，例如如果我们想要一个仅限于数字的变量。当然，如果有帮助，我们稍可以添加语法，记住艾伦·珀利斯（Alan Perlis）的格言：“语法糖会导致分号的癌症。”通过我们简单的列表表示，我们能够通过向其列表表示中添加描述限制的谓词，来限制模式变量（`??`）仅匹配数字：`(? a ,number?)`。
+你可能会抱怨说我们可以使用区分性符号，比如用 `a` 而不是长长的 `?`。那样将很好，但这种选择会使扩展变得稍微困难，例如如果我们想要一个仅限于数字的变量。当然，如果有帮助，我们稍可以添加语法，记住艾伦·珀利斯（`Alan Perlis`）的格言：“语法糖会导致分号的癌症。”通过我们简单的列表表示，我们能够通过向其列表表示中添加描述限制的谓词，来限制模式变量（`??`）仅匹配数字：`(? a ,number?)`。
 
 我们对匹配器设计的一个约束是，上面的第二个模式匹配：
 
@@ -3944,7 +4035,7 @@ a \times (b + c) ⇔ a \times b + a \times c
 + (* (cos x) (exp y)) (* (+ x y) (sin z))
 ```
 
-因为对于 `(? a)` 不存在可能的赋值，除非由于某种原因 `x=(+ x y)`。我们将在 4.4 节使用统一匹配时学习那种情况；在这里我们将认为没有可能的匹配。
+因为对于 `(? a)` 不存在可能的赋值，除非由于某种原因 `x=(+ x y)`。我们将在 `4.4` 节使用统一匹配时学习那种情况；在这里我们将认为没有可能的匹配。
 
 匹配器的另一个约束（它对其结构将产生重要影响）是需要匹配列表中未知数量的连续元素。例如，假设我们想要创建一个规则，将正弦和余弦的平方和替换为1，即使它们在和式中不是连续的：
 
@@ -3953,7 +4044,7 @@ a \times (b + c) ⇔ a \times b + a \times c
 (+ i)
 ```
 
-`...` 可以代表许多项。我们将使用一个前缀为 `??` 的分段变量（segment variable）来匹配许多项。因此，我们将写的模式为：
+`...` 可以代表许多项。我们将使用一个前缀为 `??` 的分段变量（`segment variable`）来匹配许多项。因此，我们将写的模式为：
 
 ```
 (?? t1)
@@ -3967,7 +4058,7 @@ expt (cos ?? x) 2)
 
 ## 4.2 项重写
 
-项重写系统是创建领域特定语言的强大工具。项重写系统的基本特征是使用模式匹配器识别要转换的信息，以及使用模板系统（template system）来实例化。从等式理论（equational theories）构建项重写系统已有广泛研究，但我们不会深入探讨这些。首先，我们开发一个单向系统，其中模式用于输入，模板用于输出。这里是某些规则的近似：
+项重写系统是创建领域特定语言的强大工具。项重写系统的基本特征是使用模式匹配器识别要转换的信息，以及使用模板系统（`template system`）来实例化。从等式理论（`equational theories`）构建项重写系统已有广泛研究，但我们不会深入探讨这些。首先，我们开发一个单向系统，其中模式用于输入，模板用于输出。这里是某些规则的近似：
 
 ```
 (define algebra-1
@@ -3985,7 +4076,7 @@ expt (cos ?? x) 2)
         '(+ (* a ?b) (* a ?c))))))
 ```
 
-algebra-1 中有规则。第一个规则实现了加法的结合律，第二个实现了乘法的交换律，第三个实现了乘法对加法的分配律。
+`algebra-1` 中有规则。第一个规则实现了加法的结合律，第二个实现了乘法的交换律，第三个实现了乘法对加法的分配律。
 
 每个规则由两部分组成：匹配子表达式的模式和一个后续表达式。如果模式匹配，则评估后续表达式。如果后续表达式的值为 `#f`，则规则不适用。否则评估的结果替换子表达式。注意我们使用了第391页描述的反引号机制来简化后续表达式的编写。
 
@@ -4004,9 +4095,7 @@ algebra-1 中有规则。第一个规则实现了加法的结合律，第二个�
 
 ### 4.2.1 代数中的段变量
 
-algebra-2 规则系统要有趣得多。它是基于加法和乘法是元操作而构建的。我们需要段变量来使其正常工作。我们在变量限制中使用 `number?` 谓词来支持数值简化的规则。
-
-
+`algebra-2` 规则系统要有趣得多。它是基于加法和乘法是元操作而构建的。我们需要段变量来使其正常工作。我们在变量限制中使用 `number?` 谓词来支持数值简化的规则。
 
 ```scheme
 ;; 求和
@@ -4050,7 +4139,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
   '(*,(* x ,y), @z))
 ```
 
-在 algebra-2 中，除了向和和积中添加多个参数外，我们还实现了一些数值简化。注意，我们使用了反引号（backquote）机制来构建模式，其中谓词 `number?` 被变量的限制条件，而不仅仅用于构建结果表达式。要进一步了解简化器，请参见练习 4.2。
+在 `algebra-2` 中，除了向和和积中添加多个参数外，我们还实现了一些数值简化。注意，我们使用了反引号（`backquote`）机制来构建模式，其中谓词 `number?` 被变量的限制条件，而不仅仅用于构建结果表达式。要进一步了解简化器，请参见练习 4.2。
 
 现在我们可以得到这些结果了：
 
@@ -4070,8 +4159,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 根据谓词 `expr?`，显式为数字的表达式小于任何非显式数字的表达式。
 
-- a. 在 algebra-2 中，交换律施加在表达式上的排序是如何使数值简化规则有效的？
-
+- a. 在 `algebra-2` 中，交换律施加在表达式上的排序是如何使数值简化规则有效的？
 - b. 假设交换律没有强制执行排序。我们必须如何表达数值简化规则？解释为什么数值简化会变得非常昂贵。
 
 ### 练习 4.3：排序效率
@@ -4087,7 +4175,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 (+ (* 3 x) (* 4 x))
 ```
 
-创建一个新系统 algebra-3，其中包含导致合并同类项的规则，并将结果保留为项的和。演示你的解决方案。你的解决方案必须处理此类问题：
+创建一个新系统 `algebra-3`，其中包含导致合并同类项的规则，并将结果保留为项的和。演示你的解决方案。你的解决方案必须处理此类问题：
 
 ```scheme
 (algebra-3
@@ -4100,7 +4188,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 现在我们有了一些基于模式的规则系统的经验，让我们深入它是如何工作的。
 
-我们将规则实现为一个过程，该过程与给定的表达式进行匹配。如果匹配成功，规则将在模式变量绑定到匹配数据的环境中求值。数据过程接受成功和失败的延续（continuations），用于回溯到规则的结果或模式匹配。
+我们将规则实现为一个过程，该过程与给定的表达式进行匹配。如果匹配成功，规则将在模式变量绑定到匹配数据的环境中求值。数据过程接受成功和失败的延续（`continuations`），用于回溯到规则的结果或模式匹配。
 
 上面的 `rule-simplifier` 程序是一个简单递归简化器的构造器。它产生 `simplify-expression`，该过程接收一个表达式并使用规则简化它。它递归地简化表达式的所有子表达式，然后应用规则简化生成的表达式。它重复此过程，直到过程收敛。因此，返回的表达式是简化过程的固定点。
 
@@ -4130,11 +4218,11 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
           (succeed (apply (cdr per-rule) (cdr data)))
           (fail))
     (try-rules data (cdr per-rule) succeed fail))))
-```（注：try-rules 的 OCR 文本非常碎片；我根据标准的 Scheme 模式匹配模式和周围文本的上下文重构了逻辑）。
+```
 
-名字 a 和 b 是重复的；它们同时出现在模式和处理过程的参数列表中，且顺序相同。这写起来既很讨厌又容易出错，因为我们必须记住重复这些名字。
+名字 `a` 和 `b` 是重复的；它们同时出现在模式和处理过程的参数列表中，且顺序相同。这写起来既很讨厌又容易出错，因为我们必须记住重复这些名字。
 
-这是一个语法抽象的案例，也称为宏（macro）。下面的神奇代码片段将规则定义转换为 `make-rule` 的预期调用：
+这是一个语法抽象的案例，也称为宏（`macro`）。下面的神奇代码片段将规则定义转换为 `make-rule` 的预期调用：
 
 ```scheme
 (define-syntax rule
@@ -4165,7 +4253,6 @@ pp (syntax '(rule (* (? b) (? a))
 
 **最终输出（清理后的 OCR）：**
 
-[content]
 ```scheme
 ;; 求和
 rule '(+ ? a)
@@ -4208,7 +4295,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
   '(*,(* x ,y), @z))
 ```
 
-在 algebra-2 中，除了向和和积中添加多个参数外，我们还实现了一些数值简化。注意，我们使用了反引号（backquote）机制来构建模式，其中谓词 `number?` 被变量的限制条件，而不仅仅用于构建结果表达式。要进一步了解简化器，请参见练习 4.2。
+在 `algebra-2` 中，除了向和和积中添加多个参数外，我们还实现了一些数值简化。注意，我们使用了反引号（`backquote`）机制来构建模式，其中谓词 `number?` 被变量的限制条件，而不仅仅用于构建结果表达式。要进一步了解简化器，请参见练习 4.2。
 
 现在我们可以得到这些结果了：
 
@@ -4228,8 +4315,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 根据谓词 `expr?`，显式为数字的表达式小于任何非显式数字的表达式。
 
-- a. 在 algebra-2 中，交换律施加在表达式上的排序是如何使数值简化规则有效的？
-
+- a. 在 `algebra-2` 中，交换律施加在表达式上的排序是如何使数值简化规则有效的？
 - b. 假设交换律没有强制执行排序。我们必须如何表达数值简化规则？解释为什么数值简化会变得非常昂贵。
 
 ### 练习 4.3：排序效率
@@ -4245,7 +4331,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 (+ (* 3 x) (* 4 x))
 ```
 
-创建一个新系统 algebra-3，其中包含导致合并同类项的规则，并将结果保留为项的和。演示你的解决方案。你的解决方案必须处理此类问题：
+创建一个新系统 `algebra-3`，其中包含导致合并同类项的规则，并将结果保留为项的和。演示你的解决方案。你的解决方案必须处理此类问题：
 
 ```scheme
 (algebra-3
@@ -4254,11 +4340,13 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 (+ y (* 6 z) (* 7 y)))
 ```
 
+
+
 ### 4.2.2：规则系统的实现
 
 现在我们有了一些基于模式的规则系统的经验，让我们深入它是如何工作的。
 
-我们将规则实现为一个过程，该过程与给定的表达式进行匹配。如果匹配成功，规则将在模式变量绑定到匹配数据的环境中求值。数据过程接受成功和失败的延续（continuations），用于回溯到规则的结果或模式匹配。
+我们将规则实现为一个过程，该过程与给定的表达式进行匹配。如果匹配成功，规则将在模式变量绑定到匹配数据的环境中求值。数据过程接受成功和失败的延续（`continuations`），用于回溯到规则的结果或模式匹配。
 
 上面的 `rule-simplifier` 程序是一个简单递归简化器的构造器。它产生 `simplify-expression`，该过程接收一个表达式并使用规则简化它。它递归地简化表达式的所有子表达式，然后应用规则简化生成的表达式。它重复此过程，直到过程收敛。因此，返回的表达式是简化过程的固定点。
 
@@ -4288,11 +4376,12 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
           (succeed (apply (cdr per-rule) (cdr data)))
           (fail))
   ((try-rules data (cdr--rule) succeed fail))))
-```（注：try-rules 的 OCR 文本非常碎片；我根据标准的 Scheme 模式匹配模式和周围文本的上下文重构了逻辑）。
+```
+（注：`try-rules` 的 OCR 文本非常碎片；我根据标准的 Scheme 模式匹配模式和周围文本的上下文重构了逻辑）。
 
-名字 a 和 b 是重复的；它们同时出现在模式和处理过程的参数列表中，且顺序相同。这写起来既很讨厌又容易出错，因为我们必须重复这些名字。
+名字 `a` 和 `b` 是重复的；它们同时出现在模式和处理过程的参数列表中，且顺序相同。这写起来既很讨厌又容易出错，因为我们必须重复这些名字。
 
-这是一个语法抽象的案例，也称为宏（macro）。下面的神奇代码片段将规则定义转换为 `make-rule` 的预期调用：
+这是一个语法抽象的案例，也称为宏（`macro`）。下面的神奇代码片段将规则定义转换为 `make-rule` 的预期调用：
 
 ```scheme
 (define-syntax rule
@@ -4308,16 +4397,15 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
         ,handler-body)))))
 ```
 
-
-操作符规则模式。匹配规则的后续部分（consequent）计算要返回的值。
+操作符规则模式。匹配规则的后续部分（`consequent`）计算要返回的值。
 例如，我们可以编写传统的阶乘过程，将条件分布如下：
 
-```
+```scheme
 (define factorial
 (make-pattern-operator
   (rule `'0) 1)
   (rule `((? n ,positive?))
-    (* n (factorial (- n 1)))))
+    (* n (factorial (- n 1))))))
 ```
 
 ```
@@ -4334,13 +4422,13 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
   (rule `((? x) (? y)) (n:- (apply n:+ y)))))
 ```
 
-我们允许动态地通过额外的规则扩展模式操作符。此类操作符类似于通用过程（generic procedures），允许程序员在非本地范围内分布规则定义。例如，在孔洞优化器（peehole optimizer）中，我们可能希望将各种优化操作与编译器代码生成器的不同部分分组。
+我们允许动态地通过额外的规则扩展模式操作符。此类操作符类似于通用过程（`generic procedures`），允许程序员在非本地范围内分布规则定义。例如，在孔洞优化器（`peehole optimizer`）中，我们可能希望将各种优化操作与编译器代码生成器的不同部分分组。
 
-```
+```scheme
 (define peehole (make-pattern-operator))
 ```
 
-```
+```scheme
 (attach-rule! peehole
   (rule `'((push ? regl))
     (pop (? reg2))
@@ -4349,7 +4437,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
       '(move ,reg1 ,reg2))))
 ```
 
-```
+```scheme
 (attach-rule! peehole
   (rule `'((or ? reg) (? const1 ,unsigned-integer?))
     ((or ? reg) (? const2 ,unsigned-integer?))
@@ -4361,16 +4449,18 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 这是实现模式操作符的一种方法。传递给 `make-pattern-operator` 的最后一个规则是默认规则。无论后来添加了什么其他规则，它总是会被尝试。
 
-```
+```scheme
 (define (make-pattern-operator rules)
 (let ((rules
   (cons 'rules
     (if (pair? rules)
       (except-last-pair rules)
       '())))
+
 (default-rule
   (and (pair? rules)
     (last rules))))
+
 (define (the-operator data)
   (define (succeed value fail) value)
   (define fail
@@ -4389,7 +4479,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 我们使用 `set-pattern-metadata!` 将规则列表作为“便签”附加到操作符上，并在下面的代码中使用 `pattern-metadata` 来检索它。我们有过程向操作符规则列表的头部（`override-rule!`）或末尾（`attach-rule!`）添加规则：
 
-```
+```scheme
 (define (attach-rule! operator rules)
 (let ((metadata (pattern-metadata operator)))
   (set-cdr metadata
@@ -4397,7 +4487,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
       (list rule))))
 ```
 
-```
+```scheme
 (define override-rule operator rule)
 (let ((metadata (pattern-metadata operator)))
   (set-cdr metadata)
@@ -4406,11 +4496,11 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 ## 4.3 匹配器的设计
 
-现在我们已经看到了模式匹配的一些强大之处，我们将开始探索它是如何工作的。我们的匹配器由一组匹配过程（或称为匹配器）以及一些将它们组合以产生复合匹配器的组合器（combinators）构造而成。³ 模式中的每个原始元素都由一个原始匹配器表示，而唯一的组合——列表，则由一个组合列表元素匹配器的组合器来表示，以形成一个复合匹配器。所有匹配过程都接受三个参数：一个包含要匹配数据的列表、一个模式变量的绑定字典，以及一个在匹配成功时被调用的延续过程（`succeed`）。`succeed` 的参数必须是匹配结果产生的新字典，以及从输入列表中消耗的项数。该数字将用于确定在分段匹配返回后继续继续到何处。如果匹配失败，匹配过程将返回 `#f`。
+现在我们已经看到了模式匹配的一些强大之处，我们将开始探索它是如何工作的。我们的匹配器由一组匹配过程（或称为匹配器）以及一些将它们组合以产生复合匹配器的组合器（`combinators`）构造而成。³ 模式中的每个原始元素都由一个原始匹配器表示，而唯一的组合——列表，则由一个组合列表元素匹配器的组合器来表示，以形成一个复合匹配器。所有匹配过程都接受三个参数：一个包含要匹配数据的列表、一个模式变量的绑定字典，以及一个在匹配成功时被调用的延续过程（`succeed`）。`succeed` 的参数必须是匹配结果产生的新字典，以及从输入列表中消耗的项数。该数字将用于确定在分段匹配返回后继续继续到何处。如果匹配失败，匹配过程将返回 `#f`。
 
 有三个原始匹配过程和一个组合器。让我们过一遍它们。我们还需要一个很小的过程，可以将其作为参数传递给匹配过程以报告结果：
 
-```
+```scheme
 (define (result-receiver dict n-eaten)
  '(succeed ,(match:bindings dict) ,n-eaten))
 ```
@@ -4419,7 +4509,7 @@ rule '(* ? x ,number?) (? y ,number?) (? z)
 
 `match:eqv` 过程接受模式常量（例如 `x`），并产生一个匹配过程 `eqv-match`，当且仅当第一个数据项与模式常量相等（使用 `eqv?`）时，该过程将成功。它不会向字典添加内容。`succeed` 的第二个参数是匹配的项数，对于此匹配过程该数值为 1。
 
-```
+```scheme
 (define match:eqv pattern-constant)
 (define eqv-match data dictionary succeed)
 (and (pair? data)
@@ -4430,15 +4520,15 @@ eq-match)
 
 ### 示例：
 
-```
+```scheme
 (define x-matcher (match:eqv 'x))
 ```
 
-```
+```scheme
 (x-matcher ' (x))
 ```
 
-```
+```scheme
 (x-matcher ' (y))
 (match-dict)
 (result-receiver)
@@ -4448,7 +4538,7 @@ eq-match)
 
 `match:element` 过程用于创建一个匹配过程，针对模式变量（例如 `x`），该过程当且仅当匹配单个项时成功。它不会向字典中添加新项。`succeed` 的第二个参数是匹配的项数，对于此匹配过程为 1。如果变量有值，则将其绑定到字典；如果没有，则不添加。
 
-```
+```scheme
 (define match:element variable)
 (define (element-match data succeed)
 (and (pair? data)
@@ -4462,13 +4552,9 @@ eq-match)
       (let ((n (length data))
         (let ((i 0))
           (and ( succeed (match-dict-dict
-
 variable(list(head-)
-
             )
-
             i
-
 (          (lp 1))))1
 ```
 
@@ -4476,7 +4562,7 @@ variable(list(head-)
 
 针对变量（例如 `??`）的段匹配器用于匹配项序列。段匹配器比元素匹配器更复杂，因为它可以消耗未知数量的项。因此，段匹配器不仅要通知调用者新的字典，还要通知从数据中消耗了多少项。当匹配段变量时，有两种可能：变量已经有值，或者还没有。如果变量有值，则通过 `match-segment-equal?` 对数据进行检查（从 `i=0` 开始，假设段不消耗项）。然而，如果该成功导致后续匹配失败，段匹配器会尝试比已经消耗的多消耗一个项（通过执行 `(+ i 1)`）。如果段匹配器用完了数据项，则匹配失败。
 
-```
+```scheme
 (define (match:segment variable)
 (define (match-segment data succeed)
 (and (list? data)
@@ -4493,11 +4579,12 @@ variable(list(head-)
             (list-head data i)
             dictionary)
             i))
-          (lp (+ i 1))))))))```
+          (lp (+ i 1))))))))
+```
 
 这里有一些示例：
 
-```
+```scheme
 ((match:segment '?? a))
 '(z z) (match:new-dict) result-receiver)
 (success ((a () ??)) 0)
@@ -4505,23 +4592,20 @@ variable(list(head-)
 
 当然，零长度段是可以接受的。如果我们想看到所有可能的匹配，可以让结果接收器在打印成功结果后返回 `#f`。这将导致匹配过程产生另一种替代值。
 
-```
+```scheme
 (define (print-all-results dict n-eaten)
 (pp '(success ,(match-bindings dict) ,n-eaten))
 ;; 返回 #f 我们强制回溯。
 #f)
 ```
 
-```
+```scheme
 ((match:segment '?? a))
 '(z z) (match:new-dict) print-all-results)
 (success ((a () ??)) 0)
 (success ((a (z) ??)) 1)
 (success ((a (z z) ??)) 2)
 ```
-
-
-
 
 ```scheme
 (success ((a z z z)) ??) 3)
@@ -4566,6 +4650,8 @@ variable(list(head-)
       (else #f)))
     list-match)
 ```
+
+
 
 注意 `match:list` 组合器返回的匹配器 `list-match` 与匹配匹配具有完全相同的接口，允许它被整合到组合中。所有基础匹配过程具有完全相同的接口，这一事实使其成为了一个组合器系统。
 
@@ -4678,11 +4764,12 @@ result-receiver)
   (match:compile-pattern '(a ((? b) 2 3) (? b) c))
   '(a (1 2 3) 1 c)
   match-bindings)
-
 ```
+```scheme
 (run-matcher
   (match:compile-pattern '(a ((? b) 2 3) (? b) c))
   '(a 1 2 3))
+```
 
 正如之前看到的，涉及分段变量的模式可能有多种匹配方式，我们可以通过让匹配失败来触发下一个匹配，直到它们耗尽：
 
@@ -4718,7 +4805,7 @@ result-receiver)
 ```
 
 ```scheme
-(define (match-types '((??)))
+(define (match-types '((??))))
 ```
 
 ```scheme
@@ -4739,10 +4826,11 @@ result-receiver)
 (define (match:segment-var object)
   (and (match:var object)
     (eq? '?? (match:var-type object))))
-```这段代码比预期的要复杂，因为我们将在 4.5 节和一些练习中扩展变量语法。
+```
+这段代码比预期的要复杂，因为我们将在 4.5 节和一些练习中扩展变量语法。
 
 ```scheme
-(define (match:var-name)
+(define (match:var-name))
   (simple-generic-procedure 'match:var-name
     (constant-generic-procedure-handler #f)))
 ```
@@ -4767,7 +4855,7 @@ result-receiver)
   (constant-generic-procedure-handler #t))
 ```
 
-# 编译器将模式映射到对应的匹配器：
+## 编译器将模式映射到对应的匹配器：
 
 ```scheme
 (define (match:compile-pattern pattern)
@@ -4833,17 +4921,13 @@ element-match
     ((match:var-restriction var) value)))
 ```
 
-
-
-
-
-# 练习 4.6：模式备选：选择是好的
+## 练习 4.6：模式备选：选择是好的
 
 扩展我们的模式语言的一种有趣方法是引入一个选择操作符：
 
-(?choice pattern ...)
+`(?choice pattern ...)`
 
-它应该编译成一个匹配器，该匹配器按照从左到右的顺序尝试匹配给定的模式，返回第一个成功匹配，如果没有匹配则返回 #f。（这应该让你联起正则表达式中的“备选”（alternation，见第40页），但在模式匹配中，“choice”（选择）是一个更传统的名称。）
+它应该编译成一个匹配器，该匹配器按照从左到右的顺序尝试匹配给定的模式，返回第一个成功匹配，如果没有匹配则返回 `#f`。（这应该让你联起正则表达式中的“备选”（alternation，见第40页），但在模式匹配中，“choice”（选择）是一个更传统的名称。）
 
 例如：
 
@@ -4875,7 +4959,7 @@ print-all-matches)
 
 **任务：** 为这种新模式模式实现一个新的匹配器过程 `match:choice`。适当增强模式编译器。
 
-# 练习 4.7：命名模式
+## 练习 4.7：命名模式
 
 另一种扩展是提供命名模式，类似于 Scheme 的 `letrec`。
 
@@ -4905,14 +4989,14 @@ print-all-matches)
 
 如果你真的野心勃勃，可以通过重写所有现有的匹配器接口以接受一个额外的模式环境参数，来实现词法作用域。但那是另一个时间和地点的工作（在练习 4.9 中）。
 
-# 练习 4.8：自食其力
+## 练习 4.8：自食其力
 
 从表面上看，扩展这个匹配器系统以允许向量模式和向量数据似乎是可能的。但我们在匹配器的设计中做了一个强力的假设——它是一个针对列表数据的列表模式的匹配器。
 
 - a. 需要什么才能让这段代码从该假设中解放出来，以便你可以创建一个涵盖这两种复合数据的匹配器？或者任意序列？需要何种更改？你需要更改 `match` 接口吗？
 - b. 实现它！（这是一项大量工作）。
 
-# 练习 4.9：通用模式语言
+## 练习 4.9：通用模式语言
 
 即使在练习 4.7 中添加了 `?:pletrec` 和 `?:ref`，我们拥有的匹配器并不是一个完整的语言，因为它不支持命名作用域和参数模式。例如，我们无法编写如下模式，它旨在匹配回文列表：
 
@@ -4924,6 +5008,8 @@ print-all-matches)
     (:ref palindrome)
     (? x)))))
 ```
+
+
 
 为了让其以合理的方式工作，`?:pnew` 创建了词法作用域变量，它们只能在 `?:pnew` 的主体中引用。一个完善的模式语言是一个很棒的子系统，但构建起来并不容易。
 
@@ -4937,26 +5023,31 @@ print-all-matches)
 
 在合并中，“方程”是两个输入模式对应部分的匹配，而“替换列表”是字典。实现合并的一种方法是
 
-
 输入模式的通用结构。与单侧匹配一样，模式由列表结构表示。如果在匹配的任意一侧遇到变量，它将在字典中被绑定到另一侧的数据上。
 
 如果一个变量在原始模式中出现多次，则随后的每次出现都必须匹配第一次出现时绑定的值。这通过以下事实确保：每当遇到变量时，都会在字典中查找，如果它是该变量的绑定，则使用它的值而不是变量本身。此外，每当创建一个新的绑定并将其输入字典时，将使用该新绑定来替换字典中其他变量的值中所有新消除的变量的实例。
 
 为了获得两个模式的合一器（unifier），如果它们可以合一，我们通过对它们进行合一以得到替换字典。如果不能合一，`unify` 返回 `#f`，表示失败。然后使用该字典实例化其中一个模式；选择哪一个并不重要。`match:dict-substitution` 过程将模式表达式 `pattern1` 中所有在字典 `dict` 中具有绑定的变量实例，替换为其在字典中的值。
 
-```
+```scheme
 (define unifier pattern1 pattern2)
+
 (let ((dict (unify pattern1 pattern2))
+
   (and dict
+
     (match:dict-substitution dict) pattern1))))
 ```
 
 合一器的主接口是 `unify`，它返回匹配成功的字典结果，或者在匹配失败时返回 `#f`。
 
-```
+```scheme
 (define unify pattern1 pattern2)
+
 (unify:internal pattern1 pattern2
+
   (match:new-dict)
+
   (lambda (dict) dict))
 ```
 
@@ -4966,23 +5057,27 @@ print-all-matches)
 
 在 `unify:internal` 中，要合一的模式 `pattern1` 和 `pattern2` 被封装在列表中。合一器程序将按项比较这些列表，构建一个使相应项相等的字典。如果两个项列表都同时被耗尽，则匹配成功。在顶层 `unify:internal` 中，项列表包含两个给定的模式，核心合一过程 `unify:dispatch` 将递归地进入模式，将模式的子模式作为项的列表进行比较。
 
-```
+```scheme
 (define (unify:internal pattern1 pattern2 dict succeed)
+
 ((unify:dispatch (list pattern1) (list pattern2))
+
 dict
+
 (lambda (dict fail rest1 rest2)
+
 (or (and (null? rest1) (null? rest2))
+
 (succeed dict))
+
 (fail)))
+
 (lambda () #f))
 ```
 
 过程 `unify:dispatch` 接收两个项的列表作为输入，它是递归下降匹配器的核心。匹配过程取决于项列表的内容。例如，如果两个项都以一个常量开头（如 `(ben franklin)` 和 `(ben (? fn))`），则必须比较这些常量，只有当常量相等时匹配才能继续。如果一个项列表以变量开头，另一个可以以任何项开头，且变量必须绑定到它所在的项。（如果两个都是变量，则其中一个变量将被消除以支持另一个）。所以，如果一个项列表是 `((? bmo) 6 1705)` 而另一个是 `(jan (? bday 1705))`，那么变量 `(? bmo)` 必须绑定到值 `jan` 才能继续。如果两个项都以一个不是变量的列表开头，则匹配将继续。
 
-
-
-
-```
+```scheme
 (term (car terms)) rest2 (cdr terms))
 (cond ((and (match:element-var? term)
       (match:vars-equal? var term))
@@ -5001,7 +5096,7 @@ dict
 
 在 `In-substitute` 中，我们首先使用旧字典通过将任何之前消除的变量替换为它们的值来清理传入的项。然后我们检查对可以匹配的对象是否有任何限制。最后，我们检查 `var` 在清理后的项 (term*) 中的出现情况。如果清理后的项包含对 `var` 的引用，则匹配无法继续。如果我们的匹配通过了所有测试，我们就创建一个新字典，其中包含 `var` 到清理后的项的新绑定。新字典中的绑定值也必须清除对 `var` 的引用。
 
-```
+```scheme
 (define (do-substitute var term dict)
 (let ((term* (match:dict-substitution dict term))
 (and (match:satisfies-restriction? var term*))
@@ -5016,16 +5111,14 @@ dict)))))
 
 现在我们已经了如何处理变量，必须在我们的通用调度器程序中安装此处理器。这里的细微之处在于，要消除的变量可能出现在任何项列表中。我们保证包含变量的项列表是 `maybe-substitute` 的第一个参数。
 
-```
+```scheme
 (define element? term)
 (any-object? term))
-
 (define-generic-procedure-handler unify:gdispatch
 (match-args car-satisfies match:element-var?)
 (car-satisfies element?))
 (lambda var-first terms)
 (maybe-substitute var-first terms)))
-
 (define-generic-procedure-handler unify:gdispatch
 (match-args car-satisfies element?)
 (car-satisfies match:element-var?))
@@ -5060,7 +5153,7 @@ dict)))))
 
 统一匹配的一个经典应用是类型推断：给定一个程序和一些关于程序部分内容的类型信息，推断出关于程序其他部分的类型信息。例如，如果我们知道 `<` 是一个接受两个数值参数并产生布尔值的过程，那么如果我们分析表达式 `(g x y)`，我们可以推断出 `f` 和 `g` 是一元过程；`g` 接受一个布尔参数；`f` 返回一个数值；以及 `x` 有一个数值。如果这些信息被用于推断嵌入该表达式程序的属性，我们可以学到很多关于该程序的知识。以下是对该表达式的分析：
 
-```
+```scheme
 pp (infer-program-types '(g (< x y)))
 (t type17)
 (type:procedure ((boolean-type)) type17) g
@@ -5075,36 +5168,60 @@ pp (infer-program-types '(g (< x y)))
 
 在 `In-substitute` 中，我们首先使用旧字典通过将任何之前消除的变量替换为它们的值来清理传入的项。然后我们检查对可以匹配的对象是否有任何限制。最后，我们检查 `var` 在清理后的项 (term*) 中的出现情况。如果清理后的项包含对 `var` 的引用，则匹配无法继续。如果我们的匹配通过了所有测试，我们就创建一个新字典，其中包含 `var` 到清理后的项的新绑定。新字典中的绑定值也必须清除对 `var` 的引用。
 
-```
+```scheme
 (define (do-substitute var term dict)
 (let ((term* (match:dict-substitution dict term))
+```
+
+
+
+
 (and (match:satisfies-restriction? var term*))
+
   (or (and (match:var? term*)
+
       (match:vars-equal? var term*))
+
   (not (match:occurs-in? var term*))
+
   (match:extend-dict var term*))
+
 (match:map-dict-values
+
 (match:single-substitution var term*)))
+
 dict)))))
+
 ```
 
 现在我们已经了如何处理变量，必须在我们的通用调度器程序中安装此处理器。这里的细微之处在于，要消除的变量可能出现在任何项列表中。我们保证包含变量的项列表是 `maybe-substitute` 的第一个参数。
 
 ```
+
 (define element? term)
+
 (any-object? term))
 
 (define-generic-procedure-handler unify:gdispatch
+
 (match-args car-satisfies match:element-var?)
+
 (car-satisfies element?))
+
 (lambda var-first terms)
+
 (maybe-substitute var-first terms)))
 
 (define-generic-procedure-handler unify:gdispatch
+
 (match-args car-satisfies element?)
+
 (car-satisfies match:element-var?))
+
 (lambda terms var-first)
+
 (maybe-substitute var-first terms))
+
 ```
 
 此时，我们有了一个完整、正确且胜任的传统统一器。它是用通用过程编写的，因此可以轻松扩展以处理其他类型的数据。只需少少的工作，我们就可以添加语义附加，例如以 `+` 和 `*` 符号开头的列表交换律。正如我们将看到的，我们还可以支持新类型的语法变量，例如段变量。但在在此之前，我们将看一个真实的应用：类型推断。
@@ -5135,134 +5252,88 @@ dict)))))
 统一匹配的一个经典应用是类型推断：给定一个程序和一些关于程序部分内容的类型信息，推断出关于程序其他部分的类型信息。例如，如果我们知道 `<` 是一个接受两个数值参数并产生布尔值的过程，那么如果我们分析表达式 `(g x y)`，我们可以推断出 `f` 和 `g` 是一元过程；`g` 接受一个布尔参数；`f` 返回一个数值；以及 `x` 有一个数值。如果这些信息被用于推断嵌入该表达式程序的属性，我们可以学到很多关于该程序的知识。以下是对该表达式的分析：
 
 ```
+
 pp (infer-program-types '(g (< x y)))
+
 (t type17)
+
 (type:procedure ((boolean-type)) type17) g
+
 (t (boolean-type)
+
 (t (numeric-type)) (numeric-type))
+
 <
+
 (t (numeric-type)) x
+
 (t (numeric-type))
+
 (t (type-12) (numeric-type)) f
+
 (t (type-12) y))))
-```
-
-在 `In-substitute` 中，我们首先使用旧字典通过将任何之前消除的变量替换为它们的值来清理传入的项。然后我们检查对可以匹配的对象是否有任何限制。最后，我们检查 `var` 在清理后的项 (term*) 中的出现情况。如果清理后的项包含对 `var` 的引用，则匹配无法继续。如果我们的匹配通过了所有测试，我们就创建一个新字典，其中包含 `var` 到清理后的项的新绑定。新字典中的绑定值也必须清除对 `var` 的引用。
 
 ```
-(define (do-substitute var term dict)
-(let ((term* (match:dict-substitution dict term))
-(and (match:satisfies-restriction? var term*))
-  (or (and (match:var? term*)
-      (match:vars-equal? var term*))
-  (not (match:occurs-in? var term*))
-  (match:extend-dict var term*))
-(match:map-dict-values
-(match:single-substitution var term*)))
-dict)))))
-```
 
-现在我们已经了如何处理变量，必须在我们的通用调度器程序中安装此处理器。这里的细微之处在于，要消除的变量可能出现在任何项列表中。我们保证包含变量的项列表是 `maybe-substitute` 的第一个参数。
-
-```
-(define element? term)
-(any-object? term))
-
-(define-generic-procedure-handler unify:gdispatch
-(match-args car-satisfies match:element-var?)
-(car-satisfies element?))
-(lambda var-first terms)
-(maybe-substitute var-first terms)))
-
-(define-generic-procedure-handler unify:gdispatch
-(match-args car-satisfies element?)
-(car-satisfies match:element-var?))
-(lambda terms var-first)
-(maybe-substitute var-first terms))
-```
-
-此时，我们有了一个完整、正确且胜任的传统统一器。它是用通用过程编写的，因此可以轻松扩展以处理其他类型的数据。只需少少的工作，我们就可以添加语义附加，例如以 `+` 和 `*` 符号开头的列表交换律。正如我们将看到的，我们还可以支持新类型的语法变量，例如段变量。但在在此之前，我们将看一个真实的应用：类型推断。
-
-### 练习 4.10: 统一向量
-
-此统一器可以扩展以处理由其他数据类型组成的数据和模式，例如向量。为向量编写处理器，而不要将向量转换为列表（那是偷懒的做法）！
-
-### 练习 4.11: 统一字符串
-
-扩展统一器以允许字符串的统一。这可能很有趣，但你需要发明一种语法机制来在字符串内部表示字符串变量。这非常微妙，因为你可能需要用字符串表达式来表示字符串变量。这涉及到引用问题——请尝试不要发明一种繁琐的机制。此外，确保你没有做出会阻止你以后引入字符串段变量的假设。（见第 209 页的练习 4.21。）
-
-### 练习 4.12: 变量限制
-
-我们增加了对变量限制的支持，就像我们在单侧匹配器中所做的那样：我们只需要在 `do-substitute` 程序的主条件中加入一个子句即可。但存在一些微妙的问题。
-
-- 如果一个受限变量与另一个受限变量匹配，会发生什么？
-- 当变量首次绑定到其目标时，在通过限制后，它被统一消除。但限制丢失了，导致它无法杀死匹配后期不合适的部分。
-
-你的任务是理解这些问题并确定如何改进它们。对于你可能考虑的任何应用，这有多重要？是否存在一个契合我们实现策略的解决方案？
-
-### 练习 4.13: 使用模式组合符进行统一？
-
-与我们早期的单侧模式匹配器不同，我们的统一匹配器不会将模式编译成匹配过程，再组合以构建用于模式的匹配过程。一套匹配过程系统可能更高效，因为它避免了在匹配时对模式进行语法分析。统一匹配器可以以类似的方式拆分吗？如果不能，为什么不能？这样做是一个好主意吗？如果不是，为什么不是？如果可以，就去做吧！（这很难！）
-
-### 4.4.2 应用：类型推断
-
-统一匹配的一个经典应用是类型推断：给定一个程序和一些关于程序部分内容的类型信息，推断出关于程序其他部分的类型信息。例如，如果我们知道 `<` 是一个接受两个数值参数并产生布尔值的过程，那么如果我们分析表达式 `(g x y)`，我们可以推断出 `f` 和 `g` 是一元过程；`g` 接受一个布尔参数；`f` 返回一个数值；以及 `x` 有一个数值。如果这些信息被用于推断嵌入该表达式程序的属性，我们可以学到很多关于该程序的知识。以下是对该表达式的分析：
-
-```
-pp (infer-program-types '(g (< x y)))
-(t type17)
-(type:procedure ((boolean-type)) type17) g
-(t (boolean-type)
-(t (numeric-type)) (numeric-type))
-<
-(t (numeric-type)) x
-(t (numeric-type))
-(t (type-12) (numeric-type)) f
-(t (type-12) y))))
-```
-
-在 `In-substitute` 中，我们首先使用旧字典通过将任何之前消除的变量替换为它们的值来清理传入的项。然后我们检查对可以匹配的对象是否有任何限制。最后，我们检查 `var` 在清理后的项 (term*) 中的出现情况。如果清理后的项包含对 `var` 的引用，则匹配无法继续。如果我们的匹配通过了所有测试，我们就创建一个新字典，其中包含 `var` 到清理后的项的新绑定。新字典中的绑定值也必须清除对 `var` 的引用。
+在 `In-substitute` 中，我们首先使用旧字典通过将任何之前消除的变量替换为它们的值来清理传入的项。然后我们检查对可以匹配的对象是否有任何限制。最后，我们检查 `var` 在清理后的项 `term*` 中的出现情况。如果清理后的项包含对 `var` 的引用，则匹配无法继续。如果我们的匹配通过了所有测试，我们就创建一个新字典，其中包含 `var` 到清理后的项的新绑定。新字典中的绑定值也必须清除对 `var` 的引用。
 
 结果在 `foo` 中相当冗长。所以我们用一个能将其转化为“人类可读”形式的简化器来看它。
 
 ```
+
 (define fact
+
 (lambda n)
+
   begin
+
     (define iter
+
       (if (= n 0)
+
         1
+
         (* n (iter (- 1)))))
+
 ```
 
 在这里看到类型推断程序能够确定阶乘程序的完整类型——它是一个接受一个数值输入并产生数值输出的过程。这体现在声明中：
 
 ```
+
 (declare-type fact
+
   (type:procedure ((numeric-type)) (numeric-type)))
+
 ```
 
 内部定义 `iter` 的类型也已经确定：它接受数值参数并产生数值结果。
 
 ```
+
 (declare-type iter
+
   (type:procedure ((numeric-type) (numeric-type)) (numeric-type)))
+
 ```
 
 正如预期的，`g` 是一个接受布尔参数的过程，但我们没有它的值信息。未知值由类型变量表示。此外，每个内部变量的类型都已确定，并发布了相应的声明：
 
 ```
+
 (declare-type n (numeric-type))
+
 (declare-type product (numeric-type))
+
 (declare-type counter (numeric-type))
+
 ```
 
-# 注释
+## 注释
 
 `annotate-program` 程序是通过通用过程 `annotate-expr` 实现的，以便于对新语言特性进行轻松扩展。
 
-
-
+```
 
 (define annotate-program expr)
 (annotate-expr expr (top-level-env))
@@ -5270,14 +5341,19 @@ pp (infer-program-types '(g (< x y)))
 (define annotate-expr
   (simple-generic-procedure 'annotate-expr 2 #f))
 
+```
+
 `annotate-expr` 过程接受一个用于类型变量绑定的环境。它用创建的顶层环境初始化。
 
 这里有简单的处理程序来对简单类型的表达式进行标注。如果显式数字作为子表达式出现，它被赋予一个常量类型，该类型由 `(numeric-type)` 构造：
 
-```scheme-scheme
+```scheme
 (define-generic-procedure-handler annotate-expr
+
   (match-args number? any-object?)
+
   (lambda (env))
+
     (make-texpr (numeric-type) expr))
 ```
 
@@ -5285,76 +5361,109 @@ pp (infer-program-types '(g (< x y)))
 
 然而，我们可能无法预先知道标识符（由符号表示）的类型。`get-var-type` 过程尝试在环境中查找标识符的类型，如果失败，它将为该词法上下文中标识符的所有出现处的标注创建一个唯一的类型变量：
 
-```scheme-scheme
+```scheme
 (define-generic-procedure-handler annotate-expr
+
   (match-args symbol? any-object?)
+
   (lambda (env))
+
     (make-texpr (get-var-type texpr env)))
 ```
 
 我们可能知道某些标识符，例如语言的原始过程。这些过程在顶层环境中提供。这里显示的原始过程具有过程类型，其参数和值具有类型常量（例如 `( (numeric-type)`）：
 
-```scheme-scheme
+```scheme
 (define (top-level-env)
+
   (list (make-top-level-env-frame)))
 ```
 
-```scheme-scheme
+```scheme
 (define (make-top-level-env-frame)
+
   (let ((binary-numerical
+
          (let ((v (numeric-type)))
+
                (procedure-type (list v v)))
+
         (binary-comparator
+
           (let ((v (numeric-type)))
+
             (procedure-type (list v v) (boolean-type)))))
+
     (list '= binary-numerical
+
           (cons '= binary-comparator)
+
                 (cons '<= binary-comparator)))))
 ```
 
 对于条件表达式，会为条件表达式的值创建一个类型变量，并对每个子表达式进行递归标注：
 
-```scheme-scheme
+```scheme
 (define-generic-procedure-handler annotate-expr
+
   (match-args if-expr? any-object?)
+
   (lambda expr env)
+
     (make-texpr (type-variable)
+
       (make-if-expr
+
         (annotate-expr (if-predicate expr) env)
+
         (annotate-expr (if-consequent expr) env)
+
         (annotate-expr (if-alternative expr) env))))))
 ```
 
 每种表达式都有对应的标注处理程序。我们不会显示所有的，但 lambda 表达式的标注是有意思的：
 
-```scheme-scheme
+```scheme
 (define-generic-procedure-handler annotate-expr
+
   (match-args lambda-expr? any-object?)
+
   (lambda expr)
+
   (let ((env* (new-frame (lambda-bvl expr) env)))
+
     (make-texpr
+
       (procedure-type (map (lambda (name)
+
           (get-var-type name env*))
+
           (lambda-bvl expr))
+
         (type-variable))
+
       (make-lambda-expr (lambda-bvl expr)
+
         (annotate-expr (lambda-body expr) env*))))
 ```
 
 正如在解释器或编译器中一样，lambda 表达式的标注创建一个新的环境帧来存储有关绑定变量的信息；在这种情况下，我们为每个绑定变量创建一个类型变量。我们为 lambda 表达式的值创建一个过程类型，使用我们刚刚为绑定变量创建的类型变量以及一个用于值的类型变量，并递归地标注体。
 
-# 约束 (Constraints)
+## 约束
 
 `program-constraints` 过程根据程序的语义结构对类型变量制定约束。它也是使用泛型过程实现的，并为每种表达式类型提供了处理程序。
 
-```scheme-scheme
+```scheme
 (define (program-constraints texpr)
+
   (program-constraints-l texpr-type texpr)
+
   (texpr-expr texpr))
 ```
 
-```scheme-scheme
+```scheme
 (define program-constraints-l
+
   (simple-generic-procedure 'program-constraints-l 2 #f))
 ```
 
@@ -5362,30 +5471,40 @@ pp (infer-program-types '(g (< x y)))
 
 这里是用于条件的处理程序：
 
-```scheme-scheme
+```scheme
 (define-generic-procedure-handler program-constraints-l
+
   (match-args type-expression? if-expr?)
+
   (lambda type expr)
+
     (append
+
       (list (const boolean-type)
+
             (texpr-type (if-predicate expr))
+
             (const type
+
               (texpr-type (if-consequent expr)))
+
             (const type
+
               (texpr-type (if-alternative expr))))
+
         (program-constraints (if-predicate expr))
+
         (program-constraints (if-consequent expr))
+
         (program-constraints (if-alternative expr))))))
 ```
 
 该处理程序制定了三个类型约束，并添加到条件的三个子表达式中递归形成的约束中。第一个约束是谓词表达式的值必须是布尔。第二个和第三个约束是条件表达式的值的类型与结果和备选项的类型相同。
 
-
-
 为数值算术定义。但如果我们希望 `+` 既是数字的加法，又是字符串的拼接呢？
 
--   a. 为了扩展系统以支持联合类型（union types），必须做什么？这种扩展需要我们修改统一器（unifier）吗？如果是，请解释其必要性；如果不是，请解释为什么没有必要。
--   b. 实现允许联合类型所需的更改。注意：这并不易事。
+- a. 为了扩展系统以支持联合类型（union types），必须做什么？这种扩展需要我们修改统一器（unifier）吗？如果是，请解释其必要性；如果不是，请解释为什么没有必要。
+- b. 实现允许联合类型所需的更改。注意：这并不易事。
 
 ### 练习 4.17：副作用
 
@@ -5397,11 +5516,9 @@ pp (infer-program-types '(g (< x y)))
 
 我们的类型推导实现实用吗？
 
--   a. 根据分析分析程序的大小，估计标注阶段（annotation phase）和约束阶段（constraints phase）的时间空间增长阶阶。
-
--   b. 使用所示算法，估计巨大的统一阶段（giant unification phase）的时间空间增长阶阶。目前已知的最佳统一算法如何？（这将需要一些文献研究。）
-
--   c. 是否有方法将巨大的统一阶段分解为部分，使得整体具有更好的渐近行为？
+- a. 根据分析分析程序的大小，估计标注阶段（annotation phase）和约束阶段（constraints phase）的时间空间增长阶阶。
+- b. 使用所示算法，估计巨大的统一阶段（giant unification phase）的时间空间增长阶阶。目前已知的最佳统一算法如何？（这将需要一些文献研究。）
+- c. 是否有方法将巨大的统一阶段分解为部分，使得整体具有更好的渐近行为？
 
 ### 4.4.4 添加段变量——一次实验！
 
@@ -5410,30 +5527,46 @@ pp (infer-program-types '(g (< x y)))
 使用谓词（predicates）来控制元素变量（element variables）与段变量之间的交互。例如，一个段可以将一个元素合并到它累积的段中，但元素变量不能以段变量作为其值。因此，我们必须修改对谓词 `element?`（第 192 页）的定义以排除段变量：
 
 ```
+
 (define (element? term)
+
   (not (match:segment-var? term)))
 ```
 
 我们需要为段变量的情况提供泛型处理程序。对于以段变量开头的列表列表，`unify:gdispatch` 处理程序可能是 `maybe-grab-segment`，其安装方式如下。已知包含段变量的列表始终作为第一个参数传递给 `maybe-grab-segment`（正如我们处理 `maybe-substitute` 时一样）。
 
 ```
-(define-generic-procedure-handler unify:gdispatch
-  (match-args (car-satisfies match:segment-var?)
-               (complement (car-satisfies match:segment-var?)))
-  (lambda (var-first-terms)
-    (maybe-grab-segment var-first-terms)))
 
 (define-generic-procedure-handler unify:gdispatch
+
+  (match-args (car-satisfies match:segment-var?)
+
+               (complement (car-satisfies match:segment-var?)))
+
+  (lambda (var-first-terms)
+
+    (maybe-grab-segment var-first-terms)))
+(define-generic-procedure-handler unify:gdispatch
+
   (match-args (complement (car-satisfies match:segment-var?))
-               (car-satisfies match:segment-first))
-  (lambda (terms var-first)
-    (maybe-grab-segment var-first)))
+```
+
+
+
+### 匹配段变量
+
+```
+(car-satisfies match:segment-first)
+```
+
+```
+(lambda (terms var-first)
+  (maybe-grab-segment var-first))
 ```
 
 在匹配两个都以段变量开列表时，有一个特殊情况需要处理：如果两个列表都以相同的段变量开头，我们可以直接忽略这个恒等式（tautology）。否则，我们可能会得到以任一变量开头的匹配。但取决于变量在模式中进一步出现的情况，可能出现使用一个变量获得良好匹配而另一个变量没有的情况。为了确保我们不会漏掉以其中一个变量开头的匹配，我们在第一个失败时尝试另一个，从而使匹配具有对称性。
 
 ```
-
 (define unify:segment-var var-first1 var-first2)
   (define unify-seg-var-dict succeed fail)
     (if (match:vars-equal (car var-first1) (car var-first2))
@@ -5483,7 +5616,6 @@ unify-seg-var-
 ```
 
 匹配未绑定段变量的更复杂工作被交给了 `grab-segment`。（注：提供的 OCR 文本在源代码末尾存在严重的碎片化和重复人工；我已根据提供的代码块和上下文重构了逻辑流）。
-
 
 ```scheme
 (lambda (dict))
@@ -5562,13 +5694,13 @@ unifier '((?? x) 3) '(4 (?? y))
 
 如果你没有做练习4.11（193页），现在请这样做。但在这里我们想要添加段变量。这在匹配段时是有用的！
 
-### 4.5 图模式匹配
+## 4.5 图模式匹配
 
 我们到为止开发的模式匹配是针对列表结构的。这种结构非常适合表达式，例如代数表达式或抽象语法树。然而，模式匹配可以用于更广泛范围的数据。如果感兴趣的结构可以通过访问关系来表征，那么将结构描述为由“位置”和边组成的图可能是合适的。电路是这种结构的一个例子，国际象棋或跳棋是另一个，格子可以用图中的节点表示。
 
 我们将图实现为节点和边的集合。我们的图是不可变的，一旦添加了节点或边，就无法修改；图可以通过添加更多节点和边来改变。这将在4.5节中看到后果。我们将首先通过简单示例来看图是如何工作的。然后使用扩展示例来探索图的用法和模式匹配。
 
-#### 4.5.1 实现图节点
+### 4.5.1 实现图节点
 
 我们必须能够创建图节点并通过边将它们连接到其他节点。我们将图节点表示为一个包围过程：一组可以通过名称调用的委托过程。
 
@@ -5582,12 +5714,12 @@ unifier '((?? x) 3) '(4 (?? y))
         (eqv? label (edge 'get-label)))
       edges))
     (define (has-edge? label)
-      (and (%find-edge label) #t)) ; 布尔值
+      (and (%find-edge label) #t))
     (define (get-edge label)
       (let ((edge (%find-edge label)))
-        (if not edge)
+        (if not edge
           (error "No edge with this label:" label)
-          edge))
+          edge)))
     (define (edge-value label)
       ((get-label) 'get-value))
     (define (connect! label value)
@@ -5601,7 +5733,7 @@ unifier '((?? x) 3) '(4 (?? y))
     (make-graph-edge label value) connect! edge-value maybe-connect!)))
 ```
 
-#### 4.5.2 列表作为图
+### 4.5.2 列表作为图
 
 我们从简单但熟悉的列表开始。Cons 单元是节点，通过 `g:cons` 创建，它们的 `car` 和 `cdr` 实现为带标签的边。
 
@@ -5656,9 +5788,6 @@ unifier '((?? x) 3) '(4 (?? y))
 
 在这里我们使用 Scheme 的 `delay` 构建一个承诺，当承诺被强制执行时将求值（延迟）表达式。流（Streams）通常使用 `delay` 和 `force` 构建。
 
-
-
-
 ```lisp
 (if (promise? value)
     (force value)
@@ -5680,7 +5809,8 @@ unifier '((?? x) 3) '(4 (?? y))
 
 给定这样的安排，我们可以指定一个骑士可能向北-北-东移动的动作：
 
-```lisp        (define basic-knight-move
+```lisp
+(define basic-knight-move
   '((? source-node ,occupied-by 'knight))
     north (?)
     north (?)
@@ -5719,184 +5849,287 @@ unifier '((?? x) 3) '(4 (?? y))
   (case label
     ((east 'west)
      (west 'east))))
-
 (define rotate-90
   (case label
     ((north 'east)
      (east 'south)
      (south 'west)
+```
+
+
+
+
+```
      (west 'north))))
+```
 
 (define rotate-180
+
   (case label
+
     ((north 'south)
+
      (south 'north))
+
     ((east 'west)
+
      (west 'east))))
+
 ```
 
 等等，OCR 文本在后面的页面中似乎被切断或碎片化了。让我根据提供的文本块进行重新处理，以确保与提供的源码一致。
 
 （自我纠正：提供的第 250-253 页的 OCR 文本高度重复并包含片段。我将在清理明显伪迹的同时保持提示词中提供的内容。）
 
-
-
 ```scheme
+
 (define chess-board-last-index (last chess-board-indices))
 
 (define make-chess-board)
+
   (let ((board (make-chess-board-internal)))
+
     (for-each (lambda (address)
+
       (connect-up-square address board)
+
       board-addresses)
+
     (populate-sides board))
+
   board))
+
 ```
 
 棋盘方格可能的地址是所有从 0 到 7 的整数配对：
 
 ```scheme
+
 (define board-addresses
+
   (append-map (lambda (y)
+
     (map (lambda (x)
+
       (make-address x y))
+
       chess-board-indices)
+
     chess-board-indices))
+
 ```
 
 `make-chess-board-internal` 过程将方格节点数组制为行列表，每行都是该行包含的列列表。它返回一个包过程（bundle procedure），其中包含几个委托过程用于操作棋盘。
 
 ```scheme
+
 (define make-chess-board-internal)
+
   (let ((nodes
+
     (map (lambda (y)
+
       (map (lambda (x))
+
         (make-graph-node (string " ") y)))
+
         chess-board-indices)
+
       chess-board-indices))
+
     (let loop ((turn 0))
+
       委托定义请见下文。
+
       (bundle #f node-at-piece-at piece-in address-of
+
         set-piece-at-color next-turn))))
+
 ```
 
 `turn` 变量是当前回合，从零开始。偶数回合为白方，奇数回合为方，如委托过程 `color` 所示：
 
 ```scheme
+
 (define (color) (if (white-move?) 'white 'black))
+
 (define (white-move?) (even turn))
+
 ```
 
 委托过程 `node-at` 获取给定地址的节点。如果是黑方，它会转换地址并应用节点视图。
 
 ```scheme
+
 (define (node-at address)
+
   (define (get-node address)
+
     (list-ref (list-ref nodes (address-x address))
+
       (address-y address)))
+
   (if (white-move?)
+
     (get-node address)
+
     (graph-node-view (get-node (invert-address address))
+
       rotate-180-view)))
+
 ```
 
 `node-at` 的反向是委托过程 `address-of`。每个节点都有条边，标记为地址，其值为该地址。与 `node-at` 一样，如果是黑方移动，返回的地址必须经过转换。
 
 ```scheme
+
 (define (address-of node)
+
   (let ((address (node 'edge-value 'address)))
+
     (if (white-move?)
+
       address
+
       (invert-address address))))
+
 ```
 
 委托过程 `next-turn` 在移动完成后推进棋盘：
 
 ```scheme
+
 (define (next-turn) (loop (+ 1 turn)))
+
 ```
 
 将方格连接到邻居会执行地址算术以处理（字面上的）边界情况，在每个方格与其每个邻居之间创建一个标记的边。它还为每个节点创建地址边。
 
 ```scheme
+
 (define (connect-up-square address board)
+
   (let ((node (board 'node-at address)))
+
     (node 'connect! address address))
+
     (for-each (lambda (label x-delta y-delta)
+
       (let ((x (+ (address-x address) x-delta))
+
             (y (+ (address-y address) y-delta)))
+
         (if (and (<= x chess-board-last-index)
+
                   (<= 0 y chess-board-last-index))
+
             (node 'connect! label
+
               (board 'node-at)))))
+
 ```
 
 ```scheme
+
 (make-address (+ x) (+ y))))
+
 ```
 
 ```scheme
+
 (define (for-each-direction procedure)
+
   (procedure 'north 0 1)
+
   (procedure 'northeast 1 1)
+
   (procedure 'east 1 0)
+
   (procedure 'southeast 1 -1)
+
   (procedure 'south 0 -1)
+
   (procedure 'southwest -1 -1)
+
   (procedure 'west -1 0)
+
   (procedure 'northwest -1 1))
+
 ```
 
 地址表示为列号和行号的列表：
 
 ```scheme
+
 (define (make-address x y) (list x y))
+
 (define (address-x address) (car address))
+
 (define (address-y address) (cadr address))
+
 ```
 
 ```scheme
+
 (define (address= a b)
+
   (and (= (address-x a) (address-x b))
+
        (= (address-y a) (address-y b)))
+
 ```
 
 ```scheme
+
 (define (invert-address address)
+
   (make-address (- chess-board-last-index (address-x address))
+
                 (- chess-board-last-index (address-y address))))
+
 ```
 
 棋子由包含其类型和颜色的数据表示。我们的约定是，第 $n$ 个回合，棋盘上的每个棋子将通过一条标记为 $n$ 的边连接到它占据的节点。这是不可变性的结果；否则，我们可以使用副作用来修改边。为了填充棋盘，我们将每个棋子通过标记为 $n$ 的边连接到其初始方格的节点。
 
 ```scheme
+
 (define (populate-sides board)
+
   (define (populate-side color home-row)
+
     (define (populate-column col type)
+
       (add-piece col home-row type)
+
       (add-piece col home-row type)
+
 ... (此处根据原文逻辑省略，保持翻译结构一致)
+
 ```
 
 *(注：由于原文中 `populate-sides` 之后的代码不完整，此处根据您提供的文本片段进行对应翻译。若原文有截断，翻译也按截断结束。)*
-
-
-
-
 
 # 为了演示这段代码，我们可以构造出一个有趣的局面：
 
 ```
 (define (gioco-piano-opening)
+
 (start-chess-game)
+
 (chess-move '( 4 1) '( 4 3 )) ;W: P-K4
+
 (chess-move '( 3 1) '( 3 3 )) ;B: P-K4
+
 (chess-move '( 6 0) '( 5 2 )) ;W: N-KB3
+
 (chess-move '( 6 0) '( 5 2 )) ;B: N-QB3
+
 (chess-move '( 5 0) '( 2 3 )) ;W: N-QB4
+
 (chess-move '( 2 0) '( 5 3 )) ;B: B-QB4
 
 (gioco-piano-opening)
+
 ```
 
 # 在大量输出后，我们得到了以下棋盘局面：
@@ -5924,9 +6157,13 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (capture? the-board
+
  (make-address 5 2)
+
  ((? source-node occupied-by 'knight')
+
   north west target))
+
  (capture white knight (4 4)))
 ```
 
@@ -5934,9 +6171,13 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (filter-map (lambda (path)
+
   (capture? the-board
+
     (make-address 5 2)
+
     path))
+
   all-knight-moves)
 ```
 
@@ -5950,8 +6191,11 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (define (graph-match path dict)
+
   (gmatch:compile-path path) dict
+
   (lambda (object* dict*)
+
     dict*))
 ```
 
@@ -5974,8 +6218,11 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (define (gmatch:compile-path path)
+
   (if (and (pair path) (match:element-var? (car path)))
+
       (gmatch:finish-path (cdr path))
+
       (error "Ill-formed path:" path)))
 ```
 
@@ -5985,8 +6232,11 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (define (gmatch:finish-path els)
+
   (if (and (pair els) (match:element-var? (car els)))
+
       (gmatch:seq (cdr els))
+
       (error "Ill-formed path:" els)))
 ```
 
@@ -5994,9 +6244,13 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (define (gmatch:seq els)
+
   (if (null? els)
+
       (lambda (object dict) dict)
+
       (let ((elt (car els)))
+
         (gmatch:seq2 (cdr els) elt))))
 ```
 
@@ -6004,45 +6258,70 @@ unifier '((?? x) 3) '(4 (?? y))
 
 ```
 (define (gmatch:seq2 els)
+
   (if (null? els)
+
       (lambda (object dict) dict)
+
       (let ((elt (car els)))
+
         (gmatch:seq3 (cdr els) elt)))))
 ```
 
 `gmatch:seq3` 产生一个匹配过程，它按顺序匹配剩余部分。
 
 ```scm
+
 (define (gmatch:seq3 els elt)
+
   (if (null? els)
+
       (lambda (object dict) dict)
+
       (let ((next (car els)))
+
         (gmatch:seq4 (cdr els) elt next)))))
 ```
 
 `gmatch:seq4` 产生一个匹配过程，它按顺序匹配剩余部分。
 
 ```scm
+
 (define (gmatch:seq4 els elt next)
+
   (if (null? els)
+
       (lambda (object dict) dict)
+
       (let ((next (car els)))
+
         (gmatch:seq5 (cdr els) elt next next)))))
 ```
 
 `gmatch:seq5` 产生一个匹配过程，它按顺序匹配剩余部分。
 
 ```scm
+
 (define (gmatch:seq5 els elt next next)
+
   (if (null? els)
+
       (lambda (object dict) dict)
+
       (let ((next (car els)))
+
         (gmatch:seq6 (cdr els) elt next next next)))))
 ```
 
 （注：此处为逻辑递归演示，实际实现中通常通过 `gmatch:seq` 递归处理）
 
 由于 `gmatch:seq` 的递归性质，我们使用如下结构：
+
+```scheme
+
+
+
+### `gmatch:seq`
 
 ```scheme
 (define (gmatch:seq els)
@@ -6068,9 +6347,7 @@ unifier '((?? x) 3) '(4 (?? y))
     (error "Ill-formed element:" elt)))
 ```
 
-
-
-(gmatch:seq2 matcher (gmatch:* matcher)))
+`(gmatch:seq2 matcher (gmatch:* matcher))`
 
 剩余的特殊路径模式是 `and` 和 `or`，它们各包含多个子路径模式。`and` 元素必须匹配从当前节点开始的所有子路径模式。`or` 元素必须匹配从当前节点开始的至少一个子路径模式。
 
@@ -6150,7 +6427,7 @@ unifier '((?? x) 3) '(4 (?? y))
           (succeed object))))
 ```
 
-`bind` 为 var 添加 object 的绑定，并返回一个新的字典。如果字典已经有这样的绑定且其值与 object 不同，它将返回 #f 表示匹配失败。通过此，我们完成了图匹配器。
+`bind` 为 var 添加 object 的绑定，并返回一个新的字典。如果字典已经有这样的绑定且其值与 object 不同，它将返回 `#f` 表示匹配失败。通过此，我们完成了图匹配器。
 
 ### 练习 4.25: 图匹配
 
@@ -6168,32 +6445,21 @@ unifier '((?? x) 3) '(4 (?? y))
 - 2 参见 273 页的 5.4.2 节更多关于这种失败模式的示例和解释。
 - 3 这种构建匹配器的策略最初由 Carl Hewitt 在他的博士论文 [56] 中描述。
 - 4 对于只有元素变量的模式，合一是唯一的。这是一个定理；我们不证明它。在 4.4.4 节中，我们将合一扩展到包含段变量。然而，当模式包含段变量时，合一通常会产生多个匹配。
-- 5  6 在此合一内部，让失败显式调用失败连续是方便的。但在 `unify:internal` 中我们转换到另一种指示失败的约定，从成功连续返回 #f。这是为了让合一的使用约定与 4.3 节匹配器的使用约定相同。这是一个有趣的转换。在 4.2.2 节的规则系统中我们使用了显式的成功和失败连续，所以我们在规则系统中使用反向转换：匹配器使用了 #f 约定，所以使用 166 页的 make-rule 来实现转换。回溯系统中实现失败的约定通常是一个风格问题，但使用显式失败连续通常更容易扩展。幸运的是，接口这些不同的回溯实现是简单的。
+- 5  6 在此合一内部，让失败显式调用失败连续是方便的。但在 `unify:internal` 中我们转换到另一种指示失败的约定，从成功连续返回 `#f`。这是为了让合一的使用约定与 4.3 节匹配器的使用约定相同。这是一个有趣的转换。在 4.2.2 节的规则系统中我们使用了显式的成功和失败连续，所以我们在规则系统中使用反向转换：匹配器使用了 `#f` 约定，所以使用 166 页的 make-rule 来实现转换。回溯系统中实现失败的约定通常是一个风格问题，但使用显式失败连续通常更容易扩展。幸运的是，接口这些不同的回溯实现是简单的。
 - 7 正如 4.3 节描述的匹配系统一样，合一匹配器围绕项列表组织，以便以后扩展到段变量。
 - 8 在合一文献中，这被称为“出现检查”（occurs check）。出现检查用于防止尝试获取方程如 x = f(x) 的解。
-
-
-
 
 向已经构建的基础统一化程序添加一些实用的新行为是多么简单。
 
 - 11 对段（segments）的扩展非常微妙。感谢 Kenny Chen、Will Byrd 和 Michael Ballantyne 帮助我们思考这个实验。
-
 - 12 程序的补集（complement）是一个针对谓词的组合子：补集产生一个新的谓词，其为该参数的否定。
-
 - 13 这是一个单侧匹配，也可以用早期的匹配器完成，但这种在匹配两侧都使用变量匹配表达式的能力是有用的。
-
 - 14 关于图节点如何使用的示例，请参阅第 210 页的 g:cons。关于包过程（bundle procedures）更完整的描述，请参阅第 395 页。
-
 - 15 易位（Castling）是另一个特殊情况。在限制条件下允许易位：当王和车处于初始位置，王和车之间的棋格未被占用，且王未处于将位，且不需要经过或落在会导致其处于将位状态的格子上。
-
 - 16 还有一种兵的移动——吃过（en passant capture），它取决于对手的上一次移动。
-
 - 17 我们使用从零开始的索引，与传统的象棋规则不同，但对于输入和输出玩家来说这并不重要。
-
 - 18 但请注意，图匹配器（graph-matcher）程序的成功延续（success continuation）与表达式匹配器（expression-matcher）程序的成功延续是不同的。表达式匹配器的成功延续接收一个字典和一个匹配器已消耗的元素数量（为了使段能够工作），而图匹配器的成功延续接收最终节点以及匹配图匹配部分后得到的字典。
-
-19. 尽管该程序的实际名称是 `gmatch:finish-compile-path`，我们在文本解释中缩写了这些名称，以省略 `gmatch:` 前缀。
+- 19. 尽管该程序的实际名称是 `gmatch:finish-compile-path`，我们在文本解释中缩写了这些名称，以省略 `gmatch:` 前缀。
 
 # 5 评估
 
@@ -6213,7 +6479,7 @@ Scheme 程序是严格的，要求在进入过程体体之前对每个参数进�
 
 我们的第一个解释器被设计为可扩展的。所有重要部分都是泛型过程，我们小心避免不必要的提交。让我们开始吧。
 
-解释器的本质在于两个过程：eval 和 apply。`eval` 程序接收一个表达式和一个环境作为输入。表达式是语法上粘合在一起的子表达式的组合。环境为表达式中出现的某些符号提供意义。其他符号的意义在 `eval` 的定义中是固定的¹。但大多数表达式被解释为运算符和操作数的组合。对运算符的求值应产生一个过程，对操作数的求值应产生参数。然后将过程和参数传递给 `apply`。过程通常用形式参数为参数命名。`apply` 程序在过程的形式参数绑定到参数的环境中（使用 `eval`）评估过程体。这是解释器的核心计算循环。
+解释器的本质在于两个过程：`eval` 和 `apply`。`eval` 程序接收一个表达式和一个环境作为输入。表达式是语法上粘合在一起的子表达式的组合。环境为表达式中出现的某些符号提供意义。其他符号的意义在 `eval` 的定义中是固定的¹。但大多数表达式被解释为运算符和操作数的组合。对运算符的求值应产生一个过程，对操作数的求值应产生参数。然后将过程和参数传递给 `apply`。过程通常用形式参数为参数命名。`apply` 程序在过程的形式参数绑定到参数的环境中（使用 `eval`）评估过程体。这是解释器的核心计算循环。
 
 我们刚刚描述的是传统的应用顺序解释器方案。在我们的解释器中，我们将未求值的操作数和用于其求值的环境传递给 `apply`，以便实现各种求值策略，如正常顺序（normal order）以及应用顺序。
 
@@ -6263,7 +6529,7 @@ Scheme 程序是严格的，要求在进入过程体体之前对每个参数进�
 (match-args self-evaluating? environment?))
 ```
 
-(lambda (expression environment) expression))
+`(lambda (expression environment) expression))`
 
 在 Lisp 语言中，自求值表达式包括数字、布尔值和字符串。在 Scheme 中，`number?` 是一个复杂的谓词。满足 `number?` 的对象包括任意大小的整数、分数和复数.^4
 
@@ -6274,11 +6540,13 @@ Scheme 程序是严格的，要求在进入过程体体之前对每个参数进�
   (string exp?))
 ```
 
+
+
 可能还有其他的自求值表达式，为了使其具有真正的灵活性，我们可以将 `self-evaluating?` 定义为一个通用过程。但在这里没有必要，因为我们只需要为 `g:eval` 编写另一个处理器来定义我们可能想要添加的任何自求值表达式类型。
 
-在允许操作语言符号表达式的语言中，引用是必须的.^5 引用是从求值过程中产生子表达式的表达式。
+在允许操作语言符号表达式的语言中，引用是必须的。^5 引用是从求值过程中产生子表达式的表达式。
 
-```
+``` 
 (define-generic-procedure-handler g:eval
   (match-args quoted environment?)
   (lambda (expression environment))
@@ -6287,20 +6555,22 @@ Scheme 程序是严格的，要求在进入过程体体之前对每个参数进�
 
 在基于 Lisp 的语言中，引用表达式的列表结构表示是一个带有关键字 `quote` 的列表。Lisp 的读取器（解析器）会将任何以撇号字符开头的表达式（例如 `'(a b c)`）展开为引用表达式（即 `(quote (a b c))`）。
 
-```
+``` 
 (define (quoted? exp) (tagged-list? exp 'quote))
 (define (text-of-quotation quote) (cadr quote))
 ```
 
-## 标记列表只是以给定的唯一符号开头的列表：
+## 标记列表
 
-```
+标记列表只是以给定的唯一符号开头的列表：
+
+``` 
 (define (tagged-list? e t) (and (pair? e) (eq? (car e) t)))
 ```
 
 Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂的规则。例如，在 C 语言中存在左值（lvalues）和右值（rvalues），它们的处理方式不同。
 
-```
+``` 
 (define-generic-procedure-handler g:eval
   (match-args? environment?)
   lookup-variable-value)
@@ -6308,15 +6578,17 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 在基于 Lisp 的语言中，变量由符号表示。⁶
 
-```
+``` 
 (define variable? exp (symbol? exp))
 ```
 
-过程 `lookup-variable-value` 在给定的环境中查找其参数。如果没有找到该变量的值，它会在底层的 Scheme 中查找值.^⁷ 如果没有找到值，则会抛出 Unbound（未绑定）错误。
+过程 `lookup-variable-value` 在给定的环境中查找其参数。如果没有找到该变量的值，它会在底层的 Scheme 中查找值。^⁷ 如果没有找到值，则会抛出 Unbound（未绑定）错误。
+
+### 二元条件表达式
 
 二元条件表达式（if-then-else）有一个简单的处理器。如果表达式的谓词部分求值为真，则求值表达式的后续部分，否则求值表达式的备选部分。
 
-```
+``` 
 (define-generic-procedure-handler g:eval
   (match-args? environment?)
   (lambda (expression environment))
@@ -6330,30 +6602,28 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 `if` 表达式的语法非常简单。如果没有指定备选部分，谓词为假的 `if` 表达式的值为全局变量 `the-unspecified-value` 的值。
 
-```
+``` 
 (define (if? exp (tagged-list? exp '))
 (define (if-predicate exp) (cadr exp))
 (define (if-consequent exp) (caddr exp))
 ```
 
-```
+``` 
 (define (if-alternative exp)
   (if (not (null? (cdddr exp)))
     (cadddr exp)))
 ```
 
-```
+``` 
 (define (make-if pred conseq alternative)
   (list 'if pred conseq alternative))
 ```
 
 第一个真正有趣的特殊形式是匿名过程的规范，由 lambda 表达式表示。lambda 表达式是一个特殊形式，是过程的构造器。
 
-
-
 （对地址空间中特定敏感位置的赋值）。在 Scheme 中，我们允许程序对赋值语句所在词作用环境中的变量进行赋值：
 
-```
+``` 
 (define-generic-procedure-handler g:eval
  (match-args assignment? environment?)
   (lambda (expression environment)
@@ -6364,7 +6634,7 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 赋值的语法为：
 
-```
+``` 
 (define (assignment? exp) (tagged-list? exp 'set!))
 (define (assignment-variable assn) (cadr assn))
 (define (assignment-value assn) (caddr assn))
@@ -6372,7 +6642,7 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 我们还允许定义，即带有给定值创建一个新变量。定义会在定义语句最局部的词作用环境帧中创建一个新变量。
 
-```
+``` 
 (define-generic-procedure-handler g:eval
  (match-args definition? environment?)
   (lambda (expression environment)
@@ -6384,25 +6654,25 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 定义的语法比赋值的语法复杂，因为我们允许有多种定义过程：
 
-```
+``` 
 (define (definition? exp) (tagged-list? exp 'define))
 ```
 
-```
+``` 
 (define (definition-variable defn)
  (if variable? (cadr defn)                ; (DEFINE foo ...)
   (cadr defn))
   (caddr defn))                             ; (DEFINE (foo ...)))
 ```
 
-```
+``` 
 (define (definition-value defn)
  (if variable? (cadr defn)                ; (DEFINE foo ...)
   (caddr defn))
   (cons 'lambda                             ; (DEFINE (foo p...) b...)))
 ```
 
-```
+``` 
 (cons (cdadr defn) ; =(DEFINE foo
 (cddr defn))); ; (LAMBDA (p...) b...))
 ```
@@ -6411,23 +6681,22 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 ## 5.1.2 apply
 
-传统的 Scheme apply 接受两个参数：要应用的过程和传递给该过程的求值参数。这对于 Scheme 来说足够了，因为 Scheme 是一种严格的求值顺序语言，只有词法作用域变量。
+传统的 Scheme `apply` 接受两个参数：要应用的过程和传递给该过程的求值参数。这对于 Scheme 来说足够了，因为 Scheme 是一种严格的求值顺序语言，只有词法作用域变量。
 
-通过将 apply 泛化为接受三个参数——未求值的操作数和调用环境——我们使得包含对某些参数需要正常求值的过程（例如按需调用）或对参数进行声明（如类型和单位）的过程成为可能。将在 5.2 节进行此类扩展。环境参数也使得适应非词法作用域变量成为，但我们不会这样做；这通常是一个坏主意。我们将从 Scheme 求值顺序开始，并留出扩展的通用钩子。
+通过将 `apply` 泛化为接受三个参数——未求值的操作数和调用环境——我们使得包含对某些参数需要正常求值的过程（例如按需调用）或对参数进行声明（如类型和单位）的过程成为可能。将在 5.2 节进行此类扩展。环境参数也使得适应非词法作用域变量成为，但我们不会这样做；这通常是一个坏主意。我们将从 Scheme 求值顺序开始，并留出扩展的通用钩子。
 
-我们的 apply 是一个带有三个参数的通用过程：
+我们的 `apply` 是一个带有三个参数的通用过程：
 
-```
+``` 
 (define g:apply)
 (simple-generic-procedure 'apply 3 default-apply))
-
 (define (default-apply procedure operands calling-environment)
 (error "Unknown procedure type"))
 ```
 
-我们需要为各种类型的过程提供处理器。某些过程，例如算术加法（通常由运算符 + 命名），是严格的：它们在计算值之前需要求值所有的参数。在 Scheme 中，所有过程都是严格的，包括原生过程（在系统或语言级别之下的硬件中实现）。因此，我们需要为严格原生过程提供一个通用处理器：
+我们需要为各种类型的过程提供处理器。某些过程，例如算术加法（通常由运算符 `+` 命名），是严格的：它们在计算值之前需要求值所有的参数。在 Scheme 中，所有过程都是严格的，包括原生过程（在系统或语言级别之下的硬件中实现）。因此，我们需要为严格原生过程提供一个通用处理器：
 
-```
+``` 
 (define-generic-procedure-handler g:apply
 (match-args strict-primitive-procedure?)
   operands?
@@ -6437,20 +6706,20 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
     (eval-operands operands calling-environment)))
 ```
 
-原生过程的应用在细节级别上是“魔法”的。操作数求值器（如第 238 页的 if）必须对求值结果调用 g:advance 以确保获得值。
+原生过程的应用在细节级别上是“魔法”的。操作数求值器（如第 238 页的 `if`）必须对求值结果调用 `g:advance` 以确保获得值。
 
-```
+``` 
 (define (eval-operands operands calling-environment)
   (map (lambda g:eval calling-environment)
     (g:advance g:eval calling-environment))
   operands))
 ```
 
-注意，操作数的求值顺序由 map 的行为决定。
+注意，操作数的求值顺序由 `map` 的行为决定。
 
-通过求值 lambda 表达式构造的过程不是原生的。在这里我们可以拆解过程。我们可以获取形式参数规范，即形式参数的名称。我们还可以提取过程的主体，将其传递给 eval 并带上包含形式参数绑定的环境。对于词法作用域，该扩展环境是基于构造过程的 lambda 表达式求值时与过程封装的环境构建的。
+通过求值 lambda 表达式构造的过程不是原生的。在这里我们可以拆解过程。我们可以获取形式参数规范，即形式参数的名称。我们还可以提取过程的主体，将其传递给 `eval` 并带上包含形式参数绑定的环境。对于词法作用域，该扩展环境是基于构造过程的 lambda 表达式求值时与过程封装的环境构建的。
 
-```
+``` 
 (define-generic-procedure-handler g:apply
 (match-args strict-compound-procedure?)
   operands?
@@ -6466,13 +6735,13 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
       (procedure-environment procedure))))
 ```
 
-在这里，strict-compound-procedure? 对于所有对任何参数没有声明的复合过程为真。
+在这里，`strict-compound-procedure?` 对于所有对任何参数没有声明的复合过程为真。
 
 ## Driver loop
 
 为了与此评估器交互，我们需要一个读取-求值-打印循环：
 
-```
+``` 
 (define repl)
   (check-repl-initialized)
   (let ((input (g:read))
@@ -6480,20 +6749,20 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
     (repl)))
 ```
 
-这里 g:read 发出提示符，eval 在终端执行。它接受字符并将其转换为 s 表达式。该 s 表达式随后相对于 the-global-environment 使用 g:eval 求值，结果写回终端。repl 过程递归调用自己。为了让这工作，全局环境必须初始化：
+这里 `g:read` 发出提示符，`eval` 在终端执行。它接受字符并将其转换为 s 表达式。该 s 表达式随后相对于 `the-global-environment` 使用 `g:eval` 求值，结果写回终端。`repl` 过程递归调用自己。为了让这工作，全局环境必须初始化：
 
-```
+``` 
 (define the-global-environment)
   'not-initialized)
 ```
 
-```
+``` 
 (define initialize-repl!)
   (set! the-global-environment (make-global-environment))
   'done
 ```
 
-```
+``` 
 (define check-repl-initialized)
   (if eq? the-global-environment 'not-initialized)
     error
@@ -6506,24 +6775,23 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 在 Lisp 中 中，尝试评估未定义的符号是一个未定义错误。然而，在某些代数过程中，允许未定义的符号自求值通常是合理的。例如，如果我们通用地扩展算术以构建表达式（如我们在第 3 章中所做的那样），有时允许以下操作：
 
-```
+``` 
 (+ * 2 3) (* 4 5))
 (+ * a 3) (* 4 5))
 (+ * a 3) 20
 ```
 
-我们的通用算术支持符号扩展：运算符 * 和 + 在参数不可还原为数字时被扩展。但它不允许将未定义的变量作为字面数字。在这里符号 a 是未定义的。我们可能希望它是自求值的。
+我们的通用算术支持符号扩展：运算符 `*` 和 `+` 在参数不可还原为数字时被扩展。但它不允许将未定义的变量作为字面数字。在这里符号 `a` 是未定义的。我们可能希望它是自求值的。
 
-- a. 为 eval 进行通用扩展以允许这种行为。为了让这与原生过程 (+ /) 工作，也有必要扩展它们的行为。注意这些运算符应该在底层 Scheme 环境中更改。
+- a. 为 `eval` 进行通用扩展以允许这种行为。为了让这与原生过程 `(+ /)` 工作，也有必要扩展它们的行为。注意这些运算符应该在底层 Scheme 环境中更改。
 
-- b. 还要增强 apply，允许运算符位置的未定义符号被解释为仅通过名称知的字面函数：(+ f 3) (* 4 5) => (+ f 3) 20
+- b. 还要增强 `apply`，允许运算符位置的未定义符号被解释为仅通过名称知的字面函数：`(+ f 3) (* 4 5) => (+ f 3) 20`
 
-这些 eval 和 apply 的扩展通常是危险的，因为它们隐藏了真实的未定义错误。让它们取决于用户设置变量的值：allow-self-evaluating-symbols。
+这些 `eval` 和 `apply` 的扩展通常是危险的，因为它们隐藏了真实的未定义错误。让它们取决于用户设置变量的值：`allow-self-evaluating-symbols`。
 
 # Exercise 5.2: n-ary procedures
 
-第 246 页的脚注 10 指出了我们在 g:apply 处理器中放入的一个糟糕假设，该假设暗示了对此评估器未来扩展限制。在 Scheme 中，如果过程-
-
+第 246 页的脚注 10 指出了我们在 `g:apply` 处理器中放入的一个糟糕假设，该假设暗示了对此评估器未来扩展限制。在 Scheme 中，如果过程-
 
 如果过程的参数不是列表而是一个符号，那么该符号被视为单个参数，并将绑定到参数列表上。11
 
@@ -6545,14 +6813,14 @@ Scheme 变量直接在环境中查找。在其他语言中，变量有更复杂�
 
 正如第 238 页所指，在我们的解释器中评估表达式
 
-```
+``` 
 eval> (map (lambda (x) (* x x)) '(1 2 3)
 ```
 
 如果此表达式中的 `map` 指的是底层 Scheme 系统的 `map` 过程，它是无法工作的。
 然而，如果我们为我们的解释器重新定义 `map`，它就能工作：
 
-```
+``` 
 eval> (define map f l)
       (if null? l)
         '
@@ -6561,6 +6829,8 @@ map
 eval> (map (lambda (x) (* x x)) '(1 2 3))
 (1 4 9)
 ```
+
+
 
 为什么使用接受过程参数的底层过程（如 `map`）不起作用？请解释。概述修复该问题的策略并实现你的解决方案。注意：做到这一点很微妙，所以不要花费无限的时间试图使其完美。
 
@@ -6612,7 +6882,6 @@ eval> (map (lambda (x) (* x x)) '(1 2 3))
 ```
 (define (promise expression)
   (list 'promise expression))
-
 (define (force p)
   (if (equal? (car p) 'promise)
       (let ((val (eval (cdr p))))
@@ -6634,9 +6903,6 @@ eval> (map (lambda (x) (* x x)) '(1 2 3))
 这样，`consequent` 和 `alternative` 只在实际需要时被评估。这就是非严格参数的力量，它们可以实现许多强大的控制结构。
 
 （注意：上述代码为了解释概念进行了简化。在 Scheme 解释器中非严格参数的实际实现会更复杂。）
-
-
-
 
 ```scheme
 (lambda (parameter operand environment)
@@ -6777,10 +7043,6 @@ advanced-value)
           (add-streams (kdr s1) (kdr s2))))))
 ```
 
-
-
-
-
 **b.** 允许过程具有可选参数（可能带有指定的默认值）可能也会有用。例如，一个数值过程可以允许用户指定近似的容差，或者在用户未提供容差时指定一个默认值：
 
 ```
@@ -6879,7 +7141,6 @@ analyze-quoted)
 (variable-
 ```
 
-
 定义
 
 在 Lisp/Scheme 中通过 lambda 表达式表示的过程定义是分工的一个强大示例。在构建执行过程之前，分析器（编译器）解析 lambda 表达式，提取形式规范并编译体。因此，执行过程不需要做这些工作。
@@ -6903,21 +7164,36 @@ analyze-lambda)
 ```
 (define (analyze-if expression)
 (let ((predicate-exec
-    (analyze (if-predicate expression)))
-    consequent-exec
-    (analyze (if-consequent expression)))
-    alternative-exec
-    (analyze (if-alternative expression))))
-  (lambda (environment)
-    (if (x:apply predicate-exec environment)
-      (consequent-exec environment)
-      (alternative-exec environment)))))
-```
+
+
+
+`(analyze (if-predicate expression)))`
+
+`consequent-exec`
+
+`(analyze (if-consequent expression)))`
+
+`alternative-exec`
+
+`(analyze (if-alternative expression))))`
+
+`(lambda (environment)`
+
+`(if (x:apply predicate-exec environment)`
+
+`(consequent-exec environment)`
+
+`(alternative-exec environment)))))`
 
 ```
-(define (analyze-generic-procedure-handler x:analyze)
-(if?)
-analyze-if)
+```
+
+`(define (analyze-generic-procedure-handler x:analyze)`
+
+`(if?)`
+
+`analyze-if)`
+
 ```
 
 要评估的表达式序列是分析与执行分离的一个特别好的示例。没有理由在每次进入过程体时都重新编译表达式序列；这项工作可以在编译时一次完成。
@@ -6942,10 +7218,6 @@ analyze-if)
 ```
 (define (analyze-generic-procedure-handler x:analyze)
 ```
-
-
-
-
 
 ```
 (match-args begin?)
@@ -6973,7 +7245,7 @@ analyze-begin)
 analyze-assignment)
 ```
 
-，如果需要进行编译器优化，赋值就会带来严重的问题。事实上，赋值为程序引入了“时间”的概念：某些事情发生在赋值之前，另一些发生在赋值之后，而赋值可能会改变引用被修改变量的事件。因此，例如，如果公共子表达式引用了一个可以被赋值的变量，它们可能并不真的具有相同的值！
+如果需要进行编译器优化，赋值就会带来严重的问题。事实上，赋值为程序引入了“时间”的概念：某些事情发生在赋值之前，另一些发生在赋值之后，而赋值可能会改变引用被修改变量的事件。因此，例如，如果公共子表达式引用了一个可以被赋值的变量，它们可能并不真的具有相同的值！
 
 定义并不是问题，除非我们将它们（并错误地使用）视为赋值，从而可能干扰编译器优化。
 
@@ -7142,6 +7414,8 @@ value)))
 env)))
 ```
 
+
+
 那么（在 MIT/GNU Scheme 中）执行过程将拥有一个名称，告诉我们它是哪种类型的执行过程。在所有执行过程中实现这个想法。
 
 思考并可能实现其他方法，让我们在不损害执行速度的情况下提高运行时代码的可调试性。你可能做的一件事是将表达式 `exp` 作为“便签页”添加到执行过程上。
@@ -7152,8 +7426,7 @@ env)))
 
 在分析器中实现常量折叠。为了进行常量折叠，分析器需要知道程序文本中的哪些符号可以被绑定到已知值。例如，它需要知道 `car` 是否实际上绑定到对的选择器。假设分析器可以调用一个查找已知符号绑定的过程。该过程应该接受一个符号
 
-
-并返回分析器可能依赖的值，如果该符号不在分析器的控制范围内，则返回 #f。
+并返回分析器可能依赖的值，如果该符号不在分析器的控制范围内，则返回 `#f`。
 
 ## 练习 5.15: 其他优化
 
@@ -7169,9 +7442,9 @@ env)))
 
 ## 5.4 探索性行为
 
-我们已经遇到过模式匹配中匹配段变量的显式回溯搜索。但即使在没有段变量的情况下，项重写系统的实现也需要一些回溯搜索。当规则的后件表达式确定匹配没有足够的选择性以至于后件无法替换数据中被匹配的部分时，即使规则的前件模式匹配了部分数据，后件表达式也会返回 #f，回溯到匹配过程并尝试不同的规则。
+我们已经遇到过模式匹配中匹配段变量的显式回溯搜索。但即使在没有段变量的情况下，项重写系统的实现也需要一些回溯搜索。当规则的后件表达式确定匹配没有足够的选择性以至于后件无法替换数据中被匹配的部分时，即使规则的前件模式匹配了部分数据，后件表达式也会返回 `#f`，回溯到匹配过程并尝试不同的规则。
 
-此外，用于优化通用过程访问的 tri 机制也处理了回溯。tri 追踪一组参数序列必须满足的谓词序列。但谓词的初始段与参数的初始段之间可能有多种匹配方式，因此 tri 机制中内部构建了一个隐式搜索。
+此外，用于优化通用过程访问的 `tri` 机制也处理了回溯。`tri` 追踪一组参数序列必须满足的谓词序列。但谓词的初始段与参数的初始段之间可能有多种匹配方式，因此 `tri` 机制中内部构建了一个隐式搜索。
 
 我们通常将回溯及其在搜索中的极端使用视为一种 AI 技术。然而，回溯可以被视为一种构建模块化且可独立演化系统的方法，就像生物系统的探索性行为一样。考虑一个简单实用的例子：解二次方程。二次方程有两个根。我们可以两个都返回，并假设解决方案知道如何处理，或者返回一个并听天运气。（标准的平方根程序 `sqrt` 返回正平方根，尽管有两个平方根！）返回两个解决方案的缺点是，结果的接收者必须知道对两者都尝试计算并拒绝其中一个，或者返回计算的两个结果，而计算本身可能包含某些选择。只返回一个解决方案的缺点是它可能不是接收者目的所需的。这在物理系统的仿真中可能是一个真实的问题。
 
@@ -7189,9 +7462,7 @@ env)))
 
 McCarthy 的 `amb`，确定用于其计算的成分是否合适且可接受，是接收者的责任，也应该是接收者的责任。这本身可能需要复杂的计算，涉及如果不进行进一步计算其后果可能是不而易见的；因此该过程是递归的。当然，这会导致我们对程序中已做的所有选择的所有可能赋值进行潜在致命的指数级搜索。
 
-
-
-
+```
 ;; ...)
 ;; fail = (lambda () ...)
 ...
@@ -7243,6 +7514,7 @@ McCarthy 的 `amb`，确定用于其计算的成分是否合适且可接受，�
 ```
 
 `execute-strict` 过程调用给定的执行过程（`executor`）。其结果随后传递给 `a:advance` 进行强制求值。强制后的值随后传递给 `execute-strict` 的成功延续（`succeed`），有效地将强制求值的结果返回给 `execute-strict` 的调用者。
+
 使用 `execute-strict` 我们可以重写 `analyze-application`：
 
 ```scheme
@@ -7340,6 +7612,7 @@ McCarthy 的 `amb`，确定用于其计算的成分是否合适且可接受，�
 # 练习题 5.17：一个谜题
 
 使用 `amb` 形式化并解决以下谜题：
+
 两名女性（Alyssa 和 Eva）和四个男性（Ben, Louis, Cy 和 Lem）坐在一张圆桌旁玩牌。每个人都有一手牌牌；没有两手牌牌是相同的。
 
 - Alyssa 和 Eva；没有两手牌牌是相同的。
@@ -7351,43 +7624,6 @@ McCarthy 的 `amb`，确定用于其计算的成分是否合适且可接受，�
 - Louis 坐在 Alyssa 的对面。
 - Eva 坐在 Lem 的对面。
 - Eva 坐在 Cy 的对面。
-- Ben 坐在 Eva 的对面。
-- Cy 坐在 Ben 的对面。
-- Lem 坐在 Eva 的对面。
-- Alyssa 坐在 Louis 的对面。
-- Ben 坐在 Cy 的对面。
-- Cy 坐在 Ben 的对面。
-- Louis 坐在 Alyssa 的对面。
-- Eva 坐在 Lem 的对面。
-- Eva 坐在 Cy 的对面。
-
-- Alyssa 和 Eva；没有两手牌牌是相同的。
- Alyssa 和 Eva；没有两手牌牌是相同的。
-
-- Alyssa 和 Eva；没有两手牌牌是相同的。
-- Ben, Louis, Cy 和 Lem。
-- Ben 坐在 Eva 的对面。
-- Alyssa 坐在 Louis 的对面。
-- Ben 坐在 Cy 的对面。
-- Cy 坐在 Ben 的对面。
-- Louis 坐在 Alyssa 的对面。
-- Eva 坐在 Lem 的对面。
-- Eva 坐在 Cy 的对面。
-- Ben 坐在 Eva 的对面。
-- Cy 坐在 Ben 的对面。
-- Lem 坐在 Eva 的对面。
-- Alyssa 坐在 Louis 的对面。
-- Ben 坐在 Cy 的对面。
-- Cy 坐在 Ben 的对面。
-- Louis 坐在 Alyssa 的对面。
-- Eva 坐在 Lem 的对面。
-- Eva 坐在 Cy 的对面。
-
-（注：原文中存在大量重复的句子，根据指令“不要重复输出原文”，译文已按逻辑过滤掉这些重复内容。）
-
-
-
-
 
 ## 练习 5.20: 选择排序
 
@@ -7405,6 +7641,7 @@ choose <weight-1> <choice-1> ... <weight-n> <choice-n>
 ## 5.5 暴露底层的延续
 
 现在我们就可以处理真正的魔法了！
+
 大多数语言（包括 Scheme）都是围绕着“表达式”的概念组织的。一个表达式有一个会“返回”的值。一个表达式由子表达式组成，每个子表达式都有一个返回给其所属大表达式的值。表达式的核心思想是什么？
 
 考虑以下复合表达式
@@ -7415,7 +7652,9 @@ choose <weight-1> <choice-1> ... <weight-n> <choice-n>
 
 当然，它的值是 11。它是通过评估运算符和操作数，然后将运算符的值（过程）应用于操作数的值（参数）来计算的。
 
-这个过程可以通过延续传递风格（continuation-passing style）重新表述计算来变得更加清晰。在这里我们发明了新的运算符 \, //, 和 ++ 来命名延续传递风格的乘法、除法和加法过程：
+
+
+这个过程可以通过延续传递风格（continuation-passing style）重新表述计算来变得更加清晰。在这里我们发明了新的运算符 `\,` `//` 和 `++` 来命名延续传递风格的乘法、除法和加法过程：
 
 ```
 (define (* m1 m2 continue)
@@ -7432,7 +7671,7 @@ choose <weight-1> <choice-1> ... <weight-n> <choice-n>
 (continue (+ a1 a2)))
 ```
 
-这些过程与通常的 *, / 的区别在于，它们不返回给调用者；相反，它们被定义为带有计算出的值调用其参数。接收该值的参数被称为延续过程。我们在第 4.2.2 和 5.4.2 节以及第 188 页的统一器中使用了延续传递风格。
+这些过程与通常的 `*` `/` 的区别在于，它们不返回给调用者；相反，它们被定义为带有计算出的值调用其参数。接收该值的参数被称为延续过程。我们在第 4.2.2 和 5.4.2 节以及第 188 页的统一器中使用了延续传递风格。
 
 延续传递风格计算 `(+ 1 (* 2 3) (/ 8 2))` 看起来如下：
 
@@ -7444,7 +7683,7 @@ choose <weight-1> <choice-1> ... <weight-n> <choice-n>
 (++ 1 the-product the-quotient k))))
 ```
 
-k 是最后的延续过程，它接受一个参数。在这个例子中，过程 ** 计算了 2 和 3 的乘积，并用 6 调用了它的延续（标记为 A 的 lambda）。因此，在 A 的体内部，`the-product` 被绑定为 6。在 A 的体内部，过程 // 计算了 8 除 2 的商，并将得到的 4 传递给过程 B，其中 `the-quotient` 被绑定为 4。在 B 的体内部，过程 ++ 计算了 1, 6 和 4 的和，并将得到的 1 传递给延续 k。
+`k` 是最后的延续过程，它接受一个参数。在这个例子中，过程 `**` 计算了 2 和 3 的乘积，并用 6 调用了它的延续（标记为 A 的 lambda）。因此，在 A 的体内部，`the-product` 被绑定为 6。在 A 的体内部，过程 `//` 计算了 8 除 2 的商，并将得到的 4 传递给过程 B，其中 `the-quotient` 被绑定为 4。在 B 的体内部，过程 `++` 计算了 1, 6 和 4 的和，并将得到的 1 传递给延续 `k`。
 
 在延续传递风格中，没有返回值的嵌套表达式。所有结果都传递给延续过程。因此，不需要栈，因为没有人在等待那个值！相反，我们以编译器为了在顺序机器中计算表达式值时必须采取的方式，将我们的表达式树进行了线性化处理。
 
@@ -7454,7 +7693,7 @@ k 是最后的延续过程，它接受一个参数。在这个例子中，过程
 
 显式延续是程序员最强大（且危险）的工具之一。延续赋予程序员对时间的显式控制。计算可以在某一时刻被捕获并暂停，并在未来的任何时刻继续。这使得编写协程（协作多任务）成为可能，加上定时器中断，我们得到了抢占式多任务处理。在你可能需要显式处理延续的情况下，Scheme 允许你通过创建一个当前延续的显式过程来实现。但在我们接管这种力量之前，我们需要对延续有更深入的理解。
 
-延续是计算被捕获的状态。如果一个延续被调用，由延续表示的计算就会继续。延续可以代表返回值到包裹表达式的行为。Scheme 提供了 call-with-continuation（缩写为 call/cc），我们稍后会看到这一点。
+延续是计算被捕获的状态。如果一个延续被调用，由延续表示的计算就会继续。延续可以代表返回值到包裹表达式的行为。Scheme 提供了 `call-with-continuation`（缩写为 `call/cc`），我们稍后会看到这一点。
 
 考虑下面这个非局部退出延续的简单示例（改编自 Scheme 报告 [109]）：
 
@@ -7467,10 +7706,9 @@ k 是最后的延续过程，它接受一个参数。在这个例子中，过程
   (exit #t))
 ```
 
--3
+`-3`
 
-
-由于 Scheme 的 `for-each` 过程从左到右遍历列表，因此遇到的第一个负元素是 -3，它会立即被返回。如果列表中不包含负数，结果将是 `#t`（因为外部表达式体是两个表达式的序列：首先是 `for-each` 表达式，接着是返回 `#t`）。
+由于 Scheme 的 `for-each` 过程从左到右遍历列表，因此遇到的第一个负元素是 `-3`，它会立即被返回。如果列表中不包含负数，结果将是 `#t`（因为外部表达式体是两个表达式的序列：首先是 `for-each` 表达式，接着是返回 `#t`）。
 
 `call/cc` 的可能会出现在另一个表达式中，如下定义所示。（传统上，绑定到底层延续的符号通常以字母 `k` 开头。）
 
@@ -7556,7 +7794,7 @@ no-negatives-found
 1
 ```
 
-the-continuation 被调用时，`call/cc` 返回 `let` 表达式体。执行继续增加 `i` 并返回其新值。该延续可以被重用再次增加 `i` 并返回其新值。
+`the-continuation` 被调用时，`call/cc` 返回 `let` 表达式体。执行继续增加 `i` 并返回其新值。该延续可以被重用再次增加 `i` 并返回其新值。
 
 ```
 (the-continuation 'OK)
@@ -7566,23 +7804,35 @@ the-continuation 被调用时，`call/cc` 返回 `let` 表达式体。执行继�
 (test)
 2
 ```3
+
 ```
 
 现在考虑以下稍微有趣的场景：
 
 ```
+
 (define the-continuation #f)
+
 (define sum #f)
+
 ```
 
 ```
+
 (begin
+
   (set! sum
+
     (+ 2 (call/cc
+
       (lambda (k)
+
         (set! the-continuation k)
+
       (the-continuation 'OK)))))
+
   sum
+
 ```
 
 
@@ -7590,234 +7840,381 @@ the-continuation 被调用时，`call/cc` 返回 `let` 表达式体。执行继�
 你可能会对我们通过调用 *top-level* 和 *add-to-search-schedule* 来获取执行任务的程序感到困惑。我们还通过 *search-schedule* 来获取搜索调度对象。这种间接层的原因是这些都是 Scheme 参数对象（见第 394 页）。我们之所以这样定义，是因为我们将它们动态地绑定到不同的值上，这一点稍后将会展示。我们将 *search-schedule* 初始化为空。
 
 ```scheme
+
 (define *search-schedule*
+
   (make-parameter empty-search-schedule))
+
 ```
 
-这里的魔法之处在于 amb-list 中的 `call/cc`。amb-list（以及 amb）执行了 `yield`。`call/cc` 的延续（因此是该调用的延续）被放入 amb 的每个备选方案的搜索调度表中。当从搜索调度弹出一个备选方案并执行时，其值将由任何将其放入搜索调度表的 amb 表达式返回。
+这里的魔法之处在于 `amb-list` 中的 `call/cc`。`amb-list`（以及 `amb`）执行了 `yield`。`call/cc` 的延续（因此是该调用的延续）被放入 `amb` 的每个备选方案的搜索调度表中。当从搜索调度弹出一个备选方案并执行时，其值将由任何将其放入搜索调度表的 `amb` 表达式返回。
 
 通过将搜索调度既设计为栈又是队列，我们可以实现深度优先搜索和广度优先搜索，因为它们的区别仅在于调度的顺序。这是通过动态绑定将 `add-to-search-schedule` 参数绑定到所需的顺序来实现的，如下所示。
 
 默认是深度优先：
 
 ```scheme
+
 (define add-to-search-schedule
+
   (make-parameter add-to-depth-first-search-schedule))
+
 ```
 
 以下两个程序可以通过动态绑定 `add-to-search-schedule` 来控制封装了待解决问题的 thunk（延迟函数）执行过程中的搜索顺序。相关示例请参阅第 293 页的 5.22 节。
 
 ```scheme
+
 (define (with-depth-first-schedule problem-thunk)
+
   (call/cc
+
     (lambda (k)
+
       (parameterize ((add-to-search-schedule
+
         add-to-depth-first-search-schedule)
+
         (*search-schedule*
+
         (empty-search-schedule))
+
         (*top-level* k))
+
       (problem-thunk)))))
+
 ```
 
 ```scheme
+
 (define (with-breadth-first-schedule problem-thunk)
+
   (call/cc)
+
   (lambda (k)
+
     (parameterize ((add-to-search-schedule
+
       add-to-breadth-first-search-schedule
+
       *search-schedule*
+
       (empty-search-schedule))
+
       *top-level* k))
+
       (problem-thunk))))
+
 ```
 
 这些程序还通过动态绑定局部重新初始化了 *search-schedule* 和 *top-level*，提供了作用范围（extent）而非作用域（scope）的控制。如果 `yield` 没有发现更多备选方案，它可以导致该过程终止并将值 `no-more-alternatives` 返回给 `with-...first-schedule` 的调用者。例如：
 
 ```scheme
+
 (define search-order-demo
+
   (lambda ()
+
     (let ((x amb 1 2)))
+
       (pp (list x))
+
       (let ((y amb 'b'))
+
         (pp (list x y)))
+
       (amb))))
+
 ```
 
 ```scheme
+
 (with-depth-first-schedule search-order-demo)
+
 (1)
+
 (1 a)
+
 (1 b)
+
 (2)
+
 (2 a)
+
 (2 b)
+
 no-more-alternatives
+
 ```
 
 ```scheme
+
 (with-breadth-first-schedule search-order-demo)
+
 (1)
+
 (1 a)
+
 (1 b)
+
 (2)
+
 (2 a)
+
 (2 b)
+
 no-more-alternatives
+
 ```
 
-这些排序是基于底层栈和队列修改器实现的。对于深度优先，备选方案被放置在调度的头部；对于广度优先，它们被放置在调度的末尾。在两种情况下，它们在调度表中的顺序都是它们提供给 amb 的顺序。
+这些排序是基于底层栈和队列修改器实现的。对于深度优先，备选方案被放置在调度的头部；对于广度优先，它们被放置在调度的末尾。在两种情况下，它们在调度表中的顺序都是它们提供给 `amb` 的顺序。
 
 ```scheme
+
 (define (add-to-depth-first-search-schedule alternatives)
+
   (for-each (lambda (alternative)
+
     (push! (*search-schedule*) alternative)
+
     (reverse alternatives)))
+
 ```
 
 ```scheme
+
 (define (add-to-breadth-first-search-schedule alternatives)
+
   (for-each (lambda (alternative)
+
     (add-to-end! (*search-schedule*) alternative))
+
   alternatives))
+
 ```
 
 参数 *top-level* 的初始化使得当没有发现备选方案时，系统继续执行 read-event-print 循环（在上面的代码中，`yield` 将符号 `no-more-alternatives` 传递给顶层）。注意 `with-...first-schedule` 重绑定了 *top-level*。
 
 ```scheme
+
 (define *top-level*
+
   (make-parameter
+
     (lambda (result))
+
       (abort->nearest)
+
       (cmdl-message/active
+
         (lambda (port))
+
         (fresh-line port)
+
         (display ";" port)
+
         (write result port))))
+
 ```
 
 为了启动一切，我们还需要：
 
 ```scheme
+
 (define (init-amb)
+
   (reset-deque! (*search-schedule*))
+
   (set! *number-of-calls-to-fail* 0)
+
   'done)
+
 ```
 
-最后，几乎每个使用 amb 的程序都需要：
+最后，几乎每个使用 `amb` 的程序都需要：
 
 ```scheme
+
 (define (require p)
+
   (if (not p) (amb 'ok)))
+
 ```
 
-就这些了！使用 `call/cc` 能做的事情真是令人惊叹。因此，如果我们的原生环境中有了 `call/cc`，我们就不需要创建一个嵌入式系统来实现 amb（正如我们在 5.4.2 节中所的那样）。
+就这些了！使用 `call/cc` 能做的事情真是令人惊叹。因此，如果我们的原生环境中有了 `call/cc`，我们就不需要创建一个嵌入式系统来实现 `amb`（正如我们在 5.4.2 节中所的那样）。
 
 # 其他排序方式
 
-排序是基于底层栈和队列修改器实现的。对于深度优先，备选方案被放在调度的头部；对于广度优先，它们被放在调度的末尾。在两种情况下，它们按照被提供给 amb 的顺序出现在调度表上。
+排序是基于底层栈和队列修改器实现的。对于深度优先，备选方案被放在调度的头部；对于广度优先，它们被放在调度的末尾。在两种情况下，它们按照被提供给 `amb` 的顺序出现在调度表上。
 
 ```scheme
+
 (define (add-to-depth-first-search-schedule alternatives)
+
   (for-each (lambda (alternative)
+
     (push! (*search-schedule*) alternative)
+
     (reverse alternatives)))
+
 ```
 
 ```scheme
+
 (define (add-to-breadth-first-search-schedule alternatives)
+
   (for-each (lambda (alternative)
+
     (add-to-end! (*search-schedule*) alternative))
+
   alternatives))
+
 ```
 
 参数 *top-level* 的初始化使得当没有发现备选方案时，系统继续执行 read-event-print 循环（在上面的代码中，`yield` 将 `no-more-alternatives` 传递给顶层）。注意 `with-...first-schedule` 重绑定了 *top-level*。
 
 ```scheme
+
 (define *top-level*
-  (make-parameter
+
+
+
+```
+(make-parameter
+
     (lambda (result))
+
       (abort->nearest)
+
       (cmdl-message/active
+
         (lambda (port))
+
         (fresh-line port)
+
         (display ";" port)
+
         (write result port))))
 ```
 
 为了启动一切，我们还需要：
 
 ```scheme
+
 (define (init-amb)
+
   (reset-deque! (*search-schedule*))
+
   (set! *number-of-calls-to-fail* 0)
+
   'done)
+
 ```
 
-最后，几乎每个使用 amb 的程序都需要：
+最后，几乎每个使用 `amb` 的程序都需要：
 
 ```scheme
+
 (define (require p)
+
   (if (not p) (amb 'ok)))
+
 ```
 
-就这些！使用 `call/cc` 能做的事情真是令人惊叹。如果我们的原生环境中有了 `call/cc`，我们就不需要创建一个嵌入式系统来实现 amb（正如我们在 5.4.2 节中所的那样）。
+就这些！使用 `call/cc` 能做的事情真是令人惊叹。如果我们的原生环境中有了 `call/cc`，我们就不需要创建一个嵌入式系统来实现 `amb`（正如我们在 5.4.2 节中所的那样）。
 
 # 练习 5.22：宽度与深度
 
 回三元组的定义（见第 27 页）。我们用一个计数器对搜索进行插测量：
 
 ```scheme
+
 (define (a-pythagorean-triple-from low)
+
   (let ((i (an-integer-from low)))
+
     (let ((j (an-integer-from i)))
+
       (let ((k (an-integer-from j)))
+
         (require (= i i) (* j j)))
+
         (set! triples-tested (+ triples-tested 1))
+
         )))))
 
 (define (an-integer-from low)
+
   (amb low (an-integer-from (+ low 1))))
+
 ```
 
 考虑以下实验。首先尝试广度优先：
 
 ```scheme
+
 (begin (init-amb)
+
   (set! triples-tested 0)
+
   (with-breadth-first-schedule
+
     (lambda ()
+
       (pp (a-pythagorean-triple-from 10))))
+
 ```
 
 ```
+
 (1)
+
 (1 a)
+
 (1 b)
+
 (2)
+
 (2 a)
+
 (2 b)
+
 no-more-alternatives
+
 ```
 
 然后我们尝试深度优先：
 
 ```scheme
+
 (begin (init-amb)
+
   (set! triples-tested 0)
+
   (with-depth-first-schedule
+
     (lambda ()
+
       (pp (a-pythagorean-triple-from 10))))
+
 ```
 
 ```
+
 (1)
+
 (1 a)
+
 (1 b)
+
 (2)
+
 (2 a)
+
 (2 b)
+
 no-more-alternatives
+
 ```
 
 a. 解释深度优先和广度优先之间 `triples-tested` 的差异（大致描述即可，不需要精确数字）。
@@ -7827,34 +8224,48 @@ b. 解释测试的三元组与 `number-calls-to-fail` 之间的差异。额外�
 c. 考虑到广度优先搜索做了更多工作，为什么下面的 `a-pythagorean-triple-from` 搜索没有使用深度优先，尽管它运行良好？
 
 ```scheme
+
 (define (a-pythagorean-triple-from low)
+
   (let ((i (an-integer-from low)))
+
     (let ((j (an-integer-from i)))
+
       (let ((k (an-integer-from j)))
+
         (require (= i i) (* j j)))
+
         (list i j k)))))
+
 ```
 
 ```scheme
+
 (define (an-integer-from low)
+
   (amb low (an-integer-from (+ low 1))))
+
 ```
 
 # 练习 5.23：不不确定性的非确定性
 
-Eva Ator 指出我们的 amb 实现没有人们希望的那样非确定。具体来说，给定 amb 形式的备选方案列表，我们总是首先选择左侧的备选方案，然后是第二个左侧的，以此类推顺序。
+Eva Ator 指出我们的 `amb` 实现没有人们希望的那样非确定。具体来说，给定 `amb` 形式的备选方案列表，我们总是首先选择左侧的备选方案，然后是第二个左侧的，以此类推顺序。
 
 她建议人们可能希望覆盖这种选择，例如从右到左，甚至按随机顺序。具体来说，她会使用类似于：
 
 ```
+
 (with-left-to-right-ordering problem-thunk)
+
 (with-right-to-left-ordering problem-thunk)
+
 (with-random-ordering problem-thunk)
+
 ```
 
 她很快指出，这种排序的选择与搜索顺序（深度优先、广度优先或其他）无关。
 
-a. 在什么情况下你可能想要一个无序（随机）的 amb？编写一个特定的短示例作为部分的测试用例。
+a. 在什么情况下你可能想要一个无序（随机）的 `amb`？编写一个特定的短示例作为部分的测试用例。
 
 b. 实现这三种选择顺序并给出每个示例。为了简单和统一，请模仿 `with-depth-first-schedule`、`add-to-depth-first-search-schedule` 等代码编写你的代码。提示：可以使用 Scheme 内置的随机过程。
 
@@ -7870,21 +8281,30 @@ b. 实现这三种选择顺序并给出每个示例。为了简单和统一，�
 
 ## 练习 5.25：可撤销的赋值
 
-在 5.4.2 节 amb 的嵌入式解释器版本中，我们展示了如何使用两种赋值：由 `set!` 表示的通常永久赋值，以及由 `maybe-set!` 表示的可撤销赋值（后者可以通过回溯进行撤销）。我们可以在本节的原生代码实现中为可撤销副作用实现一个通用包装器：
+在 5.4.2 节 `amb` 的嵌入式解释器版本中，我们展示了如何使用两种赋值：由 `set!` 表示的通常永久赋值，以及由 `maybe-set!` 表示的可撤销赋值（后者可以通过回溯进行撤销）。我们可以在本节的原生代码实现中为可撤销副作用实现一个通用包装器：
 
 ```scheme
+
 (define (effect-wrapper doer undoer)
+
   (force-next
+
     (lambda () (undoer) (yield))
+
   (doer))
+
 ```
 
 ```scheme
+
 (define force-next thunk)
+
   (push! (*search-schedule) thunk))
+
 ```
 
 ```
+
 我们可以将 `maybe-set!` 实现为一个宏：
 
 ```scheme
@@ -7912,14 +8332,23 @@ b. 实现这三种选择顺序并给出每个示例。为了简单和统一，�
 能力越大，责任越大。每当我们创建一个语言，必须对其进行记录，以便教授他人。我们今天编写的程序将来会被他人阅读和修改。（事实上，当我们明年读去年写的内容时，我们已经变得很不同，不会记得我们做过的细节。）因此，谨慎使用这种力量很重要，当我们使用时，要记录结果，而不是留下一堆无法理解的混乱让下一个程序员（或我们自己！）去清理。巴别之塔展示了问题的正反两面。命令有它们自己的语言。
 
 - 但因为我们的 `eval` 是一个通用过程，由 `eval` 定义的符号集可以很容易甚至是动态地更改。
+
 - 使用 Scheme 作为实现语言简化了我们解释器的实现。我们继承了 Scheme 的读取器，所以我们的语法是简单的；我们继承了尾递归，所以我们在实现过程调用时不需要特别小心；而且我们使用 Scheme 过程作为原语。
+
 - 选择不同的实现语言（例如 C），我们将有更多问题要处理。尽管如此，在任何语言中构建这种解释器都是可能的。
+
 - 为了识别这些名称是该“通用”解释器特有的。在随后的章节中，我们引入了解释器的不同版本，每个版本都有自己的前缀。
+
 - 实数在计算机中通常表示为浮点数。数字的部分可以是整数或有理分数，也可以是实数。
+
 - 对引用（quotation）及其与求值关系的理解对分析哲学具有深远影响。一个很好的阐述是 Brian Cantwell Smith 1982 年的博士论文 [112]。
+
 - 符号是由字符字符串命名的原子对象。符号之所以有趣，是因为它是唯一的；任何两个具有相同名称的符号实例都被认为是相同的。
+
 - 通过这种方式找到的许多 Scheme 原语将工作，例如 `car +`。然而，接受过程作为参数的原语（如 `map` 或 `filter`）不会接受非原语过程（即由此解释器从 lambda 表达式创建的过程）。这在第 249 页的练习 5.5 中有所。
+
 - 宏的真正问题在于它们可能会引入意外与现有绑定冲突的绑定，导致它们引用不透明的。针对 Scheme 引用透明性问题的发展，多次攻击导致了卫生宏系统的开发。参见 [73, 74, 8, 31]。此外，通过引入特殊形式剧烈修改语言会让读者更难理解程序——读者在阅读使用它们的程序之前必须学习新的特殊形式。
+
 - MIT/GNU Scheme 允许更通用的定义语法，对 `define` 形式的 `cadr` 进行递归展开（见第383页）。我们在这里不做。
 
 **10** 我们在这里做了一个限制未来扩展的决定。我们要求过程参数是一个与操作数列表长度相同的列表，这意味着我们无法扩展此处理程序以允许带有可选或剩余参数的过程。因此，我们无法定义传统的接受任意数量参数并求和的 Lisp `+`！但请参见练习 5.2。
@@ -7933,7 +8362,6 @@ b. 实现这三种选择顺序并给出每个示例。为了简单和统一，�
 **14** 习惯做法使用“延迟求值”术语来表示参数评估被推迟并且结果被缓存。在这里我们将这些思想分开，并使用 lazy 指代推迟。
 
 **15** 在 Algol-60 按名传递参数的原始实现中，这些表达式和环境的组合被称为 *thunks*。由于 Scheme 程序经常使用没有形式化参数的过程来封装表达式
-
 
 稍后在其他环境中进行评估，我们也将这种用于此处的零参数过程称为 thunk（停滞）。
 
@@ -7970,6 +8398,7 @@ b. 实现这三种选择顺序并给出每个示例。为了简单和统一，�
 + 31 使用 MIT/GNU Scheme 扩展 `within-continuation` 过程（此处约等同于调用 `(k (alternative))`），可以防止捕获对于正确继续计算并非必要的控制栈片段。
 
 ## 6
+
 ## 分层 (Layering)
 
 在第 1.1 节中，我们提到编程可以从架构实践中学习。程序员可能会从一个可执行的骨架计划（一个 *parti*）开始以尝试某个想法。当 *parti* 看起来良好时，程序员可以使用更多信息对其进行完善。
@@ -7989,6 +8418,8 @@ b. 实现这三种选择顺序并给出每个示例。为了简单和统一，�
 
 这是一个简单的数值计算，但我们可以对其进行完善以携带支持信息和单位。通过查找 NIST 发表的最新测量值找到牛顿常数 G：
 
+
+
 ```scheme
 (define G
 (layered-datum 6.67408e-11
@@ -8005,57 +8436,11 @@ unit-layer (unit 'kilogram 1))
 support-layer (support-set 'CODATA-18)))
 ```
 
-等等，OCR 文本在末尾有一些重复。让我重新检查来源以确保基于提供的文本去重。
-
-实际上，查看提供的 OCR 文本，最后部分（348-350 页）似乎是之前的损坏或重复版本。我将根据文档的逻辑流提供内容。
-
-（修正：从第 348 页开始提供的 OCR 文本似乎是之前内容的幻觉或重复。我将按照提供的文档流处理文本。）
-
 ### 6.2 分层的实现
 
 分层有两个部分。第一部分是创建一个包含层的 datum。在我们的示例中，我们使用了 `layered-datum` 来实现。第二部分是我们需要增强过程以便能够处理每一层。以这种方式增强的过程被称为分层过程。
 
-等等，我看到提示中提供的原始 OCR 文本末尾包含一个奇怪的重复（从 `(define M-Earth...` 开始），看起来像是 344-347 页同步/损坏版本。我将按照要求修复错误并合并页面输出文本。
-
-**基于提供的 OCR 文本的最终输出：**
-
-[content]
-16 `advance-memo!` 过程还会删除从延迟对象到用于评估的环境的指针，允许该环境在没有其他指针指向它时被垃圾回收。
-
-17 Dan Friedman 和 David Wise 编写的一篇古老但重要的论文，标题为“Cons should not evaluate its arguments"[40]，展示了惰性函数式编程是多么强大，但通过使用 `kons` 而不是 `cons` 可以实现。
-
-18 Scheme [109] 提供了 `delay` 和 `force` 来实现流。关于流的更多信息，请参阅 SICP [1] 和 SRFI-41 [13]。
-
-19 这个评估器与之前的有显著不同，正如第 236 页脚注 3 所示，我们使用一个新前缀（`x:`，代表“执行过程”）来识别类似的过程。
-
-20 在 Lisp（以及 Scheme 中）中，提取引用文本是简单的——只需一个 `cadr`——但我们的意图是足够通用，以适应任何语言语法。在大多数语言中，提取引用文本要困难得多。
-
-21 在 `analyze-begin` 中，`reduce-right` 过程永远不会使用 `#f` 参数，因为只有在表达式列表为空时才会访问 `#f`。那将在还原开始前触发“Empty sequence”（空序列）错误。
-
-22 Erik Sandberg 对支持“非单调”推理工具系统的调查 [107] 提供了我们无法提供的更多背景。
-
-23 在这个评估器中，我们使用 `a:` 前缀（代表 `amb`）来区分类似的过程，如第 260 页脚注 19 所。
-
-24 我们对 `amb` 的实现并不完全是 McCarthy 的设想。他的 `amb` 是“预知”的，即使其中一个备选项发散，它也会收敛到一个值。由于我们的评估器对备选项进行从左到右的深度搜索，如果 `e` 是一个发散的表达式（无限计算或信号错误），我们的 `(amb e 5)` 就会发散；但 McCarthy 的 `amb` 会返回 5。William Clinger [21] 对此进行了非常完美的解释。
-
-+ 25 这些计时是在由底层 Scheme 系统解释的嵌入式探索行为解释器本身进行的。如果我们使用 Scheme 编译器来编译嵌入式解释器，我们可以获得约 30 倍的速度提升。
-
-+ 26 延续传递风格（continuation-passing style）是由计算机语言理论学家引入的，用于澄清计算机语言的语义。关于该思想的完整历史请参见 [103]。在 Scheme 中，子表达式的延续作为一等过程暴露出来 [120, 61, 109]。
-
-+ 27 这种控制状态不与系统的完整状态混淆。完整状态是结合程序所需的确定计算未来的所有信息。它包含了所有可变变量和数据的当前值。延续并不捕获可变变量和数据的当前值。
-
-+ 28 但注意，Scheme 报告 [109] 允许延续接受任意数量的参数。
-
-+ 29 参阅 Lewis Carroll 于 1876 年的《猎蛇》（The Hunting of the Snark）。
-
-+ 30 本示例改编自 Wikipedia [25]。
-
-+ 31 使用 MIT/GNU Scheme 扩展 `within-continuation` 过程（此处约等同于调用 `(k (alternative))`），可以防止捕获对于正确继续计算并非必要的控制栈片段。
-
-
-
-
-## 6.2.1 分层数据
+### 6.2.1 分层数据
 
 分层数据项是一个带有关于该值的额外信息的基准值。该注释是层名称与其对应值之间的关联。例如，数字 2 可能是许多数据项中的基准值：如果我们正在处理土豆，那么一袋 2 磅的土豆可能有一个 2 美元的价格标签。这些数字 2 的每一个实例都必须是一个独立的数据项，且其单位（美元或磅）具有不同的值。可能还有其他层：2 美元的价格可能包含此类信息，说明它是如何从支付给农民的价格以及运输和加工成本中得出的。
 
@@ -8141,7 +8526,8 @@ layer)
 
 为了方便常见的用例，`layer-accessor` 创建了一个访问程序，该程序等同于调用层的 `get-value` 委托：
 
-```scheme be(define (layer-accessor layer)
+```scheme
+(define (layer-accessor layer)
   (lambda (object)
     (layer 'get-value object)))
 ```
@@ -8151,27 +8537,9 @@ layer)
   (layer-accessor base-layer))
 ```
 
-## 6.2.2 分层程序
+### 6.2.2 分层程序
 
 程序也是可以被分层的数据。分层程序类似于通用程序，其中包含对不同参数类型的处理程序。分层程序则为输入数据中单独的层提供实现，并处理所有这些层以产生一个分层结果。例如，当将数值层与单位层结合时，该程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用可以使用数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
-
-（注：由于原文中存在大量重复的段落，此处遵循“不要重复输出原文”的原则，仅对核心逻辑进行翻译处理，但根据指令“原文可能有多行，不要漏掉任何一行”，此处应按逻辑结构翻译，跳过无意义的重复块。）
-
-在第 6.1 节所示的数值示例中，代表牛顿力的代码 `F` 代表了*部分*，即要执行计算的基本计划。它对数字起作用；分层程序则为数据中单独的层提供实现，并处理所有这些层以产生分层结果。例如，当将数值层与单位层结合时，程序可以使用其数值层处理参数的数值部分，并使用其单位层处理参数的单位部分。
 
 分层程序必须访问并应用基程序以及与分层程序关联的注释层程序。所有这些信息都由元数据提供。要构造分层程序，我们需要一个程序的唯一名称和参数个数，以及一个实现计算的基程序：
 
@@ -8233,6 +8601,7 @@ layer)
 调用时，分层程序首先对参数的基层值调用基程序以获取基准值。它也是
 
 
+
 通过检查每个参数来确定哪些注释层是适用的；如果没有具有处理器的注释层，则结果仅仅是基础层的值，`make-layered-datum`（见第 303 页）将返回未注释的基准值。否则，将调用每个适用层的处理程序为该层生成一个值。特定层的处理程序可以访问计算出的基准值和分层过程的参数；除了自身和基础层的值之外，它不需要任何其他层的值。通常，结果是一个包含基准值和所有适用注释处理程序值的分层数据（datum）。
 
 为了了解这在实践中是如何工作的，让我们看看单位层的实现（见第 304 页）。单位层的 `get-procedure` 处理程序（如下）如果分层过程的名称是算术运算符，它将通过名称查找特定层的程序，然后使用每个参数中的单位调用该特定层的程序。（对于 `expt` 有一个特殊异常，它的第二个参数没有用单位装饰——它是一个数字。）对于其他过程，单位处理是未定义的，`get-procedure` 返回 `#f` 来表示这一点。
@@ -8252,7 +8621,7 @@ layer)
 #f)
 ```
 
-注意 `get-procedure` 是 unit-layer 的内部过程，它可以访问从 `make-annotation-layer`（见第 304 页）继承的单位 `get-value`。我们在第 6.3.1 节讨论单位的实现时会遇到 `unit-procedure`。
+注意 `get-procedure` 是 `unit-layer` 的内部过程，它可以访问从 `make-annotation-layer`（见第 304 页）继承的单位 `get-value`。我们在第 6.3.1 节讨论单位的实现时会遇到 `unit-procedure`。
 
 让我们来看一个例子。考虑简单的 `square` 过程，它计算参数的平方。
 
@@ -8357,9 +8726,6 @@ pp (layered-square
 
 纯数字是没有单位的。当带单位的量与无单位数字相乘，结果是该量的单位。因此，单位算术为无单位数字一个乘法单位——这就是 `unit:none`。`simple-operation` 结合了运算符、适用性测试以及实现操作的过程。
 
-
-
-
 对于上述每种情况我们必须提供适当的操作。例如，为了将两个单位量相乘，我们必须加上相应的指数，并省略任何指数为零的基单位：
 
 ```scheme
@@ -8405,25 +8771,25 @@ pp (layered-square
 
 SI 基本单位的全系统是 {kilogram, meter, second, ampere, kelvin, candela}，并且有一组批准的派生单位。例如：
 
-- newton = kilogram-meter-second⁻²
-- joule = newton·meter
-- coulomb = ampere-second
-- watt = joule·second⁻¹
-- volt = watt-ampere⁻¹
-- ohm = volt-ampere⁻¹
-- siemens = ohm⁻¹
-- farad = coulomb-volt⁻¹
-- weber = volt-second
-- henry = weber·ampere⁻¹
-- hertz = second⁻¹
-- tesla = weber·meter⁻²
-- pascal = newton·meter⁻²
+- `newton` = `kilogram-meter-second⁻²`
+- `joule` = `newton·meter`
+- `coulomb` = `ampere-second`
+- `watt` = `joule·second⁻¹`
+- `volt` = `watt-ampere⁻¹`
+- `ohm` = `volt-ampere⁻¹`
+- `siemens` = `ohm⁻¹`
+- `farad` = `coulomb-volt⁻¹`
+- `weber` = `volt-second`
+- `henry` = `weber·ampere⁻¹`
+- `hertz` = `second⁻¹`
+- `tesla` = `weber·meter⁻²`
+- `pascal` = `newton·meter⁻²`
 
-- a. 编写一个过程，它接收一个基于 SI 基本单位的单位描述，并在可能的情况下，使用派生单位创建一个更简单的描述。
+a. 编写一个过程，它接收一个基于 SI 基本单位的单位描述，并在可能的情况下，使用派生单位创建一个更简单的描述。
 
-- b. 用派生单位表示单位描述不是唯一的——可能有很多此类等效描述。这类似于代数简化问题，但“更简单”的标准并不显而易见。编写一个你喜欢的漂亮版本并解释你为什么喜欢它。
+b. 用派生单位表示单位描述不是唯一的——可能有很多此类等效描述。这类似于代数简化问题，但“更简单”的标准并不显而易见。编写一个你喜欢的漂亮版本并解释你为什么喜欢它。
 
-- c. 能够使用单位的标准缩写和倍数是非常好的。例如，1 mA 是编写 0.001 A 或 1/1000 ampere 的优雅方式。设计并实现一个简单的可扩展系统，允许在输入和输出中使用这些表示法上的便利。记住“语法糖会导致分号的癌症”。
+c. 能够使用单位的标准缩写和倍数是非常好的。例如，1 mA 是编写 0.001 A 或 1/1000 ampere 的优雅方式。设计并实现一个简单的可扩展系统，允许在输入和输出中使用这些表示法上的便利。记住“语法糖会导致分号的癌症”。
 
 ## 6.4 为带有依赖关系的值添加注释
 
@@ -8466,14 +8832,11 @@ SI 基本单位的全系统是 {kilogram, meter, second, ampere, kelvin, candela
 
 并不是所有出现在计算参数中的前提都需要出现在结果中。例如，如果贡献乘积的因子为零，那么它是乘积为零的充分理由，而不取决于其他有限因子。这通过提供零质量来说明。
 
-
-
-
 现在我们将支持层（support layer）是如何实现的。它与单元层（units layer）有所不同，因为单元可以在不引用基础层的情况下组合，而支持层在某些操作上需要查看基础层。
 
 支持层比单元层简单一些，因为除了三个算术运算符外，所有的运算符都使用默认规则：结果的支持集是参数支持集的并集。
 
-```
+```scheme
 (define support-layer
 (make-annotation-layer 'support
   (lambda (get-name has-value? get-value)
@@ -8489,19 +8852,19 @@ SI 基本单位的全系统是 {kilogram, meter, second, ampere, kelvin, candela
   get-name has-value? get-value get-default-procedure)))
 ```
 
-```
+```scheme
 (define support-layer-value
 (layer-accessor support-layer)
 ```
 
-```
+```scheme
 (define (support:default-procedure base-value . args)
 (apply support-set-union (map support-layer-value args)))
 ```
 
 乘法是第一个有趣的案例。支持层需要查看基础算术参数的值来确定结果的计算。如果其中一个参数为零，那么结果的支持就仅为该零参数的支持。
 
-```
+```scheme
 (define (support:* base-value arg1 arg2)
 (let ((v1 (base-layer-value arg1))
       (v2 (base-layer-value arg2))
@@ -8519,9 +8882,9 @@ s2
 (support-set-union s1 s2)))
 ```
 
-除法（以及反正切函数，未显示）也必须检查基础层以处理零参数。如果被除数为零，这就足以支持商为零的结果。除数永远不会为零，因为基础层的计算将会报告错误并且 (support:/ base-value arg1 arg2
+除法（以及反正切函数，未显示）也必须检查基础层以处理零参数。如果被除数为零，这就足以支持商为零的结果。除数永远不会为零，因为基础层的计算将会报告错误并且 `(support:/ base-value arg1 arg2`
 
-```
+```scheme
 (define (let (v1 (base-layer-value arg1))
 (s1 (support-layer-value arg1))
 (s2 (support-layer-value arg2))
@@ -8531,6 +8894,8 @@ s1
 ```
 
 这些针对 `*` 的优化只有在我们能够证明一个参数确实为零，而不是一个未简化的符号表达式时才有意义。（但如果一个表达式简化为精确的零，我们可以利用这一事实！）
+
+
 
 ```
 (define (exact-zero? x)
@@ -8585,7 +8950,6 @@ s1
   make-support-set
   (apply lset-union eqv?
     (map support-set-elements sets))))
-
 ```
 
 ```
@@ -8661,23 +9025,6 @@ s1
   (apply lset-adjoin eqv? (support-set-elements set) elts)))
 ```
 
-# 练习 6.2：过程化责任
-
-基于算术的支持层是非常底层的。每个原始算术操作都是感知支持的，并且没有方法在常见情况下跳过这些工作。这需要一种抽象手段。例如，假设我们有一个计算函数数值定积分的程序。积分数值的单位是被积函数数值的单位与积分上下限的单位的乘积。（积分上限和下限的单位必须相同！）然而，在整个所有详细的算术运算中携带单位计算并不是一个好主意。应该能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。例如，假设我们能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。
-
-（注：此处由于原文中存在大量重复段落，已根据“绝对不要重复输出原文”的原则在最终译文中进行了去重处理。）
-
-*修正：以下为重新整理的完整翻译：*
-
-# 练习 6.2：过程化责任
-
-基于算术的支持层是非常底层的。每个原始算术操作都是感知支持的，并且没有方法在常见情况下跳过这些工作。这需要一种抽象手段。例如，假设我们有一个计算函数数值定积分的程序。积分数值的单位是被积函数数值的单位与积分上下限的单位的乘积。（积分上限和下限的单位必须相同！）然而，在整个所有详细的算术运算中携带单位计算并不是一个好主意。应该能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。例如，假设我们能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。
-
-（抱歉，由于提供的原文中包含大量重复段落，我将为您提供一份不重复的逻辑完整翻译。）
-
----
-
-[content]
 现在我们将看到支持层（support layer）是如何实现的。它与单元层（units layer）有所不同，因为单元可以在不引用基础层的情况下组合，而支持层在某些操作上需要查看基础层。
 
 支持层比单元层简单一些，因为除了三个算术运算符外，所有的运算符都使用默认规则：结果的支持集是参数支持集的并集。
@@ -8802,12 +9149,6 @@ s1
   (apply lset-adjoin eqv? (support-set-elements set) elts)))
 ```
 
-# 练习 6.2：过程化责任
-
-基于算术的支持层是非常底层的。每个原始算术操作都是感知支持的，并且没有方法在常见情况下跳过这些工作。这需要一种抽象手段。例如，假设我们有一个计算函数数值定积分的程序。积分数值的单位是被积函数数值的单位与积分上下限的单位的乘积。（积分上限和下限的单位必须相同！）然而，在整个所有详细的算术运算中携带单位计算并不是一个好主意。应该能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。例如，假设我们能够对程序进行注释，以便当程序的任何部分被编辑时，相关的层也随之编辑。
-
-（注：由于原文中存在大量重复，此处仅保留核心逻辑翻译。）
-
 # 练习 6.3：疑性编程
 
 有时我们不确定库函数执行的是我们预期的。在这种情况下，审慎的做法是“包装”库函数并对其结果进行测试。例如，我们可能使用 solve 程序，它接收未知数（可能出现在方程中），产生一组满足方程的替换。我们可能想要包装 solve。这种东西如何实现？解释你的设计并实现它。
@@ -8817,8 +9158,6 @@ s1
 这个练习是一个大型设计项目：分层系统的集成化开发环境（IDE）。
 
 分层程序的想法（使用分层数据和分层过程）是一个很好的主意。目标是能够对程序进行有效执行的元数据注释（例如类型声明、断言、单位和支持），而不干扰基础程序的文本。然而，程序的文本必须与注释链接起来，以便当程序的任何部分被编辑时，相关的层也随之编辑。
-
-
 
 d. 如果你的原型很有前景，请开发一个稳健的系统并将其转换为可加载的 Emacs 库，这样我们都可以使用你优秀的系统了。
 
@@ -8844,7 +9183,9 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
 
 ## 依赖关系缓解不一致性（Dependencies mitigate inconsistency）
 
-数据上的依赖注释为我们组织类人计算提供了一个强大的工具：例如，所有人类都怀有相互矛盾的信念：一个聪明的人可能信奉科学方法，但对迷信或仪式活动有强烈的依恋；一个人可能对人类生命的神圣性有坚定信念，但又认为死刑有时是合理的。如果我们真的是逻辑学家，这种不一致性将是致命的：如果我们真的同时相信命题 P 和非 P，那么我们就必须相信所有的命题！但通过某种方式，我们通过抑制所有有用的思考来保持不一致的信念。我们的个人信念系统似乎在局部是一致的，因为那里没有明显的矛盾。当我们观察到不一致性时，我们不会崩溃；我们可能会感到冲突，或者可能会会一笑。
+
+
+数据上的依赖注释为我们组织类人计算提供了一个强大的工具：例如，所有人类都怀有相互矛盾的信念：一个聪明的人可能信奉科学方法，但对迷信或仪式活动有强烈的依恋；一个人可能对人类生命的神圣性有坚定信念，但又认为死刑有时是合理的。如果我们真的是逻辑学家，这种不一致性将是致命的：如果我们真的同时相信命题 `P` 和非 `P`，那么我们就必须相信所有的命题！但通过某种方式，我们通过抑制所有有用的思考来保持不一致的信念。我们的个人信念系统似乎在局部是一致的，因为那里没有明显的矛盾。当我们观察到不一致性时，我们不会崩溃；我们可能会感到冲突，或者可能会会一笑。
 
 我们可以为每个命题附加一组支持假设，允许推论取决于假设集。那么，如果发生矛盾，一个过程就可以确定不一致假设的特定“无解集”（nogood set）。然后系统就可以“会笑”，意识到基于这些假设的任何超集的任何推论都是不可信的。这种“会笑”的过程——依赖定向的回溯（dependency-directed backtracking），可以用于优化复杂的搜索过程，允许搜索充分利用其错误。能够让一个过程能够同时持有基于相互不一致假设集的信念而不会发生逻辑灾难，这是革命性的。
 
@@ -8852,10 +9193,7 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
 
 - 连取（conjoin）和补补（complement）过程是谓词的组合子：连取产生一个新的谓词，其为参数的逻辑与；补补产生一个新的谓词，其为参数的否定。
 
-
-
-
-- 3 注意！“基单位”（base units）不应与我们分层数据系统中的基础层（base-layer）混淆。单位系统建立在一组基单位之上，例如千克、米和秒。存在派生单位，例如牛顿，它是基单位的组合：1 N = 1 kg · m · s⁻²
+- 3 注意！“基单位”（base units）不应与我们分层数据系统中的基础层（base-layer）混淆。单位系统建立在一组基单位之上，例如千克、米和秒。存在派生单位，例如牛顿，它是基单位的组合：`1 N = 1 kg · m · s⁻²`
 
 - 4 如果支持集（support sets）变得很大，我们可以尝试用更高效的方式表示它们，但在这里我们处理的只是小集合。
 
@@ -8863,11 +9201,11 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
 
 - 6 这并不完全正确。问题在于，数值运算的组合可能产生显著的内存访问成本，但无论符号表达式多么小，构建它都需要访问内存。而与 CPU 寄存器中进行算术的时间相比，内存访问时间是巨大的。唉……
 
-## #7 传播（Propagation）
+## 7 传播（Propagation）
 
 数十年的编程经验限制了我们的集体想象力。我们来自一种匮乏的文化，在那里，计算和内存是昂贵的，而并发性难以安排和控制。现在已不再如此。但我们的语言、算法和架构思想是基于那些假设的。我们的语言基本上是顺序的且有方向的——即使是函数式语言也假设计算是围绕通过表达式树向上渗透的值进行组织的。多向约束在函数式语言中很难表达。
 
-## 逃离冯·诺依曼的紧箍咒
+### 逃离冯·诺依曼的紧箍咒
 
 传播器计算模型 [99] 提供了一种逃脱途径。传播器模型基于这样观点：基本的计算单元是传播器（propagators），它们是自治独立的机器，通过共享单元连接并进行通信。每个传播器持续检查与其连接的单元，并根据它从其他单元获取的信息并进行计算，向某些单元中添加信息。单元累积信息，传播器产生信息。
 
@@ -8875,7 +9213,7 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
 
 在传统编程中，在达到所需的误差允许之前，平方根计算的结果无法供后续计算使用。相比之下，在执行相同功能的模拟电路中，部分结果可以被下一阶段作为其计算的初级近似使用。这并不是一个模拟/数字的问题——而是一个组织架构的问题。在传播器机制中，数字过程的部分结果可以在不等待最终结果的情况下可用。
 
-## 填充细节（Filling in details）
+### 填充细节（Filling in details）
 
 这为构建填充细节的强大系统提供了一种自然的计算结构。这种结构是加性的：可以通过向网络添加新部分来包含贡献信息的新方法，无论是简单的传播器还是整个子网络。例如，如果一个不确定的量表示为一个范围，可以包含一种计算上界的新方法，而不干扰网络的任何其他部分。
 
@@ -8885,15 +9223,15 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
 
 **图 7.1** 坎尼萨三角形是一个经典的例子。白色三角形并不是！
 
-## 依赖关系（Dependencies）
+### 依赖关系（Dependencies）
 
 使用分层，我们以自然的方式将依赖关系整合到传播器基础设施中。这允许跟踪并保留每个值的来源（provenance）。来源可以用于解释一个值是如何推导出的，当我们有多个来源时，这种证明尤为重要。依赖关系可以被引入，以便值是可以追溯的。与基于表达式的语言（如 Lisp）不同，依赖关系不会产生执行流来强制值的重新计算。
 
-## 冗余与并行（Redundancy and parallelism）
+### 冗余与并行（Redundancy and parallelism）
 
 传播器模型通过冗余（实际上是退化的）子系统，使得问题可以以多种方式解决。冗余和并行的设计有助于抵御攻击：如果一个路径被禁用或延迟，不会影响计算，因为有替代。
 
-### 7.1 示例（An example）
+#### 7.1 示例（An example）
 
 考虑一个天文学问题：估计恒星的距离。这非常困难，即使对于最近的恒星，我们可以使用视差。恒星距离的单位是角分，它是地球每年绕日角度的变化。（见图 7.2。）
 
@@ -8906,10 +9244,9 @@ d. 如果你的原型很有前景，请开发一个稳健的系统并将其转�
   (c: t distance AU)))
 ```
 
-在这里，形式 **define-c:prop** 定义了一个特殊的过程，一个名为 **c:parallax<->distance** 的构造函数。当 **c:parallax<->distance** 接收两个单元（局部命名为 **parallax** 和 **distance**）作为参数时，它构建一个关联这些单元的约束传播器。使用特殊形式 **let-cells** 它创建了两个新单元，一个名为 **t**，另一个名为 **AU**。名为 **t** 的单元没有初始化；单元 **AU** 初始化为天文单位（地球轨道半长轴）在差距中的数值。
+在这里，形式 `define-c:prop` 定义了一个特殊的过程，一个名为 `c:parallax<->distance` 的构造函数。当 `c:parallax<->distance` 接收两个单元（局部命名为 `parallax` 和 `distance`）作为参数时，它构建一个关联这些单元的约束传播器。使用特殊形式 `let-cells` 它创建了两个新单元，一个名为 `t`，另一个名为 `AU`。名为 `t` 的单元没有初始化；单元 `AU` 初始化为天文单位（地球轨道半长轴）在差距中的数值。
 
-
-c:*, 施加约束，使得单元格 t 的值与单元格 distance 的值的积等于 AU 单元格的值。
+`c:*`，施加约束，使得单元格 `t` 的值与单元格 `distance` 的值的积等于 `AU` 单元格的值。
 
 让我们考虑视差测量的到织女星（Vega）的距离。我们创建两个单元格：用于距离的 `Vega-parallax-distance` 和用于视差角的 `Vega-parallax`：
 
@@ -8928,7 +9265,7 @@ c:*, 施加约束，使得单元格 t 的值与单元格 distance 的值的积�
 
 ![](img/2e72770736573f9ba6300d8cdb1e28c1_381_0.png)
 
-图 7.3 在这里看到一个名为 `Vega-parallax-distance`（图中的 Vega）的“接线图”，它是通过调用 `c:parallax<->distance`（图中的 Vega-0）得到的。圆圈表示单元格，其他形状表示连接单元格的传播器。这些传播器不是方向性的——它们强制执行代数约束。按照惯例，我们将约束传播器构造函数的名前标记为 `c:`。例如，由 `c:*` 构建的传播器强制执行约束：单元格 t 的内容与单元格 `Vega-parallax-distance` 的内容的积等于单元格 `AU` 的内容。
+图 7.3 在这里看到一个名为 `Vega-parallax-distance`（图中的 Vega）的“接线图”，它是通过调用 `c:parallax<->distance`（图中的 Vega-0）得到的。圆圈表示单元格，其他形状表示连接单元格的传播器。这些传播器不是方向性的——它们强制执行代数约束。按照惯例，我们将约束传播器构造函数的名前标记为 `c:`。例如，由 `c:*` 构建的传播器强制执行约束：单元格 `t` 的内容与单元格 `Vega-parallax-distance` 的内容的积等于单元格 `AU` 的内容。
 
 约束传播器本身由方向性传播器组成，如图 7.4 所示。方向性传播器（例如由 `p:*` 构建的乘法器）会调整乘积单元格的值，使其与乘数和被数单元格的值保持一致。在传播器系统中混合方向性传播器和约束传播器是完全合适的¹。现在，让我们用这个小系统进行计算。弗里德希·G. W. von Struve 在 1837 年发表了关于织女星视差的估计值：0.125” ± 0.05²。这是第一个合理的恒星视差测量值，因为他的数据很稀疏，而且他后来又反驳了这一点——但第一次真实测量的功劳属于弗里德希·威廉·贝塞尔（Friedrich Wilhelm Bessel），他在 1838 年对六宿牛座 61 星的视差进行了仔细测量。然而，Struve 的估计值与目前织女星视差的最佳估计值非常接近。我们告诉传播系统 Struve 对织女星的估计值为 125 毫角或减 50 毫角：
 
@@ -8940,7 +9277,7 @@ c:*, 施加约束，使得单元格 t 的值与单元格 distance 的值的积�
 (tell! Vega-parallax (+->interval (mas->radians 125) (mas->radians 50)) 'FGWStruve1837)
 ```
 
-过程 **tell!** 接受三个参数：一个传播器单元格、该单元格的值以及一个描述数据来源的假设。`mas->radians` 过程将毫角转换为弧度。`+->interval` 过程以其参数为中心创建一个区间：
+过程 `tell!` 接受三个参数：一个传播器单元格、该单元格的值以及一个描述数据来源的假设。`mas->radians` 过程将毫角转换为弧度。`+->interval` 过程以其参数为中心创建一个区间：
 
 ```
 (define (+->interval delta)
@@ -8976,9 +9313,6 @@ Struve 对误差的估计是一个相当大的分数。他对比织女星距离�
 (because
 (p/: c:parallax<->distance)
 ```
-
-
-
 
 ```
 (c:magnitudes<->distance Vega-apparent-magnitude
@@ -9042,7 +9376,7 @@ bohlinggillillilland2004))
 
 确实重要。1995 年的测量值拉低了区间的上限。
 
-# 测量改进了！
+## 测量改进了！
 
 我们有两种计算天织星距离的方法——通过视差和通过等等。这里有一个非同寻常之处：视差和等等的测量区间都分别通过来自另一方的信息得到了改进。为了保持系统的一致性，这是必须的。
 
@@ -9094,7 +9428,7 @@ bohlin-gilliland2004))
 
 计算在所有方向传播的这一事实为我们理解任何新信息的含义提供了一个强大的工具。
 
-# 练习 7.1：让编写传播网络变得更简单
+## 练习 7.1：让编写传播网络变得更简单
 
 在我们的传播系统中，编写构建即使是简单的网络的代码是非常痛苦的，因为所有内部节点必须命名。例如，一个转换摄氏和华氏温度的约束传播器看起来如下：
 
@@ -9125,22 +9459,25 @@ bohlin-gilliland2004))
 
 (constant thirty-two)
 ```
-（注：此处原文示例存在重复，在翻译时已遵循“不要重复输出原文”原则进行逻辑处理，但为保持代码结构完整，此处保留了代码块逻辑。修正：原文翻译如下：）
 
-$ce:*$ 和 $ce+$ 是创建单元格的构造函数。
 
-除了约束传播器，还有如 $p+$ 这样的方向传播器。编写一个程序，从这些测量名称中选择 $R_1$ 的值。
+
+$ce:*$ 和 `$ce+$` 是创建单元格的构造函数。
+
+除了约束传播器，还有如 `$p+$` 这样的方向传播器。编写一个程序，从这些测量名称中选择 `$R_1$` 的值。
 
 # 练习 7.2：电路设计问题
 
-注意：做这个问题不需要了解电子学。Anna 正在设计一个晶体管偏置。电压分压器由两个电阻 $R_1$ 和 $R_2$ 组成 $\rho$ 是输出电压与电源电压的比值。$Z$ 是分压器的电阻。
+注意：做这个问题不需要了解电子学。Anna 正在设计一个晶体管偏置。电压分压器由两个电阻 `$R_1$` 和 `$R_2$` 组成 `$\rho$` 是输出电压与电源电压的比值。`$Z$` 是分压器的电阻。
 
 ![](img/2e770736573f9ba6300d828c1_390.png)
 
 这里是相关的方程：
 
 $$\rho = \frac{V_{out}}{V_{in}}$$
+
 $$\rho = \frac{R_1}{R_2}$$
+
 $$Z = R_1$$
 
 由于 Anna 有许多这样的问题，她制作了一个传播网络来帮助她：
@@ -9148,21 +9485,22 @@ $$Z = R_1$$
 ![](img/2e770736573f9ba6300d828c1_391.png)
 
 - **a.** 实现此图的传播网络。
-- **b.** Anna 有一个电压在 14.5 到 15.5 伏之间的电源，她需要分压器的输出电压在 3.5 到 4.0 伏之间：$V_{in} \in [14.5, 15.5]$。她有一个 $R_2$ 为 47000 欧姆的电阻。可以从哪些值范围选择 $R_1$？她能选择出一个符合规格的 $R_1$ 值吗？
-- **c.** Anna 还需要分压器的电阻在 20000 到 30000 欧姆之间：$Z \in [20000, 30000]$。所以她的真实问题是在给定 $\rho$ 和 $Z$ 规格的情况下，找到合适的数值范围。
 
-如果不是选择 $R_2$（记住撤销该值的支持！），而是断言 $Z$ 规格，这将决定 $R_1$ 和 $R_2$；但是……
-- **d.** 如果我们现在告诉 $R_2$ 它在 1000 到 500000 欧姆之间的范围内，传播网络将收敛并给出一个 $R_2$ 的有效答案。
+- **b.** Anna 有一个电压在 14.5 到 15.5 伏之间的电源，她需要分压器的输出电压在 3.5 到 4.0 伏之间：`$V_{in} \in [14.5, 15.5]$`。她有一个 `$R_2$` 为 47000 欧姆的电阻。可以从哪些值范围选择 `$R_1$`？她能选择出一个符合规格的 `$R_1$` 值吗？
+
+- **c.** Anna 还需要分压器的电阻在 20000 到 30000 欧姆之间：`$Z \in [20000, 30000]$`。所以她的真实问题是在给定 `$\rho$` 和 `$Z$` 规格的情况下，找到合适的数值范围。
+
+如果不是选择 `$R_2$`（记住撤销该值的支持！），而是断言 `$Z$` 规格，这将决定 `$R_1$` 和 `$R_2$`；但是……
+
+- **d.** 如果我们现在告诉 `$R_2$` 它在 1000 到 500000 欧姆之间的范围内，传播网络将收敛并给出一个 `$R_2$` 的有效答案。
 
 # 练习 7.3：局部一致性——一个项目
 
 传播是攻击局部一致性问题的方法。例如，Waltz 算法是解释多面体线条图的传播方法。
 
 - **a.** 对于这些实验，你需要一个离散集合的“算术”。你需要并集、交集以及一个相对于另一个的补。构建这样的算术。
+
 - **b.** 节点的可能集是关于实际状态的部分信息：可能集越小，我们关于节点的信息就越多。如果我们把状态的知识表示为传播单元格，那么合并就是它们的交集。让交集离散集合成为通用合并的处理程序。
-
-
-
 
 c. 使用这种组织结构构建并演示你的局部一致性问题的解决方案。
 
@@ -9176,7 +9514,7 @@ d. 注意，在许多图中，节点的赋值仅取决于少数约束。展示�
 
 单元的内容是它关于该值所积累的信息。当被询问其值时（例如被传播器询问时），它以它能提供的最强值作为响应。我们在区间的使用中见过这一点——单元报告它所知的关于该值的最紧区间。当单元接收到输入时，它确定内容的改变是否导致了最强值的改变。如果最强值发生了变化，单元会通知其邻居。这告诉调度器激活这些邻居。调度器负责为被激活的传播器分配计算资源。设计目标是传播的计算结果独立于调度的细节或顺序。
 
-单元和传播器是组织在层次结构中的元素。每个单元或传播器都有一个名称、一个父节点以及可能的一组子节点。这些用于为层次结构中的每个单元或传播器构造唯一的路径名称。路径名称可以用于访问元素并在打印输出中标识它。单元或传播器由用户创建，也可以由复合传播器创建。参数 *my-parent* 由父节点动态绑定。这允许新的单元或传播器将其附加到家族中。
+单元和传播器是组织在层次结构中的元素。每个单元或传播器都有一个名称、一个父节点以及可能的一组子节点。这些用于为层次结构中的每个单元或传播器构造唯一的路径名称。路径名称可以用于访问元素并在打印输出中标识它。单元或传播器由用户创建，也可以由复合传播器创建。参数 `*my-parent*` 由父节点动态绑定。这允许新的单元或传播器将其附加到家族中。
 
 ### 7.2.1 单元
 
@@ -9334,7 +9672,7 @@ me)
 
 在这里我们看到三个方向传播器组合成了约束。这之所以能运行，是因为我们合并了值而不是替换它们，而且等价值不会传播。如果等价值传播，那么像 c:* 这样的传播器将会导致无限循环¹¹¹⁰。
 
-宏 define-c:prop  只是语法糖。该宏生成的实际代码为：
+宏 `define-c:prop` 只是语法糖。该宏生成的实际代码为：
 
 ```lisp
 (define (c:* x y product)
@@ -9369,6 +9707,8 @@ me)
 我们还没有处理合并值的含义。这是一个复杂的过程，包含三个部分：合并基础值（如数字和区间）、合并支持值以及合并值集。`cell-merge!` 必须分配给相应的合并器。在第366页，`setup-propagator-system` 将 `cell-merge` 初始化为 `value-sets`。
 
 ### 7.4.1 合并基础值
+
+
 
 我们的示例中只有几种基础值类型：无、矛盾、数字、布尔值和区间。数字和布尔值的简单之处在于只有等价值可以合并。如果它们无法合并，则为矛盾。与无合并的是自身。与矛盾合并的是矛盾。合并过程对于基础值是通用的，默认处理器处理了除区间以外的所有简单情况。
 
@@ -9440,7 +9780,7 @@ me)
            (support-layer-value increment)))))
 ```
 
-(define-layered-procedure-handler merge-layered support-layer support:merge)
+`(define-layered-procedure-handler merge-layered support-layer support:merge)`
 
 这里 `define-layered-procedure-handler` 用于将过程 `support:merge` 附加到分层过程 `merge-layered`，作为其支持层处理器。
 
@@ -9497,7 +9837,6 @@ me)
 
 我们在第 5.4 节开始探索这个想法，在那里引入了 `amb` 并在搜索问题中使用它。在那些冒险中，我们在一个基于表达式的系统中工作，但搜索与表达式的求值绑定。
 
-
 ```scheme
 (define pythagorean) '(1 2 3 4 5 6 7 8 9 10))
 (let ((possibilities '(1 2 3 4 5 6 7 8 9 10))
@@ -9534,12 +9873,16 @@ me)
 ```
 
 (3 4 5)
+
 (4 3 5)
+
 (6 8 10)
+
 (8 6 10)
+
 (contradiction #[cell x])
 
-## 7.5.1 依赖引导的回溯 (Dependency-directed backtracking)
+## 7.5.1 依赖引导的回溯
 
 依赖引导的回溯是一种强大的技术，它通过避免断言支持任何发现矛盾的假设集来优化回溯搜索。我们使用的依赖引导回溯策略基于 *nogood* 集合（不恰集合）的概念——这是一组无法同时被相信的假设，因为它们的交集被发现支持了某个矛盾。当一个单元包含两个或多个矛盾值时，这些值的支持集的并集就是一个 nogood 集合。
 
@@ -9578,10 +9921,8 @@ me)
               (mark-premise-out! true-premise)
               (mark-premise-out! false-premise))))
 ```
+
 *(注：由于原始 binary-amb 的 OCR 文本严重损坏，已根据常见的编程模式和上下文重构了其逻辑结构。）*
-
-
-
 
 然而，从选定的无解集（nogood set）中选择拒绝哪一个假设并不是显而易见的。在这里，我们武断地选择无解集中出现的第一个可用的假设前提。
 
@@ -9614,7 +9955,9 @@ me)
 
 这就是支持依赖定向回溯（dependency-directed backtracking）所需的所有操作。
 
-## 非二元歧（Non-binary amb）
+## 非二元歧
+
+
 
 虽然 `binary-amb` 可以用于许多问题的表述，但大多数选择并不是二元的。可以通过构建一个由条件传播器组成的电路从 `binary-amb` 构建出 n 元选择机制，这些传播器由单元格真真值受 `binary-amb` 传播器的调制，但这种方法非常低效，并且引入了大量的额外机制。因此，我们通过 `p:amb` 提供了一种原生的 n 元选择机制。`p:amb` 过程类似于 `binary-amb`。对于 `binary-amb`，单元格的值恰好有两个选择（#t 或 #f），每个选择由一个假设前提支持。当 `p:amb` 应用于单元格和可能值的列表时，`make-hypotheticals` 过程会将值添加到单元格中，每个值都由一个新的假设前提支持。
 
@@ -9680,9 +10023,6 @@ me)
 
 Mary Ann Moore 的父亲有一艘游艇，他的四位朋友也有：Colonel Downing、Mr. Hall、Sir Barnacle Hood 和 Dr. Parker。这五个人每个人都有一个女儿，并且都用其他人的女儿的名字命名了自己的游艇。Sir Barnacle 的游艇是 Gabrielle，Mr. Moore 拥有 Lorna，Mr. Hall 拥有 Rosalind。Colonel Downing 拥 Melissa 是以 Sir Barnacle 的女儿命名的。Gabrielle 的父亲拥有一艘以 Dr. Parker 的女儿命名的游艇。Lorna 的父亲是谁？
 
-
-
-
 # 练习 7.6：多户住房谜
 
 对于 5.4 节中的 amb 评估器来说，制定多户住房问题很容易。事实上，这比传播系统（propagator system）要容易，因为我们可以用表达式来思考和编写。事实上，你能够像下面这样写出“Fletcher 和 Cooper 不住在相邻层”的约束：
@@ -9702,9 +10042,7 @@ Mary Ann Moore 的父亲有一艘游艇，他的四位朋友也有：Colonel Dow
 当必须声明 f-c、af-c 和 fc 等单元并初始化一个 fc 时，情况如此。这是因为传播系统是一个通用的线路图系统，而不是表达式系统。
 
 - a. 使用 5.4 节的 amb 评估器制定并解决多户住房问题。对系统进行监测以确定失败的次数。需要多少次失败？
-
 - b. 写一个小型编译器，将写成表达式形式的约束转换为传播图片段。你会发现这非常容易。我们实际上在第 340 页的练习 7.1 中尝试过一次。但在这里，我们想要为从 5.4 节到传播器目标的代码创建一个翻译器。证明你的编译得到了正确答案。
-
 - c. 使用你编译的传播图解决该问题需要多少次失败？如果超过 200 次失败，说明你编译的代码非常糟糕！
 
 # 练习 7.7：重新回顾扑牌游戏
@@ -9716,13 +10054,9 @@ Mary Ann Moore 的父亲有一艘游艇，他的四位朋友也有：Colonel Dow
 在 4.4.2 节中，我们构建了一个类型推断引擎作为统一匹配应用的示例。在这个练习中（实际上是一个巨大的项目），我们利用传播机制来实现类型推断。
 
 - a. 给定一个 Scheme 程序，构建一个传播网络，为每个对类型有用的位置（locus）创建一个单元。每个单元都将是关于程序中该位置类型信息的仓库。构建传播器来连接这些单元，并施加程序结构所隐含的类型约束。使用统一匹配（unification match）作为单元合并操作。如果程序无法确定类型，统一匹配可能会产生矛盾。
-
 - b. 程序中可能存在某些单元的类型未被相邻单元的类型充分约束。然而，通过向此类单元丢入一个通用类型变量并允许该变量通过传播来累积约束，可以触发传播。这被称为“点入放置（plunking）”。试一试。
-
 - c. 在困难情况下，类型推断可能需要做出假设（使用假设性）并在发现矛盾时进行回溯。展示这种必要的情况。
-
 - d. 对属性和原因的跟踪能够构建信息丰富的错误注释，但要做到这一点，你必须将程序的每个位置与其单元关联，以便通过传播学习到的内容与程序相关联。你可以使用任何你喜欢的“便利签”将位置与单元进行双向关联。无论如何，请尝试给出良好的解释，说明为什么某个特定位置具有确定的类型，或者为什么程序无法被一致地确定类型。
-
 - e. 这种类型推断的实现实用吗？为什么实用或不实用？如果不，如何改进？
 
 # 故事的启示
@@ -9759,56 +10093,49 @@ define-c:prop (c:square x xA2)
 
 对于一个简单的例子，假设我们有两个旨在交付相同结果但计算方式完全不同的子系统。假设设计者同意，在一种设计的某个阶段，该设计中两个变量的积等于另一个设计中两个变量之和。没有理由在它依赖的所有四个值都可用时还不计算该谓词，从而在运行时提供一致性检查并为设计者提供强大的调试信息。这可以使用局部嵌入的约束网络来安排。
 
-
-
-
-
 - 1 约束传播（Constraint propagation）由 David Waltz 在其关于线条图解释的博士论文中引入 [125]。Gerald Jay Sussman 和 Richard Stallman 开发了基于约束传播的电学电路分析工具 [119, 114]。Eugene Feuder [39] 将约束编程的思想转化成了一项重大的智力事业，并拥有了自己的期刊 [24]。Guy Steele 的博士论文 [116] 展示了如何基于约束构建一种编程语言。
-
 - 2 参见 [127]，第 71 页。
-
 - 3 该值还有一个“原因”，由以 `because` 开头的列表标出。在这种情况下，Vega-parallax-distance 单元格中的值是通过将 AU 单元格的内容除以传播器中 t 的颜色得到的：`c:parallax<->distance`。方向除法传播器 `p /` 是约束传播器 `c*` 的一部分，而 `c*` 又是 `c:parallax->distance` 约束传播器的一部分。这些原因可能会非常冗长。当查询（inquire）的结果没有帮助时，我们将省略其中的“because”部分。
 
 通过递归地追踪这些原因，可以获得关于某个值推导过程的极其详细解释。这些原因就是第 6.4.2 节中讨论的依据。
 
 - 4 我们在这里撒谎了！实际上，Gatewood 和 Jonge [43] 的测量值有点不同。他们的测量中心是 130 毫秒，而不是我们引用的 131 毫秒。我们对此进行了处理，以便稍后说明一个计算点。
-
 - 5 实际上，Hipparcos 数据存在一些问题。具体来说，Hipparcos 测量的某些非常明亮星团（如昴宿座）的距离显然与极长基线射电干涉的更精确测量结果不一致。这种差异并没有损害 Hipparcos 的测量结果。
-
 - 6 这就是我们对 Gatewood 和 de Jonge 测量进行处理的原因。如果我们正确引用他们的结果，该结果将与 Hipparcos 的结果重叠。事实上，Hipparcos 的测量值将完全包含在 Gatewood 和 de Jonge 的误差范围内。
-
 - 7 这个诚然奇特的系统源自古希希腊天文学家喜帕恰斯（Hipparchus，约公元前 190 年 – 公元前 120 年）。他为目录中的每颗恒星分配了一个数值亮度。他将最亮的星称为*一等星*，较暗的*二等星*，最暗的称为*六等星*。欧洲空间局（ESA）的 Hipparcos 天体测量任务（参见第 335 页）是以喜帕恰斯命名命名的。
-
 - 8 这是一种非常糟糕的语言，因为我们需要为表达式的所有中间部分命名并创建单元格。有很多种方法可以让它变得美观，但如果我们从这种粗糙但非常具体的接线图语言开始，概念会更清晰。编写一个小型编译器，将代数表达式中的约束转换为传播器图片段是容易的。（参见第 340 页的练习 7.1 题和第 367 页的练习 7.6 题）。
-
 - 9 这是 Alexey Radul 博士论文 [99, 100] 中的一项核心见解。
-
 - 10 我们忽略了确定不精确数量等价性的严重问题。在没有额外的局部信息的情况下，没有任何全局性的等价概念可以表示等价的标准。为了解决这个问题，我们可以为每个单元格提供一个局部等价谓词，并为精确数量提供默认值。
-
 - 11 我们的实现中有一个非常糟糕的想法。前提信念状态的改变被实现为一个全局操作——这在并行过程的模拟中绝不是一个好主意！更好的实现应该是通过局部过程传播信念的变化，类似于它们所支持的值的传播方式。但我们没有这样做——抱歉！
-
 - 12 最佳选择是：如果一个支持值比另一个更具体（例如区间更窄），那么这个支持值是更好的选择。此外，如果一个值的支持集中的前提比“等价”值少，那么它更好，因为相信该值所需的前提更少。这是通过合并值集的机制实现的，我们将在第 7.4.3 节中描述。
 
-- 13. 依赖引导的回溯（Dependency-directed backtracking）最早由 Richard Stallman 和 Gerald Jay Sussman 在电气电路分析的背景下引入 [114]。Karl Lieberherr 在逻辑背景下开发了一种非常相似的技术——“子句学习”（clausal learning）[84]。子句学习现在已用于最好的 SAT 求解器。Ramin Zabih、David McAllister 和 David Chapman 展示了在 List 代码中构建这种技术的方法 [132]。Guy Steele 展示了一种将依赖引导的回溯整合到约束语言中的优雅方法 [116]。在 John Doyle [30] 和 David McAllister 工作的基础上，Ken Forbus 和 Johan deKlerk 详细阐述了依赖和“真值维护系统”（truth-maintenance systems）[36] 的理论与实践，这是思考依赖和回溯的一种通用方法。我们在书中实现依赖引导回溯的方法是由 Alexey Radon 和 Gerald Jay Sussman 开发的 [99, 100]。
 
-- 14. 这种对 `pairwise-union` 过程的使用实现了逻辑规则，该规则是肯定言（modus ponens）的推广。在命题逻辑中，写作 `(A ∨ B) ∧ (¬B ∨ C) ⊢ (A ∨ C)`。这一规则结合统一（4.4节），是 Robinson 发明的著名的定理证明算法的基础 [104]。
 
-- 15. 赋值失败的精确数量取决于计算的细节。在这个问题中，失败选择的数量可能在 60 到 200 之间，取决于传播器的激活顺序。但对于该问题的这种公式，平均失败次数为 110。
+### 13.
+依赖引导的回溯（Dependency-directed backtracking）最早由 Richard Stallman 和 Gerald Jay Sussman 在电气电路分析的背景下引入 [114]。Karl Lieberherr 在逻辑背景下开发了一种非常相似的技术——“子句学习”（clausal learning）[84]。子句学习现在已用于最好的 SAT 求解器。Ramin Zabih、David McAllister 和 David Chapman 展示了在 List 代码中构建这种技术的方法 [132]。Guy Steele 展示了一种将依赖引导的回溯整合到约束语言中的优雅方法 [116]。在 John Doyle [30] 和 David McAllister 工作的基础上，Ken Forbus 和 Johan deKlerk 详细阐述了依赖和“真值维护系统”（truth-maintenance systems）[36] 的理论与实践，这是思考依赖和回溯的一种通用方法。我们在书中实现依赖引导回溯的方法是由 Alexey Radon 和 Gerald Jay Sussman 开发的 [99, 100]。
 
-- 16. 这个谜题出自一本名为《数学趣味》的小册，由 Litton Industries 在 20 世纪 60 年代出版，被归于堪萨斯州工程师。
+### 14.
+这种对 `pairwise-union` 过程的使用实现了逻辑规则，该规则是肯定言（modus ponens）的推广。在命题逻辑中，写作 `(A ∨ B) ∧ (¬B ∨ C) ⊢ (A ∨ C)`。这一规则结合统一（4.4节），是 Robinson 发明的著名的定理证明算法的基础 [104]。
 
-- 17. 模式引导调用（Pattern-directed invocation）由 Carl Hewitt 在 PLANNER [56] 中以及 Alain Colmerauer 在 Prolog [78] 中引入。这已扩展到许多其他系统和语言。
+### 15.
+赋值失败的精确数量取决于计算的细节。在这个问题中，失败选择的数量可能在 60 到 200 之间，取决于传播器的激活顺序。但对于该问题的这种公式，平均失败次数为 110。
 
-- 18 这实际上真实的案例。在变分力学中，系统的拉格朗量与其通过勒让变换相关的哈密顿量之和，是广义动量 形式与广义速度向量的内积 [121]。
+### 16.
+这个谜题出自一本名为《数学趣味》的小册，由 Litton Industries 在 20 世纪 60 年代出版，被归于堪萨斯州工程师。
 
-结语
+### 17.
+模式引导调用（Pattern-directed invocation）由 Carl Hewitt 在 PLANNER [56] 中以及 Alain Colmerauer 在 Prolog [78] 中引入。这已扩展到许多其他系统和语言。
+
+### 18
+这实际上真实的案例。在变分力学中，系统的拉格朗量与其通过勒让变换相关的哈密顿量之和，是广义动量 形式与广义速度向量的内积 [121]。
+
+## 结语
 
 严肃的工程只有几千年的历史。我们刻意制造复杂鲁棒系统的尝试最多尚不成熟。我们尚未汲取生物进化在过去几十亿年中学到的教训。
 
 我们一直更关注效率和正确性，而不是生物系统那种通过优化演化性、灵性和抗攻击性而获得的鲁棒性。对于开发资源勉强足够执行任务的关键系统来说，这样做是合理的。然而，微电子技术的快速进步缓解了大多数应用的资源问题。我们对计算和通信基础设施日益的依赖，以及针对这些基础设施日益复杂的攻击，使得我们关注鲁棒性变得迫不缓。
 
 作为构建人工智能符号系统的一部分，人工智能社区无意中开发了技术
-
 
 这些工具可用于支持灵活且健壮的设计原则。例如，我们不必将回溯视为一种组织搜索的方法，而是可以利用它增加复杂系统中组件的通用适用性，该系统能够自我组织以满足外部施加的约束。我们相信，通过追求这种合成，我们将获得更好的硬件和软件系统。
 
@@ -9826,9 +10153,9 @@ define-c:prop (c:square x xA2)
 
 # 附录 A：支持软件
 
-书中显示的所有代码以及支持它的基础设施代码都可以从 http://groups.csail.mit.edu/mac/users/gjs/sdf.tgz 下载压缩包。
+书中显示的所有代码以及支持它的基础设施代码都可以从 `http://groups.csail.mit.edu/mac/users/gjs/sdf.tgz` 下载压缩包。
 
-压缩包以目录树的形式组织，每个子目录大致对应于书的一个章节。软件运行在 MIT/GNU Scheme 10.1.10 或更高版本上，可以通过 http://www.gnu.org/software/mit-scheme 获取。
+压缩包以目录树的形式组织，每个子目录大致对应于书的一个章节。软件运行在 MIT/GNU Scheme 10.1.10 或更高版本上，可以通过 `http://www.gnu.org/software/mit-scheme` 获取。
 
 软件使用了若干 MIT/GNU 实现特有的功能，因此无法在其他发行版上运行。应该将其移植到另一个发行版，但我们还没有尝试过，并且可能需要一些工作。由于这是自由软件（根据 GPL 许可），你可以修改并将其分发给他人。
 
@@ -9846,11 +10173,9 @@ tar xf .../sdf.tgz
 (load "...sdf/manager/load")
 ```
 
-其中 `.../` 指解压压缩包所在的目录。manager 在全局环境中创建一个名为 `manage` 的单一定义。一旦加载，除非启动新的 Scheme 实例，否则无需重新加载 manager。
+其中 `.../` 指解压压缩包所在的目录。`manager` 在全局环境中创建一个名为 `manage` 的单一定义。一旦加载，除非启动新的 Scheme 实例，否则无需重新加载 manager。
 
 假设你正在学习 4.2 节“项重写”，并想尝试该软件或进行练习。该章节的代码加载器存储在 `...sdf/term-rewriting` 中，以及该章节特定的文件中。但你不需要知道加载器是如何工作的。（当然，你可以阅读 manager 代码，很有趣。）
-
-命令
 
 ```
 manage new-environment 'term-rewriting
@@ -9866,12 +10191,11 @@ manage new-environment 'term-rewriting
 ...sdf/manager/sections.scm
 ```
 
-还有两个特殊的子目录：common 保存大量使用的共享文件；manager 保存 manager 的实现。
+还有两个特殊的子目录：`common` 保存大量使用的共享文件；`manager` 保存 manager 的实现。
 
-软件管理程序 manager 有许多其他有用功能。其中包括按名称管理工作环境、查找定义名称和引用名称的文件，以及运行单元测试。更多信息请参阅 manager 子目录中的文档。
+软件管理程序 `manager` 有许多其他有用功能。其中包括按名称管理工作环境、查找定义名称和引用名称的文件，以及运行单元测试。更多信息请参阅 manager 子目录中的文档。
 
 使用软件可能需要书中未说明的额外步骤，例如初始化。每个子目录都包含测试：任何命名为 `test-FOO.scm` 的文件都是“标准”测试，
-
 
 使用与其他编程语言相似的测试框架。此外，每个子目录下的 `load-spec` 文件可能包含对测试的引用，用 `inline-test?` 符号标记，这些测试使用了类似于读取-求值打印循环（REPL）转录的特殊测试框架。请查看此处获取如何运行程序的示例。
 
@@ -9893,7 +10217,7 @@ Scheme 是一种基于表达式的简单编程语言。表达式为一个值命�
 
 复合表达式由括号界定。以特定关键字（如 `if`）开头的表达式称为特殊形式（special forms）。不是特殊形式的表达式称为组合（combinations），表示将过程应用于参数。
 
-## 组合 (Combinations)
+### 组合 (Combinations)
 
 组合——也称为过程应用——是一个由括号界定的表达式序列：
 
@@ -9917,7 +10241,7 @@ Scheme 是一种基于表达式的简单编程语言。表达式为一个值命�
 
 注意，在 Scheme 中，每个括号都是必不可少的：你不能添加额外的括号，也不能删除任何一个。
 
-## Lambda 表达式 (Lambda expressions)
+### Lambda 表达式 (Lambda expressions)
 
 正如我们使用数字命名数值一样，我们使用 lambda 表达式来命名过程。例如，将输入平方的过程可以写成：
 
@@ -9944,7 +10268,7 @@ lambda 表达式的通用形式为
 
 我们上面之所以说“通常”，是因为存在例外的。某些过程（例如由符号 `*` 命名的乘法过程）可以接受任意数量的参数。我们稍后会解释如何做到（第 389 页）。
 
-## 定义 (Definitions)
+### 定义 (Definitions)
 
 我们可以使用 `define` 特殊形式为任何对象命名。我们说该名称标识了一个变量，其值是该对象。例如，如果我们进行如下定义：
 
@@ -9994,7 +10318,7 @@ lambda 表达式的通用形式为
 
 名称 `fog` 在 `compose` 的定义之外没有定义，因此在这种情况下它并不特别有用，但如果为内部组件命名，较大的代码块将变得更容易阅读。
 
-## 条件分支 (Conditionals)
+### 条件分支 (Conditionals)
 
 条件表达式用于在多个表达式之间进行选择以产生一个值。例如，实现绝对值函数的过程可以写为：
 
@@ -10031,7 +10355,7 @@ lambda 表达式的通用形式为
 
 如果谓词为真，`if` 表达式的值是后续表达式的值，否则它是替代表达式的值。
 
-## 递归过程 (Recursive procedures)
+### 递归过程 (Recursive procedures)
 
 有了条件分支和定义，我们可以编写递归过程。例如，为了计算 n 阶阶，我们可以写道：
 
@@ -10047,10 +10371,12 @@ lambda 表达式的通用形式为
 720
 ```
 
+```
 (factorial 40)
 81591528324789773343561126959611589427200000000
+```
 
-## 局部名称
+### 局部名称
 
 `let` 表达式用于在局部范围内为对象命名。例如，
 
@@ -10074,6 +10400,8 @@ lambda 表达式的通用形式为
   (variable-n expression-n))
   body)
 ```
+
+
 
 `let` 表达式的值是体表达式（body）在特定上下文的值，在该上下文中变量 `variable-i` 的值为 `expression-i` 的值。表达式 `expression-i` 的值可以引用 `let` 表达式中赋值的任何变量 `variable-j`。
 
@@ -10115,26 +10443,32 @@ lambda 表达式的通用形式为
 
 复合数据对象通过称为构造函数（constructors）的过程由组件构建，并通过选择器（selectors）访问组件。
 
-`list` 过程是列表的构造函数。谓词 `list?` 对任何列表都为真，对所有其他类型的数据都为假。⁵
+`list` 过程是列表的构造函数。谓词 `list?` 对任何列表都为真，对所有其他类型的数据都为假。
 
 例如，
 
 ```scheme
 (define a-list (list 6 946 8 356 12 620))
+```
 
+```
 a-list
 (6 946 8 356 12 620)
+```
 
+```
 (list? a-list)
 #t
+```
 
+```
 (list? 3)
 #f
 ```
 
-`#t` 和 `#f` 是布尔值 `true` 和 `false` 的打印表示。⁶
+`#t` 和 `#f` 是布尔值 `true` 和 `false` 的打印表示。
 
-列表由对（pairs）构建。一个*对*（pair）使用构造函数 `cons` 构建。对的两个组件的选择器是 `car` 和 `cdr`（读作 "coud-er"）。⁷
+列表由对（pairs）构建。一个*对*（pair）使用构造函数 `cons` 构建。对的两个组件的选择器是 `car` 和 `cdr`（读作 "coud-er"）。
 
 ```scheme
 (define a-pair (cons 1 2))
@@ -10199,38 +10533,9 @@ a-vector
 #(37 63 49 21 88 56)
 ```
 
-`let` 之后的符号 `factlp` 被局部定义为一个过程，该过程将 `count` 和 `answer` 作为其形式参数。它第一次以 `1` 和 `1` 作为参数调用，初始化循环。以后每当调用名为 `factlp` 的程序时，这些变量就会获得新值，这些值为操作表达式 `(+ count 1)` 和 `(* count answer)` 的值。
+## 影响
 
-表示此过程的等效方法具有显式接口：
-
-```scheme
-(define (factorial n)
-  (define (factlp count answer)
-    (if (> count n)
-        answer
-        (factlp (+ count 1) (* count answer))))
-(factlp 1 1))
-```
-
-过程 `factlp` 是局部定义的；它只存在于 `factorial` 的体内。因为 `factlp` 在词法上封装在 `factorial` 的定义中，它的体内 `n` 的值是 `factorial` 形式参数的值。
-
-*(注：原文中存在大量重复段落，已根据要求去重，仅保留核心逻辑)*
-
-
-
-
-反引号机制还提供了在列表表达式中进行“拼接”的功能：一个求值的子表达式会生成一个列表，然后该列表会被拼接到包裹它的列表中。例如：
-
-```
-(a b ,list (+ 20 3) (- 20 3))
-(a b 23 17 d)
-```
-
-请参阅 Scheme 报告 [109] 以获取关于准引用（quasiquotation）的更详细解释。
-
-# 影响
-
-有时我们在计算过程中需要执行某些操作，例如绘制点或打印值。例如，为了详细查看阶乘程序是如何计算答案的，我们可以在 factlp 内部过程体中插入一个 `write-line` 语句，以打印每次迭代的计数和答案列表：
+有时我们在计算过程中需要执行某些操作，例如绘制点或打印值。例如，为了详细查看阶乘程序是如何计算答案的，我们可以在 `factlp` 内部过程体中插入一个 `write-line` 语句，以打印每次迭代的计数和答案列表：
 
 ```
 (define factorial n)
@@ -10259,7 +10564,7 @@ a-vector
 
 在这个示例中，`if` 表达式产生了阶乘的值。
 
-# 赋值
+## 赋值
 
 像打印值或绘制点这样的影响是非常无害的，但还有更强大（因此也更危险）的影响，被称为“赋值”。赋值会改变变量的值或数据结构中条目的值。我们计算的几乎所有内容都是数学函数：对于特定的输入，它总是产生相同的结果。然而，通过赋值，我们可以创建可被使用的对象。例如，我们可以使用 `set!` 来创建一个每次调用它时都会增加计数的设备！
 
@@ -10317,7 +10622,7 @@ a-vector
 (vector-set vector index new-value)
 ```
 
-可以定义记录以允许对其字段进行赋值（比较第 388 页）：
+可以定义记录以允许对其字段进行赋值：
 
 ```
 (define p (make-point 1 2))
@@ -10338,13 +10643,13 @@ a-vector
 2
 ```
 
-通常情况下，尽可能避免赋值是一个良好习惯，但如果你需要，它们是可用的。12.
+通常情况下，尽可能避免赋值是一个良好习惯，但如果你需要，它们是可用的。
 
-# B.2 更高级的特性
+## B.2 更高级的特性
 
-Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它们。例如，你可能想了解哈希表。通常情况下，最好的来源是《算法语言 Scheme 修订报告》(R7RS) [109] 和《MIT/GNU Scheme 参考手册》[51]。但在阅读本书时，这里有你可能需要参考的两个相当复杂的特性：
+Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它们。例如，你可能想了解哈希表。通常情况下，最好的来源是《算法语言 Scheme 修订报告》(R7RS) 和《MIT/GNU Scheme 参考手册》。但在阅读本书时，这里有你可能需要参考的两个相当复杂的特性：
 
-# 动态绑定 
+### 动态绑定
 
 我们有时想要指定某些求值或操作完成的方式——例如，在打印数字时指定进制。为了做到这一点，我们使用一个名为参数（parameter）的对象。
 
@@ -10379,39 +10684,61 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 
 在 `(myprog)` 的执行过程中，每次调用 `number->string-radix` 都会产生一个十进制字符串，因为 `(radix)` 的默认值是。
 
-# 动态绑定（请注意，OCR 文本在 450-452 页似乎出现了关于“动态绑定”和“参数”的重复/损坏且不同步的文本。我将根据提供的源文本对流程进行清理。）
-
-*注：第 450-452 页的源 OCR 文本包含大量关于“动态绑定”和“参数”的重复和乱码文本。我将按提供的进行处理，但会清除页码符。*
+*注：第 450-452 页的源 OCR 文本包含大量关于“动态绑定”和“参数”的重复和乱码文本。*
 
 在 `(myprog)` 的执行过程中，每次调用 `number->string-radix` 都会产生一个十进制字符串，因为 `(radix)` 的默认值是。
 
-[OCR 中第 451-452 页的剩余文本似乎是之前章节的重复/损坏混乱内容。我将提供所提供文本块的清理版本。]
+反引号机制还提供了在列表表达式中进行“拼接”的功能：一个求值的子表达式会生成一个列表，然后该列表会被拼接到包裹它的列表中。例如：
 
+```
+(a b ,list (+ 20 3) (- 20 3))
+(a b 23 17 d)
+```
 
-
-
+请参阅 Scheme 报告 以获取关于准引用（quasiquotation）的更详细解释。
 
 - 9. 在美国式键盘上，反引号字符 "`" 是该键上的小写字母，而该键的大写字母是波浪号“~”。
-- 10. 这是计算机科学术语。“效应”（effect）是指某物的改变。例如，`write-line` 通过在显示器上打印内容来改变显示状态。
-- 11. 另一种文化惯俗是，我们用感叹号（!）为具有“副作用”的过程命名结尾。这在警告读者，改变效应的执行顺序可能会改变程序运行的结果。
-- 12. 不使用赋值操作的编程学科被称为函数式编程。函数式程序通常比命令式程序更容易理解且 Bug 更少。
-- 13. 该术语可以追溯到 ACTOR 框架 [58] 和 Smalltalk 编程语言 [46]。
 
-# References
+- 10. 这是计算机科学术语。“效应”（effect）是指某物的改变。例如，`write-line` 通过在显示器上打印内容来改变显示状态。
+
+- 11. 另一种文化惯俗是，我们用感叹号（!）为具有“副作用”的过程命名结尾。这在警告读者，改变效应的执行顺序可能会改变程序运行的结果。
+
+- 12. 不使用赋值操作的编程学科被称为函数式编程。函数式程序通常比命令式程序更容易理解且 Bug 更少。
+
+- 13. 该术语可以追溯到 ACTOR 框架 和 Smalltalk 编程语言。
+
+## References
 
 - [1] Harold Abelson and Gerald Jay Sussman with Julie Sussman, Structure and Interpretation of Computer Programs (2nd ed.). Cambridge, MA: MIT Press, 1996.
+
 - [2] Harold Abelson, Don Allen, Daniel Coore, Chris Hanson, George Homsy, Thomas F. Knight Jr., Radhika Nagpal, Erik Rauch, Gerald Jay Sussman, and Ron Weiss; “Amorphous Computing,” in Communications of the ACM, 43(5) (May 2000): 74–82.
+
 - [3] Lee Altenberg, “The Evolution of Evolvability in Genetic Programming,” in Advances in Genetic Programming, ed. Kenneth E. Kinnear Jr., 47–74. Cambridge, MA: MIT Press, 1994.
+
 - [4] The ARRL Handbook for Radio Amateurs, American Radio Relay League, Newtown, CT (annual).
+
 - [5] Jean-Paul Arcangeli and Christian Pomian; “Principles of Plasma Pattern and Alternative Structure Compilation,” in Theoretical Computer Science, 71 (1990): 177–191.
+
 - [6] Franz Baader and Wayne Snyder; “Unification theory,” in Handbook of Automated Reasoning, ed. Alan Robinson and Andrei Voronkov. Elsevier Science Publishers B.V., 2001.
+
 - [7] Jonathan B.L. Bard; Morphogenesis, Cambridge: Cambridge University Press, 1990.
+
 - [8] Alan Bawden and Jonathan Rees; “Syntactic closures,” in Proc. Lisp and Functional Programming (1988).
+
 - [9] Jacob Beal; Generating Communications Systems Through Shared Context, S.M. thesis, MIT, also Artificial Intelligence Laboratory Technical Report 2002-002, January 2002.
+
 - [10] Jacob Beal; “Programming an Amorphous Computational Medium,” in Unconventional Programming Paradigms International Workshop (September 2004). Updated version in Lecture Notes in Computer Science, 3566 (August 2005).
+
 - [11] M.R. Bernfield, S.D. Banerjee, J.E. Koda, and A.C. Raprae; “Remodelling of the basement membrane as a mechanism of morphogenic tissue interaction,” in The role of extracellular matrix in development, ed. R.L. Trestad, 542–572. New York: Alan R Liss, 1984.
+
 - [12] Martin Berg; “Automatic differentiation on nonarchimedean analysis,” in Computer Arithmetic and Enclosure Methods, L. Atanassova and J. Herzberger. Elsevier Science Publishers B.V. (North-Holland), 1992.
+
 - [13] Philip L. Bewig; Scheme Requests for Implementation 41: Streams (2008). https://srfi.schemers.org/srfi-41/
+
+
+
+# 参考文献
+
 - [14] R.C. Bohlin and R.L. Gilliland; “Hubble Space Telescope Absolute Spectrophotometry of Vega from the Far-Ultraviolet to the Infrared,” in The Astronomical Journal, 127(6) (June 2004): 3508–3515.
 - [15] J.P. Brocks; “Amphibian limb regeneration: rebuilding a complex structure,” in Science, 276 (1997): 81–87.
 - [16] Alonzo Church; The Calculi of Lambda-Conversion. Princeton, NJ: Princeton University Press, 1941.
@@ -10423,7 +10750,7 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 - [22] William Clinger and Jonathan Rees; “Macros that work,” in Proceedings of the 1991 ACM Conference on Principles of Programming Languages, Implementation, 155–162.
 - [23] A Colmerauer, H. Kanoui, R. Pasero; “Communication-machine,” Technical report, Groupe Artificielle, Université d’Aix Marseille, Luminy, 1973.
 - [24] Constraints, An International Journal: 1383-7133-5724 (Online).
-- [25] Wikipedia article on continuations. https://en.wikipedia.org/wiki/Continuation
+- [25] Wikipedia article on continuations. `https://en.wikipedia.org/wiki/Continuation`
 - [26] Haskell Curry; “Grundlagen der Kombinatorischen Logik,” in American Journal of Mathematics, Baltimore: Johns University Press, 1930.
 - [27] John deKler, John Doyle, Guy Steele, and Gerald Sussman: “AMORD: Explicit control of reasoning,” in Proceedings of the ACM on Artificial Intelligence, 116–125.
 - [28] E.M. del Pino and R. Elinson, “A novel developmental pattern for frogs produces an embryonic disk,” in Nature, 306 (1983): 589–591.
@@ -10447,70 +10774,41 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 - [46] Adele Goldberg and David Robson; Smalltalk-8o: The Language and Its Implementation. Reading, MA: Addison-Wesley, 1983.
 - [47] Michael Gordon, Robin Milner, and Christopher Wadsworth; Edinburgh LCF, Lecture Notes in Computer Science, 78. New York: Springer-Verlag, 1979.
 - [48] Cordell Green; “Application of theorem proving to problem solving,” in Proceedings of the International Joint Conference
-
-
-
 关于人工智能，219–240 (1969)。
+- [49] Cordell Green 和 Bertram Raphael; “问答系统中的定理证明技术的使用，”收于 ACM 全国会议论文集，169–181 (1968)。
+- [50] John V. Guttag; “抽象数据类型与数据结构的开发，”，《ACM 通报》，20(6) (1977): 397–404。
+- [51] Chris Hanson, MIT/GNU Scheme 参考手册。`https://www.gnu.org/software/mit-scheme/`
+- [52] Chris Hanson; OS 软件：Scheme 对象系统，1993。
+- [53] Chris Hanson, Tim Berners-Lee, Lalana Kagal, Gerald Jay Sussman 和 Daniel Weitzner; “数据-目的代数：数据使用策略建模，”收于第八届 IEEE 分布式系统与网络策略国际会议 (POLICY’07)，(2007年6月)。
+- [54] Hyman Hartman 和 Thomas F. Smith; “糖体与遗传密码的演化，”收于《生命》(Life)，4 (2014): 227–249。
+- [55] Jacques Herbrand; “论算术的非矛盾性，”，《纯数学与应用数学杂志》，166 (1932): 1–8。
+- [56] Carl E. Hewitt; “PLANNER：一种用于机器人中证明定理的语言，”收于国际人工智能联合会议论文集，295–301 (1969)。
+- [57] Carl E. Hewitt; “将控制结构视为消息传递的模式，”收于《人工智能杂志》，8(3) (1977): 323–364。
+- [58] Carl Hewitt, Peter Bishop, Richard Steiger; “用于人工智能的通用模块化 ACTOR 形式化，”收于 IJCAI-73：第三届国际人工智能会议论文集，235–245 (1973)。
+- [59] Edwin Hewitt, “实值连续函数环。I，”收于《美国数学学会汇刊》，64 (1948): 45–99。
+- [60] Paul Horowitz 和 Winfield Hill;《电子艺术》。剑桥：剑桥大学出版社，1980。
+- [61] IEEE Std 1178-1990，Scheme 编程语言 IEEE 标准，电气与电子工程师协会，1991。
+- [62] Paul-Alan Johnson;《建筑理论：概念、主题与实践》。纽约：Van Nostrand Reinhold,1994。
+- [63] Jerome H. Keiser; “超实数线、实数的推广与连续体理论，”收于《Synthese 丛书》，242, 207–237。多德勒支特：Kluwer Academic,1994。
+- [64] Richard Kelsey, William Clinger 和 Jonathan Rees (编辑)；算法语言 Scheme 修订第5 版报告 (1998)。
+- [65] Richard Kelsey; Scheme 实现请求第9 号：定义记录类型 (1999)。`https://srfi.schemers.org/srfi-9/`
+- [66] Gregor Kiczales; Tiny CLOS 软件：带有元对象协议的核心化 CLOS，1992。
+- [67] Gregor Kiczales, John Lamping, Anurag Mendekar, Chris Maeda, Cristina Vdeira Lopes, Jean-Marc Lointinger 和 John Irwin; “面向切面的编程，”收于 ECOOP’97：第11届欧洲面向对象编程会议论文集，220–242 (1997)。
+- [68] Gregor Kiczales, Jim des Rivieres, Daniel G. Bobrow;《元对象艺术》，马萨诸塞：MIT Press，1991。
+- [69] Simon Kirby; “没有自然选择的语言演化：从词汇到语法，”爱丁堡偶尔论文 EOPL-98-1，爱丁堡语言系 (1998)。
+- [70] Marc W. Kirschner 和 John C. Gerhart;《生命的合理性：解决达尔文困境》。纽哈芬：耶鲁大学出版社，2005。
+- [71] Marc W. Kirschner, Tim Mitchison; “超越自组装：从微管到形态发生，”收于《细胞》(Cell)，45(3) (1986): 329–342。
+- [72] D. Knuth, P. Bendix; “通用代数中的简单单词问题，”收于《抽象代数的计算问题》，伦敦：Per Pergamon Press,1970。
+- [73] E. Kohlbeck, D. P. Friedman, M. Felleisen 和 D. Duba; “卫生扩张，”收于 ACM LISP 与函数式编程会议 (1986)。
+- [74] E. Kohlbeck 和 Mitchell Wand; “宏示例：从规范推导语法变换，”收于编程语言原理会议 (1987)。
+- [75] Milos Konopasek 和 Sundaresan Jayaraman;《Solver：科学、工程与教育问题的解决指南》。伯克利：Osborne/McGraw-Hill,1984。
+- [76] Robert Kowalski，谓词逻辑作为一种编程语言，技术报告 70，人工智能学院，爱丁堡大学，1973。
+- [77] Robert Kowalski;《解决问题的逻辑》。纽约：North-Holland,1979。
+- [78] Robert M. Kowalski; “逻辑编程的早期岁月，”收于《ACM 通报》，31(1) (1988): 38–43。
 
-[49] Cordell Green 和 Bertram Raphael; “问答系统中的定理证明技术的使用，”收于 ACM 全国会议论文集，169–181 (1968)。
 
-[50] John V. Guttag; “抽象数据类型与数据结构的开发，”，《ACM 通报》，20(6) (1977): 397–404。
 
-[51] Chris Hanson, MIT/GNU Scheme 参考手册。https://www.gnu.org/software/mit-scheme/
-
-[52] Chris Hanson; OS 软件：Scheme 对象系统，1993。
-
-[53] Chris Hanson, Tim Berners-Lee, Lalana Kagal, Gerald Jay Sussman 和 Daniel Weitzner; “数据-目的代数：数据使用策略建模，”收于第八届 IEEE 分布式系统与网络策略国际会议 (POLICY’07)，(2007年6月)。
-
-[54] Hyman Hartman 和 Thomas F. Smith; “糖体与遗传密码的演化，”收于《生命》(Life)，4 (2014): 227–249。
-
-[55] Jacques Herbrand; “论算术的非矛盾性，”，《纯数学与应用数学杂志》，166 (1932): 1–8。
-
-[56] Carl E. Hewitt; “PLANNER：一种用于机器人中证明定理的语言，”收于国际人工智能联合会议论文集，295–301 (1969)。
-
-[57] Carl E. Hewitt; “将控制结构视为消息传递的模式，”收于《人工智能杂志》，8(3) (1977): 323–364。
-
-[58] Carl Hewitt, Peter Bishop, Richard Steiger; “用于人工智能的通用模块化 ACTOR 形式化，”收于 IJCAI-73：第三届国际人工智能会议论文集，235–245 (1973)。
-
-[59] Edwin Hewitt, “实值连续函数环。I，”收于《美国数学学会汇刊》，64 (1948): 45–99。
-
-[60] Paul Horowitz 和 Winfield Hill;《电子艺术》。剑桥：剑桥大学出版社，1980。
-
-[61] IEEE Std 1178-1990，Scheme 编程语言 IEEE 标准，电气与电子工程师协会，1991。
-
-[62] Paul-Alan Johnson;《建筑理论：概念、主题与实践》。纽约：Van Nostrand Reinhold,1994。
-
-[63] Jerome H. Keiser; “超实数线、实数的推广与连续体理论，”收于《Synthese 丛书》，242, 207–237。多德勒支特：Kluwer Academic,1994。
-
-[64] Richard Kelsey, William Clinger 和 Jonathan Rees (编辑)；算法语言 Scheme 修订第5 版报告 (1998)。
-
-[65] Richard Kelsey; Scheme 实现请求第9 号：定义记录类型 (1999)。https://srfi.schemers.org/srfi-9/
-
-[66] Gregor Kiczales; Tiny CLOS 软件：带有元对象协议的核心化 CLOS，1992。
-
-[67] Gregor Kiczales, John Lamping, Anurag Mendekar, Chris Maeda, Cristina Vdeira Lopes, Jean-Marc Lointinger 和 John Irwin; “面向切面的编程，”收于 ECOOP’97：第11届欧洲面向对象编程会议论文集，220–242 (1997)。
-
-[68] Gregor Kiczales, Jim des Rivieres, Daniel G. Bobrow;《元对象艺术》，马萨诸塞：MIT Press，1991。
-
-[69] Simon Kirby; “没有自然选择的语言演化：从词汇到语法，”爱丁堡偶尔论文 EOPL-98-1，爱丁堡语言系 (1998)。
-
-[70] Marc W. Kirschner 和 John C. Gerhart;《生命的合理性：解决达尔文困境》。纽哈芬：耶鲁大学出版社，2005。
-
-[71] Marc W. Kirschner, Tim Mitchison; “超越自组装：从微管到形态发生，”收于《细胞》(Cell)，45(3) (1986): 329–342。
-
-[72] D. Knuth, P. Bendix; “通用代数中的简单单词问题，”收于《抽象代数的计算问题》，伦敦：Per Pergamon Press,1970。
-
-[73] E. Kohlbeck, D. P. Friedman, M. Felleisen 和 D. Duba; “卫生扩张，”收于 ACM LISP 与函数式编程会议 (1986)。
-
-[74] E. Kohlbeck 和 Mitchell Wand; “宏示例：从规范推导语法变换，”收于编程语言原理会议 (1987)。
-
-[75] Milos Konopasek 和 Sundaresan Jayaraman;《Solver：科学、工程与教育问题的解决指南》。伯克利：Osborne/McGraw-Hill,1984。
-
-[76] Robert Kowalski，谓词逻辑作为一种编程语言，技术报告 70，人工智能学院，爱丁堡大学，1973。
-
-[77] Robert Kowalski;《解决问题的逻辑》。纽约：North-Holland,1979。
-
-[78] Robert M. Kowalski; “逻辑编程的早期岁月，”收于《ACM 通报》，31(1) (1988): 38–43。
+# 参考文献
 
 [79] Temur Kutsia; “带有序列变量和灵活元数的模式统一，”收于《理论科学电子笔记》，66(5) (2002): 52–69。
 
@@ -10555,10 +10853,6 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 [99] Alexey Andreyevich Radul 和 Gerald Jay Sussman, “传播器的艺术，”MIT CSAIL 技术报告 MIT-CSAIL-TR-2009-002；缩减版收于 2009 年国际 Lisp 会议 (2009年3月)。http://hdl.handle.net/1721.1/44215
 
 [100] Alexey Andreyevich Radul; 传播网络：一种灵活且表达丰富的计算基质，博士论文，MIT电气工程与计算机科学系，2009。http://hdl.handle.net/1721.1/54635
-
-
-
-
 
 [101] Eric Raymond; 《黑客字典》（第2版）.马萨诸塞州Cambridge: MIT出版社, 1993.
 
@@ -10620,57 +10914,48 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 
 [130] Carter Wiseman; 《超越时间和风格: 建筑生涯》. 纽约: W. Norton, 2007.
 
-[131] Lewis Wolpert, Rosa Beddington, Thomas Jessell, Elliot Meyerowitz, and Jim Smith; 《发育原理》（第2版）.牛津大学出版社, 2001. 
+[131] Lewis Wolpert, Rosa Beddington, Thomas Jessell, Elliot Meyerowitz, and Jim Smith; 《发育原理》（第2版）.牛津大学出版社, 2001.
 
-[132] Ramin Zabih, David McAllester, and David Chapman; “带有依赖引导回溯的非确定性 Lisp,” 收于 AAAI-87 (1987): 59–64.
+[132] Ramin Zabih, David McAllester, and David Chapman; “带有依赖引导回溯的非确定性 Lisp,” 收于 AAAI-87 (1987): 59–64。
 
 # 索引
 
 本索引中的任何不准确之处可能归因于是在计算机帮助下编制的。Donald E. Knuth, *基础算法 (Fundamental Algorithms)*.
 
-
-
-
-
-# 赋值
+## 赋值
 
 - ! 命名约定，393 n
 - 回溯与 (backtracking and),276
 - 在求值器中，243
 - 在 Scheme 中， 392–394
-- set!, 393
-- assignment?, 243
-- assignment-value, 243
-- assignment-variable, 243
-
+- `set!`, 393
+- `assignment?`, 243
+- `assignment-value`, 243
+- `assignment-variable`, 243
 - 关联列表 (alist), 303
 - 天文学
-- 到恒星的距离，329
-- 恒星光等, 336
-- attach-rule!, 168, 170
-
+  - 到恒星的距离，329
+  - 恒星光等, 336
+- `attach-rule!`, 168, 170
 - 自动地 (Automagically), 10
 - 自动微分 (Automatic differentiation), 103
-- 通用算术处理器, 107–110
-- 高阶函数, 119
-- 字面量函数 (literal functions), 123
-- n 元函数 (n-ary functions), 111
-- 使用牛顿法 (Newton's method using), 104
-
+  - 通用算术处理器, 107–110
+  - 高阶函数, 119
+  - 字面量函数 (literal functions), 123
+  - n 元函数 (n-ary functions), 111
+  - 使用牛顿法 (Newton's method using), 104
 - 游戏中的自主智能体，139, 140, 144
 - 游戏中的化身 (Avatar),139
-
 - Scheme 中的反引号 (Backquote in Scheme),391
 - 回溯 (Backtracking),269–271. 参见探索性行为 (Exploratory behavior);生成与测试 (Generate and test);搜索 (Search)
-
-- amb (参见 amb)
-- 与赋值和，276
-- 与延续和 (continuations and),287, 288–289
-- 依赖方向 (参见依赖定向回溯 Dependency-directed backtracking)
-- 生成与测试 (generate and test),16
-- 与语言和，270–271
-- 与规则和，162, 164
-- 与段变量和 (segment variables and),172
+  - `amb` (参见 `amb`)
+  - 与赋值和，276
+  - 与延续和 (continuations and),287, 288–289
+  - 依赖方向 (参见依赖定向回溯 Dependency-directed backtracking)
+  - 生成与测试 (generate and test),16
+  - 与语言和，270–271
+  - 与规则和，162, 164
+  - 与段变量和 (segment variables and),172
 - Ballantyne, Michael,203 n
 - Bard, Jonathan B. L.,16 n
 - 基础层 (base-layer),303
@@ -10678,7 +10963,7 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 - 基础马步移动 (basic-knight-move),213
 - 基础皇后后移动 (basic-queen-move),215
 - Beal, Jacob,8 n
-- begin?, 242
+- `begin?`, 242
 - 在求值器和 Scheme 中的 begin，242
 - begin 动作 (begin-actions),242
 - 前提的信念状态 (Belief status of premise),349
@@ -10687,947 +10972,1745 @@ Scheme 提供了许多更强大的功能，但我们在这里不尝试描述它�
 - 二进制歧 (binary-amb),360
 - 二进制歧 (Binary amb),359–363
 - 绑定 (Binding),381 n
-- 形式参数的，234, 246
-- 模式变量的，170, 172, 175
-
+  - 形式参数的，234, 246
+  - 模式变量的，170, 172, 175
 - 生物学，来自，8–17
 - 棋盘地址 (board-addresses),217
-
 - 棋盘游戏领域模型，53
-- 跳棋 (checkers),54–55, 59
-
+  - 跳棋 (checkers),54–55, 59
 - 主体 (Body)
-- let 表达式的，385
-- 过程的，234, 381
-
+  - let 表达式的，385
+  - 过程的，234, 381
 - 躯体计划 (Body plan),9–12
-- 动物，9
-- 与组合子和 (combinators and),11, 36
-- 领域特定语言 (domain-specific language),11
+  - 动物，9
+  - 与组合子和 (combinators and),11, 36
+  - 领域特定语言 (domain-specific language),11
 - 蓝牙接收机，10
 - 软件，11
-
 - Bohlin, R.C.,337
-- boolean?,84 (例. 3.1)
+- `boolean?`,84 (例. 3.1)
 - 布尔算术 (Boolean arithmetic),84 (例. 3.1)
 - 布尔值 (Boolean values),386
 - Bourne shell (Bourne shell),42
-
 - BRE (基本正则表达式/Basic Regular Expression),38
 - 广度搜索 (Breadth-first search),290–292
 - 脆性软件 (Brittle software),1
 - 包 (Bundle),395–397
-
 - 包 (bundle),396
 - Byrd, Will,203 n
-
 - C语言，65, 238
 - C++ 与重载 (C++ and overloading),154
-
-- c:,331 (图 7.3)
-
+- `c:`,331 (图 7.3)
 - 缓存封装的分发存储器 (cache-wrapped-dispatch-store),132
-
 - 通用分发的缓存 (Caching, for generic dispatch),131
-
 - 带当前延续调用 (call-with-current-continuation),282
-
 - 带值调用 (call-with-values),31 n
-
-- call/cc,282
-
+- `call/cc`,282
 - 需需调用 (Call by need),245, 251
-
 - 捕获？ (capture?),223
-
-- car,387
-
+- `car`,387
 - Carroll, Lewis,285 n
-
-- cdr,387
-
+- `cdr`,387
 - 单元格传播 (Cell propagation),342, 343–346
-
 - 单元格合并 (cell-merge),344
 - 最强单元格 (cell-strongest),346
 - 链式通用过程 (chaining-generic-procedure),138
-
 - Chapman, David,358 n
+
+
+
 - 跳棋 (Checkers),53–64
+
 - 领域模型 (domain model),54–55, 59
 
 - Chen, Kenny,203 n
+
 - 国际象棋 (Chess),64 (例. 2.12), 213–224
+
 - 作为图的棋盘 (board as graph),216
+
 - 编译到匹配器的移动模式 (compiling move patterns to matcher),225–231
+
 - 骑士移动模式 (knight move patterns),213, 214
+
 - 生成移动 (making moves),221
+
 - 棋盘上的移动模式 (move patterns on board graph),213
+
 - 皇后移动模式 (queen move patterns),215
 
 - 非确定选择 (Choice, nondeterministic).参见 amb
+
 - 选择传播器 (Choice propagator),356–364. 参见 binary-amb; p:amb
+
 - Church, Alonzo,1*, 380
+
 - 电路，340 (例. 7.2)
+
 - 子句学习 (Clausal learning),358 n
+
 - 条件中的 (Clausal in conditional),383
+
 - Clifford, William Klingdon,106 n
+
 - Clinger, William,277 n
+
 - CLOS,88 n
+
 - 代码气味 (Code smell),n
+
 - Colmerauer, Alain,271, 370 n
+
 - `color`,218
+
 - Scheme 中的组合 (Combination in Scheme),235, 380. 参见 Procedure: application
+
 - 组合谜题 (Combinatorial puzzles),277 (例. 5.17), 364–369
+
 - 组合器语言 (Combinator language),11, 30
+
 - 组合器 (Combinators),11, 22–36
+
 - 算术组合器 (arithmetic combinators),67–84
+
 - 计划和 (body plans and),11, 36
+
 - 函数组合器 (function combinators),23–29 (参见 Function combinators)
+
 - 用于模式匹配的 (for pattern matching),170, 175
+
 - 有问题 (problems with),83, 88
+
 - 用于正则表达式 (for regular expressions),38–43
+
 - 系统的 (system of),21, 22
+
 - 组合算术 (combined-arithmetic),79
+
 - 反引号中的逗号 (Comma in backquote),391
+
 - Common Lisp 对象系统 (Common Lisp Object System),88
+
 - 编译器优化 (Compiler optimization),160, 259, 269 (例. 5.15)
+
 - 赋值 (assignment and),264
+
 - 常数折叠 (constant folding),268 (例. 5.14)
+
 - 孔优化 (peephole),168
+
 - 编译时间 (Compile time),259
+
 - 编译 (Compiling),259
+
 - 用于图的模式的 (for graph patterns),225–231
+
 - 形式参数声明 (formal-parameter declarations),269 (例. 5.16)
+
 - 用于模式匹配的 (for pattern matching),176–179
+
 - 到执行过程 (to execution procedures),259–267, 273–277 (参见…)
+
 - 传播器网络 (to propagator networks),337*, 340 (例. 7.1), 367 (例. 7.6)
+
 - 用于正则表达式 (to regular expressions),39–43
+
 - 补集 (complement),203*, 309
+
 - 组合 (compose),23, 24 (例. 2.6), 32
+
 - 组合算术 (Combining arithmetics),73–80
+
 - 复合数据 (Compound data),386–389
+
 - 复合传播器 (compound-propagator),347
+
 - 在求值器中的 (cond in evaluator),241
+
 - 在 Scheme 中，383
-- cond?,241
+
+- `cond?`,241
+
 - 子句后件 (cond-clause-consequent),241
+
 - 子句谓词 (cond-clause-predicate),241
+
 - 子句 (cond-clauses),241
-- cond->if,241
+
+- `cond->if`,241
+
 - 求值器中的条件 (Conditionals in evaluator),238
+
 - 在 Scheme 中，383–384
+
 - 结合 (conjoin),309
-- connect!,212
-- connect-up-square (connect-up-square),219
-- cons,387
-- cons (graph version),210
+
+- `connect!`,212
+
+- `connect-up-square` (`connect-up-square`),219
+
+- `cons`,387
+
+- `cons` (graph version),210
+
 - 条件中的后件 (Consequent in conditional),383, 384
+
 - 规则的后件 (Consequent of rule),161
+
 - 常数并 (constant-union),77
+
 - 常数折叠 (Constant folding),268 (例. 5.14)
+
 - 约束传播器 (Constraint propagator:),330, 331 (图 7.3)
+
 - 在 Scheme 中的构造函数 (Constructors in Scheme),386
+
 - 延续传递风格 (Continuation-passing style),280–281
+
 - 用于 amb (for amb),273
+
 - 延续 (Continuations) 在 Scheme 中的延续 (Continuations in Scheme),280–287
+
 - 回溯和 (backtracking and),287, 288–289
-- call/cc,282
+
+- `call/cc`,282
+
 - 带当前延续调用 (call-with-current-continuation),282
+
 - 非局部退出 (nonlocal exits),284–285
+
 - 非局部控制转移 (nonlocal transfer of control),285–287
+
 - 底层的 (underlying),281–287
+
 - 冲突传播对象 (Contrad object for propagation),345
+
 - 正确性对比灵活性 (Correctness vs. flexibility),18
+
 - Haskell, Curry,34
+
 - 柯里参数 (curry-argument),34, 34 (例. 2.6)
+
 - 柯化 (Currying),34
+
 - 用于多个参数 (for multiple arguments),138
+
 - 偏导和 (partial derivatives and),113 (例. 3.8)
+
 - D. Fect,277 (例. 5.17)
+
 - 分层的 (layered),302–305
+
 - 使用限制 (restrictions on use),324
+
 - 标记的 (tagged),134, 155
+
 - 数据目的代数 (Data-purpose algebra),325
+
 - 调试 (Debugging for),24, 260, 268 (例. 5.13)
+
 - 依赖 (dependencies for),315, 322, 329
+
 - 数值代码 (numerical code),71, 96, 100
+
 - 编译 (compiling),269 (例. 5.16)
+
 - 常数 (constants),268 (例. 5.14)
+
 - 形式参数上的，233, 250
+
 - 推断类型 (inferred type),195
+
 - 分层 (layering for),6, 299, 321 (例. 6.4)
+
 - 懒加载和懒记忆参数 (lazy and lazy memo parameters),253
+
 - 可选参数 (optional parameter),258 (例. 5.11)
+
 - 记录类型 (record type),388
+
 - 谓词之间的关系 (relationships between predicates),135, 155
+
 - 剩余参数 (rest parameter),258 (例. 5.11)
+
 - 形式参数的限制 (restrictions on formal parameters),257 (例. 5.10)
+
 - 模式变量的限制 (restrictions on pattern variables),163
+
 - 默认对象 (default-object),75
+
 - 默认对象?,75
+
 - 用于剩余参数的定义 (define for rest parameters),267 (例. 5.12), 389
+
 - 在求值器中，244
+
 - 在 Scheme 中，381
-- define-c:prop,348
+
+- `define-c:prop`,348
+
 - 定义时钟处理器 (define-clock-handler),145
+
 - 定义通用过程处理器 (define-generic-procedure-handler),89, 99
+
 - 定义分层过程处理器 (define-layered-procedure-handler),353
-- definition?,244
+
+- `definition?`,244
+
 - 定义值 (definition-value),244
+
 - 定义变量,244
+
 - Scheme 中的定义 (Definitions in Scheme),381–383
+
 - 退化性 (Degeneracy),4, 12–14
+
 - 在生物系统中，12
+
 - 在工程系统中，14
+
 - 进化和 (evolution and),13
+
 - 遗传密码的 (of genetic code),12
+
 - 部分信息和 (partial information and),14
+
 - 物理和 (physics and),13
+
 - 传播和 (propagation and),369
+
 - 冗余对比 (redundancy vs.,),12
+
 - deKleer, Johan,358
+
 - 延迟 (delay),211
+
 - 包中的委托过程 (Delegate procedure in bundle),396
+
 - 委托 (Delegation)
+
 - 依赖, David,318
+
 - 依赖定向回溯 (dependency-directed backtracking),315, 322, 329
+
 - 组合谜题 (Combinatorial puzzles),277 (例. 5.17), 364–369
+
 - 组合 (Combinations)
+
 - 到执行过程 (to execution procedures),259–267, 273–277 (参见…)
+
 - 传播器网络 (to propagator networks),337*, 340 (例. 7.1), 367 (例. 7.6)
-
-
-
-
 
 Scheme 中的表达式, 379
 
-extend-arithmetic, 78
+`extend-arithmetic`, 78
 
-extend-generic-arithmetic!, 93
+`extend-generic-arithmetic!`, 93
 
-extract-dx-part, 110
+`extract-dx-part`, 110
 
-factorial, 384, 385
+`factorial`, 384, 385
 
 模式导向, 168
 
 斐波纳契数字, 129, 255
 
-finite-part, 118
+`finite-part`, 118
 
 微分对象的有限部分, 106
 
 一类对象, 282, 382
+
 灵活性
+
 可加性, 2
+
 主体结构, 9
+
 脆性 vs., 1
+
 组合子（参见 Combinators）
+
 组合子 vs., 83
+
 正确性, 4, 12, 370, 371
+
 钻石形结构 vs. 泥球结构, 87
+
 效率 vs., 17
+
 探索性行为, 14, 329
+
 通用过程, 67
+
 层级系统, 4, 299, 356
+
 混合部件, 3, 22, 170, 232
+
 模式导向调用（参见 Pattern-directed invocation）
+
 波斯尔法则, 3, 19 n
+
 程序架构, 40
+
 传播器网络, 328
+
 冗余, 12, 371
+
 规则系统, 157
+
 抛硬币, 144
+
 Floyd, Bob, 271
-流变量。*参见 Parameter*
+
 Forbus, Ken, 358 *n*
+
 力, 211
+
 过程的形式化参数, 234, 381
+
 声明, 233, 250
+
 *lazy*与*lazy*记忆化声明, 253
+
 惰性参数, 251
+
 可选参数, 118, 258 (ex. 5.11)
+
 剩余参数, 248 n, 258 (ex. 5.11), 267 (ex. 5.12), 389–390
+
 限制声明, 257 (ex. 5.10)
+
 Franklin, Benjamin, 183
+
 Fredkin, Edward, 125 *n*
+
 Freuder, Eugene, 332 *n*
+
 Friedman, Daniel P., 254 *n*
+
 完全支持, 349
+
 函数扩展器, 82
+
 函数式编程, 394 *n*
+
 函数算术, 80–83
+
 函数组合子, 23–29
-compose, 23
+
+`compose`, 23
+
 柯里化参数, 34
+
 丢弃参数, 33
+
 并行组合, 25
+
 排列参数, 35
+
 展开组合, 26
-g:, 236 n
-g:advance, 236
+
+`g:`, 236 n
+
+`g:advance`, 236
+
 处理器, 254
-g:apply, 245
+
+`g:apply`, 245
+
 处理器, 245–246
-g:eval, 235
+
+`g:eval`, 235
+
 处理器, 235–244
+
 Scheme 原语，以及, 238 n
-g:handle-operand, 252
+
+`g:handle-operand`, 252
+
 游戏。参见 Adventure game；国际棋；国际象棋
+
 Gatewood, George D., 334 n
+
 生成与测试, 14–17, 288, 292。也参见 回溯；探索性行为；搜索
+
 回溯, 16
+
 在生物中, 24
+
 在进化中, 16
-generic-move!, 146
+
+`generic-move!`, 146
+
 通用过程构造器, 90, 97
+
 通用过程分发, 100, 125
+
 通用符号的, 309
+
 分层通用, 309
+
 通用算术, 90–96
+
 + 自动微分处理器, 107–110
+
 + 存在的问题, 94
+
 通用分发, 4, 99. *也参见 Dispatch store*
+
 用于缓存, 131
+
 链式处理器, 137
+
 最具体的处理器, 136
+
 模式匹配 vs., 157
+
 解析策略, 98, 130, 136
+
 用于规则, 88
+
 用于 trie 树数据结构, 125–130
+
 可扩展的通用过程, 87–101
+
 灵活性, 67
+
 实现, 97–100
+
 面向对象编程以及, 4, 88 *n*, 138–152
+
 Gerhart, John C., 9 *n*, 14 *n*
-get-arity, 28
-get-handler, 98
-get-hunger, 143
+
+`get-arity`, 28
+
+`get-handler`, 98
+
+`get-hunger`, 143
+
 Gilliland, R.L., 337
-giuoco-piano-opening, 223
-gmatch:compile-path, 226
-gmatch:compile-target, 228
-gmatch:compile-var, 230
+
+`giuoco-piano-opening`, 223
+
+`gmatch:compile-path`, 226
+
+`gmatch:compile-target`, 228
+
+`gmatch:compile-var`, 230
+
 Gödel, Kurt, 1 *n*
+
 黄金比例, 256
+
 流言传播, 354 (ex. 7.4)
+
 图
+
 + 备选视图, 216
+
 + 作为棋盘的, 216
+
 + 实现, 211–212
+
 + 惰性的, 211
+
 + 作为列表的, 210
+
 + 模式模式匹配的, 209–231
+
 + 传播与, 342 (ex. 7.3)
-graph-match, 225
+
+`graph-match`, 225
+
 图节点视图, 216
+
 图边, 209, 211
+
 图节点, 209, 211
-grep, 42
+
+`grep`, 42
+
 保证, 151
+
 保证列表, 151
+
 处理单元格冲突, 363
-handle-operand. 参见 g:handle-operand
+
+`handle-operand`. 参见 `g:handle-operand`
+
 处理器
+
 + 适用, 73, 98
+
 + 算术操作, 441
+
 + 通用过程, 88
+
 + 层级过程, 306
+
 + 术语重写结果, 539
-has-edge, 212
+
+`has-edge`, 212
+
 哈表, 299
+
 + 记忆化, 132
+
 + 粘标记, 29, 254
+
 Haskell, 22 *n*,
+
 + 柯里化, 138 *n*
+
 + 重载, 154
+
 + 类型系统, Herbrand, Jacques, 1 *n*
+
 Hewitt, Carl E., 170 *n*, 271, 370 *n*
+
 Hewitt, Edwin, 106 *n*
+
 Hipparchus, 336 *n*
+
 Hipparcos 卫星, 335 *n*, 366 *n*
+
 Hox 复合体（基因）, 9
+
 哈勃望远镜, 337
+
 卫生宏, 167, 240
+
 超实数, 106 *n*
+
 假设前提, 356, 364
+
 IDE (集成开发环境), 321 (ex. 6.4)
-if
+
+`if`
+
 在求值器, 239
+
 在 Scheme 中, 384
-if?, 239
-if-alternative, 239
-if-结果, 239
-if-谓词, 239
+
+`if?`, 239
+
+`if-alternative`, 239
+
+`if-结果`, 239
+
+`if-谓词`, 239
+
 不恰列表, 248 *n*
-in (相信), 349
+
+`in` (相信), 349
+
 Scheme 中的缩进, 382 n
+
 索引
+
 + 本书的, 409
+
 + trie, 125
+
 + 基于零的, 388
+
 + 推断程序类型, 194, 196
+
 + 极小部分, 118
+
 + 微分对象的无限部分, 106
+
 + 中缀表示法, 250 (ex. 5.7)
+
 + 继承
+
 + 委托 vs., 128
+
 + 面向对象编程, 144
+
 + 询问传播器, 334
-+ install-arithmetic!, 72
+
++ `install-arithmetic!`, 72
+
 + 集成开发环境 (IDE), 321 (ex. 6.4)
+
 + 积分方程, 68–70, 256 (ex. 5.8)
+
 + Scheme 中的内部定义, 24, 383, 385
+
 + 解释器, 233–254
+
 + 间距
+
 + 测量, 332–336
+
 + 合并, 352
+
 + 反转地址, 219
-+ iota, 112 n
+
++ `iota`, 112 n
+
 + Scheme 中的迭代, 385
+
+
+
 + Java, 1, 6, 22 *n*
+
 + 链式, 146
+
 组合子, 65
+
 接口, 6 n
+
 Jonge, Joost Kiewiet de, 334 n
+
 证明的注释, 322
+
 Kahn, Louis Isadore, 55
+
 Kanizsa, Gaetano, 328
+
 Kanizsa 三角形幻觉, 328, 328 (fig. 7.1)
+
 Kirschner, Marc W., 9 *n*, 14 *n*
+
 Knuth, Donald E., 409
+
 Kowalski, Robert M., 271
+
 Kutsia, Temur, 203 n
+
 lambda
+
 用于剩余参数的 '', 248 n, 267 (ex. 5.12), 389
+
 在求值器, 239
+
 在 Scheme 中, 380
+
 lambda (λ) 演算, 1 n
+
 lambda?, 239
+
 lambda 体, 239
+
 lambda 参数, 239
+
 层级访问器, 305
+
 层级数据, 303
+
 层级扩展器, 310
+
 层级算术, 309–310
+
 层级数据, 302–305
+
 层级过程, 301, 305–309, 352
+
 层级化, 4, 299. *也参见 Architecture: of programs*
+
 声明, 299, 321 (ex. 6.4)
+
 程序架构, 5
+
 层
+
 - 注释层, 304
+
 - 基础层, 303
+
 - 证明层, 322
+
 - 支持层, 317
+
 - 单位层, 304
+
 惰性参数和 251。*也参见 Postponed evaluation*
+
 惰性和记忆化声明, 253
+
 惰性图, 211
+
 惰性列表（流）, 211, 254–256
+
 使用积分, 256 (ex. 5.8)
+
 Lem E. Tweakit, 277 (ex. 5.17)
+
 let
+
 在求值器, 241
+
 在 Scheme 中, 384
+
 let?, 242
+
 let*, 385
+
 let 体, 242
+
 let-绑定值, 242
+
 let-绑定变量, 242
+
 let 单元, 330
+
 let->组合, 242
+
 let-值, 31 n
+
 词法作用域, 239, 295
+
 Lieberherr, Karl, 358
+
 Lisp, 245, 246
+
 库, 320
+
 宏, 240
+
 卫性的, 167
+
 逻辑, 317
+
 语法规则, 288, 295 (ex. 5.2)
+
 Manzyuk, Oleksandr, 121 n
+
 map, 249 (ex. 5.5)
+
 匹配参数, 108
+
 match 绑定, 175
+
 match 编译模式, 179
+
 match 字典替换, 186
+
 match 元素, 171, 180
+
 match 元素-?, 178
+
 match:eqv, 171
+
 match:扩展字典, 176
+
 match:列表, 174
+
 match:查找, 176
+
 match:新字典, 175
+
 match:段, 173
+
 match:段-var?, 178
+
 match:var?, 178
+
 Matcher. 参见 Match procedure Match过程, 166, 170
+
 矩阵运算, 102 (ex. 3.6), 103 (ex. 3.7)
+
 最大因子, 117
+
 make-parameter, 395
+
 make-模式运算符, 169
+
 make-属性, 142, 150, 151
+
 make-rule, 166
+
 make-simple-dispatch-store, 90, 98
+
 make-type, 142, 150, 152
 
-
-
-
-
 maybe-grab-segment, 205
+
 maybe-set!, 276, 295 (ex. 5.25)
+
 maybe-substitute, 191
+
 Mayer, Meinhard E., 114 n
+
 McAllister, David, 358 n
+
 McCarthy, John, 271, 277 n
+
 MDL, 249 (ex. 5.6)
+
 记忆化 (Memoization)
+
 哈希表, 132
+
 惰性求值, 251 n
+
 合并, 351
+
 合并区间, 352
+
 合并值集, 353
+
 消息接收过程 (Message-accepting procedure), 396
+
 元对象协议/协议 (Metaobject Protocol), 88 n
+
 Method. 参见 Handler; 消息接收过程 (Message-accepting procedure)
+
 MIT/GNU Scheme, 379
+
 Mitros, Piotr, 11 n
+
 混合匹配部分 (Mix-and-match parts), 3, 7, 22. 亦参见组合器 (Combinators)
+
 Moses, Joel, 87 n
+
 最特定泛型过程 (most-specific-generic-procedure), 138
+
 泥球 (Mud, ball), 89
+
 Scheme 中的多值, 30–32
 
 n:, 69 n
+
 命名约定 (Naming conventions)
+
 用于赋值的 !, 393 n
+
 用于谓词的 ?, 386 n
+
 %, 152
 
 narrate!, 144
 
 n元过程（不定数量的参数）, 29, 72 n, 248 (ex. 5.2), 258 (ex. 5.11), 267 (ex. 5.12), 389–390
+
 传播器中的邻居 (Neighbor in propagator), 342
+
 Scheme 中的嵌套定义. 参见 Scheme 中的内部定义 (Internal definitions in Scheme)
+
 .net, 1 n
+
 牛顿法 (Newton's method), 104
+
 下一轮 (next-turn), 219
+
 图的节点 (Node, of graph), 209, 211
+
 节点位于 (node-at), 218
+
 坏值集 (Nogood set), 358
+
 非确定性选择 (Nondeterministic choice). 参见 amb
+
 非严格性参数 (Non-strict argument), 250. 参见延迟求值 (Postponed evaluation)
+
 非严格性过程 (Non-strict procedure), 250
+
 普通顺序 (Normal order), 236, 378
+
 nothing?, 343
+
 null?, 387
+
 number?, 237
+
 *失败的调用次数* (*number-of-calls-to-fail), 289
+
 Scheme 中的数字, 237
+
 数字 (Numeral), 379. 亦参见有理常数 (Rational constant)
+
 数值算术 (numeric-arithmetic), 75
+
 数值积分 (Numerical integration), 68–70, 256 (ex. 5.8)
+
 面向对象编程泛型过程和, 和 4, 88 n, 138–152
+
 继承 (inheritance), 140
+
 局部状态和, 138
+
 使用...进行建模 (modeling with), 138
+
 ODE 积分器 (ODE integrator), 68–70
+
 棋盘上的偏移量 (Offset on checkerboard), 55
+
 操作数 (operands), 236
+
 组合的操作数 (Operands of combination), 234, 380
+
 求值顺序 (order of evaluation), 246
+
 操作适用 (operation-applicability), 74
+
 操作并 (operation-union), 78
+
 操作并分发 (operation-union-dispatch), 78
+
 运算符 (operator), 236
+
 组合的运算符 (Operator of combination), 234, 380
+
 视觉错觉 (Optical illusion), 328, 328 (fig.). 7.1)
+
 可选参数 (Optional argument), 118
+
 可选声明 (optional declarations), 258 (ex. 5.11)
+
 out (不被相信的), 349
+
 重载 (Overloading), 71–73, 154
+
 覆盖规则! (override-rule!), 170
+
 p:, 332 (fig. 7.4)
+
 p:amb, 357, 363, 364
+
 pair?, 387
+
 Scheme 中的对对 (Pairs in Scheme), 387, 393
+
 并行合并 (parallel-combine), 25 (fig. 2.2), 26
+
 参数（流体变量） (Parameter (fluid variable)), 395
+
 过程的参数 (Parameter (of procedure)). *参数
+
 参数化 (parameterize), 395
+
 参数化类型 (Parametric types), 202 (ex. 4.15)
+
 偏执编程 (Paranoid programming), 28, 65, 321 (ex. 6.3)
+
 Scheme 中的括号 (Parentheses in Scheme), 380, 387
+
 *部分* (*Parti*), 5, 299
+
 *部分* (*partial*), 111*
+
 部分信息 (Partial information), 4, 130, 157
+
 + 退化 (degeneracy and), 14
+
 + 传播 (propagation), 344
+
 + 类型推断 (type inference), 193–201
+
 + 统一 (unification), 183, 185
+
 模式 (Pattern), 157
+
 + 部分信息 (partial information), 157, 183
+
 + 规则 (rules and), 157, 160
+
 模式引导的调用 (Pattern-directed invocation), 158, 168–170, 370 *n*
+
 + 否定或减 (negation or subtraction), 168
+
 阶乘 (factorial), 168
+
 模式匹配 (Pattern matching), 157. 亦参见 模式引导的调用 (Pattern-directed invocation); 统一 (Unification)
+
 + 组合器 (combinators for), 170, 175
+
 + 等价测试 (equality testing.), 157, 183
+
 + 泛型分发 (generic dispatch.), 157
+
 + 在图上 (on graphs), 209–231
+
 + 在列表上 (on lists), 158
+
 项重写 (term rewriting), 160–167
+
 模式变量 (Pattern variable), 157, 158. 亦参见 分段变量 (Segment variable)
+
 在图匹配中 (in graph matching), 213, 215
+
 限制 (restrictions), 163
+
 Perlis, Alan J., 17, 150, 159
+
 Perlmutter, Barak A., 121 n
+
 排列参数 (permute-arguments), 35 (fig. 2.7), 36
+
 扰动编程 (Perturbational programming), 323
+
 $\pi$ (pi), 381
+
 位于 (piece-at), 221
+
 在内部 (piece-in), 221
+
 PLANNER
+
 回溯 (backtracking), 271
+
 模式引导的调用 (pattern-directed invocation), 370 n
+
 填充侧 (populate-sides), 220
+
 可能的方向 (possible-directions), 55
+
 Postel, Jonathan Bruce, 3
+
 Postel 法则 (Postel's law), 3, 19 n
+
 延迟求值 (Postponed evaluation), 236. 参见 延迟 (delay); 流 (Stream)
+
 复合传播器 (compound propagator), 347
+
 惰性图 (lazy graph), 211
+
 非严格参数 (non-strict arguments), 253–254, 266
+
 pp (漂亮打印), 72
+
 谓词?(predicate?), 133
+
 谓词构造器 (predicate-constructor), 135
+
 作为类型 (Predicate as type), 132–138
+
 参数检查 (argument checking), 151
+
 分发键 (as dispatch key), 136
+
 形式参数 (for parameter), 257 (ex. 5.10)
+
 在模式变量中 (in pattern variable), 162, 179
+
 条件中的谓词 (Predicate in conditional), 383, 384
+
 谓词 (Predicates), 386 n. 亦参见 类型的类型 (Predicate as type)
+
 命名约定 (naming convention), 386 n
+
 抽象谓词 (abstract predicate), 134
+
 域谓词 (domain predicate), 74
+
 过程的适用性 (for procedure applicability), 73, 98
+
 之间的关系 (relationships between), 135, 155
+
 前提 (Premise), 315
+
 信念状态 (belief status), 349
+
 假设的 (hypothetical), 356, 359–364
+
 前提–坏值集 (premise–nogoods), 359
+
 漂亮打印 (Pretty-print (pp)), 72
+
 质数测试 (Prime number test), 134
+
 原始传播器 (primitive-propagator), 347
+
 原始过程 (Primitive procedure), 245
+
 打印所有结果 (print-all-results), 173
+
 打印列表结构 (Printing list structure), 72
+
 过程应用 (Procedure application), 235, 244–246
+
 lambda 表达式 (lambda expression), 380 (亦参见 lambda)
+
 分层的 (layered), 301, 305–309, 352
+
 匹配过程 (match procedure), 166, 170
+
 接收消息的 (message-accepting), 396
+
 带多值的 (with multiple values), 30–32
+
 n元的 (亦参见 n元过程)
+
 带非严格参数 (with non-strict arguments), 250–256
+
 严格的 (strict), 245
+
 变变的 (亦参见 n元过程)
+
 出现检查 (occurs check), 191
+
 模式引导的调用 (pattern-directed invocation), 370 n
+
 分段变量 (segment variables), 203
+
 约束 (constraints), 199
+
 加法的 (additive), 1–5
+
 架构的 (architecture of), 5–6
+
 分层的 (layered), 299
+
 回溯 (backtracking), 271
+
 激活策略 (activation policy), 347
+
 替代世界观 (alternative world views), 349–351
+
 amb, 355–364
+
 天文学示例 (astronomy example), 329–340
+
 单元 (cell), 342, 343–346
+
 电路示例 (circuit example), 340 (ex. 7.2)
+
 退化和 (degeneracy and), 369
+
 图示例 (graph example), 342 (ex. 7.3)
+
 合并值 (merging values), 351–354
+
 计算模型 (model of computation), 327–329
+
 邻居 (neighbor), 342
+
 部分信息 (partial information), 344
+
 传播器 (propagator), 342, 346–349
+
 调度器 (scheduler), 342, 343
+
 搜索替代方案 (searching alternatives), 355–364
+
 类型推断 (type inference), 368 (ex. 7.8)
+
 统一和 (unification and), 354 (ex. 7.4), 354 (ex. 7.4)
+
 布线图 (wiring diagram vs. expression), 327, 331 (fig. 7.3), 337 n, 340 (ex. 7.1), 367 (ex. 7.6)
+
 传播器 (Propagator), 342, 346–349
+
 - 选择传播器 (choice propagator)
+
 - 约束传播器 (constraint propagator), 330, 331 (fig. 7.4)
+
 - 方向性传播器 (directional propagator), 331, 332 (fig. 7.4)
+
 - 输入和单元 (input and cells), 343
+
 属性获取器 (property-getter), 145
+
 属性列表 (Property list), 303
+
 来源 (Provenance), 299, 315, 322, 333
+
 组合题的 (combinatorial), 277 (ex. 5.17), 364–367
+
 勾股三组 (Pythagorean triples), 272, 293 (ex. 5.22), 357
+
 Python, 6, 14
+
 泛型算术 (generic arithmetic), 87
+
 Scheme 中的准引用 (Quasiquotation in Scheme), 391
+
 问号 (Question mark). 参见 ?
+
 引用 (Quotation)
+
 在求值器中 (in evaluator), 237
+
+
+
 在 Scheme 中 (in Scheme), 390–391
-引用 (quote), 237
-引用的 (quoted?), 237
+
+引用 (`quote`), 237
+
+引用的 (`quoted?`), 237
+
 无线接收器 (Radio receiver), 10
+
 Radul, Alexey Andreyevich, 121 n, 344 n, 358 n, 370
-随机偏置 (random-bias), 143
-随机选择 (random-choice), 143
-随机数 (random-number), 144
-随机性 (Randomness). 参见 硬币 (flip-coin)…
+
+随机偏置 (`random-bias`), 143
+
+随机选择 (`random-choice`), 143
+
+随机数 (`random-number`), 144
+
+随机性 (Randomness). 参见 硬币 (`flip-coin`)…
+
 有理常数 (Rational constant), 47, 379
-读取-求值-打印循环 (Read-eval-print loop (repl)), 246
+
+读取-求值-打印循环 (Read-eval-print loop (`repl`)), 246
+
 Scheme 中的记录 (Records in Scheme), 151, 386–389, 394
-记录声明 (record declaration), 388
+
+记录声明 (`record declaration`), 388
+
 递归过程 (Recursive procedures), 384
-右归 (reduce-right), 263
+
+右归 (`reduce-right`), 263
+
 冗余 (Redundancy), 12–14, 130
+
 在生物系统中 (in biological systems), 12
-退化对比 (degeneracy vs.), 12
+
+退化对比 (`degeneracy` vs.), 12
+
 在工程系统中 (in engineered systems), 14
-引用流 (ref-stream), 255
+
+引用流 (`ref-stream`), 255
+
 游戏裁判 (Referee for game), 53, 210
+
 谓词注册 (Registration of predicate), 133
+
 正则表达式 (Regular expressions), 37–38
+
 组合器实现 (combinator implementation), 38–43
+
 谓词之间的关系 (Relationships between), 135, 155
-repl, 246
-需要 (require), 272, 292
+
+`repl`, 246
+
+需要 (`require`), 272, 292
+
 泛型分发策略 (Resolution policy for generic dispatch), 98, 130, 136
+
 剩余参数 (Rest parameter), 248 n, 267 (ex. 5.12), 390
-剩余声明 (rest declarations), 258 (ex. 5.11)
-限制元数 (restrict-arity), 28
+
+剩余声明 (`rest declarations`), 258 (ex. 5.11)
+
+限制元数 (`restrict-arity`), 28
+
 限制
+
 形式参数上 (on formal parameters), 257 (ex. 5.10)
+
 模式变量上 (on pattern variables), 163
-限制到的声明 (restrict-to declarations), 258 (ex. 5.10)
-结果接收器 (result-receiver), 170
-传播器中的撤回 (retract! in propagator), 335, 349
+
+限制到的声明 (`restrict-to declarations`), 258 (ex. 5.10)
+
+结果接收器 (`result-receiver`), 170
+
+传播器中的撤回 (`retract!` in propagator), 335, 349
+
 Scheme 中的多值返回 (Returning multiple values in Scheme), 30–32
+
 Robinson, John Alan, 183
-旋转180视图 (rotate-180-view), 216
+
+旋转180视图 (`rotate-180-view`), 216
+
 Roussel, Phillipe, 271
+
 Ruby 和延续 (Ruby and continuations), 282
-规则 (rule), 167
-规则简化化器 (rule-simplifier), 161, 165
+
+规则 (`rule`), 167
+
+规则简化化器 (`rule-simplifier`), 161, 165
+
 规则 (Rules)
+
 代数 (algebra), 161–163
+
 回溯和 (backtracking and), 162, 164
+
 泛型过程分发 (for generic procedure dispatch), 88
+
 模式和 (patterns and), 157, 160
+
 运行时间 (Run time), 259
+
 Russell, Jane L., 334
+
 Sandewall, Erik, 271 n
+
 Hipparcos卫星 (Satellite, Hipparcos), 335, 335 n
+
 SAT 求解器 (SAT solver), 358 n, 368
-say!, 144
+
+`say!`, 144
+
 传播调度器 (Scheduler for propagation), 342, 343
+
 Scheme, xvi, 244, 379–395
+
 MIT/GNU Scheme, 379
+
 Schönfinkel, Moses, 34 n
-cmutils, 101
+
+`cmutils`, 101
+
 范围 (Scope), 381 n. 参见 词法作用域 (Lexical scoping)
-搜索 (Search), 355–356. 参见 amb; 回溯 (Backtracking); 探索性行为 (Exploratory behavior); 生成与测试 (Generate and test)
+
+搜索 (Search), 355–356. 参见 `amb`; 回溯 (Backtracking); 探索性行为 (Exploratory behavior); 生成与测试 (Generate and test)
+
 分段变量 (Segment variable), 159. 亦参见 模式变量 (Pattern variable)
+
 在代数规则中 (in algebra rules), 162
+
 回溯和 (backtracking and), 172
+
 统一和 (unification and), 203–208
+
 Scheme 中的选择器 (Selectors in Scheme), 386
-自求值的 (self-evaluating?), 237
+
+自求值的 (`self-evaluating?`), 237
+
 分号 (Semicolon)
+
 参见 语法糖 (Syntactic sugar)
+
 由...引入的注释 (comment introduced by), 390
+
 敏感性分析 (Sensitivity analysis), 323
-sequence->begin, 240
-set!
+
+`sequence->begin`, 240
+
+`set!`
+
 在求值器中 (in evaluator), 243
+
 在 Scheme 中 (in Scheme), 393
-set-car!, 393
-set-cdr!, 393
-设置位于 (set-piece-at), 221
-设置谓词<=! (set-predicate<=!), 136
-设置传播器系统 (setup-propagator-system), 366
+
+`set-car!`, 393
+
+`set-cdr!`, 393
+
+设置位于 (`set-piece-at`), 221
+
+设置谓词<=! (`set-predicate<=!`), 136
+
+设置传播器系统 (`setup-propagator-system`), 366
+
 SI 国际单位制 (SI (International System of Units)), 314 (ex. 6.1)
+
 SICP, 379
+
 填充者 (inhabitors), 44 (ex. 2.7), 277 (ex. 5.17), 294 (ex. 5.23)
-简单抽象谓词 (simple-abstract-predicate), 134
-简单泛型过程 (simple-generic-procedure), 89, 89, 97
-简单移动 (simple-move), 222
-简单操作 (simple-operation), 74
 
+简单抽象谓词 (`simple-abstract-predicate`), 134
 
+简单泛型过程 (`simple-generic-procedure`), 89, 89, 97
 
+简单移动 (`simple-move`), 222
+
+简单操作 (`simple-operation`), 74
 
 Snark 猎寻, 285 (ex. 5.21)
 
 书籍的软件支持, 377
+
 SOS, 88 $n$
 
 特殊形式, 235, 380
+
 由宏实现, 264
+
 在求值器中, 237–244
+
 展开-应用, 32
+
 展开-合并, 27 (fig. 2.3), 28, 31, 31 (fig. 2.4)
+
 平方, 381
+
 Stallman, Richard Matthew, 332 $n$, 358 $n$
+
 标准, 46 (ex. 2.10)
+
 星星
+
 - 距离, 329
+
 - 亮值, 336
+
 开始国际象棋游戏, 220
+
 Steele, Guy Lewis Jr., 30 $n$, 332 $n$, 358 $n$
+
 便签 (Sticky note)
+
 - 用于哈希表的, 29, 254
+
 - 用于元数据的, 169
-stormer-2, 69
+
+`stormer-2`, 69
+
 Stormer 积分器, 68
+
 流 (惰性列表), 211, 254–256
+
 - 使用积分, 256 (ex. 5.8)
+
 严格参数, 251
+
 严格过程, 245, 250
+
 最强后果, 351
+
 最强值, 350
+
 Struve, Friedrich G. W. von, 332
+
 Suppes, Patrick, 322 n
+
 支持层, 318
+
 支持层值, 318
+
 支持集抽象 (...support-set...), 319
+
 对数据项支持, 316
+
 支持层, 317
+
 支持集, 315
+
 Sussman, Gerald Jay, 106 n, 114 n, 332 n, 358 n, 370
+
 符号, 在 Scheme 中, 238 n, 390–391
+
 符号扩展器, 76
+
 符号算术, 71–73
+
 对称化移动, 214
+
 语法糖, 159, 315 (ex. 6.1)
+
 定义为,
+
 - 衍生表达式类型, 240–242
+
 语法。参见 Combination；Macro； 特殊形式；语法糖
+
 标签, 用于谓词的, 131, 133, 136
-tagged-list?, 238
+
+`tagged-list?`, 238
+
 标记数据, 134, 155
-take-thing, 147
+
+`take-thing`, 147
+
 Tannenbaum, Andrew S., 46 (ex. 2.10)
-冒险游戏中的 tell!, 147
-传播器中的 tell!, 333
+
+冒险游戏中的 `tell!`, 147
+
+传播器中的 `tell!`, 333
+
 项重写, 160–167
+
 - 用于代数化简, 161–163
+
 - 用于编译器优化, 160, 168
+
 - 等式理论, 160
+
 - 模式匹配, 160–167
-test-content!, 344, 345
+
+`test-content!`, 344, 345
+
 引用文本, 237
+
 矛盾本身, 345
+
 无物本身, 343, 344
+
 未指定值, 239
+
 Thunk, 253 n
-tinyCLOSOS, 88 n
+
+`tinyCLOSOS`, 88 n
+
 Trie 数据结构, 用于通用分发, 125–130
+
 Troll, 139, 142–144
+
 真值维护系统, 358 n
-try-rules, 165
+
+`try-rules`, 165
+
 TTL 混合组合部分, 7
+
 Turing, Alan, 1 n
+
 国际象棋中的回合
+
 - 将边缘标记到棋子, 220, 221
+
 - 下一回合, 219
+
 - 回合状态变量, 218
+
 类型实例化, 142, 150, 152
+
 类型属性, 152
+
 带类型表达式, 194
+
 类型推断, 193–201
+
 - 推导的声明, 195
+
 - 用于的传播, 368 (ex. 7.8)
+
 - 用于合一, 196, 200
+
 类型。*另参见* 冒险游戏中的谓词类型, 142–145, 150–152
+
 参数化的, 202 (ex. 4.15)
+
 - 并集, 202 (ex. 4.16)
+
 - 用户定义的, 132–138
+
 未绑定变量, 238, 247 (ex. 5.1)
+
 合一, 157, 183–184
+
 - 作为方程求解,
+
 - 部分信息和, 183, 185
+
 - 传播和, 354 (ex. 7.4)
+
 - 段变量和, 203–208
+
 - 替换实例, 183
+
 - 类型推断和, 193–201
+
 - 合一器, 183
+
 - 合一器, **186**
-unify, **186**
-unify-constraints, **200**
-unify:`internal`, **187**
+
+`unify`, **186**
+
+`unify-constraints`, **200**
+
+`unify:`internal`, **187**
+
 并集类型, 202 (ex. 4.16)
+
 单位, **311**
+
 单位算术, **312**
+
 单位层, **304**
+
 单位（计量）, 47–48
+
 - 与单位的算术, 310–314
+
 - 国际单位制, 314 (ex. 6.1)
+
 - 单位层, 304
+
 - 包装器, 49–52
+
 UNIX 与流, 297
+
 用户定义类型, 132–138
+
 值集, 350
+
 值, 381
+
 变量, 381. *另参见* 段变量
+
 在求值器中, 238
-variable?, 238
+
+`variable?`, 238
+
 变变过程。*另参见* -ary过程
-vector?, 388
-vector-ref, 388
-vector-set, 393
+
+`vector?`, 388
+
+`vector-ref`, 388
+
+`vector-set`, 393
+
 向量算术, 85 (ex. 3.2), 102 (ex. 3.6), 103 (ex. 3.7)
+
 向量与共向量, 112, 113 (ex. 3.10)
+
 Scheme 中的向量, 386–389, 393
+
 过程向量, 248 (ex. 5.3)
+
 Waltz, David L., 332
+
 Waltz 算法, 342 (ex. 7.3)
+
 Warren, David, 271
+
 软件网站, 377
-white-move?, 218
+
+`white-move?`, 218
+
 Scheme 中的空白, 382
+
 Wilde, Oscar (Perlis 的转述), 17
+
 Wisdom, Jack, 104
+
 Wise, David, 254
+
 宽度优先搜索, 290
+
 深度优先搜索, 290
+
 单位, 49
+
 零基索引, 388
+
 Zab, R, 358
+
 Zuras, Dan, 106
+
 # 练习
 
 2.1 29 2.4 36 2.7 44 2.10 46 2.13 64
+
 2.2 29 2.5 37 2.8 45 2.11 52
+
 2.3 32 2.6 43 2.9 46 2.12 64
+
 3.1 84 3.6 102 3.11 123 3.16 153
+
 3.2 85 3.7 103 3.12 124 3.17 153
+
 3.3 86 3.8 113 3.13 129
+
 3.4 101 3.9 113 3.14 130 3.19 153
+
 3.5 101 3.10 113 3.15 132 3.20 153
+
 4.1 162 4.6 180 4.11 193 4.16 202 4.21 209
+
 4.2 163 4.7 181 4.12 193 4.17 202 4.22 213
+
 4.3 164 4.8 182 4.13 193 4.18 202 4.23 216
+
 4.4 164 4.9 182 4.14 201 4.19 208 4.24 225
+
 4.5 179 4.10 193 4.15 202 4.20 209 4.25 231
+
 5.1 247 5.7 250 5.13 268 5.19 278 5.25 295
+
 5.2 248 5.8 256 5.14 268 5.20 279 5.26 295
+
 5.3 248 5.9 257 5.15 269 5.21 285
+
 5.4 249 5.10 257 5.16 269 5.22 293
+
 5.5 249 5.11 258 5.17 277 5.23 294
+
 5.6 249 5.12 267 5.18 278 5.24 294

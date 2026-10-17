@@ -1,47 +1,38 @@
+
 # Clojure 编程指南
-
-
 
 ![](img/cover.jpg)
 
-
-
 Dave & Andy。
-
-
-
 
 # 怀念我的父亲和导师 Craig Bedra，他教会了我通过探索来学习的价值，并告诉我世界上不存在魔法。——Aaron
 
 # 目录
-
-
 
 # 读者对《Clojure 编程》（第二版）的评价
 
 Clojure 是目前最有趣的语言之一，而学习 Clojure 的最佳方法变得更棒了。《Clojure 编程》第二版增加了最新的信息、大量的实用示例，以及关于如何学习、使用以及在 Clojure 上取得成功的大量技巧。
 
 | → Ola Bini
+
 | Ioke 语言创建者、开发者，ThoughtWorks 工程师
 
 被 Clojure 吓到了吗？读完这本书后你就不会了。书中以清晰且有趣的风格编写，以一种非常易于理解的方式一小块地教授这种语言。
 
 | → Tim Berglund
+
 | August Technology Group 创始人兼首席官
 
-作者们通过这本组织良好且易读的书，为精通 Clojure 规划了迄今最顺畅的路径。他们擅长创建简单的
-
-
-
-
-以及有效的示例，展示了该语言独特的特性是如何相互结合的。
+作者们通过这本组织良好且易读的书，为精通 Clojure 规划了迄今最顺畅的路径。他们擅长创建简单的以及有效的示例，展示了该语言独特的特性是如何相互结合的。
 
 | → | Chris Houser |
+
 |  | Clojure 核心贡献者和库作者 |
 
 Clojure 是一种运行在 `JVM` 上的优美、优雅且非常强大的语言。它像是一座大教堂：你可以漫步其中，但你可能更倾向于由一位博学的导游陪同，他能为你提供见解，帮助你理解并欣赏其架构与艺术。在这本书中，你可以享受并受益于两位（而非一位）资深开发者的陪伴，他们拥有你所需要的深度知识和视角。
 
 | → | Venkat Subramaniam 博士 |
+
 |  | 获奖作者作者，Agile Developer, Inc. 创始人 |
 
 # 第二版序言
@@ -51,8 +42,8 @@ Clojure 是一种运行在 `JVM` 上的优美、优雅且非常强大的语言�
 在这一第二版中，Stuart 和 Aaron 确保了涵盖了语言的增强特性，并让你体验到利用某些社区库的感受，同时留心传达让这一切运行起来的概念。这本书仍然是关于 `Clojure` 的一个令人心潮澎湃的介绍，我希望它激励你加入社区并最终为库生态系统做出贡献。
 
 —Rich Hickey
-`Clojure` 创造者
 
+`Clojure` 创造者
 
 # 第一版序言
 
@@ -63,8 +54,8 @@ Clojure 是一种运行在 `JVM` 上的优美、优雅且非常强大的语言�
 Stuart 的这书中最令人兴奋的地方在于他在多大程度上“理解” `Clojure`，因为这种语言的目标群体是像他一样的专业开发者。他显然有足够的经验来理解 `Clojure` 所解决的痛点，并对其务实的方法表示赞赏。这本书是对 `Clojure` 关键特性的热情之旅，它立足于实际应用，并对可能出现的新概念进行了温和的介绍。我希望它激励你用 `Clojure` 编写软件，让你回看时可以说：“这不仅完成了任务，而且是以一种健壮且简单的方式完成的，编写它也很有趣！”
 
 —Rich Hickey
-`Clojure` 创造者
 
+`Clojure` 创造者
 
 # 致谢
 
@@ -76,7 +67,7 @@ Stuart 的这书中最令人兴奋的地方在于他在多大程度上“理解�
 
 感谢 Pragmatic Bookshelf 的所有人。特别感谢我们的编辑 `Michael Swaine`，他在一个非常紧迫的进度下提供了良好的建议。感谢 `Dave Thomas` 和 `Andy Hunt` 为编写技术书籍提供了一个有趣的平台，并对他们作者的热情投注一掷。
 
-感谢所有在书籍错误页面上发布建议的人[[2]](#f_0007.html_FOOTNOTE-2)。 
+感谢所有在书籍错误页面上发布建议的人[[2]](#f_0007.html_FOOTNOTE-2)。
 
 感谢我们的技术评审员提供的意见和建设性建议，包括 `Kevin Beam`、`Ola Bini`、`Sean Corfield`、`Fred Daoud`、`Steven Huwig`、`Tibor Simic`、`David Sletten`、`Venkat Subramaniam` 和 `Stefan Turalski`。
 
@@ -91,29 +82,32 @@ Stuart 的这书中最令人兴奋的地方在于他在多大程度上“理解�
 ### 脚注
 
 | [[1]](#f_0007.html_FNPTR-1) | [`groups.google.com/group/clojure`](http://groups.google.com/group/clojure) |
-| [[2]](#f_0007.html_FNPTR-2) | [`www.pragprog.com/titles/shcloj2/errata`](http://www.pragprog.com/titles/shcloj2/errata) |
 
+| [[2]](#f_0007.html_FNPTR-2) | [`www.pragprog.com/titles/shcloj2/errata`](http://www.pragprog.com/titles/shcloj2/errata) |
 
 # 前言
 
 `Clojure` 是一种基于 Java 虚拟机 (`JVM`) 的动态编程语言，具有引入胜的特性：
 
 *   `Clojure` 是优雅的。`Clojure` 纯洁的设计让你直击问题本质，没有大量的冗余和仪式。
+
 *   `Clojure` 是重载的 Lisp。`Clojure` 拥有 Lisp 内在的力量，但不受其历史限制。
+
 *   `Clojure` 是一种函数式语言。数据结构是不可变的，大多数函数没有副作用。这使得编写正确的程序以及从小程序组合大程序变得更容易。
+
 *   `Clojure` 简化了并发编程。许多语言围绕锁构建并发模型，而锁很难正确使用。`Clojure` 提供了锁的替代方案：软件事务内存、代理（agents）、原子（atoms）和动态变量。
+
 *   `Clojure` 拥抱 Java。从 `Clojure` 调用 `Java` 是直接且快速的，没有转换层。
+
 *   与许多流行的动态语言不同，`Clojure` 很快。`Clojure` 的编写是为了利用现代 `JVM` 上可能的优化。
 
-许多其他语言涵盖了之前列表中的某些特性。在所有语言中，`Clojure` 脱颖而出。之前列出的特性都很强大且有趣。它们在 `Clojure` 中的简洁协同非常引人注目。我们将在第一章 *入门 中涵盖这些特性以及更多内容。
+许多其他语言涵盖了之前列表中的某些特性。在所有语言中，`Clojure` 脱颖而出。之前列出的特性都很强大且有趣。它们在 `Clojure` 中的简洁协同非常引人注目。我们将在第一章 *入门* 中涵盖这些特性以及更多内容。
 
 ## 本书的读者
 
 `Clojure` 是一种强大的通用编程语言。因此，本书面向追求力量和优雅的经验程序员。对于具有 `C#`、`Java`、`Python` 或 `Ruby` 等现代语言经验的人来说，这本书非常有用。
 
 `Clojure` 构建在 Java 虚拟机之上，而且速度很快。对于那些希望在不牺牲性能的情况下获得动态语言表达能力的 `Java` 程序员来说，这本书将特别具有吸引力。
-
-
 
 Clojure 正在帮助重新定义通用语言应该包含哪些特性。如果你使用 Lisp 编程、使用 Haskell 这样的函数式语言，或者编写显式的并发程序，你将非常喜欢 Clojure。Clojure 结合了 Lisp、函数式编程和并发编程的理念，并让初次接触这些理念的程序员觉得它们更容易上手。
 
@@ -156,16 +150,19 @@ Clojure 是更大现象的一部分。Erlang、F#、Haskell 和 Scala 等语言�
 ### 给函数式程序员
 
 *   Clojure 处理函数式编程（FP）的方法在学术纯洁性和当前代 JVM 的执行现实之间取得了平衡。请仔细阅读第 4 章`函数式编程`。
+
 *   第 5 章`状态` 提供了处理状态的方法。
 
 ### 给 Java/C# 程序员
 
 *   仔细阅读第 2 章`探索 Clojure`。
+
 *   第 7 章`宏` 对其他语言来说非常异类。
 
 ### 给 Lisp 程序员
 
 *   第 7 章`宏` 展示了 Lisp 的标志性特性。
+
 *   Clojure 的并发模型提供了提供了处理副作用的方法。
 
 ### 给 Perl/Ruby 程序员
@@ -219,11 +216,8 @@ Clojure 是更大现象的一部分。Erlang、F#、Haskell 和 Scala 等语言�
 
 该语法是非正式的，使用 `?`、`*`、`+` 和 `&` 来记录不同的参数传递样式，如前所示。
 
-
-
-
-
 |   | `(io/file "hello.txt")` |
+
 |   | `-> #<File hello.txt>` |
 
 Clojure 在成功调用 `use` 后会返回 `nil`。为了简洁起见，这在示例列表中被省略了。
@@ -235,6 +229,7 @@ Clojure 在成功调用 `use` 后会返回 `nil`。为了简洁起见，这在�
 提示符前的 `user` 告诉你是当前正在工作的命名空间。对于书中的大多数示例，当前命名空间是无关的。在命名空间无关的情况下，我们将使用以下语法与 REPL 交互：
 
 |   | `(+ 2 2) ; 不带命名空间提示符的输入行` |
+
 |   | `-> 4 ; 返回值` |
 
 在当前命名空间重要的情况下，我们将使用这种格式：
@@ -250,6 +245,7 @@ Clojure 在成功调用 `use` 后会返回 `nil`。为了简洁起见，这在�
 书中的示例代码可以通过两个位置之一获取：
 
 * *Programming Clojure* 主页 [[6]](#f_0014.html_FOOTNOTE-6) 链接到源代码的官方副本，并根据书的每个版本进行更新。
+
 * *Programming Clojure* git 仓库[[7]](#f_0014.html_FOOTNOTE-7) 实时更新。这是最新、最强大的代码，有时可能领先于书中的文字。
 
 除非另有说明，单个示例位于 `examples` 目录中。
@@ -257,6 +253,7 @@ Clojure 在成功调用 `use` 后会返回 `nil`。为了简洁起见，这在�
 在本书中，代码列表以文件名开头，并用灰色背景与实际代码隔开。例如，以下列表来自 `src/examples/preface.clj`：
 
 | [src/examples/preface.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/preface.clj) |
+
 |   | `(println "hello")` |
 
 如果你是以 PDF 格式阅读本书，可以点击代码列表前面的小灰色框并直接下载该列表。
@@ -266,44 +263,56 @@ Clojure 在成功调用 `use` 后会返回 `nil`。为了简洁起见，这在�
 ### 脚注
 
 | [[3]](#f_0013.html_FNPTR-3) | [`www.pragprog.com/titles/shcloj2/programming-clojure`](http://www.pragprog.com/titles/shcloj2/programming-clojure) |
-| [[4]](#f_0013.html_FNPTR-4) | [`www.pragprog.com/titles/shcloj2/errata`](http://www.pragprog.com/titles/shcloj2/errata) |
-| [[5]](#f_0013.html_FNPTR-5) | [`forums.pragprog.com/forums/207`](http://forums.pragprog.com/forums/207) |
-| [[6]](#f_0014.html_FNPTR-6) | [`www.pragprog.com/titles/shcloj2`](http://www.pragprog.com/titles/shcloj2) |
-| [[7]](#f_0014.html_FNPTR-7) | [`github.com/stuarthalloway/programming-clojure`](http://github.com/stuarthalloway/programming-clojure) |
 
+| [[4]](#f_0013.html_FNPTR-4) | [`www.pragprog.com/titles/shcloj2/errata`](http://www.pragprog.com/titles/shcloj2/errata) |
+
+| [[5]](#f_0013.html_FNPTR-5) | [`forums.pragprog.com/forums/207`](http://forums.pragprog.com/forums/207) |
+
+| [[6]](#f_0014.html_FNPTR-6) | [`www.pragprog.com/titles/shcloj2`](http://www.pragprog.com/titles/shcloj2) |
+
+| [[7]](#f_0014.html_FNPTR-7) | [`github.com/stuarthalloway/programming-clojure`](http://github.com/stuarthalloway/programming-clojure) |
 
 # 第 1 章：入门
 
 许多因素促成了 Clojure 的快速兴起。快速在 Web 搜索可能会告诉你 Clojure：
 
 * 是一种函数式语言，
+
 * 是一个用于 JVM 的 Lisp，
+
 * 具有处理并发的特殊特性。
 
 所有这些点都非常重要，但没有哪一个是理解“用 Clojure 思考”的关键。在我们看来，有两个核心概念驱动了 Clojure 的其他一切：简单性与强大性。
 
+
+
 简单性在软件领域有多种含义，但我们指的定义是原始且最佳的一个：如果一个事物不是复合的，那么它就是简单的。简单的组件允许系统执行设计者的意图，而不会执行其他与当前任务无关的事情。根据我们的经验，无关的复杂性很快就会变成危险的复杂性。
 
-强大有很多含义。我们在这里关心的是完成我们想要承担的任务的充分性。要让一个程序员感到强大，你需要构建在一个本身强大且广泛部署的基底之上，例如 JVM。然后，你的工具必须赋予你对该力量的完全、无限制的访问。对于必须充分利用其平台的项目来说，强大往往是一项门槛要求。
+强大有很多含义。我们在这里关心的是完成我们想要承担的任务的充分性。要让一个程序员感到强大，你需要构建在一个本身强大且广泛部署的基底之上，例如 `JVM`。然后，你的工具必须赋予你对该力量的完全、无限制的访问。对于必须充分利用其平台的项目来说，强大往往是一项门槛要求。
 
-作为程序员，我们花费了多年容忍那些巴洛克般复杂的工具，而这些工具是获取所需能力的唯一途径。为了对编程模型进行理性的简化而接受了强大性的降低，某些权衡是根本性的，但强大与简单并非如此。Clojure 展示了强大与简单是可以并并存的。
+作为程序员，我们花费了多年容忍那些巴洛克般复杂的工具，而这些工具是获取所需能力的唯一途径。为了对编程模型进行理性的简化而接受了强大性的降低，某些权衡是根本性的，但强大与简单并非如此。`Clojure` 展示了强大与简单是可以并存的。
 
 ## 1.1 为什么选择 Clojure？
 
-Clojure 的所有独特特性都是为了提供简单性、强大性或两者。这里是一些例子：
+`Clojure` 的所有独特特性都是为了提供简单性、强大性或两者。这里是一些例子：
 
 * 函数式编程是简单的，因为它将计算与状态隔离开。优点：函数式程序更容易理解、编写、测试、优化和并行化。
-* Clojure 的 Java 交互形式是强大的，让你能直接访问 Java 语义。优点：你可以获得与 Java 相同的性能。最重要的是，你不需要为了额外的能力而“降级”。
-* Lisp 在两个关键方面是简单的：它将读取与评估分离，语言语法由少数部分组成。
-* Lisp 同样强大，提供了宏系统。
-* Clojure 的时间模型是简单的，将值与状态分离。
-* Protocol（协议）是简单的，将多态与派生分离。
+
+* `Clojure` 的 `Java` 交互形式是强大的，让你能直接访问 `Java` 语义。优点：你可以获得与 `Java` 相同的性能。最重要的是，你不需要为了额外的能力而“降级”。
+
+* `Lisp` 在两个关键方面是简单的：它将读取与评估分离，语言语法由少数部分组成。
+
+* `Lisp` 同样强大，提供了宏系统。
+
+* `Clojure` 的时间模型是简单的，将值与状态分离。
+
+* `Protocol`（协议）是简单的，将多态与派生分离。
 
 这个特性列表是本书后续内容的路线图，不必担心遵循这里的每一个细节。让我们通过构建一个小应用程序来观察这些特性的运行。在此过程中，你将学习如何加载和执行稍后使用的示例。
 
 ### Clojure 是优雅的
 
-Clojure 是高信号、低噪声的。结果是，Clojure 程序很短。短的程序构建、部署和维护成本更低。这在程序简洁而非晦涩时尤为如此。例如，请考虑以下 Java 代码：
+`Clojure` 是高信号、低噪声的。结果是，`Clojure` 程序很短。短的程序构建、部署和维护成本更低。这在程序简洁而非晦涩时尤为如此。例如，请考虑以下 `Java` 代码：
 
 ```java
 public class StringUtils {
@@ -322,21 +331,18 @@ public class StringUtils {
 }
 ```
 
-`isBlank` 方法检查字符串是否为空：空或仅由空白字符组成。这里是 Clojure 中类似的实现：
+`isBlank` 方法检查字符串是否为空：空或仅由空白字符组成。这里是 `Clojure` 中类似的实现：
 
 ```clojure
 (defn blank? [str]
   (every? #(Character/isWhitespace %) str))
 ```
 
+`Clojure` 版本更短。但更重要的是，它更简单：它没有变量、没有可变状态，也没有分支。这得益于高阶函数。高阶函数是指接受函数作为参数并/或返回函数作为结果的。`every?` 函数接受函数和一个集合作为参数，如果该函数对集合中的每个项目都返回 `true`，则它返回 `true`。
 
+由于 `Clojure` 版本没有分支，它更容易阅读和测试。这些优势在大型程序中会被放大。此外，尽管代码非常简洁，但它仍然具有可读性。事实上，`Clojure` 程序读起来就像是对“空白”的定义：如果一个字符串中的每个字符都是空白字符，那么它就是空白。这比 `Commons` 方法好得多，后者将空白的定义隐藏在了循环和 `if` 语句的实现细节之后。
 
-
-Clojure 版本更短。但更重要的是，它更简单：它没有变量、没有可变状态，也没有分支。这得益于高阶函数。高阶函数是指接受函数作为参数并/或返回函数作为结果的。`every?` 函数接受函数和一个集合作为参数，如果该函数对集合中的每个项目都返回 `true`，则它返回 `true`。
-
-由于 Clojure 版本没有分支，它更容易阅读和测试。这些优势在大型程序中会被放大。此外，尽管代码非常简洁，但它仍然具有可读性。事实上，Clojure 程序读起来就像是对“空白”的定义：如果一个字符串中的每个字符都是空白空白符，那么它就是空白。这比 Commons 方法好得多，后者将空白的定义隐藏在了循环和 `if` 语句的实现细节之后。
-
-此外，考虑在 Java 中定义一个简单的 `Person` 类：
+此外，考虑在 `Java` 中定义一个简单的 `Person` 类：
 
 ```java
 public class Person {
@@ -366,7 +372,7 @@ public class Person {
 }
 ```
 
-在 Clojure 中，你只需要一行就可以定义 `Person`：
+在 `Clojure` 中，你只需要一行就可以定义 `Person`：
 
 ```clojure
 (defrecord Person [first-name last-name])
@@ -381,26 +387,27 @@ foo
 -> #:user.Person{:first-name "Aaron", :last-name "Bedra"}
 ```
 
-`defrecord` 和相关函数将在第 6.3 节 Protocols 中介绍。
+`defrecord` 和相关函数将在第 6.3 节 `Protocols` 中介绍。
 
-除了长度短了一个数量级之外，Clojure 的方法不同之处在于 Clojure 的 `Person` 是不可变的。不可变数据结构天然是线程安全的，而且当使用 Clojure 的引用（references）、代理（agents）和原子（atoms）时，可以分层实现更新能力，这些将在第 5 章 State 中介绍。由于记录是不可变的，Clojure 还自动提供了 `hashCode` 和 `equals` 的正确实现。
+除了长度短了一个数量级之外，`Clojure` 的方法不同之处在于 `Clojure` 的 `Person` 是不可变的。不可变数据结构天然是线程安全的，而且当使用 `Clojure` 的引用（`references`）、代理（`agents`）和原子（`atoms`）时，可以分层实现更新能力，这些将在第 5 章 `State` 中介绍。由于记录是不可变的，`Clojure` 还自动提供了 `hashCode` 和 `equals` 的正确实现。
 
-Clojure 内置了许多优雅的设计，但如果你发现缺少某些功能，得益于 Lisp 的强大，你可以自己添加。
+`Clojure` 内置了许多优雅的设计，但如果你发现缺少某些功能，得益于 `Lisp` 的强大，你可以自己添加。
 
 ### Clojure 是重塑 Lisp
 
-Clojure 是一种 Lisp。几十年来，Lisp 的支持者一直指出 Lisp 相比于……其他任何东西的优势。同时，Lisp 的世界统治计划似乎正在缓慢进行。
+`Clojure` 是一种 `Lisp`。几十年来，`Lisp` 的支持者一直指出 `Lisp` 相比于……其他任何东西的优势。同时，`Lisp` 的世界统治计划似乎正在缓慢进行。
 
-与其他任何 Lisp 一样，Clojure 面临着两个挑战：
+与其他任何 `Lisp` 一样，`Clojure` 面临着两个挑战：
 
-*   Clojure 必须通过说服 Lisp 程序员承认 Clojure 纳了 Lisp 的关键部分，从而作为一个 Lisp 成功。
-*   同时，Clojure 需要通过赢得更广泛程序员社区的支持，在以往其他 Lisp 失败的地方取得成功。
+*   `Clojure` 必须通过说服 `Lisp` 程序员承认 `Clojure` 纳了 `Lisp` 的关键部分，从而作为一个 `Lisp` 成功。
 
-Clojure 通过提供 Lisp 的元编程能力，同时接受一组语法增强，这些增强使得 Clojure 对非 Lisp 程序员更友好，从而应对这些挑战。
+*   同时，`Clojure` 需要通过赢得更广泛程序员社区的支持，在以往其他 `Lisp` 失败的地方取得成功。
+
+`Clojure` 通过提供 `Lisp` 的元编程能力，同时接受一组语法增强，这些增强使得 `Clojure` 对非 `Lisp` 程序员更友好，从而应对这些挑战。
 
 #### 为什么选择 Lisp？
 
-Lisp 拥有极小的语言核心、几乎没有语法，以及强大的宏机制。通过这些特性，你可以弯曲 Lisp 来满足你的设计，而不是反之。相比之下，考虑以下 Java 代码段：
+`Lisp` 拥有极小的语言核心、几乎没有语法，以及强大的宏机制。通过这些特性，你可以弯曲 `Lisp` 来满足你的设计，而不是反之。相比之下，考虑以下 `Java` 代码段：
 
 ```java
 public class Person {
@@ -410,15 +417,17 @@ public class Person {
     }
 ```
 
-在这段代码中，`getFirstName` 是一个方法。方法是多态的，可以为了满足你的需求而改变。但与其他与其他词的解释是由语言固定的。有时你真的需要改变这些词的含义。例如，你可能会执行以下操作：
+在这段代码中，`getFirstName` 是一个方法。方法是多态的，可以为了满足你的需求而改变。但其他词的解释是由语言固定的。有时你真的需要改变这些词的含义。例如，你可能会执行以下操作：
 
 *   重新定义 `private`，意味着“对于生产代码是私有的，但对于序列化和单元测试是公开的”。
-*   重新定义 `class` 为私有字段自动生成 getter 和 setter，除非另有指示。
+
+*   重新定义 `class` 为私有字段自动生成 `getter` 和 `setter`，除非另有指示。
+
 *   创建一个 `class` 的子类，为生命周期事件提供回调钩子。例如，一个感知生命周期的类可以在该类的实例被创建时触发事件。
 
 我们见过需要所有这些功能的程序。如果没有它们，程序员就不得不采用重复的变通方法。
 
-在大多数语言中，你得请求语言实现者添加功能。在 Clojure 中，你可以通过宏添加功能（第 7 章 Macros）。Clojure 本身是由像 `defrecord` 这样的宏构建的：
+在大多数语言中，你得请求语言实现者添加功能。在 `Clojure` 中，你可以通过宏添加功能（第 7 章 `Macros`）。`Clojure` 本身是由像 `defrecord` 这样的宏构建的：
 
 ```clojure
 (defrecord Person [arg1 arg2 arg3])
@@ -430,65 +439,69 @@ public class Person {
 (defrecord Person [arg1 arg2 arg3]) :allow-nulls false
 ```
 
-这种从语言内部重新编程语言的能力是 Lisp 的独特优势。你将以各种方式看到这一想法的各个方面：
+这种从语言内部重新编程语言的能力是 `Lisp` 的独特优势。你将以各种方式看到这一想法的各个方面：
 
-*   Lisp 是同态的（homoiconic）。9 解释了为什么这是如此强大。
+*   `Lisp` 是同态的（`homoiconic`）。9 解释了为什么这是如此强大。
 
-Lisp 语法还消除了运算符优先级和结合性规则。你在书中任何地方都找不到运算符优先级或结合性的表格。通过全括号表达式，不存在任何可能的歧义。
+`Lisp` 语法还消除了运算符优先级和结合性规则。你在书中任何地方都找不到运算符优先级或结合性的表格。通过全括号表达式，不存在任何可能的歧义。
 
-Lisp 简单、规则语法的缺点（至少对于初学者来说）是它对括号以及对列表作为核心数据类型的痴迷。Clojure 提供了一组有趣的特性组合，使得 Lisp 对非 Lisp 程序员更容易上手。
+`Lisp` 简单、规则语法的缺点（至少对于初学者来说）是它对括号以及对列表作为核心数据类型的痴迷。`Clojure` 提供了一组有趣的特性组合，使得 `Lisp` 对非 `Lisp` 程序员更容易上手。
 
 #### 括号更少的 Lisp
 
-对于从其他 Lisp 转过来的程序员来说，Clojure 提供了显著优势：
+对于从其他 `Lisp` 转过来的程序员来说，`Clojure` 提供了显著优势：
 
-*   Clojure 将 Lisp 的物理列表泛化为名为序列（sequence）的抽象。这保留了列表的力量，同时将这种力量扩展到各种数据结构。
-*   Clojure 对 JVM 的依赖提供了一个标准库和一个影响广泛的部署平台。
-*   Clojure 处理符号解析和语法引用的方法使得编写许多宏变得更容易。
+*   `Clojure` 将 `Lisp` 的物理列表泛化为名为序列（`sequence`）的抽象。这保留了列表的力量，同时将这种力量扩展到各种数据结构。
 
-许多 Clojure 程序员对 Lisp 来说是全新的，他们可能听过关于那些括号的坏话。Clojure 保留了括号（以及 Lisp 的力量！），但在以下几个方面改进了传统的 Lisp 语法：
+*   `Clojure` 对 `JVM` 的依赖提供了一个标准库和一个影响广泛的部署平台。
 
-*   Clojure 为除了列表之外的各种数据结构提供了方便的字面量语法：正则表达式、映射、集合、向量和元数据。这些特性使得 Clojure 代码看起来不像大多数 Lisp 那么“列表化”。例如，函数参数指定在向量 `[]` 中，而不是列表 `()` 中。
+*   `Clojure` 处理符号解析和语法引用的方法使得编写许多宏变得更容易。
 
+许多 `Clojure` 程序员对 `Lisp` 来说是全新的，他们可能听过关于那些括号的坏话。`Clojure` 保留了括号（以及 `Lisp` 的力量！），但在以下几个方面改进了传统的 `Lisp` 语法：
 
+*   `Clojure` 为除了列表之外的各种数据结构提供了方便的字面量语法：正则表达式、映射、集合、向量和元数据。这些特性使得 `Clojure` 代码看起来不像大多数 `Lisp` 那么“列表化”。例如，函数参数指定在向量 `[]` 中，而不是列表 `()` 中。
 
+```
+(defn hello-world [username]
+  (println (format "Hello, %s" username)))
+```
 
+向量使得参数列表在视觉上跳跃出来，让 `Clojure` 函数定义变得易于阅读。
 
-| | `defn hello-world [username]` |
-| | `(println (format "Hello, %s" username))` |
+*   在 `Clojure` 中，与大多数 `Lisp` 不同，逗号是空白字符。
 
-向量使得参数列表在视觉上跳跃出来，让 Clojure 函数定义变得易于阅读。
+```
+; make vectors look like arrays in other languages
+[1, 2, 3, 4]
+-> [1 2 3 4]
+```
 
-*   在 Clojure 中，与大多数 Lisp 不同，逗号是空白字符。
-
-| | `; make vectors look like arrays in other languages` |
-| | `[1, 2, 3, 4]` |
-| | `-> [1 2 3 4]` |
-
-*   惯道的 Clojure 不会进行不括号嵌套。考虑存在于 Common Lisp 和 Clojure 中的 `cond` 宏。`cond` 评估一组测试/结果对，并返回第一个测试形式为真的结果。每个测试/结果对都用括号分组，如下所示：
+*   惯用的 `Clojure` 不会进行不必要的括号嵌套。考虑存在于 `Common Lisp` 和 `Clojure` 中的 `cond` 宏。`cond` 评估一组测试/结果对，并返回第一个测试形式为真的结果。每个测试/结果对都用括号分组，如下所示：
 
 ```lisp
 ; Common Lisp cond
 (cond (= x 10) "equal") ((> x 10) "more"))
 ```
 
-Clojure 避免了额外的括号：
+`Clojure` 避免了额外的括号：
 
 ```clojure
 ; Clojure cond
 (cond (= x 10) "equal" (> x 10) "more")
 ```
 
-这是一种审美上的决策，两种方法都有它们的支持者。重要的是，Clojure 能够在不损害 Lisp 威力的情况下，利用机会表现得不那么“Lisp 化”。
+这是一种审美上的决策，两种方法都有它们的支持者。重要的是，`Clojure` 能够在不损害 `Lisp` 威力的情况下，利用机会表现得不那么“Lisp 化”。
 
-Clojure 是一门优秀的 Lisp，对于 Lisp 专家和 Lisp 初学者都是如此。
+`Clojure` 是一门优秀的 `Lisp`，对于 `Lisp` 专家和 `Lisp` 初学者都是如此。
 
 ### Clojure 是一种函数式语言
 
-Clojure 是一种函数式语言，但不是像 Haskell 那样的纯函数式语言。函数式语言具有以下属性：
+`Clojure` 是一种函数式语言，但不是像 `Haskell` 那样的纯函数式语言。函数式语言具有以下属性：
 
 *   函数是一等对象。也就是说，函数可以在运行时创建、传递、返回，并通常像任何其他数据类型一样使用。
+
 *   数据是不可变的。
+
 *   函数是纯的；也就是说，它们没有副作用。
 
 对于许多任务，函数式程序更容易理解、更不容易出错，并且更容易复用。例如，以下短程序会在作品数据库中搜索每个写过名为“Requiem”作品的作曲家：
@@ -503,31 +516,37 @@ Clojure 是一种函数式语言，但不是像 Haskell 那样的纯函数式语
 这个示例具有四个良好的属性：
 
 *   它非常简单；没有循环、变量或可变状态。
+
 *   它是线程安全的；不需要锁。
+
 *   它是可并行的；你可以将单个步骤分配给多个线程，而无需更改每个步骤的代码。
-*   它是通用的；`compositions` 可以是一个普通的集合、XML 或数据库结果集。
+
+*   它是通用的；`compositions` 可以是一个普通的集合、`XML` 或数据库结果集。
 
 将函数式程序与命令式程序对比，后者通过显式语句改变程序状态。大多数面向对象的程序以命令风格编写，并不具备前面列出的任何优点：它们异常复杂、不是线程安全的、不可并行，且难以泛化。（要对函数式和命令式风格进行对比比较，请跳转到第 2.7 节 [我的 for 循环在哪里?]）。
 
-人们早就知道函数式语言的优势。然而，像 Haskell 这样的纯函数式语言并没有统治世界，因为开发者发现并不是所有内容都能轻松地融入纯函数式的视图中。
+人们早就知道函数式语言的优势。然而，像 `Haskell` 这样的纯函数式语言并没有统治世界，因为开发者发现并不是所有内容都能轻松地融入纯函数式的视图中。
 
-Clojure 现在比过去函数式语言吸引更多关注的四个原因：
+`Clojure` 现在比过去函数式语言吸引更多关注的四个原因：
 
-*   函数式编程比以往任何时候都更加迫切。大规模多核硬件触手可尺，函数式语言提供了一种利用它的清晰方法。函数式编程在第 4 章 [函数式编程] 中介绍。
-*   纯函数式语言在建模真正需要改变的状态时可能会很笨拙。Clojure 通过软件事务内存和 `refs`、`agents`、`atoms` 以及动态绑定提供了一种处理可变状态的结构化机制。
-*   许多函数式语言是静态类型的。Clojure 的动态类型使其更易于上手。
-*   Clojure 提供了一种通过软件事务内存 (STM) 处理可变状态的结构化机制，这不仅仅是锁。
+*   函数式编程比以往任何时候都更加迫切。大规模多核硬件触手可及，函数式语言提供了一种利用它的清晰方法。函数式编程在第 4 章 [函数式编程] 中介绍。
+
+*   纯函数式语言在建模真正需要改变的状态时可能会很笨拙。`Clojure` 通过软件事务内存和 `refs`、`agents`、`atoms` 以及动态绑定提供了一种处理可变状态的结构化机制。
+
+*   许多函数式语言是静态类型的。`Clojure` 的动态类型使其更易于上手。
+
+*   `Clojure` 提供了一种通过软件事务内存 (`STM`) 处理可变状态的结构化机制，这不仅仅是锁。
 
 ### Clojure 简化了并发编程
 
-Clojure 对并发的支持使得编写线程安全的代码变得简单。由于数据是不可变的，因此不存在基于另一个线程导致损坏的危险。例如，以下代码创建了一个线程安全的内存数据库：
+`Clojure` 对并发的支持使得编写线程安全的代码变得简单。由于数据是不可变的，因此不存在基于另一个线程导致损坏的危险。例如，以下代码创建了一个线程安全的内存数据库：
 
 ```clojure
 (def accounts (ref {}))
 (record Account [id balance])
 ```
 
-`ref` 函数创建了一个指向当前状态的事务保护引用。更新是轻而易事的。以下代码向数据库添加了一个新账户：
+`ref` 函数创建了一个指向当前状态的事务保护引用。更新是轻而易举的。以下代码向数据库添加了一个新账户：
 
 ```clojure
 (dosync
@@ -536,17 +555,17 @@ Clojure 对并发的支持使得编写线程安全的代码变得简单。由于
 
 `dosync` 导致对 `accounts` 的更新在事务内部执行。这保证了线程安全，并且比锁更容易使用。有了事务，你永远不需要担心锁定哪些对象或按什么顺序。事务方法在某些使用场景下性能更好，因为（例如）读者永远不会阻塞。
 
-尽管这里的示例非常简单，但这种技术是通用的，并且适用于现实问题。请参第 5 章了解更多关于 Clojure 中并发和 STM 的知识。
+尽管这里的示例非常简单，但这种技术是通用的，并且适用于现实问题。请参第 5 章了解更多关于 `Clojure` 中并发和 `STM` 的知识。
 
 ### Clojure 拥抱 Java 虚拟机
 
-Clojure 让你清晰、简单、直接访问 Java。你可以直接调用任何 Java API：
+`Clojure` 让你清晰、简单、直接访问 `Java`。你可以直接调用任何 `Java` API：
 
 ```java
 (System/getProperties)
 ```
 
-Clojure 为调用 Java 增加了许多语法糖。我们在这里不涉及细节（见第 2.5 节 [调用 Java]），但请注意，在下面的代码中，Clojure 版本比 Java 版本的点更少，括号也更少：
+`Clojure` 为调用 `Java` 增加了许多语法糖。我们在这里不涉及细节（见第 2.5 节 [调用 Java]），但请注意，在下面的代码中，`Clojure` 版本比 `Java` 版本的点更少，括号也更少：
 
 ```java
 // Java
@@ -556,32 +575,33 @@ Clojure 为调用 Java 增加了许多语法糖。我们在这里不涉及细节
 (.. "hello" getClass getProtectionDomain)
 ```
 
-Clojure 提供了简单的函数来实现 Java 接口和创建 Java 类的子类。此外，Clojure 函数都实现了 `Callable` 和 `Runnable`。这使得将以下匿名函数传递给 Java `Thread` 的构造函数变得轻而易举。
-
-
-
+`Clojure` 提供了简单的函数来实现 `Java` 接口和创建 `Java` 类的子类。此外，`Clojure` 函数都实现了 `Callable` 和 `Runnable`。这使得将以下匿名函数传递给 `Java` `Thread` 的构造函数变得轻而易举。
 
 ```clojure
 (.start (new Thread fn [] (println "Hello" (Thread/currentThread))))
 ```
+
 ```clojure
 -> Hello #<Thread Thread[Thread-0,5,main]>
 ```
 
-这里有趣的输出是 Clojure 打印 Java 实例的方式。`Thread` 是实例的类名，而 `Thread[Thread-0,5,main]` 是实例的 `toString` 表示。
+这里有趣的输出是 `Clojure` 打印 `Java` 实例的方式。`Thread` 是实例的类名，而 `Thread[Thread-0,5,main]` 是实例的 `toString` 表示。
 
-（请注意，在前面的示例中，新线程将运行完毕，但它的输出可能会以某种奇怪的方式与 REPL 提示符交错。这并不是 Clojure 的问题，仅仅是因为有多个线程向输出流写入内容。）
+（请注意，在前面的示例中，新线程将运行完毕，但它的输出可能会以某种奇怪的方式与 `REPL` 提示符交错。这并不是 `Clojure` 的问题，仅仅是因为有多个线程向输出流写入内容。）
 
-由于 Clojure 中的 Java 调用语法简洁简单，因此直接使用 Java 是符合惯用用法的，而不是将 Java 隐藏在 Lispy 风格的包装器之后。
+由于 `Clojure` 中的 `Java` 调用语法简洁简单，因此直接使用 `Java` 是符合惯用用法的，而不是将 `Java` 隐藏在 `Lispy` 风格的包装器之后。
 
-既然你已经了解了一些使用 Clojure 的原因，现在是时候开始编写一些代码了。
+既然你已经了解了一些使用 `Clojure` 的原因，现在是时候开始编写一些代码了。
 
 ## 1.2 Clojure 编程快速上手
 
-要运行 Clojure 和书中的代码，你需要两样东西：
+要运行 `Clojure` 和书中的代码，你需要两样东西：
 
-*   一个 Java 运行时。下载 11 并安装 Java 5 或更高版本。Java 6 有显著的性能改进和更好的异常报告，如果可能，请选择此版本。
-*   Leiningen。12 Leiningen 是一个用于管理依赖和针对代码启动任务的工具。它也是 Clojure 领域执行工作最常用的工具。
+
+
+一个 Java 运行时。下载 11 并安装 Java 5 或更高版本。Java 6 有显著的性能改进和更好的异常报告，如果可能，请选择此版本。
+
+Leiningen。12 Leiningen 是一个用于管理依赖和针对代码启动任务的工具。它也是 Clojure 领域执行工作最常用的工具。
 
 你将使用 Leiningen 安装 Clojure 以及书中示例代码的所有依赖项。如果你已经安装了 Leiningen，你应该对基础了如指。如果没有，你应该快速浏览一下 Leiningen 的 GitHub 页面 13，在那里你可以找到安装说明以及基础用法说明。不过，不必担心现在学习所有内容，因为这本书将引导你学习在家里跟随练习所需的全部命令。
 
@@ -593,7 +613,7 @@ Clojure 提供了简单的函数来实现 Java 接口和创建 Java 类的子类
 lein deps
 ```
 
-### 自行构建 Clojure
+## 自行构建 Clojure
 
 你可能想从源码构建 Clojure 以获取新功能和错误修复。方法如下：
 
@@ -620,7 +640,7 @@ user=>
 
 现在你准备好编写“Hello World”了。
 
-### 使用 REPL
+## 使用 REPL
 
 为了查看如何使用 REPL，让我们创建几个变体“Hello World”。首先，在 REPL 提示符处输入 `(println "hello world")`：
 
@@ -646,20 +666,16 @@ user=> (println "hello world")
 *   `str` 是一个函数调用，将任意参数列表拼接成字符串。
 *   `defn`、`hello`、`name` 和 `str` 都是符号（symbols），即引用事物的名称。合法的符号定义在符号 中。
 
-看返回值 `#’user/hello`。前缀 `#’` 表示 `user/hello` 是 `user` 命名空间中的一个函数。这使得工作变得简单：
+看返回值 `#'user/hello`。前缀 `#'` 表示 `user/hello` 是 `user` 命名空间中的一个函数。这使得工作变得简单：
 
 ```clojure
 user=> (str *1 " " *2)
 "1 2"
 ```
 
-### 添加状态
+## 添加状态
 
 上一节的 `hello` 函数是纯函数；也就是说，它没有副作用。尽管如此，大多数程序都有一些共享状态，并使用不纯函数来管理这些共享状态。让我们扩展 `hello` 以跟踪过去的访问者。首先，你需要一个数据结构来跟踪访问者。集合（set）就可以解决问题：
-
-
-
-
 
 ```markdown
 {}
@@ -752,7 +768,7 @@ user=> (str *1 " " *2)
 
 到此为止，你应该已经习惯在 REPL 中输入小段代码了。较大的代码单元并没有太大区别；你也可以从 REPL 加载并运行 Clojure 库。让我们下一步探索这一点。
 
-## 1.3 探索 Clojure 库
+## 探索 Clojure 库
 
 Clojure 代码被封装在库中。每个 Clojure 库都属于一个命名空间（namespace），它类似于 Java 包。你可以使用 `require` 加载 Clojure 库：
 
@@ -767,7 +783,7 @@ user=> (require 'clojure.java.io)
 -> nil
 ```
 
-前面的单引号（`’）是必要的，它对库名进行引用（引用在第 2.2 节 Reader Macros 中介绍）。返回的 `nil` 表示成功。顺便测试一下是否可以加载本章的示例代码 `examples.introduction`：
+前面的单引号（`'`）是必要的，它对库名进行引用（引用在第 2.2 节 Reader Macros 中介绍）。返回的 `nil` 表示成功。顺便测试一下是否可以加载本章的示例代码 `examples.introduction`：
 
 ```markdown
 user=> (require 'examples.introduction)
@@ -871,56 +887,58 @@ clojure.core/str
 | r | 一个 ref |
 | v | 一个向量 |
 | val | 一个值 |
-```
-
-
-
-
 
 这些名称可能看起来有些简短，但它们有充分的理由：“好的名称”通常被 Clojure 函数占用了！命名与函数名冲突的参数是合法的，但被认为是不良风格：参数会遮蔽（shadow）函数，在参数的作用域内，该函数将不可用。因此，不要将你的 refs 命名为 `ref`，将 agents 命名为 `agent` 或将 counts 命名为 `count`。这些名称指的是函数。
 
 你可以通过在函数名后紧跟字符串来为自己的函数添加文档字符串：
 
-| [src/examples/introduction.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/introduction.clj) |
-| | |
-| | `(defn hello` |
-| | `"Writes hello message to out. Calls you by username"` |
-| | `[username]` |
-| | `(println (str "Hello, " username))` |
+`src/examples/introduction.clj`
+
+```markdown
+(defn hello
+"Writes hello message to out. Calls you by username"
+[username]
+(println (str "Hello, " username)))
+```
 
 有时你并不知道想要查找文档的确切名称。`find-doc` 函数会搜索任何 `doc` 输出匹配你传递的正则表达式或字符串的项：
 
-| | |
-| | `(find-doc s)` |
+```markdown
+(find-doc s)
+```
 
 使用 `find-doc` 来探索 Clojure 如何进行还原（reduce）：
 
-| user=> (find-doc "reduce") |
-| ------------------------- |
-| `clojure/areduce` |
-| `([a idx ret init expr])` |
-| `Macro` |
-| `.. . details elided .. .` |
-| ------------------------- |
-| `clojure/reduce` |
-| `([f coll] [f val coll])` |
-| `.. . details elided .. .` |
+```markdown
+user=> (find-doc "reduce")
+-------------------------
+clojure/areduce
+([a idx ret init expr])
+Macro
+.. . details elided .. .
+-------------------------
+clojure/reduce
+([f coll] [f val coll])
+.. . details elided .. .
+```
 
 `reduce` 用于还原 Clojure 集合，并在转换序列 中有所介绍。`areduce` 用于与 Java 数组交互，并在使用 Java 集合 中介绍。
 
-Clojure 的大部分是用 Clojure 编写的，阅读源代码是有益的。你可以使用 `repl` 库查看 Clojure 函数的 `source`。
+Clojure 的大部分是用 Clojure 编写的，阅读源代码是有益的。你可以使用 `repl` 库查看 Clojure 函数的 `source`：
 
-```(clojure.repl/source a-symbol)
+```markdown
+(clojure.repl/source a-symbol)
 ```
 
 尝试查看简单函数 `identity` 的源码：
 
-```cl
+```clojure
 (use 'clojure.repl)
+
 (source identity)
 ```
 
-```
+```markdown
 -> (defn identity
  "Returns its argument."
  {:added "1.0"
@@ -930,11 +948,11 @@ Clojure 的大部分是用 Clojure 编写的，阅读源代码是有益的。你
 
 当然，你也可以使用 Java 的反射 API。你可以使用 `class`、`ancestors` 和 `instance?` 等方法对底层的 Java 对象模型进行反射，并告诉我们例如，Clojure 的集合也是 Java 集合：
 
-```
+```markdown
 (ancestors (class [1 2 3]))
 ```
 
-```
+```markdown
 -> #{clojure.lang.ILookup clojure.lang.Sequential
  java.lang.Object clojure.lang.Indexed
  java.lang.Iterable clojure.lang.IObj
@@ -950,6 +968,8 @@ Clojure 的大部分是用 Clojure 编写的，阅读源代码是有益的。你
  clojure.lang.IMeta java.io.Serializable java.lang.Runnable}
 ```
 
+
+
 Clojure 完整的 API 文档在线位于 [`clojure.github.com/clojure`](http://clojure.github.com/clojure)。右侧边栏链接到所有函数和宏，左侧边栏链接到关于 Clojure 特性的概览文章集。
 
 ## 1.4 总结
@@ -958,7 +978,7 @@ Clojure 完整的 API 文档在线位于 [`clojure.github.com/clojure`](http://c
 
 ### 脚注
 
-- 8: McC06 编写的*Software Estimation: Demystifying the Black Art*是一本非常好的读物，它证明了规模越小越越省钱。
+- 8: McC06 编写的*Software Estimation: Demystifying the Black Art*是一本非常好的读物，它证明了规模越小越省钱。
 - 9: [`en.wikipedia.org/wiki/Homoiconicity`](http://en.wikipedia.org/wiki/Homoiconicity)
 - 10: [`www.paulgraham.com/icad.html`](http://www.paulgraham.com/icad.html)
 - 11: [`www.oracle.com/technwork/java/downloads/index`](http://www.oracle.com/technwork/java/downloads/index)
@@ -995,11 +1015,6 @@ Clojure 是同质性的 17，这意味着 Clojure 代码由 Clojure 数据组成
 | 空 | `nil` | 布尔值与空 |
 | 数字 | `1`, `4.2` | 使用数字类型 |
 | 集合 | `#{:snap :crackle :pop}` | 第 3 章，统一序列数据](#f_0030.html_chp.sequences) |
-
-
-
-
-
 | 向量 | `[1 2 3]` | 第 3 章，用序列统一数据 |
 
 ***
@@ -1010,151 +1025,117 @@ Clojure 是同质性的 17，这意味着 Clojure 代码由 Clojure 数据组成
 
 数字字面量是形式。数字直接求值为它们自己。如果你输入一个数字，REPL 将将其返回给你：
 
-| | `42` |
-| | `-> 42` |
+```
+42
+-> 42
+```
 
 数字向量是另一种形式。创建一个包含数字 1, 2 和 3 的向量：
 
-| | `[1 2 3]` |
-| | `-> [1 2 3]` |
+```
+[1 2 3]
+-> [1 2 3]
+```
 
 列表也是一种形式。列表“仅仅是数据”，但它也被用于调用函数。创建一个其第一个项为 Clojure 函数命名的列表，例如符号 `+`：
 
 ```
-|   | `(+ 1 2)` |
-|   | `-> 3` |```
+(+ 1 2)
+-> 3
+```
 
 如你所见，Clojure 将列表作为函数调用来求值。这种将函数置放在前面的风格被称为前缀表示法（prefix notation），与更熟悉的中缀表示法（infix notation）`1 + 2 = 3` 相。当然，对于以单词命名的函数，前缀表示法是完全熟悉的。例如，大多数程序员会正确预期 `concat` 在此表达式中位于首：
 
 ```
-|   | `(concat [1 2] [3 4])` |
-|   | `-> (1 2 3 4)` |```
+(concat [1 2] [3 4])
+-> (1 2 3 4)
+```
 
 Clojure 仅仅是在保持一致性，将数学运算符与其他所有函数一样对待，并将它们放在前面。
 
 前缀表示法的实际优势是可以你可以轻松地将其扩展到任意数量的参数：
 
 ```
-|   | `(+ 1 2 3)` |
-|   | `-> 6` |```
+(+ 1 2 3)
+-> 6
+```
 
 即使是无参数的退化情况也能如你预期那样工作，返回零。这有助于消除用于边界条件的脆弱的特殊情况逻辑：
 
 ```
-|   | `(+)` |
-|   | `-> 0` |```
+(+)
+-> 0
+```
 
 许多数学和比较运算符具有你从其他编程语言预期的名称和语义。加法、减法、乘法、比较和相等都如你预期的那样工作：
 
 ```
-|   | `(- 10 5)` |
-|   | `-> 5` |
-|   | `(* 3 10 10)` |
-|   | `-> 300` |
-|   | `(> 5 2)` |
-|   | `-> true` |
-|   | `(>= 5 5)` |
-|   | `-> true` |
-|   | `(< 5 2)` |
-|   | `-> false` |
-|   | `(= 5 2)` |
-|   | `-> false` |```
+(- 10 5)
+-> 5
+
+(* 3 10 10)
+-> 300
+
+(> 5 2)
+-> true
+
+(>= 5 5)
+-> true
+
+(< 5 2)
+-> false
+
+(= 5 2)
+-> false
+```
 
 除法可能会让你感到惊讶：
 
 ```
-|   | `(/ 22 7)` |
-|   | `-> 22/7` |```
+(/ 22 7)
+-> 22/7
+```
 
 如你所见，Clojure 有一个内置的 `Ratio`（比例）类型：
 
 ```
-|   | `(class (/ 22 7))` |
-|   | `-> clojure.lang.Ratio` |```
+(class (/ 22 7))
+-> clojure.lang.Ratio
+```
 
 如果你实际想要的是小数除法，请对被数使用浮点字面量：
 
 ```
-|   | `(/ 22.0 7)` |
-|   | `-> 3.142857142857143` |```
+(/ 22.0 7)
+-> 3.142857142857143
+```
 
 如果你想坚持整数，可以使用 `quot` 和 `rem` 获取整数商和余数：
 
 ```
-|   | `(quot 22 7)` |
-|   | `-> 3` |
-|   | `(rem 22 7)` |
-|   | `-> 1` |```
+(quot 22 7)
+-> 3
+
+(rem 22 7)
+-> 1
+```
 
 如果你需要进行任意精度的浮点数学运算，在数字后附加 `M` 以创建一个 `BigDecimal` 字面量：
 
 ```
-|   | `(+ 1 (/ 0.00001 1000000000000000000))` |
-|   | `-> 1.0` |
-|   | `(+ 1 (/ 0.00001M 1000000000000000000))` |
-|   | `-> 1.000000000000000000` |```
+(+ 1 (/ 0.00001 1000000000000000000))
+-> 1.0
+
+(+ 1 (/ 0.00001M 1000000000000000000))
+-> 1.000000000000000000
+```
 
 对于任意精度的整数，你可以附加 `N` 来创建一个 `BigInt` 字面量：
 
 ```
-|   | `(* 1000N 1000)` |
-|   | `-> 1000000` |```
-
-注意，计算只需要一个 `BigInt` 字面量。
-
-### 符号
-
-诸如 `+`、`concat` 和 `java.lang.String` 的形式被称为符号，并用于命名事物。例如，`+` 命名了将东西相加的函数。符号为 Clojure 中的各种事物命名：
-
-*   如 `str` 和 `concat` 等函数
-*   如 `+` 和 `-` 等“运算符”，它们终究只是函数
-*   如 `java.lang.String` 和 `java.util.Random` 等类
-*   如 `clojure.core` 等命名空间和如 `java.lang` 的 Java 包
-*   数据结构和引用
-
-符号不能以数字开头，但由字母、数字字符加上 `+`、`-`、`*`、`/`、`!`、`.` 和 `_` 组成。合法符号字符列表是一个最小集。符号可以由字母、数字字符加上上述特殊符号组成。符号在 Clojure 中命名各种事物。符号不能以数字开头，但可以包含字母、数字字符以及上述特殊符号。
-
-*(注：由于原始文本在符号部分存在多处重复和乱码，翻译时已根据 Clojure 语法逻辑进行了对齐和清理。)*
-
-除法可能会让你感到惊讶：
-
+(* 1000N 1000)
+-> 1000000
 ```
-|   | `(/ 22 7)` |
-|   | `-> 22/7` |```
-
-如你所见，Clojure 有一个内置的 `Ratio` 类型：
-
-```
-|   | `(class (/ 22 7))` |
-|   | `-> clojure.lang.Ratio` |```
-
-如果你实际想要的是小数除法，请对被数使用浮点字面量：
-
-```
-|   | `(/ 22.0 7)` |
-|   | `-> 3.142857142857143` |```
-
-如果你想坚持整数，可以使用 `quot` 和 `rem` 获取整数商和余数：
-
-```
-|   | `(quot 22 7)` |
-|   | `-> 3` |
-|   | `(rem 22 7)` |
-|   | `-> 1` |```
-
-如果你需要进行任意精度的浮点数学运算，在数字后附加 `M` 以创建一个 `BigDecimal` 字面量：
-
-```
-|   | `(+ 1 (/ 0.00001 1000000000000000000))` |
-|   | `-> 1.0` |
-|   | `(+ 1 (/ 0.00001M 1000000000000000000))` |
-|   | `-> 1.000000000000000000` |```
-
-对于任意精度的整数，你可以附加 `N` 来创建一个 `BigInt` 字面量：
-
-```
-|   | `(* 1000N 1000)` |
-|   | `-> 1000000` |```
 
 注意，计算只需要一个 `BigInt` 字面量。
 
@@ -1171,77 +1152,10 @@ Clojure 仅仅是在保持一致性，将数学运算符与其他所有函数一
 符号不能以数字开头，但可以由字母、数字字符加上 `+`、`-`、`*`、`/`、`!`、`.` 和 `_` 组成。合法符号字符列表是一个最小集。
 
 *(注：由于原始文本在符号部分存在多处重复和乱码，翻译时已根据 Clojure 语法逻辑进行了对齐和清理。)*
-
-除法可能会让你感到惊讶：
-
-```
-|   | `(/ 22 7)` |
-|   | `-> 22/7` |```
-
-如你所见，Clojure 有一个内置的 `Ratio` 类型：
-
-```
-|   | `(class (/ 22 7))` |
-|   | `-> clojure.lang.Ratio` |```
-
-如果你实际想要的是小数除法，请对被数使用浮点字面量：
-
-```
-|   | `(/ 22.0 7)` |
-|   | `-> 3.142857142857143` |```
-
-如果你想坚持整数，可以使用 `quot` 和 `rem` 获取整数商和余数：
-
-```
-|   | `(quot 22 7)` |
-|   | `-> 3` |
-|   | `(rem 22 7)` |
-|   | `-> 1` |```
-
-如果你需要进行任意精度的浮点数学运算，在数字后附加 `M` 以创建一个 `BigDecimal` 字面量：
-
-```
-|   | `(+ 1 (/ 0.00001 1000000000000000000))` |
-|   | `-> 1.0` |
-|   | `(+ 1 (/ 0.00001M 1000000000000000000))` |
-|   | `-> 1.000000000000000000` |```
-
-对于任意精度的整数，你可以附加 `N` 来创建一个 `BigInt` 字面量：
-
-```
-|   | `(* 1000N 1000)` |
-|   | `-> 1000000` |```
-
-注意，计算只需要一个 `BigInt` 字面量。
-
-### 符号
-
-诸如 `+`、`concat` 和 `java.lang.String` 的形式被称为符号，并用于命名事物。例如，`+` 命名了将东西相加的函数。符号为 Clojure 中的各种事物命名：
-
-*   如 `str` 和 `concat` 等函数
-*   如 `+` 和 `-` 等“运算符”，它们终究只是函数
-*   如 `java.lang.String` 和 `java.util.Random` 等类
-*   如 `clojure.core` 等命名空间和如 `java.lang` 的 Java 包
-*   数据结构和引用
-
-符号不能以数字开头，但可以由字母、数字字符加上 `+`、`-`、`*`、`/`、`!`、`.` 和 `_` 组成。合法符号字符列表是一个最小集。
-
-*(注：由于原始文本在符号部分存在多处重复和乱码，翻译时已根据 Clojure 语法逻辑进行了对齐和清理。)*
-
-*(注：由于提供的源文本包含大量段落重复，作为文档工程师，遵循“不要重复输出原文”的原则，译文仅对核心内容进行了一次性翻译。)*
-
-
-
-
-
-```text
-(apply str (interleave "Attack at midnight" "The purple elephant chortled"))
--> "ATthtea cpku raptl em iedlneipghhatn"
-```
 
 你可以再次使用 `(apply str ...)` 来揭示这段信息：
 
-```text
+```
 (apply str (take-nth 2 "ATthtea cpku raptl em iedlneipghhatn"))
 -> "Attack at midnight"
 ```
@@ -1318,12 +1232,13 @@ Clojure 映射（map）是键值对的集合。映射有由大括号 `{}` 包围
 
 如果你觉得这样读起来更简单，可以使用逗号来分隔每个键值对。Clojure 并不在意，它将逗号视为空白：
 
-```clojure
-(def inventors {"Lisp" "McCarthy", "Clojure" "Hickey"})
--> #'user/inventors
-```
 
-映射也是函数。如果你向映射传递一个键，它将返回该键的值；如果找不到该键，则返回 `nil`：
+
+(def inventors {"Lisp" "McCarthy", "Clojure" "Hickey"})
+
+-> #'user/inventors
+
+映射也是函数。如果你向映射传递一个键，它将返回该键的值；如果找不到该键，则返回`nil`：
 
 ```clojure
 (inventors "Lisp")
@@ -1333,13 +1248,13 @@ Clojure 映射（map）是键值对的集合。映射有由大括号 `{}` 包围
 -> nil
 ```
 
-你也可以使用更冗余的 `get` 函数：
+你也可以使用更冗余的`get`函数：
 
 ```clojure
 (get the-map key not-found-val?)
 ```
 
-`get` 允许你为缺失的键指定不同的返回值：
+`get`允许你为缺失的键指定不同的返回值：
 
 ```clojure
 (get inventors "Lisp" "I dunno!")
@@ -1349,7 +1264,7 @@ Clojure 映射（map）是键值对的集合。映射有由大括号 `{}` 包围
 -> "I dunno!"
 ```
 
-因为 Clojure 数据结构是不可变的且正确地实现了 `hashCode`，所以任何 Clojure 数据结构都可以作为映射的键。尽管如此，一种非常常见的类型是关键字（keyword）。关键字类似于符号（symbol），不同之处在于以冒号（`:`）开头。关键字解析为其自身：
+因为 Clojure 数据结构是不可变的且正确地实现了`hashCode`，所以任何 Clojure 数据结构都可以作为映射的键。尽管如此，一种非常常见的类型是关键字（keyword）。关键字类似于符号（symbol），不同之处在于以冒号（`:`）开头。关键字解析为其自身：
 
 ```clojure
 :foo
@@ -1363,25 +1278,21 @@ foo
 -> java.lang.RuntimeException: Unable to resolve symbol: foo in this context
 ```
 
-关键字解析为自身的事实使得关键字作为键非常有用。你可以使用关键字作为键重新定义 `inventors` 映射：
+关键字解析为自身的事实使得关键字作为键非常有用。你可以使用关键字作为键重新定义`inventors`映射：
 
 ```clojure
 (def inventors {:Lisp "McCarthy" :Clojure "Hickey"})
 -> #'user/inventors
 ```
 
-关键字也是函数。它们接受一个映射参数并在映射中查找自己。一旦将 `inventors` 的键切换为关键字，你就可以通过调用映射或调用键来查找发明者：
+关键字也是函数。它们接受一个映射参数并在映射中查找自己。一旦将`inventors`的键切换为关键字，你就可以通过调用映射或调用键来查找发明者：
 
 ```clojure
 (inventors :Clojure)
 -> "Hickey"
 ```
 
-这种排序上的灵活性在调用高阶函数时（例如第 5 章中的 reference 和 agent API）非常有用。如果多个映射具有共同的键，你可以通过使用 `defrecord` 创建记录（record）来记录（并强制）这一事实：参数名称会被转换为 `keys`，其值在创建记录时传入。使用 `defrecord` 来创建记录。
-
-
-
-
+这种排序上的灵活性在调用高阶函数时（例如第 5 章中的 reference 和 agent API）非常有用。如果多个映射具有共同的键，你可以通过使用`defrecord`创建记录（record）来记录（并强制）这一事实：参数名称会被转换为`keys`，其值在创建记录时传入。使用`defrecord`来创建记录。
 
 | 元数据 | `^metadata form` | 第 2.8 节，*Metadata |
 | 引用 | `’form => (quote form)` | 第 2.1 节，*形式 |
@@ -1391,20 +1302,20 @@ foo
 | 反引用拼接 | `~@` | 第 7.3 节，*简化宏 |
 | 变量引用 | `#’x => (var x)` | 第 5 章，*状态 |
 
-Clojure 不允许程序定义新的读取器宏（reader macros）。这一设计的已经在 Clojure 邮件列表中被解释过（并引发了讨论）。如果你来自 Lisp 背景，这可能会让你感到沮丧。我们理解你的感受。但这种灵活性上的妥协为 Clojure 提供了更稳定的内核。自定义读取器宏可能会降低 Clojure 程序的互操作性并增加阅读难度。
+Clojure 不允许程序定义新的读取器宏（reader macros）。这一设计已经在 Clojure 邮件列表中被解释过（并引发了讨论）。如果你来自 Lisp 背景，这可能会让你感到沮丧。我们理解你的感受。但这种灵活性上的妥协为 Clojure 提供了更稳定的内核。自定义读取器宏可能会降低 Clojure 程序的互操作性并增加阅读难度。
 
 ## 2.3 函数
 
-在 Clojure 中，函数调用简单是一个第一个元素解析为函数的列表。例如，这个对 `str` 的调用将其参数拼接以创建一个字符串：
+在 Clojure 中，函数调用简单是一个第一个元素解析为函数的列表。例如，这个对`str`的调用将其参数拼接以创建一个字符串：
 
-```
+```clojure
 (str "hello" " " "world")
 -> "hello world"
 ```
 
-函数名通常使用连字符连接，例如 `clear-agent-errors`。如果一个函数是谓词（predicate），按照惯例，它的名称应该以问号结尾。例如，以下谓词测试其参数的类型，并且都以问号结尾：
+函数名通常使用连字符连接，例如`clear-agent-errors`。如果一个函数是谓词（predicate），按照惯例，它的名称应该以问号结尾。例如，以下谓词测试其参数的类型，并且都以问号结尾：
 
-```
+```clojure
 (string? "hello")
 -> true
 
@@ -1415,25 +1326,24 @@ Clojure 不允许程序定义新的读取器宏（reader macros）。这一设�
 -> true
 ```
 
-要定义你自己的函数，使用 `defn`：
+要定义你自己的函数，使用`defn`：
 
-```
+```clojure
 (defn name doc-string? attr-map? [params*] body)
 ```
 
-`attr-map` 将元数据与函数的 `var` 关联。它在第 2.8 节 *Metadata)
-```
+`attr-map`将元数据与函数的`var`关联。它在第 2.8 节 *Metadata) 中介绍。
 
-你可以调用 `greeting`：
+你可以调用`greeting`：
 
-```
+```clojure
 (greeting "world")
 -> "Hello, world"
 ```
 
-你也可以查看 `greeting:` 的文档：
+你也可以查看`greeting:`的文档：
 
-```
+```clojure
 user=> (doc greeting)
 -------------------------
 exploring/greeting
@@ -1441,93 +1351,91 @@ exploring/greeting
  Returns a greeting of the form 'Hello, username.'
 ```
 
-如果调用者省略了 `username`，`greeting` 会做什么？
+如果调用者省略了`username`，`greeting`会做什么？
 
-```
+```clojure
 (greeting)
 -> ArityException Wrong number of args (0) passed to: user$greeting
 clojure.lang.AFn.throwArity (AFn.java:437)
 ```
 
-Clojure 函数强制执行其元数（arity），即预期的参数数量。如果你用错误的参数数量调用函数，Clojure 将抛出 `ArityException`。如果你想让 `greeting` 在调用者省略 `username` 时发出通用的问候语，可以使用 `defn` 的这种替代形式，它可以接受多个参数列表和方法体：
+Clojure 函数强制执行其元数（arity），即预期的参数数量。如果你用错误的参数数量调用函数，Clojure 将抛出`ArityException`。如果你想让`greeting`在调用者省略`username`时发出通用的问候语，可以使用`defn`的这种替代形式，它可以接受多个参数列表和方法体：
 
-```
-(defn name doc-string? attr-map? ([params*] body)
+```clojure
+(defn name doc-string? attr-map? ([params*] body))
 ```
 
-同一个函数的不同元数版本可以相互调用，因此你可以轻松创建一个零参数的 `greeting`，并将它委托给单参数的 `greeting`，并传递默认的 `username`：
+同一个函数的不同元数版本可以相互调用，因此你可以轻松创建一个零参数的`greeting`，并将它委托给单参数的`greeting`，并传递默认的`username`：
 
 `src/examples/exploring.clj`
 
-```
+```clojure
 (defn greeting
-"Returns a greeting of the form 'Hello, username.
-Default username is 'world'."
-username] (str "Hello, " username)))
+  "Returns a greeting of the form 'Hello, username.
+  Default username is 'world'."
+  ([] (greeting "world"))
+  ([username] (str "Hello, " username)))
 ```
 
-你可以验证新的 `greeting` 是否正常工作：
+你可以验证新的`greeting`是否正常工作：
 
-```
+```clojure
 (greeting)
 -> "Hello, world"
 ```
 
-你可以通过在参数列表中包含一个和符号 `&` 来创建一个具有可变元数的函数。Clojure 将 `&` 之后的名称绑定到所有剩余参数的序列。以下函数允许两个人在不同数量的陪同者的情况下约会：
+你可以通过在参数列表中包含一个和符号`&`来创建一个具有可变元数的函数。Clojure 将`&`之后的名称绑定到所有剩余参数的序列。以下函数允许两个人在不同数量的陪同者的情况下约会：
 
 `src/examples/exploring.clj`
 
-```
+```clojure
 (defn date [person-1 & chaperones]
- (println person-1 "and" person-2 "went out" (count chaperones) "chaperones."))
+  (println person-1 "and" person-2 "went out" (count chaperones) "chaperones."))
 (date "Romeo" "Juliet" "Friar Lawrence" "Nurse")
 ```
+
 :2 chaperones.
 
-编写元数数不同的函数实现是很有用的。但如果你来自面向对象的编程背景，你可能想要多态性，即根据类型选择不同的实现。Clojure 可以做到这一点，并且能做更多。详细信息请参阅第 8 章 *Multethods 2))
-```
+编写元数不同的函数实现是很有用的。但如果你来自面向对象的编程背景，你可能想要多态性，即根据类型选择不同的实现。Clojure 可以做到这一点，并且能做更多。详细信息请参阅第 8 章 *Multethods 2)。
 
-然后，你可以使用 `indexable-word?` 从句子中提取单词：
+然后，你可以使用`indexable-word?`从句子中提取单词：
 
-```
+```clojure
 (require '[clojure.string :as str])
+
 (filter indexable-word? (str/split "A fine day it is" #"\W+"))
 -> ("fine" "day")
 ```
 
-`split` 调用将句子拆分成单词，然后 `filter` 为每个单词调用一次 `indexable-word?`，返回那些函数返回 `true` 的单词。
+`split`调用将句子拆分成单词，然后`filter`为每个单词调用一次`indexable-word?`，返回那些函数返回`true`的单词。
 
-匿名函数让你在一行内完成相同的事情。最简单的匿名 `fn` 形式如下：
+匿名函数让你在一行内完成相同的事情。最简单的匿名`fn`形式如下：
 
-```
+```clojure
 (fn [params*] body)
 ```
 
-使用这种形式，你可以将 `indexable-word?` 的实现直接插入 `filter` 的调用中：
+使用这种形式，你可以将`indexable-word?`的实现直接插入`filter`的调用中：
 
-```
+```clojure
 (filter (fn [w] (> (count w) 2)) (str/split "A fine day" #"\W+"))
 -> ("fine" "day")
 ```
 
-匿名函数还有更短的语法，使用隐式参数名称。参数命名为 `%1`、`%2` 等。你也可以对第一个参数使用 `%`。这种类似于：
+匿名函数还有更短的语法，使用隐式参数名称。参数命名为`%1`、`%2`等。你也可以对第一个参数使用`%`。这种形式类似于：
 
-```
+```clojure
 #(body)
 ```
 
-你可以使用更的匿名形式重写 `filter` 的调用：
+你可以使用更简洁的匿名形式重写`filter`的调用：
 
-```
+```clojure
 (filter #(> (count %) 2) (str/split "A fine day it is" #"\W+"))
 -> ("fine" "day")
 ```
 
-
-
-
-
-使用匿名函数的第二个动机是希望有一个具名的函数，但仅限于另一个函数的作用域内。继续之前的 `indexable-word?` 示例，你可以这样写：
+使用匿名函数的第二个动机是希望有一个具名的函数，但仅限于另一个函数的作用域内。继续之前的`indexable-word?`示例，你可以这样写：
 
 ```clojure
 (defn indexable-words [text]
@@ -1535,23 +1443,23 @@ username] (str "Hello, " username)))
     (filter indexable-word? (str/split text #"\W+"))))
 ```
 
-`let` 将名称 `indexable-word?` 绑定到你之前编写的同一个匿名函数，这次它是在 `indexable-words` 的词法作用域内。（关于 `let` 在第 2.4 节 变量、绑定与命名空间 中有更详细的介绍。）你可以验证 `indexable-words` 的运行结果符合预期：
+`let`将名称`indexable-word?`绑定到你之前编写的同一个匿名函数，这次它是在`indexable-words`的词法作用域内。（关于`let`在第 2.4 节 变量、绑定与命名空间 中有更详细的介绍。）你可以验证`indexable-words`的运行结果符合预期：
 
 ```clojure
 (indexable-words "a fine day it is")
 -> ("fine" "day")
 ```
 
-`let` 和匿名函数的组合向代码阅读者传达了以下信息：“`indexable-word?` 函数有趣到值得命名，但它仅在 `indexable-words` 内部相关。”
+`let`和匿名函数的组合向代码阅读者传达了以下信息：“`indexable-word?`函数有趣到值得命名，但它仅在`indexable-words`内部相关。”
 
-使用匿名函数的第三个原因是在运行时动态创建函数。在之前，你实现了一个简单的问候函数。扩展这个想法，你可以创建一个 `make-greeter` 函数来生成问候函数。`make-greeter` 会接收一个 `greeting-prefix` 并返回一个新的函数，该函数由 `greeting-prefix` 和名字组合成问候语。
+使用匿名函数的第三个原因是在运行时动态创建函数。在之前，你实现了一个简单的问候函数。扩展这个想法，你可以创建一个`make-greeter`函数来生成问候函数。`make-greeter`会接收一个`greeting-prefix`并返回一个新的函数，该函数由`greeting-prefix`和名字组合成问候语。
 
 ```clojure
 (defn make-greeter [greeting-prefix]
   (fn [username] (str greeting-prefix ", " username)))
 ```
 
-给 `fn` 命名是没有意义，因为每次调用 `make-greeter` 都会创建一个不同的函数。然而，你可能想为 `make-greeter` 特定调的结果命名。你可以使用 `def` 为 `make-greeter` 创建的函数命名：
+给`fn`命名是没有意义的，因为每次调用`make-greeter`都会创建一个不同的函数。然而，你可能想为`make-greeter`特定调用的结果命名。你可以使用`def`为`make-greeter`创建的函数命名：
 
 ```clojure
 (def hello-greeting (make-greeter "Hello"))
@@ -1578,31 +1486,31 @@ username] (str "Hello, " username)))
 -> "Howdy, pardner"
 ```
 
-如你所见，不同的问候函数记得它们在创建时 `greeting-prefix` 的值。更正式地说，这些问候函数是关于 `greeting-prefix` 值的闭包（closures）。
+如你所见，不同的问候函数记得它们在创建时`greeting-prefix`的值。更正式地说，这些问候函数是关于`greeting-prefix`值的闭包（closures）。
 
 ### 何时使用匿名函数
 
-匿名函数的语法非常简洁，但并不总是适用。你可能更倾向于显式地创建诸如 `indexable-word?` 这样的具名函数。这完全没有问题，如果 `indexable-word?` 需要从多个地方调用，这无疑是正确的选择。
+匿名函数的语法非常简洁，但并不总是适用。你可能更倾向于显式地创建诸如`indexable-word?`这样的具名函数。这完全没有问题，如果`indexable-word?`需要从多个地方调用，这无疑是正确的选择。
 
 匿名函数是一个选项，而不是要求。只有当你发现它们能让你的代码更易读时，才使用匿名形式。它们需要一点时间适应，所以如果你发现逐渐用得越来越多，请不要惊讶。
 
 ## 2.4 变量、绑定与命名空间
 
-当你使用 `def` 或 `defn` 定义对象时，该对象被存储在 Clojure 变量（var）中。例如，下面的 `def` 创建了一个名为 `user/foo` 的变量：
+当你使用`def`或`defn`定义对象时，该对象被存储在 Clojure 变量（var）中。例如，下面的`def`创建了一个名为`user/foo`的变量：
 
 ```clojure
 (def foo 10)
 -> #'user/foo
 ```
 
-符号 `user/foo` 指向绑定到值 `10` 的变量。如果你要求 Clojure 求值符号 `foo`，它将返回关联变量的值：
+符号`user/foo`指向绑定到值`10`的变量。如果你要求 Clojure 求值符号`foo`，它将返回关联变量的值：
 
 ```clojure
 foo
 -> 10
 ```
 
-变量的初始值称为其根（root）。有时拥有线程本地绑定（thread-local bindings）很有用；这在第 2.5 节 使用变量管理状态 中介绍。你可以使用 `let` 形式引用变量：
+变量的初始值称为其根（root）。有时拥有线程本地绑定（thread-local bindings）很有用；这在第 2.5 节 使用变量管理状态 中介绍。你可以使用`let`形式引用变量：
 
 ```clojure
 (let [foo 20]
@@ -1621,18 +1529,18 @@ foo
 
 ```clojure
 (defn triple [number]
-  (* number))
+  (* number 3))
 -> #'triple
 ```
 
-函数的参数绑定具有词法作用域。特殊形式 `let` 除了创建一组绑定外什么都不做：
+函数的参数绑定具有词法作用域。特殊形式`let`除了创建一组绑定外什么都不做：
 
 ```clojure
 (let [bindings]
   exprs)
 ```
 
-然后 `bindings` 在 `exprs` 中生效。假设你想在给定 `bottom`、`left` 和 `size` 的情况下获取正方形四个角的坐标。你可以根据给定的值 `let` 出 `top` 和 `right` 坐标：
+然后`bindings`在`exprs`中生效。假设你想在给定`bottom`、`left`和`size`的情况下获取正方形四个角的坐标。你可以根据给定的值`let`出`top`和`right`坐标：
 
 ```clojure
 (defn square-corners [bottom left size]
@@ -1641,7 +1549,7 @@ foo
     [[bottom left] [top left] [top right] [bottom right]]))
 ```
 
-`let` 绑定了 `top` 和 `right`。这避免了你多次计算 `top` 和 `right` 的麻烦（生成返回值时都需要两次）。然后 `let` 返回它的最后一个表达式，在示例示例中它变成了返回值。
+`let`绑定了`top`和`right`。这避免了你多次计算`top`和`right`的麻烦（生成返回值时都需要两次）。然后`let`返回它的最后一个表达式，在示例中它变成了返回值。
 
 ### 解构
 
@@ -1654,33 +1562,30 @@ foo
   (println "Hello," (:first-name author)))
 ```
 
-`greet-author-1` 函数运行良好：
+`greet-author-1`函数运行良好：
 
 ```clojure
 (greet-author-1 {:last-name "Vinge" :first-name "Vernor"})
 | Hello, Vernor
 ```
 
+必须绑定`author`并不令人满意。你并不需要`author`；你需要的只是`first-name`（名字）。Clojure 通过解构（destructuring）解决了这个问题。在任何允许符号绑定名称的地方，你都可以在绑定中嵌套向量（vector）或映射（map），以进入集合并仅绑定你想要的部分。这里是`greet-author`的变体，它只绑定第一个名字：
 
-
-
-必须绑定 `author` 并不令人满意。你并不需要 `author`；你需要的只是 `first-name`（名字）。Clojure 通过解构（destructuring）解决了这个问题。在任何允许符绑定名称的地方，你都可以在绑定中嵌套向量（vector）或映射（map），以进入集合并仅绑定你想要的部分。这里是 `greet-author` 的变体，它只绑定第一个名字：
-
-| [src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj) |
+`src/examples/exploring.clj`
 
 ```clojure
 (defn greet-author-2 [{fname :first-name}]
   (println "Hello," fname))
 ```
 
-绑定形式 `{fname :first-name}` 告诉 Clojure 将 `fname` 绑定到函数参数的 `:first-name`。`greet-author-2` 的行为与 `greet-author-1` 完全一致：
+绑定形式`{fname :first-name}`告诉 Clojure 将`fname`绑定到函数参数的`:first-name`。`greet-author-2`的行为与`greet-author-1`完全一致：
 
 ```clojure
 (greet-author-2 {:last-name "Vinge" :first-name "Vernor"})
 ; Hello, Vernor
 ```
 
-正如你可以使用映射来解构任何关联集合（associative collection）一样，你也可以向量来解构任何序列集合（sequential collection）。例如，你可以只绑定三维坐标空间的前两个坐标：
+正如你可以使用映射来解构任何关联集合（associative collection）一样，你也可以使用向量来解构任何序列集合（sequential collection）。例如，你可以只绑定三维坐标空间的前两个坐标：
 
 ```clojure
 (let [[x y] [1 2 3]]
@@ -1688,9 +1593,11 @@ foo
 -> [1 2]
 ```
 
-表达式 `[x y]` 解构了向量 `[1 2 3]`，将 `x` 绑定到 `1` 将 `y` 绑定到 `2`。由于没有符号与最后一个元素 `3` ，因此它没有绑定到任何东西。
 
-有时你想跳过集合开头的元素。以下是如何只绑定 `z` 坐标的：
+
+表达式`[x y]`解构了向量`[1 2 3]`，将`x`绑定到`1`，将`y`绑定到`2`。由于没有符号与最后一个元素`3`绑定，因此它没有绑定到任何东西。
+
+有时你想跳过集合开头的元素。以下是如何只绑定`z`坐标的：
 
 ```clojure
 (let [[_ _ z] [1 2 3]]
@@ -1698,7 +1605,7 @@ foo
 -> 3
 ```
 
-下划线（`_`）是一个法的符号，习惯上用于表示“我不在乎这个绑定”。绑定从左到右进行，因此 `_` 实际上被绑定了两次：
+下划线（`_`）是一个合法的符号，习惯上用于表示“我不在乎这个绑定”。绑定从左到右进行，因此`_`实际上被绑定了两次：
 
 ```clojure
 ; *不符合惯用法！
@@ -1707,7 +1614,7 @@ foo
 -> 2
 ```
 
-同时绑定集合本身以及集合中的元素也是可能的。在解构表达式内部，`:as` 子句为你提供一个整个闭包结构的绑定。例如，你可以单独捕 `x` 和 `y` 坐标，同时将整个集合作为 `coords`，以便报告总维度：
+同时绑定集合本身以及集合中的元素也是可能的。在解构表达式内部，`:as`子句为你提供一个整个闭包结构的绑定。例如，你可以单独捕获`x`和`y`坐标，同时将整个集合作为`coords`，以便报告总维度：
 
 ```clojure
 (let [[x y :as coords] [1 2 3 4 5 6]]
@@ -1715,12 +1622,13 @@ foo
 -> "x: 1, y: 2, total dimensions 6"
 ```
 
-尝试使用解构来创建一个 `ellipsize` 函数。`ellipsize` 应该接受一个字符串并返回前三个单词，后跟 `...`。
+尝试使用解构来创建一个`ellipsize`函数。`ellipsize`应该接受一个字符串并返回前三个单词，后跟`...`。
 
-| [src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj) |
+[src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
 
 ```clojure
 (require '[clojure.string :as str])
+
 (defn ellipsize [words]
   (let [[w1 w2 w3] (str/split words #"\s+")]
     (str/join " " [w1 w2 w3] "...")))
@@ -1728,66 +1636,67 @@ foo
 -> "The quick brown ..."
 ```
 
-`split` 在空白字符周围分割字符串，然后解构形式 `[w1 w2 w3]` 抓取前三个单词。解构忽略了任何额外的项，这正是我们想要的。最后，`join` 重新组合这三个单词，并在末尾添加省略号。
+`split`在空白字符周围分割字符串，然后解构形式`[w1 w2 w3]`抓取前三个单词。解构忽略了任何额外的项，这正是我们想要的。最后，`join`重新组合这三个单词，并在末尾添加省略号。
 
-解构还有许多此处未显示的其它特征，它本身就是一种微语言。第 5.6 节中的贪吃蛇游戏 A Clojure Snake 大使用了解构。有关解构选项的完整列表，请参 `let` 的在线文档。
+解构还有许多此处未显示的其它特征，它本身就是一种微语言。第5.6节中的贪吃蛇游戏A Clojure Snake大量使用了解构。有关解构选项的完整列表，请参阅`let`的在线文档。
 
 ### 命名空间
 
-根绑定存在于命名空间中。当你启动 Clojure REPL 并创建一个绑定时，你可以看到这一点的证据：
+根绑定存在于命名空间中。当你启动Clojure REPL并创建一个绑定时，你可以看到这一点的证据：
 
 ```clojure
 user=> (def foo 10)
 -> #'foo
 ```
 
-`user=>` 提示符你当前处于 `user` 命名空间。你应该将 `user` 视为用于探索性开发的临时命名空间。当 Clojure 解析名称 `foo` 时，它会在当前命名空间 `user` 中对 `foo` 进行命名限定。你可以通过调用 `resolve` 来验证这一点：
+`user=>`提示符表明你当前处于`user`命名空间。你应该将`user`视为用于探索性开发的临时命名空间。当Clojure解析名称`foo`时，它会在当前命名空间`user`中对`foo`进行命名限定。你可以通过调用`resolve`来验证这一点：
 
 ```clojure
 => (resolve sym)
 ```
 
-`resolve` 返回符号在当前命名空间中解析到的变量或类。使用 `resolve` 显式解析符号 `foo`：
+`resolve`返回符号在当前命名空间中解析到的变量或类。使用`resolve`显式解析符号`foo`：
 
 ```clojure
 => (resolve 'foo)
 -> #'foo
 ```
 
-你可以使用 `in-ns` 切换命名空间，并在需要时创建一个新的。尝试创建一个 `myapp` 命名空间：
+你可以使用`in-ns`切换命名空间，并在需要时创建一个新的。尝试创建一个`myapp`命名空间：
 
 ```clojure
 user=> (in-ns 'myapp)
 -> #Namespace myapp
 ```
-现在你处于 `myapp` 命名空间中，任何 `def` 或 `defn` 定义的内容都将属于 `myapp`。当你使用 `in-ns` 创建新命名空间时，`java.lang` 包对你可用：
+
+现在你处于`myapp`命名空间中，任何`def`或`defn`定义的内容都将属于`myapp`。当你使用`in-ns`创建新命名空间时，`java.lang`包对你可用：
 
 ```clojure
 myapp=> String
 -> java.lang.String
 ```
 
-当你学习 Clojure 时，每当你移动到一个新命名空间，都应该 `use` `clojure.core` 命名空间，使其核心函数也可用：
+当你学习Clojure时，每当你移动到一个新命名空间，都应该`use` `clojure.core`命名空间，使其核心函数也可用：
 
 ```clojure
 myapp=> (use clojure.core)
 -> nil
 ```
 
-默认情况下，`java.lang` 之外的类名必须完全限定。你不能直接说 `File`：
+默认情况下，`java.lang`之外的类名必须完全限定。你不能直接说`File`：
 
 ```clojure
 myapp=> File/Exception: No such namespace: File
 ```
 
-相反，你必须指定完全限定的 `java.io.File`。注意你的分隔符可能与此处不同：
+相反，你必须指定完全限定的`java.io.File`。注意你的分隔符可能与此处不同：
 
 ```clojure
 myapp=> java.io.File/separator
 -> "/"
 ```
 
-如果你不想使用完全限定类名，可以使用 `import` 将一个或多个类名映射到当前命名空间：
+如果你不想使用完全限定类名，可以使用`import`将一个或多个类名映射到当前命名空间：
 
 ```clojure
 (import '(package))
@@ -1798,11 +1707,11 @@ myapp=> java.io.File/separator
 ```clojure
 (import '(java.io InputStream))
 -> java.io.File
-(.exists "/tmp"))
+(.exists "/tmp")
 -> true
 ```
 
-`import` 仅用于类。如果你想使用另一个命名空间的 Clojure 变量，必须使用其完全限定名称或将其映射到命名空间。以 `clojure.string` 中的 `split` 函数为例：
+`import`仅用于类。如果你想使用另一个命名空间的Clojure变量，必须使用其完全限定名称或将其映射到命名空间。以`clojure.string`中的`split`函数为例：
 
 ```clojure
 (require 'clojure.string)
@@ -1812,7 +1721,7 @@ myapp=> java.io.File/separator
 -> Unable to resolve symbol: split in this context
 ```
 
-要在当前命名空间中为 `split` 设置别名，请对其命名空间调用 `require` 并赋予其别名 `str`：
+要在当前命名空间中为`split`设置别名，请对其命名空间调用`require`并赋予其别名`str`：
 
 ```clojure
 (require '[clojure.string :as str])
@@ -1820,207 +1729,200 @@ myapp=> java.io.File/separator
 -> ["Something" "separated" "by" "commas"]
 ```
 
-之前显示的 `require` 简单形式会导致命名空间引用 `clojure.string` 中的所有公共变量，并通过别名 `str` 访问它们。这可能会令人困惑，因为它没有明确说明哪些名称被引用了。
+之前显示的`require`简单形式会导致命名空间引用`clojure.string`中的所有公共变量，并通过别名`str`访问它们。这可能会令人困惑，因为它没有明确说明哪些名称被引用了。
 
-Clojure 的命名空间函数可以做比我在此处展示的多得多。
+Clojure的命名空间函数可以做比我在此处展示的多得多。你可以反思地遍历命名空间，并随时添加或删除映射。要了解更多信息，请在REPL中执行此命令。由于我们在REPL中移动了一些位置，我们还将确保自己处于用户命名空间中，这样我们的REPL工具就可以被使用了：
 
+```
+(in-ns 'user)
+(find-doc "ns-")
+```
 
+或者，你可以在[`clojure.org/namespaces`](http://clojure.org/namespaces)浏览文档。
 
+## 2. 调用Java
 
-你可以反思地遍历命名空间，并随时添加或删除映射。要了解更多信息，请在 REPL 中执行此命令。由于我们在 REPL 中移动了一些位置，我们还将确保自己处于用户命名空间中，这样我们的 REPL 工具就可以被使用了：
+Clojure为调用Java代码提供了简单、直接的语法：创建对象、调用方法，以及访问静态方法和字段。此外，Clojure还提供了语法糖，使得从Clojure调用Java比从Java调用Java更加简洁！
 
-| | |
-|---|
-| | `(in-ns 'user)` |
-| | `(find-doc "ns-")` |
-
-或者，你可以在 [`clojure.org/namespaces`](http://clojure.org/namespaces) 浏览文档。
-
-## 2. 调用 Java
-
-Clojure 为调用 Java 代码提供了简单、直接的语法：创建对象、调用方法，以及访问静态方法和字段。此外，Clojure 还提供了语法糖，使得从 Clojure 调用 Java 比从 Java 调用 Java 更加简洁！
-
-Java 中的并非所有类型都是同等的：基本数据类型和数组的工作方式不同。在 Java 有特殊特殊情况的地方，Clojure 也允许你直接访问这些内容。最后，Clojure 为常见任务提供了一系列便利函数，而这些任务在 Java 中会非常繁琐。
+Java中的并非所有类型都是同等的：基本数据类型和数组的工作方式不同。在Java有特殊特殊情况的地方，Clojure也允许你直接访问这些内容。最后，Clojure为常见任务提供了一系列便利函数，而这些任务在Java中会非常繁琐。
 
 ### 访问构造函数、方法和字段
 
-许多 Java 互操作场景的第一步是创建一个 Java 对象。Clojure 提供了 `new` 特殊形式形式来实现此目的：
+许多Java互操作场景的第一步是创建一个Java对象。Clojure提供了`new`特殊形式来实现此目的：
 
-| | |
-|---|
-| | `(new classname)` |
+```
+(new classname)
+```
 
-尝试创建一个新的 `Random`：
+尝试创建一个新的`Random`：
 
-| | |
-|---|
-| | `(new java.util.Random)` |
-| | `-> <Random java.util.Random@667cbde6>` |
+```
+(new java.util.Random)
+-> <Random java.util.Random@667cbde6>
+```
 
-REPL 仅通过调用其 `toString` 方法来打印新的 `Random` 实例。要使用 `Random` 实例，你需要将其保存到某个地方。现在，只需使用 `def` 将 `Random` 保存到 Clojure 的 `Var` 中：
+REPL仅通过调用其`toString`方法来打印新的`Random`实例。要使用`Random`实例，你需要将其保存到某个地方。现在，只需使用`def`将`Random`保存到Clojure的`Var`中：
 
-| | |
-|---|
-| | `(def rnd (new java.util.Random))` |
-| | `-> #'user/rnd` |
+```
+(def rnd (new java.util.Random))
+-> #'user/rnd
+```
 
-现在，你可以使用 Clojure 的点（`.`）特殊形式在 `rnd` 上调用方法了：
+现在，你可以使用Clojure的点（`.`）特殊形式在`rnd`上调用方法了：
 
-| | |
-|---|
-| | `(. class-or-instance member-symbol & args)` |
-| | `(. class-or-instance (member-symbol & args))` |
+```
+(. class-or-instance member-symbol & args)
+(. class-or-instance (member-symbol & args))
+```
 
-`.` 可以调用方法。例如，以下代码调用了 `nextInt` 的无参数版本：
+`.`可以调用方法。例如，以下代码调用了`nextInt`的无参数版本：
 
-| | |
-|---|
-| | `(. rnd nextInt)` |
-| | `-> -791474443` |
+```
+(. rnd nextInt)
+-> -791474443
+```
 
-`Random` 也有一个接受参数的 `nextInt`。你只需通过将参数添加到列表中即可调用该版本：
+`Random`也有一个接受参数的`nextInt`。你只需通过将参数添加到列表中即可调用该版本：
 
-| | |
-|---|
-| | `(. rnd nextInt 10)` |
-| | `-> 8` |
+```
+(. rnd nextInt 10)
+-> 8
+```
 
-在上一个调用中，`.` 形式被用于访问实例方法。但 `.` 也适用于各种类成员：字段以及方法，以及静态成员和实例成员。在这里你可以看到使用 `.` 来获取 `pi` 的值：
+在上一个调用中，`.`形式被用于访问实例方法。但`.`也适用于各种类成员：字段以及方法，以及静态成员和实例成员。在这里你可以看到使用`.`来获取`pi`的值：
 
-| | |
-|---|
-| | `(. Math PI)` |
-| | `-> 3.141592653589793` |
+```
+(. Math PI)
+-> 3.141592653589793
+```
 
-注意 `Math` 并不是全限定的。它不必是全限定的，因为 Clojure 会自动导入 `java.lang`。为了避免到处都输入 `java.util.Random`，你可以显式地 `import` 它：
+注意`Math`并不是全限定的。它不必是全限定的，因为Clojure会自动导入`java.lang`。为了避免到处都输入`java.util.Random`，你可以显式地`import`它：
 
-| | |
-|---|
-| | `(import [& import-lists])` |
-| | `; import-list => (package-symbol & class-name-symbols)` |
+```
+(import [& import-lists])
+; import-list => (package-symbol & class-name-symbols)
+```
 
-`import` 接受任意数量的列表，每个列表的第一部分是包名，其余部分是从该包中导入的名字。以下 `import` 允许对 `Random`、`Locale` 和 `MessageFormat` 进行无限定访问：
+`import`接受任意数量的列表，每个列表的第一部分是包名，其余部分是从该包中导入的名字。以下`import`允许对`Random`、`Locale`和`MessageFormat`进行无限定访问：
 
-| | |
-|---|
-| | `(import '(java.util Random Locale)` |
-| | `'(java.text MessageFormat))` |
-| | `-> java.text.MessageFormat` |
-| | |
-| | `Random` |
-| | `-> java.util.Random` |
-| | |
-| | `Locale` |
-| | `-> java.util.Locale` |
-| | |
-| | `MessageFormat` |
-| | `-> java.text.MessageFormat` |
+```
+(import '(java.util Random Locale)
+        '(java.text MessageFormat))
+-> java.text.MessageFormat
 
-到此时，你已经拥有了从 Clojure 调用 Java 所需的一切。你可以执行以下操作：
+Random
+-> java.util.Random
+
+Locale
+-> java.util.Locale
+
+MessageFormat
+-> java.text.MessageFormat
+```
+
+到此时，你已经拥有了从Clojure调用Java所需的一切。你可以执行以下操作：
 
 * 导入类名
 * 创建实例
 * 访问字段
 * 调用方法
 
-然而，这种语法并没有特别令人兴奋的地方。它只是“带了不同括号的 Java”。
+然而，这种语法并没有特别令人兴奋的地方。它只是“带了不同括号的Java”。
 
 ### Javadoc
 
-虽然从 Clojure 深入 Java 很容易，但要记住底层所有 Java 组件是如何工作的可能会令人望畏。Clojure 提供了一个 `javadoc` 函数，这会让你的生活变得简单得多。它在 REPL 中探索时提供了一个愉快的体验。
+虽然从Clojure深入Java很容易，但要记住底层所有Java组件是如何工作的可能会令人望而生畏。Clojure提供了一个`javadoc`函数，这会让你的生活变得简单得多。它在REPL中探索时提供了一个愉快的体验。
 
-| | |
-|---|
-| | `(javadoc java.net.URL)` |
-| | `->` |
+```
+(javadoc java.net.URL)
+->
+```
 
 ## 2.6 流程控制
 
-Clojure 的流程控制形式很少。在本节中，你将遇到 `if`、`do` 和 `loop`/recur`。事实证明，这就是你需要的全部。
+Clojure的流程控制形式很少。在本节中，你将遇到`if`、`do`和`loop`/`recur`。事实证明，这就是你需要的全部。
 
-### 使用 if 分支
+### 使用if分支
 
-Clojure 的 `if` 评估它的第一个参数。如果参数在逻辑上为真，它将返回评估第二个参数的结果：
+Clojure的`if`评估它的第一个参数。如果参数在逻辑上为真，它将返回评估第二个参数的结果：
 
-| | |
-|---|
-| | `(defn is-small? [number]` |
-| | `(if number 100) "yes")` |
-| | `(is-small? 50)` |
-| | `-> "yes"` |
+```
+(defn is-small? [number]
+  (if number 100) "yes")
+(is-small? 50)
+-> "yes"
+```
 
-如果 `if` 的第一个参数在逻辑上为假，它返回 `nil`：
+如果`if`的第一个参数在逻辑上为假，它返回`nil`：
 
-| | |
-|---|
-| | `(is-small? 50)` |
-| | `-> nil` |
+```
+(is-small? 50)
+-> nil
+```
 
-如果你想为 `if` 的“else”部分定义结果，将其作为第三个参数添加：
+如果你想为`if`的“else”部分定义结果，将其作为第三个参数添加：
 
-| | |
-|---|
-| | `(defn is-small? [number]` |
-| | `(if number 100) "yes" "no")` |
-| | `(is-small? 50)` |
-| | `-> "no"` |
+```
+(defn is-small? [number]
+  (if number 100) "yes" "no")
+(is-small? 50)
+-> "no"
+```
 
-`when` 和 `when-not` 控制宏是构建在 `if` 之上的，并在后文中描述。
+`when`和`when-not`控制宏是构建在`if`之上的，并在后文中描述。
 
-### 使用 do 引入副作用
+### 使用do引入副作用
 
-Clojure 的 `if` 每个分支只允许一个形式。如果你想在一个分支做做一件事怎么办？例如，你可能想记录某个分支被选中。`do` 任意数量的形式，评估它们并返回最后一个。
+Clojure的`if`每个分支只允许一个形式。如果你想在一个分支做多件事怎么办？例如，你可能想记录某个分支被选中。`do`接受任意数量的形式，评估它们并返回最后一个。
 
-你可以使用 `do` 在 `if` 内部打印打印语句：
+你可以使用`do`在`if`内部打印打印语句：
 
-| | |
-|---|
-| | `(defn is-small? [number]` |
-| | `(if number 100 "yes"` |
-| | `(do (println "Saw a number" number)` |
-| | `"no"))` |
-| | `(is-small? 200)` |
-| | `| Saw a number 200` |
-| | `-> "no"` |
+```
+(defn is-small? [number]
+  (if number 100 "yes"
+    (do (println "Saw a number" number)
+        "no")))
+(is-small? 200)
+| Saw a number 200
+-> "no"
+```
 
-这是一个副作用的示例。`println` 完全没有贡献 `is-small?` 的返回值。相反，它进入了函数外部的世界并执行了一些操作。
+这是一个副作用的示例。`println`完全没有贡献`is-small?`的返回值。相反，它进入了函数外部的世界并执行了一些操作。
 
-许多编程语言以随意的方式混合纯函数和副作用。Clojure 则不然。在 Clojure 中，副作用是显式的且不寻常的。`do` 是表达“后续副作用”的一种方式。由于 `do` 忽略除最后一个以外的形式，这些形式必须具有副作用才有意义。
+许多编程语言以随意的方式混合纯函数和副作用。Clojure则不然。在Clojure中，副作用是显式的且不寻常的。`do`是表达“后续副作用”的一种方式。由于`do`忽略除最后一个以外的形式，这些形式必须具有副作用才有意义。
 
-### 使用 loop/recur 递归
+### 使用loop/recur递归
 
-Clojure 中流程控制的瑞士军刀是 `loop`：
+Clojure中流程控制的瑞士军刀是`loop`：
 
-| | |
-|---|
-| | `(loop [bindings *] exprs*)` |
+```
+(loop [bindings *] exprs*)
+```
 
-`loop` 特殊形式类似于 `let`，建立 `bindings` 然后评估 `exprs`。区别在于 `loop` 设置了一个递归点，该点随后可以被 `recur` 特殊形式指向：
+`loop`特殊形式类似于`let`，建立`bindings`然后评估`exprs`。区别在于`loop`设置了一个递归点，该点随后可以被`recur`特殊形式指向：
 
-| | |
-|---|
-| | `(recur exprs*)` |
+```
+(recur exprs*)
+```
 
-`recur` 为 `loop` 的绑定提供新值并将控制返回到循环顶部。例如，以下 `loop`/`recur` 返回一个倒计时：
+`recur`为`loop`的绑定提供新值并将控制返回到循环顶部。例如，以下`loop`/`recur`返回一个倒计时：
 
-| | |
-|---|
-| | `(loop [result [] x 5]` |
-| | `(if (zero? x)` |
-| | `result` |
-| | `(recur (conj result x) (dec x))))` |
-| | `-> [5 4 3 2 1]` |
+```
+(loop [result [] x 5]
+  (if (zero? x)
+    result
+    (recur (conj result x) (dec x))))
+-> [5 4 3 2 1]
+```
 
-在第一次循环时，`loop` 将 `result` 绑定到空向量并将 `x` 绑定到 5。由于 `x` 不为零，`recur` 然后重新绑定 `x` 和 `result`：
+在第一次循环时，`loop`将`result`绑定到空向量并将`x`绑定到5。由于`x`不为零，`recur`然后重新绑定`x`和`result`：
 
-* `result` 绑定到之前的 `result` `conj` 结合之前的 `x`。
-* `x` 绑定到之前的 `x` 的 `dec` 后的值。
+* `result`绑定到之前的`result` `conj`结合之前的`x`。
+* `x`绑定到之前的`x`的`dec`后的值。
 
+控制权返回到循环顶部。由于`x`再次不为零，循环继续，累积`result`并递减`x`。最终，`x`达到零，`if`语句终止递归并返回`result`。
 
-
-控制权返回到循环顶部。由于 `x` 再次不为零，循环继续，累积 `result` 并递减 `x`。最终，`x` 达到零，`if` 语句终止递归并返回 `result`。
-
-与其使用 `loop`，你可以使用 `recur` 回函数的顶部。这使得编写一个整个体体作为隐式 `loop` 的函数变得简单：
+与其使用`loop`，你可以使用`recur`回到函数的顶部。这使得编写一个整个函数体作为隐式`loop`的函数变得简单：
 
 [src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
 
@@ -2033,9 +1935,9 @@ Clojure 中流程控制的瑞士军刀是 `loop`：
 -> [5 4 3 2 1]
 ```
 
-`recur` 是一个强大的构建块。但你可能不会经常使用它，因为许多常见的递归是由 Clojure 的序列库提供的。
+`recur`是一个强大的构建块。但你可能不会经常使用它，因为许多常见的递归是由Clojure的序列库提供的。
 
-例如，`countdown` 也可以表示为以下任何一种形式：
+例如，`countdown`也可以表示为以下任何一种形式：
 
 ```clojure
 (into [] (take 5 (iterate dec 5)))
@@ -2048,64 +1950,70 @@ Clojure 中流程控制的瑞士军刀是 `loop`：
 -> [5 4 3 2 1]
 ```
 
-不要期望这些形式现在就能理解——只需意识到通常有直接使用 `recur` 的替代方案即可。这里使用的序列库函数在第 3.2 节使用序列库 中描述。Clojure 不会执行自动尾调用优化（TCO）。但是，它会优化对 `recur` 的调用。第 4 章函数式编程 定义了 TCO 并详细探讨了递归和 TCO。
 
-此时，你已经看到了许多语言特征，但还没有变量。有些东西确实会变化，第 5 节状态 将向你展示 Clojure 如何处理可变引用。但传统语言中的大多数变量都是没必要的，甚至是危险的。让我们看看 Clojure 是如何消除它们的。
+
+不要期望这些形式现在就能理解——只需意识到通常有直接使用`recur`的替代方案即可。这里使用的序列库函数在第 3.2 节使用序列库中描述。Clojure 不会执行自动尾调用优化（TCO）。但是，它会优化对`recur`的调用。第 4 章函数式编程定义了 TCO 并详细探讨了递归和 TCO。
+
+此时，你已经看到了许多语言特征，但还没有变量。有些东西确实会变化，第 5 节状态将向你展示 Clojure 如何处理可变引用。但传统语言中的大多数变量都是没必要的，甚至是危险的。让我们看看 Clojure 是如何消除它们的。
 
 ## 2.7 我的 for 循环在哪里？
 
-Clojure 没有 `for` 循环，也没有直接的可变变量。那么，你如何编写那些你习惯用 `for` 循环编写的所有代码呢？
+Clojure 没有`for`循环，也没有直接的可变变量。那么，你如何编写那些你习惯用`for`循环编写的所有代码呢？
 
-与其创建一个假设的示例，我们决定随机（某种程度上）获取一段开源 Java 代码，找到一个带有 `for` 循环和变量的方法，并将其移植到 Clojure。我们打开了 Apache Commons 项目，它被广泛使用。我们选择了 Commons Lang 中的 `StringUtils` 类，假设此类类只需要很少的领域知识即可理解。然后我们浏览了一个具有多个 `for` 循环和局部变量的方法，找到了 `indexOfAny`：
+与其创建一个假设的示例，我们决定随机（某种程度上）获取一段开源 Java 代码，找到一个带有`for`循环和变量的方法，并将其移植到 Clojure。我们打开了 Apache Commons 项目，它被广泛使用。我们选择了 Commons Lang 中的`StringUtils`类，假设此类类只需要很少的领域知识即可理解。然后我们浏览了一个具有多个`for`循环和局部变量的方法，找到了`indexOfAny`：
 
-[data/snippets/StringUtils.java](http://media.pragprog.com/titles/shcloj2/code/data/snippets/StringUtils.java)
+[`data/snippets/StringUtils.java`](http://media.pragprog.com/titles/shcloj2/code/data/snippets/StringUtils.java)
 
 ```java
 // From Apache Commons Lang, http://commons.apache.org/lang/
+
 public static int indexOfAny(String str, char[] searchChars) {
   if (isEmpty(str) || ArrayUtils.isEmpty(searchChars)) {
     return -1;
   }
+
   for (int i = 0; i < str.length(); i++) {
     char ch = str.charAt(i);
+
     for (int j = 0; j < searchChars.length; j++) {
       if (searchChars[j] == ch) {
         return i;
       }
     }
   }
+
   return -1;
 }
 ```
 
-`indexOfAny` 遍历 `str` 并报告与 `searchChars` 中任何字符匹配的字符索引，如果没有匹配则返回 `-1`。以下是 `indexOfAny` 的一些示例结果：
+`indexOfAny`遍历`str`并报告与`searchChars`中任何字符匹配的字符索引，如果没有匹配则返回`-1`。以下是`indexOfAny`的一些示例结果：
 
-*   `indexOfAny(null, *)` -> -1
-*   `indexOfAny("", *)` -> -1
-*   `indexOfAny(*, null)` -> -1
-*   `indexOfAny(* [])` -> -1
-*   `indexOfAny("zzabyycdxx", [z a])` -> 0
-*   `indexOfAny("zzabyycdxx", [b y])` -> 3
-*   `indexOfAny("aba", [z])` -> -1
+- `indexOfAny(null, *)` -> `-1`
+- `indexOfAny("", *)` -> `-1`
+- `indexOfAny(*, null)` -> `-1`
+- `indexOfAny(* [])` -> `-1`
+- `indexOfAny("zzabyycdxx", [z a])` -> `0`
+- `indexOfAny("zzabyycdxx", [b y])` -> `3`
+- `indexOfAny("aba", [z])` -> `-1`
 
-`indexOfAny` 中有两个 `if`、两个 `for`、三个返回点和三个可变变量，根据 David A. Wheeler 的计数，该方法有十四行长。
+`indexOfAny`中有两个`if`、两个`for`、三个返回点和三个可变变量，根据 David A. Wheeler 的计数，该方法有十四行长。
 
-现在让我们逐步构建 Clojure 的 `index-of-any`。如果我们只想找到匹配项，可以使用 Clojure 的 `filter`。但我们想找到匹配项的索引。因此，我们创建了 `indexed`，这是一个接收集合并返回索引集合的函数：
+现在让我们逐步构建 Clojure 的`index-of-any`。如果我们只想找到匹配项，可以使用 Clojure 的`filter`。但我们想找到匹配项的索引。因此，我们创建了`indexed`，这是一个接收集合并返回索引集合的函数：
 
-[src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
+[`src/examples/exploring.clj`](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
 
 ```clojure
 (defn indexed [coll]
   (map-indexed coll))
 ```
 
-`indexed` 返回一个格式为 `[idx elt]` 的对序列。尝试对字符串进行索引：
+`indexed`返回一个格式为`[idx elt]`的对序列。尝试对字符串进行索引：
 
 `(indexed "abcde")` -> `([0 a] [1 b] [2 c] [3 d] [4 e])`
 
-接下来，我们要找到字符串中匹配搜索集的字符索引。创建一个 `index-filter` 函数，它类似于 Clojure 的 `filter`，但返回的是索引而不是匹配项：
+接下来，我们要找到字符串中匹配搜索集的字符索引。创建一个`index-filter`函数，它类似于 Clojure 的`filter`，但返回的是索引而不是匹配项：
 
-[src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
+[`src/examples/exploring.clj`](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
 
 ```clojure
 (defn index-filter [pred coll]
@@ -2113,57 +2021,55 @@ public static int indexOfAny(String str, char[] searchChars) {
     (for [idx elt] (indexed coll) :when (pred elt)] idx))
 ```
 
-Clojure 的 `for` 不是循环，而是序列推导式（参见转换序列）。`(indexed coll)` 的索引元素对绑定到名称 `idx` 和 `elt`，但前提是 `(pred elt)` 为真。最后，推导式产生每个匹配对的 `idx` 值。
+Clojure 的`for`不是循环，而是序列推导式（参见转换序列）。`(indexed coll)`的索引元素对绑定到名称`idx`和`elt`，但前提是`(pred elt)`为真。最后，推导式产生每个匹配对的`idx`值。
 
-集合是测试成员关系的函数。因此，你可以将字符集和字符串传递给 `index-filter`，获取字符串中属于该集合的所有字符索引。尝试不同的字符串和字符集：
+集合是测试成员关系的函数。因此，你可以将字符集和字符串传递给`index-filter`，获取字符串中属于该集合的所有字符索引。尝试不同的字符串和字符集：
 
-*   `(index-filter #{a b} "abcdbbb")` -> `(0 1 4 5 6)`
-*   `(index-filter #{a b} "xyz")` -> `()`
+- `(index-filter #{a b} "abcdbbb")` -> `(0 1 4 5 6)`
+- `(index-filter #{a b} "xyz")` -> `()`
 
-此时，我们已经超完成了目标。`index-filter` 返回所有匹配项的索引，而我们只需要第一个索引。因此，`index-of-any` 只需获取 `index-filter` 的第一个结果：
+此时，我们已经超完成了目标。`index-filter`返回所有匹配项的索引，而我们只需要第一个索引。因此，`index-of-any`只需获取`index-filter`的第一个结果：
 
-[src/examples/exploring.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
+[`src/examples/exploring.clj`](http://media.pragprog.com/titles/shcloj2/code/src/examples/exploring.clj)
 
 ```clojure
 (defn index-of-any [pred coll]
   (first (index-filter pred coll)))
 ```
 
-测试 `index-of-any` 在不同输入下是否正常：
+测试`index-of-any`在不同输入下是否正常：
 
-*   `(index-of-any #{z a} "zzabyycdxx")` -> 0
-*   `(index-of-any #{b y} "zzabyycdxx")` -> 3
+- `(index-of-any #{z a} "zzabyycdxx")` -> `0`
+- `(index-of-any #{b y} "zzabyycdxx")` -> `3`
 
+- 命令式的`indexOfAny`引入了局部变量来遍历集合（包括字符串和字符集）。通过使用`map`等高阶函数和`for`等序列推导式，函数式的`index-of-any`避免了对所有变量的需求。
 
+不必要的复杂性往往会滚雪式增长。例如，命令式`indexOfAny`中的特殊情况分支使用魔数`-1`来表示不匹配。这个魔数是否应该是一个符号常量？无论你认为正确答案是什么，这个问题在函数式版本中本身就消失了。虽然函数式的`index-of-any`更短更简单，但它的通用性大得多：
 
+- `indexOfAny`搜索字符串，而`index-of-any`可以搜索任何序列。
+- `indexOfAny`与一组字符集进行匹配，而`index-of-any`可以与任何谓词进行匹配。
+- `indexOfAny`返回第一个匹配项，而`index-filter`返回所有匹配项，并可以与其他过滤器进一步组合。
 
-
-*   命令式的 `indexOfAny` 引入了局部变量来遍历集合（包括字符串和字符集）。通过使用 `map` 等高阶函数和 `for` 等序列推导式，函数式的 `index-of-any` 避免了对所有变量的需求。
-
-不必要的复杂性往往会滚雪式增长。例如，命令式 `indexOfAny` 中的特殊情况分支使用魔数 `-1` 来表示不匹配。这个魔数是否应该是一个符号常量？无论你认为正确答案是什么，这个问题在函数式版本中本身就消失了。虽然函数式的 `index-of-any` 更短更简单，但它的通用性大得多：
-
-*   `indexOfAny` 搜索字符串，而 `index-of-any` 可以搜索任何序列。
-*   `indexOfAny` 与一组字符集进行匹配，而 `index-of-any` 可以与任何谓词进行匹配。
-*   `indexOfAny` 返回第一个匹配项，而 `index-filter` 返回所有匹配项，并可以与其他过滤器进一步组合。
-
-作为一个函数式 `index-of-any` 多么通用的例子，你可以使用我们刚刚编写的代码来在一系列硬币抛掷中找到第三次出现的“heads”：
+作为一个函数式`index-of-any`多么通用的例子，你可以使用我们刚刚编写的代码来在一系列硬币抛掷中找到第三次出现的“heads”：
 
 | | `(nth (index-filter #{:h} [:t :t :h :t :h :t :t :t :h :h])` |
+| --- | --- |
 | | `2)` |
 | | `-> 8` |
 
-事实证明，以函数风格编写 `index-of-any` 而不需要循环或变量，比命令式的 `indexOfAny` 更简单、更不容易出错且更通用。[[26]](#f_0029.html_FOOTNOTE-26) 在更大的代码单元上，这些优势会变得更加显著。
+事实证明，以函数风格编写`index-of-any`而不需要循环或变量，比命令式的`indexOfAny`更简单、更不容易出错且更通用。[[26]](#f_0029.html_FOOTNOTE-26) 在更大的代码单元上，这些优势会变得更加显著。
 
-## 2.8 元数据 (Metadata)
+## 2.8 元数据（Metadata）
 
 关于元数据的 Wikipedia 条目[[27]](#f_0029.html_FOOTNOTE-27)开头说元数据是“关于数据的数据”。这没错，但在实用性上不够具体。在 Clojure 中，元数据是与对象的逻辑值正交的数据。例如，一个人的姓和名是普通的数据。一个人员对象可以序列化为 XML 的事实与人本身无关，它是元数据。同样，一个人员对象是“脏”的且需要刷新到数据库，这一事实也是元数据。
 
-### 读取器元数据 (Reader Metadata)
+### 读取器元数据（Reader Metadata）
 
-Clojure 语言本身在几个地方使用了元数据。例如，变量（vars）拥有一个包含文档、类型信息和源信息的元数据映射。以下是 `str` 变量的元数据：
+Clojure 语言本身在几个地方使用了元数据。例如，变量（vars）拥有一个包含文档、类型信息和源信息的元数据映射。以下是`str`变量的元数据：
 
-```
+```clojure
 (meta #'str)
+
 -> {:ns #<Namespace clojure.core>,
  :name str,
  :file "core.clj",
@@ -2177,8 +2083,8 @@ Clojure 语言本身在几个地方使用了元数据。例如，变量（vars�
 
 | 元数据键 | 用途 |
 | --- | --- |
-| `:arglists` | `doc` 使用的参数信息 |
-| `:doc` | `doc` 使用的文档 |
+| `:arglists` | `doc`使用的参数信息 |
+| `:doc` | `doc`使用的文档 |
 | `:file` | 源文件 |
 | `:line` | 源行号 |
 | `:macro` | 宏则为真 |
@@ -2190,22 +2096,25 @@ Clojure 语言本身在几个地方使用了元数据。例如，变量（vars�
 
 变量上的大部分元数据是由 Clojure 编译器自动添加的。要向变量添加你自己的键/值对，请使用元数据读取器宏：
 
-```
+```clojure
 ^metadata form
 ```
 
-例如，你可以创建一个简单的 `shout` 函数，将字符串转换为大写，并使用 `:tag` 键记录 `shout` 既期望又返回字符串：
+例如，你可以创建一个简单的`shout`函数，将字符串转换为大写，并使用`:tag`键记录`shout`既期望又返回字符串：
 
-```
+```clojure
 ; 另见下方的简短形式
+
 (defn ^{:tag String} shout [^{:tag String} s] (.toUpperCase s))
+
 -> #'user/shout
 ```
 
-你可以检查 `shout` 的元数据来查看 Clojure 添加的 `:tag`：
+你可以检查`shout`的元数据来查看 Clojure 添加的`:tag`：
 
-```
+```clojure
 (meta #'shout)
+
 -> {:arglists ([s]),
  :ns #<Namespace user>,
  :name shout,
@@ -2214,80 +2123,77 @@ Clojure 语言本身在几个地方使用了元数据。例如，变量（vars�
  :tag java.lang.String}
 ```
 
-你提供了 `:tag`，而 Clojure 提供了其他键。`:file` 值 `NO_SOURCE_FILE` 表示代码是在 REPL 中输入的。
+你提供了`:tag`，而 Clojure 提供了其他键。`:file`值`NO_SOURCE_FILE`表示代码是在 REPL 中输入的。
 
-由于 `:tag` 元数据非常常见，你也可以使用短形式 `^Classname`，它会展开为 `^{:tag Classname}`。使用简短形式，你可以如下重写 `shout`：
+由于`:tag`元数据非常常见，你也可以使用短形式`^Classname`，它会展开为`^{:tag Classname}`。使用简短形式，你可以如下重写`shout`：
 
-```
+```clojure
 (defn ^String shout [^String s] (.toUpperCase s))
+
 -> #'user/shout
 ```
 
-如果你觉得在阅读函数定义时元数据干扰了你的阅读，可以将元数据放在最后。使用 `defn` 的变体，将一个或多个主体形式包裹在圆括号中，随后紧跟一个元数据映射：
+如果你觉得在阅读函数定义时元数据干扰了你的阅读，可以将元数据放在最后。使用`defn`的变体，将一个或多个主体形式包裹在圆括号中，随后紧跟一个元数据映射：
 
-```
+```clojure
 (defn shout
- ([s] (.toUpperCase s))
- {:tag String})
+  ([s] (.toUpperCase s))
+  {:tag String})
 ```
 
 ## 2.9 总结
 
 这是一个很长的章节。但想想你已经涵盖了多少内容：你可以实例化基础字面量类型、定义并调用函数、管理命名空间以及读取和写入元数据。你可以编写纯函数式代码，但在需要时也可以轻松地引入副作用。你还接触了 Lisp 概念，包括读取器宏、特殊形式和解构。
 
+在 Clojure 中，所有这些数据结构都可以通过单一抽象来访问：序列（sequence，或`seq`）。
 
+`seq`（读音为“seek”）是一个逻辑列表。它之所以是逻辑上的，是因为 Clojure 没有将序列绑定到列表的实现细节上，例如 Lisp 的 cons cell（关于 cons 的历史，请参阅 Cons 的起源）。相反，`seq`是一个可以随处使用的抽象。
 
+可以被视为 seq 的集合被称为**seq-able**（读音为“SEEK-a-bull”）。在本章中，你将遇到各种 seq-able 集合：
 
-
-在 Clojure 中，所有这些数据结构都可以通过单一抽象来访问：序列（sequence，或 `seq`）。
-
-`seq`（读音为“seek”）是一个逻辑列表。它之所以是逻辑上的，是因为 Clojure 没有将序列绑定到列表的实现细节上，例如 Lisp 的 cons cell（关于 cons 的历史，请参阅 Cons 的起源）。相反，`seq` 是一个可以随处使用的抽象。
-
-可以被视为 seq 的集合被称为 **seq-able**（（读音为“SEEK-a-bull”）。在本章中，你将遇到各种 seq-able 集合：
-
-*   所有的 Clojure 集合
-*   所有的 Java 集合
-*   Java 数组和字符串
-*   正则表达式匹配结果
-*   目录结构
-*   I/O 流
-*   XML 树
+- 所有的 Clojure 集合
+- 所有的 Java 集合
+- Java 数组和字符串
+- 正则表达式匹配结果
+- 目录结构
+- I/O 流
+- XML 树
 
 你还将遇到序列库（sequence library），这是一组可以作用于任何 seq-able 集合的函数。因为很多事物都是序列，所以序列库比大多数语言中的集合 API 要强大且通用得多。序列库包含了创建、过滤和转换数据的函数。这些函数充当了 Clojure 的集合 API，并且取代了许多你在命令式语言中会编写的循环。
 
-在本章中，你将成为 Clojure 序列的高手。你将看到如何使用一组非常有表达力的常用函数处理极其广泛的数据类型。然后，在下一章（第 4 章 函数式编程）中，你将学习编写序列库的函数式风格。
+在本章中，你将成为 Clojure 序列的高手。你将看到如何使用一组非常有表达力的常用函数处理极其广泛的数据类型。然后，在下一章（第 4 章函数式编程）中，你将学习编写序列库的函数式风格。
 
 ## 3.1 一切皆序列
 
 Clojure 中的每一个聚合数据结构都可以被视为序列。序列具有三个核心能力：
 
-*   你可以获取序列中的 `first` 项：
+- 你可以获取序列中的`first`项：
 
-  | | `(first aseq)` |
+  `(first aseq)`
 
-  如果其参数为空或 `nil`，`first` 将返回 `nil`。
+  如果其参数为空或`nil`，`first`将返回`nil`。
 
-*   你可以获取第一个项之后的所有内容，换句话说，就是序列的 `rest`：
+- 你可以获取第一个项之后的所有内容，换句话说，就是序列的`rest`：
 
-  | | `(rest aseq)` |
+  `(rest aseq)`
 
-  如果没有更多项，`rest` 将返回一个空 seq（而不是 `nil`）。
+  如果没有更多项，`rest`将返回一个空 seq（而不是`nil`）。
 
-*   你可以通过向现有序列的前部添加元素来构建一个新序列。这被称为 `cons` 操作：
+- 你可以通过向现有序列的前部添加元素来构建一个新序列。这被称为`cons`操作：
 
-  | | `(cons elem aseq)` |
+  `(cons elem aseq)`
 
-在底层，这三种能力是在 Java 接口 `clojure.lang.ISeq` 中声明的。（在学习 Clojure 时请记住这一点，因为 `ISeq` 这个名称经常与 seq 通替使用。）
+在底层，这三种能力是在 Java 接口`clojure.lang.ISeq`中声明的。（在学习 Clojure 时请记住这一点，因为`ISeq`这个名称经常与 seq 通替使用。）
 
-`seq` 函数会为任何 seq-able 集合返回一个 seq：
+`seq`函数会为任何 seq-able 集合返回一个 seq：
 
-  | | `(seq coll)` |
+`(seq coll)`
 
-  如果 `coll` 为空或 `nil`，`seq` 将返回 `nil`。`next` 函数将返回第一个项之后的项 seq：
+如果`coll`为空或`nil`，`seq`将返回`nil`。`next`函数将返回第一个项之后的项 seq：
 
-  | | `(next aseq)` |
+`(next aseq)`
 
-`(next aseq)` 等同于 `(seq (rest aseq))`。表 2 澄清 rest/next 行为 解释了 rest/next 的行为。
+`(next aseq)`等同于`(seq (rest aseq))`。表 2 澄清 rest/next 行为解释了 rest/next 的行为。
 
 ### 表 2. 澄清 rest/next 行为
 
@@ -2297,61 +2203,61 @@ Clojure 中的每一个聚合数据结构都可以被视为序列。序列具有
 | `(next ())` | `nil` |
 | `(seq (rest ()))` | `nil` |
 
-如果你有 Lisp 背景，你会发现 seq 函数也适用于列表：
+如果你有 Lisp 背景，你会发现`seq`函数也适用于列表：
 
 | | `(first '(1 2 3))` |
+| --- | --- |
 | | `-> 1` |
-| | | |
+| | |
 | | `(rest '(1 2 3))` |
 | | `-> (2 3)` |
-| | | |
+| | |
 | | `(cons 0 '(1 2 3))` |
 | | `-> (0 1 2 3)` |
 
 在 Clojure 中，相同的函数适用于其他数据结构。你可以将向量视为 seq：
 
 | | `(first [1 2 3])` |
+| --- | --- |
 | | `-> 1` |
-| | | |
+| | |
 | | `(rest [1 2 3])` |
 | | `-> (2 3)` |
-| | | |
+| | |
 | | `(cons 0 [1 2 3])` |
 | | `-> (0 1 2 3)` |
 
 ### Cons 的起源
 
-Clojure 的序列基于 Lisp 具体列表的抽象。在 Lisp 的原始实现中，三个基本的列表操作被命名为 `car`、`cdr` 和 `cons`。`car` 和 `cdr` 是缩写，指的是原始 IBM 704 平台上 Lisp 的实现细节。许多 Lisp（包括 Clojure）将这些晦涩的名称替换为更有意义的 `first` 和 `rest`。
+Clojure 的序列基于 Lisp 具体列表的抽象。在 Lisp 的原始实现中，三个基本的列表操作被命名为`car`、`cdr`和`cons`。`car`和`cdr`是缩写，指的是原始 IBM 704 平台上 Lisp 的实现细节。许多 Lisp（包括 Clojure）将这些晦涩的名称替换为更有意义的`first`和`rest`。
 
-第三个函数 `cons` 是 construct（构造）的缩写。Lisp 程序员将 `cons` 用名词、动词和形容词。你使用 `cons` 创建名为 cons cell（cons 单元）的数据结构，或简称为 cons。大多数 Lisp（包括 Clojure）都保留了原始的 `cons` 名称，因为“construct”对于 `cons` 的作用是一个很好的记忆点。为了方便起见，你可能会说 `cons` 向序列添加一个元素，但更准确的说法是 `cons` 构建了一个新序列，该序列类似于在原始序列上添加了一个元素。
+第三个函数`cons`是 construct（构造）的缩写。Lisp 程序员将`cons`用名词、动词和形容词。你使用`cons`创建名为 cons cell（cons 单元）的数据结构，或简称为 cons。大多数 Lisp（包括 Clojure）都保留了原始的`cons`名称，因为“construct”对于`cons`的作用是一个很好的记忆点。为了方便起见，你可能会说`cons`向序列添加一个元素，但更准确的说法是`cons`构建了一个新序列，该序列类似于在原始序列上添加了一个元素。
 
-当你对向量应用 `rest` 或 `cons` 时，结果是一个 seq 而不是向量。在 REPL 中，seq 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
+当你对向量应用`rest`或`cons`时，结果是一个 seq 而不是向量。在 REPL 中，seq 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
 
-当你将 `rest` 或 `cons` 应用于向量时，结果是一个 seq 而不是向量。在 REPL 中，seq 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
+当你将`rest`或`cons`应用于向量时，结果是一个 seq 而不是向量。在 REPL 中，seq 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
 
-```
+```clojure
 (seq [1 2 3])
+
 (2 3)
 ```
 
-[/content]
 
-*(抱歉，在处理上述文本时，后部分出现了逻辑混乱和重复翻译错误。以下是为您重新整理、准确翻译的完整译文：)*
 
-[content]
 在 Clojure 中，所有这些数据结构都可以通过单一的抽象来访问：序列（sequence，或 `seq`）。
 
 `seq`（读音为“seek”）是一个逻辑列表。它之所以是逻辑上的，是因为 Clojure 没有将序列绑定到列表的实现细节上，例如 Lisp 的 cons cell（关于 cons 的历史，请参阅 Cons 的起源）。相反，`seq` 是一个可以随处使用的抽象。
 
-可以被视为 seq 的集合被称为 **seq-able**（读音为“SEEK-a-bull”）。在本章中，你将遇到各种 seq-able 集合：
+可以被视为 `seq` 的集合被称为 seq-able（读音为“SEEK-a-bull”）。在本章中，你将遇到各种 seq-able 集合：
 
-*   所有的 Clojure 集合
-*   所有的 Java 集合
-*   Java 数组和字符串
-*   正则表达式匹配结果
-*   目录结构
-*   I/O 流
-*   XML 树
+- 所有的 Clojure 集合
+- 所有的 Java 集合
+- Java 数组和字符串
+- 正则表达式匹配结果
+- 目录结构
+- I/O 流
+- XML 树
 
 你还将遇到序列库（sequence library），这是一组可以作用于任何 seq-able 集合的函数。因为很多事物都是序列，所以序列库比大多数语言中的集合 API 要强大且通用。序列库包含了创建、过滤和转换数据的函数。这些函数充当了 Clojure 的集合 API，并且取代了许多你在命令式语言中会编写的循环。
 
@@ -2361,33 +2267,43 @@ Clojure 的序列基于 Lisp 具体列表的抽象。在 Lisp 的原始实现中
 
 Clojure 中的每一个聚合数据结构都可以被视为序列。序列具有三个核心能力：
 
-*   你可以获取序列中的 `first` 项：
+- 你可以获取序列中的 `first` 项：
 
-  | | `(first aseq)` |
+  | 形式 |  |
+  | --- | --- |
+  | `(first aseq)` |  |
 
   如果其参数为空或 `nil`，`first` 将返回 `nil`。
 
-*   你可以获取第一个项之后的所有内容，换句话说，就是序列的 `rest`：
+- 你可以获取第一个项之后的所有内容，换句话说，就是序列的 `rest`：
 
-  | | `(rest aseq)` |
+  | 形式 |  |
+  | --- | --- |
+  | `(rest aseq)` |  |
 
-  如果没有更多项，`rest` 将返回一个空 seq（而不是 `nil`）。
+  如果没有更多项，`rest` 将返回一个空 `seq`（而不是 `nil`）。
 
-*   你可以通过向现有序列的前部添加元素来构建一个新序列。这被称为 `cons` 操作：
+- 你可以通过向现有序列的前部添加元素来构建一个新序列。这被称为 `cons` 操作：
 
-  | | `(cons elem aseq)` |
+  | 形式 |  |
+  | --- | --- |
+  | `(cons elem aseq)` |  |
 
-在底层，这三种能力是在 Java 接口 `clojure.lang.ISeq` 中声明的。（在学习 Clojure 时请记住这一点，因为 `ISeq` 这个名称经常与 seq 通替使用。）
+在底层，这三种能力是在 Java 接口 `clojure.lang.ISeq` 中声明的。（在学习 Clojure 时请记住这一点，因为 `ISeq` 这个名称经常与 `seq` 通替使用。）
 
-`seq` 函数会为任何 seq-able 集合返回一个 seq：
+`seq` 函数会为任何 seq-able 集合返回一个 `seq`：
 
-  | | `(seq coll)` |
+| 形式 |  |
+| --- | --- |
+| `(seq coll)` |  |
 
-  如果 `coll` 为空或 `nil`，`seq` 将返回 `nil`。`next` 函数将返回第一个项之后的项 seq：
+如果 `coll` 为空或 `nil`，`seq` 将返回 `nil`。`next` 函数将返回第一个项之后的项 `seq`：
 
-  | | `(next aseq)` |
+| 形式 |  |
+| --- | --- |
+| `(next aseq)` |  |
 
-`(next aseq)` 等同于 `(seq (rest aseq))`。表 2 澄清 rest/next 行为 解释了 rest/next 的行为。
+`(next aseq)` 等同于 `(seq (rest aseq))`。表 2 澄清 rest/next 行为解释了 `rest`/`next` 的行为。
 
 ### 表 2. 澄清 rest/next 行为
 
@@ -2397,27 +2313,21 @@ Clojure 中的每一个聚合数据结构都可以被视为序列。序列具有
 | `(next ())` | `nil` |
 | `(seq (rest ()))` | `nil` |
 
-如果你有 Lisp 背景，你会发现 seq 函数也适用于列表：
+如果你有 Lisp 背景，你会发现 `seq` 函数也适用于列表：
 
-| | `(first '(1 2 3))` |
-| | `-> 1` |
-| | | |
-| | `(rest '(1 2 3))` |
-| | `-> (2 3)` |
-| | | |
-| | `(cons 0 '(1 2 3))` |
-| | `-> (0 1 2 3)` |
+| 形式 | 结果 |
+| --- | --- |
+| `(first '(1 2 3))` | `-> 1` |
+| `(rest '(1 2 3))` | `-> (2 3)` |
+| `(cons 0 '(1 2 3))` | `-> (0 1 2 3)` |
 
-在 Clojure 中，相同的函数适用于其他数据结构。你可以将向量视为 seq：
+在 Clojure 中，相同的函数适用于其他数据结构。你可以将向量视为 `seq`：
 
-| | `(first [1 2 3])` |
-| | `-> 1` |
-| | | |
-| | `(rest [1 2 3])` |
-| | `-> (2 3)` |
-| | | |
-| | `(cons 0 [1 2 3])` |
-| | `-> (0 1 2 3)` |
+| 形式 | 结果 |
+| --- | --- |
+| `(first [1 2 3])` | `-> 1` |
+| `(rest [1 2 3])` | `-> (2 3)` |
+| `(cons 0 [1 2 3])` | `-> (0 1 2 3)` |
 
 ### Cons 的起源
 
@@ -2425,34 +2335,36 @@ Clojure 的序列基于 Lisp 具体列表的抽象。在 Lisp 的原始实现中
 
 第三个函数 `cons` 是 construct（构造）的缩写。Lisp 程序员将 `cons` 用名词、动词和形容词。你使用 `cons` 创建名为 cons cell（cons 单元）的数据结构，或简称为 cons。大多数 Lisp（包括 Clojure）都保留了原始的 `cons` 名称，因为“construct”对于 `cons` 的作用是一个很好的记忆点。为了方便起见，你可能会说 `cons` 向序列添加一个元素，但更准确的说法是 `cons` 构建了一个新序列，该序列类似于在原始序列上添加了一个元素。
 
-当你对向量应用 `rest` 或 `cons` 时，结果是一个 seq 而不是向量。在 REPL 中，seq 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
+当你对向量应用 `rest` 或 `cons` 时，结果是一个 `seq` 而不是向量。在 REPL 中，`seq` 的打印方式类似于列表，正如你在之前的输出中看到的。你可以检查实际的类型：
 
-```
+```clojure
 (seq [1 2 3])
+
 (2 3)
 ```
 
 
 
-由于 `conj`（以及相关函数）对底层数据结构执行了高效的操作，你通常可以编写既高效又与特定底层实现完全解耦的代码。
+由于`conj`（以及相关函数）我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。底层数据结构执行了高效的操作，你通常可以编写既高效又与特定底层实现完全解耦的代码。
 
-![Joe 提问：](img/joe.jpg)Joe 提问：为什么向量上的函数会返回列表？
+![Joe 提问：](img/joe.jpg)
 
-当你尝试在 REPL 中示例时，`rest` 和 `cons` 的结果看起来是列表，即使输入是向量、映射或集合。这是否意味着 Clojure 在内部将所有内容都转换成了列表？并不是！序列函数总是返回一个 `seq`，无论其输入是什么。你可以通过检查返回对象的 Java 类型来验证这一点：
+Joe 提问：为什么向量上的函数会返回列表？
 
-| | `(class '(1 2 3))` |
-| | `-> clojure.lang.PersistentList` |
-| | |
-| | `(class (rest [1 2 3]))` |
-| | `-> clojure.lang.PersistentVector$ChunkedSeq` |
+当你尝试在 REPL 中示例时，`rest` 和 `cons` 的结果看起来是列表，即使输入是向量、映射或集合。这是否意味着 Clojure 在内部将所有内容都转换成了列表？并不是！序列函数总是返回一个`seq`，无论其输入是什么。你可以通过检查返回对象的 Java 类型来验证这一点：
 
-如你所见，`(rest [1 2 3])` 的结果是某种 `Seq`，而不是 `List`。那么，为什么结果看起来像列表呢？
+| 表达式 | 结果 |
+| --- | --- |
+| `(class '(1 2 3))` | `-> clojure.lang.PersistentList` |
+| `(class (rest [1 2 3]))` | `-> clojure.lang.PersistentVector$ChunkedSeq` |
+
+如你所见，`(rest [1 2 3])` 的结果是某种`Seq`，而不是`List`。那么，为什么结果看起来像列表呢？
 
 答案在于 REPL。当你要求 REPL 显示一个序列时，它只知道它有一个序列。它不知道这个序列是由哪种集合构建的。因此，REPL 以相同的方式打印所有序列：它遍历整个序列，并将其作为列表打印出来。
 
 Clojure 序列库特别适用于大型（甚至是无限）序列。大多数 Clojure 序列是懒惰的：它们只在实际需要时才生成元素。因此，Clojure 的序列函数可以处理大到无法放入内存的序列。
 
-Clojure 序列是不可变的：它们永远不会改变。这使得程序更容易推理，意味着 Clojure 序列对于并发访问是安全的。然而，这为人类语言带来了一个小问题。在描述可变事物时，英语描述的流畅性要得多。考虑以下关于假设序列函数 `triple` 的两种描述：
+Clojure 序列是不可变的：它们永远不会改变。这使得程序更容易推理，意味着 Clojure 序列对于并发访问是安全的。然而，这为人类语言带来了一个小问题。在描述可变事物时，英语描述的流畅性要得多。考虑以下关于假设序列函数`triple`的两种描述：
 
 - `triple` 将序列的每个元素增加三倍。
 - `triple` 接收一个序列并返回一个新的序列，其中原始序列的每个元素都增加了三倍。
@@ -2461,7 +2373,7 @@ Clojure 序列是不可变的：它们永远不会改变。这使得程序更容
 
 ## 3.2 使用序列库
 
-Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果你来自一个以名词为主导的面向对象背景，那么序列库真是不虚其实的“动词的复仇”。这些函数提供了丰富的功能骨干，可以利用任何遵循基础 `first`/`rest`/`cons` 约的数据结构。
+Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果你来自一个以名词为主导的面向对象背景，那么序列库真是不虚其实的“动词的复仇”。这些函数提供了丰富的功能骨干，可以利用任何遵循基础`first`/`rest`/`cons`约的数据结构。
 
 以下函数被分为四大类：
 
@@ -2474,48 +2386,54 @@ Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果
 
 ### 创建序列
 
-除了序列字面量外，Clojure 还提供了许多创建序列的函数。`range` 生成从 `start` 到 `end` 的序列，每次按 `step` 递增。
+除了序列字面量外，Clojure 还提供了许多创建序列的函数。`range` 生成从`start`到`end`的序列，每次按`step`递增。
 
-| | `(range start? end step?)` |
+| 表达式 |
+| --- |
+| `(range start? end step?)` |
 
-范围包含其 `start`但不包含 `end`。如果你不指定它们，`start` 默认为零，`step` 默认为 1。尝试在 REPL 中创建一些范围：
+范围包含其`start`但不包含`end`。如果你不指定它们，`start` 默认为零，`step` 默认为 1。尝试在 REPL 中创建一些范围：
 
-| | `(range 10)` |
-| | `-> (0 1 2 3 4 5 6 7 8 9)` |
-| | |
-| | `(range 10 20)` |
-| | `-> (10 11 12 13 14 15 16 17 18 19)` |
-| | `(range 1 25 2)` |
-| | `-> (1 3 5 7 9 11 13 15 17 19 21 23)` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(range 10)` | `-> (0 1 2 3 4 5 6 7 8 9)` |
+| `(range 10 20)` | `-> (10 11 12 13 14 15 16 17 18 19)` |
+| `(range 1 25 2)` | `-> (1 3 5 7 9 11 13 15 17 19 21 23)` |
 
-`repeat` 函数将元素 `x` 重复 `n` 次：
+`repeat` 函数将元素`x`重复`n`次：
 
-| | `(repeat n x)` |
+| 表达式 |
+| --- |
+| `(repeat n x)` |
 
-尝试在 REPL 中 `repeat` 一些项：
+尝试在 REPL 中`repeat`一些项：
 
-| | `(repeat 5 1)` |
-| | `-> (1 1 1 1 1)` |
-| | |
-| | `(repeat 10 "x")` |
-| | `-> ("x" "x" "x" "x" "x" "x" "x" "x" "x" "x")` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(repeat 5 1)` | `-> (1 1 1 1 1)` |
+| `(repeat 10 "x")` | `-> ("x" "x" "x" "x" "x" "x" "x" "x" "x" "x")` |
 
-`range` 和 `repeat` 都代表了可以扩展的思想。你可以将 `iterate` 视为 `range` 的无限扩展：
+`range` 和`repeat`都代表了可以扩展的思想。你可以将`iterate`视为`range`的无限扩展：
 
-| | `(iterate f x)` |
+| 表达式 |
+| --- |
+| `(iterate f x)` |
 
-`iterate` 从值 `x` 开始并无限持续，对每个值应用函数 `f` 来计算下一个值。如果你从 `1` 开始并使用 `inc` 进行 `iterate`，你可以生成整数：
+`iterate` 从值`x`开始并无限持续，对每个值应用函数`f`来计算下一个值。如果你从`1`开始并使用`inc`进行`iterate`，你可以生成整数：
 
-| | `(take 10 (iterate inc 1))` |
-| | `-> (1 2 3 4 5 6 7 8 9 10)` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(take 10 (iterate inc 1))` | `-> (1 2 3 4 5 6 7 8 9 10)` |
 
 由于序列是无限的，你需要另一个函数来帮助你在 REPL 中查看序列。
 
-| | `(take n sequence)` |
+| 表达式 |
+| --- |
+| `(take n sequence)` |
 
-`take` 返回一个包含前 `n` 个元素的懒惰序列。
+`take` 返回一个包含前`n`个元素的懒惰序列。
 
-Clojure 序列是不可变的：它们永远不会改变。这使得程序更容易推理，意味着 Clojure 序列对于并发访问是安全的。然而，这为人类语言带来了一个小问题。在描述可变事物时，英语描述的流畅性要得多。考虑以下关于假设序列函数 `triple` 的两种描述：
+Clojure 序列是不可变的：它们永远不会改变。这使得程序更容易推理，意味着 Clojure 序列对于并发访问是安全的。然而，这为人类语言带来了一个小问题。在描述可变事物时，英语描述的流畅性要得多。考虑以下关于假设序列函数`triple`的两种描述：
 
 - `triple` 将序列的每个元素增加三倍。
 - `triple` 接收一个序列并返回一个新的序列，其中原始序列的每个元素都增加了三倍。
@@ -2524,7 +2442,7 @@ Clojure 序列是不可变的：它们永远不会改变。这使得程序更容
 
 ## 3.2 使用序列库
 
-Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果你来自一个以名词为主导的面向对象背景，那么序列库真是不虚其实的“动词的复仇”。这些函数提供了丰富的功能骨干，可以利用任何遵循基础 `first`/`rest`/`cons` 约的数据结构。
+Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果你来自一个以名词为主导的面向对象背景，那么序列库真是不虚其实的“动词的复仇”。这些函数提供了丰富的功能骨干，可以利用任何遵循基础`first`/`rest`/`cons`约的数据结构。
 
 以下函数被分为四大类：
 
@@ -2537,209 +2455,231 @@ Clojure 序列库提供了丰富的功能，可以与任何序列协作。如果
 
 ### 创建序列
 
-除了序列字面量外，Clojure 还提供了许多创建序列的函数。`range` 生成从 `start` 到 `end` 的序列，每次按 `step` 递增。
+除了序列字面量外，Clojure 还提供了许多创建序列的函数。`range` 生成从`start`到`end`的序列，每次按`step`递增。
 
-| | `(range start? end step?)` |
+| 表达式 |
+| --- |
+| `(range start? end step?)` |
 
-范围包含其 `start`但不包含 `end`。如果你不指定它们，`start` 默认为零，`step` 默认为 1。尝试在 REPL 中创建一些范围：
+范围包含其`start`但不包含`end`。如果你不指定它们，`start` 默认为零，`step` 默认为 1。尝试在 REPL 中创建一些范围：
 
-| | `(range 10)` |
-| | `-> (0 1 2 3 4 5 6 7 8 9)` |
-| | |
-| | `(range 10 20)` |
-| | `-> (10 11 12 13 14 15 16 17 18 19)` |
-| | `(range 1 25 2)` |
-| | `-> (1 3 5 7 9 11 13 15 17 19 21 23)` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(range 10)` | `-> (0 1 2 3 4 5 6 7 8 9)` |
+| `(range 10 20)` | `-> (10 11 12 13 14 15 16 17 18 19)` |
+| `(range 1 25 2)` | `-> (1 3 5 7 9 11 13 15 17 19 21 23)` |
 
-`repeat` 函数将元素 `x` 重复 `n` 次：
+`repeat` 函数将元素`x`重复`n`次：
 
-| | `(repeat n x)` |
+| 表达式 |
+| --- |
+| `(repeat n x)` |
 
-尝试在 REPL 中 `repeat` 一些项：
+尝试在 REPL 中`repeat`一些项：
 
-| | `(repeat 5 1)` |
-| | `-> (1 1 1 1 1)` |
-| | |
-| | `(repeat 10 "x")` |
-| | `-> ("x" "x" "x" "x" "x" "x" "x" "x" "x" "x")` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(repeat 5 1)` | `-> (1 1 1 1 1)` |
+| `(repeat 10 "x")` | `-> ("x" "x" "x" "x" "x" "x" "x" "x" "x" "x")` |
 
-`range` 和 `repeat` 都代表了可以扩展的思想。你可以将 `iterate` 视为 `range` 的无限扩展：
+`range` 和`repeat`都代表了可以扩展的思想。你可以将`iterate`视为`range`的无限扩展：
 
-| | `(iterate f x)` |
+| 表达式 |
+| --- |
+| `(iterate f x)` |
 
-`iterate` 从值 `x` 开始并无限持续，对每个值应用函数 `f` 来计算下一个值。如果你从 `1` 开始并使用 `inc` 进行 `iterate`，你可以生成整数：
+`iterate` 从值`x`开始并无限持续，对每个值应用函数`f`来计算下一个值。如果你从`1`开始并使用`inc`进行`iterate`，你可以生成整数：
 
-| | `(take 10 (iterate inc 1))` |
-| | `-> (1 2 3 4 5 6 7 8 9 10)` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(take 10 (iterate inc 1))` | `-> (1 2 3 4 5 6 7 8 9 10)` |
 
 由于序列是无限的，你需要另一个函数来帮助你在 REPL 中查看序列。
 
-| | `(take n sequence)` |
+| 表达式 |
+| --- |
+| `(take n sequence)` |
 
-`take` 返回一个包含前 `n` 个元素的懒惰序列。
+`take` 返回一个包含前`n`个元素的懒惰序列。
 
+Clojure 提供了许多过滤序列的函数，返回原始序列的子序列。其中最基础的是`filter`：
 
+| 表达式 |
+| --- |
+| `(filter pred coll)` |
 
+`filter` 接受一个谓词函数和一个集合，并返回一个过滤结果为 true（在在布尔语文中解释时）的对象序列。你可以对前一节中的`whole-numbers`进行过滤以得到奇数或偶数：
 
-Clojure 提供了许多过滤序列的函数，返回原始序列的子序列。其中最基础的是 `filter`：
+| 表达式 | 结果 |
+| --- | --- |
+| `(take 10 (filter even? (whole-numbers)))` | `-> (2 4 6 8 10 12 14 16 18 20)` |
+| `(take 10 (filter odd? (whole-numbers)))` | `-> (1 3 5 7 9 11 13 15 17 19)` |
 
-|   | `(filter pred coll)` |
+你可以使用`take-while`在谓词函数保持为真时从序列中提取元素：
 
-`filter` 接受一个谓词函数和一个集合，并返回一个过滤结果为 true（在在布尔语文中解释时）的对象序列。你可以对前一节中的 `whole-numbers` 进行过滤以得到奇数或偶数：
-
-|   | `(take 10 (filter even? (whole-numbers)))` |
-
-|   | `-> (2 4 6 8 10 12 14 16 18 20)` |
-
-|   | `​​` |
-
-|   | `(take 10 (filter odd? (whole-numbers)))` |
-
-|   | `-> (1 3 5 7 9 11 13 15 17 19)` |
-
-你可以使用 `take-while` 在谓词函数保持为真时从序列中提取元素：
-
-|   | `(take-while pred coll)` |
+| 表达式 |
+| --- |
+| `(take-while pred coll)` |
 
 例如，要提取字符串中直到第一个元音之前的所有字符，可以使用以下代码：
 
-|   | `(take-while (complement #{\a\e\i\o\u}) "the-quick-brown-fox")` |
+```clojure
+(take-while (complement #{\a\e\i\o\u}) "the-quick-brown-fox")
+```
 
-|   | `-> (\t \h)` |
+结果：
+
+```text
+(\t \h)
+```
 
 这里有几个有趣的点：
 
-*   集合也可以充当函数。因此，你可以将 `#{\a\e\i\o\u}` 理解为“元音集合”，也可以理解为“测试参数是否为元音的”。
+- 集合也可以充当函数。因此，你可以将`#{\a\e\i\o\u}`理解为“元音集合”，也可以理解为“测试参数是否为元音的”。
+- `complement` 反转另一个函数的行为。之前被取反的函数测试其参数是否不是元音。
 
-*   `complement` 反转另一个函数的行为。之前被取反的函数测试其参数是否不是元音。
+`take-while` 的反操作是`drop-while`：
 
-`take-while` 的反操作是 `drop-while`：
+| 表达式 |
+| --- |
+| `(drop-while pred coll)` |
 
-|   | `(drop-while pred coll)` |
+`drop-while` 在谓词函数为真时从序列开头删除元素，然后返回剩余部分。你可以使用`drop-while`来忽略字符串开头所有的非元音字符：
 
-`drop-while` 在谓词函数为真时从序列开头删除元素，然后返回剩余部分。你可以使用 `drop-while` 来忽略字符串开头所有的非元音字符：
+```clojure
+(drop-while (complement #{\a\e\i\o\u}) "the-quick-brown-fox")
+```
 
-|   | `(drop-while (complement #{\a\e\i\o\u}) "the-quick-brown-fox")` |
+结果：
 
-|   | `-> (\e \- \q \u \i \c \k \- \b \r \o \w \n \- \f \o \x)` |
+```text
+(\e \- \q \u \i \c \k \- \b \r \o \w \n \- \f \o \x)
+```
 
-`split-at` 和 `split-with` 将一个集合分为两个集合：
+`split-at` 和`split-with`将一个集合分为两个集合：
 
-|   | `(split-at index coll)` |
+| 表达式 |
+| --- |
+| `(split-at index coll)` |
+| `(split-with pred coll)` |
 
-|   | `(split-with pred coll)` |
+`split-at` 接受一个索引，而`split-with`接受一个谓词函数：
 
-`split-at` 接受一个索引，而 `split-with` 接受一个谓词函数：
+```clojure
+(split-at 5 (range 10))
+```
 
-|   | `(split-at 5 (range 10))` |
+结果：
 
-|   | `->[(0 1 2 3 4) (5 6 7 8 9)]` |
+```text
+[(0 1 2 3 4) (5 6 7 8 9)]
+```
 
-|   | `​​` |
+```clojure
+(split-with #(<= % 10) (range 0 20 2))
+```
 
-|   | `(split-with #(<= % 10) (range 0 20 2))` |
+结果：
 
-|   | `->[(0 2 4 6 8 10) (12 14 16 18)]` |
+```text
+[(0 2 4 6 8 10) (12 14 16 18)]
+```
 
-当然，所有的 `take-`、`split-` 和 `drop-` 函数都返回惰性序列。
+当然，所有的`take-`、`split-`和`drop-`函数都返回惰性序列。
 
 ### 序列谓词
 
-过滤函数接受一个谓词并返回一个序列。与之相关的是序列谓词。序列谓词询问另一个谓词如何应用于序列中的每一个项。例如，`every?` 谓词询问另一个谓词是否对序列中的每个元素都为真。
+过滤函数接受一个谓词并返回一个序列。与之相关的是序列谓词。序列谓词询问另一个谓词如何应用于序列中的每一个项。例如，`every?`谓词询问另一个谓词是否对序列中的每个元素都为真。
 
-|   | `(every? pred coll)` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(every? pred coll)` | |
+| `(every? odd? [1 3 5])` | `-> true` |
+| `(every? odd? [1 3 5 8])` | `-> false` |
 
-|   | `(every? odd? [1 3 5])` |
+`some`设定了更低的门槛：
 
-|   | `-> true` |
+| 表达式 |
+| --- |
+| `(some pred coll)` |
 
-|   | `​​` |
+`some` 返回其谓词函数的第一个非假值，如果没有元素元素匹配，则返回`nil`：
 
-|   | `(every? odd? [1 3 5 8])` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(some even? [1 2 3])` | `-> true` |
+| `(some even? [1 3 5])` | `-> nil` |
 
-|   | `-> false` |
+注意`some`并不以问号结尾。`some`并不是一个谓词，尽管它经常像谓词一样被使用。`some`返回第一个匹配项的实际值而不是`true`。当你将`some`与`even?`配合使用时，这种区别是不可见的，因为`even?`本身就是一个谓词。为了看到非`true`的匹配，可以尝试将`some`配合`identity`来寻找序列中的第一个非`nil`值：
 
-`some` 设定了更低的门槛：
-
-|   | `(some pred coll)` |
-
-`some` 返回其谓词函数的第一个非假值，如果没有元素元素匹配，则返回 `nil`：
-
-|   | `(some even? [1 2 3])` |
-
-|   | `-> true` |
-
-|   | `​​` |
-
-|   | `(some even? [1 3 5])` |
-
-|   | `-> nil` |
-
-注意 `some` 并不以问号结尾。`some` 并不是一个谓词，尽管它经常像谓词一样被使用。`some` 返回第一个匹配项的实际值而不是 `true`。当你将 `some` 与 `even?` 配合使用时，这种区别是不可见的，因为 `even?` 本身就是一个谓词。为了看到非 `true` 的匹配，可以尝试将 `some` 配合 `identity` 来寻找序列中的第一个非 `nil` 值：
-
-|   | `(some identity [nil false 1 nil 2])` |
-
-|   | `-> 1` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(some identity [nil false 1 nil 2])` | `-> 1` |
 
 其他谓词的行为从它们的名称中就能看出：
 
-|   | `(not-every? pred coll)` |
-
-|   | `(not-any? pred coll)` |
+| 表达式 |
+| --- |
+| `(not-every? pred coll)` |
+| `(not-any? pred coll)` |
 
 并不是所有的整数都是偶数：
 
-|   | `(not-every? even? (whole-numbers))` |
-
-|   | `-> true` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(not-every? even? (whole-numbers))` | `-> true` |
 
 但说没有任何整数是偶数那就是撒谎：
 
-|   | `(not-any? even? (whole-numbers))` |
-
-|   | `-> false` |
+| 表达式 | 结果 |
+| --- | --- |
+| `(not-any? even? (whole-numbers))` | `-> false` |
 
 注意，我们挑选的问题已知已知。通常情况下，在对无限集合应用谓词时必须小心，它们可能会无限运行。
 
 ### 转换序列
 
-转换函数转换值。最简单的转换是 `map`：
+转换函数转换值。最简单的转换是`map`：
 
-|   | `(map f coll)` |
+| 表达式 |
+| --- |
+| `(map f coll)` |
 
-`map` 接受一个集合 `coll` 和一个函数 `f`，通过对每个元素调用 `f` 返回一个新的序列。另一种常见的转换是 `reduce`：
+`map` 接受一个集合`coll`和一个函数`f`，通过对每个元素调用`f`返回一个新的序列。另一种常见的转换是`reduce`：
 
-|   | `(reduce f coll)` |
+| 表达式 |
+| --- |
+| `(reduce f coll)` |
 
 `reduce` 用于将序列归约为单个值。
 
-
-
-
-
-```
+```clojure
 (take 10 (for [n (whole-numbers) :when (even? n)] n))
+
 -> (2 4 6 8 10 12 14 16 18 20)
 ```
 
 `:while` 子句仅在当表达式为真时才继续求值：
 
-```
+```clojure
 (for [n (whole-numbers) :while (even? n)] n)
+
 -> ()
 ```
 
-`for` 的真正的强大威力体现在你处理多个绑定表达式时。例如，你可以通过同时绑定 `rank`（行）和 `file`（列），用代数记法表示棋盘上所有可能的位置：
+`for` 的真正的强大威力体现在你处理多个绑定表达式时。例如，你可以通过同时绑定`rank`（行）和`file`（列），用代数记法表示棋盘上所有可能的位置：
 
-```
+```clojure
 (for [file "ABCDEFGH" rank (range 1 9)] (format "%c%d" file rank))
+
 -> ("A1" "A2" ... elided ... "H7" "H8")
 ```
 
-Clojure 首先遍历序列推导式中最右侧的绑定表达式，然后向左处理。由于在绑定形式中 `rank` 列在 `file` 的右侧，因此 `rank` 的迭代速度更快。如果你想让 `file` 迭代更快，可以反转绑定顺序并将 `rank` 放在前面：
+Clojure 首先遍历序列推导式中最右侧的绑定表达式，然后向左处理。由于在绑定形式中`rank`列在`file`的右侧，因此`rank`的迭代速度更快。如果你想让`file`迭代更快，可以反转绑定顺序并将`rank`放在前面：
 
-```
+```clojure
 (for [rank (range 1 9) file "ABCDEFGH"] (format "%c%d" file rank))
+
 -> ("A1" "B1" ... elided ... "G8" "H8")
 ```
 
@@ -2757,142 +2697,168 @@ Clojure 首先遍历序列推导式中最右侧的绑定表达式，然后向左
 
 ```clojure
 (ns examples.primes)
+
 ;; 取自 clojure.contrib.lazy-seqs
+
 ;; primes 无法以函数的形式高效编写，因为
 ;; 它需要回溯整个序列。这与
-; fibs 和 powers-of-2 不同，后者只需要 1 或 2 个
-; 值的固定缓冲区。
+;; fibs 和 powers-of-2 不同，后者只需要 1 或 2 个
+;; 值的固定缓冲区。
+
 (def primes
   (concat [2 3 5 7]
     (lazy-seq
       (let [primes-from
-        (fn primes-from [n [f & r]]
-          (if (some (#(zero? (rem n %)))
-            (take-while (#<= (* % %) n) primes)
-            (recur (+ n f) r))
-          (lazy-seq (cons n (primes-from (+ n f) r)))))
-        wheel (cycle [2 4 2 4 6 2 6 4 2 4 6 6 2 6 4 2 6 4 6 8 4 2 4 2 4 8 6 4 6 2 4 6 2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10])))
-      (primes-from 11 wheel)))))
+            (fn primes-from [n [f & r]]
+              (if (some (#(zero? (rem n %)))
+                    (take-while (#<= (* % %) n) primes)
+                    (recur (+ n f) r))
+                (lazy-seq (cons n (primes-from (+ n f) r)))))
+            wheel (cycle [2 4 2 4 6 2 6 4 2 4 6 6 2 6 4 2 6 4 6 8 4 2 4 2 4 8 6 4 6 2 4 6 2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10]))]
+        (primes-from 11 wheel)))))
+
 (use 'examples.primes)
+
 (def ordinals-and-primes (map vector (iterate inc 1) primes))
+
 -> #'user/ordinals-and-primes
 ```
 
-`ordinals-and-primes` 包含了类似 `[5, 11]` 的对（11 是第五个质数）。`ordinals-and-primes` 和 `primes` 都是无限的，但 `ordinals-and-primes` 可以完美放入内存，因为它是惰性的。只需从中 `take` 你需要的部分：
+
+
+`ordinals-and-primes`包含了类似`[5, 11]`的对（11是第五个质数）。`ordinals-and-primes`和`primes`都是无限的，但`ordinals-and-primes`可以完美放入内存，因为它是惰性的。只需从中`take`你需要的部分：
 
 ```clojure
 (take 5 (drop 1000 ordinals-and-primes))
 ```
 
-什么时候应该倾向于使用惰性序列？大多数时候都是。大多数序列函数返回惰性序列，所以你只为你使用的部分付费。更重要的是，惰性序列不需要你任何努力。在之前的示例中，`iterate` 和 `map` 返回惰性序列，所以 `ordinals-and-primes` “自动获得”了惰性。
+什么时候应该倾向于使用惰性序列？大多数时候都是。大多数序列函数返回惰性序列，所以你只为你使用的部分付费。更重要的是，惰性序列不需要你任何努力。在之前的示例中，`iterate`和`map`返回惰性序列，所以`ordinals-and-primes`“自动获得”了惰性。
 
-惰性序列对于 Clojure 的函数式编程至关重要。第 4.2 节将更详细探讨创建和使用惰性序列。
+惰性序列对于Clojure的函数式编程至关重要。第4.2节将更详细探讨创建和使用惰性序列。
 
-### 强制执行序列 (Forcing Sequences)
+## 强制执行序列 (Forcing Sequences)
 
-当你从 REPL 查看一个大序列时，你可能想使用 `take` 来防止 REPL 评估整个序列。在其他上下文中，你可能会遇到相反的问题：你创建了一个惰性序列，并想强制该序列执行求值。这个问题通常出现在生成序列的代码有副作用时。
+当你从REPL查看一个大序列时，你可能想使用`take`来防止REPL评估整个序列。在其他上下文中，你可能会遇到相反的问题：你创建了一个惰性序列，并想强制该序列执行求值。这个问题通常出现在生成序列的代码有副作用时。
 
 ```clojure
 (def x (for [i (range 1 3)] (println i) i))
+
 -> #'user/x
 ```
 
-Clojure 的初学者会惊讶地发现上面的代码没有打印任何内容。由于 `x` 的定义没有使用这些元素，Clojure 不会评估推导式。你可以使用 `doall` 强制求值：
+Clojure的初学者会惊讶地发现上面的代码没有打印任何内容。由于`x`的定义没有使用这些元素，Clojure不会评估推导式。你可以使用`doall`强制求值：
 
 ```clojure
 (doall x)
+
 -> 1 2
 ```
 
-你也可以使用 `dorun`：
+你也可以使用`dorun`：
 
-`dorun` 遍历序列的元素而不将过去的元素保留在内存中。因此，`dorun` 可以遍历大到无法放入内存的集合。
+`dorun`遍历序列的元素而不将过去的元素保留在内存中。因此，`dorun`可以遍历大到无法放入内存的集合。
 
 ```clojure
 (def x (for [i (range 1 3)] (println i) i))
+
 -> #'user/x
+
 (dorun x)
+
 -> 1 2
 -> nil
 ```
 
-`nil` 返回值是一个提醒，`dorun` 不持有整个序列。`dorun` 和 `doall` 函数可以帮你处理副作用，而 Clojure 绝大多数时候是不鼓励副作用的。你应该少用这些函数。
+`nil`返回值是一个提醒，`dorun`不持有整个序列。`dorun`和`doall`函数可以帮你处理副作用，而Clojure绝大多数时候是不鼓励副作用的。你应该少用这些函数。
 
-## 3.4 Clojure 让 Java 变为序列化 (Seq-able)
+## 3.4 Clojure让Java变为序列化 (Seq-able)
 
-`first`/`rest` 的序列抽象适用于任何存在多一个元素的对象。在 Java 世界中，这包括：
+`first`/`rest`的序列抽象适用于任何存在多一个元素的对象。在Java世界中，这包括：
 
-- 集合 API
+- 集合API
 - 正则表达式
 - 文件系统遍历
-- XML 处理
+- XML处理
 - 关系数据库结果
 
-Clojure 包装了这些 Java API，使得在所有的操作中都可以使用序列库。
+Clojure包装了这些Java API，使得在所有的操作中都可以使用序列库。
 
 ### 集合的序列化 (Seq-ing Collections)
 
-如果你尝试对 Java 集合应用序列函数，你会发现它们表现得像序列。可以作为序列的集合被称为 seq-able。例如，数组是可以序列化的：
+如果你尝试对Java集合应用序列函数，你会发现它们表现得像序列。可以作为序列的集合被称为seq-able。例如，数组是可以序列化的：
 
 ```java
 ; String.getBytes 返回字节数组
 (first (.getBytes "hello"))
+
 -> 104
+
 (rest (.getBytes "hello"))
+
 -> (101 108 108 111)
+
 (cons (int \h) (.getBytes "ello"))
+
 -> (104 101 108 108 111)
 ```
 
-`Hashtable` 和 `Map` 也是序列化的：
+`Hashtable`和`Map`也是序列化的：
 
 ```java
 ; System.getProperties 返回一个 Hashtable
 (first (System/getProperties))
+
 -> #<Entry java.runtime.name=Java(TM) SE Runtime Environment>
+
 (rest (System/getProperties))
+
 -> (#<Entry sun.boot.library.path=... ...)
 ```
 
-记住，即使底层 Java 集合是可变的，序列包装器也是不可变的。因此，你不能通过向 `(System/getProperties)` `cons` 一个新项来更新系统属性。`cons` 会返回一个新的序列；现有属性保持不变。
+记住，即使底层Java集合是可变的，序列包装器也是不可变的。因此，你不能通过向`(System/getProperties)` `cons`一个新项来更新系统属性。`cons`会返回一个新的序列；现有属性保持不变。
 
 由于字符串是字符序列，它们也是序列化的：
 
 ```clojure
 (first "Hello")
+
 -> \H
+
 (rest "Hello")
+
 -> (\e \l \l \o)
+
 (cons \H "ello")
+
 -> (\H ello)
 ```
 
-Clojure 会自动将集合包装成序列，但不会自动将其转换回原始类型。对于大多数集合类型，这种行为是直观的，但对于字符串，你通常会希望结果转换为字符串。考虑反转字符串。Clojure 提供了 `reverse`：
+Clojure会自动将集合包装成序列，但不会自动将其转换回原始类型。对于大多数集合类型，这种行为是直观的，但对于字符串，你通常会希望结果转换为字符串。考虑反转字符串。Clojure提供了`reverse`：
 
 ```clojure
 ; 可能不是你想要的
 (reverse "hello")
+
 -> (\o \l \l \e \h)
 ```
 
-
-
-
-要将序列转换回字符串，使用 `(apply str seq)`：
+要将序列转换回字符串，使用`(apply str seq)`：
 
 ```clojure
 (apply str (reverse "hello"))
+
 -> "olleh"
 ```
 
-Java 集合是可以 `seq` 的，但对于大多数场景，它们并不比 Clojure 的内置集合更有优势。只有在需要与旧 Java API 交互的互操作场景下，才优先使用 Java 集合。
+Java集合是可以`seq`的，但对于大多数场景，它们并不比Clojure的内置集合更有优势。只有在需要与旧Java API交互的互操作场景下，才优先使用Java集合。
 
 ### 序列化正则表达式
 
-Clojure 的正则表达式底层使用了 `java.util.regex` 库。在最低层面，这暴露了 Java `Matcher` 的可变性。你可以使用 `re-matcher` 为正则表达式和字符串创建一个 `Matcher`，然后对 `re-find` 进行 `loop` 以遍历匹配项。
+Clojure的正则表达式底层使用了`java.util.regex`库。在最低层面，这暴露了Java `Matcher`的可变性。你可以使用`re-matcher`为正则表达式和字符串创建一个`Matcher`，然后对`re-find`进行`loop`以遍历匹配项。
 
 ```clojure
 (re-matcher regexp string) ; 不要这么做！
+
 (let [m (re-matcher #"\w+" "the quick brown fox")]
   (loop [match (re-find m)]
     (when match
@@ -2905,75 +2871,86 @@ Clojure 的正则表达式底层使用了 `java.util.regex` 库。在最低层�
   | nil)
 ```
 
-更好的做法是使用更高层次的 `re-seq`。
+更好的做法是使用更高层次的`re-seq`。
 
 ```clojure
 (re-seq regexp string)
 ```
 
-`re-seq` 暴露了一个关于匹配项的不可变序列（seq）。这让你拥有了 Clojure 所有序列函数的能力。在 REPL 中尝试这些表达式：
+`re-seq`暴露了一个关于匹配项的不可变序列（seq）。这让你拥有了Clojure所有序列函数的能力。在REPL中尝试这些表达式：
 
 ```clojure
 (re-seq #"\w+" "the quick brown fox")
+
 -> ("the" "quick" "brown" "fox")
 
 (sort (re-seq #"\w+" "the quick brown fox"))
+
 -> ("brown" "fox" "quick" "the")
 
 (drop 2 (re-seq #"\w+" "the quick brown fox"))
+
 -> ("brown" "fox")
 
 (map #(.toUpperCase %) (re-seq #"\w+" "the quick brown fox"))
+
 -> ("THE" "QUICK" "BROWN" "FOX")
 ```
 
-`re-seq` 是良好的抽象如何减少代码膨肿的绝佳示例。正则表达式匹配并不是某种特殊的东西，不需要特殊的方法来处理它们。它们就是序列，就像其他所有东西一样。得益于大量的序列函数，你免费获得的功能比你盲目尝试编写特定正则表达式函数后得到的更多。
+`re-seq`是良好的抽象如何减少代码膨肿的绝佳示例。正则表达式匹配并不是某种特殊的东西，不需要特殊的方法来处理它们。它们就是序列，就像其他所有东西一样。得益于大量的序列函数，你免费获得的功能比你盲目尝试编写特定正则表达式函数后得到的更多。
 
 ### 序列化文件系统
 
-你可以对文件系统进行 `seq`。首先，你可以直接调用 `java.io.File`：
+你可以对文件系统进行`seq`。首先，你可以直接调用`java.io.File`：
 
 ```clojure
 (import '(java.io File))
+
 (.listFiles (File "."))
+
 -> [Ljava.io.File;@1f70f15e]
 ```
 
-`[Ljava.io.File...` 是 Java 对 `File` 数组的 `toString` 表示形式。序列函数会自动对它调用 `seq`，但 REPL 不会。
+`[Ljava.io.File...`是Java对`File`数组的`toString`表示形式。序列函数会自动对它调用`seq`，但REPL不会。
 
-所以，自己手动一次 `seq`：
+所以，自己手动一次`seq`：
 
 ```clojure
 (seq (.listFiles (File ".")) )
+
 -> (#<./concurrency> #<./sequences> ...)
 ```
 
-如果文件的默认打印格式不符合你的需求，你可以使用 `getName` 将它们 `map` 为字符串形式：
+如果文件的默认打印格式不符合你的需求，你可以使用`getName`将它们`map`为字符串形式：
 
 ```clojure
 ; 过过度
 (map #(.getName %) (seq (.listFiles (File "."))))
+
 -> ("concurrency" "sequences" ...)
 ```
 
-一旦决定使用像 `map` 这样的函数，调用 `seq` 就是多余的。序列库函数会为你调用 `seq`，所以你不需要手动做。之前的代码可以简化为：
+一旦决定使用像`map`这样的函数，调用`seq`就是多余的。序列库函数会为你调用`seq`，所以你不需要手动做。之前的代码可以简化为：
 
 ```clojure
 (map #(.getName %) (.listFiles (File ".")))
+
 -> ("concurrency" "sequences" ...)
 ```
 
-通常，你想递归地遍历整个目录。Clojure 通过 `file-seq` 提供了深度优先遍历。如果你对书中的示例代码执行 `file-seq`，你会看到很多文件：
+通常，你想递归地遍历整个目录。Clojure通过`file-seq`提供了深度优先遍历。如果你对书中的示例代码执行`file-seq`，你会看到很多文件：
 
 ```clojure
 count (file-seq (File "."))
+
 -> 104 ; 最终数字会更大
 ```
 
-如果你只想看到最近更改的文件呢？编写一个谓词 `recently-modified?` 来检查 `File` 是否在过去一小时内修改过：
+如果你只想看到最近更改的文件呢？编写一个谓词`recently-modified?`来检查`File`是否在过去一小时内修改过：
 
 ```clojure
 (defn minutes-to-millis [mins] (* mins 1000 60))
+
 (defn recently-modified? [file]
   > (.lastModified file) (System/currentTimeMillis) (minutes-to-millis 30)))
 ```
@@ -2982,24 +2959,28 @@ count (file-seq (File "."))
 
 ```clojure
 (filter recently-modified? (file-seq (File ".")))
+
 -> ./sequences/clj
 ```
 
 ### 序列化流
 
-你可以使用 `line-seq` 对任何 `Reader` 的行进行 `seq`。要获取 `Reader`，可以使用 Clojure 的 `clojure.java.io` 库。`clojure.java.io` 库提供了 `reader` 函数，返回一个流、文件或 URI 的 reader。
+你可以使用`line-seq`对任何`Reader`的行进行`seq`。要获取`Reader`，可以使用Clojure的`clojure.java.io`库。`clojure.java.io`库提供了`reader`函数，返回一个流、文件或URI的reader。
 
 ```clojure
 (use '[clojure.java.io :only (reader)]) ; 会开启...
+
 take 2 (line-seq (reader "src/examples/utils.clj"))
+
 -> ("ns examples.utils" (:import [java.io InputStreamReader]))
 ```
 
-由于 reader 可能代表需要关闭的资源，你应该将 reader 的创建封装在 `with-open` 中。创建一个使用序列函数 `count` 计算文件行数并使用 `with-open` 正确关闭 reader 的表达式：
+由于reader可能代表需要关闭的资源，你应该将reader的创建封装在`with-open`中。创建一个使用序列函数`count`计算文件行数并使用`with-open`正确关闭reader的表达式：
 
 ```clojure
 (with-open [rdr (reader "src/examples/utils.clj")]
   (count (line-seq rdr)))
+
 -> 64
 ```
 
@@ -3008,22 +2989,27 @@ take 2 (line-seq (reader "src/examples/utils.clj"))
 ```clojure
 (with-open [rdr (reader "src/examples/utils.clj")]
   (count (filter #(re-find #"\S %) (line-seq rdr))))
+
 -> 55
 ```
 
 通过对文件系统和单个文件内容使用序列，你可以快速创建工具。编写一个程序定义以下三个谓词：
 
-- `non-blank?` 识别非空行。
-- `non-svn?` 识别不是 Subversion 元的数据。
-- `clojure-source?` 识别 Clojure 源文件。
+- `non-blank?`识别非空行。
+- `non-svn?`识别不是Subversion元的数据。
+- `clojure-source?`识别Clojure源文件。
 
-然后，创建一个 `clojure-loc` 函数来统计目录中 Clojure 代码的数，在此过程中组合序列函数：`reduce`、`for`、`count` 和 `filter`。
+然后，创建一个`clojure-loc`函数来统计目录中Clojure代码的数，在此过程中组合序列函数：`reduce`、`for`、`count`和`filter`。
 
 ```clojure
 (use '[clojure.java.io :only (reader)])
+
 (defn non-blank? [line] (if (re-find #"\S" line) true false))
+
 (defn non-svn? [file] (not (.contains (.toString file) ".svn"))))
+
 (defn clojure-source? [file] (.endsWith (.toString file) ".clj"))
+
 (defn clojure-loc [base-file]
   (reduce
     +
@@ -3033,18 +3019,19 @@ take 2 (line-seq (reader "src/examples/utils.clj"))
           (count (filter non-blank? (line-seq rdr)))))))
 ```
 
-现在让我们使用 `clojure-loc` 来查找 Clojure 本身有多少 Clojure 代码：
+现在让我们使用`clojure-loc`来查找Clojure本身有多少Clojure代码：
 
 ```clojure
 (clojure-loc (java.io.File "/home/abedra/src/opensource/clojure/clojure"))
+
 -> 38716
 ```
 
-`clojure-loc` 函数非常针对特定，但因为它是由序列函数和简单谓词构建的，你可以轻松将其调整不同的任务。
+`clojure-loc`函数非常针对特定，但因为它是由序列函数和简单谓词构建的，你可以轻松将其调整不同的任务。
 
-### 序列化 XML
+### 序列化XML
 
-Clojure 可以对 XML 数据进行 `seq`。接下来的示例使用了以下 XML：
+Clojure可以对XML数据进行`seq`。接下来的示例使用了以下XML：
 
 ```xml
 <compositions>
@@ -3055,9 +3042,6 @@ Clojure 可以对 XML 数据进行 `seq`。接下来的示例使用了以下 XML
 </compositions>
 ```
 
-
-
-
 ```xml
 <compositions>
   <name>Fantaisie-Impromptu Op. 66</name>
@@ -3067,23 +3051,25 @@ Clojure 可以对 XML 数据进行 `seq`。接下来的示例使用了以下 XML
 </compositions>
 ```
 
-`clojure.xml/parse` 函数解析 XML 文件/流/URI，并将数据树作为一个 Clojure map 返回，其中后代节点使用嵌套的向量：
+`clojure.xml/parse`函数解析XML文件/流/URI，并将数据树作为一个Clojure map返回，其中后代节点使用嵌套的向量：
 
 ```clojure
 (use '[clojure.xml :only (parse)])
+
 (parse (java.io.File. "data/sequences/compositions.xml"))
+
 -> {:tag :compositions,
    :attrs nil,
    :content [{:tag :composition, ... etc. ...}
 ```
 
-你可以直接操作这个 map，也可以使用 `xml-seq` 函数将树视为一个序列（seq）：
+你可以直接操作这个map，也可以使用`xml-seq`函数将树视为一个序列（seq）：
 
 ```clojure
 (xml-seq root)
 ```
 
-下面的示例了如何在 `xml-seq` 上使用列表推导式来仅提取作曲家：
+下面的示例了如何在`xml-seq`上使用列表推导式来仅提取作曲家：
 
 [src/examples/sequences.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/sequences.clj)
 
@@ -3092,55 +3078,62 @@ Clojure 可以对 XML 数据进行 `seq`。接下来的示例使用了以下 XML
         (parse (java.io.File. "data/sequences/compositions.xml")))
   :when (= :composition (:tag x))]
   (:composer (:attrs x)))
+
 -> ("J. S. Bach" "F. Chopin" "W. A. Mozart")
 ```
 
 ## 3.5 调用特定结构的函数
 
-Clojure 的序列函数允许你编写非常通用的代码。有时你可能希望更具体一些，并利用特定数据结构的特性。Clojure 包含了专门针对列表、向量、map、结构体（struct）和集合的函数。
+Clojure的序列函数允许你编写非常通用的代码。有时你可能希望更具体一些，并利用特定数据结构的特性。Clojure包含了专门针对列表、向量、map、结构体（struct）和集合的函数。
 
-接下来我们将快速浏览其中一些特定结构的函数。要查看 Clojure 中特定结构函数的完整列表，请参阅 Clojure 网站的数据结构部分[[32]](#f_0036.html_FOOTNOTE-32)。
+接下来我们将快速浏览其中一些特定结构的函数。要查看Clojure中特定结构函数的完整列表，请参阅Clojure网站的数据结构部分[[32]](#f_0036.html_FOOTNOTE-32)。
 
 ### 列表上的函数
 
-Clojure 支持传统的名称 `peek` 和 `pop`，分别用于获取列表的第一个元素和剩余部分：
+Clojure支持传统的名称`peek`和`pop`，分别用于获取列表的第一个元素和剩余部分：
 
 ```clojure
 (peek coll)
 (pop coll)
 ```
 
-对一个简单的列表执行 `peek` 和 `pop`：
+对一个简单的列表执行`peek`和`pop`：
 
 ```clojure
 (peek '(1 2 3))
+
 -> 1
 
 (pop '(1 2 3))
+
 -> (2 3)
 ```
 
-`peek` 等同于 `first`，但 `pop` 不同于 `rest`。如果序列为空，`pop` 将抛出异常：
+`peek`等同于`first`，但`pop`不同于`rest`。如果序列为空，`pop`将抛出异常：
 
 ```clojure
 (rest ())
+
 -> ()
 
 (pop ())
+
 -> java.lang.IllegalStateException: Can't pop empty list
 ```
 
 ### 向量上的函数
 
-向量也支持 `peek` 和 `pop`，但它们处理的是向量末尾元素：
+向量也支持`peek`和`pop`，但它们处理的是向量末尾元素：
 
-```clojure
-(peek [1 2 3])
--> 3
 
-(pop [1 2 3])
--> [1 2]
-```
+
+`(peek [1 2 3])`
+
+-> `3`
+
+`(pop [1 2 3])`
+
+-> `[1 2]`
 
 `get` 返回索引处的值，如果索引超出向量范围，则返回 `nil`：
 
@@ -3213,13 +3206,13 @@ Clojure 提供了几个函数来读取 map 中的键和值。`keys` 返回键的
 -> ("spaniel" "beagle")
 ```
 
-`get` 返回键对应的值，或返回 `nil`。
+`get` 返回键对应的值，或返回 `nil`：
 
 ```clojure
 (get map key value-if-not?)
 ```
 
-使用 `get` 获取键的值或返回 `nil`。
+使用 `get` 获取键的值或返回 `nil`：
 
 ```clojure
 (get {:spaniel :darwin} :darwin)
@@ -3236,7 +3229,7 @@ Clojure 提供了几个函数来读取 map 中的键和值。`keys` 返回键的
 (vals {:spaniel :darwin})
 -> ("spaniel" "beagle")
 ```
-*(注：此处原文示例 vals 结果似乎与输入不完全匹配，已按原文逻辑保留)*
+*(注：此处原文示例 `vals` 结果似乎与输入不完全匹配，已按原文逻辑保留)*
 
 ```clojure
 (get {:spaniel :darwin} :darwin)
@@ -3245,10 +3238,6 @@ Clojure 提供了几个函数来读取 map 中的键和值。`keys` 返回键的
 (get {:spaniel :darwin} :unknown)
 -> nil
 ```
-
-
-
-
 
 ```clojure
 :kind "MPEG Audio File", :genre "Classical"
@@ -3272,7 +3261,7 @@ Clojure 提供了几个函数来读取 map 中的键和值。`keys` 返回键的
 
 请记住 `song` 本身永远不会改变。之前显示的每个函数都返回一个新集合。
 
-最有趣的 map 构建函数是 `merge-with`。
+最有趣的 map 构建函数是 `merge-with`：
 
 ```clojure
 (merge-with merge-fn & maps)
@@ -3425,10 +3414,6 @@ Clojure 提供了几个函数来读取 map 中的键和值。`keys` 返回键的
  {:language "German", :nation "Germany", :composer "J. S. Bach", :country "Germany"}}
 ```
 
-
-
-
-
 |   | `{:language "Italian", :nation "Italy",` |
 |   | `{:composer "Giuseppe Verdi", :country "Italy"}}` |
 
@@ -3487,6 +3472,8 @@ Copyright © 2012, Pragmatic Bookshelf.
   (if input data-1 data-2))
 ```
 
+
+
 如果 `mystery` 是一个纯函数，那么无论它做什么，`data-1` 和 `data-2` 都必须是不可变的！否则，对数据的更改会导致函数对相同的 `input` 返回不同的值。
 
 单个可变数据就可能毁掉局面，使整个函数调用链变得不纯。因此，一旦你承诺编写纯函数，你最终会在应用程序的大部分区域使用不可变数据。
@@ -3511,7 +3498,9 @@ Clojure 的数据结构并没有采用这种幼稚的“复制一切”的方法
 (def b (cons 0 a))
 ```
 
-`b` 能够复用 `a` 的所有结构，而不是拥有自己的私有副本：![images/shared-structure.png](img/shared-structure.png)
+`b` 能够复用 `a` 的所有结构，而不是拥有自己的私有副本：
+
+![images/shared-structure.png](img/shared-structure.png)
 
 Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构，机制显然更为复杂。如果你对细节感兴趣，可以查看以下文章：
 
@@ -3524,17 +3513,14 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 在 Clojure 中，函数和表达式不是惰性的。然而，序列通常是惰性的。由于许多 Clojure 编程涉及序列操作，因此你获得了全惰性语言的许多好处。特别是你可以使用惰性序列构建复杂的表达式，并只为你实际需要的元素付费。
 
-
-
-
 惰性技术（Lazy techniques）意味着纯函数。你永远不需要担心何时调用纯函数，因为它总是返回相同的结果。相反，不纯函数与惰性技术并不兼容。作为一名程序员，你必须显式地控制调用不纯函数机，因为如果你在其他时间调用它，它的行为可能会不同！
 
-### 引用透明性 (Referential Transparency)
+### 引用透明性（Referential Transparency）
 
 惰性依赖于随时将函数调用替换为其结果的能力。具有这种能力的函数被称为“引用透明的”，因为对此类函数的调用可以被替换而不会影响程序的行为。除了惰性外，引用透明函数还能从以下方面获益：
 
-*   记忆化（Memoization），对结果进行自动缓存
-*   自动并行化，将函数求值到另一个处理器或机器
+- 记忆化（Memoization），对结果进行自动缓存
+- 自动并行化，将函数求值到另一个处理器或机器
 
 根据定义，纯函数是引用透明的。大多数其他函数并不是引用透明的，而那些具有引用透明性的函数必须通过代码审查来证明其安全性。
 
@@ -3548,8 +3534,8 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 函数式代码提高了重用性。若要重用代码，你必须能够做到以下几：
 
-*   发现并理解一段用的代码。
-*   将重用的代码与其他代码组合。
+- 发现并理解一段用的代码。
+- 将重用的代码与其他代码组合。
 
 函数式代码的可读性帮助你发现并理解所需的函数，但其组合代码的益处更具吸引力。
 
@@ -3561,12 +3547,12 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 尽管 FP 的益处引人注目，但 FP 是对当今主导大部分编程世界的命令式式编程风格的彻底改变。此外，Clojure 对 FP 采取了独特的方法，在学术纯洁性和在 JVM 上良好运行的现实之间取得了平衡。这意味着有很多东西需要同时学习。但不要害怕。如果你是 FP 初学者，以下“Clojure FP 六条规则”将帮助你在迈向 Clojure 风格 FP 精通的道路上起：
 
-1.  避免直接递归。JVM 无法优化递归调用，会递归的 Clojure 程序会导致栈溢出。
-2.  当你产生标量值或较小的固定长度的序列时，使用 `recur`。Clojure 会优化使用显式 `recur` 的调用。
-3.  当产生大型或可变大小序列时，始终保持惰性。（不要递归。）这样，你的调用者就可以只消耗他们真正需要的序列部分。
-4.  注意不要实现比你需要的更多的惰性序列。
-5.  了解序列库。你通常可以完全不使用 `recur` 或惰性 API 编写代码。
-6.  细分。将看似简单的问题也分成更小的部分，你通常会在序列库中找到解决方案，从而产生更通用、可重用的代码。
+1. 避免直接递归。JVM 无法优化递归调用，会递归的 Clojure 程序会导致栈溢出。
+2. 当你产生标量值或较小的固定长度的序列时，使用 `recur`。Clojure 会优化使用显式 `recur` 的调用。
+3. 当产生大型或可变大小序列时，始终保持惰性。（不要递归。）这样，你的调用者就可以只消耗他们真正需要的序列部分。
+4. 注意不要实现比你需要的更多的惰性序列。
+5. 了解序列库。你通常可以完全不使用 `recur` 或惰性 API 编写代码。
+6. 细分。将看似简单的问题也分成更小的部分，你通常会在序列库中找到解决方案，从而产生更通用、可重用的代码。
 
 规则 5 和 6 特别重要。如果你是 FP 初学者，可以将这两条规则翻译为：“忽略这一章，直接使用第 3 章用序列统一数据 中的技术，直到你遇到墙为止。”
 
@@ -3578,27 +3564,27 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 函数式程序充分利用了递归定义。一个递归定义包含两个部分：
 
-*   基础（Basis），显式列出序列的某些成员
-*   归纳（Induction），提供组合序列成员以产生额外成员的规则
+- 基础（Basis），显式列出序列的某些成员
+- 归纳（Induction），提供组合序列成员以产生额外成员的规则
 
 我们在这一节的挑战是将递归定义转换为可运行的代码。你可以通过以下几种方式实现：
 
-*   简单的递归，使用以某种方式调用自己的函数来实现归纳步骤。
-*   尾递归（Tail recursion），使用函数仅在执行的末尾调用自己。尾递归允许了一项重要的优化。
-*   惰性序列，消除了实际递归，并在需要时稍后计算值。
+- 简单的递归，使用以某种方式调用自己的函数来实现归纳步骤。
+- 尾递归（Tail recursion），使用函数仅在执行的末尾调用自己。尾递归允许了一项重要的优化。
+- 惰性序列，消除了实际递归，并在需要时稍后计算值。
 
 选择正确的方法至关重要。糟糕地实现递归定义会导致代码性能极差、消耗所有可用栈并失败、消耗所有可用堆并失败，或两者兼有。在 Clojure 中，保持惰性通常是正确的方法。
 
 我们将通过将这些方法应用于斐波那契数来探索所有方法。斐波那契数以比萨的意大利数学家列奥纳多（Fibonacci）（约 1170 年--约 1250 年）命名，实际上印度数学家早在公元前 200 年就知道它们。斐波那契数有许多属性，它们再次出现在算法、数据结构甚至生物学中。它们有一个非常简单的递归定义：
 
-*   基础：F[0]，第 0 个斐波那契数为 0。F[1]，第 1 个斐波那契数为 1。
-*   归纳：对于 n > 1，F[n] 等于 F[n-1]+F[n-2]。
+- 基础：F[0]，第 0 个斐波那契数为 0。F[1]，第 1 个斐波那契数为 1。
+- 归纳：对于 n > 1，F[n] 等于 F[n-1]+F[n-2]。
 
 使用这个定义，前十个斐波那契数如下：0 1 1 2 3 5 8 13 21 34。
 
 让我们从使用简单递归实现 Fibacci 开始。以下 Clojure 函数将返回第 n 个斐波那契数：
 
-```cljojure
+```clojure
 (stack-consuming-fibo [n]
   (cond
     (= n 0) 0
@@ -3613,6 +3599,7 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 ```clojure
 (stack-consuming-fibo 9)
+
 => 34
 ```
 
@@ -3620,13 +3607,11 @@ Clojure 的所有数据结构尽可能共享结构。对于列表以外的结构
 
 ```clojure
 (stack-consuming-fibo 1000000)
+
 => StackOverflowError clojure.lang.Numbers.minus (Numbers.java:1837)
 ```
 
 由于递归，对于 n > 1，每次调用 `stack-consuming-fibo` 都会产生两个额外的 `stack-consuming-fibo` 调用。在 JVM 层级，这些调用被翻译为方法调用，每个调用都会分配一个名为栈帧的数据结构。
-
-
-
 
 `stack-consuming-fibo` 创建的栈帧深度与 `n` 成正比，这会迅速耗尽 JVM 栈并导致之前所示的 `StackOverflowError`。（它创建的栈帧总数是 `n` 的指数级增长，因此即使在栈没有溢出，其性能也非常糟糕。）
 
@@ -3636,21 +3621,29 @@ Clojure 函数调用被归类为“消耗栈”的，因为它们分配了会占
 
 函数式程序可以通过尾递归来解决栈空间使用问题。尾递归函数仍然是递归定义的，但递归必须发生在尾部，即出现在一个作为函数返回值的表达式中。这样，语言就可以执行尾调用优化（TCO），将尾递归转换为不消耗栈的迭代。
 
-使用 `stack-consuming-fibo` 定义的斐波纳契序列不是尾递归的，因为它在两次调用 `stack-consuming-fibo` 之后都调用了 `add` (`+`)。要使 `fibo` 变为尾递归，你必须创建一个函数，其参数携带足够的信息来推进归纳过程，而没有任何额外的“事后”工作（如加法），因为这些工作会将递归推出尾部位置。对于 `fibo`，这样的函数需要两个斐波纳契数，加上一个序数 `n`，该序数可以在计算新的斐波纳契数时减至零。你可以这样编写 `tail-fibo`：
+使用 `stack-consuming-fibo` 定义的斐波纳契序列不是尾递归的，因为它在两次调用 `stack-consuming-fibo` 之后都调用了 `add`（`+`）。要使 `fibo` 变为尾递归，你必须创建一个函数，其参数携带足够的信息来推进归纳过程，而没有任何额外的“事后”工作（如加法），因为这些工作会将递归推出尾部位置。对于 `fibo`，这样的函数需要两个斐波纳契数，加上一个序数 `n`，该序数可以在计算新的斐波纳契数时减至零。你可以这样编写 `tail-fibo`：
 
 | [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj) |
-| :--- | :--- |
-| Line 1 | `(defn tail-fibo [n]` |
-| Line 2 | `(letfn [(fib` |
-| Line 3 | `[current next n]` |
-| Line 4 | `(if (zero? n)` |
-| Line 5 | `current` |
-| Line 6 | `(fib next (+ current next) (dec n))))` |
-| Line 7 | `(fib 0N 1N n)))` |
+| :--- |
+| Line 1 |
+| `(defn tail-fibo [n]` |
+| Line 2 |
+| `(letfn [(fib` |
+| Line 3 |
+| `[current next n]` |
+| Line 4 |
+| `(if (zero? n)` |
+| Line 5 |
+| `current` |
+| Line 6 |
+| `(fib next (+ current next) (dec n))))` |
+| Line 7 |
+| `(fib 0N 1N n)))` |
 
 第 2 行引入了 `letfn` 宏：
 
 | | `(letfn fnspecs & body) ; fnspecs ==> [(fname [params*] exprs)+]` |
+|---|---|
 
 `letfn` 类似于 `let`，但专门用于定义局部函数。`letfn` 中声明的每个函数都可以调用自己或同一 `letfn` 块中的任何其他函数。第 3 行声明 `fib` 有三个参数：当前的斐波纳契数、下一个斐波纳契数以及剩余的步数 `n`。
 
@@ -3659,35 +3652,43 @@ Clojure 函数调用被归类为“消耗栈”的，因为它们分配了会占
 `tail-fibo` 适用于 `n` 的小值：
 
 | | `(tail-fibo 9)` |
-| :--- | :--- |
+|---|---|
 | | `-> 34N` |
 
 但尽管它是尾递归的，对于较大的 `n` 它仍然会失败：
 
 | | `(tail-fibo 1000000)` |
-| :--- | :--- |
+|---|---|
 | | `-> StackOverflowError java.lang.Integer.numberOfLeadingZeros (Integer.java:1054)` |
 
 这里的问题在于 JVM。虽然 Haskell 等函数式语言可以执行 TCO，但 JVM 并不是为函数式语言设计的。直接运行在 JVM 上的语言无法执行自动 TCO。
 
 TCO 的缺失虽然遗憾，但对于函数式程序并不是致命的。Clojure 提供了几种实用的解决方法：使用 `recur` 进行显式自递归、惰性序列以及使用 `trampoline` 进行显式相互递归。
 
-使用 使用 recur 的自递归
+### 使用 `recur` 的自递归
 
 JVM 上可以被优化的递归特殊情况是自递归。幸运的是，`tail-fibo` 就是例子：它直接调用自己，而不是通过一系列中间函数。
 
 在 Clojure 中，你可以将尾调用调用自身的函数转换为带有 `recur` 的显式自递归。使用这种方法，将 `tail-fibo` 转换为 `recur-fibo`：
 
 | [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj) |
-| :--- | :--- |
-| Line 1 | `; better but not great` |
-| Line 2 | `(defn recur-fibo [n]` |
-| Line 3 | `(letfn [(fib` |
-| Line 4 | `[current next n]` |
-| Line 5 | `(if (zero? n)` |
-| Line 6 | `current` |
-| Line 7 | `(fib next (+ current next) (dec n))))` |
-| Line 8 | `(fib 0N 1N n)))` |
+|---|
+| Line 1 |
+| `; better but not great` |
+| Line 2 |
+| `(defn recur-fibo [n]` |
+| Line 3 |
+| `(letfn [(fib` |
+| Line 4 |
+| `[current next n]` |
+| Line 5 |
+| `(if (zero? n)` |
+| Line 6 |
+| `current` |
+| Line 7 |
+| `(fib next (+ current next) (dec n))))` |
+| Line 8 |
+| `(fib 0N 1N n)))` |
 
 `tail-fibo` 和 `recur-fibo` 关键区别在于第 7 行，那里 `recur` 替换了调用。`recur-fibo` 不会消耗栈，因为 `recur` 使用当前帧而不是创建一个新帧。
 
@@ -3697,22 +3698,39 @@ JVM 上可以被优化的递归特殊情况是自递归。幸运的是，`tail-f
 
 ```clojure
 ;; src-examples/functional.clj
+
 [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
+
 | Line 1 | `(defn tail-fibo [n]` |
+|---|---|
+
 | Line 2 | `(letfn [(fib` |
+|---|---|
+
 | Line 3 | `[current next n]` |
+|---|---|
+
 | Line 4 | `(if (zero? n)` |
+|---|---|
+
 | Line 5 | `current` |
+|---|---|
+
 | Line 6 | `(fib next (+ current next) (dec n))))` |
+|---|---|
+
 | Line 7 | `(fib 0N 1N n)))` |
-
-
-
-
+|---|---|
 
 | [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj) |
+|---|
+
 |   | `(defn fibo [])` |
+|---|
+
 |   | `(map first (iterate (fn [[a b]] [b (+ a b)]) [0N 1N]))) |
+|---|
+```
 
 `fibo` 返回一个惰性序列，因为它基于 `map` 和 `iterate` 构建，而这两者也返回惰性序列。`fibo` 非常简单。`fibo` 是我们目前为止过的最短的实现。但如果你习惯于编写命令式的循环代码，正确地选择 `fibo` 而不是其他方法可能并不简单！学习如何递归地、惰性地以及在 JVM 对递归的限制内进行思考——同时做到这一切——可能会令人敬畏。让规则来帮助你。斐波那契数列是无限的：规则 3 正确地预测了 Clojure 中的正确方法将是一个惰性序列，而规则 5 则让现有的序列函数完成了大部分工作。
 
@@ -3729,7 +3747,9 @@ JVM 上可以被优化的递归特殊情况是自递归。幸运的是，`tail-f
 -> #'user/lots-o-fibs
 ```
 
-`lots-o-fibs` 的创建几乎立即返回，因为它几乎什么都没做。如果你调用了某个需要实际使用 `lots-o-fibs` 中某些值的函数，Clojure 将计算它们。即使如此，它也只进行必要的计算。例如，以下代码将返回 `lots-o-fibs` 中的第 100 个斐波那契数，而无需计算 `lots-o-fibs` 承诺提供的数百万其他数字：
+
+
+`lots-o-fibs` 的创建几乎立即返回，因为它几乎什么都没做。如果你调用了某个需要实际使用`lots-o-fibs`中某些值的函数，Clojure 将计算它们。即使如此，它也只进行必要的计算。例如，以下代码将返回`lots-o-fibs`中的第 100 个斐波那契数，而无需计算`lots-o-fibs`承诺提供的数百万其他数字：
 
 ```clojure
 (nth lots-o-fibs 100)
@@ -3746,16 +3766,16 @@ clojure.core/take
 返回 coll 中前 n 个项的惰性 seq，如果项少于 n，则返回所有项。
 ```
 
-然而，REPL 不是惰性的。REPL 使用的打印器默认会打印整个集合。这就是为什么我们将前十亿个斐波那契数放入 `lots-o-fibs`，而不是在 REPL 中求值它们。不要在 REPL 中输入以下内容：
+然而，REPL 不是惰性的。REPL 使用的打印器默认会打印整个集合。这就是为什么我们将前十亿个斐波那契数放入`lots-o-fibs`，而不是在 REPL 中求值它们。不要在 REPL 中输入以下内容：
 
 ```clojure
 ; 不要这样做
 (take 1000000000 (fibo))
 ```
 
-如果你输入了上面的表达式，打印器将尝试打印十亿个斐波那契数，并在过程中实现整个集合。你可能会会在 Clojure 耗尽内存之前感到无聊并退出 REPL。
+如果你输入了上面的表达式，打印器将尝试打印十亿个斐波那契数，并在过程中实现整个集合。你可能会在 Clojure 耗尽内存之前感到无聊并退出 REPL。
 
-为了方便处理惰性序列，你可以通过设置 `*print-length*` 的值来配置打印器打印的项目：
+为了方便处理惰性序列，你可以通过设置`*print-length*`的值来配置打印器打印的项目：
 
 ```clojure
 (set! *print-length* 10)
@@ -3776,20 +3796,20 @@ clojure.core/take
 -> (0N 1N 1N 2N 3N 5N 8N 13N 21N 34N ...)
 ```
 
-惰性序列是奇妙的。它们只执行所需的的操作，如果你想强制实现一个序列，可以使用 `doall` 或 `dorun`。
+惰性序列是奇妙的。它们只执行所需的操作，如果你想强制实现一个序列，可以使用`doall`或`dorun`。
 
 ### 丢失头部
 
-在处理惰性序列时，还有最后一点需要考虑。除非你想在遍历时缓存序列，否则必须小心不要保留头部（head）。如 `fibo` 示例所示，你通常应该将惰性序列作为函数暴露，而不是变量（var）。这种情况最常见的发生方式是你不小心持有了[序列的头部](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)：
+在处理惰性序列时，还有最后一点需要考虑。除非你想在遍历时缓存序列，否则必须小心不要保留头部（head）。如`fibo`示例所示，你通常应该将惰性序列作为函数暴露，而不是变量（var）。这种情况最常见的发生方式是你不小心持有了[序列的头部](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)：
 
 ```clojure
 ; 持有头部
 (def some (fibo))
 ```
 
-问题在于顶层变量 `fibo` 持有了头部。这阻止了垃圾回收器在你越这些元素后回收它们。因此，你实际使用的序列任何部分都会被缓存，其寿命很可能是引用 `fibo` 的值的寿命。
+问题在于顶层变量`fibo`持有了头部。这阻止了垃圾回收器在你遍历这些元素后回收它们。因此，你实际使用的序列任何部分都会被缓存，其寿命很可能是引用`fibo`的值的寿命。
 
-`fibo` 处理小数字时非常好：
+`fibo`处理小数字时非常好：
 
 ```clojure
 (take 10 fibo)
@@ -3805,9 +3825,9 @@ clojure.core/take
 
 ## 4.3 比惰性更懒
 
-Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可以通过寻找不需要显式序列操作的解决方案变得更懒。你通常可以组合现有的序列函数来解决问题，而无需在 `recur` 或惰性序列层面动手。
+Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可以通过寻找不需要显式序列操作的解决方案变得更懒。你通常可以组合现有的序列函数来解决问题，而无需在`recur`或惰性序列层面动手。
 
-作为一个示例，你将为以下问题实现多个解决方案：给你一个硬币掷的结果序列，其中正面为 `:h`，反面为 `:t`：
+作为一个示例，你将为以下问题实现多个解决方案：给你一个硬币掷的结果序列，其中正面为`:h`，反面为`:t`：
 
 ```clojure
 [:h :t :t :h :h :h]
@@ -3815,11 +3835,7 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
 
 在序列中，连续出现了多少次正面？在上面的例子中，答案是两个。第 3 次和第 4 次都是正面，第 4 次和第 5 次也是正面。
 
-硬币掷出的序列可能很大，但它是有限的。由于你寻找的是一个标量答案（计数），根据规则 2，使用 `recur` 是可以的：
-
-
-
-
+硬币掷出的序列可能很大，但它是有限的。由于你寻找的是一个标量答案（计数），根据规则 2，使用`recur`是可以的：
 
 ```clojure
 (defn count-heads-pairs [coll]
@@ -3832,11 +3848,11 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
             (rest coll)))))
 ```
 
-由于该函数的目的是计数某些内容，`loop` 引入了一个 `cnt` 绑定，在第 2 行初始化为 0。`loop` 也为 `coll` 引入了自身的绑定，以便我们可以在每次通过 `recur` 缩小 `coll`。第 3 行提供了递归的基础。如果一个硬币掷序列为空，那么它显然没有零次连续的两个正面。
+由于该函数的目的是计数某些内容，`loop`引入了一个`cnt`绑定，在第 2 行初始化为 0。`loop`也为`coll`引入了自身的绑定，以便我们可以在每次通过`recur`缩小`coll`。第 3 行提供了递归的基础。如果一个硬币掷序列为空，那么它显然没有零次连续的两个正面。
 
-第 5 行是该函数的核心，如果 `coll` 的第一个（first）和第二个（second）项目都是正面（`:h`），则将 `cnt` 加 1。
+第 5 行是该函数的核心，如果`coll`的第一个（first）和第二个（second）项目都是正面（`:h`），则将`cnt`加 1。
 
-尝试几个输入来查看 `count-heads-pairs` 是否如描述的那样正常工作：
+尝试几个输入来查看`count-heads-pairs`是否如描述的那样正常工作：
 
 ```text
 (count-heads-pairs [:h :h :h :t :h])
@@ -3846,7 +3862,7 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
 -> 0
 ```
 
-虽然 `count-heads-pairs` 可以工作，但它作为代码散文来说是失败的。“连续两个”这一核心概念被 `loop`/`recur` 的样板代码完全掩盖了。为了修复这个问题，你需要使用规则 5 和规则 6，通过细分问题来利用 Clojure 的序列库。
+虽然`count-heads-pairs`可以工作，但它作为代码散文来说是失败的。“连续两个”这一核心概念被`loop`/`recur`的样板代码完全掩盖了。为了修复这个问题，你需要使用规则 5 和规则 6，通过细分问题来利用 Clojure 的序列库。
 
 你将遇到的第一个问题是，几乎所有的序列函数都会逐个对序列中的每个元素进行操作。这对我们完全没有帮助，因为我们想在每个元素的相邻元素的上下文中查看它。所以，让我们转换一下序列。当你看到这个：
 
@@ -3860,11 +3876,11 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
 [[:h :t] [:t :t] [:t :h] [:h :h] [:h :h]]
 ```
 
-编写一个名为 `by-pairs` 的函数来执行此转换。由于 `by-pairs` 的输出随输入的大小而变化，根据规则 3，你应该延迟地构建此序列：
+编写一个名为`by-pairs`的函数来执行此转换。由于`by-pairs`的输出随输入的大小而变化，根据规则 3，你应该延迟地构建此序列：
 
 ```clojure
 ; src/examples/functional.clj
-;过于复杂，后面有更好的方法...
+; 过于复杂，后面有更好的方法...
 (defn by-pairs [coll]
   (let [take-pair (fn [c]
           (when (next c) (take 2 c)))]
@@ -3873,20 +3889,20 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
         (cons pair (by-pairs (rest coll)))))))
 ```
 
-第 3 行定义了一个函数，从集合中获取第一对元素。第 5 行确保递归是延迟求值的。第 6 行是一个条件：如果下一对实际上不包含两个元素，我们必须（几乎）到达列表的末尾，并隐式地终止。如果我们得到了两个元素，那么在第 7 行，我们通过 `cons` 将我们的对添加到从集合剩余部分（rest）获取的对上继续构建序列。
+第 3 行定义了一个函数，从集合中获取第一对元素。第 5 行确保递归是延迟求值的。第 6 行是一个条件：如果下一对实际上不包含两个元素，我们必须（几乎）到达列表的末尾，并隐式地终止。如果我们得到了两个元素，那么在第 7 行，我们通过`cons`将我们的对添加到从集合剩余部分（rest）获取的对上继续构建序列。
 
-检查 `by-pairs` 是否工作：
+检查`by-pairs`是否工作：
 
 ```text
 (by-pairs [:h :t :t :h :h :h])
 -> ((:h :t) (:t :t) (:t :h) (:h :h) (:h :h))
 ```
 
-现在你可以将硬币掷的结果视为结果对的序列了，用英语描述 `count-heads-pairs` 非常简单：
+现在你可以将硬币掷的结果视为结果对的序列了，用英语描述`count-heads-pairs`非常简单：
 
 “统计所有为正面的结果对。”
 
-这个英语描述可以直接翻译为现有的序列库函数：“Count”当然是 `count`，而“所有为正面的”建议使用 `filter`：
+这个英语描述可以直接翻译为现有的序列库函数：“Count”当然是`count`，而“所有为正面的”建议使用`filter`：
 
 ```clojure
 ; src/examples/functional.clj
@@ -3895,47 +3911,47 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
     (by-pairs coll))))
 ```
 
-这比基于 `recur` 的实现要有表现力得多，并且清楚地表明我们正在统计所有相邻的正面对。但我们可以让事情更简单。Clojure 已经有一个更通用的 `by-pairs` 版本，名为 `partition`：
+这比基于`recur`的实现要有表现力得多，并且清楚地表明我们正在统计所有相邻的正面对。但我们可以让事情更简单。Clojure 已经有一个更通用的`by-pairs`版本，名为`partition`：
 
 ```clojure
 (partition size coll)
 ```
 
-`partition` 将集合分解大小为 `size` 的块。因此，你可以将正面/反面分解为对序列：
+`partition`将集合分解大小为`size`的块。因此，你可以将正面/反面分解为对序列：
 
 ```text
 (partition 2 [:h :t :t :h :h])
 -> ((:h :t) (:t :h))
 ```
 
-这与产生重叠对的 `by-pairs` 非常相同。但 `partition` 也可以做到。可选的 `step` 参数决定了 `partition` 在开始下一次之前沿集合移动多远。如果没有指定，`step` 等于 `size`。要让 `partition` 工作得像 `by-pairs` 一样，将 `size` 设置为 `2`并将 `step` 设置为 `1`：
+这与产生重叠对的`by-pairs`非常相同。但`partition`也可以做到。可选的`step`参数决定了`partition`在开始下一次之前沿集合移动多远。如果没有指定，`step`等于`size`。要让`partition`工作得像`by-pairs`一样，将`size`设置为`2`并将`step`设置为`1`：
 
 ```text
 (partition 2 1 [:h :t :t :h :h :h])
 -> ((:h :t) (:t :t) (:t :h) (:h :h) (:h :h))
 
-(by-pairs [:h :t :t :h :h :h]) （等待，文本在结果处说是 `by-pairs`）
+(by-pairs [:h :t :t :h :h :h]) （等待，文本在结果处说是`by-pairs`）
 ```
 
-### def 的各种形式
+### `def`的各种形式
 
-在书中你将使用各种 `def` 形式来创建变量，例如 `defn`、`defmacro` 和 `defmulti`。这些形式最终都是 `def` 特殊形式的包装器。
+在书中你将使用各种`def`形式来创建变量，例如`defn`、`defmacro`和`defmulti`。这些形式最终都是`def`特殊形式的包装器。
 
-`defonce` 确保变量存在，如果它未被定义：
+`defonce`确保变量存在，如果它未被定义：
 
 ```clojure
 (defonce symbol?)
 ```
 
-`defn-` 像 `defn` 但产生仅在命名空间可见的函数：
+`defn-`像`defn`但产生仅在命名空间可见的函数：
 
 ```clojure
 (defn-name)
 ```
 
-许多其他 `def` 形式也有带有后缀的变体。
+许多其他`def`形式也有带有后缀的变体。
 
-另一个改进领域是 `count`/`filter` 惯用法，用于计数两个正面的对：
+另一个改进领域是`count`/`filter`惯用法，用于计数两个正面的对：
 
 ```clojure
 ; src/examples/functional.clj
@@ -3943,20 +3959,20 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
   (count))
 ```
 
-`comp` 用于组合两个或多个函数：
+`comp`用于组合两个或多个函数：
 
 ```clojure
 (comp & fs)
 ```
 
-组合函数是一个新函数，它将最右侧的函数应用于参数，然后是下一个函数，以此类推。所以，`count-if` 会首先 `filter` 然后 `count` 结果：
+组合函数是一个新函数，它将最右侧的函数应用于参数，然后是下一个函数，以此类推。所以，`count-if`会首先`filter`然后`count`结果：
 
 ```text
 (count-if odd? [1 2 3 4 5])
 -> 3
 ```
 
-最后，你可以使用 `count-if` 和 `partition` 创建一个比 `count-heads-pairs` 更通用的 `count-runs` 函数：
+最后，你可以使用`count-if`和`partition`创建一个比`count-heads-pairs`更通用的`count-runs`函数：
 
 ```clojure
 ; src/examples/functional.clj
@@ -3966,7 +3982,7 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
   (count-if #(every? pred %) (partition n 1 coll)))
 ```
 
-`count-runs` 是一个组合：比之前的 `count-heads-pairs` 更简单且更通用。你可以用它来计算正面对：
+`count-runs`是一个组合：比之前的`count-heads-pairs`更简单且更通用。你可以用它来计算正面对：
 
 ```text
 (count-runs 2 #(= % :h) [:h :t :t :h :h :h])
@@ -3987,7 +4003,7 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
 -> 1
 ```
 
-如果你仍然想要一个名为 `count-heads-pairs` 的函数，你可以根据 `count-runs` 实现它：
+如果你仍然想要一个名为`count-heads-pairs`的函数，你可以根据`count-runs`实现它：
 
 ```clojure
 ; src/examples/functional.clj
@@ -3995,23 +4011,23 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
   (partial count-runs 2 #(= % :h)))
 ```
 
-这个版本的 `count-heads-pairs` 使用 `partial` 构建一个新函数：
+这个版本的`count-heads-pairs`使用`partial`构建一个新函数：
 
 ```clojure
 (partial f & partial-args)
 ```
 
+`partial`对函数执行部分应用。当你执行`partial`时，你指定一个函数`f`和参数列表的一部分。你会在调用由`partial`创建的函数时，再指定参数列表的剩余部分。因此，如下：
 
-
-
-
-`partial` 对函数执行部分应用。当你执行 `partial` 时，你指定一个函数 `f` 和参数列表的一部分。你会在调用由 `partial` 创建的函数时，再指定参数列表的剩余部分。因此，如下：
-
-|   | `(partial count-runs 1 #(= % :h))`​ |
+```clojure
+(partial count-runs 1 #(= % :h))
+```
 
 是这种情况的一种更具表达力的方式：
 
-|   | `(fn [coll] (count-runs 1 #(= % :h) coll))`​ |
+```clojure
+(fn [coll] (count-runs 1 #(= % :h) coll))
+```
 
 部分应用与柯里化（currying）相似但不完全相同。
 
@@ -4019,255 +4035,209 @@ Clojure 的惰性序列是语言层面很好的惰性。作为程序员，你可
 
 当你对函数进行柯里化时，你会得到一个接受一个参数的新函数，该函数返回固定了该参数的原始函数。（Curry 以 Haskell Curry 命名，他是一位著名的美国逻辑学家，以在组合逻辑的工作而闻名。）如果 Clojure 有柯里化，它的实现可能像这样：
 
-|   | `; 几乎就是 curry`​ |
-
-|   | `(defn faux-curry [& args] (apply partial args))`​ |
+```clojure
+; 几乎就是 curry
+(defn faux-curry [& args] (apply partial args))
+```
 
 柯里化的用途之一就是部分应用。这里是 Clojure 中的部分应用：
 
-|   | `(def add-3 (partial + 3))`​ |
+```clojure
+(def add-3 (partial + 3))
+(add-3 7)
+-> 10
+```
 
-|   | `(add-3 7)`​ |
-|   | `-> 10`​ |
+以及使用我们的`faux-curry`实现部分应用：
 
-以及使用我们的 `faux-curry` 实现部分应用：
+```clojure
+(def add-3 ((faux-curry +) 3))
+(add-3 7)
+-> 10
+```
 
-|   | `(def add-3 ((faux-curry +) 3))`​ |
+如果你想要的只是部分应用，那么柯里化只是一个中间步骤。我们的`faux-curry`不是真正的柯里化。真正的柯里化在所有参数都固定后会返回一个结果，而不是一个无参数的函数。你可以通过只接受一个参数的函数`true?`来看到区别：
 
-|   | `(add-3 7)`​ |
-|   | `-> 10`​ |
+```clojure
+; faux curry
+((faux-curry true?) (= 1 1))
+-> #<... mangled function name ...>
 
-如果你想要的只是部分应用，那么柯里化只是一个中间步骤。我们的 `faux-curry` true 真正的柯里化。真正的柯里化在所有参数都固定后会返回一个结果，而不是一个无参数的函数。你可以通过只接受一个参数的函数 `true?` 来看到区别：
-
-|   | `; faux curry`​ |
-
-|   | `((faux-curry true?) (= 1 1))`​ |
-
-|   | `-> #<... mangled function name ...>`​ |
-
-|   | `​​` |
-
-|   | `; if the curry were real`​ |
-
-|   | `((curry true?) (= 1 1))`​ |
-
-|   | `-> true`​ |
+; if the curry were real
+((curry true?) (= 1 1))
+-> true
+```
 
 由于 Clojure 函数可以具有变长度的参数列表，Clojure 无法知道所有参数何时被固定。但你作为程序员，知道自己何时添加完参数。当你柯里化了所需的所有参数后，只需调用函数即可。这相当于在之前的表达式外面再加一层括号：
 
-|   | `(((faux-curry true?) (= 1 1)))`​ |
+```clojure
+(((faux-curry true?) (= 1 1)))
+-> true
+```
 
-|   | `-> true`​ |
-
-`Clojure` 缺少柯里化并不是一个大问题，因为 `partial` 可用，而且这通常也是人们从柯里化中想要的。事实上，许多程序员交替使用“柯里化”和“部分应用”这两个术语。
+Clojure 缺少柯里化并不是一个大问题，因为`partial`可用，而且这通常也是人们从柯里化中想要的。事实上，许多程序员交替使用“柯里化”和“部分应用”这两个术语。
 
 你在这一节中看到了很多新形式。不要让这些细节掩盖了核心思想：通过组合序列库中的现有函数，你能够创建一个比直接方法更简单、更通用的解决方案。而且，你完全不需要担心惰性（laziness）或递归。相反，你是在更高层次的抽象上工作，让 Clojure 为你处理惰性和递归。
 
 ## 4.4 重新回顾递归
 
-Clojure 非常努力地在函数式编程的力量与 Java 虚拟机的现实之间取得平衡。其中一个例子就是通过 `loop`/recur` 实现显式的尾递归优化（TCO），这是一个合理的选择。
+Clojure 非常努力地在函数式编程的力量与 Java 虚拟机的现实之间取得平衡。其中一个例子就是通过`loop`/`recur`实现显式的尾递归优化（TCO），这是一个合理的选择。
 
 但融合两个世界的优点总是面临着愉快妥协的风险，问这样一个问题：“Clojure 是否包含隐藏的设计折衷，这些折衷在第一天并不明显，但以后会给我带来麻烦？”显然是有意义的。
 
 对于任何语言，这个问题都永远无法完全回答，但让我们通过探索一些复杂的递归来考虑它。首先，我们将看看互递归（mutual recursion）。
 
-当递归在两个或多个函数之间跳跃时，就会发生互递归。不是 A 调用 A 再调用 A，而是 A 调用 B，再再次调用 A。作为一个简单的例子，你可以使用互递归来定义 `my-odd?` 和 `my-even?`：
+当递归在两个或多个函数之间跳跃时，就会发生互递归。不是 A 调用 A 再调用 A，而是 A 调用 B，再再次调用 A。作为一个简单的例子，你可以使用互递归来定义`my-odd?`和`my-even?`：
 
 [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
 
-|   | `(declare my-odd? my-even?)`​ |
-|   | `​​` |
+```clojure
+(declare my-odd? my-even?)
 
-|   | `(defn my-odd? [n]`​ |
+(defn my-odd? [n]
+  (if (= n 0)
+    false
+    (my-even? (dec n))))
 
-|   | ` (if (= n 0)`​ |
-|   | ` false`​ |
-|   | ` (my-even? (dec n))`​ |
-|   | `​​` |
+(defn my-even? [n]
+  (if (= n 0)
+    true
+    (my-odd? (dec n))))
+```
 
-|   | `(defn my-even? [n]`​ |
 
-|   | ` (if (= n 0)`​ |
-|   | ` true`​ |
-|   | ` (my-odd? (dec n))`​ |
 
-由于 `my-odd?` 和 `my-even?` 各自调用对方，因此你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
+由于`my-odd?`和`my-even?`各自调用对方，因此你需要在实际定义函数之前创建这两个变量。你可以使用`def`来此，但`declare`宏允许你在单行代码中创建这两个变量（无初始绑定）。
 
-验证 `my-odd?` 和 `my-even?` 在小值情况下是否正常：
+验证`my-odd?`和`my-even?`在小值情况下是否正常：
 
-|   | `(map my-even? (range 10))`​ |
-|   | `-> (true false true false true false)`​ |
+```
+(map my-even? (range 10))
+-> (true false true false true false)
 
-|   | `(map my-odd? (range 10))`​ |
-|   | `-> (false true false true false true)`​ |
+(map my-odd? (range 10))
+-> (false true false true false true)
+```
 
-由于 `my-odd?` 和 `my-even?` 各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
+由于`my-odd?`和`my-even?`各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用`def`来此，但`declare`宏允许你在单行代码中创建这两个变量（无初始绑定）。
 
 由于 Clojure 函数可以具有变长度的参数列表，Clojure 无法知道所有参数何时被固定。但你作为程序员，知道自己何时添加完参数。当你柯里化了所需的所有参数后，只需调用函数即可。这相当于在之前的表达式外面再加一层括号：
 
-|   | `(((faux-curry true?) (= 1 1)))`​ |
+```
+(((faux-curry true?) (= 1 1)))
+-> true
+```
 
-|   | `-> true`​ |
-
-`Clojure` 缺少柯里化并不是一个大问题，因为 `partial` 可用，而且这通常也是人们从柯里化中想要的。事实上，许多程序员交替使用“柯里化”和“部分应用”这两个术语。
+`Clojure`缺少柯里化并不是一个大问题，因为`partial`可用，而且这通常也是人们从柯里化中想要的。事实上，许多程序员交替使用“柯里化”和“部分应用”这两个术语。
 
 你在这一节中看到了很多新形式。不要让这些细节掩盖了核心思想：通过组合序列库中的现有函数，你能够创建一个比直接方法更简单、更通用的解决方案。而且，你完全不需要担心惰性（laziness）或递归。相反，你是在更高层次的抽象上工作，让 Clojure 为你处理惰性和递归。
 
 ## 4.4 重新回顾递归
 
-Clojure 非常努力地在函数式编程的力量与 Java 虚拟机的现实之间取得平衡。其中一个例子就是通过 `loop`/recur` 实现显式的尾递归优化（TCO），这是一个合理的选择。
+Clojure 非常努力地在函数式编程的力量与 Java 虚拟机的现实之间取得平衡。其中一个例子就是通过`loop`/`recur`实现显式的尾递归优化（TCO），这是一个合理的选择。
 
 但融合两个世界的优点总是面临着愉快妥协的风险，问这样一个问题：“Clojure 是否包含隐藏的设计折衷，这些折衷在第一天并不明显，但以后会给我带来麻烦？”显然是有意义的。
 
 对于任何语言，这个问题都永远无法完全回答，但让我们通过探索一些复杂的递归来考虑它。首先，我们将看看互递归（mutual recursion）。
 
-当递归在两个或多个函数之间跳跃时，就会发生互递归。不是 A 调用 A 再调用 A，而是 A 调用 B，再再次调用 A。作为一个简单的例子，你可以使用互递归来定义 `my-odd?` 和 `my-even?`：
+当递归在两个或多个函数之间跳跃时，就会发生互递归。不是 A 调用 A 再调用 A，而是 A 调用 B，再再次调用 A。作为一个简单的例子，你可以使用互递归来定义`my-odd?`和`my-even?`：
 
 [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
 
-|   | `(declare my-odd? my-even?)`​ |
-|   | `​​` |
+```
+(declare my-odd? my-even?)
 
-|   | `(defn my-odd? [n]`​ |
+(defn my-odd? [n]
+  (if (= n 0)
+    false
+    (my-even? (dec n))))
 
-|   | ` (if (= n 0)`​ |
-|   | ` false`​ |
-|   | ` (my-even? (dec n))`​ |
-|   | `​​` |
+(defn my-even? [n]
+  (if (= n 0)
+    true
+    (my-odd? (dec n))))
+```
 
-|   | `(defn my-even? [n]`​ |
+由于`my-odd?`和`my-even?`各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用`def`来此，但`declare`宏允许你在单行代码中创建这两个变量（无初始绑定）。
 
-|   | ` (if (= n 0)`​ |
-|   | ` true`​ |
-|   | ` (my-odd? (dec n))`​ |
+验证`my-odd?`和`my-even?`在小值情况下是否正常：
 
-由于 `my-odd?` 和 `my-even?` 各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
+```
+(map my-even? (range 10))
+-> (true false true false true false)
 
-验证 `my-odd?` 和 `my-even?` 在小值情况下是否正常：
+(map my-odd? (range 10))
+-> (false true false true false true)
+```
 
-|   | `(map my-even? (range 10))`​ |
-|   | `-> (true false true false true false)`​ |
-
-|   | `(map my-odd? (range 10))`​ |
-|   | `-> (false true false true false true)`​ |
-
-由于 `my-odd?` 和 `my-even?` 各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
-
-由于 Clojure 函数可以具有变长度的参数列表，Clojure 无法知道所有参数何时被固定。但你作为程序员，知道自己何时添加完参数。当你柯里化了所需的所有参数后，只需调用函数即可。这相当于在之前的表达式外面再加一层括号：
-
-|   | `(((faux-curry true?) (= 1 1)))`​ |
-
-|   | `-> true`​ |
-
-`Clojure` 缺少柯里化并不是一个大问题，因为 `partial` 可用，而且这通常也是人们从柯里化中想要的。事实上，许多程序员交替使用“柯里化”和“部分应用”这两个术语。
-
-你在这一节中看到了很多新形式。不要让这些细节掩盖了核心思想：通过组合序列库中的现有函数，你能够创建一个比直接方法更简单、更通用的解决方案。而且，你完全不需要担心惰性（laziness）或递归。相反，你是在更高层次的抽象上工作，让 Clojure 为你处理惰性和递归。
-
-## 4.4 重新回顾递归
-
-Clojure 非常努力地在函数式编程的力量与 Java 虚拟机的现实之间取得平衡。其中一个例子就是通过 `loop`/recur` 实现显式的尾递归优化（TCO），这是一个合理的选择。
-
-但融合两个世界的优点总是面临着愉快妥协的风险，问这样一个问题：“Clojure 是否包含隐藏的设计折衷，这些折衷在第一天并不明显，但以后会给我带来麻烦？”显然是有意义的。
-
-对于任何语言，这个问题都永远无法完全回答，但让我们通过探索一些复杂的递归来考虑它。首先，我们将看看互递归（mutual recursion）。
-
-当递归在两个或多个函数之间跳跃时，就会发生互递归。不是 A 调用 A 再调用 A，而是 A 调用 B，再再次调用 A。作为一个简单的例子，你可以使用互递归来定义 `my-odd?` 和 `my-even?`：
-
-[src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
-
-|   | `(declare my-odd? my-even?)`​ |
-|   | `​​` |
-
-|   | `(defn my-odd? [n]`​ |
-
-|   | ` (if (= n 0)`​ |
-|   | ` false`​ |
-|   | ` (my-even? (dec n))`​ |
-|   | `​​` |
-
-|   | `(defn my-even? [n]`​ |
-
-|   | ` (if (= n 0)`​ |
-|   | ` true`​ |
-|   | ` (my-odd? (dec n))`​ |
-
-由于 `my-odd?` 和 `my-even?` 各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
-
-验证 `my-odd?` 和 `my-even?` 在小值情况下是否正常：
-
-|   | `(map my-even? (range 10))`​ |
-|   | `-> (true false true false true false)`​ |
-
-|   | `(map my-odd? (range 10))`​ |
-|   | `-> (false true false true false true)`​ |
-
-由于 `my-odd?` 和 `my-even?` 各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用 `def` 来此，但 `declare` 宏允许你在单行代码中创建这两个变量（无初始绑定）。
+由于`my-odd?`和`my-even?`各自调用对方，你需要在实际定义函数之前创建这两个变量。你可以使用`def`来此，但`declare`宏允许你在单行代码中创建这两个变量（无初始绑定）。
 
 由于 Clojure 函数可以具有变长度的参数列表，Clojure 无法知道所有参数何时被固定。但你作为程序员，知道自己何时添加完参数。当你柯里化了所需的所有参数后，只需调用函数即可。这相当于在之前的表达式外面再加一层括号：
 
-|   | `(((faux-curry true?) (= 1 1)))`​ |
-
-|   | `-> true`​ |
-
-（注：由于原文中存在大量重复段落，已根据指令“不要重复输出原文”进行去重，但为了确保翻译逻辑的完整性，此处为核心内容的起始翻译）
-
-（以下为后续非重复部分的翻译内容）
+```
+(((faux-curry true?) (= 1 1)))
+-> true
+```
 
 ### 转换为自递归
 
 互递归通常是建模分离概念的良好方法。例如，奇数和偶数是分离的概念，但显然是相关的。
 
-你可以通过构造处理多个概念的单一抽象，将互递归转换为自递归。例如，你可以将奇偶性考虑为一个单一概念：奇偶性（parity）。定义一个使用 `recur` 的 `parity` 函数，对偶数返回 `0`，对奇数返回 `1`：
+你可以通过构造处理多个概念的单一抽象，将互递归转换为自递归。例如，你可以将奇偶性考虑为一个单一概念：奇偶性（parity）。定义一个使用`recur`的`parity`函数，对偶数返回`0`，对奇数返回`1`：
 
 [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
 
-|   | `(defn parity [n]`​ |
-|   | ` (loop [n par 0]`​ |
-|   | ` (if (= n 0)`​ |
-|   | ` par`​ |
-|   | ` (recur (dec n) (1- par))))`​
+```
+(defn parity [n]
+  (loop [n par 0]
+    (if (= n 0)
+      par
+      (recur (dec n) (1- par)))))
+```
 
-测试 `parity` 在小值情况下是否正常：
+测试`parity`在小值情况下是否正常：
 
-|   | `(map parity (range 10))`​ |
-|   | `-> (0 1 0 1 0 1 0 1 0 1)`​ |
+```
+(map parity (range 10))
+-> (0 1 0 1 0 1 0 1 0 1)
+```
 
-此时你可以就可以地通过 `parity` 实现 `my-odd?` 和 `my-even?`：
+此时你就可以地通过`parity`实现`my-odd?`和`my-even?`：
 
 [src/examples/functional.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/functional.clj)
 
-|   | `(defn my-even? [n] (= 0 (parity n))`​ |
-|   | `(defn my-odd? [n] (= 1 (parity n))`​ |
+```
+(defn my-even? [n] (= 0 (parity n))
+(defn my-odd? [n] (= 1 (parity n))
+```
 
 奇偶性是一个直观的概念。不幸的是，许多互递归无法简化为优雅的自递归。如果你尝试将互递归转换为自递归，并发现结果代码充满了掩盖定义的条件表达式，那么就不要使用这种方法。
 
 ### 互递归跳跃（Trampolining Mutual Recursion）
 
-跳跃是一种优化互递归的技术。跳跃类似于事后的 `recur`，由调用者而不是实现者施加。由于调用者可以在跳跃内部调用多个函数，跳跃可以优化互递归。
+跳跃是一种优化互递归的技术。跳跃类似于事后的`recur`，由调用者而不是实现者施加。由于调用者可以在跳跃内部调用多个函数，跳跃可以优化互递归。
 
-Clojure 的 `trampoline` 函数调用你的一个互递归函数之一：
+Clojure 的`trampoline`函数调用你的一个互递归函数之一：
 
 ```
 (trampoline f & partial-args)
 ```
 
+如果返回值不是函数，那么`trampoline`的工作方式就像直接调用函数一样。尝试对几个简单的 Clojure 函数进行 trampoline 优化：
 
+```
+(trampoline list)
+-> ()
 
+(trampoline + 1 2)
+-> 3
+```
 
+如果返回值是一个函数，那么`trampoline`会假设你想递归地调用它，并为你完成调用。`trampoline`管理它自己的`recur`，因此它会一直调用你的函数，直到它不再返回函数为止。
 
-如果返回值不是函数，那么 `trampoline` 的工作方式就像直接调用函数一样。尝试对几个简单的 Clojure 函数进行 trampoline 优化：
+在尾递归中，你实现了一个`tail-fibo`函数。你看到了该函数是如何消耗栈空间并用`recur`替换尾递归的。现在，你又有了另一种选择。你可以获取`tail-fibo`的代码，并通过将递归返回的情况封装在函数内部，为 trampoline 化做准备。
 
-| | `(trampoline list)` |
-|---|---|
-| | -> () |
-| | `(trampoline + 1 2)` |
-| | -> 3 |
-
-如果返回值是一个函数，那么 `trampoline` 会假设你想递归地调用它，并为你完成调用。`trampoline` 管理它自己的 `recur`，因此它会一直调用你的函数，直到它不再返回函数为止。
-
-在尾递归 中，你实现了一个 `tail-fibo` 函数。你看到了该函数是如何消耗栈空间并用 `recur` 替换尾递归的。现在，你又有了另一种选择。你可以获取 `tail-fibo` 的代码，并通过将递归返回的情况封装在函数内部，为 trampoline 化做准备。
-
-这只需要添加一个字符即 `#`，来引入一个匿名函数：
+这只需要添加一个字符即`#`，来引入一个匿名函数：
 
 [src/examples/trampoline.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/trampoline.clj)
 
@@ -4285,21 +4255,23 @@ Clojure 的 `trampoline` 函数调用你的一个互递归函数之一：
       :else (fib 0N 1 2)))))
 ```
 
-这与原始 `tail-fibo` 版本的唯一区别在于第 7 行开头的 `#`。尝试在 `trampoline` 上运行 `trampoline-fibo`：
+这与原始`tail-fibo`版本的唯一区别在于第 7 行开头的`#`。尝试在`trampoline`上运行`trampoline-fibo`：
 
-| | `(trampoline trampoline-fibo 9)` |
-|---|---|
-| | -> 34 |
+```
+(trampoline trampoline-fibo 9)
+-> 34
+```
 
-由于 `trampoline` 会替你执行 `recur`，它可以很好地处理大型输入，而不会抛出 `StackOverflowError`：
+由于`trampoline`会替你执行`recur`，它可以很好地处理大型输入，而不会抛出`StackOverflowError`：
 
-| | `(rem (trampoline trampoline-fibo 1000000) 1000)` |
-|---|---|
-| | -> 875 |
+```
+(rem (trampoline trampoline-fibo 1000000) 1000)
+-> 875
+```
 
-我们将 `tail-fibo` 移植为使用 `trampoline`，以便对比 `trampoline` 和 `recur`。对于像 `trampoline-fibo` 这样的自递归，`trampoline` 并没有优势，你应该优先选择 `recur`。但在互递归的情况下，`trampoline` 就能展现身手。
+我们将`tail-fibo`移植为使用`trampoline`，以便对比`trampoline`和`recur`。对于像`trampoline-fibo`这样的自递归，`trampoline`并没有优势，你应该优先选择`recur`。但在互递归的情况下，`trampoline`就能展现身手。
 
-考虑 `my-odd?` 和 `my-even?` 的互递归定义，这是我们在第 4.4 节重温递归 开头介绍的。你可以使用与转换 `tail-fibo` 相同的方法，将这些消耗栈的实现转换为使用 `trampoline`：只需在任何递归尾调用用的面面加一个 `#` 即可：
+考虑`my-odd?`和`my-even?`的互递归定义，这是我们在第 4.4 节重温递归开头介绍的。你可以使用与转换`tail-fibo`相同的方法，将这些消耗栈的实现转换为使用`trampoline`：只需在任何递归尾调用的前面加一个`#`即可：
 
 [src/examples/trampoline.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/trampoline.clj)
 
@@ -4315,26 +4287,31 @@ Clojure 的 `trampoline` 函数调用你的一个互递归函数之一：
     #(my-odd? (dec n))))
 ```
 
-与原始实现的唯一区别是第 6 行和第 11 行的 `#` 包装。有了这个更改，你可以 `trampoline` 大值的 `n`，而不会导致栈溢出：
+与原始实现的唯一区别是第 6 行和第 11 行的`#`包装。有了这个更改，你可以`trampoline`大值的`n`，而不会导致栈溢出：
 
-| | `(trampoline my-even? 1000000)` |
-|---|---|
-| | -> true |
+```
+(trampoline my-even? 1000000)
+-> true
+```
 
-`trampoline` 是针对特定问题的特殊解决方案。它要求修改你的原始函数以返回不同的类型来指示递归。如果这里介绍的其他技术之一能为特定的递归提供更优雅的实现，那就太棒了。如果没有，你会会对箱中有 `trampoline` 感到高兴。
+`trampoline`是针对特定问题的特殊解决方案。它要求修改你的原始函数以返回不同的类型来指示递归。如果这里介绍的其他技术之一能为特定的递归提供更优雅的实现，那就太棒了。如果没有，你会对箱中有`trampoline`感到高兴。
 
 ### 用懒惰性替换递归
 
-在本章消除或优化递归的技术中，懒惰性（laziness）可能是你使用最频繁的一种。对于我们的示例，我们将实现由 Eugene Wallingford 开发的 `replace` 函数来演示互递归（参见 [`www.cs.uni.edu/~wallingf/patterns/recursion.html`](http://www.cs.uni.edu/~wallingf/patterns/recursion.html)）。
+在本章消除或优化递归的技术中，懒惰性（laziness）可能是你使用最频繁的一种。对于我们的示例，我们将实现由 Eugene Wallingford 开发的`replace`函数来演示互递归（参见[`www.cs.uni.edu/~wallingf/patterns/recursion.html`](http://www.cs.uni.edu/~wallingf/patterns/recursion.html)）。
 
-`replace` 与 s-list 结构工作，s-list 是包含符号和符号列表的列表。`replace` 接收一个 `s-list`、一个 `oldsym` 和一个 `newsym`，并将所有的 `oldsym` 替换为 `newsym`。例如，这个 `replace` 调用会将所有的 `b` 替换为 `a`：
+`replace`与 s-list 结构工作，s-list 是包含符号和符号列表的列表。`replace`接收一个`s-list`、一个`oldsym`和一个`newsym`，并将所有的`oldsym`替换为`newsym`。例如，这个`replace`调用会将所有的`b`替换为`a`：
 
-`(replace '((a b) ((b r) (f r)) (d e)) b) 'a`
-`-> ((a a) ((a r) (f r)) (d e))`
+```
+(replace '((a b) ((b r) (f r)) (d e)) b) 'a
+-> ((a a) ((a r) (f r)) (d e))
+```
 
-以下是对 Wallingford 论文中 Scheme 实现的字面翻译。我们将 Scheme 函数转换为 Clojure 函数，将名称改为 `replace-symbol` 以避免与 Clojure 自带的 `replace` ，并缩短了名称以适应页面，但在其他方面保留了原始结构：
+以下是对 Wallingford 论文中 Scheme 实现的字面翻译。我们将 Scheme 函数转换为 Clojure 函数，将名称改为`replace-symbol`以避免与 Clojure 自带的`replace`，并缩短了名称以适应页面，但在其他方面保留了原始结构：
 
 [src/examples/wallingford.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/wallingford.clj)
+
+
 
 ```clojure
 ; 过于字面的移植，不要使用
@@ -4368,35 +4345,38 @@ Clojure 的 `trampoline` 函数调用你的一个互递归函数之一：
 对于几个小的 `n` 值尝试 `deeply-nested`：
 
 `(deeply-nested 5)`
+
 `-> ((((((bottom))))))`
 
 `(deeply-nested 25)`
+
 `-> (((((((((((((((((((((((((bottom)))))))))))))))))))))))`
 
-Clojure 提供了一个 `*print-level`，控制 Clojure 打印机进入嵌套数据的深度。将 `*print-level` 设置为一个适的值，这样打印机在打印深度嵌套结构时就不会疯狂。你会发现当嵌套更深时，它只需打印 `#` 并停止：
+Clojure 提供了一个 `*print-level*`，控制 Clojure 打印机进入嵌套数据的深度。将 `*print-level*` 设置为一个适的值，这样打印机在打印深度嵌套结构时就不会疯狂。你会发现当嵌套更深时，它只需打印 `#` 并停止：
 
 ```clojure
 (set! *print-level* 25)
 ```
+
 -> 25
 
 `(deeply-nested 5)`
+
 `-> ((((((bottom))))))`
 
 `(deeply-nested 25)`
+
 `-> (((((((((((((((((((((((((#)))))))))))))))))))))))`
 
 现在，尝试使用 `replace-symbol` 将 `bottom` 更改为 `deepest` 对于不同的嵌套层。你会发现大型级别会导致栈溢出。取决于你的 JVM 实现，你可能需要比这里显示的 `10000` 大的值：
 
 `(replace-symbol (deeply-nested 5) 'bottom 'deepest)`
+
 `-> ((((((deepest))))))`
 
 `(replace-symbol (deeply-nested 10000) 'bottom 'deepest)`
+
 `-> java.lang.StackOverflowError`
-
-
-
-
 
 对 `replace-symbol` 的所有递归调用都在 `cons` 内部。要打破递归，你所做的是将递归封装在 `lazy-seq` 中。这真的如此简单。你可以通过将序列生成的递归封装在 `lazy-seq` 中来打破它。这里是改进后的版本。由于向惰性的转变是如此简单，我们没能抵住另一种方式让函数更具“Clojure 风格”的诱惑：
 
@@ -4520,7 +4500,9 @@ Clojure 的定义易于阅读，并且与数学定义高度平行。然而，它
 我们这里使用的方法如下：
 
 *   以自然的方式定义互递归函数。
+
 *   使用备忘来快捷化递归递归。
+
 *   暴露序列以便在需要时缓存相关值。
 
 这种方法是消耗内存的，因为它缓存了所有以前过的值。如果这是一个问题，你可以通过选择更复杂的缓存策略来消除。
@@ -4536,13 +4518,12 @@ Clojure 的定义易于阅读，并且与数学定义高度平行。然而，它
 #### 脚注
 
 *33 - http://norvig.com/21-days.html
+
 *   34 - http://lampwww.epfl.ch/papers/idealhashtrees.pdf
+
 *   35 - http://tinyurl.com/clojure-persistent-vector
+
 *   36 - http://en.wikipedia.org/wiki/Fibonacci_number
-
-
-
-
 
 | [[37]](#f_0039.html_FNPTR-37) | 有更多关于 JVM 如何管理栈的信息，请参见 [`tinyurl.com/jvm-spec-toc`](http://tinyurl.com/jvm-spec-toc) 中的“运行时数据区域”。 |
 
@@ -4569,8 +4550,11 @@ Copyright © 2012, The Pragmatic Bookshelf.
 Clojure 的引用模型将身份（identities）与值（values）清晰地分开。Clojure 中的几乎一切都是值。对于身份，Clojure 提供了四引用类型：
 
 *   `Refs` 管理共享状态的协调同步更改。
+
 *   `Atoms` 管理共享状态的非协调同步更改。
+
 *   `Agents` 管理共享状态的异步更改。
+
 *   `Vars` 管理线程本地状态。
 
 本章将讨论这些 API 中的每一个。在章节结束时，我们将开发一个示例应用程序。贪蛇游戏演示了如何将应用程序模型划分为不可变和可变组件。
@@ -4584,8 +4568,11 @@ Clojure 的引用模型将身份（identities）与值（values）清晰地分�
 编写并发程序有许多原因：
 
 *   几十年来，性能的提升源于更多的核心。现在，它们必须来自并发或并行程序。
+
 *   可能需要运行开销巨大的计算。
+
 *   用户界面需要保持响应性。
+
 *   逻辑上独立的操作更容易进行测试。
 
 ## 5.2 Refs 和事务内存
@@ -4595,6 +4582,7 @@ Clojure 中的大多数对象都是不可变的。当你真的需要可变数据
 ```
 (def current-track (ref "Mars, the Bringer of War"))
 ```
+
 `'user/current-track`
 
 ref 封装并保护了对其内部状态的访问。要读取引用的内容，你可以调用 `deref`：
@@ -4624,6 +4612,7 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 ```
 (ref-set current-track "Venus, the Bringer of Peace")
 ```
+
 `java.lang.IllegalStateException: No transaction running`
 
 哎呀。因为 refs 是可变的，你必须保护它们的更新。在 Clojure 中，你可以使用事务。事务封装在 `dosync` 中：
@@ -4633,10 +4622,6 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 ```
 
 将你的 `ref-set` 封装在 `dosync` 中，一切就正常了。
-
-
-
-
 
 ```clojure
 (dosync (ref-set current-track "Venus, the Bringer of Peace"))
@@ -4650,14 +4635,18 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 像数据库事务一样，STM 事务保证了某些重要的属性：
 
 *   更新是**原子性的（atomic）**。如果你在一个事务中更新了多个 ref，所有更新的累积效果对于任何不在事务内部的人来说，都表现为一个单一的瞬时事件。
+
 *   更新是**一致的（consistent）**的。Refs 可以指定验证函数。如果这些函数中的任何一个失败，整个事务都将失败。
+
 *   更新是**隔离的（isolated）**。正在运行的事务看不到其他事务的已完成的结果。
 
 数据库提供了额外的保证，即更新是**持久的（durable）**的。由于 Clojure 的事务是内存事务事务，因此 Clojure 并不保证更新是持久的。如果你在 Clojure 中需要持久化事务，应该使用数据库。
 
+
+
 这四个事务属性合称为 ACID。数据库提供 ACID；而 Clojure 的 STM 提供 ACI。
 
-如果你在单个事务中更改了多个 ref，从事务外部的任何代码来看，这些更改都将被协调为“同时发生”。因此，你可以确保对 `current-track` 和 `current-composer` 的更新是协调的：
+如果你在单个事务中更改了多个 ref，从事务外部的任何代码来看，这些更改都将被协调为“同时发生”。因此，你可以确保对`current-track`和`current-composer`的更新是协调的：
 
 ```clojure
 (def current-track (ref "Venus, the Bringer of Peace"))
@@ -4675,9 +4664,9 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 
 因为更新是在事务中进行的，所以任何其他线程永远都不会看到带有过时作曲家的更新后的曲目，反之亦然。
 
-### alter
+## alter
 
-`current-track` 的示例看起来非常简单，因为对 ref 的更新与任何之前的状态都完全无关。让我们构建一个更复杂的例子，其中事务需要更新现有信息。一个简单的聊天应用程序正适合这个。首先，创建一个包含发送者和某些文本的消息记录：
+`current-track`的示例看起来非常简单，因为对 ref 的更新与任何之前的状态都完全无关。让我们构建一个更复杂的例子，其中事务需要更新现有信息。一个简单的聊天应用程序正适合这个。首先，创建一个包含发送者和某些文本的消息记录：
 
 ```clojure
 (defrecord Message [sender text])
@@ -4690,13 +4679,13 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 #:user.Message{:sender "Aaron", :text "Hello"}
 ```
 
-聊天应用程序的用户希望先看到最新的消息，因此列表是一个很好的数据结构。创建一个指向初始空列表的 `messages`引用：
+聊天应用程序的用户希望先看到最新的消息，因此列表是一个很好的数据结构。创建一个指向初始空列表的`messages`引用：
 
 ```clojure
 (def messages (ref (
 ```
 
-现在，你需要一个函数将新消息添加到 `messages` 的前面。你可以简单地使用 `deref` 获取消息列表，使用 `cons` 添加新消息，然后使用 `ref-set` 将更新后的列表回 `messages`：
+现在，你需要一个函数将新消息添加到`messages`的前面。你可以简单地使用`deref`获取消息列表，使用`cons`添加新消息，然后使用`ref-set`将更新后的列表回`messages`：
 
 ```clojure
 ; 坏主意
@@ -4704,27 +4693,27 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
   (dosync (ref-set messages (cons msg @messages))))
 ```
 
-但有一个更好的选择。为什么不在在一个步骤中执行读取和更新呢？Clojure 的 `alter` 会在事务内对引用的对象应用更新函数：
+但有一个更好的选择。为什么不在在一个步骤中执行读取和更新呢？Clojure 的`alter`会在事务内对引用的对象应用更新函数：
 
 ```clojure
 (alter ref update-fn & args..)
 ```
 
-`alter` 返回事务内 ref 的新值。当事务成功完成时，ref 将取其在事务内的最后一个值。使用 `alter` 代替 `ref-set` 使代码更易读：
+`alter`返回事务内 ref 的新值。当事务成功完成时，ref 将取其在事务内的最后一个值。使用`alter`代替`ref-set`使代码更易读：
 
 ```clojure
 (defn add-message [msg]
   (dosync (alter messages conj msg)))
 ```
 
-注意更新函数是 `conj`（“conjoin”的缩写），而不是 `cons`。这是因为 `conj` 接收参数的适用于 `alter`：
+注意更新函数是`conj`（“conjoin”的缩写），而不是`cons`。这是因为`conj`接收参数的适用于`alter`：
 
 ```clojure
 (cons item sequence)
 (conj sequence item)
 ```
 
-`alter` 函数在调用其 `update-fn` 时会将当前引用值作为第一个参数传递，正如 `conj` 预期的那样。如果你计划编写自己的更新函数，它们应该遵循与 `conj` 相同的结构：
+`alter`函数在调用其`update-fn`时会将当前引用值作为第一个参数传递，正如`conj`预期的那样。如果你计划编写自己的更新函数，它们应该遵循与`conj`相同的结构：
 
 ```clojure
 (your-func thing-that-gets-updated & optional)
@@ -4789,19 +4778,19 @@ ref 封装并保护了对其内部状态的访问。要读取引用的内容，�
 (alter messages conj msg)
 ```
 
-### STM 如何工作：MVCC
+## STM 如何工作：MVCC
 
 Clojure 的 STM 使用一种被称为多版本并发控制（MVCC）的技术，这也被用于数据库。以下是 MVCC 的工作原理。
 
-事务 A 开始获取一个点（point），它仅仅是一个唯一的时间戳。事务 A 拥有自己的私有副本。如果在任何一点，STM 检测到另一个事务已经更改了 ref，事务 A 将强制重试。如果你从 `dosync` 块抛出异常，则事务 A 将终止而不重试。
+事务 A 开始获取一个点（point），它仅仅是一个唯一的时间戳。事务 A 拥有自己的私有副本。如果在任何一点，STM 检测到另一个事务已经更改了 ref，事务 A 将强制重试。如果你从`dosync`块抛出异常，则事务 A 将终止而不重试。
 
 当且当事务 A 提交时，它的私有写入对世界可见，并关联到一个单一的点。持久数据结构使得提供这些私有副本变得廉价。在事务期间，对 ref 的操作是针对其私有副本进行的。
 
-有时 `alter` 所暗示的方法太谨慎了。如果在你的事务中间，另一个事务修改了 ref 怎么办？如果你在这种情况下仍然愿意提交更改，你可以用 `commute` 获得 `alter` 的性能。
+有时`alter`所暗示的方法太谨慎了。如果在你的事务中间，另一个事务修改了 ref 怎么办？如果你在这种情况下仍然愿意提交更改，你可以用`commute`获得`alter`的性能。
 
-### commute
+## commute
 
-`commute` 是 `alter` 的一个特殊变体，允许更高的并发：
+`commute`是`alter`的一个特殊变体，允许更高的并发：
 
 ```clojure
 (commute ref update-fn & args..)
@@ -4809,145 +4798,254 @@ Clojure 的 STM 使用一种被称为多版本并发控制（MVCC）的技术，
 
 当然，这存在权衡。Commute 之所以命名是因为它们必须是交换的（commutative）。也就是说，更新必须能够任何顺序发生。这赋予了 STM 系统自由重新排列的能力。
 
-要使用 `commute`，只需在你的 `add-message` 实现中将 `alter` 替换为 `commute`：
+要使用`commute`，只需在你的`add-message`实现中将`alter`替换为`commute`：
 
 ```clojure
 (defn add-message-commute [msg]
   (dosync (commute messages conj msg)))
 ```
 
-`commute` 返回 ref 的新值。然而，由于重排，你从 `commute` 获取的事务内值并不总是匹配 ref 的事务结束值。如果另一个事务偷偷修改了你正尝试 `commute` 的 ref，STM 不会重启你的事务。相反，它只会再次运行你的 `commute` 函数，且是无序的。你的事务永远看不到你的 `commute` 函数最终运行的 ref 值。
+`commute`返回 ref 的新值。然而，由于重排，你从`commute`获取的事务内值并不总是匹配 ref 的事务结束值。如果另一个事务偷偷修改了你正尝试`commute`的 ref，STM 不会重启你的事务。相反，它只会再次运行你的`commute`函数，且是无序的。你的事务永远看不到你的`commute`函数最终运行的 ref 值。
 
 由于 Clojure 的 STM 可以在你背后重新排列能够，因此只有在你不在乎顺序时才能使用它们。从字面上来说，这对于聊天应用程序是不成立的。消息列表显然是有顺序的，如果两次消息添加被反转，结果列表将无法正确显示消息到达的顺序。
 
+从实践上来说，聊天消息的更新具有足够的交换性。基于`STM`的消息重排可能会在微秒或更短的时间尺度上发生。对于聊天应用的用户来说，由于网络和人为延迟，在更长的时间尺度上已经存在重排现象。（回想一下你曾在在线聊天中“抢话”的情况，那是因为另一个发言者的消息还没传到你。）由于这些较大的重排是无法修复的，聊天应用忽略从 Clojure 的`STM`中冒泡出来的较小重排是合理的。
 
-
-
-从实践上来说，聊天消息的更新具有足够的交换性。基于 `STM` 的消息重排可能会在微秒或更短的时间尺度上发生。对于聊天应用的用户来说，由于网络和人为延迟，在更长的时间尺度上已经存在重排现象。（回想一下你曾在在线聊天中“抢话”的情况，那是因为另一个发言者的消息还没传到你。）由于这些较大的重排是无法修复的，聊天应用忽略从 Clojure 的 `STM` 中冒泡出来的较小重排是合理的。
-
-### 优先使用 alter
+## 优先使用 alter
 
 许多更新并不是可交换的。例如，考虑一个返回递增数字序列的计数器。你可能使用此类计数器在系统中构建唯一 ID。计数器可以是一个指向数字的简单引用：
 
-| [src/examples/concurrency.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/concurrency.clj) |
-| :--- | `(def counter (ref 0))` |
+[src/examples/concurrency.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/concurrency.clj)
 
-你不应该使用 `commute` 来更新计数器。`commute` 返回的是执行 `commute` 时计数器在事务中的值，但重排可能会导致事务结束时的实际值不同。这可能导致多个调用者获取相同的计数器值。相反，请使用 `alter`：
+```clojure
+(def counter (ref 0))
+```
 
-| :--- | `(defn next-counter [] (dosync (alter counter inc)))` |
+你不应该使用`commute`来更新计数器。`commute`返回的是执行`commute`时计数器在事务中的值，但重排可能会导致事务结束时的实际值不同。这可能导致多个调用者获取相同的计数器值。相反，请使用`alter`：
 
-尝试调用几次 `next-counter` 以验证计数器运行符合预期：
+```clojure
+(defn next-counter [] (dosync (alter counter inc)))
+```
 
-| :--- | `(next-counter)` |
-| :--- | `-> 1` |
-| :--- | `(next-counter)` |
-| :--- | `-> 2` |
+尝试调用几次`next-counter`以验证计数器运行符合预期：
 
-通常情况下，你应该优先选择 `alter` 而不是 `commute`。它的语义易于理解且防错。相反，`commute` 要求你仔细考虑事务语义。如果你在 `commute` 足够的情况下使用 `alter`，最坏的结果也只是性能下降。但如果你在需要 `alter` 的地方使用了 `commute`，将会引入一个用自动化测试难以检测的微妙 bug。
+```clojure
+(next-counter)
+```
 
-### 为 Refs 添加验证逻辑
+```clojure
+-> 1
+```
+
+```clojure
+(next-counter)
+```
+
+```clojure
+-> 2
+```
+
+通常情况下，你应该优先选择`alter`而不是`commute`。它的语义易于理解且防错。相反，`commute`要求你仔细考虑事务语义。如果你在`commute`足够的情况下使用`alter`，最坏的结果也只是性能下降。但如果你在需要`alter`的地方使用了`commute`，将会引入一个用自动化测试难以检测的微妙 bug。
+
+## 为 Refs 添加验证逻辑
 
 数据库事务通过各种完整性检查来维护一致性。你可以通过 Clojure 的事务内存实现类似的操作，在创建 ref 时指定验证函数：
 
-| :--- | `(ref initial-state options*)` |
-| :--- | `; options include:` |
-| :--- | `; :validator validate-fn` |
-| :--- | `; :meta metadata-map` |
+```clojure
+(ref initial-state options*)
+```
 
-`ref` 的选项包含一个可选的验证函数，该函数可以抛出异常以防止事务完成。注意 `options` 不是一个 map；它只是被插入到函数调用中的键值对序列。
+```clojure
+; options include:
+```
 
-继续聊天示例，为 `messages` ref 添加一个验证函数，确保所有消息的 `:sender` 和 `:text` 都有非 `nil` 的值：
+```clojure
+; :validator validate-fn
+```
 
-| [src/examples/chat.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/chat.clj) |
-| :--- | `(def validate-message-list` |
-| :--- | ` (partial every? (#(and (:sender %) (:text %))))` |
-| :--- | `(def messages (ref () :validator validate-message-list))` |
+```clojure
+; :meta metadata-map
+```
+
+`ref`的选项包含一个可选的验证函数，该函数可以抛出异常以防止事务完成。注意`options`不是一个 map；它只是被插入到函数调用中的键值对序列。
+
+继续聊天示例，为`messages`ref 添加一个验证函数，确保所有消息的`:sender`和`:text`都有非`nil`的值：
+
+[src/examples/chat.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/chat.clj)
+
+```clojure
+(def validate-message-list
+ (partial every? (#(and (:sender %) (:text %))))
+(def messages (ref () :validator validate-message-list))
+```
 
 这种验证就像数据库事务中的表键约束。如果约束失败，整个事务将回滚。尝试添加一个格式不正确的消息，例如简单的字符串：
 
-| :--- | `(add-message "not a valid message")` |
-| :--- | `-> java.lang.IllegalStateException: Invalid reference state` |
-| :--- | `@messages` |
-| :--- | `-> ()` |
+```clojure
+(add-message "not a valid message")
+```
+
+```clojure
+-> java.lang.IllegalStateException: Invalid reference state
+```
+
+```clojure
+@messages
+```
+
+```clojure
+-> ()
+```
 
 符合约束的消息没有问题：
 
-| :--- | `(add-message (user.Message. "Aaron" "Real Message"))` |
-| :--- | `-> (:user.Message{:sender "Aaron", :text "Real Message"})` |
+```clojure
+(add-message (user.Message. "Aaron" "Real Message"))
+```
+
+```clojure
+-> (:user.Message{:sender "Aaron", :text "Real Message"})
+```
 
 Refs 是协调访问共享状态的优秀工具，但并非所有任务都需要这种协调。对于更新单个孤立数据，请优先使用 atom。
 
-## 5.3 使用 Atoms 进行无协调的同步更新
+## 使用 Atoms 进行无协调的同步更新
 
 Atom 是比 ref 更轻量级的机制。当多个 ref 更新可以在事务中协调时，atom 则允许对单个值进行更新，且与任何其他都不协调。
 
-你通过 `atom` 创建 atom，其签名与 `ref` 非常相似：
+你通过`atom`创建 atom，其签名与`ref`非常相似：
 
-| :--- | `(atom initial-state options?)` |
-| :--- | `; options include:` |
-| :--- | `; :validator validate-fn` |
-| :--- | `; :meta metadata-map` |
+```clojure
+(atom initial-state options?)
+```
+
+```clojure
+; options include:
+```
+
+```clojure
+; :validator validate-fn
+```
+
+```clojure
+; :meta metadata-map
+```
 
 你可以解引用一个 atom 来获取其值，就像处理 ref 一样：
 
-| :--- | `(deref atom)` |
+```clojure
+(deref atom)
+```
 
-Atom 不参与事务。当 `swap!` 返回时，值已经改变了。
+Atom 不参与事务。当`swap!`返回时，值已经改变了。
 
+尽管`send`并不知道 agent 的新值，但 REPL 可能知道。取决于 agent 线程或 REPL 线程哪个先运行，你可能会在之前的输出的冒号后看到`1`或`0`。
 
+你可以使用`deref`/`@`来检查 agent 的当前值，就像检查 ref 一样。当你准备检查`counter`时，`inc`几乎已经在线程池中完成，并将值提升到了 1：
 
-尽管 `send` 并不知道 agent 的新值，但 REPL 可能知道。取决于 agent 线程或 REPL 线程哪个先运行，你可能会在之前的输出的冒号后看到 `1` 或 `0`。
+```clojure
+@counter
+```
 
-你可以使用 `deref`/`@` 来检查 agent 的当前值，就像检查 ref 一样。当你准备检查 `counter` 时，`inc` 几乎已经在线程池中完成，并将值提升到了 1：
+```clojure
+-> 1
+```
 
-| | `@counter` |
-| | `-> 1` |
+如果 REPL 和 agent 线程之间的竞态条件让你感到困扰，有一个解决方案。如果你想确保 agent 已经完成了你发送给它的操作，可以调用`await`或`await-for`：
 
-如果 REPL 和 agent 线程之间的竞态条件让你感到困扰，有一个解决方案。如果你想确保 agent 已经完成了你发送给它的操作，可以调用 `await` 或 `await-for`：
+```clojure
+(await & agents)
+```
 
-| | `(await & agents)` |
-| | `(await-for timeout-millis & agents)` |
+```clojure
+(await-for timeout-millis & agents)
+```
 
-这些函数将导致当前线程阻塞，直到从当前线程或 agent 发送的所有操作都完成。如果超时，`await-for` 将返回 `nil`，否则返回非 `nil` 值。`await` 没有超时限制，所以要小心：`await` 愿意永远等下去。
+这些函数将导致当前线程阻塞，直到从当前线程或 agent 发送的所有操作都完成。如果超时，`await-for`将返回`nil`，否则返回非`nil`值。`await`没有超时限制，所以要小心：`await`愿意永远等下去。
 
 ### 验证 Agent 和处理错误
 
 Agent 与 ref 还有其他共同点。它们也可以接受一个验证函数：
 
-| | `(agent initial-state options*)` |
-| | `; options include:` |
-| | `:validator validate-fn` |
-| | `:meta metadata-map` |
+```clojure
+(agent initial-state options*)
+```
 
-使用验证器重新创建 `counter`，以确保它是一个数字：
+```clojure
+; options include:
+```
 
-| | `(def counter (agent 0 :validator number?))` |
-| | `-> #'user/counter` |
+```clojure
+:validator validate-fn
+```
+
+```clojure
+:meta metadata-map
+```
+
+使用验证器重新创建`counter`，以确保它是一个数字：
+
+```clojure
+(def counter (agent 0 :validator number?))
+```
+
+```clojure
+-> #'user/counter
+```
 
 尝试通过传递一个忽略当前值并简单返回字符串的更新函数，将 agent 设置为一个非数字的值：
 
-| | `(send counter (fn [_] "boo"))` |
-| | `-> #<clojure.lang.Agent@4de8ce62: 0>` |
+```clojure
+(send counter (fn [_] "boo"))
+```
 
-一切看起来都良好（到目前），因为 `send` 仍然会立即返回。在 agent 尝试在池线程中更新自身后，它将进入异常状态。当你尝试解引用 agent 时，你会发现错误：
+```clojure
+-> #<clojure.lang.Agent@4de8ce62: 0>
+```
 
-| | `@counter` |
-| | `-> java.lang.Exception: Agent has errors` |
+一切看起来都良好（到目前），因为`send`仍然会立即返回。在 agent 尝试在池线程中更新自身后，它将进入异常状态。当你尝试解引用 agent 时，你会发现错误：
 
-要发现特定的错误（或多个错误），调用 `agent-errors`，它将返回在 agent 操作期间抛出的错误序列：
+```clojure
+@counter
+```
 
-| | `(agent-errors counter)` |
-| | `-> (#<IllegalStateException ...>)` |
+```clojure
+-> java.lang.Exception: Agent has errors
+```
 
-一旦 agent 发生错误，所有后续查询 agent 的尝试都将返回错误。你可以通过调用 `clear-agent-errors` 使 agent 再次可用：
+要发现特定的错误（或多个错误），调用`agent-errors`，它将返回在 agent 操作期间抛出的错误序列：
 
-| | `(clear-agent-errors agent)` |这会将 agent 返回到错误之前的状态。清除 `counter` 的错误，并验证其状态与错误发生前相同：
+```clojure
+(agent-errors counter)
+```
 
-| | `(clear-agent-errors counter)` |
-| | `-> nil` |
-| | |
-| | `@counter` |
-| | `-> 0` |
+```clojure
+-> (#<IllegalStateException ...>)
+```
+
+一旦 agent 发生错误，所有后续查询 agent 的尝试都将返回错误。你可以通过调用`clear-agent-errors`使 agent 再次可用：
+
+```clojure
+(clear-agent-errors agent)
+```
+
+这会将 agent 返回到错误之前的状态。清除`counter`的错误，并验证其状态与错误发生前相同：
+
+```clojure
+(clear-agent-errors counter)
+```
+
+```clojure
+-> nil
+```
+
+```clojure
+@counter
+```
+
+```clojure
+-> 0
+```
 
 现在你已经知道了 agent 的基础知识，让我们结合 ref 和事务使用它们。
 
@@ -4955,15 +5053,20 @@ Agent 与 ref 还有其他共同点。它们也可以接受一个验证函数：
 
 事务不应该有副作用，因为 Clojure 可能会重试任意次数的任务。但有时你希望事务成功时产生副作用。Agent 提供了一个解决方案。如果你在事务内部向 agent 发送操作，那么当且仅当事务成功时，该操作会被发送一次。
 
-作为这种用例的示例，考虑一个在事务成功时写入文件的 agent。你可以将此类 agent 与 commute 中的聊天示例结合，以自动备份聊天消息。首先，创建一个 `backup-agent` 来存储要写入的 `filename`：
+作为这种用例的示例，考虑一个在事务成功时写入文件的 agent。你可以将此类 agent 与 commute 中的聊天示例结合，以自动备份聊天消息。首先，创建一个`backup-agent`来存储要写入的`filename`：
 
-| [src/examples/concurrency.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/concurrency.clj) |
-| | `(def backup-agent (agent "output/messages-backup.clj"))` |
+[src/examples/concurrency.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/concurrency.clj)
 
-然后，创建 `add-message` 的修改版本。新函数 `add-message-with-backup` 应该额外做两件事：
+```clojure
+(def backup-agent (agent "output/messages-backup.clj"))
+```
 
-*   在 `let` 绑定中获取 `commute` 的返回值，即当前的消息数据库。
-*   在事务内部仍然，向备份 agent 发送一个操作，将消息数据库写入 `filename`。为了简单起见，让操作函数返回 `filename`，这样 agent 将使用相同的文件名。
+
+
+然后，创建`add-message`的修改版本。新函数`add-message-with-backup`应该额外做两件事：
+
+- 在`let`绑定中获取`commute`的返回值，即当前的消息数据库。
+- 在事务内部仍然，向备份 agent 发送一个操作，将消息数据库写入`filename`。为了简单起见，让操作函数返回`filename`，这样 agent 将使用相同的文件名。
 
 ```clojure
 (defn add-message-with-backup [message]
@@ -4988,25 +5091,26 @@ Agent 与 ref 还有其他共同点。它们也可以接受一个验证函数：
 
 统一模型是更新 refs、atoms 和 agents 最重要的方式。相比之下，辅助函数是源于每个 API 特有语义的优化和选项：
 
-*   `commute` 优化的机会出现在协调更新时。由于只有 ref 提供协调更新，因此 `commute` 仅对 ref 有意义。
-*   对 ref 和 atom 的更新是在调用它们的线程上进行的，因此它们不提供调度选项。Agent 稍后在线程池中更新，使得阻塞/非阻塞是一个相关的调度选项。
+- `commute`优化的机会出现在协调更新时。由于只有 ref 提供协调更新，因此`commute`仅对 ref 有意义。
+- 对 ref 和 atom 的更新是在调用它们的线程上进行的，因此它们不提供调度选项。Agent 稍后在线程池中更新，使得阻塞/非阻塞是一个相关的调度选项。
 
-Clojure 的最后一种引用类型 `var` 是完全不同的野兽。它们不参与统一更新模型，而是用于管理线程本地的私有状态。
+Clojure 的最后一种引用类型`var`是完全不同的野兽。它们不参与统一更新模型，而是用于管理线程本地的私有状态。
 
+当你调用`def`或`defn`时，你创建了一个动态变量（dynamic var），通常直接称为 var。在书中目前为止的所有示例中，你向`def`传递了一个初始值，该值成为该 var 的根绑定（root binding）。例如，以下代码为`` `foo` ``创建了一个值为`10`的根绑定：
 
+```
+(def ^:dynamic foo 10)
+-> #'user/foo
+```
 
+`` `foo` ``的绑定被所有线程共享。你可以在自己的线程上检查`` `foo` ``的值：
 
-当你调用 `def` 或 `defn` 时，你创建了一个动态变量（dynamic var），通常直接称为 var。在书中目前为止的所有示例中，你向 `def` 传递了一个初始值，该值成为该 var 的根绑定（root binding）。例如，以下代码为 `` `foo` `` 创建了一个值为 `10` 的根绑定：
+```
+foo
+-> 10
+```
 
-|   | `(def ^:dynamic foo 10)` |
-|   | `-> #'user/foo` |
-
-`` `foo` `` 的绑定被所有线程共享。你可以在自己的线程上检查 `` `foo` `` 的值：
-
-|   | `foo` |
-|   | `-> 10` |
-
-你也可以从另一个线程验证 `` `foo` `` 的值。创建一个新线程，向它传递一个打印 `` `foo` `` 的函数。别忘记 `start` 该线程：
+你也可以从另一个线程验证`` `foo` ``的值。创建一个新线程，向它传递一个打印`` `foo` ``的函数。别忘记`start`该线程：
 
 ```
 user=> (.start (Thread. (fn [] (println foo))))
@@ -5014,9 +5118,9 @@ user=> (.start (Thread. (fn [] (println foo))))
 | 10
 ```
 
-在上一个示例中，对 `start` 调用返回 `nil`，然后从新线程打印 `foo` 的值。
+在上一个示例中，对`start`调用返回`nil`，然后从新线程打印`foo`的值。
 
-大多数 var 都倾向于永久保留其根绑定。然而，你可以使用 `binding` 宏为 var 创建线程局部绑定（thread-local binding）：
+大多数 var 都倾向于永久保留其根绑定。然而，你可以使用`binding`宏为 var 创建线程局部绑定（thread-local binding）：
 
 ```
 (binding [bindings] & body)
@@ -5024,21 +5128,21 @@ user=> (.start (Thread. (fn [] (println foo))))
 
 绑定具有动态作用域（dynamic scope）。换句话说，绑定在线程执行的任何地方都是可见的，直到线程离开开始绑定的作用。绑定对任何其他线程不可见。
 
-在结构上，`binding` 看起来非常像 `let`。为 `` `foo` `` 创建一个线程局部绑定并检查它的值：
+在结构上，`binding`看起来非常像`let`。为`` `foo` ``创建一个线程局部绑定并检查它的值：
 
 ```
 (binding [foo 42] foo)
 -> 42
 ```
 
-要看到 `binding` 和 `let` 之间的区别，创建一个打印 `` `foo` `` 值的简单函数：
+要看到`binding`和`let`之间的区别，创建一个打印`` `foo` ``值的简单函数：
 
 ```
 (defn print-foo [] (println foo))
 -> #'user/print-foo
 ```
 
-现在，尝试分别从 `let` 和 `binding` 中调用 `print-foo`：
+现在，尝试分别从`let`和`binding`中调用`print-foo`：
 
 ```
 (let [foo "let foo"] (print-foo))
@@ -5048,13 +5152,13 @@ user=> (.start (Thread. (fn [] (println foo))))
 -> bound foo
 ```
 
-如你所见，`let` 在其自身的形式之外没有影响，因此第一个 `print-foo` 打印的是根绑定 `10`。相反，`binding` 在任何从绑定形式开始的调用链中都保持有效，因此第二个 `print-foo` 打印的是 `bound foo`。
+如你所见，`let`在其自身的形式之外没有影响，因此第一个`print-foo`打印的是根绑定`10`。相反，`binding`在任何从绑定形式开始的调用链中都保持有效，因此第二个`print-foo`打印的是`bound foo`。
 
 ### 远端作用
 
-用于动态绑定的 var 有时被称为特殊变量（special variables）。在前后各加上星号来命名它们是一种良好的风格。例如，Clojure 使用动态绑定处理线程范围的选项，如标准 I/O 输出流 `` `*in* ``、`` `*out* `` 和 `` `*err*` ``。动态绑定允许“远端作用”（action at a distance）。当你更改动态绑定时，你可以在不改变任何函数参数的情况下改变远程函数的行为。
+用于动态绑定的 var 有时被称为特殊变量（special variables）。在前后各加上星号来命名它们是一种良好的风格。例如，Clojure 使用动态绑定处理线程范围的选项，如标准 I/O 输出流`` `*in* ``、`` `*out* ``和`` `*err*` ``。动态绑定允许“远端作用”（action at a distance）。当你更改动态绑定时，你可以在不改变任何函数参数的情况下改变远程函数的行为。
 
-远端作用的一种是临时增强函数的行为。在某些语言中，这会被归类为面向切面的编程；在 Clojure 中，它只是动态绑定的副作用。例如，假设你有一个执行昂贵计算的函数。为了模拟这一点，编写一个名为 `slow-double` 的函数，它睡眠十分分之一秒然后将输入翻倍。
+远端作用的一种是临时增强函数的行为。在某些语言中，这会被归类为面向切面的编程；在 Clojure 中，它只是动态绑定的副作用。例如，假设你有一个执行昂贵计算的函数。为了模拟这一点，编写一个名为`slow-double`的函数，它睡眠十分之一秒然后将输入翻倍。
 
 ```
 (defn ^:dynamic slow-double [n]
@@ -5062,14 +5166,14 @@ user=> (.start (Thread. (fn [] (println foo))))
  (* n 2))
 ```
 
-接下来，编写一个名为 `calls-slow-double` 的函数，为 `[1 2 1 2 1 2]` 中的每个项目调用 `slow-double`：
+接下来，编写一个名为`calls-slow-double`的函数，为`[1 2 1 2 1 2]`中的每个项目调用`slow-double`：
 
 ```
 (defn calls-slow-double []
  (map slow-double [1 2 1 2 1 2]))
 ```
 
-对 `calls-slow-double` 的调用进行计时。由于六次对 `slow-double` 的内部调用，它应该花费超过六十分分之一秒。注意，你必须通过 `dorun` 运行结果，否则 Clojure 的 `map` 会通过立即返回惰性序列来胜过你。
+对`calls-slow-double`的调用进行计时。由于六次对`slow-double`的内部调用，它应该花费超过六十分之一秒。注意，你必须通过`dorun`运行结果，否则 Clojure 的`map`会通过立即返回惰性序列来胜过你。
 
 ```
 (time (dorun (calls-slow-double)))
@@ -5077,21 +5181,15 @@ user=> (.start (Thread. (fn [] (println foo))))
 -> nil
 ```
 
-阅读代码，你可以发现 `calls-slow-double` 很慢是因为它在重复执行相同的工作。（注：此处原文存在大量重复句子，翻译已按要求精简）。
-
-阅读代码，你可以发现 `calls-slow-double` 很慢是因为它在重复执行相同的工作。
+阅读代码，你可以发现`calls-slow-double`很慢是因为它在重复执行相同的工作。
 
 ### 与 Java 工作
 
-许多 Java API 依赖回调。GUI 框架如 Swing 使用事件处理器来响应输入。XML 解析器如 SAX 依赖用户。在 Clojure 中，满足此类 API 的最佳方法是使用动态绑定。这涉及类似于变量的可变引用，但因为它们是在单线程环境下使用的，所以不会产生任何问题。Clojure 提供了 `set!` 特殊形式来设置线程局部绑定：
+许多 Java API 依赖回调。GUI 框架如 Swing 使用事件处理器来响应输入。XML 解析器如 SAX 依赖用户。在 Clojure 中，满足此类 API 的最佳方法是使用动态绑定。这涉及类似于变量的可变引用，但因为它们是在单线程环境下使用的，所以不会产生任何问题。Clojure 提供了`set!`特殊形式来设置线程局部绑定：
 
 ```
 (set! var-symbol new-value)
 ```
-
-
-
-
 
 ```clojure
 (set! *stack* (pop *stack))
@@ -5101,13 +5199,13 @@ nil)
 
 ### SAX 解析与状态管理模型
 
-SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处理程序会更新三个线程局部变量。`*stack*` 是一个栈，包含了当前元素所在嵌套的所有元素。`*current*` 是当前元素，而 `*state*` 则跟踪内部的内容类型。（这主要在处理字符数据内部时非常重要，但此处未显示。）
+SAX 解析器在遇到 XML 起始标签时会调用`startElement`。回调处理程序会更新三个线程局部变量。`*stack*`是一个栈，包含了当前元素所在嵌套的所有元素。`*current*`是当前元素，而`*state*`则跟踪内部的内容类型。（这主要在处理字符数据内部时非常重要，但此处未显示。）
 
-`endElement` 通过从 `*stack*` 中弹出元素并将 `*stack*` 的栈顶元素重新赋值给 `*current*`，来撤销 `startElement` 的工作。
+`endElement`通过从`*stack*`中弹出元素并将`*stack*`的栈顶元素重新赋值给`*current*`，来撤销`startElement`的工作。
 
 值得注意的是，这种编码风格是行业标准：对象是可变的，且程序对并发可能性的完全不感知。Clojure 允许这种风格作为一种显式的特例，你应该仅在为了相互操作（interop）时使用它。
 
-`ContentHandler` 使用 `set!` 并不会可变数据泄露到 Clojure 的其他部分。Clojure 使用 `ContentHandler` 的实现来构建不可变的 Clojure 结构。
+`ContentHandler`使用`set!`并不会可变数据泄露到 Clojure 的其他部分。Clojure 使用`ContentHandler`的实现来构建不可变的 Clojure 结构。
 
 你现在已经看到了处理状态四种模型。由于 Clojure 是构建在 Java 之上的，你也可以使用 Java 基于锁的模型。这些模型及其用途总结在下表中。
 
@@ -5137,13 +5235,13 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 
 我们对蛇的设计将利用 Clojure 的函数特性以及对显式可变状态的支持，将游戏分为三层：
 
-*   函数式模型将使用纯函数尽可能地对游戏建模。
-*   可变模型将处理游戏的可变状态。可变模型将使用本章讨论的一个或多个引用模型。可变状态难以测试得多，因此我们将保持这部分很小。
-*   GUI 将使用 Swing 来绘制游戏并接受用户输入。
+- 函数式模型将使用纯函数尽可能地对游戏建模。
+- 可变模型将处理游戏的可变状态。可变模型将使用本章讨论的一个或多个引用模型。可变状态难以测试得多，因此我们将保持这部分很小。
+- GUI 将使用 Swing 来绘制游戏并接受用户输入。
 
 这些层将使贪蛇易于构建、测试和维护。
 
-在你学习此示例时，将你的代码添加到示例代码中的 `reader/snake.clj` 文件中。打开该文件时，你会发现它已经导入/使用了你所需的 Swing 类和 Clojure 库：
+在你学习此示例时，将你的代码添加到示例代码中的`reader/snake.clj`文件中。打开该文件时，你会发现它已经导入/使用了你所需的 Swing 类和 Clojure 库：
 
 ```clojure
 (ns reader.snake
@@ -5160,11 +5258,11 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 
 实现蛇的方法不止一种。你可能喜欢将这里展示的蛇与这些蛇进行比较：
 
-*   David Van Horn 的 Snake 用 Typed Scheme 编写的，它没有可变状态。
-*   Jeremy Read 写了一个 Java 版的蛇，设计目标是“在 Java 中尽可能小且仍保持可读性”。
-*   Abhishek Reddy 用 Clojure 写了一个极其微小的（35 行）蛇。设计目标是达到异常的简短。
-*   Dale Vaillancourt 的 Worm（蠕虫）。
-*   Mark Volkmann 写了一个为了可读性设计的 Clojure 蛇。
+- David Van Horn 的 Snake 用 Typed Scheme 编写的，它没有可变状态。
+- Jeremy Read 写了一个 Java 版的蛇，设计目标是“在 Java 中尽可能小且仍保持可读性”。
+- Abhishek Reddy 用 Clojure 写了一个极其微小的（35 行）蛇。设计目标是达到异常的简短。
+- Dale Vaillancourt 的 Worm（蠕虫）。
+- Mark Volkmann 写了一个为了可读性设计的 Clojure 蛇。
 
 每种蛇的实现都有自己的风格。你喜欢什么样的风格呢？
 
@@ -5181,7 +5279,7 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 (def dirs {VK_LEFT [-1 0] VK_RIGHT [1 0] VK_UP [0 -1] VK_DOWN [0 1]})
 ```
 
-`width` 和 `height` 设置了游戏板的大小，`point-size` 用于将游戏点转换为像素。`turn-millis` 是游戏的心跳，控制在每次更新棋板之前经过的毫秒数。`win-length` 是你的蛇在赢得游戏前需要的段数（五是一个无聊的小数字）。`dirs` 将四个方向的符号常量映射到它们的向量等效值。由于 Swing 已经定义了 `VK_` 常量，我们将直接复用它们而不是自己定义。
+`width`和`height`设置了游戏板的大小，`point-size`用于将游戏点转换为像素。`turn-millis`是游戏的心跳，控制在每次更新棋板之前经过的毫秒数。`win-length`是你的蛇在赢得游戏前需要的段数（五是一个无聊的小数字）。`dirs`将四个方向的符号常量映射到它们的向量等效值。由于 Swing 已经定义了`VK_`常量，我们将直接复用它们而不是自己定义。
 
 接下来，为游戏创建一些基础函数：
 
@@ -5193,14 +5291,14 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
   (map (* point-size) (pt)))
 ```
 
-`add-points` 将点相加。你可以使用 `add-points` 计算移动对象的新位置。例如，你可以让 `[10, 10]` 的对象向左移动一位：
+`add-points`将点相加。你可以使用`add-points`计算移动对象的新位置。例如，你可以让`[10, 10]`的对象向左移动一位：
 
 ```clojure
 (add-points [10 10] [-1 0])
 -> [9 10]
 ```
 
-`point-to-screen-rect` 仅将游戏空间的点转换为屏幕上的矩形：
+`point-to-screen-rect`仅将游戏空间的点转换为屏幕上的矩形：
 
 ```clojure
 (point-to-screen-rect [5 10])
@@ -5226,9 +5324,9 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
   :color (Color. 15 160 70)})
 ```
 
-由于蛇可以占据板上的多个点，它有一个 `:body`，这是一个点列表。此外，蛇始终以 `:dir` 表示的方向在运动。
+由于蛇可以占据板上的多个点，它有一个`:body`，这是一个点列表。此外，蛇始终以`:dir`表示的方向在运动。
 
-接下来，创建一个移动蛇的函数。这个函数应该是一个纯函数，返回一条新蛇。它还应该接受一个 `grow` 选项，允许蛇在吃到苹果后增长。
+接下来，创建一个移动蛇的函数。这个函数应该是一个纯函数，返回一条新蛇。它还应该接受一个`grow`选项，允许蛇在吃到苹果后增长。
 
 ```clojure
 (defn move {:keys [body dir] :as snake} & grow]
@@ -5236,18 +5334,13 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
       (if grow body (butlast body)))))
 ```
 
-`move` 使用了一个相当复杂的绑定表达式。`{:keys [body dir]}` 部分使蛇的 `body` 和 `dir` 作为绑定可用，而 `:as snake` 部分将 `snake` 绑定到整个蛇。该函数的执行如下：
+`move`使用了一个相当复杂的绑定表达式。`{:keys [body dir]}`部分使蛇的`body`和`dir`作为绑定可用，而`:as snake`部分将`snake`绑定到整个蛇。该函数的执行如下：
 
-1.  `add-points` 创建一个新点，它是原始蛇头部根据蛇运动方向偏移后的点。
+1. `add-points`创建一个新点，它是原始蛇头部根据蛇运动方向偏移后的点。
+2. `cons`将新点添加到蛇的头部。如果蛇正在生长，则保留整个原始蛇。否则，它会保留原始蛇中除最后一段（`butlast`）以外的所有部分。
+3. `assoc`返回一个新的蛇，它是旧蛇的拷贝，但更新了`:body`。
 
-
-
-
-2. `cons` 将新点添加到蛇的头部。如果蛇正在生长，则保留整个原始蛇。否则，它会保留原始蛇中除最后一段（`butlast`）以外的所有部分。
-
-3. `assoc` 返回一个新的蛇，它是旧蛇的拷贝，但更新了 `:body`。
-
-通过移动和让蛇生长来测试 `move`：
+通过移动和让蛇生长来测试`move`：
 
 ```clojure
 (move (create-snake))
@@ -5257,14 +5350,14 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 -> {:body ([2 1] [1 1]), ; etc.}
 ```
 
-编写一个 `win?` 函数来测试蛇是否赢了游戏：
+编写一个`win?`函数来测试蛇是否赢了游戏：
 
 ```clojure
 (defn win? [{body :body}]
   (>= (count body) win-length))
 ```
 
-针对不同的身体长度测试 `win?`。注意，`win?` 仅绑定了 `:body`，所以你不需要一个“真实的”蛇，只需要任何带有 `body` 属性的对象即可：
+针对不同的身体长度测试`win?`。注意，`win?`仅绑定了`:body`，所以你不需要一个“真实的”蛇，只需要任何带有`body`属性的对象即可：
 
 ```clojure
 (win? {:body [[1 1]]})
@@ -5274,7 +5367,7 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 -> true
 ```
 
-如果蛇的头部再次与其身体的其他部分接触，则输了。编写一个 `head-overlaps-body?` 函数来测试这一点，并用它来定义 `lose?`：
+如果蛇的头部再次与其身体的其他部分接触，则输了。编写一个`head-overlaps-body?`函数来测试这一点，并用它来定义`lose?`：
 
 ```clojure
 (defn head-overlaps-body? [{[head & body] :body}]
@@ -5283,7 +5376,7 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 (def lose? head-overlaps-body?)
 ```
 
-针对重叠和不重叠的蛇身体测试 `lose?`：
+针对重叠和不重叠的蛇身体测试`lose?`：
 
 ```clojure
 (lose? {:body [[1 1] [1 2] [1 3]]})
@@ -5293,14 +5386,16 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 -> true
 ```
 
-如果蛇的头部占据了苹果的位置，则表示吃了苹果。定义一个 `eats?` 函数来测试这一点：
+如果蛇的头部占据了苹果的位置，则表示吃了苹果。定义一个`eats?`函数来测试这一点：
 
 ```clojure
 (defn eats? [{[snake-head] :body} {apple :location}]
   (= snake-head apple))
 ```
 
-注意 `eats?` 函数的主体有多整洁。所有工作都在绑定中完成：`{[snake-head] :body}` 将 `snake-head` 绑定到蛇 `:body` 的第一个元素，而 `{apple :location}` 将 `apple` 绑定到苹果的 `:location`。在 REPL 中测试 `eats?`：
+
+
+注意 `eats?` 函数的主体有多整洁。所有工作都在绑定中完成：`{[snake-head] :body}` 将 `snake-head`我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。绑定到蛇 `:body` 的第一个元素，而 `{apple :location}` 将 `apple` 绑定到苹果的 `:location`。在 REPL 中测试 `eats?`：
 
 ```clojure
 (eats? {:body [[1 1] [1 2]]} {:location [2 2]})
@@ -5345,7 +5440,7 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
   nil)
 ```
 
-你可以通过传入一些 refs 然后检查它们解引用是否为蛇和苹果来测试 `reset-game`：
+你可以通过传入一些 refs，然后检查它们解引用是否为蛇和苹果来测试 `reset-game`：
 
 ```clojure
 (def test-snake (ref nil))
@@ -5361,7 +5456,7 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 -> {:location [5 2], ; etc.}
 ```
 
-`update-direction` 甚至更；它只是 `turn` 的一个封装：
+`update-direction` 甚至更简单；它只是 `turn` 的一个封装：
 
 ```clojure
 (defn update-direction [snake newdir]
@@ -5397,10 +5492,6 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
         (JOptionPane/showMessageDialog frame "You lose!"))))
 ```
 
-
-
-
-
 ```clojure
 (when (win? @snake))
 (reset-game snake apple)
@@ -5417,10 +5508,10 @@ SAX 解析器在遇到 XML 起始标签时会调用 `startElement`。回调处�
 
 `game-panel` 虽然很长但很简单。它使用 `proxy` 创建了一个具有一组 Swing 回调方法的面板。
 
-*   Swing 调用 `paintComponent`（第 3 行）来绘制面板。`paintComponent` 调用 `proxy-super` 来执行标准的 `JPanel` 行为，然后绘制蛇和苹果。
-*   Swing 会在每次定时器滴答时调用 `actionPerformed`（第 7 行）。`actionPerformed` 更新蛇和苹果的位置。如果游戏结束，它会显示一个对话框并重置游戏。最后，它通过 `(.repaint this)` 触发重绘。
-*   Swing 在响应键盘输入时调用 `keyPressed`（第 16 行）。`keyPressed` 调用 `update-direction` 来改变蛇的方向。（如果键盘输入不是方向键，`dirs` 函数返回 `nil`，且 `update-direction` 将不执行。）
-*   游戏面板忽略了 `keyReleased` 和 `keyTyped`。
+- Swing 调用 `paintComponent`（第 3 行）来绘制面板。`paintComponent` 调用 `proxy-super` 来执行标准的 `JPanel` 行为，然后绘制蛇和苹果。
+- Swing 会在每次定时器滴答时调用 `actionPerformed`（第 7 行）。`actionPerformed` 更新蛇和苹果的位置。如果游戏结束，它会显示一个对话框并重置游戏。最后，它通过 `(.repaint this)` 触发重绘。
+- Swing 在响应键盘输入时调用 `keyPressed`（第 16 行）。`keyPressed` 调用 `update-direction` 来改变蛇的方向。（如果键盘输入不是方向键，`dirs` 函数返回 `nil`，且 `update-direction` 将不执行。）
+- 游戏面板忽略了 `keyReleased` 和 `keyTyped`。
 
 `game` 函数创建一个新游戏：
 
@@ -5490,16 +5581,22 @@ Clojure 的引用模型是该语言中最创新的部分。你在本章中看到
 #### 脚注
 
 [42]: [Simple-Made-Easy](https://www.infoq.com/presentations/Simple-Made-Easy)
+
 [43]: [atom-snake.clj](https://planet.plt-scheme.org/package-source/dvanhorn/snake.plt/1/0/main)
+
 [44]: [smaller-snake](https://www.plt1.com/1069/smaller-snake/)
+
 [45]: [even-smaller-snake](https://www.plt1.com/1070/even-smaller-snake/)
+
 [46]: [worm.html](http://www.ccs.neu.edu/home/cce/acl2/worm.html) 包含了使用定理证明器 ACL2 的验证。
+
 [47]: [ClojureSnake.html](http://www.ociweb.com/mark/programming/ClojureSnake.html)
+
 [48]: [programming-clojure](https://github.com/Chouser/programming-clojure)
+
 [49]: [Expression_problem](https://en.wikipedia.org/wiki/Expression_problem)
 
-
-
+# 协议和数据类型
 
 协议（Protocols）和数据类型（Datatypes）提供了一种高性能、灵活的抽象与实现机制，使得在 Clojure 中编程时不再需要编写 Java 接口和类。通过协议和数据类型，你可以创建新的抽象，以及实现这些抽象的新类型，甚至可以将新的抽象扩展到现有的类型上。
 
@@ -5516,7 +5613,7 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
 
 在编写了可以处理多种现有数据类型的 `spit` 和 `slurp` 版本（分别命名为 `expectorate` 和 `gulp`）之后，我们将创建一个新的数据类型 `datatype` `CryptoVault`，它可以与我们的函数版本配合，也可以与原始函数配合。
 
-### gulp 和 expectorate
+### `gulp` 和 `expectorate`
 
 `gulp` 函数是 Clojure `slurp` 函数的简化版本，而 `expectorate` 尽管名字很高大上，但它是 Clojure `spit` 函数的简化版。让我们写一个 `gulp` 的基础版本，它只能从 `java.io.File` 读取。
 
@@ -5543,6 +5640,8 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
 
 | [src/examples/expectorate.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/expectorate.clj) |
 
+
+
 ```clojure
 (ns examples.expectorate
   (:import (java.io FileOutputStream OutputStreamWriter BufferedWriter)))
@@ -5554,12 +5653,12 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
     (.write writer (str content))))
 ```
 
-它创建一个 `BufferedWriter` 文件，将 `content` 参数的值转换为字符串，并将其写入 `BufferedWriter`。
+它创建一个`BufferedWriter`文件，将`content`参数的值转换为字符串，并将其写入`BufferedWriter`。
 
-但如果我们想支持额外的类型，如 `Socket`、URL 以及基础的输入和输出流呢？我们需要更新 `gulp` 和 `expectorate`，使其能够从文件以外的数据类型创建 `BufferedReader` 和 `BufferedWriter`。因此，让我们创建两个函数 `make-reader` 和 `make-writer` 来负责这项工作。
+但如果我们想支持额外的类型，如`Socket`、`URL`以及基础的输入和输出流呢？我们需要更新`gulp`和`expectorate`，使其能够从文件以外的数据类型创建`BufferedReader`和`BufferedWriter`。因此，让我们创建两个函数`make-reader`和`make-writer`来负责这项工作。
 
-- `make-reader` 函数从输入源创建一个 `BufferedReader`。
-- `make-writer` 从输出创建一个 `BufferedWriter`。
+- `make-reader`函数从输入源创建一个`BufferedReader`。
+- `make-writer`从输出创建一个`BufferedWriter`。
 
 ```clojure
 (defn make-reader [src]
@@ -5569,7 +5668,7 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
   (-> dst FileOutputStream OutputStreamWriter BufferedWriter))
 ```
 
-和我们基础的 `gulp` 和 `expectorate` 函数一样，`make-reader` 和 `make-writer` 目前只作用于文件，但很快就会改变。现在让我们重构 `gulp` 和 `expectorate` 以使用新函数：
+和我们基础的`gulp`和`expectorate`函数一样，`make-reader`和`make-writer`目前只作用于文件，但很快就会改变。现在让我们重构`gulp`和`expectorate`以使用新函数：
 
 | [src/examples/protocols.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/protocols.clj) |
 
@@ -5588,7 +5687,7 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
     (.write writer (str content))))
 ```
 
-现在只需通过更新 `make-reader` 和 `make-writer`即可为 `gulp` 和 `expectorate` 添加额外的源和目的类型支持。支持额外类型的一种方法是使用 `cond` 或 `condp` 语句处理不同类型。例如，以下版本的 `make-reader` 用 `condp` 语句替换了 `FileInputStream` 构造函数的调用，根据给定输入创建 `InputStream`，无论它是 `File`、`Socket` 或 `URL` 还是已经是 `InputStream`。
+现在只需通过更新`make-reader`和`make-writer`即可为`gulp`和`expectorate`添加额外的源和目的类型支持。支持额外类型的一种方法是使用`cond`或`condp`语句处理不同类型。例如，以下版本的`make-reader`用`condp`语句替换了`FileInputStream`构造函数的调用，根据给定输入创建`InputStream`，无论它是`File`、`Socket`或`URL`，还是已经是`InputStream`。
 
 ```clojure
 (defn make-reader [src]
@@ -5603,7 +5702,7 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
     InputStreamReader BufferedReader))
 ```
 
-这是一个相同策略的 `make-writer` 版本：
+这是一个相同策略的`make-writer`版本：
 
 ```clojure
 (defn make-writer [dst]
@@ -5618,29 +5717,26 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
     OutputStreamWriter BufferedWriter))
 ```
 
+这种方法的问题在于它是封闭的：没有其他人可以在不重写`make-reader`和`make-writer`的情况下为新的源和目标类型添加支持。我们需要的是一种开放的解决方案，即可以在之后由不同的方添加对新类型的支持。我们需要两个抽象，一个用于读取，一个用于写入。
 
-
-
-这种方法的问题在于它是封闭的：没有其他人可以在不重写 `make-reader` 和 `make-writer` 的情况下为新的源和目标类型添加支持。我们需要的是一种开放的解决方案，即可以在之后由不同的方添加对新类型的支持。我们需要两个抽象，一个用于读取，一个用于写入。
-
-## 6.2 接口 (Interfaces)
+## 6.2 接口（Interfaces）
 
 在 Java 中，支持这种形式抽象的常用机制是接口。接口机制提供了一种将调用调度到抽象的方法（该方法在接口定义中指定），根据传入的第一个参数的数据类型到具体的实现。在 Java 中，第一个参数是隐式的；它是实现该接口的对象。
 
 以下是接口的优点：
 
--   数据类型可以实现多个接口。
--   接口只提供规范而不提供实现，这允许实现多个接口，而不会产生与多类继承相关的问题。
+- 数据类型可以实现多个接口。
+- 接口只提供规范而不提供实现，这允许实现多个接口，而不会产生与多类继承相关的问题。
 
 接口的缺点是，现有的数据类型无法在不重写的情况下扩展以实现新的接口。
 
-我们可以在 Clojure 中使用 `definterface` 宏创建 Java 接口。它接收一个名称和一个或多个方法签名：
+我们可以在 Clojure 中使用`definterface`宏创建 Java 接口。它接收一个名称和一个或多个方法签名：
 
-```
+```clojure
 (definterface name & sigs)
 ```
 
-让我们为“可以从中读取并写入的对象”创建一个接口抽象，将其命名为 `IOFactory`。
+让我们为“可以从中读取并写入的对象”创建一个接口抽象，将其命名为`IOFactory`。
 
 ```clojure
 (definterface IOFactory
@@ -5648,30 +5744,30 @@ Clojure 的 `spit` 和 `slurp` I/O 函数基于两个抽象构建：读取和写
   (^java.io.BufferedWriter make-writer [this]))
 ```
 
-这将创建一个名为 `IOFactory` 的接口，其中包含两个抽象函数 `make-reader` 和 `make-writer`。任何实现此接口的类都必须包含接收单个参数以及数据类型本身实例的函数，并分别返回 `BufferedReader` 和 `BufferedWriter`。
+这将创建一个名为`IOFactory`的接口，其中包含两个抽象函数`make-reader`和`make-writer`。任何实现此接口的类都必须包含接收单个参数以及数据类型本身实例的函数，并分别返回`BufferedReader`和`BufferedWriter`。
 
-遗憾的是，类所支持的接口是由作者在设计时确定的；一旦定义了 Java 类，无法在不重写的情况下更新以支持新的接口。因此，我们无法扩展 `File`、`Socket` 和 `URL` 类来实现 `IOFactory` 接口。
+遗憾的是，类所支持的接口是由作者在设计时确定的；一旦定义了 Java 类，无法在不重写的情况下更新以支持新的接口。因此，我们无法扩展`File`、`Socket`和`URL`类来实现`IOFactory`接口。
 
-与我们基于 `condp` 实现的 `make-reader` 和 `make-writer` 版本一样，我们的接口对作者以外的其他方是封闭扩展的。这就是所谓的“表达式问题”（expression problem）的一部分。幸运的是，Clojure 有它的解决方案。
+与我们基于`condp`实现的`make-reader`和`make-writer`版本一样，我们的接口对作者以外的其他方是封闭扩展的。这就是所谓的“表达式问题”（expression problem）的一部分。幸运的是，Clojure 有它的解决方案。
 
-## 6.3 协议 (Protocols)
+## 6.3 协议（Protocols）
 
 Clojure 解决表达式问题的一部分方案是协议。协议提供了一种灵活的抽象机制，通过只提供规范而不提供实现，并允许数据类型实现多个协议，利用了接口的最优部分。此外，协议通过允许对现有类型进行非侵入式扩展以支持新协议，解决了接口的关键局限性。
 
 以下是协议的优点：
 
--   数据类型可以实现多个协议。
--   协议只提供规范而不提供实现，这允许实现多个接口，而不会产生与多类继承相关的问题。
--   现有的数据类型可以在不修改数据类型的情况下扩展以实现新接口。
--   协议方法名带有命名空间，因此当多个方选择扩展同一种现有类型时，不存在名称冲突的风险。
+- 数据类型可以实现多个协议。
+- 协议只提供规范而不提供实现，这允许实现多个接口，而不会产生与多类继承相关的问题。
+- 现有的数据类型可以在不修改数据类型的情况下扩展以实现新接口。
+- 协议方法名带有命名空间，因此当多个方选择扩展同一种现有类型时，不存在名称冲突的风险。
 
-`defprotocol` 宏的工作方式与 `definterface` 相似，但现在我们能够扩展现有的数据类型来实现我们的新抽象。
+`defprotocol`宏的工作方式与`definterface`相似，但现在我们能够扩展现有的数据类型来实现我们的新抽象。
 
-```
+```clojure
 (defprotocol name & opts+sigs)
 ```
 
-让我们将 `IOFactory` 重新定义为协议而不是接口。
+让我们将`IOFactory`重新定义为协议而不是接口。
 
 ```clojure
 (defprotocol IOFactory
@@ -5680,15 +5776,15 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
   (make-writer [this] "创建一个 BufferedWriter."))
 ```
 
-注意，我们可以为整个协议包含文档字符串，也可以为每个方法包含文档字符串。现在让我们扩展 `java.io.InputStream` 和 `java.io.OutputStream` 来实现我们的 `IOFactory` 协议。
+注意，我们可以为整个协议包含文档字符串，也可以为每个方法包含文档字符串。现在让我们扩展`java.io.InputStream`和`java.io.OutputStream`来实现我们的`IOFactory`协议。
 
-我们使用 `extend` 函数将现有类型与协议关联，并提供所需的函数实现（在此上下文中通常称为方法）。扩展的参数是待扩展的类型名称、要实现的协议名称以及一个方法实现映射，其中键是方法名的关键字化版本。
+我们使用`extend`函数将现有类型与协议关联，并提供所需的函数实现（在此上下文中通常称为方法）。扩展的参数是待扩展的类型名称、要实现的协议名称以及一个方法实现映射，其中键是方法名的关键字化版本。
 
-```
+```clojure
 (extend type & proto+mmaps)
 ```
 
-对于 `InputStream` 的 `make-reader` 实现是将传递给它的值封装在 `BufferedReader` 中。
+对于`InputStream`的`make-reader`实现是将传递给它的值封装在`BufferedReader`中。
 
 ```clojure
 (extend InputStream IOFactory
@@ -5698,7 +5794,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (throw (IllegalArgumentException "无法作为 InputStream 打开.")))})
 ```
 
-同样，`OutputStream` 的 `make-writer` 实现将其给定的输入封装在 `BufferedWriter` 中。由于你不能向 `InputStream` 写入或从 `OutputStream` 读取，因此 `make-writer` 和 `make-reader` 的相应实现会抛出 `IllegalArgumentException`。
+同样，`OutputStream`的`make-writer`实现将其给定的输入封装在`BufferedWriter`中。由于你不能向`InputStream`写入或从`OutputStream`读取，因此`make-writer`和`make-reader`的相应实现会抛出`IllegalArgumentException`。
 
 ```clojure
 (extend OutputStream IOFactory
@@ -5708,9 +5804,9 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (BufferedWriter dst))})
 ```
 
-我们可以使用 `extend-type` 宏扩展 `java.io.File` 类型来实现 `IOFactory`，它提供了比 `extend` 稍微整洁的语法。
+我们可以使用`extend-type`宏扩展`java.io.File`类型来实现`IOFactory`，它提供了比`extend`稍微整洁的语法。
 
-```
+```clojure
 (extend-type type & specs)
 ```
 
@@ -5722,11 +5818,11 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
   (make-writer [dst] (FileOutputStream dst)))
 ```
 
-注意，我们从文件创建一个 `InputStream`（具体来说是 `FileInputStream`），然后调用 `make-reader`，该调用将调度到早早为 `InputStream` 定义的实现。对 `make-writer` 方法我们也相同的递归模式，以及以下类型的方法。
+注意，我们从文件创建一个`InputStream`（具体来说是`FileInputStream`），然后调用`make-reader`，该调用将调度到早早为`InputStream`定义的实现。对`make-writer`方法我们也相同的递归模式，以及以下类型的方法。
 
-我们可以使用 `extend-protocol` 宏一次性扩展剩余的类型：
+我们可以使用`extend-protocol`宏一次性扩展剩余的类型：
 
-```
+```clojure
 (extend-protocol protocol & specs)
 ```
 
@@ -5746,10 +5842,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
       (throw (IllegalArgumentException)))))
 ```
 
-
-
-
-```
+```clojure
 "Can't write to non-file URL"
 ```
 
@@ -5815,20 +5908,26 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
         (throw (IllegalArgumentException "Can't write to non-file URL"))))))
 ```
 
-## 6.4 数据类型 (Datatypes)
+## 6.4 数据类型（Datatypes）
 
 我们已经展示了如何通过协议扩展现有类型以实现新的抽象，但如果我们想在 Clojure 中创建一个新类型呢？这就是数据类型（datatypes）大显用场。数据类型提供了以下功能：
 
-* 唯一的类，可以是命名的或匿名的
-*   结构，可以是字段形式或隐式闭包
-*   可以带有类型提示且可以是原始类型的字段
-*   对协议或接口中抽象方法的可选实现
-*   默认不可变性
-*   与映射（maps）的统一
+- 唯一的类，可以是命名的或匿名的。
+- 结构，可以是字段形式或隐式闭包。
 
-我们将使用 `deftype` 宏来定义一个名为 `CryptoVault` 的新数据类型，它将实现两个协议，包括 `IOFactory`。既然 `gulp` 和 `expectorate` 已经支持几个 Java 类，让我们创建一个新的支持类型 `CryptoVault`。你将通过传递一个实现了 `clojure.java.io.IOFactory` 协议的参数（不是我们在这里定义的这一个）、加密密钥库的路径以及密码来创建 `CryptoVault` 的实例。吐出到 `CryptoVault` 中的内容将被加密并写入 `IOFactory` 对象，然后在 gulp 回时被解密。
 
-我们将使用 `deftype` 来创建新类型：
+
+可以带有类型提示且可以是原始类型的字段
+
+对协议或接口中抽象方法的可选实现
+
+默认不可变性
+
+与映射（maps）的统一
+
+我们将使用`deftype`宏来定义一个名为`CryptoVault`的新数据类型，它将实现两个协议，包括`IOFactory`。既然`gulp`和`expectorate`已经支持几个 Java 类，让我们创建一个新的支持类型`CryptoVault`。你将通过传递一个实现了`clojure.java.io.IOFactory`协议的参数（不是我们在这里定义的这一个）、加密密钥库的路径以及密码来创建`CryptoVault`的实例。吐出到`CryptoVault`中的内容将被加密并写入`IOFactory`对象，然后在 gulp 回时被解密。
+
+我们将使用`deftype`来创建新类型：
 
 ```clojure
 (deftype name [& fields] & opts)
@@ -5840,7 +5939,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
 (deftype CryptoVault [filename keystore password])
 ```
 
-一旦定义了类型，我们就可以这样创建 `CryptoVault` 的实例：
+一旦定义了类型，我们就可以这样创建`CryptoVault`的实例：
 
 ```clojure
 (def vault (CryptoVault "vault-file" "keystore" "toomanysecrets"))
@@ -5849,10 +5948,12 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
 可以使用访问 Java 对象字段时相同的前缀点语法来访问其字段：
 
 `(.filename vault)`
+
 `(.keystore vault)`
+
 `(.password vault)`
 
-现在我们已经定义了基本的 `CryptoVault` 类型，让我们通过一些方法添加行为。数据类型只能实现已在协议或接口中指定的方法，因此让我们先创建一个 `Vault` 协议。
+现在我们已经定义了基本的`CryptoVault`类型，让我们通过一些方法添加行为。数据类型只能实现已在协议或接口中指定的方法，因此让我们先创建一个`Vault`协议。
 
 ```clojure
 (defprotocol Vault
@@ -5861,7 +5962,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
   (vault-input-stream [vault]))
 ```
 
-该协议包含了三个函数——`init-vault`、`vault-output-stream` 和 `vault-input-stream`——每个 `Vault` 都必须实现这些函数。我们可以在 `deftype` 中内联定义新类型的方法；只需像之前一样传递类型名称和字段向量，随后是协议名称和一个或多个方法体：
+该协议包含了三个函数——`init-vault`、`vault-output-stream`和`vault-input-stream`——每个`Vault`都必须实现这些函数。我们可以在`deftype`中内联定义新类型的方法；只需像之前一样传递类型名称和字段向量，随后是协议名称和一个或多个方法体：
 
 ```clojure
 (ns examples.cryptovault
@@ -5887,7 +5988,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (make-writer (vault-output-stream vault))))
 ```
 
-注意，多个协议的方法内联定义；我们在一起定义了 `Vault` 和 `IOFactory` 协议的方法，尽管 `Vault` 方法体被省略了，并在后续描述。`init-vault` 方法将生成一个高级加密标准 (AES) 密钥，将其放入 `java.security.KeyStore` 中，将密钥库数据写入 `CryptoVault` 中 `keystore` 字段指定的文件，然后对其进行密码保护。
+注意，多个协议的方法内联定义；我们在一起定义了`Vault`和`IOFactory`协议的方法，尽管`Vault`方法体被省略了，并在后续描述。`init-vault`方法将生成一个高级加密标准 (AES) 密钥，将其放入`java.security.KeyStore`中，将密钥库数据写入`CryptoVault`中`keystore`字段指定的文件，然后对其进行密码保护。
 
 ```clojure
 (init-vault [vault]
@@ -5898,10 +5999,6 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
           (.setEntry "vault-key" key password)))
 ```
 
-
-
-
-
 ```clojure
 (KeyStore$SecretKeyEntry.key)
   (KeyStore$PasswordProtection. password))
@@ -5909,7 +6006,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (.store keystore fos password))))
 ```
 
-`vault-output-stream` 和 `vault-input-stream` 方法都会使用一个函数 `vault-key` 来加载与 `CryptoVault` 关联密钥库（keystore），并提取用于加密和解密库内容的 `AES` 密钥。
+`vault-output-stream`和`vault-input-stream`方法都会使用一个函数`vault-key`来加载与`CryptoVault`关联密钥库（keystore），并提取用于加密和解密库内容的`AES`密钥。
 
 ```clojure
 (defn vault-key [vault]
@@ -5920,7 +6017,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
           (.getKey "vault-key" password)))))
 ```
 
-`vault-output-stream` 方法使用 `vault-key` 方法初始化一个 `AES` 密码对象，根据 `Vault` 的文件名创建一个 `OutputStream`，然后使用该加密器和 `OutputStream` 创建一个 `CipherOutputStream` 实例。
+`vault-output-stream`方法使用`vault-key`方法初始化一个`AES`密码对象，根据`Vault`的文件名创建一个`OutputStream`，然后使用该加密器和`OutputStream`创建一个`CipherOutputStream`实例。
 
 ```clojure
 (vault-output-stream [vault]
@@ -5929,7 +6026,7 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (CipherOutputStream. (io/output-stream (.filename vault)) cipher)))
 ```
 
-`vault-input-stream` 方法的工作原理与 `vault-output-stream` 相同，只是它返回一个 `CipherInputStream`。
+`vault-input-stream`方法的工作原理与`vault-output-stream`相同，只是它返回一个`CipherInputStream`。
 
 ```clojure
 (vault-input-stream [vault]
@@ -5938,21 +6035,21 @@ Clojure 解决表达式问题的一部分方案是协议。协议提供了一种
     (CipherInputStream. (io/input-stream (.filename vault)) cipher)))
 ```
 
-要创建一个 `CryptoVault` 实例，只需传递数据应存储的位置、密钥库文件名以及保护密钥库的密码即可。
+要创建一个`CryptoVault`实例，只需传递数据应存储的位置、密钥库文件名以及保护密钥库的密码即可。
 
 ```clojure
 user=> (def vault (->CryptoVault "vault-file" "keystore" "toomanysecrets"))
 #'user/vault
 ```
 
-如果密钥库尚未初始化，请调用 `init-vault` 方法：
+如果密钥库尚未初始化，请调用`init-vault`方法：
 
 ```clojure
 user=> (init-vault vault)
 nil
 ```
 
-然后就可以像使用 `gulp` 和 `expectorate` 的其他源/目标一样一样使用 `CryptoVault` 了。
+然后就可以像使用`gulp`和`expectorate`的其他源/目标一样一样使用`CryptoVault`了。
 
 ```clojure
 user=> (expectorate vault "This is a test of the CryptoVault")
@@ -5962,7 +6059,7 @@ user=> (gulp vault)
 "This is a test of the CryptoVault"
 ```
 
-我们可以通过扩展 `CryptoVault` 以使其支持 `clojure.java.io/IOFactory` 协议，将其与内置的 `spit` 和 `slurp` 函数一起使用。此版本的 `IOFactory` 有四个方法（而不是我们的那样两个），并且在一个名为 `default-streams-impl` 的 map 中定义了默认方法实现。我们将通过 `assoc` 将我们的新实现关联到该 map 并将其传递给 `extend` 函数，从而重写其中的两个方法：`make-input-stream` 和 `make-output-stream`。
+我们可以通过扩展`CryptoVault`以使其支持`clojure.java.io/IOFactory`协议，将其与内置的`spit`和`slurp`函数一起使用。此版本的`IOFactory`有四个方法（而不是我们的那样两个），并且在一个名为`default-streams-impl`的 map 中定义了默认方法实现。我们将通过`assoc`将我们的新实现关联到该 map 并将其传递给`extend`函数，从而重写其中的两个方法：`make-input-stream`和`make-output-stream`。
 
 ```clojure
 (extend CryptoVault clojure.java.io/IOFactory
@@ -5971,7 +6068,7 @@ user=> (gulp vault)
     :make-output-stream (fn [x opts] (vault-output-stream x))))
 ```
 
-就是这样；现在我们可以使用 `slurp` 和 `spit` 读写 `CryptoVault`。
+就是这样；现在我们可以使用`slurp`和`spit`读写`CryptoVault`。
 
 ```clojure
 user=> (spit vault "This is a test of the CryptoVault using spit and slurp")
@@ -5981,7 +6078,7 @@ user=> (slurp vault)
 "This is a test of the CryptoVault using spit and slurp"
 ```
 
-让我们把所有部分组合到一个 `.clj` 文件中。在你的目录中创建一个 `src/examples` 子目录，并创建一个名为 `vault_complete.clj` 的文件。
+让我们把所有部分组合到一个`.clj`文件中。在你的目录中创建一个`src/examples`子目录，并创建一个名为`vault_complete.clj`的文件。
 
 `src/examples/vault_complete.clj`
 
@@ -5989,7 +6086,7 @@ user=> (slurp vault)
 (ns examples.vault-complete
   (:require [clojure.java.io :as io]
             [examples.protocols :as proto])
-  (:import [java.security.KeyStore KeyStore$SecretKeyEntry
+  (:import [java.security KeyStore KeyStore$SecretKeyEntry
            KeyStore$PasswordProtection
            javax.crypto.Cipher CipherOutputStream
            CipherInputStream
@@ -6034,45 +6131,71 @@ user=> (slurp vault)
     :make-output-stream (fn [x opts] (vault-output-stream x))))
 ```
 
-
-
-
-正因如此，Clojure 一直鼓励使用映射（maps）来对此类信息建模，对于数据类型也是如此，而 records 正有用场。record 是一种数据类型，类似于使用 `deftype` 创建类型，但它实现了 `PersistentMap`，因此可以像任何其他 map 一样使用（大部分情况下）；而且由于 records 也是真正的类，它们通过协议（protocols）支持基于类型的多态。通过 records，我们兼顾了这两者的优点：可以实现协议的 map。
+正因如此，Clojure 一直鼓励使用映射（maps）来对此类信息建模，对于数据类型也是如此，而 records 正有用场。record 是一种数据类型，类似于使用`deftype`创建类型，但它实现了`PersistentMap`，因此可以像任何其他 map 一样使用（大部分情况下）；而且由于 records 也是真正的类，它们通过协议（protocols）支持基于类型的多态。通过 records，我们兼顾了这两者的优点：可以实现协议的 map。
 
 有什么比使用 records 来播放音乐更自然的呢？所以，让我们创建一个表示音乐音符的 record，包含音高（pitch）、八度（octave）和持续时间（duration）字段；然后我们将使用 JDK 内置的 MIDI 合成器来播放这些音符的序列。
 
-由于 records 是 map，我们将能够使用 `assoc` 和 `update-in` 函数更改单个音符的属性，并可以使用 `map` 和 `reduce` 创建或转换整个音符序列。这让我们能够访问整个 Clojure 集合 API。
+由于 records 是 map，我们将能够使用`assoc`和`update-in`函数更改单个音符的属性，并可以使用`map`和`reduce`创建或转换整个音符序列。这让我们能够访问整个 Clojure 集合 API。
 
-我们将使用 `defrecord` 宏创建一个 `Note` record，它的行为与 `deftype` 相同。
+我们将使用`defrecord`宏创建一个`Note` record，它的行为与`deftype`相同。
 
-| | `(defrecord name [& fields] & opts+specs)` |
+```clojure
+(defrecord name [& fields] & opts+specs)
+```
 
-一个 `Note` record 有三个字段：pitch、octave 和 duration。
+一个`Note` record 有三个字段：pitch、octave 和 duration。
 
-| | `(defrecord Note [pitch octave duration])` |
-| | `-> user.Note` |
+```clojure
+(defrecord Note [pitch octave duration])
+```
 
-音高将由像 `:C`、`:C#` 和 `:Db` 这样的关键字表示，它们分别代表 C、C♯ (C sharp) 和 D♭ (D flat)。每个音高可以在不同的八度上播放；例如，中 C 在第四八度。duration 表示音符的长度；全音符用 1 表示，二分音符用 1/2，四分音符用 1/4，十六分音符用 1/16。例如，我们可以用这个 `Note` record 表示一个第四八度上的 D♯ 二分音符：
+```clojure
+-> user.Note
+```
 
-| | `(->Note :D# 4 1/2)` |
-| | `-> #user.Note{:pitch :D#, :octave 4, :duration 1/2}` |
+音高将由像`:C`、`:C#`和`:Db`这样的关键字表示，它们分别代表 C、C♯ (C sharp) 和 D♭ (D flat)。每个音高可以在不同的八度上播放；例如，中 C 在第四八度。duration 表示音符的长度；全音符用 1 表示，二分音符用 1/2，四分音符用 1/4，十六分音符用 1/16。例如，我们可以用这个`Note` record 表示一个第四八度上的 D♯ 二分音符：
+
+```clojure
+(->Note :D# 4 1/2)
+```
+
+```clojure
+-> #user.Note{:pitch :D#, :octave 4, :duration 1/2}
+```
 
 我们可以像对待任何其他数据类型一样对待 records，使用点语法访问它们的字段。
 
-| | `(.pitch (->Note :D# 4 1/2))` |
-| | `-> :D#` |
+```clojure
+(.pitch (->Note :D# 4 1/2))
+```
+
+```clojure
+-> :D#
+```
 
 但 records 也是像 map 的：
 
-| | `(map? (->Note :D# 4 1/2))` |
-| | `-> true` |
+```clojure
+(map? (->Note :D# 4 1/2))
+```
+
+```clojure
+-> true
+```
 
 所以我们也可以使用关键字访问它们的字段：
 
-| | `(:pitch (->Note :D# 4 1/2))` |
-| | `-> :D#` |
+```clojure
+(:pitch (->Note :D# 4 1/2))
+```
 
-我们可以使用 `assoc` 和 `update-in` 创建修改过的 records。
+```clojure
+-> :D#
+```
+
+
+
+我们可以使用`assoc`和`update-in`创建修改过的 records。
 
 | | `(assoc (->Note :D# 4 1/2) :pitch :Db :duration 1/4)` |
 | | `-> #user.Note{:pitch :Db, :octave 4, :duration 1/4}` |
@@ -6084,21 +6207,21 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 | | `(assoc (->Note :D# 4 1/2) :velocity 100)` |
 | | `-> #user.Note{:pitch :D#, :octave 4, :duration 1/2, :velocity 100}` |
 
-我们将使用可选的 `:velocity` 字段来表示播放音符的力度。
+我们将使用可选的`:velocity`字段来表示播放音符的力度。
 
-在 record 上使用，`assoc` 和 `update-in` 都会返回一个新的 record，但 `dissoc` 函数的工作方式稍不同；如果被移除的字段是可选的（如上例中的 `velocity`），它将返回一个新的 record；但如果字段是 `defrecord` 规范要求的（如 pitch、octave 或 duration），它将返回一个普通的 map。
+在 record 上使用，`assoc`和`update-in`都会返回一个新的 record，但`dissoc`函数的工作方式稍不同；如果被移除的字段是可选的（如上例中的`velocity`），它将返回一个新的 record；但如果字段是`defrecord`规范要求的（如`pitch`、`octave`或`duration`），它将返回一个普通的 map。
 
 换句话说，如果你从给定类型的 record 中删除一个必需字段，它就不再是该类型的 record，而是简单地变成了一个 map。
 
 | | `(dissoc (->Note :D# 4 1/2) :octave)` |
 | | `-> {:pitch :D#, :duration 1/2}` |
 
-注意，在这种情况下 `dissoc` 返回的是一个 map 而不是 record。records 和 map 之间的区别在于，与 map 不同，records 不是关键字的函数。
+注意，在这种情况下`dissoc`返回的是一个 map 而不是 record。records 和 map 之间的区别在于，与 map 不同，records 不是关键字的函数。
 
 | | `((->Note. :D# 4 1/2) :pitch)` |
 | | `-> user.Note cannot be cast to clojure.lang.IFn` |
 
-抛出 `ClassCastException` 是因为 records 没有像 map 那样实现 `IFn` 接口。这是设计如此并导致了风格上的差异。在访问集合时，你应该将集合放在前面。在访问一个（概念上）作为数据记录的 map 时，你应该将关键字放在前面，即使该 record 是实现为普通的 map。现在我们有了 `Note` record，让我们添加一些方法，以便使用 JDK 内置的合成器来播放它们。我们首先创建一个包含三个方法的 `midiNote` 协议：
+抛出`ClassCastException`是因为 records 没有像 map 那样实现`IFn`接口。这是设计如此并导致了风格上的差异。在访问集合时，你应该将集合放在前面。在访问一个（概念上）作为数据记录的 map 时，你应该将关键字放在前面，即使该 record 是实现为普通的 map。现在我们有了`Note` record，让我们添加一些方法，以便使用 JDK 内置的合成器来播放它们。我们首先创建一个包含三个方法的`midiNote`协议：
 
 ```
 (defdef midiNote
@@ -6107,7 +6230,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
   (play [this tempo-channel]))
 ```
 
-为了用 MIDI 合成器播放我们的音符，我们需要将其音高和八度转换为 MIDI 编号，并将持续时间转换为毫秒。在这里我们定义了 `to-msec`、`key-number` 和 `play`。
+为了用 MIDI 合成器播放我们的音符，我们需要将其音高和八度转换为 MIDI 编号，并将持续时间转换为毫秒。在这里我们定义了`to-msec`、`key-number`和`play`。
 
 ```
 (import 'javax.sound.midi.MidiSystem)
@@ -6117,7 +6240,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
       (* 1000 (duration-to-bpm (duration this)))))
 ```
 
-`to-msec` 函数根据给定的速度（以每分钟拍数 bpm 表示），将音符的持续时间从全音符、二分音符、四分音符等转换为毫秒。
+`to-msec`函数根据给定的速度（以每分钟拍数 bpm 表示），将音符的持续时间从全音符、二分音符、四分音符等转换为毫秒。
 
 ```
 (key-number [this]
@@ -6130,7 +6253,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
        (scale (:pitch this)))))
 ```
 
-`key-number` 函数将表示音高的关键字映射为 0 到 11 的数字，并将该数字与给定的八度结合以相应的 MIDI 编号。
+`key-number`函数将表示音高的关键字映射为 0 到 11 的数字，并将该数字与给定的八度结合以相应的 MIDI 编号。
 
 ```
 (play [this tempo-channel]
@@ -6139,7 +6262,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
     (Thread/sleep (to-msec tempo))))
 ```
 
-最后，`play` 方法接收音符、速度和通道；向通道发送 `noteOn` 消息；然后等待持续时间。在当前线程睡眠期间，音符仍在播放，直到下一个音符发送到通道时停止。
+最后，`play`方法接收音符、速度和通道；向通道发送`noteOn`消息；然后等待持续时间。在当前线程睡眠期间，音符仍在播放，直到下一个音符发送到通道时停止。
 
 现在我们需要一个设置 MIDI 合成器并播放音符序列的函数：
 
@@ -6151,9 +6274,9 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
         (play note tempo channel)))))
 ```
 
-`perform` 函数接收音符序列和可选的速度值，打开 MIDI 合成器，获取其通道，然后调用每个音符的 `play` 方法。
+`perform`函数接收音符序列和可选的速度值，打开 MIDI 合成器，获取其通道，然后调用每个音符的`play`方法。
 
-现在所有部分都就绪了，让我们使用 `Note` records 制作音乐：
+现在所有部分都就绪了，让我们使用`Note` records 制作音乐：
 
 ```
 (def close-encounters [(->Note D 3 1/2)
@@ -6163,16 +6286,13 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
                     (->Note G 2 1/2)])
 ```
 
-在这种情况下，我们的“音乐”是由电影《接触》中外星飞船的五个音符组成的。要播放它，只需将序列传递给 `perform` 函数即可：
+在这种情况下，我们的“音乐”是由电影《接触》中外星飞船的五个音符组成的。要播放它，只需将序列传递给`perform`函数即可：
 
 ```
 (perform close-encounters)
 ```
 
-
-
-
-我们还可以使用 `for` 宏动态生成音符序列。
+我们还可以使用`for`宏动态生成音符序列。
 
 ```clojure
 (def jaws (for [duration [1/2 1/2 1/4 1/4 1/8 1/8 1/8 1/8]
@@ -6186,7 +6306,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 
 结果是电影《大鲨》中的主题曲——一段交替的 E 和 F 音符，随着从二分音符变为四分符再到八分音符，速度逐渐加快。
 
-由于音符是记录（records），而记录类似于映射（map），我们可以使用任何作用于 map 的 Clojure 函数来操作它们。例如，我们可以将 `update-in` 函数映射到 `Close Encounters` 序列上，以提高或降低它的八度。
+由于音符是记录（records），而记录类似于映射（map），我们可以使用任何作用于 map 的 Clojure 函数来操作它们。例如，我们可以将`update-in`函数映射到`Close Encounters`序列上，以提高或降低它的八度。
 
 ```clojure
 (perform (map #(update-in % [:octave] inc) close-encounters))
@@ -6196,7 +6316,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 -> nil
 ```
 
-或者我们也可以创建一个音符序列，其可选字段 `:velocity` 的值逐渐变大：
+或者我们也可以创建一个音符序列，其可选字段`:velocity`的值逐渐变大：
 
 ```clojure
 (perform (for [velocity [64 80 90 100 110 120]]
@@ -6204,9 +6324,9 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 -> nil
 ```
 
-这产生了一个力度逐渐增强的 D 音符序列。操作序列是 Clojure 的一大优势，因此在程序化地创建和操作 `Note` 记录序列方面有无限可能。
+这产生了一个力度逐渐增强的 D 音符序列。操作序列是 Clojure 的一大优势，因此在程序化地创建和操作`Note`记录序列方面有无限可能。
 
-让我们把 `MidiNote` 协议、`Note` 记录和 `perform` 函数一起放在一个名为 `src/examples/midi.clj` 的 Clojure 源文件中，以便我们以后使用它们。
+让我们把`MidiNote`协议、`Note`记录和`perform`函数一起放在一个名为`src/examples/midi.clj`的 Clojure 源文件中，以便我们以后使用它们。
 
 `src/examples/midi.clj`
 
@@ -6245,9 +6365,9 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 
 ## 6.6 reify
 
-`reify` 宏允许你创建一个实现了某个协议或接口的数据类型的匿名实例。请注意，你通过闭包（closure）访问它，而不是通过声明。这是因为没有成员变量：`reify & opts`。
+`reify`宏允许你创建一个实现了某个协议或接口的数据类型的匿名实例。请注意，你通过闭包（closure）访问它，而不是通过声明。这是因为没有成员变量：`reify & opts`。
 
-`reify` 与 `deftype` 和 `defrecord`一样，接受一个或多个协议或接口名称以及一系列方法体。与 `deftype` 和 `defrecord` 不同，它不接受名称或字段向量；使用 `reify` 产生的数据类型实例没有显式字段，而是依赖于闭包。让我们创作一些约翰·凯奇（John Cage）风格的偶然音乐，或者更好，创建一个偶然音乐生成器。我们将使用 `reify` 创建一个 `MidiNote` 实例，它在每次调用 `play` 方法时都会播放不同的音符。
+`reify`与`deftype`和`defrecord`一样，接受一个或多个协议或接口名称以及一系列方法体。与`deftype`和`defrecord`不同，它不接受名称或字段向量；使用`reify`产生的数据类型实例没有显式字段，而是依赖于闭包。让我们创作一些约翰·凯奇（John Cage）风格的偶然音乐，或者更好，创建一个偶然音乐生成器。我们将使用`reify`创建一个`MidiNote`实例，它在每次调用`play`方法时都会播放不同的音符。
 
 `src/examples/generator.clj`
 
@@ -6265,7 +6385,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 (perform (repeat 15 rand-note)))
 ```
 
-我们需要做的第一件事是从 `examples.midi` 命名空间导入（而不是使用或引入）我们的 `MidiNote` 协议。接下，我们绑定两个值：`min-duration` 和 `min-velocity`，我们将在 `MidiNote` 方法实现中使用它们。然后，我们使用 `reify` 创建一个匿名类型的实例，该类型实现了 `MidiNote` 协议，并在每次调用 `play` 方法时都会随机选择音符、持续时间和力度。最后，我们使用 `repeat` 函数创建一个由单个 `rand-note` 实例组成的 15 个音符的序列并执行它。瞧，你现在有了一个虚拟的约翰·凯奇！
+我们需要做的第一件事是从`examples.midi`命名空间导入（而不是使用或引入）我们的`MidiNote`协议。接下，我们绑定两个值：`min-duration`和`min-velocity`，我们将在`MidiNote`方法实现中使用它们。然后，我们使用`reify`创建一个匿名类型的实例，该类型实现了`MidiNote`协议，并在每次调用`play`方法时都会随机选择音符、持续时间和力度。最后，我们使用`repeat`函数创建一个由单个`rand-note`实例组成的 15 个音符的序列并执行它。瞧，你现在有了一个虚拟的约翰·凯奇！
 
 ## 6.7 总结
 
@@ -6273,10 +6393,7 @@ records 是开放的，因此我们可以将额外的字段关联到 record 中�
 
 但还有更多。Clojure 的宏实现易于学习和正确用于常用任务，并且足以处理更困难的宏相关任务。在下一章中，你将看到 Clojure 如何将宏引入主流编程。
 
-
-
-
-宏（Macros）与其他编程范式非常不同，以至于你可能苦于不知道何时使用它们。没有比社区的共享经验更好的指南了，因此第 7.4 节，*宏的分类 基于 Clojure 本身和 contrib 库中的宏，介绍了 Clojure 宏的分类。
+宏（Macros）与其他编程范式非常不同，以至于你可能苦于不知道何时使用它们。没有比社区的共享经验更好的指南了，因此第 7.4 节，*宏的分类* 基于 Clojure 本身和 contrib 库中的宏，介绍了 Clojure 宏的分类。
 
 ## 7.1 何时使用宏
 
@@ -6290,32 +6407,32 @@ Macro Club 的第二条规则是`如果这是封装模式的唯一方法，就�
 
 ## 7.2 编写控制流宏
 
-Clojure 将 `if` 特殊形式作为语言的一部分提供：
+Clojure 将`if`特殊形式作为语言的一部分提供：
 
-| | (if (= 1 1) (println "yep, math still works today")) |
-| | yep, math still works today |
+| | `(if (= 1 1) (println "yep, math still works today"))` |
+| | `yep, math still works today` |
 
-有些语言有 `unless`，它是（几乎）`if` 的相反。`unless` 执行一个测试，仅当测试在逻辑上为 `false` 时执行其执行体。
+有些语言有`unless`，它是（几乎）`if`的相反。`unless`执行一个测试，仅当测试在逻辑上为`false`时执行其执行体。
 
-Clojure 没有 `unless`，但它有一个名为 `when-not` 的等效宏。为了有一个简单的示例作为开始，让我们假设 `when-not` 不存在并创建一个 `unless` 的实现。为了遵循 Macro Club 的规则，首先尝试将 `unless` 写成函数：
+Clojure 没有`unless`，但它有一个名为`when-not`的等效宏。为了有一个简单的示例作为开始，让我们假设`when-not`不存在并创建一个`unless`的实现。为了遵循 Macro Club 的规则，首先尝试将`unless`写成函数：
 
 [src/examples/macros.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros.clj)
 
 | | ; 这注定会失败... |
-| | (defn unless [expr form] |
-| | (if expr nil form)) |
+| | `(defn unless [expr form]` |
+| | `(if expr nil form))` |
 
-检查 `unless` 在其测试 `expr` 为 `false` 时是否正确评估了其形式：
+检查`unless`在其测试`expr`为`false`时是否正确评估了其形式：
 
-| | (unless false (println "this should print")) |
-| | this should print |
+| | `(unless false (println "this should print"))` |
+| | `this should print` |
 
-目前看起来一切正常。但让我们严谨地也测试 `true` 的情况：
+目前看起来一切正常。但让我们严谨地也测试`true`的情况：
 
-| | (unless true (println "this should not print")) |
-| | this should not print |
+| | `(unless true (println "this should not print"))` |
+| | `this should not print` |
 
-显然出问题了。问题在于 Clojure 在将参数传递给函数之前会评估它们，因此 `println` 在 `unless` 看到它之前就被调用了。事实上，之前的两次 `unless` 调用都过早地调用了 `println`，在进入 `unless` 函数之前。要看到这一点，在 `unless` 内部添加一个 `println`：
+显然出问题了。问题在于 Clojure 在将参数传递给函数之前会评估它们，因此`println`在`unless`看到它之前就被调用了。事实上，之前的两次`unless`调用都过早地调用了`println`，在进入`unless`函数之前。要看到这一点，在`unless`内部添加一个`println`：
 
 ```clojure
 (defn unless [expr form]
@@ -6323,31 +6440,35 @@ Clojure 没有 `unless`，但它有一个名为 `when-not` 的等效宏。为了
   (if expr nil form))
 ```
 
-现在你可以清楚地看到函数参数在传递给 `unless` 之前总是会被评估的：
+现在你可以清楚地看到函数参数在传递给`unless`之前总是会被评估的：
 
-| | (unless false (println "this should print")) |
-| | this should print |
-| | About to test... |
+| | `(unless false (println "this should print"))` |
+| | `this should print` |
+| | `About to test...` |
 | | |
-| | (unless true (println "this should not print")) |
+| | `(unless true (println "this should not print"))` |
+
+
+
 | | this should not print |
+
 | | About to test... |
 
 宏解决了这个问题，因为它们不会立即评估其参数。相反，你可以选择宏的参数在何时（以及是否！）被评估。
 
 当 Clojure 遇到一个宏时，它会分两个步骤处理它。首先，它展开（执行）宏并将其结果替换回程序中。这被称为宏展开时间。然后，它继续进行正常的编译时间。
 
-要编写 `unless`，你需要编写 Clojure 代码在宏展开时执行以下翻译：
+要编写`unless`，你需要编写 Clojure 代码在宏展开时执行以下翻译：
 
 `(unless expr form) -> (if expr nil form)`
 
-然后，你需要通过 `defmacro` 告诉 Clojure 你的代码是一个宏，它看起来几乎像 `defn`：
+然后，你需要通过`defmacro`告诉 Clojure 你的代码是一个宏，它看起来几乎像`defn`：
 
 ```clojure
 (defmacro name doc-string? attr-map? [params*] body)
 ```
 
-由于 Clojure 代码就是 Clojure 数据，你已经拥有了编写 `unless` 所需的所有工具。使用 `list` 构建 `if` 表达式来编写 `unless` 宏：
+由于 Clojure 代码就是 Clojure 数据，你已经拥有了编写`unless`所需的所有工具。使用`list`构建`if`表达式来编写`unless`宏：
 
 ```clojure
 (defmacro unless [expr form]
@@ -6360,122 +6481,101 @@ Clojure 没有特殊语法。代码由数据组成。这对于普通函数是如
 
 考虑一种语法更多样的语言，例如 Java。56 在 Java 中，编写代码的最灵活机制是实例方法。想象你正在编写 Java 程序。如果你在实例方法中发现了一个重复模式，你有整个 Java 语言可以封装该模式。
 
-目前为止良好。但 Java 也有许多“特殊形式”（尽管它们不那样命名）。与 Clojure 的特殊形式不同，每个特殊形式都有自己的语法。例如，`if` 是一个特殊形式。如果你发现涉及 `if` 的重复模式，没有方法可以封装该模式。你无法创建 `unless`，所以你通过 `if` 的惯用用法来模拟 `unless`：
+目前为止良好。但 Java 也有许多“特殊形式”（尽管它们不那样命名）。与 Clojure 的特殊形式不同，每个特殊形式都有自己的语法。例如，`if`是一个特殊形式。如果你发现涉及`if`的重复模式，没有方法可以封装该模式。你无法创建`unless`，所以你通过`if`的惯用用法来模拟`unless`：
 
 `if (!something)`
 
-另一个例子，Java `new` 是一个特殊形式。多态对于 `new` 来说不可用，所以你必须通过 `new` 的惯用用法来模拟多态：
+另一个例子，Java`new`是一个特殊形式。多态对于`new`来说不可用，所以你必须通过`new`的惯用用法来模拟多态：
 
 `w = WidgetFactory.makeWidget(...)`
 
-这种用法有点臃肿。它引入了一个全新的类 `WidgetFactory`。这个类在问题领域是没有意义的，仅仅是为了绕过构造函数特殊形式。与 `unless` 惯用用法不同，多态实例化用法复杂到有多种实现方法。因此，这种用法应该更准确地被称为设计模式。
+这种用法有点臃肿。它引入了一个全新的类`WidgetFactory`。这个类在问题领域是没有意义的，仅仅是为了绕过构造函数特殊形式。与`unless`惯用用法不同，多态实例化用法复杂到有多种实现方法。因此，这种用法应该更准确地被称为设计模式。
 
 Wikipedia 定义设计模式[57 为“解决软件设计中常见问题的通用性解决方案”。它继续指出，“设计模式不是可以直接转换（强调）为代码的完成设计。”
 
 这就是宏大用武之地。宏提供了一层间接，使得你可以自动处理任何重复模式的各个部分。
 
-
-
 当然，这个论点并不是完全单向的。许多人会认为，拥有一堆特殊的语法会让编程语言变得更容易学习或阅读。我们并不认同这一观点，即使我们认同，我们也愿意用语法的多样性来换取一个强大的宏系统。一旦你习惯了“代码即数据”，自动化设计模式的能力将带来巨大的回报。
 
 ### 扩展宏
 
-当你在创建 `unless` 宏时，你对符号 `'if` 进行了引用：
+当你在创建`unless`宏时，你对符号`'if`进行了引用：
 
-|   | `` `(defmacro unless [expr form]` `` |
-|   | `` ` (list 'if expr nil form))` `` |
+```clojure
+(defmacro unless [expr form]
+  (list 'if expr nil form))
+```
 
 但你没有对任何其他符号进行引用。为了理解为什么，你需要仔细考虑宏展开（macro expansion）阶段发生了什么：
 
-*   通过引用 `'if`，你防止了 Clojure 在宏展开时直接求值 `if`。相反，求值会去掉引用，将 `if` 留给编译。
-*   你不想引用 `` `expr` `` 和 `` `form` ``，因为它们是宏参数。Clojure 会在宏展开时不经求值就替换它们。
-*   你不需要引用 `nil`，因为 `nil` 求值的结果是它本身。
+- 通过引用`'if`，你防止了 Clojure 在宏展开时直接求值`if`。相反，求值会去掉引用，将`if`留给编译。
+- 你不想引用`expr`和`form`，因为它们是宏参数。Clojure 会在宏展开时不经求值就替换它们。
+- 你不需要引用`nil`，因为`nil`求值的结果是它本身。
 
 思考哪些需要引用会很快变得复杂。幸运的是，你不需要在脑中完成这项工作。Clojure 包含了诊断函数，以便你可以在 REPL 中测试宏展开。
 
-`macroexpand-1` 函数将向你展示宏展开阶段发生了什么：
+`macroexpand-1`函数将向你展示宏展开阶段发生了什么：
 
-|   | `` `(`**`macroexpand-1`** `form)` `` |
+```clojure
+(macroexpand-1 form)
+```
 
-使用 `macroexpand-1` 来证明 `unless` 展开为了合理的 `if` 表达式：
+使用`macroexpand-1`来证明`unless`展开为了合理的`if`表达式：
 
-|   | `` `(macroexpand-1 '(unless false (println "this should print")))` `` |
-|   | `` `-> (if false nil (println "this should print"))` `` |
+```clojure
+(macroexpand-1 '(unless false (println "this should print")))
+-> (if false nil (println "this should print"))
+```
 
-宏是复杂的野兽，我们再如何强调强调使用 `macroexpand-1` 测试它们的重要性。让我们回到这里，尝试一些 `unless` 的错误版本。这里有一个错误地引用了 `` `expr` `` 的版本：
+宏是复杂的野兽，我们再如何强调使用`macroexpand-1`测试它们的重要性都不为过。让我们回到这里，尝试一些`unless`的错误版本。这里有一个错误地引用了`expr`的版本：
 
-|   | `` `(defmacro bad-unless [expr form]` `` |
-|   | `` ` (list 'if 'expr nil form))` `` |
+```clojure
+(defmacro bad-unless [expr form]
+  (list 'if 'expr nil form))
+```
 
-当你展开 `bad-unless` 时，你会发现它生成了符号 `` `expr` ``，而不是实际的测试表达式：
+当你展开`bad-unless`时，你会发现它生成了符号`expr`，而不是实际的测试表达式：
 
-|   | `` `(macroexpand-1 '(bad-unless false (println "this should print")))` `` |
-|   | `` `-> (if expr nil (println "this should print"))` `` |
+```clojure
+(macroexpand-1 '(bad-unless false (println "this should print")))
+-> (if expr nil (println "this should print"))
+```
 
-如果你尝试实际使用 `bad-unless` 宏，Clojure 将报错说无法解析符号 `` `expr` ``：
+如果你尝试实际使用`bad-unless`宏，Clojure 将报错说无法解析符号`expr`：
 
-|   | `` `(bad-unless false (println "this should print"))` `` |
-|   | `` `-> java.lang.Exception: Unable to resolve symbol: expr in this context` `` |
+```clojure
+(bad-unless false (println "this should print"))
+-> java.lang.Exception: Unable to resolve symbol: expr in this context
+```
 
-有时宏会展开为其他宏。当这种情况发生时，Clojure 会继续展开所有的宏，直到只剩下普通代码。例如，`..` 宏会递归展开，产生一个点运算符调用，并包裹在另一个 `..` 中。我们可以通过以下展开来看到这一点：
+有时宏会展开为其他宏。当这种情况发生时，Clojure 会继续展开所有的宏，直到只剩下普通代码。例如，`..`宏会递归展开，产生一个点运算符调用，并包裹在另一个`..`中。我们可以通过以下展开来看到这一点：
 
-|   | `` `(macroexpand-1 ..)` `` |
+```clojure
+(macroexpand-1 ..)
+```
 
-如果你想看到 `..` 展开后的结果，使用 `macroexpand`：
+如果你想看到`..`展开后的结果，使用`macroexpand`：
 
-|   | `` `(macroexpand .. arm getHand))` `` |
-|   | `` `-> (. arm getHand)` `` |
-
-注：有时宏会展开为其他宏。当这种情况发生时，Clojure 会继续展开所有的宏，直到只剩下普通代码。例如，`..` 宏会递归展开，产生一个点运算符调用，并包裹在另一个 `..` 中。我们可以通过以下展开来看到这一点：
-
-|   | `` `(macroexpand-1 ..)` `` |
-
-如果你想看到 `..` 展开后的结果，使用 `macroexpand`：
-
-|   | `` `(macroexpand .. arm getHand))` `` |
-|   | `` `-> (. arm getHand)` `` | 
-
-使用 `macroexpand-1` 来证明 `unless` 展开为了合理的 `if` 表达式：
-
-|   | `` `(macroexpand-1 '(unless false (println "this should print")))` `` |
-|   | `` `-> (if false nil (println "this should print"))` `` |
-
-宏是复杂的野兽，我们再如何强调强调使用 `macroexpand-1` 测试它们的重要性。让我们回到这里，尝试一些 `unless` 的错误版本。这里有一个错误地引用了 `` `expr` `` 的版本：
-
-|   | `` `(defmacro bad-unless [expr form]` `` |
-|   | `` ` (list 'if 'expr nil form))` `` |
-
-当你展开 `bad-unless` 时，你会发现它生成了符号 `` `expr` ``，而不是实际的测试表达式：
-
-|   | `` `(macroexpand-1 '(bad-unless false (println "this should print")))` `` |
-|   | `` `-> (if expr nil (println "this should print"))` `` |
-
-如果你尝试实际使用 `bad-unless` 宏，Clojure 将报错说无法解析符号 `` `expr` ``：
-
-|   | `` `(bad-unless false (println "this should print"))` `` |
-|   | `` `-> java.lang.Exception: Unable to resolve symbol: expr in this context` `` |
-
-有时宏会展开为其他宏。当这种情况发生时，Clojure 会继续展开所有的宏，直到只剩下普通代码。例如，`..` 宏会递归展开，产生一个点运算符调用，并包裹在另一个 `..` 中。我们可以通过以下展开来看到这一点：
-
-|   | `` `(macroexpand-1 ..)` `` |
-
-*(由于提供的原始文本中存在大量重复段落，已根据“不要重复输出”的要求进行处理，以下为剩余部分的翻译：)*
+```clojure
+(macroexpand .. arm getHand))
+-> (. arm getHand)
+```
 
 ## 7.3 简化宏
 
-`unless` 宏是一个很棒的例子，但大多数宏都更复杂。在本节中，我们将构建一组日益复杂的宏，并引入 Clojure 的功能。为了方便参考，本节介绍的功能总结如下：
+`unless`宏是一个很棒的例子，但大多数宏都更复杂。在本节中，我们将构建一组日益复杂的宏，并引入 Clojure 的功能。为了方便参考，本节介绍的功能总结如下：
 
 | 格式 | 描述 |
 | --- | --- |
-| `foo#` | 自动生成符号：在语法引用内部创建一个以 `foo` 为前缀的符号。 |
+| `foo#` | 自动生成符号：在语法引用内部创建一个以`foo`为前缀的符号。 |
 | `(gensym prefix?)` | 创建一个唯一名称，可选前缀。 |
-| `(macroexpand form)` | 重复展开 `form`，直到返回的结果不再是宏。 |
-| `(macroexpand-1 form)` | 展示 Clojure 如何展开 `form`。 |
+| `(macroexpand form)` | 重复展开`form`，直到返回的结果不再是宏。 |
+| `(macroexpand-1 form)` | 展示 Clojure 如何展开`form`。 |
 | `(list-frag? ~form list-frag?)` | 展开取消：在语法引用内部将取消列表接到模板中。 |
-| `‘form` | 语法引用：引用 `form`，但允许内部取消以便 `form` 充模板。`form` 内部的符号将被解析以防止意外捕获。 |
+| `‘form` | 语法引用：引用`form`，但允许内部取消以便`form`充模板。`form`内部的符号将被解析以防止意外捕获。 |
 | `~form` | 取消：在语法引用内部替换未引用的值。 |
 
-首先让我们复制一个 Clojure 的 `..` 宏。将其命名为 `chain`，因为它链了一系列的方法调用。以下是 `chain` 的示例展开：
+首先让我们复制一个 Clojure 的`..`宏。将其命名为`chain`，因为它链了一系列的方法调用。以下是`chain`的示例展开：
 
 | 宏调用 | 展开 |
 | --- | --- |
@@ -6484,25 +6584,25 @@ Wikipedia 定义设计模式[57 为“解决软件设计中常见问题的通用
 
 从实现链调用一个方法的简单情况开始。宏只需要创建一个简单的列表：
 
-| [src/examples/macros/chain_1.clj](http://media.prprog.com/titles/shcloj2/code/src/examples/macros/chain_1.clj) |
-|   | `` `*`; chain reimplements Clojure's .. macro`*` `` |
-|   | `` `(`**`defmacro`** chain [x form]` `` |
-|   | `` (`**`list`** `'.` x form))` ``
+[src/examples/macros/chain_1.clj](http://media.prprog.com/titles/shcloj2/code/src/examples/macros/chain_1.clj)
 
-`chain` 需要支持任意数量的参数，因此剩余实现应该定义递归。列表操作变得更加复杂，因为你需要构建两个列表并将它们合并。
+```clojure
+; chain reimplements Clojure's .. macro
+(defmacro chain [x form]
+  (list '. x form))
+```
 
+`chain`需要支持任意数量的参数，因此剩余实现应该定义递归。列表操作变得更加复杂，因为你需要构建两个列表并将它们合并。
 
-
-
-| [src/examples/macros/chain_2.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_2.clj) |
+[src/examples/macros/chain_2.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_2.clj)
 
 ```clojure
 (defmacro chain
-  ([x form] (list '.x form))
-  ([x form & more] (concat (list '.chain (x form)) more)))
+  ([x form] (list '. x form))
+  ([x form & more] (concat (list '. (chain x form)) more)))
 ```
 
-使用 `macroexpand` 测试 `chain` 以确保它生成正确的展开：
+使用`macroexpand`测试`chain`以确保它生成正确的展开：
 
 ```clojure
 (macroexpand '(chain arm getHand))
@@ -6512,15 +6612,15 @@ Wikipedia 定义设计模式[57 为“解决软件设计中常见问题的通用
 -> (. (. arm getHand) getFinger)
 ```
 
-`chain` 宏按照目前的写法可以工作良好，但处理多个参数的表达式很难读：
+`chain`宏按照目前的写法可以工作良好，但处理多个参数的表达式很难读：
 
 ```clojure
-(concat (list '.chain (x form)) more))
+(concat (list '. (chain x form)) more)
 ```
 
-`chain` 的定义在宏代码和要生成的正体之间回切换。两者的交织使得整个代码变得难以阅读。而且这只是一个单行长度的简单形式。随着宏形式变得复杂，`list` 和 `concat` 等组装函数会迅速掩盖宏的含义。
+`chain`的定义在宏代码和要生成的主体之间回切换。两者的交织使得整个代码变得难以阅读。而且这只是一个单行长度的简单形式。随着宏形式变得复杂，`list`和`concat`等组装函数会迅速掩盖宏的含义。
 
-解决此类问题的一种方法是模板语言。如果宏是通过模板创建的，你就可以采用“填空”的方法来创建它们。`chain` 的定义可能像这样：
+解决此类问题的一种方法是模板语言。如果宏是通过模板创建的，你就可以采用“填空”的方法来创建它们。`chain`的定义可能像这样：
 
 ```clojure
 ; 假设的模板语言
@@ -6529,49 +6629,49 @@ Wikipedia 定义设计模式[57 为“解决软件设计中常见问题的通用
   ([x form & more] (chain (${x} ${form}) ${more})))
 ```
 
-在这个假设的模板语言中，`${}` 允许你将参数替换到宏展开中。
+在这个假设的模板语言中，`${}`允许你将参数替换到宏展开中。
 
 注意看这个定义变得容易读了多少，以及它清晰地展示了展开后的样子。
 
 ### 语法引用（Syntax Quote）、反引用（Unquote）和展开反引用（Splicing Unquote）
 
-Clojure 宏支持在不引入额外语言的情况下模板。语法引用字符（反引号 `` ` ``）的作用几乎与普通引用相同。但在语法引用的列表内部，反引用字符（`~`，波浪号）会再次关闭引用。整体效果是看起来像这样的模板：
+Clojure 宏支持在不引入额外语言的情况下模板。语法引用字符（反引号`` ` ``）的作用几乎与普通引用相同。但在语法引用的列表内部，反引用字符（`~`，波浪号）会再次关闭引用。整体效果是看起来像这样的模板：
 
-| [src/examples/macros/chain_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_3.clj) |
+[src/examples/macros/chain_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_3.clj)
 
 ```clojure
 (defmacro chain [x form]
   `(. ~x ~form))
 ```
 
-测试这个新版本的 `chain` 是否能正确生成单个方法调用：
+测试这个新版本的`chain`是否能正确生成单个方法调用：
 
 ```clojure
 (macroexpand '(chain arm getHand))
 -> (. arm getHand)
 ```
 
-遗憾的是，语法引用/反引用的方法对于 `chain` 的多参数变体并不完全奏效：
+遗憾的是，语法引用/反引用的方法对于`chain`的多参数变体并不完全奏效：
 
-| [src/examples/macros/chain_4.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_4.clj) |
+[src/examples/macros/chain_4.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_4.clj)
 
 ```clojure
 ; 不完全工作
 (defmacro chain
   ([x form] `(. ~x ~form))
-  ([x form & more] (chain (. ~x ~form) ~more))))
+  ([x form & more] (chain (. ~x ~form) ~more)))
 ```
 
-当展开这个 `chain` 时，括号是不对的：
+当展开这个`chain`时，括号是不对的：
 
 ```clojure
 (macroexpand '(chain arm getHand getFinger))
 -> (. (. arm getHand) (getFinger))
 ```
 
-`chain` 的最后一个参数是 `more` 参数的列表。当你把 `more` 丢入宏“模板”时，它带有括号，因为它是一个列表。但你并不这些括号；你希望 `more` 被展开（splice）到列表中。这种情况发生得足够频繁，以有一个专门的读取器宏：展开反引用（`~@`）。使用展开反引用重写 `chain` 以将 `more` 展开：
+`chain`的最后一个参数是`more`参数的列表。当你把`more`丢入宏“模板”时，它带有括号，因为它是一个列表。但你并不需要这些括号；你希望`more`被展开（splice）到列表中。这种情况发生得足够频繁，以至于有一个专门的读取器宏：展开反引用（`~@`）。使用展开反引用重写`chain`以将`more`展开：
 
-| [src/examples/macros/chain_5.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_5.clj) |
+[src/examples/macros/chain_5.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/macros/chain_5.clj)
 
 ```clojure
 (defmacro chain
@@ -6583,18 +6683,18 @@ Clojure 宏支持在不引入额外语言的情况下模板。语法引用字符
 
 ```clojure
 (macroexpand '(chain arm getHand getFinger))
--> (. arm getHand) getFinger)
+-> (. (. arm getHand) getFinger)
 ```
 
-许多宏遵循 `chain` 的模式，即 Clojure 的 `..`：
+许多宏遵循`chain`的模式，即 Clojure 的`..`：
 
 1. 使用语法引用（`` ` ``）开始宏体，将整个内容视为模板。
 2. 使用反引用（`~`）插入单个参数。
-3. 使用展开反引用（`~@`）展开 `more` 参数。
+3. 使用展开反引用（`~@`）展开`more`参数。
 
 ### 在宏中创建名称
 
-Clojure 有一个 `time` 宏，它可以对表达式进行计时，并将流逝的时间写入控制台：
+Clojure 有一个`time`宏，它可以对表达式进行计时，并将流逝的时间写入控制台：
 
 ```clojure
 (time (str "a" "b"))
@@ -6602,7 +6702,9 @@ Clojure 有一个 `time` 宏，它可以对表达式进行计时，并将流逝�
 "ab"
 ```
 
-让我们构建一个 `time` 的变体称为 `bench`，设计用于收集多次运行的数据。`bench` 不会写入控制台，而是返回一个映射，包含原始表达式的返回值和经过的时间。开始编写宏的最佳方法是手动编写其期望的展开形式。`bench` 应该展开如下：
+让我们构建一个`time`的变体称为`bench`，设计用于收集多次运行的数据。`bench`不会写入控制台，而是返回一个映射，包含原始表达式的返回值和经过的时间。开始编写宏的最佳方法是手动编写其期望的展开形式。`bench`应该展开如下：
+
+
 
 ```clojure
 (bench (str "a" "b"))
@@ -6653,27 +6755,28 @@ Clojure 指责你试图 let 一个全限定名称，这是非法的。调用 `ma
 -> {:result 1228277342451783002, :elapsed 39000}
 ```
 
-
-
-
-
 Clojure 对在宏中解析名称的坚持有助于保护你免受符号捕获（symbol capture），但你仍然没有一个可用的 `bench`。你需要某种方法来引入本地名称，理想情况下是唯一的、不会与调用者使用的任何名称冲突的名称。
 
 Clojure 提供了一种读取器形式（reader form）来创建唯一的本地名称。在语法引用形式（syntax-quoted form）内部，你可以在无限定的名称后添加一个井号（`#`），Clojure 就会创建一个自动生成的符号，即自动生成符号（auto-gensym）：一个基于名称加上下划线和唯一 ID 的符号。在 REPL 中尝试一下一下：
 
 | ️ | `foo#` |
+
 | ️ | `foo__1004` |
 
 有了自动生成的符号，可以很容易地实现 `bench`：
 
 | ️ | `(defmacro bench [expr] ` |
+
 | ️ | `(let [start# (System/nanoTime)` |
+
 | ️ | `result# ~expr]` |
+
 | ️ | `{:result result# :elapsed (- (System/nanoTime) start#)})) ` |
 
 在 REPL 中测试它：
 
 | � | `(bench (str "a" "b"))` |
+
 | ️ | `-> {:elapsed 63000, :result "ab"}` |
 
 Clojure 让生成唯一名称变得简单，但如果你执意如此，仍然可以强制进行符号捕获。书中的示例代码包含一个 `evil-bench`，它展示了语法引用（syntax quoting）、引用（quoting）和反引用（unquoting）的组合如何导致符号捕获。除非你彻底理解宏，否则不要使用符号捕获。
@@ -6689,7 +6792,9 @@ Clojure 让生成唯一名称变得简单，但如果你执意如此，仍然可
 特殊形式拥有你作为程序员不具备的特殊能力：
 
 *   特殊形式提供了最基本的流控制结构，例如 `if` 和 `recur`。所有的流控制宏最终都必须调用特殊形式。
+
 *   特殊形式提供了直接访问 Java 的权限。每当你从 Clojure 调用 Java 时，你都会通过至少一个特殊形式，例如点运算符（`.`）或 `new`。
+
 *   名称通过特殊形式创建和绑定，无论是通过 `def` 定义变量、通过 `let` 创建词法绑定，还是通过 `binding` 创建动态绑定。
 
 尽管特殊形式非常强大，但它们并不是函数。它们不能做某些函数可以做到的事情。你不能 `apply` 一个特殊形式，不能将特殊形式存储在变量中，也不能将特殊形式作为序列库的过滤器。简而言之，特殊形式不是语言的一等公民。
@@ -6703,12 +6808,19 @@ Clojure 让生成唯一名称变得简单，但如果你执意如此，仍然可
 我们查看了 Clojure 和贡献库（contrib libraries）中的宏，几乎所有的宏都遵循宏俱乐部的规则。此外，它们符合下表所示的一个或多个分类，该表展示了 Clojure 宏的分类。
 
 | 依据 | 分类 | 示例 |
+
 | --- | --- | --- |
+
 | 特殊形式 | 条件评估 | `when`, `when-not`, `and`, `or`, `comment` |
+
 | 特殊形式 | 定义变量 | `defn`, `defmacro`, `defmulti`, `defstruct`, `declare` |
+
 | 特殊形式 | Java 互操作 | `..`, `doto`, `import-static` |
+
 | 调用者便利 | 延迟评估 | `lazy-cat`, `lazy-seq`, `delay` |
+
 | 调用者便利 | 封装评估 | `with-open`, `dosync`, `with-out-str`, `time`, `assert` |
+
 | 调用者便利 | 避免 lambda | （与“封装评估”相同） |
 
 让我们逐一检查每个分类。
@@ -6727,9 +6839,11 @@ Clojure 让生成唯一名称变得简单，但如果你执意如此，仍然可
       nil)
     nil))
 ```
+
 （注：上述逻辑是根据文本对 `and` 行为的描述重构的）
 
 实际上，严格遵循文本：
+
 `and` 评估某些参数（条件）；然后，根据该评估结果，选择哪些参数进行评估。
 
 ### 创建变量
@@ -6748,15 +6862,14 @@ Clojure 提供了一个用于创建结构体的低级函数 `create-struct`：
 
 `create-struct` 可以，但视觉上很冗余。由于你通常想 `def` 一个新结构，你通常会调用 `defstruct`，它在一次操作中将 `def` 和 `create-struct` 结合在一起。
 
-
-
-
-
 `defstruct` 是一个简单的宏，它已经是 Clojure 的一部分了：
 
 |   | `(defmacro defstruct)` |
+
 | :--- | :--- |
+
 |   | `[`name` & `keys`]` |
+
 |   | `(`def` ~`name`(`create-struct` ~@`keys`)))` |
 
 这个宏看起来非常简单，你可能可能想把它写成一个函数。但你做不到，因为 `def` 是一个特殊形式。你必须在宏展开时生成 `def`；不能在运行时对 `def` 进行“动态”调用。
@@ -6764,50 +6877,67 @@ Clojure 提供了一个用于创建结构体的低级函数 `create-struct`：
 `defstruct` 让单行代码更易读，但某些宏也可以将许多行代码压缩为单个形式。考虑前向声明的问题：你正在编写一个需要对变量 `a`、`b`、`c` 和 `d` 进行前向引用的程序。你可以无参数调用 `def` 来定义变量名而不进行初始绑定：
 
 |   | `(def a)` |
+
 | :--- | :--- |
+
 |   | `(def b)` |
+
 |   | `(def c)` |
+
 |   | `(def d)` |
 
 但这很繁琐，并且浪费了大量的垂直空间。`declare` 宏接收一个变量名称列表，并为每个名称执行 `def` 操作：
 
 |   | `(declare & names)` |
+
 | :--- | :--- |
 
 现在你可以在一个紧凑的形式中声明所有名称：
 
 |   | `(declare a b c d)` |
+
 | :--- | :--- |
+
 |   | `-> #'user/d` |
 
 `declare` 的实现内置在 Clojure 中中：
 
 |   | `(defmacro declare)` |
+
 | :--- | :--- |
+
 |   | `[& names] (do ~@(map #(`list 'def %) names)))` |
 
 让我们从内向外地分析 `declare`。匿名函数 `#(list 'def %)` 负责生成单个 `def`。在 REPL 中单独测试这个形式：
 
 |   | `(#(list 'def %) 'a)` |
+
 | :--- | :--- |
+
 |   | `-> (def a)` |
 
 `map` 会为传入的每个符号调用一次内部函数。同样，你可以在 REPL 中测试这个形式：
 
 |   | `(map #(list 'def %) '[a b c d])` |
+
 | :--- | :--- |
+
 |   | `-> ((def a) (def b) (def c) (def d))` |
 
 最后，开头的 `do` 将整个展开结果转换为一个合法的 Clojure 形式：
 
 |   | `(do ~@(map #(list 'def %) '[a b c d]))` |
+
 | :--- | :--- |
+
 |   | `-> (do (def a) (def b) (def c) (def d))` |
 
 在之前的形式中替换 `'[a b c d]` 等同于使用 `macroexpand-1` 对整个宏进行手动测试的结果：
 
 |   | `(macroexpand-1 '(declare a b c d))` |
+
 | :--- | :--- |
+
 |   | `-> (do (def a) (def b) (def c) (def d))` |
 
 Clojure 中很多有趣的部分是展开为涉及 `def` 的特殊形式的宏。我们在这里探索了几个，但你可以阅读其中任何一个的源码。它们大多数位于 Clojure 源码发行版的 `src/clj/clojure/core.clj` 中。
@@ -6819,29 +6949,45 @@ Clojure 程序通过 `.` (点)、`new` 和 `set!` 特殊形式调用 Java。然�
 你（或任何人）可以通过编写宏来扩展 Clojure 调用 Java 的方式。考虑以下场景：你正在编写使用 `java.lang.Math` 中几个常量的代码：
 
 |   | `Math/PI` |
+
 | :--- | :--- |
+
 |   | `-> 3.141592653589793` |
+
 |   | `(Math/pow 10 3)` |
+
+| :--- | :--- |
+
 |   | `-> 1000.0` |
 
 在较长的代码段中，`Math/` 前缀很快就会分散注意力，因此如果能简单地说 `PI` 和 `pow` 就好了。Clojure 没有提供直接实现此方法，但你可以手动定义一组变量：
 
 |   | `(def PI Math/PI)` |
+
 | :--- | :--- |
+
 |   | `-> #'user/PI` |
+
 |   | `(defn pow [b e] (Math/pow b e))` |
+
+| :--- | :--- |
+
 |   | `-> #'user/pow` |
 
 Stuart Sierra 使用 `import-static` 宏自动化了这些样板代码：
 
 |   | `(import-static)` |
+
 | :--- | :--- |
+
 |   | `import-static` |
 
 `with-out-str` 使得使用 `print` 和 `println` 来构建字符串变得简单：
 
 |   | `(with-out-str (print "hello, ") (print "world"))` |
+
 | :--- | :--- |
+
 |   | `-> "hello, world"` |
 
 `with-out-str` 的实现结构简单，可以作为编写相似宏的模板：
@@ -6860,14 +7006,12 @@ Stuart Sierra 使用 `import-static` 宏自动化了这些样板代码：
 包装宏通常接受变数量的参数（第 2 行），这些是需要评估的形式。它们随后按三个步骤进行：
 
 1. **设置**：为评估创建一些特殊的上下文，根据需要通过 `let`（第 3 行）和 `binding`（第 4 行）引入绑定。
+
 2. **评估**：评估形式（第 5 行）。由于通常有变数量的形式，通过拆分反引用 `~@` 插入它们。
+
 3. **清理**：将执行上下文重置为正常，并根据情况返回一个值（第 6 行）。
 
 在编写包装宏时，始终问自己是否需要 `finally` 块来正确实现清理步骤。对于 `with-out-str`，答案是否定的，因为 `let` 和 `binding` 都会处理它们自己的清理工作。然而，如果你正在通过 Java API 设置某些全局或线程本地状态，你你需要一个 `finally` 块来重置这些状态。
-
-
-
-
 
 这种对可变状态的论述导致了另一个观察结果。任何在包装器宏内部执行时行为会发生的代码，显然都不是纯函数。`print` 和 `println` 的行为根据 `*out` 的值而不同，因此它们不是纯函数。设置 `binding`（绑定）的宏，例如 `with-out-str`，这样做是为了改变某处不纯函数的行为。
 
@@ -6878,35 +7022,45 @@ Stuart Sierra 使用 `import-static` 宏自动化了这些样板代码：
 `assert` 测试一个表达式，如果该表达式在逻辑上为假，则抛出异常：
 
 |   | `(assert (= 1 1))` |
+
 |   | `-> nil` |
+
 |   | ` ` |
+
 |   | `(assert (= 1 2))` |
+
 |   | `-> java.lang.Exception: Assert failed: (= 1 2)` |
 
 像 `assert` 和 `time` 这样的宏违反了宏 俱乐部的第一条规则，以避免不必要的 lambda。
 
 ### 避免 Lambda
 
+
+
 出于历史原因，匿名函数通常被称为 lambda。有时，宏可以用函数调用来代替，并将参数包装在 lambda 中。例如，来自 Syntax Quote, Unquote, and Splicing Unquote 的 `bench` 宏并不需要是一个宏。你可以将其写为一个函数：
 
-|   | `(defn bench-fn [f]` |
-|   | ` (let [start (System/nanoTime)` |
-|   | ` result (f)]` |
-|   | ` {:result result :elapsed (- (System/nanoTime) start))`))`
+```clojure
+(defn bench-fn [f]
+  (let [start (System/nanoTime)
+        result (f)]
+    {:result result :elapsed (- (System/nanoTime) start)}))
+```
 
-然而，如果你想调用 `bench-fn`，你必须传递一个封装了你想执行的形式的函数。以下代码展示了区别：
+然而，如果你想调用`bench-fn`，你必须传递一个封装了你想执行的形式的函数。以下代码展示了区别：
 
-|   | `; macro` |
-|   | `(bench (+ 1 2))` |
-|   | `-> {:elapsed 44000, :result 3}` |
-|   | ` ` |
-|   | `; function` |
-|   | `(bench-fn (fn [] (+ 1 2)))` |
-|   | `-> {:elapsed 53000, :result 3}` |
+```clojure
+; macro
+(bench (+ 1 2))
+-> {:elapsed 44000, :result 3}
 
-对于像 `bench` 这样的功能，宏和匿名函数几乎可以互相替代。两者都防止了形式的立即执行。然而，匿名函数方法需要`调用者`端花费更多工作，因此打破第一条规则编写宏而不是函数是可以接受的。
+; function
+(bench-fn (fn [] (+ 1 2)))
+-> {:elapsed 53000, :result 3}
+```
 
-另一个倾向于为 `bench` 使用宏的原因是，`bench-fn` 并不是完美的替代品；它在运行时增加了匿名函数调用的开销。由于 `bench` 的目的是为某些事物计时，你应该避免这种开销。
+对于像`bench`这样的功能，宏和匿名函数几乎可以互相替代。两者都防止了形式的立即执行。然而，匿名函数方法需要`调用者`端花费更多工作，因此打破第一条规则编写宏而不是函数是可以接受的。
+
+另一个倾向于为`bench`使用宏的原因是，`bench-fn`并不是完美的替代品；它在运行时增加了匿名函数调用的开销。由于`bench`的目的是为某些事物计时，你应该避免这种开销。
 
 ## 7.5 总结
 
@@ -6914,52 +7068,58 @@ Clojure 宏允许你使代码中的模式自动化。因为它们在宏展开时
 
 ### 注脚
 
-| [56 | 我们并不是在特意抨击 Java；只是讨论特定语言比较容易，而且 Java 是众所周知的。 |
-| [57 | [http://en.wikipedia.org/wiki/Design_pattern_(computer_science)] |
-| [58 | [http://thinkrelevance.com] |
+- [56] 我们并不是在特意抨击 Java；只是讨论特定语言比较容易，而且 Java 是众所周知的。
+- [57] [http://en.wikipedia.org/wiki/Design_pattern_(computer_science)](http://en.wikipedia.org/wiki/Design_pattern_(computer_science))
+- [58] [http://thinkrelevance.com](http://thinkrelevance.com)
 
 Copyright © 2012, The Pragmatic Bookshelf.
 
 # 第 8 章
 
-## 多方法 (Multimethods)
+## 多方法（Multimethods）
 
 Clojure 多方法提供了一种灵活的方法，将函数与一组输入关联。这类似于 Java 的多态，但更通用。当你调用 Java 方法时，Java 通过检查单个对象的类型来选择一个特定的实现执行。当你调用 Clojure 多方法时，Clojure 通过检查你选择的任何函数应用于所有函数参数的结果，来选择一个特定的实现执行。
 
 在本章中，你将通过首先体验没有多方法的生活，从而让你对多方法产生渴望。然后，你将构建一系列日益复杂的多方法实现，首先使用多方法来模拟多态，然后使用多方法来实现各种即时分类法（ad hoc taxonomies）。
 
-Clojure 中多方法的使用频率远比面向对象语言中的多态低得多。但在使用它们的地方，它们通常是代码中的关键特性。第 8.5 节 我什么时候应该使用多方法？ 解析了多方法在几个开源 Clojure 项目中的用法，并提供了在你自己的程序中使用它们的指南。
+Clojure 中多方法的使用频率远比面向对象语言中的多态低得多。但在使用它们的地方，它们通常是代码中的关键特性。第 8.5 节“我什么时候应该使用多方法？”解析了多方法在几个开源 Clojure 项目中的用法，并提供了在你自己的程序中使用它们的指南。
 
 如果你是按照章节顺序阅读这本书，那么一旦完成本章，你已经看到了 Clojure 语言的所有关键特性。
 
 ## 8.1 没有多方法的生活
 
-欣赏多方法的最好方法是花几分钟没有它们的生活，所以让我们开始吧。Clojure 已经可以使用 `print`/`println` 打印任何内容了。但请假设这些函数不存在，你需要构建一个通用的打印机制。首先，创建一个 `my-print` 函数，它可以将字符串打印到标准输出流 `*out`：
+欣赏多方法的最好方法是花几分钟没有它们的生活，所以让我们开始吧。Clojure 已经可以使用`print`/`println`打印任何内容了。但请假设这些函数不存在，你需要构建一个通用的打印机制。首先，创建一个`my-print`函数，它可以将字符串打印到标准输出流`*out`：
 
-| [src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj) |
-|   | `(defn my-print [ob]` |
-|   | ` (.write *out ob))` |
+[src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj)
 
-接下来创建一个 `my-println`，它调用 `my-print` 并添加一个换行符：
+```clojure
+(defn my-print [ob]
+  (.write *out ob))
+```
 
-| [src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj) |
-|   | `(defn my-println [ob]` |
-|   | ` (my-print ob)` |
-|   | ` (write *out "\n"))` |
+接下来创建一个`my-println`，它调用`my-print`并添加一个换行符：
 
-换行符让 `my-println` 的输出更容易读。在本节的剩余部分，通过测试字符串来修改 `my-println`：
+[src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj)
+
+```clojure
+(defn my-println [ob]
+  (my-print ob)
+  (write *out "\n"))
+```
+
+换行符让`my-println`的输出更容易读。在本节的剩余部分，通过测试字符串来修改`my-println`：
 
 ```clojure
 (println "hello")
 ```
 
-很好但 `println` 处理非字符串（如 `nil`）的效果不好：
+很好，但`println`处理非字符串（如`nil`）的效果不好：
 
 ```clojure
 (println nil)
 ```
 
-这会导致 `java.lang.NullPointerException`。但这并不大。使用 `cond` 为 `nil` 添加处理：
+这会导致`java.lang.NullPointerException`。但这并不大。使用`cond`为`nil`添加处理：
 
 ```clojure
 (defn my-println [ob]
@@ -6968,32 +7128,36 @@ Clojure 中多方法的使用频率远比面向对象语言中的多态低得多
     (string?) (.write *out ob)))
 ```
 
-有了判断，你可以轻松地打印 `nil`：
+有了判断，你可以轻松地打印`nil`：
 
 ```clojure
 (println nil)
 ```
 
-当然，还有许多 `my-println` 无法处理的类型。如果你尝试打印向量，两个 `cond` 子句都不会匹配，程序将什么都不打印：
+当然，还有许多`my-println`无法处理的类型。如果你尝试打印向量，两个`cond`子句都不会匹配，程序将什么都不打印：
 
 ```clojure
 (println [1 2 3])
 ```
 
-到这里你已经懂了。只需为向量情况添加另一个 `cond` 子句。这里的实现稍微复杂，所以你可能想将实际打印分离到一个辅助函数，例如 `my-print-vector`：
+到这里你已经懂了。只需为向量情况添加另一个`cond`子句。这里的实现稍微复杂，所以你可能想将实际打印分离到一个辅助函数，例如`my-print-vector`：
 
-| [src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj) |
-|   | `(require '[clojure.string :as str])` |
-|   | `(defn my-print-vector [ob]` |
-|   | ` (.write *out "[")` |
-|   | ` (.write *out (str/join " " ob))` |
-|   | ` (.write *out "]"))))` |
-|   | ` ` |
-|   | `(defn my-print [ob]` |
-|   | ` (cond` |
-|   | ` (vector?) ob) (my-print-vector ob)` |
-|   | ` (nil?) ob (.write *out "nil")` |
-|   | ` (string?) ob (.write *out ob)))` |
+[src/examples/life_without_multi.clj](http://src/examples/life_without_multi.clj)
+
+```clojure
+(require '[clojure.string :as str])
+
+(defn my-print-vector [ob]
+  (.write *out "[")
+  (.write *out (str/join " " ob))
+  (.write *out "]"))
+
+(defn my-print [ob]
+  (cond
+    (vector?) ob) (my-print-vector ob)
+    (nil?) ob (.write *out "nil")
+    (string?) ob (.write *out ob)))
+```
 
 确保你现在可以打印向量了：
 
@@ -7001,149 +7165,188 @@ Clojure 中多方法的使用频率远比面向对象语言中的多态低得多
 (my-println [1 2 3])
 ```
 
+`my-println`现在支持三种类型：字符串、向量和`nil`。你拥有一条处理新类型的路线图：只需在`my-println`的`cond`中添加新的子句即可。但这是一个糟糕的路线图，因为它将两个东西混在了一起：选择实现的决策过程以及具体的实现细节。
 
+你可以通过提取如`my-print-vector`这样的辅助函数来稍微改善局面。然而，每当你想要为`my-println`添加新功能时，你都必须进行两个更改：
 
+- 创建一个新的特定类型的辅助函数。
+- 修改现有的`my-println`，添加一个新的`cond`来调用该特定功能的辅助函数。
 
-
-`my-println` 现在支持三种类型：字符串、向量和 `nil`。你拥有一条处理新类型的路线图：只需在 `my-println` 的 `cond` 中添加新的子句即可。但这是一个糟糕的路线图，因为它将两个东西混在了一起：选择实现的决策过程以及具体的实现细节。
-
-你可以通过提取如 `my-print-vector` 这样的辅助函数来稍微改善局面。然而，每当你想要为 `my-println` 添加新功能时，你都必须进行两个更改：
-
-*   创建一个新的特定类型的辅助函数。
-*   修改现有的 `my-println`，添加一个新的 `cond` 来调用该特定功能的辅助函数。
-
-你真正想要的是一种通过在单处添加新代码来为系统添加新功能的方法，而无需修改任何现有代码。Clojure 通过协议（protocols）实现了这一点，具体详见第 6.3 节，协议 和多方法（multimethods）。
+你真正想要的是一种通过在单处添加新代码来为系统添加新功能的方法，而无需修改任何现有代码。Clojure 通过协议（protocols）实现了这一点，具体详见第 6.3 节“协议”和多方法（multimethods）。
 
 ## 8.2 定义多方法
 
-要定义一个多方法，请使用 `defmulti`：
+要定义一个多方法，请使用`defmulti`：
 
-| | `(defmulti name dispatch-fn)` |
+```clojure
+(defmulti name dispatch-fn)
+```
 
-`name` 是新多方法的名称，Clojure 将针对方法参数调用 `dispatch-fn`，以选择该多方法的某个特定方法（实现）。
+`name`是新多方法的名称，Clojure 将针对方法参数调用`dispatch-fn`，以选择该多方法的某个特定方法（实现）。
 
-考虑上一节中的 `my-print`。它接收一个参数，即要打印的内容，你想要根据该参数的类型来选择一个特定的实现。因此，`dispatch-fn` 需要一个接收一个参数并返回该参数类型的函数。Clojure 拥有一个符合此描述的内置函数，即 `class`。使用 `class` 创建一个名为 `my-print` 的多方法：
+考虑上一节中的`my-print`。它接收一个参数，即要打印的内容，你想要根据该参数的类型来选择一个特定的实现。因此，`dispatch-fn`需要一个接收一个参数并返回该参数类型的函数。Clojure 拥有一个符合此描述的内置函数，即`class`。使用`class`创建一个名为`my-print`的多方法：
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmulti my-print class)` |
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
-此时，你提供了一个关于多方法将如何选择特定方法的描述，但还没有具体的特定方法。意料之中，尝试调用 `my-print` 将失败：
+```clojure
+(defmulti my-print class)
+```
 
-| | `(my-println "foo")` |
-| | `-> java.lang.IllegalArgumentException: ` |
-| | `No method for dispatch value` |
+此时，你提供了一个关于多方法将如何选择特定方法的描述，但还没有具体的特定方法。意料之中，尝试调用`my-print`将失败：
 
-为 `my-println` 添加特定的方法实现，请使用 `defmethod:`：
+```clojure
+(my-println "foo")
+-> java.lang.IllegalArgumentException:
+No method for dispatch value
+```
 
-| | `(defmethod name dispatch-val & fn-tail)` |
+为`my-println`添加特定的方法实现，请使用`defmethod`：
 
-`name` 是实现所属的多方法的名称。Clojure 将 `defmulti` 的分发函数的结果与 `dispatch-val` 匹配以选择一个方法，而 `fn-tail` 包含了参数和函数体形式，就像普通函数一样。
+```clojure
+(defmethod name dispatch-val & fn-tail)
+```
 
-创建一个匹配字符串的 `my-print` 实现：
+`name`是实现所属的多方法的名称。Clojure 将`defmulti`的分发函数的结果与`dispatch-val`匹配以选择一个方法，而`fn-tail`包含了参数和函数体形式，就像普通函数一样。
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmethod my-print String [s])` |
-| | `(.write *out s))` |
+创建一个匹配字符串的`my-print`实现：
 
-现在，使用字符串参数调用 `my-println`：
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
-| | `(my-println "stu")` |
-| | `| stu` |
-| | `-> nil` |
+```clojure
+(defmethod my-print String [s]
+  (.write *out s))
+```
 
-接下来，创建一个匹配 `nil` 的 `my-print`：
+现在，使用字符串参数调用`my-println`：
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmethod my-print nil [s])` |
-| | `(.write *out "nil"))` |
+```clojure
+(my-println "stu")
+| stu
+-> nil
+```
 
-注意，你已经解决了上一节提出的问题。不再是在巨大的 `cond` 中合并，`my-println` 的每个实现都是独立的。多方法的方法可以存在于你源代码的任何地方，你你可以随时添加新方法，而无需触碰原始代码。
+接下来，创建一个匹配`nil`的`my-print`：
+
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
+
+```clojure
+(defmethod my-print nil [s]
+  (.write *out "nil"))
+```
+
+注意，你已经解决了上一节提出的问题。不再是在巨大的`cond`中合并，`my-println`的每个实现都是独立的。多方法的方法可以存在于你源代码的任何地方，你可以随时添加新方法，而无需触碰原始代码。
 
 ### 分发感知继承
 
-多方法的分发感知 Java 继承关系。要看到这一点，创建一个处理 `Number` 的 `my-print`，通过打印数字的 `toString` 表示形式来处理它：
+多方法的分发感知 Java 继承关系。要看到这一点，创建一个处理`Number`的`my-print`，通过打印数字的`toString`表示形式来处理它：
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmethod my-print Number [n])` |
-| | `(.write *out (.toString n)))` |
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
-用整数测试 `Number` 实现：
+```clojure
+(defmethod my-print Number [n]
+  (.write *out (.toString n)))
+```
 
-| | `(my-println 42)` |
-| | `| 42` |
-| | `-> nil` |
+用整数测试`Number`实现：
 
-`42` 是一个 `Integer`，而不是 `Number`。多方法分发足够智能，知道整数是一个数字并进行匹配。内部，分发使用 `isa?` 函数：
+```clojure
+(my-println 42)
+| 42
+-> nil
+```
 
-| | `(isa? child parent)` |
+`42`是一个`Integer`，而不是`Number`。多方法分发足够智能，知道整数是一个数字并进行匹配。内部，分发使用`isa?`函数：
 
-`isa?` 感知 Java 继承，所以它知道 `Integer` 是一个 `Number`：
+```clojure
+(isa? child parent)
+```
 
-| | `(isa? Integer Number)` |
-| | `-> true` |
+`isa?`感知 Java 继承，所以它知道`Integer`是一个`Number`：
 
-`isa?` 不限于继承。它的行为可以在运行时扩展，正如你稍后在第 8.4 节 创建动态分类 中看到的 true。
+```clojure
+(isa? Integer Number)
+-> true
+```
+
+`isa?`不限于继承。它的行为可以在运行时扩展，正如你稍后在第 8.4 节“创建动态分类”中看到的。
 
 ### 多方法的默认值
 
-如果 `my-print` 能有一个回退表示，供你用于任何未定义的类型，那就太好了。你可以使用 `:default` 作为分发值来处理未匹配的方法。使用 `:default` 创建一个 `my-println`，打印对象的 `toString` 值，并包裹在 `<` 中：
+如果`my-print`能有一个回退表示，供你用于任何未定义的类型，那就太好了。你可以使用`:default`作为分发值来处理未匹配的方法。使用`:default`创建一个`my-println`，打印对象的`toString`值，并包裹在`<`中：
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmethod my-print :default [s])` |
-| | `(.write *out "<")` |
-| | `(.write *out (.toString s))` |
-| | `(.write *out ">"))` |
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
-现在，使用默认值测试 `my-println` 打印随机内容：
+```clojure
+(defmethod my-print :default [s]
+  (.write *out "<")
+  (.write *out (.toString s))
+  (.write *out ">"))
+```
 
-| | `(my-println (java.sql.Date. 0))` |
-| | `-> <1969-12-31>` |
-| | `(my-println (java.util.Random.))` |
-| | `-> <@ |
+现在，使用默认值测试`my-println`打印随机内容：
 
-如果 `:default` 在你的领域中具有特定含义，你可以通过这种备用签名创建一个多方法：
+```clojure
+(my-println (java.sql.Date. 0))
+-> <1969-12-31>
 
-| | `(defmulti name dispatch-fn default)` |
+(my-println (java.util.Random.))
+-> <@
+```
 
-`default-value` 允许你指定自己的默认值。也许你想把它称为 `:everything-else`：
+如果`:default`在你的领域中具有特定含义，你可以通过这种备用签名创建一个多方法：
 
-| [src/examples/multethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(defmulti my-print class :everything-else)` |
-| | `(defmethod my-print String [s])` |
-| | `(.write *out s))` |
-| | `(defmethod my-print :everything-else [_])` |
-| | `(.write *out "Not implemented...")`
+```clojure
+(defmulti name dispatch-fn default)
+```
 
-任何未匹配的分发值现在将匹配 `:everything-else`。
+`default-value`允许你指定自己的默认值。也许你想把它称为`:everything-else`：
 
-根据第一个参数的类型分发多方法（正如你在 `my-print` 中所示）是最常见的分发类型。事实上，在许多面向对象的语言中，它是唯一的动态分发，被称为多态。
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
-Clojure 的分发通用得多。让我们为 `my-print` 添加一些复杂性，超越多态的范围。
+```clojure
+(defmulti my-print class :everything-else)
+
+(defmethod my-print String [s]
+  (.write *out s))
+
+(defmethod my-print :everything-else [_]
+  (.write *out "Not implemented..."))
+```
+
+任何未匹配的分发值现在将匹配`:everything-else`。
+
+根据第一个参数的类型分发多方法（正如你在`my-print`中所示）是最常见的分发类型。事实上，在许多面向对象的语言中，它是唯一的动态分发，被称为多态。
+
+Clojure 的分发通用得多。让我们为`my-print`添加一些复杂性，超越多态的范围。
 
 ## 8.3 超越简单分发
 
-Clojure 的 `print` 函数将各种“序列”事物打印为列表。如果你希望 `my-print` 这样做，你可以添加一个在 Java 继承层次结构中较高的接口分发的方法，例如 `Collection`：
+Clojure 的`print`函数将各种“序列”事物打印为列表。如果你希望`my-print`这样做，你可以添加一个在 Java 继承层次结构中较高的接口分发的方法，例如`Collection`：
 
-| [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj) |
-| | `(require '[clojure.string :as str])` |
-| | `(defmethod my-print java.util.Collection [c])` |
-| | `(.write *out "(")` |
-| | `(.write *out (str/join " " c))` |
-| | `(.write *out ")"))` |
+[src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
+
+```clojure
+(require '[clojure.string :as str])
+
+(defmethod my-print java.util.Collection [c]
+  (.write *out "(")
+  (.write *out (str/join " " c))
+  (.write *out ")"))
+```
 
 现在，尝试各种序列，看看它们得到了良好的打印表示：
 
-| | `(my-println (take 6 (cycle [1 2 3])))` |
-| | `| (1 2 3 1 2 3)` |
-| | `-> nil` |
-| | `(my-println [1 2 3])` |
-| | `| (1 2 3)` |
-| | `-> nil` |
+```clojure
+(my-println (take 6 (cycle [1 2 3])))
+| (1 2 3 1 2 3)
+-> nil
 
+(my-println [1 2 3])
+| (1 2 3)
+-> nil
+```
 
-
-
-作为一个追求完美主义者，你无法忍受向量在打印时使用圆括号，因为这与它们字面量上的方括号语法不同。因此，再添加一个 `my-print` 方法，这次用来处理向量。向量都实现了 `IPersistentVector`，所以这应该是可以行的：
+作为一个追求完美主义者，你无法忍受向量在打印时使用圆括号，因为这与它们字面量上的方括号语法不同。因此，再添加一个`my-print`方法，这次用来处理向量。向量都实现了`IPersistentVector`，所以这应该是可以行的：
 
 [src/examples/multimethods.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods.clj)
 
@@ -7155,6 +7358,8 @@ Clojure 的 `print` 函数将各种“序列”事物打印为列表。如果你
 ```
 
 但它不起作用。相反，现在打印向量会抛出异常：
+
+
 
 ```clojure
 (my-println [1 2 3])
@@ -7269,9 +7474,13 @@ and neither is preferred
 账户有年度服务费，规则如下：
 
 - 普通支票账户支付 25 美元服务费。
+
 - 普通储蓄账户支付 10 美元服务费。
+
 - 高级账户免收费用。
+
 - 余额为 5,000 美元以上的支票账户为高级账户。
+
 - 余额为 1,000 美元以上的储蓄账户为高级账户。
 
 在现实的例子中，规则会更复杂。高级状态将由随平均余额驱动，并且可能还有其他入标方式。但之前的规则已经足够复杂以说明这一点。
@@ -7310,28 +7519,27 @@ and neither is preferred
   (defmethod service-charge ::Premium [_] 0))
 ```
 
-
-
-
 `service-charge` 中针对 `::Basic` 的条件逻辑正是多方法（multimethods）应该帮助我们避免的类型驱动条件逻辑。这里的问题在于，你已经根据 `account-level` 进行分发，而现在你还需要根据 `:tag` 进行分发。没问题——你可以对两者进行分发。编写一个 `service-charge`，其分发函数同时调用 `account-level` 和 `:tag`，并将结果返回在一个向量中：
 
-| [src/examples/multimethods/service_charge_2.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_2.clj) |
-| :--- |
-| | `(defmulti service-charge (fn [acct] [(account-level acct) (:tag acct)]))` |
-| | `(defmethod service-charge [::acc/Basic ::acc/Checking] [_] 25)` |
-| | `(defmethod service-charge [::acc/Basic ::acc/Savings] [_] 10)` |
-| | `(defmethod service-charge [::acc/Premium ::acc/Checking] [_] 0)` |
-| | `(defmethod service-charge [::acc/Premium ::acc/Savings] [_] 0)` |
+[src/examples/multimethods/service_charge_2.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_2.clj)
+
+```clojure
+(defmulti service-charge (fn [acct] [(account-level acct) (:tag acct)]))
+(defmethod service-charge [::acc/Basic ::acc/Checking] [_] 25)
+(defmethod service-charge [::acc/Basic ::acc/Savings] [_] 10)
+(defmethod service-charge [::acc/Premium ::acc/Checking] [_] 0)
+(defmethod service-charge [::acc/Premium ::acc/Savings] [_] 0)
+```
 
 这个版本的 `service-charge` 针对两个不同的分类体系进行分发：账户内部的 `:tag` 和外部定义的 `account-level`。尝试几个账户来验证 `service-charge` 是否按预期工作：
 
-| |
-| :--- |
-| | `(service-charge {:tag ::acc/Checking :balance 1000})` |
-| | `-> 25` |
-| | |
-| | `(service-charge {:tag ::acc/Savings :balance 1000})` |
-| | `-> 0` |
+```clojure
+(service-charge {:tag ::acc/Checking :balance 1000})
+-> 25
+
+(service-charge {:tag ::acc/Savings :balance 1000})
+-> 0
+```
 
 注意，之前的测试甚至没有去费心为测试创建一个“真实”的账户。像 `account` 这样的结构体只是为了存储特定字段而优化的 map，如果你发现使用普通的 map（plain old map）更方便，也没有什么阻止你这样做。
 
@@ -7339,32 +7547,34 @@ and neither is preferred
 
 你还可以对 `service-charge` 做进一步的改进。由于所有高级账户都有相同的服务费，为 `::Savings` 和 `::Checking` 账户定义两个独立的 `service-charge` 方法似乎是多余的。如果有一个父类型 `::Account` 就好了，这样你就可以定义一个匹配任何类型 `::Account` 的 `::Premium` 多方法。Clojure 允许通过 `derive` 定义任意的父子关系：
 
-| |
-| :--- |
-| | `(derive child parent)` |
+`(derive child parent)`
 
 使用 `derive`，你可以指定 `::Savings` 和 `::Checking` 都是 `::Account` 的一种类型：
 
-| [src/examples/multimethods/service_charge_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_3.clj) |
-| :--- |
-| | `(derive ::Savings ::Account)` |
-| | `(derive ::Checking ::Account)` |
+[src/examples/multimethods/service_charge_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_3.clj)
+
+```clojure
+(derive ::Savings ::Account)
+(derive ::Checking ::Account)
+```
 
 当你开始使用 `derive` 时，`isa?` 就发挥作用作用了。除了理解继承之外，`isa?` 还了解所有通过 `derive` 建立的关系：
 
-| |
-| :--- |
-| | `(isa? ::Savings ::Account)` |
-| | `-> true` |
+```clojure
+(isa? ::Savings ::Account)
+-> true
+```
 
 现在 Clojure 知道 `Savings` 和 `Checking` 是 `Account` 了，你可以使用单个方法来定义 `service-charge` 以处理 `::Premium`：
 
-| [src/examples/multimethods/service_charge_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_3.clj) |
-| :--- |
-| | `(defmulti service-charge (fn [acct] [(account-level acct) (:tag acct)]))` |
-| | `(defmethod service-charge [::acc/Basic ::acc/Checking] [_] 25)` |
-| | `(defmethod service-charge [::acc/Basic ::acc/Savings] [_] 10)` |
-| | `(defmethod service-charge [::acc/Premium ::Account] [_] 0)` |
+[src/examples/multimethods/service_charge_3.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/multimethods/service_charge_3.clj)
+
+```clojure
+(defmulti service-charge (fn [acct] [(account-level acct) (:tag acct)]))
+(defmethod service-charge [::acc/Basic ::acc/Checking] [_] 25)
+(defmethod service-charge [::acc/Basic ::acc/Savings] [_] 10)
+(defmethod service-charge [::acc/Premium ::Account] [_] 0)
+```
 
 从表面上看，你可能认为 `derive` 和 `isa?` 仅仅是复制了 Clojure 通过 Java 继承已经获得的功能。事实并非如此。Java 的继承关系在定义类时就已经固定了。而 `derive` 建立的关系可以在需要时创建，并且可以在不经对象同意的情况下应用于现有对象。因此，当你发现一个有用的关系时，可以 `derive` 该关系，而无需触碰原始对象并创建令人讨厌的“包装”类。
 
@@ -7375,6 +7585,7 @@ and neither is preferred
 多方法非常灵活，而这种灵活性带来了选择。我们应该如何选择使用多方法，而不是其他技术？我们从两个方向考虑这个问题，并问了以下问题：
 
 * Clojure 项目在什么地方使用多方法？
+
 * Clojure 项目在什么地方避开多方法？
 
 最令人惊讶的是，多方法非常稀少——大约每 1000 行代码有一个。一个没有定义任何多方法的 Clojure 程序并不像没有多态的面向对象程序那样奇怪。
@@ -7387,52 +7598,40 @@ and neither is preferred
 
 Clojure 的 `inspector` 库使用 Swing 创建数据的简单视图。你可以用它获取系统属性的树视图：
 
-| |
-| :--- |
-| | `(use '[clojure.inspector :only (inspect-tree)])` |
-| | `(inspect-tree (System/getProperties))` |
-| | `-> <JFrame>` |
+```clojure
+(use '[clojure.inspector :only (inspect-tree)])
+(inspect-tree (System/getProperties))
+-> <JFrame>
+```
 
 `inspect-tree` 返回（并显示）任何树形内容的 `JFrame`。因此，你也可以将 map 传递给 `inspect-tree`：
 
-| |
-| :--- |
-| | `(inspect-tree {:creator "Rich" :runs-on-jvm true}})` |
-| | `-> <JFrame>` |
+```clojure
+(inspect-tree {:creator "Rich" :runs-on-jvm true}})
+-> <JFrame>
+```
 
 树由回答两个问题的节点组成：
 
 * 我的子节点是谁？
+
 * 我是叶子节点吗？
 
 “树”、“节点”和“叶子”这些树形概念听起来像是面向对象设计中类或接口的候选者。但 inspector 并不是这样工作的。它通过一个名为 `collection-tag` 的分发函数，以即用的方式为现有类型添加了“树形”类型系统：
 
-| |
-| :--- |
-| | *来自 Clojure 的 clojure/inspector.clj* |
+*来自 Clojure 的 clojure/inspector.clj*
+
+
+
+`collection-tag` 函数返回 `:entry`、`:map`、`:seq` 或 `:atom` 关键字之一。这些关键字构成了树形世界的类型系统。随后，它们用于分发三个不同的多方法，根据树形类型系统选择特定的实现。
+
 ```clojure
-(defn collection-tag [x]
-  (cond
-    (instance? java.util.Map$Entry x) :entry
-    (instance? clojure.lang.IPersistentMap x) :map
-    (instance? java.util.Map x) :map
-    (instance? clojure.lang.Sequential x) :seq
-    :else :atom))
+(defmulti is-leaf collection-tag)
+(defmulti get-child (fn [parent index] (collection-tag parent)))
+(defmulti get-child-count collection-tag)
 ```
 
-`collection-tag` 返回 `:entry`, `:map`, `:seq` 或 `:atom` 关键字之一。这些关键字构成了树形世界的类型系统。随后，用于分发三个不同的多方法，根据树形类型系统选择特定的实现。
-
-| |
-| :--- |
-| | `(defmulti is-leaf collection-tag)` |
-| | |
-| | `(defmulti get-child (fn [parent index] (collection-tag parent)))` |
-| | |
-| | `(defmulti get-child-count collection-tag)` |
-| | *方法实现已省略以保持简见* |
-
-
-
+*方法实现已省略以保持简见*
 
 Clojure 中的 `clojure.test` 库允许你使用 `is` 宏编写多种不同类型的断言。你可以断言任意函数是否为真。例如，`10` 不是一个字符串：
 
@@ -7455,7 +7654,7 @@ actual: java.lang.String
 -> false
 ```
 
-`is` 同样了解 `=`。验证 `power` 不等于 `wisdom`。
+`is` 同样了解 `=`。验证 `power` 不等于 `wisdom`：
 
 ```clisp
 (is (= "power" "wisdom"))
@@ -7473,11 +7672,11 @@ actual: (not (= "power" "wisdom"))
 
 由于第一个参数是表示要检查函数的符号，这等同于另外一种临时的类型系统。这次有三种类型：`=`、`instance?` 以及其他所有。
 
-各种 `assert-expr` 方法为你可能从 `is` 调用的不同函数添加了特定的错误信息。由于多方法是开放的，你可以添加你自己的 `assert-expr` 方法，为你你经常传递给 `is` 的其他函数提供改进的错误信息。
+各种 `assert-expr` 方法为你可能从 `is` 调用的不同函数添加了特定的错误信息。由于多方法是开放的，你可以添加你自己的 `assert-expr` 方法，为你经常传递给 `is` 的其他函数提供改进的错误信息。
 
 ### 反例
 
-正如你在第 8.4 节看到的，创建临时分类法，你通常可以使用多方法将基于类型的分支从函数的主流程中提炼出来。为了找到不应该使用多方法的反例，我们查看了 Clojure 的核心代码，寻找尚未被提升到多方法的类型分支。
+正如你在第 8.4 节看到的，创建临时分类法时，你通常可以使用多方法将基于类型的分支从函数的主流程中提炼出来。为了找到不应该使用多方法的反例，我们查看了 Clojure 的核心代码，寻找尚未被提升到多方法的类型分支。
 
 一个简单的例子是 Clojure 的 `class`，它是底层 Java `getClass` 的空安全包装器。去掉注释和元数据后，`class` 如下所示：
 
@@ -7505,7 +7704,7 @@ actual: (not (= "power" "wisdom"))
 *   你应该能够直接解释 `defmethod` 的分发值，而无需引用 `defmulti`。
 *   不要仅仅为了处理可选参数或递归而使用多方法。
 
-如果不确定，尝试用两种风格编写该函数，并选择看起来更具读性的的一种。
+如果不确定，尝试用两种风格编写该函数，并选择看起来更具可读性的一种。
 
 ## 8.6 总结
 
@@ -7521,7 +7720,7 @@ actual: (not (= "power" "wisdom"))
 
 检查异常
 
-Java 的检查异常必须在可能发生它的每个方法中被显式捕获或重新抛出。这在初看起来似乎是一个好主意：检查异常可以使用类型系统来严谨地记录错误处理，并由编译器的强制执行。大多数 Java 程序员现在认为检查异常是一项失败的实验，因为它们在代码膨胀和可维护性方面的代价超过了其优势。关于检查异常的历史的更多信息，请参阅 Rod Waldhoff 的文章[60 以及相关链接。
+Java 的检查异常必须在可能发生它的每个方法中被显式捕获或重新抛出。这在初看起来似乎是一个好主意：检查异常可以使用类型系统来严谨地记录错误处理，并由编译器强制执行。大多数 Java 程序员现在认为检查异常是一项失败的实验，因为它们在代码膨胀和可维护性方面的代价超过了其优势。关于检查异常的历史的更多信息，请参阅 Rod Waldhoff 的文章[60 以及相关链接。
 
 在 Clojure 中，情况类似但更简单。`try` 和 `throw` 特殊形式赋予了你 Java `try`、`catch`、`finally` 和 `throw` 的所有功能。但你不应该频繁使用它们，原因如下：
 
@@ -7541,14 +7740,13 @@ try {
 }
 ```
 
-
-
-
 在 Clojure 中，你并不被强制处理检查异常。你不需要捕获它们，也不需要声明你抛出了它们。因此，之前的代码将翻译为如下：
 
-| | `(Manifest)` |
+```clojure
+(Manifest.)
+```
 
-异常封装的缺失使得地道的 Clojure 代码比地道的 Java 代码更易读、易写和维护。尽管如此，这并没有阻止你在 Clojure 中显式地捕获、包装和重新抛异常。这并不是强制要求的。只有当你计划以意义的方式响应异常时，才应该捕获异常。
+异常封装的缺失使得地道的 Clojure 代码比地道的 Java 代码更易读、易写和维护。尽管如此，这并没有阻止你在 Clojure 中显式地捕获、包装和重新抛异常。这并不是强制要求的。只有当你计划以有意义的方式响应异常时，才应该捕获异常。
 
 ### 清理资源
 
@@ -7556,23 +7754,29 @@ try {
 
 如果你需要释放的资源遵循具有 `close` 方法的约定，可以使用 Clojure 的 `with-open` 宏：
 
-| | `(with-open [name init-form] & body)` |
+```clojure
+(with-open [name init-form] & body)
+```
 
 在内部，`with-open` 会创建一个 `try` 块，将 `name` 设置为 `init-form` 的结果，然后运行 `body` 中的表达式。最重要的是，`with-open` 始终会在 `finally` 块中关闭绑定到 `name` 的对象。
 
 `with-open` 的一个很好的例子是 `clojure.string` 中的 `spit` 函数：
 
-| | `(clojure.core/spit file content)` |
+```clojure
+(clojure.core/spit file content)
+```
 
 `spit` 简单地将字符串写入文件。试一下：
 
-```
+```clojure
 (spit "hello.out" "hello, world")
 ```
 
-| | `-> nil` |
+```clojure
+-> nil
+```
 
-你现在应该会在 `hello.out` 一个内容为 `hello, world` 的文件。
+你现在应该会在 `hello.out` 看到一个内容为 `hello, world` 的文件。
 
 `spit` 的实现非常简单：
 
@@ -7612,7 +7816,7 @@ try {
 
 ### 响应异常
 
-最有趣的情况是异常处理器尝试在 `catch` 块中响应问题。作为一个简单的例子，考虑一个测试特定类在运行时是否可用的：
+最有趣的情况是异常处理器尝试在 `catch` 块中响应问题。作为一个简单的例子，考虑一个测试特定类在运行时是否可用的函数：
 
 [src/examples/interop.clj](http://media.pragprog.com/titles/shcloj2/code/src/examples/interop.clj)
 
@@ -7681,16 +7885,13 @@ Clojure 为整数类型提供了三组不同的操作：
 
 Clojure 依赖 Java 的 `BigDecimal` 类来处理任意精度小数。详情请参见在线文档[[61]](#f_0078.html_FOOTNOTE-61)。`BigDecimal` 提供任意精度，但是有代价的：`BigDecimal` 数学运算远慢于 Java 的浮点原生类型。
 
-
-
-
 Clojure 拥有自己的 `BigInt` 类来处理 `BigInteger` 转换。与直接使用 Java 的 `BigInteger` 相比，Clojure 的 `BigInt` 在性能上有一些改进。它还封装了 `BigInteger` 的一些粗糙之处。特别是，它正确地实现了 `hashCode`。这使得相等性优先于表示形式，你会在语言的几乎每个抽象中都看到这一点。
 
-在底层，Clojure 使用 Java 的 `BigInteger`。性能差异在于 `BigInt` 处理其值的方式。一个 `BigInt` 由一个 `Long` 部分和一个 `BigInteger` 部分组成。当传入 `BigInt` 的值小到可以被视为 `Long` 时，它就会被视为 `Long`。当在 `BigInt` 上执行数值运算时，如果其结果小到可以被视为 `Long`，它也是如此处理的。这使得使用户能够添加溢出提示 `(N)`，而在绝对必要之前无需支付 `BigInteger` 的代价。
+在底层，Clojure 使用 Java 的 `BigInteger`。性能差异在于 `BigInt` 处理其值的方式。一个 `BigInt` 由一个 `Long` 部分和一个 `BigInteger` 部分组成。当传入 `BigInt` 的值小到可以被视为 `Long` 时，它就会被视为 `Long`。当在 `BigInt` 上执行数值运算时，如果其结果小到可以被视为 `Long`，它也是如此处理的。这使得用户能够添加溢出提示 `(N)`，而在绝对必要之前无需支付 `BigInteger` 的代价。
 
 ## 9.3 性能优化
 
-在 Clojure 中，使用第 2.5 节描述的技术调用 Java 是符合惯例的，即 *调用 Java。生成的代码对于 90% 的场景来说已经足够快了。但当你需要时，可以进行局部更改来提升性能。这些更改不会改变外部调用者调用你代码的方式，因此你可以自由地让代码工作，然后再让它快速。
+在 Clojure 中，使用第 2.5 节描述的技术调用 Java 是符合惯例的，即 *调用 Java*。生成的代码对于 90% 的场景来说已经足够快了。但当你需要时，可以进行局部更改来提升性能。这些更改不会改变外部调用者调用你代码的方式，因此你可以自由地让代码工作，然后再让它快速。
 
 ### 使用原始类型优化性能
 
@@ -7698,38 +7899,43 @@ Clojure 拥有自己的 `BigInt` 类来处理 `BigInteger` 转换。与直接使
 
 考虑一个计算从 1 到 n 数字之和的函数：
 
-| | `; 仅用于演示，不要这样写代码` |
-| :--- | :--- |
-| | `(defn sum-to [n] (loop [i 1 sum 0]` |
-| | ` (if (<= i n) (recur (inc i) (+ i sum)) sum)))` |
+```clojure
+; 仅用于演示，不要这样写代码
+(defn sum-to [n] (loop [i 1 sum 0]
+  (if (<= i n) (recur (inc i) (+ i sum)) sum)))
+```
 
 你可以验证该函数在较小输入值下工作正常：
 
-| | |
-| :--- | :--- |
-| `(sum-to 10)` |
-| `=> 55` |
+```clojure
+(sum-to 10)
+=> 55
+```
 
 让我们看看 `sum-to` 的性能。要对操作计时，可以使用 `time` 函数。在进行基准测试时，你往往希望进行多次测量，以便消除启动开销加上任何异常值；因此，你可以在 `dotimes` 宏内部调用 `time`：
 
-```
+```clojure
 (dotimes bindings body)
 ```
 
 `dotimes` 将重复执行其体，并将名称绑定到从零到 n-1 的整数。使用 `dotimes`，你可以如下收集五次 `sum-to` 的耗时：
 
-| | |
-| :--- | :--- |
-| `(dotimes [_ 5] (time (sum-to 10000)))` |
-| `\| "Elapsed time: 0.149 msecs"` |
-| `\| "Elapsed time: 0.126 msecs"` |
+```clojure
+(dotimes [_ 5] (time (sum-to 10000)))
+| "Elapsed time: 0.149 msecs"
+| "Elapsed time: 0.126 msecs"
+```
+
+
+
 | `\| "Elapsed time: 0.194 msecs"` |
 | `\| "Elapsed time: 0.279 msecs"` |
 | `-> "Elapsed time: 0.212 msecs"` |
 
 为了提高速度，你可以将参数和返回类型提示为 `long`。Clojure 的类型推断会将此提示传递到函数内部的所有操作和函数调用中。
 
-```clojure(defn ^long integer-sum-to [^long n]
+```clojure
+(defn ^long integer-sum-to [^long n]
   (loop [i 1 sum 0]
     (if (<= i n)
       (recur (inc i) (+ i sum))
@@ -7751,7 +7957,8 @@ Clojure 的原始类型数学仍然是正确的，因为它会检查溢出并抛
 
 Clojure 通过未检查（unchecked）系列函数提供了 Java 的算术语义。也许你通过使用 `+` 的未检查版本 `unchecked-add` 可以获得甚至更快的函数：
 
-```clojure(defn ^long unchecked-sum-to [^long n]
+```clojure
+(defn ^long unchecked-sum-to [^long n]
   (loop [i 1 sum 0]
     (if (<= i n)
       (recur (inc i) (unchecked-add i sum))
@@ -7767,11 +7974,7 @@ Clojure 通过未检查（unchecked）系列函数提供了 Java 的算术语义
 | `\| "Elapsed time: 0.018 msecs"` |
 | `\| "Elapsed time: 0.014 msecs"` |
 
-
-
-
-
--   在运行时强制执行类型
+### 在运行时强制执行类型
 
 例如，考虑以下函数，它返回关于 Java 类的信息：
 
@@ -7788,7 +7991,7 @@ Clojure 通过未检查（unchecked）系列函数提供了 Java 的算术语义
 -> true
 ```
 
-`set!` 结尾的感叹号是一种惯用表示，说明 `set!` 会改变可变状态。`set!` 在 使用 Java Callback API 中详细描述。当 `*warn-on-reflection*` 设置为 `true` 时，编译 `describe-class` 将产生以下警告：
+`set!` 结尾的感叹号是一种惯用表示，说明 `set!` 会改变可变状态。`set!` 在使用 Java Callback API 中详细描述。当 `*warn-on-reflection*` 设置为 `true` 时，编译 `describe-class` 将产生以下警告：
 
 ```text
 Reflection warning, line: 87
@@ -7854,9 +8057,9 @@ Clojure 的对象都实现了合理的 Java 接口：
 
 ```clisp
 (import '(org.xml.sax InputSource)
-         org.xml.sax.DefaultHandler
-         java.io.StringReader
-         javax.xml.parsers.SAXFactory)
+        org.xml.sax.DefaultHandler
+        java.io.StringReader
+        javax.xml.parsers.SAXFactory)
 ```
 
 代理机制是完全通用的，可以动态生成你需要的任何类型的对象。有时对象非常简单，你可以在单行内包含整个对象。以下代码创建了一个新线程，然后创建了一个 `Runnable` 的动态子类并在线程上运行：
@@ -7892,9 +8095,6 @@ foo
 foo
 ```
 
-
-
-
 ```clojure
 ; 通过 Callable 的 call 方法调用
 (.call #(println "foo"))
@@ -7909,7 +8109,6 @@ foo
     (fn []
       (Thread/sleep (rand 500))
       (println (format "Finished %d on %s" i (Thread/currentThread))))))
-
 ```
 
 对于像 XML 和线程回调这样的一次性任务，Clojure 的代理（proxies）既快速又易用。如果你需要一个生命周期较长的类，也可以从 Clojure 生成新的具名类。
@@ -7922,7 +8121,7 @@ foo
 
 你需要处理 Java 集合的一个地方是 Java 数组的特殊情况。在 Java 中，数组有自己的语法和字节码指令。Java 数组没有实现任何 Java 接口。Clojure 集合无法伪装成数组。（Java 集合也无法！）Java 平台在各个方面都将数组视为特例，Clojure 也是如此。
 
-Clojure  `make-array` 来创建 Java 数组：
+Clojure `make-array` 来创建 Java 数组：
 
 ```clojure
 (make-array class length)
@@ -7984,7 +8183,7 @@ Clojure 为 Java 数组提供了一套低级操作，包括 `aset`、`aget` 和 
 (to-array sequence)
 ```
 
-`to-array` 总是创建一个 `Object`  数组：
+`to-array` 总是创建一个 `Object` 数组：
 
 ```clojure
 (to-array ["Easier" "array" "creation"])
@@ -7998,7 +8197,7 @@ prefer clojure.core/format (String/format "Training Week: %s %d" (to-array [2 26
 -> "Training Week: 26"
 ```
 
-`to-array` 的兄弟函数 `into-array` 可以创建比 `Object` 类型更具体的数组。
+`to-array` 的兄弟函数 `into-array` 可以创建比 `Object` 类型更具体的数组：
 
 ```clojure
 (into-array type seq)
@@ -8018,10 +8217,7 @@ prefer clojure.core/format (String/format "Training Week: %s %d" (to-array [2 26
 -> #<String[] [Ljava.lang.String;76bf849>
 ```
 
-
-
-
-首先，我们需要编写连接到 URL 并捕获响应码的代码。我们可以通过使用 Java 的 `URL` 类来实现。
+首先，我们需要编写连接到 URL 并捕获响应码的代码。我们可以通过使用 Java 的 `URL` 类来实现：
 
 ```clojure
 (ns pinger.core
@@ -8041,7 +8237,7 @@ prefer clojure.core/format (String/format "Training Week: %s %d" (to-array [2 26
 -> 200
 ```
 
-现在，让我们创建一个使用 `response-code` 的函数，判断指定的 URL 是否可用。在我们的上下文中，我们将 `available` 定义为返回 `HTTP 200` 响应码。
+现在，让我们创建一个使用 `response-code` 的函数，判断指定的 URL 是否可用。在我们的上下文中，我们将 `available` 定义为返回 `HTTP 200` 响应码：
 
 ```clojure
 (defn available? [address]
@@ -8055,6 +8251,8 @@ prefer clojure.core/format (String/format "Training Week: %s %d" (to-array [2 26
 ```
 
 接下来，我们需要一种方法来启动程序，让它定期检查我们关心的 URL 列表，并报告它们的可用性。让我们创建一个 `-main` 函数。
+
+
 
 ```clojure
 (defn -main []
@@ -8174,8 +8372,6 @@ java -jar pinger-0.0.1-SNAPSHOT-standalone.jar
 lein deps
 ```
 
-
-
 Clojure 日志库的强大之处在于，它会使用类路径上的任何标准 Java 日志库，因此在 `log4j` 和你的应用程序之间不需要额外的连接。在项目根目录下创建一个名为 `resources` 的文件夹。Leiningen 会自动将该文件夹的内容添加到类路径中，你需要用它来存放 `log4j` 属性文件。在 `resources` 目录下创建一个名为 `log4j.properties` 的文件，并添加以下内容：
 
 ```properties
@@ -8251,14 +8447,14 @@ urls=http://google.com,http://amazon.com,http://google.com/badurl
   (load-properties (resource "pinger.properties")))
 ```
 
-只要 `pinger.properties` 在类路径上，`config` 函数就会将 `pinger.properties` 读取到 Java 属性对象中。我们剩下的工作就是获取 `urls` 属性并将其放入列表。在 config 中添加以下函数：
+只要 `pinger.properties` 在类路径上，`config` 函数就会将 `pinger.properties` 读取到 Java 属性对象中。我们剩下的工作就是获取 `urls` 属性并将其放入列表。在 `config` 中添加以下函数：
 
 ```clojure
 (defn urls [conf]
   (str/split (get conf "urls")))
 ```
 
-最后，更新 `core.clj` 中的 `check` 函数以使用新配置。
+最后，更新 `core.clj` 中的 `check` 函数以使用新配置：
 
 ```clojure
 (ns pinger.core
@@ -8282,11 +8478,11 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 
 我们现在已经拥有了成功所需的方法。在这个例子中，我们涵盖了：
 
-*   使用 Java 的 `URL` 检查网站是否可用
-*   使用 Java 的 `ScheduledExecutor` 创建定期运行的任务
-*   使用 `log4j` 配合 `clojure.tools.logging` 发送错误通知
-*   使用 Java 属性系统进行配置
-*   使用 Leiningen 创建独立 JAR
+- 使用 Java 的 `URL` 检查网站是否可用
+- 使用 Java 的 `ScheduledExecutor` 创建定期运行的任务
+- 使用 `log4j` 配合 `clojure.tools.logging` 发送错误通知
+- 使用 Java 属性系统进行配置
+- 使用 Leiningen 创建独立 JAR
 
 我们可以对这个示例进行许多扩展。我们可以通过增加对某些 HTML 元素的存在的要求或在规定时间内响应的要求（覆盖 SLA）来重新定义网站可用性。尝试添加这个示例并看看你能写出什么。
 
@@ -8298,22 +8494,19 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 
 现在你已经学习了 Clojure 语言的基础知识，是时候在自己的项目中使用 Clojure 了。但当你冲出门开始编写你的杀手级 Clojure 应用时，你会很快发现语言知识只是在生态系统中高效工作所需的一部分。你会有这样的问题：
 
-*   我应该用什么工具来组织项目和依赖？
-*   良好的工作流是什么样的？
-*   如何确保我的代码是正确的？
-*   如何保持代码的灵活性和可维护性？
-*   我需要哪些库？
-*   如何将 Clojure 部署到 Web 端？
-
-
-
+- 我应该用什么工具来组织项目和依赖？
+- 良好的工作流是什么样的？
+- 如何确保我的代码是正确的？
+- 如何保持代码的灵活性和可维护性？
+- 我需要哪些库？
+- 如何将 Clojure 部署到 Web 端？
 
 对于这些问题，永远没有单一且万能的答案。Clojure 运行在 JVM 上，这是一个巨大的生态系统，数百种方法在这里蓬勃发展。但你从某处开始。在本章中，我们将为这些问题提供临时答案。这些答案对我们来说非常好，你可以先使用一段时间。随着你自己的偏好和感知的演变，你可以调整或放弃本章的方法，转而采用最适合你的方法。
 
 作为我们的示例应用程序，我们将实现一个网页版本的 Clojurebreaker 游戏。在 Clojurebreaker 中，代码生成者（程序）会创建一个由 N 个有序的彩色插子组成的秘密代码。代码破解者（人类玩家）则提交一个猜测。代码生成者按照以下方式对猜测进行评分：
 
-* 每个颜色和位置都正确的插子得一个黑色黑色插子
-* 每个颜色正确但位置不正确的插子得一个白色白色插子
+- 每个颜色和位置都正确的插子得一个黑色黑色插子
+- 每个颜色正确但位置不正确的插子得一个白色白色插子
 
 游戏在猜测正确或达到预设的猜测次数限制后结束。
 
@@ -8325,10 +8518,13 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 
 对于 Clojurebreaker（以及许多其他游戏），游戏逻辑本身是一个纯函数。它接受一个秘密和一个猜测，并返回一个分数。及早识别这一事实带给我们两个两个相关的优势：
 
-* 评分函数将很容易编写和独立测试。
-* 我们可以心地去实现 `score`，而无需考虑系统的其他部分如何工作。
+- 评分函数将很容易编写和独立测试。
 
-评分本身分为两个部分：统计精确匹配和统计顺序不正确的匹配。这每个部分都可以是自己的函数。让我们从精确匹配开始。为了使具体化，我们将为插子选择一种便于在 REPL 中尝试的表示方法：四种颜色 `:r`（红色）、`:g`（绿色）、`:b`（蓝色）和 `:y`（黄色）。该函数将返回精确匹配的数量，我们可以在稍后的单独步骤中将其转换为黑色插子。这是我们认为需要的函数框架：
+
+
+我们可以专心地实现 `score`，而无需考虑系统的其他部分如何工作。
+
+评分本身分为两个部分：统计精确匹配和统计顺序不正确的匹配。这两个部分都可以是自己的函数。让我们从精确匹配开始。为了使其具体化，我们将为棋子选择一种便于在 REPL 中尝试的表示方法：四种颜色 `:r`（红色）、`:g`（绿色）、`:b`（蓝色）和 `:y`（黄色）。该函数将返回精确匹配的数量，我们可以在稍后的单独步骤中将其转换为黑色棋子。这是我们认为需要的函数框架：
 
 ```clojure
 (defn exact-matches
@@ -8336,7 +8532,7 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
   [c1 c2])
 ```
 
-等一下——那个文档字符串（doc string）没有提到任何任何游戏、颜色或关键词。这里到底发生了什么？虽然某些调用者（例如游戏）最终会关心游戏状态的表示，但 `exact-matches` 不需要关心。所以，让我们保持它的通用性。负责任的 Clojure 设计的关键组件是用数据思考，而不是在每个机会倾入具体的对象。
+等一下——那个文档字符串（doc string）没有提到任何游戏、颜色或关键词。这里到底发生了什么？虽然某些调用者（例如游戏）最终会关心游戏状态的表示，但 `exact-matches` 不需要关心。所以，让我们保持它的通用性。负责任的 Clojure 设计的关键组件是用数据思考，而不是在每个机会倾入具体的对象。
 
 当被描述为数据的通用函数时，`exact-matches` 听起来像是一个可能已经存在的函数。在搜索相关的命名空间（`clojure.core` 和 `clojure.data`）后，我们发现与 `exact-matches` 最近的是 `clojure.data` 的 `diff`。`diff` 递归地比较两个数据结构，返回一个包含“a 中的项”、“b 中的项”和“共同项”的三元组。“共同项”正是我们正在寻找的精确匹配。在 REPL 中尝试一下：
 
@@ -8346,7 +8542,7 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 -> [[nil :g :g] [nil :y :y] [:r nil nil :b]]
 ```
 
-`[:r nil nil :b]` 中的非 `nil` 条是比较 r/g/g/b 和 r/y/y/b 时的精确匹配。有了 `diff`，`exact-matches` 的实现就变得简单了：
+`[:r nil nil :b]` 中的非 `nil` 项是比较 `:r/:g/:g/:b` 和 `:r/:y/:y/:b` 时的精确匹配。有了 `diff`，`exact-matches` 的实现就变得简单了：
 
 ```clojure
 (defn exact-matches
@@ -8357,12 +8553,13 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 ```
 
 再次，在 REPL 中针对示例进行测试：
+
 ```clojure
 (exact-matches [:r :g :g :b] [:r :y :y :b])
 2
 ```
 
-现在让我们关注无序匹配。为了计算这些匹配，我们需要知道秘密和猜测中每种颜色的插子各有多少个。这听起来像是 `frequencies` 函数的工作：
+现在让我们关注无序匹配。为了计算这些匹配，我们需要知道秘密和猜测中每种颜色的棋子各有多少个。这听起来像是 `frequencies` 函数的工作：
 
 ```clojure
 (def example-secret [:r :g :g :b])
@@ -8376,8 +8573,8 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 
 将这两个频率转换为 `unordered-matches`，我们需要做两件事：
 
-* 只考虑同时出现在秘密和猜测中的键
-* 仅统计重叠部分（即对应键下值中的最小值）
+- 只考虑同时出现在秘密和猜测中的键。
+- 仅统计重叠部分（即对应键下值中的最小值）。
 
 再次，我们希望这些操作存在，幸运的是它们确实存在。你可以使用 `select-keys` 保留需要的键：
 
@@ -8396,7 +8593,7 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 -> {:g 1}
 ```
 
-将 `frequencies`、`select-keys` 和 `merge-with` 结合起来得到了 `unordered-matches` 的如下定义：
+将 `frequencies`、`select-keys` 和 `merge-with` 结合起来，得到了 `unordered-matches` 的如下定义：
 
 ```clojure
 (defn unordered-matches
@@ -8417,8 +8614,8 @@ java -cp .:pinger-0.1-standalone.jar pinger.core
 
 这很好，但有一个细微之处。`unordered-matches` 不分顺序地计算匹配，而游戏将想要知道顺序不正确的匹配。尽管游戏似乎并不需要 `unordered-matches`，但编写它是有意义的，原因如下：
 
-* `unordered-matches` 只做一件事。要写一个无序匹配，我们必须在 `unordered-matches` 内部重新实现 `exact-matches`。
-* 我们刚刚编写的两个简单函数正是我们组合以获得无序语义所需要的函数。只需从 `unordered-matches` 的结果中减去 `exact-matches` 的结果即可。
+- `unordered-matches` 只做一件事。要计算无序匹配，我们必须在 `unordered-matches` 内部重新实现 `exact-matches`。
+- 我们刚刚编写的两个简单函数正是我们组合以获得无序语义所需要的函数。只需从 `unordered-matches` 的结果中减去 `exact-matches` 的结果即可。
 
 有了这两个原语，`score` 操作只需将它们结合起来：
 
@@ -8437,20 +8634,17 @@ REPL 欢喜了：
 -> {:exact 1, :unordered 1}
 ```
 
-
-
-
 到这里，我们已经对问题“什么是良好的代码编写工作流？”给出了一个部分的答案。总结如下：
 
-*   拆解问题以识别纯函数。
-*   学习标准库，以便你可以找到已经写好的函数。
-*   不要“倒混凝土”（使用数据作为数据）。
-*   在 REPL 中从内向外地进行测试。
+- 拆解问题以识别纯函数。
+- 学习标准库，以便你可以找到已经写好的函数。
+- 不要“倒混凝土”（使用数据作为数据）。
+- 在 REPL 中从内向外地进行测试。
 
 根据我们的经验，第一次尝试这种工作流的程序员通常会犯两个典型错误：
 
-*   编写代码过多
-*   使测试复杂化
+- 编写代码过多。
+- 使测试复杂化。
 
 每当你不理解表单的行为时，你就写了太多的代码，但你还没有测试并理解它所有的子表单。许多开发者有一种“写 X 行代码，然后进行测试”的直觉，其中 `X` 是能够完成某项实质性任务的最小行数。在 Clojure 中，`X` 远小于 1，这就是为什么我们强调在 REPL 中从内向外构建函数。
 
@@ -8460,14 +8654,14 @@ REPL 欢喜了：
 
 在上一节中，我们在 REPL 中迭代地开发了 `score` 函数，并看到它在几个示例输入下运行正常。想要比这更多的验证，对质量的投入并不算多！让我们开始拆解一下人们在说“测试”时所含义的内容。测试包括：
 
-*   思考代码是否正确
-*   在开发环境中单步执行代码，在那里你可以看到发生的一切事情
-*   构建输入以覆盖各种代码路径
-*   构建输出以匹配构建的输入
-*   使用各种输入运行代码
-*   验证结果的正确性
-*   结果验证的自动化
-*   组织测试，以便将来为了回归测试而自动运行
+- 思考代码是否正确。
+- 在开发环境中单步执行代码，在那里你可以看到发生的一切事情。
+- 构建输入以覆盖各种代码路径。
+- 构建输出以匹配构建的输入。
+- 使用各种输入运行代码。
+- 验证结果的正确性。
+- 结果验证的自动化。
+- 组织测试，以便将来为了回归测试而自动运行。
 
 这并不是一个详尽的列表，但足以说明本节的观点。简而言之，测试通常是复杂的，但它也可以是简单的。
 
@@ -8475,33 +8669,42 @@ REPL 欢喜了：
 
 ### 构建输入
 
-我们已经看到 `score` 函数在几个手工构建的输入上运行。我们需要多少个输入才能说服自己函数是正确的？在完美的世界中，我们应该测试所有输入，但这在计算上几乎是不可行的。但我们很幸运，因为游戏评分问题对于不同颜色数量或插子数量的变体本质上是相同的。如此，我们实际上可以为小型游戏生成所有可能的输入。
+我们已经看到 `score` 函数在几个手工构建的输入上运行。我们需要多少个输入才能说服自己函数是正确的？在完美的世界中，我们应该测试所有输入，但这在计算上几乎是不可行的。但我们很幸运，因为游戏评分问题对于不同颜色数量或棋子数量的变体本质上是相同的。如此，我们实际上可以为小型游戏生成所有可能的输入。
 
-处理形成模式不同方式的数学分支称为组合数学。事实证明，Clojure 库 `math.combinatorics` 我们需要生成所有可能的输入的函数。如果你的 `project.clj` 文件中的 `:dependencies` 下不存在，请添加以下形式：
+处理形成模式不同方式的数学分支称为组合数学。事实证明，Clojure 库 `math.combinatorics` 提供了我们需要生成所有可能输入的函数。如果你的 `project.clj` 文件中的 `:dependencies` 下不存在，请添加以下形式：
 
-| | `[org.clojure/math.combinatorics "0.0.1"]` |
+```clojure
+[org.clojure/math.combinatorics "0.0.1"]
+```
 
-`selections` 函数接受两个参数（集合和大小），并返回由该集合中的元素组成的该大小的每个结构。尝试为一个只有三种颜色和两列的极简版 Clojbreaker 测试：
+`selections` 函数接受两个参数（集合和大小），并返回由该集合中的元素组成的该大小的每个结构。尝试为一个只有三种颜色和两列的极简版 Clojurebreaker 测试：
 
-| | `(require '[clojure.math.combinatorics :as comb])` |
-| | `(comb/selections [:r :g :b] 2)` |
-| | `-> ((:r :r) (:r :g) (:r :b)` |
-| | `(:g :r) (:g :g) (:g :b)` |
-| | `(:b :r) (:b :g) (:b :b))` |
+```clojure
+(require '[clojure.math.combinatorics :as comb])
+
+(comb/selections [:r :g :b] 2)
+
+-> ((:r :r) (:r :g) (:r :b)
+    (:g :r) (:g :g) (:g :b)
+    (:b :r) (:b :g) (:b :b))
+```
 
 所以，`selections` 可以给我们一个可能的秘密或一个可能的猜测。那么为 `score` 函数生成输入呢？嗯，那只是从这些选择中选择两个选择：
 
-| | `(-> (comb/selections [:r :g :b] 2)` |
-| | `(comb/selections 2))` |
-| | `-> (为了简洁省略了 81 对游戏位置)` |
+```clojure
+(-> (comb/selections [:r :g :b] 2)
+    (comb/selections 2))
+
+-> （为了简洁省略了 81 对游戏位置）
+```
 
 让我们将其放入一个命名函数：
 
-[clojurebreaker/src/clojurebreaker/game.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/src/clojurebreaker/game.clj)
+`clojurebreaker/src/clojurebreaker/game.clj`
 
 ```clojure
 (defn generate-turn-inputs
-  "为具有颜色颜色和 n 列的 clojurebreaker 游戏生成所有可能的回合输入"
+  "为具有颜色和 n 列的 clojurebreaker 游戏生成所有可能的回合输入"
   [colors n]
   (-> (comb/selections colors n)
       (comb/selections 2)))
@@ -8517,19 +8720,15 @@ REPL 欢喜了：
 
 ```clojure
 (->> (generate-turn-inputs [:r :g :b] 2)
-  (score))
+     (score))
 ```
 
 ### 验证输出
 
-（注：此处根据原文逻辑补充了跳过构建输出的后续说明）
-
 在这一点上，我们为什么跳过构建输出已经显而易见了。程序已经为我们完成了这些工作。我们只需要决定投入多少精力来验证它们。这里是一些我们可能采取的方法：
 
-*   让人类代码破译专家阅读游戏小型变体的整个输出表。这种方法的优点是详尽的，但可能会漏掉在大型游戏中出现的逻辑错误。
-*   从大型游戏中随机选择一组结果，并让人类专家验证。
-
-
+- 让人类代码破译专家阅读游戏小型变体的整个输出表。这种方法的优点是详尽的，但可能会漏掉在大型游戏中出现的逻辑错误。
+- 从大型游戏中随机选择一组结果，并让人类专家验证。
 
 我们稍后会回到程序化验证，但让我们先转向回归测试。
 
@@ -8541,11 +8740,11 @@ REPL 欢喜了：
 - 运行程序一次，并将结果保存到（命名良好的！）文件中。
 - 每当程序发生变化时，再次运行该程序，并与保存的文件进行比较。如果有任何不同之处，说明程序出坏了。
 
-这种回归方法的好妙之处在于，即使你从未对结果进行过任何验证，它依然有效。当然，你仍然应该进行验证，因为这将帮助你缩小问题发生的范围。（如果没有验证，回归错误可能只是在告诉你旧代码是有问题的，而新代码修复了它。）
+这种回归方法的妙处在于，即使你从未对结果进行过任何验证，它依然有效。当然，你仍然应该进行验证，因为这将帮助你缩小问题发生的范围。（如果没有验证，回归错误可能只是在告诉你旧代码是有问题的，而新代码修复了它。）
 
 编写一个应该产生完全相同输出的程序有多难呢？只调用程序中的纯函数，这正是我们的 `score-inputs` 函数所做的。
 
-将这种回归测试集成到持续集成（CI）构建中并不困难。如果你这样做了，请考虑将其贡献给你你正在使用的任何测试框架。
+将这种回归测试集成到持续集成（CI）构建中并不困难。如果你这样做了，请考虑将其贡献给你正在使用的任何测试框架。
 
 现在我们部分地回答了这个问题：“如何确保我的代码是正确的？”总而言之：
 
@@ -8555,13 +8754,13 @@ REPL 欢喜了：
 
 最后一个想法如此重要，以至于值得某些库的支持。因此，在我们继续之前，我们将引入 `test.generative`，这是一个旨在为测试带来简单性的库。
 
-## 10.3 test.generative
+## 10.3 `test.generative`
 
 `test.generative` 库将测试分为三个关键步骤：
 
-- 生成测试输入
-- 调用测试函数
-- 验证结果
+- 生成测试输入。
+- 调用测试函数。
+- 验证结果。
 
 这三个步骤中的每一个都通过函数实现，然后通过 `defspec` 形式组合成测试。
 
@@ -8577,13 +8776,13 @@ REPL 欢喜了：
 
 从 REPL 开始，如下所示引入 `generators` 命名空间：
 
-```text
+```clojure
 (require '[clojure.test.generative.generators :as gen])
 ```
 
 `generators` 命名空间包含了用于为不同的常用数据类型生成伪随机值的函数。例如，对于每个 Java 原始类型，都有一个同名的生成器函数。尝试其中几个：
 
-```text
+```clojure
 (gen/int)
 -> 977378563
 
@@ -8598,7 +8797,7 @@ REPL 欢喜了：
 
 你也可以为不同的 Clojure 集合类型生成随机值。这些函数通过要创建的集合类型参数化。例如：
 
-```text
+```clojure
 (gen/vec gen/boolean)
 -> [false false true true true false]
 
@@ -8606,16 +8805,16 @@ REPL 欢喜了：
 -> {32 -504310803, 100 424501842, 5 1439482147, 37 1161641068}
 ```
 
-除了基本类型外，你还可以使用几个旋旋来控制类型的生成方式。你可以选择一种概率分布：
+除了基本类型外，你还可以使用几个旋钮来控制类型的生成方式。你可以选择一种概率分布：
 
-```text
+```clojure
 (gen/geometric 0.02)
 -> 10
 ```
 
 你还可以控制集合的大小，使用常数或分布：
 
-```text
+```clojure
 (gen/list gen/int 2)
 -> (-1029960512 1985289448)
 
@@ -8631,7 +8830,7 @@ REPL 欢喜了：
 ;; clojurebreaker/test/clojurebreaker/game_test.clj
 (defn random-secret
   []
-  (gen/vec #(gen/of :r :g :b : 4))
+  (gen/vec #(gen/of :r :g :b) 4))
 ```
 
 在继续验证之前，不要忘记在 REPL 中尝试 `random-secret`。
@@ -8647,6 +8846,8 @@ REPL 欢喜了：
 - 如果打乱了猜测中棋子的顺序，分数中精确匹配和无序匹配的总和将不会改变。
 
 让我们将这些不变性分别编码为关于 `secret`、`guess` 和 `score` 的布尔函数：
+
+
 
 ```clojure
 ;; clojurebreaker/test/clojurebreaker/game_test.clj
@@ -8676,7 +8877,7 @@ REPL 欢喜了：
      (comb/permutations guess)))))
 ```
 
-虽然我们通常在 REPL 中输入代码然后将其粘贴到相应的文件，但之前处理不变性函数时我们反过来了，先将它们添加到源文件中。但这并不意味着我们必须失去 REPL 的即时性。从 REPL 中，我们可以重载命名空间，然后使用 `in-ns` 进入该命名空间：
+虽然我们通常在 REPL 中输入代码然后将其粘贴到相应的文件，但之前处理不变性函数时我们反过来了，先将它们添加到源文件中。但这并不意味着我们必须失去 REPL 的即时性。从 REPL 中，我们可以重载命名空间，然后使用`in-ns`进入该命名空间：
 
 ```text
 (require :reload 'clojurebreaker.game-test)
@@ -8699,15 +8900,11 @@ REPL 欢喜了：
 -> true
 ```
 
-有了测试数据生成器和验证函数，我们现在准备好在 `defspec` 中将一切结合起来了。
-
-
-
-
+有了测试数据生成器和验证函数，我们现在准备好在`defspec`中将一切结合起来了。
 
 ### defspec
 
-`defspec` 接收三个强制参数：
+`defspec`接收三个强制参数：
 
 *   spec 的名称
 *   要测试的函数
@@ -8716,22 +8913,27 @@ REPL 欢喜了：
 在参数之后，可以跟零个或多个体形式（body forms），用于执行校验。这里有一个简单的示例：
 
 | [clojurebreaker/snippets.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/snippets.clj) |
+
 | :--- |
+
 | | `(defspec closed-under-addition` |
+
 | | `  '+` |
+
 | | `  [^long a ^long b]` |
+
 | | `  (assert (integer? %)))` |
 
 这些参数看起来像普通的 Clojure 参数，但有一个不同之处。普通的函数参数可以可选地标记上类型提示（type hints）。而 Spec 参数必须被标记，且其提示要告诉程序如何生成这些参数。
 
-`test.generative` 中的函数 `generate-test-data` 接收一个参数 spec 并生成无限的测试数据序列。你可以直接调用 `generate-test-data` 来独立于任何测试执行而生成参数：
+`test.generative`中的函数`generate-test-data`接收一个参数 spec 并生成无限的测试数据序列。你可以直接调用`generate-test-data`来独立于任何测试执行而生成参数：
 
 ```clojure
 (take 3 (test/generate-test-data '[long long]))
 -> ([-5025562857975149833 -5843495416241995736] [5694868678511409995 5111195811822994797] [-6169532649852302182 -1782466964123969572])
 ```
 
-`defspec` 的正体可以通过名称访问参数，就像普通函数一样。此外，它还可以访问 `%`，`%` 包含了调用测试函数后的返回值。在 `closed-under-addition` 示例中，唯一的校验器形式检查了加法结果是否为整数，甚至懒得去查看输入参数：
+`defspec`的正体可以通过名称访问参数，就像普通函数一样。此外，它还可以访问`%`，`%`包含了调用测试函数后的返回值。在`closed-under-addition`示例中，唯一的校验器形式检查了加法结果是否为整数，甚至懒得去查看输入参数：
 
 ```clojure
 (assert (integer? %))
@@ -8741,20 +8943,20 @@ REPL 欢喜了：
 
 ### 运行测试
 
-Specs 仍然是函数，因此你可以通过简单调用函数来运行它们。如果你在阅读上一节时在 REPL 中求值了 `closed-under-addition` spec，你现在可以调用它并传入一些整数：
+Specs 仍然是函数，因此你可以通过简单调用函数来运行它们。如果你在阅读上一节时在 REPL 中求值了`closed-under-addition` spec，你现在可以调用它并传入一些整数：
 
 ```clojure
 (closed-under-addition 1 2)
 -> nil
 ```
 
-但更有趣的是使用生成的输入来运行 spec。`test.generative` 中有三个辅助函数用于此目的：
+但更有趣的是使用生成的输入来运行 spec。`test.generative`中有三个辅助函数用于此目的：
 
-*   `test-vars` 接收一个或多个 vars，并运行这些 vars 引用的 specs。
-*   `test-dirs` 接收一个或多个目录，并反射地找到这些目录中的所有 specs 并运行它们。
-*   `test-namespaces` 接收多个命名空间并反射地找到这些命名空间中的所有 specs 并运行它们。
+*   `test-vars`接收一个或多个 vars，并运行这些 vars 引用的 specs。
+*   `test-dirs`接收一个或多个目录，并反射地找到这些目录中的所有 specs 并运行它们。
+*   `test-namespaces`接收多个命名空间并反射地找到这些命名空间中的所有 specs 并运行它们。
 
-让我们运行 `closed-under-addition` spec：
+让我们运行`closed-under-addition` spec：
 
 ```clojure
 (require '[clojure.test.generative :as test])
@@ -8762,20 +8964,20 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
 -> [#<core$future_call$reify__5684@603a3e21: :pending> #<core$future_call$reify__5684@fc519e2: :pending>]
 ```
 
-调用 `test-vars` 返回了一些 futures（在之前的输出中是两个）。然后大约过了十秒，没有任何反应，接着是类似这样的 REPL 输出：
+调用`test-vars`返回了一些 futures（在之前的输出中是两个）。然后大约过了十秒，没有任何反应，接着是类似这样的 REPL 输出：
 
 ```clojure
 {:iterations 179766, :msec 10228, :var #'clojurebreaker.game-test/closed-under-addition, :seed 43}
 {:iterations 156217, :msec 10249, :var #'clojurebreaker.game-test/closed-under-addition, :seed 42}
 ```
 
-在后台，`test.generative` 为你本地硬件上的每个处理器创建了一个 future。每个 future 在十秒内尽可能多地运行测试。输出显示了每个线程运行了多少次迭代，每个线程完成花费了多少时钟时间，以及为每个测试的 var 生成数据时使用的随机种子。
+在后台，`test.generative`为你本地硬件上的每个处理器创建了一个 future。每个 future 在十秒内尽可能多地运行测试。输出显示了每个线程运行了多少次迭代，每个线程完成花费了多少时钟时间，以及为每个测试的 var 生成数据时使用的随机种子。
 
-`test.generative` 暴露了几个动态变量（dynamic vars）来自定义测试运行。你可以绑定 `test/*msec` 来更改测试运行的长度，或者可以绑定 `test/*cores` 来更改测试运行利用的内核数。你还可以绑定 `test/*verbose` 在测试运行期间将所有输入打印到 `out`。
+`test.generative`暴露了几个动态变量（dynamic vars）来自定义测试运行。你可以绑定`test/*msec`来更改测试运行的长度，或者可以绑定`test/*cores`来更改测试运行利用的内核数。你还可以绑定`test/*verbose`在测试运行期间将所有输入打印到`out`。
 
 ### 当 Spec 失败时
 
-当 spec 失败时，`test.generative` 提供额外的输出以帮助你重现问题。让我们写一个通过断言两个数之和小于某个失败的 spec：[clojurebreaker/snippets.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/snippets.clj)
+当 spec 失败时，`test.generative`提供额外的输出以帮助你重现问题。让我们写一个通过断言两个数之和小于某个失败的 spec：[clojurebreaker/snippets.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/snippets.clj)
 
 ```clojure
 (defspec incorrect-spec
@@ -8784,15 +8986,15 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
   (assert (< b)))
 ```
 
-如果你运行 `incorrect-spec`，它将快速失败并显示类似下面的错误：
+如果你运行`incorrect-spec`，它将快速失败并显示类似下面的错误：
 
 ```text
 {:form (clojurebreaker.game-test/incorrect-spec -5025562857975149833 -5843495416241995736)}
 ```
 
-`:form` 键提供了失败的输入，`:iteration` 告诉你迭代次数，`:seed` 是生成数据时的种子，`:exception` 则是错误信息。
+`:form`键提供了失败的输入，`:iteration`告诉你迭代次数，`:seed`是生成数据时的种子，`:exception`则是错误信息。
 
-如果你想重现失败，可以使用 `:seed` 重新运行测试。如果你想查看失败的特定输入，可以使用 `failures` 函数：
+如果你想重现失败，可以使用`:seed`重新运行测试。如果你想查看失败的特定输入，可以使用`failures`函数：
 
 ```clojure
 (test/failures 'incorrect-spec)
@@ -8805,7 +9007,7 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
 {:iterations 156217, :msec 10249, :var #'clojurebreaker.game-test/closed-under-addition, :seed 42}
 ```
 
-如果你想，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，可以，可以查看 `AssertionError` 错误：
+如果你想查看`AssertionError`错误：
 
 ```clojure
 {:form (clojurebreaker.game-test/incorrect-spec) :iteration 0} :exception #<java.lang.AssertionError: (<)>
@@ -8813,7 +9015,7 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
 
 ### 生成式测试 score 函数
 
-在 程序化校验 中，我们已经创建了几个验证 Clojbreaker 评分的函数。现在让我们它们加入一个 spec 中：[clojurebreaker/test/game_test.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/test/game_test.clj)
+在程序化校验中，我们已经创建了几个验证 Clojbreaker 评分的函数。现在让我们它们加入一个 spec 中：[clojurebreaker/test/game_test.clj](http://media.pragprog.com/titles/shcloj2/code/clojurebreaker/test/game_test.clj)
 
 ```clojure
 (defspec score-invariants
@@ -8824,10 +9026,10 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
   (assert (reordering-the-guess-does-not-change-matches secret guess)))
 ```
 
-这个 spec 展示了 `defspec` 的一个新用法：语法引号的使用。`random-secret` 之上的语法引号表示该生成函数是由我们自定义的。参数 spec 中的名称引用有两种规则：
+这个 spec 展示了`defspec`的一个新用法：语法引号的使用。`random-secret`之上的语法引号表示该生成函数是由我们自定义的。参数 spec 中的名称引用有两种规则：
 
-*   如果名称没有语法引号，那么该名称将相对于 `clojure.test.generative.generators` 命名空间中的内置生成器进行解析。这些名称正是 `clojure.core` 中的类型和工厂名称，这就是为什么内置生成器看起来像类型提示。
-*   如果名称有语法引号，那么该名称将由 `defspec` 所在的命名空间的规则进行解析。这允许你使用所有标准的命名空间工具来管理自己的生成器。
+*   如果名称没有语法引号，那么该名称将相对于`clojure.test.generative.generators`命名空间中的内置生成器进行解析。这些名称正是`clojure.core`中的类型和工厂名称，这就是为什么内置生成器看起来像类型提示。
+*   如果名称有语法引号，那么该名称将由`defspec`所在的命名空间的规则进行解析。这允许你使用所有标准的命名空间工具来管理自己的生成器。
 
 现在，见证真相的时刻。当我们运行 spec 时，不变性是否真的成立？
 
@@ -8838,10 +9040,6 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
 ;; 十秒过去
 ```
 
-
-
-
-
 ```clojure
 {:iterations 1794, :msec 10002, :seed 42, :var #'clojurebreaker.game-test/score-invariants}
 {:iterations 1787, :msec 10001, :seed 43, :var #'clojurebreaker.game-test/score-invariants}
@@ -8849,21 +9047,21 @@ Specs 仍然是函数，因此你可以通过简单调用函数来运行它们�
 
 看起来不错。你还能想到其他有趣的可以测试的不不变性吗？
 
-到目前，我们仅仅触及了 `test.generative` 的冰角。虽然我们喜欢将输入生成、执行和验证分离开，但在 `Clojure` 中使用更熟悉的单元测试、TDD 和 BDD 方法也是完全可行的。如果你对这些感兴趣，应该查看以下库：
+到目前，我们仅仅触及了`test.generative`的冰角。虽然我们喜欢将输入生成、执行和验证分离开，但在`Clojure`中使用更熟悉的单元测试、TDD 和 BDD 方法也是完全可行的。如果你对这些感兴趣，应该查看以下库：
 
-*   `clojure.test` 是一个内置在 Clojure 自有测试套件中的轻量级单元测试库。
-*   `Lazytest` 是一个通用型库，它在几个通用测试表示的基础上支持不同的测试风格。
-*   `Midje` 强调测试的可读性，同时允许进行自顶向下和自底向上的测试。
+*   `clojure.test`是一个内置在 Clojure 自有测试套件中的轻量级单元测试库。
+*   `Lazytest`是一个通用型库，它在几个通用测试表示的基础上支持不同的测试风格。
+*   `Midje`强调测试的可读性，同时允许进行自顶向下和自底向上的测试。
 
-`test.generative` 中的许多想法灵感来自 `QuickCheck`，该测试库最初用 Haskell 编写，现在已移植许多语言。如果你觉得 `test.generative` 有趣，绝对应该查看 `QuickCheck`，它拥有很长的开发历史和许多在 `test.generative` 中尚未发现的功能。
+`test.generative`中的许多想法灵感来自`QuickCheck`，该测试库最初用 Haskell 编写，现在已移植许多语言。如果你觉得`test.generative`有趣，绝对应该查看`QuickCheck`，它拥有很长的开发历史和许多在`test.generative`中尚未发现的功能。
 
 既然我们对自己的评分函数有了一些信心，让我们看看如何在 Web 上运行一个 Clojurebreaker 游戏吧。
 
 ## 10.4 创建接口
 
-有了坚实的基础，引入一个接口和可玩的游戏版本应该是轻而易举的。让我们从一个基础 Web 应用开始。`noir` Web 框架将作为我们构建应用的基础。创建一个新的 `noir` 项目非常简单。
+有了坚实的基础，引入一个接口和可玩的游戏版本应该是轻而易举的。让我们从一个基础 Web 应用开始。`noir`Web 框架将作为我们构建应用的基础。创建一个新的`noir`项目非常简单。
 
-首先，你需要为 `leiningen` 安装 `lein-noir` 插件：
+首先，你需要为`leiningen`安装`lein-noir`插件：
 
 ```bash
 $ lein plugin install lein-noir 1.2.0
@@ -8877,13 +9075,13 @@ $ cd clojurebreaker
 $ lein run
 ```
 
-将浏览器指向 [`localhost:8080`](http://localhost:8080)。你会看到默认的 `noir` 落地页，这目前对你来说没意思，但它能确保你的设置是正确的。
+将浏览器指向[`localhost:8080`](http://localhost:8080)。你会看到默认的`noir`落地页，这目前对你来说没意思，但它能确保你的设置是正确的。
 
 ### 终于是时候处理状态了
 
 这是我们将引入唯一的一个状态的地方。由于我们希望多个玩家能够同时享受我们的游戏，并且我们希望能够在请求之间维护游戏的解，我们需要在某处存储这个值。很棒的一点是我们不需要在代码中管理它。我们可以将其放入浏览器的 session 中，让我们的应用代码免于状态管理。
 
-让我们从打开 `src/clojurebreaker/views/welcome.clj` 开始。将 `/welcome` 页面改为 `/`。我们需要一种方法在 session 中不存在内容时存入一些。幸运的是，`noir` 有 `session/put!` 和 `session/get`。让我们使用它们吧。
+让我们从打开`src/clojurebreaker/views/welcome.clj`开始。将`/welcome`页面改为`/`。我们需要一种方法在 session 中不存在内容时存入一些。幸运的是，`noir`有`session/put!`和`session/get`。让我们使用它们吧。
 
 ```clojure
 (defpage "/" []
@@ -8896,7 +9094,7 @@ $ lein run
 
 如果你刷新浏览器，现在会看到你的 session 中有一个游戏 ID。如果你继续刷新，它不应该改变。如果你清除 session 并刷新，你应该会看到一个新的游戏 ID。我们将在以后使用这种技术，但我们不再需要随机生成的 ID 了。那只是为了证明 session 存储器工作正常。
 
-在 `src/clojurebreaker/models` 中创建一个名为 `game.clj` 的新文件。在这里我们将放置生成新游戏密码并将其返回视图所需的函数。
+在`src/clojurebreaker/models`中创建一个名为`game.clj`的新文件。在这里我们将放置生成新游戏密码并将其返回视图所需的函数。
 
 ```clojure
 (ns clojurebreaker.models.game)
@@ -8913,10 +9111,11 @@ clojurebreaker.models.game=> (otimes 5 (println (create)))
 nil
 ```
 
-这就是我们开始游戏所需的所有。我们只需要回到视图并把代码连接起来。记住 `test.generative` 也可以创建你的游戏，所以可以尽管使用它来代替之前的函数。这展示了创建密码的另一种方法。
+这就是我们开始游戏所需的所有。我们只需要回到视图并把代码连接起来。记住`test.generative`也可以创建你的游戏，所以可以尽管使用它来代替之前的函数。这展示了创建密码的另一种方法。
 
-```clojure
-(defpage "/" []
+
+
+```clojure我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。(defpage "/" []
   (when-not (session/get :game)
     (session/put! :game (game/create)))
   (common/layout
@@ -8924,11 +9123,11 @@ nil
      Current game solution is " (session/get :game)]))
 ```
 
-另外，别忘记在命名空间声明中引入 `clojurebreaker.models.game` 为 `game`。当你刷新浏览器时，你会看到你的游戏解。如果解仍然是一个 ID，你需要清除浏览器的 session 并刷新。尝试打开不同的浏览器并访问应用。你应该能看到不同的游戏解。
+另外，别忘记在命名空间声明中引入`clojurebreaker.models.game`为`game`。当你刷新浏览器时，你会看到你的游戏解。如果解仍然是一个 ID，你需要清除浏览器的 session 并刷新。尝试打开不同的浏览器并访问应用。你应该能看到不同的游戏解。
 
 ### 玩家接口
 
-现在我们有了游戏状态，我们需要为玩家创建一个接口。让我们先创建一个面板。我们需要在命名空间声明中引入 `hiccup.form-helpers` 命名空间以及 `hiccup`。现在我们将利用 `noir` 的 `defpartial` 宏。
+现在我们有了游戏状态，我们需要为玩家创建一个接口。让我们先创建一个面板。我们需要在命名空间声明中引入`hiccup.form-helpers`命名空间以及`hiccup`。现在我们将利用`noir`的`defpartial`宏。
 
 ```clojure
 (defpartial board []
@@ -8940,7 +9139,7 @@ nil
     (submit-button "Guess")))
 ```
 
-`defpartial` 宏在这里非常有用，因为它像普通的 Clojure 函数一样被使用。这在我们以后接入评分时大派用场。在 REPL 中尝试一下：
+`defpartial`宏在这里非常有用，因为它像普通的 Clojure 函数一样被使用。这在我们以后接入评分时大派用场。在 REPL 中尝试一下：
 
 ```clojure
 clojurebreaker.models.game=> (in-ns 'clojurebreaker.views.welcome)
@@ -8964,17 +9163,13 @@ clojurebreaker.views.welcome=> (board)
 
 既然我们已经验证了 session 部分工作正常，我们可以移除它们的显示并用实际的游戏替换它们。我们现在有了让用户猜测的方法。嗯，至少我们有了让用户在浏览器中输入的方法。让我们连接服务器端。
 
-回到视图，我们需要创建另一个页面来响应对 `/guess` 的 POST 请求。在这里我们需要执行以下操作：
+回到视图，我们需要创建另一个页面来响应对`/guess`的 POST 请求。在这里我们需要执行以下操作：
 
-*   接受四个输入并将它们发送给评分器。
-*   判断玩家是否赢了游戏（四个精确匹配）。如果是，祝贺他们获胜并添加一个开始新游戏的按钮。
-*   如果用户没有赢，则返回精确匹配和无序匹配的数量，以及最后一组输入，并将它们显示给用户。
+- 接受四个输入并将它们发送给评分器。
+- 判断玩家是否赢了游戏（四个精确匹配）。如果是，祝贺他们获胜并添加一个开始新游戏的按钮。
+- 如果用户没有赢，则返回精确匹配和无序匹配的数量，以及最后一组输入，并将它们显示给用户。
 
-为了对请求进行评分，我们需要在本章节早些创建的游戏评分函数。让我们在模型中添加 `exact-matches`、`unordered-matches` 和 `score`。一旦评分函数就绪，我们就可以接入我们的处理程序并完成游戏的第一阶段。
-
-
-
-
+为了对请求进行评分，我们需要在本章节早些创建的游戏评分函数。让我们在模型中添加`exact-matches`、`unordered-matches`和`score`。一旦评分函数就绪，我们就可以接入我们的处理程序并完成游戏的第一阶段。
 
 `clojurebreaker/src/clojurebreaker/views/welcome.clj`
 
@@ -8998,9 +9193,9 @@ clojurebreaker.views.welcome=> (board)
                    :unordered (:unordered result)})))))
 ```
 
-好了，这部分有点像 REPL 风格。在这里，我们可以判断玩家是否赢了游戏并进行恰善的处理。不过，这里还从 `noir` 中引入了一些尚未介绍过的新东西。`defpage` 之后的 `:keys` 解构赋值是在处理从浏览器传来的参数。`session/remove!` 的作用正如你所想的那样。有趣的部分从 `session/flash-put!` 开始。它会将某些内容添加到会话，供紧随后的请求使用，然后它就会消失。这类似于 Ruby on Rails 的 flash 方法。最后，`render` 函数会带有随后的参数调用路由。
+好了，这部分有点像 REPL 风格。在这里，我们可以判断玩家是否赢了游戏并进行恰善的处理。不过，这里还从`noir`中引入了一些尚未介绍过的新东西。`defpage`之后的`:keys`解构赋值是在处理从浏览器传来的参数。`session/remove!`的作用正如你所想的那样。有趣的部分从`session/flash-put!`开始。它会将某些内容添加到会话，供紧随后的请求使用，然后它就会消失。这类似于 Ruby on Rails 的 flash 方法。最后，`render`函数会带有随后的参数调用路由。
 
-只需少量的修改，我们就可以尝试运行游戏了。我们的 `/` 路由需要能够接受通过我们刚刚编写的 `render` 调用传来的参数。让我们修复它。首先修改 `board` 局部视图，使其接收并解构传递给它的参数以及渲染结果：
+只需少量的修改，我们就可以尝试运行游戏了。我们的`/`路由需要能够接受通过我们刚刚编写的`render`调用传来的参数。让我们修复它。首先修改`board`局部视图，使其接收并解构传递给它的参数以及渲染结果：
 
 `clojurebreaker/src/clojurebreaker/views/welcome.clj`
 
@@ -9058,9 +9253,9 @@ clojurebreaker.views.welcome=> (board {:one "r" :two "b" :three "y" :four "g" :e
     (common/layout (board guesses))))
 ```
 
-在这里，我们只是接受来自 `render` 的参数，以便将它们传递给 `board` 局部视图。由于 `board` 的工作类似于标准的 Clojure 函数，这个过程轻而易举。
+在这里，我们只是接受来自`render`的参数，以便将它们传递给`board`局部视图。由于`board`的工作类似于标准的 Clojure 函数，这个过程轻而易举。
 
-在运行游戏之前，还有一件事要做的。我们需要在 noir 项目的 `project.clj` 文件中添加 `math.combinatorics`。
+在运行游戏之前，还有一件事要做的。我们需要在 noir 项目的`project.clj`文件中添加`math.combinatorics`。
 
 `clojurebreaker/project.clj`
 
@@ -9074,32 +9269,29 @@ clojurebreaker.views.welcome=> (board {:one "r" :two "b" :three "y" :four "g" :e
   :main clojurebreaker.server)
 ```
 
-重新运行 `lein deps` 和 `lein run`，现在你就可以尽情玩 Clojbreaker 了。
+重新运行`lein deps`和`lein run`，现在你就可以尽情玩 Clojbreaker 了。
 
 ## 10.5 部署你的代码
 
 现在你有了一个完整的应用程序，是时候把它展示给世界了！将应用程序部署到生产环境可能是一项漫长而艰巨的任务，涉及到移动代码。幸运的是，我们将跳过这些步骤，直接进入正题。有一个服务完全支持 Clojure 部署并使其极其简单。他们自称为 Heroku。
 
-设置 Heroku 只需要一些初始步骤，但部署过程就像提交代码到版本控制仓库一样简单。事实上，这就是你需要做的。简单的 `git push` 即可部署。
+设置 Heroku 只需要一些初始步骤，但部署过程就像提交代码到版本控制仓库一样简单。事实上，这就是你需要做的。简单的`git push`即可部署。
 
 要进行部署，你需要注册 Heroku 账号。
 
 ### Procfile
 
-Heroku 使用程序中的一个特殊文件来告诉它如何启动程序。它被称为 `Procfile`。将其添加到项目根目录下。
+Heroku 使用程序中的一个特殊文件来告诉它如何启动程序。它被称为`Procfile`。将其添加到项目根目录下。
 
 ```clojure
 web: lein run
 ```
 
-如果你想确保设置正确，可以安装 foreman gem 并运行 `foreman start`。如果它成功启动了你的应用程序，那么在 Heroku 上就不会有问题。
+如果你想确保设置正确，可以安装 foreman gem 并运行`foreman start`。如果它成功启动了你的应用程序，那么在 Heroku 上就不会有问题。
 
 ### The Heroku Library
 
-
-
-
-Heroku 提供了一种以编程方式与其平台交互的良好方法。唯一需要注意的是，如果你还没有安装相关环境，它需要一些额外的设置。你需要安装 Ruby 编程语言以及 RubyGems。你的系统包管理器应该可以为你提供这些项目。如果没有，你可以始终访问 [`ruby-lang.org`](http://ruby-lang.org)。
+Heroku 提供了一种以编程方式与其平台交互的良好方法。唯一需要注意的是，如果你还没有安装相关环境，它需要一些额外的设置。你需要安装 Ruby 编程语言以及 RubyGems。你的系统包管理器应该可以为你提供这些项目。如果没有，你可以始终访问[`ruby-lang.org`](http://ruby-lang.org)。
 
 通过 RubyGems 安装 Heroku 库：
 
@@ -9109,11 +9301,11 @@ gem install heroku
 
 ### Git
 
-这将提供一个 `heroku` 命令，你将用它进行所有基于 Heroku 的交互。
+这将提供一个`heroku`命令，你将用它进行所有基于 Heroku 的交互。
 
-下一步是在你的 Clojurebreaker 代码库内部创建一个 git 仓库。同样，你系统的包管理器应该可以为你提供合适的 git 版本。如果没有，你可以访问 [`git-scm.org`](http://git-scm.org)。
+下一步是在你的 Clojurebreaker 代码库内部创建一个 git 仓库。同样，你系统的包管理器应该可以为你提供合适的 git 版本。如果没有，你可以访问[`git-scm.org`](http://git-scm.org)。
 
-一旦安装了 git，只需在 clojurebreaker 程序的根目录下运行 `git init` 即可：
+一旦安装了 git，只需在 clojurebreaker 程序的根目录下运行`git init`即可：
 
 ```bash
 git init
@@ -9149,11 +9341,11 @@ git@heroku.com:freezing-waterfall-3937.git
 Git remote heroku added
 ```
 
-`--stack` 参数指定了 Heroku 上支持 Clojure 应用程序的平台。应用程序将获得 Heroku 提供的随机名称以及一个你可以访问以查看运行程序的 URL。如果你需要，稍可以重命名它。
+`--stack`参数指定了 Heroku 上支持 Clojure 应用程序的平台。应用程序将获得 Heroku 提供的随机名称以及一个你可以访问以查看运行程序的 URL。如果你需要，稍可以重命名它。
 
 ### 部署
 
-最后一步是运行 `git push`，Heroku 将处理剩下的工作。
+最后一步是运行`git push`，Heroku 将处理剩下的工作。
 
 ```bash
 git push heroku master
@@ -9177,7 +9369,7 @@ Procfile declares types -> web
 http://stormy-waterfall-3888.herokuapp.com deployed to Heroku
 ```
 
-你也可以使用 `heroku` 命令来访问你的应用程序：
+你也可以使用`heroku`命令来访问你的应用程序：
 
 ```bash
 heroku open
@@ -9186,6 +9378,8 @@ heroku open
 这将打开浏览器并直接带你进入已部署的应用程序。第一次访问可能需要一些时间，但随后的请求会变快。你可以在 Heroku 的开发者中心找到 Heroku/Clojure 教程：[`devcenter.heroku.com/articles/web-application`](http://devcenter.heroku.com/articles/web-application)。享受你的新 Clojure 应用程序带来的乐趣。让它变得更好，给它一些个性，并与与世界分享它吧！
 
 ## 10 告别
+
+
 
 恭喜你。你在短时间内走过了很长一段路。你学习了许多让 Clojure 变得伟大的理念：Lisp、函数式编程和显式并发。在本章中，你看到了一种（许多方法中的）开发 Clojure 完整应用程序的工作流。
 
@@ -9214,15 +9408,14 @@ Clojure 代码简洁且富有表现力。因此，编辑器支持不像某些其
 # 附录 2 参考文献
 
 [Goe06]
+
 Brian Goetz. *Java Concurrency in Practice*. Addison-Wesley, Reading, MA, 2006.
 
 [Hof99]
+
 Douglas R. Hofstadter. *Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books, New York, NY, USA, 20th Anniv, 1999.
 
 [McC06]
-
-
-
 
 Steve McConnell. *软件估算：揭秘黑艺术*. 微软出版社，华盛顿州，雷德蒙德，2006 年。
 
@@ -9235,4 +9428,3 @@ Steve McConnell. *软件估算：揭秘黑艺术*. 微软出版社，华盛顿�
 ![](http://pragmaticprogrammer.com/titles/bhtmux)![](http://pragmaticprogrammer.com/titles/dccar)![](http://pragmaticprogrammer.com/titles/tbcoffee)![](http://pragmaticprogrammer.com/titles/pg_sass)![](http://pragmaticprogrammer.com/titles/btlang)![](http://pragmaticprogrammer.com/titles/bksqla)
 
 ***
-

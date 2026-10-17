@@ -1,45 +1,49 @@
+
 # JavaScript Promises 入门指南
-
-
-
-
-
-
-
 
 ## 目录
 
 - 介绍
 - 关于本书
+  - 浏览器、Node.js 和 Deno 兼容性
+  - 本书的读者群体
+  - 概述
+- 使用的规范
 - 感谢
 - 关于作者
 - 免责声明
+- 帮助与支持
 - 1. Promise 基础
-    - Promise 的生命周期
-    - 创建新的（未定型）Promise
-    - 创建已定型 Promise
-    - 总结
+  - Promise 的生命周期
+  - 使用 `then()` 赋值处理器
+  - 使用 `catch()` 赋值拒绝处理器
+  - 使用 `finally()` 赋值结算处理器
+  - 为已结算的 Promise 赋值处理器
+    - 处理器与微任务
+  - 创建新的（未定型）Promise
+  - 创建已定型 Promise
+  - 总结
 - 2. Promise 链式调用
-    - 捕获错误
-    - 在 Promise 链中使用 `finally()`
-    - 在 Promise 链中返回结果
-    - 在 Promise 链中返回 Promise
-    - 总结
+  - 捕获错误
+  - 在 Promise 链中使用 `finally()`
+  - 在 Promise 链中返回结果
+  - 在 Promise 链中返回 Promise
+  - 总结
 - 3. 多个 Promise Promise
-    - `Promise.all()` 方法
-    - `Promise.allSettled()` 方法
-    - `Promise.any()` 方法
-    - `Promise.race()` 方法
-    - 总结
-- 4. 异步函数与 await 表达式
-    - 定义异步函数
-    - 异步函数的不同之处
-    - 总结
+  - `Promise.all()` 方法
+  - `Promise.allSettled()` 方法
+  - `Promise.any()` 方法
+  - `Promise.race()` 方法
+  - 总结
+- 4. 异步函数与 `await` 表达式
+  - 定义异步函数
+  - 异步函数的不同之处
+  - 总结
 - 5. 未处理拒绝拒绝的跟踪
-    - 检测未处理的拒绝
-    - Web 浏览器未处理拒绝的跟踪
-    - Node.js 未处理拒绝的跟踪
-    - 总结
+  - 检测未处理的拒绝
+  - Web 浏览器未处理拒绝的跟踪
+  - Node.js 未处理拒绝的跟踪
+  - 总结
 - 结语
 - 下载额外资源
 - 支持作者
@@ -76,7 +80,7 @@ Promise 是异步编程的另一种选择，它们的工作方式类似于其他
 - **第 1 章：Promise 基础** 介绍了 Promise 的概念、工作原理以及创建和使用它们的不同方法。
 - **第 2 章：Promise 链式调用** 讨论了将多个 Promise 链在一起的各种方法，使组合异步操作更容易。
 - **第 3 章：多个 Promise** 解释了旨在监控和响应并行执行多个 Promise 的内置 JavaScript 方法。
-- **第 4 章：异步函数与 await 表达式** 介绍了异步函数和 await 表达式的概念，并解释了它们如何关联 Promise 以及如何使用 Promise。
+- **第 4 章：异步函数与 `await` 表达式** 介绍了异步函数和 `await` 表达式的概念，并解释了它们如何关联 Promise 以及如何使用 Promise。
 - **第 5 章：未处理拒绝跟踪** 解释了如何正确跟踪在没有拒绝处理器的情况下 Promise 被拒绝的情况。
 
 ## 使用的规范
@@ -119,7 +123,7 @@ doSomething(); // error!
 
 ## 关于作者
 
-Nicholas C. Zakas 是一名独立的软件工程师、顾问和教练。他是 ESLint 开源项目的创建者，并在 ESLint 技术指导委员会任。Nicholas 与公司和个人合作改进软件工程流程，并帮助技术领导成长和成功。他还编写或贡献了十多本关于 JavaScript 和 Web 开发的书。你可以在 `https://humanwhocodes.com` 和 Twitter @slick 上找到 Nicholas。
+Nicholas C. Zakas 是一名独立的软件工程师、顾问和教练。他是 ESLint 开源项目的创建者，并在 ESLint 技术指导委员会任。Nicholas 与公司和个人合作改进软件工程流程，并帮助技术领导成长和成功。他还编写或贡献了十多本关于 JavaScript 和 Web 开发的书。你可以在 `https://humanwhocodes.com` 和 Twitter `@slick` 上找到 Nicholas。
 
 ## 免责声明
 
@@ -134,10 +138,6 @@ Nicholas C. Zakas 是一名独立的软件工程师、顾问和教练。他是 E
 const promise = fetch("books.json");
 ```
 
-
-
-
-
 `fetch()` 函数是 JavaScript 运行时中一种常用的工具函数，用于发送网络请求。`fetch()` 的调用并不会立即完成网络请求；该将在稍后发生。相反，该函数会返回一个 promise 对象（在本示例中存储在 `promise` 变量中，但你可以随心命名），代表该异步操作，以便你将来对其进行处理。你具体何时能够处理该结果完全取决于 promise 的生命周期的进展。
 
 ## Promise 的生命周期
@@ -151,9 +151,9 @@ const promise = fetch("books.json");
 
 图 1-1：Promise 状态
 
-内部属性 `[[PromiseState]]` 被设置为 `"pending"`、`fulfilled"` 或 `"rejected"` 以反映 promise 的状态。该属性不会在 promise 对象上暴露，因此你无法通过程序确定 promise 处于何种状态。但你可以通过 `then()` 方法在 promise 状态改变时采取特定操作。
+内部属性 `[[PromiseState]]` 被设置为 `"pending"`、`"fulfilled"` 或 `"rejected"` 以反映 promise 的状态。该属性不会在 promise 对象上暴露，因此你无法通过程序确定 promise 处于何种状态。但你可以通过 `then()` 方法在 promise 状态改变时采取特定操作。
 
-## 使用 then() 赋值处理器
+## 使用 `then()` 赋值处理器
 
 所有 promise 都有 `then()` 方法，并接收两个参数。第一个参数是在 promise 已完成时调用的函数，称为“完成处理程序”（fulfillment handler）。与异步操作相关的任何额外数据都会传递给此函数。第二个参数是在 promise 被拒绝时调用的函数，称为“拒绝处理程序”（rejection handler）。与完成处理器类似，拒绝处理程序也会接收与拒绝相关的任何额外数据。
 
@@ -162,26 +162,27 @@ const promise = fetch("books.json");
 `then()` 的两个参数都是可选的，因此你可以监听完成和拒绝的任何组合。例如，考虑这组 `then()` 调用：
 
 ```javascript
-const promise = fetch ( “books.json” );
+const promise = fetch("books.json");
+
 // 添加一个完成处理器和一个拒绝处理器
-promise .then ( response => {
+promise.then(response => {
     // fulfillment
-    console .log ( response . status );
+    console.log(response.status);
 }, reason => {
     // rejection
-    console .error ( reason . message );
+    console.error(reason.message);
 });
 
 // 添加另一个完成处理器
-promise .then ( response => {
+promise.then(response => {
     // fulfillment
-    console .log ( response . statusText );
+    console.log(response.statusText);
 });
 
 // 添加另一个拒绝处理器
-promise .then ( null , reason => {
+promise.then(null, reason => {
     // rejection
-    console .error ( reason . message );
+    console.error(reason.message);
 });
 ```
 
@@ -190,52 +191,56 @@ promise .then ( null , reason => {
 `fetch()` 函数的一个特点是，只要它接收到 HTTP 状态码（即使是 404 或 500），返回的 promise 就会完成。只有当网络请求由于某些原因失败时，promise 才会被拒绝。如果你想确保状态处于 200-299 范围内，可以像示例所示检查 `response.ok` 属性：
 
 ```javascript
-const promise = fetch ( “books.json” );
-promise .then ( response => {
-    if ( response .ok ) {
-        console .log ( “Request succeeded.” );
+const promise = fetch("books.json");
+
+promise.then(response => {
+    if (response.ok) {
+        console.log("Request succeeded.");
     } else {
-        console .error ( “Request failed.” );
+        console.error("Request failed.");
     }
 });
 ```
 
-## 使用 catch() 赋值拒绝处理器
+## 使用 `catch()` 赋值拒绝处理器
 
 Promise 也有一个 `catch()` 方法，当只传递拒绝处理器时，它的行为与 `then()` 相同。例如，以下 `catch()` 和 `then()` 调用在功能上是等价：
 
 ```javascript
-const promise = fetch ( “books.json” );
-promise .catch ( reason => {
+const promise = fetch("books.json");
+
+promise.catch(reason => {
     // rejection
-    console .error ( reason . message );
+    console.error(reason.message);
 });
 
 // 等同于：
-promise .then ( null , reason => {
+promise.then(null, reason => {
     // rejection
-    console .error ( reason . message );
+    console.error(reason.message);
 });
 ```
 
 `then()` 和 `catch()` 的意图让你结合使用它们，清楚地指示结果是如何被处理的。这种系统比事件和回调更好，因为它让成功或失败完全清晰。（事件在发生错误时往往不会触发，而在回调中你必须始终记得检查错误参数。）只需知道，如果你没有为被拒绝的 promise 附加拒绝处理器，JavaScript 运行时将向控制台输出消息，或者抛出错误，或者两者兼有（取决于运行时）。
 
-## 使用 finally() 赋值结算处理器
+## 使用 `finally()` 赋值结算处理器
 
 除了 `then()` 和 `catch()`，还有 `finally()`。传递给 `finally()` 的回调（称为“结算处理程序”，settlement handler）无论成功失败都会调用。与 `then()` 和 `catch()` 的回调不同，`finally()` 回调不接收任何参数，因为不清楚它是否有参数。由于结算处理器在完成和拒绝时都会调用，它与 `then()` 相似（但并不相同；将在第 2 部分进一步讨论）。这是一个示例：
 
 ```javascript
-const promise = fetch ( “books.json” );
-promise .finally (() => {
+const promise = fetch("books.json");
+
+promise.finally(() => {
     // 无法知道是完成还是拒绝
-    console .log ( “Settled” );
+    console.log("Settled");
 });
 
 // 类似于：
 const callback = () => {
-    console .log ( “Settled” );
+    console.log("Settled");
 };
-promise .then ( null , callback );
+
+promise.then(null, callback);
 ```
 
 只要你不访问传递给 `callback` 的参数，这两个示例之间的行为是相同的。但是，作为 `catch()`，使用 `finally()` 会让意图更清晰。
@@ -243,21 +248,21 @@ promise .then ( null , callback );
 当你想要知道某个操作已完成而不在乎结果时，结算处理器非常有用。例如，你可能希望在 `fetch()` 请求活动期间在页面上显示加载指示，并在请求完成后将其隐藏。请求是否成功并不重要。你的 Web 应用程序中可能会有如下代码：
 
 ```javascript
-const appElement = document .getElementById ( “app” );
-const promise = fetch ( “books.json” );
+const appElement = document.getElementById("app");
+const promise = fetch("books.json");
 
-appElement .classList .add ( “loading” );
+appElement.classList.add("loading");
 
-promise .then (() => {
+promise.then(() => {
     // 处理成功
 });
 
-promise .catch (() => {
+promise.catch(() => {
     // 处理失败
 });
 
-promise .finally (() => {
-    appElement .classList .remove ( “loading” );
+promise.finally(() => {
+    appElement.classList.remove("loading");
 });
 ```
 
@@ -269,18 +274,16 @@ promise .finally (() => {
 
 即使在 promise 已经结算后添加完成、拒绝或结算处理器，它们仍然会被执行。这允许你在任何时候添加新的完成和拒绝处理器，并保证它们会被调用。例如：
 
-
-
-
-
 ```javascript
-const promise = fetch ( “books.json” );
+const promise = fetch("books.json");
+
 // original fulfillment handler
-promise .then ( response => {
-    console .log ( response .status );
+promise.then(response => {
+    console.log(response.status);
+
     // now add another
-    promise .then ( response => {
-        console .log ( response .statusText );
+    promise.then(response => {
+        console.log(response.statusText);
     });
 });
 ```
@@ -290,6 +293,8 @@ promise .then ( response => {
 ### 处理器与微任务
 
 在程序的常规流中执行的 JavaScript 是作为 `task`（任务）执行的，这意味着 JavaScript 运行时创建了一个新的执行上下文并完全执行代码，在完成后退出。例如，网页中按钮的 `onclick` 处理器是作为任务 `task` 执行的。当按钮被点击时，会创建一个新任务并执行 `onclick` 处理器。一旦完成，JavaScript 运行时将等待下一次交互以执行更多代码。然而，Promise 处理器是以不同的方式执行的。
+
+
 
 所有的 Promise 处理器（无论是成功、拒绝还是状态处理）都是在 JavaScript 引擎内部作为 `microtasks`（微任务）执行的。`microtasks` 被入队，并在当前运行的任务完成后立即执行，在 JavaScript 运行时变为空闲之前。调用 `then()`、`catch()` 或 `finally()` 会告诉 promise 在状态确定（settled）后队列指定的 `microtasks`。
 
@@ -424,11 +429,7 @@ promise .catch ( reason => {
 
 由于 promise 执行器所做内容的动态性质，`Promise` 构造函数是创建未决定 promise 的最佳方法。但如果你想 promise 代表预先计算过的值，那么创建一个仅仅将值传递给 `resolve()` 或 `reject()` 函数的执行器就没有意义了。相反，有两种方法可以根据特定值创建已决定的 promise。
 
-使用 `Promise.resolve()`
-
-
-
-
+#### 使用 `Promise.resolve()`
 
 `Promise.resolve()` 方法接受单个参数并返回一个处于已完成（fulfilled）状态的 promise。这意味着如果你已经知道了 promise 的值，就不需要提供执行器（executor）。例如：
 
@@ -461,8 +462,6 @@ promise.catch(reason => {
 ```
 
 向此 promise 添加的任何额外拒绝处理程序都会被调用，但完成处理程序不会，因为 promise 永远不会处于已完成状态。
-
-如果你向 `Promise.resolve()` 或 `Promise.reject()` 方法中的任意一个传递 promise，该 promise 将不修改地返回。
 
 #### 非 Promise 的 Thenables
 
@@ -558,6 +557,8 @@ promise2.then(() => {
 });
 ```
 
+
+
 在代码取消链的版本中，`promise1.then()` 的结果存储在 `promise2` 中，然后调用 `promise2.then()` 来添加最后的完成处理器。`promise2.then()` 的调用也返回一个 promise。这个示例只是没有使用那个 promise。
 
 #### 捕获错误
@@ -572,8 +573,6 @@ promise.then(value => {
     console.error(reason.message); // "Oops!"
 });
 ```
-
-
 
 在这段代码中，promise 的成功处理函数（fulfillment handler）抛出了一个错误。第二个 promise 上的 `catch()` 方法链式调用能够通过其拒绝处理函数（rejection handler）接收该错误。如果拒绝处理函数抛出错误，结果也是如此：
 
@@ -621,7 +620,7 @@ promise . then ( response => {
 
 始终在 promise 链的末尾保留一个拒绝处理函数，以确保能够妥善处理可能发生的任何错误。
 
-### 在 Promise 链中使用 finally()
+### 在 Promise 链中使用 `finally()`
 
 `finally()` 方法的行为与 `then()` 或 `catch()` 都不同，因为它会将上一个 promise 的状态和值复制到它返回的 promise 中。这意味着如果原始 promise 成功完成并带有值，那么 `finally()` 返回的 promise 也将相同值成功完成。例如：
 
@@ -717,8 +716,6 @@ promise . then ( value => {
 
 `promise` 的成功处理函数在执行时返回 `value + 1`。由于 `value` 是 42（来自执行器），成功处理函数返回了 43。
 
-
-
 你也可以对拒绝处理器（rejection handler）执行相同的操作。当拒绝处理函数被调用时，它可能会返回一个值。如果确实了，该值将用于完成链中的下一个 promise，如下所示：
 
 ```javascript
@@ -750,7 +747,7 @@ promise . finally (() => {
 
 传递给成功处理函数的值是 `42` 而不是 `43`。状态处理器中的 `return` 语句被忽略，因此可以使用 `then()` 获取原始值。这是 `finally()` 返回一个状态和值都从原始 promise 复制的 promise 的结果之一。
 
-# 在 Promise 链中返回 Promise
+## 在 Promise 链中返回 Promise
 
 从 promise 处理函数中返回原始值允许在 promise 之间传递数据，但如果你返回的是一个对象呢？如果该对象是一个 promise，那么会有一个额外的步骤来确定如何继续。考虑以下示例：
 
@@ -816,69 +813,71 @@ promise1 . then ( value => {
 
 从成功处理函数中返回 promise 对于一个操作需要多个 promise 才能执行完成的情况很有帮助。例如，`fetch()` 需要第二个 promise 来读取响应的体。要读取 JSON 体，你需要使用 `response.json()`，它会返回另一个 promise。以下是在不使用 promise 链时的的写法：
 
-```javascript
-const promise1 = fetch ( “books.json” );
 
-promise1 . then ( response => {
-    promise2 = response . json ();
-    promise2 . then ( payload => {
-        console . log ( payload );
-    }). catch ( reason => {
-        console . error ( reason . message );
+
+```javascript
+const promise1 = fetch("books.json");
+
+promise1.then(response => {
+    promise2 = response.json();
+    promise2.then(payload => {
+        console.log(payload);
+    }).catch(reason => {
+        console.error(reason.message);
     });
 
-}). catch ( reason => {
-    console . error ( reason . message );
+}).catch(reason => {
+    console.error(reason.message);
 });
 ```
 
 这段代码需要两个不同的拒绝处理器来捕获过程中两个不同步骤的潜在错误。从第一个成功处理函数返回第二个 promise 简化了代码：
 
 ```javascript
-const promise = fetch ( “books.json” );
+const promise = fetch("books.json");
 
-promise . then ( response => {
-    return response . json ();
-}). then ( payload => {
-    console . log ( payload );
-}). catch ( reason => {
-    console . error ( reason . message );
+promise.then(response => {
+    return response.json();
+}).then(payload => {
+    console.log(payload);
+}).catch(reason => {
+    console.error(reason.message);
 });
 ```
 
 在这里，第一个成功处理函数在接收到响应时被调用，并返回一个 promise 来读取体。你只需要在最后需要一个拒绝处理器来捕获沿发生的错误。
 
-使用 `finally()` 从状态处理函数返回 promise 也表现出与 `then()` 或 `catch()`不同的行为。首先，如果你从状态处理函数返回一个解析的 promise，那么该 promise 被忽略，转而使用原始值，如下所示：
+使用`finally()`从状态处理函数返回 promise 也表现出与`then()`或`catch()`不同的行为。首先，如果你从状态处理函数返回一个解析的 promise，那么该 promise 被忽略，转而使用原始值，如下所示：
 
 ```javascript
-const promise = Promise . resolve ( 42 );
-promise . finally (() => {
-    return Promise . resolve ( 44 );
-}). then ( value => {
-    console . log ( value );
+const promise = Promise.resolve(42);
+promise.finally(() => {
+    return Promise.resolve(44);
+}).then(value => {
+    console.log(value);
 ```
 
-在这个示例中，状态处理器返回了一个解析为 `44` 的 promise，但返回的 promise 使用的是原始值 `42`。
+在这个示例中，状态处理器返回了一个解析为`44`的 promise，但返回的 promise 使用的是原始值`42`。
 
 然而，如果你从状态处理函数返回一个被拒绝的 promise，那么返回的 promise 将采纳该原因且返回的 promise 将被拒绝，如下所示：
 
 ```javascript
-const promise = Promise . resolve ( 42 );
-promise . finally (() => {
-    return Promise . reject ( 43 );
-}). catch ( reason => {
-    console . error ( reason );
+const promise = Promise.resolve(42);
+promise.finally(() => {
+    return Promise.reject(43);
+}).catch(reason => {
+    console.error(reason);
 });
 ```
 
 即使原始 promise 被拒绝，这种情况仍然成立，如下所示：
 
 ```javascript
-const promise = Promise . reject ( 43 );
-promise . finally (() => {
-    return Promise . reject ( 45 );
-}). catch ( reason => {
-    console . log ( reason );
+const promise = Promise.reject(43);
+promise.finally(() => {
+    return Promise.reject(45);
+}).catch(reason => {
+    console.log(reason);
 });
 ```
 
@@ -887,32 +886,30 @@ promise . finally (() => {
 从成功或拒绝处理器返回 promise 不会改变 promise 执行器的执行顺序。第一个定义的 promise 将运行其执行器；然后运行第二个 promise 执行器，依此类推。返回 promise 允许你对 promise 的结果定义额外的响应。通过在成功处理函数内部创建一个 promise 来延迟成功处理函数的执行。例如：
 
 ```javascript
-const p1 = Promise . resolve ( 42 );
-p1 . then ( value => {
-    console . log ( value );    // 42
+const p1 = Promise.resolve(42);
+p1.then(value => {
+    console.log(value);    // 42
     // 创建一个新的 promise
-    const p2 = new Promise (( resolve , reject ) => {
-        setTimeout (() => {
-            resolve ( 43 );
-        }, 500 );
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(43);
+        }, 500);
     });
-    return p2 ;
-}). then ( value => {
-    console . log ( value );    // 43
+    return p2;
+}).then(value => {
+    console.log(value);    // 43
 });
 ```
 
-
-
-在这个示例中，在 `p1` 的成功处理器内部创建了一个新的 promise。这意味着在 `p2` 成功完成之前，第二个成功处理器不会执行。`p2` 的执行器通过 `setTimeout()` 延迟了 500 毫秒，但在更实际场景中，你可能会发起网络请求或文件系统请求。当你希望在启动新的异步操作之前等待上一个 promise 状态稳定时，这种模式非常有用。
+在这个示例中，在`p1`的成功处理器内部创建了一个新的 promise。这意味着在`p2`成功完成之前，第二个成功处理器不会执行。`p2`的执行器通过`setTimeout()`延迟了 500 毫秒，但在更实际场景中，你可能会发起网络请求或文件系统请求。当你希望在启动新的异步操作之前等待上一个 promise 状态稳定时，这种模式非常有用。
 
 # 总结
 
-多个 promise 可以以各种方式链在一起，以便在它们之间传递信息。对 `then()`、`catch()` 和 `finally()` 的每次调用都会创建并返回一个新的 promise，该 promise 在前一个 promise 稳定后变为解析（resolved）。如果 promise 处理器返回一个值，那么该值将成为 `then()` 和 `catch()` 创建的新 promise 的值（`finally()` 会忽略此值）；如果 promise 处理器抛出错误，则错误会被捕获，且返回的新 promise 将以该错误为原因被拒绝（rejected）。
+多个 promise 可以以各种方式链在一起，以便在它们之间传递信息。对`then()`、`catch()`和`finally()`的每次调用都会创建并返回一个新的 promise，该 promise 在前一个 promise 稳定后变为解析（resolved）。如果 promise 处理器返回一个值，那么该值将成为`then()`和`catch()`创建的新 promise 的值（`finally()`会忽略此值）；如果 promise 处理器抛出错误，则错误会被捕获，且返回的新 promise 将以该错误为原因被拒绝（rejected）。
 
 当链中的一个 promise 被拒绝时，从其他链式处理器创建的 promise 也会被拒绝，直到到达链的末尾。基于这一点，建议在每个 promise 链末尾附加一个拒绝处理器，以确保错误被正确处理。未能捕获 promise 拒绝将导致控制台输出消息、抛出错误或两者兼有（取决于运行时环境）。
 
-你可以从处理器返回 promise，在这种情况下，从 `then()` 和 `catch()` 调用返回的 promise 的稳定状态将与处理器返回的 promise 的稳定状态和值相（`finally()` 返回的解析 promise 会被忽略，而拒绝的 promise 会被遵循）。你可以利用这一点，延迟某些操作直到某个 promise 成功完成，然后启动并返回第二个 promise，以继续使用同一个 promise 链。
+你可以从处理器返回 promise，在这种情况下，从`then()`和`catch()`调用返回的 promise 的稳定状态将与处理器返回的 promise 的稳定状态和值相（`finally()`返回的解析 promise 会被忽略，而拒绝的 promise 会被遵循）。你可以利用这一点，延迟某些操作直到某个 promise 成功完成，然后启动并返回第二个 promise，以继续使用同一个 promise 链。
 
 本章探讨了如何将多个 promise 链在一起，使它们的作用更像一个 promise。在下一章中，你将学习如何处理并行运行的多个 promise。
 
@@ -922,7 +919,7 @@ p1 . then ( value => {
 
 ### Promise.all() 方法
 
-`Promise.all()` 方法接受单个参数，该是一个要监控的 promise 可迭代对象（例如数组），并返回一个 promise，只有当迭代对象中的每个 promise 都解析时，该 promise 才会解析。当迭代对象中的每个 promise 都成功完成时，返回的 promise 变为成功，如示例所示：
+`Promise.all()`方法接受单个参数，该是一个要监控的 promise 可迭代对象（例如数组），并返回一个 promise，只有当迭代对象中的每个 promise 都解析时，该 promise 才会解析。当迭代对象中的每个 promise 都成功完成时，返回的 promise 变为成功，如示例所示：
 
 ```javascript
 let promise1 = Promise.resolve(42);
@@ -945,9 +942,9 @@ promise4.then(value => {
 });
 ```
 
-这里的每个 promise 都用数字解析。对 `Promise.all()` 的调用创建了 `promise4`，它最终在 `promise1`、`promise2` 和 `promise3` 都成功完成后变为成功完成。传递给 `promise4` 成功处理器的结果是一个包含每个解析值的数组：`42`、`43` 和 `44`。这些值按照 promise 传递给 `Promise.all()` 的顺序存储，因此你可以将 结果与解析它们的 promise 相匹配。
+这里的每个 promise 都用数字解析。对`Promise.all()`的调用创建了`promise4`，它最终在`promise1`、`promise2`和`promise3`都成功完成后变为成功完成。传递给`promise4`成功处理器的结果是一个包含每个解析值的数组：`42`、`43`和`44`。这些值按照 promise 传递给`Promise.all()`的顺序存储，因此你可以将结果与解析它们的 promise 相匹配。
 
-如果传递给 `Promise.all()` 的任何 promise 被拒绝，返回的 promise 将立即被拒绝，无需等待其他 promise 完成：
+如果传递给`Promise.all()`的任何 promise 被拒绝，返回的 promise 将立即被拒绝，无需等待其他 promise 完成：
 
 ```javascript
 let promise1 = Promise.resolve(42);
@@ -966,11 +963,11 @@ promise4.catch(reason => {
 });
 ```
 
-在这个示例中，第二个 promise (`promise2`) 被以值 `43` 拒绝。`promise4` 的拒绝处理器被立即调用，而无需等待第一个 promise。
+在这个示例中，第二个 promise（`promise2`）被以值`43`拒绝。`promise4`的拒绝处理器被立即调用，而无需等待第一个 promise。
 
 ### 何时使用 Promise.all()
 
-在任何你需要等待多个 promise 且任何一个失败都应导致整个操作失败的情况下，你都会想要使用 `Promise.all()`。
+在任何你需要等待多个 promise 且任何一个失败都应导致整个操作失败的情况下，你都会想要使用`Promise.all()`。
 
 ### 共同处理多个文件
 
@@ -1001,49 +998,49 @@ readFiles(["file1.json", "file2.json"])
 
 ### 调用多个相关的 Web 服务 API
 
-`Promise.all()` 的另一个常见用例是调用多个 Web 服务 API。这在 REST API 中特别常见，因为与实体关联的每个类型数据可能有其自己的端点。例如，考虑一个应用程序，每个用户都有博客文章和专辑，你可能需要在用户个人资料上收集所有这些信息。代码可能如下所示：
-
-
-
-
+`Promise.all()`的另一个常见用例是调用多个 Web 服务 API。这在 REST API 中特别常见，因为与实体关联的每个类型数据可能有其自己的端点。例如，考虑一个应用程序，每个用户都有博客文章和专辑，你可能需要在用户个人资料上收集所有这些信息。代码可能如下所示：
 
 ```javascript
-const API_BASE = “https://jsonplaceholder.typicode.com” ;
-function fetchUserData ( userId ) {
+const API_BASE = "https://jsonplaceholder.typicode.com";
+
+function fetchUserData(userId) {
     const urls = [
-        `${ API_BASE } /users/ ${ userId } /posts` ,
-        `${ API_BASE } /users/ ${ userId } /albums`
+        `${API_BASE}/users/${userId}/posts`,
+        `${API_BASE}/users/${userId}/albums`
     ];
-    return Promise . all ( urls . map ( url => fetch ( url)));
+
+    return Promise.all(urls.map(url => fetch(url)));
 }
 
-fetchUserData ( 1 ). then ( responses => {
-    return Promise . all (
-        responses . map (
-            response => {
-                if ( response . ok ) {
-                    return response . json ();
-                } else {
-                    return Promise . reject (
-                        new Error ( `Unexpected status code: ${ response . status } ${ response . statusText } for ${ response . url }` )
-                    );
-                }
+fetchUserData(1).then(responses => {
+    return Promise.all(
+        responses.map(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                return Promise.reject(
+                    new Error(
+                        `Unexpected status code: ${response.status} ${response.statusText} for ${response.url}`
+                    )
+                );
             }
-        )
+        })
     );
-}). then (([ posts , albums ]) => {
+}).then(([posts, albums]) => {
     // process your data as necessary
-    console . log ( posts );
-    console . log ( albums );
+    console.log(posts);
+    console.log(albums);
 
-}). catch ( reason => console . error ( reason . message ));
+}).catch(reason => console.error(reason.message));
 ```
 
-此示例使用了 `JSONPlaceholder` 服务，这是一个用于测试和原型设计的免费虚假 API。给定一个特定的用户 ID，JSONPlaceholder 将生成伪数据。在这种情况下，代码对每个用户使用了 `/posts` 和 `/albums` 端点。`fetchUserData()` 函数接收一个用户 ID 并生成用于调用的 URL。然后，这些 URL 被映射到每个 `fetch()` 调用返回的 promise。当获取到响应时，会使用另一个 `Promise.all()` 调用将每个响应映射到另一个 promise：如果响应在 200-299 范围内，则映射为 JSON 体；否则映射为被拒绝的 promise（这将短路整个操作并调用拒绝处理程序）。在最后一个结算处理程序中，可以获取 `posts` 和 `albums` 数据以供进行处理。
+此示例使用了`JSONPlaceholder`服务，这是一个用于测试和原型设计的免费虚假 API。给定一个特定的用户 ID，JSONPlaceholder 将生成伪数据。在这种情况下，代码对每个用户使用了`/posts`和`/albums`端点。`fetchUserData()`函数接收一个用户 ID 并生成用于调用的 URL。然后，这些 URL 被映射到每个`fetch()`调用返回的 promise。当获取到响应时，会使用另一个`Promise.all()`调用将每个响应映射到另一个 promise：如果响应在 200-299 范围内，则映射为 JSON 体；否则映射为被拒绝的 promise（这将短路整个操作并调用拒绝处理程序）。在最后一个结算处理程序中，可以获取`posts`和`albums`数据以供进行处理。
 
 ## 创建人工延迟
 
-`Promise.all()` 的一个不常见场景是你希望推迟某些事情发生得不要太快。这种情况在浏览器中比在服务器端更容易发生，在服务器端，你有时需要在用户操作和响应之间设置微小的延迟。例如，你可能希望在从服务器获取数据时显示加载指示器，但如果响应太快，用户可能看不到加载旋转图标，因此不知道屏幕上的数据是最新的。在这样的情况下，你可以引入一个人工延迟，如下：
+`Promise.all()`的一个不常见场景是你希望推迟某些事情发生得不要太快。这种情况在浏览器中比在服务器端更容易发生，在服务器端，你有时需要在用户操作和响应之间设置微小的延迟。例如，你可能希望在从服务器获取数据时显示加载指示器，但如果响应太快，用户可能看不到加载旋转图标，因此不知道屏幕上的数据是最新的。在这样的情况下，你可以引入一个人工延迟，如下：
+
+
 
 ```javascript
 const API_BASE = “https://jsonplaceholder.typicode.com” ;
@@ -1108,12 +1105,14 @@ fetchUserData ( 1 ). then ( responses => {
 `Promise.allSettled()` 方法是 `Promise.all()` 的一种变体，它等待指定的迭代器中的所有 promise 都结算（settled），无论它们是已完成还是被拒绝。`Promise.allSettled()` 的返回值始终一个解析为包含结果对象数组的 promise。
 
 已完成 promise 的结果对象有两个属性：
-- `status`: 始终设置为字符串 `fulfilled`
-- `value`: promise 的完成值
+
+- `status`：始终设置为字符串 `fulfilled`
+- `value`：promise 的完成值
 
 对于被拒绝的 promise，结果对象中也有两个属性：
-- `status`: 始终设置为字符串 `rejected`
-- `reason`: promise 的拒绝原因
+
+- `status`：始终设置为字符串 `rejected`
+- `reason`：promise 的拒绝原因
 
 你可以使用返回的结果对象数组来确定每个 promise 的结果。
 
@@ -1140,13 +1139,9 @@ promise4 . then ( results => {
 });
 ```
 
-即使第二个 promise（ `promise2` ）是一个被拒绝的 promise，对 `Promise.allSettled()` 的调用仍然返回一个解析为结果对象数组的 promise。
+即使第二个 promise（`promise2`）是一个被拒绝的 promise，对 `Promise.allSettled()` 的调用仍然返回一个解析为结果对象数组的 promise。
 
 ## 分别处理多个文件
-
-
-
-
 
 在讨论 `Promise.all()` 时，你已经看到过一个处理多个相互依赖且必须全部成功的文件操作示例。在某些情况下，分别处理多个文件意味着如果其中一个操作失败了，你不需要停止整个操作；你可以继续完成成功的操作，然后记录失败的操作以便稍后重试。以下是一个 Node.js 的示例：
 
@@ -1281,7 +1276,6 @@ promise4.then(value => console.log(value));
 
 
 
-
 尽管此示例中的第一个承诺（`promise1`）被拒绝了，但 `Promise.any()` 的调用仍然成功，因为第二个承诺（`promise2`）已完成。第三个承诺（`promise3`）的结果被丢弃了。
 
 如果传递给 `Promise.any()` 的所有承诺都被拒绝了，那么返回的承诺将会被 `AggregateError` 拒绝。`AggregateError` 是一种表示存储在 `errors` 属性中的多个错误的错误。例如：
@@ -1313,13 +1307,13 @@ promise4.catch(reason => {
 
 在这里，`Promise.any()` 接收到的承诺均未完成，因此返回的承诺被 `AggregateError` 拒绝。你可以检查 `errors` 属性（这是一个数组），以获取每个承诺的拒绝值。
 
-### 何时使用 Promise.any()
+### 何时使用 `Promise.any()`
 
 当你希望承诺中的任何一个完成，且不在乎有多少个承诺被拒绝（除非它们全部被拒绝）时，使用 `Promise.any()` 方法最佳。以下是你可能想要使用 `Promise.any()` 的场景。
 
-#### 执行对冲请求 (Hedged Requests)
+#### 执行对冲请求（Hedged Requests）
 
-正如《The Tail at Scale² 定义，对冲请求（hedged request）是指客户端向多个服务器发送请求，并接受第一个响应的服务器的结果。这对于需要尽可能低延迟、且有服务器资源用于管理额外负载和响应去重的情况非常有帮助。这是一个示例：
+正如《The Tail at Scale》² 定义，对冲请求（hedged request）是指客户端向多个服务器发送请求，并接受第一个响应的服务器的结果。这对于需要尽可能低延迟、且有服务器资源用于管理额外负载和响应去重的情况非常有帮助。这是一个示例：
 
 ```javascript
 const HOSTS = [
@@ -1342,7 +1336,7 @@ hedgedFetch("/transactions")
 
 #### 在 Service Worker 中使用快速响应
 
-使用 service workers 的 页面通常可以选择从哪里加载数据：网络或从缓存。在某些情况下，网络请求实际上可能比从缓存加载更快，因此你可能想使用 `Promise.any()` 来选择更快的响应。以下是在 service worker 内部演示这种模式的代码：
+使用 service workers 的页面通常可以选择从哪里加载数据：网络或从缓存。在某些情况下，网络请求实际上可能比从缓存加载更快，因此你可能想使用 `Promise.any()` 来选择更快的响应。以下是在 service worker 内部演示这种模式的代码：
 
 ```javascript
 self.addEventListener("fetch", event => {
@@ -1364,9 +1358,9 @@ self.addEventListener("fetch", event => {
 });
 ```
 
-`fetch` 事件监听器允许你监听网络请求并拦截响应。这个 service worker 示例使用 `fetch` 事件监听器来同时从缓存（使用 `caches.match()`）和网络（使用 `fetch()`）读取内容。`caches.match()` 的调用返回一个承诺。`event.respondWith()` 方法接收一个承诺。`Promise.any()` 方法返回一个在第一个承诺完成时就处于就状态的承诺。
+`fetch` 事件监听器允许你监听网络请求并拦截响应。这个 service worker 示例使用 `fetch` 事件监听器来同时从缓存（使用 `caches.match()`）和网络（使用 `fetch()`）读取内容。`caches.match()` 的调用返回一个承诺。`event.respondWith()` 方法接收一个承诺。`Promise.any()` 方法返回一个在第一个承诺完成时就处于就绪状态的承诺。
 
-### Promise.race() 方法
+### `Promise.race()` 方法
 
 `Promise.race()` 方法对多个承诺提供了略有不同的处理。它也接受承诺的可迭代器并返回一个承诺，但只要任何一个承诺就绪它就会就绪。它不像 `Promise.all()` 那样等待所有承诺解析，也不像 `Promise.any()` 那样仅在第一个完成时进行短路，`Promise.race()` 返回第一个就绪承诺的结果。例如：
 
@@ -1386,7 +1380,7 @@ let promise4 = Promise.race([promise1, promise2, promise3]);
 promise4.then(value => console.log(value));
 ```
 
-段代码中，第一个承诺（`promise1`）被创建一个已完成的承诺，而其他的在调度任务。`promise4` 的完成处理器随后带有值 42 被调用并忽略了其他的。传递给 `Promise.race()` 的承诺确实在竞争看哪个先就绪。如果第一个就绪的承诺是完成的，则返回的承诺也是完成的；如果第一个就绪的承诺是被拒绝的，则返回的承诺是被拒绝的。这是一个包含拒绝的示例：
+在这段代码中，第一个承诺（`promise1`）被创建为一个已完成的承诺，而其他的在调度任务。`promise4` 的完成处理器随后带有值 42 被调用并忽略了其他的。传递给 `Promise.race()` 的承诺确实在竞争看哪个先就绪。如果第一个就绪的承诺是完成的，则返回的承诺也是完成的；如果第一个就绪的承诺是被拒绝的，则返回的承诺是被拒绝的。这是一个包含拒绝的示例：
 
 ```javascript
 let promise1 = new Promise((resolve, reject) => {
@@ -1407,9 +1401,6 @@ let promise4 = Promise.race([promise1, promise2, promise3]);
 
 promise4.catch(reason => console.log(reason));
 ```
-
-
-
 
 `Promise.race()` 方法最适用于你希望对多个不同 promise 的完成进行短路处理的情况。与 `Promise.any()` 不同（后者是你明确希望其中一个 promise 成功，并且只关心所有 promise 是否都失败），在使用 `Promise.race()` 时，只要其中一个 promise 在其他任何 promise 履行之前失败，你就想要获知这个失败。以下是一些你可能想要使用 `Promise.race()` 的场景。
 
@@ -1445,14 +1436,14 @@ fetchWithTimeout(API_URL)
 
 请记住，尽管 `fetchWithTimeout()` 会在请求时间超过指定的超时时间时拒绝，但该请求并不会被取消。它会在后台继续等待响应，尽管该响应会被忽略。
 
-# 总结
+## 总结
 
 当你需要同时监控并响应多个 promise 时，JavaScript 提供了几种方法。每种方法的行为略有不同，但都允许你并行运行 promise 并作为一个整体对其进行响应：
 
-- `Promise.all()` - 当所有 promise 都履行时，返回的 promise 履行；当任何 promise 被拒绝时，返回的 promise 被拒绝。
-- `Promise.allSettled()` - 返回的 promise 总是通过包含 promise 结果数组的形式履行，返回的 promise 永远不会被拒绝。
-- `Promise.any()` - 当第一个 promise 履行时，返回的 promise 履行；当所有 promise 都拒绝时，返回的 promise 被拒绝。
-- `Promise.race()` - 当第一个确定的 promise 履行时，返回的 promise 履行；当第一个确定的 promise 被拒绝时，返回的 promise 被拒绝。
+- `Promise.all()`：当所有 promise 都履行时，返回的 promise 履行；当任何 promise 被拒绝时，返回的 promise 被拒绝。
+- `Promise.allSettled()`：返回的 promise 总是通过包含 promise 结果数组的形式履行，返回的 promise 永远不会被拒绝。
+- `Promise.any()`：当第一个 promise 履行时，返回的 promise 履行；当所有 promise 都拒绝时，返回的 promise 被拒绝。
+- `Promise.race()`：当第一个确定的 promise 履行时，返回的 promise 履行；当第一个确定的 promise 被拒绝时，返回的 promise 被拒绝。
 
 这些方法都适用于不同的用例，取决于你自己在任何情况下决定哪种是合适的。
 
@@ -1460,9 +1451,9 @@ fetchWithTimeout(API_URL)
 
 JavaScript promises 被设计为一种低级工具，可以被高级功能使用。Async 函数就是这样一种高级功能，它使得使用 promise 编程更类似于同步代码。在深入研究 async 函数细节之前，了解它们是如何定义的会有所帮助。
 
-#### 定义 Async 函数
+### 定义 Async 函数
 
-异步函数可以用任何可以使用函数的地方。在大多数情况下，你需要在函数或方法之前添加 `async` 关键字。这里是一些示例：
+异步函数可以用在任何可以使用函数的地方。在大多数情况下，你需要在函数或方法之前添加 `async` 关键字。这里是一些示例：
 
 ```javascript
 // async 函数
@@ -1495,16 +1486,16 @@ class MyClass {
 }
 ```
 
-#### Async 函数的不同之处
+### Async 函数的不同之处
 
 Async 函数与同步函数有四个方面的不同：
 
-1. 返回值始终是一个 promise
-2. 抛出的错误是 promise 拒绝
-3. 可以使用 `await` 表达式
-4. for-of 循环
+1. 返回值始终是一个 promise。
+2. 抛出的错误是 promise 拒绝。
+3. 可以使用 `await` 表达式。
+4. `for-of` 循环。
 
-##### 返回值始终是一个 Promise
+#### 返回值始终是一个 Promise
 
 你可以在 async 函数中使用 `return` 运算符，这与同步函数相同。区别在于，无论你指定什么类型，async 函数总是始终返回一个 promise。例如，如果你返回一个数字，它会被封装在一个 promise 中：
 
@@ -1557,13 +1548,9 @@ result.then(value => {
 
 底线是，无论你在 async 函数内部做了什么，它始终会返回一个 promise。在抛出错误时也是如此。
 
-##### 抛出的错误是 Promise 拒绝
+#### 抛出的错误是 Promise 拒绝
 
 当 async 函数中抛出错误时，返回一个被拒绝的 promise，而不是在函数外部抛出错误。这意味着你无法使用 `try-catch` 捕获 async 函数的错误。例如，以下代码无法捕获错误：
-
-
-
-
 
 ```javascript
 async function throwError () {
@@ -1591,11 +1578,15 @@ throwError (). catch ( reason => {
 
 在这里，使用 `catch()` 分配拒绝处理器，错误会导致消息输出到控制台。
 
+
+
 JavaScript 引擎付出了大量努力确保 `async` 函数始终返回 promise，这样你就有了一种一致的方式来处理返回值。这引向了 `async` 函数与同步函数的第三种区别：`await` 表达式。
 
 ## 使用 await 表达式
 
-`await` 表达式的设计是为了让处理 promise 变得简单。与其手动分配完成处理器和拒绝处理器，在 `await` 表达式中使用的任何 promise 行为都都更像同步函数中的代码：该表达式在成功时返回 promise 的完成值（fulfilled value），在 promise 失败时抛出拒绝值（rejection value）。这允许你轻松地将 `await` 表达式的结果赋值给变量，并使用 `try-catch` 语句捕捉任何拒绝。这是一个使用 `fetch()` API（在 浏览器和 Deno 中可用）但不使用 `await` 的示例：
+`await` 表达式的设计是为了让处理 promise 变得简单。与其手动分配完成处理器和拒绝处理器，在 `await` 表达式中使用的任何 promise 行为都更像同步函数中的代码：该表达式在成功时返回 promise 的完成值（fulfilled value），在 promise 失败时抛出拒绝值（rejection value）。这允许你轻松地将 `await` 表达式的结果赋值给变量，并使用 `try-catch` 语句捕捉任何拒绝。
+
+这是一个使用 `fetch()` API（在浏览器和 Deno 中可用）但不使用 `await` 的示例：
 
 ```javascript
 function retrieveJsonData ( url ) {
@@ -1611,7 +1602,9 @@ function retrieveJsonData ( url ) {
 }
 ```
 
-`retrieveJsonData()` 函数返回一个 promise，该 promise 解析为 `fetch()` 调用响应中的 JSON 数据。它还存在拒绝处理器来打印任何错误消息。以下是你如何将此函数重写为使用 `await` 的 `async` 函数：
+`retrieveJsonData()` 函数返回一个 promise，该 promise 解析为 `fetch()` 调用响应中的 JSON 数据。它还存在拒绝处理器来打印任何错误消息。
+
+以下是你如何将此函数重写为使用 `await` 的 `async` 函数：
 
 ```javascript
 async function retrieveJsonData ( url ) {
@@ -1628,9 +1621,11 @@ async function retrieveJsonData ( url ) {
 }
 ```
 
-在重写后的 `retrieveJsonData()` 版本中，对 `await fetch(url)` 的调用处理了返回 promise 的完成和拒绝处理器的定义。变量 `response` 被赋值为该 promise 的完成值（如果成功），拒绝抛出一个被 `try-catch` 语句捕捉的错误。该函数仍然返回一个解析为 JSON 数据的 promise，但它是通过返回 `response.json()`（另一个 promise）的完成值来实现的。如果在 `response.json()` 触发拒绝，它也会作为错误抛出并在 `try-catch` 语句中被捕获。
+在重写后的 `retrieveJsonData()` 版本中，对 `await fetch(url)` 的调用处理了返回 promise 的完成和拒绝处理器的定义。变量 `response` 被赋值为该 promise 的完成值（如果成功），拒绝抛出一个被 `try-catch` 语句捕捉的错误。
 
-你可能会奇怪，为什么如果 `response.json()` 是一个 promise，不直接返回它而不使用 `await` ？例如：
+该函数仍然返回一个解析为 JSON 数据的 promise，但它是通过返回 `response.json()`（另一个 promise）的完成值来实现的。如果在 `response.json()` 触发拒绝，它也会作为错误抛出并在 `try-catch` 语句中被捕获。
+
+你可能会奇怪，为什么如果 `response.json()` 是一个 promise，不直接返回它而不使用 `await`？例如：
 
 ```javascript
 async function retrieveJsonData ( url ) {
@@ -1647,7 +1642,9 @@ async function retrieveJsonData ( url ) {
 }
 ```
 
-当 `response.json()` 成功时，它的工作与之前的示例相同；当 `response.json()` 失败时，该拒绝不会作为错误抛出，因此不会被 `try-catch` 捕获。是 `await` 表达式导致了拒绝作为错误抛出，因此如果你省略了 `await`，promise 的拒绝将会被拒绝处理器捕获。在这个示例中，必须由调用此函数的代码添加拒绝处理器，如下：
+当 `response.json()` 成功时，它的工作与之前的示例相同；当 `response.json()` 失败时，该拒绝不会作为错误抛出，因此不会被 `try-catch` 捕获。是 `await` 表达式导致了拒绝作为错误抛出，因此如果你省略了 `await`，promise 的拒绝将会被拒绝处理器捕获。
+
+在这个示例中，必须由调用此函数的代码添加拒绝处理器，如下：
 
 ```javascript
 async function retrieveData ( url ) {
@@ -1686,7 +1683,7 @@ getMeaningOfLife (). then ( value => console .log ( value ));
 function getMeaningOfLife () {
     return Promise .resolve ( 42 );
 }
-getMeaningOfLife (). then ( value => console .log ( value ));
+getMeaningOfLife (). then ( value => console . log ( value ));
 ```
 
 `await` 处理非 promise 值的能力意味着即使你对所使用的值估测错误，也不会受到惩罚。
@@ -1709,7 +1706,9 @@ async function doSomething () {
 }
 ```
 
-在段代码中，`await` 使用在 `Promise.all()` 的结果上，使函数等待直到所有 promise 都完成，或者其中一个被拒绝（此时会抛出错误）。在函数等待期间，三个 promise 可以自由地并行完成。以下是在 Node.js 中读取多个文件的示例：
+在此代码中，`await` 使用在 `Promise.all()` 的结果上，使函数等待直到所有 promise 都完成，或者其中一个被拒绝（此时会抛出错误）。在函数等待期间，三个 promise 可以自由地并行完成。
+
+以下是在 Node.js 中读取多个文件的示例：
 
 ```javascript
 import { readFile } from “node:fs/promises” ;
@@ -1739,13 +1738,11 @@ readFiles ([
 
 当然，你也可以配合 `await` 使用 `Promise.allSettled()`、`Promise.any()`、`Promise.race()` 或任何其他返回 promise 的函数。
 
+## 使用 for-await-of 循环
 
+异步函数内部支持另一种特殊语法：`for-await-of` 循环，它允许你从可迭代对象或异步可迭代对象获取值。
 
-
-
-# 使用 for-await-of 循环
-
-异步函数内部支持另一种特殊语法： `for-await-of` 循环，它允许你从可迭代对象或异步可迭代对象获取值。可迭代对象（iterable）是一个具有 `Symbol.iterator` 方法的对象，该方法返回一个迭代器；异步可迭代对象（async iterable）是一个具有 `Symbol.asyncIterator` 方法的对象，该方法返回的迭代器其值总是 promise。`for-await-of` 循环会对从可迭代对象返回的每个值调用 `Promise.resolve()`，并在等待每个 promise 解析完成之前继续循环的下一次。
+可迭代对象（iterable）是一个具有 `Symbol.iterator` 方法的对象，该方法返回一个迭代器；异步可迭代对象（async iterable）是一个具有 `Symbol.asyncIterator` 方法的对象，该方法返回的迭代器其值总是 promise。`for-await-of` 循环会对从可迭代对象返回的每个值调用 `Promise.resolve()`，并在等待每个 promise 解析完成之前继续循环的下一次。
 
 JavaScript 中最常用的可迭代对象是数组，因此你可以使用 `for-await-of` 循环配合 promise 数组来按顺序处理 promise，例如所示：
 
@@ -1790,7 +1787,9 @@ readCompleteTextStream(stream)
     .then(text => console.log(text));
 ```
 
-`readCompleteTextStream()` 函数接受一个名为 `readable` 的 `ReadStream` 对象作为参数。读取文本文件的第一步是通过 `setEncoding()` 方法将编码设置为 `"utf8"`。然后，`for-await-of` 循环遍历从 `readable` 读取的数据。如果文件很短，可能只有一个数据块；如果文件很长，可能会有多个数据块。使用 `for-await-of` 循环允许你无需担心返回块的数量。
+`readCompleteTextStream()` 函数接受一个名为 `readable` 的 `ReadStream` 对象作为参数。读取文本文件的第一步是通过 `setEncoding()` 方法将编码设置为 `"utf8"`。然后，`for-await-of` 循环遍历从 `readable` 读取的数据。
+
+如果文件很短，可能只有一个数据块；如果文件很长，可能会有多个数据块。使用 `for-await-of` 循环允许你无需担心返回块的数量。
 
 与 `await` 表达式类似，如果异步可迭代对象返回的任何 promise 被拒绝（rejected），`for-await-of` 循环将抛出错误。你可以在异步函数内部使用 `try-catch` 语句捕获该错误，例如：
 
@@ -1818,7 +1817,7 @@ readCompleteTextStream(stream)
 
 在此示例中，`for-await-of` 循环中的第一个被拒绝的 promise 会导致抛异常。`try-catch` 语句可以捕获该错误并将其记录到控制台。如果没有 `try-catch` 语句，`for-await-of` 循环中的拒绝 promise 将捕获并作为拒绝的 promise 从 `readCompleteTextStream()` 函数返回。
 
-# 顶级 await 表达式
+## 顶级 await 表达式
 
 你还可以在 JavaScript 模块的顶级异步函数外部使用 `await`。本质上，JavaScript 模块默认是一个封装了整个模块的异步函数。这允许你直接调用基于 promise 的函数，例如使用 `import()` 函数：
 
@@ -1833,13 +1832,16 @@ const somethingElse = await import(filename);
 
 使用顶级 await，你可以与静态加载的模块一起动态加载模块。（动态加载模块允许你构建指定符，这在静态导入中是不可能的。）
 
-# 总结
+## 总结
 
 - 异步函数允许你使用 promise 而无需手动分配处理程序。你可以通过添加 `async` 关键字将任何函数转换为异步函数。
 - 异步函数的返回值始终是一个 promise。如果你从异步函数返回一个 promise，它将被复制并返回到调用处；如果你返回非 promise 值，则该值将被解析为一个 promise。
 - 在异步函数内部抛出的错误会被捕获并作为被拒绝的 promise 返回。由于这种行为，你无法使用 `try-catch` 捕获源自异步函数的错误；相反，你需要为返回的 promise 分配拒绝处理器。
+
+
+
 - 异步函数启用了两种特殊语法：`await` 表达式和 `for-await-of` 循环。`await` 表达式用于自动为 promise 分配成功和拒绝处理程序，使得成功值成为 `await` 表达式的返回值，而拒绝会导致错误的抛出。同样，`for-await-of` 循环对异步可迭代对象的操作，并允许使用 promise 代替循环。`for-await-of` 循环等待异步可迭代对象返回的每个 promise 解析完成后才继续处理下一个 promise。如果异步可迭代对象中的 promise 被拒绝，则会抛出错误。
-- 你只有在 JavaScript 模块中可以在异步函数外部使用顶级 await 表达式。
+- 你只有在 JavaScript 模块中可以在异步函数外部使用顶级 `await` 表达式。
 
 # 未处理拒绝的跟踪
 
@@ -1861,9 +1863,7 @@ setTimeout(() => {
 }, 5000);
 ```
 
-
-
-你可以在任何点调用 `then()` 或 `catch()`，并且无论 promise 是否已就绪（settled），它们都能正常工作，这使得很难准确判断一个 promise 何时会被处理处理。在这种情况下，promise 会立即被拒绝（rejected），但直到之后才被处理。
+你可以在任何点调用 `then()` 或 `catch()`，并且无论 promise 是否已就绪（settled），它们都能正常工作，这使得很难准确判断一个 promise 何时会被处理。在这种情况下，promise 会立即被拒绝（rejected），但直到之后才被处理。
 
 JavaScript 规范认为，如果 promise 的 `then()` 方法被调用，则该 promise 已经被处理（这包括 `catch()` 和 `finally()`，这两者在底层都会调用 `then()`）。实际上，只要调用了 `then()`，无论你是附加了成功处理程序、拒绝处理程序还是两者都没有，这并不重要。每次调用 `then()` 都会创建一个新的 promise，然后由该 promise 负责处理任何成功完成或拒绝。考虑这个示例：
 
@@ -1895,7 +1895,7 @@ const rejected = Promise .reject ( new Error ( “Oops!”));
 setTimeout (() => {
     // 这里触发“rejectionhandled”
     rejected .catch (
-        reason => console .error ( reason . message ) // “Oops!”
+        reason => console .error ( reason .message ) // “Oops!”
     );
 }, 500 );
 
@@ -1906,9 +1906,9 @@ setTimeout (() => {
 
 `unhandledrejection` 和 `rejectionhandled` 都会生成包含以下属性的事件对象：
 
-- `type`：事件名称（“unhandledrejection” 或 “rejectionhandled”）
-- `promise`：被拒绝的 promise 对象
-- `reason`：来自 promise 的拒绝值
+- `type`：事件名称（“unhandledrejection” 或 “rejectionhandled”）。
+- `promise`：被拒绝的 promise 对象。
+- `reason`：来自 promise 的拒绝值。
 
 通过这些信息，你可以追踪哪些 promise 没有拒绝处理程序，如下例所示：
 
@@ -1918,7 +1918,7 @@ const rejected = Promise .reject ( new Error ( “Oops!”));
 setTimeout (() => {
     // 这里触发“rejectionhandled”
     rejected .catch (
-        reason => console .error ( reason . message ) // “Oops!”
+        reason => console .error ( reason .message ) // “Oops!”
     );
 }, 500 );
 
@@ -1972,16 +1972,12 @@ setInterval (() => {
 
 这是一个简单的未处理拒绝追踪器。它使用 map 存储 promise 及其拒绝理由。每个 promise 是一个键，promise 的理由是关联的值。每当发射 `unhandledrejection`，promise 及其拒绝理由就会被加入 map。每当发射 `rejectionhandled`，已处理的 promise 就会从 map 中移除。结果是 `possiblyUnhandledRejections` 随着事件的发射而增长缩小。此示例中使用 map 而不是 weak map，是因为你需要定期检查 map 中存在哪些 promise，这在 weak map 中是无法实现的。
 
-
-
-
-
 默认情况下，浏览器和 Deno 会将未捕获的拒绝（uncaught rejections）输出到控制台，这种行为不会因为你监听了 `uncaughtrejection` 事件而改变。你可以在 `onuncaughtrejection` 事件处理程序中调用 `event.preventDefault()` 来阻止控制台警告，如下例所示：
 
 ```javascript
-globalThis . onununhandledrejection = event => {
+globalThis .onununhandledrejection = event => {
     // 防止控制台警告
-    event . preventDefault ();
+    event .preventDefault ();
 };
 ```
 
@@ -1992,17 +1988,17 @@ globalThis . onununhandledrejection = event => {
 `unhandledrejection` 和 `rejectionhandled` 事件之间关系的另一个特殊之处在于，你可以在 `onunhandledrejection` 事件处理程序内部添加拒绝处理程序，从而阻止 `rejectionhandled` 事件的触发，如下所示：
 
 ```javascript
-globalThis . onununhandledrejection = ({ promise , reason }) => {
-    promise . catch (() => {}); // 处理拒绝
+globalThis .onununhandledrejection = ({ promise , reason }) => {
+    promise .catch (() => {}); // 处理拒绝
 };
 
 // 这将永远不会被调用
-globalThis . onrejectionhandled = ({ promise }) => {
-    console . log ( promise );
+globalThis .onrejectionhandled = ({ promise }) => {
+    console .log ( promise );
 };
 ```
 
-在这种情况下，`rejectionhandled` 事件不会被触发，因为在该事件触发之前已经添加了拒绝处理程序。浏览器假设你知道该 promise 现在已处理处理，因此没有理由触发 `rejectionhandled` 事件。
+在这种情况下，`rejectionhandled` 事件不会被触发，因为在该事件触发之前已经添加了拒绝处理程序。浏览器假设你知道该 promise 现在已处理，因此没有理由触发 `rejectionhandled` 事件。
 
 即使在 `onunhandledrejection` 内部处理了拒绝，控制台仍然会输出警告，除非你也在 `onunhandledrejection` 内部调用了 `event.preventDefault()`。
 
@@ -2010,16 +2006,16 @@ globalThis . onrejectionhandled = ({ promise }) => {
 
 Node.js 追踪未处理的 promise 拒绝的方式与浏览器相似，但并不完全相同。Node.js 中有两个事件，但它们是在 `process` 对象上发射的，且字母大小写规则与浏览器事件不同：
 
-- `unhandledRejection`: 当 promise 被拒绝且在事件循环的一个轮次内没有调用拒绝处理程序时，触发此事件。
-- `rejectionHandled`: 当 promise 被拒绝且在一个事件循环循环之后调用了拒绝处理程序时，触发此事件。
+- `unhandledRejection`：当 promise 被拒绝且在事件循环的一个轮次内没有调用拒绝处理程序时，触发此事件。
+- `rejectionHandled`：当 promise 被拒绝且在一个事件循环循环之后调用了拒绝处理程序时，触发此事件。
 
 此外，与浏览器事件不同，这些事件不接收事件对象。`unhandledRejection` 事件处理程序将拒绝原因和被拒绝的 `promise` 作为参数传递。以下代码显示了 `unhandledRejection` 的用法：
 
 ```javascript
-const rejected = Promise . reject ( new Error ( “Oops!” ));
-process . on ( “unhandledRejection” , ( reason , promise ) => {
-    console . log ( reason .message ); // “Oops!”
-    console . log ( rejected === promise ); // true
+const rejected = Promise .reject ( new Error ( “Oops!” ));
+process .on ( “unhandledRejection” , ( reason , promise ) => {
+    console .log ( reason .message ); // “Oops!”
+    console .log ( rejected === promise ); // true
 });
 ```
 
@@ -2028,17 +2024,17 @@ process . on ( “unhandledRejection” , ( reason , promise ) => {
 `rejectionHandled` 事件处理程序只有一个参数，即被拒绝的 `promise`。例如：
 
 ```javascript
-const rejected = Promise . reject ( new Error ( “Oops!” ));
+const rejected = Promise .reject ( new Error ( “Oops!” ));
 
 setTimeout (() => {
     // “rejectionhandled” 在此处触发
-    rejected . catch (
-        reason => console . error ( reason . message ) // “Oops!”
+    rejected .catch (
+        reason => console .error ( reason .message ) // “Oops!”
     );
 }, 500);
 
-process . on ( “rejectionHandled” , promise => {
-    console . log ( rejected === promise ); // true
+process .on ( “rejectionHandled” , promise => {
+    console .log ( rejected === promise ); // true
 });
 ```
 
@@ -2054,59 +2050,57 @@ process . on ( “rejectionHandled” , promise => {
 
 对于生产部署，建议使用 `--unhandled-rejection=strict`，因为 promise 拒绝可能会以某种方式让应用程序处于不稳定状态。
 
+
+
 # 在 Node.js 中报告未处理的拒绝
 
-为了正确追踪未处理的拒绝，请使用 `unhandledRejection` 和 `rejectionHandled` 事件来维护未处理拒绝的列表。以下是 Node.js 版本的拒绝追踪器：
+为了正确追踪未处理的拒绝，请使用`unhandledRejection`和`rejectionHandled`事件来维护未处理拒绝的列表。以下是 Node.js 版本的拒绝追踪器：
 
 ```javascript
-const possiblyUnhandledRejections = new Map ();
+const possiblyUnhandledRejections = new Map();
 
 // 当拒绝未处理时，将其加入 map
-process . on ( “unhandledRejection” , ( reason , promise ) => {
-    possiblyUnhandledRejections . set ( promise , reason );
+process.on("unhandledRejection", (reason, promise) => {
+    possiblyUnhandledRejections.set(promise, reason);
 });
 
 // 当拒绝被处理时，将其从 map 中删除
-process . on ( “rejectionHandled” , promise => {
-    possiblyUnhandledRejections . delete ( promise );
+process.on("rejectionHandled", promise => {
+    possiblyUnhandledRejections.delete(promise);
 });
 
-setInterval (() => {
-    possiblyUnhandledRejections .forEach (( reason , promise ) => {
-        console . error ( “Unhandled rejection” );
-        console . error ( promise );
-        console . error ( reason . message ? reason . message : reason );
+setInterval(() => {
+    possiblyUnhandledRejections.forEach((reason, promise) => {
+        console.error("Unhandled rejection");
+        console.error(promise);
+        console.error(reason.message ? reason.message : reason);
         // 处理这些拒绝
     });
-    possiblyUnhandledRejections .clear ();
+    possiblyUnhandledRejections.clear();
 }, 60000);
 ```
 
-此拒绝追踪器的算法与浏览器中相同，只是使用了 Node.js 特有的功能。除此之外，`possiblyUnhandledRejections` 随着事件的调用增加和减少，并使用 `setInterval()` 定期检查未处理的拒绝并将信息输出到控制台。
+此拒绝追踪器的算法与浏览器中相同，只是使用了 Node.js 特有的功能。除此之外，`possiblyUnhandledRejections`随着事件的调用增加和减少，并使用`setInterval()`定期检查未处理的拒绝并将信息输出到控制台。
 
 # 总结
 
-所有 JavaScript 运行时都以某种方式追踪未处理的拒绝。浏览器和 Deno 实现了 HTML 规范中的算法，而 Node.js 实现了了自己的解决方案。两种解决方案都依赖于两个事件：一个在检测到未处理的拒绝时发射，另一个在之前未处理的拒绝被添加了拒绝处理程序时发射。
+所有 JavaScript 运行时都以某种方式追踪未处理的拒绝。浏览器和 Deno 实现了 HTML 规范中的算法，而 Node.js 实现了自己的解决方案。两种解决方案都依赖于两个事件：一个在检测到未处理的拒绝时发射，另一个在之前未处理的拒绝被添加了拒绝处理程序时发射。
 
-`unhandledrejection` 事件在浏览器和 Deno 中在 `globalThis` 对象上每当检测到未处理拒绝都会发射。`unhandledrejection` 事件处理器接收一个包含事件类型、被拒绝的 `promise` 以及 拒绝原因的事件对象。`rejectionhandled` 事件在之前未处理的拒绝被添加了拒绝处理程序时发射。
+`unhandledrejection`事件在浏览器和 Deno 中在`globalThis`对象上每当检测到未处理拒绝都会发射。`unhandledrejection`事件处理器接收一个包含事件类型、被拒绝的`promise`以及拒绝原因的事件对象。`rejectionhandled`事件在之前未处理的拒绝被添加了拒绝处理程序时发射。
 
-Node.js 也使用两个事件，但它们发生在 `process` 对象上，且名称略有不同：`unhandledRejection` 和 `rejectionHandled`。`unhandledRejection` 事件处理器接收拒绝原因和 `promise` 作为参数；`rejectionHandled` 事件处理器只接收 `promise`。
-
-
-
-
+Node.js 也使用两个事件，但它们发生在`process`对象上，且名称略有不同：`unhandledRejection`和`rejectionHandled`。`unhandledRejection`事件处理器接收拒绝原因和`promise`作为参数；`rejectionHandled`事件处理器只接收`promise`。
 
 两种方法都允许你通过监听这两个事件并在单独的位置跟踪它们提供的 promise，从而为你的应用程序实现未处理的拒绝（unhandled rejection）报告。然后，你可以定期检查 promise 列表，并将它们报告到你的日志或报告系统中。
 
 ## 结语
 
-当 promise 在 2015 年被引入 JavaScript 语言时，它们曾是争议的来源，也是许多深度文章的主题，人们在探讨这是否是解决 JavaScript 异步未来的正确方式。几年之后，尘埃已经落定，promise 赢得了许多人的认可，特别是随着 2017 年 async 函数的引入。所有新的异步 异步 API 都是为了利用 promise 而构建的，因此理解如何使用 promise 是任何与 JavaScript 相关工作的重要组成部分。
+当 promise 在 2015 年被引入 JavaScript 语言时，它们曾是争议的来源，也是许多深度文章的主题，人们在探讨这是否是解决 JavaScript 异步未来的正确方式。几年之后，尘埃已经落定，promise 赢得了许多人的认可，特别是随着 2017 年 async 函数的引入。所有新的异步异步 API 都是为了利用 promise 而构建的，因此理解如何使用 promise 是任何与 JavaScript 相关工作的重要组成部分。
 
 我希望你喜欢这次对 JavaScript promise 的探索。
 
 ## 下载额外资源
 
-你可以从 `https://bit.ly/promises-extras` 下载本书的配套材料。这些额外资源包括：
+你可以从`https://bit.ly/promises-extras`下载本书的配套材料。这些额外资源包括：
 
 - 一份 promise 速查表
 - 书中的所有示例
@@ -2114,27 +2108,26 @@ Node.js 也使用两个事件，但它们发生在 `process` 对象上，且名�
 
 ## 支持作者
 
-编写像这样的书需要花费大量的时间和精力。如果你想支持我的工作，并免费获得未来电子书的副本，请访问 `https://bit.ly/support-nzakas`。
+编写像这样的书需要花费大量的时间和精力。如果你想支持我的工作，并免费获得未来电子书的副本，请访问`https://bit.ly/support-nzakas`。
 
 ## 与支持
 
-如果你对本书有任何问题或建议，请发送邮件至 `books@humanwhocodes.com`。请务必在邮件主题中注明书名。
+如果你对本书有任何问题或建议，请发送邮件至`books@humanwhocodes.com`。请务必在邮件主题中注明书名。
 
 ## 关注作者
 
 你可以在以下网站关注 Nicholas C. Zakas：
 
 - 博客：`https://humanwhocodes.com`
-- Twitter: `@slicknet`, `@humanwhocodes`
-- GitHub: `@nzakas`, `@humanwhocodes`
-- Instagram: `@nzakas`, `@humanwhocodes`
+- Twitter：`@slicknet`、`@humanwhocodes`
+- GitHub：`@nzakas`、`@humanwhocodes`
+- Instagram：`@nzakas`、`@humanwhocodes`
 
 联系我并打个招呼吧！
 
 ## Notes
 
-3. 处理多个 promise
+### 3. 处理多个 promise
 
-1 `https://jsonplaceholder.typicode.com/` ↩︎
-2 `https://www.barroso.org/publications/TheTailAtScale.pdf` ↩︎
-
+1. `https://jsonplaceholder.typicode.com/` ↩︎
+2. `https://www.barroso.org/publications/TheTailAtScale.pdf` ↩︎

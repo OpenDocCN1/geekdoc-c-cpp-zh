@@ -1,6 +1,7 @@
+
 # 09. 数据序列化
 
-目前，我们的服务器协议响应是一个错误代码加上一个字符串。如果我们需要返回更复杂的数据呢？例如，我们可能会添加返回字符串列表的 `keys` 命令。我们已经在请求协议中编码了字符串列表数据。在本章中，我们将泛化编码以处理不同类型的数据。这通常被称为“序列化”。
+目前，我们的服务器协议响应是一个错误代码加上一个字符串。如果我们需要返回更复杂的数据呢？例如，我们可能会添加返回字符串列表的`keys`命令。我们已经在请求协议中编码了字符串列表数据。在本章中，我们将泛化编码以处理不同类型的数据。这通常被称为“序列化”。
 
 我们的序列化协议由五种数据类型组成：
 
@@ -14,9 +15,9 @@ enum {
 };
 ```
 
-`SER_NIL` 类似于 `NULL`，`SER_ERR` 用于返回错误代码和消息，`SER_STR` 和 `SER_INT` 用于字符串和 `int64`，而 `SER_ARR` 用于数组。
+`SER_NIL`类似于`NULL`，`SER_ERR`用于返回错误代码和消息，`SER_STR`和`SER_INT`用于字符串和`int64`，而`SER_ARR`用于数组。
 
-代码列表从 `try_one_request` 函数开始：
+代码列表从`try_one_request`函数开始：
 
 ```cpp
 static bool try_one_request(Conn *conn) {
@@ -48,9 +49,9 @@ static bool try_one_request(Conn *conn) {
 }
 ```
 
-为了方便起见，使用了 `std::string` 来存储响应数据。生产级别的项目通常有更复杂的方式来管理缓冲区。
+为了方便起见，使用了`std::string`来存储响应数据。生产级别的项目通常有更复杂的方式来管理缓冲区。
 
-新增了一个名为 `keys` 的命令到 `do_request` 处理器中：
+新增了一个名为`keys`的命令到`do_request`处理器中：
 
 ```cpp
 static void do_request(std::vector<std::string> &cmd, std::string &out) {
@@ -104,7 +105,7 @@ static void out_arr(std::string &out, uint32_t n) {
 
 如我们所见，我们的序列化协议以一个数据类型字节开始，随后是各种类型的有效负载数据。数组首先包含其大小，然后是其可能嵌套的元素。
 
-`do_keys` 函数生成一个由字符串列表组成的响应：
+`do_keys`函数生成一个由字符串列表组成的响应：
 
 ```cpp
 static void h_scan(HTab *tab, void (*f)(HNode *, void *), void *arg) {
@@ -133,7 +134,7 @@ static void do_keys(std::vector<std::string> &cmd, std::string &out) {
 }
 ```
 
-`del` 命令会返回一个整数，表示删除是否成功。
+`del`命令会返回一个整数，表示删除是否成功。
 
 ```cpp
 static void do_del(std::vector<std::string> &cmd, std::string &out) {
@@ -235,10 +236,7 @@ $ ./client keys
 (arr) end
 ```
 
-> +   [09_client.cpp](https://build-your-own.org/redis/09/09_client.cpp.htm)
-> +   
-> +   [09_server.cpp](https://build-your-own.org/redis/09/09_server.cpp.htm)
-> +   
-> +   [hashtable.cpp](https://build-your-own.org/redis/09/hashtable.cpp.htm)
-> +   
-> +   [hashtable.h](https://build-your-own.org/redis/09/hashtable.h.htm)
+> + [09_client.cpp](https://build-your-own.org/redis/09/09_client.cpp.htm)
+> + [09_server.cpp](https://build-your-own.org/redis/09/09_server.cpp.htm)
+> + [hashtable.cpp](https://build-your-own.org/redis/09/hashtable.cpp.htm)
+> + [hashtable.h](https://build-your-own.org/redis/09/hashtable.h.htm)

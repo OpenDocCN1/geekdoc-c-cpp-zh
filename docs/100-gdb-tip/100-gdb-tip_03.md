@@ -1,8 +1,9 @@
+
 # 断点
 
-# 在匿名空间设置断点
+## 在匿名空间设置断点
 
-## 例子
+### 例子
 
 ```cpp
 namespace Foo
@@ -20,27 +21,27 @@ namespace
 } 
 ```
 
-## 技巧
+### 技巧
 
-在 gdb 中，如果要对 namespace Foo 中的 foo 函数设置断点，可以使用如下命令：
+在 `gdb` 中，如果要对 namespace `Foo` 中的 `foo` 函数设置断点，可以使用如下命令：
 
 ```cpp
 (gdb) b Foo::foo 
 ```
 
-如果要对匿名空间中的 bar 函数设置断点，可以使用如下命令：
+如果要对匿名空间中的 `bar` 函数设置断点，可以使用如下命令：
 
 ```cpp
 (gdb) b (anonymous namespace)::bar 
 ```
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 在程序地址上打断点
+## 在程序地址上打断点
 
-## 例子
+### 例子
 
 ```cpp
 0000000000400522 <main>:
@@ -53,25 +54,25 @@ xmj
   400535:       eb 05                   jmp    40053c <main+0x1a> 
 ```
 
-## 技巧
+### 技巧
 
-当调试汇编程序，或者没有调试信息的程序时，经常需要在程序地址上打断点，方法为`b *address`。例如：
+当调试汇编程序，或者没有调试信息的程序时，经常需要在程序地址上打断点，方法为 `b *address`。例如：
 
 ```cpp
 (gdb) b *0x400522 
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Specify-Location.html#Specify-Location)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Specify-Location.html#Specify-Location)。
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 在程序入口处打断点
+## 在程序入口处打断点
 
-## 获取程序入口
+### 获取程序入口
 
-### 方法一：
+#### 方法一
 
 ```cpp
 $ strip a.out
@@ -87,18 +88,18 @@ ELF Header:
   Machine:                           Advanced Micro Devices X86-64
   Version:                           0x1
   Entry point address:               0x400440
-  Start of program headers:          64 (bytes into file)
+  Start of program headers:         64 (bytes into file)
   Start of section headers:          4496 (bytes into file)
   Flags:                             0x0
-  Size of this header:               64 (bytes)
-  Size of program headers:           56 (bytes)
+  Size of this header:              64
+  Size of program headers:           56
   Number of program headers:         9
-  Size of section headers:           64 (bytes)
+  Size of section headers:           64
   Number of section headers:         29
   Section header string table index: 28 
 ```
 
-### 方法二：
+#### 方法二
 
 ```cpp
 $ gdb a.out 
@@ -134,30 +135,30 @@ Local exec file:
     0x0000000000601040 - 0x0000000000601048 is .bss 
 ```
 
-## 技巧
+### 技巧
 
-当调试没有调试信息的程序时，直接运行`start`命令是没有效果的：
+当调试没有调试信息的程序时，直接运行 `start` 命令是没有效果的：
 
 ```cpp
 (gdb) start
 Function "main" not defined. 
 ```
 
-如果不知道 main 在何处，那么可以在程序入口处打断点。先通过`readelf`或者进入 gdb，执行`info files`获得入口地址，然后：
+如果不知道 `main` 在何处，那么可以在程序入口处打断点。先通过 `readelf` 或者进入 `gdb`，执行 `info files` 获得入口地址，然后：
 
 ```cpp
 (gdb) b *0x400440
 (gdb) r 
 ```
 
-## 贡献者
+### 贡献者
 
-*   xmj
-*   [weekface](https://github.com/weekface)
+- `xmj`
+- [weekface](https://github.com/weekface)
 
-# 在文件行号上打断点
+## 在文件行号上打断点
 
-## 例子
+### 例子
 
 ```cpp
 /* a/file.c */
@@ -188,15 +189,15 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-这个比较简单，如果要在当前文件中的某一行打断点，直接`b linenum`即可，例如：
+这个比较简单，如果要在当前文件中的某一行打断点，直接 `b linenum` 即可，例如：
 
 ```cpp
 (gdb) b 7 
 ```
 
-也可以显式指定文件，`b file:linenum`例如：
+也可以显式指定文件，`b file:linenum`，例如：
 
 ```cpp
 (gdb) b file.c:6
@@ -208,7 +209,7 @@ Num     Type           Disp Enb Address            What
 1.2                         y     0x000000000040054b in print_b at b/file.c:6 
 ```
 
-可以看出，gdb 会对所有匹配的文件设置断点。你可以通过指定（部分）路径，来区分相同的文件名：
+可以看出，`gdb` 会对所有匹配的文件设置断点。你可以通过指定（部分）路径，来区分相同的文件名：
 
 ```cpp
 (gdb) b a/file.c:6 
@@ -216,15 +217,15 @@ Num     Type           Disp Enb Address            What
 
 注意：通过行号进行设置断点的一个弊端是，如果你更改了源程序，那么之前设置的断点就可能不是你想要的了。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Specify-Location.html#Specify-Location)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Specify-Location.html#Specify-Location)。
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 保存已经设置的断点
+## 保存已经设置的断点
 
-## 例子
+### 例子
 
 ```cpp
 $ gdb -q `which gdb`
@@ -237,15 +238,15 @@ Breakpoint 2 at 0x5a6bd0: file /home/xmj/project/binutils-trunk/gdb/main.c, line
 Breakpoint 3 at 0x5a68b0: file /home/xmj/project/binutils-trunk/gdb/main.c, line 261. 
 ```
 
-## 技巧
+### 技巧
 
-在 gdb 中，可以使用如下命令将设置的断点保存下来：
+在 `gdb` 中，可以使用如下命令将设置的断点保存下来：
 
 ```cpp
 (gdb) save breakpoints file-name-to-save
 ```
 
-下此调试时，可以使用如下命令批量设置保存的断点：
+下次调试时，可以使用如下命令批量设置保存的断点：
 
 ```cpp
 (gdb) source file-name-to-save
@@ -259,15 +260,15 @@ Num     Type           Disp Enb Address            What
 3       breakpoint     keep y   0x00000000005a68b0 in captured_command_loop at /home/xmj/project/binutils-trunk/gdb/main.c:261 
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/download/onlinedocs/gdb/Save-Breakpoints.html#Save-Breakpoints)
+详情参见 [gdb 手册](https://sourceware.org/gdb/download/onlinedocs/gdb/Save-Breakpoints.html#Save-Breakpoints)。
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 设置临时断点
+## 设置临时断点
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -289,9 +290,9 @@ int main(void) {
 } 
 ```
 
-## 技巧
+### 技巧
 
-在使用 gdb 时，如果想让断点只生效一次，可以使用“tbreak”命令（缩写为：tb）。以上面程序为例：
+在使用 `gdb` 时，如果想让断点只生效一次，可以使用“`tbreak`”命令（缩写为：`tb`）。以上面程序为例：
 
 ```cpp
 (gdb) tb a.c:15
@@ -308,17 +309,17 @@ Temporary breakpoint 1, main () at a.c:15
 No breakpoints or watchpoints. 
 ```
 
-首先在文件的第 15 行设置临时断点，当程序断住后，用“i b”（"info breakpoints"缩写）命令查看断点，发现断点没有了。也就是断点命中一次后，就被删掉了。
+首先在文件的第 15 行设置临时断点，当程序断住后，用“`i b`”（`info breakpoints` 缩写）命令查看断点，发现断点没有了。也就是断点命中一次后，就被删掉了。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 设置条件断点
+## 设置条件断点
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -338,9 +339,9 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
-gdb 可以设置条件断点，也就是只有在条件满足时，断点才会被触发，命令是“`break … if cond`”。以上面程序为例：
+`gdb` 可以设置条件断点，也就是只有在条件满足时，断点才会被触发，命令是“`break … if cond`”。以上面程序为例：
 
 ```cpp
 (gdb) start
@@ -360,17 +361,19 @@ Breakpoint 2, main () at a.c:10
 $1 = 5050 
 ```
 
-可以看到设定断点只在`i`的值为`101`时触发，此时打印`sum`的值为`5050`。
+可以看到设定断点只在 `i` 的值为 `101` 时触发，此时打印 `sum` 的值为 `5050`。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Set-Breaks.html)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 忽略断点
+## 忽略断点
 
-## 例子
+### 例子
+
+
 
 ```cpp
 #include <stdio.h>
@@ -387,12 +390,12 @@ int main(void)
 
         printf("%d\n", sum);
         return 0;
-} 
+}
 ```
 
 ## 技巧
 
-在设置断点以后，可以忽略断点，命令是“`ignore bnum count`”：意思是接下来`count`次编号为`bnum`的断点触发都不会让程序中断，只有第`count + 1`次断点触发才会让程序中断。以上面程序为例：
+在设置断点以后，可以忽略断点，命令是`ignore bnum count`：意思是接下来`count`次编号为`bnum`的断点触发都不会让程序中断，只有第`count + 1`次断点触发才会让程序中断。以上面程序为例：
 
 ```cpp
 (gdb) b 10
@@ -405,13 +408,13 @@ Starting program: /data2/home/nanxiao/a
 Breakpoint 1, main () at a.c:10
 10                                      sum += i;
 (gdb) p i
-$1 = 6 
+$1 = 6
 ```
 
-可以看到设定忽略断点前`5`次触发后，第一次断点断住时，打印`i`的值是`6`。如果想让断点下次就生效，可以将`count`置为`0`：“`ignore 1 0`”。
+可以看到设定忽略断点前`5`次触发后，第一次断点断住时，打印`i`的值是`6`。如果想让断点下次就生效，可以将`count`置为`0`：`ignore 1 0`。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Conditions.html)
 
 ## 贡献者
 
-nanxiao
+`nanxiao`

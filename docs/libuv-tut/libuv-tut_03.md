@@ -1,58 +1,58 @@
+
 # 文件系统
 
-# Filesystem
+## Filesystem
 
-简单的文件读写是通过`uv_fs_*`函数族和与之相关的`uv_fs_t`结构体完成的.
+简单的文件读写是通过`uv_fs_*`函数族和与之相关的`uv_fs_t`结构体完成的。
 
-#### note
+### Note
 
-> libuv 提供的文件操作和 socket operations 并不相同. 套接字操作使用了操作系统本身提供了非阻塞操作, 而文件操作内部使用了阻塞函数, 但是 libuv 是在线程池中调用这些函数, 并在应用程序需要交互时通知在事件循环中注册的监视器.
+> libuv 提供的文件操作和 socket operations 并不相同。套接字操作使用了操作系统本身提供的非阻塞操作，而文件操作内部使用了阻塞函数，但是 libuv 是在线程池中调用这些函数，并在应用程序需要交互时通知在事件循环中注册的监视器。
 
-所有的文件操作函数都有两种形式 - 同步 synchronous 和 异步 asynchronous.
+所有的文件操作函数都有两种形式：同步 synchronous 和异步 asynchronous。
 
-同步 synchronous 形式如果没有指定回调函数则会被自动调用( 并阻塞的), 函数的返回值是`libuv error code`. 但以上通常只对同步调用有意义.
+同步 synchronous 形式如果没有指定回调函数，则会被自动调用（并阻塞），函数的返回值是`libuv error code`。但以上通常只对同步调用有意义。
 
-而异步 asynchronous 形式则会在传入回调函数时被调用, 并且返回 0.
+而异步 asynchronous 形式则会在传入回调函数时被调用，并且返回 0。
 
 ## Reading/Writing files
 
-文件描述符可以采用如下方式获得:
+文件描述符可以采用如下方式获得：
 
 ```cpp
-int uv_fs_open(uv_loop_t* loop, uv_fs_t* req, const char* path, int flags, int mode, uv_fs_cb cb) 
+int uv_fs_open(uv_loop_t* loop, uv_fs_t* req, const char* path, int flags, int mode, uv_fs_cb cb)
 ```
 
-参数`flags`与`mode`和标准的 Unix flags 相同. libuv 会小心地处理 Windows 环境下的相关标志位(flags)的转换, 所以编写跨平台程序时你不用担心不同平台上文件打开的标志位不同。
+参数`flags`与`mode`和标准的 Unix flags 相同。libuv 会小心地处理 Windows 环境下相关标志位（flags）的转换，所以编写跨平台程序时你不用担心不同平台上文件打开的标志位不同。
 
-关闭文件描述符可以使用:
+关闭文件描述符可以使用：
 
 ```cpp
-int uv_fs_close(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb) 
+int uv_fs_close(uv_loop_t* loop, uv_fs_t* req, uv_file file, uv_fs_cb cb)
 ```
 
 文件系统的回调函数有如下的形式：
 
 ```cpp
-void callback(uv_fs_t* req); 
+void callback(uv_fs_t* req);
 ```
 
 让我们看一下一个简单的`cat`命令的实现。我们通过注册一个当文件被打开时被调用的回调函数来开始：
 
-#### uvcat/main.c - opening a file
+### uvcat/main.c - opening a file
 
 ```cpp
- // The request passed to the callback is the same as the one the call setup
-    // function was passed.
-    assert(req == &open_req);
-    if (req->result >= 0) {
-        iov = uv_buf_init(buffer, sizeof(buffer));
-        uv_fs_read(uv_default_loop(), &read_req, req->result,
-                   &iov, 1, -1, on_read);
-    }
-    else {
-        fprintf(stderr, "error opening file: %s\n", uv_strerror((int)req->result));
-    }
-} 
+// The request passed to the callback is the same as the one the call setup
+// function was passed.
+assert(req == &open_req);
+if (req->result >= 0) {
+    iov = uv_buf_init(buffer, sizeof(buffer));
+    uv_fs_read(uv_default_loop(), &read_req, req->result,
+               &iov, 1, -1, on_read);
+}
+else {
+    fprintf(stderr, "error opening file: %s\n", uv_strerror((int)req->result));
+}
 ```
 
 `uv_fs_t`的`result`域保存了`uv_fs_open`回调函数打开的文件描述符。如果文件被正确地打开，我们可以开始读取了：
@@ -71,16 +71,16 @@ void on_read(uv_fs_t *req) {
         iov.len = req->result;
         uv_fs_write(uv_default_loop(), &write_req, 1, &iov, 1, -1, on_write);
     }
-} 
+}
 ```
 
-在调用读取函数的时候，你必须传递一个已经初始化的缓冲区，在`on_read()`被触发后，缓冲区被被写入数据。`uv_fs_*`系列的函数是和 POSIX 的函数对应的，所以当读到文件的末尾时(EOF)，result 返回 0。在使用 streams 或者 pipe 的情况下，使用的是 libuv 自定义的`UV_EOF`。
+在调用读取函数的时候，你必须传递一个已经初始化的缓冲区，在`on_read()`被触发后，缓冲区被写入数据。`uv_fs_*`系列的函数是和 POSIX 的函数对应的，所以当读到文件的末尾（EOF）时，`result`返回 0。在使用 streams 或者 pipe 的情况下，使用的是 libuv 自定义的`UV_EOF`。
 
-现在你看到类似的异步编程的模式。但是`uv_fs_close()`是同步的，一般来说，一次性的，开始的或者关闭的部分，都是同步的，因为我们一般关心的主要是任务和多路 I/O 的快速 I/O。所以在这些对性能微不足道的地方，都是使用同步的，这样代码还会简单一些。
+现在你看到类似的异步编程模式。但是`uv_fs_close()`是同步的，一般来说，一次性的、开始的或者关闭的部分，都是同步的，因为我们一般关心的主要是任务和多路 I/O 的快速 I/O。所以在这些对性能微不足道的地方，都是使用同步的，这样代码还会简单一些。
 
-文件系统的写入使用 `uv_fs_write()`，当写入完成时会触发回调函数，在这个例子中回调函数会触发下一次的读取。
+文件系统的写入使用`uv_fs_write()`，当写入完成时会触发回调函数，在这个例子中回调函数会触发下一次的读取。
 
-#### uvcat/main.c - write callback
+### uvcat/main.c - write callback
 
 ```cpp
 void on_write(uv_fs_t *req) {
@@ -90,16 +90,16 @@ void on_write(uv_fs_t *req) {
     else {
         uv_fs_read(uv_default_loop(), &read_req, open_req.result, &iov, 1, -1, on_read);
     }
-} 
+}
 ```
 
-##### Warning
+#### Warning
 
 > 由于文件系统和磁盘的调度策略，写入成功的数据不一定就存在磁盘上。
 
-我们开始在 main 中推动多米诺骨牌：
+我们开始在`main`中推动多米诺骨牌：
 
-#### uvcat/main.c
+### uvcat/main.c
 
 ```cpp
 int main(int argc, char **argv) {
@@ -110,17 +110,20 @@ int main(int argc, char **argv) {
     uv_fs_req_cleanup(&read_req);
     uv_fs_req_cleanup(&write_req);
     return 0;
-} 
+}
 ```
 
-##### Warning
+#### Warning
 
-> 函数 uv_fs_req_cleanup()在文件系统操作结束后必须要被调用，用来回收在读写中分配的内存。
+> 函数`uv_fs_req_cleanup()`在文件系统操作结束后必须要被调用，用来回收在读写中分配的内存。
 
 ## Filesystem operations
 
-所有像 `unlink`, `rmdir`, `stat` 这样的标准文件操作都是支持异步的，并且使用方法和上述类似。下面的各个函数的使用方法和 read/write/open 类似，在`uv_fs_t.result`中保存返回值.所有的函数如下所示：
-（译者注：返回的 result 值，<0 表示出错，其他值表示成功。但>=0 的值在不同的函数中表示的意义不一样，比如在`uv_fs_read`或者`uv_fs_write`中，它代表读取或写入的数据总量，但在`uv_fs_open`中表示打开的文件描述符.）
+所有像`unlink`、`rmdir`、`stat`这样的标准文件操作都是支持异步的，并且使用方法和上述类似。下面的各个函数的使用方法和 read/write/open 类似，在`uv_fs_t.result`中保存返回值。所有的函数如下所示：
+
+（译者注：返回的`result`值，<0 表示出错，其他值表示成功。但 >=0 的值在不同的函数中表示的意义不一样，比如在`uv_fs_read`或者`uv_fs_write`中，它代表读取或写入的数据总量，但在`uv_fs_open`中表示打开的文件描述符。）
+
+
 
 ```cpp
 UV_EXTERN int uv_fs_close(uv_loop_t* loop,
@@ -234,41 +237,43 @@ UV_EXTERN int uv_fs_link(uv_loop_t* loop,
                          uv_fs_t* req,
                          const char* path,
                          const char* new_path,
-                         uv_fs_cb cb); 
+                         uv_fs_cb cb);
 ```
 
 ## Buffers and Streams
 
-在 libuv 中，最基础的 I/O 操作是流 stream(`uv_stream_t`)。TCP 套接字，UDP 套接字，管道对于文件 I/O 和 IPC 来说，都可以看成是流 stream(`uv_stream_t`)的子类.
-上面提到的各个流的子类都有各自的初始化函数，然后可以使用下面的函数操作:
+在 libuv 中，最基础的 I/O 操作是流 stream（`uv_stream_t`）。TCP 套接字、UDP 套接字、管道对于文件 I/O 和 IPC 来说，都可以看成是流 stream（`uv_stream_t`）的子类。
+
+上面提到的各个流的子类都有各自的初始化函数，然后可以使用下面的函数进行操作：
 
 ```cpp
 int uv_read_start(uv_stream_t*, uv_alloc_cb alloc_cb, uv_read_cb read_cb);
 int uv_read_stop(uv_stream_t*);
 int uv_write(uv_write_t* req, uv_stream_t* handle,
-                 const uv_buf_t bufs[], unsigned int nbufs, uv_write_cb cb); 
+             const uv_buf_t bufs[], unsigned int nbufs, uv_write_cb cb);
 ```
 
-可以看出，流操作要比上述的文件操作要简单一些，而且当`uv_read_start()`一旦被调用，libuv 会保持从流中持续地读取数据，直到`uv_read_stop()`被调用。
-数据的离散单元是 buffer-`uv_buffer_t`。它包含了指向数据的开始地址的指针(`uv_buf_t.base`)和 buffer 的长度(`uv_buf_t.len`)这两个信息。`uv_buf_t`很轻量级，使用值传递。我们需要管理的只是实际的数据，即程序必须自己分配和回收内存。
+可以看出，流操作要比上述的文件操作简单一些。而且当`uv_read_start()`一旦被调用，libuv 会保持从流中持续地读取数据，直到`uv_read_stop()`被调用。
 
-.. ERROR::
+数据的离散单元是 buffer（`uv_buffer_t`）。它包含了指向数据开始地址的指针（`uv_buf_t.base`）和 buffer 的长度（`uv_buf_t.len`）这两个信息。`uv_buf_t`很轻量级，使用值传递。我们需要管理的只是实际的数据，即程序必须自己分配和回收内存。
+
+> **错误：**
+>
+> ```cpp
+> THIS PROGRAM DOES NOT ALWAYS WORK, NEED SOMETHING BETTER
+> ```
+
+为了更好地演示流 stream，我们将会使用`uv_pipe_t`。它可以将本地文件转换为流（stream）的形态。接下来这个示例是使用 libuv 实现的一个简单的 T 型工具（如果不是很了解，请看[维基百科](https://en.wikipedia.org/wiki/Tee_(command))）。所有的操作都是异步的，这也正是事件驱动 I/O 的威力所在。两个输出操作不会相互阻塞，但是我们也必须注意，确保一块缓冲区不会在还没有写入之前就提前被回收了。
+
+这个程序执行命令如下：
 
 ```cpp
-THIS PROGRAM DOES NOT ALWAYS WORK, NEED SOMETHING BETTER** 
-```
-
-为了更好地演示流 stream，我们将会使用`uv_pipe_t`。它可以将本地文件转换为流（stream）的形态。接下来的这个是使用 libuv 实现的，一个简单的 T 型工具（如果不是很了解，请看[维基百科](https://en.wikipedia.org/wiki/Tee_(command))）。所有的操作都是异步的，这也正是事件驱动 I/O 的威力所在。两个输出操作不会相互阻塞，但是我们也必须要注意，确保一块缓冲区不会在还没有写入之前，就提前被回收了。
-
-这个程序执行命令如下
-
-```cpp
-./uvtee <output_file> 
+./uvtee <output_file>
 ```
 
 在使用 pipe 打开文件时，libuv 会默认地以可读和可写的方式打开文件。
 
-#### uvtee/main.c - read on pipes
+### uvtee/main.c - read on pipes
 
 ```cpp
 int main(int argc, char **argv) {
@@ -289,14 +294,14 @@ int main(int argc, char **argv) {
 
     uv_run(loop, UV_RUN_DEFAULT);
     return 0;
-} 
+}
 ```
 
-当需要使用 IPC 的命名管道的时候（*无名管道是 Unix 最初的 IPC 形式，但是由于无名管道的局限性，后来出现了有名管道 FIFO，这种管道由于可以在文件系统中创建一个名字，所以可以被没有亲缘关系的进程访问*），`uv_pipe_init()`的第三个参数应该被设置为 1。这部分会在 Process 进程的这一章节说明。`uv_pipe_open()`函数把管道和文件描述符关联起来，在上面的代码中表示把管道`stdin_pipe`和标准输入关联起来（译者注：`0`代表标准输入，`1`代表标准输出，`2`代表标准错误输出）。
+当需要使用 IPC 的命名管道时（无名管道是 Unix 最初的 IPC 形式，但是由于无名管道的局限性，后来出现了有名管道 FIFO。这种管道由于可以在文件系统中创建一个名字，所以可以被没有亲缘关系的进程访问），`uv_pipe_init()`的第三个参数应该被设置为 1。这部分会在 Process 进程的这一章节说明。`uv_pipe_open()`函数把管道和文件描述符关联起来，在上面的代码中表示把管道`stdin_pipe`和标准输入关联起来（译者注：`0`代表标准输入，`1`代表标准输出，`2`代表标准错误输出）。
 
-当调用`uv_read_start()`后，我们开始监听`stdin`，当需要新的缓冲区来存储数据时，调用 alloc_buffer，在函数`read_stdin()`中可以定义缓冲区中的数据处理操作。
+当调用`uv_read_start()`后，我们开始监听`stdin`。当需要新的缓冲区来存储数据时，调用`alloc_buffer`，在函数`read_stdin()`中可以定义缓冲区中的数据处理操作。
 
-#### uvtee/main.c - reading buffers
+### uvtee/main.c - reading buffers
 
 ```cpp
 void alloc_buffer(uv_handle_t *handle, size_t suggested_size, uv_buf_t *buf) {
@@ -318,18 +323,20 @@ void read_stdin(uv_stream_t *stream, ssize_t nread, const uv_buf_t *buf) {
 
     if (buf->base)
         free(buf->base);
-} 
+}
 ```
 
-标准的`malloc`是非常高效的方法，但是你依然可以使用其它的内存分配的策略。比如，nodejs 使用自己的内存分配方法（`Smalloc`），它将 buffer 用 v8 的对象关联起来，具体的可以查看[nodejs 的官方文档](https://nodejs.org/docs/v0.11.5/api/smalloc.html)。
+标准的`malloc`是非常高效的方法，但是你依然可以使用其他的内存分配策略。比如，nodejs 使用自己的内存分配方法（`Smalloc`），它将 buffer 与 V8 的对象关联起来，具体可以查看[nodejs 的官方文档](https://nodejs.org/docs/v0.11.5/api/smalloc.html)。
 
-当回调函数`read_stdin()`的 nread 参数小于 0 时，表示错误发生了。其中一种可能的错误是 EOF(**读到文件的尾部**)，这时我们可以使用函数`uv_close()`关闭流了。除此之外，当 nread 大于 0 时，nread 代表我们可以向输出流中写入的字节数目。最后注意，缓冲区要由我们手动回收。
+当回调函数`read_stdin()`的`nread`参数小于 0 时，表示错误发生了。其中一种可能的错误是 EOF（读到文件的尾部），这时我们可以使用函数`uv_close()`关闭流了。除此之外，当`nread`大于 0 时，`nread`代表我们可以向输出流中写入的字节数目。最后注意，缓冲区要由我们手动回收。
 
-当分配函数`alloc_buf()`返回一个长度为 0 的缓冲区时，代表它分配内存失败。在这种情况下，读取的回调函数会被错误`UV_ENOBUFS`唤醒。libuv 同时也会继续尝试从流中读取数据，所以如果你想要停止的话，必须明确地调用`uv_close()`.
+当分配函数`alloc_buf()`返回一个长度为 0 的缓冲区时，代表它分配内存失败。在这种情况下，读取的回调函数会被错误`UV_ENOBUFS`唤醒。libuv 同时也会继续尝试从流中读取数据，所以如果你想要停止的话，必须明确地调用`uv_close()`。
 
-当 nread 为 0 时，代表已经没有可读的了，大多数的程序会自动忽略这个。
 
-#### uvtee/main.c - Write to pipe
+
+当`nread`为`0`时，代表已经没有可读的了，大多数的程序会自动忽略这个。
+
+#### `uvtee/main.c` - Write to pipe
 
 ```cpp
 typedef struct {
@@ -356,27 +363,30 @@ void write_data(uv_stream_t *dest, size_t size, uv_buf_t buf, uv_write_cb cb) {
     req->buf = uv_buf_init((char*) malloc(size), size);
     memcpy(req->buf.base, buf.base, size);
     uv_write((uv_write_t*) req, (uv_stream_t*)dest, &req->buf, 1, cb);
-} 
+}
 ```
 
-`write_data()`开辟了一块地址空间存储从缓冲区读取出来的数据，这块缓存不会被释放，直到与`uv_write()`绑定的回调函数执行.为了实现它，我们用结构体`write_req_t`包裹一个 write request 和一个 buffer，然后在回调函数中展开它。因为我们复制了一份缓存，所以我们可以在两个`write_data()`中独立释放两个缓存。 我们之所以这样做是因为，两个调用`write_data()`是相互独立的。为了保证它们不会因为读取速度的原因，由于共享一片缓冲区而损失掉独立性，所以才开辟了新的两块区域。当然这只是一个简单的例子，你可以使用更聪明的内存管理方法来实现它，比如引用计数或者缓冲区池等。
+`write_data()`开辟了一块地址空间，存储从缓冲区读取出来的数据。这块缓存不会被释放，直到与`uv_write()`绑定的回调函数执行。为了实现它，我们用结构体`write_req_t`包裹一个`write request`和一个`buffer`，然后在回调函数中展开它。
+
+因为我们复制了一份缓存，所以我们可以在两个`write_data()`中独立释放两个缓存。我们之所以这样做，是因为两个调用`write_data()`是相互独立的。为了保证它们不会因为读取速度的原因，由于共享一片缓冲区而损失掉独立性，所以才开辟了新的两块区域。当然这只是一个简单的例子，你可以使用更聪明的内存管理方法来实现它，比如引用计数或者缓冲区池等。
 
 ##### WARNING
 
-> 你的程序在被其他的程序调用的过程中，有意无意地会向 pipe 写入数据，这样的话它会很容易被信号 SIGPIPE 终止掉，你最好在初始化程序的时候加入这句：
-> `signal(SIGPIPE, SIG_IGN)`。
+你的程序在被其他的程序调用的过程中，有意无意地会向`pipe`写入数据，这样的话它会很容易被信号`SIGPIPE`终止掉，你最好在初始化程序的时候加入这句：
+
+`signal(SIGPIPE, SIG_IGN)`。
 
 ## File change events
 
-所有的现代操作系统都会提供相应的 API 来监视文件和文件夹的变化(**如 Linux 的 inotify，Darwin 的 FSEvents，BSD 的 kqueue，Windows 的 ReadDirectoryChangesW， Solaris 的 event ports**)。libuv 同样包括了这样的文件监视库。这是 libuv 中很不协调的部分，因为在跨平台的前提上，实现这个功能很难。为了更好地说明，我们现在来写一个监视文件变化的命令：
+所有的现代操作系统都会提供相应的 API 来监视文件和文件夹的变化（如 Linux 的`inotify`，Darwin 的`FSEvents`，BSD 的`kqueue`，Windows 的`ReadDirectoryChangesW`，Solaris 的`event ports`）。libuv 同样包括了这样的文件监视库。这是 libuv 中很不协调的部分，因为在跨平台的前提上，实现这个功能很难。为了更好地说明，我们现在来写一个监视文件变化的命令：
 
 ```cpp
-./onchange <command> <file1> [file2] ... 
+./onchange <command> <file1> [file2] ...
 ```
 
 实现这个监视器，要从`uv_fs_event_init()`开始：
 
-#### onchange/main.c - The setup
+#### `onchange/main.c` - The setup
 
 ```cpp
 int main(int argc, char **argv) {
@@ -397,28 +407,29 @@ int main(int argc, char **argv) {
     }
 
     return uv_run(loop, UV_RUN_DEFAULT);
-} 
+}
 ```
 
-函数`uv_fs_event_start()`的第三个参数是要监视的文件或文件夹。最后一个参数，`flags`，可以是：
+函数`uv_fs_event_start()`的第三个参数是要监视的文件或文件夹。最后一个参数`flags`可以是：
 
 ```cpp
- UV_FS_EVENT_WATCH_ENTRY = 1,
-  UV_FS_EVENT_STAT = 2,
-  UV_FS_EVENT_RECURSIVE = 4 
+UV_FS_EVENT_WATCH_ENTRY = 1,
+UV_FS_EVENT_STAT = 2,
+UV_FS_EVENT_RECURSIVE = 4
 ```
 
-`UV_FS_EVENT_WATCH_ENTRY`和`UV_FS_EVENT_STAT`不做任何事情(至少目前是这样)，`UV_FS_EVENT_RECURSIVE`可以在支持的系统平台上递归地监视子文件夹。
+`UV_FS_EVENT_WATCH_ENTRY`和`UV_FS_EVENT_STAT`不做任何事情（至少目前是这样），`UV_FS_EVENT_RECURSIVE`可以在支持的系统平台上递归地监视子文件夹。
+
 在回调函数`run_command()`中，接收的参数如下：
 
-> 1.`uv_fs_event_t *handle`-句柄。里面的 path 保存了发生改变的文件的地址。
-> 2.`const char *filename`-如果目录被监视，它代表发生改变的文件名。只在 Linux 和 Windows 上不为 null，在其他平台上可能为 null。
-> 3.`int flags` -`UV_RENAME`名字改变，`UV_CHANGE`内容改变之一，或者他们两者的按位或的结果(`|`)。
-> 4.`int status`－当前为 0.
+1. `uv_fs_event_t *handle`——句柄。里面的`path`保存了发生改变的文件的地址。
+2. `const char *filename`——如果目录被监视，它代表发生改变的文件名。只在 Linux 和 Windows 上不为`null`，在其他平台上可能为`null`。
+3. `int flags`——`UV_RENAME`表示名字改变，`UV_CHANGE`表示内容改变，或者他们两者的按位或的结果（`|`）。
+4. `int status`——当前为`0`。
 
-在我们的例子中，只是简单地打印参数和调用`system()`运行 command.
+在我们的例子中，只是简单地打印参数和调用`system()`运行`command`。
 
-#### onchange/main.c - file change notification callback
+#### `onchange/main.c` - file change notification callback
 
 ```cpp
 void run_command(uv_fs_event_t *handle, const char *filename, int events, int status) {
@@ -436,7 +447,5 @@ void run_command(uv_fs_event_t *handle, const char *filename, int events, int st
 
     fprintf(stderr, " %s\n", filename ? filename : "");
     system(command);
-} 
+}
 ```
-
-* * *

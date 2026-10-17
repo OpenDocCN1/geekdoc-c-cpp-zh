@@ -1,20 +1,11 @@
+
 # .NET 性能高级指南：优化你的 C# 应用
-
-
-
-
-
-
-
-
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_0_0.png)
 
 为了方便起见，Apress 将部分前言内容放在了索引之后。请使用“书签”和“速览”链接访问这些内容。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_1_0.png)
-
-
 
 # 引言
 
@@ -34,27 +25,23 @@
 - 第九章是对复杂性理论和算法的简要探索。它的编写目的是让你了解算法优化的本质。
 - 第十章是性能模式的汇编。它的目的是让你领略算法优化的内容。
 
-
-
-
-
 # 性能目标
 
 性能目标在很大程度上取决于你的应用程序领域和架构。当你完成需求收集后，应该确定通用的性能目标。根据你的软件开发流程，随着需求的变化和新业务操作需的出现，你可能需要对这些目标进行调整。我们在这里回顾了几个典型应用的性能目标示例和准则，但与任何与性能相关的事务一样，这些准则需要根据你软件的领域进行调整。
 
 首先，这里有一些不是良好性能目标的陈述示例：
 
--   *当许多用户同时访问购物车时，应用程序将保持响应能力。*
--   *只要用户数量在范围内，应用程序将不会使用过量的内存。*
--   *当有多个满负荷的应用程序时，单个数据库服务器将快速处理查询。*
+- *当许多用户同时访问购物车时，应用程序将保持响应能力。*
+- *只要用户数量在范围内，应用程序将不会使用过量的内存。*
+- *当有多个满负荷的应用程序时，单个数据库服务器将快速处理查询。*
 
 这些陈述的主要问题在于它们过于泛泛且主观。如果这些是你的性能目标，那么你必然会发现它们存在多种解释方式，并且在参考标准上产生分歧。业务分析师可能认为100,000个并发用户是一个“合理”的数量，而技术团队可能知道可用硬件无法在单台机器上支持如此数量的用户。相反，开发者可能认为50ms的响应时间是“响应良好的”，但用户界面专家可能认为这是荒谬的。。
 
 因此，性能目标是通过量化的性能指标表示的，这些指标可以通过某些性能测试手段进行测量。性能目标还应该包含关于其环境的信息——无论是通用的还是针对特定性能目标的。定义良好的性能目标示例包括：
 
--   *只要并发访问购物车的用户不超过5,000人，应用程序将在300毫秒内（不包括网络往返时间）提供“重要”类别下的每个页面。*
--   *应用程序为每个用户会话使用的内存将不超过 4 KB。*
--   *数据库服务器的CPU和磁盘利用率不应超过70%，只要访问它的应用程序服务器不超过10台，它就应该在75毫秒内对“常用”类别的查询返回响应。*
+- *只要并发访问购物车的用户不超过5,000人，应用程序将在300毫秒内（不包括网络往返时间）提供“重要”类别下的每个页面。*
+- *应用程序为每个用户会话使用的内存将不超过 4 KB。*
+- *数据库服务器的CPU和磁盘利用率不应超过70%，只要访问它的应用程序服务器不超过10台，它就应该在75毫秒内对“常用”类别的查询返回响应。*
 
 > 注意：这些示例假设“重要”页面类别和“常用”查询类别是业务分析师或应用程序架构师定义的已知术语。为应用程序的每一个角落保证性能目标是不现实的，而且不值得在开发、硬件和运营成本上投入投资。
 
@@ -108,9 +95,9 @@
 
 某些指标与某些应用程序类型更为相关。例如，数据库访问时间对客户端并非如此。常见的性能指标与应用程序类型的组合包括
 
--   对于客户端应用程序，你可能关注启动时间、内存使用和CPU利用率。
--   对于服务器应用程序，你通常关注CPU利用率、缓存缺失、竞争、分配和垃圾收集。
--   对于Web应用程序，你通常测量内存使用、数据库访问、网络和磁盘操作，以及响应时间。
+- 对于客户端应用程序，你可能关注启动时间、内存使用和CPU利用率。
+- 对于服务器应用程序，你通常关注CPU利用率、缓存缺失、竞争、分配和垃圾收集。
+- 对于Web应用程序，你通常测量内存使用、数据库访问、网络和磁盘操作，以及响应时间。
 
 关于性能指标的一个初步观察是，它们的测量级别通常可以改变而不会显著改变指标的含义。例如，分配和执行时间可以在系统级、单进程级，甚至是方法级进行测量。单个方法内部的执行时间比进程级的CPU利用率更具可操作性。遗憾的是，增加测量的粒度通常会产生性能开销，我们将在下一章通过讨论各种性能分析工具来说阐这一点。
 
@@ -118,17 +105,13 @@
 
 性能在软件开发生命周期中处于什么位置？这个简单的问题带有将性能追溯到现有流程的包袱。虽然这是可能的，但更健康的方法是将生命周期的每一步都视为更好地了解应用程序性能的机会：首先是性能目标和重要指标；其次是应用程序是否符合或超过其目标；最后是维护、用户负载以及引入任何回归
 
--   在需求收集阶段，开始考虑你想设定的性能目标。
--   在架构阶段，精炼对你的应用程序重要的性能指标并定义具体的性能目标。
--   在开发阶段，经常对原型代码或部分完成的功能进行探索性测试，以验证你是否良好处于系统性能目标之内。
--   在测试阶段，进行重大的负载测试和测试，以完全验证你的系统性能目标。
--   在随后的开发和维护期间，每次发布时进行额外的负载测试和测试（最好是每天或每周一次），以快速识别引入系统的任何回归。
+- 在需求收集阶段，开始考虑你想设定的性能目标。
+- 在架构阶段，精炼对你的应用程序重要的性能指标并定义具体的性能目标。
+- 在开发阶段，经常对原型代码或部分完成的功能进行探索性测试，以验证你是否良好处于系统性能目标之内。
+- 在测试阶段，进行重大的负载测试和测试，以完全验证你的系统性能目标。
+- 在随后的开发和维护期间，每次发布时进行额外的负载测试和测试（最好是每天或每周一次），以快速识别引入系统的任何回归。
 
 花费时间开发一套自动负载测试和性能测试套件，建立一个运行这些测试的隔离环境，并仔细分析其结果以确保没有回归引入是非常耗时的。然而，通过系统化地测量和改进性能，并确保没有回归悄悄进入系统而获得的性能收益，值得对建立稳健的性能开发流程进行初始投入。
-
-
-
-
 
 ## 总结
 
@@ -146,41 +129,33 @@
 
 测试小型程序或库方法的一种方法是白盒测试：插入源代码，在白板上分析其复杂性，修改程序源代码，并在其中插入测量代码。我们将在本章末尾讨论这种方法——通常称为微基准（microbenchmarking）——它可以非常有价值，特别是在需要精确结果和对每条 CPU 指令有绝对理解的情况下，但在涉及大型应用程序时又非常耗时且不灵活。如果你预先不知道要测量和推理程序的哪个部分，如果不诉诸自动工具，隔离瓶颈将变得极其困难。
 
-对于较大的程序，更常见的方法是黑盒测试，即由人工识别性能指标，并由工具自动测量。使用这种方法时，开发者不需要预先识别瓶颈，也不需要假设罪祸在程序的某个特定（且较小）部分。尽管本章将考虑许多分析应用程序的工具，但性能自动化以易于消化的形式呈现结果。工具包括性能计数器、Windows 事件跟踪 (ETW) 和商业级性能分析器。
+对于较大的程序，更常见的方法是黑盒测试，即由人工识别性能指标，并由工具自动测量。使用这种方法时，开发者不需要预先识别瓶颈，也不需要假设罪祸在程序的某个特定（且较小）部分。尽管本章将考虑许多分析应用程序的工具，但性能自动化以易于消化的形式呈现结果。工具包括性能计数器、Windows 事件跟踪 `ETW` 和商业级性能分析器。
 
 在读阅读本章时，请记住性能测量工具可能会严重影响应用程序的性能。很少工具能够在提供准确信息的同时，在应用程序执行时不产生任何开销。当我们从一个工具移动到另一个工具时，请始终记住，工具的准确性往往与它们对应用程序施加的开销相冲突。
 
 ### Windows 内置工具
 
-在我们转向需要安装并侵入式测量你应用程序性能的商业工具之前，确保充分利用所有开箱即用的功能是至关重要的。性能计数器已经是 Windows 近近年的年的组成部分，而 Windows 事件跟踪 (ETW) 稍新一些，并在 Windows 时代（2006 年）左右变得真正有用。两者都是免费的，存在于每个 Windows 版本中，并可以用最小的开销进行性能调查。
+在我们转向需要安装并侵入式测量你应用程序性能的商业工具之前，确保充分利用所有开箱即用的功能是至关重要的。性能计数器已经是 Windows 近近年的年的组成部分，而 Windows 事件跟踪 `ETW` 稍新一些，并在 Windows 时代（2006 年）左右变得真正有用。两者都是免费的，存在于每个 Windows 版本中，并可以用最小的开销进行性能调查。
 
 ### 性能计数器
 
 Windows 性能计数器是用于性能和健康调查的内置机制。包括 Windows 内核、驱动程序、数据库和 CLR 在内的各种组件提供了性能计数器，用户和管理员可以使用它们并了解系统运行得如何。作为额外奖励，大多数系统组件的性能计数器默认开启的，因此您在收集这些信息时不会引入任何额外的开销。
 
-从本地或远程系统读取性能计数器极其非常。内置的性能监视器工具 (perfmon.exe) 可以显示系统上可用的性能计数器，并将性能计数器数据记录到文件中供后续调查，并在性能计数器读取器达到定义的阈值时提供自动警报。如果你具有管理员权限并通过本地网络连接，性能监视器可以监控远程系统。
+从本地或远程系统读取性能计数器极其非常。内置的性能监视器工具 `perfmon.exe` 可以显示系统上可用的性能计数器，并将性能计数器数据记录到文件中供后续调查，并在性能计数器读取器达到定义的阈值时提供自动警报。如果你具有管理员权限并通过本地网络连接，性能监视器可以监控远程系统。
 
 性能信息按照以下层次结构组织：
 
-- 性能计数器类别（或性能对象）代表与特定系统相关的一组单独计数器。类别的示例包括 .NET CLR Memory、Process Information、TCPv4 和 PhysicalDisk。
-- 性能计数器是性能计数器类别中的单个数值数据。通常会指定用斜杠分隔的性能计数器和类别名称，例如 `Process\Private Bytes`。性能计数器有几种支持类型，包括数值信息（Process\Thread Count）、事件速率（Print Bytes Printed/sec）、百分比（PhysicalDisk\Idle Time）和平均值（Service\Operation3.0.0\Calls）。
-- 性能计数器实例用于区分系统中的多个计数器集。例如，由于可能存在多个实例，因此 Processor 类别和 Memory 类别都有实例。
-
-
-
-
+- 性能计数器类别（或性能对象）代表与特定系统相关的一组单独计数器。类别的示例包括 `.NET CLR Memory`、`Process Information`、`TCPv4` 和 `PhysicalDisk`。
+- 性能计数器是性能计数器类别中的单个数值数据。通常会指定用斜杠分隔的性能计数器和类别名称，例如 `Process\Private Bytes`。性能计数器有几种支持类型，包括数值信息（`Process\Thread Count`）、事件速率（`Print Bytes Printed/sec`）、百分比（`PhysicalDisk\Idle Time`）和平均值（`Service\Operation3.0.0\Calls`）。
+- 性能计数器实例用于区分系统中的多个计数器集。例如，由于可能存在多个实例，因此 `Processor` 类别和 `Memory` 类别都有实例。
 
 # 第2章 性能测量
 
-- 3. 点击左侧树中的“性能监器”（Performance Monitor）节点，然后点击绿色的 + 按钮。
-
-- 4. 从 NET CLR Memory 计数器中，选择 # Bytes in all Heaps 和 Allocated Bytes/sec 性能计数器，从实例列表中选择 `MemoryLeak` 实例，并点击“Add >>”按钮。
-
-- 5. 从 Process 计数器中，选择 Private Bytes 性能计数器，从列表中选择 `MemoryLeak` 实例，并点击“Add >>”按钮。
-
+- 3. 点击左侧树中的“性能监器”`Performance Monitor`节点，然后点击绿色的 + 按钮。
+- 4. 从 `NET CLR Memory` 计数器中，选择 `# Bytes in all Heaps` 和 `Allocated Bytes/sec` 性能计数器，从实例列表中选择 `MemoryLeak` 实例，并点击“Add >>”按钮。
+- 5. 从 `Process` 计数器中，选择 `Private Bytes` 性能计数器，从列表中选择 `MemoryLeak` 实例，并点击“Add >>”按钮。
 - 6. 点击“确定”确认你的选择并查看性能图表。
-
-- 7. 你可能需要右键点击屏幕底部的计数器并选择“调整计数器”（Scale counters），以便在图表中显示实际线条。
+- 7. 你可能需要右键点击屏幕底部的计数器并选择“调整计数器”`Scale counters`，以便在图表中显示实际线条。
 
 你现在应该可以看到对应 `Private Bytes` 和 `# Bytes in all Heaps` 性能计数器的线条同步上升（与图 2-1类似）。这指向托管堆中存在内存泄漏。我们将在第 4 章回到这个特定的内存泄漏，并找出其根源。
 
@@ -196,36 +171,37 @@ Windows 性能计数器是用于性能和健康调查的内置机制。包括 Wi
 
 要配置性能计数器日志，打开性能监器并执行以下步骤。（我们假设你正并在 Windows 7 或 Windows Server 2008 R2 上使用性能监器；在之前的操作系统版本中，性能监器的界面略有不同——如果你使用的是这些版本，请参阅文档获取详细说明。）
 
-- 1. 在左侧树中，展开数据收集器节点（Data Collectors Nodes）。
-2. 右键点击用户定义（User Defined）节点，从右键菜单中选择新建 ► 数据收集器（Data Collector）。
-3. 命名你的数据收集器集，选择“手动创建（高级）”单选按钮，并点击“下一步”。
-4. 确保选择了“创建日志”单选按钮，勾选“性能计数器”复选框，并点击“下一步”。
-5. 使用“添加”按钮添加性能计数器（将打开“添加计数器”对话框）。完成后，配置采样间隔（默认是每 15 秒采样一次计数器）并点击“下一步”。
-6. 提供一个性能监器将用于存储计数器日志的目录，然后点击“下一步”。
-7. 选择“打开此数据收集器集的属性”单选按钮并点击“完成”。
-8. 使用各种选项页来配置你的数据收集器集——你可以定义自动运行的计划、停止条件（例如，在收集一定数量的数据后）以及在数据收集停止时运行的任务（例如，将结果上传到集中位置）。完成后，点击“确定”。
-9. 点击“用户定义”节点，在主面板中右键点击你的数据收集器集，从右键菜单中选择“启动”。
-10. 你的计数器日志现在正在运行并将数据收集到你选择的目录。你可以随时通过右键点击它并从右键菜单中选择“停止”来停止计数器集。
+- 1. 在左侧树中，展开数据收集器节点 `Data Collectors Nodes`。
+- 2. 右键点击用户定义 `User Defined` 节点，从右键菜单中选择新建 ► 数据收集器 `Data Collector`。
+- 3. 命名你的数据收集器集，选择“手动创建（高级）”单选按钮，并点击“下一步”。
+- 4. 确保选择了“创建日志”单选按钮，勾选“性能计数器”复选框，并点击“下一步”。
+- 5. 使用“添加”按钮添加性能计数器（将打开“添加计数器”对话框）。完成后，配置采样间隔（默认是每 15 秒采样一次计数器）并点击“下一步”。
+- 6. 提供一个性能监器将用于存储计数器日志的目录，然后点击“下一步”。
+- 7. 选择“打开此数据收集器集的属性”单选按钮并点击“完成”。
+- 8. 使用各种选项页来配置你的数据收集器集——你可以定义自动运行的计划、停止条件（例如，在收集一定数量的数据后）以及在数据收集停止时运行的任务（例如，将结果上传到集中位置）。完成后，点击“确定”。
+- 9. 点击“用户定义”节点，在主面板中右键点击你的数据收集器集，从右键菜单中选择“启动”。
+- 10. 你的计数器日志现在正在运行并将数据收集到你选择的目录。你可以随时通过右键点击它并从右键菜单中选择“停止”来停止计数器集。
 
 当你完成数据收集并想使用性能监器检查它时，执行以下步骤：
 
 - 1. 选择“用户定义”节点。
-2. 右键点击你的数据收集器集，从菜单中选择“最新报告”（Latest Report）。
-3. 在弹出的窗口中，你可以从日志中的计数器列表中添加或删除计数器，配置时间范围，并通过右键点击图表并从右键菜单中选择“属性”来更改数据比例。
+- 2. 右键点击你的数据收集器集，从菜单中选择“最新报告”`Latest Report`。
+- 3. 在弹出的窗口中，你可以从日志中的计数器列表中添加或删除计数器，配置时间范围，并通过右键点击图表并从右键菜单中选择“属性”来更改数据比例。
 
-最后，要在另一台机器上分析日志数据，你应该将日志目录复制到该机器，打开性能监器节点，并点击从左数第二个工具栏按钮（或按 Ctrl + L）。在弹出的对话框中，你可以勾选“日志文件”复选框并使用“添加”按钮添加日志文件。
+
+
+最后，要在另一台机器上分析日志数据，你应该将日志目录复制到该机器，打开性能监器节点，并点击从左数第二个工具栏按钮（或按 `Ctrl + L`）。在弹出的对话框中，你可以勾选“日志文件”复选框并使用“添加”按钮添加日志文件。
 
 # 第2章 性能测量
 
-### 自性能计数器
+## 自性能计数器
 
 尽管性能监器是一个非常有用的工具，但你可以使用 `System.Diagnostics.PerformanceCounter` 类从任何 .NET 应用程序读取性能计数器。甚至，你还可以创建自己的性能计数器，并将它们添加到可用于性能调查的数据集中。
+
 以下是你应该考虑导出性能计数器的一些场景：
 
 - 你正在开发一个可供系统大部分部分使用的基础库。你的库可以通过性能计数器报告性能信息，对于开发者和系统管理员来说，通过日志文件或代码层级的调试这通常容易得多。
-
 - 你正在开发一个接受请求、处理请求并交付响应的服务器系统（自定义 Web 服务器、Web 服务等）。你应该报告请求处理率、遇到的错误和类似统计的性能信息。（关于 ASP.NET 性能类的一些灵感）。
-
 - 你正在开发一个无人运行并与自定义硬件通信的高可靠 Windows 服务。你的服务可以报告硬件的健康状况、软件与硬件交互的速率以及类似的统计数据。
 
 以下代码仅用于从类别中导出单实例性能计数器并更新这些计数器。它假设 `AttendanceClass` 包含当前签入人数的信息，并且你想将此信息作为性能计数器暴露。（你需要使用 `System.Diagnostics` 命名空间来编译这段代码段）。
@@ -254,17 +230,13 @@ public static void StartUpdatingCounters() {
 
 正如我们所，配置自定义性能计数器所需的精力很少，而且在进行性能调查时，它们至关重要。将系统性能计数器数据与自定义性能计数器关联起来，通常是性能调查员确定性能或配置问题精确原因所需的全部。
 
-
-
-
-
-### 第二2章 性能测量
+## 性能测量
 
 性能监器（Performance Monitor）可用于收集与性能计数器无关的其他信息。你可以用它来收集系统配置数据——注册表项的值、WMI 对象属性，甚至是插入磁盘文件。你还可以用它捕获来自 ETW 提供程序（我们将在下文中讨论）的数据以供后续分析。通过使用 XML 模板，系统管理员可以快速为系统应用数据收集器，并用极少的手动配置步骤生成实用的报告。
 
 性能计数器提供了大量丰富的信息，但它们不能作为高性能的日志记录和监控框架。没有系统组件更新性能计数器的频率每秒超过几次，而 Windows 性能监器读取性能计数器的频率也不会每秒一次。如果你的性能调查每秒需要数千次事件，那么性能计数器并不是理想选择。我们将注意力转向到 Windows 事件跟踪（ETW），它是为了高性能数据收集和更丰富的数据类型（而不仅仅是数字）而设计的。
 
-## Windows 事件跟踪 (ETW)
+### Windows 事件跟踪 (ETW)
 
 Windows 事件跟踪（ETW）是 Windows 内置的一种高性能事件日志框架。与性能计数器类似，许多系统组件和应用程序框架（包括 Windows 内核和 CLR）都定义了提供程序（Providers），它们报告事件——即组件内部运行机制的信息。与始终开启的性能计数器不同，ETW 提供程序可以在性能调查需要时运行时开启或关闭。
 
@@ -272,7 +244,7 @@ ETW 信息最丰富的来源之一是内核提供程序，它报告有关进程�
 
 ETW 事件带有精确的时间标记，并可以包含自定义信息以及发生位置的堆栈跟踪。这些堆栈跟踪可以进一步识别性能和正确性问题的来源。例如，CLR 提供程序可以报告每次垃圾回收开始和结束的事件。结合精确的调用栈，这些事件可以用于确定程序的哪些部分通常导致垃圾回收。（有关垃圾回收及其触发器的更多信息，请参阅第 4 章。）
 
-### 表 2-1. Windows 和 CLR 中 ETW 事件部分列表
+#### 表 2-1. Windows 和 CLR 中 ETW 事件部分列表
 
 | 提供程序 | 标志 / 关键字 | 说明 | 事件（部分列表） |
 | --- | --- | --- | --- |
@@ -289,23 +261,17 @@ ETW 事件带有精确的时间标记，并可以包含自定义信息以及发�
 
 访问这些详细信息需要 ETW 收集工具和一个可以读取原始事件并进行基础分析的应用程序。在编写时，有两个工具可以胜任这两项任务：Windows Performance Toolkit (WPT，也称为 XPerf)，它随 Windows SDK 发布；以及 PerfMonitor（不要与 Windows Performance Monitor 混淆！）它是微软 CLR 的开源项目。
 
-## Windows Performance Toolkit (WPT)
+### Windows Performance Toolkit (WPT)
 
-Windows Performance Toolkit (WPT)是一组用于控制 ETW 会话、将 ETW 事件捕获到日志文件中并进行后续处理的工具。它可以生成 ETW 事件的图形和叠加层、包含调用栈信息的摘要表以及用于自动处理的 CSV 文件。从 http://msdn.microsoft.com/en-us/performance/cc75297.aspx 下载 Windows SDK 安装程序，并在安装选项屏幕上仅选择“Common Utilities Windows Performance Toolkit”。SDK 安装程序完成后，导航到 SDK 安装目录下的 Redist\Windows Performance Toolkit 子目录，并运行适用于系统架构的安装程序（32 位系统运行 Xperf_x86.msi，64 位系统运行 Xperf_x64.msi）。
+Windows Performance Toolkit (WPT)是一组用于控制 ETW 会话、将 ETW 事件捕获到日志文件中并进行后续处理的工具。它可以生成 ETW 事件的图形和叠加层、包含调用栈信息的摘要表以及用于自动处理的 CSV 文件。从 `http://msdn.microsoft.com/en-us/performance/cc75297.aspx` 下载 Windows SDK 安装程序，并在安装选项屏幕上仅选择“Common Utilities Windows Performance Toolkit”。SDK 安装程序完成后，导航到 SDK 安装目录下的 `Redist\Windows Performance Toolkit` 子目录，并运行适用于系统架构的安装程序（32 位系统运行 `Xperf_x86.msi`，64 位系统运行 `Xperf_x64.msi`）。
 
-注意：64 位 Windows 的堆栈遍历需要更改注册表设置以禁用内核页的分页输出（Windows 内核本身及任何驱动程序）。这可能会使系统工作集（内存利用率）增加几兆字节。要更改此设置，导航到注册表项 HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management，将 DisablePagingExecutable 设置为 DWORD 0x1，并重启系统。
+注意：64 位 Windows 的堆栈遍历需要更改注册表设置以禁用内核页的分页输出（Windows 内核本身及任何驱动程序）。这可能会使系统工作集（内存利用率）增加几兆字节。要更改此设置，导航到注册表项 `HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management`，将 `DisablePagingExecutable` 设置为 DWORD `0x1`，并重启系统。
 
-你用于捕获和分析 ETW 跟踪的工具是 XPerf.exe 和 XPerfView.exe。这两个工具都需要管理员权限才能运行。XPerf 工具具有多个命令行选项，用于控制在跟踪期间期间启用哪些提供程序、使用的缓冲区大小以及文件名。XPerfView.exe 为捕获的数据提供图形化分析。
+你用于捕获和分析 ETW 跟踪的工具是 `XPerf.exe` 和 `XPerfView.exe`。这两个工具都需要管理员权限才能运行。`XPerf` 工具具有多个命令行选项，用于控制在跟踪期间期间启用哪些提供程序、使用的缓冲区大小以及文件名。`XPerfView.exe` 为捕获的数据提供图形化分析。
 
-## 使用 XPERF 捕获和分析内核跟踪
+### 使用 XPERF 捕获和分析内核跟踪
 
 在本节中，你将使用 XPerf 捕获并分析内核跟踪。
-
-
-
-
-
-## 第 2 章 性能测量
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_21_0.png)
 
@@ -334,10 +300,6 @@ Windows Performance Toolkit (WPT)是一组用于控制 ETW 会话、将 ETW 事�
 | 18 | | | * 常规用法 | 11,056,087 |
 
 图 2-3。单个进程 (TimeSnapper.exe) 的详细堆栈帧。权重列表示（大致上）在该帧中花费了多少 CPU 时间。
-
-17
-
-## 第 2 章 性能测量
 
 使用率
 
@@ -369,84 +331,83 @@ Windows Performance Toolkit (WPT)是一组用于控制 ETW 会话、将 ETW 事�
 
 **图 2-5.**报告中的堆栈聚合。注意托管帧是部分显示的——某些帧无法解析。mclr.dll 帧 (System.DateTime.GetNow()) 已成功解析，因为它们是预编译的，而不是在运行时由 JIT 编译的。
 
-最新版本的 Windows SDK (8) 带有一对新工具：Windows Performance Recorder (wpr.exe) 和 Windows Performance Analyzer (wpa.exe)，它们的设计是为了取代之前的 XPerf 和 PerfView。例如，wpr -start 大约相当于perf -on，而 wpr -stop 相当于 report。WPA 的界面略不同，但提供了与 PerfView 类似的功能。有关工具的更多信息，请咨询 MSDN：http://msdn.microsoft.com/en-us/library/hi2962.aspx。
+最新版本的 Windows SDK (8) 带有一对新工具：Windows Performance Recorder (`wpr.exe`) 和 Windows Performance Analyzer (`wpa.exe`)，它们的设计是为了取代之前的 XPerf 和 PerfView。例如，`wpr -start` 大约相当于`perf -on`，而 `wpr -stop` 相当于 report。WPA 的界面略不同，但提供了与 PerfView 类似的功能。有关工具的更多信息，请咨询 MSDN：`http://msdn.microsoft.com/en-us/library/hi2962.aspx`。
 
-108
+XPerf 非常擅长以吸引人的图表和表格显示数据，但对于自定义来说并不强大。例如，我们可以捕获 CLR ETW 提供程序的事件，但我们需要根据文档中的关键字和事件列表理解跟踪中的原始数据（CLR ETW 提供程序的完整关键字和事件可用 MSDN：`http://msdn.microsoft.com/en-us/library/f35720.aspx`）。
 
-## 第 2 章 性能测量
+如果我们运行带有 CLR ETW 提供程序 (`e1c302e-ccbc-421e-a91b-d9cee2274`) 的 GC 提供程序和详细日志 (Verbose log) 的 XPerf，它将通过将其导出为 CSV 文件或用 XPerf 打开完整捕获每个事件，我们能够识别应用程序中 GC 相关的事件。2-6 是生成的 XPerf 报告的示例视图——GC Start 的时间显示了在监控的操作中完成垃圾回收所需的时间。
 
-XPerf 非常擅长以吸引人的图表和表格显示数据，但对于自定义来说并不强大。例如，我们可以捕获 CLR ETW 提供程序的事件，但我们需要根据文档中的关键字和事件列表理解跟踪中的原始数据（CLR ETW 提供程序的完整关键字和事件可用 MSDN：http://msdn.microsoft.com/en-us/library/f35720.aspx）。
-
-如果我们运行带有 CLR ETW 提供程序 (e1c302e-ccbc-421e-a91b-d9cee2274) 的 GC 提供程序和详细日志 (Verbose log) 的 XPerf，它将通过将其导出为 CSV 文件或用 XPerf 打开完整捕获每个事件，我们能够识别应用程序中 GC 相关的事件。2-6 是生成的 XPerf 报告的示例视图——GC Start 的时间显示了在监控的操作中完成垃圾回收所需的时间。
-
-| 事件名称 | 时间 (ms) | 分配类型 | 实例 ID | |
-|---|---|---|---|
+| 事件名称 | 时间 (ms) | 分配类型 | 实例 ID |  |
+|---|---|---|---|---|
 | Microsoft-Windows-DotNet-GC/AllocationTick | 6216 377 000 | 0032a28 | 1 | 13 |
-| Microsoft-Windows-DotNet-GC/AllocationTick | 6216 547 399 | 00f3b10 | 1 | |
+| Microsoft-Windows-DotNet-GC/AllocationTick | 6216 547 399 | 00f3b10 | 1 |  |
 | Microsoft-Windows-DotNet-GC/AllocationTick | 6217 219 916 | 000ae18 | 1 | 13 |
-| Microsoft-Windows-DotNet-GC/AllocationTick | 6217 254 019 | 00c5020 | 1 | |
+| Microsoft-Windows-DotNet-GC/AllocationTick | 6217 254 019 | 00c5020 | 1 |  |
 | Microsoft-Windows-DotNet-GC/SuspendedStart | 6217 328 151 | 1 | 13 |
 | Microsoft-Windows-DotNet-GC/SuspendedEnd | 6217 356 130 | 2 | 4 |
+
+
+
 | Microsoft-Windows-DotNet-GC/CreateConcurrentThread | 6217 650 163 | 11 | |
+
 | Microsoft-Windows-DotNet-GC/RestartEEWStart | 6217 658 619 | 1 | |
+
 | Microsoft-Windows-DotNet-GC/RestartEEWEnd | 6217 663 376 | 1 | |
+
 | Microsoft-Windows-DotNet-GC/SuspendedStart | 6217 821 914 | 6 | |
+
 | Microsoft-Windows-DotNet-GC/SuspendedEnd | 6217 825 865 | 1 | |
-
-
-
-
 
 ## 第二章 性能测量
 
 | 名称 | 排除 % | 增加 % | 排除 % | CPU 占用率 | 首次 | 最后一次 |
-|---|---|---|---|---|---|---|---|
-| mscorlib.System.String.Stringcat(String,String) | 15.0 | 119.5 | 15.0 | 总时间被分为 32 个桶，每个数字代表 | | | |
-| JackCompiler.Compiler.Enumerator(Enumerator<I0>) | 29.7 | 35.2 | 实施已内联 | | | |
-| System.Core.Linq.Enumerable.Where(IEnumerable<T>,Func<...>) | 8.1 | 7.4 | 8.1 | - 未使用任何代码 | | | |
-| JackCompiler.Compiler.Enumerator(ParserTerm) | 11.9 | 18.8 | 11.9 | - 未使用任何代码 | | |
-| JackCompiler.Compiler.Parser.ParseAddress() | 7.0 | 64.8 | 25.7 | 使用率 1-20% | | | |
-| mscorlib.System.TextWriter.WriteLine(String) | 3.7 | 3.4 | 3.7 | 使用率 9-100% | | | |
-| JackCompiler.Compiler.Tokenizer(Enumerator<I>-like) | 3.6 | 3.3 | 9.9 | Z 使用率 30-350% | | | |
-| JackCompiler.Compiler.Parser.ParseExpression() | 2.2 | 20.5 | 9.9 | | | | |
-| JackCompiler.Compiler.Parser.SubExpression() | 22.0 | 21.8 | 40.2 | | | | |
-| JackCompiler.Compiler.Parser.NextToken(MultiOp) | 2.2 | 53.9 | 49.0 | | | | |
-| JackCompiler.Compiler.Parser.ParseStatement() | 2.1 | 19.9 | 36.0 | | | | |
-| JackCompiler.Compiler.Parser.SubCall(Token) | 9.1 | 20.8 | 18.0 | 021159a9a9a9a9a9a9 | 297.286.370 | | | |
-| myworks()? | 2.0 | 18.0 | 18.1 | 012222222222222222 | 399.519.773 | | | |
-| JackCompiler.Compiler.CodeGenerator.Generate(Token,bool) | 1.5 | 15.4 | 14.5 | 051000100000001100 | 555.645.322 | | | |
-| JackCompiler.Compiler.Parser.ParseSubBody() | 1.9 | 17.8 | 72.5 | 017878787878787878 | 529.789.337 | | | |
-| System.Core.Linq.Enumerable.Select(IEnumerable<T>,...) | 1.5 | 15.4 | 14.5 | 00_0_0_000000000000 | 547.789.337 | | | |
-| JackCompiler.Compiler.Tokenizer.Next() | 1.2 | 11.9 | 19.7 | 211212312112312121 | 547.789.337 | | | |
-| JackCompiler.Compiler.Tokenizer.Withspace() | 2.2 | 11.7 | 17.6 | 00_0_0_000000000000 | 515.783.227 | | | |
+|---|---|---|---|---|---|---|
+| `mscorlib.System.String.Stringcat(String,String)` | 15.0 | 119.5 | 15.0 | 总时间被分为 32 个桶，每个数字代表 | | |
+| `JackCompiler.Compiler.Enumerator(Enumerator<I0>)` | 29.7 | 35.2 | 实施已内联 | | | |
+| `System.Core.Linq.Enumerable.Where(IEnumerable<T>,Func<...>)` | 8.1 | 7.4 | 8.1 | - 未使用任何代码 | | |
+| `JackCompiler.Compiler.Enumerator(ParserTerm)` | 11.9 | 18.8 | 11.9 | - 未使用任何代码 | | |
+| `JackCompiler.Compiler.Parser.ParseAddress()` | 7.0 | 64.8 | 25.7 | 使用率 1-20% | | |
+| `mscorlib.System.TextWriter.WriteLine(String)` | 3.7 | 3.4 | 3.7 | 使用率 9-100% | | |
+| `JackCompiler.Compiler.Tokenizer(Enumerator<I>-like)` | 3.6 | 3.3 | 9.9 | Z 使用率 30-350% | | |
+| `JackCompiler.Compiler.Parser.ParseExpression()` | 2.2 | 20.5 | 9.9 | | | |
+| `JackCompiler.Compiler.Parser.SubExpression()` | 22.0 | 21.8 | 40.2 | | | |
+| `JackCompiler.Compiler.Parser.NextToken(MultiOp)` | 2.2 | 53.9 | 49.0 | | | |
+| `JackCompiler.Compiler.Parser.ParseStatement()` | 2.1 | 19.9 | 36.0 | | | |
+| `JackCompiler.Compiler.Parser.SubCall(Token)` | 9.1 | 20.8 | 18.0 | 021159a9a9a9a9a9a9 | 297.286.370 | | |
+| `myworks()?` | 2.0 | 18.0 | 18.1 | 012222222222222222 | 399.519.773 | | |
+| `JackCompiler.Compiler.CodeGenerator.Generate(Token,bool)` | 1.5 | 15.4 | 14.5 | 051000100000001100 | 555.645.322 | | |
+| `JackCompiler.Compiler.Parser.ParseSubBody()` | 1.9 | 17.8 | 72.5 | 017878787878787878 | 529.789.337 | | |
+| `System.Core.Linq.Enumerable.Select(IEnumerable<T>,...)` | 1.5 | 15.4 | 14.5 | 00_0_0_000000000000 | 547.789.337 | | |
+| `JackCompiler.Compiler.Tokenizer.Next()` | 1.2 | 11.9 | 19.7 | 211212312112312121 | 547.789.337 | | |
+| `JackCompiler.Compiler.Tokenizer.Withspace()` | 2.2 | 11.7 | 17.6 | 00_0_0_000000000000 | 515.783.227 | | |
 
 图 2-b. 来自 PerMonitor 的顶部报告。“Inc %” 是该方法及其所有调用的方法（其调用树中的子树）所用 CPU 时间的估计。
 
 | 名称 | 增加 % | 增加 % | 排除 % | CPU 占用率 |
 |---|---|---|---|---|
-| ROOT | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | | |
-| +ParserClass(1372) | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | | |
-| +Thread(4636) | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | | |
-| +udtl() | 98.3 | 9.0 | 2.1 | 021159a9a9a9a9a9a9a9 | | | |
-| +JackCompiler.Compiler.JackCompiler.Driver.Main(String) | 95.3 | 8.4 | 0.2 | 159959a9a9a9a9a9a9a9 | | | |
-| +JackCompiler.Compiler.JackCompiler.DriverWithGenerator(String) | 91.5 | 8.2 | 0.5 | 059959a9a9a9a99aa9 | | | |
-| +JackCompiler.Compiler.Parser.Class() | 84.2 | 7.7 | 0.0 | 099959a9a9a99a9 | | | |
-| +JackCompiler.Compiler.Parser.Class() | 84.2 | 7.2 | 0.9 | 2998089898989898 | | | |
-| +JackCompiler.Compiler.Parser.SubBody() | 82.0 | 7.5 | 0.1 | 2798089898989898 | | | |
-| +JackCompiler.Compiler.Parser.SubBody() | 81.9 | 7.5 | 0.5 | 2998089898989898 | | | |
-| +JackCompiler.Compiler.Parser.Expression() | 78.5 | 7.2 | 1.9 | 0178787878787878 | | | |
-| +JackCompiler.Compiler.Parser.Expression() | 75.4 | 6.8 | 0.5 | 0178787878787878 | | | |
-| +JackCompiler.Compiler.Parser.Statement() | 75.0 | 6.8 | 0.5 | 18777878787878 | | | |
-| +JackCompiler.Compiler.Parser.ExpressionList() | 30.2 | 2.7 | 11.2 | 024332222211165 | | | |
-| +JackCompiler.Compiler.Parser.Expression() | 20.3 | 18.6 | 0.0 | 022322222212221 | | | |
-| +JackCompiler.Compiler.Parser.RelExpression() | 19.5 | 7.9 | 0.3 | 022222222212221 | | | |
-| +jackcompiler.tokenizer.parser.Expression() | 17.7 | 16.2 | 0.1 | 021212121212121 | | | |
-| +JackCompiler.Compiler.Parser.Term() | 16.5 | 6.5 | 0.2 | 01656565656565 | | | |
-| +JackCompiler.Compiler.Parser.Statement() | 12.9 | 11.8 | 0.7 | 211211212122121 | | | |
-| +JackCompiler.Compiler.Parser.SubCallToken() | 22.0 | 20.2 | 0.1 | 122222222222222 | | | |
-| +JackCompiler.Compiler.Parser.SubCallToken() | 17.3 | 15.9 | 0.1 | 0102110121122221 | | | |
-| +JackCompiler.Compiler.Parser.ExpressionList() | 8.1 | 7.4 | 0.0 | 010100000011100 | | | |
-| +JackCompiler.Compiler.Parser.Expression() | 8.1 | 7.4 | 0.3 | 010100000011100 | | | |
+| ROOT | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | |
+| +ParserClass(1372) | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | |
+| +Thread(4636) | 100.0 | 9.7 | 0.0 | 031159a9a9a9a9a9a9a9 | | |
+| +udtl() | 98.3 | 9.0 | 2.1 | 021159a9a9a9a9a9a9a9 | | |
+| +JackCompiler.Compiler.JackCompiler.Driver.Main(String) | 95.3 | 8.4 | 0.2 | 159959a9a9a9a9a9a9a9 | | |
+| +JackCompiler.Compiler.JackCompiler.DriverWithGenerator(String) | 91.5 | 8.2 | 0.5 | 059959a9a9a99aa9 | | |
+| +JackCompiler.Compiler.Parser.Class() | 84.2 | 7.7 | 0.0 | 099959a9a9a99a9 | | |
+| +JackCompiler.Compiler.Parser.Class() | 84.2 | 7.2 | 0.9 | 2998089898989898 | | |
+| +JackCompiler.Compiler.Parser.SubBody() | 82.0 | 7.5 | 0.1 | 2798089898989898 | | |
+| +JackCompiler.Compiler.Parser.SubBody() | 81.9 | 7.5 | 0.5 | 2998089898989898 | | |
+| +JackCompiler.Compiler.Parser.Expression() | 78.5 | 7.2 | 1.9 | 0178787878787878 | | |
+| +JackCompiler.Compiler.Parser.Expression() | 75.4 | 6.8 | 0.5 | 0178787878787878 | | |
+| +JackCompiler.Compiler.Parser.Statement() | 75.0 | 6.8 | 0.5 | 18777878787878 | | |
+| +JackCompiler.Compiler.Parser.ExpressionList() | 30.2 | 2.7 | 11.2 | 024332222211165 | | |
+| +JackCompiler.Compiler.Parser.Expression() | 20.3 | 18.6 | 0.0 | 022322222212221 | | |
+| +JackCompiler.Compiler.Parser.RelExpression() | 19.5 | 7.9 | 0.3 | 022222222212221 | | |
+| +jackcompiler.tokenizer.parser.Expression() | 17.7 | 16.2 | 0.1 | 021212121212121 | | |
+| +JackCompiler.Compiler.Parser.Term() | 16.5 | 6.5 | 0.2 | 01656565656565 | | |
+| +JackCompiler.Compiler.Parser.Statement() | 12.9 | 11.8 | 0.7 | 211211212122121 | | |
+| +JackCompiler.Compiler.Parser.SubCallToken() | 22.0 | 20.2 | 0.1 | 122222222222222 | | |
+| +JackCompiler.Compiler.Parser.SubCallToken() | 17.3 | 15.9 | 0.1 | 0102110121122221 | | |
+| +JackCompiler.Compiler.Parser.ExpressionList() | 8.1 | 7.4 | 0.0 | 010100000011100 | | |
+| +JackCompiler.Compiler.Parser.Expression() | 8.1 | 7.4 | 0.3 | 010100000011100 | | |
 
 图 2-b. 来自 PerMonitor 的顶部报告
 
@@ -455,7 +416,7 @@ XPerf 非常擅长以吸引人的图表和表格显示数据，但对于自定�
 所有时间单位均为毫秒。从 ms 跟踪开始。
 
 | 开始时间 | GC 编号 | 代 | 暂停 | 分配速率 MB | GC 留存 | 毫秒前 MB | 毫秒后 MB | 后 MB | 比例 | 回收量 | 挂起时间 | 类型 | 原因 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 55153 | 1 | 0 | 02 | 7.53 | 4.15 | 0.046 | 2.56 | 0.07 | 55.82 | 4.07 | 0.01 | NonConcurrentGC | Alloc/Small |
 | 55438 | 2 | 0 | 09 | 13.42 | 4.15 | 0.020 | 0.84 | 0.21 | 42.74 | 0.0 | 0.01 | NonConcurrentGC | Alloc/Small |
 | 55765 | 3 | 0 | 08 | 13.21 | 4.15 | 0.015 | 0.59 | 0.25 | 33.15 | 0.01 | NonConcurrentGC | Alloc/Small |
@@ -464,10 +425,6 @@ XPerf 非常擅长以吸引人的图表和表格显示数据，但对于自定�
 | 56681 | 6 | 0 | 08 | 14.91 | 4.15 | 0.017 | 0.34 | 0.21 | 20.79 | 0.01 | NonConcurrentGC | Alloc/Small |
 
 **图 2-9.** 单个 GC 事件，包括回收量
-
-
-
-
 
 # 第 2 章 -- 性能测量
 
@@ -541,17 +498,19 @@ PerfMonitor processing time: 1.886 secs.
 
 # 第 2 章 性能测量
 
-注意：我们还没有考虑另一个性能监控和系统健康插桩框架：Windows 管理规程序 (WMI)。WMI 是集成到 Windows 中的命令与控制 (C&C) 基础设施，不在本章的范围内。它可以用于获取有关系统状态的信息（例如已安装的操作系统、BIOS 固件或可用磁盘空间）、注册交叉事件（如进程创建和终止），并调用更改系统状态的控制方法（如创建网络共享或解锁驱动程序）。有关 WMI 的更多信息，请参阅 http://msdn.microsoft.com/en-us/library/desktop/aa394582.aspx 的 MSDN 文档。如果你对开发 WMI 提供程序感兴趣，Sasha Goldsteins 的文章“WMI Provider Extensions in NET 3.5”（http://codeproject.com/Articles/25783/WMI-Provider-Extensions-in-NET-3-5, 2008）提供了一个很好的起点。
+
+
+注意：我们还没有考虑另一个性能监控和系统健康插桩框架：Windows 管理规程序 (`WMI`)。`WMI` 是集成到 Windows 中的命令与控制 (`C&C`) 基础设施，不在本章的范围内。它可以用于获取有关系统状态的信息（例如已安装的操作系统、BIOS 固件或可用磁盘空间）、注册交叉事件（如进程创建和终止），并调用更改系统状态的控制方法（如创建网络共享或解锁驱动程序）。有关 `WMI` 的更多信息，请参阅 `http://msdn.microsoft.com/en-us/library/desktop/aa394582.aspx` 的 MSDN 文档。如果你对开发 `WMI` 提供程序感兴趣，Sasha Goldsteins 的文章“`WMI Provider Extensions in NET 3.5`”（`http://codeproject.com/Articles/25783/WMI-Provider-Extensions-in-NET-3-5, 2008`）提供了一个很好的起点。
 
 ## 时间分析器 (Time Profilers)
 
-虽然性能计数器 ETW 事件为应用程序提供了大量的洞察，但性能分析器（performance profiler）是一个非常有用的工具，可以显著缩短性能调查的时间。你可以通过主界面链接的内置教程了解更多信息，BCL 团队提供的视频也展示了该工具的一些主要功能。
+虽然性能计数器 `ETW` 事件为应用程序提供了大量的洞察，但性能分析器（performance profiler）是一个非常有用的工具，可以显著缩短性能调查的时间。你可以通过主界面链接的内置教程了解更多信息，`BCL` 团队提供的视频也展示了该工具的一些主要功能。
 
-虽然性能计数器 ETW 事件为应用程序提供了大量的洞察，但性能分析器是一个非常有用的工具，可以显著缩短性能调查的时间。你可以通过主界面链接的内置教程了解更多信息，BCL 团队提供的视频也展示了该工具的一些主要功能。
+虽然性能计数器 `ETW` 事件为应用程序提供了大量的洞察，但性能分析器是一个非常有用的工具，可以显著缩短性能调查的时间。你可以通过主界面链接的内置教程了解更多信息，`BCL` 团队提供的视频也展示了该工具的一些主要功能。
 
 ## Visual Studio 采样分析器 (Sampling Profiler)
 
-Visual Studio 采样分析器的工作原理与内核类似。它会定期中断应用程序并记录线程正在运行的调用栈。与内核不同，采样基于若干标准，其中某些列在表 2-2 中。
+`Visual Studio` 采样分析器的工作原理与内核类似。它会定期中断应用程序并记录线程正在运行的调用栈。与内核不同，采样基于若干标准，其中某些列在表 2-2 中。
 
 ### 表 2-2 Visual Studio 采样分析器事件（部分列表）
 
@@ -563,23 +522,19 @@ Visual Studio 采样分析器的工作原理与内核类似。它会定期中断
 | 最后缓存缺失 | 应用程序访问了不在 CPU 缓存中但在主内存 (RAM) 中可以找到的位置 | 1000—1M | 寻找导致缓存缺失的代码（另参见第 5 章） |
 | 已执行指令 | 应用程序执行了 CPU | 500K—100M | 与时钟周期类似 |
 
-
-
-
-
 ## 在 Visual Studio 中运行采样分析器
 
-运行采样分析器最简单的方法是直接从 Visual Studio 中运行（稍后我们将看到），它也支持从简化的命令行环境进行生产环境分析。我们建议您使用自己的应用程序进行此实验。
+运行采样分析器最简单的方法是直接从 `Visual Studio` 中运行（稍后我们将看到），它也支持从简化的命令行环境进行生产环境分析。我们建议您使用自己的应用程序进行此实验。
 
-- 1. 在 Visual Studio 中，点击“分析 (Analyze) ► 启动性能 (Launch Performance)”菜单项。
-2. 在向导的第一页，选择“CPU 采样 (CPU sampling)”单选按钮并点击“下一步 (Next)”按钮。（在本章后面的部分我们将讨论其他分析模式；届您可以重复此实验）
-3. 如果当前解决方案中加载了项目配置文件，点击“一个或多个项目 (One or more projects)”单选按钮并从列表中选择项目。否则，点击“可执行文件 (.EXE file)”单选按钮。点击“下一步”。
-4. 如果你在上一个屏幕上选择了“可执行文件 (.EXE file)”，请将分析器指向您的可执行文件，并在时提供任何行参数，然后点击“下一步”。（如果没有您的应用程序处理程序，可以使用本章源码文件夹中的 `JackCompiler.exe` 示例应用程序）。
-5. 勾选“向导完成后启动分析 (Launch profiling after the wizard finishes)”框框并点击“完成 (Finish)”按钮。
-6. 如果你没有以管理员身份运行 Visual Studio，将提示你升级分析器的凭据。
-7. 当你的应用程序完成后，将打开一个分析报告。顶部的“当前视图 (Current View)”组合框用于在不同视图之间导航，显示在应用程序代码中收集的样本。
+- 1. 在 `Visual Studio` 中，点击“分析 (`Analyze`) ► 启动性能 (`Launch Performance`)”菜单项。
+- 2. 在向导的第一页，选择“CPU 采样 (`CPU sampling`)”单选按钮并点击“下一步 (`Next`)”按钮。（在本章后面的部分我们将讨论其他分析模式；届您可以重复此实验）
+- 3. 如果当前解决方案中加载了项目配置文件，点击“一个或多个项目 (`One or more projects`)”单选按钮并从列表中选择项目。否则，点击“可执行文件 (`.EXE file`)”单选按钮。点击“下一步”。
+- 4. 如果你在上一个屏幕上选择了“可执行文件 (`.EXE file`)”，请将分析器指向您的可执行文件，并在时提供任何行参数，然后点击“下一步”。（如果没有您的应用程序处理程序，可以使用本章源码文件夹中的 `JackCompiler.exe` 示例应用程序）。
+- 5. 勾选“向导完成后启动分析 (`Launch profiling after the wizard finishes`)”框框并点击“完成 (`Finish`)”按钮。
+- 6. 如果你没有以管理员身份运行 `Visual Studio`，将提示你升级分析器的凭据。
+- 7. 当你的应用程序完成后，将打开一个分析报告。顶部的“当前视图 (`Current View`)”组合框用于在不同视图之间导航，显示在应用程序代码中收集的样本。
 
-为了进行更多实验，在分析会完成后，确保检查“性能资源管理器 (Performance Explorer)”窗口（例如选择不同的事件或间隔），更改目标二进制文件，并比较不同运行的多个分析器报告。
+为了进行更多实验，在分析会完成后，确保检查“性能资源管理器 (`Performance Explorer`)”窗口（例如选择不同的事件或间隔），更改目标二进制文件，并比较不同运行的多个分析器报告。
 
 图 2-12 显示了分析器结果的摘要窗口，其中开销最大的调用路径以及收集最多独占样本（exclusive samples）的函数。图 2-13 显示了详细报告，其中少数方法负责大部分 CPU 利用率（具有大量的独占样本）。双击列表中的方法将打开详细窗口，该窗口将显示应用程序源代码，并标出收集样本最多的行（见图 2-14）。
 
@@ -591,11 +546,11 @@ Visual Studio 采样分析器的工作原理与内核类似。它会定期中断
 
 | 函数名称 | 包含性样本 % | 独占样本 % |
 | --- | --- | --- |
-| JackCompiler.Parser.ParseStatements() | 75.95 | 0.38 |
-| JackCompiler.Parser.ParseStatement() | 75.19 | 0.00 |
-| JackCompiler.Parser.ParseDoStatement() | 27.10 | 0.00 |
-| JackCompiler.Parser.ParseLetStatement() | 25.95 | 0.00 |
-| JackCompiler.Parser.ParseSelfStatement() | 13.36 | 0.00 |
+| `JackCompiler.Parser.ParseStatements()` | 75.95 | 0.38 |
+| `JackCompiler.Parser.ParseStatement()` | 75.19 | 0.00 |
+| `JackCompiler.Parser.ParseDoStatement()` | 27.10 | 0.00 |
+| `JackCompiler.Parser.ParseLetStatement()` | 25.95 | 0.00 |
+| `JackCompiler.Parser.ParseSelfStatement()` | 13.36 | 0.00 |
 
 相关视图：调用树函数
 
@@ -605,11 +560,11 @@ Visual Studio 采样分析器的工作原理与内核类似。它会定期中断
 
 | 名称 | 独占样本 % |
 | --- | --- |
-| System.String.Concat(string,string,string) | 24.81 |
-| System.Linq.Enumerable.Contains(class System.Collections.Generic.IEnumerator<1>,Il...) | 11.07 |
-| System.IO.TextWriter.WriteLine(string,object) | 8.02 |
-| System.Linq.Enumerable.Contains(class System.Collections.Generic.IEnumerator<1>,Il...) | 6.49 |
-| _PreStubWorker@ | 4.96 |
+| `System.String.Concat(string,string,string)` | 24.81 |
+| `System.Linq.Enumerable.Contains(class System.Collections.Generic.IEnumerator<1>,Il...)` | 11.07 |
+| `System.IO.TextWriter.WriteLine(string,object)` | 8.02 |
+| `System.Linq.Enumerable.Contains(class System.Collections.Generic.IEnumerator<1>,Il...)` | 6.49 |
+| `_PreStubWorker@` | 4.96 |
 
 **图 2-12.** 分析器报告，摘要视图——负责大部分样本的调用路径以及具有最多独占样本的函数
 
@@ -619,34 +574,34 @@ Visual Studio 采样分析器的工作原理与内核类似。它会定期中断
 
 | 函数名称 | 包含性样本... | 独占样本... |
 | --- | --- | --- |
-| System.String.Concat(string,string,string) | 65 | 65 |
-| System.Linq.Enumerable.Contains(class.Collections.Generic.IEnumerator<1<I1O) | 29 | 29 |
-| System.IO.TextWriter.WriteLine(line,object) | 58 | 21 |
-| System.Linq.Enumerable.Contains(class.Collections.Generic.IEnumerator<1<I1O) | 17 | 17 |
-| .PreStubWorker@4 | 15 | 13 |
-| System.String.Concat(object,object) | 11 | 11 |
-| JackCompiler.Tokenizer.NextChar(() | 15 | 6 |
-| System.IO.File.OpenText(string) | 6 | 6 |
-| System.IO.StreamReader.Peek() | 6 | 6 |
-| JackCompiler.Tokenizer.Advance(() | 80 | 5 |
-| System.Collections.Generic.HashSet`1.Contains(10) | 5 | 5 |
+| `System.String.Concat(string,string,string)` | 65 | 65 |
+| `System.Linq.Enumerable.Contains(class.Collections.Generic.IEnumerator<1<I1O)` | 29 | 29 |
+| `System.IO.TextWriter.WriteLine(line,object)` | 58 | 21 |
+| `System.Linq.Enumerable.Contains(class.Collections.Generic.IEnumerator<1<I1O)` | 17 | 17 |
+| `.PreStubWorker@4` | 15 | 13 |
+| `System.String.Concat(object,object)` | 11 | 11 |
+| `JackCompiler.Tokenizer.NextChar(()` | 15 | 6 |
+| `System.IO.File.OpenText(string)` | 6 | 6 |
+| `System.IO.StreamReader.Peek()` | 6 | 6 |
+| `JackCompiler.Tokenizer.Advance(()` | 80 | 5 |
+| `System.Collections.Generic.HashSet`1.Contains(10)` | 5 | 5 |
 
-**图 2-13.** 函数视图，显示了具有最多独占样本的函数。System.String.Concat 函数负责的样本量是任何其他函数的两倍。
+**图 2-13.** 函数视图，显示了具有最多独占样本的函数。`System.String.Concat` 函数负责的样本量是任何其他函数的两倍。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_34_1.png)
 
 | 调用函数 | 被调用函数 | 包含 % | 独占 % |
 | --- | --- | --- | --- |
-| WriteLine | Concat | 27% | 24% |
-| Add | Body | 14% | 1.5% |
+| `WriteLine` | `Concat` | 27% | 24% |
+| `Add` | `Body` | 14% | 1.5% |
 
 **图 2-14.** 详细视图，显示应用程序源代码以及收集样本最多的行。注意，采样并不是测量 CPU 利用率的准确技术。有几个因素会导致采样的不准确性：CPU 速率每秒变化数百次，如果方法在采样时未运行则可能被“漏掉”（表示不足）；如果它正在运行，则会被过度表示。总结，不要将采样分析器的结果视为时间的精确表示，而应是一个概览。
 
-Visual Studio 分析器为每个方法提供了更多独占/包含信息。调用树显示类的层次结构，行视图显示行级采样信息，模块视图按程序集分组，这可以快速对查找方向得出结论。由于所有采样间隔都需要触发它们的线程在 CPU 上执行，因此无法从等待 I/O 或同步的应用程序中获取样本。对于 CPU 密集型应用程序，采样是理想的。
+`Visual Studio` 分析器为每个方法提供了更多独占/包含信息。调用树显示类的层次结构，行视图显示行级采样信息，模块视图按程序集分组，这可以快速对查找方向得出结论。由于所有采样间隔都需要触发它们的线程在 CPU 上执行，因此无法从等待 I/O 或同步的应用程序中获取样本。对于 CPU 密集型应用程序，采样是理想的。
 
 ## Visual Studio 实例化分析器
 
-Visual Studio 分析器提供了另一种工作模式——实例化分析器，它为测量整体执行时间而定制，而不仅仅是 CPU 时间。这适用于 I/O 密集型应用程序或大量执行同步操作应用程序。在实例化模式下，分析器会修改目标二进制文件并在其中嵌入代码，以返回每个方法的精确时间和调用计数。
+`Visual Studio` 分析器提供了另一种工作模式——实例化分析器，它为测量整体执行时间而定制，而不仅仅是 CPU 时间。这适用于 I/O 密集型应用程序或大量执行同步操作应用程序。在实例化模式下，分析器会修改目标二进制文件并在其中嵌入代码，以返回每个方法的精确时间和调用计数。
 
 例如，考虑以下方法：
 
@@ -662,7 +617,7 @@ public static int InstrumentedMethod(int param) {
 }
 ```
 
-在实例化期间，Visual Studio 分析器会修改此方法。记住，你的源代码没有被修改，但你可以使用 II 反汇编器（如 .NET Reflector）检查二进制文件。（为了方便起，我们对代码进行了微调）。
+在实例化期间，`Visual Studio` 分析器会修改此方法。记住，你的源代码没有被修改，但你可以使用 II 反汇编器（如 `.NET Reflector`）检查二进制文件。（为了方便起，我们对代码进行了微调）。
 
 ```csharp
 public static int mmid = (int)
@@ -674,10 +629,6 @@ public static int InstrumentedMethod(int param) {
   _CAP_Enter_Function_Managed(mmid, 0x0000000, o);
 }
 ```
-
-
-
-
 
 ## 第 2 章 性能测量
 
@@ -698,7 +649,7 @@ _Cap_Exit_Function_Managed(mmid, 0x60000b, 0);
 return count;
 ```
 
-以 C# 开头的方法调用是与 VSPerf10.dll 模块的交互，该模块由插桩的程序集引用。它们负责测量时间和记录方法调用。由于插桩（Instrumentation）会捕获被插桩代码的每一个方法调用并记录方法的进入和退出位置，因此插桩运行结束时的可用信息是可以验证的。
+以 C# 开头的方法调用是与 `VSPerf10.dll` 模块的交互，该模块由插桩的程序集引用。它们负责测量时间和记录方法调用。由于插桩（Instrumentation）会捕获被插桩代码的每一个方法调用并记录方法的进入和退出位置，因此插桩运行结束时的可用信息是可以验证的。
 
 当在 2-12、2-13 和 2-14 中显示应用程序处于插桩模式（你可以跟踪所有——JCompiler 应用程序），分析器会生成一个摘要，其中包含一些信息——应用程序中最昂贵的路径以及独立工作量最大的函数。然而，此时间不是基于计数（计数仅测量 CPU 上的执行），而是基于插桩代码记录的精确计时。
 
@@ -706,51 +657,49 @@ return count;
 
 | 函数名称 (Function Name) | 包含执行时间 (Elapsed Incl) | 排除执行时间 (Elapsed Exclus) | 调用次数 (Number of Calls) |
 | :--- | :--- | :--- | :--- |
-| JCompiler.Tokenizer.NextChar | 4,163.71 | 2,246.36 | 951,000 |
-| JCompiler.Tokenizer..ctor(valuetype JCompiler.TokenType;string) | 2,561.65 | 1,557.73 | 463,000 |
-| JCompiler.Tokenizer.Advance() | 9,195.09 | 1,070.54 | 293,000 |
-| JCompiler.Parser.Match(class JCompiler.Token) | 7,751.63 | 749.13 | 171,000 |
-| JCompiler.Eat(class System.List<'char>') | 2,445.82 | 716.53 | 144,000 |
-| System.Object.ToString() | 627.72 | 627.72 | 483,000 |
-| System.String.Of(string) | 580.68 | 580.68 | 1,116,000 |
-| System.String.Get(int32) | 481.38 | 481.38 | 951,000 |
-| JCompiler.Parser.ParseStatements() | 9,734.91 | 457.06 | 6,000 |
-| System.Predicate.Invoke(0) | 501.06 | 434.25 | 525,000 |
-| JCompiler.Tokenizer.get_IsAtEnd() | 418.59 | 404.36 | 293,000 |
-| System.Environment.get_NewLine(string) | 391.10 | 391.10 | 951,000 |
-| System.String.Concat(string,string) | 383.15 | 383.15 | 1,091,000 |
-| System.String.ctor(char[]) | 342.48 | 342.48 | 463,000 |
-| JCompiler.Parser.NextToken() | 2,586.89 | 329.52 | 121,000 |
+| `JCompiler.Tokenizer.NextChar` | 4,163.71 | 2,246.36 | 951,000 |
+| `JCompiler.Tokenizer..ctor(valuetype JCompiler.TokenType;string)` | 2,561.65 | 1,557.73 | 463,000 |
+| `JCompiler.Tokenizer.Advance()` | 9,195.09 | 1,070.54 | 293,000 |
+| `JCompiler.Parser.Match(class JCompiler.Token)` | 7,751.63 | 749.13 | 171,000 |
+| `JCompiler.Eat(class System.List<'char>')` | 2,445.82 | 716.53 | 144,000 |
+| `System.Object.ToString()` | 627.72 | 627.72 | 483,000 |
+| `System.String.Of(string)` | 580.68 | 580.68 | 1,116,000 |
+| `System.String.Get(int32)` | 481.38 | 481.38 | 951,000 |
+| `JCompiler.Parser.ParseStatements()` | 9,734.91 | 457.06 | 6,000 |
+| `System.Predicate.Invoke(0)` | 501.06 | 434.25 | 525,000 |
+| `JCompiler.Tokenizer.get_IsAtEnd()` | 418.59 | 404.36 | 293,000 |
+| `System.Environment.get_NewLine(string)` | 391.10 | 391.10 | 951,000 |
+| `System.String.Concat(string,string)` | 383.15 | 383.15 | 1,091,000 |
+| `System.String.ctor(char[])` | 342.48 | 342.48 | 463,000 |
+| `JCompiler.Parser.NextToken()` | 2,586.89 | 329.52 | 121,000 |
 
-图 2-15. 函数视图：String.String.Concat 看起来不再是瓶颈了，因为我们的注意力转向了 JCompiler.Tokenizer.NextChar 和 JCompiler.Token..ctor。第一个方法被调用了近百万次。
+图 2-15. 函数视图：`String.String.Concat` 看起来不再是瓶颈了，因为我们的注意力转向了 `JCompiler.Tokenizer.NextChar` 和 `JCompiler.Token..ctor`。第一个方法被调用了近百万次。
 
-提示：用于生成图 2-12 和图 2-15 的示例应用程序并非完全受 CPU 限制；事实上，它的大部分时间花在了等待 I/O 操作完成。这解释了采样结果与插桩结果之间的差异——采样指向 System.String.Concat 是 CPU 头部，而插桩结果则指向 JCompiler.Tokenizer.NextChar 是整体性能瓶颈。
+提示：用于生成图 2-12 和图 2-15 的示例应用程序并非完全受 CPU 限制；事实上，它的大部分时间花在了等待 I/O 操作完成。这解释了采样结果与插桩结果之间的差异——采样指向 `System.String.Concat` 是 CPU 头部，而插桩结果则指向 `JCompiler.Tokenizer.NextChar` 是整体性能瓶颈。
 
 尽管插桩看起来是更准确的方法，但在实践中，如果你的应用程序的大部分代码是 CPU 密集型的，你应该尝试保持采样。插桩限制了灵活性，因为它会捕获每个方法调用。
 
-
-
-
-
 ## 第 2 章 性能测量
 
-某些性能分析工具提供了远程分析模式，这允许主性能分析器 UI 运行在一台机器上，而性能分析会话在另一台机器上进行，无需手动复制性能报告。例如，JetBrains dotTrace 性能分析器通过运行在机器上的远程代理程序支持这种操作模式，该程序与主性能分析器 UI 通信。这是在生产环境机器上安装整个性能分析工具的一种良好替代方案。
+某些性能分析工具提供了远程分析模式，这允许主性能分析器 UI 运行在一台机器上，而性能分析会话在另一台机器上进行，无需手动复制性能报告。例如，JetBrains `dotTrace` 性能分析器通过运行在机器上的远程代理程序支持这种操作模式，该程序与主性能分析器 UI 通信。这是在生产环境机器上安装整个性能分析工具的一种良好替代方案。
 
-在第 6 章中，我们将利用 GPU 进行超并行计算，从而带来显著的加速（超过 100 倍！）。除非性能问题出现在运行在 GPU 上的代码中，否则标准的性能分析工具是毫无用处的。有一些工具可以分析和诊断 GPU 代码中的性能问题，包括 Visual Studio 2012。该主题超出本章的范围，但如果你在使用 GPU 进行图形渲染或纯计算，你应该研究适用于你的 GPU 编程框架的工具（如 C++ API、CUDA 或 OpenCL）。
+
+
+在第 6 章中，我们将利用 GPU 进行超并行计算，从而带来显著的加速（超过 100 倍！）。除非性能问题出现在运行在 GPU 上的代码中，否则标准的性能分析工具是毫无用处的。有一些工具可以分析和诊断 GPU 代码中的性能问题，包括 `Visual Studio 2012`。该主题超出本章的范围，但如果你在使用 GPU 进行图形渲染或纯计算，你应该研究适用于你的 GPU 编程框架的工具（如 `C++ API`、`CUDA` 或 `OpenCL`）。
 
 在本节中，我们已经详细查看了如何分析应用程序的执行时间（整体或仅限 CPU）。内存管理是托管应用程序性能的另一个重要方面。通过接下来的两个章节，我们将讨论分配器和内存性能分析器，它们可以精确定应用程序中与内存相关的性能瓶颈。
 
 ## 分配性能分析器
 
-分配性能分析器检测应用程序执行的内存分配，并可以报告哪些方法分配了最多内存、哪些类型由方法分配，以及类似的内存相关统计。内存密集型应用程序可能会垃圾回收器上花费大量时间，以回收之前分配的内存。正如我们在第 4 章中看到的，CLR 分配内存既容易又昂贵，回收内存的代价可能非常高。因此，分配内存的小方法组可能不会消耗大量的 CPU 时间来运行——在时间性能分析器的报告中几乎不可见——但它们会通过触发垃圾收集和应用程序执行中的不确定性而导致运行变慢。我们见过某些对内存分配非常谨慎的生产应用程序，它们通过改进分配和内存管理，提升了性能——有时提升幅度高达 10 倍。
+分配性能分析器检测应用程序执行的内存分配，并可以报告哪些方法分配了最多内存、哪些类型由方法分配，以及类似的内存相关统计。内存密集型应用程序可能会垃圾回收器上花费大量时间，以回收之前分配的内存。正如我们在第 4 章中看到的，`CLR` 分配内存既容易又昂贵，回收内存的代价可能非常高。因此，分配内存的小方法组可能不会消耗大量的 CPU 时间来运行——在时间性能分析器的报告中几乎不可见——但它们会通过触发垃圾收集和应用程序执行中的不确定性而导致运行变慢。我们见过某些对内存分配非常谨慎的生产应用程序，它们通过改进分配和内存管理，提升了性能——有时提升幅度高达 10 倍。
 
-我们将使用两个工具来分析内存分配：无处不在的 Visual Studio 性能分析器（它提供分配分析模式）以及免费的独立工具 CLR Profiler。遗憾的是，这两个工具都会对内存密集型应用程序产生显著的性能损耗，因为每次内存分配都必须通过性能分析器进行记录。尽管如此，结果可能是非常有价值的，以至于 100 倍的变慢也值得等待。
+我们将使用两个工具来分析内存分配：无处不在的 `Visual Studio` 性能分析器（它提供分配分析模式）以及免费的独立工具 `CLR Profiler`。遗憾的是，这两个工具都会对内存密集型应用程序产生显著的性能损耗，因为每次内存分配都必须通过性能分析器进行记录。尽管如此，结果可能是非常有价值的，以至于 100 倍的变慢也值得等待。
 
 ## Visual Studio 分配性能分析器
 
-Visual Studio 性能分析器可以在采样和插桩模式收集分配信息和对象生命周期数据（哪些对象被垃圾回收器回收）。使用采样时，性能分析器从整个进程收集分配数据；使用插桩时，性能分析器仅从已插桩模块收集数据。
+`Visual Studio` 性能分析器可以在采样和插桩模式收集分配信息和对象生命周期数据（哪些对象被垃圾回收器回收）。使用采样时，性能分析器从整个进程收集分配数据；使用插桩时，性能分析器仅从已插桩模块收集数据。
 
-你可以通过在本文章源码的 JackCompiler.exe 示例应用程序上运行 Visual Studio 性能分析器来练习。确保在 Visual Studio 性能向导中选择“NET memory allocation”。分析结束时，摘要（Summary）视图会显示分配内存的函数以及分配内存最多的类型（见图 2-16）。报告中的函数（Functions）视图提供了每个方法分配的对象数量和字节数（包括包含和排除指标），此外，函数详细（Function Details）视图可以提供调用者和被调用者信息，并以带有页边距分配信息的颜色高亮源代码形式显示（见图 2-17）。更多信息在分配（Allocation）视图中，它显示了哪些调用树负责分配特定类型（见图 2-18）。
+你可以通过在本文章源码的 `JackCompiler.exe` 示例应用程序上运行 `Visual Studio` 性能分析器来练习。确保在 `Visual Studio` 性能向导中选择“`NET memory allocation`”。分析结束时，摘要（Summary）视图会显示分配内存的函数以及分配内存最多的类型（见图 2-16）。报告中的函数（Functions）视图提供了每个方法分配的对象数量和字节数（包括包含和排除指标），此外，函数详细（Function Details）视图可以提供调用者和被调用者信息，并以带有页边距分配信息的颜色高亮源代码形式显示（见图 2-17）。更多信息在分配（Allocation）视图中，它显示了哪些调用树负责分配特定类型（见图 2-18）。
 
 ### 分配内存最多的函数
 
@@ -758,11 +707,11 @@ Visual Studio 性能分析器可以在采样和插桩模式收集分配信息和
 
 | 名称 | 字节数百分比 |
 | --- | --- |
-| System.String.Concat(string,string,string) | 89.04 |
-| System.String.CharToCharCount(char,int32) | 1.66 |
-| System.IO.TextWriter.WriteLine(string,object) | 1.43 |
-| System.String.Concat(object,object) | 1.41 |
-| JackCompiler.Tokenizer | 1.03 |
+| `System.String.Concat(string,string,string)` | 89.04 |
+| `System.String.CharToCharCount(char,int32)` | 1.66 |
+| `System.IO.TextWriter.WriteLine(string,object)` | 1.43 |
+| `System.String.Concat(object,object)` | 1.41 |
+| `JackCompiler.Tokenizer` | 1.03 |
 
 ### 分配内存最多的类型
 
@@ -770,39 +719,35 @@ Visual Studio 性能分析器可以在采样和插桩模式收集分配信息和
 
 | 名称 | 字节数百分比 |
 | --- | --- |
-| System.String | 95.53 |
-| System.Char[] | 1.47 |
-| JackCompiler.Token | 0.65 |
-| System.String[] | 0.48 |
-| System.Byte[] | 0.45 |
+| `System.String` | 95.53 |
+| `System.Char[]` | 1.47 |
+| `JackCompiler.Token` | 0.65 |
+| `System.String[]` | 0.48 |
+| `System.Byte[]` | 0.45 |
 
 > **图 2-16.** 摘要视图
 
 ![](img/d3ea56daae375e1d9f44d8bff55d847_41.png)
 
-> **图 2-17.** JackCompiler.Tokenizer 的函数详细视图，显示页边距带有分配信息的源码
+> **图 2-17.** `JackCompiler.Tokenizer` 的函数详细视图，显示页边距带有分配信息的源码
 
 ![](img/d3ea56daae375e1d9f44d8bff55d847_42.png)
 
-> **图 2-18.** 分配视图，显示分配 System.String 对象的调用树
+> **图 2-18.** 分配视图，显示分配 `System.String` 对象的调用树
 
 ![](img/d3ea56daae375e1d9f44d8bff55d847_4.png)
 
 ## CLR Profiler
 
-CLR Profiler 是一个独立的性能分析工具，不需要安装，占用小于 1MB 的磁盘空间。你可以从 http://www.microsoft.com/download/en/details.aspx?id=16273 下载它。作为额外，它附带了完整的文档，如果你正在使用 CLR Profiling API 开发工具，阅读这些文档非常有帮助。它可以附加到运行的进程中（针对 CLR 4.0）或启动可执行文件，并记录所有的内存分配和收集事件
+`CLR Profiler` 是一个独立的性能分析工具，不需要安装，占用小于 1MB 的磁盘空间。你可以从 `http://www.microsoft.com/download/en/details.aspx?id=16273` 下载它。作为额外，它附带了完整的文档，如果你正在使用 `CLR Profiling API` 开发工具，阅读这些文档非常有帮助。它可以附加到运行的进程中（针对 `CLR 4.0`）或启动可执行文件，并记录所有的内存分配和收集事件
 
-虽然 CLR Profiler 极其简单——运行性能分析器，点击启动应用程序，然后等待报告出现——但信息的丰富程度可能会让人无从从。我们将介绍一些报告；完整的 `CLRProfiler guide` 文档是下载包的一部分。一如既往，你可以通过我们的 JackProfiler 示例来练习 CLR Profiler。
+虽然 `CLR Profiler` 极其简单——运行性能分析器，点击启动应用程序，然后等待报告出现——但信息的丰富程度可能会让人无从从。我们将介绍一些报告；完整的 `CLRProfiler guide` 文档是下载包的一部分。一如既往，你可以通过我们的 `JackProfiler` 示例来练习 `CLR Profiler`。
 
 图 2-20 显示了性能分析程序终止后生成的主视图。它包含了内存分配和垃圾收集的统计数据。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d847_43.png)
 
-> **图 2-20.** CLR Profiler 的主报告视图，显示分配和垃圾收集统计
-
-
-
-
+> **图 2-20.** `CLR Profiler` 的主报告视图，显示分配和垃圾收集统计
 
 ## 第 2 章 性能测量
 
@@ -812,7 +757,7 @@ CLR Profiler 是一个独立的性能分析工具，不需要安装，占用小�
 
 图 2-21。性能分析部分分配的所有对象。每个桶代表特定大小的对象。左侧的图例包含每个类型分配的字节总数和实例数。
 
-图 2-20 中的分配图（Allocation Graph）打开了一个视图，以分组图的形式显示所有对象的分配调用，这使得易于从分配内存的方法导航到分配其实例的方法。图 2-22 显示了分配图的一小部分，从 `Parser.ParseStatement` 方法开始，该方法分配了（包含在内）372MB 的内存，并显示了调用它的方法。（此外，CLR Profiler 的其他视图都有“显示谁分配的”（Show who's allocated）右键菜单项，它可以打开应用程序部分集对象的分配图。）
+图 2-20 中的分配图（Allocation Graph）打开了一个视图，以分组图的形式显示所有对象的分配调用，这使得易于从分配内存的方法导航到分配其实例的方法。图 2-22 显示了分配图的一小部分，从 `Parser.ParseStatement` 方法开始，该方法分配了（包含在内）372MB 的内存，并显示了调用它的方法。（此外，`CLR Profiler` 的其他视图都有“显示谁分配的”（Show who's allocated）右键菜单项，它可以打开应用程序部分集对象的分配图。）
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_45_0.png)
 
@@ -837,9 +782,11 @@ CLR Profiler 是一个独立的性能分析工具，不需要安装，占用小�
 图 2-25 显示了被分析应用程序是如何运行的，点击“现在显示堆”会生成一个堆转储，可以对其进行检查以分类对象之间的引用。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_48_0.png)
+
 **图 2-25。** 性能分析部分分配的所有对象。每个桶代表特定大小的对象。左侧的图例包含每个类型分配的字节总数和实例数。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_48_1.png)
+
 **图 2-22。** 被分析应用的分配图。这里只显示了方法；实际分配的类型位于图的最右侧。
 
 ## 内存分析器
@@ -848,49 +795,51 @@ CLR Profiler 是一个独立的性能分析工具，不需要安装，占用小�
 
 ## ANTS Profiler
 
-RedGate 的 ANTS Profiler 专门用于快照分析。下面详细介绍了使用 ANTS Profiler 的过程。如果你想遵循这些步骤，请从 http://www.redgate.com/products/dotnet-development/ants-memory-profiler/ 下载 ANTS Profiler 的免费14 天试用版，并使用本章源代码中的 FileExplorer.exe 应用程序遵循此演示。在下方的说明和截图，我们使用了 ANTS Profiler 7.3，这是编写时的最新版本。
+`RedGate` 的 `ANTS Profiler` 专门用于快照分析。下面详细介绍了使用 `ANTS Profiler` 的过程。如果你想遵循这些步骤，请从 `http://www.redgate.com/products/dotnet-development/ants-memory-profiler/` 下载 `ANTS Profiler` 的免费14 天试用版，并使用本章源代码中的 `FileExplorer.exe` 应用程序遵循此演示。在下方的说明和截图，我们使用了 `ANTS Profiler 7.3`，这是编写时的最新版本。
 
-- 从分析器内部运行应用程序（类似于 CLR Profiler，ANTS 支持挂载到运行中的进程）。
+- 从分析器内部运行应用程序（类似于 `CLR Profiler`，`ANTS` 支持挂载到运行中的进程）。
+
 - 使用“拍摄内存快照”（Take Memory Snapshot）在应用程序完成初始化后捕获初始快照。该快照是后续性能调查的基准。
+
 - 随着内存泄漏的积累，拍摄额外的快照。
+
 - 应用程序终止后，比较快照（基准快照与中间快照之间的比较），以理解哪些类型的对象在内存中增长。
+
 - 使用“实例分类器”（Instance Categorizer）关注特定类型，以理解是哪种引用保留了可疑的对象。（在此阶段，你正在检查类型之间的引用——类型 A 的实例将被分组，就好像 A 引用了 B 一样。）
+
 - 使用“实例列表”（Instance List）探索可疑类型的单个实例。识别几个具有代表性的实例并使用“实例留存图”（Instance Retention Graph）确定它们为何被保留在内存中。（在此阶段，你正在检查单个对象之间的引用，并可以看到为什么特定对象没有被 GC 回收。）
+
 - 回到应用程序源代码并修改它，使泄漏对象不再被问题链引用。
-
-
-
-
 
 # 第2章 性能测量
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_50_0.png)
 
-图 2-27。两个堆栈快照之间的比较。它们之间的总差异为 +6.23MB，内存中当前持有最大的类型是 System.String。
+图 2-27。两个堆栈快照之间的比较。它们之间的总差异为 +6.23MB，内存中当前持有最大的类型是 `System.String`。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_50_1.png)
 
-图 2-28。字符串被字符串数组保留，字符串数组又被 FileInformation 实例保留，而这些实例反过来被一个事件（通过 System.EventHandler 委托）保留。
+图 2-28。字符串被字符串数组保留，字符串数组又被 `FileInformation` 实例保留，而这些实例反过来被一个事件（通过 `System.EventHandler` 委托）保留。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_51_0.png)
 
-**图 2-29。** 我们选择检查的单个字符串是字符串数组中的第 29 个元素，它由 FileInformation 对象的 `<FirstFewLines>k_BackingField` 持有。遵循引用点指向 FileInformation.FileNeedsRefresh 静态元素。
+**图 2-29。** 我们选择检查的单个字符串是字符串数组中的第 29 个元素，它由 `FileInformation` 对象的 `<FirstFewLines>k_BackingField` 持有。遵循引用点指向 `FileInformation.FileNeedsRefresh` 静态元素。
 
 ### SciTech .NET 内存分析器
 
-SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工具。虽然其通用分析流程与 ANTS Memory Profiler 非常相似，但此分析器可以打开转储文件，这意味着你不需要在应用程序内部运行，并且可以分析 CLR 内存耗尽时生成的崩溃。这对于在生产环境中问题发生后进行内存泄漏的事诊断至关重要。你可以从 http://memprofiler.com/download.aspx 下载 10 天评估版。在下方的说明和截图中，我们使用了 .NET Memory Profiler 4.0，这是编写时的最新版本。
+`SciTech .NET Memory Profiler` 是另一种专注于内存泄漏诊断的商业工具。虽然其通用分析流程与 `ANTS Memory Profiler` 非常相似，但此分析器可以打开转储文件，这意味着你不需要在应用程序内部运行，并且可以分析 `CLR` 内存耗尽时生成的崩溃。这对于在生产环境中问题发生后进行内存泄漏的事诊断至关重要。你可以从 `http://memprofiler.com/download.aspx` 下载 10 天评估版。在下方的说明和截图中，我们使用了 `.NET Memory Profiler 4.0`，这是编写时的最新版本。
 
-注意 CLR Profiler 无法直接打开转储文件，但有一个名为 `!!traverseHeap` 的 SOS.DLL 命令可以生成 CLR Profiler 格式的 .log 文件。我们将在第 3 和第 4 章中讨论更多 SOS.DLL 命令。同时，Sasha Goldstein 的博客文章 http://blog.sashag.net/archive/2008/04/08/nextgeneration-production-debugging-demo-2-and-demo-3.aspx 提供了一个如何结合使用 SOS.DLL 和 CLR Profiler 的示例。
+注意 `CLR Profiler` 无法直接打开转储文件，但有一个名为 `!!traverseHeap` 的 `SOS.DLL` 命令可以生成 `CLR Profiler` 格式的 `.log` 文件。我们将在第 3 和第 4 章中讨论更多 `SOS.DLL` 命令。同时，`Sasha Goldstein` 的博客文章 `http://blog.sashag.net/archive/2008/04/08/nextgeneration-production-debugging-demo-2-and-demo-3.aspx` 提供了一个如何结合使用 `SOS.DLL` 和 `CLR Profiler` 的示例。
 
-要在 .NET Memory Profiler 中打开内存转储，选择 File ➤ Import dump 菜单项并指向转储文件。如果你有多个转储文件，可以将它们全部导入到分析会话中并作为快照进行比较。导入过程可能非常缓慢，特别是当涉及大堆时；为了更快的分析，SciTech 还提供了一个独立的工具 NmpCore.exe，可以使用它在生产环境中捕获堆，而不是依赖转储文件。
+要在 `.NET Memory Profiler` 中打开内存转储，选择 `File ➤ Import dump` 菜单项并指向转储文件。如果你有多个转储文件，可以将它们全部导入到分析会话中并作为快照进行比较。导入过程可能非常缓慢，特别是当涉及大堆时；为了更快的分析，`SciTech` 还提供了一个独立的工具 `NmpCore.exe`，可以使用它在生产环境中捕获堆，而不是依赖转储文件。
 
-图 2-30 显示了在 .NET Memory Profiler 中比较两个内存转储的结果。它直接通过事件处理程序立即在内存中发现了可疑的对象，并将分析方向指向了 FileInformation 对象。
+图 2-30 显示了在 `.NET Memory Profiler` 中比较两个内存转储的结果。它直接通过事件处理程序立即在内存中发现了可疑的对象，并将分析方向指向了 `FileInformation` 对象。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_52_0.png)
 
 **图 2-30。** 两个内存快照的初始分析。第一列列出了存活实例的数量，而第三列列出了它们占据的对象数量。主要的内存大户——字符串对象——由于工具提示的存在而不可见。
 
-关注 FileInformation 对象说明了从 FileInformationNeedsRefresh 事件处理程序到所选 FileInformation 实例存在一条单一的根路径（见图 2-31），且对单个实例的可视化确认了我们之前在 ANTS Memory Profiler 中看到的相同引用链。
+关注 `FileInformation` 对象说明了从 `FileInformationNeedsRefresh` 事件处理程序到所选 `FileInformation` 实例存在一条单一的根路径（见图 2-31），且对单个实例的可视化确认了我们之前在 `ANTS Memory Profiler` 中看到的相同引用链。
 
 # 第2章 性能测量
 
@@ -899,7 +848,6 @@ SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工
 | 类型 | FileExplorer.MainForm |
 | :--- | :--- |
 | 存活实例: 613 | 持有字节: 12,260 |
-
 | 事件 直接处理程序 | |
 | 实例 | 被引用（按计数） | 持有字节 |
 | :--- | :--- | :--- |
@@ -932,15 +880,13 @@ SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工
 
 并行编程的兴起使得对那些在多个处理器上运行多个线程的高并发软件使用专用分析器变得非常必要。第 6 章将探讨几种可以轻松从并行化中获得性能收益的场景——而这些性能收益通过准确的测量工具可以更好地实现。
 
-
-
-
-
 # 第 2 章 性能测量
 
 ## 资源 "Handle 1" 的竞争
 
 资源竞争详情
+
+
 
 | 线程 | ...lateThreadProc(Void*) [4532] | ...lateThreadProc(Void*) [8568] | ...lateThreadProc(Void*) [7908] | ...lateThreadProc(Void*) [2244] | ...lateThreadProc(Void*) [5396] | ...lateThreadProc(Void*) [3040] |
 
@@ -949,8 +895,10 @@ SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工
 ## 竞争调用栈
 
 | 函数名称 |
-| System.Threading.Monitor.Enter(object,bool) |
-| CODE.Program.<c_DisplayClass4.<Main>b_1(object) |
+
+| `System.Threading.Monitor.Enter(object,bool)` |
+
+| `CODE.Program.<c_DisplayClass4.<Main>b_1(object)` |
 
 **图 2-32.** 特定特定资源的竞争——有多个线程同时等待获取该资源。当选中一个线程时，其阻塞调用栈将列在底部。
 
@@ -960,7 +908,7 @@ SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工
 
 **图 2-33.** 多个应用程序线程（列在左侧）及其执行情况可视化。从可视化和底部的直方图可以看出，工作没有在不同线程之间均匀分布。
 
-> 注意：MSDN 提供了一组基于并发可视化工具图表的多线程应用程序反模式，包括锁争队（lock convoy）、分布不均、过度订阅等——你可以在网上 http://msdn.microsoft.com/en-us/library/ee329530.aspx 找到这些反模式。当你运行自己的测量时，通过比较报告将更容易识别类似的问题。
+> 注意：MSDN 提供了一组基于并发可视化工具图表的多线程应用程序反模式，包括锁争队（lock convoy）、分布不均、过度订阅等——你可以在网上 `http://msdn.microsoft.com/en-us/library/ee329530.aspx` 找到这些反模式。当你运行自己的测量时，通过比较报告将更容易识别类似的问题。
 
 并发性能剖析和可视化是非常有用的工具，我们将在随后的章节中遇到它们。它们是 ETW 巨大影响力的另一个有力证据——这个无处不在的高性能监控框架被许多原生分析工具所使用。
 
@@ -968,7 +916,7 @@ SciTech .NET Memory Profiler 是另一种专注于内存泄漏诊断的商业工
 
 我们在本章研究的最后一类性能指标是 I/O 操作。ETW 事件可用于获取物理磁盘访问、页错误、网络流量和其他类型 I/O 的计数和细节，但我们还没有看到任何专门针对 I/O 操作的工具。
 
-Sysinternals Process Monitor 是一个免费工具，用于收集文件系统、注册表和网络活动（见图 2-34）。你可以从 TechNet 网站 http://technet.microsoft.com/en-us/sysinternals/bb896645 下载整个 Sysinternals 工具包，或最新版本的 Process Monitor。
+Sysinternals Process Monitor 是一个免费工具，用于收集文件系统、注册表和网络活动（见图 2-34）。你可以从 TechNet 网站 `http://technet.microsoft.com/en-us/sysinternals/bb896645` 下载整个 Sysinternals 工具包，或最新版本的 Process Monitor。
 
 凭借丰富的过滤功能，系统管理员和性能调查人员使用 Process Monitor 来诊断 I/O 相关的错误（如缺少文件或权限不足）以及性能问题（如远程文件系统访问或过度分页）。
 
@@ -1042,10 +990,6 @@ mov ecx,163780h (MT: Employee)
 call cl!JIT_IsInstanceOfClass
 ```
 
-
-
-
-
 ## 第 2 章 性能测量
 
 ```assembly
@@ -1091,26 +1035,16 @@ WRONG_TYPE:
 为了获得成功的微基准测试，你必须确保决定测量的内容符合以下要求：
 
 - 你的 `test.code` 应对其所开发的真实环境具有代表性。例如，如果一个方法设计用于在数据库表上操作，那么你不应该在内存数据集合上运行它。
-
 - 你的测试代码的输入应对其所开发的真实输入具有代表性。例如，如果一个排序方法设计用于处理数百万个元素，那么你不应该测量它在只有三个元素的列表上的失败情况。
-
 - 用于设置环境的辅助代码与你实际测量的代码相比，其影响应该是忽略不计的。如果这是可能的，那么设置应该发生一次，并多次重复测试代码。
-
 - 测试代码的运行时间应该足够长，以便在面对硬件和软件波动时具有可考虑性且可靠的。例如，如果你正在测试值类型装箱（boxing）操作的开销，单次装箱操作可能太快而无法产生显著结果，需要多次重复相同的测试才能变得有意义。
-
 - 测试代码不应被语言编译器或 JIT 编译器优化。这在 Release 模式下尝试测量简单操作时会发生这种情况（我们稍后会回到这一点）。
 
 当你确定测试代码足够健壮，并且测量到了你想要测量的精确效果后，你应该花一些时间来搭建基准测试环境：
 
 - 当基准测试运行时，目标系统不应允许运行其他进程。网络、文件 I/O 以及其他类型的外部活动应减少到最低（例如，通过禁用网卡和关闭不需要的服务）。
-
 - 分配许多对象的基准测试应该警惕垃圾收集的影响。建议在基准测试前后强制进行垃圾收集。
-
 - 在测量性能测试销时，应关注测量对的的影响。。，，，是是是是是可以执行的。
-
-
-
-
 
 # 第3 章
 
@@ -1131,7 +1065,9 @@ WRONG_TYPE:
 Point2D 实例数组，其中 Point2D 是值类型
 
 | 数组头部 | X | Y | X | Y | X | Y |
+
 |---|---|---|---|---|---|---|
+
 | | Point2D | Point2D | Point2D | | Point2D |
 
 Point2D 实例数组，其中 Point2D 是引用类型
@@ -1149,9 +1085,13 @@ Point2D 实例数组，其中 Point2D 是引用类型
 **表 3-1.** 值类型与引用类型的语义差异
 
 | 则 | 引用类型 | 值类型 |
+
 |---|---|---|
+
 | 向方法传递对象 | 仅传递引用；更改会传播到所有其他引用 | 对象的内容被复制到参数中（除非使用 `ref` 或 `out` 关键字）；更改不会影响方法外部的任何代码 |
+
 | 赋值给另一个变量 | 仅复制引用；两个变量现在引用同一个对象 | 复制内容；两个变量包含无关数据的相同副本 |
+
 | 使用运算符 `==` 比较两个对象 | 比较的是引用；如果两个引用指向同一个对象，则两个引用相等 | 比较内容；如果两个对象的内容相同，则两个对象相等 |
 
 这些语义差异是我们在任何 .NET 语言中编写代码的基础。然而，在引用类型和值类型如何不同方面，这些仅仅是冰山一角。首先，让我们考虑存储对象的内存位置，以及它们是如何分配和释放的。
@@ -1176,21 +1116,38 @@ int Calculation(int a, int b)
     return x + y + z;
 }
 ```
+
 ; 参数放在栈上 [esp+4] 和 [esp+8]
+
 push ebp
+
 mov ebp, esp
+
 add esp, 16 ; 为局部变量分配存储
+
 mov eax, dword ptr [ebp+8]
+
 add eax, dword ptr [ebp+12]
+
 add eax, dword ptr [ebp+16]
+
 mov ptr [ebp-4], eax ; eax 包含返回值
+
 ; ...对 y, z, w 的类似操作
+
 mov eax, dword ptr [ebp-4]
-add eax, dword ptr [ebp-8]
-add eax, dword ptr [ebp-12]
-add esp, 16 ; 恢复栈
-pop ebp ; 恢复帧，释放栈空间
-ret 8 ; 释放两个参数
+
+
+
+`add eax, dword ptr [ebp-8]`
+
+`add eax, dword ptr [ebp-12]`
+
+`add esp, 16` ; 恢复栈
+
+`pop ebp` ; 恢复帧，释放栈空间
+
+`ret 8` ; 释放两个参数
 
 `new` 关键字在 C# 和其他托管语言中并不意味着堆分配。你可以使用 `new` 关键字在栈上分配值类型。例如，下行代码从栈上分配一个 `DateTime` 实例，初始化为跨年夜（`System.DateTime newYear = new DateTime(2011, 12, 31));`）。
 
@@ -1199,12 +1156,10 @@ ret 8 ; 释放两个参数
 与流行观点相反，.NET 进程中的栈和堆之间并没有太大区别。栈和堆仅仅是虚拟内存中的地址范围，特定线程的栈的地址范围与托管堆的地址范围相比，没有内在优势。访问堆上的内存位置并不比访问栈上的内存位置快或慢。有某些因素在某些情况下支持“访问栈位置比访问堆位置更快”的说法：其中
 
 - 在栈上，时间局部性（在时间上靠近分配）意味着空间局部性（在空间上靠近存储）。反之，当时间局部性意味着空间局部性（在一起分配的对象被在一起访问）时，顺序栈存储在 CPU 和操作系统模式下的性能更好。
+
 - 栈的内存密度通常比堆高，因为存在引用类型开销（在本章稍后讨论）。更高的内存密度通常会导致更好的性能，例如更多对象可以放入 CPU 缓存。
+
 - 线程栈通常很小——Windows 默认最大栈大小为 1MB，大多数线程只使用几个栈页。在现代系统中，所有应用程序线程的栈都可以放入 CPU 缓存，这使得典型的访问变得极快。（相比之下，整个堆很少放入 CPU 缓存）。
-
-
-
-
 
 # 第 3 章 类型内部原理
 
@@ -1241,7 +1196,7 @@ public class Employee {
 
 **注意** 在 32 位系统上，堆中的对象对最近的字节倍数对齐。这意味着一个只有一个字节成员的对象由于对齐原因，在堆中仍会占用 12 字节（事实上，即使是一个没有字段的类在实例化时也会占用 12 字节）。引入 64 位系统后会有几处不同。首先，方法表指针字段（指向它的指针）占用 8 字节内存，对象头也占用 8 字节。其次，堆中的对象对最近的字节倍数对齐。这意味着在 64 位堆中，一个只有一个字节成员的对象将占用 24 字节内存。这只是更强烈地证明了引用类型的内存开销，特别是在内部构建小对象时。
 
-## 方法表
+### 方法表
 
 方法表指向一个名为方法表（MT）的内部 CLR 数据结构，该结构反又指向一个名为 `EEClass` 的内部结构（EE 代表执行引擎）。MT 和 EEClass 共同包含了分发虚方法、接口调用、访问静态变量、确定运行时对象的类型、访问基类型方法以及许多其他用途所需的信息。方法表包含频繁访问的信息，这些信息对于虚方法分发等反射机制的操作是必需的；而 EEClass 包含访问频率较低但仍被运行时机制（如反射）使用的信息。我们可以使用 `!DumpMT` 和 `!DumpClass` 命令以及 Router (SNCLI) 源码来了解这两个数据结构的内容，请记住我们讨论的是不同 CLR 版本之间可能显著差异的内部实现细节。
 
@@ -1291,8 +1246,6 @@ Unmanaged code
 002ac3b eb04  jmp 002ac041
 ```
 
-
-
 ```
 002ac03d b008  mov  al,8
 002ac03f eb00  jmp  002ac041
@@ -1302,43 +1255,69 @@ Unmanaged code
 002ac04c 9e8270ca66 jmp  clr:ThePreSub (66f53d03)
 ```
 
+```
 0:07> ldumpd 00373a78
+
 Method Name: Employee.Sleep()
+
 Class: 003712fc
+
 MethodTable: 003737c8
+
 mdToken: 06000003
+
 Module: 00372efc
+
 IsListed: yes
+
 CodeAddr: 00490140
+
 Transparency: Critical
+```
 
 真实的方法表包含比我们之前披露的更多信息。理解某些额外字段对于接下来的方法派发细节至关重要；如果我们必须更深入地查看 `Employee` 实例的方法表结构。我们假设 `Employee` 类实现了三个接口：IComable、IDisposable 和 ICloneable。
 
 在图 3-4 中，我们之前对方法表布局的理解有了几处补充。方法表包含几个有趣的标志，允许动态发现其布局，例如：
 
 | Employee 类实例 | Employee 方法表 | 从左侧继续 |
+
 | --- | --- | --- |
+
 | 对象头器字 | | |
+
 | 方法表指针 | 标志 | |
+
 | _id 的存储空间 每个字段四字节 | 实例大小 -4 | IComable MT 指针 |
+
 | _name 的存储空间 | 标志，# 虚方法 | IDisposable MT 指针 |
+
 | | # 方法与接口 | ICloneable MT 指针 |
+
 | System.Object 方法表 | 基 MT 指针 | Object.ToString |
+
 | | 模块指针 | Object.Equals |
+
 | | | EEClass 指针 | Object.GetHashCode |
+
 | | | Object.Finalize 距离方法开始 +16 字节 |
+
 | Employee EEClass | 接口指针 | Employee.Work |
+
 | | +40 字节 | 方法指针 | Employee.CopyTo |
+
 | | | Employee.Dispose |
+
 | | Employee..ctor | Employee.Clone |
+
 | | | Employee.Sleep |
+
 | | 向右侧继续 | Employee.SetCompanyPolicy |
 
 **图 3-4。** Employee 方法表的详细视图，包括指向接口列表和方法列表的内部指针，用于虚方法调用、该类型实现的虚方法以及接口方法。其次，方法表包含一个指向其基类方法表的指针、指向其模块的指针以及指向其 EEClass 的指针（其包含指向方法表的反引用）。第三，实际方法之前是一个该类型实现的接口方法表列表。这就是为什么方法表内部有一个指向方法列表的指针，其相对于方法表起始位置的偏移量为 40 字节。
 
 注意：到达类型方法的地址地址表所需的额外解引用步骤，允许此表与方法表对象分开存储在不同的内存位置。例如，如果你检查 `System.Object` 的方法表，可能会发现它的方法代码地址存储在单独的位置。此外，由于包含许多方法的类将具有多个一级表指针，允许派生类中部分重用方法表。
 
-## 在引用类型实例上调用方法
+### 在引用类型实例上调用方法
 
 显然，方法表可以用于调用任意对象实例上的方法。假设栈 `EBP-64` 包含一个调用对象的地址，其方法表布局如前面的图所示。那么我们可以使用以下指令序列来调用虚方法：
 
@@ -1368,11 +1347,7 @@ employee.Work();
 
 在这种特殊情况下，编译器可能能够使用静态分析推断出将调用 `Manager.Work` 方法。在一般情况下，当遇到一个静态类型的 `Employee` 引用时，编译器需要将绑定推到运行时。获取正确方法的唯一方法是在运行时确定所引用的对象的实际类型。
 
-
-
-
-
-# 第3 章 类型内部机制
+## 第3 章 类型内部机制
 
 注意：在调用虚拟方法时不需要类似的 `CMP` 指令；这种检查是隐式的，因为标准的虚拟方法调用会访问方法表指针，这使得它所指向的对象指针有效。对于虚拟方法，你并不总是能看到生成 `CMP` 指令；在最近的 CLR 版本中，JIT 编译器足够智能，避免冗余检查。例如，如果程序从一个对象的虚拟方法调用返回（该调用隐式地包含了空检查），那么 JIT 编译器可能不会生成该指令。
 
@@ -1391,34 +1366,53 @@ int Add(int a, int b)
 内联与非内联方法调用之间的性能差异可能是巨大的，尤其是当编译器生成的自动属性时更是如此，因为它们除了直接访问字段外不包含任何逻辑。
 
 ```csharp
+
 public class Manager : Employee
+
 {
+
     public override sealed void Work() ...
+
     Manager manager = ...; //可能可能是 Manager 的实例，也可能是派生类型
+
     manager.Work(); // 直接分发应该是可能的！
+
 }
+
 ```
 
 尽管如此，在编写时，`sealed` 关键字在所有 CLR 版本中对方法分发都没有作用，尽管知道一个类或方法是密封的，可以实际上消除消除对虚拟方法分发的需求。
 
-## 分发静态方法和接口方法
+### 分发静态方法和接口方法
 
 为了完整起见，我们还需要考虑两种额外的方法类型：静态方法和接口方法。分发静态方法相当容易：不需要加载对象引用，只需调用该方法（或其预 JIT 存根）即可；因为调用不通过方法进行，所以 JIT 编译器使用了与非虚拟实例方法相同的技巧：方法分发通过一个特殊的内存位置间接进行，该位置在 JIT 编译后会更新。
 
 然而，接口方法完全完全另一回事。分发接口方法看起来与分发虚拟实例方法没有区别。接口确实实现了一种类似于经典虚拟方法的多态形式。遗憾的是，无法保证特定接口在多个类中的实现最终会位于方法表中的同一个槽位（slot）中。考虑以下代码，两个类都实现了 `IComparable` 接口：
 
 ```csharp
+
 class Manager : Employee, IComparable {
+
     public override void Work() {...}
+
     public void TakeVacation(int days) { ... }
+
     public static void SetCompanyPolicy(...) { ... }
+
     public int CompareTo(object other) { ... }
+
 }
 
 class BigNumber : IComparable {
+
     public long Part1, Part2;
-    public int CompareTo(object other) { ... }
+
+
+
+`public int CompareTo(object other) { ... }`
+
 }
+
 ```
 
 显然，这些类的方法表将非常不同，而 `CompareTo` 方法所在的槽位编号也将同样复杂。复杂的对象层次结构和多个实现表明，需要额外的分发步骤来识别接口被放置在方法表的什么。
@@ -1433,15 +1427,11 @@ mov eax, dword ptr [ecx+12]
 
 内联与非内联方法调用之间的性能差异可能是巨大的，尤其是当编译器生成的自动属性时更是如此，因为它们除了直接访问字段外不包含任何逻辑。
 
-
-
-
-
 ## 第 3 章 —— 类型内部机制
 
-!SyncBl 命令可以检查当前发生竞争的同步块，即同步块被一个线程拥有并被另一个线程（可能是多个线程）等待的同步块。从 CLR 0.2 开始，存在优化机制，仅在发生竞争时才会惰性地创建同步块。在没有同步块的情况下，CLR 可能会使用薄量锁（thin lock）来管理同步状态。以下是一些示例。
+`!SyncBl` 命令可以检查当前发生竞争的同步块，即同步块被一个线程拥有并被另一个线程（可能是多个线程）等待的同步块。从 CLR 0.2 开始，存在优化机制，仅在发生竞争时才会惰性地创建同步块。在没有同步块的情况下，CLR 可能会使用薄量锁（thin lock）来管理同步状态。以下是一些示例。
 
-首先，让我们来看一个尚未用于同步但已存在哈希码（hash code）的对象的对象头（在本章稍后的部分，我们将讨论引用类型中哈希的存储）。在下面的示例中，EAX 指向一个 Employee 对象，其哈希码为 0x46104728：
+首先，让我们来看一个尚未用于同步但已存在哈希码（hash code）的对象的对象头（在本章稍后的部分，我们将讨论引用类型中哈希的存储）。在下面的示例中，`EAX` 指向一个 `Employee` 对象，其哈希码为 `0x46104728`：
 
 ```
 0000: dd eax-4 L2
@@ -1458,7 +1448,7 @@ Hex: 02bf8098
 Binary: 00000010 10111111
 ```
 
-这里没有同步块；只有哈希码和两个被设置为 1 的位，其中一个可能指示对象头现在存储了同步码。接下来，我们使用一个线程的 Monitor.Enter 调用对该对象进行锁定，并检查对象头：
+这里没有同步块；只有哈希码和两个被设置为 1 的位，其中一个可能指示对象头现在存储了同步码。接下来，我们使用一个线程的 `Monitor.Enter` 调用对该对象进行锁定，并检查对象头：
 
 ```
 0004: dd 02444390-4 L2
@@ -1472,7 +1462,7 @@ Index Sync MonitorHeader Recursion Info SyncBlock Owner
 1 009d2bac 3 00092c68 1790 0 02444390 Employee
 ```
 
-该对象被分配了同步块 #1，这从 !Syncblk 的输出中可以看出（有关该命令列的更多信息，请参考 SOS 文档）。当另一个线程尝试使用相同对象锁定该语句时，它将进入标准的 Win32 等待（如果存在 GUI 线程，则带有消息泵处理）。下面是一个线程等待另一个线程的示例：
+该对象被分配了同步块 #1，这从 `!Syncblk` 的输出中可以看出（有关该命令列的更多信息，请参考 SOS 文档）。当另一个线程尝试使用相同对象锁定该语句时，它将进入标准的 Win32 等待（如果存在 GUI 线程，则带有消息泵处理）。下面是一个线程等待另一个线程的示例：
 
 ```
 0004: kb
@@ -1488,9 +1478,10 @@ Index Sync MonitorHeader Recursion Info SyncBlock Owner
 04c7664 67d02df 0939428 0050172 CLR|WaitLock::InputDialog+048
 04cf7c 670f0f 3 04c0f8b 097db4c|WaitLock::Contention+0x4a
 04cf7ec 670d58 ffffffff f2e05968 04c0f8b clrWaitWaitention+Contention+xx2
-
 49894000202592044439000000000!JITUtil_Contention+0x8a
-同步对象使用了 0x25c，这是一个事件句柄：
+```
+
+同步对象使用了 `0x25c`，这是一个事件句柄：
 
 ```
 0:004:dd 04cf454
@@ -1514,14 +1505,14 @@ Object Specific Information Auto Reset Waiting
 097dbc 00000000 00000003 00000000 00000001
 ```
 
-值得注意的细节是，在之前的示例中，我们在锁定对象之前通过调用 GetHashCode 强制创建了同步块。从 CLR 2.0 开始，有一种特殊的优化，可以节省时间和内存，如果对象之前没有与同步块关联，则不创建同步块。当对象首次锁定且没有竞争（即没有其他线程尝试锁定该对象）时，CLR 使用称为薄量锁（thin lock）的机制，CLR 在对象头中存储当前线程的线程 ID。例如，这里是主线程在发生任何竞争之前锁定的对象头：
+值得注意的细节是，在之前的示例中，我们在锁定对象之前通过调用 `GetHashCode` 强制创建了同步块。从 CLR 2.0 开始，有一种特殊的优化，可以节省时间和内存，如果对象之前没有与同步块关联，则不创建同步块。当对象首次锁定且没有竞争（即没有其他线程尝试锁定该对象）时，CLR 使用称为薄量锁（thin lock）的机制，CLR 在对象头中存储当前线程的线程 ID。例如，这里是主线程在发生任何竞争之前锁定的对象头：
 
 ```
 0:004:dd 02384390-4
 023843c 00000001 00423870 00000000 00000000
 ```
 
-在这里，线程 ID 为 1 的线程是应用程序的主线程，Threads 的输出也是如此：
+在这里，线程 ID 为 1 的线程是应用程序的主线程，`Threads` 的输出也是如此：
 
 ```
 0:004:ThreadCount: 2
@@ -1532,12 +1523,13 @@ DeadThread: 0
 HostRuntime: no
 ```
 
-OSID ThreadOBJ State Mode Alloc Context Domain Count Apt Exception
-0 1 12f80 0033ce80 2a020 Preemptive 02385114:00000000 00334850 2 MTA
-2 23bc 00384eb 2b220 Preemptive 00000000:00000000 00334850 1 MTA (Finalizer)
-```
+`OSID ThreadOBJ State Mode Alloc Context Domain Count Apt Exception`
 
-SOS !DumpObj 命令也会报告薄量锁，它指示头部包含薄量锁的所有线程。同样，!DumpHeap -thinlock 命令可以输出托管堆中存在的所有锁：
+`0 1 12f80 0033ce80 2a020 Preemptive 02385114:00000000 00334850 2 MTA`
+
+`2 23bc 00384eb 2b220 Preemptive 00000000:00000000 00334850 1 MTA (Finalizer)`
+
+`SOS !DumpObj` 命令也会报告薄量锁，它指示头部包含薄量锁的所有线程。同样，`!DumpHeap -thinlock` 命令可以输出托管堆中存在的所有锁：
 
 ```
 0:004> !dumpheap -thinlock
@@ -1557,7 +1549,7 @@ Recursive: 0
 
 ## 值类型的局限性
 
-首先，考虑对象头字。如果程序尝试使用值类型进行同步，这通常是程序的错误（我们很快就会看到），但运行时是否应该使其非法并抛出异常呢！在下面的代码示例中，当两个不同的线程执行同一个 Counter 实例的 Increment 方法时，会发生什么？
+首先，考虑对象头字。如果程序尝试使用值类型进行同步，这通常是程序的错误（我们很快就会看到），但运行时是否应该使其非法并抛出异常呢！在下面的代码示例中，当两个不同的线程执行同一个 `Counter` 实例的 `Increment` 方法时，会发生什么？
 
 ```
 class Counter
@@ -1568,10 +1560,6 @@ class Counter
         lock (_i)
         {
 ```
-
-
-
-
 
 ```csharp
 return ++_i;
@@ -1654,20 +1642,16 @@ public class Object
 
 撇开性能问题不考虑，装箱为我们之前遇到的问题提供了解决方案。例如，`GetInt` 方法返回指向包含值的堆引用。只要引用存在，该值就会存在，且不受栈上局部变量生命周期的影响。同样，`Monitor.Enter` 方法期望一个对象引用，它在运行时接收到堆上的一个箱。不幸的是，从相同类型在不同点创建的箱是不相同的，因此传递给 `Monitor` 的箱与传递给 `Monitor.Enter` 的箱不是同一个。
 
-
-
-
-
 ## 第 3 章 类型内部
 
-Point2D a = ..., b = ...;
-a.Equals(b);
+`Point2D a = ..., b = ...;`
+`a.Equals(b);`
 
-这里涉及两个问题。首先，`Equals` 即使被 `System.ValueType` 重写，仍然接受一个 `System.Object` 引用作为参数。正如我们所见，将 Point2D 对象视为对象引用需要装箱（boxing），因此 `b` 必须被装箱。此外，分发 `Equals` 方法调用还需要装箱 `a` 以获取方法表指针！
+这里涉及两个问题。首先，`Equals` 即使被 `System.ValueType` 重写，仍然接受一个 `System.Object` 引用作为参数。正如我们所见，将 `Point2D` 对象视为对象引用需要装箱（boxing），因此 `b` 必须被装箱。此外，分发 `Equals` 方法调用还需要装箱 `a` 以获取方法表指针！
 
 注意 JIT 编译器具有短路行为，可以允许对 `Equals` 进行直接方法调用，因为值类型会被擦除，且虚拟分发目标在编译时由 `Point2D` 是否重写了 `Equals` 决定（这通过约束 IL 前缀启用）。尽管如此，由于 `System.ValueType` 是引用类型，`Equals` 方法可以自由将其隐式参数视为引用类型，而我们使用值类型（`Point2D a`）调用 `Equals` 时这需要装箱。
 
-总结来说，对于 Point2D 实例的每次 `Equals` 调用，我们都有两次装箱操作。对于上述代码执行的 10,000,000 次 `Equals` 调用，我们有 20,000,000 次装箱操作，每次（在 32 位系统上）分配 16 字节，总共分配 320,000,000 字节并将 160,000,000 字节内存复制到堆中。这些分配的成本超过了在二维空间中实际比较点所需的时间。
+总结来说，对于 `Point2D` 实例的每次 `Equals` 调用，我们都有两次装箱操作。对于上述代码执行的 10,000,000 次 `Equals` 调用，我们有 20,000,000 次装箱操作，每次（在 32 位系统上）分配 16 字节，总共分配 320,000,000 字节并将 160,000,000 字节内存复制到堆中。这些分配的成本超过了在二维空间中实际比较点所需的时间。
 
 ## 使用 Equals 方法避免值类型的装箱
 
@@ -1694,11 +1678,20 @@ public struct Point2D
 {
     public int X;
     public int Y;
-    public override bool Equals(object obj) ... // 同上所示
-    public bool Equals(Point2D other)
-    {
-        return X == other.X && Y == other.Y;
-    }
+
+
+
+```csharp
+public override bool Equals(object obj) ... // 同上所示
+
+public bool Equals(Point2D other)
+
+{
+
+    return X == other.X && Y == other.Y;
+
+}
+
 }
 ```
 
@@ -1722,7 +1715,7 @@ public struct Point2D
 }
 ```
 
-这已经很接近了。有一个与 CLR 实现泛型的方式相关的边缘情况，当 `List<T>` 在两个 Point2D 实例上调用 `Equals` 时，且 Point2D 是其泛型类型 (T) 的具体实现，仍然会产生问题。我们将在第 5 章讨论详细细节；目前只需说 Point2D 需要实现 `IEquatable<Point2D>`，这将明确 `List<T>` 和 `EqualityComparer<T>` 的行为，使其通过接口将方法分发到重载的 `Equals` 方法（代价是对 `EqualityComparer<T>` 抽象方法的虚拟方法调用）。结果是在包含 10,000,000 个 Point2D 实例的列表中搜索特定实例时，执行效率提升了 10 倍，并完全消除了所有（由装箱引入的）内存分配。
+这已经很接近了。有一个与 CLR 实现泛型的方式相关的边缘情况，当 `List<T>` 在两个 `Point2D` 实例上调用 `Equals` 时，且 `Point2D` 是其泛型类型 `T` 的具体实现，仍然会产生问题。我们将在第 5 章讨论详细细节；目前只需说 `Point2D` 需要实现 `IEquatable<Point2D>`，这将明确 `List<T>` 和 `EqualityComparer<T>` 的行为，使其通过接口将方法分发到重载的 `Equals` 方法（代价是对 `EqualityComparer<T>` 抽象方法的虚拟方法调用）。结果是在包含 10,000,000 个 `Point2D` 实例的列表中搜索特定实例时，执行效率提升了 10 倍，并完全消除了所有（由装箱引入的）内存分配。
 
 ```csharp
 public struct Point2D : IEquatable<Point2D>
@@ -1737,7 +1730,7 @@ public struct Point2D : IEquatable<Point2D>
 
 ```csharp
 Point2D point = ...;
-IEquatable<Point2D> equatable = point; //此处发生装箱
+IEquatable<Point2D> equatable = point; // 此处发生装箱
 ```
 
 然而，当通过静态类型的值类型变量进行接口调用时，不会发生装箱（这是上面讨论的由约束 IL 前缀启用的相同短路效应）：
@@ -1747,11 +1740,7 @@ Point2D point = ..., anotherPoint = ...;
 point.Equals(anotherPoint); // 不发生装箱，调用了 Point2D.Equals(Point2D)
 ```
 
-如果值类型是可变的（例如我们在本章中处理的 Point2D），通过接口使用值类型会引发潜在的问题。因为修改装箱后的副本不会影响原始对象，
-
-
-
-
+如果值类型是可变的（例如我们在本章中处理的 `Point2D`），通过接口使用值类型会引发潜在的问题。因为修改装箱后的副本不会影响原始对象，
 
 # 第 3 章 类型内部
 
@@ -1826,10 +1815,6 @@ CLR 为引用类型提供了默认的 `GetHashCode` 实现，该实现依赖于�
 - 消除内存管理的负担和陷阱
 - 提供等同或超过原生分配器性能的内存管理性能
 
-
-
-
-
 ## 空闲列表管理 (Free List Management)
 
 空闲列表管理是 C 运行时底层的内存管理机制，C++ 内存管理 API（如 `new` 和 `delete`）默认也会使用。这是一个确定性的内存，允许开发者根据需要分配和释放内存。内存块存储在链列表中，并从列表中满足分配请求（见图 4-1）。被释放的内存块会被返回空闲列表。
@@ -1887,10 +1872,6 @@ CLR 为引用类型提供了默认的 `GetHashCode` 实现，该实现依赖于�
 
 **图 4-3.** 当循环不再被应用程序引用时，它将被销毁。
 
-
-
-
-
 # 第 4 章 垃圾回收
 
 在随后的章节中，我们将研究 .NET GC 内存管理范式，从理解 GC 的标记和清除阶段开始，移动到更重要的优化方案，例如分代（generations）。
@@ -1922,29 +1903,31 @@ static void Main(string[] args) {
 ```csharp
 using System;
 using System.Threading;
-
 class Program {
     static void Main(string[] args) {
         Timer timer = new Timer(OnTimer, null, 0, 1000);
         Console.ReadLine();
     }
-
     static void OnTimer(object state) {
         Console.WriteLine(DateTime.Now.TimeOfOfDay);
+
+
+
+```
         GC.Collect();
+
     }
+
 }
 ```
 
-如果你在 Debug 模式下运行上述代码（如果是命令行编译且不使用 /optimize+ 编译器开关），你会发现定时器回调每秒被调用一次，正如预期，这意味着定时器没有被垃圾回收。然而，如果你在 Release 模式下运行它（使用 /optimize+ 编译器开关），定时器回调只调用了一次！换句话说，定时器被回收了并停止调用回调。这可能是（甚至是想要的）行为，因为当我们到达 `Console.Read` 方法时，我们对定时器的局部引用作为根已不再具有相关性。因为不再相关，所以定时器被回收了，如果你没有尽早关注关于局部根的讨论，将会产生一个相当出乎意料的结果！
+
+
+如果你在 Debug 模式下运行上述代码（如果是命令行编译且不使用 `/optimize+` 编译器开关），你会发现定时器回调每秒被调用一次，正如预期，这意味着定时器没有被垃圾回收。然而，如果你在 Release 模式下运行它（使用 `/optimize+` 编译器开关），定时器回调只调用了一次！换句话说，定时器被回收了并停止调用回调。这可能是（甚至是想要的）行为，因为当我们到达 `Console.Read` 方法时，我们对定时器的局部引用作为根已不再具有相关性。因为不再相关，所以定时器被回收了，如果你没有尽早关注关于局部根的讨论，将会产生一个相当出乎意料的结果！
 
 ## 尽早根回收 (EAGER ROOT COLLECTION)
 
 这种针对局部根的尽早回收机制实际上是由 .NET 即时编译器（JIT）提供的。垃圾回收器本身无法得知某个变量是否仍然可以使用。
-
-
-
-
 
 # 第 4 章 垃圾回收
 
@@ -2008,19 +1991,16 @@ class Program {
 
 **注意**固定的副作用可以通过设计的工具进行管理，包括分析器。分析器可以按地址显示对象，将空（碎片）区域显示为空白。或者，SOS.DLL（托管调试扩展）可以显示类型为“Free”的对象。最后，固定对象计数（.NET CLR 内存性能计数器分类）可用于确定上次垃圾回收期间固定的对象数量。
 
-
-
-
 另一方面，在某些场景下，让垃圾回收过程与其他应用程序线程并发执行是至关重要的。例如，考虑一个 GUI 应用。如果垃圾回收过程在后台线程上触发，我们希望在回收发生时保持 UI 的响应能力。尽管回收本身可能需要更长时间才能完成（因为 UI 正在与 GC 竞争 CPU 资源），但用户会感到愉快得多，因为应用程序的响应更快。这里会产生两类问题：
 
--   **假阴性（False negatives）**：一个对象虽然符合垃圾回收条件，但仍被认为是存活的。这是一个不希望看到，但如果该对象会在下一个周期中被回收，你也可以接受这种后果。
--   **假阳性（False positives）**：一个对象虽然仍被应用程序引用，但被认为是死亡的。这是一个调试的噩梦，垃圾收集器必须竭尽全力防止这种情况的发生。
+- **假阴性（False negatives）**：一个对象虽然符合垃圾回收条件，但仍被认为是存活的。这是一个不希望看到，但如果该对象会在下一个周期中被回收，你也可以接受这种后果。
+- **假阳性（False positives）**：一个对象虽然仍被应用程序引用，但被认为是死亡的。这是一个调试的噩梦，垃圾收集器必须竭尽全力防止这种情况的发生。
 
 让我们考虑垃圾回收的两个阶段，看看我们是否能够负担起与 GC 过程并发运行应用程序线程。请注意，无论我们得出什么结论，某些场景在垃圾回收期间需要暂停。例如，如果进程耗尽了内存，则必须在回收内存时优雅地挂起线程。然而，我们将回顾异常场景，这些场景占了大多数情况。
 
 ## 为 GC 挂起线程
 
-为垃圾回收挂起线程是在安全点（safe points）执行的。并不是每一组指令都可以被中断以执行回收。JIT 会发出额外信息，以便在安全执行回收时发生挂起，而 CLR 会尝试优雅地挂起线程——在未验证挂起后线程安全的情况下，不会诉诸粗暴的 SuspendThreadWin32 API。
+为垃圾回收挂起线程是在安全点（safe points）执行的。并不是每一组指令都可以被中断以执行回收。JIT 会发出额外信息，以便在安全执行回收时发生挂起，而 CLR 会尝试优雅地挂起线程——在未验证挂起后线程安全的情况下，不会诉诸粗暴的 `SuspendThreadWin32` API。
 
 在 CLR 2.0 中，可能会出现一种场景：一个在非常紧密的 CPU 密集型循环中的托管线程会长时间不通过安全点，导致 GC 启动延迟高达 1500 毫秒（这反过来又延迟了任何已经在在等待 GC 的线程）。这个问题在 Sasha Goldstein 的文章《垃圾回收线程挂起》[http://blog.sash.com/archive/2009/07/31/garbage-collection-thread-suspension-delay-250ms-multiples.aspx,2009] 中得到了修复。
 
@@ -2031,8 +2011,6 @@ class Program {
 在标记阶段，垃圾收集器的工作几乎是只读的。尽管如此，仍然可能发生假阴性和假阳性。
 
 一个新创建的对象即使被应用程序引用，收集器也可能认为它是死亡的。如果收集器已经考虑了在对象创建时被更新的图谱部分（见图 4-7），这种情况就是可能的。可以通过拦截新引用（和新对象）的创建并确保标记它们来解决这个问题。这需要同步并会增加分配成本，但允许其他线程与回收过程并发执行。
-
-## 第 4 章 垃圾回收
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_106_0.png)
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_106_1.png)
@@ -2077,7 +2055,7 @@ class Program {
 
 ### 并发工作站 GC
 
-并发工作站 GC 是默认类型。在工作站 GC 下，有一个标记为 THREAD_PRIORITY_HIGHEST 的独立 GC 线程从头到尾执行回收。请注意，CLR 可以检测到它希望垃圾回收的部分与线程并发运行（标记阶段）。
+并发工作站 GC 是默认类型。在工作站 GC 下，有一个标记为 `THREAD_PRIORITY_HIGHEST` 的独立 GC 线程从头到尾执行回收。请注意，CLR 可以检测到它希望垃圾回收的部分与线程并发运行（标记阶段）。
 
 如果垃圾回收是由 UI 线程触发的，使用并发工作站 GC 的响应可能会受到损害。在这种情况下，当执行扫描阶段时，所有的线程都会挂起。这实际上会降低响应速度，因为 UI 线程被阻塞直到 GC 完成，而且其他应用程序线程正在与 GC 竞争资源。（见图 4-9。）
 
@@ -2085,18 +2063,13 @@ class Program {
 
 **图 4-9。** 上部分显示 UI 线程触发时的并发 GC。下部分显示后台线程触发时的并发 GC。（虚线表示阻塞。）
 
-因此，使用并发工作站 GC 的 UI 应用程序应该非常小心防止回收在 UI 线程上发生。这归结为在后台线程上进行分配，并避免在 UI 线程上显式调用 GC.Collect。
+因此，使用并发工作站 GC 的 UI 应用程序应该非常小心防止回收在 UI 线程上发生。这归结为在后台线程上进行分配，并避免在 UI 线程上显式调用 `GC.Collect`。
 
 .NET 应用程序（ASP.NET 应用程序除外）无论运行在用户的工作站还是强大的多处理器服务器上，默认的 GC 类型都是工作站 GC。正如我们很快将看到的，这种默认对于服务器应用程序很少适用。正如我们刚刚看到的，如果 UI 应用程序倾向于在 UI 线程上触发垃圾回收，这并不总是合适的。
 
 ### 非并发工作站 GC
 
 非并发工作站 GC 类型顾如其义，在标记和扫描阶段都提供应用程序线程运行。非并发工作站 GC 的主要使用场景是上一节提到的情况，即 UI 线程倾向于触发垃圾回收。在这种情况下，非并发 GC 可能会提供更好的响应能力，因为后台线程不会与 UI 线程等待的 GC 竞争资源，从而更快地释放 UI 线程。（见图 4-10。）
-
-
-
-
-# 第 4 章 垃圾回收
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_109_0.png)
 
@@ -2113,8 +2086,6 @@ class Program {
 使用服务器 GC 时，CLR 尝试在各个处理器堆之间平衡对象分配。在 CLR 4.0 之前，只有小堆会被平衡；从 CLR 4.5 开始，大堆（稍后讨论）也被平衡了。因此，所有堆的分配速率、填充率和垃圾回收频率保持相似。
 使用服务器 GC 的局限性是机器上物理处理器的数量。如果机器上只有一个物理处理器，则可用的 GC 工作站 GC（Workstation GC）。这是一个合理的选择，因为如果只有一个可用处理器，将只有一个托管堆和单个 GC 线程，这会阻碍服务器 GC 架构的有效性。
 
-# 第 4 章 垃圾回收
-
 注意从 NT 6.1（Windows 7 和 Windows Server 2008 R2）开始，Windows 使用处理器组支持多于 64 个逻辑处理器。从 CLR 4.5 开始，GC 也可以使用超过 64 个逻辑处理器。这需要在你的应用程序配置文件中放置 `<GCGroup enabled="true" />` 元素。
 
 服务器应用程序可能从服务器 GC 中受益。然而，正如我们之前看到的，默认的 GC 变体是工作站 GC。对于托管在默认 CLR 宿主下的控制台应用程序、Windows 和 Windows 服务，情况确实如此。非默认 CLR 宿主可以选择不同的 GC 变体。如果 IIS ASPNET 宿主这样做，也是如此：它在服务器 GC 下运行应用程序，因为 IIS 要安装在机器上（尽管这种行为可以通过 Web.config 自定义）。
@@ -2124,6 +2095,11 @@ class Program {
 ## 在 GC 变体之间切换
 
 可以使用 CLR 宿主接口来控制 GC（将在本章稍后部分讨论）。然而，也可以使用应用程序配置文件（App.config）来控制 GC 变体的选择。可以使用以下 XML 配置文件在不同的 GC 变体和子变体之间选择：
+
+```xml
+```
+
+
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -2165,10 +2141,6 @@ finally
 - 大对象：大对象是一个昂贵的操作，然而扫描阶段的对象在期间仍会被移动。在某些情况下，复制内存可能成为执行垃圾回收的主要成本。我们得出的结论是在扫描阶段必须根据大小对对象进行区分。
 - 回收效率：每次回收都是全堆，这意味着具有相对稳定的对象集合的应用程序将为执行付出沉重代价
 
-
-
-
-
 # 第 4 章 垃圾回收
 
 尽管大多数对象仍被引用，但仍会在整个堆上进行标记和清除。为了防止收集效率因子过低，我们必须追求一种优化方法，根据对象的回收概率对它们进行区分：即它们可能在下次 GC 周期中被回收。
@@ -2179,7 +2151,7 @@ finally
 
 .NET 垃圾收集器的代模型通过执行部分垃圾回收来优化收集性能。部分垃圾回收具有更高的收集效率，且收集器遍历的对象是具有最佳回收概率的对象。按回收概率划分对象的首要决策因素是它们的年龄——该模型假设对象的年龄与其预期寿命之间存在内在的相关性。
 
-## 代模型假设
+### 代模型假设
 
 与人类和动物世界相反相反，年轻的 .NET 对象预计会很快死亡，而旧的 .NET 对象预计会活得更久。这两个假设迫使对象预期寿命分布在图 4–11 图表的两个对角。
 
@@ -2193,11 +2165,11 @@ finally
 
 并不是所有的分配都遵循代模型所加的假设。很容易想象这样一个系统：临时对象在垃圾回收中存活，然后失去引用，并创建了更多的临时对象。这种对象的预期寿命落入代模型预测的桶之外的现象，正式称为“中年危机”。出现这种现象的对象超过了代模型提供的性能优化益处。我们将在本节后面检查中年危机。
 
-## .NET代的实现
+### .NET代的实现
 
 在代模型中，垃圾回收被分为三个区域：第 0 代、第 1 代和第 2 代。这些区域反映了它们包含对象的预期寿命：第 0 代包含年轻的对象，第 2 代包含已存活了一定的旧对象。
 
-# 第 0 代
+## 第 0 代
 
 第 0 代是所有新对象的游场（在本节稍后的部分我们将看到对象也按大小进行划分，这使得该陈述部分正确）。它非常小，无法容纳最小对象的所有内存使用。第 0 代通常从 256 KB 到 4 MB 之间的预算开始，并在需要时可能会稍微收紧。
 
@@ -2210,10 +2182,6 @@ finally
 - 第 0 代非常小，不包含很多对象。遍历如此少的内存所需的时间非常短。在我们的一台测试机器上，对 2% 的对象执行第 0 代回收大约需要 `70 μs`（微秒）。
 - 缓存大小影响第 0 代的大小，这使得第 0 代中的所有对象更有可能在缓存中被找到。遍历已经在缓存中的内存比从主内存访问或从磁盘获取要快得多，正如我们将在第 5 章中看到的。
 - 由于局部性，分配在第 0 代的对象很有可能引用第 0 代中的其他对象。这些对象在空间上也很可能彼此靠近。如果在标记阶段遍历图表时发生缓存未命中，则效率更高（注：此处原文逻辑略乱，已按意译译）。
-
-
-
-
 
 第 1 代垃圾回收的自然触发条件是第 0 代的先验垃圾回收，因为对象会从第 0 代提升到第 1 代（触发垃圾回收是另一个触发因素）。
 
@@ -2249,8 +2217,6 @@ finally
 
 当达到第 2 代回收阈值时，将对 LOH 进行收集。同样，当达到 LOH 回收阈值时，第 2 代也会被回收。因此，创建大量临时对象会导致与“中年危机”相同的问题——将执行全量收集来回收这些对象。大堆中的碎片是另一个潜在问题，因为碎片不会通过扫描和整理堆来自动回收。LOH 模型意味着开发者必须处理内存分配，这通常属于手动内存管理。一种有效的策略是对大对象进行池化而不是释放它们给 GC。维护池的成本可能比执行全量收集的成本小。另一种可能的方法（对于相同类型的数组）是分配一个大对象并根据需要将其拆分为块（见图 4-13）。
 
-## 第 4 章 垃圾收集
-
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_0.png)
 
 **图 4-13.** 通过权量化窗口暴露大对象
@@ -2269,17 +2235,14 @@ finally
 
 这种先验知识可以借助 JIT 编译器的协助获得。旧代对象引用年轻代对象的场景可以源于一类统计数据：对对象类型的实例字段（或数组元素写入器）进行非空引用赋值。
 
-```
+```csharp
 class Customer {
     public Order LastOrder { get; set; }
 }
 ```
 
-
-
-```cs
+```csharp
 class Order { }
-
 class Program {
   static void Main(string[] args) {
     Customer customer = new Customer();
@@ -2323,146 +2286,87 @@ ret
 mov byte ptr [ed+0x4839C], 0xFF ; 更新卡表
 ```
 
-垃圾回收器在执行标记（mark）时会使用这些信息。在收集年轻代时，它会检查卡表确定哪些地址范围被视为根（roots）。收集器遍历这些地址内的对象，并定位它们对年轻代对象的引用。这使得上述性能优化成为可能，即回收器在遇到不属于第 0 代的对象时，可以停止遍历图。
 
-卡表可能会增长到每个 1 KB 堆内存占用一个字节。这似乎浪费了约 0.1% 的空间，但在收集年轻代时提供了巨大的提升。如果为每个单独的对象引用都使用卡表条目，速度会更快（GC 只需要考虑该特定对象而非 1024 字节的范围），但在运行时为每个对象引用存储额外信息是不可能的。现有的卡表方法完美地反映了这种权衡。
+
+垃圾回收器在执行标记（`mark`）时会使用这些信息。在收集年轻代时，它会检查卡表确定哪些地址范围被视为根（`roots`）。收集器遍历这些地址内的对象，并定位它们对年轻代对象的引用。这使得上述性能优化成为可能，即回收器在遇到不属于第 0 代的对象时，可以停止遍历图。
+
+卡表可能会增长到每个 1 KB 堆内存占用一个字节。这似乎浪费了约 0.1% 的空间，但在收集年轻代时提供了巨大的提升。如果为每个单独的对象引用都使用卡表条目，速度会更快（`GC` 只需要考虑该特定对象而非 1024 字节的范围），但在运行时为每个对象引用存储额外信息是不可能的。现有的卡表方法完美地反映了这种权衡。
 
 > 尽管这种微优化很少有价值
 
 ## 后台 GC
 
-CLR 1.0 中引入的工作站并发 GC 变体有一个主要的缺点。尽管允许第 2 代并发 GC 线程继续分配，但它们只能分配能够放入第 0 代和第 1 代的空间。当超过此限制时，应用程序线程必须阻塞并等待收集完成。
+`CLR` 1.0 中引入的工作站并发 `GC` 变体有一个主要的缺点。尽管允许第 2 代并发 `GC` 线程继续分配，但它们只能分配能够放入第 0 代和第 1 代的空间。当超过此限制时，应用程序线程必须阻塞并等待收集完成。
 
-CLR 4.0 引入的后台 GC 允许 CLR 即使在要求全收集的情况下，对第 0 代和第 1 代执行后台收集。为了实现这一点，CLR 创建了两个 GC 线程：一个前景线程和一个后台线程。后台 GC 在后台执行第 2 代收集，并定期检查是否有对第 0 代和第 1 代执行快速收集的请求。当请求到达时（因为应用程序已耗尽年轻代），后台 GC 会挂起自身并让给前景 GC 线程，由后者执行快速收集并解锁应用程序线程。
+`CLR` 4.0 引入的后台 `GC` 允许 `CLR` 即使在要求全收集的情况下，对第 0 代和第 1 代执行后台收集。为了实现这一点，`CLR` 创建了两个 `GC` 线程：一个前景线程和一个后台线程。后台 `GC` 在后台执行第 2 代收集，并定期检查是否有对第 0 代和第 1 代执行快速收集的请求。当请求到达时（因为应用程序已耗尽年轻代），后台 `GC` 会挂起自身并让给前景 `GC` 线程，由后者执行快速收集并解锁应用程序线程。
 
-在 CLR 4.0 中，任何使用并发工作站 GC 的应用程序都会提供后台 GC。没有办法退出后台 GC 或在其他 GC 变体中使用后台 GC。
+在 `CLR` 4.0 中，任何使用并发工作站 `GC` 的应用程序都会提供后台 `GC`。没有办法退出后台 `GC` 或在其他 `GC` 变体中使用后台 `GC`。
 
-在 CLR 4.5 中，后台 GC 扩展到了服务器 GC。此外，服务器 GC 也已扩展到支持并发收集。在在使用 N 个逻辑处理器的进程中使用并发 GC 时，CLR 会创建 N 个前景 GC 线程和 N 个后台 GC 线程。后台 GC 线程负责第 2 代收集，允许应用程序在前景并发执行。当 CLR 认为合适需要执行阻塞式收集、执行压缩（compaction，后台 GC 不影响此项）或在后台线程全收集的中期间对较年轻代执行收集时，就会调用前景 GC 线程。总结一下，从 CLR 4.5 开始，你可以通过应用程序配置文件选择 4 种 GC 变体：
+在 `CLR` 4.5 中，后台 `GC` 扩展到了服务器 `GC`。此外，服务器 `GC` 也已扩展到支持并发收集。在使用 N 个逻辑处理器的进程中使用并发 `GC` 时，`CLR` 会创建 N 个前景 `GC` 线程和 N 个后台 `GC` 线程。后台 `GC` 线程负责第 2 代收集，允许应用程序在前景并发执行。当 `CLR` 认为合适需要执行阻塞式收集、执行压缩（`compaction`，后台 `GC` 不影响此项）或在后台线程全收集的中期间对较年轻代执行收集时，就会调用前景 `GC` 线程。总结一下，从 `CLR` 4.5 开始，你可以通过应用程序配置文件选择 4 种 `GC` 变体：
 
-1. 并发工作站 GC——默认变体；具有后台 GC。
-2. 非并发工作站 GC——没有后台 GC。
-3. 非并发服务器 GC——没有后台 GC。
-4. 并发服务器 GC——具有后台 GC。
+1. 并发工作站 `GC`——默认变体；具有后台 `GC`。
+2. 非并发工作站 `GC`——没有后台 `GC`。
+3. 非并发服务器 `GC`——没有后台 `GC`。
+4. 并发服务器 `GC`——具有后台 `GC`。
 
 ## GC 段与虚拟内存
 
-基于上述观点，我们必须精炼垃圾回收器与虚拟内存管理器的交互。在进程内启动 CLR 期间，会从虚拟内存分配两个名为 GC 段（GC segments）的内存块（更准确地说，是请求 CLR 主机提供该内存块）。第一个段用于第 0 代、第 1 代和第 2 代（称为临时段）。第二个段用于大堆。段的大小取决于 GC 因素以及运行 CLR 主机时的启动限制。32 位系统上使用工作站 GC 的典型大小为 16MB，对于服务器 GC，则在 16GB-64GB 之间。在 64 位系统上，服务器 GC 使用 128MB-2GB 的段，工作站 GC 使用 128MB-256MB 的段。（CLR 不会一次提交整个段；它只预留地址范围并根据需要提交段的部分。）
+基于上述观点，我们必须精炼垃圾回收器与虚拟内存管理器的交互。在进程内启动 `CLR` 期间，会从虚拟内存分配两个名为 `GC` 段（`GC segments`）的内存块（更准确地说，是请求 `CLR` 主机提供该内存块）。第一个段用于第 0 代、第 1 代和第 2 代（称为临时段）。第二个段用于大堆。段的大小取决于 `GC` 因素以及运行 `CLR` 主机时的启动限制。32 位系统上使用工作站 `GC` 的典型大小为 16MB，对于服务器 `GC`，则在 16GB-64GB 之间。在 64 位系统上，服务器 `GC` 使用 128MB-2GB 的段，工作站 `GC` 使用 128MB-256MB 的段。（`CLR` 不会一次提交整个段；它只预留地址范围并根据需要提交段的部分。）
 
-当段满且有更多分配请求到达时，CLR 会分配另一个段。任何时候只有一个段包含第 0 代和第 1 代。但它们不必是同一个段！我们之前观察到，在第 0 代或第 1 代中长时间固定对象会对这些小内存区域的碎片产生危险影响。CLR 通过将另一个段声明临时段来处理这些问题，从而将之前在年轻代的对象直接提升到第 2 代（因为只能有一个临时段）。
+当段满且有更多分配请求到达时，`CLR` 会分配另一个段。任何时候只有一个段包含第 0 代和第 1 代。但它们不必是同一个段！我们之前观察到，在第 0 代或第 1 代中长时间固定对象会对这些小内存区域的碎片产生危险影响。`CLR` 通过将另一个段声明临时段来处理这些问题，从而将之前在年轻代的对象直接提升到第 2 代（因为只能有一个临时段）。
 
+# 第 4 章 垃圾回收
 
-
-
-
-## 第 4 章 垃圾回收
-
-### SOH 段
+## SOH 段
 
 | LOH 段 | Gen 2 | Gen 1 | Gen 0 |
 | :--- | :--- | :--- | :--- |
 | | | | |
 
-**图 4-16.** GC 段占据了进程的虚拟地址空间。包含已生成代的段是临时段（ephemeral segment）。
+**图 4-16.** `GC` 段占据了进程的虚拟地址空间。包含已生成代的段是临时段（`ephemeral segment`）。
 
-当一个段由于垃圾回收而变空时，CLR 会释放该段的内存并将其给操作系统。这是许多应用程序的预期行为，特别是那些内存使用出现不频繁峰值的应用程序。然而，可以指示 CLR 将空段保留在待备列表中，而不是将其返回给操作系统。这种行为被称为段托管（segment hosting）或虚拟机托管（VM hosting），可以通过通过使用 `Cor8ToRuntimeExe` 函数的启动标志进行 CLR 托管来启用。段托管可以提高那些频繁分配和释放段的应用程序的性能（内存密集型且内存使用频繁出现峰值的应用程序），并减少由于虚拟碎片化（将在后文讨论）导致的内存溢出异常。它是默认启用的。自定义 CLR 可以通过来自内存池或任何使用 `IHostMemory` 接口的其他段分配请求来进一步自定义此行为。
+当一个段由于垃圾回收而变空时，`CLR` 会释放该段的内存并将其给操作系统。这是许多应用程序的预期行为，特别是那些内存使用出现不频繁峰值的应用程序。然而，可以指示 `CLR` 将空段保留在待备列表中，而不是将其返回给操作系统。这种行为被称为段托管（`segment hosting`）或虚拟机托管（`VM hosting`），可以通过通过使用 `Cor8ToRuntimeExe` 函数的启动标志进行 `CLR` 托管来启用。段托管可以提高那些频繁分配和释放段的应用程序的性能（内存密集型且内存使用频繁出现峰值的应用程序），并减少由于虚拟碎片化（将在后文讨论）导致的内存溢出异常。它是默认启用的。自定义 `CLR` 可以通过来自内存池或任何使用 `IHostMemory` 接口的其他段分配请求来进一步自定义此行为。
 
-托管内存空间的分段引入了一个极其严重的问题，即外部碎片（虚拟碎片）。因为段在变空时会被返回给操作系统，非托管分配可能会发生在曾经是 GC 段的内存区域中间。这导致了段的碎片化，浪费了内存。
+托管内存空间的分段引入了一个极其严重的问题，即外部碎片（虚拟碎片）。因为段在变空时会被返回给操作系统，非托管分配可能会发生在曾经是 `GC` 段的内存区域中间。这导致了段的碎片化，浪费了内存。
 
 虚拟碎片化的常见原因是延迟加载的动态程序集（如 XML 序列化程序集或 .NET 调试编译页面）、动态加载的 COM 对象以及执行分散内存分配的非托管代码。当进程的感知内存使用超过 2 GB 限制时，虚拟内存碎片会导致内存溢出情况。长时间运行的进程，例如 Web 服务器在执行几小时、几天或几周后内存密集工作并频繁出现内存峰值。在可用故障转移的非关键场景（如负载均衡的服务器群）中，这通常通过进程回收来解决。
 
 > 从理论上讲，如果段的大小为 64MB，虚拟内存分配粒度为 4KB，且 32 位进程的地址空间为 2GB（其中只能容纳 32 个段），可能只分配 4KB × 32 = 128KB 的非托管内存，仍然会碎片地址空间，导致没有任何一个连续的段可以分配！
 
-SysVMMap 可以非常容易地诊断内存碎片场景。它不仅能精确报告哪个内存区域被用于什么目的，还有一个“碎片”（Fragmentation）视图选项，可以显示地址空间的图像并易于可视化碎片化问题。图 4-17 显示了一个地址空间快照示例，其中有几乎 500MB 的空闲空间，但没有足够大的单个碎片可以容纳 16MB 的 GC 段。在截图，白色区域是空闲内存区域。
+`SysVMMap` 可以非常容易地诊断内存碎片场景。它不仅能精确报告哪个内存区域被用于什么目的，还有一个“碎片”（`Fragmentation`）视图选项，可以显示地址空间的图像并易于可视化碎片化问题。图 4-17 显示了一个地址空间快照示例，其中有几乎 500MB 的空闲空间，但没有足够大的单个碎片可以容纳 16MB 的 `GC` 段。在截图，白色区域是空闲内存区域。
 
-图 4-17。碎片严重的地址空间快照。有几乎 500MB 的可用内存，但没有足够大的块来容纳 GC 段。
+图 4-17。碎片严重的地址空间快照。有几乎 500MB 的可用内存，但没有足够大的块来容纳 `GC` 段。
 
 ### 使用 VMMAP 进行实验
 
-你可以尝试结合示例应用程序使用 VMMap，看看它能多快引导你找到正确的方向。具体来说，VMMap 可以让你轻松判断所经历的内存问题是源于托管堆还是其他地方，并有助于碎片问题的诊断。
+你可以尝试结合示例应用程序使用 `VMMap`，看看它能多快引导你找到正确的方向。具体来说，`VMMap` 可以让你轻松判断所经历的内存问题是源于托管堆还是其他地方，并有助于碎片问题的诊断。
 
-1. 从 Microsoft TechNet (http://technet.microsoft.com/en-us/sysinternals/dd35533.aspx) 下载 VMMap 并将其存储在你的机器上。
-2. 本章示例代码文件夹运行 OOM2.exe 应用程序。该程序迅速耗尽所有可用内存并带异常崩溃。当 Windows 错误报告对话出现时，不要关闭它——保持应用程序运行。
-3. 运行 VMMap 并选择监控 OOM2.exe 进程。注意可用内存（摘要表中的 "Free"）。打开碎片视图（来自 View 菜单）以视觉方式检查地址空间。检查内存块详细列表中的 "Free" 类型，查看应用程序地址空间中最大的空闲块。
-4. 正如你所见，应用程序确实耗尽了所有虚拟地址空间，但没有足够的空间分配新的 GC 段——最大的空闲块小于 16 MB。
-5. 对本章示例代码文件夹中的 OOM3.exe 应用程序重复步骤 2 和 3。内存耗尽的速度较慢，且产生原因不同。
+1. 从 Microsoft TechNet (`http://technet.microsoft.com/en-us/sysinternals/dd35533.aspx`) 下载 `VMMap` 并将其存储在你的机器上。
+2. 本章示例代码文件夹运行 `OOM2.exe` 应用程序。该程序迅速耗尽所有可用内存并带异常崩溃。当 Windows 错误报告对话出现时，不要关闭它——保持应用程序运行。
+3. 运行 `VMMap` 并选择监控 `OOM2.exe` 进程。注意可用内存（摘要表中的 "`Free`"）。打开碎片视图（来自 View 菜单）以视觉方式检查地址空间。检查内存块详细列表中的 "`Free`" 类型，查看应用程序地址空间中最大的空闲块。
+4. 正如你所见，应用程序确实耗尽了所有虚拟地址空间，但没有足够的空间分配新的 `GC` 段——最大的空闲块小于 16 MB。
+5. 对本章示例代码文件夹中的 `OOM3.exe` 应用程序重复步骤 2 和 3。内存耗尽的速度较慢，且产生原因不同。
 
-每当你在 Windows 应用程序中遇到内存相关问题时，VMMap 都应该始终准备在你的工具箱中。它可以指向内存泄漏、堆碎片、过度加载程序集以及许多其他问题。它甚至可以对非托管分配进行分析，帮助检测内存泄漏；参见 Sasha Goldstein 关于 VMMap 分配分析的博客 (http://blog.sashag.net/archive/2011/08/27/vmmap-allocation-profiling-and-leak-detection.aspx)。
+每当你在 Windows 应用程序中遇到内存相关问题时，`VMMap` 都应该始终准备在你的工具箱中。它可以指向内存泄漏、堆碎片、过度加载程序集以及许多其他问题。它甚至可以对非托管分配进行分析，帮助检测内存泄漏；参见 Sasha Goldstein 关于 `VMMap` 分配分析的博客 (`http://blog.sashag.net/archive/2011/08/27/vmmap-allocation-profiling-and-leak-detection.aspx`)。
 
 解决虚拟碎片问题有两种方法：
 
-- 减少动态程序集的数量、减少或池化非托管分配、池化托管分配或囤 GC 段。这类方法通常延长问题再次出现的时间，但不能消除它。
+- 减少动态程序集的数量、减少或池化非托管分配、池化托管分配或囤 `GC` 段。这类方法通常延长问题再次出现的时间，但不能消除它。
 - 切换到 64 位操作系统并在 64 位进程中运行代码。64 位进程拥有 TB 级的地址空间，这在所有用途上完全消这个问题。因为问题与可用物理内存量无关，而是严格取决于虚拟地址空间的大小，因此切换到 64 位。
 
-对终结化（Finalization）的检查结束。
+对终结化（`Finalization`）的检查结束。
 
 ### 终结 (Finalization)
 
 ```csharp
 class File {
     private IntPtr handle;
-
     public File(string fileName) {
         handle = ...;
     }
-
     public void Close() {
         handle = IntPtr.Zero;
     }
-
-    protected override void Finalize() {
-        Close();
-    }
-}
-```
-
-```csharp
-class File {
-    private IntPtr handle;
-
-    public File(string fileName) {
-        handle = ...;
-    }
-
-    public void Close() {
-        handle = IntPtr.Zero;
-    }
-
-    protected override void Finalize() {
-        Close();
-    }
-}
-```
-
-```csharp
-class File {
-    private IntPtr handle;
-
-    public File(string fileName) {
-        handle = ...;
-    }
-
-    public void Close() {
-        handle = IntPtr.Zero;
-    }
-
-    protected override void Finalize() {
-        Close();
-    }
-}
-```
-
-```csharp
-class File {
-    private IntPtr handle;
-
-    public File(string fileName) {
-        handle = ...;
-    }
-
-    public void Close() {
-        handle = IntPtr.Zero;
-    }
-
     protected override void Finalize() {
         Close();
     }
@@ -2471,20 +2375,15 @@ class File {
 
 ### 自动非确定性终结
 
-终结器线程并不运行垃圾回收。相反，一个特殊的线程在 CLR 初始化期间调用终结器（每个进程有一个终结线程，无论 GC 因素如何，但它以 THREAD_PRIORITY_HIGHEST 优先级运行）。该线程反复等待终结事件变为信号。当垃圾回收完成后，如果对象被移动到 f-reachable 队列中，GC 会发出此信号，结果终结器线程从 f-reachable 队列中移除对象引用，并同步执行由对象定义的终结方法。
-
-
-
-
-# 第 4 章 垃圾回收
+终结器线程并不运行垃圾回收。相反，一个特殊的线程在 `CLR` 初始化期间调用终结器（每个进程有一个终结线程，无论 `GC` 因素如何，但它以 `THREAD_PRIORITY_HIGHEST` 优先级运行）。该线程反复等待终结事件变为信号。当垃圾回收完成后，如果对象被移动到 `f-reachable` 队列中，`GC` 会发出此信号，结果终结器线程从 `f-reachable` 队列中移除对象引用，并同步执行由对象定义的终结方法。
 
 ## 终化队列
 
 ![](img/d3ea56da375e1d9f44d8bff55d84126_0.png)
 
-**图 4-18.** 终化队列持有带有终化函数的对象的引用。当应用程序停止引用它们时，GC 将它们移动到 `f-reachable` 队列。终化线程被唤醒并执行这些对象的终化函数，随后释放它们。
+**图 4-18.** 终化队列持有带有终化函数的对象的引用。当应用程序停止引用它们时，`GC` 将它们移动到 `f-reachable` 队列。终化线程被唤醒并执行这些对象的终化函数，随后释放它们。
 
-为什么 GC 不直接执行对象的终化函数，而是将工作推到异步线程呢？这样做的动机是 `f-reachable` 队列或额外的终化线程看起来更廉价。然而，在 GC 期间运行终化函数的主要风险是，终化函数（其本质如此）可能需要很长时间才能完成，从而阻塞垃圾回收过程。此外，在 GC 过程中处理异常并非易事，处理终化过程中可能触发的内存分配同样如此。总之，出于可靠性考虑，GC 不执行终化代码，而是将此处理推给了一个专用线程。
+为什么 `GC` 不直接执行对象的终化函数，而是将工作推到异步线程呢？这样做的动机是 `f-reachable` 队列或额外的终化线程看起来更廉价。然而，在 `GC` 期间运行终化函数的主要风险是，终化函数（其本质如此）可能需要很长时间才能完成，从而阻塞垃圾回收过程。此外，在 `GC` 过程中处理异常并非易事，处理终化过程中可能触发的内存分配同样如此。总之，出于可靠性考虑，`GC` 不执行终化代码，而是将此处理推给了一个专用线程。
 
 ## 非确定性终化的陷阱
 
@@ -2496,7 +2395,7 @@ class File {
 
 以下代码显示了应用程序以高于终化线程可以终化的速度创建对象，因为终化函数中执行的代码导致了持续内存泄漏。
 
-```sharp
+```csharp
 class File2 {
   public File2() {
     Thread.Sleep(10);
@@ -2504,10 +2403,8 @@ class File2 {
   ~File2() {
     Thread.Sleep(20);
   }
-  // 泄漏的数据
   private byte[] data = new byte[1024];
 }
-
 class Program {
   static void Main(string[] args) {
     while (true) {
@@ -2537,7 +2434,7 @@ class Program {
 
 另一种场景是由垃圾回收器尽快回收内存的渴望引起的考虑以下代码，它代表了一个 `File` 类的幼稚实现，包含一个关闭文件句柄的终化函数：
 
-```sharp
+```csharp
 class File3 {
     Handle handle;
     public File3(string filename) {
@@ -2550,7 +2447,6 @@ class File3 {
         handle.Close();
     }
 }
-
 class Program {
   static void Main() {
     File file = new File("File.txt");
@@ -2559,6 +2455,8 @@ class Program {
   }
 }
 ```
+
+
 
 这段无害的代码可能会以糟糕的方式崩溃。`Read` 方法可能需要很长时间才能完成，而且只处理对象内部的句柄，而不是对象本身。确定局部变量何时被视为活跃的规则规定，在调用 `Read` 后，客户端的局部变量就不再相关。该对象被认为可以被回收，其终化函数可能会在 `Read` 返回之前执行！
 
@@ -2569,9 +2467,6 @@ class Program {
 终化不会发生的场景之一是强制关闭。如果用户通过任务管理器关闭进程，或者应用程序调用了 `Terminate` API，终化函数没有机会回收资源。
 
 不那么明显的是应用程序遇到内存不足情况并即将关闭的情况。通常，我们期望即使发生异常，终化函数也会运行，但如果某个类的终化函数从未被调用过且需要 JIT 编译怎么办？JIT 需要内存分配来编译终化函数。
-
-
-
 
 # 第 4 章 垃圾回收
 
@@ -2591,21 +2486,37 @@ class Program {
 
 ```
 class File3 : IDisposable {
+
     Handle handle;
+
     public File3(string filename) {
+
         handle = new Handle(filename);
+
     }
+
     public byte[] Read(int bytes) {
+
         Util.InternalRead(handle, bytes);
+
     }
+
     ~File3() {
+
         Debug.Assert(false, "Do not rely on finalization! Use Dispose!");
+
         handle.Close();
+
     }
+
     public void Dispose() {
+
         handle.Close();
+
         GC.SuppressFinalize(this);
+
     }
+
 }
 ```
 
@@ -2639,43 +2550,65 @@ class File3 : IDisposable {
 
 ```
 public class Button {
+
     private class WeakDelegate {
+
         public WeakReference Target;
+
         public MethodInfo Method;
+
     }
+
     private List<WeakDelegate> clickSubscribers = new List<WeakDelegate>();
 
     public event EventHandler Click {
+
         add {
+
             clickSubscribers.Add(new WeakDelegate {
+
                 Target = new WeakReference(value.Target),
+
                 Method = value.Method
+
             });
+
         }
+
         remove {
+
             //...实现省略
+
         }
+
     }
+
     public void FireClick() {
+
         List<WeakDelegate> toRemove = new List<WeakDelegate>();
+
         foreach (WeakDelegate subscriber in clickSubscribers) {
+
             object target = subscriber.Target.Target;
+
             if (target == null) {
+
                 ToRemove.Add(subscriber);
+
             } else {
+
                 subscriber.Method.Invoke(target, new object[] { this, EventArgs.Empty });
+
             }
+
         }
+
         clickSubscribers.RemoveAll(ToRemove);
+
     }
+
 }
 ```
-
-
-
-
-
-## 第 4 章 垃圾回收
 
 ## 订阅者列表
 
@@ -2704,15 +2637,15 @@ public class Button {
 
 ## System.GC 类
 
-System.GC 类是从托管代码与 .NET 垃圾回收器交互的主要点。它包含一组方法，用于控制垃圾回收器的行为并获取有关其迄为止工作的诊断信息。
+`System.GC` 类是从托管代码与 .NET 垃圾回收器交互的主要点。它包含一组方法，用于控制垃圾回收器的行为并获取有关其迄为止工作的诊断信息。
 
 ## 诊断方法
 
-System.GC 类的诊断方法提供了有关垃圾回收器工作的信息。它们用于诊断或调试场景；不要依赖它们在正常时间内做出决策。其中某些诊断方法返回的信息可以作为性能计数器可用，存在于 .NET CLR Memory 性能类别下。
+`System.GC` 类的诊断方法提供了有关垃圾回收器工作的信息。它们用于诊断或调试场景；不要依赖它们在正常时间内做出决策。其中某些诊断方法返回的信息可以作为性能计数器可用，存在于 .NET CLR Memory 性能类别下。
 
-- GC.CollectionCount 返回自应用程序启动以来，指定代际的垃圾回收次数。它可以用于判断在两个时间点之间是否发生了指定代代的回收。
-- GC.GetTotalMemory 返回垃圾堆消耗的总内存，单位为字节（bytes）。如果其布尔参数为 `true`，则在返回结果之前会执行一次全垃圾回收，以确保只计算无法回收的内存。
-- GC.GetGeneration 返回特定对象所属的代际。注意，在当前的 CLR 实现下，无法保证在发生垃圾回收时对象会被提升（promote）。
+- `GC.CollectionCount` 返回自应用程序启动以来，指定代际的垃圾回收次数。它可以用于判断在两个时间点之间是否发生了指定代代的回收。
+- `GC.GetTotalMemory` 返回垃圾堆消耗的总内存，单位为字节（bytes）。如果其布尔参数为 `true`，则在返回结果之前会执行一次全垃圾回收，以确保只计算无法回收的内存。
+- `GC.GetGeneration` 返回特定对象所属的代际。注意，在当前的 CLR 实现下，无法保证在发生垃圾回收时对象会被提升（promote）。
 
 ## 通知
 
@@ -2724,43 +2657,69 @@ GC 通知 API 在 .NET 3.5 SP1 中引入，提供了一个预先获即将进行�
 
 ```
 public class GCWatcher {
+
     private Thread watcherThread;
 
     public event EventHandler GCAproaches;
+
     public event EventHandler GCComplete;
 
     public void Watch() {
+
         GC.RegisterForFullGCNotification(50, 50);
+
         watcherThread = new Thread(() => {
+
             while (true) {
+
                 GCNotification status = GC.WaitForFullGCApproach();
+
                 // 省略错误代码
+
                 if (status != null) {
+
                     GC.WaitForFullGCComplete(EventArgs.Empty);
+
                 }
+
                 GC.WaitForFullGCComplete();
+
                 // 省略错误代码
+
                 if (status != null) {
+
                     GC.WaitForFullGCComplete(EventArgs.Empty);
+
                 }
+
             }
+
         });
+
         watcherThread.IsBackground = true;
+
         watcherThread.Start();
+
     }
 
     public void Cancel() {
+
         GC.WaitForFullGCNotification();
+
         watcherThread.Join();
+
     }
+
 }
 ```
+
+
 
 如需更多信息和使用 GC 调用的完整示例，请参考 MSDN。
 
 ## 控制方法
 
-GC.Collect 指令垃圾回收器执行指定代际的回收。从 .NET 3.0（或 SP1）开始，`GC.Collect` 具有一个 `GCMode` 参数的重载版本。该枚举具有以下值：
+`GC.Collect` 指令垃圾回收器执行指定代际的回收。从 .NET 3.0（或 SP1）开始，`GC.Collect` 具有一个 `GCMode` 参数的重载版本。该枚举具有以下值：
 
 - 当使用 `GCMode.Forced` 时，垃圾回收器随线程立即执行回收。
 - 当使用 `GCMode.Optimized` 时，垃圾回收器可以决定是否执行回收。
@@ -2778,8 +2737,6 @@ GC.Collect 指令垃圾回收器执行指定代际的回收。从 .NET 3.0（或
 - `GC.AddMemoryPressure` 和 `GC.RemoveMemoryPressure` 方法用于通知垃圾回收器当前进程中的非托管分配。添加内存压力指示垃圾回收器已分配指定数量的非托管内存。垃圾回收器可以使用此信息来调优垃圾回收的激进程度频率，或者完全忽略它。当已知非托管分配已回收时，通知垃圾回收器可以移除内存压力。
 - `GC.WaitPendingFinalizers` 方法阻塞当前线程直到所有终化器执行完毕。该方法应谨慎使用。
 
-
-
 因为这可能会引入死锁；例如，如果主线程在持有某些锁时阻塞了 `GC.WaitForPendingFinalizers`，而其中一个活跃的终化器需要该同一个锁，就会发生死锁。`GC.WaitForPendingFinalizers` 不接受超时时间，终化器内部的锁定代码必须使用超时来get优雅处理。
 
 - `GC.SuppressFinalize` 和 `GC.RegisterForFinalizer` 方法与终化和复活（resurrection）功能结合使用。它们将在本章的终化部分进行讨论。
@@ -2787,7 +2744,7 @@ GC.Collect 指令垃圾回收器执行指定代际的回收。从 .NET 3.0（或
 
 关于本节未提到的 `System` 其他方法和属性，请参阅 MSDN 文档。
 
-## 使用 CLR 托管与 GC 交互
+### 使用 CLR 托管与 GC 交互
 
 在前面的节中，我们检查了从托管代码与垃圾回收器交互的诊断和控制方法。然而，这些方法提供的控制程度仍不如人意；此外，还没有可用的通知机制让应用程序知道垃圾回收的发生。
 
@@ -2816,9 +2773,9 @@ if (flAllocationType & COMMIT) {
 }
 ```
 
-HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType) VirtualUnlock(lpAddress, dwSize); 关于与自动 GC 相关的 CLR 托管接口（包括 `IGHost`、`IGHostControl` 和 `IGThreadControl`）的信息，请参阅 MSDN 文档。
+`HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType) VirtualUnlock(lpAddress, dwSize);` 关于与自动 GC 相关的 CLR 托管接口（包括 `IGHost`、`IGHostControl` 和 `IGThreadControl`）的信息，请参阅 MSDN 文档。
 
-## GC 触发器
+### GC 触发器
 
 我们已经看到了触发 GC 的几个原因，但从未将它们全部列在一个处。以下是 CLR 用于判断是否有必要执行 GC 的触发器，按可能性大小排序如下：
 
@@ -2829,11 +2786,11 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 5. AppDomain 卸载。
 6. 进程（或 CLR）正在关闭。这种回收是根，对象被提升，堆被压缩。收集的主要原因是运行终化器。
 
-## 垃圾回收性能最佳实践
+### 垃圾回收性能最佳实践
 
 在本节中，我们将提供与 .NET 垃圾回收器交互的最佳实践总结。我们将检查演示这些最佳实践场景并指出必须避免的陷阱。
 
-## 代际模型
+#### 代际模型
 
 我们回顾了代际模型，它是对原始 GC 模型的重大优化。代际模型根据对象的生存预期对堆进行分区，使 GC 能够频繁收集短命对象。此外，独立堆通过对回收内存块采用空列表策略解决了大对象的问题。
 
@@ -2855,9 +2812,6 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 
 在生产环境中，Web 服务器调执行时间会更长，这是由于网络状况、后端服务器负载和其他因素。请求在几分之一秒内返回给客户端，这不值得优化，因为人类无法观察到这种差异。
 
-
-
-
 ## 第 4 章 垃圾回收
 
 需要注意的是，服务器处理请求的能力并没有因为请求略微减轻而受到损害：内存负载仍然在接受范围内，且客户端没有感觉到任何差异，因为请求仍然在几分之一秒内返回了。然而，服务器的扩展能力遭到了严重损害，因为前端应用程序 70% 的时间都花在了 GC（垃圾回收）代码上。
@@ -2868,7 +2822,7 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 
 如果这些像素由引用类型表示，那么我们将应用程序的内存占用将增加一倍或三倍；实际的方法是使用值类型来表示像素，这可以将内存占用减少 2 到 3 倍，并将花费在 GC 上的时间降低几个数量级。
 
-## 固定（Pinning）
+#### 固定（Pinning）
 
 我们之前讨论过固定是一种正确性措施，必须采用以确保托管对象的地址可以安全地传递给非托管代码。固定一个对象会使其保持在内存中的相同位置，通过移动对象来弥补垃圾回收器无法对堆进行碎片整理的固有局限。
 
@@ -2879,7 +2833,7 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 - 固定并重用在应用程序启动阶段已分配的旧对象，而不是为固定分配新缓冲区。大对象很少移动，从而最小化了固定的内存碎片化成本。
 - 如果应用程序严重依赖固定，考虑分配非托管内存。非托管内存可以被非托管代码直接操作，而无需固定或产生任何垃圾回收成本。使用不安全代码（C# 指针）可以方便地从托管代码操作非托管内存块，而无需将数据拷贝到托管数据结构中。从托管代码分配非托管内存通常使用 `System.Runtime.InteropServices.Marshal` 类。（更多细节见第 8 章。）
 
-## 终结（Finalization）
+#### 终结（Finalization）
 
 终结部分的精神非常清楚地表明，.NET 提供的自动非确定性终结功能有很大的改进空间。关于终结，最佳建议是尽可能使其具有确定性，并将特殊情况交给非确定性终结器。
 
@@ -2889,11 +2843,11 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 - 提供一个终结器以及 `Debug`、`Assert` 或日志语句，以确保客户端意识到他们没有使用你的类。
 - 在实现复杂对象时，将可终化的资源封装在一个单独的类中（`System.Runtime.InteropServices.SafeHandle` 是一个经典示例）。这将确保只有这个封装非托管资源的小类会在额外的垃圾回收中存活，你的对象的其他部分在不再被引用时就可以销毁。
 
-## 杂提示与最佳实践
+#### 杂提示与最佳实践
 
 在本节中，我们将简要检查不属于本章讨论的任何主要章节的最佳实践和性能提示。
 
-## 值类型
+##### 值类型
 
 可能时，优先使用值类型而不是引用类型。我们已经在第 3 章中从通用角度检查了值类型和引用类型的各种特征。此外，值类型具有几项影响应用程序垃圾回收成本的特征：
 
@@ -2903,13 +2857,13 @@ HRESULT _stdcall HostControl::VirtualFree(LPVOID lpAddress, SIZE_T dwSize, DWORD
 - 值类型减少了应用程序的内存占用，因为它们占据了内存。此外，当嵌入在引用类型内部时，访问它们不需要引用，消除了存储额外引用的需要。最后，嵌入在引用类型中的值类型表现出访问的局部性——如果对象被调入并在缓存中处于热状态，这些嵌入的值类型字段也可能被调入并在缓存中处于热。
 - 值类型减少了代之间的引用，因为引入对象图的引用更少。
 
-## 对象图
+##### 对象图
 
 减少对象图的大小直接影响垃圾回收器必须执行的工作量。一个由大对象组成的简单图比一个由许多小对象组成的复杂图更容易标记和扫描。我们之前已经提到过这种特定场景。
 
 此外，引入引用类型的局部变量减少了由 JIT 生成的本地根表的大小，这改进了编译时间并节省了少量内存。
 
-## 对象池（Pooling Objects）
+##### 对象池（Pooling Objects）
 
 对象池是一种旨在手动管理内存和资源的机制，而不是依赖执行环境提供的功能。当对象池生效时，分配新对象意味着从空用对象池中获取它，去分配对象意味着将其返回池中。
 
@@ -2933,10 +2887,6 @@ public class Pool<T> {
     private Func<T> objectFactory;
 }
 ```
-
-
-
-
 
 ```csharp
 public Pool(Func<T> factory) {
@@ -2969,8 +2919,10 @@ public class PoolableObjectBase<T> : IDisposable {
 
 ```csharp
 public class MyPoolableObjectExample : PoolableObjectBase<MyPoolableObjectExample> {
-    }
+}
 ```
+
+
 
 ## 分页与未托管内存分配
 
@@ -2996,21 +2948,21 @@ Visual Studio 的静态代码分析 (FxCop) 有一组针对与垃圾回收常见
 
 - 设计规则—CA1001—拥有可释放字段的类也应该是可释放的。此规则确保了通过聚合类型对类型成员进行确定性的终结化。
 
-- 设计规则—CA1049—拥有原生资源的类也应该是可释放的。此规则确保为提供原生资源（如 System.Runtime.InteropServices.HandleRef）访问的类型正确地实现了 Dispose 模式。
+- 设计规则—CA1049—拥有原生资源的类也应该是可释放的。此规则确保为提供原生资源（如 `System.Runtime.InteropServices.HandleRef`）访问的类型正确地实现了 Dispose 模式。
 
 - 设计规则—CA1063—实现 IDisposable。此规则确保了可释放类型正确地实现了 Dispose 模式。
 
 - 性能规则—CA1821—移除空终结器。此规则确保那些带有空终结器的类型被移除，空终结器会降低性能并影响“中年危机”问题。
 
-- 可靠性规则—CA2000—在锁定之前释放对象。此规则确保 IDisposable 类型的局部变量在离开作用域之前被释放。
+- 可靠性规则—CA2000—在锁定之前释放对象。此规则确保 `IDisposable` 类型的局部变量在离开作用域之前被释放。
 
-- 可靠性规则—CA2006—使用 SafeHandle 封装原生资源。此规则确保在可能的情况下，使用 SafeHandle 类或其派生类之一而不是直接句柄（如 System.IntPtr）指向未托管资源。
+- 可靠性规则—CA2006—使用 SafeHandle 封装原生资源。此规则确保在可能的情况下，使用 `SafeHandle` 类或其派生类之一而不是直接句柄（如 `System.IntPtr`）指向未托管资源。
 
 - 使用规则—CA1816—GC.SuppressFinalize。此规则确保可释放类型在它们的终结器中调用抑制终结化。
 
 - 使用规则—CA2213—可释放字段应该被释放。此规则确保可释放类型调用抑制终结化。
 
-- 使用规则—CA2215—Dispose 方法应该调用 dispose（此处可能指内部逻辑）。此规则确保如果实现了 IDisposable，则正确地实现了 Dispose 模式。
+- 使用规则—CA2215—Dispose 方法应该调用 dispose（此处可能指内部逻辑）。此规则确保如果实现了 `IDisposable`，则正确地实现了 Dispose 模式。
 
 - 使用规则—CA2216—可释放类型应声明终结器。此规则确保可释放类型为该场景提供终结器作为备份。
 
@@ -3041,10 +2993,6 @@ Visual Studio 的静态代码分析 (FxCop) 有一组针对与垃圾回收常见
 垃圾回收的常见陷阱通常与其最强大的优化的优点有关：
 
 - 代模型为良好的应用程序提供了性能优势，但可能会表现出“中年危机”现象，这直接影响性能。
-
-
-
-
 
 # 第 4 章 垃圾回收
 
@@ -3134,13 +3082,9 @@ Employee third = (Employee)employees[2]; // 编译通过并在运行时抛出异
  42 不属于员工集合，但是，如果我们指定了 `ArrayList` 被限制为特定类型的实例。虽然可以创建一个限制项目为特定类型的 `ArrayList`，但这仍然是一个开销很大的操作，并且像 `employees.Add(42)` 这样的语句仍然编译失败。
 这就是泛型编程的问题；基于 `System.Object` 的集合无法保证类型安全，并且将检查推迟到运行时。
 
-
-
-
-
 ## .NET Generics
 
-泛型类和方法允许编写真正的泛型代码，这一方面不会回退到 System.Object，另一方面也不需要为每种数据类型进行特化。以下是一个泛型类型 List<T> 的草图，它取代了我们之前的 ArrayList，并解决了安全性和装箱问题：
+泛型类和方法允许编写真正的泛型代码，这一方面不会回退到 System.Object，另一方面也不需要为每种数据类型进行特化。以下是一个泛型类型 `List<T>` 的草图，它取代了我们之前的 `ArrayList`，并解决了安全性和装箱问题：
 
 ```csharp
 public class List<T> : IEnumerable<T>, IList<T>, ... {
@@ -3173,7 +3117,7 @@ public class List<T> : IEnumerable<T>, IList<T>, ... {
 
 > 注意：如果你不熟悉 C# 泛型的所有语法，Jon Skeet 的《C# in Depth》（Manning, 2010）是一本很好的教材。在本章的剩余部分，假设我们已经编写了泛型类，或者至少是泛型类，例如 .NET Framework 类。
 
-如果你已经编写过泛型类或方法，就会知道将基于 System.Object 实例的伪泛型代码转换为具有一个或多个泛型类型参数的真正泛型代码有多简单。在需要时替换泛型类型参数来使用泛型类和方法也非常容易：
+如果你已经编写过泛型类或方法，就会知道将基于 `System.Object` 实例的伪泛型代码转换为具有一个或多个泛型类型参数的真正泛型代码有多简单。在需要时替换泛型类型参数来使用泛型类和方法也非常容易：
 
 ```csharp
 List<Employee> employees = new List<Employee>();
@@ -3190,7 +3134,7 @@ for (int i = 0; i < 100000; ++i) {
 
 几乎像魔术一样，泛型集合是类型安全的（即它不允许存储不恰当的元素，并且对值类型不需要装箱）。即使是内部存储——元素数组——也会根据泛型类型进行相应的调整：当 T 是 Point2D 时，items 数组就是 Point2D[]，存储的是值而不是引用。我们稍后会揭开其中的魔术，但目前我们已经为泛型编程的基本问题有了语言级别的解决方案。
 
-当我们从泛型参数的某些额外功能时，仅靠这个解决方案似乎是不够的。考虑一个在排序数组中执行二分查找的方法。它的完全泛型版本无法执行搜索，因为 System.Object 没有配备任何比较相关的设施：
+当我们从泛型参数的某些额外功能时，仅靠这个解决方案似乎是不够的。考虑一个在排序数组中执行二分查找的方法。它的完全泛型版本无法执行搜索，因为 `System.Object` 没有配备任何比较相关的设施：
 
 ```csharp
 public static int BinarySearch<T>(T[] array, T element) {
@@ -3201,7 +3145,7 @@ public static int BinarySearch<T>(T[] array, T element) {
 }
 ```
 
-System.Object 没有静态运算符 <，这就是为什么它简单地无法编译。事实上，我们必须向编译器证明，对于传递给方法的每一个泛型类型，它都能解析在该类型上的所有方法调用（包括运算符）。这就是泛型约束登场的地方。
+`System.Object` 没有静态运算符 `<`，这就是为什么它简单地无法编译。事实上，我们必须向编译器证明，对于传递给方法的每一个泛型类型，它都能解析在该类型上的所有方法调用（包括运算符）。这就是泛型约束登场的地方。
 
 ## 泛型约束
 
@@ -3235,17 +3179,21 @@ public T Create<T>() where T : new() {
 // 这并非最优，但 IL 没有对应的这种约束
 ```
 
-```csharp
+
+
+```
 // T 必须是引用类型：
+
 public void ReferencesOnly<T>(T reference) where T : class
 ```
 
-```csharp
+```
 // T 必须是值类型：
+
 public void ValuesOnly<T>(T value) where T : struct
 ```
 
-如果我们回顾二分查找示例，接口约束证明非常有用（而且它是最常用的约束）。具体来说，我们可以要求 T 实现 IComparable，并使用 IComparable.CompareTo 方法比较数组元素。然而，Comparable 不是泛型接口，它的 CompareTo 方法接受 System.Object 参数，这对值类型会产生装箱开销。理理应该有一个 IComparable 的泛型版本，Comparable<T>：
+如果我们回顾二分查找示例，接口约束证明非常有用（而且它是最常用的约束）。具体来说，我们可以要求 `T` 实现 `IComparable`，并使用 `IComparable.CompareTo` 方法比较数组元素。然而，`Comparable` 不是泛型接口，它的 `CompareTo` 方法接受 `System.Object` 参数，这对值类型会产生装箱开销。理理应该有一个 `IComparable` 的泛型版本，`Comparable<T>`：
 
 ```csharp
 public static int BinarySearch<T>(T[] array, T element) where T : IComparable {
@@ -3260,11 +3208,7 @@ public static int BinarySearch<T>(T[] array, T element) where T : IComparable {
 
 CLR 泛型的语法特征与 Java 泛型非常相似，甚至类似于 C++ 模板。然而，事实证明它们的内部实现以及对使用它们的程序施加的限制与 Java 和 C++ 有很大不同。为了理解这些差异，我们应该简要回顾泛型和 C++ 模板。
 
-
-
-
-
-## Java 泛型
+### Java 泛型
 
 Java 中的泛型类可以拥有泛型类型参数，甚至存在一种与 .NET 提供的非常类似的约束机制（边界类型参数和通配符）。例如，这里是将我们的 `List<T>` 转换为 Java 的首次尝试：
 
@@ -3312,7 +3256,7 @@ public class List<E> {
 
 然而，在 CLR 中采用这种方法引发了一个担忧：值类型（value types）将何去？引入泛型的原因之一是我们希望避免装箱（boxing）和强制类型转换。将值类型插入对象数组需要装箱，这是不可接受的。
 
-## C++ 模板
+### C++ 模板
 
 与 Java 泛型相比，C++ 模板可能更具吸引力。（它们也极其强大；你可能听过模板解析机制本身是图完备的）。C++ 编译器并不执行类型擦除——恰恰相反——不需要约束，因为编译器乐于编译你丢给它的任何东西。让我们从列表示例开始，然后考虑约束会发生什么：
 
@@ -3343,7 +3287,7 @@ public:
 };
 ```
 
-list 类是完全类型安全的：模板的每次实例化都会创建一个新类，该类使用模板定义作为其模板。虽然这在底层发生，但这里有一个它可能看起来像的示例：
+`list` 类是完全类型安全的：模板的每次实例化都会创建一个新类，该类使用模板定义作为其模板。虽然这在底层发生，但这里有一个它可能看起来像的示例：
 
 ```cpp
 // 原始 C++ 代码：
@@ -3363,6 +3307,7 @@ public:
     }
 };
 list_int listOfInts(14); // 注意：此处原文漏int
+```
 
 # 第 5 章 集合与泛型
 
@@ -3392,6 +3337,7 @@ BinarySearch(empties, 10, empty()); // 无法编译，empty 没有 < 运算符
 ```
 
 尽管这种设计极具吸引力，但 C++ 模板：
+
 - 因为模板展开是在编译时发生的，因此在代码上无法共享。
 - 出于同样的原因，无法为不同类型生成代码。
 - 这允许 JIT 编译器节省资源（时间和内存）并共享方法表——对于 T 是引用类型的 List<T>。
@@ -3446,10 +3392,6 @@ class BasicStack<T> {
     public T Pop() {
 ```
 
-
-
-
-
 # 第5章 集合与泛型
 
 | List-<int> 方法表 | List-<string> 方法表 |
@@ -3479,7 +3421,7 @@ return items[--topIndex];
 }
 ```
 
-BasicStack<string>、BasicStack<int>、BasicStack<int> 和 BasicStack<double> 的方法列如下所示。注意，对于使用引用类型泛型参数的封闭类型，显示的是方法条目（即代码地址），而值类型则是：
+`BasicStack<string>`、`BasicStack<int>`、`BasicStack<int>` 和 `BasicStack<double>` 的方法列如下所示。注意，对于使用引用类型泛型参数的封闭类型，显示的是方法条目（即代码地址），而值类型则是：
 
 ```
 0:004 !dumpheap -stat
@@ -3497,6 +3439,7 @@ Name: BasicStack'1[System.String, mscorlib]
 ```
 
 MethodDesc 表
+
 条目 方法De JIT 名称
 
 ```
@@ -3513,6 +3456,7 @@ Module: 00172e7c
 Name: BasicStack`[[System.Int32], mscorlib]`
 
 MethodDesc 表
+
 条目 方法De JIT 名称
 
 ```
@@ -3521,11 +3465,15 @@ MethodDesc 表
 ```
 
 0004: |dumppt -md 00173948
+
 EEClass: 001758c
+
 Module: 0017e7c
+
 Name: BasicStack`[[System.Int32, mscorlib]`
 
 MethodDesc 表
+
 条目 方法De JIT 名称
 
 ```
@@ -3534,11 +3482,15 @@ MethodDesc 表
 ```
 
 0004: |dumppt -md 00173b40
+
 EEClass: 00171sec
+
 Module: 001727c
+
 Name: BasicStack`[[System.Double, mscorlib]`
 
 MethodDesc 表
+
 条目 方法De JIT 名称
 
 ```
@@ -3547,6 +3499,8 @@ MethodDesc 表
 ```
 
 最后，如果我们检查实际的方法体，就会变得显而易见：引用类型确实取决于实际类型（它们所做的只是移动引用），而值类型则取决于类型。拷贝一个整数与拷贝一个双精度浮点数是不同的。以下是 push 方法的反汇编版本，其中标记了实际移动数据的数据行：
+
+
 
 ```
 0004: |00260360
@@ -3599,6 +3553,7 @@ BasicStack`1[[System.Double, mscorlib]].Push(Double)
 0026043b c8 ret
 0026043e e8134467 call !JIT_RngFail(70874856)
 00260443
+```
 
 我们已经看到 .NET 泛型实现在编译时是完全类型安全的。仍然需要确定的是在泛型集合中使用值类型时是否存在装箱（boxing）代价。事实上，因为 JIT 编译器会为每个泛型参数为值类型的泛型编译一个特殊的体，因此不需要装箱。
 
@@ -3616,21 +3571,18 @@ BasicStack`1[[System.Double, mscorlib]].Push(Double)
 
 | 集合 | 详情 | 插入时间 | 删除时间 | 查找时间 | 排序 | 索引访问 |
 |---|---|---|---|---|---|---|
-| List<T> | 自动可缩放数组 | O(1)* | O(n) | O(n) | 否 | 是 |
-| LinkedList<T> | 双向 | O(1) | O(1) | O(n) | 否 | 否 |
-| Dictionary<K,V> | 哈希表 | O(1) | O(1) | O(1) | 否 | 否 |
-| HashSet<T> | 哈希表 | O(1) | O(1) | O(1) | 否 | 否 |
-| Queue<T> | 自动循环数组 | 摊销 O(1) | O(1) | | 否 | 否 |
-| Stack<T> | 自动可缩放数组 | 摊销 O(1) | | | 否 | 否 |
-| SortedDictionary<K,V> | 红黑树 | O(log n) | O(log n) | O(log n) | 是（键） | 否 |
-| SortedList<K,V> | 排序可缩放数组 | O(n)** | O(n) | O(log n) | 是（键） | 是 |
-| SortedSet<T> | 红黑树 | O(log n) | O(log n) | O(log n) | 是 | 否 |
+| `List<T>` | 自动可缩放数组 | O(1)* | O(n) | O(n) | 否 | 是 |
+| `LinkedList<T>` | 双向 | O(1) | O(1) | O(n) | 否 | 否 |
+| `Dictionary<K,V>` | 哈希表 | O(1) | O(1) | O(1) | 否 | 否 |
+| `HashSet<T>` | 哈希表 | O(1) | O(1) | O(1) | 否 | 否 |
+| `Queue<T>` | 自动循环数组 | 摊销 O(1) | O(1) | | 否 | 否 |
+| `Stack<T>` | 自动可缩放数组 | 摊销 O(1) | | | 否 | 否 |
+| `SortedDictionary<K,V>` | 红黑树 | O(log n) | O(log n) | O(log n) | 是（键） | 否 |
+| `SortedList<K,V>` | 排序可缩放数组 | O(n)** | O(n) | O(log n) | 是（键） | 是 |
+| `SortedSet<T>` | 红黑树 | O(log n) | O(log n) | O(log n) | 是 | 否 |
 
 * “摊销”在这种情况下我们的意思是某些操作可能花费 O(n) 时间，但大多数操作将花费 O(1) 时间，使得 n 次操作的平均时间为 O(1)。
 ** 除非数据按排序插入，在这种情况下为 O(1)。
-
-
-
 
 前者是通过具有 $n$ 个节点的 $n$ 个元素的二叉搜索树实现的，后者则是基于包含 $n$ 个元素的连续数组实现的。在 32 位系统上，在排序集中存储 $n$ 个大小为 $s$ 的值类型需要 $(20+s)n$ 字节的存储，而列表只需要 $n$ 字节。
 
@@ -3648,7 +3600,7 @@ BasicStack`1[[System.Double, mscorlib]].Push(Double)
 
 随着 .NET 4.0 中任务并行库（Task Parallel Library）的出现，对线程安全集合的需求变得更加迫。在第 6 章中，我们将看到几个从多个线程并发访问数据源或输出缓冲区的动机示例。现在，我们本着之前学过的标准（非线程安全）集合相同的精神，关注可用的并发集合及其性能特征。
 
-# 第 5 章 集合与泛型
+### 第 5 章 集合与泛型
 
 表 5-2. .NET Framework 中的并发集合
 
@@ -3671,6 +3623,7 @@ BasicStack`1[[System.Double, mscorlib]].Push(Double)
 // 以下代码使用 AddOrUpdate 方法来确保在添加项或更新现有项时进行正确的同步：
 
 ConcurrentDictionary<string, int> expenses = ...;
+
 expenses.AddOrUpdate("ParisExpenses", currentAmount, (key, amount) => amount + currentAmount);
 ```
 
@@ -3684,12 +3637,15 @@ expenses.AddOrUpdate("ParisExpenses", currentAmount, (key, amount) => amount + c
 
 ```csharp
 LinkedList<int> numbers = new LinkedList<int>(Enumerable.Range(0, 20000000));
+
 int sum = 0;
+
 for (LinkedListNode<int> curr = numbers.First; curr != null; curr = curr.Next()) {
     sum += curr.Value;
 }
 
 int[] numbers = Enumerable.Range(0, 20000000).ToArray();
+
 for (int curr = 0; curr < numbers.Length; ++curr) {
     sum += numbers[curr];
 }
@@ -3697,14 +3653,11 @@ for (int curr = 0; curr < numbers.Length; ++curr) {
 
 在上述系统中，第二种代码运行速度比第一种快 2 倍。这是一个不可忽视的差异。图 5-3: 显示缓存层级的 Intel i7 架构图。
 
-
-
-
-
-# 第5章 集合与泛型
+### 第5章 集合与泛型
 
 ```assembly
 ; x86 assembly for the second loop, assume 'sum' is in EAX and 'numbers' is in ECX
+
 mov edi, dword ptr [ecx+4]    ; numbers.Length
 test edi, edi
 z LOOP_END
@@ -3739,27 +3692,29 @@ public static int[] MultiplyNaive(int[] a, int[] b) {
 }
 ```
 
-在外层循环的核心，是在第一个矩阵的第 i 行与第二个矩阵的第 j 列进行搜索；由于整个第 i 行和第 j 列都被遍历，存在利用缓存的潜力。输出矩阵中的整个第 i 行反复遍历第一个矩阵的第 i 行。相同的元素被重用了很多次。矩阵是以一种对缓存不利的方式遍历的：它的第一行被迭代了 N 次，依此类推。但这并没有帮助，因为在外层循环完成第 i 次迭代后，它不会再次遇到第 i 行。不幸的是，第二个矩阵也是以对缓存不利的方式遍历的：它的第一列被完全迭代了 N 次，它的第二列也是，依此类推。（这种方式对缓存不利的原因是，int[] 类型的矩阵是按行主序存储的，如图 5-4 所示。）
 
-二维数组，int[]。
+
+在外层循环的核心，是在第一个矩阵的第 `i` 行与第二个矩阵的第 `j` 列进行搜索；由于整个第 `i` 行和第 `j` 列都被遍历，存在利用缓存的潜力。输出矩阵中的整个第 `i` 行反复遍历第一个矩阵的第 `i` 行。相同的元素被重用了很多次。矩阵是以一种对缓存不利的方式遍历的：它的第一行被迭代了 `N` 次，依此类推。但这并没有帮助，因为在外层循环完成第 `i` 次迭代后，它不会再次遇到第 `i` 行。不幸的是，第二个矩阵也是以对缓存不利的方式遍历的：它的第一列被完全迭代了 `N` 次，它的第二列也是，依此类推。（这种方式对缓存不利的原因是，`int[]` 类型的矩阵是按行主序存储的，如图 5-4 所示。）
+
+二维数组，`int[]`。
 
 | 列 1 | 列 2 | 行 1 | 列 1 | 列 2 | 行 2 | 列 M | 列 1 | 列 2 | 行 N | 列 M |
 |---|---|---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | | |
 
-**图 5-4。** 二维数组 (int[]) 的内存布局。行在内存中是连续的，列则不是。
+**图 5-4。** 二维数组 (`int[]`) 的内存布局。行在内存中是连续的，列则不是。
 
-如果缓存足够大能够容纳整个矩阵，那么在外层循环迭代一次后，整个矩阵都会在缓存中，后续按列主序的访问仍将从缓存满足；然而，如果矩阵无法放入缓存中，则会频繁发生缓存缺失：每个元素 (ij) 的缓存缺失都会产生一个包含行 i 元素但不包含列 j 额外元素的缓存行，这意味着每次访问都会发生缓存缺失！
+如果缓存足够大能够容纳整个矩阵，那么在外层循环迭代一次后，整个矩阵都会在缓存中，后续按列主序的访问仍将从缓存满足；然而，如果矩阵无法放入缓存中，则会频繁发生缓存缺失：每个元素 (`ij`) 的缓存缺失都会产生一个包含行 `i` 元素但不包含列 `j` 额外元素的缓存行，这意味着每次访问都会发生缓存缺失！
 
 分块矩阵乘法引入了以下思想：两个矩阵的乘法可以通过朴素算法执行，也可以将它们分成更小的矩阵（块），乘以这些块，然后对结果矩阵进行加法。
 
-具体来说，如果矩阵 A 和 B 以块的形式给出（如图 5-5 所示），则矩阵 C=AB 可以分块计算，其中 Cij = AikBj + AjBk + ... + AkBj。在实践中，这会导致以下代码：
+具体来说，如果矩阵 `A` 和 `B` 以块的形式给出（如图 5-5 所示），则矩阵 `C=AB` 可以分块计算，其中 `Cij = AikBj + AjBk + ... + AkBj`。在实践中，这会导致以下代码：
 
 | A11 | A12 | | Aik | B11 | B12 | | Bik |
 |---|---|---|---|---|---|---|---|
 | A21 | | | B21 | | | | |
 
-**图 5-5。** 块形式的矩阵 A 和 B 
+**图 5-5。** 块形式的矩阵 `A` 和 `B`
 
 ```csharp
 public static int[][] MultiplyBlocked(int[][] A, int[][] B, int bs) {
@@ -3780,7 +3735,6 @@ public static int[][] MultiplyBlocked(int[][] A, int[][] B, int bs) {
     return C;
 }
 ```
-
 
 并查查找（union-find）的简单实现涉及使用一个集合来表示每个集合，并在时将这些集合合并。例如，当使用链表存储每个集合时，合并操作需要线性时间，而如果每个元素都有指向其代表元素的指针，则查找操作可以实现在常数时间内。
 
@@ -3821,21 +3775,21 @@ public static void Union(Set x, Set y) {
 }
 ```
 
-该数据结构的准确运行时复杂度是复杂的；一个简单的上界是，在包含 n 个元素的森林中，每次操作的摊均时间为 O(log n)，其中 log n（n 的迭代对数）是应用对数函数以得到小于 1 的结果所需的次数，即不等式 log log log ... n ≤ 1 中“log” 必须出现的最小次数。对于 n 的实际值，例如 n ≤ 10¹⁰，这个值不超过 5，这是“有效常数”。
+该数据结构的准确运行时复杂度是复杂的；一个简单的上界是，在包含 `n` 个元素的森林中，每次操作的摊均时间为 `O(log n)`，其中 `log n`（`n` 的迭代对数）是应用对数函数以得到小于 1 的结果所需的次数，即不等式 `log log log ... n ≤ 1` 中“log” 必须出现的最小次数。对于 `n` 的实际值，例如 `n ≤ 10¹⁰`，这个值不超过 5，这是“有效常数”。
 
 # 第 5 章 集合与泛型
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_170_0.png)
 
-**图 5-6.** 两个集合 x 和 y 的合并，其中 y 较小。虚线箭头是结果
+**图 5-6.** 两个集合 `x` 和 `y` 的合并，其中 `y` 较小。虚线箭头是结果
 
 ## 跳表 (Skip List)
 
-跳表是一种存储有序元素链表的数据结构，允许在 O(log n) 时间内进行查找，这与数组中的二分查找或平衡二叉搜索树中的查找相当。显然，在跳表上执行二分查找的主要问题是链表不允许通过索引进行随机访问。跳表通过使用层次化的日益稀疏的链表来解决这一局限性：第一层列表连接所有节点；第二个链表连接节点 0, 2, 4, ...；第三个链表连接节点 0, 4, 8, ...；第四层列表连接节点 0, 8, 16, ...，以此类推。
+跳表是一种存储有序元素链表的数据结构，允许在 `O(log n)` 时间内进行查找，这与数组中的二分查找或平衡二叉搜索树中的查找相当。显然，在跳表上执行二分查找的主要问题是链表不允许通过索引进行随机访问。跳表通过使用层次化的日益稀疏的链表来解决这一局限性：第一层列表连接所有节点；第二个链表连接节点 0, 2, 4, ...；第三个链表连接节点 0, 4, 8, ...；第四层列表连接节点 0, 8, 16, ...，以此类推。
 
-要在跳表中查找一个元素，程序会首先遍历最稀疏的列表。当遇到大于或等于目标元素时，程序会返回上一个元素并下降到层次结构中的下一个列表。重复此过程直到找到该元素。这样可以保证 O(log n) 的列表查找时间。
+要在跳表中查找一个元素，程序会首先遍历最稀疏的列表。当遇到大于或等于目标元素时，程序会返回上一个元素并下降到层次结构中的下一个列表。重复此过程直到找到该元素。这样可以保证 `O(log n)` 的列表查找时间。
 
-遗憾的是，维护跳表元素并非易事。如果整个链表层次结构都被添加或删除，它将与 SortedList 等数据结构相比没有任何优势。一种常用方法是使列表的层次随机化（见图 5-7），这使得元素的插入、删除和查找达到对数级时间。维护跳表的具体细节可以参考 William Pugh 的论文《Skip lists: a probabilistic alternative to balanced trees》（ACM, 1990）。
+遗憾的是，维护跳表元素并非易事。如果整个链表层次结构都被添加或删除，它将与 `SortedList` 等数据结构相比没有任何优势。一种常用方法是使列表的层次随机化（见图 5-7），这使得元素的插入、删除和查找达到对数级时间。维护跳表的具体细节可以参考 William Pugh 的论文《Skip lists: a probabilistic alternative to balanced trees》（ACM, 1990）。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_170_1.png)
 
@@ -3855,10 +3809,6 @@ public static void Union(Set x, Set y) {
 | Mars | 0.88 |
 | Snickers | 1.02 |
 | Kisses | 0.66 |
-
-
-
-
 
 # 第 5 章 集合与泛型
 
@@ -3952,7 +3902,7 @@ private static bool IsPrime(uint number) {
 }
 ```
 
-这里有什么可以改进的吗？也许算法太快了，尝试优化它也没有什么可言！嗯，对于一个合理的范围，例如 [1, 200000]，该代码在现代处理器上运行几秒钟，留下了巨大的优化空间。
+这里有什么可以改进的吗？也许算法太快了，尝试优化它也没有什么可言！嗯，对于一个合理的范围，例如 `[1, 200000]`，该代码在现代处理器上运行几秒钟，留下了巨大的优化空间。
 
 你可能对算法的效率有疑虑（例如，一个运行亚线性时间的微小优化），但无论算法是否最优，它看起来非常适合并行。毕竟，判断一个数字是否为质数是一个独立的任务，因此并行化上述代码的一种简单方法是将范围分成若干块，并为每个块创建一个单独的线程（如图6-1 所示）。显然，我们必须同步对集合的访问，以防止多个线程导致损坏。一种粗素的方法如下：
 
@@ -3967,25 +3917,25 @@ public static IEnumerable<uint> PrimesInRange(uint start, uint end) {
         uint chunkStart = start + i * chunk;
         uint chunkEnd = chunkStart + chunk;
         threads[i] = new Thread(() => {
-            for (uint number = chunkStart; number < chunkEnd; ++number) {
-                if (IsPrime(number)) {
-                    lock(primes) {
-                        primes.Add(number);
-                    }
-                }
-            }
-        });
-        threads[i].Start();
+
+
+
+```csharp
+for (uint number = chunkStart; number < chunkEnd; ++number) {
+    if (IsPrime(number)) {
+        lock(primes) {
+            primes.Add(number);
+        }
     }
+}
+});
+threads[i].Start();
+}
     // ... 合并线程 ...
 }
 ```
 
-
-
-
-
-## 第6 章 并发与并行
+# 第6章 并发与并行
 
 ```csharp
 foreach (Thread thread in threads) {
@@ -3995,14 +3945,14 @@ return primes;
 }
 ```
 
-分布在多个线程的数字范围
+## 分布在多个线程的数字范围
 
 | 1 - 25,000 | 25,001 - 50,000 | 50,001 - 75,000 | 75,001 - 100,000 |
 | 线程 1 | 线程 2 | 线程 3 | 线程 4 |
 
 **图 6-1.** 将质数范围划分到多个线程
 
-在 Intel i7 系统上，顺序代码遍历范围 [100, 200000] 平均耗时 2950 ms，而并行化版本执行相同操作平均仅需 950 ms。对于具有 8 个 CPU 的系统，你可以预期更好的结果，但这种型号的处理器使用了超线程技术（HyperThreading），这意味着只有 4 个物理核心（每个物理核心承载两个逻辑核心）。预期 4 倍的加速更为合理，而我们获得了 3 倍的加速，这仍然是不容忽视的。正如图 6-2 和 6-3 中的并发分析器报告所示，某些线程完成得比其他线程快，导致整体 CPU 利用率远低于 100%（要在应用程序上运行并发分析器，请参阅第 2 章）。
+在 Intel i7 系统上，顺序代码遍历范围 `[100, 200000]` 平均耗时 2950 ms，而并行化版本执行相同操作平均仅需 950 ms。对于具有 8 个 CPU 的系统，你可以预期更好的结果，但这种型号的处理器使用了超线程技术（`HyperThreading`），这意味着只有 4 个物理核心（每个物理核心承载两个逻辑核心）。预期 4 倍的加速更为合理，而我们获得了 3 倍的加速，这仍然是不容忽视的。正如图 6-2 和 6-3 中的并发分析器报告所示，某些线程完成得比其他线程快，导致整体 CPU 利用率远低于 100%（要在应用程序上运行并发分析器，请参阅第 2 章）。
 
 CPU 利用率
 
@@ -4011,31 +3961,32 @@ CPU 利用率
 **图 6-2.** 整体 CPU 利用率上升到接近 8 个逻辑核心（100%），然后在运行结束时下降到仅一个逻辑核心
 
 | 线程 ID | 名称 | 毫秒 2,500 | 2,600 | 2,700 | 2,800 | 2,900 | 3,000 | 3,100 | 3,200 | 3,300 |
-|---|---|---|---|---|---|---|---|---|---|
-| 7932 | CLR 工作线程 | | | | | | | | | | |
-| 9428 | CLR 工作线程 | | | | | | | | | | | |
-| 7192 | CLR 工作线程 | | | | | | | | | | | |
-| 7708 | CLR 工作线程 | | | | | | | | | | | |
-| 9348 | CLR 工作线程 | | | | | | | | | | | |
-| 5488 | CLR 工作线程 | | | | | | | | | | | |
-| 11100 | CLR 工作线程 | | | | | | | | | | | |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7932 | CLR 工作线程 | | | | | | | | | |
+| 9428 | CLR 工作线程 | | | | | | | | | |
+| 7192 | CLR 工作线程 | | | | | | | | | |
+| 7708 | CLR 工作线程 | | | | | | | | | |
+| 9348 | CLR 工作线程 | | | | | | | | | |
+| 5488 | CLR 工作线程 | | | | | | | | | |
+| 11100 | CLR 工作线程 | | | | | | | | | |
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_178_0.png)
 
-**图 6-3.**某些线程比其他线程完成更快。虽然线程 9428 的运行时间不足 200ms，但线程 5488 的运行时间超过了 800ms
+**图 6-3.** 某些线程比其他线程完成更快。虽然线程 9428 的运行时间不足 200ms，但线程 5488 的运行时间超过了 800ms
 
 事实上，此程序的运行比顺序版本更快（尽管不会线性缩放），特别是当你拥有许多核心时。然而，这引出了几个问题：
 
 - 多少线程是最优的？如果我们有 8 个 CPU 核心，我们应该创建 8 个线程吗？
-- 如何确保我们不会垄用资源或过度订阅（oversubscribe）？例如，如果我们的进程中有另一个线程需要计算质数，并尝试像我们一样运行并行算法怎么办？从多个线程访问 `List<int>` 是不安全的，会导致数据损坏，因为每次我们在向集合中添加数字时都加锁（这是朴素解决方案的做法）被证明是极其昂贵的，并且会限制我们将算法扩展到进一步增加的处理器核心数量的能力。
+- 如何确保我们不会垄用资源或过度订阅（`oversubscribe`）？例如，如果我们的进程中有另一个线程需要计算质数，并尝试像我们一样运行并行算法怎么办？从多个线程访问 `List<int>` 是不安全的，会导致数据损坏，因为每次我们在向集合中添加数字时都加锁（这是朴素解决方案的做法）被证明是极其昂贵的，并且会限制我们将算法扩展到进一步增加的处理器核心数量的能力。
 - 对于较小的数字范围，创建新线程是否值得？或者在单个线程上同步执行整个操作是否会更好？（在 Windows 上创建和销毁线程是廉价的，但并没有判断 20 个数字是质数还是合数那么便宜？）
-- 我们如何确保所有线程的工作量相等？某些线程比其他线程完成得更快，特别是那些处理较小数字的线程。对于将 [100, 100000] 分为四等份，负责 [100, 25075] 范围的线程完成速度将负责 [75025, 100000] 范围线程的两倍，因为我们的质数算法在遇到大质数时会变得越来越慢。
-
+- 我们如何确保所有线程的工作量相等？某些线程比其他线程完成得更快，特别是那些处理较小数字的线程。对于将 `[100, 100000]` 分为四等份，负责 `[100, 25075]` 范围的线程完成速度将负责 `[75025, 100000]` 范围线程的两倍，因为我们的质数算法在遇到大质数时会变得越来越慢。
 - 我们如何处理可能从其他线程产生的异常？在这种特定情况下，可以避免 `IsPrime` 方法产生任何错误，但在现实示例中，并行化工作可能充满陷阱和异常情况。（CLR 的默认行为是在线程因未处理的异常而失败时终止整个进程，这通常是一个好主意——快速失败语义——但不会允许 `PrimesInRange` 的调用者处理该异常）。
 
 这些问题的答案远非易事，而且开发一个允许并发执行且不会产生过多线程、过度订阅并确保工作分配均匀的框架是非常复杂的。
 
-从手动管理到线程池。线程池是一个管理任务的组件。与其创建和销毁线程，不如将任务提交到线程池，这可以处理过度订阅问题。特别是，线程池有助于解决上述的一些问题。例如：
+### 从手动管理到线程池
+
+线程池是一个管理任务的组件。与其创建和销毁线程，不如将任务提交到线程池，这可以处理过度订阅问题。特别是，线程池有助于解决上述的一些问题。例如：
 
 ```csharp
 public static IEnumerable<uint> PrimesInRange(uint start, uint end) {
@@ -4065,10 +4016,10 @@ public static IEnumerable<uint> PrimesInRange(uint start, uint end) {
 }
 ```
 
-此代码版本比基于线程的版本扩展性更好，并在 950 ms 内完成（针对范围 [100, 200000]），因为它将任务提交到了线程池。
+此代码版本比基于线程的版本扩展性更好，并在 950 ms 内完成（针对范围 `[100, 200000]`），因为它将任务提交到了线程池。
 
 | 线程 ID | 名称 | 1,000 | 1,100 | 1,200 | 1,300 | 1,400 | 1,500 | 1,600 | 1,700 |
-|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|
 | 1096 | CLR 工作线程 | █ | █ | █ | █ | █ | | | |
 | 1070 | CLR 工作线程 | | | | | | | | |
 | 9048 | CLR 工作线程 | | | | | | | | |
@@ -4082,11 +4033,7 @@ public static IEnumerable<uint> PrimesInRange(uint start, uint end) {
 
 **图 6-5.** 线程 #2 正在执行工作项 #5，执行完成后，它将从全局 FIFO 队列中借用工作。线程 #1 在处理任何其他工作之前会清空其本地队列。
 
-
-
-
-
-# 线程池的 FIFO 和 LIFO 语义
+## 线程池的 FIFO 和 LIFO 语义
 
 看似古异的 FIFO 和 LIFO 语义背后的原因如下：当工作被推入全局队列时，没有特定的线程对执行有任何偏好，公平性是选择工作进行执行的唯一标准。这就是为什么 FIFO 语义适用于全局队列。然而，当线程池为执行排队某个工作时，它很可能会使用与当前正在执行的工作项相同的数据和指令；这就是为什么将其推入属于同一线程的池中是有意义的——它将在当前执行的工作项不久后被执行，并利用 CPU 的数据和指令缓存。
 
@@ -4094,13 +4041,13 @@ public static IEnumerable<uint> PrimesInRange(uint start, uint end) {
 
 与抽象一样，线程池从应用程序接管了更多关于线程生命周期和工作项调度的细粒度控制。虽然 CLR 线程池有控制 API，但它没有内置 API 来控制其任务或线程的优先级。然而，通常情况下，这种级别的控制并没有应用程序在更强大的系统上自动扩展的能力所补偿，也没有无需为短寿命任务创建和销毁线程的性能。
 
-推送到线程池的工作项的异常信息极其有限，不支持异步连接和取消，并且没有任何获取已完成任务结果的机制.NET 4 中的任务并行库（TPL）引入了任务（Tasks），它是线程工作项之上的一个强大抽象。任务是线程和线程工作项的结构化替代方案，就像子程序和函数是基于跳转的汇编编程的结构化替代方案一样。
+推送到线程池的工作项的异常信息极其有限，不支持异步连接和取消，并且没有任何获取已完成任务结果的机制。`.NET 4` 中的任务并行库（TPL）引入了任务（Tasks），它是线程工作项之上的一个强大抽象。任务是线程和线程工作项的结构化替代方案，就像子程序和函数是基于跳转的汇编编程的结构化替代方案一样。
 
 ## 任务并行
 
-任务并行是一种范式和一组 API，用于将大任务分解为一组小任务，并在多个线程上执行它们。事实上，这会让代码更简单——至少我们不再需要完成任务和 ManualResetEvent 来跟踪任务的执行。然而，正如我们在下一节中将看到的，TPL 提供的数据并行 API 甚至适合并行化寻找范围内所有质数的循环。相反，我们将考虑一个不同的问题。
+任务并行是一种范式和一组 API，用于将大任务分解为一组小任务，并在多个线程上执行它们。事实上，这会让代码更简单——至少我们不再需要完成任务和 `ManualResetEvent` 来跟踪任务的执行。然而，正如我们在下一节中将看到的，TPL 提供的数据并行 API 甚至适合并行化寻找范围内所有质数的循环。相反，我们将考虑一个不同的问题。
 
-有一种著名的递归比较排序算法称为“快速排序”（QuickSort），它非常容易并行化（且平均运行时间复杂度为 O(n log n)），这是最优的——尽管很少有大型框架使用快速排序来排序任何内容。快速排序算法的过程如下：
+有一种著名的递归比较排序算法称为“快速排序”（`QuickSort`），它非常容易并行化（且平均运行时间复杂度为 `O(n log n)`），这是最优的——尽管很少有大型框架使用快速排序来排序任何内容。快速排序算法的过程如下：
 
 ```c
 public static void QuickSort<T>(T[] items) where T : IComparable<T>{
@@ -4133,17 +4080,16 @@ private static void Swap<T>(ref T a, ref T b) {
 }
 ```
 
-图 6-6 是 Partition 方法的一个步骤的插图。第四个元素（值为 5）被选为基准（pivot）。首先，它被移动到数组的最右侧。接下来，所有比它大的元素向右侧传播。最后，确定基准的位置，使其左侧的所有元素都小于等于它。
+图 6-6 是 `Partition` 方法的一个步骤的插图。第四个元素（值为 5）被选为基准（`pivot`）。首先，它被移动到数组的最右侧。接下来，所有比它大的元素向右侧传播。最后，确定基准的位置，使其左侧的所有元素都小于等于它。
 
 # 第 6 章 并发与并行
 
-快速排序在每一步的递归调用必须引起警觉。排序数组的左部分和右部分是独立的任务，它们之间不需要同步，而 Task 类是表达这种关系的理想选择。以下是使用任务 并行化快速排序的首次尝试：
+快速排序在每一步的递归调用必须引起警觉。排序数组的左部分和右部分是独立的任务，它们之间不需要同步，而 `Task` 类是表达这种关系的理想选择。以下是使用任务 并行化快速排序的首次尝试：
 
 ```csharp
 public static void QuickSort<T>(T[] items) where T : IComparable<T> {
     QuickSort(items, 0, items.length);
 }
-
 private static void QuickSort<T>(T[] items, int left, int right) where T : IComparable<T> {
     if (right - left < 2) {
         int pivot = Partition(items, left, right);
@@ -4160,9 +4106,9 @@ private static int Partition<T>(T[] items, int left, int right) where T : ICompa
 }
 ```
 
-Task.Run 方法创建一个新任务（等同于调用 new Task()）并调度其执行（等同于新创建任务的 start 方法）。Task.WaitAll 方法等待任务完成并返回。注意，我们不需要处理如何等待任务完成、何时创建和销毁它们。
+`Task.Run` 方法创建一个新任务（等同于调用 `new Task()`）并调度其执行（等同于新创建任务的 `start` 方法）。`Task.WaitAll` 方法等待任务完成并返回。注意，我们不需要处理如何等待任务完成、何时创建和销毁它们。
 
-有一个非常有用的方法称为 Parallel.Invoke，它执行提供的一组任务并在所有任务完成后返回。这允许我们以如下方式重写快速排序方法的核心部分：
+有一个非常有用的方法称为 `Parallel.Invoke`，它执行提供的一组任务并在所有任务完成后返回。这允许我们以如下方式重写快速排序方法的核心部分：
 
 ```csharp
 Parallel.Invoke(
@@ -4171,10 +4117,7 @@ Parallel.Invoke(
 );
 ```
 
-图 6-6. Partition 方法单次调用的插图。
-
-
-
+图 6-6. `Partition` 方法单次调用的插图。
 
 # 第 6 章 并发与并行
 
@@ -4182,7 +4125,7 @@ Parallel.Invoke(
 
 问题在于，并行化需要足够的粗粒度；尝试对一个三个元素的数组排序进行并行化是徒劳的，因为创建 `Task` 对象、将工作项调度到线程池以及等待它们完成执行所引入的开销，超过了所需的几次比较操作。
 
-# 递归算法中的并行性限制
+## 递归算法中的并行性限制
 
 你建议如何限制并行性，以防止其削减我们优化的收益？有几种可行的方法：
 
@@ -4203,9 +4146,16 @@ private static void QuickSort<T>(T[] items, int left, int right) where T : IComp
     );
   } else {
     QuickSort(items, left, pivot);
+
+
+
+```
     QuickSort(items, pivot+1, right);
+
   }
+
 }
+
 ```
 
 # 递归分解的更多示例
@@ -4226,24 +4176,27 @@ private static void QuickSort<T>(T[] items, int left, int right) where T : IComp
 
 任务执行环境提供了基础设施，可以将任务内部发生的异常封送回它们被认为适当的地方。假设 QuickSort 任务的其中一次递归调用遇到了异常，可能是因为我们没有仔细考虑边界，导致在数组的两侧都触发了差一错误。此异常将在池线程上抛出，该线程不受我们的显式控制，也不允许任何上层控制。
 
-
-
-
-Task.Run(() => Treeloop(root.Right, condition, cts, cts.Token));
+`Task.Run(() => Treeloop(root.Right, condition, cts, cts.Token));`
 
 ```csharp
+
 foreach (T element in data)
+
     if (cts.IsCancellationRequested) break; // 协作式取消
+
     if (condition(element))
+
         cts.Cancel(); // 取消所有正在进行的工作
+
     // 对感兴趣的元素进行某些操作
+
 ```
 
 // 调用代码的示例：
-CancellationSource cts = new CancellationSource();
-Task.Run(() => Treeloop(treeRoot, i => i % 77 == 0, cts));
+`CancellationSource` `cts` = new `CancellationSource`();
+`Task.Run(() => Treeloop(treeRoot, i => i % 77 == 0, cts));`
 // 一过段时间后，例如用户不再对该操作感兴趣：
-cts.Cancel();
+`cts.Cancel();`
 
 不可避免地，在某些算法示例中，我们可能希望有一种更简单的方式来表达并行性。考虑我们开始的质数测试示例。我们可以手动将范围拆分成多个块，为每个块创建一个任务，并等待所有任务完成。事实上，有一整整类算法，它们对一组数据范围应用某种特定的操作。这些算法要求在任务并行之上提供一个更高级层次的抽象。我们现在转向这种抽象。
 
@@ -4258,21 +4211,33 @@ cts.Cancel();
 回到质数测试的示例，我们有一个遍历大范围数字的循环，检查每个数字是否为质数并将其插入集合中，如下所示：
 
 ```csharp
+
 for (int number = start; number < end; ++number) {
+
     if (IsPrime(number))
+
         primes.Add(number);
+
 }
+
 ```
 
 将此代码转换为使用 `Parallel.For` 几乎是一项机械任务，尽管同步对 `primes` 集合的访问需要一些谨慎（存在许多更好的方法，例如聚合，我们稍后会考虑）：
 
 ```csharp
+
 Parallel.For(start, end, number => {
+
     if (IsPrime(number))
+
         lock(primes) {
+
             primes.Add(number);
+
         }
+
 });
+
 ```
 
 通过将语言级循环替换为 API 调用，我们获得了循环迭代的自动并行化。此外，`Parallel.For` 并不是一个为每次迭代生成任务、或为范围的每个硬编码块大小部分生成任务的简单循环。相反，`Parallel.For` 会适应单个迭代的执行速度，考虑当前正在执行的任务数量，并通过动态扩展范围来防止细粒度开销。这些优化并非于易事，但你可以使用 `Parallel.For` 的重载（例如控制并发执行任务的最大数量）或使用自定义分区器来确定迭代范围应如何划分到不同的任务中。
@@ -4280,21 +4245,33 @@ Parallel.For(start, end, number => {
 类似的 API 也适用于 `foreach`，其中数据源可能没有被完全枚举，实际上，它可能不是有限的。假设我们需要从 Web 上下载一组 RSS 馈，指定为 `IEnumerable<string>`。循环的骨架将如下所示：
 
 ```csharp
+
 IEnumerable<string> rssFeeds = ...;
+
 WebClient webClient = new WebClient();
+
 foreach (string url in rssFeeds) {
+
   Process(webClient.DownloadString(url));
+
 }
+
 ```
 
 此循环可以通过机械转换实现并行化，即将循环替换为对 `Parallel.ForEach` 的调用。请注意，数据源（`rssFeeds` 集合）不需要是线程安全的，`Parallel.ForEach` 在从多个线程访问时会使用同步机制。
 
 ```csharp
+
 IEnumerable<string> rssFeeds = ...;
+
 WebClient webClient = new WebClient();
+
 Parallel.ForEach(rssFeeds, url => {
+
   Process(webClient.DownloadString(url));
+
 });
+
 ```
 
 > 你可能会担心在无限数据源上执行操作。然而，事实证明，开始此类操作并期望在满足某些条件时提前终止是非常方便的。例如，一个无限数据源，如所有自然数（在一个在一个返回 `IEnumerable<BigInteger>` 的方法中指定）。我们可以编写并并行化一个循环，寻找一个数字和为 477 但不能被 133 整除的数字。希望我们的循环会终止。
@@ -4304,14 +4281,23 @@ Parallel.ForEach(rssFeeds, url => {
 `ParallelLoopState` 表示并行循环的执行状态，并允许从循环中提前中断。这是一个简单的示例：
 
 ```csharp
+
 int invitedToParty = 0;
+
 Parallel.ForEach(customers, (customer, loopState) => {
+
   if (customer.Orders.Count > 10 && customer.City == "Portland") {
+
     if (Interlocked.Increment(ref invitedToParty) >= 25) {
+
         loopState.Stop(); // 不再执行额外的迭代
+
     }
+
   }
+
 });
+
 ```
 
 第 6 章 并发与并行
@@ -4323,19 +4309,31 @@ Parallel.ForEach(customers, (customer, loopState) => {
 并行计算可能最高层次的抽象是你声明：“我想让这段代码并行运行”，并将剩下的交给框架来实现。什么是并行 LINQ？但在之前，需要对 LINQ 进行简短的回顾。LINQ（语言集成查询）是 C# 3.0 和 .NET 3.5 引入的一系列语言扩展，模糊了命令式编程和声明式编程之间的界限。例如，LINQ 查询从数据源客户（可能是内存集合、数据库表或更奇特的来源）检索华盛顿州客户在过去十个月内购买过三次 10 美元订单的姓名和年龄，并将它们显示在控制台上：
 
 ```csharp
+
 var results = from customer in customers
+
     where customer.State == "WA"
+
     let custOrders = (from order in orders
+
                         where customer.ID == order.ID
+
                         select new { order.Date, order.Amount })
+
     where custOrders.Count((co) => co.Amount >= 10 &&
+
         co.Date > DateTime.Now.AddMonths(-10)) >= 3
+
 ```
 
 ```csharp
+
 foreach (var result in results) {
+
     Console.WriteLine("{0} ({1})", result.Name, result.Age);
+
 }
+
 ```
 
 这里主要的注意事项是，查询是以声明式的方式指定的——就像 SQL 查询一样。通常情况下，你不必同步查询的不同部分，因为 LINQ 查询是纯函数且没有副作用——它们将一个集合转换为另一个而不修改过程中的对象。
@@ -4343,23 +4341,29 @@ foreach (var result in results) {
 要并行化查询执行，唯一的代码更改是将源集合从通用的 `IEnumerable<T>` 修改为 `ParallelQuery<T>`。`AsParallel()` 扩展方法接收：
 
 ```csharp
+
 var results = from customer in customers.AsParallel()
+
 ```
-
-
-
-
 
 # 第 6 章 并与并行
 
 ```csharp
+
 select new { order.Date, order.Amount }
+
 where custOrders.Count(co => co.Amount >= 10 &&
+
       co.Date >= DateTime.Now.AddMonths(-10)) == 3
+
 select new { customer.Name, customer.Age };
+
 foreach (var result in results) {
+
   Console.WriteLine("{0}", result.Name, result.Age);
+
 }
+
 ```
 
 PLINQ 使用三阶段处理流水线来执行并行查询，如图 6-7 所示。首先，PLINQ 决定应使用多少线程来并行化查询执行。接下来，工作线程从源获取工作块，并确保在锁保护下进行访问。每个线程独立地执行其工作项，并将结果在每个线程的本地队列中。最后，所有本地结果被缓冲到一个单一结果集中，该集合由上述示例中的 `foreach` 循环轮询。
@@ -4371,10 +4375,15 @@ PLINQ 使用三阶段处理流水线来执行并行查询，如图 6-7 所示。
 与 `Parallel.ForEach` 相比，PLINQ 的主要优势在于 PLINQ 会自动在执行查询的每个线程本地处理处理结果的聚合。当使用 `Parallel.ForEach` 寻找素数时，我们必须访问一个全局素数集合来聚合结果（在本章的后后部分，我们将考虑这需要连续的同步，并且引入了重大的开销）。我们可以使用 PLINQ 实现相同的结果，如下：
 
 ```csharp
+
 List<int> primes = (from n in Enumerable.Range(3, 200000).AsParallel()
+
                       where IsPrime(n)
+
                     select n).ToList();
+
 // 也可以使用 Parallel.Enumerable.Range(...).AsParallel()
+
 ```
 
 # 第 6 章 并与并行
@@ -4397,46 +4406,81 @@ List<int> primes = (from n in Enumerable.Range(3, 200000).AsParallel()
 通常，你想将延续（或回调）与特定任务关联；延续应该在任务完成时执行。如果你对任务有控制权——即你调度了它的执行——或者你从他人那里接收到它，那么一个显式的延续 API 是理想的。TPL 提供了 `ContinueWith` 方法（不言自明）来控制各种设置下的延续。延续可能仅在任务遇到异常时执行，并可以在特定的线程或使用 `TaskScheduler` 调度执行。以下是各种 API 的示例：
 
 ```csharp
+
 Task<string> weatherTask = DownloadInfo(...);
+
 weatherTask.ContinueWith(() => Display(weatherTask.Result), TaskScheduler.Current);
+
 Task left = ProcessLeft(...);
+
 Task right = ProcessRight(...);
+
 TaskFactory.ContinueWhenAll(
+
     new Task[] { left, right },
+
     CleanupResources
+
 );
+
 TaskFactory.ContinueWhenAny(
+
     new Task[] { left, right },
+
     HandleError
+
 );
+
 );
+
 ```
 
 延续是编写异步应用程序的一种合理方法，在 GUI 设置中执行异步 I/O 时非常有价值。例如，为了确保 Windows 8 Metro 风格应用程序保持响应式用户界面，Windows 8 中的 WinRT（Windows Runtime）API 为所有可能运行超过 50 毫秒的操作提供了异步版本。当多个异步调用链联时，嵌套延续会变得有些笨拙，如下例所示：
 
 ```csharp
+
 // 同步版本
+
 private void update_Clicked(...) {
+
   using (LocationService location = new LocationService())
+
   using (WeatherService weather = new WeatherService()) {
+
     Location loc = location.GetCurrentLocation();
-    Forecast forecast = weather.GetForecast(loc.City);
-    MessageDialog msg = new MessageDialog(forecast.Summary);
-    msg.Display();
-  }
+
+
+
+```csharp
+Forecast forecast = weather.GetForecast(loc.City);
+
+MessageDialog msg = new MessageDialog(forecast.Summary);
+
+msg.Display();
+
+}
 }
 ```
 
 ```csharp
 // 异步版本
+
 private async void update_Clicked(...) {
+
   using (LocationService location = new LocationService())
+
   using (WeatherService weather = new WeatherService()) {
+
     Task<Location> locTask = location.GetCurrentLocationAsync();
+
     Location loc = await locTask;
+
     MessageDialog msg = new MessageDialog(forecast.Summary);
+
     await msg.Display();
+
   }
+
 }
 ```
 
@@ -4444,6 +4488,7 @@ private async void update_Clicked(...) {
 
 ```csharp
 // 同步版本
+
 private Forecast[] GetForecastForAllCities(City[] cities) {
   Forecast[] forecasts = new Forecast[cities.Length];
   using (WeatherService weather = new WeatherService()) {
@@ -4457,6 +4502,7 @@ private Forecast[] GetForecastForAllCities(City[] cities) {
 
 ```csharp
 // 异步版本
+
 private async Task<Forecast[]> GetForecastForAllCitiesAsync(City[] cities) {
     Forecast[] forecasts = new Forecast[cities.Length];
     using (WeatherService weather = new WeatherService()) {
@@ -4468,23 +4514,16 @@ private async Task<Forecast[]> GetForecastForAllCitiesAsync(City[] cities) {
 }
 ```
 
-
-
-
-
-forecasts[i] = await weather.GetForecastAsync(cities[i]);
+`forecasts[i] = await weather.GetForecastAsync(cities[i]);`
 
 }
-
 return forecasts;
-
 }
 
 注意，这些更改是非常微小的，编译器会处理获取 `forecasts` 变量（类型为 `Forecast[]`）的细节，并在周围创建 `Task<Forecast[]>` 骨架。通过简单的语言特性（尽管实现本身绝并不简单），C# 大极地降低了异步编程的门槛，并使得处理 API 和操作任务变得更加容易。`await` 操作符的实现并不限于任务并行库（TPL）；Windows 中原生的 WinRT API 是 `AsyncOperation<T>` 而不是 Task（这是一个托管概念），但仍然可以等待，如下例所示，该示例使用了真实的 WinRT API：
 
 ```
 using Windows.Devices.Geolocation;
-
 ```
 private async void updateButton_Clicked(...) {
   Geolocation locator = new Geolocation();
@@ -4532,6 +4571,7 @@ for (int i = range.Item1; i < range.Item2; ++i)
 ```
 
 有关自定义的更多信息（这是数据可用的一项重要优化），请访问 http://microsoft.com/en-us/library/dd97411.aspx。
+
 最后，有些应用程序可以从任务调度器中受益。示例包括 UI 线程上的延续（我们已经使用 `TaskScheduler.Current` 进入 UI 线程来实现）、通过更高优先级的调度器对其进行优先级排序，以及通过调度到使用特定 CPU 亲和性线程的调度器将任务绑定到特定的 CPU。关于自定义调度器的示例，请参考 MSDN 文章“如何创建一个限制并发度的任务调度器”，地址为 http://microsoft.com/en-us/library/ee789351.aspx。
 
 ## 同步
@@ -4564,7 +4604,9 @@ inc eax // 增加寄存器
 ```
 
 inc eax
+
 mov dword ptr [ebp], eax // 从寄存器复制到栈
+
 ```
 
 在这种情况下，变量的值将是 101，尽管两个处理器都执行了递增操作，本应该是 102。这种竞态条件——希望它是显而易见且易于检测的——是需要仔细同步的情况典型示例。
@@ -4584,10 +4626,6 @@ mov dword ptr [ebp], eax // 从寄存器复制到栈
 同步的一种方法是将负担交给操作系统。毕竟，操作系统提供了创建和管理线程的设施，并对它的调度承担全部责任。自然地期望它提供一组同步原语。尽管我们很快就会讨论同步机制，但这引出了一个问题：操作系统是如何实现这些同步机制的？显然 Windows 本身需要对其内部结构——表示同步机制的数据结构进行同步，它不能通过推延给这些机制来实现。事实证明，同步机制通常需要系统调用（用户态到内核态的转换）和线程切换来确保同步，如果被同步的操作非常廉价（例如增加数字或向链表中插入项），这种开销是相对昂贵的。
 
 Windows 上的所有处理器都可以实现一种名为比较交换（CAS）的硬件同步原语。CAS 具有以下语义（伪代码），并以原子方式执行：
-
-
-
-
 
 # 第 6 章 并发与并行
 
@@ -4704,7 +4742,17 @@ public class Spinlock {
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
 
 ```csharp
 public bool TryPop(out T element) {
@@ -4722,9 +4770,9 @@ public bool TryPop(out T element) {
 }
 ```
 
-`Push` 方法尝试将列表头部替换为新节点，新结的 `Next` 指针指向当前列表头部。同样地，`TryPop` 方法尝试将列表头部替换为当前头部结点的 `Next` 指针所指向的节点，如图 6-8 所示。
+`Push`方法尝试将列表头部替换为新节点，新结的`Next`指针指向当前列表头部。同样地，`TryPop`方法尝试将列表头部替换为当前头部结点的`Next`指针所指向的节点，如图 6-8 所示。
 
-**图 6-8.** `TryPop` 操作尝试将当前列表头部替换为新的头部。
+**图 6-8.** `TryPop`操作尝试将当前列表头部替换为新的头部。
 
 你可能会想，世界上上的每种数据结构都可以使用 CAS 和类似的无锁原语来实现。事实上，如今还有一些广泛使用的无锁集合的其他示例：
 
@@ -4736,7 +4784,7 @@ public bool TryPop(out T element) {
 
 ## Windows 同步机制
 
-Windows 为用户态程序提供了许多同步机制，例如事件、信号量、互斥锁（mutex）和条件变量。我们的程序可以通过句柄（handle）和 Win32 API 调用访问这些同步机制。.NET 以面向对象的方式提供了同步机制，例如 `ManualResetEvent`、`Mutex` 和 `Semaphore`。在现有同步机制的基础上，.NET 还提供了几种新机制，例如 `ReaderWriterLockSlim` 和 `Monitor`。我们不会详细详尽地检查每种同步机制……
+Windows 为用户态程序提供了许多同步机制，例如事件、信号量、互斥锁（mutex）和条件变量。我们的程序可以通过句柄（handle）和 Win32 API 调用访问这些同步机制。.NET 以面向对象的方式提供了同步机制，例如`ManualResetEvent`、`Mutex`和`Semaphore`。在现有同步机制的基础上，.NET 还提供了几种新机制，例如`ReaderWriterLockSlim`和`Monitor`。我们不会详细详尽地检查每种同步机制……
 
 # 第 6 章 并发与并行
 
@@ -4746,7 +4794,7 @@ Windows 内核通过阻塞在锁不可用时尝试获取锁的线程来实现我
 
 **图 6-9.** 操作系统调度器维护的数据。就绪执行的线程被放在 FIFO 队列中。被阻塞的线程通过一个名为 wait 的内部结构恢复其同步机制。
 
-总的来说，阻塞一个线程可能会花费数千个 CPU 周期，并且当同步机制可用时，需要若干周期来解锁。因此，如果使用内核同步机制来保护如向写入缓冲区或执行网络往返等耗时操作，这种开销是可以忽略不计的；但如果使用内核同步机制来保护像 +++ 这样的操作，这种开销就会引入不必要的成本。
+总的来说，阻塞一个线程可能会花费数千个 CPU 周期，并且当同步机制可用时，需要若干周期来解锁。因此，如果使用内核同步机制来保护如向写入缓冲区或执行网络往返等耗时操作，这种开销是可以忽略不计的；但如果使用内核同步机制来保护像`+++`这样的操作，这种开销就会引入不必要的成本。
 
 Windows 和 .NET 为应用程序提供的同步机制主要区别在于它们的获取和释放语义，也称为它们的信号状态。当同步机制变为信号状态（signaled）时，它会唤醒等待其可用的线程（或一组线程）。以下是 .NET 应用程序当前可用的某些同步机制的信号语义：
 
@@ -4754,11 +4802,11 @@ Windows 和 .NET 为应用程序提供的同步机制主要区别在于它们的
 
 | 同步机制 | 何时变为信号状态？ | 哪些线程被唤醒？ |
 |---|---|---|
-| Mutex | 当线程调用 `Mutex` 时 | 等待互斥锁的线程 |
-| Semaphore | 当线程调用 `Semaphore.Release` 时 | 等待信号量的线程 |
-| ManualResetEvent | 当线程调用 `ManualResetEvent.Set` 时 | 等待事件的线程 |
-| AutoResetEvent | 当线程调用 `AutoResetEvent.Set` 时 | 等待事件的线程 |
-| Monitor | 当线程调用 `Monitor.Exit` 时 | 等待显示器的线程 |
+| Mutex | 当线程调用`Mutex`时 | 等待互斥锁的线程 |
+| Semaphore | 当线程调用`Semaphore.Release`时 | 等待信号量的线程 |
+| ManualResetEvent | 当线程调用`ManualResetEvent.Set`时 | 等待事件的线程 |
+| AutoResetEvent | 当线程调用`AutoResetEvent.Set`时 | 等待事件的线程 |
+| Monitor | 当线程调用`Monitor.Exit`时 | 等待显示器的线程 |
 
 # 第 6 章 并发与并行
 
@@ -4766,7 +4814,7 @@ Windows 和 .NET 为应用程序提供的同步机制主要区别在于它们的
 
 | 同步机制 | 何时变为信号状态？ | 哪些线程被唤醒？ |
 | --- |---|---|
-| Barrier | 当参与的线程都调用 `Barrier.SignalAndWait` 时 | 等待屏障的 |
+| Barrier | 当参与的线程都调用`Barrier.SignalAndWait`时 | 等待屏障的 |
 | ReaderWriterLock—for reading | 当没有写入线程，或最后一个写入线程释放锁时 | 等待读取锁的线程 |
 | ReaderWriterLock—for writing | 当没有读取线程时 | 等待写入锁的线程 |
 
@@ -4824,17 +4872,13 @@ public static int MatrixParallel(int[,] matrix) {
 
 这显然是不可接受的，但为什么呢？这并不是另一个细粒度并行的例子，因为线程只有 4 个。如果你接受这个问题与缓存有关（因为这个示例出现在缓存考虑章节），那么测量缓存缺失的次数是有意义的。Visual Studio 性能分析器（每发生 2000 次缓存缺失采样一次）并行版本报告了 963 次独占样本，而顺序版本仅报告 67 次独占样本，其中大多数样本位于读取矩阵的内部循环中。
 
-
-
-
-
 # 第 6 章并发与并行
 
-正如第 5 章所述，处理器缓存是以缓存行（cache lines）为单位组织的，相邻的内存位置共享同一个缓存行。当一个处理器写入另一个处理器缓存中的内存位置时，硬件会导致缓存失效（cache invalidation），将另一个处理器缓存中的该缓存行标记为无效。访问无效的行行会导致缓存缺失。在上面的上面的示例中，整个 `localSums` 数组很可能完全放入一个缓存行内，并同时存在于执行应用程序线程的全部四个处理器的缓存中。即使在任何一个处理器上对数组的任何元素执行操作，也会导致其他处理器的缓存行失效，引起缓存失效的频繁“乒乓”效应（见图 6-10）。
+正如第 5 章所述，处理器缓存是以缓存行（cache lines）为单位组织的，相邻的内存位置共享同一个缓存行。当一个处理器写入另一个处理器缓存中的内存位置时，硬件会导致缓存失效（cache invalidation），将另一个处理器缓存中的该缓存行标记为无效。访问无效的行行会导致缓存缺失。在上面的上面的示例中，整个`localSums`数组很可能完全放入一个缓存行内，并同时存在于执行应用程序线程的全部四个处理器的缓存中。即使在任何一个处理器上对数组的任何元素执行操作，也会导致其他处理器的缓存行失效，引起缓存失效的频繁“乒乓”效应（见图 6-10）。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_205_0.png)
 
-**图 6-10。** CPU 1 写入 localSums[1] 的同时，CPU 2 写入 localSums[2]。由于这两个数组元素是相邻的并且在两个处理器的缓存中都位于同一个缓存行，因此此类每次写入会导致另一个处理器的缓存失效。
+**图 6-10.** CPU 1 写入 localSums[1] 的同时，CPU 2 写入 localSums[2]。由于这两个数组元素是相邻的并且在两个处理器的缓存中都位于同一个缓存行，因此此类每次写入会导致另一个处理器的缓存失效。
 
 为了确保该问题完全与缓存失效有关，可以将数组的步长（strides）做得足够大以免发生缓存失效，或者将对数组的直接写入替换为对每个线程本地变量的写入，并在线程完成后将其刷新到数组。这两种优化中的任何一种都能恢复世界的正常，并让并行版本在足够数量的核心数上比顺序版本更快。
 
@@ -4888,7 +4932,6 @@ void VectorAddExpPointwise(float* first, float* second, float* result, int len) 
 #include <amp.h>
 #include <math.h>
 using namespace std::experimental::concurrency;
-
 void VectorAddExpPointwise(float* first, float* second, float* result, int len) {
   array_view<const float, int> aFirst(len, first);
   array_view<const float, int> aSecond(len, second);
@@ -4901,10 +4944,6 @@ void VectorAddExpPointwise(float* first, float* second, float* result, int len) 
 ```
 
 接下来，传递给方法的原始数据（first、second 和 result 参数）已被封装在 `array_view` 类中，该类必须移动到加速器中。它的模板参数是数据类型和维度。如果我们想要 GPU 执行指令
-
-
-
-
 
 ## 第 6 章 并发与并行
 
@@ -4926,7 +4965,12 @@ lambda 函数的参数是一个索引 `<I>`，它代表一个一维索引。如�
 
 ```cpp
 void matrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
-  for (int i = 0; i < m; i++) {
+```
+
+
+
+```cpp
+for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
       int sum = 0;
       for (int k = 0; k < w; k++) {
@@ -4934,7 +4978,6 @@ void matrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
       }
       C[i*n+j] = sum;
     }
-  }
 }
 ```
 
@@ -4945,7 +4988,7 @@ void matrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
   array_view<const int, 2> avA(m, w, A);
   array_view<const int, 2> avB(w, n, B);
   array_view<int> avC(m, n, C);
-  avC.discard(data());
+  avC.discard_data();
   parallel_for_each(avC.extent(), [=](index<2> idx) restrict(amp) {
     int sum = 0;
     for (int k = 0; k<w; ++k) {
@@ -4956,19 +4999,15 @@ void matrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
 }
 ```
 
-一切仍然与顺序乘法以及我们之前看到的向量加法示例非常相似——除了索引是二维的，并且内层循环使用 `[]` 运算符进行访问。这个版本与 CPU 替代方案相比如何？为了乘以 1024×1024 的（整数）矩阵，CPU 版本平均需要 7350 ms，而 GPU 版本——平均平均仅需 50 ms，提升了 147 倍！
+一切仍然与顺序乘法以及我们之前看到的向量加法示例非常相似——除了索引是二维的，并且内层循环使用 `[]` 运算符进行访问。这个版本与 CPU 替代方案相比如何？为了乘以 `1024×1024` 的（整数）矩阵，CPU 版本平均需要 `7350 ms`，而 GPU 版本——平均平均仅需 `50 ms`，提升了 `147` 倍！
 
 ## N 体模拟
 
 我们到为止看到的示例在调度到 GPU 上的内层循环非常复杂。显然，情况并不总是如此。我们引用的 Native Concurrency 团队博客上的一个示例展示了 N 体模拟，它模拟了粒子之间受到重力作用的相互作用。模拟无限数量的步骤；在每一步中，它必须处理这些相互作用。由于 GPU 并行化的优势，这种模拟在 GPU 上运行会非常有意义。
 
-
-
-
-
 ## 第 6 章 并发与并行
 
-（结果矩阵），我们必须找到 $A_i$（第一个矩阵的第 $i$ 行）与 $B_{sj}$ 之间的标量积。然而，这等相当于找到部分行和部分列的标量积并将结果相加。我们可以借此将矩阵乘法转换为下面的算法：
+（结果矩阵），我们必须找到 `$A_i$`（第一个矩阵的第 `$i$` 行）与 `$B_{sj}$` 之间的标量积。然而，这等相当于找到部分行和部分列的标量积并将结果相加。我们可以借此将矩阵乘法转换为下面的算法：
 
 ```cpp
 void MatrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
@@ -4988,26 +5027,27 @@ void MatrixMultiply(int* A, int m, int w, int* B, int n, int* C) {
                 sum += localA[localRow][t]*localB[t][localCol];
             }
         }
-        idx.barrier.wait(); //避免下一次迭代覆盖共享内存
+        idx.barrier.wait();
         avC[idx.global] = sum;
     });
+}
 ```
 
-分块优化（tiled optimization）的本质在于每个线程读取一个分块（共有 256 个线程，分块大小为 16×16），并在来自 $A$ 和 $B$ 输入矩阵的 16×16 子块副本中初始化它自己的元素（见图 6-13）。分块中的每个线程只需要这些子块的一行一列，但所有线程共同访问每行 16 次、每列 16 次，从而显著减少了主内存的访问次数。
+分块优化（tiled optimization）的本质在于每个线程读取一个分块（共有 256 个线程，分块大小为 `16×16`），并在来自 `$A$` 和 `$B$` 输入矩阵的 `16×16` 子块副本中初始化它自己的元素（见图 6-13）。分块中的每个线程只需要这些子块的一行一列，但所有线程共同访问每行 16 次、每列 16 次，从而显著减少了主内存的访问次数。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_213_0.png)
 
-**图 6-13.** 为了找到结果矩阵中的元素 (i,j)，算法需要第一个矩阵的整个第 $i$ 行和第二个矩阵的第 $j$ 列。当图中所示的 $16 \times 16$ 分块中的线程执行且 $k=0$ 时，第一两个矩阵中的阴影区域将被读取到共享内存中。负责结果矩阵中 (i,j) 元素的线程将获得第 $i$ 行前 $k$ 个元素与第 $j$ 行前 $k$ 个元素的部分标量积。
+**图 6-13.** 为了找到结果矩阵中的元素 `(i,j)`，算法需要第一个矩阵的整个第 `$i$` 行和第二个矩阵的第 `$j$` 列。当图中所示的 `16 × 16` 分块中的线程执行且 `k=0` 时，第一两个矩阵中的阴影区域将被读取到共享内存中。负责结果矩阵中 `(i,j)` 元素的线程将获得第 `$i$` 行前 `$k$` 个元素与第 `$j$` 行前 `$k$` 个元素的部分标量积。
 
-在这种情况下，分块是一种非常值得的优化。分块版本的矩阵乘法执行速度远快于简单版本，使用相同的 $1024 \times 1024$ 矩阵，平均需要 17 毫秒完成。与 CPU 版本相比，这实现了 430 倍的加速！
+在这种情况下，分块是一种非常值得的优化。分块版本的矩阵乘法执行速度远快于简单版本，使用相同的 `1024 × 1024` 矩阵，平均需要 `17` 毫秒完成。与 CPU 版本相比，这实现了 `430` 倍的加速！
 
-在我们开始 C++ AMP 之前，有必要提到 C++ AMP 开发者可用的开发工具（Visual Studio）。Visual Studio 2012 具有 GPU 调试器，你可以用它在 GPU 内核中设置断点、检查模拟调用堆栈、读取和修改局部变量（某些加速器支持 GPU 调试；对于另一些，Visual Studio 使用软件模拟器），以及一个性能分析器，用于衡量你的应用程序从 GPU 并行化中获得了什么。有关 Visual Studio 调试体验的更多信息，请参阅 MSDN 文章“Walkthrough: Debugging a C++ AMP Application”，地址：http://msdn.microsoft.com/en-us/library/hj36288(v=VS.10).aspx。
+在我们开始 C++ AMP 之前，有必要提到 C++ AMP 开发者可用的开发工具（Visual Studio）。Visual Studio 2012 具有 GPU 调试器，你可以用它在 GPU 内核中设置断点、检查模拟调用堆栈、读取和修改局部变量（某些加速器支持 GPU 调试；对于另一些，Visual Studio 使用软件模拟器），以及一个性能分析器，用于衡量你的应用程序从 GPU 并行化中获得了什么。有关 Visual Studio 调试体验的更多信息，请参阅 MSDN 文章“Walkthrough: Debugging a C++ AMP Application”，地址：`http://msdn.microsoft.com/en-us/library/hj36288(v=VS.10).aspx`。
 
 ## GPU 计算的 .NET 替代方案
 
 尽管到为止本节专门讨论了 C++，但从托管程序利用 GPU 力量方面还有许多选择。一种方法是使用托管-原生互操作性（在第 8 章中讨论），推迟到原生 C++ 组件来实现 GPU 内核。如果你喜欢原生的 C++ AMP，或者有一个在托管应用和原生应用中都使用的复用 C++ AMP 组件，那么这是一个合理的选择。
 
-另一个选项是使用直接从托管代码直接与 GPU 工作的库。目前有几个此类库，例如 GPU.NET 和 CUDA.NET（带有商业版本）。这里是来自 GPU.NET GitHub 仓库的一个示例，演示了两个向量的标量积：
+另一个选项是使用直接从托管代码直接与 GPU 工作的库。目前有几个此类库，例如 `GPU.NET` 和 `CUDA.NET`（带有商业版本）。这里是来自 `GPU.NET` GitHub 仓库的一个示例，演示了两个向量的标量积：
 
 ```csharp
 [Kernel]
@@ -5021,10 +5061,6 @@ public static void MultiplyAddGpu(double[] a, double[] b, double[] c) {
 ```
 
 在作者看来，与纯粹在库级别尝试弥补差距相比，C++ AMP 方法更有效且更容易学习。
-
-
-
-
 
 ## 第 7 章 网络、I/O 与序列化
 
@@ -5046,7 +5082,7 @@ Windows I/O 系统（包括设备驱动程序）在内部是异步的——当 I
 
 # I/O 完成端口
 
-Windows 提供了一种高效的异步 I/O 完成通知机制，称为 I/O 完成端口 (IOCP)。它暴露给 .NET `ThreadPool` 的 `BindHandle` 方法。多个处理 I/O 的 .NET 类型在内部利用了此功能：FileStream、Socket、TcpPort、HttpClient、PipeStream 以及某些 .NET 管道。
+Windows 提供了一种高效的异步 I/O 完成通知机制，称为 I/O 完成端口 (`IOCP`)。它暴露给 .NET `ThreadPool` 的 `BindHandle` 方法。多个处理 I/O 的 .NET 类型在内部利用了此功能：`FileStream`、`Socket`、`TcpPort`、`HttpClient`、`PipeStream` 以及某些 .NET 管道。
 
 一个 IOCP（见图 7-2）与零或多个重叠模式下的 I/O 句柄（套接、文件和特殊设备对象）以及用户创建的线程关联。一旦关联的 I/O 句柄的 I/O 操作完成，Windows 将完成通知执行到相应的 IOCP，由关联的线程处理该完成通知。通过拥有完成服务的线程池并智能地控制线程唤醒，减少了上下文切换并最大化了多处理器并发性。高性能服务器（如 Microsoft SQL Server）使用 I/O 完成端口并不令人意外。
 
@@ -5066,7 +5102,7 @@ Windows 提供了一种高效的异步 I/O 完成通知机制，称为 I/O 完�
 
 如果正在进行的操作不多，我们调用 `CreateFile` 并指定原生重叠计数。否则，我们等待直到事件变为信号化，表示挂起的 I/O 操作已降至限制以下。
 
-I/O 完成的 WriteComplete 由 .NET I/O 完成线程池在 I/O 完成时调用。它返回一个指向重叠结构的指针，可以将其解包以转换回托管重叠结构。
+I/O 完成的 `WriteComplete` 由 .NET I/O 完成线程池在 I/O 完成时调用。它返回一个指向重叠结构的指针，可以将其解包以转换回托管重叠结构。
 
 ```csharp
 using System;
@@ -5123,23 +5159,32 @@ enum EAccess : uint {
 }
 
 static long _numBytesWritten;
-static AutoResetEvent _waterMarkFullEvent; // throttles writer thread
+static AutoResetEvent _waterMarkFullEvent;
 static int _pendingIosCount;
 const int MaxPendingIos = 10;
 
-// Completion routine called by .NET I/O completion threads
 static unsafe void WriteComplete(uint errorCode, uint numBytes, NativeOverlapped* pOVERLAP) {
     _numBytesWritten += numBytes;
-    Overlapped ovl = Overlapped.Unpack(pOVERLAP);
-    //Notify writer thread that pending I/O fell below watermark
-    if (Interlocked.Decrement(ref _pendingIosCount) < MaxPendingIos) {
-        _waterMarkFullEvent.Set();
-    }
-}
+```
 
+
+
+## 第 7 章 网络、I/O 与序列化
+
+```csharp
+Overlapped ovl = Overlapped.Unpack(pOVERLAP);
+
+//Notify writer thread that pending I/O fell below watermark
+
+if (Interlocked.Decrement(ref _pendingIosCount) < MaxPendingIos) {
+    _waterMarkFullEvent.Set();
+}
+```
+
+```csharp
 static unsafe void TestIOCP() {
     //Open file in overlapped mode
-    var handle = CreateFile("F:\largefile.bin",
+    var handle = CreateFile("F:\\largefile.bin",
         EAccess.GenericRead | EAccess.GenericWrite,
         FileShare.Read | FileShare.Write,
         IntPtr.Zero,
@@ -5149,30 +5194,33 @@ static unsafe void TestIOCP() {
 }
 ```
 
+`IntPtr.Zero`, `ECreationDisposition.CreateAlways`,
+`FileAttributes.Normal | EFileAttributes.Overlapped`, `IntPtr.Zero`);
 
+`.waterMarkFullEvent = new AutoResetEvent(false);`
+`ThreadPool.BindHandle(handle);`
 
-
-## 第 7 章 网络、I/O 与序列化
-
-IntPtr.Zero, ECreationDisposition.CreateAlways,
-FileAttributes.Normal | EFileAttributes.Overlapped, IntPtr.Zero);
-
-.waterMarkFullEvent = new AutoResetEvent(false);
-ThreadPool.BindHandle(handle);
-
+```csharp
 for (int k=0; k<100000; k++) {
     byte[] fbuffer = new byte[4096];
+}
+```
 
 ```c
 //参数: 文件偏移量低位与高位，事件句柄，IAsyncResult 对象
+
 Overlapped ovil = new Overlapped(0, 0, IntPtr.Zero, null);
+
 // CLR 负责固定缓冲区
+
 NativeOverlapped* pOvl = Pack(WriteComplete, fbuffer);
+
 uint bytesWritten;
 ```
 
 ```c
 // 检查是否有过多的挂起 I/O 请求
+
 if (Interlocked.Increment(ref _pendingIoCount) < MaxPendingIos) {
     if (WriteFile(handle, fbuffer, (uint)fbuffer.Length, numBytesWritten,
     pOOvl())) {
@@ -5197,67 +5245,62 @@ if (Marshal.LastWin32Error() != ERROR_IO_PENDING) {
 }
 ```
 
-总结一下，处理高吞吐量 I/O 设备时，请使用重叠端口（overlapped ports），可以直接在非托管库中创建并使用你自己的连接池，或者通过 ThreadPool.BindHandle 将 Win32 句柄与 .NET 连接关联。
+总结一下，处理高吞吐量 I/O 设备时，请使用重叠端口（overlapped ports），可以直接在非托管库中创建并使用你自己的连接池，或者通过 `ThreadPool.BindHandle` 将 Win32 句柄与 .NET 连接关联。
 
-## NET 线程池
+### NET 线程池
 
-NET Thread Pool 用于许多用途，每个用途由不同类型的线程提供。第 6 章展示了我们使用的线程池 API，用于利用线程池并行化 CPU 密集型计算的能力。然而，线程池还适用于许多类型的工作：
+`NET Thread Pool` 用于许多用途，每个用途由不同类型的线程提供。第 6 章展示了我们使用的线程池 API，用于利用线程池并行化 CPU 密集型计算的能力。然而，线程池还适用于许多类型的工作：
 
--   工作线程（Worker threads）处理委托的异步调用（例如 BeginInvoke 和 ThreadPool.QueueUserItem）。
--   I/O 完成线程（I/O completion threads）处理全局 IOCP 的完成操作。
--   等待线程（Waits）处理注册的等待器。注册等待通过将多个等待合并为了一个等待（WaitForMultipleObjects）来节省线程，最多达到 Windows 限制（MAX_WAIT_OBJECTS=64）。注册等待用于不使用 I/O 完成的重叠 I/O。
--   定时器线程（Timer thread）合并对多个计时器的等待。
--   门控线程（Gate thread）监控线程池线程的 CPU 使用情况，并根据预设限制增加或减少线程数以获得最佳性能。
+- `工作线程（Worker threads）` 处理委托的异步调用（例如 `BeginInvoke` 和 `ThreadPool.QueueUserItem`）。
+- `I/O 完成线程（I/O completion threads）` 处理全局 IOCP 的完成操作。
+- `等待线程（Waits）` 处理注册的等待器。注册等待通过将多个等待合并为了一个等待（`WaitForMultipleObjects`）来节省线程，最多达到 Windows 限制（`MAX_WAIT_OBJECTS=64`）。注册等待用于不使用 I/O 完成的重叠 I/O。
+- `定时器线程（Timer thread）` 合并对多个计时器的等待。
+- `门控线程（Gate thread）` 监控线程池线程的 CPU 使用情况，并根据预设限制增加或减少线程数以获得最佳性能。
 
-> **注意** 你可以发布一个看起来可能是异步的 I/O 操作，尽管它实际上并不是异步。例如，在委托上调用 ThreadPool.QueueUserItem 然后执行同步 I/O 操作，并不会使其真正变成异步，其效果与在普通线程上执行该操作没有区别。
+> **注意** 你可以发布一个看起来可能是异步的 I/O 操作，尽管它实际上并不是异步。例如，在委托上调用 `ThreadPool.QueueUserItem` 然后执行同步 I/O 操作，并不会使其真正变成异步，其效果与在普通线程上执行该操作没有区别。
 
-## 内存拷贝
+### 内存拷贝
 
 通常，从硬件设备接收到的数据缓冲区会被复制，直到应用程序完成对其的处理。拷贝可能会成为 CPU 开销的重大来源，因此在高吞吐量 I/O 代码路径中应尽量避免。我们现在调查你拷贝数据的场景以及如何避免它。
 
-## 非托管内存
+### 非托管内存
 
 在 .NET 中，处理非托管内存缓冲区比处理托管数组 `[]` 复杂得多，因此程序员往往采取简单捷径，直接将缓冲区拷贝到托管内存中。
-如果你的 API 或库允许你拥有缓冲区或具有用户定义的分配器，请管理缓冲区并固定（pin）它，以便可以通过指针和托管引用来访问它。如果缓冲区很大（>85,000 字节），它将分配在大对象堆（Large Object Heap）中，以便重用缓冲区。在其他情况下，非托管库允许你通过指针（unsafe）访问非托管内存，如 UnmanagedStream 或 UnmanagedAccessor。如果重叠 I/O 不使用 I/O 完成，拷贝是不可避免的。
+如果你的 API 或库允许你拥有缓冲区或具有用户定义的分配器，请管理缓冲区并固定（pin）它，以便可以通过指针和托管引用来访问它。如果缓冲区很大（>85,000 字节），它将分配在大对象堆（Large Object Heap）中，以便重用缓冲区。在其他情况下，非托管库允许你通过指针（unsafe）访问非托管内存，如 `UnmanagedStream` 或 `UnmanagedAccessor`。如果重叠 I/O 不使用 I/O 完成，拷贝是不可避免的。
 即使是重叠 I/O，通过检查某些数据 `[]` 来避免不必要的拷贝也是可能的。
 
-## 暴露缓冲区的一部分
+### 暴露缓冲区的一部分
 
 正如第 8 章所解释的，为了避免不必要的拷贝，使用偏移量和长度参数 `[]`。这种场景通常假设 `[]` 包含了从开始到结束的数据。这种情况下情况下 `[]` 必须是连续的。
 
-## 离散聚集 I/O (Scatter-Gather I/O)
+### 离散聚集 I/O (Scatter-Gather I/O)
 
-离散聚集是一项允许从一组非连续的内存位置进行 I/O 传输，就像它们是连续的一样。Win32 通过 ReadFileScatter 和ToFile 暴露了这种能力。Windows Socket 也通过其函数 WSASend、WSARv 支持离散聚集。离散聚集在以下场景中有用：
+离散聚集是一项允许从一组非连续的内存位置进行 I/O 传输，就像它们是连续的一样。Win32 通过 `ReadFileScatter` 和 `ToFile` 暴露了这种能力。Windows Socket 也通过其函数 `WSASend`、`WSARv` 支持离散聚集。离散聚集在以下场景中有用：
 
--   你需要在 payload 前部有一个固定头部。这为你节省了每次都拷贝缓冲区。
--   你想通过在一个系统调用中对多个缓冲区执行 I/O 来节省系统调用开销。
+- 你需要在 payload 前部有一个固定头部。这为你节省了每次都拷贝缓冲区。
+- 你想通过在一个系统调用中对多个缓冲区执行 I/O 来节省系统调用开销。
 
-尽管 ReadFileScatter 和 WriteFileGather 有局限，因为每个缓冲区必须是系统大小且句柄是重叠且缓冲的（增加了更多限制），但基于 Socket 的离散聚集更为实用。.NET Framework 通过 Socket 的 Send 和 Receive 重载暴露了离散聚集，但通用的离散聚集函数尚未暴露。离散聚集的一个示例是通过 HttpRequest。它将 HTTP 头部与负载合并，无需构建连续的缓冲区。
+尽管 `ReadFileScatter` 和 `WriteFileGather` 有局限，因为每个缓冲区必须是系统大小且句柄是重叠且缓冲的（增加了更多限制），但基于 Socket 的离散聚集更为实用。.NET Framework 通过 `Socket` 的 `Send` 和 `Receive` 重载暴露了离散聚集，但通用的离散聚集函数尚未暴露。离散聚集的一个示例是通过 `HttpRequest`。它将 HTTP 头部与负载合并，无需构建连续的缓冲区。
 
-## 文件 I/O
+### 文件 I/O
 
 通常，文件 I/O 通过文件系统缓存，这具有某些性能优势：最近访问数据的缓存、预读（推测性预取磁盘）、后写（异步将数据写入磁盘）以及小写合并。如果告知 Windows 你预期的访问模式，你可以获得更好的性能。如果你的应用程序重叠 I/O 并且能够智能地处理复杂的缓冲区，那么完全跳过可能会更高效。
 
-## 缓存提示
+### 缓存提示
 
-在打开文件时，你向 CreateFile Win32 API 函数指定标志和属性，其中某些会影响缓存行为：
+在打开文件时，你向 `CreateFile` Win32 API 函数指定标志和属性，其中某些会影响缓存行为：
 
--   FILE_FLAG_SEQUENTIAL_SCAN 提示缓存管理器文件是顺序访问的，可能会跳过某些部分，但不是随机访问。缓存会预读更多。
--   FILE_FLAG_RANDOM_ACCESS 提示文件是随机顺序访问的，因此缓存管理器预读较少，因为应用程序不太可能请求这些数据。
--   FILE_ATTRIBUTE_TEMPORARY 提示文件是临时的，刷新磁盘的刷新（以防止数据丢失）可以延迟。NET 通过接受 FileOptions 参数的 FileStream 构造函数重载暴露了这些选项（除最后一个外）。
+- `FILE_FLAG_SEQUENTIAL_SCAN` 提示缓存管理器文件是顺序访问的，可能会跳过某些部分，但不是随机访问。缓存会预读更多。
+- `FILE_FLAG_RANDOM_ACCESS` 提示文件是随机顺序访问的，因此缓存管理器预读较少，因为应用程序不太可能请求这些数据。
+- `FILE_ATTRIBUTE_TEMPORARY` 提示文件是临时的，刷新磁盘的刷新（以防止数据丢失）可以延迟。NET 通过接受 `FileOptions` 参数的 `FileStream` 构造函数重载暴露了这些选项（除最后一个外）。
 
-
-
-
-
-```markdown
 # 无缓冲 I/O (Unbuffered I/O)
 
 无缓冲 I/O 完全跳过了 Windows 缓存。这既有优点也有缺点。与缓存提示类似，无缓冲 I/O 在创建时通过“标志和属性”参数启用，.NET 并没有暴露此功能：
 
-- FILE_FLAG_NO_BUFFERING 防止读取或写入的数据被缓存，但对磁盘控制器的硬件缓存没有影响。这避免了内存拷贝（从用户态缓冲区到缓存）并防止了缓存污染（以牺牲更重要数据为代价用无用数据填充缓存）。然而，读取和写入必须遵守对齐要求。以下参数必须对齐，或者其大小是磁盘扇区大小的整数倍：512 字节传输、文件偏移和内存缓冲区地址。通常，磁盘扇区长度为 512 字节。高容量磁盘驱动器具有 4096 字节（称为“高级格式”，但它们可以在兼容模式下运行，模拟 512 字节扇区（以牺牲性能为代价）。
+- `FILE_FLAG_NO_BUFFERING` 防止读取或写入的数据被缓存，但对磁盘控制器的硬件缓存没有影响。这避免了内存拷贝（从用户态缓冲区到缓存）并防止了缓存污染（以牺牲更重要数据为代价用无用数据填充缓存）。然而，读取和写入必须遵守对齐要求。以下参数必须对齐，或者其大小是磁盘扇区大小的整数倍：512 字节传输、文件偏移和内存缓冲区地址。通常，磁盘扇区长度为 512 字节。高容量磁盘驱动器具有 4096 字节（称为“高级格式”，但它们可以在兼容模式下运行，模拟 512 字节扇区（以牺牲性能为代价）。
 
-- FILE_FLAG_WRITE_THROUGH 指令缓存管理器（如果没有指定 FILE_FLAG_NO_BUFFERING）指示磁盘控制器立即提交到物理介质，而不是存储在硬件缓存中。
+- `FILE_FLAG_WRITE_THROUGH` 指令缓存管理器（如果没有指定 `FILE_FLAG_NO_BUFFERING`）指示磁盘控制器立即提交到物理介质，而不是存储在硬件缓存中。
 
 预读（Read-ahead）通过保持磁盘利用率来提高性能，即使应用程序是同步的且读取之间存在延迟。这取决于 Windows 能否正确预测应用程序将请求文件的哪个部分。通过缓冲，你还会禁用预读，并且可以通过运行多个重叠的 I/O 操作来保持磁盘忙碌。
 
@@ -5285,7 +5328,7 @@ NET Thread Pool 用于许多用途，每个用途由不同类型的线程提供�
 
 流式不仅用于视频和音频，还可以用于消息传递。通过流式，应用程序在数据完成之前就开始通过网络发送数据。流式减少了延迟并提高了通道利用率。
 
-例如，如果服务器从数据库获取数据以响应请求，它可以一次性读取到一个 DataSet 中（这会消耗大量内存），或者它可以使用 DataReader 逐条检索记录。在前种方法中，服务器必须等待整个数据集到达后才能开始向客户端发送响应；而在后一种方法中，一旦第一条数据库记录到达，服务器就可以开始发送响应。
+例如，如果服务器从数据库获取数据以响应请求，它可以一次性读取到一个 `DataSet` 中（这会消耗大量内存），或者它可以使用 `DataReader` 逐条检索记录。在前种方法中，服务器必须等待整个数据集到达后才能开始向客户端发送响应；而在后一种方法中，一旦第一条数据库记录到达，服务器就可以开始发送响应。
 
 # 消息分块 (Message Chunking)
 
@@ -5304,9 +5347,7 @@ NET Thread Pool 用于许多用途，每个用途由不同类型的线程提供�
 网络带宽通常是受限的资源，拥有浪费的消息格式对性能没有帮助。以下是优化消息格式的几个技巧：
 
 - 在传输数据时不要过度传输头部，保持头部较小。
-
 - 使用智能编码以填充缓冲区，例如，UTF-8 而不是 UTF-16。
-
 - 使用压缩处理数据，如文本。
 
 # 套接字 (Sockets)
@@ -5315,11 +5356,11 @@ Socket API 是应用程序处理 TCP 和 UDP 的标准。最初，Socket API 引
 
 # 异步套接字 (Asynchronous Sockets)
 
-.NET 通过 Socket 类支持异步 I/O。然而，有两类异步 API：BegXXX 和 XXXAsync，其中 XXX 代表 Accept、Connect、Receive、Send 等。前者使用 .NET 线程池的回调等待重叠 I/O 完成，而后者使用 I/O 完成端口，性能更好。后期 API 引入于 .NET Framework 2.0。
+.NET 通过 `Socket` 类支持异步 I/O。然而，有两类异步 API：`BegXXX` 和 `XXXAsync`，其中 XXX 代表 `Accept`、`Connect`、`Receive`、`Send` 等。前者使用 .NET 线程池的回调等待重叠 I/O 完成，而后者使用 I/O 完成端口，性能更好。后期 API 引入于 .NET Framework 2.0。
 
 # 套接字缓冲区 (Socket Buffers)
 
-Socket 对象暴露两个缓冲区大小：ReceiveBufferSize 和 SendBufferSize，它们指定由 TCP/IP 栈分配的缓冲区大小。默认设置为 8192 字节。接收缓冲区用于存储尚未被应用程序读取的数据。发送缓冲区用于存储尚未被接收端确认的数据。如果接收端需要重传数据，将从发送缓冲区重传。
+Socket 对象暴露两个缓冲区大小：`ReceiveBufferSize` 和 `SendBufferSize`，它们指定由 TCP/IP 栈分配的缓冲区大小。默认设置为 8192 字节。接收缓冲区用于存储尚未被应用程序读取的数据。发送缓冲区用于存储尚未被接收端确认的数据。如果接收端需要重传数据，将从发送缓冲区重传。
 
 当应用程序从 Socket 读取数据时，它会根据读取量减少接收缓冲区。当接收缓冲区为空时，调用将阻塞或挂起，取决于使用的是同步还是异步 I/O。
 
@@ -5329,9 +5370,7 @@ Socket 对象暴露两个缓冲区大小：ReceiveBufferSize 和 SendBufferSize�
 
 # Nagel 算法 (Nagle’s Algorithm)
 
-如前所述，小数据包是浪费的，因为数据头部相对于有效负载可能很大。Nagel 算法通过将多次写入合并为完整数据包的数据来提高 TCP 的性能。然而，这种服务并非免费，因为它在发送之前引入了延迟。延迟敏感型应用程序应该通过设置 Socket.NoDelay 属性为 true 来禁用 Nagel 算法。编写良好的应用程序会一次发送大缓冲区，而不会从 Nagel 算法中受益。
-```
-
+如前所述，小数据包是浪费的，因为数据头部相对于有效负载可能很大。Nagel 算法通过将多次写入合并为完整数据包的数据来提高 TCP 的性能。然而，这种服务并非免费，因为它在发送之前引入了延迟。延迟敏感型应用程序应该通过设置 `Socket.NoDelay` 属性为 true 来禁用 Nagel 算法。编写良好的应用程序会一次发送大缓冲区，而不会从 Nagel 算法中受益。
 
 
 
@@ -5365,39 +5404,39 @@ RIO 支持三种通知机制：
 
 首先，我们查看可用的序列化器：
 
-- System.Xml.Serialization.XmlSerializer
+- `System.Xml.Serialization.XmlSerializer`
 - 序列化为 XML、文本或二进制。
 - 支持子对象，但不支持循环引用。
 - 仅对公共字段和属性有效，除非显式排除。
-- 仅使用一次反射生成序列化程序集，以实现高效操作。可以使用 sgen.exe 工具预创建序列化程序集。
+- 仅使用一次反射生成序列化程序集，以实现高效操作。可以使用 `sgen.exe` 工具预创建序列化程序集。
 - 允许自定义 XML Schema。
 - 需要预先知道所有参与序列化的类型：在使用继承类型时会自动推断信息。
 
-- System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+- `System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`
 - 序列化为专用二进制格式，仅供 .NET 消费。
 - 用于 .NET Remoting，也可以单独用于通用序列化。
 - 适用于公共和非公共字段。
 - 处理循环引用。
 - 不需要预先知道要序列化的类型。
-- 通过应用 [Serializable] 属性将类型标记为可序列化。
+- 通过应用 `[Serializable]` 属性将类型标记为可序列化。
 
-- System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-- 功能类似于 BinaryFormatter，但序列化为 SOAP 格式，更紧凑。
--不支持泛型和泛型集合，因此在 .NET Framework 的最新版本中被弃用。
+- `System.Runtime.Serialization.Formatters.Soap.SoapFormatter`
+- 功能类似于 `BinaryFormatter`，但序列化为 SOAP 格式，更紧凑。
+- 不支持泛型和泛型集合，因此在 .NET Framework 的最新版本中被弃用。
 
-- System.Runtime.Serialization.DataContractSerializer
+- `System.Runtime.Serialization.DataContractSerializer`
 - 序列化为 XML、文本或二进制。
 - 用于 WCF，也可以单独用于通用序列化。
-- 通过使用 [DataContract] 和 [DataMember] 属性对类型和字段进行选择包含：如果类标记为 [Serializable]，则所有字段都会序列化。
+- 通过使用 `[DataContract]` 和 `[DataMember]` 属性对类型和字段进行选择包含：如果类标记为 `[Serializable]`，则所有字段都会序列化。
 - 需要预先知道所有参与序列化的类型：在使用继承类型时会自动推断信息。
 
-- System.Runtime.Serialization.NetDataContractSerializer
-- 类似于 DataContractSerializer，但在序列化数据中嵌入了 .NET 特有的类型信息。
+- `System.Runtime.Serialization.NetDataContractSerializer`
+- 类似于 `DataContractSerializer`，但在序列化数据中嵌入了 .NET 特有的类型信息。
 - 不需要预先知道序列化的类型。
 - 需要包含序列化类型的程序集。
 
-- System.Runtime.Serialization.DataContractJsonSerializer
-- 类似于 DataContractSerializer，但序列化为 JSON 格式而非 XML 格式。
+- `System.Runtime.Serialization.DataContractJsonSerializer`
+- 类似于 `DataContractSerializer`，但序列化为 JSON 格式而非 XML 格式。
 
 图 7-3 显示了上述序列化器的测试结果。某些序列化器在 XML 输出和二进制输出方面的速度快一倍。基准测试涉及复杂对象图的序列化和反序列化，该图包含 3600 个具有树引用模式的实例。每个类型包含字符串字段及其数组。没有出现循环引用，因为并不是所有的序列化器都支持它们；然而，支持引用的序列化器在存在引用时运行慢得多。
 
@@ -5407,23 +5446,23 @@ RIO 支持三种通知机制：
 
 此处显示的测试结果是在 .NET Framework 4.5 上运行的，对于使用二进制 XML 的测试，它比 .NET Framework 3.5 有所提高，否则没有显著差异。
 
-测试结果显示，使用二进制 XML 格式的 DataContractSerializer 和 XmlSerializer 整体最快。
+测试结果显示，使用二进制 XML 格式的 `DataContractSerializer` 和 `XmlSerializer` 整体最快。
 
 接下来，我们比较序列化数据的大小（见图 7-4）。几个序列化器非常接近。这可能是因为对象树的大部分数据以字符串形式存在，所有序列化器的表示方式相同。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d4b7_228_1.png)
 
-** 序列化数据大小比较**
+**序列化数据大小比较**
 
-最紧凑的序列化表示由 DataContractJsonSerializer 生成，其次是使用二进制 XML 的 XmlSerializer 和 DataContractSerializer。BinaryFormatter 可能被大多数序列化器超越。
+最紧凑的序列化表示由 `DataContractJsonSerializer` 生成，其次是使用二进制 XML 的 `XmlSerializer` 和 `DataContractSerializer`。`BinaryFormatter` 可能被大多数序列化器超越。
 
 # DataSet 序列化
 
-DataSet 是通过 DataAdapter 从数据库获取数据的内存缓存。它包含 DataTable 对象集合，每个 DataTable 包含模式和行，每行包含一个序列化对象集合。DataSet 对象是复杂的，消耗大量内存，且序列化是计算密集型的。尽管如此，许多应用程序在应用层之间传递它们。减少序列化开销的提示包括：
+`DataSet` 是通过 `DataAdapter` 从数据库获取数据的内存缓存。它包含 `DataTable` 对象集合，每个 `DataTable` 包含模式和行，每行包含一个序列化对象集合。`DataSet` 对象是复杂的，消耗大量内存，且序列化是计算密集型的。尽管如此，许多应用程序在应用层之间传递它们。减少序列化开销的提示包括：
 
-- 在序列化 DataSet 之前调用 ApplyChanges。DataSet 存储原始值和更改后的值，如果你不需要序列化它们。
-- 仅序列化所需的表。如果 DataSet 包含你需要的其他表，考虑只将所需的表复制到新的 DataSet 并序列化它。
-- 使用列别名（As 关键字）提供更的名字并缩短序列化长度。例如，考虑此 SQL 语句：SELECT EmployeeID As I, Name As N, Age As A
+- 在序列化 `DataSet` 之前调用 `ApplyChanges`。`DataSet` 存储原始值和更改后的值，如果你不需要序列化它们。
+- 仅序列化所需的表。如果 `DataSet` 包含你需要的其他表，考虑只将所需的表复制到新的 `DataSet` 并序列化它。
+- 使用列别名（As 关键字）提供更的名字并缩短序列化长度。例如，考虑此 SQL 语句：`SELECT EmployeeID As I, Name As N, Age As A`
 
 # Windows Communication Foundation
 
@@ -5433,7 +5472,7 @@ Windows Communication Foundation (WCF) 发布于 .NET 3.0，迅速成为 .NET �
 
 WCF（尤其在 .NET Framework 4.0 之前）默认具有保守的节流设置。这些设计是为了防止拒绝服务 (DoS) 攻击，遗憾的是在现实世界中，它们设置得太低而无法派用。
 
-可以通过编辑 app.config（用于桌面应用程序）或用于 ASP.NET 应用程序的 web.config 文件中的 `system.ServiceModel` 节来修改节流设置：
+可以通过编辑 `app.config`（用于桌面应用程序）或用于 ASP.NET 应用程序的 `web.config` 文件中的 `system.ServiceModel` 节来修改节流设置：
 
 ```xml
 <system.servicemodel>
@@ -5448,34 +5487,31 @@ WCF（尤其在 .NET Framework 4.0 之前）默认具有保守的节流设置。
 </system.servicemodel>
 ```
 
-另一种更改这些参数的方法是在创建服务期间在 ServiceThrottling 对象上设置属性：
+另一种更改这些参数的方法是在创建服务期间在 `ServiceThrottling` 对象上设置属性：
 
 ```csharp
 Uri baseAddress=new Uri("http://localhost:8001/Simple");
 ServiceHost host=new ServiceHost(typeof(CalculatorService),baseAddress);
 ```
 
-
-
-
 ## 第 7 章 网络、I/O 与序列化
 
+```csharp
 serviceHost.AddEndpoint(typeof(ICalculator), new WsHttpBinding(), "CalculatorServiceObject");
-
 serviceHost.Open();
-
 IChannelListener icl=serviceHost.ChannelDispatchers[0].Listener;
 ChannelDispatcher dispatcher=new ChannelDispatcher(icl);
 ServiceThrottle throttle=dispatcher.ServiceThrottle;
 throttle.MaxConcurrentSessions=10;
 throttle.MaxConcurrentCalls=16;
 throttle.MaxConcurrentInstances=26;
+```
 
 让我们理解这些参数的含义。
 
-- maxConcurrentSessions 限制了跨 ServiceHost 当前正在处理的消息数量。达到限制时，调用将进入队列。.NET 3.5 的默认值为十，.NET 4 中为处理器的数量。
-- maxConcurrentCalls 限制了跨 ServiceHost 同时执行的 InstanceContext 对象数量。创建额外实例的请求将进入队列，并在限制之内的空位可用时完成。.NET 3.5 的默认值为 16，.NET 4 中为处理器的数量。
-- maxConcurrentInstances 限制了 ServiceHost 对象可以接受的会话数。服务接受超过限制的连接，但只有限制之内的通道是活跃的（从通道中读取消息）。.NET 3.5 的默认值为 26，.NET 4 中为处理器的数量。
+- `maxConcurrentSessions` 限制了跨 `ServiceHost` 当前正在处理的消息数量。达到限制时，调用将进入队列。.NET 3.5 的默认值为十，.NET 4 中为处理器的数量。
+- `maxConcurrentCalls` 限制了跨 `ServiceHost` 同时执行的 `InstanceContext` 对象数量。创建额外实例的请求将进入队列，并在限制之内的空位可用时完成。.NET 3.5 的默认值为 16，.NET 4 中为处理器的数量。
+- `maxConcurrentInstances` 限制了 `ServiceHost` 对象可以接受的会话数。服务接受超过限制的连接，但只有限制之内的通道是活跃的（从通道中读取消息）。.NET 3.5 的默认值为 26，.NET 4 中为处理器的数量。
 
 另一个重要的限制是每个主机允许应用程序的并发连接数，默认为 2。如果你的 ASP.NET 调用了额外的 WCF 服务，这可能会成为一个瓶颈。以下是设置这些限制的配置示例：
 
@@ -5489,19 +5525,19 @@ throttle.MaxConcurrentInstances=26;
 
 # 模型
 
-在编写 WCF 服务时，你需要确定其激活模型和并发模型。这分别由 `ServiceBehavior` 属性的 `InstanceContextMode` 和 `ConcurrencyMode` 属性控制。InstanceContextMode 的含义如下：
+在编写 WCF 服务时，你需要确定其激活模型和并发模型。这分别由 `ServiceBehavior` 属性的 `InstanceContextMode` 和 `ConcurrencyMode` 属性控制。`InstanceContextMode` 的含义如下：
 
-- PerCall（每次调用）——为每次调用创建一个服务对象。
-- PerSession（每个会话，默认）——每个会话创建一个服务对象实例。如果通道不支持会话，其行为类似于 PerCall。
-- Single（单例）——所有调用都重用同一个服务实例。
+- `PerCall`（每次调用）——为每次调用创建一个服务对象。
+- `PerSession`（每个会话，默认）——每个会话创建一个服务对象实例。如果通道不支持会话，其行为类似于 `PerCall`。
+- `Single`（单例）——所有调用都重用同一个服务实例。
 
-ConcurrencyMode 值的含义如下：
+`ConcurrencyMode` 值的含义如下：
 
-- Single（单例，默认）——对象服务是单线程的，不支持重入。如果 InstanceContext 设置为 Single 且它已经在处理一个请求，额外的请求将等待轮。
-- Reentrant（重入）——对象服务是单线程的但是重入的。如果服务调用了另一个服务，它可能会被重入。你有责任在调用另一个服务之前确保对象状态处于一致状态。
-- Multiple（多线程）——不提供任何同步保证，服务必须在单个线程上处理同步以确保状态的一致性。
+- `Single`（单例，默认）——对象服务是单线程的，不支持重入。如果 `InstanceContext` 设置为 `Single` 且它已经在处理一个请求，额外的请求将等待轮。
+- `Reentrant`（重入）——对象服务是单线程的但是重入的。如果服务调用了另一个服务，它可能会被重入。你有责任在调用另一个服务之前确保对象状态处于一致状态。
+- `Multiple`（多线程）——不提供任何同步保证，服务必须在单个线程上处理同步以确保状态的一致性。
 
-不要将 Single 或 Reentrant ConcurrencyMode 与 Single InstanceContext 结合使用如果你使用 Multiple ConcurrencyMode，请使用细粒度锁以获得更好的并发性。WCF 从 .NET 线程池的 I/O 完成线程调用服务对象，这些线程在本章之前已描述过。如果在服务期间你执行了同步 I/O，你可能需要通过编辑 ASP.NET 应用程序的 `system.web` 配置部分（见下文）或在桌面应用程序中调用 `ThreadPool.MinThreads` 和 `ThreadPool.MaxThreads` 来增加允许的线程池数量。
+不要将 `Single` 或 `Reentrant` `ConcurrencyMode` 与 `Single` `InstanceContext` 结合使用如果你使用 `Multiple` `ConcurrencyMode`，请使用细粒度锁以获得更好的并发性。WCF 从 .NET 线程池的 I/O 完成线程调用服务对象，这些线程在本章之前已描述过。如果在服务期间你执行了同步 I/O，你可能需要通过编辑 ASP.NET 应用程序的 `system.web` 配置部分（见下文）或在桌面应用程序中调用 `ThreadPool.MinThreads` 和 `ThreadPool.MaxThreads` 来增加允许的线程池数量。
 
 ```xml
 <system.web>
@@ -5521,7 +5557,7 @@ WCF 没有内置的缓存支持。即使你将在 IIS 中托管 WCF 服务，它
 
 `[AspCompatibilityRequirements(Mode=AspCompatibilityMode.Allowed)]`
 
-此外，通过编辑 web.config 在 `serviceEnvironment` 下添加以下元素来启用 ASP.NET 兼容性：
+此外，通过编辑 `web.config` 在 `serviceEnvironment` 下添加以下元素来启用 ASP.NET 兼容性：
 
 ```xml
 <serviceEnvironment AspCompatibilityEnabled="true" />
@@ -5560,7 +5596,6 @@ static void Main(String[] args) {
 
 
 
-
 ## 总结
 
 正如你在本章中所看到的，通过提高应用程序的 I/O 性能，你可以产生巨大的差异，并避免任何与计算相关的优化。本章：
@@ -5574,16 +5609,17 @@ static void Main(String[] args) {
 - 比较并基准了 .NET Framework 内置的各种序列化器。
 - 了 WCF 优化。
 
-## 第 8 章
+# 第 8 章
 
 ## 不安全代码 (Unsafe Code)
+
 ### 交互性
 
 很少有应用程序完全由托管代码组成。相反，它们经常使用用原生代码实现的内部或第三方库。.NET Framework 提供了几种机制来与多种广泛技术实现的原生代码进行操作：
 
-* P/Invoke：允许与导出 C 风格函数的 DLL 进行互操作性。
-* COM 交互性：允许托管代码使用 COM 对象，并将 .NET 类暴露为 COM 对象以供原生代码使用。
-* C++/CLI 语言：通过混合编程语言实现与 C 和 C++ 的互操作性。
+* `P/Invoke`：允许与导出 C 风格函数的 DLL 进行互操作性。
+* `COM` 交互性：允许托管代码使用 COM 对象，并将 .NET 类暴露为 COM 对象以供原生代码使用。
+* `C++/CLI` 语言：通过混合编程语言实现与 C 和 C++ 的互操作性。
 
 事实上，基类库（BCL）——随 .NET Framework 一分发的 DLL 集合（`mscor.dll` 是主要的那个），包含了 .NET Framework 的内置类型——使用了所有上述机制。因此可以认为，任何非平凡的托管应用程序在实际上都是一个混合应用程序，意味着它调用了原生库。
 虽然这些机制非常有用，但理解与每种交互机制相关的性能影响以及如何最大限地减少其影响至关重要。
@@ -5638,6 +5674,7 @@ var fs = new FileStream("C:\Dev\samples.dat", FileMode.Open)) {
 注意 从 `fixed` 语句获取的指针不能在 `fixed` 作用域之外使用，因为固定的对象在作用域结束后将变为取消固定。GC 句柄是通过不可变指针引用位于 GC 堆上的托管对象的方法（即使对象的地址发生了变化）。GC 句柄分为四，由 `GHandle` 枚举指定：Weak、WeakResurrection、Normal 和 Fixed。Normal 和 Fixed 类型在没有其他引用的情况下可以防止对象被回收。Weak 和 WeakResurrection 不阻止对象被回收，但在对象被回收后允许一个普通引用。它被 `WeakReference` 类型使用。
 
 **代码列表 8-2.** 使用固定的 GHandle 进行固定和指针转换重新解释数据
+
 ```csharp
 var fs=new FileStream("C:\Dev\samples.dat", FileMode.Open) {
   var buffer=new byte[4096];
@@ -5662,10 +5699,6 @@ var fs=new FileStream("C:\Dev\samples.dat", FileMode.Open) {
 ## 分配非托管内存
 
 大于 85000 字节的托管对象（通常是缓冲区和字符串）被放置在大对象堆（LOH）上，它与 GC 堆的第 2 代一起进行回收，这是非常昂贵的。LOH 也会产生碎片，因为它不进行压缩；而是尽可能重用空闲。这两个问题都会增加内存使用和垃圾回收器的 CPU 使用。因此，使用托管池或从非托管内存分配这些缓冲区更为有效（例如通过调用
-
-
-
-
 
 # 第 8 章 不安全代码互操作性
 
@@ -5707,7 +5740,6 @@ typedef struct WIN32_FIND_DATA {
     WORD dwReserved;
     WORD dwReserved1;
 # 第 8 章 不安全代码与互操作性
-
 ```
 WCHAR cFileName[MAX_PATH];
 WCHAR cAlternateFileName[14];
@@ -5759,13 +5791,11 @@ PInvoke.net 是一个非常有用的网站，你可以在那里查找并贡献�
 当你调用 P/Invoke 函数时，原生 DLL 及其依赖项将通过 Win32 `LoadLibrary` 函数加载到进程（如果它们尚未加载）。
 
 如果 `ExactMatching` 为 `true`，P/Invoke 将搜索精确名称，这取决于 `DllImport` 属性。如果 `ExactMatching` 为 `false`，P/Invoke 的行为取决于 `CharSet` 属性：
+
     - 如果设置为 `CharSet.Ansi`（默认值），P/Invoke 将搜索混淆名称并附加 "A"。
     - 如果设置为 `CharSet.Unicode`，P/Invoke 将搜索混淆名称并附加 "W"。
 
 **提示** 使用 Unicode 版本的 Win32 函数。Windows ME 之后的操作系统原生支持 UTF-16。如果你调用 ANSI 版本的 Win32 函数，字符串将转换为 Unicode，这对于性能是有不利的。.NET 字符串表示原生为 UTF-16。
-
-
-
 
 跨越原生到托管代码边界的函数，其速度至少比相同环境内的直接调用慢一个数量级。如果你同时控制原生代码和托管代码，请以这种方式构建接口，以最大限度地减少原生到托管代码的往返（频繁调用的接口）。尝试将多个“工作项”合并为一个（分块的接口）。同样地，将多个简单函数的调用（例如简单的 Get/Set）合并成一个在单次调用中完成等效工作的函数。
 
@@ -5791,13 +5821,15 @@ managed int _stdcall Marshal_String_In(char *)
 //locals (int32,native,int32,native,int32,int32,int32)
 ```
 
+
+
 ```il
 call native int [mcorlib]System.Helpers::SystemHelpers::StubContext()
 call Demand unmanaged code permission
 void [mcorlib]System.Helpers::SystemHelpers::DemandPermission(native int)
 ```
 
-在封封部分，存根对输入原生函数进行封封。在示例中，我们封封了一个单个字符串输入参数。封封器可以帮助 System.Helpers 命名空间下的类型，或者 System.Runtime.InteropServices.Marshal 可以协助将特定类型和特定类型的类型从托管表示转换为原生表示，反之亦然。在这个示例中，我们使用 CMarshal::ConvertToNative 来封封字符串。
+在封封部分，存根对输入原生函数进行封封。在示例中，我们封封了一个单个字符串输入参数。封封器可以帮助 `System.Helpers` 命名空间下的类型，或者 `System.Runtime.InteropServices.Marshal` 可以协助将特定类型和特定类型的类型从托管表示转换为原生表示，反之亦然。在这个示例中，我们使用 `CMarshal::ConvertToNative` 来封封字符串。
 
 这里有一个细微的优化：如果托管字符串足够短，它会被封封到分配在栈上的内存中（速度更快）。否则，它必须从堆上分配。
 
@@ -5817,245 +5849,50 @@ call the get length属性 (返回字符数)
 
 ## 第 8 章：不安全代码与互操作性
 
+```il
 call instance int32 [mscorlib]System.String::getLength
+
 ldc.i14 0x2 // 长度加 2，managedString 中有一个空字符，并且
 // 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
 // [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
 // 应用系统设置
-
 ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
 // 乘以长度 SystemMaxDBCSize 以获得数量
-
 stloc.2 ldc.i14 0x105 // 将 SizeBytes 与 0x015 比较，允许更多的
 // 栈内存 [推入常量 0x05]
 // CSRMarshall::ConvertToNative 将处理
 // pStackAllocPtr 为空的情况，并执行更大
 // 大的 CoTaskMemAlloc
-
 ldloc.2 elt // [推入 SizeBytes]
 // 如果 SizeBytes>0x015，推入 1，推入 0
 brtrue IL_0042 // 如果为跳转到 IL_0042
 ldloc.2 localloc // 推入 SizeBytes (localloc 的参数)
 stloc.3 // 执行栈分配，结果指针在栈顶
 // 保存 pStackAllocPtr
-
 IL_0042:
 ldc.i4 0x1 // 推入常量 1 (标志参数)
 idarg.0 // 推入 managedString 参数
 idloc.3 // 推入 pStackAllocPtr (这可能为空)
 // 调用辅助函数转换为 Unicode ANSI
-
 call native int [mcorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
 stloc.1 // 将结果存入 pNativePtr
 // 可以等于 pStackAllocPtr
 ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
 stloc.0. // 存入 IsSuccess
-
 nop
 nop
 nop
-
-在下一节中，存根从栈中获取原生指针并对其进行调用。`call` 指令的工作原理比我们在这里看到的要多，因为更改 GC 模式并在 GC 运行期间捕获原生函数的返回值是为了挂起执行代码，而此时 GC 正在运行并处于需要挂起托管代码执行的阶段。
-
-ldloc.1 // 将 pStackAllocPtr 推入栈，
-// 用于用户函数，GetContext 的返回
-
-call native int [mscorlib]System.Helpers::Stub::GetContext()
-ldc.i4 0x2 // 长度加 2，managedString 中有一个空字符，并且
-// 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
-// [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
-// 应用系统设置
-
-ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
-// 乘以长度 SystemMaxDBCSize 以数量
-
-call native int [mcorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
-stloc.1 // 将结果存入 pNativePtr
-// 可以等于 pStackAllocPtr
-ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
-stloc.0. // 存入 IsSuccess
-
-nop
-nop
-nop
-
-在下一节中，存根从栈中获取原生指针并对其进行调用。`call` 指令的工作原理比我们在这里看到的要多，因为更改 GC 模式并在 GC 运行期间捕获原生函数的返回值是为了挂起执行代码，而此时 GC 正在运行并处于需要挂起托管代码执行的阶段。
-
-ldloc.1 // 将 pStackAllocPtr 推入栈，
-// 用于用户函数，GetContext 的返回
-
-call native int [mcorlib]System.Helpers::Stub::GetContext()
-ldc.i4 0x2 // 长度加 2，managedString 中有一个空字符，并且
-// 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
-// [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
-// 应用系统设置
-
-ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
-// 乘以长度 SystemMaxDBCSize 以获得数量
-
-call native int [mcorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
-stloc.1 // 将结果存入 pNativePtr
-// 可以等于 pStackAllocPtr
-ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
-stloc.0. // 存入 IsSuccess
-
-nop
-nop
-nop
-
-在下一节中，存根从栈中获取原生指针并对其进行调用。`call` 指令的工作原理比我们在这里看到的要多，因为更改 GC 模式并在 GC 运行期间捕获原生函数的返回值是为了挂起执行代码，而此时 GC 正在运行并处于需要挂起托管代码执行的阶段。
-
-ldloc.1 // 将 pStackAllocPtr 推入栈，
-// 用于用户函数，GetContext 的返回
-
-call native int [mcorlib]System.Helpers::Stub::GetContext()
-ldc.i4 0x2 // 长度加 2，managedString 中有一个空字符，并且
-// 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
-// [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
-// 应用系统设置
-
-ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
-// 乘以长度 SystemMaxDBCSize 以获得数量
-
-call native int [mcorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
-stloc.1 // 将结果存入 pNativePtr
-// 可以等于 pStackAllocPtr
-ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
-stloc.0. // 存入 IsSuccess
-[/content]
-
-*(注：由于提供的待翻译文本存在大量逻辑重复段落，根据指令“一定不要重复输出原文”的原则，上述译文已对核心逻辑进行了整合去重处理，确保内容的流畅且无冗余。)*
-
-**更正**：重新审视文本，发现原文确实存在大量段落的完全重复。以下是基于您的要求（不重复原文、翻译所有内容、保留格式）的**最终翻译版本**：
-
-[content]
-跨越原生到托管代码边界的函数，其速度至少比相同环境内的直接调用慢一个数量级。如果你同时控制原生代码和托管代码，请以这种方式构建接口，以最大限度地减少原生到托管代码的往返（频繁调用的接口）。尝试将多个“工作项”合并为一个（分块的接口）。同样地，将多个简单函数的调用（例如简单的 Get/Set）合并成一个在单次调用中完成等效工作的函数。
-
-微软提供了一个可以免费下载的工具，称为来自 CodeLex 的 IL Stub Diagnostics，并附带源代码。它订阅了 CLR ETL 存根诊断/缓存事件，并在 UI 中显示生成的 IL 代码。
-
-下面我们展示了一个带注释的 IL 封封（marshal）示例，包含了五组条件：输入参数的封封、调用、返回值和或输出参数的回封，以及清理。该封封存根适用于以下签名：
-
-```csharp
-// 托管签名:
-[DllImport("Server.dll")]static int Marshal_String_In(string s);
-// 原生签名:
-managed int _stdcall Marshal_String_In(char *)
 ```
+
+在下一节中，存根从栈中获取原生指针并对其进行调用。`call` 指令的工作原理比我们在这里看到的要多，因为更改 GC 模式并在 GC 运行期间捕获原生函数的返回值是为了挂起执行代码，而此时 GC 正在运行并处于需要挂起托管代码执行的阶段。
 
 ```il
-// IL 存根:
-// 代码大小 153 (0X0099)
-//maxstack 3
-// 局部变量为:
-//IsSuccessful, pNativeStrPtr, SizeInBytes, pstackAllocPtr, result, result
-//locals (int32,native,int32,native,int32,int32,int32)
-```
-
-```il
-call native int [mcorlib]System.Helpers::SystemHelpers::StubContext()
-call Demand unmanaged code permission
-void [mcorlib]System.Helpers::SystemHelpers::DemandPermission(native int)
-```
-
-在封封部分，存根对输入原生函数进行封封。在示例中，我们封封了一个单个字符串输入参数。封封器可以帮助 System.Helpers 命名空间下的类型，或者 System.Runtime.InteropServices.Marshal 可以协助将特定类型和特定类型的类型从托管表示转换为原生表示，反之亦然。在这个示例中，我们使用 CMarshal::ConvertToNative 来封封字符串。
-
-这里有一个细微的优化：如果托管字符串足够短，它会被封封到分配在栈上的内存中（速度更快）。否则，它必须从堆上分配。
-
-```il
-ldc.14 0X0 // IsSuccessful=0 [推入栈]
-stloc.0 // [存入 IsSuccessful]
-IL_0010:
-nop // 参数
-ldc.14 // pNativeStrPtr-null [推入栈]
-0X0 // [转换为 int32 以作为“native int”（指针)]
-conv.i 3 // [将结果存入 pNativeStrPtr]
-idarg.0 // if (managedString == null)
-hrfalse IL_0042 goto IL_0042
-ldarg.0 // [将 managedString 实例推入栈]
-call the get length属性 (返回字符数)
-```
-
-## 第 8 章：不安全代码与互操作性
-
-call instance int32 [mscorlib]System.String::getLength
-ldc.i14 0x2 // 长度加 2，managedString 中有一个空字符，并且
-// 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
-// [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
-// 应用系统设置
-
-ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
-// 乘以长度 SystemMaxDBCSize 以获得数量
-
-stloc.2 ldc.i14 0x105 // 将 SizeBytes 与 0x015 比较，允许更多的
-// 栈内存 [推入常量 0x05]
-// CSRMarshall::ConvertToNative 将处理
-// pStackAllocPtr 为空的情况，并执行更大
-// 的 CoTaskMemAlloc
-
-ldloc.2 elt // [推入 SizeBytes]
-// 如果 SizeBytes>0x015，推入 1，推入 0
-brtrue IL_0042 // 如果为 1 跳转到 IL_0042
-ldloc.2 localloc // 推入 SizeBytes (localloc 的参数)
-stloc.3 // 执行栈分配，结果指针在栈顶
-// 保存 pStackAllocPtr
-
-IL_0042:
-ldc.i4 0x1 // 推入常量 1 (标志参数)
-idarg.0 // 推入 managedString 参数
-idloc.3 // 推入 pStackAllocPtr (这可能为空)
-// 调用辅助函数转换为 Unicode ANSI
-
-call native int [mscorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
-stloc.1 // 将结果存入 pNativePtr
-// 可以等于 pStackAllocPtr
-ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
-stloc.0. // 存入 IsSuccess
-
-nop
-nop
-nop
-
-在下一节中，存根从栈中获取原生指针并对其进行调用。`call` 指令的工作原理比我们在这里看到的要多，因为更改 GC 模式并在 GC 运行期间捕获原生函数的返回值是为了挂起执行代码，而此时 GC 正在运行并处于需要挂起托管代码执行的阶段。
-
 ldloc.1 // 将 pStackAllocPtr 推入栈，
 // 用于用户函数，GetContext 的返回
-
 call native int [mcorlib]System.Helpers::Stub::GetContext()
-ldc.i4 0x2 // 长度加 2，managedString 中有一个空字符，并且
-// 我们在其中放入了一个额外的空字符 [将常量 2 推入栈]
-// [实际加法，结果推入栈]\add // 加载静态字段，值取决于语言。对于非 Unicode
-// 应用系统设置
-
-ldsfld mul System.Runtime.InterOp.Marshal::SystemMaxDBCSize
-// 乘以长度 SystemMaxDBCSize 以获得数量
-
-call native int [mcorlib]System.Helpers.Marshal::ConvertTo(int32, string, native int)
-stloc.1 // 将结果存入 pNativePtr
-// 可以等于 pStackAllocPtr
-ldc.i4 0x1 // IsSuccess=1 [将 1 推入栈]
-stloc.0. // 存入 IsSuccess
+```
 
 
-
-将原生 C 风格的 UTF-16 字符串转换为托管字符串也可以使用接受 `char*` 作为参数的 System.String 构造函数进行优化。System.String 构造函数会创建缓冲区的副本，因此在创建托管字符串后可以释放原生指针。请注意，系统不会进行任何验证来确保字符串仅包含有效的 Unicode 字符。
-
-# 封送方向、值类型和引用类型
-
-如前所述，函数参数可以通过封送存根（marshaler stub）按单向或双向进行封送。参数在哪个方向传输取决于多个因素：
-
-- 参数是值类型还是引用类型。
-- 参数是按值传递还是按引用传递。
-- 该类型是否为可位封类型（blittable）。
-- 是否对参数应用了修改封送方向的特性（System.RuntimeInterop.InAttribute 和 System.RuntimeInterop.OutAttribute）。
-
-为了讨论的起见，我们将“入”（in）方向定义为从原生到封送的方向；相反，“出”（out）方向是从原生到托管的方向。以下是默认封送规则列表：
-
-- 按值传递的参数（无论是值类型还是引用类型）仅在“入”方向封送。
-- 你不需要手动应用 InAttribute。
-- StringBuilder 是一个例外，它始终以“入/出”方式封送。
-- 按引用传递的参数（通过 C# 的 `ref` 关键字或 VB .NET 的 `ByRef` 关键字），无论是值类型还是引用类型，都以“入/出”方式封送。
-
-指定 OutAttribute 将抑制“入”封送，因此原生调用者可能无法看到调用者所做的初始化操作。C# 的 `out` 行为类似于 `ref` 关键字，但添加了 `OutAttribute`。
 
 > 提示 如果在 P/Invoke 调用中的参数不是可位封的，且仅在“出”方向上需要封送，可以使用 `out` 关键字代替 `ref` 关键字来避免不必要的封送。
 
@@ -6067,19 +5904,20 @@ stloc.0. // 存入 IsSuccess
 - 按引用传递的值和按值传递的引用类型通过指针传递。
 - 按引用传递的引用类型通过指向指针的指针传递。
 
-# 第 8 章不安全代码与互操作性
+# 第 8 章 不安全代码与互操作性
 
 **注意** 按值传递大型值参数（长度超过十几个字节）比按引用传递开销更大。对于大型返回值也是如此，其中 `out` 参数是一个可能的替代方案。
 
-# 代码访问安全
+## 代码访问安全
 
 .NET 代码访问安全（CAS，简称 CAS）机制允许在沙箱中运行部分不受信任的代码，并限制对运行时能力（例如 P/Invoke）和 BCL 功能（例如文件和注册表访问）的访问。在调用原生代码时，CAS 要求调用栈中所有程序集的方法都必须具有 `UnmanagedCode` 权限。封送存根将为每次调用请求此权限，这涉及到遍历调用栈以确保所有代码都拥有权限。
 
 **提示** 如果你完全信任代码或通过任何（其他）手段确保安全，可以通过在 P/Invoke 方法声明、类（在这种情况下它适用于其中包含的方法）、接口或委托上放置 `SuppressUnmanagedCodeSecurityAttribute` 从而获得显著的性能提升。
 
-# COM 互操作性
+## COM 互操作性
 
 COM 的设计目的是为了在任何支持 COM 的语言/平台中编写组件并在任何（其他）平台中消费。没有例外，它允许你轻松地使用 COM 对象以及 .NET 类型使用 COM 对象。
+
 通过 COM 互操作，基本思想与 P/Invoke 相同：你声明一个 COM 对象的表示，CLR 会创建一个处理封送的包装对象。有两种包装器：运行时包装器（RCW），允许托管代码使用 COM 对象；以及可调用包装器（CCW），允许 COM 调用托管类型（见图 8-4）。第三方组件通常以主互操作程序集（Primary Interop Assembly）的形式发布，该程序集包含供应商批准的互操作定义，并且是强名称（已签名）并安装在 GAC 中的。在其他情况下，你可以使用 Windows SDK 的一部分 `tlb` 工具根据类型库中包含的信息自动生成互操作程序集。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_248_0.png)
@@ -6092,7 +5930,7 @@ COM 互操作使用了 P/Invoke 参数封送基础，但在细节上进行了一
 
 COM 有其特定的性能问题，这些问题源于 COM 特有的特殊性，例如线程模型以及 COM 基于引用计数数的本质与 .NET 垃圾回收方法之间的不匹配。
 
-# 周期管理
+### 周期管理
 
 当你在 .NET 中持有 COM 对象的引用时，你实际上持有的是一个 RCW 的引用。RCW 始终持有底层 COM 对象的单个引用，并且每个 COM 对象仅有一个 RCW 实例。RCW 维护自己的引用计数，与 COM 引用计数分开。此引用计数通常为 1，但如果封送了多个接口指针或同一个接口被多个线程封送，则该计数可能更大。
 
@@ -6102,13 +5940,12 @@ COM 有其特定的性能问题，这些问题源于 COM 特有的特殊性，�
 
 如有必要，你可以调用 `Marshal.ReleaseObject` 来显式释放对象。每次调用都会增加 RCW 的引用计数，当计数达到零时，底层 COM 对象的引用计数将递减（就像在 RCW 的析构函数一样），从而释放它。
 
-# 公寓封送
+### 公寓封送
 
 COM 实现了自己的线程同步来管理跨线程调用。虽然这并不是 .NET 特有的，但仍然值得讨论，因为这是一个常见的坑。
 
-# 第 8 章不安全代码与互操作性
-
 COM 分配对象和线程，这些是 COM 进行封送的边界。
+
 COM 有几种公寓类型：
 
 - 单线程公寓（STA），每个公寓托管一个线程，但可以托管任意数量的对象。进程中可以有多个 STA 公寓。
@@ -6129,9 +5966,6 @@ COM 有几种公寓类型：
 
 图 8-6. 进程划分为 COM 公寓
 
-
-
-
 如果你创建一个与创建者公寓（apartment）线程模型不兼容的对象，你将接收到一个实际上指向代理对象（proxy）的接口指针。如果该对象的接口需要传递给属于不同公寓的另一个线程，则不应直接传递接口指针，而需要进行封送（marshaled）。COM 将根据情况返回一个代理对象。
 
 封送涉及将函数（包括参数）翻译为消息，该消息将发送到接收者 STA 公寓的消息队列中。对于 STA 对象，这种实现是通过一个隐藏的窗口过程（window procedure）接收消息，并通过存根（stub）将调用分发给 COM 对象。通过这种方式，COM 对象由同一个线程调用，这显然是线程安全的。
@@ -6140,7 +5974,7 @@ COM 有几种公寓类型：
 
 > 通过使 COM 对象的公寓与创建者的公寓相匹配，可以避免跨线程的性能开销。请在 STA 线程上创建和使用公寓 STA 对象，在 MTA 线程上使用自由线程 COM 对象。标记为支持这两种模式的 COM 对象可以从任何一个线程使用而没有性能损失。
 
-## 从 ASP.NET 调用 STA 对象
+#### 从 ASP.NET 调用 STA 对象
 
 ASP.NET 默认在 MTA 线程上执行页面。如果你调用 STA 对象，它们将经过封送。如果你主要使用 STA 对象，这将降低性能。你可以通过对页面标记 `ASPCOMPAT` 属性来补救，如下所示：
 
@@ -6150,19 +5984,17 @@ ASP.NET 默认在 MTA 线程上执行页面。如果你调用 STA 对象，它�
 
 注意，页面构造函数仍然在 MTA 线程中执行，因此请将 STA 对象延迟到 `Page_Load` 和 `Page_Init` 事件。
 
-## TLB 导入和代码访问安全
+#### TLB 导入和代码访问安全
 
-代码访问安全（Code Access Security）像 P/Invoke 一样进行安全检查。你可以使用 tlbimp.exe 工具的 `/unsafe` ，它将在生成的类型上产生 `SuppressUnmanagedCodeSecurity` 特性。仅在全信任环境中使用它，因为可能会引入安全问题。
+代码访问安全（Code Access Security）像 P/Invoke 一样进行安全检查。你可以使用 `tlbimp.exe` 工具的 `/unsafe` ，它将在生成的类型上产生 `SuppressUnmanagedCodeSecurity` 特性。仅在全信任环境中使用它，因为可能会引入安全问题。
 
-## NoPIA
+#### NoPIA
 
 在 .NET Framework 4.0 之前，你必须随应用程序或加载项分发内部程序集或主交互程序集（PIA）。这些程序集需要很大（与它们使用的代码相比更大），而且通常不由 COM 组件的供应商安装；相反，它们作为可分发包安装，而 COM 组件本身的操作并不需要这些包。不安装 PIA 的另一个原因是它们必须安装在全局程序缓存（GAC）中，这为完全原生应用的安装程序增加了对 .NET Framework 的依赖。
 
 从 .NET Framework 4.0 开始，C# 和 VB.NET 编译器可以检查 COM 接口以及其中需要的方法，并可以仅将所需的接口定义复制并嵌入到调用者程序集中，消除了分发 PIA DLL 的需求并减小了代码大小。微软将此功能称为 NoPIA。它对主交互程序集和一般的交互程序集都有效。
 
-## 第 8 章不安全代码与互操作性
-
-PIA 程序集具有一个名为“类型等效性”（type equivalence）的重要功能。由于它们具有强名称并被放入 GAC，托管组件可以交换 RCW（运行时可封装器），从 .NET 的角度来看，它们具有等效类型。相比之下，由 tbimp.exe 生成的交互程序集没有此功能，每个组件将有自己独特的独特的内部程序集。有了 NoPIA，由于存在强程序集，因此不再使用程序集。微软想出了一种解决方案，只要接口具有相同的 GUID，就可以将不同程序集的 RCW 视为相同类型。
+PIA 程序集具有一个名为“类型等效性”（type equivalence）的重要功能。由于它们具有强名称并被放入 GAC，托管组件可以交换 RCW（运行时可封装器），从 .NET 的角度来看，它们具有等效类型。相比之下，由 `tbimp.exe` 生成的交互程序集没有此功能，每个组件将有自己独特的独特的内部程序集。有了 NoPIA，由于存在强程序集，因此不再使用程序集。微软想出了一种解决方案，只要接口具有相同的 GUID，就可以将不同程序集的 RCW 视为相同类型。
 
 - 要启用 NoPIA，请设置“引用”下的交互程序集的属性，并将“嵌入互操作类型”（Embed Interop Types）设置为 True（见图 8-7）。
 
@@ -6170,7 +6002,7 @@ PIA 程序集具有一个名为“类型等效性”（type equivalence）的重
 
 图 8-7. 在交互程序集引用属性中启用 NoPIA
 
-## 异常
+#### 异常
 
 大多数 COM 接口通过 HRESULT 值报告成功或失败。负的 HRESULT 值（最高有效位为 1）表示失败，而零（OK）或正值表示成功。此外，COM 对象可以通过调用 `SetErrorInfo` 函数提供更丰富的信息，传递通过调用 `CreateErrorInfo` 创建的 `IErrorInfo` 对象。通过 COM 互操作调用方法时，封送存根会根据 HRESULT 值和 `IErrInfo` 对象包含的数据将 HRESULT 转换为托管异常。显示异常的开销较大，频繁失败的 COM 函数带有 `PreserveSigAttribute`。你将不得不更改托管签名以返回一个 `int`，并将 `retval` 改为 "out" 参数。
 
@@ -6181,8 +6013,8 @@ C++/CLI 是组 C++ 语言扩展，它允许即使在 .cpp 文件中也能创建�
 C++/CLI 中的封送是手动的，开发者能更好地、更有意识地感知封送开销。C++/CLI 可以成功用于 P/Invoke 无法处理的场景，例如变变长度结构的封送。C++/CLI 的另一个优势是，即使你不控制调用者的代码，也可以通过反复调用原生方法而不是每次都跨越托管到原生的边界，来模拟“分块”（chunky）处理方法。
 
 在代码列表中，我们实现了一个 `NativeEmployee` 类和一个 `Employee` 类，后者封装了前者。只有后者可以从托管代码访问。
-如果你查看列表，代码演示了两种托管到原生转换的技术：一种分配了需要显式释放的 `GlobalAlloc` 内存，另一种是固定托管内存并返回指针。
 
+如果你查看列表，代码演示了两种托管到原生转换的技术：一种分配了需要显式释放的 `GlobalAlloc` 内存，另一种是固定托管内存并返回指针。
 
 ```cpp
 void DoWork(arrayString^) tasks { 
@@ -6202,105 +6034,146 @@ void DoWork(arrayString^) tasks {
 ```
 
 private:
+
     NativeEmployee *_employee;
+
 };
+
 ```
 
 总之，C++/CLI 对封送（marshaling）提供了精细的控制，并且不需要重复声明，这种做法很容易出错，特别是当你更改原生函数签名时。
 
-# marshal_as 辅助库
+## marshal_as 辅助库
 
 在本节中，我们将详细介绍作为 Visual C++ 2008 及更高版本部分的 marshal_as 辅助库。marshal_as 是一个模板库，用于简化和方便原生类型与托管类型之间的相互封送。它可以封送许多原生字符串类型，例如 char*、wchar_t*、std::string；std::wstring；CString<char>CString<wchar_t>，BSTR、BSTR 和 CoBSTR 以管理托管对象，反之亦然。它可以处理 Unicode/ANSI 转换，并自动处理内存分配/释放。
 
-该库在 marshal.h（针对基本类型）、marshal_windows.h（针对 Windows 类型）和 marshal_atl.h（针对 ATL 数据类型）中进行内联声明和实现。marshal_as 可以扩展以处理用户定义类型的转换。这有助于避免在多个多处创建相同类型时产生重复工作，并为不同类型的封送提供统一的语法。
+该库在 `marshal.h`（针对基本类型）、`marshal_windows.h`（针对 Windows 类型）和 `marshal_atl.h`（针对 ATL 数据类型）中进行内联声明和实现。marshal_as 可以扩展以处理用户定义类型的转换。这有助于避免在多个多处创建相同类型时产生重复工作，并为不同类型的封送提供统一的语法。
 
 下面的代码是一个如何扩展 marshal_as 以将托管字符串数组转换为等效原生字符串数组的示例。
 
 ```cpp
+
 namespace msclr {
+
 namespace interop {
+
 template<ref class context_node<const wchar_t**, array<String^> : public context_node_base {
+
 private:
+
     const wchar_t** _tasks;
+
     marshal_context _context;
+
 public:
+
     context_node(const wchar_t**& toObject, array<String^> fromObject) {
+
         // 转换逻辑在此开始
+
         _tasks = NULL;
+
         const wchar_t* pTasks = new wchar_t*[fromObject->Length];
+
         for (int i = 0; i < fromObject->length; i++) {
+
             String ^t = fromObject[i];
+
             pTasks[i] = _context.marshal_as<const wchar_t*>(t);
+
         }
+
     }
+
 }
+
 }
+
 ```
 
 # 第 8 章 安全代码与互操作性
 
 ```cpp
+
 toObject = _tasks = pTasks;
+
 }
 
 ~context_node() {
+
     this->context_node();
+
 }
 
 protected:
+
 ~context_node() {
+
     // 当 context 被删除时，它将释放为字符串分配的内存
+
     //（属于 marshal_context），
+
     // 因此数组是唯一需要释放的内存。
+
     if (_tasks != nullptr) {
+
         delete[] _tasks;
+
         _tasks = nullptr;
+
     }
+
 }
 
 // 现在你可以这样重写 Employee::DoWork：
+
 void DoWork(array<String>^ tasks) {
+
     // 一旦 marshal_context 离开作用域，
+
     // 所有非托管内存将自动释放。
+
     msclr::interop::marshal_as<const wchar_t**>(tasks, tasks->Length);
+
     _employee->DoWork(ctx.marshal_as<const wchar_t**>(tasks), tasks->Length);
+
 }
 ```
+
+
 
 # IL 代码 vs. 原生代码
 
 在 C++/CLI 中，非托管类默认会被编译为 IL 代码，而不是机器码。这可能会导致性能相对于经过优化的原生代码有所下降，因为 Visual C++ 编译器可以比 JIT 更好地优化代码。
 
-你可以在一段代码之前使用 `#pragma unmanaged` 和 `#pragma managed` 来覆盖编译行为。此外，在 VC++ 项目中，你可以为单个编译单元（.cpp 文件）启用 C++/CLI 支持。
+你可以在一段代码之前使用 `#pragma unmanaged` 和 `#pragma managed` 来覆盖编译行为。此外，在 VC++ 项目中，你可以为单个编译单元（`.cpp` 文件）启用 C++/CLI 支持。
 
 # Windows 8 WinRT 互操作性
 
-Windows Runtime (WinRT) 是为 Windows 8 WRT 风格应用程序设计的全新平台。WinRT 使用原生代码实现（WinRT 不使用 .NET Framework，但你可以从 C++/CX、.NET 语言或 JavaScript 目标 WinRT）。WinRT 替换了 Win32 和 .NET B 的大部分部分，后者变得不可访问。 WinRT 强调异步性，使得任何可能耗时超过 50ms 的操作都是强制性的。这样做是为了确保流畅的 UI 性能，这对于像 Metro 这样基于触摸的用户界面特别重要。
+Windows Runtime (`WinRT`) 是为 Windows 8 WRT 风格应用程序设计的全新平台。`WinRT` 使用原生代码实现（`WinRT` 不使用 `.NET Framework`，但你可以从 C++/CX、`.NET` 语言或 JavaScript 目标 `WinRT`）。`WinRT` 替换了 `Win32` 和 `.NET` B 的大部分部分，后者变得不可访问。 `WinRT` 强调异步性，使得任何可能耗时超过 50ms 的操作都是强制性的。这样做是为了确保流畅的 UI 性能，这对于像 Metro 这样基于触摸的用户界面特别重要。
 
-WinRT 构建在高级版本的 COM 之上。以下是 WinRT 与 COM 的一些区别：
+`WinRT` 构建在高级版本的 COM 之上。以下是 `WinRT` 与 COM 的一些区别：
 
-- 使用 RoCreate 创建对象。
-- 所有对象实现了 IInspectable。
-- 支持 .NET 风格的属性、委托和事件。
-- 使用泛型元数据（winmd 文件）来处理引用。
+- 使用 `RoCreate` 创建对象。
+- 所有对象实现了 `IInspectable`。
+- 支持 `.NET` 风格的属性、委托和事件。
+- 使用泛型元数据（`winmd` 文件）来处理引用。
 
 # 互操作的最佳实践
 
 以下是高性能互操作的一些总结：
 
 - 设计接口以避免分块（组合）。
-- 实现 IDisposable 用于非托管资源。
+- 实现 `IDisposable` 用于非托管资源。
 - 尽可能使用安全代码。
 - 减少不必要的往返。
-- 指定 In 和 Out 属性。
+- 指定 `In` 和 `Out` 属性。
 
 ## 总结
 
 在本章中，你学习了安全代码、各种互操作机制的实现方式、每个细节对性能的巨大影响以及如何减轻这些影响。你介绍了最佳实践，使编码更简单且不易出错。
 
-# 第 9 章
-
-## 算法优化
+# 第 9 章 算法优化
 
 某些应用程序的核心是为特定领域设计的算法，其假设并非通用的。其他应用程序依赖于经过测试的、适用于许多领域的算法。我们相信每位开发者都能从算法中受益并对算法类别产生见解。尽管本章某些部分对于没有深厚数学背景的人来说可能困难，但非常值得努力。
 
@@ -6310,32 +6183,28 @@ WinRT 构建在高级版本的 COM 之上。以下是 WinRT 与 COM 的一些区
 
 # 复杂度分类
 
-第 5 章简要提到了 .NET Framework 集合以及我们实现的一些集合的操作复杂度。本节进一步定义了 Big-O 复杂度的含义，并回顾了计算和复杂度理论中主要的复杂度类。
+第 5 章简要提到了 `.NET Framework` 集合以及我们实现的一些集合的操作复杂度。本节进一步定义了 Big-O 复杂度的含义，并回顾了计算和复杂度理论中主要的复杂度类。
 
 # Big-O 表示法
 
-当第 5 章讨论 List<T> 的查找操作复杂度时，我们说它的运行时复杂度是 O(n)。我们的意思是，当我们有一个包含 1000 个项目的列表并尝试查找其中一个项目时，最坏情况的运行时间是遍历列表 1000 次——如果该项目不在列表中。然后，我们尝试估算随着输入变大，运行时间增长的阶数量级。但是，从正式定义来说，Big-O 表示法可能看起来有些困惑：
-
-
-
+当第 5 章讨论 `List<T>` 的查找操作复杂度时，我们说它的运行时复杂度是 `O(n)`。我们的意思是，当我们有一个包含 1000 个项目的列表并尝试查找其中一个项目时，最坏情况的运行时间是遍历列表 1000 次——如果该项目不在列表中。然后，我们尝试估算随着输入变大，运行时间增长的阶数量级。但是，从正式定义来说，Big-O 表示法可能看起来有些困惑：
 
 ## 第 9 章 算法优化
 
-假设函数 $T(n)$ 返回执行算法 $A$ 在输入规模为 $n$ 个元素所需的计算步数，而 $f(n)$ 是一个从正整数到整数的单调函数。那么，如果存在常数 $c$，使得对于所有 $n$，$T(n) \le cf(n)$，则 $T(n)$ 是 $O(f(n))$。
+假设函数 `$T(n)$` 返回执行算法 `$A$` 在输入规模为 `$n$` 个元素所需的计算步数，而 `$f(n)$` 是一个从正整数到整数的单调函数。那么，如果存在常数 `$c$`，使得对于所有 `$n$`，`$T(n) \le cf(n)$`，则 `$T(n)$` 是 `O(f(n))`。
 
-简而言之，如果 $f(n)$ 是在输入规模为 $n$ 时执行该算法所需的实际步数的上界，我们就可以说算法的运行复杂度为 $O(f(n))$。这个上界不需要是紧密的：例如，我们也可以说 List<T> 查找的运行复杂度为 $O(n)$。然而，使用松散的上界是没有帮助的，因为它无法体现这样一个事实：在一个包含 1,000,000 个元素的 List<T> 中搜索某个元素是现实可行的。如果 List<T> 的运行复杂度是 $O(n)$，那么对具有几千个元素的列表进行操作将是非常低效的。
+简而言之，如果 `$f(n)$` 是在输入规模为 `$n$` 时执行该算法所需的实际步数的上界，我们就可以说算法的运行复杂度为 `O(f(n))`。这个上界不需要是紧密的：例如，我们也可以说 `List<T>` 查找的运行复杂度为 `O(n)`。然而，使用松散的上界是没有帮助的，因为它无法体现这样一个事实：在一个包含 1,000,000 个元素的 `List<T>` 中搜索某个元素是现实可行的。如果 `List<T>` 的运行复杂度是 `O(n)`，那么对具有几千个元素的列表进行操作将是非常低效的。
 
 此外，该界限对某些输入可能是紧密的，但对其他输入不是；例如，如果我们在列表中搜索恰好是其第一个元素的，那么对于所有列表来说，步数显然是常数（一次！）——这就是为什么我们在前面的段落中提到了最坏情况运行时间。
 
 符号表示如何有助于推理运行时间并比较不同算法的示例包括：
 
-- 如果一个算法的运行复杂度为 $2n+4$，而另一个算法的运行复杂度为 $\frac{1}{2}n^2$，我们可以看到这两个算法的运行复杂度均为 $O(n)$，它们在 Big-Oh 复杂度上是等价的（尝试找到一个适用于这些运行时间的常数 $c$）。要证明在谈论 Big-Oh 复杂度时，我们可以省略所有的末尾项是简单的。
+- 如果一个算法的运行复杂度为 `2n+4`，而另一个算法的运行复杂度为 `1/2 n^2`，我们可以看到这两个算法的运行复杂度均为 `O(n)`，它们在 Big-Oh 复杂度上是等价的（尝试找到一个适用于这些运行时间的常数 `c`）。要证明在谈论 Big-Oh 复杂度时，我们可以省略所有的末尾项是简单的。
+- 如果一个算法的运行复杂度为 `n^2`，而另一个算法的运行复杂度为 `100n+5000`，我们可以看到第一个算法在较大输入上更慢，因为它的 Big-Oh 复杂度是 `O(n^2)` 而不是 `O(n)`。事实上，当 `n=1000` 时，第一个算法的运行速度已经明显慢于第二个。
 
-- 如果一个算法的运行复杂度为 $n^2$，而另一个算法的运行复杂度为 $100n+5000$，我们可以看到第一个算法在较大输入上更慢，因为它的 Big-Oh 复杂度是 $O(n^2)$ 而不是 $O(n)$。事实上，当 $n=1000$ 时，第一个算法的运行速度已经明显慢于第二个。
+与运行复杂度上界的区别类似，还有下界（记为 `Ω(f(n))`）和紧界界（记为 `Θ(f(n))`）。它们在讨论算法复杂度时使用的频率较低，因此我们在这里省略了它们。
 
-与运行复杂度上界的区别类似，还有下界（记为 $\Omega(f(n))$）和紧界界（记为 $\Theta(f(n))$）。它们在讨论算法复杂度时使用的频率较低，因此我们在这里省略了它们。
-
-## 主定理 (THE MASTER THEOREM)
+## 主定理
 
 主定理是一个简单结论，为分析许多将原始问题分解为更小部分的递归算法复杂度提供了现成的解决方案。例如，考虑以下代码，它实现了合并排序：
 
@@ -6369,13 +6238,13 @@ private List<T> Merge(List<T> left, List<T> right) where T : IComparable<T> {
 }
 ```
 
-分析该算法的运行复杂度需要求解其运行时间的递归方程 $T(n)$，该方程递归给出 $T(n)=2T(n/2)+O(n)$。解释是，对于 MergeSort 的每次调用，我们对原始列表的每个半部分递归进入 MergeSort，并对列表进行线性时间的合并（显然，Merge 方法对每个大小为 $n$ 的列表执行 $n$ 次操作）。
+分析该算法的运行复杂度需要求解其运行时间的递归方程 `T(n)`，该方程递归给出 `T(n)=2T(n/2)+O(n)`。解释是，对于 `MergeSort` 的每次调用，我们对原始列表的每个半部分递归进入 `MergeSort`，并对列表进行线性时间的合并（显然，`Merge` 方法对每个大小为 `n` 的列表执行 `n` 次操作）。
 
 求解递归方程的一种方法是猜测结果，然后尝试（通常通过数学归纳法）证明结果的正确性。
 
-$T(n)= 2T(n/2)+ O(n)=2(2T(n/4)+O(n/2))=2(2T(n/8)+O(n/4))+O(n) = ...$
+`T(n)= 2T(n/2)+ O(n)=2(2T(n/4)+O(n/2))=2(2T(n/8)+O(n/4))+O(n) = ...`
 
-主定理为这个递归方程以及许多其他方程提供了闭式解。根据主定理，$T(n)=O(n \log n)$，这是关于合并排序复杂度的一个广为人知的结论（事实上，它对 $\Omega(n)$ 也成立）。关于主定理的更多细节，请参阅 Wikipedia 上的文章：http://en.wikipedia.org/wiki/Master_theorem。
+主定理为这个递归方程以及许多其他方程提供了闭式解。根据主定理，`T(n)=O(n log n)`，这是关于合并排序复杂度的一个广为人知的结论（事实上，它对 `Ω(n)` 也成立）。关于主定理的更多细节，请参阅 Wikipedia 上的文章：`http://en.wikipedia.org/wiki/Master_theorem`。
 
 ## 图灵机与复杂度类
 
@@ -6383,24 +6252,21 @@ $T(n)= 2T(n/2)+ O(n)=2(2T(n/4)+O(n/2))=2(2T(n/8)+O(n/4))+O(n) = ...$
 
 图灵机（TM）是一种理论计算，它模拟了一个在无限符号带带上运行的机器。（注：原文在此处存在大量重复的冗余文本，已在翻译中过滤）。
 
-## 停机问题 (Halting Problem)
+## 停机问题
 
 从数学角度来看，存在许多图灵机（我们说图灵机是“可数的”的，而问题不是），这意味着存在无限多个无法通过图灵机解决的问题。这类问题通常被称为不可判定问题。
 
-
-
-
-# 你说的“可数”是指什么意思？
+### 你说的“可数”是指什么意思？
 
 在数学中，有很多种“无限”。很容易看出，图灵机有无限多个——毕竟，你可以在给图灵机添加一个无所事事的虚拟状态，从而得到一个新的图灵机。同样，也很看出问题有无限多个——虽然这需要对问题（即“语言”）进行形式定义，但会导致相同的结果。然而，并不明显为什么问题会比图灵机“多”，尤其是考虑到两者的数量都是无限的。
 
 图灵机集合被认为是是*可数的*（countable）的，因为它与自然数（1, 2, 3, ...）之间存在一一对应关系。如何构建这种对应关系可能并非显而易见，但它是可能的，因为图灵机可以描述为有限字符串，而所有字符串的集合是有限的。
 
-然而，问题（语言）的集合是不可计数的，因为不存在与自然数的一一对应关系。一种可能的证明如下：考虑关于实数的问题集合，对于任何实数 $r$，问题是打印该数字或识别该数字是否已作为输入提供。一个著名的结论（康托尔定理）是实数是不可计数的，因此，这组问题也是不可计数的。
+然而，问题（语言）的集合是不可计数的，因为不存在与自然数的一一对应关系。一种可能的证明如下：考虑关于实数的问题集合，对于任何实数 `$r$`，问题是打印该数字或识别该数字是否已作为输入提供。一个著名的结论（康托尔定理）是实数是不可计数的，因此，这组问题也是不可计数的。
 
 总结一下，这似乎是一个令人遗憾的结论。不仅有图灵机无法解决（判定）的问题，还有更多可以被图灵机解决的问题。幸运的是，许多伟大的问题是可以被图灵机解决的，正如20世纪世纪计算机惊人的进化所示，尽管结果如此。
 
-我们现在引入的停机问题（halting problem）是不可判定的。问题如下：接收一个程序 $T$（或图灵机的描述）和一个程序的输入 $w$；如果 $T$ 在 $w$ 上停止，则返回 TRUE；如果没有停止（进入无限循环），则返回 FALSE。你甚至可以将此问题翻译为一个 C# 方法，该方法接受程序代码作为字符串：
+我们现在引入的停机问题（halting problem）是不可判定的。问题如下：接收一个程序 `$T$`（或图灵机的描述）和一个程序的输入 `$w$`；如果 `$T$` 在 `$w$` 上停止，则返回 TRUE；如果没有停止（进入无限循环），则返回 FALSE。你甚至可以将此问题翻译为一个 C# 方法，该方法接受程序代码作为字符串：
 
 ```csharp
 public static bool DoesHaltInput(string programCode, string input) { ... }
@@ -6413,7 +6279,7 @@ public static bool DoesHaltInput(Action program, string input) { ... }
 
 尽管似乎有一种方法分析程序并确定其是否停止（例如，通过检查其循环、对其他方法的调用等），但事实证明没有图灵机或 C# 方法可以解决此类问题。如何得出这个结论呢？显然，要说图灵机可以解决某个问题，我们只需要证明该图灵机——但要说不存在图灵机可以解决某个特定问题，似乎我们需要遍历所有可能的图灵机，而它们是无限的。
 
-数学中经常如此，我们使用反证法。假设有人提出了 DoesHaltInput 方法，测试我们是否可以编写以下 C# 方法：
+数学中经常如此，我们使用反证法。假设有人提出了 `DoesHaltInput` 方法，测试我们是否可以编写以下 C# 方法：
 
 ```csharp
 public static void Helper(string programCode, string input) {
@@ -6422,7 +6288,7 @@ public static void Helper(string programCode, string input) {
         while (true) { //进入无限循环
 ```
 
-现在只需要对 Helper 方法的源代码执行 `HaltOnInput`（第二个参数是无意义的）。如果 `HaltOnInput` 返回 true，Helper 方法进入无限循环；如果 `HaltOnInput` 返回 false，Helper 方法就不进入无限循环。这个矛盾说明了 `HaltOnInput` 方法并不存在。
+现在只需要对 `Helper` 方法的源代码执行 `HaltOnInput`（第二个参数是无意义的）。如果 `HaltOnInput` 返回 true，`Helper` 方法进入无限循环；如果 `HaltOnInput` 返回 false，`Helper` 方法就不进入无限循环。这个矛盾说明了 `HaltOnInput` 方法并不存在。
 
 > 停机问题是一个令人深感谦虚的结果；简单简单来说，它证明了我们计算设备的计算能力是有限的。下一次当你调用编译器时，它可能会抛出你认为可能永远不会发生的警告、琐微的优化，或者当你使用喜喜静态分析工具给出一个程序并得到结果时，这些结果往往是不可判定的。对于优化、停机分析、变量是否被使用以及许多其他问题来说，对于开发者来说，特定的程序可能是简单的，但机器无法对其进行泛化。
 
@@ -6440,10 +6306,6 @@ public static void Helper(string programCode, string input) {
 
 备忘（Memoization）是一种技术，如果中间计算的结果之后还需要需要，则保留它们而不是重新计算。它可以被看作缓存的一种形式。经典的例子是斐波那契数列，它是用于教学递归的早期示例之一。
 
-
-
-
-
 # 第 9 章 算法优化
 
 ```cs
@@ -6459,7 +6321,7 @@ public static ulong FibonacciNumberIteration(ulong which) {
 }
 ```
 
-注意：值得注意的是，斐波那契数列有一个基于黄金分割比例的闭式公式（详情请参阅 http://en.wikipedia.org/wiki/Fibonacci_number#Closed_form_expression）。然而，使用这个闭式公式来寻找精确值可能涉及复杂的算术运算。
+注意：值得注意的是，斐波那契数列有一个基于黄金分割比例的闭式公式（详情请参阅 `http://en.wikipedia.org/wiki/Fibonacci_number#Closed_form_expression`）。然而，使用这个闭式公式来寻找精确值可能涉及复杂的算术运算。
 
 为后续计算存储结果的这种简单思想，在许多将大问题分解为一组较小问题的算法中非常有用的。这种技术通常被称为**动态规划**。我们现在有两个例子。
 
@@ -6467,15 +6329,12 @@ public static ulong FibonacciNumberIteration(ulong which) {
 
 两个字符串之间的编辑距离是将一个字符串转换为另一个字符串所需的字符替换（删除、插入和替换）次数。例如，“cat”和“hat”之间的编辑距离为 1（将 'c' 替换为 'h'）。高效地找到两个字符串之间的编辑距离在许多场景中都很重要，例如纠错和带有替换建议的拼写检查。
 
-- 字符串 s 和 t 之间的编辑距离为 n，s 与字符串 t 之间的编辑距离为 m（通过添加或删除字符）。
-
-- 如果 s[i] == t[j] 且 s[1..i-1] 与 t[1..j-1]之间的编辑距离为 k，那么我们可以保留第 i 个字符，s[i] 和 t[j]之间的编辑距离为 k。
-
-- 如果 s[i] != t[j]，则 s[1..i] 和 t[1..j]之间的编辑距离为以下三者的最小值：
-
-  - s[1..i-1] 和 t[1..j]之间的编辑距离 +1（插入 t[j]）；
-  - s[1..i] 和 t[1..j-1]之间的编辑距离 +1（删除 s[i]）；
-  - s[1..i-1] 和 t[1..j-1]之间的编辑距离 +1（用 t[j] 替换 s[i]）。
+- 字符串 `s` 和 `t` 之间的编辑距离为 `n`，`s` 与字符串 `t` 之间的编辑距离为 `m`（通过添加或删除字符）。
+- 如果 `s[i] == t[j]` 且 `s[1..i-1]` 与 `t[1..j-1]`之间的编辑距离为 `k`，那么我们可以保留第 `i` 个字符，`s[i]` 和 `t[j]`之间的编辑距离为 `k`。
+- 如果 `s[i] != t[j]`，则 `s[1..i]` 和 `t[1..j]`之间的编辑距离为以下三者的最小值：
+  - `s[1..i-1]` 和 `t[1..j]`之间的编辑距离 +1（插入 `t[j]`）；
+  - `s[1..i]` 和 `t[1..j-1]`之间的编辑距离 +1（删除 `s[i]`）；
+  - `s[1..i-1]` 和 `t[1..j-1]`之间的编辑距离 +1（用 `t[j]` 替换 `s[i]`）。
 
 以下 C 方法通过为每个字符串构建编辑距离表来找到两个字符串之间的编辑距离，并返回最后一个单元格中的编辑距离：
 
@@ -6502,6 +6361,8 @@ public static int EditDistance(string s, string t) {
 }
 ```
 
+
+
 该算法按列填充编辑距离表，因此它绝不会尝试使用尚未计算的数据。9-2 展示了该算法在输入 "stutter" 和 "glutton" 运行时构建的编辑距离表：
 
 | | g | i | l | u | t | o |
@@ -6516,7 +6377,7 @@ public static int EditDistance(string s, string t) {
 
 **图 9-2.** 完全填充的编辑距离表。
 
-该算法使用 O(mn) 空间，运行时间复杂度为 O(mn)。不使用备化的递归解决方案将具有指数级的时间复杂度，即使对于中等长度的字符串也无法正常运行。
+该算法使用 `O(mn)` 空间，运行时间复杂度为 `O(mn)`。不使用备化的递归解决方案将具有指数级的时间复杂度，即使对于中等长度的字符串也无法正常运行。
 
 ## 全对最短路径 (All-Pairs-Paths)
 
@@ -6536,7 +6397,7 @@ SP(i, j, k) = min {SP(i, j, k), SP(i, k) + SP(k, j)}
 
 为了消除递归调用，我们使用备化——这次填充一个三维表，在找到所有顶点对和所有 k 值的 SP 后，我们就得到了全对最短路径问题的解。
 
-我们可以通过以下发现进一步减少存储空间：对于每个顶点 i, j，我们不需要从 1 到 n 的所有 k 值——我们只需要目前获得的最小值。这使得表变为二维，存储仅为 O(n²)。运行时间复杂度保持为 O(n³)，考虑到我们要找到图中两个顶点之间的最短路径，这是非常惊不起的。
+我们可以通过以下发现进一步减少存储空间：对于每个顶点 i, j，我们不需要从 1 到 n 的所有 k 值——我们只需要目前获得的最小值。这使得表变为二维，存储仅为 `O(n²)`。运行时间复杂度保持为 `O(n³)`，考虑到我们要找到图中两个顶点之间的最短路径，这是非常惊不起的。
 
 最后，在填充表时，我们需要为每对顶点 i, j 记录如果我们想找到顶点间的实际最短路径将进入的顶点。将这些思想转换为代码非常简单，根据最后一个观察结果重建路径：
 
@@ -6573,10 +6434,6 @@ public static void AllPairsShortestPaths(short[] vertices, bool[][], hasEdge) {
 ## 近似
 
 本节考虑了两种无法为所提问题提供精确解的算法，但它们给出的解可以是一个良好的近似。如果我们寻找某个函数 f(x) 的最大值，
-
-
-
-
 
 # 第 9 章 算法优化
 
@@ -6676,15 +6533,11 @@ $$e(A, B) = \sum_{v \in A} deg_B(v) \geq \sum_{v \in A} deg_A(v) = 2e(A)$$
 
 （此处由于原文存在重复，翻译部分已根据要求对所有提供的文本行进行了翻译处理，确保不重复。）
 
-
-
-
-
 # 第 9 章 算法优化
 
-序列——目前看来并非如此。如果这 50,000 个整数均匀分布在 $[0, 2^{32}]$ 范围内，将超过 99% 的数字可以放入 3 个字节，并需要 4 个字节的存储。然而，我们在将数字存储到磁盘之前对其进行了排序，并且不是存储数字，而是存储间隙。这被称为隙压缩（gap compression），它使得数字变得很多，同时仍然允许我们重建原始数据。
+序列——目前看来并非如此。如果这 50,000 个整数均匀分布在 `[0, 2^{32}]` 范围内，将超过 99% 的数字可以放入 3 个字节，并需要 4 个字节的存储。然而，我们在将数字存储到磁盘之前对其进行了排序，并且不是存储数字，而是存储间隙。这被称为隙压缩（gap compression），它使得数字变得很多，同时仍然允许我们重建原始数据。
 
-例如，序列 $(38, 14, 77, 5, 90)$ 首先被排序为 $(5, 14, 38, 77, 90)$，然后使用隙压缩编码为 $(5, 9, 24, 39, 13)$。注意，使用隙压缩后数字变小得多，存储它们所需的平均字节数显著下降。在我们的情况下，如果这 50,000 个整数均匀分布在 $[0, 2^{32}]$ 范围内，许多数字可以轻松放入单个字节中，该字节可以包含 $[0, 256]$ 范围内的值。
+例如，序列 `(38, 14, 77, 5, 90)` 首先被排序为 `(5, 14, 38, 77, 90)`，然后使用隙压缩编码为 `(5, 9, 24, 39, 13)`。注意，使用隙压缩后数字变小得多，存储它们所需的平均字节数显著下降。在我们的情况下，如果这 50,000 个整数均匀分布在 `[0, 2^{32}]` 范围内，许多数字可以轻松放入单个字节中，该字节可以包含 `[0, 256]` 范围内的值。
 
 接下来，我们转向变长编码，这是理论上可以压缩数据的众多方法之一。其思想是使用每个字节的最高位来指示它是否为该整数的最后一个字节。如果该位为 0，则继续处理下一个字节以重建该数字；如果该位为 1，我们存储用于解码该值所使用的字节。例如，数字 13 被编码为 00001101——高位为 0，因此该字节包含整个整数，其余部分只是二进制的数字 13。下一个数字 12 被编码为 00000001 00001010。第一个字节的高位为 0，所以记住前 7 位 0000001；而第二个字节的高位也为 0，因此追加位 0000000 和 10001010，即二进制的数字 12。在这个例子中，一个数字仅用 1 个字节存储，而另一个数字则用了 2 个字节。使用这种技术存储上一步获得的间隙，可以将原始数据压缩近四倍。我们可以对随机整数进行实验以得出这一结果。
 
@@ -6692,7 +6545,7 @@ $$e(A, B) = \sum_{v \in A} deg_B(v) \geq \sum_{v \in A} deg_A(v) = 2e(A)$$
 
 为了高效地存储出现在网页上的单词索引——这是搜索引擎的基础——我们需要为每个单词存储它出现的页码（URL），同时保持对它的访问。在典型情况下，一个单词的页码无法放入主内存，但单词字典恰恰可以装下。
 
-存储单词出现的页码，最佳方法是使用变长编码——即我们刚刚考虑过的这种方法。然而，存储字典要稍微复杂一些；字典是一个简单的条目数组，每个条目包含单词以及指向该单词出现处页码的偏移量。为了能够访问这些数据，应该对其进行排序——这保证了 $O(log\ n)$ 的访问时间。
+存储单词出现的页码，最佳方法是使用变长编码——即我们刚刚考虑过的这种方法。然而，存储字典要稍微复杂一些；字典是一个简单的条目数组，每个条目包含单词以及指向该单词出现处页码的偏移量。为了能够访问这些数据，应该对其进行排序——这保证了 `O(log\ n)` 的访问时间。
 
 假设每个条目都是 C 值类型在内存中的表示，而整个字典是以下格式的数组：
 
@@ -6704,9 +6557,11 @@ struct DictionaryEntry{
 DictionaryEntry[] dictionary = ...;
 ```
 
+
+
 正如第 3 章所示，值类型数组仅由值类型实例组成。然而，每个值类型包含一个指向字符串的引用；对于这些引用，加上 64 位系统上的 16 个字节，字典单词本身占据了宝贵的空间，而且每个字典单词（作为单独字符串存储）会有额外的 24 字节开销（16 字节 + 4 字节存储字符串长度 + 4 字节存储索引所使用的字符缓冲区中的字符数量）。
 
-通过将所有单词连接成一个单一长字符串，并在 `DictionaryEntry` 结构中存储偏移量，我们可以大幅减少存储字典条目所需的空间（见图 4–5）。这些拼接后的字符串很少超过 $2^{24}$ 字节 = 16MB，这意味着索引字段可以是一个 3 字节整数，而不是 8 字节的内存地址：
+通过将所有单词连接成一个单一长字符串，并在 `DictionaryEntry` 结构中存储偏移量，我们可以大幅减少存储字典条目所需的空间（见图 4–5）。这些拼接后的字符串很少超过 `$2^{24}$` 字节 = 16MB，这意味着索引字段可以是一个 3 字节整数，而不是 8 字节的内存地址：
 
 # 第 9 章 算法优化
 
@@ -6739,9 +6594,7 @@ class Dictionary {
 
 本章考察了算法优化的一些支柱。正如你所看到的，选择合适的算法可以产生巨大的差异。具体来说，我们讨论了隙压缩、索引压缩和编码。我们的主要希望通过阅读本章，你学了一些思想。我们知道许多开发者很少需要发明算法。
 
-# 第 10 章
-
-## 性能模式
+# 第 10 章 性能模式
 
 本章包含了我们在其他地方没有讨论过的话题。虽然这些问题很小，但对于高性能应用程序非常重要。没有统一的主题来引导你阅读本章，但在简单的循环和复杂的应用程序中。
 
@@ -6753,7 +6606,7 @@ class Dictionary {
 
 要检查这些，你必须附加到运行进程——JIT 编译器在检测到调试器时不会进行优化。当你附加时，必须确保要检查的方法已经调用并编译。
 
-如果由于某些原因你想禁用 JIT 优化——例如为了在内联和尾调用的情况下更容易调试——不需要修改代码或使用 Debug 配置。相反，你可以创建一个与应用程序可执行文件同名的 .ini 文件（例如 MyApp.ini），并在其中放入以下三行。下次放在可执行文件旁边时，它将阻止 JIT 编译器执行任何优化。
+如果由于某些原因你想禁用 JIT 优化——例如为了在内联和尾调用的情况下更容易调试——不需要修改代码或使用 Debug 配置。相反，你可以创建一个与应用程序可执行文件同名的 `.ini` 文件（例如 `MyApp.ini`），并在其中放入以下三行。下次放在可执行文件旁边时，它将阻止 JIT 编译器执行任何优化。
 
 ```
 .Framework Debugging Control
@@ -6768,21 +6621,12 @@ AllowOptimize=0
 ```csharp
 //原始 C# 代码:
 static int Add(int i, int j) {
-```
-
-
-
-
-
-## 第 10 章 性能模式
-
-```sharp
-return i+j;
+    return i+j;
 }
 static void Main() {
-int i=4;
-int j=3*i+11;
-Console.WriteLine(Add(i, j));
+    int i=4;
+    int j=3*i+11;
+    Console.WriteLine(Add(i, j));
 }
 ```
 
@@ -6796,7 +6640,7 @@ mov edx,dword ptr [ecx+38h]  ; 剩余部分是间接调用
 call dword ptr [eax+14h] StreamWriter.WriteLine virtual method
 ```
 
-> **注意** 执行此优化的并不是 C# 代码。如果你检查 IL 代码，局部变量仍然在那里，对 Add 方法的调用也是。JIT 编译器负责所有的优化。
+> **注意** 执行此优化的并不是 C# 代码。如果你检查 IL 代码，局部变量仍然在那里，对 `Add` 方法的调用也是。JIT 编译器负责所有的优化。
 
 这种优化被称为*常量折叠*（constant folding），还有许多类似的优化，例如*公共子表达式*（在类似 `a+(b* c) - (a* b* c)` 的语句中，值 `a* b` 只需计算一次）。JIT 编译器执行这些标准优化，但通常认为它们不如 Microsoft C++ 编译器等优化编译器那样有效。原因是 JIT 编译器的执行环境非常受限，必须能够在首次调用时快速编译，以防止显著延迟。
 
@@ -6810,9 +6654,9 @@ JIT 编译器用于确定哪些方法进行内联的精确标准尚未公开。�
 - 带有异常处理的方法不内联。
 - 递归方法不内联。
 - 具有非原始类型值参数、局部变量或返回值的方法不内联。
-- 体积大于 32 字节 IL 方法不内联。（[MethodImpl] 属性的 `MethodImplOptions.AggressiveInlining` 值可以覆盖内联。）
+- 体积大于 32 字节 IL 方法不内联。（`[MethodImpl]` 属性的 `MethodImplOptions.AggressiveInlining` 值可以覆盖内联。）
 
-在 CLR 的最新版本中，内联的一些限制被删除了。例如，从 .NET 3.5 SP1 开始，32 位 JIT 编译器能够内联接受某些非原始值参数的方法，例如第 3 章中的 Point2D。该版本中的更改在某些条件下将对值类型的操作替换为对原始类型的操作等效操作（Point2D 被转换为两个 int），并允许对与结构体相关的代码进行更好的优化，例如复制传播、冗余赋值消除等。例如，考虑以下代码：
+在 CLR 的最新版本中，内联的一些限制被删除了。例如，从 .NET 3.5 SP1 开始，32 位 JIT 编译器能够内联接受某些非原始值参数的方法，例如第 3 章中的 `Point2D`。该版本中的更改在某些条件下将对值类型的操作替换为对原始类型的操作等效操作（`Point2D` 被转换为两个 int），并允许对与结构体相关的代码进行更好的优化，例如复制传播、冗余赋值消除等。例如，考虑以下代码：
 
 ```csharp
 private static void MethodThatTakesAPoint(Point2d pt) {
@@ -6854,7 +6698,7 @@ pop ebp
 ret 8
 ```
 
-尽管在 JIT 编译器愿意执行时无法强制内联，但有一种方法关闭内联。[MethodImpl] 属性的 `MethodImplOptions.NoInlining` 值可以禁用特定方法的内联——顺便说，这对微基准测试很有用，见第 2 章。
+尽管在 JIT 编译器愿意执行时无法强制内联，但有一种方法关闭内联。`[MethodImpl]` 属性的 `MethodImplOptions.NoInlining` 值可以禁用特定方法的内联——顺便说，这对微基准测试很有用，见第 2 章。
 
 ## 范围检查消除 (Range-Check Elimination)
 
@@ -6976,11 +6820,6 @@ test eax,ecx      ; 如果 b == 0，返回 a
 jne PROCEED
 ```
 
-
-
-
-# 第 10 章 性能模式
-
 ```
 pop esi
 pop ebp
@@ -7060,6 +6899,8 @@ call clr!JIT_Overflow
 nop
 ```
 
+
+
 显而易见，64 位 JIT 编译器使用了尾部优化来消除递归方法调用，而 32 位 JIT 编译器并没有这样做。关于确定是否可以使用尾部调用的条件，详细讨论已超出了本书的范围——以下是一些启发式规则：
 
 - 64 位 JIT 编译器在尾部调用方面较为宽松，即使语言编译器（例如 C# 编译器）没有通过使用 `tail.il` 前缀来建议使用，它通常也会执行尾部调用。
@@ -7090,17 +6931,13 @@ nop
 
 改进你的应用程序特定数据加载取决于你；我们发布的每条准则在实践中都是通用的（提供启动界面来拉长用户的耐心除外）。然而，对于源自 I/O 操作和 JIT 编译的启动性能不佳，我们提供了几种方法。优化应用程序的启动时间可以将其减少一半，在某些情况下更是如此。
 
-
-
-
-
 # 第 10 章 性能模式
 
 图像存储在您无需手动管理的缓存中——它存储在 GAC 旁边，默认路径为 `C:\Windows\Assembly\NativeImages\`。
 
 由于 CLR 和 NGen 会自动管理原生镜像，因此您永远不要将原生镜像从一台机器复制到另一台机器。在特定系统上预编译托管程序集的唯一支持方法是在该系统上运行 NGen 工具。执行此操作的理想时间是应用程序安装期间（NGen 甚至支持“defer”命令，它会将预编译排到后台服务中执行）。这就是 .NET Framework 安装程序对 .NET 程序集所的操作。
 
-下面是一个使用 NGen 预编译单个应用程序的完整示例，该程序由两个程序集组成：main.exe 文件和它引用的辅助 .dll 文件。NGen 成功检测到依赖项并将两个程序集预编译为原生镜像：
+下面是一个使用 NGen 预编译单个应用程序的完整示例，该程序由两个程序集组成：`main.exe` 文件和它引用的辅助 `.dll` 文件。NGen 成功检测到依赖项并将两个程序集预编译为原生镜像：
 
 ```
 > c:\windows.microsoft.net\framework\v4.0.30319\ngen install Chi10.exe
@@ -7116,65 +6953,121 @@ Microsoft (R) CLR Native Image Generator - Version 4.0.30319.17379 Copyright (c)
 
 ```
 0:007|1
+
 start end module name
+
 01350000 01358000 Chi10 (deferred)
+
 2f460000 2f466000
+
 3b500000 3b516000 HelperLibrary_ni (deferred)
+
 67f24000 67f8e000 mscorlib_ni (deferred)
+
 6b240000 6b6bf000 clr (deferred)
+
 6f250000 6f222000 MSVCR10_CLR0400 (deferred)
+
 72191000 7220a000 mscoree (deferred)
+
 72211000 7225a000 MSCORE (deferred)
+
 747b0000 747c0000 CRYPTBASE (deferred)
+
 74cc0000 74d20000 SpiCli (deferred)
+
 74d20000 74d39000 sechost (deferred)
+
 74d40000 74d86000 KERNELBASE (deferred)
+
 74e50000 74f50000 USER32 (deferred)
+
 74fb0000 74fc97000 MSFT (deferred)
+
 75080000 7512c000 msvcrrt (deferred)
+
 75150000 751e0000 USP10 (deferred)
+
 75e30000 75480000 ADVAPI32 (deferred)
+
 75480000 75570000 RPCRT4 (deferred)
+
 75570000 7566cc00 ole32 (deferred)
+
 75730000 75787000 SHLLWAPI (deferred)
 ```
 
 ```
 0:007 > Ildump -md 2f46242dc
+
 EEClass: 2f4614c8
+
 Module: 2f461000
+
 Name: Chi10.Program
+
 mdToken: 02000002
+
 File: D:\Chi10.exe
+
 BaseSize: 0xc
+
 ComponentSize: 0x0
+
 Slots in VTable: 6
+
 Number of Ifaces in IFace: 0
+
 MethodDesc Table
+
 Entry Method JIT Name
+
 68267450 68013524 PreJIT System.Object.ToString()
+
 682606b0 68013522 PreJIT System.Object.Equals(System.Object)
+
 68260270 6801354c PreJIT System.Object.GetHashCode()
+
 68260230 68013560 PreJIT System.Object.Finalize())
+
 2f462a68 2f461511 PreJIT Chi10..ctor()
+
 2f462a68 2f461508 PreJIT Chi10.Main(String[])
+
 0:007 > Ildump -md 30b14c4
+
 EEClass: 30b14c4
+
 Module: 30b11000
+
 Name: HelperLibrary.UtilityClass
+
 mdToken: 02000002
+
 File: D:\Code\HelperLibrary.dll
+
 BaseSize: 0xc
+
 ComponentSize: 0x0
+
 Slots in VTable: 6
+
 Number of Ifaces in IFace: 0
+
 MethodDesc Table
+
 Entry Method JIT Name
+
 68267450 68013524 PreJIT System.Object.ToString()
+
 682606b0 68013522 PreJIT System.Object.Equals(System.Object)
+
 68260270 6801354c PreJIT System.Object.GetHashCode()
+
 68260230 68013560 PreJIT System.Object.Finalize())
+
 30b14158 30b11518 PreJIT HelperLibrary.UtilityClass..ctor()
+
 30b12048 30b04 PreJIT HelperLibrary.UtilityClass.SayHello()
 ```
 
@@ -7194,23 +7087,35 @@ Entry Method JIT Name
 
 ```
 public static void Main(string[] args) {
+
     System.Runtime.ProfileOptimization.SetExecutingRoot(
+
         Path.GetDirectoryName(Assembly.GetAssembly().Location));
+
     if (args[0] == "display") {
+
         System.Runtime.ProfileOptimization.StartProfile("DisplayArchive.prof");
+
     } else if (args[0] == "compress") {
+
         System.Runtime.ProfileOptimization.StartProfile("CompressDirectory.prof");
+
     }
+
     //..更多启动场景
+
 // 确定启动场景后是应用程序的其他代码
+
 }
 ```
+
+
 
 ## 镜像封装
 
 最小 I/O 传输成本的常用方法是压缩原始数据。毕竟，如果 15GB 的未解压 Windows 安装可以以压缩格式放入一张 DVD，那么下载它就没什么意义了。同样的想法也可以用于存储在磁盘上的托管应用程序。对应用程序进行压缩并在加载到内存后解压，可以显著降低启动成本，对于必须尽快启动的应用程序是如此。
 
-有商业和开源的应用程序压缩工具（通常称为封装器）。如果您使用封装器，请确保只处理非托管二进制文件。一个示例是 MPress，可以在 http://www.netcode.com/mpress.htm 免费获取。另一个示例是 .NET 可执行文件封装器 (RPX)，这是一个发布在 http://rplex.com/ 的开源工具。以下是 RPX 在小型应用程序上运行时的一些示例输出：
+有商业和开源的应用程序压缩工具（通常称为封装器）。如果您使用封装器，请确保只处理非托管二进制文件。一个示例是 `MPress`，可以在 `http://www.netcode.com/mpress.htm` 免费获取。另一个示例是 `.NET` 可执行文件封装器 (`RPX`)，这是一个发布在 `http://rplex.com/` 的开源工具。以下是 `RPX` 在小型应用程序上运行时的一些示例输出：
 
 +   * Rpx exe Shlook.Testserver Shlook.common.dll Shlook.Server.dll Rigid Packer for (.Net) executables 1.3.4399.43191
 
@@ -7229,57 +7134,53 @@ public static void Main(string[] args) {
 
 ## 托管分析优化 (MPGO)
 
-托管配置分析优化 (MPGO) 是 Visual Studio 10 和 CLR 4.5 中引入的工具，用于优化 Ngen 生成的原生镜像磁盘布局。MPGO 从应用程序执行的指定期间生成分析信息并将其嵌入程序集中。随后，Ngen 使用这些信息来优化生成的原生镜像的布局。
+托管配置分析优化 (`MPGO`) 是 Visual Studio 10 和 CLR 4.5 中引入的工具，用于优化 `Ngen` 生成的原生镜像磁盘布局。`MPGO` 从应用程序执行的指定期间生成分析信息并将其嵌入程序集中。随后，`Ngen` 使用这些信息来优化生成的原生镜像的布局。
 
-MPGO 主要通过两种方式优化原生布局。首先，MPGO 确保频繁热的代码和数据在磁盘上放置在一起。结果减少了页错误并提高了热数据的命中。其次，MPGO 将潜在易变的数据放在一起。当与其他进程共享数据页时，Windows 会为修改它的进程创建一个私有副本（这被称为写时复制）。由于 MPGO 的优化，共享页面被合并，从而减少了副本并降低了内存占用。
+`MPGO` 主要通过两种方式优化原生布局。首先，`MPGO` 确保频繁热的代码和数据在磁盘上放置在一起。结果减少了页错误并提高了热数据的命中。其次，`MPGO` 将潜在易变的数据放在一起。当与其他进程共享数据页时，Windows 会为修改它的进程创建一个私有副本（这被称为写时复制）。由于 `MPGO` 的优化，共享页面被合并，从而减少了副本并降低了内存占用。
 
+> `mpgo.exe -scenario Ch10.exe -assemblylist Ch10.exe HelperLibrary.dll -OutDir -NoClean`
 
-
-
-
-> mpgo.exe -scenario Ch10.exe -assemblylist Ch10.exe HelperLibrary.dll -OutDir -NoClean
-
-成功插桩程序集 D:\Code\Ch10.exe
-成功插桩程序集 D:\Code\HelperLibrary.dll
+成功插桩程序集 `D:\Code\Ch10.exe`
+成功插桩程序集 `D:\Code\HelperLibrary.dll`
 
 <应用程序中移除输出>
 
-成功插桩程序集 D:\Code\Ch10.exe
-成功移除程序集 D:\Code\HelperLibrary.dll
-读取 IBC 数据文件：D:\Code\Ch10.ibc
-模块 D:\Code\Ch10-1.exe 不包含 IBC 资源
-在模块 D:\Code\Ch10-1.exe 中写入性能分析数据
+成功插桩程序集 `D:\Code\Ch10.exe`
+成功移除程序集 `D:\Code\HelperLibrary.dll`
+读取 IBC 数据文件：`D:\Code\Ch10.ibc`
+模块 `D:\Code\Ch10-1.exe` 不包含 IBC 资源
+在模块 `D:\Code\Ch10-1.exe` 中写入性能分析数据
 来自一个或多个输入文件的数据已升级到更高版本
-成功将性能分析数据合并到新文件 D:\Code\Ch10-exe.ibc
- IBC 数据文件：D:\Code\Helperlibrary-1.dll，不包含 IBC 资源
-在模块 D:\Code\Helperlibrary-1.dll 中写入性能分析数据
+成功将性能分析数据合并到新文件 `D:\Code\Ch10-exe.ibc`
+IBC 数据文件：`D:\Code\Helperlibrary-1.dll`，不包含 IBC 资源
+在模块 `D:\Code\Helperlibrary-1.dll` 中写入性能分析数据
 来自一个或多个输入文件的数据已升级到更高版本
-成功将性能分析数据合并到新文件 D:\Code\HelperLibrary-1.dll
+成功将性能分析数据合并到新文件 `D:\Code\HelperLibrary-1.dll`
 
-注意：当优化完成后，你需要对优化后的程序集再次运行 NGen，以创建受益于 MPGO 的原生映像。在程序集上运行 NGen 的内容将在本章中介绍。
+注意：当优化完成后，你需要对优化后的程序集再次运行 `NGen`，以创建受益于 `MPGO` 的原生映像。在程序集上运行 `NGen` 的内容将在本章中介绍。
 
-在编写本文时，尚没有计划将 MPGO 引入 Visual Studio 2012 的用户界面。命令行工具是为应用程序添加这些性能提升的唯一方法。因为它依赖于 NGen，这是另一种在目标机器的安装时间后执行的优化。
+在编写本文时，尚没有计划将 `MPGO` 引入 Visual Studio 2012 的用户界面。命令行工具是为应用程序添加这些性能提升的唯一方法。因为它依赖于 `NGen`，这是另一种在目标机器的安装时间后执行的优化。
 
 ## 启动性能的杂项技巧
 
 我们之前没有提到过的几个额外技巧，这些技巧可能会为你的应用程序启动时间节省几秒钟。
 
-## 强性名称程序集属于 GAC
+### 强性名称程序集属于 GAC
 
-如果你的程序集具有强性名称（Strong Names），请确保将它们放置在全局程序集缓存（GAC）中。否则，加载程序集时需要触及几乎每一个页面以验证其数字签名。当程序集未放置在 GAC 中时，对强性名称的验证也会削减 NGen 带来的任何性能收益。
+如果你的程序集具有强性名称（Strong Names），请确保将它们放置在全局程序集缓存（GAC）中。否则，加载程序集时需要触及几乎每一个页面以验证其数字签名。当程序集未放置在 GAC 中时，对强性名称的验证也会削减 `NGen` 带来的任何性能收益。
 
-## 确保你的原生映像不需要重基（Rebasing）
+### 确保你的原生映像不需要重基（Rebasing）
 
-使用 NGen 时，请确保你的原生映像没有基地址冲突，因为冲突需要重基。重基是一项昂贵的操作，涉及在运行时修改代码地址，并创建共享代码页的副本。要查看原生映像的基地址，请使用带有 /headers 标志的 dumpbin.exe 工具，如下：
+使用 `NGen` 时，请确保你的原生映像没有基地址冲突，因为冲突需要重基。重基是一项昂贵的操作，涉及在运行时修改代码地址，并创建共享代码页的副本。要查看原生映像的基地址，请使用带有 `/headers` 标志的 `dumpbin.exe` 工具，如下：
 
-## 第 10 章 性能模式
-
-> dumpbin.exe /headers Ch10.ni.exe
+```
+dumpbin.exe /headers Ch10.ni.exe
+```
 
 Microsoft (R) COFF/PE Dumper Version 11.00.50214.1
 Copyright (C) Microsoft Corporation. 保留所有.
 
-文件 Ch10.ni.exe 的转储
+文件 `Ch10.ni.exe` 的转储
 
 找到 PE 签名
 
@@ -7289,14 +7190,23 @@ FILE HEADER VALUES
 
 ```
 14C machine (x86)
+
 4 number of sections
+
 4F84B2C time date stamp Tue Apr 10 15:44:28 2012
+
 0 pointer to symbol table
+
 0 number of symbols
+
 Eo size of optional header
+
 2102 characteristics
+
 Executable
+
 32 bit word machine
+
 DLL
 ```
 
@@ -7304,43 +7214,57 @@ OPTIONAL HEADER VALUES
 
 ```
 10B magic #(PE32)
+
 11.00 linker version
+
 0 size of code
+
 0 size of initialized data
+
 0 size of uninitialized data
+
 0 entry point
+
 0 base of code
+
 0 base of data
+
 30000000 image base (30000000 to 3005FFF)
+
 1000 section alignment
+
 200 file alignment
+
 5.00 operating system version
+
 0.00 image version
+
 5.00 subsystem version
+
 0 Win32 version
+
 600 size of image
+
 <为了简洁省略了更多输出>
 ```
 
-若要更改原生映像的基地址，请在 Visual Studio 的项目属性中更改基地址。基地址可以在 Build 选项卡的打开 Advanced对话框后找到（见图 10-1）。
-
-## 第 10 章 性能模式
+若要更改原生映像的基地址，请在 Visual Studio 的项目属性中更改基地址。基地址可以在 Build 选项卡的打开 Advanced 对话框后找到（见图 10-1）。
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_290_0.png)
 
-**图 10-1.** Visual Studio 高级生成对话框，允许修改 NGen 生成的原生映像的基地址。
+**图 10-1.** Visual Studio 高级生成对话框，允许修改 `NGen` 生成的原生映像的基地址。
 
-从 .NET 3.5 SP1 开始，当应用程序在 Windows Vista 或更新的平台上运行时，NGen 会选择使用地址空间布局随机化（ASLR）。使用 ASLR 时，出于安全考虑，映像的基地址会在每次运行期间随机化。在此配置下，在 Windows Vista 及更新平台上，通过重组来避免基地址冲突是不重要的。
+从 `.NET 3.5 SP1` 开始，当应用程序在 Windows Vista 或更新的平台上运行时，`NGen` 会选择使用地址空间布局随机化（ASLR）。使用 ASLR 时，出于安全考虑，映像的基地址会在每次运行期间随机化。在此配置下，在 Windows Vista 及更新平台上，通过重组来避免基地址冲突是不重要的。
 
-## 减少程序集的总数
+### 减少程序集的总数
 
 减少应用程序加载的程序集数量。每个程序集无论大小如何，都会产生固定的成本，而且程序集之间的引用和方法调用在运行时可能成本更高。加载数百个程序集的大型应用程序并不罕见，如果将程序集合并为几个二进制文件，它们的启动时间可以减少几秒。
 
-## 针对处理器的优化
+### 针对处理器的优化
 
-理论上，.NET 开发者不应该担心针对特定处理器或指令集的优化。毕竟，IL 和 JIT 编译目的是目的是托管应用程序运行在任何安装了 .NET Framework 的硬件上，并且对操作系统、处理器功能和指令集保持无关。正如我们在本书中所看到的，要从托管应用程序中榨取最后一点性能可能需要在汇编层级进行推理。
+理论上，`.NET` 开发者不应该担心针对特定处理器或指令集的优化。毕竟，IL 和 JIT 编译目的是目的是托管应用程序运行在任何安装了 `.NET Framework` 的硬件上，并且对操作系统、处理器功能和指令集保持无关。正如我们在本书中所看到的，要从托管应用程序中榨取最后一点性能可能需要在汇编层级进行推理。
 
-## 单指令多数据 (SIMD)
+#### 单指令多数据 (SIMD)
 
 数据级并行，也称为单指令多数据（SIMD），是现代处理器的一项功能，它允许在一组数据（大于机器字）上执行单个指令。SIMD 指令集的标准是 SSE（流式 SIMD 扩展），Intel 处理器自 Pentium III 以来一直使用。该指令增加了 128 位寄存器（带有 XMM 前缀）以及可以在这些寄存器上操作的指令。Intel 处理器引入了高级向量扩展（AVX），它是 SSE 的扩展，提供了 256 位寄存器和更多的指令。SSE 指令的一些示例包括：
 
@@ -7349,16 +7273,16 @@ OPTIONAL HEADER VALUES
 - 位运算
 - 最小值、最大值、条件复制、CRC32、人口计数（在 SSE4 及更高版本中引入）
 
-你可能在好奇，在“新”寄存器上操作的指令是否比对应的指令慢。如果是这样，任何性能提升都是虚假的。坦率地说，情况并非如此。在 Intel i7 处理器上，针对 32 位寄存器的浮点加法（FADD）指令的吞吐量为每周期一次指令，延迟为 3 个周期。针对 128 位寄存器的等效指令 ADDPS 的吞吐量也为每周期一次指令，延迟为 3 个周期。
+你可能在好奇，在“新”寄存器上操作的指令是否比对应的指令慢。如果是这样，任何性能提升都是虚假的。坦率地说，情况并非如此。在 Intel i7 处理器上，针对 32 位寄存器的浮点加法（FADD）指令的吞吐量为每周期一次指令，延迟为 3 个周期。针对 128 位寄存器的等效指令 `ADDPS` 的吞吐量也为每周期一次指令，延迟为 3 个周期。
 
-## 延迟与吞吐量
+#### 延迟与吞吐量
 
 延迟和吞吐量是性能测量中的常用术语，特别是在讨论处理器的“速度”时：
 
 - 指令的**延迟（Latency）**是指从开始到结束执行一个实例的时间（通常以时钟周期计算）。
 - 指令的**吞吐量（Throughput）**是指单位时间内（通常以时钟周期计算）可以执行的同类型指令的数量。
 
-如果我们说 FADD 的延迟为 3 个周期，意味着单个 FADD 操作将需要 3 个周期才能完成。如果我们说 FADD 的吞吐量为每周期一次指令，意味着处理器能够维持每周期执行一次指令的速率，这将需要三个此类指令并发执行。
+如果我们说 `FADD` 的延迟为 3 个周期，意味着单个 `FADD` 操作将需要 3 个周期才能完成。如果我们说 `FADD` 的吞吐量为每周期一次指令，意味着处理器能够维持每周期执行一次指令的速率，这将需要三个此类指令并发执行。
 
 通常，指令的吞吐量显著优于其延迟，因为处理器可以并行发射和执行多条指令（我们稍后会这个问题）。
 
@@ -7366,16 +7290,13 @@ OPTIONAL HEADER VALUES
 
 ```
 // 假设 A, B, C 是大小相同的 float 数组
+
 for (int i=0; i<A.length; i++) {
+
   C[i]=A[i]+B[i];
+
 }
 ```
-
-
-
-
-
-## 第 10 章 性能模式
 
 在此场景下，JIT 导出的标准代码如下：
 
@@ -7398,7 +7319,7 @@ j NEXT_ITERATION
 END_LOOP:
 ```
 
-每次迭代都执行一次 FADD 指令，加上两个 32 位浮点数。然而，通过使用 128 位 SSE 指令，一次可以发射四次迭代，如下（以下代码执行了范围检查，并假设迭代次数可 4 整除）：
+每次迭代都执行一次 `FADD` 指令，加上两个 32 位浮点数。然而，通过使用 128 位 SSE 指令，一次可以发射四次迭代，如下（以下代码执行了范围检查，并假设迭代次数可 4 整除）：
 
 ```assembly
 xor edx, edx
@@ -7426,13 +7347,13 @@ cmp edx,dword ptr [esi+4]      ; increase loop index
 j NEXT_ITERATION
 ```
 
-注意：这些示例中使用的 SIMD 指令仅仅是冰山一角。现代应用程序使用 SIMD 指令执行复杂操作，包括标量积、寄存器间的数据洗牌、校验和计算等。Intel 的 AVX 门户是学习 AVX 功能的绝佳途径：http://software.intel.com/en-us/avx 
+注意：这些示例中使用的 SIMD 指令仅仅是冰山一角。现代应用程序使用 SIMD 指令执行复杂操作，包括标量积、寄存器间的数据洗牌、校验和计算等。Intel 的 AVX 门户是学习 AVX 功能的绝佳途径：`http://software.intel.com/en-us/avx`
 
-## 性能模式
+#### 性能模式
 
 JIT 编译器使用了少量的 SSE 指令，尽管它们在过去 10 年制造的每个处理器上都可用。具体来说，JIT 编译器使用 SSE MOV 指令通过 XMM 寄存器拷贝中等结构（使用 REP MOV 代），并使用 SSE 指令进行浮点到整数的转换。JIT 编译器不会像我们在前面的代码中所那样对向量化循环，而现代 C++ 编译器（包括 Visual Studio 2012）可以。
 
-遗憾的是，C# 没有提供将代码嵌入托管项目的任何关键字。你可以使用 .NET 互操作性来调用性能敏感的 C++ 代码，但这通常很复杂。还有两种方法可以在不使用独立方法的情况下嵌入 SIMD 代码。从托管应用程序中运行任何机器码（尽管有一个轻量级的互操作层）的暴力方法是动态封送机器码并调用它。`Marshal.GetDelegatePointer` 是关键，因为它返回一个指向非托管内存位置的托管委托，其中可能包含任意代码。以下带有 EXECUTE_READWRITE 页的方法使我们能够将字节拷贝到内存并执行它们。然而，结果是 80 个 CPU 周期的开销，这比执行时间提升了 2 倍以上！
+遗憾的是，C# 没有提供将代码嵌入托管项目的任何关键字。你可以使用 `.NET` 互操作性来调用性能敏感的 C++ 代码，但这通常很复杂。还有两种方法可以在不使用独立方法的情况下嵌入 SIMD 代码。从托管应用程序中运行任何机器码（尽管有一个轻量级的互操作层）的暴力方法是动态封送机器码并调用它。`Marshal.GetDelegatePointer` 是关键，因为它返回一个指向非托管内存位置的托管委托，其中可能包含任意代码。以下带有 `EXECUTE_READWRITE` 页的方法使我们能够将字节拷贝到内存并执行它们。然而，结果是 80 个 CPU 周期的开销，这比执行时间提升了 2 倍以上！
 
 ```csharp
 [UnmanagedFunctionPointer(Calling.StdCall)]
@@ -7452,15 +7373,19 @@ IntPtr codeBuffer = VirtualAlloc(
     0x40); // EXECUTE_READWRITE
 
 Marshal.Copy(sseAssembleBytes, 0, codeBuffer, sseAssembleBytes.Length);
+
 VectorAddDelegate add = (VectorAddDelegate)Marshal.GetDelegateForFunctionPointer(codeBuffer, typeof(VectorAddDelegate));
+
 // 我们可以使用 'add' 来相加向量
 ```
 
-另一种完全不同的方法（遗憾的是在 MicrosoftCLR 上不可用）是扩展 JIT 编译器以发射 SSE 指令。这种方法被 Mono.Sim 采用。使用 .NET 运行时的托管代码开发者可以引用 Mono.Sim 并使用将 Vector16 或 Vector4 的操作转换为相应 SSE 指令的 JIT 编译器。有关 Mono.Sim 的更多信息，请参阅官方文档：http://docs.go-mono.com/index.aspx?link=N:Mono.Sim
+
+
+另一种完全不同的方法（遗憾的是在 `MicrosoftCLR` 上不可用）是扩展 `JIT` 编译器以发射 `SSE` 指令。这种方法被 `Mono.Sim` 采用。使用 `.NET` 运行时的托管代码开发者可以引用 `Mono.Sim` 并使用将 `Vector16` 或 `Vector4` 的操作转换为相应 `SSE` 指令的 `JIT` 编译器。有关 `Mono.Sim` 的更多信息，请参阅官方文档：`http://docs.go-mono.com/index.aspx?link=N:Mono.Sim`
 
 ## 指令级并行
 
-与处理较大数据块的数据级并行不同，指令级并行（ILP）是一种允许单线程同时执行多条指令的机制。除了流水线，处理器还采用了所谓的超标量执行，使用了多个冗余单元。
+与处理较大数据块的数据级并行不同，指令级并行（`ILP`）是一种允许单线程同时执行多条指令的机制。除了流水线，处理器还采用了所谓的超标量执行，使用了多个冗余单元。
 
 数据依赖在指令需要另一个指令的结果时产生；例如，当指令从上一个指令写入的位置读取时。这限制了程序的执行。
 
@@ -7478,11 +7403,7 @@ for (int k = 1; k < 100; k++) {
 }
 ```
 
-我们在测试机器上执行了这些循环，使用长度为 100 的整数数组，每次执行百万次迭代。第一个循环运行了 190ms，第二个循环运行了 210ms，第三个循环运行了 270ms。这是源于指令级并行的巨大性能差异。优化型编译器用于组织指令结构以最大化指令并行性。JIT 编译器做得并不出色，但现代处理器的乱序执行能力可能会影响它。
-
-
-
-
+我们在测试机器上执行了这些循环，使用长度为 100 的整数数组，每次执行百万次迭代。第一个循环运行了 190ms，第二个循环运行了 210ms，第三个循环运行了 270ms。这是源于指令级并行的巨大性能差异。优化型编译器用于组织指令结构以最大化指令并行性。`JIT` 编译器做得并不出色，但现代处理器的乱序执行能力可能会影响它。
 
 ## 第 10 章 性能模式
 
@@ -7506,9 +7427,9 @@ for (int k=3; k<100; k+=2) {
 int max=Math.Max(max0, max1);
 ```
 
-遗憾的是，JIT 编译器通过为第二个循环生成较不优的机器代码，错过了这种特定的优化。第一个循环的值可以放入寄存器中——`max` 和 `k` 被存储在寄存器中。在第二个循环中，JIT 无法将所有值放入寄存器中；如果 `max1` 或 `max0` 被置于内存中，性能将显著下降。相应的 C# 实现提供了预期的性能——第一次改进将操作速度提升了一倍，再次改进（使用四个 `max`）显示出 25% 的提升。
+遗憾的是，`JIT` 编译器通过为第二个循环生成较不优的机器代码，错过了这种特定的优化。第一个循环的值可以放入寄存器中——`max` 和 `k` 被存储在寄存器中。在第二个循环中，`JIT` 无法将所有值放入寄存器中；如果 `max1` 或 `max0` 被置于内存中，性能将显著下降。相应的 `C#` 实现提供了预期的性能——第一次改进将操作速度提升了一倍，再次改进（使用四个 `max`）显示出 25% 的提升。
 
-指令级并行性（ILP）可以与数据级并行性结合。这里考虑的示例（乘加循环和最大值计算）可以从使用 SIMD 指令中获得更好的速度。在 `max` 的情况下，PMAXD SSE 指令处理两组整数中的每对整数。以下代码（使用 `<immintrin.h>` 中的 Visual C++ 内联函数）运行比之前的版本快 3 倍，比原始简单版本快 7 倍：
+指令级并行性（`ILP`）可以与数据级并行性结合。这里考虑的示例（乘加循环和最大值计算）可以从使用 `SIMD` 指令中获得更好的速度。在 `max` 的情况下，`PMAXD SSE` 指令处理两组整数中的每对整数。以下代码（使用 `<immintrin.h>` 中的 Visual C++ 内联函数）运行比之前的版本快 3 倍，比原始简单版本快 7 倍：
 
 ```cs
 m128i max=*(arr);
@@ -7525,15 +7446,15 @@ for (int k=4; k<100; k+=4) {
 
 ## 托管代码与非托管代码
 
-.NET 程序员的一个常见顾虑是，托管对象会引入性能开销，并导致他们无法使用 C#、.NET Framework 和 CLR 开发高性能应用程序。在整本书中，甚至在本章中，我们看到了一些陷阱，如果你想从托管应用程序中压榨每一比特性能，就必须意识到这些陷阱。遗憾的是，在某些情况下，非托管代码（用 C++ 编写或手工编写）的性能会比其托管版本更好。
+`.NET` 程序员的一个常见顾虑是，托管对象会引入性能开销，并导致他们无法使用 `C#`、`.NET Framework` 和 `CLR` 开发高性能应用程序。在整本书中，甚至在本章中，我们看到了一些陷阱，如果你想从托管应用程序中压榨每一比特性能，就必须意识到这些陷阱。遗憾的是，在某些情况下，非托管代码（用 `C++` 编写或手工编写）的性能会比其托管版本更好。
 
-我们并不打算分析和分类每一个证明 C++ 算法比 C 版本更高效的示例。尽管如此，仍有一些比其他主题出现频繁得多的共同点：
+我们并不打算分析和分类每一个证明 `C++` 算法比 `C` 版本更高效的示例。尽管如此，仍有一些比其他主题出现频繁得多的共同点：
 
-- 严格受 CPU 限制的数值算法在 C++ 中往往运行得更快，即使在 C# 中应用了特定优化也是如此。原因往往围绕着数组检查（JIT 编译器仅在某些情况下会优化掉，且仅针对单维数组）、C++ 编译器使用的 SIMD 指令，以及 C++ 擅长的其他优化，例如复杂的内联和智能寄存器分配。
+- 严格受 `CPU` 限制的数值算法在 `C++` 中往往运行得更快，即使在 `C#` 中应用了特定优化也是如此。原因往往围绕着数组检查（`JIT` 编译器仅在某些情况下会优化掉，且仅针对单维数组）、`C++` 编译器使用的 `SIMD` 指令，以及 `C++` 擅长的其他优化，例如复杂的内联和智能寄存器分配。
 
-- 某些内存管理模式对 GC 性能的性能是有害的（正如我们在第 4 章看到的）。有时， C++ 代码可以通过池化正确“处理”内存管理。
+- 某些内存管理模式对 `GC` 性能的性能是有害的（正如我们在第 4 章看到的）。有时， `C++` 代码可以通过池化正确“处理”内存管理。
 
-- C++ 享受对操作系统的直接访问，而 .NET 代码由于交互性可能运行较慢。在某些场景下，非托管代码比托管代码性能更快。Piegrass 在 CodeProject 的文章 [Head-to-head: C# vs .NET](https://www.codeproject.com/Articles/21285/Head-to-head-csharp-vs-NET) 打破了许多关于性能的误解。例如，Piegrass 的基准显示在某些情况下，使用 .NET 的集合比 C++ 更快； .NET 框架缺乏 SIMD 内联函数也是另一个因素。
+- `C++` 享受对操作系统的直接访问，而 `.NET` 代码由于交互性可能运行较慢。在某些场景下，非托管代码比托管代码性能更快。`Piegrass` 在 `CodeProject` 的文章 [`Head-to-head: C# vs .NET`](https://www.codeproject.com/Articles/21285/Head-to-head-csharp-vs-NET) 打破了许多关于性能的误解。例如，`Piegrass` 的基准显示在某些情况下，使用 `.NET` 的集合比 `C++` 更快； `.NET` 框架缺乏 `SIMD` 内联函数也是另一个因素。
 
 ## 异常
 
@@ -7549,38 +7470,34 @@ for (int k=4; k<100; k+=4) {
 
 - 构建异常需要回溯栈，栈越深，开销越大。
 
-- 抛出和处理异常需要与非托管代码交互——结构化异常处理 (SEH) 基础设施。
+- 抛出和处理异常需要与非托管代码交互——结构化异常处理 (`SEH`) 基础设施。
 
-为了了解异常是否导致了性能问题，可以使用 .NET CLR 计数器。具体来说，`# Exceptions Thrown / sec` 计数会有帮助。
+为了了解异常是否导致了性能问题，可以使用 `.NET CLR` 计数器。具体来说，`# Exceptions Thrown / sec` 计数会有帮助。
 
 ## 反射
 
 反射在复杂应用程序中被称为性能杀手。这在某种程度上是合理的：使用反射执行一些极其昂贵的操作。例如，使用 `Type.Invoke` 调用方法需要使用元数据确定要调用的方法，确保参数与方法参数匹配，必要时进行拷贝，验证任何安全问题，最后执行方法调用。由于反射高度基于对象参数和返回值，装箱和拆箱会产生额外成本。
 
-> 注意：为了从内部角度调整 .NET API，请考虑 Joel 在 MSN 杂志的文章 [Dodge Common Performance Pitfalls to Craft Speedy Applications](https://msdn.microsoft.com/en-us/magazine/cc163759.aspx)。
+> 注意：为了从内部角度调整 `.NET API`，请考虑 `Joel` 在 `MSN` 杂志的文章 [`Dodge Common Performance Pitfalls to Craft Speedy Applications`](https://msdn.microsoft.com/en-us/magazine/cc163759.aspx)。
 
 通过使用某种形式的代码生成，可以在性能关键场景中消除反射——不再动态反射类型并调用方法/属性，而是为（每个类型）生成代码以强类型的方式执行。
 
 ## 代码生成
 
-代码生成通常用于序列化框架、对象关系映射器 (ORM)、动态代理以及其他需要处理动态未知类型的性能敏感代码。在 .NET 框架中有多种方法可以动态生成代码，也有许多第三方代码生成框架，如 LLGen 和 T4 模板。
+代码生成通常用于序列化框架、对象关系映射器 (`ORM`)、动态代理以及其他需要处理动态未知类型的性能敏感代码。在 `.NET` 框架中有多种方法可以动态生成代码，也有许多第三方代码生成框架，如 `LLGen` 和 `T4` 模板。
 
-- 轻量级代码生成 (LCG)，称为 `DynamicMethod`，可以在不创建类型和程序集的情况下生成方法。对于小代码块，这是最高效的代码生成机制。在 LCG 中发射代码需要 `ILGenerator` 类，它直接与 IL 指令工作。
+- 轻量级代码生成 (`LCG`)，称为 `DynamicMethod`，可以在不创建类型和程序集的情况下生成方法。对于小代码块，这是最高效的代码生成机制。在 `LCG` 中发射代码需要 `ILGenerator` 类，它直接与 `IL` 指令工作。
 
-- `System.Reflection.Emit` 命名空间包含用于在 IL 级别生成程序集、类型和方法的 API。
-
-
-
-
+- `System.Reflection.Emit` 命名空间包含用于在 `IL` 级别生成程序集、类型和方法的 `API`。
 
 ## 第 10 章 性能模式
 
-- *表达式树（System.Linq.Expression 命名空间）可以用于从序列化表示创建轻量级表达式。*
-- `CSharpProvider` 类可以直接将 C# 源代码（以字符串形式提供或从文件读取）编译为程序集。
+- *表达式树（`System.Linq.Expression` 命名空间）可以用于从序列化表示创建轻量级表达式。*
+- `CSharpProvider` 类可以直接将 `C#` 源代码（以字符串形式提供或从文件读取）编译为程序集。
 
 ## 从源生成代码
 
-假设你正在实现一个序列化框架，该框架会写入任意对象的 XML 表示。使用反射（Reflection）来获取非空公共字段并递归地写入它们是非常昂贵的，但实现起来简单：
+假设你正在实现一个序列化框架，该框架会写入任意对象的 `XML` 表示。使用反射（`Reflection`）来获取非空公共字段并递归地写入它们是非常昂贵的，但实现起来简单：
 
 ```csharp
 // 基础的 XML 序列化器 - 不支持集合、循环引用等
@@ -7621,7 +7538,7 @@ if (typeof(T).IsPrimitive || typeof(T) == typeof(string)) {
 
 ## 使用动态轻量级代码生成代码
 
-另一个示例源于网络协议解析。假设你有一个大型的二进制数据流（例如网络数据包），你必须从数据包头中检索它并选择负载的部分。考虑以下数据包头结构（这是一个虚构的示例——TCP 数据包头并非那样排列）：
+另一个示例源于网络协议解析。假设你有一个大型的二进制数据流（例如网络数据包），你必须从数据包头中检索它并选择负载的部分。考虑以下数据包头结构（这是一个虚构的示例——`TCP` 数据包头并非那样排列）：
 
 ```csharp
 public struct TcpHeader {
@@ -7634,7 +7551,7 @@ public struct TcpHeader {
 }
 ```
 
-从字节流中检索此类结构在 C/C++ 中是一个轻而易举的任务，如果通过指针访问，甚至不需要拷贝任何内存。事实上，从字节流中检索任何字符串都是轻而易见的：
+从字节流中检索此类结构在 `C/C++` 中是一个轻而易举的任务，如果通过指针访问，甚至不需要拷贝任何内存。事实上，从字节流中检索任何字符串都是轻而易见的：
 
 ```cpp
 template<typename T>
@@ -7650,7 +7567,7 @@ const T get_value(const unsigned char* data, int offset) {
 }
 ```
 
-在 C# 中，遗憾的是事情变得复杂。有许多方法从流中读取任意数据。一种可能性是使用反射来遍历类型的字段，并从字节流中逐个读取：
+在 `C#` 中，遗憾的是事情变得复杂。有许多方法从流中读取任意数据。一种可能性是使用反射来遍历类型的字段，并从字节流中逐个读取：
 
 ```csharp
 // 仅支持某些原始类型字段，不递归
@@ -7675,7 +7592,7 @@ public static void ReadReflectionBitConverter<T>(byte[] data, int offset, out T 
     value=(T)box;
 ```
 
-当在其中一台机器上对一个 20 字节的 `TcpHeader` 结构执行 1,000,000 次时，该方法的平均执行时间为 170ms。虽然运行时间看起来并不糟糕，但所有装箱操作分配的内存量是大量的。此外，如果你考虑 1Gb/s 的实际网络速率，预计每秒几十个数据包是合理的，这意味着我们必须花费大量的 CPU 时间从传入的数据中读取字符串。
+当在其中一台机器上对一个 20 字节的 `TcpHeader` 结构执行 1,000,000 次时，该方法的平均执行时间为 170ms。虽然运行时间看起来并不糟糕，但所有装箱操作分配的内存量是大量的。此外，如果你考虑 1Gb/s 的实际网络速率，预计每秒几十个数据包是合理的，这意味着我们必须花费大量的 `CPU` 时间从传入的数据中读取字符串。
 
 一种好得多的涉及 `Marshal.PtrToStructure` 方法，它旨在将非托管内存转换为结构：
 
@@ -7701,7 +7618,7 @@ public static unsafe void ReadPointer(byte[] data, int offset, out TcpHeader hea
 }
 ```
 
-为什么这个方法这么快？因为负责拷贝的实体不再是像 `Marshal.PtrStructure` 这样的 API 调用——而是 JIT 编译器本身。为此方法生成的汇编代码可以被内联（JIT 编译器选择这样做），并使用 64 位指令一次拷贝 64 字节。问题在于我们设计的 `ReadPointer` 方法不是泛型的：
+为什么这个方法这么快？因为负责拷贝的实体不再是像 `Marshal.PtrStructure` 这样的 `API` 调用——而是 `JIT` 编译器本身。为此方法生成的汇编代码可以被内联（`JIT` 编译器选择这样做），并使用 64 位指令一次拷贝 64 字节。问题在于我们设计的 `ReadPointer` 方法不是泛型的：
 
 ```csharp
 public static unsafe void ReadPointerGeneric<T>(byte[] data, int offset, T value) {
@@ -7711,13 +7628,15 @@ public static unsafe void ReadPointerGeneric<T>(byte[] data, int offset, T value
 }
 ```
 
---无法编译！具体来说，在 C# 中 `T` 不是可以取指针的，因为没有泛型约束来保证取指针（仅限 blitt 类型，在第 8 章讨论过，似乎我们必须为每个类型编写一个特殊的 `ReadPointer` 版本）。
+--无法编译！具体来说，在 `C#` 中 `T` 不是可以取指针的，因为没有泛型约束来保证取指针（仅限 `blitt` 类型，在第 8 章讨论过，似乎我们必须为每个类型编写一个特殊的 `ReadPointer` 版本）。
+
+
 
 ## TypedReference 和两个未公开的 C# 关键字
 
 危急的时刻需要极端的措施，在这种情况下，极端措施是提取出未公开的 C# 关键字：`_makeref` 和 `_refvalue`（由同样未公开的操作码支持）。与 `TypedReference` 一起，这些结构用于某些带有 C 风格可变参数列表的底层交互场景（这还需要另一个关键字 `_arg`）。
 
-`TypedReference` 是一个包含两个 `IntPtr` 字段的结构——Type 和 Value。Value 是指向值的指针，可以是值类型或引用类型，而 Field 是这个表指针。通过创建一个指向值类型的 `TypedReference`，我们可以以强类型方式重新解释内存，正如我们的场景所需的，并使用 JIT 编译器拷贝内存。
+`TypedReference` 是一个包含两个 `IntPtr` 字段的结构——`Type` 和 `Value`。`Value` 是指向值的指针，可以是值类型或引用类型，而 `Field` 是这个表指针。通过创建一个指向值类型的 `TypedReference`，我们可以以强类型方式重新解释内存，正如我们的场景所需的，并使用 JIT 编译器拷贝内存。
 
 ```csharp
 // 我们通过 ref 传递参数而不是 out，因为我们需要获取这个地址，
@@ -7728,8 +7647,6 @@ public static unsafe void ReadTypedRef<T>(byte[] data, int offset, ref T value) 
     fixed (byte* pdata=&data[offset]) {
     // TypedReference 的第一个指针大小字段是对象地址，所以我们
 ```
-
-
 
 ```cs
 //覆盖数据数组中指向右位置的指针：
@@ -7809,7 +7726,7 @@ del(data, offset, out value);
 
 此版本处理 1,000,000 个数据包需要 1.05ms，是 `ReadPointer` 的两倍，但比原始的基于反射的方法快两个数量级——这是代码生成的另一个胜利。（与 `ReadPointer` 相比的性能损失是因为需要从静态字段获取委托、检查空值并通过委托调用方法。）
 
-## 总结
+### 总结
 
 尽管有所不同，本章讨论的优化技巧和技术对于实现高性能的 CPU 密集型算法以及设计复杂系统的架构都至关重要。通过让你的代码利用内置的 JIT 优化以及处理器提供的特定指令，尽可能尽可能减少应用程序的启动时间，并避开 Reflection 和异常等昂贵的 CLR 机制，你将能够压榨出托管软件的每一比特性能。
 
@@ -7831,7 +7748,7 @@ Web 应用程序设计用于每秒处理数百甚至数次请求。要成功构�
 
 在本章中，我们将简要讨论 Web 应用程序的性能测试工具，并从上述每种方法探索帮助我们提高应用程序整体性能的方法。在章节结束，我们将讨论扩展 Web 应用程序的必要性和影响，以及如何在扩展时避免已知的陷阱。
 
-## 测试 Web 应用程序的性能
+### 测试 Web 应用程序的性能
 
 在开始对 Web 应用程序进行更改之前，你需要知道它的运行是否良好——是否符合 SLA（服务水平协议）的要求？它在负载下表现是否不同？是否存在任何可以改进的通用问题？为了了解这些及更多，我们需要使用测试和监控工具来识别 Web 应用程序中的陷阱和瓶颈。
 
@@ -7853,10 +7770,6 @@ Visual Studio Ultimate 提供的功能之一是 Web 性能测试，它可以记�
 
 Web 性能测试允许你自定义测试流。你可以更改请求顺序并添加自己的新请求，在流中插入循环和条件，更改请求的头和内容，为响应添加验证规则，并通过将其转换为代码并编辑生成的代码来确保整个测试的完整性。
 
-
-
-
-
 **注意** 建议你不要测试公共网站，仅测试你自己的网站和Web应用程序。对公共网站进行负载测试可能被解释为拒绝服务（DOS）攻击，导致你的机器或本地网络被禁止访问该网站。
 
 将负载测试与Web性能测试的记录相结合，我们可以模拟几十甚至数百个用户并发访问我们的Web应用程序，模拟在每个请求中带有不同参数的各种页面进行调用。
@@ -7867,7 +7780,7 @@ Web 性能测试允许你自定义测试流。你可以更改请求顺序并添�
 
 通过运行各种场景的负载测试，例如不同的并发用户数量或不同类型的网络（慢/快），我们可以了解Web应用程序在压力下的工作情况，并从记录的数据中继续改进其整体性能的方法。
 
-## HTTP 监控工具
+### HTTP 监控工具
 
 可以嗅探 HTTP 通信的监控工具（如 asing、NetMon、HTTP Analyzer 和 Fiddler）可以帮助我们识别 Web应用程序的 HTTP 请求和响应。在监控工具的帮助下，我们可以验证影响 Web应用程序性能的各种问题。例如：
 
@@ -7878,7 +7791,7 @@ Web 性能测试允许你自定义测试流。你可以更改请求顺序并添�
 
 某些工具（如 Fiddler）还可以将记录的流量导出为 Visual Studio Web 测试，因此你可以使用 Web 测试和负载测试来测试从客户端应用程序和 Internet Explorer 之外调用的应用程序。例如，你可以监控来自 .NET 应用程序基于 HTTP 的 WCF 调用，将其导出为 Web 测试，并使用负载测试对你的 WCF 服务进行压力。
 
-## Web 分析工具
+### Web 分析工具
 
 另一组可用于识别 Web应用程序问题的工具是 Web 分析工具，例如 Yahoo 的 YSlow 和 Google 的 Page Speed。Web 分析工具的作用不仅仅是分析流量本身（如缺失的缓存标头和未压缩的响应），它们还分析 HTML 页面本身以检测影响页面加载和渲染性能的问题，例如：
 
@@ -7887,11 +7800,11 @@ Web 性能测试允许你自定义测试流。你可以更改请求顺序并添�
 - 大图像可以通过缩放来减小大小并更改它们在 HTML 页面中的尺寸。
 - JavaScript 代码可以在页面加载后执行而不是加载期间执行，以便页面加载得更快。
 
-## 在服务器上提高 Web 性能
+### 在服务器上提高 Web 性能
 
 提高 ASPNET 应用程序代码性能有许多方法。某些改进可以使用适用于 ASPNET 应用程序和桌面应用程序的技术来实现，例如使用线程（threads）或 `Tasks` 进行非依赖的异步操作，但也有一些改进与你编写 ASPNET 代码的方式有关，无论是 WebForm 后置代码代码还是 ASPNET MVC 控制器。然而，这些更改可以帮助更好地利用服务器，允许应用程序运行更快，并处理更多的并发请求。
 
-## 缓存常用对象
+#### 缓存常用对象
 
 1. 如果数据已经缓存，则使用它。
 2. 否则：
@@ -7903,7 +7816,8 @@ Web 性能测试允许你自定义测试流。你可以更改请求顺序并添�
 
 许多开发者使用 ASP.NET Application 状态集合作为一种缓存机制，因为它提供了一个内存缓存存储，所有用户和会话都可以访问。`Application` 集合非常简单：
 
-```Application["listOfCountries"]=countries; // 在集合中存储一个值
+```csharp
+Application["listOfCountries"]=countries; // 在集合中存储一个值
 countries=(IEnumerable<string>)Application["listOfCountries"]; // 取回值
 ```
 
@@ -7914,16 +7828,21 @@ countries=(IEnumerable<string>)Application["listOfCountries"]; // 取回值
 - 为缓存对象附加回调函数，这样当对象从缓存中删除时，将调用回调函数。使用回调函数可以帮助在缓存像向字典添加项时检索更新的资源信息：
 
 向字典添加项：
-```Cache["listOfCountries"]=listOfCountries;
+
+```csharp
+Cache["listOfCountries"]=listOfCountries;
 ```
 
 当使用上述代码将项添加到缓存时，缓存项将具有默认的 `Normal` 优先级，并且不会使用任何过期或依赖检查。例如，要将具有滑动过期的项添加到缓存，请使用 `Insert` 方法：
-```Cache.Insert("products", productslist, Cache.NoAbsoluteExpiration, TimeSpan.FromMinutes(60), dependencies: null);
+
+```csharp
+Cache.Insert("products", productslist, Cache.NoAbsoluteExpiration, TimeSpan.FromMinutes(60), dependencies: null);
 ```
 
 > 注意 `Cache` 类还提供了 `Add` 方法。使用 `Insert` 方法时，如果缓存已包含相同键参数的项，将抛出异常。
 
 使用 ASP.NET `Cache` 类的缓存访问范式通常实现如下：
+
 ```
 retrievedObject=Cache["theKey"];
 if (retrievedObject == null) {
@@ -7931,9 +7850,6 @@ if (retrievedObject == null) {
 object originalData=null;
 ...}
 ```
-
-
-
 
 # 第 11 章 应用程序性能
 
@@ -7944,6 +7860,8 @@ retrievedObject=originalData;
 }
 // 使用从缓存中或刚刚缓存的检索对象
 ```
+
+
 
 你会注意到，代码的第一行尝试从缓存中检索对象，而无需先检查该对象是否存在。这是因为对象可以被其他请求或缓存机制随时从缓存中移除，因此在获取和检索之间，项可能会被移除。
 
@@ -7957,7 +7875,7 @@ retrievedObject=originalData;
 
 在这种情况下，工作线程会被占用且无法释放回线程池。最终，执行中的请求数量将超过线程池的限制，新请求将放入队列。当队列中的数量超过限制时，请求将失败并返回 HTTP 503 响应（“服务不可用”）。这可以通过 `web.config` 文件进行控制。
 
-# 创建异步页面
+## 创建异步页面
 
 如果你有一个 ASP.NET Web Forms 应用程序并希望创建一个异步页面，首先需要将页面标记为异步：
 
@@ -8008,7 +7926,7 @@ public partial class MyAsyncPage : System.UI.Page {
 }
 ```
 
-# 第 11 章 应用程序性能
+## 第 11 章 应用程序性能
 
 创建异步页面的另一种方法是使用完成事件，例如在使用 Web 服务或 WCF 服务生成的代理时创建事件：
 
@@ -8033,13 +7951,13 @@ public partial class AsyncPage : System.Web.UI.Page {
 
 当将页面设置为异步时，ASP.NET 会更改页面实现 `IHttpAsyncHandler` 而不是同步的 `IHttpHandler`。如果你希望创建自己的异步通用 HTTP 处理器，请实现 `IHttpAsyncHandler` 接口的通用 HTTP 处理器类。
 
-# 创建异步控制器
+## 创建异步控制器
 
 如果 ASP.NET MVC 中的控制器类执行了耗时的 I/O 操作，也可以创建为异步控制器。要创建异步控制器，你需要执行以下步骤：
 
 - 1. 创建继承自 `AsyncController` 类型的控制器类。
-- 2. 根据以下约定为每个异步操作实现一组操作方法，其中 xx 是操作名称：xxCompleted。
-- 3. 在 xxAsync 方法中，通过调用 `AsyncManager.OutstandingOperations.Increment` 方法指定要执行的异步操作数量。
+- 2. 根据以下约定为每个异步操作实现一组操作方法，其中 xx 是操作名称：`xxAsync` / `xxCompleted`。
+- 3. 在 `xxAsync` 方法中，通过调用 `AsyncManager.OutstandingOperations.Increment` 方法指定要执行的异步操作数量。
 - 4. 在异步操作返回期间执行的代码中，调用 `AsyncManager.OutstandingOperations.Decrement` 方法通知操作已完成。
 
 例如，以下代码显示了一个具有名为 Index 的异步操作的控制器，它调用了一个返回数据的服务：
@@ -8055,9 +7973,6 @@ public class MyController : AsyncController {
 }
 ```
 
-
-
-
 ```csharp
 serviceProxy.GetDataCompleted+=( (sender, e) => {
   AsyncManager.Parameters["result"]=e.Value;
@@ -8069,14 +7984,15 @@ public ActionResult IndexCompleted(MyData result) {
 }
 ```
 
-## 调整 ASP.NET 环境
+### 调整 ASP.NET 环境
 
 除了代码之外，每个传入的请求和传出的响应都必须经过 ASP.NET 的组件。ASP.NET 的某些机制是为了满足开发者的需求而创建的（例如为了性能设计的 ViewState 机制），但在精调 ASP.NET 应用程序时，建议更改这些机制的默认行为，尽管更改它们有时需要你对应用程序代码进行相应调整。
 
-## 关闭 ASP.NET 跟踪和调试
+### 关闭 ASP.NET 跟踪和调试
 
 ASP.NET 跟踪（Tracing）允许开发者查看请求页面的诊断信息，例如执行时间和执行路径、会话状态以及 HTTP 请求头列表。
-虽然跟踪是一项很好的功能，在开发和调试 ASP.NET 应用程序时具有附加价值，但由于跟踪机制以及对每个请求执行的数据收集，它会对应用程序的整体性能产生某些影响。因此，如果你在开发期间启用了跟踪，请在将 Web 应用程序部署到生产环境之前，通过更改 web.config 中的跟踪设置将其关闭。
+
+虽然跟踪是一项很好的功能，在开发和调试 ASP.NET 应用程序时具有附加价值，但由于跟踪机制以及对每个请求执行的数据收集，它会对应用程序的整体性能产生某些影响。因此，如果你在开发期间启用了跟踪，请在将 Web 应用程序部署到生产环境之前，通过更改 `web.config` 中的跟踪设置将其关闭。
 
 ```xml
 <configuration>
@@ -8098,29 +8014,21 @@ ASP.NET 跟踪（Tracing）允许开发者查看请求页面的诊断信息，�
 </configuration>
 ```
 
-# 第 11 章 Web 应用程序性能
+### 第 11 章 Web 应用程序性能
 
 **注意** 这是在 Visual Studio 2012 或 2010 中创建 ASP.NET Web 应用程序时的默认行为。在 Visual Studio 的之前的版本中，默认行为是将 `debug` 设置为 *false*，当开发者首次尝试调试应用程序时，会弹出一个对话框请求许可将设置更改为 *true*。
 
 该设置的问题在于，开发者在将应用程序部署到生产环境时，往往忘记将设置从 `true` 改为 `false`，甚至故意这样做以获取更详细的异常信息。事实上，此设置会导致若干性能问题：
 
 - 使用 `WebResources.ax` 句程序下载的脚本（例如在页面中使用验证控件）不会被浏览器缓存。将 `debug` 设置为 `false` 时，来自该处理程序的响应将带有缓存头返回，允许浏览器缓存响应以备后续访问。
-
 - 当 `debug` 设置为 `true` 时，请求不会超时。虽然这在调试代码时非常方便，但在生产环境中，这种行为是不理想的，因为此类请求可能导致服务器无法处理其他请求，甚至导致 CPU 使用率增加、内存消耗增加和其他资源分配问题。
-
 - 将 `debug` 标记设置为 `false`，可以允许 ASP.NET 根据 `httpRuntime.timeout` 配置设置为请求定义超时（默认值为 100 秒）。
-
 - 当使用 `debug=true` 时，代码将不会应用 JIT 优化。JIT 优化是 .NET 最重要的优势之一，可以在不更改代码的情况下高效地提高 ASP.NET 应用程序的性能。将 `debug` 设置为 `false` 将允许 JIT 编译器执行其职责，使你的应用程序运行更快、更高效。
-
 - 当使用 `debug=true` 时，编译过程不会使用批编译。没有批编译的情况下，每个页面和用户控件都会创建一个程序集，导致应用程序在运行时加载几十甚至数百个程序集；加载如此多的程序集可能会由于内存碎片化导致内存异常。
-
-
-
-
 
 注意：除了不同的查询字符串参数外，输出缓存还可以根据请求的 HTTP 头部（如 Accept-Encoding 和 Accept-Language 头部）区分缓存输出。例如，如果你的操作根据 Accept-Language HTTP 头部返回不同语言的内容，你可以设置输出缓存根据该头部进行更改，为每个请求的语言创建一个不同的输出缓存版本。
 
-如果你对不同的页面或操作具有相同的缓存设置，可以创建一个缓存配置文件（caching profile），并使用它而不是反复重复缓存设置。缓存配置文件是在 web config 中创建的，使用 `<system.web>caching>` 部分。例如，以下配置定义了一个缓存配置文件，你可以在多处使用它：
+如果你对不同的页面或操作具有相同的缓存设置，可以创建一个缓存配置文件（caching profile），并使用它而不是反复重复缓存设置。缓存配置文件是在 `web config` 中创建的，使用 `<system.web>caching>` 部分。例如，以下配置定义了一个缓存配置文件，你可以在多处使用它：
 
 ```xml
 <system.web>
@@ -8145,39 +8053,43 @@ public class ProductController {
 ```
 
 我们还可以通过使用 OutputCache 指令在 ASP.NET Web Form 中使用相同的缓存配置文件：
-`@OutputCache CacheProfile="CacheEntityFor30Seconds" %>
+
+`@OutputCache CacheProfile="CacheEntityFor30Seconds" %>`
 
 注意：默认情况下，ASP.NET 输出缓存机制将缓存内容保留在服务器的内存中。从 ASP.NET 4 开始，你可以创建自己的输出缓存提供程序来代替默认的提供程序。例如，你可以编写自己的自定义提供程序，将输出缓存存储到磁盘上。
 
-# 预编译 ASP.NET 
+### 预编译 ASP.NET
 
-在编译 ASP.NET Web 项目时，会创建一个程序集来包含应用程序所有的代码。Web 页面 (.aspx) 和用户控件 (.ascx) 不会被编译，而是原样部署到服务器上。当应用程序首次启动（在第一次请求时）时，ASP.NET 会动态编译 Web 控件，并将编译后的文件放在 ASP.NET 临时文件夹中。这种动态编译增加了第一次请求的响应时间，导致用户体验到网站加载缓慢。
+在编译 ASP.NET Web 项目时，会创建一个程序集来包含应用程序所有的代码。Web 页面 `.aspx` 和用户控件 `.ascx` 不会被编译，而是原样部署到服务器上。当应用程序首次启动（在第一次请求时）时，ASP.NET 会动态编译 Web 控件，并将编译后的文件放在 ASP.NET 临时文件夹中。这种动态编译增加了第一次请求的响应时间，导致用户体验到网站加载缓慢。
 
-为了解决这个问题，应用程序可以使用 ASP.NET 编译工具 (Aspnet-compiler.exe) 对所有代码、页面和用户控件进行预编译。在生产服务器上运行 ASP.NET 编译工具可以减少用户首次请求时的影响。要运行该工具，请遵循以下步骤：
+为了解决这个问题，应用程序可以使用 ASP.NET 编译工具 `Aspnet-compiler.exe` 对所有代码、页面和用户控件进行预编译。在生产服务器上运行 ASP.NET 编译工具可以减少用户首次请求时的影响。要运行该工具，请遵循以下步骤：
 
-# 第 11 章 Web 应用程序性能
+#### 第 11 章 Web 应用程序性能
 
 - 在你的生产服务器上打开命令提示符。
 - 导航到 `%windir%\Microsoft.NET` 文件夹。
 - 根据 Web 应用程序操作系统是否配置为支持 32 位应用程序（对于 32 位操作系统，Framework 是唯一选项），导航到 Framework 或 Framework64 文件夹。
-- 根据应用程序池使用的 .NET 框架版本（v2.0.50727 或 v4.0.30319），导航到相应框架版本的文件夹。
+- 根据应用程序池使用的 .NET 框架版本（`v2.0.50727` 或 `v4.0.30319`），导航到相应框架版本的文件夹。
 - 输入以下命令开始编译（将 WebApplicationName 替换为你的应用程序的虚拟路径）：`Aspnet-compiler.exe -v /WebApplicationName`
 
-# 调优 ASP.NET 进程模型
+### 调优 ASP.NET 进程模型
 
 当调用 ASPNET 应用程序时，ASP.NET 使用工作线程来处理请求。有时，应用程序本身的代码可能会创建新线程，例如在调用服务时，这会导致线程池中空闲线程减少。ASP.NET 会自动对线程池进行若干项调整，并且若干限制限制了任何给定时刻执行的请求数。这些设置由三个主要的配置控制：`<system.web>processModel` 部分、`<system.web>httpRuntime` 部分以及 `<system.net>connectionManagement` 部分。
 
-> httpRuntime 和 connectionManagement 部分可以从应用程序的 web.config 文件进行设置。然而，processModel 部分只能在 machine.config 文件中更改。
+> `httpRuntime` 和 `connectionManagement` 部分可以从应用程序的 `web.config` 文件进行设置。然而，`processModel` 部分只能在 `machine.config` 文件中更改。
 
-processModel 部分定义了工作线程最小和最大数量限制，httpRuntime 部分定义了与可用线程相关的限制，例如为了继续处理传入的请求而必须存在的最小可用线程数。connectionManagement 部分控制每个地址的输出 HTTP 连接的最大数。尽管所有设置都有默认值，但其中某些设置对于 ASP.NET 性能来说设置得有点低。这包括 autoConfig 设置，它通过削弱某些设置来获得最佳性能。这部分 processModel 配置自 ASPNET 2.0 以来一直存在，并被自动设置为 true。
+`processModel` 部分定义了工作线程最小和最大数量限制，`httpRuntime` 部分定义了与可用线程相关的限制，例如为了继续处理传入的请求而必须存在的最小可用线程数。`connectionManagement` 部分控制每个地址的输出 HTTP 连接的最大数。尽管所有设置都有默认值，但其中某些设置对于 ASP.NET 性能来说设置得有点低。这包括 `autoConfig` 设置，它通过削弱某些设置来获得最佳性能。这部分 `processModel` 配置自 ASPNET 2.0 以来一直存在，并被自动设置为 true。
 
-autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章，地址为：http://support.microsoft.com/?id=821268）：
+`autoConfig` 设置控制以下设置（默认值来自 Microsoft 知识库文章，地址为：`http://support.microsoft.com/?id=821268`）：
 
-- processModel>maxWorkerThreads: 将线程池中的最大工作线程数从 20 更改为核心数的 100 倍。
-- processModel>maxIOThreads: 将线程池中的最大 I/O 线程数从 20 更改为核心数的 100 倍。
-- httpRuntime>minFreeThreads: 将允许执行新请求所需的最小可用线程数从 8 更改为核心数的 8 倍。
-- runtime>minLocalFreeThreads: 将允许执行新请求（来自本地主机）所需的最小可用线程数从 4 更改为核心数的 7 倍。
-- connectionManagement>maxConnections: 将最大并发数从 10 更改为核心数的 12 倍。
+- `processModel>maxWorkerThreads`: 将线程池中的最大工作线程数从 20 更改为核心数的 100 倍。
+- `processModel>maxIOThreads`: 将线程池中的最大 I/O 线程数从 20 更改为核心数的 100 倍。
+- `httpRuntime>minFreeThreads`: 将允许执行新请求所需的最小可用线程数从 8 更改为核心数的 8 倍。
+
+
+
+- `runtime>minLocalFreeThreads`: 将允许执行新请求（来自本地主机）所需的最小可用线程数从 4 更改为核心数的 7 倍。
+- `connectionManagement>maxConnections`: 将最大并发数从 10 更改为核心数的 12 倍。
 
 尽管默认值是为了优化性能而设置的，但根据你遇到的场景，你可能需要更改它们。例如，如果你的应用程序调用服务，你可能需要增加最大连接数以允许更多请求同时连接服务。以下配置显示了如何增加连接数：
 
@@ -8191,7 +8103,7 @@ autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章�
 </configuration>
 ```
 
-在其他场景下，例如当 Web 应用程序在启动时需要获取大量请求时，你可能需要减少线程池中的最小工作线程（根据机器的核心数在运行时指定的值）。要执行此操作，请在 machine.config 中应用以下配置：
+在其他场景下，例如当 Web 应用程序在启动时需要获取大量请求时，你可能需要减少线程池中的最小工作线程（根据机器的核心数在运行时指定的值）。要执行此操作，请在 `machine.config` 中应用以下配置：
 
 ```xml
 <configuration>
@@ -8207,15 +8119,11 @@ autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章�
 
 作为 Web应用程序的托管环境，IIS 对整体性能有一定的影响，例如，IIS 管道越小，每个请求执行的代码就越少。IIS 中有一些可以增加应用程序性能延迟和吞吐量的机制，以及某些机制在调优适当后可以提高应用程序的整体性能。
 
-# 输出缓存
+### 输出缓存
 
 我们已经看到 ASP.NET 提供了了自己的输出缓存机制，那么为什么 IIS 还需要另一种输出缓存机制呢？答案很简单：我们想要缓存的类型不仅是 ASP.NET 页面。例如，我们可能想要缓存频繁请求的静态图像文件，或者自定义 HTTP 句程序的输出。为了这个目的，我们可以使用 IIS 缓存的输出。IIS 有两种输出缓存机制：用户模式缓存和内核模式缓存。
 
-
-
-
-
-# 用户模式缓存
+#### 用户模式缓存
 
 与 ASP.NET 一样，IIS 能够在内存、磁盘或自动从内存缓存响应，无需访问磁盘上的静态文件或调用服务器端代码。
 
@@ -8227,7 +8135,7 @@ autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章�
 
 一旦勾选复选框，您可以选择缓存项从内存中移除的时间，例如在文件更新后或内容首次缓存一段时间后。文件缓存更适用于静态文件，而时间间隔则更适用于动态内容。通过点击“高级”按钮，您还可以控制缓存如何存储输出的不同版本（选项取决于查询字符串或 HTTP 请求头）。
 
-添加缓存规则后，其配置将存储在应用程序的 `web.config` 文件中，位于 `system.webServer` 缓存部分下。例如，设置规则缓存 .aspx 页面会导致它们在 30 分钟后过期，并根据 `Accept-Language` HTTP 请求头的输出而变化，生成以下配置：
+添加缓存规则后，其配置将存储在应用程序的 `web.config` 文件中，位于 `system.webServer` 缓存部分下。例如，设置规则缓存 `.aspx` 页面会导致它们在 30 分钟后过期，并根据 `Accept-Language` HTTP 请求头的输出而变化，生成以下配置：
 
 ```xml
 <system.webServer>
@@ -8239,49 +8147,45 @@ autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章�
 </system.webServer>
 ```
 
-# 内核模式缓存
+#### 内核模式缓存
 
-与用户模式不同，缓存模式将缓存内容存储在 IIS 的工作进程内存中，内核模式缓存将缓存内容存储在 HTTP.sys 内核模式驱动程序。使用内核模式缓存提供更快的响应时间，但并非总是都支持。例如，当请求包含查询字符串或请求不是匿名请求时，无法使用内核模式缓存。
+与用户模式不同，缓存模式将缓存内容存储在 IIS 的工作进程内存中，内核模式缓存将缓存内容存储在 `HTTP.sys` 内核模式驱动程序。使用内核模式缓存提供更快的响应时间，但并非总是都支持。例如，当请求包含查询字符串或请求不是匿名请求时，无法使用内核模式缓存。
 
 为内核模式设置缓存规则的方法与用户模式类似。在规则对话框中，勾选内核模式缓存（kernel-mode-caching）复选框，并选择您想要使用的缓存监控设置。您可以在同一条规则中同时使用内核模式和用户模式缓存。当两种模式都使用时，会尝试内核模式缓存。例如，当请求包含查询字符串时，将应用用户模式缓存。
 
 > **提示：** 在对内核模式和用户模式设置使用时间间隔监控时，请确保两个设置中的时间间隔相同，否则内核模式的间隔将用于两者。
 
-# 应用程序池配置
+### 应用程序池配置
 
-应用程序池控制 IIS 如何创建和管理最终托管我们代码的工作进程。当您安装 IIS 和 ASP.NET 时，系统会根据服务器上安装的 .NET 框架版本创建应用程序池，您可以在向服务器上安装更多 Web 应用程序时添加新的池。当应用程序池被创建时，它具有控制其行为的默认设置。例如，每个应用程序池在创建时都有一个应用程序池关闭后的默认空闲超时设置。
+应用程序池控制 IIS 如何创建和管理最终托管我们代码的工作进程。当您安装 IIS 和 ASP.NET 时，系统会根据服务器上安装的 `.NET` 框架版本创建应用程序池，您可以在向服务器上安装更多 Web 应用程序时添加新的池。当应用程序池被创建时，它具有控制其行为的默认设置。例如，每个应用程序池在创建时都有一个应用程序池关闭后的默认空闲超时设置。
 
 理解其中某些设置的含义有助于配置应用程序池的工作方式，或者更精确地满足您的应用程序需求。
 
-# 回收
+#### 回收
 
 通过回收（Recycling）设置，您可以控制应用程序池重启工作进程的时间。例如，您可以设置工作进程每几小时回收一次，或在内存超过特定数量时回收。如果您的 Web 应用程序随时间推移消耗大量内存（例如由于存储对象），增加回收次数有助于维护其整体性能。另一方面，如果 Web 运行正常，减少回收次数将防止状态信息的丢失。
 
-# 第 11 章 ■ 应用程序性能
+# 第 11 章 应用程序性能
 
-# 空闲超时
+#### 空闲超时
 
 > **提示：** 您可以使用 ASP.NET 工作进程重启性能计数器来检查应用程序自身回收的次数和回收频率。如果您发现在没有明显原因的情况下频繁回收，请尝试将结果与应用程序的内存消耗和 CPU 使用关联起来，以验证其是否超过了应用程序池配置中定义的阈值。
 
 应用程序池的默认设置在无活动 20 分钟后关闭池。如果您预料会有这种空闲超时（例如所有用户都出去午餐），您可能希望增加超时时间，甚至取消。
 
-# 处理器亲和性
+#### 处理器亲和性
 
 默认情况下，应用程序池配置为使用服务器上的所有可用核心。如果您在服务器上运行任何需要大量 CPU 时间的特殊后台进程，可以调整池的亲和性以使用特定核心，为后台进程留出其他核心。当然，这将需要您设置工作进程的亲和性，使其不会与工作进程在相同核心上竞争。
 
-# Web 园 (Web Garden)
+#### Web 园
 
 应用程序池的默认行为是启动一个工作进程来处理应用程序的所有请求。如果您的工作进程同时处理多个请求，且这些请求通过锁定资源来竞争相同资源，可能会导致冲突，从而导致响应延迟。例如，如果您的应用程序使用自定义的缓存机制，锁定会导致并发请求无法向缓存中插入项。
 
+提示：你可以使用 `Fiddler` 等 HTTP 监控工具验证是否没有为缓存内容发送请求，并检查向发送了哪些请求。如果你发现内容已缓存但仍发送了请求，请检查该请求的响应以验证是否存在 `max-age` / `Expires` 标头。
 
+将 `max-age` / `Expires` 与 `ETag` / `Last-Modified` 结合使用可以确保在内容过期后发送请求；如果服务器上的内容实际上没有更改，则返回 HTTP 304 响应。此响应中将包含一个新的 `max-age` / `Expires` HTTP 标头。
 
-
-
-提示：你可以使用 Fiddler 等 HTTP 监控工具验证是否没有为缓存内容发送请求，并检查向发送了哪些请求。如果你发现内容已缓存但仍发送了请求，请检查该请求的响应以验证是否存在 max-age / Expires 标头。
-
-将 max-age / Expires 与 ETag / Last-Modified 结合使用可以确保在内容过期后发送请求；如果服务器上的内容实际上没有更改，则返回 HTTP 304 响应。此响应中将包含一个新的 max-age / Expires HTTP 标头。
-
-在大多数浏览器中，点击刷新按钮（或按下 F5）将强制浏览器忽略 max-age / Expires 标头并刷新缓存。请求仍然会带有 If-Modified-Since / If-None-Match 标头（如果适用的话），因此如果内容是最新的，服务器可以返回 304 响应。
+在大多数浏览器中，点击刷新按钮（或按下 F5）将强制浏览器忽略 `max-age` / `Expires` 标头并刷新缓存。请求仍然会带有 `If-Modified-Since` / `If-None-Match` 标头（如果适用的话），因此如果内容是最新的，服务器可以返回 304 响应。
 
 要设置 `max-age`，请向你的 `web.config` 文件中添加以下配置：
 
@@ -8329,9 +8233,9 @@ autoConfig 设置控制以下设置（默认值来自 Microsoft 知识库文章�
 
 注意：你必须使用格式化的日期并设置 `Expires` 标头。此外，根据 HTTP 规范，`Expires` 标头的日期不能超过当前日期的一年。
 
-# 为动态内容设置缓存标头
+### 为动态内容设置缓存标头
 
-静态文件具有修改日期，可以用于验证缓存内容是否发生了更改。然而，动态内容没有修改日期，因为每次请求动态内容时它都会被重新创建，其修改日期实际上是当前日期。在处理动态内容时，ETag 和 `Last-Modified` 等标头并不相关适用。
+静态文件具有修改日期，可以用于验证缓存内容是否发生了更改。然而，动态内容没有修改日期，因为每次请求动态内容时它都会被重新创建，其修改日期实际上是当前日期。在处理动态内容时，`ETag` 和 `Last-Modified` 等标头并不相关适用。
 
 尽管如此，如果你查看动态页的内容，你可能会找到一种表示其修改日期的方法，或者为它计算一个 ETag。例如，如果发送请求以从数据库检索信息，产品表可能包含一个最后更新列，该列用于设置 `Last-Modified` 标头。如果数据库表没有最后更新列，你可以尝试从实体的字段计算 MD5 哈希值并将 ETag 设置为该结果。当向服务器发送后续请求时，服务器可以重新计算实体的 MD5 哈希值，如果没有字段发生变化，则 ETags 将相同，服务器可以返回 HTTP 304 响应。
 
@@ -8381,7 +8285,7 @@ if (true)
 Response.Cache.SetMaxAge(TimeSpan.FromDays(365));
 ```
 
-你不需要在代码中设置响应的过期时间，可以在 .aspx 文件中指定它。例如，如果页面显示的产品信息可以在客户端缓存 10 分钟（600 秒），你可以设置输出指令：
+你不需要在代码中设置响应的过期时间，可以在 `.aspx` 文件中指定它。例如，如果页面显示的产品信息可以在客户端缓存 10 分钟（600 秒），你可以设置输出指令：
 
 ```asp
 <@ Page ... %>
@@ -8390,17 +8294,13 @@ Response.Cache.SetMaxAge(TimeSpan.FromDays(365));
 
 当使用 `OutputCache` 指令时，指定的持续时间将作为 `max-age` 和 `expires` 输出到响应标头中（`expires` 是从当前日期计算出的）。
 
-
-
-
-
-# 配置压缩
+### 配置压缩
 
 压缩需要完成的第一工作是启用静态压缩、动态压缩或两者。要在 IIS 中启用压缩，请使用 IIS Manager 应用程序，选择您的机器，并选择您想要使用的压缩功能，如图 11-3 所示：
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_326_0.png)
 
-# 压缩
+### 压缩
 
 启用此功能以配置响应压缩的设置
 
@@ -8411,7 +8311,7 @@ Response.Cache.SetMaxAge(TimeSpan.FromDays(365));
 
 您还可以使用压缩对话框来设置静态压缩设置，例如存储缓存内容的文件夹以及符合压缩条件的最小文件大小。
 
-在选择的压缩类型激活后，您可以继续选择哪些 MIME 类型将进行静态压缩，哪些进行动态压缩。遗憾的是，IIS 不支持从 IIS Manager 更改这些设置，因此您需要手动在 IIS 配置文件 `applicationHost.config` 中更改。该文件位于 %systemroot%\system32\inetrv\config 文件夹中。搜索 `<httpCompression>` 部分，你会看到为静态压缩定义的几个 MIME 类型，以及为动态压缩定义的其他类型。除了已指定的 MIME 类型外，您还可以添加在应用程序中使用的额外类型。例如，如果 AJAX 调用返回 JSON 响应，您可能希望为这些响应添加动态压缩支持。以下配置显示了 IIS 的动态压缩支持（为了简洁，已移除现有内容）：
+在选择的压缩类型激活后，您可以继续选择哪些 MIME 类型将进行静态压缩，哪些进行动态压缩。遗憾的是，IIS 不支持从 IIS Manager 更改这些设置，因此您需要手动在 IIS 配置文件 `applicationHost.config` 中更改。该文件位于 `%systemroot%\system32\inetrv\config` 文件夹中。搜索 `<httpCompression>` 部分，你会看到为静态压缩定义的几个 MIME 类型，以及为动态压缩定义的其他类型。除了已指定的 MIME 类型外，您还可以添加在应用程序中使用的额外类型。例如，如果 AJAX 调用返回 JSON 响应，您可能希望为这些响应添加动态压缩支持。以下配置显示了 IIS 的动态压缩支持（为了简洁，已移除现有内容）：
 
 ```
 <httpCompression>
@@ -8421,13 +8321,15 @@ Response.Cache.SetMaxAge(TimeSpan.FromDays(365));
 </httpCompression>
 ```
 
-> 在列表中添加新的 MIME 类型后，建议通过 Fiddler 等 HTTP 嗅探工具检查响应以验证压缩确实在工作。压缩后的响应应具有 `Content-Encoding` HTTP 头部，且其应设置为 gzip 或 deflate。
+> 在列表中添加新的 MIME 类型后，建议通过 `Fiddler` 等 HTTP 嗅探工具检查响应以验证压缩确实在工作。压缩后的响应应具有 `Content-Encoding` HTTP 头部，且其应设置为 gzip 或 deflate。
 
-# IIS 压缩与客户端应用程序
+### IIS 压缩与客户端应用程序
 
 为了让 IIS 处理出的请求，它需要知道客户端应用程序可以处理压缩的响应。因此，当客户端应用程序向服务器发送请求时，它需要添加 `Accept-Encoding` HTTP 头部并设置为 gzip 或 deflate。
 
 大多数已知浏览器会自动添加此头部。当使用带有 Web 应用程序或 Silverlight 应用程序的浏览器时，IIS 将响应压缩内容。然而，在 .NET 应用程序中，使用 `HttpRequest` 类型发送 HTTP 请求时，不会自动添加 `Accept-Encoding` 头部，您需要手动进行。此外，除非 `HttpRequest` 设置为预期的压缩响应，否则它不会尝试解压缩。例如，如果您正在使用 `HttpRequest` 对象，您将需要添加以下代码以接收并解压缩压缩的响应：
+
+
 
 ```
 var request = (HttpRequest)WebRequest.Create(uri);
@@ -8439,7 +8341,7 @@ request.AutomaticDecompression = DecompressionMethods.Gzip | DecompressionMethod
 
 # 第 11 章 Web 应用程序性能
 
-# 压缩化与合并（Minification and Bundling）
+## 压缩化与合并（Minification and Bundling）
 
 在开发应用程序时，您的页面可能会使用多个 JavaScript 和 CSS 文件。当页面有多个指向外部资源的链接时，在浏览器中加载页面将成为一项耗时的操作，用户将需要等待页面及其所有相关脚本被下载并解析。对于外部资源，我们面临着两个问题：
 
@@ -8466,6 +8368,7 @@ protected void Application_Start() {
 默认情况下，合并和压缩仅在 Web 应用程序编译设置为 Release 时工作。为了在 Debug 模式下启用合并，我们将 `EnableOptimizations` 设置为 true。
 
 要使用创建的包，在页面上添加以下脚本行：
+
 <%= Scripts.Render("/MyScripts") %>
 
 当页面渲染时，该行将被替换为指向包的 `<script>` 标签，例如上面的行可能转换为 HTML：
@@ -8474,7 +8377,7 @@ protected void Application_Start() {
 <script src="/bundles/MyScript?xGAE5010_bMlU7DS_Xmgf5dchi8g41" type="javascript"></script>
 ```
 
-# 内容分发网络（CDN）
+## 内容分发网络（CDN）
 
 合并和压缩框架还支持自定义转换，允许为 JavaScript 文件创建专门的转换。
 
@@ -8488,15 +8391,14 @@ BundleTable.Add(MyStylesBundle);
 ```
 
 并在页面中使用该包：
+
 <%= Styles.Render("/bundles/myStyles") %>
 
 这将渲染一个链接：
+
 <link href="/bundles/MyStyles?v=jj30n1pdg6Y3V3cUJwxtzgGNfZ1zRc1WDbm4YfW-yORI1" type="text/css" />
 
 Web 性能问题之一是通过网络访问资源的延迟。与 Web 服务器位于同一网络的终端用户通常具有良好的响应时间，但一旦您的 Web 应用程序在全球范围内通过互联网收集世界用户，远远的用户（例如来自其他大洲的用户）将由于网络问题遭受更长的延迟和较慢的带宽。
-
-
-
 
 解决位置问题的解决方案之一是在不同的地理位置部署多个 Web 服务器实例，这样终端用户在地理位置上就会靠近其中一台服务器。当然，当你需要不断更换和同步服务器，并可能需要指示每个终端用户根据其所在位置使用不同的 URL 时，就会产生一个巨大的问题。
 
@@ -8525,7 +8427,7 @@ Web 性能问题之一是通过网络访问资源的延迟。与 Web 服务器�
 
 在调试 Web 应用时，将 `CdnUrl` 更改为空字符串，以从本地 Web 服务器获取内容。
 
-# 扩展 ASP.NET 
+## 扩展 ASP.NET
 
 现在，你通过结合在这里学到的所有知识提升了 Web 应用的性能，甚至应用了一些其他技术来加速，现在你的应用程序运行良好，并达到了尽可能的优化。当你将应用程序投入生产环境时，前几周运行一切正常，但随后额外的用户开始访问网站，每天都有新用户加入，增加了服务器必须处理的请求数量，突然，你的服务器开始出现瓶颈。这可能始于请求时间比平时长，你的工作进程开始使用更多内存和 CPU，最终导致超时，日志文件中出现了 HTTP 500（“内部服务器错误”）。
 
@@ -8533,15 +8435,13 @@ Web 性能问题之一是通过网络访问资源的延迟。与 Web 服务器�
 
 扩展 Web 应用是一个必须在 Web 应用生命周期某个阶段发生的自然过程。一台服务器可以处理几十或数千个并发用户，但它无法长时间承受这种压力。Session 填满服务器内存、线程因为没有更多可用线程而饥饿，以及过于频繁的上下文切换将增加单台服务器的延迟和吞吐量。
 
-# 横向扩展（Scaling Out）
+## 横向扩展（Scaling Out）
 
 从架构角度来看，扩展不仅仅是增加一或多台服务器。扩展 Web 应用是一个必须在 Web 应用生命周期某个阶段发生的自然过程。一台服务器可以处理几十或数千个并发用户，但它无法长时间承受这种压力。Session 填满服务器内存、线程因为没有更多可用线程而饥饿，以及过于频繁的上下文切换将增加单台服务器的延迟和吞吐量。
 
 # 第 11 章 Web 应用性能
 
 从架构角度来看，扩展不仅仅是增加一或多台服务器。扩展 Web 应用是一个必须在 Web 应用生命周期某个阶段发生的自然过程。一台服务器可以处理几十或数千个并发用户，但它无法长时间承受这种压力。Session 填满服务器内存、线程因为没有更多可用线程而饥饿，以及过于频繁的上下文切换将增加单台服务器的延迟和吞吐量。
-
-（注：原文后续存在大量重复的段落，根据指令“一定不要重复输出原文”，此处仅保留核心逻辑翻译，不再重复翻译相同的段落）
 
 以及可以帮助你定位 Web 应用程序瓶颈的分析工具。通过使用监控和分析工具，你可以轻松追踪问题，并显著提高你的 Web 应用程序的性能。从那里，我们回顾了流水线（pipeline），识别了可以进行修改的不同部分，使你的应用程序运行更快、更智能，或提供更小的负载（payload）以便更快提供服务。在学习这一章之后，你现在已经意识到微小的变化（如正确使用客户端缓存）如何帮助减少服务器需要处理的请求数量，解决许多应用程序面临的某些瓶颈问题。
 
@@ -8555,483 +8455,820 @@ Web 性能问题之一是通过网络访问资源的延迟。与 Web 服务器�
 
 - 聚合 (Aggregation), 193–194
 - 算法优化 (Algorithm optimization)
-- c 近似算法 (c-approximation algorithm), 269–270
-- 最大切 (maximum cut), 271, 270–271
-- 旅行推员问题 (traveling salesman), 273
-- 间压缩 (gap compression)
-- 索引压缩 (index compression), 273–274
-- 引言 (introduction), 259
-- 记忆化与编程 (memorization and programming)
-- 全对最短路径 (all-pairs-shortest-paths), 267–269
-- 计算 (calculation), 265–266
-- 动态规划 (dynamic programming), 266
-- 编辑距离 (edit distance), 266–267
-- 斐波那契数字 (Fibonacci numbers), 265
-- 递归 (recursion), 265
-- 内存与字符串字典 (memory and string dictionary), 274
-- 概率算法 (probabilistic algorithms)
-- 费马质数性测试 (fermat primality test), 272
-- 最大切 (maximum cut), 271
-- 分类复杂度 (taxonomy complexity)
-- 大 O 表示法 (Big-notation), 259–260
-- 复杂度类与图机 (complexity classes and TM), 261–265
-- 主定理 (master theorem), 260–261
-- 变长编码 (variable length encoding), 272–273
+  - c 近似算法 (c-approximation algorithm), 269–270
+  - 最大切 (maximum cut), 271, 270–271
+  - 旅行推员问题 (traveling salesman), 273
+  - 间压缩 (gap compression)
+  - 索引压缩 (index compression), 273–274
+  - 引言 (introduction), 259
+  - 记忆化与编程 (memorization and programming)
+  - 全对最短路径 (all-pairs-shortest-paths), 267–269
+  - 计算 (calculation), 265–266
+  - 动态规划 (dynamic programming), 266
+  - 编辑距离 (edit distance), 266–267
+  - 斐波那契数字 (Fibonacci numbers), 265
+  - 递归 (recursion), 265
+  - 内存与字符串字典 (memory and string dictionary), 274
+  - 概率算法 (probabilistic algorithms)
+    - 费马质数性测试 (fermat primality test), 272
+    - 最大切 (maximum cut), 271
+  - 分类复杂度 (taxonomy complexity)
+    - 大 O 表示法 (Big-notation), 259–260
+    - 复杂度类与图机 (complexity classes and TM), 261–265
+    - 主定理 (master theorem), 260–261
+  - 变长编码 (variable length encoding), 272–273
 - 分配器 (Allocators)
-- CLR 性能分析器 (CLR profiler)
-- 构建分配图 (allocation graph built), 40–41
-- 堆转储 (heap dumps), 43–44
-- 直方图按钮 (histogram buttons), 40
-- 主报告视图 (main report view), 39
-- 对象 (objects), 41–42
-- 时间线底部 (time line bottom), 42–43
-- Visual (Visual), 43–44
-- 内存相关统计数据 (memory-related statistics), 32
-- Visual 性能分析器 (Visual profiler)
-- 分配视图 (allocation view), 36, 38
-- 函数详情视图 (function details view), 36–37
-- JCompiler.exe, 35–36
-- 对象生命周期视图 (object lifetime view), 38–39
-- 摘要视图 (summary view), 36
+  - CLR 性能分析器 (CLR profiler)
+    - 构建分配图 (allocation graph built), 40–41
+    - 堆转储 (heap dumps), 43–44
+    - 直方图按钮 (histogram buttons), 40
+    - 主报告视图 (main report view), 39
+    - 对象 (objects), 41–42
+    - 时间线底部 (time line bottom), 42–43
+    - Visual (Visual), 43–44
+  - 内存相关统计数据 (memory-related statistics), 32
+  - Visual 性能分析器 (Visual profiler)
+    - 分配视图 (allocation view), 36, 38
+    - 函数详情视图 (function details view), 36–37
+    - JCompiler.exe, 35–36
+    - 对象生命周期视图 (object lifetime view), 38–39
+    - 摘要视图 (summary view), 36
 - 全对最短路径 (All-pairs-shortest-paths)
-- Floyd-Warshall 算法 (Floyd-Warshall algorithm), 268
-- 观察 (observation), 269
-- 现实场景 (real-life scenarios), 267–268
-- 最短路径 (SP), 268
+  - Floyd-Warshall 算法 (Floyd-Warshall algorithm), 268
+  - 观察 (observation), 269
+  - 现实场景 (real-life scenarios), 267–268
+  - 最短路径 (SP), 268
 - ANTS 内存性能分析器 (ANTS memory profiler)
-- 比较 (comparison), 45–46
-- 目录 (directories), 44–45
-- 单个字符串 (individual string), 45, 47
-- 字符串 (strings), 45–46
+  - 比较 (comparison), 45–46
+  - 目录 (directories), 44–45
+  - 单个字符串 (individual string), 45, 47
+  - 字符串 (strings), 45–46
 - ASNET 应用程序 (ASNET applications)
-- 特性 (features), 305
-- 机制 (mechanisms), 331–332
-- 概述 (overview), 330–331
-- 编译 (per-compiling), 317–318
-- 陷阱 (pitfalls), 322
-- 进程模型 (process model), 318–319
-- 服务端应用程序 (server applications), 331
-- 服务端输出 (server-side output), 316–317
-- 跟踪与调试 (tracing and debugging), 313–315
-- 状态 (view state), 315–316
-- 异步课程 (asynchronous courses), 225
+  - 特性 (features), 305
+  - 机制 (mechanisms), 331–332
+  - 概述 (overview), 330–331
+  - 编译 (per-compiling), 317–318
+  - 陷阱 (pitfalls), 322
+  - 进程模型 (process model), 318–319
+  - 服务端应用程序 (server applications), 331
+  - 服务端输出 (server-side output), 316–317
+  - 跟踪与调试 (tracing and debugging), 313–315
+  - 状态 (view state), 315–316
+  - 异步课程 (asynchronous courses), 225
 
 ## B
 
 - 基类库 (Base class library (BCL)), 118–119
 - 大 O 表示法算法 (Big-notation algorithm), 259–260
 - 内置 Windows 工具 (Built-in Windows tools)
-- 分类 (categories), 12–13
-- Windows 事件跟踪 (Event Tracing for Windows (ETW))
-- 自定义 ETW 提供者 (custom ETW providers), 24–26
-- 内内核提供者 (kernel providers), 3
-- 部分列表 (partial list), 13–14
-- PerMonitor (PerMonitor), 19–21
-- PerView (PerView), 22–24
+  - 分类 (categories), 12–13
+  - Windows 事件跟踪 (Event Tracing for Windows (ETW))
+    - 自定义 ETW 提供者 (custom ETW providers), 24–26
+    - 内内核提供者 (kernel providers), 3
+    - 部分列表 (partial list), 13–14
+    - PerMonitor (PerMonitor), 19–21
+    - PerView (PerView), 22–24
+  - 内置 Windows 工具 (Built-in Windows tools cont.)
+    - 采样 (sampling), 13
+    - Windows 性能工具包 (Windows Toolkit), 14–19
+  - 性能计数器 (performance counters), 8
+    - 配置性能 (configuring performance), 11
+    - 日志与警报 (logs and alerts), 10
+    - 监控内存 (monitoring memory), 9–10
+    - 点 (points), 8
+    - 步骤 (steps), 11
+    - 工具 (tools), 8–9
+
 ![](img/d3ea56ae375e1d9f44bff55d84_333_0.png)
-- 内置 Windows 工具 (Built-in Windows tools cont.)
-- 采样 (sampling), 13
-- Windows 性能工具包 (Windows Toolkit), 14–19
-- 性能计数器 (performance counters), 8
-- 配置性能 (configuring performance), 11
-- 日志与警报 (logs and alerts), 10
-- 监控内存 (monitoring memory), 9–10
-- 点 (points), 8
-- 步骤 (steps), 11
-- 工具 (tools), 8–9
+
+
+
 - 图灵完备模板解析 (turing-complete template resolution), 153
+
 - 类型安全类 (type-safe template class), 153
+
 - java
+
 - 代码转换 (code conversion), 152
+
 - 对象数组 (Object array), 152
+
 - 类型擦除 (type erasure), 152
+
 - 代码生成 (Code generation)
+
 - 动态轻量级 (dynamic lightweight), 300–304
+
 - LCG, 268
+
 - 集合 (Collections)
+
 - 内置数组 (built-in arrays), 159
+
 - 缓存-内存关系 (cache-memory relationships), 162
+
 - 缓存命中 (cache hit), 162
+
 - 缓存行 (cache line), 163
+
 - 缓存未命中率 (cache miss ratio), 164
+
 - 代码生成 (code generation), 164
+
 - 遭遇内存墙 (hitting the memory wall), 162
+
 - 大主内存 (large main memories), 162
+
 - 数据 Level 1 缓存 (Level 1 cache for data), 163
+
 - 数据 Level 2 缓存 (Level 2 cache for data), 163
+
 - 程序指令 Level 1 缓存 (Level 1 cache for program instructions), 162
+
 - 矩阵乘法 (matrix multiplication), 164
+
 - .NET Framework 中的并发事件 (concurrent events in .NET Framework), 160
+
 - AddOrUpdate 方法 (AddOrUpdate method), 162
+
 - ConcurrentB, 161
+
 - ConcurrentDictionary (ConcurrentDictionary), 161
+
 - ConcurrentQueue (ConcurrentQueue), 161
+
 - ConcurrentStack (ConcurrentStack), 161
 
 ## C
 
 - C++ AMP
+
 - alg (alg), 206
+
 - array_view 类 (array_view class), 206
+
 - 框架 (framework), 206
+
 - 基于 GPU 的程序 (GPU-based programs), 205
+
 - I/O 设备 (I/O devices), 207
+
 - lambda 函数 (lambda function), 207
+
 - 并行 foreach (parallel, foreach), 206
+
 - c 近似算法 (c-approximation algorithm), 269–270
+
 - C# 5 async 方法 (C# 5 async methods)
+
 - async and await (async and await), 192
+
 - 异步 (asynchronous), 191–192
+
 - 延续 (continuation), 150
+
 - dispose 方法 (dispose method), 192
+
 - 异常处理 (exception handling), 192–193
+
 - 预测变量 (forecasts variables), 193
+
 - 语言特性 (language features), 193
+
 - TaskScheduler API (TaskScheduler API), 190
+
 - WinRT (Windows Runtime) APIs (WinRT (Windows Runtime) APIs), 191
+
 - C++/语言扩展 (C++/language extensions)
+
 - man (advancements), 253
+
 - cpp 文件 (cpp file), 253
+
 - DoWork 方法 (DoWork method), 253
+
 - GetName (GetName), 253
+
 - GlobalAlloc (GlobalAlloc), 253
+
 - IL 代码对比 原生代码 (IL code vs. native code), 256
+
 - marshal_helper 库 (marshal_helper library), 255–256
+
 - marshal_context 对象 (marshal_context object), 253–255
+
 - Windows 8, 256–257
+
 - Chatty 池 (Chatty pools), 224
+
 - CLR 分配 (CLR allocation)
+
 - 分配图按钮 (allocation graph button), 40–41
+
 - 堆转储 (heap dumps), 43–44
+
 - 直方图按钮 (histogram buttons), 40
+
 - 主报告视图 (main report view), 39
+
 - 对象 (objects), 41–42
+
 - 时间线 (time line), 42–43
+
 - Visual 视图 (Visual view), 43–44
+
 - 自定义 (custom)
+
 - 并集数据结构 (disjoint-union-find data structure), 166–168
+
 - 单次集合 (one-shot collections), 169–170
+
 - 跳跃表数据结构 (skip list data structure), 168
+
 - IEnumerable (IEnumerable), 170–171
+
 - .NET 框架 (.NET framework), 160
+
 - 额外需求 (additional requirements), 160
+
 - 分摊 O(1) 成本集合 (amortized O(1) cost collections), 160
+
 - Dictionary (Dictionary), 159
+
 - LinkedList (LinkedList), 159
+
 - List (List), 159
+
 - SortedDictionaryKV (SortedDictionaryKV), 159
+
 - SortedListKV (SortedListKV), 159
+
 - SortedSet (SortedSet), 159
+
 - Stack (Stack), 159
+
 - 存储需求 (storage requirements), 159–160
+
 - 字符串 (strings), 160
+
 - CLR C++ 模板 (CLR C++ templates)
+
 - 局限性 (limitations), 254
+
 - COM 调用封装器 (COM Callable Wrapper (RCW)), 248–249
+
 - COM 互操作性 (COM interoperability).另见 C++/CLI 扩展
+
 - 区域 (apartments)
+
 - ASP.NET (ASP.NET), 251
+
 - 跨线程参数 (cross-thread parameter), 251
+
 - STA, MTA 和 NTA (STA, MTA and NTA), 250
+
 - 并发事件 (concurrent events in .NET Framework), 160
+
 - AddOrUpdate 方法 (AddOrUpdate method), 162
+
 - ConcurrentB (ConcurrentB), 161
+
 - ConcurrentDictionary (ConcurrentDictionary), 161
+
 - ConcurrentQueue (ConcurrentQueue), 161
+
 - ConcurrentStack (ConcurrentStack), 161
-
-
-
 
 # 索引
 
 ## E
 
 Windows 事件跟踪 (ETW)
+
 - 自定义 ETW 标识程序, 24–26
+
 - 内内核提供程序, 13
+
 - 部分列表, 13–14
+
 - PerMonitor
+
     - 优势, 19
+
     - 自底向上报告, 20–21
+
     - CPU, GC 和 JIT 报告, 20
+
     - GC 分析报告, 22
+
     - HTML 报告, 22
+
     - JIT 分析报告, 20
+
     - Analyze 命令, 20
+
     - 源代码文件夹, 20
+
     - 自顶向下报告, 20–21
+
 - TraceEvent, 19
+
 - PerView
+
     - 特性, 24
+
     - 视图视图, 22–23
+
     - MemoryLeak.exe, 23
+
     - 引用链, 23–24
+
     - 采样, 13
+
 - Windows 性能工具包 (WPT)
+
     - 调用栈聚合, 16, 18
+
     - 详细堆栈帧, 16–17
+
     - 图表, 16, 18
+
     - /O 操作, 16–17
+
     - 原始报告, 19
+
     - 采样分析器, 15
+
     - SDK 安装目录, 14–15
+
     - XPerf.exe, 15–16
+
 - 异常, 297–298
 
 ## F
 
 - 费马小定理, 272
+
 - FIFO（先进先出）队列, 179–180
+
 - 终化 (Finalization), GC
+
     - 自动非确定性, 123–124
+
     - 释放模式, 127–129
+
     - 事件, 123
+
     - 实验, 125–126
+
     - 手动确定性, 122–123
+
     - 内存泄漏, 125
+
     - 实践, 1–139
+
     - 队列, 123–124
+
     - 引用类型, 123
+
     - 资源, 127
+
     - 复活, 129
+
     - 线程, 123
+
     - 非托管资源, 122
+
 - 变 (Flavors), GC
+
     - CER, 109
+
     - 缺点, 109–110
+
     - GC 因素和子因素, 108–109
+
     - 场景, 102
+
     - 服务器 GC, 107–108
+
     - 线程
+
         - 标记阶段, 103–104
+
         - 挂起, 103
+
         - 扫描阶段, 105
+
     - 类型, 102–103
+
     - 工作站 GC
+
         - 并发 GC, 105–106
+
         - 非并发 GC, 106–107
+
         - 类型, 105
+
 - 浮点加法 (FADD), 292
+
 - Floyd-Warshall 算法, 268
 
 ## G
 
 - 垃圾收集 (GC)。另见 追踪垃圾收集
+
 - 分配成本, 92
+
 - 协调概念, 75–76
+
 - 解除成本, 92
+
 - 设计目标, 91
+
 - 终化
+
     - 自动机制, 123–124
+
     - 防弹性特性, 127
+
     - 释放模式, 127–129
+
     - 手动确定性, 122–123
+
     - 实践, 138–139
+
     - 资源, 127
+
     - 非托管资源, 122
+
 - 变
+
     - 应用, 102–105
+
     - GC 因素和子因素, 108–110
+
     - 场景, 102
+
     - 服务器 GC, 107–108
+
     - 工作站 GC, 105–107
+
 - 空闲列表管理, 92–93
+
 - 代际模型
+
     - 假设, 110–111
+
     - 后台 GC, 118–119
+
     - 大对象堆, 115–116
+
     - .NET 实现, 111–114
+
     - 实践, 127–138
+
     - 引用, 116–118
+
 - 交互
+
     - CLR 托管, 135–136
+
     - System.GC 类, 132–135
+
     - 触发器, 136
+
 - 管理成本, 92–93
+
 - 内存泄漏, 94
+
 - 内存管理, 135–136
+
 - 优化, 134
+
 - 实践
+
     - 终化, 138–139
+
     - 代际模型, 137–138
+
     - 对象图, 139–140
+
     - 分页和非托管内存, 141–142
+
     - 钉钉, 138
+
     - 对象池化, 140–141
+
     - 静态分析 (FxCop), 142–143
+
     - 数值, 132
+
     - 引用垃圾收集, 93–94
+
 - 段和垂直内存
+
     - 方法, 122
+
     - CLR 句柄, 119
+
     - COM 对象和非托管代码, 120
+
     - 临时段, 119–120
+
     - 碎片化, 119
+
     - 托管代码, 119
+
     - 内存空间, 120–121
+
     - 段/VM硬件, 120
+
     - VMMap, 121–122
+
 - 弱引用
+
     - 应用代码, 130
+
     - 事件, 131
+
     - GC 句柄, 131
+
     - 长弱引用, 131
+
     - 短弱引用, 131
+
     - 强引用, 129
+
     - 各种场景, 129
+
     - 微优化, 118
+
     - 非类型, 116–117
+
 - 语句, 118
+
 - 泛型
+
     - ArrayList, 145
+
     - 装箱的 ArrayList, 146–147
+
     - 二分查找, 149
+
     - CLR 泛型, 151
+
     - C++ 模板, 153–154
+
     - Java, 152
+
     - 约束, 149
+
     - 闭合泛型类型, 151
+
     - IComparable, 149
+
     - 接口, 149
+
     - Equitable, 150–151
+
     - List, 150
+
     - 开放泛型类型, 151
+
     - 泛型转换, 148
+
     - 泛型接口, 154–158
+
     - List, 148
+
     - 装箱, 145
+
     - System.Object 方法, 149
+
     - 类型安全, 142
+
 - 全局程序集 (GAC), 289
+
 - GPU 计算，矩阵乘法, 207–208
+
 - 模拟, 208–209
+
 - 并行, 205
+
 - 矩阵乘法算法, 210–211
+
 - 多线程, 209
+
 - parallel_each, 209–210
+
 - 速度提升, 212
+
 - 静态存储, 210
+
 - GC 段和虚拟内存
+
     - CLR 句柄, 119
+
     - COM 对象和非托管代码, 120
+
     - 临时段, 119–120
+
     - 碎片化, 119
+
     - 托管代码, 119
+
     - 内存空间, 120–121
+
     - 段/VM硬件, 120
+
     - VMMap, 121–122
+
 - 代际模型
+
     - 假设, 110–111
+
     - 后台 GC, 118–119
+
     - 大对象堆, 115–116
+
     - .NET 实现, 111–114
+
     - 实践, 127–138
+
     - 引用, 116–118
+
 - 交互
+
     - CLR 托管, 135–136
+
     - System.GC 类, 132–135
+
     - 触发器, 136
+
 - 管理成本, 92–93
+
 - 内存泄漏, 94
+
 - 内存管理, 135–136
+
 - 优化, 134
+
 - 中年危机, 115
+
 - 大对象/代, 2, 114
+
 - d 对象/代, 1, 113–114
+
 - 钉钉对象, 111–112
+
 - 类型, 111–113
+
 - 最年轻对象/代, 0, 111–113
+
 - 对象生命经验, 110
+
 - 实践, 137–138
+
 - 引用:
+
     - 卡表, 117
+
     - JIT 编译器, 117–118
+
     - 标记阶段, 116
 
 ## H
 
 - HTTP 监控工具, 307
+
 - 图像包器, 288
 
 ## I
 
 - 索引压缩, 273–274
+
 - 指令级方法 (ILP), 295–296
+
 - 合并数据, 296
+
 - 数据块, 294–295
+
 - 循环函数, 295
+
 - 指令级并行 (ILP) (续)
+
     - 托管代码 vs 非托管代码, 296-297
+
     - 标量执行, 295
+
     - 简单实现, 295-296
+
 - Internet 信息服务 (IIS)
+
     - 空闲超时, 322
+
     - 处理器亲和性, 322
+
     - 回收, 321
+
     - Web 园, 322
+
 - 输出缓存
+
     - 内核缓存, 321
+
     - 用户模式缓存, 320-321
+
 - 范围检查消除
+
     - 数组, 279-281
+
     - 循环函数, 280
+
 - 尾递归调用
+
     - GCD 方法, 281-282
+
     - 启发式算法, 282-283
+
 - 整数, 281
+
 - 方法, 281
+
 - 在线详情, 283, 96
+
 - 即时编译器 (JIT),
+
 - 互操作性。见 COM 互操作性
+
 - I/O 完成端口 (IOCP)
+
     - CreateCompletionPort, 217
+
     - GetQueuedCompletionStatus, 217–218
+
     - 叠叠结构, 218
+
     - Pack 方法, 218
+
     - 结构操作, 217
+
     - TestOCP 方法, 218
+
     - 线程句柄, 217
 
 ## L
 
 - 大对象堆 (LOH), 115-116
+
 - LIFO（后进先出）队列, 179–180
+
 - 轻量级代码生成 (LCG), 298
+
 - LINQ (语言集成查询)。见 并行 LINQ (PLINQ)
 
 ## M
 
 - I/O 概念
+
 - 内存拷贝
+
     - 数据缓冲区, 221
+
     - 非托管内存, 221
+
 - 接入端口, 10
+
 - 文件/O
+
     - 缓存方法, 222
-    - 非缓冲 I/O, 223
-- I/O 完成端口 (IOCP)
-    - CreateCompletionPort, 217
-    - GetQueuedCompletionStatus, 217–218
-    - 叠叠结构, 218–220
-    - 结构操作, 217
-    - TestOCP 方法, 218
-    - 线程句柄, 217
-- 托管剖面优化 (MPGO), 278–289
+
+
+
+- 非缓冲 I/O, 223
+
+## I/O 完成端口 (IOCP)
+- `CreateCompletionPort`, 217
+- `GetQueuedCompletionStatus`, 217–218
+- 叠叠结构, 218–220
+- 结构操作, 217
+- `TestOCP` 方法, 218
+- 线程句柄, 217
+
+- 托管剖面优化 (`MPGO`), 278–289
+
 - 托管代码 vs 非托管代码, 296-297
+
 - 主定理, 260–261
-- 记忆化与编程
-    - 斐波那契数列, 265
-    - 编辑距离, 266
-    - 递归, 265
+
+## 记忆化与编程
+- 斐波那契数列, 265
+- 编辑距离, 266
+- 递归, 265
+
 - 内存池, 220–221
 
-
-
-
-
 ## 性能指标（续）
-
 - 内存分配，243–244
 - 语句，2
 - ML 和汇编代码，242–243
@@ -9045,25 +9282,28 @@ Windows 事件跟踪 (ETW)
 - 序列化解除（unmarshaling），244–245
 
 ## 性能模式
-
 - P/Invoke.net 和拦截器代理，240–241
-- 代码生成
-    - WIN32_FIND_DATA, 239–240
-    - 动态轻量级，300–304
+
+## 代码生成
+- `WIN32_FIND_DATA`, 239–240
+- 动态轻量级，300–304
+
 - 流水线协议，223–224
-    - 源，229–300
+- 源，229–300
+
 - 平台调用用程序（Platform invoker）。参见 P/Invoke
+
 - 第三方框架，298–299
 
-##  JIT 编译
+## JIT 编译
 - 异常，297–298
 - 优势，284
 
 ## JIT 编译器
-- .ini 文件，277
-- CLR，285–287
+- `.ini` 文件，277
+- `CLR`，285–287
 - 内联方法，278–291
-- NGGen.exe 工具，284–285
+- `NGGen.exe` 工具，284–285
 - 范围检查，279–281
 - 共享系统程序集，284
 - 标准优化，277–278
@@ -9073,11 +9313,11 @@ Windows 事件跟踪 (ETW)
 
 ## 概率算法
 - 针对特定处理器的优化
-    - 脆弱性证词（ferality testimony），272
-    - 特性，291
-    - 最大割，271–272
-    - ILP，234–297
-    - SIMD，292
+  - 脆弱性证词（ferality testimony），272
+  - 特性，291
+  - 最大割，271–272
+  - `ILP`，234–297
+  - `SIMD`，292
 - 快速排序算法（QuickSort algorithm），181
 - 启动
 
@@ -9085,7 +9325,7 @@ Windows 事件跟踪 (ETW)
 - 递归算法，183
 - 映像包（image-packages），288
 - 归约（Reduction）。参见 聚合（Aggregation）
-- MPGO，288–299
+- `MPGO`，288–299
 - 引用计数垃圾回收，93–94
 - 多核 JIT 编译，287
 - 反射，298
@@ -9099,133 +9339,154 @@ Windows 事件跟踪 (ETW)
 
 ## SciTech.NET 内存分析
 - 钉住操作（Pinning operation）
-    - 转储文件，47
-    - 方法，101
-    - 文件信息问题，47–48
-    - 缺点，102
-    - 内存快照，48
-    - GC 句柄，102
-    - 事后分析（post mortem），47
-    - 托管和非托管代码，101
+  - 转储文件，47
+  - 方法，101
+  - 文件信息问题，47–48
+  - 缺点，102
+  - 内存快照，48
+  - GC 句柄，102
+  - 事后分析（post mortem），47
+  - 托管和非托管代码，101
+
 - 序列化（Serialization）。参见 数据序列化与反序列化
-- .NET 内存管理模型，101
+
+- `.NET` 内存管理模型，101
 
 ## 服务器 Web 应用
 - 实践，138
-- 异步
-    - 控制器类，312–313
-    - P/Invoke
-    - 绑定，241–242
-    - 可位操作类型，245–247
-    - I/O 操作，311–312
-    - 页面，311–312
-    - C 风格函数，239
-    - 线程，310
-    - Dllimport 属性方法，240
-    - 缓存对象，308–310
-    - IntPtr，239
-    - 封化存根（marshal stub）
-        - AVX 处理器，293
-        - 方向、值和引用类型，247–248
-        - 数据级并行，292
-        - HRESULT 结果，245
-        - FADD，292
-    - IL 存根诊断，243
-    - 托管代码执行，244
-    - 整数值，292–293
-    - JIT 编译器，294
-    - 机器码，294
-    - 处理器指令，292
+
+## 异步
+- 控制器类，312–313
+- P/Invoke
+- 绑定，241–242
+- 可位操作类型，245–247
+- I/O 操作，311–312
+- 页面，311–312
+- C 风格函数，239
+- 线程，310
+- `Dllimport` 属性方法，240
+- 缓存对象，308–310
+- `IntPtr`，239
+- 封化存根（marshal stub）
+  - `AVX` 处理器，293
+  - 方向、值和引用类型，247–248
+  - 数据级并行，292
+  - `HRESULT` 结果，245
+  - `FADD`，292
+- IL 存根诊断，243
+- 托管代码执行，244
+- 整数值，292–293
+- JIT 编译器，294
+- 机器码，294
+- 处理器指令，292
+
 - 单线程单元（STA），249–251
+
 - 跳跃列表数据结构（Skip list），168
+
 - 套接字缓冲区，225
-- 静态分析 (FxCop)，142–143
+
+- 静态分析 (`FxCop`)，142–143
+
 - 流式 SIMD 扩展，292
+
 - Sutter, Herb，173
 
 ## 同步
 - 基于代理的语言，195
-- 缓存考虑
-    - 失效/取消，204
-    - LocalSums 数组，204
-    - 序贯方法，202–203
-    - 求和变量，203
+
+## 缓存考虑
+- 失效/取消，204
+- `LocalSums` 数组，204
+- 序贯方法，202–203
+- 求和变量，203
+
 - 方向，195
-    - 执行历史，194–195
-- 无锁代码
-    - C# 方法，196
-    - 比较交换（CAS），195–196
-    - 数据结构，200
-    - DoWithCAST，199–200
-    - 通版本，197
-    - 错误结果，197
-    - 队列中自旋锁，199
-    - InterlockedCompareExchange，196
-    - 加载更新，197
-    - 内存模型和 volatile变量，198
-    - 相乘方法，197
-    - 操作系统，196
-    - 处理器，196
-    - Push 方法，200
-    - 自旋锁，197–198
-    - 受影响，199
-    - 任务并行库（Task Parallel Library），199
-    - 线程，195–196
-    - TryPop 方法，200
-    - 机器指令，194
-    - 消息传递处理器，195
-    - 事务内存，195
-- Windows 机制
-    - 数据结构，201
-    - 内部实现，201–202
-    - 状态语义，202
-    - 用户模式程序，200
-- System.GC
-    - 控制方法
-        - 枚举，133–134
-        - 属性，134
-    - 诊断方法，132
-    - 通知，132–133
-- 任务并行
-    - 异常和取消
-    - 并行任务，185
-    - 二叉树查找，181–184
-    - 划分方法，181–82
-    - 快速排序，181
-    - 递归算法，183
-    - 任务.Run 方法，182
-- 线程
-    - CPU，174–175
-    - 抽象，180
-    - 优先级，189
-    - FIFO，175–176
-    - 模式，177–178
-    - 挂起，103
-    - 运行时，180
-    - 采样，102–103
-- 时间分析器
-    - 商业工具，26
-    - 自定义，34–35
-    - 采样方法，33
-    - 采样模式，33
-    - Visual Studio，26–31
-- 跟踪垃圾回收
-    - 激进收集，96–97
-    - 误报/假阴性，95
-    - 存根代码，98
-    - GC 句柄，98
-    - 局部根，95–97
-    - 性能影响，98–100
-    - 引用对象，99–101
-    - 移动对象，100
-    - 下一个对象指针和 GC 堆，99–100
-    - 影子对象，100
-    - 碎片化，102
-    - GC 模型，101
+- 执行历史，194–195
+
+## 无锁代码
+- C# 方法，196
+- 比较交换（CAS），195–196
+- 数据结构，200
+- `DoWithCAST`，199–200
+- 通版本，197
+- 错误结果，197
+- 队列中自旋锁，199
+- `InterlockedCompareExchange`，196
+- 加载更新，197
+- 内存模型和 `volatile`变量，198
+- 相乘方法，197
+- 操作系统，196
+- 处理器，196
+- `Push` 方法，200
+- 自旋锁，197–198
+- 受影响，199
+- 任务并行库（Task Parallel Library），199
+- 线程，195–196
+- `TryPop` 方法，200
+- 机器指令，194
+- 消息传递处理器，195
+- 事务内存，195
+
+## Windows 机制
+- 数据结构，201
+- 内部实现，201–202
+- 状态语义，202
+- 用户模式程序，200
+
+## System.GC
+- 控制方法
+  - 枚举，133–134
+  - 属性，134
+- 诊断方法，132
+- 通知，132–133
+
+## 任务并行
+- 异常和取消
+- 并行任务，185
+- 二叉树查找，181–184
+- 划分方法，181–82
+- 快速排序，181
+- 递归算法，183
+- 任务.Run 方法，182
+
+## 线程
+- CPU，174–175
+- 抽象，180
+- 优先级，189
+- FIFO，175–176
+- 模式，177–178
+- 挂起，103
+- 运行时，180
+- 采样，102–103
+
+## 时间分析器
+- 商业工具，26
+- 自定义，34–35
+- 采样方法，33
+- 采样模式，33
+- Visual Studio，26–31
+
+## 跟踪垃圾回收
+- 激进收集，96–97
+- 误报/假阴性，95
+- 存根代码，98
+- GC 句柄，98
+- 局部根，95–97
+- 性能影响，98–100
+- 引用对象，99–101
+- 移动对象，100
+- 下一个对象指针和 GC 堆，99–100
+- 影子对象，100
+- 碎片化，102
+- GC 模型，101
+
 - 静态根，87
-- .NET CLR，94–95
-- 钉住操作
-    - 方法，101
+
+- `.NET CLR`，94–95
+
+## 钉住操作
+- 方法，101
 
 ## 弱引用
 - 应用代码，130
@@ -9237,57 +9498,60 @@ Windows 事件跟踪 (ETW)
 - Web 分析工具，308
 
 ## Web 应用性能
-- ASP.NET 应用
-    - 机制，331–332
-    - 概述，338–331
-    - 预编译，317–318
-    - 陷阱，332
-    - 进程模型，318–319
-    - 扩展，331
-    - 服务器亲和性，331
-    - 服务器端输出缓存，316–317
-    - 跟踪与调试，313–315
-    - 视图状态，315–316
+## ASP.NET 应用
+- 机制，331–332
+- 概述，338–331
+- 预编译，317–318
+- 陷阱，332
+- 进程模型，318–319
+- 扩展，331
+- 服务器亲和性，331
+- 服务器端输出缓存，316–317
+- 跟踪与调试，313–315
+- 视图状态，315–316
+
 - 特性，305
 
 ## 联合
+
 ## 不安全代码。参见 C++/CLI 语言扩展
 - C# 项目，235–236
 - 生命周期管理，237
 - 内存池方案，238–239
 - 钉住和 GCHandle，236–237
-- P/Invoke
-    - 绑定，241–242
-    - 代码访问安全，248
-    - C 风格函数，239
-    - DllImport 属性，239
-    - 可执行文件方法，240
-    - IntPtr，239
-    - 封化位，242–245–247
-    - P/Invoke.net 和互操作助手，240–241
 
-
-
-
+## P/Invoke
+- 绑定，241–242
+- 代码访问安全，248
+- C 风格函数，239
+- `DllImport` 属性，239
+- 可执行文件方法，240
+- `IntPtr`，239
+- 封化位，242–245–247
+- P/Invoke.net 和互操作助手，240–241
 
 > 献给我亲爱的妻子 Dina，她是我生命的阳光。
+
 > 献给我的父母 Boris 和 Marina，感谢你们付出了这一切，才让我无需如此。
->—Sasha
+
+> —Sasha
 
 > 献给我可爱的妻子 Efrat，感谢你提醒我，灵感并未离开，它只是在玩躲迷藏。
->—Ido
+
+> —Ido
 
 # 目录
-
 - 前言 ..................................................................................................... xv
 - 关于作者....................................................................................... xvii
 - 关于技术评审员.................................................................. xix
 - 致谢............................................................................................................. xxi
 - 引言........................................................................................................ xxiii
+
 ## 第1章：性能指标 ................................................................ 1
 - 性能目标............................................................................................... 2
 - 性能指标............................................................................................ 4
 - 总结............................................................................................................... 6
+
 ## 第2章：性能测量........................................................................... 7
 - 性能测量的方法............................................................................... 7
 - Windows 内置工具...................................................................................... 7
@@ -9311,6 +9575,7 @@ Windows 事件跟踪 (ETW)
 - 糟糕的微基准测试示例................................................................54
 - 微基准测试指南...............................................................................56
 - 总结 .......................................................................58
+
 ## 第3章：类型内部机制 ................................................................61
 - 示例 .................................................................................................61
 - 引用类型与值类型之间的语义差异 .................62
@@ -9318,55 +9583,98 @@ Windows 事件跟踪 (ETW)
 - 引用类型内部机制 ................................................................65
 - 方法表（Method Table） .......................................................................66
 - 在引用类型实例上调用方法 ................................................70
-- 同步块（Sync Blocks）与 lock 关键字 ............................................75
+
+
+
+- 同步块（Sync Blocks）与 `lock` 关键字 ............................................75
+
 ## 值类型内部机制 ................................................................79
+
 - 值类型的局限性 ..........................................................80
+
 - 值类型上的虚方法 ................................................................82
+
 - 装箱（Boxing） ........................................................82
-- 通过 Equals 方法避免值类型上的装箱..............................84
-- GetHashCode 方法 ...................................................87
+
+- 通过 `Equals` 方法避免值类型上的装箱..............................84
+
+- `GetHashCode` 方法 ...................................................87
+
 - 使用值类型的最佳实践 ................................................89
+
 - 总结 .......................................................................89
+
 ## 第4章：垃圾回收 ................................................91
+
 - 为什么需要垃圾回收？.........................................................91
+
 - 空闲列表管理（Free List Management） ................................................92
+
 - 引用计数垃圾回收 ......................................93
+
 - 追踪式垃圾回收（Tracing Garbage Collection） ................................................94
+
 - 标记阶段（Mark Phase）............................................................................................... 95
+
 - 扫描与压缩阶段（Sweep and Compact Phases）............................................................... 99
+
 - 固定（Pinning）..................................................................................................................... 102
+
 - 垃圾回收模式（Garbage Collection Flavors）............................................................................. 103
+
 - 为了垃圾回收暂停线程............................................................... 103
+
 - 工作站垃圾回收（Workstation GC）.....................................................................................106
+
 - 服务器垃圾回收（Server GC）..................................................................................107
+
 - 垃圾回收模式之间的切换.......................................................................108
+
 ## 代（Generations）...............................................................................110
+
 - 代模型假设..................................................................................110
+
 - .NET 的代的实现...............................................................111
+
 - 大对象堆（Large Object Heap）...............................................................................115
+
 - 代之间的引用......................................................................116
+
 - 后台垃圾回收（Background GC）...............................................................................119
+
 ## GC 区域与虚拟内存...............................................................119
+
 ## 终化（Finalization）.............................................................................. 123
+
 - 手动确定性终化......................................................123
+
 - 自动非确定性终化..................................................123
+
 - 非确定性终化的陷阱..................................................125
+
 - 释放模式（Dispose Pattern）..................................................................................128
+
 ## 弱引用（Weak References）....................................................... 130
+
 ## 与垃圾回收器的交互..................................................132
-- System.GC 类..................................................................................132
+
+- `System.GC` 类..................................................................................132
+
 - 使用 CLR 托管与 GC 交互...............................................................135
+
 - GC 触发器（GC Triggers）................................................................................136
+
 ## 垃圾回收性能最佳实践................ 137
+
 - 代模型..................................................................................137
+
 - 固定（Pinning）..................................................................................138
+
 - 终化（Finalization）.........................................................................................139
+
 - 其他提示与最佳实践............................................................... 139
+
 - 总结............................................................................................... 143
-
-
-
-
 
 # 第 5 章：集合与泛型..........................................................................................145
 
@@ -9435,150 +9743,160 @@ N 体模拟 ....................................................................
 ## 通用 I/O 概念。
 
 - 同步与异步 I/O .................................................................215
+
 - I/O 完成端口 ................................................................................................................217
+
 - .NET 线程池 ......................................................................................................220
+
 - 内存拷贝 .......................................................................................................221
+
 - 散乱/聚集 I/O (Scatter–Gather I/O) ...............................................................................221
+
 - 文件 I/O ................................................................................................................222
+
 - 缓存提示 ................................................................................................222
-- 无缓冲 I/O ......................................................................................223
-- 网络 ................................................................................................223
-- 网络协议 .......................................................................................223
-- 网络套字 .......................................................................................225
-- 数据序列化与反序列化 .................................................226
-- 序列化基准测试 ............................................................................226
-- DataSet 序列化 ............................................................................229
 
-## Windows 通信框架 (WCF) ................................................229
 
-- 节流 (Throttling) .................................................................................229
-- 进程模型 ................................................................................230
-- 缓存 ................................................................................................231
-- 异步 WCF 客户端和服务器 ...................................231
-- 绑定 (Bindings) ................................................................................................233
-- 总结 ................................................................................................234
-- 钉住 (Pinning) 与 GC 句柄 ...................................................................236
-- 生命周期管理 ...................................................................237
-- 分配非托管内存 ...................................................237
 
 # 目录
 
-- P/Invoke ................................................................................................................239
-- PInvoke.net 和 P/Invoke 交互助手...............................................................240
-- 绑定 (Binding) .................................................................................................................241
-- 封送存根 (Marshaller Stubs) ...................................................................................242
-- 可拷贝类型 (Blittable Types) .......................................................................................................245
-- 封送方向、值类型与引用类型...............................................................247
-- 代码访问安全 ................................................................................................248
-- COM 互操作性...............................................................................................248
-- 生命周期管理......................................................................................................249
-- 区域封送 (Apartment Marshaling)..........................................................................................249
-- TLB 导入与代码访问安全 ........................................................................251
-- NoPInvoke...............................................................................................................251
-- 异常.........................................................................................................................252
-- C++/CLI 语言扩展..................................................................................253
-- marshal_as 辅助库..................................................................................255
-- IL 代码与 原生代码 ........................................................................................256
-- Windows 8 WinRT 互操作.......................................................................256
-- 互操作最佳实践.......................................................................................257
-- 总结...............................................................................................258
+- 无缓冲 I/O 223
+- 网络 223
+- 网络协议 223
+- 网络套字 225
+- 数据序列化与反序列化 226
+- 序列化基准测试 226
+- DataSet 序列化 229
 
-## 第 9 章：算法优化...............................................................259
+## Windows 通信框架 (WCF) 229
+- 节流 (Throttling) 229
+- 进程模型 230
+- 缓存 231
+- 异步 WCF 客户端和服务器 231
+- 绑定 (Bindings) 233
+- 总结 234
+- 钉住 (Pinning) 与 GC 句柄 236
+- 生命周期管理 237
+- 分配非托管内存 237
 
-- 复杂度分类法...............................................................................259
-- 大 O 表示符号 (Big-Oh Notation) ................................................................................259
-- 图灵机与复杂度类.......................................................261
-- 记忆化与动态规划.......................................................265
-- 编辑距离......................................................................................................266
-- 所有对最短路径 (All-Pairs-Shortest-Paths).....................................................................................267
-- 近似算法.......................................................................................269
-- 旅行旅行商问题......................................................................................270
-- 最大割...............................................................................................271
+# 目录
+
+- P/Invoke 239
+- PInvoke.net 和 P/Invoke 交互助手 240
+- 绑定 (Binding) 241
+- 封送存根 (Marshaller Stubs) 242
+- 可拷贝类型 (Blittable Types) 245
+- 封送方向、值类型与引用类型 247
+- 代码访问安全 248
+- COM 互操作性 248
+- 生命周期管理 249
+- 区域封送 (Apartment Marshaling) 249
+- TLB 导入与代码访问安全 251
+- NoPInvoke 251
+- 异常 252
+- C++/CLI 语言扩展 253
+- marshal_as 辅助库 255
+- IL 代码与 原生代码 256
+- Windows 8 WinRT 互操作 256
+- 互操作最佳实践 257
+- 总结 258
+
+## 第 9 章：算法优化 259
+- 复杂度分类法 259
+- 大 O 表示符号 (Big-Oh Notation) 259
+- 图灵机与复杂度类 261
+- 记忆化与动态规划 265
+- 编辑距离 266
+- 所有对最短路径 (All-Pairs-Shortest-Paths) 267
+- 近似算法 269
+- 旅行旅行商问题 270
+- 最大割 271
+
+# 概率算法 271
+- 概率最大切 271
+- 费马质数检验 272
+
+# 索引与压缩 272
+- 变长长度编码 272
+- 索引压缩 273
+
+# 总结 274
+
+# 第 10 章：性能模式 277
+- JIT 编译器优化 277
+- 标准优化 277
+- 方法内联 278
+- 范围检查消除 279
+- 尾递归 281
+
+# 启动性能 283
+- 使用 NGen（原生映像生成器）进行预 JIT 编译 284
+- 多核骨干 JIT 编译 287
+- 映像打包器 288
+- 托管配置文件引导优化 (MPGO) 288
+- 启动性能杂项提示 289
+
+# 特定处理器的优化 291
+- 单指令多数据流 (SIMD) 292
+- 指令级并行 294
+
+# 异常 297
+
+# 反射 298
+
+# 代码生成 298
+- 从源生成代码 299
+- 使用动态轻量级代码生成生成代码 300
+
+# 总结 304
+
+# 第 11 章：Web 应用性能 305
+- 测试 Web 应用的性能 305
+- Visual Studio Web 性能测试与负载测试 306
+- HTTP 监控工具 307
+- Web 分析工具 308
+
+# 在服务器端提高 Web 性能 308
+- 缓存常用对象 308
 
 
 
-
-
-# 概率算法 ................................................................................271
-
-- 概率最大切......................................................................................271
-- 费马质数检验..................................................................................................272
-
-# 索引与压缩 ..........................................................................................272
-
-- 变长长度编码........................................................................................272
-- 索引压缩.....................................................................................................273
-
-# 总结 .......................................................................................................................274
-
-# 第 10 章：性能模式 ................................................................................277
-
-- JIT 编译器优化.......................................................................................277
-- 标准优化..............................................................................................277
-- 方法内联.........................................................................................................278
-- 范围检查消除...........................................................................................279
-- 尾递归...............................................................................................................281
-
-# 启动性能 ................................................................................................283
-
-- 使用 NGen（原生映像生成器）进行预 JIT 编译..............................................284
-- 多核骨干 JIT 编译...........................................................................287
-- 映像打包器...........................................................................................288
-- 托管配置文件引导优化 (MPGO).......................................................288
-- 启动性能杂项提示..................................................................289
-
-# 特定处理器的优化 ...................................................................291
-
-- 单指令多数据流 (SIMD)......................................................292
-- 指令级并行.....................................................................294
-
-# 异常 ..........................................................................................................................297
-
-# 反射 ................................................................................................298
-
-# 代码生成 ........................................................................................298
-
-- 从源生成代码.......................................................................299
-- 使用动态轻量级代码生成生成代码...............................300
-
-# 总结 .......................................................................................304
-
-# 第 11 章：Web 应用性能 ................................................305
-
-- 测试 Web 应用的性能...............................................305
-Visual Studio Web 性能测试与负载测试 ................................................306
-HTTP 监控工具 .................................................................................................307
-Web 分析工具 ................................................................................................308
-
-# 在服务器端提高 Web 性能 .......................................................................308
-
-- 缓存常用对象 ........................................................308
-- 使用异步页面、模块和控制器 ................................................310
+# 使用异步页面、模块和控制器 ................................................310
 
 # 调整 ASP.NET 环境 ................................................................................313
 
 - 关闭 ASP.NET 跟踪和调试 ................................................313
+
 - 禁用视图状态 (ViewState) .......................................................................315
+
 - 服务器端输出缓存 .......................................................316
+
 - 预编译 ASP.NET 应用程序 ...................................317
+
 - 精调 ASP.NET 进程模型 ........................................................318
 
 # 配置 IIS ................................................................................319
 
 - 输出缓存 ............................................................319
+
 - 应用程序池配置 ................................................321
 
 # 优化网络 ................................................................................323
 
 - 应用 HTTP 缓存头部 ................................................................323
+
 - 开启 IIS 压缩 ................................................................326
+
 - 代码压缩化与合并 ...................................328
+
 - 使用内容分发网络 (CDN) ........................................329
 
 # 扩展 ASP.NET 应用程序 .......................................................330
 
 - 横向扩展 ...................................................331
+
 - ASP.NET 扩展机制 ...................................331
+
 - 横向扩展的陷阱 ...................................................332
 
 # 总结 .......................................................332
@@ -9589,31 +9907,30 @@ Web 分析工具 ...............................................................
 
 原始桌面版 .NET Framework 最近也已发布 10 年了（2012 年 2 月）。从它诞生起我就在这个团队中，在超过一半的时间里我一直担任性能架构师，因此这 10 周岁让我思考 .NET 经历了什么、现在处于什么位置，以及关于 .NET 性能的“正确”思考是什么。能为一本专门介绍 .NET 性能的书写序言，让我有机会将这些想法记录下来。
 
-程序员的生产力一直是并将永远是 .NET 框架的根本价值。垃圾回收 (GC) 是提高生产力最重要的功能，这不仅是因为它允许编写类库时避免大量糟糕的错误（内存损坏），还因为这避免了易错的资源分配规范带来的“混乱”（不再需要传递缓冲区，不再需要关于谁负责删除内存的微妙规则）。强类型安全（包括泛型）是另一个重要支柱，因为它捕捉了广泛的程序员意图，并允许工具在程序运行之前发现许多错误。JavaScript 等语言缺乏强类型，这在软件规模化上始终处于劣势。在这两个支柱中，我们构建了一个专为易用性设计的类库（非常实用的、简单的接口、一致的命名规范等）。我对这一结果感到自豪；我们构建了一个构建代码的系统，其生产力无与伦比。
+程序员的生产力一直是并将永远是 .NET 框架的根本价值。垃圾回收 (`GC`) 是提高生产力最重要的功能，这不仅是因为它允许编写类库时避免大量糟糕的错误（内存损坏），还因为这避免了易错的资源分配规范带来的“混乱”（不再需要传递缓冲区，不再需要关于谁负责删除内存的微妙规则）。强类型安全（包括泛型）是另一个重要支柱，因为它捕捉了广泛的程序员意图，并允许工具在程序运行之前发现许多错误。JavaScript 等语言缺乏强类型，这在软件规模化上始终处于劣势。在这两个支柱中，我们构建了一个专为易用性设计的类库（非常实用的、简单的接口、一致的命名规范等）。我对这一结果感到自豪；我们构建了一个构建代码的系统，其生产力无与伦比。
 
 然而，仅仅有程序员生产力是不够的，特别是对于像 .NET 这样成熟的软件。我们同样追求高性能，这就是我们要讨论的内容：
 
-坏消息是，正如你无法指望第一次运行程序就能完全正确运行一样，你不能期望高性能在程序第一次正确运行时就“自然而然”。正如存在某些（GC 和类型安全）技术（接口、接口约）可以减少软件 bug 的发生一样，也存在各种（分析）和技术（性能规划、延迟初始化）可以减少性能问题的可能性。
+坏消息是，正如你无法指望第一次运行程序就能完全正确运行一样，你不能期望高性能在程序第一次正确运行时就“自然而然”。正如存在某些（`GC` 和类型安全）技术（接口、接口约）可以减少软件 bug 的发生一样，也存在各种（分析）和技术（性能规划、延迟初始化）可以减少性能问题的可能性。
 
 好消息是，应用程序中 90%-10% 的部分并不是性能关键的，可以为了提高程序员生产力而编写（尽可能最少、最简单的代码）。但剩下的 10% 需要仔细关注。它需要一个计划，而且在编写代码之前就需要。这就是第 1 章要讨论的。为了制定这个计划，你需要数据（操作、库调用等有多快）。这就是第 2 章要讨论的。这些都是任何高性能软件项目的基石。
 
-本书的其余部分涵盖了你在制定性能计划时需要“了解你的选择”的细节。对所用平台的性能特性的基础理解是不可替代的，这正是第 3 章（类型）、第 4 章（GC）和第 5 章（基础类库）的重点。如果你的原型设计显示简单、直接的 .NET 实现无法满足你的性能需求，你应该研究算法改进（第 9 章）或并发（第 6 章），因为这些可能产生最大的影响。如果你仍然需要性能，还有一些 .NET 小技巧（第 10 章）。
-
-
-
-
+本书的其余部分涵盖了你在制定性能计划时需要“了解你的选择”的细节。对所用平台的性能特性的基础理解是不可替代的，这正是第 3 章（类型）、第 4 章（`GC`）和第 5 章（基础类库）的重点。如果你的原型设计显示简单、直接的 .NET 实现无法满足你的性能需求，你应该研究算法改进（第 9 章）或并发（第 6 章），因为这些可能产生最大的影响。如果你仍然需要性能，还有一些 .NET 小技巧（第 10 章）。
 
 Vance Morrison
+
 .NET Runtime 性能架构师
 
 # 关于作者
 
 Sasha Goldsstein 是微软 Visual C# MVP，也是 SELA Group 的首席技术官。Sasha 领导着 SELA 技术中心的性能与调试团队，并在生产环境调试、应用性能故障排除和分布式架构等多个领域提供咨询服务。Sasha 的大部分经验集中在 C# 和 C++ 应用开发，以及高扩展性和高性能的系统架构。他是微软会议的常见演讲者，并是多门培训课程的作者，包括“NET Performance”、“NET Debugging”、“Windows Internals”等。
+
 博客：http://blog.sashag.net Twitter：@goldshtn
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_357_0.png)
 
 Dima Zurbalev 是 SELA Group 性能与调试应急响应团队的高级顾问。Dima 的性能优化和调试技能使他能够为客户解决看似不可能的问题，并对 CLR 和 Windows 内部原理有深入理解。他的大部分开发经验围绕 .NET 和 C++ 基础设施项目展开，并为 CodePlex 上的多个开源项目做过贡献。
+
 博客：http://blogs.microsoft.co.il/blogs/dimaz
 
 ![](img/d3ea56daae375e1d9f44d8bff55d84b7_357_1.png)
@@ -9623,6 +9940,7 @@ Dima Zurbalev 是 SELA Group 性能与调试应急响应团队的高级顾问。
 **Ido Flatow** 是微软 Connected Systems MVP，SELA Group 的高级架构师。Ido 拥有超过15 年的经验，是 SELA 的 Windows Azure 和 Web 专家之一，专长 WCF、ASP.NET、Silverlight 和 IIS 等技术。他是微软认证培训师 (MCT)，微软官方 WCF 4 课程 (10263A) 的合著者，也是全球范围内会议的常见演讲者。
 
 博客：http://blogs.microsoft.co.il/blogs/idof
+
 Twitter：@IdoFlatow
 
 # 关于技术审核员
@@ -9642,4 +9960,3 @@ Fabio Claudio Ferracchiati 是一位关于尖端技术的畅产作家和技术�
 Apres 的编辑团队让这个项目变得充满乐趣，并包容了我们用非母语英语来塑造了你们今天所看到的这本书。Gwenan、Kevin 和 Corbin：感谢你们的专业精神和耐心。
 
 最后但同样重要的是，非常感谢我们的家人，他们在这本书的祭坛上付献了无数小时。没有你们的支持，这本书永远无法出版。
-

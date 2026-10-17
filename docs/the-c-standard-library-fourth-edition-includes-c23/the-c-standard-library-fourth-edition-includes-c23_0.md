@@ -1,16 +1,11 @@
+
 # C++ 标准库：第四版包含 C++23
-
-
 
 ![](img/title_page.png)
 
 ![C++ 标准库](img/title_page.png)
 
-
-
-
 本书可在 [`leanpub.com/cpplibrary`](http://leanpub.com/cpplibrary) 购买。
-
 
 ![出版商标志](img/leanpub-logo.png)
 
@@ -19,11 +14,6 @@
 这是一本 [Leanpub](https://leanpub.com) 书。Leanpub 通过精益出版（Lean Publishing）流程为作者和出版社提供支持。[精益出版](https://leanpub.com/manifesto) 是使用轻量级工具和多次迭代来出版进行中的电子书，以获取读者反馈，不断调整直到获得正确的书籍，并在完成后建立影响力。
 
 * * * * * * *
-
-
-
-
-
 
 ## 英文版
 
@@ -95,7 +85,7 @@ C++ 标准库是当前 C++23 标准 [ISO/IEC 14882:2023](https://www.iso.org/sta
 
 我承诺只会有几种约定。
 
-#### 特殊字体
+### 特殊字体
 
 *斜体*
 
@@ -103,9 +93,9 @@ C++ 标准库是当前 C++23 标准 [ISO/IEC 14882:2023](https://www.iso.org/sta
 
 `等宽字体`
 
-我将`等宽字体` 用于代码、指令、关键字以及类型、变量和类的名称。
+我将`等宽字体`用于代码、指令、关键字以及类型、变量和类的名称。
 
-#### 特殊框
+### 特殊框
 
 我使用方框来展示独特信息、提示和警告。
 
@@ -136,10 +126,6 @@ C++ 标准库是当前 C++23 标准 [ISO/IEC 14882:2023](https://www.iso.org/sta
 ![我是 Cippi：好奇、聪明而且——是的——女性化的！](img/Cippi----CippiPortrait.jpg)
 
 ### 关于我
-
-
-
-
 
 自 1999 年以来，我一直担任软件架构师、团队负责人和讲师。2002 年，我创建了公司内部会议以进行进修教育。自 2002 年以来，我一直在提供培训课程。我的第一个教程是关于专利管理软件的，但很快就开始开始教授 Python 和 C++。我喜欢在空余时间编写关于 C++、Python 和 Haskell 的文章。我也喜欢在会议上演讲。我在我的英文博客 [Modernes Cpp](https://www.modernescpp.com/) 上每周更新，以及由 Heise Developer 托管的[德语博客](https://www.grimm-jaud.de/index.php/blog)。
 
@@ -175,17 +161,17 @@ C++ 时间轴
 
 `C++23` 改进了 C++20 的四大特性：扩展的范围功能、协程生成器 `std::generator` 以及模块化的 C++ 标准库。
 
-#### 概述
+### 概述
 
 由于 C++ 拥有许多库，为每个用例找到方便的库通常很困难。
 
 ### 工具类
 
-工具类 是关注通用任务的库，因此可以应用于许多语境。
+工具类是关注通用任务的库，因此可以应用于许多语境。
 
 工具类的示例包括计算值的最小或最大值的函数、两个值的中点函数，或者用于交换或移动值的函数。得益于保存整数的比较，整数提升不会发生。
 
-其他工具类包括 `std::function`、`std::bind` 或 `std:bind_front`。通过 `std::bind` 或 `std::bind_front`，你可以从现有函数轻松创建新函数。为了将它们绑定到变量并在稍后调用，你需要 `std::function`。
+其他工具类包括 `std::function`、`std::bind` 或 `std::bind_front`。通过 `std::bind` 或 `std::bind_front`，你可以从现有函数轻松创建新函数。为了将它们绑定到变量并在稍后调用，你需要 `std::function`。
 
 通过 `std::pair` 和泛化的 `std::tuple`，你可以创建任意长度的异构对和元组。
 
@@ -211,11 +197,7 @@ C++ 标准库拥有丰富的容器。我们有序列容器和关联容器。关�
 
 每个序列容器都有独特的领域。尽管如此，在 95%的用例中，`std::vector` 是正确的选择。`std::vector` 可以动态调整大小，自动管理内存并提供卓越的性能。相比之下，`std::array` 是唯一无法运行时调整大小的序列容器。它针对内存和性能开销进行了优化。虽然 `std::vector` 擅长在末尾添加新元素，但你应该使用 `std::deque` 在开头也添加元素。由于 `std::list` 是双链表而 `std::forward_list` 是单链表，我们还有两个针对容器内任意位置操作进行了优化的额外容器。
 
-
-
-
-
-`关联容器` 是键值对的容器。它们通过各自的键来提供其值。关联容器的一个典型用场景是电话簿，你使用`family name` 作为键来检索`phone number` 这个值。C++ 有八种不同的关联容器。一边是具有有序键的关联容器：`std::set`、`std::map`、`std::multiset` 和 `std::multimap`。另一边是无序关联容器：`std::unordered_set`、`std::unordered_map`、`std::unordered_multiset` 和 `std::unordered_multimap`。
+`关联容器`是键值对的容器。它们通过各自的键来提供其值。关联容器的一个典型用场景是电话簿，你使用`family name`作为键来检索`phone number`这个值。C++ 有八种不同的关联容器。一边是具有有序键的关联容器：`std::set`、`std::map`、`std::multiset` 和 `std::multimap`。另一边是无序关联容器：`std::unordered_set`、`std::unordered_map`、`std::unordered_multiset` 和 `std::unordered_multimap`。
 
 首先，看看[有序关联容器]。`std::set` 和 `std::map` 的区别在于前者没有关联的值。`std::map` 和 `std::multimap` 的区别在于后者可以有多个相同的键。这些命名约定也适用于[无序关联容器]，它们与有序容器有许多共同点。关键区别在于性能。有序关联容器具有对数访问时间，而无序关联容器允许常数级访问时间。因此，无序关联容器的访问时间与其大小无关。这一规则同样适用于 `std::unordered_map` 和 `std::vector`。在 95% 的用例中，如果你不需要排序键，`std::unordered_map` 应该是你的首选。
 
@@ -245,9 +227,9 @@ C++ 支持基础和高级的[数学常量]，如 ![e](img/leanpub_equation_0.png
 
 通过字符串和正则表达式，C++ 有两个强大的库来处理文本。
 
-`std::string` 拥有丰富的成员函数集合，用于分析和修改其文本。因为它与字符的 `std::vector` 有许多共同点，你可以将 STL 算法应用于 `std::string`。`std::string` 是 C 字符串的继承者，但使用起来容易且安全得多。C++ 字符串管理自己的内存。
+`std::string`拥有丰富的成员函数集合，用于分析和修改其文本。因为它与字符的 `std::vector` 有许多共同点，你可以将 STL 算法应用于`std::string`。`std::string`是 C 字符串的继承者，但使用起来容易且安全得多。C++ 字符串管理自己的内存。
 
-与 `std::string` 不同，`std::string_view` 的拷贝开销很小。`std::string_view` 是 `std::string` 的非所有引用。
+与`std::string`不同，`std::string_view`的拷贝开销很小。`std::string_view`是`std::string`的非所有引用。
 
 [正则表达式]是一种描述文本的语言。你可以使用正则表达式来确定文本模式是否在文中出现一次或多次。但不仅如此，正则表达式还允许将匹配到的模式替换为文本。
 
@@ -269,19 +251,17 @@ C++ 支持基础和高级的[数学常量]，如 ![e](img/leanpub_equation_0.png
 
 ### 多线程
 
+
+
 C++ 在 2011 年发布的 C++ 标准中获得了多线程库。该库拥有原子变量、线程、锁和条件变量等基础构建块。这是未来 C++ 标准构建更高抽象的基础。但 C++11 已经拥有了任务（tasks），它们提供了比上述基础构建块更高层次的抽象。
 
-在底层，C++11 首次提供了[内存模型]和原子变量。这两个组件都是多线程编程中实现*良定义*行为的基础。
+在底层，C++11 首次提供了[内存模型]和原子变量。这两个组件都是多线程编程中实现良定义行为的基础。
 
-
-
-
-
-一个新的 C++ 线程会立即开始其工作。它可以在前台或后台运行，并通过拷贝或引用获取数据。得益于停止令牌 (stop token)，你可以中断改进后的线程 `std::jthread`。
+一个新的 C++ 线程会立即开始其工作。它可以在前台或后台运行，并通过拷贝或引用获取数据。得益于停止令牌（stop token），你可以中断改进后的线程 `std::jthread`。
 
 线程之间共享变量的访问必须经过协调。这种协调可以通过互斥锁或锁以不同的方式完成。但很多情况下，保护数据的初始化就足够了，因为在它的生命周期内它是不可变的。
 
-将变量声明为线程局部 (thread-local)可以确保线程获取的是自己的拷贝，因此不存在冲突。
+将变量声明为线程局部（thread-local）可以确保线程获取的是自己的拷贝，因此不存在冲突。
 
 条件变量是实现发送者-接收者工作流的经典解决方案。核心思想是发送者在完成工作后通知接收者，以便接收者开始工作。
 
@@ -289,7 +269,7 @@ C++ 在 2011 年发布的 C++ 标准中获得了多线程库。该库拥有原�
 
 与信号量类似，`std::latch` 和 `std::barrier` 是协调类型，允许某些线程阻塞直到计数器变为零。与 `std::barrier` 不同，你可以重用 `std::latch` 用于新的迭代，并为该新迭代调整其计数器。
 
-任务与线程有许多共同点。但程序员显式地创建线程，但任务将由 C++ 运行时隐式创建。任务类似于数据通道。数据可以是值、异常或仅是通知。承诺(promise)将数据放入数据通道；未来(future)则从中取出值。
+任务与线程有许多共同点。但程序员显式地创建线程，但任务将由 C++ 运行时隐式创建。任务类似于数据通道。数据可以是值、异常或仅是通知。承诺（promise）将数据放入数据通道；未来（future）则从中取出值。
 
 协程可以在挂起和恢复执行的同时保持其状态的函数。协程是编写[事件驱动应用](https://en.wikipedia.org/wiki/Event-driven_programming)的常用方法。事件驱动应用可以是模拟、游戏、服务器、用户界面甚至甚至是算法。协程实现了[协作多任务](https://de.wikipedia.org/wiki/Multitasking)。协作多任务的关键是每个任务根据其需要花费时间。
 
@@ -327,22 +307,19 @@ C++ 在 2011 年发布的 C++ 标准中获得了多线程库。该库拥有原�
 
 ### 构建可执行文件
 
-只有在极少数需要显式地链接某个库。这句话取决于平台。例如，使用当前的 *g++* 或 *clang++* 编译器时，你应该链接 `pthread` 库以获得多线程功能。
+只有在极少数需要显式地链接某个库。这句话取决于平台。例如，使用当前的 `g++` 或 `clang++` 编译器时，你应该链接 `pthread` 库以获得多线程功能。
 
-# 2. 工具
+## 2. 工具
 
-工具是你可以在不同语文中使用的宝贵工具。它们不局限于特定领域。这句话适用于本章的函数和库。我展示了你可以应用于任意值的函数，或者你可以用来创建新函数并将其绑定到变量的函数。你可以在对和元组中存储任意类型的任何值，或者构建任何值的引用。智能指针是你在 C++ 中实现自动内存管理的工具。要获取类型信息，请使用 type-traits 库。
+工具是你可以在不同语文中使用的宝贵工具。它们不局限于特定领域。这句话适用于本章的函数和库。我展示了你可以应用于任意值的函数，或者你可以用来创建新函数并将其绑定到变量的函数。你可以在对和元组中存储任意类型的任何值，或者构建任何值的引用。智能指针是你在 C++ 中实现自动内存管理的工具。要获取类型信息，请使用 `type-traits` 库。
 
+你可以将 `min`、`max` 和 `minmax` 函数的许多变体应用于值和初始化列表。这些函数需要 `<algorithm>` 头文件。相反，`std::move`、`std::forward`、`std::to_underlying` 和 `std::swap` 函数定义在 `<utility>` 头文件中。你可以将它们应用于任意值。
 
-
-
-你可以将 `min`、`max` 和 `minmax` 函数的许多变应用于值和初始化列表。这些函数需要 `<algorithm>` 头文件。相反，`std::move`、`std::forward`、`std::to_underlying` 和 `std::swap` 函数定义在 `<utility>` 头文件中。你可以将它们应用于任意值。
-
-### `std::min`, `std::max`, 和 `std::minmax`
+### `std::min`、`std::max` 和 `std::minmax`
 
 函数 [`std::min`](http://en.cppreference.com/w/cpp/algorithm/min)、[`std::max`](http://en.cppreference.com/w/cpp/algorithm/max) 和 [`std::minmax`](http://en.cppreference.com/w/cpp/algorithm/minmax) 定义在 `<algorithm>` 头文件中，它们作用于值和初始化列表，并将请求的值作为结果返回。在 `std::minmax` 的情况下，你会得到一个 `std::pair`。对的第一个元素是最小值；第二个元素是值的最大值。默认使用小于运算符（`<`），但你可以应用自己的比较运算符。此函数需要两个参数并返回一个布尔值。返回 `true` 或 `false` 的函数被称为谓词。
 
-```
+```cpp
 // minMax.cpp
 ...
 #include <algorithm>
@@ -354,9 +331,9 @@ cout << std::min({3, 1, 2011, 2014, -5});               // -5
 cout << std::min(-10, -5, [](int a, int b)
                 { return std::abs(a) < std::abs(b); }); // -5
 
-auto pairInt= std::minmax(2011, 2014);
-auto pairSeq= std::minmax({3, 1, 2011, 2014, -5});
-auto pairAbs= std::minmax({3, 1, 2011, 2014, -5}, [](int a, int b)
+auto pairInt = std::minmax(2011, 2014);
+auto pairSeq = std::minmax({3, 1, 2011, 2014, -5});
+auto pairAbs = std::minmax({3, 1, 2011, 2014, -5}, [](int a, int b)
                       { return std::abs(a) < std::abs(b); });
 
 cout << pairInt.first << "," << pairInt.second;  // 2011,2014
@@ -364,37 +341,25 @@ cout << pairSeq.first << "," << pairSeq.second;  // -5,2014
 cout << pairAbs.first << "," << pairAbs.second;  // 1,2014
 ```
 
-函数 `std::min`、`std::max` 和 `std::minmax`
+#### 函数 `std::min`、`std::max` 和 `std::minmax`
 
-表格提供了 `std::min`、`std::max` 和 `std::minmax` 函数的概述
+表格提供了 `std::min`、`std::max` 和 `std::minmax` 函数的概述。
 
-`std::min`、`std::max` 和 `std::minmax` 的变体
+#### `std::min`、`std::max` 和 `std::minmax` 的变体
 
 | 函数 | 描述 |
 | --- | --- |
-| | |
 | `min(a, b)` | 返回 `a` 和 `b` 的较小值。 |
-| | |
 | `min(a, b, comp)` | 根据谓词 `comp` 返回 `a` 和 `b` 较小值。 |
-| | |
 | `min(initialiser list)` | 返回初始化列表中的最小值。 |
-| | |
 | `min(initialiser list, comp)` | 根据谓词 `comp` 返回初始化列表中的最小值。 |
-| | |
 | `max(a, b)` | 返回 `a` 和 `b` 的较大值。 |
-| | |
 | `max(a, b, comp)` | 根据谓词 `comp` 返回 `a` 和 `b` 的较大值。 |
-| | |
 | `max(initialiser list)` | 返回初始化列表中的最大值。 |
-| | |
 | `max(initialiser list, comp)` | 根据谓词 `comp` 返回初始化列表中的最大值。 |
-| | |
 | `minmax(a, b)` | 返回 `a` 和 `b` 的较小值和较大值。 |
-| | |
 | `minmax(a, b, comp)` | 根据谓词 `comp` 返回 `a` 和 `b` 的较小值和较大值。 |
-| | |
 | `minmax(initialiser list)` | 返回初始化列表中的最小值和最大值。 |
-| | |
 | `minmax(initialiser list, comp)` | 根据谓词 `comp` 返回初始化列表中的最小值和最大值。 |
 
 ### `std::midpoint` 和 `std::lerp`
@@ -403,7 +368,7 @@ cout << pairAbs.first << "," << pairAbs.second;  // 1,2014
 
 函数 `std::lerp(a, b, t)` 计算两个数字的线性插值。它需要 `<cmath>` 头文件。返回值为 `a + t(b - a)`。
 
-```
+```cpp
 // midpointLerp.cpp
 
 #include <cmath>
@@ -415,51 +380,48 @@ std::midpoint(a, b)
 std::lerp(a, b, t)
 ```
 
-
-
-
 `std::bind`、`std::bind_front`、`std::bind_back` 和 `std::function` 这三个函数非常契合使用。虽然 `std::bind`、`std::bind_front` 或 `std::bind_back` 允许你动态创建新的函数对象，但 `std::function` 会接收这些临时函数对象并将它们绑定到变量。
 
 ## `std::bind`
 
 `std::bind` 函数比 `std::bind_front` 或 `std::bind_back` 更强大，因为 `std::bind` 允许将参数绑定到任意位置。虽然 `std::bind`、`std::bind_front` 和 `std::bind_back` 允许你动态创建新的函数对象，但 `std::function` 会接收这些临时函数对象并将它们绑定到变量。这些函数是函数式编程中的强大工具，需要包含头文件 `<functional>`。
 
-```
-// bindAndFunction.cpp 
+```cpp
+// bindAndFunction.cpp
 ...
 #include <functional>
 ...
 // 用于占位符 _1 和 _2
-using namespace std::placeholders; 
+using namespace std::placeholders;
 
 using std::bind;
 using std::bind_front;
 using std::bind_back;
-using std::function
+using std::function;
 ...
-double divMe(double a, double b){ return a/b; };
+double divMe(double a, double b) { return a / b; }
 
 function<double(double, double)> myDiv1 = bind(divMe, _1, _2);  // 200
-function<double(double)> myDiv2 = bind(divMe, 2000, _1);        // 200
-function<double(double>> myDiv3 = bind_front(divMe, 2000);      // 200
-function<double(double)> myDiv4 = bind_back(divMe, 10);         // 200
+function<double(double)> myDiv2 = bind(divMe, 2000, _1);       // 200
+function<double(double)> myDiv3 = bind_front(divMe, 2000);     // 200
+function<double(double)> myDiv4 = bind_back(divMe, 10);        // 200
 ```
 
 ### 创建并绑定函数对象
 
 由于 [`std::bind`](http://en.cppreference.com/w/cpp/utility/functional/bind)，你可以以多种方式创建函数对象：
 
-* 将参数绑定到任意位置，
-* 更改参数的顺序，
-* 为参数引入占位符，
-* 对函数进行部分求值，
-* 调用新创建的函数对象，在 STL 算法中使用它们，或将其存储在 `std::function` 中。
+- 将参数绑定到任意位置；
+- 更改参数的顺序；
+- 为参数引入占位符；
+- 对函数进行部分求值；
+- 调用新创建的函数对象，在 STL 算法中使用它们，或将其存储在 `std::function` 中。
 
-## `std::bind_front` (C++20)
+## `std::bind_front`（C++20）
 
 [`std::bind_front`](https://en.cppreference.com/w/cpp/utility/functional/bind_front) 从可调用对象创建一个可调用包装器。调用 `std::bind_front(func, arg ...)` 将所有参数 `arg` 绑定到 `func` 的头部并返回一个可调用包装器。
 
-## `std::bind_back` (C++23)
+## `std::bind_back`（C++23）
 
 [`std::bind_back`](https://en.cppreference.com/w/cpp/utility/functional/bind_front) 从可调用对象创建一个可调用包装器。调用 `std::bind_back(func, arg ...)` 将所有参数 `arg` 绑定到 `func` 的尾部并返回一个可调用包装器。
 
@@ -467,8 +429,8 @@ function<double(double)> myDiv4 = bind_back(divMe, 10);         // 200
 
 [`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function) 可以在变量中存储任意的可调用对象。它是一个多态函数包装器。可调用对象可以是 Lambda 函数、函数对象或函数。如果你必须显式指定可调用对象的类型，那么 `std::function` 是必不可少的且不能被 `auto` 替换。
 
-```
-// dispatchTable.cpp 
+```cpp
+// dispatchTable.cpp
 ...
 #include <functional>
 ...
@@ -476,22 +438,22 @@ using std::make_pair;
 using std::map;
 
 map<const char, std::function<double(double, double)>> tab;
-tab.insert(make_pair('+', [](double a, double b){ return a + b; }));
-tab.insert(make_pair('-', [](double a, double b){ return a - b; }));
-tab.insert(make_pair('*', [](double a, double b){ return a * b; }));
-tab.insert(make_pair('/', [](double a, double b){ return a / b; }));
+tab.insert(make_pair('+', [](double a, double b) { return a + b; }));
+tab.insert(make_pair('-', [](double a, double b) { return a - b; }));
+tab.insert(make_pair('*', [](double a, double b) { return a * b; }));
+tab.insert(make_pair('/', [](double a, double b) { return a / b; }));
 
-std::cout << tab'+';  // 8
-std::cout << tab'-';  // -1
-std::cout << tab'*';  // 15.75
-std::cout << tab'/';  // 0.777778
+std::cout << tab['+'];  // 8
+std::cout << tab['-'];  // -1
+std::cout << tab['*'];  // 15.75
+std::cout << tab['/'];  // 0.777778
 ```
 
-使用 `std::function` 的分发表
+### 使用 `std::function` 的分发表
 
 `std::function` 的类型参数定义了 `std::function` 将接受的可调用对象类型。
 
-### 返回类型和参数类型
+#### 返回类型和参数类型
 
 | 函数类型 | 返回类型 | 参数类型 |
 | --- | --- | --- |
@@ -500,7 +462,7 @@ std::cout << tab'/';  // 0.777778
 | `double(int, double)` | `double` | `int, double` |
 | `void()` | | |
 
-### 数值对 (Pairs)
+## 数值对（Pairs）
 
 你可以使用 [`std::pair`](http://en.cppreference.com/w/cpp/utility/pair) 构建任意类型的对。类模板 `std::pair` 需要头文件 `<utility>`。`std::pair` 默认构造函数、拷贝构造函数和移动构造函数。你可以交换对。
 
@@ -520,40 +482,38 @@ std::cout << tab'/';  // 0.777778
 auto p = std::make_pair(10, "hello");
 ```
 
-### 元组 (Tuples)
+## 元组（Tuples）
 
-你可以创建任意长度的元组。辅助函数 [`std::make_tuple`](http://en.cppreference.com/w/cpp/utility/tuple/make_tuple 提供了一种创建元组的方便方法。你不需要指定类型，编译器会自动推导它们。
+
+
+你可以创建任意长度的元组。辅助函数[`std::make_tuple`](http://en.cppreference.com/w/cpp/utility/tuple/make_tuple)提供了一种创建元组的方便方法。你不需要指定类型，编译器会自动推导它们。
 
 ### `std::tuple`
 
 ```cpp
-auto pair= std::make_pair(1, true);
-std::tuple<int, bool> tup= pair;
+auto pair = std::make_pair(1, true);
+std::tuple<int, bool> tup = pair;
 ```
 
 ### `std::tie` 和 `std::ignore`
 
-[`std::tie`](http://en.cppreference.com/w/cpp/utility/tuple/tie) 允许你创建引用变量的元组。你可以使用 [`std::ignore`](http://en.cppreference.com/w/cpp/utility/tuple/ignore) 显式忽略元组元素。
-
-
-
-
+[`std::tie`](http://en.cppreference.com/w/cpp/utility/tuple/tie)允许你创建引用变量的元组。你可以使用[`std::ignore`](http://en.cppreference.com/w/cpp/utility/tuple/ignore)显式忽略元组元素。
 
 ```cpp
-// tupleTie.cpp 
+// tupleTie.cpp
 ...
 #include <tuple>
 ...
 using namespace std;
 
-int first= 1;
-int second= 2;
-int third= 3;
-int fourth= 4;
+int first = 1;
+int second = 2;
+int third = 3;
+int fourth = 4;
 cout << first << " " << second << " "
      << third << " " << fourth << endl;          // 1 2 3 4
 
-auto tup= tie(first, second, third, fourth)      // 绑定元
+auto tup = tie(first, second, third, fourth)      // 绑定元
         = std::make_tuple(101, 102, 103, 104);   // 创建元组
                                                  // 并赋值它
 cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
@@ -561,36 +521,36 @@ cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
 cout << first << " " << second << " " << third << " "
      << fourth << endl;                          // 101 102 103 104
 
-first= 201;
-get<1>(tup)= 202;
+first = 201;
+get<1>(tup) = 202;
 cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
      << " " << get<3>(tup) << endl;              // 201 202 103 104
 cout << first << " " << second << " " << third << " "
      << fourth << endl;                          // 201 202 103 104
 
 int a, b;
-tie(std::ignore, a, std::ignore, b)= tup;
+tie(std::ignore, a, std::ignore, b) = tup;
 cout << a << " " << b << endl;                   // 202 104
 ```
 
-辅助函数 `std::tie` 和 `std::ignore`
+辅助函数`std::tie`和`std::ignore`。
 
-## 引用包装器 (Reference Wrappers)
+## 引用包装器（Reference Wrappers）
 
-引用包装器是一个用于 `&` 类型对象的[可拷贝构造](http://en.cppreference.com/w/cpp/concept/CopyConstructible)且[可拷贝赋值](http://en.cppreference.com/w/cpp/concept/CopyAssignable)的包装器，定义在头文件 `<functional>` 中。你拥有一个行为像引用但可以拷贝的对象。与经典引用相反，[`std::reference_wrapper`](http://en.cppreference.com/w/cpp/utility/functional/reference_wrapper) 对象支持两个额外的用例：
+引用包装器是一个用于`&`类型对象的[可拷贝构造](http://en.cppreference.com/w/cpp/concept/CopyConstructible)且[可拷贝赋值](http://en.cppreference.com/w/cpp/concept/CopyAssignable)的包装器，定义在头文件`<functional>`中。你拥有一个行为像引用但可以拷贝的对象。与经典引用相反，[`std::reference_wrapper`](http://en.cppreference.com/w/cpp/utility/functional/reference_wrapper)对象支持两个额外的用例：
 
-* 你可以在标准模板库（STL）的容器中使用它们。`std::vector<std::reference_wrapper<int>> myIntRefVector`
-* 你可以复制包含 `std::reference_wrapper` 对象的类实例。这在通常情况下通过引用是不可能的。
+- 你可以在标准模板库（STL）的容器中使用它们：`std::vector<std::reference_wrapper<int>> myIntRefVector`。
+- 你可以复制包含`std::reference_wrapper`对象的类实例。这在通常情况下通过引用是不可能的。
 
-`get` 成员函数允许访问引用：`myInt.get()`。你可以使用引用包装器来封装并调用可调用对象。
+`get`成员函数允许访问引用：`myInt.get()`。你可以使用引用包装器来封装并调用可调用对象。
 
 ```cpp
-// referenceWrapperCallable.cpp 
+// referenceWrapperCallable.cpp
 ...
 #include <functional>
 ...
-void foo(){ 
-  std::cout << "Invoked" << '\n'; 
+void foo() {
+  std::cout << "Invoked" << '\n';
 }
 
 typedef void callableUnit();
@@ -599,47 +559,47 @@ std::reference_wrapper<callableUnit> refWrap(foo);
 refWrap();                           // Invoked
 ```
 
-### std::ref 和 std::cref
+### `std::ref`和`std::cref`
 
-通过辅助函数 [`std::ref`](http://en.cppreference.com/w/cpp/utility/functional/ref) 和 [`std::cref`](http://en.cppreference.com/w/cpp/utility/functional/ref)，你可以轻松地为变量创建引用包装器。`std::ref` 会创建一个非常量引用包装器，`std::cref` 则创建一个常量引用包装器：
+通过辅助函数[`std::ref`](http://en.cppreference.com/w/cpp/utility/functional/ref)和[`std::cref`](http://en.cppreference.com/w/cpp/utility/functional/ref)，你可以轻松地为变量创建引用包装器。`std::ref`会创建一个非常量引用包装器，`std::cref`则创建一个常量引用包装器：
 
 ```cpp
-// referenceWrapperRefCref.cpp 
+// referenceWrapperRefCref.cpp
 ...
 #include <functional>
 ...
-void invokeMe(const std::string& s){
+void invokeMe(const std::string& s) {
   std::cout << s << ": const " << '\n';
 }
 
 template <typename T>
-  void doubleMe(T t){ 
-  t*= 2; 
+void doubleMe(T t) {
+  t *= 2;
 }
 
 std::string s{"string"};
 
 invokeMe(std::cref(s));        // string
 
-int i= 1;
-std::cout << i << '\n';   // 1
+int i = 1;
+std::cout << i << '\n';        // 1
 
 doubleMe(i);
-std::cout << i << '\n';   // 1S
+std::cout << i << '\n';        // 1
 
 doubleMe(std::ref(i));
-std::cout << i << '\n';   // 2
+std::cout << i << '\n';        // 2
 ```
 
-辅助函数 `std::ref` 和 `std::cref`
+辅助函数`std::ref`和`std::cref`。
 
-可以通过对 `std::string` 传递常量引用来调用函数 `invokeMe`，使用封装在 `std::cref(s)` 中的非常量 `s`。当我将变量 `i` 封装在辅助函数 `std::ref` 中时，函数模板 `doubleMe` 会通过引用调用。因此，变量 `i` 的值翻倍了。
+可以通过对`std::string`传递常量引用来调用函数`invokeMe`，使用封装在`std::cref(s)`中的非常量`s`。当我将变量`i`封装在辅助函数`std::ref`中时，函数模板`doubleMe`会通过引用调用。因此，变量`i`的值翻倍了。
 
-## 智能指针 (Smart Pointers)
+## 智能指针（Smart Pointers）
 
-智能指针对 C++ 至关重要，因为它们让你能够在 C++ 中实现显式的内存管理。除了弃用的 `std::auto_ptr`，C++ 还提供了三种智能指针。它们定义在头文件 `<memory>` 中。
+智能指针对 C++ 至关重要，因为它们让你能够在 C++ 中实现显式的内存管理。除了弃用的`std::auto_ptr`，C++还提供了三种智能指针。它们定义在头文件`<memory>`中。
 
-首先，`std::unique_ptr` 建模了独占所有权的概念。其次，`std::shared_ptr` 建模了共享所有权的概念。最后是 `std::weak_ptr`。`std::weak_ptr` 不智能是因为它的接口有限。它的作用是打破 `std::shared_ptr` 的循环。它建模了临时所有权的概念。智能指针根据 RAII 范式管理资源。因此，如果智能指针超出作用域，资源将自动释放。
+首先，`std::unique_ptr`建模了独占所有权的概念。其次，`std::shared_ptr`建模了共享所有权的概念。最后是`std::weak_ptr`。`std::weak_ptr`不智能是因为它的接口有限。它的作用是打破`std::shared_ptr`的循环。它建模了临时所有权的概念。智能指针根据 RAII 范式管理资源。因此，如果智能指针超出作用域，资源将自动释放。
 
 ### 智能指针概述
 
@@ -648,14 +608,14 @@ std::cout << i << '\n';   // 2
 | `std::auto_ptr` | C++98 | 独占所有资源。拷贝时移动（已弃用）。 |
 | `std::unique_ptr` | C++11 | 独占所有资源。不可拷贝。 |
 | `std::shared_ptr` | C++11 | 为变量拥有引用计数器。自动管理引用计数器。 |
-| `std::weak_ptr` | C++11 | 帮助打破 `std::shared_ptr` 的循环。不修改引用计数器。 |
+| `std::weak_ptr` | C++11 | 帮助打破`std::shared_ptr`的循环。不修改引用计数器。 |
 
-### std::unique_ptr
+### `std::unique_ptr`
 
-[`std::unique_ptr`](http://en.cppreference.com/w/cpp/memory/unique_ptr) 负责其资源。如果超出作用域，会自动释放资源。如果不使用拷贝语义，你可以在标准模板库的容器和算法中使用 `std::unique_ptr`。`std::unique_ptr` 的开销和速度与原始指针一样。在下面的代码中可以看到 `std::unique_ptr` 的用法：
+[`std::unique_ptr`](http://en.cppreference.com/w/cpp/memory/unique_ptr)负责其资源。如果超出作用域，会自动释放资源。如果不使用拷贝语义，你可以在标准模板库的容器和算法中使用`std::unique_ptr`。`std::unique_ptr`的开销和速度与原始指针一样。在下面的代码中可以看到`std::unique_ptr`的用法：
 
 ```cpp
-// unique_ptr.cpp 
+// unique_ptr.cpp
 ...
 #include <memory>
 ...
@@ -677,7 +637,7 @@ int main() {
   cout << up.get()->i << " " << up2.get()->i << " " << up3.get()->i
        << " " << up4.get()->i << endl; // 101 102 103 104
 
-  // 
+  //
   cout << up->i << " " << up2->i << " " << up3->i << " "
        << up4->i << endl; // 101 102 103 104
 
@@ -701,9 +661,9 @@ int main() {
 
   // tie() 交换多个所有权
   tie(up, up2, up3, up4) = make_tuple(unique_ptr<MyInt>(new MyInt(301)),
-                                     unique_ptr<MyInt>(new MyInt(302)),
-                                     unique_ptr<MyInt>(new MyInt(303)),
-                                     unique_ptr<MyInt>(new MyInt(304)));
+                                       unique_ptr<MyInt>(new MyInt(302)),
+                                       unique_ptr<MyInt>(new MyInt(303)),
+                                       unique_ptr<MyInt>(new MyInt(304)));
   cout << up->i << " " << up2->i << " " << up3->i << " "
        << up4->i << endl; // 301 302 303 104
 
@@ -711,62 +671,63 @@ int main() {
   tie(std::ignore, a, std::ignore, b) = up; // 此处逻辑与示例不符，但按要求翻译
 }
 ```
-*(注：由于原文提供的文本中 `unique_ptr` 的代码块似乎与前面的 `tupleTie.cpp` 逻辑混淆或缺失，根据文档工程师逻辑，我保持了代码块的完整并翻译了描述部分，但注意到原文中 `unique_ptr` 示例代码似乎不完整。)*
 
-**重新根据您提供的文本内容进行翻译：**
+> 注：由于原文提供的文本中`unique_ptr`的代码块似乎与前面的`tupleTie.cpp`逻辑混淆或缺失，根据文档工程师逻辑，我保持了代码块的完整并翻译了描述部分，但注意到原文中`unique_ptr`示例代码似乎不完整。
+
+## 重新根据您提供的文本内容进行翻译
 
 ```cpp
-// tupleTie.cpp 
+// tupleTie.cpp
 ...
 #include <tuple>
 ...
 using namespace std;
 
-int first= 1;
-int second= 2;
-int third= 3;
-int fourth= 4;
+int first = 1;
+int second = 2;
+int third = 3;
+int fourth = 4;
 cout << first << " " << second << " "
      << third << " " << fourth << endl;          // 1 2 3 4
 
-auto tup= tie(first, second, third, fourth)      // 绑定元组
-        = std::make_tuple(101, 102, 103, 104);   // 创建元组 
-                               // 并赋值给它
+auto tup = tie(first, second, third, fourth)      // 绑定元组
+        = std::make_tuple(101, 102, 103, 104);   // 创建元组
+                                                 // 并赋值给它
 cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
      << " " << get<3>(tup) << endl;              // 101 102 103 104
 cout << first << " " << second << " " << third << " "
      << fourth << endl;                          // 101 102 103 104
 
-first= 201;
-get<1>(tup)= 202;
+first = 201;
+get<1>(tup) = 202;
 cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
      << " " << get<3>(tup) << endl;              // 201 202 103 104
 cout << first << " " << second << " " << third << " "
      << fourth << endl;                          // 201 202 103 104
 
 int a, b;
-tie(std::ignore, a, std::ignore, b)= tup;
+tie(std::ignore, a, std::ignore, b) = tup;
 cout << a << " " << b << endl;                   // 202 104
 ```
 
-辅助函数 `std::tie` 和 `std::ignore`
+辅助函数`std::tie`和`std::ignore`。
 
-## 引用包装器 (Reference Wrappers)
+## 引用包装器（Reference Wrappers）
 
-引用包装器是一个用于 `&` 类型对象的[可拷贝构造](http://en.cppreference.com/w/cpp/concept/CopyConstructible)且[可拷贝赋值](http://en.cppreference.com/w/cpp/concept/CopyAssignable)的包装器，定义在头文件 `<functional>` 中。你拥有一个行为像引用但可以拷贝的对象。与经典引用相反，[`std::reference_wrapper`](http://en.cppreference.com/w/cpp/utility/functional/reference_wrapper) 对象支持两个额外的用例：
+引用包装器是一个用于`&`类型对象的[可拷贝构造](http://en.cppreference.com/w/cpp/concept/CopyConstructible)且[可拷贝赋值](http://en.cppreference.com/w/cpp/concept/CopyAssignable)的包装器，定义在头文件`<functional>`中。你拥有一个行为像引用但可以拷贝的对象。与经典引用相反，[`std::reference_wrapper`](http://en.cppreference.com/w/cpp/utility/functional/reference_wrapper)对象支持两个额外的用例：
 
-* 你可以在标准模板库（STL）的容器中使用它们。`std::vector<std::reference_wrapper<int>> myIntRefVector`
-* 你可以复制包含 `std::reference_wrapper` 对象的类实例。这在通常情况下通过引用是不可能的。
+- 你可以在标准模板库（STL）的容器中使用它们：`std::vector<std::reference_wrapper<int>> myIntRefVector`。
+- 你可以复制包含`std::reference_wrapper`对象的类实例。这在通常情况下通过引用是不可能的。
 
-`get` 成员函数允许访问引用：`myInt.get()`。你可以使用引用包装器来封装并调用可调用对象。
+`get`成员函数允许访问引用：`myInt.get()`。你可以使用引用包装器来封装并调用可调用对象。
 
 ```cpp
-// referenceWrapperCallable.cpp 
+// referenceWrapperCallable.cpp
 ...
 #include <functional>
 ...
-void foo(){ 
-  std::cout << "Invoked" << '\n'; 
+void foo() {
+  std::cout << "Invoked" << '\n';
 }
 
 typedef void callableUnit();
@@ -775,9 +736,11 @@ std::reference_wrapper<callableUnit> refWrap(foo);
 refWrap();                           // Invoked
 ```
 
-### std::ref 和 std::cref
+### `std::ref`和`std::cref`
 
-通过辅助函数 [`std::ref`](http://en.cppreference.com/w/cpp/utility/functional/ref) 和 [`std::cref`](http://en.cppreference.com/w/cpp/utility/functional/ref)，你可以轻松地为变量创建引用包装器。`std::ref` 会创建一个非常量引用包装器，`std::cref` 则创建一个常量引用包装器：
+通过辅助函数[`std::ref`](http://en.cppreference.com/w/cpp/utility/functional/ref)和[`std::cref`](http://en.cppreference.com/w/cpp/utility/functional/ref)，你可以轻松地为变量创建引用包装器。`std::ref`会创建一个非常量引用包装器，`std::cref`则创建一个常量引用包装器。
+
+
 
 ```cpp
 // referenceWrapperRefCref.cpp 
@@ -811,7 +774,7 @@ std::cout << i << '\n';   // 2
 
 可以通过对 `std::string` 传递常量引用来调用函数 `invokeMe`，使用封装在 `std::cref(s)` 中的非常量 `s`。当我将变量 `i` 封装在辅助函数 `std::ref` 中时，函数模板 `doubleMe` 会通过引用调用。因此，变量 `i` 的值翻倍了。
 
-## 智能指针 (Smart Pointers)
+## 智能指针（Smart Pointers）
 
 智能指针对 C++ 至关重要，因为它们让你能够在 C++ 中实现显式的内存管理。除了弃用的 `std::auto_ptr`，C++ 还提供了三种智能指针。它们定义在头文件 `<memory>` 中。
 
@@ -826,7 +789,7 @@ std::cout << i << '\n';   // 2
 | `std::shared_ptr` | C++11 | 为变量拥有引用计数器。自动管理引用计数器。 |
 | `std::weak_ptr` | C++11 | 帮助打破 `std::shared_ptr` 的循环。不修改引用计数器。 |
 
-### std::unique_ptr
+### `std::unique_ptr`
 
 [`std::unique_ptr`](http://en.cppreference.com/w/cpp/memory/unique_ptr) 负责其资源。如果超出作用域，会自动释放资源。如果不使用拷贝语义，你可以在标准模板库的容器和算法中使用 `std::unique_ptr`。`std::unique_ptr` 的开销和速度与原始指针一样。在下面的代码中可以看到 `std::unique_ptr` 的用法：
 
@@ -884,7 +847,8 @@ int main() {
        << up4->i << endl; // 301 302 303 104
 
 }
-``` 
+```
+
 *(注：由于原文提供的文本中 `unique_ptr` 的代码块似乎与前面的 `tupleTie.cpp` 逻辑混淆或缺失，根据文档工程师逻辑，我保持了代码块的完整并翻译了描述部分，但注意到原文中 `unique_ptr` 示例代码似乎不完整。)*
 
 **重新根据您提供的文本内容进行翻译：**
@@ -923,52 +887,15 @@ tie(std::ignore, a, std::ignore, b)= tup;
 cout << a << " " << b << endl;                   // 202 104
 ```
 
-抱歉，在刚才的回复中出现了逻辑处理混乱。以下是针对您提供的“以下是需要翻译的文本”部分的最终准确翻译：
-
-[content]
-
-```cpp
-// tupleTie.cpp 
-...
-#include <tuple>
-...
-using namespace std;
-
-int first= 1;
-int second= 2;
-int third= 3;
-int fourth= 4;
-cout << first << " " << second << " "
-     << third << " " << fourth << endl;          // 1 2 3 4
-
-auto tup= tie(first, second, third, fourth)      // 绑定元组
-        = std::make_tuple(101, 102, 103, 104);   // 创建元组 
-                               // 并赋值给它
-cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
-     << " " << get<3>(tup) << endl;              // 101 102 103 104
-cout << first << " " << second << " " << third << " "
-     << fourth << endl;                          // 101 102 103 104
-
-first= 201;
-get<1>(tup)= 202;
-cout << get<0>(tup) << " " << get<1>(tup) << " " << get<2>(tup)
-     << " " << get<3>(tup) << endl;              // 201 202 103 104
-cout << first << " " << second << " " << third << " "
-     << fourth << endl;                          // 201 202 103 104
-
-int a, b;
-tie(std::ignore, a, std::ignore, b)= tup;
-cout << a << " " << b << endl;                   // 202 104
-```
-
 辅助函数 `std::tie` 和 `std::ignore`
 
-## 引用包装器 (Reference Wrappers)
+## 引用包装器（Reference Wrappers）
 
 引用包装器是一个用于 `&` 类型对象的[可拷贝构造](http://en.cppreference.com/w/cpp/concept/CopyConstructible)且[可拷贝赋值](http://en.cppreference.com/w/cpp/concept/CopyAssignable)的包装器，定义在头文件 `<functional>` 中。你拥有一个行为像引用但可以拷贝的对象。与经典引用相反，[`std::reference_wrapper`](http://en.cppreference.com/w/cpp/utility/functional/reference_wrapper) 对象支持两个额外的用例：
 
-* 你可以在标准模板库（STL）的容器中使用它们。`std::vector<std::reference_wrapper<int>> myIntRefVector`
-* 你可以复制包含 `std::reference_wrapper` 对象的类实例。这在通常情况下通过引用是不可能的。
+- 你可以在标准模板库（STL）的容器中使用它们：`std::vector<std::reference_wrapper<int>> myIntRefVector`
+
+- 你可以复制包含 `std::reference_wrapper` 对象的类实例。这在通常情况下通过引用是不可能的。
 
 `get` 成员函数允许访问引用：`myInt.get()`。你可以使用引用包装器来封装并调用可调用对象。
 
@@ -987,7 +914,7 @@ std::reference_wrapper<callableUnit> refWrap(foo);
 refWrap();                           // Invoked
 ```
 
-### std::ref 和 std::cref
+### `std::ref` 和 `std::cref`
 
 通过辅助函数 [`std::ref`](http://en.cppreference.com/w/cpp/utility/functional/ref) 和 [`std::cref`](http://en.cppreference.com/w/cpp/utility/functional/ref)，你可以轻松地为变量创建引用包装器。`std::ref` 会创建一个非常量引用包装器，`std::cref` 则创建一个常量引用包装器：
 
@@ -1023,7 +950,7 @@ std::cout << i << '\n';   // 2
 
 可以通过对 `std::string` 传递常量引用来调用函数 `invokeMe`，使用封装在 `std::cref(s)` 中的非常量 `s`。当我将变量 `i` 封装在辅助函数 `std::ref` 中时，函数模板 `doubleMe` 会通过引用调用。因此，变量 `i` 的值翻倍了。
 
-## 智能指针 (Smart Pointers)
+## 智能指针（Smart Pointers）
 
 智能指针对 C++ 至关重要，因为它们让你能够在 C++ 中实现显式的内存管理。除了弃用的 `std::auto_ptr`，C++ 还提供了三种智能指针。它们定义在头文件 `<memory>` 中。
 
@@ -1038,7 +965,7 @@ std::cout << i << '\n';   // 2
 | `std::shared_ptr` | C++11 | 为变量拥有引用计数器。自动管理引用计数器。 |
 | `std::weak_ptr` | C++11 | 帮助打破 `std::shared_ptr` 的循环。不修改引用计数器。 |
 
-### std::unique_ptr
+### `std::unique_ptr`
 
 [`std::unique_ptr`](http://en.cppreference.com/w/cpp/memory/unique_ptr) 负责其资源。如果超出作用域，会自动释放资源。如果不使用拷贝语义，你可以在标准模板库的容器和算法中使用 `std::unique_ptr`。`std::unique_ptr` 的开销和速度与原始指针一样。在下面的代码中可以看到 `std::unique_ptr` 的用法：
 
@@ -1046,12 +973,11 @@ std::cout << i << '\n';   // 2
 
 
 
+辅助函数 [`std::make_unique`](http://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique) 与它在 C++11 标准中被遗忘的同兄弟 `std::make_shared` 不同。因此，`std::make_unique` 在 C++14 标准中被添加。`std::make_unique` 允许在一个步骤内创建一个 `std::unique_ptr`：`std::unique_ptr<int> up = std::make_unique<int>(2014)`。
 
-辅助函数 [`std::make_unique`](http://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique) 与它在 C++11 标准中被遗忘的同兄弟 `std::make_shared` 不同。因此，`std::make_unique` 在 C++14 标准中被添加。`std::make_unique` 允许它在一个步骤内创建一个 `std::unique_ptr`：`std::unique_ptr<int> up= std::make_unique<int>(2014)`。
+### `std::shared_ptr`
 
-### std::shared_ptr
-
-[`std::shared_ptr`](http://en.cppreference.com/w/cpp/memory/shared_ptr) 共享资源的所有权。它们有两个句柄：一个指向资源，另一个指向引用计数器。通过拷贝 `std::shared_ptr`，引用计数加一。如果 `std::shared_ptr` 离开作用域，引用计数将减一。如果引用计数器变为 0 且不再有 `std::shared_ptr` 引用该资源，C++ 运行时将自动释放该资源。资源的释放正好发生在最后一个 `std::shared_ptr` 离开作用域时。C++ 运行时保证引用计数器的调用是原子操作。由于这种管理开销，`std::shared_ptr` 比原始指针或 `std::unique_ptr` 需要更多的时间和内存。
+[`std::shared_ptr`](http://en.cppreference.com/w/cpp/memory/shared_ptr) 共享资源的所有权。它们有两个句柄：一个指向资源，另一个指向引用计数器。通过拷贝 `std::shared_ptr`，引用计数加一。如果 `std::shared_ptr` 离开作用域，引用计数将减一。如果引用计数器变为 `0` 且不再有 `std::shared_ptr` 引用该资源，C++ 运行时将自动释放该资源。资源的释放正好发生在最后一个 `std::shared_ptr` 离开作用域时。C++ 运行时保证引用计数器的调用是原子操作。由于这种管理开销，`std::shared_ptr` 比原始指针或 `std::unique_ptr` 需要更多的时间和内存。
 
 下表是 `std::shared_ptr` 的成员函数。
 
@@ -1060,19 +986,19 @@ std::cout << i << '\n';   // 2
 | 名称 | 描述 |
 | --- | --- |
 | `get` | 返回指向资源的指针。 |
-| `get_deleter` | 返回删除函数 |
-| `reset` | 重置资源 |
+| `get_deleter` | 返回删除函数。 |
+| `reset` | 重置资源。 |
 | `swap` | 交换资源。 |
 | `unique` | 检查 `std::shared_ptr` 是否是资源的唯一所有者。 |
 | `use_count` | 返回引用计数器的值。 |
 
-### std::make_shared
+### `std::make_shared`
 
 辅助函数 [`std::make_shared`](http://en.cppreference.com/w/cpp/memory/shared_ptr/make_shared) 创建资源并在 `std::shared_ptr` 中返回它。你应该优先使用 `std::make_shared` 而不是直接创建 `std::shared_ptr`，因为 `std::make_shared` 更快。
 
 以下代码示例展示了 `std::shared_ptr` 的典型用例。
 
-```
+```cpp
 // sharedPtr.cpp 
 ...
 #include <memory>
@@ -1113,11 +1039,11 @@ sharPtr= std::shared_ptr<MyInt>(new MyInt(2011));  // Hello:2011
 
 在该示例中，可调用对象是一个函数对象。因此你可以轻松地计算创建了多少类实例。结果存储在静态变量 `count` 中。
 
-### 来自 std::shared_ptr
+### 来自 `std::shared_ptr`
 
 你必须让类公继承 `std::enable_shared_from_this`。你可以使用类 [`std::enable_shared_from_this`](http://en.cppreference.com/w/cpp/memory/enable_shared_from_this) 来创建对象，该对象可以返回指向自身的 `std::shared_ptr`。该类支持成员函数 `shared_from_this` 来返回指向自身的 `std::shared_ptr`：
 
-```
+```cpp
 // enableShared.cpp
 ...
 #include <memory>
@@ -1139,19 +1065,15 @@ std::cout << (void*)shareMe1.get() << '\n';
 
 在该示例中，可调用对象是一个函数对象。因此你可以轻松地计算创建了多少类实例。结果存储在静态变量 `count` 中。
 
-### 来自 std::shared_ptr
+### 来自 `std::shared_ptr`
 
 你必须让类公继承 `std::enable_shared_from_this`。你可以使用类 [`std::enable_shared_from_this`](http://en.cppreference.com/w/cpp/memory/enable_shared_from_this) 来创建对象，该对象可以返回指向自身的 `std::shared_ptr`。该类支持成员函数 `shared_from_this` 来返回指向自身的 `std::shared_ptr`：
-
-
-
-
 
 通过类型 traits 库，你可以检查基础类型和复合类型类别。`value` 属性会提供结果。
 
 ### 基础类型类别
 
-共有 14 种不同的类型类别。它们是完整的且互不重叠的。因此，每个类型仅属于一种类型类型的成员。如果你对某个类型检查类型类别，该请求不受 `const` 或 `volatile` 修饰符的影响。
+共有 14 种不同的类型类别。它们是完整的且互不重叠的。因此，每个类型仅属于一种类型类别的成员。如果你对某个类型检查类型类别，该请求不受 `const` 或 `volatile` 修饰符的影响。
 
 ```cpp
 template <class T> struct is_void;
@@ -1214,7 +1136,7 @@ cout << std::is_rvalue_reference<int&&>::value;  // true
 
 基于 14 种基础类型类别，共有 7 种复合类型类别。
 
-复合类型类别
+#### 复合类型类别
 
 | 复合类型类别 | 基础类型类别 |
 | --- | --- |
@@ -1266,11 +1188,6 @@ template <class T> struct is_trivially_assignable;
 template <class T> struct is_trivially_move_constructible;
 template <class T> struct is_trivially_destructible;
 ```
-（注：原文在属性部分包含了一些重复/损坏的模板行；我已清理了结构，同时保留了源中提供的核心 trait 定义。）
-
-
-
-
 
 ```cpp
 template <class T> struct remove_reference;
@@ -1301,6 +1218,8 @@ template <class... T> type_identity;
 `std::conjunction`、`std::disjunction` 和 `std::negation` 函数实现了类型特性函数的逻辑组合。它们都是变长模板。
 
 ## 成员关系
+
+
 
 `std::is_pointer_interconvertible_with_class` 函数检查某个类型的对象是否与该类型的指定子对象具有指针可转换性，而 `std::is_corresponding_member` 函数检查两个指定的成员在两个指定类型的共同初始子序列中是否对应。
 
@@ -1456,19 +1375,12 @@ C++14 为最常用的时间段内置了字面量。
 用于时间段的内置字面量
 
 | **类型** | **后缀** | **示例** |
-
 | --- | --- | --- |
-|  |   |   |
 | `std::chrono::hours` | h | 5h |
-|  |   |   |
 | `std::chrono::minutes` | min | 5min |
-|  |   |   |
 | `std::chrono::seconds` | s | 5s |
-|  |   |   |
 | `std::chrono::milliseconds` | ms | 5ms |
-|  |   |   |
 | `std::chrono::microseconds` | us | 5us |
-|  |   |   |
 | `std::chrono::nanoseconds` | ns | 5ns |
 
 ### 时钟 (Clock)
@@ -1498,15 +1410,7 @@ C++14 为最常用的时间段内置了字面量。
 `std::chrono::time_of_day` 的成员函数
 
 | **成员函数** | **描述** |
-
 | --- | --- |
-
-
-
-
-
-| | |
-| :--- | :--- |
 | `tOfDay.hours()` | 返回自午夜以来的小时部分。 |
 | `tOfDay.minutes()` | 返回自午夜以来的分钟部分。 |
 | `tOfDay.seconds()` | 返回自午夜以来的秒部分。 |
@@ -1568,7 +1472,7 @@ std::cout << "Weekday: " << birthOfChrist.weekday() << '\n';
 | `year_month` | 表示特定年份中的特定月份。 |
 | `year_month_day` | 表示特定的年、月、日。 |
 | `year_month_day_last` | 表示特定年份和月份的最后一天。 |
-| `year_month_weekday` | 表示特定年份和月份的最后（注：原文为 year_month_weekday，但描述意为最后一天）。 |
+| `year_month_weekday` | 表示特定年份和月份的最后（注：原文为 `year_month_weekday`，但描述意为最后一天）。 |
 | `year_month_weekday_last` | 表示特定年份和月份的最后一个星期。 |
 
 #### 时区
@@ -1617,10 +1521,9 @@ std::cout << tokyoTime << '\n';
 
 下表提供了时区功能的概述。有关更多详细信息，请参考 [cpprefere.com](https://en.cppreference.com/w/cpp/chrono)。
 
-
-
-
 这是一个使用 `std::optional` 的简单示例。
+
+
 
 ```cpp
 // optional.cpp
@@ -1654,11 +1557,11 @@ if (!myEmptyInt){
 
 ### `std::optional`
 
-我在函数 `getFirst` 中使用了 `std::optional`。`getFirst` 在元素存在时返回第一个元素；如果不存在，你将获得一个 `std::optional<int>` 对象。主函数中有两个 vector。它们都调用了 `getFirst` 并返回一个 `std::optional` 对象。对于 `myInt`，该对象有一个值；对于 `myEmptyInt`，该对象没有值。程序显示了 `myInt` 和 `myEmptyInt` 的值。`myInt.value_or(2017)` 返回该值，而 `myEmptyInt.value_or(2017)` 则返回默认值。
+我在函数`getFirst`中使用了`std::optional`。`getFirst`在元素存在时返回第一个元素；如果不存在，你将获得一个`std::optional<int>`对象。主函数中有两个 vector。它们都调用了`getFirst`并返回一个`std::optional`对象。对于`myInt`，该对象有一个值；对于`myEmptyInt`，该对象没有值。程序显示了`myInt`和`myEmptyInt`的值。`myInt.value_or(2017)`返回该值，而`myEmptyInt.value_or(2017)`则返回默认值。
 
-在 C++23 中，`std::optional` 扩展了单子操作 `opt.and_then`、`opt.transform` 和 `opt.or_else`。`opt.and_then` 在存在时返回给定函数调用的结果，否则返回一个空的 `std::optional`。`opt.transform` 返回一个包含转换后值的 `std::optional`，或者返回一个空的 `std::optional`。此外，`opt.or_else` 在包含值时返回该 `std::optional`，否则返回给定函数执行的结果。
+在 C++23 中，`std::optional`扩展了单子操作`opt.and_then`、`opt.transform`和`opt.or_else`。`opt.and_then`在存在时返回给定函数调用的结果，否则返回一个空的`std::optional`。`opt.transform`返回一个包含转换后值的`std::optional`，或者返回一个空的`std::optional`。此外，`opt.or_else`在包含值时返回该`std::optional`，否则返回给定函数执行的结果。
 
-这些单子操作允许对 `std::optional` 的操作进行组合：
+这些单子操作允许对`std::optional`的操作进行组合：
 
 ```cpp
  1 // optionalMonadic.cpp
@@ -1693,15 +1596,15 @@ if (!myEmptyInt){
 30 }
 ```
 
-#### `std::optional` 上的单子操作
+#### `std::optional`上的单子操作
 
-基于范围的循环（第 22 行）遍历 `std::vector<std::optional<std::string>>`。首先，函数 `getInt` 将每个元素转换为整数（第 23 行），对其加 `100`（第 24 行），转换回字符串（第 25 行），最后显示该字符串（第 27 行）。如果初始转换为 `int` 失败，将返回字符串 `Error`（第 26 行）并显示。
+基于范围的循环（第 22 行）遍历`std::vector<std::optional<std::string>>`。首先，函数`getInt`将每个元素转换为整数（第 23 行），对其加`100`（第 24 行），转换回字符串（第 25 行），最后显示该字符串（第 27 行）。如果初始转换为`int`失败，将返回字符串`Error`（第 26 行）并显示。
 
 ### `std::variant`
 
-[`std::variant`](http://en.cppreference.com/w/cpp/utility/variant) 是一种类型安全的联合体。这种类型需要 `<variant>` 头文件。`std::variant` 的实例拥有其类型之一的值。该类型不能是引用、数组或 `void`。一个 `std::variant` 可以多次包含同一类型。默认初始化的 `std::variant` 使用其第一个类型初始化；因此，其第一个类型必须有默认构造函数。通过使用 `var.index`，你可以获得 `std::variant` `var` 所持备选类型从 0 开始的索引。`var.valueless_by_exception` 在变体持有值时返回 `false`。你可以使用 `var.emplace` 原地创建一个新值。有几个全局函数用于访问 `std::variant`。函数模板 `var.holds_alternative` 允许你检查 `std::variant` 是否持有指定的备选类型。你可以使用 `std::get` 并传入索引和类型作为参数。通过索引，你将获得值。如果你使用类型调用 `std::get`，只有当该类型是唯一的时才能获得该值。如果你使用了无效索引或非唯一类型，将得到 `std::bad_variant_access` 异常。
+[`std::variant`](http://en.cppreference.com/w/cpp/utility/variant)是一种类型安全的联合体。这种类型需要`<variant>`头文件。`std::variant`的实例拥有其类型之一的值。该类型不能是引用、数组或`void`。一个`std::variant`可以多次包含同一类型。默认初始化的`std::variant`使用其第一个类型初始化；因此，其第一个类型必须有默认构造函数。通过使用`var.index`，你可以获得`std::variant` `var`所持备选类型从 0 开始的索引。`var.valueless_by_exception`在变体持有值时返回`false`。你可以使用`var.emplace`原地创建一个新值。有几个全局函数用于访问`std::variant`。函数模板`var.holds_alternative`允许你检查`std::variant`是否持有指定的备选类型。你可以使用`std::get`并传入索引和类型作为参数。通过索引，你将获得值。如果你使用类型调用`std::get`，只有当该类型是唯一的时才能获得该值。如果你使用了无效索引或非唯一类型，将得到`std::bad_variant_access`异常。
 
-以下代码展示了 `std::variant` 的用法：
+以下代码展示了`std::variant`的用法：
 
 ```cpp
 // variant.cpp
@@ -1726,20 +1629,17 @@ try {
 }
 ```
 
-
-
-
-现在我想对变体的元素求和。首先，我需要在编译时获得一个正确的类型类型。来自类型特性库的 `std::common_type` 将提供它。`std::common_type` 给出了 `char`、`long`、`float`、`int`、`double` 和 `long long`转换为转换为类型。`res{}` 中最后的 `{}` 会将其初始化为 `0.0`。`res` 的类型是 `double`。访问器 `&res{arg *= 2;}` 计算和，下一行显示它。
+现在我想对变体的元素求和。首先，我需要在编译时获得一个正确的类型类型。来自类型特性库的`std::common_type`将提供它。`std::common_type`给出了`char`、`long`、`float`、`int`、`double`和`long long`转换为转换为类型。`res{}`中最后的`{}`会将其初始化为`0.0`。`res`的类型是`double`。访问器`&res{arg *= 2;}`计算和，下一行显示它。
 
 ### `std::expected`
 
-`std::expected<T, E>` 提供了一种存储两个值之一一的方法。`std::expected` 实例始终持有一个值：要么类型为 `T` 的预期值，要么类型为 `E` 的意外值。这种类型类型需要 `<expected>` 头文件。得益于 `std::expected`，你可以实现一个返回值或返回错误的函数。存储的值直接分配在预期对象所占用的存储空间内。没有发生动态内存分配。
+`std::expected<T, E>`提供了一种存储两个值之一一的方法。`std::expected`实例始终持有一个值：要么类型为`T`的预期值，要么类型为`E`的意外值。这种类型类型需要`<expected>`头文件。得益于`std::expected`，你可以实现一个返回值或返回错误的函数。存储的值直接分配在预期对象所占用的存储空间内。没有发生动态内存分配。
 
-`std::expected` 有一个类似的接口，类似于 `std::optional`。与 `std::optional` 不同，`std::exptected` 可以返回一个错误消息。
+`std::expected`有一个类似的接口，类似于`std::optional`。与`std::optional`不同，`std::exptected`可以返回一个错误消息。
 
-各种构造函数允许你定义一个带有预期值的预期对象 `exp`。`exp.emplace` 将在原地构造包含的值。你可以显式地询问 `std::expected` 容器它是否有一个值，或者可以在逻辑表达式中检查它。`exp.value` 返回预期值，而 `exp.value_or` 返回预期值或默认值。如果 `exp` 有一个意外值，则调用 `exp.value` 将抛出一个 `std::bad_expected_access` 异常。
+各种构造函数允许你定义一个带有预期值的预期对象`exp`。`exp.emplace`将在原地构造包含的值。你可以显式地询问`std::expected`容器它是否有一个值，或者可以在逻辑表达式中检查它。`exp.value`返回预期值，而`exp.value_or`返回预期值或默认值。如果`exp`有一个意外值，则调用`exp.value`将抛出一个`std::bad_expected_access`异常。
 
-`std::unexpected` 表示存储在 `std::expected` 中的意外值。
+`std::unexpected`表示存储在`std::expected`中的意外值。
 
 ```cpp
  1 // expected.cpp
@@ -1785,11 +1685,11 @@ try {
 
 ### `std::expected`
 
-`getInt` 函数将每个字符串转换为整数并返回一个 `std::expected<int, std::string>`。`int` 代表预期的，`std::string` 代表意外的值。两个范围的 for 循环（第 22 行和第 34 行）遍历 `std::vector<std::string>`。在第一个范围的 for 循环（第 22 行），显示预期值（第 25 行）或意外值（第 28 行）。在第二个范围的 for 循环（第 34 行），显示预期值或默认值 `2023`（第 36 行）。
+`getInt`函数将每个字符串转换为整数并返回一个`std::expected<int, std::string>`。`int`代表预期的，`std::string`代表意外的值。两个范围的 for 循环（第 22 行和第 34 行）遍历`std::vector<std::string>`。在第一个范围的 for 循环（第 22 行），显示预期值（第 25 行）或意外值（第 28 行）。在第二个范围的 for 循环（第 34 行），显示预期值或默认值`2023`（第 36 行）。
 
-`std::exptected` 支持单子操作以方便于函数组合：`exp.and_then`、`exp.transform`、`exp.or_else` 和 `exp.transform_error`。`exp.and_then` 如果存在则返回给定函数调的结果，否则返回一个空的 `std::expected`。`exp.transform` 返回一个包含转换后值的 `std::exptected`，或者返回一个空的 `std::exptected`。此外，`exp.or_else` 如果包含一个值则返回 `std::exptected`，否则返回给定函数调的结果。
+`std::exptected`支持单子操作以方便于函数组合：`exp.and_then`、`exp.transform`、`exp.or_else`和`exp.transform_error`。`exp.and_then`如果存在则返回给定函数调的结果，否则返回一个空的`std::expected`。`exp.transform`返回一个包含转换后值的`std::exptected`，或者返回一个空的`std::exptected`。此外，`exp.or_else`如果包含一个值则返回`std::exptected`，否则返回给定函数调的结果。
 
-以下程序基于之前的程序 `optionalMonadic.cpp`。本质上，类型 `std::optional` 被 `std::exptected` 替换了。
+以下程序基于之前的程序`optionalMonadic.cpp`。本质上，类型`std::optional`被`std::exptected`替换了。
 
 ```cpp
  1 // expectedMonadic.cpp
@@ -1828,8 +1728,6 @@ try {
  34 }
 ```
 
-
-
 ```cpp
 // containerConstructor.cpp
 ...
@@ -1865,7 +1763,9 @@ cout << vec3.size() << endl; // 0
 
 ### 大小
 
-对于容器 `cont`，你可以通过 `cont.empty()` 检查容器是否为空。`cont.size()` 返回当前元素数量，而 `cont.max_size()` 返回 `cont` 可以拥有的最大元素数量。最大数量由实现定义。
+对于容器`cont`，你可以通过`cont.empty()`检查容器是否为空。`cont.size()`返回当前元素数量，而`cont.max_size()`返回`cont`可以拥有的最大元素数量。最大数量由实现定义。
+
+
 
 ```cpp
 // containerSize.cpp 
@@ -1894,13 +1794,13 @@ cout << str2Int.max_size() << endl; // 384307168202282325
 cout << douSet.max_size() << endl;  // 461168601842738790
 ```
 
-容器的大小
+# 容器的大小
 
 ## 访问
 
 迭代器允许你访问容器的元素。如果你使用起始和结束迭代器，你就得到了一个可以进一步处理的范围。对于容器 `cont`，你通过 `cont.begin()` 获取起始迭代器，通过 `cont.end()` 获取结束迭代器，它们定义了一个*半开区间*范围。之所以是*半开*的，是因为起始迭代器属于该范围，而结束迭代器指向范围之外的后续。迭代器对 `cont.begin()` 和 `cont.end()` 允许你修改容器的元素。
 
-容器的创建与删除
+## 容器的创建与删除
 
 | 迭代器 | 说明 |
 | --- | --- |
@@ -2043,32 +1943,30 @@ int main() {
 }
 ```
 
-
-
 [序列容器](http://en.cppreference.com/w/cpp/container) 有许多共同点，但每个容器都有其特定的领域。在深入细节之前，我将对 `std` 命名空间中的所有五个序列容器进行概述。
 
 # 序列容器
 
 | `Criteria` | `array` | `vector` | `deque` | `list` | `forward_list` |
 | --- | --- | --- | --- | --- | --- |
-|  |   |   |   |   |   |
+|  |  |  |  |  |  |
 | `Size` | 静态 | 动态 | 动态 | 动态 | 动态 |
-|  |   |   |   |   |   |
+|  |  |  |  |  |  |
 | `Implementation` | 静态数组 | 动态数组 | 数组序列 | 双向链表 | 单向链表 |
-|  |   |   |   |   |   |
+|  |  |  |  |  |  |
 | `Access` | 随机 | 随机 | 随机 | 前向和后向 | 前向 |
-|  |   |   |   |   |   |
-| `Optimized for insert and delete at` |   | 尾: O(1) | 起头和尾: O(1) | 起头和尾: O(1) | 起头(1) |
-|   |   |   |   | 任意: O(1) | 任意: O(1) |
-|  |   |   |   |   |   |
-| `Memory reservation` |   | 是 | 否 | 否 | 否 |
-|  |   |   |   |   |   |
-| `Release of memory` |   | `shrink_to_fit` | `shrink_to_fit` | 总是 | 总是 |
-|  |   |   |   |   |   |
+|  |  |  |  |  |  |
+| `Optimized for insert and delete at` |  | 尾: O(1) | 起头和尾: O(1) | 起头和尾: O(1) | 起头(1) |
+|  |  |  |  | 任意: O(1) | 任意: O(1) |
+|  |  |  |  |  |  |
+| `Memory reservation` |  | 是 | 否 | 否 | 否 |
+|  |  |  |  |  |  |
+| `Release of memory` |  | `shrink_to_fit` | `shrink_to_fit` | 总是 | 总是 |
+|  |  |  |  |  |  |
 | `Strength` | 无需内存分配；内存需求极低 | 95% 的解决方案 | 在头部和尾部的插入和删除 | 在任意位置的插入和删除 | 快速插入删除；内存需求极低 |
-|  |   |   |   |   |   |
+|  |  |  |  |  |  |
 | `Weakness` | 无动态内存 | 插入和删除 | 插入和删除 | 无随机访问 | 无随机访问 |
-|   | `allocation` | 任意位置: O(n) | 任意位置: O(n) |   |   |
+|  | `allocation` | 任意位置: O(n) | 任意位置: O(n) |  |  |
 
 我想对该表格做一些额外的说明。
 
@@ -2076,7 +1974,7 @@ int main() {
 
 虽然 `std::vector` 元素的随机访问复杂度与 `std::deque` 元素的随机访问相同均为 `O(1)`，但并不意味着这两个操作的速度一样快。
 
-向双向链表 (`std::list`) 或单向链表 (`std::forward_list`) 插入或删除的复杂度保证 `O(1)` 仅在迭代器指向正确元素时才有效。
+向双向链表（`std::list`）或单向链表（`std::forward_list`）插入或删除的复杂度保证 `O(1)` 仅在迭代器指向正确元素时才有效。
 
 ## 数组
 
@@ -2089,15 +1987,14 @@ int main() {
 ```cpp
 std::array<int, 10> arr
 ```
+
 10 个元素没有被初始化。
 
 ```cpp
 std::array<int, 10> arr{}
 ```
+
 10 个元素被默认初始化。
-
-
-
 
 [`std::deque`](http://en.cppreference.com/w/cpp/container/deque) 通常由一组固定大小的数组组成，与 `std::vector` 非常相似。`std::deque` 需要头文件 `<deque>`。`std::deque` 额外拥有三个成员函数：`deq.push_front(elem)`、`deq.pop_front()` 和 `deq.emplace_front(args... )`，用于在头部添加或删除元素。
 
@@ -2153,10 +2050,10 @@ for (auto v: intDeq) std::cout << v << " ";   // -1 0 1 2 3 4 5 6 7 8 9 10
 
 `std::list` 的以下几具有独特性：
 
-* 它不支持随机访问。
-* 访问任意元素的速度很慢，因为最坏情况下你必须遍历整个列表。
-* 如果迭代器指向正确的位置，添加或删除元素是非常快的。
-* 如果添加或删除一个元素，迭代器保持有效。
+- 它不支持随机访问。
+- 访问任意元素的速度很慢，因为最坏情况下你必须遍历整个列表。
+- 如果迭代器指向正确的位置，添加或删除元素是非常快的。
+- 如果添加或删除一个元素，迭代器保持有效。
 
 由于其独特的结构，`std::list` 有一些特殊的成员函数。
 
@@ -2165,35 +2062,40 @@ for (auto v: intDeq) std::cout << v << " ";   // -1 0 1 2 3 4 5 6 7 8 9 10
 | 成员函数 | 说明 |
 | --- | --- |
 | `lis.merge(c)` | 将有序列表 `c` 合并到有序列表 `lis` 中，使 `lis` 保持有序。 |
+
+
+
+| 成员函数 | 说明 |
+| --- | --- |
 | `lis.merge(c, op)` | 将有序列表 `c` 合并到有序列表 `lis` 中，使 `lis` 保持有序。它使用 `op` 作为排序标准。 |
 | `lis.remove(val)` | 从 `lis` 中删除所有值为 `val` 的元素。 |
 | `lis.remove_if(pre)` | 从 `lis` 中删除所有满足谓词 `pre` 的元素。 |
-| `lis.splice(pos, ... )` | 分 `lis` 中 `pos` 之前的元素。元素可以是单个元素、范围或列表。 |
+| `lis.splice(pos, ...)` | 分 `lis` 中 `pos` 之前的元素。元素可以是单个元素、范围或列表。 |
 | `lis.unique()` | 具有相同值的相邻元素。 |
 | `lis.unique(pre)` | 删除满足谓词 `pre` 的相邻元素。 |
 
 这里是代码片段中的几个成员函数。
 
 ```cpp
-// list.cpp 
+// list.cpp
 ...
 #include <list>
 ...
-std::list<int> list1{15, 2, 18, 19, 4, 15, 1, 3, 18, 5, 
-                      4, 7, 17, 9, 16, 8, 6, 6, 17, 1, 2};
+std::list<int> list1{15, 2, 18, 19, 4, 15, 1, 3, 18, 5,
+                     4, 7, 17, 9, 16, 8, 6, 6, 17, 1, 2};
 
 list1.sort();
 for (auto l: list1) std::cout << l << " ";
-     // 1 1 2 2 3 4 4 5 6 6 7 8 9 15 15 16 17 17 18 18 19
+// 1 1 2 2 3 4 4 5 6 6 7 8 9 15 15 16 17 17 18 18 19
 
 list1.unique();
 for (auto l: list1) std::cout << l << " ";
-     // 1 2 3 4 5 6 7 8 9 15 16 17 18 19
+// 1 2 3 4 5 6 7 8 9 15 16 17 18 19
 
 std::list<int> list2{10, 11, 12, 13, 14};
 list1.splice(std::find(list1.begin(), list1.end()), list2);
 for (auto l: list1) std::cout << l << " ";
-     // 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+// 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 ```
 
 ### 前向列表
@@ -2202,35 +2104,35 @@ for (auto l: list1) std::cout << l << " ";
 
 [`std::forward_list`](http://en.cppreference.com/w/cpp/container/forward_list) 是单向链表，需要头文件 `<forward_list>`。`std::forward_list` 接口大幅减少并针对内存需求进行了优化。`std::forward_list` 与 `std::list` 有许多共同点：
 
-* 它不支持随机访问。
-* 访问任意元素的速度很慢，因为你必须正向遍历整个列表。
-* 如果迭代器指向正确的位置，添加或删除元素是非常快的。
-* 如果添加或删除元素，迭代器保持有效。
-* 操作始终指向 `std::forward_list` 的头部或当前元素之后。
+- 它不支持随机访问。
+- 访问任意元素的速度很慢，因为你必须正向遍历整个列表。
+- 如果迭代器指向正确的位置，添加或删除元素是非常快的。
+- 如果添加或删除元素，迭代器保持有效。
+- 操作始终指向 `std::forward_list` 的头部或当前元素之后。
 
 可以正向遍历 `std::forward_list` 这一特性有很大影响。因此迭代器不能递减，不支持 `--` 操作。由于由于，`std::forward_list` 没有后向迭代器。`std::forward_list` 不知道自己的大小。
 
 #### `std::forward_list` 的特殊成员函数
 
-| 成员函数 |  |
+| 成员函数 | 说明 |
 | --- | --- |
 | `forw.before_begin()` | 返回元素之前的迭代器。 |
 | `forw.emplace_after(pos, args...)` | 在 `pos` 之后创建一个参数为 `args...` 的元素。 |
 | `forw.emplace_front(args...)` | 在 `forw` 头部创建一个参数为 `args...` 的元素。 |
-| `forw.erase_after(pos, ... )` | 从 `forw` 删除 `pos` 元素或从 `pos` 开始的元素范围。 |
-| `forw.insert_after(pos, ... )` | 在 `pos` 之后插入元素。这些元素可以是单个元素、范围或初始化列表。 |
+| `forw.erase_after(pos, ...)` | 从 `forw` 删除 `pos` 元素或从 `pos` 开始的元素范围。 |
+| `forw.insert_after(pos, ...)` | 在 `pos` 之后插入元素。这些元素可以是单个元素、范围或初始化列表。 |
 | `forw.merge(c)` | 将有序前向列表 `c` 合并到有序前向列表 `forw` 中，使 `forw` 保持有序。 |
 | `forw.merge(c, op)` | 将有序前向列表 `c` 合并到有序前向列表 `forw` 中，使 `forw` 保持有序。使用 `op` 作为排序标准。 |
-| `forw.splice_after(pos, ... )` | 分 `forw` 中 `pos` 之前的元素。元素可以是单个元素、范围或列表。 |
+| `forw.splice_after(pos, ...)` | 分 `forw` 中 `pos` 之前的元素。元素可以是单个元素、范围或列表。 |
 | `forw.unique()` | 删除具有相同的相邻元素。 |
 | `forw.unique(pre)` | 删除满足谓词 `pre` 的相邻元素。 |
 
 让我们看看 `std::forward_list` 的 `unique` 成员函数。
 
 ```cpp
-// forwardList.cpp 
+// forwardList.cpp
 ...
-#include<forward_list>
+#include <forward_list>
 ...
 using std::cout;
 
@@ -2247,49 +2149,47 @@ forw.push_front(1);
 for (auto i: forw) cout << i << " "; // 1 2 3 4 5 6 7
 
 forw.erase_after(forw.before_begin());
-cout<< forw.front(); // 2
+cout << forw.front(); // 2
 
 std::forward_list<int> forw2;
 forw2.insert_after(forw2.before_begin(), 1);
 forw2.insert_after(++forw2.before_begin(), 2);
 forw2.insert_after(++(++forw2.before_begin()), 3);
 forw2.push_front(1000);
-for (auto i= forw2.cbegin();i != forw2.cend(); ++i) cout << i << " "; 
+for (auto i = forw2.cbegin(); i != forw2.cend(); ++i) cout << i << " ";
 
-auto IteratorTo5= std::find(forw.begin(), forw.end(), 5);
+auto IteratorTo5 = std::find(forw.begin(), forw.end(), 5);
 forw.splice_after(IteratorTo5, std::move(for2));
-for (auto i= forw.cbegin(); i != forw.cend(); ++i) cout << *i << " "; 
+for (auto i = forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";
 
 forw.sort();
-for (auto i= forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";  
-    // 1 2 2 3 3 4 5 6 7 1000
+for (auto i = forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";
+// 1 2 2 3 3 4 5 6 7 1000
 
 forw.reverse();
-for (auto i= forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";  
-    // 1000 7 6 5 4 3 3 2 2 1
+for (auto i = forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";
+// 1000 7 6 5 4 3 3 2 2 1
 
 forw.unique();
-for (auto i= forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";  
-    // 1000 7 6 5 4 3 2 1
+for (auto i = forw.cbegin(); i != forw.cend(); ++i) cout << *i << " ";
+// 1000 7 6 5 4 3 2 1
 ```
 
-
-
-C++ 有八种不同的[关联容器](http://en.cppreference.com/w/cpp/container)。其中四种是键排序的关联容器：`std::set`、`std::map`、`std::multiset` 和 `std::multimap`。另外四种是键无序的关联容器：`std::unordered_set`、`std::unordered_map`、`std::unordered_multiset` 和 `std::unordered_multimap`。关联容器是特殊的容器。这意味着它们支持章节所有容器的接口 中描述的所有操作。
+C++ 有八种不同的[关联容器](http://en.cppreference.com/w/cpp/container)。其中四种是键排序的关联容器：`std::set`、`std::map`、`std::multiset` 和 `std::multimap`。另外四种是键无序的关联容器：`std::unordered_set`、`std::unordered_map`、`std::unordered_multiset` 和 `std::unordered_multimap`。关联容器是特殊的容器。这意味着它们支持章节所有容器的接口中描述的所有操作。
 
 #### 概述
 
 所有八种有序和无序容器的共同点是它们都将键（key）与值（value）关联。你可以使用键来获取值。要对关联容器进行分类，你需要回答三个简单的问题：
 
-* 键是排序的吗？
-* 键是否有关联的值？
-* 同一个键可以出现多次吗？
+- 键是排序的吗？
+- 键是否有关联的值？
+- 同一个键可以出现多次吗？
 
 下表包含 2³=8 行，给出了这三个问题的答案。我在表中回答了第四个问题：在最佳情况下，键的访问时间有多快？
 
-关联容器的特征
+关联容器的特征：
 
-| `关联容器` | `排序` | `关联值` | `相同键` | `访问时间` |
+| 关联容器 | 排序 | 关联值 | 相同键 | 访问时间 |
 | --- | --- | --- | --- | --- |
 | `std::set` | 是 | 否 | 否 | 对数 |
 | `std::unordered_set` | 否 | 否 | 否 | 常数 |
@@ -2305,41 +2205,41 @@ C++ 有八种不同的[关联容器](http://en.cppreference.com/w/cpp/container)
 你可以使用初始化列表初始化容器，并使用索引运算符添加新元素。要访问键/值对 `p` 的第一个元素，使用 `p.first`；对于第二个元素，使用 `p.second`。`p.first` 是键，`p.second` 是该对的关联值。
 
 ```cpp
-// orderedUnorderedComparison.cpp 
+// orderedUnorderedComparison.cpp
 ...
 #include <map>
 #include <unordered_map>
 
 // std::map
 
-std::map<std::string, int> m {{"Dijkstra", 1972}, {"Scott", 1976}};
-m["Ritchie"]= 1983;
-std::cout << m["Ritchie"];            // 1983
-for(auto p : m) std::cout << "{" << p.first << "," << p.second << "}";
-                // {Dijkstra,1972},{Ritchie,1983},{Scott,1976}
+std::map<std::string, int> m{{"Dijkstra", 1972}, {"Scott", 1976}};
+m["Ritchie"] = 1983;
+std::cout << m["Ritchie"]; // 1983
+for (auto p : m) std::cout << "{" << p.first << "," << p.second << "}";
+// {Dijkstra,1972},{Ritchie,1983},{Scott,1976}
 m.erase("Scott");
-for(auto p : m) std::cout << "{" << p.first << "," << p.second << "}";
-                // {Dijkstra,1972},{Ritchie,1983}
+for (auto p : m) std::cout << "{" << p.first << "," << p.second << "}";
+// {Dijkstra,1972},{Ritchie,1983}
 m.clear();
-std::cout << m.size() << '\n';   // 0
+std::cout << m.size() << '\n'; // 0
 
 // std::unordered_map
 
-std::unordered_map<std::string, int> um {{"Dijkstra", 1972}, {"Scott", 1976}};
-um["Ritchie"]= 1983;
-std::cout << um["Ritchie"];          // 1983
-for(auto p : um) std::cout << "{" << p.first << "," << p.second << "}";
-                 // {Ritchie,1983},{Scott,1976},{Dijkstra,1972}
+std::unordered_map<std::string, int> um{{"Dijkstra", 1972}, {"Scott", 1976}};
+um["Ritchie"] = 1983;
+std::cout << um["Ritchie"]; // 1983
+for (auto p : um) std::cout << "{" << p.first << "," << p.second << "}";
+// {Ritchie,1983},{Scott,1976},{Dijkstra,1972}
 um.erase("Scott");
-for(auto p : um) std::cout << "{" << p.first << "," << p.second << "}";
-                 // {Ritchie,1983},{Dijkstra,1972}
+for (auto p : um) std::cout << "{" << p.first << "," << p.second << "}";
+// {Ritchie,1983},{Dijkstra,1972}
 um.clear();
-std::cout << um.size() << '\n';  // 0
+std::cout << um.size() << '\n'; // 0
 ```
 
 ### `std::map` 与 `std::unordered_map`
 
-这两个执行结果之间存在细微差别：`std::map` 的键是有序的，而 `std::unordered_map` 的键是无序的。问题是：为什么在 C++ 中要有这样的容器呢？我已经在表格 中指出这一点。答案对于 C++ 来说通常是：性能。无序容器的键访问时间是常数级的，因此与大小无关。如果容器足够大，性能差异非常显著。请查看关于性能的章节。
+这两个执行结果之间存在细微差别：`std::map` 的键是有序的，而 `std::unordered_map` 的键是无序的。问题是：为什么在 C++ 中要有这样的容器呢？我已经在表格中指出这一点。答案对于 C++ 来说通常是：性能。无序容器的键访问时间是常数级的，因此与大小无关。如果容器足够大，性能差异非常显著。请查看关于性能的章节。
 
 #### contains（包含）
 
@@ -2354,16 +2254,16 @@ bool contains(const AssoCont& eleCont) {
 }
 
 std::set<int> mySet{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-std::cout << "contains(mySet): " << contains(mySet);               // true
+std::cout << "contains(mySet): " << contains(mySet); // true
 
 std::unordered_set<int> myUnset{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-std::cout << "contains(myUnset): " << contains(myUnset);          // true
+std::cout << "contains(myUnset): " << contains(myUnset); // true
 
 std::map<int, std::string> myMap{{1, "red"}, {2, "blue"}, {3, "green}};
-std::cout << "contains(myMap): " << contains(myMap);               // false
+std::cout << "contains(myMap): " << contains(myMap); // false
 
 std::unordered_map<int, std::string> myUnmap{{1, "red"}, {2, "blue"}, {3, "green"}};
-std::cout << "contains(myUnmap): " << contains(myUnmap);          // false
+std::cout << "contains(myUnmap): " << contains(myUnmap); // false
 ```
 
 #### 插入与删除
@@ -2383,43 +2283,42 @@ int erase(AssoCont& eleCont) {
 std::multiset<int> mySet{3, 1, 5, 3, 4, 5, 1, 4, 3, 2, 2, 7, 6};
 
 for (auto s: mySet) std::cout << s << " ";
-      // 1 1 2 2 3 3 3 4 4 4 5 5 6 6 7
+// 1 1 2 2 3 3 3 4 4 4 5 5 6 6 7
 
 mySet.insert(8);
 std::array<int, 5> myArr{10, 11, 12, 13, 14};
-mySet.insert(myArr.begin(), myArr.begin()+3);
+mySet.insert(myArr.begin(), myArr.begin() + 3);
 mySet.insert({22, 21, 20});
 for (auto s: mySet) std::cout << s << " ";
-     // 1 1 2 2 3 3 3 4 4 4 5 5 6 6 7 10 11 12 20 21 22
+// 1 1 2 2 3 3 3 4 4 4 5 5 6 6 7 10 11 12 20 21 22
 
-std::cout << mySet.erase(4);  // 4
+std::cout << mySet.erase(4); // 4
 mySet.erase(mySet.lower_bound(5), mySet.upper_bound(15));
 for (auto s: mySet) std::cout << s << " ";
-    // 1 1 2 2 3 3 3 3 20 21 22
+// 1 1 2 2 3 3 3 3 20 21 22
 ```
 
 ### 有序关联容器
 
 #### 概述
 
-有序关联容器 `std::map` 和 `std::multimap` 将其键与值关联。它们都定义在 `<map>` 头文件中。`std::set` 和 `std::multiset` 需要 `<set>` 头文件。这个表格 提供了详细信息。
+有序关联容器 `std::map` 和 `std::multimap` 将其键与值关联。它们都定义在 `<map>` 头文件中。`std::set` 和 `std::multiset` 需要 `<set>` 头文件。这个表格提供了详细信息。
 
 所有四个有序容器都通过类型、分配器和比较函数进行参数化。根据类型的不同，容器拥有分配器和比较函数的默认值。`std::map` 和 `std::set` 的声明非常清晰地展示了这一点。
 
+
+
 ```cpp
-template < class key, class val, class Comp= less<key>,
-           class Alloc= allocator<pair<const key, val> >
+template <class key, class val, class Comp = less<key>,
+          class Alloc = allocator<pair<const key, val>>>
 class map;
 
-template < class T, class Comp = less<T>,
-           class Alloc = allocator<T> >
+template <class T, class Comp = less<T>,
+          class Alloc = allocator<T>>
 class set;
 ```
 
-
-
-
-这两个关联容器的声明表明 `std::map` 具有一个关联值。键和值被用于默认分配器：`allocator<pair<const key, val>>`。稍微加一点想象力，你可以从分配器中推导出更多信息。`std::map` 拥有类型为 `std::pair< const key, val>` 的对。关联值 `val` 不影响排序准则：`less<key>`。所有观察结果也适用于 `std::multimap` 和 `std::multiset`。
+这两个关联容器的声明表明 `std::map` 具有一个关联值。键和值被用于默认分配器：`allocator<pair<const key, val>>`。稍微加一点想象力，你可以从分配器中推导出更多信息。`std::map` 拥有类型为 `std::pair<const key, val>` 的对。关联值 `val` 不影响排序准则：`less<key>`。所有观察结果也适用于 `std::multimap` 和 `std::multiset`。
 
 ### 键与值
 
@@ -2427,40 +2326,40 @@ class set;
 
 键必须是：
 
-*   可排序的（默认使用 `<`），
-*   可拷贝且移动的。
+- 可排序的（默认使用 `<`）。
+- 可拷贝且移动的。
 
 值必须是：
 
-*   可默认构造的，
-*   可拷贝且移动的。
+- 可默认构造的。
+- 可拷贝且移动的。
 
 键关联值构建了一个对 `p`，通过成员 `p.first` 获取键，通过 `p.second` 获取值。
 
-```
+```cpp
 #include <map>
 ...
-std::multimap<char, int> multiMap= {{'a', 10}, {'a', 20}, {'b', 30}};
-for (auto p: multiMap) std::cout << "{" << p.first << "," << p.second << "} ";
-                         // {a,10} {a,20} {b,30}
+std::multimap<char, int> multiMap = {{'a', 10}, {'a', 20}, {'b', 30}};
+for (auto p : multiMap) std::cout << "{" << p.first << "," << p.second << "} ";
+// {a,10} {a,20} {b,30}
 ```
 
 ### 比较准则
 
-有序关联容器的默认比较准则是 `std::less`。如果你想使用*用户定义*的类型作为键，你必须重载运算符 `<`。仅为你的数据类型重载运算符 `<` 就足够了，因为 C++ 运行时会在关系 `(! (elem1<elem2 || elem2<elem1))` 的帮助下比较两个元素是否相等。
+有序关联容器的默认比较准则是 `std::less`。如果你想使用用户定义的类型作为键，你必须重载运算符 `<`。仅为你的数据类型重载运算符 `<` 就足够了，因为 C++ 运行时会在关系 `(!(elem1 < elem2 || elem2 < elem1))` 的帮助下比较两个元素是否相等。
 
-你可以将排序准则作为模板参数指定。该排序准则必须实现*严格弱序*（strict weak ordering）。
+你可以将排序准则作为模板参数指定。该排序准则必须实现严格弱序（strict weak ordering）。
 
-与*严格弱序*的定义相比，对于 `std::map` 来说，使用具有*严格弱序*的比较准则要简单得多。
+与严格弱序的定义相比，对于 `std::map` 来说，使用具有严格弱序的比较准则要简单得多。
 
-```
+```cpp
 #include <map>
 ...
 std::map<int, std::string, std::greater<int>> int2Str{
-         {5, "five"}, {1, "one"}, {4, "four"}, {3, "three"},
-         {2, "two"}, {7, "seven"}, {6, "six"} };
-for (auto p: int2Str) std::cout << "{" << p.first << "," << p.second << "} ";
-         // {7,seven} {6,six} {5,five} {4,four} {3,three} {2,two} {1,one}
+    {5, "five"}, {1, "one"}, {4, "four"}, {3, "three"},
+    {2, "two"}, {7, "seven"}, {6, "six"}};
+for (auto p : int2Str) std::cout << "{" << p.first << "," << p.second << "} ";
+// {7,seven} {6,six} {5,five} {4,four} {3,three} {2,two} {1,one}
 ```
 
 ### 特殊搜索函数
@@ -2469,38 +2368,40 @@ for (auto p: int2Str) std::cout << "{" << p.first << "," << p.second << "} ";
 
 有序关联容器的特殊搜索函数：
 
-| 搜索函数 |  |
+| 搜索函数 | 说明 |
 | --- | --- |
 | `ordAssCont.count(key)` | 返回具有 `key` 的值的数量。 |
 | `ordAssCont.find(key)` | 返回 `ordAssCont` 中 `key` 的迭代器。如果 `ordAssCont` 中不存在 `key`，则返回 `ordAssCont.end()`。 |
 | `ordAssCont.lower_bound(key)` | 返回指向 `ordAssCont` 中可以插入 `key` 的第一个 `key` 的迭代器。 |
 | `ordAssCont.upper_bound(key)` | 返回 `ordAssCont` 中可以插入 `key` 的最后一个位置。 |
-| `ordAssCont.equal_range(key)` | 返回一个 `std::pair`，包含 `ordAssCont.lower bound(key)` 和 `ordAssCont.upper_bound(key)`。 |
+| `ordAssCont.equal_range(key)` | 返回一个 `std::pair`，包含 `ordAssCont.lower_bound(key)` 和 `ordAssCont.upper_bound(key)`。 |
 
 现在来看这些特定搜索函数的应用。
 
 ```cpp
-// associativeContainerSearch.cpp 
+// associativeContainerSearch.cpp
 ...
 #include <set>
 ...
 std::multiset<int> mySet{3, 1, 5, 3, 4, 5, 1, 4, 4, 3, 2, 2, 7, 6, 4, 3, 6};
 
-for (auto s: mySet) std::cout << s << " ";
-     // 1 1 2 2 3 3 3 3 4 4 4 4 5 5 6 6 7
+for (auto s : mySet) std::cout << s << " ";
+// 1 1 2 2 3 3 3 3 4 4 4 4 5 5 6 6 7
 
 mySet.erase(mySet.lower_bound(4), mySet.upper_bound(4));
-for (auto s: mySet) std::cout << s << " ";
-     // 1 1 2 2 3 3 3 3 5 5 6 6 7
+for (auto s : mySet) std::cout << s << " ";
+// 1 1 2 2 3 3 3 3 5 5 6 6 7
+
 std::cout << mySet.count(3) << '\n'; // 4
 std::cout << *mySet.find(3) << '\n'; // 3
 std::cout << *mySet.lower_bound(3) << '\n'; // 3
 std::cout << *mySet.upper_bound(3) << '\n'; // 5
-auto pair= mySet.equal_range(3);
+
+auto pair = mySet.equal_range(3);
 std::cout << "(" << *pair.first << "," << *pair.second << ")"; // (3,5)
 ```
 
-在关联容器中搜索
+## 在关联容器中搜索
 
 ### `std::map`
 
@@ -2511,10 +2412,11 @@ std::cout << "(" << *pair.first << "," << *pair.second << ")"; // (3,5)
 ### 无序关联容器
 
 在 C++11 中有四种无序关联容器：
-*   `std::map`
-*   `std::multimap`
-*   `std::set`
-*   `std::multiset`
+
+- `std::map`
+- `std::multimap`
+- `std::set`
+- `std::multiset`
 
 它们与有序容器有很多共同点，但它们不是排序的。相反，它们使用哈希函数确定桶。哈希函数将键映射到值，即所谓的哈希值。如果哈希函数尽可能减少冲突并将键均匀地分布到桶中，它就是良好的。由于哈希函数的执行时间是常数，元素的访问在基础情况下也是常数。
 
@@ -2539,18 +2441,19 @@ using namespace std::chrono;
 int main() {
     const int size = 1000000;
     vector<int> randValues(size);
-    for(int i=0; i<size; ++i) randValues[i] = rand() % 10000;
+    for (int i = 0; i < size; ++i) randValues[i] = rand() % 10000;
 
     map<int, int> myMap;
     auto start = high_resolution_clock::now();
-    for(int i=0; i<size; ++i) myMap[randValues[i]] = i;
+    for (int i = 0; i < size; ++i) myMap[randValues[i]] = i;
     auto end = high_resolution_clock::now();
     duration<double> diff = end - start;
     cout << "map: " << diff.count() << "s" << endl;
 
     unordered_map<int, int> myUnorderedMap;
     start = high_resolution_clock::now();
-    for(int i=0; i<size; ++i) myUnorderedMap[randValues[i]] = i; own    end = high_resolution_clock::now();
+    for (int i = 0; i < size; ++i) myUnorderedMap[randValues[i]] = i;
+    end = high_resolution_clock::now();
     diff = end - start;
     cout << "unordered_map: " << diff.count() << "s" << endl;
 
@@ -2558,105 +2461,109 @@ int main() {
 }
 ```
 
+- `std::hash` 已经为内置类型（如 `boolean`、`自然数` 和 `浮点数`）定义。
+- `std::string` 和 `std::wstring` 可用。
+- 为 C 字符串 `const char` 生成指针地址的哈希值。
+- 可以为自定义（user-defined）数据类型定义。
 
-
-
-
-* `std::hash` 已经为内置类型（如 `boolean`、`自然数`和`浮点数`）定义，
-* `std::string` 和 `std::wstring` 可用，
-* 为 C 字符串 `const char` 生成指针地址的哈希值，
-* 可以为`自定义（user-defined）`数据类型定义。
-
-对于作为`无序关联容器（unordered associative container）`键的`自定义`类型，你必须记住两个要求。它们需要一个哈希函数，并且能够进行等值比较。
+对于作为无序关联容器（unordered associative container）键的自定义类型，你必须记住两个要求。它们需要一个哈希函数，并且能够进行等值比较。
 
 ```cpp
-// unorderedMapHash.cpp 
+// unorderedMapHash.cpp
 ...
 #include <unordered_map>
 ...
-struct MyInt{
-  MyInt(int v):val(v){}
-  bool operator== (const MyInt& other) const {
-    return val == other.val;
-  }
-  int val;
+struct MyInt {
+    MyInt(int v) : val(v) {}
+
+    bool operator==(const MyInt& other) const {
+        return val == other.val;
+    }
+
+    int val;
 };
 
-struct MyHash{
-  std::size_t operator()(MyInt m) const {
-    std::hash<int> hashVal;
-    return hashVal(m.val);
-  }
+struct MyHash {
+    std::size_t operator()(MyInt m) const {
+        std::hash<int> hashVal;
+        return hashVal(m.val);
+    }
 };
 
-std::ostream& operator << (std::ostream& st, const MyInt& myIn){
-  st << myIn.val ;
-  return st;
+std::ostream& operator<<(std::ostream& st, const MyInt& myIn) {
+    st << myIn.val;
+    return st;
 }
 
 typedef std::unordered_map<MyInt, int, MyHash> MyIntMap;
-MyIntMap myMap{{MyInt(-2), -2}, {MyInt(-1), -1}, {MyInt(0), 0}, {MyInt(1), 1}};
+MyIntMap myMap{
+    {MyInt(-2), -2},
+    {MyInt(-1), -1},
+    {MyInt(0), 0},
+    {MyInt(1), 1}
+};
 
-for(auto m : myMap) std::cout << "{" << m.first << "," << m.second << "} ";
-    // {MyInt(1),1} {MyInt(0),0} {MyInt(-1),-1} {MyInt(-2),-2}
+for (auto m : myMap) std::cout << "{" << m.first << "," << m.second << "} ";
+// {MyInt(1),1} {MyInt(0),0} {MyInt(-1),-1} {MyInt(-2),-2}
 
-std::cout << myMap[MyInt(-2)] << '\n';     // -2
+std::cout << myMap[MyInt(-2)] << '\n'; // -2
 ```
 
-# 自定义哈希函数
+## 自定义哈希函数
 
-## 详情
+### 详情
 
-`无序关联容器`将它们的索引存储在桶（buckets）中。索引进入哪个桶取决于哈希函数，该函数将键映射到索引。如果不同的键映射到同一个索引，则称为冲突（collision）。哈希函数试图避免这种情况。
+无序关联容器将它们的索引存储在桶（buckets）中。索引进入哪个桶取决于哈希函数，该函数将键映射到索引。如果不同的键映射到同一个索引，则称为冲突（collision）。哈希函数试图避免这种情况。
 
-索引通常以链表的形式存储在桶中。访问桶的操作是常数级的；而桶内的访问是线性的。桶的数量被称为`容量（capacity）`。每个桶的平均元素数量被称为`负载因子（load factor）`。通常，当`负载因子`超过 `1` 时，C++ 运行时生成新桶。这个过程被称为`重哈（rehashing）`，也可以显式触发：
+索引通常以链表的形式存储在桶中。访问桶的操作是常数级的；而桶内的访问是线性的。桶的数量被称为容量（capacity）。每个桶的平均元素数量被称为负载因子（load factor）。通常，当负载因子超过 `1` 时，C++ 运行时生成新桶。这个过程被称为重哈（rehashing），也可以显式触发：
 
 ```cpp
-// hashInfo.cpp 
+// hashInfo.cpp
 ...
 #include <unordered_set>
 ...
 using namespace std;
 
-void getInfo(const unordered_set<int>& hash){
-  cout << "hash.bucket_count(): " << hash.bucket_count();
-  cout << "hash.load_factor(): " << hash.load_factor();
+void getInfo(const unordered_set<int>& hash) {
+    cout << "hash.bucket_count(): " << hash.bucket_count();
+    cout << "hash.load_factor(): " << hash.load_factor();
 }
 
 unordered_set<int> hash;
 cout << hash.max_load_factor() << endl; // 1
 
 getInfo(hash);
-    // hash.bucket_count(): 1
-    // hash.load_factor(): 0
+// hash.bucket_count(): 1
+// hash.load_factor(): 0
 
 hash.insert(500);
 cout << hash.bucket(500) << endl; // 5
 
-// 添加 100 个任意值 
+// 添加 100 个任意值
 fillHash(hash, 100);
 
 getInfo(hash);
-    // hash.bucket_count(): 109
-    // hash.load_factor(): 0.88908
+// hash.bucket_count(): 109
+// hash.load_factor(): 0.88908
 
 hash.rehash(500);
 
 getInfo(hash);
-    // hash.bucket_count(): 541
-    // hash.load_factor(): 0.17298
+// hash.bucket_count(): 541
+// hash.load_factor(): 0.17298
+
 cout << hash.bucket(500); // 500
 ```
 
 ### 哈希函数的细节
 
-通过成员函数 `max_load_factor`，你可以读取和设置`负载因子`。因此，你可以影响冲突和重哈的概率。我在上面的短示例中强调了一点：键 `500` 起初在第 5 个桶中，但在重哈后位于第 `500` 个桶中。
+通过成员函数 `max_load_factor`，你可以读取和设置负载因子。因此，你可以影响冲突和重哈的概率。我在上面的短示例中强调了一点：键 `500` 起初在第 5 个桶中，但在重哈后位于第 `500` 个桶中。
 
-# 6. 容器适配器
+## 6. 容器适配器
 
 ![Cippi 将形状放入箱中](img/Cippi----CippiBox.jpg)
 
-Cippi 将形状放入箱中
+Cippi 将形状放入箱中。
 
 ### 线性容器
 
@@ -2664,21 +2571,21 @@ C++ 拥有 `std::stack`、`std::queue` 和 `std::priority_queue` 三种特殊的
 
 ### 容器适配器
 
-* 为现有的序列容器提供精简接口，
-* 不能与标准模板库（STL）的算法配合使用，
-* 是类模板，以数据类型及其容器（`std::vector`、`std::list` 和 `std::deque`）为参数，
-* 默认使用 `std::deque` 作为内部序列容器：
+- 为现有的序列容器提供精简接口。
+- 不能与标准模板库（STL）的算法配合使用。
+- 是类模板，以数据类型及其容器（`std::vector`、`std::list` 和 `std::deque`）为参数。
+- 默认使用 `std::deque` 作为内部序列容器：
 
 ```cpp
-template <typename T, typename Container= deque<T>> 
+template <typename T, typename Container = deque<T>>
 class stack;
 ```
 
-#### Stack (栈)
+#### Stack（栈）
 
 ![](img/privat----stack.png)
 
-[`std::stack`](http://en.cppreference.com/w/cpp/container/stack) 遵循 LIFO 原则（**后**进**先**出，Last First Out）。栈 `sta` 需要头文件 `<stack>`，有三个特殊的成员函数。
+[`std::stack`](http://en.cppreference.com/w/cpp/container/stack) 遵循 LIFO 原则（后进先出，Last First Out）。栈 `sta` 需要头文件 `<stack>`，有三个特殊的成员函数。
 
 通过 `sta.push(e)`，你可以在栈顶插入新元素 `e`，通过 `sta.pop()` 从栈顶移除它，并通过 `sta.top()` 引用它。栈支持比较运算符并知道自己的大小。
 
@@ -2689,32 +2596,34 @@ class stack;
 ...
 std::stack<int> myStack;
 
-std::cout << myStack.empty() << '\n';   // true
-std::cout << myStack.size() << '\n';    // 0
+std::cout << myStack.empty() << '\n'; // true
+std::cout << myStack.size() << '\n'; // 0
 
 myStack.push(1);
 myStack.push(2);
 myStack.push(3);
-std::cout << myStack.top() << '\n';     // 3
+std::cout << myStack.top() << '\n'; // 3
 
-while (!myStack.empty()){ 
-  std::cout << myStack.top() << " ";
-  myStack.pop();
-}                                        // 3 2 1
+while (!myStack.empty()) {
+    std::cout << myStack.top() << " ";
+    myStack.pop();
+} // 3 2 1
 
-std::cout << myStack.empty() << '\n';   // true
-std::cout << myStack.size() << '\n';    // 0
+std::cout << myStack.empty() << '\n'; // true
+std::cout << myStack.size() << '\n'; // 0
 ```
 
-std::stack 
+`std::stack`
 
-#### Queue (队列)
+#### Queue（队列）
 
 ![](img/privat----queue.png)
 
-[`std::queue`](http://en.cppreference.com/w/cpp/container/queue) 遵循 FIFO 原则（**先**进**后**出，First In Out）。队列 `que` 需要头文件 `<queue>`，有四个特殊的成员函数。
+[`std::queue`](http://en.cppreference.com/w/cpp/container/queue) 遵循 FIFO 原则（先进后出，First In Out）。队列 `que` 需要头文件 `<queue>`，有四个特殊的成员函数。
 
 通过 `que.push(e)`，你可以在队列末尾插入新元素 `e`，通过 `que.pop()` 从队列移除第一个元素。`que.back()` 允许访问最后一个元素，`que.front()` 访问第一个元素。
+
+
 
 ```cpp
 // queue.cpp
@@ -2742,9 +2651,9 @@ std::cout << myQueue.empty() << '\n';   // true
 std::cout << myQueue.size() << '\n';    // 0
 ```
 
-std::queue 
+`std::queue`
 
-#### Priority Queue (优先队列)
+### Priority Queue（优先队列）
 
 ![](img/privat----priority_queue.png)
 
@@ -2775,10 +2684,6 @@ while (!myPriority.empty()){
 std::cout << myPriority.empty() << '\n';   // true
 std::cout << myPriority.size() << '\n';    // 0
 ```
-
-
-
-
 
 ```cpp
 // priorityQueue.cpp 
@@ -2820,11 +2725,11 @@ while (!myPriorityQueue2.empty()){
 
 `std::priority_queue`
 
-### 关联容器
+## 关联容器
 
-C++23 中的四种关联容器 `std::flat_map`、`std::flat_multimap`、`std::flat_set` 和 `std::set_multiset` 是 有序关联容器 `std::map`、`std::multimap`、`std::set` 和 `std::multiset` 的无缝替换。更准确地说，`std::flat_map` 是 `std::map` 的无缝替换，`std::flat_multimap` 是 `std::multimap` 的无缝替换，依此类推。
+C++23 中的四种关联容器 `std::flat_map`、`std::flat_multimap`、`std::flat_set` 和 `std::set_multiset` 是有序关联容器 `std::map`、`std::multimap`、`std::set` 和 `std::multiset` 的无缝替换。更准确地说，`std::flat_map` 是 `std::map` 的无缝替换，`std::flat_multimap` 是 `std::multimap` 的无缝替换，依此类推。
 
-扁平有序关联容器需要用于其键和值的独立 序列容器。该序列容器必须支持随机访问迭代器。默认情况下，使用 `std::vector`，但使用 `std::array` 或 `std::deque` 也是有效的。
+扁平有序关联容器需要用于其键和值的独立序列容器。该序列容器必须支持随机访问迭代器。默认情况下，使用 `std::vector`，但使用 `std::array` 或 `std::deque` 也是有效的。
 
 以下代码片段展示了 `std::flat_map` 和 `std::flat_set` 的声明。
 
@@ -2840,9 +2745,9 @@ template<class Key,
 class flat_set;
 ```
 
-扁平有序关联容器提供了与 有序关联容器不同的时空复杂度。扁平版本比其非扁平有序对应版本消耗更内存，且读取速度更快。下面的比较更详细地介绍了扁平与非扁平有序关联容器的细节。
+扁平有序关联容器提供了与有序关联容器不同的时空复杂度。扁平版本比其非扁平有序对应版本消耗更少内存，且读取速度更快。下面的比较更详细地介绍了扁平与非扁平有序关联容器的细节。
 
-#### `std::sorted_unique`
+### `std::sorted_unique`
 
 您可以在构造函数调用或成员函数 `insert` 中使用常量 `std::sorted_unique` 来指定元素已经是排序状态的。这提升了创建扁平有序关联容器或插入元素的性能。
 
@@ -2854,13 +2759,13 @@ std::flat_map myFlatMap = { std::sorted_unique, {1, 2, 3, 4, 5}, {10, 11, 1, 5, 
 
 对未排序的元素使用常量 `std::sorted_unique` 是未定义行为。
 
-# 7. 视图 (Views)
+# 7. 视图（Views）
 
 ![Cippi observes](img/Cippi----CippiGlasses.jpg)
 
 Cippi 观察
 
-### 连续访问
+## 连续访问
 
 `std::span` 代表引用连续对象序列的对象。`std::span`（有时也称为视图）永远不是所有者。这个连续对象序列可以是普通的 C 数组、带大小的指针、`std::array`、`std::vector` 或 `std::string`。您也可以访问子序列。
 
@@ -2871,37 +2776,25 @@ template <typename T, std::size_t Extent = std::dynamic_extent>
 class span;
 ```
 
-`std::span` 的定义
+`std::span` 的定义。
 
 下表展示了 `std::span` 的函数。
 
-`std::span sp` 的函数
+`std::span sp` 的函数：
 
-| **函数** | **描述** |
+| 函数 | 描述 |
 | --- | --- |
-|  |   |
 | `sp.front()` | 访问第一个元素。 |
-|  |   |
 | `sp.back()` | 访问最后一个元素。 |
-|  |   |
 | `sp[i]` | 访问第 `i` 个元素。 |
-|  |   |
 | `sp.data()` | 返回序列起始的指针。 |
-|  |   |
 | `sp.size()` | 返回序列的数量。 |
-|  |   |
 | `sp.size_bytes()` | 返回序列的字节大小。 |
-|  |   |
 | `sp.empty()` | 如果序列为空返回 `true`。 |
-|  |   |
 | `sp.first()` | 返回包含第一个元素的子视图。 |
-|  |   |
 | `sp.last()` | 返回包含最后元素的子视图。 |
-|  |   |
 | `sp.subspan(offset)` | 从 `offset` 开始的子视图。 |
-|  |   |
 | `sp.subspan(offset, count)` | 返回从 `offset` 开始且包含 `count` 个元素的子视图。 |
-|  |   |
 | `sp.subspan(first, last)` | 从 `first` 开始到 `last` 结束的子视图。 |
 
 ```cpp
@@ -2934,10 +2827,6 @@ int main() {
 }
 ```
 
-
-
-
-
 `std::mdspan` 的每个维度都可以有一个 `static extent`（静态范围）或 `dynamic extent`（动态范围）。`static extent` 意味着其长度在编译时指定；`dynamic extent` 意味着其长度在运行时指定。
 
 ```cpp
@@ -2951,23 +2840,23 @@ template<
 
 ## `std::mdspan` 定义
 
-- `T`: 对象的连续序列
-- `Extents`: 以其大小指定维度的数量；每个维度都可以有一个 `static extent` 或 `dynamic extent`
-- `LayoutPolicy`: 指定用于访问底层内存的布局策略
-- `AccessorPolicy`: 指定如何引用底层元素
+- `T`：对象的连续序列。
+- `Extents`：以其大小指定维度的数量；每个维度都可以有一个 `static extent` 或 `dynamic extent`。
+- `LayoutPolicy`：指定用于访问底层内存的布局策略。
+- `AccessorPolicy`：指定如何引用底层元素。
 
-得益于 C++17 中的[类模板参数推导 (CTAG)](https://en.cppreference.com/w/cpp/language/class_template_argument_deduction)，编译器通常可以自动推导出模板参数。
+得益于 C++17 中的[类模板参数推导（CTAG）](https://en.cppreference.com/w/cpp/language/class_template_argument_deduction)，编译器通常可以自动推导出模板参数。
 
 ```cpp
  1 // mdspan.cpp
  2 
-3 #include <mdspan>
+ 3 #include <mdspan>
  4 #include <iostream>
  5 #include <vector>
  6 
-7 int main() {
+ 7 int main() {
  8     
-9     std::vector myVec{1, 2, 3, 4, 5, 6, 7, 8};
+ 9     std::vector myVec{1, 2, 3, 4, 5, 6, 7, 8};
 10 
 11     std::mdspan m{myVec.data(), 2, 4};
 12     std::cout << "m.rank(): " << m.rank() << '\n';
@@ -2986,17 +2875,17 @@ template<
 25 
 26     for (std::size_t i = 0; i < m2.extent(0); ++i) {
 27         for (std::size_t j = 0; j < m2.extent(1); ++j) {
-28         std::cout << m2[i, j] << ' ';  
-29     }
-30     std::cout << '\n';
-31   }
+28             std::cout << m2[i, j] << ' ';  
+29         }
+30         std::cout << '\n';
+31     }
 32 
 33 }
 ```
 
 ## 二维数组
 
-在这个示例中应用了三次类模板参数推导。第 9 行将其用于 `std::vector`，第 11 行和 23 行用于 `std::mdspan`。第一个二维数组 `m` 的形状为 (2, 4)，第二个 `m2` 的形状为 (4, 2)。第 12 行和 24 行显示了两个 `std::mdspan` 的秩（rank）。受益于每个维度的范围（第 14 行和第 15 行）以及第 16 行中的索引运算符，遍历多维数组变得非常简单。
+在这个示例中应用了三次类模板参数推导。第 9 行将其用于 `std::vector`，第 11 行和第 23 行用于 `std::mdspan`。第一个二维数组 `m` 的形状为（2, 4），第二个 `m2` 的形状为（4, 2）。第 12 行和第 24 行显示了两个 `std::mdspan` 的秩（rank）。受益于每个维度的范围（第 14 行和第 15 行）以及第 16 行中的索引运算符，遍历多维数组变得非常简单。
 
 ![二维数组](img/privat----mdspan.png)
 
@@ -3004,31 +2893,35 @@ template<
 
 如果你的多维数组应该有一个 `static extent`，则你必须指定模板参数。
 
+
+
 ```cpp
- 1 // staticDynamicExtent.cpp
- 2 
-3 #include <mdspan>
- 4 ...
- 5 
-6 std::mdspan<int, std::extents<std::size_t, 2, 4>> m{myVec.data()}; // (1)
-7 std::cout << "m.rank(): " << m.rank() << '\n';
-8 
-9 for (std::size_t i = 0; i < m.extent(0); ++i) {
-10     for (std::size_t j = 0; j < m.extent(1); ++j) {
-11         std::cout << m[i, j] << ' ';  
-12     }
-13     std::cout << '\n';
-14 }
-15 std::mdspan<int, std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>>
-16             m2{myVec.data(), 4, 2}; // (2)
-17 std::cout << "m2.rank(): " << m2.rank() << '\n';
-18 
-19 for (std::size_t i = 0; i < m2.extent(0); ++i) {
-20     for (std::size_t j = 0; j < m2.extent(1); ++j) {
-21         std::cout << m2[i, j] << ' ';  
-22     }
-23 std::cout << '\n';
-24 }
+// staticDynamicExtent.cpp
+
+#include <mdspan>
+...
+
+std::mdspan<int, std::extents<std::size_t, 2, 4>> m{myVec.data()}; // (1)
+std::cout << "m.rank(): " << m.rank() << '\n';
+
+for (std::size_t i = 0; i < m.extent(0); ++i) {
+    for (std::size_t j = 0; j < m.extent(1); ++j) {
+        std::cout << m[i, j] << ' ';
+    }
+    std::cout << '\n';
+}
+
+std::mdspan<int, std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>>
+            m2{myVec.data(), 4, 2}; // (2)
+std::cout << "m2.rank(): " << m2.rank() << '\n';
+
+for (std::size_t i = 0; i < m2.extent(0); ++i) {
+    for (std::size_t j = 0; j < m2.extent(1); ++j) {
+        std::cout << m2[i, j] << ' ';
+    }
+    std::cout << '\n';
+}
+```
 
 ### 显式指定 `std::mdspan` 的模板参数
 
@@ -3043,37 +2936,41 @@ template<
 使用 `std::layout_right` 和 `std::layout_left` 布局遍历两个 `std::mdspan` 显示了差异。
 
 ```cpp
- 1 // mdspanLayout.cpp
- 2 ...
-3 #include <mdspan>
- 4
-5 std::vector myVec{1, 2, 3, 4, 5, 6, 7, 8};
- 6 
-7 std::mdspan<int,                                                 // (1)
-8     std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>, 
-9     std::layout_right> m{myVec.data(), 4, 2};                   
-10-std::cout << "m.rank(): " << m.rank() << '\n';
-11 
-12-for (std::size_t i = 0; i < m.extent(0); ++i) {
-13     for (std::size_t j = 0; j < m.extent(1); ++j) {
-14         std::cout << m[i, j] << ' ';  
-15     }
-16     std::cout << '\n';
-17 }
-18 
-19-std::cout << '\n';
-20 
-21-std::mdspan<int,                                                
-22-     std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>, 
-23-     std::layout_left> m2{myVec.data(), 4, 2};                 // (2)
-24-std::cout << "m2.rank(): " << m2.rank() << '\n';
-25 
-26-for (std::size_t i = 0; i < m2.extent(0); ++i) {
-27     for (std::size_t j = 0; j < m2.extent(1); ++j) {
-28         std::cout << m2[i, j] << ' ';  
-29     }
-30     std::cout << '\n';
-31 }
+// mdspanLayout.cpp
+
+...
+
+#include <mdspan>
+
+std::vector myVec{1, 2, 3, 4, 5, 6, 7, 8};
+
+std::mdspan<int,
+    std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>,
+    std::layout_right> m{myVec.data(), 4, 2};
+
+std::cout << "m.rank(): " << m.rank() << '\n';
+
+for (std::size_t i = 0; i < m.extent(0); ++i) {
+    for (std::size_t j = 0; j < m.extent(1); ++j) {
+        std::cout << m[i, j] << ' ';
+    }
+    std::cout << '\n';
+}
+
+std::cout << '\n';
+
+std::mdspan<int,
+    std::extents<std::size_t, std::dynamic_extent, std::dynamic_extent>,
+    std::layout_left> m2{myVec.data(), 4, 2};
+
+std::cout << "m2.rank(): " << m2.rank() << '\n';
+
+for (std::size_t i = 0; i < m2.extent(0); ++i) {
+    for (std::size_t j = 0; j < m2.extent(1); ++j) {
+        std::cout << m2[i, j] << ' ';
+    }
+    std::cout << '\n';
+}
 ```
 
 ### 使用带有 `std::layout_right` 和 `std::layout_left` 的 `std::mdspan`
@@ -3084,7 +2981,7 @@ template<
 
 ![带有 std::layout_left 的 std::mdspan](img/privat----mdspan.png)
 
-#### 带有 std::layout_left 的 std::mdspan
+#### 带有 `std::layout_left` 的 `std::mdspan`
 
 下表概述了 `std::mdspan` 的接口。
 
@@ -3110,9 +3007,9 @@ template<
 
 迭代器支持以下操作：
 
-- `*`: 返回当前位置的元素
-- `==, !=`: 比较两个位置
-- `=` 给迭代器分配新值
+- `*`：返回当前位置的元素
+- `==, !=`：比较两个位置
+- `=`：给迭代器分配新值
 
 基于范围的循环隐式使用迭代器。
 
@@ -3120,19 +3017,17 @@ template<
 
 ```cpp
 std::vector<int> verc{1, 23, 3, 3, 3, 4, 5};
+
 std::deque<int> deq;
 
 // 起迭代器大于结束迭代器
-std::copy(vec.begin()+2, vec.begin(), deq.begin());
+std::copy(vec.begin() + 2, vec.begin(), deq.begin());
 
 // 目标容器太小
 std::copy(vec.begin(), vec.end(), deq.end());
 ```
 
 ### 分类
-
-
-
 
 它们的能力可以将迭代器进行分类。迭代器的类别取决于所用容器的类型。C++ 具有正向、双向、随机访问和连续（contiguous）迭代器。使用正向迭代器，你可以正向遍历容器；使用双向迭代器，可以向两个方向遍历。随机访问迭代器允许直接访问任意元素。特别是，随机访问迭代器支持迭代器算术和排序比较（例如：`<`）。连续迭代器是一种随机访问迭代器，它要求容器的元素在内存中连续存储。
 
@@ -3142,30 +3037,26 @@ std::copy(vec.begin(), vec.end(), deq.end());
 
 | 迭代器类别 | 属性 | 容器 |
 | --- | --- | --- |
-| | | |
 | 正向迭代器 | `++It, It++, *It` | `std::unordered_set` |
-| | `It == It2, It != It2` | `std::unordered_map` |
-| | | `std::unordered_multiset` |
-| | | `std::unordered_multimap` |
-| | | `std::forward_list` |
-| | | |
+|  | `It == It2, It != It2` | `std::unordered_map` |
+|  |  | `std::unordered_multiset` |
+|  |  | `std::unordered_multimap` |
+|  |  | `std::forward_list` |
 | 双向迭代器 | `--It, It--` | `std::set` |
-| | | `std::map` |
-| | | `std::multiset` |
-| | | `std::multimap` |
-| | | `std::list` |
-| | | |
+|  |  | `std::map` |
+|  |  | `std::multiset` |
+|  |  | `std::multimap` |
+|  |  | `std::list` |
 | 随机访问迭代器 | `It[i]` | `std::deque` |
-| | `It+= n, It-= n` | |
-| | `It+n, It-n` | |
-| | `n+It` | |
-| | `It-It2` | |
-| | `It < It2, It <= It2, It > It2` | |
-| | `It >= It2` | |
-| | | |
-| 连续迭代器 | | `std::array` |
-| | | `std::vector` |
-| | | `std::string` |
+|  | `It += n, It -= n` |  |
+|  | `It + n, It - n` |  |
+|  | `n + It` |  |
+|  | `It - It2` |  |
+|  | `It < It2, It <= It2, It > It2` |  |
+|  | `It >= It2` |  |
+| 连续迭代器 |  | `std::array` |
+|  |  | `std::vector` |
+|  |  | `std::string` |
 
 输入迭代器和输出迭代器是特殊的正向迭代器：它们只能读写一次其指向的元素。
 
@@ -3174,140 +3065,162 @@ std::copy(vec.begin(), vec.end(), deq.end());
 每个容器都会根据请求生成其合适的迭代器。例如，`std::unordered_map` 会生成常量和非常量的正向迭代器。
 
 ```cpp
-std::unordered_map<std::string, int>::iterator unMapIt= unordMap.begin();
-std::unordered_map<std::string, int>::iterator unMapIt= unordMap.end();
+std::unordered_map<std::string, int>::iterator unMapIt = unordMap.begin();
 
-std::unordered_map<std::string, int>::const_iterator unMapIt= unordMap.cbegin();
-std::unordered_map<std::string, int>::const_iterator unMapIt= unordMap.cend();
+std::unordered_map<std::string, int>::iterator unMapIt = unordMap.end();
+
+std::unordered_map<std::string, int>::const_iterator unMapIt = unordMap.cbegin();
+
+std::unordered_map<std::string, int>::const_iterator unMapIt = unordMap.cend();
 ```
 
 此外，`std::map` 支持反向迭代器：
 
 ```cpp
-std::map<std::string, int>::reverse_iterator mapIt= map.rbegin();
-std::map<std::string, int>::reverse_iterator mapIt= map.rend();
+std::map<std::string, int>::reverse_iterator mapIt = map.rbegin();
 
-std::map<std::string, int>::const_reverse_iterator mapIt= map.crbegin();
-std::map<std::string, int>::const_reverse_iterator mapIt= map.crend();
+std::map<std::string, int>::reverse_iterator mapIt = map.rend();
+
+std::map<std::string, int>::const_reverse_iterator mapIt = map.crbegin();
+
+std::map<std::string, int>::const_reverse_iterator mapIt = map.crend();
 ```
 
 最后一个示例：
 
 ```cpp
 // iteratorCreation.cpp
-...
-using namespace std;
-...
-map<string, int> myMap{{"Rainer", 1966}, {"Beatrix", 1966}, {"Juliette", 1997},
-                      {"Marius", 1999}};
 
-auto endIt= myMap.end();
-for (auto mapIt= myMap.begin(); mapIt != endIt; ++mapIt) 
-     cout << "{" << mapIt->first << "," << mapIt->second << "}";
-         // {Beatrix,1966},{Juliette,1997},{Marius,1999},{Rainer,1966}
+...
+
+using namespace std;
+
+...
+
+map<string, int> myMap{
+    {"Rainer", 1966},
+    {"Beatrix", 1966},
+    {"Juliette", 1997},
+    {"Marius", 1999}
+};
+
+auto endIt = myMap.end();
+
+for (auto mapIt = myMap.begin(); mapIt != endIt; ++mapIt)
+    cout << "{" << mapIt->first << "," << mapIt->second << "}";
+
+// {Beatrix,1966},{Juliette,1997},{Marius,1999}
 
 vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9};
-vector<int>::const_iterator vecEndIt= myVec.end();
-vector<int>::iterator vecIt;
-for (vecIt= myVec.begin(); vecIt != vecEndIt; ++vecIt) cout << *vecIt << " ";
-        // 1 2 3 4 5 6 7 8 9
 
-vector<int>::const_reverse_iterator vecEndRevIt= myVec.rend();
+vector<int>::const_iterator vecEndIt = myVec.end();
+
+vector<int>::iterator vecIt;
+
+for (vecIt = myVec.begin(); vecIt != vecEndIt; ++vecIt)
+    cout << *vecIt << " ";
+
+// 1 2 3 4 5 6 7 8 9
+
+vector<int>::const_reverse_iterator vecEndRevIt = myVec.rend();
+
 vector<int>::reverse_iterator revIt;
-for (revIt= myVec.rbegin(); revIt != vecEndRevIt; ++revIt) cout << *revIt << " ";
-        // 9 8 7 6 5 4 3 2 1
+
+for (revIt = myVec.rbegin(); revIt != vecEndRevIt; ++revIt)
+    cout << *revIt << " ";
+
+// 9 8 7 6 5 4 3 2 1
 ```
 
 ## 有用函数
 
 全局函数 `std::begin`、`std::end`、`std::prev`、`std::next`、`std::distance` 和 `std::advance` 让处理迭代器变得容易。只有 `std::prev` 函数需要双向迭代器。所有函数都需要 `<iterator>` 头。下表提供了概述。
 
-迭代器的有用函数
+### 迭代器的有用函数
 
 | 全局函数 | 描述 |
 | --- | --- |
-| | |
 | `std::begin(cont)` | 返回指向 `cont` 的起始迭代器。 |
-| | |
 | `std::end(cont)` | 返回指向 `cont` 的结束迭代器。 |
-| | |
 | `std::rbegin(cont)` | 返回指向 `cont` 的反向起始迭代器。 |
-| | |
 | `std::rend(cont)` | 返回指向 `cont` 的反向结束迭代器。 |
-| | |
 | `std::cbegin(cont)` | 返回指向 `cont` 的常量起始迭代器。 |
-| | |
 | `std::cend(cont)` | 返回指向 `cont` 的常量结束迭代器。 |
-| | |
 | `std::crbegin(cont)` | 返回指向 `cont` 的常量反向起始迭代器。 |
-| | |
 | `std::crend(cont)` | 返回指向 `cont` 的常量反向结束迭代器。 |
-| | |
 | `std::prev(it)` | 返回指向 `it` 之前的迭代器。 |
-| | |
 | `std::next(it)` | 返回指向 `it` 之后的迭代器。 |
-| | |
 | `std::distance(fir, sec)` | 返回 `fir` 和 `sec` 之间的元素数量。 |
-| | |
 | `std::advance(it, n)` | 将 `it` 移动 `n` 个位置。 |
 
 这里是这些应用：
 
 ```cpp
 // iteratorUtilities.cpp
+
 ...
+
 #include <iostream>
 #include <iterator>
 #include <unordered_map>
 #include <map>
 #include <vector>
 #include <string>
+
 ...
+
 using namespace std;
 
-unordered_map<string, int> myMap{{"Rainer", 1966}, {"Beatrix", 1966}, {"Juliette", 1997},
-                                  {"Marius", 1999}};
+unordered_map<string, int> myMap{
+    {"Rainer", 1966},
+    {"Beatrix", 1966},
+    {"Juliette", 1997},
+    {"Marius", 1999}
+};
 
-auto endIt= myMap.end();
-for (auto mapIt= myMap.begin(); mapIt != endIt; ++mapIt) 
-     cout << "{" << mapIt->first << "," << mapIt->second << "}";
-         // {Beatrix,1966},{Juliette,1997},{Marius,1999},{Rainer,1966}
+auto endIt = myMap.end();
+
+for (auto mapIt = myMap.begin(); mapIt != endIt; ++mapIt)
+    cout << "{" << mapIt->first << "," << mapIt->second << "}";
+
+// {Beatrix,1966},{Juliette,1997},{Marius,1999}
 
 vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9};
-vector<int>::const_iterator vecEndIt= myVec.end();
-vector<int>::iterator vecIt;
-for (vecIt= myVec.begin(); vecIt != vecEndIt; ++vecIt) cout << *vecIt << " ";
-        // 1 2 3 4 5 6 7 8 9
 
-vector<int>::const_reverse_iterator vecEndRevIt= myVec.rend();
-vector<int>::reverse_iterator revIt;
-for (revIt= myVec.rbegin(); revIt != vecEndRevIt; ++revIt) cout << *revIt << " ";
-        // 9 8 7 6 5 4 3 2 1
+vector<int>::const_iterator vecEndIt = myVec.end();
+
+vector<int>::iterator vecIt;
+``` 
+
+
+
+```cpp
+for (revIt = myVec.rbegin(); revIt != vecEndRevIt; ++revIt)
+  cout << *revIt << " ";
+
+// 9 8 7 6 5 4 3 2 1
 ```
 
 ## 适配器
 
-迭代器适配器允许在插入模式或流中使用迭代器。它们需要 `<iterator>` 头。
+迭代器适配器允许在插入模式或流中使用迭代器。它们需要 `<iterator>` 头文件。
 
 ### 插入迭代器
 
-使用三个插入迭代器 `std::front_inserter`、`std::back_inserter` 和 `std::inserter`，你可以分别在容器的开头、末尾或任意位置插入元素。这三个迭代器在容器 `cont` 的底层成员函数上映射功能。元素的内存会自动分配。
+使用三个插入迭代器 `std::front_inserter`、`std::back_inserter` 和 `std::inserter`，你可以分别在容器的开头、末尾或任意位置插入元素。这三个迭代器将功能映射到底层容器 `cont` 的成员函数。元素的内存会自动分配。
 
-下表提供了两条信息：内部使用了容器的哪些成员函数，可以使用哪些迭代器取决于容器的类型。
+下表提供了两条信息：内部使用了容器的哪些成员函数，以及可以使用哪些迭代器取决于容器的类型。
 
-三个插入迭代器
+#### 三个插入迭代器
 
 | 名称 | 内部使用的成员函数 | 容器 |
 | --- | --- | --- |
-| | | |
 | `std::front_inserter(val)` | `cont.push_front(val)` | `std::deque` |
 | | | `std::list` |
-| | | |
 | `std::back_inserter(val)` | `cont.push_back(val)` | `std::vector` |
 | | | `std::deque` |
 | | | `std::list` |
 | | | `std::string` |
-| | | |
 | `std::inserter(val, pos)` | `cont.insert(pos, val)` | `std::vector` |
 | | | `std::deque` |
 | | | `std::list` |
@@ -3317,116 +3230,149 @@ for (revIt= myVec.rbegin(); revIt != vecEndRevIt; ++revIt) cout << *revIt << " "
 
 你可以将 STL 中的算法与这三个插入迭代器结合使用。
 
-
-
-
-
 ```cpp
 #include <iterator>
+
 ...
+
 std::deque<int> deq{5, 6, 7, 10, 11, 12};
+
 std::vector<int> vec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
 std::copy(std::find(vec.begin(), vec.end(), 13),
           vec.end(), std::back_inserter(deq));
 
-for (auto d: deq) std::cout << d << " ";
-                    // 5 6 7 10 11 12 13 14 15
+for (auto d : deq)
+  std::cout << d << " ";
+
+// 5 6 7 10 11 12 13 14 15
 
 std::copy(std::find(vec.begin(), vec.end(), 8),
-std::find(vec.begin(), vec.end(), 10),
-std::inserter(deq,
-std::find(deq.begin(), deq.end(), 10)));d
-for (auto d: deq) std::cout << d << " ";
-                    // 5 6 7 8 9 10 11 12 13 14 15
+          std::find(vec.begin(), vec.end(), 10),
+          std::inserter(deq, std::find(deq.begin(), deq.end(), 10)));
 
-std::copy(vec.rbegin()+11, vec.rend(),
-std::front_inserter(deq));
-for (auto d: deq) std::cout << d << " ";
-                    // 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+for (auto d : deq)
+  std::cout << d << " ";
+
+// 5 6 7 8 9 10 11 12 13 14 15
+
+std::copy(vec.rbegin() + 11, vec.rend(),
+          std::front_inserter(deq));
+
+for (auto d : deq)
+  std::cout << d << " ";
+
+// 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 ```
 
-## 流迭代器 (Stream Iterators)
+## 流迭代器（Stream Iterators）
 
-流迭代器适配器可以使用流作为数据源或数据汇。C++ 提供了两个函数来创建 istream 迭代器，以及两个来创建 ostream 迭代器。创建的 istream 迭代器行为类似于输入迭代器 (#chap09.xhtml_textXXXinputSSSiteratorZZZoutputSSSiterator)，而 ostream 迭代器行为类似于插入迭代器 (#chap09.xhtml_textXXXinputSSSiteratorZZZoutputSSSiterator)。
+流迭代器适配器可以使用流作为数据源或数据汇。C++ 提供了两个函数来创建 `istream` 迭代器，以及两个函数来创建 `ostream` 迭代器。创建的 `istream` 迭代器行为类似于输入迭代器，而 `ostream` 迭代器行为类似于插入迭代器。
 
 ### 四种流迭代器
 
 | 函数 | 描述 |
 | --- | --- |
 | `std::istream_iterator<T>` | 创建一个流结束迭代器。 |
-| `std::istream_iterator<T>(istream)` | 为 `istream` 创建一个 istream 迭代器。 |
-| `std::ostream_iterator<T>(ostream)` | 为 `ostream` 创建一个 ostream 迭代器 |
-| `std::ostream_iterator<T>(ostream, delim)` | 为带有分隔符 `delim` 的 `ostream` 创建一个 ostream 迭代器。 |
+| `std::istream_iterator<T>(istream)` | 为 `istream` 创建一个 `istream` 迭代器。 |
+| `std::ostream_iterator<T>(ostream)` | 为 `ostream` 创建一个 `ostream` 迭代器。 |
+| `std::ostream_iterator<T>(ostream, delim)` | 为带有分隔符 `delim` 的 `ostream` 创建一个 `ostream` 迭代器。 |
 
-得益流迭代器适配器，你可以直接从流读取或向流写入。
+得益于流迭代器适配器，你可以直接从流读取或向流写入。
 
 以下交互式程序片段循环从 `std::cin` 读取自然数，并将它们推入向量 `myIntVec`。如果输入不是自然数，输入流将发生错误。`myIntVec` 中的所有数字都被复制到 `std::cout`，并用 `:` 分隔。现在你可以在控制台上看到结果了。
 
 ```cpp
 #include <iterator>
+
 ...
+
 std::vector<int> myIntVec;
+
 std::istream_iterator<int> myIntStreamReader(std::cin);
+
 std::istream_iterator<int> myEndIterator;
 
 // 可能的输入
+
 // 1
+
 // 2
+
 // 3
+
 // 4
+
 // z
-while(myIntStreamReader != myEndIterator){ 
+
+while (myIntStreamReader != myEndIterator) {
   myIntVec.push_back(*myIntStreamReader);
   ++myIntStreamReader;
 }
 
-std::copy(myIntVec.begin(), myIntVec.end(), 
+std::copy(myIntVec.begin(), myIntVec.end(),
           std::ostream_iterator<int>(std::cout, ":"));
-          // 1:2:3:4:
+
+// 1:2:3:4:
 ```
 
-# 9. 可调用单元 (Callable Units)
+# 9. 可调用单元（Callable Units）
 
 ![Cippi 滑滑滑滑梯](img/Cippi----CippiLambda.jpg)
 
 Cippi 滑滑滑滑梯
 
-许多 STL 算法和容器可以使用可调用单元（短可调用）进行参数化。可调用是指行为像函数的东西。这不仅包括函数，还包括函数对象和 lambda 函数。谓词是返回布尔结果的特殊函数。如果谓词有一个参数，则称为一元谓词。如果谓词有两个参数，则称为二元谓词。函数也是如此。接受一个参数的函数是一元函数；接受两个参数的函数是二元函数。
+许多 STL 算法和容器可以使用可调用单元（简称可调用对象）进行参数化。可调用对象是指行为像函数的东西。这不仅包括函数，还包括函数对象和 lambda 函数。
 
-### 函数 (Functions)
+谓词是返回布尔结果的特殊函数。如果谓词有一个参数，则称为一元谓词；如果谓词有两个参数，则称为二元谓词。函数也是如此。接受一个参数的函数是一元函数；接受两个参数的函数是二元函数。
 
-函数是最简单的可调用对象。除了静态变量外，它们没有状态。因为函数的定义通常与其使用相隔较远甚至在不同的编译单元，编译器优化结果代码的机会较少。
+## 函数（Functions）
+
+函数是最简单的可调用对象。除了静态变量外，它们没有状态。因为函数的定义通常与其使用相隔较远，甚至位于不同的编译单元中，编译器优化结果代码的机会较少。
 
 ```cpp
-void square(int& i){ i = i*i; }
+void square(int& i) {
+  i = i * i;
+}
+
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 std::for_each(myVec.begin(), myVec.end(), square);
-for (auto v: myVec) std::cout << v << " ";      // 1 4 9 16 25 36 49 64 81 100
+
+for (auto v : myVec)
+  std::cout << v << " ";
+
+// 1 4 9 16 25 36 49 64 81 100
 ```
 
-### 函数对象 (Function Objects)
+## 函数对象（Function Objects）
 
-起初，不要称它们为[演算](https://en.wikipedia.org/wiki/Functor)。那是范畴论中一个定义良好的术语。[函数对象](https://en.cppreference.com/w/cpp/utility) 是行为像函数的对象。由于函数对象是对象，它们可以拥有属性和状态。它们通过实现的 `operator()` 来实现这一点。
+起初，不要称它们为[演算](https://en.wikipedia.org/wiki/Functor)。那是范畴论中一个定义良好的术语。[函数对象](https://en.cppreference.com/w/cpp/utility) 是行为像函数的对象。由于函数对象是对象，它们可以拥有属性和状态。它们通过实现 `operator()` 来实现这一点。
 
 ```cpp
-struct Square{
-  void operator()(int& i){i= i*i;}
+struct Square {
+  void operator()(int& i) {
+    i = i * i;
+  }
 };
 
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 std::for_each(myVec.begin(), myVec.end(), Square());
-for (auto v: myVec) std::cout << v << " "; // 1 4 9 16 25 36 49 64 81 100
+
+for (auto v : myVec)
+  std::cout << v << " ";
+
+// 1 4 9 16 25 36 49 64 81 100
 ```
 
-#### 预定义函数对象 (Predefined Function Objects)
+### 预定义函数对象（Predefined Function Objects）
 
-C++ 许多许多定义的函数对象。它们需要 `<functional>` 头文件。这些函数对象有助于改变容器的默认行为。例如，有序容器默认使用 `std::less` 排序。你可能想使用 `std::greater`。
+C++ 定义了许多函数对象。它们需要 `<functional>` 头文件。这些函数对象有助于改变容器的默认行为。例如，有序容器默认使用 `std::less` 排序。你可能想使用 `std::greater`。
 
 ```cpp
 std::map<int, std::string> myDefaultMap; // std::less<int>
+
 std::map<int, std::string, std::greater<int>> mySpecialMap; // std::greater<int>
 ```
 
@@ -3435,117 +3381,138 @@ std::map<int, std::string, std::greater<int>> mySpecialMap; // std::greater<int>
 | 函数对象 | 代表 |
 | --- | --- |
 | 取反 | `std::negate<T>()` |
-| 算术 | `std::plus<T>()`, `std::minus<T>()`, `std::plies<T>()`, `std::divides<T>()`, `std::modulus<T>()` |
-| 比较 | `std::equal_to<T>()`, `std::less<T>()`, `std::greater<T>()`, `std::less_equal<T>()` |
-| 逻辑 | `std::logical_not<T>()`, `std::logical_and<T>()`, `std::logical_or<T>()` |
-| 位运算 | `std::bit_and<T>()`, `std::bit_or<T>()`, `std::bit_xor<T>()` |
+| 算术 | `std::plus<T>()`、`std::minus<T>()`、`std::plies<T>()`、`std::divides<T>()`、`std::modulus<T>()` |
+| 比较 | `std::equal_to<T>()`、`std::less<T>()`、`std::greater<T>()`、`std::less_equal<T>()` |
+| 逻辑 | `std::logical_not<T>()`、`std::logical_and<T>()`、`std::logical_or<T>()` |
+| 位运算 | `std::bit_and<T>()`、`std::bit_or<T>()`、`std::bit_xor<T>()` |
 
-### Lambda 函数 (Lambda Functions)
+## Lambda 函数（Lambda Functions）
 
-[Lambda 函数](https://en.cppreference.com/w/cpp/language) 提供就地功能。Lambda 函数可以按值或引用接收参数。它们可以按值、引用以及 C++14 的移动捕获环境。编译器获得了大量洞察并具有良好的优化潜力。
+[Lambda 函数](https://en.cppreference.com/w/cpp/language) 提供就地功能。Lambda 函数可以按值或引用接收参数。它们可以按值、按引用以及在 C++14 中按移动方式捕获环境。编译器获得了大量洞察并具有良好的优化潜力。
 
 ```cpp
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-std::for_each(myVec.begin(), myVec.end(), [](int& i){ i= i; });
-                                        // 1 4 9 16 25 36 49 64 81 100
+
+std::for_each(myVec.begin(), myVec.end(),
+              [](int& i) {
+                i = i;
+              });
+
+// 1 4 9 16 25 36 49 64 81 100
 ```
 
-# 10. 算法 (Algorithms)
+# 10. 算法（Algorithms）
 
 ![Cippi 自己](img/Cippi----CippiParallel.jpg)
 
 Cippi 自己
 
-标准模板库有许多算法](https://en.cppreference.com/w/cpp/algorithm) 用于容器及其元素。由于算法是函数模板，它们独立于容器元素的类型。容器和算法之间的胶水是迭代器 (#chap09.xhtml_chapterXXXIterators)。如果你的容器支持 STL 容器接口，就可以将算法应用于你的容器。
+标准模板库有许多[算法](https://en.cppreference.com/w/cpp/algorithm)，用于容器及其元素。由于算法是函数模板，它们独立于容器元素的类型。容器和算法之间的胶水是迭代器。如果你的容器支持 STL 容器接口，就可以将算法应用于你的容器。
 
 ```cpp
-// algorithm.cpp 
+// algorithm.cpp
+
 ...
+
 #include <algorithm>
+
 ...
+
 template <typename Cont, typename T>
-void doTheSame(Cont cont, T t){
-  for (auto c: cont) std::cout << c << " ";
+void doTheSame(Cont cont, T t) {
+  for (auto c : cont)
+    std::cout << c << " ";
+
   std::cout << cont.size() << '\n';
+
   std::reverse(cont.begin(), cont.end());
-  for (auto c: cont) std::cout << c << " ";
+
+  for (auto c : cont)
+    std::cout << c << " ";
+
   std::reverse(cont.begin(), cont.end());
-  for (auto c: cont) std::cout << c << " ";
-  auto It= std::find(cont.begin(), cont.end(), t);
+
+  for (auto c : cont)
+    std::cout << c << " ";
+
+  auto It = std::find(cont.begin(), cont.end(), t);
+
   std::reverse(It, cont.end());
-  for (auto c: cont) std::cout << c << " ";
+
+  for (auto c : cont)
+    std::cout << c << " ";
 }
 
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
 std::deque<std::string> myDeq({"A", "B", "C", "D", "E", "F", "G", "H", "I"});
+
 std::list<char> myList({'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'});
 
 doTheSame(myVec, 5);
-  // 1 2 3 4 5 6 7 8 9 10
-  // 10 
-  // 10 9 8 7 6 5 4 3 2 1
-  // 1 2 3 4 5 6 7 8 9 10
+
+// 1 2 3 4 5 6 7 8 9 10
+// 10
+// 10 9 8 7 6 5 4 3 2 1
+// 1 2 3 4 5 6 7 8 9 10
 
 doTheSame(myDeq, "D");
-  // A B C D E F G H I
-  // 9
-  // I H G F E D C B A
-  // A B C D E F G H I
-  // A B C I G F E D
+
+// A B C D E F G H I
+// 9
+// I H G F E D C B A
+// A B C D E F G H I
+// A B C I G F E D
 
 doTheSame(myList, 'd');
-  // a b c d e f g h
-  // 8
-  // h g f e d c b a
-  // a b c d e f g h
-  // a b c h g f e d
+
+// a b c d e f g h
+// 8
+// h g f e d c b a
+// a b c d e f g h
+// a b c h g f e d
 ```
 
-Generic programming with the algorithm
-
-
-
-
+## 使用算法进行泛型编程
 
 ## 约定
 
 在使用算法时，你必须在心中记住一些规则。
 
-算法定义在不同的头文件中。
+算法定义在不同的头文件中：
 
-`<algorithm>`
-包含了通用算法。
-
-`<numeric>`
-包含了数值算法。
+- `<algorithm>` 包含了通用算法。
+- `<numeric>` 包含了数值算法。
 
 许多算法带有 `_if` 和 `_copy` 后缀。
 
-### \_if
-该算法可以通过谓词 进行参数化。
+### `_if`
 
-### \_copy
+该算法可以通过谓词进行参数化。
+
+### `_copy`
+
 该算法将其元素复制到另一个范围内。
 
-诸如 `auto num= std::count(InpIt first, InpIt last, const T& val)` 类的算法返回等于 `val` 的元素个数。`num` 的类型为 `iterator_traits<InpIt>::difference_type`。你可以保证 `num` 足够容结果。得益于 `auto` 的自动返回类型推导，编译器将为你提供正确的类型。
+诸如 `auto num = std::count(InpIt first, InpIt last, const T& val)` 的算法返回等于 `val` 的元素个数。`num` 的类型为 `iterator_traits<InpIt>::difference_type`。你可以保证 `num` 足够容纳结果。得益于 `auto` 的自动返回类型推导，编译器将为你提供正确的类型。
 
 ## 迭代器是胶合剂
 
 迭代器定义了算法作用的容器范围。它们描述了一个*半开*区间。在*半开*区间中，起始迭代器指向开头，而结束迭代器指向范围之后的一个位置。
 
-迭代器可以根据其能力进行分类。参见迭代器章节的分类部分。算法为迭代器提供了条件。在 `std::rotate` 的情况下，大多数时候一个前向迭代器 就足够了。但对于 `std::reverse` 则如此。`std::reverse` 需要双向迭代器。
+迭代器可以根据其能力进行分类。参见迭代器章节的分类部分。算法为迭代器提供了条件。在 `std::rotate` 的情况下，大多数时候一个前向迭代器就足够了。但对于 `std::reverse` 则不是如此。`std::reverse` 需要双向迭代器。
 
 ## 顺序、并行或向量化的并行执行
 
-使用 C++17 中的执行策略，你可以指定算法应该顺序执行、并行执行还是带向量化的并行执行。
+使用 C++17 中的执行策略，你可以指定算法应该顺序执行、并行执行，还是带向量化的并行执行。
 
 ### 执行策略
 
-策略标签指定算法应该顺序执行、并行执行还是带向量化的并行执行。
+策略标签指定算法应该顺序执行、并行执行，还是带向量化的并行执行。
 
-* `std::execution::seq`：顺序执行算法。
-* `std::execution::par`：在多个线程上并行执行算法。
-* `std::execution::par_unseq`：在多个线程上并行执行算法并允许单个循环的交替执行；允许带有 [SIMD](https://en.wikipedia.org/wiki/SIMD)（**单**指令**多**数据**）**扩展的向量化版本。
+- `std::execution::seq`：顺序执行算法。
+- `std::execution::par`：在多个线程上并行执行算法。
+- `std::execution::par_unseq`：在多个线程上并行执行算法并允许单个循环的交替执行；允许带有 [SIMD](https://en.wikipedia.org/wiki/SIMD)（单指令多数据）扩展的向量化版本。
 
 以下代码片段展示了所有的执行策略。
 
@@ -3565,51 +3532,52 @@ std::sort(std::execution::par, v.begin(), v.end());
 std::sort(std::execution::par_unseq, v.begin(), v.end());
 ```
 
-执行策略
+
+
+# 执行策略
 
 示例显示你仍然可以使用不带执行策略的经典 `std::sort` 变体。此外，在 C++17 中，你可以显式指定使用顺序、并行还是并行且向量化的版本。
 
 STL 中的 77 个算法可以通过执行策略进行参数化。
 
-### 带有并行版本的算法
+## 带有并行版本的算法
 
 这里是带有并行版本的 77 个算法。
 
-带有并行版本的 77 个算法：
-
-| std::adjacent_difference | std::adjacent_find | std::all_of |
+| `std::adjacent_difference` | `std::adjacent_find` | `std::all_of` |
 | :--- | :--- | :--- |
-| std::any_of | std::copy | std::copy_if |
-| std::copy_n | std::count | std::count_if |
-| std::equal | std::exclusive_scan | std::fill |
-| std::fill_n | std::find | std::find_end |
-| std::find_first_of | std::find_if | std::find_if_not |
-| std::for_each | std::for_each_n | std::generate |
-| std::generate_n | std::includes | std::inclusive_scan |
-| std::inner_product | std::inplace_merge | std::is_heap |
-| std::is_heap_until | std::is_partitioned | std::is_sorted |
-| std::is_sorted_until | std::lexicographical_compare | std::max_element |
-| std::merge | std::min_element | std::minmax_element |
-| std::mismatch | std::move | std::none_of |
-| std::nth_element | std::partial_sort | std::partial_sort_copy |
-| std::partition | std::partition_copy | std::reduce |
-| std::remove | std::remove_copy | std::remove_copy_if |
-| std::remove_if | std::replace | std::replace_copy |
-| std::replace_copy_if | std::replace_if | std::reverse |
-| std::reverse_copy | std::rotate | std::rotate_copy |
-| std::search | std::search_n | std::set_difference |
-| std::set_intersection | std::set_symmetric_difference | std::set_union |
-| std::sort | std::stable_partition | std::stable_sort |
-| std::swap_ranges | std::transform | std::transform_exclusive_scan |
-| std::transform_inclusive_scan | std::uninitialized_copy | std::uninitialized_fill |
-| std::uninitialized_fill_n | std::unique |
+| `std::any_of` | `std::copy` | `std::copy_if` |
+| `std::copy_n` | `std::count` | `std::count_if` |
+| `std::equal` | `std::exclusive_scan` | `std::fill` |
+| `std::fill_n` | `std::find` | `std::find_end` |
+| `std::find_first_of` | `std::find_if` | `std::find_if_not` |
+| `std::for_each` | `std::for_each_n` | `std::generate` |
+| `std::generate_n` | `std::includes` | `std::inclusive_scan` |
+| `std::inner_product` | `std::inplace_merge` | `std::is_heap` |
+| `std::is_heap_until` | `std::is_partitioned` | `std::is_sorted` |
+| `std::is_sorted_until` | `std::lexicographical_compare` | `std::max_element` |
+| `std::merge` | `std::min_element` | `std::minmax_element` |
+| `std::mismatch` | `std::move` | `std::none_of` |
+| `std::nth_element` | `std::partial_sort` | `std::partial_sort_copy` |
+| `std::partition` | `std::partition_copy` | `std::reduce` |
+| `std::remove` | `std::remove_copy` | `std::remove_copy_if` |
+| `std::remove_if` | `std::replace` | `std::replace_copy` |
+| `std::replace_copy_if` | `std::replace_if` | `std::reverse` |
+| `std::reverse_copy` | `std::rotate` | `std::rotate_copy` |
+| `std::search` | `std::search_n` | `std::set_difference` |
+| `std::set_intersection` | `std::set_symmetric_difference` | `std::set_union` |
+| `std::sort` | `std::stable_partition` | `std::stable_sort` |
+| `std::swap_ranges` | `std::transform` | `std::transform_exclusive_scan` |
+| `std::transform_inclusive_scan` | `std::uninitialized_copy` | `std::uninitialized_fill` |
+| `std::uninitialized_fill_n` | `std::unique` |  |
 
-## for_each
+## `for_each`
 
 `std::for_each` 将一元调用目标应用于范围内的每个元素。输入迭代器提供了该范围。
 
 ```cpp
 UnFunc std::for_each(InpIt first, InpIt second)
+
 void std::for_each(ExePol pol, FwdIt first, FwdIt second)
 ```
 
@@ -3617,6 +3585,7 @@ void std::for_each(ExePol pol, FwdIt first, FwdIt second)
 
 ```cpp
 InpIt std::for_each_n(InpIt first, InpIt second, UnFunc func)
+
 void std::for_each_n(ExePol pol, FwdIt first, FwdIt second)
 ```
 
@@ -3632,12 +3601,15 @@ void std::for_each_n(ExePol pol, FwdIt first, FwdIt second)
 
 ```cpp
 InpIt find(InpIt first, InpIt last, const T& val)
+
 InpIt find(ExePol pol, FwdIt first, FwdIt last, const T& val)
 
 InpIt find_if(InpIt first, InpIt last, UnPred pred)
+
 InpIt find_if(ExePol pol, FwdIt first, FwdIt last, UnPred pred)
 
 InpIt find_if_not(InpIt first, InpIt last, UnPred pre)
+
 InpIt find_if_not(ExePol pol, FwdIt first, FwdIt last, UnPred pre)
 ```
 
@@ -3646,26 +3618,26 @@ InpIt find_if_not(ExePol pol, FwdIt first, FwdIt last, UnPred pre)
 ```cpp
 FwdIt1 find_first_of(InpIt1 first1, InpIt1 last1, 
                      FwdIt2 first2, FwdIt2 last2)
+
 FwdIt1 find_first_of(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
-                    FwdIt2 first2, FwdIt2 last2)
+                     FwdIt2 first2, FwdIt2 last2)
 
 FwdIt1 find_first_of(InpIt1 first1, InpIt1 last1, 
                      FwdIt2 first2, FwdIt2 last2, BiPre pre)
+
 FwdIt1 find_first_of(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
                      FwdIt2 first2, FwdIt2 last2, BiPre pre)
 ```
 
 返回范围内内相邻且相同的元素：
 
-
-
-
-
-```
+```cpp
 FwdIt adjacent_find(FwdIt first, FwdIt last)
+
 FwdIt adjacent_find(ExePol pol, FwdIt first, FwdIt last)
 
 FwdIt adjacent_find(FwdIt first, FwdI last, BiPre pre)
+
 FwdIt adjacent_find(ExePol pol, FwdIt first, FwdI last, BiPre pre)
 ```
 
@@ -3673,40 +3645,59 @@ FwdIt adjacent_find(ExePol pol, FwdIt first, FwdI last, BiPre pre)
 
 ```cpp
 // find.cpp
+
 ...
+
 #include <algorithm>
+
 ...
+
 using namespace std;
 
 bool isVowel(char c){
+
   string myVowels{"aeiouäöü"};
+
   set<char> vowels(myVowels.begin(), myVowels.end());
+
   return (vowels.find(c) != vowels.end());
+
 }
 
 list<char> myCha{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+
 int cha[]= {'A', 'B', 'C'};
 
 cout << *find(myCha.begin(), myCha.end(), 'g');             // g
+
 cout << *find_if(myCha.begin(), myCha.end(), isVowel);      // a
+
 cout << *find_if_not(myCha.begin(), myCha.end(), isVowel);  // b
 
 auto iter= find_first_of(myCha.begin(), myCha.end(), cha, cha + 3);
+
 if (iter == myCha.end()) cout << "None of A, B or C.";      // None of A, B or C.
+
 auto iter2= find_first_of(myCha.begin(), myCha.end(), cha, cha+3, 
+
             [](char a, char b){ return toupper(a) == toupper(b); });
 
 if (iter2 != myCha.end()) cout << *iter2;                   // a
+
 auto iter3= adjacent_find(myCha.begin(), myCha.end());
+
 if (iter3 == myCha.end()) cout << "No same adjacent chars."; 
+
                                         // No same adjacent chars.
 
 auto iter4= adjacent_find(myCha.begin(), myCha.end(),
+
             [](char a, char b){ return isVowel(a) == isVowel(b); });
+
 if (iter4 != myCha.end()) cout << *iter4;                   // b
 ```
 
-`std::find`, `std::find_if`, `std::find_if_not`, `std::find_of` 和 `std::adjacent_fint`
+`std::find`、`std::find_if`、`std::find_if_not`、`std::find_of` 和 `std::adjacent_fint`
 
 ### 计数元素
 
@@ -3716,9 +3707,11 @@ if (iter4 != myCha.end()) cout << *iter4;                   // b
 
 ```cpp
 Num count(InpIt first, InpIt last, const T& val)
+
 Num count(ExePol pol, FwdIt first, FwdIt last, const T& val)
 
 Num count_if(InpIt first, InpIt last, UnPred pre)
+
 Num count_if(ExePol pol, FwdIt first, FwdIt last, UnPred pre)
 ```
 
@@ -3726,12 +3719,19 @@ Num count_if(ExePol pol, FwdIt first, FwdIt last, UnPred pre)
 
 ```cpp
 // count.cpp 
+
 ...
+
 #include <algorithm>
+
 ...
+
 std::string str{"abcdabAAAaefaBqeaBCQEaadsfdewAAQAaafbd"};
+
 std::cout << std::count(str.begin(), str.end(), 'a');              // 9
+
 std::cout << std::count_if(str.begin(), str.end(),              
+
                            [](char a){ return std::isupper(a); }); // 12
 ```
 
@@ -3745,6 +3745,7 @@ std::cout << std::count_if(str.begin(), str.end(),
 
 ```cpp
 bool all_of(InpIt first, InpIt last, UnPre pre)
+
 bool all_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
@@ -3752,6 +3753,7 @@ bool all_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 
 ```cpp
 bool any_of(InpIt first, InpIt last, UnPre pre)
+
 bool any_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
@@ -3759,6 +3761,7 @@ bool any_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 
 ```cpp
 bool none_of(InpIt first, InpIt last, UnPre pre)
+
 bool none_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
@@ -3766,17 +3769,25 @@ bool none_of(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 
 ```cpp
 // allAnyNone.cpp 
+
 ...
+
 #include <algorithm>
+
 ...
+
 auto even= [](int i){ return i%2; };
+
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9};
+
 std::cout << std::any_of(myVec.begin(), myVec.end(), even);  // true
+
 std::cout << std::all_of(myVec.begin(), myVec.end(), even);  // false
+
 std::cout << std::none_of(myVec.begin(), myVec.end(), even);  // true
 ```
 
-`std::all_of`, `std::any_of`, `std::none_of`
+`std::all_of`、`std::any_of`、`std::none_of`
 
 ### 比较范围
 
@@ -3786,9 +3797,11 @@ std::cout << std::none_of(myVec.begin(), myVec.end(), even);  // true
 
 ```cpp
 bool equal(InpIt first, InpIt last)
+
 bool equal(ExePol pol, FwdIt first, FwdIt last)
 
 bool equal(InpIt first, InpIt last, BiPre pred)
+
 bool equal(ExePol pol, FwdIt first, FwdIt last, BiPre pred)
 ```
 
@@ -3796,9 +3809,11 @@ bool equal(ExePol pol, FwdIt first, FwdIt last, BiPre pred)
 
 ```cpp
 bool lexicographical_compare(InpIt first1, InpIt last1, InpIt first2, InpIt last2)
+
 bool lexicographical_compare(ExePol pol, FwdIt first1, FwdIt last1, FwdIt first2, FwdIt last2)
 
 bool lexicographical_compare(InpIt first1, InpIt last1, InpIt first2, InpIt last2, BiPre pred)
+
 bool lexicographical_compare(ExePol pol, FwdIt first1, FwdIt last1, FwdIt first2, FwdIt last2, BiPre pred)
 ```
 
@@ -3806,9 +3821,11 @@ bool lexicographical_compare(ExePol pol, FwdIt first1, FwdIt last1, FwdIt first2
 
 ```cpp
 auto lexicographical_compare_three_way(InpIt first1, InpIt last1, InpIt first2, InpIt last2)
+
 auto lexicographical_compare_three_way(ExePol pol, FwdIt first1, FwdIt last1, FwdIt first2, FwdIt last2)
 
 auto lexicographical_compare_three_way(InpIt first1, InpIt last1, InpIt first2, InpIt last2, BiPre pred)
+
 auto lexicographical_compare_three_way(ExePol pol, FwdIt first1, FwdIt last1, FwdIt first2, FwdIt last2, BiPre pred)
 ```
 
@@ -3816,45 +3833,66 @@ auto lexicographical_compare_three_way(ExePol pol, FwdIt first1, FwdIt last1, Fw
 
 ```cpp
 pair<InpIt, InpIt> mismatch(InpIt first1, InpIt last1)
+
 pair<InpIt, InpIt> mismatch(ExePol pol, FwdIt first1, FwdIt last1)
 
 pair<InpIt, InpIt> mismatch(InpIt first1, InpIt last1, BiPre pred)
+
 pair<InpIt, InpIt> mismatch(ExePol pol, FwdIt first1, FwdIt last1, BiPre pred)
 ```
 
+```cpp
+// equalLexicographicalMismatch.cpp
 
+...
+
+#include <algorithm>
+
+...
+
+using namespace std;
+
+string str1{"Only For Testing Purpose." };
+```
 
 
 
 ```cpp
-// equalLexicographicalMismatch.cpp
-...
-#include <algorithm>
-...
-using namespace std;
+string str2{"only for testing purpose."};
 
-string str1{"Only For Testing Purpose." };
-string str2{"only for testing purpose." };
 cout << equal(str1.begin(), str1.end(), str2.begin());  // false
-cout << equal(str1.begin(), str1.end(), str2.begin(),
-              [](char c1, char c2){ return toupper(c1) == toupper(c2);} ); 
-                                          // true
 
-str1= {"Only for testing Purpose." };
-str2= {"Only for testing purpose." };
-auto pair= mismatch(str1.begin(), str1.end(), str2.begin());
-if (pair.first != str1.end()){
-  cout << distance(str1.begin(), pair.first)
-       << "at (" << *pair.first << "," << *pair.second << ")";  // 17 at (P,p)
+cout << equal(
+    str1.begin(),
+    str1.end(),
+    str2.begin(),
+    [](char c1, char c2) { return toupper(c1) == toupper(c2); }
+);  // true
+
+str1 = {"Only for testing Purpose."};
+
+str2 = {"Only for testing purpose."};
+
+auto pair = mismatch(str1.begin(), str1.end(), str2.begin());
+
+if (pair.first != str1.end()) {
+    cout << distance(str1.begin(), pair.first)
+         << "at (" << *pair.first << "," << *pair.second << ")";  // 17 at (P,p)
 }
-auto pair2= mismatch(str1.begin(), str1.end(), str2.begin(),
-                     [](char c1, char c2){ return toupper(c1) == toupper(c2); });
-if (pair2.first == str1.end()){
-  cout << "str1 and str2 are equal";  // str1 and str2 are equal
+
+auto pair2 = mismatch(
+    str1.begin(),
+    str1.end(),
+    str2.begin(),
+    [](char c1, char c2) { return toupper(c1) == toupper(c2); }
+);
+
+if (pair2.first == str1.end()) {
+    cout << "str1 and str2 are equal";  // str1 and str2 are equal
 }
 ```
 
-`std::equal`, `std::lexicographical_compare` 和 `std::mismatch`
+`std::equal`、`std::lexicographical_compare` 和 `std::mismatch`
 
 ### 在范围内搜索范围
 
@@ -3864,65 +3902,86 @@ if (pair2.first == str1.end()){
 
 在第一个范围内搜索第二个范围并返回位置。它从头开始：
 
-```
+```cpp
 FwdIt1 search(FwdIt1 first1, FwdIt1 last1, FwdIt2 first2, FwdIt2 last2)
-FwdIt1 search(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
+
+FwdIt1 search(ExePol pol, FwdIt1 first1, FwdIt1 last1,
               FwdIt2 first2, FwdIt2 last2)
 
-FwdIt1 search(FwdIt1 first1, FwdIt1 last1, 
+FwdIt1 search(FwdIt1 first1, FwdIt1 last1,
               FwdIt2 first2, FwdIt2 last2, BiPre pre)
-FwdIt1 search(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
-              FwdIt2 first2, FwdIt2 last2, BiPre pre)              
 
-FwdIt1 search(FwdIt1 first, FwdIt last1, Search search) 
+FwdIt1 search(ExePol pol, FwdIt1 first1, FwdIt1 last1,
+              FwdIt2 first2, FwdIt2 last2, BiPre pre)
+
+FwdIt1 search(FwdIt1 first, FwdIt last1, Search search)
 ```
 
 在第一个范围内搜索第二个范围并返回位置。它从尾部开始：
 
-```
-FwdIt1 find_end(FwdIt1 first1, FwdIt1 last1, FwdIt2 first2 FwdIt2 last2)
-FwdIt1 find_end(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
-                FwdIt2 first2 FwdIt2 last2)
+```cpp
+FwdIt1 find_end(FwdIt1 first1, FwdIt1 last1, FwdIt2 first2, FwdIt2 last2)
 
-FwdIt1 find_end(FwdIt1 first1, FwdIt1 last1, FwdIt2 first2, FwdIt2 last2, 
-                BiPre pre)
-FwdIt1 find_end(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
-                FwdIt2 first2, FwdIt2 last2, BiPre pre) 
+FwdIt1 find_end(ExePol pol, FwdIt1 first1, FwdIt1 last1,
+                FwdIt2 first2, FwdIt2 last2)
+
+FwdIt1 find_end(FwdIt1 first1, FwdIt1 last1,
+                FwdIt2 first2, FwdIt2 last2, BiPre pre)
+
+FwdIt1 find_end(ExePol pol, FwdIt1 first1, FwdIt1 last1,
+                FwdIt2 first2, FwdIt2 last2, BiPre pre)
 ```
 
 在第一个范围内搜索 `count` 个连续的值：
 
-```
+```cpp
 FwdIt search_n(FwdIt first, FwdIt last, Size count, const T& value)
+
 FwdIt search_n(ExePol pol, FwdIt first, FwdIt last, Size count, const T& value)
 
 FwdIt search_n(FwdIt first, FwdIt last, Size count, const T& value, BiPre pre)
-FwdIt search_n(ExePol pol, FwdIt first, 
+
+FwdIt search_n(ExePol pol, FwdIt first,
                FwdIt last, Size count, const T& value, BiPre pre)
 ```
 
 ```cpp
 // search.cpp
+
 ...
+
 #include <algorithm>
+
 ...
 
 using std::search;
 
 std::array<int, 10> arr1{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
 std::array<int, 5> arr2{3, 4, -5, 6, 7};
 
-auto fwdIt= search(arr1.begin(), arr1.end(), arr2.begin(), arr2.end());
-if (fwdIt == arr1.end()) std::cout << "arr2 not in arr1.";  // arr2 not in arr1.
+auto fwdIt = search(arr1.begin(), arr1.end(), arr2.begin(), arr2.end());
 
-auto fwdIt2= search(arr1.begin(), arr1.end(), arr2.begin(), arr2.end(),
-                    [](int a, int b){ return std::abs(a) == std::abs(b); });
-if (fwdIt2 != arr1.end()) std::cout << "arr2 at position "
-                    << std::distance(arr1.begin(), fwdIt2) << " in arr1."; 
-                                                  // arr2 at position 3 in arr1.
+if (fwdIt == arr1.end()) {
+    std::cout << "arr2 not in arr1.";
+}  // arr2 not in arr1.
+
+auto fwdIt2 = search(
+    arr1.begin(),
+    arr1.end(),
+    arr2.begin(),
+    arr2.end(),
+    [](int a, int b) { return std::abs(a) == std::abs(b); }
+);
+
+if (fwdIt2 != arr1.end()) {
+    std::cout << "arr2 at position "
+              << std::distance(arr1.begin(), fwdIt2) << " in arr1.";
+}
+// arr2 at position 3 in arr1.
 ```
 
-`std::find`, `std::find_end` 和 `std::search_n`
+`std::find`、`std::find_end` 和 `std::search_n`
 
 ### 修改算法
 
@@ -3933,25 +3992,32 @@ C++ 有许多修改元素和范围的算法。
 你可以使用 `std::copy` 正向拷贝范围，使用 `std::copy_backward` 反向拷贝，使用 `std::copy_if` 根据条件拷贝。如果你想拷贝 `n` 个元素，可以使用 `std::copy_n`。
 
 拷贝范围：
-```
+
+```cpp
 OutIt copy(InpIt first, InpIt last)
+
 FwdIt copy(ExePol pol, FwdIt first, FwdIt last)
 ```
 
 拷贝 `n` 个元素：
-```
+
+```cpp
 OutIt copy_n(InpIt first, Size count)
+
 FwdIt copy_n(ExePol pol, FwdIt first, Size count)
 ```
 
 根据谓词拷贝元素：
-```
+
+```cpp
 OutIt copy_if(InpIt first, InpIt last, UnPre pre)
+
 FwdIt copy_if(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
 反向拷贝范围：
-```
+
+```cpp
 BiIt copy_backward(BiIt first, BiIt last)
 ```
 
@@ -3959,14 +4025,29 @@ BiIt copy_backward(BiIt first, BiIt last)
 
 ```cpp
 // copy.cpp
+
 ...
+
 #include <algorithm>
+
 ...
 
 std::vector<int> myVec{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
 std::vector<int> my2;
-std::copy(myVec.begin(), myVec.begin() + 5, std::back_inserter(my2)); // 0, 1, 2, 3, 4
-std::copy_if(myVec.begin(), myVec.end(), std::back_inserter(my2), [](int n){ return n % 2 == 0; }); // 0, 2, 4, 6, 8
+
+std::copy(
+    myVec.begin(),
+    myVec.begin() + 5,
+    std::back_inserter(my2)
+);  // 0, 1, 2, 3, 4
+
+std::copy_if(
+    myVec.begin(),
+    myVec.end(),
+    std::back_inserter(my2),
+    [](int n) { return n % 2 == 0; }
+);  // 0, 2, 4, 6, 8
 ```
 
 #### 替换元素和范围
@@ -3974,90 +4055,141 @@ std::copy_if(myVec.begin(), myVec.end(), std::back_inserter(my2), [](int n){ ret
 `std::replace`、`std::replace_if`、`std::replace_copy` 和 `std::replace_copy_if` 在以下方面有所不同：首先，算法是否需要谓词？其次，算法是否拷贝元素到目标范围？
 
 将范围中的旧元素替换为 `newValue`：
+
 ```cpp
 void replace(InpIt first, InpIt last, T val)
+
 FwdIt replace(ExePol pol, FwdIt first, FwdIt last, T val)
 ```
 
 根据谓词 `pred` 替换范围：
+
 ```cpp
 void replace_if(InpIt first, InpIt last, UnPre pre, T val)
+
 FwdIt replace_if(ExePol pol, FwdIt first, FwdIt last, UnPre pre, T val)
 ```
 
 替换元素并拷贝到目标范围：
+
 ```cpp
 OutIt replace_copy(InpIt first, InpIt last, OutIt result, T val)
+
 FwdIt replace_copy(ExePol pol, FwdIt first, FwdIt last, OutIt result, T val)
 ```
 
 根据谓词 `pred` 替换元素并拷贝到目标范围：
+
 ```cpp
 OutIt replace_copy_if(InpIt first, InpIt last, OutIt result, UnPre pre, T val)
-FwdIt replace_copy_if(ExePol pol, FwdIt first, FwdIt last, OutIt result, UnPre pre, T val)
+
+FwdIt replace_copy_if(
+    ExePol pol,
+    FwdIt first,
+    FwdIt last,
+    OutIt result,
+    UnPre pre,
+    T val
+)
 ```
 
 算法示例：
 
 ```cpp
 // replace.cpp
+
 ...
+
 #include <algorithm>
+
 ...
 
-std::string str{"Only for testing purpose." };
-std::replace(str.begin(), str.end(), ' ', '1');
-std::cout << str; // Only1for1testing1purpose.
+std::string str{"Only for testing purpose."};
 
-std::replace_if(str.begin(), str.end(), [](char c){ return c == '1'; }, '2'); 
-std::cout << str; // Only2for2testing2purpose.
+std::replace(str.begin(), str.end(), ' ', '1');
+
+std::cout << str;  // Only1for1testing1purpose.
+
+std::replace_if(
+    str.begin(),
+    str.end(),
+    [](char c) { return c == '1'; },
+    '2'
+);
+
+std::cout << str;  // Only2for2testing2purpose.
 
 std::string str2;
-std::replace_copy(str.begin(), str.end(), std::back_inserter(str2), '2', '3');
-std::cout << str2; // Only3for3testing3purpose.
+
+std::replace_copy(
+    str.begin(),
+    str.end(),
+    std::back_inserter(str2),
+    '2',
+    '3'
+);
+
+std::cout << str2;  // Only3for3testing3purpose.
 
 std::string str3;
-std::replace_copy_if(str2.begin(), str2.end(),
-std::back_inserter(str3), [](char c){ return c == '3'; }, '4');
-std::cout << str3; // Only4for4testing4purpose.
+
+std::replace_copy_if(
+    str2.begin(),
+    str2.end(),
+    std::back_inserter(str3),
+    [](char c) { return c == '3'; },
+    '4'
+);
+
+std::cout << str3;  // Only4for4testing4purpose.
 ```
 
 #### 删除元素和范围
-
-
-
-
 
 `std::remove`、`std::remove_if`、`std::remove_copy` 和 `std::remove_copy_if` 这四种变体支持两种操作。一方面，从范围中删除满足或不满足谓词的元素；另一方面，将你修改后的结果拷贝到一个新范围中。
 
 从范围中删除值为 `val` 的元素：
 
-```
+```cpp
 FwdIt remove(FwdIt first, FwdIt last, const T& val)
+
 FwdIt remove(ExePol pol, FwdIt first, FwdIt last, const T& val)
 ```
 
 从范围中删除满足谓词 `pred` 的元素：
 
-```
+```cpp
 FwdIt remove_if(FwdIt first, FwdIt last, UnPred pred)
+
 FwdIt remove_if(ExePol pol, FwdIt first, FwdIt last, UnPred pred)
 ```
 
-从范围中删除值为 `val` 的元素。并将结果拷贝到 `result` 中：
+从范围中删除值为 `val` 的元素，并将结果拷贝到 `result` 中：
 
-```
+```cpp
 OutIt remove_copy(InpIt first, InpIt last, OutIt result, const T& val)
-FwdIt2 remove_copy(ExePol pol, FwdIt first, FwdIt last, 
-                   FwdIt2 result, const T& val)
+
+FwdIt2 remove_copy(
+    ExePol pol,
+    FwdIt first,
+    FwdIt last,
+    FwdIt2 result,
+    const T& val
+)
 ```
 
-从范围中删除满足谓词 `pred` 的元素。并将结果拷贝到 `result` 中。
+从范围中删除满足谓词 `pred` 的元素，并将结果拷贝到 `result` 中：
 
-```
+```cpp
 OutIt remove_copy_if(InpIt first, InpIt last, OutIt result, UnPre pred)
-FwdIt2 remove_copy_if(ExePol pol, FwdIt first, FwdIt last, 
-                      FwdIt2 result, UnPre pred)
+
+FwdIt2 remove_copy_if(
+    ExePol pol,
+    FwdIt first,
+    FwdIt last,
+    FwdIt2 result,
+    UnPre pred
+)
 ```
 
 这些算法需要源范围的输入迭代器和目标范围的输出迭代器。作为结果，它们返回指向目标范围的结束迭代器。
@@ -4068,53 +4200,67 @@ FwdIt2 remove_copy_if(ExePol pol, FwdIt first, FwdIt last,
 
 用元素填充范围：
 
-```
+```cpp
 void fill(FwdIt first, FwdIt last, const T& val)
+
 void fill(ExePol pol, FwdIt first, FwdIt last, const T& val)
 ```
 
-用 n 个新元素填充范围：
+用 `n` 个新元素填充范围：
 
-```
+```cpp
 OutIt fill_n(OutIt first, Size n, const T& val)
+
 FwdIt fill_n(ExePol pol, FwdIt first, Size n, const T& val)
 ```
 
 使用生成器 `gen` 生成范围：
 
-```
+```cpp
 void generate(FwdIt first, FwdIt last, Generator gen)
+
 void generate(ExePol pol, FwdIt first, FwdIt last, Generator gen)
 ```
 
-使用生成器 `gen` 生成范围的 n 个元素：
+使用生成器 `gen` 生成范围的 `n` 个元素：
 
-```
+```cpp
 OutIt generate_n(OutIt first, Size n, Generator gen)
+
 FwdIt generate_n(ExePol pol, FwdIt first, Size n, Generator gen)
 ```
 
 这些算法期望值 `val` 或生成器 `gen` 作为参数。`gen` 必须是一个不接受参数并返回新值的函数。算法 `std::fill_n` 和 `std::generate_n` 的返回值是一个输出迭代器，指向最后一个创建的元素。
 
-```
+```cpp
 // fillAndCreate.cpp
-...
-#include <algorithm>
+
 ...
 
-int getNext(){
-  static int next{0};
-  return ++next;
+#include <algorithm>
+
+...
+
+int getNext() {
+    static int next{0};
+    return ++next;
 }
 
 std::vector<int> vec(10);
+
 std::fill(vec.begin(), vec.end(), 2011);
-for (auto v: vec) std::cout << v << " ";
-                      // 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011
+
+for (auto v : vec) {
+    std::cout << v << " ";
+}
+// 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011
 
 std::generate_n(vec.begin(), 5, getNext);
-for (auto v: vec) std::cout << v << " ";
-                      // 1 2 3 4 5 2011 2011 2011 2011 2011
+
+for (auto v : vec) {
+    std::cout << v << " ";
+}
+// 1 2 3 4 5 2011 2011 2011 2011 2011
 ```
 
 ## 移动范围
@@ -4123,28 +4269,37 @@ for (auto v: vec) std::cout << v << " ";
 
 将范围向前移动：
 
-```
+```cpp
 OutIt move(InpIt first, InpIt last, OutIt result)
+
 FwdIt2 move(ExePol pol, FwdIt first, FwdIt last, Fwd2It result)
 ```
 
-将范围向后移动：
 
-```
+
+## 向后移动范围
+
+```cpp
 BiIt move_backward(BiIt first, BiIt last, BiIt result)
 ```
 
 这两个算法都需要一个目标迭代器 `result`，范围将被移动到那里。在 `std::move` 算法中，这是一个输出迭代器。在 `std::move_backward` 算法中，这是一个双向迭代器。算法返回一个输出或双向迭代器，指向目标范围中的初始位置。
 
-```
+```cpp
 // move.cpp
+
 ...
+
 #include <algorithm>
+
 ...
 
 std::vector<int> myVec{0, 1, 2, 3, 4, 5, 6, 7, 9};
+
 std::vector<int> myVec2(myVec.size());
+
 std::move(myVec.begin(), myVec.end(), myVec2.begin());
+
 for (auto v: myVec) std::cout << v << " ";
 ```
 
@@ -4152,31 +4307,39 @@ for (auto v: myVec) std::cout << v << " ";
 
 `std::swap` 和 `std::swap_ranges` 可以交换对象和范围。
 
-交换对象：
+### 交换对象
 
-```
+```cpp
 void swap(T& a, T& b)
 ```
 
-交换范围：
+### 交换范围
 
-```
+```cpp
 void swap_ranges(FwdIt first1, FwdIt first2)
+
 FwdIt2 swap_ranges(ExePol pol, FwdIt first1, FwdIt first2)
 ```
 
 返回的迭代器指向目标范围的最后一个元素。
 
-```
+```cpp
 // swap.cpp
+
 ...
+
 #include <algorithm>
+
 ...
 
 std::vector<int> myVec{0, 1, 2, 3, 4, 5, 6, 7, 9};
+
 std::vector<int> myVec2(9);
+
 std::swap(myVec, myVec2);
+
 for (auto v: myVec) std::cout << v; // 9 7 6 5 4 3 2 1
+```
 
 ## 转换范围
 
@@ -4184,21 +4347,21 @@ for (auto v: myVec) std::cout << v; // 9 7 6 5 4 3 2 1
 
 将一元调用器 `fun` 应用于范围并将结果拷贝到 `result`：
 
-```
+```cpp
 OutIt transform(InpIt first1, InpIt last1, OutIt result, UnFun fun)
 FwdIt2 transform(ExePol pol, FwdIt first1, FwdIt last1, FwdIt2 result, UnFun fun)
 ```
 
 将二元调用器 `fun` 应用于两个范围并将结果拷贝到 `result`：
 
-```
+```cpp
 OutIt transform(InpIt first1, InpIt last1, InpIt first2, OutIt result, BiFun fun)
 FwdIt3 transform(ExePol pol, FwdIt first1, FwdIt last1, FwdIt2 first2, FwdIt3 result, BiFun fun)
 ```
 
 这两个版本的区别在于，第一个版本将调用器应用于范围的每个元素；第二个版本将调用器并行应用于两个范围。返回的迭代器指向最后一个转换元素之后。
 
-```
+```cpp
 // transform.cpp 
 ...
 #include <algorithm>
@@ -4214,23 +4377,23 @@ std::cout << str;         // ABCDEFGHIJKLMNOP
 
 `std::reverse` 和 `std::reverse_copy` 反转范围内元素的顺序。
 
-反转范围内元素的顺序：
+### 反转范围内元素的顺序
 
-```
+```cpp
 void reverse(BiIt first, BiIt last)
 void reverse(ExePol pol, BiIt first, BiIt last)
 ```
 
-反转范围内元素的顺序并将结果拷贝到 `result`：
+### 反转范围内元素的顺序并将结果拷贝到 `result`
 
-```
+```cpp
 OutIt reverse_copy(BiIt first, BiIt last, OutIt result)
 FwdIt reverse_copy(ExePol pol, BiIt first, BiIt last, FwdIt result)
 ```
 
 这两个算法都需要双向迭代器。返回的迭代器指向拷贝元素之前的输出范围 `result` 位置。
 
-```
+```cpp
 // algorithmen.cpp 
 ...
 #include <algorithm>
@@ -4245,20 +4408,16 @@ std::cout << str;           // 543216789
 
 `std::rotate` 和 `std::rotate_copy` 旋转它们的元素。
 
-旋转元素，使得 `middle` 成为新的第一个元素：
+### 旋转元素，使得 `middle` 成为新的第一个元素
 
-```
+```cpp
 FwdIt rotate(FwdIt first, FwdIt middle, FwdIt last)
 FwdIt rotate(ExePol pol, FwdIt first, FwdIt middle, FwdIt last)
 ```
 
+### 旋转元素使得 `middle` 成为新的第一个元素，并将结果拷贝到 `result`
 
-
-
-
-旋转元素使得 `middle` 成为新的第一个元素。将结果拷贝到 `result`：
-
-```
+```cpp
 OutIt rotate_copy(FwdIt first, FwdIt middle, FwdIt last, OutIt result)
 FwdIt2 rotate_copy(ExePol pol, FwdIt first, FwdIt middle, FwdIt last, 
                    FwdIt2 result)
@@ -4282,7 +4441,7 @@ for (auto i= 0; i < str.size(); ++i){
 
 # 旋转算法
 
-## 范围平移 (Shift Ranges)
+## 范围平移（Shift Ranges）
 
 C++20 函数 `std::shift_left` 和 `std::shift_right` 用于移动范围内的元素。两个算法都返回一个前向迭代器。
 
@@ -4320,9 +4479,9 @@ myVec.erase(myVec.begin(), newBegin);
 for (auto v: myVec) std::cout << v << " ";       // 3 4 5
 ```
 
-移动范围内的元素
+移动范围内的元素。
 
-## 随机打乱范围 (Randomly Shuffle Ranges)
+## 随机打乱范围（Randomly Shuffle Ranges）
 
 你可以使用 `std::random_shuffle` 和 `std::shuffle` 随机打乱范围。
 
@@ -4344,7 +4503,7 @@ void random_shuffle(RanIt first, RanIt last, RanNumGen&& gen)
 void shuffle(RanIt first, RanIt last, URNG&& gen)
 ```
 
-这些算法需要随机访问迭代器。`RanNumGen&& gen` 必须是可调，接受一个参数并返回一个参数范围内的值。`URNG&& gen` 必须是一个均匀随机数生成器。
+这些算法需要随机访问迭代器。`RanNumGen&& gen` 必须是可调用，接受一个参数并返回一个参数范围内的值。`URNG&& gen` 必须是一个均匀随机数生成器。
 
 ```cpp
 // shuffle.cpp
@@ -4365,36 +4524,36 @@ std::shuffle(vec2.begin(), vec2.end(), default_random_engine(seed));
 for (auto v: vec2) std::cout << v << " ";     // 4 0 2 3 9 6 5 1 8 7
 ```
 
-随机打乱算法
+随机打乱算法。
 
 `seed` 初始化随机数生成器。
 
-## 去除重复项 (Remove Duplicates)
+## 去除重复项（Remove Duplicates）
 
 通过 `std::unique` 和 `std::unique_copy` 算法，你有更多机会去除相邻的重复元素。你可以带或不带二元谓词来实现。
 
-去除相邻重复元素：
+### 去除相邻重复元素
 
 ```cpp
 FwdIt unique(FwdIt first, FwdIt last)
 FwdIt unique(ExePol pol, FwdIt first, FwdIt last)
 ```
 
-去除满足二元谓词的相邻重复元素：
+### 去除满足二元谓词的相邻重复元素
 
 ```cpp
 FwdIt unique(FwdIt first, FwdIt last, BiPred)
 FwdIt unique(ExePol pol, FwdIt first, FwdIt last)
 ```
 
-去除相邻重复元素并将结果拷贝到 `result`：
+### 去除相邻重复元素并将结果拷贝到 `result`
 
 ```cpp
 OutIt unique_copy(InpIt first, InpIt last, OutIt result)
 FwdIt2 unique_copy(ExePol pol, FwdIt first, FwdIt last, OutIt result)
 ```
 
-去除满足二元谓词的相邻重复元素并将结果拷贝到 `result`：
+### 去除满足二元谓词的相邻重复元素并将结果拷贝到 `result`
 
 ```cpp
 OutIt unique_copy(InpIt first, InpIt last, OutIt result, BiPred)
@@ -4421,36 +4580,34 @@ for(auto v: myVec2) std::cout << v << " ";                      // 1 4 3 5 7 9 2
 for(auto v: resVec) std::cout << v << " ";                       // 1 4 3 5 7 9 2 6 8 0 3
 ```
 
-去重算法
+去重算法。
 
-## 分区 (Partition)
+## 分区（Partition）
 
-###
+C++ 提供了几个处理分区的函数。它们都需要一个一元谓词 `pre`。`std::partition` 和 `std::stable_partition` 对范围分区并返回分区点。通过 `std::partition_point`，你可以获取分区的点。之后，你可以使用 `std::is_partitioned` 检查分区或使用 `std::partition_copy` 拷贝。
 
-C++ 提供了几个处理分区的函数。它们都需要一个单元谓词 `pre`。`std::partition` 和 `std::stable_partition` 对范围分区并返回分区点。通过 `std::partition_point`，你可以获取分区的点。之后，你可以使用 `std::is_partitioned` 检查分区或使用 `std::partition_copy` 拷贝。
-
-检查范围是否分区：
+### 检查范围是否分区
 
 ```cpp
 bool is_partitioned(InpIt first, InpIt last, UnPre pre)
 bool is_partitioned(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
-分区范围：
+### 分区范围
 
 ```cpp
 FwdIt partition(FwdIt first, FwdIt last, UnPre pre)
 FwdIt partition(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
-分区范围（保持顺序）：
+### 分区范围（保持顺序）
 
 ```cpp
 BiIt stable_partition(FwdIt first, FwdIt last, UnPre pre)
 BiIt stable_partition(ExePol pol, FwdIt first, FwdIt last, UnPre pre)
 ```
 
-在两个范围内分区：
+### 在两个范围内分区
 
 ```cpp
 pair<OutIt1, OutIt2> partition_copy(InIt first, InIt last, 
@@ -4459,53 +4616,58 @@ pair<FwdIt1, FwdIt2> partition_copy(ExePol pol, FwdIt1 first, FwdIt1 last,
                      FwdIt2 result_true, FIt3 result_false, UnPre pre)
 ```
 
-返回分区点：
+### 返回分区点
 
 ```cpp
 FwdIt partition_point(FwdIt first, FwdIt last, UnPre pre)
 ```
 
-`std::stable_partition` 与 `std::partition` 不同，它保证元素保持相对顺序。返回的迭代器 `FwdIt` 和 `BiIt` 指向第二个子集的初始位置。算法 `std::partition_copy` 的对 `std::pair<OutIt, OutIt>` 包含子集 `result_true` 和 `result_false` 的结束迭代器。如果范围未分区，`std::partition_point` 的行为是未定义的。
+`std::stable_partition` 与 `std::partition` 不同，它保证元素保持相对顺序。返回的迭代器 `FwdIt` 和 `BiIt` 指向第二个子集的初始位置。算法 `std::partition_copy` 的 `std::pair<OutIt, OutIt>` 包含子集 `result_true` 和 `result_false` 的结束迭代器。如果范围未分区，`std::partition_point` 的行为是未定义的。
+
+
 
 ```cpp
-// partition.cpp 
+// partition.cpp
 ...
 #include <algorithm>
 ...
 using namespace std;
 
-bool isOdd(int i){ return (i%2) == 1; }
-vector<int> vec{1, 4, 3, 4, 5, 6, 7, 3, 4, 5, 6, 0, 4, 
+bool isOdd(int i) { return (i % 2) == 1; }
+vector<int> vec{1, 4, 3, 4, 5, 6, 7, 3, 4, 5, 6, 0, 4,
                 8, 4, 6, 6, 5, 8, 8, 3, 9, 3, 7, 6, 4, 8};
 
-auto parPoint= partition(vec.begin(), vec.end(), isOdd);
-for (auto v: vec) cout << v << " ";
-                    // 1 7 3 3 5 9 7 3 3 5 5 0 4 8 4 6 6 6 8 8 4 6 4 4 6 4 8
+auto parPoint = partition(vec.begin(), vec.end(), isOdd);
+for (auto v : vec) cout << v << " ";
+// 1 7 3 3 5 9 7 3 3 5 5 0 4 8 4 6 6 6 8 8 4 6 4 4 6 4 8
 
-for (auto v= vec.begin(); v != parPoint; ++v) cout << *v << " ";
-                    // 1 7 3 3 5 9 7 3 3 5 5
-for (auto v= parPoint; v != vec.end(); ++v) cout << *v << " ";
-                    // 4 8 4 6 6 6 8 8 4 6 4 4 6 4 8
+for (auto v = vec.begin(); v != parPoint; ++v) cout << *v << " ";
+// 1 7 3 3 5 9 7 3 3 5 5
 
-cout << is_partitioned(vec.begin(), vec.end(), isOdd);     // true
+for (auto v = parPoint; v != vec.end(); ++v) cout << *v << " ";
+// 4 8 4 6 6 6 8 8 4 6 4 4 6 4 8
+
+cout << is_partitioned(vec.begin(), vec.end(), isOdd); // true
+
 list<int> le;
 list<int> ri;
 partition_copy(vec.begin(), vec.end(), back_inserter(le), back_inserter(ri),
                [](int i) { return i < 5; });
-for (auto v: le) cout << v << "";    // 1 4 3 3 3 0 4 4 4 4 4 4
-for (auto v: ri) cout << v << "";    // 7 5 9 7 5 5 8 6 6 6 8 8 6 6 8
+
+for (auto v : le) cout << v << "";
+// 1 4 3 3 3 0 4 4 4 4 4 4
+
+for (auto v : ri) cout << v << "";
+// 7 5 9 7 5 5 8 6 6 6 8 8 6 6 8
 ```
 
+你可以使用`std::sort`或`std::stable_sort`对范围进行排序，或者使用`std::partial_sort`排序到某个位置为止。此外，`std::partial_sort_copy`会拷贝部分排序后的范围。通过`std::nth_element`，你可以将某个元素分配到范围中的`sorted`位置。你可以用`std::is_sorted`检查一个范围是否已排序。如果你想知道一个范围到哪个位置为止是有序的，请使用`std::is_sorted_until`。
 
+默认情况下，使用预定义的函数对象`std::less`作为排序准则。然而，你可以使用自己的排序准则。这必须遵守严格弱序。
 
+### 排序范围内的元素
 
-你可以使用 `std::sort` 或 `std::stable_sort` 对范围进行排序，或者使用 `std::partial_sort` 排序到某个位置为止。此外，`std::partial_sort_copy` 会拷贝部分排序后的范围。通过 `std::nth_element`，你可以将某个元素分配到范围中的 `sorted` 位置。你可以用 `std::is_sorted` 检查一个范围是否已排序。如果你想知道一个范围到哪个位置为止是有序的，请使用 `std::is_sorted_until`。
-
-默认情况下，使用预定义的函数对象 `std::less` 作为排序准则。然而，你可以使用自己的排序准则。这必须遵守严格弱序。
-
-### 排序范围内的元素：
-
-```
+```cpp
 void sort(RaIt first, RaIt last)
 void sort(ExePol pol, RaIt first, RaIt last)
 
@@ -4513,9 +4675,9 @@ void sort(RaIt first, RaIt last, BiPre pre)
 void sort(ExePol pol, RaIt first, RaIt last, BiPre pre)
 ```
 
-### 排序范围内的元素（稳定）：
+### 稳定排序范围内的元素
 
-```
+```cpp
 void stable_sort(RaIt first, RaIt last)
 void stable_sort(ExePol pol, RaIt first, RaIt last)
 
@@ -4523,9 +4685,9 @@ void stable_sort(RaIt first, RaIt last, BiPre pre)
 void stable_sort(ExePol pol, RaIt first, RaIt last, BiPre pre)
 ```
 
-### 部分排序范围内的元素直到 `middle` 为止：
+### 部分排序范围内的元素直到`middle`为止
 
-```
+```cpp
 void partial_sort(RaIt first, RaIt middle, RaIt last)
 void partial_sort(ExePol pol, RaIt first, RaIt middle, RaIt last)
 
@@ -4533,21 +4695,21 @@ void partial_sort(RaIt first, RaIt middle, RaIt last, BiPre pre)
 void partial_sort(ExePol pol, RaIt first, RaIt middle, RaIt last, BiPre pre)
 ```
 
-### 部分排序范围内的元素并将其拷贝到目标范围 `result_first` 和 `result_last`：
+### 部分排序范围内的元素并将其拷贝到目标范围`result_first`和`result_last`
 
 ```cpp
-RaIt partial_sort_copy(InIt first, InIt last, 
+RaIt partial_sort_copy(InIt first, InIt last,
                        RaIt result_first, RaIt result_last)
 RaIt partial_sort_copy(ExePol pol, FwdIt first, FwdIt last,
-                       RaIt result_first, RaIt result_last)                       
+                       RaIt result_first, RaIt result_last)
 
-RaIt partial_sort_copy(InIt first, InIt last, 
+RaIt partial_sort_copy(InIt first, InIt last,
                        RaIt result_first, RaIt result_last, BiPre pre)
 RaIt partial_sort_copy(ExePol pol, FwdIt first, FwdIt last,
                        RaIt result_first, RaIt result_last, BiPre pre)
 ```
 
-### 检查范围是否排序：
+### 检查范围是否排序
 
 ```cpp
 bool is_sorted(FwdIt first, FwdIt last)
@@ -4557,7 +4719,7 @@ bool is_sorted(FwdIt first, FwdIt last, BiPre pre)
 bool is_sorted(ExePol pol, FwdIt first, FwdIt last, BiPre pre)
 ```
 
-### 返回第一个不满足排序准则元素的位置：
+### 返回第一个不满足排序准则的元素位置
 
 ```cpp
 FwdIt is_sorted_until(FwdIt first, FwdIt last)
@@ -4567,7 +4729,7 @@ FwdIt is_sorted_until(FwdIt first, FwdIt last, BiPre pre)
 FwdIt is_sorted_until(ExePol pol, FwdIt first, FwdIt last, BiPre pre)
 ```
 
-### 重新排序范围使得第元素 个元素处于（排序后的）位置：
+### 重新排序范围，使第`nth`个元素处于排序后的位置
 
 ```cpp
 void nth_element(RaIt first, RaIt nth, RaIt last)
@@ -4580,58 +4742,63 @@ void nth_element(ExePol pol, RaIt first, RaIt nth, RaIt last, BiPre pre)
 这是一个代码片段。
 
 ```cpp
-// sort.cpp 
+// sort.cpp
 ...
 #include <algorithm>
 ...
 
 std::string str{"RUdAjdDkaACsdfjwldXmnEiVSEZTiepfgOIkue"};
-std::cout << std::is_sorted(str.begin(), str.end());        // false
+std::cout << std::is_sorted(str.begin(), str.end()); // false
 
-std::partial_sort(str.begin(), str.begin()+30, str.end());
-std::cout << str;           // AACDEEIORSTUVXZaddddeeffgiijjkwspnmluk
+std::partial_sort(str.begin(), str.begin() + 30, str.end());
+std::cout << str; // AACDEEIORSTUVXZaddddeeffgiijjkwspnmluk
 
-auto sortUntil= std::is_sorted_until(str.begin(), str.end());
-std::cout << *sortUntil;                                   // s
-for (auto charIt= str.begin(); charIt != sortUntil; ++charIt) 
-    std::cout << *charIt;           // AACDEEIORSTUVXZaddddeeffgiijkw
+auto sortUntil = std::is_sorted_until(str.begin(), str.end());
+std::cout << *sortUntil; // s
+
+for (auto charIt = str.begin(); charIt != sortUntil; ++charIt)
+    std::cout << *charIt; // AACDEEIORSTUVXZaddddeeffgiijkw
 
 std::vector<int> vec{1, 0, 4, 3, 5};
-auto vecIt= vec.begin();
-while(vecIt != vec.end()){
-  std::nth_element(vec.begin(), vecIt++, vec.end());
-  std::cout << std::distance(vec.begin(), vecIt) << "-th ";
-  for (auto v: vec) std::cout << v << "/";
+auto vecIt = vec.begin();
+
+while (vecIt != vec.end()) {
+    std::nth_element(vec.begin(), vecIt++, vec.end());
+    std::cout << std::distance(vec.begin(), vecIt) << "-th ";
+
+    for (auto v : vec) std::cout << v << "/";
 }
 // 1-th 01435/2-th 01435/3-th 01435/4-th 01435/5-th 01435
 ```
 
-### 二分查找
+## 二分查找
 
-二分查找算法利用范围已排序的特性。要搜索某个元素，请使用 `binary_search`。使用 `lower_bound` 可以获取第一个不小于给定元素的迭代器。使用 `upper_bound` 可以获取第一个大于给定元素的迭代器。`equal_range` 结合了两者。如果容器有 `n` 个元素，二分查找平均需要 `log2(n)` 次比较。二分查找要求与范围使用相同的排序准则。默认情况下使用 `std::less`。如果你使用自己的排序准则，它必须遵守严格弱序。如果不遵守，程序行为是未定义的。
+二分查找算法利用范围已排序的特性。要搜索某个元素，请使用`binary_search`。使用`lower_bound`可以获取第一个不小于给定元素的迭代器。使用`upper_bound`可以获取第一个大于给定元素的迭代器。`equal_range`结合了两者。如果容器有`n`个元素，二分查找平均需要`log2(n)`次比较。
 
-在范围内查找 `val`：
+二分查找要求与范围使用相同的排序准则。默认情况下使用`std::less`。如果你使用自己的排序准则，它必须遵守严格弱序。如果不遵守，程序行为是未定义的。
+
+### 在范围内查找`val`
 
 ```cpp
 bool binary_search(FwdIt first, FwdIt last)
 bool binary_search(ExePol pol, FwdIt first, FwdIt last)
 ```
 
-返回第一个不满足排序准则的元素的位置：
+### 返回第一个不满足排序准则的元素位置
 
 ```cpp
 FwdIt lower_bound(FwdIt first, FwdIt last)
 FwdIt lower_bound(ExePol pol, FwdIt first, FwdIt last)
 ```
 
-返回范围内第一个大于给定元素的位置：
+### 返回范围内第一个大于给定元素的位置
 
 ```cpp
 FwdIt upper_bound(FwdIt first, FwdIt last)
 FwdIt upper_bound(ExePol pol, FwdIt first, FwdIt last)
 ```
 
-返回 `val` 的 `lower_bound` 和 `upper_bound`：
+### 返回`val`的`lower_bound`和`upper_bound`
 
 ```cpp
 pair<FwdIt, FwdIt> equal_range(FwdIt first, FwdIt last)
@@ -4641,37 +4808,41 @@ pair<FwdIt, FwdIt> equal_range(ExePol pol, FwdIt first, FwdIt last)
 最后，这里是代码片段。
 
 ```cpp
-// binarySearch.cpp 
+// binarySearch.cpp
 ...
 #include <algorithm>
 ...
 using namespace std;
 
-bool isLess(int a, int b){
-  return abs(a) < abs(b);
+bool isLess(int a, int b) {
+    return abs(a) < abs(b);
 }
+
 vector<int> vec{-3, 0, -3, 2, -3, 5, -3, 7, 0, 8, 9, 0, 8, 7, -6, 3, -3};
 
 sort(vec.begin(), vec.end(), isLess);
-for (auto v: vec) cout << v << " ";             // -3 -3 -3 -3 -3 0 0 2 2 3 5 5 6 7 7 8 8 9
+for (auto v : vec) cout << v << " ";
+// -3 -3 -3 -3 -3 0 0 2 2 3 5 5 6 7 7 8 8 9
+
 cout << binary_search(vec.begin(), vec.end(), -5, isLess); // true
 cout << binary_search(vec.begin(), vec.end(), 5, isLess);  // true
 
-auto pair= equal_range(vec.begin(), vec.end(), 3, isLess);
-cout << distance(vec.begin(), pair.first);                    // 5
-cout << distance(vec.begin(), pair.second)-1;                 // 1
+auto pair = equal_range(vec.begin(), vec.end(), 3, isLess);
+cout << distance(vec.begin(), pair.first); // 5
+cout << distance(vec.begin(), pair.second) - 1; // 1
 
-for (auto threeIt= pair.first;threeIt != pair.second; ++threeIt) 
-     cout << *threeIt << " ";              // -3 -3 -3 -3 -3
+for (auto threeIt = pair.first; threeIt != pair.second; ++threeIt)
+    cout << *threeIt << " ";
+// -3 -3 -3 -3 -3
 ```
 
-### 合并操作
+## 合并操作
 
-合并操作允许你将排序范围合并到一个新的排序范围中。算法要求范围和算法使用相同的排序准则。如果不相同，程序具有未定义行为。默认情况下，使用预定义的排序准则 `std::less`。如果你使用自己的排序准则，它必须遵守严格弱序。如果不遵守，程序是定义的。
+合并操作允许你将排序范围合并到一个新的排序范围中。算法要求范围和算法使用相同的排序准则。如果不相同，程序具有未定义行为。默认情况下，使用预定义的排序准则`std::less`。如果你使用自己的排序准则，它必须遵守严格弱序。如果不遵守，程序是定义的。
 
-你可以使用 `std::inplace_merge` 和 `std::merge` 合并两个排序范围。你可以用 `std::includes` 检查一个排序范围是否在另一个范围内。你可以使用 `std::set_difference`、`std::set_intersection`、`std::set_symmetric_difference` 和 `std::set_union` 将两个排序范围合并到一个新的排序范围。
+你可以使用`std::inplace_merge`和`std::merge`合并两个排序范围。你可以用`std::includes`检查一个排序范围是否在另一个范围内。你可以使用`std::set_difference`、`std::set_intersection`、`std::set_symmetric_difference`和`std::set_union`将两个排序范围合并到一个新的排序范围。
 
-原地合并两个排序子范围 `[first, mid)` 和 `[mid, last)`：
+### 原地合并两个排序子范围`[first, mid)`和`[mid, last)`
 
 ```cpp
 void inplace_merge(BiIt first, BiIt mid, BiIt last)
@@ -4681,182 +4852,179 @@ void inplace_merge(BiIt first, BiIt mid, BiIt last, BiPre pre)
 void inplace_merge(ExePol pol, BiIt first, BiIt mid, BiIt last, BiPre pre)
 ```
 
-合并两个排序范围并将结果拷贝到 `result`：
+### 合并两个排序范围并将结果拷贝到`result`
 
-
-
-
-```
+```cpp
 OutIt merge(InpIt first1, InpIt last1, InpIt first2, InpIt last2, OutIt result)
-FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
+FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1,
              FwdIt2 first2, FwdIt2 last2, FwdIt3 result)
 
-OutIt merge(InpIt first1, InpIt last1, InpIt first2, InpIt last2, OutIt result, 
+OutIt merge(InpIt first1, InpIt last1, InpIt first2, InpIt last2, OutIt result,
             BiPre pre)
-FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
+FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1,
              FwdpIt2 first2, FwdIt2 last2, FwdIt3 result, BiPre pre)
 ```
 
-### 检查第二个范围的所有元素是否都在第一个范围内：
+### 检查第二个范围的所有元素是否都在第一个范围内
 
-```
+```cpp
 bool includes(InpIt first1, InpIt last1, InpIt1 first2, InpIt1 last2)
 bool includes(ExePol pol, FwdIt first1, FwdIt last1, FwdIt1 first2, FwdIt1 last2)
 
 bool includes(InpIt first1, InpIt last1, InpIt first2, InpIt last2, BinPre pre)
-bool includes(ExePol pol, FwdIt first1, FwdIt last1, 
+bool includes(ExePol pol, FwdIt first1, FwdIt last1,
               FwdIt1 first2, FwdIt1 last2, BinPre pre)
 ```
 
-### 将第一个范围中不在第二个范围内的元素拷贝到 `result`：
+### 将第一个范围中不在第二个范围内的元素拷贝到`result`
 
-```
-OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+```cpp
+OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                      OutIt result)
-FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                     FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                      FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                      OutIt result, BiPre pre)
-FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                      FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
+FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                     FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
 ```
 
-### 求第一个范围与第二个范围的交集并将结果拷贝到 `result`：
 
-```
-OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+
+### 求第一个范围与第二个范围的交集，并将结果拷贝到 `result`
+
+```cpp
+OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                        OutIt result)
-FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1, 
-                        FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1,
+                        FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                        OutIt result, BiPre pre)
-FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1, 
+FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1,
                         FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
 ```
 
-### 求第一个范围与第二个范围的对称差并将结果拷贝到 `result`：
+### 求第一个范围与第二个范围的对称差，并将结果拷贝到 `result`
 
-```
-OutIt set_symmetric_difference(InpIt first1, InpIt last1, 
+```cpp
+OutIt set_symmetric_difference(InpIt first1, InpIt last1,
                                InpIt1 first2, InpIt2 last2, OutIt result)
-FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                                FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_symmetric_difference(InpIt first1, InpIt last1, 
-                               InpIt1 first2, InpIt2 last2, OutIt result, 
+OutIt set_symmetric_difference(InpIt first1, InpIt last1,
+                               InpIt1 first2, InpIt2 last2, OutIt result,
                                BiPre pre)
-FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result, 
+FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result,
                                 BiPre pre)
 ```
 
-### 求第一个范围与第二个范围的并集并将拷贝到 `result`：
+### 求第一个范围与第二个范围的并集，并将结果拷贝到 `result`
 
 ```cpp
-OutIt set_union(InpIt first1, InpIt last1, 
+OutIt set_union(InpIt first1, InpIt last1,
                 InpIt1 first2, InpIt2 last2, OutIt result)
-FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1, 
-                 FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1,
+                 FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_union(InpIt first1, InpIt last1, 
-               InpIt1 first2, InpIt2 last2, OutIt result, BiPre pre)
-FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1, 
+OutIt set_union(InpIt first1, InpIt last1,
+                InpIt1 first2, InpIt2 last2, OutIt result, BiPre pre)
+FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1,
                  FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
-```返回的迭代器是目标范围的结束迭代器。`std::set_difference` 的目标范围包含第一个范围中但不在第二个范围中的元素。相反，`std::symmetric_difference` 的目标范围只包含一个范围中但不在另一个范围中的元素。`std::union` 求并集。
+```
+
+返回的迭代器是目标范围的结束迭代器。`std::set_difference` 的目标范围包含第一个范围中但不在第二个范围中的元素。相反，`std::symmetric_difference` 的目标范围只包含一个范围中但不在另一个范围中的元素。`std::union` 求并集。
 
 ```cpp
 OutIt merge(InpIt first1, InpIt last1, InpIt first2, InpIt last2, OutIt result)
-FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
+FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1,
              FwdIt2 first2, FwdIt2 last2, FwdIt3 result)
 
-OutIt merge(InpIt first1, InpIt last1, InpIt first2, InpIt last2, OutIt result, 
+OutIt merge(InpIt first1, InpIt last1, InpIt2 first2, InpIt2 last2, OutIt result,
             BiPre pre)
-FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1, 
-             FwdpIt2 first2, FwdIt2 last2, FwdIt3 result, BiPre pre)
+FwdIt3 merge(ExePol pol, FwdIt1 first1, FwdIt1 last1,
+             FwdIt2 first2, FwdIt2 last2, FwdIt3 result, BiPre pre)
 
 bool includes(InpIt first1, InpIt last1, InpIt1 first2, InpIt1 last2)
 bool includes(ExePol pol, FwdIt first1, FwdIt last1, FwdIt1 first2, FwdIt1 last2)
 
 bool includes(InpIt first1, InpIt last1, InpIt first2, InpIt last2, BinPre pre)
-bool includes(ExePol pol, FwdIt first1, FwdIt last1, 
+bool includes(ExePol pol, FwdIt first1, FwdIt last1,
               FwdIt1 first2, FwdIt1 last2, BinPre pre)
 
-OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                      OutIt result)
-FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                     FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                      FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_difference(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                      OutIt result, BiPre pre)
-FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1, 
+FwdIt2 set_difference(ExePol pol, FwdIt first1, FwdIt last1,
                       FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
 
-OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                        OutIt result)
-FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1, 
-                        FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1,
+                        FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2, 
+OutIt set_intersection(InpIt first1, InpIt last1, InpIt1 first2, InpIt2 last2,
                        OutIt result, BiPre pre)
-FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1, 
+FwdIt2 set_intersection(ExePol pol, FwdIt first1, FwdIt last1,
                         FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
 
-OutIt set_symmetric_difference(InpIt first1, InpIt last1, 
+OutIt set_symmetric_difference(InpIt first1, InpIt last1,
                                InpIt1 first2, InpIt2 last2, OutIt result)
-FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                                FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_symmetric_difference(InpIt first1, InpIt last1, 
-                               InpIt1 first2, InpIt2 last2, OutIt result, 
+OutIt set_symmetric_difference(InpIt first1, InpIt last1,
+                               InpIt1 first2, InpIt2 last2, OutIt result,
                                BiPre pre)
-FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1, 
-                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result, 
+FwdIt2 set_symmetric_difference(ExePol pol, FwdIt first1, FwdIt last1,
+                                FwdIt1 first2, FwdIt1 last2, FwdIt2 result,
                                 BiPre pre)
 
-OutIt set_union(InpIt first1, InpIt last1, 
+OutIt set_union(InpIt first1, InpIt last1,
                 InpIt1 first2, InpIt2 last2, OutIt result)
-FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1, 
-                 FWdIt1 first2, FwdIt1 last2, FwdIt2 result)
+FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1,
+                 FwdIt1 first2, FwdIt1 last2, FwdIt2 result)
 
-OutIt set_union(InpIt first1, InpIt last1, 
-               InpIt1 first2, InpIt2 last2, OutIt result, BiPre pre)
-FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1, 
+OutIt set_union(InpIt first1, InpIt last1,
+                InpIt1 first2, InpIt2 last2, OutIt result, BiPre pre)
+FwdIt2 set_union(ExePol pol, FwdIt first1, FwdIt last1,
                  FwdIt1 first2, FwdIt1 last2, FwdIt2 result, BiPre pre)
 ```
 
-
-
-
-
 ```cpp
-// heap.cpp 
+// heap.cpp
 ...
 #include <algorithm>
 ...
 
 std::vector<int> vec{4, 3, 2, 1, 5, 6, 7, 9, 10};
 std::make_heap(vec.begin(), vec.end());
-for (auto v: vec) std::cout << v << " ";                   // 10 9 7 4 5 6 2 3 1
-std::cout << std::is_heap(vec.begin(), vec.end());         // true
+for (auto v : vec) std::cout << v << " ";                   // 10 9 7 4 5 6 2 3 1
+std::cout << std::is_heap(vec.begin(), vec.end());          // true
 
 vec.push_back(100);
-std::cout << std::is_heap(vec.begin(), vec.end());         // false
-std::cout << *std::is_heap_until(vec.begin(), vec.end());  // 100
-for (auto v: vec) std::cout << v << " ";                   // 10 9 7 4 5 6 2 3 1 100
+std::cout << std::is_heap(vec.begin(), vec.end());          // false
+std::cout << *std::is_heap_until(vec.begin(), vec.end());   // 100
+for (auto v : vec) std::cout << v << " ";                   // 10 9 7 4 5 6 2 3 1 100
 
 std::push_heap(vec.begin(), vec.end());
-std::cout << std::is_heap(vec.begin(), vec.end());        // true
-for (auto v: vec) std::cout << v << " ";                  // 100 10 7 4 9 6 2 3 1 5
+std::cout << std::is_heap(vec.begin(), vec.end());          // true
+for (auto v : vec) std::cout << v << " ";                   // 100 10 7 4 9 6 2 3 1 5
 
 std::pop_heap(vec.begin(), vec.end());
-for (auto v: vec) std::cout << v << " ";                  // 10 9 7 4 5 6 2 3 1 100
-std::cout << *std::is_heap_until(vec.begin(), vec.end()); // 100
+for (auto v : vec) std::cout << v << " ";                   // 10 9 7 4 5 6 2 3 1 100
+std::cout << *std::is_heap_until(vec.begin(), vec.end());   // 100
 
-vec.resize(vec.size()-1);
-std::cout << std::is_heap(vec.begin(), vec.end());        // true
-std::cout << vec.front() << '\n';                    // 10
+vec.resize(vec.size() - 1);
+std::cout << std::is_heap(vec.begin(), vec.end());          // true
+std::cout << vec.front() << '\n';                           // 10
 ```
 
 # 堆算法
@@ -4898,12 +5066,12 @@ pair<FwdIt, FwdIt> minmax_element(ExePol pol, FwdIt first, FwdIt last, BinPre pr
 如果范围内有多个最小或最大元素，则返回第一个一个。
 
 ```cpp
-// minMax.cpp 
+// minMax.cpp
 ...
 #include <algorithm>
 ...
 
-int toInt(const std::string& s){
+int toInt(const std::string& s) {
   std::stringstream buff;
   buff.str("");
   buff << s;
@@ -4914,11 +5082,13 @@ int toInt(const std::string& s){
 
 std::vector<std::string> myStrings{"94", "5", "39", "-4", "-49", "1001", "-77",
                                    "23", "0", "84", "59", "96", "6", "-94"};
-auto str= std::minmax_element(myStrings.begin(), myStrings.end());
+auto str = std::minmax_element(myStrings.begin(), myStrings.end());
 std::cout << *str.first << ":" << *str.second;              // -4:96
 
-auto asInt= std::minmax_element(myStrings.begin(), myStrings.end(),
-            [](std::string a, std::string b){ return toInt(a) < toInt(b); });
+auto asInt = std::minmax_element(
+    myStrings.begin(),
+    myStrings.end(),
+    [](std::string a, std::string b) { return toInt(a) < toInt(b); });
 std::cout << *asInt.first << ":" << *asInt.second;          // -94:1001
 ```
 
@@ -4933,6 +5103,8 @@ constexpr const T& clamp(const T& v, const T& lo, const T& hi, BinPre pre);
 
 如果 `lo` 小于 `v` 且 `v` 小于 `hi`，则返回 `v` 的引用。否则，返回 `lo` 或 `hi` 的引用。默认使用 `<` 作为比较，但你也可以提供二元谓词 `pre`。
 
+
+
 ```cpp
 // clamp.cpp
 ...
@@ -4940,7 +5112,7 @@ constexpr const T& clamp(const T& v, const T& lo, const T& hi, BinPre pre);
 ...
 
 auto values = {1, 2, 3, 4, 5, 6, 7};
-for (auto v: values) std::cout << v << ' '; // 1234567 
+for (auto v: values) std::cout << v << ' '; // 1234567
 
 auto lo = 3;
 auto hi = 6;
@@ -5046,14 +5218,10 @@ result += *(first+1);
 ...
 ```
 
-
-
-
-
 带有两个二进制可调用对象的算法变体 `inner_product(InpIt, InpIt, OutIt, T, BiFun fun1, BiFun fun2)` 具有挑战性，使用了以下策略：第二个可调用对象 `fun2` 被应用于范围的每一对元素以生成临时目标范围 `tmp`，而第一个可调用对象被应用于目标范围 `tmp` 的每个元素以进行累加，从而生成最终结果。
 
 ```cpp
-// numeric.cpp 
+// numeric.cpp
 ...
 #include <numeric>
 ...
@@ -5076,19 +5244,17 @@ for (auto v: myVec) std::cout << v << " ";            // 1 3 6 10 15 21 28 36 45
 
 std::vector<int> myLongVec(10);
 std::iota(myLongVec.begin(), myLongVec.end(), 2000);
-for (auto v: myLongVec) std::cout << v << " ";    
-                            // 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
+for (auto v: myLongVec) std::cout << v << " ";
+// 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
 ```
-
-# 数值算法
 
 ## C++17 中的新并行算法
 
 通常用于并行执行的六种新算法被称为[前缀和](https://en.wikipedia.org/wiki/Prefix_sum)。如果给定的二进制可调用对象不满足结合律和交换律，则这些算法的行为是未定义的。
 
-### `reduce`: 归范围内的元素。`init` 是起始值。
+### `reduce`：归范围内的元素。`init` 是起始值
 
-*   行为与 `std::accumulate` 相同，但范围可能会被重排。
+- 行为与 `std::accumulate` 相同，但范围可能会被重排。
 
 ```cpp
 ValType reduce(InpIt first, InpIt last)
@@ -5101,15 +5267,14 @@ T reduce(InpIt first, InpIt last, T init, BiFun fun)
 T reduce(ExePol pol, InpIt first, InpIt last, T init, BiFun fun)
 ```
 
-### `transform_reduce`: 转换并归约一个两个范围的元素。`init` 是起始值。
+### `transform_reduce`：转换并归约一个或两个范围的元素。`init` 是起始值
 
-*   行为类似于 `std::inner_product`，但范围可能会重排。
-
-*   应用于两个范围
-    *   如果未提供，则使用加法将两个范围转换为一个范围
-    *   如果提供，则 `fun1` 用于转换，`fun2` 用于归约
-*   应用于单个范围
-    *   `fun1` 用于转换
+- 行为类似于 `std::inner_product`，但范围可能会重排。
+- 应用于两个范围：
+  - 如果未提供，则使用加法将两个范围转换为一个范围。
+  - 如果提供，则 `fun1` 用于转换，`fun2` 用于归约。
+- 应用于单个范围：
+  - `fun1` 用于转换。
 
 ```cpp
 T transform_reduce(InpIt first, InpIt last, T init)
@@ -5122,10 +5287,10 @@ T transform_reduce(InpIt first, InpIt last, T init, BiFun transform, BiFun reduc
 T transform_reduce(ExePol pol, InpIt first, InpIt last, T init, BiFun transform, BiFun reduce)
 ```
 
-### `exclusive_scan`: 使用二进制操作计算斥前缀和。
+### `exclusive_scan`：使用二进制操作计算斥前缀和
 
-*   行为与 `std::reduce` 相同，但提供了所有前缀和
-*   排除每次迭代中的最后一个元素
+- 行为与 `std::reduce` 相同，但提供了所有前缀和。
+- 排除每次迭代中的最后一个元素。
 
 ```cpp
 T exclusive_scan(InpIt first, InpIt last, T init)
@@ -5135,10 +5300,10 @@ T exclusive_scan(InpIt first, InpIt last, T init, BiFun op)
 T exclusive_scan(ExePol pol, InpIt first, InpIt last, T init, BiFun op)
 ```
 
-### `inclusive_scan`: 使用二进制操作计算包含前缀和。
+### `inclusive_scan`：使用二进制操作计算包含前缀和
 
-*   行为与 `std::reduce` 相同，但提供了所有前缀和
-*   包含每次迭代中的最后一个元素
+- 行为与 `std::reduce` 相同，但提供了所有前缀和。
+- 包含每次迭代中的最后一个元素。
 
 ```cpp
 T inclusive_scan(InpIt first, InpIt last, T init)
@@ -5148,7 +5313,7 @@ T inclusive_scan(InpIt first, InpIt last, T init, BiFun op)
 T inclusive_scan(ExePol pol, InpIt first, InpIt last, T init, BiFun op)
 ```
 
-以下示例演示了使用并行执行策略 使用这六种算法的方法。
+以下示例演示了使用并行执行策略使用这六种算法的方法。
 
 
 
@@ -5161,36 +5326,36 @@ T inclusive_scan(ExePol pol, InpIt first, InpIt last, T init, BiFun op)
 ...
 
 std::vector<int> resVec{1, 2, 3, 4, 5, 6, 7, 8};
-std::exclusive_scan(std::execution::par,                   
+std::exclusive_scan(std::execution::par,
                     resVec.begin(), resVec.end(), resVec.begin(), 1,
                     [](int fir, int sec){ return fir * sec; });
 
-for (auto v: resVec) std::cout << v << " "; // 1 1 2 6 24 120 720 5040 
+for (auto v: resVec) std::cout << v << " "; // 1 1 2 6 24 120 720 5040
 
 std::vector<int> resVec2{1, 2, 3, 4, 5, 6, 7, 8};
 
-std::inclusive_scan(std::execution::par,                   
-                    resVec2.begin(), resVec2.end(), resVec2.begin(),      
+std::inclusive_scan(std::execution::par,
+                    resVec2.begin(), resVec2.end(), resVec2.begin(),
                     [](int fir, int sec){ return fir * sec; }, 1);
 
-for (auto v: resVec2) std::cout << v << " "; // 1 2 6 24 120 720 5040 40320 
+for (auto v: resVec2) std::cout << v << " "; // 1 2 6 24 120 720 5040 40320
 
 std::vector<int> resVec3{1, 2, 3, 4, 5, 6, 7, 8};
-std::vector<int> resVec4(resVec3.size());             
-std::transform_exclusive_scan(std::execution::par,         
-                              resVec3.begin(), resVec3.end(), 
+std::vector<int> resVec4(resVec3.size());
+std::transform_exclusive_scan(std::execution::par,
+                              resVec3.begin(), resVec3.end(),
                               resVec4.begin(), 0,
                               [](int fir, int sec){ return fir + sec; },
                               [](int arg){ return arg *= arg; });
 
-for (auto v: resVec4) std::cout << v << " "; // 0 1 5 14 30 55 91 140 
+for (auto v: resVec4) std::cout << v << " "; // 0 1 5 14 30 55 91 140
 
-std::vector<std::string> strVec{"Only", "for", "testing", "purpose"};            
+std::vector<std::string> strVec{"Only", "for", "testing", "purpose"};
 std::vector<int> resVec5(strVec.size());
 
-std::transform_inclusive_scan(std::execution::par,         
-                              strVec.begin(), strVec.end(), 
-                              resVec5.begin(), 
+std::transform_inclusive_scan(std::execution::par,
+                              strVec.begin(), strVec.end(),
+                              resVec5.begin(),
                               [](auto fir, auto sec){ return fir + sec; },
                               [](auto s){ return s.length(); }, 0);
 
@@ -5198,18 +5363,18 @@ for (auto v: resVec5) std::cout << v << " "; // 4 7 14 21
 
 std::vector<std::string> strVec2{"Only", "for", "testing", "purpose"};
 
-std::string res = std::reduce(std::execution::par,         
-                       strVec2.begin() + 1, strVec2.end(), strVec2[0], 
-                       [](auto fir, auto sec){ return fir + ":" + sec; });
+std::string res = std::reduce(std::execution::par,
+                              strVec2.begin() + 1, strVec2.end(), strVec2[0],
+                              [](auto fir, auto sec){ return fir + ":" + sec; });
 
-std::cout << res;      // Only:for:testing:purpose
+std::cout << res; // Only:for:testing:purpose
 
-std::size_t res7 = std::transform_reduce(std::execution::par,        
-                        strVec2.begin(), strVec2.end(), 0,
-                        [](std::size_t a, std::size_t b){ return a + b; },
-                        [](std::string s){ return s.length(); }); 
+std::size_t res7 = std::transform_reduce(std::execution::par,
+                                         strVec2.begin(), strVec2.end(), 0,
+                                         [](std::size_t a, std::size_t b){ return a + b; },
+                                         [](std::string s){ return s.length(); });
 
-std::cout << res7;    // 21
+std::cout << res7; // 21
 ```
 
 # 新算法
@@ -5347,9 +5512,9 @@ std::pair<InIt, FwdIt> uninitialized_move_n(InIt first, Size count, FwIt out)
 std::pair<FwdIt, FwdIt> uninitialized_move_n(ExePol pol, FwdIt first, Size count, FwIt out)
 ```
 
-# 11. 范围 (Ranges)
+# 11. 范围（Ranges）
 
-ranges 库在 C++20 中引入，并在 C++23 中有了强大的扩展。大多数算法都支持范围并提供了投影（projections）。
+`ranges` 库在 C++20 中引入，并在 C++23 中有了强大的扩展。大多数算法都支持范围并提供了投影（projections）。
 
 ```cpp
 // rangesTransform.cpp
@@ -5364,7 +5529,7 @@ auto results = numbers | std::views::filter([](int n){ return n % 2 == 0; })
 for (auto v: results) std::cout << v << " "; // 4 8
 ```
 
-范围的组合
+## 范围的组合
 
 你需要从左到右读取表达式。管道符号 `|` 表示函数组合：首先过滤出所有偶数（`std::views::filter([](int n){ return n % 2 == 0; })`）。随后，将每个剩余数字映射到其双倍（`std::views::transform([](int n){ return n * 2; })`）。
 
@@ -5378,31 +5543,20 @@ for (auto v: results) std::cout << v << " "; // 4 8
 
 是 `std::range` 的进一步细分：
 
-`std::range` 的进一步细分
+`std::range` 的进一步细分。
 
-| **Range** (省略 `std` 命名空间) | **描述** |
+| Range（省略 `std` 命名空间） | 描述 |
 | --- | --- |
-|  |   |
 | `ranges::input_range` | 指定其迭代器类型满足 `input_iterator` |
-|  |   |
 | `ranges::output_range` | 指定其迭代器类型满足 `output_iterator` |
-|  |   |
 | `ranges::forward_range` | 指定其迭代器类型满足 `forward_iterator` |
-|  |   |
 | `ranges::bidirectional_range` | 指定其迭代器类型满足 `bidirectional_iterator` |
-|  |   |
 | `ranges::random_access_range` | 指定其迭代器类型满足 `random_access_iterator` |
-|  |   |
-
-
-
-
-
 | `ranges::contiguous_range` | 指定一个迭代器类型满足 `contiguous_iterator` 的范围。 |
 
 `random_access_iterator` 为其元素提供随机访问，并隐式作为 `bidirectional_iterator`；`bidirectional_iterator` 允许双向迭代，并隐式作为 `forward_iterator`；`forward_iterator` 在单方向上进行迭代。`contiguous_iterator` 的接口与 `bidirectional_iterator` 接口相同。`contiguous_iterator` 保证迭代器指向连续的存储区域。
 
-### 哨兵 (Sentinel)
+### 哨兵（Sentinel）
 
 哨兵指定了范围的结束位置。对于 STL 容器来说，结束迭代器就是哨兵。在 C++20 中，哨兵的类型可以与起始迭代器的类型不同。接的示例使用一个空格作为哨兵。
 
@@ -5414,9 +5568,10 @@ for (auto v: results) std::cout << v << " "; // 4 8
 ...
 
 struct Space {
-bool operator== (auto pos) const {
-    return *pos == ' '; 
-}
+    bool operator== (auto pos) const {
+        return *pos == ' ';
+    }
+};
 
 ...
 
@@ -5424,7 +5579,7 @@ const char* rainerGrimm = "Rainer Grimm";
 std::ranges::for_each(rainerGrimm, Space{}, [] (char c) { std::cout << c; }); // Rainer
 ```
 
-### 范围的组合 (Composing of ranges)
+### 范围的组合（Composing of ranges）
 
 由于使用了空格作为哨兵，最后一行只显示 `Rainer`。
 
@@ -5432,12 +5587,14 @@ std::ranges::for_each(rainerGrimm, Space{}, [] (char c) { std::cout << c; }); //
 
 `std::ranges::to` 是 C++23 中从范围构造容器的方便方法：
 
+
+
 ```cpp
 std::vector<int> range(int begin, int end, int stepsize = 1) {
     auto boundary = end{ return i < end; };
-    std::vector<int> result = std::ranges::views::iota(begin) 
-                              | std::views::stride(stepsize) 
-                              | std::views::take_while(boundary) 
+    std::vector<int> result = std::ranges::views::iota(begin)
+                              | std::views::stride(stepsize)
+                              | std::views::take_while(boundary)
                               | std::ranges::to<std::vector>();
     return result;
 }
@@ -5445,11 +5602,11 @@ std::vector<int> range(int begin, int end, int stepsize = 1) {
 
 函数 `range` 创建了一个 `std::vector<int>`，包含从 `begin` 到 `end` 且步长为 `stepsize` 的所有元素。`begin` 必须小于 `end`。
 
-### 视图 (View)
+### 视图（View）
 
 视图是轻量级的范围。视图允许你访问范围、遍历范围，或者修改或过滤范围中的元素。视图不拥有数据，其拷贝、移动或赋值的时间复杂度是常数级的。
 
-### 范围适配器 (Range Adaptors)
+### 范围适配器（Range Adaptors）
 
 范围适配器将范围转换为视图。
 
@@ -5468,51 +5625,35 @@ C++20 的 ranges 库拥有丰富的视图。
 
 | 视图 | 说明 |
 | --- | --- |
-| | |
 | `std::views::all_t` | 获取所有元素。 |
 | `std::views::all` | |
-| | |
 | `std::ranges::ref_view` | 获取另一个范围的所有元素。 |
-| | |
 | `std::ranges::filter_view` | 获取满足谓词的元素。 |
 | `std::views::filter` | |
-| | |
 | `std::ranges::transform_view` | 转换每个元素。 |
 | `std::views::transform` | |
-| | |
 | `std::ranges::take_view` | 获取另一个视图的前 `n` 个元素。 |
 | `std::views::take` | |
-| | |
 | `std::ranges::take_while_view` | 只要谓词返回 `true`，就获取另一个视图的元素。 |
 | `std::views::take_while` | |
-| | |
 | `std::ranges::drop_view` | 跳过另一个视图的前 `n` 个元素。 |
 | `std::views::drop` | |
-| | |
 | `std::ranges::drop_while_view` | 跳过另一个视图的初始元素，直到谓词返回 `false`。 |
 | `std::views::drop_while` | |
-| | |
 | `std::ranges::join_view` | 合并范围的视图。 |
 | `std::views::join` | |
-| | |
 | `std::ranges::split_view` | 使用分隔符分割视图。 |
 | `std::views::split` | |
-| | |
 | `std::ranges::common_view` | 将视图转换为 `std::ranges::common_range`。 |
 | `std::views::common` | |
-| | |
 | `std::ranges::reverse_view` | 反向迭代。 |
 | `std::views::reverse` | |
-| | |
 | `std::ranges::basic_istream_view` | 在视图上应用 `>>`。 |
 | `std::ranges::istream_view` | |
-| | |
 | `std::ranges::elements_view` | 在元组的第 `n` 个元素上创建视图。 |
 | `std::views::elements` | |
-| | |
 | `std::ranges::keys_view` | 在对的第一个元素上创建视图。 |
 | `std::views::keys` | |
-| | |
 | `std::ranges::values_view` | 在对的第二个元素上创建视图。 |
 | `std::views::values` | |
 
@@ -5522,45 +5663,32 @@ C++20 的 ranges 库拥有丰富的视图。
 
 | 视图 | 说明 |
 | --- | --- |
-| | |
 | `std::ranges::zip_view` | 获取所有元素。 |
 | `std::views::zip` | |
-| | |
 | `std::ranges::adjacent_view` | 获取相邻元素的元组。 |
 | `std::views::adjacent` | |
-| | |
 | `std::ranges::adjacent_transform_view` | 转换相邻元素。 |
 | `std::views::adjacent_transform` | |
-| | |
 | `std::ranges::split_view` | 使用分隔符合并范围的视图。 |
 | `std::views::split` | |
-| | |
 | `std::ranges::chunk_view` | 按大小划分范围。 |
 | `std::views::chunk` | |
-| | | || `std::ranges::drop_while_view` | 根据谓词跳过初始元素。 |
+| `std::ranges::drop_while_view` | 根据谓词跳过初始元素。 |
 | `std::views::drop_while` | |
-| | |
 | `std::ranges::join_view` | 合并范围的视图。 |
 | `std::views::join` | |
-| | |
 | `std::ranges::split_view` | 使用分隔符分割视图。 |
 | `std::views::split` | |
-| | |
 | `std::ranges::common_view` | 将视图转换为 `std::ranges::common_range`。 |
 | `std::views::common` | |
-| | |
 | `std::ranges::reverse_view` | 反向迭代。 |
 | `std::views::reverse` | |
-| | |
 | `std::ranges::basic_istream_view` | 在视图上应用 `>>`。 |
 | `std::ranges::istream_view` | |
-| | |
 | `std::ranges::elements_view` | 在元组的第 `n` 个元素上创建视图。 |
 | `std::views::elements` | |
-| | |
 | `std::ranges::keys_view` | 在对的第一个元素上创建视图。 |
 | `std::views::keys` | |
-| | |
 | `std::ranges::values_view` | 在对的第二个元素上创建视图。 |
 | `std::views::values` | |
 
@@ -5571,10 +5699,6 @@ C++20 的 ranges 库拥有丰富的视图。
 #### `generator`
 
 `std::generator` 是 C++23 中第一个具体的 `coroutine` 生成器。`std::generator` 通过反复恢复从暂停处继续的协程来生成元素序列。
-
-
-
-
 
 ```cpp
 // generator.cpp
@@ -5613,8 +5737,8 @@ for (auto f : fib() | std::views::take(10)) {  // 3
 
 ```cpp
 std::vector<int> myVec{1, 2, 3, 4, 5, 6, 7, 8, 9};
-auto res = std::accumulate(std::begin(myVec), std::end(myVec), 0); 
-std::cout << res << '\n';      //  45 
+auto res = std::accumulate(std::begin(myVec), std::end(myVec), 0);
+std::cout << res << '\n';      //  45
 ```
 
 ranges 库允许直接在 `std::unordered_map` 的键 (1) 或值 (3) 上创建视图（view）。
@@ -5624,22 +5748,22 @@ ranges 库允许直接在 `std::unordered_map` 的键 (1) 或值 (3) 上创建�
 ...
 #include <ranges>
 
-std::unordered_map<std::string, int> freqWord{ {"witch", 25}, {"wizard", 33}, 
-                                               {"tale", 45}, {"dog", 4}, 
-                                               {"cat", 34}, {"fish", 23} };    
+std::unordered_map<std::string, int> freqWord{{"witch", 25}, {"wizard", 33},
+                                              {"tale", 45}, {"dog", 4},
+                                              {"cat", 34}, {"fish", 23}};
 std::cout << "Keys" << '\n';
 auto names = std::views::keys(freqWord);                                      // (1)
-for (const auto& name : names){ std::cout << name << " "; };
+for (const auto& name : names) { std::cout << name << " "; }
 
-for (const auto& na : std::views::keys(freqWord)){ std::cout << na << " "; }; // (2)
+for (const auto& na : std::views::keys(freqWord)) { std::cout << na << " "; }  // (2)
 
 std::cout << "Values: " << '\n';
 auto values = std::views::values(freqWord);                                   // (3)
-for (const auto& value : values){ std::cout << value << " "; };
+for (const auto& value : values) { std::cout << value << " "; }
 
-for (const auto& value : std::views::values(freqWord)){                       // (4)
-    std::cout << value << " "; 
-} 
+for (const auto& value : std::views::values(freqWord)) {                       // (4)
+    std::cout << value << " ";
+}
 ```
 
 ## Ranges 直接在容器上工作
@@ -5657,26 +5781,28 @@ ranges 库支持使用 `|` 符号进行函数组合。
 ...
 #include <ranges>
 
-std::map<std::string, int> freqWord{ {"witch", 25}, {"wizard", 33}, {"tale", 45},
-                                     {"dog", 4}, {"cat", 34}, {"fish", 23} };
+std::map<std::string, int> freqWord{{"witch", 25}, {"wizard", 33}, {"tale", 45},
+                                    {"dog", 4}, {"cat", 34}, {"fish", 23}};
 
-std::cout << "All words: ";                            // (1)
-for (const auto& name : std::views::keys(freqWord)) { std::cout << name << " "; }        \
-
-std::cout << "All words reverse: ";                    // (2)
-for (const auto& name : std::views::keys(freqWord) | std::views::reverse) { 
+std::cout << "All words: ";  // (1)
+for (const auto& name : std::views::keys(freqWord)) {
     std::cout << name << " ";
-} 
-
-std::cout << "The first 4 words: ";                    // (3)
-for (const auto& name : std::views::keys(freqWord) | std::views::take(4)) { 
-    std::cout << name << " "; 
 }
 
-std::cout << "All words starting with w:                        // (4)
-auto firstw = [](const std::string& name){ return name[0] == 'w'; };
-for (const auto& name : std::views::keys(freqWord) | std::views::filter(firstw)) { 
-    std::cout << name << " "; 
+std::cout << "All words reverse: ";  // (2)
+for (const auto& name : std::views::keys(freqWord) | std::views::reverse) {
+    std::cout << name << " ";
+}
+
+std::cout << "The first 4 words: ";  // (3)
+for (const auto& name : std::views::keys(freqWord) | std::views::take(4)) {
+    std::cout << name << " ";
+}
+
+std::cout << "All words starting with w: ";  // (4)
+auto firstw = [](const std::string& name) { return name[0] == 'w'; };
+for (const auto& name : std::views::keys(freqWord) | std::views::filter(firstw)) {
+    std::cout << name << " ";
 }
 ```
 
@@ -5688,15 +5814,17 @@ for (const auto& name : std::views::keys(freqWord) | std::views::filter(firstw))
 
 ```cpp
 auto rev1 = std::views::reverse(std::views::keys(freqWord));
-auto rev2 = std::views::keys(freqWord) | std::views::reverse; 
-auto rev3 = freqWord | std::views::keys | std::views::reverse; 
+auto rev2 = std::views::keys(freqWord) | std::views::reverse;
+auto rev3 = freqWord | std::views::keys | std::views::reverse;
 ```
 
 最后，这里是程序的输出：
 
 ![](img/privat----rangesComposition.png)
 
-## 惰性求值[`std::views::iota`](https://en.cppreference.com/w/cpp/ranges/iota_view) 是一个 range 工厂，用于通过连续递增初始值来创建元素序列。
+## 惰性求值
+
+[`std::views::iota`](https://en.cppreference.com/w/cpp/ranges/iota_view) 是一个 range 工厂，用于通过连续递增初始值来创建元素序列。
 
 ```cpp
 // rangesLazy.cpp
@@ -5704,16 +5832,18 @@ auto rev3 = freqWord | std::views::keys | std::views::reverse;
 #include <ranges>
 
 bool isPrime(int i) {
-    for (int j=2; j*j <= i; ++j){
+    for (int j = 2; j * j <= i; ++j) {
         if (i % j == 0) return false;
     }
     return true;
 }
 
-auto odd = [](int i){ return i % 2; };
+auto odd = [](int i) { return i % 2; };
 
 std::cout << "Numbers from 100000: " << '\n';
-for (int i: std::views::iota(100000) | std::views::filter(odd) | std::views::filter(isPrime)) {
+for (int i : std::views::iota(100000)
+           | std::views::filter(odd)
+           | std::views::filter(isPrime)) {
     std::cout << i << " ";
 }
 ```
@@ -5731,6 +5861,8 @@ for (int i: std::views::iota(100000) | std::views::filter(odd) | std::views::fil
 
 ## `std` 算法与 `std::ranges` 算法
 
+
+
 [algorithm 库](https://en.cppreference.com/w/cpp/header/algorithm) 和 [memory 库](https://en.cppreference.com/w/cpp/header/memory) 的算法有 [ranges 后缀](https://en.cppreference.com/w/cpp/algorithm/ranges)。它们以 `std::ranges` 命名空间开头。[numeric 库](https://en.cppreference.com/w/cpp/header/numeric) 没有 ranges 后缀。在下面的列表中，我展示了 `std::sort` 算法的五个重载之一以及新的 `std::ranges::sort` 算法的两个重载之一。
 
 ```cpp
@@ -5746,12 +5878,9 @@ constexpr I sort(I first, S last, Comp comp = {}, Proj proj = {});
 
 首先，`std::sort` 接收由起始和结束迭代器定义的范围。迭代器必须是[随机访问迭代器](https://en.cppreference.com/w/cpp/iterator/random_access_iterator)。它需要一个[执行策略](https://en.cppreference.com/w/cpp/execution/execution_policy)。`Compare` 允许你指定 `std::sort` 的排序策略。
 
-
-
-
 此外，当你学习 `std::ranges::sort` 的重载时，你会注意到它接受一个由随机访问迭代器和哨兵（sentinel）定义的范围。此外，该重载接受一个谓词 `Comp` 和一个投影 `Proj`。谓词 `Comp` 用于默认的小于比较，而投影 `Proj` 使用恒等 [`std::identity`](https://en.cppreference.com/w/cpp/utility/functional/identity)。投影是将集合映射到其子集的映射：
 
-```
+```cpp
 struct PhoneBookEntry{ 
     std::string name;
     int number;
@@ -5781,11 +5910,11 @@ C++ 继承了 C 的数值函数，并拥有一个随机数库。
 
 [随机数](http://en.cppreference.com/w/cpp/header/random) 对于许多领域都是必要的，例如软件测试、生成密钥或计算机游戏。C++ 的随机数机制由两部分组成：随机数的生成和这些随机数的分布。这两部分都需要 `<random>` 头文件。
 
-#### 随机数生成器
+### 随机数生成器
 
 随机数生成器生成一个最小值和最大值之间的随机数流。该流由一个所谓的“种子”（`seed`）初始化，保证不同的随机数序列。
 
-```
+```cpp
 #include <random>
 ...
 std::random_device seed;
@@ -5812,7 +5941,7 @@ std::mt19937 generator(seed());
 
 随机数库支持多种随机数生成器。最为人知的是梅森旋转算法（Mersenne Twister）、由实现选择的 `std::default_random_engine` 以及 `std::random_device`。`std::random_device` 是唯一的真随机数生成器，但并非所有平台都提供它。
 
-#### 随机数分布
+### 随机数分布
 
 随机数分布将随机数生成器 `gen` 的随机数映射到所选的分布。
 
@@ -5894,7 +6023,7 @@ std::mt19937 gen(seed());
 
 ## 数学函数
 
-来自 C
+### 来自 C
 
 数值函数需要用命名空间 `std` 限定。
 
@@ -5928,7 +6057,7 @@ for (int i= 0; i < 10; ++i) std::cout << (rand()%6 + 1) << " ";
 
 C++ 支持基础和高级数学常量。数学常量类型为 `double`。它们位于 `std::numbers` 命名空间并在 `<numbers>` 头文件中。
 
-数学常量
+### 数学常量
 
 | 数学常量 | 含义 |
 | --- | --- |
@@ -5936,10 +6065,6 @@ C++ 支持基础和高级数学常量。数学常量类型为 `double`。它们�
 | `std::numbers::log2` | ![log2e](img/leanpub_equation_4.png) |
 | `std::numbers::log10` | ![log10e](img/leanpub_equation_5.png) |
 | `std::numbers::pi` | ![pi](img/leanpub_equation_6.png) |
-
-
-
-
 | `std::numbers::inv_pi` | ![\frac{1}{\pi}](img/leanpub_equation_7.png) |
 | `std::numbers::inv_sqrtpi` | ![\frac{1}{\sqrt{\pi}}](img/leanpub_equation_8.png) |
 | `std::numbers::ln2` | ![\ln 2](img/leanpub_equation_9.png) |
@@ -5963,17 +6088,17 @@ std::cout << "std::numbers::e: " <<  std::numbers::e << '\n';
 std::cout << "std::numbers::log2e: " <<  std::numbers::log2e << '\n'; 
 std::cout << "std::numbers::log10e: " <<  std::numbers::log10e << '\n'; 
 std::cout << "std::numbers::pi: " <<  std::numbers::pi << '\n'; 
-std::cout << "std::numbers::inv_pi: " <<  std::numbers::inv_pi << '\n';
-std::cout << "std::numbers::inv_sqrtpi: " <<  std::numbers::inv_sqrtpi << '\n'; 
-std::cout << "std::numbers::ln2: " <<  std::numbers::ln2 << '\n'; 
-std::cout << "std::numbers::sqrt2: " <<  std::numbers::sqrt2 << '\n'; 
-std::cout << "std::numbers::sqrt3: " <<  std::numbers::sqrt3 << '\n'; 
-std::cout << "std::numbers::inv_sqrt3: " <<  std::numbers::inv_sqrt3 << '\n';
-std::cout << "std::numbers::egamma: " <<  std::numbers::egamma << '\n';
-std::cout << "std::numbers::phi: " <<  std::numbers::phi << '\n';
+std::cout << "std::numbers::inv_pi: " << std::numbers::inv_pi << '\n';
+std::cout << "std::numbers::inv_sqrtpi: " << std::numbers::inv_sqrtpi << '\n'; 
+std::cout << "std::numbers::ln2: " << std::numbers::ln2 << '\n'; 
+std::cout << "std::numbers::sqrt2: " << std::numbers::sqrt2 << '\n'; 
+std::cout << "std::numbers::sqrt3: " << std::numbers::sqrt3 << '\n'; 
+std::cout << "std::numbers::inv_sqrt3: " << std::numbers::inv_sqrt3 << '\n';
+std::cout << "std::numbers::egamma: " << std::numbers::egamma << '\n';
+std::cout << "std::numbers::phi: " << std::numbers::phi << '\n';
 ```
 
-数学函数
+### 数学函数
 
 ![](img/privat----mathematicalConstants.png)
 
@@ -5981,9 +6106,9 @@ std::cout << "std::numbers::phi: " <<  std::numbers::phi << '\n';
 
 ![Cippi 在玩蛇](img/Cippi----CippiSchlange.jpg)
 
-Cippi 正在玩蛇
+Cippi 正在玩蛇。
 
-[字符串](http://en.cppreference.com/w/cpp/string/basic_string) 是字符序列。C++ 许多许多成员函数来分析或更改字符串。C++ 字符串是 C 字符串（`const char*`）的安全替代品。字符串需要 `<string>` 头文件。
+[字符串](http://en.cppreference.com/w/cpp/string/basic_string) 是字符序列。C++ 有许多成员函数来分析或更改字符串。C++ 字符串是 C 字符串（`const char*`）的安全替代品。字符串需要 `<string>` 头文件。
 
 ![](img/privat----string.png)
 
@@ -5998,6 +6123,8 @@ class basic_string;
 
 C++ 为字符类型 `char`、`wchar_t`、`char16_t` 和 `char32_t` 提供了别名。
 
+
+
 ```cpp
 typedef basic_string<char> string;
 typedef basic_string<wchar_t> wstring;
@@ -6009,10 +6136,10 @@ typedef basic_string<char32_t> u32string;
 
 C++ 提供了许多成员函数从 C 字符串或 C++ 字符串创建字符串。在底层，创建 C++ 字符串时总是涉及一个 C 字符串。这在 C++14 中发生了变化，因为新的 C++ 标准支持 C++ 字符串字面量：`std::string str{"string"s}`。C 字符串字面量 `"string literal"` 通过后缀 `s` 变为 C++ 字符串字面量：`"string literal"s`。表格概述了创建和删除 C++ 字符串的成员函数。
 
-#### 创建和删除字符串的成员函数
+### 创建和删除字符串的成员函数
 
 | 成员函数 | 示例 |
-| :--- | --- |
+| :--- | :--- |
 | 默认 | `std::string str` |
 | 从 C++ 字符串拷贝 | `std::string str(oth)` |
 | 从 C++ 字符串移动 | `std::string str(std::move(oth))` |
@@ -6023,7 +6150,7 @@ C++ 提供了许多成员函数从 C 字符串或 C++ 字符串创建字符串�
 | 从数组创建 | `std::string str("c-array", len)` |
 | 从字符创建 | `std::string str(num, 'c')` |
 | 从初始化列表创建 | `std::string str({'a', 'b', 'c', 'd'})` |
-| 从子串创建 | `str= other.substring(3, 10)` |
+| 从子串创建 | `str = other.substring(3, 10)` |
 | 析构函数 | `str.~string()` |
 
 ```cpp
@@ -6046,24 +6173,24 @@ std::cout << str6.substr(1);                  // 2345
 std::cout << str6.substr(1, 2);               // 23
 ```
 
-创建字符串
+### 创建字符串
 
-### C++ 字符串与 C 字符串之间的转换
+## C++ 字符串与 C 字符串之间的转换
 
 ![](img/privat----stringConvert)
 
 C 字符串转换为 C++ 字符串是隐式的，但必须显式地请求将 C++ 字符串转换为 C 字符串。`str.copy()` 拷贝 C++ 字符串的内容但不包含终止符 `\0`。`str.data()` 和 `str.c_str()` 空字符。
 
-### 大小与容量
+## 大小与容量
 
 字符串拥有的元素数量（`str.size()`）通常小于预留的元素数量（`str.capacity()`）。因此，如果你向字符串添加元素，将不会重新分配。`str.max_size()` 返回字符串最多可以拥有的数量。以下成员函数满足：`str.size() <= str.capacity() <= str.max_size()`。
 
 下表显示处理字符串内存管理的成员函数。
 
-创建和删除字符串的成员函数
+### 创建和删除字符串的成员函数
 
 | 成员函数 | 说明 |
-| :--- | --- |
+| :--- | :--- |
 | `str.empty()` | 检查 `str` 是否为空。 |
 | `str.size(), str.length()` | `str` 的元素数量。 |
 | `str.capacity()` | `str` 在不重新分配的情况下可以拥数量。 |
@@ -6091,7 +6218,7 @@ void showStringInfo(const std::string& s){
 std::string str;
 showStringInfo(str);  // "": 0 0 461168601842738797
 
-str +="12345";
+str += "12345";
 showStringInfo(str);  // "12345": 5 5 461168601842738797
 
 str.resize(30);
@@ -6104,9 +6231,9 @@ str.shrink_to_fit();
 showStringInfo(str);  // "12345": 30 30 461168601842738797
 ```
 
-大小与容量
+### 大小与容量
 
-### 比较
+## 比较
 
 字符串支持著名的比较运算符 `==, !=, <, >, >=`。两个字符串的比较在它们的元素上进行。
 
@@ -6124,11 +6251,7 @@ std::cout << (first <= first) << '\n'; // true
 std::cout << (first < second) << '\n'; // true
 ```
 
-字符串比较
-
-
-
-
+### 字符串比较
 
 # 字符串拼接
 
@@ -6143,14 +6266,10 @@ std::cout << (first < second) << '\n'; // true
 ### 访问字符串的元素
 
 | 成员函数 | 示例 |
-| --- | --- |
-| | |
+| :--- | :--- |
 | `str.front()` | 返回 `str` 的第一个字符。 |
-| | |
 | `str.back()` | 返回 `str` 的最后一个字符。 |
-| | |
 | `str[n]` | 返回 `str` 的第 $n$ 个字符。**不会检查**字符串边界。 |
-| | |
 | `str.at(n)` | 返回 `str` 的第 $n$ 个字符。**会检查**边界。如果违反边界，将抛出 `std::out_of_range` 异常。 |
 
 ```cpp
@@ -6159,10 +6278,10 @@ std::cout << (first < second) << '\n'; // true
 #include <string>
 ...
 
-std::string str= {"0123456789"};
+std::string str = {"0123456789"};
 std::cout << str.front() << '\n';           // 0
 std::cout << str.back() << '\n';            // 9
-for (int i= 0; i <= 3; ++i){
+for (int i = 0; i <= 3; ++i){
   std::cout << "str[" << i << "]:" << str[i] << "; ";
 } // str[0]: 0; str[1]: 1; str[2]: 2; str[3]: 3;
 
@@ -6174,14 +6293,14 @@ catch (const std::out_of_range& e){
   std::cerr << "Exception: " << e.what() << '\n';
 } // Exception: basic_string::at
 
-std::cout << *(&str[0]+5) << '\n';         // 5
-std::cout << *(&str[5]) << '\n';           // 5
+std::cout << *(&str[0] + 5) << '\n';        // 5
+std::cout << *(&str[5]) << '\n';            // 5
 std::cout << str[5] << '\n';               // 5
 ```
 
 ## 元素访问
 
-在示例中看到编译器执行了调用 `str[10]`，这非常令人兴奋。在字符串边界之外访问是 `未定义行为`。相反，编译器会针对调用 `str.at(10)` 报错。
+在示例中看到编译器执行了调用 `str[10]`，这非常令人兴奋。在字符串边界之外访问是`未定义行为`。相反，编译器会针对调用 `str.at(10)` 报错。
 
 ## 输入与输出
 
@@ -6201,7 +6320,7 @@ istream& getline (istream&& is, string& line);
 `getline` 消耗整行内容，包括空格。只有行分隔符被忽略。该函数需要头文件 `<string>`。
 
 ```cpp
-// stringInputOutput.cpp 
+// stringInputOutput.cpp
 ...
 #include <string>
 ...
@@ -6214,14 +6333,14 @@ std::vector<std::string> readFromFile(const char* fileName){
   }
   std::vector<std::string> lines;
   std::string line;
-  while (getline(file , line)) lines.push_back(line);
+  while (getline(file, line)) lines.push_back(line);
   return lines;
 }
 
 std::string fileName;
 std::cout << "Your filename: ";
 std::cin >> fileName;
-std::vector<std::string> lines= readFromFile(fileName.c_str());
+std::vector<std::string> lines = readFromFile(fileName.c_str());
 int num{0};
 for (auto line: lines) std::cout << ++num << ": " << line << '\n';
 ```
@@ -6230,34 +6349,30 @@ for (auto line: lines) std::cout << ++num << ": " << line << '\n';
 
 该程序显示任意文件的行，包括它们的行号。表达式 `std::cin >> fileName` 读取文件名。`readFromFile` 函数使用 `getline` 读取文件所有行，并将它们推入 vector 中。
 
-### 搜索
+## 搜索
 
 C++ 提供了多种变体来搜索字符串中。每种变体都以各种重载形式存在。
 
 `find` 算法支持：
 
-*   搜索字符、C 风格字符串或 C++ 字符串，
-*   从 C 字符串或 C++ 字符串中搜索字符，
-*   向前和向后搜索，
-*   对 C 字符串或 C++ 字符串中的字符进行正（包含）或负（不包含）搜索，
-*   在字符串的任意位置开始搜索。
+- 搜索字符、C 风格字符串或 C++ 字符串；
+- 从 C 字符串或 C++ 字符串中搜索字符；
+- 向前和向后搜索；
+- 对 C 字符串或 C++ 字符串中的字符进行正（包含）或负（不包含）搜索；
+- 在字符串的任意位置开始搜索。
 
 六种 `find` 函数变体的参数遵循相似的模式。第一个参数是你正在搜索的文本。第二个参数是搜索的起始位置，第三个参数是字符数量。
 
-以下是 `find` 的六种变体：
+以下是六种 `find` 的变体：
 
 | 成员函数 | 说明 |
-| --- | --- |
+| :--- | :--- |
 | `str.find(...)` | 返回字符或子字符串在 `str` 中首次出现的位置。 |
 | `str.rfind(...)` | 返回字符或子字符串在 `str` 中最后出现的位置。 |
 | `str.find_first_of(...)` | 返回集合中任意字符在 `str` 中首次出现的位置。 |
 | `str.find_last_of(...)` | 返回集合中任意字符在 `str` 中最后出现的位置。 |
 | `str.find_first_not_of(...)` | 返回不在集合中的任意字符在 `str` 中首次出现的位置。 |
 | `str.find_last_not_of(...)` | 返回不在集合中的任意字符在 `str` 中最后出现的位置。 |
-
-
-
-
 
 `str.contains` 用于检查字符串是否包含子字符串。该子字符串可以是 `std::string_view`、单个字符或字符串。
 
@@ -6270,30 +6385,32 @@ std::string helloWorld = "hello world";
 
 std::cout << helloWorld.contains("hello") << '\n'; // true
 std::cout << helloWorld.contains("llo") << '\n';   // true
-std::cout << helloWorld.contains('w') << '\n';     // true          
+std::cout << helloWorld.contains('w') << '\n';     // true
 std::cout << helloWorld.contains('W') << '\n';     // false
 ```
 
-检查字符串是否包含子字符串
+### 检查字符串是否包含子字符串
 
-### 修改操作
+## 修改操作
 
 字符串有许多用于修改其本身的操作。`str.assign` 将新字符串赋值给字符串 `str`。通过 `str.swap` 你可以交换两个字符串。要从字符串中删除一个字符，使用 `str.pop_back` 或 `str.erase`。相反，`str.clear` 或 `str.erase` 会删除整个字符串。要向字符串追加新字符，使用 `+=`、`std.append` 或 `str.push_back`。你可以使用 `str.insert` 插入新字符，或使用 `str.replace` 替换字符。
 
-修改字符串的成员函数
+### 修改字符串的成员函数
 
 | 成员函数 | 描述 |
-| --- | --- |
-| `str= str2` | 将 `str2` 赋值给 `str`。 |
+| :--- | :--- |
+| `str = str2` | 将 `str2` 赋值给 `str`。 |
 | `str.assign(...)` | 给 `str` 赋值一个新字符串。 |
 | `str.swap(str2)` | 交换 `str` 和 `str2`。 |
-| `str.pop_back()` |  `str` 的最后一个字符。 |
+| `str.pop_back()` | `str` 的最后一个字符。 |
 | `str.erase(...)` | 从 `str` 中删除字符。 |
 | `str.clear()` | 清空 `str`。 |
 | `str.append(...)` | 向 `str` 追加字符。 |
 | `str.push_back(s)` | 向 `str` 追加字符 `s`。 |
 | `str.insert(pos, ...)` | 从 `pos` 开始在 `str` 中插入字符。 |
 | `str.replace(pos, len, ...)` | 替换 `str` 中从 `pos` 开始的 `len` 个字符。 |
+
+
 
 这些操作有许多重载版本。成员函数 `str.assign`、`str.append`、`str.insert` 和 `str.replace` 非常相似。这四个函数都可以用 C++ 字符串和子字符串、字符、C 字符串、C 字符串数组、范围和初始化列表调用。`str.erase` 可以删除单个字符、范围以及给定位置开始的多个字符。
 
@@ -6334,9 +6451,9 @@ str.insert(0, "012");                 // 0123456789
 
 str= {"only for testing."};
 str.replace(0, 0, "0");               // nly for testing.
-str.replace(0, 5, "Only", 0);      // 4 for testing.
+str.replace(0, 5, "Only", 0);         // 4 for testing.
 str.replace(16, 8, "");               // Only for testing.
-str.replace(4, 0, 5, 'y');            // yyyyy for testing.
+str.replace(4, 0, 5, 'y');             // yyyyy for testing.
 str.replace(str.begin(), str.end(), "Only for purpose."); // Only for purpose.
 str.replace(str.begin()+4, str.end()-8, 10, '#');
 ```
@@ -6345,7 +6462,7 @@ str.replace(str.begin()+4, str.end()-8, 10, '#');
 
 ### 数字转换
 
-![](img/NumericConvert.png)
+![数字转换](img/NumericConvert.png)
 
 你可以使用 `std::to_string(val)` 和 `std::to_wstring(val)` 将数字或浮点数转换为对应的 `std::string` 或 `std::wstring`。你有一组反向的 `sto` 函数用于将字符串转换为数字或浮点数。所有函数都需要包含 `<string>` 头文件。`sto` 函数都具有相同的接口。示例展示了针对 `long` 类型：
 
@@ -6448,9 +6565,6 @@ std::string str = "123.456";
 long double ld = std::stold(str); // 123.456
 ```
 
-
-
-
 ```cpp
 template<
     class CharT,
@@ -6473,7 +6587,7 @@ typedef std::u32string_view std::basic_string_view<char32_t>
 
 下表概述了创建字符串视图的各种方式。
 
-用于创建和设置字符串视图的成员函数
+**用于创建和设置字符串视图的成员函数**
 
 | 成员函数 | 示例 |
 | --- | --- |
@@ -6481,17 +6595,17 @@ typedef std::u32string_view std::basic_string_view<char32_t>
 | 从 C 字符串 | `std::string_view str_view2("C-string")` |
 | 从字符串视图 | `std::string_view str_view3(str_view2)` |
 | 从 C 数组 | `std::string_view str_view4(arr, sizeof arr)` |
-| 从字符串视图 | `str_view4= str_view3.substring(2, 3)` |
+| 从字符串视图 | `str_view4 = str_view3.substring(2, 3)` |
 | 从字符串视图 | `std::string_view str_view5 = str_view4` |
 
 ## 非修改操作
 
 为了使本章节内容简洁并避免重复字符串章节中的详细描述，我仅提到字符串视图的非修改操作。请通过 string 章节中相关文档的链接获取更多细节。
 
-- **元素访问**：`operator[]`, `at`, `front`, `back`, `data`（参见 string: 元素访问）
-- **容量**：`size`, `length`, `max_size`, `empty`（参见 string: 大小与容量）
-- **查找**：`find`, `rfind`, `find_first_of`, `find_last_of`, `find_first_not_of`, `find_last_not_of`（参见 string: 搜索）
-- **拷贝**：`copy`（参见 string: C++字符串与 C-String 之间的转换）
+- **元素访问**：`operator[]`、`at`、`front`、`back`、`data`（参见 string：元素访问）
+- **容量**：`size`、`length`、`max_size`、`empty`（参见 string：大小与容量）
+- **查找**：`find`、`rfind`、`find_first_of`、`find_last_of`、`find_first_not_of`、`find_last_not_of`（参见 string：搜索）
+- **拷贝**：`copy`（参见 string：C++ 字符串与 C-String 之间的转换）
 
 ## 修改操作
 
@@ -6530,22 +6644,26 @@ cout << arr << ": " << sizeof arr << endl             // A lot of space: 17
 - 在文本中搜索模式：`std::regex_search`
 - 替换文本：`std::regex_replace`
 - 遍历模式：`std::regex_iterator`
+
 默认情况下，使用 `ECMAScript` 语法。其他的语法有 basic、grep 和 egrep。处理正则表达式通常分为三步：
 
-I. 定义正则表达式：
+### I. 定义正则表达式
+
 ```cpp
 std::string text="C++ or c++;
 std::string regExpr(R"(c\+)");
 std::regex rgx(regExpr);
 ```
 
-II. 存储结果：
+### II. 存储结果
+
 ```cpp
 std::smatch smatch;
 std::regex_search(text, smatch, rgx);
 ```
 
-III. 处理结果：
+### III. 处理结果
+
 ```cpp
 std::cout << smatch[0] << '\n';
 ```
@@ -6601,11 +6719,7 @@ if (std::regex_search(theQuestion, smatch, rgxIn)){
 
 `std::match_results` 类型的对象是 `std::regex_match` 或 `std::regex_search` 的结果。`std::match_results` 是一个序列容器，至少一个 `std::sub_match` 对象的捕获组。`std::sub_match` 对象是字符序列。
 
-
-
-
-
-```
+```cpp
 typedef match_results<const char*> cmatch;
 typedef match_results<const wchar_t*> wcmatch;
 typedef match_results<string::const_iterator> smatch;
@@ -6618,12 +6732,16 @@ typedef match_results<wstring::const_iterator> wsmatch;
 
 | 成员函数 | 说明 |
 | --- | --- |
+
+
+
 | `smatch.size()` | 返回捕获组的数量。 |
+| --- | --- |
 | `smatch.empty()` | 返回结果是否包含捕获组。 |
-| `smatch[i]` | 返回第 i 个捕获组。 |
-| `smatch.length(i)` | 返回第 i 个捕获组的长度。 |
-| `smatch.position(i)` | 返回第 i 个捕获组的位置。 |
-| `smatch.str(i)` | 以字符串形式返回第 i 个捕获组。 |
+| `smatch[i]` | 返回第 `i` 个捕获组。 |
+| `smatch.length(i)` | 返回第 `i` 个捕获组的长度。 |
+| `smatch.position(i)` | 返回第 `i` 个捕获组的位置。 |
+| `smatch.str(i)` | 以字符串形式返回第 `i` 个捕获组。 |
 | `smatch.prefix()` 和 `smatch.suffix()` | 返回捕获组之前之后的字符串。 |
 | `smatch.begin()` 和 `smatch.end()` | 返回捕获组的起始和结束迭代器。 |
 | `smatch.format(...)` | 为输出对 `std::smatch` 对象进行格式化。 |
@@ -6631,9 +6749,9 @@ typedef match_results<wstring::const_iterator> wsmatch;
 以下程序展示了不同正则表达式的前四个捕获组的输出。
 
 ```cpp
-// captureGroups.cpp 
+// captureGroups.cpp
 ...
-#include<regex>
+#include <regex>
 ...
 using namespace std;
 
@@ -6663,7 +6781,7 @@ abc+              abccccc     abccccc
 
 ### `std::sub_match`
 
-捕获组的类型为 `std::sub_match`。与 `std::match_results` 类似，C++ 定义了以下四个类型别。
+捕获组的类型为 `std::sub_match`。与 `std::match_results` 类似，C++ 定义了以下四个类型别名。
 
 ```cpp
 typedef sub_match<const char*> csub_match;
@@ -6674,7 +6792,7 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 
 你可以进一步分析捕获组 `cap`。
 
-## `std::sub_match` 对象
+### `std::sub_match` 对象
 
 | 成员函数 | 说明 |
 | --- | --- |
@@ -6687,7 +6805,7 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 以下代码片段展示了搜索结果 `std::match_results` 与其捕获组 `std::sub_match` 之间的相互作用。
 
 ```cpp
-// subMatch.cpp 
+// subMatch.cpp
 ...
 #include <regex>
 ...
@@ -6731,23 +6849,19 @@ capture group: 21
 
 正则表达式 `regEx` 代表一个 IPv4 地址。`regEx` 使用捕获组提取地址的组件。最后，捕获组和 ASCII 字符将以十六进制形式显示。
 
-### 匹配
+## 匹配
 
 `std::regex_match` 用于判断文本是否匹配文本模式。你可以进一步分析类型为 `std::match_results` 的结果。
 
 以下代码片段展示了 `std::regex_match` 的三种简单应用：针对 C 字符串、C++ 字符串以及仅返回布尔值的范围。这三种变体分别适用于 `std::match_results` 对象。
 
 ```cpp
-// match.cpp 
+// match.cpp
 ...
 #include <regex>
 ...
 // (内容省略以保持简洁)
 ```
-
-
-
-
 
 ```cpp
 typedef basic_regex<char> regex;
@@ -6758,14 +6872,14 @@ std::regex_replace(std::back_inserter(str2),
 
 `std::regex_replace` 的所有变体都有一个额外的可选参数。如果你将该参数设置为 `std::regex_constants::format_no_copy`，你将获得与正则表达式匹配的文本部分。未匹配的文本不会被复制。如果你将该参数设置为 `std::regex_constants::format_first_only`，`std::regex_replace` 将仅应用一次。
 
-### 格式
+## 格式
 
 `std::regex_replace` 和 `std::match_results.format` 结合捕获组可以让你对文本进行格式化。可以使用格式字符串配合占位符来插入值。
 
 以下是两种可能性：
 
 ```cpp
-// format.cpp 
+// format.cpp
 ...
 #include <regex>
 ...
@@ -6778,14 +6892,14 @@ std::regex regValues{"(.*),(.*)"};
 std::string standardText{"The $1 name of the new C++ standard is $2."};
 std::string textNow= std::regex_replace(unofficial, regValues, standardText);
 std::cout << textNow << '\n';
-                        // The unofficial name of the new C++ standard is C++0x.
+// The unofficial name of the new C++ standard is C++0x.
 
 std::smatch smatch;
 if (std::regex_match(official, smatch, regValues)){
-  std::cout << smatch.str();                                   // official,C++11
+  std::cout << smatch.str(); // official,C++11
   std::string textFuture= smatch.format(standardText);
   std::cout << textFuture << '\n';
-}                       // The official name of the new C++ standard is C++11.
+} // The official name of the new C++ standard is C++11.
 ```
 
 ### 使用正则表达式格式化
@@ -6794,28 +6908,23 @@ if (std::regex_match(official, smatch, regValues)){
 
 搜索结果 `smatch` 的创建与其格式化字符串时的使用是分开的。
 
-除了捕获组外，C++ 还支持额外的格式转义序列。你可以在格式字符串中使用它们：
+除了捕获组外，C++ 还支持额外的格式转义序列。你可以在格式字符串中使用它们。
 
 #### 格式转义序列
 
 | 格式转义序列 | 说明 |
 | --- | --- |
-| | |
 | `$&` | 返回整个匹配项（第 0 个捕获组）。 |
-| | |
-| `$$` | 返回 $。 |
-| | |
-| `` `$` `` | 返回整个匹配之前的文本。 |
-| | |
+| `$$` | 返回 `$`。 |
+| `` `$ `` | 返回整个匹配之前的文本。 |
 | `$'` | 返回整个匹配之后的文本。 |
-| | |
 | `$i` | 返回第 `i` 个捕获组。 |
 
-### 重复搜索
+## 重复搜索
 
 使用 `std::regex_iterator` 和 `std::regex_token_iterator` 遍历匹配的文本是非常方便的。`std::regex_iterator` 支持匹配项及其捕获组。`std::regex_token_iterator` 支持更多功能。你可以访问每个捕获的组件。使用负索引可以使其访问匹配项之间的文本。
 
-#### `std::regex_iterator`
+### `std::regex_iterator`
 
 C++ 为 `std::regex_iterator` 定义了以下四个类型别名。
 
@@ -6829,7 +6938,7 @@ typedef wsregex_iterator    regex_iterator<std::wstring::const_iterator>
 你可以使用 `std::regex_iterator` 来统计文本中单词的出现次数：
 
 ```cpp
-// regexIterator.cpp 
+// regexIterator.cpp
 ...
 #include <regex>
 ...
@@ -6849,18 +6958,18 @@ for (; wordItBegin != wordItEnd; ++wordItBegin){
 }
 for (auto wordIt: allWords) cout << "(" << wordIt.first << ":" 
                                         << wordIt.second << ")";
-                  // (as:2)(of:1)(level:1)(find:1)(ever:1)(and:2)(natural:1) ...
+// (as:2)(of:1)(level:1)(find:1)(ever:1)(and:2)(natural:1) ...
 ```
 
-`std::regex_iterator`
+### `std::regex_iterator`
 
-一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 for 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
+一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 `for` 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
 
-`std::regex_iterator`
+### `std::regex_iterator`
 
-一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 for 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
+一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 `for` 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
 
-#### `std::regex_iterator`
+### `std::regex_iterator`
 
 C++ 为 `std::regex_iterator` 定义了以下四个类型别名。
 
@@ -6871,7 +6980,7 @@ typedef sregex_iterator     regex_iterator<std::string::const_iterator>
 typedef wsregex_iterator    regex_iterator<std::wstring::const_iterator>
 ```
 
-#### `std::regex_token_iterator`
+### `std::regex_token_iterator`
 
 C++ 为 `std::regex_token_iterator` 定义了以下四个类型别名。
 
@@ -6882,13 +6991,9 @@ typedef sregex_iterator     token_iterator<std::string::const_iterator>
 typedef wsregex_iterator    token_iterator<std::wstring::const_iterator>
 ```
 
-`std::regex_token_iterator`
+### `std::regex_token_iterator`
 
-一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 for 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
-
-
-
-
+一个单词由至少一个字符 `(\w+)` 组成。这个正则表达式用于定义迭代器 `wordItBegin` 和结束迭代器 `wordItEnd`。对匹配项的遍历发生在 `for` 循环中。每个单词都会增加计数器：`++allWords[wordItBegin->str()]`。
 
 流类 `std::istream` 和 `std::ostream` 通常用于数据的读取和写入。使用 `std::istream` 类需要 `<istream>` 头文件；使用 `std::ostream` 类需要 `<ostream>` 头文件。你可以通过 `<iostream>` 头文件同时拥有这两者。`std::istream` 是类 `basic_istream` 和字符类型 `char` 的别名，`std::ostream` 是类 `basic_ostream` 的别名：
 
@@ -6903,14 +7008,12 @@ C++ 提供了四个预定义的流对象，方便处理键盘和显示器。
 
 | 流对象 | C 语言对应 | 设备 | 是否缓冲 |
 | --- | --- | --- | --- |
-| | | | |
 | `std::cin` | `stdin` | 键盘 | 是 |
-| | | | |
 | `std::cout` | `stdout` | 控制台 | 是 |
-| | | | |
 | `std::cerr` | `stderr` | 控制台 | 否 |
-| | | | |
 | `std::clog` | | 监器 | 是 |
+
+
 
 这些流对象足以编写一个从命令行读取并返回和的程序。
 
@@ -6932,11 +7035,11 @@ int main(){
 
 ## 流对象
 
-上面的小型程序使用了流操作符 `<<` 和 `>>` 以及流操纵符 `std::endl`。
+上面的小型程序使用了流操作符`<<`和`>>`以及流操纵符`std::endl`。
 
-插入运算符 `<<` 将字符推送到输出流 `std::cout`；提取运算符 `>>` 从输入流 `std::cin` 中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
+插入运算符`<<`将字符推送到输出流`std::cout`；提取运算符`>>`从输入流`std::cin`中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
 
-`std::endl` 是一个流操纵符，因为它向 `std::cout` 放入一个 `\n` 字符并刷新输出缓冲区。
+`std::endl`是一个流操纵符，因为它向`std::cout`放入一个`\n`字符并刷新输出缓冲区。
 
 以下是最常用的流操纵符。
 
@@ -6944,49 +7047,38 @@ int main(){
 
 | 操纵符 | 流类型 | 描述 |
 | --- | --- | --- |
-| | | |
 | `std::endl` | 输出 | 插入一个换行符并刷新流。 |
-| | | |
 | `std::flush` | 输出 | 刷新流。 |
-| | | |
 | `std::ws` | 输入 | 丢弃前导空白字符。 |
 
 ### 输入
 
-在 C++ 中，你有两种方式从输入流读取内容：使用提取操作符 `>>` 进行格式化读取，以及使用显成员函数进行非格式化读取。
+在 C++ 中，你有两种方式从输入流读取内容：使用提取操作符`>>`进行格式化读取，以及使用显成员函数进行非格式化读取。
 
 #### 格式化输入
 
-提取运算符 `>>`
+提取运算符`>>`：
 
-*   对所有内置类型和字符串都是预定义的，
-*   可以为用户定义的数据类型实现，
-*   可以通过格式说明符进行配置。
+- 对所有内置类型和字符串都是预定义的；
+- 可以为用户定义的数据类型实现；
+- 可以通过格式说明符进行配置。
 
 #### 非格式化输入
 
-有许多成员函数用于从输入流 `is` 进行非格式化输入。
+有许多成员函数用于从输入流`is`进行非格式化输入。
 
 #### 来自输入流的非格式化输入
 
 | 成员函数 | 描述 |
 | --- | --- |
-| | | |
-| `is.get(ch)` | 读取一个字符到 `ch` 中。 |
-| | | |
-| `is.get(buf, num)` | 最多读取 `num` 个字符到缓冲区 `buf` 中。 |
-| | | |
-| `is.getline(buf, num[, delim])` | 最多读取 `num` 个字符到缓冲区 `buf` 中。可选使用行分隔符 `delim`（默认认为 `\n`）。 |
-| | | |
-| `is.gcount()` | 返回通过非格式化操作从 `is` 提取的最后字符个数。 |
-| | | |
-| `is.ignore(streamsize sz= 1, int delim= end-of-file)` | 忽略 `sz` 个字符直到 `delim`。 |
-| | | |
-| `is.peek()` | 从 `is` 获取一个字符但不消耗它。 |
-| | | |
-| `is.unget()` | 将最后读取的字符推回 `is`。 |
-| | | |
-| `is.putback(ch)` | 将字符 `ch` 推送到流 `is` 上。 |
+| `is.get(ch)` | 读取一个字符到`ch`中。 |
+| `is.get(buf, num)` | 最多读取`num`个字符到缓冲区`buf`中。 |
+| `is.getline(buf, num[, delim])` | 最多读取`num`个字符到缓冲区`buf`中。可选使用行分隔符`delim`（默认认为`\n`）。 |
+| `is.gcount()` | 返回通过非格式化操作从`is`提取的最后字符个数。 |
+| `is.ignore(streamsize sz= 1, int delim= end-of-file)` | 忽略`sz`个字符直到`delim`。 |
+| `is.peek()` | 从`is`获取一个字符但不消耗它。 |
+| `is.unget()` | 将最后读取的字符推回`is`。 |
+| `is.putback(ch)` | 将字符`ch`推送到流`is`上。 |
 
 ```cpp
 // inputUnformatted.cpp 
@@ -7005,11 +7097,11 @@ while (std::cin >> val) sum += val;
 
 ### 输出
 
-上面的小型程序使用了流操作符 `<<` 和 `>>` 以及流操纵符 `std::endl`。
+上面的小型程序使用了流操作符`<<`和`>>`以及流操纵符`std::endl`。
 
-插入运算符 `<<` 将字符推送到输出流 `std::cout`；提取运算符 `>>` 从输入流 `std::cin` 中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
+插入运算符`<<`将字符推送到输出流`std::cout`；提取运算符`>>`从输入流`std::cin`中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
 
-`std::endl` 是一个流操纵符，因为它向 `std::cout` 放入一个 `\n` 字符并刷新输出缓冲区。
+`std::endl`是一个流操纵符，因为它向`std::cout`放入一个`\n`字符并刷新输出缓冲区。
 
 ```cpp
 std::string line;
@@ -7018,11 +7110,11 @@ std::cout << "Write a line: " << '\n';
 
 （注：由于原文中存在大量重复，此处仅展示核心逻辑部分的翻译）
 
-小型程序使用了流操作符 `<<` 和 `>>` 以及流操纵符 `std::endl`。
+小型程序使用了流操作符`<<`和`>>`以及流操纵符`std::endl`。
 
-插入运算符 `<<` 将字符推送到输出流 `std::cout`；提取运算符 `>>` 从输入流 `std::cin` 中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
+插入运算符`<<`将字符推送到输出流`std::cout`；提取运算符`>>`从输入流`std::cin`中提取字符。你可以构建插入或提取操作符的链，因为这两个操作符都返回自身的引用。
 
-`std::endl` 是一个流操纵符，因为它向 `std::cout` 放入一个 `\n` 字符并刷新输出缓冲区。
+`std::endl`是一个流操纵符，因为它向`std::cout`放入一个`\n`字符并刷新输出缓冲区。
 
 ```cpp
 std::string line;
@@ -7036,10 +7128,6 @@ while (std::cin >> val) sum += val;
 ```
 
 （注：由于提供的原始文本存在大量重复段落，译文已按照要求对逻辑内容进行了翻译，并确保了格式一致性。）
-
-
-
-
 
 | `std::hexfloat` | output | 以十六进制格式显示浮点数。 |
 | `std::defaultfloat` | output | 以默认浮点表示法显示浮点数。 |
@@ -7096,17 +7184,18 @@ std::cout << std::setprecision(9) << 123.456789;  // 123.456789
 
 ### 字符串流（String Streams）
 
-字符串流需要头文件 `<sstream>`。它们没有连接到输入或输出流，并将数据存储在字符串中。
+字符串流需要头文件`<sstream>`。它们没有连接到输入或输出流，并将数据存储在字符串中。
 
-无论你是将字符串流用于输入、输出，还是配合 `char` 或 `wchar_t` 类型，都有各种字符串流类：
+无论你是将字符串流用于输入、输出，还是配合`char`或`wchar_t`类型，都有各种字符串流类：
 
-- `std::istringstream` 和 `std::wistringstream`: 用于 `char` 和 `wchar_t` 类型输入数据的字符串流。
-- `std::ostringstream` 和 `std::wostringstream`: 用于 `char` 和 `wchar_t` 类型输出数据的字符串流。
-- `std::stringstream` 和 `std::wstringstream`: 用于 `char` 和 `wchar_t` 类型输入或输出数据的字符串流。
+- `std::istringstream`和`std::wistringstream`：用于`char`和`wchar_t`类型输入数据的字符串流。
+- `std::ostringstream`和`std::wostringstream`：用于`char`和`wchar_t`类型输出数据的字符串流。
+- `std::stringstream`和`std::wstringstream`：用于`char`和`wchar_t`类型输入或输出数据的字符串流。
 
 字符串流的典型操作有：
 
 - 在字符串流中写入数据：
+
 ```cpp
 std::stringstream os;
 os << "New String";
@@ -7114,6 +7203,7 @@ os.str("Another new String");
 ```
 
 - 从字符串流中读取数据：
+
 ```cpp
 std::stringstream os;
 std::string str;
@@ -7122,6 +7212,7 @@ str= os.str();
 ```
 
 - 清空字符串流：
+
 ```cpp
 std::stringstream os;
 os.str("");
@@ -7163,15 +7254,16 @@ int main(){
 
 ### 文件流（File Streams）
 
-文件流允许文件与流直接交互。文件流需要头文件 `<fstream>`。无论你是将文件流用于输入、输出，还是配合字符类型，都有各种文件流类：
+文件流允许文件与流直接交互。文件流需要头文件`<fstream>`。无论你是将文件流用于输入、输出，还是配合字符类型，都有各种文件流类：
 
-- `std::ifstream`: 用于 `char` 和 `wchar_t` 类型输入文件的文件流。
-- `std::ofstream`: 用于 `char` 和 `wchar_t` 类型输出文件的文件流。
-- `std::fstream`: 用于 `char` 和 `wchar_t` 类型输入或输出文件的文件流。
+- `std::ifstream`：用于`char`和`wchar_t`类型输入文件的文件流。
+- `std::ofstream`：用于`char`和`wchar_t`类型输出文件的文件流。
+- `std::fstream`：用于`char`和`wchar_t`类型输入或输出文件的文件流。
 
 文件流的典型操作有：
 
 - 打开文件：
+
 ```cpp
 std::ofstream out("test.txt");
 out << "Hello World";
@@ -7179,6 +7271,7 @@ out.close();
 ```
 
 - 读取文件：
+
 ```cpp
 std::ifstream in("test.txt");
 std::string line;
@@ -7195,42 +7288,39 @@ while (std::getline(in, line)) {
 
 标志用于控制流的输出行为。
 
-- `std::left`: 向左对齐。
-- `std::right`: 向右对齐。
-- `std::internal`: 内部对齐（符号放在数字旁）。
-- `std::showbase`: 显示基数（如 `0x`, `0o`）。
-- `std::showpoint`: 强制显示小数点点。
-- `std::dec`: 使用十进制表示。
-- `std::oct`: 使用八进制表示。
-- `std::hex`: 使用十六进制表示。
-- `std::hexfloat`: 使用十六进制浮点表示。
-- `std::scientific`: 使用科学法表示。
-- `std::fixed`: 使用固定点表示。
-- `std::defaultfloat`: 使用默认浮点表示。
+- `std::left`：向左对齐。
+- `std::right`：向右对齐。
+- `std::internal`：内部对齐（符号放在数字旁）。
+- `std::showbase`：显示基数（如`0x`、`0o`）。
+- `std::showpoint`：强制显示小数点。
+- `std::dec`：使用十进制表示。
+- `std::oct`：使用八进制表示。
+- `std::hex`：使用十六进制表示。
+- `std::hexfloat`：使用十六进制浮点表示。
+- `std::scientific`：使用科学法表示。
+- `std::fixed`：使用固定点表示。
+- `std::defaultfloat`：使用默认浮点表示。
 
 #### 宽度与精度（Width and Precision）
 
 这些控制输出的大小。
 
-- `std::setw(n)`: 设置下一个输出的宽度。
-- `std::setprecision(n)`: 设置精度。
+- `std::setw(n)`：设置下一个输出的宽度。
+- `std::setprecision(n)`：设置精度。
 
 #### 填充符（Fill）
 
 填充符用于填充未使用的宽度空间。
 
-- `std::setfill('c')`: 设置填充字符。
+- `std::setfill('c')`：设置填充字符。
 
 #### 对齐方式（Alignment）
 
 对齐方式控制内容在宽度内的位置。
 
-- `std::left`: 左对齐。
-- `std::right`: 右对齐。
-- `std::internal`: 符号与数字之间。
-
-
-
+- `std::left`：左对齐。
+- `std::right`：右对齐。
+- `std::internal`：符号与数字之间。
 
 ```cpp
 // randomAccess.cpp 
@@ -7285,9 +7375,11 @@ std::cout << line;                         // 9         0123456789
 
 ## 流的状态
 
+
+
 标志位表示流 `stream` 的状态。处理这些标志位的成员函数需要包含 `<iostream>` 头文件。
 
-### 流的状态
+## 流的状态
 
 | 标志 | 标志查询 | 描述 |
 | --- | --- | --- |
@@ -7298,32 +7390,35 @@ std::cout << line;                         // 9         0123456789
 
 以下是导致流的不同状态的条件示例：
 
-#### `std::ios::eofbit`
-* 读取了最后一个有效字符之后。
+### `std::ios::eofbit`
 
-#### `std::ios::failbit`
-* 格式化读取失败。
-* 读取了最后一个有效字符之后。
-* 打开文件时出错。
+- 读取了最后一个有效字符之后。
 
-#### `std::ios::badbit`
-* 无法调整流缓冲区的大小。
-* 流缓冲区的代码转换出错。
-* 流的某抛出了异常。
+### `std::ios::failbit`
+
+- 格式化读取失败。
+- 读取了最后一个有效字符之后。
+- 打开文件时出错。
+
+### `std::ios::badbit`
+
+- 无法调整流缓冲区的大小。
+- 流缓冲区的代码转换出错。
+- 流的某抛出了异常。
 
 `stream.fail()` 返回是否设置了 `std::ios::failbit` 或 `std::ios::badbit`。
 
 流的状态是可以被读取和设置的。
 
-* `stream.clear()`：初始化标志位并将流置于 `goodbit` 状态。
-* `stream.clear(sta)`：初始化标志位并将流置于 `sta` 状态。
-* `stream.rdstate()`：返回当前状态。
-* `stream.setstate(fla)`：设置额外的标志 `fla`。
+- `stream.clear()`：初始化标志位并将流置于 `goodbit` 状态。
+- `stream.clear(sta)`：初始化标志位并将流置于 `sta` 状态。
+- `stream.rdstate()`：返回当前状态。
+- `stream.setstate(fla)`：设置额外的标志 `fla`。
 
 只有当流处于 `goodbit` 状态时，对流的操作才有效。如果流处于 `badbit` 状态，你无法将其设回 `goodbit` 状态。
 
 ```cpp
-// streamState.cpp 
+// streamState.cpp
 ...
 #include <iostream>
 ...
@@ -7340,7 +7435,7 @@ std::cin.clear();
 std::cout << std::cin.fail() << '\n';     // false
 ```
 
-### 流的状态
+## 流的状态
 
 输入字符 `a` 会导致流 `std::cin` 进入 `std::ios::failbit` 状态。因此 `a` 和 `std::cin.fail()` 无法显示。首先，你必须初始化流 `std::cin`。
 
@@ -7355,10 +7450,10 @@ friend std::ostream& operator<< (std::ostream& out, const Fraction& frac);
 
 重载输入和输出运算符时，你需要记住几条规则：
 
-* 为了支持输入输出操作的链式调用，你需要通过非常量引用获取并返回输入输出流。
-* 为了访问类的私有成员，输入输出运算符必须是你数据类型的 `friend`（朋友）。
-* 输入运算符 `>>` 以非常量引用接收其数据类型。
-* 输出运算符 `<<` 以常量引用接收其数据类型。
+- 为了支持输入输出操作的链式调用，你需要通过非常量引用获取并返回输入输出流。
+- 为了访问类的私有成员，输入输出运算符必须是你数据类型的 `friend`（朋友）。
+- 输入运算符 `>>` 以非常量引用接收其数据类型。
+- 输出运算符 `<<` 以常量引用接收其数据类型。
 
 ```cpp
 // overloadingInOutput.cpp
@@ -7388,21 +7483,19 @@ int main() {
     return 0;
 }
 ```
-*(注：提示中提供的代码是片段化的；我根据提供的代码片段重构了逻辑结构，以保持要求的语义完整性。）*
 
+（注：提示中提供的代码是片段化的；我根据提供的代码片段重构了逻辑结构，以保持要求的语义完整性。）
 
-
-
-* `:` 后面跟着格式规范（可选）
-* 结束字符 `}`
+- `:` 后面跟着格式规范（可选）。
+- 结束字符 `}`。
 
 `argument-id` 允许你指定 `Args` 中参数的索引。id 从 0 开始。当你不提供 `argument-id` 时，将按原始顺序使用参数。替换字段要么全部使用 `argument-id`，要么全都不使用。
 
 `std::formatter` 及其特化版本定义了参数的 `format specification`（格式规范）。
 
-* 基础类型和字符串类型：基于 [Python 格式规范](https://docs.python.org/3/library/string.html#formatspec) 的[标准格式规范](https://en.cppreference.com/w/cpp/utility/format/formatter#Standard_format_specification)。
-* chrono 类型：[chrono 格式规范](https://en.cppreference.com/w/cpp/chrono/system_clock/formatter#Format_specification)
-其他类型：用户定义的格式规范
+- 基础类型和字符串类型：基于 [Python 格式规范](https://docs.python.org/3/library/string.html#formatspec) 的[标准格式规范](https://en.cppreference.com/w/cpp/utility/format/formatter#Standard_format_specification)。
+- chrono 类型：[chrono 格式规范](https://en.cppreference.com/w/cpp/chrono/system_clock/formatter#Format_specification)。
+- 其他类型：用户定义的格式规范。
 
 ### 格式规范
 
@@ -7410,32 +7503,32 @@ int main() {
 
 #### 文本的填充字符和对齐方式
 
-* 填充字符：默认为空格
-* 对齐方式：
-    * `<`: 左对齐
-    * `>`: 右对齐
-    * `^`: 居中
+- 填充字符：默认为空格。
+- 对齐方式：
+  - `<`：左对齐。
+  - `>`：右对齐。
+  - `^`：居中。
 
-```
+```cpp
 char c = 120;
 
 std::format("{:7}", 42);     // "     42"
 std::format("{:7}", 'x');    // "x      "
 std::format("{:*<7}", 'x');  // "x******"
 std::format("{:*>7}", 'x');  // "******x"
-std::format("{:*⁷}", 'x');  // "***x***"
+std::format("{:*⁷}", 'x');   // "***x***"
 std::format("{:7d}", c);     // "    120"
 std::format("{:7}", true);   // "true   "
 ```
 
 #### 数字的符号、宽度和精度
 
-* 符号
-    * `+`: 数字获得符号标记
-    * `-`: 负数获得符号（默认）
-    * 空格：正数获得一个空格
+- 符号：
+  - `+`：数字获得符号标记。
+  - `-`：负数获得符号（默认）。
+  - 空格：正数获得一个空格。
 
-```
+```cpp
 double inf = std::numeric_limits<double>::infinity();
 double nan = std::numeric_limits<double>::quiet_NaN();
 
@@ -7445,13 +7538,13 @@ std::format("{0:},{0:+},{0:-},{0: }", inf); // "inf,+inf,inf, inf"
 std::format("{0:},{0:+},{0:-},{0: }", nan); // "nan,+nan,nan, nan"
 ```
 
-* `#`:
-    * 使用备用格式
-    * 整数：
-        * 二进制数：`0b`
-        * 进制数：`0`
-        * 十进制数：`0x`
-* `0`: 用前导零填充
+- `#`：
+  - 使用备用格式。
+  - 整数：
+    - 二进制数：`0b`。
+    - 进制数：`0`。
+    - 十进制数：`0x`。
+- `0`：用前导零填充。
 
 ```cpp
 std::format("{:+06d}", 120);   // "+00120"
@@ -7460,10 +7553,10 @@ std::format("{:0>15f}", 120)); // "00000120.000000"
 std::format("{:#06x}", 0xa);   // "0x000a"
 ```
 
-* 宽度：指定最小宽度
-* 精度：可以应用于浮点数和字符串
-    * 浮点数：小数点后的位数
-    * 字符串：字符的最大数量
+- 宽度：指定最小宽度。
+- 精度：可以应用于浮点数和字符串。
+  - 浮点数：小数点后的位数。
+  - 字符串：字符的最大数量。
 
 ```cpp
 double d = 20.11;
@@ -7478,35 +7571,35 @@ std::format("{:.3}", "Only a test."); // " Onl "
 
 如果没有其他指定，值将直接复制到输出。你可以显式指定值的表示方式：
 
-* 字符串表示：`s`
-* 整数表示：
-    * `b`, `B`: 二进制
-    * `d`: 十进制
-    * `o`: 八进制
-    * `x`, `X`: 十六进制
-* 字符表示：
-    * `b`, `B`, `d`, `o`, `x`, `X`: 整数
-* 布尔值：
-    * `s`: `true` 或 `false`
-    * `b`, `B`, `d`, `o`, `x`, `X`: 整数
-* 浮点数：
-    * `e`, `E`: 科学计数法
-    * `f`, `F`: 十进制
+- 字符串表示：`s`。
+- 整数表示：
+  - `b`、`B`：二进制。
+  - `d`：十进制。
+  - `o`：八进制。
+  - `x`、`X`：十六进制。
+- 字符表示：
+  - `b`、`B`、`d`、`o`、`x`、`X`：整数。
+- 布尔值：
+  - `s`：`true` 或 `false`。
+  - `b`、`B`、`d`、`o`、`x`、`X`：整数。
+- 浮点数：
+  - `e`、`E`：科学计数法。
+  - `f`、`F`：十进制。
 
-字体 用户定义格式化器
+### 用户定义格式化器
 
 要格式化自定义类型，我必须为我的自定义类型特化 [`std::formatter`](https://en.cppreference.com/w/cpp/utility/format/formatter) 类。这意味着我必须实现 `parse` 和 `format` 成员函数。
 
-* `parse`:
-    * 接收解析上下文（parse context）
-    * 解析解析上下文
-    * 返回指向格式规范末尾的迭代器
-* `format`:
-    * 获取值
-    * 根据上下文格式化值
-    * 返回迭代器
+- `parse`：
+  - 接收解析上下文（parse context）。
+  - 解析解析上下文。
+  - 返回指向格式规范末尾的迭代器。
+- `format`：
+  - 获取值。
+  - 根据上下文格式化值。
+  - 返回迭代器。
 
-#### 格式化 `std::vector`
+### 格式化 `std::vector`
 
 `std::formatter` 的特化非常直观。
 
@@ -7537,21 +7630,17 @@ struct std::formatter<std::vector<T>> {
 };
 ```
 
-
-
-
-
 - `regular file`（普通文件）既不是目录、硬链接，也不是符号链接的目录条目。
 - `file name`（文件名）是表示文件的字符串。允许哪些字符、名称长度多长或是否区分大小写由具体的实现定义。
 - `path`（路径）是标识文件位置的条目序列。它包含一个可选的根名称（例如 Windows 上的“C:”），随后是根目录（例如 Unix 上的“/”）。额外的部分可以是目录、硬链接、符号链接或普通文件。路径可以是绝对路径、规范路径或相对路径。
-    - `absolute path`（绝对路径）是用于标识文件位置的路径。
-    - `canonical path`（规范路径）是不既包含符号链接，也不包含相对路径 `"."`（当前目录）或 `".."`（父目录）的路径。
-    - `relative path`（相对路径）指定相对于文件系统中某个位置的路径。诸如 `"."`（当前目录）、`".."`（父目录）或 `"home/rainer"` 等路径都是相对路径。在 Unix 上，它们不以根目录 `"/"` 开头。
+  - `absolute path`（绝对路径）是用于标识文件位置的路径。
+  - `canonical path`（规范路径）是不既包含符号链接，也不包含相对路径 `"."`（当前目录）或 `".."`（父目录）的路径。
+  - `relative path`（相对路径）指定相对于文件系统中某个位置的路径。诸如 `"."`（当前目录）、`".."`（父目录）或 `"home/rainer"` 等路径都是相对路径。在 Unix 上，它们不以根目录 `"/"` 开头。
 
 这里有一个文件系统的入门示例。
 
-```
-// filesystem.cpp 
+```cpp
+// filesystem.cpp
 ...
 #include <filesystem>
 
@@ -7561,19 +7650,19 @@ namespace fs = std::filesystem;
 
 std::cout << "Current path: " << fs::current_path() << '\n';   // (1)
 
-std::string dir= "sandbox/a/b";
-fs::create_directories(dir);                                        // (2)
+std::string dir = "sandbox/a/b";
+fs::create_directories(dir);                                  // (2)
 
 std::ofstream("sandbox/file1.txt");
-fs::path symPath= fs::current_path() /=  "sandbox";                 // (3)
+fs::path symPath = fs::current_path() /= "sandbox";            // (3)
 symPath /= "syma";
-fs::create_symlink("a", "symPath");                                 // (4)
+fs::create_symlink("a", "symPath");                            // (4)
 
 std::cout << "fs::is_directory(dir): " << fs::is_directory(dir) << '\n';
-std::cout << "fs::exists(symPath): "  << fs::exists(symPath) <<  '\n';
+std::cout << "fs::exists(symPath): " << fs::exists(symPath) << '\n';
 std::cout << "fs::symlink(symPath): " << fs::is_symlink(symPath) << '\n';
 
-for(auto& p: fs::recursive_directory_iterator("sandbox")){          // (5)
+for (auto& p : fs::recursive_directory_iterator("sandbox")) {  // (5)
   std::cout << p << '\n';
 }
 fs::remove_all("sandbox");
@@ -7581,7 +7670,7 @@ fs::remove_all("sandbox");
 
 ## 文件系统库概述
 
-`fs::current_path()` (1) 返回当前路径。你可以使用 `std::filesystem::create_directories` 创建目录层级 (2)。`/=` 运算符针对路径进行了了重载 (3)。因此，我可以直接创建符号链接 (4) 或检查文件的属性。调用 `recursive_directory_iterator` (5) 允许你递归遍历目录。
+`fs::current_path()` (1) 返回当前路径。你可以使用 `std::filesystem::create_directories` 创建目录层级 (2)。`/=` 运算符针对路径进行了重载 (3)。因此，我可以直接创建符号链接 (4) 或检查文件的属性。调用 `recursive_directory_iterator` (5) 允许你递归遍历目录。
 
 ![](img/privat----filesystem.png)
 
@@ -7606,17 +7695,15 @@ fs::remove_all("sandbox");
 | `copy_options` | 表示 `copy` 函数的选项。 |
 | `file_time_type` | 表示文件时间。 |
 
-#### 修改文件的权限
+### 修改文件的权限
 
 文件的权限由 `std::filesystem::perms` 类表示。它是一个 `Bitmask`（位掩码），因此可以通过位操作进行处理。访问权限基于 [POSIX](https://en.wikipedia.org/wiki/POSIX)。
 
+## 文件的权限
 
 
 
-
-# 文件的权限
-
-通过调用 `fs::status("rainer.txt").permissions()`，我获取了文件 `rainer.txt` 的权限并可以在函数 `printPerms` (1) 中显示它们。通过设置类型 `std::filesystem::add_perms`，我可以为文件的所有者和用户组添加权限 (2)。或者，我可以通过设置常量 `std::filesystem::remove_perms` 来移除权限 (3)。
+通过调用`fs::status("rainer.txt").permissions()`，我获取了文件`rainer.txt`的权限，并可以在函数`printPerms`(1)中显示它们。通过设置类型`std::filesystem::add_perms`，我可以为文件的所有者和用户组添加权限(2)。或者，我可以通过设置常量`std::filesystem::remove_perms`来移除权限(3)。
 
 ![](img/privat----perms.png)
 
@@ -7624,64 +7711,39 @@ fs::remove_all("sandbox");
 
 存在许多非成员函数用于操作文件系统。
 
-用于操作文件系统的非成员函数
+### 用于操作文件系统的非成员函数
 
 | 非成员函数 | 描述 |
 | --- | --- |
-|  |   |
 | `absolute` | 组合一个绝对路径。 |
-|  |   |
-| `canonical` 和 `weakly_canonical` | 组合一个规范路径。 |
-|  |   |
-| `relative` 和 `proximate` | 组合一个相对路径。 |
-|  |   |
+| `canonical`和`weakly_canonical` | 组合一个规范路径。 |
+| `relative`和`proximate` | 组合一个相对路径。 |
 | `copy` | 复制文件或目录。 |
-|  |   |
 | `copy_file` | 复制文件内容。 |
-|  |   |
 | `copy_symlink` | 复制符号链接。 |
-|  |   |
-| `create_directory` 和 `create_directories` | 创建新目录。 |
-|  |   |
+| `create_directory`和`create_directories` | 创建新目录。 |
 | `create_hard_link` | 创建硬链接。 |
-|  |   |
-| `create_symlink` 和 `create_directory_symlink` | 创建符号链接。 |
-|  |   |
+| `create_symlink`和`create_directory_symlink` | 创建符号链接。 |
 | `current_path` | 返回当前工作目录。 |
-|  |   |
 | `exists` | 检查路径是否指向一个存在的文件。 |
-|  |   |
 | `equivalent` | 检查两个路径是否指向同一个文件。 |
-|  |   |
 | `file_size` | 返回文件大小。 |
-|  |   |
 | `hard_link_count` | 返回指向文件的硬链接数。 |
-|  |   |
 | `last_write_time` | 获取和设置文件的最后修改时间。 |
-|  |   |
 | `permissions` | 修改文件的访问权限。 |
-|  |   |
 | `read_symlink` | 获取符号链接的目标。 |
-|  |   |
 | `remove` | 删除文件或空目录。 |
-|  |   |
 | `remove_all` | 递归删除文件或包含所有内容的目录。 |
-|  |   |
 | `rename` | 移动或重命名文件或目录。 |
-|  |   |
 | `resize_file` | 通过截断更改文件大小。 |
-|  |   |
 | `space` | 返回文件系统上的可用空间。 |
-|  |   |
 | `status` | 确定文件属性。 |
-|  |   |
 | `symlink_status` | 确定文件属性并检查符号链接目标。 |
-|  |   |
 | `temp_directory_path` | 返回用于临时文件的目录。 |
 
 ### 读取和设置文件的最后写入时间
 
-通过全局函数 `std::filesystem::last_write_time`，你可以读取和设置文件的最后写入时间。以下是一个基于 [en.cppreference.com](http://en.cppreference.com/w/cpp/experimental/fs/last_write_time) 中 `last_write_time` 示例的例子。
+通过全局函数`std::filesystem::last_write_time`，你可以读取和设置文件的最后写入时间。以下是一个基于[en.cppreference.com](http://en.cppreference.com/w/cpp/experimental/fs/last_write_time)中`last_write_time`示例的例子。
 
 ```cpp
 // fileTime.cpp 
@@ -7714,17 +7776,17 @@ std::cout << "Local time on client "
           << std::asctime(std::localtime(&cftime2)) << '\n';
 ```
 
-文件的写入时间
+### 文件的写入时间
 
-第 (1) 行给出了新创建文件的写入时间。你可以使用 (2) 中的 `fTime` 将其转换为真实的墙上时间 `sTime`。此 `sTime` 初始化了 `sTime`。
+第(1)行给出了新创建文件的写入时间。你可以使用(2)中的`fTime`将其转换为真实的墙上时间`sTime`。此`sTime`初始化了`sTime`。
 
 ### 文件系统空间
 
-全局函数 `std::filesystem::space` 返回一个 `std::filesystem::space_info` 对象，包含三个成员：`capacity`、`free` 和 `available`。
+全局函数`std::filesystem::space`返回一个`std::filesystem::space_info`对象，包含三个成员：`capacity`、`free`和`available`。
 
-* `capacity`: 文件系统的总大小
-* `free`: 文件系统上的可用空间
-* `available`: 可用空间
+- `capacity`：文件系统的总大小
+- `free`：文件系统上的可用空间
+- `available`：可用空间
 
 所有大小单位均为字节。
 
@@ -7746,7 +7808,7 @@ std::cout << ".        Capacity       Free      Available\n"
           << usr.free << "   " << usr.available;
 ```
 
-空间信息
+### 空间信息
 
 images/privat----space.png
 
@@ -7754,38 +7816,24 @@ images/privat----space.png
 
 通过使用以下谓词，你可以轻松地查询文件类型。
 
-文件系统的类型
+### 文件系统的类型
 
 | 文件类型 | 描述 |
 | --- | --- |
-|  | � |
 | `is_block_file` | 检查路径是否指向块设备。 |
-|  |   |
 | `is_character_file` | 检查路径是否指向字符设备。 |
-|  |   |
 | `is_directory` | 检查路径是否指向目录。 |
-|  |   |
 | `is_empty` | 检查路径是否指向空文件或目录。 |
-|  |   |
 | `is_fifo` | 检查路径是否指向[命名管道](https://en.wikipedia.org/wiki/Named_pipe)。 |
-|  |   |
 | `is_other` | 检查路径是否指向其他文件。 |
-|  |   |
 | `is_regular_file` | 检查路径是否指向普通文件。 |
-|  |   |
 | `is_socket` | 检查路径是否指向 IPC 套接字。 |
-|  |   |
 | `is_symlink` | 检查路径是否指向符号链接。 |
-|  |   |
 | `status_known` | 检查文件状态是否已知。 |
 
 ### 获取文件的类型
 
 谓词为你提供了关于文件类型的信息。一个文件可能适用于多个谓词。例如，指向普通文件的符号链接既是普通文件也是符号链接。
-
-
-
-
 
 ```cpp
 // fileType.cpp 
@@ -7839,7 +7887,7 @@ printStatus("dummy.txt");
 fs::remove_all("rainer");
 ```
 
-# 文件类型
+## 文件类型
 
 ![](img/privat----filePredicates.png)
 
@@ -7855,89 +7903,86 @@ Cippi 正在编辫
 
 多线程的基础是`良好定义`的内存模型。该内存模型必须处理以下几点：
 
-*   原子操作：可以在不被中断的情况下执行的操作。
-*   操作的局部排序：不能被重排序的操作序列。
-*   操作的可可见性：保证对共享变量的操作何时在其他线程中可见。
+- 原子操作：可以在不被中断的情况下执行的操作。
+- 操作的局部排序：不能被重排序的操作序列。
+- 操作的可可见性：保证对共享变量的操作何时在其他线程中可见。
 
-C++ 内存模型与其前身：Java 内存模型有许多共同点。此外，C++ 允许打破顺序一致性。顺序一致性是原子操作的默认行为。
+C++内存模型与其前身：Java内存模型有许多共同点。此外，C++允许打破顺序一致性。顺序一致性是原子操作的默认行为。
 
 顺序一致性提供了两项保证：
 
-1.  程序的指令按照源代码的顺序执行。
-2.  所有线程上的所有操作存在一个全局顺序。
+1. 程序的指令按照源代码的顺序执行。
+2. 所有线程上的所有操作存在一个全局顺序。
 
 ## 原子数据类型
 
-C++ 拥有一组原子数据类型。首先，是 `std::atomic_flag`，其次是类模板 `std::atomic`。此外，你可以使用 `std::atomic` 定义自己的原子数据类型。
+C++拥有一组原子数据类型。首先，是`std::atomic_flag`，其次是类模板`std::atomic`。此外，你可以使用`std::atomic`定义自己的原子数据类型。
 
 ### `std::atomic_flag`
 
-`std::atomic_flag` 是一个原子布尔值。它有一个清除（clear）和一个设置（set）状态。为了简单，我将清除状态称为 `false`，设置状态称为 `true`。它的 `clear` 成员函数允许你将其值设置为 `false`。通过 `test_and_set` 成员函数，你可以将其设回 `true` 并返回之前的值。没有成员函数可以查询当前值。这在 C++20 中发生了变化。在 C++20 中，`std::atomic_flag` 有了 `test` 成员函数，并通过函数 `notify_one`、`notify_all` 和 `wait` 用于线程同步。
+`std::atomic_flag`是一个原子布尔值。它有一个清除（clear）和一个设置（set）状态。为了简单，我将清除状态称为`false`，设置状态称为`true`。它的`clear`成员函数允许你将其值设置为`false`。通过`test_and_set`成员函数，你可以将其设回`true`并返回之前的值。没有成员函数可以查询当前值。这在 C++20 中发生了变化。在 C++20 中，`std::atomic_flag`有了`test`成员函数，并通过函数`notify_one`、`notify_all`和`wait`用于线程同步。
 
-`std::atomic_flag atomicFlag` 的所有操作
+### `std::atomic_flag atomicFlag`的所有操作
 
 | 成员函数 | 说明 |
 | --- | --- |
 | `atomicFlag.clear()` | 清除原子标志。 |
 | `atomicFlag.test_and_set()` | 设置原子标志并返回旧值。 |
-| `atomicFlag.test()` (C++20) | 返回标志的值。 |
-| `atomicFlag.notify_one()` (C++20) | 通知一个等待该原子标志的线程。 |
-| `atomicFlag.notify_all()` (C++20) | 通知所有等待该原子标志的线程。 |
-| `atomicFlag.wait(b)` (C++20) | 阻塞线程直到被通知且原子值发生变化。 |
+| `atomicFlag.test()`（C++20） | 返回标志的值。 |
+| `atomicFlag.notify_one()`（C++20） | 通知一个等待该原子标志的线程。 |
+| `atomicFlag.notify_all()`（C++20） | 通知所有等待该原子标志的线程。 |
+| `atomicFlag.wait(b)`（C++20） | 阻塞线程直到被通知且原子值发生变化。 |
 
-调用 `atomicFlag.test()` 返回 `atomicFlag` 的值而不改变它。此后，你可以使用 `std::atomic_flag` 进行线程同步：`atomicFlag.wait()`、`atomicFlag.notify_one()` 和 `atomicFlag.notify_all()`。成员函数 `notify_one` 或 `notify_all` 通知一个或所有等待的原子标志。`atomicFlag.wait(boo)` 需要一个布尔值 `b`。
+调用`atomicFlag.test()`返回`atomicFlag`的值而不改变它。此后，你可以使用`std::atomic_flag`进行线程同步：`atomicFlag.wait()`、`atomicFlag.notify_one()`和`atomicFlag.notify_all()`。成员函数`notify_one`或`notify_all`通知一个或所有等待的原子标志。`atomicFlag.wait(boo)`需要一个布尔值`b`。
 
 ### `std::atomic`
 
-C++ 拥有一组原子数据类型。首先，是 `std::atomic_flag`，其次是类模板 `std::atomic`。此外，你可以使用 `std::atomic` 定义自己的原子数据类型。
+C++拥有一组原子数据类型。首先，是`std::atomic_flag`，其次是类模板`std::atomic`。此外，你可以使用`std::atomic`定义自己的原子数据类型。
 
 #### 基础接口
 
-`std::atomic` 的特化版本支持基础接口。
+`std::atomic`的特化版本支持基础接口。
 
 | 成员函数 | 说明 |
 | --- | --- |
 | `is_lock_free` | 检查原子对象是否无锁。 |
 | `is_always_lock_free` | 在编译时检查原子是否始终无锁。 |
 | `load` | 原子地返回原子的值。 |
-| `operator T` | 原子地返回原子的值。等同于 `atom.load()`。 |
+| `operator T` | 原子地返回原子的值。等同于`atom.load()`。 |
 | `store` | 原子地用非原子值替换原子值。 |
 | `exchange` | 原子地替换新值。返回旧值。 |
 | `compare_exchange_strong` | 原子地比较并最终交换值。 |
-| `compare_exchange_weak` | |
-| `notify_one` (C++20) | 通知一个原子等待操作。 |
-| `notify_all` (C++20) | 通知所有原子等待操作。 |
-| `wait` (C++20) | 阻塞直到被通知。 |
+| `compare_exchange_weak` |  |
+| `notify_one`（C++20） | 通知一个原子等待操作。 |
+| `notify_all`（C++20） | 通知所有原子等待操作。 |
+| `wait`（C++20） | 阻塞直到被通知。 |
 
-`compare_exchange_strong` 具有以下语法：`bool compare_exchange_strong(T& expected, T& desired)`。其行为如下：
+`compare_exchange_strong`具有以下语法：`bool compare_exchange_strong(T& expected, T& desired)`。其行为如下：
 
-*   如果 `atomicValue` 与 `expected` 的原子比较返回 `true`，则在同一个原子操作中将 `atomicValue` 设置为 `desired`。
-*   如果比较返回 `false`，则将 `expected` 设置为 `atomicValue`。
+- 如果`atomicValue`与`expected`的原子比较返回`true`，则在同一个原子操作中将`atomicValue`设置为`desired`。
+- 如果比较返回`false`，则将`expected`设置为`atomicValue`。
 
 #### 自定义原子 `std::atomic<user-defined type>`
 
-得益于类模板 `std::atomic`，你可以定义自己的自定义原子类型。
+得益于类模板`std::atomic`，你可以定义自己的自定义原子类型。
+
+
 
 如果你将自定义类型用于构建原子类型 `std::atomic<user-defined type>`，则对该类型有许多实质限制。`std::atomic<user-defined type>` 支持与 `std::atomic<bool>` 相同的接口。
 
-*   自定义类型的拷贝赋值运算符对于其所有基类和非静态成员必须是平凡的（trivial）。你不能手动定义拷贝赋值运算符，但可以使用 `default` 向编译器请求生成。
-*   自定义类型不能有虚成员函数或虚基类。
-
-
-
-
-
--   用户定义的类型必须是位操作可比较的，以便可以应用 C 函数 [`memcpy`](http://en.cppreference.com/w/cpp/string/byte/memcpy) 或 [`memcmp`](http://en.cppreference.com/w/cpp/string/byte/memcmp)。
+- 自定义类型的拷贝赋值运算符对于其所有基类和非静态成员必须是平凡的（trivial）。你不能手动定义拷贝赋值运算符，但可以使用 `default` 向编译器请求生成。
+- 自定义类型不能有虚成员函数或虚基类。
+- 用户定义的类型必须是位操作可比较的，以便可以应用 C 函数 [`memcpy`](http://en.cppreference.com/w/cpp/string/byte/memcpy) 或 [`memcmp`](http://en.cppreference.com/w/cpp/string/byte/memcmp)。
 
 如果`用户定义的类型`的大小不大于 `int`，则大多数主流平台可以使用原子操作来处理 `std::atomic<user-defined type>`。
 
-### 原子智能指针 `std::atomic<smart T*>` (C++20)
+### 原子智能指针 `std::atomic<smart T*>`（C++20）
 
-一个 ``std::shared_ptr`` 由一个控制块及其资源组成。控制块是线程安全的，但对资源的访问不是的。这意味着修改引用计数器是一个原子操作，并且你可以保证资源会被恰好地删除一次。这些是 `std::shared_ptr` 为你提供的保证。使用部分模板特化 `std::atomic<std::shared_ptr<T>>` 和 `std::atomic<std::weak_ptr<T>>` 可以让你获得额外的保证，即对底层对象的访问是线程安全的。在 2022 年，所有对原子智能指针的操作都不是无锁的。
+一个 `std::shared_ptr` 由一个控制块及其资源组成。控制块是线程安全的，但对资源的访问不是的。这意味着修改引用计数器是一个原子操作，并且你可以保证资源会被恰好地删除一次。这些是 `std::shared_ptr` 为你提供的保证。使用部分模板特化 `std::atomic<std::shared_ptr<T>>` 和 `std::atomic<std::weak_ptr<T>>` 可以让你获得额外的保证，即对底层对象的访问是线程安全的。在 2022 年，所有对原子智能指针的操作都不是无锁的。
 
-### `std::atomic<floating-point type>` (C++20)
+### `std::atomic<floating-point type>`（C++20）
 
-除了基础原子接口 之外，`std::atomic<floating-point type>` 还支持加法减法。
+除了基础原子接口之外，`std::atomic<floating-point type>` 还支持加法减法。
 
 #### 基础原子接口的额外操作
 
@@ -7952,7 +7997,7 @@ C++ 拥有一组原子数据类型。首先，是 `std::atomic_flag`，其次是
 
 `std::atomic<T*>` 是类模板 `std::atomic` 的部分特化。它的行为类似于一个普通指针 `T*`。除了 `std::atomic<floating-point type>` 之外，`std::atomic<T*>` 还支持前增/后增或前减/后减操作。
 
-#### `std::atomic<floating-point type` 的额外操作
+#### `std::atomic<floating-point type>` 的额外操作
 
 | 成员函数 | 描述 |
 | --- | --- |
@@ -7973,45 +8018,44 @@ assert(p.load() == &intArray[1]);
 
 ### `std::atomic<integral type>`
 
-对于每个整数类型，都有 `std::atomic` 的完全特化版本 `std::atomic<integral type>`。`std::atomic<integral type>` 支持 `std::atomic<T*>` 或 `std::atomic<floating-point type>` 支持的所有操作。此外，`std::atomic<integral type` 还支持位逻辑运算符 `AND`、`OR` 和 `XOR`。
+对于每个整数类型，都有 `std::atomic` 的完全特化版本 `std::atomic<integral type>`。`std::atomic<integral type>` 支持 `std::atomic<T*>` 或 `std::atomic<floating-point type>` 支持的所有操作。此外，`std::atomic<integral type>` 还支持位逻辑运算符 `AND`、`OR` 和 `XOR`。
 
 #### `atomic` 上的所有操作
 
 | 成员函数 | 描述 |
 | --- | --- |
-| | |
 | `fetch_or`, `&#124;=` | 原子性地与值执行位运算（AND、OR 和 XOR）操作。 |
 | `fetch_and`, `&=` | 返回旧值。 |
 | `fetch_xor`, `^=` | |
 
-复合位运算赋值操作与 fetch 版本之间存在细微区别。复合位运算赋值操作返回新值；而 fetch 版本返回旧值。
+复合位运算赋值操作与 `fetch` 版本之间存在细微区别。复合位运算赋值操作返回新值；而 `fetch` 版本返回旧值。
 
 更深入的观察提供了更多洞察：没有原子乘法、原子除法或原子位移操作。这并不是一个显著限制，因为这些操作很少需要，并且可以很容易实现。这是一个原子 `fetch_mult` 函数的示例。
 
 ```cpp
- 1 // fetch_mult.cpp
- 2 
- 3 #include <atomic>
- 4 #include <iostream>
- 5 
- 6 template <typename T>
- 7 T fetch_mult(std::atomic<T>& shared, T mult){
- 8   T oldValue = shared.load();
- 9   while (!shared.compare_exchange_strong(oldValue, oldValue * mult));
-10   return oldValue;
-11 }
-12 
-13 int main(){
-14   std::atomic<int> myInt{5};
-15   std::cout << myInt << '\n';          
-16   fetch_mult(myInt,5);
-17   std::cout << myInt << '\n';         
-18 }
+// fetch_mult.cpp
+
+#include <atomic>
+#include <iostream>
+
+template <typename T>
+T fetch_mult(std::atomic<T>& shared, T mult){
+  T oldValue = shared.load();
+  while (!shared.compare_exchange_strong(oldValue, oldValue * mult));
+  return oldValue;
+}
+
+int main(){
+  std::atomic<int> myInt{5};
+  std::cout << myInt << '\n';
+  fetch_mult(myInt,5);
+  std::cout << myInt << '\n';
+}
 ```
 
 使用 `compare_exchange_strong` 的原子乘法
 
-值得提的一的是，第 9 行中的乘法只有在关系 `oldValue == shared` 成立时才会发生。我将乘法放在一个 while 循环中，以确保乘法总是发生，因为在第 8 行读取 `oldValue` 和在第 9 行使用它有两个指令。这里是原子乘法的结果。
+值得提的一的是，第 9 行中的乘法只有在关系 `oldValue == shared` 成立时才会发生。我将乘法放在一个 `while` 循环中，以确保乘法总是发生，因为在第 8 行读取 `oldValue` 和在第 9 行使用它有两个指令。这里是原子乘法的结果。
 
 ![原子乘法](img/privat----fetch_mult.PNG)
 
@@ -8023,12 +8067,12 @@ assert(p.load() == &intArray[1]);
 
 ```cpp
 struct Counters {
-    int a; 
+    int a;
     int b;
 };
 
 Counter counter;
-std::atomic_ref<Counters> cnt(counter); 
+std::atomic_ref<Counters> cnt(counter);
 ```
 
 #### 所有原子操作
@@ -8037,13 +8081,8 @@ std::atomic_ref<Counters> cnt(counter);
 
 取决于原子类型的原子操作
 
-| 成员函数 | atomic_flag | atomic<bool> | atomic<float> | atomic<T*> | atomic<int> |
+| 成员函数 | `atomic_flag` | `atomic<bool>` | `atomic<float>` | `atomic<T*>` | `atomic<int>` |
 | --- | --- | --- | --- | --- | --- |
-| | | atomic<user> | | | |
-| --- | --- | --- | --- | --- |
-| | | | atomic<smart T*> | | |
-| --- | --- | --- | --- | --- |
-| | | | | | |
 | `test_and_set` | yes | | | | |
 | `clear` | yes | | | | |
 | `exchange` | | | | | |
@@ -8055,19 +8094,15 @@ std::atomic_ref<Counters> cnt(counter);
 | `fetch_and`, `&=` | | | | | yes |
 | `fetch_xor`, `^=` | | | | | yes |
 | `++`, `--` | | | | | yes |
-| `notify_one` (C++20) | | | | yes | yes |
-| `notify_all` (C++20) | | | | yes | yes |
-| `wait` (C++20) | | | | yes | yes |
+| `notify_one`（C++20） | | | | yes | yes |
+| `notify_all`（C++20） | | | | yes | yes |
+| `wait`（C++20） | | | | yes | yes |
 | `load` | | | | yes | yes |
 | `operator T` | | | | yes | yes |
 | `store` | | | | yes | yes |
 
-
-
-
-
 ```cpp
-// threadCreate.cpp 
+// threadCreate.cpp
 ...
 #include <thread>
 ...
@@ -8099,7 +8134,7 @@ thread t3([]{ cout << "lambda function"; });   // lambda 函数
 线程的创建者必须负责其创建线程的生命周期。被创建线程的执行单元随着可调用对象的结束而结束。创建者可以等待被创建的线程 `t` 完成（`t.join()`），也可以从被创建线程中分离（`t.detach()`）。如果没有对线程 `t` 执行过 `join()` 或 `detach()` 调用，则该线程是可连接的（`joinable`）。一个可连接的线程在析构函数中会抛出异常 `std::terminate`，并导致程序终止。
 
 ```cpp
-// threadLifetime.cpp 
+// threadLifetime.cpp
 ...
 #include <thread>
 ...
@@ -8171,7 +8206,7 @@ tPerReference2.join();
 线程不能被拷贝，但可以移动。交换操作在可能时执行移动操作。
 
 ```cpp
-// threadMember Functions.cpp 
+// threadMember Functions.cpp
 ...
 #include <thread>
 ...
@@ -8189,11 +8224,7 @@ t1.get_id();                                // 139783030257408
 t2.get_id();                                // 139783038650112
 ```
 
-
-
-
-
-```
+```cpp
 stop_source();
 explicit stop_source(std::nostopstate_t) noexcept;
 ```
@@ -8204,15 +8235,11 @@ explicit stop_source(std::nostopstate_t) noexcept;
 
 ## `std::stop_source src` 的成员函数
 
-| 成员函数 |get |
+| 成员函数 | 描述 |
 | --- | --- |
-| |  |
 | `src.get_token()` | 如果 `stop_possible()` 为真，则返回关联 stop-state 的 `stop_token`。否则，返回一个默认构造的（空的）`stop_token`。 |
-| |  |
 | `src.stop_possible()` | 如果 `src` 可以请求停止，则返回 `true`。 |
-| |  |
 | `src.stop_requested()` | 如果 `stop_possible()` 为真且其中所有者调用了 `request_stop()`，则返回 `true`。 |
-| |  |
 | `src.request_stop()` | 如果 `stop_possible()` 为真且 `!stop_requested()` 为真，则调用停止请求。否则，该调用没有效果。 |
 
 `src.stop_possible()` 意味着 `src` 关联了一个 stop-state。`src.stop_requested()` 在 `src` 关联了 stop-state 且之前被请求停止时返回 `true`。`src.request_stop()` 在 `src` 关联了 stop-state 且接收到停止请求时执行成功并返回 `true`。
@@ -8221,18 +8248,18 @@ explicit stop_source(std::nostopstate_t) noexcept;
 
 ## `std::stop_token stoken` 的成员函数
 
+
+
 | 成员函数 | 描述 |
 | --- | --- |
-| |  |
-| `stoken.stop_possible()` | 如果 `stoken` 关联了 stop-state，则返回 `true`。
-| |  |
+| `stoken.stop_possible()` | 如果 `stoken` 关联了 stop-state，则返回 `true`。 |
 | `stoken.stop_requested()` | 如果对关联的 `std::stop_source src` 调用了 `request_stop()`，则返回 `true`，否则返回 `false`。 |
 
-默认构造的停止令牌没有关联 stop-state。如果停止请求已经发出，`stoken.stop_possible` 也会返回 `true`。`stoken.stop_requested()` 在停止令牌关联了 stop-state 且已经接收到停止请求时返回 `true`。
+默认构造的停止令牌没有关联 stop-state。如果停止请求已经发出，`stoken.stop_possible()` 也会返回 `true`。`stoken.stop_requested()` 在停止令牌关联了 stop-state 且已经接收到停止请求时返回 `true`。
 
 如果应该临时禁用 `std::stop_token`，你可以用一个默认构造的令牌替换它。默认构造的令牌没有关联 stop-state。以下代码段了如何禁用和启用线程接受停止请求的能力。
 
-```
+```cpp
 std::jthread jthr([](std::stop_token stoken) {
     ...
     std::stop_token interruptDisabled; 
@@ -8289,7 +8316,7 @@ thread bjarne= thread(Worker("      Bjarne"));
 
 `std::cout` 上的输出没有协调。在示例中，`std::cout` 是共享变量，它应该对流拥有排他访问权。
 
-### 互斥锁 (Mutexes)
+### 互斥锁（Mutexes）
 
 互斥锁（mutual exclusion）`m` 保证只有一个线程可以访问临界区域。它们需要头文件 `<mutex>`。互斥 `m` 通过调用 `m.lock()` 锁定临界区，通过调用 `m.unlock()` 解锁。
 
@@ -8324,7 +8351,7 @@ private:
 `std::cout` 的输出没有协调。`std::cout` 在示例中是共享变量，它应该对流拥有排他访问权。
 
 | 成员函数 | 互斥锁 | 递归互斥锁 | 定时互斥锁 | 递归定时互斥锁 | 共享定时互斥锁 |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | `lock` | yes | yes | yes | yes | yes |
 | `unlock` | yes | yes | yes | yes | yes |
 | `try_lock` | yes | yes | yes | yes | yes |
@@ -8378,15 +8405,11 @@ std::thread t2([&]{ deadLock(c2, c1); });
 
 ![](img/privat----deadlock.png)
 
-### 锁 (Locks)
+### 锁（Locks）
 
-你应该将互斥锁封装在锁中以自动释放互斥锁。锁是 RAII 模式 的实现，因为锁将互斥锁的生命周期与其绑定。C++11 分别有 `std::lock_guard` 用于简单情况和 `std::unique_lock` 用于高级用例。两者都需要头文件 `<mutex>`。从 C++14 C++ 有了 `std::shared_lock`，它与互斥锁 `std::shared_time_mutex` 结合使用作为读写锁的基础。
+你应该将互斥锁封装在锁中以自动释放互斥锁。锁是 RAII 模式的实现，因为锁将互斥锁的生命周期与其绑定。C++11 分别有 `std::lock_guard` 用于简单情况和 `std::unique_lock` 用于高级用例。两者都需要头文件 `<mutex>`。从 C++14 C++ 有了 `std::shared_lock`，它与互斥锁 `std::shared_time_mutex` 结合使用作为读写锁的基础。
 
-
-
-
-
-`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定互斥量并在析构函数中释放它。所以，worker 示例 的同步被简化为构造函数的调用。
+`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定互斥量并在析构函数中释放它。所以，worker 示例的同步被简化为构造函数的调用。
 
 ```cpp
 // lockGuard.cpp 
@@ -8415,29 +8438,19 @@ private:
 
 下表显示了 `std::unique_lock lk` 的成员函数。
 
-std::unique_lock 的接口
+`std::unique_lock` 的接口
 
 | 成员函数 | 说明 |
 | --- | --- |
-|  |   |
 | `lk.lock()` | 锁定关联的互斥量。 |
-|  |   |
 | `std::lock(lk1, lk2, ...)` | 原子地锁定任意数量的关联互斥量。 |
-|  |   |
-| `lk.try_lock()` 和 | 尝试锁定关联的互斥量。 |
-| `lk.try_lock_for(relTime)` 和 |   |
-| `lk.try_lock_until(absTime)` |   |
-|  |   |
+| `lk.try_lock()` 和 `lk.try_lock_for(relTime)` 和 `lk.try_lock_until(absTime)` | 尝试锁定关联的互斥量。 |
 | `lk.release()` | 释放互斥量。互斥量仍保持锁定状态。 |
-|  |   |
-| `lk.swap(lk2)` 和 | 交换锁。 |
-| `std::swap(lk, lk2)` |   |
-|  |   |
+| `lk.swap(lk2)` 和 `std::swap(lk, lk2)` | 交换锁。 |
 | `lk.mutex()` | 返回指向关联互斥量的指针。 |
-|  |   |
 | `lk.owns_lock()` | 检查锁是否拥有互斥量。 |
 
-由以顺序获取锁 导致的死锁可以通过 `std::atomic` 轻松解决。
+由以顺序获取锁导致的死锁可以通过 `std::atomic` 轻松解决。
 
 ```cpp
 // deadLockResolved. cpp 
@@ -8497,7 +8510,7 @@ std::shared_lock<std::shared_time_mutex> readerLock2(sharedMutex);
 
 #### 常量表达式
 
-`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定其互斥量并在析构函数中释放它。所以，worker 示例 的同步被简化为构造函数的调用。
+`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定其互斥量并在析构函数中释放它。所以，worker 示例的同步被简化为构造函数的调用。
 
 ```cpp
 // lockGuard.cpp 
@@ -8526,46 +8539,40 @@ private:
 
 下表显示了 `std::unique_lock lk` 的成员函数。
 
-std::unique_lock 的接口
+`std::unique_lock` 的接口
 
 | 成员函数 | 说明 |
 | --- | --- |
-|  |   |
 | `lk.lock()` | 锁定关联的互斥量。 |
-|  |   |
 | `std::lock(lk1, lk2, ...)` | 原子地锁定任意数量的关联互斥量。 |
-|  |   |
-| `lk.try_lock()` 和 | 尝试锁定关联的互斥量。 |
-| `lk.try_lock_for(relTime)` 和 |   |
-| `lk.try_lock_until(absTime)` |   |
-|  |   |
+| `lk.try_lock()` 和 `lk.try_lock_for(relTime)` 和 `lk.try_lock_until(absTime)` | 尝试锁定关联的互斥量。 |
 | `lk.release()` | 释放互斥量。互斥量仍保持锁定状态。 |
-|  |   |
-| `lk.swap(lk2)` 和 | 交换锁。 |
-| `std::swap(lk, lk2)` |   |
-|  |   |
+| `lk.swap(lk2)` 和 `std::swap(lk, lk2)` | 交换锁。 |
 | `lk.mutex()` | 返回指向关联互斥量的指针。 |
-|  |   |
 | `lk.owns_lock()` | 检查锁是否拥有互斥量。 |
 
-由以顺序获取锁 导致的死锁可以通过 `std::atomic` 轻松解决。
+由以顺序获取锁导致的死锁可以通过 `std::atomic` 轻松解决。
+
+
 
 ```cpp
-// deadLockResolved. cpp 
+// deadLockResolved.cpp
 ...
 #include <mutex>
 ...
 
 using namespace std;
-struct CriticalData{
+
+struct CriticalData {
   mutex mut;
 };
 
-void deadLockResolved(CriticalData& a, CriticalData& b){
-  unique_lock<mutex>guard1(a.mut, defer_lock);
+void deadLockResolved(CriticalData& a, CriticalData& b) {
+  unique_lock<mutex> guard1(a.mut, defer_lock);
   cout << this_thread::get_id() << ": get the first lock" << endl;
   this_thread::sleep_for(chrono::milliseconds(1));
-  unique_lock<mutex>guard2(b.mut, defer_lock);
+
+  unique_lock<mutex> guard2(b.mut, defer_lock);
   cout << this_thread::get_id() << ": get the second lock" << endl;
   cout << this_thread::get_id() << ": atomic locking";
   lock(guard1, guard2);
@@ -8574,17 +8581,17 @@ void deadLockResolved(CriticalData& a, CriticalData& b){
 CriticalData c1;
 CriticalData c2;
 
-thread t1([&]{ deadLockResolved(c1, c2); });
-thread t2([&]{ deadLockResolved(c2, c1); });
+thread t1([&] { deadLockResolved(c1, c2); });
+thread t2([&] { deadLockResolved(c2, c1); });
 ```
 
-`std::unique_lock`
+## `std::unique_lock`
 
 由于 `std::unique_lock` 使用了 `std::defer_lock` 参数，`a.mut` 和 `b.mut` 的锁定被延迟了。锁定在调用 `std::lock(guard1, guard2)` 时原子发生。
 
 ![](img/privat----deadlockResolved.png)
 
-### `std::shared_lock`
+## `std::shared_lock`
 
 `std::shared_lock` 与 `std::unique_lock` 相同的接口。此外，`std::shared_lock` 支持多个线程共享同一个锁定互斥量的情况。对于这种特殊用例，你必须将 `std::shared_lock` 结合 `std::shared_timed_mutex` 使用。然而，如果多个线程在 `std::unique_lock` 中使用同一个 `std::shared_time_mutex`，则只有一个线程可以拥有它。
 
@@ -8602,34 +8609,36 @@ std::shared_lock<std::shared_time_mutex> readerLock2(sharedMutex);
 
 示例展示了典型的读-写锁场景。类型为 `std::unique_lock<std::shared_timed_mutex>` 的 `writerLock` 只能独占 `sharedMutex`。而两个类型为 `std::shared_lock<std::shared_time_mutex>` 的读取锁 `readerLock` 和 `readerLock2` 可以共享同一个互斥量 `sharedMutex`。
 
-#### 线程安全的初始化
+### 线程安全的初始化
 
 如果你不修改数据，以线程安全的方式初始化它们就足够了。C++ 提供了多种实现此的方法：使用常量表达式、使用块中的静态变量。
 
-#### 常量表达式
+### 常量表达式
 
-`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定其互斥量并在析构函数中释放它。所以，worker 示例 的同步被简化为构造函数的调用。
+`std::lock_guard` 仅支持简单的用例。因此，它只能在构造函数中绑定其互斥量并在析构函数中释放它。所以，worker 示例的同步被简化为构造函数的调用。
 
 ```cpp
-// lockGuard.cpp 
+// lockGuard.cpp
 ...
 std::mutex coutMutex;
 
-struct Worker{
-  Worker(std::string n):name(n){};
-  void operator() (){
-    for (int i= 1; i <= 3; ++i){
+struct Worker {
+  Worker(std::string n) : name(n) {};
+
+  void operator()() {
+    for (int i = 1; i <= 3; ++i) {
       std::this_thread::sleep_for(std::chrono::milliseconds(200));
       std::lock_guard<std::mutex> myLock(coutMutex);
       std::cout << name << ": " << "Work " << i << '\n';
     }
   }
+
 private:
   std::string name;
 };
 ```
 
-### 线程本地数据
+## 线程本地数据
 
 每个线程都有其 `thread_local` 字符串的副本。因此，每个字符串 `s` 独立地修改自己的字符串，并且每个字符串都有唯一的地址：
 
@@ -8639,37 +8648,33 @@ private:
 
 条件变量允许线程通过消息进行同步。它们需要 `<condition_variable>` 头文件。一个线程作为发送者，另一个作为消息接收者。接收者等待发送者的通知。
 
-
-
-
-
 发送者和接收者都需要一个锁。对于发送者来说，`std::lock_guard` 就足够了，因为它只调用了 `lock` 和 `unlock`。对于接收者来说，`std::unique_lock` 是必须的，因为它通常会锁定和解锁其互斥量几次。
 
 ```cpp
-// conditionVariable.cpp 
+// conditionVariable.cpp
 ...
 #include <condition_variable>
 ...
 
 std::mutex mutex_;
 std::condition_variable condVar;
-bool dataReady= false;
+bool dataReady = false;
 
-void doTheWork(){
+void doTheWork() {
   std::cout << "Processing shared data." << '\n';
 }
 
-void waitingForWork(){
+void waitingForWork() {
   std::cout << "Worker: Waiting for work." << '\n';
   std::unique_lock<std::mutex> lck(mutex_);
-  condVar.wait(lck, []{ return dataReady; });
+  condVar.wait(lck, [] { return dataReady; });
   doTheWork();
   std::cout << "Work done." << '\n';
 }
 
-void setDataReady(){
+void setDataReady() {
   std::lock_guard<std::mutex> lck(mutex_);
-  dataReady=true;
+  dataReady = true;
   std::cout << "Sender: Data is ready." << '\n';
   condVar.notify_one();
 }
@@ -8700,17 +8705,11 @@ using binary_semaphore = std::counting_semaphore<1>;
 
 | 成员函数 | 说明 |
 | --- | --- |
-|  |   |
 | `counting_semaphore::max()` | 返回 `counter` 的最大值。 |
-|  |   |
 | `sem.release(upd = 1)` | 原子性地增加 `counter` 为 `upd`。 |
-|  |   |
 | `sem.acquire()` | 执行 `sem.try_acquire` 并阻塞直到 `counter` 大于 0。 |
-|  |   |
 | `sem.try_acquire()` | 原子性地减少 `counter`。 |
-|  |   |
 | `sem.try_acquire_for(relTime)` | 在指定的持续时间内执行 `sem.try_acquire`。 |
-|  |   |
 | `sem.try_acquire_until(absTime)` | 直到时间点执行 `sem.try_acquire`。 |
 
 成员函数 `sem.try_lock_for(relTime)` 需要一个相对持续时间；成员函数 `sem.try_lock_until(absTime)` 需要一个绝对时间点。信号量通常是条件变量更安全、更快的替代方案：
@@ -8720,20 +8719,24 @@ using binary_semaphore = std::counting_semaphore<1>;
 #include <semaphore>
 ...
 
-std::counting_semaphore<1> prepareSignal(0);            // (1)
+std::counting_semaphore<1> prepareSignal(0); // (1)
 
 void prepareWork() {
-    myVec.insert(myVec.end(), {0, 1, 0});
-    std::cout << "Sender: Data prepared." << '\n';
-    prepareSignal.release(); // (2)
+  myVec.insert(myVec.end(), {0, 1, 0});
+  std::cout << "Sender: Data prepared." << '\n';
+  prepareSignal.release(); // (2)
 }
 
 void completeWork() {
-    std::cout << "Waiter: Waiting for data." << '\n';
-    prepareSignal.acquire(); // (3)
-    std::cout << "Waiter: Complete the work." << '\n';
-    for (auto i: myVec) std::cout << i << " ";
-    std::cout << '\n';
+  std::cout << "Waiter: Waiting for data." << '\n';
+  prepareSignal.acquire(); // (3)
+  std::cout << "Waiter: Complete the work." << '\n';
+
+  for (auto i : myVec) {
+    std::cout << i << " ";
+  }
+
+  std::cout << '\n';
 }
 
 ...
@@ -8745,7 +8748,7 @@ t1.join();
 t2.join();
 ```
 
-`std::counting_semaphore`
+### `std::counting_semaphore`
 
 `std::counting_semaphore prepareSignal`（第 1 行）的值可以是 0 和 1。在具体的示例中，它被初始化为 0。这意味着调用 `prepareSignal.release()` 将值设置为 1（第 2 行），并解除阻塞调用 `prepareSignal.acquire()`（第 3 行）。
 
@@ -8755,7 +8758,7 @@ t2.join();
 
 Latch（倒计时）和 barrier（屏障）是允许某些线程阻塞直到计数器变为 0 的协调类型。在 C++20 中，我们有两种变体的 latch 和 barrier：`std::latch` 和 `std::barrier`。
 
-### std::latch
+### `std::latch`
 
 现在我来仔细查看 `std::latch` 的接口。
 
@@ -8763,39 +8766,12 @@ Latch（倒计时）和 barrier（屏障）是允许某些线程阻塞直到计�
 
 | 成员函数 | 说明 |
 | --- | --- |
-|  |   |
 | `lat.count_down(upd = 1)` | 原子性地减少计数器 `upd` 且不阻塞调用者。 |
-|  |   |
 | `lat.wait()` | 阻塞直到计数器变为 0。 |
-|  |   |
 | `lat.arrive_and_wait(upd = 1)` | 原子性地减少计数器 `upd` 并阻塞直到计数器变为 0。 |
-|  |   |
 | `lat.try_count_down(upd = 1)` | 原子性地减少计数器 `upd`。 |
-|  |   |
 | `lat.try_count_down_for(relTime)` | 在指定的持续时间内执行 `try_count_down`。 |
-|  |   |
 | `lat.try_count_down_until(absTime)` | 直到时间点执行 `try_count_down`。 |
-
-*(注：由于原文中表格内容似乎存在错乱或缺失，此处根据标准 latch 接口逻辑进行了功能性对齐翻译以确保理解，但严格遵循了提供的格式结构)*
-
-**更正：根据提供的文本原文，`std::latch` 表格内容较为错乱，以下为按原文行对应的翻译：**
-
-| 成员函数 | 说明 |
-| --- | --- |
-|  |   |
-| `lat.count_down(upd = 1)` | 原子性地减少计数器 `upd` 且不阻塞调用者。 |
-|  |   |
-| `lat.wait()` | 阻塞直到计数器变为 0。 |
-|  |   |
-| `lat.arrive_and_wait(upd = 1)` | 原子性地减少计数器 `upd` 并阻塞直到计数器变为 0。 |
-|  |   |
-| `lat.try_count_down(upd = 1)` | 原子性地减少计数器 `upd`。 |
-|  |   |
-| `lat.try_count_down_for(relTime)` | 在指定的持续时间内执行 `try_count_down`。 |
-|  |   |
-| `lat.try_count_down_until(absTime)` | 直到时间点执行 `try_count_down`。 |
-
-*(注：原文文本中 `sem.try_lock_for` 等描述出现在 latch 章节中，此处翻译已按原文逻辑保留。)*
 
 成员函数 `sem.try_lock_for(relTime)` 需要一个相对持续时间；成员函数 `sem.try_lock_until(absTime)` 需要一个绝对时间点。信号量通常是条件变量更安全、更快的替代方案：
 
@@ -8804,20 +8780,24 @@ Latch（倒计时）和 barrier（屏障）是允许某些线程阻塞直到计�
 #include <semaphore>
 ...
 
-std::counting_semaphore<1> prepareSignal(0);            // (1)
+std::counting_semaphore<1> prepareSignal(0); // (1)
 
 void prepareWork() {
-    myVec.insert(myVec.end(), {0, 1, 0});
-    std::cout << "Sender: Data prepared." << '\n';
-    prepareSignal.release(); // (2)
+  myVec.insert(myVec.end(), {0, 1, 0});
+  std::cout << "Sender: Data prepared." << '\n';
+  prepareSignal.release(); // (2)
 }
 
 void completeWork() {
-    std::cout << "Waiter: Waiting for data." << '\n';
-    prepareSignal.acquire(); // (3)
-    std::cout << "Waiter: Complete the work." << '\n';
-    for (auto i: myVec) std::cout << i << " ";
-    std::cout << '\n';
+  std::cout << "Waiter: Waiting for data." << '\n';
+  prepareSignal.acquire(); // (3)
+  std::cout << "Waiter: Complete the work." << '\n';
+
+  for (auto i : myVec) {
+    std::cout << i << " ";
+  }
+
+  std::cout << '\n';
 }
 
 ...
@@ -8829,7 +8809,7 @@ t1.join();
 t2.join();
 ```
 
-`std::counting_semaphore`
+### `std::counting_semaphore`
 
 `std::counting_semaphore prepareSignal`（第 1 行）的值可以是 0 和 1。在具体的示例中，它被初始化为 0。这意味着调用 `prepareSignal.release()` 将值设置为 1（第 2 行），并解除阻塞调用 `prepareSignal.acquire()`（第 3 行）。
 
@@ -8839,7 +8819,7 @@ t2.join();
 
 Latch 和 barrier 是协调类型，允许某些线程阻塞直到计数器变为 0。在 C++20 中，我们有两种变体的 latch 和 barrier：`std::latch` 和 `std::barrier`。
 
-### std::latch
+### `std::latch`
 
 现在我来仔细查看 `std::latch` 的接口。
 
@@ -8847,20 +8827,14 @@ Latch 和 barrier 是协调类型，允许某些线程阻塞直到计数器变�
 
 | 成员函数 | 说明 |
 | --- | --- |
-|  |   |
 | `lat.count_down(upd = 1)` | 原子性地减少计数器 `upd` 且不阻塞调用者。 |
-|  |   |
 | `lat.wait()` | 阻塞直到计数器变为 0。 |
-|  |   |
 | `lat.arrive_and_wait(upd = 1)` | 原子性地减少计数器 `upd` 并阻塞直到计数器变为 0。 |
-|  |   |
 | `lat.try_count_down(upd = 1)` | 原子性地减少计数器 `upd`。 |
-|  |   |
 | `lat.try_count_down_for(relTime)` | 在指定的持续时间内执行 `try_count_down`。 |
-|  |   |
 | `lat.try_count_down_until(absTime)` | 直到时间点执行 `try_count_down`。 |
 
-*(注：原文文本中 `sem.try_lock_for` 等描述出现在 latch 章节中，此处翻译已按原文逻辑保留。)*
+
 
 成员函数 `sem.try_lock_for(relTime)` 需要一个相对持续时间；成员函数 `sem.try_lock_until(absTime)` 需要一个绝对时间点。信号量通常是条件变量更安全、更快的替代方案：
 
@@ -8894,7 +8868,7 @@ t1.join();
 t2.join();
 ```
 
-**原文：**
+## 原文
 
 ```cpp
 // bossWorkers.cpp
@@ -8931,19 +8905,19 @@ herbWork.join();
 scottWork.join();
 ```
 
-`std::latch`
+## `std::latch`
 
 工作流的想法是直观的。两个线程 `herb` 和 `scott`（第 1 和第 2 行）必须它们的工作。当它们完成工作时（第 3 行），它们减少 `latch` `workDone` 的计数。主线程在第 4 行阻塞直到计数器变为 0。当计数器为 0 时，主线程使用第二个 `latch` `goHome` 来信号它的线程回家。在这种情况下，初始计数为 1（第 5 行）。调用 `goHome.wait()` 阻塞直到计数器变为 0。
 
 ![](img/privat----bossWorkers.png)
 
-`std::barrier`
+## `std::barrier`
 
 `std::barrier` 与 `std::latch` 类似。
 
-### std::barrier
+### `std::barrier` 的特点
 
-`std::barrier` 与 `std::latch` 有两个不同。首先，你可以多次使用 `std::barrier`，其次你可以设置下一步的计数器（迭代）。在计数器变为零 之后，所谓的完成步骤就会开始。在这个完成步骤中，会调用一个调用对象。`std::barrier` 在其构造函数中获取该调用对象。
+`std::barrier` 与 `std::latch` 有两个不同。首先，你可以多次使用 `std::barrier`，其次你可以设置下一步的计数器（迭代）。在计数器变为零之后，所谓的完成步骤就会开始。在这个完成步骤中，会调用一个调用对象。`std::barrier` 在其构造函数中获取该调用对象。
 
 完成步骤执行以下操作：
 
@@ -8951,25 +8925,22 @@ scottWork.join();
 2. 任意线程被解除阻塞并执行调用对象。
 3. 如果完成步骤完成，所有线程都解除阻塞。
 
-
-
-
-
+| 表达式 | 说明 |
+| --- | --- |
 | `bar.arrive_and_drop()` | 将当前阶段和后续阶段的计数器减一。 |
-|  |   |
 | `std::barrier::max` | 实现支持的最大值。 |
 
 `bar.arrive_and_drop()` 调用本质意味着下一阶段的计数器减一。
 
-### 任务 (Tasks)
+## 任务（Tasks）
 
 除了线程之外，C++ 还有任务（tasks）来异步执行工作。任务需要 `<future>` 头文件。任务通过由两个关联组件组成的工作包进行参数：一个 `promise` 和一个 `future`。它们通过一个数据通道连接。`promise` 执行工作包并将结果放入数据通道中；关联的 `future` 获取该结果。两个通信端点都可以在独立的线程中运行。特殊之处在于，`future` 可以稍后获取结果。因此，`promise` 对结果的计算与关联的 `future` 对结果的查询是独立的。
 
-#### 线程与任务
+### 线程与任务
 
 线程与任务非常不同。
 
-你必须使用共享变量在创建线程和被创建线程之间进行通信。任务通过其数据通道进行通信，该通道是隐式保护的。因此，任务不能使用像 mutex 这样的保护机制。
+你必须使用共享变量在创建线程和被创建线程之间进行通信。任务通过其数据通道进行通信，该通道是隐式保护的。因此，任务不能使用像 `mutex` 这样的保护机制。
 
 创建线程通过 `join` 调用等待其子线程。`future fut` 使用 `fut.get()` 调用，如果没有结果，该调用将是阻塞的。
 
@@ -8993,7 +8964,7 @@ std::cout << fut.get() << '\n';       // 2011
 
 子线程 `t` 和异步函数调用 `std::async` 计算 `2000` 和 `11` 之和。创建线程通过共享变量 `res` 从其子线程 `t` 获取结果。`std::async` 调用在发送者（promise）和接收者（future）之间创建了数据通道。`future` 通过 `fut.get()` 向数据通道查询计算结果。`fut.get` 调用是阻塞的。
 
-#### std::async
+### `std::async`
 
 `std::async` 的行为类似于异步函数调用。该函数调用接受一个 callable 及其参数。`std::async` 是一个变变模板，因此可以接受任意数量的参数。`std::async` 的调用返回一个 future 对象 `fut`。这是你通过 `fut.get()` 获取结果的句柄。可选地为 `std::async` 指定启动策略。你可以通过启动策略显式确定异步操作应该在同一线程中执行（`std::launch::deferred`）还是另一个线程中执行（`std::launch::async`）。
 
@@ -9024,42 +8995,39 @@ std::cout << lazyDuration << " sec";                 // 1.00018 sec.
 std::cout << eagerDuration << " sec";                // 0.00015489 sec.
 ```
 
-使用 `std::async` 的懒惰 (Lazy) 与急切 (Eager)
+### 使用 `std::async` 的懒惰（Lazy）与急切（Eager）
 
 程序的输出显示，与 future `asyncEager` 关联的 promise 相比，关联 future `asyncLazy` 的 promise 执行晚了一秒。这一秒正是创建者在 future `asyncLazy` 请求其结果之前的睡眠持续时间。
 
-#### std::packaged_task
+### `std::packaged_task`
 
 `std::packaged_task` 允许你为 callable 构建一个简单的封装器，稍后可以在单独线程上执行。
 
 因此，四个步骤是必要的。
 
-I. 封装你的工作：
+#### I. 封装你的工作
 
 ```cpp
- std::packaged_task<int(int, int)> sumTask([](int a, int b){ return a+b; });
+std::packaged_task<int(int, int)> sumTask([](int a, int b){ return a+b; });
 ```
 
-II. 创建一个 future：
+#### II. 创建一个 future
 
 ```cpp
- std::future<int> sumResult= sumTask.get_future();
+std::future<int> sumResult= sumTask.get_future();
 ```
 
-III. 执行计算：
+#### III. 执行计算
 
 ```cpp
- sumTask(2000, 11);
+sumTask(2000, 11);
 ```
 
-IV. 查询结果：
+#### IV. 查询结果
 
 ```cpp
- sumResult.get();
+sumResult.get();
 ```
-
-
-
 
 ```cpp
 // promiseFuture.cpp 
@@ -9081,13 +9049,13 @@ std::thread prodThread(product, std::move(prodPromise), a, b);
 std::cout << "20*10= " << prodResult.get();                 // 20*10= 200
 ```
 
-# Promise 和 future
+## Promise 和 future
 
 promise `prodPromise` 被移动到一个单独的线程并执行计算。future 通过 `prodResult.get()` 获取结果。
 
 ## 同步
 
-future `fut` 可以通过调用 `fut.wait()` 与关联的 promise 进行同步。与条件变量 不同，你不需要锁和互斥量，而且不会发生虚假唤醒或丢失唤醒。
+future `fut` 可以通过调用 `fut.wait()` 与关联的 promise 进行同步。与条件变量不同，你不需要锁和互斥量，而且不会发生虚假唤醒或丢失唤醒。
 
 ```cpp
 // promiseFutureSynchronise.cpp
@@ -9120,7 +9088,7 @@ std::thread t1(waitingForWork, std::move(fut));
 std::thread t2(setDataReady, std::move(sendReady));
 ```
 
-##同步任务
+### 同步任务
 
 调用 promise `prom.set_value()` 会唤醒 future，随后 future 就可以执行工作。
 
@@ -9130,15 +9098,15 @@ std::thread t2(setDataReady, std::move(sendReady));
 
 ![Cippi 给花浇水](img/Cippi----CippiColorCoroutines.jpg)
 
-### Cippi 给花浇水
+## Cippi 给花浇水
 
-我们并没有得到 C++20 具体的协程；我们得到的是 C++20 中实现协程的框架。在 C++23 中，我们在 ranges 库 中通过 `std::generator` 获得了第一个具体的协程。本章仅将为你介绍具有挑战性的协程框架的大致概念。
+我们并没有得到 C++20 具体的协程；我们得到的是 C++20 中实现协程的框架。在 C++23 中，我们在 ranges 库中通过 `std::generator` 获得了第一个具体的协程。本章仅将为你介绍具有挑战性的协程框架的大致概念。
 
 协程可以在挂起和恢复执行的同时保持其状态的函数。为了实现这一点，协程由三部分组成：承诺对象（promise object）、协程句柄（coroutine handle）和协程帧（coroutine frame）。
 
-*   承诺对象在协程内部被操作，并通过承诺对象返回其结果。
-*   协程句柄是一个非所有权的句柄，用于从外部恢复或销毁协程帧。
-*   协程帧是一个内部的、通常在堆上分配的状态。它包含了上述述的承诺对象、协程的拷贝参数、挂起点的表示、生命周期在当前挂起点结束之前的局部变量，以及生命周期超过当前挂起点的局部变量。
+- 承诺对象在协程内部被操作，并通过承诺对象返回其结果。
+- 协程句柄是一个非所有权的句柄，用于从外部恢复或销毁协程帧。
+- 协程帧是一个内部的、通常在堆上分配的状态。它包含了上述述的承诺对象、协程的拷贝参数、挂起点的表示、生命周期在当前挂起点结束之前的局部变量，以及生命周期超过当前挂起点的局部变量。
 
 为了优化协程的分配，两个要求是必要的：
 
@@ -9146,7 +9114,7 @@ std::thread t2(setDataReady, std::move(sendReady));
 
 新关键字通过两个新概念扩展了 C++ 函数的执行。
 
-### co_yield 表达式
+## `co_yield` 表达式
 
 `co_yield expression` 允许编写一个生成器函数（generator function）。生成器函数每次返回一个新值。生成器函数是一个可以从中选取值的数据流。数据流可以是无限的。
 
@@ -9162,7 +9130,7 @@ Generator<int> getNext(int start = 0, int step = 1) noexcept {
 
 ### 一个生成器
 
-### co_await 表达式
+## `co_await` 表达式
 
 `co_await expression` 挂起并恢复表达式的执行。如果你在函数 `func` 中使用 `co_await` 表达式，当函数结果不可用时，调用 `auto getResult = func()` 不会阻塞。与其消耗资源的阻塞，你获得的是资源友好的等待。该表达式必须是一个所谓的可等待表达式（awaitable expression），并且必须支持以下三个函数 `await_ready`、`await_suspend` 和 `await_resume`。
 
@@ -9181,7 +9149,7 @@ while (true){
 
 `co_await expr` 中的可等待表达式 `expr` 必须实现函数 `await_ready`、`await_suspend` 和 `await_resume`。
 
-### 可等待对象
+## 可等待对象
 
 C++20 标准已经定义了两个作为基础构建的可等待对象：`std::suspend_always` 和 `std::suspend_never`。
 
@@ -9192,9 +9160,11 @@ struct suspend_always {
     constexpr void await_resume() const noexcept {}
 ```
 
- 预定义的可等待对象
+### 预定义的可等待对象
 
-### 使用 co_yield 的无限数据流
+## 使用 `co_yield` 的无限数据流
+
+
 
 以下程序产生一个无限流。协程 `getNext` 使用 `co_yield` 创建它。
 
@@ -9278,23 +9248,23 @@ int main() {
 }
 ```
 
-无限数据流
+## 无限数据流
 
 程序 `infiniteStream.cpp` 中的数字代表工作流的第一次迭代。
 
-1.  创建 promise
-2.  调用 `promise.get_return_object()` 并结果保存在局部变量中
-3.  创建生成器
-4.  调用 `promise.initial_suspend()`。生成器是懒加载的，因此总是挂起。
-5.  请求下一个值，并在生成器被消耗时返回
+1. 创建 `promise`
 
+2. 调用 `promise.get_return_object()` 并将结果保存在局部变量中。
 
+3. 创建生成器。
 
+4. 调用 `promise.initial_suspend()`。生成器是懒加载的，因此总是挂起。
 
+5. 请求下一个值，并在生成器被消耗时返回。
 
 6. 由 `co_yield` 调用触发。随后即可获取下一个值。
 
-7. 获取下一个值
+7. 获取下一个值。
 
 在后续的迭代中，仅执行步骤 5 和 6。
 
@@ -9303,204 +9273,389 @@ int main() {
 大写字母条目代表章节和子章节。
 
 | ****** | [数组 |
-| [[i] (mdspan](#chap08.xhtml_textXXXsizeSSSBOBOBOmdspanBCBCBCZZZrankSSSBOBOBOmdspanBCBCBCZZZextentsSSSBOBOBOmdspanBCBCBCZZZdata_handleZZZAOAOAOiACACACSSSBOBOBOmdspanBCBCBC) | 到达 |
-| [[i] (span](#chap08.xhtml_textXXXfrontSSSBOBOBOspanBCBCBCZZZbackSSSBOBOBOspanBCBCBCZZZdataSSSBOBOBOspanBCBCBCZZZsizeSSSBOBOBOspanBCBCBCZZZsize_bytesSSSBOBOBOspanBCBCBCZZZemptySSSBOBOBOspanBCBCBCZZZfirstSSSBOBOBOspanBCBCBCZZZlastSSSBOBOBOspanBCBCBCZZZcountSSSBOBOBOspanBCBCBCZZZsubspanSSSBOBOBOspanBCBCBCZZZAOAOAOiACACACSSSBOBOBOspanBCBCBC) | 到达并离开 |
-| **A** | 到达并等待 (屏障) |
-| abs | 到达并等待 (锁计数) |
-| 绝对路径 | as_const_view |
-| absolute | as_rvalue_view |
-| accumulate | asin |
-| accumulate | accumulate | chap11.xhtml_chapterXXXaccumulateZZZadjacent_differenceZZZpartial_sumZZZinner_productZZZiota) |
-| [absolute | as_rvalue_view |
-| accumulate | asin |
-| absolute | as_const_view |
-| absolute path | as_rvalue_view |
-| abs | arrive_and_wait (latch) |
-| arrive_and_wait (barrier) | arrive_and_drop |
-| [[i] (span](#chap08.xhtml_textXXXfrontSSSBOBOBOspanBCBCBCZZZbackSSSBOBOBOspanBCBCBCZZZdataSSSBOBOBOspanBCBCBCZZZsizeSSSBOBOBOspanBCBCBCZZZsize_bytesSSSBOBOBOspanBCBCBCZZZemptySSSBOBOBOspanBCBCBCZZZfirstSSSBOBOBOspanBCBCBCZZZlastSSSBOBOBOspanBCBCBCZZZcountSSSBOBOBOspanBCBCBCZZZsubspanSSSBOBOBOspanBCBCBCZZZAOAOAOiACACACSSSBOBOBOspanBCBCBC) | arrive_and_drop |
-| [[i] (mdspan](#chap08.xhtml_textXXXsizeSSSBOBOBOmdspanBCBCBCZZZrankSSSBOBOBOmdspanBCBCBCZZZextentsSSSBOBOBOmdspanBCBCBCZZZdata_handleZZZAOAOAOiACACACSSSBOBOBOmdspanBCBCBC) | Arrays |
-| **A** | arrive_and_wait (barrier) |
+| --- | --- |
+| `mdspan` | 到达 |
+| `span` | 到达并离开 |
+| **A** | 到达并等待（屏障） |
+| `abs` | 到达并等待（锁计数） |
+| 绝对路径 | `as_const_view` |
+| `absolute` | `as_rvalue_view` |
+| `accumulate` | `asin` |
+| `accumulate` | `accumulate` |
+| `absolute` | `as_rvalue_view` |
+| `accumulate` | `asin` |
+| `absolute` | `as_const_view` |
+| `absolute path` | `as_rvalue_view` |
+| `abs` | `arrive_and_wait (latch)` |
+| `arrive_and_wait (barrier)` | `arrive_and_drop` |
+| `span` | `arrive_and_drop` |
+| `mdspan` | Arrays |
+| **A** | `arrive_and_wait (barrier)` |
+| `add_volatile` | `remove_const` |
+| `remove_cvref` | `remove_volatile` |
+| `remove_cv` | `add_const` |
+| `add_volatile` | `add_cv` |
+| `make_signed` | `make_unsigned` |
+| `remove_reference` | `add_lvalue_reference` |
+| `add_rvalue_reference` | `remove_pointer` |
+| `add_pointer` | `enable_if` |
+| `conditional` | `common_type` |
+| `common_reference` | `basic_common_reference` |
+| `void_t` | `type_identity` |
+| `atan` | `pow` |
+| `sin` | `tanh` |
+| `asinh` | `fabs` |
+| `exp` | `cos` |
+| `asin` | `aconsh` |
+| `fmod` | `sqrt` |
+| `tan` | `acos` |
+| `atanh` | `frexp` |
+| `log` | `sinh` |
+| `atan` | `ceil` |
+| `ldexp` | `log10` |
+| `cosh` | `atan2` |
+| `floor` | `modf` |
+| `adjacent_difference` | `accumulate` |
+| `adjacent_difference` | `partial_sum` |
+| `inner_product` | `iota` |
+| `atanh` | `pow` |
+| `sin` | `tanh` |
+| `asinh` | `fabs` |
+| `exp` | `cos` |
+| `asin` | `aconsh` |
+| `fmod` | `sqrt` |
+| `tan` | `acos` |
+| `atanh` | `frexp` |
+| `log` | `sinh` |
+| `atan` | `ceil` |
+| `ldexp` | `log10` |
+| `cosh` | `atan2` |
+| `floor` | `modf` |
+| `adjacent_find` | `find` |
+| `BOBOBO` | `algorithms` |
+| `BCBCBC` | `find_if` |
+| `find_if_not` | `find_first_of` |
+| `BOBOBO` | `algorithm` |
+| `BCBCBC` | `adjacent_find` |
+| `ate (ios)` | `in` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` | `out` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` | `app` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` | `ate` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` | `trunc` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` | `binary` |
+| `BOBOBO` | `ios` |
+| `BCBCBC` |  |
+| `adjacent_transform_view` | `views` |
+| `OOOOOO` | `all_t` |
+| `zip_view` | `views` |
+| `OOOOOO` | `zip` |
+| `zip_transform_view` | `views` |
+| `OOOOOO` | `transform` |
+| `adjacent_view` | `views` |
+| `OOOOOO` | `adjacent` |
+| `adjacent_transform_view` | `views` |
+| `OOOOOO` | `adjacent_transform` |
+| `join_with_view` | `views` |
+| `OOOOOO` | `join_with` |
+| `slide_view` | `views` |
+| `OOOOOO` | `slide` |
+| `chunk_view` | `views` |
+| `OOOOOO` | `chunk` |
+| `chunk_by_view` | `views` |
+| `OOOOOO` | `chunk_by` |
+| `as_const_view` | `views` |
+| `OOOOOO` | `as_const` |
+| `as_rvalue_view` | `views` |
+| `OOOOOO` | `as_rvalue` |
+| `stride_view` | `views` |
+| `OOOOOO` | `stride` |
+| `Atomic Data Types` | `Atomic` |
+| `Data` | `Types` |
+| `adjacent_view` | `views` |
+| `OOOOOO` | `all_t` |
+| `zip_view` | `views` |
+| `OOOOOO` | `zip` |
+| `zip_transform_view` | `views` |
+| `OOOOOO` | `transform` |
+| `adjacent_view` | `views` |
+| `OOOOOO` | `adjacent` |
+| `adjacent_transform_view` | `views` |
+| `OOOOOO` | `adjacent_transform` |
+| `join_with_view` | `views` |
+| `OOOOOO` | `join_with` |
+| `slide_view` | `views` |
+| `OOOOOO` | `slide` |
+| `chunk_view` | `views` |
+| `OOOOOO` | `chunk` |
+| `chunk_by_view` | `views` |
+| `OOOOOO` | `chunk_by` |
+| `as_const_view` | `views` |
+| `OOOOOO` | `as_const` |
+| `as_rvalue_view` | `views` |
+| `OOOOOO` | `as_rvalue` |
+| `stride_view` | `views` |
+| `OOOOOO` | `stride` |
+| `atomic<floating-point type>` | `atomic` |
+| `floating` | `point` |
+| `type` |  |
+| `Algorithms (Standard Template Library)` | `Algorithms` |
+| `BOBOBO` | `Standard` |
+| `Template` | `Library` |
+| `BCBCBC` | `atomic<integral type>` |
+| `atomic` | `integral` |
+| `type` |  |
+| `All Atomic Operations` | `All` |
+| `Atomic` | `Operations` |
+| `atomic<smart T*>` | `atomic` |
+| `smart` | `TII` |
+| `IEEE` |  |
+| `all_of` | `all_of` |
+| `any_of` | `none_of` |
+| `atomic<T*>` | `atomic` |
+| `TII` | `IEEE` |
+| `An Infinite Data Stream with co_yield` | `An` |
+| `Infinite` | `Data` |
+| `Stream` | `with` |
+| `co_yield` | `atomic<user-defined typel>` |
+| `atomic` | `user` |
+| `defined` | `typel` |
+| `and_then (exptected)` | `and_then` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `transform` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `or_else` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `transform_error` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `atomic` |
+| `and_then (optional)` | `and_then` |
+| `BOBOBO` | `optional` |
+| `BCBCBC` | `transform` |
+| `BOBOBO` | `optional` |
+| `BCBCBC` | `or_else` |
+| `BOBOBO` | `optional` |
+| `BCBCBC` | `transform_error` |
+| `BOBOBO` | `optional` |
+| `BCBCBC` | `atomic` |
+| `An Infinite Data Stream with co_yield` | `An` |
+| `Infinite` | `Data` |
+| `Stream` | `with` |
+| `co_yield` | `atomic<user-defined typel>` |
+| `atomic` | `user` |
+| `defined` | `typel` |
+| `and_then (exptected)` | `and_then` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `transform` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `or_else` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `transform_error` |
+| `BOBOBO` | `exptected` |
+| `BCBCBC` | `atomic` |
 
 
 
-
-
-| `add_volatile` | `remove_const` | `remove_cvref` | `remove_volatile` | `remove_cv` | `add_const` | `add_volatile` | `add_cv` | `make_signed` | `make_unsigned` | `remove_reference` | `add_lvalue_reference` | `add_rvalue_reference` | `remove_pointer` | `add_pointer` | `enable_if` | `conditional` | `common_type` | `common_reference` | `basic_common_reference` | `void_t` | `type_identity` |
-| `atan` | `pow` | `sin` | `tanh` | `asinh` | `fabs` | `exp` | `cos` | `asin` | `aconsh` | `fmod` | `sqrt` | `tan` | `acos` | `atanh` | `frexp` | `log` | `sinh` | `atan` | `ceil` | `ldexp` | `log10` | `cosh` | `atan2` | `floor` | `modf` |
-| `adjacent_difference` | `accumulate` | `adjacent_difference` | `partial_sum` | `inner_product` | `iota` |
-| `atanh` | `pow` | `sin` | `tanh` | `asinh` | `fabs` | `exp` | `cos` | `asin` | `aconsh` | `fmod` | `sqrt` | `tan` | `acos` | `atanh` | `frexp` | `log` | `sinh` | `atan` | `ceil` | `ldexp` | `log10` | `cosh` | `atan2` | `floor` | `modf` |
-| `adjacent_find` | `find` | `BOBOBO` | `algorithms` | `BCBCBC` | `find_if` | `find_if_not` | `find_first_of` | `BOBOBO` | `algorithm` | `BCBCBC` | `adjacent_find` | `ate (ios)` | `in` | `BOBOBO` | `ios` | `BCBCBC` | `out` | `BOBOBO` | `ios` | `BCBCBC` | `app` | `BOBOBO` | `ios` | `BCBCBC` | `ate` | `BOBOBO` | `ios` | `BCBCBC` | `trunc` | `BOBOBO` | `ios` | `BCBCBC` | `binary` | `BOBOBO` | `ios` | `BCBCBC` |
-| `adjacent_transform_view` | `views` | `OOOOOO` | `all_t` | `zip_view` | `views` | `OOOOOO` | `zip` | `zip_transform_view` | `views` | `OOOOOO` | `transform` | `adjacent_view` | `views` | `OOOOOO` | `adjacent` | `adjacent_transform_view` | `views` | `OOOOOO` | `adjacent_transform` | `join_with_view` | `views` | `OOOOOO` | `join_with` | `slide_view` | `views` | `OOOOOO` | `slide` | `chunk_view` | `views` | `OOOOOO` | `chunk` | `chunk_by_view` | `views` | `OOOOOO` | `chunk_by` | `as_const_view` | `views` | `OOOOOO` | `as_const` | `as_rvalue_view` | `views` | `OOOOOO` | `as_rvalue` | `stride_view` | `views` | `OOOOOO` | `stride` | `Atomic Data Types` | `Atomic` | `Data` | `Types` |
-| `adjacent_view` | `views` | `OOOOOO` | `all_t` | `zip_view` | `views` | `OOOOOO` | `zip` | `zip_transform_view` | `views` | `OOOOOO` | `transform` | `adjacent_view` | `views` | `OOOOOO` | `adjacent` | `adjacent_transform_view` | `views` | `OOOOOO` | `adjacent_transform` | `join_with_view` | `views` | `OOOOOO` | `join_with` | `slide_view` | `views` | `OOOOOO` | `slide` | `chunk_view` | `views` | `OOOOOO` | `chunk` | `chunk_by_view` | `views` | `OOOOOO` | `chunk_by` | `as_const_view` | `views` | `OOOOOO` | `as_const` | `as_rvalue_view` | `views` | `OOOOOO` | `as_rvalue` | `stride_view` | `views` | `OOOOOO` | `stride` | `atomic<floating-point type>` | `atomic` | `floating` | `point` | `type` |
-| `Algorithms (Standard Template Library)` | `Algorithms` | `BOBOBO` | `Standard` | `Template` | `Library` | `BCBCBC` | `atomic<integral type>` | `atomic` | `integral` | `type` |
-| `All Atomic Operations` | `All` | `Atomic` | `Operations` | `atomic<smart T*>` | `atomic` | `smart` | `TII` | `IEEE` |
-| `all_of` | `all_of` | `any_of` | `none_of` | `atomic<T*>` | `atomic` | `TII` | `IEEE` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exp `cted` | `BCBC `` | `transform_error` | `BOBOBO` | `expte `` | `BCBC `` | ` `and
-| (optional_ | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | ` `` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined `el ` | `atomic` | `user` | ` `` | `typel` |
-| ` `_then (exp ` ` ` | ` `_ `` | `BOBO `` | `exp ` `` | ` ` ` `` | ` `` | `BOBO `` | ` ` | `` | ` ` ` `` | `or_else` | `BOBO `` | `exp ` `` | `BCBC `` | `transform_error` | `BOBO `` | `exp ` `` | `BCBC `` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
-| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
-| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
-| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
 | `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
 
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
 
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
 
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
+
+| `An Infinite Data Stream with co_yield` | `An` | `Infinite` | `Data` | `Stream` | `with` | `co_yield` | `atomic<user-defined typel>` | `atomic` | `user` | `defined` | `typel` |
+
+| `and_then (exptected)` | `and_then` | `BOBOBO` | `exptected` | `BCBCBC` | `transform` | `BOBOBO` | `exptected` | `BCBCBC` | `or_else` | `BOBOBO` | `exptected` | `BCBCBC` | `transform_error` | `BOBOBO` | `exptected` | `BCBCBC` | `atomic` |
+
+| `and_then (optional)` | `and_then` | `BOBOBO` | `optional` | `BCBCBC` | `transform` | `BOBOBO` | `optional` | `BCBCBC` | `or_else` | `BOBOBO` | `optional` | `BCBCBC` | `transform_error` | `BOBOBO` | `optional` | `BCBCBC` | `atomic` |
 
 | `bad_any_cast` | `cbegin (无序 associative container)` |
+
 | `bad_expected_access` | `ceil` |
+
 | `bad_optional_access` | `cend (container)` |
+
 | `bad_variante_access (variant)` | `cend (无序 associative container)` |
+
 | `badbit (ios)` | `cerr` |
+
 | `barrier` | `chunk_by_view` |
+
 | `basic_common_reference` | `chunk_view` |
+
 | `basic_ios` | `cin` |
+
 | `basic_iostream` | `cout` |
+
 | `basic_iostream` | `Cippi` |
+
 | `basic_istream` | `clamp` |
+
 | `basic_istream_view` | `Classes (filesystem)` |
+
 | `basic_ostream` | `clear (atomic_flag)` |
+
 | `basic_streambuf` | `clear (string)` |
+
 | `before_begin (forward_list)` | `clear (vector)` |
+
 | `beg (ios)` | `clear` |
 
-
-
-
-
 | `begin (container)` | `clock` |
+
 | :--- | :--- |
+
 | `begin (unordered associative container)` | `clock_cast` |
+
 | `biderectional iterator` | `clog` |
+
 | `bidirectional_range` | `close` |
+
 | `binary (ios)` | `cmp_equal` |
+
 | `binary_search` | `cmp_greater` |
+
 | `binary_semaphore` | `cmp_greater_equal` |
+
 | `bind` | `cmp_less` |
+
 | `bind` | `cmp_less_equal` |
+
 | `bind_back` | `cmp_not_equal` |
+
 | `bind_front` | `co_await` |
+
 | `bit_and` | `co_yield` |
+
 | `bit_or` | `common_reference` |
+
 | `bit_xor` | `common_type` |
+
 | `boolalpha` | `common_view` |
-| `C` | `Compare (container)` |
-| `c_str (string)` | `complexity` |
-| `calendar` | `Condition Variables` |
-| `call_once` | `conditional` |
-| `callable unit` | `conjunction` |
-| `Constant Expressions` | `crend (container)` |
-| `construct_at` | `crend (ordered associative container)` |
-| `Container Adaptors` | `cur (ios)` |
-| `contains (associative container)` | `current_path` |
 
 
 
-
-
-| `contains (string)` | `current_zone` |
-| `Contiguous Access (Views)` | `Cyclic References` |
-| `contiguous iterator` | **D** |
-| `contiguous_range` | `data (span)` |
-| `Conversion Between C++ and C Strings` | `data (string)` |
-| `Coordination Types` | `Data Race` |
-| `copy (algorithms)` | `data_handle` |
-| `copy (filesystem)` | `day (calendar)` |
-| `copy (string)` | `deadlock` |
-| `copy constructor (container)` | `dec` |
-| `copy_backward` | `default constructor (container)` |
+| `C` | Compare (container) |
+|---|---|
+| `c_str` (string) | complexity |
+| calendar | Condition Variables |
+| `call_once` | conditional |
+| callable unit | conjunction |
+| Constant Expressions | `crend` (container) |
+| `construct_at` | `crend` (ordered associative container) |
+| Container Adaptors | `cur` (ios) |
+| `contains` (associative container) | `current_path` |
+| `contains` (string) | `current_zone` |
+| Contiguous Access (Views) | Cyclic References |
+| contiguous iterator | `D` |
+| contiguous_range | `data` (span) |
+| Conversion Between C++ and C Strings | `data` (string) |
+| Coordination Types | Data Race |
+| `copy` (algorithms) | `data_handle` |
+| `copy` (filesystem) | `day` (calendar) |
+| `copy` (string) | deadlock |
+| copy constructor (container) | `dec` |
+| `copy_backward` | default constructor (container) |
 | `copy_file` | `default_random_engine` |
 | `copy_if` | `defaultfloat` |
-| `copy_n` | `Deques` |
+| `copy_n` | Deques |
 | `copy_options` | `destroy` |
 | `copy_symlink` | `destroy_at` |
-| `Coroutines` | `destroy_n` |
+| Coroutines | `destroy_n` |
 | `cos` | `detach` |
-| `cosh` | `Direct on the Containers (ranges)` |
-
-
-
-
-
-| `count (algorithms)` | `directory` |
-| `count (sorted associative container)` | `directory_entry` |
-| `count (span)` | `directory_iterator` |
+| `cosh` | Direct on the Containers (ranges) |
+| `count` (algorithms) | directory |
+| `count` (sorted associative container) | `directory_entry` |
+| `count` (span) | `directory_iterator` |
 | `count_down` | `directory_options` |
-| `count_if` | `disjunction` |
-| `counting semaphores` | `div` |
+| `count_if` | disjunction |
+| counting semaphores | `div` |
 | `cout` | `divides` |
-| `crbegin (container)` | `drop_view` |
-| `crbegin (ordered associative container)` | `drop_while_view` |
-| `Create and Delete (string)` | `dynamic extent (md)` |
-| `Create and Delete` | `dynamic extent (span)` |
-| `Create and Initialise (string_view)` | `E` |
+| `crbegin` (container) | `drop_view` |
+| `crbegin` (ordered associative container) | `drop_while_view` |
+| Create and Delete (string) | dynamic extent (md) |
+| Create and Delete | dynamic extent (span) |
+| Create and Initialise (string_view) | `E` |
 | `create_directories` | `e_v` |
 | `create_directory` | `egamma_v` |
 | `create_hard_link` | `elements_view` |
-
-
-
-
 
 ## 索引概览
 
 | 类别/方法 | 类别/方法 |
 | :--- | :--- |
-| `create_symlink` (`filesystem`): `absolute`, `canonical`, `weakly_canonical`, `relative`, `copy`, `proximate`, `copy_file`, `copy_symlink`, `create_directory`, `create_directories`, `create_hard_link`, `create_symlink`, `current_path`, `exists`, `equivalent`, `file_size`, `hard_link_count`, `last_write_time`, `permissions`, `read_symlink`, `remove`, `remove_all`, `rename`, `resize_file`, `space`, `status`, `symlink_status`, `temp_directory_path` | `emplace (any)`: `reset`, `has_value`, `type`, `any_cast`, `make_any`, `bad_any_cast` |
-| `cref` (`cref`) | `emplace (associative container)`: `insert`, `emplace`, `erase` |
-| `cregex_iterator` (`regex_iterator`): `cregex_iterator`, `cregex_iterator`, `regex_iterator` | `emplace (expected)`: `has_value`, `value`, `value_or`, `emplace`, `bad_expected_access` |
-| `cregex_token_iterator` (`regex_token_iterator`): `cregex_token_iterator`, `cregex_token_iterator`, `regex_token_iterator` | `emplace (optional)`: `has_value`, `value`, `value_or`, `reset`, `emplace`, `make_optional`, `bad_optional_access` |
-| `emplace (variant)`: `index`, `value_by_exception`, `emplace`, `holds_alternative`, `bad_variante_access`, `get`, `get_if` | `fetch_and (atomic)`: `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `wait`, `notify_one` (`atomic_flag`), `notify_all` (`atomic_flag`), `wait` (`atomic_flag`) |
-| `emplace (vector)`: `assign`, `clear`, `emplace`, `emplace_back`, `erase`, `insert`, `pop_back`, `push_back` | `fetch_or (atomic)`: `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (`atomic_flag`), `notify_all` (`atomic_flag`), `wait` (`atomic_flag`) |
-| `emplace_after (forward_list)`: `before_begin`, `emplace_after`, `emplace_front`, `erase_after`, `insert_after`, `merge`, `splice_after`, `unique` | `fetch_sub (atomic)`: `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (`atomic_flag`), `notify_all` (`atomic_flag`), `wait` (`atomic_flag`) |
-| `emplace_back (vector)`: `assign`, `clear`, `emplace`, `emplace_back`, `erase`, `insert`, `pop_back`, `push_back` | `fetch_xor (atomic)`: `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (`atomic_flag`), `notify_all` (`atomic_flag`), `wait` (`atomic_flag`) |
-| `emplace_front (forward_list)`: `before_begin`, `emplace_after`, `emplace_front`, `erase_after`, `insert_after`, `merge`, `splice_after`, `unique` | `FIFO` (`FIFO`) |
-| `empty (container)` | `File Streams`: `ifstream`, `ofstream`, `fstream`, `fstream`, `filebuf` |
-| `empty (span)`: `front`, `back`, `data`, `size`, `size_bytes`, `empty`, `first`, `last`, `count`, `subspan` | `File Types`: `is_block_file`, `is_character_file`, `is_directory`, `is_empty`, `is_fifo`, `is_other`, `is_regular_file`, `is_socket`, `is_symlink`, `status_known` |
-| `empty (string)`: `empty`, `size`, `length`, `capacity`, `max_size`, `resize`, `resize_and_overwrite`, `reserve`, `shrink_to_fit` | `file`: `path`, `name`, `directory`, `hard_link`, `symbolic_link`, `absolute_path`, `canonical_path`, `relative_path`, `root-name`, `root-directory` |
+| `create_symlink` (`filesystem`): `absolute`, `canonical`, `weakly_canonical`, `relative`, `copy`, `proximate`, `copy_file`, `copy_symlink`, `create_directory`, `create_directories`, `create_hard_link`, `create_symlink`, `current_path`, `exists`, `equivalent`, `file_size`, `hard_link_count`, `last_write_time`, `permissions`, `read_symlink`, `remove`, `remove_all`, `rename`, `resize_file`, `space`, `status`, `symlink_status`, `temp_directory_path` | `emplace` (any): `reset`, `has_value`, `type`, `any_cast`, `make_any`, `bad_any_cast` |
+| `cref` (`cref`) | `emplace` (associative container): `insert`, `emplace`, `erase` |
+| `cregex_iterator` (`regex_iterator`): `cregex_iterator`, `cregex_iterator`, `regex_iterator` | `emplace` (expected): `has_value`, `value`, `value_or`, `emplace`, `bad_expected_access` |
+| `cregex_token_iterator` (`regex_token_iterator`): `cregex_token_iterator`, `cregex_token_iterator`, `regex_token_iterator` | `emplace` (optional): `has_value`, `value`, `value_or`, `reset`, `emplace`, `make_optional`, `bad_optional_access` |
+| `emplace` (variant): `index`, `value_by_exception`, `emplace`, `holds_alternative`, `bad_variante_access`, `get`, `get_if` | `fetch_and` (atomic): `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `wait`, `notify_one` (atomic_flag), `notify_all` (atomic_flag), `wait` (atomic_flag) |
+| `emplace` (vector): `assign`, `clear`, `emplace`, `emplace_back`, `erase`, `insert`, `pop_back`, `push_back` | `fetch_or` (atomic): `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (atomic_flag), `notify_all` (atomic_flag), `wait` (atomic_flag) |
+| `emplace_after` (forward_list): `before_begin`, `emplace_after`, `emplace_front`, `erase_after`, `insert_after`, `merge`, `splice_after`, `unique` | `fetch_sub` (atomic): `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (atomic_flag), `notify_all` (atomic_flag), `wait` (atomic_flag) |
+| `emplace_back` (vector): `assign`, `clear`, `emplace`, `emplace_back`, `erase`, `insert`, `pop_back`, `push_back` | `fetch_xor` (atomic): `test`, `test_and_set`, `clear`, `is_lock_free`, `is_always_lock_free`, `load`, `operator()`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `notify_one` (atomic_flag), `notify_all` (atomic_flag), `wait` (atomic_flag) |
+| `emplace_front` (forward_list): `before_begin`, `emplace_after`, `emplace_front`, `erase_after`, `insert_after`, `merge`, `splice_after`, `unique` | `FIFO` (FIFO) |
+| `empty` (container) | File Streams: `ifstream`, `ofstream`, `fstream`, `fstream`, `filebuf` |
+| `empty` (span): `front`, `back`, `data`, `size`, `size_bytes`, `empty`, `first`, `last`, `count`, `subspan` | File Types: `is_block_file`, `is_character_file`, `is_directory`, `is_empty`, `is_fifo`, `is_other`, `is_regular_file`, `is_socket`, `is_symlink`, `status_known` |
+| `empty` (string): `empty`, `size`, `length`, `capacity`, `max_size`, `resize`, `resize_and_overwrite`, `reserve`, `shrink_to_fit` | file: `path`, `name`, `directory`, `hard_link`, `symbolic_link`, `absolute_path`, `canonical_path`, `relative_path`, `root-name`, `root-directory` |
+| `enable_if` | `remove_const` \| `remove_cvref` \| `remove_volatile` \| `remove_cv` \| `add_const` \| `add_volatile` \| `add_cv` \| `make_signed` \| `make_unsigned` \| `remove_reference` \| `add_lvalue_reference` \| `add_rvalue_reference` \| `remove_pointer` \| `add_pointer` \| `enable_if` \| `conditional` \| `common_type` \| `common_reference` \| `basic_common_reference` \| `void_t` \| `type_identity` |
+| `file_size` | `absolute` \| `canonical` \| `weakly_canonical` \| `relative` \| `copy` \| `proximate` \| `copy_file` \| `copy_symlink` \| `create_directory` \| `create_directories` \| `create_hard_link` \| `create_symlink` \| `current_path` \| `exists` \| `equivalent` \| `file_size` \| `hard_link_count` \| `last_write_time` \| `permissions` \| `read_symlink` \| `remove` \| `remove_all` \| `rename` \| `resize_file` \| `space` \| `status` \| `symlink_status` \| `temp_directory_path` |
+| `enable_shared_from_this` \| `shared_from_this` | `file_status` \| `path` \| `filesystem_error` \| `directory_entry` \| `directory_iterator` \| `recursive_directory_iterator` \| `file_status` \| `space_info` \| `file_type` \| `perms` \| `perm_options` \| `copy_options` \| `directory_options` \| `file_time_type` |
+| `end` (container) | `begin` \| `end` \| `cbegin` \| `cend` \| `rbegin` \| `rend` \| `crbegin` \| `crend` \| `file_time_type` \| `path` \| `filesystem_error` \| `directory_entry` \| `directory_iterator` \| `recursive_directory_iterator` \| `file_status` \| `space_info` \| `file_type` \| `perms` \| `perm_options` \| `copy_options` \| `directory_options` \| `file_time_type` |
+| `end` (ios) | `beg` \| `cur` \| `end` \| `file_type` \| `path` \| `filesystem_error` \| `directory_entry` \| `directory_iterator` \| `recursive_directory_iterator` \| `file_status` \| `space_info` \| `file_type` \| `perms` \| `perm_options` \| `copy_options` \| `directory_options` \| `file_time_type` |
+| `end` (unordered associative container) | `begin` \| `end` \| `cbegin` \| `cend` \| `filebuf` \| `ifstream` \| `ofstream` \| `wofstream` \| `fstream` \| `filebuf` |
+| `endl` | `flush` \| `ws` \| Filesystem |
+| `ends_with` (string) | `starts_with` \| `ends_with` \| `filesystem_error` \| `path` \| `filesystem_error` \| `directory_entry` \| `directory_iterator` \| `recursive_directory_iterator` \| `file_status` \| `space_info` \| `file_type` \| `perms` \| `perm_options` \| `copy_options` \| `directory_options` \| `file_time_type` |
+| `eof` | `good` \| `fail` \| `bad` \| `fill` \| `generate` |
+| `eof` (ios) | `good` \| `fail` \| `bad` \| `fill_n` \| `generate_n` |
 
 
 
-
-
-| `enable_if` | `remove_const` | `remove_cvref` | `remove_volatile` | `remove_cv` | `add_const` | `add_volatile` | `add_cv` | `make_signed` | `make_unsigned` | `remove_reference` | `add_lvalue_reference` | `add_rvalue_reference` | `remove_pointer` | `add_pointer` | `enable_if` | `conditional` | `common_type` | `common_reference` | `basic_common_reference` | `void_t` | `type_identity` |
-| `file_size` | `absolute` | `canonical` | `weakly_canonical` | `relative` | `copy` | `proximate` | `copy_file` | `copy_symlink` | `create_directory` | `create_directories` | `create_hard_link` | `create_symlink` | `current_path` | `exists` | `equivalent` | `file_size` | `hard_link_count` | `last_write_time` | `permissions` | `read_symlink` | `remove` | `remove_all` | `rename` | `resize_file` | `space` | `status` | `symlink_status` | `temp_directory_path` |
-| `enable_shared_from_this` | `shared_from_this` | `file_status` | `path` | `filesystem_error` | `directory_entry` | `directory_iterator` | `recursive_directory_iterator` | `file_status` | `space_info` | `file_type` | `perms` | `perm_options` | `copy_options` | `directory_options` | `file_time_type` |
-| `end (container)` | `begin` | `end` | `cbegin` | `cend` | `rbegin` | `rend` | `crbegin` | `crend` | `file_time_type` | `path` | `filesystem_error` | `directory_entry` | `directory_iterator` | `recursive_directory_iterator` | `file_status` | `space_info` | `file_type` | `perms` | `perm_options` | `copy_options` | `directory_options` | `file_time_type` |
-| `end (ios)` | `beg` | `cur` | `end` | `file_type` | `path` | `filesystem_error` | `directory_entry` | `directory_iterator` | `recursive_directory_iterator` | `file_status` | `space_info` | `file_type` | `perms` | `perm_options` | `copy_options` | `directory_options` | `file_time_type` |
-| `end (unordered associative container)` | `begin` | `end` | `cbegin` | `cend` | `filebuf` | `ifstream` | `ofstream` | `wofstream` | `fstream` | `filebuf` |
-| `endl` | `flush` | `ws` | `Filesystem` |
-| `ends_with (string)` | `starts_with` | `ends_with` | `filesystem_error` | `path` | `filesystem_error` | `directory_entry` | `directory_iterator` | `recursive_directory_iterator` | `file_status` | `space_info` | `file_type` | `perms` | `perm_options` | `copy_options` | `directory_options` | `file_time_type` |
-| `eof` | `good` | `fail` | `bad` | `fill` | `generate` |
-| `eof (ios)` | `good` | `fail` | `bad` | `fill_n` | `generate_n` |
 | `equal` | `lexicographical_compare` | `lexicographical_compare_three_way` | `filter_view` | `all_t` | `ref_view` | `filter_view` | `transform_view` | `take_view` | `take_while_view` | `drop_view` | `drop_while_view` | `join_view` | `split_view` | `common_view` | `reverse_view` | `basic_istream_view` | `istream_view` | `elements_view` | `keys_view` | `values_view` |
 | `equal_range (algorithms)` | `binary_search` | `lower_bound` | `equal_range` | `find (algorithms)` | `find_if` | `find_if_not` | `find_first_of` | `adjacent_find` |
 | `equal_range (sorted associative container)` | `lower_bound` | `upper_bound` | `equal_range` | `find (sorted associative container)` | `lower_bound` | `upper_bound` | `equal_range` |
@@ -9509,13 +9664,7 @@ int main() {
 | `erase (associative container)` | `insert` | `emplace` | `erase` |
 | `erase (std)` | `erase` | `erase_if` |
 | `erase (string)` | `assign` | `swap` | `pop_back` | `erase` | `clear` | `append` | `push_back` | `insert` | `replace` | `find_if` |
-
-
-
-
-
 | `erase (vector)` | `find_if_not` |
-| :--- | :--- |
 | `erase-remove idiom` | `find_last_not_of (string)` |
 | `erase_after (forward_list)` | `find_last_of (string)` |
 | `erase_if (std)` | `findend` |
@@ -9534,52 +9683,26 @@ int main() {
 | `fetch_add (atomic)` | `format_to (formatting library)` |
 | `format_to_n (formatting library)` | `greater` |
 | 格式化输入 (Formatted Input (streams)) | `greater_equal` |
-| `formatter` | **H** |
-
-
-
-
-
+| `formatter` | `H` |
 | 格式库 | 硬链接 |
-
-| 正向迭代器 | hard_link_count |
-
-| 正向列表 | hardware_concurrency (线程) |
-
-| 正向 | has_unique_object_represenation |
-
-| 正向范围 | has_value (any) |
-
-| 转发引用 | has_value (expected) |
-
-| frexp | has_value (optional) |
-
-| front (队列) | has_virtual_destructor |
-
-| front (span) | hex |
-
-| front (string) | hexfloat |
-
-| front_inserter (插入迭代器) | 层级（输入和输出流）chap17.xhtml_chapterXXXHierachySSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZbasic_streambufZZZios_baseZZZbasic_iosbasic_istreambasic_ostreambasic_iostream) |
-
-| [fstream | 高分辨率时器 |
-
-| 函数组合（范围） | holds_alternative (variant) |
-
-| function | hours（当天）chap03.xhtml_textXXXhoursSSSBOBOBOtime_of_dayBCBCBCZZZminutesSSSBOBOBOtime_of_dayBCBCBCZZZsecondsSSSBOBOBOtime_of_dayBCBCBCZZZsubsecondsSSSBOBOBOtime_of_dayBCBCBCZZZto_durationSSSBOBOBOtime_of_dayBCBCBCZZZmake12SSSBOBOBOtime_of_dayBCBCBCZZZmake24SSSBOBOBOtime_of_dayBCBCBC) |
-
-| [函数对象 | **I** |
-
-| 函数 | ifstream |
-
-| 基本原子接口 | [ignore (输入流）chap17.xhtml_chapterXXXUnformattedInputSSSBOBOstreamsBCBCBCZZZgetSSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZgetlineSSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZgcountZZZignoreSSSBOBOBOinputstreamBCBCBCZZZpeekZZZungetZZZputback) |
-
-
-
-
-
+| 正向迭代器 | `hard_link_count` |
+| 正向列表 | `hardware_concurrency (线程)` |
+| 正向 | `has_unique_object_represenation` |
+| 正向范围 | `has_value (any)` |
+| 转发引用 | `has_value (expected)` |
+| `frexp` | `has_value (optional)` |
+| front (队列) | `has_virtual_destructor` |
+| `front (span)` | `hex` |
+| `front (string)` | `hexfloat` |
+| `front_inserter (插入迭代器)` | 层级（输入和输出流）`chap17.xhtml_chapterXXXHierachySSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZbasic_streambufZZZios_baseZZZbasic_iosbasic_istreambasic_ostreambasic_iostream` |
+| fstream | 高分辨率时器 |
+| 函数组合（范围） | `holds_alternative (variant)` |
+| `function` | 小时（当天）`chap03.xhtml_textXXXhoursSSSBOBOBOtime_of_dayBCBCBCZZZminutesSSSBOBOBOtime_of_dayBCBCBCZZZsecondsSSSBOBOBOtime_of_dayBCBCBCZZZsubsecondsSSSBOBOBOtime_of_dayBCBCBCZZZto_durationSSSBOBOBOtime_of_dayBCBCBCZZZmake12SSSBOBOBOtime_of_dayBCBCBCZZZmake24SSSBOBOBOtime_of_dayBCBCBC` |
+| 函数对象 | `I` |
+| 函数 | `ifstream` |
+| 基本原子接口 | `ignore (输入流）chap17.xhtml_chapterXXXUnformattedInputSSSBOBOstreamsBCBCBCZZZgetSSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZgetlineSSSBOBOBOinputSSSandoutputstreamsBCBCBCZZZgcountZZZignoreSSSBOBOBOinputstreamBCBCBCZZZpeekZZZungetZZZputback` |
 | `future` | `ignore (std)` |
-| **G** | `in (ios)` |
+| `G` | `in (ios)` |
 | `gcount` | `includes` |
 | `generate` | `inclusive_scan` |
 | `generate_n` | `index (variant)` |
@@ -9593,7 +9716,7 @@ int main() {
 | `get_deleter (unique_ptr)` | `input_range` |
 | `get_future` | `insert (associative container)` |
 | `get_id (thread)` | `insert (string)` |
-| `get_id (thread)` | `insert (vector)` | |
+| `get_id (thread)` | `insert (vector)` |
 | `get_id (thread)` | `insert (vector)` |
 | `get_if (variant)` | `Insert Iterators` |
 | `get_token (stop_source)` | `insert_after (forward_list)` |
@@ -9601,49 +9724,33 @@ int main() {
 | `getline (string)` | `Interface Of All Containers` |
 | `good` | `internal` |
 | `goodbit (ios)` | `inv_pi_v` |
-
-
-
-
-
 | `inv_sqrt3_v` | `is_member_function_pointer` |
 | `ios_base` | `is_member_object_pointer` |
 | `iota` | `is_member_pointer` |
 | `is_abstract` | `is_move_assignable` |
 | `is_aggregate` | `is_move_constructible` |
 | `is_always_lock_free (atomic)` | `is_nothrow_assignable` |
-
-
-
-
-
 | `is_am` | `is_nothrow_constructible`, `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 | `is_arithmetic` | `is_void`, `is_integral`, `is_floating_point`, `is_array`, `is_pointer`, `is_null_pointer`, `is_member_object_pointer`, `is_member_function_pointer`, `is_enum`, `is_union`, `is_class`, `is_function`, `is_lvalue_reference`, `is_rvalue_reference`, `is_arithmetic`, `is_fundamental`, `is_object`, `is_reference`, `is_compound`, `is_member_pointer`, `is_scalar` | `is_nothrow_convertible` | `is_base_of`, `is_convertible`, `is_same`, `is_nothrow_convertible`, `is_layout_compatible`, `is_pointer_interconvertible_base_of`, `is_invocable`, `is_invocable_r`, `is_nothrow_invocable`, `is_nothrow_invocable_r` |
+
+
+
 | `is_array` | `is_void`, `is_integral`, `is_floating_point`, `is_array`, `is_pointer`, `is_null_pointer`, `is_member_object_pointer`, `is_member_function_pointer`, `is_enum`, `is_union`, `is_class`, `is_function`, `is_lvalue_reference`, `is_rvalue_reference`, `is_arithmetic`, `is_fundamental`, `is_object`, `is_reference`, `is_compound`, `is_member_pointer`, `is_scalar` | `is_nothrow_copy_assignable` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
-| `is_assignable` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_n_ible_move_ibleible`, `is_nothrow_assignible`, `is_n_row_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` | `is_othrowrow___ibleible | `is_constconst `is__`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
-| `is_base_of` | `is_base_of`, `is_convertible`, `is_same`, `is_nothrow_convertible`, `is_layout_compatible`, `is_pointer_interconvertible_base_of`, `is_invocable`, `is_invocable_r`, `is_nothrow_invocable`, `is_nothrow_invocable_r` | `is_nothrow_default_constructible` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 
+| `is_assignable` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_n_ible_move_ibleible`, `is_nothrow_assignible`, `is_n_row_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` | `is_othrowrow___ibleible | is_constconst `is__`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 
-
-
+| `is_base_of` | `is_base_of`, `is_convertible`, `is_same`, `is_nothrow_convertible`, `is_layout_compatible`, `is_pointer_interconvertible_base_of`, `is_invocable`, `is_invocable_r`, `is_nothrow_invocable`, `is_nothrow_invocable_r` | `is_nothrow_default_constructible` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `typeStraits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 
 | `is_block_file` | `is_nothrow_destructible` |
 | `is_bounded_array` | `is_nothrow_invocable` |
 | `is_character_file` | `is_nothrow_invocable_r` |
 | `is_class` | `is_nothrow_assignable` |
 | `is_compound` | `is_nothrow_move_constructible` |
-
-
-
-
 | `is_const` | `is_nothrow_swappable` |
 | `is_constant_evaluated` | `is_nothrow_swappable_with` |
 | `is_constructible` | `is_null_pointer` |
 | `is_convertible` | `is_object` |
 | `is_copy_assignable` | `is_open` |
-
-
-
 
 # 类型属性查询表
 
@@ -9651,6 +9758,9 @@ int main() {
 | :--- | :--- |
 | `is_copy_constructible` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `type`, `Straits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 | `is_other` | `File`, `Types`, `is_block_file`, `is_character_file`, `is_directory`, `is_empty`, `Filesystem`, `is_fifo`, `is_other`, `is_regular_file`, `is_socket`, `is_symlink`, `status_known` |
+
+
+
 | `is_default_constructible` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `type`, `Straits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 | `is_partitioned` | `partition`, `stable_partition`, `partition_point`, `is_partitioned`, `partition_copy` |
 | `is_destructible` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `type`, `Straits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
@@ -9661,11 +9771,6 @@ int main() {
 | `is_pointer_interconvertible_base_of` | `base_of`, `is_convertible`, `is_same`, `is_nothrow_convertible`, `is_layout_compatible`, `pointer_interconvertible_base_of`, `is_invocable`, `is_invocable_r`, `is_nothrow_invocable`, `is_nothrow_invocable_r` |
 | `is_empty (traits)` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `type`, `Straits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
 | `is_polymorphic` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `type`, `Straits`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable` |
-
-
-
-
-
 | `is_fifo` | `is_regular_file` |
 | :--- | :--- |
 | `is_final` | `is_rvalue_reference` |
@@ -9675,104 +9780,88 @@ int main() {
 | `is_heap` | `is_signed` |
 | `is_heap_until` | `is_socket` |
 | `is_implicit_lifetime` | `is_sorted` |
-
-
-
-
-
 | `is_integral` | `is_sorted_until` |
 | `is_invocable` | `is_standard_layout` |
 | `is_invocable_r` | `is_swappable` |
 | `is_layout_compatible` | `is_swappable_with` |
 | `is_lock_free (atomic)` | `is_symlink` |
 | `is_lvalue_reference` | `is_trivial` |
+| `is_trivially_assignable` | `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represenation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`, `BO`, `BO`, `BO`, `type`, `Straits`, `BC`, `BC`, `BC`, `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable`, `ldexp`, `pow`, `sin`, `tanh`, `asinh`, `fabs`, `exp`, `cos`, `asin`, `ach`, `fmod`, `sqrt`, `tan`, `acos`, `atanh`, `frexp`, `log`, `sinh`, `atan`, `ceil`, `ldexp`, `log10`, `cosh`, `atan2`, `floor`, `modf` |
 
 
 
-
-
-| `is_trivially_assignable` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `ldexp` | `pow` | `sin` | `tanh` | `asinh` | `fabs` | `exp` | `cos` | `asin` | `ach` | `fmod` | `sqrt` | `tan` | `acos` | `atanh` | `frexp` | `log` | `sinh` | `atan` | `ceil` | `ldexp` | `log10` | `cosh` | `atan2` | `floor` | `modf` |
 | `is_trivially_constructible` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `ldiv` | `abs` | `llabs` | `ldiv` | `rand` | `labs` | `div` | `lldiv` | `rand` |
 | `is_trivially_copy_assignable` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_n `row_default__ible` | `is_ | `row_copy__ible` | `is_ | `row_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `is_triviallyible` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `is_leap_second` | `tzdb` | `locate_zone` | `current_zone` | `time_zone` | `sys_info` | `BO` | `BO` | `BC` | `local_info` | `BO` | `BO` | `BC` | `zoned_time` | `is_leap_second` |
 | `is_trivially_constructible` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `left` | `boolalpha` | `noolalpha` | `setw` | `setfill` | `left` | `right` | `internal` | `showpos` | `nhowpos` | `uppercase` | `lowercase` | `oct` | `dec` | `hex` | `showbase` | `nhowbase` | `hexfloat` | `defaultfloat` |
 | `is_trivially_copyable` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` | `length (string)` | `empty` | `string` | `size` | `string` | `length` | `string` | `capacity` | `string` | `max_size` | `string` | `resize` | `string` | `resize_and_overwrite` | `string` | `reserve` | `string` | `shrink_to_fit` | `string` |
 | `is_trivially_default_constructible` | `is_const` | `is_volatile` | `is_trivial` | `is_trivially_copyable` | `is_standard_layout` | `has_unique_object_represenation` | `is_implicit_lifetime` | `is_bounded_array` | `is_unbounded_array` | `is_scoped_enum` | `is_empty` | `BO` | `BO` | `BO` | `type` | `Straits` | `BC` | `BC` | `BC` | `is_polymorphic` | `is_abstract` | `is_final` | `is_aggregate` | `is_signed` | `is_unsigned` | `is_constructible` | `is_default_constructible` | `is_copy_constructible` | `is_move_constructible` | `is_assignable` | `is_copy_assignable` | `is_move_assignable` | `is_destructible` | `is_trivially_constructible` | `is_trivially_default_constructible` | `is_trivially_copy_constructible` | `is_trivially_move_constructible` | `is_trivially_assignable` | `is_trivially_copy_assignable` | `is_trivially_move_assignable` | `is_trivially_destructible` | `is_nothrow_constructible` | `is_nothrow_default_constructible` | `is_nothrow_copy_constructible` | `is_nothrow_move_constructible` | `is_nothrow_assignable` | `is_nothrow_copy_assignable` | `is_nothrow_move_assignable` | `is_nothrow_destructible` | `has_virtual_destructor` | `is_swappable_with` | `is_swappable` | `is_nothrow_swappable_with` | `is_nothrow_swappable` |
-
-
-
-
-
 | `is_trivially_destructible` | `less` |
 | `is_trivially_move_assignable` | `less_equal` |
+
+
+
 | `is_trivially_move_constructible` | `lexicographical_compare` |
+| --- | --- |
 | `is_unbounded_array` | `lexicographical_compare_three_way` |
-| `is_union` | `生命周期 (线程)` |
+| `is_union` | 生命周期（线程） |
 | `is_unsigned` | `LIFO` |
-| `is_void` | `线性容器 (容器适配器)` |
-
-
-
-
+| `is_void` | 线性容器（容器适配器） |
 
 ## 索引概览
 
 ### 属性与特性
-- **布尔值属性**: `is_volatile`, `is_const`, `is_volatile`, `is_trivial`, `is_trivially_copyable`, `is_standard_layout`, `has_unique_object_represation`, `is_implicit_lifetime`, `is_bounded_array`, `is_unbounded_array`, `is_scoped_enum`, `is_empty`。
-- **Traits**:
-  - `is_polymorphic`, `is_abstract`, `is_final`, `is_aggregate`, `is_signed`, `is_unsigned`, `is_constructible`, `is_default_constructible`, `is_copy_constructible`, `is_move_constructible`, `is_assignable`, `is_copy_assignable`, `is_move_assignable`, `is_destructible`, `is_trivially_constructible`, `is_trivially_default_constructible`, `is_trivially_copy_constructible`, `is_trivially_move_constructible`, `is_trivially_assignable`, `is_trivially_copy_assignable`, `is_trivially_move_assignable`, `is_trivially_destructible`, `is_nothrow_constructible`, `is_nothrow_default_constructible`, `is_nothrow_copy_constructible`, `is_nothrow_move_constructible`, `is_nothrow_assignable`, `is_nothrow_copy_assignable`, `is_nothrow_move_assignable`, `is_nothrow_destructible`, `has_virtual_destructor`, `is_swappable_with`, `is_swappable`, `is_nothrow_swappable_with`, `is_nothrow_swappable`。
+
+- **布尔值属性**：`is_volatile`、`is_const`、`is_volatile`、`is_trivial`、`is_trivially_copyable`、`is_standard_layout`、`has_unique_object_represation`、`is_implicit_lifetime`、`is_bounded_array`、`is_unbounded_array`、`is_scoped_enum`、`is_empty`。
+- **Traits**：
+  - `is_polymorphic`、`is_abstract`、`is_final`、`is_aggregate`、`is_signed`、`is_unsigned`、`is_constructible`、`is_default_constructible`、`is_copy_constructible`、`is_move_constructible`、`is_assignable`、`is_copy_assignable`、`is_move_assignable`、`is_destructible`、`is_trivially_constructible`、`is_trivially_default_constructible`、`is_trivially_copy_constructible`、`is_trivially_move_constructible`、`is_trivially_assignable`、`is_trivially_copy_assignable`、`is_trivially_move_assignable`、`is_trivially_destructible`、`is_nothrow_constructible`、`is_nothrow_default_constructible`、`is_nothrow_copy_constructible`、`is_nothrow_move_constructible`、`is_nothrow_assignable`、`is_nothrow_copy_assignable`、`is_nothrow_move_assignable`、`is_nothrow_destructible`、`has_virtual_destructor`、`is_swappable_with`、`is_swappable`、`is_nothrow_swappable_with`、`is_nothrow_swappable`。
 
 ### 输入输出与数学函数
-- **流**: `istream`, `ostream`。
-- **数学函数**: `llabs`, `ldiv`, `rand`, `labs`, `div`, `lldiv`。
-- **常量与计算**: `e_v`, `log2e_v`, `log10e_v`, `pi_v`, `inv_pi_v`, `ln2_v`, `ln10_v`, `sqrt2_v`, `sqrt3_v`, `inv_sqrt3_v`, `egamma_v`, `phi_v`。
 
-## 视图 (Views)
-- **常用视图**: `all_t`, `all`, `ref_view`, `filter_view`, `transform_view`, `take_view`, `take`, `take_while_view`, `take_while`, `drop_view`, `drop`, `drop_while_view`, `drop_while`, `join_view`, `join`, `split_view`, `split`, `common_view`, `common`, `reverse_view`, `reverse`。
-- **基础**: `basic_istream_view`, `istream_view`, `elements_view`, `keys_view`, `values_view`。
+- **流**：`istream`、`ostream`。
+- **数学函数**：`llabs`、`ldiv`、`rand`、`labs`、`div`、`lldiv`。
+- **常量与计算**：`e_v`、`log2e_v`、`log10e_v`、`pi_v`、`inv_pi_v`、`ln2_v`、`ln10_v`、`sqrt2_v`、`sqrt3_v`、`inv_sqrt3_v`、`egamma_v`、`phi_v`。
+
+## 视图（Views）
+
+- **常用视图**：`all_t`、`all`、`ref_view`、`filter_view`、`transform_view`、`take_view`、`take`、`take_while_view`、`take_while`、`drop_view`、`drop`、`drop_while_view`、`drop_while`、`join_view`、`join`、`split_view`、`split`、`common_view`、`common`、`reverse_view`、`reverse`。
+- **基础**：`basic_istream_view`、`istream_view`、`elements_view`、`keys_view`、`values_view`。
 
 ### 迭代器与原子操作
-- **迭代器分类**: `Iterators categories`。
-- **原子操作 (atomic)**:
-  - `atomic_flag`: `test_and_set`, `clear`, `is_lock_free`。
-  - `atomic`: `is_always_lock_free`, `load`, `operator`, `store`, `exchange`, `fetch_add`, `fetch_sub`, `fetch_or`, `fetch_and`, `fetch_xor`, `notify_one`, `notify_all`, `wait`。
+
+- **迭代器分类**：`Iterators categories`。
+- **原子操作（atomic）**：
+  - `atomic_flag`：`test_and_set`、`clear`、`is_lock_free`。
+  - `atomic`：`is_always_lock_free`、`load`、`operator`、`store`、`exchange`、`fetch_add`、`fetch_sub`、`fetch_or`、`fetch_and`、`fetch_xor`、`notify_one`、`notify_all`、`wait`。
 
 ### 线程与同步
-- **线程操作**: `join`, `detach`, `joinable`, `get_id`, `hardware_concurrency`, `sleep_until`, `sleep_for`, `yield`。
-- **同步类**: `jthread`, `lock_guard`。
-- **锁机制**: `unique_lock`, `weak_ptr`。
+
+- **线程操作**：`join`、`detach`、`joinable`、`get_id`、`hardware_concurrency`、`sleep_until`、`sleep_for`、`yield`。
+- **同步类**：`jthread`、`lock_guard`。
+- **锁机制**：`unique_lock`、`weak_ptr`。
 
 ### 容器
-- **有序容器**: `key (ordered associative container)`。
-- **无序容器**: `key (unordered associative container)`。
 
+- **有序容器**：`key (ordered associative container)`。
+- **无序容器**：`key (unordered associative container)`。
 
-
-
-
-| 视图相关 (Views) | 逻辑与运算 (Logical & Ops) | 算法与容器 (Algorithms & Containers) |
+| 视图相关（Views） | 逻辑与运算（Logical & Ops） | 算法与容器（Algorithms & Containers） |
 | :--- | :--- | :--- |
-| `keys_view` | `logical_not` | **L**: `logical_or` |
-| | `labs` | `lower_bound (binary_search)` |
-| `Lambda Functions` | `lower_bound (sorted associative container)` | |
-| `last (span)` | `lowercase` | |
-| `last_spec (calendar)` | **M** | |
-| `last_write_time` | `make12 (time_of_day)` | |
-| `latch` | `make24 (time_of_day)` | |
-| `launch::async` | `make_any` | |
-| `launch::deferred` | `make_format_args (formatting library)` | |
-| `layout_left` | `make_heap` | |
-| `layout_right` | `make_optional` | |
-| 惰性求 (ranges) | `make_pair` | |
-| `make_shared` | `negation` | |
-| `make_signed` | `next_permutation` | |
-| `make_tuple` | `boolalpha` | |
-| `make_unique` | | |
-
-*(注：由于原文仅为索引列表，以上已按逻辑进行了清洗排版。若有具体的正文段落需要处理，请提供详细文本。)*
-
-
-
-
+| `keys_view` | `logical_not` | **L**：`logical_or` |
+|  | `labs` | `lower_bound (binary_search)` |
+| `Lambda Functions` | `lower_bound (sorted associative container)` |  |
+| `last (span)` | `lowercase` |  |
+| `last_spec (calendar)` | **M** |  |
+| `last_write_time` | `make12 (time_of_day)` |  |
+| `latch` | `make24 (time_of_day)` |  |
+| `launch::async` | `make_any` |  |
+| `launch::deferred` | `make_format_args (formatting library)` |  |
+| `layout_left` | `make_heap` |  |
+| `layout_right` | `make_optional` |  |
+| 惰性求（ranges） | `make_pair` |  |
+| `make_shared` | `negation` |  |
+| `make_signed` | `next_permutation` |  |
+| `make_tuple` | `boolalpha` |  |
+| `make_unique` |  |  |
 
 | `Mathematical Constants` | `not_equal_to` |
 | :--- | :--- |
@@ -9790,12 +9879,9 @@ int main() {
 | `mismatch` | `once_flag` |
 | `modf` | `open` |
 | `Modifying Operatios` | `operations (thread)` |
-
-
-
-
-
 | `modulus` | `operator T (atomic)` |
+
+|  |  |
 | :--- | :--- |
 | `negate` | `atomic_flag::test_and_set()` |
 | `plus` | `atomic_flag::clear()` |
@@ -9815,7 +9901,7 @@ int main() {
 | `bit_and` | `atomic::wait()` |
 | `bit_or` | `atomic_flag::notify_one()` |
 | `bit_xor` | `atomic_flag::notify_all()` |
-| | `atomic_flag::wait()` |
+|  | `atomic_flag::wait()` |
 
 | `month (calendar)` | `optional` |
 | :--- | :--- |
@@ -9823,22 +9909,22 @@ int main() {
 | `day` | `and_then::transform()` |
 | `month` | `expected::or_else()` |
 | `year` | `expected::transform_error()` |
-| `weekday` | |
-| `weekday_indexed` | |
-| `weekday_last` | |
+| `weekday` |  |
+| `weekday_indexed` |  |
+| `weekday_last` |  |
 | `month_day` | `or_else (optional)` |
 | `month_day_last` | `and_then::transform()` |
 | `month_weekday` | `optional::or_else()` |
-| `month_weekday_last` | |
-| `year_month` | |
-| `year_month_day` | |
-| `year_month_day_last` | |
-| `year_month_day_weekday` | |
-| `year_month_weekday_last` | |
+| `month_weekday_last` |  |
+| `year_month` |  |
+| `year_month_day` |  |
+| `year_month_day_last` |  |
+| `year_month_day_weekday` |  |
+| `year_month_weekday_last` |  |
 
 | `month_day (calendar)` | `Ordered Associative` |
 | :--- | :--- |
-| `last_spec` | |
+| `last_spec` |  |
 | `day` | `month_weekday_last (calendar)` |
 | `month` | `day` |
 | `year` | `month` |
@@ -9857,97 +9943,85 @@ int main() {
 
 | `month_weekday (calendar)` | `ostream` |
 | :--- | :--- |
-| `last_spec` | |
+| `last_spec` |  |
 | `day` | `move constructor (container)` |
 | `month` | `default` |
 | `year` | `range` |
 | `weekday` | `copy` |
 | `weekday_indexed` | `move` |
 | `weekday_last` | `sequence` |
-| `month_day` | |
-| `month_day_last` | |
-| `month_weekday` | |
-| `month_weekday_last` | |
-| `year_month` | |
-| `year_month_day` | |
-| `year_month_day_last` | |
-| `year_month_day_weekday` | |
-| `year_month_weekday_last` | |
+| `month_day` |  |
+| `month_day_last` |  |
+| `month_weekday` |  |
+| `month_weekday_last` |  |
+| `year_month` |  |
+| `year_month_day` |  |
+| `year_month_day_last` |  |
+| `year_month_day_weekday` |  |
+| `year_month_weekday_last` |  |
 
 | `Multidimensional Access (Views)` | `out (ios)` |
 | :--- | :--- |
-| | `in` |
-| | `app` |
-| | `ate` |
-| | `trunc` |
-| | `binary` |
+|  | `in` |
+|  | `app` |
+|  | `ate` |
+|  | `trunc` |
+|  | `binary` |
 
 | `multimap` | `Output (streams)` |
 | :--- | :--- |
-
 | `multiplies` | `output iterator` |
-| :--- | :--- |
 
-| `multiset` | `output_range` |
+|  |  |
 | :--- | :--- |
+| `multiset` | `output_range` |
 
 | `Multithreading` | `owns_lock (unique_lock)` |
 | :--- | :--- |
-| | `try_lock` |
-| | `try_lock_for` |
-| | `try_lock_until` |
-| | `release` |
-| | `owns_lock` |
+|  | `try_lock` |
+|  | `try_lock_for` |
+|  | `try_lock_until` |
+|  | `release` |
+|  | `owns_lock` |
 
 | `mutex` | **P** |
 | :--- | :--- |
-
 | `Mutexes` | `packaged_task` |
-| :--- | :--- |
 
 | **N** | `pair` |
 | :--- | :--- |
-
 | `negate` | `par (execution)` |
-| :--- | :--- |
-| `par_unseq (execution)` | |
-
+| `par_unseq (execution)` |  |
 | `parse (chrono)` | `RAII` |
+
+| `rand` |  |
 | :--- | :--- |
-
-| `rand` | |
-
-
-
-
-
-| `partial_sort` | `随机访问 (文件流 (filestreams))` |
-| `partial_sort_copy` | `随机访问迭代器` |
-| `partial_sum` | `随机数分布` |
-| `partition` | `随机数生成器` |
-| `partition_copy` | `随机数` |
+| `partial_sort` | 随机访问（文件流（filestreams）） |
+| `partial_sort_copy` | 随机访问迭代器 |
+| `partial_sum` | 随机数分布 |
+| `partition` | 随机数生成器 |
+| `partition_copy` | 随机数 |
 | `partition_point` | `random_device` |
 | `path (classes)` | `random_shuffle` |
-| `path (filesystem)` | `范围 (ranges)` |
-| `path name` | `范围适配器 (ranges)` |
-| `peek` | `范围构造函数 (container)` |
-| `性能关联容器` | `Ranges` |
+| `path (filesystem)` | 范围（ranges） |
+| `path name` | 范围适配器（ranges） |
+| `peek` | 范围构造函数（container） |
+| 性能关联容器 | `Ranges` |
 | `perm_options` | `rank (mdspan)` |
 | `permissions` | `rank` |
 | `perms` | `ratio` |
 | `phi_v` | `rank (container)` |
 | `pi_v` | `rank (ordered container)` |
 | `plus` | `state` |
+
+
+
 | `pop (priority_queue)` | `read_symblink` |
+|---|---|
 | `pop (queue)` | `recursive_directory_iterator` |
 | `pop (stack)` | `recursive_mutex` |
 | `pop_back (string)` | `recursive_timed_mutex` |
 | `pop_back (vector)` | `reduce` |
-
-
-
-
-
 | `pop_heap` | `ref` |
 | `pow` | `ref_view` |
 | `predicate (可调用单元)` | `引用封装` |
@@ -9961,80 +10035,42 @@ int main() {
 | `push (优先级队列)` | `释放 (shared_ptr` |
 | `push (队列` | `释放 (unique_lock` |
 | `push (栈` | `释放 (unique_ptr` |
-| `push_back (string)` | `remove`) |
-| [`push_back (vector` | `remove (if)` |
-| `remove (文件系统`) | [`remove (list` |
+| `push_back (string)` | `remove` |
+| `push_back (vector` | `remove (if)` |
+| `remove (文件系统)` | `remove (list` |
 | `putback` | `全部删除` |
-| **R** | `remove_const` |
+| `R` | `remove_const` |
 | `remove_copy` | `search (算法` |
-
-
-
-
-| remove_copy_if | search (正则表达式) |
-
-| remove_cv | Search |
-
-| remove_cvref | search_n |
-
-| remove_if (算法) | seconds (time_of_day) |
-
-| remove_if (list) | seed |
-
-| remove_pointer | seekg |
-
-| remove_prefix (string_view) | seekp |
-
-| remove_reference | Semaphores |
-
-| remove_suffix (string_view) | sentinel (ranges) |
-
-| remove_volatile | seq (execution) |
-
-| copy | renameZZZremove_ifBOBOBOBOZZZremove_BO_BOBOBOBO_BOBOBOBOBOBOBOBOBO_BO__Zremove__BOBOBOBOBOBO_)ZZZremove_copy_ZZremove_copyZZZremove_copy_if) |
-
-| remove_copy | size |
-
-| remove_copy_if | count |
-
-| remove_if | capacity |
-
-| remove_copy | front |
-
-| remove_copy_if | back |
-
-| remove_if | empty |
-
-| remove_copy | resize |
-
-| remove_copy_if | shrink_to_fit |
-
-| remove_if | insert |
-
-| remove_copy | push |
-
-| remove_copy_if | push_back |
-
-| remove_if | pop |
-
-| remove_copy | pop_back |
-
-| remove_copy_if | assign |
-
-| remove_if | replace |
-
-| remove_copy | replace_all |
-
-| remove_copy_if | replace_first |
-
-| remove_if | swap_with_capacity |
-
-| remove_copy | swap |
-
-
-
-
-
+| `remove_copy_if` | `search (正则表达式)` |
+| `remove_cv` | `Search` |
+| `remove_cvref` | `search_n` |
+| `remove_if (算法)` | `seconds (time_of_day)` |
+| `remove_if (list)` | `seed` |
+| `remove_pointer` | `seekg` |
+| `remove_prefix (string_view)` | `seekp` |
+| `remove_reference` | `Semaphores` |
+| `remove_suffix (string_view)` | `sentinel (ranges)` |
+| `remove_volatile` | `seq (execution)` |
+| `copy` | `renameZZZremove_ifBOBOBOBOZZZremove_BO_BOBOBOBO_BOBOBOBOBOBOBOBOBO_BO__Zremove__BOBOBOBOBOBO_)ZZZremove_copy_ZZremove_copyZZZremove_copy_if)` |
+| `remove_copy` | `size` |
+| `remove_copy_if` | `count` |
+| `remove_if` | `capacity` |
+| `remove_copy` | `front` |
+| `remove_copy_if` | `back` |
+| `remove_if` | `empty` |
+| `remove_copy` | `resize` |
+| `remove_copy_if` | `shrink_to_fit` |
+| `remove_if` | `insert` |
+| `remove_copy` | `push` |
+| `remove_copy_if` | `push_back` |
+| `remove_if` | `pop` |
+| `remove_copy` | `pop_back` |
+| `remove_copy_if` | `assign` |
+| `remove_if` | `replace` |
+| `remove_copy` | `replace_all` |
+| `remove_copy_if` | `replace_first` |
+| `remove_if` | `swap_with_capacity` |
+| `remove_copy` | `swap` |
 | `reserve (string)` | `set_value_at_thread_exit` |
 | `reserve (vector)` | `setfill` |
 | `reset (any)` | `setstate` |
@@ -10054,13 +10090,7 @@ int main() {
 | `root-name` | `shuffle` |
 | `rotate` | `sin` |
 | `rotate_copy` | `sinh` |
-
-| **S** | `Size (container)` |
-
-
-
-
-
+| `S` | `Size (container)` |
 | `size (mdspan)` | `stoi (string)`, `to_wstring`, `stoi`, `stol`, `stoll`, `stoul`, `stoull`, `stof`, `stod`, `stold` |
 | `size (span)` | `front`, `back`, `data`, `size`, `size_bytes`, `empty`, `first`, `last`, `count`, `subspan` | `stol (string)`, `to_wstring`, `stoi`, `stol`, `stoll`, `stoul`, `stoull`, `stof`, `stod`, `stold` |
 | `size (string)` | `empty`, `size`, `length`, `capacity`, `max_size`, `resize`, `resize_and_overwrite`, `reserve`, `shrink_to_fit` | `stold (string)`, `to_wstring`, `stoi`, `stol`, `stoll`, `stoul`, `stoull`, `stof`, `stod`, `stold` |
@@ -10079,11 +10109,7 @@ int main() {
 | `space_info` | `path`, `filesystem_error`, `directory_entry`, `directory_iterator`, `recursive_directory_iterator`, `file_status`, `space_info`, `file_type`, `perms`, `perm_options`, `copy_options`, `directory_options`, `file_time_type` | `流迭代器` |
 | `splice (list)` | `merge`, `remove`, `remove_if`, `splice`, `unique` | `流` |
 
-
-
-
-
-## 容器操作与排序 (Operations)
+## 容器操作与排序（Operations）
 
 - `splice_after(forward_list)`
 - `emplace_after(forward_list)`
@@ -10095,9 +10121,10 @@ int main() {
 - `unique(forward_list)`
 - `严格弱序`
 
-## 视图 (Views)
+## 视图（Views）
 
 ### `split_view`
+
 - `all_t`
 - `ref_view`
 - `filter_view`
@@ -10116,6 +10143,7 @@ int main() {
 - `values_view`
 
 ### `stride_view`
+
 - `all_t`
 - `zip_view`
 - `zip_transform_view`
@@ -10129,9 +10157,10 @@ int main() {
 - `as_rvalue_view`
 - `stride_view`
 
-## 数学常量 (Mathematical Constants)
+## 数学常量（Mathematical Constants）
 
 ### `sqrt2_v`
+
 - `e_v`
 - `log2e_v`
 - `log10e_v`
@@ -10145,12 +10174,12 @@ int main() {
 - `egamma_v`
 - `phi_v`
 
-## 字符串字面量 (String Literal)
+## 字符串字面量（String Literal）
 
 - `字符串字面量 (C)`
 - `字符串字面量 (C++)`
 
-## 数学函数 (Mathematical Functions)
+## 数学函数（Mathematical Functions）
 
 - `sqrt`
 - `pow`
@@ -10179,7 +10208,7 @@ int main() {
 - `floor`
 - `modf`
 
-## 随机数 (Random Number)
+## 随机数（Random Number）
 
 - `srand`
 - `abs`
@@ -10191,9 +10220,10 @@ int main() {
 - `lldiv`
 - `rand`
 
-## 字符串处理 (String Processing)
+## 字符串处理（String Processing）
 
 ### `String Views`
+
 - `字符串流`
 - `istringstream`
 - `wringstream`
@@ -10210,7 +10240,8 @@ int main() {
 - `u16string_view`
 - `u32string_view`
 
-### 正则 (Regex)
+### 正则（Regex）
+
 - `sregex_iterator`
 - `cregex_iterator`
 - `wcregex_iterator`
@@ -10223,7 +10254,7 @@ int main() {
 - `regex_token_iterator`
 - `wsregex_token_iterator`
 
-## 分区 (Partitioning)
+## 分区（Partitioning）
 
 - `stable`
 - `stable_partition`
@@ -10233,7 +10264,7 @@ int main() {
 - `is_partitioned`
 - `partition_copy`
 
-## 排序 (Sorting)
+## 排序（Sorting）
 
 - `stable_sort`
 - `sort`
@@ -10243,12 +10274,18 @@ int main() {
 - `is_sorted`
 - `is_sorted_until`
 
-## 内存与时间 (Memory & Time)
+## 内存与时间（Memory & Time）
 
 ### `Stack`
+
 - `sub_match(match_results)`
 - `Stack`
 - `subseconds(time_of_day)`
+
+
+
+## 时间操作（Time of Day）
+
 - `hours(time_of_day)`
 - `minutes(time_of_day)`
 - `seconds(time_of_day)`
@@ -10256,7 +10293,8 @@ int main() {
 - `make_duration(time_of_day)`
 - `make_24(time_of_day)`
 
-### 范围操作 (Span)
+## 范围操作（Span）
+
 - `starts_with(string)`
 - `ends_with(string)`
 - `subspan(span)`
@@ -10275,9 +10313,10 @@ int main() {
 - `static_extent(span)`
 - `static_extension(span)`
 
-## 智能指针 (Smart Pointers)
+## 智能指针（Smart Pointers）
 
 ### `shared_ptr`
+
 - `get(shared_ptr)`
 - `get_deleter(shared_ptr)`
 - `reset(shared_ptr)`
@@ -10287,6 +10326,7 @@ int main() {
 - `use_count(shared_ptr)`
 
 ### `unique_ptr`
+
 - `get(unique_ptr)`
 - `get_deleter(unique_ptr)`
 - `reset(unique_ptr)`
@@ -10296,15 +10336,17 @@ int main() {
 - `use_count(unique_ptr)`
 
 ### `weak_ptr`
+
 - `expired(weak_ptr)`
 - `lock(weak_ptr)`
 - `reset(weak_ptr)`
 - `swap(weak_ptr)`
 - `use_count(weak_ptr)`
 
-## 文件系统 (Filesystem)
+## 文件系统（Filesystem）
 
 ### `status`
+
 - `absolute`
 - `canonical`
 - `weakly_canonical`
@@ -10335,7 +10377,8 @@ int main() {
 - `temp_directory_path`
 
 ### `status_known`
-- `文件类型`
+
+- 文件类型
 - `is_block_file`
 - `is_character_file`
 - `is_directory`
@@ -10347,7 +10390,7 @@ int main() {
 - `is_symlink`
 - `status_known`
 
-## 输入/输出 (I/O)
+## 输入/输出（I/O）
 
 - `stderr`
 - `cin`
@@ -10376,17 +10419,13 @@ int main() {
 - `stdout`
 - `stderr`
 
-## 算法与变量 (Others)
+## 算法与变量（Others）
 
 - `Static Variables`
 - `swap_ranges`
 - `steady_clock`
 - `system_clock`
 - `high_resolution_clock`
-
-
-
-
 
 | `stod (string)` | `symbol link` |
 | :--- | :--- |
@@ -10404,11 +10443,6 @@ int main() {
 | `tellp` | `type (any)` |
 | `temp_directory_path` | `Type Traits` |
 | `test (atomic_flag)test_and_set (atomic_flag)` | `type_identity` |
-
-
-
-
-
 | `Threads` | `u32string` |
 | :--- | :--- |
 | `Threads` | `u32string_view` |
@@ -10429,33 +10463,17 @@ int main() {
 | `to_wstring (string)` | `unique (forward_list)` `before_begin`, `emplace_after`, `emplace_front`, `erase_after`, `insert_after`, `merge`, `splice_after`, `unique` |
 | `top (priority_queue)` | `unique (list)` `merge`, `remove`, `remove_if`, `splice`, `unique` |
 | `top (stack)` | `unique (shared_ptr)` `get`, `get_deleter`, `reset`, `release`, `swap`, `unique`, `use_count` |
-
-
-
-
-
 | `transform (expected)` | `unique (std)` |
 | `transform (optional)` | `unique_copy` |
 | `transform_error (expected)` | `unique_lock` |
 | `transform_exclusive_scan` | `unique_ptr` |
-| `transform_inclusive_scan` | `通用引用 (universal reference)` |
-| `transform_reduce` | `无序关联容器 (Unordered Associative Containers)` |
-| `transform_view` | `unordered_map` |
-| `转换范围 (Transform Ranges)` | `unordered_multimap` |
-| `unordered_multiset` | `views::reverse` |
-| `unordered_set` | `views::slide` |
-| `upper_bound (expected)` | `views::all` |
-| `upper_bound (expected)` | `views::split` |
-| `uppercase` | `views::transform` |
-| `uppercase` | `views::take` |
-| `use_count (shared_ptr)` | `views::take_while` |
-| `use_count (weak_ptr)` | `views::transform` |
-
-
+| `transform_inclusive_scan` | 通用引用（`universal reference`） |
+| `transform_reduce` | 无序关联容器（Unordered Associative Containers） |
 
 
 
 # 用户定义数据类型
+
 - `views::transform`
 - `views::zip`
 - `views::zip_transform_view`
@@ -10478,7 +10496,8 @@ int main() {
 - `views::stride_view`
 - `views::stride`
 
-### 工具类
+## 工具类
+
 - `views::values`
 - `views::all`
 - `ref_view`
@@ -10512,6 +10531,7 @@ int main() {
 - `views::values`
 
 # V
+
 - `views::zip`
 - `views::zip_view`
 - `views::zip`
@@ -10537,6 +10557,7 @@ int main() {
 - `views::stride`
 
 # valid
+
 - `std::future`
 - `wait`
 - `wait_for`
@@ -10545,6 +10566,7 @@ int main() {
 ## 视图 (Views)
 
 # value (预期 expected)
+
 - `has_value`
 - `value`
 - `value_or`
@@ -10554,6 +10576,7 @@ int main() {
 # visit
 
 # value (可选 optional)
+
 - `has_value`
 - `value`
 - `value_or`
@@ -10563,6 +10586,7 @@ int main() {
 - `bad_optional_access`
 
 # `void_t`
+
 - `remove_const`
 - `remove_cvref`
 - `remove_volatile`
@@ -10588,8 +10612,11 @@ int main() {
 # value (有序关联容器)
 
 # W
+
 # value (无序关联容器)
+
 # wait (原子操作)
+
 - `atomic_flag`
 - `test_and_set`
 - `clear`
@@ -10606,13 +10633,17 @@ int main() {
 - `fetch_xor`
 - `notify_one`
 - `notify_all`
+
 # value_by_exception (变体 variant)
+
 - `index`
 - `emplace`
 - `holds_alternative`
 - `get`
 - `get_if`
+
 # wait (atomic_flag)
+
 - `atomic_flag`
 - `test_and_set`
 - `clear`
@@ -10629,17 +10660,23 @@ int main() {
 - `fetch_xor`
 - `notify_one`
 - `notify_all`
+
 # value_or (expected)
+
 - `has_value`
 - `value`
 - `value_or`
 - `emplace`
 - `bad_expected_access`
+
 # wait (barrier)
+
 - `wait`
 - `arrive_and_wait`
 - `drop`
+
 # value_or (optional)
+
 - `has_value`
 - `value`
 - `value_or`
@@ -10647,13 +10684,17 @@ int main() {
 - `emplace`
 - `make_optional`
 - `bad_optional_access`
+
 # wait (condition_variable)
+
 - `notify_one`
 - `notify_all`
 - `wait`
 - `wait_for`
 - `wait_until`
+
 # values_view
+
 - `all_t`
 - `all`
 - `ref_view`
@@ -10685,20 +10726,27 @@ int main() {
 - `views::keys`
 - `values_view`
 - `views::values`
+
 # wait (future)
+
 - `std::future`
 - `wait`
 - `wait_for`
 - `wait_until`
+
 # variant
+
 # wait (latch)
+
 - `count_down`
 - `try_wait`
 - `arrive_and_wait`
 - `wait`
 
 # Vectors
+
 # wait_for (condition_variable)
+
 - `notify_one`
 - `notify_all`
 - `wait`
@@ -10706,20 +10754,26 @@ int main() {
 - `wait_until`
 
 # vformat (formatting library)
+
 - `vformat`
 - `vformat_to`
 - `make_format_args`
+
 # wait_for (future)
+
 - `std::future`
 - `wait`
 - `wait_for`
 - `wait_until`
 
 # vformat_to (formatting library)
+
 - `vformat`
 - `vformat_to`
 - `make_format_args`
+
 # wait_until (condition_variable)
+
 - `notify_one`
 - `notify_all`
 - `wait`
@@ -10727,15 +10781,13 @@ int main() {
 - `wait_until`
 
 # View (ranges)
+
 # wait_until (future)
+
 - `std::future`
 - `wait`
 - `wait_for`
 - `wait_until`
-
-
-
-
 
 | `views::adjacent` | `wcerr` |
 | :--- | :--- |
@@ -10748,10 +10800,6 @@ int main() {
 | `views::chunk` | `weakly_canonical` |
 | `views::chunk_by` | `weekday (calendar)` |
 | `views::common` | `weekday_indexed (calendar)` |
-
-
-
-
 | `views::drop` | `weekday_last (calendar)` |
 | :--- | :--- |
 | `views::drop_while` | `wfilebuf` |
@@ -10767,20 +10815,20 @@ int main() {
 | `wstring` | |
 | `wstring_view` | |
 | `wstringstream` | |
-| **Y** | |
+
+**Y**
+
 | `year (calendar)` | |
 | `year_month (calendar)` | |
-
-
-
-
 | `year_month_day (calendar)` | |
 | :--- | :--- |
 | `year_month_day_last (calendar)` | |
 | `year_month_day_weekday (calendar)` | |
 | `year_month_weekday_last (calendar)` | |
 | `yield (this_thread)` | |
-| **Z** | |
+
+**Z**
+
 | `zip_transform_view` | |
 | `zip_view` | |
 | `zoned_time` | |

@@ -1,3 +1,4 @@
+
 # 对象身份
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/object_identity.html`](https://cel.cs.brown.edu/crp/idioms/object_identity.html)
@@ -8,7 +9,7 @@
 
 在其他情况下，指针值被用作逻辑身份来区分具有相同属性的对象的具体实例。例如，表示一个可能具有不同标签的节点的带标签图。
 
-In Rust，这些情况中的一些不适用，而其他情况通常通过实现值的合成身份概念来处理。
+在 Rust 中，这些情况中的一些不适用，而其他情况通常通过实现值的合成身份概念来处理。
 
 ## 重载复制赋值和相等比较运算符
 
@@ -35,50 +36,32 @@ struct Person
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { struct Person {
-
     name: String,
-
 }
 
 实现对 `Person` 的 `Clone` trait {
-
     fn clone(&self) -> Self {
-
         Self { name: self.name.clone() }
-
     }
 
     fn clone_from(&mut self, source: &Self) {
-
         // self 和 source 不能在这里相同，
-
         // because that would mean there are a
-
         // mutable and an immutable reference to
-
         // the same memory location. Therefore, a
-
         // check for assignment to self is not
-
         // needed, even for the purpose of
-
         // optimization.
-
         self.name.clone_from(&source.name);
-
     }
-
 }
-
 }
-
 ```
 
 在 C++ 中，大多数比较都是在对象与其自身之间进行的（例如，对象的主要用途是存储在哈希集中），并且比较不等价对象是昂贵的，因此可能会使用对象身份比较作为相等比较运算符重载的优化。
 
-为了在 Rust 中支持类似操作，可以使用 `std::ptr::eq`(https://doc.rust-lang.org/std/ptr/fn.eq.html)。
+为了在 Rust 中支持类似操作，可以使用 `std::ptr::eq`（[链接](https://doc.rust-lang.org/std/ptr/fn.eq.html)）。
 
 ```rs
 struct Person
@@ -100,37 +83,24 @@ bool operator==(const Person& lhs, const Person& rhs) {
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { struct Person {
-
     name: String,
-
     // many other expensive-to-compare fields
-
 }
 
 实现对 `Person` 的 `PartialEq` trait {
-
     fn eq(&self, other: &Self) -> bool {
-
         if std::ptr::eq(self, other) {
-
             return true;
-
         }
 
         // compare other expensive-to-compare fields
-
         true
-
     }
-
 }
 
 实现对 `Person` 的 `Eq` trait {}
-
 }
-
 ```
 
 ## 在关系结构中区分值
@@ -165,29 +135,18 @@ bool CapturedStmt::capturesVariable(const VarDecl *Var) const {
 使用相同的合成标识符技术的一个简化的图表示如下，它通过表示标签和边的向量的索引来表示节点标识。
 
 ```rs
-
 #![allow(unused)] fn main() { enum Color {
-
     Red,
-
     Blue
-
 }
 
 struct Graph {
-
     /// 从节点 ID 到节点标签的映射，在这里是颜色。
-
     nodes_labels: Vec<Color>,
-
     /// 从节点 ID 到相邻节点 ID 的映射。
-
     edges: Vec<Vec<usize>>,
-
 }
-
 }
-
 ```
 
 如果性能要求使得使用合成标识符不可接受，那么可能需要使用防止值移动。可以使用 `Pin` 和 `PhantomPinned` 结构体（[链接](https://doc.rust-lang.org/std/pin/index.html)）来实现类似于在 C++ 中删除移动构造函数的效果。

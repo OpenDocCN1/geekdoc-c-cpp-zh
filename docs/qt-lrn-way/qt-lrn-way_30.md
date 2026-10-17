@@ -1,3 +1,4 @@
+
 # 三十、Graphics View Framework
 
 现在基本上也已经到了 2D 绘图部分的尾声，所谓重头戏都是在最后压轴的，现在我们就要来看看在绘图部分功能最强大的 Graphics View。我们经常说 KDE 桌面，新版本的 KDE 桌面就是建立在 Graphics View 的基础之上，可见其强大之处。
@@ -6,7 +7,7 @@ Qt 的白皮书里面这样写道：“Qt Graphics View 提供了用于管理和
 
 Graphics View 是一个基于 item 的 M-V 架构的框架。
 
-基于 item 意思是，它的每一个组件都是一个 item。这是与 QPainter 的状态机不同。回忆一下，使用 QPainter 绘图多是采用一种面向过程的描述方式，首先使用 drawLine()画一条直线，然后使用 drawPolygon()画一个多边形；而对于 Graphics View 来说，相同的过程可以是，首先创建一个场景 scene，然后创建一个 line 对象和一个 polygon 对象，再使用 scene 的 add()函数将 line 和 polygon 添加到 scene，最后通过视口 view 就可以看到了。乍看起来，后者似乎更加复杂，但是，如果你的图像中包含了成千上万的直线、多边形之类，管理这些对象要比管理 QPainter 的 draw 语句容易得多。并且，这些图形对象也更加符合面向对象的设计要求：一个很复杂的图形可以很方便的复用。
+基于 item 意思是，它的每一个组件都是一个 item。这是与 QPainter 的状态机不同。回忆一下，使用 QPainter 绘图多是采用一种面向过程的描述方式，首先使用`drawLine()`画一条直线，然后使用`drawPolygon()`画一个多边形；而对于 Graphics View 来说，相同的过程可以是，首先创建一个场景 scene，然后创建一个 line 对象和一个 polygon 对象，再使用 scene 的`add()`函数将 line 和 polygon 添加到 scene，最后通过视口 view 就可以看到了。乍看起来，后者似乎更加复杂，但是，如果你的图像中包含了成千上万的直线、多边形之类，管理这些对象要比管理 QPainter 的 draw 语句容易得多。并且，这些图形对象也更加符合面向对象的设计要求：一个很复杂的图形可以很方便的复用。
 
 M-V 架构的意思是，Graphics View 提供一个 model 和一个 view。所谓 model 就是我们添加的种种对象，所谓 view 就是我们观察这些对象的视口。同一个 model 可以由很多 view 从不同的角度进行观察，这是很常见的需求。使用 QPainter 就很难实现这一点，这需要很复杂的计算，而 Qt 的 Graphics View 就可以很容易的实现。
 
@@ -15,7 +16,7 @@ Graphics View 提供了一个 QGraphicsScene 作为场景，即是我们添加�
 下面我们来看一下代码：
 
 ```cpp
- #include <QtGui> 
+#include <QtGui> 
 
 class DrawApp : public QWidget { 
 public: 
@@ -53,7 +54,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-为了突出重点，我们就直接 include 了 QtGui，不过在实际应用中不建议这么做。这里提供了直线的两种实现：一个是 DrawApp 使用我们前面介绍的技术，重写 paintEvent()函数，这里就不在赘述，重点来看 main()函数里面的实现。
+为了突出重点，我们就直接 include 了 QtGui，不过在实际应用中不建议这么做。这里提供了直线的两种实现：一个是 DrawApp 使用我们前面介绍的技术，重写`paintEvent()`函数，这里就不在赘述，重点来看`main()`函数里面的实现。
 
 首先，我们创建了一个 QGraphicsScene 作为场景，然后在 scene 中添加了一个直线，这样就把我们需要的图形元件放到了 scene 中。然后创建一个 QGraphicsView 对象进行观察。就这样，我们就是用 Graphics View 搭建了一个最简单的应用。运行这个程序来看结果：
 

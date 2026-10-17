@@ -1,33 +1,7 @@
+
 # NET 7 与 C# 11 简明指南
 
-
-
-
-
-
-
-
-
 前言：Daniel Jebaraj
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 当我们 2012 年出版第一本 Succinctly® 系列书籍——《jQuery Succinctly®》时，我们的目标是为在 Microsoft 平台上工作的软件开发者编写一系列简明的技术书籍。我们当时坚信（现在也依然坚信），感兴趣的话题可以转化成长度约 100 页的书籍。
 
@@ -39,7 +13,7 @@
 
 我们的目标是保持信息的免费且易于获取，以便任何拥有计算设备和接入网络的人都能获得简洁的信息并从中受益。书籍将始终是免费的。我们发布的任何更新也是免费的。
 
-# 让我们知道您的想法
+## 让我们知道您的想法
 
 如果您有感兴趣的话题、想法或反馈，请随时通过 succinctlyyseries@syncfusion.com 与我们联系。
 
@@ -47,11 +21,7 @@
 
 请在社交媒体上关注我们，并帮助我们向更多人推广 Succinctly® 系列！
 
-
-
-
-
-# 关于作者
+## 关于作者
 
 作为一名拥有超过 17 年 C# 和 Visual Studio 使用经验的资深软件开发人员，我有幸与许多公司合作，并向行业中一些最有天赋的人士学习。除了专业经验外，我还出版了多本关于 C#、Visual Studio 和 ASP.NET Core 等主题的书籍。我对编程的热情始终如一，并致力于紧跟最新技术与他人分享我的专业知识。
 
@@ -76,7 +46,7 @@
 
 2022 年 11 月发布的 .NET 7.0 标准期限支持（STS）版本带我们来到了现在的局面：一个统一的、支持跨平台应用程序开发的 .NET，允许开发者创建各种不同的应用程序——从桌面应用到云应用、Web 应用程序、Unity 游戏、移动应用以及 AI 应用。
 
-.NET 的统一意味着我们有一个单一的 BCL（或基类库）和 SDK。随着 MAUI 的发布，我们可以创建跨平台的原生 UI 应用程序。
+.NET 的统一意味着我们有一个单一的`BCL`（或基类库）和`SDK`。随着 MAUI 的发布，我们可以创建跨平台的原生 UI 应用程序。
 
 ## 关于 .NET 7
 
@@ -84,14 +54,14 @@
 
 单此这一点就是升级到 .NET 7.0 的理由。.NET 7.0 还引入了新的 API。更改包括：
 
--   在 DateTime 中增加了微秒和纳秒。
--   对 Microsoft.Extensions.Caching 命名空间进行了更改。
--   System.Formats.Tar 包含了对处理 Tar（tar 归档）文件的支持。
--   System.Text.Json 中还添加了各种选项。
+- 在 `DateTime` 中增加了微秒和纳秒。
+- 对 `Microsoft.Extensions.Caching` 命名空间进行了更改。
+- `System.Formats.Tar` 包含了对处理 Tar（tar 归档）文件的支持。
+- `System.Text.Json` 中还添加了各种选项。
 
-ASP.NET Core 也有显著的变化。这些包括诸如速率限制（rate limiting），允许 ASP.NET Core 在特定时间内限制其处理的请求。还添加了输出缓存（Output caching），并配置了如何缓存来自 ASP.NET Core 应用程序的响应。
+`ASP.NET Core` 也有显著的变化。这些包括诸如速率限制（rate limiting），允许 `ASP.NET Core` 在特定时间内限制其处理的请求。还添加了输出缓存（Output caching），并配置了如何缓存来自 `ASP.NET Core` 应用程序的响应。
 
-在 .NET 6.0 中引入的 Minimal APIs 也得到了更新，包括端点过滤器（endpoint filters）和路由组（route groups）。
+在 .NET 6.0 中引入的 `Minimal APIs` 也得到了更新，包括端点过滤器（endpoint filters）和路由组（route groups）。
 
 2022 年初引入的 MAUI 也获得了一些关注。MAUI 允许开发者构建针对 iOS 和 Android、Windows 桌面以及 macOS 的移动应用程序。在 .NET 7.0 中，MAUI 的一个关键改进领域是性能。MAUI 还获得了一些新控件，例如地图控件。桌面目标支持也得到了改进。
 
@@ -105,35 +75,14 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制（rate limit
 
 单此这一点就是升级到 .NET 7.0 的理由。.NET 7.0 还引入了新的 API。更改包括：
 
--   在 DateTime 中增加了微秒和纳秒。
--   对 Microsoft.Extensions.Caching 命名空间进行了更改。
--   System.Formats.Tar 包含了对处理 Tar（tar 归档）文件的支持。
--   System.Text.Json 中还添加了各种选项。
+- 在 `DateTime` 中增加了微秒和纳秒。
+- 对 `Microsoft.Extensions.Caching` 命名空间进行了更改。
+- `System.Formats.Tar` 包含了对处理 Tar（tar 归档）文件的支持。
+- `System.Text.Json` 中还添加了各种选项。
 
-ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP.NET Core 在特定时间内限制其处理的请求。还添加了输出缓存，并配置了如何缓存来自 ASP.NET Core 应用程序的响应。
+`ASP.NET Core` 也有显著的变化。这些包括诸如速率限制，允许 `ASP.NET Core` 在特定时间内限制其处理的请求。还添加了输出缓存，并配置了如何缓存来自 `ASP.NET Core` 应用程序的响应。
 
-在 .NET 6.0 中引入的 Minimal APIs 也得到了更新，包括端点过滤器和路由组。
-
-2022 年初引入的 MAUI 也获得了一些关注。MAUI 允许开发者构建针对 iOS 和 Android、Windows 桌面以及 macOS 的移动应用程序。在 .NET 7.0 中，MAUI 的一个关键改进领域是性能。MAUI 还获得了一些新控件，例如地图控件。桌面目标支持也得到了改进。
-
-一些工具方面的改进包括 Azure 支持、容器支持、热重载和 CLI 改进。微软还改进了 Azure助手，帮助开发者将应用程序升级到最新版本的 .NET。虽然它并非完美，但它显著帮助开发者解决了升级旧版 .NET 应用程序的痛苦。
-
-.NET 7.0 是一个标准期限支持版本，在 .NET 8.0 发布后将获得六个月的支持。这意味着任何运行 .NET 7.0 的生产应用程序必须在 2023 年 11 月 .NET 8.0 发布时进行升级。
-
-升级到 .NET 7
-
-由于 .NET 7 的发布，相比 .NET 6.0 变化较少。然而，它确实带来了性能的提升。影响拉请求的更改进入了运行时和核心库，导致开发者通过简单的升级到 .NET 7.0 就能在他们的应用程序中获得显著的性能提升。这些性能改进使得 .NET 7 成为迄为止最快的 .NET 版本。
-
-单此这一点就是升级到 .NET 7.0 的理由。.NET 7.0 还引入了新的 API。更改包括：
-
--   在 DateTime 中增加了微秒和纳秒。
--   对 Microsoft.Extensions.Caching 命名空间进行了更改。
--   System.Formats.Tar 包含了对处理 Tar（tar 归档）文件的支持。
--   System.Text.Json 中还添加了各种选项。
-
-ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP.NET Core 在特定时间内限制其处理的请求。还添加了输出缓存，并配置了如何缓存来自 ASP.NET Core 应用程序的响应。
-
-在 .NET 6.0 中引入的 Minimal APIs 也得到了更新，包括端点过滤器和路由组。
+在 .NET 6.0 中引入的 `Minimal APIs` 也得到了更新，包括端点过滤器和路由组。
 
 2022 年初引入的 MAUI 也获得了一些关注。MAUI 允许开发者构建针对 iOS 和 Android、Windows 桌面以及 macOS 的移动应用程序。在 .NET 7.0 中，MAUI 的一个关键改进领域是性能。MAUI 还获得了一些新控件，例如地图控件。桌面目标支持也得到了改进。
 
@@ -141,7 +90,7 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP
 
 .NET 7.0 是一个标准期限支持版本，在 .NET 8.0 发布后将获得六个月的支持。这意味着任何运行 .NET 7.0 的生产应用程序必须在 2023 年 11 月 .NET 8.0 发布时进行升级。
 
-现在很显然，你正在升级的旧项目，你需要做的工作是升级它。例如，升级 .NET Core 1.x 项目需要大量的努力，但确实可行。如果你查看构建在 .NET 6.0 的应用程序的项目文件，你会看到 TargetFramework设置为 net6.0。
+现在很显然，你正在升级的旧项目，你需要做的工作是升级它。例如，升级 .NET Core 1.x 项目需要大量的努力，但确实可行。如果你查看构建在 .NET 6.0 的应用程序的项目文件，你会看到 `TargetFramework` 设置为 `net6.0`。
 
 列表 1：.NET 6.0 项目
 
@@ -158,7 +107,7 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP
 </Project>
 ```
 
-修改项目文件引用 net7.0 以使用 .NET 7。
+修改项目文件引用 `net7.0` 以使用 .NET 7。
 
 列表 2：.NET 7.0 项目
 
@@ -177,7 +126,7 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP
 
 记得将任何 NuGet 包升级到相应的 .NET 7.0 版本。
 
-值得注意的是，自 .NET 6.0 以来，Startup 类已被移除，Program.cs 文件现在使用了顶层语句。这些更改是可选的（不过我想我是个老古人，我不喜欢这些更改，仍然青睐 Startup 类）。
+值得注意的是，自 .NET 6.0 以来，`Startup` 类已被移除，`Program.cs` 文件现在使用了顶层语句。这些更改是可选的（不过我想我是个老古人，我不喜欢这些更改，仍然青睐 `Startup` 类）。
 
 对于我们来说，升级到 .NET 7 是明智的，如下面的代码列表所示。
 
@@ -185,15 +134,11 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP
 
 遗憾的是，如果你的项目是构建在 .NET Framework 上，你有更多工作要做。没有直接的升级路径，这意味着你必须创建一个新项目并手动迁移文件。
 
-
-
-
-
 ![](img/778d5698a16c98b6e4877f67a9324f37_12_0.png)
 
 图 4：安装 .NET Upgrade Assistant
 
-一旦安装了 .NET Upgrade Assistant，你就可以打开你的项目并开始升级过程。在我的示例项目中，我有一个为冰淇淋店在线商店开发的 Web 应用程序，它是使用 ASP.Net Core 2.1 开发的。
+一旦安装了 .NET Upgrade Assistant，你就可以打开你的项目并开始升级过程。在我的示例项目中，我有一个为冰淇淋店在线商店开发的 Web 应用程序，它是使用 `ASP.Net Core 2.1` 开发的。
 
 代码列表 3：我的冰淇淋店项目文件
 
@@ -230,7 +175,7 @@ ASP.NET Core 也有显著的变化。这些包括诸如速率限制，允许 ASP
 
 从右键菜单中选择升级会显示 Upgrade Assistant，并给我原地项目升级（in-place project upgrade）选项。
 
-Upgrade Assistant 支持三种升级类型。这些是：
+`Upgrade Assistant` 支持三种升级类型。这些是：
 
 - 原地升级 (In-place)
 - 并行升级 (Side-by-side)
@@ -246,7 +191,7 @@ Upgrade Assistant 支持三种升级类型。这些是：
 
 ### 图 8：目标框架选择
 
-Upgrade Assistant 现在询问我想要升级到哪个目标框架。由于这本书是关于 .NET 7.0 的，我将从可用选项中选择它。实际上，如果你的项目已经在生产环境中运行或即将发布，你可能想选择 .NET 6.0 以利用其长期支持（LTS）。
+`Upgrade Assistant` 现在询问我想要升级到哪个目标框架。由于这本书是关于 .NET 7.0 的，我将从可用选项中选择它。实际上，如果你的项目已经在生产环境中运行或即将发布，你可能想选择 .NET 6.0 以利用其长期支持（LTS）。
 
 请不要误解：.NET 7.0 是一个完全合理的选择，正如之前提到的，它带来了性能改进和许多其他好处。
 
@@ -264,7 +209,7 @@ Upgrade Assistant 现在询问我想要升级到哪个目标框架。由于这�
 
 
 
-
+我将以下代码添加到解决方案中：
 
 ```csharp
 public string Address3 { get; set; }
@@ -284,11 +229,11 @@ public string ReturnAddressDetails()
 }
 ```
 
-如果我向解决方案中添加一个名为 `Address` 的类，如图 13 所示），我会看到一个错误。
+如果我向解决方案中添加一个名为 `Address` 的类（如图 13 所示），我会看到一个错误。
 
 ![](img/778d5698a16c98b6e4877f67a9324f37_22_0.png)
 
-**图 13：添加名为 Address 的类** 
+**图 13：添加名为 `Address` 的类**
 
 Visual Studio 正确地告知我，新添加的类是无效的，因为我的项目已经包含了 `Address` 类的定义。
 
@@ -304,9 +249,9 @@ namespace FileScopedTypes
 
 **图 14：类错误**
 
-这就是文件作用域类型（file-scoped types）展现优势。如果我将 `Address` 类的修饰符从 `public` 修改为 `file`，`Address` 类的范围和可见性将被限制在创建它的文件中。
+这就是文件作用域类型（`file-scoped types`）展现优势的地方。如果我将 `Address` 类的修饰符从 `public` 修改为 `file`，`Address` 类的范围和可见性将被限制在创建它的文件中。
 
-**代码 9：将 Address 类从 public 改为 file**
+**代码 9：将 `Address` 类从 `public` 改为 `file`**
 
 ```csharp
 internal class Student
@@ -339,7 +284,7 @@ public string ReturnAddressDetails()
 }
 ```
 
-文件类型（file-type）中包含的任何类型仅在其声明的文件可见，这就是它的用用之处。
+文件类型（`file-type`）中包含的任何类型仅在其声明的文件可见，这就是它的用用之处。
 
 想象你想为你的 `Address` 类创建一个扩展方法。你编写的扩展方法所提供的功能仅针对该类，且你不希望它泄露到项目的其他部分。考虑代码列表 10 中的代码。
 
@@ -392,9 +337,9 @@ file static class ClassExtensions
 
 ## 编译器看到了什么
 
-为什么这行得通？当你创建一个文件作用域的类时，编译器看到了什么？为了说明这一点，我正在 SharpLab，它允许你看到编译器所看到的代码。
+为什么这行得通？当你创建一个文件作用域的类时，编译器看到了什么？为了说明这一点，我正在使用 SharpLab，它允许你看到编译器所看到的代码。
 
-> 注意：SharpLab 是一个可用的 .NET 代码游场，地址为 https://sharplab.io。
+> 注意：SharpLab 是一个可用的 .NET 代码游场，地址为 `https://sharplab.io`。
 
 如果我们把 `class Address { }` 到 SharpLab，你会看到它生成的编译代码（图 15）。
 
@@ -412,7 +357,7 @@ namespace Microsoft.CodeAnalysis
 }
 ```
 
-**图 15：SharpLab 为 Class Address 编译代码**
+**图 15：SharpLab 为 `Class Address` 编译代码**
 
 类默认是 `internal` 的，如编译后的代码所示。如果我们把 `class Address` 改为 `file class Address`，编译代码就会改变。
 
@@ -428,7 +373,7 @@ internal class <_FD2EAD2177B7A8AFDDBC120>
 }
 ```
 
-**图 16：文件作用域 Address 类的编译代码**
+**图 16：文件作用域 `Address` 类的编译代码**
 
 图 16 中的截图没有显示完整代码，因此我包含了代码列表 11 中的代码。注意，`Address` 类仍然是 `internal` 类，但被编译成了一个几乎无法复制的类名。
 
@@ -494,7 +439,7 @@ namespace System.Runtime.CompilerServices
 
 .NET 7 引入基类的数学相关泛型接口意味着你可以将泛方法的类型参数约束为“数字类”。因此，你可以泛型地执行数学运算。为了说明这一概念，我创建了一个 `Mathinator` 类，将数组的值相加。
 
-**代码列表 12：Mathinator 类**
+**代码列表 12：`Mathinator` 类**
 
 ```csharp
 internal class Mathinator
@@ -515,7 +460,7 @@ internal class Mathinator
 
 在调用代码中，我创建了 `Mathinator` 实例并调用了 `SumArray` 方法。
 
-**代码列表 13：调用 SumArray 方法**
+**代码列表 13：调用 `SumArray` 方法**
 
 ```csharp
 internal class Program
@@ -554,14 +499,16 @@ static void Main(string[] args)
 ```
 
 > ![image](url)
-CS1503: 参数 1：无法从 'double' 转换为 'int'
-显示潜在修复 (Alt+Enter)
+
+`CS1503`: 参数 1：无法从 `'double'` 转换为 `'int'`
+
+显示潜在修复 （`Alt+Enter`）
 
 **图 17：参数错误**
 
 我们可以通过扩展 `Mathinator` 类以包含一个处理 `double` 数组的重载方法来快速修复此（代码列表 15）。
 
-**代码列表 15：扩展的 Mathinator 类**
+**代码列表 15：扩展的 `Mathinator` 类**
 
 ```csharp
 internal class Mathinator
@@ -588,15 +535,11 @@ internal class Mathinator
 }
 ```
 
-然而，解决此问题的另一种方法是使用通用数学支持。考虑代码列表 16 所示的代码。现在我们有一个带有约束的泛型方法，指定 T 必须是 `INumber<T>`。由于 `INumber` 具有静态成员 `Zero`，我可以使用 `T.Zero` 为返回的结果提供默认值。
+然而，解决此问题的另一种方法是使用通用数学支持。考虑代码列表 16 所示的代码。现在我们有一个带有约束的泛型方法，指定 `T` 必须是 `INumber<T>`。由于 `INumber` 具有静态成员 `Zero`，我可以使用 `T.Zero` 为返回的结果提供默认值。
 
 通用数学支持允许开发者在编写数字代码时更具灵活性。
 
-
-
-
-
-## 代码列表 16：修改后的 Mathinator 类
+## 代码列表 16：修改后的 `Mathinator` 类
 
 ```cs
 internal class Mathinator {
@@ -612,19 +555,19 @@ internal class Mathinator {
 }
 ```
 
-仔细观察 `INNumber`，你会发现 `Zero` 并不是唯一暴露的属性。
+仔细观察 `INumber`，你会发现 `Zero` 并不是唯一暴露的属性。
 
 ![](img/778d5698a16c98b6e4877f67a9324f37_30_0.png)
 
-图 18：INNumber 的属性
+图 18：`INumber` 的属性
 
-这里几个几个可供使用的方法。为什么这种方法可以生效？C# 11 和 .NET 7.0 发生了什么变化？这种泛型数学是如何为开发者开启更多可能性的？答案是 C# 11 允许你定义**静态虚拟接口成员**。这一新功能允许我们使用泛型算法来指定“类数字”的行为。
+这里有几个可供使用的方法。为什么这种方法可以生效？C# 11 和 .NET 7.0 发生了什么变化？这种泛型数学是如何为开发者开启更多可能性的？答案是 C# 11 允许你定义**静态虚拟接口成员**。这一新功能允许我们使用泛型算法来指定“类数字”的行为。
 
 微软文档对静态抽象和虚拟成员的定义如下：
 
 > 使用 C# 11
 
-你可能在想这在现实情况下将如何应用于你。我会在下一章讨论最小化 API（minimal APIs）时演示这一点。所以请留好，接下来的内容会变得越来越好。
+你可能在想这在现实情况下将如何应用于你。我会在下一章讨论最小化 API（`minimal APIs`）时演示这一点。所以请留好，接下来的内容会变得越来越好。
 
 ## UTF-8 字面量
 
@@ -634,7 +577,7 @@ UTF-8 被认为是 Web 的编码标准。它也被用于 .NET 堆栈的重要部
 
 在 C# 11 中，你可以使用 `u8` 后缀将字符串标记为 UTF-8，如代码列表 17 所示。
 
-代码列表 17：在字符串上使用 u8 后缀
+**代码列表 17：在字符串上使用 `u8` 后缀**
 
 ```cs
 ReadOnlySpan<byte> utf8 = "AUTH"u8;
@@ -655,6 +598,21 @@ ReadOnlySpan<byte> utf8 = "AUTH"u8; // 带有调试器视图
 图 20：UTF-8 编码
 
 这种差异由于不同编码之间的大小差异。
+
+## 原始字符串字面量
+
+下一个特性让开发者在处理字符串时生活轻松得多。考虑图 21 中的 XML 头部（`Prologue`）。
+
+```cs
+var xmlPrologue = "<?xml version=\"1.0\" encoding=\"UTF-8\">";
+```
+
+图 21：未转义的文字字符串
+
+由于字符串没有转义，双引号是无效的，因为在 C# 中，你不能在字符串内部包含双引号。我们通常通过代码列表 18 所示转义双引号来解决这个问题。
+
+
+
 
 ## 原始字符串字面量
 
@@ -698,137 +656,7 @@ var xmlPrologue = """<?xml version="1.0" encoding="UTF-8">""";
 var myString = """This is a string with "" double quotes""";
 ```
 
-这种逻辑可以无限持续。换句话说，如果你的字符串包含 $n$ 个双引号，你就必须用 $n+1$ 个双引号开头和结束你的字符串。
-
-原始字符串字面量在处理 JSON 字符串时效果也。考虑代码列表 22 中转义的 JSON 字符串。
-
-## 代码列表 22：转义 JSON 字符串
-
-```cs
-var jsonString = "{\n  \"course\": \"NET 7 and C# 11 Succinctly\"\n}";
-```
-
-运行程序得到 JSON，如代码列表 23 所示。
-
-## 代码列表 23：JSON 输出
-
-```json
-{
-  "course": ".NET 7 and C# 11 Succinctly"
-}
-```
-
-代码列表 22 中的代码读起来并不理想，当 JSON 字符串变得更加复杂时，它变得更加复杂。
-
-## 代码列表 24：处理 JSON
-
-```cs
-var jsonString = @"{{
-  ""course"": "".NET 7 and C# 11 Succinctly""
-}"";
-```
-
-使用原始字符串字面量，你可以写出你的 JSON 字符串更好的表示形式，如代码列表 24 所示。
-
-## 使用字符串插值
-
-你可能在好奇这在实际情况下如何应用于你。# 代码列表 25：使用字符串插值
-
-```cs
-var foxColor = "brown";
-var myString = $"{foxColor}";
-```
-
-如代码列表 25 所示，字符串插值在处理包含括号的字符串时有效。# 代码列表 26：包含括号的字符串插值
-
-```cs
-var jsonName = ".NET 7 and C# 11 Succinctly";
-var jsonString = $"{{{jsonName}}}";
-```
-
-## 要求的成员
-
-C# 11 允许你定义静态虚拟接口成员。这一新功能允许我们使用泛型算法来指定“类数字”的行为。
-
-微软文档对静态抽象和虚拟成员的定义如下：
-
-> 使用 C# 11
-
-你可能在想这在现实情况下将如何应用于你。我会在下一章讨论最小化 API 时演示这一点。所以请留好，，从这里开始内容会变得越来越好。
-
-## UTF-8 字面量
-
-UTF-8 被认为是 Web 的编码。它也被用于 .NET 堆栈的重要部分。网络栈仍然在代码中使用常量。想一下 `HTTP/1.0\r\n`、`AUTH`，甚至还有我们经常看到的 `Content-Length:`。
-
-遗憾的是，没有高效的语法来处理这些常量，而且 C# 将所有字符串表示为 C# UTF-16 编码。
-
-在 C# 11 中，你可以使用 `u8` 后缀将字符串标记为 UTF-8，如代码列表 17 所示。
-
-代码列表 17：在字符串上使用 u8 后缀
-
-```cs
-ReadOnlySpan<byte> utf8 = "AUTH"u8;
-```
-
-对比 UTF-16 与 UTF-8 的大小差异。
-
-![](img/778d5698a16c98b6e4877f67a9324f37_31_0.png)
-
-图 19：UTF-16 编码
-
-正如对比图 19 和图 20 时，`utf16` 变量包含 10 个字节，而 `utf8` 变量只包含 5 个字节。
-
-```cs
-ReadOnlySpan<byte> utf8 = "AUTH"u8; // 带有调试器视图
-```
-
-图 20：UTF-8 编码
-
-这种差异由于不同编码之间的大小差异。
-
-## 原始字符串字面量
-
-下一个特性让开发者在处理字符串时生活轻松得多。考虑图 21 中的 XML 头部（Prologue）。
-
-```cs
-var xmlPrologue = "<?xml version=\"1.0\" encoding=\"UTF-8\">";
-```
-
-图 21：未转义的文字字符串
-
-由于字符串没有转义，双引号是无效的，因为在 C# 中，你不能在字符串内部包含双引号。我们通常通过代码列表 18 所示转义双引号来解决这个问题。
-
-代码列表 18：转义双引号
-
-```cs
-var xmlPrologue = "<?xml version=\"1.0\" encoding=\"UTF-8\">";
-```
-
-你也可以通过逐字字符串（verbatim string）来转义双引号，但你仍然需要通过双双引号来转义它们。
-
-代码列表 19：另一种转义引号的方法
-
-```cs
-var xmlPrologue = @"<?xml version=\"1.0\" encoding=\"UTF-8\">";
-```
-
-在 C# 11 中，你可以通过在字符串周围使用三个双引号来转义字符串内部的双引号，如代码列表 20 所示。
-
-代码列表 20：原始字符串字面量
-
-```cs
-var xmlPrologue = """<?xml version="1.0" encoding="UTF-8">""";
-```
-
-原始字符串字面量确实有助于让字符串变得更易读。如果你碰巧在字符串中有三个连续的双引号，那么你就可以在周围添加四个双引号来转义它，如代码列表 21 所示。
-
-代码列表 21：转义三个双引号
-
-```cs
-var myString = """This is a string with "" double quotes""";
-```
-
-这种逻辑可以无限持续。换句话说，如果你的字符串包含 $n$ 个双引号，你就必须用 $n+1$ 个双引号开头和结束你的字符串。
+这种逻辑可以无限持续。换句话说，如果你的字符串包含 `$n$` 个双引号，你就必须用 `$n+1$` 个双引号开头和结束你的字符串。
 
 原始字符串字面量在处理 JSON 字符串时效果也很好。考虑代码列表 22 中转义的 JSON 字符串。
 
@@ -862,14 +690,18 @@ var jsonString = @"{{
 
 ## 使用字符串插值
 
-你可能在好奇这在实际情况下如何应用于你。# 代码列表 25：使用字符串插值
+你可能在好奇这在实际情况下如何应用于你。如代码列表 25 所示，字符串插值在处理包含括号的字符串时有效。
+
+### 代码列表 25：使用字符串插值
 
 ```cs
 var foxColor = "brown";
 var myString = $"{foxColor}";
 ```
 
-如代码列表 25 所示，字符串插值在处理包含括号的字符串时有效。# 代码列表 26：包含括号的字符串插值
+如代码列表 25 所示，字符串插值在处理包含括号的字符串时有效。
+
+### 代码列表 26：包含括号的字符串插值
 
 ```cs
 var jsonName = ".NET 7 and C# 11 Succinctly";
@@ -886,7 +718,39 @@ C# 11 允许你定义静态虚拟接口成员。这一新功能允许我们使�
 
 你可能在想这在现实情况下将如何应用于你。我会在下一章讨论最小化 API 时演示这一点。所以请留好，从这里开始内容会变得越来越好。
 
+## UTF-8 字面量
 
+UTF-8 被认为是 Web 的编码。它也被用于 .NET 堆栈的重要部分。网络栈仍然在代码中使用常量。想一下 `HTTP/1.0\r\n`、`AUTH`，甚至还有我们经常看到的 `Content-Length:`。
+
+遗憾的是，没有高效的语法来处理这些常量，而且 C# 将所有字符串表示为 C# UTF-16 编码。
+
+在 C# 11 中，你可以使用 `u8` 后缀将字符串标记为 UTF-8，如代码列表 17 所示。
+
+代码列表 17：在字符串上使用 `u8` 后缀
+
+```cs
+ReadOnlySpan<byte> utf8 = "AUTH"u8;
+```
+
+对比 UTF-16 与 UTF-8 的大小差异。
+
+![](img/778d5698a16c98b6e4877f67a9324f37_31_0.png)
+
+图 19：UTF-16 编码
+
+正如对比图 19 和图 20 时，`utf16` 变量包含 10 个字节，而 `utf8` 变量只包含 5 个字节。
+
+```cs
+ReadOnlySpan<byte> utf8 = "AUTH"u8; // 带有调试器视图
+```
+
+图 20：UTF-8 编码
+
+这种差异由于不同编码之间的大小差异。
+
+## 泛型过滤器
+
+以下内容描述了如何创建和使用一个泛型过滤器属性：
 
 ```csharp
 public async Task OnActionExecutionAsync(
@@ -919,11 +783,11 @@ public IEnumerable<WeatherForecast> Get()
 }
 ```
 
-通过运行 API 并从 Swagger 或 Postman 调用 GetWeatherForecast 端点，你可以在输出窗口看到信息日志。
+通过运行 API 并从 Swagger 或 Postman 调用 `GetWeatherForecast` 端点，你可以在输出窗口看到信息日志。
 
 但 `ServiceFilter` 的问题在于，它在构造函数中接受一个参数，该参数通过 `typeof(LogFilter)` 传递。通过查看代码列表 33 所示的 `ServiceFilterAttribute` 类可以看到这一点。
 
-## 代码列表 33：ServiceFilterAttribute 代码
+## 代码列表 33：`ServiceFilterAttribute` 代码
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method,
@@ -964,7 +828,7 @@ public IFilterMetadata CreateInstance(IServiceProvider serviceProvider)
 
 让我们创建一个泛型属性作为自己的过滤器属性。
 
-## 代码列表 34：我们自己的 ServiceFilterAttribute
+## 代码列表 34：我们自己的 `ServiceFilterAttribute`
 
 ```csharp
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
@@ -993,7 +857,7 @@ public class ServiceFilterGenericAttribute<T> : Attribute, IFilterFactory, IOrde
 
 代码列表 34 表明，我们不再使用构造函数中传递的类型，而是使用 `ServiceFilterGeneric<T>` 和 `typeof(T)` 来设置过滤器。
 
-我可以像代码列表 35 所示修改我的 GetWeatherForecast 端点——不是使用类型参数，而是使用 `[ServiceFilterGeneric<LogFilter>]`。因此，泛型属性意味着我的属性是泛型的。
+我可以像代码列表 35 所示修改我的 `GetWeatherForecast` 端点——不是使用类型参数，而是使用 `[ServiceFilterGeneric<LogFilter>]`。因此，泛型属性意味着我的属性是泛型的。
 
 ## 代码列表 35：修改后的 GET 端点
 
@@ -1033,6 +897,19 @@ Console.WriteLine(nums is [0 or 5]); // false
 
 但当我们考虑代码列表 37 中的代码时，我们可以更进一步。
 
+## 代码列表 37：列表模式的高级用法
+
+```csharp
+int[] nums = { 1, 2, 3 };
+
+Console.WriteLine(nums is [1, 2, 3]); // true
+Console.WriteLine(nums is [1, 7, 3]); // false
+Console.WriteLine(nums is [1, 2, 4]); // false
+Console.WriteLine(nums is [0 or 5]); // false
+```
+
+
+
 ```csharp
 var empty = Array.Empty<string>();
 // outputMatch1 将输出 "The array is empty"
@@ -1046,7 +923,7 @@ var outputMatch1 = switch
 
 var course = new[] { ".NET 7 and C# 11 Succinctly" };
 // outputMatch2 将输出 "The course is .NET 7 and C# 11 Succinctly"
-var outputMatch2 = course
+var outputMatch2 = course switch
 {
     [] => "The array is empty",
     [var fullCourse] => $"The course is {fullCourse}",
@@ -1056,7 +933,7 @@ var outputMatch2 = course
 
 var dotNetAndCSharp = new[] { ".NET 7", "C# 11" };
 // outputMatch3 将输出 "This is C# 11 on .NET 7"
-var outputMatch3 = switch
+var outputMatch3 = dotNetAndCSharp switch
 {
     [] => "The array is empty",
     [var fullCourse] => $"The course is {fullCourse}",
@@ -1068,7 +945,8 @@ Console.WriteLine(outputMatch1);
 Console.WriteLine(outputMatch2);
 Console.WriteLine(outputMatch3);
 ```
-*(注：原文中 `outputMatch2` 处缺失了 `switch` 关键字和赋值符号，翻译时已补全以保持逻辑正确)*
+
+*（注：原文中 `outputMatch2` 处缺失了 `switch` 关键字和赋值符号，翻译时已补全以保持逻辑正确）*
 
 ## 代码列表 37：字符串数组上的模式
 
@@ -1078,11 +956,7 @@ The course is .NET 7 and C# 11 Succinctly
 This is C# 11 on .NET 7
 ```
 
-
-
-
-
-# 第3章 ASP.NET Core 7
+# 第 3 章 ASP.NET Core 7
 
 在你的职业生涯中某个时刻，你很可能会接触到 ASP.NET Core。无论是开发网站还是 API，ASP.NET Core 都会在此发挥作用。由于 ASP.NET Core 的重要性，微软为 ASP.NET Core 平台添加了大量功能。让我们通过 .NET 7 的视角来看其中的一些功能。
 
@@ -1117,41 +991,41 @@ ASP.NET Core 为 HTTP/3 带来了改进，具体包括：
 
 - HTTP/3 不再是实验性的，并在 ASP.NET Core 中得到了完全支持。
 - 改进了 Kestrel 对 HTTP/3 的支持，包括性能以及与 HTTP/1.1 和 HTTP/2 的对齐。
-- HTTP/3 提供了对 UseHttps(ListenOptions, X509Certificate2) 的完全支持。
+- HTTP/3 提供了对 `UseHttps(ListenOptions, X509Certificate2)` 的完全支持。
 
 HTTP.sys 和 IIS 已添加对 HTTP/3 的支持。
 
 > 提示：HTTP.sys 是 Kestrel 服务器的替代 Web 服务器。它提供 Kestrel 不具备的功能。HTTP.sys 是一个仅运行在 Windows 上的 ASP.NET Core Web 服务器。
 
-.NET 7 还减少了 HTTP/3 的分配。如果你感兴趣，可以登录 GitHub，导航到 https://github.com/dotnet/aspnetcore，然后在仓库问题（issues）中搜索以下项目：
+.NET 7 还减少了 HTTP/3 的分配。如果你感兴趣，可以登录 GitHub，导航到`https://github.com/dotnet/aspnetcore`，然后在仓库问题（issues）中搜索以下项目：
 
-- 42685
-- 42708
-- 42760
+- `42685`
+- `42708`
+- `42760`
 
-## 输出缓存 (Output caching)
+## 输出缓存（Output caching）
 
 输出缓存存储 Web 应用程序的响应，允许 ASP.NET Core 从缓存中提供这些响应，而不是每次都计算。它与响应缓存（response caching）的区别在于以下几方面：
 
 - 你可以在服务器上配置缓存行为。
 - 你可以通过编程方式使缓存项失效。
 - 通过资源锁定缓解了缓存击穿（cache stampede）和惊群效应（thundering herd）的风险。
-- 服务器可以返回 304 Not Modified 状态而不是缓存响应体。
+- 服务器可以返回 `304 Not Modified` 状态而不是缓存响应体。
 - 缓存存储媒介是扩展的。
 
 输出缓存是 ASP.NET Core 7 中的新中间件。
 
-### 频率限制 (Rate limiting)
+### 频率限制（Rate limiting）
 
 ASP.NET Core 7 应用程序现在可以配置频率限制策略并将策略附加到应用程序的端点。
 
-### 请求解压缩 (Request decompression)
+### 请求解压缩（Request decompression）
 
-请求解压缩也是 ASP.NET Core 7 中的新中间件。它允许 API 端点接受带有压缩内容的请求。使用 Content-Encoding HTTP 头部，可以自动识别并解压缩压缩内容。这意味着开发者不需要编写自定义代码来处理压缩请求。
+请求解压缩也是 ASP.NET Core 7 中的新中间件。它允许 API 端点接受带有压缩内容的请求。使用 `Content-Encoding` HTTP 头部，可以自动识别并解压缩压缩内容。这意味着开发者不需要编写自定义代码来处理压缩请求。
 
-### 热重载 (hot reload) 的改进
+### 热重载（hot reload）的改进
 
-.NET 6 中的热重载显著改进了调试应用程序时的开发者工作流。参考 .NET 7 中[这篇文章](...) 中的热重载章节，热重载将适用于 Blazor WebAssembly，允许开发者：
+.NET 6 中的热重载显著改进了调试应用程序时的开发者工作流。参考 .NET 7 中[这篇文章](...)中的热重载章节，热重载将适用于 Blazor WebAssembly，允许开发者：
 
 - 添加新类型。
 - 添加嵌套类。
@@ -1160,9 +1034,9 @@ ASP.NET Core 7 应用程序现在可以配置频率限制策略并将策略附�
 - 为现有类型添加静态 lambda 表达式。
 - 为已经捕获过之前内容的现有方法添加捕获此内容的 lambda 表达式。
 
-### 频率限制 (Rate limiting)
+### 频率限制（Rate limiting）
 
-可能会出现应用程序承受极高负载的情况。这增加了应用程序因为无法处理增加的负载而直接崩溃的可能性。负载的增加可能是无意的，也可能是故意的。意外负载负载可能是由于错误的脚本不断向 API 端点发送请求导致的。另一方面，恶意攻击者可能故意向你的应用程序发送多次请求以导致网站宕机。
+可能会出现应用程序承受极高负载的情况。这增加了应用程序因为无法处理增加的负载而直接崩溃的可能性。负载的增加可能是无意的，也可能是故意的。意外负载可能是由于错误的脚本不断向 API 端点发送请求导致的。另一方面，恶意攻击者可能故意向你的应用程序发送多次请求以导致网站宕机。
 
 ASP.NET Core 7 中的频率限制允许开发者缓解这些问题：
 
@@ -1174,10 +1048,6 @@ ASP.NET Core 7 中的频率限制允许开发者缓解这些问题：
 
 频率限制允许开发者保护应用程序。
 
-
-
-
-
 ![](img/778d5698a16c98b6e4877f67a9324f37_48_0.png)
 
 图 28：Swagger 中的 GET 请求
@@ -1186,21 +1056,290 @@ ASP.NET Core 7 中的频率限制允许开发者缓解这些问题：
 
 ## 响应
 
-Curl
+### Curl
 
-```
+```bash
 curl -X 'GET' \
   'https://localhost:7147/WeatherForecast' \
   -H accept: text/plain
 ```
 
-请求 URL
+### 请求 URL
+
+```text
+https://localhost:7147/WeatherForecast
+```
+
+### 服务器响应
+
+| 代码 | 详情 |
+| :--- | :--- |
+| 200 | |
+
+```json
+[
+  {
+    "date": "2023-07-17",
+    "temperatureC": 47,
+    "temperatureF": 116,
+    "summary": "Hot"
+  },
+  {
+    "date": "2023-07-18",
+    "temperatureC": 37,
+    "temperatureF": 98,
+    "summary": "scorching"
+  },
+  {
+    "date": "2023-07-19",
+    "temperatureC": 18,
+    "temperatureF": 64,
+    "summary": "Hot"
+  }
+]
+```
+
+> 图 29：GET 请求响应
+
+GET 请求的响应正如我们预期的。为了达到 `PermitLimit` 选项设置的速率限制（我们指定的值为 4），我们将在第五次请求时收到 503 响应状态，如图 30 所示。
+
+## Xxx
+
+![](img/778d5698a16c98b6e4877f67a9324f37_50_0.png)
+
+图 30：第五次 GET 请求受速率限制
+
+这是因为在指定的 20 秒窗口内我们执行了四次以上的请求。当 20 秒窗口过后，当我们再次执行相同的 GET 请求时，我们将再次收到响应。
+
+## 启用队列
+
+你可能记得，可以通过使用 `QueueLimit` 选项设置速率限制，将某些超过你设置的 `PermitLimit` 的请求放入队列。这本质上是延迟了请求而不是立即拒绝它们。为了实现这一点，我们需要稍微修改我们的速率限制器，如代码列表 42 所示。
+
+## 代码列表 42：启用队列限制
+
+```csharp
+public class Program
+{
+    const string FIXED_RATE_LIMIT_POLICY = "fixed";
+
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+
+        // 固定速率限制。
+        builder.Services.AddRateLimiter(_ =>
+            .AddFixedWindowLimiter(policyName: FIXED_RATE_LIMIT_POLICY, options =>
+            {
+                options.PermitLimit = 4;
+                options.Window = TimeSpan.FromSeconds(20);
+                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+                options.QueueLimit = 2;
+            }));
+
+        var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        // 启用速率限制中间件。
+        app.UseRateLimiter();
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
+    }
+}
+
+app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
+app.Run();
+```
+
+为了使其生效，请添加使用 `System.Threading.RateLimiting` 的语句，并在你的速率限制器中添加 `options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst` 和 `options.QueueLimit = 2`。
+
+这将队列两个请求，之后我的速率限制器将按照旧到新的顺序处理它们。
+
+在启用 `QueueLimit` 运行 API 并执行五次 GET 请求将导致 API 调用等待而不是返回 503 响应。
+
+![](img/778d5698a16c98b6e4877f67a9324f37_52_0.png)
+
+图 31：GET 请求入队
+
+时间过后，API 将返回响应。如果我必须打开三个浏览器窗口，在队列第五次请求的第一个浏览器上触发速率限制，并在第二个浏览器中执行新的 GET 请求，那么 `QueueLimit 2` 将填满。如果我在第三个浏览器中执行新请求，则该请求将返回 503。
+
+这是因为我的队列限制已达到，进一步的请求将被拒绝。
+
+## 并发限制
+
+另一个选项是使用并发限制器，如代码列表 43 所示。
+
+## 代码列表 43：使用并发限制器
+
+```csharp
+public class Program
+{
+    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
+
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+```
+
+*（注：由于原文代码块 43 逻辑与描述不符，此处仅保持代码格式，翻译根据上下文理解）*
+
+Wait，重新审视原文代码块 43：
+
+```text
+Code 43: the currency iter
+```
+
+```csharp
+public class Program
+{
+    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
+
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+```
+
+
+
+`builder.Services.AddControllers();`
+
+`builder.Services.AddEndpointsApiExplorer();`
+
+`builder.Services.AddSwaggerGen();`
+
+```csharp
+// Concurrent rate limit.
+builder.Services.AddRateLimiter(_ =>
+    .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
+
+        options.PermitLimit = 4;
+
+        options.Window = TimeSpan.FromSeconds(20);
+
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+
+        options.QueueLimit = 2;
+
+    }));
+```
+
+```csharp
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+
+{
+
+    app.UseSwagger();
+
+    app.UseSwaggerUI();
+
+}
+
+// Enable rate limiting middleware.
+
+app.UseRateLimiter();
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+}
+```
+
+```csharp
+app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
+
+app.Run();
+```
+
+为了让上述代码生效，需要添加`using System.Threading.RateLimiting;`语句，并在速率限制器中配置`options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst`和`options.QueueLimit = 2`。
+
+这样设置后，速率限制器会将多出的2个请求放入队列，并按照从旧到新的顺序进行处理。
+
+当启用`QueueLimit`运行API并发送五次GET请求时，API调用将会等待而不是返回503响应。
+
+![](img/778d5698a16c98b6e4877f67a9324f37_52_0.png)
+
+图 31: GET Request Queued
+
+当时间窗口过去后，API会正常返回响应。如果打开三个浏览器窗口，在第一个浏览器中触发速率限制使第五个请求排队，然后在第二个浏览器中发送新的GET请求，此时`QueueLimit`（值为2）将被占满。如果在第三个浏览器中再发送新请求，该请求将会返回503状态码。
+
+这是因为队列限制已达到上限，后续的请求将被拒绝。
+
+## 并发限制
+
+另一个选择是使用并发限制器，如代码列表43所示。
+
+**代码列表 43: 使用并发限制器**
+
+```csharp
+public class Program
+{
+    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
+
+        // 并发速率限制。
+        builder.Services.AddRateLimiter(_ =>
+            .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
+
+                options.PermitLimit = 4;
+                options.Window = TimeSpan.FromSeconds(20);
+                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+                options.QueueLimit = 2;
+            }));
+
+        var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        // 启用速率限制中间件。
+        app.UseRateLimiter();
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
+    }
+}
+app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
+app.Run();
+```
+
+当通过 `Swagger` 向 `WeatherForecast` API 发送 `GET` 请求时，我收到了如图29所示的响应。
+
+## 响应
+
+**Curl**
+
+```bash
+curl -X 'GET' \
+  'https://localhost:7147/WeatherForecast' \
+  -H accept: text/plain
+```
+
+**请求 URL**
 
 ```
 https://localhost:7147/WeatherForecast
 ```
 
-服务器响应
+**服务器响应**
 
 | 代码 | 详情 |
 | :--- | :--- |
@@ -1229,29 +1368,28 @@ https://localhost:7147/WeatherForecast
 ]
 ```
 
-> 图 29：GET 请求响应
+> 图 29: GET 请求响应
 
-GET 请求的响应正如我们预期的。为了达到 PermitLimit 选项设置的速率限制（我们指定的值为 4），我们将在第五次请求时收到 503 响应状态，如图 30 所示。
+`GET` 请求的响应与预期一致。为了触发由`PermitLimit`选项设置的速率限制（值为4），我们将在第五次请求时收到503响应状态码，如图30所示。
 
-## Xxx
+## 第五次请求被限制
 
 ![](img/778d5698a16c98b6e4877f67a9324f37_50_0.png)
 
-图 30：第五次 GET 请求受速率限制
+图 30: 第五次 GET 请求受速率限制
 
-这是因为在指定的 20 秒窗口内我们执行了四次以上的请求。当 20 秒窗口过后，当我们再次执行相同的 GET 请求时，我们将再次收到响应。
+这是因为在指定的20秒窗口内，我们已经执行了四次以上的请求。当20秒窗口过去后，再次执行相同的`GET`请求，便会重新收到正常的响应。
 
 ## 启用队列
 
-你可能记得，可以通过使用 QueueLimit 选项设置速率限制，将某些超过你设置的 PermitLimit 的请求放入队列。这本质上是延迟了请求而不是立即拒绝它们。为了实现这一点，我们需要稍微修改我们的速率限制器，如代码列表 42 所示。
+你或许记得，可以通过 `QueueLimit` 选项设置速率限制，将超出`PermitLimit`的请求放入队列。这实质上是延迟处理请求而不是立即拒绝。为了实现这一点，我们需要对速率限制器稍作修改，如代码列表42所示。
 
-代码列表 42：启用队列限制
+**代码列表 42: 启用队列限制**
 
 ```csharp
 public class Program
 {
     const string FIXED_RATE_LIMIT_POLICY = "fixed";
-
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -1263,6 +1401,7 @@ public class Program
         // 固定速率限制。
         builder.Services.AddRateLimiter(_ =>
             .AddFixedWindowLimiter(policyName: FIXED_RATE_LIMIT_POLICY, options => {
+
                 options.PermitLimit = 4;
                 options.Window = TimeSpan.FromSeconds(20);
                 options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
@@ -1270,6 +1409,7 @@ public class Program
             }));
 
         var app = builder.Build();
+
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
@@ -1286,31 +1426,30 @@ app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
 app.Run();
 ```
 
-为了使其生效，请添加使用 System.Threading.RateLimiting 的语句，并在你的速率限制器中添加 `options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst` 和 `options.QueueLimit = 2`。
+为了使配置生效，需要添加`using System.Threading.RateLimiting;`语句，并在速率限制器中添加`options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst`和`options.QueueLimit = 2`。
 
-这将队列两个请求，之后我的速率限制器将按照旧到新的顺序处理它们。
+这将允许两个请求进入队列，之后速率限制器会按照从旧到新的顺序处理它们。
 
-在启用 QueueLimit 运行 API 并执行五次 GET 请求将导致 API 调用等待而不是返回 503 响应。
+启用`QueueLimit`后运行API并执行五次`GET`请求，API调用会进入等待状态，而不是直接返回503响应。
 
 ![](img/778d5698a16c98b6e4877f67a9324f37_52_0.png)
 
-图 31：GET 请求入队
+图 31: GET 请求入队
 
-时间过后，API 将返回响应。如果我必须打开三个浏览器窗口，在队列第五次请求的第一个浏览器上触发速率限制，并在第二个浏览器中执行新的 GET 请求，那么 QueueLimit 2 将填满。如果我在第三个浏览器中执行新请求，则该请求将返回 503。
+当时间窗口过去后，API会返回响应。如果打开三个浏览器窗口，在第一个浏览器中触发速率限制，使第五个请求进入队列，然后在第二个浏览器中发起新的`GET`请求，此时`QueueLimit`（值为2）将被占满。如果在第三个浏览器中再发起新请求，该请求将返回503状态码。
 
-这是因为我的队列限制已达到，进一步的请求将被拒绝。
+这是因为队列限制已满，后续的请求会被拒绝。
 
 ## 并发限制
 
-另一个选项是使用并发限制器，如代码列表 43 所示。
+另一个选项是使用并发限制器，如代码列表43所示。
 
-代码列表 43：使用并发限制器
+**代码列表 43: 使用并发限制器**
 
 ```csharp
 public class Program
 {
     const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
-
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -1322,408 +1461,7 @@ public class Program
         // 并发速率限制。
         builder.Services.AddRateLimiter(_ =>
             .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
-                options.PermitLimit = 4;
-                options.Window = TimeSpan.FromSeconds(20);
-                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-                options.QueueLimit = 2;
-            }));
-            // 注意：此处原文代码逻辑与描述略有出入，按要求保留格式
-```
-*(注：由于原文代码块 43 逻辑与描述不符，此处仅保持代码格式，翻译根据上下文理解)*
 
-Wait，重新审视原文代码块 43 
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-    
-
-
-
-
-}
-{
-    
-    
-}
-{
-    
-}
-}
-}
-{
-    
-}
-}
-}
-{
-    
-}
-}
-}
-{
-    
-}
-}
-}
-{
-    
-}
-}
-}
-{
-    
-}
-}
-}
-{
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Code
- 43:
- the
-currency
-iter
-
-```csharp
-public class Program
-{
-    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
-
-    public static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
-
-        builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-
-        // Concurrent rate limit.
-        builder.Services.AddRateLimiter(_ =>
-            .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
                 options.PermitLimit = 4;
                 options.Window = TimeSpan.FromSeconds(20);
                 options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
@@ -1731,178 +1469,7 @@ public class Program
             }));
 
         var app = builder.Build();
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
 
-        // Enable rate limiting middleware.
-        app.UseRateLimiter();
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
-    }
-}
-app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
-app.Run();
-```
-
-For this to work, add the statement using System.Threading.RateLimiting, and add options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst and options.QueueLimit = 2 to your rate limiter.
-
-This will queue two requests, after my rate limiter will process them from oldest to newest.
-
-Running your API with the QueueLimit enabled and performing five GET requests will cause the API call to wait instead of returning a 503 response.
-
-![](img/778d5698a16c98b6e4877f67a9324f37_52_0.png)
-
-Figure 31: GET Request Queued
-
-After the time has passed, the API will return a response. If I had to open three browser windows, hit the rate limit on the first browser that queues the fifth request, and perform a new GET request in the second browser, the QueueLimit of 2 will be full. If I perform a new request in the third browser, that request will return a 503.
-
-This is because my queue limit has been reached, and further requests will be rejected.
-
-## Concurrency limit
-
-Another option is to use the concurrency limiter, as illustrated in Code Listing 43.
-
-Code Listing 43: Using the Concurrency Limiter
-
-```csharp
-public class Program
-{
-    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
-
-    public static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
-
-        builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-
-        // Concurrent rate limit.
-        builder.Services.AddRateLimiter(_ =>
-            .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
-                options.PermitLimit = 4;
-                options.Window = TimeSpan.FromSeconds(20);
-                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-                options.QueueLimit = 2;
-            }));
-
-        var app = builder.Build();
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
-
-        // Enable rate limiting middleware.
-        app.UseRateLimiter();
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
-    }
-}
-app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
-app.Run();
-```
-*(注：由于提供的文本中存在大量重复的字符和乱码，上述翻译已基于核心逻辑内容进行清理和处理)*
-
-非常抱歉，由于提供的原始文本包含了大量的重复字符和格式错误，以下是基于文本中核心逻辑内容的完整翻译版本：
-
-[content]
-
-![](img/778d5698a16c98b6e4877f67a9324f37_48_0.png)
-
-图 28：Swagger 中的 GET 请求
-
-当通过 Swagger 向 WeatherForecast API 发送 GET 请求时，我收到如图 29 所示的响应。
-
-## 响应
-
-Curl
-
-```
-curl -X 'GET' \
-  'https://localhost:7147/WeatherForecast' \
-  -H accept: text/plain
-```
-
-请求 URL
-
-```
-https://localhost:7147/WeatherForecast
-```
-
-服务器响应
-
-| 代码 | 详情 |
-| :--- | :--- |
-| 200 | |
-
-```json
-[
-  {
-    "date":"2023-07-17",
-    "temperatureC": 47,
-    "temperatureF": 116,
-    "summary": "Hot"
-  },
-  {
-    "date":"2023-07-18",
-    "temperatureC": 37,
-    "temperatureF": 98,
-    "summary": "scorching"
-  },
-  {
-    "date":"2023-07-19",
-    "temperatureC": 18,
-    "temperatureF": 64,
-    "summary": "Hot"
-  }
-]
-```
-
-> 图 29：GET 请求响应
-
-GET 请求的响应正如我们预期的。为了达到 PermitLimit 选项设置的速率限制（我们指定的值为 4），我们将在第五次请求时收到 503 响应状态，如图 30 所示。
-
-## Xxx
-
-![](img/778d5698a16c98b6e4877f67a9324f37_50_0.png)
-
-图 30：第五次 GET 请求受速率限制
-
-这是因为在指定的 20 秒窗口内我们执行了四次以上的请求。当 20 秒窗口过后，当我们再次执行相同的 GET 请求时，我们将再次收到响应。
-
-## 启用队列
-
-你可能记得，可以通过使用 QueueLimit 选项设置速率限制，将某些超过你设置的 PermitLimit 的请求放入队列。这本质上是延迟了请求而不是立即拒绝它们。为了实现这一点，我们需要稍微修改我们的速率限制器，如代码列表 42 所示。
-
-代码列表 42：启用队列限制
-
-```csharp
-public class Program
-{
-    const string FIXED_RATE_LIMIT_POLICY = "fixed";
-
-    public static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
-
-        builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-
-        // 固定速率限制。
-        builder.Services.AddRateLimiter(_ =>
-            .AddFixedWindowLimiter(policyName: FIXED_RATE_LIMIT_POLICY, options => {
-                options.PermitLimit = 4;
-                options.Window = TimeSpan.FromSeconds(20);
-                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-                options.QueueLimit = 2;
-            }));
-
-        var app = builder.Build();
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
@@ -1918,66 +1485,6 @@ public class Program
 app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
 app.Run();
 ```
-
-为了使其生效，请添加使用 System.Threading.RateLimiting 的语句，并在你的速率限制器中添加 `options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst` 和 `options.QueueLimit = 2`。
-
-这将队列两个请求，之后我的速率限制器将按照旧到新的顺序处理它们。
-
-在启用 QueueLimit 运行 API 并执行五次 GET 请求将导致 API 调用等待而不是返回 503 响应。
-
-![](img/778d5698a16c98b6e4877f67a9324f37_52_0.png)
-
-图 31：GET 请求入队
-
-时间过后，API 将返回响应。如果我必须打开三个浏览器窗口，在队列第五次请求的第一个浏览器上触发速率限制，并在第二个浏览器中执行新的 GET 请求，那么 QueueLimit 2 将填满。如果我在第三个浏览器中执行新请求，则该请求将返回 503。
-
-这是因为我的队列限制已达到，进一步的请求将被拒绝。
-
-## 并发限制
-
-另一个选项是使用并发限制器，如代码列表 43 所示。
-
-代码列表 43：使用并发限制器
-
-```csharp
-public class Program
-{
-    const string CONCURRENT_RATE_LIMIT_POLICY = "concurrent";
-
-    public static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
-
-        builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-
-        // 并发速率限制。
-        builder.Services.AddRateLimiter(_ =>
-            .AddConcurrencyLimiter(policyName: CONCURRENT_RATE_LIMIT_POLICY, options => {
-                options.PermitLimit = 4;
-                options.Window = TimeSpan.FromSeconds(20);
-                options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-                options.QueueLimit = 2;
-            }));
-
-        var app = builder.Build();
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
-
-        // 启用速率限制中间件。
-        app.UseRateLimiter();
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
-    }
-}
-app.MapControllers().RequireRateLimiting(FIXED_RATE_LIMIT_POLICY);
-app.Run();
-```
-
 
 ```csharp
 builder.Services.AddControllers();
@@ -1998,34 +1505,39 @@ builder.Services.AddRateLimiter(opt =>
                     QueueLimit = 0,
                     Window = TimeSpan.FromMinutes(1)
                 })),
-            PartitionedRateLimiter.Create<HttpContext, string>(httpContext => RateLimitPartition.GetFixedWindowLimiter(
-                    partitionKey: httpContext.User.Identity?.Name ??
-                    HttpContext.Request.Headers.Host.ToString(),
-                    factory: partition => new FixedWindowRateLimiter
-                    {
-                        AutoReplenishment = true,
-                        PermitLimit = 1000,
-                        QueueLimit = 0,
-                        Window = TimeSpan.FromHours(1)
-                    }))
+};
+```
+
+
+
+`PartitionedRateLimiter.Create<HttpContext, string>(httpContext => RateLimitPartition.GetFixedWindowLimiter(`
+```
+partitionKey: httpContext.User.Identity?.Name ??
+HttpContext.Request.Headers.Host.ToString(),
+factory: partition => new FixedWindowRateLimiter
+{
+    AutoReplenishment = true,
+    PermitLimit = 1000,
+    QueueLimit = 0,
+    Window = TimeSpan.FromHours(1)
+}))
 });
+```
+`var app = builder.Build();`
 
-var app = builder.Build();
-
+```
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-// 启用限流中间件。
-app.UseRateLimiter();
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
 ```
+// 启用限流中间件。
+`app.UseRateLimiter();`
+`app.UseHttpsRedirection();`
+`app.UseAuthorization();`
+`app.MapControllers();`
+`app.Run();`
 
 第一个限流器限制了 ASP.NET Core，我只想每分钟允许 100 次请求。我通过指定 `PermitLimit = 100` 和 `Window = TimeSpan.FromMinutes(1)` 这一点。
 
@@ -2092,10 +1604,13 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
         app.UseHttpsRedirection();
         app.UseAuthorization();
+
         // 添加输出缓存的中间件。
         app.UseOutputCache();
+
         // 为了让输出缓存工作，添加 CacheOutput。
         app.MapControllers().CacheOutput();
 
@@ -2104,9 +1619,7 @@ public class Program
 }
 ```
 
-
-
-这意味着如果我运行 API 并使用 URL https://localhost:7203/weatherforecast?days=2 调用它，我将收到如下响应，如代码列表 49 所示。
+这意味着如果我运行 API 并使用 URL `https://localhost:7203/weatherforecast?days=2` 调用它，我将收到如下响应，如代码列表 49 所示。
 
 ## 代码列表 49：返回两天的预报
 
@@ -2125,7 +1638,7 @@ public class Program
 }
 ```
 
-如果我使用 URL https://localhost:7203/weatherforecast?days=6 调用六天的预报，我将收到代码列表 50 所示的响应。注意，考虑到温度，摘要（summary）的值似乎并不逻辑，但在在本示例中这并不重要。
+如果我使用 URL `https://localhost:7203/weatherforecast?days=6` 调用六天的预报，我将收到代码列表 50 所示的响应。注意，考虑到温度，摘要（summary）的值似乎并不逻辑，但在在本示例中这并不重要。
 
 ## 代码列表 50：返回六天的预报
 
@@ -2182,9 +1695,9 @@ Minimal APIs 依赖于顶层语句（top-level statements），随着开发者�
 
 三个主要特性是：
 
--   端点过滤器（Endpoint filters）
--   路由组（Route groups）
--   类型结果（Typed results）
+- 端点过滤器（Endpoint filters）
+- 路由组（Route groups）
+- 类型结果（Typed results）
 
 端点过滤器是在端点处理程序逻辑执行之前之后执行代码的方法。过滤器逻辑可以检查并更改参数，使用端点过滤器对于日志记录或验证等工作很有帮助。
 
@@ -2200,24 +1713,31 @@ Minimal APIs 依赖于顶层语句（top-level statements），随着开发者�
 
 ```csharp
 using MinimalAPIs.Model;
+
 var builder = WebApplication.CreateBuilder(args);
+
 // 将服务添加到容器中。
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
 // 配置 HTTP 请求管道。
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
 app.MapGet("/movies", (IMovieRepository movieRepo) => {
     return movieRepo.GetAllMovieItems();
 });
+
 app.Run();
 ```
 
@@ -2262,11 +1782,8 @@ app.MapGet("/movies", (IMovieRepository movieRepo) => {
   return movieRepo.GetAllMovieItems();
 }).AddEndpointFilter(async (context, next) => {
   app.Logger.LogInformation($"Request {context.Request.Path} processed at {DateTime.Now}");
-
   var result = await next(context);
-
   app.Logger.LogInformation($"Request {context.Request.Path} processed at {DateTime.Now}");
-
   return result;
 });
 ```
@@ -2287,7 +1804,9 @@ builder.Logging.AddDebug();
 
 ```csharp
 using MinimalAPIs.Model;
+
 var builder = WebApplication.CreateBuilder(args);
+
 // 将服务添加到容器中。
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
@@ -2299,6 +1818,7 @@ builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 
 var app = builder.Build();
+
 // 配置 HTTP 请求管道。
 if (app.Environment.IsDevelopment())
 {
@@ -2313,11 +1833,8 @@ app.MapGet("/movies", (IMovieRepository movieRepo) => {
     return movieRepo.GetAllMovieItems();
 }).AddEndpointFilter(async (context, next) => {
     app.Logger.LogInformation($"Request {context.Request.Path} processed at {DateTime.Now}");
-
     var result = await next(context);
-
     app.Logger.LogInformation($"Request {context.Request.Path} processed at {DateTime.Now}");
-
     return result;
 });
 
@@ -2338,13 +1855,13 @@ app.Run();
 // (内容根据上下文继续)
 ```
 
-
-
 ```
 return result;
 ));
 app.Run();
 ```
+
+
 
 重新运行 API 并添加一部电影将如预期的那样将信息记录到控制台中。
 
@@ -2354,9 +1871,9 @@ app.Run();
 
 然而，问题是现在我们有了重复代码，因为我们有两个端点过滤器。我们在 GET 请求上有一个，在 POST 请求上也有用一个。
 
-让我们通过添加通用的 `AddEndpointFilter` 实现来改进代码。如代码列表 57 所示，我在 `MapGet` 和 `MapPost` 中添加了 `AddEndpointFilter<MinimalAPILogFilter>()`。这告诉我的 API 我想使用 `MinimalAPILogFilter` 作为端点过滤器。
+让我们通过添加通用的`AddEndpointFilter`实现来改进代码。如代码列表 57 所示，我在`MapGet`和`MapPost`中添加了`AddEndpointFilter<MinimalAPILogFilter>()`。这告诉我的 API 我想使用`MinimalAPILogFilter`作为端点过滤器。
 
-代码列表 57：添加通用的 `AddEndpointFilter` 实现
+## 代码列表 57：添加通用的`AddEndpointFilter`实现
 
 ```csharp
 using MinimalAPIs;
@@ -2386,10 +1903,13 @@ if (app.Environment.IsDevelopment)
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-app.MapGet("/movies", (IMovieRepository movieRepo) => {
+app.MapGet("/movies", (IMovieRepository movieRepo) =>
+{
     return movieRepo.GetAllMovieItems();
 }).AddEndpointFilter<MinimalAPILogFilter>();
-app.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRepo) => {
+
+app.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRepo) =>
+{
     if (movieItem is null) return Results.BadRequest();
     if (string.IsNullOrEmpty(movieItem.Title)) return Results.BadRequest();
 
@@ -2400,22 +1920,25 @@ app.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRepo) => {
 app.Run();
 ```
 
-`MinimalAPILogFilter` 是一个自定义类，它在委托内部包含了我的日志代码。你可以在代码列表 58 中看到我自定义类的代码。它实现了 `IEndpointFilter` 接口，并在 `InvokeAsync` 方法中包含了日志逻辑。
+`MinimalAPILogFilter`是一个自定义类，它在委托内部包含了我的日志代码。你可以在代码列表 58 中看到我自定义类的代码。它实现了`IEndpointFilter`接口，并在`InvokeAsync`方法中包含了日志逻辑。
 
-依赖注入提供了对日志器的访问，我通过 `LoggingFilter` 构造函数注入了它。
+依赖注入提供了对日志器的访问，我通过`LoggingFilter`构造函数注入了它。
 
-## 代码列表 58：自定义的 `MinimalAPILogFilter` 类
+## 代码列表 58：自定义的`MinimalAPILogFilter`类
 
 ```csharp
 namespace MinimalAPIs;
+
 public class LoggingFilter : IEndpointFilter
 {
     protected readonly ILogger _logger;
+
     protected LoggingFilter(ILogger loggerFac)
     {
         _logger = loggerFac.CreateLogger<LoggingFilter>();
     }
-    public virtual async Task<object> 
+
+    public virtual async Task<object>
     InvokeAsync(EndpointInvocationContext context, EndpointFilterDelegate next)
     {
         _logger.LogInformation("Request {context.HttpContext.Request.Path} processed at {DateTime.Now}");
@@ -2431,38 +1954,46 @@ public class LoggingFilter : IEndpointFilter
 class MinimalAPILogFilter : LoggingFilter
 {
     public MinimalAPILogFilter(ILoggerFactory loggerFac) :
-    base(loggerFac) { }
+        base(loggerFac)
+    {
+    }
 }
 ```
 
-最后，我创建了一个派生类 `MinimalAPILogFilter`，我在通用的 `AddEndpointFilter` 实现中使用它。
+最后，我创建了一个派生类`MinimalAPILogFilter`，我在通用的`AddEndpointFilter`实现中使用它。
 
 运行 API 并执行 GET 或 POST 请求仍然如预期那样记录到控制台，如图 37 所示。
 
-```
+```text
 C:\z_Syncfusion\CSharp11Succinctly\MinimalAPIs\bin\Debu...
+
 info: Microsoft.Hosting.Lifetime[14]
 Now listening on: https://localhost:7163
+
 info: Microsoft.Hosting.Lifetime[14]
 Now listening on: http://localhost:5185
+
 info: Microsoft.Hosting.Lifetime[0]
 Application started. Press Ctrl+C to shut down.
+
 info: Microsoft.Hosting.Lifetime[0]
 Hosting environment: Development
+
 info: Microsoft.Hosting.Lifetime[0]
-Content root path: C:\z_Syncfusion\CSharp1Succinctly\
-MinimalAPIS
+Content root path: C:\z_Syncfusion\CSharp1Succinctly\MinimalAPIS
+
 info: MinimalAPIs.LoggingFilter[0]
 Request /movies processed at 2023/05/26 14:02:58
+
 info: MinimalAPIs.LoggingFilter[0]
 Request /movies processed at 2023/05/26 14:02:58
 ```
 
 图 37：控制台日志输出仍然有效
 
-创建一个自定义类是非常方便的，并且减少了我们实现端点过滤器需要编写的重复代码。然而，必须配置每个端点以使用通用的 **EndpointFilter** 可能会有点麻烦。
+创建一个自定义类是非常方便的，并且减少了我们实现端点过滤器需要编写的重复代码。然而，必须配置每个端点以使用通用的`EndpointFilter`可能会有点麻烦。
 
-现在可以使用路由组（route groups）。让我们来看看它是如何工作的的。
+现在可以使用路由组（route groups）。让我们来看看它是如何工作的。
 
 ## 路由组
 
@@ -2470,18 +2001,19 @@ Request /movies processed at 2023/05/26 14:02:58
 
 考虑代码列表 59 所示的代码。
 
-代码列表 59：添加路由组
+## 代码列表 59：添加路由组
 
 ```csharp
 using MinimalAPIs.Model;
+
 var builder = WebApplication.CreateBuilder(args);
+
 // 将服务添加到容器中。
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-```csharp
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
@@ -2498,18 +2030,24 @@ if (app.Environment.IsDevelopment)
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
-var groupedLogging = app.MapGroup("/api").AddEndpointFilter(async (context, next) => {
+var groupedLogging = app.MapGroup("/api").AddEndpointFilter(async (context, next) =>
+{
     app.Logger.LogInformation($"Request {context.HttpContext.Request.Path} processed at {DateTime.Now}");
+
     var result = await next(context);
+
     app.Logger.LogInformation($"Request {context.HttpContext.Request.Path} processed at {DateTime.Now}");
+
     return result;
 });
 
-groupedLogging.MapGet("/movies", (IMovieRepository movieRepo) => {
+groupedLogging.MapGet("/movies", (IMovieRepository movieRepo) =>
+{
     return movieRepo.GetAllMovieItems();
 });
 
-groupedLogging.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRepo) => {
+groupedLogging.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRepo) =>
+{
     if (movieItem is null) return Results.BadRequest();
     if (string.IsNullOrEmpty(movieItem.Title)) return Results.BadRequest();
 
@@ -2520,15 +2058,15 @@ groupedLogging.MapPost("/movies", (MovieItem movieItem, IMovieRepository movieRe
 app.Run();
 ```
 
-我创建了一个变量 `groupedLogging`，它的类型是 `RouteGroupBuilder`，并分配了一个指定 `/api` 的 `MapGroup`。这意味着所有以 `/api` 开头的端点将获得此配置。
+我创建了一个变量`groupedLogging`，它的类型是`RouteGroupBuilder`，并分配了一个指定`/api`的`MapGroup`。这意味着所有以`/api`开头的端点将获得此配置。
 
-最后，我将 `app.MapGet` 和 `app.MapPost` 修改为 `groupedLogging.MapGet` 和 `groupedLogging.MapPost`。这意味着我不再需要为每个端点单独应用端点过滤器。
+最后，我将`app.MapGet`和`app.MapPost`修改为`groupedLogging.MapGet`和`groupedLogging.MapPost`。这意味着我不再需要为每个端点单独应用端点过滤器。
 
 ![](img/778d5698a16c98b6e4877f67a9324f37_76_0.png)
 
-运行我的 API 并在 Swagger 中查看端点，你会发现我的端点显示为 `/api/movies`，如图 38 所示。
+运行我的 API 并在 Swagger 中查看端点，你会发现我的端点显示为`/api/movies`，如图 38 所示。
 
-```
+```text
 C:\z_Syncfusion\CSharp11Succinctly\MinimalAPIs\bin\Deb...
 info: Microsoft.Hosting.Lifetime[14]
 Now listening on: https://localhost:7163
@@ -2539,8 +2077,7 @@ Application started. Press Ctrl+C to shut down.
 info: Microsoft.Hosting.Lifetime[0]
 Hosting environment: Development
 info: Microsoft.Hosting.Lifetime[0]
-root path: C:\z_Syncfusion\CSharp1Succinctly\
-MinimalAPI
+root path: C:\z_Syncfusion\CSharp1Succinctly\MinimalAPI
 info: MinimalAPIs[0]
 Request /api/movies processed at 2023/05/26 14:34:10
 info: MinimalAPIs[0]
@@ -2555,12 +2092,13 @@ Request /api/movies processed at 2023/05/26 14:34:10
 
 我在网上找到了一些使用静态抽象接口成员的有趣示例。在书的前部，我们查看了泛型数学（Generic Math）支持以及静态抽象接口成员如何启用此功能。我提到过我们将查看如何在实际情况下应用它。Minimal APIs 提供了一个说明如何使用静态抽象接口成员来让生活变得简单的机会。
 
-Minimal APIs 并不意味着我们需要将所有逻辑都放在 `Program.cs` 文件中。事实上，我想让我的 `Program.cs` 尽可能精简。因此，我正在重构我的 Minimal API 以使其更于管理。为了实现这一点，我正在创建简化我的端点的类。
+Minimal APIs 并不意味着我们需要将所有逻辑都放在`Program.cs`文件中。事实上，我想让我的`Program.cs`尽可能精简。因此，我正在重构我的 Minimal API 以使其更于管理。为了实现这一点，我正在创建简化我的端点的类。
 
-代码 60：`IEndpoint` 接口
+## 代码列表 60：`IEndpoint`接口
 
 ```csharp
 namespace MinimalAPISStaticAbstractInterfaceMembers;
+
 public interface IEndpoint
 {
     static abstract string Pattern { get; }
@@ -2569,42 +2107,45 @@ public interface IEndpoint
 }
 ```
 
+你将在代码列表 60 中看到一个接口，它使用了几个静态抽象接口成员。它包含一个用于`Pattern`的属性（它是终点的路径）；一个指定了 GET、POST、PUT 等的`Method`属性；最后是一个`Delegate`（委托），它是告诉我的 API 如何处理收到的请求的句程序。
 
+## 代码列表 61：`MapEndpointExtension`方法
 
-
-你将在代码列表 60 中看到一个接口，它使用了几个静态抽象接口成员。它包含一个用于 `Pattern` 的属性（它是终点的路径）；一个指定了 GET、POST、PUT 等的 `Method` 属性；最后是一个 `Delegate`（委托），它是告诉我的 API 如何处理收到的请求的句程序。
-
-## 代码列表 61：MapEndpointExtension 方法
-
-```
+```csharp
 namespace MinimalAPIStaticAbstrInterMembers;
+
 public static class EndpointExtensions
 {
-    public static IEndpointRouteBuilder MapEndpoint<T>(this
-IEndpointRouteBuilder app) where T : IEndpoint
-{
+    public static IEndpointRouteBuilder MapEndpoint<T>(
+        this IEndpointRouteBuilder app
+    ) where T : IEndpoint
+    {
         app.MapMethods(
             T.Pattern,
             new[] { T.Method.ToString() },
             T.Handler
         );
+
         return app;
     }
 }
 ```
 
-在代码列表 61 中，你看到一个映射你的终点的扩展方法。该扩展方法对 `T` 有约束，以确保它实现了 `IEndpoint`。然后它映射了 `Pattern`、`Method` 和 `Handler` 并返回一个 `IEndpointRouteBuilder`。
+在代码列表 61 中，你看到一个映射你的终点的扩展方法。该扩展方法对`T`有约束，以确保它实现了`IEndpoint`。然后它映射了`Pattern`、`Method`和`Handler`并返回一个`IEndpointRouteBuilder`。
 
-## 代码列表 62：GetMovies Endpoint 类
+## 代码列表 62：`GetMovies Endpoint`类
 
 ```csharp
 using MinimalAPIs.Model;
+
 namespace MinimalAPIStaticAbstrInterMembers;
+
 public class GetMoviesEndpoint : IEndpoint
 {
     public static string Pattern => "movies";
     public static HttpMethod Method => HttpMethod.Get;
     public static Delegate Handler => GetMovies;
+
     private static IResult GetMovies(IMovieRepository repo)
     {
         return Results.Ok(repo.GetAllMovieItems());
@@ -2612,47 +2153,50 @@ public class GetMoviesEndpoint : IEndpoint
 }
 ```
 
-现在我可以创建一个 `GetMoviesEndpoint` 类（代码列表 62），它实现了 `IEndpoint` 接口并返回电影存储库中的电影。
+现在我可以创建一个`GetMoviesEndpoint`类（代码列表 62），它实现了`IEndpoint`接口并返回电影存储库中的电影。
 
-代码列表 63 中的 `Program.cs` 文件要洁得多，因为我不需要一直将最小 API 的逻辑保持在这里。我现在可以使用 `app.MapEndPoint` 调用我的终点，并为它提供之前创建的终点类。
+代码列表 63 中的`Program.cs`文件要洁得多，因为我不需要一直将最小 API 的逻辑保持在这里。我现在可以使用`app.MapEndPoint`调用我的终点，并为它提供之前创建的终点类。
 
-我现在可以更高效地构建我的最小 API结构，这允许我更好地管理终点逻辑。
+我现在可以更高效地构建我的最小 API 结构，这允许我更好地管理终点逻辑。
 
-## 代码列表 63：更整洁的 Program.cs
+## 代码列表 63：更整洁的`Program.cs`
+
+
 
 ```csharp
 using MinimalAPIs.Model;
 
 namespace MinimalAPIsStaticAbstrInterfMembers
 {
-public class Program
-{
-    public static void Main(string[] args)
+    public class Program
     {
-        var builder = WebApplication.CreateBuilder(args);
-
-        // 将服务添加到容器中。
-        builder.Services.AddAuthorization();
-        builder.Services.AddScoped<IMovieRepository, MovieRepository>();
-
-        builder.Services.AddEndpointsExplorer();
-        builder.Services.AddSwaggerGen();
-
-        var app = builder.Build();
-
-        // 配置 HTTP 请求流水线。
-        if (app.Environment.IsDevelopment())
+        public static void Main(string[] args)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            var builder = WebApplication.CreateBuilder(args);
+
+            // 将服务添加到容器中。
+            builder.Services.AddAuthorization();
+            builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
+            builder.Services.AddEndpointsExplorer();
+            builder.Services.AddSwaggerGen();
+
+            var app = builder.Build();
+
+            // 配置 HTTP 请求流水线。
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseAuthorization();
+
+            app.MapEndpoint<GetMoviesEndpoint>();
+
+            app.Run();
         }
-
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
-
-        app.MapEndpoint<GetMoviesEndpoint>();
-
-        app.Run();
     }
 }
 ```
@@ -2705,13 +2249,10 @@ public class Program
 </Project>
 ```
 
-
-
-
-- Mean（平均值）：所有测量值的算术平均值
-- Allocated（分配）：单次操作分配的内存（仅托管，包含 1KB = 1024B）
-- ns: 1 纳秒
-- us: 1 微秒
+- `Mean`（平均值）：所有测量值的算术平均值
+- `Allocated`（分配）：单次操作分配的内存（仅托管，包含 1KB = 1024B）
+- `ns`：1 纳秒
+- `us`：1 微秒
 
 将 .NET 6 的结果与 .NET 7 进行比较，我们可以看到使用 .NET 7 时时间显著缩短，而且 .NET 7 没有产生任何分配。
 
@@ -2721,7 +2262,7 @@ public class Program
 
 LINQ 中的 `OrderBy` 方法允许创建输入可枚举的排序副本。代码列表 68 列出了后续示例的基准测试代码。
 
-代码列表 68：使用新 Order() 方法的 LINQ 示例
+代码列表 68：使用新 `Order()` 方法的 LINQ 示例
 
 ```c
 using BenchmarkDotNet.Attributes;
@@ -2767,8 +2308,11 @@ public class Bench {
 ## 代码列表 69：OrderBy() 与 Order() 的结果
 
 | Method | Length | Mean | Ratio | Code Size | Allocated | Alloc Ratio |
+
 | --- | --- | --- | --- | --- | --- | --- |
+
 | Order | 1024 | 95.13 us | 1.00 | 427 B | 12.3 KB | 1.00 |
+
 | Order | 1024 | 90.64 us | 0.96 | 336 B | 8.28 KB | 0.67 |
 
 列表 69 中的结果不言自明。使用 `OrderBy()`，调用者传递一个 `Func<T, TKey>` 谓词，为每个项目发出比较。由于使用键排序项目非常常见，.NET 7 会代表调用者通过隐式的 `x => x` 执行相同的排序。
@@ -2830,11 +2374,17 @@ public class StudentPoco
 代码列表 71：.NET 6 的 JSON 序列化
 
 | [Host] : .NET 6.0.016 (6.0.1627311), X64 RyuJIT | | |
+
 | DefaultJob : .NET 6.0.016 (6.0.1627311), X64 RyuJIT | | |
+
 | Method | Mean | Code Size | Allocated | Alloc Ratio |
+
 | --- | --- | --- | --- | --- |
+
 | ImplicitOptions | 325.3 ns | 999 B | 232 B | 1.00 |
+
 | WithCached | 313.1 ns | 871 B | 232 B | 1.00 |
+
 | WithoutCached | 344,578.1 ns | 1180 B | 13623 B | 58.72 |
 
 使用 .NET 7 运行基准测试展示了完全不同的局面。
@@ -2842,11 +2392,17 @@ public class StudentPoco
 代码列表 72：.NET 7 的 JSON 序列化
 
 | [Host] : .NET 7.0.5 (7.0.5217405), X64 RyuJIT | | |
+
 | DefaultJob : .NET 7.0.5 (7.0.5217405), X64 RyuJIT | | |
+
 | Method | Mean | Code Size | Allocated | Alloc Ratio |
+
 | --- | --- | --- | --- | --- |
+
 | ImplicitOptions | 323.4 ns | 1004 B | 80 B | 1.00 |
+
 | WithCached | 327.7 ns | 680 B | 80 B | 1.00 |
+
 | WithoutCached | 1,112.5 ns | 865 B | 311 B | 3.89 |
 
 .NET 7 添加了一个包含类型信息的全局缓存，并将其与实例分开。使用 `JsonSerializerOptions` 仍然会缓存，但如果通过反射发射生成了新的处理程序，它们将在全局级别进行缓存。
@@ -2857,5 +2413,4 @@ public class StudentPoco
 
 要说明 .NET 7 中所做的的所有性能改进，就需要一整本书了。这里的结论是意识到，尽管 .NET 7 是一个标准术支持（Standard Term Support）版本，但这并不意味着你不应该将项目升级到 .NET 7。你的项目开箱即可获得的性能提升足以成为升级到 .NET 7 的充分理由。
 
-关于 BenchmarkDotNet 的更多信息，请参阅其[文档](https://github.com/dotnet/BenchmarkDotNet)。
-
+关于 `BenchmarkDotNet` 的更多信息，请参阅其[文档](https://github.com/dotnet/BenchmarkDotNet)。

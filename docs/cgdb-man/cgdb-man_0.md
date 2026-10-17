@@ -1,6 +1,7 @@
+
 # CGDB 中文手册
 
-# 关于《CGDB 中文手册》
+## 关于《CGDB 中文手册》
 
 《CGDB 中文手册》是一本由英文版《CGDB Manual》翻译而来的一本手册，CGDB 的项目主页在[`cgdb.github.com/`](http://cgdb.github.com/)，英文原版的《CGDB Manual》在[`cgdb.github.com/docs/cgdb.html`](http://cgdb.github.com/docs/cgdb.html)。
 

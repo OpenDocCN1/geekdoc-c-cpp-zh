@@ -1,38 +1,18 @@
+
+
 # C 语言与编程题库：强化你的编程能力，第 2 版
-
-
-
-
-
-
-
-
-
 
 ![](img/a9b55275f80b34892d021c70982643c0_1_0.png)
 
-
-
-
-
 ![](img/a9b55275f80b34892d021c70982643c0_2_0.png)
-
-
-
-
-
-
-
-
 
 ![](img/a9b55275f80b34892d021c70982643c0_3_0.png)
 
+## “C”语言
 
-## ‘C’语言
+“C”是一种通用的、强大的计算机编程语言，支持结构化编程和自顶向下设计方法。
 
-‘C’是一种通用的、强大的计算机编程语言，支持结构化编程和自顶向下设计方法。
-
-它由 Dennis Ritchie 于1972年在 AT & T 贝尔实验室开发。它用于重新实现 Unix 操作系统。
+它由 Dennis Ritchie 于 1972 年在 AT & T 贝尔实验室开发。它用于重新实现 Unix 操作系统。
 
 它用于设计系统软件（如操作系统和编译器）、网络设备，以及开发应用软件（如数据库和电子表格）。Unix 内核完全是用 C 语言开发的。
 
@@ -44,7 +24,7 @@
 
 ## 前言
 
-《C语言题库》通过许多问题帮助你理解编程和编码。
+《C 语言题库》通过许多问题帮助你理解编程和编码。
 
 本书涵盖了从面试和考试角度认为重要的所有问题。
 
@@ -52,24 +32,26 @@
 
 尽管已经注意了准确性，但不能排除细微不准确的可能。最后，感谢所有信任我的学生。
 
-
-
 # 第一章
 
-### 如何输出？
+## 如何输出？
 
-`printf()` 函数是C语言中的内置库函数，默认在C库中可用。该函数的声明和相关的宏定义在 `stdio.h` 中，这是C语言中的一个头文件。
+`printf()` 函数是 C 语言中的内置库函数，默认在 C 库中可用。该函数的声明和相关的宏定义在 `stdio.h` 中，这是 C 语言中的一个头文件。
 
-在C语言中使用 `printf()` 库函数时，必须包含 `stdio.h` 文件。
+在 C 语言中使用 `printf()` 库函数时，必须包含 `stdio.h` 文件。
 
-在 C语言中，`printf()` 函数用于在屏幕上打印字符、字符串、浮点数、整数、八进制和十六进制值。
+在 C 语言中，`printf()` 函数用于在屏幕上打印字符、字符串、浮点数、整数、八进制和十六进制值。
 
 `printf()` 函数的语法为：`printf("Text");`
 
-`printf("Format string", variable)`
+```c
+printf("Format string", variable)
+```
 
-- 1. 编写一个程序打印消息：
-欢迎学生，我们正在尝试学习C
+### 1. 编写一个程序打印消息
+
+欢迎学生，我们正在尝试学习 C。
+
 ```c
 #include <stdio.h>
 int main()
@@ -80,9 +62,12 @@ int main()
 }
 ```
 
-- 2. 编写一个程序打印你的名字和电话：
+### 2. 编写一个程序打印你的名字和电话
+
 姓名：XXX
+
 电话：99-999-99999
+
 ```c
 #include <stdio.h>
 int main()
@@ -93,7 +78,8 @@ return(0);
 }
 ```
 
-- 3. 编写一个程序打印你名字的首字母，例如 F：
+### 3. 编写一个程序打印你名字的首字母，例如 F
+
 ```c
 #include <stdio.h>
 int main()
@@ -108,11 +94,16 @@ int main()
 }
 ```
 
-- 4. 编写一个程序打印：
+### 4. 编写一个程序打印
+
 姓名 XXX
+
 出生日期：10/200
+
 课程：C
+
 学校：Swati Computers
+
 ```c
 #include <stdio.h>
 int main()
@@ -125,7 +116,8 @@ int main()
 }
 ```
 
-- 5. 编写一个C程序声明整数和浮点变量，并将它们初始化为 23、56 和 34.6。打印这些值。
+### 5. 编写一个 C 程序声明整数和浮点变量，并将它们初始化为 23、56 和 34.6。打印这些值
+
 ```c
 #include <stdio.h>
 int main()
@@ -141,8 +133,8 @@ return 0;
 }
 ```
 
-- 6. 编写一个程序声明char变量，将其初始化为 A，然后打印它。
-（注：此处OCR内容混乱，根据提示意图修复）
+### 6. 编写一个程序声明 `char` 变量，将其初始化为 A，然后打印它
+
 ```c
 #include <stdio.h>
 int main()
@@ -154,7 +146,8 @@ return 0;
 }
 ```
 
-- 7. 编写一个程序计算矩形的面积。
+### 7. 编写一个程序计算矩形的面积
+
 ```c
 #include <stdio.h>
 int main() {
@@ -167,22 +160,23 @@ return(0);
 }
 ```
 
-## 第二章
+# 第二章
 
-### 基本输入与输出
+## 基本输入与输出
 
 `scanf()` 函数允许你从标准输入接受输入。`scanf()` 的语法为：`scanf("format string", variable)`
 
 | 格式说明符 | 描述 |
 |---|---|
-| %d | 整数说明符 |
-| %f | 浮点数说明符 |
-| %c | 字符说明符 |
-| %s | 字符串说明符 |
-| %u | 无符号整数说明符 |
-| %ld | 长整数说明符 |
+| `%d` | 整数说明符 |
+| `%f` | 浮点数说明符 |
+| `%c` | 字符说明符 |
+| `%s` | 字符串说明符 |
+| `%u` | 无符号整数说明符 |
+| `%ld` | 长整数说明符 |
 
-- 8. 编写一个程序计算圆的面积和周长。
+### 8. 编写一个程序计算圆的面积和周长
+
 ```c
 #include <stdio.h>
 int main() {
@@ -197,7 +191,8 @@ int main() {
 }
 ```
 
-- 9. 编写一个程序，提示用户输入年龄并打印。
+### 9. 编写一个程序，提示用户输入年龄并打印
+
 ```c
 #include <stdio.h>
 int main()
@@ -210,7 +205,8 @@ int main()
 }
 ```
 
-- 10. 编写一个程序，提示用户输入两个数字并计算它们的加法、减法、乘法除法。
+### 10. 编写一个程序，提示用户输入两个数字并计算它们的加法、减法、乘法、除法
+
 ```c
 #include <stdio.h>
 int main()
@@ -228,7 +224,8 @@ int main()
 }
 ```
 
-- 11. 编写一个程序输入三个科目的分数并计算总分和百分比。
+### 11. 编写一个程序输入三个科目的分数并计算总分和百分比
+
 ```c
 #include <stdio.h>
 int main() {
@@ -239,11 +236,12 @@ int main() {
     percentage=total/300*100;
     printf("\nMarks obtained=%d",total);
     printf("\nPercentage scored=%%f",percentage);
-    return(0);
+    return 0;
 }
 ```
 
-- 12. 编写一个程序将指定的天数转换为年、周和天（忽略闰年）。
+### 12. 编写一个程序将指定的天数转换为年、周和天（忽略闰年）
+
 ```c
 #include <stdio.h>
 int main() {
@@ -260,11 +258,7 @@ int main() {
 }
 ```
 
-
-
-
-
-13. 编写一个程序，将给定的整数（秒）转换为小时、分钟和秒。
+### 13. 编写一个程序，将给定的整数（秒）转换为小时、分钟和秒
 
 ```c
 #include <stdio.h>
@@ -280,7 +274,7 @@ s = (sec - (3600*h)-(m*60));
 }
 ```
 
-14. 编写一个程序，当用户给出距离和时间时，计算自行车的速度。
+### 14. 编写一个程序，当用户给出距离和时间时，计算自行车的速度
 
 ```c
 #include <stdio.h>
@@ -294,14 +288,15 @@ int main() {
 }
 ```
 
-15. 编写一个程序，将温度从摄氏度转换为华氏度。
+### 15. 编写一个程序，将温度从摄氏度转换为华氏度
 
 ```c
 #include <stdio.h>
 int main() {
 ```
 
-- 17. 编写一个程序输入两个数字并在不使用任何第三方的情况下交换它们的值。
+### 17. 编写一个程序输入两个数字并在不使用任何第三方变量的情况下交换它们的值
+
 ```c
 #include <stdio.h>
 int main ()
@@ -318,9 +313,9 @@ return(0);
 }
 ```
 
-- 18. 编写一个程序，当用户给出 P、R 和 T 时，计算单利。
+### 18. 编写一个程序，当用户给出 P、R 和 T 时，计算单利
 
-- 19. 编写一个 C 语言程序，计算三个数的和，并用逗号分隔在一行内获取结果。
+### 19. 编写一个 C 语言程序，计算三个数的和，并用逗号分隔在一行内获取结果
 
 ```c
 #include<stdio.h>
@@ -340,7 +335,7 @@ return(0);
 }
 ```
 
-- 20. 编写一个程序输入购买的笔的数量和每支笔的价格，并计算应付总。
+### 20. 编写一个程序输入购买的笔的数量和每支笔的价格，并计算应付总额
 
 ```c
 #include<stdio.h>
@@ -358,7 +353,7 @@ return(0);
 }
 ```
 
-- 21. 编写一个程序，当用户给出基本工资时计算总薪资，并计算 HRA（住房补贴）、DA（津贴）和 TA（交通补贴）。
+### 21. 编写一个程序，当用户给出基本工资时计算总薪资，并计算 HRA（住房补贴）、DA（津贴）和 TA（交通补贴）
 
 ```c
 #include<stdio.h>
@@ -376,7 +371,7 @@ return(0);
 }
 ```
 
-- 22. 编写一个程序，计算销售期间购买享受 10% 折扣后的应付金额。
+### 22. 编写一个程序，计算销售期间购买享受 10% 折扣后的应付金额
 
 ```c
 #include<stdio.h>
@@ -396,17 +391,20 @@ int main()
 
 ## 使用三元运算符
 
-使用 ?: 可以减少代码行数并提高应用程序的性能。
+使用 `?:` 可以减少代码行数并提高应用程序的性能。
 
 其语法如下：
 
+```c
 expression-1 ? expression-2 : expression-3
+```
 
-在上述语法中，expression-1 是条件，expression-2 和 expression-3 可以是值、变量、语句或任何数学表达式。
+在上述语法中，`expression-1` 是条件，`expression-2` 和 `expression-3` 可以是值、变量、语句或任何数学表达式。
 
-如果条件为真，则执行 expression-2；否则执行 expression-3。
+如果条件为真，则执行 `expression-2`；否则执行 `expression-3`。
 
-- 23. 编写一个使用三元运算符的程序检查给定的数字是否为偶数。
+### 23. 编写一个使用三元运算符的程序检查给定的数字是否为偶数
+
 ```c
 #include<stdio.h>
 int main()
@@ -419,7 +417,7 @@ int n;
 }
 ```
 
-- 24. 编写一个使用三元运算符的程序检查给定的数字是正数还是负数。
+### 24. 编写一个使用三元运算符的程序检查给定的数字是正数还是负数
 
 ```c
 #include<stdio.h>
@@ -433,7 +431,7 @@ return(0);
 }
 ```
 
-- 25. 编写一个使用三元运算符的程序，从两个数中返回较大的一个。
+### 25. 编写一个使用三元运算符的程序，从两个数中返回较大的一个
 
 ```c
 #include<stdio.h>
@@ -448,7 +446,7 @@ return(0);
 }
 ```
 
-- 26. 编写一个使用三元运算符的程序检查性别是男性还是女性。
+### 26. 编写一个使用三元运算符的程序检查性别是男性还是女性
 
 ```c
 #include<stdio.h>
@@ -463,7 +461,7 @@ return(0);
 }
 ```
 
-- 27. 编写一个程序使用 OR 运算符和三元运算符检查性别是否为男性/女性。
+### 27. 编写一个程序使用 OR 运算符和三元运算符检查性别是否为男性/女性
 
 ```c
 #include<stdio.h>
@@ -477,7 +475,7 @@ int main()
 }
 ```
 
-- 28. 编写一个程序使用 OR 运算符和三元运算符检查性别是男性还是女性。
+### 28. 编写一个程序使用 OR 运算符和三元运算符检查性别是男性还是女性
 
 ```c
 #include<stdio.h>
@@ -491,7 +489,7 @@ int main()
 }
 ```
 
-- 29. 编写一个 C 语言程序计算三个数的和，并用逗号分隔在一行内获取结果。
+### 29. 编写一个 C 语言程序计算三个数的和，并用逗号分隔在一行内获取结果
 
 ```c
 #include<stdio.h>
@@ -511,7 +509,10 @@ return(0);
 }
 ```
 
-- 30. 编写一个程序使用三元运算符检查人员是否可以投票。
+### 30. 编写一个程序使用三元运算符检查人员是否可以投票
+
+
+
 
 ```c
 #include<stdio.h>
@@ -529,7 +530,7 @@ return(0);
 
 ## 决策
 
-- 31. 编写一个程序检查字符是否是元音还是辅音。
+### 31. 编写一个程序检查字符是否是元音还是辅音
 
 ```c
 #include<stdio.h>
@@ -546,7 +547,7 @@ int main()
 }
 ```
 
-- 32. 编写一个程序找出两个人中最高的一个。
+### 32. 编写一个程序找出两个人中最高的一个
 
 ```c
 #include<stdio.h>
@@ -563,7 +564,7 @@ int main()
 }
 ```
 
-- 33. 编写一个程序接受两个整数并检查它们是否相等。
+### 33. 编写一个程序接受两个整数并检查它们是否相等
 
 ```c
 #include <stdio.h>
@@ -584,7 +585,7 @@ void main()
 }
 ```
 
-- 34. 编写一个程序检查给定的年份是否为闰年。
+### 34. 编写一个程序检查给定的年份是否为闰年
 
 ```c
 #include <stdio.h>
@@ -607,7 +608,7 @@ void main()
 }
 ```
 
-- 35. 编写一个程序更改输入字符的大小。如果是大写字母，则转换为小写字母，反之亦然。
+### 35. 编写一个程序更改输入字符的大小。如果是大写字母，则转换为小写字母，反之亦然
 
 ```c
 #include<stdio.h>
@@ -630,7 +631,6 @@ int main()
 }
 ```
 
-
 ```c
 ch=ch+32;
 }else
@@ -641,7 +641,7 @@ return(0);
 }
 ```
 
-36. 编写一个程序来检查三个给定数字中最大的数。
+### 36. 编写一个程序来检查三个给定数字中最大的数
 
 ```c
 #include<stdio.h>
@@ -664,9 +664,6 @@ int main()
     }
     else if(b>c)
     {
-```
-
-```c
         printf("b is greater");
     }
     else
@@ -677,7 +674,7 @@ int main()
 }
 ```
 
-37. 编写一个程序来检查三个给定数字中较大的数。
+### 37. 编写一个程序来检查三个给定数字中较大的数
 
 ```c
 #include<stdio.h>
@@ -699,121 +696,213 @@ int main()
     {
         printf("\n c is greater");
     }
-```
-
-```c
     return(0);
 }
 ```
 
-38. 编写一个程序输入一个等级并显示相应的描述。
+### 38. 编写一个程序输入一个等级并显示相应的描述
+
+```c
 #include <stdio.h>
+
 void main()
+
 {
+
     char grd;
+
     printf("Input the grade :");
+
     scanf("%c", &grd);
+
     switch(grd)
+
     {
+
         case 'E':
+
             printf(" Excellent");
+
             break;
+
         case 'V':
+
             printf(" Very Good");
+
             break;
+
         case 'G':
+
             printf(" Good ");
+
             break;
+
         case 'A':
+
             printf(" Average");
+
             break;
+
         case 'F':
+
             printf(" Fails");
+
             break;
+
         default :
+
             printf("Invalid Grade Found. \n");
+
             break;
+
     }
+
 }
 ```
 
-39. 编写一个程序以整数形式读取任意一天并显示单词名称。
+### 39. 编写一个程序以整数形式读取任意一天并显示单词名称
 
 ```c
 #include <stdio.h>
+
 void main()
+
 {
+
     int dayno;
+
     printf("Input Day No : ");
+
     scanf("%d", &dayno);
+
     switch(dayno)
+
     {
+
         case 1:
+
             printf("Monday \n");
+
             break;
+
         case 2:
+
             printf("Tuesday \n");
+
             break;
+
         case 3:
+
             printf("Wednesday \n");
+
             break;
+
         case 4:
+
             printf("Thursday \n");
+
             break;
+
         case 5:
+
             printf("Friday \n");
+
             break;
+
         case 6:
+
             printf("Saturday \n");
+
             break;
+
         case 7:
+
             printf("Sunday \n");
+
             break;
+
         default:
+
             printf("Invalid day number. \nPlease try again\n");
+
             break;
+
     }
+
 }
 ```
 
-40. 编写一个程序以整数形式读取任意月份并显示该月份的天数。
+### 40. 编写一个程序以整数形式读取任意月份并显示该月份的天数
 
 ```c
 #include <stdio.h>
+
 void main()
+
 {
+
     int monno;
+
     printf("Input Month No : ");
+
     scanf("%d",&monno);
+
     switch(monno)
+
     {
+
         case 1:
+
         case 3:
+
         case 5:
+
         case 7:
+
         case 8:
+
         case 10:
+
         case 12:
+
             printf("Month have 31 days. \n");
+
             break;
+
         case 2:
+
             printf("The 2nd month is a February and have 28 days. \n");
+
             printf("in leap year The February month Have 29 days. \n");
+
             break;
+
         case 4:
+
         case 6:
+
         case 9:
+
         case 11:
+
             printf("Month have 30 days. \n");
+
             break;
+
         default:
+
             printf("invalid Month number \nPlease try again");
+
             break;
+
     }
+
 }
 ```
 
-41. 编写一个菜单驱动程序来执行简单的计算。
+### 41. 编写一个菜单驱动程序来执行简单的计算
+
+```c
 #include <stdio.h>
 void main() {
     int num1,num2,opt;
@@ -850,7 +939,9 @@ void main() {
 }
 ```
 
-42. 编写一个程序计算给定客户的电费。用户消耗的单位应从键盘输入，并显示客户需要支付的总金额。费用标准如下：
+### 42. 编写一个程序计算给定客户的电费
+
+用户消耗的单位应从键盘输入，并显示客户需要支付的总金额。费用标准如下：
 
 | 单位 | 费用/单价 |
 | --- | --- |
@@ -892,111 +983,136 @@ void main() {
 }
 ```
 
-43. 编写一个程序计算交易中的利润和亏损。
+### 43. 编写一个程序计算交易中的利润和亏损
+
+```c
 #include <stdio.h>
+
 void main()
+
 {
+
     int cp, sp;
+
     printf("Enter Cost Price: ");
+
     scanf("%d", &cp);
+
     printf("Enter Selling Price: ");
+
     scanf("%d", &sp);
+
     if(sp > cp)
+
     {
+
         printf("Profit: %d\n", sp - cp);
+
     }
+
     else if(cp > sp)
+
     {
+
         printf("Loss: %d\n", cp - sp);
+
     }
+
     else
+
     {
+
         printf("No Profit No Loss\n");
+
     }
+
 }
+
 }
 ```
 
-
-
-
 ```c
 for(i=1;i<=10&&i>=3;i++){}
+
 for(i=1;i<=10;i++);
+
 while(1){ //无限循环
+
     while(1){ if(condition)break;}}
 ```
 
 ## 跳跃语句
 
-跳转语句用于退出循环 / 在循环中继续 / 跳到特定位置。
+跳转语句用于退出循环、在循环中继续或跳到特定位置。
 
 跳转语句的类型有：
 
-- Break
-- Continue
-- Goto
-- Return
+- `Break`
+- `Continue`
+- `Goto`
+- `Return`
 
 ## Break
 
-break 语句用于循环或 switch 语句内部。
+`break`语句用于循环或`switch`语句内部。
 
-当编译器在循环内部找到 break 语句时，它将终止循环并继续执行循环后面的语句。
+当编译器在循环内部找到`break`语句时，它将终止循环并继续执行循环后面的语句。
 
-break 语句用于终止其所在代码块中剩余代码的执行，并将控制权移出代码块执行到下一条语句。break 语句的语法为：
+`break`语句用于终止其所在代码块中剩余代码的执行，并将控制权移出代码块，执行下一条语句。`break`语句的语法为：
 
 ```c
 for(;;){ if (condition){break;}}
 ```
 
+
+
 ## Continue
 
-Continue 是另一个控制循环流的关键字。如果你正在执行一个循环并遇到了 continue 语句，循环将停止当前的迭代，更新自身（对于 for 循环而言），并从顶部开始重新执行。
+`Continue`是另一个控制循环流的关键字。如果你正在执行一个循环并遇到了`continue`语句，循环将停止当前的迭代，更新自身（对于`for`循环而言），并从顶部开始重新执行。
 
-Continue 主要用于循环中。它不是终止循环，而是停止下方语句的执行并获取下一次迭代的控制权。
+`Continue`主要用于循环中。它不是终止循环，而是停止下方语句的执行并获取下一次迭代的控制权。
 
-continue 语句将控制权传递给其所在内部循环的下一次迭代，而不是任何外层循环。
+`continue`语句将控制权传递给其所在内部循环的下一次迭代，而不是任何外层循环。
 
-continue 语句的语法为：for(;;){if(condition){continue;}}
+`continue`语句的语法为：`for(;;){if(condition){continue;}}`
 
 ## Goto
 
-goto 跳转语句用于将控制流转移到程序的任何部分。
+`goto`跳转语句用于将控制流转移到程序的任何部分。
 
 它在函数内部从一个点跳转到另一个点。
 
-goto 语句的语法为：goto label;
+`goto`语句的语法为：`goto label;`
 
-> 注意：在任何编程语言中都强烈建议使用 goto 语句，因为这使得追踪程序的控制流变得困难，使程序难以理解和修改。
+> 注意：在任何编程语言中都强烈建议使用`goto`语句，因为这使得追踪程序的控制流变得困难，使程序难以理解和修改。
 
-任何使用 goto 语句的程序都可以重写以避免使用它。
+任何使用`goto`语句的程序都可以重写以避免使用它。
 
 ## Return
 
-return 语句用于终止函数的执行并将程序控制权传回调用它的函数。
+`return`语句用于终止函数的执行并将程序控制权传回调用它的函数。
 
-return 语句结束当前函数并将控制权返回到调用点。它也可以在该点返回一个值。
+`return`语句结束当前函数并将控制权返回到调用点。它也可以在该点返回一个值。
 
 函数可以返回值，也可以不返回。
 
-return 语句向调用函数返回一个值，并赋值给调用函数左侧的变量。
+`return`语句向调用函数返回一个值，并赋值给调用函数左侧的变量。
 
-如果函数不返回值，则函数定义和声明中的返回类型指定为 void。
+如果函数不返回值，则函数定义和声明中的返回类型指定为`void`。
 
-return 语句的语法为：
+`return`语句的语法为：
 
 ```c
 return expr;
 ```
 
-其中 expr 是函数返回值的表达式。
+其中`expr`是函数返回值的表达式。
 
-return 语句的执行会导致表达式 expr 被求值并将其返回到调用该函数的地方。
+`return`语句的执行会导致表达式`expr`被求值并将其返回到调用该函数的地方。
 
-return 语句中的表达式 expr 是可选的，如果省略，则程序控制权传回调用函数，而不返回任何值。
+`return`语句中的表达式`expr`是可选的，如果省略，则程序控制权传回调用函数，而不返回任何值。
 
-- 50. 写一个程序，使用 for 循环打印 1 到 N 的序列。
+- 50. 写一个程序，使用`for`循环打印 1 到 N 的序列。
 
 ```c
 #include<stdio.h>
@@ -1005,7 +1121,6 @@ void main()
     int i,n;
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=1;i<=n;i++)
     {
         printf("\n%d",i);
@@ -1013,7 +1128,7 @@ void main()
 }
 ```
 
-- 51. 写一个程序，使用 for 循环打印 1 到 N 的平方序列。
+- 51. 写一个程序，使用`for`循环打印 1 到 N 的平方序列。
 
 ```c
 #include<stdio.h>
@@ -1022,7 +1137,6 @@ void main()
     int i,n;
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=1;i<=n;i++)
     {
       printf("\n%d",i*i);
@@ -1030,7 +1144,8 @@ void main()
 }
 ```
 
-- 52. 写一个程序，使用 for 循环打印 1 到 N 的立方序列。
+- 52. 写一个程序，使用`for`循环打印 1 到 N 的立方序列。
+
 ```c
 #include<stdio.h>
 void main()
@@ -1038,7 +1153,6 @@ void main()
   int i,n;
   printf("enter value of n");
   scanf("%d",&n);
-
   for(i=1;i<=n;i++)
   {
     printf("\n%d",i*i);
@@ -1047,6 +1161,7 @@ void main()
 ```
 
 - 53. 写一个程序，使用循环打印 1 到 N 的序列、其平方和立方。
+
 ```c
 #include<stdio.h>
 void main()
@@ -1054,7 +1169,6 @@ void main()
   int i,n;
   printf("enter value of n");
   scanf("%d",&n);
-
   for(i=1;i<=n;i++)
   {
     printf("\n%d\t%d\t%d",i,i*i,i*i);
@@ -1062,7 +1176,8 @@ void main()
 }
 ```
 
-- 54. 写一个程序，使用 for 循环查找 1 到 N 之间的偶数/奇数。
+- 54. 写一个程序，使用`for`循环查找 1 到 N 之间的偶数/奇数。
+
 ```c
 #include<stdio.h>
 void main()
@@ -1070,7 +1185,6 @@ void main()
     int i,n;
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=1;i<=n;i++)
     {
         if(i % 2 == 0)
@@ -1084,6 +1198,7 @@ void main()
 ```
 
 - 55. 写一个程序，打印给定数字的乘法表。
+
 ```c
 #include<stdio.h>
 void main()
@@ -1091,7 +1206,6 @@ void main()
     int i,n;
     printf("enter number");
     scanf("%d",&n);
-
     for(i=1;i<=10;i++)
     {
         printf("\n%d*%d=%d",n,i,n*i);
@@ -1099,16 +1213,15 @@ void main()
 }
 ```
 
-- 56. 写一个程序，使用 for 循环打印 1,3,5,7,9 序列。
+- 56. 写一个程序，使用`for`循环打印 1,3,5,7,9 序列。
+
 ```c
 #include<stdio.h>
 void main()
 {
     int i,n;
-
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=1;i<=n;i+=2)
     {
         printf("\n%d",i);
@@ -1116,16 +1229,15 @@ void main()
 }
 ```
 
-- 57. 写一个程序，使用 for 循环打印 2,4,6,8...N 序列。
+- 57. 写一个程序，使用`for`循环打印 2,4,6,8...N 序列。
+
 ```c
 #include<stdio.h>
 void main()
 {
     int i,n;
-
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=2;i<=n;i+=2)
     {
         printf("\n%d",i);
@@ -1133,26 +1245,21 @@ void main()
 }
 ```
 
-- 58. 写一个程序，打印 1 到 N 的序列，使用 for 循环。
+- 58. 写一个程序，打印 1 到 N 的序列，使用`for`循环。
+
 ```c
 #include<stdio.h>
 void main()
 {
     int i,n;
-
     printf("enter value of n");
     scanf("%d",&n);
-
     for(i=1;i<=n;i++)
     {
         printf("\n%d",i);
     }
 }
 ```
-
-
-
-
 
 ```c
 float g1,cr,i,n,j;
@@ -1205,7 +1312,6 @@ Goto 的使用
 ```c
 #include<stdio.h>
 #include<stdlib.h>
-
 void main()
 {
     int num1,num2,ans,choice; start:{
@@ -1220,7 +1326,6 @@ void main()
     else
         goto stop;
 }
-
 addi:{
     printf("\nenter 2 numbers\n");
     scanf("%d%d",&num1,&num2); ans=num1+num2;
@@ -1359,7 +1464,6 @@ void main()
     int num,rev=0,remainder,i;
     printf("enter number");
     scanf("%d",&num);
-
     while(num!=0)
     {
         remainder=num%10;
@@ -1399,7 +1503,7 @@ void main()
 }
 ```
 
-79. 编写一个程序使用 do-while 循环找到数字的阶乘。
+79. 编写一个程序使用`do-while`循环找到数字的阶乘。
 
 ```c
 #include<stdio.h>
@@ -1461,21 +1565,30 @@ void main()
 82. 编写一个程序判断给定的数字是否为素数。
 
 ```c
+```
+
+
+
+```c
 #include<stdio.h>
+
 void main()
 {
-    int num,i,temp=0;
+    int num, i, temp = 0;
+
     printf("enter number");
-    scanf("%d",&num);
-    for(i=2;i<=num/2;i++)
+    scanf("%d", &num);
+
+    for(i = 2; i <= num / 2; i++)
     {
-        if(num%i==0)
+        if(num % i == 0)
         {
-            temp=1;
+            temp = 1;
             break;
         }
     }
-    if(temp==0)
+
+    if(temp == 0)
         printf("\nis prime");
     else
         printf("\nis not prime");
@@ -1486,22 +1599,27 @@ void main()
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int num,i=0;
+    int num, i = 0;
     int binary[32];
+
     printf("enter decimal number");
-    scanf("%d",&num);
-    while(num!=0)
+    scanf("%d", &num);
+
+    while(num != 0)
     {
-        binary[i] = num%2;
-        num = num/2;
+        binary[i] = num % 2;
+        num = num / 2;
         i++;
     }
+
     printf("binary: ");
-    for(int j=i-1; j>=0; j--)
+
+    for(int j = i - 1; j >= 0; j--)
     {
-        printf("%d",binary[j]);
+        printf("%d", binary[j]);
     }
 }
 ```
@@ -1514,37 +1632,47 @@ void main()
 
 int main()
 {
-    int a=5000,ch,d;
+    int a = 5000, ch, d;
+
     printf("\nplease enter your choice:\n1. check balance\n2. deposit\n3. withdrawal\n4. exit\n");
-    scanf("%d",&ch);
+    scanf("%d", &ch);
+
     switch(ch)
     {
         case 1:
-            printf("\nbalance is %d",a);
+            printf("\nbalance is %d", a);
             break;
+
         case 2:
             printf("\nenter amount");
-            scanf("%d",&d);
-            a=a+d;
-            printf("\nafter deposit is %d",a);
+            scanf("%d", &d);
+            a = a + d;
+            printf("\nafter deposit is %d", a);
             break;
+
         case 3:
             printf("\nenter amount");
-            scanf("%d",&d);
-            if(d<=a) {
-                a=a-d;
-                printf("\nafter withdrawal is %d",a);
+            scanf("%d", &d);
+
+            if(d <= a)
+            {
+                a = a - d;
+                printf("\nafter withdrawal is %d", a);
             }
-            else {
+            else
+            {
                 printf("\nu have notcient amount in account");
             }
             break;
+
         case 4:
             printf("\nthanks for using ATM, visit again");
             break;
+
         default:
             printf("\nInvalid choice");
     }
+
     return 0;
 }
 ```
@@ -1553,28 +1681,33 @@ int main()
 
 ```c
 #include<stdio.h>
-int main() {
-  int a,b,c;
-  printf("enter 3 no");
-  scanf("%d%d%d",&a,&b,&c);
-  if(a<b)
-  {
-    if(a<c)
+
+int main()
+{
+    int a, b, c;
+
+    printf("enter 3 no");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a < b)
+    {
+        if(a < c)
         {
-            printf("%d is smaller",a);
+            printf("%d is smaller", a);
         }
+        else
+        {
+            printf("%d is smaller", c);
+        }
+    }
+    else if(b < c)
+    {
+        printf("%d is smaller", b);
+    }
     else
-        {
-            printf("%d is smaller",c);
-        }
-  } else if(b<c)
-  {
-    printf("%d is smaller",b);
-  }
-  else
-  {
-    printf("%d is smaller",c);
-  }
+    {
+        printf("%d is smaller", c);
+    }
 }
 ```
 
@@ -1586,465 +1719,581 @@ int main() {
 
 int main()
 {
-    char user_name='a',password='z',i=0;
-    start:
-        printf("\nenter user_name\");
-        scanf("%c",&user_name);
-        printf("\nenter password\");
-        password=getch();
-        fflush(stdin);
-        if(user_name!='a'||password!='z')
-        {
-            printf("\naccess denied\n");
-            i++;
-            if(i<3)
-                goto start;
-            else
-                printf("\nllocked");
-        }
+    char user_name = 'a', password = 'z', i = 0;
+
+start:
+    printf("\nenter user_name\"");
+    scanf("%c", &user_name);
+
+    printf("\nenter password\"");
+    password = getch();
+    fflush(stdin);
+
+    if(user_name != 'a' || password != 'z')
+    {
+        printf("\naccess denied\n");
+        i++;
+
+        if(i < 3)
+            goto start;
         else
-        {
-            printf("\nlogin successful");
-        }
+            printf("\nllocked");
+    }
+    else
+    {
+        printf("\nlogin successful");
+    }
+
     return 0;
 }
 ```
 
-
-
 ```c
 goto incr;
 }
-if(user_name=='a' && password=='z')
+
+if(user_name == 'a' && password == 'z')
 {
     printf("\nwelcome sir");
 }
+
 goto end;
 }
+
 incr:
 {
     i++;
-    if(i<3)
+
+    if(i < 3)
     {
         goto start;
     }
+
     goto lock;
 }
+
 lock:
 {
     printf("\naccount is locked");
     goto end;
 }
-end: getch();
+
+end:
+getch();
 ```
 
-# 第8 章
+# 第 8 章
 
 ## 图案
 
 图案程序打印各种数字和星号图案。这些代码演示了如何使用 C 语言创建各种图案。
 
-大多数这些 C 程序都涉及嵌套 for 循环的使用。
+大多数这些 C 程序都涉及嵌套 `for` 循环的使用。
 
 数字、星号或字符的图案是以某种逻辑方式排列这些内容的方法，它们可能形成一个序列。
 
 ```c
 for() // 用于行的外层循环
 {
-for() // 用于列的内层循环
-{}
+    for() // 用于列的内层循环
+    {}
 }
 ```
 
 内层循环中的条件取决于行的列数。
 
-87. 显示以下图案（26图案）：
+### 87. 显示以下图案（26 图案）
 
-+   1)
+#### 1)
+
+```text
 *
 **
 ***
 ****
 ******
-
-```c
-#include<stdio.h>
-void main()
-{
-int i,j;
-for (i=1;i<=5;i++)
-{
-    for(j=1;j<=i;j++)
-    {
-        printf("**");
-    }
-    printf("\n");
-}
 ```
 
-2)
-
-1
-
-21
-
-321
-
-4321
-
-54321
-
 ```c
 #include<stdio.h>
+
 void main()
 {
-    for(i=1;i<=5;i++)
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=i;j>=1;j--)
+        for(j = 1; j <= i; j++)
         {
-            printf("%d",j);
+            printf("**");
         }
+
         printf("\n");
     }
 }
 ```
 
-3)
-54321
-4321
-321
-21
+#### 2)
+
+```text
 1
+21
+321
+4321
+54321
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=5;i>=1;i--)
+    for(i = 1; i <= 5; i++)
     {
-        for(j=i;j>=1;j--)
+        for(j = i; j >= 1; j--)
         {
-            printf("%d",j);
+            printf("%d", j);
         }
+
         printf("\n");
     }
 }
 ```
 
-4)
+#### 3)
+
+```text
+54321
+4321
+321
+21
+1
+```
+
+```c
+#include<stdio.h>
+
+void main()
+{
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
+    {
+        for(j = i; j >= 1; j--)
+        {
+            printf("%d", j);
+        }
+
+        printf("\n");
+    }
+}
+```
+
+#### 4)
+
+```text
 54321
 5432
 543
 54
 5
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-int i,j;
-for(i=1;i<=5;i++)
-{
-    for(j=5;j>=i;j--)
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        printf("%d",j);
+        for(j = 5; j >= i; j--)
+        {
+            printf("%d", j);
+        }
+
+        printf("\n");
     }
-    printf("\n");
 }
 ```
-```
 
-5)
+#### 5)
 
+```text
 12345
 1234
 123
 12
 1
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=5;i>=1;i--)
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
     {
-        for(j=1;j<=i;j++)
+        for(j = 1; j <= i; j++)
         {
-            printf("%d",j);
+            printf("%d", j);
         }
+
         printf("\n");
     }
 }
 ```
 
-6)
+#### 6)
+
+```text
 *
 *#
 *#*
 *#####
 *##**#
+```
+
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=1;i<=5;i++)
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=1;j<=i;j++)
+        for(j = 1; j <= i; j++)
         {
-            if(j%2==0)
+            if(j % 2 == 0)
                 printf("#");
             else
                 printf("*");
         }
+
         printf("\n");
     }
 }
 ```
 
-7)
+#### 7)
+
+```text
 5
 54
 543
 5432
 54321
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=5;i>=1;i--)
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
     {
-        for(j=1;j<i;j++)
+        for(j = 1; j < i; j++)
         {
             printf(" ");
         }
-        for(j=5;j>=i;j--)
+
+        for(j = 5; j >= i; j--)
         {
-            printf("%d",j);
+            printf("%d", j);
         }
     }
 }
 ```
 
-8)
+#### 8)
+
+```text
 12345
 2345
 345
 45
 5
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
     printf("\n");
-    int i,j;
-    for(i=1;i<=5;i++)
+
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=1;j<i;j++)
+        for(j = 1; j < i; j++)
         {
             printf(" ");
         }
-        for(j=i;j<=5;j++)
+
+        for(j = i; j <= 5; j++)
         {
-            printf("%d",j);
+            printf("%d", j);
         }
+
         printf("\n");
     }
 }
 ```
 
-9)
+#### 9)
 
+```text
 *
 **
 ***
 ****
 *****
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=1;i<=5;i++)
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=i;j<5;j++)
+        for(j = i; j < 5; j++)
         {
             printf(" ");
         }
-        for(j=1;j<=i;j++)
+
+        for(j = 1; j <= i; j++)
         {
             printf("*");
         }
+
         printf("\n");
     }
 }
 ```
 
-10)
+#### 10)
+
+```text
 ******
 ****
 ***
 **
 *
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=5;i>=1;i--)
+    int i, j;
+
+    for(i = 5; i >= 1; i--)
     {
-        for(j=5;j>i;j--)
+        for(j = 5; j > i; j--)
         {
             printf(" ");
         }
-        for(j=1;j<=i;j++)
+
+        for(j = 1; j <= i; j++)
         {
             printf("**");
         }
+
         printf("\n");
     }
 }
 ```
 
-11)
+#### 11)
+
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j;
-    for(i=1;i<=5;i++)
+    int i, j;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=1;j<i;j++)
+        for(j = 1; j < i; j++)
         {
             printf(" ");
         }
-        for(j=i;j>=1;j--)
+
+        for(j = i; j >= 1; j--)
         {
-            printf("%d",j);
+            printf("%d", j);
         }
+
         printf("\n");
     }
 }
 ```
 
-12)
+#### 12)
+
 ```c
 #include<stdio.h>
-void main() {
-    int i,j;
-    for(i=5;i>=1;i++) {
-        for(j=1;j<i;j++) {
+
+void main()
+{
+    int i, j;
+
+    for(i = 5; i >= 1; i++)
+    {
+        for(j = 1; j < i; j++)
+        {
             printf(" ");
         }
-        for(j=5;j>=i;j--) {
-            printf("%d",j);
+
+        for(j = 5; j >= i; j--)
+        {
+            printf("%d", j);
         }
+
         printf("\n");
     }
 }
 ```
 
-13)
+#### 13)
+
 ```c
 #include<stdio.h>
-void main() {
-    int i,j,k;
-    for(i=5;i>=1;i--) {
-        for(j=1;j<i;j++) {
+
+void main()
+{
+    int i, j, k;
+
+    for(i = 5; i >= 1; i--)
+    {
+        for(j = 1; j < i; j++)
+        {
             printf(" ");
         }
-        for(j=i;j<=5;j++) {
-            printf("%d",j);
+
+        for(j = i; j <= 5; j++)
+        {
+            printf("%d", j);
         }
-        for(k=j-2;k>=1;k--) {
-            printf("%d",k);
+
+        for(k = j - 2; k >= 1; k--)
+        {
+            printf("%d", k);
         }
+
         printf("\n");
     }
 }
 ```
 
-14)
+#### 14)
+
+```text
 *
 **
 ***
 ****
 *****
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j,k;
-    for(i=1;i<=5;i++)
+    int i, j, k;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=i;j<5;j++)
+        for(j = i; j < 5; j++)
         {
             printf(" ");
         }
-        for(j=1;j<=i;j++)
+
+        for(j = 1; j <= i; j++)
         {
-            if(j%2==0)
+            if(j % 2 == 0)
                 printf(" ");
             else
                 printf("**");
         }
-        for(k=j-2;k>=1;k--)
+
+        for(k = j - 2; k >= 1; k--)
         {
-            if(k%2==0)
+            if(k % 2 == 0)
                 printf(" ");
             else
                 printf("**");
         }
+
         printf("\n");
     }
 }
 ```
 
-15)
+#### 15)
+
+```text
 ********
 **********
 *****
+```
 
 ```c
 #include<stdio.h>
+
 void main()
 {
-    int i,j,k;
-    for(i=1;i<=5;i++)
+    int i, j, k;
+
+    for(i = 1; i <= 5; i++)
     {
-        for(j=1;j<i;j++)
+        for(j = 1; j < i; j++)
             printf("*");
-        for(j=i;j<=5;j++)
+
+        for(j = i; j <= 5; j++)
             printf("*");
-        for(k=i;k<5;k++)
+
+        for(k = i; k < 5; k++)
             printf("*");
+
         printf("\n");
     }
 }
 ```
 
-16)
+#### 16)
+
+```text
 * --*
 -- *
 - * - *
 -* - - *
+```
 
 ```c
 #include <stdio.h>
+
 int main()
 {
     int i;
 ```
 
-17)
+#### 17)
+
+```text
 *
 **
 ***
@@ -2054,20 +2303,23 @@ int main()
 ***
 **
 *
+```
 
 ```c
 #include<stdio.h>
+
 int main()
 {
-    int i, j, rows=5, columns;
-    columns=1;
+    int i, j, rows = 5, columns;
+    columns = 1;
 
-    for(i=1;i<rows*2;i++)
+    for(i = 1; i < rows * 2; i++)
     {
-        for(j=1; j<=columns; j++)
+        for(j = 1; j <= columns; j++)
         {
             printf("*");
         }
+
         if(i < rows)
         {
             columns++;
@@ -2077,21 +2329,36 @@ int main()
             columns--;
         }
     }
+
     printf("\n");
     return 0;
 }
 ```
 
-18)
+#### 18)
+
+```text
 *****
 *** ***
+
 *** ***
+
 ** **
+
 * *
+
 ** **
+
 *** ***
+
 *** ***
+
 ********
+```
+
+
+
+## 19) 打印菱形图案
 
 ```c
 #include <stdio.h>
@@ -2126,12 +2393,18 @@ int main() {
 }
 ```
 
-19) * * * * *
+输出示例：
+
+```
+* * * * *
 *
   *
 *  *
 *  *
 *  *
+```
+
+## 20) 打印倒三角图案
 
 ```c
 #include <stdio.h>
@@ -2156,25 +2429,24 @@ int main()
 }
 ```
 
-20)
+输出示例：
+
+```
 *****
 ***
 *
+```
 
-21)
+## 21) 打印矩形边框图案
+
+输出示例：
+
+```
 ****
 * *
+```
 
-
-
-
-
-23)
-1 1
-12 21
-123 321
-1234 4321
-1234554321
+## 23) 打印数字金字塔图案
 
 ```c
 #include <stdio.h>
@@ -2204,10 +2476,17 @@ int main()
 }
 ```
 
-24)
+输出示例：
+
+```
 1 1
-2 2
-3 3
+12 21
+123 321
+1234 4321
+1234554321
+```
+
+## 24) 打印数字菱形图案
 
 ```c
 #include <stdio.h>
@@ -2255,11 +2534,15 @@ int main() {
 }
 ```
 
-25)
-01110
-10001
-10001
-10001
+输出示例：
+
+```
+1 1
+2 2
+3 3
+```
+
+## 25) 打印矩形边框图案
 
 ```c
 01110
@@ -2293,11 +2576,16 @@ int main()
 }
 ```
 
-26)
-1
-11
-101
-11111
+输出示例：
+
+```
+01110
+10001
+10001
+10001
+```
+
+## 26) 打印三角形图案
 
 ```c
 #include <stdio.h>
@@ -2321,6 +2609,15 @@ int main()
     }
     return 0;
 }
+```
+
+输出示例：
+
+```
+1
+11
+101
+11111
 ```
 
 ## 88. 编写一个程序将十进制数转换为二进制数。
@@ -2566,8 +2863,6 @@ int main()
 }
 ```
 
-
-
 ```c
 printf("\n\n\n\t\t%d is a perfect square\n\n\n", number);
 printf("\n\n\n\t\tCoding is Fun !\n\n\n");
@@ -2583,39 +2878,65 @@ printf("\n\n\n\t\t%d is not a perfect square\n", number);
 
 ## 使用 string.h
 
-C语言中的字符串简单来说是字符数组。字符串在最后一个字符之后必须有一个 NULL 或 \0 字符，以指示字符串的结束位置。字符串可以声明为字符数组，也可以声明为字符串指针。
+C语言中的字符串简单来说是字符数组。字符串在最后一个字符之后必须有一个 `NULL` 或 `\0` 字符，以指示字符串的结束位置。字符串可以声明为字符数组，也可以声明为字符串指针。
 
 C语言本身对字符串没有提供显式支持。字符串处理函数是在库中实现的。
 
-字符串的 I/O 操作在 <stdio.h> 中实现（puts, gets, 等）。一组简单的字符串操作函数在 <string.h> 中实现，在某些系统中在 <strings.h> 中。
+字符串的 I/O 操作在 `<stdio.h>` 中实现（`puts`, `gets`, 等）。一组简单的字符串操作函数在 `<string.h>` 中实现，在某些系统中在 `<strings.h>` 中。
 
-字符串库（string.h 或 strings.h）包含了一些处理字符串的有用函数，例如 strcpy, strcat, strcmp, strlen 和 strncoll。我们将查看其中一些字符串操作。
-
-| 字符串函数 | 描述 |
-| --- | --- |
-| strcat () | 将 str2 拼接到 str1 的末尾 |
-| strcat () | 将 str1 的部分追加到另一个字符串 |
-| strcpy () | 将 str2 复制到 str1 中 |
-| strncpy () | 将一个字符串的指定数量字符复制到另一个 |
-| strlen () | 获取 str1 的长度 |
-| strcmp () | 如果 str1 与 str2 相同则返回 0。如果 str2 小于则返回 <0。如果 str1 > str2 则返回 >0 |
-| strncmp () | 与 strcmp() 函数相同。但此函数会忽略大小写。"A" 和 "a" 被视为相同。
+字符串库（`string.h` 或 `strings.h`）包含了一些处理字符串的有用函数，例如 `strcpy`, `strcat`, `strcmp`, `strlen` 和 `strncoll`。我们将查看其中一些字符串操作。
 
 | 字符串函数 | 描述 |
 | --- | --- |
-| strchr () | 返回字符在 str1 中第一次出现位置的指针 |
-| strchr () | 找到字符串中给定字符的最后一次出现 |
-| strstr () | 返回 str2 在 str1 中第一次出现位置的指针 |
-| strstr () | 返回 str2 在 str1 中最后一次出现位置的指针 |
-| strdup () | 复制字符串 |
-| strwlr () | 将字符串转换为小写 |
-| strupr () | 将字符串转换为大写 |
-| strev () | 反转给字符串 |
-| strset () | 将字符串中的所有字符设置为给定字符 |
-| strset () | 将字符串中的部分字符设置为给定字符 |
-| strtok () | 使用分隔符对给定字符串进行分词 |
+| `strcat()` | 将 `str2` 拼接到 `str1` 的末尾 |
+| `strcat()` | 将 `str1` 的部分追加到另一个字符串 |
+| `strcpy()` | 将 `str2` 复制到 `str1` 中 |
+| `strncpy()` | 将一个字符串的指定数量字符复制到另一个 |
+| `strlen()` | 获取 `str1` 的长度 |
 
-99. 写一个程序，使用 string.h 函数根据名称中的性别合并头。
+
+
+# 第 10 章
+
+## 数组 – 1D 和 2D
+
+数组是相似数据类型值的集合。数组被定义为存储在连续内存位置的同质有限有序集合。
+
+数组的语法为：
+
+- `Datatype array_name[size];` // 一维数组
+- `Datatype array_name[No_of_Rows][No_Of_columns]` // 二维数组
+
+数组索引始终从 0 开始到 `size–1`。行索引和列索引都从 0 开始。
+
+## 数组的优点
+
+1. **代码优化**：访问数据代码更少。
+2. **易遍历数据**：通过使用 `for` 循环，我们可以轻松获取数组的元素。
+3. **易排序/搜索数据**：排序数组元素只需要几行代码。
+4. **随机访问**：我们可以使用数组随机访问任何元素。
+
+## 字符串函数
+
+| 字符串函数 | 描述 |
+| --- | --- |
+| `strcmp()` | 如果 `str1` 与 `str2` 相同则返回 0。如果 `str2` 小于则返回 `<0`。如果 `str1 > str2` 则返回 `>0` |
+| `strncmp()` | 与 `strcmp()` 函数相同。但此函数会忽略大小写。"A" 和 "a" 被视为相同。 |
+| `strchr()` | 返回字符在 `str1` 中第一次出现位置的指针 |
+| `strrchr()` | 找到字符串中给定字符的最后一次出现 |
+| `strstr()` | 返回 `str2` 在 `str1` 中第一次出现位置的指针 |
+| `strrstr()` | 返回 `str2` 在 `str1` 中最后一次出现位置的指针 |
+| `strdup()` | 复制字符串 |
+| `strlwr()` | 将字符串转换为小写 |
+| `strupr()` | 将字符串转换为大写 |
+| `strrev()` | 反转给定字符串 |
+| `strset()` | 将字符串中的所有字符设置为给定字符 |
+| `strnset()` | 将字符串中的部分字符设置为给定字符 |
+| `strtok()` | 使用分隔符对给定字符串进行分词 |
+
+## 程序示例
+
+### 99. 写一个程序，使用 `string.h` 函数根据名称中的性别合并头。
 
 ```c
 void main() {
@@ -2630,7 +2951,8 @@ void main() {
   if(gender=='m' || gender=='M')
 ```
 
-100. 写一个程序，输入一个一位数并用单词形式显示。
+### 100. 写一个程序，输入一个一位数并用单词形式显示。
+
 ```c
 #include<stdio.h>
 void main()
@@ -2642,29 +2964,9 @@ void main()
 }
 ```
 
-# 第 10 章
-## 数组– 1D 和 2D
-
-数组是相似数据类型值的集合。
-
-数组被定义为存储在连续内存位置的同质有限有序集合。
-
-数组的语法为：
-
-- Datatype array_name[size]; // 一维数组
-- Datatype array_name[No_of_Rows][No_Of_columns] // 二维数组
-
-数组索引始终从 0 开始到 size–1。行索引和列索引都从 0 开始。
-
-## 数组的优点
-
-- 1) 代码优化：访问数据代码更少。
-- 2) 易遍历数据：通过使用 for 循环，我们可以轻松获取数组的元素。
-- 3) 易排序/搜索数据：排序数组元素只需要几行代码。
-- 4) 随机访问：我们可以使用数组随机访问任何元素。
+### 101. 写一个程序将一个数组的元素复制到另一个数组。
 
 ```c
-101. 写一个程序将一个数组的元素复制到另一个数组。
 #include <stdio.h>
 void main()
 {
@@ -2698,7 +3000,7 @@ for(i=0; i<n; i++)
 printf("\n\n");
 ```
 
-102. 写一个程序找到数组的极大值、次大值、偶数元素和和奇数元素和。
+### 102. 写一个程序找到数组的极大值、次大值、偶数元素和和奇数元素和。
 
 ```c
 #include<stdio.h>
@@ -2723,24 +3025,24 @@ for(i=0;i<5;i++)
         max = a[i];
 }
 ```
-*(注：最大值/和的逻辑在 OCR 中碎片化，已根据标准算法重构)*
 
-103. 写一个程序将一个数组的元素复制到另一个数组。（101 的逻辑重复）
+> **注**：最大值/和的逻辑在 OCR 中碎片化，已根据标准算法重构。
 
-104. 写一个程序找到数组的极大值、次大值、偶数元素和和奇数元素和。（102 的逻辑重复）
+### 103. 写一个程序将一个数组的元素复制到另一个数组。（101 的逻辑重复）
 
-105. 写一个程序打印数组的元素。
+### 104. 写一个程序找到数组的极大值、次大值、偶数元素和和奇数元素和。（102 的逻辑重复）
 
-106. 写一个程序使用线性搜索排序数组。
+### 105. 写一个程序打印数组的元素。
 
-107. 写一个程序使用冒泡排序排序数组。
+### 106. 写一个程序使用线性搜索排序数组。
 
-108. 写一个程序使用二分查找在数组中搜索一个值。
+### 107. 写一个程序使用冒泡排序排序数组。
 
-109. 写一个程序输入你的名字并显示一个模式。
+### 108. 写一个程序使用二分查找在数组中搜索一个值。
 
-110. 写一个程序统计给定名称中的元音数量。
+### 109. 写一个程序输入你的名字并显示一个模式。
 
+### 110. 写一个程序统计给定名称中的元音数量。
 
 ```c
 count++;
@@ -2749,7 +3051,7 @@ count++;
 }
 ```
 
-111. 编写一个程序，输入字符串并将 *a* 替换为 *e*。
+### 111. 编写一个程序，输入字符串并将 `a` 替换为 `e`。
 
 ```c
 #include<stdio.h>
@@ -2771,7 +3073,7 @@ int main()
 }
 ```
 
-105. 编写一个程序，将给定字符串中的大写字母转换为小写，反之亦然。
+### 105. 编写一个程序，将给定字符串中的大写字母转换为小写，反之亦然。
 
 ```c
 #include<stdio.h>
@@ -2794,7 +3096,7 @@ printf("\n\n%s\n",n);
 }
 ```
 
-106. 编写一个程序，打印给定名字的字母首（缩写）。
+### 106. 编写一个程序，打印给定名字的字母首（缩写）。
 
 ```c
 #include<stdio.h>
@@ -2815,7 +3117,7 @@ return 1;
 }
 ```
 
-107. 编写一个程序，计算空格并打印名字的长度（排除空格）。
+### 107. 编写一个程序，计算空格并打印名字的长度（排除空格）。
 
 ```c
 #include<stdio.h>
@@ -2839,7 +3141,7 @@ int main()
 }
 ```
 
-108. 编写一个程序，将给定名字中的大写字母转换为小写，反之亦然。
+### 108. 编写一个程序，将给定名字中的大写字母转换为小写，反之亦然。
 
 ```c
 #include<stdio.h>
@@ -2863,7 +3165,7 @@ int main()
 }
 ```
 
-109. 编写一个程序，倒序打印一个名字。
+### 109. 编写一个程序，倒序打印一个名字。
 
 ```c
 #include<conio.h>
@@ -2885,10 +3187,11 @@ printf("\n");
 }
 ```
 
-110. 编写一个程序，检查给定名字是否为回文。
+### 110. 编写一个程序，检查给定名字是否为回文。
+
+> **提示**：原始字符串 = 反转字符串
 
 ```c
-Hint:原始字符串 = 反转字符串
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
@@ -2910,7 +3213,7 @@ return 1;
 }
 ```
 
-111. 使用 string.h 中的字符串函数
+### 111. 使用 `string.h` 中的字符串函数
 
 ```c
 #include<conio.h>
@@ -2927,7 +3230,7 @@ strcpy(b,a);
 printf("\ncopy of a into b %%s",b);
 strupr(b);
 printf("\nCapitalize b %%s",b);
-strwr(b);
+strlwr(b);
 printf("\nSmall letters b=%%s",b);
 strrev(a);
 
@@ -2943,7 +3246,7 @@ return 1;
 }
 ```
 
-112. 编写一个程序，从 10 个学生中找出分数最高的学号。
+### 112. 编写一个程序，从 10 个学生中找出分数最高的学号。
 
 ```c
 #include<stdio.h>
@@ -2977,7 +3280,7 @@ int main()
 }
 ```
 
-13. 编写一个程序，输入 3x3 矩阵并打印行的和。
+### 13. 编写一个程序，输入 3x3 矩阵并打印行的和。
 
 ```c
 #include<stdio.h>
@@ -3004,7 +3307,7 @@ int main()
 }
 ```
 
-14. 编写一个程序，输入 3×3 矩阵并打印转置矩阵。
+### 14. 编写一个程序，输入 3×3 矩阵并打印转置矩阵。
 
 ```c
 #include<stdio.h>
@@ -3030,7 +3333,7 @@ int main()
 }
 ```
 
-15. 编写一个程序，输入 3×3 矩阵并打印矩阵的对角线元素。
+### 15. 编写一个程序，输入 3×3 矩阵并打印矩阵的对角线元素。
 
 ```c
 #include<stdio.h>
@@ -3053,7 +3356,9 @@ int main()
 }
 ```
 
-16. 编写一个程序，输入两个 3×3 矩阵并打印它们的乘积。
+### 16. 编写一个程序，输入两个 3×3 矩阵并打印它们的乘积。
+
+
 
 ```c
 #include<stdio.h>
@@ -3105,9 +3410,6 @@ int main() {
     return 0;
 }
 ```
-
-
-
 
 119. 编写一个程序，查找给数字是否存在数组中（二分查找）。
 
@@ -3200,7 +3502,7 @@ return(0);
 
 ## 函数 – 值传递 / 引用传递
 
-函数是执行特定任务的程序块。每个程序至少包含一个函数，即 `main()`。
+函数是执行特定任务的程序块。每个程序至少包含一个函数，即`main()`。
 
 根据函数是由用户定义的还是已经包含在 C 编译器中，C 语言编程中有两种函数：
 
@@ -3253,21 +3555,21 @@ Return_type function_name(argument list){}
 当一段代码调用函数时，传入的参数数量必须与要求的参数数量匹配。每个参数的类型必须与返回类型匹配。
 
 ```
-Variable=function_name(argument.).
+Variable=function_name(argument.);
 ```
 
 ## 返回类型
 
-当函数中的 `return X;` 代码执行时，函数结束，`X` 的值变为函数的结果。
+当函数中的`return X;`代码执行时，函数结束，`X`的值变为函数的结果。
 
 ## 参数
 
-进入函数的 `data` 符号是参数。C 语言中传递参数有两种方式：值传递和引用传递。
+进入函数的`data`符号是参数。C 语言中传递参数有两种方式：值传递和引用传递。
 
 - 值传递：意味着创建了数据的副本。对参数的更改对变量没有影响。
 - 引用传递：引用原始数据。因此，对参数的更改会导致原始变量发生。
 
-Void 函数：如果函数不返回值，使用特殊的 `TYPE` 来告知计算机。返回类型是 `void`。
+Void 函数：如果函数不返回值，使用特殊的`TYPE`来告知计算机。返回类型是`void`。
 
 22. 编写一个函数显示两个数的和。
 
@@ -3288,7 +3590,7 @@ void main()
 }
 ```
 
-23. 编写一个函数计算 `x=(a*b)+10`。
+23. 编写一个函数计算`x=(a*b)+10`。
 
 ```c
 #include<stdio.h>
@@ -3330,7 +3632,7 @@ int fact(int n)
 }
 ```
 
-25. 编写一个程序，使用用户定义函数找到级数 `1/1+2/2+3/3+4/4+5/5...n` 的和。
+25. 编写一个程序，使用用户定义函数找到级数`1/1+2/2+3/3+4/4+5/5...n`的和。
 
 ```c
 #include <stdio.h>
@@ -3349,7 +3651,7 @@ int main() {
 }
 ```
 
-26. 编写一个程序，使用用户定义函数计算 `(a+b)*(c+d)+(e+f)*(g+h)`。
+26. 编写一个程序，使用用户定义函数计算`(a+b)*(c+d)+(e+f)*(g+h)`。
 
 ```c
 #include<stdio.h>
@@ -3416,7 +3718,7 @@ printf("not a palindrome number");
 }
 ```
 
-128. 编写一个程序计算圆的面积，并为 `PI()` 和 `square()` 创建函数。
+128. 编写一个程序计算圆的面积，并为`PI()`和`square()`创建函数。
 
 ```c
 #include<stdio.h>
@@ -3459,8 +3761,6 @@ int main()
   input_star();
 }
 ```
-
-
 
 ```c
 printf("good evening");
@@ -3542,6 +3842,8 @@ printf("\ninterchange() 函数更改后 a=%d,\nb=%d",a,b);
 ```
 
 132. 编写一个程序使用指针交换两个数字的值。
+
+
 
 ```c
 #include<stdio.h>
@@ -3756,10 +4058,6 @@ int main()
 }
 ```
 
-
-
-
-
 - 通用指针：当一个变量被声明为 `void` 类型的指针时，它被称为通用指针。
 
 ```c
@@ -3926,6 +4224,7 @@ int main() {
 ```
 
 # 第 13 章
+
 ## 结构体
 
 结构体是不同类型变量的集合。
@@ -3967,16 +4266,19 @@ struct tagname_1
 ```
 
 - 143. 编写一个程序生成给定字符串的所有可能排列。
+
 - 144. 编写一个程序使用指针找到给定字符串的长度。
+
 - 141. 编写一个程序使用指针对数组进行排序。
+
 - 142. 编写一个程序反序打印给定字符串。
 
-
-
-
-[content]
-
 149. 编写一个程序来创建多个嵌套结构体。
+
+
+
+### 149. 编写一个程序来创建多个嵌套结构体
+
 ```c
 #include<stdio.h>
 struct dates
@@ -4043,23 +4345,23 @@ int main()
 }
 ```
 
-## 共用体 (Union)
+## 共用体（Union）
 
-Union 是 C语言中的一种特殊数据类型，允许在同一个内存位置存储不同的数据类型。我们可以定义一个包含许多成员的 union，但在任何给定时刻只有一个成员可以包含值。
+Union 是 C 语言中的一种特殊数据类型，允许在同一个内存位置存储不同的数据类型。我们可以定义一个包含许多成员的 union，但在任何给定时刻只有一个成员可以包含值。
 
-结构体（structure）与共用体（union）的区别
+### 结构体与共用体的区别
 
-| 结构体 (Structure) | 共用体 (Union) |
+| 结构体（Structure） | 共用体（Union） |
 |---|---|
-| 内存分配 | 结构体的成员互不共享内存。因此，结构体为其所有成员需要独立的内存空间，即所有成员都有唯一的存储空间。 | 共用体在各个成员之间共享内存空间，因此不需要为所有成员分配内存。分配的是共享内存空间，即等于内存占用最大的成员的大小。 |
-| 成员访问 | 可以在任何时间单独访问结构体的任何成员。 | 一某一时间只能访问共用体的一个成员。 |
-| 关键字 | 定义结构体时使用*struct 关键字*。 | 定义共用体时使用*union 关键字*。 |
-| 初始化 | 结构体的所有成员都可以初始化。 | *只有共用体的第一个成员可以被初始化。* |
-| 大小 | 结构体的大小大于每个成员大小之和。 | 共用体的大小等于具有*最大*尺寸成员的大小。 |
-| 语法 | `struct struct_name { struct ele 1; struct ele 2; ______ ele n; } struct_variable_name;` | `union union_name { union ele 1; union ele 2; ______ ele n; } union_variable_name;` |
-| 值的变化 | 结构体中一个成员的值的变化不会影响结构中的其他成员。 | 共用体内一个成员的值的变化会影响其他成员的值。 |
+| **内存分配**：结构体的成员互不共享内存。因此，结构体为其所有成员需要独立的内存空间，即所有成员都有唯一的存储空间。 | **内存分配**：共用体在各个成员之间共享内存空间，因此不需要为所有成员分配内存。分配的是共享内存空间，即等于内存占用最大的成员的大小。 |
+| **成员访问**：可以在任何时间单独访问结构体的任何成员。 | **成员访问**：某一时间只能访问共用体的一个成员。 |
+| **关键字**：定义结构体时使用 `struct` 关键字。 | **关键字**：定义共用体时使用 `union` 关键字。 |
+| **初始化**：结构体的所有成员都可以初始化。 | **初始化**：只有共用体的第一个成员可以被初始化。 |
+| **大小**：结构体的大小大于每个成员大小之和。 | **大小**：共用体的大小等于具有最大尺寸成员的大小。 |
+| **语法**：`struct struct_name { struct ele 1; struct ele 2; ______ ele n; } struct_variable_name;` | **语法**：`union union_name { union ele 1; union ele 2; ______ ele n; } union_variable_name;` |
+| **值的变化**：结构体中一个成员的值的变化不会影响结构中的其他成员。 | **值的变化**：共用体内一个成员的值的变化会影响其他成员的值。 |
 
-150. 编写一个程序显示结构体和共用体之间的区别。
+### 150. 编写一个程序显示结构体和共用体之间的区别
 
 ```c
 #include<stdio.h>
@@ -4086,50 +4388,24 @@ void main()
     printf("\nSizeOf a=%d, n=%d,il1 is %d",sizeof(il1.a),sizeof(il1.n),sizeof(il1));
 }
 ```
-*(注：原文代码中该处 printf 逻辑似乎有冗余，已根据要求保留代码逻辑不作翻译，但修正了可能的变量引用错误以保持一致)*
 
-*修正后的 150 代码块内容：*
-```c
-#include<stdio.h>
+### Typedef
 
-struct info
-{
-    char n[10];
-    int a;
-};
+`typedef` 可以为类型指定一个新名称。
 
-union infor
-{
-    char n[10];
-    int a;
-};
-void main()
-{
-    struct info i;
-    union infor il1;
-    printf("\nSizeOf a=%d, n=%d,i is %d",sizeof(i.a),sizeof(i.n),sizeof(i));
-    printf("\nSizeOf a=%d, n=%d,il1 is %d",sizeof(il1.a),sizeof(il1.n),sizeof(il1));
-    printf("\nEnter string and number"); scanf("%s%d",i.n,&i.a);
-    printf("\nSizeOf a=%d, n=%d,i is %d",sizeof(i.a),sizeof(i.n),sizeof(i));
-    printf("\nSizeOf a=%d, n=%d,il1 is %d",sizeof(il1.a),sizeof(il1.n),sizeof(il1));
-}
-```
-*(注：根据用户提供的原文，150 示例代码最后部分存在重复的 printf 逻辑，我严格遵循“不要漏掉任何一行”且“不要重复输出原文”的原则，翻译时保持其逻辑结构)*
+#### 151. 编写一个程序显示 typedef 语句
 
-## Typedef
-
-typedef 可以为类型指定一个新名称。
-
-151. 编写一个程序显示 typedef 语句。
 ```c
 #include<stdio.h>
 void main()
 {
     typedef int myname;
     idname b=34; printf("%d",b);
-}```
+}
+```
 
-152. 编写一个程序在结构体中使用 typedef 语句。
+#### 152. 编写一个程序在结构体中使用 typedef 语句
+
 ```c
 #include<stdio.h>
 void main()
@@ -4144,9 +4420,11 @@ void main()
     printf("Enter name and age");
     scanf("%s%d",a.name,&a.age);
     printf("\nStruct:%s%d",a.name,a.age);
-}```
+}
+```
 
-153. 编写一个程序使用指针读取和写入结构体数据。
+#### 153. 编写一个程序使用指针读取和写入结构体数据
+
 ```c
 #include<stdio.h>
 struct stu
@@ -4161,9 +4439,11 @@ void main()
     printf("Enter name and age");
     scanf("%s%d",s->name,s->age);
     printf("\nStruct:%s%d",s->name,s->age);
-}```
+}
+```
 
-154. 编写一个程序不使用语句添加两个结构体并显示结果。
+#### 154. 编写一个程序不使用语句添加两个结构体并显示结果
+
 ```c
 #include <stdio.h>
 struct distance
@@ -4185,7 +4465,7 @@ int main()
 }
 ```
 
-155. 编写一个程序运行时为 int、char 和 float 变量创建内存。
+#### 155. 编写一个程序运行时为 `int`、`char` 和 `float` 变量创建内存
 
 ```c
 #include <stdio.h>
@@ -4212,95 +4492,15 @@ int main()
     return 0;
 }
 ```
-[/content] (注：由于您提供的待翻译文本存在部分重复和逻辑断层（如 150 示例中的重复 printf 以及 Typedef 部分的断裂），我已按照高级文档工程师的标准，在保持原文结构完整性的基础上进行了翻译和格式对齐。)
 
-**抱歉，上述输出中在处理原文逻辑时出现了格式混乱。以下是针对您提供的文本的纯净翻译版本：**
 
-[content]
-149. 编写一个程序来创建多个嵌套结构体。
-```c
-#include<stdio.h>
-struct dates
-{
-    int d,m,y;
-};
-struct student
-{
-    char name[20],course[20];
-    struct dates dob, doj;
-    float fee;
-};
-struct employee
-{
-    char name[20];
-    struct dates dob, doj;
-    float salary;
-};
-int main()
-{
-    struct student a;
-    struct employee b;
-    int c;
-    printf("enter choice 1 or 2 \n");
-    scanf("%d",&c);
-    switch(c)
-    {
-    case 1:
-        printf("Enter name of student\n ");
-        fflush(stdin);
-        gets(a.name);
-        printf("\nEnter date of birth\n");
-        scanf("%d%d%d",&a.dob.d, &a.dob.m, &a.dob.y);
-        printf("\nEnter date of joining\n");
-        scanf("%d%d%d",&a.doj.d, &a.doj.m, &a.doj.y);
-        printf("\nEnter course\n");
-        scanf("%s",a.course);
-        printf("\nEnter fee\n");
-        scanf("%f",a.fee);
-        printf("\n---Details--\n");
-        printf("\nName:\t%s",a.name);
-        printf("\nDOB:\t%d/%d/%d",a.dob.m,a.dob.y);
-        printf("\nDOJ:\t%d/%d/%d",a.doj.d, a.doj.m,a.doj.y);
-        printf("\nCourse:\t%s",a.course);
-        printf("\nFee:\t%5.2f",a.fee);
-        break;
-    case 2: 
-        printf("\nEnter name of employee\n");
-        scanf("%s",b.name);
-        printf("\nEnter date of birth\n");
-        scanf("%d%d%d",&b.dob.d, &b.dob.m, &b.dob.y);
-        printf("\nEnter date of joining\n");
-        scanf("%d%d%d",&b.doj.d, &b.doj.m, &b.doj.y);
-        printf("\nsalary\n");
-        scanf("%f",&b.salary);
-        printf("\n---Details--\n");
-        printf("\nName:\t%s",b.name);
-        printf("\nDOB:\t%d/%d/%d",b.dob.d,b.dob.m,b.dob.y);
-        printf("\nDOJ:\t%d/%d/%d",b.doj.d,b.doj.m,b.doj.y);
-        printf("\nSalary:\t%5.2f",b.salary);
-        break;
-    default: printf("Invalid");
-    }
-}
-```
 
-## 共用体 (Union)
-
-Union 是 C语言中的一种特殊数据类型，允许在同一个内存位置存储不同的数据类型。我们可以定义一个包含许多成员的 union，但在任何给定时刻只有一个成员可以包含值。
-
-结构体与共用体的区别
-
-| 结构体 (Structure) | 共用体 (Union) |
-|---|---|
-| 内存分配 | 结构体的成员互不共享内存。因此，结构体为其所有成员需要独立的内存空间，即所有成员都有唯一的存储空间。 | 共用体在各个成员之间共享内存空间，因此不需要为所有成员分配内存。分配的是共享内存空间，即等于内存占用最大的成员的大小。 |
-| 成员访问 | 可以在任何时间单独访问结构体的任何成员。 | 某一时间只能访问共用体的一个成员。 |
-| 关键字 | 定义结构体时使用*struct 关键字*。 | 定义共用体时使用*union 关键字*。 |
-| 初始化 | 结构体的所有成员都可以初始化。 | *只有共用体的第一个成员可以被初始化。* |
-| 大小 | 结构体的大小大于每个成员大小之和。 | 共用体的大小等于具有*最大*尺寸成员的大小。 |
+| 大小 | 结构体的大小大于每个成员大小之和。 | 共用体的大小等于具有最大尺寸成员的大小。 |
+| --- | --- | --- |
 | 语法 | `struct struct_name { struct ele 1; struct ele 2; ______ ele n; } struct_variable_name;` | `union union_name { union ele 1; union ele 2; ______ ele n; } union_variable_name;` |
 | 值的变化 | 结构体中一个成员的值的变化不会影响结构中的其他成员。 | 共用体内一个成员的值的变化会影响其他成员的值。 |
 
-150. 编写一个程序显示结构体和共用体之间的区别。
+### 150. 编写一个程序显示结构体和共用体之间的区别
 
 ```c
 #include<stdio.h>
@@ -4330,18 +4530,21 @@ void main()
 
 ## Typedef
 
-typedef 可以为类型指定一个新名称。
+`typedef` 可以为类型指定一个新名称。
 
-151. 编写一个程序显示 typedef 语句。
+### 151. 编写一个程序显示 typedef 语句
+
 ```c
 #include<stdio.h>
 void main()
 {
     typedef int myname;
     idname b=34; printf("%d",b);
-}```
+}
+```
 
-152. 编写一个程序在结构体中使用 typedef 语句。
+### 152. 编写一个程序在结构体中使用 typedef 语句
+
 ```c
 #include<stdio.h>
 void main()
@@ -4356,9 +4559,11 @@ void main()
     printf("Enter name and age");
     scanf("%s%d",a.name,&a.age);
     printf("\nStruct:%s%d",a.name,a.age);
-}```
+}
+```
 
-153. 编写一个程序使用指针读取和写入结构体数据。
+### 153. 编写一个程序使用指针读取和写入结构体数据
+
 ```c
 #include<stdio.h>
 struct stu
@@ -4376,7 +4581,8 @@ void main()
 }
 ```
 
-154. 编写一个程序不使用语句添加两个结构体并显示结果。
+### 154. 编写一个程序不使用语句添加两个结构体并显示结果
+
 ```c
 #include <stdio.h>
 struct distance
@@ -4398,7 +4604,7 @@ int main()
 }
 ```
 
-155. 编写一个程序运行时为 int、char 和 float 变量创建内存。
+### 155. 编写一个程序运行时为 int、char 和 float 变量创建内存
 
 ```c
 #include <stdio.h>
@@ -4425,7 +4631,6 @@ int main()
     return 0;
 }
 ```
-
 
 ```c
 scanf("%d",&n);
@@ -4439,7 +4644,7 @@ printf("Inputted text is: %s\n",name);
 return 0;
 ```
 
-158. 编写一个程序，使用动态内存分配读取一维数组，并打印所有元素的和以及输入的数组元素。
+### 158. 编写一个程序，使用动态内存分配读取一维数组，并打印所有元素的和以及输入的数组元素
 
 ```c
 #include <stdio.h>
@@ -4476,7 +4681,7 @@ int main()
 }
 ```
 
-159. 编写一个程序，使用结构体和动态内存分配读取并打印学生详情。
+### 159. 编写一个程序，使用结构体和动态内存分配读取并打印学生详情
 
 ```c
 #include <stdio.h>
@@ -4514,7 +4719,7 @@ int main()
 }
 ```
 
-160. 编写一个程序在运行时为数组分配内存。
+### 160. 编写一个程序在运行时为数组分配内存
 
 ```c
 #include <stdio.h>
@@ -4544,7 +4749,8 @@ int main() {
 }
 ```
 
-161. 编写一个程序使用 realloc。
+### 161. 编写一个程序使用 realloc
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -4564,7 +4770,8 @@ int main()
 }
 ```
 
-## 第15 章
+# 第15章
+
 ## 文件处理
 
 文件是存储在辅助存储设备中的字节集合。系统中有两种文件：
@@ -4572,19 +4779,21 @@ int main()
 - 文本文件
 - 二进制文件
 
-文本文件包含ASCII数字、字母和符号。
+文本文件包含 ASCII 数字、字母和符号。
+
 二进制文件是文本文件的编译版本。
 
-C语言中的基本文件操作如下：
+C 语言中的基本文件操作如下：
 
-- 1. 创建新文件（属性为"a","w"或"w+" fopen）。
-2. 打开现有文件（fopen）。
-3. 从文件中读取（fscanf 和 getc）。
-4. 写入文件（fprintf 和 fputs）。
-5. 移动到特定位置（fseek, rewind）。
-6. 关闭文件（fclose）。
+1. 创建新文件（属性为`"a"`、`"w"`或`"w+"`的`fopen`）。
+2. 打开现有文件（`fopen`）。
+3. 从文件中读取（`fscanf`和`getc`）。
+4. 写入文件（`fprintf`和`fputs`）。
+5. 移动到特定位置（`fseek`、`rewind`）。
+6. 关闭文件（`fclose`）。
 
 基本文件操作的语法为：
+
 ```c
 FILE *fp;
 fp=fopen("filename","mode");
@@ -4592,56 +4801,56 @@ fp=fopen("filename","mode");
 
 文件的模式如下：
 
-- r: 以读模式打开文件并将指针指向文件的第一个字符。如果文件不存在，返回空。
-- w: 以写模式打开文件并将指针指向文件的第一个字符。如果文件存在，数据会被覆盖。
-- a: 以追加模式打开文件并将指针指向文件的第一个字符。如果文件不存在，则创建它。但它不能修改现有内容。
-- r+: 以读写模式打开文件并将指针指向文件的第一个字符。
-- w+: 以读写模式打开文件并将指针指向文件的第一个字符。
-- a+: 以读写模式打开文件并将指针指向文件的第一个字符。
+- `r`：以读模式打开文件并将指针指向文件的第一个字符。如果文件不存在，返回空。
+- `w`：以写模式打开文件并将指针指向文件的第一个字符。如果文件存在，数据会被覆盖。
+- `a`：以追加模式打开文件并将指针指向文件的第一个字符。如果文件不存在，则创建它。但它不能修改现有内容。
+- `r+`：以读写模式打开文件并将指针指向文件的第一个字符。
+- `w+`：以读写模式打开文件并将指针指向文件的第一个字符。
+- `a+`：以读写模式打开文件并将指针指向文件的第一个字符。
 
 | 文件处理函数 | 描述 |
-| :--- | :--- |
-| fopen () | 创建新文件或打开现有文件。 |
-| fclose () | 关闭打开的文件。 |
-| getw () | 从文件中读取一个整数。 |
-| putw () | 向文件写入一个整数。 |
-| fgetc () | 从文件中读取一个字符。 |
-| fputc () | 向文件写入一个字符。 |
-| gets () | 从键盘读取一行。 |
-| puts () | 向屏幕输出一行。 |
-| fgets () | 每次从文件中读取一个字符串。 |
-| fputs () | 向文件写入一个字符串。 |
-| feof () | 查找文件结束符。 |
-| fgetchar () | 从键盘读取一个字符。 |
+| --- | --- |
+| `fopen()` | 创建新文件或打开现有文件。 |
+| `fclose()` | 关闭打开的文件。 |
+| `getw()` | 从文件中读取一个整数。 |
+| `putw()` | 向文件写入一个整数。 |
+| `fgetc()` | 从文件中读取一个字符。 |
+| `fputc()` | 向文件写入一个字符。 |
+| `gets()` | 从键盘读取一行。 |
+| `puts()` | 向屏幕输出一行。 |
+| `fgets()` | 每次从文件中读取一个字符串。 |
+| `fputs()` | 向文件写入一个字符串。 |
+| `feof()` | 查找文件结束符。 |
+| `fgetchar()` | 从键盘读取一个字符。 |
 
 | 文件处理函数 | 描述 |
-| :--- | :--- |
-| fprintf () | 向文件写入格式化数据。 |
-| fscanf () | 从文件中读取格式化数据。 |
-| fputch () | 从键盘向屏幕写入字符。 |
-| fseek() | 将文件指针移动到指定位置。 |
-| SEEK_SET | 将文件指针移动到文件开头。 |
-| SEEK_CUR | 将文件指针移动到指定位置。 |
-| SEEK_END | 将文件指针移动到文件末尾。 |
-| ftell() | 给文件指针的位置。 |
-| rewind() | 将文件指针移动到文件开头。 |
-| getc() | 从文件中读取一个字符。 |
-| getch() | 从键盘读取一个字符。 |
-| getche() | 从键盘读取字符并显示在屏幕。 |
-| getchar() | 从键盘读取一个字符。 |
-| putc() | 向文件写入一个字符。 |
+| --- | --- |
+| `fprintf()` | 向文件写入格式化数据。 |
+| `fscanf()` | 从文件中读取格式化数据。 |
+| `fputch()` | 从键盘向屏幕写入字符。 |
+| `fseek()` | 将文件指针移动到指定位置。 |
+| `SEEK_SET` | 将文件指针移动到文件开头。 |
+| `SEEK_CUR` | 将文件指针移动到指定位置。 |
+| `SEEK_END` | 将文件指针移动到文件末尾。 |
+| `ftell()` | 给文件指针的位置。 |
+| `rewind()` | 将文件指针移动到文件开头。 |
+| `getc()` | 从文件中读取一个字符。 |
+| `getch()` | 从键盘读取一个字符。 |
+| `getche()` | 从键盘读取字符并显示在屏幕。 |
+| `getchar()` | 从键盘读取一个字符。 |
+| `putc()` | 向文件写入一个字符。 |
 
 | 文件处理函数 | 描述 |
-| :--- | :--- |
-| putchar () | 向屏幕输出字符。 |
-| printf () | 向屏幕输出格式化数据。 |
-| sprintf () | 向字符串写入格式化输出。 |
-| scanf () | 从键盘读取格式化数据。 |
-| sscanf () | 从字符串读取格式化输入。 |
-| remove () | 删除文件。 |
-| fflush () | 刷新文件。 |
+| --- | --- |
+| `putchar()` | 向屏幕输出字符。 |
+| `printf()` | 向屏幕输出格式化数据。 |
+| `sprintf()` | 向字符串写入格式化输出。 |
+| `scanf()` | 从键盘读取格式化数据。 |
+| `sscanf()` | 从字符串读取格式化输入。 |
+| `remove()` | 删除文件。 |
+| `fflush()` | 刷新文件。 |
 
-162. 编写一个程序打开现有文件并逐字符读取它。
+### 162. 编写一个程序打开现有文件并逐字符读取它
 
 ```c
 #include<stdio.h>
@@ -4662,9 +4871,9 @@ fclose(fp);
 }
 ```
 
-163. 编写一个程序复制现有文件。
+### 163. 编写一个程序复制现有文件
 
-164. 编写一个程序统计文件中元音的数量。
+### 164. 编写一个程序统计文件中元音的数量
 
 ```c
 #include<stdio.h>
@@ -4687,7 +4896,8 @@ return(0);
 }
 ```
 
-165. 编写一个程序从文件中打印所有学生的名字。
+### 165. 编写一个程序从文件中打印所有学生的名字
+
 ```c
 #include<stdio.h>
 void main()
@@ -4703,9 +4913,7 @@ void main()
 }
 ```
 
-166. 编写一个程序输入学生姓名并更新现有文件。
-
-
+### 166. 编写一个程序输入学生姓名并更新现有文件
 
 ```c
 #include<stdio.h>
@@ -4722,7 +4930,10 @@ void main()
 }
 ```
 
-167. 编写一个程序创建一个文件的副本，但将所有的 *i* 替换为 *I*。
+### 167. 编写一个程序创建一个文件的副本，但将所有的 `i` 替换为 `I`
+
+
+
 ```c
 #include<stdio.h>
 void main()
@@ -4960,6 +5171,7 @@ void main()
 ```
 
 173. 编写一个显示 enum 的程序。
+
 ```c
 #include <stdio.h>
 enum course {C,VB,HTML};
@@ -4973,6 +5185,7 @@ int main()
 ```
 
 174. 编写一个使用 sprintf() 的程序。
+
 ```c
 #include <stdio.h>
 int main()
@@ -4989,6 +5202,7 @@ int main()
 ```
 
 175. 编写一个使用 sscanf() 的程序。
+
 ```c
 #include <stdio.h>
 int main ()
@@ -4999,6 +5213,7 @@ int main ()
 ```
 
 176. 编写一个使用 getch(), putch(), getchar(), and puts() 的程序。
+
 ```c
 #include <stdio.h>
 #include<conio.h>
@@ -5022,10 +5237,12 @@ int main ()
 ```
 
 # 第16章
+
 ## 位运算符
 
 - 位运算符用于执行位操作。十进制值被转换为二进制值，位运算符对这些位进行操作。
-- C 语言中的位运算符有 & (位与), | (位或), ~ (位取反), ^ (位异异), << (左移), >> (右移)。
+
+- C 语言中的位运算符有 `&` (位与), `|` (位或), `~` (位取反), `^` (位异或), `<<` (左移), `>>` (右移)。
 
 位操作和位运算符真值表：
 
@@ -5038,10 +5255,12 @@ int main ()
 
 有二位位移运算符。它们是：
 
-- 右移 (>>)
-- 左移 (<<)
+- 右移 (`>>`)
 
-177. 编写一个使用位与 (&) 运算符的程序。
+- 左移 (`<<`)
+
+177. 编写一个使用位与 (`&`) 运算符的程序。
+
 ```c
 #include <stdio.h>
 #include<conio.h>
@@ -5052,16 +5271,23 @@ int main ()
     return 0;
 }
 ```
+
 解释：
-12 = 00001100 (二进制)
-25 = 00011001 (二进制)
 
-12 和 25 的位操作
-00001100
-& 00011001
-00001000 = 8 (十进制)
+`12` = `00001100` (二进制)
 
-178. 编写一个使用位或 (|) 运算符的程序。
+`25` = `00011001` (二进制)
+
+`12` 和 `25` 的位操作
+
+`00001100`
+
+`& 00011001`
+
+`00001000` = `8` (十进制)
+
+178. 编写一个使用位或 (`|`) 运算符的程序。
+
 ```c
 #include <stdio.h>
 #include<conio.h>
@@ -5071,16 +5297,23 @@ int a = 12, b = 25;
     return 0;
 }
 ```
+
 解释：
-12 = 00001100 (二进制)
-25 = 00011001 (二进制)
 
-12 和 25 的位或操作
-00001100
-00011001
-00011101 = 29 (十进制)
+`12` = `00001100` (二进制)
 
-179. 编写一个使用位异异 (^) 运算符的程序。
+`25` = `00011001` (二进制)
+
+`12` 和 `25` 的位或操作
+
+`00001100`
+
+`00011001`
+
+`00011101` = `29` (十进制)
+
+179. 编写一个使用位异或 (`^`) 运算符的程序。
+
 ```c
 #include <stdio.h>
 #include<conio.h>
@@ -5091,16 +5324,23 @@ int a = 12, b = 25;
     return 0;
 }
 ```
+
 解释：
-12 = 00001100 (二进制)
-25 = 00011001 (二进制)
 
-12 和 25 的位异异操作
-00001100
-00011001
-00010101 = 21 (十进制)
+`12` = `00001100` (二进制)
 
-180. 编写一个使用位取反 (~) 的程序。
+`25` = `00011001` (二进制)
+
+`12` 和 `25` 的位异或操作
+
+`00001100`
+
+`00011001`
+
+`00010101` = `21` (十进制)
+
+180. 编写一个使用位取反 (`~`) 的程序。
+
 ```c
 #include <stdio.h>
 #include<conio.h>
@@ -5111,14 +5351,19 @@ int b = 35;
     return 0;
 }
 ```
-解释：
-35 = 00100011 (二进制)
 
-35 的位取反操作
-~ 00100011
-11011100 = 220 (十进制)
+解释：
+
+`35` = `00100011` (二进制)
+
+`35` 的位取反操作
+
+`~ 00100011`
+
+`11011100` = `220` (十进制)
 
 181. 编写一个使用位移运算符的程序。
+
 ```c
 #include <stdio.h>
 int main()
@@ -5136,10 +5381,6 @@ int main()
 }
 ```
 
-
-
-
-
 头文件的语法如下：
 
 ```
@@ -5149,76 +5390,70 @@ int main()
 
 ## C 标准库头文件
 
-| <assert.h> | 将其参数与零进行比较的条件编译宏 |
-| <complex.h> (自 C99) | 复数算术 |
-| <ctype.h> | 确定字符数据中包含的类型的函数 |
-| <errno.h> | 报告错误条件的宏 |
-| <fenv.h> (自 C99) | 浮点数环境 |
-| <float.h> | 浮点类型的限制值 |
-| <intypes.h> (自 C99) | 整数类型的格式转换 |
-| <iso6046.h> (自 C95) | 运算符的替代拼写 |
-| <limits.h> | 基础类型的大小 |
-| <locale.h> | 本地化工具 |
-| <math.h> | 通用数学函数 |
-| <setjmp.h> | 非局部跳转 |
-| <signal.h> | 信号处理 |
-| <stdalign.h> (自 C11) | 对齐和 alignof 方便宏 |
-| <stdarg.h> | 可变参数 |
-| <statomic.h> (自 C11) | 原子类型 |
-| <stdbool.h> (自 C99) | 布尔类型 |
-| <stddef.h> | 通用宏定义 |
-| <stdint.h> (自 C99) | 固定宽度整数类型 |
-| <stdio.h> | 输入/输出 |
-| <stdlib.h> | 通用工具：内存管理、程序实用、字符串转换和随机数 |
-| <stdnoreturn.h> (自 C11) | noreturn 方便宏 |
-| <string.h> | 字符串处理 |
-| <tgmath.h> (自 C99) | 类型泛型数学（封装 math.h 和 complex.h 的宏） |
-| <threads.h> (自 C11) | 线程库 |
-| <time.h> | 时间/日期工具 |
-| <uchar.h> (自 C11) | UTF-16 和 UTF-32 字符工具 |
-| <wchar.h> (自 C95) |扩展多字节和宽字符工具 |
-| <wctype.h> (自 C95) | 确定宽字符数据中包含的类型的函数 |
+| `<assert.h>` | 将其参数与零进行比较的条件编译宏 |
+|---|---|
+| `<complex.h>` (自 C99) | 复数算术 |
+| `<ctype.h>` | 确定字符数据中包含的类型的函数 |
+| `<errno.h>` | 报告错误条件的宏 |
+| `<fenv.h>` (自 C99) | 浮点数环境 |
+| `<float.h>` | 浮点类型的限制值 |
+| `<inttypes.h>` (自 C99) | 整数类型的格式转换 |
+| `<iso646.h>` (自 C95) | 运算符的替代拼写 |
+| `<limits.h>` | 基础类型的大小 |
+| `<locale.h>` | 本地化工具 |
+| `<math.h>` | 通用数学函数 |
+| `<setjmp.h>` | 非局部跳转 |
+| `<signal.h>` | 信号处理 |
+| `<stdalign.h>` (自 C11) | 对齐和 `alignof` 方便宏 |
+| `<stdarg.h>` | 可变参数 |
+| `<stdatomic.h>` (自 C11) | 原子类型 |
+| `<stdbool.h>` (自 C99) | 布尔类型 |
+| `<stddef.h>` | 通用宏定义 |
+| `<stdint.h>` (自 C99) | 固定宽度整数类型 |
+| `<stdio.h>` | 输入/输出 |
+| `<stdlib.h>` | 通用工具：内存管理、程序实用、字符串转换和随机数 |
+| `<stdnoreturn.h>` (自 C11) | `noreturn` 方便宏 |
+| `<string.h>` | 字符串处理 |
+| `<tgmath.h>` (自 C99) | 类型泛型数学（封装 `math.h` 和 `complex.h` 的宏） |
+| `<threads.h>` (自 C11) | 线程库 |
+| `<time.h>` | 时间/日期工具 |
+| `<uchar.h>` (自 C11) | UTF-16 和 UTF-32 字符工具 |
+| `<wchar.h>` (自 C95) | 扩展多字节和宽字符工具 |
+| `<wctype.h>` (自 C95) | 确定宽字符数据中包含的类型的函数 |
 
 ## C语言中的宏和预处理器
 
-在 C 程序中，所有以井号 (#) 开头的行都由预处理器处理，预处理器是一个由编译器调用的特殊程序。简单来说，预处理器获取一个 C 程序并生成另一个不包含任何 # 的 C 程序。
+在 C 程序中，所有以井号 (`#`) 开头的行都由预处理器处理，预处理器是一个由编译器调用的特殊程序。简单来说，预处理器获取一个 C 程序并生成另一个不包含任何 `#` 的 C 程序。
 
-- 1. 以下是关于 C 预处理器的一些有趣的事实：
+1. 以下是关于 C 预处理器的一些有趣的事实：
 
 当我们使用 `include` 指令时，被包含的头文件内容（预处理后）会被复制到当前文件中。
 
 尖括号 `<` 和 `>` 指示预处理器在存放所有头文件的标准文件夹中查找。
 
-- 2. 双引号 `" "` 指示预处理器在当前文件夹中查找，如果当前文件夹不存在该文件，则它会在所有头文件的标准文件夹中查找。
+2. 双引号 `" "` 指示预处理器在当前文件夹中查找，如果当前文件夹不存在该文件，则它会在所有头文件的标准文件夹中查找。
 
-当我们使用 `define` 定义常量时，预处理器会生成一个 C 程序，其中定义的常量会被搜索，匹配的标记将被替换为给定的表达式。
 
-在 C 语言中，`#define` 指令允许在源代码中定义宏。
 
-这些宏定义允许声明常量值供整个代码使用。
+当我们使用`define`定义常量时，预处理器会生成一个 C 程序，其中定义的常量会被搜索，匹配的标记将被替换为给定的表达式。
 
-宏定义不是变量，不能像变量一样被我们的程序代码更改。
+在 C 语言中，`#define`指令允许在源代码中定义宏。这些宏定义允许声明常量值供整个代码使用。宏定义不是变量，不能像变量一样被我们的程序代码更改。在创建表示数字、字符串或表达式的常量时，我们通常使用这种语法。
 
-在创建表示数字、字符串或表达式的常量时，我们通常使用这种语法。
-
-`#define` 的语法为：
+`#define`的语法为：
 
 ```
 #define Constant_name value
 #define Constant_name (Expression)
 ```
 
-还有 `#if`、`#elif`、`#else` 和 `#endif` 指令。
+还有`#if`、`#elif`、`#else`和`#endif`指令。`#if`指令配合`#elif`、`#else`和`#endif`控制源文件中部分的编译。如果在`#if`后面写的表达式非零值，则紧随`#if`指令的部分将在翻译单元中保留。
 
-`#if` 指令配合 `#elif`、`#else` 和 `#endif` 控制源文件中部分的编译。
-
-如果在 `#if` 后面写的表达式非零值，则紧随 `#if` 指令的部分将在翻译单元中保留。
-
-## 第18 章
+## 第18章
 
 ## 附加题
 
-- 1. 以下程序的输出是什么？
+1. 以下程序的输出是什么？
+
 ```c
 #include <stdio.h>
 using namespace std;
@@ -5231,9 +5466,11 @@ printf("%d",c);
 return 0;
 }
 ```
+
 答案：1
 
-- 2. 以下程序的输出是什么？
+2. 以下程序的输出是什么？
+
 ```c
 #include <stdio.h>
 using namespace std;
@@ -5244,9 +5481,11 @@ printf("%d %d",+x,--y);
 return 0;
 }
 ```
+
 答案：6 4
 
-- 3. 以下程序的输出是什么？
+3. 以下程序的输出是什么？
+
 ```c
 int main()
 {
@@ -5258,9 +5497,11 @@ printf("%d",z);
 return 0;
 }
 ```
+
 答案：10
 
-- 4. 以下程序的输出是什么？
+4. 以下程序的输出是什么？
+
 ```c
 int main()
 {
@@ -5273,9 +5514,11 @@ printf("%d %d %d",num1,num2,num3);
 return 0;
 }
 ```
+
 答案：5 3 1
 
-- 5. 以下程序的输出是什么？
+5. 以下程序的输出是什么？
+
 ```c
 #include <stdio.h>
 int main()
@@ -5285,9 +5528,11 @@ c = a++ + b;
 printf("%d %d", a, b);
 }
 ```
+
 答案：a=2, b=1
 
-- 6. 以下程序的输出是什么？
+6. 以下程序的输出是什么？
+
 ```c
 void main()
 {
@@ -5296,18 +5541,22 @@ num=(++i,++j,i+j);
 printf("%d %d %d",num,i,j);
 }
 ```
+
 答案：19 7 11
 
-- 7. 以下程序的输出是什么？
+7. 以下程序的输出是什么？
+
 ```c
 void main() {
 int i = 5;
 printf("%d",++++i);
 }
 ```
+
 答案：编译器错误
 
-- 8. 以下程序的输出是什么？
+8. 以下程序的输出是什么？
+
 ```c
 int main() {
 FILE *fp1, *fp2;
@@ -5318,9 +5567,11 @@ fputc('B',fp2);
 close(fp1);
 }
 ```
+
 答案：B
 
-- 9. 以下程序的输出是什么？
+9. 以下程序的输出是什么？
+
 ```c
 int main() {
 int k = 1;
@@ -5328,16 +5579,20 @@ printf("%d = %s", k, k==1?"TRUE":"FALSE");
 return 0;
 }
 ```
+
 答案：1 is TRUE
 
-- 10. 以下程序的输出是什么？
+10. 以下程序的输出是什么？
+
 ```c
 char *str = "char *str = %c%s";
 main() { printf(str, str, str); }
 ```
+
 答案：char *str = c
 
-- 11. 以下程序的输出是什么？
+11. 以下程序的输出是什么？
+
 ```c
 int main() {
 float a=3.14159;
@@ -5345,9 +5600,11 @@ printf("%f\n", a);
 return 0;
 }
 ```
+
 答案：3
 
-- 12. 以下程序的输出是什么？
+12. 以下程序的输出是什么？
+
 ```c
 int main() {
 char *p;
@@ -5356,18 +5613,22 @@ printf(p, 23);
 return 0;
 }
 ```
+
 答案：23
 
-- 13. 以下程序的输出是什么？
+13. 以下程序的输出是什么？
+
 ```c
 int main() {
     printf("%%%n");
     return 0;
 }
 ```
+
 答案：%
 
-- 14. 以下程序的输出是什么？
+14. 以下程序的输出是什么？
+
 ```c
 int main() {
     FILE *ptr;
@@ -5378,9 +5639,11 @@ int main() {
     return 0;
 }
 ```
+
 答案：死循环
 
-- 15. 以下程序的输出是什么？
+15. 以下程序的输出是什么？
+
 ```c
 int main() {
     int a=100;
@@ -5388,25 +5651,31 @@ int main() {
     return 0;
 }
 ```
+
 答案：100
 
-- 16. 以下程序的输出是什么？
+16. 以下程序的输出是什么？
+
 ```c
 void main() {
     int i,j;
     printf("%d %d\n", scanf("%d", &i),scanf("%d", &j));
 }
 ```
+
 答案：1 1
 
-- 17. 以下代码中 `fopen()` 函数中“rb”的作用是什么？
+17. 以下代码中`fopen()`函数中“rb”的作用是什么？
+
 ```c
 FILE *fp;
 fp = fopen("source.txt", "rb");
 ```
+
 答案：以二进制模式打开“source.txt”进行读取
 
-- 18. 以下程序的输出是什么？
+18. 以下程序的输出是什么？
+
 ```c
 int main() {
 char *str;
@@ -5414,29 +5683,31 @@ str="%s";
 printf(str,"s");
 }
 ```
+
 答案：S
 
-- 19. 写出以下程序的输出：
+19. 写出以下程序的输出：
+
 假设数组从位置 1002 开始，整数的大小为 4 字节。
+
 ```c
 int a[3][4]={1,2,3,4,5,6,7,8,9,10,11,12};
 printf("%u %u %u",a[0]+1,*(a[0]+1),*((a+0)+1));
 }
 ```
+
 答案：1006 2 2
 
-- 20. 以下程序的输出：
+20. 以下程序的输出：
+
 ```c
 void main() {
 char str1[20]="Swati", str2[20]="Computers";
 printf("%s",strcpy(str2,strcat(str1,str2)));
 }
 ```
+
 答案：SwatiComputers
-
-
-
-
 
 ```c
 return(0);
@@ -5453,9 +5724,9 @@ Process exited after 0.3283 seconds with return value 0
 Press any key to continue . . -
 ```
 
-+ 3. double sqrt(x)
+3. `double sqrt(x)`
 
-C 库函数 double sqrt(double x) 返回 x 的平方根。
+C 库函数`double sqrt(double x)`返回 x 的平方根。
 
 写一个程序找到 2 到 10 之间的平方根？
 
@@ -5493,13 +5764,18 @@ Process exited after 0.07951 seconds with return value 0
 Press any key to continue . . -
 ```
 
-+ 4. double pow(double x, double y):
+4. `double pow(double x, double y)`:
+
 它返回 x 的 y 次方，即 xy。
 
 写一个程序计算-
+
 22,23,24,25,26,27,28,29,30
+
 31,32,33,34,35,36,37,38,39,40
+
 41,42,43,44,45,46,47,48,49,50
+
 51,52,53,54,55,56,57,58,59,60
 
 ```c
@@ -5526,15 +5802,20 @@ return(0);
 ## 输出
 
 | (2) - 4.00 | 8.00 | 16.00 | 32.00 | 64.00 | 128.00 | 256.00 | 512.00 | 1024.00 |
+
 |---|---|---|---|---|---|---|---|---|
+
 | (3) - 9.00 | 27.00 | 81.00 | 243.00 | 729.00 | 2187.00 | 6561.00 | 19683.00 | 59049.00 |
+
 | (4) - 16.00 | 64.00 | 256.00 | 1024.00 | 4096.00 | 16384.00 | 65536.00 | 202144.00 | 1048576.00 |
+
 | (5) - 25.00 | 125.00 | 625.00 | 3125.00 | 15625.00 | 78125.00 | 390625.00 | 1953125.00 | 9765625.00 |
 
 Process exited after 0.1001 seconds with return value 0
+
 Press any key to continue . .
 
-+ 5. 父亲给了孩子 1200.50 卢比零花钱。写一个程序显示他分别给了多少卢比和多少分（paisa）？
+5. 父亲给了孩子 1200.50 卢比零花钱。写一个程序显示他分别给了多少卢比和多少分（paisa）？
 
 ```c
 #include <stdio.h>
@@ -5551,7 +5832,9 @@ int main ()
 return(0);
 }
 ```
+
 输出
+
 ```
 Total Money: 1200.50
 Rupee: 1200.00
@@ -5561,10 +5844,14 @@ Process exited after 0.1996 seconds with return value 0
 Press any key to continue . .
 ```
 
-+ 6. double floor(double x):
+6. `double floor(double x)`:
+
 它返回大于或等于 x 的最大整数值。
+
+```c
 #include <stdio.h>
 #include <math.h>
+```
 
 ```c
 int main ()
@@ -5583,7 +5870,9 @@ printf("Value4 = %lf\n", floor(val4));
 return(0);
 }
 ```
+
 输出
+
 ```
 Value1 = 1.0
 Value2 = 1.0
@@ -5593,8 +5882,10 @@ Value4 = -3.0
 Process exited after 0.0969 seconds with return value 0
 ```
 
-+ 7. double fabs(double x):
+7. `double fabs(double x)`:
+
 返回 x 的绝对值。
+
 写一个程序打印成本价格和销售价格之间的差值。
 
 ```c
@@ -5620,7 +5911,9 @@ int main ()
 return(0);
 }
 ```
+
 输出
+
 ```
 Enter cost price
 1234
@@ -5633,7 +5926,8 @@ Difference between cost price and sell price is 247.00
 Process exited after 6.105 seconds with return value 0
 ```
 
-+ 8. double exp(double x):
+8. `double exp(double x)`:
+
 返回 e 的 x 次方。
 
 ```c
@@ -5650,7 +5944,9 @@ int main ()
     return(0);
 }
 ```
+
 输出
+
 ```
 The exponential value of 0.00 is 1.00
 The exponential value of 1.00 is 2.72
@@ -5659,10 +5955,14 @@ The exponential value of 2.00 is 7.39
 Process exited after 0.07457 seconds with return value 0
 ```
 
-+ 9. double log10(double x):
+9. `double log10(double x)`:
+
 返回 x 的常用对数（以10为底）
+
+```c
 #include <stdio.h>
 #include <math.h>
+```
 
 ```c
 int main ()
@@ -5678,7 +5978,9 @@ printf("log10(%lf) = %lf\n", x, ret);
 return(0);
 }
 ```
+
 输出
+
 ```
 log10(10000.000000) = 4.000000
 
@@ -5686,9 +5988,11 @@ Process exited after 0.1385 seconds with return value 0
 Press any key to continue . . 
 ```
 
-| 10. | sin(x) | x 的正弦（弧度） | sin(0.0) 为 0.0 |
-| 11. | cos(x) | x 的余弦（弧度） | cos(0.0) 为 1.0 |
-| 12. | tan(x) | x 的正切（弧度） | tan(0.0) 为 0.0 |
+| 10. | `sin(x)` | x 的正弦（弧度） | `sin(0.0)` 为 0.0 |
+
+| 11. | `cos(x)` | x 的余弦（弧度） | `cos(0.0)` 为 1.0 |
+
+| 12. | `tan(x)` | x 的正切（弧度） | `tan(0.0)` 为 0.0 |
 
 ```c
 #include <stdio.h>
@@ -5710,7 +6014,9 @@ printf("%.2f\n",tan(45.0));
 return(0);
 }
 ```
+
 输出
+
 ```
 0.00
 1.00
@@ -5719,7 +6025,7 @@ return(0);
 Process exited after 0.0787 seconds with return value 0
 ```
 
-+ 13. 写一个程序找到浮点形式的余数
+13. 写一个程序找到浮点形式的余数
 
 ```c
 #include <stdio.h>
@@ -5734,20 +6040,27 @@ printf("\nRemainder of x/y is %.2lf",fmod(x,y));
 return(0);
 }
 ```
+
 余数 x/y 为 1.44
 
 ## Ctype.h
 
-| isalnum | 检查字符是否为字母数字 |
-| isalpha | 检查字符是否为字母 |
-| islower | 检查字符是否为小写 |
-| isupper | 检查字符是否为大写 |
-| isdigit | 检查字符是否为数字 |
-| isxdigit | 检查字符是否为十六进制数字 |
-| isspace | 检查字符是否为空格 |
-| isblank | 检查字符是否为空白 |
 
-写一个程序描述上述 ctype.h 函数
+
+## ctype.h 函数表
+
+| 函数名 | 描述 |
+| --- | --- |
+| `isalnum` | 检查字符是否为字母数字 |
+| `isalpha` | 检查字符是否为字母 |
+| `islower` | 检查字符是否为小写 |
+| `isupper` | 检查字符是否为大写 |
+| `isdigit` | 检查字符是否为数字 |
+| `isxdigit` | 检查字符是否为十六进制数字 |
+| `isspace` | 检查字符是否为空格 |
+| `isblank` | 检查字符是否为空白 |
+
+写一个程序描述上述 `ctype.h` 函数：
 
 ```c
 #include<stdio.h>
@@ -5764,7 +6077,9 @@ printf("\n%s",isalnum(b))?"Alphanumeric":"Not");
 return(0);
 }
 ```
-输出
+
+输出：
+
 ```
 a
 Digit
@@ -5775,36 +6090,49 @@ Not
 
 ## 其他问题
 
-+ 27. 什么是预处理器？
-预处理器是在用户编写的源程序编译之前执行的程序。预处理器指令以 (#) 开头，后面跟着命令。例如 #include ——这是一个包含文件的指令。
+### 27. 什么是预处理器？
 
-+ 28. 描述 C 语言中用于动态内存分配的函数；
-malloc()
-malloc 函数用于在程序执行期间分配内存。
-它不初始化内存，而是带有 #垃圾值。
-如果无法分配请求的空间，它将返回空指针。
-语法
+预处理器是在用户编写的源程序编译之前执行的程序。预处理器指令以 (`#`) 开头，后面跟着命令。例如 `#include` ——这是一个包含文件的指令。
+
+### 28. 描述 C 语言中用于动态内存分配的函数
+
+`malloc()`
+
+`malloc` 函数用于在程序执行期间分配内存。它不初始化内存，而是带有垃圾值。如果无法分配请求的空间，它将返回空指针。
+
+语法：
+
+```c
 ptr = (cast-type*) malloc(byte-size) // 使用 malloc() 函数分配内存。
-calloc()
-calloc() 与 malloc() 函数相同，区别仅在于它将内存初始化为零值。
-语法
-ptr = (cast-type*)calloc(n, element-size);//// 使用 calloc() 函数分配内存。
-realloc() 函数用于重新分配内存到新大小。
+```
 
+`calloc()`
 
-如果内存中没有足够的空间，将分配一个新的块来容纳现有数据。
+`calloc()` 与 `malloc()` 函数相同，区别仅在于它将内存初始化为零值。
 
-## 语法
+语法：
+
+```c
+ptr = (cast-type*)calloc(n, element-size); // 使用 calloc() 函数分配内存。
+```
+
+`realloc()`
+
+`realloc()` 函数用于重新分配内存到新大小。如果内存中没有足够的空间，将分配一个新的块来容纳现有数据。
+
+语法：
 
 ```c
 ptr = realloc(ptr, newsize); // 使用 realloc() 函数更新内存大小。
 ```
 
-在上述语法中，ptr 被分配了一个新的大小。
+在上述语法中，`ptr` 被分配了一个新的大小。
 
-free();: free 释放由 calloc() 或 malloc() 函数 分配的内存。
+`free()`
 
-## 语法
+`free()` 释放由 `calloc()` 或 `malloc()` 函数分配的内存。
+
+语法：
 
 ```c
 free(ptr); // 使用 free() 函数释放内存。
@@ -5812,55 +6140,65 @@ free(ptr); // 使用 free() 函数释放内存。
 
 ## 基于测试用例的题目
 
-- 1. Pooja 想从 ATM 机提取 X 卢比。只有当 X 是 5 的倍数且 Pooja 的账户余额有足够的现金进行取款交易（包括银行手续费）时，ATM 机才会接受交易。每次成功取款，银行收取 0.50 卢比。
+### 1. ATM 取款问题
+
+Pooja 想从 ATM 机提取 `X` 卢比。只有当 `X` 是 5 的倍数且 Pooja 的账户余额有足够的现金进行取款交易（包括银行手续费）时，ATM 机才会接受交易。每次成功取款，银行收取 0.50 卢比。
 
 计算 Pooja 在尝试交易后的账户余额。
 
-输入
-正整数 $0 < X <= 2000$ - Pooja 想要提取的现金金额。
+**输入**
 
-非负数 $0 <= Y <= 2000$，保留两位小数 - Pooja 的初始账户余额。
+正整数 `0 < X <= 2000` - Pooja 想要提取的现金金额。
 
-输出
+非负数 `0 <= Y <= 2000`，保留两位小数 - Pooja 的初始账户余额。
+
+**输出**
+
 输出尝试交易后的账户余额，格式为保留两位小数的数字。如果账户资金不足完成交易，则输出当前银行余额。
 
-示例 - 成功交易
+**示例 - 成功交易**
 
 输入：
+
 ```
 30 120.00
 ```
 
 输出：
+
 ```
 89.50
 ```
 
-示例 - 取款金额错误（不是5的倍数）
+**示例 - 取款金额错误（不是 5 的倍数）**
 
 输入：
+
 ```
 42 120.00
 ```
 
 输出：
+
 ```
 120.00
 ```
 
-示例 - 资金不足
+**示例 - 资金不足**
 
 输入：
+
 ```
 300 120.00
 ```
 
 输出：
+
 ```
 120.00
 ```
 
-解决方案：
+**解决方案：**
 
 ```c
 #include <stdio.h>
@@ -5886,17 +6224,21 @@ Process exited after 7.385 seconds with return value 0
 Press any key to continue . . .
 ```
 
-- 2. John 喜欢自己玩玩数组。今天，他有一个包含 N 个不同整数的数组。
+### 2. 数组操作问题
 
-他想对他的数组 A 执行以下操作：选择一对相邻的整数并删除其中较大的一个。这会让数组大小减小 1。此操作的代价等于两者中较小的一个。
+John 喜欢自己玩玩数组。今天，他有一个包含 `N` 个不同整数的数组。
 
-输入
-输入的第一行包含一个整数 T，表示测试用例的数量。
+他想对他的数组 `A` 执行以下操作：选择一对相邻的整数并删除其中较大的一个。这会让数组大小减小 1。此操作的代价等于两者中较小的一个。
 
-每个测试用例的第一行以整数 N 开始，表示数组 A 的大小。
-下一行包含 N 个用空格分隔的整数，其中第 i 个整数表示值 Ai。
+**输入**
 
-解决方案：
+输入的第一行包含一个整数 `T`，表示测试用例的数量。
+
+每个测试用例的第一行以整数 `N` 开始，表示数组 `A` 的大小。
+
+下一行包含 `N` 个用空格分隔的整数，其中第 `i` 个整数表示值 `Ai`。
+
+**解决方案：**
 
 ```c
 #include <stdio.h>
@@ -5924,32 +6266,50 @@ int main(void) {
 }
 ```
 
-- 3. 今天是 Jon 的生日。他的妈妈给了他一个惊喜，是真正的水果礼物：两个水果篮。第一个篮子里有 N 个苹果，第二个篮子里有 M 个橙子。Jon 喜欢苹果和橙子，但他希望它们数量相等，因此想让苹果和橙子数量之间的差异最小。为了实现这一点，他可以通过支付 1 个金币购买 1 个苹果或 1 个橙子（那是很贵的水果吧？）。Jon 最多可以购买 K 次（因为他口袋里有 K 个金币），以使差异最小。我们的小 Jon 忙于尽情庆祝他的生日，因此他将这项任务交给了他最好的朋友——你。你可以通过找到他所能实现的苹果和橙子数量之间的最小差异来帮助他吗？输入的第一行包含一个整数 T，表示测试用例的数量。
-每个测试用例的唯一行包含 3 个用空格分隔的整数——N、M 和 K——表示小 Jon 的苹果数量、橙子数量和金币数量。
+### 3. 水果篮问题
 
-输出
+今天是 Jon 的生日。他的妈妈给了他一个惊喜，是真正的水果礼物：两个水果篮。第一个篮子里有 `N` 个苹果，第二个篮子里有 `M` 个橙子。Jon 喜欢苹果和橙子，但他希望它们数量相等，因此想让苹果和橙子数量之间的差异最小。为了实现这一点，他可以通过支付 1 个金币购买 1 个苹果或 1 个橙子（那是很贵的水果吧？）。Jon 最多可以购买 `K` 次（因为他口袋里有 `K` 个金币），以使差异最小。我们的小 Jon 忙于尽情庆祝他的生日，因此他将这项任务交给了他最好的朋友——你。你可以通过找到他所能实现的苹果和橙子数量之间的最小差异来帮助他吗？
+
+**输入**
+
+输入的第一行包含一个整数 `T`，表示测试用例的数量。
+
+每个测试用例的唯一行包含 3 个用空格分隔的整数——`N`、`M` 和 `K`——表示小 Jon 的苹果数量、橙子数量和金币数量。
+
+**输出**
+
 对于每个测试用例，输出 Jon 能实现的苹果和橙子数量之间的最小差异。
 
-约束
-1 <= T = 100
-1 <= N, M, K = 100
+**约束**
 
-样例输入 1
+`1 <= T = 100`
+
+`1 <= N, M, K = 100`
+
+**样例输入 1**
+
+```
 3
 4 1
 5 2 1
 3 4 3
+```
 
-样例输出 1
+**样例输出 1**
+
+```
 0
 2
 0
+```
 
-解释
+**解释**
+
 测试 1：Jon 支付 1 个金币买 1 个苹果，苹果和橙子的数量将相等。
+
 测试 2：Jon 支付 1 个金币买 1 个橙子，他将有 5 个苹果和 3 个橙子。
 
-解决方案：
+**解决方案：**
 
 ```c
 #include<stdio.h>
@@ -5963,9 +6323,15 @@ int main()
     // ... (保持代码结构不变)
 ```
 
-- 4. Alice 和 Bob 正在玩一个游戏。Alice 初始有数字 A，Bob 有数字 B。游戏中共有 N 轮，Alice 和 Bob 轮替进行。每一轮轮到的人都会将其数字乘以 2。假设 N 轮后，Alice 的数字变成了 C，Bob 的数字变成了 D。你想计算 C 和 D 中的最大值除以最小值 max(c,d)/min(c,d)。输入的第一行包含一个整数 T，表示测试用例的数量。接下来是每个测试用例。每个测试用例包含三个整数 A, B 和 N。
+### 4. 数字倍增游戏
 
-解决方案：
+Alice 和 Bob 正在玩一个游戏。Alice 初始有数字 `A`，Bob 有数字 `B`。游戏中共有 `N` 轮，Alice 和 Bob 轮替进行。每一轮轮到的人都会将其数字乘以 2。假设 `N` 轮后，Alice 的数字变成了 `C`，Bob 的数字变成了 `D`。你想计算 `C` 和 `D` 中的最大值除以最小值 `max(c,d)/min(c,d)`。
+
+**输入**
+
+输入的第一行包含一个整数 `T`，表示测试用例的数量。接下来是每个测试用例。每个测试用例包含三个整数 `A`, `B` 和 `N`。
+
+**解决方案：**
 
 ```c
 #include<stdio.h>
@@ -6004,14 +6370,21 @@ printf("\n%d=\n",ans);
 }
 ```
 
-- 5. 给定一个整数数组和 q 个查询，打印给定索引右侧更大的数字。在 Next Greater Number 问题中，我们给了一个大小为 n 的数组和一个大小为 m 的查询数组。每个查询代表数组 a 中的索引。对于每个查询 i，打印数组 a 中索引 q[i] 之后更大的数字。输入
-a[] = {3, 4, 2, 7, 5, 8, 10, 6}
-q[] = {3, 6, 1}
+### 5. 下一个更大数字问题
 
-输出
-8 -7
+给定一个整数数组和 `q` 个查询，打印给定索引右侧更大的数字。在 Next Greater Number 问题中，我们给了一个大小为 `n` 的数组和一个大小为 `m` 的查询数组。每个查询代表数组 `a` 中的索引。对于每个查询 `i`，打印数组 `a` 中索引 `q[i]` 之后更大的数字。
 
-解决方案：
+**输入**
+
+`a[] = {3, 4, 2, 7, 5, 8, 10, 6}`
+
+`q[] = {3, 6, 1}`
+
+**输出**
+
+`8 -7`
+
+**解决方案：**
 
 ```c
 #include<stdio.h>
@@ -6043,20 +6416,41 @@ int main() {
 }
 ```
 
-- 6. 找到大小为 k 的每个连续子数组的最大值。
-输入：arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}, K = 3
-输出：3 3 4 5 5 5 6
-解释：
-1, 2, 3 的最大值是 3
-2, 3, 1 的最大值是 3
-3, 1, 4 的最大值是 4
-1, 4, 5 的最大值是 5
-4, 5, 2 的最大值是 5
-5, 2, 3 的最大值是 5
-2, 3, 6 的最大值是 6
+### 6. 滑动窗口最大值问题
 
-输入：arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}, K = 4
-输出：10 10 10 15 15 90
+找到大小为 `k` 的每个连续子数组的最大值。
+
+**输入：**
+
+`arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}, K = 3`
+
+**输出：**
+
+`3 3 4 5 5 5 6`
+
+**解释：**
+
+`1, 2, 3` 的最大值是 3
+
+`2, 3, 1` 的最大值是 3
+
+`3, 1, 4` 的最大值是 4
+
+`1, 4, 5` 的最大值是 5
+
+`4, 5, 2` 的最大值是 5
+
+`5, 2, 3` 的最大值是 5
+
+`2, 3, 6` 的最大值是 6
+
+**输入：**
+
+`arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}, K = 4`
+
+**输出：**
+
+`10 10 10 15 15 90`
 
 ```c
 #include<stdio.h>
@@ -6095,15 +6489,25 @@ int main()
 }
 ```
 
-- 7. Jerry 女士给她的学生们出了了一个挑战。她给出了包含 N 个随机整数的列表，她想找到给定列表中出现频率最高的整数。[1,4,3,2,3,2,1,2,5,2,3,4,3,2]
-如果两个数字的频率相同，则打印较小的一个输入：
-输入的第一行包含 N，整数的数量。
-第二行将包含 N 个用空格分隔的整数。
-输出：
-打印最频繁的整数
+### 7. 最高频整数问题
+
+Jerry 女士给她的学生们出了一个挑战。她给出了包含 `N` 个随机整数的列表，她想找到给定列表中出现频率最高的整数。`[1,4,3,2,3,2,1,2,5,2,3,4,3,2]`
+
+如果两个数字的频率相同，则打印较小的一个。
+
+**输入：**
+
+输入的第一行包含 `N`，整数的数量。
+
+第二行将包含 `N` 个用空格分隔的整数。
+
+**输出：**
+
+打印最频繁的整数。
+
+**解决方案：**
 
 ```c
-解决方案：
 #include<stdio.h>
 int main()
 {
@@ -6136,12 +6540,15 @@ for(i=0;i<n;i++)
 printf("%0d",b);
 ```
 
-- 汤姆和杰鼠在一家建筑工地工作，他们必须将 N 块砖从一个地方搬到另一个地方，并开始工作。他们决定玩一个有趣的挑战：看谁放的是最后一块砖。他们需要遵循一个简单的规则：在第 $i$ 轮中，汤姆放 $i$ 块砖，而杰鼠放 $i \times 2$ 块砖。总共有 N 块砖，你需要帮助找到挑战的结果，找出是谁放了最后一块砖。
+### 8. 砖块搬运游戏
 
-Input:
-第一行包含一个整数 N。
+汤姆和杰鼠在一家建筑工地工作，他们必须将 `N` 块砖从一个地方搬到另一个地方，并开始工作。他们决定玩一个有趣的挑战：看谁放的是最后一块砖。他们需要遵循一个简单的规则：在第 `i` 轮中，汤姆放 `i` 块砖，而杰鼠放 `i * 2` 块砖。总共有 `N` 块砖，你需要帮助找到挑战的结果，找出是谁放了最后一块砖。
 
-Solution:
+**输入：**
+
+第一行包含一个整数 `N`。
+
+**解决方案：**
 
 ```c
 #include<stdio.h>
@@ -6174,21 +6581,29 @@ int main()
 }
 ```
 
-9. 强尼的生日在下个月。这次他计划邀请 N 个朋友。他想在派对结束后给所有朋友分一些巧克力。他去商店买了一包巧克力。在巧克力店里，每包巧克力包含的数量都不同。他想买这样包巧克力：其包含的数量可以平均分给所有朋友。帮助强尼买这样包巧克力。
+### 9. 巧克力购买问题
 
-Input:
-第一行包含 T，即测试用例的数量。
-每个测试用例包含两个整数 N 和 M。其中 N 是朋友的数量，M 是每包巧力的数量。
+强尼的生日在下个月。这次他计划邀请 `N` 个朋友。他想在派对结束后给所有朋友分一些巧克力。他去商店买了一包巧克力。在巧克力店里，每包巧克力包含的数量都不同。他想买这样包巧克力：其包含的数量可以平均分给所有朋友。帮助强尼买这样包巧克力。
 
-Output:
+**输入：**
+
+第一行包含 `T`，即测试用例的数量。
+
+每个测试用例包含两个整数 `N` 和 `M`。其中 `N` 是朋友的数量，`M` 是每包巧克力的数量。
+
+**输出：**
+
 在每个测试用例中，如果他可以买那包巧克力则输出“Yes”，如果不能买则输出“No”。
 
-Constraints:
-1<=T<=20
-1<=N<=100
-1<=M<=10^5
+**约束：**
 
-Solution:
+`1<=T<=20`
+
+`1<=N<=100`
+
+`1<=M<=10^5`
+
+**解决方案：**
 
 ```c
 #include<stdio.h>
@@ -6210,11 +6625,15 @@ int main()
 }
 ```
 
-10. 检查给定数字是否为幸运数字的程序。
+### 10. 幸运数字判断
+
+检查给定数字是否为幸运数字的程序。
 
 如果一个数字的所有数字位都不相同，那么这个数字就是幸运的。
 
-Solution:
+**解决方案：**
+
+
 
 ```c
 #include<stdio.h>
@@ -6272,16 +6691,11 @@ C 提供了一些函数来完成这些任务。提供了四个库函数：
 
 | 函数 | 语法 | 描述 |
 | --- | --- | --- |
-| malloc() | `malloc(size)` | 分配一块内存。 |
-| calloc() | `calloc(n, size)` | 分配多个内存块并将其初始化为零。 |
-| realloc() | `realloc(ptr, size)` | 重新分配之前分配的内存块。 |
-| free() | `free(ptr)` | 释放已分配的内存。 |
+| `malloc()` | `malloc(size)` | 分配一块内存。 |
+| `calloc()` | `calloc(n, size)` | 分配多个内存块并将其初始化为零。 |
+| `realloc()` | `realloc(ptr, size)` | 重新分配之前分配的内存块。 |
+| `free()` | `free(ptr)` | 释放已分配的内存。 |
 
-
-
-` 标签中。
-
-[content]
 ```c
 case 3:
 {

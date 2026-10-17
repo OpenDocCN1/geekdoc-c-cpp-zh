@@ -1,3 +1,4 @@
+
 # 打印 ASCII 和宽字符字符串
 
 ## 例子
@@ -17,7 +18,7 @@ int main(void)
 
 ## 技巧
 
-用 gdb 调试程序时，可以使用“`x/s`”命令打印 ASCII 字符串。以上面程序为例：
+用 gdb 调试程序时，可以使用`x/s`命令打印 ASCII 字符串。以上面程序为例：
 
 ```cpp
 Temporary breakpoint 1, main () at a.c:6
@@ -47,7 +48,7 @@ $1 = 4
 0x8047788:      U"abcd" 
 ```
 
-由于当前平台宽字符的长度为 4 个字节，则用“`x/ws`”命令。如果是 2 个字节，则用“`x/hs`”命令。
+由于当前平台宽字符的长度为 4 个字节，则用`x/ws`命令。如果是 2 个字节，则用`x/hs`命令。
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Memory.html).
 
@@ -107,34 +108,34 @@ $1 = std::vector of length 10, capacity 10 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 方法如下:
 
-1.  获得 python 脚本，建议使用 gcc 默认安装的
+1. 获得 python 脚本，建议使用 gcc 默认安装的
 
-    ```cpp
-     sudo find / -name "*libstdcxx*" 
-    ```
+```cpp
+ sudo find / -name "*libstdcxx*" 
+```
 
-2.  若本机查找不到 python 脚本，建议下载 gcc 对应版本源码包，相对目录如下
+2. 若本机查找不到 python 脚本，建议下载 gcc 对应版本源码包，相对目录如下
 
-    ```cpp
-     gcc-4.8.1/libstdc++-v3/python 
-    ```
+```cpp
+ gcc-4.8.1/libstdc++-v3/python 
+```
 
-3.  也可直接下载最新版本
+3. 也可直接下载最新版本
 
-    ```cpp
-     svn co svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python 
-    ```
+```cpp
+ svn co svn://gcc.gnu.org/svn/gcc/trunk/libstdc++-v3/python 
+```
 
-4.  将如下代码添加到.gdbinit 文件中（假设 python 脚本位于 /home/maude/gdb_printers/ 下）
+4. 将如下代码添加到`.gdbinit`文件中（假设 python 脚本位于 `/home/maude/gdb_printers/` 下）
 
-    ```cpp
-     python
-     import sys
-     sys.path.insert(0, '/home/maude/gdb_printers/python')
-     from libstdcxx.v6.printers import register_libstdcxx_printers
-     register_libstdcxx_printers (None)
-     end 
-    ```
+```cpp
+ python
+ import sys
+ sys.path.insert(0, '/home/maude/gdb_printers/python')
+ from libstdcxx.v6.printers import register_libstdcxx_printers
+ register_libstdcxx_printers (None)
+ end 
+```
 
 （源自[`sourceware.org/gdb/wiki/STLSupport）`](https://sourceware.org/gdb/wiki/STLSupport）)
 
@@ -149,13 +150,13 @@ $2 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 ## 技巧三
 
-将 [dbinit_stl_views](http://www.yolinux.com/TUTORIALS/src/dbinit_stl_views-1.03.txt) 下载下来,，执行命令
+将 [dbinit_stl_views](http://www.yolinux.com/TUTORIALS/src/dbinit_stl_views-1.03.txt) 下载下来，执行命令
 
 ```cpp
 cat dbinit_stl_views-1.03.txt >> ~/.gdbinit 
 ```
 
-即可 一些常用的容器及其对应的命令关系
+即可。一些常用的容器及其对应的命令关系
 
 ```cpp
 std::vector <t class="calibre19">pvector stl_variable 
@@ -173,7 +174,7 @@ std::string  pstring stl_variable
 std::widestring  pwstring stl_variable</n></t></t></t></t></t></t></tu0002ct></tu0002ct></t></t> 
 ```
 
-更多详情，参考配置中的帮助
+更多详情，参考配置中的帮助。
 
 ## 贡献者
 
@@ -262,7 +263,7 @@ int main(void)
 
 ## 技巧
 
-在 gdb 中，如果要打印数组中任意连续元素的值，可以使用“`p array[index]@num`”命令（`p`是`print`命令的缩写）。其中`index`是数组索引（从 0 开始计数），`num`是连续多少个元素。以上面代码为例：
+在 gdb 中，如果要打印数组中任意连续元素的值，可以使用`p array[index]@num`命令（`p`是`print`命令的缩写）。其中`index`是数组索引（从 0 开始计数），`num`是连续多少个元素。以上面代码为例：
 
 ```cpp
 (gdb) p array
@@ -279,7 +280,8 @@ $9 = {60, 61, 62, 63, 64, 65, 66, 67, 68, 69}
 ```
 
 可以看到打印了`array`数组第 60~69 个元素的值。
-如果要打印从数组开头连续元素的值，也可使用这个命令：“`p *array@num`”：
+
+如果要打印从数组开头连续元素的值，也可使用这个命令：`p *array@num`：
 
 ```cpp
 (gdb) p *array@10
@@ -334,14 +336,16 @@ $1 = {1, 2, 4, 8, 16, 32, 64, 128, 256, 512}
 
 如果要打印索引下标，则可以通过如下命令进行设置：
 
+
+
 ```cpp
 (gdb) set print array-indexes on
 
 (gdb) p num
-$2 = {[0] = 1, [1] = 2, [2] = 4, [3] = 8, [4] = 16, [5] = 32, [6] = 64, [7] = 128, [8] = 256, [9] = 512} 
+$2 = {[0] = 1, [1] = 2, [2] = 4, [3] = 8, [4] = 16, [5] = 32, [6] = 64, [7] = 128, [8] = 256, [9] = 512}
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Print-Settings.html#index-set-print)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Print-Settings.html#index-set-print)。
 
 ## 贡献者
 
@@ -386,12 +390,12 @@ int main(void)
     int var = -1;
     fun_d();
     return 0;
-} 
+}
 ```
 
 ## 技巧一
 
-如果要打印函数局部变量的值，可以使用“bt full”命令（bt 是 backtrace 的缩写）。首先我们在函数 fun_a 里打上断点，当程序断住时，显示调用栈信息：
+如果要打印函数局部变量的值，可以使用“`bt full`”命令（`bt` 是 `backtrace` 的缩写）。首先我们在函数 `fun_a` 里打上断点，当程序断住时，显示调用栈信息：
 
 ```cpp
 (gdb) bt
@@ -399,10 +403,10 @@ int main(void)
 #1  0x000109b0 in fun_b () at a.c:12
 #2  0x000109e4 in fun_c () at a.c:19
 #3  0x00010a18 in fun_d () at a.c:26
-#4  0x00010a4c in main () at a.c:33 
+#4  0x00010a4c in main () at a.c:33
 ```
 
-接下来，用“bt full”命令显示各个函数的局部变量值：
+接下来，用“`bt full`”命令显示各个函数的局部变量值：
 
 ```cpp
 (gdb) bt full
@@ -415,10 +419,10 @@ int main(void)
 #3  0x00010a18 in fun_d () at a.c:26
         d = 3
 #4  0x00010a4c in main () at a.c:33
-        var = -1 
+        var = -1
 ```
 
-也可以使用如下“bt full n”，意思是从内向外显示 n 个栈桢，及其局部变量，例如：
+也可以使用如下“`bt full n`”，意思是从内向外显示 `n` 个栈帧及其局部变量，例如：
 
 ```cpp
 (gdb) bt full 2
@@ -426,20 +430,20 @@ int main(void)
         a = 0
 #1  0x000109b0 in fun_b () at a.c:12
         b = 1
-(More stack frames follow...) 
+(More stack frames follow...)
 ```
 
-而“bt full -n”，意思是从外向内显示 n 个栈桢，及其局部变量，例如：
+而“`bt full -n`”意思是从外向内显示 `n` 个栈帧及其局部变量，例如：
 
 ```cpp
 (gdb) bt full -2
 #3  0x00010a18 in fun_d () at a.c:26
         d = 3
 #4  0x00010a4c in main () at a.c:33
-        var = -1 
+        var = -1
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Backtrace.html)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Backtrace.html)。
 
 ## 技巧二
 
@@ -447,10 +451,10 @@ int main(void)
 
 ```cpp
 (gdb) info locals
-a = 0 
+a = 0
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Frame-Info.html#index-info-locals)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Frame-Info.html#index-info-locals)。
 
 ## 贡献者
 
@@ -462,7 +466,7 @@ xmj
 
 ## 技巧
 
-用 gdb 调试程序时，如果想查看进程的内存映射信息，可以使用“i proc mappings”命令（i 是 info 命令缩写），例如:
+用 `gdb` 调试程序时，如果想查看进程的内存映射信息，可以使用“`i proc mappings`”命令（`i` 是 `info` 命令缩写），例如：
 
 ```cpp
 (gdb) i proc mappings
@@ -492,13 +496,14 @@ Mapped address spaces:
     0xfefc0000 0xfefeafff    0x2b000          0 ----r-x
     0xfeff0000 0xfeff0fff     0x1000          0 ----rwx
     0xfeffb000 0xfeffcfff     0x2000    0x2b000 ----rwx
-    0xfeffd000 0xfeffdfff     0x1000          0 ----rwx 
+    0xfeffd000 0xfeffdfff     0x1000          0 ----rwx
 ```
 
-首先输出了进程的 flags，接着是进程的内存映射信息。
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/SVR4-Process-Information.html#index-info-proc-exe).
+首先输出了进程的 `flags`，接着是进程的内存映射信息。
 
-此外，也可以用"i files"（还有一个同样作用的命令：“i target”）命令，它可以更详细地输出进程的内存信息，包括引用的动态链接库等等，例如：
+参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/SVR4-Process-Information.html#index-info-proc-exe)。
+
+此外，也可以用“`i files`”（还有一个同样作用的命令：“`i target`”）命令。它可以更详细地输出进程的内存信息，包括引用的动态链接库等等，例如：
 
 ```cpp
 (gdb) i files
@@ -525,10 +530,10 @@ Local exec file:
     0xfef650e2 - 0xfef650e2 is .bssf in /usr/lib/libc.so.1
     0xfef650e8 - 0xfef65be0 is .picdata in /usr/lib/libc.so.1
     0xfef65be0 - 0xfef666a7 is .data1 in /usr/lib/libc.so.1
-    0xfef666a8 - 0xfef680dc is .bss in /usr/lib/libc.so.1 
+    0xfef666a8 - 0xfef680dc is .bss in /usr/lib/libc.so.1
 ```
 
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Files.html)
+参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Files.html)。
 
 ## 贡献者
 
@@ -556,9 +561,9 @@ int main(void)
 static int var = 1;
 
 void print_var_1(void)
-{ 
+{
   printf("var = %d\n", var);
-} 
+}
 
 /* static-2.c */
 #include <stdio.h>
@@ -566,14 +571,14 @@ void print_var_1(void)
 static int var = 2;
 
 void print_var_2(void)
-{ 
+{
   printf("var = %d\n", var);
-} 
+}
 ```
 
 ## 技巧
 
-在 gdb 中，如果直接打印静态变量，则结果并不一定是你想要的：
+在 `gdb` 中，如果直接打印静态变量，则结果并不一定是你想要的：
 
 ```cpp
 $ gcc -g main.c static-1.c static-2.c
@@ -586,7 +591,7 @@ $ gcc -g main.c static-2.c static-1.c
 $ gdb -q ./a.out
 (gdb) start
 (gdb) p var
-$1 = 1 
+$1 = 1
 ```
 
 你可以显式地指定文件名（上下文）：
@@ -595,10 +600,10 @@ $1 = 1
 (gdb) p 'static-1.c'::var
 $1 = 1
 (gdb) p 'static-2.c'::var
-$2 = 2 
+$2 = 2
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/current/onlinedocs/gdb/Variables.html#Variables)
+详情参见 [gdb 手册](https://sourceware.org/gdb/current/onlinedocs/gdb/Variables.html#Variables)。
 
 ## 贡献者
 
@@ -624,16 +629,16 @@ int main (void)
   printf ("Hello %s %s.\n", he.gender == boy ? "boy" : "girl", he.name);
   printf ("Hello %s %s.\n", she.gender == boy ? "boy" : "girl", she.name);
   return 0;
-} 
+}
 ```
 
 ## 技巧
 
-在 gdb 中，可以使用如下命令查看变量的类型：
+在 `gdb` 中，可以使用如下命令查看变量的类型：
 
 ```cpp
 (gdb) whatis he
-type = struct child 
+type = struct child
 ```
 
 如果想查看详细的类型信息：
@@ -643,7 +648,7 @@ type = struct child
 type = struct child {
     char name[10];
     enum {boy, girl} gender;
-} 
+}
 ```
 
 如果想查看定义该变量的文件：
@@ -657,22 +662,22 @@ struct child he;
 
 Non-debugging symbols:
 0x0000000000402030  she
-0x00007ffff7dd3380  __check_rhosts_file 
+0x00007ffff7dd3380  __check_rhosts_file
 ```
 
-哦，gdb 会显示所有包含（匹配）该表达式的变量。如果只想查看完全匹配给定名字的变量：
+哦，`gdb` 会显示所有包含（匹配）该表达式的变量。如果只想查看完全匹配给定名字的变量：
 
 ```cpp
 (gdb) i variables ^he$
 All variables matching regular expression "^he$":
 
 File variable.c:
-struct child he; 
+struct child he;
 ```
 
-注：`info variables`不会显示局部变量，即使是 static 的也没有太多的信息。
+注：`info variables` 不会显示局部变量，即使是 `static` 的也没有太多的信息。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Symbols.html)
+详情参见 [gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Symbols.html)。
 
 ## 贡献者
 
@@ -696,42 +701,48 @@ int main(void)
         }
 
         return 0;
-} 
+}
 ```
 
 ## 技巧
 
-gdb 中使用“`x`”命令来打印内存的值，格式为“`x/nfu addr`”。含义为以`f`格式打印从`addr`开始的`n`个长度单元为`u`的内存值。参数具体含义如下：
-a）n：输出单元的个数。
-b）f：是输出格式。比如`x`是以 16 进制形式输出，`o`是以 8 进制形式输出,等等。
-c）u：标明一个单元的长度。`b`是一个`byte`，`h`是两个`byte`（halfword），`w`是四个`byte`（word），`g`是八个`byte`（giant word）。
+`gdb` 中使用“`x`”命令来打印内存的值，格式为“`x/nfu addr`”。含义为以 `f` 格式打印从 `addr` 开始的 `n` 个长度单元为 `u` 的内存值。参数具体含义如下：
+
+a）`n`：输出单元的个数。
+
+b）`f`：是输出格式。比如 `x` 是以 16 进制形式输出，`o` 是以 8 进制形式输出，等等。
+
+c）`u`：标明一个单元的长度。`b` 是一个 `byte`，`h` 是两个 `byte`（`halfword`），`w` 是四个 `byte`（`word`），`g` 是八个 `byte`（`giant word`）。
 
 以上面程序为例：
-（1） 以 16 进制格式打印数组前`a`16 个 byte 的值：
+
+（1）以 16 进制格式打印数组 `a` 前 16 个 byte 的值：
 
 ```cpp
 (gdb) x/16xb a
 0x7fffffffe4a0: 0x00    0x01    0x02    0x03    0x04    0x05    0x06    0x07
-0x7fffffffe4a8: 0x08    0x09    0x0a    0x0b    0x0c    0x0d    0x0e    0x0f 
+0x7fffffffe4a8: 0x08    0x09    0x0a    0x0b    0x0c    0x0d    0x0e    0x0f
 ```
 
-（2） 以无符号 10 进制格式打印数组`a`前 16 个 byte 的值：
+（2）以无符号 10 进制格式打印数组 `a` 前 16 个 byte 的值：
 
 ```cpp
 (gdb) x/16ub a
 0x7fffffffe4a0: 0       1       2       3       4       5       6       7
-0x7fffffffe4a8: 8       9       10      11      12      13      14      15 
+0x7fffffffe4a8: 8       9       10      11      12      13      14      15
 ```
 
-（3） 以 2 进制格式打印数组前 16 个`a`byte 的值：
+（3）以 2 进制格式打印数组 `a` 前 16 个 byte 的值：
 
 ```cpp
 (gdb) x/16tb a
 0x7fffffffe4a0: 00000000        00000001        00000010        00000011        00000100        00000101        00000110        00000111
-0x7fffffffe4a8: 00001000        00001001        00001010        00001011        00001100        00001101        00001110        00001111 
+0x7fffffffe4a8: 00001000        00001001        00001010        00001011        00001100        00001101        00001110        00001111
 ```
 
-（4） 以 16 进制格式打印数组`a`前 16 个 word（4 个 byte）的值：
+（4）以 16 进制格式打印数组 `a` 前 16 个 word（4 个 byte）的值：
+
+
 
 ```cpp
 (gdb) x/16xw a
@@ -745,7 +756,7 @@ c）u：标明一个单元的长度。`b`是一个`byte`，`h`是两个`byte`（
 
 ## 贡献者
 
-nanxiao
+`nanxiao`
 
 # 打印源代码行
 
@@ -768,7 +779,7 @@ $ gdb -q `which gdb`
 
 ## 技巧
 
-如上所示，在 gdb 中可以使用`list`（简写为 l）命令来显示源代码以及行号。`list`命令可以指定行号，函数：
+如上所示，在`gdb`中可以使用`list`（简写为`l`）命令来显示源代码以及行号。`list`命令可以指定行号，函数：
 
 ```cpp
 (gdb) l 24
@@ -792,7 +803,7 @@ $ gdb -q `which gdb`
 
 ## 贡献者
 
-xmj
+`xmj`
 
 # 每行打印一个结构体成员
 
@@ -820,7 +831,7 @@ int main(void) {
 
 ## 技巧
 
-默认情况下，gdb 以一种“紧凑”的方式打印结构体。以上面代码为例：
+默认情况下，`gdb`以一种“紧凑”的方式打印结构体。以上面代码为例：
 
 ```cpp
 (gdb) n
@@ -832,7 +843,7 @@ $1 = {a = 1, b = 2, c = 3, d = 4, mutex = {__data = {__lock = 0, __count = 0, __
 
 可以看到结构体的显示很混乱，尤其是结构体里还嵌套着其它结构体时。
 
-可以执行“set print pretty on”命令，这样每行只会显示结构体的一名成员，而且还会根据成员的定义层次进行缩进：
+可以执行`set print pretty on`命令，这样每行只会显示结构体的一名成员，而且还会根据成员的定义层次进行缩进：
 
 ```cpp
 (gdb) set print pretty on
@@ -865,7 +876,7 @@ $2 = {
 
 ## 贡献者
 
-nanxiao
+`nanxiao`
 
 # 按照派生类型打印对象
 
@@ -911,7 +922,7 @@ int main (void)
 
 ## 技巧
 
-在 gdb 中，当打印一个对象时，缺省是按照声明的类型进行打印：
+在`gdb`中，当打印一个对象时，缺省是按照声明的类型进行打印：
 
 ```cpp
 (gdb) frame
@@ -921,7 +932,7 @@ int main (void)
 $1 = (Shape &) @0x7fffffffde90: {_vptr.Shape = 0x400a80 <vtable for Circle+16>} 
 ```
 
-在这个例子中，p 虽然声明为 class Shape，但它实际的派生类型可能为 class Circle 和 Square。如果要缺省按照派生类型进行打印，则可以通过如下命令进行设置：
+在这个例子中，`p`虽然声明为`class Shape`，但它实际的派生类型可能为`class Circle`和`Square`。如果要缺省按照派生类型进行打印，则可以通过如下命令进行设置：
 
 ```cpp
 (gdb) set print object on
@@ -957,9 +968,9 @@ class Shape {
 
 ## 贡献者
 
-xmj
+`xmj`
 
-xanpeng
+`xanpeng`
 
 # 指定程序的输入输出设备
 
@@ -983,7 +994,7 @@ int main(void)
 
 ## 技巧
 
-在 gdb 中，缺省情况下程序的输入输出是和 gdb 使用同一个终端。你也可以为程序指定一个单独的输入输出终端。
+在`gdb`中，缺省情况下程序的输入输出是和`gdb`使用同一个终端。你也可以为程序指定一个单独的输入输出终端。
 
 首先，打开一个新终端，使用如下命令获得设备文件名：
 
@@ -999,7 +1010,7 @@ $ gdb -tty /dev/pts/2 ./a.out
 (gdb) r 
 ```
 
-或者，在 gdb 中，使用命令进行设置：
+或者，在`gdb`中，使用命令进行设置：
 
 ```cpp
 (gdb) tty /dev/pts/2 
@@ -1009,7 +1020,7 @@ $ gdb -tty /dev/pts/2 ./a.out
 
 ## 贡献者
 
-xmj
+`xmj`
 
 # 使用“$\\_”和“$\\__”变量
 
@@ -1036,7 +1047,7 @@ int main(void)
 
 ## 技巧
 
-"`x`"命令会把最后检查的内存地址值存在“`$_`”这个“convenience variable”中，并且会把这个地址中的内容放在“`$__`”这个“convenience variable”，以上面程序为例:
+`x`命令会把最后检查的内存地址值存在`$_`这个`convenience variable`中，并且会把这个地址中的内容放在`$__`这个`convenience variable`，以上面程序为例:
 
 ```cpp
 (gdb) b a.c:13
@@ -1055,8 +1066,9 @@ $1 = (int8_t *) 0x7fffffffe4af
 $2 = 15 
 ```
 
-可以看到“`$_`”值为`0x7fffffffe4af`，正好是"`x`"命令检查的最后的内存地址。而“`$__`”值为`15`。
-另外要注意有些命令（像“`info line`”和“`info breakpoint`”）会提供一个默认的地址给"`x`"命令检查，而这些命令也会把“`$_`”的值变为那个默认地址值：
+可以看到`$_`值为`0x7fffffffe4af`，正好是`x`命令检查的最后的内存地址。而`$__`值为`15`。
+
+另外要注意有些命令（像`info line`和`info breakpoint`）会提供一个默认的地址给`x`命令检查，而这些命令也会把`$_`的值变为那个默认地址值：
 
 ```cpp
 (gdb) p $_
@@ -1069,12 +1081,13 @@ Num     Type           Disp Enb Address            What
 $6 = (void *) 0x4004a0 <main+44> 
 ```
 
-可以看到使用“`info breakpoint`”命令后，“`$_`”值变为`0x4004a0`。
+可以看到使用`info breakpoint`命令后，`$_`值变为`0x4004a0`。
+
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Convenience-Vars.html).
 
 ## 贡献者
 
-nanxiao
+`nanxiao`
 
 # 打印程序动态分配内存的信息
 
@@ -1099,7 +1112,7 @@ int main(void)
 
 ## 技巧
 
-用 gdb 调试程序时，可以用下面的自定义命令，打印程序动态分配内存的信息：
+用`gdb`调试程序时，可以用下面的自定义命令，打印程序动态分配内存的信息：
 
 ```cpp
 define mallocinfo
@@ -1111,7 +1124,13 @@ end
 
 以上面程序为例：
 
-```cpp
+
+
+以下内容展示了 gdb 中 `mallocinfo` 命令的输出示例，以及如何通过栈帧查看变量的方法。
+
+可以看到`gdb`输出了动态分配内存的变化信息。
+
+```
 Temporary breakpoint 5, main () at a.c:7
 7               int i = 0;
 (gdb) mallocinfo 
@@ -1218,21 +1237,22 @@ $23 = 0
 <aspace type="mprotect" size="1134592"/>
 </malloc>
 $24 = 0
-$25 = 0 
+$25 = 0
 ```
 
-可以看到 gdb 输出了动态分配内存的变化信息。
 参见[stackoverflow](http://stackoverflow.com/questions/1471226/most-tricky-useful-commands-for-gdb-debugger).
 
 ## 贡献者
 
-nanxiao
+`nanxiao`
+
+---
 
 # 打印调用栈帧中变量的值
 
 ## 例子
 
-```cpp
+```
 #include <stdio.h>
 
 int func1(int a)
@@ -1257,14 +1277,14 @@ int main(void)
 {
   printf("%d\n", func3(10));
   return 0;
-} 
+}
 ```
 
 ## 技巧
 
-在 gdb 中，如果想查看调用栈帧中的变量，可以先切换到该栈帧中，然后打印：
+在`gdb`中，如果想查看调用栈帧中的变量，可以先切换到该栈帧中，然后打印：
 
-```cpp
+```
 (gdb) b func1
 (gdb) r
 (gdb) bt
@@ -1275,26 +1295,26 @@ int main(void)
 (gdb) f 1
 (gdb) p b
 (gdb) f 2
-(gdb) p b 
+(gdb) p b
 ```
 
 也可以不进行切换，直接打印：
 
-```cpp
+```
 (gdb) p func2::b
 $1 = 2
 (gdb) p func3::b
-$2 = 3 
+$2 = 3
 ```
 
-同样，对于 C++的函数名，需要使用单引号括起来，比如：
+同样，对于 C++ 的函数名，需要使用单引号括起来，比如：
 
-```cpp
-(gdb) p '(anonymous namespace)::SSAA::handleStore'::n->pi->inst->dump() 
+```
+(gdb) p '(anonymous namespace)::SSAA::handleStore'::n->pi->inst->dump()
 ```
 
 详情参见[gdb 手册](https://sourceware.org/gdb/current/onlinedocs/gdb/Variables.html#Variables)
 
 ## 贡献者
 
-xmj
+`xmj`

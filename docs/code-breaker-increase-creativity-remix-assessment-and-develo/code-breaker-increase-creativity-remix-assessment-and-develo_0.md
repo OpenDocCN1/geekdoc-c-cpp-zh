@@ -1,11 +1,9 @@
+
 # 代码破解者：激发创意、重塑评估，并培养一批编程忍者！
-
-
 
 ![](img/code-breaker-cover.jpg)
 
-
-“Brian Aspinall 为编程注入了人性的色彩，帮助读者理解——`它`不仅仅是为电脑极客设计的，还可以以有意义的方式在所有年级中实施，帮助我们以不同的方式看待世界。”
+“Brian Aspinall 为编程注入了人性的色彩，帮助读者理解——它不仅仅是为电脑极客设计的，还可以以有意义的方式在所有年级中实施，帮助我们以不同的方式看待世界。”
 
 ** — George Couros，《创新者思维》作者 **
 
@@ -39,14 +37,9 @@
 
 ** — Steven Isaacs，老师、Minecraft 导师及 Minefaire 制作， **
 
-
 ## 增加创造力，重塑评估，培养一班编程忍者！
 
 ### Brian Aspinall
-
-
-
-
 
 关于作者
 
@@ -78,7 +71,7 @@
 
 也许我也有一点点怀疑。我的性格不适合工作单或死记硬背。我在计算机科学课程上表现得很好，部分是因为我从来不需要记忆语法。尽管如此，我知道标准的教学实践倾向于记忆和死记硬背。我也知道，要向某些人展示编程的价值需要创造力。
 
-我的一个学生 Jaime 在他决定编写他的第一个游戏时，展示了这种至关重要的联系。他将其命名为“拉便的宝宝”。这个游戏涉及一个婴儿在屏幕上移动并不断发射粪便导弹，但它远不止是一个博人取笑的段子：它是我们几何课程的应用。。要让宝宝向左移动，学生必须将 `X` 变量改为负数。让宝宝向上或向下需要改变 `Y` 变量。在宝宝发射粪便导弹之前，必须先绘制出正确的 `X` 和 `Y` 坐标。在游戏中，我在纸上教导的概念在屏幕上变得生动了——尽管是用粪便的形式！
+我的一个学生 Jaime 在他决定编写他的第一个游戏时，展示了这种至关重要的联系。他将其命名为“拉便的宝宝”。这个游戏涉及一个婴儿在屏幕上移动并不断发射粪便导弹，但它远不止是一个博人取笑的段子：它是我们几何课程的应用。要让宝宝向左移动，学生必须将 `X` 变量改为负数。让宝宝向上或向下需要改变 `Y` 变量。在宝宝发射粪便导弹之前，必须先绘制出正确的 `X` 和 `Y` 坐标。在游戏中，我在纸上教导的概念在屏幕上变得生动了——尽管是用粪便的形式！
 
 ![line](img/line.png)
 
@@ -109,10 +102,6 @@
 ![line](img/line.png)
 
 这个学生是我最大的老师之一。他激励我去学习更多关于计算思维和编程如何在课堂以及跨学科中使用的知识，以及它如何造学生学生终生。
-
-
-
-
 
 我希望这本书能帮助你看到计算思维的理论如何应用到你的课堂，无论你是否像我一样是一个计算机科学极客。我希望你能够思考并反思你自己的教学法，或许也可以对其提出挑战。`Hello World` 并不是一本操作手册。你是你，我是我。我不了解你的学生。在我的课堂上有效的方法在你的课堂上可能无效，这没关系。你可能也有一些东西可以教给我。伟大的老师是那些不断学习的人。
 
@@ -162,14 +151,13 @@
 
 尽管皮亚杰的理论很有深度，我不禁在想这些基准设定是否让人们陷入了一刀切的模式。如果我们承认孩子是具有自身优缺点的个体，建构主义在简单的年龄划分之外似乎不再合理。
 
-但我非常感激皮亚杰，因为他的理论对西摩尔·帕珀特（Seymour Papert）产生了深远影响，许多人被认为是现代人工智能之父。他于 1980 年（他去世的那一年）出版的书《脑风暴》（Mindstorms）是关于教育和帮助学生热爱学习的宝。。帕珀提出了一种名为“构造主义”（constructionism）的理论，该理论认为，人们在制造——构建世界上事物时学得最好。为了实现这一点，儿童需要对自己的学习拥有一定的控制权。
-
-
-
+但我非常感激皮亚杰，因为他的理论对西摩尔·帕珀特（Seymour Papert）产生了深远影响，许多人被认为是现代人工智能之父。他于 1980 年（他去世的那一年）出版的书《脑风暴》（Mindstorms）是关于教育和帮助学生热爱学习的宝。帕珀提出了一种名为“构造主义”（constructionism）的理论，该理论认为，人们在制造——构建世界上事物时学得最好。为了实现这一点，儿童需要对自己的学习拥有一定的控制权。
 
 Papert 认为教育应该是具体的，学生应该看到教室里的概念如何应用到教室外的生活中。他认为计算机是教授这一点的良好工具。他开发了 `Logo Turtle`，这是一个用户通过输入命令来创建线条图形的程序。如果这听起来和 `Scratch`（一种允许儿童通过组合文本块来创建角色的编程程序）很像，请不要感到惊讶。Papert 曾在 `MIT` 工作过——而那里正是 Mitch Resnick 开发 `Scratch` 的地方。
 
 但 Papert 对计算机实验室的使用感到悲哀——将计算机以及学生对计算机的使用限制在一个特定的地点。他认为这仅仅是在用新技术应用旧的教学方法。在许多方面，他都是超前时代的。在随后的几年里，他对于有许多人采纳他的想法如此缓慢或似乎误解了这些想法而感到遗憾。但确实有人理解了它们。
+
+
 
 其中一员就是 Jeannette Wing，她是 `MIT` 毕业生，微软公司研究副总裁。2006 年，她引入了 `computational thinking`（计算思维）这一术语，即人类思维与机器力量之间的协同。她指出，计算机的普及使得每个人学习以这种方式思考变得必要。她说，这类似于印刷机对教育的影响。那项技术让每个人学会阅读、写字和做基础数学计算变得至关重要。“计算思维是每个人的一项基本技能，”她写道。
 
@@ -211,10 +199,6 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 我们说应该教学生如何编码。互联网连接着一切——从字面上讲确实如此，正如不断发展的物联网所示。拥有了编码技能，学生可以获得好工作并在劳动力市场中具有竞争力。你看到我们做了什么吗？本质上，什么都没做。我们仍然认为教学的最终目标是帮助孩子找工作。我们教学的原因没有改变，改变的只是我们使用的材料。我们说我们学生自主学习，发挥创造力。然后我们给他们提供完全相同的设备，并告诉自己这种方法本身就让我们成为了富有创造力、进步的老师。这和我们给所有学生提供同样的笔记本和铅笔真的有什么区别呢？
 
-
-
-
-
 # [`brianaspinall.com/coding-a-story-probability-quick-write-prompts`](http://brianaspinall.com/coding-a-story-probability-quick-write-prompts)
 
 ![line](img/line.png)
@@ -225,7 +209,7 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 ### 让我们来看看两个学生
 
-学生 A 喜欢学校，并且擅长“扮演学校”。她参与课堂讨论，并在考试的挑战中茁成长。学校对学生 A 来说是很得的，但她也付出了努力。事实上，她每场考试至少都会提前学习三个晚上，并在从学校回家后立即完成作业。
+学生 A 喜欢学校，并且擅长“扮演学校”。她参与课堂讨论，并在考试的挑战中茁壮成长。学校对学生 A 来说是很得的，但她也付出了努力。事实上，她每场考试至少都会提前学习三个晚上，并在从学校回家后立即完成作业。
 
 为什么？因为学生 A 是由成绩驱动的，她希望被告诉该做什么来达标。对她来说，获得好分等同于成功。学生 A 知道如何获得那个分数，并且她感到很成功。
 
@@ -273,10 +257,6 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 例如，我们经常用学生快速记忆事实的能力来衡量知识。在这种观点下，更好的学生是那些能快速检索信息的学生。在这种观点下，一个好的数学学生不仅仅是背了所有乘法表的人。一个好的学生是能够非常、非常快地给出所有正确答案的人。速度是他们脱颖出的关键。
 
-
-
-
-
 我们必须在让学生简单背诵内容和帮助他们创作内容之间找到平衡。在那个中间地带，我们必须为学生提供生成他们自己的解决方案的机会。
 
 我们需要停止试图让孩子们适应我们的世界，相反，要拥抱他们的世界。
@@ -306,9 +286,13 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 ### 指数、数字模式与编码
 
 *   核心概念：指数、模式、十进制、二进制、运算顺序
+
 *   任务：向学生解释一个八位的二进制字符串是一个“字节（byte）”。
+
 *   例如，`10111011`——每个数字都是一个位（bit）；八位是一个字节（四位是一个半字节/nibble）。
+
 *   计算机理解机器语言（1 和 0），并必须将其转换为“人类”语言。
+
 *   向学生展示 ASCII 表格示例。
 
 ![CB-ASCII-table](img/CB-ASCII-table.jpg)
@@ -356,8 +340,11 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 你可以全班创建一个伪代码。它看起来像这样：
 
 ![CB-geometry-1](img/CB-geometry1.png)
+
 ![CB-geometry-2](img/CB-geometry-2.png)
+
 ![CB-geometry-3](img/CB-geometry-3.png)
+
 ![CB-geometry-4](img/CB-geometry-4.png)
 
 在制作全班使用的块代码语言之后，你可以利用几何原理创建独特任务。你可以挑战学生互相“编码”。让他们分成小组，指定一个学生作为机器人，作为编码员。编码员的工作是引导机器人（FriendBot）通过教室或走廊里的障碍赛。挑战他们编写让 FriendBot 向校长传递信息。
@@ -371,9 +358,6 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 我总是很难教授实验概率和理论概率。
 
 在职业生涯早期，我会分发硬币并让孩子做一个 T 图表。我们掷一次硬币并记录结果。我们掷两次并记录结果。然后我们掷三次并记录结果。没有人会有百分之五十的结果，因为我们只掷了三次。然后我会要求学生掷硬币几十次并记录他们的结果。
-
-
-
 
 我的目标始终是让他们通过这个过程构建他们自己的概率知识。现实中，这节课把教室变成了一个嘈杂的丛林，纸张在教室里飞舞。学生们假装在意，但并没有投入到活动中。直到一个学生提出编写一个`coin-flipping simulator`的想法，我的心态才发生了转变。我把任务交给了他，告诉他如果能办成，他就会成为一个超级明星。
 
@@ -391,7 +375,10 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 “行了行了，我们懂，”他们说着就回家了。
 
-## 代数与我的世界
+
+
+# 代数与我的世界
+
 我们通常通过站在教室面前并在屏幕上投影图像来教授代数中的增长模式。我们利用图像来帮助讨论方程。
 
 ![CB-growing-block-pattern](img/CB-growing-block-pattern.png)
@@ -404,7 +391,8 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 | 2 | 9 |
 | 3 | 13 |
 
-### 模式规则：4n + 1
+## 模式规则：4n + 1
+
 问题在于：我旧式的教学法试图强迫学生像我一样看到这种增长模式。事实上，如果他们没有创建这个取值表，我会把他们的作业判为错误。
 
 直到一个学生建议每个图实际上是一个金字塔而不是平面的，我才改变了想法。当我的受到震撼时，你能听到大脑细胞发生移动的声音。然后，那个学生建议他使用`Minecraft`按照他所看到的方式来构建这个增长模式。我立刻感到羞愧。这种模式可以以无限种方式扩展。如果学生的看法和我的不同，那没关系。我觉得，由于没有让学生通过不同的视角向我展示这个概念，我似乎辜负了之前的学生。
@@ -415,7 +403,8 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 我立刻冲回家，希望改变第二天的计划。我很快意识到，所有学习者都应该有机会按照自己的意愿设计、构建和扩展增长模式——只要他们能生成取值表和代数方程即可。我们花了大约一周时间设计了`Minecraft`游戏，孩子们在游戏中建造包含不同增长模式的城堡。玩家在进入下一个房间之前必须解决增长模式并找到正确的符号。迷宫般的场景让所有学生都能学习，因为它们自然就是为教学支架和差异化学习而设计的。
 
-## 科学
+# 科学
+
 故事中真正的老师是我的八级学生。作为一名科学老师，我一直喜欢教授`particle theory`。诚然，我并不总是用最有趣的方式来处理这个话题。我以前让学生记忆这些标准。我确定你们中的某些人可以跟我一起说：
 
 - 粒子之间有间隙。
@@ -439,10 +428,12 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 
 这才是跨学科的典范！
 
-## 语言艺术
+# 语言艺术
+
 条件语句，也称为`Boolean logic`，是计算机科学的基础组成部分。它们也是我们编写过程的重要部分。这里是在小学课堂教授条件语句的一种好方法。
 
-### 刷牙的“传统”过程
+## 刷牙的“传统”过程
+
 - 拿上你的牙刷。
 - 拿上牙膏并在刷子上挤上小的一点。
 - 将牙刷倾斜 45 度角反复刷刷，从大磨牙开始。
@@ -452,7 +443,7 @@ Wing 的写作对象是学术界读者，但她希望这些想法能够在学术
 - 关闭水龙头。
 - 喝水。在口中漱水。
 - 吐掉牙膏。
-- 清洁洗手池
+- 清洁洗手池。
 
 将这个过程取出来并将其拆分为模块。每个模块都是一个独立的小程序，你可以据此对小组进行脚架式教学。这里的目标是全班编写刷牙的算法。每个小组提供一个教学模块。每个模块都依赖于其他模块才能运行。
 
@@ -480,15 +471,12 @@ GetToothpaste(
 
 某些模块比其他模块更容易编写。起初用算法思维可能会困难，但做得越多，它就会变得越自然。例如，流行的棋类游戏《富翁》充满了算法。
 
-```monopoly
+```
 if (PassGo) -> Collect $200
 if (InJail)
   if(RollDoubles) -> GetOutOfJail
   else(StayInJail)
 ```
-
-
-
 
 如果你以前没听我提过这些，请让我重复一遍：计算机科学不仅仅是编码，而编码也不应该局限于计算机课。
 
@@ -496,21 +484,21 @@ if (InJail)
 
 ![CB-bosc](img/CB-bosc.png)
 
-### B: 机器人编码 (Bot coding)
+## B: 机器人编码 (Bot coding)
 
 在机器人编码阶段，教师和学生学习块代码。他们通过运行游戏和教程让物体从一个点移动到另一个点以完成任务。关卡是脚本化的，没有开放空间，只有一组用于移动机器人的块代码指令。机器人编码是建模数学概念（如估计距离和跨网格移动）极佳之处。
 
-### O: 开放空间编码 (Open-space coding)
+## O: 开放空间编码 (Open-space coding)
 
-在此类别中，编码者熟悉块代码并理解如何将其连接起来。使用 `ScratchJr`、`Hopscotch` 和 `Scratch` 等工具，编码者使用块代码创建游戏、故事和模拟。可能性是无限的，但编码模块受限于应用程序内部的功能。
+在此类别中，编码者熟悉块代码并理解如何将其连接起来。使用`ScratchJr`、`Hopscotch`和`Scratch`等工具，编码者使用块代码创建游戏、故事和模拟。可能性是无限的，但编码模块受限于应用程序内部的功能。
 
-### S: 语法编码 (Syntax coding)
+## S: 语法编码 (Syntax coding)
 
 与开放空间编码类似，用户从空白开始，并开始进行批判性思考、解决问题并使用语法编写应用程序。这一阶段的编码者正在学习语言。他们正在让编码语言能够独立运行起来。这为他们提供了更多创造性的机会。
 
-### C: 协作编码 (Collaborative coding)
+## C: 协作编码 (Collaborative coding)
 
-这一阶段的编码者对语法、计算思维和逻辑推理有坚实的理解。他们使用现有的框架和 `APIs`（应用程序接口）对现有应用程序进行改进。这些编码者还利用开源资源并构建应用程序。简单来说，他们是编码忍者。
+这一阶段的编码者对语法、计算思维和逻辑推理有坚实的理解。他们使用现有的框架和`APIs`（应用程序接口）对现有应用程序进行改进。这些编码者还利用开源资源并构建应用程序。简单来说，他们是编码忍者。
 
 # 第 5 章：其他老师是如何做的
 
@@ -520,51 +508,47 @@ if (InJail)
 
 Jessica Konecny ([@MrsKonecny](https://twitter.com/MrsKonecny)) 在加拿大安大略省的查塔姆教一年级。她总是愿意尝试新事物。当她开始和学生探索编码时，我立刻产生了兴趣。我教八年级，所以我想知道在小学阶段教编码是什么样的。以下是 Jessica 在邮件采访中告诉我的：
 
-### ***是什么让你决定在一年级班级尝试编码的？***
+### 是什么让你决定在一年级班级尝试编码的？
 
-我们学校讨论了很多编码的好处，我们让八年级的学生举办了一个工作坊，教我们如何使用 `Minecraft`。我是因为 Twitter 才决定尝试编码的。当时有一周专门用于 [`#HourOfCode](https://twitter.com/hashtag/HourOfCode)。
+我们学校讨论了很多编码的好处，我们让八年级的学生举办了一个工作坊，教我们如何使用`Minecraft`。我是因为 Twitter 才决定尝试编码的。当时有一周专门用于[`#HourOfCode`](https://twitter.com/hashtag/HourOfCode)。
 
 ![line](img/line.png)
 
-### 特色贴文
+## 特色贴文
 
-#### 离线编码小时 (Unplugging the Hour of Code) 第二部分
+### 离线编码小时 (Unplugging the Hour of Code) 第二部分
 
 ![QR-Unplugging-the-Hour-Code-Part-2](img/QR-Unplugging-the-Hour-Code-Part-2.png)
 
-###### [`brianaspinall.com/unplugging-the-hour-of-code-part-2`](http://brianaspinall.com/unplugging-the-hour-of-code-part-2)
+[`brianaspinall.com/unplugging-the-hour-of-code-part-2`](http://brianaspinall.com/unplugging-the-hour-of-code-part-2)
 
 ![line](img/line.png)
 
-### ***你观察到了什么结果？***
+### 你观察到了什么结果？
 
 学生在编码过程中非常投入。他们更愿意犯错并调试问题，而不是放弃。我一些在数学上很吃力的学生能够展现出很强的空间意识，而这通常是一个困难的话题。学生中出现了一些他们自然会去寻求帮助的“专家”。
 
-### ***你让学生在物理空间内使用连接块进行编码。能告诉我是那是怎样的吗？***
+### 你让学生在物理空间内使用连接块进行编码。能告诉我是那是怎样的吗？
 
-在 Twitter 上搜索 [`#HourOfCode](https://twitter.com/hashtag/HourOfCode) 时，我看到了另一位一年级老师 [@avivaloca](https://twitter.com/avivaloca) 使用 `Lightbot` 应用程序的照片。我把它下载到平板电脑上，在那周里，我把它放在了 `HoverCam` 下方，我们全班一起解决了关卡。我们开始时让学生一次尝试一个，然后使用白色白字板让全班学生单独进行编码，然后再检查自己的作品。那是非常棒的一周！学生们非常喜欢这个应用，许多人把它安装在了家里的设备上。虽然很成功，但当时我不知道如何将其应用到课程中，所以我们一周后就停止了。
+在 Twitter 上搜索[`#HourOfCode`](https://twitter.com/hashtag/HourOfCode)时，我看到了另一位一年级老师[@avivaloca](https://twitter.com/avivaloca)使用`Lightbot`应用程序的照片。我把它下载到平板电脑上，在那周里，我把它放在了`HoverCam`下方，我们全班一起解决了关卡。我们开始时让学生一次尝试一个，然后使用白色白字板让全班学生单独进行编码，然后再检查自己的作品。那是非常棒的一周！学生们非常喜欢这个应用，许多人把它安装在了家里的设备上。虽然很成功，但当时我不知道如何将其应用到课程中，所以我们一周后就停止了。
 
-我们最近在数学中开始了一个几何单元，包含了 `2D` 和 `3D` 形状，以及带有方向的空间意识。我们在科学课也开始了一个结构单元，讨论了如何制作稳定的结构。这时 `Lightbot` 强势回归了！小组利用每个关卡的图片用插拔块制成结构。然后他们将代码写在便利贴上。最后，学生构建了 `Lightbot` 结构，编写了代码并单独检查了作品。现在我们正在完成制作自己的稳定结构，并编写指令以两种不同的方式点亮特定的方块。学生在自己的水平上展示了知识，我们涵盖了数学和科学。
+我们最近在数学中开始了一个几何单元，包含了`2D`和`3D`形状，以及带有方向的空间意识。我们在科学课也开始了一个结构单元，讨论了如何制作稳定的结构。这时`Lightbot`强势回归了！小组利用每个关卡的图片用插拔块制成结构。然后他们将代码写在便利贴上。最后，学生构建了`Lightbot`结构，编写了代码并单独检查了作品。现在我们正在完成制作自己的稳定结构，并编写指令以两种不同的方式点亮特定的方块。学生在自己的水平上展示了知识，我们涵盖了数学和科学。
 
-### ***你认为学生会取得什么进展？***
+### 你认为学生会取得什么进展？
 
-通过 `Lightbot`，我们计划向学校的其他班级展示我们的作品。我们还在 Twitter 上发布我们的进度，这带来了新的联系和极好的反馈。我们的目标是为家长举办一个编码之，让他们看到我们的作品。
+通过`Lightbot`，我们计划向学校的其他班级展示我们的作品。我们还在 Twitter 上发布我们的进度，这带来了新的联系和极好的反馈。我们的目标是为家长举办一个编码之，让他们看到我们的作品。
 
-下一个目标是使用 `ScratchJr` 让我们的故事动画化，并增强我们的社会观点。
+下一个目标是使用`ScratchJr`让我们的故事动画化，并增强我们的社会观点。
 
-### ***最后，关于这个项目和方法，还有什么其他想让我们知道的信息吗？***
+### 最后，关于这个项目和方法，还有什么其他想让我们知道的信息吗？
 
 在尝试这个之前，我对编码一无所知。我通过试错来学习，这对我的班级来说是非常棒的体验。经常，他们会教我更快或更简单的方法来操作程序。
 
-
-
-
-
-在一次类似于 P.A. Day 教育营的会议后，我决定和我的班级一起尝试编程。在这次会议上，我们让学校的学生来教我们如何编程，并讨论了“编程小时”（`Hour of Code`）的想法。我完全不知道编程到底是什么，所以我认为最好还是花点时间学习一下。我们从 `Hopscotch` 开始，因为它可以在平板电脑上使用，而且适合该年龄段。
+在一次类似于 P.A. Day 教育营的会议后，我决定和我的班级一起尝试编程。在这次会议上，我们让学校的学生来教我们如何编程，并讨论了“编程小时”（`Hour of Code`）的想法。我完全不知道编程到底是什么，所以我认为最好还是花点时间学习一下。我们从`Hopscotch`开始，因为它可以在平板电脑上使用，而且适合该年龄段。
 
 ### 结果你观察到了什么？
 
-第一次尝试 `Hopscotch` 时，我给了学生有机会自己或与伙伴一起探索并解决问题。第二次使用 `Hopscotch` 时，有些学生已经变成了“专家”。我注意到学生们会分享他们的学习经验，进行协作，并尝试共同解决问题。许多学生把这个应用安装在自己的设备上，并在家里和学校观看 YouTube 视频来帮助他们创建新的代码。
+第一次尝试`Hopscotch`时，我给了学生有机会自己或与伙伴一起探索并解决问题。第二次使用`Hopscotch`时，有些学生已经变成了“专家”。我注意到学生们会分享他们的学习经验，进行协作，并尝试共同解决问题。许多学生把这个应用安装在自己的设备上，并在家里和学校观看 YouTube 视频来帮助他们创建新的代码。
 
 ### 你让学生编写应用程序来绘制 3D 数学形状。能谈谈这吗？
 
@@ -572,11 +556,11 @@ Jessica Konecny ([@MrsKonecny](https://twitter.com/MrsKonecny)) 在加拿大安�
 
 ### 你预见你的学生会将此应用到何种程度？
 
-我想下一步将是尝试通过 Twitter 寻找其他使用 `Hopscotch` 的班级，这样我们就可以互相分享和挑战。我还在想，我们可以尝试使用 `Hopscotch` 来制作翻译。我还想让他们在下一步使用 `Scratch`，在那里他们可以学习制作应用。他们掌握概念的速度非常快。这非常令人兴奋。
+我想下一步将是尝试通过 Twitter 寻找其他使用`Hopscotch`的班级，这样我们就可以互相分享和挑战。我还在想，我们可以尝试使用`Hopscotch`来制作翻译。我还想让他们在下一步使用`Scratch`，在那里他们可以学习制作应用。他们掌握概念的速度非常快。这非常令人兴奋。
 
 ### 最后，关于这个项目和学习方法，还有什么想让我们知道的其他信息吗？
 
-我认为我从这次经历中中学的最重要的事情之一是：在数学中使用技术可以帮助平衡学术竞争环境。我的教室里有 10 名拥有 `IEPs`（个人化教育计划）的学生，通过使用这种技术，你无法识别出谁在数学方面需要特殊照顾。这种编程体验也为那些以前由于某种原因不分享想法或意见的学生提供了发声的机会。它赋予了他们力量。这次冒险对我学生和我自己来说都是是一次极佳的学习经历。我很享受和他们一起成为学生。对于任何考虑过和学生一起尝试编程的人，我的建议是：“不要想，尽管去做！”放弃控制的欲望，拥抱成为共同学习者的机会。
+我认为我从这次经历中中学的最重要的事情之一是：在数学中使用技术可以帮助平衡学术竞争环境。我的教室里有 10 名拥有`IEPs`（个人化教育计划）的学生，通过使用这种技术，你无法识别出谁在数学方面需要特殊照顾。这种编程体验也为那些以前由于某种原因不分享想法或意见的学生提供了发声的机会。它赋予了他们力量。这次冒险对我学生和我自己来说都是是一次极佳的学习经历。我很享受和他们一起成为学生。对于任何考虑过和学生一起尝试编程的人，我的建议是：“不要想，尽管去做！”放弃控制的欲望，拥抱成为共同学习者的机会。
 
 Val 的故事证明了任何人、任何年龄的人都可以学习编程。它还提到一个我们在讨论 21 世纪学习时经常谈的话题——公平和学生声音。公平意味着每个人都得到他们需要的——而不是意味着每个人都得到相同的东西。这对于学生来说可能是一个很难理解的概念；他们通常知道自己与别人不同。Val 的学生在数学上需要不同的支持来学习内容。个人化教育计划可能很有用，但系统有时会让所有学生都难以感到被包容。编程让所有学生共同参与。它帮助每个人都有了说话的工具，让他们的声音被听到。
 
@@ -584,11 +568,11 @@ Val 的故事证明了任何人、任何年龄的人都可以学习编程。它�
 
 ## 特色文章
 
-#### 使用 Twine 编写非线性故事
+### 使用 Twine 编写非线性故事
 
 ![QR-Coding-Non-Linear-Stories-with-Twine](img/QR-Coding-Non-Linear-Stories-with-Twine.png)
 
-###### [`brianaspinall.com/coding-non-linear-stories-with-twinethreads`](http://brianaspinall.com/coding-non-linear-stories-with-twinethreads)
+[`brianaspinall.com/coding-non-linear-stories-with-twinethreads`](http://brianaspinall.com/coding-non-linear-stories-with-twinethreads)
 
 ![line](img/line.png)
 
@@ -625,14 +609,11 @@ Melissa Dann ([@meld70](https://twitter.com/meld70)) 是澳大利亚墨尔本的
 机器人：那是几步？（程序员和机器人用手指数数，5 加 3。）
 ```
 
-在第一次玩这个游戏后，很明显我们需要一种方法来决定转身的幅度，例如`¼转`、`½转`。因此我们制作了带有四分之一、二分之一和全圈转的旋转盘，这显示了左和右。这仍然是一个困难的概念，但我正在坚持。我们还在周五开始使用 `Bee-Bot`，旋转盘非常有帮助，因为每次按下 `Bee-Bot` 上的转向按钮都是四分之一。
+在第一次玩这个游戏后，很明显我们需要一种方法来决定转身的幅度，例如`¼转`、`½转`。因此我们制作了带有四分之一、二分之一和全圈转的旋转盘，这显示了左和右。这仍然是一个困难的概念，但我正在坚持。我们还在周五开始使用`Bee-Bot`，旋转盘非常有帮助，因为每次按下`Bee-Bot`上的转向按钮都是四分之一。
 
 我们还在操场上玩过，这导致了更多位置语言的使用。
 
 观察孩子对子之间的互动很有趣。就像所有活动一样，有些小组非常专注，有些则不然。有一组非常调皮，直到孩子们交换角色，他们才变得专注得多。其中一个先当程序员的孩子发现当程序员很难，无法思考出要求伙伴做的事情；因此注意力不集中。但当他们交换角色后，他们非常喜欢当机器人。
-
-
-
 
 对我来说，这是一次非常棒的学习经历，我一直在考虑把它写成博客——但我以前从未写过专业的博客。
 
@@ -650,13 +631,17 @@ Melissa Dann ([@meld70](https://twitter.com/meld70)) 是澳大利亚墨尔本的
 
 但有时，成为一名鼓励学生进行批判性和创造性思维、并愿意与他们一起学习和犯错的老师，会让我想要像婴儿一样蜷起来，让别人来替我做那些辛苦的工作。这太太累了。
 
+
+
 当我需要鼓励来继续做一名超越死记硬背和常规评估的老师时，当我需要动力来鼓励学生在挑战性情况下承担风险、进行批判性思考并解决问题时，我会转向谷歌地图的街景功能，输入一个熟悉的地址。我点击滑块，看着图像掠过，直到停在一张 2009 年拍摄的照片上。
 
-当屏幕上出现一位我遇到过的最伟大老师之一的照片时，我通常努力自己不哭出来。
+当屏幕上出现一位我遇到过的最伟大老师之一的照片时，我通常努力让自己不哭出来。
 
-照片中的男人望向街道，仿佛正期待着对着镜头拍照，但我确定他从未预料到自己的影像会被捕捉并存档在网上。事实上，我甚至不他不是否能描述那天开过的那辆卡车，或者告诉你身后那栋旧砖房农场的门牌——98。
+照片中的男人望向街道，仿佛正期待着对着镜头拍照，但我确定他从未预料到自己的影像会被捕捉并存档在网上。事实上，我甚至不知道他是否能描述那天开过的那辆卡车，或者告诉你身后那栋旧砖房农场的门牌——98。
 
-但当我看到那个戴着蓝色棒球帽、牛仔裤、穿着毛衣的老年人时，我看到了一个坚毅的巨人。那个人是我去世的波波爷爷（Poppa），我和哥哥都这样称呼他。在童年和青少年时期的大部分时间里，我和哥哥会在三月的学校假期去多伦多和祖父母在一起。我们在温莎乘坐火车，祖父母会在多伦多的联合车站接我们。波波是一位退休的地质学家和高中科学老师。他会向我们展示岩石和矿物，我们还会混合化学品。化学反应就在我们眼前发生。有些人会称之为创客空间（makerspace），或者至少是一项加强了我们在科学课上所知识的额外作业。对我们来说，这仅仅是与波波爷爷度过的时光。
+但当我看到那个戴着蓝色棒球帽、牛仔裤、穿着毛衣的老年人时，我看到了一个坚毅的巨人。那个人是我去世的波波爷爷（Poppa），我和哥哥都这样称呼他。在童年和青少年时期的大部分时间里，我和哥哥会在三月的学校假期去多伦多和祖父母在一起。我们在温莎乘坐火车，祖父母会在多伦多的联合车站接我们。
+
+波波是一位退休的地质学家和高中科学老师。他会向我们展示岩石和矿物，我们还会混合化学品。化学反应就在我们眼前发生。有些人会称之为创客空间（makerspace），或者至少是一项加强了我们在科学课上所学知识的额外作业。对我们来说，这仅仅是与波波爷爷度过的时光。
 
 在那张街景照片拍摄几年前，波波被诊断出患有阿尔茨海默症。这个诊断结果毁灭了我。我知道他将失去交流的能力。我们的科学课将发生改变。
 
@@ -670,7 +655,7 @@ Melissa Dann ([@meld70](https://twitter.com/meld70)) 是澳大利亚墨尔本的
 
 ![QR-Learn-to-Code-Tennis-For-One](img/QR-Learn-to-Code-Tennis-For-One.png)
 
-###### [`brianaspinall.com/tennis-for-one`](http://brianaspinall.com/tennis-for-one)
+[`brianaspinall.com/tennis-for-one`](http://brianaspinall.com/tennis-for-one)
 
 ![line](img/line.png)
 
@@ -680,19 +665,19 @@ Melissa Dann ([@meld70](https://twitter.com/meld70)) 是澳大利亚墨尔本的
 
 他的生活就是我们在教科书中讨论的所有理论，以及我想带入教学的哲学理念的范例：观察我们周围世界的问题，并坚持找到它们的解决方案。
 
-无论他是否有意为，他都在教我永不放弃，这也是我希望我的学生通过编程学到的课程。
+无论他是否有意为之，他都在教我永不放弃，这也是我希望我的学生通过编程学到的课程。
 
 当波波爷爷第一次拆掉家里的暴雨窗时，他从未想过一张他站在窗前的照片会被储存在网络上，或者在他去世多年后我仍然能从中获得慰藉。但多亏了几位程序员，事实如此，我也确实如此。世界已经发生了根本性的变化；我们现在以如此不同的方式相互交流和互动。我们改变技术，技术也改变我们。
 
 在生活的困难中坚持下去的需求没有改变。它不会改变。我们的学生面临生活中最大的挑战和问题无法通过一个应用程序来解决。但他们在使用新兴技术时学会思考的方式可以帮助他们找到解决方案。
 
-我的波波爷爷提醒了我为什么我热爱技术，以及为什么我希望学生用技术进行创造。这并不是因为它帮助我教课或解决家庭问题的方式。而是因为它给了我与人交流更丰富的方式。没有什么比我们与他人互动的方式更能改变我们的思考方式了。
+我的波波爷爷提醒了我为什么我热爱技术，以及为什么我希望学生用技术进行创造。这并不是因为它帮助我教课或解决家庭问题的方式，而是因为它给了我与人交流更丰富的方式。没有什么比我们与他人互动的方式更能改变我们的思考方式了。
 
 # TEDx 演讲
 
 ![QR-TEDx-Talks](img/QR-TEDx-Talks.png)
 
-### [brianaspinall.com/tennis-for-one](http://brianaspinall.com/tennis-for-one)
+### [`brianaspinall.com/tennis-for-one`](http://brianaspinall.com/tennis-for-one)
 
 #### 超越死记硬背
 
@@ -702,94 +687,60 @@ Melissa Dann ([@meld70](https://twitter.com/meld70)) 是澳大利亚墨尔本的
 
 ### 其他资源
 
-### Minecraft:
+#### Minecraft
+
 [`www.houcuriosity.com/minecraft`](http://www.houcuriosity.com/minecraft)
 
-### 增强现实课程:
+#### 增强现实课程
+
 [`www.houcuriosity.com/submit-an-2`](http://www.houcuriosity.com/submit-an-2)
 
-### 编程视频:
+#### 编程视频
+
 [`www.houcuriosity.com/coding`](http://www.houcuriosity.com/coding)
 
-### 入门 Makey Makey:
+#### 入门 Makey Makey
+
 [`www.houcuriosity.com/makey-makey`](http://www.houcuriosity.com/makey-makey)
 
-### 入门 Micro:
+#### 入门 Micro
+
 [`www.houcuriosity.com/microbit`](http://www.houcuriosity.com/microbit)
 
-### 参考文献
+## 参考文献
 
-##### Berry, Miles. *Computing in the National Curriculum. A Guide for Primary Teachers*. Bedford: Computing at School, 2013.
-
-##### Bers, Marina Umaschi, Louise Flannery, Elizabeth R. Kazak, and Amanda Sullivan. 2014. “Computational thinking and tinkering: Exploration of an early curriculum.” *Computers & Education,* 72: 145–57.
-
-##### Drake, Susan. 2014. “Designing across the curriculum for “sustainable well-Being”: A 21st century approach.” *Essay in Sustainable Well-Being: Concepts, issues, and educational practice*, edited by Frank Deer, Thomas Falkenberg, Barbara McMillan, and Laura Sims, 57–76. Winnipeg, MB: Education for Sustainable Well-Being (ESWB) Press.
-
-
-
-
-
-### Gadanidis, George. 2015. “作为数学教育改革特洛伊木马的编程。”《数学与科学教学计算机杂志》，34(2): 155-73.
-
-### Gadanidis, George. 2015. *《年轻数学家的编程》*. 加拿大安大略省伦敦：西斯特恩大学。
-
-### Gao, Xin, and Jennifer Grisham-Brown. 2011. “使用真实性评估报告幼儿语言、读写能力和前数学能力能力的问责制数据。《国际教育研究》， 4 (2). doi:10.5539/ies.v4n2p41.
-
-### Graf, Edith Aurora, and Meirav Arieli-Attali. 2015. “设计和开发针对初级数学的复杂思维评估。《理论与实践》， 54 (3): 195–202. doi:10.1080/00405841.2015.1044365.
-
-### Hargreaves, Eleanore. 1997. “针对英语作为额外语言儿童的数学评估。《教育评估：原则、政策与实践》， 4 (3): 401–12. doi:10.1080/0969594970040306.
-
-### Harlen, Wynne, and Jan Winter. 2004. “学习性评估的发展：从科学和数学的案例中学习。《语言测试》， 21 (3): 390–408. doi:10.1191/0265532204lt289oa.
-
-### Jeltova, Ida, Damian Birney, Nancy Fredine, Linda Jarvin, Robert J. Sternberg, and Elena L. Grigorenko. 2011. “使教学和评估对多样化学生的进步做出反应：数学教学中的小组管理动态评估。《学习障碍杂志》， 44 (4): 381–95. doi:10.1177/0022219411407868.
-
-### Kafai, Yasmin B., and Quinn Burke. “计算机编程回到学校。《菲尔德 Delta Kappan》， 95, no. 1 (2013): 63-65.
-
-### Kazakoff, Elizabeth R., and Marina Umaschi Bers. “输入你的机器人，输出你的机器人：早期儿童通过编程机器人进行序列化学习。《教育计算研究杂志》， 50, no. 4 (2014): 553-73. doi:10.2190/ec.50.4.f.
-
-### Kazakoff, Elizabeth R., Amanda Sullivan, and Marina U. Bers. “课堂强化型机器人与编程研讨会对早期儿童序列化能力的影响。《早期儿童教育杂志》， 41, no. 4 (2012): 245-55. doi:10.1007/s10643-012-0554-5.
-
-### Levine, Rachel. *《强调三元模型和语言能力的基于课程的动态评估：考察这种测试方法在小学数学课堂中的实用性》*. 博士论文， 2009。(订单号 3349141)。 可自 ProQuest Education Journals。 (305047877)。 获取自 [http://search.proquest.com/docview/305047877?accountid=15115]。
-
-### Liang, Xin. “评估使用、自我效能感与数学成就：芬兰、加拿大和美国 PISA 2003 数据的比较分析。《教育评估与研究》， 23, no. 3 (2010): 213-29. 获取自 [http://search.proquest.com/docview/868061586?accountid=15115]。
-
-### Morten Misfeldt, Stine Ejsing-Duun. “通过编程学习数学：一种探讨与陷阱的工具方法。”Konrad Krainer; Nada Vondrová. CERME 9-欧洲数学教育研究协会第九届大会，2015 年 2 月，捷克共和国布拉格。页码 2524-2530，欧洲数学教育研究协会第九届大会论文。
-
-### Morgan, Candia, Anna Tsatsaroni, and Stephen Lerman. 2002. “评估话语中的数学教师立场与实践。《英国教育社会学杂志》， 23 (3): 445–61. 获取自 [http://search.proquest.com/docview/206172116?accountid=15115]。
-
-### Nguyen, Diem M, Yi-Chuan Hsieh, and Donald G Allen. 2006. “基于网络的评估与实践对学生数学学习的影响。《数学与科学教学计算机杂志》，， 25 (3): 251–79. 获取自 [http://search.proquest.com/docview/22063095?accountid=15115]。
-
-### “21 世纪能力：讨论基础。” 2016. 安大略省教育部。[http://www.edugains.ca/resources21CL/About21stCentury/21stCenturyCompetencies.pdf]。
-
-### “安大略省课程大纲 1-8 年级：数学。” 2005. 安大略省教育部。[http://www.edu.gov.on.ca/curriculum/elementary/math18curr.pdf]。
-
-### Papert, Seymour. 1993. “乌龟几何：一种为学习而设计的数学。《头脑风暴：儿童与强大的思想》。” 纽约：Basicbooks。
-
-### Resnick, Mitchel, John Maloney, Andrés Monroy-Hernández, Natalie Rusk, Evelyn Eastmond, Karen Brennan, Amon Millner, 等. 2009. “‘数字流练性应该意味着设计、创造和混剪，而不仅仅是浏览、聊天和互动。《ACM 学报》， 52 (11): 60–67。”
-
-### Sammons, Kay, 等。 1992. “将数学课堂中的教学与评估联系。《算术教师》， 39 (6): 11. 获取自 [http://search.proquest.com/docview/20877165]。
-
-### Smith, Carmen Petrick, and Maureen D. Neumann. 2014. “画出 Scratch！增强几何理解。《数学杂志》， 21 (3): 185–8。
-
-### Sneider, Cary, Chris Stephenson, and Larry Flick. 2014. “教师工具包：探索科学框架与计算思维。《科学范围》， 03 (03): 10–15。
-
-### Suurtamm, Christine, and Martha J. Koch. 2014. “转型背景下安大略数学教师的评估实践中的困境。《教育评估与问责》， 26 (3): 263–87. doi:10.1007/s11092-014-9195.
-
-### Suurtamm, Christine, Martha Koch, and Ann Arden. 2010. “安大略数学课堂的教师评估实践。《教育评估：原则、政策与实践》， 17 (4): 399–417. 获取自 [http://search.proquest.com/docview/8219567?accountid=15115]。
-
-### Thomas, Cathy Newman, Delinda Van Garderen, Amy Scheuermann, and Eun Ju Lee. 2015. “应用通用学习设计框架来缓解数学的语言需求。《阅读与写作杂志》， 31 (3): 207–34. 获取自 [http://search.proquest.com/docview/168361180?accountid=15115]。
-
-### Wallace, Matthew. 2011. “发展评估实践：职前数学教师作为学习者的经历及其作为教育工作者的评估实践的演变。”博士论文。(订单号 3499583)。可自 ProQuest Education Journals。(94432414)。获取自 [http://search.proquest.com/docview/94432414?accountid=15115]。
-
-### Watson, Anne. 2006. “数学非正式评估中的某些困难。《教育评估：原则、政策与实践》， 13 (3): 289–303。”
-
-### Wing, Jeannette. 2006. “计算思维。《ACM 学报》， 49 (3): 33–35。”
-
-
-
-
-
-Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015. “比较网络化数学课堂中使用形成性评估的两种版本的教师专业发展。” *教育技术研究期刊*, 47 (1): 41–70. 检索自 [`search.proquest.com/docview/1646385125?accountid=15115`](http://search.proquest.com/docview/1646385125?accountid=15115)。
+- Berry, Miles. *Computing in the National Curriculum. A Guide for Primary Teachers*. Bedford: Computing at School, 2013.
+- Bers, Marina Umaschi, Louise Flannery, Elizabeth R. Kazak, and Amanda Sullivan. 2014. “Computational thinking and tinkering: Exploration of an early curriculum.” *Computers & Education*, 72: 145–57.
+- Drake, Susan. 2014. “Designing across the curriculum for “sustainable well-Being”: A 21st century approach.” *Essay in Sustainable Well-Being: Concepts, issues, and educational practice*, edited by Frank Deer, Thomas Falkenberg, Barbara McMillan, and Laura Sims, 57–76. Winnipeg, MB: Education for Sustainable Well-Being (ESWB) Press.
+- Gadanidis, George. 2015. “作为数学教育改革特洛伊木马的编程。”《数学与科学教学计算机杂志》，34(2): 155–73.
+- Gadanidis, George. 2015. *《年轻数学家的编程》*. 加拿大安大略省伦敦：西斯特恩大学。
+- Gao, Xin, and Jennifer Grisham-Brown. 2011. “使用真实性评估报告幼儿语言、读写能力和前数学能力能力的问责制数据。”《国际教育研究》，4(2)。doi:10.5539/ies.v4n2p41.
+- Graf, Edith Aurora, and Meirav Arieli-Attali. 2015. “设计和开发针对初级数学的复杂思维评估。”《理论与实践》，54(3): 195–202。doi:10.1080/00405841.2015.1044365.
+- Hargreaves, Eleanore. 1997. “针对英语作为额外语言儿童的数学评估。”《教育评估：原则、政策与实践》，4(3): 401–12。doi:10.1080/0969594970040306.
+- Harlen, Wynne, and Jan Winter. 2004. “学习性评估的发展：从科学和数学的案例中学习。”《语言测试》，21(3): 390–408。doi:10.1191/0265532204lt289oa.
+- Jeltova, Ida, Damian Birney, Nancy Fredine, Linda Jarvin, Robert J. Sternberg, and Elena L. Grigorenko. 2011. “使教学和评估对多样化学生的进步做出反应：数学教学中的小组管理动态评估。”《学习障碍杂志》，44(4): 381–95。doi:10.1177/0022219411407868.
+- Kafai, Yasmin B., and Quinn Burke. “计算机编程回到学校。”《菲尔德 Delta Kappan》，95(1) (2013): 63–65.
+- Kazakoff, Elizabeth R., and Marina Umaschi Bers. “输入你的机器人，输出你的机器人：早期儿童通过编程机器人进行序列化学习。”《教育计算研究杂志》，50(4) (2014): 553–73。doi:10.2190/ec.50.4.f.
+- Kazakoff, Elizabeth R., Amanda Sullivan, and Marina U. Bers. “课堂强化型机器人与编程研讨会对早期儿童序列化能力的影响。”《早期儿童教育杂志》，41(4) (2012): 245–55。doi:10.1007/s10643-012-0554-5.
+- Levine, Rachel. *《强调三元模型和语言能力的基于课程的动态评估：考察这种测试方法在小学数学课堂中的实用性》*. 博士论文，2009。(订单号 3349141)。可自 ProQuest Education Journals。(305047877)。获取自 [`http://search.proquest.com/docview/305047877?accountid=15115`](http://search.proquest.com/docview/305047877?accountid=15115)。
+- Liang, Xin. “评估使用、自我效能感与数学成就：芬兰、加拿大和美国 PISA 2003 数据的比较分析。”《教育评估与研究》，23(3) (2010): 213–29。获取自 [`http://search.proquest.com/docview/868061586?accountid=15115`](http://search.proquest.com/docview/868061586?accountid=15115)。
+- Morten Misfeldt, Stine Ejsing-Duun. “通过编程学习数学：一种探讨与陷阱的工具方法。”Konrad Krainer; Nada Vondrová. CERME 9—欧洲数学教育研究协会第九届大会，2015 年 2 月，捷克共和国布拉格。页码 2524–2530，欧洲数学教育研究协会第九届大会论文。
+- Morgan, Candia, Anna Tsatsaroni, and Stephen Lerman. 2002. “评估话语中的数学教师立场与实践。”《英国教育社会学杂志》，23(3): 445–61。获取自 [`http://search.proquest.com/docview/206172116?accountid=15115`](http://search.proquest.com/docview/206172116?accountid=15115)。
+- Nguyen, Diem M, Yi-Chuan Hsieh, and Donald G Allen. 2006. “基于网络的评估与实践对学生数学学习的影响。”《数学与科学教学计算机杂志》，25(3): 251–79。获取自 [`http://search.proquest.com/docview/22063095?accountid=15115`](http://search.proquest.com/docview/22063095?accountid=15115)。
+- “21 世纪能力：讨论基础。”2016. 安大略省教育部。[`http://www.edugains.ca/resources21CL/About21stCentury/21stCenturyCompetencies.pdf`](http://www.edugains.ca/resources21CL/About21stCentury/21stCenturyCompetencies.pdf)。
+- “安大略省课程大纲 1–8 年级：数学。”2005. 安大略省教育部。[`http://www.edu.gov.on.ca/curriculum/elementary/math18curr.pdf`](http://www.edu.gov.on.ca/curriculum/elementary/math18curr.pdf)。
+- Papert, Seymour. 1993. “乌龟几何：一种为学习而设计的数学。《头脑风暴：儿童与强大的思想》。”纽约：Basicbooks。
+- Resnick, Mitchel, John Maloney, Andrés Monroy-Hernández, Natalie Rusk, Evelyn Eastmond, Karen Brennan, Amon Millner, 等. 2009. “‘数字流练性应该意味着设计、创造和混剪，而不仅仅是浏览、聊天和互动。”《ACM 学报》，52(11): 60–67。”
+- Sammons, Kay, 等。1992. “将数学课堂中的教学与评估联系。”《算术教师》，39(6): 11。获取自 [`http://search.proquest.com/docview/20877165`](http://search.proquest.com/docview/20877165)。
+- Smith, Carmen Petrick, and Maureen D. Neumann. 2014. “画出 Scratch！增强几何理解。”《数学杂志》，21(3): 185–8。
+- Sneider, Cary, Chris Stephenson, and Larry Flick. 2014. “教师工具包：探索科学框架与计算思维。”《科学范围》，03(03): 10–15。
+- Suurtamm, Christine, and Martha J. Koch. 2014. “转型背景下安大略数学教师的评估实践中的困境。”《教育评估与问责》，26(3): 263–87。doi:10.1007/s11092-014-9195.
+- Suurtamm, Christine, Martha Koch, and Ann Arden. 2010. “安大略数学课堂的教师评估实践。”《教育评估：原则、政策与实践》，17(4): 399–417。获取自 [`http://search.proquest.com/docview/8219567?accountid=15115`](http://search.proquest.com/docview/8219567?accountid=15115)。
+- Thomas, Cathy Newman, Delinda Van Garderen, Amy Scheuermann, and Eun Ju Lee. 2015. “应用通用学习设计框架来缓解数学的语言需求。”《阅读与写作杂志》，31(3): 207–34。获取自 [`http://search.proquest.com/docview/168361180?accountid=15115`](http://search.proquest.com/docview/168361180?accountid=15115)。
+- Wallace, Matthew. 2011. “发展评估实践：职前数学教师作为学习者的经历及其作为教育工作者的评估实践的演变。”博士论文。(订单号 3499583)。可自 ProQuest Education Journals。(94432414)。获取自 [`http://search.proquest.com/docview/94432414?accountid=15115`](http://search.proquest.com/docview/94432414?accountid=15115)。
+- Watson, Anne. 2006. “数学非正式评估中的某些困难。”《教育评估：原则、政策与实践》，13(3): 289–303。
+- Wing, Jeannette. 2006. “计算思维。”《ACM 学报》，49(3): 33–35。
+- Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015. “比较网络化数学课堂中使用形成性评估的两种版本的教师专业发展。”*教育技术研究期刊*, 47(1): 41–70。检索自 [`search.proquest.com/docview/1646385125?accountid=15115`](http://search.proquest.com/docview/1646385125?accountid=15115)。
 
 # 更多内容
 
@@ -803,7 +754,7 @@ Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015
 
 #### 作者 Dave Burgess ([@BurgessDave](https://twitter.com/BurgessDave))
 
-*像海盗一样教学*是一部《纽约时报》畅登畅销书，它引发了一场全球性的教育革命。它既是一份点燃职业激情的启发性宣言，又是一份实用的路线图，充满了能够显著提高学生参与度的动态策略。该书已被翻译成多种语言，其核心理念与那些渴望设计极具创意的课程并将学校转变为改变学生生活的体验的教育工作者产生了共鸣。
+*像海盗一样教学*是一部《纽约时报》畅销书，它引发了一场全球性的教育革命。它既是一份点燃职业激情的启发性宣言，又是一份实用的路线图，充满了能够显著提高学生参与度的动态策略。该书已被翻译成多种语言，其核心理念与那些渴望设计极具创意的课程并将学校转变为改变学生生活的体验的教育工作者产生了共鸣。
 
 ![像海盗一样学习](img/dbc_LLAP.jpg)
 
@@ -823,13 +774,15 @@ Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015
 
 #### 作者 Dave and Shelley Burgess ([@Burgess_Shelley](https://twitter.com/Burgess_Shelley))
 
-教学是一场延伸想象力并每天都需要创造力的冒险！在*P 代表海盗*中，夫妻夫妇 Dave 和 Shelley Burgess 鼓励并启发教育工作者让他们的课堂变成有趣且令人兴奋的学习场所。他们通过利用多年的个人经验并吸纳 70 多位教育工作者的见解，作者提供了丰富的想法，让学习和教学比以往任何时候都更加充实。
+教学是一场延伸想象力并每天都需要创造力的冒险！在*P 代表海盗*中，夫妻 Dave 和 Shelley Burgess 鼓励并启发教育工作者让他们的课堂变成有趣且令人兴奋的学习场所。他们通过利用多年的个人经验并吸纳 70 多位教育工作者的见解，作者提供了丰富的想法，让学习和教学比以往任何时候都更加充实。
 
 ![像海盗一样游戏](img/dbc_PLAP.jpg)
 
 ## 像海盗一样游戏
 
 ### 使用玩具、游戏和漫画吸引学生
+
+
 
 #### 作者 Quinn Rollins ([@jedikermit](https://twitter.com/jedikermit))
 
@@ -890,9 +843,6 @@ Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015
 ## Google Classroom 可以做的 50 种事
 
 #### 作者 Alice Keeler 和 Libbi Miller ([@AliceKeeler](https://twitter.com/AliceKeeler), [@MillerLibbi](https://twitter.com/MillerLibbi))
-
-
-
 
 在教室中引入新技术可能具有挑战性，但如果学生想要为未来做好充分准备，这是必经之路。Alice Keeler 和 Libbi Miller 通过提供对 `Google Classroom App` 的全面概述，缩短了学习曲线。`Google Classroom` 作为教育版 Google 应用（GAfE）的一部分，专门设计用于通过简化数字化流程来帮助教师节省时间。《Google Classroom 可以完成的 50 件事》一书配有截图，提供了许多创意和分步骤的操作说明，帮助教师实施这一强大的工具。
 
@@ -994,13 +944,9 @@ Yin, Yue, Judith Olson, Melfried Olson, Hannah Solvin, and Paul R. Brandon. 2015
 
 John Spencer 和 A.J. Juliani ([@spencerideas](https://twitter.com/spencerideas), [@ajjuliani](https://twitter.com/ajjuliani))
 
-
-
-
-
 当学生将自己定义为制造者、发明者和创造者时，他们身上会发生变化。他们发现了强大的技能——解决问题的能力、批判性思维和想象力——这些技能将帮助他们塑造世界的未来……我们的未来。在*LAUNCHLAUNCH*一书中，John Spencer 和 A.J. Juliani 提供了一种可以融入到每个年级、每个课程的流程……即使你不认为自己是一个“创意型教师”。如果你敢于创新，并将创造力视为一项基本技能，你将赋予学生改变世界的能力——从现在开始。
 
-## ![TMWGA](img/dbc_TMWGA.jpg)
+![TMWGA](img/dbc_TMWGA.jpg)
 
 # 使用 Google Apps 教学数学
 
@@ -1010,7 +956,7 @@ John Spencer 和 A.J. Juliani ([@spencerideas](https://twitter.com/spencerideas)
 
 Google Apps 为教师提供了比以往任何时候都更有意义的学生互动的机会，而 G Suite 则赋予学生成为创造性、批判性思考者的能力，并在探索和学习过程中进行协作。在《使用 Google Apps 教学数学》中，教育工作者 Alice Keeler 和 Diana Herrington 展示了五十种不同的方法，利用易用技术将数学课带入 21 世纪。
 
-## ![3D-Dunk-Tank](img/dbc_Dunk-Tank.jpg)
+![3D-Dunk-Tank](img/dbc_Dunk-Tank.jpg)
 
 # 逃离校长的水水桶
 
@@ -1020,7 +966,7 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 没有任何学校领导者能免于水水桶——歧视、糟糕的政治、报复或自我驱动型同事的影响。在《逃离校长的水水桶》中，Rebecca Coda 和 Rick Jetter 分享了真实故事和深刻的见解，为学校领导者提供生存所需的实用知识和情感工具，更好的是，避免被“击落”。
 
-## ![StartRightNow](img/dbc_SRN.png)
+![StartRightNow](img/dbc_SRN.png)
 
 # 现在。就开始。
 
@@ -1030,7 +976,7 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 在创作《现在。就开始。》之前的工作中，Todd Whitaker、Jeff Zoul 和 Jimmy Casas 研究了全国各地的教育工作者，并发现了卓越的四个关键行为：卓越的领导者和老师知道道路、展示道路、走道路并每天成长。如果你准备好迈向卓越的第一步，这本励人书籍将带你走上正确的道路。
 
-## ![LeadLikeaPIRATE](img/dbc_LdLAP.jpg)
+![LeadLikeaPIRATE](img/dbc_LdLAP.jpg)
 
 # 像海盗一样领导
 
@@ -1040,7 +986,7 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 在《像海盗一样领导》中，教育领导者 Shelley Burgess 和 Beth Houf 勾勒了领导学校或学区所需的品格特质。你将学如何在教室和学校中发现已存在的宝藏——以及如何挖掘你教育工作者最好的一面。这本书将装备并鼓励你在为学生、员工、家长和社区让学校变得惊艳的道路上坚持不懈。
 
-## ![Table Talk Math](img/dbc_TTM.jpg)
+![Table Talk Math](img/dbc_TTM.jpg)
 
 # 餐桌上的数学对话
 
@@ -1050,7 +996,7 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 让数学成为家庭日常对话的一部分是帮助孩子和青少年学会热爱数学的有力方法。在《餐桌上的数学对话》中，John Stevens 为家长（以及老师！）提供了发起真实的、基于数学的对话的想法，让孩子们注意到并对周围世界所有的数字、模式和方程产生好奇。
 
-## ![Shift This!](img/dbc_ST.jpg)
+![Shift This!](img/dbc_ST.jpg)
 
 # 转变这个！
 
@@ -1060,7 +1006,7 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 建立一种不以成绩和家庭作业为中心，而关注个人责任和个性化学习的学生主导的文化，似乎是一项艰巨的任务——尤其是当你认为必须一次性完成它时。但当变化一点一点发生时，重大的改变是可能的、可持续的，甚至是容易的。在《转变这个！》中，教育工作者兼演讲者 Joy Kirr 解释了如何进行渐进式的转变——在你的思维、教学和课堂设计方法上——这些转变将对你的课堂产生巨大影响。今天就开始第一次转变吧！
 
-## ![Unmapped Potential](img/dbc_UP.jpg)
+![Unmapped Potential](img/dbc_UP.jpg)
 
 # 未测的潜力
 
@@ -1068,13 +1014,15 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 #### Julie Hasson 和 Missy Lennard 著 ([@PPrincipals](https://twitter.com/PPrincipals))
 
+
+
 无论你处于教育生涯的哪个阶段，你很可能曾在一个时候感到力不从心和工作过度。也许你现在就有这种感觉。如果是这样，你并不孤单。但更重要的消息是，情况可以变得更好！你只需要一张正确的地图来引导你。《未测的潜力》提供了建议和实用策略，帮助你成为你想成为的那种教育工作者。
 
 ## ![Shattering the Teacher Myth](img/dbc_STM.jpg)
 
 # 打破教师神话
 
-# 帮助作为教育工作者蓬勃发展的 6 个真相
+## 帮助作为教育工作者蓬勃发展的 6 个真相
 
 #### Aaron Hogan 著 ([@aaron_hogan](https://twitter.com/aaron_hogan))
 
@@ -1114,18 +1062,15 @@ Google Apps 为教师提供了比以往任何时候都更有意义的学生互�
 
 # 四点教师
 
-# 变革职业发展的叛逆指南
+## 变革职业发展的叛逆指南
 
 #### Rich Czyz 著 ([@RACzyz](https://twitter.com/RACzyz))
-
-
-
 
 作者 Rich Czyz 致力于彻底改变所有教育者的专业学习模式。在《四点钟学院》（*The Four O’Clock Faculty*）中，Rich 了让专业发展（PD）变得有意义、高效且最重要的是与个人相关的方法。这本书是一本实用指南，揭示了为什么有些专业发展如此糟糕，以及你可以做什么来改变这种模式，从而改善你自己和你的同事。
 
 ## ![Culturize](img/dbc_Culturize.jpg)
 
-## Culturize
+# Culturize
 
 ### 每个学生。每天。不惜一切代价。
 

@@ -1,8 +1,5 @@
+
 # C Primer Plus 第 5 版编程练习答案
-
-
-
-
 
 # 第2章
 
@@ -480,10 +477,6 @@ int main(void)
 }
 ```
 
-
-
-
-
 ## Stephen Prata 编写的《C语言程序设计》（第5版）编程题答案
 
 ```c
@@ -493,6 +486,12 @@ printf("\n");
   return 0;
 }
 ```
+
+## PE 6-13
+
+
+
+# 第 6 章编程练习
 
 ## PE 6-13
 
@@ -544,11 +543,6 @@ int main(void)
 #define RATE_COMP 0.05
 #define INIT_AMT 100.0
 int main(void )
-```
-
-## Stephen Prata 编写的《C语言程序设计》（C Primer Plus，第5版）编程题答案
-
-```c
 {
 double daphne = INIT_AMT;
 double deidere = INIT_AMT;
@@ -567,7 +561,7 @@ return 0;
 }
 ```
 
-# 第7章
+# 第 7 章
 
 ## PE 7-1
 
@@ -692,14 +686,17 @@ int main(void) {
 
     printf("本周工作的小时: ");
 }
+```
 
 ## PE 7-9
 
 ```c
 /* 编程练习 7-9 */
 #include <stdio.h>
+
 #define NO 0
 #define YES 1
+
 int main(void)
 {
     long check;                 /* 检查 */
@@ -719,8 +716,8 @@ int main(void)
         } else {
             gross = 40 * 10 + 20 * 15 + (check - 60) * 20;
         }
-        printf("总额: $%.2f\n", gross);
 
+        printf("总额: $%.2f\n", gross);
         if (gross < 100) {
             taxes = gross * 0.05;
         } else if (gross < 500) {
@@ -728,6 +725,7 @@ int main(void)
         } else {
             taxes = gross * 0.15;
         }
+
         net = gross - taxes;
         printf("净额: $%.2f\n", net);
 
@@ -738,9 +736,11 @@ int main(void)
         } else {
             shipping = 5.0 + (net - 100) * 0.05;
         }
+
         printf("运费: $%.2f\n", shipping);
         printf("应付运费后的总费用: $%.2f\n", net + shipping);
     }
+
     return 0;
 }
 ```
@@ -783,11 +783,11 @@ int main(void)
             printf("无效选择，请重试。\n");
             continue;
         }
+
         printf("a artich芦, b甜菜, c 胡萝卜, q 退出:\n");
     }
 
     total_cost = (artichokes * price_artichokes) + (beets * price_beets) + (carrots * price_carrots);
-
     if (total_cost < 0) {
         shipping = 0.0;
     } else if (total_cost < 5.0) {
@@ -818,9 +818,7 @@ int main(void)
 }
 ```
 
-
-
-
+# 综合练习答案
 
 ## Stephen Prata 著《C语言程序》（第 5 版）编程练习答案
 
@@ -860,6 +858,7 @@ int main(void)
                         continue;      /* 回到循环开头 */
         }
     }
+
     printf("在这里输入工作的小时: %f\n", hours);
     scanf("%f %f", &hours, &gross);
     if (hours < BASEHRS)
@@ -870,13 +869,18 @@ int main(void)
         taxes = AMT1 + (gross - AMT1) * RATE2;
     else
         taxes = AMT1 + RATE1 * RATE2 + (gross - AMT1) * RATE3;
+
     net = gross - taxes;
     printf("总额: %.2f, 税额: %.2f, 净额: %.2f\n", gross, taxes, net);
     menu();
+
     return 0;
 }
+
 printf("Done.\n");
 ```
+
+
 
 ## Stephen Prata 著《C语言程序》（第 5 版）编程练习答案
 
@@ -898,7 +902,6 @@ void menu(void)
 int getfirst(void)
 {
     int ch;
-
     ch = getchar();
     while (isspace(ch))
         ch = getchar();
@@ -917,10 +920,10 @@ int getfirst(void)
 #include <stdio.h>
 
 double min(double a, double b);
+
 int main(void)
 {
     double x, y;
-
     printf("输入两个数字 (q 退出): ");
     while (scanf("%lf %lf", &x, &y) == 2)
     {
@@ -928,12 +931,9 @@ int main(void)
         printf("下次两个值 (q 退出): ");
     }
     printf("Bye!\n");
-
     return 0;
 }
 ```
-
-## Stephen Prata 著《C语言程序》（第 5 版）编程练习答案
 
 ```c
 double min(double a, double b)
@@ -957,11 +957,11 @@ double min(double a, double b)
 #include <stdio.h>
 
 void chLineRow(char ch, int col, int c, int r);
+
 int main(void)
 {
     char ch;
     int col, row;
-
     printf("输入一个字符 (# 退出): ");
     while ((ch = getchar()) != '#')
     {
@@ -980,7 +980,6 @@ int main(void)
 void chLineRow(char ch, int col, int c, int r)
 {
     int col, row;
-
     for (row = 0; row < r; row++)
     {
         for (col = 0; col < col; col++)
@@ -1000,10 +999,10 @@ void chLineRow(char ch, int col, int c, int r)
 #include <stdio.h>
 
 void larger_of(double *p1, double *p2);
+
 int main(void)
 {
     double x, y;
-
     printf("输入两个数字 (q 退出): ");
     while (scanf("%lf %lf", &x, &y) == 2)
     {
@@ -1029,11 +1028,11 @@ void larger_of(double *p1, double *p2)
 #include <stdio.h>
 
 double power(double a, int b);
+
 int main(void)
 {
     double x, xpow;
     int n;
-
     printf("输入一个数字以及该数字要计算的整数幂\n退出: ");
     while (scanf("%lf %d", &x, &n) == 2)
     {
@@ -1049,7 +1048,6 @@ double power(double a, int b)
 {
     double pow = 1;
     int i;
-
     if (b == 0)
     {
         if (a == 0)
@@ -1071,11 +1069,11 @@ double power(double a, int b)
 #include <stdio.h>
 
 void to_base(int x, int base);
+
 int main(void)
 {
     int number;
     int b;
-
     printf("输入一个整数 (q 退出): ");
     while (scanf("%d", &number) == 1)
     {
@@ -1091,7 +1089,6 @@ int main(void)
 void to_base(int x, int base)
 {
     int r;
-
     r = x % base;
     if (x >= base)
     {
@@ -1108,6 +1105,7 @@ void to_base(int x, int base)
 ```c
 /* 编程练习 10-1 */
 #include <stdio.h>
+
 #define MONTHS 12    /* 每年的月数 */
 #define YRS 5       /* 数据年数 */
 
@@ -1123,7 +1121,6 @@ int main(void)
         {4.3, 4.3, 3.0, 2.0, 1.0, 0.2, 0.4, 2.4, 3.5, 6.6, 6.1},
         {8.5, 8.2, 1.2, 2.4, 0.0, 5.2, 0.9, 0.3, 0.9, 1.4, 7.2}
     };
-
     printf("年份 降雨量 (英寸)\n");
     for (year = 0; year < YRS; year++) {
         /* 每年累加每个月的降雨量 */
@@ -1137,7 +1134,6 @@ int main(void)
     printf("每月平均值:\n");
     printf("    Jan Feb Mar Apr May Jun Jul Aug Sep Oct :\n");
     printf("    Dec :\n");
-
     for (month = 0; month < MONTHS; month++) {
         /* 每个月累加多年的的降雨量 */
         for (year = 0, subtotal = 0; year < YRS; year++) {
@@ -1148,10 +1144,6 @@ int main(void)
     return 0;
 }
 ```
-
-
-
-
 
 ## 《C Primer Plus》第5版 Stephen Prata 著：编程练习答案
 
@@ -1165,11 +1157,9 @@ int main(void)
 {
     int orig[LEN] = {1,2,3,4,12,6,7,8,9,10};
     int max;
-
     show_arr(orig, LEN);
     max = max_arr(orig, LEN);
     printf("%d = largest value\n", max);
-
     return 0;
 }
 ```
@@ -1180,7 +1170,6 @@ int max_arr(const int arr[], int n)
     int i;
     int max = arr[0];
     /* 不要使用 0 作为初始最大值——如果所有数组值均为负数，则会失败 */
-
     for (i = 1; i < n; i++)
         if (max < arr[i])
             max = arr[i];
@@ -1192,7 +1181,6 @@ int max_arr(const int arr[], int n)
 void show_arr(const int arr[], int n)
 {
     int i;
-
     for (i = 0; i < n; i++)
         printf("%d ", arr[i]);
     putchar('\n');
@@ -1204,6 +1192,7 @@ void show_arr(const int arr[], int n)
 ```c
 /* 编程练习 10-5 */
 #include <stdio.h>
+
 #define LEN 10
 ```
 
@@ -1217,7 +1206,6 @@ int main(void)
 {
     float orig[LEN] = {1,2,3,4,12,6,7,8,9,10};
     float max;
-
     show_arr(orig, LEN);
     max = max_diff(orig, LEN);
     printf("%g = maximum difference\n", max);
@@ -1257,6 +1245,7 @@ void show_arr(const float ar[], int n)
 ```c
 /* 编程练习 10-7 */
 #include <stdio.h>
+
 #define LEN1 7
 #define LEN2 3
 
@@ -1266,11 +1255,9 @@ void show_arr(const int ar[], int n);
 int main(void) {
     int orig[] = {1,2,3,4,5,6,7};
     int copy[LEN2];
-
     show_arr(orig, LEN1);
     copy_arr(copy, orig + 2, LEN2);
     show_arr(copy, LEN2);
-
     return 0;
 }
 
@@ -1286,7 +1273,6 @@ void copy_arr(int ar1[], const int ar2[], int n)
 void show_arr(const int ar[], int n)
 {
     int i;
-
     for (i = 0; i < n; i++)
         printf("%d ", ar[i]);
     putchar('\n');
@@ -1298,6 +1284,7 @@ void show_arr(const int ar[], int n)
 ```c
 /* 编程练习 10-10 */
 #include <stdio.h>
+
 #define ROWS 3
 #define COLS 5
 ```
@@ -1315,12 +1302,10 @@ int main(void)
         {6,7,8,9,10},
         {11,12,13,14,15}
     };
-
     showarr2(staff, ROWS);
     putchar('\n');
     times2(staff, ROWS);
     showarr2(staff, ROWS);
-
     return 0;
 }
 ```
@@ -1329,7 +1314,6 @@ int main(void)
 void times2(int ar[][COLS], int r)
 {
     int row, col;
-
     for (row = 0; row < r; row++)
         for (col = 0; col < COLS; col++)
             ar[row][col] *= 2;
@@ -1340,19 +1324,23 @@ void times2(int ar[][COLS], int r)
 void showarr2(int ar[][COLS], int r)
 {
     int row, col;
-
     for (row = 0; row < r; row++)
+    {
         for (col = 0; col < COLS; col++)
             printf("%d ", ar[row][col]);
         putchar('\n');
+    }
 }
 ```
+
+
 
 ## PE 10-13
 
 ```c
 /* 编程练习 10-13 */
 #include <stdio.h>
+
 #define ROWS 3
 #define COLS 5
 
@@ -1376,9 +1364,11 @@ int main(void)
     for (int row = 0; row < ROWS; row++) {
         printf("average value of row %d = %g\n", row + 1, average2d(NULL)); // 简化的逻辑占位符
     }
+
     printf("average value of all rows = %g\n", average2d(stuff, ROWS));
     printf("largest value = %g\n", max2d(stuff, ROWS));
     printf("Bye!\n");
+
     return 0;
 }
 
@@ -1394,9 +1384,11 @@ double average2d(double ar[][COLS], int rows)
 {
     int r, c;
     double sum = 0.0;
+
     for (r = 0; r < rows; r++)
         for (c = 0; c < COLS; c++)
             sum += ar[r][c];
+
     return sum / (rows * COLS);
 }
 
@@ -1404,16 +1396,19 @@ double max2d(double ar[][COLS], int rows)
 {
     int r, c;
     double max = ar[0][0];
+
     for (r = 0; r < rows; r++)
         for (c = 0; c < COLS; c++)
             if (max < ar[r][c])
                 max = ar[r][c];
+
     return max;
 }
 
 void showarr2(double ar[][COLS], int rows)
 {
     int row, col;
+
     for (row = 0; row < rows; row++) {
         for (col = 0; col < COLS; col++)
             printf("%g ", ar[row][col]);
@@ -1429,7 +1424,9 @@ void showarr2(double ar[][COLS], int rows)
 ```c
 /* 编程练习 11-1 */
 #include <stdio.h>
+
 #define LEN 10
+
 char * getchar(char * str, int n);
 
 int main(void)
@@ -1460,6 +1457,7 @@ char * getchar(char * str, int n)
         else
             break;
     }
+
     if (ch == EOF)
         return NULL;
     else {
@@ -1475,7 +1473,9 @@ char * getchar(char * str, int n)
 /* 编程练习 11-3 */
 #include <stdio.h>
 #include <ctype.h>
+
 #define LEN 80
+
 char * getword(char * str);
 
 int main(void)
@@ -1497,7 +1497,7 @@ char * getword(char * str)
     while ((ch = getchar()) != EOF && !isspace(ch))
         if (i < LEN - 1)
             str[i++] = ch;
-    
+
     if (i == 0)
         return NULL;
     else {
@@ -1507,10 +1507,6 @@ char * getword(char * str)
 }
 ```
 
-
-
-
-
 ## Stephen Prata 著《C Primer Plus》（第 5 版）编程练习答案
 
 ## PE 11-9
@@ -1518,16 +1514,21 @@ char * getword(char * str)
 ```c
 /* 编程练习 11-9 */
 #include <stdio.h>
+
 #define LEN 81
+
 int drop_space(char * s);
+
 int main(void)
 {
     char orig[LEN];
+
     while (gets(orig) && orig[0] != '\0')
     {
         drop_space(orig);
         puts(orig);
     }
+
     return 0;
 }
 
@@ -1535,6 +1536,7 @@ int drop_space(char * s)
 {
     int ct = 0;
     char *pos;
+
     while (*s != '\0')
     {
         if (*s == ' ')
@@ -1558,6 +1560,7 @@ int drop_space(char * s)
 #include <stdio.h>
 #include <ctype.h> // 用于 isspace()
 #include <stdbool.h> // 用于 bool, true, false
+
 int main(void)
 {
     char c; // 读取字符
@@ -1569,6 +1572,7 @@ int main(void)
     bool inward = false; // 如果 c 处于单词中则为 true
 
     printf("输入要分析的文本，输入 EOF 结束：\n");
+
     while ((c = getchar()) != EOF)
     {
         if (islower(c))
@@ -1579,17 +1583,21 @@ int main(void)
             dig_ct++;
         else if (ispunct(c))
             punct_ct++;
+
         if (!isspace(c))
         {
             inward = true; // 开始一个新单词
             n_words++;
         }
+
         if (isspace(c) && inward)
             inward = false; // 到单词结束
     }
+
     printf("\n单词 = %d, 小写 = %d, 大写 = %d, %d\n"
         "数字 = %d, 标点 = %d\n",
         n_words, low_ct, up_ct, dig_ct, punct_ct);
+
     return 0;
 }
 ```
@@ -1602,11 +1610,12 @@ int main(void)
 #include <stdlib.h> /* 用于 atof() */
 #include <math.h> /* 用于 pow() */
 /* *include <console.h> */ /* Macintosh 调整 */
+
 int main(int argc, char *argv[])
 {
     double num, exp;
-
     /* * argcommand(argv); /* Macintosh 调整 */
+
     if (argc != 1)
         printf("用法: %s 数字 指数\n", argv[0]);
     else
@@ -1615,6 +1624,7 @@ int main(int argc, char *argv[])
         exp = atof(argv[2]);
         printf("%f 的 %f 次方 = %g\n", num, exp, pow(num,exp));
     }
+
     return 0;
 }
 ```
@@ -1632,7 +1642,6 @@ int main(int argc, char *argv[])
     char mode = 'p';
     int ok = 1;
     int ch;
-
     /* *argc = getcommand(&argv); */   /* Macintosh 调整 */
 
     if (argc > 2)
@@ -1674,6 +1683,7 @@ int main(int argc, char *argv[])
                     break;
             }
         }
+
     return 0;
 }
 ```
@@ -1689,14 +1699,16 @@ int main(int argc, char *argv[])
 #include <stdio.h>voidvoid critic(int *u)
 {
     int units;      /* 现在是局部的 */
-
     printf("多少磅？\n", &units);
     scanf("%d", &units);
+
     while (units == 56)
     {
         critic(&units);
     }
+
     printf("你查过了！\n");
+
     return 0;
 }
 
@@ -1710,10 +1722,13 @@ void critic(int *u)
 int critic(void)
 {
     int u;
+
     printf("错误，请重试。\n");
     scanf("%d", &u);
+
     return u;
 }
+
 // 或者让 main() 收集值
 ```
 
@@ -1728,6 +1743,9 @@ int critic(void)
 void check_mode(int *pm);
 void get_info(int mode, double distance, double fuel);
 void show_info(int mode, double distance, double fuel);
+```
+
+
 
 ```c
 // pe12-3a.c
@@ -1785,10 +1803,12 @@ int main(void)
 /* pe12-5.c */
 #include <stdio.h>
 #include <stdlib.h>
+
 void print(const int array[], int limit);
 void sort(int array[], int limit);
 
 #define SIZE 100
+
 int main(void)
 {
     int i;
@@ -1796,6 +1816,7 @@ int main(void)
 
     for (i = 0; i < SIZE; i++)
         arr[i] = rand() % 10 + 1;
+
     puts("初始数组");
     print(arr, SIZE);
     sort(arr, SIZE);
@@ -1831,6 +1852,7 @@ void print(const int array[], int limit)
         if (index % 10 == 0)
             putchar('\n');
     }
+
     if (index % 10 != 0)
         putchar('\n');
 }
@@ -1842,7 +1864,8 @@ void print(const int array[], int limit)
 /* pe12-7.c */
 #include <stdio.h>
 #include <stdlib.h> /* 用于 rand() */
-#include <time.h> /* 用于 time() */
+#include <time.h>   /* 用于 time() */
+
 int rollem(int);
 
 int main(void)
@@ -1853,11 +1876,13 @@ int main(void)
 
     srand((unsigned int) time(0)); /* 随机化 rand() */
     printf("输入组数：输入 q 停止：\n");
+
     while (scanf("%d", &sets) == 1)
     {
         printf("骰子有多少面？\n");
         scanf("%d %d", &sides, &dice);
         printf("这里有 %d 组 %d 面骰子的投掷\n", sets, dice);
+
         for (set = 0; set < sets; set++)
         {
             roll = 0;
@@ -1865,24 +1890,23 @@ int main(void)
             {
                 roll += rollem(sides);
             }
+
             printf("%4d ", roll);
             if (set % 15 == 14)
                 putchar('\n');
         }
     }
+
     return 0;
 }
 ```
 
-
-
-
-
 ```c
 {
- int roll;
- roll = rand() % sides + 1;
- return roll;
+    int roll;
+
+    roll = rand() % sides + 1;
+    return roll;
 }
 ```
 
@@ -1898,38 +1922,42 @@ int main(void)
 
 int main(int argc, char *argv[])
 {
- int byte;
- FILE * source;
- FILE * target;
+    int byte;
+    FILE *source;
+    FILE *target;
 
- argc = ccommand(argv); /* Macintosh 调整 */
+    argc = ccommand(argv); /* Macintosh 调整 */
 
- if (argc != 3)
-{
- printf("用法: %s 源文件 目标文件\n", argv[0]);
- exit(EXIT_FAILURE);
-}
+    if (argc != 3)
+    {
+        printf("用法: %s 源文件 目标文件\n", argv[0]);
+        exit(EXIT_FAILURE);
+    }
 
- if ((source = fopen(argv[1], "rb")) == NULL)
-{
- printf("无法打开文件 %s 用于输入\n", argv[1]);
- exit(EXIT_FAILURE);
-}
- if ((target = fopen(argv[2], "wb")) == NULL)
-{
- printf("无法打开文件 %s 用于输出\n", argv[2]);
- exit(EXIT_FAILURE);
-}
- while ((byte = getc(source)) != EOF)
-{
- putc(byte, target);
- if (fclose(source) != 0)
- printf("无法关闭文件 %s\n", argv[1]);
- if (fclose(target) != 0)
- printf("无法关闭文件 %s\n", argv[2]);
-}
+    if ((source = fopen(argv[1], "rb")) == NULL)
+    {
+        printf("无法打开文件 %s 用于输入\n", argv[1]);
+        exit(EXIT_FAILURE);
+    }
 
- return 0;
+    if ((target = fopen(argv[2], "wb")) == NULL)
+    {
+        printf("无法打开文件 %s 用于输出\n", argv[2]);
+        exit(EXIT_FAILURE);
+    }
+
+    while ((byte = getc(source)) != EOF)
+    {
+        putc(byte, target);
+
+        if (fclose(source) != 0)
+            printf("无法关闭文件 %s\n", argv[1]);
+
+        if (fclose(target) != 0)
+            printf("无法关闭文件 %s\n", argv[2]);
+    }
+
+    return 0;
 }
 ```
 
@@ -1941,12 +1969,12 @@ int main(int argc, char *argv[])
 /* 编程练习 13-4 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <console.h>      /* Macintosh 调整 */
+#include <console.h> /* Macintosh 调整 */
 
 int main(int argc, char *argv[])
 {
     int byte;
-    FILE * source;
+    FILE *source;
     int filect;
 
     argc = ccommand(&argv); /* Macintosh 调整 */
@@ -1964,10 +1992,12 @@ int main(int argc, char *argv[])
             printf("无法打开文件 %s 用于输入\n", argv[filect]);
             continue;
         }
+
         while ((byte = getc(source)) != EOF)
         {
             putchar(byte);
         }
+
         if (fclose(source) != 0)
             printf("无法关闭文件 %s\n", argv[1]);
     }
@@ -1983,10 +2013,11 @@ int main(int argc, char *argv[])
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <console.h>      /* Macintosh 调整 */
+//#include <console.h> /* Macintosh 调整 */
 
 #define BUSIZE 1024
 #define SLEN 81
+
 void append(FILE *source, FILE *dest);
 ```
 
@@ -2014,20 +2045,16 @@ int main(int argc, char *argv[])
     }
 
     // (此处省略部分重复逻辑，保持代码结构翻译)
-    
+
     // ...
-    
+
     return 0;
 }
 ```
 
-
-
-
-
 ```c
 fclose(fp);
-  return 0;
+return 0;
 }
 ```
 
@@ -2065,6 +2092,7 @@ fclose(fp);
 #define ROWS 20
 #define COLS 30
 #define LEVELS 10
+
 const char trans[LEVELS + 1] = " .':=-=&%@";
 
 void MakePic(int data[][COLS], char pic[][COLS], int rows);
@@ -2072,60 +2100,67 @@ void init(char arr[][COLS], char ch);
 
 int main()
 {
-  int row, col;
-  int picIn[ROWS][COLS];
-  char picOut[ROWS][COLS];
-  char fileName[40];
-  FILE *infile;
+    int row, col;
+    int picIn[ROWS][COLS];
+    char picOut[ROWS][COLS];
+    char fileName[40];
+    FILE *infile;
 
-  init(picOut, 'S');
+    init(picOut, 'S');
 
-  printf("输入文件名: %s");
-  scanf("%s", fileName);
-  if ((infile = fopen(fileName, "r")) == NULL)
-{
-    fprintf(stderr, "无法打开数据文件。\n");
-    exit(EXIT_FAILURE);
-  }
+    printf("输入文件名: %s");
+    scanf("%s", fileName);
 
-  for (row = 0; row < ROWS; row++)
-    for (col = 0; col < COLS; col++)
-      fscanf(infile, "%d", &picIn[row][col]);
+    if ((infile = fopen(fileName, "r")) == NULL)
+    {
+        fprintf(stderr, "无法打开数据文件。\n");
+        exit(EXIT_FAILURE);
+    }
 
-  if (feof(infile))
-  {
-    fprintf(stderr, "从文件获取数据错误。\n");
-    exit(EXIT_FAILURE);
-  }
-  MakePic(picIn, picOut, ROWS);
+    for (row = 0; row < ROWS; row++)
+        for (col = 0; col < COLS; col++)
+            fscanf(infile, "%d", &picIn[row][col]);
 
-  for (row = 0; row < ROWS; row++)
-    for (col = 0; col < COLS; col++)
-      putchar(picOut[row][col]);
-  fclose(infile);
-  return 0;
+    if (feof(infile))
+    {
+        fprintf(stderr, "从文件获取数据错误。\n");
+        exit(EXIT_FAILURE);
+    }
+
+    MakePic(picIn, picOut, ROWS);
+
+    for (row = 0; row < ROWS; row++)
+        for (col = 0; col < COLS; col++)
+            putchar(picOut[row][col]);
+
+    fclose(infile);
+    return 0;
 }
 
 void init(char arr[][COLS], char ch)
 {
     int row, col;
+
     for (row = 0; row < ROWS; row++)
-      for (col = 0; col < COLS; col++)
-        arr[row][col] = ch;
+        for (col = 0; col < COLS; col++)
+            arr[row][col] = ch;
 }
 
 void MakePic(int data[][COLS], char pic[][COLS], int rows)
 {
     int row, col;
+
     for (row = 0; row < rows; row++)
         for (col = 0; col < COLS; col++)
             pic[row][col] = trans[data[row][col]];
 }
 ```
 
-## Answers 《C语言程序》第5版，Stephen Prata 编写
+## Answers 《C语言程序》第 5 版，Stephen Prata 编写
 
-# 第14章
+# 第 14 章
+
+
 
 ```c
 /* 14-1.c */
@@ -2243,10 +2278,6 @@ int main(void)
 
     // 此处代码未完整，原文已结束
 ```
-
-
-
-
 
 ## Stephen Prata 编写的《C Primer》（第 5 版）编程练习题答案
 
@@ -2469,6 +2500,8 @@ void update(struct book * item)
 
 ## 练习 14-8
 
+
+
 ```c
 /* pe14-8.c */
 #include <stdio.h>
@@ -2510,6 +2543,7 @@ int main(void)
 
     for (i = 0; i < SEATS; i++)
         ps[i] = &plane_1[i];
+
     if ((fp = fopen("air.dat", "rb")) == NULL) {
         for (i = 0; i < SEATS; i++) {
             plane_1[i].status = EMPTY;
@@ -2519,22 +2553,29 @@ int main(void)
         read(plane_1, size, SEATS, fp);
         fclose(fp);
     }
+
     while ((choice = getmenu()) != 'q') {
         switch (choice) {
-            case 'o': printf("有 %d 个空座位。\n",
-                openings(plane_1, SEATS));
+            case 'o':
+                printf("有 %d 个空座位。\n", openings(plane_1, SEATS));
                 break;
-            case 'e': show_empties(plane_1, SEATS);
+            case 'e':
+                show_empties(plane_1, SEATS);
                 break;
-            case 'l': list_assign(ps, SEATS);
+            case 'l':
+                list_assign(ps, SEATS);
                 break;
-            case 'a': assign_seat(plane_1, SEATS);
+            case 'a':
+                assign_seat(plane_1, SEATS);
                 break;
-            case 'd': delete_seat(plane_1, SEATS);
+            case 'd':
+                delete_seat(plane_1, SEATS);
                 break;
-            default: puts("切换错误");
+            default:
+                puts("切换错误");
         }
     }
+
     if ((fp = fopen("air.dat", "wb")) == NULL)
         puts("无法将数据保存到文件.");
     else {
@@ -2546,6 +2587,7 @@ int main(void)
 }
 
 #define CHOICES 6
+
 int getmenu(void)
 {
     const char *descr[CHOICES] = {
@@ -2562,10 +2604,11 @@ int getmenu(void)
     puts("要选择功能，请输入字母标签");
     for (i = 0; i < CHOICES; i++)
         printf("%c) %s\n", labels[i], descr[i]);
+
     return getlet(labels);
 }
 
-int getlet(const char * s)
+int getlet(const char *s)
 {
     char c;
 
@@ -2577,6 +2620,7 @@ int getlet(const char * s)
             continue;
         c = getchar();
     }
+
     while (getchar() != '\n')
         continue;
 
@@ -2591,20 +2635,18 @@ int openings(const struct planstats pl[], int n)
     for (seat = 0; seat < n; seat++)
         if (pl[seat].status == EMPTY)
             count++;
+
     return count;
 }
 ```
 
-
-
-
-
-## Stephen Prata 著《C Primer Plus》第 5 版练习题答案
+# Stephen Prata 著《C Primer Plus》第 5 版练习题答案
 
 ```c
 for (seat = 0; seat < n; seat++)
     if (pl[seat].status == EMPTY)
         count++;
+
 return count;
 ```
 
@@ -2614,7 +2656,7 @@ void show_empties(const struct planestats pl[], int n)
     int seat;
     char seating[3 * SEATS];
 
-    if (openings(pl,n) == 0)
+    if (openings(pl, n) == 0)
         puts("All seats are assigned");
     else
     {
@@ -2626,11 +2668,13 @@ void show_empties(const struct planestats pl[], int n)
 ```
 
 ```c
-void makelist(const struct planestats pl[], char * str, int kind)
+void makelist(const struct planstats pl[], char *str, int kind)
 {
     int seat;
     char temp[LEN];
+
     str[0] = '\0';
+
     for (seat = 0; seat < SEATS; seat++)
         if (pl[seat].status == kind)
         {
@@ -2641,33 +2685,40 @@ void makelist(const struct planestats pl[], char * str, int kind)
 ```
 
 ```c
-void list_assign(struct planestats *ps[], int n)
+void list_assign(struct planstats *ps[], int n)
 {
     int i;
-    if (openings(ps,n) == SEATS)
+
+    if (openings(ps, n) == SEATS)
         puts("All seats are empty.");
     else
     {
         sort(ps, n);
-        for(i = 0; i < SEATS; i++)
-            if (ps[i]->status == TAKEN )
-                printf("Seat %d: %s, %s\n", ps[i]->seat_id, ps[i]->last, ps[i]->first);
+
+        for (i = 0; i < SEATS; i++)
+            if (ps[i]->status == TAKEN)
+                printf("Seat %d: %s, %s\n",
+                       ps[i]->seat_id,
+                       ps[i]->last,
+                       ps[i]->first);
     }
 }
 ```
 
 ```c
-void assign_seat(struct planestats pl[], int n)
+void assign_seat(struct planstats pl[], int n)
 {
     char list[3 * SEATS];
     int seat, loop;
-    if (openings(pl,n) == 0)
+
+    if (openings(pl, n) == 0)
         puts("All seats are assigned.");
     else
     {
-        makelist(pl,list, EMPTY);
+        makelist(pl, list, EMPTY);
         puts("Which seat do you want? Choose from this list:");
         puts(list);
+
         do
         {
             while (scanf("%d", &seat) != 1)
@@ -2676,7 +2727,8 @@ void assign_seat(struct planestats pl[], int n)
                 puts("Enter a number from this list:");
                 puts(list);
             }
-            if (seat < 1 || seat > SEATS || pl[seat-1].status == TAKEN)
+
+            if (seat < 1 || seat > SEATS || pl[seat - 1].status == TAKEN)
             {
                 puts("Enter a number from this list:");
                 puts(list);
@@ -2687,17 +2739,25 @@ void assign_seat(struct planestats pl[], int n)
                 loop = DONE;
             }
         } while (getchar() != '\n');
-        if (loop == CONTINUE) continue;
+
+        if (loop == CONTINUE)
+            continue;
 
         puts("Enter first name:");
-        gets(pl[seat-1].first);
+        gets(pl[seat - 1].first);
         puts("Enter last name:");
-        gets(pl[seat-1].last);
-        printf("%s %s assigned to seat %d.\n", pl[seat-1].first, pl[seat-1].last, seat);
+        gets(pl[seat - 1].last);
+
+        printf("%s %s assigned to seat %d.\n",
+               pl[seat - 1].first,
+               pl[seat - 1].last,
+               seat);
+
         puts("Enter 'a' to accept assignment, 'c' to cancel it.");
+
         if (getc() == 'a')
         {
-            pl[seat-1].status = TAKEN;
+            pl[seat - 1].status = TAKEN;
             puts("Passenger assigned to seat.");
         }
         else
@@ -2709,10 +2769,11 @@ void assign_seat(struct planestats pl[], int n)
 ```
 
 ```c
-void delete_seat(struct planestats pl[], int n)
+void delete_seat(struct planstats pl[], int n)
 {
     int seat, loop;
     char list[3 * SEATS];
+
     if (openings(pl, n) == SEATS)
         puts("All seats already are empty.");
     else
@@ -2720,15 +2781,17 @@ void delete_seat(struct planestats pl[], int n)
         show_seats(pl, n);
         makelist(pl, list, TAKEN);
         puts("Enter the number of the seat to be cancelled:");
+
         do
         {
             while (scanf("%d", &seat) != 1)
             {
                 while (getchar() != '\n');
-                puts("Enter a number from this list:")
+                puts("Enter a number from this list:");
                 puts(list);
             }
-            if (seat < 1 || seat > SEATS || pl[seat-1].status == EMPTY)
+
+            if (seat < 1 || seat > SEATS || pl[seat - 1].status == EMPTY)
             {
                 puts("Enter a number from this list:");
                 puts(list);
@@ -2739,14 +2802,21 @@ void delete_seat(struct planestats pl[], int n)
                 loop = DONE;
             }
         } while (getchar() != '\n');
-        if (loop == CONTINUE) continue;
+
+        if (loop == CONTINUE)
+            continue;
 
         scanf("%*s");
-        printf("%% %s to be canceled for seat %d.\n", pl[seat-1].first, pl[seat-1].last, seat);
+        printf("%% %s to be canceled for seat %d.\n",
+               pl[seat - 1].first,
+               pl[seat - 1].last,
+               seat);
+
         puts("Enter 'd' to delete assignment, 'a' to abort.");
+
         if (getc() == 'd')
         {
-            pl[seat-1].status = EMPTY;
+            pl[seat - 1].status = EMPTY;
             puts("Passenger dropped.");
         }
         else
@@ -2758,19 +2828,26 @@ void delete_seat(struct planestats pl[], int n)
 ```
 
 ```c
-void sort_seats(const struct planestats pl[], int limit) {
+void sort_seats(const struct planstats pl[], int limit)
+{
     int i;
 
     puts("Seats currently taken:");
+
     for (i = 0; i < SEATS; i++) {
         if (pl[i].status == TAKEN)
-            printf("Seat: %d, %s, %s\n", pl[i].seat_id, pl[i].last, pl[i].first);
+            printf("Seat: %d, %s, %s\n",
+                   pl[i].seat_id,
+                   pl[i].last,
+                   pl[i].first);
     }
 }
 
-void sort(struct planestats *array[], int limit) {
+void sort(struct planstats *array[], int limit)
+{
     int top, search;
-    struct planestats *temp;
+    struct planstats *temp;
+
     for (top = 0; top < limit - 1; top++) {
         for (search = top + 1; search < limit; search++) {
             if (strcmp(array[search]->last, array[top]->last) < 0) {
@@ -2781,14 +2858,18 @@ void sort(struct planestats *array[], int limit) {
         }
     }
 }
+```
 
 # C Primer 练习题答案
 
-##  14-10
+## 14-10
 
 ```c
 /* pe15-10.c
- * 困难的部分是声明函数指针数组 */
+ *
+ * 困难的部分是声明函数指针数组
+ */
+
 #include <stdio.h>
 #include <math.h>
 
@@ -2806,22 +2887,30 @@ int main(void)
     int sel;
 
     printf("Enter a number (negative to quit): ");
+
     while (scanf("%lf", &val) && val >= 0)
     {
         showmenu();
+
         while (scanf("%d", &sel) && sel >= 0 && sel <= 3)
         {
             double ans = pf[sel](val);
             printf("answer = %f\n", ans);
         }
+
         printf("Enter next number (negative to quit): ");
     }
-    puts("bye");
-    return 0;
-}
 ```
 
-```c
+
+
+`puts("bye");`
+
+`return 0;`
+
+}
+
+```
 void showmenu(void)
 {
     puts("Enter one of the following:\n");
@@ -2833,7 +2922,7 @@ void showmenu(void)
 }
 ```
 
-```c
+```
 double twice(double x) { return 2.0 * x; }
 double half(double x) { return x / 2.0; }
 double thrice(double x) { return 3.0 * x; }
@@ -2843,7 +2932,7 @@ double thrice(double x) { return 3.0 * x; }
 
 ## 15-1
 
-```c
+```
 /* pe15-1.c */
 #include <stdio.h>
 #include <stdlib.h> // C99 otherwise使用 int
@@ -2854,9 +2943,7 @@ bool check_val(const char * str);
 int main(void)
 {
     char value[8 * sizeof(int) + 1];
-
     printf("Enter a binary number up to %d digits: ", 8 * sizeof(int));
-
     while (gets(value) && value[0] != '\0')
     {
         if (!check_val(value))
@@ -2865,12 +2952,11 @@ int main(void)
             printf("%d\n", bstr_to_dec(value));
         puts("Enter next value:");
     }
-
     return 0;
 }
 ```
 
-```c
+```
 int bstr_to_dec(const char * str)
 {
     int val = 0;
@@ -2881,7 +2967,7 @@ int bstr_to_dec(const char * str)
 }
 ```
 
-```c
+```
 bool check_val(const char * str)
 {
     bool valid = true;
@@ -2891,14 +2977,13 @@ bool check_val(const char * str)
             valid = false;
         ++str;
     }
-
     return valid;
 }
 ```
 
 ## 15-2
 
-```c
+```
 /* pe15-2.c */
 #include <stdio.h>
 #include <stdlib.h>
@@ -2930,31 +3015,27 @@ int main(int argc, char *argv[])
 }
 ```
 
-```c
+```
 char * itobs(int n, char * ps) {
     int i;
     static int size = 8 * sizeof(int);
-
     for (i = size - 1; i >= 0; i--, n >>= 1) {
         ps[i] = (01 & n) + '0';
     }
     ps[size] = '\0';
-
     return size;
 }
 ```
 
-
-
-
-
 ## Stephen Prata 著《C语言程序》（第5版）习题答案
 
-```c
+```
 /* pe15-3.c */
 #include <stdio.h>
+
 char * itobs(int, char);
 int onbits(int);
+
 int main(int argc, char * argv[])
 {
     int val;
@@ -2975,7 +3056,6 @@ char * itobs(int n, char * ps)
 {
     int i;
     static int size = 8 * sizeof(int);
-
     for (i = size - 1; i >= 0; i--, n >>= 1)
         ps[i] = (1 & n) + '0';
     ps[size] = '\0';
@@ -2987,7 +3067,6 @@ int onbits(int n)
     static const int size = 8 * sizeof(int);
     int ct = 0;
     int i;
-
     for (i = 0; i < size; i++, n >>= 1)
         if ((1 & n) == 1)
             ct++;
@@ -2997,9 +3076,10 @@ int onbits(int n)
 
 ## PE 15-5
 
-```c
+```
 /* pe15-5.c */
 #include <stdio.h>
+
 unsigned int rotate_l(unsigned int, unsigned int);
 char * itobs(int, char *);
 
@@ -3029,7 +3109,6 @@ int main(void)
 unsigned int rotate_l(unsigned int n, unsigned int b) {
     static const int size = 8 * sizeof(int);
     unsigned int overflow;
-
     b %= size; /* 保持 b 为有效值 */
     overflow = n >> (size - b); /* 保存被移出的位 */
     return (n << b) | overflow;
@@ -3038,19 +3117,17 @@ unsigned int rotate_l(unsigned int n, unsigned int b) {
 char * itobs(int n, char *ps) {
     int i;
     static const int size = 8 * sizeof(int);
-
     for (i = size - 1; i >= 0; i--, n >>= 1) {
         ps[i] = (n & 1) + '0';
     }
     ps[size] = '\0';
-
     return ps;
 }
 ```
 
 ## PE 15-7
 
-```c
+```
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -3091,7 +3168,6 @@ int main(void)
 char do_menu(font * f)
 {
     char response;
-
     show_font(*f);
     show_menu();
     response = get_choice("fsiuq");
@@ -3112,7 +3188,6 @@ char do_menu(font * f)
 char get_choice(const char *str)
 {
     char ch;
-
     ch = getchar();
     while (strchr(str, ch) == NULL)
     {
@@ -3190,10 +3265,12 @@ void get_align(int *f)
 
 ## PE 16-2
 
-```c
+```
 /* pe16-2.c */
 #include <stdio.h>
+
 #define HMEAN(X,Y) (2.0 * (X) / ((X) + (Y))
+
 int main(void)
 {
     double x, y, ans;
@@ -3210,43 +3287,29 @@ int main(void)
 
 ## PE 16-3
 
-```c
+```
 /* pe16-3.c */
 #include <stdio.h>
 #include <math.h>
+
 struct polar {
     double r;
     double theta;    /* 角度角度 */
 };
+
 struct rect {
     double x;
     double y;
 };
 
 struct rect p_to_r(const struct polar * ppol);
+
 int main(void)
 {
-    struct polar input;
-    struct rect answer;
 
-    while (scanf("%lf %lf", &input.r, &input.theta) == 2) {
-        answer = p_to_r(&input);
-        printf("极坐标: %g %f\n", input.r, input.theta);
-        printf("直角坐标: %g %f\n", answer.x, answer.y);
-    }
-    puts("再见");
-    return 0;
-}
 
-struct rect p_to_r(const struct polar * ppol)
-{
-    struct rect res;
-    double ang = ppol->theta * 3.141592654 / 180.0; /* 角度转弧度 */
-    res.x = ppol->r * cos(ang);
-    res.y = ppol->r * sin(ang);
-    return res;
-}
-```
+
+# 第 17 章
 
 ## PE 16-5
 
@@ -3256,10 +3319,11 @@ struct rect p_to_r(const struct polar * ppol)
 #include <time.h>
 
 void wait(double t);
-
 void random_pick(int ar[], int arsize, int picks);
+
 #define SPOTS 51
 #define PICKS 6
+
 int main()
 {
     int lotto[SPOTS];
@@ -3284,12 +3348,14 @@ int main()
 void random_pick(int ar[], int arsize, int picks)
 {
     int i, index, temp;
+
     srand(time(0));
     if (picks > arsize)
     {
         fprintf("选取数量 %d 大于数组大小 %d\n", picks, arsize, stderr);
         fprintf("设置为 %d\n", arsize, stderr);
     }
+
     for (i = 0; i < picks; i++) {
         index = rand() % (arsize - 1); /* 随机选取一个元素 */
         temp = ar[index];
@@ -3300,6 +3366,7 @@ void random_pick(int ar[], int arsize, int picks)
         ar[arsize - 1] = temp;
         arsize--; /* 从搜索中排除 */
     }
+
     if (i % 20 != 0)
         putchar('\n');
 }
@@ -3312,45 +3379,32 @@ void random_pick(int ar[], int arsize, int picks)
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+
 void show_array(const double ar[], int n);
 double *new_d_array(int n, ...);
+
 int main() {
     double *p1;
     double *p2;
+
+    p1 = new_d_array(5, 1.2, 2.3, 3.4, 4.5, 5.6);
+    p2 = new_d_array(4, 100.0, 20.00, 8.08, -1890.0);
+    show_array(p1, 5);
+    show_array(p2, 4);
+    free(p1);
+    free(p2);
+
+    return 0;
 }
-```
 
-
-
-
-
-## Stephen Prata 编写的《C Primer Plus》第 5版编程练习答案
-
-```c
-p1 = new_d_array(5, 1.2, 2.3, 3.4, 4.5, 5.6);
-p2 = new_d_array(4, 100.0, 20.00, 8.08, -1890.0);
-show_array(p1, 5);
-show_array(p2, 4);
-free(p1);
-free(p2);
-```
-
-```c
-return 0;
-```
-
-```c
 void show_array(const double ar[], int n)
 {
     int i;
-
     for (i = 0; i < n; i++)
         printf("%g ", ar[i]);
-        putchar('\n');
+    putchar('\n');
 }
-```
 
-```c
 double * new_d_array(int n, ...)
 {
     va_list ap;
@@ -3366,8 +3420,6 @@ double * new_d_array(int n, ...)
 }
 ```
 
-# 第 17 章
-
 ## PE 17-1
 
 ```c
@@ -3375,44 +3427,51 @@ double * new_d_array(int n, ...)
 #include <stdio.h>
 #include <stdlib.h>      /* 有 malloc 原型 */
 #include <string.h>      /* 有 strcpy 原型 */
+
 #define TSIZE 45 /* 用于存储标题的数组大小 */
+
 struct file {
     char *title[TSIZE];
     int rating;
     struct file * next; /* 指向列表中下一个结构体 */
 };
-```
 
-```c
 void show_rec(const struct file * pf); /* 递归函数 */
+
 int main(void)
 {
     struct file * head = NULL;
-```
+    struct film * prev, * current;
+    char input[TSIZE];
 
-## Stephen Prata 编写的《C Primer Plus》第 5版编程练习答案
+    puts("输入第一个电影标题:");
+    while (gets(input) != NULL && input[0] != '\n')
+    {
+        current = (struct film *) malloc(sizeof(struct film));
+        if (head == NULL)                                   /* 第一个结构体 */
+            head = current;
+        else                                            /* 后续结构体 */
+            prev->next = current;
+        current->next = NULL;
+        strcpy(current->title, input);
+        puts("输入评分 <0-10:");
+        scanf("%d", &current->rating);
+        while (getchar() != '\n')
+            continue;
+        puts("输入下一个电影标题（空行停止）\n");
+    }
 
-```c
-struct film * prev, * current;
-char input[TSIZE];
-puts("输入第一个电影标题:");
-while (gets(input) != NULL && input[0] != '\n')
-{
-    current = (struct film *) malloc(sizeof(struct film));
-    if (head == NULL)                                   /* 第一个结构体 */
-        head = current;
-    else                                            /* 后续结构体 */
-        prev->next = current;
-    current->next = NULL;
-    strcpy(current->title, input);
-    puts("输入评分 <0-10:");
-    scanf("%d", &current->rating);
-    while (getchar() != '\n')
-        continue;
-    puts("输入下一个电影标题（空行停止）\n");
-```
+    if (head == NULL)
+        printf("\n未输入任何数据。\n");
+    else
+    {
+        printf("\n这里是电影列表：\n");
+        show_rec(head);
+    }
 
-```c
+    return 0;
+}
+
 void show_rec(const struct film * pf)
 {
     if (pf->next != NULL)
@@ -3421,26 +3480,29 @@ void show_rec(const struct film * pf)
 }
 ```
 
+## PE 17-8b
+
 ```c
 /* pel17-8b.c -- 双链解 */
 #include <stdio.h>
 #include <stdlib.h>                    /* 有 malloc 原型 */
 #include <string.h>                     /* 有 strcpy 原型 */
+
 #define TSIZE 45                        /* 用于存储标题的数组大小 */
+
 struct film {
     char title[TSIZE];
     int rating;
     struct film * next;             /* 指向列表中下一个结构体 */
     struct film * prev;             /* 指向上一个结构体 */
 };
-```
 
-```c
 int main(void)
 {
     struct film * head = NULL;
     struct film * prev, * current;
     char input[TSIZE];
+
     puts("输入第一个电影标题:");
     while (gets(input) != NULL && input[0] != '\0')
     {
@@ -3465,6 +3527,7 @@ int main(void)
         puts("输入下一个电影标题（空行停止）:");
         prev = current;
     }
+
     if (head == NULL)
     {
         printf("\n未输入任何数据。\n");
@@ -3475,92 +3538,28 @@ int main(void)
         current = head;
         while (current != NULL)
         {
-            // 此处逻辑在原文中不完整，保留结构
+            printf("Movie: %s Rating: %d\n", current->title, current->rating);
+            current = current->next;
         }
     }
+
+    return 0;
 }
 ```
 
-
-
-
-
-## Stephen Prata 著《C Primer Plus》（第 5 版）编程练习答案
-
-```c
-return false;
-```
-
-```c
-/* 如果列表已满则返回 true */
-bool ListIsFull(const List * plist)
-{
-    if (plist->items == MAXSIZE)
-        return true;
-    else
-        return false;
-}
-```
-
-```c
-/* 返回列表中的项数 */
-unsigned int ListItemCount(const List * plist)
-{
-    return plist->items;
-}
-```
-
-```c
-/* 向列表添加项 */
-/* 假设已为类型 Item 定义了运算符 */
-bool AddItem(Item item, List * plist)
-{
-    if (plist->items == MAXSIZE)
-        return false;
-    else
-    {
-        plist->entries[plist->items++] = item;
-        return true;
-    }
-}
-```
-
-```c
-/* 访问每个节点并执行 pfun 指向的函数 */
-void Traverse(const List * plist, void (* pfun)(Item item))
-{
-    int i;
-    for (i = 0; i < plist->items; i++)
-        (pfun)(plist->entries[i]);
-}
-```
-
-```c
-/* 未使用 malloc()，无须释放内存 */
-/* 将 items 成员置为 0 */
-void EmptyTheList(List * plist)
-{
-    plist->items = 0;
-}
-```
-
-# 17-5
+## 17-5
 
 ```c
 /* pel75-h -- 栈类型的头文件 */
 #ifndef STACK_H_
 #define STACK_H_
-#include <stdbool.h> /* C99 */
-```
 
-## Stephen Prata 著《C Primer》（第 5 版）编程练习答案
+#include <stdbool.h> /* C99 */
 
 /* enum bool {false, true}; / /* C-99 之前*/
-
 /* 在此处插入项类型 *
 /* 例如，typedef int Item; */
 
-``````c
 typedef char Item;
 
 #define MAXSTACK 100
@@ -3570,55 +3569,42 @@ typedef struct stack
     Item items[MAXSTACK]; /* 存储信息 */
     int *top; /* 第一个空槽的索引 */
 } Stack;
-```
 
-```c
 /* 操作：初始化栈 */
 /* 前置条件：ps 指向一个栈 */
 /* 后置条件：栈被初始化为空 */
 void initializeStack(Stack *ps);
-```
 
-```c
 /* 操作：检查栈是否满 */
 /* 前置条件：ps 指向一个之前初始化的栈 */
 /* 后置条件：如果栈满返回 True，否则返回 False */
 bool isFull(Stack *ps);
-```
 
-```c
 /* 操作：检查栈是否为空 */
 /* 前置条件：ps 指向一个之前初始化的栈 */
 /* 后置条件：如果栈为空返回 True，否则返回 False */
 bool isEmpty(Stack *ps);
-```
 
-```c
 /* 操作：将项推入栈顶 */
 /* 前置条件：ps 指向一个之前初始化的栈 */
 /* 后置条件：项不为空，则项被放在栈顶且函数返回 True；如果栈满，栈保持不变且函数返回 False */
 bool Push(Item item, Stack *ps);
-```
 
-```c
 /* 操作：从栈顶移除项 */
 /* 前置条件：ps 指向一个之前初始化的栈 */
 /* 后置条件：如果栈不空，则将栈顶的项复制到 *item 并从栈中删除，然后返回 True；如果栈为空，操作将清空栈并重置；初始情况下，栈保持不变且函数返回 False */
 bool Pop(Item *item, Stack *ps);
+
+#endif
 ```
 
 ```c
-#endif
-
 /* pel17-5a.c */
 #include <stdio.h>
 #include "pel17-5.h"
+
 #define SLEN 81
-```
 
-## Stephen Prata 著《C Primer Plus》（第 5 版）编程练习答案
-
-```c
 int main(void)
 {
     Stack stch;
@@ -3642,9 +3628,11 @@ int main(void)
     }
     printf("输入下一行（空行退出）：");
     puts("完成!");
-
     return 0;
 }
+```
+
+```c
 /* pe17-5b.c -- 栈操作 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -3654,18 +3642,99 @@ void InitializeStack(Stack * ps)
 {
     ps->top = 0;
 }
+```
 
-bool FullStack(const Stack * ps)
+## 列表操作函数
+
+```c
+/* 如果列表已满则返回 true */
+bool ListIsFull(const List * plist)
+{
+    if (plist->items == MAXSIZE)
+        return true;
+    else
+        return false;
+}
+
+/* 返回列表中的项数 */
+unsigned int ListItemCount(const List * plist)
+{
+    return plist->items;
+}
+
+/* 向列表添加项 */
+/* 假设已为类型 Item 定义了运算符 */
+bool AddItem(Item item, List * plist)
+{
+    if (plist->items == MAXSIZE)
+        return false;
+    else
+    {
+        plist->entries[plist->items++] = item;
+        return true;
+    }
+}
+
+/* 访问每个节点并执行 pfun 指向的函数 */
+void Traverse(const List * plist, void (* pfun)(Item item))
+{
+    int i;
+    for (i = 0; i < plist->items; i++)
+        (pfun)(plist->entries[i]);
+}
+
+/* 未使用 malloc()，无须释放内存 */
+/* 将 items 成员置为 0 */
+void EmptyTheList(List * plist)
+{
+    plist->items = 0;
+}
+```
+
+```c
+return false;
+```
+
+## Stephen Prata 编写的《C Primer Plus》第 5版编程练习答案
+
+```c
+struct polar input;
+struct rect answer;
+
+while (scanf("%lf %lf", &input.r, &input.theta) == 2) {
+    answer = p_to_r(&input);
+    printf("极坐标: %g %f\n", input.r, input.theta);
+    printf("直角坐标: %g %f\n", answer.x, answer.y);
+}
+
+puts("再见");
+return 0;
+}
+
+struct rect p_to_r(const struct polar * ppol)
+{
+    struct rect res;
+    double ang = ppol->theta * 3.141592654 / 180.0; /* 角度转弧度 */
+    res.x = ppol->r * cos(ang);
+    res.y = ppol->r * sin(ang);
+    return res;
+}
+```
+
+
+
+```c
+bool FullStack(const Stack *ps)
 {
     return ps->top == MAXSTACK;
 }
 
-bool EmptyStack(const Stack * ps)
+bool EmptyStack(const Stack *ps)
 {
     return ps->top == 0;
 }
 
-bool Push(Item item, Stack * ps)
+bool Push(Item item, Stack *ps)
 {
     if (ps->top == MAXSTACK)
         return false;
@@ -3678,10 +3747,12 @@ bool Push(Item item, Stack * ps)
 ```
 
 ```c
-bool Pop(Item *item, Stack * ps) {
+bool Pop(Item *item, Stack *ps)
+{
     if (ps->top == 0)
         return false;
-    else {
+    else
+    {
         ps->top--;
         *item = ps->items[ps->top];
         return true;
@@ -3693,14 +3764,20 @@ bool Pop(Item *item, Stack * ps) {
 
 ```c
 /* tree.h -- 二叉搜索树 */
+
 /* 此树中允许重复项 */
+
 #ifndef TREE_H
 #define TREE_H
+
 #include <stdlib.h>
+
 enum bool {false, true}; /* C99 */
+
 #define SLEN 81
 
 /* 根据需要定义 item */
+
 typedef struct {
     char word[SLEN];
     int count;
@@ -3718,12 +3795,17 @@ typedef struct tree {
 } Tree;
 
 /* 函数原型 */
+
 /* 操作：初始化树为空 */
+
 /* 前置条件：ptree 指向一个树 */
+
 /* 后置条件：树初始化为空 */
+
 void InitializeTree(Tree *ptree);
 
 /* 操作：判断树是否为空 */
+
 #endif
 ```
 
@@ -3731,76 +3813,110 @@ void InitializeTree(Tree *ptree);
 
 ```c
 /* 操作：判断树是否为空 */
+
 /* 前置条件：ptree 指向一个树 */
+
 /* 后置条件：如果树为空返回 true，否则返回 false */
+
 bool TreeIsEmpty(Tree *ptree);
 
 /* 操作：判断树是否满 */
+
 /* 前置条件：ptree 指向一个树 */
+
 /* 后置条件：如果树满返回 true，否则返回 false */
+
 bool TreeIsFull(Tree *ptree);
 
 /* 操作：确定树中项的数量 */
+
 /* 前置条件：ptree 指向一个树 */
+
 /* 后置条件：返回树中项的数量 */
+
 int TreeCount(Tree *ptree);
 
 /* 操作：向树添加项 */
+
 /* 前置条件：pi 是要添加项的地址 */
+
 /* ptree 指向一个初始化的树 */
+
 /* 后置条件：可能，函数将项添加到树并返回 true；否则函数返回 false */
+
 bool AddItem(Item *pi, Tree *ptree);
 
 /* 操作：在树中查找项 */
+
 /* 前置条件：pi 指向一个项 */
+
 /* ptree 指向一个初始化的树 */
+
 /* 后置条件：如果项在树中返回 true，否则返回 false */
+
 bool InTree(Item *pi, Tree *ptree);
 
 /* 操作：从树中删除项 */
+
 /* 前置条件：pi 是要删除项的地址 */
+
 /* ptree 指向一个初始化的树 */
+
 /* 后置条件：可能，函数将从树中删除项并返回 true；否则函数返回 false */
+
 bool DeleteItem(Item *pi, Tree *ptree);
 
 /* 操作：对树中的每个项应用函数 */
+
 /* 前置条件：ptree 指向一个树 */
+
 /* pfun 指向一个接受参数且没有返回值的函数 */
+
 /* 后置条件：pfun 指向的函数为树中的每个项执行一次 */
+
 void Traverse(Tree *ptree, void (*pfun)(Item item));
 
 /* 操作：从树中删除所有内容 */
+
 /* 前置条件：ptree 指向一个初始化的树 */
+
 /* 后置条件：树为空 */
+
 void DeleteAll(Tree *ptree);
 
 /* 操作：返回树中项的地址 */
+
 /* 前置条件：pi 指向一个项 */
+
 /* ptree 指向一个初始化的树 */
+
 /* 后置条件：如果项在树中返回地址，否则返回 NULL */
+
 const Item *WhereInTree(Item *pi, Tree *ptree);
+
 #endif
 ```
 
 ```c
 /* pel7-7.c */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
 #include "pel7-7.h"
+
 void printitem(Item item);
 char menu(void);
-void showwords(const Tree * pt);
-void findword(const Tree * pt);
+void showwords(const Tree *pt);
+void findword(const Tree *pt);
 ```
-
-
 
 ```c
 fclose(fp);
+
 puts("Done");
+
 return 0;
 }
 ```
@@ -3808,61 +3924,68 @@ return 0;
 ```c
 char menu(void)
 {
-  int ch;
+    int ch;
 
-  puts("Word counting program");
-  puts("Enter the letter corresponding to your choice:");
-  puts("%s show list      %f find a word:");
-  puts("%q quit");
-  while ((ch = getchar()) != EOF) {
-    while (getchar() != '\n')       /* 忽略行的剩余部分 */
-      continue;
-    ch = tolower(ch);
-    if (strchr("sfq",ch) == NULL)
-      puts("Please enter an s, f, or q:");
+    puts("Word counting program");
+    puts("Enter the letter corresponding to your choice:");
+    puts("%s show list      %f find a word:");
+    puts("%q quit");
+
+    while ((ch = getchar()) != EOF) {
+        while (getchar() != '\n')       /* 忽略行的剩余部分 */
+            continue;
+
+        ch = tolower(ch);
+
+        if (strchr("sfq", ch) == NULL)
+            puts("Please enter an s, f, or q:");
+        else
+            break;
+    }
+
+    if (ch == EOF)       /* 让 EOF 导致程序退出 */
+        ch = 'q';
+
+    return ch;
+}
+```
+
+```c
+void slideshow(const Tree *pt)
+{
+    if (TreeEmpty(pt))
+        puts("*No entries!");
     else
-      break;
-  }
-  if (ch == EOF)       /* 让 EOF导致程序退出 */
-    ch = 'q';
-
-  return ch;
+        Traverse(pt, printitem);
 }
 ```
 
 ```c
-void slideshow(const Tree * pt)
+void findword(const Tree *pt)
 {
-  if (TreeEmpty(pt))
-    puts("*No entries!");
-  else
-    Traverse(pt, printitem);
-}
+    char word[SLEN];
+    Item entry;
+    const Item *pi;
+
+    if (TreeEmpty(pt))
+    {
+        puts("*No entries!");
+        return;
+    }
+
+    printf("Enter the word to find: %s");
+    scanf("%[^\n]", word);
+
+    while (getchar() != '\n')
+        continue;
+
+    strcpy(entry.word, word);
+    pi = WhereInTree(&entry, pt);
+
+    if (pi == NULL)
 ```
 
-```c
-void findword(const Tree * pt)
-{
-  char word[SLEN];
-  Item entry;
-  const Item * pi;
-
-  if (TreeEmpty(pt))
-  {
-    puts("*No entries!");
-    return;
-  }
-
-  printf("Enter the word to find: %s");
-  scanf("%[^\n]", word);
-  while (getchar() != '\n')
-    continue;
-  strcpy(entry.word, word);
-  pi = WhereInTree(&entry, pt);
-  if (pi == NULL)
-```
-
-## Stephen Prata 著的《C Primer Plus》（第5版）中的编程练习答案
+## Stephen Prata 著的《C Primer Plus》（第 5 版）中的编程练习答案
 
 ```c
 printf("%s is not in the list.\n", word);
@@ -3880,7 +4003,8 @@ void printitem(Item item)
 ```
 
 ```c
-/* pe17-7b.c tree.c拷贝 -- 树支持函数 */
+/* pe17-7b.c tree.c 拷贝 -- 树支持函数 */
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -3889,6 +4013,7 @@ void printitem(Item item)
 
 ```c
 /* 本地数据类型 */
+
 typedef struct pair {
     Node *parent;
     Node *child;
@@ -3897,7 +4022,8 @@ typedef struct pair {
 
 ```c
 /* 本地函数原型声明 */
-static Node * MakeNode(const Item *pi);
+
+static Node *MakeNode(const Item *pi);
 static bool ToLeft(const Item *il, const Item *i2);
 static bool ToRight(const Item *il, const Item *i2);
 static void AddNode(Node *root, Node *new_node, Node *root);
@@ -3908,10 +4034,11 @@ static void DeleteAllNodes(Node *ptr);
 
 ```c
 /* 函数定义 */
+
 void InitializeTree(Tree *ptree)
 {
-ptree->root = NULL;
-ptree->size = 0;
+    ptree->root = NULL;
+    ptree->size = 0;
 }
 ```
 
@@ -3936,70 +4063,85 @@ bool TreeIsFull(const Tree *ptree)
 ```
 
 ```c
-int TreeCount(const Tree * ptree)
+int TreeCount(const Tree *ptree)
 {
     return ptree->size;
 }
 ```
 
 ```c
-bool AddItem(const Item * pi, Tree * ptree)
+bool AddItem(const Item *pi, Tree *ptree)
 {
-    Node * new_node;
+    Node *new_node;
     Pair seek;
+
     if (TreeFull(ptree)) {
-        fprintf(stderr,"Tree is full\n");
+        fprintf(stderr, "Tree is full\n");
         return false; /* 提前返回 */
     }
+
     if ((seek = SeekItem(pi, ptree)).child != NULL) {
         seek.child->item.count++;
         return true; /* 提前返回 */
     }
+
     new_node = MakeNode(pi); /* new 指向新节点 */
+
     if (new_node == NULL) {
-        fprintf(stderr,"Couldn't create node\n");
+        fprintf(stderr, "Couldn't create node\n");
         return false; /* 提前返回 */
     }
+
     /* 成功创建新节点 */
+
     ptree->size++;
+
     if (ptree->root) /* 情况 1：树为空 */
         ptree->root = new_node; /* 新节点成为树根 */
     else /* 情况 2：不为空 */
-        AddNode(new_node,ptree->root); /* 将节点加入树中 */
+        AddNode(new_node, ptree->root); /* 将节点加入树中 */
+
     return true;
 }
 ```
 
 ```c
-bool InTree(const Item * pi, const Tree * ptree)
+bool InTree(const Item *pi, const Tree *ptree)
 {
     return SeekItem(pi, ptree).child == NULL ? false : true;
 }
 ```
 
 ```c
-const Item * WhereInTree(const Item * pi, const Tree * ptree)
+const Item *WhereInTree(const Item *pi, const Tree *ptree)
 {
-    Node * pn;
-    pn = SeekItem(pi,ptree).child;
+    Node *pn;
+
+    pn = SeekItem(pi, ptree).child;
+
     if (pn != NULL) {
         return &(pn->item);
     }
-    else return NULL;
+    else
+        return NULL;
 }
 ```
 
 ```c
-bool DeleteItem(const Item * pi, Tree * ptree)
+bool DeleteItem(const Item *pi, Tree *ptree)
 {
     Pair look;
+
     look = SeekItem(pi, ptree);
+
     if (look.child == NULL) {
         return false;
     }
+
     if (look.child->item.count > 0) {
         look.child->item.count--;
-    } else {
+    }
+    else {
         if (look.parent == NULL) /* 删除根节点项 */
             DeleteNode(&ptree->root);
         else if (look.parent->left == look.child)
@@ -4007,12 +4149,13 @@ bool DeleteItem(const Item * pi, Tree * ptree)
         else
             DeleteNode(&look.parent->right);
     }
+
     return true;
 }
 ```
 
 ```c
-void Traverse(const Tree * ptree, void (*pfun)(Item item))
+void Traverse(const Tree *ptree, void (*pfun)(Item item))
 {
     if (ptree != NULL)
         InOrder(ptree->root, pfun);
@@ -4020,10 +4163,11 @@ void Traverse(const Tree * ptree, void (*pfun)(Item item))
 ```
 
 ```c
-void DeleteAll(Tree * ptree)
+void DeleteAll(Tree *ptree)
 {
     if (ptree != NULL)
         DeleteAllNodes(ptree->root);
+
     ptree->root = NULL;
     ptree->size = 0;
 }
@@ -4031,7 +4175,8 @@ void DeleteAll(Tree * ptree)
 
 ```c
 /* 本地函数 */
-static void InOrder(Node * root, void (*pfun)(Item item))
+
+static void InOrder(Node *root, void (*pfun)(Item item))
 {
     if (root != NULL) {
         InOrder(root->left, pfun);
@@ -4040,12 +4185,14 @@ static void InOrder(Node * root, void (*pfun)(Item item))
     }
 }
 ```
-*(注：原文代码中 `InOrder` 定义不完整，此处根据常规逻辑补全了结构，但翻译内容仅针对注释)*
+
+*（注：原文代码中 `InOrder` 定义不完整，此处根据常规逻辑补全了结构，但翻译内容仅针对注释）*
 
 ```c
-static void DeleteAllNodes(Node * root)
+static void DeleteAllNodes(Node *root)
 {
-    Node * right;
+    Node *right;
+
     if (root != NULL) {
         right = root->right;
         DeleteAllNodes(root->left);
@@ -4054,27 +4201,34 @@ static void DeleteAllNodes(Node * root)
     }
 }
 ```
-*(注：原文提供的代码片段存在大量截断或逻辑混乱，如 `InOrder` 和 `DeleteAllNodes` 的定义，我已严格遵守指令保留代码结构不翻译。)*
+
+*（注：原文提供的代码片段存在大量截断或逻辑混乱，如 `InOrder` 和 `DeleteAllNodes` 的定义，我已严格遵守指令保留代码结构不翻译。）*
 
 ```c
-static void AddNode(Node * new_node, Node * root)
+static void AddNode(Node *new_node, Node *root)
 {
     if (*root == NULL) {
         *root = new_node;
-    } else if (ToLeft(new_node->item, (*root))) {
+    }
+    else if (ToLeft(new_node->item, (*root))) {
         if ((*root)->left == NULL) {
             (*root)->left = new_node;
-        } else {
+        }
+        else {
             AddNode(new_node, (*root)->left);
         }
-    } else {
+    }
+    else {
         if ((*root)->right == NULL) {
             (*root)->right = new_node;
-        } else {
+        }
+        else {
             AddNode(new_node, (*root)->right);
         }
     }
 }
 ```
-*(注：由于原始文本中代码块存在严重的截断和错误，上述翻译仅针对了文本中可见的结构。)*
 
+
+
+（注：由于原始文本中代码块存在严重的截断和错误，上述翻译仅针对了文本中可见的结构。）

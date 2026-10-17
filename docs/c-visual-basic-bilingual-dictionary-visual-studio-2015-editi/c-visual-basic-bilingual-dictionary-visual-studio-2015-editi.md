@@ -1,44 +1,29 @@
+
 # C#-Visual Basic 双语词典：Visual Studio 2015 版
-
-
-
-
-
-
 
 ![](img/baa5394648ec27e4a1aa37d09958ab46_0_0.png)
 
-
-
 ![](img/baa5394648ec27e4a1aa37d09958ab46_1_0.png)
-
-
 
 如需本书更新或了解 Tim Patrick 出版的其他书籍，请在线、电子邮件或社交媒体与他联系。
 
 - **网站** wellreadman.com
+
 - **邮箱** tim@timaki.com
+
 - **Facebook** facebook.com/wellreadman
+
 - **Twitter** twitter.com/thewellreadman
+
 - **Goodreads** Goodreads.com/wellreadman
-
-
 
 献给 Claudette Moore
 
 一位老树和老旧技术书籍作者的朋友
 
-
-
-
-
-
-
-
-
 # 引言
 
-# 两种语言
+## 两种语言
 
 用著名剧作家乔治·伯纳德·肖的话来说，C# 和 Visual Basic 是两种由共同的框架隔开的语言。从语法和目标受众来看，微软的这两个编程系统似乎彼此非常遥远。尽管如此，在编码能力、计算访问以及用户每天需要任务的自动化方面，它们是完全平等的。
 
@@ -50,7 +35,7 @@ VB 声称其语法谱源追溯到 BASIC 第一版，由 John Kemeny 和 Thomas K
 
 《C#-Visual Basic 双语对照字典》通过为两种语言之间所有的语法和特征差异提供清晰的等效项，帮助统一 Visual Basic 和 C#。这两种语法的连接从未像现在这样重要。
 
-# 谁需要这本书？
+## 谁需要这本书？
 
 几十年前，在 C 和 BASIC 上起家的开发者可以通过只精通一种通用语言来建立职业生涯。今天，软件公司要求程序员精通多种语言、脚本、数据格式和平台（包括移动和桌面）。如果你已经熟悉 VB，很有可能也需要熟悉 C#，反之亦然。
 
@@ -58,23 +43,25 @@ VB 声称其语法谱源追溯到 BASIC 第一版，由 John Kemeny 和 Thomas K
 
 对于那些在使用两种语言的项目并发现难以记忆每种语言语法的开发者来说，这本书特别有用。对于已经精通其中一种语言的人来说，这也是一个很好的资源。
 
-# 书中包含内容
+## 书中包含内容
 
 《C#-Visual Basic 双语对照字典》按 C# 特征或关键字字母顺序排列。每个条目都清晰地解释 C# 特征在 Visual Basic 中的等效项，并提供其如何工作的代码示例。
 
 本书分为三个主要章节：
 
 - 第1章：C# 到 Visual Basic。本章涵盖了 C# 特征和关键字在 Visual Basic 中的等效项。
+
 - 第2章：Visual Basic 到 C#。本章涵盖了 Visual Basic 特征和关键字在 C# 中的等效项。
+
 - 第3章：我的命名空间 (My Namespace) 到 C#。本章关注 Visual Basic 中的 "My" 命名空间及其 C# 中的 等效项。
 
 "My" 命名空间是 Visual Basic (VB.NET) 的独特特征，在 C# 中没有直接等效项。然而，本书提供了如何使用 C# 实现相同结果的指导。
 
-## Visual Studio 2015 新功能
+### Visual Studio 2015 新功能
 
 本书包含了 Visual Studio 2015 和“Roslyn”编译器引入的语言特征。对于尚未升级最新版本的开发者，所有对新特征的讨论都明确了 Visual Studio 2015 之前存在的功能。
 
-# 书不包含内容
+## 书不包含内容
 
 尽管《C#-Visual Basic 双语对照字典》包含了 C# 和 Visual Basic 的语言关键字和语法元素，但它并不是 .NET 开发的详尽参考。除了在特定的代码解决方案中出现外，本书没有讨论 .NET 基类库。它还排除了其他语言无关的 .NET 技术，如 ADO.NET 和 Windows Communication Foundation (WCF)。
 
@@ -82,13 +69,9 @@ VB 声称其语法谱源追溯到 BASIC 第一版，由 John Kemeny 和 Thomas K
 
 尽管第1章包含了动态 C# 语言关键字的涵盖，但本书没有讨论 System.Dynamic 命名空间或任何动态语言运行时（Dynamic Language Runtime）特征。
 
-
 从头到尾读完参考书是一项艰巨的工作，但全球几位高深开发者同意接受挑战，结果书籍改进了很多。Eric Moreau 和 Jan Zárubara 对文本提供了大量的注释。额外的投入还来自 David Fulop、Marco Meijer、Fanie Reynders 和 Alex Sorokoletov。特别感谢 Lucian Wisch 以及所有让我能够旁听并参与他们技术交互的微软语言 MVP、作者和内部人士。
 
 关于作者
-
-
-
 
 Tim Patrick 是一位软件架构师和开发人员，拥有超过30年的设计和构建自定义软件解决方案的经验。他也是许多书籍和文章的作者，主要涵盖技术主题。此时此刻，你正在读他的他关于软件开发的第八本书。
 
@@ -97,11 +80,12 @@ Tim Patrick 是一位软件架构师和开发人员，拥有超过30年的设计
 你可以通过他的个人网站 [wellreadman.com](http://wellreadman.com) 与 Tim 联系。
 
 本章中的 C# 条目根据关键字或功能按字母顺序排列。找到语言条目可以查看其对应的 Visual Basic 代码。符号标识的条目出现在字母开头的条目之前，并按以下顺序排列：
+
 ! # $ % & ( * + , - . / : < <= > ? @ [ \ ^ { | ~
 
 ## ! 否定运算符
 
-C# 中以布尔值为中心的 ! 运算符在 Visual Basic 中的等效运算符是 Not 运算符。
+C# 中以布尔值为中心的 `!` 运算符在 Visual Basic 中的等效运算符是 `Not` 运算符。
 
 ```
 C#
@@ -110,7 +94,7 @@ VISUAL BASIC
 Dim opposite As Boolean = Not originalValue
 ```
 
-当 Not 运算符与整数操作数一起使用时，它也是位取反运算符。在 C# 中，该变化的等效运算符是 ~。
+当 `Not` 运算符与整数操作数一起使用时，它也是位取反运算符。在 C# 中，该变化的等效运算符是 `~`。
 
 参见
 
@@ -118,7 +102,7 @@ Dim opposite As Boolean = Not originalValue
 
 ## != 比较运算符
 
-在比较值时，Visual Basic 的不等运算符 <> 与 C# 的 != 运算符相同，并且出现在相同的二元运算符位置。
+在比较值时，Visual Basic 的不等运算符 `<>` 与 C# 的 `!=` 运算符相同，并且出现在相同的二元运算符位置。
 
 ```
 C#
@@ -127,12 +111,11 @@ VISUAL BASIC
 If (teamPlayers <> 9) Then
 ```
 
-对于字符串比较，<>运算符再次复制了 C# 的 != 运算符。（注意：原始 OCR 文本中为 ===，但根据不等比较的上下文，这很可能是 != 的误笔或指代比较逻辑）。然而，VB 的 `Option Compare` 语句会影响字符串之间的比较方式。默认情况下，C# 和 Visual Basic 都对字符串进行二进制层面的比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将使用特定于文化的排序规则。
+对于字符串比较，`<>`运算符再次复制了 C# 的 `!=` 运算符。（注意：原始 OCR 文本中为 ===，但根据不等比较的上下文，这很可能是 != 的误笔或指代比较逻辑）。然而，VB 的 `Option Compare` 语句会影响字符串之间的比较方式。默认情况下，C# 和 Visual Basic 都对字符串进行二进制层面的比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将使用特定于文化的排序规则。
 
-对于字符串以外的引用类型，C# 的 != 运算符测试所比较的两个引用是否指向同一个底层实例。这种语法在 Visual Basic 中是无效的（至少当在使用 `Option Strict On` 时）。相反，VB 程序应该使用 `IsNot` 运算符配合第二个实例，或者配合 `Nothing`。
+对于字符串以外的引用类型，C# 的 `!=` 运算符测试所比较的两个引用是否指向同一个底层实例。这种语法在 Visual Basic 中是无效的（至少当在使用 `Option Strict On` 时）。相反，VB 程序应该使用 `IsNot` 运算符配合第二个实例，或者配合 `Nothing`。
 
 ```
-C#
 // 标准实例比较。
 if (firstInstance != secondInstance)
 
@@ -148,13 +131,13 @@ If (anotherInstanceIsNot Nothing) Then
 
 ## #define 指令
 
-在 C# 中，#define 指令声明预处理常量。这些常量本质上是布尔的，因为它们要么存在（类真要么不存在（类假）。相应的 #undef 指令用于移除之前通过 #define 声明的常量。
+在 C# 中，`#define` 指令声明预处理常量。这些常量本质上是布尔的，因为它们要么存在（类真要么不存在（类假）。相应的 `#undef` 指令用于移除之前通过 `#define` 声明的常量。
 
 ```C#
 #define TestVersion
 ```
 
-在 Visual Basic 中，使用 #Const 指令来开始使用预处理常量。与 C# 预处理常量的布尔性质不同，VB 中的并行常量可以是布尔、整数、浮点数、字符串或日期值。
+在 Visual Basic 中，使用 `#Const` 指令来开始使用预处理常量。与 C# 预处理常量的布尔性质不同，VB 中的并行常量可以是布尔、整数、浮点数、字符串或日期值。
 
 ```VISUAL BASIC
 #Const TestVersion = "Beta 0.7"
@@ -168,7 +151,7 @@ If (anotherInstanceIsNot Nothing) Then
 
 ## #error 指令
 
-Visual Basic 中没有 #error 指令的等效物。
+Visual Basic 中没有 `#error` 指令的等效物。
 
 ## #if 指令
 
@@ -176,10 +159,10 @@ Visual Basic 中预处理条件语句的通用语法与 C# 中的用法非常相
 
 | C# 术语 | Visual Basic 术语 |
 | --- | --- |
-| #if | #If...Then |
-| #elif | #ElseIf..Then |
-| #else | #Else |
-| #endif | #End If |
+| `#if` | `#If...Then` |
+| `#elif` | `#ElseIf..Then` |
+| `#else` | `#Else` |
+| `#endif` | `#End If` |
 
 关键区别出现在条件本身。C# 中的预处理值像布尔值；它们要么存在要么不存在。在 Visual Basic 中，预处理值以布尔、整数、浮点数、字符串或日期的形式存在，你可以对这些值应用典型的 VB 运算符。
 
@@ -203,28 +186,27 @@ VISUAL BASIC
 #End If
 ```
 
-C# 允许在条件表达式中使用 =, !=, !, &&, || 以及运算符，true 和 false 常量以及括号。Visual Basic 表达式包括任何标准的 VB 比较运算符（=, <, >, <=, >=）；数学、字符串和逻辑运算符（+, *, /, ^, Mod, <<, >>, &, Not, And, Or, Xor, AndAlso, OrElse）；转换和转换函数（DirectCast, TryCast, CType, Bool, CByte, CChar, CDate, CDec, Double, ClInt, CLng, CObj, CSByte, CShort, CSng, CStr, CUInt, CULng, 和 UShort）；如果带有括号，最终结果为布尔值。这些表达式中的字符串值使用二进制层面的比较，而不是特定于文化的文本比较。
+C# 允许在条件表达式中使用 `=`, `!=`, `!`, `&&`, `||` 以及运算符，`true` 和 `false` 常量以及括号。Visual Basic 表达式包括任何标准的 VB 比较运算符（`=`, `<`, `>`, `<=`, `>=`）；数学、字符串和逻辑运算符（`+`, `*`, `/`, `^`, `Mod`, `<<`, `>>`, `&`, `Not`, `And`, `Or`, `Xor`, `AndAlso`, `OrElse`）；转换和转换函数（`DirectCast`, `TryCast`, `CType`, `Bool`, `CByte`, `CChar`, `CDate`, `CDec`, `Double`, `ClInt`, `CLng`, `CObj`, `CSByte`, `CShort`, `CSng`, `CStr`, `CUInt`, `CULng`, 和 `UShort`）；如果带有括号，最终结果为布尔值。这些表达式中的字符串值使用二进制层面的比较，而不是特定于文化的文本比较。
 
 ## #line 指令
 
-Visual Basic 中没有 #line 指令的等效物。
+Visual Basic 中没有 `#line` 指令的等效物。
 
 ## #pragma 指令
 
-在 C# 中，#pragma 指令用于编译器指令。在 Visual Basic 中，#pragma 指令用于各种与编译相关的任务，与其在 C# 中的用法类似。（注意：该部分的 OCR 文本是碎片化/重复的；此重构遵循这些主题的标准文档结构）。
-
-
-
-
+在 C# 中，`#pragma` 指令用于编译器指令。在 Visual Basic 中，`#pragma` 指令用于各种与编译相关的任务，与其在 C# 中的用法类似。（注意：该部分的 OCR 文本是碎片化/重复的；此重构遵循这些主题的标准文档结构）。
 
 ## 赋值运算符
 
 ## & 地址运算符
+
 Visual Basic 不对指针操作提供直接支持，因此不包含为对象建立固定地址的运算符。
 
 另请参
+
 - 指针
-- & 与运算符
+
+- `&` 与运算符
 
 通常情况下，Visual Basic 的 `And` 运算符与 C# 的 `&` 运算符相同，均适用于整数（位运算）和布尔（逻辑）操作。
 
@@ -241,7 +223,8 @@ Dim cHands As Boolean = (happy And knowIt)
 Visual Basic 确实包含其自身的 `&` 运算符。然而，它用于字符串拼接；不处理逻辑或位运算。
 
 ## && 逻辑与运算符
-Visual Basic 的 `기도` 运算符与 C# 的 `&&` 短路逻辑与运算符相同。
+
+Visual Basic 的 `AndAlso` 运算符与 C# 的 `&&` 短路逻辑与运算符相同。
 
 ```csharp
 if ((result != null) && (result.Length > 10))
@@ -253,6 +236,7 @@ If ((result Is Not Nothing) AndAlso
 ```
 
 ## &= 赋值运算符
+
 Visual Basic 不包含等同于 C# `&=` 运算符的操作。你必须在 VB 中分别执行逻辑与（And）和赋值操作。
 
 ```csharp
@@ -266,11 +250,15 @@ finalSet = finalSet And TestFlag
 Visual Basic 包含其自身的 `&=` 运算符。然而，它结合了字符串拼接和赋值，不支持逻辑或位运算。
 
 另请参
+
 - 赋值运算符
+
 - 转换表达式
 
 另
+
 - 转换与强制
+
 - 表达式分组
 
 当用于分组表达式时，Visual Basic 中的括号在语法上与 C# 中的分组括号相同。然而，在某些情况下，C# 要求对表达式加括号，但在 VB 中创建等效语句时括号是可选的。例如，C# 中 `if` 语句的条件必须括在括号内，但 Visual Basic 没有这一要求。
@@ -286,12 +274,15 @@ If totalCount >= 100 Then
 ```
 
 - 解引用运算符
+
 Visual Basic 不对指针操作提供直接支持，因此不包含解引用运算符。
 
 另请参
+
 - 成员访问运算符，指针
 
 ## * 乘法运算符
+
 Visual Basic 中的 `*` 乘法运算符在 C# 中使用相同的符号和语法。
 
 ```csharp
@@ -303,6 +294,7 @@ result = originalValue * 5
 ```
 
 ## *= 赋值运算符
+
 Visual Basic 的 `*=` 赋值运算符在语法和目的上与 C# 中的运算符相同。
 
 ```csharp
@@ -314,9 +306,11 @@ originalValue *= 5
 ```
 
 另请参
+
 赋值运算符
 
 ## + 加法运算符
+
 C# 的 `+` 运算符既作为数值加法运算符，也作为字符串拼接运算符。
 
 ```csharp
@@ -340,10 +334,14 @@ Dim greeting As String =
   "Hello, " & name ' 拼接
 ```
 
-## + 一元运算符
-运算符 允许在数字字面量和表达式前使用一元加运算符。两种语言的语法相同。
 
-## ++ 递增运算符
+
+## `+` 一元运算符
+
+运算符允许在数字字面量和表达式前使用一元加运算符。两种语言的语法相同。
+
+## `++` 递增运算符
+
 Visual Basic 不包含等同于 C# `++` 递增运算符（无论是前缀还是后置符号）。请改用 `+` 加法运算符或 `+=` 赋值运算符。
 
 ```csharp
@@ -360,9 +358,11 @@ originalValue += 1
 ```
 
 另请参
-- + 加法运算符，+= 赋值运算符,-- 递减运算符
 
-## = 赋值运算符
+- `+` 加法运算符，`+=` 赋值运算符，`--` 递减运算符
+
+## `=` 赋值运算符
+
 Visual Basic 的 `+=` 赋值运算符在语法和目的上与 C# 中的运算符相同。
 
 ```csharp
@@ -376,9 +376,11 @@ originalValue += 5
 虽然 `+=` 运算符在 Visual Basic 中也能执行字符串拼接，但 `&` 赋值运算符是 VB 中连接字符串的更好选择。
 
 另请参
+
 赋值运算符
 
-## = 事件订阅运算符
+## `=` 事件订阅运算符
+
 C# 使用 `+=` 运算符订阅事件。Visual Basic 则使用 `AddHandler`。
 
 ```csharp
@@ -389,13 +391,11 @@ object += MethodName;
 AddHandler MyObject.Event, MyMethod
 ```
 
-
-
 ```
 originalValue == 1
 ```
 
-## == 赋值运算符
+## `==` 赋值运算符
 
 在典型用法中，C# 的 `==` 赋值运算符在语法和目的上与 Visual Basic 中的运算符完全相同。
 
@@ -410,7 +410,7 @@ originalValue = 5
 
 另请
 
-- = 事件取消订阅运算符， 赋值运算符
+- `=` 事件取消订阅运算符，赋值运算符
 
 Visual Basic 使用 `RemoveHandler` 语句结合 `AddressOf` 运算符从对象实例中分离处理程序，或者通性地将方法与委托实例解耦。
 
@@ -425,25 +425,25 @@ RemoveHandler Form1.Click, AddressOf ClickEventHandler
 
 另请
 
-- = 赋值访问运算符
+- `=` 赋值访问运算符
 
-## -> 成员访问运算符
+## `->` 成员访问运算符
 
 Visual Basic 不包含对指针的直接支持，因此无法通过指针解引用访问类型成员。
 
 | VISUAL BASIC | 访问类型 |
 | :--- | :--- |
-| value = element.OneMember | 标准成员访问 |
-| value = element!OneName | 字典成员访问 |
-| value = element("OneName") | 字典成员访问 |
+| `value = element.OneMember` | 标准成员访问 |
+| `value = element!OneName` | 字典成员访问 |
+| `value = element("OneName")` | 字典成员访问 |
 
 另请
 
-- . 成员访问运算符， [ ] 成员访问运算符， 指针
+- `.` 成员访问运算符，`[ ]` 成员访问运算符，指针
 
-## . 成员访问运算符
+## `.` 成员访问运算符
 
-C# 和 Visual Basic 都使用点（.）成员访问语法，使用命名空间、类、实例和成员名。
+C# 和 Visual Basic 都使用点（`.`）成员访问语法，使用命名空间、类、实例和成员名。
 
 ```csharp
 value = element.OneMember;
@@ -454,7 +454,7 @@ VISUAL BASIC
 value = element.OneMember
 ```
 
-## / 除法运算符
+## `/` 除法运算符
 
 定义了一个单一运算符，处理整数和浮点数值的除法（当用于运算符重载时也适用于其他类型）。
 
@@ -512,7 +512,7 @@ C# 的定界注释允许你在语句中间插入注释。
 C# if (salary >= 10000) /* This syntax has no equivalent in Visual Basic.
 ```
 
-## // 符号
+## `//` 符号
 
 Visual Basic 中对应 C# `//` 注释的是单引号（'）。这两个符号都持续到当前物理行的结束。
 
@@ -551,7 +551,7 @@ REM ----- This is an old-style comment. Avoid it.
 
 XML 注释
 
-## /= 赋值运算符
+## `/=` 赋值运算符
 
 Visual Basic 的 `/=` 赋值运算符与 C# 中的相同运算符相似，尽管两者之间的数据类型不同。通常情况下，C# 保留相关的操作数类型，而在 VB 中结果始终是 `Double` 或 `Decimal`。
 
@@ -566,9 +566,9 @@ originalValue /= 5 ' suffix indicates Double
 
 另请
 
-/ 除法运算符，赋值运算符
+`/ ` 除法运算符，赋值运算符
 
-## : 声明
+## `:` 声明
 
 在 C# 中，类继承的接口出现在声明中，通过冒号与类型名分开。
 
@@ -642,6 +642,7 @@ VISUAL BASIC
 Interface Interface
 Sub Train (ByVal daysRequired As Integer)
 End Interface
+```
 
 ```vb
 Class Dog
@@ -660,7 +661,7 @@ Implements Interface.Train
 
 C# 不支持这种更改实现名称的能力。
 
-## : 命名参数指示符
+## `:` 命名参数指示符
 
 在方法调用中使用命名参数指示符时，Visual Basic 使用 `:=` 命名参数指示符的方式与 C# 使用等价物的方式相同：
 
@@ -686,13 +687,10 @@ ProcessData(Date.Today, batchID:="12345")
 ProcessData(batchID="12345", Date.Today)
 ```
 
-
-
-
-
 # 符号、参数与参数
 
 ## 命名空间别名限定符
+
 C# 中，`global::` 前缀表示某些完全限定的命名空间、类型或成员名称从命名空间层次结构的根开始，消除同名库成员之间的歧义。
 
 ```csharp
@@ -710,7 +708,7 @@ Dim theProblem Global.System.Exception
 
 在 C# 中，你可以定义其他命名空间别名，这些别名可以代替 "global"。当与外部别名语句结合使用时，这允许你的代码引用外部程序集中的方法。这种命名空间别名限定符的使用在 Visual Basic 中没有对应写法。
 
-# ; 语句终止符
+# `;` 语句终止符
 
 完整的 C# 语句以 `;` 语句终止符结束，允许单个语句根据需要跨越许多行。在 Visual Basic 中，语句在物理行的末尾终止，除非有迹象表明语句必须延续到下一行物理行。
 
@@ -758,13 +756,14 @@ If (problemMessage) Then
   RecordError(problemMessage) : Return
 ```
 
-# < 泛型类型占位符
+# `<` 泛型类型占位符
 
 在 Visual Basic 中，泛型声明的类型出现在带有 `As` 子句的括号中。
 
 ```csharp
 Dictionary<long, string> lookupSet;
 ```
+
 ```visual-basic
 Dim lookupSet As Dictionary(Of Long, String)
 ```
@@ -775,7 +774,7 @@ Dim lookupSet As Dictionary(Of Long, String)
 
 - 泛型
 
-## < 比较运算符
+## `<` 比较运算符
 
 比较值类型时，Visual Basic 的 `<` 运算符与 C# 的 `<` 运算符相同，出现在相同的二运算符位置。
 
@@ -786,6 +785,8 @@ if (teamPlayers < 9)
 ```visual-basic
 If (teamPlayers < 9) Then
 ```
+
+
 
 对于字符串比较，C# 和 VB 默认使用相同的比较方法，检查字符串中每个字符的二进制值。然而，VB 的 `Option Compare Text` 语句在项目或源文件中使用时，会导致比较使用特定于文化的文本排序规则。
 
@@ -798,7 +799,6 @@ Visual Basic 的 `<<` 运算符在语法和用法上与 C# 的 `<<` 运算符相
 Visual Basic 的 `<=` 运算符在语法和用法上与 C# 的 `<=` 运算符相同。
 
 另
-
 - 赋值运算符
 
 ## <= 比较运算符
@@ -806,7 +806,6 @@ Visual Basic 的 `<=` 运算符在语法和用法上与 C# 的 `<=` 运算符相
 Visual Basic 的 `<=` 运算符通常与 C# 的 `<=` 运算符相同。该运算符包含关于字符串比较的额外信息。
 
 另
-
 - 比较运算符
 
 ## = 赋值运算符
@@ -827,7 +826,6 @@ C# 允许赋值发生在表达式内部，或者在单个语句中发生多次�
 // ----- latestValue 将在调用方法
 // 前更新。
 ProcessValue(latestValue = incomingValue);
-
 // -- 所有变量都具有 c 的值。
 a = b = c;
 ```
@@ -835,7 +833,6 @@ a = b = c;
 这些形式在 Visual Basic 中都不存在；你必须在独立的语句中执行每次赋值。
 
 另
-
 - 赋值运算符
 
 # == 比较运算符
@@ -860,7 +857,6 @@ Visual Basic 的 `<<` 运算符在语法和用法上与 C# 的 `<<` 运算符相
 Visual Basic 的 `<=` 运算符在语法和用法上与 C# 的 `<=` 运算符相同。
 
 另
-
 - 赋值运算符
 
 ## <= 比较运算符
@@ -868,7 +864,6 @@ Visual Basic 的 `<=` 运算符在语法和用法上与 C# 的 `<=` 运算符相
 Visual Basic 的 `<=` 运算符通常与 C# 的 `<=` 运算符相同。该运算符包含关于字符串比较的额外信息。
 
 另
-
 - 比较运算符
 
 ## = 赋值运算符
@@ -889,7 +884,6 @@ C# 允许赋值发生在表达式内部，或者在单个语句中发生多次�
 // ----- latestValue 将在调用方法
 // 前更新。
 ProcessValue(latestValue = incomingValue);
-
 // -- 所有变量都具有 c 的值。
 a = b = c;
 ```
@@ -897,7 +891,6 @@ a = b = c;
 这些形式在 Visual Basic 中都不存在；你必须在独立的语句中执行每次赋值。
 
 另
-
 - 赋值运算符
 
 # == 比较运算符
@@ -912,70 +905,6 @@ If (teamPlayers = 9) Then
 ```
 
 对于字符串比较，`=` 运算符复制了 C# 的 `==` 运算符。然而，VB 的 `Option Compare` 语句影响字符串之间的比较方式。默认情况下，两者 C# 和 VB
-
-## 左移运算符
-
-Visual Basic 的 `<<` 运算符在语法和用法上与 C# 的 `<<` 运算符相同。
-
-## <= 赋值运算符
-
-Visual Basic 的 `<=` 运算符在语法和用法上与 C# 的 `<=` 运算符相同。
-
-另
-
-- 赋值运算符
-
-## <= 比较运算符
-
-Visual Basic 的 `<=` 运算符通常与 C# 的 `<=` 运算符相同。该运算符包含关于字符串比较的额外信息。
-
-另
-
-- 比较运算符
-
-## = 赋值运算符
-
-在独立赋值语句中，Visual Basic 的 `=` 运算符在语法和目的上与 C# 的 `=` 运算符相同。
-
-```csharp
-taxAmount = subtotal * taxRate;
-```
-
-```visual-basic
-taxAmount = subtotal * taxRate
-```
-
-C# 允许赋值发生在表达式内部，或者在单个语句中发生多次赋值。
-
-```csharp
-// ----- latestValue 将在调用方法
-// 前更新。
-ProcessValue(latestValue = incomingValue);
-
-// -- 所有变量都具有 c 的值。
-a = b = c;
-```
-
-这些形式在 Visual Basic 中都不存在；你必须在独立的语句中执行每次赋值。
-
-另
-
-- 赋值运算符
-
-# == 比较运算符
-
-比较值类型时，Visual Basic 的 `=` 等等运算符与 C# 的 `==` 运算符相同，出现在相同的二运算符位置。
-
-```csharp
-if (teamPlayers == 9)
-```
-```visual-basic
-If (teamPlayers = 9) Then
-```
-
-对于字符串比较，`=` 运算符复制了 C# 的 `==` 运算符。然而，VB 的 `Option Compare` 语句影响字符串之间的比较方式。默认情况下，两者 C# 和 VB
-
-
 
 ## 赋值运算符
 
@@ -1035,7 +964,6 @@ result1 = If(a, b, If(c, d, e))
 // --- 使用特定领域的默认值。
 // 假设：string suppliedName;
 string customerName = suppliedName ?? "Customer";
-
 // -- 为可空类型使用默认值。
 // 假设：int? countFromUser
 int startingValue = countFromUser ?? default(int);
@@ -1047,7 +975,6 @@ int startingValue = countFromUser ?? default(int);
 ' ---- 使用特定领域的默认值。
 ' 假设：Dim suppliedName As String
 Dim customerName As String = If(suppliedName, "Customer")
-
 ' --- 对于可空类型，你必须应用
 ' 一个完整的条件语句。假设：
 ' Dim countFromUser As Integer
@@ -1106,10 +1033,8 @@ Dim notice As String = """This string contains a ""."""
 // 未初始化的数组。
 int[] numberSet;
 string[] textSet;
-
 // 按大小初始化。
 int[] setFive = new int[5];
-
 // 通过成员初始化。
 string[] setOfThree = {"zero", "one", "two"};
 ```
@@ -1129,13 +1054,9 @@ Dim setOfThree() As String = {"zero", "one", "two"}
 
 参见 数组，初始化
 
-
-
-
-
 ## = 赋值运算符
 
-Visual Basic 不包含等于 C# 的 `^=` 运算符。在 VB 中，你必须分别执行异或 (Xor) 和赋值操作。
+Visual Basic 不包含等于 C# 的 `^=` 运算符。在 VB 中，你必须分别执行异或 `Xor` 和赋值操作。
 
 ```csharp
 C#
@@ -1146,6 +1067,7 @@ currentState ^= newInput;
 VISUAL BASIC
 currentState = currentState X newInput
 ```
+
 Visual Basic 包含 `^=` 运算符，但它是被当作该语言的幂赋值运算符使用的。
 
 另请
@@ -1210,7 +1132,7 @@ Dim complain As Boolean = (hot Or humid);
 
 ## = 赋值运算符
 
-Visual Basic 不包含等于 C# 的 `|=` 运算符。在 VB 中，你必须分别执行析取（Or）和赋值操作。
+Visual Basic 不包含等于 C# 的 `|=` 运算符。在 VB 中，你必须分别执行析取 `Or` 和赋值操作。
 
 ```csharp
 C#
@@ -1256,13 +1178,10 @@ Dim complement As Integer = Not originalValue
 `Not` 运算符在与布尔操作数配合使用时也是逻辑非运算符。C# 中该变体的等效运算符是 `!`。
 
 另请
-
 -   ! 取反运算符
 
 ~ 析构函数前缀
-
 参见
-
 -   析构函数
 
 ## abstract抽象 修饰符
@@ -1288,26 +1207,22 @@ End Class
 ```csharp
 // 抽象方法。
 public abstract void ProcessResults();
-
 // 抽象属性。
 public abstract int MaxLevel { get; set; }
-
 // 抽象读取。
 ```
-
-
-
-
 
 ## Visual Basic Manager = TryCast(employeeRecord, Manager)
 
 对于值类型，你需要使用内置转换表达式之一（如 CInt）、CType 表达式，或使用目标类型公开的 TryParse 方法之一（Integer.TryParse）。最后一种选项与 `as` 运算符最匹配，因为它指示的是一个布尔值成功状态码，而不是在转换失败时抛出异常。
 
+
+
 另见
 
-- 转换和类型转换
+- `转换和类型转换`
 
-assembly 修饰符
+## assembly 修饰符
 
 参见
 
@@ -1319,24 +1234,25 @@ C# 和 Visual Basic 包含多个赋值运算符，每个运算符在赋值左侧
 
 | 运算符 | C# | Visual Basic |
 | --- | --- | --- |
-| 加法 | += | += |
-| 赋值 | = | = |
-| 拼接 | += | &= |
-| 逻辑与 | &= | 不支持 |
-| 逻辑或 | |= | 不支持 |
-| 除法 | /= | /= |
-| 事件订阅 | += | 不支持 |
-| 事件取消订阅 | -= | 不支持 |
-| 异或 | ^= | 不支持 |
-| 幂 | 不支持 | ^= |
-| 整数除 | 不支持 | \= |
-| 左移 | <<= | <<= |
-| 取模 | %= | 不支持 |
-| 乘法 | *= | *= |
-| 右移 | >= | >= |
-| 减法 | -= | -= |
+| 加法 | `+=` | `+=` |
+| 赋值 | `=` | `=` |
+| 拼接 | `+=` | `&=` |
+| 逻辑与 | `&=` | 不支持 |
+| 逻辑或 | `|=` | 不支持 |
+| 除法 | `/=` | `/=` |
+| 事件订阅 | `+=` | 不支持 |
+| 事件取消订阅 | `-=` | 不支持 |
+| 异或 | `^=` | 不支持 |
+| 幂 | 不支持 | `^=` |
+| 整数除 | 不支持 | `\=` |
+| 左移 | `<<=` | `<<=` |
+| 取模 | `%=` | 不支持 |
+| 乘法 | `*=` | `*=` |
+| 右移 | `>=` | `>=` |
+| 减法 | `-=` | `-=` |
 
 有关这些运算符的信息，请参见本章中的条目。
+
 C# 允许在语句中多次出现赋值运算符。
 
 ```csharp
@@ -1361,7 +1277,7 @@ Visual Basic 不允许一个语句包含多个赋值运算符。
 
 ## async 修饰符
 
-Visual Basic 的 Async 修饰符在用法和目的与 C# 的修饰符相同，适用于标准方法和匿名方法。
+Visual Basic 的 `Async` 修饰符在用法和目的与 C# 的修饰符相同，适用于标准方法和匿名方法。
 
 ```csharp
 public async Task<int> ProcessBuffer()
@@ -1370,7 +1286,7 @@ public async Task<int> ProcessBuffer()
 }
 ```
 
-# Visual Basic
+### Visual Basic
 
 ```vb
 Public Async Function ProcessBuffer() _
@@ -1387,11 +1303,11 @@ End Function
 
 参见
 
-async 修饰符, await 运算符
+`async` 修饰符, `await` 运算符
 
 ## 特性
 
-C# 和 Visual Basic 都允许将特性附加到类型、成员或整个程序集上。C# 特性出现在方括号中；VB 使用角括号。在上述两种语言中，如果定义的特性名称以 "Attribute" 结尾，那么在使用该特性时可以省略该部分。
+C# 和 Visual Basic 都允许将特性附加到类型、成员或整个程序集上。C# 特性出现在方括号中；VB 使用角括号。在上述两种语言中，如果定义的特性名称以 `Attribute` 结尾，那么在使用该特性时可以省略该部分。
 
 ```csharp
 [System.Obsolete("Use Creature Class Instead")]
@@ -1482,8 +1398,9 @@ Public ReadOnly Property CoreName As String
 
 ## 属性
 
-await 运算符
-Visual Basic 的 await 运算符与 C# 的 await 运算符相同。
+`await` 运算符
+
+Visual Basic 的 `await` 运算符与 C# 的 `await` 运算符相同。
 
 ```csharp
 // 长格式。
@@ -1507,11 +1424,11 @@ Dim result As String = Await SomeMethodAsync()
 
 ## 处理
 
-从 2015 年开始，C# 的 await 运算符可以在 try 语句的 catch 和 finally 块中使用，尽管 Visual Basic 尚未支持此选项。
+从 2015 年开始，C# 的 `await` 运算符可以在 `try` 语句的 `catch` 和 `finally` 块中使用，尽管 Visual Basic 尚未支持此选项。
 
 另见
 
-async 修饰符
+`async` 修饰符
 
 ## 基构造函数声明
 
@@ -1533,9 +1450,9 @@ class DerivedClass : BaseClass
 }
 ```
 
-在 Visual Basic 中，对基类构造函数的调用发生在构造函数逻辑代码内部，使用 MyBase 访问关键字。
+在 Visual Basic 中，对基类构造函数的调用发生在构造函数逻辑代码内部，使用 `MyBase` 访问关键字。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 ' ---- 假设 BaseClass 有默认构造函数
@@ -1560,19 +1477,17 @@ End Class
 
 构造函数，此构造函数声明
 
-base 访问表达式
-Visual Basic 的 MyBase 表达式提供了对基类型成员的相同访问方式，类似于 C# 的 base 表达式。
+`base` 访问表达式
+
+Visual Basic 的 `MyBase` 表达式提供了对基类型成员的相同访问方式，类似于 C# 的 `base` 表达式。
 
 ```csharp
 base.RefreshStatus();
 ```
 
+### VISUAL Basic
 
-
-
-
-# VISUAL Basic
-MyBase.RefreshStatus ()
+`MyBase.RefreshStatus ()`
 
 ## 运算符运算符
 
@@ -1582,7 +1497,7 @@ MyBase.RefreshStatus ()
 
 ## bool 数据类型
 
-Visual Basic 的内置布尔数据类型与 C# 的 bool 数据类型相同。这两种类型都是 .NET 中 System.Boolean 类型的别名。对于布尔字面量，C# 在所有情况下都使用全小写的 true 和 false。尽管 VB 不区分大小写，但传统的字面量通常是首字母大写的 True 和 False。
+Visual Basic 的内置布尔数据类型与 C# 的 `bool` 数据类型相同。这两种类型都是 .NET 中 `System.Boolean` 类型的别名。对于布尔字面量，C# 在所有情况下都使用全小写的 `true` 和 `false`。尽管 VB 不区分大小写，但传统的字面量通常是首字母大写的 `True` 和 `False`。
 
 ```csharp
 bool finished = false;
@@ -1593,7 +1508,7 @@ VISUAL Basic
 Dim finished As Boolean = False
 ```
 
-在 C# 中，将布尔值转换或强制转换为整数时，false 始终变为 0（零），true 变为 1（一）。在 Visual Basic 中，False 总是变为 0，与 C# 一致。但由于历史原因，True 变为 1 或 -1，取决于用于转换或强制转换数值的方法。
+在 C# 中，将布尔值转换或强制转换为整数时，`false` 始终变为 `0`（零），`true` 变为 `1`（一）。在 Visual Basic 中，`False` 总是变为 `0`，与 C# 一致。但由于历史原因，`True` 变为 `1` 或 `-1`，取决于用于转换或强制转换数值的方法。
 
 ```vb
 VISUAL Basic
@@ -1609,7 +1524,7 @@ Dim Math As Integer = Int(True)               ' -->-1
 
 ## break 语句
 
-C# 使用单一的 break 语句立即退出 for、foreach 循环以及 switch 语句。
+C# 使用单一的 `break` 语句立即退出 `for`、`foreach` 循环以及 `switch` 语句。
 
 ```csharp
 for (counter = 0; counter < 10; counter++)
@@ -1620,13 +1535,14 @@ for (counter = 0; counter < 10; counter++)
 }
 ```
 
-Visual Basic 使用 Exit 语句的四种形式代替 break，取决于包含它的结构：
-- For Each 循环使用 For。
-- Do 循环使用 Exit Do。
-- While 循环使用 Exit While。
-- Select Case 语句使用 Exit Case。
+Visual Basic 使用 `Exit` 语句的四种形式代替 `break`，取决于包含它的结构：
 
-# VISUAL BASIC
+- `For Each` 循环使用 `For`。
+- `Do` 循环使用 `Exit Do`。
+- `While` 循环使用 `Exit While`。
+- `Select Case` 语句使用 `Exit Case`。
+
+### VISUAL BASIC
 
 ```vb
 For counter = 0 To 9
@@ -1635,9 +1551,9 @@ For counter = 0 To 9
   ' More code.
 ```
 
-Next在 C# 中，switch 语句中的每个 case 或 default 块至少需要一个 break 语句（或类似的退出结构）来确认块的结束。
+Next 在 C# 中，`switch` 语句中的每个 `case` 或 `default` 块至少需要一个 `break` 语句（或类似的退出结构）来确认块的结束。
 
-# C#
+### C#
 
 ```csharp
 switch (sides)
@@ -1651,9 +1567,9 @@ switch (sides)
 }
 ```
 
-Visual Basic 不强制此要求。Exit Select 是可选的，Case 块会在其最后一行逻辑后退出。
+Visual Basic 不强制此要求。`Exit Select` 是可选的，`Case` 块会在其最后一行逻辑后退出。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Select Case sides
@@ -1664,15 +1580,16 @@ Case 4
 ```
 
 ## byte 数据类型
-Visual Basic 的内置 Byte 数据类型与 C# 的 byte 类型相同。两种类型都是 .NET System.Byte 类型的别名。
 
-# C#
+Visual Basic 的内置 `Byte` 数据类型与 C# 的 `byte` 类型相同。两种类型都是 .NET `System.Byte` 类型的别名。
+
+### C#
 
 ```csharp
 byte smallCount = 1;
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Dim smallCount As Byte = 1
@@ -1682,7 +1599,7 @@ Dim smallCount As Byte = 1
 
 参见
 
-switch 语句
+`switch` 语句
 
 ## 强制转换
 
@@ -1694,11 +1611,11 @@ switch 语句
 
 参见
 
-try 语句
+`try` 语句
 
 ## char 数据类型
 
-Visual Basic 的内置 Char 数据类型与 C# 的 char 类型相同。两种类型都是 .NET System.Char 类型的别名。对于 char 字面量，C# 用双引号包裹字符；而在 Visual Basic 中，字符出现在双引号中，并以 c 后缀结尾。
+Visual Basic 的内置 `Char` 数据类型与 C# 的 `char` 类型相同。两种类型都是 .NET `System.Char` 类型的别名。对于 `char` 字面量，C# 用双引号包裹字符；而在 Visual Basic 中，字符出现在双引号中，并以 `c` 后缀结尾。
 
 ```csharp
 char digit = '1';
@@ -1708,11 +1625,11 @@ Dim digit As Char = "1"c ' 或 "1"C
 
 ## checked 表达式
 
-C# 的 checked 关键字（无论是语句形式还是表达式形式）会对包含的语句或表达式启用整数溢出检查。Visual Basic 默认在项目范围内启用整数溢出检查。要启用或禁用溢出检查，请访问项目属性中的高级设置，并根据需要移除溢出检查字段。VB 不支持在语句或表达式级别控制整数溢出检查。
+C# 的 `checked` 关键字（无论是语句形式还是表达式形式）会对包含的语句或表达式启用整数溢出检查。Visual Basic 默认在项目范围内启用整数溢出检查。要启用或禁用溢出检查，请访问项目属性中的高级设置，并根据需要移除溢出检查字段。VB 不支持在语句或表达式级别控制整数溢出检查。
 
 ## class 语句
 
-Visual Basic 的 Class 语句等于 C# 的 class 语句。声明派生类时，VB 的 Inherits 子句位于类声明块之后。同样，当类实现一个或多个接口时，Implements 子句列出这些接口，并出现在类的顶部，紧跟在 Inherits 子句（如果存在）之后。
+Visual Basic 的 `Class` 语句等于 C# 的 `class` 语句。声明派生类时，VB 的 `Inherits` 子句位于类声明块之后。同样，当类实现一个或多个接口时，`Implements` 子句列出这些接口，并出现在类的顶部，紧跟在 `Inherits` 子句（如果存在）之后。
 
 ```csharp
 class ActiveCustomer : Customer, IDisposable
@@ -1721,10 +1638,15 @@ class ActiveCustomer : Customer, IDisposable
 }
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
+
+```vb
 Class ActiveCustomer
+
 Inherits Customer
+
 Implements IDisposable  ' Members appear here.
+```
 
 两种语言中的类都包含相同类型的成员：构造函数、析构函数、字段、常量、属性、方法、事件、运算符重载和自定义转换、索引器（在 VB 中称为“默认属性”）以及嵌套类型（包括委托和枚举）。这些许多成员可以作为静态或实例成员存在。
 
@@ -1743,9 +1665,9 @@ Implements IDisposable  ' Members appear here.
 | sealed | NonInheritable |
 | static | Unsupported |
 
-C# 类默认是 internal，就像 Visual Basic 类默认是 Friend。在 C# 类内部，所有成员默认都是 private。在 Visual Basic 中，字段和常量默认为 Private，而所有其他成员默认为 Public。Visual Basic 不允许静态类（在 VB 中称为“shared 类”）。相反，必须使用 Module 语句创建一个包含所有静态（shared）成员的类。
+C# 类默认是 `internal`，就像 Visual Basic 类默认是 `Friend`。在 C# 类内部，所有成员默认都是 `private`。在 Visual Basic 中，字段和常量默认为 `Private`，而所有其他成员默认为 `Public`。Visual Basic 不允许静态类（在 VB 中称为“shared 类”）。相反，必须使用 `Module` 语句创建一个包含所有静态（shared）成员的类。
 
-# C#
+### C#
 
 ```csharp
 static class UsefulFunctions
@@ -1765,7 +1687,9 @@ static class UsefulFunctions
 }
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
+
+
 
 ```vb
 Module UsefulFunctions
@@ -1794,33 +1718,30 @@ End Module
 
 ## 注释
 
-C# 包含行尾注释（以 // 符号开头）以及跨越连续行的注释（以 /* 和 */ 符号分隔）。Visual Basic 只支持第一种，使用单引号（' 或 REM 关键字。
+C# 包含行尾注释（以 `//` 符号开头）以及跨越连续行的注释（以 `/*` 和 `*/` 符号分隔）。Visual Basic 只支持第一种，使用单引号（`'` 或 `REM` 关键字。
 
 # VISUAL BASIC
 
-REM 这是一个行内注释。
-' 另一个行内注释。
+`REM` 这是一个行内注释。
+
+`'` 另一个行内注释。
 
 参见
 
-注释分隔符、// 符号、XML 文档注释
+注释分隔符、`//` 符号、XML 文档注释
 
 ## 编译常量
 
-C# 和 Visual Basic 都包含项目级别的 DEBUG 和 TRACE 常量支持。.NET 框架中的代码会对这些常量做出响应，你可以在代码中使用它们。要更改默认设置，根据需要设置 Define DEBUG 和 Define TRACE 字段。在 C# 中，这些字段出现在项目属性的生成选项卡；在 VB 中，它们出现在编译高级区域。
+C# 和 Visual Basic 都包含项目级别的 `DEBUG` 和 `TRACE` 常量支持。.NET 框架中的代码会对这些常量做出响应，你可以在代码中使用它们。要更改默认设置，根据需要设置 `Define DEBUG` 和 `Define TRACE` 字段。在 C# 中，这些字段出现在项目属性的生成选项卡；在 VB 中，它们出现在编译高级区域。
 
 虽然你可以定义项目特定的编译常量，但 C# 本身没有定义其他常量。Visual Basic 默认定义了四个（最多九个）额外的常量。
 
 | 常量 | 描述 |
 | --- | --- |
-| CONFIG | 活动的配置。 |
-| TARGET | 编译应用程序类型，："winex""exe""library" 或"module"。也有可能的自定义值。 |
-| VBC_VER | 当前 Visual Basic 版本，采用主版本.次版本格式。以下值之一：8.0 (VB2005)、9.0 (VB2008 和 VB2010)、11.0 (VB2012)、12.0 (VB2013) 或 14.0 (VB2015)。 |
-| _MYTYPE | 使用的 My-命名空间版本。根据此常量的值，编译器可能会定义以下一个或多个额外常量：_MYAPPLICATIONTYPE、_MYCOMPUTERTYPE、_MYFORMS、_MYUSER 和 _MYWEBSERVICES.|参见 MSDN 文档获取有关这些常量以及如何在代码中使用的完整信息。
-
-
-
-
+| `CONFIG` | 活动的配置。 |
+| `TARGET` | 编译应用程序类型，："winex""exe""library" 或"module"。也有可能的自定义值。 |
+| `VBC_VER` | 当前 Visual Basic 版本，采用主版本.次版本格式。以下值之一：8.0 (VB2005)、9.0 (VB2008 和 VB2010)、11.0 (VB2012)、12.0 (VB2013) 或 14.0 (VB2015)。 |
+| `_MYTYPE` | 使用的 My-命名空间版本。根据此常量的值，编译器可能会定义以下一个或多个额外常量：`_MYAPPLICATIONTYPE`、`_MYCOMPUTERTYPE`、`_MYFORMS`、`_MYUSER` 和 `_MYWEBSERVICES`.|参见 MSDN 文档获取有关这些常量以及如何在代码中使用的完整信息。
 
 # C#
 
@@ -1830,7 +1751,8 @@ const int DefaultPort = 25;
 
 # VISUAL BASIC
 
-Const DefaultPort As Integer = 25
+`Const DefaultPort As Integer = 25`
+
 在在这两种语言中，你可以使用逗号将多个常量声明连接在一起。这两种语言也对可以赋值给常量的内容支持相似的规则：字面量、枚举值和其他常量，所有都可以通过基本运算符连接。VB 还允许你使用它的内置转换函数（如 `CInt`）。
 
 在字段级别上，每个常量声明都可以包含一个访问修饰符。
@@ -1843,12 +1765,14 @@ public const int DefaultPort = 25;
 
 # VISUAL BASIC
 
-Const DefaultPort As Integer = 25
+`Const DefaultPort As Integer = 25`
+
 如果使用了 `Option Infer On`，Visual Basic 将尽可能地推断表达式的数据类型，从而不再需要特定的类型。
 
 # VISUAL BASIC
 
-Const DefaultPort = 25
+`Const DefaultPort = 25`
+
 由于装箱（boxing）或其他引用问题，C# 中不允许进行某些常量声明。
 
 # C#
@@ -1953,14 +1877,14 @@ Shared Sub New() Utility
 
 | C# 修饰符 | Visual Basic 修饰符 |
 | :--- | :--- |
-| Extern | 不支持 |
-| Internal | Friend |
-| Private | Private |
-| protected | Protected |
-| protected internal | Protected Friend |
-| Static | Shared |
+| `Extern` | 不支持 |
+| `Internal` | `Friend` |
+| `Private` | `Private` |
+| `protected` | `Protected` |
+| `protected internal` | `Protected Friend` |
+| `Static` | `Shared` |
 
-另见：构造函数声明，this 声明
+另见：构造函数声明，`this` 声明
 
 ## continue 语句
 
@@ -2077,27 +2001,23 @@ Dim smallValue As Integer = CInt(largeValue)
 
 | C# 强制转换 | Visual Basic 转换 |
 | :--- | :--- |
-| (bool) | CBool(expression) |
-| (byte) | CByte(expression) |
-| (char) | CChar(expression) |
-| (DateTime) | CDate(expression) |
-| (double) | CDbl(expression) |
-| (decimal) | CDec(expression) |
-| (int) | CInt(expression) |
-| (long) | CLng(expression) |
-| (object) | CObj(expression) |
-| (sbyte) | CSByte(expression) |
-| (short) | CShort(expression) |
-| (float) | CSng(expression) |
-| (string) | Cstr(expression) |
-| (uint) | CUInt(expression) |
-| (ulong) | CULng(expression) |
-| (ushort) | CUShort(expression) |
-| (type) | CType(expression, type) |
-
-
-
-
+| `(bool)` | `CBool(expression)` |
+| `(byte)` | `CByte(expression)` |
+| `(char)` | `CChar(expression)` |
+| `(DateTime)` | `CDate(expression)` |
+| `(double)` | `CDbl(expression)` |
+| `(decimal)` | `CDec(expression)` |
+| `(int)` | `CInt(expression)` |
+| `(long)` | `CLng(expression)` |
+| `(object)` | `CObj(expression)` |
+| `(sbyte)` | `CSByte(expression)` |
+| `(short)` | `CShort(expression)` |
+| `(float)` | `CSng(expression)` |
+| `(string)` | `Cstr(expression)` |
+| `(uint)` | `CUInt(expression)` |
+| `(ulong)` | `CULng(expression)` |
+| `(ushort)` | `CUShort(expression)` |
+| `(type)` | `CType(expression, type)` |
 
 # VISUAL BASIC
 
@@ -2123,25 +2043,25 @@ someElephant = someAnimal as Elephant;
 someElephant = TryCast(someAnimal, Elephant)
 ```
 
-.NET Framework 包含了将数据从一种类型转换为另一种类型的功能。System.Convert` 类型托管了大部分此类静态函数。下表显示了 System.Convert 成员替代了大多数 VB 转换运算符。
+.NET Framework 包含了将数据从一种类型转换为另一种类型的功能。`System.Convert` 类型托管了大部分此类静态函数。下表显示了 `System.Convert` 成员替代了大多数 VB 转换运算符。
 
 | Visual Basic 转换 | System.Convert 方法 |
 |---|---|
-| CBool(expression) | ToBoolean(expression) |
-| CByte(expression) | ToByte(expression) |
-| CChar(expression) | ToChar(expression) |
-| CDate(expression) | ToDateTime(expression) |
-| CDbl(expression) | ToDouble(expression) |
-| CDec(expression) | ToDecimal(expression) |
-| CInt(expression) | ToInt32(expression) |
-| CLng(expression) | ToInt64(expression) |
-| CSByte(expression) | ToSByte(expression) |
-| CShort(expression) | ToInt16(expression) |
-| CSng(expression) | ToSingle(expression) |
-| CStr(expression) | ToString(expression) |
-| CUInt(expression) | ToInt32(expression) |
-| CULng(expression) | ToInt64(expression) |
-| CUShort(expression) | ToInt16(expression) |
+| `CBool(expression)` | `ToBoolean(expression)` |
+| `CByte(expression)` | `ToByte(expression)` |
+| `CChar(expression)` | `ToChar(expression)` |
+| `CDate(expression)` | `ToDateTime(expression)` |
+| `CDbl(expression)` | `ToDouble(expression)` |
+| `CDec(expression)` | `ToDecimal(expression)` |
+| `CInt(expression)` | `ToInt32(expression)` |
+| `CLng(expression)` | `ToInt64(expression)` |
+| `CSByte(expression)` | `ToSByte(expression)` |
+| `CShort(expression)` | `ToInt16(expression)` |
+| `CSng(expression)` | `ToSingle(expression)` |
+| `CStr(expression)` | `ToString(expression)` |
+| `CUInt(expression)` | `ToInt32(expression)` |
+| `CULng(expression)` | `ToInt64(expression)` |
+| `CUShort(expression)` | `ToInt16(expression)` |
 
 每个 .NET 对象都包含的 `ToString` 方法在 Visual Basic 和 C# 中同样可用。
 
@@ -2151,41 +2071,44 @@ Visual Basic 和 C# 共享一组共同的内置数据类型，有一个例外。
 
 | C# Type | Visual Basic Type | .NET Type |
 | --- | --- | --- |
-| bool | Boolean | System.Boolean |
-| byte | Byte | System.Byte |
-| char | Char | System.Char |
-| decimal | Decimal | System.Decimal |
-| double | Double | System.Double |
-| float | Single | System.Single |
-| int | Integer | System.Int32 |
-| long | Long | System.Int64 |
-| object | Object | System.Object |
-| sbyte | SByte | System.SByte |
-| short | Short | System.Int16 |
-| string | String | System.String |
-| uint | UInteger | System.UInt32 |
-| ulong | ULong | System.UInt64 |
-| ushort | UShort | System.UInt16 |
-| 不支持 | Date | System.DateTime |
+| `bool` | `Boolean` | `System.Boolean` |
+| `byte` | `Byte` | `System.Byte` |
+| `char` | `Char` | `System.Char` |
+| `decimal` | `Decimal` | `System.Decimal` |
+| `double` | `Double` | `System.Double` |
+| `float` | `Single` | `System.Single` |
+| `int` | `Integer` | `System.Int32` |
+| `long` | `Long` | `System.Int64` |
+| `object` | `Object` | `System.Object` |
+| `sbyte` | `SByte` | `System.SByte` |
+| `short` | `Short` | `System.Int16` |
+| `string` | `String` | `System.String` |
+| `uint` | `UInteger` | `System.UInt32` |
+| `ulong` | `ULong` | `System.UInt64` |
+| `ushort` | `UShort` | `System.UInt16` |
+| 不支持 | `Date` | `System.DateTime` |
 
 Visual Basic 包含内置的 `Date` 类型，它是框架 `System.DateTime` 类型的别名。C# 不包含行的日期/时间类型。相反，你必须在 C# 中直接使用 `System.DateTime`。
 
 有关内置数据类型的更多信息，请参阅本章其他部分的单独条目。
 
-decimal 数据类型
+`decimal` 数据类型
+
+
 
 Visual Basic 的内置 `Decimal` 数据类型与 C# 的 `decimal` 数据类型相同。两种类型都是 .NET `System.Decimal` 类型的别名。对于十进制字面量，C# 在值后使用 `M` 或 `m` 后缀；在 Visual Basic 中，使用 `D`、`d` 或 `@`。
 
 ```csharp
 decimal cost = 0m; // 或 0M
 ```
+
 ```vb
 Dim cost As Decimal = 0@ ' 或 0D 或 0d
 ```
 
 ## default 子句
 
-查看 switch 
+查看 `switch`
 
 ## default 运算符
 
@@ -2222,6 +2145,7 @@ Visual Basic 的 `Delegate` 语句等于 C# 的 `delegate` 语句。
 ```csharp
 public delegate int PerformCalculation(int x, int y);
 ```
+
 ```vb
 Public Delegate Function PerformCalculation(
     ByVal x As Integer, ByVal y As Integer) _
@@ -2245,7 +2169,7 @@ As Integer
 
 ## 析构函数
 
-在 C# 中，析构函数显示为波浪号 (~)。
+在 C# 中，析构函数显示为波浪号 `~`。
 
 ```csharp
 class Customer {
@@ -2305,7 +2229,7 @@ Loop Until content.Length = 0
 
 ## while 语句
 
-double 数据类型
+## double 数据类型
 
 Basic 的内置 `Double` 类型与 C# 的 `double` 数据类型相同。两种类型都是 .NET `System.Double` 的别名。对于双精度字面量，C# 在值后使用 `D` 或 `d` 后缀；在 Visual Basic 中，使用 `R`、`r` 或 `#`。
 
@@ -2343,21 +2267,21 @@ Dim complexValue As Object = New ExampleType()
 complexValue.ProcessData()
 ```
 
+## else 子句
 
-else 子句
 参见
 
-if 语句
+`if` 语句
 
 ## 入口点
 
 参见
 
-main 方法
+`main` 方法
 
-enum 语句
+## enum 语句
 
-Visual Basic 的 Enum 语句等于 C# 的 enum 语句。
+Visual Basic 的 `Enum` 语句等于 C# 的 `enum` 语句。
 
 ```csharp
 enum DoorState
@@ -2379,11 +2303,12 @@ End Enum
 
 这两种语言都将每个枚举成员的默认值为 0（对于第一个项目）或比前一个项目大 1，除非使用特定值进行覆盖（如前面的示例中对 `DoorState.Closed` 所做的那样）。C# 用逗号分隔成员， VB 则使用换行符。
 
-Visual Basic 和 C# 支持基于八种核心整数类型（byte, byte, short, ushort, int, uint, long, long）以及它们在 Visual Basic 中对应的类型的枚举，并默认使用 `int` (C#) 和 `Integer` (VB)。
+Visual Basic 和 C# 支持基于八种核心整数类型（`byte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `long`）以及它们在 Visual Basic 中对应的类型的枚举，并默认使用 `int` (C#) 和 `Integer` (VB)。
 
 ```csharp
 enum DoorState : long
 ```
+
 ```vb
 VISUAL BASIC
 enum DoorState As Long
@@ -2435,7 +2360,8 @@ Dim backDoor As DoorState = IsClosed
 ## 错误处理
 
 参见
-throw 语句, try 语句
+
+`throw` 语句, `try` 语句
 
 ## 事件处理程序
 
@@ -2501,9 +2427,10 @@ End Sub
 ```
 
 参见
-- += 事件订阅运算符
-- -= 取消订阅运算符
-- event 语句
+
+- `+=` 事件订阅运算符
+- `-=` 取消订阅运算符
+- `event` 语句
 
 ## event 修饰符
 
@@ -2532,8 +2459,9 @@ End Class
 ```
 
 参见
-- implicit 修饰符
-- operator 语句
+
+- `implicit` 修饰符
+- `operator` 语句
 
 ## 扩展方法
 
@@ -2559,13 +2487,16 @@ Friend Module LocalExtensions
 End Module
 ```
 
-extern alias 语句
+## extern alias 语句
+
 Visual Basic 没有等于 C# 的 `alias` 语句。类似的替代方案是使用反射间接加载并访问外部程序集的成员，这一任务超出了本书的范围。
 
 参见
+
 -命名空间别名限定符
 
-extern 修饰符
+## extern 修饰符
+
 与 `DllImport` 特性（来自 `System.Runtime.InteropServices`）配合使用时，`extern` 修饰符指示源自外部文件。
 
 ```csharp
@@ -2588,8 +2519,6 @@ Private Declare Sub InitAVI Lib "avifil32.dll"
 Alias "AVIFilInit" ()
 ```
 
-
-
 `Lib` 子句指示源文件，而可选的 `Alias` 子句用于当你想在代码中为方法指定不同名称时，标识库中的方法名。将 `Sub` 替换为 `Function` 以导入返回数据的方法，并根据需要更新签名。
 
 使用 `Declare` 语句导入的方法默认是 `Public`（公共）的。此外，导入的方法假设与 ANSI 字符集工作。要更改此默认值，请在 `Default` 关键字后跟随 `Unicode`、`Auto` 或（为了明确默认值）`Ansi` 关键字。
@@ -2599,9 +2528,11 @@ Alias "AVIFilInit" ()
 - 方法
 
 ### false 布尔字面量
+
 Visual Basic 的 `False` 字面量与 C# 的 `false` 字面量相同。
 
 ### 字段 (Fields)
+
 字段是在类或结构体（以及 VB 中的模块）内部声明的变量，它们位于任何方法之外。其语法与局部变量声明非常相似。（更多声明细节请参见本章的“变量”条目。）
 
 ```csharp
@@ -2615,7 +2546,8 @@ Private MonitoredValue As Integer = 0
 ```
 
 > ' "Dim" 是可选的，但在未使用访问修饰符时是必须的。
-Dim AnotherValue As Integer
+
+`Dim AnotherValue As Integer`
 
 字段声明中，访问修饰符是可选的。如果缺失，在 C# 类和结构体中，访问级别默认为 `private`。在 Visual Basic 类或模块中，字段默认是 `Private`；在结构体中使用时，默认是 `Public`。
 
@@ -2635,23 +2567,33 @@ Dim AnotherValue As Integer
 | 不支持 | WithEvents |
 
 另另引用
-- 数组声明、访问修饰符、标识符、初始化器、new 运算符、static 修饰符、变量
+
+
+
+- 数组声明、访问修饰符、标识符、初始化器、`new`运算符、`static`修饰符、变量
 
 ## field 修饰符
+
 参见
+
 属性 (Attributes)
 
 ## finally 子句
+
 参见
-try 语句 (try Statement)
+
+`try`语句 (`try` Statement)
 
 ## fixed 修饰符
+
 C# 的 `fixed` 修饰符用于创建固定大小的缓冲区，仅在 `unsafe` 上文中有效。由于 Visual Basic 不支持安全代码，因此 VB 中没有该修饰符的对应项。
 
 ## fixed 语句
+
 C# 的 `fixed` 语句用于防止 .NET 垃圾收集移动内存块，仅在 `unsafe` 上文中有效。由于 Visual Basic 不支持安全代码，因此 VB 中没有该语句的对应项。
 
 ## float 数据类型
+
 Visual Basic 的内置 `Single` 数据类型与 C# 的 `float` 数据类型相同。两种类型都是 .NET `System.Single` 类型的别名。对于单个字面量，C# 在值后使用 `F` 或 `f` 后缀；在 Visual Basic 中，请使用 `F`、`f` 或 `!`。
 
 ```csharp
@@ -2663,6 +2605,7 @@ Dim factor As Single = 0! // 或 0F 或 0f
 ```
 
 ## for 语句
+
 对于从起始数字到结束值、每次按标准量递增的简单 C# 循环，Visual Basic 的 `For` 循环是一个实用的替代。
 
 ```csharp
@@ -2693,10 +2636,6 @@ Next counter
 ```
 
 VB 语句中的循环计数器可以是整数（`Byte`、`Short`、`Integer` 或 `Long`，或它们的符号/无符号对应项）。
-
-（注：原文后续文本似乎存在大量重复和乱码片段，此处已根据逻辑翻译了核心部分，并遵循了不重复原文的原则。）
-
-
 
 ## 垃圾回收
 
@@ -2755,7 +2694,7 @@ End Sub
 
 在 C# 和 Visual Basic 中，泛型类型参数列表都可以包含特定的修饰符，为每个参数提供限制。C# 的 `where` 子句类似于 VB 的 `As` 子句，允许您在实例化时限制用于类型参数的特定类型。更多信息请参阅本章中的“where Clause”条目。在定义泛型接口时，可选修饰符指定与每个类型参数相关的变型性。默认情况下，类型参数是不变的。每种语言中的“out”修饰符指定协变性，“in”指定逆变性。
 
-# C#
+### C#
 
 ```csharp
 interface IVariant<TInvariant, out TCovariant,
@@ -2764,7 +2703,7 @@ interface IVariant<TInvariant, out TCovariant,
 }
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```visualbasic
 VISUAL BASIC
@@ -2777,7 +2716,7 @@ End Interface
 
 ## where Clause
 
-get Declaration
+`get` Declaration
 
 参见
 
@@ -2785,7 +2724,7 @@ get Declaration
 
 ## 全局命名空间别名 (global Namespace Alias)
 
-用于指示命名空间层次结构的根时，Visual Basic 的 Global 命名空间别名等同于 C# 的全局别名。
+用于指示命名空间层次结构的根时，Visual Basic 的 `Global` 命名空间别名等同于 C# 的全局别名。
 
 ```csharp
 C#
@@ -2794,7 +2733,7 @@ C#
 global:: System.Exception theProblem
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```visualbasic
 VISUAL BASIC
@@ -2807,15 +2746,15 @@ Dim theProblem As Global.System.Exception
 
 ## goto 语句
 
-对于到行标签的普通跳转，Visual Basic 的 GoTo 语句与 C# 的 goto 语句相同。
+对于到行标签的普通跳转，Visual Basic 的 `GoTo` 语句与 C# 的 `goto` 语句相同。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ## GoTo SkipProcessing
 
-在 switch 语句内部，C# 允许使用 `goto case` 和 `goto default` 将处理重定向到 switch 语句内的另一个块。VB 不支持这种语法。相反，为目标块添加行标签，并使用标准的 Goto 语句跳转到其他代码。
+在 `switch` 语句内部，C# 允许使用 `goto case` 和 `goto default` 将处理重定向到 `switch` 语句内的另一个块。VB 不支持这种语法。相反，为目标块添加行标签，并使用标准的 `Goto` 语句跳转到其他代码。
 
-## C# switch (token)
+### C# switch (token)
 
 ```csharp
 C# switch
@@ -2833,7 +2772,7 @@ switch (token)
 }
 ```
 
-# Visual Basic
+### Visual Basic
 ```visualbasic
 Visual Basic
 Select Case token
@@ -2853,18 +2792,16 @@ End Select
 
 ## group 查询表达式运算符 (LINQ)
 
-Visual Basic 的查询表达式运算符与 C# 的分组运算符并行。在 C# 中，单个表达式或范围变量由一个或多个分组表达式分组。在 Visual Basic 中，目标可以是表达式、范围变量、逗号分隔的表达式列表，或者完全缺失（这意味着所有范围变量或字段都应该是目标）。
+Visual Basic 的查询表达式运算符与 C# 的分组运算符并行。在 C# 中，单个表达式或范围变量由一个或多个分组表达式分组。在 Visual Basic 中，目标可以是表达式、范围变量、逗号分隔的表达式列表，或者完全缺失。
 
 ```csharp
 C#
 // ----- 范围变量的分组。
 var result = from item in Employees
     group item by item.Department;
-
 // ----- 特定字段的分组。
 var result = from item in Employees
 // -- group item.FullName by item.Department;
-
 // ----- 多个字段的分组。
 var result = from item in Employees
     group new (item.FullName, item.HireDate)
@@ -2877,13 +2814,11 @@ Visual Basic
 范围变量的分组。
 Dim result = From item In Employees
     Group By item.Department Into Group
-
 -----
 特定字段的分组。
 Dim result = From item In Employees
     Group item.FullName
     By item.Department Into Group
-
 -----
 多个字段的分组。
 Dim result = From item In Employees
@@ -2891,7 +2826,7 @@ Dim result = From item In Employees
     By item.Department Into Group
 ```
 
-为了对分组结果进行额外的处理，子句（C#）标识了后续子句中使用的临时标识符。在 Visual Basic 中，所有的 Group 表达式都要求 `Into` 部分，如之前的示例代码块所示。Group By 之后的子句引用分组元素，通常不需要标识。
+为了对分组结果进行额外的处理，子句（C#）标识了后续子句中使用的临时标识符。在 Visual Basic 中，所有的 `Group` 表达式都要求 `Into` 部分。
 
 ```csharp
 C#
@@ -2907,7 +2842,7 @@ Dim result = From item In Employees
     Select New { Dept = Group.Key, Count = Group.Count()
 ```
 
-为了对分组结果进行额外的处理，子句（C#）标识了后续子句中使用的临时标识符。在 Visual Basic 中，所有支持聚合函数的 Group 表达式中都要求有 `Into` 部分。这种语法在 C# 中并不直接支持，而是需要一个。
+为了对分组结果进行额外的处理，子句（C#）标识了后续子句中使用的临时标识符。在 Visual Basic 中，所有支持聚合函数的 `Group` 表达式中都要求有 `Into` 部分。
 
 ```csharp
 C#
@@ -2932,7 +2867,7 @@ Dim result = From item In Employees
 
 C# 和 Visual Basic 使用通用的命名规则，允许混合字母、数字和下划线，但也有限制，例如标识符不能以数字开头。
 
-C# 中的标识符是区分大小的。在同一方法中命名为 `customerName` 和 `CustomerName` 的变量不会冲突。Visual Basic 中的标识符是不区分大小的。在 VB 中，如果两个标识符转换为全写后相同，则它们是相同的。在 C# 中创建一个具有两个公开或成员名称的程序集，当被 Visual Basic 项目调用时可能会产生问题，尽管 VB 有规则在冲突时尝试识别最可访问的项。
+C# 中的标识符是区分大小的。在同一方法中命名为 `customerName` 和 `CustomerName` 的变量不会冲突。Visual Basic 中的标识符是不区分大小的。
 
 Visual Basic 允许为类型及其一个成员赋予相同的（不区分大小的）名称。
 
@@ -2945,9 +2880,7 @@ Public Class ItemData
 End Class
 ```
 
-C# 不允许这种组合。与其封装类型相同。如果您创建一个具有这种类型和成员共享命名的 Visual Basic 程序集，C# 项目将无法直接访问该成员。
-
-C# 允许标识符包含 `\hhhh` 形式的 Unicode 转义序列，其中 `hhhh` 是 4 位或 8 位的十六进制值。十六进制代码必须解析为被认为有效的字符，通常是字母数字字符的变体。
+C# 不允许这种组合。
 
 ```csharp
 C#
@@ -2957,14 +2890,13 @@ nameof(p00E8e), p00E8e));
 // 显示：pére is French for 'father'
 ```
 
-Visual Basic 不包含这些序列的支持。您可以在 VB 的标识符名称中使用 Unicode 字符，但必须作为标准字符输入代码中，而不是作为转义序列。
+Visual Basic 不包含这些序列的支持。
 
 ```visualbasic
 Visual Basic
 Dim pére As String = "French for 'father"
 MessageBox.Show(String.Format("{0} is {1}",));
 ```
-
 
 ```cs
 NameOf(père), père));
@@ -2977,19 +2909,18 @@ NameOf(père), père));
 long @for = 0;
 ```
 
-Visual Basic
 ```vb
 Dim [For] As Long = 0&
 ```
 
-微软建议标识符名称使用 Pascal 命名法（大驼峰命名）或 camel 命名法（驼峰命名）。在 Pascal 命名法中，名称中的每个独立单词的首字母都大写，包括标识符的开头。Camel 命名法类似，但首字母小写。
+微软建议标识符名称使用 Pascal 命名法（大驼峰命名）或 camel 命名法（驼峰命名）。
 
 ```csharp
 int PascalCaseExample;
 int camelCaseExample;
 ```
 
-如 Visual Studio 文档所示，参数名、局部变量名和类型内的保护实例字段推荐 camel 命名法。所有其他标识符（包括行标签）应使用 Pascal 命名法。
+如 Visual Studio 文档所示，参数名、局部变量名和类型内的保护实例字段推荐 camel 命名法。所有其他标识符应使用 Pascal 命名法。
 
 ## if 语句
 
@@ -3014,18 +2945,19 @@ Else
 End If
 ```
 
-VB 中的每个条件都以 `If` 或 `ElseIf` 开始，并以 `Then` 结束相应的逻辑。整个语句以 `End If` 结束。Visual Basic 包含了该语句的压缩版本，将 `Then` 和 `Else` 部分放在同一逻辑行上。（这种语法在 C# 中也有效，但那是由于空格的使用方式，而不是因为 `if` 语句的语法，就像一样。）
+VB 中的每个条件都以 `If` 或 `ElseIf` 开始，并以 `Then` 结束相应的逻辑。整个语句以 `End If` 结束。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 -- 没有 Else 组件的简单 If。
 If problemOccurred then ErrorField.Visible = True
-
 -- 带有 Else 组件的简单 If。
 If (IsValid(zipCode)) = True Then
     city = GetZipCode(zipCode) Else city = "Unknown"
 ```
+
+
 
 在这个语句的简单版本中，不使用 `End If` 标记。如第二个示例所示，如果逻辑行跨越了多个物理行，你可能需要包含一个行连续连接符 `_`。
 
@@ -3035,7 +2967,7 @@ If (IsValid(zipCode)) = True Then
 
 C# 的 `implicit` 修饰符表示从一种类型到另一种重载转换可以隐式执行，因为目标类型足够宽，允许源类型的所有可能值。
 
-# C#
+### C#
 
 ```csharp
 class SmallType
@@ -3051,7 +2983,7 @@ class SmallType
 
 等效的 Visual Basic 重载使用 `Widening`（扩展）修饰符来表示这种转换。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Class SmallType
@@ -3113,7 +3045,7 @@ string readyUse = null;
 int fromExpression = 123;
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Const closeToPi As Decimal = 3.2
@@ -3126,20 +3058,18 @@ Dim fromExpression As Integer = 123
 
 对象初始化器允许你设置字段和属性。在 Visual Basic 中，这作为 `With` 子句的一部分出现，并且每个成员都带有 `.` 前缀。
 
-# C#
+### C#
 
 ```csharp
 // 显式类型
 Animal cat = new Animal {Age = 5, Name = "Fluffy"};
-
 // 隐式类型
 var kitten = new Animal {Age = 0, Name = "Kitty"};
-
 // 自定义构造函数
 Employee boss = new Employee("John Smith") {Title = "President"};
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 ' 显式类型
@@ -3152,14 +3082,13 @@ Dim boss As New Employee("John Smith") With {.Title = "President"}
 
 C# 和 Visual Basic 均可以在实例声明时初始化数组和集合。注意 Visual Basic 在初始化集合时使用了 `From` 子句。
 
-# C#
+### C#
 
 ```csharp
 // 数组。在 explicitSize 声明中引用上限而不是大小。
 int[] implicitSize = new int[] {3, 5, 7};
 int[] explicitSize = new int[] {13, 19, 23};
 int[] simpler = {29, 31, 37};
-
 List<int> basicList = new List<int>{1, 2, 3, 4, 5};
 Dictionary<int, string> dayInfo = new Dictionary<int, string>{{0, "Sunday"}, {"Monday"}};
 int[][] jagged = new int[][] {{1, 2}, {3, 4}, {5, 6}, {7, 8}};
@@ -3170,7 +3099,6 @@ int[][] jagged = new int[][] {{1, 2}, {3, 4}, {5, 6}, {7, 8}};
 Dim implicitSize As Integer() = {3, 5, 7}
 Dim explicitSize As Integer() = {13, 19, 23}
 Dim simpler As Integer() = {29, 31, 37}
-
 ' 集合
 Dim basicList As New List(Of Integer) From {1, 2, 3, 4, 5}
 Dim dayInfo As New Dictionary(Of Integer, String) From {{0, "Sunday"}, {"Monday"}}
@@ -3236,7 +3164,6 @@ End Class
 ```csharp
 // 可写属性
 public string CoreName { get; set; } = "Unknown";
-
 // 只读属性
 public string CoreName { get; } = "Unknown";
 ```
@@ -3244,14 +3171,9 @@ public string CoreName { get; } = "Unknown";
 ```vb
 '----- 只读属性
 Public Property CoreName As String = "Unknown"
-
 '----- 只读属性
 Public ReadOnly Property CoreName As String = "Unknown"
 ```
-
-
-
-
 
 # 从2015年开始，C# 有了用于初始化索引集合的新语法。
 
@@ -3296,7 +3218,7 @@ End Interface
 
 C# 中的接口可以包含方法、属性、事件和索引器。Visual Basic 支持所有这些成员，还可以包含子接口、类和结构，而这些内容都无法包含在 C# 接口中。
 
-# C#
+### C#
 
 ```csharp
 interface IOptions
@@ -3304,17 +3226,15 @@ interface IOptions
     // 有返回值和无返回值的方法
     int MethodWithData(string incoming);
     void WorkOnlyMethod();
-
     // 属性和索引器
     string Name {get; set;}
     string this[int index] {get;}
-
     // 事件（委托在别处定义）
     event DelegateSignature EventName;
 }
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Interface IOptions
@@ -3322,26 +3242,21 @@ Interface IOptions
     Function MethodWithData(
         ByVal incoming As String) As Integer
     Sub WorkOnlyMethod()
-
     ' 属性和索引器
     Property() As String
     Default ReadOnly Property Item(
         ByVal index As Integer) As String
-
     ' 事件（定义和未定义委托）
     Event EventFromDelegate As DelegateSignature
     EventDefinedInline(ByVal source As Object)
-
     ' 类
     Class SubordinateClass
         ' ---- 成员在这里
     End Class
-
     ' 结构
     Structure SubordinateStructure
         ' ---- 成员在这里
     End Structure
-
     ' 接口
     Interface ISubordinate
         ' ---- 成员在这里
@@ -3431,6 +3346,11 @@ End Function
 当实现为只读属性时，Visual Basic 使用 `Yield` 语句。
 
 ```csharp
+```
+
+
+
+```csharp
 public IEnumerable<int> FirstFivePrimes()
 {
     yield return 2;
@@ -3440,9 +3360,9 @@ public IEnumerable<int> FirstFivePrimes()
     yield return 11;
 }
 ```
+
 ```vb
-Public Iterator Function FirstFivePrimes() As
-IEnumerable(Of Integer)
+Public Iterator Function FirstFivePrimes() As IEnumerable(Of Integer)
     Yield 2
     Yield 3
     Yield 5
@@ -3451,15 +3371,11 @@ IEnumerable(Of Integer)
 End Function
 ```
 
-
-
-
-
 ## 字面量 (Literals)
 
 C# 和 Visual Basic 都支持各种值类型字面量，尽管这些语言之间存在一些显著的功能差异。
 
-## Unicode 序列
+### Unicode 序列
 
 C# 中的字符串和字符字面量支持 Unicode 转义序列，以 `\U` 或 `\u` 转义代码前缀。
 
@@ -3470,7 +3386,7 @@ char currencySymbol = '\u00a3';
 
 Visual Basic 不支持此类序列。你必须直接在字面量中嵌入字符，或者使用 VB 的 `ChrW` 函数获取 Unicode 表示。
 
-# Visual Basic
+### Visual Basic
 
 ```vb
 ' ----- 直接嵌入符号。
@@ -3484,7 +3400,7 @@ Dim currencySymbol As Char = ChrW(&H00A3)
 
 C# 的 `\x` 变长度十六进制字符转义序列在 Visual Basic 中不支持。
 
-## 字符和字符串字面量
+### 字符和字符串字面量
 
 C# 支持两种字符串字面量：支持嵌入转义序列的标准字面量；以及以 `@` 符号开头的逐字字面量（verbatim string literals）。Visual Basic 的字符串与 C# 的逐字字面量相同，包括嵌入双引号符号的方法。
 
@@ -3492,7 +3408,7 @@ C# 支持两种字符串字面量：支持嵌入转义序列的标准字面量�
 string notice = @"This is verbatim ""text.""
 ```
 
-# Visual Basic
+### Visual Basic
 
 ```vb
 Dim notice As String = ""This is verbatim"" text." 
@@ -3500,13 +3416,13 @@ Dim notice As String = ""This is verbatim"" text."
 
 C# 的标准字符串字面量在 Visual Basic 中没有直接对应物。要模拟 C# 的转义序列，你必须将这些特殊字符变体连接到目标字面量中。VB 包含这些符号的一些内置字面量（在 `Microsoft.VisualBasicConstants` 中，或者你可以使用 .NET 基类库提供的，例如 `System.Environment.NewLine`）。你还可以使用 Visual Basic 的 `Chr` 或 `ChrW` 函数根据其 ASCII 或 Unicode 数值返回字符。
 
-# C#
+### C#
 
 ```csharp
 string endLine = "\r\n";
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Dim endLine As String = vbCrLf
@@ -3529,7 +3445,7 @@ Dim endLine As String = vbCrLf
 | 单引号 (Single Quote) | 0x27 | \' | \'within text |
 | 垂直制表符 (Vertical Tab) | 0x0b | \v | vbVerticalTab |
 
-## Visual Studio 2015 新功能
+### Visual Studio 2015 新功能
 
 C# 的逐字字面量可以跨越物理行边界，导致在字面量字符串中嵌入换行符。从2015 年开始，Visual Basic 也支持此功能。
 
@@ -3537,7 +3453,7 @@ C# 的逐字字面量可以跨越物理行边界，导致在字面量字符串�
 string multiLine = @"First Line\nSecond Line";
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 ' ------ 仅限2015 及后续版本。
@@ -3546,7 +3462,7 @@ Dim multiLine As String = "First Line\nSecond Line"
 
 2015 之前的 Visual Basic 版本不允许开放字符串跨越物理行。根据需要将行结束连接到字符串中。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Dim multiLine As String = "First Line" & vbCrLf & _
@@ -3559,17 +3475,17 @@ C# 中的字符字面量出现在单引号中。在 VB 中，使用双引号并�
 char oneDigit = '0';
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Dim oneDigit As Char = "0"c
 ```
 
-## Visual Basic 2015 新功能
+### Visual Basic 2015 新功能
 
 C# 和 Visual Basic 都增加了字符串插值（string interpolation），一种使用字符串字面量生成格式化字符串的方法。两种语言对于此类字符串共享相同的语法，以 `$` 符号作为前缀，并使用大括号来包含插值部分。
 
-## 整数字面量
+### 整数字面量
 
 在 C# 中，如果值符合该类型，普通整数字面量将被类型化为 `int`。否则，它会被强制转换为 `uint`、`long` 或 `ulong` 中的最小类型。在 Visual Basic 中，整数字面量默认是 `Integer`，如果对于该类型太大，则为 `Long`。每种语言都支持一组后缀来强制整数字面量变为特定类型。以下示例包含了每种语言中的长整数值。
 
@@ -3577,7 +3493,7 @@ C# 和 Visual Basic 都增加了字符串插值（string interpolation），一�
 PassAlongValue(123L);
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 PassAlongValue(123&)
@@ -3594,7 +3510,7 @@ PassAlongValue(123&)
 | Long | L | & or L |
 | Unsigned Long | UL or LU | UL |
 
-## 浮点字面量
+### 浮点字面量
 
 在 C# 中，如果值符合该类型，浮点字面量将被类型化为 `double`。否则，它会被强制转换为 `float`、`double` 或 `decimal` 中的最小类型。在 Visual Basic 中，浮点字面量默认是 `Double`，如果对于该类型太大，则为 `Single`。每种语言都支持一组后缀来强制浮点字面量变为特定类型。
 
@@ -3604,11 +3520,11 @@ PassAlongValue(123&)
 | Double | D | None |
 | Decimal | M | None |
 
-## 布尔字面量
+### 布尔字面量
 
 在 C# 中，布尔字面量是 `true` 和 `false`。在 Visual Basic 中，它们是 `True` 和 `False`。
 
-## 十进制和八进制字面量
+### 十进制和八进制字面量
 
 在 C# 中，十六进制字面量以 `0x` 前缀，八进制字面量以 `0o` 前缀。在 Visual Basic 中，十六进制字面量以 `&H` 前缀。
 
@@ -3616,13 +3532,11 @@ PassAlongValue(123&)
 int hex = 0x1A;
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Dim hex As Integer = &H1A
 ```
-
-
 
 ```csharp
 {
@@ -3630,7 +3544,7 @@ Dim hex As Integer = &H1A
 }
 ```
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vbnet
 Shared Friend Sub Main()
@@ -3638,29 +3552,29 @@ Shared Friend Sub Main()
 End Sub
 ```
 
-## 退出应用程序
+### 退出应用程序
 
 应用程序通常在到达 `Main` 方法结束时退出。可以通过以下功能之一让程序提前退出，按从礼貌到最粗鲁的方式排序：
 
-+   - 调用 `System.Windows.Forms.Application.Exit()`
--   调用 `System.Environment.Exit(exitCode)`
--   使用 Visual Basic 的 `End` 语句
++ 调用 `System.Windows.Forms.Application.Exit()`
+- 调用 `System.Environment.Exit(exitCode)`
+- 使用 Visual Basic 的 `End` 语句
 
 Visual Basic 包含了其 Visual Basic 模型（Application Model），通过项目属性中的 `Enable Application Framework` 字段激活。激活后，该模型能够启用提供更结构化启动过程的功能，以及对整个应用程序范围内的未处理错误监控的支持。
 
 有关这些功能的更多信息，请参阅 Visual Studio 文档。你还可以阅读本书第 3 章中的以下条目：
 
-+   - `MinimumSplashScreenDisplayTime` 属性
--   `NetworkAvailabilityChanged` 事件 (My.Application)
--   `SplashScreen` 属性
--   `Startup` 事件
--   `StartupNextInstance` 事件
--   `UnhandledException` 事件
++ `MinimumSplashScreenDisplayTime` 属性
+- `NetworkAvailabilityChanged` 事件 (My.Application)
+- `SplashScreen` 属性
+- `Startup` 事件
+- `StartupNextInstance` 事件
+- `UnhandledException` 事件
 
-### method 修饰符
+#### method 修饰符
 参见 特性 (Attributes)
 
-## 方法
+### 方法
 
 Visual Basic 的 `Sub` 语句等同于返回 `void` 值的 C# 方法。
 
@@ -3672,7 +3586,7 @@ public void LogError(string errorText)
 }
 ```
 
-# Visual Basic
+### Visual Basic
 
 ```vbnet
 Public Sub LogError(ByVal errorText As String)
@@ -3685,7 +3599,7 @@ End Sub
 
 类似地，Visual Basic 中的 `Function` 语句对应于 C# 中返回 `void` 以外任何类型的方法。其语法与 `Sub` 语句相似，但使用 `Function` 关键字代替 `Sub`。参数列表后面跟着一个带有返回类型的 `As` 子句。
 
-# C#
+### C#
 
 ```csharp
 public bool ParseTime(string timeText)
@@ -3695,7 +3609,7 @@ public bool ParseTime(string timeText)
 }
 ```
 
-# Visual Basic
+### Visual Basic
 
 ```vbnet
 Public Function ParseTime(ByVal timeText As String,
@@ -3708,7 +3622,7 @@ End Function
 
 在 C# 中对接口成员执行显式实现时，方法名带有接口名称的前缀。
 
-# C#
+### C#
 
 ```csharp
 public void IVocal.Speak(string textToSpeak)
@@ -3717,7 +3631,7 @@ public void IVocal.Speak(string textToSpeak)
 
 Visual Basic 使用 `Implements` 子句来指示方法正在显式实现哪个接口成员。
 
-# Visual Basic
+### Visual Basic
 
 ```vbnet
 Public Sub Speak(ByVal textToSpeak As String)
@@ -3726,7 +3640,7 @@ Public Sub Speak(ByVal textToSpeak As String)
 
 当用于对使用 VB 的 `WithEvents` 修饰符定义的对象实现事件处理器时，`Handles` 子句会识别源实例和事件。
 
-# Visual Basic
+### Visual Basic
 
 ```vbnet
 Public Sub Button1_Click(ByVal sender As Object)
@@ -3758,21 +3672,17 @@ Public Sub Button1_Click(ByVal sender As Object)
 
 *(注：由于提供的原始文本存在大量重复和碎片，上述译文已根据要求提取了核心逻辑并翻译)*
 
+在数据库交互中处理“null”值时，请使用 `System.Dbnull` 而不是 `null`。在 Visual Basic 中，`Nothing` 字面量具有类似的作用。
 
-
-
-
-(在数据库交互中处理“null”值时，请使用 System.Dbnull 而不是 null。) 在 Visual Basic 中，Nothing 字面量具有类似的作用。
-
-```
+```vb
 VISUAL BASIC
 Dim oneManager As Employee = Nothing  ' 没有实例
 Dim optionalNumber As Integer = Nothing  ' 没有值
 ```
 
-然而，Nothing 也可以赋值给标准的（非可空）值类型，在这种情况下，它的功能类似于 C# 的默认运算符，将默认值分配给变量。
+然而，`Nothing` 也可以赋值给标准的（非可空）值类型，在这种情况下，它的功能类似于 C# 的默认运算符，将默认值分配给变量。
 
-```
+```vb
 VISUAL BASIC
 Dim requiredNumber As Integer = Nothing  ' 设置为 0
 ```
@@ -3789,21 +3699,21 @@ int requiredNumber = null;
 int requiredNumber = default(int);
 ```
 
-当在 C# 中将变量或表达式与 null 进行比较时，请使用 == 和 != 比较运算符。
+当在 C# 中将变量或表达式与 null 进行比较时，请使用 `==` 和 `!=` 比较运算符。
 
 ```c#
 if (customerRecord == null)
 ```
 
-你不能在 Visual Basic 中使用等价的比较运算符 (= 和 <>) 来检查 Nothing。相反，请使用 VB 的 Is 和 IsNot 运算符来将表达式与 Nothing 进行比较。
+你不能在 Visual Basic 中使用等价的比较运算符 (= 和 <>) 来检查 Nothing。相反，请使用 VB 的 `Is` 和 `IsNot` 运算符来将表达式与 Nothing 进行比较。
 
-```
+```vb
 VISUAL BASIC
 ' ----- 检查实例是否存在。
 If (customerRecord Is Nothing) Then
 ```
 
-```
+```vb
 VISUAL BASIC
 ' ----- 检查实例是否存在。
 If (customerRecord Is Nothing) Then
@@ -3816,7 +3726,7 @@ Visual Basic 传播或丢弃 Nothing 的方式与 C# 使用 null 的方式有所
 string result = (5 + null).ToString();
 ```
 
-```
+```vb
 VISUAL BASIC
 ' ----- result 将被设置为 "5"。
 Dim result As String = (5 + Nothing).ToString()
@@ -3833,439 +3743,48 @@ else
     result = "Not Empty";
 ```
 
-VISUAL BASIC
-' ----- result 将被设置为 "Empty"。
-Dim testValue As String = Nothing
-If (testValue = "") Then
-Else
-    result = "Not Empty"
-End If
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
 ```
-
-要测试 VB 字符串是否未赋值，请改用 Nothing。
-
-```
-Visual Basic
-If (testValue Is Nothing) Then
-```
-
-另请参阅
-
-default 运算符
-
-## 可空类型
-
-C# 和 Visual Basic 都在值类型名称后使用 ? 符号来表示可空值类型。
-
-```c#
-int? optionalNumber = null;
-```
-
-VISUAL BASIC
-Dim optionalNumber As Integer? = Nothing
-
-' ----- 这也是一种有效语法。
-Dim optionalNumber? As Integer = Nothing
-```
-
-在 C# 中，将可空变量与 null 进行比较是有效的。
-
-```c#
-if (optionalNumber == null)
-```
-
-在 Visual Basic 中，你不能直接通过这种方式将实例与 Nothing 进行。相反，请使用 Is 或 IsNot 运算符，或者使用变量的 HasValue 方法。
-
-Visual Basic
-
-```vb
-' ----- 这可以替代 = 或 <> 起作用。
-If (optionalNumber Is Nothing) Then
-
-' ----- 这在两种语言中都有效。
-If (optionalNumber.HasValue() = False) Then
-```
-
-在两种语言中，可空语法都是 Nullable<T>（C# 中）或 Nullable(Of T）（Visual Basic 中）的别名。
-
-## object 数据类型
-
-Visual Basic 的内置 Object 数据类型与 C# 的 object 数据类型相同。两种类型都是 .NET System.Object 类型的别名。
-
-```c#
-object result = null;
-```
-
-VISUAL BASIC
-Dim result As Object = Nothing
-```
-
-## 对象初始化器
-
-参阅
-初始化器
-
-## 运算符重载
-
-参阅
-operator 语句
-
-Visual Basic 的 Operator 语句等于 C# 的 operator 语句。在两种语言中，“operator”关键字后面都跟着被重载的具体运算符符号，操作数以参数的形式出现在方法风格定义中。
-
-```c#
-public static operator +(Team op1, Player op2)
-{
-    // ----- 将玩家添加到团队的逻辑，然后...
-    return updatedTeam;
-}
-```
-
-VISUAL BASIC
-Public Shared Operator +(ByVal op1 As Team,
-    ByVal op2 As Player) As Team
-    ' 将玩家添加到团队的逻辑，然后...
-    Return updatedTeam
-End Operator
-```
-
-重载在 C# 中必须声明为 public static，在 Visual Basic 中等同于 Public Shared。VB 还允许 Overloads 修饰符出现在 Public 和 Shared 之间，但它对重载的逻辑没有影响。在两种语言中，对于一元运算符，参数列表将仅包含一个参数。
-
-下表列出了种语言中可以重载的不同运算符。
-
-| 类型 | C# | Visual Basic |
-| --- | --- | --- |
-| 加法 | + | + |
-| And-also False  own | false | IsFalse |
-| 位取反 | ~ | Not |
-| 字符串拼接 | + | & |
-| 逻辑与 | & | And |
-| 转换 | | CType |
-| 递减 | -- | Not |
-| 逻辑或 | | Or |
-| 除法 | / | / |
-| 等于 | == | = |
-| 异或 | ^ | Xor |
-| 幂 | | ^ |
-| 大于 | > | > |
-| 大于等于 | | >= |
-| 不等于 | != | <> |
-| 左移 | << | << |
-| 右移 | >> | >> |
-| 减法 | - | - |
-| 一元加法 | + | + |
-| 取模 | % | Mod |
-| 乘法 | * | * |
-| 否定 | ! | Not |
-| And-else True | true | IsTrue |
-| 模式匹配 | | Like |
-
-在两种语言中，必须重载的运算符成对出现。
-
-| 类型 | C# | Visual Basic |
-| --- | --- | --- |
-| 等于 | == | = |
-| 大于 | > | < |
-| 大于等于 | >= | <= |
-| 不等于 | != | <> |
-
-运算符重载在每种语言中支持以下修饰符。
-
-| C# 修饰符 | Visual Basic 修饰符 |
-|---|---|
-| explicit | Narrowing |
-| extern | Not supported |
-| implicit | Widening |
-| public | Shared |
-| static | Overloads |
-| Not supported | Shadows |
-| | | |
-
-自定义转换在两种语言中都是作为运算符重载的一部分实现的。在 C# 中，源类型出现在参数列表中，目标类型作为运算符名。在 Visual Basic 中，CType 用作运算符名。源类型出现在参数列表中，目标类型作为返回类型。在两种语言中，包含转换的类型必须匹配源类型或目标类型。
-
-```c#
-class CountMonitor
-{
-public static operator int(
-    CountMonitor source)
-    {
-    // 将 CountMonitor 转换为 int，然后...
-    return newInt;
-    }
-public static operator CountMonitor(
-    int source)
-    {
-    // 将 int 转换为 CountMonitor，然后...
-    return newCountMonitor;
-    }
-}
-```
-
-VISUAL BASIC
-
-```vb
-Class CountMonitor
-    Public Shared Narrowing Operator CType(
-        ByVal source As CountMonitor) As Integer
-        '--- 将 CountMonitor 转换为 Integer，然后...
-        return newInt
-    End Operator
-    Public Shared Widening Operator CType(
-        ByVal source As Integer) As CountMonitor
-        '--- 将 Integer 转换为 CountMonitor，然后...
-        return newCountMonitor
-    End Operator
-End Class
-```
-
-Visual Basic 的 Widening 修饰符等同于 C# 的 implicit 修饰符，而 VB 的 Narrowing 修饰符匹配 C# 的 explicit 修饰符。每个自定义转换声明中必须使用这些修饰符之一。
-
-运算符优先级和结合性
-当表达式包含多个运算符时，C# 和 Visual Basic 都使用特定的优先级和结合性规则来确定在没有分组括号的情况下，先应用哪些操作。下表列出了 C# 的优先级规则，顺序从最高（先应用）到最低（最后应用）。相同优先级的运算符在应用顺序上被视为相等。
-
-| 类别 | 运算符 |
-|---|---|
-| 主要 | x, y, f(x), a[x], x++, x-, new, typeof, default, checked, unchecked, delegate, nameof |
-| 一元 | +, -, !, ~, ++x, -x, (T)X |
-| 乘法 | *, /, % |
-
-
-
-
-
-| 加减法 | +, - |
-| 移位 | <<, >> |
-| 比较 | <, >, <=, >=, is, as |
-| 等于 | ==, != |
-| 逻辑与 | & |
-| 异或 | ^ |
-| 逻辑或 | | |
-| 条件逻辑与 | && |
-| 条件逻辑或 | || |
-| 合并运算符 | ?? |
-| 条件运算符 | ?: |
-| 赋值和 lambda | =, *=, /= %, +=, -= <=, >=, &&, =, ^, |, =, => |
-
-下表列出了按优先级从高到低的 Visual Basic 运算符。
-
-| 类别 | 运算符 |
-| :--- | :--- |
-| Await | |
-| 幂 | ^ |
-| 一元 | +, - |
-| 乘除法 | *, / |
-| 整数除法 | \ |
-| 取模 | Mod |
-| 加减法 | +, - |
-| 字符串连接 | & |
-| 移位 | <<, >> |
-
-| 比较 | <=, <>, <=, >, >=, Is, IsNot, Like, TypeOf...Is, TypeOfIsNot |
-| 否定 | Not |
-| 逻辑与 | And, AndAlso |
-| 逻辑或 | Or, OrElse |
-| 异或 | Xor |
-
-在这两种语言中，赋值运算符都是右结合的；运算符的右侧先求值。对于相同优先级的其他二元运算符，操作是左结合的；从左到右先确定运算符左侧的表达式。例如，x + y + z 的求值方式为 (x + y) + z。两个例外是 C# 的 `?:` 条件运算符和 `??` 空合并运算符，两者都是右结合的。有关这如何影响条件操作的示例，请参见本章中的“?: 条件运算符”条目。
-
-## 运算符
-下表列出了两种语言中提供的运算符。使用表中的“参见”列可以定位本章中的相关条目。
-
-| C# 运算符 | Visual Basic 运算符 | 参见 |
-| :--- | :--- | :--- |
-| ! | Not | ! 否定运算符 |
-| != | <> | != 比较运算符 |
-| % | Mod | % 取模运算符 |
-| %= | 不支持 | %= 赋值运算符 |
-| & | And (仅限逻辑与) | & 地址运算符 & 逻辑与运算符 |
-| && | AndAlso | && 逻辑与运算符 |
-| &= | 不支持 | &= 赋值运算符 |
-| * | * (乘法运算符) | * 解引用运算符 * 乘法运算符 |
-| *= | *= | *= 赋值运算符 |
-| + | + or & | + 加法运算符, 一元加运算符 |
-| ++ | 不支持 | ++ 递增运算符 |
-| += | += (仅限赋值) | += 赋值运算符, += 事件订阅运算符 |
-| - | - | - 减法运算符, - 一元负运算符 |
-| -- | 不支持 | -- 递减运算符 |
-| -= | -= (仅限赋值) | -= 赋值运算符 -= 事件取消订阅运算符 |
-| -> | 不支持 | -> 成员访问运算符 |
-| ? | ? | ?. 空条件运算符 |
-| . | . | . 成员访问运算符 |
-| / | / or \ | / 除法运算符 |
-| /= | /= or \ | /= = 赋值运算符 |
-| ?: | If(x,y,z) | ?: 条件运算符 |
-| < | < | < 比较运算符 |
-| << | << | << 左移位运算符 |
-| <= | <= | <= = 赋值运算符 |
-| <= | <= | <= = 比较运算符 |
-| = | = | = = 赋值运算符 |
-| == | = | == = 比较运算符 |
-| => | Function(), Sub() | => > Lambda 运算符 |
-| > | > | > 比较运算符 |
-| >= | >= | >= = 比较运算符 |
-| >> | >> | 右移位运算符 |
-| >= | == | 赋值运算符 |
-| ?? | If(x,y) | ?? 合并运算符 |
-| [ ] | ] | 成员访问运算符 |
-| ^ | | | ^ 异或运算符 |
-| = | 不支持 | ^ = 赋值运算符 |
-| | | Or | | 逻辑或运算符 |
-| |= | 不支持 | = 赋值运算符 |
-| || | OrElse | || 逻辑或运算符 |
-| ~ | Not | ~ 位取反运算符 |
-
-## 参见
-- 赋值运算符、运算符优先级和结合性
-- 可选参数
-
-在 C# 方法签名中，任何包含赋值的参数都成为调用过程的可选参数。
-
-```csharp
-// ------ times 参数是可选的，默认值为 2。
-public string CopyText(string original, int times = 2)
-```
-
-Visual Basic 的可选参数还包括此类常量表达式的赋值，以及 `Optional` 修饰符。
-
-```vb
-' The times 参数是可选的，默认值为 2。
-Public Function CopyText(ByVal original As String,
-OptionalVal times As Integer = 2) As String
-```
-
-两种语言中关于可选参数使用的规则是类似的：非可选参数不能出现在可选参数之后；参数数组和可选参数不能一起使用；以此此类推。
-
-## 参见
-- 标点符号、参数和变量、方法
-
-## orderby 查询表达式运算符 (LINQ)
-Visual Basic 的 Order By 表达式运算符与 C# 的 `orderBy` 运算符相同。两种语言都支持逗号分隔的排序字段列表。每个字段默认按升序排序，或者显式地使用 `ascending` (C#) 或 `Ascending` (VB) 选项。要按降序排序，请使用 `descending` (C#) 或 `Descending` (VB) 选项。
-
-在 C# 中，`orderby` 子句必须出现在 `select` 子句之前。Visual Basic 在这些子句的位置提供了更大的灵活性。
-
-```csharp
-var result = from oneEmployee
-orderby oneEmployee
-select oneEmployee
-```
-
-```vb
-Dim result = From oneEmployee in Employees
-orderby oneEmployee
-select oneEmployee.FullName
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
-
-
-## params 修饰符
-
-查看属性
-
-参数数组
-
-查看 params 修饰符
-
-参数
-
-查看参数和参数、方法
-
-params 修饰符
-
-Visual Basic 的 ParamArray 修饰符在功能上与 C# 的 params 修饰符相同。
-
-```csharp
-public int AverageValue(params int[] values)
-```
-
-```visual basic
-Public Function AverageValue(
-    ByVal ParamArray values() As Integer) As Integer
-```
-
-## partial 修饰符
-
-应用于类、结构和接口时，C# 的 partial 修饰符允许你将类型拆分到多个文件中。每个部分必须包含 partial 修饰符。
-
-```csharp
-// ----- 来自第一个 *.cs 文件。
-partial class ComplexContent
-{
-  // ----- 在此处定义了一些成员。
-}
-// ----- 来自第二个 *.cs 文件。
-partial class ComplexContent
-{
-  // ----- 在此处定义了其他成员。
-}
-```
-
-Visual Basic 的 Partial 修饰符具有相同的功能。你最多可以在部分中省略 Partial 关键字。
-
-```visual basic
-' 来自第一个 *.vb 文件。
-Partial Class ComplexContent
-'' --- 在此处定义了一些成员。
-
-End Class
-
-' ---- 来自第二个 *.vb 文件。
-
-Class ComplexContent
-' ---- 在此处定义了其他成员。该部分
-"Partial" 修饰符被省略了，尽管它本是可以保留的。
-
-End Class
-```
-
-## Visual Studio 2015 中的新功能
-
-Basic 最初并不允许在接口声明中使用 Partial 修饰符。然而，此功能从 2015 年开始被添加。同样的更新还支持在 VB 自身的 Module 类型上使用 Partial 修饰符。
-
-Partial 方法（部分方法）允许你在一个文件中定义方法，并在另一个文件中提供其实现，且这两个部分都属于同一个 partial 类。
-
-```csharp
-// 来自第一个 *.cs 文件。
-partial class ComplexContent
-{
-    // 隐含为 "private"。
-    partial void RecordTraceData(string data);
-}
-// ---- 来自第二个 *.cs 文件。
-partial class ComplexContent
-{
-    // 相同的 "partial void" 和签名。
-    partial void RecordTraceData(string data)
-    {
-        // ---- 在此处编写实现。
-    }
-}
-```
 
 # VISUAL BASIC
 
 ' 来自第一个 *.vb 文件。
 
-Partial Class ComplexContent
+`Partial Class ComplexContent`
 ' ---- 声明不包含方法体。
-' 始终以 "Partial Private Sub" 开始。
+' 始终以 "`Partial Private Sub`" 开始。
 
 ```visual basic
 Partial Private Sub RecordTraceData(
     ByVal data As String)
 End Sub
-
 End Class
+```
 
 ' ---- 来自第二个 *.vb 文件。
 
-Partial Class ComplexContent
-' ----- 实现省略了 "Partial" 修饰符。
+`Partial Class ComplexContent`
+
+' ----- 实现省略了 "`Partial`" 修饰符。
 ' 签名必须保持匹配。
-Private Sub ReadTraceData(ByVal data As String)
+
+`Private Sub ReadTraceData(ByVal data As String)`
 ' ----- 在此处编写实现。
 End Sub
 End Class
-```
 
 C# 允许在类和结构中使用部分方法。在 VB 中，只有类支持部分方法。
 
@@ -4275,19 +3794,17 @@ Visual Basic 不支持指针操作，也不支持任何启用指针功能的 C# 
 
 另参
 
-
-
-- * 解引用运算符, -> 成员访问运算符, & 地址运算符, fixed 修饰符, fixed 语句, stackalloc 修饰符, unsafe 修饰符, unsafe 语句
+- `*` 解引用运算符, `->` 成员访问运算符, `&` 地址运算符, `fixed` 修饰符, `fixed` 语句, `stackalloc` 修饰符, `unsafe` 修饰符, `unsafe` 语句
 
 ## 预处理指令
 
 查看
 
-- #define 指令, #error 指令, #if 指令, #line 指令, #pragma 指令, #region 指令, #undef 指令, #warning 指令
+- `#define` 指令, `#error` 指令, `#if` 指令, `#line` 指令, `#pragma` 指令, `#region` 指令, `#undef` 指令, `#warning` 指令
 
 ## private 访问修饰符
 
-Visual Basic 的 private 访问修饰符等于 C# 的 private 访问修饰符。
+Visual Basic 的 `private` 访问修饰符等于 C# 的 `private` 访问修饰符。
 
 另参
 
@@ -4301,13 +3818,11 @@ C# 和 Visual Basic 通过“项目属性”窗口提供几乎相同的设置。
 
 ## 应用程序选项卡
 
-独立的 C# 程序通过 Main 方法启动。应用程序选项卡中的“启动对象”（Startup Object）包含了应用程序中所有可用 Main 方法的列表，可以作为程序的入口。在 Visual Basic 项目的应用程序选项卡中你可以找到类似的字段。然而，在 Windows Forms 中，默认显示允许你选择表单作为启动对象。即使你添加了 Main 方法，它默认也不会出现在“启动表单”（Startup Form）列表中（尽管如果你向启动表单添加了兼容的 Main 方法，将使用它而不是编译器生成的默认 Main 方法）。若要在 Visual Basic 程序中使用非表单 Main 方法作为入口，请取消勾选项目的“启用应用程序框架”（Enable Application Framework）字段。这将“启动表单”字段更改为“启动对象”，并显示所有合格的 Main 方法。C# 在应用程序选项卡上提供了多种资源管理选项，其中只有部分在 Visual Basic 中可用。对于图标（Icon）选项，VB 有一个字段允许你选择默认图标。要访问项目的 "app.manifest" 文件，请点击 VB 应用程序选项卡上的设置按钮。通过 Win32 资源文件管理资源的 C# 程序，Visual Basic 中的对应配置需要使用 VB 编译器的 /win32Resource 命令行。
+独立的 C# 程序通过 `Main` 方法启动。应用程序选项卡中的“启动对象”（Startup Object）包含了应用程序中所有可用 `Main` 方法的列表，可以作为程序的入口。在 Visual Basic 项目的应用程序选项卡中你可以找到类似的字段。然而，在 Windows Forms 中，默认显示允许你选择表单作为启动对象。即使你添加了 `Main` 方法，它默认也不会出现在“启动表单”（Startup Form）列表中（尽管如果你向启动表单添加了兼容的 `Main` 方法，将使用它而不是编译器生成的默认 `Main` 方法）。若要在 Visual Basic 程序中使用非表单 `Main` 方法作为入口，请取消勾选项目的“启用应用程序框架”（Enable Application Framework）字段。这将“启动表单”字段更改为“启动对象”，并显示所有合格的 `Main` 方法。C# 在应用程序选项卡上提供了多种资源管理选项，其中只有部分在 Visual Basic 中可用。对于图标（Icon）选项，VB 有一个字段允许你选择默认图标。要访问项目的 `app.manifest` 文件，请点击 VB 应用程序选项卡上的设置按钮。通过 Win32 资源文件管理资源的 C# 程序，Visual Basic 中的对应配置需要使用 VB 编译器的 `/win32Resource` 命令行。
 
 ## 生成选项卡
 
 生成选项卡上的大多数功能出现在 Visual Basic 对应的编译（Compile）选项卡中，尽管名称有所更改。在大多数情况下，你应该能够快速确定相应的字段。两个选项卡都包含一个“高级”（Advanced）按钮，且某些名称已更改。
-
-
 
 ```visualbasic
 VISUAL Basic
@@ -4472,15 +3987,11 @@ C# 和 Visual Basic 都对 LINQ 的许多功能提供了原生支持。每种语
 | Union | Not supported | Not supported |
 | Where | Not supported | Where |
 
-
-
-
 Visual Basic 的 `Return` 语句在用法和语法上与 C# 的 `return` 语句相同，适用于有返回值的方法和不返回值的方法。
 
 ```csharp
 // ---- For methods with void return type.
 return;
-
 // ---- For methods with non-void return type
 return someValue;
 ```
@@ -4488,7 +3999,6 @@ return someValue;
 ```vb
 ' ---- For methods with void return type (Sub)
 Return
-
 ' ---- For methods (Function)
 Return someValue
 ```
@@ -4507,11 +4017,9 @@ Exit Sub
 VISUAL BASIC
 Public Function DetermineValue() As Integer
 Dim theValue as Integer
-
 ' ---- Calculating logic, then...
 DetermineValue = theValue
 Exit Function
-
 ' ---- More logic can appear here.
 End Function
 ```
@@ -4519,6 +4027,7 @@ End Function
 这种变化是为了向后兼容。建议使用较新的语法。
 
 ## sbyte 数据类型
+
 Visual Basic 的内置 `Sbyte` 数据类型与 C# 的 `sbyte` 数据类型相同。
 两种类型都是 .NET `System.Int16` 类型的别名。
 
@@ -4536,6 +4045,7 @@ Dim offset As SByte = 0
 - 生命周期与作用域
 
 ## sealed 修饰符
+
 应用于类时，C# 的 `sealed` 修饰符相当于 Visual Basic 的 `NotInheritable` 修饰符。
 
 ```csharp
@@ -4546,6 +4056,7 @@ VISUAL BASIC Class CoreSettings
 ```
 
 ## NotInheritable 类
+
 应用于派生类重写基类中匹配虚拟成员时，C# 的 `sealed` 修饰符在 Visual Basic 中被 `NotOverridable` 修饰符取代。在两种语言中，必须存在 `override` (C#) 或 `Overrides` (VB) 修饰符。
 
 ```csharp
@@ -4563,13 +4074,19 @@ Protected NotOverridable Overrides Sub Refresh()
 Visual Basic 的 `Select` 查询表达式运算符与 C# 的 `select` 运算符相同。在 VB 中编写查询表达式时，`Select` 子句是可选的，即使在 C# 对应项需要它的情况下也是如此。如果省略 `Select`，则返回 `From`、`Aggregate` 或 `Group` 类中指定的成员。此外，Visual Basic 允许 `Select` 子句在查询表达式中的位置具有更大的灵活性。
 
 ```csharp
-var result = from oneEmployee in Employees
-where oneEmployee.IsManager == true
-select oneEmployee;
 ```
 
-# VISUAL BASIC
 
+
+`var result = from oneEmployee in Employees`
+
+`where oneEmployee.IsManager == true`
+
+`select oneEmployee;`
+
+```
+# VISUAL BASIC
+```
 ```vb
 ' --- The Select clause can also appear before Where.
 Dim result = From oneEmployee In Employees
@@ -4580,7 +4097,6 @@ Select oneEmployee
 与 C# 一样，Visual Basic 支持返回匿名类型，可以通过受限的选择列表隐式地，或通过 `New With` 语法显式地返回。你可以使用相同的语法创建命名类型的新实例。
 
 # C#
-
 ```csharp
 // --- Anonymous type.
 var result = from oneEmployee in Employees
@@ -4588,7 +4104,6 @@ where oneEmployee.IsManager == true
 select new {Name = oneEmployee.FullName,
 oneEmployee.Salary, oneEmployee.HireDate};
 ```
-
 ```csharp
 // ---- Named type.
 var result = from oneEmployee in Employees
@@ -4598,7 +4113,6 @@ Name = oneEmployee.FullName};
 ```
 
 # VISUAL BASIC
-
 ```vb
 ' --- Anonymous type.
 Dim result = From oneEmployee in Employees
@@ -4606,7 +4120,6 @@ Where oneEmployee.IsManager = True
 Select New With {.Name = oneEmployee.FullName,
 oneEmployee.Salary, oneEmployee.HireDate};
 ```
-
 ```vb
 ' --- Named type.
 Dim result = From oneEmployee in Employees
@@ -4619,13 +4132,13 @@ Select New Person With {
 
 ## 查询表达式
 
-set 声明
+`set` 声明
 
 ## 属性
 
 短路求值
 
-## & 与运算符, || 逻辑析运算符, ?: 条件运算符
+## `&` 与运算符, `||` 逻辑析运算符, `?:` 条件运算符
 
 短数据类型
 Visual Basic 的内置 `Short` 数据类型与 C# 的 `short` 数据类型相同。两种类型都是 .NET `System.Int16` 类型的别名。
@@ -4640,19 +4153,14 @@ Dim offset As Int16 = 0
 
 *(注：由于原始文本存在大量重复，此处已按要求提取并翻译核心内容。)*
 
-
-
-
-If (counter > 100) Then overflow = True : counter = 0
+`If (counter > 100) Then overflow = True : counter = 0`
 在 C# 中，这些从语句必须包含在一组括号内。
 使用与 VB 更为相似的语法将产生错误的结果。
 
 # C#
-
 ```sharp
 // --- 这等同于之前的 VB 代码。
 if (counter > 100) { overflow = true; counter = 0; }
-
 // 这段代码是错误的；counter 将被重置，
 // 无论条件真是假。
 if (counter > 100) overflow = true; counter = 0;
@@ -4661,7 +4169,6 @@ if (counter > 100) overflow = true; counter = 0;
 C# 允许你通过使用大括号来开始一个明显的范围块，而不需要关联的块结构。
 
 # C#
-
 ```sharp
 {
   // ----- 这里的代码是局部作用域的。
@@ -4671,7 +4178,6 @@ C# 允许你通过使用大括号来开始一个明显的范围块，而不需�
 在 Visual Basic 中没有内置方法来实现这一点，尽管你可以通过使用多余的 If 语句来模拟。
 
 # Visual Basic
-
 ```vb
 If (True) Then
   ' ----- 这里的代码是局部作用域的。
@@ -4684,12 +4190,11 @@ End If
 
 - 语句字符
 
-static 修饰符
+`static` 修饰符
 
-C# 的 static 修饰符当附加到类或结构体或类的单个成员上时，用于标识可以在该类的任何特定实例之外访问的成员（或整个类的成员）。当类在声明中使用 static 作为其一部分时，它的所有成员也必须标记为 static。
+C# 的 `static` 修饰符当附加到类或结构体或类的单个成员上时，用于标识可以在该类的任何特定实例之外访问的成员（或整个类的成员）。当类在声明中使用 `static` 作为其一部分时，它的所有成员也必须标记为 `static`。
 
 # C#
-
 ```csharp
 static class CoreFeatures
 {
@@ -4700,10 +4205,9 @@ static class CoreFeatures
 }
 ```
 
-在 Visual Basic 中，Shared 修饰符执行相同的功能。然而，它只能附加到类和结构体的成员上，而不能附加到类本身上。
+在 Visual Basic 中，`Shared` 修饰符执行相同的功能。然而，它只能附加到类和结构体的成员上，而不能附加到类本身上。
 
 # Visual BASIC
-
 ```vb
 Class CoreFeatures
     Public Shared Sub LogError(ByVal errorText As String)
@@ -4712,7 +4216,7 @@ Class CoreFeatures
 End Class
 ```
 
-如果类的每个成员都是共享的，你可以使用 Visual Basic 语句。模块中的所有成员都是隐式共享的，就像 C# 中一样。因此，Shared 修饰符在上下文中出现。
+如果类的每个成员都是共享的，你可以使用 Visual Basic 语句。模块中的所有成员都是隐式共享的，就像 C# 中一样。因此，`Shared` 修饰符在上下文中出现。
 
 ```vb
 Module CoreFeatures
@@ -4722,10 +4226,9 @@ Module CoreFeatures
 End Module
 ```
 
-Visual Basic 不包含 Static 语句。它用于声明局部变量，因为静态变量的生命周期是实例的生命周期（当在类和结构体的方法中）或应用程序的生命周期（当在模块或静态方法中）。
+Visual Basic 不包含 `Static` 语句。它用于声明局部变量，因为静态变量的生命周期是实例的生命周期（当在类和结构体的方法中）或应用程序的生命周期（当在模块或静态方法中）。
 
 # VISUAL BASIC
-
 ```vb
 Public Sub ProcessData()
     ' ----- 跨多次调用跟踪错误。
@@ -4743,21 +4246,20 @@ C# 不支持静态变量。此类变量表现为类型级字段。
 
 类型
 
-Visual Basic 的 String 类型与 C# 的 string 类型相同。这两种类型都是 System.String 的别名。
+Visual Basic 的 `String` 类型与 C# 的 `string` 类型相同。这两种类型都是 `System.String` 的别名。
 
 ```csharp
 string name = "";
 ```
-
 ```vb
 Dim name As String = ""
 ```
 
-从历史上看，Visual Basic 提供了一个可以附加到标识符或某些函数的 $ 后缀。虽然 .NET 版本的 Visual Basic 为了向后兼容性仍然支持此功能，但不建议使用它。
+从历史上看，Visual Basic 提供了一个可以附加到标识符或某些函数的 `$` 后缀。虽然 .NET 版本的 Visual Basic 为了向后兼容性仍然支持此功能，但不建议使用它。
 
-## struct
+## `struct`
 
-Visual Basic 的 Structure 语句等同于 C# struct 语句。在声明实现一个或多个接口的结构时，VB 的 Implements 子句列出了这些接口，其形式如下：
+Visual Basic 的 `Structure` 语句等同于 C# `struct` 语句。在声明实现一个或多个接口的结构时，VB 的 `Implements` 子句列出了这些接口，其形式如下：
 
 ```csharp
 struct DataPart
@@ -4765,7 +4267,6 @@ struct DataPart
     // ----- 这里的代码。
 }
 ```
-
 ```vb
 Structure DataPart
     Implements Interface
@@ -4777,22 +4278,22 @@ C# 结构包含：构造函数、字段、方法、重载、索引器、事件�
 
 | C# 修饰符 | Visual Basic 修饰符 |
 | :--- | :--- |
-| internal | Friend |
-| new | Partial |
-| private | Private |
-| protected | Protected |
-| protected internal | Public
-| static | Shared |
-| public | Public |
-| virtual | |
+| `internal` | `Friend` |
+| `new` | `Partial` |
+| `private` | `Private` |
+| `protected` | `Protected` |
+| `protected internal` | `Public` |
+| `static` | `Shared` |
+| `public` | `Public` |
+| `virtual` | |
 
 另见
 
 - 访问修饰符
 
-switch 语句
+`switch` 语句
 
-Visual Basic 的 Select 语句通常等同于 C# 的 switch 语句。
+Visual Basic 的 `Select` 语句通常等同于 C# 的 `switch` 语句。
 
 ```csharp
 switch (position)
@@ -4810,7 +4311,6 @@ switch (position)
         positionName = "too large!";
 }
 ```
-
 ```vb
 Select Case position
     Case 1
@@ -4824,9 +4324,9 @@ Select Case position
 End Select
 ```
 
-与其他 C# 语句一样，switch 关键字后面的条件必须在括号内。在 VB 中括号是可选的。C# 的 case 子句变为 Case 后面跟冒号，default 变为 Case Else。在两种语言中，都会使用第一个的匹配块；后续匹配的块将被跳过。
+与其他 C# 语句一样，`switch` 关键字后面的条件必须在括号内。在 VB 中括号是可选的。C# 的 `case` 子句变为 `Case` 后面跟冒号，`default` 变为 `Case Else`。在两种语言中，都会使用第一个的匹配块；后续匹配的块将被跳过。
 
-C# 的每个 case 块必须显式使用 break 语句退出。在 Visual Basic 中，匹配的块在其最后一个语句后自动退出；不需要 break。你也可以使用 goto case 或 goto default 退出 C# case 块。
+C# 的每个 `case` 块必须显式使用 `break` 语句退出。在 Visual Basic 中，匹配的块在其最后一个语句后自动退出；不需要 `break`。你也可以使用 `goto case` 或 `goto default` 退出 C# `case` 块。
 
 ```csharp
 case DayOfWeek.Monday:
@@ -4836,7 +4336,7 @@ default:
     // ----- 普通处理。
 ```
 
-要在 Visual Basic 中执行相同操作，使用标准的 GoTo 语句并在目标 Case 块放置标签。
+要在 Visual Basic 中执行相同操作，使用标准的 `GoTo` 语句并在目标 `Case` 块放置标签。
 
 ```vb
 Case DayOfWeek.Monday:
@@ -4847,7 +4347,7 @@ DoDefault:
     ' ----- 普通处理。
 ```
 
-在 C# 中，每个 case 包含一个比较值：整数、字符或字符串、布尔字量、枚举成员或空。Visual Basic 将浮点数、日期和通用 Object 实例添加到列表中。在 C# 中，通过将 case 子句相邻，可以让两个值触发相同的匹配块。
+在 C# 中，每个 `case` 包含一个比较值：整数、字符或字符串、布尔字量、枚举成员或空。Visual Basic 将浮点数、日期和通用 `Object` 实例添加到列表中。在 C# 中，通过将 `case` 子句相邻，可以让两个值触发相同的匹配块。
 
 ```csharp
 case DayOfWeek.Monday:
@@ -4855,7 +4355,7 @@ case DayOfWeek.Wednesday:
     // ----- 处理特定。
 ```
 
-在 Visual Basic 中，两个值可以出现在同一个 Case 子句中并用逗号分隔。此外，VB 支持值范围、表达式和相对比较。
+在 Visual Basic 中，两个值可以出现在同一个 `Case` 子句中并用逗号分隔。此外，VB 支持值范围、表达式和相对比较。
 
 ```vb
 Case 1, 2
@@ -4865,7 +4365,6 @@ Case 3 To 6
     '----- 匹配闭区间范围。
     tableSize = "medium"
 ```
-
 ```vb
 Case TableForSeven()
     '----- 匹配表达式或方法调用的结果。
@@ -4875,14 +4374,10 @@ Case Is > 7
     tableSize = "large"
 ```
 
-
-
-
-
 ## 三元运算符
 
 参见
-?: 条件构造函数声明
+`?:` 条件构造函数声明
 
 # 标识 构造函数声明
 
@@ -4893,12 +4388,10 @@ class Person
 {
     public string FullName;
     public int CurrentAge;
-
     public Person(string name)
     {
         FullName = name;
     }
-
     public Person(string name, int age) : this(name)
     {
         CurrentAge = age;
@@ -4912,11 +4405,9 @@ Visual Basic 没有这种语法的直接等效写法。相反，你必须从一�
 Class Person
     Public FullName As String
     Public CurrentAge As Integer
-
     Public Sub New (ByVal name As String)
         Me.FullName = name
     End Sub
-
     Public Sub New (ByVal name As String, ByVal age As Integer)
         Me.New(name)
         Me.CurrentAge = age
@@ -4926,15 +4417,15 @@ End Class
 
 另另
 
-base 构造函数声明、构造函数
+`base` 构造函数声明、构造函数
 
-this 扩展方法修饰符
+`this` 扩展方法修饰符
 
 # 
 扩展方法
 
-this 索引器声明
-C# 使用 this 作为属性声明的一部分来定义索引器。
+`this` 索引器声明
+C# 使用 `this` 作为属性声明的一部分来定义索引器。
 
 ```C#
 public string this[int index]
@@ -4977,7 +4468,6 @@ interface IIndexed
 ```
 
 # Visual Basic
-
 ```-----
 ----- 基于接口的索引器。
 Interface IIndexed
@@ -4993,6 +4483,8 @@ End Interface
 public Order this[long orderID] =>
     LookupByID(orderID);
 ```
+
+
 
 Visual Basic 不支持 lambda 创建默认属性。
 
@@ -5018,14 +4510,13 @@ Visual Basic 不支持 lambda 创建默认属性。
 
 - [ ] 成员访问运算符、属性
 
-this 实例表达式
+`this` 实例表达式
 Visual Basic 的 `Me` 表达式提供了访问本地类型的方法，就像 C# 的 `this` 表达式一样。
 
 ```C#
 class SimpleAdder
 {
     public int Value = 0;
-
     public void Increment()
     {
         this.Value++;
@@ -5034,6 +4525,7 @@ class SimpleAdder
 ```
 
 VISUAL BASIC
+```
 Class SimpleAdder
 Public Value As Integer = 0
 
@@ -5041,15 +4533,19 @@ Public Sub Increment()
 Me.Value += 1
 End Sub
 ```
+```
 
 Visual Basic 还包含一个与 `Me` 相似的 `MyClass` 表达式，但在相关时，`Me` 会引用派生类中的重写成员，而 `MyClass` 始终引用当前类中原始定义的成员。C# 中没有 `MyClass` 的等效物。
 
-throw 语句
+`throw` 语句
+
 Visual Basic 的 `Throw` 语句与 C# 的 `throw` 语句相同。
 
 ```C#
 throw new System.Exception("Something bad happened.")
+```
 VISUAL BASIC
+```
 Throw New System.Exception("Something bad happened.")
 ```
 
@@ -5064,7 +4560,9 @@ catch (System.Exception ex)
 ```
 
 Visual Basic 支持相同的语法。
+
 VISUAL BASIC
+```
 Catch ex As System.Exception
 Local logic, then...
 ```
@@ -5074,7 +4572,7 @@ Visual Basic 的 `True` 字面量与 C# 的 `true` 字面量相同。当将布�
 
 另另
 
-bool 数据类型
+## bool 数据类型
 
 ## try 语句
 Visual Basic 的 `try` 语句与 C# 的 `try` 语句相同。
@@ -5091,6 +4589,7 @@ catch (System.Exception ex)
 ```
 
 VISUAL BASIC
+```
 Try
 Catch ex As System.Exception
 Local logic, then...
@@ -5104,7 +4603,6 @@ interface IIndexed
 {
     string this[int index] {get; set;}
 ```
-
 ```-----
 ----- 基于接口的索引器。
 Interface IIndexed
@@ -5140,9 +4638,11 @@ Visual Basic 不支持 lambda 创建默认属性。
 | Not supported | WriteOnly |
 
 # true 布尔字面量
+
 在布尔操作中，Visual Basic 的 `True` 字面量转换为或强制转换后与 C# 的 `true` 字面量相同。当将布尔值转换为或强制转换为整数时，C# 的 `true` 值将始终变为 1。而在 VB 中，`True` 会变为 1 或 -1，取决于强制转换或转换的类型。参见“bool 数据类型”。
 
 ## typeof 运算符
+
 Visual Basic 的 `GetType` 运算符与 C# 的 `typeof` 运算符相同。
 
 ```C#
@@ -5150,10 +4650,9 @@ System.Type numberType = typeof(int);
 ```
 
 VISUAL BASIC
+```
 Dim numberType As System.Type = GetType(Integer);
-
-
-
+```
 
 US 的大小写变体；C# 不包含此类后缀。
 
@@ -5169,7 +4668,7 @@ ushort counter = 0;
 Dim counter As UShort = 0
 ```
 
-using 指令
+## using 指令
 
 C# 的 `using` 指令用于识别当前源文件中将使用的命名空间，而无需为其成员提供完整的绝对命名空间路径。
 
@@ -5252,7 +4751,7 @@ Imports System.Drawing.SystemColors
 displayColor = ControlText
 ```
 
-using 语句
+## using 语句
 
 Visual Basic 的 `Using` 语句通常等同于 C# 的 `using` 语句。C# 要求在块变量声明周围使用括号，而在 VB 中是可选的。
 
@@ -5269,8 +4768,11 @@ using mydb As SqlConnection = New SqlConnection(dbPath)
 ```
 
 End Using
+
 ----- 支持这种压缩格式。
+
 Using mydb As New SqlConnection(dbPath)
+
 End Using
 
 两种语言都允许在同一个 `using` 或 `Using` 语句中同时创建多个资源。编译器将这些转换为嵌套块，这在每种语言中都是允许的。在 C# 中，用同一个 `using` 语句声明的所有变量必须是相同的数据类型； VB 则允许变量类型不同。
@@ -5307,15 +4809,10 @@ var moreComplex = new { ID = 10, Name = "Ten" };
 
 在 Visual Basic 中，标准的 `Dim` 声明关键字在不带 `As` 子句使用时可以实现这一点。
 
-（注：原始文本中包含大量关于 "var" 部分的重复，此处已去重保留核心逻辑。）
-
-
-
-
-
 ## 泛型
 
 ## 查询操作运算符 (LINQ)
+
 Visual Basic 的 `Where` 查询表达式运算符与 C# 的 `where` 运算符相同。与 C# 类似，Visual Basic 的 `Where` 子句支持全语言特定的逻辑运算符。
 
 ```csharp
@@ -5339,7 +4836,8 @@ See Also
 ## 查询表达式
 
 ## while 语句
-while 语句在条件为真时进行循环，如果条件初始为假，则可能完全不循环。
+
+`while` 语句在条件为真时进行循环，如果条件初始为假，则可能完全不循环。
 
 ```csharp
 C#
@@ -5408,6 +4906,7 @@ C#
 两种语言都使用同一组推荐的 XML 标签来记录代码。请参考 Microsoft 的 MSDN 文档获取有关在项目中使用这些标签的信息。
 
 ## yield 语句
+
 在定义方法迭代器或 访问器迭代器时，C# 的 `yield` 语句标识要发出的下一个值。相关的 `yield break` 语句提前终止迭代器，在迭代器代码中任何其他逻辑运行之前终止。
 
 ```csharp
@@ -5441,15 +4940,19 @@ Public Iterator Function SmallNumbers() As _
 End Function
 ```
 
+
+
 如果 `yield` 语句出现在 C# 的 `try` 语句中，该语句不能有 `catch` 子句，只能有 `finally` 子句。Visual Basic 允许包含 `Yield` 语句的 `Try` 语句同时使用 `Catch` 和 `Finally` 子句。
 
-See Also
-Iterators
+## See Also
+
+### Iterators
 
 本章中的 Visual Basic 条按关键字或特征字母顺序排列。找到语言条以查看其 C# 等效项。以符号标识的项目出现在字母开头之前，按以下顺序排列：
-! # $ % & ' ( * + , - . / : < = > ? @ [ \ ^ _ { 
 
- # ! 字典访问运算符
+`!` `#` `$` `%` `&` `'` `(` `*` `+` `,` `-` `.` `/` `:` `<` `=` `>` `?` `@` `[` `\` `^` `_` `{` 
+
+# `!` 字典访问运算符
 
 Visual Basic 的成员访问运算符是基于括号的字典查找的快捷方式。
 
@@ -5471,7 +4974,8 @@ C#
 customerName = (string)allRecords["FullName"];
 ```
 
- # 类型字符
+# 类型字符
+
 当作为数字字面量的后缀附加时，Visual Basic 的类型字符将值强制转换为 `Single` 数据类型。在 C# 中，使用 `F` 或 `f` 后缀将值强制转换为 `float` 数据类型。
 
 ```visual basic
@@ -5484,10 +4988,12 @@ C#
 float value = 123F;
 ```
 
-See Also
-Single 数据类型
+## See Also
 
- # 日期字面量标记
+`Single` 数据类型
+
+# 日期字面量标记
+
 C# 不支持日期字面量。相反，你必须创建一个 `System.DateTime` 实例，并将初始值传递给它的构造函数。
 
 ```visual basic
@@ -5500,7 +5006,8 @@ C#
 DateTime dateTime = new DateTime(1999, 12, 31);
 ```
 
- # 类型字符
+# 类型字符
+
 当作为数字字面量的后缀附加时，Visual Basic 的类型字符将值强制转换为 `Single` 数据类型。在 C# 中，使用 `F` 或 `f` 后缀将值强制转换为 `float` 数据类型。
 
 ```visual basic
@@ -5513,10 +5020,12 @@ C#
 double value = 123;
 ```
 
-See Also
-Double 数据类型
+## See Also
 
- # Const 指令
+`Double` 数据类型
+
+# Const 指令
+
 在 Visual Basic 中，使用 `#Const` 定义常量。可以是布尔、整数、浮点、字符串或日期。
 
 ```visual basic
@@ -5534,8 +5043,10 @@ C#
 #undef TestVersion
 ```
 
- # Disable 指令
+# Disable 指令
+
 ## 2015 版
+
 2015 年，Visual Basic 引入了新的 `#Disable` 指令，防止编译器报告特定的错误条件。C# 使用 `#pragma` 语句来实现相同的目的。
 
 ```visual basic
@@ -5549,8 +5060,10 @@ C#
 
 两种语言都接受逗号分隔的列表。
 
- # Enable 指令
+# Enable 指令
+
 ## Studio 2015 版
+
 2015 年，Visual Basic 引入了新的 `#Enable` 指令，提示编译器再次报告特定的错误条件。C# 使用 `#pragma warning` 语句来实现相同的目的。
 
 ```visual basic
@@ -5564,27 +5077,26 @@ C#
 
 两种语言都接受逗号分隔的列表。
 
- # ExternalChecksum 指令
+# ExternalChecksum 指令
+
 在生成的 ASP.NET 源文件中，C# 的 `#pragma checksum` 指令与 Visual Basic 的 `#ExternalChecksum` 指令的作用相同。这两个语句都不应直接在代码中使用，除非是由 .NET 框架生成的。
 
- # ExternalSource 指令
+# ExternalSource 指令
+
 C# 中没有 `#ExternalSource` 指令的等效项。即使在 Visual Basic 中，它也仅用于生成的代码，通常不是由开发者添加。
 
- # If 指令
+# If 指令
+
 C# 中预处理条件语句的通用语法与 Visual Basic 中的用法相似，仅有细小的拼写和大小差异。
 
 | Visual Basic 术语 | C# 术语 |
 |---|---|
-| #If...Then | #if |
-| #Else...Then | #elif |
-| #Else | #else |
-| #End If | #endif |
+| `#If...Then` | `#if` |
+| `#Else...Then` | `#elif` |
+| `#Else` | `#else` |
+| `#End If` | `#endif` |
 
 关键差异出现在条件本身。在 Visual Basic 中，预处理值为布尔、整数、浮点、字符串或日期，你可以对这些值应用典型的 VB 运算符。C# 中的预处理值作用类似于布尔值；它们要么存在，要么不存在。
-
-
-
-
 
 # VISUAL BASIC
 
@@ -5608,11 +5120,11 @@ C# 中预处理条件语句的通用语法与 Visual Basic 中的用法相似，
 #endif
 ```
 
-在这些预处理表达式中，Visual Basic 支持所有的标准比较操作符；数学、字符串和逻辑运算符；以及内置转换函数。在 C# 中，表达式的限制得多，仅允许使用 ==、!=、`&&`、`||` 操作运算符；true 和 false 常量以及条件表达式中的括号。所有表达式都假设你正在处理类布尔的常量。C# 不允许使用布尔类型的表达式。
+在这些预处理表达式中，Visual Basic 支持所有的标准比较操作符；数学、字符串和逻辑运算符；以及内置转换函数。在 C# 中，表达式的限制得多，仅允许使用 `==`、`!=`、`&&`、`||` 操作运算符；`true` 和 `false` 常量以及条件表达式中的括号。所有表达式都假设你正在处理类布尔的常量。C# 不允许使用布尔类型的表达式。
 
-## #Region 指令
+## `#Region` 指令
 
-C# 的 #Region 指令等同于 Visual Basic 的 #Region 指令。指令关键字后面的描述性标签在 VB 中用双引号括起来，但在 C# 中不使用引号。
+C# 的 `#Region` 指令等同于 Visual Basic 的 `#Region` 指令。指令关键字后面的描述性标签在 VB 中用双引号括起来，但在 C# 中不使用引号。
 
 # VISUAL BASIC
 
@@ -5630,11 +5142,11 @@ C# 的 #Region 指令等同于 Visual Basic 的 #Region 指令。指令关键字
 
 两种语言都允许这些区域嵌套。
 
-## $ 插值字符串指示符
+## `$` 插值字符串指示符
 
 ## Visual Studio 2015 新增
 
-在 2015 年，Visual Basic 和 C# 都增加了字符串插值，这是一种使用字符串字面量生成格式化字符串的方法。两种语言对此类字符串共享相同的语法：以 $ 符号作为前缀，并使用大括号包含插值部分。
+在 2015 年，Visual Basic 和 C# 都增加了字符串插值，这是一种使用字符串字面量生成格式化字符串的方法。两种语言对此类字符串共享相同的语法：以 `$` 符号作为前缀，并使用大括号包含插值部分。
 
 ```
 VISUAL BASIC
@@ -5643,17 +5155,17 @@ csharp
 message = $"Meet {name} on {meetDate:dddd}";
 ```
 
-## $ 类型字符
+## `$` 类型字符
 
-在 .NET 之前的 Visual Basic 版本中，$ 后缀用于区分“string”（字符串）和“variant”（变体）版本的标识符和函数。现代 Visual Basic 不再存在 Variant 数据类型，使得 $ 类型字符变得毫无意义。此外，在等效的 C# 代码中也无需需要它。
+在 .NET 之前的 Visual Basic 版本中，`$` 后缀用于区分“string”（字符串）和“variant”（变体）版本的标识符和函数。现代 Visual Basic 不再存在 Variant 数据类型，使得 `$` 类型字符变得毫无意义。此外，在等效的 C# 代码中也无需需要它。
 
 另参
 
 ## 字符串数据类型
 
-## % 类型字符
+## `%` 类型字符
 
-当作为数字字面量的后缀附加时，Visual Basic 的 % 类型字符会将值强制转换为 Integer（整数）数据类型。在 C# 中，符合 `int` 数据类型的数字字面量默认为 `int`，尽管你也可以通过强制转换将值转换为 `int`。
+当作为数字字面量的后缀附加时，Visual Basic 的 `%` 类型字符会将值强制转换为 `Integer`（整数）数据类型。在 C# 中，符合 `int` 数据类型的数字字面量默认为 `int`，尽管你也可以通过强制转换将值转换为 `int`。
 
 ```csharp
 int someIntValue = (int)someLongValue;
@@ -5663,9 +5175,9 @@ int someIntValue = (int)someLongValue;
 
 ## 整数数据类型
 
-## & 字符串连接操作符
+## `&` 字符串连接操作符
 
-C# 使用其 + 后缀加法进行连接。
+C# 使用其 `+` 后缀加法进行连接。
 
 ```
 VISUAL BASIC
@@ -5674,13 +5186,13 @@ csharp
 string greeting = "Hello, " + name;
 ```
 
-Visual Basic 也允许使用 + 进行连接，具体取决于操作数的数据类型以及当前生效的 Option Strict 语句的状态。因此，更倾向于使用它。在 C# 中，不存在这种差异；只要涉及字符串操作数，它总是会执行连接。
+Visual Basic 也允许使用 `+` 进行连接，具体取决于操作数的数据类型以及当前生效的 `Option Strict` 语句的状态。因此，更倾向于使用它。在 C# 中，不存在这种差异；只要涉及字符串操作数，它总是会执行连接。
 
-C# 包含了它自己的 & 运算符。然而，它等同于 VB 的 And 逻辑连接运算符；它并不执行字符串连接。
+C# 包含了它自己的 `&` 运算符。然而，它等同于 VB 的 `And` 逻辑连接运算符；它并不执行字符串连接。
 
-## & 类型字符
+## `&` 类型字符
 
-当作为数字字面量的后缀附加时，Visual Basic 的 & 类型字符会将值强制转换为 Long（长型）数据类型。在 C# 中，使用 L 或 l 后缀将值强制转换为 long 数据类型。
+当作为数字字面量的后缀附加时，Visual Basic 的 `&` 类型字符会将值强制转换为 `Long`（长型）数据类型。在 C# 中，使用 `L` 或 `l` 后缀将值强制转换为 `long` 数据类型。
 
 # VISUAL BASIC
 
@@ -5695,9 +5207,9 @@ long value = 123L;
 
 ## 长型数据类型
 
-## &= 赋值操作符
+## `&=` 赋值操作符
 
-当用于字符串连接时，C# 的 += 赋值操作符提供的结果与 Visual Basic 的 &= 运算符相同。
+当用于字符串连接时，C# 的 `+=` 赋值操作符提供的结果与 Visual Basic 的 `&=` 运算符相同。
 
 # VISUAL BASIC
 
@@ -5708,17 +5220,17 @@ csharp
 originalValue += "The end.";
 ```
 
-Visual Basic 允许使用 += 运算符进行连接。然而，关于何时连接的规则取决于操作数的数据类型以及当前生效的 Option Strict 语句的状态。为此，更倾向于使用 &=。在 C# 中，不存在此类差异；只要涉及字符串操作数，+= 运算符总是会执行连接。
+Visual Basic 允许使用 `+=` 运算符进行连接。然而，关于何时连接的规则取决于操作数的数据类型以及当前生效的 `Option Strict` 语句的状态。为此，更倾向于使用 `&=`. 在 C# 中，不存在此类差异；只要涉及字符串操作数，`+=` 运算符总是会执行连接。
 
-尽管 C# 包含了 &= 运算符，但那是 & 逻辑运算符的赋值操作符，不应与外观相同的 VB 运算符混淆。
+尽管 C# 包含了 `&=` 运算符，但那是 `&` 逻辑运算符的赋值操作符，不应与外观相同的 VB 运算符混淆。
 
 另参
 
 ## 赋值操作符
 
-## ' 注释符号
+## `'` 注释符号
 
-C# 等同于 Visual Basic 注释符号的是 //。这两个符号都开始注释并持续到当前物理行的末尾。
+C# 等同于 Visual Basic 注释符号的是 `//`。这两个符号都开始注释并持续到当前物理行的末尾。
 
 # VISUAL BASIC
 
@@ -5735,12 +5247,13 @@ result = DoWork(); // A trailing comment.
 
 ## REM 语句，XML 文档注释
 
-"" XML 文档注释符号
+## `""` XML 文档注释符号
+
 查看
 
 ## XML 文档注释
 
-## () 数组声明
+## `()` 数组声明
 
 数组在 Visual Basic 和 C# 之间的用法相似，但在声明方式上存在差异。
 
@@ -5770,13 +5283,9 @@ string[] setOfThree = {"zero", "one", "two"};
 
 Visual Basic 使用括号来声明数组。C# 使用方括号。例如，VB 中的 `Dim numberSet() As Integer` 等同于 C# 中的 `int[] numberSet;`。
 
-Visual Basic 允许使用 += 运算符进行连接。然而，关于何时连接的规则取决于操作数的数据类型以及当前生效的 Option Strict 语句的状态。为此，更倾向于使用 &=。在 C# 中，不存在此类差异；只要涉及字符串操作数，+= 运算符总是会执行连接。
+Visual Basic 允许使用 `+=` 运算符进行连接。然而，关于何时连接的规则取决于操作数的数据类型以及当前生效的 `Option Strict` 语句的状态。为此，更倾向于使用 `&=`. 在 C# 中，不存在此类差异；只要涉及字符串操作数，`+=` 运算符总是会执行连接。
 
-
-
-
-
-## () 成员运算符
+## `()` 成员运算符
 
 字典的成员访问在两种语言中都非常相似，C# 使用一组方括号来代替 Visual Basic 的括号。
 
@@ -5796,7 +5305,7 @@ Visual Basic 使用 `!` 作为字典访问的快捷方式，这在 C# 中没有�
 
 ## 索引器
 
-## * 乘法运算符
+## `*` 乘法运算符
 
 C# 中的乘法运算符与 Visual Basic 使用相同的符号和语法。
 
@@ -5810,7 +5319,7 @@ C#
 result = originalValue * 5;
 ```
 
-## *= 赋值运算符
+## `*=` 赋值运算符
 
 C# 的 `*=` 赋值运算符与 Visual Basic 中找到的运算符完全相同，无论是在语法还是在目的上。
 
@@ -5828,7 +5337,7 @@ originalValue *= 5;
 
 ## 赋值运算符
 
-## + 加法运算符
+## `+` 加法运算符
 
 对于数学运算，C# 的 `+` 运算符与 Visual Basic 中找到的运算符完全相同，无论是在语法还是在目的上。
 
@@ -5853,11 +5362,11 @@ C#
 string greeting = "Hello, " + name;
 ```
 
-## + 一元加运算符
+## `+` 一元加运算符
 
 Visual Basic 和 C# 均允许在数字字面量和表达式之前使用前缀一元加运算符。两种语言之间的语法是相同的。
 
-## = 赋值运算符
+## `=` 赋值运算符
 
 对于数学运算，C# 的 `+=` 赋值运算符与 Visual Basic 中找到的运算符完全相同，无论是在语法还是在目的上。
 
@@ -5878,7 +5387,7 @@ C# 还使用此运算符将事件处理程序附加到对象的事件，或者�
 
 赋值运算符
 
-, 标点符号
+## `,` 标点符号
 
 通常情况下，C# 对逗号的使用与 Visual Basic 中的用法平行，但有两个显著的异常。第一个异常关于 C# 在语句中使用逗号来分隔赋值和条件，这种变化在 Visual Basic 以计数为中心的 `For` 语句中是不支持的。
 
@@ -5910,9 +5419,13 @@ Task(aValue, , cValue)
 
 初始化器
 
-- 减法运算符
+## `-` 减法运算符
 
 C# 中的 `-` 减法运算符与 Visual Basic 使用相同的符号和语法。
+
+
+
+# Visual Basic 与 C# 运算符对照
 
 ```
 Visual Basic
@@ -5924,7 +5437,7 @@ C#
 result = originalValue;
 ```
 
-- 一元减运算符
+## 一元减运算符
 
 C# 中的 `-` 一元减运算符与 Visual Basic 使用相同的符号和语法。
 
@@ -5938,7 +5451,7 @@ C#
 negativeVersion = -originalValue;
 ```
 
-- 赋值运算符
+## 赋值运算符
 
 对于数学运算，Visual Basic 的 `-=` 赋值运算符与 C# 中找到的运算符完全相同，无论是在语法还是在目的上。
 
@@ -5956,9 +5469,9 @@ C# 还使用此运算符从对象的事件中分离事件处理程序，或者�
 
 另请
 
-+   RemoveHandler 语句
++   `RemoveHandler` 语句
 
-## . 成员访问运算符
+## 成员访问运算符
 
 Visual Basic 和 C# 都使用点（`.`）语法在命名空间、类、实例和成员名称之间进行访问。
 
@@ -5972,7 +5485,7 @@ C#
 value = element.OneMember;
 ```
 
-## / 除法运算符
+## 除法运算符
 
 Visual Basic 的 `/` 除法运算符返回浮点商。
 
@@ -5984,7 +5497,7 @@ Dim wholeResult2 As Double = 5 / 3    ' 1.666666...
 
 在两种语言中，`/` 运算符也返回浮点商。然而，虽然 C# 对字符串操作数执行简单的除法，但 Visual Basic 可能会根据操作数的数据类型和 `Option Strict` 的当前设置执行整数除法或双除法。因此，对于除法操作，C# 的运算符与 VB# 的运算符更一致。
 
-# VISUAL BASIC
+### Visual Basic
 
 ```
 Dim wholeResult1 As Double = 5 / 3    ' 1.666666...
@@ -5995,8 +5508,6 @@ Dim wholeResult2 As Double = 5 / 3    ' 1.666666...
 double wholeResult1 = 5.0 / 3.0;
 int wholeResult2 = 5 / 3;
 ```
-
-
 
 ```vb
 Visual Basic
@@ -6012,13 +5523,13 @@ public class EmployeeData
 
 另参
 
-- 特性 (Attributes)
+- 特性 `Attributes`
 
-## < 比较运算符
+## 比较运算符 `<`
 
-比较值类型时，C# 的 < 运算符与 Visual Basic 的 < 运算符相同，并出现在相同的二元运算符位置。
+比较值类型时，C# 的 `<` 运算符与 Visual Basic 的 `<` 运算符相同，并出现在相同的二元运算符位置。
 
-Visual Basic
+### Visual Basic
 
 ```vb
 If (teamPlayers < 9) Then
@@ -6036,56 +5547,58 @@ if (teamPlayers < 9)
 if (string.Compare(title1, title2, StringComparison.CurrentCultureIgnoreCase) < 0)
 ```
 
-## << 移运算符
+## 移运算符 `<<`
 
-C# 的 << 运算符在语法和用法上与 Visual Basic 的 << 运算符相同。
+C# 的 `<<` 运算符在语法和用法上与 Visual Basic 的 `<<` 运算符相同。
 
-## <= 赋值运算符
+## 赋值运算符 `<=`
 
-C# 的 <= 运算符在语法和用法上与 Visual Basic 的 <= 运算符相同。
-
-另参
-
-- 赋值运算符 (Assignment Operators)
-
-## <= 比较运算符
-
-C# 的 <= 运算符通常与 Visual Basic 的 <= 运算符相同。< 运算符条目包含关于字符串比较的附加信息。
+C# 的 `<=` 运算符在语法和用法上与 Visual Basic 的 `<=` 运算符相同。
 
 另参
 
-- < 比较运算符
+- 赋值运算符 `Assignment Operators`
 
-## <> 比较运算符
+## 比较运算符 `<=`
 
-比较值类型时，C# 的 != 不等运算符与 Visual Basic 的 <> 运算符相同，并出现在相同的二元运算符位置。
+C# 的 `<=` 运算符通常与 Visual Basic 的 `<=` 运算符相同。`<` 运算符条目包含关于字符串比较的附加信息。
 
-VISUAL BASIC
+另参
+
+- `<` 比较运算符
+
+## 比较运算符 `<>`
+
+比较值类型时，C# 的 `!=` 不等运算符与 Visual Basic 的 `<>` 运算符相同，并出现在相同的二元运算符位置。
+
+### VISUAL BASIC
 
 ```vb
 If (teamPlayers <> 9) Then
 ```
 
-# C#
+### C#
 
 ```csharp
 // C#
 if (teamPlayers != 9)
 ```
 
-对于字符串比较，!= 运算符再次复制了 VB 的 <> 运算符。然而，Visual Basic 的 `Option Compare` 语句影响字符串之间相互比较的方式。默认情况下，Visual Basic 和 C# 都对字符串进行二进制级比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将用特定区域的文本排序规则。参见本章中的“< 比较运算符”条目，获取使用 .NET Framework 特性实现此点的 C# 示例。
+对于字符串比较，`!=` 运算符再次复制了 VB 的 `<>` 运算符。然而，Visual Basic 的 `Option Compare` 语句影响字符串之间相互比较的方式。默认情况下，Visual Basic 和 C# 都对字符串进行二进制级比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将用特定区域的文本排序规则。参见本章中的“`<` 比较运算符”条目，获取使用 .NET Framework 特性实现此点的 C# 示例。
 
-对于字符串以外引用类型，Visual Basic 的 `IsNot` 替代 <>，特别是在比较实例与 `Nothing` 时候。在 C# 中， != 运算符也用于此类比较。
+对于字符串以外引用类型，Visual Basic 的 `IsNot` 替代 `<>`，特别是在比较实例与 `Nothing` 时候。在 C# 中，`!=` 运算符也用于此类比较。
 
-VISUAL BASIC
+### VISUAL BASIC
 
 - --- 标准实例比较
-If (firstInstance IsNot secondInstance) Then
+
+`If (firstInstance IsNot secondInstance) Then`
 
 - --- 与 null 比较（VB 中的 Nothing）
-If (anotherInstance IsNot Nothing) Then
 
-# C#
+`If (anotherInstance IsNot Nothing) Then`
+
+### C#
 
 ```csharp
 // C#
@@ -6098,13 +5611,13 @@ if (anotherInstance != null)
 
 另参
 
-- Nothing 字面量 (Nothing Literal)
+- `Nothing` 字面量 `Nothing Literal`
 
-## = 赋值运算符
+## 赋值运算符 `=`
 
-在独立赋值语句中使用，C# 的 = 运算符在语法和目的上与 Visual Basic 中的 = 运算符相同。
+在独立赋值语句中使用，C# 的 `=` 运算符在语法和目的上与 Visual Basic 中的 `=` 运算符相同。
 
-## VISUAL Basic
+### VISUAL Basic
 
 ```vb
 // Visual Basic
@@ -6129,13 +5642,13 @@ a = b = c;
 
 另参
 
-- 赋值运算符 (Assignment Operators)
+- 赋值运算符 `Assignment Operators`
 
-## = 比较运算符
+## 比较运算符 `=`
 
-比较值类型时，C# 的 == 等于运算符与 Visual Basic 的 = 运算符相同，并出现在相同的二元运算符位置。
+比较值类型时，C# 的 `==` 等于运算符与 Visual Basic 的 `=` 运算符相同，并出现在相同的二元运算符位置。
 
-## VISUAL Basic
+### VISUAL Basic
 
 ```vb
 // VISUAL Basic
@@ -6147,11 +5660,11 @@ If (teamPlayers = 9) Then
 if (teamPlayers == 9)
 ```
 
-对于字符串，== 运算符再次复制了 VB 的运算符。然而，VB 的 `Option Compare` 语句影响字符串之间相互比较的方式。默认情况下，Visual Basic 和 C# 都对字符串进行二进制级比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将用特定区域的排序规则。C# 无法通过比较运算符指定这种风格的比较。参见本章中的“比较运算符”条目，获取使用 .NET Framework 特性实现此点的 C# 示例。
+对于字符串，`==` 运算符再次复制了 VB 的运算符。然而，VB 的 `Option Compare` 语句影响字符串之间相互比较的方式。默认情况下，Visual Basic 和 C# 都对字符串进行二进制级比较。但是，如果 VB 项目或源文件使用了 `Option Compare Text`，则比较将用特定区域的排序规则。C# 无法通过比较运算符指定这种风格的比较。参见本章中的“比较运算符”条目，获取使用 .NET Framework 特性实现此点的 C# 示例。
 
-对于字符串以外的引用类型，Visual Basic 的 `Is` 运算符替代 =，特别是在比较实例与 `Nothing` 时候。在 C# 中，== 运算符也用于此类比较。
+对于字符串以外的引用类型，Visual Basic 的 `Is` 运算符替代 `=`，特别是在比较实例与 `Nothing` 时候。在 C# 中，`==` 运算符也用于此类比较。
 
-## VISUAL Basic
+### VISUAL Basic
 
 ```vb
 // VISUAL Basic
@@ -6173,11 +5686,11 @@ if (anotherInstance == null)
 
 另参
 
-- Nothing 字面量 (Nothing Literal)
+- `Nothing` 字面量 `Nothing Literal`
 
-## > 比较运算符
+## 比较运算符 `>`
 
-比较值类型时，C# 的 运算符与 Visual Basic 的 > 运算符相同，并出现在相同的二元运算符位置。
+比较值类型时，C# 的 `>` 运算符与 Visual Basic 的 `>` 运算符相同，并出现在相同的二元运算符位置。
 
 ```vb
 // Visual Basic
@@ -6189,43 +5702,43 @@ If (teamPlayers > 9) Then
 if (teamPlayers > 9)
 ```
 
-< 运算符条目包含关于字符串比较的附加信息。
+`<` 运算符条目包含关于字符串比较的附加信息。
 
-## >= 比较运算符
+## 比较运算符 `>=`
 
-C# 的 >= 运算符通常与 Visual Basic 的 >= 运算符相同。< 运算符条目包含关于字符串比较的附加信息。
+C# 的 `>=` 运算符通常与 Visual Basic 的 `>=` 运算符相同。`<` 运算符条目包含关于字符串比较的附加信息。
 
 另参
 
-- > 比较运算符
+- `>` 比较运算符
 
-## >> 移运算符
+## 移运算符 `>>`
 
-C# 的 >> 运算符在语法和用法上与 Visual Basic 的 >> 运算符相同。
+C# 的 `>>` 运算符在语法和用法上与 Visual Basic 的 `>>` 运算符相同。
 
-## >> 赋值运算符
+## 赋值运算符 `>>`
 
-C# 的 >> 运算符在语法和用法上与 Visual Basic 的运算符相同。
+C# 的 `>>` 运算符在语法和用法上与 Visual Basic 的运算符相同。
 
 另参
 
 - 赋值运算符
-- 可空类型 (Nullable Types)
+- 可空类型 `Nullable Types`
 
-## ? 条件运算符
+## 条件运算符 `?`
 
-2015 年，Visual Basic 和 C# 都增加了 ?. 运算符。通常情况下，它们的用法相同。
+2015 年，Visual Basic 和 C# 都增加了 `?.` 运算符。通常情况下，它们的用法相同。
 
 | 用法 | Visual Basic 语法 | C# 语法 |
 |---|---|---|
-| 实例成员 | A? | A? |
-| 字典成员 | A? | A? |
-| 数组 | A? | A? |
-| 特性 | A? | A? |
-| 后代轴 | A?> | A?> |
-| 子轴 | A?> | A?> |
+| 实例成员 | `A?` | `A?` |
+| 字典成员 | `A?` | `A?` |
+| 数组 | `A?` | `A?` |
+| 特性 | `A?` | `A?` |
+| 后代轴 | `A?>` | `A?>` |
+| 子轴 | `A?>` | `A?>` |
 
-对于数值字面量，@ 后缀将值强制转换为 Decimal 类型。在 C# 中，使用 M 后缀进行强制转换。
+对于数值字面量，`@` 后缀将值强制转换为 `Decimal` 类型。在 C# 中，使用 `M` 后缀进行强制转换。
 
 ```vb
 // Visual Basic
@@ -6240,8 +5753,8 @@ decimal value = 123M;
 另参
 
 - 标识符、字面量
-- Decimal 类型
-- 逐字指示 (Verbatim Indicator)
+- `Decimal` 类型
+- 逐字指示 `Verbatim Indicator`
 
 在 Visual Basic 中，术语可能在括号内需要限定。
 
@@ -6257,15 +5770,11 @@ int double = originalValue * 2;
 
 由于 C# 对标识符的大小写敏感，与小写关键字冲突的术语在大写输入时不会产生冲突。在进行跨语言开发时，请注意避免两种语言中的关键字。在一种语言中需要限定的术语在另一种语言中无需即可工作。
 
+## 另请
 
+- 除法运算符、整数除法运算符、赋值运算符
 
-
-
-# 另请
-
--   除法运算符、整数除法运算符、赋值运算符
-
-## ^ 幂运算符
+## 幂运算符 `^`
 
 C# 不包含专门的运算符来计算数值的幂次方。请改用 `System.Math.Pow` 方法。
 
@@ -6278,7 +5787,7 @@ double result = Math.Pow(base, power);
 
 C# 包含 `^` 运算符，但它是作为该语言的异或运算符使用的。
 
-## = 赋值运算符
+## 赋值运算符 `=`
 
 C# 不包含专门的赋值运算符来计算数值的幂次方。请改用 `System.Math.Pow` 方法。
 
@@ -6291,15 +5800,15 @@ double base = Math.Pow(base, power);
 
 C# 包含 `=` 运算符，但它是作为该语言的异或赋值运算符使用的。
 
-# 另请
+## 另请
 
 赋值运算符
 
-# _ 换行延续延续符
+## 换行延续符 `_`
 
 C# 不需要要求使用任何特殊字符来将语句延续到下一行物理行。只要语句以分号结束，单行就可以跨越多行。
 
-## { } 实例初始化
+## 实例初始化 `{ }`
 
 参见
 
@@ -6311,11 +5820,11 @@ C# 包含了与 Visual Basic 中找到对应的访问修饰符。
 
 | Visual Basic 修饰符 | C# 修饰符 |
 | :--- | :--- |
-| Friend | internal |
-| Private | private |
-| Protected | protected |
-| Protected Friend | protected internal |
-| Public | public |
+| `Friend` | `internal` |
+| `Private` | `private` |
+| `Protected` | `protected` |
+| `Protected Friend` | `protected internal` |
+| `Public` | `public` |
 
 在大多数情况下，C# 中这些修饰符的使用与在 Visual Basic 中的用法相同，它们作为被声明类型或成员的前缀出现。
 
@@ -6346,7 +5855,7 @@ class NameTracking
     private string OriginalName;
 ```
 
-结构成员在两种语言中都不能使用 `Protected` (VB) 或 `protected` (C#) 修饰符。有关使用访问修饰符的更多信息，请参见本章中使用访问修饰符的特定语句（例如“类语句”）。
+结构成员在两种语言中都不能使用 `Protected` `VB` 或 `protected` `C#` 修饰符。有关使用访问修饰符的更多信息，请参见本章中使用访问修饰符的特定语句（例如“类语句”）。
 
 ## EventHandler 自定义事件声明
 
@@ -6356,7 +5865,7 @@ class NameTracking
 
 ## EventHandler 语句
 
-在 Visual Basic 中，`AddHandler`语句将事件处理器附加到对象的事件上。`AddressOf` 运算符出现在事件处理器名称之前。
+在 Visual Basic 中，`AddHandler` 语句将事件处理器附加到对象的事件上。`AddressOf` 运算符出现在事件处理器名称之前。
 
 ```
 VISUAL BASIC
@@ -6401,7 +5910,7 @@ button1.Click += (object o, EventArgs e)
 
 C# 不包含 Visual Basic `AddressOf` 运算符的等效物。然而，在将事件处理器附加到实例事件时，其功能是隐含的。
 
-# VISUAL Basic
+### VISUAL Basic
 
 ```vb
 ' ----- Button1_Click 方法在别处定义，
@@ -6417,13 +5926,13 @@ button1.Click += button1_Click;
 
 另请
 
-AddHandler 语句、RemoveHandler 语句
+`AddHandler` 语句、`RemoveHandler` 语句
 
-## 聚合查询表达式运算符 (LINQ)
+## 聚合查询表达式运算符 `LINQ`
 
 C# 不包含 Visual Basic 聚合表达式运算符的直接等效物。然而，你可以使用 LINQ 的聚合扩展方法（例如 `Sum`）生成聚合结果。
 
-# VISUAL Basic
+### VISUAL Basic
 
 ```vb
 Dim taxPaid = Aggregate order In AllOrders
@@ -6436,6 +5945,8 @@ select order.SalesTax).Sum();
 ```
 
 对于按分组聚合，请使用 `group` 运算符，它与 Visual Basic 自身的 `Group` 运算符并行。
+
+
 
 # VISUAL Basic
 
@@ -6466,6 +5977,7 @@ And 逻辑运算符
 VISUAL BASIC
 Dim clapHands As Boolean = (happy And
 ```
+
 ```csharp
 bool clapHands = (happy &
 ```
@@ -6480,8 +5992,8 @@ If ((result Is Nothing) AndAlso
 ```
 
 ```csharp
-if ((result != null) &&
-
+if ((result != null)) &&
+```
 
 ## 匿名方法
 
@@ -6494,22 +6006,31 @@ Lambda 表达式
 Visual Basic 使用 `New` 和 `With` 运算符定义新类型。
 
 ```vb
+
 VISUAL BASIC
+
 Dim samplePerson = New With {.Name = "John", .Age = 42}
+
 ```
 
 C# 使用 `new` 运算符的类似语法。C# 中不包含每个字段的点。
 
 ```csharp
+
 var samplePerson = new { "John", Age = 42 };
+
 ```
 
 VB 允许指定匿名类型的“键”属性，即用于测试实例间等效性的属性。
 
 ```vb
+
 VISUAL BASIC
+
 Dim samplePerson = New With {Key.ID = 123,
+
 .Name = "John", .Age = 42}
+
 ```
 
 C# 不支持这些键字段。相反，你必须创建一个具名的类型，并为基方法 `Equals` 和 `GetHashCode` 提供自己的重写。
@@ -6523,31 +6044,53 @@ C# 不支持这些键字段。相反，你必须创建一个具名的类型，�
 C# 不包含 Visual Basic `AppActivate` 方法的等效物。以下代码定义了与 `AppActivate` 提供的功能相当的方法。
 
 ```csharp
+
 [System.Runtime.InteropServices]
+
 [DllImport("user32.dll")]
+
 private static extern int SetForegroundWindow(int hWnd);
 
 private void AppActivate(string windowTitle)
+
 {
+
     System.Diagnostics.Process[] allProcesses =
+
         System.Diagnostics.Process.GetProcesses();
+
     var targetProcess = from oneProcess in allProcesses
+
         where oneProcess.MainWindowTitle == windowTitle
+
         select oneProcess;
+
     if (targetProcess != null)
+
         SetForegroundWindow(targetProcess.First().
+
         MainWindowHandle.ToInt32());
+
 }
 
 private void AppActivate(int processID)
+
 {
+
     System.Diagnostics.Process targetProcess =
+
         System.Diagnostics.Process
+
         GetProcessById(processID);
+
     if (targetProcess != null)
+
         SetForegroundWindow(targetProcess.
+
         MainWindowHandle.ToInt32());
+
 }
+
 ```
 
 ## 参数和参数
@@ -6557,14 +6100,14 @@ private void AppActivate(int processID)
 # VISUAL BASIC
 
 ```vb
+
 ' 参数：小时和分钟。
+
 Public Function FormatTime(ByVal hour As Integer,
+
 ByVal minute As Integer) As String
+
 ```
-
-
-
-
 
 Return String.Format("{0:0}:{1:0}", hour, minute)
 End Function
@@ -6577,27 +6120,36 @@ Visual Basic 和 C# 都支持用于处理参数和实的类似功能。默认情
 # VISUAL BASIC
 
 ```vb
+
 ' 参数为：
 ' content: 输入/输出引用传递
 ' method: 按值传递
 ' warnings: 输入/输出引用传递
+
 ```
 
 ```vb
+
 Public Function CorrectContent(ByRef content As String,
+
                               ByVal method As Integer,
+
                               ByRef warnings As String)
+
 ```
 
 # C#
 
 ```csharp
+
 // 参数为：
 // content: 输入/输出引用传递
 // method: 按值传递
 // warnings: 仅输出引用传递
 public bool CorrectContent(ref string content,
+
 int method, out string warnings)
+
 ```
 
 通常情况下，你可以直接用 C# 的 `ref` 修饰符代替 Visual Basic 的 `ByRef` 修饰符。如果你知道数据永远不会通过该参数传入，而只会被发送输出，可以使用相应的修饰符。在按引用传递值时，调用代码必须已经为传递的参数分配了值。在 C# 中，调用代码需要应用 `out` 或 `ref` 修饰符以匹配参数列表中的修饰符，这在 VB 中是不需要的。
@@ -6605,16 +6157,20 @@ int method, out string warnings)
 # VISUAL BASIC
 
 ```vb
+
 ' userContent 必须已经赋值。
 success = CorrectContent(userContent, 3, warningText)
+
 ```
 
 # C#
 
 ```csharp
+
 // userContent 必须已经赋值。
 success = CorrectContent(ref userContent, 3,
 out warningText);
+
 ```
 
 两种语言都支持可选参数和参数数组。请参阅本章中的“可选修饰符（Optional Modifier）”和“ParamArray 修饰符（ParamArray Modifier）”章节。命名参数在两种语言中都是有效的。请参阅本章中的“:= 命名参数指示符（Named Argument Indicator）”章节。
@@ -6631,26 +6187,29 @@ out warningText);
 在 Visual Basic 中，可以使用 `As` 子句将泛型放置在类型参数上。
 
 ```vb
+
 VISUAL BASIC
+
 '-- 应用于一个类型参数的子句
 Class SingleGeneric (Of T As IEnumerable)
-
 '-- 应用于两个类型参数的约束
 ' 需要两个 As 子句。
 Class DoubleGeneric (Of T As IEnumerable, U As IDDisposable)
+
 ```
 
 在 C# 中，该子句复制了 VB 的 `As` 子句，并紧接在被约束的类型参数之后。
 
 ```csharp
+
 // ---- 应用于一个类型参数的子句。
 class SingleGeneric<T> where T : IEnumerable
-
 // ---- 应用于两个类型参数的约束
 // 需要两个 where 子句。
 class DoubleGeneric<T, U>
     where T : IEnumerable
     where U : IDDisposable
+
 ```
 
 多个约束以逗号分隔的列表形式出现。C# 不需要 Visual Basic 中使用的外大括号。
@@ -6658,11 +6217,15 @@ class DoubleGeneric<T, U>
 # Visual Basic
 
 ```vb
+
 Class ComplexGeneric(Of T As {class, IDisposable})
+
 ```
 
 ```csharp
+
 class ComplexGeneric<T> where T : class, IDisposable
+
 ```
 
 两种语言对参数支持相同类型的约束。
@@ -6684,6 +6247,7 @@ class ComplexGeneric<T> where T : class, IDisposable
 Visual Basic 的 `Asc` 方法将字符（或长字符串的第一个字符）转换为整数，并考虑当前平台和语言编码的单字节和双字节字符集规则。以下代码提供了 `Asc` 执行转换的 C# 等实现。
 
 ```csharp
+
 C#
 public int Asc(char oneChar)
 {
@@ -6695,7 +6259,6 @@ public int Asc(char oneChar)
       byte[] asBytes;
       int length;
       byte holdByte;
-
       // ----- 七位值是简单的。
       charAsInt = Convert.ToInt32(oneChar);
       if (charAsInt < 128)
@@ -6707,8 +6270,7 @@ public int Asc(char oneChar)
       charSize = System.Encoding.Default;
       asArray = new char[] {oneChar};
       asBytes = new byte[2];
-      length = charSize.GetBytes(asArray, 0, 1, asBytes, 0); // 此处逻辑似乎有误？让我们仔细重新阅读代码
-
+      length = charSize.GetBytes(asArray, 0, 1, asBytes, 0);
       // -- SBSC 或双字节字符中的单字节字符。
       if ((charSize.IsSingleByte(asBytes[0])))
       {
@@ -6722,11 +6284,8 @@ public int Asc(char oneChar)
 }
 ```
 
-
-
-
-
 ```csharp
+
 [System.Obsolete("Use Creature Class Instead")]
 class Animal
 {
@@ -6735,25 +6294,31 @@ class Animal
 
 在两种语言中，多个属性可以出现在单独的括号集中，或者在单组括号内用逗号分隔。当属性接受参数时，你可以在 Visual Basic 中使用 `:=` 符号指定命名参数或初始化器，而在 C# 中则使用 `=`。
 
-``````Visual Basic
+```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple=True)>
 ```
 
 ```csharp
+
 [AttributeUsage(AttributeTargets.Class, AllowMultiple=true)]
+
 ```
 
 通常，属性出现在它所修饰的项目之前。在某些情况下，可能有需要指定属性的目标。在两种语言中，通过在左括号后立即紧跟一个前缀来指示目标。
 
 ```vb
+
 Visual Basic
 ' 此属性针对整个程序集。
 <Assembly: AssemblyVersion("1.0.0.0")>
+
 ```
 
 ```csharp
+
 // 此属性针对整个程序集。
 [assembly: AssemblyVersion("1.0.0.0")]
+
 ```
 
 C# 支持的目标前缀比 Visual Basic 多。下表列出了两种语言中可用的前缀目标。
@@ -6780,15 +6345,19 @@ C# 支持的目标前缀比 Visual Basic 多。下表列出了两种语言中可
 在 Visual Basic 中，自动属性（也称为“自动实现属性”）包含属性名称和数据类型，但没有实现代码。
 
 ```vb
+
 Visual Basic
 Public Property CoreName As String
+
 ```
 
 C# 使用类似的精简的属性声明语法来创建自动属性。
 
 ```csharp
+
 // C#
 public string CoreName { get; set; }
+
 ```
 
 ## Visual Studio 2015 新功能
@@ -6796,22 +6365,28 @@ public string CoreName { get; set; }
 在 2015 年之前，Visual Basic 不支持只读自动属性。相反，必须创建一个带有 `ReadOnly` 修饰符的标准属性，并省略设置器代码。然而，其 2015 版本增加了对只读自动属性的支持。C# 已经支持此类只读自动属性。
 
 ```vb
+
 Visual Basic
 ' ----- 2015 版本发布之前。
 Public ReadOnly Property CoreName() As String
 Get
     ' ----- 此处编写属性特定的逻辑。
 End Property
+
 ```
 
 ```vb
+
 ' ----- 从 2015 版本开始。
 Public ReadOnly Property CoreName As String
+
 ```
 
 ```csharp
+
 // C#
 public string CoreName { get; }
+
 ```
 
 ## Visual Studio 2015 新功能
@@ -6821,25 +6396,33 @@ public string CoreName { get; }
 # VISUAL BASIC
 
 ```vb
+
 Visual Basic
 ---- 读写属性。
 Public Property CoreName As String = "Unknown"
+
 ```
 
 ```vb
+
 '---- 只读属性。
 Public ReadOnlyProperty CoreName As String = "Unknown"
+
 ```
 
 ```csharp
+
 // C#
 // 只读属性。
 public string CoreName { get; set; } = "Unknown";
+
 ```
 
 ```csharp
+
 // ---- 只读属性。
 public string CoreName { get; } = "Unknown";
+
 ```
 
 两种语言现在都允许在构造函数为只读属性赋值。
@@ -6853,26 +6436,36 @@ C# 的 `await` 运算符与 Visual Basic 的 `Await` 运算符相同。
 # VISUAL BASIC
 
 ```vb
+
 VISUAL BASIC
 ---- 长版本格式。
-Dim theTask As Task(Of String) = SomeMethodAsync()
-Dim result As String = Await theTask
 ```
+
+
+
+`Dim theTask As Task(Of String) = SomeMethodAsync()`
+
+`Dim result As String = Await theTask`
 
 ```vb
 ---- 短版本格式。
+
 Dim result As String = Await SomeMethodAsync()
 ```
 
 ```csharp
 // C#
+
 // ---- 长版本格式。
+
 Task<string> theTask = SomeMethodAsync();
+
 string result = await theTask;
 ```
 
 ```csharp
 // ---- 短版本格式。
+
 string result = await SomeMethodAsync();
 ```
 
@@ -6880,7 +6473,7 @@ string result = await SomeMethodAsync();
 
 从 2015 年开始，C# 的 `await` 运算符可以使用 `try` 语句的 `catch` 和 `finally` 块，尽管该选项在 Visual Basic 中尚未支持。
 
-参见 Async 修饰符
+参见 `Async` 修饰符
 
 ## Beep 方法
 
@@ -6888,17 +6481,19 @@ string result = await SomeMethodAsync();
 
 ```vb
 VISUAL BASIC
+
 Beep ()
 ```
 
 ```csharp
 // C#
+
 System.Console.Beep();
 ```
 
 ## 位运算符
 
-参见 运算符
+参见 `运算符`
 
 ## Boolean 数据类型
 
@@ -6910,87 +6505,89 @@ C# 内置的 `byte` 数据类型与 Visual Basic 的 `Byte` 数据类型相同�
 
 ```vb
 // Visual Basic
+
 Dim smallCount As Byte = 1
 ```
 
 ```csharp
 // C#
+
 byte smallCount = 1;
 ```
 
-
 参见
-[Select Case 语句]
+`[Select Case 语句]`
 
 类型转换
 参见
-[转换与强制转换]
+`[转换与强制转换]`
 
-[Catch 子句
+`[Catch 子句`
 参见
-[Try 语句]
+`[Try 语句]`
 
 ## CBool 转换操作符
 
-C# 没有与 Visual Basic 的 CBool 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 bool。
+C# 没有与 Visual Basic 的 `CBool` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `bool`。
 
-VISUAL BASIC
+`VISUAL BASIC`
 
 ```
 result = CBool(originalValue)
 ```
 
-C#
+`C#`
 // --- 转换失败时抛出异常
-result = (bool)originalValue;
-```
-
+`result = (bool)originalValue;`
 ```csharp
 // 转换失败时返回 null
 nullableResult = originalValue as bool?;
 ```
-
 ```csharp
 // --- System.Convert 函数提供了最// 灵活性
 result = System.Convert.ToBoolean(originalValue);
 ```
-
 ```csharp
 // --- Parse 适用于 "true" 或 "false" 字符串
 result = System.Boolean.Parse(originalValue);
 ```
 
 另请
+
 转换与强制转换
 
 ## CByte 转换操作符
 
-C# 没有与 Visual Basic 的 CByte 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 byte。
+C# 没有与 Visual Basic 的 `CByte` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `byte`。
 
-VISUAL BASIC
+`VISUAL BASIC`
 
 ```
 result = CByte(originalValue)
 ```
 
-C#
+`C#`
 // --- 转换失败时抛出异常
-result = (byte)originalValue;
-```
+
+`result = (byte)originalValue;`
 
 ```csharp
 // ----- 转换失败时返回 null。
+
 nullableResult = originalValue as byte?;
 ```
 
 ```csharp
 // ----- System.Convert 函数提供了最
+
 // 灵活性。
+
 result = System.Convert.ToByte(originalValue);
 ```
 
 ```csharp
 // ----- Parse 适用于数字字符串。
+
 result = System.Byte.Parse(originalValue);
 ```
 
@@ -7000,29 +6597,26 @@ result = System.Byte.Parse(originalValue);
 
 ## CHar 转换操作符
 
-C# 没有与 Visual Basic 的 CChar 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 char。
+C# 没有与 Visual Basic 的 `CChar` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `char`。
 
 ```
 VISUAL BASIC
+
 result = CChar(originalValue);
 ```
 
-C#
+`C#`
 // ----- 转换失败时抛出异常。
-result = (char)originalValue;
-```
-
+`result = (char)originalValue;`
 ```csharp
 // ----- 转换失败时返回 null。
 nullableResult = originalValue as char?;
 ```
-
 ```csharp
 // ----- System.Convert 函数提供了最
 // 灵活性。
 result = System.Convert.ToChar(originalValue);
 ```
-
 ```csharp
 // ----- Parse 适用于数字字符串。
 result = System.Char.Parse(originalValue);
@@ -7034,31 +6628,35 @@ result = System.Char.Parse(originalValue);
 
 ## CDate 转换操作符
 
-C# 没有与 Visual Basic 的 CDate 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 DateTime。
+C# 没有与 Visual Basic 的 `CDate` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `DateTime`。
 
 ```
 VISUAL BASIC
 result = CDate(originalValue);
 ```
 
-C#
+`C#`
 // ----- 转换失败时抛出异常。
-result = (DateTime)originalValue;
-```
+
+`result = (DateTime)originalValue;`
 
 ```csharp
 // ----- 转换失败时返回 null。
+
 nullableResult = originalValue as DateTime?;
 ```
 
 ```csharp
 // ----- System.Convert 函数提供了最
+
 // 灵活性。
+
 result = System.Convert.ToDateTime(originalValue);
 ```
 
 ```csharp
 // ----- Parse 适用于包含日期内容的字符串。
+
 result = System.DateTime.Parse(originalValue);
 ```
 
@@ -7068,29 +6666,26 @@ result = System.DateTime.Parse(originalValue);
 
 ## CDbl 转换操作符
 
-C# 没有与 Visual Basic 的 CDbl 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 double。
+C# 没有与 Visual Basic 的 `CDbl` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `double`。
 
 ```
 VISUAL BASIC
+
 result = CDbl(originalValue);
 ```
 
-C#
+`C#`
 // 转换失败时抛出异常。
-result = (double)originalValue;
-```
-
+`result = (double)originalValue;`
 ```csharp
 // ----- 转换失败时返回 null。
 nullableResult = originalValue as double?;
 ```
-
 ```csharp
 // ----- System.Convert 函数提供了最
 // 灵活性。
 result = System.Convert.ToDouble(originalValue);
 ```
-
 ```csharp
 // ----- Parse 适用于数字字符串。
 result = System.Double.Parse(originalValue);
@@ -7102,31 +6697,35 @@ result = System.Double.Parse(originalValue);
 
 ## CDec 转换操作符
 
-C# 没有与 Visual Basic 的 CDec 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 decimal。
+C# 没有与 Visual Basic 的 `CDec` 运算符完全对应的替代品。相反，它有几个相似的功能，可以将其他数据类型转换为 `decimal`。
 
 ```
 VISUAL BASIC
 result = CDec(originalValue);
 ```
 
-C#
+`C#`
 // 转换失败时抛出异常。
-result = (decimal)originalValue;
-```
+
+`result = (decimal)originalValue;`
 
 ```csharp
 // ----- 转换失败时返回 null。
+
 nullableResult = originalValue as decimal?;
 ```
 
 ```csharp
 // ----- System.Convert 函数提供了最
+
 // 灵活性。
+
 result = System.Convert.ToDecimal(originalValue);
 ```
 
 ```csharp
 // ----- Parse 适用于数字字符串。
+
 result = System.Decimal.Parse(originalValue);
 ```
 
@@ -7134,10 +6733,11 @@ result = System.Decimal.Parse(originalValue);
 
 ## Char 类型
 
-C# 的内建 char 类型与 Visual Basic 的 Char 类型相同。这两个类型都是 .NET System.Char 的别名。在 Visual Basic 中，字符字面量用双引号括，并跟有 c 后缀。C# 使用单引号包裹字面量。
+C# 的内建 `char` 类型与 Visual Basic 的 `Char` 类型相同。这两个类型都是 .NET `System.Char` 的别名。在 Visual Basic 中，字符字面量用双引号括，并跟有 `c` 后缀。C# 使用单引号包裹字面量。
 
 ```
 VISUAL BASIC
+
 Dim digit As Char = "1c" Or "1"C
 ```
 
@@ -7147,10 +6747,11 @@ char digit = '1';
 
 ## ChDir 方法
 
-在 C# 中，.NET 框架的 SetCurrentDirectory 方法实现了与 Visual Basic ChDir 方法相同的结果。
+在 C# 中，.NET 框架的 `SetCurrentDirectory` 方法实现了与 Visual Basic `ChDir` 方法相同的结果。
 
 ```
 VISUAL BASIC
+
 ChDir("C:\temp")
 ```
 
@@ -7158,10 +6759,7 @@ ChDir("C:\temp")
 System.IO.Directory.SetCurrentDirectory("C:\\temp");
 ```
 
-ChDir 方法将路径表达式调整为 Windows 识别的形式。例如，该方法接受反斜杠字符 (\)。
-
-
-
+`ChDir` 方法将路径表达式调整为 Windows 识别的形式。例如，该方法接受反斜杠字符 (`\`)。
 
 通过类名，而不是通过特定的 `Inherits`（继承）或 `Implements`（实现）语句。
 
@@ -7169,17 +6767,25 @@ ChDir 方法将路径表达式调整为 Windows 识别的形式。例如，该�
 
 ```
 Class ActiveCustomer
+
   Inherits Customer
+
   Implements IDisposable
+
   ' ---- 成员在此处出现。
+
 End Class
 ```
 
 ```
 C#
+
 class ActiveCustomer : Customer, IDisposable
+
 {
+
   // ---- 成员在此处出现。
+
 }
 ```
 
@@ -7212,16 +6818,27 @@ C# 没有 Visual Basic `CLng` 运算符的精确替代品。
 
 ```
 VISUAL BASIC
+
 result = CLng(originalValue)
+
 C#
+
 // 失败时抛出异常的转换。
+
 result = (long)originalValue;
+
 // ----- 失败时返回空的转换。
+
 nullableResult = originalValue as long?
+
 // ----- System.Convert 函数提供了
+
 // 最灵活的转换。
+
 result = System.Convert.ToInt64(originalValue);
+
 // ----- Parse 适用于数字字符串。
+
 result = System.Int64.Parse(originalValue);
 ```
 
@@ -7234,8 +6851,11 @@ C# 没有 Visual Basic `CObj` 运算符的精确替代品。
 
 ```
 VISUAL BASIC
+
 result = CObj(originalValue)
+
 C#
+
 result = (object)originalValue;
 ```
 
@@ -7271,8 +6891,11 @@ string result = Environment.CommandLine;
 
 ```Visual BASIC
 ' 这是一个注释
+
 REM 这也是一个注释
+
 C#
+
 // 这是一个注释
 ```
 
@@ -7280,11 +6903,15 @@ C# 还支持多行注释，使用一对斜杠字符（`/* ... */`）。
 
 ```Visual BASIC
 ' 这是释
+
 C#
+
 // 这是一个单行注释
 
 /*
+
  这是一个多行注释
+
 */
 ```
 
@@ -7296,8 +6923,11 @@ Visual Basic 和 C# 都支持常量。在 Visual Basic 中，编译器可以推�
 
 ```
 Visual BASIC
+
 Const DefaultPort = 25
+
 C#
+
 const int DefaultPort = 25;
 ```
 
@@ -7311,9 +6941,13 @@ const int DefaultPort = 25;
 
 ```Visual BASIC
 Dim backspace As String = vbBack
+
 C#
+
 string backspace = "\b";
 ```
+
+
 
 下表列出了 `ControlChars` 类字段、`Constants` 类的成员以及 C# 字符串中对应的转义序列。
 
@@ -7335,26 +6969,31 @@ string backspace = "\b";
 
 在 Visual Basic 中，构造函数始终命名为 `New`。在 C# 中，构造函数与其所在的类型同名。两种语言中的构造函数功能通常是等等的。与其他类型方法不同，C# 构造函数的 `void` 返回类型是隐式的，不要在声明中包含该关键字。
 
-```
-Visual BASIC
+```vb
 Class Employee
+
 Public Sub New()
+
     ---- 默认构造函数。
+
     End Sub
+
 Public Sub New(ByVal empName As String)
+
     ---- 自定义构造函数。
+
     End Sub
+
+End Class
 ```
 
-```
-C#
+```csharp
 class Employee
 {
     public Employee() { }
     public Employee(string empName) { }
 }
 ```
-
 
 ```cs
 {
@@ -7371,21 +7010,23 @@ class Employee
 
 默认情况下，派生类中的构造函数会调用基类的默认构造函数（如果存在）。在 Visual Basic 中调用自定义基类构造函数，或调用派生类中的其他构造函数，请在新构造函数的第一行调用特定的构造函数。
 
-# VISUAL BASIC
+### VISUAL BASIC
+```vb
 Class Employee
 Inherits Person
 
-```vb
 Public Sub New (ByVal empName As String)
   ' 基类处理人员姓名。
   MyBase.New(empName)
 End Sub
+
 Public Sub New (ByVal empName As String,
   ByVal salary As Decimal)
   ' 另一个构造函数处理姓名。
   Me.New(empName)
   ' 此处处理特定工资的代码。
 End Sub
+
 End Class
 ```
 
@@ -7417,8 +7058,7 @@ Class Utility
 End Class
 ```
 
-# C#
-
+### C#
 ```csharp
 class Utility
 {
@@ -7500,7 +7140,7 @@ for (int counter = 0; counter < 10; counter++)
 
 Visual Basic 支持 (1) 隐式（宽）强制转换或数据转换，例如从 `Integer` 到 `Long`；(2) 在 `Option Strict Off` 时的增强隐式转换；以及 (3) .NET 特性，如 `System.Convert`。
 
-## 隐式转换
+### 隐式转换
 
 从“较小”到“较大”数据类型的转换在两种语言中都会自动发生。在 Visual Basic 中，在使用 `Option Strict` 时，不允许收窄转换。在 C# 中，这些必须显式转换。
 
@@ -7528,7 +7168,7 @@ int largeValue = 25;
 int smallValue = (int)largeValue;
 ```
 
-## 显式转换
+### 显式转换
 
 Visual Basic 提供了内置函数，例如 `CInt`。在 C# 中，这些与特定的强制转换相关。
 
@@ -7564,8 +7204,6 @@ int smallValue = (int)100000; // System.Convert
 | CULng(expression) | ulong |
 | CUShort(expression) | ushort |
 
-
-
 | CSByte(expression) | ToSByte(expression) |
 | :--- | :--- |
 | CShort(expression) | ToInt16(expression) |
@@ -7575,30 +7213,27 @@ int smallValue = (int)100000; // System.Convert
 | CULng(expression) | ToInt64(expression) |
 | CUShort(expression) | ToInt16(expression) |
 
-每个 .NET 对象都包含的 ToString 方法在 C# 和 Visual Basic 中同样可用。
+每个 .NET 对象都包含的 `ToString` 方法在 C# 和 Visual Basic 中同样可用。
 
 ## CreateObject 方法
 
-Visual Basic 的 CreateObject 方法从外部源返回 COM 实例。在 C# 中，一旦程序 ID（program ID）和可选的服务器名称转换为有效类型，System.Activator.CreateInstance 方法将实例化并返回 COM 内容。
+Visual Basic 的 `CreateObject` 方法从外部源返回 COM 实例。在 C# 中，一旦程序 ID（program ID）和可选的服务器名称转换为有效类型，`System.Activator.CreateInstance` 方法将实例化并返回 COM 内容。
 
 ![](img/baa5394648ec27e4a1aa37d09958ab46_241_0.png)
 
 ```vb basic
 ' 使用程序 ID。
 Dim external1 As Object = CreateObject(programID)
-
 ' ---- 同时使用程序 ID 和服务器名称。
 Dim external2 As Object = CreateObject(programID, serverName)
 ```
 
-# C#
-
+### C#
 ```csharp
 // ----- 仅使用程序 ID。
 Type externalType = Type.GetTypeFromProgID(programID)
 dynamic external1 =
 Activator.CreateInstance(externalType)
-
 // ----- 同时使用程序 ID 和服务器名称。
 Type external2Type = Type.GetTypeFromProgID(programID, serverName);
 dynamic external2 =
@@ -7607,7 +7242,7 @@ Activator.CreateInstance(external2Type)
 
 ## CSByte 转换运算符
 
-C# 没有与 Visual Basic 的 CSByte 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 sbyte。
+C# 没有与 Visual Basic 的 `CSByte` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `sbyte`。
 
 ![](img/baa5394648ec27e4a1aa37d09958ab46_241_1.png)
 
@@ -7615,14 +7250,11 @@ C# 没有与 Visual Basic 的 CSByte 运算符完全对应的运算符。相反�
 result = CSByte(originalValue)
 // C# // 转换失败时抛出异常
 result = (sbyte)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as sbyte?
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToByte(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.SByte.Parse(originalValue);
 ```
@@ -7631,9 +7263,9 @@ result = System.SByte.Parse(originalValue);
 
 # 转换与强制类型转换
 
-# CShort 转换运算符
+## CShort 转换运算符
 
-C# 没有与 Visual Basic 的 CShort 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 short。
+C# 没有与 Visual Basic 的 `CShort` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `short`。
 
 ```vb basic
 result = CShort(originalValue)
@@ -7642,14 +7274,11 @@ result = CShort(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (short)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as short?
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToInt16(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.Int16.Parse(originalValue);
 ```
@@ -7660,7 +7289,7 @@ result = System.Int16.Parse(originalValue);
 
 ## CSng 转换运算符
 
-C# 没有与 Visual Basic 的 CSng 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 float。
+C# 没有与 Visual Basic 的 `CSng` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `float`。
 
 ```vb basic
 result = CSng(originalValue)
@@ -7669,14 +7298,11 @@ result = CSng(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (float)originalValue;
-
 // 转换失败时返回 null
 nullableResult = originalValue as float?;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToSingle(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.Single.Parse(originalValue);
 ```
@@ -7687,7 +7313,7 @@ result = System.Single.Parse(originalValue);
 
 ## CStr 转换运算符
 
-C# 没有与 Visual Basic 的 CStr 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为字符串。
+C# 没有与 Visual Basic 的 `CStr` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为字符串。
 
 ```vb basic
 result = CStr(originalValue)
@@ -7695,14 +7321,11 @@ result = CStr(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (string)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as string;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToString(originalValue);
-
 // Parse 适用于数字字符串.
 result = System.String.Parse(originalValue);
 ```
@@ -7713,7 +7336,7 @@ result = System.String.Parse(originalValue);
 
 ## CType 转换运算符
 
-C# 没有与 Visual Basic 的 CType 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为对象。
+C# 没有与 Visual Basic 的 `CType` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为对象。
 
 ```vb basic
 result = CType(originalValue, NewType)
@@ -7721,25 +7344,24 @@ result = CType(originalValue, NewType)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (object)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as object;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ChangeType(originalValue, typeof(NewType));
-
 // Parse 适用于数字字符串。
 result = (originalValue);
 ```
+
+
 
 另见
 
 # 转换与强制类型转换
 
-# CUInt 转换运算符
+## CUInt 转换运算符
 
-C# 没有与 Visual Basic 的 CUInt 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 uint。
+C# 没有与 Visual Basic 的 `CUInt` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `uint`。
 
 ```vb basic
 result = CUInt(originalValue)
@@ -7747,14 +7369,11 @@ result = CUInt(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (uint)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as uint?;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.To32(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.UInt32.Parse(originalValue);
 ```
@@ -7763,9 +7382,9 @@ result = System.UInt32.Parse(originalValue);
 
 # 转换与强制类型转换
 
-# CULng 转换运算符
+## CULng 转换运算符
 
-C# 没有与 Visual Basic 的 CULng 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 ulong。
+C# 没有与 Visual Basic 的 `CULng` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `ulong`。
 
 ```vb basic
 result = CULng(originalValue)
@@ -7773,14 +7392,11 @@ result = CULng(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (ulong)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as ulong?;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToUInt64(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.UInt64.Parse(originalValue);
 ```
@@ -7789,28 +7405,26 @@ result = System.UInt64.Parse(originalValue);
 
 # 转换与强制类型转换
 
-# CurDir 方法
+## CurDir 方法
 
-Visual Basic 的 CurDir 方法返回当前目录，可以是默认驱动器或指定的驱动器。在 C# 中，使用 System.IO.Path 类来获取这些。
+Visual Basic 的 `CurDir` 方法返回当前目录，可以是默认驱动器或指定的驱动器。在 C# 中，使用 `System.IO.Path` 类来获取这些。
 
 ```vb basic
 ' 默认驱动器。
 Dim drivePath As String = CurDir()
-
 ' 指定的驱动器。
 Dim drivePath As String = CurDir("E:")
 ```
 ```csharp
 // 默认驱动器。
 string drivePath = System.IO.Path.GetCurrentDirectory();
-
 // "E" 驱动器。
 string drivePath = System.IO.Path.GetFullPath("E:");
 ```
 
 # CShort 转换运算符
 
-C# 没有与 Visual Basic 的 CShort 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 ushort。
+C# 没有与 Visual Basic 的 `CShort` 运算符完全对应的运算符。相反，它有几个相似的功能，可以将其他数据类型转换为 `ushort`。
 
 ```vb basic
 result = CShort(originalValue)
@@ -7818,19 +7432,14 @@ result = CShort(originalValue)
 ```csharp
 // C# // 转换失败时抛出异常
 result = (ushort)originalValue;
-
 // 转换失败时返回 null。
 nullableResult = originalValue as ushort?;
-
 // System.Convert 函数提供了
 // 最灵活的活性。
 result = System.Convert.ToUInt16(originalValue);
-
 // Parse 适用于数字字符串。
 result = System.UInt16.Parse(originalValue);
 ```
-
-
 
 ```csharp
 remove { /* Code using "value" here. }
@@ -7894,7 +7503,6 @@ Visual Basic 的 `DateAdd` 方法通过在另一个日期表达式上添加日�
 ```visualbasic
 ' ---- 添加三天。
 Dim someLater As Date = DateAdd("d", 3, originalDate)
-
 ' 或者使用枚举值。
 someTimeLater = DateAdd(DateInterval.Day, 3, originalDate)
 ```
@@ -7930,7 +7538,6 @@ Dim hours As Long = DateDiff("h", date1, date2)
 Dim minutes As Long = DateDiff("n", date1, date2)
 Dim seconds As Long = DateDiff("s", date1, date2)
 Dim weeks As Long = DateDiff("w", date1, date2)
-
 Dim years As Long = DateDiff("yyyy", date1, date2)
 Dim months As Long = DateDiff("m", date1, date2)
 Dim quarters As Long = DateDiff("q", date1, date2)
@@ -7945,7 +7552,6 @@ long hours = (long)(date2 - date1).TotalHours;
 long minutes = (long)(date2 - date1).TotalMinutes;
 long seconds = (long)(date2 - date1).TotalSeconds;
 long weeks = (long)((date2 - date1).TotalDays / 7);
-
 // 年、月、季度不需要 TimeSpan。
 long years = date2.Year - date1.Year;
 long months = (date2.Month - date1.Month) * 12;
@@ -7979,14 +7585,11 @@ Dim someYear As Integer = DatePart("yyyy", sourceDate)
 int someYear = sourceDate.Year;
 ```
 
-
-
 ```csharp
 [DllImport("kernel32.dll")]
 static extern void GetLocalTime(out SystemTime timeInfo);
 [DllImport("kernel32.dll")]
 static extern bool SetLocalTime(ref SystemTime timeInfo);
-
 [StructLayout(LayoutKind.Sequential)]
 struct SystemTime
 {
@@ -8009,11 +7612,9 @@ static bool SetDate(string dateText)
     DateTime newDate;
     if (DateTime.TryParse(dateText, out newDate) == false)
         return false;
-
     // ----- 获取当前日期。
     SystemTime timeInfo = new SystemTime();
     GetLocalTime(out timeInfo);
-
     // -- 修改日期并设置。
     timeInfo.Year = (ushort)newDate.Year;
     timeInfo.Month = (ushort)newDate.Month;
@@ -8108,13 +7709,20 @@ Default Public Property Item(
     Return InternalStorage(index)
   End Get
   Set(ByVal value As String)
-    ' 如果省略了 "value" 声明，
-    ' 它是隐式定义的。你可以根据需要
-    ' 将名称更改为 "value"。
-    InternalStorage(index) = value
-  End Set
+
+
+
+' 如果省略了 "value" 声明，
+
+' 它是隐式定义的。你可以根据需要
+
+' 将名称更改为 "value"。
+
+InternalStorage(index) = value
+
+End Set
+
 End Property
-```
 
 在 C# 中，默认属性被称为“索引器”（indexers），并使用 `this` 关键字作为属性声明的名称部分。
 
@@ -8253,8 +7861,6 @@ byte[] storage; // 数组
 | Dim i1, i2, i3 As s4, s5 As Short |
 ```
 
-
-
 ```cs
 // ----- 两个变量类型均为 DateTime
 DateTime startDate, endDate;
@@ -8339,6 +7945,7 @@ Elephant someElephant = (Elephant)someAnimal;
 ## 指令
 
 参见
+
 预处理指令
 
 ## Distinct 查询表达式 (LINQ)
@@ -8409,6 +8016,7 @@ C# 的内置 `double` 数据类型与 Visual Basic 的 `Double` 数据类型相�
 ```vb
 Dim factor As Double = 0# ' 或者 OR 或 Or
 ```
+
 ```csharp
 double factor = 0d; // 或者 0D
 ```
@@ -8523,15 +8131,12 @@ C# 和 Visual Basic 都支持基于八种核心整数类型的枚举（Byte、SB
 ```vb
 Enum DoorState As Long
 ```
+
 ```csharp
 enum DoorState : long
 ```
 
 Visual Basic 枚举可以出现在命名空间、类、结构体或接口内部。C# 不允许枚举出现在接口内部，但支持在其他三种类型中包含。
-
-
-
-
 
 ## Visual Studio 2015 新特性
 
@@ -8585,11 +8190,13 @@ Dim result As String = Environ("PATH")
 
 # C#
 
+
+
 ```csharp
 string result = Environment.GetEnvironmentVariable("PATH");
 ```
 
-Environ 还可以添加一个从 1 开始的数值值，返回该位置的变量。在 C# 中，你必须检索所有元素并定位正确的项。
+`Environ` 还可以添加一个从 1 开始的数值值，返回该位置的变量。在 C# 中，你必须检索所有元素并定位正确的项。
 
 # VISUAL BASIC
 
@@ -8609,7 +8216,7 @@ if (oneBasedPosition <= allVars.Count)
 
 # EOF 方法
 
-Visual Basic 的 EOF 方法表示打开打开文件的当前读取或写入位置是否为该文件的末尾。
+Visual Basic 的 `EOF` 方法表示打开打开文件的当前读取或写入位置是否为该文件的末尾。
 
 # VISUAL BASIC
 
@@ -8617,7 +8224,7 @@ Visual Basic 的 EOF 方法表示打开打开文件的当前读取或写入位�
 Dim atEndFile As Boolean = EOF(fileNumber)
 ```
 
-C# 并不包含与 VB 相同的文件管理功能。相反，通常是使用 System.IO.FileStream 类来读写文件。该类不包含 EOF 方法的直接等价物。相反，你可以比较文件长度与其当前位置（o-position），或者尝试从文件中读取数据。
+C# 并不包含与 VB 相同的文件管理功能。相反，通常是使用 `System.IO.FileStream` 类来读写文件。该类不包含 `EOF` 方法的直接等价物。相反，你可以比较文件长度与其当前位置（o-position），或者尝试从文件中读取数据。
 
 # C#
 
@@ -8633,7 +8240,7 @@ int nextByte = openedStream.ReadByte();
 atEndFile = (nextByte == -1);
 ```
 
-如果你使用 System.IO.StreamReader 打开文件，TextReader 实例包含一个 Peek 方法，可以用它来检查文件末尾。
+如果你使用 `System.IO.StreamReader` 打开文件，`TextReader` 实例包含一个 `Peek` 方法，可以用它来检查文件末尾。
 
 # C#
 
@@ -8647,7 +8254,7 @@ atEndFile = (openedReader.Peek() == -1);
 
 # Erase 语句
 
-C# 没有类似于 Visual Basic Erase 语句的专用语句，你可以通过给数组赋值为 null 值来释放数组。
+C# 没有类似于 Visual Basic `Erase` 语句的专用语句，你可以通过给数组赋值为 `null` 值来释放数组。
 
 # VISUAL BASIC
 
@@ -8663,11 +8270,11 @@ arrayOfData = null;
 
 # Erl 属性
 
-C# 方法不允许数字行标签，因此该语言没有 Visual Basic Erl 属性的对应项。
+C# 方法不允许数字行标签，因此该语言没有 Visual Basic `Erl` 属性的对应项。
 
 ## Err 对象
 
-Visual Basic 的 Err 对象用于识别错误详细信息，作为该语言非结构化错误处理系统的一部分。由于 C# 只包含结构化错误处理，因此它不包含 Err 的等价物。然而，由于 Err 内部使用对活动结构化 Exception 的引用，将你的非结构化错误处理代码转换为结构化等价物将为你提供类似的错误访问能力。
+Visual Basic 的 `Err` 对象用于识别错误详细信息，作为该语言非结构化错误处理系统的一部分。由于 C# 只包含结构化错误处理，因此它不包含 `Err` 的等价物。然而，由于 `Err` 内部使用对活动结构化 `Exception` 的引用，将你的非结构化错误处理代码转换为结构化等价物将为你提供类似的错误访问能力。
 
 ```vb
 On Error GoToErrorHandler
@@ -8693,7 +8300,7 @@ catch (System.Exception ex)
 
 ## Err 属性
 
-Visual Basic 的 Err 属性作为语言非结构化错误处理系统的一部分呈现最近的错误。C# 只包含对结构化错误处理的支持。Err 属性最接近等价物是 try 语句 catch 子句包含的异常。
+Visual Basic 的 `Err` 属性作为语言非结构化错误处理系统的一部分呈现最近的错误。C# 只包含对结构化错误处理的支持。`Err` 属性最接近等价物是 `try` 语句 `catch` 子句包含的异常。
 
 ```vb
 On Error GoToErrorHandler
@@ -8716,12 +8323,14 @@ catch (System.Exception ex)
 ## 错误处理
 
 查看
-Err 对象，Error 语句，On Error 语句，Resume 语句，
-Throw 语句，Try 语句
+
+`Err` 对象，`Error` 语句，`On Error` 语句，`Resume` 语句，
+
+`Throw` 语句，`Try` 语句
 
 ## Error 语句
 
-Visual Basic 的 Error 语句仅为了向后兼容而存在。Visual Studio 文档建议用 Err.Raise 方法代替它。C# 中既没有 Error 也没有 Err.Raise。相反，请使用 C# 的 throw 语句在代码中抛出错误条件。
+Visual Basic 的 `Error` 语句仅为了向后兼容而存在。Visual Studio 文档建议用 `Err.Raise` 方法代替它。C# 中既没有 `Error` 也没有 `Err.Raise`。相反，请使用 C# 的 `throw` 语句在代码中抛出错误条件。
 
 ```vb
 -- 已弃。
@@ -8737,11 +8346,11 @@ throw new System.IO.FileNotFoundException();
 
 ## ErrorToString 方法
 
-Visual Basic 的 ErrorToString 方法根据数字代码返回错误消息。C# 不支持这种数字代码列表，因此不包含 ErrorToString 方法的等价物。最接近的等价物是 System.Exception 类或派生类的 Message 属性。
+Visual Basic 的 `ErrorToString` 方法根据数字代码返回错误消息。C# 不支持这种数字代码列表，因此不包含 `ErrorToString` 方法的等价物。最接近的等价物是 `System.Exception` 类或派生类的 `Message` 属性。
 
 ## Event 语句
 
-与 Visual Basic 一样，C# 支持基于委托的事件声明。它的语句在此种用法下，与 VB 的 event 语句的功能非常相似。
+与 Visual Basic 一样，C# 支持基于委托的事件声明。它的语句在此种用法下，与 VB 的 `event` 语句的功能非常相似。
 
 ```vb
 Public Delegate Sub SampleEventHandler(
@@ -8784,12 +8393,16 @@ ByVal e As SampleEventArgs)
 | Not supported | virtual |
 
 异常
+
 查看
-Err 对象，Error 语句，On Error 语句，Resume 语句，
-Throw 语句，Try 语句
+
+`Err` 对象，`Error` 语句，`On Error` 语句，`Resume` 语句，
+
+`Throw` 语句，`Try` 语句
 
 Exit 语句
-Visual Basic 的各种 Exit 语句允许你的代码退出块，例如循环或方法。下表显示了相应的 C# 语句。
+
+Visual Basic 的各种 `Exit` 语句允许你的代码退出块，例如循环或方法。下表显示了相应的 C# 语句。
 
 | Visual Basic 语句 | C# 语句 |
 |---|---|
@@ -8799,63 +8412,89 @@ Visual Basic 的各种 Exit 语句允许你的代码退出块，例如循环或�
 | Exit Property | return |
 | Exit Select | break |
 | Exit Sub | return |
-| Exit Try | Not supported
+| Exit Try | Not supported |
 | Exit While | break |
 
-通常，C# 的 return 语句退出方法和属性，而 break 语句退出其他块。要在 C# 中退出 try 块，你需要 goto 语句跳转到外部标签；C# 没有 Exit Try 的直接等价物。
+通常，C# 的 `return` 语句退出方法和属性，而 `break` 语句退出其他块。要在 C# 中退出 `try` 块，你需要 `goto` 语句跳转到外部标签；C# 没有 `Exit Try` 的直接等价物。
 
-在 Visual Basic Case 语句中，使用 Exit Select 跳出 Case 块是可选的。仅当你需要提前退出块时才使用该语句。在 C# 中，你必须始终使用 break 语句（或其他退出语句，如 return 语句）来离开每个 Case 块。
+在 Visual Basic `Case` 语句中，使用 `Exit Select` 跳出 `Case` 块是可选的。仅当你需要提前退出块时才使用该语句。在 C# 中，你必须始终使用 `break` 语句（或其他退出语句，如 `return` 语句）来离开每个 `Case` 块。
 
-- 在这些块中都不需要 Exit Select。
+- 在这些块中都不需要 `Exit Select`。
+
 Select Case customerType
+
   Case Custype.New
+
     message = "Welcome!"
+
   Case Custype.Existing
+
     message = "Welcome back!"
+
 End Select
 
 # C#
+
 // 两个块都需要 break。
 
 switch (customerType)
+
 {
+
   case Custype.New:
+
     message = "Welcome!"
+
     break;
+
   case Custype.Existing:
+
     message = "Welcome back!"
+
     break;
+
 }
+
 ```
 
 由于 Visual Basic 允许识别特定的退出类型，因此可以同时退出某些类型的嵌套结构。
 
-
-
-
-
 # VISUAL BASIC
 
 ```vb
+
 For counter As Integer = 0 To 9
+
   Do While (content.Length > 0)
+
     --- 这将同时退出两个循环
+
   Exit For
+
 Loop
+
 ```
 
 C# 的组合 `break` 语句不支持这种级别的跳转。相反，对于使用 `break` 退出代码块的结构，你必须使用其他方法（例如 `goto` 语句）来立即退出多个结构。
 
 ```csharp
+
 C# for (int counter = 0; counter < 10; counter++)
+
 {
+
   while (content.Length > 0)
+
   {
+
     // --- "break" 语句只会退出
     // while 循环。请使用 "goto" 代替。
     goto AfterAllLoops;
+
   }
+
 }
+
 ```
 
 ## AfterAllLoops 方法
@@ -8865,26 +8504,43 @@ C# for (int counter = 0; counter < 10; counter++)
 # VISUAL BASIC
 
 ```vb
+
 --- 假设：导入 System.Runtime.CompilerServices
+
 Friend Module LocalExtensions
+
 <Extension> Public Function DigitsOnly(
+
 ByVal originalText As String) As String
+
   --- 返回一个字符串结果。
+
 End Function
+
 End Module
+
 ```
 
 在 C# 中，扩展方法出现在静态类（类似于 VB 模块），并使用此修饰符来指示被扩展的目标类型。
 
 ```csharp
+
 C# internal static class LocalExtensions
+
 {
+
   public static string DigitsOnly(
+
     this string originalText)
+
   {
+
     // ----- 返回一个字符串结果。
+
   }
+
 }
+
 ```
 
 ## False 布尔字面量
@@ -8901,8 +8557,11 @@ C# 的 `false` 字面量与 Visual Basic 的 `False` 字面量相同。
 > Dim AnotherValue As Integer
 
 ```csharp
+
 // --- 使用初始化器声明的字段。
+
 private int MonitoredValue = 0;
+
 ```
 
 字段声明中的访问修饰符是可选的。如果缺失，Visual Basic 类和模块中的访问级别默认为 `Private`，而结构体中默认为 `Public`。在 C# 类和结构体中，字段默认是 `private`。
@@ -8931,8 +8590,11 @@ private int MonitoredValue = 0;
 Visual Basic 的 `FileAttr` 方法指示了最初用于通过 `FileOpen` 方法打开文件的 `OpenMode` 枚举。可能的值有 `Append`、`Binary`、`Input`、`Output` 或 `Random`。
 
 ```vb
+
 VISUAL BASIC
+
 Dim whichMode As OpenMode = FileAttr(fileNumber)
+
 ```
 
 C# 不包含与 VB 相同的文件管理功能。相反，通常使用 `System.IO.Stream` 类来读写文件。该类不包含 `FileAttr` 方法的直接等价物。它确实包含了 `CanRead`、`CanSeek` 和 `CanWrite` 属性，这些属性可能提供与 `FileAttr` 方法相似的有限信息。
@@ -8946,16 +8608,23 @@ C# 不包含与 VB 相同的文件管理功能。相反，通常使用 `System.I
 Visual Basic 的 `FileClose` 方法关闭之前通过 `FileOpen` 方法打开的一个、一些或所有文件。关闭方法接受零或多个文件编号，指示要关闭的文件。
 
 ```vb
+
 VISUAL BASIC
+
 FileClose()        ' 所有文件
+
 FileClose(1)      ' 仅限 #1 号文件
+
 FileClose(2, 3)   ' #2 和 #3 号文件
+
 ```
 
 C# 不包含与 VB 相同的文件管理功能。相反，通常使用 `System.IO.Stream` 类来读写文件。要关闭已打开的文件流，请调用其 `Close` 方法。
 
 ```csharp
+
 openedStream.Close();
+
 ```
 
 另
@@ -8964,23 +8633,31 @@ openedStream.Close();
 
 ## FileCopy 方法
 
-`System.IO.File.Copy` 方法提供了与 Visual Basic 的 `FileCopy` 方法提供的类似的文件复制服务。
+`System.IO.File.Copy` 方法提供了与 Visual Basic 的 `FileCopy` 方法提供的文件复制服务。
 
 ```vb
+
 VISUAL BASIC
+
 FileCopy (sourcePath, destinationPath)
+
 ```
 
 ```csharp
+
 // C# 第三个参数是“overwrite”（覆盖）参数。
 // Visual Basic 的 FileCopy 方法总是覆盖。
+
 System.IO.File.Copy(sourcePath, destinationPath, true);
+
 ```
 
 当使用 `FileCopy` 时，原始文件的属性将保留在新文件中。Visual Basic 的 `FileCopy` 方法会清除目标文件的属性，仅设置归档标记（archive）。以下 C# 语句在复制后使用时，可以模拟 VB 的行为。
 
 ```csharp
+
 // C# System.IO.File.SetAttributes(destinationPath, FileAttributes.Archive);
+
 ```
 
 ## DateTime 方法
@@ -8990,20 +8667,21 @@ System.IO.File.Copy(sourcePath, destinationPath, true);
 # VISUAL BASIC
 
 ```vb
+
 Dim updateDate As Date = DateTime(pathToFile)
+
 ```
 
 ```csharp
+
 C# new FileInfo(pathToFile).LastWriteTime;
 ```
+
+
 
 ## FileGet 方法
 
 Visual Basic 的 `FileGet` 方法从文件中读取使用流写入的类型实例。C# 没有 `FileGet` 方法的直接等价物。相反，通常使用 `System.IO.Stream` 类来读写文件。该类不包含 `FileAttr` 方法的直接等价物。它确实包含了 `CanRead`、`CanSeek` 和 `CanWrite` 属性，这些属性可能提供与 `FileAttr` 方法相似的有限信息。
-
-
-
-
 
 在 VB 中，打开的文件会被锁定，以防止其他用户访问。为了覆盖这一默认设置，`OpenShare` 枚举包含了相关的选项。下表将这些值与 `System.IO.FileShare` 枚举中的值进行了比较，后者用于处理文件流时。
 
@@ -9022,7 +8700,6 @@ Visual Basic 的 `FileGet` 方法从文件中读取使用流写入的类型实�
 ```csharp
 // C# --- 打开文件进行读取。
 System.IO.TextReader inputFile = new System.IO.StreamReader("C:\\work.txt");
-
 // --- 打开文件进行写入。
 System.IO.TextWriter outputFile = new System.IO.StreamWriter("C:\\output.txt");
 ```
@@ -9033,7 +8710,7 @@ Visual Basic 的 `FilePut` 方法将一段数据写入一个用于二进制或�
 
 C# 没有与 `FilePut` 方法直接等价的方法。相反，可以使用流格式化器（stream formatter）将数据序列化到文件或其他任何流中。.NET Framework 包含了二进制格式化器和 XML 格式化器等。任何带有 `System.SerializableAttribute` 属性标记的对象都可以序列化到流中，C# 中包含的所有核心数据类型都自动支持此属性。
 
-## 注意
+### 注意
 
 通过 .NET 序列化方法写入的文件与使用 `FilePut` 方法写入的文件并不相同。`FilePut` 的输出格式是 Visual Basic 专有的。你可以访问 http://references.microsoft.com 并搜索“FilePut” 来了解使用 `FilePut` 写入的具体内容。关于其输出的完整讨论超出了本书的范围。
 
@@ -9045,16 +8722,13 @@ C# 没有与 `FilePut` 方法直接等价的方法。相反，可以使用流格
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-
 // 在方法中。
 bool booleanData = true;
 int numericData = 123;
 string textData = "Hello, World";
-
 // 打开输出流。
 IFormatter formatter = new BinaryFormatter();
 Stream outputFile = new FileStream("C:\temp\output.dat", FileMode.Create, FileAccess.Write, FileShare.None);
-
 // 写入数据值。
 formatter.Serialize(outputFile, booleanData);
 formatter.Serialize(outputFile, numericData);
@@ -9071,32 +8745,28 @@ Visual Basic 的 `FilePutObject` 方法将一个类型的实例写入一个用�
 C# 没有与 `FilePutObject` 直接等价的方法。相反，可以使用流格式化器将数据序列化到文件或其他任何流中。本章中的“FilePut 方法”条目包含一个使用二进制格式向文件写入数据的示例。
 
 ### 另请
-
 - FilePut 方法
 
 ## FileWidth 方法
 
 Visual Basic 的 `FileWidth` 方法指示使用 `FileOpen` 方法打开的文件中任何文本行的行宽。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 - 将行宽设置为 35 个字符。
-FileWidth(lineNumber, 35)
+`FileWidth(lineNumber, 35)`
 
 C# 并不包含与 VB 相同的文件管理功能。相反，通常使用 `System.IO.StreamWriter` 类来输出文本数据。在使用该类时，你必须在输出文本数据时在适当的位置插入换行符。
 
 ### 另请
-
 - FileOpen 方法, Print 方法, Write 方法
 
 ## Filter 方法
 
 Visual Basic 的 `Filter` 方法返回字符串数组元素的子集，以匹配子字符串模式。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 - 仅限蒙大拿州的城市。
-Dim montana() As String = Filter(allCities, " MT")
+`Dim montana() As String = Filter(allCities, " MT")`
 
 C# 没有与 `Filter` 方法直接等价的方法。相反，你可以在循环中手动提取匹配元素，或者使用 LINQ 在一个语句中检索匹配项。
 
@@ -9110,7 +8780,6 @@ foreach (string oneCity in allCities)
 }
 // 如果确实需要数组。
 string[] montanaAsArray = montanaOnly.ToArray();
-
 // ----- 基于 LINQ 的过滤。
 string[] montanaOnly =
   (from oneCity in allCities
@@ -9118,27 +8787,21 @@ string[] montanaOnly =
   select oneCity).ToArray();
 ```
 
-
-
-
-
-```
+```csharp
 // ----- This would also work.
 counter <= 9
-
 // ---- Or even this.
 (counter * 2) < 19
 ```
 
 第三部分是迭代表达式，提供了关于循环在开始新迭代之前以及检查条件表达式之前如何更改循环计数器的指令。简单的增会向计数器加 1。
 
-# C#
-
+### C#
 ```sharp
 counter++
 ```
 
-```
+```csharp
 // ---- This will also work.
 ++counter
 ```
@@ -9150,12 +8813,11 @@ counter += 1
 
 将所有内容结合在一起这三个表达式声明了循环生命周期的边界和阶段。
 
-# C#
-
+### C#
 ```sharp
 for (int counter = 0; counter < 10; counter++)
 {
-// ---- 循环 10 次，从 0 到 9。
+    // ---- 循环 10 次，从 0 到 9。
 }
 ```
 
@@ -9165,27 +8827,25 @@ for (int counter = 0; counter < 10; counter++)
 int counter;
 for (counter = 9; counter >= 0; counter -= 1)
 {
-// ---- 循环 10 次，从 9 到 0。
+    // ---- 循环 10 次，从 9 到 0。
 }
 ```
 
 Visual Basic 循环支持整数、浮点数或枚举值。由于其灵活的语法，C# 支持所有这些选项以及更多。例如，你可以设计一个使用语法进行循环监控的循环。
 
-# C#
-
+### C#
 ```sharp
 for (string content = GetContent(); content.Length > 0;
 content = (content.Length > 0 ?
 content.Substring(1) : "")
 {
-// 只要 content 中包含字符就循环。
+    // 只要 content 中包含字符就循环。
 }
 ```
 
-C# 的 for 语句允许更复杂的循环场景，支持多个由逗号分隔的初始化器（具有相同的数据类型）和迭代器。在 Visual Basic 中，此类循环通常使用 `Do` 语句或在循环体内也考虑其他变量的 `Loop` 来创建。C# 的 `for` 语句也可以通过留空条件部分（或所有部分）来创建无限循环，这种格式在 VB 中是允许的。
+C# 的 `for` 语句允许更复杂的循环场景，支持多个由逗号分隔的初始化器（具有相同的数据类型）和迭代器。在 Visual Basic 中，此类循环通常使用 `Do` 语句或在循环体内也考虑其他变量的 `Loop` 来创建。C# 的 `for` 语句也可以通过留空条件部分（或所有部分）来创建无限循环，这种格式在 VB 中是允许的。
 
-# C#
-
+### C#
 ```sharp
 for (); {
 ```
@@ -9196,8 +8856,7 @@ for (); {
 
 通常情况下，字符串的 `Format` 方法是 Visual Basic `Format` 方法的良好替代方案。两种方法都接受格式化模板，并且共享一些自定义格式化代码。两种方法之间最大的区别是 VB 的 `Format` 方法接受一个要格式化的对象或表达式，后面跟是模板。在 `string.Format` 方法中，模板出现在参数列表的前部，后面是一个或多个根据模板进行格式化的对象或表达式。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 ```vb
 Dim displayName As String = "Christmas"
 Dim targetDate As Date = New Date(2000, 12, 25)
@@ -9206,8 +8865,7 @@ Dim result As String = holidayName & _
 Format(targetDate,"M/d/yyyy") & "."
 ```
 
-# C#
-
+### C#
 ```sharp
 // 使用拼接构建字符串，如 VB 一所示。
 string holidayName = "Christmas";
@@ -9229,10 +8887,9 @@ holidayName, targetDate);
 ## FormatCurrency 方法
 
 Visual Basic 的 `FormatCurrency` 方法将数值（或数字的字符串表示）转换为对应区域的货币格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"C"` 格式代码使用当前区域的默认货币格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。“`C`” 格式代码使用当前区域的默认货币格式输出值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = FormatCurrency(moneyValue)
 ```
@@ -9247,8 +8904,7 @@ string result = moneyValue.ToString("C");
 
 Visual Basic 的 `FormatDateTime` 方法使用 `System.DateTime` 类的 `ToString` 方法来输出格式化的日期时间字符串。`FormatDateTime` 接受一个指示输出格式的格式枚举值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = _
 DateTime(workDate, DateTime.LongDate)
@@ -9271,10 +8927,9 @@ string result = workDate.ToString("D");
 ## FormatNumber 方法
 
 Visual Basic 的 `FormatNumber` 方法将数值（或数字的字符串表示）转换为对应区域的数字格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"N"` 格式代码使用当前区域的数字格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。“`N`” 格式代码使用当前区域的数字格式输出值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = FormatNumber(moneyValue)
 ```
@@ -9288,10 +8943,9 @@ string result = moneyValue.ToString("N");
 ## FormatPercent 方法
 
 Visual Basic 的 `FormatPercent` 方法将数值（或数字的字符串表示）转换为对应区域的百分比格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"P"` 格式代码使用当前区域的默认百分比格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。“`P`” 格式代码使用当前区域的默认百分比格式输出值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = FormatPercent(moneyValue)
 ```
@@ -9303,10 +8957,9 @@ string result = moneyValue.ToString("P");
 ## FormatTime 方法
 
 Visual Basic 的 `FormatTime` 方法将数值（或数字的字符串表示）转换为对应区域的时间格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"T"` 格式代码使用当前区域的默认时间格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。“`T`” 格式代码使用当前区域的默认时间格式输出值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = FormatTime(moneyValue)
 ```
@@ -9319,8 +8972,7 @@ string result = moneyValue.ToString("T");
 
 Visual Basic 的 `FormatDateTime` 方法使用 `System.DateTime` 类的 `ToString` 方法输出格式化的日期时间字符串。`FormatDateTime` 接受一个指示输出格式的格式枚举值。
 
-Visual Basic
-
+### Visual Basic
 ```vb
 Dim result As String = _
 DateTime(workDate, DateTime.LongDate)
@@ -9329,6 +8981,8 @@ DateTime(workDate, DateTime.LongDate)
 ```sharp
 string result = workDate.ToString("D");
 ```
+
+
 
 下表显示了每个 `DateFormat` 枚举值所需的 `ToString` 参数。
 
@@ -9343,7 +8997,7 @@ string result = workDate.ToString("D");
 ## FormatNumber 方法
 
 Visual Basic 的 `FormatNumber` 方法将数值（或数字的字符串表示）转换为对应区域的数字格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"N"` 格式代码使用当前区域的数字格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。`"N"` 格式代码使用当前区域的数字格式输出值。
 
 Visual Basic
 
@@ -9351,14 +9005,14 @@ Visual Basic
 Dim result As String = FormatNumber(moneyValue)
 ```
 
-```sharp
+```csharp
 string result = moneyValue.ToString("N");
 ```
 
 ## FormatPercent 方法
 
 Visual Basic 的 `FormatPercent` 方法将数值（或数字的字符串表示）转换为对应区域的百分比格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"P"` 格式代码使用当前区域的默认百分比格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。`"P"` 格式代码使用当前区域的默认百分比格式输出值。
 
 Visual Basic
 
@@ -9366,14 +9020,14 @@ Visual Basic
 Dim result As String = FormatPercent(moneyValue)
 ```
 
-```sharp
+```csharp
 string result = moneyValue.ToString("P");
 ```
 
 ## FormatTime 方法
 
 Visual Basic 的 `FormatTime` 方法将数值（或数字的字符串表示）转换为对应区域的时间格式。在格式化之前，所有数字都会强制转换为 `System.Double` 类型。
-C# 中 double 类型的 `ToString` 方法接受格式化字符串。“"T"` 格式代码使用当前区域的默认时间格式输出值。
+C# 中 `double` 类型的 `ToString` 方法接受格式化字符串。`"T"` 格式代码使用当前区域的默认时间格式输出值。
 
 Visual Basic
 
@@ -9381,7 +9035,7 @@ Visual Basic
 Dim result As String = FormatTime(moneyValue)
 ```
 
-```sharp
+```csharp
 string result = moneyValue.ToString("T");
 ```
 
@@ -9396,7 +9050,7 @@ Dim result As String = _
 DateTime(workDate, DateTime.LongDate)
 ```
 
-```sharp
+```csharp
 string result = workDate.ToString("D");
 ```
 
@@ -9410,10 +9064,6 @@ string result = workDate.ToString("D");
 | ShortTime | "HH:mm" |
 | GeneralDate | 无日期的时间使用 "T"，带午夜时间的日期使用 "d"，否则使用 "G" |
 
-
-
-
-
 ## 垃圾回收
 
 参见
@@ -9424,25 +9074,33 @@ string result = workDate.ToString("D");
 
 Visual Basic 和 C# 都支持泛型，也称为“构造类型”。一个关键区别在于指定类型占位符的语法。在 Visual Basic 中，这些占位符以括号的形式出现在 `Of` 子句中；而在 C# 中，它们出现在泛型名称后的角括号内。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```visualbasic
 ***** 作为泛型声明的一部分。
+
 Class SpecialList(Of T)
+
     Private InternalList As T
+
 End Class
 ```
 
 ```visualbasic
 ***** 作为泛型实例化。
+
 Dim trackNumbers As New SpecialList(Of Integer)
 ```
 
 ```csharp
 // 作为泛型声明的一部分。
+
 class SpecialList<T>
+
 {
+
     private T InternalList;
+
 }
 ```
 
@@ -9452,7 +9110,7 @@ class SpecialList<T>
 
 泛型构造可以应用于两种语言中的类、结构体、接口、方法和委托。泛型方法可以出现在泛型或非泛型类型内部。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```visualbasic
 Shared Sub ReverseItems(Of T) (ByRef firstItem As T,
@@ -9466,7 +9124,7 @@ Shared Sub ReverseItems(Of T) (ByRef firstItem As T,
 End Sub
 ```
 
-# C#
+### C#
 
 ```csharp
 static void ReverseItems<T>(ref T firstItem,
@@ -9570,7 +9228,7 @@ char result = largeString[4];
 
 Visual Basic 的 `GetObject` 方法根据其路径、类或两者返回一个 COM 组件。在 C# 中，使用 `System.Marshal` 类的成员来检索 COM 组件实例。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 - 假设：Option Strict Off
 Dim comComponent As Object
@@ -9578,13 +9236,10 @@ Dim comComponent As Object
 ```visualbasic
 ' 从路径、默认类创建组件。
 comComponent = GetObject(pathName)
-
 ' ---- 获取指定类的运行实例。
 comComponent = GetObject(, className)
-
 ' 为指定类创建新实例。
 comComponent = GetObject("", className)
-
 ' 从路径、特定类创建组件。
 comComponent = GetObject(pathName, className)
 ```
@@ -9592,16 +9247,12 @@ comComponent = GetObject(pathName, className)
 ```csharp
 // 位于文件顶部。
 using System.Runtime.InteropServices;
-
 // 从路径、默认类创建组件。
 comComponent = Marshal.GetActiveObject(pathName);
-
 // 获取指定类的运行实例。
 comComponent = Marshal.GetActiveObject(className);
-
 // 为指定类创建新实例。
 comComponent = Activator.CreateInstance(className);
-
 // 从路径、特定类创建组件。
 comComponent = Type.GetTypeFromProgID(className).CreateInstance();
 ```
@@ -9715,24 +9366,33 @@ By item.Department Into Group
 ```visualbasic
 ' 按多个字段分组。
 Dim result = From Item In Employees
+
+
+
 Group By.Item.FullName, item.HireDate
+
 By item.Department Into Group
-```
-
-
 
 ```cs
+
 var result = from item in Employees
+
 group item by item.Department
 
 // ----- 特定字段的分组。
+
 var result = from item in Employees
+
 group item by item.FullName by item.Department
 
 // ----- 多个字段分组。
+
 var result = from item in Employees
+
 group new (item.FullName, item.HireDate)
+
 by item.Department;
+
 ```
 
 在 Visual Basic 中，必须使用 `Into` 子句，尽管你为后续处理指定了临时标识符。在 C# 中，`into` 子句仅在对分组后的结果进行额外处理时才需要。
@@ -9740,19 +9400,29 @@ by item.Department;
 # Visual Basic
 
 ```vb
+
 Dim result = From item In Employees
+
 Group By item.Department Into deptSets = Group
+
 Order By Department
+
 Select deptSets
+
 ```
 
 # C#
 
 ```csharp
+
 var result = from item in Employees
+
 group item by item.Department into deptSets
+
 orderby deptSets.Key
+
 select deptSets;
+
 ```
 
 Visual Basic 的 `Into` 子句支持额外的聚合函数。这种语法在 C# 中不被直接支持，而是需要额外的 `select` 子句。
@@ -9760,21 +9430,33 @@ Visual Basic 的 `Into` 子句支持额外的聚合函数。这种语法在 C# �
 # Visual Basic
 
 ```vb
+
 在此变体中，结果也将包含
+
 从属 "item" 记录，尽管 C# 版本
+
 仅包含部门名称和计数。
+
 Dim result = From item In Employees
+
 Group By item.Department
+
 Into Group, Count()
+
 ```
 
 # C#
 
 ```csharp
+
 var result = from item in Employees
+
 group item by item.Department into deptSets
+
 select new { DeptName = deptSets.Key,
+
 DeptMembers = deptSets.Count() };
+
 ```
 
 ## 另另
@@ -9794,10 +9476,15 @@ C# 没有等于 Visual Basic `Handles` 子句的语句。相反，必须手动�
 Visual Basic 的 `Hex` 方法返回一个字符串，显示数值的十六进制表示。在 C# 中，向任何整数值类型的 `ToString` 方法传递 "X" 作为参数将生成相同的结果。
 
 ```vb
+
 VISUAL BASIC
+
 Dim result As String = Hex(someInteger)
+
 C#
+
 string result = someInteger.ToString("X");
+
 ```
 
 ## Hour 方法
@@ -9805,10 +9492,15 @@ string result = someInteger.ToString("X");
 DateTime 类型的 `Hour` 属性返回与 Visual Basic `Hour` 方法相同的信息。
 
 ```vb
+
 VISUAL BASIC
+
 Dim whichHour As Integer = Hour(oneOrder.OrderDate)
+
 C#
+
 int whichHour = oneOrder.OrderDate.Hour;
+
 ```
 
 ## 标识符 (Identifiers)
@@ -9820,11 +9512,17 @@ Visual Basic 和 C# 使用通用的标识符命名规则，允许混合字母、
 Visual Basic 允许为类型和其中一个成员赋予相同的（不区分大小写的）名称。
 
 ```vb
+
 ***** 这在 Visual Basic 中是有效的。
+
 Public Class ItemData
+
     Public ItemText As String
+
     Public ItemData As Long
+
 End Class
+
 ```
 
 C# 不允许这种组合。在 C# 中，你不能将类型成员命名为与其包含类型相同的名称。如果你创建一个具有这种类型和成员共享命名的 Visual Basic 程序集，C# 项目将无法直接访问该成员。
@@ -9832,19 +9530,27 @@ C# 不允许这种组合。在 C# 中，你不能将类型成员命名为与其�
 这两种语言都允许你创建与保留关键字冲突的标识符。在 Visual Basic 中，用方括号将它们括起来，在 C# 中则使用 `@` 符号作为前缀。
 
 ```vb
+
 Dim [For] As Long = 0
+
 C#
+
 long @for = 0;
+
 ```
 
 微软建议标识符使用帕斯卡命名法 (PascalCase) 或驼峰命名法 (camelCase)。根据文档，标识符使用 PascalCase 或 camelCase。在帕斯卡命名法 (Pascal casing) 中，名称中的每个独立单词的首字母都大写，包括标识符的开头。驼峰命名法 (camel casing) 类似，但首字母是小写。
 
 ```csharp
+
 int PascalCaseExample;
+
 ```
 
 ```csharp
+
 int camelCaseExample;
+
 ```
 
 如 Visual Studio 文档所示，参数名、局部变量名和类型内部的实例字段推荐驼峰命名法。所有其他标识符（包括行标签）应使用帕斯卡命名法。
@@ -9854,34 +9560,49 @@ int camelCaseExample;
 C# 的 `if` 语句与 Visual Basic 中的 `If` 语句相似。
 
 ```vb
+
 VISUAL BASIC
+
 If (testDate < Now) Then
+
   era = "Past"
+
 ElseIf (testDate = Now) Then
+
   era = "Present"
+
 Else
+
   era = "Future"
+
 End If
+
 ```
 
 ```csharp
+
 if (testDate < DateTime.Now)
+
   era = "Past"
+
 else if (testDate == DateTime.Now)
+
   era = "Present"
+
 else
+
   era = "Future";
+
 ```
-
-
-
-
 
 # Visual Basic
 
 ```vb
+
 Public Sub TeachTheDog(ByValRequired As Integer) 
+
 Implements IDomesticate.Train
+
 ```
 
 C# 不支持更改实现名称的能力。
@@ -9897,8 +9618,11 @@ Visual Basic 类型在实现接口后，在类型声明之后会紧跟一个 `Im
 # Visual Basic
 
 ```vb
+
 Public Class Dog
+
   Implements IDomesticate
+
 ```
 
 在 C# 中，逗号分隔的接口名称列表紧跟在声明的类型名称之后，用冒号与名称分隔。如果新类型派生自基类，此列表还可能包含一个类名。
@@ -9906,8 +9630,11 @@ Public Class Dog
 # C#
 
 ```csharp
+
 public class Dog : IDomesticate
+
 {
+
 ```
 
 另请参见
@@ -9921,14 +9648,21 @@ Visual Basic 的 `Imports` 语句用于识别当前源文件中使用的命名�
 # Visual Basic
 
 ```vb
+
 ' ----- 在源代码文件的顶部。
+
 Imports System.Text
+
 ```
 
 ```vb
+
 ' 稍后在同一文件的方法中，不需要
+
 ' 完整的 System.Text.StringBuilder 路径。
+
 Dim content As New StringBuilder()
+
 ```
 
 C# 的 `using` 指令执行此类命名空间识别。
@@ -9936,33 +9670,51 @@ C# 的 `using` 指令执行此类命名空间识别。
 # C#
 
 ```csharp
+
 // ----- 在源文件的顶部。
+
 using System.Text;
+
 ```
 
 ```csharp
+
 // 稍后在同一文件的方法中，不需要
+
 // 完整的 System.Text.StringBuilder 路径。
+
 StringBuilder content = new StringBuilder();
+
 ```
 
 两种语言都支持为导入的命名空间分配别名。
 
 ```vb
+
 VISUAL BASIC
+
 Imports TextStuff = System.Text
+
 C#
+
 using TextStuff = System.Text;
+
 ```
 
 别名可以作为缀放在同一文件中的成员名称之前。
 
 ```vb
+
 VISUAL BASIC
+
 Dim content As New TextStuff.StringBuilder()
+
 C#
+
 TextStuff.StringBuilder content =
+
 new TextStuff.StringBuilder();
+
 ```
 
 Visual Basic 提供项目范围的命名空间导入，允许程序员引用这些命名空间，而无需在每个文件中包含 `Imports` 语句。C# 不支持这种项目级功能。相反，你必须在引用已导入命名空间的每个文件中包含适当的指令。
@@ -9972,20 +9724,31 @@ Visual Basic 提供项目范围的命名空间导入，允许程序员引用这�
 除了命名空间，VB 的 `Imports` 语句还允许你指定容器类型（类、结构体、模块、接口或枚举）的全名层次结构，使该类型的可用成员可以在当前文件中无需限定即可使用，至少当单独使用成员名称没有歧义时如此。C# 的 `using static` 指令复制了这一功能，但仅适用于 2015 版本及以后的语言。
 
 ```vb
+
 VISUAL BASIC
+
 Imports System.Drawing.SystemColors
 
 ' 稍后在同一文件的方法代码中，可以直接使用
+
 ' SystemColors 的成员。
+
 displayColor = ControlText
+
 C#
+
 using static System.Drawing.SystemColors;
+
 ```
 
 ```csharp
+
 // 稍后在同一文件的方法代码中，可以直接使用
+
 // SystemColors 的成员。
+
 displayColor = ControlText;
+
 ```
 
 Visual Basic 在导入类型时允许别名赋值，但 C# 的 `static` 语句中是不允许的。
@@ -10005,20 +9768,31 @@ Visual Basic 在导入类型时允许别名赋值，但 C# 的 `static` 语句�
 在 Basic 中，派生类使用 `Inherits` 语句指定其基类。该语句出现在类定义的第一行。
 
 ```vb
+
 VISUAL BASIC
+
 ' Dog 派生自 Animal，并且
+
   实现了 IDomesticate。
+
 Public Class Dog
+
   Inherits Animal
+
   Implements IDomesticate
+
 ```
 
 在 C# 中，基类出现在声明的派生类名称之后，用冒号与名称分隔。已实现的接口也可以出现在此冒号之后，用逗号分隔多个接口和基类名。
 
 ```csharp
+
 // Dog 派生自 Animal，并且
+
 // 实现 IDomesticate。
+
 public class Dog : Animal, IDomesticate
+
 ```
 
 ## 初始化器
@@ -10028,23 +9802,37 @@ public class Dog : Animal, IDomesticate
 # VISUAL BASIC
 
 ```vb
+
 Const closePi As Decimal = 3.2
+
 Dim implicitSize() As Integer = {2}
+
 Dim startingZero As Integer = 0
+
 Dim startingEmpty As String = ""
+
 Dim readyUse As String = Nothing
+
 Dim fromExpression As String = "3"
+
 ```
 
 # C#
 
 ```csharp
+
 const decimal closePi = 3.2m;
+
 int[] implicitSize = {2};
+
 int startingZero = 0;
+
 string startingEmpty = "";
+
 string readyUse = null;
+
 string fromExpression = "3";
+
 ```
 
 在语言中，对象初始化器允许在实例声明时设置字段和属性。在 Visual Basic 中，初始化集合时需要 `With` 子句，且每个成员都以点为缀；C# 则省略了 `With` 关键字和点。
@@ -10052,31 +9840,45 @@ string fromExpression = "3";
 # VISUAL BASIC
 
 ```vb
+
 ' 显式类型。
+
 Dim cat1 As New Animal {.Age = 5, .Name = "Fluffy"}
+
 Dim cat2 As New Animal {.Age = 10, .Name = "Fang"}
 
 ' 隐式类型。
+
 Dim kitten = New Animal {.Age = 0, .Name = "Kitty"}
+
 ```
 
 ```vb
+
 ' 自定义构造函数。
+
 Dim boss As New Employee("John Smith") With {.Title = "President"}
+
 ```
 
 # C#
 
 ```csharp
+
 // 显式类型。
+
 Animal cat = new Animal {Age = 5, Name = "Fluffy"};
+
 Animal cat2 = new Animal {Age = 10, Name = "Fang"};
 
 // 隐式类型。
+
 var kitten = new Animal {Age = 0, Name = "Kitty"};
 
 // 自定义构造函数。
+
 Employee boss = new Employee("John Smith") {Title = "President"};
+
 ```
 
 Visual Basic 和 C# 均可以在实例声明时初始化数组和集合。Visual Basic 在初始化集合时需要 `With` 子句，而 C# 则不需要此类关键字。
@@ -10084,35 +9886,53 @@ Visual Basic 和 C# 均可以在实例声明时初始化数组和集合。Visual
 # VISUAL BASIC
 
 ```vb
+
 ' 数组。在 explicitSize 声明中，“3"
+
 ' 指的是上限而不是大小。
+
 Dim implicitSize() As Integer = {2, 3, 5, 7, 11}
+
 Dim explicitSize() As Integer = New Integer(3) = {13, 17, 19, 23}
+
 Dim simpler() As Integer = {29, 31, 37}
+
 Dim multiDimension() As Integer = {{1, 2}, {3, 4}}
+
 Dim jagged() As Integer = New Integer() {New Integer() {1, 2, 3}, New Integer() {4, 5, 6, 7, 8}}
 
 ' 集合。
+
 Dim basicList As New List(Of Integer) From {1, 2, 3, 4, 5}
+
 Dim dayInfo As New Dictionary(Of Integer, String) From {{0, "Sunday"}, {1, "Monday"}}
+
 ```
 
 # C#
 
 ```csharp
+
 // 数组。在 explicitSize 声明中，“4"
+
 // 指的是大小而不是上限。
+
 int[] implicitSize = new int[] {2, 3, 5, 7, 11};
+
 int[] explicitSize = new int[] {13, 17, 19, 23};
+
 int[] simpler = {29, 31, 37};
+
 int[,] multiDimension = {{1, 2}, {3, 4}};
+
 int[][] jagged = new int[][] {{1, 2, 3}, new[] {4, 5, 6, 7, 8}};
 
-
-
 // 集合。
+
 List<int> basicList = new List<int> {1, 2, 3, 4, 5};
+
 Dictionary<int, string> dayInfo = new Dictionary<int, string> {{0, "Sunday"}, {"1", "Monday"}};
+
 ```
 
 这是一个结合集合和初始化器的复杂示例。
@@ -10120,19 +9940,26 @@ Dictionary<int, string> dayInfo = new Dictionary<int, string> {{0, "Sunday"}, {"
 # VISUAL BASIC
 
 ```vb
+
 Dim moreCats As New List(Of Cat) From {
+
 New Cat() With {.Name = "Furrytail", .Age = 5},
+
 New Cat() With {.Name = "Peaches", .Age = 4}}
+
 ```
 
 # C#
 
-```csharp
-List<Cat> moreCats = new List<Cat> {
-new Cat() {Name = "Furrytail", Age = 5},
-new Cat() {Name = "Peaches", Age = 4}
+
+
+`List<Cat>` `moreCats` = new `List<Cat>` {
+
+new `Cat()` {Name = "Furrytail", Age = 5},
+
+new `Cat()` {Name = "Peaches", Age = 4}
+
 };
-```
 
 在期望集合数组的地方，集合初始化器可以使用表达式。
 
@@ -10163,36 +9990,34 @@ Dim pet = New {.Age = 3, .Name = "Rover"}
 var pet = new {Age = 3, Name = "Rover"};
 ```
 
-
-
-
-
 ## InStr 方法
 
 在 C# 中，使用字符串类型的 `IndexOf` 方法可以返回与 Visual Basic 的 `InStr` 方法相似的结果。如果未找到所需的子字符串，`IndexOf` 返回 -1，而 `InStr` 在没有匹配项时则返回 0。此外，`InStr` 的结果是基于 1 的（1-based），即字符串开头的匹配将返回 1。相比之下，`IndexOf` 方法是基于 0 的（0-based），当与源字符串的第一个字符匹配时返回 0。当使用 `InStr` 指定起始位置时，该值也是基于 1 的，而 `IndexOf` 中相关的索引是基于 0 的。
 
-```
+```vb
 VISUAL BASIC
 ----- 结果是基于 1 开始的。
 position = InStr(internetUrl, "//://")
-
 ----- 索引也是基于 1 开始的。
 afterDomain = InStr(position + 3, internetUrl, "//")
-C#
+```
+
+```csharp
 // 结果是基于 0 开始的。
 position = internetUrl.IndexOf("://");
-
 // 索引也是基于 0 开始的。
 afterDomain = internetUrl.IndexOf("/", position + 3);
 ```
 
 两种方法都允许你通过可选参数指定二进制（区分大小写）或文本（不区分大小写）搜索方法。
 
-```
+```vb
 VISUAL BASIC
 ----- 执行不区分大小写的匹配。
 position = InStr(originalText, pattern, CompareMethod);
-C#
+```
+
+```csharp
 // 执行不区分大小写的匹配。
 position = originalText.IndexOf(pattern, StringComparison.CurrentCultureIgnoreCase);
 ```
@@ -10201,33 +10026,31 @@ position = originalText.IndexOf(pattern, StringComparison.CurrentCultureIgnoreCa
 
 在 C# 中，使用字符串类型的 `LastIndexOf` 方法可以返回与 Visual Basic 的 `InStrRev` 方法相似的结果。如果未找到所需的子字符串，`LastIndexOf` 返回 -1，而 `InStrRev` 在没有匹配项时返回 0。此外，`InStrRev` 的结果是基于 1 的，即字符串开头的匹配将返回 1。相比之下，`LastIndexOf` 方法是基于 0 的，当与源字符串的第一个字符匹配时返回 0。当使用 `InStrRev` 指定起始位置时，该值也是基于 1 的，而 `LastIndexOf` 中相关的索引是基于 0 的。
 
-```
+```vb
 VISUAL BASIC
 ' ----- 结果是基于 1 开始的。
 filePart = InStrRev(fullPath, "\")
 ```
 
-```
+```vb
 ' ----- 索引也是基于 1 开始的。
 directoryPart = InStrRev(fullPath, "\", filePart - 1)
 ```
 
-```
-C#
+```csharp
 // 结果是基于 0 开始的。
 filePart = fullPath.LastIndexOf("\");
 ```
 
 两种方法都允许你通过可选参数指定二进制（区分大小写）或文本（不区分大小写）搜索方法。
 
-```
+```vb
 VISUAL BASIC
 ' 执行不区分大小写的匹配。
 position = InStrRev(originalText, pattern, CompareMethod.Text);
 ```
 
-```
-C#
+```csharp
 // 执行不区分大小写的匹配。
 position = originalText.LastIndexOf(pattern, StringComparison.CurrentCultureIgnoreCase);
 ```
@@ -10257,7 +10080,6 @@ public string InputBox(string prompt, string title = "", string defaultResponse 
     else
         this.StartPosition = FormStartPosition.Manual;
     this.DesktopLocation = new Point(xPos, yPos);
-
     // 提示用户。取消时返回 ""
     if (this.ShowDialog() == DialogResult.OK)
         return textBox1.Text;
@@ -10335,21 +10157,16 @@ interface ISSethingNew : ISSethingOld
 }
 ```
 
-
-
-
 名称始终与正在被实现的接口成员名称相同。
 
 ## IPmt 方法
 
 查看
-
 财务方法 (Financial Methods)
 
 ## IRR 方法
 
 查看
-
 财务方法 (Financial Methods)
 
 ## Is 比较运算符
@@ -10444,7 +10261,6 @@ if ((someVariable != null) &&
 ## IsFalse 运算符
 
 查看
-
 ## 运算符比较
 
 ## IsNot 运算符
@@ -10455,7 +10271,6 @@ C# 的 `!=` 比较运算符在用于引用类型时，提供与 Visual Basic 的
 VISUAL BASIC
 ' ----- 标准实例比较。
 If (firstInstance IsNot secondInstance) Then
-
 ' ----- 与 Nothing 的比较。
 If (anotherInstance IsNot Nothing) Then
 ```
@@ -10504,14 +10319,11 @@ if (double.TryParse(input, out result)) {
 
 Nothing 字面量，可空类型 (Nullable Types)
 
-
 ```cs
 // ----- 使用带类型的参数。
 (int limit, string code) => code.Length > limit
-
 // ----- 使用类型推断参数。
 (first, second) => first! != second
-
 // 无参数。
 () => LogAction()
 ```
@@ -10557,12 +10369,15 @@ Dim complexValue As Object = New ExampleType
 complexValue.ProcessData()
 ```
 
+
+
 在 C# 中，晚绑定（在该语言中通常称为“动态绑定”）通过 `dynamic` 类型声明表达式实现。
 
 # C#
 
 ```csharp
 dynamic basicValue = 20;
+
 dynamic complexValue = new ExampleType();
 ```
 
@@ -10644,8 +10459,6 @@ Visual Basic 的 `Len` 方法返回字符串的长度，或值类型占用的字
 | UInteger | uint | 4 |
 | ULong | ulong | 8 |
 | UShort | ushort | 2 |
-
-
 
 ```csharp
 string notice = @"verbatim text";
@@ -10753,6 +10566,7 @@ C# 和 Visual Basic 也接受指数格式（科学计数法）的数字。基数
 ' Visual Basic
 bigValue = 9.24E+22# ' Double
 ```
+
 ```csharp
 // C#
 double bigValue = 9.24E+22D; // double
@@ -10783,20 +10597,15 @@ Visual Basic 使用字符串字面量表示日期和时间，然后转换为 `Da
 ### 字符串字面量
 Visual Basic 使用双引号字符串字面量（插值除外）。C# 使用双引号字符串字面量，并使用 `$` 前缀进行插值。
 
-
-
-
-
 ## Main 方法
 
 在 Visual Basic 和 C# 中，应用程序都使用 `Main` 方法作为程序的入口点。这些程序始终是 `Shared`（VB 中如果方法出现在 Module 中，则假设使用了 `Shared` 修饰符）或 `static`（C#），返回无结果（Sub 或 void）或整数，并且可以定义一个参数，即命令行字符串数组。C# 允许这些方法为私有，尽管 Visual Basic 并不允许这样做。
 
-```
+```vb
 VISUAL BASIC
 ' --- 无返回值或参数的基础版本。
 Shared Friend Sub Main()
 End Sub
-
 ' ---- 同时包含返回代码和参数的版本。
 Shared Friend Function Main(
 ByVal cmdArgs() As String) As Integer
@@ -10807,8 +10616,7 @@ End Function
 // ---- 无返回值或参数的基础版本。
 static void Main()
 {}
-
-// --- 同时包含返回代码和参数的版本。
+ // --- 同时包含返回代码和参数的版本。
 static int Main(string[] args)
 {
 }
@@ -10848,11 +10656,9 @@ Visual Basic 包含了通过项目属性中的启用应用程序框架复选框�
 
 C# 的 `this` 表达式提供了对本地类型成员的访问，就像 Visual Basic 的 `Me` 表达式一样。
 
-```
-VISUAL BASIC
+```vb
 Class SimpleAdder
     Public Value As Integer = 0
-
     Public Sub Increment()
     Me.Value += 1
     End Sub
@@ -10863,7 +10669,6 @@ End Class
 class SimpleAdder
 {
     public int Value = 0;
-
     public void Increment()
     {
         this.Value++;
@@ -10928,7 +10733,7 @@ public void LogError(string errorText)
 
 在 Visual Basic 中实现特定接口的成员时，`Implements` 子句显式标识了方法正在实现的接口成员。
 
-```
+```vb
 VISUAL BASIC
 Public Sub Speak (ByVal textToSpeak As String) -
     Implements IVocal.Speak
@@ -10941,6 +10746,8 @@ public void IVocal.Speak(string textToSpeak)
 {
 }
 ```
+
+
 
 当 Visual Basic `Handles` 子句附加到方法声明时，会将事件连接到事件处理程序。C# 不包含等效关键字。相反，你必须作为标准方法逻辑的一部分附加事件处理程序。参见本章的“AddHandler 语句”获取等效 C# 语法的详情。
 
@@ -10964,58 +10771,62 @@ public void IVocal.Speak(string textToSpeak)
 | Shared | static |
 | 不支持 | extern |
 
-在 Visual Basic 中，所有方法默认为 Public。在 C# 中，如果没有访问修饰符，则为 private。
+在 Visual Basic 中，所有方法默认为 `Public`。在 C# 中，如果没有访问修饰符，则为 `private`。
 
 另请参阅标点符号、参数和参数、访问修饰符、处理器、标识符
 
 ## Mid 赋值语句
 
-C# 没有等效于 Visual Basic Mid 语句。要在 C# 中替换现有字符串的部分，使用字符串类型的 `Substring` 方法提取部分，并与新内容拼接。Visual Basic 的 Mid 语句对字符串长度非常宽，会静默修剪额外内容，并在原始字符串文本不足时不报错。`Substring` 方法更严格，如果尝试访问字符串的部分将抛出异常。你必须确保只检索有效的部分。
+C# 没有等效于 Visual Basic `Mid` 语句。要在 C# 中替换现有字符串的部分，使用字符串类型的 `Substring` 方法提取部分，并与新内容拼接。Visual Basic 的 `Mid` 语句对字符串长度非常宽，会静默修剪额外内容，并在原始字符串文本不足时不报错。`Substring` 方法更严格，如果尝试访问字符串的部分将抛出异常。你必须确保只检索有效的部分。
 
 ## Mid 方法
 
-C# 字符串类型的 `Substring` 方法提供了与 Visual Basic `Mid` 方法相似的功能。Mid 使用从 1 开始的位置；Substring 使用从 0 开始的位置。
+C# 字符串类型的 `Substring` 方法提供了与 Visual Basic `Mid` 方法相似的功能。`Mid` 使用从 1 开始的位置；`Substring` 使用从 0 开始的位置。
 
+### VISUAL BASIC
 ```
-VISUAL BASIC
 ----- 获取 XXXYYYYZZZ 电话中的 YYY 部分。phoneExchange = Mid(phoneNumber, 4, 3)
 ```
 
+### C#
 ```csharp
 // 获取 XXXYYZZZZ 电话中的 YYY 部分。
 phoneExchange = phoneNumber.Substring(3, 3);
-
 // 获取末尾数字。
 phoneSuffix = phoneNumber.Substring(6);
 ```
 
 ## Minute 方法
 
-DateTime 的 Minute 属性返回 Visual Basic Minute 方法相同的信息。
+`DateTime` 的 `Minute` 属性返回 Visual Basic `Minute` 方法相同的信息。
 
-```
-VISUAL BASIC
+### VISUAL BASIC
+```visualbasic
 Dim whichMinute As Integer = Minute(oneOrder.OrderDate)
-C#n whichMinute = oneOrder.OrderDate.Minute;
+```
+
+### C#
+```csharp
+int whichMinute = oneOrder.OrderDate.Minute;
 ```
 
 ## MIRR 方法
 
-参见
-
-财务方法
+参见财务方法
 
 ## MkDir 方法
 
-Visual Basic 的 MkDir 方法创建目录。要在 C# 中执行相同操作，请使用 System.IO.Directory.CreateDirectory 方法。
+Visual Basic 的 `MkDir` 方法创建目录。要在 C# 中执行相同操作，请使用 `System.IO.Directory.CreateDirectory` 方法。
 
-```
-VISUAL BASIC
+### VISUAL BASIC
+```visualbasic
 MkDir(pathToDirectory)
-C#nSystem.IO.Directory.CreateDirectory(pathToDirectory);
 ```
 
-
+### C#
+```csharp
+System.IO.Directory.CreateDirectory(pathToDirectory);
+```
 
 参见
 
@@ -11025,8 +10836,8 @@ C#nSystem.IO.Directory.CreateDirectory(pathToDirectory);
 
 C# 不包含与 Visual Basic `Module` 语句直接等价的内容。最接近的方法是使用带有 `static` 饰符的类语句。`static` 饰符类似于 VB 的 `Shared` 饰符，它将每个成员绑定到类本身，而不是特定的实例。
 
-```
-VISUAL BASIC
+### VISUAL BASIC
+```visualbasic
 Module UsefulFunctions
     Public Function Reverse(ByVal originalText As String) - 
     As String
@@ -11042,7 +10853,8 @@ Module UsefulFunctions
 End Module
 ```
 
-```c#
+### C#
+```csharp
 static class UsefulFunctions
 {
     public static string Reverse(string originalText)
@@ -11067,25 +10879,21 @@ static class UsefulFunctions
 
 你需要在访问静态类成员时指定类名。从 2015 年开始，C# 允许在使用新的 `using static` 语句时进行无限定符访问。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 ```visualbasic
 ----- 假设存在之前的代码示例。
 Dim funText As String = Reverse(originalText)
 ```
 
-# C#
-
+### C#
 ```csharp
 // ----- 假设存在之前的代码示例。
 string funText = UsefulFunctions.Reverse(originalText)
 ```
-
 ```csharp
 // ----- 从 2015 年开始，在文件顶部。
 using static UsefulFunctions;
 ```
-
 ```csharp
 // ----- 稍后，在方法内部。
 string funText = Reverse(originalText)
@@ -11094,21 +10902,18 @@ string funText = Reverse(originalText)
 有关在 C# 中创建静态类的更多信息，请参阅本章中的“类语句”（Class Statement）条目。
 
 另见
-
 - 类语句
 
 ## Month 方法
 
-DateTime 类型的 `Month` 属性返回与 Basic 的 `Month` 方法相同的信息。
+`DateTime` 类型的 `Month` 属性返回与 Basic 的 `Month` 方法相同的信息。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 ```visualbasic
 Dim whichMonth As Integer = Month(oneOrder.OrderDate)
 ```
 
-# C#
-
+### C#
 ```csharp
 int whichMonth = oneOrder.OrderDate.Month;
 ```
@@ -11117,37 +10922,32 @@ int whichMonth = oneOrder.OrderDate.Month;
 
 Basic 的 `MonthName` 方法在给定数值值时会返回完整或缩写的月份名称。在 C# 中，请使用运行程序集当前区域文化的 `DateTimeFormat` 成员。
 
-# VISUAL BASIC
-
+### VISUAL BASIC
 ```visualbasic
 ----- 完整的月份名，en-US 语言下的 "January"。
 result = MonthName(1)
 ```
-
 ```visualbasic
 ----- 缩写，en-US 语言下的 "Jan"。
 result = MonthName(1, True)
 ```
 
-# C#
-
+### C#
 ```csharp
 // ----- 完整的月份名，en-US 语言下的 "January"。
 result = System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat.GetMonthName(1);
 ```
-
 ```csharp
 // ----- 缩写，en-US 语言下的 "Jan"。
 result = System.Threading.Thread.CurrentThread.
 CurrentCulture.DateTime.GetAbbreviatedMonthName(1);
 ```
 
-在处理 DateTime 类型的实例时，你可以使用其 `ToString` 方法配合格式代码来返回完整或缩写的月份名称。
+在处理 `DateTime` 类型的实例时，你可以使用其 `ToString` 方法配合格式代码来返回完整或缩写的月份名称。
 
 ```csharp
 // ----- 完整名称，en-US 语言下的 "January"。
 result = order.ToString("MMMM");
-
 // ----- 缩写，en-US 语言下的 "Jan"。
 result = order.ToString("MMM");
 ```
@@ -11196,35 +10996,29 @@ C# 也使用 `abstract` 关键字作为类饰符。在这种情况下，它等�
 
 当应用于类成员时，C# 的 `abstract` 饰符与 Visual Basic 的 `MustOverride` 饰符相同。装饰的成员将包含实现。
 
-# Visual Basic
-
+### Visual Basic
 ```visualbasic
 ----- 方法。
 Public MustOverride Sub ProcessResults()
 ```
-
 ```visualbasic
 ----- 属性。
 Public MustOverride Property MaxLevel As Integer
 ```
-
 ```visualbasic
 ----- 只读索引器。
 Public MustOverride ReadOnly Item(ByVal index As Integer) As String
 ```
 
-# C#
-
+### C#
 ```csharp
 ----- 方法。
 public abstract void ProcessResults();
 ```
-
 ```csharp
 ----- 属性。
 public abstract int MaxLevel { get; set; }
 ```
-
 ```csharp
 ----- 只读索引器。
 public abstract string this[int index] { get; }
@@ -11235,7 +11029,6 @@ public abstract string this[int index] { get; }
 C# 也使用 `abstract` 关键字作为类饰符。在这种情况下，它等同于 VB 的 `MustInherit` 饰符。就像 Visual Basic 的 `MustOverride` 成员只能出现在标记为 `MustInherit` 的类中，C# 的 `abstract` 成员只能出现在 `abstract` 类中。
 
 另见
-
 - MustInherit 饰符
 
 ## My Namespace
@@ -11280,7 +11073,6 @@ Visual Basic 的 `MyClass` 表达式类似于 `Me` 表达式，但即使派生�
 C# 不包含 `MyClass` 的等价物，你必须在基类中添加公共或保护成员，并在派生代码中直接访问。
 
 另见
-
 - MyBase 实例表达式
 
 ## NameOf 运算符
@@ -11316,7 +11108,6 @@ namespace Level1
 在项目属性中，Visual Basic 支持项目的“根命名空间”（Root Namespace），它是项目中所有代码的封装命名空间（除非文件中使用了 `Global` 命名空间别名）。C# 在其项目属性中包含“默认命名空间”（Default Namespace）选项，但该选项用于 Visual Studio 在向项目添加新源文件时创建初始 `namespace` 语句。它对项目内部类型的层次结构没有其他影响。
 
 另见
-
 - 全局命名空间别名
 
 ## Narrowing 饰符
@@ -11326,10 +11117,6 @@ Visual Basic 的 `Narrowing` 饰符表示从一种类型到另一种类型的重
 ```visualbasic
 ```
 
-
-
-
-
 # Class BigType
 Public Shared Narrowing Operator CType(
     ByVal source As BigType As SmallType
@@ -11338,17 +11125,15 @@ End Class
 
 等效 C# 重载使用 `explicit` 修饰符表示相同的限制转换。
 
-```
-C#
+```csharp
 class BigType
 {
     public static explicit operator SmallType (
         BigType source)
     {
         return new SmallType(source.GetCondensed());
-    }
-}
-```
+
+
 
 ## See Also
 
@@ -11360,28 +11145,47 @@ class BigType
 
 ```
 VISUAL BASIC
+
 Class Employee
+
     Public Sub New()
+
         ' 默认构造函数。
+
     End Sub
+
     Public Sub New(ByVal empName As String)
+
         ' 自定义构造函数。
+
     End Sub
+
 End Class
 ```
 
 ```
 C#
+
 class Employee
+
 {
+
     public Employee()
+
     {
+
         // 默认构造函数
+
     }
+
     public Employee(string empName)
+
     {
+
         // 自定义构造函数。
+
     }
+
 }
 ```
 
@@ -11389,36 +11193,60 @@ class Employee
 
 ```
 VISUAL BASIC
+
 Class Employee
+
 Inherits Person
 
 Public Sub New(ByVal empName As String)
+
     ' 基类处理人员姓名。
+
     MyBase.New(empName)
+
 End Sub
+
 Public Sub New(ByVal empName As String,
+
     ByVal salary As Decimal)
+
     ' 另一个构造函数处理姓名。
+
     Me.New(empName)
+
     ' 此处是特定工资的代码。
+
 End Sub
+
 End Class
 ```
 
 在 C# 中调用自定义构造函数，或使用另一个自定义构造函数作为构造函数的起点，请分别使用 `base` 和 `this` 构造函数声明。它们紧跟在构造签名之后，通过冒号与签名隔开。
 
 ```C#
+
 class Employee : Person
+
 {
+
     public Employee(string empName) : base(empName)
+
     {
+
         // 基类处理人员姓名。
+
     }
+
     public Employee(string empName,
+
     decimal salary) : this(empName)
+
     {
+
         // 此处是特定工资的代码。
+
     }
+
 }
 ```
 
@@ -11444,9 +11272,10 @@ C# 的 `new` 运算符在创建新类型实例时，功能上等同于 Visual Ba
 > Dim namedManager As Employee = New Employee ("Jones")
 
 ```
-C#
 // --- 使用默认和自定义构造函数的示例
+
 Employee oneManager = new Employee();
+
 Employee namedManager = new Employee ("Jones")
 ```
 
@@ -11462,6 +11291,7 @@ Employee namedManager = new Employee ("Jones")
 
 ```
 C#
+
 authenticated = (new PasswordDialog()).PromptUser();
 ```
 
@@ -11503,6 +11333,7 @@ Dim opposite As Boolean = Not originalValue
 # C#
 
 ```cs
+
 bool opposite = !originalValue;
 ```
 
@@ -11517,6 +11348,7 @@ Dim complement As Integer = Not originalValue
 # C#
 
 ```cs
+
 int complement = ~originalValue;
 ```
 
@@ -11531,11 +11363,12 @@ Dim oneManager As Employee = Nothing ' 无实例
 Dim optionalNumber As Integer?
 ```
 
-
-
 ```sharp
+
 if (optionalNumber == null)
+
 // ----- 这在两种语言中均有效。
+
 if (optionalNumber.HasValue() == false)
 ```
 
@@ -11546,10 +11379,13 @@ if (optionalNumber.HasValue() == false)
 C# 的内置对象数据类型与 Visual Basic 的 Object 数据类型相同。这两种类型都是 .NET System.Object 类型的别名。
 
 ```vb
+
 VISUAL BASIC
+
 Dim result As Object = Nothing
 
 C#
+
 object result = null;
 ```
 
@@ -11563,10 +11399,13 @@ object result = null;
 `Convert.ToString` 方法的重载接受目标数值基数。向此方法传递基数 8 可以复制 Visual Basic 中 `Oct` 方法的输出。
 
 ```vb
+
 VISUAL BASIC
+
 Dim result As String = Oct(123) ' --> "173"
 
 C#
+
 string result = System.Convert.ToString(123, 8);
 ```
 
@@ -11575,10 +11414,13 @@ string result = System.Convert.ToString(123, 8);
 Visual Basic 在括号内使用 `Of` 子句来指示泛型声明中的数据类型。在 C# 中，此声明出现在角括号中。
 
 ```vb
+
 VISUAL BASIC
+
 Dim lookupSet As Dictionary(Of Long, String)
 
 C#
+
 Dictionary<long, string> lookupSet;
 ```
 
@@ -11600,19 +11442,30 @@ C# 不支持非结构化错误处理，因此它没有对应 Visual Basic 的 `O
 C# 的运算符语句（operator statement）等同于 Visual Basic 的 `Operator` 语句。在两种语言中，“operator”关键字后面都跟着被重载的具体运算符符号，操作数以参数的形式出现在方法风格定义中。
 
 ```vb
+
 Visual Basic
+
 Public Shared Operator +(ByVal op1 As Team,
+
     ByVal op2 As Player) As Team
+
     ' 将玩家添加到团队的逻辑，然后...
+
     Return updatedTeam
+
 End Operator
 ```
 
 ```csharp
+
 public static Team operator +(Team op1, Player op2)
+
 {
+
     // 将玩家添加到团队的逻辑，然后...
+
     return updatedTeam;
+
 }
 ```
 
@@ -11675,20 +11528,25 @@ public static Team operator +(Team op1, Player op2)
 用户定义的转换是运算符重载语法的一部分。在 Visual Basic 中，`CType` 用作所有转换的运算符名称。源类型出现在参数列表中，目标类型作为方法的返回值。在 C# 中，源类型出现在参数列表中，目标类型作为运算符名称。在两种语言中，转换声明的类型必须匹配源类型或目标类型。
 
 ```vb
+
 VISUAL BASIC
+
 Class CountMonitor
+
     Public Shared Narrowing Operator CType(
+
         ByVal source As CountMonitor) As Integer
+
         ----- 将 CountMonitor 转换为 int，然后...
+
         Return newInt
+
 End Operator
+
     Public Shared Widening Operator CType(
+
         ByVal source As CountMonitor)
 ```
-
-
-
-
 
 | <> | !== | 比较运算符 |
 | :--- | :--- | :--- |
@@ -11754,9 +11612,13 @@ C# 不包含 Visual Basic `Option Strict` 语句的等效项（无论是文件�
 
 ```
 --- The times 参数是可选的，默认值为 2。
+
 Public Function CopyText(ByVal original As String,
+
 Optional ByVal times As Integer = 2) As String
 ```
+
+
 
 C# 在其方法签名中不需要类似于 `Optional` 的修饰符。
 相反，任何包含赋值的参数都将成为调用过程的可选参数。
@@ -11775,7 +11637,7 @@ public string CopyText(string original, int times = 2)
 
 通常情况下，C# 的析取运算符与 Visual Basic 的运算符相同，无论对于整数（位运算）还是布尔（逻辑）操作都是如此。
 
-# VISUAL BASIC
+## VISUAL BASIC
 
 ```vb
 Dim complain As Boolean = (hot Or humid)
@@ -11791,7 +11653,7 @@ bool complain = (hot | humid);
 
 C# 的查询表达式运算符与 Visual Basic 的 `Order By` 运算符相同。两种语言都支持用逗号分隔的排序字段列表。每个字段默认按升序排序，或显式使用 `Ascending` (VB) 或 `ascending` (C#) 选项。若要按降序排序，请使用 `Descending` (VB) 或 `descending` (C#) 选项。
 
-# VISUAL BASIC
+## VISUAL BASIC
 
 ```vb
 Dim result = From Employee OrderBy FullName Descending Select Name
@@ -11802,10 +11664,6 @@ var result = from Employee in Employees order by Name descending select Name;
 ```
 
 *(注：由于原文中大量重复的区块已根据指令剔除，仅保留核心逻辑翻译)*
-
-
-
-
 
 ```cs
 partial class ComplexContent
@@ -11876,7 +11734,6 @@ public static string Partition(long number, long start,
     // 处理无效数据。
     if ((start < 0) | (stop < start) | (interval < 1))
         throw new ArgumentException();
-
     // 处理边界条件。
     if (number < start)
         return string.Format("{0}", start - 1);
@@ -11884,7 +11741,6 @@ public static string Partition(long number, long start,
         return string.Format("{0}", stop + 1);
     else if (interval == 1)
         return string.Format("{0}:{0}", stop);
-
     // 在有效范围内。
     for (long counter = start; counter <= stop;
         counter += interval)
@@ -11894,7 +11750,6 @@ public static string Partition(long number, long start,
             return string.Format("{0}:{1}", counter,
                 Math.Min(stop, counter + interval - 1)));
     }
-
     // 不应该无法到达。
     throw new ArgumentException();
 }
@@ -11969,10 +11824,6 @@ C# 的编译选项卡中没有包含 VB Option 设置（如 Option Explicit）�
 
 VB 的高级编译选项包含一个移除整数溢出检查选项。因为整数操作在 VB 中默认检查溢出/下溢，而在 C# 中默认不检查，选择这些选项会导致语言之间的行为差异。如果你在 VB 中勾选了该选项，在 C# 中应取消勾选，反之亦然。
 
-
-
-
-
 单个 C# 源文件。
 
 ## 我的扩展选项卡
@@ -11989,7 +11840,6 @@ C# 对属性的实现与 Visual Basic 的 Property 语句非常相似，尽管 C
 ```vb
 ---- 许多属性使用后备字段。
 Private _maxAmount As Integer = 0
-
 ---- 这里是属性本身。
 Public Property Maximum As Integer
 Get
@@ -12012,7 +11862,6 @@ End Property
 ```csharp
 // 许多属性使用后备字段。
 private int _maxAmount = 0;
-
 // 这里是属性本身。
 public int Maximum
 {
@@ -12133,6 +11982,8 @@ Set(ByVal value As Integer)
 End
 ```
 
+
+
 这种创建属性的方法在 C# 中是不支持的。此外，Visual Basic 可以通过引用传递给方法，即包含 `ByRef` 修饰符。C# 不允许这样做。
 
 - Automatic Properties
@@ -12165,6 +12016,7 @@ Visual Basic 的 `Color` 方法根据一组定义的颜色 ID 返回 RGB 值。�
 
 ```csharp
 var result = Color(colorID);
+
 int[] ColorTable = {
   0x0, 0x800000, 0x8000, 0x8000,
   0x80, 0x0080, 0xc0c0,
@@ -12222,13 +12074,7 @@ Visual Basic 和 C# 都原生支持许多 LINQ 功能。每种语言都包含一
 | Take | Take | Not supported |
 | TakeWhile | Take While | Not supported |
 | ThenBy | Order By | orderby |
-
-
-
-
-
 | ThenByDescending | Order By | orderby |
-| :--- | :--- | :--- |
 | ToArray | 不支持 | 不支持 |
 | ToDictionary | 不支持 | 不支持 |
 | ToList | 不支持 | 不支持 |
@@ -12239,7 +12085,7 @@ Visual Basic 和 C# 都原生支持许多 LINQ 功能。每种语言都包含一
 
 要查看这些原生操作符的具体示例，请使用本章末尾“另另”（See Also）区块来查找查询表达式条目。当特定的 LINQ 方法不受原生支持时，每种语言都允许将该方法直接作为查询表达式语法的一部分。
 
-# Visual Basic
+### Visual Basic
 
 ```vb
 Dim allNames = (From set1 in OldCustomers
@@ -12248,7 +12094,7 @@ From set2 in NewCustomers
 Select set2.FullName);
 ```
 
-# C#
+### C#
 
 ```csharp
 var allNames = (from set1 in OldCustomers
@@ -12273,24 +12119,23 @@ Aggregate 查询表达式操作符、Distinct 查询表达式操作符、From �
 
 ### RaiseEvent 语句
 
-C# 不包含等于 Visual Basic RaiseEvent 语句的内容。相反，你必须手动调用事件处理方法。
+C# 不包含等于 Visual Basic `RaiseEvent` 语句的内容。相反，你必须手动调用事件处理方法。
 
 ## Randomize 方法
 
-C# 中的随机数通过 System.Random 类生成。创建该类的实例（无论是否带有种子值）都会重置生成器。不需要类似于 Visual Basic Randomize 方法的单独 distinct 语句。
+C# 中的随机数通过 `System.Random` 类生成。创建该类的实例（无论是否带有种子值）都会重置生成器。不需要类似于 Visual Basic `Randomize` 方法的单独 distinct 语句。
 
 ```vb
 VISUAL BASIC
 ' ---- 使用默认种子。
 Randomize()
-
 ' ---- 使用自定义种子。
 Randomize CInt(Now.Ticks & &H0000FFFF)
 ```
+
 ```csharp
 // ---- 使用默认种子。
 System.Random generator = new System.Random();
-
 // ---- 使用自定义种子。
 System.Random generator = new System.Random(
 (int)DateTime.Now.Ticks & 0x0000FFFF);
@@ -12304,7 +12149,7 @@ System.Random generator = new System.Random(
 
 ## ReadOnly 修饰符
 
-与字段定义配合使用时，C# 的 readonly 修饰符与 Basic 的 ReadOnly 修饰符相同。
+与字段定义配合使用时，C# 的 `readonly` 修饰符与 Basic 的 `ReadOnly` 修饰符相同。
 
 ```vb
 VISUAL BASIC
@@ -12313,6 +12158,7 @@ Class TaxInformation
 Private ReadOnly TaxYear As Integer
 End Class
 ```
+
 ```csharp
 class TaxInformation{
     // ---- 必须在构造函数或声明中设置。
@@ -12320,9 +12166,9 @@ class TaxInformation{
 }
 ```
 
-Visual Basic 的 ReadOnly 修饰符用于创建只读属性。在这些定义中，属性的 Set 部分被省略了。C# 也省略了 set 部分，但它不需要任何其他特殊修饰符来指示属性的只读格式。
+Visual Basic 的 `ReadOnly` 修饰符用于创建只读属性。在这些定义中，属性的 Set 部分被省略了。C# 也省略了 set 部分，但它不需要任何其他特殊修饰符来指示属性的只读格式。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 Public ReadOnly Property Status As Integer
@@ -12333,7 +12179,7 @@ Get
 End Property
 ```
 
-# C#
+### C#
 
 ```csharp
 public int Status
@@ -12348,9 +12194,9 @@ public int Status
 
 ## ReDim 语句
 
-C# 不包含等于 Visual Basic ReDim 语句的内容。要调整数组大小，你需要创建一个具有所需维度的新数组，使用 System.Array Resize 方法（针对一维数组），或使用 Array 类的功能根据旧数组构建新数组。
+C# 不包含等于 Visual Basic `ReDim` 语句的内容。要调整数组大小，你需要创建一个具有所需维度的新数组，使用 `System.Array Resize` 方法（针对一维数组），或使用 `Array` 类的功能根据旧数组构建新数组。
 
-## VIS BASIC
+### VIS BASIC
 
 ```vb
 Dim infoArray(4, 8) As Integer
@@ -12358,7 +12204,7 @@ Dim infoArray(4, 8) As Integer
 ReDim infoArray(2, 10) ' 3x11 数组
 ```
 
-# C#
+### C#
 
 ```csharp
 int[,] infoArray = new int[5, 9];
@@ -12366,7 +12212,35 @@ int[,] infoArray = new int[5, 9];
 infoArray = new int[3, 11];
 ```
 
-ReDim 语句的 Preserve 方法保留新数组中的现有内容。在 C# 中，你必须手动将旧元素复制到新数组。对于一维数组，你可以使用 Array.Resize 方法更改数组的同时保留现有元素。
+`ReDim` 语句的 `Preserve` 方法保留新数组中的现有内容。在 C# 中，你必须手动将旧元素复制到新数组。对于一维数组，你可以使用 `Array.Resize` 方法更改数组的同时保留现有元素。
+
+### VIS BASIC
+
+```vb
+ReDim Preserve storageArea(0 to 9)
+```
+
+```csharp
+Array.Resize(ref storageArea, 10);
+```
+
+## REM 语句
+
+当在源码中添加全行注释时，C# 的 `//` 相当于 Basic 的 `REM` 语句。
+
+```vb
+C# 的 // 相当于注释。
+```
+
+```csharp
+// 
+```
+
+
+
+`infoArray = new int[3, 11];`
+
+`ReDim` 语句的 `Preserve` 方法保留新数组中的现有内容。在 C# 中，你必须手动将旧元素复制到新数组。对于一维数组，你可以使用 `Array.Resize` 方法更改数组的同时保留现有元素。
 
 ## VIS BASIC
 
@@ -12379,18 +12253,18 @@ Array.Resize(ref storageArea, 10);
 
 ## REM 语句
 
-当在源码中添加全行注释时，C# 的 // 相当于 Basic 的 REM 语句。
+当在源码中添加全行注释时，C# 的 `//` 相当于 Basic 的 `REM` 语句。
 
 ```vb
 C# 的 // 相当于注释。
 ```
 ```csharp
-// 
+//
 ```
 
 ## 另另
 
-RaiseEvent 自定义事件声明
+`RaiseEvent` 自定义事件声明
 
 查看
 
@@ -12398,145 +12272,15 @@ RaiseEvent 自定义事件声明
 
 ### RaiseEvent 语句
 
-C# 不包含等于 Visual Basic RaiseEvent 语句的内容。相反，你必须手动调用事件处理方法。
+C# 不包含等于 Visual Basic `RaiseEvent` 语句的内容。相反，你必须手动调用事件处理方法。
 
-## Randomize 方法
-
-C# 中的随机数通过 System.Random 类生成。创建该类的实例（无论是否带有种子值）都会重置生成器。不需要类似于 Visual Basic Randomize 方法的单独 distinct 语句。
-
-```vb
-VISUAL BASIC
-' ---- 使用默认种子。
-Randomize()
-
-' ---- 使用自定义种子。
-Randomize CInt(Now.Ticks & &H0000FFFF)
-```
-```csharp
-// ---- 使用默认种子。
-System.Random generator = new System.Random();
-
-// ---- 使用自定义种子。
-System.Random generator = new System.Random(
-(int)DateTime.Now.Ticks & 0x0000FFFF);
-```
-
-## Rate 方法
-
-查看
-
-### 财务方法
-
-## ReadOnly 修饰符
-
-与字段定义配合使用时，C# 的 readonly 修饰符与 Basic 的 ReadOnly 修饰符相同。
-
-```vb
-VISUAL BASIC
-Class TaxInformation
-' ---- 必须在构造函数或声明中设置。
-Private ReadOnly TaxYear As Integer
-End Class
-```
-```csharp
-class TaxInformation{
-    // ---- 必须在构造函数或声明中设置。
-    private readonly int TaxYear;
-}
-```
-
-Visual Basic 的 ReadOnly 修饰符用于创建只读属性。在这些定义中，属性的 Set 部分被省略了。C# 也省略了 set 部分，但它不需要任何其他特殊修饰符来指示属性的只读格式。
-
-# VISUAL BASIC
-
-```vb
-Public ReadOnly Property Status As Integer
-Get
-    ' ---- Return 语句出现在这里。
-    End Get
-    ' ---- 但没有出现 setter。
-End Property
-```
-
-# C#
-
-```csharp
-public int Status
-{
-    get
-    {
-        // ---- return 语句出现在这里。
-        // ---- 但没有出现 setter。
-    }
-}
-```
-
-## ReDim 语句
-
-C# 不包含等于 Visual Basic ReDim 语句的内容。要调整数组大小，你需要创建一个具有所需维度的新数组，使用 System.Array Resize 方法（针对一维数组），或使用 Array 类的功能根据旧数组构建新数组。
-
-## VIS BASIC
-
-```vb
-Dim infoArray(4, 8) As Integer
-' 随后调整数组大小，丢弃旧内容。
-ReDim infoArray(2, 10) ' 3x11 数组
-```
-
-# C#
-
-```csharp
-int[,] infoArray = new int[5, 9];
-// 随后调整数组大小，丢弃旧内容。
-infoArray = new int[3, 11];
-```
-
-ReDim 语句的 Preserve 方法保留新数组中的现有内容。在 C# 中，你必须手动将旧元素复制到新数组。对于一维数组，你可以使用 Array.Resize 方法更改数组的同时保留现有元素。
-
-## VIS BASIC
-
-```vb
-ReDim Preserve storageArea(0 to 9)
-```
-```csharp
-Array.Resize(ref storageArea, 10);
-```
-
-## REM 语句 
-
-当在源码中添加全行注释时，C# 的 // 相当于 Basic 的 REM 语句。
-
-```vb
-C# 的 // 相当于注释。
-```
-```csharp
-// 
-```
-
-## 另另
-
-RaiseEvent 自定义事件声明
-
-查看
-
-### 自定义事件语句
-
-### RaiseEvent 语句 
-
-C# 不包含等于 Visual Basic RaiseEvent 语句的内容。相反，你必须手动调用事件处理方法。
-
-
-
-
-
-(greenValue * 0x100) + redValue;
+`(greenValue * 0x100) + redValue;`
 
 # Right 方法
 
-Visual Basic 的 Right 方法返回源字符串的右侧字符。使用 C# 字符串 类的 Substring 方法可以返回类似的内容。
+Visual Basic 的 `Right` 方法返回源字符串的右侧字符。使用 C# 字符串 类的 `Substring` 方法可以返回类似的内容。
 
-```
-VISUAL BASIC
+```vb
 ' 返回最后两个字符。
 Dim cents As String = Right(dollarsAndCents, 2)
 ```
@@ -12545,44 +12289,39 @@ Dim cents As String = Right(dollarsAndCents, 2)
 string cents = dollarsAndCents.Substring(dollarsAndCents.Length - 2, 2);
 ```
 
-如果请求的长度超过了字符串的完整长度，Right 方法将静默返回字符串。在 C# 中，如果请求的起始位置或长度过长，Substring 方法将抛出异常。在使用 Substring 方法之前之前，请务必验证字符串的长度。
+如果请求的长度超过了字符串的完整长度，`Right` 方法将静默返回字符串。在 C# 中，如果请求的起始位置或长度过长，`Substring` 方法将抛出异常。在使用 `Substring` 方法之前之前，请务必验证字符串的长度。
 
 # RmDir 方法
 
-Visual Basic 的 RmDir 用于删除目录。要在 C# 中实现相同功能，请使用 System.IO.Directory.Delete 方法。
+Visual Basic 的 `RmDir` 用于删除目录。要在 C# 中实现相同功能，请使用 `System.IO.Directory.Delete` 方法。
 
-```
-VISUAL BASIC
+```vb
 RmDir(pathToDirectory)
 ```
-
 ```csharp
 System.IO.Directory.Delete(pathToDirectory);
 ```
 
 # Rnd 方法
 
-C# 中的随机数是通过 System.Random 类生成的。该类的 NextDouble 方法返回一个 0 到 1 之间的值，类似于 Visual Basic 的 Rnd 方法返回的值。
+C# 中的随机数是通过 `System.Random` 类生成的。该类的 `NextDouble` 方法返回一个 0 到 1 之间的值，类似于 Visual Basic 的 `Rnd` 方法返回的值。
 
-```
-VISUAL BASIC
+```vb
 Randomize()
 Dim nextSample As Double = Rnd()
 ```
-
 ```csharp
 System.Random generator = new System.Random();
 double nextSample = generator.NextDouble();
 ```
 
-Random 类还包括返回特定范围内随机整数的方法。
+`Random` 类还包括返回特定范围内随机整数的方法。
 
 # RSet 方法
 
-Visual Basic 的 RSet 方法返回原始字符串，该字符串会经过修剪或使用空格填充到特定长度。你可以在 C# 中实现这一点，尽管它没有等同于 RSet 的单一语言特性。
+Visual Basic 的 `RSet` 方法返回原始字符串，该字符串会经过修剪或使用空格填充到特定长度。你可以在 C# 中实现这一点，尽管它没有等同于 `RSet` 的单一语言特性。
 
-```
-VISUAL BASIC
+```vb
 result = RSet(originalString, 10)
 ```
 ```csharp
@@ -12594,10 +12333,9 @@ else
 
 # RTrim 方法
 
-C# 字符串数据类型的 TrimEnd 方法与 Visual Basic 的 RTrim 方法的作用相同。
+C# 字符串数据类型的 `TrimEnd` 方法与 Visual Basic 的 `RTrim` 方法的作用相同。
 
-```
-VISUAL BASIC
+```vb
 result = RTrim(someString)
 ```
 ```csharp
@@ -12606,17 +12344,15 @@ result = someString.TrimEnd();
 
 # SaveSetting 方法
 
-Visual Basic 的 SaveSetting 方法向 Windows 注册表中标准的 Visual Basic 部分添加单个键值。
+Visual Basic 的 `SaveSetting` 方法向 Windows 注册表中标准的 Visual Basic 部分添加单个键值。
 
-```
-VISUAL BASIC
+```vb
 SaveSetting(appName, sectionName, keyName, newValue)
 ```
 ```csharp
 // 假设：使用 Microsoft.Win32;
 const string stringRoot = "Software\\VB and VBA Program Settings";
-string stringLocation = string.Format("{0}\\\{1}\\\{2}", stringRoot, appName, sectionName);
-
+string stringLocation = string.Format("{0}\\\\{1}\\\\{2}", stringRoot, appName, sectionName);
 RegistryKey keyAccess = Registry.CurrentUser.CreateSubKey(stringLocation);
 keyAccess.SetValue(keyName, newValue);
 keyAccess.Close();
@@ -12624,10 +12360,9 @@ keyAccess.Close();
 
 # Sbyte 数据类型
 
-C# 的内置 sbyte 数据类型与 Visual Basic 的 sbyte 数据类型相同。两者都是 .NET System.SByte 类型的别名。
+C# 的内置 `sbyte` 数据类型与 Visual Basic 的 `sbyte` 数据类型相同。两者都是 .NET `System.SByte` 类型的别名。
 
-```
-VISUAL BASIC
+```vb
 Dim offset as SByte = 0
 ```
 ```csharp
@@ -12640,23 +12375,22 @@ sbyte offset = 0;
 - 周期与范围 (Lifetime and Scope)
 
 ### ScriptEngine 属性
-Visual Basic 的 ScriptEngine 属性始终返回短文本 "VB" 以表示 Visual Basic 语言。它在 C# 中没有等效属性。
+Visual Basic 的 `ScriptEngine` 属性始终返回短文本 `"VB"` 以表示 Visual Basic 语言。它在 C# 中没有等效属性。
 
 ### ScriptEngineBuildVersion 属性
-Visual Basic 的 ScriptEngineBuildVersion 属性在 C# 中没有等效属性。
+Visual Basic 的 `ScriptEngineBuildVersion` 属性在 C# 中没有等效属性。
 
 ### ScriptEngineMajorVersion 属性
-Visual Basic 的 ScriptEngineMajorVersion 属性在 C# 中没有等效属性。
+Visual Basic 的 `ScriptEngineMajorVersion` 属性在 C# 中没有等效属性。
 
 ### ScriptEngineMinorVersion 属性
-Visual Basic 的 ScriptEngineMinorVersion 属性在 C# 中没有等效属性。
+Visual Basic 的 `ScriptEngineMinorVersion` 属性在 C# 中没有等效属性。
 
 # Second 方法
 
-DateTime 类型的 Second 方法返回与 Visual Basic 的 Second 方法相同的信息。
+`DateTime` 类型的 `Second` 方法返回与 Visual Basic 的 `Second` 方法相同的信息。
 
-```
-VISUAL BASIC
+```vb
 Dim whichSecond As Integer = Second(OrderDate)
 ```
 ```csharp
@@ -12665,10 +12399,9 @@ int whichSecond = OrderDate.Second;
 
 # Seek 方法
 
-Visual Basic 的 Seek 方法获取或设置文件的读取或写入位置，这与 FileStream 类提供的功能相似。
+Visual Basic 的 `Seek` 方法获取或设置文件的读取或写入位置，这与 `FileStream` 类提供的功能相似。
 
-```
-VISUAL BASIC
+```vb
 ' 设置当前位置。
 Seek(fileNumber)
 ```
@@ -12679,14 +12412,13 @@ openedStream.Position = targetPosition;
 
 # 另请
 
-FileOpen 方法
+`FileOpen` 方法
 
 # Select Case 语句
 
-C# 的 switch 语句通常相当于 Visual Basic 的 Select Case 语句。这些语句都包含“case”块，以及可选的 else/default 块。
+C# 的 `switch` 语句通常相当于 Visual Basic 的 `Select Case` 语句。这些语句都包含“case”块，以及可选的 else/default 块。
 
-```
-VISUAL BASIC
+```vb
 Select Case position
   Case 1
     positionName = "ones"
@@ -12716,10 +12448,10 @@ switch (position)
 }
 ```
 
-' ----- Select 子句也可以出现在 Where 之前。
-Dim result = From oneEmployee in Employees
-Where oneEmployee.IsManager = True
-Select oneEmployee
+`' ----- Select 子句也可以出现在 Where 之前。`
+`Dim result = From oneEmployee in Employees`
+`Where oneEmployee.IsManager = True`
+`Select oneEmployee`
 
 ```csharp
 var result = from oneEmployee in Employees
@@ -12738,7 +12470,6 @@ Where oneEmployee.IsManager = True
 Select New { .Name = oneEmployee.FullName,
 oneEmployee.Salary, oneEmployee.HireDate}
 ```
-
 ```vb
 ----- 命名类型。
 Dim result = From oneEmployee in Employees
@@ -12746,7 +12477,6 @@ Where oneEmployee.IsManager = True
 Select New Person With (
 .Name = oneEmployee.FullName)
 ```
-
 ```csharp
 // ----- 匿名类型。
 var result = from oneEmployee in Employees
@@ -12754,7 +12484,6 @@ where oneEmployee.IsManager == true
 select new {Name = oneEmployee.FullName,
 oneEmployee.Salary, oneEmployee.HireDate}
 ```
-
 ```csharp
 // ----- 命名类型。
 var result = from oneEmployee in Employees
@@ -12772,14 +12501,13 @@ Name = oneEmployee.FullName};
 
 # SetAttr 方法
 
-在 Visual Basic 中，SetAttr 方法为文件路径设置属性。在 C# 中，此操作通过 .NET 的 `File.SetAttributes` 方法完成。
+在 Visual Basic 中，`SetAttr` 方法为文件路径设置属性。在 C# 中，此操作通过 .NET 的 `File.SetAttributes` 方法完成。
 
 # VISUAL BASIC
 
 ```vb
 SetAttr(targetFile, attributeFlags)
 ```
-
 ```csharp
 System.IO.File.SetAttributes(targetFile, attributeFlags);
 ```
@@ -12800,7 +12528,6 @@ Inherits BaseClass
 End Sub
 End Class
 ```
-
 ```csharp
 class DerivedClass : BaseClass
 {
@@ -12865,12 +12592,10 @@ Visual Basic 的 `Shell` 方法启动一个外部应用程序。在 C# 中，可
 ```vb
 - ----- 启动应用程序。程序将最小化，但默认具有焦点。
 Shell("Notepad.exe")
-
 - ----- 使用不同的位置/焦点设置。
 进程 ID 也被保留。
 Dim processID As Integer =
 Shell("Explorer.exe", AppStyle.Maximized)
-
 - ----- 等待程序完成。
 Shell("ComponentSetup.exe", AppStyle.NormalFocus, True, -1)
 ```
@@ -12882,7 +12607,6 @@ Shell("ComponentSetup.exe", AppStyle.NormalFocus, True, -1)
 // 假设使用了 System.Diagnostics;
 Process.Start("Notepad.exe");
 ```
-
 ```csharp
 // ----- 使用不同的位置/焦点设置。
 Process browserProcess = new Process();
@@ -12891,36 +12615,33 @@ browserProcess.StartInfo.FileName = "explorer.exe";
 browserProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized; // 也具有焦点。
 browserProcess.Start();
 int processID = browserProcess.Id;
-
 // ----- 等待程序完成。
 Process setupProcess = Process.Start("ComponentSetup.exe");
 setupProcess.WaitForExit();
 ```
 
+
+
 # 短路逻辑 (Short Circuiting)
 
-参见 AndAlso 逻辑运算符、OrElse 逻辑或运算符、If 运算符
+参见 `AndAlso` 逻辑运算符、`OrElse` 逻辑或运算符、`If` 运算符
 
 # Short 数据类型 (Short Data Type)
 
-C# 的内置短整型类型与 Visual Basic 的 Short 是相同的。
+C# 的内置短整型类型与 Visual Basic 的 `Short` 是相同的。
 
 # Single 类型 (Single Type)
 
-C# 的内置单精度浮类型与 Visual Basic 的 Single 是相同的。
+C# 的内置单精度浮类型与 Visual Basic 的 `Single` 是相同的。
 
 # 短路逻辑 (Short Circuiting (LINQ))
 
 # Space 方法 (Space Method)
 
-[content]
-（等待，我之前的输出由于 OCR 文本碎片化导致重复。根据提供的文本提供整洁的最终版本。）
-
-[content]
 ' ----- Select 子句也可以出现在 Where 之前。
-Dim result = From oneEmployee in Employees
-Where oneEmployee.IsManager = True
-Select oneEmployee
+`Dim result = From oneEmployee in Employees`
+`Where oneEmployee.IsManager = True`
+`Select oneEmployee`
 
 ```csharp
 var result = from oneEmployee in Employees
@@ -12973,7 +12694,7 @@ Name = oneEmployee.FullName};
 
 # SetAttr 方法
 
-在 Visual Basic 中，SetAttr 方法为文件路径设置属性。在 C# 中，此操作通过 .NET 的 `File.SetAttributes` 方法完成。
+在 Visual Basic 中，`SetAttr` 方法为文件路径设置属性。在 C# 中，此操作通过 .NET 的 `File.SetAttributes` 方法完成。
 
 # VISUAL BASIC
 
@@ -13066,12 +12787,10 @@ Visual Basic 的 `Shell` 方法启动一个外部应用程序。在 C# 中，可
 ```vb
 - ----- 启动应用程序。程序将最小化，但默认具有焦点。
 Shell("Notepad.exe")
-
 - ----- 使用不同的位置/焦点设置。
 进程 ID 也被保留。
 Dim processID As Integer =
 Shell("Explorer.exe", AppStyle.Maximized)
-
 - ----- 等待程序完成。
 Shell("ComponentSetup.exe", AppStyle.NormalFocus, True, -1)
 ```
@@ -13092,7 +12811,6 @@ browserProcess.StartInfo.FileName = "explorer.exe";
 browserProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized; // 也具有焦点。
 browserProcess.Start();
 int processID = browserProcess.Id;
-
 // ----- 等待程序完成。
 Process setupProcess = Process.Start("ComponentSetup.exe");
 setupProcess.WaitForExit();
@@ -13100,23 +12818,19 @@ setupProcess.WaitForExit();
 
 # 短路逻辑 (Short Circuiting)
 
-参见 AndAlso 逻辑运算符、OrElse 逻辑或运算符、If 运算符
+参见 `AndAlso` 逻辑运算符、`OrElse` 逻辑或运算符、`If` 运算符
 
 # Short 数据类型 (Short Data Type)
 
-C# 的内置短整型类型与 Visual Basic 的 Short 是相同的。
+C# 的内置短整型类型与 Visual Basic 的 `Short` 是相同的。
 
 # Single 类型 (Single Type)
 
-C# 的内置单精度浮类型与 Visual Basic 的 Single 是相同的。
+C# 的内置单精度浮类型与 Visual Basic 的 `Single` 是相同的。
 
 # 短路逻辑 (Short Circuiting (LINQ))
 
 # Space 方法 (Space Method)
-
-
-
-
 
 对于块语句（例如 For 循环），起始、结束和从属部分分别在物理行的末尾终止。
 
@@ -13125,12 +12839,10 @@ C# 的内置单精度浮类型与 Visual Basic 的 Single 是相同的。
 ```vb
 ' ----- 一个简单的单行语句。
 quotient = numerator / denominator
-
 ' 一个 If 条件，以及其从属语句。
 If (totalPercent > 100) Then
 totalPercent = 100
 End If
-
 ' 一个带有从属块的 If 条件。
 If (totalPercent > 100) Then
 ReportOverage(totalPercent)
@@ -13145,11 +12857,9 @@ End If
 ```csharp
 // ----- 一个简单的单行语句。
 quotient = numerator / denominator;
-
 // 一个 if 条件，以及其从属语句。
 if (totalPercent > 100)
 totalPercent = 100;
-
 // 一个带有从属块的 if 条件。
 if (totalPercent > 100)
 {
@@ -13166,7 +12876,6 @@ Visual Basic 允许通过在最后一行之外的所有行添加换行延续符�
 ' 显式：使用换行延续符。
 expirationDate = String.Format("{0:00}/{1:0000}", \
 monthPort, yearPortion)
-
 ' 隐式：逗号表示延续。
 expirationDate = String.Format("{0:00}/{1:0000}", \
 monthPort, yearPortion)
@@ -13198,7 +12907,6 @@ Do While (status > 0) : status = DoMoreWork() : Loop
 // C#
 // ---- 一行中的两个简单语句。
 firstName = "John"; lastName = "Doe";
-
 // ----- 块语句也可以是单行的
 while (status > 0) : status = DoMoreWork();
 ```
@@ -13217,7 +12925,6 @@ If (counter > 100) then overflow = True : counter = 0
 // C#
 // ----- 这等同于之前的 VB 代码。
 if (counter > 100) { overflow = true; counter = 0 };
-
 // ----- 这段代码是错误的；无论条件真假，counter 都会被重置。
 if (counter > 100) overflow = true; counter = 0;
 ```
@@ -13257,7 +12964,7 @@ class Example
 
 ## Stop Statement
 
-C# 不包含 Visual Basic Stop 语句的语言替代品。相反，你必须调用相应的 .NET 方法。
+C# 不包含 Visual Basic `Stop` 语句的语言替代品。相反，你必须调用相应的 .NET 方法。
 
 ```vb
 Stop
@@ -13268,7 +12975,7 @@ System.Diagnostics.Debugger.Break();
 
 ## Str Method
 
-Visual Basic 的 Str 方法返回数字的字符串表示。通常情况下，数值表达式的 ToString 方法提供相似的结果，尽管 Str 对于浮点数的输出格式可能与此不同。当向 Str 提供格式化数字时，它会尝试将源值转换为 Double 后重新输出为字符串。
+Visual Basic 的 `Str` 方法返回数字的字符串表示。通常情况下，数值表达式的 `ToString` 方法提供相似的结果，尽管 `Str` 对于浮点数的输出格式可能与此不同。当向 `Str` 提供格式化数字时，它会尝试将源值转换为 `Double` 后重新输出为字符串。
 
 ```vb
 Dim result As String = Str(sourceValue)
@@ -13277,23 +12984,21 @@ Dim result As String = Str(sourceValue)
 ```csharp
 // -- 有符号或无符号整数表达式。
 string result = sourceValue.ToString();
-
 // 浮点数表达式。
 result = ((double)sourceValue).ToString();
-
 // 数值值。
 double convertedValue;
 if (double.TryParse(sourceValue, out convertedValue))
     result = convertedValue;
 ```
 
-Str 方法对特定表达式还包含一些非标准输出：
+`Str` 方法对特定表达式还包含一些非标准输出：
 - 如果源是类型，输出为 "True"。
 - 如果源是布尔值，输出为 "False"。
 
 ## StrComp Method
 
-Visual Basic 的 StrComp 返回一个指示两个字符串相对顺序的整数。
+Visual Basic 的 `StrComp` 返回一个指示两个字符串相对顺序的整数。
 
 ```vb
 VISUAL BASIC
@@ -13304,19 +13009,15 @@ Dim result As Integer = StrComp(firstName, lastName, Binary)
 ```csharp
 // 区分大小比较
 int result = string.Compare(firstName, lastName, StringComparison.Ordinal);
-
 // 不区分大小写比较
 int result = string.Compare(firstName, lastName, StringComparison.OrdinalIgnoreCase);
 ```
 
-StrComp 始终根据项目的顺序返回 0、-1 或 1。Compare 方法根据顺序返回正值、负值或零。
+`StrComp` 始终根据项目的顺序返回 0、-1 或 1。`Compare` 方法根据顺序返回正值、负值或零。
 
 ## StrDup Method
 
-Visual Basic 的 StrDup 方法创建一个具有特定数量的字符串
-
-
-指定字符的重复。在 C# 中，创建字符串类的新实例，并使用其其中一个构造函数来指定基础字符和重复次数。
+Visual Basic 的 `StrDup` 方法创建一个具有特定数量的字符串指定字符的重复。在 C# 中，创建字符串类的新实例，并使用其其中一个构造函数来指定基础字符和重复次数。
 
 # VISUAL BASIC
 
@@ -13325,52 +13026,68 @@ Visual Basic 的 StrDup 方法创建一个具有特定数量的字符串
 Dim result As String = StrDup(5, "**")
 C#
  // ---- 创建字符串 "*****"
-string result = new string('*', 5);
 ```
+
+
+
+`string result = new string('*', 5);`
 
 ## 字符串数据类型
-C# 的内建字符串类型与 Visual Basic 的 String 数据类型相同。这两种类型都是 .NET System.String 类型的别名。
 
-# VISUAL BASIC
+C# 的内建字符串类型与 Visual Basic 的 `String` 数据类型相同。这两种类型都是 `.NET System.String` 类型的别名。
 
-```
+### VISUAL BASIC
+
+```vb
 C#
+```
+
+```vb
 dim name As String = ""
+```
+
+```csharp
 string name = "";
 ```
 
-从历史上来看，Visual Basic 提供了一个 $ 后缀，可以附加到字符串标识符或内置函数上。虽然 .NET 版本的 Visual Basic 为了向后兼容仍然支持这种写法，但 C# 中没有等效语法。
+从历史上来看，Visual Basic 提供了一个 `$` 后缀，可以附加到字符串标识符或内置函数上。虽然 `.NET` 版本的 Visual Basic 为了向后兼容仍然支持这种写法，但 C# 中没有等效语法。
 
 ## StrReverse 方法
 
-Visual Basic 的 StrReverse 方法返回一个字符顺序与源字符串反转的新字符串。在 C# 中实现这一点，需要将字符串转换为字符数组，反转数组，然后重新组装字符串。
+Visual Basic 的 `StrReverse` 方法返回一个字符顺序与源字符串反转的新字符串。在 C# 中实现这一点，需要将字符串转换为字符数组，反转数组，然后重新组装字符串。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
-```
+```vb
 Dim result As String = StrReverse(originalString)
-C#
+```
+
+### C#
+
+```csharp
 char[] tempData = originalString.CharArray();
 System.Array.Reverse(tempArray);
 string result = new string(tempArray);
 ```
 
-StrReverse 方法在处理扩展字符（如某些 Unicode 字符）的代理时会执行特殊处理。如果你处理某些国际字符集，StrReverse 的源代码可以提供如何执行此类反转的指导。访问源代码：http://referencesource.microsoft.com/#Microsoft.VisualBasic/Strings.vb
+`StrReverse` 方法在处理扩展字符（如某些 Unicode 字符）的代理时会执行特殊处理。如果你处理某些国际字符集，`StrReverse` 的源代码可以提供如何执行此类反转的指导。访问源代码：`http://referencesource.microsoft.com/#Microsoft.VisualBasic/Strings.vb`
 
 ## Structure 语句
 
-C# 的语句等同于 Visual Basic 的 Structure 语句。在 C# 中声明实现一个或多个接口的结构体时，结构名称后面会出现一个逗号分隔的接口列表，并用冒号与名称分隔：
+C# 的语句等同于 Visual Basic 的 `Structure` 语句。在 C# 中声明实现一个或多个接口的结构体时，结构名称后面会出现一个逗号分隔的接口列表，并用冒号与名称分隔：
 
-```
-Visual Basic
+### Visual Basic
+
+```vb
 Structure Variable
 Implements IDataPart
 ' ----- 成员在此出现。
 End Structure
 ```
 
-```
-C#
+### C#
+
+```csharp
 struct Variable : IDataPart
 {
     // ----- 成员在此出现。
@@ -13382,7 +13099,7 @@ struct Variable : IDataPart
 结构在每种语言中都支持以下修饰符。
 
 | Visual Basic 修饰符 | C# 修饰符 |
-|--- |--- |
+|---|---|
 | Friend | internal |
 | Partial | partial |
 | Private | private |
@@ -13391,7 +13108,7 @@ struct Variable : IDataPart
 | Public | public |
 | Shadows | new |
 
-Visual Basic 中的结构默认是 Friend，就像 C# 中的结构默认是 internal 一。在 VB 中，结构成员默认是 Public；而在 C# 中默认是 private。结构成员不能使用 Protected (VB) 或 protected (C#) 修饰符。
+Visual Basic 中的结构默认是 `Friend`，就像 C# 中的结构默认是 `internal` 一。在 VB 中，结构成员默认是 `Public`；而在 C# 中默认是 `private`。结构成员不能使用 `Protected` (VB) 或 `protected` (C#) 修饰符。
 
 ## 另请参考
 
@@ -13399,28 +13116,26 @@ Visual Basic 中的结构默认是 Friend，就像 C# 中的结构默认是 inte
 
 ## Sub 语句
 
-查看 方法 (Methods)
+查看 方法 (`Methods`)
 
 ## Sub Lambda 语句
 
-查看 Lambda 表达式 (Lambda Expressions)
+查看 Lambda 表达式 (`Lambda Expressions`)
 
 ## Switch 方法
 
-Visual Basic 的 Switch 方法接受一个条件和匹配对象的参数数组，返回第一个条件为 True 的对象，或者在没有匹配条件时返回 Nothing。
+Visual Basic 的 `Switch` 方法接受一个条件和匹配对象的参数数组，返回第一个条件为 `True` 的对象，或者在没有匹配条件时返回 `Nothing`。
 
-```
-Visual Basic
+```vb
 Dim playerMessage As String = Switch(
 players < 9, "Too few players!",
 players > 9, "Too many players!",
 players = 9, "Play ball!")
 ```
 
-C# 缺乏 Switch 方法的语言等语法。相反，你可以使用条件语句（如 select case 或 if 语句）来实现相同的结果。
+C# 缺乏 `Switch` 方法的语言等语法。相反，你可以使用条件语句（如 select case 或 if 语句）来实现相同的结果。
 
-```
-C#
+```csharp
 nstring playerMessage = null;
 if (players < 9)
     playerMessage = "Too few players!"
@@ -13432,13 +13147,13 @@ else
 
 ## SYD 方法
 
-查看 财务方法 (Financial Methods)
+查看 财务方法 (`Financial Methods`)
 
 ## SyncLock 语句
 
-C# 的 lock 语句等同于 Visual Basic 的 SyncLock 语句。
+C# 的 `lock` 语句等同于 Visual Basic 的 `SyncLock` 语句。
 
-```go
+```vb
 Visual Basic
 Class VitalMethods
     Private Holdlock As New Object
@@ -13450,7 +13165,7 @@ End Sub
 End Class
 ```
 
-```C#
+```csharp
 class VitalMethods
 {
     private object HoldLock = new object();
@@ -13463,7 +13178,7 @@ class VitalMethods
 }}
 ```
 
-指定系统（在此例中为 .NET）类型等效名称。C# 中没有该方法的直接替换。然而，下表显示了此 SystemTypeName 方法产生的完整结果集。忽略输入项的大小写。
+指定系统（在此例中为 `.NET`）类型等效名称。C# 中没有该方法的直接替换。然而，下表显示了此 `SystemTypeName` 方法产生的完整结果集。忽略输入项的大小写。
 
 | 输入值 | 输出值 |
 |---|---|
@@ -13480,17 +13195,17 @@ class VitalMethods
 | Single | System.Single |
 | String | System.String |
 
-所有其他输入均返回 Nothing，等同于 C# 中的 null。
+所有其他输入均返回 `Nothing`，等同于 C# 中的 `null`。
 
 ## TAB 方法
 
-C# 不包含 Visual Basic TAB 方法的等效项。在输出列文本时，你必须手动管理间距。
+C# 不包含 Visual Basic `TAB` 方法的等效项。在输出列文本时，你必须手动管理间距。
 
 ## 查询运算符 (LINQ)
 
 C# 不包含 Visual Basic 查询运算符的直接等效项。然而，你可以使用 LINQ 实现相同的结果。
 
-```
+```vb
 Visual Basic
 Dim result As String = ...
 ```
@@ -13509,31 +13224,30 @@ C# 不包含 Visual Basic 三元运算符的直接等效项。然而，你可以
 
 ## Throw 语句
 
-C# 的 throw 语句与 Visual Basic 的 throw 语句完全相同。
+C# 的 `throw` 语句与 Visual Basic 的 `throw` 语句完全相同。
 
-```
+```vb
 Visual Basic
 Throw New System.Exception("Something bad.")
 ```
 
-```C#
+```csharp
 throw new System.Exception("Something bad.");
 ```
 
 ```csharp
 // ----- 区域特定
 string result = DateTime.Now.ToString("HH:mm:ss");
+
 在 C# 中设置时间，你必须使用 Win32 API 暴露的特性。
 
 // ----- 在文件顶部定义。
 using System.InteropServices;
-
 // ----- 在方法外部定义。
 [DllImport("kernel32.dll")]
 static extern void GetLocalTime(out SystemTime timeInfo);
 [DllImport("kernel32.dll")]
 static extern void SetLocalTime(ref SystemTime timeInfo);
-
 [StructLayout(LayoutKind.Sequential)]
 struct SystemTime
 {
@@ -13546,7 +13260,6 @@ struct SystemTime
     public ushort Second;
     public ushort Milliseconds;
 }
-
 // ----- 一个类似于设置 TimeString 的方法
 static bool SetTime(string timeText)
 {
@@ -13554,11 +13267,9 @@ static bool SetTime(string timeText)
     DateTime newTime;
     if (DateTime.TryParse(timeText, out newTime) == false)
         return false;
-
     // ----- 获取当前时间。
     SystemTime timeInfo = new SystemTime();
     GetLocalTime(out timeInfo);
-
     // ----- 修改并设置时间。
     timeInfo.Hour = (ushort)newTime.Hour;
     timeInfo.Minute = (ushort)newTime.Minute;
@@ -13579,7 +13290,7 @@ static bool SetTime(string timeText)
 
 要在 C# 中模拟 Visual Basic 的 `TimeValue` 方法，可以将字符串转换为 `DateTime` 实例，然后只提取时间部分。
 
-```visualbasic
+```vb
 Dim result As Date = TimeValue(timeAsString)
 ```
 
@@ -13587,7 +13298,7 @@ Dim result As Date = TimeValue(timeAsString)
 DateTime result = new DateTime(Convert.ToDateTime(timeAsString).Ticks % TimeSpan.TicksPerDay);
 ```
 
-.NET Framework 还包含一个 `TimeSpan` 结构，它为处理非日期时间值提供了额外功能。
+`.NET Framework` 还包含一个 `TimeSpan` 结构，它为处理非日期时间值提供了额外功能。
 
 ```csharp
 TimeSpan result = Convert.ToDateTime(timeAsString).OfDay;
@@ -13597,7 +13308,7 @@ TimeSpan result = Convert.ToDateTime(timeAsString).OfDay;
 
 Visual Basic 的 `Today` 属性用于检索或设置当前日期。要在 C# 中作为 `DateTime` 实例获取当前时间，请访问该类型的 `Today` 属性。
 
-```visualbasic
+```vb
 Dim result As Date = Today
 ```
 
@@ -13615,7 +13326,7 @@ DateString Property
 
 C# 字符串数据类型的 `Trim` 方法与 Visual Basic 的 `Trim` 方法功能相同。
 
-```visualbasic
+```vb
 result = Trim(someString)
 ```
 
@@ -13635,7 +13346,7 @@ result = someString.Trim();
 
 C# 的 `try` 语句通常等同于 Visual Basic 的 `Try` 语句。
 
-```visualbasic
+```vb
 Try
     customerRecord = RetrieveCustomer(customerID)
 Catch ex As System.Exception
@@ -13665,9 +13376,9 @@ try
 
 Visual Basic 的 `Catch` 子句可以包含条件，通过额外的 `When` 子句来限制对特定异常处理程序的访问。C# 在 2015 年引入 `if` 子句时添加了这一功能。在 2015 年之前编写的 C# 应用程序中，必须在 `catch` 块中使用标准条件代码来区分触发相同异常的不同情况。
 
-# VISUAL BASIC
+### VISUAL BASIC
 
-```visualbasic
+```vb
 Try
     customerRecord = RetrieveCustomer(customer)
 Catch ex As System.Exception When (errorCount < 5)
@@ -13679,7 +13390,7 @@ Catch ex As System.Exception When (errorCount >= 5)
 End Try
 ```
 
-# C#
+### C#
 
 ```csharp
 try
@@ -13687,7 +13398,7 @@ try
     customerRecord = RetrieveCustomer(customer);
 } catch (System.Exception ex) if (errorCount < 5)
 {
-    errorCount += 1;
+    errorCount += 1
     LogWarning("Problem with customer record.", ex);
 } catch (System.Exception ex) if (errorCount >= 5)
 {
@@ -13698,16 +13409,13 @@ try
 
 Visual Basic 包含 `Exit Try` 语句，可以在 `Try Catch` 块中（但不是 `Finally` 块）使用以退出内层 `Try`。执行将继续执行整个块之后的语句。
 
-
-
-
 # C# ulong counter = 0ul;
 
 ## Unlock 方法
 
 Visual Basic 的 `Unlock` 方法用于解锁通过 `FileOpen` 方法打开的文件中被锁的部分。可选参数指示了要解锁的起始和结束字节或记录。所有位置均从 1 开始。
 
-VISUAL BASIC
+### VISUAL BASIC
 
 ```vb
 -- 解锁整个文件。
@@ -13718,6 +13426,22 @@ Unlock(fileNumber)
 -- 解锁一个字节或记录。
 Unlock(fileNumber, targetPosition)
 ```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+## Unlock 方法
 
 ```vb
 -- 解锁一个范围的字节或记录。
@@ -13743,13 +13467,12 @@ stopPosition - startPosition + 1)
 ```
 
 另见
-
-- FileOpen 方法
+- `FileOpen` 方法
 
 ## Until 子句
 
 - 参阅
-- Do 语句
+- `Do` 语句
 
 ## UShort 数据类型
 
@@ -13757,14 +13480,12 @@ C# 的内建 `ushort` 数据类型与 Visual Basic 的 `UShort` 数据类型相�
 
 这两个类型都是 .NET `System.UInt16` 类型的别名。对于无符号短整字面量，Visual Basic 在值后使用 `US` 后缀，或 `US` 的某些大小写变体；C# 则不包含此类后缀。
 
-# Visual Basic
-
+### Visual Basic
 ```vb
 Dim counter As UShort = 0;
 ```
 
-# C#
-
+### C#
 ```csharp
 ushort counter = 0;
 ```
@@ -13773,8 +13494,7 @@ ushort counter = 0;
 
 C# 的 `using` 语句通常等同于 Visual Basic 的 `Using` 语句。在 VB 中，块变量声明周围的括号是可选的，但在 C# 中是必须的。
 
-# Visual Basic
-
+### Visual Basic
 ```vb
 Using myDB As SqlConnection = New SqlConnection(dbPath)
     ----- myDB 在退出 Using 块时会被释放。
@@ -13787,8 +13507,7 @@ Using myDB As New SqlConnection(dbPath)
 End Using
 ```
 
-# C#
-
+### C#
 ```csharp
 using (SqlConnection myDB = new SqlConnection(dbPath))
 {
@@ -13798,8 +13517,7 @@ using (SqlConnection myDB = new SqlConnection(dbPath))
 
 这两种语言都允许在同一个 `Using` 或 `using` 语句中同时创建多个资源。编译器会将这些转换为嵌套块，这在每种语言中都是允许的。在 VB 中，在同一个 `Using` 语句中声明每个变量可以是不同类型；而在 C# 中，所有此类变量共享相同的数据类型。
 
-# Visual Basic
-
+### Visual Basic
 ```vb
 ----- 同一类型的变量。
 Using firstVal As New Type1, secondVal As New Type1
@@ -13810,8 +13528,7 @@ Using firstVal As New Type1, secondVal As New Type1
 Using firstVal As New Type2, secondVal As New Type2
 ```
 
-# C#
-
+### C#
 ```csharp
 using (Type1 firstVal = new Type1(),
 secondVal = new Type1())
@@ -13832,8 +13549,7 @@ VB 的 `Val` 方法在输入字符串的格式上允许更大的灵活性。例�
 ## 变量
 
 参阅
-
-- () 数组声明、Const 语句、Dim 语句、字段、标识符、初始化器、生命周期和作用域、Static 修饰
+- `()` 数组声明、`Const` 语句、`Dim` 语句、字段、标识符、初始化器、生命周期和作用域、`Static` 修饰
 
 ## VarType 方法
 
@@ -13841,11 +13557,11 @@ Visual Basic 的 `VarType` 方法返回一个枚举值，指示实例的变体�
 
 `VarType` 在 C# 中没有直接的对应物。然而，每个 .NET 内建的 `GetType` 方法提供了与 `VarType` 类似的通用功能，尽管它返回的是 .NET 类型而不是枚举值。
 
-# VBFixedArrayAttribute 类
+## VBFixedArrayAttribute 类
 
 `VBFixedArrayAttribute` 类用于指示在与某些文件操作配合时，数组字段应被视为具有固定长度。例如，VB 的 `FileGet` 和 `FilePut` 方法在读写结构化数据时使用此属性。该属性本身不会更改其关联的数组，但通过反射为 `FileGet` 等方法中的代码提供信息。在这些特定方法之外，该属性对代码不产生影响。
 
-# VBFixedStringAttribute 类
+## VBFixedStringAttribute 类
 
 `VBFixedStringAttribute` 类用于指示在与某些文件操作配合时，字符串字段应被视为具有固定长度。例如，VB 的 `FileGet` 和 `FilePut` 方法在读写结构化数据时使用此属性。该属性本身不会更改其关联的字符串，但通过反射为 `FileGet` 等方法中的代码提供信息。在这些特定方法之外，该属性对代码不产生影响。
 
@@ -13869,25 +13585,23 @@ Visual Basic 的 `VTypeName` 方法接收来自 .NET 类型的输入，返回一
 
 所有其他输入返回 `Nothing`，相当于 C# 中的 `null`。
 
-# Weekday 方法
+## Weekday 方法
 
-DateTime 类型的 `DayOfWeek` 属性返回与 Visual Basic `Weekday` 方法相同的信息。
+`DateTime` 类型的 `DayOfWeek` 属性返回与 Visual Basic `Weekday` 方法相同的信息。
 
 ```vb
 VISUAL BASIC
 -- 使用系统默认的第一周起始日时为该周的第一天返回 1。
 Dim whichDay As Integer = Weekday (oneOrder.Order)
-
 ' 使用指定的第一周起始日。
 whichDay = Weekday (oneOrder.Order,
        FirstDayOfWeek.Sunday)
 ```
 
-# C#
+### C#
+`System.DayOfWeek whichDay = oneOrder.OrderDate.DayOfWeek;` `Weekday` 方法返回一个基于 1 的整数值，指示当前系统设置的第一周起始日或指定的周起始日。`DateTime.DayOfWeek` 属性始终返回 `System.DayOfWeek` 枚举值。在枚举中，0 代表 Sunday。
 
-System.DayOfWeek whichDay = oneOrder.OrderDate.DayOfWeek; `Weekday` 方法返回一个基于 1 的整数值，指示当前系统设置的第一周起始日或指定的周起始日。`DateTime.DayOfWeek` 属性始终返回 `System.DayOfWeek` 枚举值。在枚举中，0 代表 Sunday。
-
-# WeekdayName 方法
+## WeekdayName 方法
 
 Visual Basic 的 `WeekdayName` 方法根据数值返回完整或缩写的星期名称，其中 1 是周的第一天。在 C# 中，使用当前运行程序集的 `DateTimeFormat` 成员。
 
@@ -13895,7 +13609,6 @@ Visual Basic 的 `WeekdayName` 方法根据数值返回完整或缩写的星期�
 VISUAL BASIC
 ' 当系统默认的第一周起始日为周一时，返回 Sunday 值。
 result = WeekdayName(1)
-
 ' 使用指定的第一周起始日的缩写。
 result = WeekdayName(1, True, FirstDayOfWeek.Sunday)
 ```
@@ -13905,7 +13618,6 @@ result = WeekdayName(1, True, FirstDayOfWeek.Sunday)
 result = System.Threading.Thread.CurrentThread.
 CurrentCulture.DateTimeFormat.GetName(
 DayOfWeek.Sunday);
-
 // ----- 缩写。
 result = System.Threading.Thread.CurrentThread.
 CurrentCulture.DateTimeFormat.GetAbbreviatedName(
@@ -13914,12 +13626,8 @@ DayOfWeek.Sunday)
 
 `WeekdayName` 函数允许用于指示星期几的数值值具有一定的灵活性。在处显示的 C# 示例中，
 
-
-
-
-
-DayOfWeek 枚举用于指定目标日期。在此枚举中，零等同于星期日。
-当与 DateTime 类型实例一起工作时，可以使用其 ToString 方法并配合格式代码来返回完整或缩写的星期几名称。
+`DayOfWeek` 枚举用于指定目标日期。在此枚举中，零等同于星期日。
+当与 `DateTime` 类型实例一起工作时，可以使用其 `ToString` 方法并配合格式代码来返回完整或缩写的星期几名称。
 
 ```csharp
 // C# // 完整的星期几名称。
@@ -13932,7 +13640,8 @@ result = orderDate.ToString("ddd");
 ```
 
 ## Where-Query 表达式运算符 (LINQ)
-C# 的 where 查询表达式运算符与 Visual Basic 的 Where 运算符相同。与 VB 一样，C# 的 where 子句支持全套语言特定的操作符。
+
+C# 的 `where` 查询表达式运算符与 Visual Basic 的 `Where` 运算符相同。与 VB 一样，C# 的 `where` 子句支持全套语言特定的操作符。
 
 ```visual basic
 VISUAL BASIC
@@ -13948,25 +13657,26 @@ where oneEmployee.IsManager == true
 select oneEmployee;
 ```
 
-Visual Basic 在查询表达式中，where 子句相对于 select 子句的位置上具有一定的灵活性。在 C# 中，where 子句必须出现在 select 子句之前。
+Visual Basic 在查询表达式中，`where` 子句相对于 `select` 子句的位置上具有一定的灵活性。在 C# 中，`where` 子句必须出现在 `select` 子句之前。
 
 参见
 查询表达式
 
-While 子句
-参见
+## While 子句
 
-Do 语句
+参见
+`Do` 语句
 
 ## While 语句
-Visual Basic 的 While 语句是 Do 语句的变体， While 子句位于循环顶部。关于在 C# 中使用此构造的信息，请参见本章中的“Do 语句”条目。
+
+Visual Basic 的 `While` 语句是 `Do` 语句的变体， `While` 子句位于循环顶部。关于在 C# 中使用此构造的信息，请参见本章中的“Do 语句”条目。
 
 参见
-
-## Do 语句
+`Do` 语句
 
 ## Widening 修饰符
-Visual Basic 的 Widening 修饰符表示可以隐式执行从一种类型到另一种类型的重载转换，因为目标类型足够宽，可以容源类型的所有可能值。
+
+Visual Basic 的 `Widening` 修饰符表示可以隐式执行从一种类型到另一种类型的重载转换，因为目标类型足够宽，可以容源类型的所有可能值。
 
 ```visual basic
 VISUAL BASIC
@@ -13978,7 +13688,7 @@ class SmallType
 End Class
 ```
 
-相应的 C# 重载使用 implicit 修饰符来表达相同的转换。
+相应的 C# 重载使用 `implicit` 修饰符来表达相同的转换。
 
 ```csharp
 // C# class
@@ -13991,23 +13701,26 @@ class SmallType
 ```
 
 ## 参见
-- Narrowing 修饰符, Operator Statement
+- `Narrowing` 修饰符, `Operator` Statement
 
 ## With 子句
 - 参见
-- Initializers
+- `Initializers`
 
 ## With 语句
-C# 不包含与 Visual Basic With 块语句等价的内容。
+
+C# 不包含与 Visual Basic `With` 块语句等价的内容。
 
 ## WithEvents 修饰符
-C# 不包含与 Visual Basic WithEvents 修饰符等价的内容。你不需要指示编译器变量将使用事件处理程序。相反，你必须在方法逻辑中通过 VB 中的 AddHandler 语句手动附加事件。有关在 C# 中附加事件的信息，请参见本章中的“AddHandler Statement”条目。
+
+C# 不包含与 Visual Basic `WithEvents` 修饰符等价的内容。你不需要指示编译器变量将使用事件处理程序。相反，你必须在方法逻辑中通过 VB 中的 `AddHandler` 语句手动附加事件。有关在 C# 中附加事件的信息，请参见本章中的“AddHandler Statement”条目。
 
 ## 参见
-- AddHandler Statement
+- `AddHandler` Statement
 
 ## Write 方法
-Visual Basic 的 Write 方法（以及相关的 WriteLine 方法）输出内容到使用 FileOpen 方法的文件。Write 为结构化数据设计，根据需要插入逗号和引号以分隔每条数据。WriteLine 添加一对回车符和换行符。
+
+Visual Basic 的 `Write` 方法（以及相关的 `WriteLine` 方法）输出内容到使用 `FileOpen` 方法的文件。`Write` 为结构化数据设计，根据需要插入逗号和引号以分隔每条数据。`WriteLine` 添加一对回车符和换行符。
 
 ```visual basic
 VISUAL BASIC
@@ -14016,7 +13729,7 @@ VISUAL BASIC
 WriteLine(fileNumber, cityName, totalMatches)
 ```
 
-C# 不包含 VB 中提供的相同文件管理功能。相反，通常使用 System.IO.StreamWriter 类来输出文本数据。该类包含 Write 和 WriteLine 方法，并带有输出不同类型数据的重载。你必须手动发出逗号和引号。
+C# 不包含 VB 中提供的相同文件管理功能。相反，通常使用 `System.IO.StreamWriter` 类来输出文本数据。该类包含 `Write` 和 `WriteLine` 方法，并带有输出不同类型数据的重载。你必须手动发出逗号和引号。
 
 ```csharp
 // C#
@@ -14027,15 +13740,16 @@ outFile.Write(",");
 outFile.WriteLine(totalMatches);
 ```
 
- 参见
-- FileOpen 方法
+参见
+- `FileOpen` 方法
 
 ## WriteLine 方法
 - 参见
-- Write 方法
+- `Write` 方法
 
 ## WriteOnly 修饰符
-Visual Basic 的 WriteOnly 修饰符用于创建只写属性。在此类定义中，属性的 Get 部分被省略。C# 也省略了该部分，但它不需要其他特殊修饰符来指示属性的只写格式。
+
+Visual Basic 的 `WriteOnly` 修饰符用于创建只写属性。在此类定义中，属性的 `Get` 部分被省略。C# 也省略了该部分，但它不需要其他特殊修饰符来指示属性的只写格式。
 
 ```visual basic
 VISUAL BASIC
@@ -14060,6 +13774,7 @@ public int Status
 ```
 
 ## XML 文档注释
+
 Visual Basic 和 C# 都支持 XML 注释，作为记录代码的手段，并提示 Visual Studio 的 IntelliSense 显示类型和类型成员的扩展信息。在 VB 中，这些注释以 " 符号开头。
 
 ```visual basic
@@ -14071,7 +13786,7 @@ Class Animal
 End Class
 ```
 
-在 C# 中，使用 /// 符号。
+在 C# 中，使用 `///` 符号。
 
 ```csharp
 // C#
@@ -14083,7 +13798,7 @@ class Animal
 }
 ```
 
-虽然 Visual Basic 中没有多行注释语法，但 C# 不允许在此类块中使用 XML 注释。使用 /** 符号开始该块。
+虽然 Visual Basic 中没有多行注释语法，但 C# 不允许在此类块中使用 XML 注释。使用 `/**` 符号开始该块。
 
 ```csharp
 // C#
@@ -14094,10 +13809,12 @@ class Animal
 两种语言都使用同一组推荐的 XML 标签来记录代码。请参考 Microsoft 的 MSDN 文档获取有关在项目中使用这些标签的信息。
 
 ## XML 字面量
+
 C# 中没有 Visual Basic XML 字面量的直接等价物。相反，你必须使用 .NET Framework 类来操作 XML，或者使用字符串特性处理 XML。
 
 ## Xor 异或运算符
-C# 的 ^ 运算符是 Visual Basic Xor 运算符的精确替换，适用于整数和布尔操作数。
+
+C# 的 `^` 运算符是 Visual Basic `Xor` 运算符的精确替换，适用于整数和布尔操作数。
 
 ```visual basic
 VISUAL BASIC
@@ -14110,12 +13827,16 @@ currentState = currentState ^ newInput;
 ```
 
 ## Year 方法
-C# 中 DateTime 类型的 Year 属性返回与 Visual Basic Year 方法相同的信息。
+
+C# 中 `DateTime` 类型的 `Year` 属性返回与 Visual Basic `Year` 方法相同的信息。
 
 ```visual basic
 VISUAL BASIC
-Dim whichYear As Integer = Year(orderDate)
 ```
+
+
+
+Dim `whichYear` As Integer = `Year(orderDate)`
 
 ```csharp
 // C#
@@ -14128,8 +13849,7 @@ int whichYear = orderDate.Year;
 ```visual basic
 VISUAL BASIC
 ' 假设其他处有 LimitedEdition。
-Public Iterator Function SmallNumbers() As
-  IEnumerable(Of Integer)
+Public Iterator Function SmallNumbers() As IEnumerable(Of Integer)
   Yield 1
   Yield 2
   Yield 3
@@ -14159,56 +13879,42 @@ Visual Basic 允许包含 Yield 语句的 Try 语句使用 Catch 和 Finally 子
 参见
 - 迭代器
 
-
-
-
-
 # AllUsersApplicationData 属性
 
-◆ My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData
+◆ `My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData`
 返回所有本地用户共享的“应用程序数据”文件夹路径。
 
-```
-VISUAL BASIC
-Dim result As String = My.Computer.FileSystem.
-SpecialDirectories.AllUsersApplicationData
+```VISUAL BASIC
+Dim result As String = My.Computer.FileSystem.SpecialDirectories.AllUsersApplicationData
 ```
 
 ```C#
-string result = System.Environment.GetFolderPath(
-System.Environment.SpecialFolder.
-CommonApplicationData);
-``````
+string result = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData);
+```
 
 # AltKeyDown 属性
 
-◆ My.Computer.Keyboard.AltKeyDown
+◆ `My.Computer.Keyboard.AltKeyDown`
 指示当前是否按下了 Alt 键
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.Computer.Keyboard.AltKeyDown
 ```
 
 ```C#
 // 用于 Windows Forms 代码:
-bool result = ((System.Windows.Forms.Control.ModifierKeys &
-System.Windows.Keys.Alt) != 0);
-
+bool result = ((System.Windows.Forms.Control.ModifierKeys & System.Windows.Keys.Alt) != 0);
 // 用于以 XAML 为的代码:
-bool result = ((System.Windows.Input.Keyboard.Modifiers &
-System.Windows.Input.ModifierKeys.Alt) != 0);
+bool result = ((System.Windows.Input.Keyboard.Modifiers & System.Windows.Input.ModifierKeys.Alt) != 0);
 ```
 
 # AppContext 属性
 
-◆ My.Application.ApplicationContext
+◆ `My.Application.ApplicationContext`
 返回当前应用程序或线程的应用程序上下文。
 
-```
-VISUAL BASIC
-Dim result As System.Windows.Forms.ApplicationContext =
-My.Application.ApplicationContext
+```VISUAL BASIC
+Dim result As System.Windows.Forms.ApplicationContext = My.Application.ApplicationContext
 ```
 
 如果你通过传递自定义上下文启动 Windows Forms 应用程序，则该实例通常无法在应用程序内被访问。如果你想稍后访问它，必须在代码中保留它的引用。
@@ -14216,11 +13922,8 @@ My.Application.ApplicationContext
 ```C#
 static class Program
 {
-    // 假设在其他地方定义了派自
-    // System.Windows.Forms.ApplicationContext
-    // 的 LocalContext 类
+    // 假设在其他地方定义了派自 System.Windows.Forms.ApplicationContext 的 LocalContext 类
     private static LocalContext TheContext = null;
-
     [STAThread]
     static void Main()
     {
@@ -14228,7 +13931,6 @@ static class Program
         Program.TheContext.MainForm = new Form1();
         Application.Run(Program.TheContext);
     }
-
     public static LocalContext GetContext()
     {
         get
@@ -14241,38 +13943,33 @@ static class Program
 
 # AssemblyName 属性
 
-- ◆ My.Application.Info.AssemblyName
+- ◆ `My.Application.Info.AssemblyName`
 检索程序集的简单名称，并删除文件扩展名。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As String = My.Application.Info.AssemblyName
 ```
 
 ```C#
-System.Reflection.Assembly currentAssembly =
-    System.Reflection.Assembly.GetEntryAssembly();
-if (currentAssembly == null) currentAssembly =
-    System.Reflection.Assembly.GetCallingAssembly();
+System.Reflection.Assembly currentAssembly = System.Reflection.Assembly.GetEntryAssembly();
+if (currentAssembly == null) currentAssembly = System.Reflection.Assembly.GetCallingAssembly();
 string result = currentAssembly.GetName().Name;
 ```
 
 # Audio 对象
 
-- ◆ My.Computer.Audio
+- ◆ `My.Computer.Audio`
 
 参见
 Play 方法，PhysicalSound 方法，Stop 方法
 
 # AvailablePhysicalMemory 属性
 
-- ◆ My.Computer.Info.AvailablePhysicalMemory
+- ◆ `My.Computer.Info.AvailablePhysicalMemory`
 返回本地计算机上空闲内存的总字节数。
 
-```
-VISUAL BASIC
-Dim result As ULong =
-My.Computer.Info.AvailablePhysicalMemory
+```VISUAL BASIC
+Dim result As ULong = My.Computer.Info.AvailablePhysicalMemory
 ```
 
 ```C#
@@ -14288,9 +13985,7 @@ Visual Basic 通过 GlobalMemoryStatusEx Windows API 调用检索内存信息。
 // --- 此代码仅适用于 Windows 2000 及更高版本。
 public class MemoryQuery
 {
-    [System.Runtime.InteropServices.StructLayoutAttribute(
-        System.Runtime.InteropServices.LayoutKind.
-        Sequential)]
+    [System.Runtime.InteropServices.StructLayoutAttribute(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct MemoryInfo
     {
         public uint DataLength;
@@ -14302,32 +13997,24 @@ public class MemoryQuery
         public long AvailVirtual;
         public long AvailExtendedVirtual;
     }
-
     public void Initialize()
     {
         // --- API 必须知道返回的大小。
         this.DataLength = (uint)System.Runtime.Marshal.SizeOf(typeof(MemoryInfo));
     }
-
-    [System.Runtime.InteropServices.DllImportAttribute(
-        "kernel32.dll", EntryPoint="GlobalMemoryStatusEx")]
+    [System.Runtime.InteropServices.DllImportAttribute("kernel32.dll", EntryPoint="GlobalMemoryStatusEx")]
     [MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.Bool)]
-    public static extern bool GlobalMemoryStatusEx(
-        [System.Runtime.InteropServices.OutAttribute()]
-        out MemoryInfo memoryDetails);
-
+    public static extern bool GlobalMemoryStatusEx([System.Runtime.InteropServices.OutAttribute()] out MemoryInfo memoryDetails);
     public static MemoryQuery.MemoryInfo GetMemoryInfo()
     {
         MemoryInfo memoryDetails = new MemoryInfo();
         memoryDetails.Initialize();
-        if (MemoryQuery.GlobalMemoryStatusEx(
-            out memoryDetails))
+        if (MemoryQuery.GlobalMemoryStatusEx(out memoryDetails))
         {
             return memoryDetails;
         }
         else
-            throw new System.Exception(
-                "无法检索内存信息.");
+            throw new System.Exception("无法检索内存信息.");
         }
     }
 }
@@ -14335,14 +14022,12 @@ public class MemoryQuery
 
 # AvailableVirtualMemory 属性
 
-- My.Computer.Info.AvailableVirtualMemory
+- `My.Computer.Info.AvailableVirtualMemory`
 
 返回本地计算机上空闲内存的总字节数。
 
-```
-VISUAL BASIC
-Dim result As ULong =
-My.Computer.Info.AvailableVirtualMemory
+```VISUAL BASIC
+Dim result As ULong = My.Computer.Info.AvailableVirtualMemory
 ```
 
 ```C#
@@ -14354,175 +14039,139 @@ Visual Basic 通过 GlobalMemoryStatusEx Windows API 调用检索内存信息。
 
 # ButtonsSwapped 属性
 
-- ◆ My.Computer.Mouse.ButtonsSwapped
+- ◆ `My.Computer.Mouse.ButtonsSwapped`
 指示标准按钮布局是否已反转。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.Computer.Mouse.ButtonsSwapped
 ```
 
 ```C#
 // 用于 Windows Forms 代码:
-bool result = System.Windows.Forms.Control.ModifierKeys &
-System.Windows.Keys.Alt != 0;
-
+bool result = System.Windows.Forms.Control.ModifierKeys & System.Windows.Keys.Alt != 0;
 // 用于以 XAML 为的代码:
-bool result = System.Windows.Input.Keyboard.Modifiers &
-System.Windows.Input.ModifierKeys.Alt != 0;
+bool result = System.Windows.Input.Keyboard.Modifiers & System.Windows.Input.ModifierKeys.Alt != 0;
 ```
 
 # CapsLock 属性
 
-- ◆ My.Computer.Keyboard.CapsLock
+- ◆ `My.Computer.Keyboard.CapsLock`
 指示大写锁定是否激活。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.Computer.Keyboard.CapsLock
 ```
 
 ```C#
 // 用于 Windows Forms 代码:
 bool result = System.Windows.Forms.Control.ButtonsSwapped;
-
 // 用于以 XAML 为的代码:
 bool result = System.Windows.Input.CapsLock;
 ```
 
 # ChangeCulture 方法
 
-- ◆ My.Application.ChangeCulture
+- ◆ `My.Application.ChangeCulture`
 传递区域代码（如 en-US），更改格式化值（如数字和日期）的当前区域。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 My.Application.ChangeCulture("en-US")
 ```
 
 ```C#
-System.Threading.Thread.CurrentCulture =
-new System.Globalization.CultureInfo("en-US");
+System.Threading.Thread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
 ```
 
 # ChangeUIColor 方法
 
-- ◆ My.Application.ChangeUICulture
+- ◆ `My.Application.ChangeUICulture`
 传递区域代码（如 en-US），更改用户界面的当前区域。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 My.Application.ChangeUICulture("en-US")
 ```
 
 ```C#
-System.Threading.Thread.CurrentUICulture =
-new System.Globalization.CultureInfo("en-US");
+System.Threading.Thread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
 ```
 
 # ClassesRoot 属性
 
-- ◆ My.Computer.Registry.ClassesRoot
+- ◆ `My.Computer.Registry.ClassesRoot`
 返回 HKEY_CLASSES_ROOT 注册表位置引用。
 
-```
-VISUAL BASIC
-Dim result As Microsoft.Win32.RegistryKey =
-My.Computer.Registry.ClassesRoot
+```VISUAL BASIC
+Dim result As Microsoft.Win32.RegistryKey = My.Computer.Registry.ClassesRoot
 ```
 
 ```C#
-Microsoft.Win32.RegistryKey result =
-Microsoft.Win32.Registry.ClassesRoot;
+Microsoft.Win32.RegistryKey result = Microsoft.Win32.Registry.ClassesRoot;
 ```
 
 # Clear 方法
 
-- ◆ My.Computer.Clipboard.Clear
+- ◆ `My.Computer.Clipboard.Clear`
 从系统剪贴板清除所有数据。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 My.Computer.Clipboard.Clear()
 ```
 
 ```C#
 // 用于 Windows Forms 代码:
 System.Windows.Forms.Clipboard.Clear();
-
 // 用于以 XAML 为的代码:
 System.Windows.Clipboard.Clear();
 ```
 
 # Clipboard 对象
 
-- ◆ My.Computer.Clipboard.Contains
+- ◆ `My.Computer.Clipboard.Contains`
 
 参见
-
-Clear 方法，ContainsAudio 方法，ContainsData 方法，Contains
-FileDropList 方法，ContainsImage 方法，ContainsText
-方法，GetAudioStream 方法，GetData 方法，DataObject
-方法，GetFileList 方法，GetImage 方法，GetText 方法，
-SetAudio 方法，SetData 方法，SetDataObject 方法，SetFileDropDownList
-方法，SetImage 方法，SetText 方法
+Clear 方法，ContainsAudio 方法，ContainsData 方法，Contains FileDropList 方法，ContainsImage 方法，ContainsText 方法，GetAudioStream 方法，GetData 方法，DataObject 方法，GetFileList 方法，GetImage 方法，GetText 方法，SetAudio 方法，SetData 方法，SetDataObject 方法，SetFileDropDownList 方法，SetImage 方法，SetText 方法
 
 # Clock 对象
 
-- ◆ My.Computer.Clock
+- ◆ `My.Computer.Clock`
 
 参见
-
 GmtTime 属性，LocalTime 属性，TickCount 属性
 
 # CombinePath 方法
 
-- ◆ My.Computer.FileSystem.CombinePath
+- ◆ `My.Computer.FileSystem.CombinePath`
 将绝对路径（如目录）与额外的相对路径（如文件名）合并，并添加相应的符号。
 
-```
-VISUAL BASIC
-Dim result As String = My.Computer.FileSystem.CombinePath(
-"C:\temp", "OutputFile.txt")
+```VISUAL BASIC
+Dim result As String = My.Computer.FileSystem.CombinePath("C:\temp", "OutputFile.txt")
 ```
 
 ```C#
-string result = System.IO.Path.Combine(
-"C:\temp", "OutputFile.txt");
+string result = System.IO.Path.Combine("C:\temp", "OutputFile.txt");
 ```
-
-
-
-
 
 ## CommandLineArgs 属性
 
-- * My.Application.CommandLineArgs
+- * `My.Application.CommandLineArgs`
 返回启动应用程序时使用的命令行参数集合。应用程序路径不作为第一个元素包含；如果有参数，则仅包含参数本身。
 
-VISUAL BASIC
-
 ```vb
-' 此代码返回一个只读集合，
-' 命令行参数，排除了
-' 程序本身。
-Dim result As System.Collections.ObjectModel.
-ReadOnlyCollection(Of String) =
-My.Application.CommandLineArgs
+' 此代码返回一个只读集合，命令行参数，排除了程序本身。
+Dim result As System.Collections.ObjectModel.ReadOnlyCollection(Of String) = My.Application.CommandLineArgs
 ```
-
-C#
 
 ```csharp
-// 此代码返回一个普通的字符串数组，
-// 命令行参数，*包含*
-// 程序本身作为数组的第零个元素。
-string[] result = System.Environment.GetCommandLineArgs();
+// 此代码返回一个普通的字符串数组，命令行参数，*包含* 程序本身作为数组的第零个元素。
 ```
+
+
+
+`string[] result = System.Environment.GetCommandLineArgs();`
 
 ## CompanyName 属性
 
-- * My.Application.Info.CompanyName
+- * `My.Application.Info.CompanyName`
 返回存储在程序集中的公司名称。
 
 VISUAL BASIC
@@ -14549,12 +14198,12 @@ attrSet[0]).Company;
 
 ## Computer 对象
 
-- * My.Computer
-参见音频对象、剪贴板对象、时钟对象、FileSystem对象、Info对象 (My.Computer)、键盘对象、鼠标对象、Name属性 (My.Computer)、网络对象、端口对象、注册表对象、Screen 属性。
+- * `My.Computer`
+参见音频对象、剪贴板对象、时钟对象、`FileSystem`对象、`Info`对象 (`My.Computer`)、键盘对象、鼠标对象、`Name`属性 (`My.Computer`)、网络对象、端口对象、注册表对象、`Screen` 属性。
 
 ## ContainsAudio 方法
 
-- ◆ My.Computer.Clipboard.ContainsAudio
+- ◆ `My.Computer.Clipboard.ContainsAudio`
 指示系统剪贴板是否包含音频数据。
 
 VISUAL BASIC
@@ -14569,14 +14218,13 @@ C#
 ```csharp
 // 用于 Windows Forms 代码：
 bool result = System.Windows.Forms.Clipboard.ContainsAudio();
-
 // 用于以 XAML 为中心的代码：
 bool result = System.Windows.Clipboard.ContainsAudio();
 ```
 
 ## ContainsData 方法
 
-- ◆ My.Computer.Clipboard.ContainsData
+- ◆ `My.Computer.Clipboard.ContainsData`
 指示系统剪贴板是否包含具有特定数据格式的内容。
 
 VISUAL BASIC
@@ -14592,7 +14240,6 @@ C#
 // 用于 Windows Forms 代码：
 bool result = System.Windows.Forms.Clipboard.ContainsData(
     "CustomerRecord")
-
 // 用于以 XAML 为中心的代码：
 bool result = System.Windows.Clipboard.ContainsData(
     "CustomerRecord")
@@ -14600,7 +14247,7 @@ bool result = System.Windows.Clipboard.ContainsData(
 
 ## ContainsFileDropList
 
-- ◆ My.Computer.Clipboard.ContainsFileDropList
+- ◆ `My.Computer.Clipboard.ContainsFileDropList`
 指示系统剪贴板是否包含目标文件路径列表。
 
 VISUAL BASIC
@@ -14616,7 +14263,6 @@ C#
 // 用于 Windows Forms 代码：
 bool result = System.Windows.Forms.Clipboard.
 ContainsFileDropList();
-
 // 用于以 XAML 为中心的代码：
 bool result =
   System.Windows.Clipboard.ContainsFileDropList();
@@ -14624,7 +14270,7 @@ bool result =
 
 ## ContainsImage 方法
 
-- * My.Computer.Clipboard.ContainsImage
+- * `My.Computer.Clipboard.ContainsImage`
 指示系统剪贴板是否包含图像数据。
 
 VISUAL BASIC
@@ -14639,14 +14285,13 @@ C#
 // 用于 Windows Forms 代码：
 bool result =
   System.Windows.Forms.Clipboard.ContainsImage();
-
 // 用于以 XAML 为中心的代码：
 bool result = System.Windows.Clipboard.ContainsImage();
 ```
 
 ## ContainsText 方法
 
-- * My.Computer.Clipboard.ContainsText
+- * `My.Computer.Clipboard.ContainsText`
 指示系统剪贴板是否包含文本，可选的指定格式。
 
 VISUAL BASIC
@@ -14661,16 +14306,15 @@ C#
 ```csharp
 // 用于 Windows Forms 代码：
 bool result = System.Windows.Forms.Clipboard.ContainsText();
-
 // 用于以 XAML 为中心的代码：
 bool result = System.Windows.Clipboard.ContainsText();
 ```
 
-Text 方法接受一个可选参数，指示要检查的文本类型，例如 HTML 或 Unicode。在 My 和 Windows 的代码中，该参数类型为 System.Windows.Forms.TextFormat；对于 XAML 代码，请使用 System.Windows.Forms.TextFormat 枚举。
+`Text` 方法接受一个可选参数，指示要检查的文本类型，例如 HTML 或 Unicode。在 My 和 Windows 的代码中，该参数类型为 `System.Windows.Forms.TextFormat`；对于 XAML 代码，请使用 `System.Windows.Forms.TextFormat` 枚举。
 
 ## CopyDirectory 方法
 
-- * My.Computer.FileSystem.CopyDirectory
+- * `My.Computer.FileSystem.CopyDirectory`
 将目录及其所有文件复制到新的目标目录。
 
 VISUAL BASIC
@@ -14680,13 +14324,12 @@ VISUAL BASIC
 ' 覆盖标志。
 My.Computer.FileSystem.CopyDirectory(
     source, destination, True)
-
 ' ----- UI 调用语法。
 My.Computer.FileSystem.CopyDirectory(source, destination,
     UIOption.OnlyErrorDialogs)
 ```
 
-C# 不包含复制完整目录的功能。对于基本的目录复制操作，你的代码必须手动创建目标目录并使用 System.IO 命名空间中的功能将源目录中的每个文件和子目录复制到目标。
+C# 不包含复制完整目录的功能。对于基本的目录复制操作，你的代码必须手动创建目标目录并使用 `System.IO` 命名空间中的功能将源目录中的每个文件和子目录复制到目标。
 
 C#
 
@@ -14695,17 +14338,14 @@ private void CopyDirectory(string source,
     string destination)
 {
     string destItem;
-
     // 创建目标目录。
     System.IO.Directory.CreateDirectory(destination);
-
     // 扫描每个文件。
     foreach (string file in System.IO.Directory.GetFiles(source))
     {
         destItem = System.IO.Path.Combine(destination, System.IO.Path.GetFileName(file));
         System.IO.File.Copy(file, destItem, true);
     }
-
     // 扫描每个子目录。
     foreach (string dir in System.IO.Directory.GetDirectories(source))
     {
@@ -14715,8 +14355,6 @@ private void CopyDirectory(string source,
     }
 }
 ```
-
-
 
 ```cs
 try
@@ -14730,11 +14368,11 @@ try
 }
 ```
 
-Microsoft 的 MSDN 网站 (msdn.microsoft.com) 包含了关于此以及其他“shell”功能的完整文档。
+Microsoft 的 MSDN 网站 (`msdn.microsoft.com`) 包含了关于此以及其他“shell”功能的完整文档。
 
-# Copyright 属性（版权属性）
+## Copyright 属性（版权属性）
 
-- * My.Application.Info.Copyright
+- * `My.Application.Info.Copyright`
 
 返回程序程序集中存储的版权所有者通知。
 
@@ -14756,9 +14394,9 @@ else
     result = ((System.Reflection.AssemblyCopyrightAttribute)attrSet[0]).Copyright;
 ```
 
-# CreateDirectory 方法（创建目录）
+## CreateDirectory 方法（创建目录）
 
-- * My.Computer.FileSystem.CreateDirectory
+- * `My.Computer.FileSystem.CreateDirectory`
 
 在路径中创建目录和子目录。
 
@@ -14769,9 +14407,9 @@ My.Computer.FileSystem.CreateDirectory("C:\temp")
 System.IO.Directory.CreateDirectory("C:\temp");
 ```
 
-# CtrlKeyDown 属性（Ctrl 按按下）
+## CtrlKeyDown 属性（Ctrl 按按下）
 
-◆ My.Computer.Keyboard.CtrlKeyDown
+◆ `My.Computer.Keyboard.CtrlKeyDown`
 
 表示 Control 键当前按按下。
 
@@ -14782,14 +14420,13 @@ Dim result As Boolean = My.Computer.Keyboard.CtrlKeyDown
 // ----- 用于 Windows Forms 代码:
 bool result = (System.Windows.Forms.Control.ModifierKeys &
 System.Windows.Forms.Keys.Control) != 0;
-
 // ----- 用于以 XAML 为中心的代码:
 bool result = (System.Windows.Input.ModifierKeys.Control) != 0);
 ```
 
-# Culture 属性（区域）
+## Culture 属性（区域）
 
-◆ My.Application.Culture
+◆ `My.Application.Culture`
 
 返回一个描述用于数字、日期和其他值的活动数据格式化区域的对象。
 
@@ -14802,11 +14439,11 @@ System.Globalization.CultureInfo result =
 System.Threading.Thread.CurrentThread.CurrentCulture;
 ```
 
-# CurrentConfig 属性（当前配置）
+## CurrentConfig 属性（当前配置）
 
-◆ My.Computer.Registry.CurrentConfig
+◆ `My.Computer.Registry.CurrentConfig`
 
-返回指向 HKEY_CURRENT_CONFIG Windows 注册表位置的引用。
+返回指向 `HKEY_CURRENT_CONFIG` Windows 注册表位置的引用。
 
 ```VISUAL BASIC
 Dim result As Microsoft.Win32.RegistryKey =
@@ -14817,9 +14454,9 @@ Microsoft.Win32.RegistryKey result =
 Microsoft.Win32.Registry.CurrentConfig;
 ```
 
-# CurrentDirectory 属性（当前目录）
+## CurrentDirectory 属性（当前目录）
 
-◆ My.Computer.FileSystem.CurrentDirectory
+◆ `My.Computer.FileSystem.CurrentDirectory`
 
 返回用于相对目录引用的目录完整路径。
 
@@ -14831,11 +14468,9 @@ Dim result As String =
 string result = System.IO.Directory.GetCurrentDirectory();
 ```
 
-# My.Computer.FileSystem.CurrentDirectory
+## CurrentPrincipal 属性（当前主体）
 
-# CurrentPrincipal 属性（当前主体）
-
-- - My.Computer.CurrentPrincipal
+- - `My.Computer.CurrentPrincipal`
 
 返回生效的安全上下文。
 
@@ -14848,11 +14483,11 @@ System.Security.Principal.IPPrincipal result =
 System.Threading.CurrentPrincipal;
 ```
 
-# CurrentUserProperty 属性（当前用户属性）
+## CurrentUserProperty 属性（当前用户属性）
 
-- - My.Computer.Registry.CurrentUser
+- - `My.Computer.Registry.CurrentUser`
 
-返回指向 HKEY_CURRENT_USER Windows 注册表位置的引用。
+返回指向 `HKEY_CURRENT_USER` Windows 注册表位置的引用。
 
 ```VISUAL BASIC
 Dim result As Microsoft.Win32.RegistryKey =
@@ -14863,9 +14498,9 @@ Microsoft.Win32.RegistryKey result =
 Microsoft.Win32.Registry.CurrentUser;
 ```
 
-# CurrentUserApplicationData 属性（当前用户应用程序数据）
+## CurrentUserApplicationData 属性（当前用户应用程序数据）
 
-- - My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData
+- - `My.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData`
 
 返回当前用户“应用程序数据”的路径。
 
@@ -14878,20 +14513,20 @@ string result = System.Environment.GetFolderPath(
 System.Environment.SpecialFolder.ApplicationData);
 ```
 
-# DefaultFileLogWriter 属性（默认日志写入器）
+## DefaultFileLogWriter 属性（默认日志写入器）
 
-- - My.Application.Log.DefaultFileLogWriter（用于桌面应用程序）
-- My.Log.DefaultFileLogWriter（用于 ASP.NET 应用程序）
+- - `My.Application.Log.DefaultFileLogWriter`（用于桌面应用程序）
+- `My.Log.DefaultFileLogWriter`（用于 ASP.NET 应用程序）
 
 C# 默认不配置日志功能。因此，没有用于日志目的的默认监听器。
 
 另见
 
-TraceSource 属性
+`TraceSource` 属性
 
-# DeleteDirectory 方法（删除目录）
+## DeleteDirectory 方法（删除目录）
 
-- - My.Computer.FileSystem.DeleteDirectory
+- - `My.Computer.FileSystem.DeleteDirectory`
 
 删除目录或将其移动到回收站。
 
@@ -14907,7 +14542,9 @@ My.Computer.FileSystem.DeleteDirectory(targetDirectory,
   RecycleOption.SendToRecycleBin
 ```
 
-对于基本的删除操作，System.IO 命名空间中的 .Delete 方法提供了与基本 VB 语法相当的功能。
+
+
+对于基本的删除操作，`System.IO`命名空间中的`.Delete`方法提供了与基本 VB 语法相当的功能。
 
 ```csharp
 // 目录将被永久删除。该
@@ -14916,23 +14553,24 @@ My.Computer.FileSystem.DeleteDirectory(targetDirectory,
 System.IO.Directory.Delete(targetFile, true);
 ```
 
-C# 不包含你调用的功能。相反，你必须访问 Win32 API 并调用相应的函数。对于基本的删除操作，System.IO 命名空间中的 .Delete 方法提供了与基本 VB 语法相当的功能。在区域删除和类似操作的情况下，你可以调用 SHFileOperation API。
+C# 不包含你调用的功能。相反，你必须访问 Win32 API 并调用相应的函数。对于基本的删除操作，`System.IO`命名空间中的`.Delete`方法提供了与基本 VB 语法相当的功能。在区域删除和类似操作的情况下，你可以调用`SHFileOperation` API。
 
 # DeleteFile 方法（删除文件）
 
-- - My.Computer.FileSystem.DeleteFile
+- - `My.Computer.FileSystem.DeleteFile`
 
 删除文件或将其移动到回收站。
 
 ```VISUAL BASIC
 ' 基础语法。文件将被永久删除。
 ```
+
 ```csharp
 ```
 
 # Deployment 属性（部署）
 
-- - My.Application.Deployment
+- - `My.Application.Deployment`
 
 返回当前应用程序 ClickOnce（安装）部署。
 
@@ -14940,6 +14578,7 @@ C# 不包含你调用的功能。相反，你必须访问 Win32 API 并调用相
 Dim result As System.Deployment.Application.
 Deployment
 ```
+
 ```csharp
 System.Deployment.Application.ApplicationDeployment
 result = System.Application.Current;
@@ -14947,13 +14586,14 @@ result = System.Application.Current;
 
 # Description 属性（描述）
 
-- - My.Application.Info.Description
+- - `My.Application.Info.Description`
 
 返回程序集中存储的应用程序描述。
 
 ```VISUAL BASIC
 Dim result As String = My.Application.Info.Description
 ```
+
 ```csharp
 string result;
 System.Reflection.Assembly currentAssembly =
@@ -14966,6 +14606,7 @@ inherit:true);
 if (attrSet.Length == 0)
 result = "";
 ```
+
 ```csharp
 result = ((System.Reflection.
 AssemblyDescriptionAttribute)
@@ -14974,7 +14615,7 @@ attrSet[0]).Description;
 
 # Desktop 属性（桌面）
 
-- - My.Computer.FileSystem.SpecialDirectories.Desktop
+- - `My.Computer.FileSystem.SpecialDirectories.Desktop`
 
 返回当前用户“桌面”文件夹的路径。
 
@@ -14982,6 +14623,7 @@ attrSet[0]).Description;
 Dim result As String = My.Computer.FileSystem.
 SpecialDirectories.Desktop
 ```
+
 ```csharp
 string result = System.Environment.GetFolderPath(
 System.Environment.SpecialFolder.DesktopDirectory);
@@ -14989,7 +14631,7 @@ System.Environment.SpecialFolder.DesktopDirectory);
 
 # DirectoryExists 方法（目录是否存在）
 
-- - My.Computer.FileSystem.DirectoryExists
+- - `My.Computer.FileSystem.DirectoryExists`
 
 表示目录路径是否存在。
 
@@ -14997,19 +14639,21 @@ System.Environment.SpecialFolder.DesktopDirectory);
 Dim result As Boolean = My.Computer.FileSystem.
 DirectoryExists("C:\temp");
 ```
+
 ```csharp
 bool result = System.IO.Directory.Exists("C:\\temp");
 ```
 
 # DirectoryPath（目录路径）
 
-- - My.Application.Info.DirectoryPath
+- - `My.Application.Info.DirectoryPath`
 
 返回包含当前应用程序的目录路径。
 
 ```VISUAL BASIC
 Dim result As String = My.Application.Info.DirectoryPath
 ```
+
 ```csharp
 System.Reflection.Assembly currentAssembly =
 System.Reflection.Assembly.GetEntryAssembly();
@@ -15021,19 +14665,14 @@ Assembly.Location);
 
 # DoEvents 方法（处理事件）
 
-- - My.Application.DoEvents
+- - `My.Application.DoEvents`
 
 在 Windows Forms 应用程序中，临时暂停当前代码，以允许其他线程和进程处理消息。
 
 ```VISUAL BASIC
 ```
 
-
-
-
-
-## My.Application.DoEvents()
-
+## `My.Application.DoEvents()`
 ```
 // --- 仅 Windows Forms 代码：
 System.Windows.Forms.Application.DoEvents();
@@ -15043,7 +14682,7 @@ System.Windows.Forms.Application.DoEvents();
 
 ## DownloadFile 方法
 
-+   ◆ My.Computer.Network.DownloadFile
++   ◆ `My.Computer.Network.DownloadFile`
 
 从网络地址下载文件到本地计算机。
 
@@ -15083,21 +14722,19 @@ AsyncCompletedFileEventHandler(CompletedCallback);
 client.DownloadFileAsync(sourceUri, destinationFile);
 ```
 
-如果目标文件存在，WebClient 类方法将覆盖它。如果你不想覆盖该文件，则必须手动检查。此外，它没有提供关于传输状态的视觉提示。如果需要，你必须提供自己的进度对话框。
+如果目标文件存在，`WebClient`类方法将覆盖它。如果你不想覆盖该文件，则必须手动检查。此外，它没有提供关于传输状态的视觉提示。如果需要，你必须提供自己的进度对话框。
 
-要覆盖默认超时值，请从 WebClient 类派生新类，并手动配置 HttpRequest 的 TimeOut 属性。使用此类 own标准的 WebClient 类来执行下载。
+要覆盖默认超时值，请从`WebClient`类派生新类，并手动配置`HttpRequest`的`TimeOut`属性。使用此类 own标准的`WebClient`类来执行下载。
 
 ```csharp
 class WebClientTimeout : System.Net.WebClient
 {
     public int Timeout { get; set; }
-
     public WebClientTimeout(int timeoutOverride)
     {
         // ---- 保存用户指定的超时时间。
         this.Timeout = timeoutOverride;
     }
-
     protected override System.Net.WebRequest
     GetWebRequest(System.Uri sourceAddress)
     {
@@ -15113,7 +14750,7 @@ class WebClientTimeout : System.Net.WebClient
 
 ## Drives 属性
 
-+   ◆ My.Computer.FileSystem.Drives
++   ◆ `My.Computer.FileSystem.Drives`
 
 返回一个描述工作站逻辑驱动器的对象的集合。
 
@@ -15132,9 +14769,9 @@ System.IO.DriveInfo[] result =
 
 ## DynData 属性
 
-+   ◆ My.Computer.Registry.DynData
++   ◆ `My.Computer.Registry.DynData`
 
-返回指向 HKEY_DN_DATA Windows注册表位置的引用。
+返回指向 `HKEY_DN_DATA` Windows注册表位置的引用。
 
 ```VISUAL BASIC
 ' 此代码已过时。
@@ -15152,7 +14789,7 @@ Microsoft.Win32.RegistryKey result =
 
 ## FileExists 方法
 
-+   - My.Computer.FileSystem.FileExists
++   - `My.Computer.FileSystem.FileExists`
 
 指示文件路径是否存在。
 
@@ -15168,25 +14805,24 @@ bool result = System.IO.File.Exists(
 
 ## FileSystemObject
 
-+   - My.Computer.FileSystem
++   - `My.Computer.FileSystem`
 
 参见
-
-CombinePath 方法, CopyDirectory 方法, CopyFile 方法,
-CreateDirectory 方法, CurrentDirectory 属性, DeleteDirectory
-方法, DeleteFile 方法, DirectoryExists 方法, Drives 属性,
-FileExists 方法, FindFiles 方法, GetDirectories 方法,
-GetDirectoryInfo 方法, GetDriveInfo 方法, GetFileInfo 方法,
-GetFiles 方法, GetName 方法, GetPath 方法,
-GetTempFileName 方法, MoveDirectory 方法, MoveFile 方法,
-OpenTextFieldParser, OpenTextFileReader 方法,
-OpenTextWriter 方法, ReadAllBytes 方法, ReadAllText 方法,
-RenameDirectory 方法, RenameFile 方法, SpecialDirectories 对象,
-WriteAllBytes 方法, WriteAll 方法
+`CombinePath` 方法, `CopyDirectory` 方法, `CopyFile` 方法,
+`CreateDirectory` 方法, `CurrentDirectory` 属性, `DeleteDirectory`
+方法, `DeleteFile` 方法, `DirectoryExists` 方法, `Drives` 属性,
+`FileExists` 方法, `FindFiles` 方法, `GetDirectories` 方法,
+`GetDirectoryInfo` 方法, `GetDriveInfo` 方法, `GetFileInfo` 方法,
+`GetFiles` 方法, `GetName` 方法, `GetPath` 方法,
+`GetTempFileName` 方法, `MoveDirectory` 方法, `MoveFile` 方法,
+`OpenTextFieldParser`, `OpenTextFileReader` 方法,
+`OpenTextWriter` 方法, `ReadAllBytes` 方法, `ReadAllText` 方法,
+`RenameDirectory` 方法, `RenameFile` 方法, `SpecialDirectories` 对象,
+`WriteAllBytes` 方法, `WriteAll` 方法
 
 ## FindFiles 方法
 
-+   - My.Computer.FileSystem.FindFiles
++   - `My.Computer.FileSystem.FindFiles`
 
 从目标目录返回包含特定搜索字符串的文件路径集合。
 
@@ -15198,7 +14834,7 @@ searchText, ignoreCase,
 SearchOption.SearchAllSubDirectories, "*.txt")
 ```
 
-C# 不包含与 VB 的 FindFiles 方法等效的方法。相反，你必须检查目标目录中的每个文件，以查看其是否包含搜索字符串。以下代码提供了如何搜索匹配项的一个示例。
+C# 不包含与 VB 的 `FindFiles` 方法等效的方法。相反，你必须检查目标目录中的每个文件，以查看其是否包含搜索字符串。以下代码提供了如何搜索匹配项的一个示例。
 
 ```csharp
 private static List<string> FindFiles(
@@ -15209,7 +14845,6 @@ private static List<string> FindFiles(
     List<string> results = new List<string>();
     bool foundMatch;
     string content;
-
     foreach (string oneFile
     in System.IO.Directory.GetFiles(
         targetDirectory, fileMask, depthType))
@@ -15230,7 +14865,7 @@ private static List<string> FindFiles(
 
 ## Forms 对象
 
-+   ◆ My.Forms
++   ◆ `My.Forms`
 
 提供对当前 Windows Forms 项目中任何表的访问。
 
@@ -15245,7 +14880,7 @@ Form1.Show()
 
 ## GetAudioStream 方法
 
-◆ My.Computer.Clipboard.GetAudioStream
+◆ `My.Computer.Clipboard.GetAudioStream`
 
 返回来自系统剪贴板的数据对象。
 
@@ -15261,7 +14896,7 @@ System.IO.Stream result = System.Windows.Forms.Clipboard.GetAudioStream();
 
 ## GetData 方法
 
-◆ My.Computer.Clipboard.GetData
+◆ `My.Computer.Clipboard.GetData`
 
 返回系统剪贴板中指定格式的对象。
 
@@ -15276,9 +14911,9 @@ object result = System.Windows.Forms.Clipboard.GetData("MyAppFormat")
 
 ## GetDataObject 方法
 
-◆ My.Computer.Clipboard.GetDataObject
+◆ `My.Computer.Clipboard.GetDataObject`
 
-返回支持DataObject 接口的剪贴板对象。当剪贴板包含多种格式时，该接口可以访问这些格式。
+返回支持`DataObject`接口的剪贴板对象。当剪贴板包含多种格式时，该接口可以访问这些格式。
 
 ```VISUAL BASIC
 Dim result As System.Windows.Forms.IDataObject =
@@ -15287,13 +14922,18 @@ Dim result As System.Windows.Forms.IDataObject =
 
 ```csharp
 // --- Windows Forms 代码：
-System.Windows.Forms.IDataObject result =
-System.Windows.Forms.Clipboard.GetDataObject();
 ```
+
+
+
+`System.Windows.Forms.IDataObject` `result` =
+
+`System.Windows.Forms.Clipboard.GetDataObject()`;
+
 
 ## GetDirectories 方法
 
-+   * My.Computer.FileSystem.GetDirectories
++   * `My.Computer.FileSystem.GetDirectories`
 
 返回指定目录中的目录名称，可以检查子目录，并可以匹配模式。
 
@@ -15317,7 +14957,7 @@ System.IO.SearchOption.TopDirectoryOnly);
 
 ## GetDirectoryInfo 方法
 
-+   * My.Computer.FileSystem.GetDirectoryInfo
++   * `My.Computer.FileSystem.GetDirectoryInfo`
 
 返回指定目录的信息对象。
 
@@ -15333,7 +14973,7 @@ new System.IO.DirectoryInfo("C:\temp");
 
 ## GetDriveInfo 方法
 
-+   * My.Computer.FileSystem.GetDriveInfo
++   * `My.Computer.FileSystem.GetDriveInfo`
 
 返回指定驱动器号的信息对象。
 
@@ -15346,16 +14986,11 @@ My.Computer.FileSystem.GetDriveInfo("C:")
 System.IO.DriveInfo result = new System.IO.DriveInfo("C:");
 ```
 
-
-
-
-
-## ◆ My.Application.GetEnvironmentVariable
+## ◆ `My.Application.GetEnvironmentVariable`
 
 检索指定的 Windows 环境变量的值。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 ' 如果未找到变量则抛出异常。
 Dim result As String =
     My.Application.GetEnvironmentVariable("PATH")
@@ -15368,12 +15003,11 @@ string result = System.Environment;
 ```
 
 ## GetFileDropList 方法
-### ◆ My.Computer.Clipboard.GetFileDropList
+### ◆ `My.Computer.Clipboard.GetFileDropList`
 
 从系统剪贴板返回文件路径的集合。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As System.Collections.
     Specialized.StringCollection =
     My.Computer.Clipboard.GetFileDropList()
@@ -15392,12 +15026,11 @@ System.Collections.Specialized.StringCollection result =
 ```
 
 ## GetFileInfo 方法
-### ◆ My.Computer.FileSystem.GetInfo
+### ◆ `My.Computer.FileSystem.GetInfo`
 
 返回指定文件的信息对象。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As System.IO.FileInfo =
     My.Computer.FileSystem.GetInfo(
         "C:\temp\WorkFile.txt")
@@ -15409,7 +15042,7 @@ System.IO.FileInfo result =
 ```
 
 ## GetFiles 方法
-### ◆ My.Computer.FileSystem.GetFiles
+### ◆ `My.Computer.FileSystem.GetFiles`
 
 返回指定目录中的文件名集合，可选地检查子目录，并可选地匹配模式。
 
@@ -15427,11 +15060,10 @@ SearchOption.TopLevelOnly, "*.txt")
 
 ## GetImage 方法
 
-- * My.Computer.Clipboard.GetImage
+- * `My.Computer.Clipboard.GetImage`
 从系统剪贴板获取图像。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As System.Drawing.Image =
 My.Computer.Clipboard.GetImage()
 ```
@@ -15440,7 +15072,6 @@ My.Computer.Clipboard.GetImage()
 // 用于 Windows Forms 代码：
 System.Drawing.Image result =
 System.Windows.Forms.Clipboard.GetImage();
-
 // 用于以 XAML 为的代码：
 System.Drawing.Image result =
 System.Windows.Clipboard.GetImage();
@@ -15448,11 +15079,10 @@ System.Windows.Clipboard.GetImage();
 
 ## GetName 方法
 
-- * My.Computer.FileSystem.GetName
+- * `My.Computer.FileSystem.GetName`
 返回路径中的文件名部分。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 ' 返回 "WorkFile.txt"
 Dim result As String = My.Computer.FileSystem.GetName(
 "C:\temp\WorkFile.txt")
@@ -15466,11 +15096,10 @@ string result = System.IO.Path.GetFileName(
 
 ## GetParentPath 方法
 
-- * My.Computer.FileSystem.GetParentPath
+- * `My.Computer.FileSystem.GetParentPath`
 返回指定文件或目录路径的父目录。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 ----- 返回 "C:\temp"
 Dim result As String =
     My.Computer.FileSystem.GetParentPath(
@@ -15483,15 +15112,14 @@ string result = System.IO.Path.GetDirectoryName(
     "C:\temp\WorkFile.txt")
 ```
 
-GetParentPath 接受绝对或相对路径。C# 的等方法返回绝对路径。
+`GetParentPath` 接受绝对或相对路径。C# 的等方法返回绝对路径。
 
 ## GetTempFileName 方法
 
-- * My.Computer.FileSystem.GetTempFileName
+- * `My.Computer.FileSystem.GetTempFileName`
 创建一个临时文件，并返回该文件的路径。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As String =
     My.Computer.FileSystem.GetTempFileName()
 ```
@@ -15502,31 +15130,28 @@ string result = System.IO.Path.GetTempFileName();
 
 ## GetText 方法
 
-- * My.Computer.Clipboard.GetText
+- * `My.Computer.Clipboard.GetText`
 从系统剪贴板获取文本。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As String = My.Computer.Clipboard.GetText()
 ```
 
 ```csharp
 // 用于 Windows Forms 代码：
 string result = System.Windows.Forms.Clipboard.GetText();
-
 // 用于以 XAML 为的代码：
 string result = System.Windows.Clipboard.GetText();
 ```
 
-GetText 方法接受一个可选参数，指示要检查的文本类型，例如 HTML 或 Unicode。在 My 和 Windows Forms 版本的代码中，此参数的类型为 `System.Windows.Forms.TextDataFormat`；对于 XAML 代码，请使用 `System.Windows.TextDataFormat` 枚举。默认情况下从 Unicode 格式检索文本。
+`GetText` 方法接受一个可选参数，指示要检查的文本类型，例如 HTML 或 Unicode。在 My 和 Windows Forms 版本的代码中，此参数的类型为 `System.Windows.Forms.TextDataFormat`；对于 XAML 代码，请使用 `System.Windows.TextDataFormat` 枚举。默认情况下从 Unicode 格式检索文本。
 
 ## GetValue 方法
 
-- ◆ My.Computer.Registry.GetValue
+- ◆ `My.Computer.Registry.GetValue`
 从指定的 Windows 注册表值获取数据。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Long = CLng(My.Computer.Registry.GetValue(
 "HKEY_CURRENT_USER\Software\MyApp", 0))
 ```
@@ -15537,11 +15162,10 @@ long result = (long)Microsoft.Win32.Registry.GetValue("HKEY_CURRENT_USER\Softwar
 
 ## GmtTime 属性
 
-- ◆ My.Computer.Clock.GmtTime
+- ◆ `My.Computer.Clock.GmtTime`
 返回 UTC（协调时）日期和时间。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Date = My.Computer.Clock.GmtTime
 ```
 
@@ -15551,11 +15175,10 @@ DateTime result = DateTime.UtcNow;
 
 ## InstalledUICulture 属性
 
-- ◆ My.Computer.Info.InstalledUICulture
+- ◆ `My.Computer.Info.InstalledUICulture`
 返回一个描述系统界面文化的对象。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Globalization.CultureInfo = My.Computer.Info.InstalledUICulture
 ```
 
@@ -15565,11 +15188,10 @@ System.Globalization.CultureInfo result = System.Globalization.CultureInfo.Curre
 
 ## IsAuthenticated 属性
 
-- ◆ My.User.IsAuthenticated
+- ◆ `My.User.IsAuthenticated`
 返回当前用户的身份状态。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.User.IsAuthenticated
 ```
 
@@ -15579,11 +15201,10 @@ bool result = System.Threading.Thread.CurrentPrincipal.Identity.IsAuthenticated;
 
 ## IsInRole 方法
 
-- ◆ My.User.IsInRole
+- ◆ `My.User.IsInRole`
 返回指示当前用户是否属于指定角色的值。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 ' 选项 1：Dim role As String = "Administrator"
 ' 选项 2：Dim role As BuiltInRole = BuiltInRole.Administrator
 Dim result As Boolean = My.User.IsInRole(role)
@@ -15593,7 +15214,6 @@ Dim result As Boolean = My.User.IsInRole(role)
 // ----- 选项 1：字符串查找。
 string role = "Administrator";
 bool result = System.Threading.Thread.CurrentPrincipal.IsInRole(role);
-
 // ----- 选项 2：Windows 角色查找。
 // 假设使用了：using System.Security.Principal;
 bool result;
@@ -15610,11 +15230,10 @@ else
 
 ## IsAvailable 属性
 
-- ◆ My.Computer.Network.IsAvailable
+- ◆ `My.Computer.Network.IsAvailable`
 指示连接到本地计算机的网络可用。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.Computer.Network.IsAvailable
 ```
 
@@ -15624,11 +15243,10 @@ bool result = System.Net.NetworkInformation.NetworkInterface.GetNetworkAvailable
 
 ## IsNetworkDeployed 属性
 
-- * My.Application.IsNetworkDeployed
+- * `My.Application.IsNetworkDeployed`
 返回一个指示应用程序是否通过 ClickOnce 从网络部署的值。
 
-```
-VISUAL BASIC
+```VISUAL BASIC
 Dim result As Boolean = My.Application.IsNetworkDeployed
 ```
 
@@ -15636,19 +15254,15 @@ Dim result As Boolean = My.Application.IsNetworkDeployed
 bool result = System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed;
 ```
 
-
-
-
-
 ## Keyboard 对象
 
-- ◆ My.Computer.Keyboard
+- ◆ `My.Computer.Keyboard`
 
-参见 AltKeyDown Property, CapsLock Property, CtrlKeyDown Property, NumLock Property, ScrollLock Property, SendKeys Method, ShiftKeyDown Property
+参见 `AltKeyDown` Property, `CapsLock` Property, `CtrlKeyDown` Property, `NumLock` Property, `ScrollLock` Property, `SendKeys` Method, `ShiftKeyDown` Property
 
 ## LoadedAssemblies 属性
 
-- My.Application.Info.LoadedAssemblies
+- `My.Application.Info.LoadedAssemblies`
 
 返回当前应用程序加载的程序集。
 
@@ -15669,9 +15283,9 @@ AppDomain.CurrentDomain.GetAssemblies();
 
 ## LocalMachine 属性
 
-- My.Computer.Registry.LocalMachine
+- `My.Computer.Registry.LocalMachine`
 
-返回 HKEY_LOCAL_MACHINE Windows 注册表位置的引用。
+返回 `HKEY_LOCAL_MACHINE` Windows 注册表位置的引用。
 
 ```vb
 # VISUAL BASIC
@@ -15687,7 +15301,7 @@ Microsoft.Win32.Registry.LocalMachine;
 
 ## LocalTime 属性
 
-- My.Computer.Clock.LocalTime
+- `My.Computer.Clock.LocalTime`
 
 返回当前时区内的当前日期时间。
 
@@ -15701,321 +15315,257 @@ Dim result As Date = My.Computer.Clock.LocalTime
 DateTime result = DateTime.Now;
 ```
 
+
+
 ## Log 对象
+- `My.Application.Log`（用于桌面应用程序）
+- `My.Log`（用于 ASP.NET 应用程序）
 
-- My.Application.Log（用于桌面应用程序）
-- My.Log（用于 ASP.NET 应用程序）
-
-参见 DefaultFileLogWriter Property, TraceSource Property, WriteEntry Method, WriteException Method
+参见 `DefaultFileLogWriter Property`, `TraceSource Property`, `WriteEntry Method`, `WriteException Method`
 
 ## MinimumSplashScreenDisplayTime 属性
-
-- ◆ My.Application.MinimumSplashScreenDisplayTime
+- ◆ `My.Application.MinimumSplashScreenDisplayTime`
 
 指定启动界面显示的时间（毫秒为单位）。
 
 ```vb
-VISUAL BASIC
 ' 显示至少两秒。
 My.Application.MinimumSplashScreenDisplayTime = 2000
 ```
 
-此属性是 Visual Basic Windows 应用程序框架的一部分，该类集未包含在 C# 项目中。MinimumSplashScreenDisplayTime 没有直接的 C# 等价项。相反，你必须手动管理应用程序中任何启动界面的显示。更多信息请参阅本章中的“SplashScreen Property”条目。
+此属性是 Visual Basic Windows 应用程序框架的一部分，该类集未包含在 C# 项目中。`MinimumSplashScreenDisplayTime` 没有直接的 C# 等价项。相反，你必须手动管理应用程序中任何启动界面的显示。更多信息请参阅本章中的“SplashScreen Property”条目。
 
 另请
-- SplashScreen Property
+- `SplashScreen Property`
 
 ## Mouse 对象
+- ◆ `My.Computer.Mouse`
 
-- ◆ My.Computer.Mouse
-
-参见 ButtonsSwapped Property, WheelExists Property, WheelScrollLines Property
+参见 `ButtonsSwapped Property`, `WheelExists Property`, `WheelScrollLines Property`
 
 ## MoveDirectory 方法
-
-- ◆ My.Computer.FileSystem.MoveDirectory
+- ◆ `My.Computer.FileSystem.MoveDirectory`
 
 将目录移动到新位置。
 
 ```vb
-# VISUAL BASIC
 ' 基础语法。第三个（可选）参数是覆盖标记。
 My.Computer.FileSystem.MoveDirectory(source, destination, True)
 
-'-- UI 调用语法。
+' UI 调用语法。
 My.Computer.FileSystem.MoveDirectory(source, destination, UIOption.OnlyErrorDialogs)
 ```
 
-对于目录移动操作，System.IO 命名空间提供了与基本 VB 语法相当的功能。
+对于目录移动操作，`System.IO` 命名空间提供了与基本 VB 语法相当的功能。
 
 ```csharp
-// C#
 // Directory.Move 缺少覆盖选项。
 System.IO.Directory.Move(source, destination);
 ```
 
-C# 不包含调用 Windows 目录移动对话框的功能。相反，你必须直接访问 Win32 API 并调用相应的函数。在移动目录和类似的基于文件的操作中，你调用 SHFileOperation API。请参本章中的“CopyFile Method”条目获取调用此 API 的示例代码。
+C# 不包含调用 Windows 目录移动对话框的功能。相反，你必须直接访问 Win32 API 并调用相应的函数。在移动目录和类似的基于文件的操作中，你调用 `SHFileOperation` API。请参本章中的“CopyFile Method”条目获取调用此 API 的示例代码。
 
 ## MoveFile 方法
-
-- My.Computer.FileSystem.MoveFile
+- `My.Computer.FileSystem.MoveFile`
 
 将文件移动到新目录。
 
 ```vb
-# VISUAL BASIC
-' 基础语法。第三个（可选）参数
-  ' 覆盖标记。
+' 基础语法。第三个（可选）参数 覆盖标记。
 My.Computer.FileSystem.MoveFile(source, destination, True)
 
----- UI 调用语法。
-My.Computer.FileSystem.MoveFile(source, destination,
-  UIOption.OnlyErrorDialogs)
+' UI 调用语法。
+My.Computer.FileSystem.MoveFile(source, destination, UIOption.OnlyErrorDialogs)
 ```
 
-对于基本文件操作，System.IO 命名空间中的 File.Move 方法提供了与基本语法相当的功能。
+对于基本文件操作，`System.IO` 命名空间中的 `File.Move` 方法提供了与基本语法相当的功能。
 
 ```csharp
-// C#
 // File.Move 缺少覆盖选项。
 System.IO.File.Move(source, destination);
-```C# 不包含调用 Windows 文件移动对话框的功能。相反，你必须直接访问 Win32 API 并调用相应的函数。在移动文件和类似的基于文件的操作中，你调用 SHFileOperation API。请参阅本章中的“CopyFile Method”条目获取示例示例代码。
+```
+
+C# 不包含调用 Windows 文件移动对话框的功能。相反，你必须直接访问 Win32 API 并调用相应的函数。在移动文件和类似的基于文件的操作中，你调用 `SHFileOperation` API。请参阅本章中的“CopyFile Method”条目获取示例示例代码。
 
 ## My 命名空间
+- `My`
 
-- My
-
-参见 Application Object, Computer Object, Forms Object, Log Object (My), Request Object, Response Object, Settings Object, User Object, WebServices Object
+参见 `Application Object`, `Computer Object`, `Forms Object`, `Log Object (My)`, `Request Object`, `Response Object`, `Settings Object`, `User Object`, `WebServices Object`
 
 ## MyDocuments 属性
-
-- My.Computer.FileSystem.SpecialDirectories.MyDocuments
+- `My.Computer.FileSystem.SpecialDirectories.MyDocuments`
 
 返回当前用户的“文档”文件夹路径。
 
 ```vb
-# VISUAL BASIC
 Dim result As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments
 ```
 
 ```csharp
-# C#
-string result = System.Environment.GetFolderPath(
-Environment.SpecialFolder.MyDocuments);
+string result = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 ```
 
 ## MyMusic 属性
-
-- My.Computer.FileSystem.SpecialDirectories.MyMusic
+- `My.Computer.FileSystem.SpecialDirectories.MyMusic`
 
 返回当前用户的“音乐”文件夹路径。
 
 ```vb
-# VISUAL BASIC
 Dim result As String = My.Computer.FileSystem.SpecialDirectories.MyMusic
 ```
 
 ```csharp
-# C#
-string result = System.Environment.GetFolderPath(
-Environment.SpecialFolder.MyMusic);
+string result = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
 ```
 
 ## MyPictures 属性
-
-- My.Computer.FileSystem.SpecialDirectories.MyPictures
+- `My.Computer.FileSystem.SpecialDirectories.MyPictures`
 
 返回当前用户的“图片”文件夹路径。
 
 ```vb
-# VISUAL BASIC
 Dim result As String = My.Computer.FileSystem.SpecialDirectories.MyPictures
 ```
 
 ```csharp
-# C#
-string result = System.Environment.GetFolderPath(
-Environment.SpecialFolder.MyPictures);
+string result = System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 ```
 
 ## Name 属性 (My.Computer)
-
-- My.Computer.Name
+- `My.Computer.Name`
 
 返回本地计算机名称。
 
 ```vb
-# VISUAL BASIC
 Dim result As String = My.Computer.Name
 ```
 
 ```csharp
-# C#
 string result = System.Environment.MachineName;
 ```
 
 ## Name 属性 (My.User)
-
-- My.User.Name
+- `My.User.Name`
 
 返回当前用户名。
 
 ```vb
-# VISUAL BASIC
 Dim result As String = My.User.Name
 ```
 
 ```csharp
-# C#
-string result = System.Threading.Thread.
-CurrentPrincipal.Identity.Name;
+string result = System.Threading.Thread.CurrentPrincipal.Identity.Name;
 ```
 
 ## Network 对象
+- `My.Computer.Network`
 
-- My.Computer.Network
-
-参见 DownloadFile, IsAvailable Property, NetworkAvailabilityChanged Event (My.Computer.Network), Ping Method, UploadFile
+参见 `DownloadFile`, `IsAvailable Property`, `NetworkAvailabilityChanged Event (My.Computer.Network)`, `Ping Method`, `UploadFile`
 
 ## NetworkAvailabilityChanged 事件 (My.Application)
+- `My.Application.NetworkAvailabilityChanged`
 
-- My.Application.NetworkAvailabilityChanged
-
-此事件限于 Windows Forms 应用程序。通过 My.Computer.Network 类暴露的相同事件适用于所有应用程序类型。请参见该事件条目以获取 VB 的 C# 等效项。
+此事件限于 Windows Forms 应用程序。通过 `My.Computer.Network` 类暴露的相同事件适用于所有应用程序类型。请参见该事件条目以获取 VB 的 C# 等效项。
 
 另请
-- NetworkAvailabilityChanged Event (My.Computer.Network)
+- `NetworkAvailabilityChanged Event (My.Computer.Network)`
 
 ## NetworkAvailabilityChanged 事件 (My.Computer.Network)
-
-- My.Computer.Network.NetworkAvailabilityChanged
+- `My.Computer.Network.NetworkAvailabilityChanged`
 
 当网络可用性 way时调用事件处理程序。
 
 ```vb
-# VISUAL BASIC
----- 事件处理逻辑。
+' 事件处理逻辑。
 Public Sub NetworkPresenceHandler(ByVal sender As Object, ByVal e As NetworkAvailableEventArgs)
-' // 在其他地方，将程序与事件关联。
-AddHandler My.Computer.Network.NetworkAvailabilityChanged
-AddressOf NetworkPresenceHandler
+' 在其他地方，将程序与事件关联。
+AddHandler My.Computer.Network.NetworkAvailabilityChanged AddressOf NetworkPresenceHandler
 ```
 
 ```csharp
-# C#
-// --- 事件处理逻辑。
-public static void NetworkPresenceHandler(object sender,
-    System.Net.NetworkInformation.NetworkAvailabilityChangedEventArgs e)
-{}
+// 事件处理逻辑。
+public static void NetworkPresenceHandler(object sender, System.Net.NetworkInformation.NetworkAvailabilityChangedEventArgs e) {}
 
-// --- 将程序与事件关联。
+// 将程序与事件关联。
 System.Net.NetworkInformation.NetworkAvailabilityChanged += NetworkPresenceHandler;
 ```
 
 ## NumLock 属性
-
-- * My.Computer.Keyboard.NumLock
+- * `My.Computer.Keyboard.NumLock`
 
 指示 Num Lock 当前是否激活。
 
 ```vb
-# VISUAL BASIC
 Dim result As Boolean = My.Computer.Keyboard.NumLock
 ```
 
 ```csharp
-# C#
-bool result = System.Windows.Forms.Form.IsLocked(
-    System.Windows.Forms.Keys.NumLock);
+bool result = System.Windows.Forms.Form.IsLocked(System.Windows.Forms.Keys.NumLock);
 ```
 
 ```csharp
-// --- 用于 Forms 代码：
-bool result = System.Windows.Input.Keyboard.IsToggled(
-    System.Windows.Input.Key.NumLock);
+// 用于 Forms 代码：
+bool result = System.Windows.Input.Keyboard.IsToggled(System.Windows.Input.Key.NumLock);
 ```
 
 ## OpenForms 属性
-
-- My.Application.OpenForms
+- `My.Application.OpenForms`
 
 返回 Windows Forms 应用程序中当前打开的表集合。
 
 ```vb
-# VISUAL BASIC
-Dim result As System.Windows.Forms.FormCollection =
-My.Application.OpenForms
+Dim result As System.Windows.Forms.FormCollection = My.Application.OpenForms
 ```
 
 ```csharp
-# C#
-System.Windows.Forms.FormCollection result =
-System.Windows.Forms.Application.OpenForms;
+System.Windows.Forms.FormCollection result = System.Windows.Forms.Application.OpenForms;
 ```
 
 ## OpenSerialPort 方法
-
-- My.Computer.Ports.OpenSerialPort
+- `My.Computer.Ports.OpenSerialPort`
 
 在本地工作站在串口上打开连接。
 
 ```vb
-# VISUAL BASIC
-portAccess As System.IO.SerialPort =
-My.Computer.Ports.OpenSerialPort(
-portName, baudRate, parity, dataBits, stopBits)
+portAccess As System.IO.SerialPort = My.Computer.Ports.OpenSerialPort(portName, baudRate, parity, dataBits, stopBits)
 ```
 
 ```csharp
-# C#
-System.IO.Ports.SerialPort portAccess =
-new System.IO.Ports.OpenSerialPort(
-portName, baudRate, parity, dataBits, stopBits);
+System.IO.Ports.SerialPort portAccess = new System.IO.Ports.OpenSerialPort(portName, baudRate, parity, dataBits, stopBits);
 ```
 
 ## OpenTextField 方法
+- `My.Computer.FileSystem.OpenTextFieldParser`
 
-- My.Computer.FileSystem.OpenTextFieldParser
+C# 不包含 `OpenTextField` 方法的直接等价项，或其所使用的底层 TextField 类。可以在 C# 应用程序中对 Microsoft.VisualBasic 程序集的引用，并使用这些针对 VB 的功能。对于不需要访问所有 Visual Basic 组件的应用程序，需要从其他来源获取等效功能，或从开始开发。
 
-C# 不包含 OpenTextField 方法的直接等价项，或其所使用的底层 TextField 类。可以在 C# 应用程序中对 Microsoft.VisualBasic 程序集的引用，并使用这些针对 VB 的功能。对于不需要访问所有 Visual Basic 组件的应用程序，需要从其他来源获取等效功能，或从开始开发。
-
-要在 C# 中打开文件读取，使用相应的编码打开流。打开后，可以使用 StreamReader 类的 ReadLine 方法读取每行。
+要在 C# 中打开文件读取，使用相应的编码打开流。打开后，可以使用 `StreamReader` 类的 `ReadLine` 方法读取每行。
 
 ```csharp
-#
-string filePath = "C:\temp\FileFields.txt";
-System.Text.Encoding useEncoding =
-System.Text.Encoding.UTF8;
+string filePath = "C:\\temp\\FileFields.txt";
+System.Text.Encoding useEncoding = System.Text.Encoding.UTF8;
 bool autoDetectEncoding = true;
-System.IO.StreamReader inStream
-new System.IO.StreamReader(
+System.IO.StreamReader inStream new System.IO.StreamReader(filePath, useEncoding, autoDetectEncoding);
 ```
-
-
 
 ```csharp
 filePath, useEncoding, autoDetectEncoding);
 ```
 
-// ----- 稍后，在循环中。
+// 稍后，在循环中。
 string lineContent = inputStream.ReadLine();
 对于固定宽度字段，提取行文本的部分。
 
-# C#
-
 ```csharp
-// ----- 行以 2 个字符的状态代码开头，
-// 后面是 30 个字符的城市名称。
+// 行以 2 个字符的状态代码开头，后面是 30 个字符的城市名称。
 string stateShort = lineContent.Substring(0, 2);
 string cityName = lineContent.Substring(2, 30).Trim();
 ```
 
 对于不使用单列列文本限定符的定符字段，使用字符串对象的 `Split` 方法来获取各个字段。
 
-# C#
-
 ```csharp
-// ----- 一个制表符分隔的文件。
+// 一个制表符分隔的文件。
 string[] allFields = lineContent.Split(new char[] {'\t'});
 string stateShort = allFields[0];
 cityName = allFields[1];
@@ -16023,36 +15573,25 @@ cityName = allFields[1];
 
 对于使用文本限定符的定符字段（并允许在引号字段内包含分隔符），您需要逐个处理行的字符，或者使用某些根据输入格式而变化的复杂正则表达式。以下代码表示了解析数据的一种方法，寻找带引号限定的、逗号分隔字符串。
 
-# C#
-
 ```csharp
 List<string> results = new List<string>();
 int fieldPos = 0;
 bool inQuote = false;
 string tempField = " ";
-
 for (int counter = 0; counter < lineContent.Length; counter++)
 {
   if (lineContent[counter] == ',')
   {
-    // 可能是新字段或在引号内。
     if (!inQuote)
     {
-      // 完成一个字段。
-      tempField = lineContent.Substring(
-        fieldPos, counter - fieldPos);
-      if ((tempField.Length >= 2) &&
-        (tempField.Substring(0, 1) == "\\") &&
-        tempField.Substring(
-          tempField.Length - 1, 1) == "\\")
-      tempField = tempField.Substring(
-        1, tempField.Length - 2);
+      tempField = lineContent.Substring(fieldPos, counter - fieldPos);
+      if ((tempField.Length >= 2) && (tempField.Substring(0, 1) == "\\") && tempField.Substring(tempField.Length - 1, 1) == "\\")
+      tempField = tempField.Substring(1, tempField.Length - 2);
       results.Add(tempField);
       fieldPos = counter + 1;
     }
   else if (lineContent[counter] == '"')
   {
-    // ----- 开始或结束一个引号字段。
     inQuote = !inQuote;
   }
 }
@@ -16061,65 +15600,56 @@ for (int counter = 0; counter < lineContent.Length; counter++)
 此代码没有处理所有复杂情况。例如，如果引号字段被空白字符包围，引号将不会被移除。
 
 ## OpenTextFileReader 方法
-
-- * My.Computer.FileSystem.OpenTextFileReader
+- * `My.Computer.FileSystem.OpenTextFileReader`
 
 打开一个现有文件进行文本输入。
 
-```visual basic
+```vb
 Dim filePath As String = "C:\temp\WorkFile.txt"
-Dim useEncoding As System.Text.Encoding =
-    System.Text.UTF8
-Dim result As System.IO.StreamReader =
-    My.Computer.FileSystem.OpenTextFileReader(
-        filePath, useEncoding)
+Dim useEncoding As System.Text.Encoding = System.Text.UTF8
+Dim result As System.IO.StreamReader = My.Computer.FileSystem.OpenTextFileReader(filePath, useEncoding)
 ```
-
-# C#
 
 ```csharp
 string filePath = @"C:\temp\WorkFile.txt";
-System.Text.Encoding useEncoding =
-    System.Text.UTF8;
+System.Text.Encoding useEncoding = System.Text.UTF8;
 bool autoDetectEncoding = true;
-System.IO.StreamReader result = new System.IO.StreamReader(
-    filePath, useEncoding, autoDetectEncoding);
 ```
+
+
+
+`System.IO.StreamReader` `result` = new `System.IO.StreamReader`(
+    `filePath`, `useEncoding`, `autoDetectEncoding`);
 
 在 Visual Basic 中，编码参数是可选的；如果缺失，输出默认为 UTF8 编码。等效的 `StreamReader` 类在其构造函数中接受更广泛的选项。请参考 Visual Studio 文档获取这些选项。
 
 ## OpenFileWriter 方法
 
-- - My.Computer.FileSystem.OpenTextFile
+- - `My.Computer.FileSystem.OpenTextFile`
 
 打开一个现有文件或创建一个新文件进行文本输出。
 
 ```visual basic
 Dim filePath As String = "C:\temp\WorkFile.txt"
 Dim appendIfFound As Boolean = True
-Dim useEncoding As System.Text.Encoding =
-    System.Text.Encoding.UTF8
-Dim result As System.IO.StreamWriter =
-    My.Computer.FileSystem.OpenTextFileWriter(
-    filePath, appendIfFound, useEncoding)
+Dim useEncoding As System.Text.Encoding = System.Text.Encoding.UTF8
+Dim result As System.IO.StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(filePath, appendIfFound, useEncoding)
 ```
 
-# C#
+### C#
 
 ```csharp
 string filePath = @"C:\temp\WorkFile.txt";
 bool appendIfFound = true;
-System.Text.Encoding useEncoding =
-    System.Text.Encoding.UTF8;
-System.IO.StreamWriter result = new System.IO.StreamWriter(
-    filePath, appendIfFound, useEncoding);
+System.Text.Encoding useEncoding = System.Text.Encoding.UTF8;
+System.IO.StreamWriter result = new System.IO.StreamWriter(filePath, appendIfFound, useEncoding);
 ```
 
 在 Visual Basic 中，编码参数是可选的；如果缺失，输出默认为 UTF8 编码。等效的 `StreamWriter` 类在其构造函数中接受更广泛的选项。请参考 Visual Studio 文档获取这些选项。
 
 ## OSFullName 属性
 
-- - My.Computer.Info.OSFullName
+- - `My.Computer.Info.OSFullName`
 
 返回操作系统的全名。
 
@@ -16127,17 +15657,14 @@ System.IO.StreamWriter result = new System.IO.StreamWriter(
 Dim result As String = My.Computer.Info.OSFullName
 ```
 
+```csharp
 // 假设：使用了 System.Management;
-
 // ----- 默认等效于 My.Computer.Info.OSPlatform。
-string result =
-    System.Environment.OSVersion.ToString();
+string result = System.Environment.OSVersion.ToString();
 try
 {
-    SelectQuery querySet =
-        new SelectQuery("Win32_OperatingSystem");
-    ManagementObjectSearcher queryScan =
-        new ManagementObjectSearcher(querySet);
+    SelectQuery querySet = new SelectQuery("Win32_OperatingSystem");
+    ManagementObjectSearcher queryScan = new ManagementObjectSearcher(querySet);
     ManagementObjectCollection results = queryScan.Get();
     if (results.Count > 0)
     {
@@ -16154,7 +15681,7 @@ try
 
 ## OSPlatform 属性
 
-- * My.Computer.Info.OSPlatform
+- * `My.Computer.Info.OSPlatform`
 
 返回操作系统的平台名称。
 
@@ -16168,7 +15695,7 @@ string result = System.Environment.OSVersion.ToString();
 
 ## OSVersion 属性
 
-- * My.Computer.Info.OSVersion
+- * `My.Computer.Info.OSVersion`
 
 返回操作系统的版本号。
 
@@ -16182,13 +15709,12 @@ string result = System.Environment.OSVersion.ToString();
 
 ## PerformanceData 属性
 
-- - My.Computer.Registry.PerformanceData
+- - `My.Computer.Registry.PerformanceData`
 
 返回 HKEY_PERFORMANCE_DATA 注册表位置引用。
 
 ```visual basic
-Dim result As Microsoft.Win32.RegistryKey =
-My.Computer.Registry.PerformanceData
+Dim result As Microsoft.Win32.RegistryKey = My.Computer.Registry.PerformanceData
 ```
 
 ```csharp
@@ -16197,7 +15723,7 @@ Microsoft.Win32.RegistryKey result = My.Computer.Registry.PerformanceData;
 
 ## Ping 方法
 
-- - My.Computer.Network.Ping
+- - `My.Computer.Network.Ping`
 
 通过发送 ICMP 请求测试网络上另一台计算机或设备是否存在。
 
@@ -16225,7 +15751,7 @@ bool result = System.Net.NetworkInformation.Ping.Send(target, 3000);
 
 ## Play 方法
 
-- - My.Computer.Audio.Play
+- - `My.Computer.Audio.Play`
 
 播放文件、字节数组或流中的声音。
 
@@ -16242,12 +15768,12 @@ audioSource.Play();
 
 ## PlaySystemSound 方法
 
-- * My.Computer.Audio.PlaySystemSound
+- * `My.Computer.Audio.PlaySystemSound`
+
 播放一次系统定义的声音。
 
 ```visual basic
-Dim whichSound As System.Media.SystemSound =
-System.Media.SystemSounds.Beep
+Dim whichSound As System.Media.SystemSound = System.Media.SystemSounds.Beep
 My.Computer.Audio.PlaySystemSound(whichSound)
 ```
 
@@ -16256,252 +15782,266 @@ System.Media.SystemSound whichSound = System.Media.SystemSounds.Beep;
 whichSound.Play();
 ```
 
+## My.Computer.Ports
 
+参见 `OpenSerialPort` 方法、`SerialNames` 属性、`ProductName` 属性
 
-
-## ◆ My.Computer.Ports
-
-参见 OpenSerialPort 方法、SerialNames 属性、ProductName 属性
-
-### + ◆ My.Application.Info.ProductName
+### My.Application.Info.ProductName
 
 返回程序集中存储的程序名称。
 
 VISUAL BASIC
+
 ```vb
 Dim result As String = My.Application.Info.ProductName
 ```
+
 ```csharp
 string result;
-System.Reflection.Assembly currentAssembly =
-  System.Reflection.Assembly.GetEntryAssembly();
-if (currentAssembly == null) currentAssembly =
-  System.Reflection.Assembly.GetCallingAssembly();
-object[] attrSet = currentAssembly.GetCustomAttributes(typeof(System.Reflection.AssemblyProductAttribute,
-inherit:true);
+System.Reflection.Assembly currentAssembly = System.Reflection.Assembly.GetEntryAssembly();
+if (currentAssembly == null) currentAssembly = System.Reflection.Assembly.GetCallingAssembly();
+object[] attrSet = currentAssembly.GetCustomAttributes(typeof(System.Reflection.AssemblyProductAttribute, inherit:true);
 if (attrSet.Length == 0)
   result = "";
 ```
 
 ## ProgramFiles 属性
 
-### + ◆ My.Computer.FileSystem.SpecialDirectories.ProgramFiles
+### My.Computer.FileSystem.SpecialDirectories.ProgramFiles
 
 返回本地系统中原生“程序文件”文件夹的路径。
 
 VISUAL BASIC
+
 ```vb
 Dim result As String = My.Computer.FileSystem.SpecialDirectories.ProgramFiles
 ```
+
 ```csharp
-string result = System.Environment.GetFolderPath(
-  System.Environment.SpecialFolder.ProgramFiles);
+string result = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ProgramFiles);
 ```
 
 ## Programs 属性
 
-### + ◆ My.Computer.FileSystem.SpecialDirectories.Programs
+### My.Computer.FileSystem.SpecialDirectories.Programs
 
 返回当前用户“程序组”文件夹的路径。
 
 VISUAL BASIC
+
 ```vb
 Dim result As String = My.Computer.FileSystem.SpecialDirectories.Programs
 ```
+
 ```csharp
-string result = System.Environment.GetFolderPath(
-  System.Environment.SpecialFolder.Programs);
+string result = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Programs);
 ```
 
 ## ReadAllBytes 方法
 
-### + ◆ My.Computer.FileSystem.ReadAllBytes
+### My.Computer.FileSystem.ReadAllBytes
 
 返回一个包含文件内容的字节数组。
 
 VISUAL BASIC
+
 ```vb
-Dim result As Byte() = My.Computer.FileSystem.ReadAllBytes(
-  "C:\temp\RawData.dat"
-)
+Dim result As Byte() = My.Computer.FileSystem.ReadAllBytes("C:\temp\RawData.dat")
 ```
+
 ```csharp
-byte[] result = System.IO.File.ReadAllBytes(
-  "C:\temp\RawData.dat"
-)
+byte[] result = System.IO.File.ReadAllBytes("C:\temp\RawData.dat")
 ```
 
 ## ReadAllText 方法
 
-### + ◆ My.Computer.FileSystem.ReadAllText
+### My.Computer.FileSystem.ReadAllText
 
 返回一个包含文件内容的字符串。
 
 VISUAL BASIC
+
 ```vb
-Dim optionalEncoding As System.Text.Encoding =
-  System.Text.UnicodeEncoding
-Dim result As String = My.Computer.FileSystem.ReadAllText(
-  "C:\temp\WorkFile.txt", optionalEncoding)
+Dim optionalEncoding As System.Text.Encoding = System.Text.UnicodeEncoding
+Dim result As String = My.Computer.FileSystem.ReadAllText("C:\temp\WorkFile.txt", optionalEncoding)
 ```
+
 ```csharp
-System.Text.Encoding optionalEncoding =
-  System.Text.UnicodeEncoding;
-string result = System.IO.File.ReadAllText(
-  "C:\temp\WorkFile.txt", optionalEncoding)
+System.Text.Encoding optionalEncoding = System.Text.UnicodeEncoding;
+string result = System.IO.File.ReadAllText("C:\temp\WorkFile.txt", optionalEncoding)
 ```
 
 该方法的第二个参数指定了一个可选的文本编码系统。如果缺失，则将使用文件本身指定的编码读取文本（如果可用）。
 
 ## Registry 对象
 
-### + ◆ My.Computer.Registry
+### My.Computer.Registry
 
-参见 ClassesRoot 属性、CurrentConfig 属性、CurrentUser 属性、DynData 属性、GetValue 方法、LocalMachine 属性、PerformanceData 属性、SetValue 方法、Users 属性
+参见 `ClassesRoot` 属性、`CurrentConfig` 属性、`CurrentUser` 属性、`DynData` 属性、`GetValue` 方法、`LocalMachine` 属性、`PerformanceData` 属性、`SetValue` 方法、`Users` 属性
 
 ## RenameDirectory 方法
 
-### + ◆ My.Computer.FileSystem.RenameDirectory
+### My.Computer.FileSystem.RenameDirectory
 
 重命名现有目录，并保持在原原始目录下。
 
 VISUAL BASIC
+
 ```vb
-My.Computer.FileSystem.RenameDirectory(
-  "C:\temp\WorkArea", "BackupArea")
+My.Computer.FileSystem.RenameDirectory("C:\temp\WorkArea", "BackupArea")
 ```
+
 ```csharp
-System.IO.Directory.Move(
-  "C:\temp\WorkArea", "C:\temp\BackupArea");
+System.IO.Directory.Move("C:\temp\WorkArea", "C:\temp\BackupArea");
 ```
-Rename 方法要求新名称只需要目录名称，不包含路径或驱动器信息。C# 的替代方案允许源路径或目标路径为相对或绝对路径。
+
+`Rename` 方法要求新名称只需要目录名称，不包含路径或驱动器信息。C# 的替代方案允许源路径或目标路径为相对或绝对路径。
 
 ## RenameFile 方法
 
-### + ◆ My.Computer.FileSystem.RenameFile
+### My.Computer.FileSystem.RenameFile
 
 将文件重命名为新名称，并保持在相同目录下。
 
 VISUAL BASIC
+
 ```vb
-My.Computer.FileSystem.RenameFile(
-  "C:\temp\WorkFile.txt", "BackupWorkFile.old");
+My.Computer.FileSystem.RenameFile("C:\temp\WorkFile.txt", "BackupWorkFile.old");
 ```
+
 ```csharp
-System.IO.File.Move("C:\temp\WorkFile.txt",
-  "C:\temp\BackupWorkFile.old");
+System.IO.File.Move("C:\temp\WorkFile.txt", "C:\temp\BackupWorkFile.old");
 ```
-Rename 方法要求新只需要只需要，不包含路径或驱动器信息。C# 的替代方案允许源路径或目标路径为相对或绝对路径。
+
+`Rename` 方法要求新只需要只需要，不包含路径或驱动器信息。C# 的替代方案允许源路径或目标路径为相对或绝对路径。
 
 ## Request 对象
 
-### + ◆ My.Request
+### My.Request
 
 公开当前 ASP.NET HTTP 请求的详情。
 
 VISUAL BASIC
+
 ```vb
 Dim currentRequest As System.Web.HttpRequest = My.Request
 ```
+
 ```csharp
 var currentRequest = My.Request;
 ```
 
 ## Resources 对象
 
-### + ◆ My.Resources
+### My.Resources
 
 访问项目定义的定义的资源。
 
 VISUAL BASIC
+
 ```vb
 Dim template = My.Resources
 ```
+
 ```csharp
 var template = My.Resources;
 ```
 
 ## Response 对象
 
-### + ◆ My.Computer.Response
+### My.Computer.Response
 
 公开当前 ASP.NET HTTP 请求的响应。
 
 VISUAL BASIC
+
 ```vb
 Dim response = My.Computer.Response
 ```
+
 ```csharp
 var response = My.Computer.Response;
 ```
 
 ## Run 方法
 
-### + ◆ My.Computer.Run
+### My.Computer.Run
 
 启动应用程序。
 
 VISUAL BASIC
+
 ```vb
 My.Computer.Run()
 ```
+
 ```csharp
 My.Computer.Run();
 ```
 
 ## SaveMySettings 属性
 
-### + ◆ My.Computer.SaveOnExit
+### My.Computer.SaveOnExit
 
 指示退出时是否保存设置。
 
 VISUAL BASIC
+
 ```vb
 Dim result = My.Computer.SaveOnExit
 ```
+
 ```csharp
 bool result = My.Computer.SaveOnExit;
 ```
 
 ## Screen 属性
 
-### + ◆ My.Computer.Screen
+### My.Computer.Screen
 
 返回包含主显示器信息的对象。
 
 VISUAL BASIC
+
 ```vb
 Dim result = My.Computer.Screen
 ```
+
 ```csharp
 var result = My.Computer.Screen;
 ```
 
 ## ScrollLock 属性
 
-### + ◆ My.Computer.Keyboard.ScrollLock
+### My.Computer.Keyboard.ScrollLock
 
 指示滚动锁当前是否激活。
 
 VISUAL BASIC
+
 ```vb
 Dim result = My.Computer.Keyboard.ScrollLock
 ```
+
 ```csharp
 bool result = My.Computer.Keyboard.ScrollLock;
 ```
 
 ## SendKeys 方法
 
-### + ◆ My.Computer.Keyboard.SendKeys
+### My.Computer.Keyboard.SendKeys
 
 向活动窗口发送按键，就像从键盘输入一样。
 
 VISUAL BASIC
+
+
+
 ```vb
 Dim waitForProcessing As Boolean = True
 My.Computer.Keyboard.SendKeys("c", waitForProcessing)
 ```
+
 ```csharp
 System.Windows.Forms.SendKeys.SendWait("c");
 System.Windows.Forms.SendKeys("c");
@@ -16509,35 +16049,35 @@ System.Windows.Forms.SendKeys("c");
 
 ## SerialPortNames 属性
 
-### + ◆ My.Computer.Ports.SerialPortNames
+### `My.Computer.Ports.SerialPortNames`
 
 返回本地计算机上的串口名称集合。
 
-VISUAL BASIC
+#### VISUAL BASIC
+
 ```vb
 Dim result As System.Collections.Generic.
   ReadOnlyCollection(Of String) =
   My.Computer.Ports.SerialPortNames
 ```
+
 ```csharp
 string[] result = System.IO.Ports.SerialPort.GetPortNames();
 ```
 
 ## SetAudio 方法
 
-### + ◆ My.Computer.Clipboard.SetAudio
+### `My.Computer.Clipboard.SetAudio`
 
-将音频数据写入系统剪贴板。提供的音频内容可以是字节数组或流 (System.IO.Stream) 的形式。
+将音频数据写入系统剪贴板。提供的音频内容可以是字节数组或流 (`System.IO.Stream`) 的形式。
 
+#### VISUAL BASIC
 
+选项 1: `Dim audioContent() As Byte`
 
+选项 2: `Dim audioContent As System.IO.Stream`
 
-
-# VISUAL BASIC
-
-选项 1: Dim audioContent() As Byte
-选项 2: Dim audioContent As System.IO.Stream
-My.Computer.Clipboard.SetAudio(audioContent)
+`My.Computer.Clipboard.SetAudio(audioContent)`
 
 ```csharp
 // Option 1: byte[] audioContent;
@@ -16552,7 +16092,7 @@ System.Windows.Clipboard.SetAudio(audioContent);
 
 ## SetData 方法
 
-- ◆ My.Computer.Clipboard.SetData
+### `My.Computer.Clipboard.SetData`
 
 将自定义命名格式的数据写入系统剪贴板。
 
@@ -16578,7 +16118,7 @@ formatName, customData);
 
 ## SetDataObject 方法
 
-- ◆ My.Computer.Clipboard.SetDataObject
+### `My.Computer.Clipboard.SetDataObject`
 
 一次性以多种格式将数据写入系统剪贴板。
 
@@ -16611,7 +16151,7 @@ System.Windows.Clipboard.SetDataObject(toClipboard);
 
 ## SetFileDropList 方法
 
-- ◆ My.Computer.Clipboard.SetFileDropList
+### `My.Computer.Clipboard.SetFileDropList`
 
 将文件路径字符串集合写入系统剪贴板。
 
@@ -16639,7 +16179,7 @@ System.Windows.Clipboard.SetFileDropList(files);
 
 ## SetImage 方法
 
-- ◆ My.Computer.Clipboard.SetImage
+### `My.Computer.Clipboard.SetImage`
 
 将图像写入系统剪贴板。
 
@@ -16658,7 +16198,7 @@ System.Windows.Clipboard.SetImage();
 
 ## SetText 方法
 
-- ◆ My.Computer.Clipboard.SetText
+### `My.Computer.Clipboard.SetText`
 
 将文本字符串写入系统剪贴板。
 
@@ -16672,11 +16212,12 @@ System.Windows.Forms.Clipboard.SetText(text);
 
 // ----- 用于以 XAML 为中心的代码:
 System.Windows.Clipboard.SetText(text);
-``` SetText 方法接受一个第二个可选参数，用于指定存储文本的类型（HTML 或 Unicode）。在 My 和 Windows 版本的代码中，该参数的类型为 System.Windows.TextFormat。对于 XAML 代码，请使用 System.Windows.TextData 枚举。默认情况下，文本以 Unicode 格式存储。
+```
+`SetText` 方法接受一个第二个可选参数，用于指定存储文本的类型（HTML 或 Unicode）。在 `My` 和 `Windows` 版本的代码中，该参数的类型为 `System.Windows.TextFormat`。对于 XAML 代码，请使用 `System.Windows.TextData` 枚举。默认情况下，文本以 Unicode 格式存储。
 
 ## Settings 对象
 
-- ◆ My.Settings
+### `My.Settings`
 
 通过属性访问用户和应用程序设置。
 
@@ -16686,7 +16227,7 @@ My.Settings
 
 ## SetValue 方法
 
-- ◆ My.Computer.Registry.SetValue
+### `My.Computer.Registry.SetValue`
 
 将数据保存到指定的 Windows 注册表值中。
 
@@ -16700,7 +16241,7 @@ Microsoft.Win32.Registry.SetValue(key, name, value, kind);
 
 ## ShiftKeyDown 属性
 
-- **My.Computer.Keyboard.ShiftKeyDown**
+### `My.Computer.Keyboard.ShiftKeyDown`
 
 指示 Shift 键是否按下。
 
@@ -16720,7 +16261,7 @@ bool result = ((System.Windows.Input.Keyboard.Modifiers
 
 ## Shutdown 事件
 
-- **My.Application.Shutdown**
+### `My.Application.Shutdown`
 
 在应用程序关闭时触发。
 
@@ -16731,10 +16272,7 @@ Public Sub Shutdown(ByVal sender As Object,
 End Sub
 ```
 
-
-
-
-手动启动后续实例。下面的 Main 方法提供了一个示例，展示了如何使用共享互斥锁对象来监控后续实例。
+手动启动后续实例。下面的 `Main` 方法提供了一个示例，展示了如何使用共享互斥锁对象来监控后续实例。
 
 ```csharp
 // ---- 假设：using System.Threading;
@@ -16785,11 +16323,12 @@ public static void Main()
 }
 ```
 
-Visual Basic 的 StartupNextInstance 会关闭后续实例，并通过事件的参数将其任何命令行参数传递给第一个实例。这是通过进程间通信实现的，但其演示方法超出了本文条目的涵盖范围。
+Visual Basic 的 `StartupNextInstance` 会关闭后续实例，并通过事件的参数将其任何命令行参数传递给第一个实例。这是通过进程间通信实现的，但其演示方法超出了本文条目的涵盖范围。
 
 # Stop 方法
 
-- *My.Computer.Audio.Stop*
+### `My.Computer.Audio.Stop`
+
 停止正在播放的音频。
 
 ```vb
@@ -16813,7 +16352,7 @@ audioSource.Stop();
 
 # Temp 属性
 
-- *My.Computer.FileSystem.SpecialDirectories.Temp*
+### `My.Computer.FileSystem.SpecialDirectories.Temp`
 
 返回当前用户的临时文件文件夹路径。
 
@@ -16835,7 +16374,7 @@ string result = System.IO.Path.GetPath();
 
 # TickCount
 
-- *My.Computer.Clock.TickCount*
+### `My.Computer.Clock.TickCount`
 
 返回自系统启动以来经过的毫秒数，或者计数器上次重置的时间（大约每 25 天重置一次）。
 
@@ -16850,7 +16389,7 @@ int result = System.Environment.TickCount;
 
 # Title 属性
 
-- *My.Application.Info.Title*
+### `My.Application.Info.Title`
 
 返回存储在程序中的应用程序标题。
 
@@ -16877,7 +16416,7 @@ else
 
 # TotalPhysicalMemory 属性
 
-- *My.Computer.Info.TotalPhysicalMemory*
+### `My.Computer.Info.TotalPhysicalMemory`
 
 返回计算机上安装的物理内存总字节数。
 
@@ -16891,11 +16430,11 @@ Dim result As ULong = My.Computer.Info.TotalPhysicalMemory
 ulong result = MemoryQuery.GetMemoryInfo().TotalPhysical;
 ```
 
-Visual Basic 通过 GlobalMemoryStatusEx API 调用检索内存信息。参见本章中的“AvailablePhysicalMemory 属性”条目，其中有一个在 C# 代码中封装 API 用的 GetMemoryInfo 方法示例。
+Visual Basic 通过 `GlobalMemoryStatusEx` API 调用检索内存信息。参见本章中的“AvailablePhysicalMemory 属性”条目，其中有一个在 C# 代码中封装 API 用的 `GetMemoryInfo` 方法示例。
 
 # TotalVirtualMemory 属性
 
-- *My.Computer.Info.TotalVirtualMemory*
+### `My.Computer.Info.TotalVirtualMemory`
 
 返回计算机上配置的虚拟内存总字节数。
 
@@ -16909,7 +16448,9 @@ Dim result As ULong = My.Computer.Info.TotalVirtualMemory
 ulong result = MemoryQuery.GetMemoryInfo().TotalVirtual;
 ```
 
-Visual Basic 通过 GlobalMemoryStatusEx API 调用检索内存信息。参见本章中的“AvailablePhysicalMemory 属性”条目，其中有一个在 C# 代码中封装 API 用的 GetMemoryInfo 方法示例。
+
+
+Visual Basic 通过 `GlobalMemoryStatusEx` API 调用检索内存信息。参见本章中的“AvailablePhysicalMemory 属性”条目，其中有一个在 C# 代码中封装 API 用的 `GetMemoryInfo` 方法示例。
 
 # TraceSource 属性
 
@@ -16918,9 +16459,9 @@ Visual Basic 通过 GlobalMemoryStatusEx API 调用检索内存信息。参见�
 
 与 Visual Basic 不同，C# 默认不配置内置日志环境。相反，你可以从 Microsoft Enterprise Library 向应用程序添加日志 块。在应用程序中设置和使用跟踪日志所需的代码超出了本书的范围。
 
-你可以在 MSDN 网站 mdn.microsoft.com 上找到有关 Logging Application Block 的完整信息，包括示例代码。在该网站上搜索“Enterprise Library 6”。第一个结果应该是指向 Microsoft Enterprise Library 开发者指南的链接。第 5 章“像掉下木上一样简单”提供了日志组件的概述。
+你可以在 MSDN 网站 `mdn.microsoft.com` 上找到有关 Logging Application Block 的完整信息，包括示例代码。在该网站上搜索“Enterprise Library 6”。第一个结果应该是指向 Microsoft Enterprise Library 开发者指南的链接。第 5 章“像掉下木上一样简单”提供了日志组件的概述。
 
-Visual Basic 的日志工具包括 WriteEntry 和 Write 方法。在 Logging Application Block 的示例代码中，LogWriter 方法是 VB 自带 WriteEntry 方法的良好替代品。然而，Enterprise Library 不包含专门为 Exception 实例设计的写入方法。相反，你必须手动格式消息并将其传递给 LogWriter.Write 方法。
+Visual Basic 的日志工具包括 `WriteEntry` 和 `Write` 方法。在 Logging Application Block 的示例代码中，`LogWriter` 方法是 VB 自带 `WriteEntry` 方法的良好替代品。然而，Enterprise Library 不包含专门为 `Exception` 实例设计的写入方法。相反，你必须手动格式消息并将其传递给 `LogWriter.Write` 方法。
 
 # Trademark 属性
 
@@ -16952,6 +16493,7 @@ else
 # UICulture 属性
 
 - *My.Application.UICulture*
+
 返回描述用户界面的对象。
 
 ```vb
@@ -16966,6 +16508,7 @@ System.Globalization.CultureInfo result = System.Globalization.CurrentCulture;
 # UnhandledEvent
 
 - *My.Application.UnhandledException*
+
 在 Windows Forms 框架内捕捉未处理的异常。
 
 ```vb
@@ -16976,7 +16519,7 @@ ByVal e As UnhandledEventArgs) Handles Me.UnhandledException
 End Sub
 ```
 
-UnhandledEvent 仅适用于采用 Windows Forms 框架的程序。然而，你可以通过为当前域的 UnhandledEvent 添加处理器来管理任何应用程序中的未处理异常。
+`UnhandledEvent` 仅适用于采用 Windows Forms 框架的程序。然而，你可以通过为当前域的 `UnhandledEvent` 添加处理器来管理任何应用程序中的未处理异常。
 
 ```csharp
 static void SurpriseProblem(object sender, UnhandledEventArgs e)
@@ -17038,9 +16581,9 @@ client.UploadFileCompleted += new
 client.UploadFileAsync(destinationUri, sourceFile);
 ```
 
-WebClient 类上传方法未提供传输状态的视觉提示。你可以根据需要提供进度对话框。
+`WebClient` 类上传方法未提供传输状态的视觉提示。你可以根据需要提供进度对话框。
 
-要重写默认超时值，请从 WebClient 类派生新类，并手动配置 Request 的 Timeout 属性。然后使用此类代替标准的 WebClient 类来执行上传。有关 C# 中此重写的示例，请参见本章中的“DownloadFile 方法”条目。
+要重写默认超时值，请从 `WebClient` 类派生新类，并手动配置 `Request` 的 `Timeout` 属性。然后使用此类代替标准的 `WebClient` 类来执行上传。有关 C# 中此重写的示例，请参见本章中的“DownloadFile 方法”条目。
 
 另见
 
@@ -17048,21 +16591,19 @@ WebClient 类上传方法未提供传输状态的视觉提示。你可以根据�
 
 # User 对象
 
-
-
-
-
 - ◆ My.User
 
 查看
-CurrentPrincipal 属性，InitializeWithWindowsUser 方法，
-Authenticated 属性，IsInRole 方法，Name 属性 (My.User)
 
-Users 属性
+`CurrentPrincipal` 属性，`InitializeWithWindowsUser` 方法，
+
+`Authenticated` 属性，`IsInRole` 方法，`Name` 属性 (`My.User`)
+
+`Users` 属性
 
 - ◆ My.Computer.Registry.Users
 
-返回指向 HKEY_USERS Windows 注册表位置的引用。
+返回指向 `HKEY_USERS` Windows 注册表位置的引用。
 
 # VISUAL BASIC
 
@@ -17099,6 +16640,7 @@ System.Version result = currentAssembly.GetName().Version;
 # WebServices 对象
 
 ◆ My.WebServices
+
 从非 ASP.NET 应用程序访问 Web 服务及其成员。
 
 # VISUAL BASIC
@@ -17123,6 +16665,7 @@ MappingNamespace.MappingService.theService =
 # WheelExists属性
 
 ◆ My.Computer.Mouse.WheelExists
+
 返回一个值，指示安装的鼠标是否包含滚轮。
 
 # VISUAL BASIC
@@ -17143,6 +16686,7 @@ IsMouseWheelPresent;
 # WheelScrollLines属性
 
 ◆ My.Computer.Mouse.WheelScrollLines
+
 返回鼠标滚轮操作期间滚动的行数。
 
 # VISUAL BASIC
@@ -17224,7 +16768,7 @@ My.Computer.FileSystem.WriteAllText(
 string filePath = "C:\temp\Output.txt"
 string content = "Hello, world!\r\n"
 System.Text.Encoding optionalEncoding =
-new System.Text.UTF8Encoding();
+new System.Text.Encoding.UTF8Encoding();
 
 // 创建或覆盖文件
 System.IO.WriteAllText(
@@ -17243,6 +16787,7 @@ System.IO.AppendAllText(
 向日志系统写入消息。
 
 查看
+
 TraceSource 属性
 
 # WriteException 方法
@@ -17253,5 +16798,5 @@ TraceSource 属性
 向日志系统写入异常。
 
 查看
-TraceSource 属性
 
+TraceSource 属性

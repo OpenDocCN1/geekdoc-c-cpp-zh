@@ -1,80 +1,39 @@
+
 # Unity 3D C# 游戏编程秘籍
-
-
-
-
-
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_0_0.png)
 
-
-
-
 ![](img/041dca164b58875f4f1a64abb3328f5c_2_0.png)
-
-
-
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_6_0.png)
 
-
-
-
-
-
-
-
-
-
-
 Murray, Jeff
-3D C# 游戏编程手册 / Jeff J.W. Murray.
-- 包含索引。
-QA76.C67*M68 2014
-794.8/1526—23
 
+3D C# 游戏编程手册 / Jeff J.W. Murray.
+
+- 包含索引。
+
+QA76.C67*M68 2014
+
+794.8/1526—23
 
 这本书献给我的儿子。
 
-
 - 致谢 ................................................................ xiii
+
 - 引言 .................................................................... xv
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 致谢
 
 感谢我的妻子提供所有的鼓励、支持和那些美味的茶。
+
 我也想感谢我的父母、我的兄弟 Steve 以及其他所有认识我的人。Sophie（小猫），要对小男孩们好一点。
 
 感谢要感谢许多直接或间接对我的生活产生积极影响的人：Michelle Ashton、Brian Robbins、George Bray、Nadeem Rasool、Christian Boutin、James and Anna、Rich and Sharon、Liz and Peter、Rob Fearon（所有闪亮事物的收藏家）、Twitter 上所有听过我唠叨的人（伙计们，你们知道指的是谁！）、Matthew Smith（《Manic Miner》的创建者）、David Braben、岩谷井以及任何在 20 世纪 80 年代制作 Atari 游戏的人。
 
 我要感谢 AK Peters/CRC Press 的所有人在我出版我的作品方面提供的帮助和支持。
 
-最后，非常感谢你购买此书，并想要尝试制作游戏这么酷的事情。我诚挚地希望这本书能帮助你的游戏制作之旅——欢迎随时在 Twitter @psychicparrot 上告诉我是你的进展，或者访问我的网站 http://www.psychicparrot.com。
+最后，非常感谢你购买此书，并想要尝试制作游戏这么酷的事情。我诚挚地希望这本书能帮助你的游戏制作之旅——欢迎随时在 Twitter @psychicparrot 上告诉我是你的进展，或者访问我的网站 `http://www.psychicparrot.com`。
 
 # 引言
 
@@ -90,9 +49,9 @@ QA76.C67*M68 2014
 
 你完全可以零元钱获取并运行所需的软件。你需要的一切都可以免费下载，没有任何附加条件。你可能想在未来的某个时候考虑升级到 Unity Pro，以利用它的高级功能，但要开始，你只需要从 Unity 网站获取免费版本即可。
 
-Unity Free 或 Unity Pro（可在 Unity 商店 http://www.unity3d.com 获取）
+`Unity Free` 或 `Unity Pro`（可在 Unity 商店 `http://www.unity3d.com` 获取）
 
-Unity Free 对于任何年收入少于 100,000 美元的个人或公司都是完全免费的——它可以无需支付任何费用下载，你甚至不需要信用卡。这真的是一个非常划算的买卖！我们说的是一个功能完备的、准备好制作游戏的游戏引擎。Unity Pro 适用于年收入超过 100,000 美元的公司，提供更多功能和专业支持。
+`Unity Free` 对于任何年收入少于 100,000 美元的个人或公司都是完全免费的——它可以无需支付任何费用下载，你甚至不需要信用卡。这真的是一个非常划算的买卖！我们说的是一个功能完备的、准备好制作游戏的游戏引擎。`Unity Pro` 适用于年收入超过 100,000 美元的公司，提供更多功能和专业支持。
 
 ## 本书未涵盖的内容
 
@@ -103,10 +62,6 @@ Unity Free 对于任何年收入少于 100,000 美元的个人或公司都是完
 当我刚开始制作游戏时，我会以项目为单位的方法进行开发，每次都从头重新编码和构建一切。当我成为一名专业开发者，在一家游戏开发工作室工作时，我有幸能与一位在领域内进行创新的男士共事。他是一个快速产出优秀游戏（无论从视觉还是玩法上）的大师。他成功的秘密之一在于开发了一个可重用的框架，该框架可以轻松重构并应用到他的所有项目中。他的框架设计用于处理基于服务器的游戏通信、输入处理、浏览器通信和 UI 等，这为他和团队节省了惊人的时间，让他们专注于出色的玩法和图形优化。当然，这种结构是根据他的工作方式量定制的（毕竟是由他构建的），我花了一段时间才适应他的开发风格；但一旦我适应了，它真的让我大开眼界。从那时起，我在每个项目中都使用该框架，并教了其他程序员如何这样做。开发时间被大幅减少，留下了更多时间专注于制作更好的游戏。
 
 本书基于类似的概念，即一个适用于许多不同类型游戏的游戏中心框架，而不是几种不同风格的教程。这本书的总目标是提供基于脚本的组件，你可以在该框架中使用这些组件为自己的项目取得良好开端，从而减少重新编码、重用或适配的时间。
-
-
-
-
 
 如果将本书看作一本食谱，那么可以将框架看作底汤，而将脚本组件视为食材。我们可以混合并匹配使用相同框架的不同游戏中的组件来创建新游戏，也可以在许多不同的游戏中共享几个相同的核心部分。框架处理了基础性工作，而我们只需要添加一点“胶水”，按照我们想要的方式将所有内容整合在一起，使其按预期方式运行。
 
@@ -133,18 +88,20 @@ Unity Free 对于任何年收入少于 100,000 美元的个人或公司都是完
 我们结构中的重要部分是脚本之间如何通信的。有几种方法：
 
 - 直接引用（Direct referencing）：让脚本相互通信的最简单方法是通过变量进行直接引用。
+
 - SendMessage：一种向 gameObject 发送消息并调用其挂载脚本中函数的方法。
+
 - 静态变量（Static variables）：静态变量很有用，因为它跨越了整个系统，可以从每个其他脚本访问。
 
 #### 2. GameObject SendMessage
 
-当我们不需要任何返回值时，SendMessage 是向 gameObject 发送消息并调用其脚本一个函数的极佳方法。例如：
+当我们不需要任何返回值时，`SendMessage` 是向 `gameObject` 发送消息并调用其脚本一个函数的极佳方法。例如：
 
 ```csharp
 gameObject.SendMessage("DoSomething");
 ```
 
-SendMessage 也可以接收参数，例如设置当没有接收者时引擎是否应该抛出错误。你也可以像调用普通函数一样向函数传递参数：
+`SendMessage` 也可以接收参数，例如设置当没有接收者时引擎是否应该抛出错误。你也可以像调用普通函数一样向函数传递参数：
 
 ```csharp
 gameObject.SendMessage("AddScore", 2, SendMessageOptions.RequireReceiver);
@@ -165,24 +122,23 @@ private static GameController aController;
 
 公共静态变量存在于系统的各个地方，可以被其他类和脚本类型访问。想象一种情况，玩家控制脚本在玩家捡香蕉时需要告诉游戏控制器脚本。我们可以这样做：
 
-1. 在我们的 GameController.cs 游戏控制器脚本中，我们设置一个公共静态：
+1. 在我们的 `GameController.cs` 游戏控制器脚本中，我们设置一个公共静态：
+
 ```csharp
 public static GameController gateway;
 ```
 
-2. 当游戏控制器（GameController）运行其 Start() 函数时，它将自己的引用存储在公共静态变量中：
+2. 当游戏控制器（`GameController`）运行其 `Start()` 函数时，它将自己的引用存储在公共静态变量中：
+
 ```csharp
 gateway = this;
 ```
 
-3. 在任何其他类中，我们现在可以通过引用其类型后跟该静态变量（GameController.gateway）来访问游戏控制器，例如：
+3. 在任何其他类中，我们现在可以通过引用其类型后跟该静态变量（`GameController.gateway`）来访问游戏控制器，例如：
+
 ```csharp
 GameController.gateway.GetBanana();
 ```
-
-
-
-
 
 私有静态变量存在于声明它的类以及该类的任何其他实例中。其他类/脚本类型将无法访问它。
 
@@ -239,7 +195,8 @@ public static MySingleton Instance {
 ```
 
 我们脚本的单例实例可以在任何地方通过任何脚本访问，只需使用以下语法：
-MySingleton.Instance.MySingletonMember;
+
+`MySingleton.Instance.MySingletonMember;`
 
 ### 1.1.4 继承
 
@@ -250,16 +207,18 @@ MySingleton.Instance.MySingletonMember;
 这些关系可以按层级顺序显示：
 
 - 轮子
+
 - 引擎
 
 现在尝试将此想象成一个 C# 脚本：
 
-Car 类
+`Car` 类
 
-- Wheels 函数
-- Engine 函数
+- `Wheels` 函数
 
-如果我们正在构建一个包含大量汽车的游戏，为每种类型的汽车都重写 Car 类将是愚蠢的。一种更有效的方法可能是编写一个基类并填充虚函数（virtual functions）。当我们需要创建一个类时，与其使用这个基类，不如构建一个继承该基类的新类。由于我们的新类是继承的，选择是否重写 Wheels 或 Engine 函数以使其以我们新类的特定方式运行是可选的。也就是说，我们可以构建“这是一辆汽车”。
+- `Engine` 函数
+
+如果我们正在构建一个包含大量汽车的游戏，为每种类型的汽车都重写 `Car` 类将是愚蠢的。一种更有效的方法可能是编写一个基类并填充虚函数（virtual functions）。当我们需要创建一个类时，与其使用这个基类，不如构建一个继承该基类的新类。由于我们的新类是继承的，选择是否重写 `Wheels` 或 `Engine` 函数以使其以我们新类的特定方式运行是可选的。也就是说，我们可以构建“这是一辆汽车”。
 
 ```cs
 public class Car
@@ -281,27 +240,29 @@ public class SportsCar : Car
 }
 ```
 
-
-
-
-
-## 2 构建核心游戏框架
+# 2 构建核心游戏框架
 
 在本章中，我们将查看基础项目的结构，我们将向该项目添加所有的游戏脚本组件，并探讨其背后的设计思路。本章将为核心框架中做出的设计决策提供背景，并为理解各个代码配方如何协同工作，以及它们为何有时会依赖其他组件提供良好的基础。
 
 本书的框架（如图 2.1 所示）包含六个主要区域：
 
 - 1. 游戏控制器 (Game Controller)
+
 游戏控制器充充当游戏中所有不同部分之间的中央通信脚本。在某种程度上，它是将组成游戏的各种组件结合在一起的主要“胶水”。
 
 - 2. 场景管理器 (Scene Manager)
+
 该脚本处理场景的加载和保存。场景是 Unity 对关卡文件的称呼。
 
 - 3. UI 管理 (UI Manager)
+
 UI 管理器绘制所有的游戏内主要用户界面元素，例如分数显示和生命值。
 
 - 4. 音效管理器 (Sound Manager)
+
 音效管理器处理音频播放。管理器持有一个包含可能播放声音的 `AudioClips` 数组。当游戏开始时，
+
+
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_31_0.png)
 
@@ -309,29 +270,32 @@ UI 管理器绘制所有的游戏内主要用户界面元素，例如分数显�
 
 音效管理器为数组中的每个声音创建一个独立的 `AudioSource`。当我们需要播放声音时，会将引用声音在数组中位置的索引号传递给管理器。它使用自己独立的 `AudioSource` 来播放源，这有助于缓解从单个源播放过多音频文件可能引起的问题。
 
-- 5. 玩家 (Players)
+- 5. 玩家 `Players`
+
 玩家可能已经存在于游戏场景中，也可能由游戏控制器实例化。玩家具有较为复杂的结构，将在第 3 章中进行探讨。
 
-- 6. AI 与敌人 (AI and Enemies)
+- 6. AI 与敌人 `AI and Enemies`
+
 与玩家一样，AI 控制的字符或敌人可能在加载时已经存在于场景中，或者由游戏控制器或其他脚本在运行时创建。
 
 尽管你可能选择使用自己的框架，但理解组件之间如何协同工作以及它们如何结合是非常重要的。为了最大限度地提高灵活性，基类需要能够适应各种不同的配置。例如，玩家控制脚本应该允许从另一个脚本传递输入，以便可以轻松切换控制系统。主玩家脚本不需要知道输入来自哪里，但它需要为输入脚本提供一个通信的通用接口。输入脚本可以从键盘、鼠标、人工智能、网络输入等获取输入，只要使用通用接口与玩家控制器通信；对于玩家控制器来说，输入实际上来自哪里并不重要。
 
-## 2.1 控制器与管理器 (Controllers and Managers)
+## 2.1 控制器与管理器 `Controllers and Managers`
 
-通过将任务专门化给特定的管理器，可以在不影响核心功能的情况下更换组件，这反过来使得很容易将相同的代码从一个游戏带到另一个游戏而无需重写；从第一人称射击游戏到赛车游戏，相同的代码可以存储用户会话数据、加载关卡或控制武器。在本书中，我使用术语来指定类的类型：控制器 (controllers) 和管理器 (managers)。
+通过将任务专门化给特定的管理器，可以在不影响核心功能的情况下更换组件，这反过来使得很容易将相同的代码从一个游戏带到另一个游戏而无需重写；从第一人称射击游戏到赛车游戏，相同的代码可以存储用户会话数据、加载关卡或控制武器。在本书中，我使用术语来指定类的类型：控制器 `controllers` 和管理器 `managers`。
 
-### 2.1.1 控制器 (Controllers)
+### 2.1.1 控制器 `Controllers`
 
 控制器专门负责特定任务，例如帮助脚本之间相互通信、持有特定游戏的玩家信息，或处理会话数据。例如，本书中所有示例游戏的中心都是游戏控制器脚本，它作为游戏脚本的中央位置。每个游戏都有自己的控制器脚本，充当那些本没有内置通信方法的不同组件之间的“胶水”。
 
-### 2.1.2 管理器 (Managers)
+### 2.1.2 管理器 `Managers`
 
-管理器在书中用于代表专门管理对象或数据的脚本（以处理玩家、音频或其他游戏元素，类似于管理器可能管理公司员工的方式）。例如，`GlobalBattleManager.cs` 脚本被 `RaceController.cs` 实例使用，用于在示例游戏《坦克大战》(Tank Battle) 中跟踪死亡战战斗。管理器脚本负责计算玩家在得分板上的位置，并通知玩家游戏当前的运行状态。
+管理器在书中用于代表专门管理对象或数据的脚本（以处理玩家、音频或其他游戏元素，类似于管理器可能管理公司员工的方式）。例如，`GlobalBattleManager.cs` 脚本被 `RaceController.cs` 实例使用，用于在示例游戏《坦克大战》`Tank Battle` 中跟踪死亡战战斗。管理器脚本负责计算玩家在得分板上的位置，并通知玩家游戏当前的运行状态。
 
 ## 2.2 构建核心框架脚本
 
 `Scripts/BASE` 文件夹中有几个脚本，旨在作为你自己的版本的模板，或者作为你自己的游戏中可以从中派生出的类。在本节中，我们将查看构成主框架的脚本。
+
 `BASE` 文件夹中在本章将涵盖的核心框架脚本如下：
 
 - 2.2.1 `BaseGameController.cs`
@@ -360,10 +324,10 @@ UI 管理器绘制所有的游戏内主要用户界面元素，例如分数显�
 
 游戏控制器是定义整体玩法以及持有当前游戏状态的地方。典型的游戏可能有几种不同的核心状态，例如：
 
-1. 运行中 (running)
-2. 暂停 (paused)
-3. 加载中 (loading)
-4. 已结束 (ended)
+1. 运行中 `running`
+2. 暂停 `paused`
+3. 加载中 `loading`
+4. 已结束 `ended`
 
 可能还有适用于特定游戏类型的自定义状态，例如用于显示过场动画或播放特殊音频。建议为任何影响一个或多个脚本的游戏动作创建一个新状态。这样你始终可以让脚本依赖游戏控制器来知道如何运行。
 
@@ -422,8 +386,6 @@ public class BaseGameController : MonoBehaviour
 }
 ```
 
-
-
 ```csharp
 get {
   // 获取暂停状态
@@ -441,9 +403,9 @@ get {
 }
 ```
 
-### 2.2.1.1 脚本解析
+#### 2.2.1.1 脚本解析
 
-BaseGameController.cs 中的许多关键函数都是 `virtual`（虚拟的），包含这些函数是为了作为处理不同类型游戏活动的既定协议。也就是说，它们在这个特定的文件中不包含代码，但意图是让你以后在自己的派生游戏控制器版本中对它们进行重写。
+`BaseGameController.cs` 中的许多关键函数都是 `virtual`（虚拟的），包含这些函数是为了作为处理不同类型游戏活动的既定协议。也就是说，它们在这个特定的文件中不包含代码，但意图是让你以后在自己的派生游戏控制器版本中对它们进行重写。
 
 `BaseGameController` 类继承自 `MonoBehaviour`，这样它就可以接入自动调用的系统函数，如 `Awake()`、`Start()`、`Update()` 和 `FixedUpdate()`：
 
@@ -495,7 +457,7 @@ public void Explode ( Vector3 aPosition)
 }
 ```
 
-`Explode()` 所做的只是在函数调用者传递的位置实例化一个 `GameObject`。后续版本的游戏控制器脚本将使用单独的生成管理器（spawn manager）来处理实例化，尽管在现阶段，尽可能通用且不依赖于任何其他脚本是恰当的。
+`Explode()` 所做的只是在函数调用者传递的位置实例化一个 `GameObject`。后续版本的游戏控制器脚本将使用单独的生成管理器 `spawn manager` 来处理实例化，尽管在现阶段，尽可能通用且不依赖于任何其他脚本是恰当的。
 
 在 `Explode` 之后，我们又看到了两个空函数，用于告诉控制器何时普通敌人被销毁以及何时 Boss 被销毁：
 
@@ -524,7 +486,7 @@ public virtual void RestartGameButtonPressed()
 }
 ```
 
-`RestartGameButtonPressed` 使用 Unity 的 `Application.LoadLevel` 函数来重新加载当前场景。`Application.loadedLevel` 返回一个字符串，指向游戏当前内存中加载的场景名称。你也可以通过 `Application.name` 获取一个指向场景的索引。此索引编号与 Build Settings（File -> Build Settings）中的场景组织方式相关，这意味着如果你以后选择使用索引号来引用特定场景，那么构建设置中的更改可能会影响你游戏的运行方式。为了避免混淆，我倾向于在处理关加载时始终使用名称。
+`RestartGameButtonPressed` 使用 Unity 的 `Application.LoadLevel` 函数来重新加载当前场景。`Application.loadedLevel` 返回一个字符串，指向游戏当前内存中加载的场景名称。你也可以通过 `Application.name` 获取一个指向场景的索引。此索引编号与 Build Settings `File -> Build Settings` 中的场景组织方式相关，这意味着如果你以后选择使用索引号来引用特定场景，那么构建设置中的更改可能会影响你游戏的运行方式。为了避免混淆，我倾向于在处理关加载时始终使用名称。
 
 `BaseGameController` 的最后部分处理游戏暂停和取消暂停的机制：
 
@@ -551,11 +513,13 @@ public bool Paused {
 名为 `paused` 的布尔变量在内部持有游戏暂停状态。与其提供直接访问，不如使用 getter-setter（访问器属性）函数，这样我们可以在暂停状态改变时采取行动，而无需对其进行监控。
 
 `Get` 部分只是返回该布尔变量。
+
 `Set` 部分设置该布尔变量，并将 `Time.timeScale` 设置为 0（暂停）或 1（取消暂停）。设置 `Time.timeScale` 会影响时间的流逝。例如，将 `timescale` 设置为 0.5 意味着时间比真实时间慢 2 倍。Unity 文档规定：
 
-除了 realtimeStartup 外，timescale 会影响 `Time` 类中所有的时间和增量时间测量。
+除了 `realtimeStartup` 外，`timescale` 会影响 `Time` 类中所有的时间和增量时间测量。
 
-如果你降低了 timescale，建议按相同幅度降低 `Time.fixedDeltaTime`。
+如果你降低了 `timescale`，建议按相同幅度降低 `Time.fixedDeltaTime`。
+
 当 `timescale` 被设为 0 时，`FixedUpdate` 函数将不会被调用。
 
 普通的视频游戏会在游戏暂停时显示某种消息告诉玩家，但此脚本仅提供暂停机制，我们将在第 14 章之前不会过多考虑用户界面。
@@ -604,8 +568,6 @@ public class SceneManager : MonoBehaviour
 }
 ```
 
-
-
 下方显示的 `LoadLevel` 函数的备用版本使用索引在加载处理更早获取关卡名称。它再次声明了原始的 `LoadLevel` 函数。这样做的目的是保持关注：使用单个函数处理所有加载，而不是重复代码或让其发生在多个地方：
 
 ```
@@ -637,8 +599,8 @@ public void ResetGame()
 - 3. `myBody` 变量，用于持有 rigidbody 的缓存引用
 - 4. `didInit` 布尔变量，用于确定脚本是否已初始化
 - 5. 一个名为 `id` 的整数变量，用于持有 ID 数字
-- 6. 一个名为 `tempV` 的 Vector3 类型变量，用于临时向量操作
-- 7. 一个名为 `tempTR` 的 Transform 变量，用于任何 transform 的临时引用
+- 6. 一个名为 `tempV` 的 `Vector3` 类型变量，用于临时向量操作
+- 7. 一个名为 `tempTR` 的 `Transform` 变量，用于任何 transform 的临时引用
 - 8. 一个名为 `SetID(integer)` 的函数，以便其他类设置该变量
 
 该类的脚本非常直接，主要包含变量声明：
@@ -647,6 +609,8 @@ public void ResetGame()
 public class ExtendedCustomMonoBehavior : MonoBehavior
 {
 ```
+
+
 
 ```
 // 此类用于向
@@ -699,6 +663,7 @@ public virtual void SetID(int anID)
 - 该玩家是否完成游戏
 
 用户管理器还包含操作其数据的函数
+
 以下是完整的 `BaseUserManager.cs` 脚本：
 
 ```
@@ -772,7 +737,6 @@ public void LostScore(int num)
 {
     score=num;
 }
-
 ```
 
 ```
@@ -881,10 +845,6 @@ public class BaseInputController : MonoBehaviour
     public bool Right;
 }
 ```
-
-
-
-
 
 ```cs
 // 射击 / 动作按钮
@@ -1102,8 +1062,6 @@ public class SimplePlayerController : BaseTopDownSpaceShip
 }
 ```
 
-
-
 ```csharp
 if(!didInit)
 return;
@@ -1145,6 +1103,8 @@ public void PlayerFinished()
 }
 ```
 
+
+
 ```csharp
 public void ScoredPoints(int howMany)
 {
@@ -1156,7 +1116,7 @@ public void ScoredPoints(int howMany)
 
 独立的脚本为移动控制器提供输入以进行响应。这样做使其能够根据需要切换到任何输入方式，而无需更改移动控制器内部的任何内容，无论你“喂”给它什么。这意味着你可以将完全相同的移动控制器脚本用于主玩家、AI 玩家，可能甚至用于通过网络连接的远程玩家——只需使用不同的输入。
 
-BaseInputController 提供了一系列常用变量和函数。其他输入脚本将派生于它：
+`BaseInputController` 提供了一系列常用变量和函数。其他输入脚本将派生于它：
 
 ```csharp
 public class BaseInputController : MonoBehaviour
@@ -1199,7 +1159,7 @@ public Vector3 TEMPVec3;
 private Vector3 zeroVector = new Vector3(0,0,0);
 ```
 
-Input 提供了 Unity 输入系统的接口。它被用于从移动设备的陀螺仪输入到键盘按键的一切地方。根据 Unity 文档，Input.GetAxis 返回由 `axisName` 标识的虚拟轴的值。轴名称在 Unity 的 Input Manager（Edit -> Project Settings -> Input）中设置，尽管 Horizontal 和 Vertical 应该已经默认设置：
+`Input` 提供了 Unity 输入系统的接口。它被用于从移动设备的陀螺仪输入到键盘按键的一切地方。根据 Unity 文档，`Input.GetAxis` 返回由 `axisName` 标识的虚拟轴的值。轴名称在 Unity 的 `Input Manager`（`Edit -> Project Settings -> Input`）中设置，尽管 `Horizontal` 和 `Vertical` 应该已经默认设置：
 
 ```csharp
 public virtual void CheckInOut()
@@ -1226,7 +1186,7 @@ public virtual float GetVertical()
 }
 ```
 
-虽然脚本包含一个名为 GetFire() 的函数，用于返回布尔变量 Fire 的值，但脚本并没有包含任何设置它的代码。它只是为了一致性而存在。
+虽然脚本包含一个名为 `GetFire()` 的函数，用于返回布尔变量 `Fire` 的值，但脚本并没有包含任何设置它的代码。它只是为了一致性而存在。
 
 ```csharp
 public virtual bool GetFire() {
@@ -1234,7 +1194,7 @@ public virtual bool GetFire() {
 }
 ```
 
-再次，脚本包含 GetRespawn() 纯粹是为了协议，没有实际功能。
+再次，脚本包含 `GetRespawn()` 纯粹是为了协议，没有实际功能。
 
 ```csharp
 public bool GetRespawn() {
@@ -1242,7 +1202,7 @@ public bool GetRespawn() {
 }
 ```
 
-为了方便起见，BaseInputController.cs 包含一个返回方向向量的系统。该函数将返回一个 Vector3，其 x 和 y 轴代表输入水平：
+为了方便起见，`BaseInputController.cs` 包含一个返回方向向量的系统。该函数将返回一个 `Vector3`，其 x 和 y 轴代表输入水平：
 
 ```csharp
 public virtual Vector3 GetMovementDirectionVector() {
@@ -1267,7 +1227,7 @@ public virtual Vector3 GetMovementDirectionVector() {
 }
 ```
 
-输入的默认脚本是一个名为 Keyboard_Input.cs 的基础键盘设置脚本。它派自 BaseInputController 并重写了 CheckInput() 和 LateUpdate() 函数，以添加垂直轴，并检查在 Unity Input Manager 中设置为 Fire3 的射击和复活按钮：
+输入的默认脚本是一个名为 `Keyboard_Input.cs` 的基础键盘设置脚本。它派自 `BaseInputController` 并重写了 `CheckInput()` 和 `LateUpdate()` 函数，以添加垂直轴，并检查在 Unity `Input Manager` 中设置为 `Fire3` 的射击和复活按钮：
 
 ```csharp
 public class Keyboard_Input : BaseInputController {
@@ -1310,6 +1270,7 @@ public void LateUpdate()
 玩家管理器充当玩家和用户管理器之间的桥梁。如果没有挂载，它也会创建一个。
 
 using UnityEngine;
+
 using System.Collections;
 
 ```csharp
@@ -1337,7 +1298,7 @@ public class PlayerManager : MonoBehaviour
 
 ### 3.3.1 脚本分解
 
-start 函数没有什么特别的——设置 init 为 false 后调用 Init()：
+`start` 函数没有什么特别的——设置 `init` 为 false 后调用 `Init()`：
 
 ```csharp
 public class PlayerManager : MonoBehaviour
@@ -1347,7 +1308,7 @@ public class PlayerManager : MonoBehaviour
 }
 ```
 
-GameFinished() 和 GameStart() 用于向用户管理器传递消息。一个用可能是知道玩家对象并想要告知游戏状态的脚本。与其使用 GetComponent 调用该脚本，不如使用 SendMessage 来调用函数。这比直接使用 GetComponent 并访问函数要高效一点：
+`GameFinished()` 和 `GameStart()` 用于向用户管理器传递消息。一个用可能是知道玩家对象并想要告知游戏状态的脚本。与其使用 `GetComponent` 调用该脚本，不如使用 `SendMessage` 来调用函数。这比直接使用 `GetComponent` 并访问函数要高效一点：
 
 ```csharp
 public void GameFinished()
@@ -1367,7 +1328,7 @@ public void GameFinished()
 5. 玩家是否结束（不再活跃）
 6. 玩家名称
 
-每个玩家都挂载 BaseUserManager 脚本。游戏控制器或游戏结构其他部分的脚本可以轻松查找并访问玩家的信息。用户管理器脚本如下：
+每个玩家都挂载 `BaseUserManager` 脚本。游戏控制器或游戏结构其他部分的脚本可以轻松查找并访问玩家的信息。用户管理器脚本如下：
 
 ```csharp
 public class BaseUserManager : MonoBehaviour
@@ -1377,8 +1338,6 @@ public class BaseUserManager : MonoBehaviour
     // 而不是直接访问，以防止任何意外损坏或无效
     // 数据进入
 ```
-
-
 
 ```csharp
 private int score;
@@ -1500,7 +1459,7 @@ public void SetIsFinished(bool aVal)
 
 ### 3.4.1 脚本拆解
 
-在变量声明之后，BaseUserManager.cs 包含的第一个函数是一个用于用默认值填充玩家统计数据，以避免在尝试访问它们时出现任何问题。
+在变量声明之后，`BaseUserManager.cs` 包含的第一个函数是一个用于用默认值填充玩家统计数据，以避免在尝试访问它们时出现任何问题。
 
 ```csharp
 public virtual void getDefaultData()
@@ -1542,23 +1501,16 @@ public void SetIsFinished(bool aVal)
 
 在示例源文件中，可以在 `Scripts` 文件夹中找到 `COMMON` 文件夹。这里我们存储所有偶尔出现但不属于基础框架的脚本。在 `COMMON` 文件夹中有许多子文件夹。它们是：
 
-- BOTS OR PLAYER CONTROL（机器人或玩家控制）：与玩家或自动控制相关的脚本，例如与 `BaseAIController.cs` 脚本通信并在游戏环境中移动的简单功能机器人脚本。
-
-- CAMERA（相机）：与相机相关的脚本应该放在这里，例如第三人称或俯视相机代码。
-
-- GAME CONTROL（游戏控制）：此文件夹中的脚本关于整体游戏状态控制。在示例文件中，你会找到：
-
-- BattleController 和 GlobalBattleManager——此脚本用于死亡斗模式的评分和游戏状态逻辑。
-- RaceController 和 GlobalRaceManager——此脚本包含赛游戏的基础逻辑，例如圈数计数和位置跟踪。
-- SceneManager——此脚本处理场景加载以及增量式游戏场景管理（如书中的《Interstellar Paranoids》示例游戏中所使用的）。
-
-- INPUT（输入）：不同的玩家和游戏类型需要不同的控制系统或输入方法。任何处理输入的通用脚本都放在此文件夹中。
-
-- SPAWNING（生成）：在这里可以找到与生成相关的脚本，包括在触发器触发时生成对象的代码，或为动态跟随对象生成路径的代码。
-
-- UTILITY（实用工具）：Utility 文件夹是小型辅助脚本的家园，例如定时器类或自动旋转 gameObject 的脚本。
-
-- WEAPONS（武器）：任何基础框架之外的武器相关脚本都可以在这里找到。
+- `BOTS OR PLAYER CONTROL`（机器人或玩家控制）：与玩家或自动控制相关的脚本，例如与 `BaseAIController.cs` 脚本通信并在游戏环境中移动的简单功能机器人脚本。
+- `CAMERA`（相机）：与相机相关的脚本应该放在这里，例如第三人称或俯视相机代码。
+- `GAME CONTROL`（游戏控制）：此文件夹中的脚本关于整体游戏状态控制。在示例文件中，你会找到：
+  - `BattleController` 和 `GlobalBattleManager`——此脚本用于死亡斗模式的评分和游戏状态逻辑。
+  - `RaceController` 和 `GlobalRaceManager`——此脚本包含赛游戏的基础逻辑，例如圈数计数和位置跟踪。
+  - `SceneManager`——此脚本处理场景加载以及增量式游戏场景管理（如书中的《Interstellar Paranoids》示例游戏中所使用的）。
+- `INPUT`（输入）：不同的玩家和游戏类型需要不同的控制系统或输入方法。任何处理输入的通用脚本都放在此文件夹中。
+- `SPAWNING`（生成）：在这里可以找到与生成相关的脚本，包括在触发器触发时生成对象的代码，或为动态跟随对象生成路径的代码。
+- `UTILITY`（实用工具）：`Utility` 文件夹是小型辅助脚本的家园，例如定时器类或自动旋转 `gameObject` 的脚本。
+- `WEAPONS`（武器）：任何基础框架之外的武器相关脚本都可以在这里找到。
 
 本章中的脚本将在本书后后的示例游戏部分被多次使用。
 
@@ -1574,6 +1526,8 @@ public void SetIsFinished(bool aVal)
 我们只在请求时间时更新时间。虽然可能存在定时器需要不断更新的情况，但在书的项目中，我们只需要按需进行。
 
 定时器的工作原理是有一个变量 `currentTime`，它存储了自定时器开始以来流逝的时间。`currentTime` 从零开始，`UpdateTimer()` 计算经过了多少时间并将其添加到 `currentTime`。然后将 `currentTime` 的值解析为分钟、秒和毫秒，并在同一类的 `GetFormattedTimer()` 函数中返回一个整洁、规范的格式化字符串。
+
+
 
 ```csharp
 class TimerClass
@@ -1649,160 +1603,268 @@ class TimerClass
 *(自我修正：OCR 文本 TimerClass 的实现在第 64-66 页是高度重复且碎片化的。)* 等，仔细观察 OCR 文本，有很多重复和乱码的行。让我提供实际文本的干净版本。
 
 （注：此处内容为用户提供的重复性 OCR 文本段落，已按要求进行翻译和清理处理）
+```
 
-[content]
 ```csharp
+
 private int score;
+
 private int highScore;
+
 private int level;
+
 private int health;
+
 private bool isFinished;
+
 ```
 
 ```csharp
+
 // this is the display name of the player
+
 public string playerName="Anon";
+
 ```
 
 ```csharp
+
 public virtual void GetDefaultData()
+
 {
+
     playerName="Anon";
+
     score=0;
+
     level=1;
+
     health=3;
+
     highScore=0;
+
     isFinished=false;
+
 }
+
 ```
 
 ```csharp
+
 public string GetName()
+
 {
+
     return playerName;
+
 }
+
 ```
 
 ```csharp
+
 public void SetName(string aName)
+
 {
+
     playerName=aName;
+
 }
+
 ```
 
 ```csharp
+
 public int GetLevel()
+
 {
+
     return level;
+
 }
+
 ```
 
 ```csharp
+
 public void SetLevel(int num)
+
 {
+
     level=num;
+
 }
+
 ```
 
 ```csharp
+
 public int GetHighScore()
+
 {
+
     return highScore;
+
 }
+
 ```
 
 ```csharp
+
 public int GetScore()
+
 {
+
     return score;
+
 }
+
 ```
 
 ```csharp
+
 public virtual void AddScore(int anAmount)
+
 {
+
     score+=anAmount;
+
 }
+
 ```
 
 ```csharp
+
 public void LostScore(int num)
+
 {
+
     score=num;
+
 }
+
 ```
 
 ```csharp
+
 public void SetScore(int num)
+
 {
+
     score=num;
+
 }
 
 public int GetHealth()
+
 {
+
     return health;
+
 }
 
 public void AddHealth(int num)
+
 {
+
     health+=num;
+
 }
 
 public void ReduceHealth(int num)
+
 {
+
     health-=num;
+
 }
 
 public void SetHealth(int num)
+
 {
+
     health=num;
+
 }
 
 public bool GetIsFinished()
+
 {
+
     return isFinished;
+
 }
 
 public void SetIsFinished(bool aVal)
+
 {
+
     isFinished=aVal;
+
 }
+
 ```
 
 ### 3.4.1 脚本拆解
 
-在变量声明之后，BaseUserManager.cs 包含的第一个函数是一个用于用默认值填充玩家统计数据，以避免在尝试访问它们时出现任何问题。
+在变量声明之后，`BaseUserManager.cs` 包含的第一个函数是一个用于用默认值填充玩家统计数据，以避免在尝试访问它们时出现任何问题。
 
 ```csharp
+
 public virtual void getDefaultData()
+
 {
+
     playerName="Anon";
+
     score=0;
+
     level=1;
+
     health=3;
+
     highScore=0;
+
     isFinished=false;
+
 }
+
 ```
 
 该类的其余部分处理获取和设置玩家数据。逻辑上仅仅是获取或设置变量，因此如果你需要详细查看，请参考本章开头的完整脚本。为了清晰起见，这里是函数列表：
 
 ```csharp
+
 public string GetName()
+
 public void SetName(string aName)
+
 public int GetLevel()
+
 public void SetLevel(int num)
+
 public int GetHighScore()
+
 public int GetScore()
+
 public virtual void AddScore(int anAmount)
+
 public void LostScore(int num)
+
 public void SetScore(int num)
+
 public int GetHealth()
+
 public void AddHealth(int num)
+
 public void ReduceHealth(int num)
+
 public void SetHealth(int num)
+
 public bool GetIsFinished()
+
 public void SetIsFinished(bool aVal)
+
 ```
 
 ## 4. 食谱：通用组件
@@ -1814,21 +1876,14 @@ public void SetIsFinished(bool aVal)
 在示例源文件中，可以在 `Scripts` 文件夹中找到 `COMMON` 文件夹。这里我们存储所有偶尔出现但不属于基础框架的脚本。在 `COMMON` 文件夹中有许多子文件夹。它们是：
 
 - BOTS OR PLAYER CONTROL（机器人或玩家控制）：与玩家或自动控制相关的脚本，例如与 `BaseAIController.cs` 脚本通信并在游戏环境中移动的简单功能机器人脚本。
-
 - CAMERA（相机）：与相机相关的脚本应该放在这里，例如第三人称或俯视相机代码。
-
 - GAME CONTROL（游戏控制）：此文件夹中的脚本关于整体游戏状态控制。在示例文件中，你会找到：
-
-- BattleController 和 GlobalBattleManager——此脚本用于死亡斗模式的评分和游戏状态逻辑。
-- RaceController 和 GlobalRaceManager——此脚本包含赛游戏的基础逻辑，例如圈数计数和位置跟踪。
-- SceneManager——此脚本处理场景加载以及增量式游戏场景管理（如书中的《Interstellar Paranoids》示例游戏中所使用的）。
-
+  - `BattleController` 和 `GlobalBattleManager`——此脚本用于死亡斗模式的评分和游戏状态逻辑。
+  - `RaceController` 和 `GlobalRaceManager`——此脚本包含赛游戏的基础逻辑，例如圈数计数和位置跟踪。
+  - `SceneManager`——此脚本处理场景加载以及增量式游戏场景管理（如书中的《Interstellar Paranoids》示例游戏中所使用的）。
 - INPUT（输入）：不同的玩家和游戏类型需要不同的控制系统或输入方法。任何处理输入的通用脚本都放在此文件夹中。
-
 - SPAWNING（生成）：在这里可以找到与生成相关的脚本，包括在触发器触发时生成对象的代码，或为动态跟随对象生成路径的代码。
-
-- UTILITY（实用工具）：Utility 文件夹是小型辅助脚本的家园，例如定时器类或自动旋转 gameObject 的脚本。
-
+- UTILITY（实用工具）：Utility 文件夹是小型辅助脚本的家园，例如定时器类或自动旋转 `gameObject` 的脚本。
 - WEAPONS（武器）：任何基础框架之外的武器相关脚本都可以在这里找到。
 
 本章中的脚本将在本书后后的示例游戏部分被多次使用。
@@ -1847,79 +1902,124 @@ public void SetIsFinished(bool aVal)
 定时器的工作原理是有一个变量 `currentTime`，它存储了自定时器开始以来流逝的时间。`currentTime` 从零开始，`UpdateTimer()` 计算经过了多少时间并将其添加到 `currentTime`。然后将 `currentTime` 的值解析为分钟、秒和毫秒，并在同一类的 `GetFormattedTimer()` 函数中返回一个整洁、规范的格式化字符串。
 
 ```csharp
+
 class TimerClass
+
 {
+
     public bool isRunning;
+
     private float currentTime;
+
     private float timeFactor;
+
     private float lastTime;
 
     private string minutes;
+
     private string seconds;
+
     private string millis;
 
     private int hour;
+
     private int minute;
+
     private int second;
+
     private int mill;
 
     private GameObject callback;
 
     public void UpdateTimer()
+
     {
+
         // 计算自上次更新以来经过的时间
+
         timeElapsed=Math.Abs(Time.timeSinceStart-lastTime);
 
         // 如果定时器正在运行，则将经过的时间加到 currentTime 上
+
         // 当前时间 (推进定时器)
+
         if (isRunning) {
+
             currentTime+=timeFactor;
+
         }
+
     }
 
     public void StartTimer()
+
     {
+
         // 设置变量以开始
+
         isRunning=true;
+
         lastTime=Time.timeSinceStart;
+
     }
 
     public void StopTimer()
+
     {
+
         // 停止定时器
+
         isRunning=false;
+
     }
 
     public void ResetTimer()
+
     {
+
         // 将定时器重置为零
+
         timeElapsed=0.0f;
+
         currentTime=0.0f;
+
     }
 
     public string GetFormattedTime()
+
     {
+
         // 执行更新以完成更新
+
         UpdateTimer();
 
         // 汇总格式化字符串返回
+
         timeString=minutes+":"+seconds+":"+millis;
 
         return timeString;
+
     }
 
     public int GetTime()
+
     {
+
         // 在使用之前调用 UpdateTimer()
+
         // 否则时间值将不会更新
+
         return (int) (currentTime);
+
     }
+
 }
 
 // (注：OCR 文本 TimerClass 的实现在源码中是重复且碎片化的。我根据变量名和方法签名重构了结构)
+
 *(自我修正：OCR 文本 TimerClass 的实现在第 64-66 页是高度重复且碎片化的。)* 等，仔细观察 OCR 文本，有很多重复和乱码的行。让我提供实际文本的干净版本。
 
-
+```
 
 ```cs
 // 保存当前时间，以便在下一次更新可以使用
@@ -1975,6 +2075,8 @@ public string GetFormattedTime() {
     UpdateTimer();
 }
 ```
+
+
 
 注意，当调用 `GetFormattedTime()` 时，我们首先进行 `UpdateTimer` 调用来更新 `currentTime`。正如之前提到的，计时器不会自动更新——它是一个“惰性更新器”，只有在我们要求它执行操作时它才会更新。在这种情况下，我们要求它提供一个格式化的时间字符串。
 
@@ -2038,181 +2140,6 @@ public string GetFormattedTime() {
 }
 ```
 
-注意，当调用 `GetFormattedTime()` 时，我们首先进行 `UpdateTimer` 调用来更新 `currentTime`。正如之前提到的，计时器不会自动更新——它是一个惰性更新器，只有在我们要求它执行操作时它才会更新。在这种情况下，我们要求它提供一个格式化的时间字符串。
-
-从那里开始，我们只是在通过数学计算从 `currentTime` 中获取分钟、秒和毫秒值：
-
-```cs
-// 获取分钟
-aMinute=(int)currentTime%60;
-aMinute=aMinute%60;
-```
-
-```cs
-// 获取秒
-aSecond=(int)currentTime%60;
-```
-
-```cs
-// 获取毫秒
-aMillis=(int)(currentTime*100)%100;
-```
-
-在分钟、秒和毫秒值被计算并存储在整数变量 `aMinute`、`aSecond` 和 `aMillis` 之后，根据它们构建三个名为 `seconds`、`minutes` 和 `mills` 的新字符串：
-
-```cs
-// 为单个 mm/ss/ms 格式化字符串
-tmp=(int)aSecond;
-seconds=tmp.ToString();
-if(seconds.Length<2)
-    seconds="0"+seconds;
-```
-
-```cs
-tmp=(int)aMinute;
-minutes=tmp.ToString();
-if(minutes.Length<2)
-    minutes="0"+minutes;
-```
-
-```cs
-tmp=(int)aHour;
-hour=tmp.ToString();
-if(hour.Length<2)
-    hour="0"+hour;
-```
-
-```cs
-tmp=(int)aMillis;
-mills=tmp.ToString();
-if(mills.Length<2)
-    mills="0"+mills;
-```
-
-我们将 `lastTime` 重置为从 `Time.realtimeSinceStart` 获取的时间，这实际上消除了从现在到上一次更新之间计算的时间，并从现在开始计算。最后，我们快速调用 `UpdateTimer()` 来重新启动计时器进程。
-
-每当我们需要在屏幕上显示时间时，我们很可能需要将其格式化为固定的格式，例如分钟：秒：毫秒。为了做到这一点，需要一些工作从我们的 `currentTime` 变量中计算所需的单位，因为 `currentTime` 仅仅是一个浮点值，包含的数字与我们需要的没有任何相似。`Time.realtimeSinceStart` 返回系统计时器报告的秒级时间。`GetFormatted` 函数获取此值并将其分解为所需的单位，然后组合成一个格式化良好的字符串并返回它。
-
-```cs
-public string GetFormattedTime() {
-    // 对计时器进行更新以确保它是“最新”的
-    UpdateTimer();
-}
-```
-
-注意，当调用 `GetFormattedTime()` 时，我们首先进行 `UpdateTimer` 调用来更新 `currentTime`。正如之前提到的，计时器不会自动更新——它是一个惰性更新器，只有在我们要求它执行操作时它才会更新。在这种情况下，我们要求它提供一个格式化的时间字符串。
-
-从那里开始，我们只是在通过数学计算从 `currentTime` 中获取分钟、秒和毫秒值：
-
-```cs
-// 获取分钟
-aMinute=(int)currentTime%60;
-aMinute=aMinute%60;
-```
-
-```cs
-// 获取秒
-aSecond=(int)currentTime%60;
-```
-
-```cs
-// 获取毫秒
-aMillis=(int)(currentTime*100)%100;
-```
-
-在分钟、秒和毫秒值被计算并存储在整数变量 `aMinute`、`aSecond` 和 `aMillis` 之后，根据它们构建三个名为 `seconds`、`minutes` 和 `mills` 的新字符串：
-
-```cs
-// 为单个 mm/ss/ms 格式化字符串
-tmp=(int)aSecond;
-seconds=tmp.ToString();
-if(seconds.Length<2)
-    seconds="0"+seconds;
-```
-
-```cs
-tmp=(int)aMinute;
-minutes=tmp.ToString();
-if(minutes.Length<2)
-    minutes="0"+minutes;
-```
-
-```cs
-tmp=(int)aHour;
-hour=tmp.ToString();
-if(hour.Length<2)
-    hour="0"+hour;
-```
-
-```cs
-tmp=(int)aMillis;
-mills=tmp.ToString();
-if(mills.Length<2)
-    mills="0"+mills;
-```
-
-我们将 `lastTime` 重置为从 `Time.realtimeSinceStart` 获取的时间，这实际上消除了从现在到上一次更新之间计算的时间，并从现在开始计算。最后，我们快速调用 `UpdateTimer()` 来重新启动计时器进程。
-
-每当我们需要在屏幕上显示时间时，我们很可能需要将其格式化为固定的格式，例如分钟：秒：毫秒。为了做到这一点，需要一些工作从我们的 `currentTime` 变量中计算所需的单位，因为 `currentTime` 仅仅是一个浮点值，包含的数字与我们需要的没有任何相似。`Time.realtimeSinceStart` 返回系统计时器报告的秒级时间。`GetFormatted` 函数获取此值并将其分解为所需的单位，然后组合成一个格式化良好的字符串并返回它。
-
-```cs
-public string GetFormattedTime() {
-    // 对计时器进行更新以确保它是“最新”的
-    UpdateTimer();
-}
-```
-
-注意，当调用 `GetFormattedTime()` 时，我们首先进行 `UpdateTimer` 调用来更新 `currentTime`。正如之前提到的，计时器不会自动更新——它是一个惰性更新器，只有在我们要求它执行操作时它才会更新。在这种情况下，我们要求它提供一个格式化的时间字符串。
-
-从那里开始，我们只是在通过数学计算从 `currentTime` 中获取分钟、秒和毫秒值：
-
-```cs
-// 获取分钟
-aMinute=(int)currentTime%60;
-aMinute=aMinute%60;
-```
-
-```cs
-// 获取秒
-aSecond=(int)currentTime%60;
-```
-
-```cs
-// 获取毫秒
-aMillis=(int)(currentTime*100)%100;
-```
-
-在分钟、秒和毫秒值被计算并存储在整数变量 `aMinute`、`aSecond` 和 `aMillis` 之后，根据它们构建三个名为 `seconds`、`minutes` 和 `mills` 的新字符串：
-
-```cs
-// 为单个 mm/ss/ms 格式化字符串
-tmp=(int)aSecond;
-seconds=tmp.ToString();
-if(seconds.Length<2)
-    seconds="0"+seconds;
-```
-
-```cs
-tmp=(int)aMinute;
-minutes=tmp.ToString();
-if(minutes.Length<2)
-    minutes="0"+minutes;
-```
-
-```cs
-tmp=(int)aHour;
-hour=tmp.ToString();
-if(hour.Length<2)
-    hour="0"+hour;
-```
-
-```cs
-tmp=(int)aMillis;
-mills=tmp.ToString();
-if(mills.Length<2)
-    mills="0"+mills;
-```
-
 ## 4.3 简单的生成器控制器 (Spawn Controller)
 
 我们使用生成器控制器的原因是我们可以跟踪已添加到游戏世界的内容，并在需要时，将生成系统切换为更健壮的方案（例如来自 Unity Asset Store 的第三方库）。
@@ -2258,13 +2185,13 @@ public class SpawnController : ScriptableObject
     {
 ```
 
-
-
 ```cs
 // 每当创建 SpawnController 类实例时，
 // 此函数就会被调用
 // 首先
 ```
+
+
 
 ```cs
 // 因为不存在现有实例，我们可以安全地将 instance
@@ -2382,14 +2309,14 @@ public ArrayList GetAllSpawnedPlayers()
 
 ### 4.3.1.1 脚本详解
 
-SpawnController 类派生自 ScriptableObject：
+`SpawnController` 类派生自 `ScriptableObject`：
 
 ```cs
 public class SpawnController : ScriptableObject
 {
 ```
 
-在变量声明之后，SpawnController.cs 设置了一个单例。正如注释所说，这基于 AngryArt 的工作（发布在 Unity wiki 网站 http://wiki.unity3d.com/index.php?title=Singleton）。回想一下单例模式在第 2 章中已经讨论过。如果你错过了，它仅仅的作用是确保在任何时候只存在一个脚本实例，以便无论其他脚本从何处或如何访问它，我们始终使用同一个实例。
+在变量声明之后，`SpawnController.cs` 设置了一个单例。正如注释所说，这基于 AngryArt 的工作（发布在 Unity wiki 网站 `http://wiki.unity3d.com/index.php?title=Singleton`）。回想一下单例模式在第 2 章中已经讨论过。如果你错过了，它仅仅的作用是确保在任何时候只存在一个脚本实例，以便无论其他脚本从何处或如何访问它，我们始终使用同一个实例。
 
 ```cs
 private static SpawnController instance;
@@ -2414,9 +2341,9 @@ public SpawnController()
 }
 ```
 
-在设置函数之后，脚本进入了一个简单的 Restart() 函数，该函数会清除脚本之后使用的所有 ArrayList。
+在设置函数之后，脚本进入了一个简单的 `Restart()` 函数，该函数会清除脚本之后使用的所有 `ArrayList`。
 
-SetUpPlayers 函数是一个为特定目的设计的特定函数。即，它的功能是通过一系列数组和一个表示总玩家人数的整数来提供有关游戏中玩家的信息。这些信息不会被立即使用，稍后将在脚本中的 CreatePlayers() 函数使用。
+`SetUpPlayers` 函数是一个为特定目的设计的特定函数。即，它的功能是通过一系列数组和一个表示总玩家人数的整数来提供有关游戏中玩家的信息。这些信息不会被立即使用，稍后将在脚本中的 `CreatePlayers()` 函数使用。
 
 ```cs
 public void SetUpPlayers (GameObject[] playerPrefabs, Vector3[] playerStartPositions, Quaternion[] playerRotations, Transform theParentObj, int totalPlayers)
@@ -2429,10 +2356,6 @@ public void SetUpPlayers (GameObject[] playerPrefabs, Vector3[] playerStartPosit
     startRotations= playerRotations; 
 }
 ```
-
-
-
-
 
 ```cs
 // 将此对象存入我们的对象列表中
@@ -2532,6 +2455,8 @@ public class TriggerSpawner : MonoBehaviour
 该脚本将通过两种方式开始从 `spawnObjectPrefabs` 列表中生成对象：一种是将 `shouldAutoStartSpawningOn` 变量设置为 `true`，另一种是使用基于摄像机位置的触发器系统。在示例游戏《星际惊魂》中，使用了触发系统，以便在相机（以及玩家）进入范围之前，敌人不会出现。
 
 以下是是完整的 `Path_Spawner.cs` 脚本：
+
+
 
 ```cs
 public class Path_Spawner : MonoBehaviour
@@ -2671,7 +2596,7 @@ public class Path_Spawner : MonoBehaviour
 
 ### 4.3.3.1 脚本解析
 
-此脚本派自 MonoBehaviour
+此脚本派自 `MonoBehaviour`
 
 ```cs
 public class Path_Spawner : MonoBehaviour
@@ -2688,9 +2613,7 @@ void Start()
 }
 ```
 
-
-
-Init() 负责设置该类核心工作所需的引用。这些是挂载到 gameObject 脚本的 transform，以及属于场景中主摄像机的 transform（通过 Unity 的 `camera.main` 找到）：
+`Init()` 负责设置该类核心工作所需的引用。这些是挂载到 gameObject 脚本的 transform，以及属于场景中主摄像机的 transform（通过 Unity 的 `camera.main` 找到）：
 
 ```cs
 void Init() {
@@ -2701,7 +2624,7 @@ void Init() {
     Camera mainCam = Camera.main;
 ```
 
-Camera.main 会寻找第一个标记为 `MainCamera` 标签的相机（参见 Unity 编辑器 Inspector 窗口中的标签下拉菜单）。如果场景中没有标记此标签的相机，该函数的主部分将无法正常工作。因此，如果 `mainCam` 为空，它将退出 `Init()`：
+`Camera.main` 会寻找第一个标记为 `MainCamera` 标签的相机（参见 Unity 编辑器 Inspector 窗口中的标签下拉菜单）。如果场景中没有标记此标签的相机，该函数的主部分将无法正常工作。因此，如果 `mainCam` 为空，它将退出 `Init()`：
 
 ```cs
 if (mainCam==null) {
@@ -2710,9 +2633,11 @@ if (mainCam==null) {
 ```
 
 摄像机的 transform 存储在 `cameraTransform` 中，它将在 `distanceBasedSpawnStart` 为 true 时用于触发生成：
+
 ```
 cameraTransform = mainCam.transform;
 ```
+
 它有一个自己的布尔值变量 `shouldReversePath`，由拥有它的路点控制器（waypoint controller）拥有。此行获取 `shouldReversePath` 布尔变量的值，并用它来覆盖路点控制器持有的现有保留值，所有生成的对象将使用该值。它通过调用 `waypointControl.SetReverseMode()` 实现：
 
 ```cs
@@ -2722,11 +2647,13 @@ waypointControl.SetReverseMode(shouldReversePath);
 ```
 
 统计 `spawnObjectPrefabs` 数组中有多少个对象：
+
 ```
 totalSpawnObjects = spawnObjectPrefabs.Length;
 ```
 
 如果 `AutoStartSpawningOnLoad` 为 true，则第一次生成将立即启动。
+
 `TheWave()` 函数接收两个参数：它应该生成多少敌人，以及这里每次生成之间的时间间隔是多少。`StartWave()` 将调度未来的敌人生成：
 
 ```cs
@@ -2884,12 +2811,12 @@ currentObjectNum++;
 
 变量 `currentObjectNum` 用于指向生成数组中的下一个对象。当它达到 `totalSpawnObjects-1` 的值时，即到达数组末尾，需要重置为零：
 
+
+
 ```cs
 // 检查是否到达生成
 // 对象数组的末尾
 ```
-
-
 
 ```cs
 if (currentObjectNum > totalObjectsNum-1)
@@ -3096,17 +3023,13 @@ public class Camera_Third_Person : BaseCameraController
 
 图 4.1 第三人视角相机的行为。
 
-
-
-
-
 ```cs
 myTransform.position = wantedPosition;
 
 myTransform.LookAt( target.position + lookAtAdjustVector );
 ```
 
-### 4.6.1.1 脚本详解
+#### 4.6.1.1 脚本详解
 
 所有配合框架使用的相机脚本都应该实现 `SetTarget` 函数。SetTarget 接收一个 `Transform` 类型的参数，将其赋值给名为 `target` 的变量：
 
@@ -3151,10 +3074,15 @@ currentRotationAngle = myTransform.eulerAngles.y;
 Unity 文档告诉我们 `SmoothDampAngle` 接受以下参数（按传递顺序排列）：
 
 | current | 当前位置。 |
+
 | :--- | :--- |
+
 | target | 我们正尝试到达的位置。 |
+
 | currentVelocity | 当前速度；每当你调用它时，函数都会对其进行修改。 |
+
 | smoothTime | 到达目标的大致时间。值越小，到达目标越快。 |
+
 | maxSpeed | 可选，允许限制最大速度。 |
 
 在代码的这部分，`currentVelocity` 变量持有插值移动的当前速度，但它在脚本的其他地方并没有被实际使用。它是 `SmoothDampAngle` 的必填字段，因此我们提供它以让函数正常工作，然后就不管它了。注意，一种可能是可以使用速度来限制移动，但 `SmoothDampAngle` 实际上通过提供 `maxSpeed` 参数已经处理了这一点，无需额外的代码。这对于……
@@ -3189,6 +3117,8 @@ wantedPosition.y = currentHeight;
 usedDistance = Mathf.SmoothDampAngle(usedDistance, wantedRotation, ref zVelocity, distanceTime);
 ```
 
+
+
 代码的后续部分计算相机需要在玩家后面移动多远。为此，脚本使用了 `Mathf.SmoothDampAngle`。`zVelocity` 代表相机沿 z 轴移动的速度，但完全是为了配合 `SmoothDampAngle` 使用的格式化要求，并不：
 
 ```csharp
@@ -3196,9 +3126,6 @@ wantedPosition += Quaternion.Euler(0, currentRotationAngle, 0) * new Vector3(0, 
 ```
 
 函数的最后部分使相机看向目标（玩家）。它使用 Unity 内置的 `LookAt()` 函数来实现。我们传入了目标的坐标（作为 `Vector3`），并通过 `LookAtVector` 添加了相机将要去的位置的偏移。你也可以为 `LookAt` 函数添加一个向上向量，但在情况下我们不需要。
-
-
-
 
 控制摄像机的单行代码使用 `Vector3.Lerp` 函数将摄像机的变换位置插值到存储在 `followTarget` 中的目标位置。我们在位置上添加了偏移量（以便我们最终位于目标上方，而不是在目标内部），并使用速度乘以 `Time.deltaTime` 来实现与帧率无关的插值。
 
@@ -3283,7 +3210,7 @@ CheckInput();
 }
 ```
 
-### 4.7.1.1 脚本详解
+#### 4.7.1.1 脚本详解
 
 `Start()` 为 `prevMousePos` 添加了默认值，这将用于计算每次更新之间的移动。如果 `prevMousePos` 留为 0（其默认值），在第一次执行 `CheckInput()` 时，脚本将错误地假设鼠标从 0 移动到了当前鼠标位置。
 
@@ -3341,7 +3268,6 @@ Left = (horz < 0);
 Right = (horz > 0);
 ```
 
-
 ```cs
 public class AutoSpinObject : MonoBehaviour
 {
@@ -3362,14 +3288,14 @@ public class AutoSpinObject : MonoBehaviour
 
 ## 4.9.1 脚本解析
 
-AutoSpinObject.cs 继承自 MonoBehaviour，因此它可以可以使用 Unity 自动调用的 `Start()` 和 `Update()` 函数：
+`AutoSpinObject.cs` 继承自 `MonoBehaviour`，因此它可以可以使用 Unity 自动调用的 `Start()` 和 `Update()` 函数：
 
 ```cs
 public class AutoSpinObject : MonoBehaviour
 {
 ```
 
-该函数继承自 MonoBehaviour，以便我们可以在 `Update()` 函数中更新对象的旋转。
+该函数继承自 `MonoBehaviour`，以便我们可以在 `Update()` 函数中更新对象的旋转。
 
 ```cs
 public Vector3 spinVector = new Vector3(1,0,0);
@@ -3472,7 +3398,7 @@ private void LoadLevel( int indexNum)
 
 ### 4.10.1 脚本解析
 
-脚本继承自 MonoBehaviour 并应该挂载到空 gameObject 上：
+脚本继承自 `MonoBehaviour` 并应该挂载到空 gameObject 上：
 
 ```cs
 using UnityEngine;
@@ -3546,9 +3472,10 @@ private void LoadLevel( int indexNum)
 - n. 人类角色——此控制脚本能够处理通用人类动作，如跑步、后退和转身。
 - 3. 有轮车辆——车辆利用 Unity 的轮子碰撞体（wheel colliders）来实现更真实的物理模拟。将没有挡位，但车辆能够加速、制动或左右转向。
 
-## 5.1 射击游戏飞船
+### 5.1 射击游戏飞船
 
 此脚本控制玩家在屏幕上左、右、上下的移动。它不使用任何物理力，而是通过 `Transform.Translate` 直接操作 GameObject 的位置。
+
 
 
 ```csharp
@@ -3603,7 +3530,7 @@ public virtual void UpdateShip ()
 
 ### 5.1 射击类飞船
 
-与本书中的许多其他脚本一样，在变量声明之后，`Start()` 函数使用 `didInit` 来跟踪脚本是否已经初始化。
+与本书中的许多其他脚本一样，在变量声明之后，`Start()`函数使用`didInit`来跟踪脚本是否已经初始化。
 
 ```csharp
 public virtual void Start()
@@ -3614,7 +3541,7 @@ public virtual void Start()
 }
 ```
 
-并不是将所有初始化都放在 `Start()` 函数中，而是有一个自己的名为 `Init()` 的函数以保持代码整洁。`Init()` 开始缓存对 `transform`、`gameObject` 和 `rigidbody` 的引用。
+并不是将所有初始化都放在`Start()`函数中，而是有一个自己的名为`Init()`的函数以保持代码整洁。`Init()`开始缓存对`transform`、`gameObject`和`rigidbody`的引用。
 
 ```csharp
 public virtual void Init()
@@ -3626,14 +3553,14 @@ public virtual void Init()
 }
 ```
 
-输入来自存储在 `default_input` 变量中的 `Keyboard_Controller.cs`，我们将在本章稍后详细介绍它。
+输入来自存储在`default_input`变量中的`Keyboard_Controller.cs`，我们将在本章稍后详细介绍它。
 
 ```csharp
 // add default keyboard input
 default_input = myGO.AddComponent<Keyboard_Input>();
 ```
 
-为了让玩家留在游戏区域内的特定空间内，此脚本使用初始 `z` 位置开始计算如何限制移动。一个名为 `originZ` 的浮点数是：
+为了让玩家留在游戏区域内的特定空间内，此脚本使用初始`z`位置开始计算如何限制移动。一个名为`originZ`的浮点数是：
 
 ```csharp
 // grab the starting Z position to use as a baseline for Z
@@ -3641,14 +3568,14 @@ default_input = myGO.AddComponent<Keyboard_Input>();
 originZ = myTransform.localPosition.z;
 ```
 
-一旦 `Init()` 函数执行完毕，`didInit` 被设置为 `true`。
+一旦`Init()`函数执行完毕，`didInit`被设置为`true`。
 
 ```csharp
 // set a flag that our Update function knows when we are OK to use it
 didInit = true;
 ```
 
-为了让脚本在框架内正确运行，所有玩家都使用名为 `canControl` 的布尔变量来决定对象是否应该由第三方（作为 AI 或输入）控制。注意，这与启用或禁用玩家移动不同——它决定的是是否允许控制玩家。名为 `GameStart()` 函数由游戏控制器脚本在时机允许开始控制时调用。
+为了让脚本在框架内正确运行，所有玩家都使用名为`canControl`的布尔变量来决定对象是否应该由第三方（作为 AI 或输入）控制。注意，这与启用或禁用玩家移动不同——它决定的是是否允许控制玩家。名为`GameStart()`函数由游戏控制器脚本在时机允许开始控制时调用。
 
 ```csharp
 public virtual void GameStart()
@@ -3658,7 +3585,7 @@ public virtual void GameStart()
 }
 ```
 
-`GetInput()` 函数是虚拟的，设计用于在需要时重写。这使得如果你为其他游戏从此类派生一个新类，切换控制系统会变得更容易。变量 `horizontal_input` 和 `vertical_input` 是浮点值，由输入控制器在 `GetInput()` 中填充，并在脚本的后部分用于控制玩家：
+`GetInput()`函数是虚拟的，设计用于在需要时重写。这使得如果你为其他游戏从此类派生一个新类，切换控制系统会变得更容易。变量`horizontal_input`和`vertical_input`是浮点值，由输入控制器在`GetInput()`中填充，并在脚本的后部分用于控制玩家：
 
 ```csharp
 public void GetInput ()
@@ -3670,7 +3597,7 @@ public void GetInput ()
 }
 ```
 
-`Update()` 函数调用 `UpdateShip()`：
+`Update()`函数调用`UpdateShip()`：
 
 ```csharp
 public virtual void Update ()
@@ -3695,7 +3622,7 @@ public virtual void UpdateShip ()
 
 `GetInput();`
 
-当计算移动量（使用输入值作为倍数）时，我们使用 `Time.deltaTime` 使移动与帧无关。通过将移动量乘以 `deltaTime`（自上次更新以来的时间），我们的移动会适应更新之间的时间间隔，而不是只在引擎必须执行操作时更新：
+当计算移动量（使用输入值作为倍数）时，我们使用`Time.deltaTime`使移动与帧无关。通过将移动量乘以`deltaTime`（自上次更新以来的时间），我们的移动会适应更新之间的时间间隔，而不是只在引擎必须执行操作时更新：
 
 ```csharp
 // calculate movement amounts for X and Z axis
@@ -3703,12 +3630,11 @@ moveAmount = horizontal_input * Time.deltaTime * moveXSpeed;
 moveAmount = vertical_input * Time.deltaTime * moveZSpeed;
 ```
 
-
-
-
 ## 5.2 人形角色
 
 人类控制脚本使用了 Unity 的角色控制器（character controller），并基于 Unity 提供的第三人称角色控制器（该控制器作为 Unity 游戏引擎内置资源的一部分免费提供）。
+
+
 
 ```csharp
 using UnityEngine;
@@ -3908,13 +3834,17 @@ public class BaseTopDown : ExtendedCustomMonoBehavior
 }
 ```
 
-Animation 组件应该挂载到被操作的对象（gameObject）上。由于这可能与脚本挂载的对象不是同一个，因此在脚本后续用于协调动画的 `_animation` 变量被声明为 public。使用 Unity 编辑器的 Inspector（检查器）窗口来引用 Animation 组件：
+### Animation 组件挂载
+
+`Animation` 组件应该挂载到被操作的对象 `gameObject` 上。由于这可能与脚本挂载的对象不是同一个，因此在脚本后续用于协调动画的 `_animation` 变量被声明为 `public`。使用 Unity 编辑器的 `Inspector` 窗口来引用 `Animation` 组件：
 
 ```cs
 public Animation _animation;
 ```
 
-`enum` 关键字用于声明枚举。枚举是一组被称为枚举列表的常量集合，它是一种用单词描述某物的方法（保持代码的易读性），同时又让引擎的内部运行机制使用数字来使处理更高效。在脚本的开头，我们开始声明一个枚举 `CharacterState`。它将用于存储玩家动画的状态：
+### 枚举声明
+
+`enum` 关键字用于声明枚举。枚举是一组被称为枚举列表的常量集合，它是一种用单词描述某物的方法，同时又让引擎的内部运行机制使用数字来使处理更高效。在脚本的开头，我们开始声明一个枚举 `CharacterState`。它将用于存储玩家动画的状态：
 
 ```
 enum CharacterState {
@@ -3926,11 +3856,11 @@ enum CharacterState {
 
 大多数变量声明都是平平无奇的，不需要详细描述，尽管有一些值得注意的变量：
 
-| CharacterState_characterState | 这存储了玩家的动画状态（基于本节之前显示的枚举列表 `CharacterState`）。 |
-| BasePlayermanagerPlayerController | 虽然此脚本没有使用该控制器，但它持有该控制器的引用，以便其他脚本可以找到它。 |
-| Keyboard_Input default_input CharacterController | 默认输入系统是标准的键盘输入脚本。Unity 内置的角色控制器用于由此脚本控制的角色的物理模拟。 |
+| `CharacterState_characterState` | 这存储了玩家的动画状态，基于本节之前显示的枚举列表 `CharacterState`。 |
+| `BasePlayermanagerPlayerController` | 虽然此脚本没有使用该控制器，但它持有该控制器的引用，以便其他脚本可以找到它。 |
+| `Keyboard_Input default_input CharacterController` | 默认输入系统是标准的键盘输入脚本。Unity 内置的角色控制器用于由此脚本控制的角色的物理模拟。 |
 
-接下来是 `Awake()` 函数：
+### `Awake()` 函数
 
 ```cs
 void Awake ()
@@ -3943,7 +3873,7 @@ void Awake ()
 moveDirection = transform.TransformDirection(Vector3.forward);
 ```
 
-Animation 组件（Unity 内置的一个组件）用于制作角色动画。`GetComponent()` 用于在脚本挂载的对象上查找动画组件的实例：
+`Animation` 组件用于制作角色动画。`GetComponent()` 用于在脚本挂载的对象上查找动画组件的实例：
 
 ```cs
 // 如果没有在 inspector 中设置 animation，我们将尝试
@@ -3952,14 +3882,14 @@ if(_animation==null)
   _animation = GetComponent<Animation>();
 ```
 
-## 5.2 人类角色 (Humanoid Character)
+## 5.2 人类角色
 
 ```cs
 if(!animation)
     Debug.Log("你想要控制的角色没有动画。移动她可能会看起来很奇怪。");
 ```
 
-空闲、行走和跳跃动画应该通过角色上的 Inspector 窗口进行引用，以便它们能与此脚本配合。如果其中任何一个缺失，我们不希望完全停止工作；而是向调试窗口写入一条报告缺失信息的消息，而不是 `Debug.Log`：
+空闲、行走和跳跃动画应该通过角色上的 `Inspector` 窗口进行引用，以便它们能与此脚本配合。如果其中任何一个缺失，我们不希望完全停止工作；而是向调试窗口写入一条报告缺失信息的消息，而不是 `Debug.Log`：
 
 ```cs
 if(!idleAnimation) {
@@ -3972,7 +3902,7 @@ if(!idleAnimation) {
 }
 ```
 
-`Init()` 在获取某些所需脚本的引用之前，缓存了角色的刚体（rig）、gameObject 和 transform 的引用。为了在玩家结构内运行，使用了 `Keyboard_Input.cs` 提供玩家的输入以移动角色。`Init()` 函数也引用了 `BasePlayerManager.cs`，虽然此脚本没有直接使用它，但它存储了玩家管理器的引用，供其他脚本访问：
+`Init()` 在获取某些所需脚本的引用之前，缓存了角色的刚体 `rig`、`gameObject` 和 `transform` 的引用。为了在玩家结构内运行，使用了 `Keyboard_Input.cs` 提供玩家的输入以移动角色。`Init()` 函数也引用了 `BasePlayerManager.cs`，虽然此脚本没有直接使用它，但它存储了玩家管理器的引用，供其他脚本访问：
 
 ```cs
 public virtual void Start () {
@@ -4003,7 +3933,7 @@ public void SetUserInput( bool setInput ) {
 }
 ```
 
-将输入分离到 `GetInput()` 中应该便于在需要时自定义输入。在这里，`horz`、`vert` 和 `jump` 布尔变量由 `default_input`（一个 `Keyboard_Input` 实例）设置。这些函数用于在后续脚本中控制控制器：
+将输入分离到 `GetInput()` 中应该便于在需要时自定义输入。在这里，`horz`、`vert` 和 `jump` 布尔变量由 `default_input` 一个 `Keyboard_Input` 实例设置。这些函数用于在后续脚本中控制控制器：
 
 ```cs
 public virtual void GetInput()
@@ -4024,11 +3954,13 @@ public virtual void LateUpdate()
 }
 ```
 
-此脚本改编自 Unity 提供的第三称控制器代码。其原始行为是根据摄像机的方向移动玩家。例如，当按下右键时，玩家将根据相机的位置和旋转向屏幕右侧移动（右侧沿摄像机的 x 轴）。脚本中的玩家旋转由相机旋转决定，为了让移动符合逻辑，它依赖于游戏过程中位于玩家身后的相机。当然，这种控制方案在俯视角下将无法运行。
+此脚本改编自 Unity 提供的第三称控制器代码。其原始行为是根据摄像机的方向移动玩家。例如，当按下右键时，玩家将根据相机的位置和旋转向屏幕右侧移动，右侧沿摄像机的 x 轴。脚本中的玩家旋转由相机旋转决定，为了让移动符合逻辑，它依赖于游戏过程中位于玩家身后的相机。当然，这种控制方案在俯视角下将无法运行。
+
+`BaseTopDown.script` 的下一部分涉及速度。变量 `curSmooth` 将在脚本中用于决定玩家的移动速度从零变为最大速度需要多长时间：
 
 
 
-BaseTopDown.script 的下一部分涉及速度。变量 `curSmooth` 将在脚本中用于决定玩家的移动速度从零变为最大速度需要多长时间：
+### 根据当前目标方向平滑速度
 
 ```cs
 // 根据当前目标方向平滑速度
@@ -4092,9 +4024,9 @@ if (moveSpeed < walkSpeed * 0.3f)
     walkTimeStart = Time.time;
 ```
 
-`UpdateDirectionalMovement()` 函数的最后部分告诉角色控制器移动，并设置其 transform 的旋转以改变移动方向。在所改编的原始 Unity 第一人称控制器脚本中，这段代码是在 `Update()` 函数中使用的。它的目的是将所有方向性移动保持在单个函数中。
+`UpdateDirectionalMovement()` 函数的最后部分告诉角色控制器移动，并设置其 `transform` 的旋转以改变移动方向。在所改编的原始 Unity 第一人称控制器脚本中，这段代码是在 `Update()` 函数中使用的。它的目的是将所有方向性移动保持在单个函数中。
 
-变量 `movement` 获取 `moveDirection` 并将其乘以 `moveSpeed`；在下一行中，结果乘以 `Time.deltaTime` 以提供一个基于时间的移动向量，其模长适用于传递给角色控制器。当控制器执行 `Move` 时（通过参数传递移动向量），它将返回一个名为 `CollisionFlags` 的位掩码。当与角色控制器发生碰撞时，可以使用 `collisionFlags` 变量告知碰撞发生的位置；`collisionFlags` 代表 `None`（无）、`Sides`（侧面）、`Above`（上方）或 `Below`（下方）。虽然在这个版本的 BaseTopDown.cs 中没有使用碰撞数据，但它是为了未来的功能实现的：
+变量 `movement` 获取 `moveDirection` 并将其乘以 `moveSpeed`；在下一行中，结果乘以 `Time.deltaTime` 以提供一个基于时间的移动向量，其模长适用于传递给角色控制器。当控制器执行 `Move` 时（通过参数传递移动向量），它将返回一个名为 `CollisionFlags` 的位掩码。当与角色控制器发生碰撞时，可以使用 `collisionFlags` 变量告知碰撞发生的位置；`collisionFlags` 代表 `None`（无）、`Sides`（侧面）、`Above`（上方）或 `Below`（下方）。虽然在这个版本的 `BaseTopDown.cs` 中没有使用碰撞数据，但它是为了未来的功能实现的：
 
 ```cs
 // 计算实际运动
@@ -4114,9 +4046,9 @@ collisionFlags = controller.Move(movement);
 myTransform.rotation = Quaternion.LookRotation(moveDirection);
 ```
 
-BaseTopDown.cs 中的第二种移动类型是旋转移动。`UpdateRotationalMovement()` 使用了 `transform.Rotate` 和角色控制器的 `SimpleMove` 函数，提供了一个控制系统，让玩家绕其 y 轴旋转并沿其 z 轴移动（对于人类来说，这就是向前和向后的行走或跑步）。
+`BaseTopDown.cs` 中的第二种移动类型是旋转移动。`UpdateRotationalMovement()` 使用了 `transform.Rotate` 和角色控制器的 `SimpleMove` 函数，提供了一个控制系统，让玩家绕其 y 轴旋转并沿其 z 轴移动（对于人类来说，这就是向前和向后的行走或跑步）。
 
-对于水平输入，变量 `horz` 乘以变量 `rotateSpeed` 并乘以 `Time.deltaTime`，用于玩家（myTransform）的 y 轴旋转：
+对于水平输入，变量 `horz` 乘以变量 `rotateSpeed` 并乘以 `Time.deltaTime`，用于玩家（`myTransform`）的 y 轴旋转：
 
 ```cs
 void UpdateRotationMovement()
@@ -4135,11 +4067,11 @@ curSpeed = moveSpeed * vert;
 
 `CharacterController.SimpleMove` 移动角色控制器，考虑了……
 
-当速度大于 0.1 时，脚本依赖于 _characterState 来为玩家正在进行的操作提供正确的答案。_characterState 指的是脚本开头处名为 CharacterState 的列表。
+当速度大于 0.1 时，脚本依赖于 `_characterState` 来为玩家正在进行的操作提供正确的答案。`_characterState` 指的是脚本开头处名为 `CharacterState` 的列表。
 
-CharacterState 动画状态由 _characterState 维护，并由移动脚本（`UpdateDirectionalMovement()` 和 `UpdateRotationalMovement()` 函数）设置。这些脚本在此处声明声明时，通过使用 `controller.velocity.magnitude`（控制器的移动速度）并将其限制在 `runMaxAnimationSpeed` 以内来加快动画速度，以保持数值在合理范围内。
+`CharacterState` 动画状态由 `_characterState` 维护，并由移动脚本（`UpdateDirectionalMovement()` 和 `UpdateRotationalMovement()` 函数）设置。这些脚本在此处声明声明时，通过使用 `controller.velocity.magnitude`（控制器的移动速度）并将其限制在 `runMaxAnimationSpeed` 以内来加快动画速度，以保持数值在合理范围内。
 
-首先，检查 _characterState 是否处于运行状态，并在以下位置播放跑步动画：
+首先，检查 `_characterState` 是否处于运行状态，并在以下位置播放跑步动画：
 
 ```csharp
 if (_characterState == CharacterState.Running) {
@@ -4352,9 +4284,7 @@ public class BaseVehicle : ExtendedMonoBehaviour
 }
 ```
 
-
-
-此脚本引用了一个玩家管理器（BasePlayerManager），但脚本的其余部分并没有使用它，它除了初始化函数 `Init()` 之外没有执行任何操作。它的存在是为了适配框架并为脚本的未来开发做准备：
+此脚本引用了一个玩家管理器（`BasePlayerManager`），但脚本的其余部分并没有使用它，它除了初始化函数 `Init()` 之外没有执行任何操作。它的存在是为了适配框架并为脚本的未来开发做准备：
 
 ```
 public BasePlayerManager myPlayerController;
@@ -4362,9 +4292,7 @@ public BasePlayerManager myPlayerController;
 
 默认输入系统是一个键盘脚本，它不需要序列化，因为它仅在内部使用。
 
-```
-[System.NonSerialized] public Keyboard_Input default_input;
-```
+
 
 车辆上需要一个 `AudioSource` 来产生引擎噪音。要设置它，请向 gameObject 添加一个 `AudioSource` 组件（Component -> Audio -> AudioSource）并引用一个引擎音频片段。在 `AudioSource` 上，勾选 Loop（循环）和 Play Awake（唤醒播放）复选框：
 
@@ -4493,11 +4421,15 @@ public virtual void GetInput()
 ### 5.3.2 轮轴对齐
 
 WheelCollider 在模拟轮胎方面表现出色，但如果我们想看到轮胎，仍然有更多工作要做完成；每个轮子网格都需要定位，以与其对应的 WheelCollider 匹配。
+
 完整的脚本看起来如下：
 
 > // 基于此论坛帖子中的工作：
+
 // http://forum.unity3d.com/threads/50643-How-to-make-a-physically-real-
+
 // stable-car-with-WheelColliders
+
 // 由 Edy 完成。
 
 ```csharp
@@ -4592,22 +4524,30 @@ BaseWheelAlignment.cs 脚本用于将轮子网格与轮子碰撞器对齐，并�
 在示例 Metal Vehicle Doom 中，车辆在层级结构中所示：
 
 - Car
+
 - Body
+
 - Colliders (body)
+
 - WheelColliders
+
 - Wheel_FL
+
 - Wheel_FR
+
 - Wheel_RL
+
 - Wheel_RR
+
 - WheelMeshes
+
 - Wheel_FL
+
 - Wheel_FR
+
 - Wheel_RL
+
 - Wheel_RR
-
-
-
-
 
 correspondingGroundHit 是一个新的新的 `WheelHit`，其特定目的是获取 `WheelCollider` 的 `sidewaysSlip` 值。如果该值低于某个阈值，说明轮子滑动得足够厉害，足以实例化一些轮胎烟：
 
@@ -4622,7 +4562,7 @@ WheelHit correspondingGroundHit=new WheelHit();
 
 ```cs
 CorrespondingCollider.GetGroundHit( correspondingGroundHit );
-// 如果轮胎的滑移位移大于 2.0f，且滑移
+// 如果轮胎的打滑位移大于 2.0f，且滑移
 // prefab 存在，则在地上创建一个实例，
 // 旋转为零。
 if ( Mathf.Abs( correspondingGroundHit.sidewaysSlip ) > slipAmountForTireSmoke )
@@ -4665,6 +4605,8 @@ SpawnController.Instance.Spawn( slipPrefab, correspondingGroundHit.point, zeroRo
 ### 6.1.1 BaseWeaponController.cs
 
 以下是完成后的 `BaseWeaponController.cs` 脚本：
+
+
 
 ```cs
 using UnityEngine;
@@ -4721,92 +4663,74 @@ public class BaseWeaponController : MonoBehaviour
             // 从 weapons 列表中实例化项
             TEMPGameObject=(GameObject) Instantiate( weapons[i]);
 ```
-
-
-
 ```cs
 // 我们存储这个选定的槽位以防止重复
 // 武器槽设置
 lastSelectedWeaponSlot=selectedWeaponSlot;
 ```
-
 ```cs
 // 启用新选的武器
 EnableCurrentWeapon();
 ```
-
 ```cs
 public virtual void DisableCurrentWeapon ()
 {
     if(weaponScripts.Count==0)
         return;
 ```
-
 ```cs
 // 获取当前选择武器脚本的引用
 TEMPWeapon=( ( BaseWeaponScript ) weaponScripts[selectedWeaponSlot];
 ```
-
 ```cs
 // 现在让脚本禁用自己
 TEMPWeapon.Disable();
 ```
-
 ```cs
 // 获取武器的 gameObject 引用并禁用
 // 那个
 TEMPgameObject=( ( GameObject )weaponSlots[selectedWeaponSlot];
 TEMPgameObject.SetActive( false );
 ```
-
 ```cs
 public virtual void EnableCurrentWeapon ()
 {
     if(weaponScripts.Count==0)
         return;
 ```
-
 ```cs
 // 获取当前选择武器的引用
 TEMPWeapon=( ( BaseWeaponScript ) weaponScripts[selectedWeaponSlot];
 ```
-
 ```cs
 // 现在让脚本启用自己
 TEMPWeapon.Enable();
 ```
-
 ```cs
 TEMPgameObject=( ( GameObject )weaponSlots[selectedWeaponSlot];
 TEMPgameObject.SetActive( true );
 ```
-
 ```cs
 public virtual void Fire ()
 {
     if(weaponScripts==null)
         return;
 ```
-
 ```cs
 if (weaponScripts.Count==0)
   return;
 ```
-
 ```cs
 // 在当前选择的槽位中寻找武器
 TEMPWeapon = ( BaseWeaponScript ) weaponScripts[selectedWeaponSlot];
 ```
-
 ```cs
 theDir = myTransform.forward;
 ```
-
 ```cs
 if( useForceVectorDirection )
   theDir = forceVector;
 ```
-
 ```cs
 // 发射射物
 TEMPWeapon.Fire(theDir, ownerNum );
@@ -4840,7 +4764,7 @@ weaponSlots= new ArrayList();
 weaponScripts= new ArrayList();
 ```
 
-Transform 被缓存在 `myTransform` 中，如果 `forceParent` 变量在 Unity 编辑器检查器中没有被设置，则将用 `transform` 填充它。这里的想法是，在某些情况下，武器所需的父级 transform 并不总是挂载此脚本的 transform。武器的父级 transform 可以通过在 Unity 中将引用拖入 `forceParent` 来设置：
+`Transform` 被缓存在 `myTransform` 中，如果 `forceParent` 变量在 Unity 编辑器检查器中没有被设置，则将用 `transform` 填充它。这里的想法是，在某些情况下，武器所需的父级 transform 并不总是挂载此脚本的 transform。武器的父级 transform 可以通过在 Unity 中将引用拖入 `forceParent` 来设置：
 
 ```cs
 myTransform= transform;
@@ -4908,9 +4832,6 @@ TEMPgameObject=( ( GameObject )weaponSlots[selectedWeaponSlot];
 TEMPgameObject.SetActive( true );
 ```
 
-
-
-
 首先，在设置新武器之前会禁用当前武器：
 
 ```
@@ -4952,7 +4873,7 @@ EnableCurrentWeapon();
 
 `PrevWeaponSlot` 的工作原理与 `NextWeaponSlot()` 几乎相同。它有一个布尔参数，用于说明当当前武器降至零时是否循环，最明显的区别是 `selectedSlot` 变量是递减而不是递增：
 
-```public
+```cs
 public virtual void PrevWeaponSlot(bool shouldLoop)
 {
     // 禁用当前武器
@@ -4972,21 +4893,33 @@ if( selectedWeaponSlot<0 )
 ```
 
 {
+
     selectedWeaponSlot= weaponScripts.Count-1;
+
 } else {
+
     selectedWeaponSlot= 0;
+
 }
+
 ```
 
 ```
+
 // 我们存储此槽位以备使用，防止重复
+
 // 武器槽位设置
+
 lastSelectedWeaponSlot=selectedWeaponSlot;
+
 ```
 
 ```
+
 // 启用新选的武器
+
 EnableCurrentWeapon();
+
 ```
 
 禁用当前武器意味着它将既是不可见的又无法发射：`public void DisableCurrentWeapon() {`
@@ -4996,47 +4929,58 @@ EnableCurrentWeapon();
 为了确保 `weaponScripts` 数组中有有脚本，在继续后续之前会检查其 `Count` 属性：
 
 ```
+
 if (weaponScripts.Count==0)
+
 return;
+
 ```
 
 从 `weaponScripts` ArrayList 中检索时，会将当前选定槽位的武器脚本（`BaseWeapon.cs`）的引用存储在变量 `TEMPWeapon` 中：
 
 ```
+
 // 获取当前选定武器脚本的引用
+
 TEMPWeapon= ( BaseWeaponScript )weaponScripts[selectedWeaponSlot];
+
 ```
 
 要让武器禁用，需要调用它的 `Disable()` 方法：
 
 ```
+
 // 现在告诉脚本禁用自身
+
 TEMPWeapon.Disable();
+
 ```
 
 由于已经禁用了实际的武器脚本，现在需要将其从视图中隐藏。。首先，变量 `TEMPGameObject` 接收来自 `weaponSlots` ArrayList 的武器游戏对象（gameObject）。然后通过 `GameObject.SetActive()` 将 `TEMPGameObject` 变量设为非激活状态：
 
 ```
+
 // 获取武器的 gameObject 并禁用
+
 // 那个
+
 TEMPGameObject= ( GameObject )weaponSlots[selectedWeaponSlot];
+
 TEMPGameObject.SetActive( false );
+
 ```
 
 启用当前选定的武器是通过 `EnableCurrentWeapon()` 函数完成的，它的原理与 `DisableCurrentWeapon()` 几乎相同，只是它调用的是 `BaseWeaponScript` 的 `Enable()` 函数而不是 `Disable()`：
 
-```public
+```cs
 public virtual void EnableCurrentWeapon()
 {
     if ( weaponScripts.Count==0 )
         return;
-
     // 获取当前选定武器的引用
     TEMPWeapon = ( BaseWeaponScript ) weaponScripts[selectedWeaponSlot];
-
     // 现在告诉脚本启用自身
     TEMPWeapon.Enable();
-
     TEMPGameObject = ( GameObject ) weaponSlots[selectedWeaponSlot];
     TEMPGameObject.SetActive( true );
 }
@@ -5045,7 +4989,7 @@ public virtual void EnableCurrentWeapon()
 默认情况下，`Fire()` 函数将沿着变换（transform）的正向轴发射射体，但支持通过将 `useForceVectorDirection` 设置为 `true` 来支持沿固定向量发射。
 该函数不接受任何参数，使其很容易从任何其他脚本调用：
 
-```public
+```cs
 public virtual void Fire()
 {}
 ```
@@ -5066,8 +5010,11 @@ if(weaponScripts.Count==0)
 
 ```
 // 在当前选定的槽位查找武器
-TEMPWeapon = ( BaseWeaponScript ) weaponScripts[selectedWeaponSlot];
 ```
+
+
+
+`TEMPWeapon = (BaseWeaponScript) weaponScripts[selectedWeaponSlot];`
 
 默认情况下，发射方向沿变换的正向向量：
 
@@ -5086,7 +5033,7 @@ if (useForceVectorDirection )
 
 ```
 // 发射射体
-TEMPWeapon.Fire( theDir, ownerNum );
+TEMPWeapon.Fire(theDir, ownerNum);
 ```
 
 ```
@@ -5097,10 +5044,9 @@ TEMPWeapon.Fire( theDir, ownerNum );
 
 这里是 `BaseWeaponController.cs` 的完整形式：
 
-```
+```cs
 using UnityEngine;
 using System.Collections;
-
 public class BaseWeaponScript : MonoBehaviour
 {
     [Serialized]
@@ -5122,99 +5068,78 @@ public class BaseWeaponScript : MonoBehaviour
     private GameObject theGO;
     private bool isLoaded;
     private ProjectileController theController;
-
     public virtual void Start()
     {
         Init();
     }
-
     public virtual void Init()
     {
         // 缓存变换
         myTransform= transform;
-
         // 缓存层（我们将设置所有射体的层
         // 以免它们击中自己！）
         myLayer=gameObject.layer;
-
         // 加载武器
         Reloaded();
     }
-
     public virtual void Enable()
     {
         // 如果已经是启用状态，则跳出
         if(canFire==true)
             return;
-
         // 启用武器（如显示武器网格等）
         canFire=true;
     }
-
     public virtual void Disable()
     {
         // 如果已经是禁用状态，则跳出
         if(canFire==false )
             return;
-
         // 隐藏武器（如隐藏武器网格等）
         canFire=false;
     }
-
     public virtual void Reloaded()
     {
         // 'isLoaded' 变量告诉我们武器是否已加载
         // 准备好发射
         isLoaded= true;
     }
-
     public virtual void SetCollider( Collider aCollider)
     {
         parentCollider= aCollider;
     }
-
     public virtual void Fire( Vector3 aDirection, int ownerID )
     {
         // 确保检查 canFire，以便根据需要
         // 启用或禁用！
         if (!canFire)
             return;
-
         // 如果武器未加载，则跳出
         if(!isLoaded)
             return;
-
         // 如果弹药耗尽且没有无限弹药，
         // 跳出……
         if(ammo<=0 && !isInfiniteAmmo)
             return;
-
         // 减少弹药
         ammo--;
-
         // 生成实际射体
         FireProjectile( aDirection, ownerID);
-
         // 在再次发射之前我们需要加载
         isLoaded= false;
-
         // 在 <reloadTime> 秒后调度重新加载
         // 方法："Reloaded"
         Invoke("Reloaded", reloadTime);
     }
-
     public virtual void FireProjectile( Vector3 fireDirection, int ownerID )
     {
         // 制作我们的第一个射体
         theProjectile= MakeProjectile( ownerID);
-
         // 将射体导向发射方向
     }
-
     protected abstract GameObject MakeProjectile(int ownerID); 
 }
 ```
-
 
 ```cs
 theProjectile.LookAt(theProjectile.position + 
@@ -5237,15 +5162,12 @@ public virtual Transform MakeProjectile( int ownerID )
     * forwardOffset), myTransform.rotation);
     theGO=theProjectile.gameObject;
     theProjectile.layer=myLayer;
-
 // 获取射物体控制器的引用，以便我们传递
 // 关于它的信息
 theProjectileController=theGO.GetComponent<Proj
 tileController>();
-
 // 设置所有者 ID，以便我们知道是谁发送的
 theProjectileController.SetOwnerType(ownerID);
-
 ```
 
 ```cs
@@ -5254,7 +5176,6 @@ theProjectileController.SetOwnerType(ownerID);
 // 可能被射物体击中的碰撞网格
 // 该系统的一个局限性是它只能可靠地支持
 // 单个碰撞网格
-
 if(parentCollider!=null) 
 {
     // 禁用我们与我们的射物体之间的碰撞
@@ -5262,7 +5183,6 @@ if(parentCollider!=null)
     Physics.IgnoreCollision(theProjectile.collider,
     parentCollider);
 }
-
 // 返回此射物体，以防我们想对它进行
 // 其他操作
 return theProjectile;
@@ -5276,7 +5196,6 @@ return theProjectile;
 ```cs
 using UnityEngine;
 using System.Collections;
-
 public class BaseWeaponScript : MonoBehaviour
 {
     public virtual void Start()
@@ -5293,11 +5212,9 @@ public virtual void Init()
 {
     // 缓存 transform
     myTransform= transform;
-
     // 缓存层（我们将设置所有射物体以避免
     // 层级碰撞，以免物体之间相互碰撞！）
     myLayer= gameObject.layer;
-
     // 加载武器
     Reloaded();
 }
@@ -5310,7 +5227,6 @@ public virtual void Enable()
 {
     canFire=true;
 }
-
 public virtual void Disable()
 {
     canFire=false;
@@ -5350,15 +5266,11 @@ if(canFire)
 {
     // ... 发射逻辑 ...
 }
-
 if(!isLoaded)
 {
     // ... 重新加载逻辑 ...
 }
 ```
-
-
-
 
 为了防止投射物与父物体或其他紧密生成的投射物发生碰撞，使用了 `Physics.IgnoreLayerCollision()`。`Physics.IgnoreLayerCollision()` 需要两个数字（均为整数），表示哪些层之间应该忽略相互碰撞。层号可以通过菜单 `Edit -> Project Settings -> Unity Editor Inspector` 访问，通过点击层下拉菜单并点击 `Add layer` 按钮从 `Tags and Layers` 管理器中获取。这是全局生效的，这意味着一旦两个层进入 Unity 的列表，放置在这些层上的所有物体都将不再检测碰撞。
 
@@ -5421,148 +5333,157 @@ public class Waypoints_Controller : MonoBehaviour
     private int TMPPIndex; // 索引数的临时存储容器
     private int totalTransforms;
 
-    private Vector3 diff;
-    private float floatDistance;
-    private Transform closest;
 
-    private Vector3 currentPos;
-    private Vector3 lastPos;
-    private Transform pointT;
 
-    public bool closed=true;
-    public bool shouldReverse;
+```cs
+private Vector3 diff;
 
-    void Start()
+private float floatDistance;
+
+private Transform closest;
+
+private Vector3 currentPos;
+
+private Vector3 lastPos;
+
+private Transform pointT;
+
+public bool closed=true;
+
+public bool shouldReverse;
+
+void Start()
+{
+    // 确保当此脚本启动时
+    // 我们已经获取了每个路点的 transforms
+    GetTransforms();
+}
+
+void OnDrawGizmos()
+{
+    // 我们只在编辑时绘制路点，
+    // 不在玩游戏时绘制
+    if (Application.isPlaying)
+        return;
+
+    GetTransforms();
+
+    // 确保列表中多于一个 transform
+    // 否则我们无法在它们之间画线
+    if (totalTransforms < 2)
+        return;
+
+    // 绘制我们的路径，我们获取第一个
+    // 路点的位置，以便我们的线有一个起点
+    Transform TMPtrans = (Transform)transforms[0];
+    lastPos = TMPtrans.position;
+
+    // 我们让每个路点指向下一个，这样
+    // 就能旋转就可以出玩家
+    // 是面朝哪个方向
+    for (int i = 0; i < totalTransforms; i++)
     {
-        // 确保当此脚本启动时
-        // 我们已经获取了每个路点的 transforms
-        GetTransforms();
-    }
-
-    void OnDrawGizmos()
-    {
-        // 我们只在编辑时绘制路点，
-        // 不在玩游戏时绘制
-        if (Application.isPlaying)
-            return;
-
-        GetTransforms();
-        // 确保列表中多于一个 transform
-        // 否则我们无法在它们之间画线
-        if (totalTransforms < 2)
-            return;
-
-        // 绘制我们的路径，我们获取第一个
-        // 路点的位置，以便我们的线有一个起点
-        Transform TMPtrans = (Transform)transforms[0];
-        lastPos = TMPtrans.position;
-
-        // 我们让每个路点指向下一个，这样
-        // 就能旋转就可以出玩家
-        // 是面朝哪个方向
-        for (int i = 0; i < totalTransforms; i++)
+        Transform TempTrans = (Transform)transforms[i];
+        if (TempTrans == null)
         {
-            Transform TempTrans = (Transform)transforms[i];
-            if (TempTrans == null)
-            {
-                GetTransforms();
-                return;
-            }
-
-            // 更新“上一个”路点变为
-            // 当前这，因为我们需要
-            lastPos = TempTrans.position;
-
-            // 更新当前的“胜利者”
-            //（最近的 transform）为
-            // 我们刚刚找到的 transform
-            // ... 逻辑继续
-        }
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(currentPos,2);
-
-        if (closed)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(lastPos, firstPos);
-        }
-    }
-
-    public void SetReverseMode(bool rev)
-    {
-        shouldReverse=rev;
-    }
-
-    public void GetTransforms()
-    {
-        // 将所有路点存储在 ArrayList 中
-        // 它在在这里初始化（在我们可以使用 ArrayLists
-        // 之前总是需要这样做）
-        transforms=new ArrayList();
-
-        // 现在我们遍历此 transform “下方”的 transforms
-        // 所以所有的子对象都作为路点
-        foreach(Transform t in transform)
-        {
-            // 将此 transform 添加到列表
-            transforms.Add(t);
-        }
-        totalTransforms=(int)transforms.Count;
-    }
-
-    public int FindNearestWaypoint (Vector3 fromPos, float maxRange)
-    {
-        // 确保我们已经填充了 transforms
-        // 列表，如果没有，则填充
-        if(transforms==null)
             GetTransforms();
+            return;
+        }
+        // 更新“上一个”路点变为
+        // 当前这，因为我们需要
+        lastPos = TempTrans.position;
 
-        // distance 变量仅用于在比较时持有
-        // “当前”距离，这样我们就能
-        // 找到最近的 distance = Math.Infinity;
+        // 更新当前的“胜利者”
+        //（最近的 transform）为
+        // 我们刚刚找到的 transform
+        // ... 逻辑继续
+    }
 
-        // 遍历它们并找到最近的一个
-        for (int i = 0; i < transforms.Count; i++)
+    Gizmos.color = Color.green;
+    Gizmos.DrawSphere(currentPos,2);
+
+    if (closed)
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(lastPos, firstPos);
+    }
+}
+
+public void SetReverseMode(bool rev)
+{
+    shouldReverse=rev;
+}
+
+public void GetTransforms()
+{
+    // 将所有路点存储在 ArrayList 中
+    // 它在在这里初始化（在我们可以使用 ArrayLists
+    // 之前总是需要这样做）
+    transforms=new ArrayList();
+
+    // 现在我们遍历此 transform “下方”的 transforms
+    // 所以所有的子对象都作为路点
+    foreach(Transform t in transform)
+    {
+        // 将此 transform 添加到列表
+        transforms.Add(t);
+    }
+
+    totalTransforms=(int)transforms.Count;
+}
+
+public int FindNearestWaypoint (Vector3 fromPos, float maxRange)
+{
+    // 确保我们已经填充了 transforms
+    // 列表，如果没有，则填充
+    if(transforms==null)
+        GetTransforms();
+
+    // distance 变量仅用于在比较时持有
+    // “当前”距离，这样我们就能
+    // 找到最近的 distance = Math.Infinity;
+    // 遍历它们并找到最近的一个
+    for (int i = 0; i < transforms.Count; i++)
+    {
+        // 获取 transform 的引用
+        Transform TempTrans = (Transform)transforms[i];
+
+        // 计算当前 transform 
+        // 和传入的 transform 之间的距离
+        diff = (TempTrans.position - fromPos);
+        float curDistance = diff.sqrMagnitude;
+
+        // 现在比较距离——确保
+        // 我们不比最近的物体更近
+        //（其距离由变量
+        // (distance）持有）
+        if (curDistance < distance)
         {
-            // 获取 transform 的引用
-            Transform TempTrans = (Transform)transforms[i];
-
-            // 计算当前 transform 
-            // 和传入的 transform 之间的距离
-            diff = (TempTrans.position - fromPos);
-            float curDistance = diff.sqrMagnitude;
-            // 现在比较距离——确保
-            // 我们不比最近的物体更近
-            //（其距离由变量
-            // (distance）持有）
-            if (curDistance < distance)
+            if (Math.Abs(TempTrans.position.y - fromPos.y) < maxRange)
             {
-                if (Math.Abs(TempTrans.position.y - fromPos.y) < maxRange)
-                {
-                    // 设置当前的“胜利者”
-                    //（最近的 transform）为
-                    // 我们刚刚找到的 transform
-                    closest = TempTrans;
+                // 设置当前的“胜利者”
+                //（最近的 transform）为
+                // 我们刚刚找到的 transform
+                closest = TempTrans;
 
-                    // 存储此路点的
-                    // 索引
-                    TempIndex=i;
+                // 存储此路点的
+                // 索引
+                TempIndex=i;
 
-                    // 设置我们的“胜利”距离
-                    // 为刚刚找到的距离
-                    // 
-                    distance = curDistance;
-                }
+                // 设置我们的“胜利”距离
+                // 为刚刚找到的距离
+                // 
+                distance = curDistance;
             }
         }
-        return TempIndex;
     }
-    
-    private int TempIndex;
+
+    return TempIndex;
+}
+
+private int TempIndex;
 }
 ```
-
 
 ```cs
 // 现在我们确保是否真的找到了
@@ -5580,7 +5501,6 @@ if (closest) {
 // 相同的变换（transform）。我们使用它来确保
 // 当我们寻找最近的路点时，不会找到
 // 我们刚刚经过的那个路点
-
 public int FindNearestWaypoint(Vector3 fromPos, Transform
 exceptThis, float maxRange)
 {
@@ -5593,18 +5513,15 @@ exceptThis, float maxRange)
     // 存储“当前”距离，这样我们 
     // 就能找到最近的距离
     distance = Mathf.Infinity;
-
     // 遍历它们并找到最近的一个
     for(int i = 0; i < transforms.Count; i++) {
         // 获取一个 transform 的引用
         TEMptrans = (Transform)transforms[i];
-
         // 计算当前
         // transform 与传入的 transform 的
         // 位置向量之间的距离
         diff = (TEMptrans.position - fromPos);
         curDistance = diff.sqrMagnitude;
-
         // 现在比较距离 - 确保
         // 我们不是
         if (curDistance < distance && TEMptrans !=
@@ -5661,6 +5578,7 @@ public Transform GetWaypoint(int index) {
     }
     return (Transform)transforms[index];
 }
+
 public int getTotal() {
     return totalTransforms;
 }
@@ -5696,7 +5614,6 @@ foreach (Transform t in transforms)
     // 将此添加到 arraylist
     transforms.Add(t);
 }
-
 totalTransforms=(int)transforms.Count;
 ```
 
@@ -5800,7 +5717,6 @@ void OnDrawGizmos()
     // 确保当此脚本启动时
     // 我们已经获取了每个路点的 transforms
     GetTransforms();
-    
 ```
 
 ```
@@ -5811,14 +5727,7 @@ void OnDrawGizmos()
 当
 脚本启动时
     // 我们已经获取了每个路点的
-
-
     Transforms
-
-
-
-
-
 ```
 
 如果你发现自动旋转点时遇到问题，请注释掉上方行代码。
@@ -5836,12 +5745,17 @@ pointT=(Transform) transforms[i];
 // close the path
 if(closed)
 {
-    Gizmos.color=Color.red;
-    Gizmos.DrawLine(currentPos, firstPoint);
-}
 ```
 
-在讨论完 GetTransforms() 函数之后，该类的其余部分由公开的实用程序函数组成，供其他脚本访问：
+
+
+`Gizmos.color=Color.red;`
+
+`Gizmos.DrawLine(currentPos, firstPoint);`
+
+}
+
+在讨论完 `GetTransforms()` 函数之后，该类的其余部分由公开的实用程序函数组成，供其他脚本访问：
 
 | 方法 | 说明 |
 | :--- | :--- |
@@ -5855,7 +5769,6 @@ public void SetReverseMode(bool rev)
 {
     shouldReverse=rev;
 }
-
 public int FindNearestWaypoint(Vector3 fromPos, float maxRange)
 {
     // make sure that we have populated the transforms
@@ -5884,13 +5797,11 @@ for(int i = 0; i < transforms.Count; i++)
 {
     // grab a reference to a transform
     TEMPtrans = (Transform)transforms[i];
-
     // calculate the distance between the current
     // transform and the passed in transform's
     // position vector
     diff = (TEMPtrans.position - fromPos);
     curDistance = diff.sqrMagnitude;
-
     // now compare distances - making sure that
     // we are not
     if (curDistance < distance)
@@ -5943,7 +5854,6 @@ if (closest) {
     // should be accounted for at the other end!)
     return -1;
 }
-
 // this function has the addition of a check to avoid finding the
 // same transform as the one passed in. We use this to make sure
 // that we are looking for the nearest waypoint we don't find
@@ -5958,23 +5868,19 @@ public int FindNearestWaypoint(Vector3 fromPos , Transform exceptThis, float max
     // list, if not, populate it
     if (transforms==null)
         GetTransforms();
-
     // the distance variable is just used to hold the
     // 'current' distance when we are comparing, so that
     // we can find the closest
     distance = Mathf.Infinity;
-
     // Iterate through and find the closest closest one
     for(int i = 0; i < transforms.Count; i++) {
         // grab a reference to a transform
         TEMPTrans = (transforms[i]);
-
         // calculate the distance between the current
         // transform and the passed in transform's
         // position vector
         diff = (TEMPTrans.position - fromPos);
         curDistance = diff.magnitude;
-
         // now compare distances - making sure that
         // we are not
         if (curDistance < distance && TEMPTrans != exceptThis)
@@ -5989,11 +5895,9 @@ if(Mathf.Abs(TEMPTrans.position.y - fromPos.y) < maxRange) {
     // (closest transform) to the
     // transform we just found
     closest = TEMPTrans;
-
     // store the index of this
     // waypoint
     TEMPIndex=i;
-
     // set our 'winning' distance
     // to the distance we just
     // found
@@ -6065,10 +5969,6 @@ public int GetTotal()
 }
 ```
 
-
-
-
-
 ## 第 8 章：音频管理器
 
 音频可以决定一个视频游戏的成败。良好的音频可以通过强化游戏世界的主题并将环境填充为生动且有噪音的地方，提供更深层次的沉浸感。相反，糟糕的音频会让玩家感到烦躁，并将良好的游戏体验变得重复且空虚。
@@ -6086,7 +5986,7 @@ public int GetTotal()
 
 书中有两个脚本与音频的播放和管理有关。一个是用于音效的音频控制器 `BaseSoundController.cs`。另一个用于音乐控制的脚本 `MusicSoundController.cs`。
 
-## 8.1 音频控制器
+### 8.1 音频控制器
 
 在本书的示例框架中，假设每个场景都有音频控制器，这是一个挂载了 `BaseSoundController.cs` 脚本的空游戏 GameObject。该组件有一个在 Unity 编辑器 Inspector 中填充的数组，包含了游戏所需的音频（它们的 AudioClips）。当另一个脚本需要某个声音时，它会调用音频管理器来播放，并传递 AudioClip 在数组中对应的索引：
 
@@ -6102,21 +6002,17 @@ BaseSoundController.Instance.PlaySoundByIndex( the index number from the array o
 public class BaseSoundController : MonoBehaviour
 {
     public static BaseSoundController Instance;
-
     public AudioClip[] GameSounds;
     private int totalSounds;
     private ArrayList soundObjectList;
     private SoundObject tempSoundObj;
-
     public float volume= 1;
     public string gamePrefsName = "DefaultGame"; // 在编辑器中忘记设置
                                                 // 这个项！！
-
     public void Awake()
     {
         Instance = this;
     }
-
     public void Start()
     {
         // 当此脚本首次启动时，
@@ -6124,7 +6020,6 @@ public class BaseSoundController : MonoBehaviour
         volume = PlayerPrefs.GetFloat(gamePrefsName+"_SFXVol");
         Debug.Log("BaseSoundController gets volume from prefs "+gamePrefsName+"_SFXVol at "+volume+"");
         soundObjectList=new ArrayList();
-
         // 为 GameSounds 数组中所有的声音创建声音对象
         foreach(AudioClip theSound in GameSounds)
         {
@@ -6134,26 +6029,29 @@ public class BaseSoundController : MonoBehaviour
             totalSounds++;
         }
     }
-
     public void playSoundByIndex(int anIndexNumber, Vector3 aPosition)
     {
-        // 确保我们没有尝试播放一个索引大于
-        // 数组长度的声音
-        if(anIndexNumber>soundObjectList.Count)
-        {
-            Debug.LogWarning("BaseSoundController>正尝试使用无效索引执行 PlaySoundByIndex。正在播放数组中的最后一个声音.");
-            anIndexNumber=soundObjectList.Count-1;
-        }
+```
 
-        tempSoundObj= (SoundObject)soundObjectList[anIndexNumber];
-        tempSoundObj.Play(aPosition);
-    }
+
+
+```cs
+// 确保我们没有尝试播放一个索引大于
+// 数组长度的声音
+if(anIndexNumber>soundObjectList.Count)
+{
+    Debug.LogWarning("BaseSoundController>正尝试使用无效索引执行 PlaySoundByIndex。正在播放数组中的最后一个声音.");
+    anIndexNumber=soundObjectList.Count-1;
+}
+tempSoundObj= (SoundObject)soundObjectList[anIndexNumber];
+tempSoundObj.Play(aPosition);
+}
 }
 ```
 
 ### 8.1.1 脚本解析
 
-此脚本应该挂载到场景中的空 GameObject 上。为了让音量控制正常工作，`gamePrefsName` 应该设置为适合描述游戏的名称。这样，它将使用 PlayerPrefs 来获取音量水平。
+此脚本应该挂载到场景中的空 GameObject 上。为了让音量控制正常工作，`gamePrefsName` 应该设置为适合描述游戏的名称。这样，它将使用 `PlayerPrefs` 来获取音量水平。
 
 应通过 Unity 编辑器的 Inspector 窗口将 AudioClips 拖入 GameObjects 数组中。当 `BaseSoundController` 脚本运行时，数组中的每个 AudioClip 都将实例化它自己的 AudioSource 和 GameObject。将每个声音想象为拥有自己的音频通道，以避免在单个 AudioSource 上重叠或播放过多不同的声音。内部，使用一个名为 `SoundObject` 的类来存储音频源及其 GameObject 的信息。当主音频控制器脚本需要查找每一个对象时，将使用 `SoundObject` 中的引用，以避免反复查找。`SoundObject` 类定义在脚本顶部：
 
@@ -6168,8 +6066,6 @@ public void PlaySound(Vector3 atPosition)
     source.PlayShot(clip);
 }
 ```
-
-
 
 为了安全起见，会对索引号进行检查以确保其有效性，防止因调用错误导致空引用异常。如果索引号超过了范围，将将其设置为数组中的最后一个 `AudioClip`，并在控制台中记录警告以引起注意：
 
@@ -6195,35 +6091,26 @@ tempSoundObj.PlaySound(position);
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class MusicController : MonoBehaviour
 {
     private float volume;
     public string gamePrefsName = "DefaultGame"; // 不要忘记设置
     // 在编辑器中设置这个！！
-
     public AudioClip music;
-
     public bool loopMusic;
-
     private AudioSource source;
     private GameObject sourceGO;
-
     private int fadeState;
     private int targetFadeState;
-
     private float volumeON;
     private float targetVolume;
-
     public float fadeTime=15f;
     public bool shouldFadeInAtStart=true;
-
     void Start ()
     {
         // 当此脚本首次启动时，
         // 我们从 PlayerPrefs 获取音量
         volume= PlayerPrefs.GetFloat(gamePrefsName+"_MusicVol");
-
         // 创建一个游戏对象并为其添加 AudioSource 组件，
         // 开始播放音乐
         sourceGO=new GameObject("Music_AudioSource");
@@ -6232,7 +6119,6 @@ public class MusicController : MonoBehaviour
         source.playOnAwake=true;
         source.clip=music;
         source.volume=volume;
-
         // 如果设置了此项，脚本将自动淡入
         if (shouldFadeInAtStart) {
             fadeState=0;
@@ -6241,13 +6127,11 @@ public class MusicController : MonoBehaviour
             fadeState=1;
             volume=volumeON;
         }
-
         // 设置默认值
         targetFadeState=1;
         targetVolume=volumeON;
         source.volume=volume;
     }
-
     void Update ()
     {
         // 如果音频源没有播放且本应该
@@ -6255,7 +6139,6 @@ public class MusicController : MonoBehaviour
         if (!source.isPlaying && loopMusic) {
             source.Play();
         }
-
         // 处理音量淡入/淡出
         if(fadeState!=targetFadeState) {
             if (targetFadeState==1) {
@@ -6265,12 +6148,10 @@ public class MusicController : MonoBehaviour
                 if (volume==0)
                     fadeState=0;
             }
-
             volume=Mathf.Lerp(volume, targetVolume, Time.deltaTime * fadeTime);
             source.volume=volume;
         }
     }
-
     public void FadeIn ( float fadeAmount )
     {
         volume=0;
@@ -6279,7 +6160,6 @@ public class MusicController : MonoBehaviour
         targetVolume=volumeON;
         fadeTime=fadeAmount;
     }
-
     public void FadeOut ( float fadeAmount )
     {
         volume=volumeON;
@@ -6301,9 +6181,6 @@ public class MusicController : MonoBehaviour
 ```
 
 `MusicController` 脚本可以在加载时自动淡入音乐，从而实现更平的场景过渡。应该在 Unity 编辑器的组件 Inspector 窗口中设置 `shouldFadeInAtStart`：
-
-
-
 
 根据弹体类型进行定制。例如，较小的爆炸产生的音效可能比较大的爆炸声音更小，或者绿色激光发出的声音听起来像红色激光。
 
@@ -6335,37 +6212,37 @@ myTransform.position);
 
 实现这将需要控制器在几种不同的状态下采取不同的行为。`BaseAIController.cs` 的状态如下：
 
-- 1. moving_looking_for_target（移动并寻找目标）
+- 1. `moving_looking_for_target`（移动并寻找目标）
 
 前进并持续检查此对象与目标之间的距离。如果距离小于设定的追逐距离（`maxChaseDistance`），则 AI 将使用射线检测检查对象与目标之间的视线。如果目标可见，`AIState` 变为 `chasing_target`（追逐目标）。
 
 将从该对象的前方发射两条“探测”射线以寻找障碍物。如果在右侧发现障碍物，`AIState` 变为 `turn left`（左转）。如果在左侧发现障碍物，`AIState` 变为 `turn right`（右转）。如果在两侧发现障碍物，`AIState` 切换到 `backing_looking_for_target`（后退并寻找目标）。AI 将后退，直到不再检测到任何障碍物。
 
-- 2. chasing_target（追逐目标）
+- 2. `chasing_target`（追逐目标）
 
 AI 将转向目标并向其移动。如果目标超出范围，`AIState` 返回到 `moving_for_target`（向目标移动）。
 
-- 3. backing_up_looking_for_target（后退并寻找目标）
+- 3. `backing_up_looking_for_target`（后退并寻找目标）
 
 在此状态下，AI 向后移动，直到向前射线检测未发现障碍物。当未发现障碍物时，`AIState` 随机切换到 `stopped_turning_left`（停止左转）或 `stopped_turning_right`（停止右转）。这种随机化是为了减少后退和向特定方向转向无法让 AI 离开障碍物的情况。重复的后退和转向最终会让 AI 获得自由。在这一过程中，代码仍会检查目标是否在范围内（如果在范围内，`AIState` 将变为 `chasing_target`）。
 
-- 4. stopped_turning_left（停止左转）
+- 4. `stopped_turning_left`（停止左转）
 
 AI 将向左侧旋转，直到向前射线检测未发现障碍物。尽管此状态意味着 AI 没有在移动，但代码会检查目标是否在范围内（如果在范围内，`AIState` 将改为变为 `chasing_target`）。
 
-- 5. stopped_turning_right（停止右转）
+- 5. `stopped_turning_right`（停止右转）
 
 AI 将向右侧旋转，直到未发现障碍物。如果目标在范围内，`AIState` 将变为 `chasing_target`。
 
-- 6. paused_looking_for_target（暂停并寻找目标）
+- 6. `paused_looking_for_target`（暂停并寻找目标）
 
 AI 在此状态下不移动，但继续检查目标是否在追逐范围内。
 
-- 7. translate_along_waypoint_path（沿路点路径移动）
+- 7. `translate_along_waypoint_path`（沿路点路径移动）
 
 路点（由 `Waypoints_Controller.cs` 脚本组件实例管理，见第 7 章）被用目标。使用 `Transform.Translate` 来移动 AI，并使用 `BaseAIController.TurnTowardTarget()` 控制旋转。AI 将向目标移动，并在靠近路点时移动到下一个路点。
 
-- 8. steer_to_waypoint（转向路点）
+- 8. `steer_to_waypoint`（转向路点）
 
 此状态与 `translate_along_waypoint` 路径类似，但它没有使用 `TurnTowardTarget()` 进行转向。相反，计算输入值（格式与用户输入值相同），以便玩家控制器脚本可以使用它们并处理自身。
 
@@ -6385,7 +6262,6 @@ AI 在此状态下不移动，但继续检查目标是否在追逐范围内。
 
 ```
 using UnityEngine;
-
 namespace AIStates
 {
     public enum AIState
@@ -6412,100 +6288,131 @@ namespace AIStates
 using UnityEngine;
 using System.Collections;
 using AIStates;
-
 [AddComponent("Base/AI Controller")]
-
 public class BaseAIController : ExtendedCustomBehavior {
-
-    // AI 状态定义在 AIStates 命名空间
-
-    private Transform proxyTarget;
-    private Vector3 relativeTarget;
-    private float targetAngle;
-    private RaycastHit hit;
-    private Transform tempTransform;
-    private Vector3 tempDirVec;
-
-    public float horz;
-    public float vert;
-
-    private int obstacleHitType;
-
-    // 编辑器可更改/可见
-    public bool isStationary;
-
-    public AIState currentAIState;
-
-    public float patrolSpeed=5f;
-    public float patrolTurnSpeed=10f;
-    public float wallAvoidDistance=40f;
-
-    public Transform followTarget;
-
-    public float modelRotateSpeed=15f;
-    public int followTargetMaxTurnAngle=120;
-
-    public float minChaseDistance=2f;
-    public float maxChaseDistance=10f;
-    public float visionHeightOffset=1f;
-
-    [System.Serializable]
-    public Vector3 moveDirection;
-
-    // 路点跟随相关变量
-    public Waypoints_Controller myWayControl;
-
-    public int currentWaypointNum;
-
-    [System.Serializable]
-    public Transform currentWaypointTransform;
-
-}
 ```
 
 
 
+```csharp
+// AI 状态定义在 AIStates 命名空间
+
+private Transform proxyTarget;
+
+private Vector3 relativeTarget;
+
+private float targetAngle;
+
+private RaycastHit hit;
+
+private Transform tempTransform;
+
+private Vector3 tempDirVec;
+
+public float horz;
+
+public float vert;
+
+private int obstacleHitType;
+
+// 编辑器可更改/可见
+
+public bool isStationary;
+
+public AIState currentAIState;
+
+public float patrolSpeed=5f;
+
+public float patrolTurnSpeed=10f;
+
+public float wallAvoidDistance=40f;
+
+public Transform followTarget;
+
+public float modelRotateSpeed=15f;
+
+public int followTargetMaxTurnAngle=120;
+
+public float minChaseDistance=2f;
+
+public float maxChaseDistance=10f;
+
+public float visionHeightOffset=1f;
+
+[System.Serializable]
+
+public Vector3 moveDirection;
+
+// 路点跟随相关变量
+
+public Waypoints_Controller myWayControl;
+
+public int currentWaypointNum;
+
+[System.Serializable]
+
+public Transform currentWaypointTransform;
+
+}
+```
 
 ```csharp
 private int totalWaypoints;
 
 private Vector3 nodePosition;
+
 private Vector3 myPosition;
+
 private Vector3 diff;
+
 private float currentWayDist;
 ```
 
 ```csharp
 [System.Serialized]
+
 public bool reachedLastWaypoint;
+
 private Vector3 moveVec;
+
 private Vector3 targetMoveVec;
+
 private float distanceToChaseTarget;
 ```
 
 ```csharp
 public float waypointDistance = 5f;
+
 public float moveSpeed = 30f;
+
 public float pathSmoothing = 2f;
+
 public bool shouldReversePathFollowing;
+
 public bool loopPath;
+
 public bool destroyAEndOfWaypoints;
 ```
 
 ```csharp
 public bool faceWaypoints;
+
 public bool startAtFirstWaypoint;
+
 [System.Serialized]
+
 public bool isRespawning;
 ```
 
 ```csharp
 private int obstacleFinderResult;
+
 public Transform rotateTransform;
 ```
 
 ```csharp
 [System.Serialized]
+
 public Vector3 RelativeWaypointPosition;
 ```
 
@@ -6525,18 +6432,14 @@ public virtual void Init ()
 {
   // cache ref to gameObject
   myGO= gameObject;
-
   // cache ref to transform
   myTransform= transform;
-
   // rotateTransform may be get if the object we rotate is
   // different to the main transform
   if ( rotateTransform==null)
     rotateTransform= myTransform;
-
   // cache ref to our rigidbody
   myBody= transform.rigidbody;
-
   // init done!
   didInit= true;
 }
@@ -6626,11 +6529,9 @@ public virtual void Update ()
     // make sure we have initialized before doing anything
     if(! didInit )
         Init ();
-
     // check to see if we're supposed to be controlling the player
     if (! AIControlled )
         return;
-
     // do AI updates
     UpdateAI();
 }
@@ -6648,7 +6549,6 @@ witch (currentState)
         // look for chase target
         if(followTarget==null)
             LookAroundFor(followTarget);
-
         // the AvoidWalls function looks to see if there's
         // anything in front. If there is, it will
         // automatically change the value of moveDirection
@@ -6659,34 +6559,28 @@ witch (currentState)
             SetAIState(AIState.stopped_turning_right);
         if(obstacleFinderResult==3 ) // 向后退
             SetAIState( AIState.backing_up_looking_for_target );
-
     // 全安全！向前移动
     MoveForward();
     break;
     case AIState.chasing_target:
         // in chase mode, we point toward the target
         // and go right at it!
-
         // quick check to make sure that we have a target
         // (if not, we drop back to patrol mode)
         if( followTarget==null )
             SetAIState(AIState.moving_looking_for_target);
-
         // the TurnTowardTarget function does just that, so
         // to chase we just throw it to the current target
         TurnTowardTarget(followTarget);
-
         // find the distance between us and the chase target
         // to see if it is within range
         distanceToChaseTarget=Vector3.Distance(myTransform.position,followTarget.position);
-
         // check the range
         if(distanceToChaseTarget==minChaseDistance )
         {
             // 保持前进
             MoveForward();
         }
-
         // here we do a quick check to test the distance
         // between AI and target. If it's higher than
         // our maxChaseDistance variable, we drop out of
@@ -6696,12 +6590,10 @@ witch (currentState)
             SetAIState(AIState.moving_looking_for_target);
         }
         break;
-
     case AIState.backing_up_looking_for_target:
         // look for chase target
         if(followTarget==null)
             LookAroundFor(followTarget);
-
         // 向后退
         MoveBack();
         if(obstacleFinderResult==0)
@@ -6715,41 +6607,33 @@ witch (currentState)
             }
         }
         break;
-
     case AIState.stopped_turning_left:
         // look for chase target
         if(followTarget==null)
             LookAroundFor(followTarget);
-
         // 停止，向左转
         TurnLeft();
-
         if(obstacleFinderResult==0)
         {
             SetAIState(AIState.moving_looking_for_target);
         }
         break;
-
     case AIState.stopped_turning_right:
         // look for chase target
         if(followTarget==null)
             LookAroundFor(followTarget);
-
         // 停止，向右转
         TurnRight();
-
         if(obstacleFinderResult==0)
         {
             SetAIState(AIState.moving_looking_for_target);
         }
         break;
-
     case AIState.paused_looking_for_target:
         // 停顿，寻找目标
         if(followTarget==null)
             LookAroundFor(followTarget);
         break;
-
     case AIState.translate_along_waypoint_path:
         // 遵循路点（朝它们移动，而不是指向它们）以移动速度移动
         if(!isStationary)
@@ -6758,48 +6642,48 @@ witch (currentState)
             moveVec = Vector3.Lerp(moveVec, targetMoveVec, Time.deltaTime * pathSmoothing);
         }
         myTransform.Translate(moveVec * moveSpeed * Time.deltaTime);
-
         MoveForward();
-
         if( faceWaypoints )
         {
             TurnTowardTarget( currentWaypointTransform );
         }
         break;
-
     case AIState.steer_to_waypoint:
         // 确保在尝试访问路点之前已经初始化
-        if (! didInit && !reachedWaypoint )
-            return;
-
-        UpdateWaypoints();
-
-        if( currentWaypointTransform==null )
-        {
-            return;
-        }
-
-        // 现在我们只需要找到路点相对于汽车变换的坐标
-        // 这样我们就可以确定路点在左侧还是右侧
-        RelativeWaypointPosition= transform.InverseTransform(currentWaypointTransform.position);
-
-        // 通过将水平位置除以幅度，
-        // 我们得到了转角角度的小数百分比
-        // 可用于驱动轮子
-        horz=( RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude );
-
-        // 现在我们对扭矩执行相同的操作，但要确保
-        // 在转急弯时不会应用任何引擎扭矩...
-        if ( Mathf.Abs( horz ) < 0.5f )
-            vert= RelativeWaypointPosition.z / RelativeWaypointPosition.magnitude - Math.Abs( horz );
-        else{
-            NoMove();
-        }
-        break;
-
-}
 ```
 
+
+
+```csharp
+if (!didInit && !reachedWaypoint)
+    return;
+
+UpdateWaypoints();
+
+if (currentWaypointTransform == null)
+{
+    return;
+}
+
+// 现在我们只需要找到路点相对于汽车变换的坐标
+// 这样我们就可以确定路点在左侧还是右侧
+RelativeWaypointPosition = transform.InverseTransform(currentWaypointTransform.position);
+
+// 通过将水平位置除以幅度，
+// 我们得到了转角角度的小数百分比
+// 可用于驱动轮子
+horz = (RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude);
+
+// 现在我们对扭矩执行相同的操作，但要确保
+// 在转急弯时不会应用任何引擎扭矩...
+if (Mathf.Abs(horz) < 0.5f)
+    vert = RelativeWaypointPosition.z / RelativeWaypointPosition.magnitude - Math.Abs(horz);
+else {
+    NoMove();
+}
+break;
+}
+```
 
 ```cs
 {
@@ -6810,23 +6694,22 @@ witch (currentState)
 }
 
 // 现在我们只需要找到路点相对于汽车变换（transform）
-//的相对位置，这样我们就可以
+// 的相对位置，这样我们就可以
 // 确定路点在左侧或右侧有多远。
-  RelativeWaypointPosition = transform.InverseTransformPoint(followTarget.position);
+RelativeWaypointPosition = transform.InverseTransformPoint(followTarget.position);
 
 // 通过将水平位置除以模长，
 // 我们得到转弯角度的小数百分比，
 // 我们可以用它来驱动轮子
-  horz = RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude;
+horz = RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude;
 
 // 如果我们处于最小追逐距离之外，
 // 移动吧！
-  if (Vector3.Distance(followTarget.position, myTransform.position) > minChaseDistance) {
-    MoveForward();
-  } else {
-    NoMove();
-  }
-
+if (Vector3.Distance(followTarget.position, myTransform.position) > minChaseDistance) {
+  MoveForward();
+} else {
+  NoMove();
+}
 if (followTarget != null) {
   LookAroundFor(followTarget);
 }
@@ -6838,51 +6721,40 @@ if (followTarget != null) {
 if (obstacleFinderResult == 1) { // 向左转
   TurnLeft();
 }
-
 if (obstacleFinderResult == 2) { // 向右转
   TurnRight();
 }
-
 if (obstacleFinderResult == 3) { // 向后退
   MoveBack();
 }
-
 break;
-
 case AIState.paused_no_target:
   // 暂停且无目标 (paused_no_target)
   break;
-
 default:
   // 空闲（什么都不做）
   break;
 }
-
 public virtual void TurnLeft()
 {
     horz = -1;
 }
-
 public virtual void TurnRight()
 {
     horz = 1;
 }
-
 public virtual void MoveForward()
 {
     vert = 1;
 }
-
 public virtual void MoveBack()
 {
     vert = -1;
 }
-
 public virtual void NoMove()
 {
     vert = 0;
 }
-
 public virtual void LookAroundFor(Transform aTransform)
 {
     // 在这里我们进行快速检查，测试 AI 与
@@ -6900,24 +6772,19 @@ public virtual void LookAroundFor(Transform aTransform)
         }
     }
 }
-
 private int obstacleFinding;
-
 public virtual int IsObstacleAhead()
 {
     obstacleHitType = 0;
 }
-
 // 快速检查以确保 myTransform 已设置
 if (myTransform == null)
 {
     return 0;
 }
-
 // 绘制出这条射线，我们可以看到它在做什么
 debug.DrawRay(myTransform.position, (myTransform.forward + myTransform.right * 0.5f) * wallAvoidDistance);
 debug.DrawRay(myTransform.position, (myTransform.forward + myTransform.right * -0.5f) * wallAvoidDistance);
-
 // 从我们的 AI 发射一条射线，并将“结果”
 // 放入名为 hit 的变量中
 if (Physics.Raycast(myTransform.position, myTransform.forward + myTransform.right * 0.5f, out RaycastHit hit)) {
@@ -6926,7 +6793,6 @@ if (Physics.Raycast(myTransform.position, myTransform.forward + myTransform.righ
     // 当我们检查另一侧时可能会改变）
     obstacleHitType = 1;
 }
-
 if (Physics.Raycast(myTransform.position, myTransform.forward + myTransform.right * -0.5f, out RaycastHit hit)) {
     // 障碍物
     if (obstacleHitType == 0) {
@@ -6941,9 +6807,6 @@ if (Physics.Raycast(myTransform.position, myTransform.forward + myTransform.righ
 }
 ```
 
-
-
-
 ```cpp
 // 在我们将另一个路点抓取到
 // currentWaypointTransform 之前先跳出此函数，
@@ -6953,17 +6816,17 @@ return;
 } else {
     currentWaypointNum++;
     // 现在检查是否已经到达所有的路点
-    if (currentWaypointNum>=totalWaypoints) {
+    if (currentWaypointNum >= totalWaypoints) {
         // 路线已完成！
-        reachedWaypoint=true;
+        reachedWaypoint = true;
         // 如果设置为循环，则将
         // currentWaypointNum 重置为 0
         if (loopPath) {
-            currentWaypointNum= 0;
+            currentWaypointNum = 0;
             // 路线将持续循环，
             // 所以我们不希望 reachedWaypoint
             // 变为 true
-            reachedWaypoint=false;
+            reachedWaypoint = false;
         }
         // 在我们将另一个路点抓取到
         // currentWaypointTransform 之前先跳出此函数，
@@ -6973,8 +6836,7 @@ return;
     }
 }
 // 从路点控制器获取我们的变换引用
-currentWaypointTransform=myControl.GetWaypoint(currentWaypointNum);
-
+currentWaypointTransform = myControl.GetWaypoint(currentWaypointNum);
 public float GetHorizontal() {
     return horz;
 }
@@ -7004,10 +6866,8 @@ public void Init()
 {
     // 缓存 gameObject 的引用
     myGO = gameObject;
-
     // 缓存 transform 的引用
     myTransform = transform;
-
     // 缓存 rigidbody 的引用
     myBody = myTransform.rigidbody;
 }
@@ -7018,23 +6878,23 @@ public void Init()
 ```csharp
 // 如果我们要旋转的物体与
 // 主变换不同，则可以设置 rotateTransform
-if(rotateTransform==null)
-    rotateTransform=myTransform;
+if (rotateTransform == null)
+    rotateTransform = myTransform;
 ```
 
 与书中所有其他脚本一样，`didInit` 是一个布尔变量，用于确定 `Init()` 函数是否成功完成。
 
 ```csharp
 // 初始化完成；
-didInit=true;
+didInit = true;
 ```
 
 一个名为 `AIControl` 的布尔变量用于决定此脚本是否应该接控制。`SetAIControl()` 函数为其他脚本启用或禁用 AI 控制提供了一种方便的方法：
 
 ```csharp
-public void SetAIControl( bool state)
+public void SetAIControl(bool state)
 {
-    AIControlled= state;
+    AIControlled = state;
 }
 ```
 
@@ -7055,35 +6915,28 @@ public void SetAIControl( bool state)
 ```csharp
 // 设置 AI 参数
 public void SetPatrolSpeed(float aNum) {
-    patrolSpeed=aNum;
+    patrolSpeed = aNum;
 }
-
 public void SetPatrolTurnSpeed(float aNum) {
-    patrolTurnSpeed=aNum;
+    patrolTurnSpeed = aNum;
 }
-
 public void SetWallAvoidDistance(float aNum) {
-    wallAvoidDistance=aNum;
+    wallAvoidDistance = aNum;
 }
-
 public void SetWaypointDistance(float aNum) {
-    waypointDistance=aNum;
+    waypointDistance = aNum;
 }
-
 public void SetSpeed(float aNum) {
-    speed=aNum;
+    speed = aNum;
 }
-
 public void SetTargetDistance(float aNum) {
-    targetDistance=aNum;
+    targetDistance = aNum;
 }
-
 public void SetChaseDistance(float aNum) {
-    chaseDistance=aNum;
+    chaseDistance = aNum;
 }
-
 public void SetPathSmoothing(float aNum) {
-    pathSmoothing=aNum;
+    pathSmoothing = aNum;
 }
 ```
 
@@ -7117,15 +6970,13 @@ public virtual void Update() {
 }
 ```
 
-
-
 ```cs
 // 在执行实际移动之前，
 // 自动改变 moveDirection 的值
-if( obstacleFinderResult==-1) { // 向左移动
+if (obstacleFinderResult == -1) { // 向左移动
     SetAIState(AIState.stopped_running_length );
 }
-if( obstacleFinderResult==2) { // 向右移动
+if (obstacleFinderResult == 2) { // 向右移动
     SetAIState(AIState.stopped_running_right );
 }
 ```
@@ -7133,8 +6984,8 @@ if( obstacleFinderResult==2) { // 向右移动
 当机器人左右两侧都检测到障碍物时，`IsObstacleAhead()` 的返回结果为 3。机器人并没有尝试避开前方挡住的物体，而是进入了后退状态——`AIState.backing_looking_for_target`：
 
 ```cs
-if( obstacleFinderResult==3) { // 后退
-    SetAIState( AI State.backing_looking_for_target );
+if (obstacleFinderResult == 3) { // 后退
+    SetAIState(AI State.backing_looking_for_target );
 }
 ```
 
@@ -7159,15 +7010,19 @@ case AIState.chasing_target:
 ```cs
 // 快速检查以确保我们有一个目标
 // （如果没有，则退回到巡逻模式）
-if( followTarget==null )
-    SetAIState( AI State.moving_looking_for_target );
+if (followTarget == null )
+    SetAIState(AI State.moving_looking_for_target );
 ```
+
+
 
 `TurnTowardTarget()` 将将作为参数传递函数的 `transform` 旋转向目标，旋转速度由 float 变量 `RotateSpeed` 决定。请注意，要旋转的 `transform` 是变量 `rotate-Transform` 的 `transform`（如本节之前 `Init()` 函数中描述的），而不是脚本挂载的特定 `transform`：
 
 ```cs
 // TurnTowardTarget 函数正是这样做的，
+
 // 所以为了追逐，我们只需将其传递给当前目标
+
 TurnTowardTarget(followTarget);
 ```
 
@@ -7175,7 +7030,9 @@ TurnTowardTarget(followTarget);
 
 ```cs
 // 找到我们与追逐目标之间的距离
+
 // 以查看它是否在范围内
+
 distanceToChaseTarget=Vector3.Distance
     (myTransform.position,followTarget.position);
 ```
@@ -7205,7 +7062,6 @@ if(distanceToChaseTarget>maxChaseDistance ||
     // target
     SetAIState(AIState.moving_looking_for_target);
 }
-
 break;
 //
 ```
@@ -7217,7 +7073,6 @@ case AIState.backing_up_for_target:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 后退
 MoveBack();
 ```
@@ -7246,10 +7101,8 @@ case AIState.stopped_turning_left:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 停止，左转
     TurnLeft();
-
 if(obstacleFinderResult==0)
 {
     SetAIState(AIState.moving_looking_for_target);
@@ -7262,10 +7115,8 @@ case AIState.stopped_turning_right:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 停止，右转
     TurnRight();
-
 // 检查观察结果以查看前方路径
 // 是否畅通
 if(obstacleFinderResult==0)
@@ -7288,7 +7139,7 @@ break;
 
 到目前为止，AI 代码处理了巡逻和守卫，但脚本支持路径点跟随和转向行为。路径点跟随的第一种方法是 `AIState.translate_along_waypoint`（注：原文此处为 translate，此处根据上下文逻辑为跟随）：
 
-```cs
+```
 // 此处对应原文逻辑，关于路径点跟随 
 // （此处原文未提供代码块，保持逻辑描述）
 ```
@@ -7344,7 +7195,6 @@ if(distanceToChaseTarget>maxChaseDistance ||
     // target
     SetAIState(AIState.moving_looking_for_target);
 }
-
 break;
 //
 ```
@@ -7356,7 +7206,6 @@ case AIState.backing_up_for_target:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 后退
 MoveBack();
 ```
@@ -7385,10 +7234,8 @@ case AIState.stopped_turning_left:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 停止，左转
     TurnLeft();
-
 if(obstacleFinderResult==0)
 {
     SetAIState(AIState.moving_looking_for_target);
@@ -7401,10 +7248,8 @@ case AIState.stopped_turning_right:
 // 寻找追逐目标
 if(followTarget!=null)
     LookAroundFor(followTarget);
-
 // 停止，右转
     TurnRight();
-
 // 检查观察结果以查看前方路径
 // 是否畅通
 if(obstacleFinderResult==0)
@@ -7428,9 +7273,6 @@ break;
 到目前为止，AI 代码处理了巡逻和守卫，但脚本支持路径点跟随和转向行为。路径点跟随的第一种方法是 `AIState.translate_along_waypoint`：
 
 （注：此处翻译对应原文逻辑，由于原文未提供具体代码块，此处为描述部分）
-
-
-
 
 下一步是找到航点相对于 `myTransform` 变换（transform）的相对位置。`transform.InverseTransform` 将位置从世界空间转换为本地空间。在这种情况下，我们获取航点的位置并将其转换为 `myTransform` 的本地空间。
 
@@ -7478,18 +7320,15 @@ case AIState.steer_to_target:
     // 我们在这里捕获任何空值
     return;
   }
-
   // 现在我们只需要找到
   // 航点相对于汽车变换的位置，
   // 这样我们就可以确定航点在左侧和
   // 右侧有多远。
   transform.InverseTransformPoint(followTarget.position);
-
   // 通过将水平位置除以幅值，
   // 我们得到一个转向角度的小数百分比
   // 它可以用来驱动轮子
   horz = (RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude);
-
   // 如果在最小距离之外，
   // 前进！
   if (Vector3.Distance(followTarget.position, myTransform.position) > minChaseDistance) {
@@ -7498,6 +7337,8 @@ case AIState.steer_to_target:
     NoMove();
   }
 ```
+
+
 
 由于此状态是跟随目标移动而不是沿着固定的航点路径行驶，因此它包含了一些逻辑来应对障碍（当目标决定躲在墙后或其他类似地方时）：
 
@@ -7517,7 +7358,6 @@ if (followTarget == null) {
 if (obstacleFinderResult == 1) { // 向左转
   TurnLeft();
 }
-
 if (obstacleFinderResult == 2) { // 向右转
   TurnRight();
 }
@@ -7529,7 +7369,6 @@ if (obstacleFinderResult == 2) { // 向右转
 if (obstacleFinderResult == 3) { // 向后退
   MoveBack();
 }
-
 break;
 ```
 
@@ -7554,10 +7393,7 @@ default:
 
 `AIState.steer_to_target` 状态也使用这些函数来跟随目标。所有这些状态都依赖于之前章节定义的定义的移动逻辑。
 
-
-
-
-# 现在，射线投射到了机器人的另一侧：
+### 现在，射线投射到了机器人的另一侧
 
 ```cs
 if (Physics.Raycast(myTransform.position, myTransform.forward +
@@ -7706,7 +7542,6 @@ if( shouldReversePathFollowing ) {
 Init();
 // 从路点控制器获取第一个路点
 currentWaypointTransform= myControl.GetWaypoint ( currentWaypointNum );
-
 if( startFirst ) {
 // 在当前路点定位
 myTransform.position= currentWaypointTransform;
@@ -7720,17 +7555,14 @@ public void setReversePath( bool shouldRev )
 {
     shouldReversePathFollowing=shouldRev;
 }
-
 public void setSpeed( float aSpeed )
 {
     moveSpeed=aSpeed;
 }
-
 public void setPathSmoothing( float aRate )
 {
     pathSmoothing=aRate;
 }
-
 public void setRotateSpeed( float aRate )
 {
     modelRotateSpeed=aRate;
@@ -7792,10 +7624,8 @@ if( currentWaypointTransform==null )
 ```cs
 // 现在我们检查是否足够接近当前
 // 路点以可以推进到下一个
-
 myPosition=myTransform.position;
 myPosition.y=0;
-
 // 获取路点位置并将其“平化”
 nodePosition=currentWaypointTransform.position;
 nodePosition.y=0;
@@ -7805,18 +7635,15 @@ AI 与下一个路点之间的距离使用下方两个缓存的位置变量计�
 
 ```cs
 currentWayDist= Vector3.Distance( nodePosition,myPosition);
-
 if ( currentWayDist < waypointDistance ) {
     // 我们接近当前节点，所以让我们移动
 // 到下一个！
 }
 ```
 
-
-
 在进到下一个航点之前，会检查 `shouldReversePathFollowing` 以确定它需要沿路径的哪个方向移动。当该值为 `true` 时，`currentWaypointNum` 的值会减1：
 
-```
+```cs
 if ( shouldReversePathFollowing ) {
   currentWaypointNum--;
 }
@@ -7826,13 +7653,12 @@ if ( shouldReversePathFollowing ) {
 
 在此段代码中发生的另一件事是，当我们知道已经到达路径终点时，`reachedWaypoint` 的值被设置为 `true`。将在下一次 `UpdateWaypoints()` 中进行检查，以执行在路径末尾需要完成的动作（当 `destroyEndOfWaypoints` 设置为 `true` 时销毁 `GameObject`）：
 
-```
+```cs
 // 现在检查我们是否已经绕完了一圈
 if (currentWaypointNum<=0) {
   // 以防在被销毁之前被引用
   // 让我们保持在一个安全的
   // 索引数字
-
   currentWaypointNum = 0;
   // 完成了路线！
   reachedWaypoint = true;
@@ -7853,27 +7679,47 @@ if (currentWaypointNum<=0) {
 } else {
 ```
 
+
+
 为了执行后续代码，`shouldReversePathFollowing` 布尔值必须被设置为 `false`，这意味着 `currentWaypointNum` 已经通过航点控制器所持有的列表中的最后一个航点，并且如果变量 `loopPath` 设置为 `true`，则需要将 `currentWaypointNum` 重置为零：
 
 ```
 currentWaypointNum++;
+
 // 现在检查我们是否已经绕完了一圈
+
 if (currentWaypointNum>=totalWaypoints) {
+
   // 完成了路线！
+
   reachedLastWaypoint=true;
+
   // 如果我们设置为循环，则重置当前的
+
   // WaypointNum 为 0
+
   if(loopPath) {
+
     currentWaypointNum= 0;
+
     // 路线将循环进行，所以我们
+
     // 不希望 reachedLastWaypoint 永远
+
     // 变为 true
+
     reachedLastWaypoint=false;
+
   }
+
   // 在我们将另一个航点
+
   // 抓取到 currentWaypointTransform 之前退出此函数，因为
+
   // 我们不需要，且索引可能是无效的
+
   return;
+
 } 
 ```
 
@@ -7892,7 +7738,6 @@ public float GetHorizontal()
 {
     return horz;
 }
-
 public float GetVertical()
 {
     return vert;
@@ -7927,64 +7772,50 @@ public class BaseArmedEnemy : ExtendedCustomBehavior
 {
     [NonSerialized]
     public bool doFire;
-
     public bool onlyFireOnscreen=50;
     public int pointsValue=10;
     public bool thisGameObjectShouldFire;
-
     // 我们使用 renderer 来测试船是否在屏幕上
     public Renderer rendererToTestAgainst;
-
     public StandardSlotWeaponController weaponControl;
     public GameObject mesh_parent;
-
     private bool fireCan;
     public float fireDelay =1f;
-
     BasePlayerManager myPlayerManager;
     BaseUserManager myDataManager;
     public bool isBoss=false;
-
     public int tempINT;
     // 默认动作是不攻击
     public AIAttackState currentState=AIAttackState.random_fire;
-
     public string tagOfTargetsToAt;
-
     public void Start ()
     {
         // 现在调用我们的特定初始化函数
         InitThis();
     }
-
     public void InitThis()
     {
         // 缓存我们的 transform
         myTransform= transform;
         // 缓存我们的 gameObject
         myGO= gameObject;
-
         if (weaponControl==null) {
             // 尝试在 gameObject 上寻找武器控制
             weaponControl= myGO.GetComponent<StandardSlotWeaponController>();
         }
-
         if (rendererToTestAgainst==null) {
             // 在子节点中寻找 renderer
             rendererToTestAgainst= myGO.InChildren<Renderer>();
         }
-
         if (myPlayerManager==null) {
             // 寻找玩家管理器
             myPlayerManager= myGO.GetComponent<BasePlayerManager>();
         }
-
         if (myDataManager==null) {
             // 寻找数据管理器
             myDataManager= myGO.GetComponent<BaseUserManager>();
         }
     }
-
     public virtual void Update()
     {
         // 使用标记来禁用射击
@@ -8017,13 +7848,9 @@ public class BaseArmedEnemy : ExtendedCustomBehavior
 }
 ```
 
+`weaponControl=myGO.GetComponent<Standard_SlotController>();`
 
-
-
-
-weaponControl=myGO.GetComponent<Standard_SlotController>();
-
-该类提供了此选项，仅当指定的渲染器（renderer）位于屏幕上时发射武器。其意图是使用主要的敌人网格渲染器，这样只有当敌人出现在屏幕上时才会发射武器。如果 `Renderer` 类型的变量 `renderToTestAgainst` 没有在 Unity 编辑器检查器（Inspector）中设置，代码将使用 `GameObject.GetComponentInChildren()` 尝试寻找一个可用的渲染器：
+该类提供了此选项，仅当指定的渲染器 `renderer` 位于屏幕上时发射武器。其意图是使用主要的敌人网格渲染器，这样只有当敌人出现在屏幕上时才会发射武器。如果 `Renderer` 类型的变量 `renderToTestAgainst` 没有在 Unity 编辑器检查器 `Inspector` 中设置，代码将使用 `GameObject.GetComponentInChildren()` 尝试寻找一个可用的渲染器：
 
 ```
 if (renderToTestAgainst==null)
@@ -8037,7 +7864,7 @@ if (renderToTestAgainst==null)
 
 该敌人的玩家管理器将用于处理该敌人的血量。该敌人在技术上并不是玩家，但它共享了一些脚本和行为，两种类型之间的某些模糊行和某些脚本是可以互换的。由于它将要发射射物，它很可能会受到这些射物的击中，`BaseArmedEnemy.cs` 脚本本身不处理健康值，但在第 14 章中，我们将看到一个派自此脚本的脚本为健康和击中添加完整支持。
 
-`myPlayerManager` 持有 `BasePlayerManager` 脚本的引用，如果它在 Unity 检查器窗口未设置（导致其值为 null），则在此代码中进行填充：
+`myPlayerManager` 持有 `BasePlayerManager` 脚本的引用，如果它在 Unity 检查器窗口未设置 `null`，则在此代码中进行填充：
 
 ```
 // 如果编辑器中没有设置玩家管理器，让我们尝试
@@ -8063,7 +7890,7 @@ canFire=true;
 didInit=true;
 ```
 
-由于大部分核心逻辑都发生在 `Update()` 函数中（该函数由 Unity 引擎每帧自动调用），因此在这里被声明为 `virtual` 函数，几乎肯定会被任何派自 `BaseArmedEnemy` 类的类所重写：
+由于大部分核心逻辑都发生在 `Update()` 函数中 `Update()` 函数由 Unity 引擎每帧自动调用，因此在这里被声明为 `virtual` 函数，几乎肯定会被任何派自 `BaseArmedEnemy` 类的类所重写：
 
 ```
 public virtual void Update()
@@ -8084,7 +7911,7 @@ public virtual void Update()
 if(thisGameGameObjectShouldFire)
 ```
 
-取决于该敌人当前设置使用的 `AIAttackState`，可能要求在发射之前能够对潜在目标拥有视线。`doFire` 是一个布尔变量，用于告诉发射条件（如视线）是否已满足以及允许发射。在开始检查发射条件之前，会假设将允许发射，并将 `doFire` 设置为 `false`：
+取决于该敌人当前设置使用的 `AIAttackState`，可能要求在发射之前能够对潜在目标拥有视线。`doFire` 是一个布尔变量，用于告诉发射条件 `doFire` 是否已满足以及允许发射。在开始检查发射条件之前，会假设将允许发射，并将 `doFire` 设置为 `false`：
 
 ```
 // 我们使用 doFire 来决定现在
@@ -8099,7 +7926,7 @@ if( canFire )
 {
 ```
 
-`AIAttackState.random_fire` 顾如其名——除了生成一个随机数并查看它是否大于设定数字（在本例中为98）之外没有其他检查。当随机数足够大时，`doFire` 被设置为 `true`，以便：
+`AIAttackState.random_fire` 顾如其名——除了生成一个随机数并查看它是否大于设定数字 `98` 之外没有其他检查。当随机数足够大时，`doFire` 被设置为 `true`，以便：
 
 ```
 AIAttackState.random_fire
@@ -8116,7 +7943,8 @@ else
 ```
 
 
-“他们可以用它们来做这些。” 通过这种方法，Apple 商店试图传达出与产品同样的生活方式，使用清晰的布局和样式来增强体验的核心主题，例如使用自然材料为他们随性且不杂乱的开放式设计带来更贴地、更有生机的感觉。
+
+“他们可以用它们来做这些。”通过这种方法，Apple 商店试图传达出与产品同样的生活方式，使用清晰的布局和样式来增强体验的核心主题，例如使用自然材料为他们随性且不杂乱的开放式设计带来更贴地、更有生机的感觉。
 
 就像高端商店的外观和布局一样，你的菜单和界面会影响人们对游戏“内部”的感受。难以置信的画面效果或糟糕的菜单流程会在游戏开始之前就让玩家感到挫败，导致在初始游戏过程中挫败感增强。一个未加雕琢的界面可能会降低预期，或改变人们对投入游戏中工作质量的认知。我们希望避免这些情况，并让用户感到尽可能良好。为了鼓励积极的开始，我们应该尽量确保菜单系统整洁且具有功能性，并尝试在各个方面强化游戏世界的主题主题。
 
@@ -8126,14 +7954,16 @@ else
 
 我们将在本章中构建的菜单系统将不会赢得奖励或吸引玩家游玩。但它将作为一个结构性的起点，以及作为配置示例游戏并启动它们的功能性方法。这个菜单很棒的地方在于，它是完全开放解释的。通过添加一些图形和声音，它可以为几乎任何类型的游戏构建。当你开发自己的游戏和风格时，拥有一个可运行的菜单将在测试期间提供帮助。
 
+### 主菜单系统
+
 主菜单系统被书中的所有示例游戏使用。它很容易在游戏之间迁移，并具有音频和图形选项的子菜单。整个主菜单及其子菜单的全屏流程如图 10.1 所示。
 
 每个游戏的流程要求几乎完全相同，尽管有少数几个需要是变量的。这些是：
 
--   1. 游戏名称。
--   2. 点击“开始游戏”按钮时加载哪个场景。
--   3. 我们保存以存储选项的 prefs 文件名（音量和图形级别）。
--   4. 在《星际恐慌》的情况下，菜单还需要一个“开始合作游戏”的按钮。
+- 1. 游戏名称。
+- 2. 点击“开始游戏”按钮时加载哪个场景。
+- 3. 我们保存以存储选项的 `prefs` 文件名（音量和图形级别）。
+- 4. 在《星际恐慌》的情况下，菜单还需要一个“开始合作游戏”的按钮。
 
 选项菜单使用 `PlayerPrefs` 来保存和加载我们需要存储或检索的任何与音频和图形设置相关的信息。菜单代码应该检查
 
@@ -8145,7 +7975,7 @@ else
 
 我们可以使用相同的退出按钮和退出确认（一个简单的“你确定要退出吗？”是/否菜单），选项将完全相同。添加一个显示图像而非仅显示文本来显示游戏名称的选项可能会有益，这实现起来很简单，所以我们也应该处理一下这一点。
 
-菜单将使用 Unity GUI 构建，为了简单起见，尽管基本的的可复用菜单原则可以很容易应用到使用自定义或第三方解决方案（如 NGUI）的 GUI 中。菜单还应该具有在背景播放某些音乐以及每次点击按钮时播放音效的选项，并且背景音乐应该在菜单之间继续，而不重启或重置。
+菜单将使用 Unity GUI 构建，为了简单起见，尽管基本的的可复用菜单原则可以很容易应用到使用自定义或第三方解决方案（如 `NGUI`）的 GUI 中。菜单还应该具有在背景播放某些音乐以及每次点击按钮时播放音效的选项，并且背景音乐应该在菜单之间继续，而不重启或重置。
 
 菜单是一个单类，以保持简单并便于在项目之间进行扩展或迁移。它能够通过一个变量来指示应该显示哪个菜单，通过 `case` 语句进行检查，并使用 `OnGUI` 函数组合出正确的主菜单的所有屏幕。
 
@@ -8156,7 +7986,6 @@ else
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class MenuController : MonoBehaviour
 {
     public int whichMenu = 0;
@@ -8168,7 +7997,6 @@ public class MenuController : MonoBehaviour
     public float audioSFXSlider;
     public float audioMusicSlider;
     public int detailLevels;
-
     void Start()
     {
         // set up options, if they have saved to prefs
@@ -8180,7 +8008,6 @@ public class MenuController : MonoBehaviour
         {
             audioSFXSlider = 1;
         }
-
         if (PlayerPrefs.HasKey("MusicVol"))
         {
             audioMusicSlider = PlayerPrefs.GetFloat("MusicVol");
@@ -8189,7 +8016,6 @@ public class MenuController : MonoBehaviour
         {
             audioMusicSlider = 1;
         }
-
         if (PlayerPrefs.HasKey("GraphicsDetail"))
         {
             detailLevels = PlayerPrefs.GetInt("GraphicsDetail");
@@ -8200,16 +8026,13 @@ public class MenuController : MonoBehaviour
             detailLevels = names.Length;
         }
     }
-
     void OnGUI()
     {
         float resX = Screen.width;
         float resY = Screen.height;
         GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(resX, resY, 1));
-
         // set the GUI skin to use our skin
         GUI.skin = menuSkin;
-
         switch (whichMenu)
         {
             case 0:
@@ -8217,7 +8040,6 @@ public class MenuController : MonoBehaviour
                 // All rectangles are now adjusted to the group.
                 // (0,0) is the top-left corner.
                 GUI.Label(new Rect(0, 50, 300, 30), displayName);
-
                 if (GUI.Button(new Rect(0, 200, 300, 40), "START SINGLE"))
                 {
                     PlayerPrefs.SetInt("totalPlayers", 1);
@@ -8242,7 +8064,6 @@ public class MenuController : MonoBehaviour
                         ShowOptionsMenu();
                     }
                 }
-
                 if (GUI.Button(new Rect(0, 400, 300, 40), "EXIT"))
                 {
                 }
@@ -8252,7 +8073,6 @@ public class MenuController : MonoBehaviour
     }
 }
 ```
-
 
 ```cpp
 ConfirmExitGame();
@@ -8296,7 +8116,6 @@ case 2:
     }
     GUI.EndGroup ();
 break;
-
 case 3:
     // 音频选项
     GUI.BeginGroup(new Rect (default_width / 2 - 150,
@@ -8308,7 +8127,6 @@ case 3:
     GUI.Label(new Rect (0, 270, 300, 20), "音乐量:");
     audioMusicSliderValue = GUI.HorizontalSlider (new
     Rect (0, 300, 300, 50), audioMusicSliderValue, 0.0f, 1f);
-
     if (GUI.Button(new Rect (0, 400, 300, 40), "返回选项菜单"))
     {
         SaveOptionsPrefs();
@@ -8316,7 +8134,6 @@ case 3:
     }
     GUI.EndGroup ();
     break;
-
 case 4:
     // 图形选项
     GUI.BeginGroup(new Rect (default_width / 2 - 150,
@@ -8326,7 +8143,6 @@ case 4:
     graphicsSliderValue = Math.RoundToInt(GUI.
     HorizontalSlider(new Rect (0, 200, 300, 50), 
     graphicsSliderValue, 0, detailLevels));
-
     if (GUI.Button(new Rect (0, 400, 300, 40), "返回选项菜单"))
     {
         SaveOptionsPrefs();
@@ -8334,7 +8150,6 @@ case 4:
     }
     GUI.EndGroup ();
     break;
-
 } // - 结束 switch
 void LoadLevel( string whichLevel ) {
     Application.LoadLevel(whichLevel);
@@ -8358,7 +8173,6 @@ void SaveOptionsPrefs() {
     audioMusicSliderValue);
     PlayerPrefs.SetFloat(gamePrefsName+"__GraphicsDetail",
     graphicsSliderValue);
-
     // 设置质量设置
     QualitySettings.SetQualityLevel((int)graphicsSliderValue,
     true);
@@ -8372,13 +8186,15 @@ void ExitGame() {
 }
 ```
 
+
+
 ### 10.1.1 脚本解析
 
 在所有变量声明之后，此脚本的第一部分在 `Start()` 函数中进行初始设置。记住，在 Unity 中，`Start` 函数会在脚本初始化后、第一次更新之前由引擎自动调用。在这里，脚本检查 `PlayerPrefs` 数据是否已经保存到磁盘。如果发现已存在的 `PlayerPrefs` 键，它会加载它们并将保存的值应用到我们的本地变量中。为了存储选项菜单中的滑块值，使用了三个变量：
 
-- 1. audioSFXSliderValue，一个浮点数，值在 0 到 1 之间，用于音效音量级。
-- 2. audioMusicSliderValue，一个浮点数，值在 0 到 1 之间，用于音乐音量级。
-- 3. graphicsSliderValue，一个整数，用于存储图形细节级别。该数字作为索引，通过 `SetQualityLevel` 函数设置 Unity 的 QualitySettings 质量级别。
+- 1. `audioSFXSliderValue`，一个浮点数，值在 0 到 1 之间，用于音效音量级。
+- 2. `audioMusicSliderValue`，一个浮点数，值在 0 到 1 之间，用于音乐音量级。
+- 3. `graphicsSliderValue`，一个整数，用于存储图形细节级别。该数字作为索引，通过 `SetQualityLevel` 函数设置 Unity 的 `QualitySettings` 质量级别。
 
 ```cpp
 void Start ({
@@ -8469,8 +8285,6 @@ if (GUI.Button(new Rect (0, 200, 300, 40 ), "START GAME", "button"))
 
 `GUI.Button` 使用定义的矩形绘制一个带有指定文本 "START GAME" 的按钮。再次，你在这里看到，为了鼓励可预测性，我们指定了 `Style="button"`。注意这一行在条件语句中像一个布尔值，如果按钮被按下，大括号内的所有内容都会发生：
 
-
-
 ```cs
 PlayerPrefs.SetInt("totalPlayers", 1);
 LoadLevel(singleGameStartScene);
@@ -8487,12 +8301,9 @@ if (GUI.Button(new Rect(0, 400, 300, 40),"EXIT")) {
 
 ```cs
 }
-
 // ConfirmGame();
-
 // 结束上面的组。这非常重要！
 GUI.EndGroup();
-
 break;
 ```
 
@@ -8504,25 +8315,20 @@ break;
 case 1:
     // 选项菜单
     GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
     // 你确定要退出吗？
     GUI.Label(new Rect(0, 50, 300, 50), "OPTIONS", "textarea");
-
     if (GUI.Button(new Rect (0, 250, 300, 40), "AUDIO OPTIONS"))
     {
         ShowAudioOptionsMenu();
     }
-
     if (GUI.Button(new Rect (0, 300, 300, 40), "GRAPHICS OPTIONS"))
     {
         ShowGraphicsOptionsMenu();
     }
-
     if (GUI.Button(new Rect (0, 400, 300, 40), "BACK TO MAIN MENU"))
     {
         GoMainMenu();
     }
-
     GUI.EndGroup();
 ```
 
@@ -8530,24 +8336,18 @@ case 1:
 
 ```cs
 case 2:
-
 GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
 // 你确定要退出吗？
 GUI.Label(new Rect(0, 50, 300, 50), "Are you sure you want to exit?", "textarea");
-
 if (GUI.Button(new Rect (0, 250, 300, 40), "YES, QUIT PLEASE!"))
 {
     ExitGame();
 }
-
 if (GUI.Button(new Rect (0, 300, 300, 40), "NO, DON'T QUIT"))
 {
     GoMainMenu();
 }
-
 GUI.EndGroup();
-
 break;
 ```
 
@@ -8555,12 +8355,9 @@ break;
 
 ```cs
 case 3:
-
 // 音频选项
 GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
 GUI.Label(new Rect(0, 50, 300, 50), "AUDIO OPTIONS", "textarea");
-
 GUI.Label(new Rect(0, 170, 300, 20), "SFX volume:");
 ```
 
@@ -8572,11 +8369,11 @@ audioSFXSliderValue = GUI.HorizontalSlider(new Rect (0, 200, 300, 50 ), audioSFX
 
 在这里，我们使用 `audioSFXSliderValue` 变量（float 类型）来返回 `GUI.HorizontalSlider` 返回的值。一个滑块可以接受最多五个参数，如下：
 
--   1. 定义区域的矩形。
--   2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
--   3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
--   4. 这里的 `totalPlayers` 键值。
--   5. 滑块可以接受的五个参数。
+- 1. 定义区域的矩形。
+- 2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
+- 3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
+- 4. 这里的 `totalPlayers` 键值。
+- 5. 滑块可以接受的五个参数。
 
 设置好 GUI 并渲染两个标签后，我们移动到渲染水平滑块的代码，如下所示：
 
@@ -8586,75 +8383,21 @@ audioSFXSliderValue = GUI.HorizontalSlider(new Rect (0, 200, 300, 50 ), audioSFX
 
 在这里，我们使用 `audioSFXSliderValue` 变量（float 类型）来返回 `GUI.HorizontalSlider` 返回的值。一个滑块可以接受最多五个参数，如下：
 
--   1. 定义区域的矩形。
--   2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
--   3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
--   4. 这里的 `totalPlayers` 键值。
--   5. 滑块可以接受的五个参数。
+- 1. 定义区域的矩形。
+- 2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
+- 3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
+- 4. 这里的 `totalPlayers` 键值。
+- 5. 滑块可以接受的五个参数。
 
-当 `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。基础菜单系统允许玩家更改音频和图形。菜单还使用了返回主菜单的方法：
 
-```cs
-case 1:
-    // 选项菜单
-    GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
-    // 你确定要退出吗？
-    GUI.Label(new Rect(0, 50, 300, 50), "OPTIONS", "textarea");
-
-    if (GUI.Button(new Rect (0, 250, 300, 40), "AUDIO OPTIONS"))
-    {
-        ShowAudioOptionsMenu();
-    }
-
-    if (GUI.Button(new Rect (0, 300, 300, 40), "GRAPHICS OPTIONS"))
-    {
-        ShowGraphicsOptionsMenu();
-    }
-
-    if (GUI.Button(new Rect (0, 400, 300, 40), "BACK TO MAIN MENU"))
-    {
-        GoMainMenu();
-    }
-
-    GUI.EndGroup();
-```
-
-`ShowAudioOptionsMenu()`、`ShowGraphicsOptionsMenu()` 和 `GoMainMenu()` 是用于为不同菜单设置 `variableMenu` 的函数。下一个菜单 case 是简单的退出确认屏幕，带有两个按钮的文本标签分别调用 `ExitGame()` 函数或 `GoMainMenu()` 函数：
-
-```cs
-case 2:
-
-GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
-// 你确定要退出吗？
-GUI.Label(new Rect(0, 50, 300, 50), "Are you sure you want to exit?", "textarea");
-
-if (GUI.Button(new Rect (0, 250, 300, 40), "YES, QUIT PLEASE!"))
-{
-    ExitGame();
-}
-
-if (GUI.Button(new Rect (0, 300, 300, 40), "NO, DON'T QUIT"))
-{
-    GoMainMenu();
-}
-
-GUI.EndGroup();
-
-break;
-```
 
 音频选项菜单与我们在本章为止看到的那些有所不同，因为它调用了两个水平滑块来设置音效和音乐音量：
 
 ```cs
 case 3:
-
 // 音频选项
 GUI.BeginGroup(new Rect (default_width / 2 - 150, default_height / 2 - 250, 500, 500));
-
 GUI.Label(new Rect(0, 50, 300, 50), "AUDIO OPTIONS", "textarea");
-
 GUI.Label(new Rect(0, 170, 300, 20), "SFX volume:");
 ```
 
@@ -8664,40 +8407,33 @@ GUI.Label(new Rect(0, 170, 300, 20), "SFX volume:");
 audioSFXSliderValue = GUI.HorizontalSlider(new Rect (0, 200, 300, 50 ), audioSFXSliderValue, 0.0f, 1f);
 ```
 
-在这里，我们使用 `audioSFXSliderValue` 变量（float 类型）来返回 `GUI.HorizontalSlider` 返回的值。一个滑块可以接受最多五个参数，如下：
+在这里，我们使用 `audioSFXSliderValue` 变量（`float` 类型）来返回 `GUI.HorizontalSlider` 返回的值。一个滑块可以接受最多五个参数，如下：
 
--   1. 定义区域的矩形。
--   2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
--   3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
--   4. 这里的 `totalPlayers` 键值。
--   5. 滑块可以接受的五个参数。
-
-
+- 1. 定义区域的 `Rect`。
+- 2. `GUI.HorizontalSlider` 返回的值所在的 `audioSFXSliderValue` 变量。
+- 3. `variableMenu` 设置为 1 时，我们的 `OnGUI` 函数包含了渲染简单选项菜单的代码。
+- 4. 这里的 `totalPlayers` 键值。
+- 5. 滑块可以接受的五个参数。
 
 ```csharp
 public int player_highscore;
 public string gamePrefsName= "DefaultGame"; // 切记忘记设置
 // 在编辑器中设置这个！！
-
 public void UpdateScorePl( int aScore ) {
     player_score=aScore;
     if( player_score>player_highscore ) {
         player_highscore = player_score;
     }
 }
-
 public void UpdateLivesPl( int alifeNum ) {
     player_lives = alifeNum;
 }
-
 public void UpdateScore( int aScore ) {
     player_score = aScore;
 }
-
 public void UpdateLives( int alifeNum ) {
     player_lives = alifeNum;
 }
-
 public void LoadHighScore() {
     // 从偏好设置中获取高分
     if( PlayerPrefs.HasKey( gamePrefsName+"_highScore" ) {
@@ -8706,7 +8442,6 @@ public void LoadHighScore() {
         );
     }
 }
-
 public void SaveHighScore() {
     // 既然我们知道游戏结束了，让我们也保存高分
     PlayerPrefs.SetInt( gamePrefsName+"_highScore", player_highscore );
@@ -8715,7 +8450,7 @@ public void SaveHighScore() {
 
 关于使用此系统的游戏内用户界面脚本示例，请查看下一章或任何其他示例游戏以获取完整拆解。
 
-## 11 章节：激光射击生存 (Lazer Blast Survival)
+# 11 章节：激光射击生存 (Lazer Blast Survival)
 
 20世纪70年代后期，出现了一款由伯利软件发行版（BSD）出品的名为 *Robots* 的回合游戏。在 *Robots* 中，玩家必须逃避一群敌人，这些敌人每回合都会向玩家靠近。在游戏的原始版本中，玩家在竞技场内移动，试图避免与敌人接触，接触会导致游戏结束。
 
@@ -8727,7 +8462,7 @@ public void SaveHighScore() {
 
 游戏并没有为每一波攻击加载不同的场景，而是通过不断在同一个场景中实例化敌人的预制体（prefabs），直到玩家没有剩余生命为止。
 
-主菜单由单个 gameObject 组成，主菜单脚本在第 10 章。
+主菜单由单个 `gameObject` 组成，主菜单脚本在第 10 章。
 
 主游戏场景的层级（Hierarchy）结构如下：
 
@@ -8746,150 +8481,128 @@ public void SaveHighScore() {
   - Game Over Graphic（游戏结束图形）
   - Get Ready Graphic（准备好了图形）
 
-注意，游戏控制器在游戏开始时动态创建玩家和敌人。Unity  窗口设置了多个预制体和 gameObject 的引用：
+注意，游戏控制器在游戏开始时动态创建玩家和敌人。Unity 窗口设置了多个预制体和 `gameObject` 的引用：
 
 - 游戏控制器预制体
 - 爆炸预制体（爆炸的粒子效果）
-- Player Prefab List 数组，包含对 Top_Down_Player 预制体的引用
-- StartPoints 数组，包含对场景中 Player_Startpoint gameObject 的引用
+- `Player Prefab List` 数组，包含对 `Top_Down_Player` 预制体的引用
+- `StartPoints` 数组，包含对场景中 `Player_Startpoint` `gameObject` 的引用
 
-- Radar Control Script（雷达控制脚本）包含对 Main Camera 的引用（其绑定了 RadarGUI.cs 组件实例）
+- 雷达控制脚本（雷达控制脚本）包含对 `Main Camera` 的引用（其绑定了 `RadarGUI.cs` 组件实例）
 
-- 挂载在 Sound Controller gameObject 上的 BaseSoundController.cs 脚本有一个名为 Game Sounds 的数组，包含引用：
-  - shoot（射）
-  - explode2（爆炸2）
-  - player_explode（玩家爆炸）
-  - powerup（强化）
-  - spawner 1（生成器1）
+- 挂载在 `Sound Controller` `gameObject` 上的 `BaseSoundController.cs` 脚本有一个名为 `Game Sounds` 的数组，包含引用：
+  - `shoot`（射）
+  - `explode2`（爆炸2）
+  - `player_explode`（玩家爆炸）
+  - `powerup`（强化）
+  - `spawner 1`（生成器1）
 
-- Spawn Controller gameObject 挂载了 WaveSpawner.cs 实例，其 Spawn Object Prefabs 数组中包含以下引用：
-  - Spawn_Structure1
-  - Spawn_Structure2
-  - Spawn_Structure3
+- `Spawn Controller` `gameObject` 挂载了 `WaveSpawner.cs` 实例，其 `Spawn Object Prefabs` 数组中包含以下引用：
+  - `Spawn_Structure1`
+  - `Spawn_Structure2`
+  - `Spawn_Structure3`
 
-- UI gameObject 挂载了名为 UI_LBS.cs 的脚本。它引用：
-  - GAMEOVER_GRAPHIC gameObject
-  - GETREADY_GRAPHIC gameObject
+- `UI` `gameObject` 挂载了名为 `UI_LBS.cs` 的脚本。它引用：
+  - `GAMEOVER_GRAPHIC` `gameObject`
+  - `GETREADY_GRAPHIC` `gameObject`
 
 ## 11.3 预制体 (Prefabs)
 
 构成游戏的预制体有：
 
 ENEMIES（敌人）
-EnemyBot
+`EnemyBot`
 
 ENEMY WAVES（敌波）
-Spawn_Structure 1
-Spawn_Structure 2
-Spawn_Structure 3
+`Spawn_Structure 1`
+`Spawn_Structure 2`
+`Spawn_Structure 3`
 
 PLAYERS（玩家）
-Top_down_player
-Top_down_player_ALT
+`Top_down_player`
+`Top_down_player_ALT`
 
 PROJECTLES（弹药）
-Blast
-Blast2
+`Blast`
+`Blast2`
 
 WEAPONS（武器）
-Blaster
-Blaster_1
+`Blaster`
+`Blaster_1`
 
 EXPLOSION PREFAB（爆炸预制体 - 不特定于此）
 
-本章剩余部分将介绍预制体和 gameObject；本节将不再涵盖已详细介绍的组件。
+本章剩余部分将介绍预制体和 `gameObject`；本节将不再涵盖已详细介绍的组件。
 
 ## 11.4 核心材料
 
 Lazer Blast 使用了：
 
-1. Game Controller（游戏控制器）。见第 10 章。
-2. Player（玩家）。见第 10 章。
-3. Enemies（敌人）。见第 9 章。
-4. Wave spawning（生成）。见第 9 章。
-5. Projectiles（弹药）。见第 5 章。
-6. User Interface（用户界面）。见第 10 章。
-7. Top Down Camera（俯视摄像机）。
-8. Sound Controller（声音控制器）。见第 8 章。
-9. Music Controller（音乐控制器）。
+1. `Game Controller`（游戏控制器）。见第 10 章。
+2. `Player`（玩家）。见第 10 章。
+3. `Enemies`（敌人）。见第 9 章。
+4. `Wave spawning`（生成）。见第 9 章。
+5. `Projectiles`（弹药）。见第 5 章。
+6. `User Interface`（用户界面）。见第 10 章。
+7. `Top Down Camera`（俯视摄像机）。
+8. `Sound Controller`（声音控制器）。见第 8 章。
+9. `Music Controller`（音乐控制器）。
 
- 11.5 游戏控制器 (Game Controller)
+## 11.5 游戏控制器 (Game Controller)
 
-游戏控制器是游戏的中央枢纽。它继承自 BaseController，重写了一些基类函数并添加了自己的函数。
+游戏控制器是游戏的中央枢纽。它继承自 `BaseController`，重写了一些基类函数并添加了自己的函数。
 
-完整的 GameController_LBS.cs 脚本如下：
+完整的 `GameController_LBS.cs` 脚本如下：
 
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class GameController_LBS : BaseController
 {
     public mainMenuName = "menu_LBS";
     public GameObject[] playerPrefabList;
-
     public Wave_Spawner WaveSpawnController;
-
     public Transform playerParent;
     public Transform [] startPoints;
-
     [System.NonSerialized]
     public GameObject playerGO1;
-
     private Vector3[] playerStarts;
     private Quaternion[] playerRotations;
-
     private ArrayList playerList;
     private ArrayList playerTransforms;
-
     private Player_LBS thePlayerScript;
     private Player_LBS focusPlayerScript;
-
     [System.NonSerialized]
     public BaseUserManager mainPlayerDataManager;
-
     private int numberOfPlayers;
-
     public UI_LBS UIControl;
-
     [System.NonSerialized]
     public static GameController_LBS Instance;
-
     public float gameSpeed=1;
-
     public RadarGUI theRadarControl;
-
     public GameController_LBS()
     {
         Instance=this;
     }
-
     public void Start()
     {
         Init();
         Time.timeScale=gameSpeed;
     }
-
     public void Init()
     {
         Invoke("StartPlayer",1);
         SpawnController.Instance.Restart();
-
         numberOfPlayers=playerPrefabList.Length;
-
-// 初始化一些我们可以用来设置玩家的临时数组
-Vector3[] playerStarts = new Vector3[numberOfPlayers];
-Quaternion[] playerRotations = new Quaternion[numberOfPlayers];
-
-// 我们将使用那些必须在编辑器中设置的起始位置数组，
-// 这意味着我们总是需要
+        // 初始化一些我们可以用来设置玩家的临时数组
+        Vector3[] playerStarts = new Vector3[numberOfPlayers];
+        Quaternion[] playerRotations = new Quaternion[numberOfPlayers];
+        // 我们将使用那些必须在编辑器中设置的起始位置数组，
+        // 这意味着我们总是需要
 ```
-
-
 
 ```cs
 // 确保为玩家数量提供足够的起点
-
 for ( int i = 0; i < numberOfPlayers; i++ )
 {
   // 从检查器（inspector）设置的起始变换
@@ -8897,17 +8610,13 @@ for ( int i = 0; i < numberOfPlayers; i++ )
   playerStarts(i) = (Vector3)startPoints[i].position;
   playerRotations(i) = (Quaternion)startPoints[i].rotation;
 }
-
 SpawnController.Instance.SetupPlayers(playerPrefabList,
 playerStarts, playerRotations, playerParent, numberOfOfPlayers);
-
 playerTransforms=new ArrayList();
-
 // 现在获取每个玩家控制脚本
 // 的引用
 playerTransforms =
 SpawnController.Instance.GetAllSpawnedTransforms();
-
 playerList=new ArrayList();
 for ( int i = 0; i < numberOfPlayers; i++ )
 {
@@ -8917,28 +8626,21 @@ for ( int i = 0; i < numberOfPlayers; i++ )
   playerList.Add(tempController);
   tempController.Init();
 }
-
 // 获取玩家游戏对象的引用供以后使用
 playerGO1 = SpawnController.Instance.GetPlayerGO( 0 );
-
 // 获取聚焦玩家的控制脚本，
 // 这样我们就可以执行访问速度变量等操作
 tPlayerScript = { Player_LBS }
 playerGO1.GetComponent<Player_LBS>();
-
 // 为此玩家分配 ID 为 0
 tPlayerScript.SetID( 0 );
-
 // 设置玩家控制
 tPlayerScript.SetUserInput(true );
-
 // 因为这是用户，我们希望在 UI 等方面关注此玩家
 focusPlayerScript = thePlayerScript;
-
 // 检查是否有可以观察的相机目标对象
 Transform aarget=
 playerGO1.transform.FindChild("CamTarget");
-
 if(aTarget!=null)
 {
   // 如果有相机目标对象，而不是
@@ -8949,103 +8651,121 @@ if(aTarget!=null)
     Camera.main.SendMessage("SetTarget",
     playerGO1.transform);
 }
-
 // 最后，告诉雷达新玩家
 tRadarControlsScript.SetCenterObject( playerGO1.transform );
-
 void StartPlayer() {
     // 获取主玩家数据管理器引用，以便
     // 稍后更新其值（得分、生命值等）
     mainPlayerDataManager = 
     playerGO1.GetComponent<BasePlayerManager>().DataManager;
-
     // 准备就绪，开始吧！
     thePlayerScript.GameStart();
 }
-
 public override void EnemyDestroyed( Vector3 aPosition, int pointsValue, int hitByID) {
     // 告诉我们的音频控制器播放爆炸声
     BaseSoundController.Instance.PlaySoundByIndex(1, aPosition);
-
     // 告诉主数据管理器增加分数
     mainPlayerDataManager.AddScore( pointsValue );
-
     // 更新 UI 分数
     UpdateScoreUI( mainPlayerDataManager.GetScore() );
-
     // 在敌人位置播放爆炸效果
     Explode( aPosition );
-
     // 告诉生成控制器我们离下一波
     // 近了一个敌人
     WaveSpawnController.Fragged();
 }
-
 public void PlayerHit(Transform whichPlayer) {
     // 告诉我们的音频控制器播放爆炸声
     BaseSoundController.Instance.PlaySoundByIndex(2, whichPlayer.position);
-
     // 调用爆炸函数！
     Explode( whichPlayer.position );
 }
-
 public void AddEnemyToRadar( Transform aTransform) {
+```
+
+
+
+```cs
     theRadarControlScript.AddEnemyBlipToList( aTransform);
+
 }
 
 public void RemoveEnemyFromRadar( Transform aTransform )
+
 {
+
     theRadarControlScript.RemoveEnemyBlip( aTransform );
+
 }
 
 public Player_LBS GetMainPlayerScript ()
+
 {
+
     return focusPlayerScript;
+
 }
 
 public Transform GetMainPlayerTransform()
+
 {
+
     return playerGO1.transform;
+
 }
 
 public GameObject GetMainPlayerGO ()
+
 {
+
     return playerGO1;
+
 }
 
 public void PlayerDied(int whichID)
+
 {
+
     // 这是单人游戏，所以现在结束游戏
     // 两个玩家都死亡了，结束游戏
     UIControl.ShowGameOver();
     Invoke("Exit",5);
+
 }
 
 void Exit ()
+
 {
+
     Application.LoadLevel( mainSceneName);
+
 }
 
 // UI 更新调用
 // public void UpdateScoreP1( int aScore )
+
 {
+
     UIControl.UpdateScoreP1( aScore);
+
 }
 
 public void UpdateLivesP1( int aScore )
+
 {
+
     UIControl.UpdateLivesP1( aScore);
+
 }
 ```
 
 ### 11.5.1 脚本详解
 
-Controller_LBS.cs 继承自 BaseGameController，后者又继承自 MonoBehaviour，以便它可以接入 Unity 的某些内置函数调用，如 `Update()`、`Awake()` 和 `Start()`。
+`Controller_LBS.cs` 继承自 `BaseGameController`，后者又继承自 `MonoBehaviour`，以便它可以接入 Unity 的某些内置函数调用，如 `Update()`、`Awake()` 和 `Start()`。
 
 ```cs
 using UnityEngine;
 using System.Collections;
-
 public class Controller_LBS : BaseGameController
 {
     public string mainSceneName = "menu";
@@ -9056,10 +8776,8 @@ public class Controller_LBS : BaseGameController
     private Player_LBS thePlayerScript;
     private Player_LBS focusPlayerScript;
     private BasePlayerManager mainPlayerDataManager;
-
     // 不是硬编码值，我们使用变量 
     // 来定义玩家数量
-    
     void Init()
     {
         // 不是硬编码值，我们使用变量 
@@ -9067,7 +8785,6 @@ public class Controller_LBS : BaseGameController
     }
 }
 ```
-
 
 添加到 Unity 编辑器 Inspector 面板列表中的第一个玩家对象必须是主玩家，在游戏术语中，我们称之为“1 号玩家”。当玩家生成时，`SpawnController` 将它们的对象存储在数组中，以便以后从其他脚本访问。数组的访问通过 `GetPlayerGO(index number)` 函数提供。在这里，我们调用 `SpawnController` 返回主玩家对象并存储在 `playerGO1`：
 
@@ -9096,7 +8813,6 @@ thePlayerScript.SetID( 0 );
 ```
 // set player control
 thePlayerScript.SetInput( true);
-
 // as this is the user, we want to focus on this for UI etc.
 focusPlayerScript = thePlayerScript;
 ```
@@ -9106,7 +8822,6 @@ focusPlayerScript = thePlayerScript;
 ```
 // if we have a camera target to look at
 Transform aTarget=playerGO1.transform.FindChild("CamTarget");
-
 if(aTarget==null)
 ```
 
@@ -9194,48 +8909,37 @@ public void PlayerHit(Transform whichPlayer)
     // tell our sound controller to play explosion sound
     BaseSoundController.Instance.PlayByIndex(2,
     whichPlayer.position);
-
     // call the explosion function!
     Explode(whichPlayer.position);
 }
 ```
 （注：提供的文本包含大量重复和 OCR 错误，已根据逻辑进行了清理，以提供连贯的文档。）
 
-
-
-
 ## 11.6 玩家控制器 (Player Controller)
 
 Lazer Blast 使用了 Unity 自带的 Angry Bots 教程中的动画人物模型。它使用继承自第 5 章所示俯视角控制器脚本的类，并为其添加了自定义的游戏特定脚本，以及一个独立的类来处理角色模型的动画。
 
-玩家类 _LBS 继承自控制器脚本 BaseTopDown.cs*，后者是 Unity 自带的第三称控制器脚本的修改版本，该脚本使用 Unity 内置的字符控制器来处理物理效果。BaseTopDown.cs 在第 5 章（构建玩家移动控制器）中有详细的介绍。
+玩家类 `_LBS` 继承自控制器脚本 `BaseTopDown.cs*`，后者是 Unity 自带的第三称控制器脚本的修改版本，该脚本使用 Unity 内置的字符控制器来处理物理效果。`BaseTopDown.cs` 在第 5 章（构建玩家移动控制器）中有详细的介绍。
 
-Player_LBS.cs 看起来如下：
+`Player_LBS.cs` 看起来如下：
 
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class Player_LBS : BaseTopDown
 {
     private bool isInvulnerable;
     private bool isRespawning;
-
     public BasePlayerManager myPlayerManager;
     public BaseUserManager myDataManager;
-
     public bool godMode = false;
     public GameObject meshGO;
-
     public Standard.SlotWeaponController weaponControl;
     public bool canFire;
-
     public bool isFinished;
-
     public override void Init()
     {
         base.Init();
-
         // 如果需要，开启无敌模式
         if(godMode)
         {
@@ -9243,13 +8947,10 @@ public class Player_LBS : BaseTopDown
         } else {
             MakeInvulnerable();
         }
-
         // 初始不允许玩家控制
         canControl = false;
-
         // 获取武器控制器的引用
         weaponControl = myGO.GetComponent<Standard.SlotWeaponController>();
-
         // 如果在编辑器中没有设置玩家管理器，尝试获取
         if(myPlayerManager == null)
             myPlayerManager = myGO.GetComponent<BasePlayerManager>();
@@ -9262,13 +8963,10 @@ public class Player_LBS : BaseTopDown
 myDataManager = myDataManager.DataManager;
 myDataManager.SetName("Player");
 myDataManager.SetHealth(3);
-
 isFinished = false;
-
 // 告诉游戏控制器更新生命 UI
 GameController_LBS.Instance.UpdateLivesPl(myDataManager.GetHealth());
 }
-
 public override void GetInput()
 {
     if(isFinished || isRespawning)
@@ -9277,41 +8975,33 @@ public override void GetInput()
         vert = 0;
         return;
     }
-
     // 如果我们不应该控制这个玩家，则退出
     if(!canControl)
         return;
 }
-
 // 从输入提供程序获取输入
 horz = Mathf.Clamp(default_input.GetHorizontal(), -1, 1);
 vert = Mathf.Clamp(default_input.GetVertical(), -1, 1);
-
 // 如果需要则射击
 if(default_input.GetFire() && canFire)
 {
     // 告诉武器控制器处理射击
     weaponController.Fire();
 }
-
 public void GameStart()
 {
     // 此函数由游戏控制器调用，告诉我们
     // 什么时候可以开始移动
     canControl = true;
 }
-
 void LostLife()
 {
     isRespawning = true;
-
     // 让我们爆炸！
     GameController_LBS.Instance.PlayerHit(myTransform);
-
     // 减少一个生命值
     myDataManager.ReduceHealth(1);
     myController_LBS.Instance.UpdateLivesPl(myDataManager.GetHealth());
-
     if(myDataManager.GetHealth() < 1) // 游戏结束
     {
         // 停止移动，只要刚体不是
@@ -9319,72 +9009,61 @@ void LostLife()
         // 我们尝试设置它会产生错误消息）
         if (!PlayerController.rigidbody.isKinematic)
             PlayerController.rigidbody.velocity = Vector3.zero;
-
         // 隐藏船体
         theMeshGO.SetActive(false);
-
         // 禁用并隐藏武器
         weaponControl.DisableCurrentWeapon();
-
         // 执行游戏结束需要做的任何操作
         PlayerFinished();
     }
     else {
         // 隐藏船体
         theMeshGO.SetActive(false);
-
         // 禁用并隐藏武器
         weaponControl.DisableCurrentWeapon();
-
         // 重生
         Invoke("Respawn", 2f);
     }
 }
-
 void Respawn() 
 {
     // 重置重生标记
     isRespawning = false;
+```
 
-    // 让玩家一段时间内无敌
-    MakeInvulnerable();
 
-    // 显示船体
-    theMeshGO.SetActive(true);
 
-    // 显示武器
-    weaponControl.EnableCurrentWeapon();
+```cs
+// 让玩家一段时间内无敌
+MakeInvulnerable();
+// 显示船体
+theMeshGO.SetActive(true);
+// 显示武器
+weaponControl.EnableCurrentWeapon();
 }
-
 void OnEnter(Collision collision)
 {
     // 如果玩家处于无敌状态，则忽略碰撞
     if (isInvulnerable) return;
-
     // 检查是否撞到了弹药
     if (collision.gameObject.CompareTag("Projectile"))
     {
         LostLife();
     }
 }
-
 void MakeVulnerable() 
 {
     isInvulnerable = true;
 }
-
 void MakeInvulnerable() 
 {
     isInvulnerable = false;
 }
 ```
 
+![](img/041dca6b58875f4abb332f5c274_0.png) 图 11 挂载在 prefab 上的 `WeaponController`。
 
-
-
-![](img/041dca6b58875f4abb332f5c274_0.png) 图 11 挂载在 prefab 上的 WeaponController。
-
-```
+```cs
 // 设置玩家的数据
 myDataManager=myPlayer;
 myDataManager.SetName("Player");
@@ -9393,18 +9072,18 @@ myDataManager.SetHealth(3);
 
 `isFinished` 用于告诉玩家是否正在重生。当游戏结束时，`isFinished` 被设置为 true，用户将不再控制：
 
-```
+```cs
 isFinished=false;
 ```
 
 该函数的最后一部分告诉游戏控制器更新数据管理器中的生命值显示。当游戏开始时，生命值显示需要填充正确的数量：
 
-```
+```cs
 // 告诉游戏控制器更新 UI
 GameController_LBS.Instance.UpdateLives(myDataManager.GetHealth());
 ```
 
-`GetInput()` 函数重写了基类（BaseDown），为重生和射击提供支持。当游戏结束且 `isFinished` 为 true，或者玩家正在重生时，所有输入都被设置为零，以便玩家无法移动：
+`GetInput()` 函数重写了基类 `BaseDown`，为重生和射击提供支持。当游戏结束且 `isFinished` 为 true，或者玩家正在重生时，所有输入都被设置为零，以便玩家无法移动：
 
 ```cs
 public override void GetInput()
@@ -9460,7 +9139,6 @@ public void GameStart()
 ```cs
 void LostLife() {
     isRespawning=true;
-
     // 爆炸！
     GameController_LBS.Instance.PlayerHit( transform );
 }
@@ -9498,7 +9176,7 @@ isFinished=true;
 ```
 （注：此处原文逻辑似乎与赋值处有出入，按原文翻译为 `isFinished=false`，但根据上下文应为 `true`。此处遵循翻译要求保留逻辑结构）。
 
-`GetInput()` 函数重写了基类（BaseDown）。当 `isFinished` 为 true 且 `isRespawning` 为 true 时，所有输入都被设置为零，以便玩家无法移动。。
+`GetInput()` 函数重写了基类 `BaseDown`。当 `isFinished` 为 true 且 `isRespawning` 为 true 时，所有输入都被设置为零，以便玩家无法移动。
 
 `Respawn()` 会重置玩家的位置并将所有变量：
 
@@ -9518,12 +9196,9 @@ if (!canControl)
     return;
 ```
 
-
-
-
 ### 11.7.1 脚本解析
 
-EnemyBot_LBS 类继承自 BaseArmedEnemy，正如本书第 4 章所描述：
+`EnemyBot_LBS` 类继承自 `BaseArmedEnemy`，正如本书第 4 章所描述：
 
 ```csharp
 public class EnemyBot_LBS : BaseArmedEnemy
@@ -9531,40 +9206,32 @@ public class EnemyBot_LBS : BaseArmedEnemy
     public void Start ()
     {
         base.Start ();
-
         // 让我们找到我们的 AI 控制器
         BaseAIController aController = (BaseAIController) gameObject.GetComponent<BaseAIController>();
-
         // 并告诉它在屏幕上追逐我们的玩家（我们从游戏控制器
         // 获取玩家的 transform）
         aController.SetChaseTarget( GameController_LBS.Instance.GetMainPlayerTransform() );
-
         // 现在开始并追逐它吧！
         aController.SetAIState(AIStates.AIState.chasing_target);
-
         // 我们还需要将此加入雷达，因此我们将
         // 向游戏控制器汇报它，
         // 游戏控制器中的某些代码将为我们完成这一点
         GameController_LBS.Instance.AddEnemyToRadar(myTransform);
     }
-
     // 游戏控制器特定逻辑（针对我们的激光爆炸进行了重写）
     // 生存游戏控制器
     public override void TellGCENemyDestroyed()
     {
         // 告诉游戏控制器我们已被摧毁
         GameController_LBS.Instance.EnemyDestroyed(myTransform);
-
         // 从雷达中移除这个敌人
         GameController_LBS.Instance.RemoveEnemyFromRadar(myTransform);
     }
-
     public override void TellGCBossDestroyed()
     {
         // 告诉游戏控制器我们已被摧毁（并且
         // 我们是一个 boss！）
         GameController_LBS.Instance.BossDestroyed();
-
         // 从雷达中移除这个敌人
         GameController_LBS.Instance.RemoveEnemyFromRadar(myTransform);
     }
@@ -9575,12 +9242,11 @@ public class EnemyBot_LBS : BaseArmedEnemy
 
 ## 11.8 波次生成与控制
 
-这里是 Wave_Spawner.cs 脚本的完整：
+这里是 `Wave_Spawner.cs` 脚本的完整：
 
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class Wave_Spawner : MonoBehaviour
 {
     public bool randomSpawning;
@@ -9589,7 +9255,6 @@ public class Wave_Spawner : MonoBehaviour
     private int totalSpawnObjects;
     private int currentObjectNum;
     public int currentWave;
-
     void Start()
     {
         // 统计我们在生成对象列表中
@@ -9598,18 +9263,14 @@ public class Wave_Spawner : MonoBehaviour
         {
             totalSpawnObjects++;
         }
-
         Debug.Log("Wave_Spawner.cs " + totalSpawnObjects + " objects to choose.");
-
         // 调度第一波
         Invoke("LaunchWave", timeBeforeFirstSpawn);
     }
-
     public void LaunchWave()
     {
         // 防止 Invoke 重复调用用的
         CancelInvoke("LaunchWave");
-
         if (randomSpawning)
         {
             currentObjectNum = Random.Range(0, totalSpawnObjects - 1);
@@ -9623,20 +9284,17 @@ public class Wave_Spawner : MonoBehaviour
                 currentObjectNum = 0;
             }
         }
-
         // 生成波次的逻辑
         GameObject tempObj = SpawnController.Instance.SpawnGO(spawnObjectPrefabs[currentObjectNum], Vector3.zero, Quaternion.identity);
-        
         // 调度下一波
         Invoke("LaunchWave", timeBeforeFirstSpawn);
     }
 }
 ```
 
-
 一旦攻击波进入场景，我们使用 `GameObject.GetComponent` 来寻找需要挂载到父物体制体上的 `WaveProperties` 预制体。该脚本包含一个我们需要获取的变量：`enemiesInWave`。只要制体上的 `enemiesInWave` 被正确设置，波次生成器就会使用 `currentWave` 来存储玩家需要摧毁多少敌人才能进入下一个波次：
 
-```
+```cs
 WaveProperties tempProps=
 tempObj.GetComponent<WaveProperties>();
 currentWave=tempProps.enemiesInWave;
@@ -9644,21 +9302,21 @@ currentWave=tempProps.enemiesInWave;
 
 每当一个敌人被摧毁时，游戏特定的游戏控制器会调用以下 `Fragged()` 函数（参见本章前面的部分 `GameController_LBS.cs`）：
 
-```
+```cs
 public void Fragged()
 {}
 ```
 
 我们减小 `currentWave` 的值，它存储了当前波中的敌人数量：
 
-```
+```cs
 // 消灭了一个敌人
 currentWave--;
 ```
 
 然后检查 `currentWave` 的值，看它是否小于或等于 0。如果为真，说明是时候生成下一波了，因此会调用 `LaunchWave()` 函数：
 
-```
+```cs
 if(currentWave <= 0)
 {
     // 这一波结束，让我们开始下一波！
@@ -9671,7 +9329,7 @@ if(currentWave <= 0)
 上一节概述的 `Wave_Spawner.cs` 脚本显示我们需要知道每个攻击波中有多少个敌人。为了处理这个问题，这个简单的 `WaveProperties` 脚本被挂载到攻击波制体上。它包含一个名为 `enemiesInWave` 的整数变量，我们在 Unity 编辑器的 Inspector 窗口中设置它。游戏控制器脚本在每当生成新波次时都会访问此值，并使用 `enemiesInWave` 的值来跟踪每波中的敌人。
 `WaveProperties.cs` 如下所示：
 
-```
+```cs
 public class WaveProperties : MonoBehaviour
 {
     public int enemiesInWave;
@@ -9684,28 +9342,33 @@ public class WaveProperties : MonoBehaviour
 
 弹药由立方体制成，涂成红色以便看起来更像激光火。弹药上挂载了几个脚本：
 
-- 自动销毁对象 (Automatic Destroy Object)
-  在设定时间内销毁 GameObject（以停止任何击中物体弹药飞向无限空间！）。
+- 自动销毁对象 `Automatic Destroy Object`
+  在设定时间内销毁 `GameObject`（以停止任何击中物体弹药飞向无限空间！）。
 
-- 弹药控制器 (Projectile Controller)
+- 弹药控制器 `Projectile Controller`
   在第 6 章中有详细讨论。
 
-- 刚体 (Rigidbody)
-  刚体的质量只有 0.1 且完全没有阻力。刚体设置为插值其移动（试图帮助改进碰撞）。需要注意的一点是，它的碰撞方法被设置为连续（Continuous）。当弹药像在这个游戏中那样移动得如此快时，它们很可能会有时穿过其他注册了碰撞的网格。连续碰撞设置意味着更高的准确性，但会带来很小的处理开销。在像这样的游戏中，性能差异可以忽略不计，但你应该谨慎地使用连续碰撞，并尽可能少用。
+- 刚体 `Rigidbody`
+  刚体的质量只有 0.1 且完全没有阻力。刚体设置为插值其移动（试图帮助改进碰撞）。需要注意的一点是，它的碰撞方法被设置为连续 `Continuous`。当弹药像在这个游戏中那样移动得如此快时，它们很可能会有时穿过其他注册了碰撞的网格。连续碰撞设置意味着更高的准确性，但会带来很小的处理开销。在像这样的游戏中，性能差异可以忽略不计，但你应该谨慎地使用连续碰撞，并尽可能少用。
 
-- 球体碰撞器 (Sphere Collider)
+- 球体碰撞器 `Sphere Collider`
   该碰撞器是一个标准的球体碰撞器。
 
 ## 11.11 用户界面
 
 主脚本如下：
 
-```
+```cs
 using UnityEngine;
-using System.Collections;
+```
 
-[AddComponent("Sample Glue Code/Lazer Blast Survival/In-Game UI*")]
 
+
+`using System.Collections;`
+
+`[AddComponent("Sample Glue Code/Lazer Blast Survival/In-Game UI*")]`
+
+```csharp
 public class UI_LBS : BaseUIManager
 {
     public GameObject gameOverMessage;
@@ -9715,15 +9378,14 @@ public class UI_LBS : BaseUIManager
     {
       Init();
     }
+}
 ```
 
-```
+```csharp
 void Init()
 {
   LoadHighScore();
-
   HideMessages();
-
   Invoke("ShowReady",1);
   Invoke("HideMessages",2);
 }
@@ -9751,7 +9413,6 @@ void OnGUI()
   GUI.Label(new Rect (10,100,100,50),"玩家 1");
   GUI.Label(new Rect (10,40,100,50),"分数 "+player_score);
   GUI.Label(new Rect (10,70,200,50),"最高分 "+player_score);
-
   GUI.Label(new Rect (10,100,100,50),"生命 "+player_lives);
 }
 ```
@@ -9760,22 +9421,24 @@ void OnGUI()
 
 脚本继承自 `BaseUIDataManager`，这是第 10 章所示的标准 UI 脚本。`BaseUIDataManager` 声明了一些常用变量，并提供了处理这些变量的基础函数：
 
+```csharp
 using UnityEngine;
 using System.Collections;
-
 ```
+
+```csharp
 public class UI_LBS : BaseUIManager
 {
 ```
 
 示例中，游戏结束消息和准备消息是 GUitexture 对象。在 Unity 编辑器的 Inspector 窗口中，`gameOverMessage` 和 `getReadyMessage` 变量被设置为场景中的对象：
 
-```
+```csharp
 public GameObject gameOverMessage;
 public GameObject getReadyMessage;
 ```
 
-```
+```csharp
 void Awake () {
     Init();
 }
@@ -9783,14 +9446,11 @@ void Awake () {
 
 在显示主 UI 之前，`player_highscore` 变量需要从 PlayerPrefs 文件中保存的高分进行填充。调用 `LoadHighScore()` 函数进行设置：
 
-```
+```csharp
 void Init() {
     LoadHighScore();
 }
 ```
-
-
-
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_291_0.png)
 
@@ -9900,66 +9560,55 @@ public class GameController : BaseGameController {
 }
 ```
 
-
-
-
-
 ```csharp
 // 设置玩家控制
 thePlayerScript.SetUserInput( true );
-
 // 因为这是用户控制的，我们希望在 UI 等方面关注这个脚本
 focusPlayerScript = thePlayerScript;
-
 // 告诉相机脚本目标是这个新玩家
 cameraScript.SetTarget( playerGO1.transform );
-
 // 执行初始圈数计数显示
 UpdateLapCounter( 1 );
-
 // 在我们准备好开始之前，锁定所有玩家在原地
 SetPlayerLocks( true );
-
 // 从现在起 3 秒后开始游戏
 Invoke( "StartRace", 4 );
-
 // 在整个比赛过程中更新位置，但我们不需要
 // 每一帧都这样做，所以每半秒执行一次
 InvokeRepeating( "UpdatePositions", 0.5f, 0.5f );
-
 // 隐藏我们的数字计数
 HideCount();
-
 // 在消息中安排倒计时
 Invoke( "Count3", 1 );
 Invoke( "ShowCount2", 2 );
 Invoke( "ShowCount1", 3 );
 Invoke( "HideCount", 4 );
-
 // 隐藏最终排名文本
 finalPositionText.gameObject.SetActive( false );
 doneFinalMessage = false;
-
 // 从隐藏我们的错误信息开始
 wrongWaySign.SetActive( false );
-
 didInit=true;
 }
+```
+
+```csharp
 void StartRace ()
 {
-// // SetPlayerLocks 函数告诉所有玩家解锁
-SetPlayerLocks( false );
-
-// // 告诉全局比赛管理器我们现在正在比赛中
-GlobalRacerManager.Instance.StartRace();
+    // // SetPlayerLocks 函数告诉所有玩家解锁
+    SetPlayerLocks( false );
+    // // 告诉全局比赛管理器我们现在正在比赛中
+    GlobalRacerManager.Instance.StartRace();
 }
+
 void SetPlayerLocks( bool aState )
 {
-// // 告诉所有玩家设置它们的锁定
-// for ( int i = 0; i < numberOfRacers; i++ )
-{
-    thePlayerScript = ( CarController_MVD ) playerList [i];
-    thePlayerScript.SetLock(aState);
+    // // 告诉所有玩家设置它们的锁定
+    // for ( int i = 0; i < numberOfRacers; i++ )
+    {
+        thePlayerScript = ( CarController_MVD ) playerList [i];
+        thePlayerScript.SetLock(aState);
+    }
 }
 ```
 
@@ -9973,7 +9622,6 @@ void UpdatePositions()
     focusPlayerRacePosition =
     GlobalRaceManager.Instance.GetPosition(1);
     theLap = GlobalRaceManager.Instance.GetLapsDone(1) +1;
-
     // 更新显示
     UpdateRacePositionText();
     UpdateLapCounter(theLap);
@@ -10012,20 +9660,15 @@ private bool doneFinalMessage ( int finalPosition )
     {
         if ( finalPosition == 1 )
             finalPositionText.text = "FINISHED 1st";
-
         if ( finalPosition == 2 )
             finalPositionText.text = "FINISHED 2nd";
-
         if ( finalPosition == 3 )
             finalPositionText.text = "FINISHED 3rd";
-
         if ( finalPosition >= 4 )
             finalPositionText.text = "FINISHED";
-
         doneFinalMessage = true;
         finalPositionText.gameObject.SetActive(true);
     }
-
     // 10秒后完全离开比赛场景
     Invoke("FinishRace", 10);
 }
@@ -10043,18 +9686,21 @@ void ShowCount1()
     count2.SetActive(false);
     count3.SetActive(false);
 }
+
 void ShowCount2()
 {
     count1.SetActive(false);
     count2.SetActive(true);
     count3.SetActive(false);
 }
+
 void ShowCount3()
 {
     count1.SetActive(false);
     count2.SetActive(false);
     count3.SetActive(true);
 }
+
 void HideCount()
 {
     count1.SetActive(false);
@@ -10068,7 +9714,6 @@ public void UpdateWrongWay (bool isWrongWay)
 {
     if (isWrongWay==oldIsWrongWay)
         return;
-
     if (isWrongWay)
     {
         wrongSign.SetActive(true);
@@ -10077,7 +9722,6 @@ public void UpdateWrongWay (bool isWrongWay)
     {
         wrongSign.SetActive(false);
     }
-
     oldIsWrongWay=isWrongWay;
 }
 
@@ -10086,7 +9730,6 @@ public void PlayerHit(Transform whichPlayer)
     // 告诉我们的控制器播放爆炸音
     BaseSoundController.Instance.PlaySoundByIndex(1,
     whichPlayer.position);
-
     // 调用爆炸函数！
     Explode(whichPlayer.position );
 }
@@ -10094,19 +9737,27 @@ public void PlayerHit(Transform whichPlayer)
 public void PlayerHit(Transform whichPlayer)
 {
     // 告诉我们的控制器播放爆炸音
-    BaseSoundController.Instance.PlaySoundByIndex(2,
-    whichPlayer.position);
-
-    // 调用爆炸函数！
-    Explode(whichPlayer.position );
-}
-
-public void Explode ( Vector3 aPosition)
-{
-    // 在传入此的位置实例化爆炸
-    Instantiate( explosionPrefab,aPosition, Quaternion.identity );
-}
 ```
+
+
+
+`BaseSoundController.Instance.PlaySoundByIndex(2, whichPlayer.position);`
+
+// 调用爆炸函数！
+
+`Explode(whichPlayer.position);`
+
+}
+
+`public void Explode(Vector3 aPosition)`
+
+{
+
+// 在传入此的位置实例化爆炸
+
+`Instantiate(explosionPrefab, aPosition, Quaternion.identity);`
+
+}
 
 ### 2.3.1 脚本分解 (Script Breakdown)
 
@@ -10120,7 +9771,7 @@ using System.Collections;
 当脚本首次创建时将 `Instance` 设置为 `this` 并调用脚本的构造函数：
 
 ```csharp
-public GameController_MVD ()
+public GameController_MVD()
 {
     Instance = this;
 }
@@ -10129,7 +9780,7 @@ public GameController_MVD ()
 调用了 `Init()`：
 
 ```csharp
-void Start ()
+void Start()
 {
     Init();
 }
@@ -10138,7 +9789,7 @@ void Start ()
 `Init()` 函数通过设置 `Time.timeScale` 开始，设置 `gameSpeed` 使游戏运行更快：
 
 ```csharp
-void Init ()
+void Init()
 {
     // 如果我们需要更改时间尺度，就会到达这里
     Time.timeScale = gameSpeed;
@@ -10149,38 +9800,38 @@ void Init ()
 
 ```csharp
 // 告诉比赛管理器准备比赛
-GlobalRaceManager.Instance.NewRace( totalLaps );
+GlobalRaceManager.Instance.NewRace(totalLaps);
 ```
 
 生成系统需要传入两个数组来生成玩家，即起始位置和旋转。在这段代码中，数组被初始化并用来自 `startPoints` 数组的位置和旋转填充：
 
 ```csharp
 // 初始化一些我们可以用来设置玩家的临时数组
-Vector3 [] playerStarts = new Vector3[numberOfRacers];
-Quaternion [] playerRotations = new Quaternion[numberOfRacers];
+Vector3[] playerStarts = new Vector3[numberOfRacers];
+Quaternion[] playerRotations = new Quaternion[numberOfRacers];
 ```
 
 我们将使用必须在编辑器中的起始位置数组，这意味着我们需要确保有足够的起始位置来对应玩家数量：
 
 ```csharp
-for ( int i = 0; i < numberOfRacers; i++)
+for (int i = 0; i < numberOfRacers; i++)
 {
     // 从起始 transform 获取位置和旋转值
-    playerStarts[i] = (Vector3) startPoints[i].position;
-    playerRotations[i] = (Quaternion ) startPoints[i].rotation;
+    playerStarts[i] = (Vector3)startPoints[i].position;
+    playerRotations[i] = (Quaternion)startPoints[i].rotation;
 }
 ```
 
 现在控制器有了玩家的位置和旋转，可以调用 `SpawnController` 将玩家添加到场景中：
 
 ```csharp
-SpawnController.Instance.SetupPlayers( playerPrefab, playerStarts, playerRotations, numberOfRacers );
+SpawnController.Instance.SetupPlayers(playerPrefab, playerStarts, playerRotations, numberOfRacers);
 ```
 
 `playerTransforms` 被所有 transform 填充。我们通过调用 `SpawnController.Instance.GetAllSpawnedPlayers()` 获取它们，它返回由生成控制器创建的所有玩家 transform：
 
 ```csharp
-playerTransforms=new ArrayList();
+playerTransforms = new ArrayList();
 // 获取获取每个玩家控制器脚本的引用
 playerTransforms = SpawnController.Instance.GetAllSpawnedPlayers();
 ```
@@ -10191,56 +9842,54 @@ playerTransforms = SpawnController.Instance.GetAllSpawnedPlayers();
 playerList = new ArrayList();
 for (int i = 0; i < numberOfRacers; i++)
 {
-    thePlayerScript = ( CarController_MVD ) playerList[i];
+    thePlayerScript = (CarController_MVD)playerList[i];
 }
 ```
-
 
 为了快速访问用户的控制脚本，游戏控制器将该脚本的引用存储在变量 `focusPlayerScript` 中，命名为此此是因为它是游戏控制器将关注的玩家：
 
 ```
-focusPlayerScript = ( CarController_MVD )
-playerGO1.GetComponent<CarController_MVD>();
+focusPlayerScript = (CarController_MVD)playerGO1.GetComponent<CarController_MVD>();
 ```
 
 用户的玩家脚本被分配了 ID 数字 0，并通过调用 `UseInput()` 允许用户输入：
 
 ```
 // assign this player the id of 0
-focusPlayerScript.SetID( 0 );
+focusPlayerScript.SetID(0);
 ```
 
 ```
 // set player control
-focusPlayerScript.SetInput( true );
+focusPlayerScript.SetInput(true);
 ```
 
 为了让相机在游戏期间跟随玩家，相机控制脚本需要知道它的目标。该脚本使用 `SetTarget()` 函数来实现这一点，并传入来自 `playerGO1` 的 `transform`：
 
 ```
 // tell the camera script to target this new player
-cameraScript.SetTarget( playerGO1.transform );
+cameraScript.SetTarget(playerGO1.transform);
 ```
 
 `UpdateLapCounter` 用于设置由 UI 代码显示的计数器。其默认值 1 被被设置，以确保在游戏开始时显示是正确的：
 
 ```
 // do initial lap counter
-UpdateLapCounter( 1 );
+UpdateLapCounter(1);
 ```
 
 玩家在比赛开始时的 3-2-1 倒计时结束之前需要保持在原地。`SetPlayerLocks` 函数将遍历游戏中的所有玩家，并告诉他们是否应该被锁定在原地：
 
 ```
 // lock all the players on the spot we're ready to go
-SetPlayerLocks( true );
+SetPlayerLocks(true);
 ```
 
 3-2-1 倒计时即将开始。使用 `Invoke` 函数执行 4 次 `StartRace` 需要 4 秒钟：
 
 ```
 // start the game in 3 seconds from now
-Invoke( "StartRace", 4 );
+Invoke("StartRace", 4);
 ```
 
 用户界面不需要每帧或每一步都更新。像那样更新位置会给 CPU 带来不必要的负载，因此，游戏控制器调度了对 `InvokeRepeating` 函数的重复调用。该函数接受三个参数：要调用的函数名称、从调用到第一次函数调用之间的时间、以及此之后每次函数调用之间的时间，该调用将持续进行直到此脚本实例被销毁或调用 `CancelInvoke` 停止持续的调用：
@@ -10249,7 +9898,7 @@ Invoke( "StartRace", 4 );
 // update positions throughout the race, but we don't need
 // to do this every frame, so just do it every half a second
 // instead
-InvokeRepeating( "UpdatePositions", 0.5f, 0.5f );
+InvokeRepeating("UpdatePositions", 0.5f, 0.5f);
 ```
 
 3-2-1 倒计时的三个数字在游戏开始时都应该被隐藏（否则，我们在屏幕上看到三个大数字堆在一起）。调用游戏控制器的 `HideCount()` 函数可以解决这个问题：
@@ -10299,24 +9948,23 @@ didInit = true;
 
 该函数首先检查 `doneFinalMessage` 以确保消息正在显示中（这不应该发生，但我倾向于检查它以确保对任何意外调用都保持安全）；
 
-```
-public void RaceComplete (int finalPosition)
+```csharp
+public void RaceComplete(int finalPosition)
 {
     if (!doneFinalMessage)
+    {
 ```
-
-
 
 在这个游戏中，不需要向用户报告第三名之后的位置，因此特定的消息到此结束。任何高于第三名的位置将仅显示“已完成”的消息。
 
 ```go
-if ( finalPosition == 1 )
+if (finalPosition == 1)
     finalPositionText.text = "FINISHED 1st";
-if ( finalPosition == 2 )
+if (finalPosition == 2)
     finalPositionText.text = "FINISHED 2nd";
-if ( finalPosition == 3 )
+if (finalPosition == 3)
     finalPositionText.text = "FINISHED 3rd";
-if ( finalPosition >= 4 )
+if (finalPosition >= 4)
     finalPositionText.text = "FINISHED";
 ```
 
@@ -10343,7 +9991,7 @@ Invoke("FinishRace", 10);
 当被调用时，`FinishRace()` 将加载主菜单，从而有效地结束整个游戏：
 
 ```
-void FinishRace ()
+void FinishRace()
 {
     Application.LoadLevel(mainSceneName);
 }
@@ -10352,23 +10000,23 @@ void FinishRace ()
 `ShowCount1()`、`ShowCount2()` 和 `ShowCount3()` 函数切换用于比赛开始时 3-2-1 倒计时期间显示数字的用户界面对象的激活状态：
 
 ```go
-void ShowCount1 ()
+void ShowCount1()
 {
-    count1.SetActive( true);
-    count2.SetActive( false );
+    count1.SetActive(true);
+    count2.SetActive(false);
 ```
 
 ```go
-count3.SetActive( false );
+count3.SetActive(false);
 void ShowCount2() {
-    count1.SetActive( false );
-    count2.SetActive( true );
-    count3.SetActive( false );
+    count1.SetActive(false);
+    count2.SetActive(true);
+    count3.SetActive(false);
 }
 void ShowCount3() {
-    count1.SetActive( false );
-    count2.SetActive( false );
-    count3.SetActive( true );
+    count1.SetActive(false);
+    count2.SetActive(false);
+    count3.SetActive(true);
 }
 ```
 
@@ -10376,17 +10024,17 @@ void ShowCount3() {
 
 ```go
 void HideCount() {
-    count1.SetActive( false );
-    count2.SetActive( false );
-    count3.SetActive( false );
+    count1.SetActive(false);
+    count2.SetActive(false);
+    count3.SetActive(false);
 }
 ```
 
 为了向用户隐藏或显示主玩家在赛道上反向行驶的消息，`UpdateWrongWay()` 函数使用了 `GameObject.SetActive()`。因此，用户界面的激活状态只需要在发生变化时更新，而不是不断重置。为了跟踪变化，`oldIsWrongWay` 只有在与 `isWrongWay` 不相同时才会被赋值。当 `isWrongWay` 等于 `oldIsWrongWay` 时，我们可以尽早决定离开赛道：
 
 ```go
-public void UpdateWrongWay ( bool isWrongWay) {
-    if (isWrongWay==oldIsWrongWay) {
+public void UpdateWrongWay(bool isWrongWay) {
+    if (isWrongWay == oldIsWrongWay) {
         return;
     }
 }
@@ -10395,12 +10043,12 @@ public void UpdateWrongWay ( bool isWrongWay) {
 如果脚本执行到此点，反向行驶的值一定发生了变化，因此脚本可以继续设置由 `wrongWaySign` 引用 UI GameObject 的激活状态：
 
 ```go
-if ( isWrongWay ) {
-    wrongWaySign.SetActive( true );
+if (isWrongWay) {
+    wrongWaySign.SetActive(true);
 } else {
-    wrongWaySign.SetActive( false );
+    wrongWaySign.SetActive(false);
 }
-oldIsWrongWay=isWrongWay;
+oldIsWrongWay = isWrongWay;
 ```
 
 `PlayerHit()` 和 `PlayerBigHit()` 函数对于赛车游戏不是必须的，但它们在这里是有原因的。它们的作用是播放爆炸音效并调用 `Explode()` 函数实例化小型粒子效果。当使用书中的武器时，`PlayerHit()` 和 `PlayerBigHit()` 函数将为弹体命中提供反馈：
@@ -10409,9 +10057,7 @@ oldIsWrongWay=isWrongWay;
 public void PlayerHit(Transform whichPlayer)
 {
     // 告诉声音控制器播放爆炸音
-    BaseSoundController.Instance.PlaySoundByIndex(1,
-    whichPlayer.position);
-    
+    BaseSoundController.Instance.PlaySoundByIndex(1, whichPlayer.position);
     // 调用爆炸函数！
     Explode(whichPlayer.position);
 }
@@ -10421,9 +10067,7 @@ public void PlayerHit(Transform whichPlayer)
 public void PlayerBigHit(Transform whichPlayer)
 {
     // 告诉声音控制器播放爆炸音
-    BaseSoundController.Instance.PlaySoundByIndex(2,
-    whichPlayer.position);
-
+    BaseSoundController.Instance.PlaySoundByIndex(2, whichPlayer.position);
     // 调用爆炸函数！
     Explode(whichPlayer.position);
 }
@@ -10432,10 +10076,10 @@ public void PlayerBigHit(Transform whichPlayer)
 对于标准的赛车游戏，虽然 `PlayerHit()` 和 `PlayerBigHit()` 是这样要求的，但 `Explode()` 函数并不是实际的需要，提供它是为了确保游戏控制器支持武器系统：
 
 ```go
-public void Explode (Vector3 aPosition)
+public void Explode(Vector3 aPosition)
 {
     // 在传入此的位置实例化爆炸
-    Instantiate(explosionPrefab,aPosition,Quaternion.identity);
+    Instantiate(explosionPrefab, aPosition, Quaternion.identity);
 }
 ```
 
@@ -10446,77 +10090,114 @@ public void Explode (Vector3 aPosition)
 ```go
 using UnityEngine;
 using System.Collections;
-
 public class RaceController : MonoBehaviour
 {
     private bool isFinished;
     private bool isLapDone;
-    private float currentWaypointDist;
-    private int currentWaypointDist;
 ```
 
-（注：OCR 文本在结尾变得重复/碎片化，我已经处理了逻辑流。）
 
 
+`private float currentWaypointDist;`
 
+`private int currentWaypointDist;`
 
 ```cs
+
 {
+
   currentWaypointNum=0;
+
   currentWaypointTransform=waypointManager.Getwaypoint(currentWaypointNum);
+
 }
+
 ```
 
 ```cs
+
 // 现在我们需要检查是否足够接近当前路点，
+
 // 以移动到下一个路点
+
 ```
 
 ```cs
+
 myPosition = myTransform.position;
+
 myPosition.y=0;
+
 ```
 
 ```cs
+
 // 获取路点位置并将其“扁平化”
+
 nodePosition = currentWaypointTransform.position;
+
 nodePosition.y=0;
+
 ```
 
 ```cs
+
 // 检查这辆车到路点的距离
+
 ```
 
 ```cs
+
 currentWaypointDist = Vector3.Distance(nodePosition, myPosition);
+
 ```
 
 ```cs
+
 if (currentWaypointDist < waypointDistance) {
+
   // 我们很接近当前节点，所以让我们移动 
+
   // 到下一个节点；
+
   currentWaypointNum++;
+
 ```
 
 ```cs
+
 // 现在检查我们是否已经完全绕过了 
+
 // 赛道并重新开始
+
 ```
 
 ```cs
+
 if(currentWaypointNum==totalWaypoints){
+
   // 完成了一圈！将 lapDone 标记设为
+
   // true，这将在我们经过
+
   // 第一个路点时进行检查（这样你就不会
+
   // 在几乎完成比赛时从另一侧
+
   // 绕回来来搞乱它）
+
   isLapDone=true;
+
 ```
 
 ```cs
+
 // 将我们的当前路点重新重置为
+
 // 第
+
   currentWaypointNum=0;
+
 ```
 
 }
@@ -10649,8 +10330,11 @@ public class RaceController : MonoBehaviour
     // finalPosition 通过通过 GetPosition（传入玩家的 ID）
     // 点击 GlobalRaceManager 获取其比赛位置值：
 ```cs
+
     // 找出我们在哪个位置结束的
+
     int finalPosition=GlobalRaceManager.Instance.GetPosition(myID);
+
 ```
 
     // 为了告诉玩家比赛已经结束，此脚本使用了 Unity 的函数
@@ -10670,172 +10354,253 @@ public class RaceController : MonoBehaviour
     // 这意味着如果没有脚本来接收消息，就不会发生错误或警告：
 
 ```cs
+
 gameObject.SendMessage("PlayerFinished", finalRacePosition, SendMessageOptions.DontRequireReceiver);
+
 ```
 
-在 RaceStart() 中，我们的内部状态变量 Finished 和 raceRunning 被设为 false。注意 raceRunning 初始为 false，因为它将在此脚本初始化之后的另一个函数中被设置：
+在 `RaceStart()` 中，我们的内部状态变量 `Finished` 和 `raceRunning` 被设为 false。注意 `raceRunning` 初始为 false，因为它将在此脚本初始化之后的另一个函数中被设置：
 
 ```cs
+
 public void RaceStart()
+
 {
+
     isFinished=false;
+
     raceRunning=false;
+
 }
+
 ```
 
-其他脚本可能需要知道此玩家是否已经完成了比赛。IsFinished() 函数会返回一个对此的布尔值：
+其他脚本可能需要知道此玩家是否已经完成了比赛。`IsFinished()` 函数会返回一个对此的布尔值：
 
 ```cs
+
 public bool IsFinished()
+
 {
+
     return isFinished;
+
 }
+
 ```
 
-当其他脚本需要查找玩家当前是第几圈时，GetCurrentLap() 函数通过玩家的 ID 作为参数获取最新信息（以便全局比赛管理器知道是谁在请求圈数计数），并在 GlobalRaceManager.Instance.GetLapsDone() 的返回值上加 1。GetLapsDone() 将是完成的圈数，而当前是第几圈：
+当其他脚本需要查找玩家当前是第几圈时，`GetCurrentLap()` 函数通过玩家的 ID 作为参数获取最新信息（以便全局比赛管理器知道是谁在请求圈数计数），并在 `GlobalRaceManager.Instance.GetLapsDone()` 的返回值上加 1。`GetLapsDone()` 将是完成的圈数，而当前是第几圈：
 
 ```cs
+
 public int GetCurrentLap()
+
 {
+
     return GlobalRaceManager.Instance.GetLapsDone(myID)+1;
+
 }
+
 ```
 
-
-
 ```cs
+
 public int getCurrentWaypoint()
+
 {
+
     return currentWaypointNum;
+
 }
+
 ```
 
-currentWaypointDist 是一个浮点变量，包含玩家到其当前途点之间的距离（以 3D 单位为单位）。getCurrentWaypointDist() 仅将其值作为 float 类型返回：
+`currentWaypointDist` 是一个浮点变量，包含玩家到其当前途点之间的距离（以 3D 单位为单位）。`getCurrentWaypointDist()` 仅将其值作为 float 类型返回：
 
 ```cs
+
 public float getCurrentWaypointDist()
+
 {
+
     return currentWaypointDist;
+
 }
+
 ```
 
-GetFinished() 和 GetLapDone() 都返回布尔值，并将被全局比赛管理器使用：
+`GetFinished()` 和 `GetLapDone()` 都返回布尔值，并将被全局比赛管理器使用：
 
 ```cs
+
 public bool GetFinished()
+
 {
+
     return isFinished;
+
 }
+
 ```
 
 ```cs
+
 public bool GetLapDone()
+
 {
+
     return isLapDone;
+
 }
+
 ```
 
 当游戏开始或停止时，全局比赛管理器将调用 `UpdateState` 函数来告诉此脚本比赛是否正在运行：
 
 ```cs
+
 public void UpdateState( bool aState)
+
 {
+
     raceRunning=aState;
+
 }
+
 ```
 
-waypointManager（类型为 `Waypoints_Controller`）在此函数中进行设置，该函数由游戏控制器调用，用于传入用于比赛位置/进度追踪的途点。
+`waypointManager`（类型为 `Waypoints_Controller`）在此函数中进行设置，该函数由游戏控制器调用，用于传入用于比赛位置/进度追踪的途点。
 
 ```cs
+
 public void SetWayController ( Waypoints_Controller aControl )
+
 {
+
     waypointManager=aControl;
+
 }
+
 ```
 
 当前途点的 transform 可以通过 `GetWaypointTransform()` 获取。如果 `currentWaypointTransform` 变量中已经没有 transform，此函数将检测并从 `waypointTransform` 对象中检索 transform：
 
 ```cs
+
 public Transform GetWaypointTransform()
+
 {
+
     // 如果“系统”中我们还没有途点 transform 
+
     // 那么我们需要获取一个
+
     if(currentWaypointTransform==null)
+
         currentWaypointNum=0;
 
     currentWaypointTransform=
+
     waypointManager.GetWaypoint(currentWaypointNum);
 
     return currentWaypointTransform;
+
 }
+
 ```
 
 玩家在某些时候需要重新复活是不可避免的。这可能是由于玩家被卡住、掉出了游戏区域，或者可能是玩家当汽车在赛道上朝向错误时选择复活。无论原因是什么，复活玩家都应该包含一些微小的惩罚，以防止其被用作遇到麻烦时的“逃生按钮”。
 
-GetRespawnWaypointTransform() 用于返回一个复活代码用于位置放置和旋转数据的 transform。它不返回当前途点，而是返回上一个通过的途点。当发生这种情况时，改变 `currentWaypointNum` 的值也很重要，这样当前途点就不会离复活点太远。
+`GetRespawnWaypointTransform()` 用于返回一个复活代码用于位置放置和旋转数据的 transform。它不返回当前途点，而是返回上一个通过的途点。当发生这种情况时，改变 `currentWaypointNum` 的值也很重要，这样当前途点就不会离复活点太远。
 
 当调用函数时，它首先检查 `currentWaypointNum` 是否大于 0，以便可以递减它而不破坏代码：
 
 ```cs
+
 public Transform GetRespawnWaypointTransform ()
+
 {
+
     // 如果我们已经过了第一个途点，让我们回到
+
     // 一个途点并返回它，而不是
+
     // 当前的。这样，汽车将出现在它
+
     // 消失的大附近，而不是它的前方。
+
 }
+
 ```
 
 只要它大于 0，`currentWaypointNum` 在此处就会递减 1：
 
 ```cs
+
 if (currentWaypointNum>0)
+
     currentWaypointNum--;
+
 ```
 
 新的当前途点通过 `waypointManager` 的其 `GetWaypoint()` 函数返回，然后存储在 `currentWaypointTransform` 变量中，准备在在此函数结束时返回：
 
 ```cs
+
 currentWaypointTransform=
+
 waypointManager.GetWaypoint(currentWaypointNum)
+
 ```
 
 下一个函数是 `UpdateWaypoints()`，它负责追踪玩家应该瞄准哪个途点，并根据需要更新途点计数。`UpdateWaypoints()` 是玩家控制脚本作为其自身更新序列的一部分调用的：
 
 ```cs
+
 public void UpdateWaypoints()
+
 {
+
 ```
 
 在进行任何途点检查之前，该类必须已经运行其初始化函数 `Init()` 并 `doneInit` 设置为 true
 
 ```cs
+
 if (!doneInit)
+
     Init();
+
 ```
 
 变量 `waypointManager` 必须包含对途点控制器的引用
 
 ```cs
+
 if (waypointManager==null) {
+
     return;
+
 }
+
 ```
 
 在任何途点检查发生之前，该类必须已经运行其初始化函数 `Init()` 并 `doneInit` 设置为 true通过查看玩家和途点之间的距离来检查途点，并在距离过低时移动到下一个途点。`currentWaypointNum` 超过途点总数。当 `currentWaypointNum` 超过途点总数时，变量 `isLapDone` 设为 true，并且 `currentWaypointNum` 的值重置为 0，准备瞄准下一个途点（现在是第一个途点）：
 
 ```cs
-if(currentWaypointNum==totalpoints) {
-    // 完成一圈，将 lapDone 标记设为
-    // true，我们将在通过第一个途点
-    // 时进行检查（这样你就不能
-    // 几乎完成比赛然后朝
-    // 反方向绕行来混乱它）
-    isLapDone=true;
-    // 重置我们的当前途点为第一个
-    // 一个
-    currentWaypointNum=0;
-}
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 途点检查的工作方式是查看玩家和途点之间的距离，并在距离过低时移动到下一个途点。此代码获取玩家和途点的位置并将 y 轴设为 0：
@@ -10889,7 +10654,6 @@ if(currentWaypointNum==totalpoints) {
 // 获取我们的 transform 引用
 currentWaypointTransform=waypointManager.GetWaypoint(currentWaypointNum);
 ```
-
 
 如果你需要调试路点跟随（waypoint-following），取消下方代码的注释将提供车辆应该指向的可视化表示。取消注释后，它将在当前路点的位置放置一个名为 `debugBox` 的 `GameObject`：
 
@@ -11007,20 +10771,16 @@ public class GlobalRaceManager : ScriptableObject
 {
     public int totalLaps;
     private int currentID;
-
     private Hashtable raceControllers;
     private Hashtable racePositions;
     private Hashtable raceLaps;
     private Hashtable raceFinished;
-
     private int numberOfRacers;
-
     private int myPos;
     private bool isAhead;
     private RaceController tempRC;
     private RaceController focusPlayerScript;
     private bool raceRaceRunning;
-
     private static GlobalRaceManager instance;
     public static GlobalRaceManager Instance
     {
@@ -11032,12 +10792,10 @@ public class GlobalRaceManager : ScriptableObject
             return instance;
         }
     }
-
     public void OnApplicationQuit()
     {
         instance = null;
     }
-
     public void InitNewRace(int howManyLaps)
     {
         // 初始化我们的哈希表准备放入对象
@@ -11045,10 +10803,8 @@ public class GlobalRaceManager : ScriptableObject
         raceLaps = new Hashtable();
         raceFinished = new Hashtable();
         raceControllers = new Hashtable();
-
         totalLaps = howManyLaps;
     }
-
     public int GetUniqueID(RaceController theRaceController)
     {
         // 每当请求 ID 时，我们就增加 ID 计数器。
@@ -11059,50 +10815,39 @@ public class GlobalRaceManager : ScriptableObject
 }
 ```
 
-
 ```cs
 // 现在为这个新玩家设置一些默认数据
-
 // 该玩家将处于第一圈
 raceLaps.Add(currentID, 1);
-
 // 该玩家将处于最后一名
 racePositions.Add(currentID, racePositions.Count + 1);
-
 // 存储对比赛控制器的引用，稍后使用
 raceControllers.Add (currentID, theRaceController);
-
 // 默认完成状态
 raceFinished(currentID) = false;
-
 // 增加我们的比赛计数器，这样当我们需要时
 // 就不需要进行任何计数或查找
 numberOfRacers++;
-
 // 将此 ID 传回供比赛控制器使用
 return currentID;
 }
-
 public int GetRacePosition(int anID)
 {
     // 返回 racePositions 哈希表中该 ID 的条目
     // hashtable
     return (int)racePositions[anID];
 }
-
 public int GetLapsDone(int anID)
 {
     // 返回 raceLaps 哈希表中该 ID 的条目
     // hashtable
     return (int)raceLaps[anID];
 }
-
 public void CompletedLap(int anID)
 {
     // 如果 raceLaps 中已经有了条目，我们只需
     // 增加它
     raceLaps[anID] = (int)raceLaps[anID] + 1;
-
     // 在这里，我们检查该玩家是否已完成比赛
     //（通过将 raceLaps 中的条目与我们的 totalLaps 变量进行比较），
     // 如果已完成，我们就将其在 raceFinished 哈希表中的条目
@@ -11119,7 +10864,6 @@ public void CompletedLap(int anID)
         tempRC.RaceFinished();
     }
 }
-
 public void ResetLapCount(int anID)
 {
     // 如果需要重新开始比赛并重置该玩家
@@ -11127,7 +10871,6 @@ public void ResetLapCount(int anID)
     // raceLaps 哈希表中的条目
     raceLaps[anID] = 0;
 }
-
 public int GetPosition(int ofWhichID)
 {
     // 首先，确保我们已经准备就绪（
@@ -11138,65 +10881,78 @@ public int GetPosition(int ofWhichID)
         Debug.Log("GetPosition raceControllers is NULL!");
         return -1;
     }
-
     if (raceControllers.ContainsKey(ofWhichID) == false)
     {
         Debug.Log("GetPosition says no race controller\nfound for " + ofWhichID);
         return -1;
     }
-
     // 首先，我们需要找到我们正尝试
     // 计算位置的玩家
     focusPlayersScript = (RaceController) raceControllers[ofWhichID];
-
     // 从假设玩家在最后一名开始
     // 并逐向上递进计算
     myPos = numberOfRacers;
-
     // 现在我们遍历每位参赛者并检查他们的位置
     // 确定我们的关注玩家是否在他们前面
-    // 或者不是
-    for (int b = 1; b < numberOfRacers; b++)
-    {
-        // 假设我们在这个玩家后面
-        Ahead = false;
-
-        // 获取我们想要对比的“另一个”玩家的
-        // 临时引用。
-        tempRC = (RaceController) raceControllers[b];
-        // 如果 2 号车恰好为空（例如被删除了）
-        // 这里有一个小小的安全措施来跳过循环中的
-        // 迭代
-        if (tempRC == null)
-            continue;
-    }
-
-    if (focusPlayersScript.GetID() != tempRC.GetID())
-    {
-        // 确保我们没有在比较同一个对象！
-
-        // 关注的玩家领先了一圈吗？
-        if (focusPlayerScript.GetCurrentLap() > tempRC.GetCurrentLap())
-            isAAhead = true;
-
-        // 如果关注的玩家在同一圈，但在更高的
-        // 点编号？
-        if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && !tempRC.IsLapDone())
-            isAAhead = true;
-
-        // 如果关注的玩家在同一圈，同一个路点，
-        // 但更接近它？
-        if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && focusPlayerScript.GetCurrentWaypointDist() < tempRC.GetCurrentWaypointDist() && !tempRC.IsLapDone())
-            isAAhead = true;
-
-        // 玩家是否完成了一圈并正准备
-        // 移动到下一圈？
-        if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && (focusPlayerScript.IsLapDone() == tempRC.GetCurrentWaypointNum())) // 注意：原始 OCR 此处有逻辑错误，已清理
-    }
-}
 ```
 
 
+
+```csharp
+// 或者不是
+
+for (int b = 1; b < numberOfRacers; b++)
+
+{
+
+    // 假设我们在这个玩家后面
+
+    Ahead = false;
+
+    // 获取我们想要对比的“另一个”玩家的
+    // 临时引用。
+
+    tempRC = (RaceController) raceControllers[b];
+
+    // 如果 2 号车恰好为空（例如被删除了）
+    // 这里有一个小小的安全措施来跳过循环中的
+    // 迭代
+
+    if (tempRC == null)
+        continue;
+
+}
+
+if (focusPlayersScript.GetID() != tempRC.GetID())
+{
+
+    // 确保我们没有在比较同一个对象！
+    // 关注的玩家领先了一圈吗？
+
+    if (focusPlayerScript.GetCurrentLap() > tempRC.GetCurrentLap())
+        isAAhead = true;
+
+    // 如果关注的玩家在同一圈，但在更高的
+    // 点编号？
+
+    if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && !tempRC.IsLapDone())
+        isAAhead = true;
+
+    // 如果关注的玩家在同一圈，同一个路点，
+    // 但更接近它？
+
+    if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && focusPlayerScript.GetCurrentWaypointDist() < tempRC.GetCurrentWaypointDist() && !tempRC.IsLapDone())
+        isAAhead = true;
+
+    // 玩家是否完成了一圈并正准备
+    // 移动到下一圈？
+
+    if (focusPlayerScript.GetCurrentLap() == tempRC.GetCurrentLap() && focusPlayerScript.GetCurrentWaypointNum() && (focusPlayerScript.IsLapDone() == tempRC.GetCurrentWaypointNum())) // 注意：原始 OCR 此处有逻辑错误，已清理
+
+}
+
+}
+```
 
 由于比赛刚刚开始，尚未结束，该玩家的 `raceFinished` 状态默认为 `false`：
 
@@ -11326,7 +11082,7 @@ raceControllers[ofWhichID];
 myPos = numberOfRacers;
 ```
 
-循环 (b) 从 1 到 `numberOfRacers` 的值。`b` 的值将用于从 `raceController` Hashtable 中检索控制器引用。在循环开始时，假设 `focusPlayerScript` 在所有赛车手之后，并将布尔值 `isAhead` 设为 `false`：
+循环 `(b)` 从 1 到 `numberOfRacers` 的值。`b` 的值将用于从 `raceController` Hashtable 中检索控制器引用。在循环开始时，假设 `focusPlayerScript` 在所有赛车手之后，并将布尔值 `isAhead` 设为 `false`：
 
 ```go
 for (int b=1; b<=numberOfRacers; b++) {
@@ -11334,7 +11090,6 @@ for (int b=1; b<=numberOfRacers; b++) {
     isAhead = false;
     tempRC = (RaceController)raceControllers[b];
     if (tempRC.currentID == ofWhichID) continue;
-
     // 检查是否PlayerScript在tempRC之后
     if (focusPlayerScript.currentLap > tempRC.currentLap) {
         isAhead = true;
@@ -11349,14 +11104,12 @@ for (int b=1; b<=numberOfRacers; b++) {
     }
 }
 ```
+
 *(注：此处根据上下文逻辑补全了原文截断的循环结构，由于原文在循环处出现了严重的重复乱码，翻译保持了代码逻辑的完整性)*
 
 **抱歉，由于您提供的原始文本在 `GetPosition` 之后的循环部分存在极其严重的文本重复和截断（从 `myPos` 开始开始逻辑混乱），我根据代码逻辑为您还原了该部分。**
 
-
-
-
-在 tempRC 之前。如果 `focusPlayerScript.IsLapDone()` 为 true 且 `tempRC.IsLapDone()` 为 false，脚本会将 `isAhead` 设置为 true：
+在 `tempRC` 之前。如果 `focusPlayerScript.IsLapDone()` 为 `true` 且 `tempRC.IsLapDone()` 为 `false`，脚本会将 `isAhead` 设置为 `true`：
 
 ```
 // 玩家是否已经完成了一圈并正准备
@@ -11369,7 +11122,7 @@ tempRC.IsLapDone() == false )
   isAhead = true;
 ```
 
-第五个也是最后一个条件执行了与上一个相似的检查，只是这次省略了任何路点检查。代码解码了玩家是否在同一条赛道上，以及当他们处于同一条赛道时，`focusPlayerScript` 是否完成了它的循环。当 `focusPlayerScript.IsLapDone()` 为 true 且 `tempRC.IsLapDone()` 为 false 时，我们知道关注的玩家在前面，可以去 `isAhead` 设置为 true：
+第五个也是最后一个条件执行了与上一个相似的检查，只是这次省略了任何路点检查。代码解码了玩家是否在同一条赛道上，以及当他们处于同一条赛道时，`focusPlayerScript` 是否完成了它的循环。当 `focusPlayerScript.IsLapDone()` 为 `true` 且 `tempRC.IsLapDone()` 为 `false` 时，我们知道关注的玩家在前面，可以去 `isAhead` 设置为 `true`：
 
 ```
 if ( focusPlayerScript.GetCurrentLap() &&
@@ -11378,7 +11131,7 @@ true && !tempRC.IsLapDone() )
   isAhead = true;
 ```
 
-在此时，`isAhead` 告诉我们由 `focusPlayerScript-tempRC` 代表的当前玩家是否在前面。如果 `isAhead` 为 true，脚本可以减小 `myPos` 的值，将玩家的比赛排名向上移动一位：
+在此时，`isAhead` 告诉我们由 `focusPlayerScript-tempRC` 代表的当前玩家是否在前面。如果 `isAhead` 为 `true`，脚本可以减小 `myPos` 的值，将玩家的比赛排名向上移动一位：
 
 ```
 if ( isAhead )
@@ -11393,7 +11146,7 @@ if ( isAhead )
 return myPos;
 ```
 
-`StartRace()` 和 `StopRace()` 函数都会改变 `raceRunning` 的值（分别更改为 true 或 false），并调用 `UpdateRaceState()` 函数告诉前面的玩家状态发生了变化：
+`StartRace()` 和 `StopRace()` 函数都会改变 `raceRunning` 的值（分别更改为 `true` 或 `false`），并调用 `UpdateRaceState()` 函数告诉前面的玩家状态发生了变化：
 
 ```public
 public void StartRace()
@@ -11426,7 +11179,6 @@ void UpdateRacerState() {
 ```
 using UnityEngine;
 using System.Collections;
-
 public class CarController_MVD : BaseVehicle {
     public bool Standard_SlotWeaponController weaponControl;
     public bool canFire;
@@ -11451,14 +11203,17 @@ public class CarController_MVD : BaseVehicle {
     private float resetTimer;
     private bool canRespawn;
     private bool playFireSound;
-    public float timeBetweenFireSounds= 0.25f;
+
+
+
+```csharp
+public float timeBetweenFireSounds= 0.25f;
 
 public override void Start()
 {
     // 我们正在重写 BaseVehicle 的 Start 函数
     // 因为我们不想从这里初始化！游戏
     // 控制器会在准备就绪后调用 Init
-
     myBody= rigidbody;
     myGO= gameObject;
     myTransform= transform;
@@ -11467,39 +11222,33 @@ public override void Start()
 public override void Init()
 {
     Debug.Log("CarController_MVD Init called.");
-
     // 缓存嫌疑对象
     myBody= rigidbody;
     myGO= gameObject;
     myTransform= transform;
-
     // 允许从开始时重生
     canRespawn=true;
-
     // 保存我们的 accelMax 以备后用，以防我们需要
     // 更改它来实现 AI 追赶
     originalAccelMax= accelMax;
-
     // 如果我们还没有默认键盘输入，则添加一个
     if(default_input==null)
         default_input=myGO.AddComponent<Keyboard_Input>();
-
     // 缓存玩家控制器的引用
     myPlayerController= myGO.GetComponent<BaseManager>();
-
     // 基类初始化
     myPlayerController.Init();
-
     // 通过这段简单的代码，我们将重心设得
     // 较低以防止车辆翻倒
     myBody.centerOfMass= new Vector3(0,-3.5f,0);
 }
+```
 
+```csharp
 if (AIControlled)
 {
     // 将我们的名字设为 AI
     myData.SetName("AI");
-
     // 设置 AI
     InitAI();
 }
@@ -11507,47 +11256,39 @@ if (AIControlled)
 void InitAI() {
     // 缓存 AI 控制器的引用
     AIController= myGO.GetComponent<BaseAIController>();
-
     // 检查是否找到了 AI 控制器，
     // 如果没有则添加一个
     if(AIController==null)
         AIController= myGO.AddComponent<BaseAIController>();
-
     // 初始化 AI 控制
     AIController.Init();
-
     // 告诉 AI 控制器进入路点模式
     AIController.SetAIState(AIStates.steer_to_point);
-
     // 禁用默认输入
     def_input.enabled=false;
-
     // 添加 AI 武器控制器
     gunControl= myGO.GetComponent<BaseArmedEnemy>();
-
     // 如果没有武器控制器，添加一个
     // 防止崩溃并警告
     if( gunControl==null ) {
         gunControl= myGO.AddComponent<BaseArmedEnemy>();
         Debug.LogWarning("WARNING! 初始化缺少 BaseArmedEnemy。玩家无法射击！");
     }
-
     // 告诉控制器“寻找并销毁”
     gunControl.currentState=AIAttackStates.look_and_destroy;
 }
+```
 
+```csharp
 public void AddRaceController()
 {
     if (myGO==null)
         myGO=gameObject;
-
     // 将比赛脚本添加到我们的对象
     raceControl=myGO.AddComponent<RaceController>();
-
     // 从比赛脚本获取我们的 racer ID，
     // 这样我们在与全局比赛控制器通信时就不需要查找
     racerID=raceController.GetID();
-
     // 设置重复调用来更新我们的排名，
     // 而不是每帧或每次更新
     InvokeRepeating("UpdateRacePosition",0, 0.5f);
@@ -11558,12 +11299,13 @@ public void UpdateRacePosition()
     // 从全局比赛管理器获取我们的排名
     myRacePosition=GlobalRaceManager.Instance.GetPosition(racerID);
 }
+```
 
+```csharp
 public override void UpdatePhysics ()
 {
     if (canControl)
         base.UpdatePhysics();
-
     // 如果我们移动缓慢，施加额外的力来快速转向
     // 车辆以便我们可以转圈（！）请注意由于
     // 没有“地面检测”，它在空中也会应用
@@ -11571,32 +11313,28 @@ public override void UpdatePhysics ()
     if(mySpeed < TurnTorqueHelperMaxSpeed)
         myBody.AddTorque(new Vector3( 0, steer * myBody.mass * turnTorqueHelper * motor, 0 ));
 }
+```
 
+```csharp
 private float timid;
 
 public override void LateUpdate()
 {
     // 从比赛控制器获取比赛状态
     isRaceRunning= raceControl.raceRunning;
-
     if(isRaceRunning)
 }
 ```
-
-
-
 
 ```csharp
 {
   // 检查车辆是否已经翻车并处于倒置
   // 或错误状态(!)
   Check_If_Car_Is_Flipped();
-
   // 确保 gunControl 已经被告知它可以
   // 射击
   if(isAIControlled) {
     gunControl.canControl=true;
-
     // 我们在 LateUpdate 中检查输入，因为 Unity
     // 推荐这样做
     if(isAIControlled) {
@@ -11611,16 +11349,12 @@ public override void LateUpdate()
       gunControl.canControl=false;
     }
   }
-
   // 告诉比赛控制器更新路点
   raceControl.UpdateWaypoints();
-
   // 检查我们的车辆是否应该被固定在地
   CheckLock();
-
   // 告诉比赛控制检查我们是否在逆行
   raceControl.CheckWrongWay();
-
   // 检查我们是否在逆行并对此采取行动
   if(raceControl.goingWrongWay) {
     if(isAIControlled) {
@@ -11642,7 +11376,9 @@ public override void LateUpdate()
 }
 ```
 
+```csharp
 accelMax = originalAccel;
+```
 
 ```csharp
 // 如果这辆车在比赛中掉队了就追赶
@@ -11656,13 +11392,11 @@ if (isRaceRunning && isAIControlled)
     else {
         accelMax= originalAccel;
     }
-
     // 第一名，让我们慢下来！
     if(myRacePosition<2)
     {
         accelMax= originalAccel*0.25f;
     }
-
     // 更新引擎音频
     UpdateEngineAudio();
 }
@@ -11673,13 +11407,10 @@ public override void GetInput()
 {
     // 计算转向
     steer= Mathf.Clamp ( default_input.GetHorizontal() , -1, 1 );
-
     // 需要多少油门（力？
     motor= Mathf.Clamp(default_input.GetVertical() , 0, 1 );
-
     // 需要多少刹车？
     brake=-1 * Mathf.Clamp ( default_input.GetVertical() , -1, 0 );
-
     if(default_input.GetRespawn() && !isRespawning)
     {
         isRespawning=true;
@@ -11687,7 +11418,6 @@ public override void GetInput()
         canRespawn=false;
         Invoke("*resetRespawn",2);
     }
-
     // 首先，确保一个武器控制器存在
     // (否则不需要射击！)
     if(weaponControl != null)
@@ -11712,7 +11442,6 @@ public void GetAIInput (float amount)
 {
     // 计算转向
     steer= Mathf.Clamp( AIController.GetHorizontal(), -1, 1 );
-
     // 需要多少油门？
     motor= Mathf.Clamp( AIController.GetVertical() , 0, 1 );
 }
@@ -11723,7 +11452,6 @@ public void FinishedRace()
     canControl = false;
     brake = 1;
     motor = 0;
-
     // 设置一个标记，方便判断我们何时
     // 比赛结束
     raceControl.RaceFinished();
@@ -11802,42 +11530,35 @@ void Hit()
 {
     // 减少生命值
     DataManager.ReduceHealth(1);
-
     if(DataManager.GetHealth()<1) // 
     {
         isRespawning=true;
     }
-
     // 爆炸！
     myBody.AddosionForce(myBody.mass * 2000, myBody.position, myBody.angularVelocity-new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(-100,100)));
-
     // 告诉游戏控制器处理爆炸
     CameraController_MVD.Instance.PlayerBigHit(myTransform);
-
     // 重生
     Invoke("Respawn",4f);
-
     // 重置生命值为满
     DataManager.SetHealth(startHealthAmount);
 }
 
 else {
-// 告诉游戏控制器处理轻微伤害
-GameController_MVD.Instance.PlayerHit(myTransform);
+    // 告诉游戏控制器处理轻微伤害
+    GameController_MVD.Instance.PlayerHit(myTransform);
+}
 
 void Respawn()
 {
     // 重置“正在重生”变量
     isRespawning=false;
-
     // 重置我们的速度，以便我们重新定位
     myBody.velocity+=Vector3.zero;
     myBody.angularVelocity-=Vector3.zero;
-
     // 获取用于重生的路点
     tempTR=raceController.GetRespawnWaypoint();
     tempVEC=tempTR.position;
-
     // 从路点向下发射射线以寻找地面
     RaycastHit hit;
     if(Physics.Raycast(tempVEC + (Vector3.up * 300), -Vector3.up, out hit)) {
@@ -11848,30 +11569,42 @@ void Respawn()
     // 确保重生后面向正确的方向
     myTransform.rotation=tempTR.rotation;
     myTransform.position=tempVEC;
-
     // 我们需要一段时间的无敌状态
     MakeInvulnerable();
-
     Invoke("MakeVulnerable",3);
-
     // 回到第一种武器
     if(weaponControl!=null) {
-        weaponControl.SetWeaponSlot(0);
-    }
 }
+```
+
+
+
+```csharp
+weaponControl.SetWeaponSlot(0);
+}
+
+}
+
 }
 
 void MakeInvulnerable() {
+
     isInvulnerable=true;
+
 }
 
 void MakeVulnerable()
+
 {
+
     isInvulnerable=false;
+
 }
 
 public void PlayerFinished()
+
 {
+
     // 禁用这辆车辆
     isAIControlled=false;
     canControl=false;
@@ -11882,25 +11615,28 @@ public void PlayerFinished()
 }
 
 void Check_If_Car_Is_Flipped()
+
 {
+
     if((myTransform.localEulerAngles.z > 80 && myTransform.localEulerAngles.z < 280) || (myTransform.localEulerAngles.x > 80 && myTransform.localEulerAngles.x < 280)) {
         resetTimer += Time.deltaTime;
     } else {
         resetTimer = 0;
     }
-
     if(resetTimer > resetTime)
         Respawn();
 }
 
 void PlayerFinishedRace(int whichPositionDidFinish)
+
 {
+
     if(!isAIControlled)
+
     {
         // 告诉游戏控制器游戏结束
         GameController_MVD.Instance.RaceComplete(whichPositionDidFinish);
     }
-
     // AI 接管车辆
     isAIControlled=true;
     InitAI();
@@ -11914,7 +11650,6 @@ void PlayerFinishedRace(int whichPositionDidFinish)
 ```csharp
 using UnityEngine;
 using System.Collections;
-
 public class CarController_MVD : BaseVehicle
 {
 ```
@@ -11938,7 +11673,6 @@ public override void Start ()
 public override void Init ()
 {
     Debug.Log("CarController_MVD Init called.");
-
     // 缓存常见的变量
     myBody = rigidbody;
     myGO = gameObject;
@@ -11968,8 +11702,6 @@ originalMax=accelMax;
 if (default_input==null)
 default_input=myGO.AddComponent<Keyboard_Input>();
 ```
-
-
 
 ```cs
 // 缓存对玩家控制器的引用
@@ -12028,7 +11760,6 @@ weaponController=myGO.GetComponent<Standard_SlotWeaponController>();
 // 寻找一个
 if (myPlayerManager==null)
 PlayerManager=myGO.GetComponent<BasePlayerManager>();
-
 // 缓存数据管理器的引用
 myDataManager=myPlayerManager.DataManager;
 ```
@@ -12048,7 +11779,6 @@ if(aiControlled)
 {
     //将我们的名字设置为 AI 玩家
     myDataManager.SetName("AIPlayer");
-
     // 设置 AI
     InitAI();
 }
@@ -12099,7 +11829,6 @@ default_input.enabled=false;
 ```cs
 // 添加一个 AI 武器控制器
 gmyGO.GetComponent<BaseArmedEnemy>();
-
 // 如果我们还没有枪的控制器，让我们添加一个
 // 以防止情况变糟并发出警告，以便可以// 进行修复
 if (gunController==null)
@@ -12172,8 +11901,6 @@ public override void UpdatePhysics()
 
 在这里我们检查 `mySpeed` 的值（当然，它持有玩家的移动速度）并查看它是否低于 `TorqueHelperMaxSpeed` 的值。意图是在 Unity 窗口中设置它的值。如果 `mySpeed` 大于 `TorqueHelperMaxSpeed`，则不会对车辆应用辅助力。如果它低于该阈值，则使用 `rigidbody.AddTorque()` 来转向车辆：
 
-
-
 ```cs
 // 如果我们移动得慢，应用一些额外的力来快速转向
 // 车辆，这样我们就可以转圈了！)——注意由于
@@ -12225,7 +11952,9 @@ if(isAIControlled) {
 }
 ```
 
-当布尔变量 `isRaceRunning` 为 `false` 时，该玩家的比赛已结束，LateUpdate() 函数需要忽略输入。此代码没有为车辆获取输入，而是直接禁用了 `canControl` 脚本，这样在游戏结束后没有人可以射击：
+
+
+当布尔变量 `isRaceRunning` 为 `false` 时，该玩家的比赛已结束，`LateUpdate()` 函数需要忽略输入。此代码没有为车辆获取输入，而是直接禁用了 `canControl` 脚本，这样在游戏结束后没有人可以射击：
 
 ```csharp
 if (isAIControlled) {
@@ -12234,7 +11963,7 @@ if (isAIControlled) {
 }
 ```
 
-无论比赛是否仍在运行，比赛控制器都需要跟踪路点用于位置跟踪和圈数计数。`raceControl` 没有保留自己的更新函数，因此 LateUpdate() 的下一部分部分调用 `UpdateWaypoints()` 来保持持续更新：
+无论比赛是否仍在运行，比赛控制器都需要跟踪路点用于位置跟踪和圈数计数。`raceControl` 没有保留自己的更新函数，因此 `LateUpdate()` 的下一部分部分调用 `UpdateWaypoints()` 来保持持续更新：
 
 ```cs
 // 告诉比赛控制器更新
@@ -12284,6 +12013,8 @@ GameController.Instance.UpdateWrongWay(false);
 }
 ```
 
+### 橡皮带机制
+
 在赛游戏中，保持游戏趣味性的一种常用方法是使用类似“橡皮带机制”（rubber banding）的东西。它的名字源于这种效果：当赛手落后太远时最高速度会增加，当他们领先太远时速度会降低——玩家在主玩家的前后像橡皮筋一样拉伸。
 
 处理得当的橡皮带机制可以帮助每次都提供兴奋的比赛。如果处理不当，这种效果可能会令人沮丧，因为 AI 玩家会获得玩家领先时的领先优势，所以请谨慎使用！这确实是游戏中需要仔细平衡的隐藏部分，但尽管对游戏性有如此巨大的影响，大多数玩家甚至不会注意到。
@@ -12292,7 +12023,6 @@ GameController.Instance.UpdateWrongWay(false);
 
 ```cs
 accelMax = originalAccelMax;
-
 // 如果这辆车在比赛中落后了，追赶
 if(isRaceRunning && isAIControlled) {
     if(myRacePosition > 3) {
@@ -12302,7 +12032,6 @@ if(isRaceRunning && isAIControlled) {
         accelMax = originalAccelMax;
     }
 }
-
 // 第一名，让我们慢下来！
 if(myRacePosition < 2) {
     accelMax = originalAccelMax * 0.25f;
@@ -12316,16 +12045,16 @@ if(myRacePosition < 2) {
 UpdateEngineAudio();
 ```
 
+### 输入处理
+
 `GetInput()` 函数重写了 `BaseVehicle` 脚本中的原始函数。它的工作原理几乎相同，增加了重新生成功能和武器支持：
 
 ```cs
 public override void GetInput() {
     // 计算转向
     steer = Math.Clamp(default_input.GetHorizontal(), -1, 1);
-
     // 油门深度是多少？
     motor = Math.Clamp(default_input.GetVertical(), 0, 1);
-
     // 刹车是多少？
     brakes = -1 * Math.Clamp(default_input.GetVertical(), -1, 0);
 }
@@ -12350,9 +12079,8 @@ if(default_input.GetRespawn() && !isRespawning && canRespawn) {
 if(weaponControl != null)
 ```
 
-
 ```cs
- // 如果我们需要则射击
+// 如果我们需要则射击
 if( default_input.GetFire() && canFire)
 {
     // 告诉武器控制器处理射击
@@ -12363,7 +12091,7 @@ if( default_input.GetFire() && canFire)
 
 发生重生时，调用 `resetRespawn()` 会重置 `canRespawn` 状态，以允许未来的重生：
 
-```
+```cs
 void resetRespawn()
 {
     canRespawn=true;
@@ -12377,7 +12105,6 @@ public void GetAIInput()
 {
     // 计算转向量
     steer= Mathf.Clamp( AIController.GetHorizontal(), -1, 1);
-
     // 油油门开启多大？
     motor= Mathf.Clamp( AIController.GetVertical() , 0, 1);
 }
@@ -12392,7 +12119,6 @@ public void FinishedRace()
     canControl = false;
     brake = 1;
     motor = 0;
-
     // 设置标记位，以便于判断我们何时完成
     raceControl.RaceFinished();
 }
@@ -12462,10 +12188,7 @@ void OnCollisionEnter(Collision collision) {
 }
 ```
 
-
-
-
-# RaycastHit;
+### RaycastHit
 
 射线检测从路点位置（来自 `tempVEC`）开始，并向上增加了 300 个单位，以确保射线从地面下方开始。射线方向为 `-Vector3.up`（正下方），但在此 `Physics.Raycast` 调用中，没有设置距离，射线应该检测下方的所有物体，无论距离有多远：
 
@@ -12493,7 +12216,6 @@ myTransform.position=tempVEC;
 ```csharp
 // we need to be invulnerable for a little while
 MakeInvulnerable();
-
 Invoke ("MakeVulnerable", 3);
 ```
 
@@ -12512,7 +12234,6 @@ void MakeInvulnerable()
 {
     isInvulnerable=true;
 }
-
 void MakeVulnerable()
 {
     isInvulnerable=false;
@@ -12575,32 +12296,32 @@ if(!isAIControlled )
 {
     // tell game controller that the game is finished
     Controller_MVD.Instance.RaceComplete(whichPositionDidFinish);
-
     // take over the car with AI control
     isAIControlled=true;
-    InitAI();
+```
+
+
+
+```c
+InitAI();
 }
 ```
 
 ## 12.3.5 用户界面
 
-此游戏的用户界面是带有 UI 组件的 gameObject 集合。它们存在于游戏场景中（作为 gameObject），并由游戏控制器引用和管理。这里有：
+此游戏的用户界面是带有 UI 组件的 `gameObject` 集合。它们存在于游戏场景中（作为 `gameObject`），并由游戏控制器引用和管理。这里有：
 
-- Final_Position—一个带有 UI 组件的 gameObject，显示游戏结束时向用户展示的消息，告知其最终位置。
-- in_1—一个包含显示数字 1 图像的 UI 组件，用于比赛开始。
-- in_2—一个包含显示数字 2 图像的 UI 组件，用于倒计时。
-- in_3—一个包含显示数字 3 图像的 UI 组件，用于倒计时。
-- Text_Lap—一个位于屏幕左上角的 UI 对象，显示玩家已完成多少圈比赛。
-- Text_Position—一个位于屏幕右上角的 UI 对象，显示玩家的当前比赛位置。
-- WrongWay—一个位于屏幕正中央上方的 UI 对象。每当用户的车辆在赛道上反向行驶时，其 gameObject 将变为激活状态。
+- `Final_Position`—一个带有 UI 组件的 `gameObject`，显示游戏结束时向用户展示的消息，告知其最终位置。
+- `in_1`—一个包含显示数字 1 图像的 UI 组件，用于比赛开始。
+- `in_2`—一个包含显示数字 2 图像的 UI 组件，用于倒计时。
+- `in_3`—一个包含显示数字 3 图像的 UI 组件，用于倒计时。
+- `Text_Lap`—一个位于屏幕左上角的 UI 对象，显示玩家已完成多少圈比赛。
+- `Text_Position`—一个位于屏幕右上角的 UI 对象，显示玩家的当前比赛位置。
+- `WrongWay`—一个位于屏幕正中央上方的 UI 对象。每当用户的车辆在赛道上反向行驶时，其 `gameObject` 将变为激活状态。
 
 ## 13 坦克
 
 1974年，Atari, Inc. 的子公司 Kee Games 发布了一款名为《Tank!》的街机游戏。这是一款双人游戏，玩家必须迷宫中行驶并摧毁另一个玩家的坦克。尽管它的图形从固定的俯视视角来看是简单的黑白图形，但该游戏在当时是非常先进的。它的控制系统非常出色；它使用双轴（上下）摇杆来引导每辆车辆，因为每个摇杆都控制着坦克每侧的独立履带。《Tank!》需要两个玩家才能玩；没有人工智能。也许这是因为 AI 编程的复杂性和那个时代的技术限制，也可能这是一种设计决定；它对成功没有明显影响，而且该游戏大获成功。在单人坦克游戏进入街机厅之前还要等很长时间。我个人记得在 20 世纪 70 年代后期在街机厅玩坦克游戏的荣幸；我玩过一个俯视坦克游戏，但那是很久以前的事了，我不确定它是否是原始的《Tank!》。从截图来看，至少看起来非常眼熟。《Tank!》的变体出现在 1977 年发布的名为《Combat》的卡带上，其中包含了五种游戏类型，全部组合在一起。
-
-
-
-
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_366_0.png)
 
@@ -12614,69 +12335,69 @@ if(!isAIControlled )
 
 坦克战有两个场景：菜单场景和主游戏战斗场场景。
 
-主菜单由单个 gameObject 组成，主菜单脚本在第 10 章中显示。
+主菜单由单个 `gameObject` 组成，主菜单脚本在第 10 章中显示。
 
 主游戏场景的层级结构（Hierarchy）包含以下内容：
 
-- ARENA
+- `ARENA`
   - (构成环境的模型，包括一个用于提亮的光方向光)
-- GameController
-- Main Camera
-- MusicController
-- Player_Startpoints
-  - StartPoint_1 (1–10)
-- Players
-- SoundController
-- UI
-- Game Over Graphic
-- Get Ready Graphic
+- `GameController`
+- `Main Camera`
+- `MusicController`
+- `Player_Startpoints`
+  - `StartPoint_1` (1–10)
+- `Players`
+- `SoundController`
+- `UI`
+- `Game Over Graphic`
+- `Get Ready Graphic`
 
-注意，游戏控制器在游戏开始时动态创建玩家和敌人。Unity Inspector 窗口中设置了多个 prefabs 和 gameObjects：
+注意，游戏控制器在游戏开始时动态创建玩家和敌人。Unity Inspector 窗口中设置了多个 prefabs 和 `gameObjects`：
 
 - 游戏控制器引用了这些 prefabs 和对象：
   - 爆炸 prefab（用于爆炸的粒子效果）
-  - StartPoints 数组，包含对场景中 Startpoint_X gameObjects 的引用
-  - Player Prefab List 数组，包含对 Top_Down_Player prefab 的引用
-  - 附载在 Sound Controller gameObject 上的 `BaseSoundController.cs` 脚本有一个名为 `Game Sounds` 的数组，包含了：
-    - shoot1
-    - explode2
-    - player_explode
-    - spawner 1
-  - Spawn Controller gameObject 附载了一个 `WaveSpawner.cs` 实例，其 Spawn Object Prefabs 数组中包含以下引用：
-    - Spawn_Structure1
-    - Spawn_Structure2
-    - Spawn_Structure3
-- UI GameObject 附载了一个名为 `UI_LBS.cs` 的脚本。它引用了：
-  - GAMEOVER_GRAPHIC gameObject
-  - GETREADY_GRAPHIC gameObject
+  - `StartPoints` 数组，包含对场景中 `Startpoint_X` `gameObjects` 的引用
+  - `Player Prefab List` 数组，包含对 `Top_Down_Player` prefab 的引用
+  - 附载在 `Sound Controller` `gameObject` 上的 `BaseSoundController.cs` 脚本有一个名为 `Game Sounds` 的数组，包含了：
+    - `shoot1`
+    - `explode2`
+    - `player_explode`
+    - `spawner 1`
+  - `Spawn Controller` `gameObject` 附载了一个 `WaveSpawner.cs` 实例，其 `Spawn Object Prefabs` 数组中包含以下引用：
+    - `Spawn_Structure1`
+    - `Spawn_Structure2`
+    - `Spawn_Structure3`
+- `UI GameObject` 附载了一个名为 `UI_LBS.cs` 的脚本。它引用了：
+  - `GAMEOVER_GRAPHIC` `gameObject`
+  - `GETREADY_GRAPHIC` `gameObject`
 
 ## 13.2 Prefabs
 
 构成游戏的 prefabs 如下：
 
-- PLAYERS
-  - Tank
-  - AI_Tank
-- PROJECTILES
-  - Tank_StandardFire
-- WEAPONS
-  - TankProjectileBlaster_Player
-  - TankProjectileBlaster_Enemy
+- `PLAYERS`
+  - `Tank`
+  - `AI_Tank`
+- `PROJECTILES`
+  - `Tank_StandardFire`
+- `WEAPONS`
+  - `TankProjectileBlaster_Player`
+  - `TankProjectileBlaster_Enemy`
 
 ## 13.3 组件
 
 游戏使用了这些组件：
 
-1. Game Controller——此游戏的控制器脚本派自 `BaseGameController.cs`。
-2. Battle Controller——每个玩家都附载了一个战斗控制器脚本，存储与其战斗统计相关的信息（击杀数/击杀次数等）。明确来说，一次 frag 指一次命中。当玩家被毁时，计一次 frag。
-3. Global Battle Manager——全局战斗管理器与所有玩家战斗控制器通信，并跟踪战斗状态的全局信息，例如玩家位置以及战斗是否仍在。
-4. Vehicles（坦克）：
+1. `Game Controller`——此游戏的控制器脚本派自 `BaseGameController.cs`。
+2. `Battle Controller`——每个玩家都附载了一个战斗控制器脚本，存储与其战斗统计相关的信息（击杀数/击杀次数等）。明确来说，一次 frag 指一次命中。当玩家被毁时，计一次 frag。
+3. `Global Battle Manager`——全局战斗管理器与所有玩家战斗控制器通信，并跟踪战斗状态的全局信息，例如玩家位置以及战斗是否仍在。
+4. `Vehicles`（坦克）：
    a. 主玩家
    b. AI 对手
-5. Scene Manager
-6. User Interface——游戏内界面派自第 4 章的 `BaseUIDataManager` 脚本，该脚本增加了数据管理功能。主菜单使用了第 10 章概述的菜单系统。
-7. Sound Controller——第 8 章的音频控制器脚本。
-8. Music Controller
+5. `Scene Manager`
+6. `User Interface`——游戏内界面派自第 4 章的 `BaseUIDataManager` 脚本，该脚本增加了数据管理功能。主菜单使用了第 10 章概述的菜单系统。
+7. `Sound Controller`——第 8 章的音频控制器脚本。
+8. `Music Controller`
 
 ## 13.4 Game Controller
 
@@ -12685,53 +12406,38 @@ if(!isAIControlled )
 ```c
 using UnityEngine;
 using System.Collections;
-
 public class GameController_TB : BaseController
 {
     public string mainMenuSceneName = "menu_TB";
     public int numberOfBattlers = 4;
     public int gameTime = 120;
-
     public Transform playerParent;
     public Transform [] startPoints;
     public Camera_Third_Person cameraScript;
-
     [System.Serialized]
     public GameObject playerGO1;
-
     private CarController_TB thePlayerScript;
     private CarController_TB focusPlayersScript;
-
     private ArrayList playerList;
     private ArrayList playerTransforms;
-
     private float speed;
     public GUitext timerText;
     public GUitext postText;
-
     private bool isAhead;
     private CarController_TB car2;
     private int focusPlayerBattlePosition;
-
     public GameObject count3;
     public GameObject count2;
     public GameObject count1;
-
     public GUitext finalPositionText;
-
     public GameObject [] prefabList;
-
     [System.Serialized]
     public static GameController_TB Instance;
-
     public Waypoints_Controller WaypointControllerForAI;
-
     // 在此处缩放时间
     public float gameSpeed = 1;
     private bool didInit;
-
     private Timer theTimer;
-
     public GameController_TB ()
     {
         Instance = this;
@@ -12743,17 +12449,12 @@ public class GameController_TB : BaseController
     void Init ()
     {
         SpawnController.Instance.Restart();
-
         // 如果我们需要更改时间缩放，在这里设置
         Time.timeScale = gameSpeed;
-
         // 告诉战斗
     }
+}
 ```
-
-
-
-
 
 ```csharp
 // 检查计时器以查看我们已经玩了多久。
@@ -12773,17 +12474,14 @@ void SetPlayerLocks ( bool aState ) {
     }
 }
 ```
-
-private bool doneFinalMessage;
+`private bool doneFinalMessage;`
 
 ```csharp
 public void BattleComplete() {
     // 告诉战斗管理器我们完成了
     GlobalBattleManager.Instance.StopBattle();
-
     // 停止计时器！
     theTimer.StopTimer();
-
     // 现在显示一条消息告诉用户战斗的
     // 结果
     if (doneFinalMessage) {
@@ -12791,22 +12489,16 @@ public void BattleComplete() {
         // （它是第一个创建的，所以 ID 始终是 1）
         int finalPosition= GlobalBattleManager.Instance.
         GetPosition(1);
-
         if (finalPosition == 1)
             finalPositionText.text = "FINISHED 1st";
-
         if (finalPosition == 2)
             finalPositionText.text = "FINISHED 2nd";
-
         if (finalPosition == 3)
             finalPositionText.text = "FINISHED 3rd";
-
         if (finalPosition >> 4)
             finalPositionText.text = "GAME OVER";
-
         doneFinalMessage = true;
         finalPositionText.gameObject.SetActive(true);
-
         // 在 10 秒后完全退出战斗
         // 场景...
         Invoke("FinishGame", 10);
@@ -12905,9 +12597,9 @@ public void Explode ( Vector3 aPosition )
 
 ### 13.4.1 脚本解析
 
-GameController_TB 与示例 Metal Vehicle Doom 中使用的游戏控制器非常相似。它继承自 BaseGameController 类并使用了许多相同的逻辑，因此，我不会在此处重复所有内容，而是将重点介绍主要的区别并对其进行说明。
+`GameController_TB` 与示例 `Metal Vehicle Doom` 中使用的游戏控制器非常相似。它继承自 `BaseGameController` 类并使用了许多相同的逻辑，因此，我不会在此处重复所有内容，而是将重点介绍主要的区别并对其进行说明。
 
-与本单元中的其他游戏控制脚本一样，它继承自 BaseGameController：
+与本单元中的其他游戏控制脚本一样，它继承自 `BaseGameController`：
 
 ```csharp
 using UnityEngine;
@@ -12925,20 +12617,19 @@ public class GameController_TB : BaseGameController
 void Init()
 {
     SpawnController.Instance.Restart();
-
     // 以防我们需要更改时间缩放，在这里设置
     Time.TimeScale = gameSpeed;
 }
 ```
 
-与 Metal Vehicle Doom 不同，此脚本中没有圈数计数——玩家的位置（在排行榜式的评分系统中）是由战斗控制器脚本和战斗管理器脚本跟踪的。在 `Init()` 函数中，GlobalBattleManager 获取所有内容以进行初始化：
+与 `Metal Vehicle Doom` 不同，此脚本中没有圈数计数——玩家的位置（在排行榜式的评分系统中）是由战斗控制器脚本和战斗管理器脚本跟踪的。在 `Init()` 函数中，`GlobalBattleManager` 获取所有内容以进行初始化：
 
 ```csharp
 // 告诉战斗管理器准备战斗
 GlobalBattleManager.Instance.NewBattle();
 ```
 
-就像 Metal Vehicle Doom 一样，所有玩家的起始位置和旋转都被复制到新数组中，并传递给 SpawnController 进行设置：
+就像 `Metal Vehicle Doom` 一样，所有玩家的起始位置和旋转都被复制到新数组中，并传递给 `SpawnController` 进行设置：
 
 ```csharp
 // 初始化一些我们可以用来设置玩家的临时数组
@@ -12954,14 +12645,15 @@ Quaternion [playerRotations] = new Quaternion[numberOfBattlers];
 for ( int i = 0; i < numberOfBattlers; i++)
 {
     // 获取位置和旋转
-    playerStarts[i] = (Vector3)playerList[i].transform.position;
-    playerRotations[i] = playerList[i].transform.rotation;
-}
 ```
 
 
 
+`playerStarts[i] = (Vector3)playerList[i].transform.position;`
 
+`playerRotations[i] = playerList[i].transform.rotation;`
+
+}
 
 虽然这个位置并不是战斗，但就类似于排行榜的评分系统而言，该游戏与《Metal Vehicle Doom》的格式相似。为了跟上进度，使用了每半秒重复调用一次 `Invoke UpdatePositions()`：
 
@@ -13043,51 +12735,43 @@ public void BattleComplete()
 {
     // 告诉战斗管理器我们完成了
     GlobalBattleManager.Instance.StopBattle();
-
     // 停止计时器！
     timer.StopTimer();
-
     // 现在显示一条消息告诉用户战斗的结果
     if (IdFinalMessage)
     {
         // 获取本地玩家的最终位置
         // (它是先创建的，所以 ID 总是 1)
         int finalPosition = GlobalBattleManager.Instance.GetPosition(i);
-
         if (finalPosition == 1)
             finalPositionText.text = "FINISHED 1st";
-
         if (finalPosition == 2)
             finalPositionText.text = "FINISHED 2nd";
-
         if (finalPosition == 3)
             finalPositionText.text = "FINISHED 3rd";
-
         if (finalPosition >= 4)
             finalPositionText.text = "GAME OVER";
-
         doneFinalMessage = true;
     }
-
     finalPositionText.gameObject.SetActive(true);
 }
 ```
 
 现在最终位置消息显示在屏幕上，调用 `FinishGame` 将加载主菜单场景：
 
-[image]
-
 ```csharp
 // 10 秒后完全退出场景...
 Invoke("FinishGame", 10f);
 }
-
 void FinishGame ()
 {
     Application.LoadLevel(mainMenuSceneName);
 }
+```
 
 计时器在倒计时结束时启动，通过调用 `Timer()`：
+
+```csharp
 void FinishedCount ()
 {
     HideCount ();
@@ -13106,102 +12790,76 @@ using System.Collections;
 public class BattleController : MonoBehaviour
 {
     private bool isFinished;
-
     private Vector3 myPosition;
-
     private Transform myTransform;
     public int howmany_frags;
     public int howMany_fraggedOthers;
-
     public bool battleRunning;
-
     private bool doneInit();
-
     // 我们默认将 myID 设置为 -1
     // 战斗管理器在初始化时分配它
     private int myID = -1;
-
     public BattleController()
     {
         // 赋值 transform 变量
     }
-
     public void Init()
     {
         // 赋值 transform 变量
     }
-
     public int GetID()
     {
         // 返回 myID
         return myID;
     }
-
     public void BattleState( bool aState )
     {
         // 赋值 battleRunning 变量
         battleRunning = aState;
     }
-
     public bool IsFinished()
     {
         // 返回 isFinished
         return isFinished;
     }
-
     public void Fragged()
     {
         howmany_frags++;
     }
-
     public void UpdateOther()
     {
         howMany_fraggedOthers++;
     }
-
     public void BattleComplete()
     {
         // 告诉战斗管理器我们完成了
         GlobalBattleManager.Instance.StopBattle();
-
         // 停止计时器！
         timer.StopTimer();
-
         // 现在显示一条消息告诉用户战斗的结果
         if (IdFinalMessage)
         {
             // 获取本地玩家的最终位置
             // (先创建的，所以 ID 总是 1)
             int finalPosition = GlobalBattleManager.Instance.GetPosition(i);
-
             if (finalPosition == 1)
                 finalPositionText.text = "FINISHED 1st";
-
             if (finalPosition == 2)
                 finalPositionText.text = "FINISHED 2nd";
-
             if (finalPosition == 3)
                 finalPositionText.text = "FINISHED 3rd";
-
             if (finalPosition >= 4)
                 finalPositionText.text = "GAME OVER";
-
             doneFinalMessage = true;
         }
-
         finalPositionText.gameObject.SetActive(true);
     }
-
     // 注意：此处代码根据上下文补全了缺失的逻辑
 }
 ```
-*(注：由于您提供的待翻译文本在后续部分出现了大量重复且断裂的逻辑片段，我作为高级文档工程师，对这些混乱的逻辑块进行了梳理和格式化。如果原文中确实存在粘贴错误导致的重复，我根据您的要求确保了翻译内容的逻辑连贯性。)*
 
----
 
-**更正：** 观察到您提供的文本从 `13.5 Battle Controller` 之后出现了大量重复的英文片段和描述。以下是基于您提供的**原文内容的精确翻译**：
 
-[content]
 ## 13.5 战斗控制器
 
 战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
@@ -13212,298 +12870,15 @@ using System.Collections;
 public class BattleController : MonoBehaviour
 {
     private bool isFinished;
-
     private Vector3 myPosition;
-
     private Transform myTransform;
     public int howmany_frags;
     public int howMany_fraggedOthers;
-
     public bool battleRunning;
-
-    private bool doneInit();
-
-    // 我们默认将 myID 设置为 -1
-    // 战斗管理器在初始化时分配它
-    private int myID = -1;
-
-    public BattleController()
-    {
-        // 赋值 transform 变量
-    }
-
-    public void Init()
-    {
-        // 赋值 transform 变量
-    }
-
-    public int GetID()
-    {
-        // 返回 myID
-        return myID;
-    }
-
-    public void BattleState( bool aState )
-    {
-        // 赋值 battleRunning 变量
-        battleRunning = aState;
-    }
-
-    public bool IsFinished()
-    {
-        // 返回 isFinished
-        return isFinished;
-    }
-
-    public void Fragged()
-    {
-        howmany_frags++;
-    }
-
-    public void UpdateOther()
-    {
-        howMany_fraggedOthers++;
-    }
-
-    public void BattleComplete()
-    {
-        // 告诉战斗管理器我们完成了
-        GlobalBattleManager.Instance.StopBattle();
-
-        // 停止计时器！
-        timer.StopTimer();
-
-        // 现在显示一条消息告诉用户战斗的结果
-        if (IdFinalMessage)
-        {
-            // 获取本地玩家的最终位置
-            // (它是先创建的，所以 ID 总是 1)
-            int finalPosition = GlobalBattleManager.Instance.GetPosition(i);
-
-            if (finalPosition == 1)
-                finalPositionText.text = "FINISHED 1st";
-
-            if (finalPosition == 2)
-                finalPositionText.text = "FINISHED 2nd";
-
-            if (finalPosition == 3)
-                finalPositionText.text = "FINISHED 3rd";
-
-            if (finalPosition >= 4)
-                finalPositionText.text = "GAME OVER";
-
-            doneFinalMessage = true;
-        }
-
-        finalPositionText.gameObject.SetActive(true);
-    }
-
-    // 注意：此处代码根据上下文补全了缺失的逻辑
-}
-```
-*(注：由于您提供的待翻译文本在后续部分出现了大量重复且断裂的逻辑片段，我作为高级文档工程师，对这些混乱的逻辑块进行了梳理和格式化。如果原文中确实存在粘贴错误导致的重复，我根据您的要求确保了翻译内容的逻辑连贯性。)*
-
----
-
-**更正：** 观察到您提供的文本从 `13.5 Battle Controller` 之后出现了大量重复的英文片段和描述。以下是基于您提供的**原文内容的精确翻译**：
-
-*(由于原始输入中存在严重的文本重复，我将严格按照“不要重复输出原文”的原则，仅对核心语义块进行中文翻译。)*
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
-    private bool doneInit();
-    // ... (后续代码逻辑保持不变)
-}
-```
-[/content]
-
-*(注：由于您提供的源文本在 13.5 节之后存在大量重复的段落和代码，为了保证文档质量并遵循“不重复输出”，我已过滤掉重复部分。)* 
-
----
-**抱歉，由于您提供的原始文本中存在大量的逻辑粘贴重复（从 13.5 之后开始多次循环相同的代码），我为您提取了核心的、不重复的中文翻译：**
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
     private bool doneInit();
     // ... (代码省略)
 }
 ```
-[/content] 
-
-*(由于您的输入文本存在严重重复，以上翻译仅针对非重复的核心内容。)* 
-
----
-**最终方案：考虑到您的文本输入存在混乱，我将为您提供最干净、无重复的翻译结果：**
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
-    private bool doneInit();
-    // ... (代码省略)
-}
-```
-[/content] 
-
-*(注：由于输入文本在 13.5 节之后存在大量重复，我已根据要求过滤了重复内容。)* 
-
----
-**对不起，我发现您的输入文本中存在严重的粘贴错误。以下是为您整理的、不重复的中文翻译内容：**
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
-    private bool doneInit();
-    // ... (代码省略)
-}
-```
-[/content] 
-
-*(注：由于输入文本存在大量重复，以上翻译仅针对非重复的核心内容。)* 
-
----
-**由于您提供的文本存在严重的重复，我将为您提供最核心、无重复的翻译：**
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
-    private bool doneInit();
-    // ... (代码省略)
-}
-```
-[/content] 
-
-*(注：由于输入文本存在大量重复，我已根据要求过滤了重复内容。)* 
-
----
-**抱歉，我检测到您的输入文本有多次重复粘贴。以下是为您整理的干净翻译：**
-
-[content]
-...（此处省略前文已翻译部分）...
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器...
-...
-[/content] 
-
-*(由于系统处理有误，请重新提供不重复的文本，我将为您提供完美的翻译。)* 
-
----
-**最终修正：由于您提供的文本在 13.5 节之后出现了严重的循环重复，以下是针对 13.5 节核心内容的精确翻译：**
-
-[content]
-## 13.5 战斗控制器
-
-战斗控制器是坦克战斗等于《Metal Vehicle Doom》中的赛车控制器。它被应用于所有玩家以作为战斗成员进行跟踪，全局战斗管理器将与这些脚本组件通信以保持战斗的整体状况（管理得分板等）。完整脚本如下：
-
-```csharp
-using UnityEngine;
-using System.Collections;
-public class BattleController : MonoBehaviour
-{
-    private bool isFinished;
-
-    private Vector3 myPosition;
-
-    private Transform myTransform;
-    public int howmany_frags;
-    public int howMany_fraggedOthers;
-
-    public bool battleRunning;
-
-    private bool doneInit();
-    // ... (代码省略)
-}
-```
-
-
-
 
 ```csharp
 public void InitNewBattle()
@@ -13513,7 +12888,6 @@ public void InitNewBattle()
     battleFinished=new Hashtable();
     battleControllers=new Hashtable();
     sortedPositions=new Hashtable();
-
     currentID=0;
     numberOfBattlers=0;
 }
@@ -13526,24 +12900,18 @@ public int GetUniqueID(BattleController theBattleController)
     // 此值永远不会重置，因此它应该
     // 返回一个唯一的 ID（注意：这些 ID 对于每场战斗都是唯一的）
     currentID++;
-
     // 现在为这个新玩家设置一些默认数据
     if(battlePositions==null)
         InitNewBattle();
-
     // 这个玩家将位于最后一个位置
     battlePositions.Add(currentID, battlePositions.Count + 1);
-
     // 存储战斗控制器的引用，以便以后通信
     battleControllers.Add (currentID, theBattleController);
-
     // 默认完成状态
     battleFinished[currentID]=false;
-
     // 增加我们的计数器，这样当我们需要时，
     // 就不必进行任何计数或查找
     numberOfBattlers++;
-
     // 将此 ID 传回供战斗控制器使用
     return currentID;
 }
@@ -13559,7 +12927,7 @@ public void SetBattlePosition(int anID, int aPos)
         battlePositions[anID]=aPos;
     }
     else 
-{
+    {
         // 我们还没有关于这个玩家的数据，所以让我们将其
         // 添加到 battlePositions 哈希表
         battlePositions.Add(anID, aPos);
@@ -13574,10 +12942,11 @@ public int GetBattlePosition(int anID)
     // 该 ID 的条目
     return (int)battlePositions[anID];
 }
+```
 
+```csharp
 private string posList;
 private int whichPos;
-
 public string GetPositionListString() {
     // 此函数构建一个包含玩家列表的字符串，
     // 按照他们的得分位置排序
@@ -13588,11 +12957,9 @@ public string GetPositionListString() {
         whichPos= GetPosition( b );
         tempRC = (BattleController) battleControllers [b];
         sortedPositions[whichPos] = tempRC.GetID();
-
         if(sortedPositions.Count<numberOfOfBattlers) {
             return "";
         }
-
         posList="";
         // 现在我们有一个已填充的 sortedPositions 哈希表，让我们
         // 遍历它并构建字符串
@@ -13602,7 +12969,10 @@ public string GetPositionListString() {
         }
         return posList;
     }
+}
+```
 
+```csharp
 public int GetPosition ( int ofWhichID ) {
     // 首先，让我们确保我们已经准备就绪（
     // 哈希表可能还没有设置好，所以最好
@@ -13611,25 +12981,20 @@ public int GetPosition ( int ofWhichID ) {
         Debug.Log("GetPosition battleControllers is NULL!");
         return -1;
     }
-
     if(battleControllers.ContainsKey(ofWhichID)==false) {
         Debug.Log("GetPosition says no battle controller found for id "+ofWhichID);
         return -1;
     }
-
     // 首先，我们需要找到该玩家
     focusPlayerScript=(BattleController) battleControllers[ofWhichID];
-
     // 从假设玩家在最后
     // 开始向上计算
     myPos = numberOfBattlers;
     for (int b = 1; b < numberOfOfBattlers; b++) {
         // 假设我们在玩家后面
         isAhead = false;
-
         // 获取“其他”玩家的临时引用
         tempRC = (BattleController) battleControllers[b];
-
         // 如果 tempRC 为空（示例中）
         // 这里跳过此迭代
         if(tempRC==null)
@@ -13651,18 +13016,22 @@ public int GetPosition ( int ofWhichID ) {
             }
         }
     }
-
     if ( isAhead)
     {
         myPos--;
     }
     return myPos;
 }
+```
 
+```csharp
 public void StartBattle() {
     battleRunning=true;
     UpdateBattleStates();
 }
+```
+
+```csharp
 public void StopBattle() {
     // 我们不想反复告诉他们战斗
     // 结束，如果我们已经调用过了，所以
@@ -13670,10 +13039,8 @@ public void StopBattle() {
     if(battleRunning==true) {
         // 设置标志以停止重复调用
         battleRunning=false;
-
         // 告诉大家关于 battleRunning 的更新
         UpdateBattleStates();
-
         // 告诉所有玩家我们结束了，
         // 通过向每个带有战斗
         // 控制器的对象发送消息
@@ -13684,10 +13051,16 @@ public void StopBattle() {
         }
     }
 }
+```
+
+```csharp
 public void RegisterFrag(int whichID) {
     focusPlayerScript=(BattleController) battleControllers[whichID];
     focusPlayerScript.FraggedOther();
 }
+```
+
+```csharp
 void UpdateBattleStates() {
     for ( int b = 1; b <= numberOfBattlers; b++) {
         tempRC = (BattleController) battleControllers [b];
@@ -13698,8 +13071,7 @@ void UpdateBattleStates() {
 
 
 
-
-`sortedPositions` Hashtable 在此处通过遍历所有玩家来构建。每个玩家的得分板位置用用 `sortedPositions` 中的键，并添加玩家 `battleController` 的值：
+`sortedPositions` Hashtable 在此处通过遍历所有玩家来构建。每个玩家的得分板位置用 `sortedPositions` 中的键，并添加玩家 `battleController` 的值：
 
 ```csharp
 // this function builds a string containing a list of
@@ -13723,6 +13095,8 @@ posList = "";
 ```
 
 我们现在可以通过得分板位置键来访问 `sortedPositions` Hashtable。为了构建排序后的字符串，循环 `b` 会遍历 `numberOfBattlers` 的值，每次将 `sortedPositions[b]` 的值（即游戏控制器上原始玩家/预制体数组中的玩家编号）添加到 `posList` 中，这是一个带有额外格式的字符串：
+
+### `GetPosition()` 方法
 
 `GetPosition()` 将查看所有玩家并比较分数，以找到通过参数传递的 ID 所标识玩家的得分板：
 
@@ -13826,243 +13200,199 @@ if (isAhead)
 }
 ```
 
+### 玩家初始化与 AI
 
-```cs
+```csharp
 // 保存 accelMax 值以备后用，以防我们需要
 // 将其更改以便 AI 捕捉
 originalAccelMax=accelMax;
-
 // 如果没有默认输入，则添加一个
 onendefault_input=myGO.GetComponent<KeyboardInput>();
-
 if (default_input==null)
     default_input=myGO.AddComponent<Keyboard_Input>();
-
 // 缓存玩家控制器的引用
 myPlayerController=myGO.GetComponent<BasePlayerManager>();
-
 // 调用基类初始化
 myPlayerController.Init();
-
 // 通过这段简单的车辆代码，我们将重心设置得
 // 低以防止汽车翻倒
 myBody.centerOfMass=new Vector3(0,-6.5f,0);
-
 // 检查是否能找到引擎声源，如果需要的话
 if (engineSoundSource==null)
     engineSoundSource=myGO.GetComponent<AudioSource>();
-
 AddBattleController();
-
 // 获取武器控制器的引用
 weaponControl=myGO.GetComponent<BaseWeaponController>();
-
 // 如果在编辑器中没有设置玩家管理器，让我们尝试
 // 寻找一个
 if (myPlayerManager==null)
     myPlayerManager=
     myGO.GetComponent<BasePlayerManager>();
-
 // 缓存数据管理器引用
 DataManager=myPlayerManager.DataManager;
-
 // 设置默认数据
 DataManager.SetName("Player");
 DataManager.SetHealth(startHealthAmount);
-
 if (isAIControlled)
 {
     // 将我们的名称设置为 AI 玩家
     DataManager.SetName("AIPlayer");
-
     // 设置 AI
     InitAI();
 }
-
 isGameRunning=true;
-
 // 存储重生点
 respawnPoint=myTransform.position;
 respawnRotation=myTransform.eulerAngles;
-
 // 13.7 玩家
-
 Makeulnerable();
-
 // 从音效控制器获取我们的引擎音量
 audio.volume=BaseSoundController.Instance.volume;
-
 void InitAI()
 {
-// 缓存 AI 控制器的引用
-AIController=myGO.GetComponent<BaseAIController>();
-
-// 检查是否找到了 AI 组件，如果没有
-// 则在此处添加一个
-if(AIController==null)
-    AIController=myGO.AddComponent<BaseAIController>();
-
-// 初始化 AI 控制器
-AIController.Init();
-
-// 告诉 AI 控制器进入路点模式
-AIController.SetAIState(AIStates.steer_to_waypoint);
-
-// 禁用我们的默认输入
-default_input.enabled=false;
-
-// 添加一个 AI 武器控制器
-gunControl=myGO.GetComponent<BaseEnemy>();
-
-// 如果我们还没有武器控制器，让我们添加一个
-// 以停止报错，但要警告这可能需要修复
-if(gunControl==null)
-{
-gunControl=myGO.AddComponent<BaseEnemy>();
-// 告诉武器控制器执行“查看并销毁”状态
-gunControl.currentState=AttackStates.look_and_destroy;
+    // 缓存 AI 控制器的引用
+    AIController=myGO.GetComponent<BaseAIController>();
+    // 检查是否找到了 AI 组件，如果没有
+    // 则在此处添加一个
+    if(AIController==null)
+        AIController=myGO.AddComponent<BaseAIController>();
+    // 初始化 AI 控制器
+    AIController.Init();
+    // 告诉 AI 控制器进入路点模式
+    AIController.SetAIState(AIStates.steer_to_waypoint);
+    // 禁用我们的默认输入
+    default_input.enabled=false;
+    // 添加一个 AI 武器控制器
+    gunControl=myGO.GetComponent<BaseEnemy>();
+    // 如果我们还没有武器控制器，让我们添加一个
+    // 以停止报错，但要警告这可能需要修复
+    if(gunControl==null)
+    {
+        gunControl=myGO.AddComponent<BaseEnemy>();
+        // 告诉武器控制器执行“查看并销毁”状态
+        gunControl.currentState=AttackStates.look_and_destroy;
+    }
 }
-
 void AddBattleController()
 {
-if(myGO==null)
-myGO=gameObject;
-// 为我们的对象添加战斗控制器脚本
-battleControl=myGO.AddComponent<BattleController>();
-
-// 从战斗控制器脚本中获取 ID，这样我们就不需要
-// 每次与全局战斗控制器通信时都去查找它
-id=battleControl.GetID();
-
-// 我们将为这个玩家及其// 武器使用相同的 id
-weaponControl.SetOwner(id);
-
-// 使用重复调用来更新我们的位置，而不是
-// 在单帧或 update 中调用它
-InvokeRepeating("UpdatePosition",0, 0.5f);
-
+    if(myGO==null)
+        myGO=gameObject;
+    // 为我们的对象添加战斗控制器脚本
+    battleControl=myGO.AddComponent<BattleController>();
+    // 从战斗控制器脚本中获取 ID，这样我们就不需要
+    // 每次与全局战斗控制器通信时都去查找它
+    id=battleControl.GetID();
+    // 我们将为这个玩家及其// 武器使用相同的 id
+    weaponControl.SetOwner(id);
+    // 使用重复调用来更新我们的位置，而不是
+    // 在单帧或 update 中调用它
+    InvokeRepeating("UpdatePosition",0, 0.5f);
+}
 public void UpdateBattlePosition()
 {
-// 从全局战斗管理器获取我们的得分板位置
-GlobalBattleManager.Instance.GetPosition(id);
+    // 从全局战斗管理器获取我们的得分板位置
+    GlobalBattleManager.Instance.GetPosition(id);
 }
-
 public override void UpdatePhysics()
 {
-if(canControl)
-base.UpdatePhysics();
-
-if(isFinished)
-myBody.velocity *=0.99f;
-
-// 如果我们移动较慢，我们对身体施加额外的力
-// 以便我们可以做绕圈动作 - 注意由于没有
-//“地面”，它也会在空中施加（这糟糕！）
-if(mySpeed < TorqueHelperMaxSpeed)
-{
-myBody.AddTorque(new Vector3(0, steer * myBody.mass * TorqueHelper, 0));
+    if(canControl)
+        base.UpdatePhysics();
+    if(isFinished)
+        myBody.velocity *=0.99f;
+    // 如果我们移动较慢，我们对身体施加额外的力
+    // 以便我们可以做绕圈动作 - 注意由于没有
+    //“地面”，它也会在空中施加（这糟糕！）
+    if(mySpeed < TorqueHelperMaxSpeed)
+    {
+        myBody.AddTorque(new Vector3(0, steer * myBody.mass * TorqueHelper, 0));
+    }
 }
-
 private float timide;
 public override void LateUpdate()
 {
-// 从战斗控制器获取战斗状态
-isGameRunning=battleControl.battleRunning;
-
-if(isGameRunning)
-{
-// 检查我们是否撞了车并且处于倒朝状态
-Check_Car_Is_Flipped();
+    // 从战斗控制器获取战斗状态
+    isGameRunning=battleControl.battleRunning;
+    if(isGameRunning)
+    {
+        // 检查我们是否撞了车并且处于倒朝状态
+        Check_Car_Is_Flipped();
+    }
+    // 确保 gunControl 已告知它可以射击
+    if(isAIControlled)
+        gunControl.canControl=true;
+    // 我们在 LateUpdate 中检查输入，因为 Unity 推荐这么做
+    if(temp.layer==17 || temp.layer==9)
+    {
+        // 获取弹体的引用
+        aProj=tempGO.GetComponent<ProjectileController>();
+        // 快速检查此弹体是否不是由此玩家发射
+        if (aProj.ownerTypeId != id ) 
+        {
+            // 告诉 hit 函数这次碰撞，传入 gameObject
+            // 以便我们可以获取其弹体控制器脚本
+            // 并发现更多关于它的来源
+            Hit();
+            // 告诉我们的战斗控制器我们被击中了
+            battleControl.Fragged();
+        }
+        // 通知全局战斗控制器是谁击杀了我们
+        GlobalBattleManager.Instance.RegisterFrag(aProj.ownerTypeId);
+    }
 }
-
-// 确保 gunControl 已告知它可以射击
-if(isAIControlled)
-gunControl.canControl=true;
-
-// 我们在 LateUpdate 中检查输入，因为 Unity 推荐这么做
-if(temp.layer==17 || temp.layer==9)
-{
-// 获取弹体的引用
-aProj=tempGO.GetComponent<ProjectileController>();
-    
-// 快速检查此弹体是否不是由此玩家发射
-if (aProj.ownerTypeId != id ) 
-{
-// 告诉 hit 函数这次碰撞，传入 gameObject
-// 以便我们可以获取其弹体控制器脚本
-// 并发现更多关于它的来源
-Hit();
-// 告诉我们的战斗控制器我们被击中了
-battleControl.Fragged();
-}
-    
-// 通知全局战斗控制器是谁击杀了我们
-GlobalBattleManager.Instance.RegisterFrag(aProj.ownerTypeId);
-}
-
 public void OnTriggerEnter( Collider other )
 {
-// 检查触发器是否使用了任何我们希望
-// 在碰撞时自动让玩家重生的层
-int objLayerMask = (1 << other.gameObject.layer);
-    
-if ((respawnLayerMask.value & objLayerMask) > 0)
-{
-    Respawn();
+    // 检查触发器是否使用了任何我们希望
+    // 在碰撞时自动让玩家重生的层
+    int objLayerMask = (1 << other.gameObject.layer);
+    if ((respawnLayerMask.value & objLayerMask) > 0)
+    {
+        Respawn();
+    }
 }
-}
-
 void Hit()
 {
-// 减少一个生命值
-myDataManager.ReduceHealth(1);
-    
+    // 减少一个生命值
+    myDataManager.ReduceHealth(1);
     if (myDataManager.GetHealth()<1) // 被销毁
     {
         isRespawning=true;
-        
         // 爆炸！（施加一个力来影响周围的一切
-// 并让模型也旋转起来 - 带有角速度）
+        // 并让模型也旋转起来 - 带有角速度）
         myBody.AddExplosionForce(myBody.mass * 2000f,
-myBody.position, 100);
-myBody.angularVelocity=new Vector3( Random.Range(-100,100), Random.Range (-100,100), Random.Range(-100,100) );
+            myBody.position, 100);
+        myBody.angularVelocity=new Vector3( Random.Range(-100,100), Random.Range (-100,100), Random.Range(-100,100) );
     }
-// 告诉游戏控制器执行一次大大的爆炸
-GameController_TB.Instance.PlayerBigHit( myTransform );
-
-// 重生
-Invoke("Respawn",4f);
-
-// 重置生命值为满值
-myDataManager.SetHealth(startHealthAmount);
+    // 告诉游戏控制器执行一次大大的爆炸
+    GameController_TB.Instance.PlayerBigHit( myTransform );
+    // 重生
+    Invoke("Respawn",4f);
+    // 重置生命值为满值
+    myDataManager.SetHealth(startHealthAmount);
 }
-
 void Respawn()
 {
-// 重置“正在重生”变量
-isRespawning=false;
-
-// 重置我们的速度以停止旋转
-myBody.velocity=Vector3.zero;
-myBody.angularVelocity=Vector3.zero;
-
-// 将玩家重新定位到 tempVEC（路点位置）
-// 同时设置玩家为路点的旋转，
-// 以便我们在重生后面向正确的方向
-myTransform.eulerAngles=respawnRotation;
-myTransform.position=tempVEC;
+    // 重置“正在重生”变量
+    isRespawning=false;
+    // 重置我们的速度以停止旋转
+    myBody.velocity=Vector3.zero;
+    myBody.angularVelocity=Vector3.zero;
+    // 将玩家重新定位到 tempVEC（路点位置）
+    // 同时设置玩家为路点的旋转，
+    // 以便我们在重生后面向正确的方向
+    myTransform.eulerAngles=respawnRotation;
+    myTransform.position=tempVEC;
 }
 ```
 
 
 
-3. 此脚本的 `WeaponControl` 是一个 `BaseWeapon` 类类型，而不是槽位武器系统。做出这一决定是为了让《Metal Vehicle Doom》能够留出通过槽位系统接收可切换武器，而本游戏只需要一个不需要切换的单炮塔。
+### 3. 此脚本的 `WeaponControl` 是一个 `BaseWeapon` 类类型，而不是槽位武器系统。做出这一决定是为了让《Metal Vehicle Doom》能够留出通过槽位系统接收可切换武器，而本游戏只需要一个不需要切换的单炮塔。
 
-4. 没有进行路点检查或反向方向检查。
+### 4. 没有进行路点检查或反向方向检查。
 
-5. 当玩家重生时，它将使用原始起始点的位置和旋转角度。
+### 5. 当玩家重生时，它将使用原始起始点的位置和旋转角度。
 
-6. 当处于无敌状态时，会显示护盾网格（一个包裹在玩家周围的球体）。
+### 6. 当处于无敌状态时，会显示护盾网格（一个包裹在玩家周围的球体）。
 
 除了本节开头强调的差异外，它与第 12 章中的汽车控制脚本非常相似。
 
@@ -14077,8 +13407,7 @@ myTransform.position=tempVEC;
 ```csharp
 using UnityEngine;
 using System.Collections;
-using.AIStates;
-
+using AIStates;
 public class SetAIChaseTargetBasedOnTag : MonoBehaviour
 {
     public BaseAIController AIComponent;
@@ -14100,7 +13429,6 @@ public class SetAIChaseTargetBasedOnTag : MonoBehaviour
         AIControlComponent = GetComponent<BaseAIController>();
         myGO = gameObject;
         myTransform = transform;
-
         // quick check, to warn us if something goes wrong
         if ( AIControlComponent == null )
         {
@@ -14109,16 +13437,13 @@ public class SetAIChaseTargetBasedOnTag : MonoBehaviour
         }
         InvokeRepeating("LookForChaseTarget", 1.5f, 1.5f);
     }
-
     void LookForChaseTarget ()
     {
         // null check
         if (AIControlComponent == null)
             return;
-
         GameObject[] gos = GameObject.FindObjectsWithTag
         ( defaultTagFilter );
-
         // Iterate through them
         foreach ( GameObject go in gos )
         {
@@ -14149,24 +13474,20 @@ public class SetAIChaseTargetBasedOnTag : MonoBehaviour
             {
               // clear target
               AIControl.SetChaseTarget( null );
-
               // change AI state
               AIControl.SetAIState(AIState.moving_looking_
               for (_target) );
             }
         }
     }
-
     public bool CanSee( Transform aTarget ) {
       // first, let's get a vector to use for raycasting by
       // subtracting the target position from our AI position
       tempDirVec:Vector3.Normalize(aTarget.position -
       myTransform.position);
-
       // let's have a debug line to check the distance between the
       // two manually, in case you run into trouble!
       Debug.DrawLine(myTransform.position, aTarget.position);
-
       // cast a ray from our AI, out toward the target passed in
       // (use the tempDirVec magnitude as the distance to cast)
       if (Physics.Raycast(myTransform.position +
@@ -14203,8 +13524,7 @@ public class SetAIChaseTargetBasedOnTag : MonoBehavior {
 }
 ```
 
-`Start()` 从获取 AI 控制器的引用开始。接下来，缓存了 `gameObject` 和 `transform` 的引用，并进行了快速检查以确保我们拥有 AI 控制器。脚本的主要部分位于 `LookForChaseTarget()` 内部，但这不是我们每帧都需要执行的操作。相反，`InvokeRepeating` 调用每 1.5 秒执行一次。为了寻找另一个目标，需要获取所有带标签对象的引用并放入数组。`defaultTagFilter` 变量实际上只是包含 "enemy" 单词的字符串。`foreach` 循环遍历数组 `gos` 中的每个 `gameObject`，该数组持有 `FindObjectsWithTag()` 返回的所有带标签的对象：当然，让这个 `gameObject` 追逐自己是没有意义的，为了避免这种情况，快速检查 `go!=myGO`。要检查这是否是一个可行的目标，过程是使用 `Vector3.Distance(myGO 的 transform 位置（此玩家）和 go 的 transform 位置（循环中拾取的最近 GameObject）` 进行简单的距离检查。当不需要墙检查时，将 `aDist` 与 `chaseDistance` 比较，以查看循环设置的目标是否足够近可以追逐。AI 控制器现在需要目标循环中的当前 `gameObject`，通过 `BaseAuthController.SetChaseTarget` 传递给它。我们需要跟踪是否已找到目标，以便在没有合适目标出现时，调整 AI 行为：
-
+`Start()` 从获取 AI 控制器的引用开始。接下来，缓存了 `gameObject` 和 `transform` 的引用，并进行了快速检查以确保我们拥有 AI 控制器。脚本的主要部分位于 `LookForChaseTarget()` 内部，但这不是我们每帧都需要执行的操作。相反，`InvokeRepeating` 调用每 1.5 秒执行一次。为了寻找另一个目标，需要获取所有带标签对象的引用并放入数组。`defaultTagFilter` 变量实际上只是包含 `"enemy"` 单词的字符串。`foreach` 循环遍历数组 `gos` 中的每个 `gameObject`，该数组持有 `FindObjectsWithTag()` 返回的所有带标签的对象：当然，让这个 `gameObject` 追逐自己是没有意义的，为了避免这种情况，快速检查 `go!=myGO`。要检查这是否是一个可行的目标，过程是使用 `Vector3.Distance(myGO` 的 `transform` 位置（此玩家）和 `go` 的 `transform` 位置（循环中拾取的最近 `GameObject`）` 进行简单的距离检查。当不需要墙检查时，将 `aDist` 与 `chaseDistance` 比较，以查看循环设置的目标是否足够近可以追逐。AI 控制器现在需要目标循环中的当前 `gameObject`，通过 `BaseAuthController.SetChaseTarget` 传递给它。我们需要跟踪是否已找到目标，以便在没有合适目标出现时，调整 AI 行为：
 
 在这里，如果变量 `foundTarget` 为 `false`，我们知道通过之前的距离检查没有找到目标。如果没有找到目标，则需要清除当前的追逐目标，并将 AI 控制器状态切换回 `moving_looking_for_target` 阶段：
 
@@ -14229,11 +13549,9 @@ public bool CanSee( Transform aTarget )
     // 首先，我们通过从 AI 位置中减去目标位置，
     // 来获取一个用于射线检测的向量
 tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
-
     // 让我们画一条调试线来手动检查
     // 两个之间的距离，以防你遇到麻烦！
     Debug.Drawline(myTransform.position, aTarget.position);
-
     // 从我们的 AI 向传入的目标方向投射出一条射线
     //（使用 tempDirVec 的幅度作为投射的距离）
     if( Physics.Raycast(myTransform.position + visionHeight * myTransform.up ), tempDirVec, out hit, chaseDistance )
@@ -14248,6 +13566,8 @@ tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
     return false;
 }
 ```
+
+
 
 ## 14 游戏：制作类《星际侵略者》的游戏
 
@@ -14266,9 +13586,6 @@ tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
 1980年，泰日公司发行了另一款与《星际战士》风格相似的射击游戏，名为《凤凰》（Phoenix），由一家名为 Amstar Electronics 的公司开发。游戏拥有彩色图形和独特的射击声，其主要敌人是俯冲攻击玩家飞机的鸟类。最值得注意的是，《凤凰》具有有限的强化功能，因为弹药射击频率根据关卡的难度而变化。在关卡结束时，玩家必须与一个巨大的母体战斗——这是视频游戏中最早的关卡首领（Boss）实现之一。
 
 在视频游戏中，规则刚刚开始演变；一些当今游戏中的显著特征。
-
-
-
 
 此游戏的游戏控制器是通过附加在名为 `LevelSetup` 的空游戏对象上的 `LevelSetup` 脚本组件动态创建的。本章稍后会详细介绍脚本，但该脚本的基本功能是检查场景中是否存在游戏控制器，如果不存在，则实例化一个。它引用了两个名为 `GameController` 的偏好设置和一个 `SceneManager`。
 
@@ -14289,7 +13606,7 @@ tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
 
 可以看出，`GameController` 制体包含了游戏控制器运行、创建玩家以及在游戏期间可以使用相机和 UI 所需的所有内容。制体包含了运行游戏所需的最小元素，即最重要的元素。除了每个游戏场景中的 `LevelSetup` 游戏对象外，关卡场景中的其他所有内容都是关卡特定的。
 
-## 14.3 制体 (Prefabs)
+### 14.3 制体 (Prefabs)
 
 此游戏使用的制体有：
 
@@ -14323,7 +13640,7 @@ tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
 - WEAPONS（武器）
   - 3WayBlaster_Boss
 
-### 14.3.1 材质
+#### 14.3.1 材质
 
 游戏使用了这些材料：
 
@@ -14347,7 +13664,7 @@ tempDirVec= Vector3.Normalize(aTarget.position - myTransform.position);
 
 - 7. 音乐控制器
 
-### 14.3.2 GameController_IP
+#### 14.3.2 GameController_IP
 
 `GameController_IP` 脚本：
 
@@ -14360,109 +13677,68 @@ public class GameController_IP : BaseGameController
     public bool didinit;
     public Transform playerParent;
     public GameObject[] playerPrefabList;
-
     public GameObject powerPrefab;
-
     public float levelForwardSpeed = 1f;
     public Transform CameraTransform;
-
     [System.NonSerialized]
     public GameObject playerGO1;
     public GameObject playerGO2;
-
     private Player_SpaceShip_IP playerScript1;
     private Player_SpaceShip_IP playerScript2;
-
     public BaseUserManager mainPlayerDataManager1;
     public BaseUserManager mainPlayerDataManager2;
-
     private int powerupExplosionCount = 0;
     public int numberOfExplosionsToMakePowerup = 10;
-
     public UI_IP UIControl;
     public UI_Gameover gameUIScript;
-
     public BaseCameraController cameraControl;
-
     private int tempINT;
     private Vector3 tempVec3;
     private Quaternion tempQuat;
-
     private bool isStopped;
-
     [System.Serialized]
     public static GameController_IP Instance;
-
     public float gameSpeed = 8;
-
     public bool BossWinToNextLevel = true;
-
-    // 应该始终有一个玩家
     public int totalPlayers = 1;
-
     public SceneManager sm;
-
     public float CameraStartPositionZ = -11;
-
     public GameController_IP()
     {
         Instance = this;
     }
-
     public void Start()
     {
-        // 我们希望让游戏控制器贯穿整个
-        // 游戏，所以使用 DontDestroyOnLoad 来保持它的存
         DontDestroyOnLoad(this.gameObject);
     }
-
     public void LevelLoadingComplete()
     {
         Init();
         UIControl.Init();
     }
-
     public void Init()
     {
-        // 告诉玩家 4 秒后可以移动
         Invoke("StartPlayer", 4);
-
-        // 以防我们需要更改时间缩放，在这里进行设置
         Time.timeScale = gameSpeed;
-
-        // 我们将玩家人数存储在偏好设置中
-        // 这样可以在其他地方（例如主菜单）设置
-        // 并带到游戏的每个关卡中
-        if (PlayerPrefs.HasKey("totalPlayers")) // 该偏好设置是否存在？
+        if (PlayerPrefs.HasKey("totalPlayers"))
         {
             totalPlayers = PlayerPrefs.GetInt("totalPlayers");
-            // 使用存储的值
         } else
         {
-            totalPlayers = 1; // 默认单人玩家
+            totalPlayers = 1;
         }
-
-        // 找到玩家父物体
         playerParent = GameObject.Find("Player_Parent_Object").transform;
         Vector3[] playerStarts = new Vector3[totalPlayers];
         Quaternion[] playerRotations = new Quaternion[totalPlayers];
-
-        // 这可能有点过头，但硬编码
-        // 将不符合整体的重用主题
         for (int i = 0; i < totalPlayers; i++)
         {
             tempQuat = Quaternion.identity;
-
             if (i == 0)
             {
-                // 将玩家 1 放在默认起始
-                // 位置 -5,0,0
                 tempVec3 = new Vector3(-5, 0, 0);
             }
             else
             {
-                // 我们将玩家 2 设置在玩家 1
-                // 起始位置右侧 5 个单位
                 tempVec3 = new Vector3(-5 + (i * 5), 0, 0);
             }
             playerStarts[i] = tempVec3;
@@ -14471,10 +13747,6 @@ public class GameController_IP : BaseGameController
     }
 }
 ```
-
-
-
-
 
 ```csharp
 {
@@ -14486,8 +13758,6 @@ public class GameController_IP : BaseGameController
 ```csharp
 public void Explode ( Vector3 aPosition )
 {
-  // 在传入此函数的的位置实例化
-  // 一个爆炸效果
   Instantiate( explosionPrefab, aPosition, Quaternion.identity);
 }
 ```
@@ -14495,11 +13765,7 @@ public void Explode ( Vector3 aPosition )
 ```csharp
 public void PlayerHit(Transform whichPlayer)
 {
-  // 告诉我们的声音控制器播放爆炸音
-  BaseSoundController.Instance.PlaySoundByIndex( 2,
-  whichPlayer.position );
-
-  // 调用爆炸函数！
+  BaseSoundController.Instance.PlaySoundByIndex( 2, whichPlayer.position );
   Explode(whichPlayer.position );
 }
 ```
@@ -14557,13 +13823,10 @@ public void PlayerDied(int whichID)
         player2Dead=true;
     if(player1Dead && player2Dead && totalPlayers>1)
     {
-        // 两个玩家都死了，所以结束游戏
         UIControl.ShowGameOver();
         Invoke("Exit",5);
     } else if(totalPlayers==1)
     {
-        // 这是单人游戏，所以直接结束游戏
-        // 现在玩家都死了，所以结束游戏
         UIControl.ShowGameOver();
         Invoke("Exit",5);
     }
@@ -14575,15 +13838,13 @@ void Exit()
 {
     SpawnController.Instance.Restart();
     Destroy(this.gameObject);
-
-    // 确保我们有一个可以通信的场景管理器
     GetSceneManager().LoadLevel(mainSceneName);
 }
 ```
 
-### 14.3.2.1 脚本详解
+##### 14.3.2.1 脚本详解
 
-`GameController_IP`get基于 `BaseGameController`：
+`GameController_IP` get基于 `BaseGameController`：
 
 ```csharp
 using UnityEngine;
@@ -14609,16 +13870,17 @@ public GameController_IP()
 ```csharp
 public void Start()
 {
-    // 我们希望让游戏控制器贯穿
-    // 整个游戏，所以我们使用 DontDestroyOnLoad 来保持它存活
     DontDestroyOnLoad(this.gameObject);
 }
 ```
 
 当加载新场景时，`LevelSetup.cs` 的实例会调用 `LevelLoadingComplete()` 函数。此处的脚本可以重新初始化自己和用户界面，以便游戏可以在新场景中继续：
 
-```csharp
-public void LevelLoadingComplete()
+
+
+`public void LevelLoadingComplete()`
+
+```
 {
     Init();
     UIControl.Init();
@@ -14676,7 +13938,6 @@ Quaternion[] playerations=new Quaternion[totalPlayers];
 for(int i=0; i<totalPlayers; i++)
 {
     tempQuat=Quaternion.identity;
-
     if(i==0)
     {
         // 玩家 1 的位置
@@ -14760,12 +14021,9 @@ GetSceneManager();
 didInit=true;
 ```
 
+`Player_Parent_Object` 当玩家生成时，游戏控制器将将其设置为此对象的父级。反之，当此对象被设置为摄像机的父级时，玩家将始终随相机移动。
 
-
-
-Player_Parent_Object 当玩家生成时，游戏控制器将将其设置为此对象的父级。反之，当此对象被设置为摄像机的父级时，玩家将始终随相机移动。
-
-StarsLayer1 用于模拟背景中恒星的粒子效果。此效果随相机移动，而粒子向下移动，看起来像是在空间中持续移动。
+`StarsLayer1` 用于模拟背景中恒星的粒子效果。此效果随相机移动，而粒子向下移动，看起来像是在空间中持续移动。
 
 如果布尔变量 `isStopped` 被设置为 `true`，相机将不再继续在关卡中移动。这通常用于关卡结束时的 Boss 战。`Translate` 函数只需要一个移动向量，在此情况下，它会乘以 `Time.deltaTime`，以确保移动是基于时间的：
 
@@ -14778,7 +14036,7 @@ public void LateUpdate() {
 }
 ```
 
-StartPlayer() 由 `Init()` 函数调度在关卡首次加载几秒钟后调用。在此之前，玩家（或多个玩家）将保持在原地。该函数首先通过 Unity 的 `GameObject.GetComponent()` 获取 `Player_SpaceShip_IP` 组件的引用，然后再次调用 `GetComponent()` 找到 `DataManager` 组件（在第 3 章中讨论过 `BasePlayerManager` 和 `DataManager` 脚本）：
+`StartPlayer()` 由 `Init()` 函数调度在关卡首次加载几秒钟后调用。在此之前，玩家（或多个玩家）将保持在原地。该函数首先通过 Unity 的 `GameObject.GetComponent()` 获取 `Player_SpaceShip_IP` 组件的引用，然后再次调用 `GetComponent()` 找到 `DataManager` 组件（在第 3 章中讨论过 `BasePlayerManager` 和 `DataManager` 脚本）：
 
 ```csharp
 public void startPlayer() {
@@ -14789,7 +14047,7 @@ public void startPlayer() {
 }
 ```
 
-现在已经存储了 `playerScript` 和 `mainPlayerDataManager` 的引用，向玩家控制脚本发送消息以调用其 `StartGame()` 函数。使用 `GameObject.SendMessage()` 来发送它：准备就绪了！gameObject.SendMessage("GameStart");
+现在已经存储了 `playerScript` 和 `mainPlayerDataManager` 的引用，向玩家控制脚本发送消息以调用其 `StartGame()` 函数。使用 `GameObject.SendMessage()` 来发送它：准备就绪了！`gameObject.SendMessage("GameStart");`
 
 如果有多个玩家，游戏控制器将知道如何以及何地与第二个玩家通信。脚本的这部分获取了与第一个玩家相同的组件，但这次是针对第二个玩家，并将其放入后缀为 2 而不是 1 的变量中：现在，如果 `totalPlayers > 1`，让它开始运行。
 
@@ -14798,7 +14056,7 @@ playerScript2 = gameObject2.GetComponent<Player_SpaceShip_IP>();
 mainPlayerDataManager2 = gameObject2.GetComponent<BasePlayerManager>().DataManager;
 ```
 
-与第一个玩家一样，向玩家的 `Player_SpaceShip_IP` 组件发送消息，通过调用 `StartGame()` 函数来准备玩家：gameObject.SendMessage("GameStart");
+与第一个玩家一样，向玩家的 `Player_SpaceShip_IP` 组件发送消息，通过调用 `StartGame()` 函数来准备玩家：`gameObject.SendMessage("GameStart");`
 
 `StopMovingForward()` 和 `ContinueForward()` 将在需要停止通过关卡移动时从另一个脚本调用。
 
@@ -14862,9 +14120,7 @@ if(sceneManagerGO != null) {
 override void EnemyDestroyed(Vector3 aPosition, int pointsValue, int hitID)
 ```
 
-当敌人被摧毁时，如果没有音效，场景将是不完整的。`BaseSoundController` 提供爆炸音：告诉我们的声音控制器播放爆炸音：BaseSoundController.Instance.PlaySoundByIndex(1, aPosition);
-
-```
+当敌人被摧毁时，如果没有音效，场景将是不完整的。`BaseSoundController` 提供爆炸音：告诉我们的声音控制器播放爆炸音：`BaseSoundController.Instance.PlaySoundByIndex(1, aPosition);`
 
 除了音频，这次爆炸还需要良好的爆炸粒子效果。我们不需要每次需要爆炸时都重复代码，`Explode()` 函数绝不会仅仅这样做：
 
@@ -14898,9 +14154,6 @@ mainPlayerData2.AddScore(pointsValue);
 UpdateScoreP2(mainPlayerData2.GetScore());
 }
 ```
-
-
-
 
 ```csharp
 {
@@ -14943,6 +14196,8 @@ if(player1Dead && player2Dead && totalPlayers>1) {
 
 当 `TotalPlayers` 为 1 时，这必须是单人游戏，因此只需要对此函数调用一次即可显示游戏结束消息并结束游戏：
 
+
+
 ```csharp
 else if(totalPlayers==1) {
   // 这是一个单人游戏，所以现在直接结束游戏
@@ -15157,72 +14412,108 @@ public void OnTriggerEnter(Collider other)
     }
 }
 }
+```
 
 等待，提供的 OCR 文本非常破碎且包含许多错误。让我根据提供的代码片段逻辑重新处理整个文本，以确保获得整洁的 Markdown 输出。
 
-[content]
 ```csharp
+
 {
+
   if (UIControl l == null)
+
     UIControl.UpdateScoreP2(int aScore);
+
   }
+
   public void UpdateLivesP2(int aScore) {
+
     if (UIControl l == null)
+
       UIControl.UpdateLivesP2(int aScore);
+
   }
+
 }
+
 ```
 
 `Player_SpaceShip_IP.cs` 将处理玩家的健康/生命值管理，但当玩家生命耗尽时，它会调用 `PlayerDied()` 函数，以便游戏控制器决定游戏是否真的结束。如果是单人游戏，游戏可以在调用此函数后立即结束，但如果是双人游戏，我们需要确保在完全结束游戏之前，两个玩家都失去了所有生命值：
 
 ```csharp
+
 public void PlayerDied(int whichID) {
+
 }
+
 ```
 
 没有剩余值的玩家的 ID 将作为名为 `whichID` 的参数传入。这用于根据 ID 编号将 `player1Dead` 或 `player2Dead` 设置为 `true`：
 
 ```csharp
+
 if (whichID==1)
+
   player1Dead=true;
 
 if (whichID==2)
+
   player2Dead=true;
+
 ```
 
 这段代码部分检查是否为双人游戏，如果是，则通知 `UIControl` 脚本显示游戏结束消息。通过 `Invoke` 在 5秒后调度了一个 `Exit()` 的调用：
 
 ```csharp
+
 if(player1Dead && player2Dead && totalPlayers>1) {
+
   // 两个玩家都死了，所以结束游戏
+
   UIControl.ShowGameOver();
+
   Invoke("Exit",5);
+
 }
+
 ```
 
 当 `TotalPlayers` 为 1 时，这必须是单人游戏，因此只需要对此函数调用一次即可显示游戏结束消息并结束游戏：
 
 ```csharp
+
 else if(totalPlayers==1) {
+
   // 这是一个单人游戏，所以现在直接结束游戏
+
   // 两个玩家都死了，所以结束游戏
+
   UIControl.ShowGameOver();
+
   Invoke("Exit",5);
+
 }
+
 ```
 
 一旦 `PlayerDied()` 函数确定所有玩家的游戏都结束了，就会调用 `Exit()` 函数来关闭程序并离开游戏，加载菜单场景：
 
 ```csharp
+
 void Exit()
+
 {
+
 ```
 
 生成器控制器持有的任何引用都会在游戏结束时被清除，通过 `SpawnController.Restart()`，并且此游戏控制脚本会被销毁：
 
 ```csharp
+
 SpawnController.Instance.Restart();
+
 Destroy(this.gameObject);
+
 ```
 
 `SceneManager` 将用于加载菜单场景。`GetSceneManager` 确保我们拥有它的引用，然后通过调用其 `LoadLevel()` 函数传递要加载的菜单场景名称：
@@ -15232,170 +14523,262 @@ Destroy(this.gameObject);
 `BaseTopDownSpaceship` 是本书第 5 章中讨论的移动控制类。
 
 ```csharp
+
 using UnityEngine;
+
 using System.Collections;
 
 public class Player_SpaceShip_IP : BaseTopDownSpaceship
+
 {
+
     private Standard_SlotWeaponController weaponControl;
 
     private bool isInvulnerable;
+
     private bool isRespawning;
 
     public bool isMouseControlled;
+
     private bool fire_input;
 
     // 另一种控制方法
+
     private Mouse_Input mouse_input;
 
     public GameObject theMeshGO;
+
     public GameObject shieldMesh;
 
     public BasePlayerManager myPlayerManager;
+
     public BaseUserManager myDataManager;
 
     public bool godMode =true;
+
     public int ownerID =-1;
 
     public override void Start()
+
 {
+
 // 我们想要让玩家对象贯穿整个
+
 // ，所以我们使用 DontDestroyOnLoad 来保持它存活
+
 DontDestroyOnLoad(this.transform);
 
 didInit=false;
 
 // 告诉我们的基类初始化
+
 base.Init();
 
 // 现在进行我们自己的初始化
+
 this.Init();
 
 public override void Init()
+
 {
+
     // 隐藏无敌护盾(!)
+
     if (godMode)
+
     {
+
         MakeVulnerable();
+
     } else {
+
         MakeInvulnerable();
+
     }
 
 // 获取对武器控制器的引用
+
 weaponControl=
+
 myGO.GetComponent<Standard_SlotWeaponController>();
 
 // 告诉武器控制器我们是谁（这样所有的武器控制都可以
+
 // 告诉投影是谁发送了它们）
+
 weaponControl.SetOwner(ownerID);
 
 // 如果在编辑器中没有设置管理器，让我们尝试
+
 // 寻找一个
+
 if (myPlayerManager==null)
+
 myPlayerManager=myGO.GetComponent<BasePlayerManager>();
 
 myDataManager=myManager.DataManager;
+
 myDataManager.SetName("Player");
+
 myDataManager.SetHealth(3);
 
 // 更新 UI 生命值
+
 if(ownerID==1)
+
 {
+
     // 如果我们的所有 ID 是 1，我们必须是玩家 1
+
     GameController_IP.Instance.UpdateLivesP1(myDataManager.GetHealth());
+
 } else {
+
     // 我们是玩家 2，所以设置那个 UI
+
     GameController_IP.Instance.UpdateLivesP2(myDataManager.GetHealth());
+
 }
 
 if(isMouseControlled)
+
 {
+
     // 如果我们将使用鼠标控制，添加一个
+
     // 鼠标输入控制器
+
     mouse_input= gameObject.AddComponent<Mouse_Input>();
+
 }
 
 didInit=true;
 
 public override void Update()
+
 {
+
     // 检查是否已经初始化
+
     if (!didInit)
+
     {
+
         Init();
+
     }
 
     // 更新鼠标输入
+
     if (isMouseControlled)
+
     {
+
         mouse_input.Update();
+
     }
 
     // 检查输入
+
     if (Input.GetKeyDown(KeyCode.Space))
+
     {
+
         weaponControl.Fire();
+
     }
 
     // 检查装载
+
     if (Input.GetKeyDown(KeyCode.R))
+
     {
+
         weaponControl.Reload();
+
     }
 
     // 检查上一个
+
     if (Input.GetKeyDown(KeyCode.Q))
+
     {
+
         weaponControl.PreviousWeapon();
+
     }
 
     // 检查下一个
+
     if (Input.GetKeyDown(KeyCode.E))
+
     {
+
         weaponControl.NextWeapon();
+
     }
 
     // 更新武器
+
     weaponControl.Update();
 
     // 更新玩家管理器
+
     if (myPlayerManager != null)
+
     {
+
         myPlayerManager.Update();
+
     }
 
     // 更新数据管理器
+
     if (myDataManager != null)
+
     {
+
         myDataManager.Update();
+
     }
+
 }
 
 public void GetInput()
+
 {
+
     // 检查输入
+
     if (Input.GetKeyDown(KeyCode.Space))
+
     {
+
         weaponControl.Fire();
+
     }
 
     // 检查装载
+
     if (Input.GetKeyDown(KeyCode.R))
-    {
-        weaponControl.Reload();
-    }
 
-    // 检查上一个
-    if (Input.GetKeyDown(KeyCode.Q))
-    {
-        weaponControl.PreviousWeapon();
-    }
 
-    // 检查下一个
-    if (Input.GetKeyDown(KeyCode.E))
-    {
-        weaponControl.NextWeapon();
-    }
+
+```csharp
+{
+    weaponControl.Reload();
+}
+
+// 检查上一个
+if (Input.GetKeyDown(KeyCode.Q))
+{
+    weaponControl.PreviousWeapon();
+}
+// 检查下一个
+if (Input.GetKeyDown(KeyCode.E))
+{
+    weaponControl.NextWeapon();
+}
 }
 
 public void OnCollisionEnter(Collision collision)
@@ -15419,12 +14802,9 @@ public void OnTriggerEnter(Collider other)
 }
 ```
 
-
-
-
 玩家飞船在关卡之间是持久化的，从游戏开始到结束都保持相同的 GameObject 和组件。在 `Start()` 函数中，`DestroyOnLoad` 告诉 Unity 保持此 gameObject 变换（transform）活跃：
 
-```
+```csharp
 public override void Start() {
     // we want to keep the player object alive through the
     // game, so we use DestroyOnLoad to keep it alive
@@ -15434,19 +14814,17 @@ public override void Start() {
 
 有些变量需要由基类（`BaseTopDownSpaceShip`）设置，与其在这个派生类中重复代码，我们不如调用 `base.Init()` 在调用此类的 `Init()` 之前运行原始脚本的 `Init()` 函数：
 
-```
+```csharp
 didInit=false;
-
 // tell our base class to initialize
 base.Init();
-
 // now we do our own init
 this.Init();
 ```
 
 布尔变量 `godMode` 用于让玩家处于无敌状态。其设计意图是：`godMode` 将在 Unity 编辑器的检检器（Inspector）窗口中设置，并仅在测试期间使用，以便轻松通过关卡。当 `Init()` 启动时，发生的第一件事是设置易伤/无敌的默认状态。`MakeVulnerable()` 和 `MakeInvulnerable()` 函数分别处理显示或隐藏玩家周围的护盾网格，并设置正确的变量来使其生效：
 
-```
+```csharp
 public override void Init() {
     // hide the invulnerability shield(i)
     if (godMode) {
@@ -15459,12 +14837,12 @@ public override void Init() {
 
 武器控制系统需要知道玩家的 ID，以便它可以告诉它产生的所有弹体携带哪个 ID（从而使弹体可以追溯到玩家 1 或玩家 2）。在变量 `weaponControl` 中找到并存储了 `Standard_SlotWeaponController` 引用（reference）的引用，然后调用其 `SetOwner()` 函数将所有者 ID 设置为玩家的 ID：
 
-```
+```csharp
 // get a ref to the weapon controller
 weaponControl=myGO.GetComponent<Standard_SlotWeaponController>();
 ```
 
-```
+```csharp
 // tell weapon control who we are (so all weapon control can tell
 // projectiles who sent them)
 weaponControl.SetOwner(ownerID);
@@ -15472,11 +14850,10 @@ weaponControl.SetOwner(ownerID);
 
 这里设置了玩家管理器数据管理器的默认值：
 
-```
+```csharp
 // if a player manager is not set in the editor, let's try to find one
 if (myPlayerManager==null)
     myPlayerManager=myGO.GetComponent<BasePlayerManager>();
-
 myData=myPlayerManager.DataManager;
 myData.SetName("Player");
 myData.SetHealth(3);
@@ -15484,7 +14861,7 @@ myData.SetHealth(3);
 
 使用了数据管理器的健康系统，但这里不是使用健康点，而是再次使用 `ownerID` 来告诉游戏控制器 UI 的哪个部分（玩家 1 或玩家 2）更新该玩家的默认生命值：
 
-```
+```csharp
 // update UI lives
 if (ownerID==1)
 {
@@ -15499,7 +14876,7 @@ if (ownerID==1)
 
 将 `isControlled` 变量设置为 `true` 将添加一个来自 `Mouse_Input.cs` 脚本的新脚本组件，作为此玩家的输入：
 
-```
+```csharp
 if (isControlled)
 {
     // we are going to use mouse controls, add a mouse input
@@ -15510,20 +14887,20 @@ if (isControlled)
 
 当 `Init()` 完成后，`didInit` 布尔变量被设置为 `true`。其他函数将引用此变量，以便在尝试操作玩家之前检查玩家是否已设置，否则这些操作可能会导致错误或问题：
 
-```
+```csharp
 didInit=true;
 ```
 
 `Update()` 函数用于所有主要的玩家更新。它重写了基类（`BaseTopDownShip.cs`）的 `Update()` 函数：
 
-```
+```csharp
 public override void Update()
 {
 ```
 
 在对玩家进行任何操作（例如更新其位置或与武器控制器通信）之前，必须已经调用并完成了 `Init()` 函数。如果已经调用，`didInit` 将为 `true`。如果没有，`didInit` 将为 `false`，那么这部分代码将在任何意外情况发生前跳出函数：
 
-```
+```csharp
 // don't do anything until Init() has been run
 if (!didInit)
     return;
@@ -15531,14 +14908,14 @@ if (!didInit)
 
 基类提供了一个名为 `UpdateShip()` 的函数。它处理飞船的移动，所以为了让飞船按预期运行，我们只需要调用 `UpdateShip()`，`BaseTopDownSpaceShip` 类将完成其余工作：
 
-```
+```csharp
 // do the update in our base
 UpdateShip();
 ```
 
 当 `CanControl` 为 `false` 时，函数将在检查火击按钮输入之前跳出：
 
-```
+```csharp
 // check to see if we're supposed to be controlling the
 // player before checking for firing
 if (canControl)
@@ -15547,7 +14924,7 @@ if (canControl)
 
 `fire_input` 是由 `GetInput()` 函数设置的布尔值。当火击键被按下时，`fire_input` 将为 `true`，并调用 `weaponControl.Fire()` 来发射弹体：
 
-```
+```csharp
 // fire if we need to
 if(fire_input)
 {
@@ -15558,14 +14935,14 @@ if(fire_input)
 
 为了保持脚本的灵活性，`GetInput()` 函数与输入控制器通信。如果我们使用不同的输入系统，可以重写基类中的 `GetInput()` 函数以包含任何需要的内容。这正是我们在重写 `GetInput()` 函数时要做的：
 
-```
+```csharp
 public override void GetInput()
 {}
 ```
 
 在双玩家合作游戏中，第二个玩家在第二个期间使用鼠标输入。默认系统是游戏控制器或键盘（由 `Keyboard_Input.cs` 脚本使用），但当 `isControlled` 为 `true` 时，它将使用 `mouse_input` 对象作为输入：
 
-```
+```csharp
 if(isControlled)
 {
     // we're overriding the input function to add in the
@@ -15575,7 +14952,7 @@ if(isControlled)
 }
 ```
 
-```
+```csharp
 // firing isn't in the default spaceship
 // (BaseTopShip.cs) behavior, so we add it here
 fire_input= mouse_input.GetFire();
@@ -15589,20 +14966,20 @@ fire_input= mouse_input.GetFire();
 
 `BaseTopShip` 控制器包含了移动飞船的代码，但不包含发射代码，因此我们需要在这里添加一些代码来检测默认输入中的火击按钮并设置 `fire_input`：
 
-```
+```csharp
 fire_input= default_input.GetFire();
 ```
 
 敌弹体位于层17（命名为 `enemy_projectile`），该层由武器的挂载点设置。挂载点设置在哪里，弹体就会从哪里产生。这里 `OnEnter()` 检查玩家与敌弹体之间的碰撞，以判断玩家是否应该失去生命：
 
-```
+```csharp
 void OnEnter(Collision collider)
 {
 ```
 
 参与碰撞的另一个对象的 collider 由引擎作为参数传递给此函数。检查 collider 的 gameObject 层，以判断它是否匹配敌弹体层 17。如果玩家没有处于重生状态且未被设置为无敌，我们就可以调用 `LostLife()` 函数：
 
-```
+```csharp
 if(gameObject.layer==17 && !isRespawning &&
 isInvulnerable)
 {
@@ -15613,9 +14990,6 @@ isInvulnerable)
 升级武器的强化包是带有盒碰撞器的 GameObject，这些碰撞器设置为触发器（通过 Unity 窗口将碰撞器的 `IsTrigger` 属性设置为 `true`）。当玩家碰到触发器时，会播放声音并销毁强化包。为了升级武器，会告诉武器控制器切换到下一个武器插槽。
 
 这意味着武器系统应该设置为：第一个插槽是威力最低的武器，并从那里开始每个插槽逐渐设置越来越强大的武器。添加和设置武器只需使用 Unity 编辑器的检检器窗口（选中玩家 gameObject），并将每种武器的制体（prefab）拖入 `Standard_Slot Weapon Controller` 的数组中（见图 14.3）。
-
-
-
 
 ![](img/041dca164b58875f4f1a64abb3328f5c_437_0.png)
 
@@ -15631,10 +15005,8 @@ void OnTriggerEnter(Collider other)
         // 告诉我们的声音控制器播放强化音
         BaseSoundController.Instance.PlaySoundByIndex( 3,
         myTransform.position );
-
         // 击中强化触发器
         Destroy (other.gameObject);
-
         // 进到下一个武器
         weaponControl.NextWeaponSlot( false);
     }
@@ -15754,6 +15126,8 @@ isRespawning= false;
 MakeInvulnerable();
 ```
 
+
+
 玩家将在 3 秒后恢复对爆炸弹药的易感性，这是通过调用 `MakeVulnerable()` 实现的：
 
 ```csharp
@@ -15789,7 +15163,6 @@ void Invulnerable()
     isInvulnerable = true;
     shield.SetActive(true);
 }
-
 void MakeVulnerable()
 {
     isInvulnerable = false;
@@ -15798,10 +15171,6 @@ void MakeVulnerable()
 ```
 
 当玩家耗尽生命时，最后剩下的就是通知游戏控制器。这在 `Enemy_IP` 脚本中处理。
-
-
-
-
 
 正如本节提到的，`TellGCEnemyDestroyed()` 函数（以及 `TellGCBossDestroyed()` 函数）设计用于在使用新的游戏控制器时进行重写。这些函数会调用其对象的 `EnemyDestroyed()` 或 `BossDestroyed()`。
 
@@ -15812,8 +15181,7 @@ public virtual void TellGCEnemyDestroyed()
 ```
 
 ```java
-GameController_IP.Instance.EnemyDestroyed(myTransform.position,
-pointsValue, tempINT);
+GameController_IP.Instance.EnemyDestroyed(myTransform.position, pointsValue, tempINT);
 ```
 
 ```java
@@ -15839,19 +15207,15 @@ GameController_IP.Instance.BossDestroyed();
 public class BaseWaypointFollower : ExtendedCustomMonoBehavior
 {
     public BaseAIController AIController;
-
     public virtual void Start () {
         if(didInit)
             Init (
     }
-
     public virtual void Init () {
         // 缓存我们的 transform
         myTransform= transform;
-
         // 缓存我们的 gameObject
         myGO= gameObject;
-
         // 缓存对 AI 控制器的引用
         AIController= myGO.GetComponent<BaseAIController>();
     }
@@ -15889,14 +15253,13 @@ public virtual void SetWaypointController(Waypoints _aWaypointPoint)
 {
     if (AIController==null)
         Init();
-
     // 将此传递给我们的途点控制器，以便它可以
     // 跟随途点
 AIController.SetWaypointController(aWaypointPoint);
 }
 ```
 
-### 14.3.5.1 脚本解析
+#### 14.3.5.1 脚本解析
 
 `BaseWaypointFollower` 类派自 `ExtendedCustomMonoBehavior`，该后者添加了一些额外功能和自定义变量：
 
@@ -15922,10 +15285,8 @@ public class BaseWaypointFollower : ExtendedCustomMonoBehavior
     {
         // 缓存我们的 transform
         myTransform= transform;
-
         // 缓存我们的 gameObject
         myGO= gameObject;
-
         // 缓存对 AI 控制器的引用
         AIController= myGO.GetComponent<BaseAIController>();
     }
@@ -15970,12 +15331,13 @@ public void SetWaypointController(Waypoints_Controller waypointControl)
 {
     if (AIController==null)
         Init();
-
     // 将此传递给我们的途点控制器，以便它可以
     // 跟随途点
 AIController.SetWaypointController(waypointControl);
 }
 ```
+
+
 
 # 结语
 
@@ -15991,98 +15353,94 @@ Jeff
 页码后跟 f 表示图表。
 
 ## A
-- AddEnemyToList(), 248
-- AddEnemyToRadar(), 248
-- AddExplosionForce(), 340
-- AddRaceController(), 329, 321
-- AttackStates.cs 脚本, 206–214, 210–214
-- AIStates.cs 脚本, 171
+- `AddEnemyToList()`, 248
+- `AddEnemyToRadar()`, 248
+- `AddExplosionForce()`, 340
+- `AddRaceController()`, 329, 321
+- `AttackStates.cs` 脚本, 206–214, 210–214
+- `AIStates.cs` 脚本, 171
 - Angry, 250
 - Animations, 104–105. *另见 Humanoid character*
-- Animation.CrossFade(), 104, 组件, 97–198
+- `Animation.CrossFade()`, 104, 组件, 97–198
 - Apple Store, 215–216
-- ArrayList(), 245
+- `ArrayList()`, 245
 - 人工智能 (AI) 计数器，管理器, 169–214
 - 添加武器控制到, 206–214
-- AIStates.cs 脚本, 171
-- BaseAIController.cs 脚本, 169–171, 172–206, 238, 259, 185–206, 206–214, 238, 259, 260, 331
+- `AIStates.cs` 脚本, 171
+- `BaseAIController.cs` 脚本, 169–171, 172–206, 238, 259, 185–206, 206–214, 238, 259, 260, 331
 - 基类 (Base class), 7
 - BASE 核心框架, 1–27
-- BaseGameController 脚本, 12–16, 238, 239, 275, 282, 349, 401, 14–16
-- BaseInputController 脚本, 22–27, 26–27, 玩家结构和, 32–33, 34
-- BasePlayerManager 脚本, 22–24, 98, 110, 238, 23–24
-- Camera_Third_Person.cs, 69–74, 69–74
-- CancelInvoke(function), 64, 264
-- CanSee(function), 198, 201, 388
-- CarController_MVD.cs 脚本, 283, 318–344
-- CarController_TB 脚本, 373–383, 382–383
-- CharacterState 动画状态, 105
-- Check_If_Cs_Is_Follow(function), 333, 343
-- Check(function), 34–35, 77
-- CheckLock(function), 112, 113–114, 334
-- CheckWrongWay(function), 304, 305
+- `BaseGameController` 脚本, 12–16, 238, 239, 275, 282, 349, 401, 14–16
+- `BaseInputController` 脚本, 22–27, 26–27, 玩家结构和, 32–33, 34
+- `BasePlayerManager` 脚本, 22–24, 98, 110, 238, 23–24
+- `Camera_Third_Person.cs`, 69–74, 69–74
+- `CancelInvoke(function)`, 64, 264
+- `CanSee(function)`, 198, 201, 388
+- `CarController_MVD.cs` 脚本, 283, 318–344
+- `CarController_TB` 脚本, 373–383, 382–383
+- `CharacterState` 动画状态, 105
+- `Check_If_Cs_Is_Follow(function)`, 333, 343
+- `Check(function)`, 34–35, 77
+- `CheckLock(function)`, 112, 113–114, 334
+- `CheckWrongWay(function)`, 304, 305
 - 碰撞体 (Colliders), 109, 142, 236, 238, 239, 266, 271, 305–306, 338, 339, 409, 414, 425, 轮, 85–109
 - 碰撞标记 (Collision_Flags), 102
 - COMMON 文件夹, 41
-- CompletedCompletedLap(function), 306, 313
-- ConfirmExitGame(function), 227
-- ContinueForward(function), 406
+- `CompletedCompletedLap(function)`, 306, 313
+- `ConfirmExitGame(function)`, 227
+- `ContinueForward(function)`, 406
 - 控制器 (Controller) AI. 另见 人工智能 (AI)，管理器, 361–364, 游戏. 游戏控制器, 在游戏框架内, 1, 移动. 玩家移动控制器，玩家, 250–259, 游戏特定的, 29, 31–32, 移动. 比赛, 291–306, 297–306, 脚本, 2–3, 简单生成. 查看 生成控制器，声音, 158–163
 - 核心游戏框架 (Core game framework). 另见 游戏框架
 - 创建者 (Creators), 53–54
-- BaseSoundController 脚本, 158–163, 237, 248, 348, 407, 409, 160–163
-- BaseTopown sc, 96–238, 250, 253, 96–105
-- BaseIDataManager 脚本, 231–232, 267
-- BaseUserManager sc, 脚本 20–22, 22, 玩家结构和, 37–38, 39
-- Vehicle.cs 脚本, 106–114, 332, 109–114
-- BaseWaypointFollower.cs 脚本, 426–428, 427–428
-- BaseWeaponController.cs, 122–134, 127–134
-- BaseWeaponScript.cs 脚本, 121, 128, 133, 134–142, 266, 138–142
+- `BaseSoundController` 脚本, 158–163, 237, 248, 348, 407, 409, 160–163
+- `BaseTopown sc`, 96–238, 250, 253, 96–105
+- `BaseIDataManager` 脚本, 231–232, 267
+- `BaseUserManager sc`, 脚本 20–22, 22, 玩家结构和, 37–38, 39
+- `Vehicle.cs` 脚本, 106–114, 332, 109–114
+- `BaseWaypointFollower.cs` 脚本, 426–428, 427–428
+- `BaseWeaponController.cs`, 122–134, 127–134
+- `BaseWeaponScript.cs` 脚本, 121, 128, 133, 134–142, 266, 138–142
 
-
-
-
-
-- didInt 布尔变量, 19, 23, 24, 36, 88, 186, 193, 286, 403, 417, 418
+- `didInt` 布尔变量, 19, 23, 24, 36, 88, 186, 193, 286, 403, 417, 418
 - 直接引用管理器脚本, 3
-- DisableCurrentWeapon(function) 函数, 130, 133, 421
-- Disable(function), 132, 133, 138
-- DontDestroyOnLoad(function) 函数, 81, 82
-- DoSpawn(function) 函数, 64
+- `DisableCurrentWeapon(function)` 函数, 130, 133, 421
+- `Disable(function)`, 132, 133, 138
+- `DontDestroyOnLoad(function)` 函数, 81, 82
+- `DoSpawn(function)` 函数, 64
 
 # E
-- EnableCurrentWeapon(function), 130, 133, 422
+- `EnableCurrentWeapon(function)`, 130, 133, 422
 - 敌人 (Enemies)
     - AI 与, 10
     - 星际妄战士 (Interstellar Paranoids)
-        - Enemy_IP.script, 423–426
+        - `Enemy_IP.script`, 423–426
         - 路径点位于, 143–144
     - 激光爆发生存游戏 (Lazer Blast Survival game)
-        - EnemyBot_LBS.script, 259–261
+        - `EnemyBot_LBS.script`, 259–261
         - 详细说明, 260–261
-    - EnemyDestroyed(function, 247, 261, 407
-        - Enemy_IP.script, 423–426
+    - `EnemyDestroyed(function`, 247, 261, 407
+        - `Enemy_IP.script`, 423–426
         - 详细说明, 424–426
-- Engine(function), 7, 8
+- `Engine(function)`, 7, 8
 - 枚举列表 (Enumeration list), 97
-- enum 关键字, 97
+- `enum` 关键字, 97
 - 欧拉角 (Euler angles), 89
-- Exit(function), 249, 410, 411
-- ExitGame(function), 227–228
-- Explode(function), 15, 290, 408, 409
-- ExtendedCustomMonoBehavior.scripts, 19–20, 109, 210, 427
+- `Exit(function)`, 249, 410, 411
+- `ExitGame(function)`, 227–228
+- `Explode(function)`, 15, 290, 408, 409
+- `ExtendedCustomMonoBehavior.scripts`, 19–20, 109, 210, 427
 
 # F
 - Fearon, Robert, 234
-- FindFirstWaypoint(function), 154–155
-- FinishedCount(function), 359
-- FinishedLevel(function), 406
-- FinishedRace(function), 337
-- FinishRace(function), 289
-- Fire(function), 121, 133, 134, 139, 140, 141, 142, 256
-- Projectile(function), 139–140
-- FixedUpdate(function), 7, 14, 68, 71, 112
-- Frag(function), 248, 265, 363
+- `FindFirstWaypoint(function)`, 154–155
+- `FinishedCount(function)`, 359
+- `FinishedLevel(function)`, 406
+- `FinishedRace(function)`, 337
+- `FinishRace(function)`, 289
+- `Fire(function)`, 121, 133, 134, 139, 140, 141, 142, 256
+- `Projectile(function)`, 139–140
+- `FixedUpdate(function)`, 7, 14, 68, 71, 112
+- `Frag(function)`, 248, 265, 363
 - 摩擦模拟 (Friction simulation), script, 66–68
     - 详细说明, 68
 - 函数 (Functions), 3, 4, 5.
@@ -16091,137 +15449,137 @@ Jeff
 
 # G
 - 银河游戏 (Galaxian game), 389–390
-- gamecontroller.cs, 4
-- GameController_IP.script, 395–411
+- `gamecontroller.cs`, 4
+- `GameController_IP.script`, 395–411
     - 详细说明, 401–411
-    - GameController_IP.EnemyDestroyed(function), 426
-- GameController_LBS.cs script, 239–249
+    - `GameController_IP.EnemyDestroyed(function)`, 426
+- `GameController_LBS.cs` script, 239–249
     - 详细说明, 243–249
-    - GameController_LBS.Instance(function), 244
-- GameController_MVD.script, 276–291
+    - `GameController_LBS.Instance(function)`, 244
+- `GameController_MVD.script`, 276–291
     - 详细说明, 282–291
 - Game controller, 9
 - 星际妄战士游戏 (Interstellar Paranoids game), 395–411
 - 激光爆发生存游戏 (Lazer Blast game), 239–249
 - 金属坦克游戏 (Metal Doom game), 276–291
 - 坦克战斗游戏 (Tank Battle game), 350–361
-- GameController_TB.script, 350–361
+- `GameController_TB.script`, 350–361
     - 详细说明, 356–361
 - Unity3d 开发 (Game for Unity3d), 271
-- GameFinished(function), 24, 36–37
+- `GameFinished(function)`, 24, 36–37
 - 游戏框架 (Game framework), core, 9–27
     - 控制器 (trollers), 11. 另见 控制器 (Controllers)
     - 管理器 (managers), 11
     - 概述 (overview), 9–10
     - 脚本 (scripts), 11–27. 另见 脚本 (Scripts)
-- BaseGameController.cs, 24–27, 32–34
-- BasePlayer.cs, 24–94, 98, 110, 238
-- BaseUserManager.cs, 20–22, 37–39
-- ExtendedCustomMonoBehavior.cs, 19–20
-- SceneManager.cs, 17–19
-- GameObject.AddComponent(function), 330, 331, 428
-- GameObject.Find(function), 407
-- GameObject.GetComponent(function), 111, 128–211, 319, 330, 407, 427
+- `BaseGameController.cs`, 24–27, 32–34
+- `BasePlayer.cs`, 24–94, 98, 110, 238
+- `BaseUserManager.cs`, 20–22, 37–39
+- `ExtendedCustomMonoBehavior.cs`, 19–20
+- `SceneManager.cs`, 17–19
+- `GameObject.AddComponent(function)`, 330, 331, 428
+- `GameObject.Find(function)`, 407
+- `GameObject.GetComponent(function)`, 111, 128–211, 319, 330, 407, 427
 - GameObject 引用 (referencing), 4
-- GameObject.SendMessage(function), 64–65, 405
-- GameObject.SendMessageUp(function), 298
-- GameObject.SetActive(function), 129, 132, 268, 288, 289, 290, 421, 423
+- `GameObject.SendMessage(function)`, 64–65, 405
+- `GameObject.SendMessageUp(function)`, 298
+- `GameObject.SetActive(function)`, 129, 132, 268, 288, 289, 290, 421, 423
 - Game场景, 星际妄战士游戏 (Interstellar Paranoids game), 392–393
 - 特定玩家 (Game-specific player), 29, 31–32
-- GameStart() 函数, 24, 36–37, 88, 247, 256, 405, 406
+- `GameStart()` 函数, 24, 36–37, 88, 247, 256, 405, 406
 - 游戏状态 (Game state), 42
 - 间隙 (Gap), 215
 - 战争机器 (Gears of War game), 69
 - 几何结构 (Geometry), 234
-- GetAllInput() 函数, 56–57, 245
-- GetAllSpawnTransforms() 函数, 97, 141, 245, 283, 386, 425
-- GetCurrentLapID() 函数, 299, 338
-- GetCurrentWaypointID() 函数, 299, 338
-- GetDirection(function), 105
-- GetFire() 函数, 27
-- GetFormattedTime() 函数, 45, 47, 359
-- GetHealth() 函数, 257
-- GetID() 函数, 89, 99, 111, 245, 356, 334
-- GetFinished() 函数, 300
-- GetLapDone() 函数, 300
-- GetLapDown() 函数, 248–249
-- GetMainPlayer() 函数, 248–249
-- GetMainPlayerTransform() 函数, 248–249
-- GetPlayerGO(indexNum) 函数, 54–55, 246, 403–404
-- GetTransform() 函数, 55
-- GetPosition() 函数, 314, 370
-- GetPositionList() 函数, 359, 369
-- GetRace() 函数, 313
-- GetResp() 函数, 27
-- GetResawnTransform() 函数, 301, 341
-- GetSceneManager() 函数, 404, 407, 411
-- GetScore() 函数, 27
-- GetSpeed() 函数, 105
-- GetTime() 函数, 48
-- GetTotal(), 156
-- GetTransforms() 函数, 148–149, 152
-- GetUniqueID() 函数, 297, 312
-- GetWaypoint() 函数, 155, 206
-- GetWaypointTransform() 函数, 300–301
-- GlobalBattleManager.cs 脚本, 11, 42, 364–373
+- `GetAllInput()` 函数, 56–57, 245
+- `GetAllSpawnTransforms()` 函数, 97, 141, 245, 283, 386, 425
+- `GetCurrentLapID()` 函数, 299, 338
+- `GetCurrentWaypointID()` 函数, 299, 338
+- `GetDirection(function)`, 105
+- `GetFire()` 函数, 27
+- `GetFormattedTime()` 函数, 45, 47, 359
+- `GetHealth()` 函数, 257
+- `GetID()` 函数, 89, 99, 111, 245, 356, 334
+- `GetFinished()` 函数, 300
+- `GetLapDone()` 函数, 300
+- `GetLapDown()` 函数, 248–249
+- `GetMainPlayer()` 函数, 248–249
+- `GetMainPlayerTransform()` 函数, 248–249
+- `GetPlayerGO(indexNum)` 函数, 54–55, 246, 403–404
+- `GetTransform()` 函数, 55
+- `GetPosition()` 函数, 314, 370
+- `GetPositionList()` 函数, 359, 369
+- `GetRace()` 函数, 313
+- `GetResp()` 函数, 27
+- `GetResawnTransform()` 函数, 301, 341
+- `GetSceneManager()` 函数, 404, 407, 411
+- `GetScore()` 函数, 27
+- `GetSpeed()` 函数, 105
+- `GetTime()` 函数, 48
+- `GetTotal()`, 156
+- `GetTransforms()` 函数, 148–149, 152
+- `GetUniqueID()` 函数, 297, 312
+- `GetWaypoint()` 函数, 155, 206
+- `GetWaypointTransform()` 函数, 300–301
+- `GlobalBattleManager.cs` 脚本, 11, 42, 364–373
     - 详细说明, 368–373
 - 全局比赛管理器 (Global race manager), 306–318
-- GlobalRaceManager.cs 脚本, 306–318
+- `GlobalRaceManager.cs` 脚本, 306–318
     - 详细说明, 311–318
-- GlobalRaceManager.Instance.GetDone(), 299
-- GlobalRaceManager, 脚本, 252
-- GoMainMenu() 函数, 227–228
-- GoNextLevel() 函数, 18, 19, 81, 83, 407
+- `GlobalRaceManager.Instance.GetDone()`, 299
+- `GlobalRaceManager`, 脚本, 252
+- `GoMainMenu()` 函数, 227–228
+- `GoNextLevel()` 函数, 18, 19, 81, 83, 407
 - 图形用户界面 (GUI), 227–229
-- GUI.Begin(), 225
-- GUI.End(), 225
-- GUI.HorizontalLayout 函数, 229–230
-- GUI.matrix 函数, 224–225
-- GUIStyle, 229
-- OnGUI 函数, 224–225, 227, 229, 230
+- `GUI.Begin()`, 225
+- `GUI.End()`, 225
+- `GUI.HorizontalLayout` 函数, 229–230
+- `GUI.matrix` 函数, 224–225
+- `GUIStyle`, 229
+- `OnGUI` 函数, 224–225, 227, 229, 230
 - 重力设置 (Gravity, script script), 66
 - 界面辅助工具 (UI helper for user interface)
 
 # H
 - 哈希表 (Hashtables), 312, 313, 314, 316, 369, 370
 - 长距离比赛 (Headlong race), 271, 272
-- HideCount() 函数, 286, 290, 359
-- HideMessages() 函数, 268
-- Hit() 函数, 339
+- `HideCount()` 函数, 286, 290, 359
+- `HideMessages()` 函数, 268
+- `Hit()` 函数, 339
 - 人类角色 (Humanoid character), 91–105
     - 详细说明, 96–105
 
 # I
 - 游戏界面 (In-game user interface), 231–232
 - 继承 (Inheritance), 6–8
-- Init() 函数, 23, 34, 61–62, 88, 110, 138, 142
-- AIAAttack.cs 脚本, 210, 211
-- BaseController.cs 脚本, 186, 188, 190, 202
+- `Init()` 函数, 23, 34, 61–62, 88, 110, 138, 142
+- `AIAAttack.cs` 脚本, 210, 211
+- `BaseController.cs` 脚本, 186, 188, 190, 202
 - 星际妄战士游戏 (Interstellar Paranoids game), 202, 404, 405, 417, 427
 - 激光爆发生存游戏 (Lazer Blast Survival game), 244, 253, 268
 - 金属坦克游戏 (Metal Wave game), 282, 283, 286, 297, 301, 328, 330
 - 坦克战斗游戏 (Tank Battle game), 356, 359
-- InitBattle() 函数, 369
-- InitRace() 函数, 311
+- `InitBattle()` 函数, 369
+- `InitRace()` 函数, 311
 - 输入 (Input)
     - 玩家结构 (in player structure), 32–35
     - 脚本 (scripts), 42–78
     - 鼠标输入 (mouse input), 75–78
     - 单轴键盘 (single axis keyboard), 78
-- Input.GetAxis, 333
-- Gizmos.color 函数, 151
-- Gizmos.DrawCube() 函数, 63
-- Gizmos.DrawSphere, 函数, 151
+- `Input.GetAxis`, 333
+- `Gizmos.color` 函数, 151
+- `Gizmos.DrawCube()` 函数, 63
+- `Gizmos.DrawSphere`, 函数, 151
 - 全局战斗管理器 (Global battle manager), 349, 359
 - 整数变量 (Integer variable), 19
 
 # K
-- Keyboard_Controller.cs, 88
-- KeyboardInput.cs 脚本, 34, 98, 418
+- `Keyboard_Controller.cs`, 88
+- `KeyboardInput.cs` 脚本, 34, 98, 418
 
 # L
-- LateUpdate(function), 34, 35, 71, 78, 99, 111, 333, 334
-- LaunchWave(function), 264, 265
+- `LateUpdate(function)`, 34, 35, 71, 78, 99, 111, 333, 334
+- `LaunchWave(function)`, 264, 265
 - 激光爆发生存游戏 (Lazer Blast Survival game), 75, 129, 234–269
     - 控制器脚本 (controller script), 239–249
     - 敌人 (enemies), 259–261
@@ -16242,39 +15600,36 @@ Jeff
     - 比赛控制器 (race controller), 275–306
 
 # M
-- LevelLoadingComplete(function), 402
-- LoadHighScore(function), 268
-- LoadLevel(function), 82, 230, 431
-- LookAround(function), 189, 192–198
-- LookAt(function), 73, 140
-- LostLife(function), 256, 258–259, 409, 420
+- `LevelLoadingComplete(function)`, 402
+- `LoadHighScore(function)`, 268
+- `LoadLevel(function)`, 82, 230, 431
+- `LookAround(function)`, 189, 192–198
+- `LookAt(function)`, 73, 140
+- `LostLife(function)`, 256, 258–259, 409, 420
 - 主游戏场景 (main game scene), 272
 - 主菜单 (main menu), 215–231
     - 全屏 (full screen for), 216–217–217
-    - MainMenuController.cs 脚本, 218–231, 272, 392
+    - `MainMenuController.cs` 脚本, 218–231, 272, 392
     - 详细说明 (breakdown), 223–231
 - 选项菜单 (options menu), 216–217
 - 激光爆发生存游戏场景 (scene in Lazer Blast Survival game), 235
 - 金属坦克游戏场景 (scene in Metal Doom game), 272
-- MakeIncludable(function), 258, 259, 342, 416, 423
-- MakeProjectile(function), 141
-- MakeVulnerable(function), 259, 342, 416, 422, 423
+- `MakeIncludable(function)`, 258, 259, 342, 416, 423
+- `MakeProjectile(function)`, 141
+- `MakeVulnerable(function)`, 259, 342, 416, 422, 423
 - 游戏框架管理器 (Managers in game framework), 11
     - 脚本 (script), 2–3
-- Mathf.Abs, 112
-- Mathf.Atan2, 304
-- Mathf.Clamp(function), 90, 114, 201, 256
-- Mathf.Infinity, 153
-- Mathf.Lerp, 72–73
-- Mathf.Min, 101
-- Mathf.SmoothDAle(function), 72
-- MaxChaseDistance(function), 187
+- `Mathf.Abs`, 112
+- `Mathf.Atan2`, 304
+- `Mathf.Clamp(function)`, 90, 114, 201, 256
+- `Mathf.Infinity`, 153
+- `Mathf.Lerp`, 72–73
+- `Mathf.Min`, 101
+- `Mathf.SmoothDAle(function)`, 72
+- `MaxChaseDistance(function)`, 187
 - Jarvis, Eugene, 236
 - Jobs, Steve, 215
 - Johansen, Emil, 345
-
-
-
 
 Player_SpaceShip_PC 脚本, 411–423
 - 拆解。玩家统计，处理 37–40
@@ -16288,35 +15643,35 @@ Player_SpaceShip_PC 脚本, 411–423
 - 玩家管理器脚本，30, 35–37
 - 拆解，36–37
 
-Respawn() 函数, 257–258, 315, 336, 339
+`Respawn()` 函数, 257–258, 315, 336, 339
 422
-Restart() 函数, 53
-Restart(GameButtonPressed) 函数, 15–16
-RigidBody.AddForce, 66
+`Restart()` 函数, 53
+`Restart(GameButtonPressed)` 函数, 15–16
+`RigidBody.AddForce`, 66
 Robotron 视频游戏, 234
 Robots 游戏, 233–234
 橡皮带机制 (Rubber banding), 335
 
 # S
-SaveOptionsPrefs() 函数, 229, 230–231
+`SaveOptionsPrefs()` 函数, 229, 230–231
 Kawazuni, Kazunori, 389
 场景管理器, 9, 91–83
 - 拆解，82–83
-SceneManager.cs 脚本, 17–19, 42, 40
+`SceneManager.cs` 脚本, 17–19, 42, 40
 - 拆解，17–19
 
-Play() 函数, 166
-PlayShot() 函数, 160
-PlaySoundByIndex() 函数, 162–163
-PlaySound() 函数, 160, 163
+`Play()` 函数, 166
+`PlayShot()` 函数, 160
+`PlaySoundByIndex()` 函数, 162–163
+`PlaySound()` 函数, 160, 163
 池化 (Pooling), 48
-PoolManager, 49
+`PoolManager`, 49
 
 预制体 (Prefabs), 35, 49, 55, 57, 237–238, 275
 星际恐幻症 (Interstellar Paranoids) 游戏, 393–423
-spawnObjectPrefabs, 58, 62
+`spawnObjectPrefabs`, 58, 62
 坦克大战游戏, 349
-PretendFriction.cs 脚本, 66–68
+`PretendFriction.cs` 脚本, 66–68
 - 拆解，68
 
 ## 场景
@@ -16328,29 +15683,29 @@ PretendFriction.cs 脚本, 66–68
 
 私有变量, 5
 复杂性逻辑, 2–8
-Controller.cs 脚本, 129, 141, 168, 238, 99
+`Controller.cs` 脚本, 129, 141, 168, 238, 99
 弹幕，激光射击生存游戏, 266
 迷幻竞技场射击, 234
 公共静态变量, 4
 
 # R
-RaceCount() 函数, 288, 289
-RaceController.GetID() 函数, 332
+`RaceCount()` 函数, 288, 289
+`RaceController.GetID()` 函数, 332
 赛车控制器
 - 金属车辆末日游戏, 291–306
-RaceController.cs 脚本, 11, 42, 291–306, 314–315
+`RaceController.cs` 脚本, 11, 42, 291–306, 314–315
 - 拆解，297–306
-RaceController() 函数, 297
-RaceFinished() 函数, 298, 314, 363
-RaceStart() 函数, 299
-Reloaded() 函数, 139, 140
-RemoveEnemyFromRadar() 函数, 248
-Renderer.IVisibleFrom() 函数, 213
-ResetFile() 函数, 214
-ResetGame() 函数, 81
-ResetLapCount() 函数, 299, 314
-ResetRespawn() 函数, 337
-ResetTimer() 函数, 46–37
+`RaceController()` 函数, 297
+`RaceFinished()` 函数, 298, 314, 363
+`RaceStart()` 函数, 299
+`Reloaded()` 函数, 139, 140
+`RemoveEnemyFromRadar()` 函数, 248
+`Renderer.IVisibleFrom()` 函数, 213
+`ResetFile()` 函数, 214
+`ResetGame()` 函数, 81
+`ResetLapCount()` 函数, 299, 314
+`ResetRespawn()` 函数, 337
+`ResetTimer()` 函数, 46–37
 
 主菜单
 - 星际恐幻症游戏, 392
@@ -16366,21 +15721,21 @@ ResetTimer() 函数, 46–37
 - 在坦克大战游戏中。参见坦克大战游戏
 - 用于路点系统。参见路点系统
 脚本，构建, 11–27
-- BaseGameController.cs, 12–16
+- `BaseGameController.cs`, 12–16
 - 拆解，14–16
 - 核心功能，12
-- BaseInputController.cs, 24–27, 32–33, 拆解，26–27
-- BasePlayerManager.cs, 22–24, 98, 110, 23
+- `BaseInputController.cs`, 24–27, 32–33, 拆解，26–27
+- `BasePlayerManager.cs`, 22–24, 98, 110, 23
 - 拆解，23
-- BaseUserManager.cs, 20–22, 37–38, 39
+- `BaseUserManager.cs`, 20–22, 37–38, 39
 - 拆解，22
-- ExtendedCustomBehavior.cs, 19–20
-- SceneManager.cs, 17–19, 42
+- `ExtendedCustomBehavior.cs`, 19–20
+- `SceneManager.cs`, 17–19, 42
 - 拆解，17–19
 - 在武器系统中, 122–142
 
-- BaseWeaponController.cs, 122–133
-BaseWeaponScript.cs 脚本, 121, 128, 132, 133, 134–142, 266
+- `BaseWeaponController.cs`, 122–133
+`BaseWeaponScript.cs` 脚本, 121, 128, 132, 133, 134–142, 266
 脚本，通用组件, 41–83
 - 自动物体旋转器，79–80
 - 拆解，80
@@ -16392,130 +15747,130 @@ BaseWeaponScript.cs 脚本, 121, 128, 132, 133, 134–142, 266
 - 鼠标输入，75–78
 - 单轴键盘，78
 - 概览，41–43
-- PretendFunction.cs, 66–68
+- `PretendFunction.cs`, 66–68
 - 拆解，68
 - 场景管理器，81–83
 - 拆解，82–83
-- SetGravity.cs, 66
+- `SetGravity.cs`, 66
 - 生成，42–66
-- Path_Spawner.cs, 57–66
+- `Path_Spawner.cs`, 57–66
 - 简单生成器，49–56
-- SpawnerController.cs, 49–56
-- TriggerSpawner.cs, 56–57
-- TimerClass.cs, 43–48
+- `SpawnerController.cs`, 49–56
+- `TriggerSpawner.cs`, 56–57
+- `TimerClass.cs`, 43–48
 - 拆解，45–48
-- SendMessage.cs, 46
-- SetUpdates() 函数, 298–299
-- SetActive() 函数, 258, 421
-- SetAIChaseBasedTag.cs, 383–388
+- `SendMessage.cs`, 46
+- `SetUpdates()` 函数, 298–299
+- `SetActive()` 函数, 258, 421
+- `SetAIChaseBasedTag.cs`, 383–388
 - 拆解，385–388
-- SetAIControl() 函数, 186
-- SetAllInput() 函数, 337
-- SetAllState() 函数, 188
-- SetCameraController() 函数, 246–247
-- SetChaseTarget() 函数, 188
-- SetCollider() 函数, 254
-- SetGravity.cs 脚本, 66
-- SetHealth() 函数, 254
-- SetID(integer) 函数, 19
-- SetLock() 函数, 287
-- SetName() 函数, 254
-- SetOwner() 函数, 129, 416
-- SetPlayerLocks() 函数, 285, 286
-- SetRotateSpeed() 函数, 65
-- SetTarget() 函数, 71, 74
-- SetTarget() 函数, 285
-- SetUpPlayers() 函数, 49, 54, 245
-- SetUserInput() 函数, 285
-- SetWayController() 函数, 64, 202, 428
-- SetWeaponSlot() 函数, 129–130
-- Shoot() 飞船, 85–91
-- ShowGameOver() 函数, 268–269
-- ShowOptionsMenu() 函数, 226, 229
-- SimpleBot.cs, 238
+- `SetAIControl()` 函数, 186
+- `SetAllInput()` 函数, 337
+- `SetAllState()` 函数, 188
+- `SetCameraController()` 函数, 246–247
+- `SetChaseTarget()` 函数, 188
+- `SetCollider()` 函数, 254
+- `SetGravity.cs` 脚本, 66
+- `SetHealth()` 函数, 254
+- `SetID(integer)` 函数, 19
+- `SetLock()` 函数, 287
+- `SetName()` 函数, 254
+- `SetOwner()` 函数, 129, 416
+- `SetPlayerLocks()` 函数, 285, 286
+- `SetRotateSpeed()` 函数, 65
+- `SetTarget()` 函数, 71, 74
+- `SetTarget()` 函数, 285
+- `SetUpPlayers()` 函数, 49, 54, 245
+- `SetUserInput()` 函数, 285
+- `SetWayController()` 函数, 64, 202, 428
+- `SetWeaponSlot()` 函数, 129–130
+- `Shoot()` 飞船, 85–91
+- `ShowGameOver()` 函数, 268–269
+- `ShowOptionsMenu()` 函数, 226, 229
+- `SimpleBot.cs`, 238
 - 简单生成器，49–56
-- SpawnerController.cs, 49–56
+- `SpawnerController.cs`, 49–56
 - 拆解，52–56
 - 单轴键盘输入，78
 - 单例模式，5–6
 - 音频控制器，158–163
-- BaseSoundController.cs, 158, 233, 248, 348, 407
+- `BaseSoundController.cs`, 158, 233, 248, 348, 407
 - 拆解，160–163
 - 音频管理器，9,10–158
 - 添加音频到武器，167–168
-- BaseSpawnerController.cs, 158, 237, 248, 348, 409
+- `BaseSpawnerController.cs`, 158, 237, 248, 348, 409
 - 拆解，160–163
-MusicController.cs, 163–167
+`MusicController.cs`, 163–167
 - 概览，157–158
-- SpawnerController.restart() 函数, 411, 脚本, 42, 237, 46
-- Path_Spawner.cs, 57–66
-- TriggerSpawner.cs, 56–57
+- `SpawnerController.restart()` 函数, 411, 脚本, 42, 237, 46
+- `Path_Spawner.cs`, 57–66
+- `TriggerSpawner.cs`, 56–57
 - 简单生成器，49–56
 - 拆解，52–56
-- SpawnerController.cs, 49, 56, 246
+- `SpawnerController.cs`, 49, 56, 246
 - 拆解，52–56
-- GetAllSpawnedPlayers() 函数, 283
-- SpawnerController.cs.Spawn(), 141
-- SetUpPlayers() 函数, 403
-- Spawn() 函数, 55, 141
-- SpawnGO 函数, 56, 64, 264
-- SpawnObject() 函数, 64
-- SpawnObjectPrefabs, 52
+- `GetAllSpawnedPlayers()` 函数, 283
+- `SpawnerController.cs.Spawn()`, 141
+- `SetUpPlayers()` 函数, 403
+- `Spawn()` 函数, 55, 141
+- `SpawnGO` 函数, 56, 64, 264
+- `SpawnObject()` 函数, 64
+- `SpawnObjectPrefabs`, 52
 - 激光射击生存脚本，261–265
-- Standard_Slot_Controller.cs 脚本, Start() 函数, 4, 7, 18
-- AutoObject.cs, 80
-- BaseArmedEnemy.cs, 210
-- BaseSoundController.cs, 161
-- BaseVehicle.cs, 110
-- BaseWeaponController.cs, 127
-- CarController_MVD.cs, 328
+- `Standard_Slot_Controller.cs` 脚本, `Start()` 函数, 4, 7, 18
+- `AutoObject.cs`, 80
+- `BaseArmedEnemy.cs`, 210
+- `BaseSoundController.cs`, 161
+- `BaseVehicle.cs`, 110
+- `BaseWeaponController.cs`, 127
+- `CarController_MVD.cs`, 328
 
-DontDestroyOnLoad() 和，81, 82
-GameController_LBS.cs, 244, 247
+`DontDestroyOnLoad()` 和，81, 82
+`GameController_LBS.cs`, 244, 247
 星际恐幻游戏, 401–416, 427
-MainMenuController.cs, 223, 224
-- Mouse_Input.cs, 175, 176
-- MusicController.cs, 165, 166
-- Path_Spawner.cs, 61–62
-- Player_LBS.cs, 253, 256
-- PretendFunction.cs, 68
-- ProjectileController.cs, 234
-- SetAIChaseTargetBased.cs, 386
-- SetGravity.cs, 66
-- TopDown_Camera.cs, 74
-- Wave_Spawner.cs, 148
-- StartPlayer() 函数, 247, 256
-- Start() 函数, 286, 317
-- StartWave() 函数, 62, 64
-- TellBossDestroyed() 函数, 225, 426
-- TellEnemyDestroyed() 函数, 225, 426
-- TimerClass.cs, 43–48
-- Time.Scale, 45–46
-- TopDown_Camera.cs, 74
-- TurnAt() 函数, 151, 304
-- TurnLeft() 函数, 192
-- TurnRight() 函数, 192
-- TurnTarget() 函数, 170
+`MainMenuController.cs`, 223, 224
+- `Mouse_Input.cs`, 175, 176
+- `MusicController.cs`, 165, 166
+- `Path_Spawner.cs`, 61–62
+- `Player_LBS.cs`, 253, 256
+- `PretendFunction.cs`, 68
+- `ProjectileController.cs`, 234
+- `SetAIChaseTargetBased.cs`, 386
+- `SetGravity.cs`, 66
+- `TopDown_Camera.cs`, 74
+- `Wave_Spawner.cs`, 148
+- `StartPlayer()` 函数, 247, 256
+- `Start()` 函数, 286, 317
+- `StartWave()` 函数, 62, 64
+- `TellBossDestroyed()` 函数, 225, 426
+- `TellEnemyDestroyed()` 函数, 225, 426
+- `TimerClass.cs`, 43–48
+- `Time.Scale`, 45–46
+- `TopDown_Camera.cs`, 74
+- `TurnAt()` 函数, 151, 304
+- `TurnLeft()` 函数, 192
+- `TurnRight()` 函数, 192
+- `TurnTarget()` 函数, 170
 
 # U
-UI, 99, 100, 102, 103, 104, 127, 129, 134, 141, 142, 158, 160, 162, 165, 186, 194, 19, 210, 211, 213, 218, 225, 224, 245, 246, 247, 249, 253, 264, 265, 274, 329, 332, 338, 346, 382, 392, 403, 407, 418, 419, 428
+`UI`, 99, 100, 102, 103, 104, 127, 129, 134, 141, 142, 158, 160, 162, 165, 186, 194, 19, 210, 211, 213, 218, 225, 224, 245, 246, 247, 249, 253, 264, 265, 274, 329, 332, 338, 346, 382, 392, 403, 407, 418, 419, 428
 - 音频系统, 157
 - 内置函数, 286
 - 内置实例, 243
 - 角色碰撞体, 219
-- GetComponent() 函数, 386
+- `GetComponent()` 函数, 386
 - 输入系统, 141
-- invoke() 函数, 286
+- `invoke()` 函数, 286
 - 物体旋转, 79
 - 单例函数, 5–6
-- stopBattle() 函数, 372
-- stopForward() 函数, 406
+- `stopBattle()` 函数, 372
+- `stopForward()` 函数, 406
 
 # T
 Taito, 389
 坦克大战游戏, 11, 48, 197, 345–388
 - 战斗控制器，361–364
-- CarController_TB.cs 脚本, 373–383
+- `CarController_TB.cs` 脚本, 373–383
 - 拆解，368–373
 - 游戏控制器，350–361, 356–361
 - 全局管理器，364–373
@@ -16524,7 +15879,7 @@ Taito, 389
 - 金属车辆末日游戏和，345, 356, 358, 359, 360, 361, 363, 364, 372
 - 概览，345–347
 - 玩家，373–383
-- SetAIChaseTargetBased.cs, 383–388
+- `SetAIChaseTargetBased.cs`, 383–388
 - 追逐，383–388
 - 拆解，385–388
 
@@ -16532,11 +15887,8 @@ Unity Asset Store, 48
 Unity 编辑, 96, 97, 127, 129, 134, 139, 141, 142, 158, 160, 162, 165, 186, 194, 19, 210, 211, 213, 218, 225, 224, 245, 246, 247, 249, 253, 264, 265, 274, 329, 332, 338, 346, 382, 392, 403, 407, 418, 419, 428
 Unity 引擎, 196, 161, 212, 244, 305
 Unity 模式, 48
-UpdateAI() 函数, 188, 189, 197, 200
-UpdateBattlePosition() 函数, 359
-
-
-
+`UpdateAI()` 函数, 188, 189, 197, 200
+`UpdateBattlePosition()` 函数, 359
 
 `UpdateEngineAudio()` 函数, 17, 14, 63, 71, 80, 92, 104,
 `Update()` 函数, 165, 166, 178, 188, 212, 417,

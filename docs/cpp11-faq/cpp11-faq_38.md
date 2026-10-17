@@ -1,6 +1,7 @@
+
 # 委托构造函数（Delegating constructors）
 
-在 C++98 中，如果你想让两个构造函数完成相似的事情，可以写两个大段代码相同的构造函数，或者是另外定义一个 init()函数，让两个构造函数都调用这个 init()函数。例如：
+在 C++98 中，如果你想让两个构造函数完成相似的事情，可以写两个大段代码相同的构造函数，或者是另外定义一个`init()`函数，让两个构造函数都调用这个`init()`函数。例如：
 
 ```cpp
 class X {
@@ -39,5 +40,6 @@ public:
 
 参考：
 
-*   the C++ draft section 12.6.2
-*   N1986==06-0056 Herb Sutter and Francis Glassborow: Delegating Constructors (revision 3).
+* the C++ draft section 12.6.2
+
+* N1986==06-0056 Herb Sutter and Francis Glassborow: Delegating Constructors (revision 3).

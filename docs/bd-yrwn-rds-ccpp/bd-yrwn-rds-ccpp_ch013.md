@@ -1,3 +1,4 @@
+
 # 12. 事件循环和计时器
 
 我们的服务器中缺少一个主要的东西：超时。每个网络应用程序都需要处理超时，因为网络另一端可能会消失。不仅进行中的 IO 操作如读写需要超时，而且踢出空闲的 TCP 连接也是一个好主意。要实现超时，必须修改事件循环，因为`poll`是唯一会阻塞的操作。
@@ -138,13 +139,10 @@ int main() {
 
 修改了几件事：
 
-1.  `poll`的超时参数是由`next_timer_ms`函数计算的。
-
-1.  销毁连接的代码被移动到了`conn_done`函数中。
-
-1.  添加了`process_timers`函数来触发计时器。
-
-1.  计时器在`connection_io`中更新，并在`accept_new_conn`中初始化。
+1. `poll`的超时参数是由`next_timer_ms`函数计算的。
+2. 销毁连接的代码被移动到了`conn_done`函数中。
+3. 添加了`process_timers`函数来触发计时器。
+4. 计时器在`connection_io`中更新，并在`accept_new_conn`中初始化。
 
 `next_timer_ms`函数从列表中取出第一个（最近的）计时器，并使用它来计算`poll`的超时值。
 
@@ -258,24 +256,15 @@ $ socat tcp:127.0.0.1:1234 -
 
 练习：
 
-1.  为 IO 操作（读取和写入）添加超时。
+1. 为 IO 操作（读取和写入）添加超时。
+2. 尝试使用排序数据结构实现更通用的计时器。
 
-1.  尝试使用排序数据结构实现更通用的计时器。
-
-> +   [12_server.cpp](https://build-your-own.org/redis/12/12_server.cpp.htm)
-> +   
-> +   [avl.cpp](https://build-your-own.org/redis/12/avl.cpp.htm)
-> +   
-> +   [avl.h](https://build-your-own.org/redis/12/avl.h.htm)
-> +   
-> +   [common.h](https://build-your-own.org/redis/12/common.h.htm)
-> +   
-> +   [hashtable.cpp](https://build-your-own.org/redis/12/hashtable.cpp.htm)
-> +   
-> +   [hashtable.h](https://build-your-own.org/redis/12/hashtable.h.htm)
-> +   
-> +   [list.h](https://build-your-own.org/redis/12/list.h.htm)
-> +   
-> +   [zset.cpp](https://build-your-own.org/redis/12/zset.cpp.htm)
-> +   
-> +   [zset.h](https://build-your-own.org/redis/12/zset.h.htm)
+> + [12_server.cpp](https://build-your-own.org/redis/12/12_server.cpp.htm)
+> + [avl.cpp](https://build-your-own.org/redis/12/avl.cpp.htm)
+> + [avl.h](https://build-your-own.org/redis/12/avl.h.htm)
+> + [common.h](https://build-your-own.org/redis/12/common.h.htm)
+> + [hashtable.cpp](https://build-your-own.org/redis/12/hashtable.cpp.htm)
+> + [hashtable.h](https://build-your-own.org/redis/12/hashtable.h.htm)
+> + [list.h](https://build-your-own.org/redis/12/list.h.htm)
+> + [zset.cpp](https://build-your-own.org/redis/12/zset.cpp.htm)
+> + [zset.h](https://build-your-own.org/redis/12/zset.h.htm)

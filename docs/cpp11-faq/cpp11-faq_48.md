@@ -1,3 +1,4 @@
+
 # 初始化列表
 
 考虑如下代码：
@@ -17,7 +18,7 @@ map<vector<string>,vector<int>> years = {
 }; 
 ```
 
-现在，初始化列表不再仅限于数组。可以接受一个“{}列表”对变量进行初始化的机制实际上是通过一个可以接受参数类型为 std::initializer_list 的函数（通常为构造函数）来实现的。例如：
+现在，初始化列表不再仅限于数组。可以接受一个“`{}`列表”对变量进行初始化的机制实际上是通过一个可以接受参数类型为`std::initializer_list`的函数（通常为构造函数）来实现的。例如：
 
 ```cpp
 void f(initializer_list<int>);
@@ -28,7 +29,7 @@ f{1,2}; // 错误：缺少函数调用符号( )
 years.insert({{"Bjarne","Stroustrup"},{1950, 1975, 1985}}); 
 ```
 
-初始化列表可以是任意长度，但必须是同质的（所有的元素必须属于某一模板类型 T, 或可转化至 T 类型的)。
+初始化列表可以是任意长度，但必须是同质的（所有的元素必须属于某一模板类型`T`, 或可转化至`T`类型的）。
 
 容器可以用如下方式来实现“初始化列表构造函数”：
 
@@ -48,10 +49,10 @@ public:
 }; 
 ```
 
-使用“{}初始化”时，直接构造与拷贝构造之间仍有细微差异，但不再像以前那样明显。例如，std::vector 拥有一个参数类型为 int 的显式构造函数及一个带有初始化列表的构造函数：
+使用“`{}`初始化”时，直接构造与拷贝构造之间仍有细微差异，但不再像以前那样明显。例如，`std::vector`拥有一个参数类型为`int`的显式构造函数及一个带有初始化列表的构造函数：
 
 ```cpp
-vector<double> v1(7); // OK: v1 有 7 个元素<br />
+vector<double> v1(7); // OK: v1 有 7 个元素
 v1 = 9;         // Err: 无法将 int 转换为 vector
 vector<double> v2 = 9;    // Err: 无法将 int 转换为 vector
 
@@ -70,7 +71,7 @@ vector<vector<double>> vs = {
 }; 
 ```
 
-函数可以将 initializer_list 作为一个不可变的序列进行读取。例如：
+函数可以将`initializer_list`作为一个不可变的序列进行读取。例如：
 
 ```cpp
 void f(initializer_list<int> args)
@@ -80,15 +81,16 @@ void f(initializer_list<int> args)
 } 
 ```
 
-仅具有一个 std::initializer_list 的单参数构造函数被称为初始化列表构造函数。
+仅具有一个`std::initializer_list`的单参数构造函数被称为初始化列表构造函数。
 
-标准库容器，string 类型及正则表达式均具有初始化列表构造函数，以及（初始化列表）赋值函数等。初始化列表亦可作为一种“序列”以供“序列化 for 语句”使用。（译注：参见“序列 for 循环语句”章节）
+标准库容器，`string`类型及正则表达式均具有初始化列表构造函数，以及（初始化列表）赋值函数等。初始化列表亦可作为一种“序列”以供“序列化`for`语句”使用。（译注：参见“序列`for`循环语句”章节）
 
 初始化列表同时也是“统一初始化”方案的一部分。（译注：参见“统一初始化的语法和语义”章节）
 
 参考：
 
 *   the C++ draft 8.5.4 List-initialization [dcl.init.list]
+
 *   [N1890=05-0150 ] Bjarne Stroustrup and Gabriel Dos Reis:
 
     [Initialization and initializers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1890.pdf)

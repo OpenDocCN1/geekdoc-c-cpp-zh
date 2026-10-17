@@ -1,25 +1,25 @@
+
+
 # Web 应用开发指南：Ember.js 指南
-
-
 
 ![](img/00001.jpeg)
 
-
-
-
-
 ## 免责声明
+
 尽管已尽一切努力验证书中提供的信息，但作者对书中包含的错误、遗漏或对主题内容的相反解释不承担任何责任。书中提供的信息仅供教育和娱乐之用。读者对其自己的行为负责，作者对使用这些信息而产生的任何实际或感知的责任或损害不承担任何责任。
 
 书中使用的商标均未获得任何许可，且商标的出版未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，其所有权归所有人，与本文无关联。
 
-# 引言
+## 引言
+
 对 Web 应用的需求正在增加。`Ember JS` 是一种可以辅助开发此类应用的 JavaScript。该框架很容易学习，特别是对于 JavaScript 专家来说。然而，即使你完全不擅长 JavaScript，也不担心，因为书中的解释对你来说非常容易。通过这种 JavaScript，你可以创建具有高度交互性界面的 Web 应用，你的用户一定会喜欢你的应用。
 
-# 第 1 章 控制器 (Controllers)
+## 第 1 章 控制器（Controllers）
+
 控制器非常像组件，人们认为这些未来将由组件取代。
 
 在大多数当前应用中，控制器并不经常使用。当使用它们时，它们承担以下职责：
+
 1. 用于根据当前使用的路由维护状态。
 2. 当用户操作从组件传递到路由时，它们必须经过控制器。
 
@@ -73,6 +73,7 @@ export default Ember.Controller.extend({
 ```
 
 ### 控制器之间的依赖管理
+
 有时，当我们嵌套资源时，我们通常需要在两个控制器之间建立连接。考虑下面的路由器：
 
 ```javascript
@@ -83,7 +84,7 @@ Router.map(function() {
 });
 ```
 
-在访问 URL “/posts/1/comments”时，模型 `post` 将加载到 `PostController` 的模型中。然而，与之相关的某些信息可能会显示在“comments”的模板中。
+在访问 URL `/posts/1/comments` 时，模型 `post` 将加载到 `PostController` 的模型中。然而，与之相关的某些信息可能会显示在 `comments` 的模板中。
 
 为了实现这一点，我们必须将 `pController` 注入到 `CommentsController` 中。如下：
 
@@ -113,7 +114,8 @@ export default Ember.Controller.extend({
 </ul>
 ```
 
-## 第 2 章 模型 (Models)
+## 第 2 章 模型（Models）
+
 构建 Web 应用的方法之一是实现与数据高度耦合的组件。考虑你正在创建一个博客的情况。以下代码演示了这一点：
 
 ```html
@@ -137,7 +139,7 @@ export default Ember.Component.extend({
 });
 ```
 
-按钮的 .hbs 文件如下：
+按钮的 `.hbs` 文件如下：
 
 ```html
 {{#link-to 'drafts' tagName="button"}}
@@ -174,7 +176,8 @@ export default DS.Model.extend({
 
 你需要注意的是，模型本身没有数据，但它们用于定义特定实例（称为“记录”）属性和行为。
 
-### 创建记录 (Creating Records)
+### 创建记录（Creating Records）
+
 当你需要创建记录时，只需在 store 上调用 `createRecord()` 方法。考虑下面的代码：
 
 ```javascript
@@ -186,7 +189,8 @@ store.createRecord('post', {
 
 存储的对象可以通过 `this.store` 用于控制器和路由器。
 
-### 更新记录 (Updating Records)
+### 更新记录（Updating Records）
+
 可以通过设置需要更改的属性来修改 Ember JS 数据记录。如下代码所示：
 
 ```javascript
@@ -194,10 +198,6 @@ this.store.findRecord('human', 1).then(function(myfunction) {
   // ...一旦记录被加载
 });
 ```
-
-
-
-
 
 ```javascript
 myfunction.set('fName', "John");
@@ -411,10 +411,6 @@ export default DS.Model.extend({
 });
 ```
 
-
-
-
-
 要移除一个 `belongsTo` 关系，我们只需要将其设置为 `null`。这将从 `hasMany` 关系的一侧将其移除。考虑下面的代码，它最清楚地说明了这一点：
 
 ```javascript
@@ -450,6 +446,9 @@ p.get('comments').then((comments) => {
 ```
 
 同样的情况也适用于 `hasMany` 关系，如下所示：
+
+
+
 
 ```javascript
 let comm = this.store.peekRecord('comment', 1);
@@ -681,9 +680,6 @@ inflect.uncountable('advice');
 export default {};
 ```
 
-
-
-
 ```javascript
 export default DS.JSONAPIAdapter.extend({
   namespace: 'api/1'
@@ -692,7 +688,7 @@ export default DS.JSONAPIAdapter.extend({
 
 这就是实现方法。
 
-### 宿主机自定义 (Host Customizations)
+### 宿主机自定义（Host Customizations）
 
 适配器默认指向当前域名。如果你需要指定新域名，只需在新的适配器上设置 `host` 属性即可。下面的代码很好地展示了如何实现：
 
@@ -704,7 +700,7 @@ export default DS.JSONAPIAdapter.extend({
 
 就是这样。
 
-### 路径自定义 (Path Customizations)
+### 路径自定义（Path Customizations）
 
 可以像下面的代码所示，重写 `pathForType` 方法：
 
@@ -718,7 +714,7 @@ export default DS.JSONAPIAdapter.extend({
 
 在上述情况下，我们不需要将模型名称变为复数形式，并且需要使用下线命名（underscore）而不是驼命名法（camelCase）。
 
-### 请求头自定义 (Headers Customizations)
+### 请求头自定义（Headers Customizations）
 
 某些 API 需要 HTTP 请求头，一个很好的例子是需要提供 API 密钥时。可以将任意请求头作为 `JSONAPIAdapter` 头对象上的键值对进行设置，Ember data 将在我们的每个 Ajax 请求中发送。考虑下面的代码：
 
@@ -758,7 +754,7 @@ export default DS.JSONAPIAdapter.extend({
 });
 ```
 
-### 编写适配器 (Authoring Adapters)
+### 编写适配器（Authoring Adapters）
 
 `defaultSerializer` 属性将用于指定适配器使用的序列化器。这仅在没有指定 `serializer:application` 或特定模型的适配器时才使用。在任何应用程序中指定 `serializer:application` 都非常简单。考虑下面的示例展示了如何实现：
 
@@ -768,11 +764,11 @@ export default DS.JSONAPIAdapter.extend({
 });
 ```
 
-### 自定义序列化器 (Customizing Serializers)
+### 自定义序列化器（Customizing Serializers）
 
 在 Ember data 中，序列化器用于格式化发送到后端存储以及从后端存储接收的数据。默认设置是 Ember data 将使用 JSON API 格式进行数据序列化。
 
-#### JSON API 文档 (JSON API Document)
+#### JSON API 文档（JSON API Document）
 
 考虑我们请求的如下响应：
 
@@ -811,7 +807,7 @@ export default DS.JSONAPIAdapter.extend({
 }
 ```
 
-#### 侧载数据 (Sideloaded Data)
+#### 侧载数据（Sideloaded Data）
 
 这类数据不属于主请求的一部分，但具有一些关联关系，这些关系应该被添加到 `included` 键下的数组中。考虑下面的代码：
 
@@ -857,16 +853,15 @@ export default DS.JSONAPIAdapter.extend({
 }
 ```
 
-#### 自定义序列化器 (Serializers)
+#### 自定义序列化器（Serializers）
 
 在 Ember data 中，序列化器用于格式化发送到后端存储以及从后端存储接收的数据。默认设置是 Ember data 将使用 JSON API 格式进行数据序列化。
 
-*(注：由于原文文本在此处存在部分重复和逻辑断层，译文已根据技术上下文进行了整理，保留了核心意图。)*
+（注：由于原文文本在此处存在部分重复和逻辑断层，译文已根据技术上下文进行了整理，保留了核心意图。）
 
 
 
-
-如果你需要跟踪存储（store）中包含的唯一记录，Ember 数据期望负载（payload）中的每条记录都应该有一个唯一的 `id` 属性。对于特定类型的每条记录，`id` 也应该是唯一的。如果后端使用了不同的键而不是 `id`，可以使用序列化器的主键（primary key）属性，以便在数据的序列化和反序列化过程中正确地转换 `id`。下面的代码所示：
+如果你需要跟踪`store`中包含的唯一记录，Ember Data 期望负载（payload）中的每条记录都应该有一个唯一的`id`属性。对于特定类型的每条记录，`id`也应该是唯一的。如果后端使用了不同的键而不是`id`，可以使用序列化器的主键（primary key）属性，以便在数据的序列化和反序列化过程中正确地转换`id`。下面的代码所示：
 
 ```javascript
 export default DS.JSONSerializer.extend({
@@ -876,7 +871,7 @@ export default DS.JSONSerializer.extend({
 
 ### 属性名称
 
-Ember data 的惯例是将特定模型上的属性名称转换为驼峰命名法（camelize）。考虑下面的示例：
+Ember Data 的惯例是将特定模型上的属性名称转换为驼峰命名法（camelize）。考虑下面的示例：
 
 ```javascript
 export default DS.Model.extend({
@@ -886,7 +881,7 @@ export default DS.Model.extend({
 });
 ```
 
-`JSONAPISerializer` 期望服务器返回的文档负载中的属性是短横线命名法（dasherized）的。下面的代码所示：
+`JSONAPISerializer`期望服务器返回的文档负载中的属性是短横线命名法（dasherized）的。下面的代码所示：
 
 ```json
 {
@@ -902,7 +897,7 @@ export default DS.Model.extend({
 }
 ```
 
-如果服务器返回的属性使用了非常不同的惯例，可以使用序列化器的 `keyForAttribute()` 方法将模型中的属性名转换为 JSON 负载中的键。考虑下面的代码：
+如果服务器返回的属性使用了非常不同的惯例，可以使用序列化器的`keyForAttribute()`方法将模型中的属性名转换为 JSON 负载中的键。考虑下面的代码：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -912,7 +907,7 @@ export default DS.JSONAPISerializer.extend({
 });
 ```
 
-可以使用自定义的序列化器来映射不规则的键。`attrs` 对象可以用于在 `DS` 中不同属性名之间建立简单的映射。考虑样例代码：
+可以使用自定义的序列化器来映射不规则的键。`attrs`对象可以用于在`DS`中不同属性名之间建立简单的映射。考虑样例代码：
 
 ```javascript
 export default DS.Model.extend({
@@ -920,7 +915,7 @@ export default DS.Model.extend({
 });
 ```
 
-我们所做的是为我们的模型创建了一个自定义序列化器，然后覆盖了 `attrs` 属性。接下来的代码应该如下：
+我们所做的是为我们的模型创建了一个自定义序列化器，然后覆盖了`attrs`属性。接下来的代码应该如下：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -932,7 +927,7 @@ export default DS.JSONAPISerializer.extend({
 
 ### 关系
 
-`id` 属性应该用于引用其他记录。考虑你的模型具有如下所示的 `hasMany` 关系的情况：
+`id`属性应该用于引用其他记录。考虑你的模型具有如下所示的`hasMany`关系的情况：
 
 ```javascript
 export default DS.Model.extend({
@@ -983,7 +978,7 @@ export default DS.Model.extend({
 }
 ```
 
-如果需要这些命名惯例，可以通过 `keyForRelationship` 方法来覆盖它们。下面的代码演示了这一点：
+如果需要这些命名惯例，可以通过`keyForRelationship`方法来覆盖它们。下面的代码演示了这一点：
 
 ```javascript
 export default DS.JSONAPISerializer.extend({
@@ -995,7 +990,7 @@ export default DS.JSONAPISerializer.extend({
 
 ### 自定义转换
 
-在某些情况下，内置类型（如 `string`、`Boolean` 等）可能不足以实现我们需要。一个很好的例子是服务器给出了非标准的日期格式。在 Ember data 中，我们可能注册了作为属性的新 JSON 转换。下面的代码最好描述了这一点：
+在某些情况下，内置类型（如`string`、`Boolean`等）可能不足以实现我们需要。一个很好的例子是服务器给出了非标准的日期格式。在 Ember Data 中，我们可能注册了作为属性的新 JSON 转换。下面的代码最好描述了这一点：
 
 ```javascript
 export default DS.Transform.extend({
@@ -1016,7 +1011,7 @@ export default DS.Model.extend({
 });
 ```
 
-从 API 接收到 `coordinatePoint` 后，期望是一个如下数组：
+从 API 接收到`coordinatePoint`后，期望是一个如下数组：
 
 ```json
 {
@@ -1034,7 +1029,7 @@ c.get('position.x'); // 5
 c.get('position.y'); // 9
 ```
 
-一旦位置被修改并保存，它将通过转换中的 `serialize` 函数传递并以 数组的形式呈现。在应用中使用 `JSONSerializer` 必须定义 `serializer`。下面的代码显示了如何这样做：
+一旦位置被修改并保存，它将通过转换中的`serialize`函数传递并以数组的形式呈现。在应用中使用`JSONSerializer`必须定义`serializer`。下面的代码显示了如何这样做：
 
 ```javascript
 export default DS.JSONSerializer.extend({
@@ -1071,7 +1066,7 @@ export default DS.JSONSerializer.extend({
 
 ### EmbeddedRecordMixin
 
-在 Ember data 中，我们鼓励侧加载（sideload）关系，但有时在处理旧 API 时，可能需要处理嵌入其他记录中的 JSON。`EmbeddedRecordsMixin` 的创建是为了解决这个问题。设置嵌入记录，只需在扩展序列化器包含该 mixin，然后对嵌入关系进行配置。考虑模型 `post` 有如下所示 `author` 记录的情况：
+在 Ember Data 中，我们鼓励侧加载（sideload）关系，但有时在处理旧 API 时，可能需要处理嵌入其他记录中的 JSON。`EmbeddedRecordsMixin`的创建是为了解决这个问题。设置嵌入记录，只需在扩展序列化器包含该`mixin`，然后对嵌入关系进行配置。考虑模型`post`有如下所示`author`记录的情况：
 
 ```json
 {
@@ -1100,7 +1095,7 @@ export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
 });
 ```
 
-如果你自己定义并需要序列化和反序列化嵌入关系，可以使用简写选项 `{ embedded: 'always' }`。考虑与下面类似的示例：
+如果你自己定义并需要序列化和反序列化嵌入关系，可以使用简写选项`{ embedded: 'always' }`。考虑与下面类似的示例：
 
 ```javascript
 export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
@@ -1110,7 +1105,7 @@ export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
 });
 ```
 
-考虑你需要在提取 JSON 负载的过程中过程中读取嵌入记录，但在序列化记录时只需要包含关系的 id。这可以通过使用 `serialize: 'ids'` 选项轻松实现。要跳过关系的序列化，可以使用 `serialize: false` 选项。下面的代码演示了如何这样做：
+考虑你需要在提取 JSON 负载的过程中读取嵌入记录，但在序列化记录时只需要包含关系的`id`。这可以通过使用`serialize: 'ids'`选项轻松实现。要跳过关系的序列化，可以使用`serialize: false`选项。下面的代码演示了如何这样做：
 
 ```javascript
 export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
@@ -1129,18 +1124,14 @@ export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
 
 #### EmbeddedRecordsMixin 默认值
 
-如果你不需要为特定关系覆盖 `attrs` 属性，以下是 `EmbeddedRecordsMixin` 的行为：
+如果你不需要为特定关系覆盖`attrs`属性，以下是`EmbeddedRecordsMixin`的行为：
 
-- `BelongsTo`: `{ serialize: 'id', deserialize: 'id' }`
-- `HasMany`: `{ serialize: false, deserialize: 'ids' }`
+- `BelongsTo`：`{ serialize: 'id', deserialize: 'id' }`
+- `HasMany`：`{ serialize: false, deserialize: 'ids' }`
 
 ### 编写序列化器
 
-
-
-
-
-对于那些需要创建序列化器的人，我们建议从 `JSONAPISerializer` 或 `JSONSerializer` 开始，然后扩展其中之一以匹配我们的需求。然而，如果负载（payload）与这些序列化器之一不同，请考虑你获得了如下“posts”模型：
+对于那些需要创建序列化器的人，我们建议从`JSONAPISerializer`或`JSONSerializer`开始，然后扩展其中之一以匹配我们的需求。然而，如果负载（payload）与这些序列化器之一不同，请考虑你获得了如下“posts”模型：
 
 ```javascript
 export default DS.Model.extend({
@@ -1151,7 +1142,7 @@ export default DS.Model.extend({
 });
 ```
 
-此时 `store.push` 将接受一个如下结构的对象：
+此时`store.push`将接受一个如下结构的对象：
 
 ```json
 {
@@ -1177,9 +1168,9 @@ export default DS.Model.extend({
 }
 ```
 
-为了使每个序列化的记录都能转换为 Ember data 记录，必须遵循上述格式。
+为了使每个序列化的记录都能转换为 Ember Data 记录，必须遵循上述格式。
 
-# 第 3 章- 应用关注
+# 第 3 章：应用关注
 
 ## 依赖注入
 
@@ -1207,7 +1198,7 @@ export default {
 
 ### 注册实例化对象（Registering Instantiated Objects）
 
-默认设置是 Ember 会在查找后尝试实例化已注册的工厂。在特定类的实例化对象的注册过程中，你必须使用选项 `instantiate: false`，以便避免它在查找 期间被重复实例化。在下文的示例中，`logger` 是 JavaScript 中的一个对象，在查找期间应原样返回。以下是代码：
+默认设置是 Ember 会在查找后尝试实例化已注册的工厂。在特定类的实例化对象的注册过程中，你必须使用选项`instantiate: false`，以便避免它在查找期间被重复实例化。在下文的示例中，`logger`是 JavaScript 中的一个对象，在查找期间应原样返回。以下是代码：
 
 ```javascript
 export function initialize(app) {
@@ -1227,7 +1218,7 @@ export default {
 
 ### 单例与非单例（Singletons vs. Non-Singletons）
 
-在 Ember data 中，注册被视为单例。这意味着在查找后必须创建一个实例，并且同一个实例将在后续查找中被缓存并返回。在下文的示例中，“message”类将被注册为非单例：
+在 Ember Data 中，注册被视为单例。这意味着在查找后必须创建一个实例，并且同一个实例将在后续查找中被缓存并返回。在下文的示例中，“message”类将被注册为非单例：
 
 ```javascript
 export function initialize(app) {
@@ -1264,7 +1255,7 @@ export default {
 };
 ```
 
-由于这种类型注入，类型为“route”的工厂将使用已注入的 `logger` 进行实例化。`logger` 值将从名为“logger:main”的工厂中获取。考虑下文的示例，它展示了如何通过注入的 `logger` 访问应用：
+由于这种类型注入，类型为“route”的工厂将使用已注入的`logger`进行实例化。`logger`值将从名为“logger:main”的工厂中获取。考虑下文的示例，它展示了如何通过注入的`logger`访问应用：
 
 ```javascript
 export default Ember.Route.extend({
@@ -1276,11 +1267,14 @@ export default Ember.Route.extend({
 ```
 
 使用全键时，可以像如下所示对全键进行注入：
+
 `app.inject('route:index', 'logger', 'logger:main');`
 
 ### 现有的注入（Ad Hoc Injections）
 
-依赖注入通过 `Ember.inject` 直接在 Ember 类上声明。目前，该属性支持服务和控制器的注入。考虑下文的代码，它展示了如何将服务“shopping-cart”作为 `cart` 属性注入到组件“cart-contents”中。以下是相应的代码：
+依赖注入通过`Ember.inject`直接在 Ember 类上声明。目前，该属性支持服务和控制器的注入。考虑下文的代码，它展示了如何将服务“shopping-cart”作为`cart`属性注入到组件“cart-contents”中。以下是相应的代码：
+
+
 
 ```javascript
 export default Ember.Component.extend({
@@ -1345,6 +1339,7 @@ export default Component.extend({
 ### 应用初始化器（Application Initializers）
 
 应用初始化器使用 Ember CLI 的初始化器生成器创建。下文的命令演示了这一点：
+
 `ember generate initializer shopping-cart`
 
 我们可以自定义“shopping-cart”初始化器，将属性“cart”注入到应用中的所有路由中。下文的代码演示了这一点：
@@ -1363,6 +1358,7 @@ export default {
 ### 应用实例初始化器（Application Instance Initializers）
 
 这些可以使用 Ember CLI 的“instance-initializer”生成器创建。如下文所示：
+
 `ember generate instance-initializer logger`
 
 考虑下文的代码，它展示了如何实现一些简单的日志记录，用以指示实例已经启动。如下文所示：
@@ -1373,10 +1369,6 @@ export function initialize(appInstance) {
   logger.log('Hello from an instance initializer!');
 }
 ```
-
-
-
-
 
 ```javascript
 logger.log('Hi from our instance initializer!');
@@ -1419,16 +1411,16 @@ export default {
 };
 ```
 
-## 服务 (Services)
+## 服务（Services）
 
 `Ember.service` 属性是 Ember 中的一个对象，可以在应用程序的不同部分使用并可用。以下是服务使用的领域：
 
-* `Geolocation`（地理位置）。
-* `User/session authentication`（用户/会话认证）。
-* `Web Sockets`（网络套）。
-* 无法放入 Ember Data 的服务器后端 API 调用。
-* `Third-party APIs`（第三方 API）。
-* 服务器发送事件或通知 `Logging`（日志记录）。
+- `Geolocation`（地理位置）。
+- `User/session authentication`（用户/会话认证）。
+- `Web Sockets`（网络套）。
+- 无法放入 Ember Data 的服务器后端 API 调用。
+- `Third-party APIs`（第三方 API）。
+- 服务器发送事件或通知 `Logging`（日志记录）。
 
 ## 服务的定义
 
@@ -1505,7 +1497,7 @@ export default Ember.Component.extend({
 });
 ```
 
-在上述代码中，我们将 `remove` 添加到了 `cart-contacts` 组件中。一旦注入到组件中，服务将在模板中使用。注意下面的代码中用于从购物车获取数据的 cart：
+在上述代码中，我们将 `remove` 添加到了 `cart-contacts` 组件中。一旦注入到组件中，服务将在模板中使用。注意下面的代码中用于从购物车获取数据的 `cart`：
 
 ```html
 <ul>
@@ -1518,7 +1510,7 @@ export default Ember.Component.extend({
 </ul>
 ```
 
-## 运行循环 (Run Loop)
+## 运行循环（Run Loop）
 
 Ember 大多数的内部机制以及我们为应用程序编写的代码都发生在运行循环中。运行循环用于以更高效、有效的方式对工作进行批处理和排序。
 
@@ -1527,10 +1519,6 @@ Ember 大多数的内部机制以及我们为应用程序编写的代码都发�
 <div id="bar"></</div>
 <div id="baz"></</div>
 ```
-
-
-
-
 
 该框架具有许多我们可以利用的特性来增强我们的应用程序。
 

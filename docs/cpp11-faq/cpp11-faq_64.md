@@ -1,3 +1,4 @@
+
 # 模板别名（正式的名称为"template typedef"）
 
 如何在某个模板类的基础上，通过写死（绑定）部分模板参数类型，来定制出一个新的模板类？
@@ -16,9 +17,9 @@ Vec<int> fib = { 1, 2, 3, 5, 8, 13 };
 vector<int,My_alloc<int>> verbose = fib; 
 ```
 
-有了 using 语法，定义模板别名则可一目了然：***using 模板别名 = 引用细节;***。在这之前，我们也曾徘徊在”typedef”的经典和复杂之间左右为难，但没有哪一个方案能做到完美平衡，直到后来我们干脆弃而转向言简意赅的 using 语法。
+有了`using`语法，定义模板别名则可一目了然：`using 模板别名 = 引用细节;`。在这之前，我们也曾徘徊在"typedef"的经典和复杂之间左右为难，但没有哪一个方案能做到完美平衡，直到后来我们干脆弃而转向言简意赅的`using`语法。
 
-即使模板存在特化，using 语法也能照常使用。（需注意：为模板及其各种特化形式可以设定一个统一的别名，但反之则不然：模板特化操作不能通过别名进行）。例如：
+即使模板存在特化，`using`语法也能照常使用。（需注意：为模板及其各种特化形式可以设定一个统一的别名，但反之则不然：模板特化操作不能通过别名进行）。例如：
 
 ```cpp
 template<int>
@@ -48,7 +49,7 @@ template<int N>
 int_exact<8> a = 7; 
 ```
 
-除了在模板方面身担重任外，using 语法也可作为对普通类型定义别名的另一种选择（相较于 typedef 更合吾意）。
+除了在模板方面身担重任外，`using`语法也可作为对普通类型定义别名的另一种选择（相较于`typedef`更合吾意）。
 
 ```cpp
 typedef void (*PFD)(double);    // C 样式
@@ -58,10 +59,10 @@ using P = [](double)->void;  // using 和函数返回类型后置语法
 
 参考：
 
-参考：
-
 *   the C++ draft: 14.6.7 Template aliases; 7.1.3 The typedef specifier
+
 *   [N1489=03-0072] Bjarne Stroustrup and Gabriel Dos Reis: [Templates aliases for C++](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1489.pdf) .
+
 *   [N2258=07-0118] Gabriel Dos Reis and Bjarne Stroustrup: [Templates Aliases (Revision 3)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2258.pdf) (final proposal).
 
 （翻译：张潇，dabaitu）

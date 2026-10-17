@@ -1,67 +1,49 @@
+
 # 可再生能源系统的人工智能与物联网
-
-
 
 ![](img/mark_cov_9783110713794.png)
 
 ![epub-cover-image](img/mark_cov_9783110713794.png)
 
+[81]Sun H., Fu Z., Tao F., Zhu L., Si P. 燃料电池/电池/超级容器混合系统的基于强化学习的能量管理。`Journal of Power Sources`, 455, 2020, 227964, `https://doi.org/10.1016/j.jpowsour.2020.227964.`
 
+[82]Wu N., Wang H. 微电网的深度学习自适应动态规划能量管理。`Journal of Cleaner Production`, 204, 2018, 1169–1177, `https://doi.org/10.1016/j.apenergy.2018.09.017`
 
+[83]Kofinas P., Dounis A., Vouros G. 基于模糊的微电网管理。`Applied Energy`, 219 (2018), 53–67.
 
+[84]Hua H., Qin Y., Hao C., Cao J. 基于深度学习的智能家居最优能量管理。`Applied Energy`, 239 (2019), 598–609.
 
+[85]Lee S., Choi D. 屋顶太阳能系统基于强化学习的能量管理。`Sensors`, 19 (2019), 3937.
 
+[86]Feng C. 基于 LSTM 的控制器优化。`IEEE Access`, 7 (2019), 3271–3277.
 
+[87]Zhou Y., Wang Y., Kang L., Peng L., Pang J. 混合遗传算法用于超级容器的剩余寿命。`Applied Energy`, 260 (2020), 11469.
 
+[88]Rao R. V., Patel V. 使用教学学习优化的翅片热交换器的热力学优化。`The International Journal of Advanced Manufacturing`, 2 (2011), 91–96.
 
-
-
-
-
-
-
-[81]Sun H., Fu Z., Tao F., Zhu L., Si P. 燃料电池/电池/超级容器混合系统的基于强化学习的能量管理。Journal of Power Sources, 455, 2020, 227964, `https://doi.org/10.1016/j.jpowsour.2020. 227964.`→
-
-[82]Wu N., Wang H. 微电网的深度学习自适应动态规划能量管理。Journal of Cleaner Production, 204, 2018, 1169–1177, `https://doi.org/10.1016/j.apenergy.2018.09.017`
-
-[83]Kofinas P., Dounis A., Vouros G. 基于模糊的微电网管理。Applied Energy, 219 (2018), 53–67.
-
-[84]Hua H., Qin Y., Hao C., Cao J. 基于深度学习的智能家居最优能量管理。Applied Energy, 239 (2019), 598–609.
-
-[85]Lee S., Choi D. 屋顶太阳能系统基于强化学习的能量管理。Sensors, 19 (2019), 3937.
-
-[86]Feng C. 基于 LSTM 的控制器优化。IEEE Access, 7 (2019), 3271–3277.
-
-[87]Zhou Y., Wang Y., Kang L., Peng L., Pang J. 混合遗传算法用于超级容器的剩余寿命。Applied Energy, 260 (2020), 11469.
-
-[88]Rao R. V., Patel V. 使用教学学习优化的翅片热交换器的热力学优化。The International Journal of Advanced Manufacturing, 2 (2011), 91–96.
-
-[89]Islam, Mohammad Zohrul, 等. “求解单目标流量海洋掠食者算法。“Plos one, 16.8 (2021): e256050.
+[89]Islam, Mohammad Zohrul, 等. “求解单目标流量海洋掠食者算法。”`Plos one`, 16.8 (2021): e256050.
 
 # 2 使用四模式 I 型模糊逻辑控制器对改进型 III 型 DFIG 风力机进行功率控制
 
 Bibhu Prasad Ganthia 工程学院，KIIT 学同等大学
+
 Subrat Kumar Barik 工程学院，KIIT 学同等大学
+
 Byamakesh Nayak 工程学院，KIIT 学同等大学
 
 ### 摘要
 
 本章致力于实施先进控制技术以增强风能系统的发电。在本章中，使用了各种模糊逻辑控制器来调节瞬态下的有功功率 `P` 和无功功率 `Q`。对并网集成风能系统的三相故障进行了瞬态或故障分析。在本章中，实现了改进型转子 III 型风力机。双电馈感应发电机作为 III 型风力机系统的运行发电机。除了传统的 `PI` 控制器外，还使用了多种模糊逻辑结构。这种自适应控制器能够针对风速快速变化或任何引起故障的瞬态提供更短的时间和更快的响应。
 
-关键词：`风能`、`III 型风力机`、`I 型模糊逻辑`、`功率分析`、`有功功率`、`无功功率`、`功率平滑`
+**关键词**：`风能`、`III 型风力机`、`I 型模糊逻辑`、`功率分析`、`有功功率`、`无功功率`、`功率平滑`
 
-
-
-
-风能作为一种可再生能源，由于其清洁和免费的可用性，现在是所有电力部门的需求[1, 2]。为了平衡电力需求，它在提高商业和家用公用事业能源效率方面可以发挥价值[3, 4, 5]。这种能源源最好的部分是它不会产生导致环境污染的有害气体排放[6, 7, 8]。因此，它被用作完美的能源来源并能满足我们的能源需求[9, 10]。我们需要具有完全控制的平衡稳定电力系统以实现高输出[11]。如今可再生能源在平衡巨大的电力 D 系统方面发挥着至关重要的作用。我们现在从可再生能源产生 1500 到 2000 万兆瓦电力，风能是最经济的发电源。它可以作为独立模式，也可以与电网集成以平滑电力需求[12]。技术性风力机系统需要机械和电气元件，以对发电、输和配电进行完全控制。最初，我们使用没有任何控制机制的双馈感应电机 (DFIGs)，由于它们是为固定速度运行模式设计的，风速的突然变化会导致损失[13]。后来，我们开发了 III 型风力机系统，它使用对速度和发电具有完全控制的 DFIGs。这些系统是基于最大功率点跟踪能力的转子侧和电网侧变流器设计的。然后使用了 IV 型 PMSG，但成本非常高，这些机制在全球范围内使用较少。在我们国家印度，III 型 DFIG 使用最广泛，并在独立和并网模式下都发挥了高效的发电作用。但转子侧和电网侧的控制器应该更精确，并应该实施更快的响应技术。许多研究人员正在使用遗传算法、人工智能和元启发式控制器等自适应技术进行瞬态期间的故障分析[14]。模糊逻辑控制器 (FLC)也是一种很好的控制技术，可以实施以对瞬态做出快速响应。由于风能系统需要恒定的风速来实现高质量发电，因此风速在低速和高速下应保持平衡[15, 16]。不可预测的风流会对系统造成破坏，因此转子侧和电网侧的控制器应该得到适当的检查和实施[17]。
-
-
+风能作为一种可再生能源，由于其清洁和免费的可用性，现在是所有电力部门的需求[1, 2]。为了平衡电力需求，它在提高商业和家用公用事业能源效率方面可以发挥价值[3, 4, 5]。这种能源源最好的部分是它不会产生导致环境污染的有害气体排放[6, 7, 8]。因此，它被用作完美的能源来源并能满足我们的能源需求[9, 10]。我们需要具有完全控制的平衡稳定电力系统以实现高输出[11]。如今可再生能源在平衡巨大的电力系统方面发挥着至关重要的作用。我们现在从可再生能源产生 1500 到 2000 万兆瓦电力，风能是最经济的发电源。它可以作为独立模式，也可以与电网集成以平滑电力需求[12]。技术性风力机系统需要机械和电气元件，以对发电、输电和配电进行完全控制。最初，我们使用没有任何控制机制的双馈感应电机 (DFIGs)，由于它们是为固定速度运行模式设计的，风速的突然变化会导致损失[13]。后来，我们开发了 III 型风力机系统，它使用对速度和发电具有完全控制的 DFIGs。这些系统是基于最大功率点跟踪能力的转子侧和电网侧变流器设计的。然后使用了 IV 型 PMSG，但成本非常高，这些机制在全球范围内使用较少。在我们国家印度，III 型 DFIG 使用最广泛，并在独立和并网模式下都发挥了高效的发电作用。但转子侧和电网侧的控制器应该更精确，并应该实施更快的响应技术。许多研究人员正在使用遗传算法、人工智能和元启发式控制器等自适应技术进行瞬态期间的故障分析[14]。模糊逻辑控制器 (FLC)也是一种很好的控制技术，可以实施以对瞬态做出快速响应。由于风能系统需要恒定的风速来实现高质量发电，因此风速在低速和高速下应保持平衡[15, 16]。不可预测的风流会对系统造成破坏，因此转子侧和电网侧的控制器应该得到适当的检查和实施[17]。
 
 使用这种三型双频异步感应电机（DFIGs）的风力发电机系统的最大功率比未控制的三型 DFIG 或部分控制系统高出多 30%。风能发电的定速和变速控制技术已经过时，因此全球范围内正在使用全控风力发电机系统。作为四型的永磁同步发电机也被用于风能发电，但由于成本较高，其实用性略低于三型 [10]。这种 DFIG 在控制转矩和转速方面非常有效。基于 DFIG 的系统需要维护，而四型系统的维护需求较少。可以使用本文提出的模型进行有功和无功功率控制，并在本章进行研究。
 
 ## 2.3 基于 DFIG 的三型风力发电机系统
 
-三型风力发电机使用 DFIG 以同步转速发电。图 2.2 展示了使用下一节 中描述的建议技术对 (P)有功功率和 (Q)无功功率进行的平滑控制。这些模型拥有 `P` 控制和 `Q` 控制组件器，它们直接连接到控制模型，以减少瞬态运行过程中产生的误差。模型的架构基于 `dq` 参考系，在瞬态下它作为旋转坐标系以实现有效的控制动作 [23]：
+三型风力发电机使用 DFIG 以同步转速发电。图 2.2 展示了使用下一节中描述的建议技术对 `P` 有功功率和 `Q` 无功功率进行的平滑控制。这些模型拥有 `P` 控制和 `Q` 控制组件器，它们直接连接到控制模型，以减少瞬态运行过程中产生的误差。模型的架构基于 `dq` 参考系，在瞬态下它作为旋转坐标系以实现有效的控制动作 [23]：
 
 ![](img/b_9783110714043-002_fig_002.jpg)
 
@@ -89,21 +71,17 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 ## 2.4 并网 WECS 一型 FC 控制策略
 
-并网风能系统的有功功率和无功功率平滑是高效输出的主要因素。如今常用传统的控制器，但其对故障的处理性总是所需的。因此，自适应控制器和其他控制器均被考虑用于并网系统的功率平滑 [32, 33]。因此，`FLC` 作为这种传统的自适应控制器出现。在本章中，`PI` 被作为复用 `FLC` 的传统控制器以实现目标。本章设计了四种不同模式来控制有力和无功功率 [34]。带有 `PI` 控制器的一型模糊逻辑控制器用于转子侧和电网侧，直接控制风能系统产生的电压。定子电压控制技术用于控制由风速突变引起的瞬态电压。此处考虑了多种参数以维持功率质量。在并网期间，`FLC` 和 `PI` 同时对超出参考值的电压进行控制。图 2.3 展示了正常和瞬态运行下的定子电压控制相量图 [35]。提出的技术对稳态和瞬态分析均有效。在本章中，使用 `HIL` 实时软件进行瞬态分析并验证。使用 `Mamdani` 一型模糊规则展示了受控参数的运行模式 [36]。
+并网风能系统的有功功率和无功功率平滑是高效输出的主要因素。如今常用传统的控制器，但其对故障的处理性总是所需的。因此，自适应控制器和其他控制器均被考虑用于并网系统的功率平滑 [32, 33]。因此，`FLC` 作为这种传统的自适应控制器出现。在本章中，`PI` 被作为复用 `FLC` 的传统控制器以实现目标。本章设计了四种不同模式来控制有功和无功功率 [34]。带有 `PI` 控制器的一型模糊逻辑控制器用于转子侧和电网侧，直接控制风能系统产生的电压。定子电压控制技术用于控制由风速突变引起的瞬态电压。此处考虑了多种参数以维持功率质量。在并网期间，`FLC` 和 `PI` 同时对超出参考值的电压进行控制。图 2.3 展示了正常和瞬态运行下的定子电压控制相量图 [35]。提出的技术对稳态和瞬态分析均有效。在本章中，使用 `HIL` 实时软件进行瞬态分析并验证。使用 `Mamdani` 一型模糊规则展示了受控参数的运行模式 [36]。
 
 ![](img/b_9783110714043-002_fig_003.jpg)
 
 图 2.3：正常和瞬态下的定子电压定向。
 
-定子电压定向控制技术的旋转参考系在图 2.3 所示。取 `d` 和 `q` 参考系以及与轴相关的电压作为主参数。这些参数通过模糊规则进行控制和分配 [37]。旋转框架取决于风速和用于模型风速生成的的高斯风速模型。通过采用 `d` 和 `q` 参考电压，所提出的技术控制了瞬态下的有功和无功功率。输入参数中的波动通过自适应 `PI-T1FLC` 进行控制。下面通过详细框图解释了四种不同模式。图 2.4 展示了与定子 `d` 和 `q` 电压功率控制相关的隶属函数的一型 `FLC` [38]。
+定子电压定向控制技术的旋转参考系在图 2.3 所示。取 `d` 和 `q` 参考系以及与轴相关的电压作为主参数。这些参数通过模糊规则进行控制和分配 [37]。旋转框架取决于风速和用于模型风速生成的高斯风速模型。通过采用 `d` 和 `q` 参考电压，所提出的技术控制了瞬态下的有功和无功功率。输入参数中的波动通过自适应 `PI-T1FLC` 进行控制。下面通过详细框图解释了四种不同模式。图 2.4 展示了与定子 `d` 和 `q` 电压功率控制相关的隶属函数的一型 `FLC` [38]。
 
 ![](img/b_9783110714043-002_fig_004.png)
 
 图 2.4：模糊逻辑控制器框图。
-
-
-
-
 
 图 2.4 基于由定子电压定义的规则。接口系统被视为 `d` 和 `q` 坐标系电压的控制环节。对风速参考值进行模糊化，模糊系统的输入是 `d` 和 `Q` 电压的有功功率和无功功率参考。带有规则的隶属函数限制了瞬态引起的误差，并增强了电网功率 [39, 40]。
 
@@ -146,10 +124,6 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 ## 2.5 Simulink 结果
 
 数学模型使用 MATLAB Simulink 设计。此处使用了 III 型风力发电机系统，其中采用了双馈变频电机（DFIG）用于变风速运行。对于转子侧和电网侧控制，采用了具有上述四种运行模式的 I 型 FLC。增益值根据稳态和瞬态运行的需求选取。该技术通过使用基于规则的隶属函数来优化功率，适用于稳态和瞬态运行。
-
-
-
-
 
 对于模式 1 操作的常规 PI 控制器，结果所示图 2.25–[2.27]。
 
@@ -213,7 +187,7 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 图 2.36：跨模型参考值的电磁转矩控制随时间的变化 (pu)。
 
-### 2.5.2 Mamdani I 型模糊逻辑控制技术（收敛度）
+### Mamdani I 型模糊逻辑控制技术（收敛度）
 
 所提出的、使用模式 4 I 型模糊逻辑控制器的自适应技术，使用了三角形高斯隶属度函数，并与有功和无功功率规则接口。这些规则与电压、风速以及灰尘和冰块等环境因素等控制参数相关。对于高斯隶属函数，输入和输出均用于优化误差以提高瞬态稳定性。
 
@@ -239,7 +213,7 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 图 2.41：跨转子参考值的控制。
 
-### 2.5.2 类型 III 瞬态研究
+### 类型 III 瞬态研究
 
 #### 常规 PI 控制模式 I 和 II FLC
 
@@ -273,73 +247,71 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 ![](img/b_9783110714043-002_fig_049.jpg)
 
-图 2.49：跨 DFIG 参考值的电压控制。
+
+
+# 图 2.49：跨 DFIG 参考值的电压控制。
 
 ![](img/b_9783110714043-002_fig_050.jpg)
 
-图 2.50：跨 DFIG 参考值的电流控制。
+# 图 2.50：跨 DFIG 参考值的电流控制。
 
 ![](img/b_9783110714043-002_fig_051.jpg)
 
-图 2.51：跨转子参考值的电流控制。
+# 图 2.51：跨转子参考值的电流控制。
 
 ![](img/b_9783110714043-002_fig_052.jpg)
 
-图 2.52：跨定子参考值的有功功率控制随时间的变化 (pu)。
+# 图 2.52：跨定子参考值的有功功率控制随时间的变化 (pu)。
 
 ![](img/b_9783110714043-002_fig_053.jpg)
 
-图 2.53：跨 DFIG 参考值的电磁转矩控制随时间的变化 (pu)。
+# 图 2.53：跨 DFIG 参考值的电磁转矩控制随时间的变化 (pu)。
 
 ![](img/b_9783110714043-002_fig_054.jpg)
 
-图 2.54：跨转子参考值的速度控制。
+# 图 2.54：跨转子参考值的速度控制。
 
-#### 采用常规 PI 控制技术的模式 III FLC
+## 采用常规 PI 控制技术的模式 III FLC
 
-#### 采用常规 PI 控制技术的模式 IV FLC
+## 采用常规 PI 控制技术的模式 IV FLC
 
 考虑到模型中的高感性负载，模式 4 提议技术表现出比模式 3 更好的响应。
 
 ![](img/b_9783110714043-002_fig_055.jpg)
 
-图 2.55：跨 DFIG 参考值的电压控制随时间的变化 (pu)。
+# 图 2.55：跨 DFIG 参考值的电压控制随时间的变化 (pu)。
 
 ![](img/b_9783110714043-002_fig_056.jpg)
 
-图 2.56：跨 DFIG 参考值的电流控制随时间的变化 (pu)。
+# 图 2.56：跨 DFIG 参考值的电流控制随时间的变化 (pu)。
 
 ![](img/b_9783110714043-002_fig_057.jpg)
 
-图 2.57：跨定子参考值的有功功率控制随时间的变化 (pu)。
+# 图 2.57：跨定子参考值的有功功率控制随时间的变化 (pu)。
 
 ![](img/b_9783110714043-002_fig_058.jpg)
-
-
-
-
 
 ## 图 2.58: 电磁矩参考值随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_059.jpg)
 
-图 2.59: 跨转子参考值随时间的变化。
+# 图 2.59: 跨转子参考值随时间的变化。
 
 ![](img/b_9783110714043-002_fig_060.jpg)
 
-图 2.60: DFIG 跨转子参考值电流随时间的变化对比 (pu)。
+# 图 2.60: DFIG 跨转子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_061.jpg)
 
-图 2.61: DFIG 跨定子参考值电压随时间的变化对比 (pu)。
+# 图 2.61: DFIG 跨定子参考值电压随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_062.jpg)
 
-图 2.62: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
+# 图 2.62: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_063.jpg)
 
-图 2.63: DFIG 跨定子参考值有功随时间的变化对比 (pu)。
+# 图 2.63: DFIG 跨定子参考值有功随时间的变化对比 (pu)。
 
 ### 表 2.1: PI-T1FLC (模式 3) 与 PII-T1FLC (模式 4) 高电感负载的对比。
 
@@ -355,79 +327,79 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 | 9.35 | DFIG 侧电压 | 8.9 | 8.4 |
 | 9.5 | 转子速度 | 8.84 | 8.85 |
 
-### 2.5.2.2 对比研究 2: (三相故障 100 ms 的瞬态分析)
+## 2.5.2.2 对比研究 2: (三相故障 100 ms 的瞬态分析)
 
-#### 采用 PI 传统控制技术的模式 III FLC
+### 采用 PI 传统控制技术的模式 III FLC
 
 ![](img/b_9783110714043-002_fig_064.jpg)
 
-图 2.64: DFIG 跨定子参考值电压随时间的变化对比 (pu)。
+# 图 2.64: DFIG 跨定子参考值电压随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_065.jpg)
 
-图 2.65: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
+# 图 2.65: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_066.jpg)
 
-图 2.66: 定子参考值电流随时间的变化对比 (pu)。
+# 图 2.66: 定子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_067.jpg)
 
-图 2.67: 定子参考值有功随时间的变化对比。
+# 图 2.67: 定子参考值有功随时间的变化对比。
 
 ![](img/b_9783110714043-002_fig_068.jpg)
 
-图 2.68: 定子参考值无功随时间的变化对比。
+# 图 2.68: 定子参考值无功随时间的变化对比。
 
 ![](img/b_9783110714043-002_fig_069.jpg)
 
-图 2.69: 电磁矩参考值随时间的变化对比 (pu)。
+# 图 2.69: 电磁矩参考值随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_070.png)
 
-图 2.70: 跨转子参考值速度随时间的变化。
+# 图 2.70: 跨转子参考值速度随时间的变化。
 
-#### 采用 PI 传统控制技术的模式 IV FLC
+### 采用 PI 传统控制技术的模式 IV FLC
 
 ![](img/b_9783110714043-002_fig_071.jpg)
 
-图 2.71: 跨 DFIG 参考值电压随时间的变化对比 (pu)。
+# 图 2.71: 跨 DFIG 参考值电压随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_072.jpg)
 
-图 2.72: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
+# 图 2.72: DFIG 跨定子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_073.jpg)
 
-图 2.73: 跨转子参考值电流随时间的变化对比 (pu)。
+# 图 2.73: 跨转子参考值电流随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_074.jpg)
 
-图 2.74: 定子参考值有功随时间的变化对比 (pu)。
+# 图 2.74: 定子参考值有功随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_075.jpg)
 
-图 2.75: 定子参考值无功随时间的变化。
+# 图 2.75: 定子参考值无功随时间的变化。
 
 ![](img/b_9783110714043-002_fig_076.jpg)
 
-图 2.76: 电磁矩参考值随时间的变化对比 (pu)。
+# 图 2.76: 电磁矩参考值随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_077.jpg)
 
-图 2.77: 转子参考值速度随时间的变化。
+# 图 2.77: 转子参考值速度随时间的变化。
 
 ![](img/b_9783110714043-002_fig_078.jpg)
 
-图 2.78: 跨 DFIG 参考值电流随时间的变化对比。
+# 图 2.78: 跨 DFIG 参考值电流随时间的变化对比。
 
 ![](img/b_9783110714043-002_fig_079.jpg)
 
-图 2.79: 有功参考值随时间的变化对比 (pu)。
+# 图 2.79: 有功参考值随时间的变化对比 (pu)。
 
 ![](img/b_9783110714043-002_fig_080.jpg)
 
-图 2.80: 电磁矩参考值随时间的变化对比。
+# 图 2.80: 电磁矩参考值随时间的变化对比。
 
 ### 表 2.2: PI-T1FLC (模式 3) 与 PII-T1FLC (模式 4) 三相故障分析（故障在 8.0–8.1 秒 内被移除，单位为秒）。
 
@@ -445,58 +417,55 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 使用三相故障对系统进行瞬态分析；根据表 2.3 的结果分析，模式 4 模型的响应优于模式 3。
 
-### 2.5.2.3 对比研究 3: (欠速和过速情况)
+## 2.5.2.3 对比研究 3: (欠速和过速情况)
 
 ![](img/b_9783110714043-002_fig_081.png)
 
-图 2.81: 部分和满载风电功率参考值随时间的变化。
+# 图 2.81: 部分和满载风电功率参考值随时间的变化。
 
 ![](img/b_9783110714043-002_fig_082.png)
 
-图 2.82: 风速参考值随时间变化的区域表示。
+# 图 2.82: 风速参考值随时间变化的区域表示。
 
 ![](img/b_9783110714043-002_fig_083.png)
 
-图 2.83: PI 传统控制下定子参考值有功随时间的变化。
+# 图 2.83: PI 传统控制下定子参考值有功随时间的变化。
 
 ![](img/b_9783110714043-002_fig_084.png)
 
-图 2.84: PI 传统控制下电磁矩参考值随时间的变化。
+# 图 2.84: PI 传统控制下电磁矩参考值随时间的变化。
 
 ![](img/b_9783110714043-002_fig_085.jpg)
 
-图 2.85: 模式 IV 下定子参考值有功随时间的变化。
+# 图 2.85: 模式 IV 下定子参考值有功随时间的变化。
 
 ![](img/b_9783110714043-002_fig_086.jpg)
 
-图 2.86: 模式 IV 下电磁矩参考值随时间的变化。
+# 图 2.86: 模式 IV 下电磁矩参考值随时间的变化。
 
 以下结果展示了在风速从切速到基速以及过速情况下，PI 和所建议的模式 4 类型模糊逻辑控制器的性能。上述结果说明了图 2.42–2.86 的结果。结果表明，PI 控制系统在速度从输入变化到基速时会随参考值振荡，而建议的模型以高于参考值的初始值进行收敛。因此，考虑到收敛性，建议模型的性能优于 IP 控制器。
 
-## 2.6 Typhoon HIL 风能系统设计
+# 2.6 Typhoon HIL 风能系统设计
 
 使用 MATLAB Simulink 进行风电模型建模。在这里，利用电路硬件和软件对验证过的预设计模型进行结果的验证和比较。该模型使用 SCADA 和实时仿真器创建。Typhoon HIL 软件，例如原理图编辑器和 HIL SCADA 用于此模型。下图展示了 DFIG 的 WECS 硬件建模。MATLAB 实现了模糊控制器的硬件，并在实时软件中使用 TYPHOON HIL 402 对其进行验证。图 2.87 所示的风力模型详细说明了 Typhoon HIL 软件工具中可访问的所有功能，包括集成在用于 WTM 运行和设计的 Typhoon HIL 控制中心 App 中的原理图编辑器和 HIL SCADA。图 2.87 显示了 WTM 设计的 HIL Typhoon 软件（风力发电机模型）。
 
 ![](img/b_9783110714043-002_fig_087.jpg)
 
+# 图 2.87：使用实时 HIL (TYPHOON) 的 WECS 模型。
 
-
-
-图 2.87：使用实时 HIL (TYPHOON) 的 WECS 模型。
-
-### THIL 实时建模结果
+## THIL 实时建模结果
 
 `MATLAB` 模型的参数在实时模型中实现，以验证结果。输入电压、输出电压、机械转矩和速度以及滤波器电压分别在图 2.88 和图 2.89 中表示。对结果进行了比较，输出列于表 2.3 以供比较。
 
 ![](img/b_9783110714043-002_fig_088.jpg)
 
-图 2.88：(a) 输入电压 (3p)，(b) 转矩和速度，(c) 输出电压 (3p)，以及 (d) 电容直流电压。
+# 图 2.88：(a) 输入电压 (3p)，(b) 转矩和速度，(c) 输出电压 (3p)，以及 (d) 电容直流电压。
 
 ![](img/b_9783110714043-002_fig_089.jpg)
 
-图 2.89：(a) 输入电压 (3p)，(b) 转矩和速度，(c) 输出电压 (3p)，以及 (d) 电容直流电压。
+# 图 2.89：(a) 输入电压 (3p)，(b) 转矩和速度，(c) 输出电压 (3p)，以及 (d) 电容直流电压。
 
-表 2.3：使用 Typhoon HIL 验证所提模型的标幺值比较。
+### 表 2.3：使用 Typhoon HIL 验证所提模型的标幺值比较。
 
 | 电量 | MATLAB | TYPHOON |
 | --- | --- | --- |
@@ -508,7 +477,7 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 | DFIG 侧电压 | 8.9 | 8.4 |
 | 转子速度 | 8.86 | 8.85 |
 
-表 2.4：使用 MATLAB 设计模型的验证输出（瞬态运行模式下故障消除的调节时间）。
+### 表 2.4：使用 MATLAB 设计模型的验证输出（瞬态运行模式下故障消除的调节时间）。
 
 | 控制器软件 | PI-FLC 类型 I 模式 I | PI-FLC 类型 I 模式 II | PI-FLC 类型 I 模式 III | PI-FLC 类型 I 模式 IV |
 | --- | --- | --- | --- | --- |
@@ -517,138 +486,166 @@ V[qr] = R[r]i[qr] + dΨ[qr]/dt + ω[dqr]Ψdr
 
 各种参数的实时软件验证结果所示表 2.3。通过比较 MATLAB 和实时 HIL 模型的输出，显然，改进的风力发电机系统和用于调节有、无功功率的所提控制技术在瞬态下证实了高效的结果。对于稳态和瞬态条件，所提技术均显示出更好的输出。由于风速变化引起的瞬态响应加速，可以通过控制有功和无功功率来实现功率平滑。在表 2.4 中，给出了系统移除故障时调节时间的软件比较。可以明显看出，所提技术的响应比传统控制器和其他自适应技术更快。该模型维持了系统在风速变化、故障发生和功率平滑过程中的稳定性。
 
-## 2.7 结论
+# 2.7 结论
 
 风能是发电过程中最丰富且免费的资源，不会产生有害排放。因此，利用先进技术增强这种可再生能源，可以通过维持我们现代电力系统的稳定性来加速发电能力。本章有助于最近的研究人员了解二型风力机系统的改进如何降低维护成本和故障期间的损坏。所提的模式 4 类型 I 模糊逻辑控制器可以是风能发电公司在独立和并网集成模式下的良好选择。对于功率平滑，这种所提技术是主动且高效的选择之一。本章展示了使用所提技术进行有功和无功功率控制。使用先进且最新的实时软件（TYPHOON HIL）验证 MATLAB 模型也有助于当前研究人员获取处理二型区间类型控制器技术所需的知识。对于线性和非线性操作，该技术也将非常有帮助。在并网接入的改进型基于转子的三型风力发电机系统中，所提技术被有效用于通过维持其稳定性来增强我们的现代电力系统。
 
-## 参考文献
+# 参考文献
 
-[1]Priyadarshi N., Padmanaban S., Maroti P. K., Sharma A. An extensive practical investigation of FPSO-based MPPT for grid integrated PV system under variable operating conditions with anti-islanding protection. IEEE Journal, 13, 2018, 
+[1] Priyadarshi N., Padmanaban S., Maroti P. K., Sharma A. An extensive practical investigation of FPSO-based MPPT for grid integrated PV system under variable operating conditions with anti-islanding protection. IEEE Journal, 13, 2018,
 
-[2]Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaaberg F. A fuzzy logic based SVPWM control of grid integrated PV-wind system: experimental. IET Electric Power,
+[2] Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaaberg F. A fuzzy logic based SVPWM control of grid integrated PV-wind system: experimental. IET Electric Power,
 
-[3]Priyadarshi N., Sharma A. Hybrid Firefly-Asymmetrical Fuzzy logic controller for grid integration. International Journal of Renewable Energy, 7
+[3] Priyadarshi N., Sharma A. Hybrid Firefly-Asymmetrical Fuzzy logic controller for grid integration. International Journal of Renewable Energy, 7
 
-[4]Bansal R. C. Integration of renewable generators into the distribution system: a review. IET Renewable Power, 10(7),
+[4] Bansal R. C. Integration of renewable generators into the distribution system: a review. IET Renewable Power, 10(7),
 
-[5]Bansal R. C. (Editor). Handbook of Distributed Generation: Electric Power Technologies, Economics and Environmental
+[5] Bansal R. C. (Editor). Handbook of Distributed Generation: Electric Power Technologies, Economics and Environmental
 
-[6]Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Azam F., K. Novel Sine-cosine optimized MPPT for grid integrated PV under real operating conditions. IEEE Access, 7, 2019,
+[6] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Azam F., K. Novel Sine-cosine optimized MPPT for grid integrated PV under real operating conditions. IEEE Access, 7, 2019,
 
-[7]Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Hossain E. Hybrid Photovoltaic Cell for grid integration-based maximum point tracking: experimental evaluation. IEEE Access, 7, 2019,
+[7] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Hossain E. Hybrid Photovoltaic Cell for grid integration-based maximum point tracking: experimental evaluation. IEEE Access, 7, 2019,
 
-[8]Bansal R. C. Handbook of Renewable Energy Technology and Systems, World Scientific Publisher, UK, 2021.
+[8] Bansal R. C. Handbook of Renewable Energy Technology and Systems, World Scientific Publisher, UK, 2021.
 
-[9]Mishra Y., Mishra S., Li F., Dong Z. Y., Bansal R. C. Small signal stability analysis of DFIG based wind power system with tuned damping controller under super/sub-synchronous mode of operation. IEEE Trans. Energy Conversion, 24(4), 2009, 972–982.
+[9] Mishra Y., Mishra S., Li F., Dong Z. Y., Bansal R. C. Small signal stability analysis of DFIG based wind power system with tuned damping controller under super/sub-synchronous mode of operation. IEEE Trans. Energy Conversion, 24(4), 2009, 972–982.
 
-[10]Choudhary T., Priyadarshi N., Kuma P., Azam F., Bhoi A. K. A fuzzy logic based vibration control system for renewable application. In: Advances in Greener Energy Technologies, Springer, Singapore, 2020, 385–396.
+[10] Choudhary T., Priyadarshi N., Kuma P., Azam F., Bhoi A. K. A fuzzy logic based vibration control system for renewable application. In: Advances in Greener Energy Technologies, Springer, Singapore, 2020, 385–396.
 
-[11]Medeiros Rocha M., Patrocinio Da Silva J., Das Chagas Barbosa De Sena F. Simulation of a fuzzy control applied to a variable speed wind system connected to the electrical network. IEEE Latin America Transactions, 16(2), 2018, 521–526.
-
-[12]Ganthia B. P., Barik S. K. Steady-state and dynamic comparative analysis of PI and fuzzy logic controller in stator voltage oriented controlled DFIG wind energy conversion system. Journal of The Institution of Engineers (India): Series, B101, 2020, 273–286.
-
-[13]Ganthia B. P., Barik S. K., Nayak B. Shunt connected FACTS devices for LVRT capability enhancement in WECS. Engineering, Technology & Applied Science Research, 10(3), 5819–5823.
+[11] Medeiros Rocha M., Patrocinio Da Silva J., Das Chagas Barbosa De Sena F. Simulation of a fuzzy control applied to a variable speed wind system connected to the electrical network. IEEE Latin America Transactions, 16(2), 2018, 521–526.
 
 
 
 
-[14]Ganthia B. P. 混合静止器件在基于 DFIG 的风能系统中的 LVRT 能力增强应用。Journal of Mechanics of Continua and Mathematical Sciences, 15, 10.26782/jmcms.2020.06.00019. →
+[12] Ganthia B. P., Barik S. K. Steady-state and dynamic comparative analysis of PI and fuzzy logic controller in stator voltage oriented controlled DFIG wind energy conversion system. *Journal of The Institution of Engineers (India): Series B*, 101, 2020, 273–286.
 
-[15]Ganthia B. P., Mohanty S., Rana P. K., Sahu P. K. 使用 PI 控制器的 DVR 进行电压跌落补偿，2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), Chennai, 2016, 2138–2142, 10.1109/ICEEOT.2016.7755068. →
+[13] Ganthia B. P., Barik S. K., Nayak B. Shunt connected FACTS devices for LVRT capability enhancement in WECS. *Engineering, Technology & Applied Science Research*, 10(3), 5819–5823.
 
-[16]Ganthia B. P., Rana P. K., Patra T., Pradhan R., Sahu R. 电力系统中基于引力搜索算法的 TCSC 控制器设计与分析。Materials Today: Proceedings, 5(1), 2018, 841–847. →
+[14] Ganthia B. P. 混合静止器件在基于 DFIG 的风能系统中的 LVRT 能力增强应用。*Journal of Mechanics of Continua and Mathematical Sciences*, 15, `10.26782/jmcms.2020.06.00019`.
 
-[17]Honrubia-Escribano A., Jiménez-Buendía F., Gómez-Lázaro E., Fortmann J. 根据 `IEC 61400-27-1` 要求的标准 3 型风力涡轮机模型电力系统稳定性现场验证，位于 IEEE Transactions on Energy Conversion, 33(1), 2018 年 3 月, 137–145. →
+[15] Ganthia B. P., Mohanty S., Rana P. K., Sahu P. K. 使用 PI 控制器的 DVR 进行电压跌落补偿，2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), Chennai, 2016, 2138–2142, `10.1109/ICEEOT.2016.7755068`.
 
-[18]Sun L., Peng C., Hu J., Hou Y. 3 型风力涡轮机系统恢复的应用。位于 IEEE Transactions on Power Systems, 33(3), 2018 年 5 月, 3040–3051. →
+[16] Ganthia B. P., Rana P. K., Patra T., Pradhan R., Sahu R. 电力系统中基于引力搜索算法的 TCSC 控制器设计与分析。*Materials Today: Proceedings*, 5(1), 2018, 841–847.
 
-[19]Guest E., Jensen K. H., Rasmussen T. W. IV 型风力涡轮机的序列域谐波建模。位于 IEEE Transactions on Power Electronics, 33(6), 2018 年 6 月, 4934–4943. →
+[17] Honrubia-Escribano A., Jiménez-Buendía F., Gómez-Lázaro E., Fortmann J. 根据 `IEC 61400-27-1` 要求的标准 3 型风力涡轮机模型电力系统稳定性现场验证，位于 *IEEE Transactions on Energy Conversion*, 33(1), 2018 年 3 月, 137–145.
 
-[20]Hu J., Sun L., Yuan X., Wang S., Chi Y. 带有 `df/dt` 惯性控制的 3 型风力涡轮机建模，用于系统频率响应研究。IEEE Transactions on Power Systems, 32(4), 2017 年 7 月, 2799–2809. →
+[18] Sun L., Peng C., Hu J., Hou Y. 3 型风力涡轮机系统恢复的应用。位于 *IEEE Transactions on Power Systems*, 33(3), 2018 年 5 月, 3040–3051.
 
-[21]Göksu Ö., Altin M., Fortmann J., Sørensen P. E. 带有电厂功率因控制器的 `IEC 61400-27-1` 风发电 3 型模型现场验证。IEEE Transactions on Energy Conversion, 31(3), 2016 年 9 月, 1170–1178. →
+[19] Guest E., Jensen K. H., Rasmussen T. W. IV 型风力涡轮机的序列域谐波建模。位于 *IEEE Transactions on Power Electronics*, 33(6), 2018 年 6 月, 4934–4943.
 
-[22]Hussein D. N., Matar M., Iravani R. 用于 EMT 研究的 3 型风电站宽带等效模型。IEEE Transactions on Power Delivery, 31(5), 2016 年 10 月, 2322–2331. →
+[20] Hu J., Sun L., Yuan X., Wang S., Chi Y. 带有 `df/dt` 惯性控制的 3 型风力涡轮机建模，用于系统频率响应研究。*IEEE Transactions on Power Systems*, 32(4), 2017 年 7 月, 2799–2809.
 
-[23]Bhattacharjee C., Roy B. K. 用于电网并网混合发电系统电质改善的风能转换系统高级模糊功率提取控制。IET Generation, Transmission & Distribution, 10(5), 2016 年 7 月 24 日, 1179–1189. →
+[21] Göksu Ö., Altin M., Fortmann J., Sørensen P. E. 带有电厂功率因控制器的 `IEC 61400-27-1` 风发电 3 型模型现场验证。*IEEE Transactions on Energy Conversion*, 31(3), 2016 年 9 月, 1170–1178.
 
-[24]Ismail M. M., Bendary A. F. 使用模糊逻辑控制保护 DFIG 风力涡轮机。Alexandria Engineering Journal, 55(2), 2016, 941–949. →
+[22] Hussein D. N., Matar M., Iravani R. 用于 EMT 研究的 3 型风电站宽带等效模型。*IEEE Transactions on Power Delivery*, 31(5), 2016 年 10 月, 2322–2331.
 
-[25]Göksu Ö., Altin M., Fortmann J., Sørensen P. E. 带有电厂功率因控制器的 `IEC 61400-27-1` 风发电 3 型模型现场验证。IEEE Transactions on Energy Conversion, 31(3), 2016 年 9 月, 1170–1178. →
+[23] Bhattacharjee C., Roy B. K. 用于电网并网混合发电系统电质改善的风能转换系统高级模糊功率提取控制。*IET Generation, Transmission & Distribution*, 10(5), 2016 年 7 月 24 日, 1179–1189.
 
-[26]Van T. L., Nguyen T. H., Lee D. 基于模糊逻辑变速风力系统先进变角控制。IEEE Transactions on Energy Conversion, 30(2), 2015 年 6 月, 578–587. →
+[24] Ismail M. M., Bendary A. F. 使用模糊逻辑控制保护 DFIG 风力涡轮机。*Alexandria Engineering Journal*, 55(2), 2016, 941–949.
 
-[27]Hansen A. D., Margaris I. D. (2014). IV 型风力涡机。DTU Wind Energy. →
+[25] Göksu Ö., Altin M., Fortmann J., Sørensen P. E. 带有电厂功率因控制器的 `IEC 61400-27-1` 风发电 3 型模型现场验证。*IEEE Transactions on Energy Conversion*, 31(3), 2016 年 9 月, 1170–1178.
 
-[28]Belkacem Y., Drid S., Makouf A., Chrifi-Alaoui L., Ouriagli M. 高性能变速双馈感电机风力涡机的模糊控制器，2019 International Conference on Intelligent Systems and Advanced Sciences (ISACS), Taza, 2019, 1–7. →
+[26] Van T. L., Nguyen T. H., Lee D. 基于模糊逻辑变速风力系统先进变角控制。*IEEE Transactions on Energy Conversion*, 30(2), 2015 年 6 月, 578–587.
 
-[29]Gu J., Meng B., Ren H., Zhu J., Li H. 基于模糊控制的风力涡机仿真系统设计，2019 第 6 届 International Conference on Systems and Informatics (ICSA), 上海, 2019, 268–273. →
+[27] Hansen A. D., Margaris I. D. (2014). IV 型风力涡机。DTU Wind Energy.
 
-[30]Zerouali M., Boutouba M., Ougli A. E., Tidhaf B. 使用模糊逻辑和传统 P&O 控制变速风能系统，2019 International Conference on Intelligent Systems and Advanced Computing (ISACS), Taza, 2019, 1–5. →
+[28] Belkacem Y., Drid S., Makouf A., Chrifi-Alaoui L., Ouriagli M. 高性能变速双馈感电机风力涡机的模糊控制器，2019 International Conference on Intelligent Systems and Advanced Sciences (ISACS), Taza, 2019, 1–7.
 
-[31]Ferrari M., Orendorff M., Smith T., Buckner M. 硬件验证的并网 3 型风力涡机系统开源代码实时仿真台，2019 IEEE Applied Electronics Conference and Exposition (APEC), 美国加利福尼亚州阿纳姆, 2019, 66–70. →
+[29] Gu J., Meng B., Ren H., Zhu J., Li H. 基于模糊控制的风力涡机仿真系统设计，2019 第 6 届 International Conference on Systems and Informatics (ICSA), 上海, 2019, 268–273.
 
-[32]ZakiDiab A. A., Hassan M. S., Shoyama M. 基于模糊逻辑控制的无传感器直驱永磁同步电机风力涡机改进自适应滑模式控制，2019 IEEE 第 4 International Future Energy Electronics Conference (IFEEC), 新加坡, 2019, 1–8. →
+[30] Zerouali M., Boutouba M., Ougli A. E., Tidhaf B. 使用模糊逻辑和传统 P&O 控制变速风能系统，2019 International Conference on Intelligent Systems and Advanced Computing (ISACS), Taza, 2019, 1–5.
 
-[33]Honrubia-Escribano A., Jimenez-Buendia F., Gomez-Lazaro E., Fortmann J. 根据 IEC 61400-27-1 要求的标准 3 型风力涡轮机模型电力系统稳定性现场验证，2018 IEEE Power & Energy Society General Meeting (PESGM), 勒冈州波特兰, 2018, 1–1. →
+[31] Ferrari M., Orendorff M., Smith T., Buckner M. 硬件验证的并网 3 型风力涡机系统开源代码实时仿真台，2019 IEEE Applied Electronics Conference and Exposition (APEC), 美国加利福尼亚州阿纳姆, 2019, 66–70.
 
-[34]Eisa S. A., Stone W., Wedeward K. 带有变桨控制的 3 型 DFIG 风力涡轮机动力学数学建模、稳定性、分叉分析与仿真，2017 第 9 届 IEEE Green Technologies Conference (GreenTech), 科罗拉多州丹佛, 2017, 334–341. →
+[32] ZakiDiab A. A., Hassan M. S., Shoyama M. 基于模糊逻辑控制的无传感器直驱永磁同步电机风力涡机改进自适应滑模式控制，2019 IEEE 第 4 International Future Energy Electronics Conference (IFEEC), 新加坡, 2019, 1–8.
 
-[35]Ganthia B. P., Agarwal V., Rout K., Pardhe M. K. 使用 PI & GA 的 DFIG 风风能转换系统最优控制研究，2017 International Conference on Power and Embedded Drive Control (ICPEDC), Chennai, 2017, 343–347. →
+[33] Honrubia-Escribano A., Jimenez-Buendia F., Gomez-Lazaro E., Fortmann J. 根据 IEC 61400-27-1 要求的标准 3 型风力涡轮机模型电力系统稳定性现场验证，2018 IEEE Power & Energy Society General Meeting (PESGM), 勒冈州波特兰, 2018, 1–1.
 
-[36]Ganthia B. P., Mohanty S., Rana P. K., Sahu P. K. 使用 PI 控制器的 DVR 进行电压跌落补偿，2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), Chennai, 2016, 2138–2142, 10.1109/ICEEOT.2016.7755068. →
+[34] Eisa S. A., Stone W., Wedeward K. 带有变桨控制的 3 型 DFIG 风力涡轮机动力学数学建模、稳定性、分叉分析与仿真，2017 第 9 届 IEEE Green Technologies Conference (GreenTech), 科罗拉多州丹佛, 2017, 334–341.
 
-[37]Muljadi E., Gevorgian V., Hoke A. 3 型风发电机的能量存储机会与能力，2016 IEEE Energy Conversion Congress and Exposition (CCE), 威斯康星州密尔沃基, 2016, 1–5. →
+[35] Ganthia B. P., Agarwal V., Rout K., Pardhe M. K. 使用 PI & GA 的 DFIG 风风能转换系统最优控制研究，2017 International Conference on Power and Embedded Drive Control (ICPEDC), Chennai, 2017, 343–347.
 
-[38]Siraj K., Siraj H., Nasir M. 电网集成双馈感电机风力涡机的建模与控制。Power Electronics and Motion Control Conference and Exposition (PEMC), 2014 第 16 届 IEEE, 2014. →
+[36] Ganthia B. P., Mohanty S., Rana P. K., Sahu P. K. 使用 PI 控制器的 DVR 进行电压跌落补偿，2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), Chennai, 2016, 2138–2142, `10.1109/ICEEOT.2016.7755068`.
 
-[39]Gogdare A. N., Doroudi A., Ghaseminejad M. 使用 DFIG 风机缓解固定速风场电压波动的新方法，2012 第 17 届电力分配会议，德黑兰, 2012, 1–6. →
+[37] Muljadi E., Gevorgian V., Hoke A. 3 型风发电机的能量存储机会与能力，2016 IEEE Energy Conversion Congress and Exposition (CCE), 威斯康星州密尔沃基, 2016, 1–5.
 
-[40]Belmokhtar K., Doumbia M. L., Agbossou K. DFIG 风能转换系统的建模与模糊逻辑控制。Industrial Electronics (ISIE), 2012 IEEE International Symposium on IEEE, 2012. →
+[38] Siraj K., Siraj H., Nasir M. 电网集成双馈感电机风力涡机的建模与控制。Power Electronics and Motion Control Conference and Exposition (PEMC), 2014 第 16 届 IEEE, 2014.
 
+[39] Gogdare A. N., Doroudi A., Ghaseminejad M. 使用 DFIG 风机缓解固定速风场电压波动的新方法，2012 第 17 届电力分配会议，德黑兰, 2012, 1–6.
 
-
-
+[40] Belmokhtar K., Doumbia M. L., Agbossou K. DFIG 风能转换系统的建模与模糊逻辑控制。Industrial Electronics (ISIE), 2012 IEEE International Symposium on IEEE, 2012.
 
 # 致谢
-感谢施耐德电气实验室（Schneider Electric Lab）、新地平工程学院（New Horizon College of Engineering）在本章节的编写及背景调查的支持。耐德的主要目标是赋予每个人利用我们能源和资产的能力，连接进步与可维护性，并通过协调全球驱动周期和能源创新来加速数字化变更，以实现极端的效率和管理能力。他们涵盖了从终端到云端的界面设备、控制、编程和管理。通过数字孪生实现从设计、工作到运行和维护的全生命周期规划，他们提供了从现场板到协同企业管理的能力。对于您的家庭、建筑和服务器场，他们的协调方案以安全、稳定性和网络安全为最高优先级。
 
-### 摘要
-通过提供实时跟踪、准备和感知以及芯片等特性，物联网（`IoT`）旨在将现有结构转变为节能、智能且互联的建筑。物联网赋能的资源可见性和能源储备是当前建筑环境数字化的两大优势。本研究探讨了物联在智能建筑以及建议性配置中的作用、影响和挑战。它还展示了如何利用基于物联网的方案解决智能建筑中的能源浪费问题。当与智能建筑结合时，物联网（`IoT`）组织提供了更全面的效益建议。这些应用于建筑、学校、图书馆、购物中心及不同领域的先进信息与通信技术（`ICT`）应用提供了低成本且强大的检测和控制方案。部署在关键位置的传感器可以动态监测建筑环境，为智能动态收集信息并与各种管理部门协作。开发了一种用于物联网的设备平台，能够整合来自多个源的信息并提供单一控制指挥链。这是一个灵活、低成本的编程平台，可以监测和控制关键电气负载（如空调、照明和附件负载），以及建筑中的太阳能光伏系统、储能单元和其他物联网传感器。
+感谢施耐德电气实验室（Schneider Electric Lab）、新地平工程学院（New Horizon College of Engineering）在本章节的编写及背景调查的支持。
 
-**关键词：** `IoT`，建筑能源，智能建筑，连续监测，
+耐德的主要目标是赋予每个人利用我们能源和资产的能力，连接进步与可维护性，并通过协调全球驱动周期和能源创新来加速数字化变更，以实现极端的效率和管理能力。他们涵盖了从终端到云端的界面设备、控制、编程和管理。通过数字孪生实现从设计、工作到运行和维护的全生命周期规划，他们提供了从现场板到协同企业管理的能力。对于您的家庭、建筑和服务器场，他们的协调方案以安全、稳定性和网络安全为最高优先级。
+
+## 摘要
+
+通过提供实时跟踪、准备和感知以及芯片等特性，物联网（`IoT`）旨在将现有结构转变为节能、智能且互联的建筑。物联网赋能的资源可见性和能源储备是当前建筑环境数字化的两大优势。本研究探讨了物联在智能建筑以及建议性配置中的作用、影响和挑战。它还展示了如何利用基于物联网的方案解决智能建筑中的能源浪费问题。
+
+当与智能建筑结合时，物联网（`IoT`）组织提供了更全面的效益建议。这些应用于建筑、学校、图书馆、购物中心及不同领域的先进信息与通信技术（`ICT`）应用提供了低成本且强大的检测和控制方案。部署在关键位置的传感器可以动态监测建筑环境，为智能动态收集信息并与各种管理部门协作。
+
+开发了一种用于物联网的设备平台，能够整合来自多个源的信息并提供单一控制指挥链。这是一个灵活、低成本的编程平台，可以监测和控制关键电气负载（如空调、照明和附件负载），以及建筑中的太阳能光伏系统、储能单元和其他物联网传感器。
+
+**关键词：** `IoT`，建筑能源，智能建筑，连续监测
 
 ## 3.1 引言
-随着物联网（`IoT`）接管我们的生活，自动化让生活变得更加简单，房屋变得更加智能。智能家居是智能城市的基础和更安全的生活方式。它是一种使功能自动化并让您控制房屋的智能家居技术。您可以通过家庭控制机制访问家庭安全性。它基于移动应用程序控制，并可以与现有的安全系统连接。您选择时间表，其余将根据您的偏好实现自动化，总的来说提供了舒适、控制、节约和更智能的家居。物业自动化还可以在您离开时快速告知您应该知道的事件，例如漏水和对您房屋的未经授权访问。以下是您应该考虑家居自动化和控制以提高满意度的几个原因：(1) 舒适性——通过单一界面连接所有设备是智能家居技术的重大进步。通过移动应用程序进行指尖控制也提供了远程控制的优势，允许您在任何时间、任何地控制家。(2) 灵活性——在涉及新设备和电器的集成时，智能家居解决方案通常具有很强的通用性。这些系统的性能和定制都是可扩展且动态的。(3) 能源效率——智能家居技术允许消费者节约能源从而节省资金。它减少了在不需要时开启灯或其他器具的概率，并检查用户的习惯和模式以帮助节省能源和金钱 [[1], [2], [3]]。可再生能源技术（例如光伏 (`PV`） 面板）、电池储能、智能设备和融资策略的进步一个世纪以来一直推动电力用户的需求增长 [[4], [5], [6]]。然而，还没有广泛可用或强大的设备来帮助买家参与电力市场 [[7], [8]]。以下主题特别受到关注：(i) 能源管理；(ii) 可扩展性；以及(iii) 网络安全 [[9], [10], [11]]。文献中提出了多种不同规格和能力的家庭自动化系统 [[12], [13], [14]]。可以通过 Web 服务器检查用户设备的状态。系统通过 Web 应用程序进行控制管理 [[16], [17], [18]]。
+
+随着物联网（`IoT`）接管我们的生活，自动化让生活变得更加简单，房屋变得更加智能。智能家居是智能城市的基础和更安全的生活方式。它是一种使功能自动化并让您控制房屋的智能家居技术。您可以通过家庭控制机制访问家庭安全性。它基于移动应用程序控制，并可以与现有的安全系统连接。
+
+您选择时间表，其余将根据您的偏好实现自动化，总的来说提供了舒适、控制、节约和更智能的家居。物业自动化还可以在您离开时快速告知您应该知道的事件，例如漏水和对您房屋的未经授权访问。
+
+以下是您应该考虑家居自动化和控制以提高满意度的几个原因：
+
+1. **舒适性**——通过单一界面连接所有设备是智能家居技术的重大进步。通过移动应用程序进行指尖控制也提供了远程控制的优势，允许您在任何时间、任何地控制家。
+2. **灵活性**——在涉及新设备和电器的集成时，智能家居解决方案通常具有很强的通用性。这些系统的性能和定制都是可扩展且动态的。
+3. **能源效率**——智能家居技术允许消费者节约能源从而节省资金。它减少了在不需要时开启灯或其他器具的概率，并检查用户的习惯和模式以帮助节省能源和金钱 [[1], [2], [3]]。
+
+可再生能源技术（例如光伏（`PV`）面板）、电池储能、智能设备和融资策略的进步一个世纪以来一直推动电力用户的需求增长 [[4], [5], [6]]。然而，还没有广泛可用或强大的设备来帮助买家参与电力市场 [[7], [8]]。
+
+以下主题特别受到关注：
+
+1. 能源管理；
+2. 可扩展性；
+3. 网络安全 [[9], [10], [11]]。
+
+文献中提出了多种不同规格和能力的家庭自动化系统 [[12], [13], [14]]。可以通过 Web 服务器检查用户设备的状态。系统通过 Web 应用程序进行控制管理 [[16], [17], [18]]。
 
 ## 3.2 用于节能建筑的物联网
-世界上有一些绿色能源住宅。这些建筑中的每一个都包含了某些创新技术以增强电力性能。通过 `IoT`，目前的住宅可以转换为节能、智能和互联的住宅。通过 `IoT` 传感器和执行器的通信、操作和可视化产生一个智能建筑环境。智能系统中的 `IoT` 网关如图 3.1 所示。`IoT` 框架提供了一个集成建筑基础设施和资源的技术结构，从而提供了优化其使用的机制并提供绿色、知且公平的服务分配，这从几个方面有利于建筑居住者。三个主要优势包括智能建筑环境能源效率的提高、建筑环境的动态监测以及居住者更佳的福祉 [[19]]。
 
-![](img/b_9783110714043-003_fig_001.jpg)
+世界上有一些绿色能源住宅。这些建筑中的每一个都包含了某些创新技术以增强电力性能。通过 `IoT`，目前的住宅可以转换为节能、智能和互联的住宅。通过 `IoT` 传感器和执行器的通信、操作和可视化产生一个智能建筑环境。
 
-图 3.1：智能建筑中的 IoT 网关。
+智能系统中的 `IoT` 网关如图 3.1 所示。`IoT` 框架提供了一个集成建筑基础设施和资源的技术结构，从而提供了优化其使用的机制并提供绿色、知且公平的服务分配，这从几个方面有利于建筑居住者。
+
+三个主要优势包括智能建筑环境能源效率的提高、建筑环境的动态监测以及居住者更佳的福祉 [[19]]。
+
+![图 3.1：智能建筑中的 IoT 网关。](img/b_9783110714043-003_fig_001.jpg)
 
 ### 3.2.1 物联网传感器
 
+IoT 传感器在增强智能结构的稳健性方面发挥着至关重要的作用。建筑管理者可以根据需要使用 IoT 传感器主动优化能源，以避免浪费。IoT 传感器还能通过有效识别结构内部环境中毒素或其他破坏性物质的存在，帮助建筑气候监测，并让居住者迅速采取补救措施 [20]。
 
-
-
-IoT 传感器在增强智能结构的稳健性方面发挥着至关重要的作用。建筑管理者可以根据需要使用 IoT 传感器主动优化能源，以避免浪费。IoT 传感器还能通过有效识别结构内部环境中毒素或其他破坏性物质的存在，帮助建筑气候监测，并让居住者迅速采取补救措施 [20]。此外，IoT 传感器通过提升居住者的安全感和舒适度，进一步促进了智能建筑居民的社会繁荣。
+此外，IoT 传感器通过提升居住者的安全感和舒适度，进一步促进了智能建筑居民的社会繁荣。
 
 ### 3.2.2 智能建筑占用传感器
 
-建筑经理可以使用 IoT 智能建筑占用传感器显示建筑内部周围的所有活动，帮助保护建筑免受窃偷和破坏者的侵害。此外，这些传感器通过根据空间占用情况调节照明来减少能量损失 [21]。智能传感器的连接性如图 3.2 所示。建筑内的活动通过运动传感器显示。建筑经理可以使用运动传感器区分某处是否有人员停留，并作为响应开启/关闭灯光。得益于集成传感器技术，数据和系统功能得到了增强。无线技术和云服务开启了数据提取的新世界。无论应用何种，我们都集成了车载加密安全能力，以确保您的信息和传输是安全的 [22]。
+建筑经理可以使用 IoT 智能建筑占用传感器显示建筑内部周围的所有活动，帮助保护建筑免受窃偷和破坏者的侵害。此外，这些传感器通过根据空间占用情况调节照明来减少能量损失 [21]。
 
-```
-![](img/b_9783110714043-003_fig_002.jpg)
-```
-图 3.2：智能传感器与连接。
+智能传感器的连接性如图 3.2 所示。建筑内的活动通过运动传感器显示。建筑经理可以使用运动传感器区分某处是否有人员停留，并作为响应开启/关闭灯光。
+
+得益于集成传感器技术，数据和系统功能得到了增强。无线技术和云服务开启了数据提取的新世界。无论应用何种，我们都集成了车载加密安全能力，以确保您的信息和传输是安全的 [22]。
+
+![图 3.2：智能传感器与连接。](img/b_9783110714043-003_fig_002.jpg)
 
 显示了检测架子、门和窗开启或关闭的传感器。当门打开时，开启/靠近传感器也可以自动开灯。玻璃破碎传感器、被动红外传感器以及门窗传感器都是开启/关闭传感器的示例。边界传感器通过检测任何接近结构的车辆或个人增加了另一层保护 [23]。
 
 ## 3.3 IoT 智能建筑环境传感器
 
-通过 IoT 智能建筑环境传感器，建筑管理员可以为建筑居民提供舒适的居住环境。温度传感器、湿度传感器、漏水和水浸传感器、烟雾和空气传感器以及光传感器都是 IoT 智能环境传感器的示例。温湿度传感器揭示了建筑内加热、制冷和水蒸气量的意外变化。温湿度传感器还可以在无人场时关闭空调或暖气来节省能量 [24]。
+通过 IoT 智能建筑环境传感器，建筑管理员可以为建筑居民提供舒适的居住环境。温度传感器、湿度传感器、漏水和水浸传感器、烟雾和空气传感器以及光传感器都是 IoT 智能环境传感器的示例。
+
+温湿度传感器揭示了建筑内加热、制冷和水蒸气量的意外变化。温湿度传感器还可以在无人场时关闭空调或暖气来节省能量 [24]。
 
 ### 3.3.1 IoT 智能建筑能源视频显示单元
 
@@ -656,12 +653,16 @@ IoT 智能建筑能源视频显示系统跟踪建筑中每台电器或其他设�
 
 ### 3.3.2 其他 IoT 智能建筑传感器
 
-用于定位受压接触点之间接触的干式传感器；智能插座允许建筑管理员使用智能手机远程开启/关闭电器或其他电子设备；以及监控电信网络中能量漂移的现代变压器，是目前市场上存在且尚未被广泛索引的一些额外 IoT 智能建筑设备。通过按需控制及其进一步改善空气质量等进步，它正在整合框架并交付原创价值。然而，重要的是，基于 IoT 的调查方案仅在它们将公众与专家联系起来时才有价值。整合在不同结构上收集的数据具有挑战性。这导致获取建筑运营的完整视图变成了一个挑战。由于没有专门的调查部门，数据调查的任务被留给了人类。这些构建的初衷仅仅是为了系统的自动化收集数据，而不是为了通用的执行改进。引导此类调查既需要时间也需要知识，而中心组织显然缺乏这些这些。因此，许多数据被丢弃了。
+用于定位受压接触点之间接触的干式传感器；智能插座允许建筑管理员使用智能手机远程开启/关闭电器或其他电子设备；以及监控电信网络中能量漂移的现代变压器，是目前市场上存在且尚未被广泛索引的一些额外 IoT 智能建筑设备。
+
+通过按需控制及其进一步改善空气质量等进步，它正在整合框架并交付原创价值。然而，重要的是，基于 IoT 的调查方案仅在它们将公众与专家联系起来时才有价值。整合在不同结构上收集的数据具有挑战性。这导致获取建筑运营的完整视图变成了一个挑战。
+
+由于没有专门的调查部门，数据调查的任务被留给了人类。这些构建的初衷仅仅是为了系统的自动化收集数据，而不是为了通用的执行改进。引导此类调查既需要时间也需要知识，而中心组织显然缺乏这些这些。因此，许多数据被丢弃了。
+
+
+
 
 另一方面，用于建筑类的 IoT 数据收集和研究是廉价且高效的，大多数建筑的建立完全是为了提高整体性能。这些解决方案实现了远程记录监控、各种资产记录的聚合以及数据的分类和分析，以提供独特的见解。这使得设施经理在应对各种情况和预算时更加灵活和敏捷 [26]。
-
-
-
 
 基于 IoT 的报告和分析工具具有颠覆行业的潜力，但方式可能与你预期的不同。这些改进后的结构不会取代中心人员，但它们将为他们提供关于如何提高性能的更好理解。必须控制的端点数量是一个明显的区别。在未来，可能会有大量的 IoT 传感器收集温度、湿度、静压因子和不同元素的信息，从而对整个建筑的执行情况提供更深入的洞察[29]。然而，更大的交易可能在于，更远端的端点允许输入回路区分出哪些策略可以产生额外的能源效率。办公室主管能够看到单个设备组件相对于更广泛结构运行框架的整体表现时，他们可能会有更多的自由来进行价值评估。管理员可以利用 IoT 提供的更主动的控制系统，更好地规划减少成本的策略并整体影响现实。他们也将能够为实现生态目标做出关键承诺。劳动力中的成员可以更快地响应预期的功能问题，迅速确定问题原因。他们还将拥有所需的数据，在未来的设备故障变得昂贵且烦人之前进行管理。危机处理的成本无疑比重新设计要高。考虑一下在危机情况下这有多帮助：例如，一个博博的办公室主管可以向值班人员提供有关建筑火灾特定区域或有害空气污染部分的建议，在他们到达之前。
 
@@ -704,20 +705,17 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 
 ## 3.5 智能家居管理
 
+智能家居管理解决方案提供了一个平台，用于显示和操控其他客户端 IoT 设备，包括恒温器、灯具、安全结构和家庭设备。协调智能能源框架中`IoT`的利用如图 3.5 所示。通过允许智能家居设备进行通信，购买者可以实现多个设备联动的方法和操作——例如，在电视开启时调暗灯光，或者在大门解锁时开灯并降低恒温器温度 [36, 37, 38, 39]。智能家居管理的主要优势允许智能家居设备尽管来自不同的制造商和品牌，能够相互通信、交换数据并根据每个设备触发动作。智能家庭安全利用了一系列支持`IoT`的产品，允许用户远程监控和操控其房屋的安全性。如果配备了智能锁，这些系统可以控制房屋及其周围的监控，还可以控制谁有进入门口的权限 [40, 41, 42, 43, 44]。
 
-
-
-智能家居管理解决方案提供了一个平台，用于显示和操控其他客户端 IoT 设备，包括恒温器、灯具、安全结构和家庭设备。协调智能能源框架中 `IoT` 的利用如图 3.5 所示。通过允许智能家居设备进行通信，购买者可以实现多个设备联动的方法和操作——例如，在电视开启时调暗灯光，或者在大门解锁时开灯并降低恒温器温度 [36, 37, 38, 39]。智能家居管理的主要优势允许智能家居设备尽管来自不同的制造商和品牌，能够相互通信、交换数据并根据每个设备触发动作。智能家庭安全利用了一系列支持 `IoT` 的产品，允许用户远程监控和操控其房屋的安全性。如果配备了智能锁，这些系统可以控制房屋及其周围的监控，还可以控制谁有进入门口的权限 [40, 41, 42, 43, 44]。
-
-智能家庭安全结构允许用户实时查看并管理他们的房屋，向房主报警异常行为，或进入门口或窗户的尝试。`IoT` 的各种挑战和解决方案列在表 3.1 中。与传统的家庭安全系统相比，智能安全结构即使在解除状态下也能监控并发送指标。智能家庭防护结构可以包括智能门铃，它现在不仅能在有人在门口时通知客户，还能允许他们在开门之前与陌生人感知并交流；以及通过运动触发并可远程访问的智能安全摄像头。企业在进行建筑更智能、更高效的过程中，应考虑以下三个基本的规划因素。
+智能家庭安全结构允许用户实时查看并管理他们的房屋，向房主报警异常行为，或进入门口或窗户的尝试。`IoT`的各种挑战和解决方案列在表 3.1 中。与传统的家庭安全系统相比，智能安全结构即使在解除状态下也能监控并发送指标。智能家庭防护结构可以包括智能门铃，它现在不仅能在有人在门口时通知客户，还能允许他们在开门之前与陌生人感知并交流；以及通过运动触发并可远程访问的智能安全摄像头。企业在进行建筑更智能、更高效的过程中，应考虑以下三个基本的规划因素。
 
 ### 3.5.1 技术集成与互操作性
 
-在将系统添加到网络骨干时，要采取整体而非碎片化的策略。此外，许多设备和系统必须具有可扩展性、适应性并能够与 `BEMS` 集成。随着新技术的发展以及对新功能能力的需求，组织应该准备在未来扩展其系统。
+在将系统添加到网络骨干时，要采取整体而非碎片化的策略。此外，许多设备和系统必须具有可扩展性、适应性并能够与`BEMS`集成。随着新技术的发展以及对新功能能力的需求，组织应该准备在未来扩展其系统。
 
 ### 3.5.2 智能建筑数据分析
 
-虽然强大的 `BEMS` 可以收集、过滤和翻译海量数据以提供可操作的见解，但设施经理和其他人员应该学会理解相关数据，以便做出更好的决策。
+虽然强大的`BEMS`可以收集、过滤和翻译海量数据以提供可操作的见解，但设施经理和其他人员应该学会理解相关数据，以便做出更好的决策。
 
 ### 3.5.3 网络安全与数据隐私
 
@@ -725,21 +723,19 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 
 ## 3.6 终端自动化系统：示例实验演示概述
 
-`C-BUS` 测试台和软件包旨在发现用于建筑管理的家庭自动化解决方案。该测试台的设计用于实现从计算机或手机对房屋或建筑进行控制。这个不同的接线盒通过 `C-BUS` 协议通信。`CBUS Proficient Dimmers` 是高功率多通道调光器，适用于酒店、酒吧、餐厅和其他此类场所的常规功率照明应用，每个通道的电流评估从 3 到 20 安培。提供 3、6 和 12 通道可选。
+`C-BUS`测试台和软件包旨在发现用于建筑管理的家庭自动化解决方案。该测试台的设计用于实现从计算机或手机对房屋或建筑进行控制。这个不同的接线盒通过`C-BUS`协议通信。`CBUS Proficient Dimmers`是高功率多通道调光器，适用于酒店、酒吧、餐厅和其他此类场所的常规功率照明应用，每个通道的电流评估从 3 到 20 安培。提供 3、6 和 12 通道可选。
 
-该调光器是一种 `cbus` 控制的高功率多相控制调光器，可用于各种负载类型。采用前沿波导阶段控制/后沿波导阶段控制来实现调光。在使用电子变压器负载时，不需要对通道进行降额。该专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，专业调光器强调了板载 `MCB` 保护，前沿波导阶段控制/后沿波导阶段控制用于调光。
-
-
+该调光器是一种`cbus`控制的高功率多相控制调光器，可用于各种负载类型。采用前沿波导阶段控制/后沿波导阶段控制来实现调光。在使用电子变压器负载时，不需要对通道进行降额。该专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，专业调光器强调了板载`MCB`保护，前沿波导阶段控制/后沿波导阶段控制用于调光。
 
 * 三路应急辅助输入
 * 备用发电机辅助输入
 * 每个通道的应急照明输出开启
-* 板载 MCB 保护
-* C-Transport 或 DMX512
+* 板载`MCB`保护
+* `C-Transport`或`DMX512`
 * 独立调暗
 * 通道模块
 * 支持本地可用照明场景
-* 可选 DALI 输出
+* 可选`DALI`输出
 * 可选 0–10 Vdc 输出
 * 通道模块记忆的手动调光器旁路开关
 * 邻域覆盖开关
@@ -749,7 +745,7 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 * 安装人员可量化的调暗曲线
 * 交叉模糊场景能力
 * 从正面控制板清晰可见的通道状态标记
-* 外置 C-Transport 连接器
+* 外置`C-Transport`连接器
 * 尝试并符合澳大利亚照明标准
 * 调光器 AS/NZS CISPR 15:2002
 
@@ -759,8 +755,8 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 
 安装的示意图如图 3.6 所示。
 
-* C-BUS 控制盒
-* Wiser
+* `C-BUS`控制盒
+* `Wiser`
 
 ![](img/b_9783110714043-003_fig_006.jpg)
 
@@ -777,16 +773,16 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 **工作内容：**
 
 * 验证您的设备。
-* 运行 C-BUS toolkit 并实现 WISER 程序。
+* 运行`C-BUS toolkit`并实现`WISER`程序。
 * 检查您的安装。
 
 ### 3.7.1 验证您的设备并实现第一个程序
 
-**场景：**在此场景中，我们使用 C-BUS toolkit 对安装进行编程。
+**场景：**在此场景中，我们使用`C-BUS toolkit`对安装进行编程。
 
 **步骤 1：创建一个新项目。**
 
-* 在桌面启动 `C-BUS toolkit`。
+* 在桌面启动`C-BUS toolkit`。
 * 选择文件 (File)：
     * 项目 (Projects)
     * 添加项目 (Add projects)
@@ -804,30 +800,25 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
     * 使用“添加/传输到数据库 (`Add/Transfer to Data Base`) 执行此操作。
     * 配置不同的元素。
 * **RELDN4：**
-
-创建组 1 和 2。这两个组分别是厨房灯和客厅灯。
-* **不要修改 `PCLOCAL4`。**
+    * 创建组 1 和 2。这两个组分别是厨房灯和客厅灯。
+* **不要修改`PCLOCAL4`。**
 * **RELDB1：**
-
-创建组 5：此组是窗帘。设置一个输出为开启，一个输出为关闭。
+    * 创建组 5：此组是窗帘。设置一个输出为开启，一个输出为关闭。
 * **DIMDN4：**
-
-创建组 3 和 4：此组是主卧室灯和卧室灯。
+    * 创建组 3 和 4：此组是主卧室灯和卧室灯。
 * **KEYGL5：**
     * 点击场景管理器 (`Scene Manager`) 图标创建场景。
     * 选择一个新场景并选择场景标签 (`scene Label`) 图标。
     * 提供场景信息。
     * 在此场景中插入使用的组并进行配置。
-* 最后按 `OK`。
+* 最后按`OK`。
 * 点击按键设置 (`KEY Settings`) 图标。输入小部件类型 (`Widget type`)：场景 (`Scene`)。
 
-在 **待机 (Standby)** 菜单中：在 **待机** 中
+在**待机 (Standby)** 菜单中：在**待机**中
 
 * **设置图标：**
-
-选择颜色/亮度设置 (`Color/Brightness Settings`)：
-
-此菜单允许设置面板按钮的外观。
+    * 选择颜色/亮度设置 (`Color/Brightness Settings`)：
+    * 此菜单允许设置面板按钮的外观。
 * 选择常规设置 (General Settings)。
 * 您几乎已完成，应用并插入您的程序。
 
@@ -839,31 +830,32 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 
 **目标：**
 
-通过程序 `PICED` 为您的 WISER 编程。其目标是将您的家连接到互联网或 WIFI-FI。
+通过程序`PICED`为您的 WISER 编程。其目标是将您的家连接到互联网或 WIFI-FI。
 
 **工作内容：**
 
 * 验证您的设备。
-* 实现 WISER 程序。
+* 实现`WISER`程序。
 * 检查您的安装。
 
 第 1 步：验证您的设备。
 
-第 2 步：实现 WISER 程序。
+第 2 步：实现`WISER`程序。
 
 **2-1/ 创建项目。**
 
-若要实现 WISER 程序，请使用 `PICED` 软件。点击桌面上的图标并按照此流程操作。
+若要实现`WISER`程序，请使用`PICED`软件。点击桌面上的图标并按照此流程操作。
+
 * 选择：
 * 选择创建一个新的空白项目。
-* 在设备类型中中选择 `WISER 2`（这非常重要，如果不选择此项将无法实现程序）。
-* 在 C-Bus Project 中选择 `HOME`。
+* 在设备类型中中选择`WISER 2`（这非常重要，如果不选择此项将无法实现程序）。
+* 在`C-Bus Project`中选择`HOME`。
 * 输入此项目的名称。
-* 在 C-bus 图标中：
-    * 选择在 WISER 中命名项目/属性 (`Name Project in WISER/Properties`)。
-* 在 `WISER/LAN` 中输入 IP 地址。
-* 在开始菜单输入 `CMD`。
-* `Ping` 地址以确保网络良好。
+* 在`C-bus`图标中：
+    * 选择在`WISER`中命名项目/属性 (`Name Project in WISER/Properties`)。
+* 在`WISER/LAN`中输入 IP 地址。
+* 在开始菜单输入`CMD`。
+* `Ping`地址以确保网络良好。
 * 选择完成 (`Finish`) 图标。
 
 **2-2/ 为您的灯和场景实现 WIDGET 按钮。**
@@ -878,6 +870,7 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 **2-3/ 实现您的场景并选择灯（组）。**
 
 进入编辑场景 (`Edit Scenes`) 图标。
+
 * 点击添加 (`Add`)。
 * 在常规 (General) 中选择场景名称。
 * 为您的场景选择触发组 (`Trigger Group`) 并选择动作 (`action`)。
@@ -889,24 +882,21 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 **2-4/ 为您的灯和场景实现 WIDGET 按钮。**
 
 * 点击传输 (`Transfer`)。
-* 选择更新固件 (`Update Firmware`) 并按 `OK`。
+* 选择更新固件 (`Update Firmware`) 并按`OK`。
 * 等待 2 分钟。
-* 点击 `OK` 并保存。
+* 点击`OK`并保存。
 
 ### 3.7.3 检查您的安装
 
-* 在 Google 浏览器（或其他选择）输入此 IP 地址 `192.168.0.2` 访问 WISER。如果需要，输入登录名 `default` 和密码 `admin@123`。
-
-
-
+* 在 Google 浏览器（或其他选择）输入此 IP 地址`192.168.0.2`访问 WISER。如果需要，输入登录名`default`和密码`admin@123`。
 
 该组织的大脑悬挂在云端。当我们拥有了这些大脑时，我们终于可以让这些精密的结构相互对话。你可以将其想象为“结构网”（Web of Structures）：个人、交通、城市框架和设计最终都将相互连接，从而形成认证的智慧城市。由于其广泛的使用，“物联网”（Web of Things）这一表达已经失去了一部分意义。尽管如此，它只是一个目前并不优雅的表达的等效词：20 年前，世界被网络所迷住；现在，我们被物联网所吸引。目前最显著的模式是组织，尽管它也有另一个名字。
 
-大数据、开放数据集、人工智能（`AI`）以及各种趋势术语与构建机器人化的讨论密不可分。然而，这些词汇中的每一个如何变成现实或为客户和买家产生更好的激励？恰当的可以在项目中找到。人工智能、`AI` 和能量增强是可能利用这些信息并将其增值服务的应用实例。这些应用已经得到了充分尝试。现在比以往任何时候都更容易制造出利用这些信息的应用程序——只要这些是开放数据。通常，存在一种情况：构建的信息被收集并存储在数据集中，但信息很少被使用。这是对重要数据的极大浪费。
+大数据、开放数据集、人工智能（`AI`）以及各种趋势术语与构建机器人化的讨论密不可分。然而，这些词汇中的每一个如何变成现实或为客户和买家产生更好的激励？恰当的可以在项目中找到。人工智能、`AI`和能量增强是可能利用这些信息并将其增值服务的应用实例。这些应用已经得到了充分尝试。现在比以往任何时候都更容易制造出利用这些信息的应用程序——只要这些是开放数据。通常，存在一种情况：构建的信息被收集并存储在数据集中，但信息很少被使用。这是对重要数据的极大浪费。
 
 我最近与几家巨型 IT 公司的代理会了面。当我们的讨论从阶段和灵活性转向响应式和源代码时，我感到震惊。这些企业现在以特别大的规模支持开源和开放平台，并不是因为它们打算与我讨论这个问题，而是因为它们正出人意料地维护开源和开放平台。与这些巨头相比，独立创业在透明度和灵活性方面一直拥有优势。一种心态的明显转变已经发生，这对整个行业都有益。开源代码，尽管是开放数据，也开启了一个可能结果的宇宙。由于基础编码工作已经有效完成，我们现在能够专注于在保持开放心态的同时制作改进应用程序。
 
-你，作为客户，是负责人。你，同样也是统治者。客户已经变得非常难以应付，考虑到现状：我们许多人已经习惯了客户产品中非凡的便利，现在已经渴望在专业产品中获得同样级别的易用性，例如结构自动化行业中的产品。企业才刚刚开始理解客户体验的核心含义。建筑自动化行业的大量我们已经习惯了晦涩的用户手册、糟糕的 `UI`（用户界面）以及乏味的材料菜单——即那些你只想更改另一个选项的界面。想一下：你上一次去长途旅行并期望更改酒店温度是什么时候？更大的便利性是我们可以且应该要求的。正因为了这种渴望，我们在日常生活中实现了效率。
+你，作为客户，是负责人。你，同样也是统治者。客户已经变得非常难以应付，考虑到现状：我们许多人已经习惯了客户产品中非凡的便利，现在已经渴望在专业产品中获得同样级别的易用性，例如结构自动化行业中的产品。企业才刚刚开始理解客户体验的核心含义。建筑自动化行业的大量我们已经习惯了晦涩的用户手册、糟糕的`UI`（用户界面）以及乏味的材料菜单——即那些你只想更改另一个选项的界面。想一下：你上一次去长途旅行并期望更改酒店温度是什么时候？更大的便利性是我们可以且应该要求的。正因为了这种渴望，我们在日常生活中实现了效率。
 
 ## 3.8.1 节能的智能家居小贴士
 
@@ -914,45 +904,43 @@ IoT 创建了物的专门化，允许更先进的设备运行，例如远程控�
 
 ## 3.8.2 智能室内调节器
 
-供暖和冷却消耗了家里任何设备最多的能量，因此，智能室内调节器是节能的最理想选择。这些设备允许你在不在家时随时监控并调整家里的温度。它们还可用于在不使用时限制供暖冷却。带有 `ENERGY STAR` 标志的智能室内调节器通过了自动认证测量，确保利用关键领域数据实现能源储约。`NEST`、`Eco bee`、`Carrier/Bryant` 和 `EcoFactor` 是首批获得认证的产品。为了帮助家庭节能，每个产品具有不同不同的功能。
+
+
+供暖和冷却消耗了家里任何设备最多的能量，因此，智能室内调节器是节能的最理想选择。这些设备允许你在不在家时随时监控并调整家里的温度。它们还可用于在不使用时限制供暖冷却。带有`ENERGY STAR`标志的智能室内调节器通过了自动认证测量，确保利用关键领域数据实现能源储约。`NEST`、`Eco bee`、`Carrier/Bryant`和`EcoFactor`是首批获得认证的产品。为了帮助家庭节能，每个产品具有不同不同的功能。
 
 ### 3.8.3 智能照明
 
-智能照明装置和经过 `ENERGY STAR` 认证的灯具不仅比传统的发光灯节省 90% 的能量，而且会在你忘记时提醒你关灯。带有 `ENERGY STAR` 的智能照明消耗能量更少，且寿命比普通智能灯长 15 倍。
+智能照明装置和经过`ENERGY STAR`认证的灯具不仅比传统的发光灯节省 90% 的能量，而且会在你忘记时提醒你关灯。带有`ENERGY STAR`的智能照明消耗能量更少，且寿命比普通智能灯长 15 倍。
 
 ### 3.8.3.1 智能家电
 
-更智能机器正在到来。具有相关功能的 `ENERGY STAR` 机器确保使用更少的能量，并提供可以带来舒适、进一步节省资金和“智慧网格”可能结果的新功能。
+更智能机器正在到来。具有相关功能的`ENERGY STAR`机器确保使用更少的能量，并提供可以带来舒适、进一步节省资金和“智慧网格”可能结果的新功能。
 
 ## 3.8.4 智能家居系统
 
-智能家居能源管理系统（`SHEMS`）帮助你简化、减少和控制能源消耗，现在被新的 `ENERGY STAR SHEMS` 程序认可。一个 `ENERGY STAR SHEMS` 解决方案需要智能温控器、照明和监控/控制插座负载。其他产品和服务，例如 `ENERGY STAR` 家电、电动汽车充电站和智能安全，也可以整合。除了基本要素之外，组合还可以根据你的特定需求进行定制。以下是 SHEMS 减少能源消耗的一些方式：
+智能家居能源管理系统（`SHEMS`）帮助你简化、减少和控制能源消耗，现在被新的`ENERGY STAR SHEMS`程序认可。一个`ENERGY STAR SHEMS`解决方案需要智能温控器、照明和监控/控制插座负载。其他产品和服务，例如`ENERGY STAR`家电、电动汽车充电站和智能安全，也可以整合。除了基本要素之外，组合还可以根据你的特定需求进行定制。以下是 SHEMS 减少能源消耗的一些方式：
 
-*   为你的智能设备创建运行计划
-*   基于使用趋势的节能建议
-*   根据房间内的人数或家中人数自动控制智能家居设备
+* 为你的智能设备创建运行计划
+* 基于使用趋势的节能建议
+* 根据房间内的人数或家中人数自动控制智能家居设备
 
 ## 3.8.5 什么是 ENERGY STAR 智能家居能源执行框架？
 
-智能家居能源管理系统（`SHEMS`），另一种 `ENERGY STAR` 认证，尊重帮助你改进、减少和控制能源消耗的智能家居系统。该荣誉授予一组由专家小组指导并由人们控制和更改的智能家居设备和服务。
+智能家居能源管理系统（`SHEMS`），另一种`ENERGY STAR`认证，尊重帮助你改进、减少和控制能源消耗的智能家居系统。该荣誉授予一组由专家小组指导并由人们控制和更改的智能家居设备和服务。
 
 ### 3.8.5.1 SHEMS 的益处
 
-SHEMS 提供了许多优势，包括跟踪能源使用、保护环境和节省电费。允许智能设备在你不在家时工作、根据时间表为你的智能设备工作，以及根据房间或家中人数建议节能活动，都有助于改进能源消耗。`ENERGY STAR SHEMS` 非常灵活，可以根据你的需求进行修改。
+SHEMS 提供了许多优势，包括跟踪能源使用、保护环境和节省电费。允许智能设备在你不在家时工作、根据时间表为你的智能设备工作，以及根据房间或家中人数建议节能活动，都有助于改进能源消耗。`ENERGY STAR SHEMS`非常灵活，可以根据你的需求进行修改。
 
 ### 3.8.5.2 ENERGY STAR 执行框架组合包含什么？
 
-*   `ENERGY STAR` 认证组合的最低要求是：
+* `ENERGY STAR`认证组合的最低要求是：
 
-`ENERGY STAR` 程序鼓励在最低要求之外连接更多的智能设备，以优化优势。通过系统根据入座情况和其他协调活动集中化处理更多设备，可以实现更好的家居能源管理。以下是额外设备和服务的示例：
+`ENERGY STAR`程序鼓励在最低要求之外连接更多的智能设备，以优化优势。通过系统根据入座情况和其他协调活动集中化处理更多设备，可以实现更好的家居能源管理。以下是额外设备和服务的示例：
 
-*   电动汽车充电
-
-*   `ENERGY STAR` 家电
-*   使用先进技术的安全系统
-
-
-
+* 电动汽车充电
+* `ENERGY STAR`家电
+* 使用先进技术的安全系统
 
 在家办公时最有效的节电方法。由于 COVID-19 的限制，我们许多人都在居家办公，这意味着我们的能源消耗将会。
 
@@ -965,17 +953,17 @@ SHEMS 提供了许多优势，包括跟踪能源使用、保护环境和节省�
 
 ### 3.8.6 能源管理系统
 
-在家中节能的最佳方法是从一个 `EMS` 开始。`EMS` 可以衡量并报告你的用量，限制能源浪费，并为你提供远程处理能源成本的工具。通常，它由智能网关、智能插座、空调控制器和各种环境传感器组成。敏锐的 `EMS` 允许你远程监控家庭电路并控制连接的设备。通过你有趣的用电信息，你实际上会做出更明智的决定，在不需要时关闭机器，并计划它们在低电价时段运行。一个优秀的 `EMS` 不仅提供有关能源消耗和投资的关键信息，还能让你能够：
+在家中节能的最佳方法是从一个`EMS`开始。`EMS`可以衡量并报告你的用量，限制能源浪费，并为你提供远程处理能源成本的工具。通常，它由智能网关、智能插座、空调控制器和各种环境传感器组成。敏锐的`EMS`允许你远程监控家庭电路并控制连接的设备。通过你有趣的用电信息，你实际上会做出更明智的决定，在不需要时关闭机器，并计划它们在低电价时段运行。一个优秀的`EMS`不仅提供有关能源消耗和投资的关键信息，还能让你能够：
 
 * 设置自定义警报
 * 优化太阳能发电
 * 最大化电池使用
-    * 在系统停电时具备能源灵活性
-    * 避免峰值需求费用
+  * 在系统停电时具备能源灵活性
+  * 避免峰值需求费用
 
 ### 3.8.7 当今的智能城市
 
-当我们思考智能城市时，我们许多人会想象一个不可能的未来城市。也许是因为科幻电影描绘了一个未来的大都市，在那里自动驾驶汽车悬浮在地面上，一切都是计算机化的。尽管我们距离实现这一目标还远，但敏锐的城市正在周围崛起。智慧城市社区不需要开发新的现代高层建筑或随处可见的高公路。现有的建筑和基础设施可以通过智能创新进行改造使其变得智能。简单来说，“智能城市”是指利用智能 `IoT` 技术管理和改进其城市基础设施和公共服务的城市。在这里，我们研究了一些趋势以及一些现实案例，特别关注当今城市中智能去中心化能源管理的命运。尽管关于智能城市已经写了许多论文，但并没有一个公认的定义。一个城市如何获得这种“智能”分类取决于解释。没有任何特定的技术、服务或系统必须到位，一个城市才能被标记为“智能”。根据维基百科的说法，智能城市是“一个从各种类型的电子物联网（`IoT`）传感器收集数据，并使用这些数据高效地管理资产和资源的城市区域”。传感器和数据是这里的关键词。智慧城市利用这两者来提供体验和中介服务，以解决常见的城市问题。智慧城市传感器收集的粒度信息可能用于进一步完善规划和影响策略，以自动化和进一步改进交通流、废物利用以及能源消耗和生产。
+当我们思考智能城市时，我们许多人会想象一个不可能的未来城市。也许是因为科幻电影描绘了一个未来的大都市，在那里自动驾驶汽车悬浮在地面上，一切都是计算机化的。尽管我们距离实现这一目标还远，但敏锐的城市正在周围崛起。智慧城市社区不需要开发新的现代高层建筑或随处可见的高公路。现有的建筑和基础设施可以通过智能创新进行改造使其变得智能。简单来说，“智能城市”是指利用智能`IoT`技术管理和改进其城市基础设施和公共服务的城市。在这里，我们研究了一些趋势以及一些现实案例，特别关注当今城市中智能去中心化能源管理的命运。尽管关于智能城市已经写了许多论文，但并没有一个公认的定义。一个城市如何获得这种“智能”分类取决于解释。没有任何特定的技术、服务或系统必须到位，一个城市才能被标记为“智能”。根据维基百科的说法，智能城市是“一个从各种类型的电子物联网（`IoT`）传感器收集数据，并使用这些数据高效地管理资产和资源的城市区域”。传感器和数据是这里的关键词。智慧城市利用这两者来提供体验和中介服务，以解决常见的城市问题。智慧城市传感器收集的粒度信息可能用于进一步完善规划和影响策略，以自动化和进一步改进交通流、废物利用以及能源消耗和生产。
 
 以下是全球城市经历自身“先进转型”的几个实例：
 
@@ -983,51 +971,56 @@ SHEMS 提供了许多优势，包括跟踪能源使用、保护环境和节省�
 2. **美国科罗拉多州维尔。** 这个世界级的滑雪小镇居住约 6000 人。它利用全城 Wi-Fi 网络进行安全监控、授权许可、供暖和水系统框架控制、跟踪可疑车辆以及大型活动期间的检查。在特殊情况下，该城市在约 2 平英里内可以容纳 20,000 到 30,000 人。考虑到小镇 4.5 平英里的面积，这是一个非常巨大的数字。维尔的公共和私人 Wi-Fi 网络被隔离以扩展安全性。
 3. **墨尔本** 正在利用技术帮助应对预测的人口增长。在某些社区，这包括行人检查系统、开放信息驱动计划和免费的开放 Wi-Fi。该市还在执行智慧城市项目以帮助视障和听障人士，同时利用技术进一步提高垃圾分类效率。
 
-正如第一个模型所示，“智慧城市社区”自然是通过一系列创新的、技术驱动的升级实现的，这些升级在实践中更像是一次有组织的改造，而不是重大的基础设施工程。无论问题是拥堵、污染、能源还是相关网络，这些创新方案都汇聚了额外的数字化层，考虑了更多的关联和协作能源。“家庭能源管理框架”这一表达式被许多来源独特地刻画，但我们认为下面的定义很好地捕捉了思想，而不至于宽泛。家庭能源执行框架是一个连接硬件和软件的技术平台，允许用户跟踪能源消耗和产生，同时物理控制并进一步自动化家中的能源使用。家庭能源执行框架设备通常包含一个“中心”设备，在房屋内部情况、用户以及特定情况下公用事业公司或电力供应商之间传输信息。这个中心通常安装在家庭的电箱上，但如果 `HEMS` 仅是远程的，它也可以以“本质”的方式引入。
+正如第一个模型所示，“智慧城市社区”自然是通过一系列创新的、技术驱动的升级实现的，这些升级在实践中更像是一次有组织的改造，而不是重大的基础设施工程。无论问题是拥堵、污染、能源还是相关网络，这些创新方案都汇聚了额外的数字化层，考虑了更多的关联和协作能源。“家庭能源管理框架”这一表达式被许多来源独特地刻画，但我们认为下面的定义很好地捕捉了思想，而不至于宽泛。家庭能源执行框架是一个连接硬件和软件的技术平台，允许用户跟踪能源消耗和产生，同时物理控制并进一步自动化家中的能源使用。家庭能源执行框架设备通常包含一个“中心”设备，在房屋内部情况、用户以及特定情况下公用事业公司或电力供应商之间传输信息。这个中心通常安装在家庭的电箱上，但如果`HEMS`仅是远程的，它也可以以“本质”的方式引入。
 
-
-
-在控制方面，一个 `HEMS` 可能允许用户执行各种任务，例如：
+在控制方面，一个`HEMS`可能允许用户执行各种任务，例如：
 
 - 远程开启和关闭设备。
 - 设置设备按照时间表运行。为设备活动设置限制性原则。
 
 ## HEMS 是做什么的？
 
-家庭能源管理系统（EMSs）的应用范围相当广泛。家庭能源管理框架可以帮助处理家庭能源的四个主要部分。某些 `HEMS` 使用了全部四个部分，而另一些只使用其中一个或两个。下面我们列出了每一项。
+家庭能源管理系统（EMSs）的应用范围相当广泛。家庭能源管理框架可以帮助处理家庭能源的四个主要部分。某些`HEMS`使用了全部四个部分，而另一些只使用其中一个或两个。下面我们列出了每一项。
 
 ### 电力
-房屋内部电力的利用对于智能家庭能源管理框架的实用性至关重要。`HEMS` 应该允许用户“看到”哪些设备正在运行，并“远程”开启、关闭它们或更改其工作状态（例如降低冷却单元的室内调节器温度）。能源利用管理中的关键变量将考虑电网电价（无论客户是否处于峰谷电价时段）、以及现场是否有太阳能影响或电池，其前提是 `HEMS` 的基本目的是为客户节省资金。
+
+房屋内部电力的利用对于智能家庭能源管理框架的实用性至关重要。`HEMS`应该允许用户“看到”哪些设备正在运行，并“远程”开启、关闭它们或更改其工作状态（例如降低冷却单元的室内调节器温度）。能源利用管理中的关键变量将考虑电网电价（无论客户是否处于峰谷电价时段）、以及现场是否有太阳能影响或电池，其前提是`HEMS`的基本目的是为客户节省资金。
 
 ### 太阳能光
+
 在许多国家，小规模太阳能光伏发电——如太阳能电池板——已变得普及，使家庭能够生产自己的电力。当地电网所有者可能专注于“自发自用”他们的太阳能或尽可能将其出售给电网，具体取决于情况和激励机制结构。
 
 太阳能储能的扩展使得家庭能源管理框架成为比没有储能设备的家庭更具参与感的决策。
 
 ### 电池储能
+
 私人能源领域的未来是电池储能，它是实现扩大能源独立和降低电费的关键，也是我们电网的最终命运。然而，一个可以考虑许多因素的智能管理框架（例如你处于分时电价还是固定费率时段，以及你是否有动力将储存的能量出售给电网），可以帮助你增加电池组的价值。
 
 ### 太阳能热
-太阳能热——通常被称为太阳能热水——是一种利用太阳能为家庭加热供水的常见程序。太阳能热水系统通常与家中的其他电器设备独立运行，但一个具有正确网络和监测能力的智能 `HEMS` 可以帮助进一步扩大其价值。任何合格的 `EMS` 都都应该包含以下五个特征：
 
-1. 一个良好的 `EMS` 应该允许你从任何地方**监控**家庭的能源使用情况。
-你应该能够从任何地方访问你的 `EMS UI`（通常是网络浏览器或手机应用程序），查看家里哪些设备连接着并在使用能量。例如，你是否无意中留下了加热器？你是否忘记了启动洗碗机？如果你的 `EMS` 不能让你一眼看到这些信息，你就应该考虑购买其他。
+太阳能热——通常被称为太阳能热水——是一种利用太阳能为家庭加热供水的常见程序。太阳能热水系统通常与家中的其他电器设备独立运行，但一个具有正确网络和监测能力的智能`HEMS`可以帮助进一步扩大其价值。任何合格的`EMS`都都应该包含以下五个特征：
 
-2. 一个良好的 `EMS` 应该允许你远程**控制**家中的设备。
-如果你不能电子化地“触达”并开关设备，那么盯着你 `EMS` 的水晶球有什么意义呢？一个良好的平台允许你物理拨动开关或设置定时，以在你选择的任何时间、任何地点满足你的需求。
+1. 一个良好的`EMS`应该允许你从任何地方**监控**家庭的能源使用情况。
 
-3. 一个良好的 `EMS` 应该给你提供关于如何更高效利用能源的**深度洞察**。
-当你不在家时，家里哪些设备在消耗电力？你的强制空气系统或散热器使用频率是否超过了正常水平？家里是否有老旧设备消耗了异常高额的并应该被更换？优秀的 `EMS` 应该有能力帮助你回答这些及其他问题。
+你应该能够从任何地方访问你的`EMS UI`（通常是网络浏览器或手机应用程序），查看家里哪些设备连接着并在使用能量。例如，你是否无意中留下了加热器？你是否忘记了启动洗碗机？如果你的`EMS`不能让你一眼看到这些信息，你就应该考虑购买其他。
 
-4. 一个良好的 `EMS` 理解你的**习惯**并据此围绕这些习惯运行。
-良好的 `EMS` 不仅仅是“智能的”，而且是“明智的”。智能设备与传统电池相比，通常具有网络连接并可以远程监控。一个明智的 `EMS` 可以审视大局，并自动发现你的偏好和能源使用模式，并根据这些数据做出建议或决策。
+2. 一个良好的`EMS`应该允许你远程**控制**家中的设备。
 
-5. 一个良好的 `EMS` 能够完美**集成**太阳能和电池储能系统。
-一个完美的家庭能源管理框架将使你能够监控和控制你消耗的能量，以及以最智能的方式管理生产（并储存）的能量。当阳光明媚时，你的 `EMS` 应该能够建议你直接从电网、电池或太阳能电池板取电，以节省最多的资金。如果你没有太阳能或电池，你的 `EMS` 应该能够在帮助你识别并消除家居缺陷后，评估一个大致符合你需求和预算的方案。
+如果你不能电子化地“触达”并开关设备，那么盯着你`EMS`的水晶球有什么意义呢？一个良好的平台允许你物理拨动开关或设置定时，以在你选择的任何时间、任何地点满足你的需求。
 
-由于物联网（IoT）阶段，智能家居已成为现实。随着传感器和智能设备变得越来越廉价，智能家居逻辑地改变了传统家庭。家庭能源管理框架 (`HEMS`) 允许所有主以“智能”方式记录、测量和跟踪他们的充电情况，这是前沿家庭中一种重新定义能源估算和效率的特征。通过在物业中引入设备，智能家居的 `EMS` 可以跟踪并记录家庭的用电情况。安装后，该设备（也称为智能附件）可以通过内置固件读取、记录并传输有关用电使用的数据。房屋所有主可以通过手机应用程序或客户网关来跟踪 `HEMS` 记录的能源使用情况。
+3. 一个良好的`EMS`应该给你提供关于如何更高效利用能源的**深度洞察**。
 
+当你不在家时，家里哪些设备在消耗电力？你的强制空气系统或散热器使用频率是否超过了正常水平？家里是否有老旧设备消耗了异常高额的并应该被更换？优秀的`EMS`应该有能力帮助你回答这些及其他问题。
 
+4. 一个良好的`EMS`理解你的**习惯**并据此围绕这些习惯运行。
+
+良好的`EMS`不仅仅是“智能的”，而且是“明智的”。智能设备与传统电池相比，通常具有网络连接并可以远程监控。一个明智的`EMS`可以审视大局，并自动发现你的偏好和能源使用模式，并根据这些数据做出建议或决策。
+
+5. 一个良好的`EMS`能够完美**集成**太阳能和电池储能系统。
+
+一个完美的家庭能源管理框架将使你能够监控和控制你消耗的能量，以及以最智能的方式管理生产（并储存）的能量。当阳光明媚时，你的`EMS`应该能够建议你直接从电网、电池或太阳能电池板取电，以节省最多的资金。如果你没有太阳能或电池，你的`EMS`应该能够在帮助你识别并消除家居缺陷后，评估一个大致符合你需求和预算的方案。
+
+由于物联网（IoT）阶段，智能家居已成为现实。随着传感器和智能设备变得越来越廉价，智能家居逻辑地改变了传统家庭。家庭能源管理框架 (`HEMS`) 允许所有主以“智能”方式记录、测量和跟踪他们的充电情况，这是前沿家庭中一种重新定义能源估算和效率的特征。通过在物业中引入设备，智能家居的`EMS`可以跟踪并记录家庭的用电情况。安装后，该设备（也称为智能附件）可以通过内置固件读取、记录并传输有关用电使用的数据。房屋所有主可以通过手机应用程序或客户网关来跟踪`HEMS`记录的能源使用情况。
 
 在澳大利亚的新南威尔士州、昆士兰州和南澳大利亚，今年的电税今年增长了高达 20%。在能源成本上升的节点，家庭经常被敦促更换老旧设备，或大幅减少对电脑等耗能设备的使用。通过智能家居及其带来的结果，例如家庭能源管理系统（HEMS），房主可以直观地了解哪些设备最耗电、其用电峰值情况，并获得有关减少总能耗建议的系统化报告。
 
@@ -1035,8 +1028,8 @@ HEMS 理念让房主能够看到高额电单的真实原因，从而通过有关
 
 许多人将家庭能源管理系统与家居自动化系统（HAS）混淆。虽然 HEMS 和 HAS 都依赖于物联网（IoT），即智能设备通过安排好的网络远程工作和传输数据，但它们有自己的标准体系：
 
-*   `HEMS` – 负责房屋的能源追踪和能源消耗监测。
-*   `HAS` – 处理自动化使用，HAS 将一些智能设备连接并管理到单一阶段，以便房主可以在一个地方处理其所有的连接智能设备。
+* `HEMS` – 负责房屋的能源追踪和能源消耗监测。
+* `HAS` – 处理自动化使用，HAS 将一些智能设备连接并管理到单一阶段，以便房主可以在一个地方处理其所有的连接智能设备。
 
 家居自动化系统和 HEMS 可以协同工作。这意味着受 HEMS 驱动的智能附件将与你现有的家居自动化系统兼容。正如 RMIT 一项新研究所示，转向家居自动化方案的房主可能会在项目的“熟悉阶段”看到用电量增加。房主可能会弄乱他们的家居自动化程序，甚至忘记它而忽略了调整。例如，HVAC（暖通空调）系统可以进行远程控制和自动化。这意味着房主在回到家之前可以关闭空调和冷却。当房主忘记时间并未调整其机械 HVAC 的时间表编程时，自动化可能会导致电费增加。这正是 HEMS 和 HAS 可以帮助已引入 HAS 的家庭的地方。修复/优化措施可以准确评估每个智能设备的效率和使用速率，为房主提供所需的信息，以调整其 HAS 程序并进一步提高其整体能源效率。
 
@@ -1050,24 +1043,21 @@ HEMS 理念让房主能够看到高额电单的真实原因，从而通过有关
 
 ## 3.10 结论
 
-本章描述了一种先进的 `HEMS` 方法。当负载关闭时，`HEMS` 同样可以浓缩。我们将通过减少等待时间改进这一系统。
+本章描述了一种先进的`HEMS`方法。当负载关闭时，`HEMS`同样可以浓缩。我们将通过减少等待时间改进这一系统。
 
 ## 参考文献
 
-[1] `Priyadarshi N.`, `Padmanaban S.`, `Maroti P.`, `Sharma A.`. 变工作条件下的 `FPSO` mppt 综合调查。`IEEE System`, `13`, 2018, 1861–1871. [#9783110713794_008285.xhtml)
+[1] `Priyadarshi N.`, `Padmanaban S.`, `Maroti P.`, `Sharma A.`. 变工作条件下的`FPSO` mppt 综合调查。`IEEE System`, `13`, 2018, 1861–1871. [#9783110713794_008285.xhtml)
 
-[2] `Priyadarshi N.`, `Padmanaban S.`, `Bhaskar M. S.`, `Blaabjerg F.`, `Sharma A.`. 电网集成光伏/风电系统的 `SVPWM` 变变器控制 `FPSO` mppt。`IET Power Application`, `12`, 2018, 962–971. [#9783110713794_008285.xhtml)
+[2] `Priyadarshi N.`, `Padmanaban S.`, `Bhaskar M. S.`, `Blaabjerg F.`, `Sharma A.`. 电网集成光伏/风电系统的`SVPWM`变变器控制`FPSO` mppt。`IET Power Application`, `12`, 2018, 962–971. [#9783110713794_008285.xhtml)
 
 [3] `Mbungu N.`, `Naidoo R.`, `Bansal R.`, `Bazolana J.`. 商业建筑集成再生能源的实时电价。`Sustainable Cities and Society`, `41`, 2018, 392–404. [#9783110713794_008285.xhtml)
 
 [4] `Adefarati T.`, `Bansal R.`, `Shahnia F.`, `Shoeb M`. 再生能源技术对住宅微网系统的经济影响。电力与能源国际会议 (IPES)，澳大利亚珀斯，2019 年 12 月 10 日至 12 日。 [#9783110713794_008285.xhtml)
 
-[5] `Priyadarshi N.`, `Azam F.`, `Bhoi A. K.`, `Alam S.`. 用于 `PV` 电网发电的人工模糊智能控制器 `mppt`。`Lecture Notes in Networks and Systems`, `46`, https://doi.org/10.1007/978-981-13-1217-5_88.
+[5] `Priyadarshi N.`, `Azam F.`, `Bhoi A. K.`, `Alam S.`. 用于`PV`电网发电的人工模糊智能控制器`mppt`。`Lecture Notes in Networks and Systems`, `46`, https://doi.org/10.1007/978-981-13-1217-5_88.
 
-[6] `Padmanaban S.`, `Priyadarshi N.`, `Holm-Nielsen J. B.`, `Bhaskar M. S.`, `Azam F.`, `Sharma A. K.` 真实运行条件下电网集成光伏系统的新型改进正弦余弦优化 `mppt` 算法。`IEEE Access`, `7`, 2019, 10467–10477.
-
-
-
+[6] `Padmanaban S.`, `Priyadarshi N.`, `Holm-Nielsen J. B.`, `Bhaskar M. S.`, `Azam F.`, `Sharma A. K.` 真实运行条件下电网集成光伏系统的新型改进正弦余弦优化`mppt`算法。`IEEE Access`, `7`, 2019, 10467–10477.
 
 [7] Mbungu N. T., Bansal R. C., Naidoo R. 自主住宅家居的智能能源协调。IET-Smart Grid, 2(3), 2019, 336–346. →
 
@@ -1075,99 +1065,99 @@ HEMS 理念让房主能够看到高额电单的真实原因，从而通过有关
 
 [9] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Hossain E. 基于 Java 的最大功率点跟踪用于电网集成的混合光伏-燃料电池：实验性能评估。IEEE Access, 7, 2019, 82978–82990. →
 
-[10] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Blaabjerg F., Bhaskar M. S. 波动太阳辐照下光伏电网集中基于混合 ANFIS–PSO 的 MPPT 实验性估计。IEEE Systems Journal, 14, 2020, 1218–1229. →
 
-[11] Tyagi S. K. S., Mukherjee A., Pokhrel S. R., Hiran K. K. 智能农业物联网传感器网络中一种智能且优的资源分配方法。IEEE Sensors Journal, 2020. →
 
-[12] Lakhwani K., Gianey H. K., Wireko J. K., Hiran K. K. 物联网 (Iot)：物联网原理、范式与应用。Bpb Publications, 2020. →
+[10] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Blaabjerg F., Bhaskar M. S. 波动太阳辐照下光伏电网集中基于混合 ANFIS–PSO 的 MPPT 实验性估计。*IEEE Systems Journal*, 14, 2020, 1218–1229. →
 
-[13] Priyadarshi N., Padmanaban N., Bhaskar M. S., Blaabjerg F., Holm-Nielsen J. B., Azam F., Sharma A. K. 基于李普诺夫控制方案的单级混合光伏-燃料电池单元电网集成。IEEE Systems Journal, 14, 2020, 3334–3342. →
+[11] Tyagi S. K. S., Mukherjee A., Pokhrel S. R., Hiran K. K. 智能农业物联网传感器网络中一种智能且优的资源分配方法。*IEEE Sensors Journal*, 2020. →
 
-[14] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 用于水泵应用的采用 MPPT 的混合 GSA–PSO 算法的新型 CUK–SEPIC 变换器光伏电源系统。IET Power Electronics, 13, 2020, 2824–2830. →
+[12] Lakhwani K., Gianey H. K., Wireko J. K., Hiran K. K. 物联网 (`IoT`)：物联网原理、范式与应用。*Bpb Publications*, 2020. →
 
-[15] Wireko J. K., Hiran K. K., Doshi R. IoT 时代发展中国家对新技术的文化抵制：埃塞俄比亚的视角。International Journal of Emerging Technology and Advanced Engineering, 8(4), 2018, 96–105. →
+[13] Priyadarshi N., Padmanaban N., Bhaskar M. S., Blaabjerg F., Holm-Nielsen J. B., Azam F., Sharma A. K. 基于李普诺夫控制方案的单级混合光伏-燃料电池单元电网集成。*IEEE Systems Journal*, 14, 2020, 3334–3342. →
 
-[16] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的新型采用 PSO 的改进型 zeta 变换器基的光光伏最大功率跟踪系统：硬件实现。IET Power Electronics, 13, 2020, 2775–2781, [https://www.se.com/in/en/product-category/2200-home-automation/]. →
+[14] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 用于水泵应用的采用 MPPT 的混合 GSA–PSO 算法的新型 CUK–SEPIC 变换器光伏电源系统。*IET Power Electronics*, 13, 2020, 2824–2830. →
 
-[17] Liu J., Xiao Y., Shuhui L., Liang W., Philip Chen C. 智能电网中的网络安全与隐私问题。IEEE Communications & Tutorials, 14(4), 2012, 981–997. a, b
+[15] Wireko J. K., Hiran K. K., Doshi R. IoT 时代发展中国家对新技术的文化抵制：埃塞俄比亚的视角。*International Journal of Emerging Technology and Advanced Engineering*, 8(4), 2018, 96–105. →
 
-[18] Williams E. 信息通信技术对环境的影响。Nature, 479(7373), 2011, 354–358. →
+[16] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的新型采用 PSO 的改进型 zeta 变换器基的光光伏最大功率跟踪系统：硬件实现。*IET Power Electronics*, 13, 2020, 2775–2781, [https://www.se.com/in/en/product-category/2200-home-automation/]. →
 
-[19] 未来能源系统中的智能家居：当效率与智能协同工作。IEEE Consumer Magazine, 5(1), 2015, 74–80. →
+[17] Liu J., Xiao Y., Shuhui L., Liang W., Philip Chen C. 智能电网中的网络安全与隐私问题。*IEEE Communications & Tutorials*, 14(4), 2012, 981–997. a, b
 
-[20] De Bakker C., Aries M., Rosemann A. 开放式空间基于占用的照明：现状综述。Building and Environment, 112, 2017, 308–321. →
+[18] Williams E. 信息通信技术对环境的影响。*Nature*, 479(7373), 2011, 354–358. →
 
-[21] Akpakwu G., Silva B. J., Hancke G., Abu-Mahfouz A. 物联网 5G 网络综述：通信技术与挑战。IEEE Access, 6, 2017, 3619–3647. →
+[19] 未来能源系统中的智能家居：当效率与智能协同工作。*IEEE Consumer Magazine*, 5(1), 2015, 74–80. →
 
-[22] Bedi G., Venagamoorthy G. K., Singh R. R., Wang K.-C. 电力和能源系统中的物联网 (`IoT`)综述。IEEE Internet of Things Journal, 5(2), 2018, 847–870. →
+[20] De Bakker C., Aries M., Rosemann A. 开放式空间基于占用的照明：现状综述。*Building and Environment*, 112, 2017, 308–321. →
 
-[23] Riffat S. B., Xiaoli M. 热电学：现状与应用综述。Applied Thermal Engineering, 23(8), 2003, 913–935. →
+[21] Akpakwu G., Silva B. J., Hancke G., Abu-Mahfouz A. 物联网 5G 网络综述：通信技术与挑战。*IEEE Access*, 6, 2017, 3619–3647. →
 
-[24] Bhati A., Hansen M., Chan C. M. 智能城市中的家居节能：新加坡家庭的启示。Energy Policy, 104, 2017, 230–239. →
+[22] Bedi G., Venagamoorthy G. K., Singh R. R., Wang K.-C. 电力和能源系统中的物联网 (`IoT`)综述。*IEEE Internet of Things Journal*, 5(2), 2018, 847–870. →
 
-[25] Holler J., Tsiatsis V., Mulligan C., Karnouskos S., Avesand S., Boyle D. 物联网。Academic Press, 2014. →
+[23] Riffat S. B., Xiaoli M. 热电学：现状与应用综述。*Applied Thermal Engineering*, 23(8), 2003, 913–935. →
 
-[26] M. Nayim K., Mishra Y., Ledwich G., Dong Z. Y., Wong K. P. 并电网光伏无功功率与电池储能系统的协调控制以改善居民配线的电压分布。IEEE Transactions on Industrial Informatics, 10(2), 2014, 967–977. →
+[24] Bhati A., Hansen M., Chan C. M. 智能城市中的家居节能：新加坡家庭的启示。*Energy Policy*, 104, 2017, 230–239. →
 
-[27] L’heureux A., Grolinger K., Elyamany H. F., Capretz M. A. M. 大数据机器学习：挑战与方法。IEEE Access, 5, 2017, 7776–7797. →
+[25] Holler J., Tsiatsis V., Mulligan C., Karnouskos S., Avesand S., Boyle D. 物联网。*Academic Press*, 2014. →
 
-[28] Ganzha M., Paprzycki M., Pawłowski W., Szmeja P., Wasielewska K. 物联网中的语义互操作性：来自 INTER-IoT 视角的概述。Journal of Network and Computer Applications, 81, 2017, 111–124. →
+[26] M. Nayim K., Mishra Y., Ledwich G., Dong Z. Y., Wong K. P. 并电网光伏无功功率与电池储能系统的协调控制以改善居民配线的电压分布。*IEEE Transactions on Industrial Informatics*, 10(2), 2014, 967–977. →
 
-[29] Pandey A. 颠覆性数字：新常态。Notion Press, 2017. →
+[27] L’heureux A., Grolinger K., Elyamany H. F., Capretz M. A. M. 大数据机器学习：挑战与方法。*IEEE Access*, 5, 2017, 7776–7797. →
 
-[30] Vermesan O., Friess P. 物联网：智能环境与集成生态系统的融合技术。Morgan, 2013. →
+[28] Ganzha M., Paprzycki M., Pawłowski W., Szmeja P., Wasielewska K. 物联网中的语义互操作性：来自 INTER-IoT 视角的概述。*Journal of Network and Computer Applications*, 81, 2017, 111–124. →
 
-[31] Dastbaz M., Pattinson C., Akhgar B. 绿色信息：一种可持续方法。Morgan Kaufmann, 2015. →
+[29] Pandey A. 颠覆性数字：新常态。*Notion Press*, 2017. →
 
-[32] Jia M., Komeily A., Wang Y., Srinivasan R. 物联网应用于智能建筑的发展。Automation in Construction, 101, 2019, 111–126. →
+[30] Vermesan O., Friess P. 物联网：智能环境与集成生态系统的融合技术。*Morgan*, 2013. →
 
-[33] Fabi V., Andersen R., Corgnati S., Olesen B. 住户行为：影响住户行为的因素的文献综述。Building and Environment, 58, 2012, 188–198. →
+[31] Dastbaz M., Pattinson C., Akhgar B. 绿色信息：一种可持续方法。*Morgan Kaufmann*, 2015. →
 
-[34] Fernandez E., Hossain M. J., Nizami M. S. 纳入可再生能源的智能社区需求侧管理的博弈论方法。Applied Energy, 232, 2018, 245–257. →
+[32] Jia M., Komeily A., Wang Y., Srinivasan R. 物联网应用于智能建筑的发展。*Automation in Construction*, 101, 2019, 111–126. →
 
-[35] Märzinger T., Doris Ö. 支持智能准备指标——一种整合建筑负载转移潜力定量评估的方法。Energies, 12(10), 2019, 1955. →
+[33] Fabi V., Andersen R., Corgnati S., Olesen B. 住户行为：影响住户行为的因素的文献综述。*Building and Environment*, 58, 2012, 188–198. →
+
+[34] Fernandez E., Hossain M. J., Nizami M. S. 纳入可再生能源的智能社区需求侧管理的博弈论方法。*Applied Energy*, 232, 2018, 245–257. →
+
+[35] Märzinger T., Doris Ö. 支持智能准备指标——一种整合建筑负载转移潜力定量评估的方法。*Energies*, 12(10), 2019, 1955. →
 
 [36] Akhtar G. M. A., Al-Awami A. T. 通过协调热力和风电发电实现排放感知能源交易。第 44 届电力工程、能源和电气驱动国际会议，1023–1027。IEEE, 2013. →
 
-[37] Hashem I., Targio A., Chang V., Anuar N. B., Adewole K., Yaqoob I., Gani A., Ahmed E., Chiroma H. 大数据在智能城市中的作用。International Journal of Information Management, 36(5), 2016, 748–758. →
+[37] Hashem I., Targio A., Chang V., Anuar N. B., Adewole K., Yaqoob I., Gani A., Ahmed E., Chiroma H. 大数据在智能城市中的作用。*International Journal of Information Management*, 36(5), 2016, 748–758. →
 
+[38] Brown Jr R. J., Romanowiz J. D. 能源管理与家居自动化系统。美国专利 5,761,083，1998 年 6 月 2 日颁发。→
 
+[39] Stang A., Hawthorne C. 绿色建筑：可持续建筑的新方向。普林顿建筑出版社, 2005。→
 
+[40] Mataloto B., Ferreira J. C., Cruz N. `LoBEMS` – 用于建筑和能源管理系统的物联网。电子设备, 8(7), 2019, 763。→
 
+[41] Trim P., Lee Y.-I. 网络安全管理：治理、风险与合规框架。Routledge, 2016。a, b
 
-[38]Brown Jr R. J., Romanowiz J. D. 能源管理与家居自动化系统。美国专利 5,761,083，1998 年 6 月 2 日颁发。→
+[42] Smith P. F. 为应对气候变化而建筑：建筑、规划与能源的挑战。Earthscan, 2009。a, b
 
-[39]Stang A., Hawthorne C. 绿色建筑：可持续建筑的新方向。普林顿建筑出版社, 2005。→
+[43] Tawfik A., Adel W. M. 自然光作为建筑中提供健康环境的因素。博士论文，开罗大学工程学院，为履行开罗大学工程学院建筑学硕士学位要求，吉萨，2005。a, b
 
-[40]Mataloto B., Ferreira J. C., Cruz N. LoBEMS – 用于建筑和能源管理系统的物联网。电子设备, 8(7), 2019, 763。→
+[44] Hotel, In Your. 能源管理。（1994）。a, b
 
-[41]Trim P., Lee Y.-I. 网络安全管理：治理、风险与合规框架。Routledge, 2016。a, b
+[45] Emrouzeh M. P., Fleet G., Moir R. 用于检查和探索城市社会挑战的智慧城市倡议。在：迈向社会物联网（SIoT）：性技术、架构与应用，Springer, Cham, 2020, 77–98。a, b
 
-[42]Smith P. F. 为应对气候变化而建筑：建筑、规划与能源的挑战。Earthscan, 2009。a, b
-
-[43]Tawfik A., Adel W. M. 自然光作为建筑中提供健康环境的因素。博士论文，开罗大学工程学院，为履行开罗大学工程学院建筑学硕士学位要求，吉萨，2005。a, b
-
-[44]Hotel, In Your. 能源管理。（1994）。a, b
-
-[45]Emrouzeh M. P., Fleet G., Moir R. 用于检查和探索城市社会挑战的智慧城市倡议。在：迈向社会物联网（SIoT）：性技术、架构与应用，Springer, Cham, 2020, 77–98。a, b
-
-[46]Xu L. D., Xu E. L., Ling L. 工业 4.0：现状与未来趋势。国际生产研究杂志, 56(8), 2018, 2941–2962。→
+[46] Xu L. D., Xu E. L., Ling L. 工业 4.0：现状与未来趋势。国际生产研究杂志, 56(8), 2018, 2941–2962。→
 
 # 44 基于物联网的智能单相电能表监控系统的设计与实现
 
 Zhang RuiChoo，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
+
 Hungyang Leong，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
+
 Rodney H. G. Tan，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
 
 ### 摘要
 
-智能建筑、智能办公室以及智能家居的优化能源利用对一个国家的经济增长和可持续性具有重大影响。通过物联网（IoT）技术，可以通过实时监控和控制更有效地进行能源管理。本章介绍了一种低成本智能单相电能表监控系统的全面设计。单相电能表监控系统的架构由数据采集设备、中央处理器和物联网平台组成。本章由几个子主题组成。涵盖了硬件和软件实现，包括 `Modbus` 远程终端单元（`RTU`）通信协议的设置、配置和系统集成、微控制器、Wi-Fi 集成以及物联网平台。还将详细说明根据 `IEEE-754` 单精度浮点标准进行电表读数的 `Modbus` 通信协议配置。这些信息随后通过 Wi-Fi 连接每分钟通过用户仪表板发送并存储到物联网平台通道，以详细显示随时间变化的用电信息趋势。描述了单相 IEC 标准电表监控系统的操作流程。本章将解释在硬件选择、原型设计和施工中为了实现可靠性和安全性需要考虑的因素。结果显示，成功实施了通过物联网平台的在线仪表板，允许用户实时监控其用电信息。电能表原型能够每分钟从负载读取典型能量，如电压、电流、频率、有功功率和功率因。测量结果成功上传到云数据库，并通过物联网平台进行监控。此外，将原型测得的能源信息与工业级 `Janitza` 数字功率计进行比较，显示读数相似。结论是，这种低成本原型电表适用于住宅消费者以及小规模企业主，以便他们对能源消耗有更好的了解。该系统适用于任何使用 `Modbus RT` 的设备。
+智能建筑、智能办公室以及智能家居的优化能源利用对一个国家的经济增长和可持续性具有重大影响。通过物联网（`IoT`）技术，可以通过实时监控和控制更有效地进行能源管理。本章介绍了一种低成本智能单相电能表监控系统的全面设计。单相电能表监控系统的架构由数据采集设备、中央处理器和物联网平台组成。本章由几个子主题组成。涵盖了硬件和软件实现，包括 `Modbus` 远程终端单元（`RTU`）通信协议的设置、配置和系统集成、微控制器、Wi-Fi 集成以及物联网平台。还将详细说明根据 `IEEE-754` 单精度浮点标准进行电表读数的 `Modbus` 通信协议配置。这些信息随后通过 Wi-Fi 连接每分钟通过用户仪表板发送并存储到物联网平台通道，以详细显示随时间变化的用电信息趋势。描述了单相 IEC 标准电表监控系统的操作流程。本章将解释在硬件选择、原型设计和施工中为了实现可靠性和安全性需要考虑的因素。结果显示，成功实施了通过物联网平台的在线仪表板，允许用户实时监控其用电信息。电能表原型能够每分钟从负载读取典型能量，如电压、电流、频率、有功功率和功率因。测量结果成功上传到云数据库，并通过物联网平台进行监控。此外，将原型测得的能源信息与工业级 `Janitza` 数字功率计进行比较，显示读数相似。结论是，这种低成本原型电表适用于住宅消费者以及小规模企业主，以便他们对能源消耗有更好的了解。该系统适用于任何使用 `Modbus RT` 的设备。
 
 关键词：能源监控，智能电表，物联网
 
 ## 4.1 引言
 
-能源是国家增长最重要的动力之一。能源委员会发布的《2017 年能源平衡报告》显示，从 1980 年至 2017 年能源显著增加。技术的进步改善了生活质量并加速了能源消耗。1。图 4.1 显示了 2017 年各部门的用电情况。2017 年总用电量达到`146,524 GWh。1。这是一个巨大的数字。根据饼图，工业部门的用电量最高，为`71,417 GWh`，占总量的`49%`。商业部门消耗了`30%`，其次是住宅部门占`20%`，农业和交通部门最后占`1%%。商业和住宅部门合计占了总消耗的一半。因此，商业和住宅部门通过高效明智地用电，具有减少总用电量的巨大潜力。
+能源是国家增长最重要的动力之一。能源委员会发布的《2017 年能源平衡报告》显示，从 1980 年至 2017 年能源显著增加。技术的进步改善了生活质量并加速了能源消耗。1。图 4.1 显示了 2017 年各部门的用电情况。2017 年总用电量达到`146,524 GWh`。1。这是一个巨大的数字。根据饼图，工业部门的用电量最高，为`71,417 GWh`，占总量的`49%`。商业部门消耗了`30%`，其次是住宅部门占`20%`，农业和交通部门最后占`1%`。商业和住宅部门合计占了总消耗的一半。因此，商业和住宅部门通过高效明智地用电，具有减少总用电量的巨大潜力。
 
 ![](img/b_9783110714043-004_fig_001.png)
 
@@ -1175,15 +1165,11 @@ Rodney H. G. Tan，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
 
 用电消费者可以在实现能源效率方面发挥巨大作用。然而，节约能源意识在马来西亚社会中并不强。马来西亚的发电燃料是间接补贴的。这是因为国家石油天然气公司放弃了收入，以低于市场的价格向 TNB 供应天然气。事实上，马来西亚消费者、住宅、工业和商业部门的电价与东南亚其他国家相比处于最低水平。2。这是因为气体供应由国家气体公司 PETRONAS 补贴。因此，对于大多数消费者来说，电费并不是负担，值得关注。电力用户没有意识地根据需要控制用量。例如，建筑中的许多空调或照明系统一直开启，即使建筑内没有人。结果导致了大量的不必要能源浪费。3。
 
+提高消费者对能源消耗的意识非常重要。需要实施详细的能源监测，以收集大量、高粒度且具有变性的数据。然而，传统的计量系统无法提供实现这一目标所需的功能。传统电表需要公用公司派遣人力进行人工抄表以计费，这通常在月底进行。用户无法从电表中获取实时消耗数据，消费者也无法从账单中观察随时间变化的能源使用模式。因此，他们不知道如何有效控制自己的能源消耗。此外，它无法测量到单个设备级别的细分能源使用情况，这使得消费者难以追踪耗电最高的设备。与传统计量系统相比，集成了 `IoT` 的智能电表能够实时从用户侧收集详细的能源使用数据。它们收集并将用电信息传输到云系统，随后可供消费者和公用公司进行监控和分析。智能计量数据为公用公司的战略规划提供了洞察，并实时告知消费者其能源消耗和计费情况。智能电表的采用可以带来多种好处，如实时计费、需求响应计划、能源欺诈检测、停电预警等。因此，传统电表的局限性可以被克服 [4]。
 
+在马来西亚，国家电力公用公司 TNB 正在转向智能计量，以促进电力的高效利用。TNB 从 2014 年到 2016 年在马六甲和布城通过试点项目开始安装智能电表，并计划到 2026 年在全国范围内为 910 万户安装智能电表 [5]。推广能源管理有助于消费者节约能源并减少电费。然而，其智能计费项目报告智能电表应用的使用率较低。系统日志统计显示，只有 10% 的用户积极且定期地使用该服务 [6]。此外，目前 TNB 智能电表提供的服务仍无法为消费者提供详细信息以充分了解能源消耗并有效实践节电。`myTNB` 移动应用程序或门户网页上的仪表板可以显示每月和每天的使用情况。每日消耗将在第二天更新并反映在 `myTNB` 门户中 [7]。然而，用户无法以小时或分钟为单位实时观察其能源使用情况，而无法反映能源消耗的实际趋势。
 
-
-
-提高消费者对能源消耗的意识非常重要。需要实施详细的能源监测，以收集大量、高粒度且具有变性的数据。然而，传统的计量系统无法提供实现这一目标所需的功能。传统电表需要公用公司派遣人力进行人工抄表以计费，这通常在月底进行。用户无法从电表中获取实时消耗数据，消费者也无法从账单中观察随时间变化的能源使用模式。因此，他们不知道如何有效控制自己的能源消耗。此外，它无法测量到单个设备级别的细分能源使用情况，这使得消费者难以追踪耗电最高的设备。与传统计量系统相比，集成了 IoT 的智能电表能够实时从用户侧收集详细的能源使用数据。它们收集并将用电信息传输到云系统，随后可供消费者和公用公司进行监控和分析。智能计量数据为公用公司的战略规划提供了洞察，并实时告知消费者其能源消耗和计费情况。智能电表的采用可以带来多种好处，如实时计费、需求响应计划、能源欺诈检测、停电预警等。因此，传统电表的局限性可以被克服 [4]。
-
-在马来西亚，国家电力公用公司 TNB 正在转向智能计量，以促进电力的高效利用。TNB 从 2014 年到 2016 年在马六甲和布城通过试点项目开始安装智能电表，并计划到 2026 年在全国范围内为 910 万户安装智能电表 [5)。推广能源管理有助于消费者节约能源并减少电费。然而，其智能计费项目报告智能电表应用的使用率较低。系统日志统计显示，只有 10% 的用户积极且定期地使用该服务 [6)。此外，目前 TNB 智能电表提供的服务仍无法为消费者提供详细信息以充分了解能源消耗并有效实践节电。`myTNB` 移动应用程序或门户网页上的仪表板可以显示每月和每天的使用情况。每日消耗将在第二天更新并反映在 `myTNB` 门户中 [7)。然而，用户无法以小时或分钟为单位实时观察其能源使用情况，而无法反映能源消耗的实际趋势。
-
-因此，可以开发一种更高效有效的能源监测解决方案来解决上述局限性。本章旨在介绍一种全面的方法，用于构建一个成本效益高的基于 IoT 的智能单相电表能源监测系统。系统的设计能够记录每分钟的能源信息，并通过 IoT 平台仪表板实时在线显示数据。用户能够在短间隔内监控电力信息的变化并据此控制其设备。本章将描述 `IEC` 标准电表、通用工业通信协议 (`Modbus`)、`Wi-Fi` 连接以及 IoT 平台的系统集成。还将介绍根据 `IEC` 工业标准的硬件原型合适外壳设计和安装。
+因此，可以开发一种更高效有效的能源监测解决方案来解决上述局限性。本章旨在介绍一种全面的方法，用于构建一个成本效益高的基于 `IoT` 的智能单相电表能源监测系统。系统的设计能够记录每分钟的能源信息，并通过 IoT 平台仪表板实时在线显示数据。用户能够在短间隔内监控电力信息的变化并据此控制其设备。本章将描述 `IEC` 标准电表、通用工业通信协议 (`Modbus`)、`Wi-Fi` 连接以及 IoT 平台的系统集成。还将介绍根据 `IEC` 工业标准的硬件原型合适外壳设计和安装。
 
 ## 4.2 文献综述
 
@@ -1199,9 +1185,6 @@ Rodney H. G. Tan，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
 
 ### 4.2.2 其他研究人员提出的智能能源监测系统架构
 
-
-
-
 近年来，能源管理已成为研究人员为了节省成本和提高效率的重要领域。图 4.2 显示了 IEEE Xplore 数据库中 2014 年到 2019 年间带 IoT 的电表论文数量。根据图表显示，使用各种 IoT 技术的智能电表监测系统的研发呈现上升趋势，正顺着工业革命 4.0 的浪潮。能源监控系统在过去的几十年中被反复讨论，并提出了许多全面的研究方案。在接下来的小节中，将回顾各种系统，包括功率测量单元、IoT 连接技术、中央处理器、功能、数据存储和用户界面。
 
 ![](img/b_9783110714043-004_fig_002.png)
@@ -1210,32 +1193,29 @@ Rodney H. G. Tan，吉隆坡 UCSI 大学 工程、技术与建筑环境学院
 
 ### 4.2.3 功率测量单元
 
-数据采集是能源监控系统的首要过程。市场上有多种类型和规格的功率测量单元用于采集能量信息。研究人员使用霍尔效应电流传感器来采集电流值 [11, 12]。这种传感器可以检测直流（DC）和交流（AC）。它们利用霍尔效应将电流输入转换为比例的模拟电压输出。它们为交流电流感应提供了极廉的解决方案，并可以轻松地通过微控制器实现。然而，参考文献中使用的如 `ACS712` 模块电流传感器只能接受最大 30 安培的电流，无法处理重的电力负载。
 
-除了霍尔效应电流传感器外，一些研究人员在其系统使用了如 `SCT-013-000` 型的电流互感器 [13, 14]。电流互感器利用电磁感应将交流电降低到微控制器可接受的输入电压。它具有测量极高电流的特征，且功耗低。电流互感器使用非侵入式探测，更加简单且安全。然而，与相同规格的电流传感器相比，它的体积较大且成本昂贵。对于电压传感单元，通常部署了如 `ZMPT101B` 型的电压变压器或电变压器传感器 [12, 14]。它可以测量直流或交流电压，并可以直接连接到微控制器的输入端，非常方便。
+
+数据采集是能源监控系统的首要过程。市场上有多种类型和规格的功率测量单元用于采集能量信息。研究人员使用霍尔效应电流传感器来采集电流值 [11, 12]。这种传感器可以检测直流（DC）和交流（AC）。它们利用霍尔效应将电流输入转换为比例的模拟电压输出。它们为交流电流感应提供了极廉的解决方案，并可以轻松地通过微控制器实现。然而，参考文献中使用的如`ACS712`模块电流传感器只能接受最大 30 安培的电流，无法处理重的电力负载。
+
+除了霍尔效应电流传感器外，一些研究人员在其系统使用了如`SCT-013-000`型的电流互感器 [13, 14]。电流互感器利用电磁感应将交流电降低到微控制器可接受的输入电压。它具有测量极高电流的特征，且功耗低。电流互感器使用非侵入式探测，更加简单且安全。然而，与相同规格的电流传感器相比，它的体积较大且成本昂贵。对于电压传感单元，通常部署了如`ZMPT101B`型的电压变压器或电变压器传感器 [12, 14]。它可以测量直流或交流电压，并可以直接连接到微控制器的输入端，非常方便。
 
 上述设备通过将流经电路电力转换为处理器可读的信号来采集信息，而其他研究人员使用了信号调理单元来检测传统电表产生的指示信号。信号调理传感器（如光敏电阻、光耦合器或光学传感器）用于检测连接在运行传统电表上的 LED 或其转盘旋转产生的光脉冲 [15, 16, 17, 18]。这些传感器根据其特性对指示做出反应，并控制外部电源的切换以向微控制器发送可读的电信号。然而，这些方法只能采集功耗数据，而电压、电流、频率和功率因等其他重要的电力信息就会缺失。此外，使用信号调理单元采集的数据精度和准确性可能不可。
 
 ### 4.2.4 中央处理器
 
-在智能能源监控系统中，中央处理器解释功率单元产生的电信号以获取数值。市场上有各种范围的微控制器可用 [19, 20, 21]，例如 `Arduino UNO`、`Arduino Mega` 等常见的板提供了 Wi-Fi 支持。然而，`Nucleo` 板 [22] 和 `STM32` 也被使用了。一些研究人员利用 `ATmega328` [20, 23] 是因为其高性能和低功耗。近年来，`NodeMCU ESP8266` 在研究人员中变得流行，因为它是一种不需要额外模块的紧凑解决方案 [14, 18, 23]。`ESP8266` 运行在 `80 MHz` 系统时钟上，拥有 `50KB` 的 RAM 和 `4MB` 的闪存。它的处理能力和数据存储大于常见的 Arduino 板。在成本方面，它们比 Arduino 板便宜。然而，`NodeMCU` 板和 `ESP8266` 模块的 IO 脚较少。
+在智能能源监控系统中，中央处理器解释功率单元产生的电信号以获取数值。市场上有各种范围的微控制器可用 [19, 20, 21]，例如`Arduino UNO`、`Arduino Mega`等常见的板提供了 Wi-Fi 支持。然而，`Nucleo`板 [22] 和`STM32`也被使用了。一些研究人员利用`ATmega328` [20, 23] 是因为其高性能和低功耗。近年来，`NodeMCU ESP8266`在研究人员中变得流行，因为它是一种不需要额外模块的紧凑解决方案 [14, 18, 23]。`ESP8266`运行在`80 MHz`系统时钟上，拥有`50KB`的 RAM 和`4MB`的闪存。它的处理能力和数据存储大于常见的 Arduino 板。在成本方面，它们比 Arduino 板便宜。然而，`NodeMCU`板和`ESP8266`模块的 IO 脚较少。
 
 ### 4.2.5 IoT 连接技术
 
-通信技术分为有线式和无线式。一名研究人员使用 `Ethernet` 让能源监控系统通过电缆与 `Wi-Fi router` 通信并将采集的数据传输到服务器 [21]。大多数之前的研究人员选择无线通信系统连接智能电表。`NodeMCU` 和 `ESP8266` 单片系统 (`SoC`) 等 `Wi-Fi` 模块被用于智能电表系统 [15, 18]。该模块使能源监控系统能够与路由器或热点建立 Wi-Fi 连接，随后连接到互联网。其他研究人员将 `Arduino` 官方的 `Wi-Fi shield` 安装在 `Arduino board` 上，这是一种更简单的实现方法 [11]。
+通信技术分为有线式和无线式。一名研究人员使用`Ethernet`让能源监控系统通过电缆与`Wi-Fi router`通信并将采集的数据传输到服务器 [21]。大多数之前的研究人员选择无线通信系统连接智能电表。`NodeMCU`和`ESP8266`单片系统 (`SoC`) 等`Wi-Fi`模块被用于智能电表系统 [15, 18]。该模块使能源监控系统能够与路由器或热点建立 Wi-Fi 连接，随后连接到互联网。其他研究人员将`Arduino`官方的`Wi-Fi shield`安装在`Arduino board`上，这是一种更简单的实现方法 [11]。
 
-
-
-除 Wi-Fi 之外，ZigBee 是一种基于 `IEEE 805.15.4` 协议的低成本、低功耗无线技术。它是人员 [22] 使用的有前景的无线网络技术之一。某些应用采用了 GSM 通信在特定事件发生时传输重要信息。它是大多数国家用于移动蜂通信的结构化设计。之前的研究实现了带有电源和如 `Sim900A-RS232` 等通信接口的 `GSM` 调制解调器 [17, 20]。其他研究人员使用 `Arduino` 板将开发板与官方 `GSM` 扩展板直接连接 [19]。此外，`Bluetooth` 通信技术已应用于电表系统。该计量系统通过 `Bluetooth` 模块 `HC-05` 连接到 `Android` 应用程序。数据定期从计量系统更新到运行应用程序的设备，仅用于短距离远程监控 [13]。然而，该系统仍然依赖 Wi-Fi 连接将收集到的数据发送到云端并存储。
+除 Wi-Fi 之外，ZigBee 是一种基于`IEEE 805.15.4`协议的低成本、低功耗无线技术。它是人员 [22] 使用的有前景的无线网络技术之一。某些应用采用了 GSM 通信在特定事件发生时传输重要信息。它是大多数国家用于移动蜂通信的结构化设计。之前的研究实现了带有电源和如`Sim900A-RS232`等通信接口的`GSM`调制解调器 [17, 20]。其他研究人员使用`Arduino`板将开发板与官方`GSM`扩展板直接连接 [19]。此外，`Bluetooth`通信技术已应用于电表系统。该计量系统通过`Bluetooth`模块`HC-05`连接到`Android`应用程序。数据定期从计量系统更新到运行应用程序的设备，仅用于短距离远程监控 [13]。然而，该系统仍然依赖 Wi-Fi 连接将收集到的数据发送到云端并存储。
 
 ### 4.2.6 数据库与用户界面
 
-对于实时监控，云数据库是保存海量数据的理想解决方案。智能能源监控研究使用了 `MySQL` 数据库 [11, 13, 24]。它采用开源许可，兼容许多操作系统和语言。它处理大数据集的效果良好。然而，实现数据库需要对 `HTML` 和 `PHP` 等语言有一定程度的知识。研究人员构建自己的网页来监控数据。网页开发语言和工具如 `HTML`、`JavaScript`、`AJAX`、`Bootstrap`、`CSS`、`PHP` 以及 `Google Charts` 引擎用于设计网页并显示具有高度灵活性的数据 [11, 24]。研究人员可以根据需求自定义用户界面，但这需要对采用的语言具有一定技能。一旦主机服务器（无论是本地还是远程），用户或访问者可以通过 `URL` 链接访问信息。
+对于实时监控，云数据库是保存海量数据的理想解决方案。智能能源监控研究使用了`MySQL`数据库 [11, 13, 24]。它采用开源许可，兼容许多操作系统和语言。它处理大数据集的效果良好。然而，实现数据库需要对`HTML`和`PHP`等语言有一定程度的知识。研究人员构建自己的网页来监控数据。网页开发语言和工具如`HTML`、`JavaScript`、`AJAX`、`Bootstrap`、`CSS`、`PHP`以及`Google Charts`引擎用于设计网页并显示具有高度灵活性的数据 [11, 24]。研究人员可以根据需求自定义用户界面，但这需要对采用的语言具有一定技能。一旦主机服务器（无论是本地还是远程），用户或访问者可以通过`URL`链接访问信息。
 
-近年来，IoT 平台已成为研究人员在智能能源监控系统中 IoT 系统的首选 [25]。`ThingSpeak`、`Ubidots` 和 `FavorIoT` 等平台为研究人员和教育者提供免费许可。然而，它们在更新间隔、数据保留期和容量方面存在某些局限。这些平台对于小规模研究足够足够。与在线数据库系统相比，这些平台的设计非常简单且快捷。IoT 平台还具有现成的用户界面（UI）设计功能和数据可视化能力，可以快速方便地创建用户界面 [14, 15, 18]。
-
-
-
+近年来，IoT 平台已成为研究人员在智能能源监控系统中 IoT 系统的首选 [25]。`ThingSpeak`、`Ubidots`和`FavorIoT`等平台为研究人员和教育者提供免费许可。然而，它们在更新间隔、数据保留期和容量方面存在某些局限。这些平台对于小规模研究足够足够。与在线数据库系统相比，这些平台的设计非常简单且快捷。IoT 平台还具有现成的用户界面（UI）设计功能和数据可视化能力，可以快速方便地创建用户界面 [14, 15, 18]。
 
 Modbus 协议是一种主从协议，它规定在同一串行总线上只允许一个主设备，最多允许有 247 个从设备。每个从设备在网络中都应该具有一个唯一的设备地址，以便主设备能够独立地调用它们 [28]。只有主设备可以发起通信并向一个或多个从设备发送请求。从设备之间不会发生通信，而且在没有收到主设备发送的请求之前，它们不会传输消息。主设备通过两种模式向从设备发布请求：单播模式和广播模式。单播模式表示主设备发送的消息仅针对单个从设备，且该从设备是接收并处理请求后唯一需要对该消息做出响应的设备。广播模式用于主节点将消息发送给每个从设备，且不期望响应。这通常是写命令，并有一个预留的广播地址。
 
@@ -1282,9 +1262,6 @@ RTU 帧中不同字段存储的信息需要根据规范和要求进行配置。�
 
 ### 4.3.3 Modbus 通信参数
 
-
-
-
 在串口上使用 RTU 传输模式实现 Modbus 设备通信，需要配置相关的通信参数。这些参数包括波特率和编码格式。波特率是每秒传输的数据位速率。标准建议的波特率为 9,600 和 19,200 kbps。不同制造商针对各种规格提供了其他可用波特率，最高可达 115,200 kbps。编码格式涉及起始位数量、停止位数量、校验位、存储数据类型、字序、字节序和超时时间。根据 Modbus-RTU 标准，每个字节的 11 位格式由 1 个起始位、8 个数据位、1 个校验位和 1 个停止位组成 [30]。对于校验位，偶数校验是默认设置，但也可以使用其他选项，如奇数校验和无校验。然而，当不使用校验位时，需要一个额外的停止位来占用字符字段 [32]。对于字序和字节序，通常使用大端序（big-Endian）表示地址和数据，这意味着先发送最有效字节。大端序的反向称为小端序（little-Endian）。
 
 ### 4.3.4 RS-485 标准
@@ -1317,44 +1294,39 @@ RS-485 标准的差分信号路径是平衡的，因为一根线上的信号理�
 
 ### 4.5.1 功率测量单元
 
-
-
-
-`DDM18SD` 电能表被选为系统的功率测量单元。它是一种 DIN 轨单相数字电表。它可以直接准确地测量额定频率为 50 或 60 Hz 的单相交流网络中的负载有功耗量。它可以获取负载电流、电压、有功功率、频率和功率因数的读数。工作电压范围接受符合马来西亚电力标准的 230/240 V[AC] 单相电，电流规格为 100/5 A，能够处理正常的家用电器和机械设备。其技术性能完全符合 1 类单相有功电表的国际标准 `IEC 62053-21`。此外，它还配备了 `RS-485` 接口并支持 `Modbus-RTU` 通信协议用于远程读取功能。
+`DDM18SD`电能表被选为系统的功率测量单元。它是一种 DIN 轨单相数字电表。它可以直接准确地测量额定频率为 50 或 60 Hz 的单相交流网络中的负载有功耗量。它可以获取负载电流、电压、有功功率、频率和功率因数的读数。工作电压范围接受符合马来西亚电力标准的 230/240 V[AC] 单相电，电流规格为 100/5 A，能够处理正常的家用电器和机械设备。其技术性能完全符合 1 类单相有功电表的国际标准`IEC 62053-21`。此外，它还配备了`RS-485`接口并支持`Modbus-RTU`通信协议用于远程读取功能。
 
 ## 4.5.2 集成 Wi-Fi 连接模块的微控制器
 
-`WeMos D1 Mini R2` 用于读取电表的数据寄存并在处理后将信息发送到 IoT 平台。它是一种基于 `IEEE 802.11` (Wi-Fi) 协议的微型无线微控制器开发板。它与 `ESP8266` 无线微控制器结合成一个完整的开发板。它具有 4MB 闪存内存、80 MHz 系统时钟、约 50KB 可用 RAM 和片载 Wi-Fi 收发器。编程 `D1 mini` 就像编程任何其他基于 Arduino 的微控制器一样简单，因为该模块内置了 micro-USB 接口，允许直接从 `Arduino IDE` 对模块进行编程。只需通过板管理器添加 `ESP8266` 板级包，无需额外的硬件。板载 3.3 V 电压调节模块允许设备通过 micro-USB 直接从 USB 端口供电。
+`WeMos D1 Mini R2`用于读取电表的数据寄存并在处理后将信息发送到 IoT 平台。它是一种基于`IEEE 802.11` (Wi-Fi) 协议的微型无线微控制器开发板。它与`ESP8266`无线微控制器结合成一个完整的开发板。它具有 4MB 闪存内存、80 MHz 系统时钟、约 50KB 可用 RAM 和片载 Wi-Fi 收发器。编程`D1 mini`就像编程任何其他基于 Arduino 的微控制器一样简单，因为该模块内置了 micro-USB 接口，允许直接从`Arduino IDE`对模块进行编程。只需通过板管理器添加`ESP8266`板级包，无需额外的硬件。板载 3.3 V 电压调节模块允许设备通过 micro-USB 直接从 USB 端口供电。
 
 ## 4.5.3 Modbus RS-485 转 TTL 转换模块
 
-`WeMosboard` 需要一个 `RS-485` 转 `TTL` 转换模块才能正确地从 `RS-485` 接口读取数据。`RS-485` 使用抗干扰和噪声的分差信号，适用于远距离传输，而 `TTL` 设计用于逻辑电平，用于板级通信。该数据转换模块基于 `Maxim MAX485` 接口芯片，可以将电压水平从 `RS-485` 端口转换为相应的 `TTL` 标准，反之亦然。该模块在 5 V 供电压下运行，功耗低。
+`WeMosboard`需要一个`RS-485`转`TTL`转换模块才能正确地从`RS-485`接口读取数据。`RS-485`使用抗干扰和噪声的分差信号，适用于远距离传输，而`TTL`设计用于逻辑电平，用于板级通信。该数据转换模块基于`Maxim MAX485`接口芯片，可以将电压水平从`RS-485`端口转换为相应的`TTL`标准，反之亦然。该模块在 5 V 供电压下运行，功耗低。
 
 ### 4.5.4 电源模块
 
-使用 AC–DC 电源模块将来自电源座的 240 V[AC] 输入电压降至 5 V[DC]，为 `WeMos D1 Mini` 和 `TTL-RS-485` 转换器供电。根据规格，它允许输入电压范围为 90 到 264 V[AC]，并将输出电压调节为 5 V[DC]。它具有 3 W 的低功耗和超小尺寸，适用于 DIN 轨外箱的狭窄空间。它还具有高效率、低纹波和噪声以及过载和短路保护功能。
+使用 AC–DC 电源模块将来自电源座的 240 V[AC] 输入电压降至 5 V[DC]，为`WeMos D1 Mini`和`TTL-RS-485`转换器供电。根据规格，它允许输入电压范围为 90 到 264 V[AC]，并将输出电压调节为 5 V[DC]。它具有 3 W 的低功耗和超小尺寸，适用于 DIN 轨外箱的狭窄空间。它还具有高效率、低纹波和噪声以及过载和短路保护功能。
 
 ### 4.5.5 保护装置
 
-选择并安装了施德 `C60N` 断路器以保护电路免受短路电流和过载电流的影响。它可以保护人员免受中性系统的间接接触。其技术规格符合 `IEC 60947-2` 标准。
+选择并安装了施德`C60N`断路器以保护电路免受短路电流和过载电流的影响。它可以保护人员免受中性系统的间接接触。其技术规格符合`IEC 60947-2`标准。
 
-DIN 轨外箱封装了内部电气和电子元件，包括 `WeMos D1 Mini`、`TTL-RS-485` 转换器和 AC–DC 电源模块。这种形式的外箱非常适用于有限的空间。它允许印刷电路板和其他标准电气元件的安全安装和保护，减少损坏和老化的机会。为 DIN 轨设计的外箱可以通过螺钉或钩子轻松地安装在轨上，提供快速的安装和拆卸。
+DIN 轨外箱封装了内部电气和电子元件，包括`WeMos D1 Mini`、`TTL-RS-485`转换器和 AC–DC 电源模块。这种形式的外箱非常适用于有限的空间。它允许印刷电路板和其他标准电气元件的安全安装和保护，减少损坏和老化的机会。为 DIN 轨设计的外箱可以通过螺钉或钩子轻松地安装在轨上，提供快速的安装和拆卸。
 
-选择了一个 6 路配电箱 (DB) 来封装整个电气系统。断路器、电表和 DIN 轨外箱将安装在配电箱内。DB 通常包含任何商业或住宅实体的主供电系统。电源线进入配电箱，然后通过断路器分配到次级电路。对于设备的最佳性能和安全性至关重要。DB 配有母线、DIN 轨和中性线排，用于安装和布线路由。
 
-电表板还用于固定整个系统。封装在 DB 中的所有电气和电子设备、组件以及配件都固定在电表板上。三 针电源输入插座固定在板的侧面，以便插入连接到电源的电源线。电表板上安装了插座出口以连接负载。接线和端子覆盖在电表板后面，需要时可以直接从背面进行修改。
+
+选择了一个 6 路配电箱（DB）来封装整个电气系统。断路器、电表和 DIN 轨外箱将安装在配电箱内。DB 通常包含任何商业或住宅实体的主供电系统。电源线进入配电箱，然后通过断路器分配到次级电路。这对于设备的最佳性能和安全性至关重要。DB 配有母线、DIN 轨和中性线排，用于安装和布线路由。
+
+电表板还用于固定整个系统。封装在 DB 中的所有电气和电子设备、组件以及配件都固定在电表板上。三针电源输入插座固定在板的侧面，以便插入连接到电源的电源线。电表板上安装了插座出口以连接负载。接线和端子覆盖在电表板后面，需要时可以直接从背面进行修改。
 
 插座出口用于插入负载。所使用的插座符合 `MS 589-2`、`SS 145-2` 和 `BS 1363-2` 电气设备标准。出口极性配置为两火一地，额定电流为 230 V AC 50 Hz 下的 13 A。需要较粗的缆来处理更大的电流。使用截面积为 4 mm² 的电缆从输入电源连接到断路器、电表和电源座等电气设备。接线颜色代码遵循旧英国标准，红色为火线，黑色为零线，绿色为地线。
 
 ### 4.5.6 原型制作
 
-原型的物理设计考虑了将部件组装成单元。小型电气电子元件封装在 DIN 轨外箱中，然后与电表和断路器一起安装在配电箱的导轨上。三 针插座位于电表板侧面，用于连接到电源的电源线。电表板上的插座出口指定用于任何电气负载。它位于 DB 箱下方，以便布线路由。电表板顶部将安装一个手手，方便用户在使用时携带和挂在某处。
+原型的物理设计考虑了将部件组装成单元。小型电气电子元件封装在 DIN 轨外箱中，然后与电表和断路器一起安装在配电箱的导轨上。三针插座位于电表板侧面，用于连接到电源的电源线。电表板上的插座出口指定用于任何电气负载。它位于 DB 箱下方，以便布线路由。电表板顶部将安装一个手柄，方便用户在使用时携带和挂在某处。
 
-系统的布线和互连如图 `4.7` 所示。首先，输入电源通过电表。然后流向断路器，最后到达电表板上的插座出口。电源还进入 AC–DC 电源模块，为 `RS-485-TTL` 转换模块和 `WeMos` 板降压。电表底部 `RS-485` 接口的 A、B 口连接到转换模块的相应端子。转换模块的输出引脚连接到 `WeMos` 板的相应引脚。
-
-
-
-
+系统的布线和互连如图`4.7`所示。首先，输入电源通过电表。然后流向断路器，最后到达电表板上的插座出口。电源还进入 AC–DC 电源模块，为`RS-485-TTL`转换模块和`WeMos`板降压。电表底部`RS-485`接口的 A、B 口连接到转换模块的相应端子。转换模块的输出引脚连接到`WeMos`板的相应引脚。
 
 该原型的设计目标是紧凑且易于使用。设计标准包括通过引入保护装置以及良好的电气绝缘来确保安全性。通过使用外壳和盖防止灰尘、水分和老化，考虑了设备性能的可靠性。
 
@@ -1370,7 +1342,7 @@ DIN 轨外箱封装了内部电气和电子元件，包括 `WeMos D1 Mini`、`TT
 
 ### 4.6.1 测量单元 Modbus-RTU 寄存器
 
-`DM18SD` 能量表采用 Modbus RS-485 通信协议实现远程电表读取功能。Modbus 协议的信息从用户手册中提取。由于每个设备之间可能存在细微差异，因此理解各自的参数和配置非常重要。根据手册，所使用的编码格式符合 `Modbus-RTU` 标准，并要求偶校验位。每个字节的 11 位格式包含一个停止位、八个数据位、一个校验位和一个停止位。支持的波特率为 `1,200`、`2,400`、`4,800` 或默认的 `9,600` bps。此外，该协议默认支持偶校验，并可以配置为奇校验和无校验。从站地址默认为 `1`，并可以在 Modbus 标准指定的范围内手动配置。根据手册，电表中使用了两种类型的寄存器，即数据寄存器和参数寄存器。数据寄存器使用 `0 ×04` Modbus 命令进行只读操作，而从此后可以分别使用 Modbus 命令 `0 ×03` 和 `0 ×10` 进行读和写操作。数据寄存器和参数寄存器上可以执行的操作类型指示了它们对应的 Modbus 寄存器类型，分别为输入寄存器和保持寄存器。通信参数存储在参数寄存器中，可以使用功能码 `0 ×06` 覆盖存储在相应保持寄存器中的值。由于本研究的重点是监控能量信息而非控制或操作设备，因此访问了电压到频率的数据寄存器地址。Modbus 寄存器地址文档并未标准化；因此，需要注意地址可能会以不同的标准提供。手册中提供的寄存器地址是以十进制编写的，这意味着它是访问时所需的确切寄存器地址。然而，制造商可能会提供具有偏移值 `1` 的寄存器引用编号而非寄存器地址。从电表读取的数据符合 `IEEE-754` 标准，即根据 32 位 4 字节单精度浮点数格式。数据寄存器信息列于表 4.3 中。
+`DM18SD`能量表采用 Modbus RS-485 通信协议实现远程电表读取功能。Modbus 协议的信息从用户手册中提取。由于每个设备之间可能存在细微差异，因此理解各自的参数和配置非常重要。根据手册，所使用的编码格式符合`Modbus-RTU`标准，并要求偶校验位。每个字节的 11 位格式包含一个停止位、八个数据位、一个校验位和一个停止位。支持的波特率为`1,200`、`2,400`、`4,800`或默认的`9,600` bps。此外，该协议默认支持偶校验，并可以配置为奇校验和无校验。从站地址默认为`1`，并可以在 Modbus 标准指定的范围内手动配置。根据手册，电表中使用了两种类型的寄存器，即数据寄存器和参数寄存器。数据寄存器使用`0 ×04` Modbus 命令进行只读操作，而从此后可以分别使用 Modbus 命令`0 ×03`和`0 ×10`进行读和写操作。数据寄存器和参数寄存器上可以执行的操作类型指示了它们对应的 Modbus 寄存器类型，分别为输入寄存器和保持寄存器。通信参数存储在参数寄存器中，可以使用功能码`0 ×06`覆盖存储在相应保持寄存器中的值。由于本研究的重点是监控能量信息而非控制或操作设备，因此访问了电压到频率的数据寄存器地址。Modbus 寄存器地址文档并未标准化；因此，需要注意地址可能会以不同的标准提供。手册中提供的寄存器地址是以十进制编写的，这意味着它是访问时所需的确切寄存器地址。然而，制造商可能会提供具有偏移值`1`的寄存器引用编号而非寄存器地址。从电表读取的数据符合`IEEE-754`标准，即根据 32 位 4 字节单精度浮点数格式。数据寄存器信息列于表 4.3 中。
 
 表 4.3：数据寄存器列表。
 
@@ -1384,35 +1356,31 @@ DIN 轨外箱封装了内部电气和电子元件，包括 `WeMos D1 Mini`、`TT
 
 ### 4.6.2 验证测量单元 Modbus 寄存器读取
 
-MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功能，并更好地理解 `Modbus-RTU` 协议的工作原理。它提供了一个用户界面，可以方便地设置读写。它还能显示实时图表以查看数值，并轻松管理多个数据地址的读取。图 4.8 显示了电表与笔记本电脑之间的连接测试。使用 RS-485 转 USB 转换模块使笔记本电脑能够通过 RS-485 接口从能量读取数据。该转换模块基于 `CH320` 芯片，可以自动识别并控制数据传输方向，无需任何握手信号。
+MATLAB 中的`ModbusExplorer`可用于测试能量表的远程电表读取功能，并更好地理解`Modbus-RTU`协议的工作原理。它提供了一个用户界面，可以方便地设置读写。它还能显示实时图表以查看数值，并轻松管理多个数据地址的读取。图 4.8 显示了电表与笔记本电脑之间的连接测试。使用 RS-485 转 USB 转换模块使笔记本电脑能够通过 RS-485 接口从能量读取数据。该转换模块基于`CH320`芯片，可以自动识别并控制数据传输方向，无需任何握手信号。
 
 ![](img/b_9783110714043-004_fig_008.jpg)
 
 图 4.8：能量表与笔记本电脑之间的连接设置测试。
 
-通过使用 `Modbus Explorer`，可以轻松执行 Modbus 通信参数配置和电表读取功能。首先，配置到设备的新连接。连接可以是 `Modbus serial` 或 `Modbus TCP/IP`。选择 `Modbus serial` 是因为它实现了 `Modbus-RTU` 协议。接下来，填写能量表采用的 Modbus 协议参数，如校验、波特率、停止位数量、数据位数量、超时、字节序、字序和服务器 ID，如图 4.9 所示。分配寄存器地址和寄存器类型，应用程序将在继续确认参数设置之前尝试从该寄存器读取数据。如果从寄存器读取到有效值，则配置过程可以继续。
+通过使用`Modbus Explorer`，可以轻松执行 Modbus 通信参数配置和电表读取功能。首先，配置到设备的新连接。连接可以是`Modbus serial`或`Modbus TCP/IP`。选择`Modbus serial`是因为它实现了`Modbus-RTU`协议。接下来，填写能量表采用的 Modbus 协议参数，如校验、波特率、停止位数量、数据位数量、超时、字节序、字序和服务器 ID，如图 4.9 所示。分配寄存器地址和寄存器类型，应用程序将在继续确认参数设置之前尝试从该寄存器读取数据。如果从寄存器读取到有效值，则配置过程可以继续。
 
 ![](img/b_9783110714043-004_fig_009.jpg)
 
 图 4.9：Modbus 通信规范配置。
 
-最后，插入需要读取的数据寄存器信息，并检索结果并显示在表中。从界面上可以实时读取不同参数的值，如图 4.10 所示。获得的结果符合预期。记录的电压读取值为 `243.1` V，在 `240` V 左右，频率正好为 `50` Hz，符合马来西亚电力标准。电流读取值为 `0.206` A，功率因数为 `0.458`，有功功率为 `22.3` W，由于是连接到笔记本电脑，这些值是可以接受的。因此，通过参考成功且正确读取数值的设置，可以在系统程序中相应地编码 Modbus 事务过程。
+最后，插入需要读取的数据寄存器信息，并检索结果并显示在表中。从界面上可以实时读取不同参数的值，如图 4.10 所示。获得的结果符合预期。记录的电压读取值为`243.1` V，在`240` V 左右，频率正好为`50` Hz，符合马来西亚电力标准。电流读取值为`0.206` A，功率因数为`0.458`，有功功率为`22.3` W，由于是连接到笔记本电脑，这些值是可以接受的。因此，通过参考成功且正确读取数值的设置，可以在系统程序中相应地编码 Modbus 事务过程。
 
 ![](img/b_9783110714043-004_fig_010.jpg)
 
-图 4.10：从 ModbusExplorer 实时读取寄存器数据。
+图 4.10：从`ModbusExplorer`实时读取寄存器数据。
 
-
-
-
-
-图 4.10 显示数据格式使用了单精度，且数值被正确读取。根据说明书，单精度代表 IEEE-754 单精度浮点标准，该标准被用作电表的数据格式。单精度浮点数可以表示非常广泛的范围（大约 ± 10^(38.53)），精度约为 7 位有效数字。IEEE-754 单精度规定了浮点数据在 32 位数据中的二进制表示结构。然而，每个寄存器只能存储 16 位，因此 32 位数据需要被拆分并存储在两个连续的寄存器中。Modbus 协议没有明确定义数据应如何在寄存器中存储和传输，因此制造商可能对数据结构的组织有自己的设计。因此，根据制造商实现的方案从寄存器中读取数据至关重要。寄存器读取必须按照正确的字节序和字序执行。字序表示存储在连续寄存器中的两个数据字的顺序，可以是大端序（先存储高位字，后存储低位字），反之则称为小端序。相同的概念适用于字节序。一个字包含 2 个字节的数据，因此可以先存储并传输高字节，后传输低字节，或反之。这种顺序分别命名为大端和小端。在按照正确顺序读取数据后，需要将高位字和低位字合并，以获得完整的 32 位二进制数据结构。
+图 4.10 显示数据格式使用了单精度，且数值被正确读取。根据说明书，单精度代表 IEEE-754 单精度浮点标准，该标准被用作电表的数据格式。单精度浮点数可以表示非常广泛的范围（大约 ± 10^(38.53)），精度约为 7 位有效数字。IEEE-754 单精度规定了浮点数据在 32 位数据中的二进制表示结构。然而，每个寄存器只能存储 16 位，因此 32 位数据需要被拆分并存储在两个连续的寄存器中。Modbus 协议没有明确定义数据应如何在寄存器中存储和传输，因此制造商可能对数据结构的组织有自己的设计。因此，根据制造商实现的方案从寄存器中读取数据至关重要。寄存器读取必须按照正确的字节序和字序执行。字序表示存储在连续寄存器中的两个数据字的顺序，可以是大端序（先存储高位字，后存储低位字），反之则称为小端序。相同的概念适用于字节序。一个字包含 2 个字节的数据，因此可以先存储并传输高字节，后传输低字节，或反之。这种顺序分别命名为大端和小端。在按照正确顺序读取数据后，需要将高位字和低位字合并，以获得完整的 32 位二进制数据结构。
 
 合并后的 32 位数据需要以 IEEE-754 格式进行解释，而不是普通的通用二进制值。根据 IEEE-754 标准，最高位是符号位（S），0 表示正数，1 表示负数。接下来的 8 位表示指数（E）。这是一个偏置指数，通过在实际指数上加上一个偏置来得到存储的指数。正指数和负指数均可表示。剩余的 23 位表示尾数（M）。它是一个规格化尾数。尾数是科学计数法数字或浮点数的一部分，由其有效数字组成。规格化尾数是指小数点左侧只有一个 1 的尾数。使用编码中的计算方法从 IEEE-754 数据结构的每个分量中计算实际值是复杂的。浮点是计算机系统识别的常用变量类型，因此可以使用内置函数轻松实现转换。类型转换函数可用于将值转换为所需的类型。在系统程序中，合并后的 32 位数据被存储为无符号 32 位整数。因此，它需要被转换为浮点数据类型，以便系统能够正确解释数据。
 
 ### 4.6.3 系统程序流
 
-图 4.11 显示了实时电表监控系统的程序流。首先，初始化 Modbus 通信协议、Wi-Fi 连接、软件串口引脚、NTP 服务器和 ThingSpeak 通道。配置所有所需的参数，以确保循环中的过程正常运行。接下来，WeMos Wi-Fi 板板将尝试连接到家庭路由器，直到建立互联网连接。之后，从网络时间协议（NTP）服务器检查 `currenttimestamp`。NTP 是一种用于将计算机时钟同步到协调世界时间（UTC）几毫秒以内的互联网协议。它持续监控当前时间，并等待直到下一分钟（完成以分钟为单位的时间间隔），然后再从电表的数据寄存器中读取数据。每分钟使用 Modbus-RTU 通信协议从电表的数据寄存器中读取数据。WeMos 板接收到的数据将根据 IEEE-754 单精度浮点二进制格式进行处理，以以正确的格式组织它们并获得相应的值。最后，处理后的数据通过 `post` 方法发送到 ThingSpeak 通道。`post` 是 HTTP 支持的一种请求方法，用于从指定资源向服务器发送数据包。每当 Wi-Fi 连接断开时，程序将在运行循环之前启动重新连接。
+图 4.11 显示了实时电表监控系统的程序流。首先，初始化 Modbus 通信协议、Wi-Fi 连接、软件串口引脚、NTP 服务器和 ThingSpeak 通道。配置所有所需的参数，以确保循环中的过程正常运行。接下来，WeMos Wi-Fi 板将尝试连接到家庭路由器，直到建立互联网连接。之后，从网络时间协议（NTP）服务器检查`currenttimestamp`。NTP 是一种用于将计算机时钟同步到协调世界时间（UTC）几毫秒以内的互联网协议。它持续监控当前时间，并等待直到下一分钟（完成以分钟为单位的时间间隔），然后再从电表的数据寄存器中读取数据。每分钟使用 Modbus-RTU 通信协议从电表的数据寄存器中读取数据。WeMos 板接收到的数据将根据 IEEE-754 单精度浮点二进制格式进行处理，以以正确的格式组织它们并获得相应的值。最后，处理后的数据通过`post`方法发送到 ThingSpeak 通道。`post`是 HTTP 支持的一种请求方法，用于从指定资源向服务器发送数据包。每当 Wi-Fi 连接断开时，程序将在运行循环之前启动重新连接。
 
 ![](img/b_9783110714043-004_fig_011.jpg)
 
@@ -1420,19 +1388,15 @@ MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功�
 
 ### 4.6.4 平台
 
-在此项目中，使用 Arduino 集成开发环境（IDE）根据上述说明的概念编写程序。它是一个开源平台，可以在网上找到全面的文档和丰富的资源。由于其用户友好的界面并带有社区支持，它被学生、开发者和研究人员广泛使用。它允许编写编写代码，并且与市场上的大多数开发板具有良好的兼容性。它运行在 Windows、Mac OS X 和 Linux 上。该软件支持 C 和 C++ 语言。
+在此项目中，使用 Arduino 集成开发环境（IDE）根据上述说明的概念编写程序。它是一个开源平台，可以在网上找到全面的文档和丰富的资源。由于其用户友好的界面并带有社区支持，它被学生、开发者和研究人员广泛使用。它允许编写代码，并且与市场上的大多数开发板具有良好的兼容性。它运行在 Windows、Mac OS X 和 Linux 上。该软件支持 C 和 C++ 语言。
 
 ### 4.6.5 使用的板级内核和库
 
-板内核（Board cores）对于使新的微控制器与 Arduino IDE 以及现有的 sketch 和库兼容是必要的。Arduino IDE 内部的板管理器提供了为 Arduino 板开发的内核列表。WeMos D1 Mini 板使用的 ESP8266 微控制器不是 Arduino 板板，因此需要添加第三方内核。该项目使用了 ESP8266 Arduino Core。它将 ESP8266 芯片的支持引入 Arduino 环境，允许用户编写 sketch、使用熟悉的 Arduino 函数和库，并直接在 ESP8266 上运行，而无需外部微控制器。要安装第三方平台包，在使用板管理器添加内核之前，需要在 Arduino IDE 的首选项窗口中添加额外的 URL。使用的板包 URL 是 `https://arduino.esp8266.com/stable/package_esp8266com_index.json`，在板管理器中要安装的板包版本为 `v2.7.2`。使用兼容的版本是非常重要的，因为某些旧版本包含错误且无法良好运行。
+板内核（Board cores）对于使新的微控制器与 Arduino IDE 以及现有的 sketch 和库兼容是必要的。Arduino IDE 内部的板管理器提供了为 Arduino 板开发的内核列表。WeMos D1 Mini 板使用的 ESP8266 微控制器不是 Arduino 板，因此需要添加第三方内核。该项目使用了 ESP8266 Arduino Core。它将 ESP8266 芯片的支持引入 Arduino 环境，允许用户编写 sketch、使用熟悉的 Arduino 函数和库，并直接在 ESP8266 上运行，而无需外部微控制器。要安装第三方平台包，在使用板管理器添加内核之前，需要在 Arduino IDE 的首选项窗口中添加额外的 URL。使用的板包 URL 是`https://arduino.esp8266.com/stable/package_esp8266com_index.json`，在板管理器中要安装的板包版本为`v2.7.2`。使用兼容的版本是非常重要的，因为某些旧版本包含错误且无法良好运行。
 
+## 库
 
-
-
-
-# 库
-
-库是非常实用的工具，可以节省大量工作，因为它们包含了开发者为了特定目的而创建的代码组和函数。有几个库用于根据程序流构建代码 [39]。`board` 包附带的 `ESP8266` 库允许 `ESP8266` 板板执行某些所需的功能。例如，`ESPSoftwareSerial` 库和 `ESP8266Wi-Fi` 库。`WeMos D1 Mini R2` 只有一个串口，即 micro-USB 端口和一对发射器与接收器引脚。同一时间只有一个引脚可以作为串口使用。micro-USB 端口始终用于通过 `Arduino IDE` 的 `Serial Monitor` 打印结果。因此，需要额外的串口来接收来自电能的信号。代码中使用了 `ESP software serial library`。它允许用户将两个数字引脚转换为软件串口。该库的代码在两个数字引脚上添加了编码器和解码器，允许它们像串口一样用于传输和接收信号。它主要用于 `ESP8266` 板。`ESP8266` 板上的引脚 `D1` 和 `D2` 在项目中被用作软件串口。软件包中的另一个名为 `ESP8266WiFi` 的库用于提供特定的 `ESP8266` Wi-Fi 方法，以便于连接网络。其他所需的库是 `ModbusMaster`、`NTPClient` 和 `Wi-FiUDP`，可以从库管理器下载。`ModbusMaster` 库使 Modbus 通信编程变得简单，能够通过 `RS232/485`（通过 `RTU` 协议）与 Modbus 从站通信。`NTPClient` 库代码允许 `NTP` 客户端连接到时间服务器，获取时间并保持同步。`Wi-FiUDP` 库与 `NTPClient` 库关联，便于使用 `User Datagram Protocol` (`UDP`) 向 `NTP` 服务器发送请求，例如打开 UDP 端口、发送和接收 UDP 数据包等。表 4.4 显示了开发系统程序时从这些库利用的关键函数。表中列出的函数是本项目使用的重要代码。这些库还提供了许多其他函数，可以根据研究人员或用户的需要用于其他操作或目的。
+库是非常实用的工具，可以节省大量工作，因为它们包含了开发者为了特定目的而创建的代码组和函数。有几个库用于根据程序流构建代码 [39]。`board`包附带的`ESP8266`库允许`ESP8266`板执行某些所需的功能。例如，`ESPSoftwareSerial`库和`ESP8266Wi-Fi`库。`WeMos D1 Mini R2`只有一个串口，即 micro-USB 端口和一对发射器与接收器引脚。同一时间只有一个引脚可以作为串口使用。micro-USB 端口始终用于通过`Arduino IDE`的`Serial Monitor`打印结果。因此，需要额外的串口来接收来自电能的信号。代码中使用了`ESP software serial library`。它允许用户将两个数字引脚转换为软件串口。该库的代码在两个数字引脚上添加了编码器和解码器，允许它们像串口一样用于传输和接收信号。它主要用于`ESP8266`板。`ESP8266`板上的引脚`D1`和`D2`在项目中被用作软件串口。软件包中的另一个名为`ESP8266WiFi`的库用于提供特定的`ESP8266` Wi-Fi 方法，以便于连接网络。其他所需的库是`ModbusMaster`、`NTPClient`和`Wi-FiUDP`，可以从库管理器下载。`ModbusMaster`库使 Modbus 通信编程变得简单，能够通过`RS232/485`（通过`RTU`协议）与 Modbus 从站通信。`NTPClient`库代码允许`NTP`客户端连接到时间服务器，获取时间并保持同步。`Wi-FiUDP`库与`NTPClient`库关联，便于使用`User Datagram Protocol` (`UDP`)向`NTP`服务器发送请求，例如打开 UDP 端口、发送和接收 UDP 数据包等。表 4.4 显示了开发系统程序时从这些库利用的关键函数。表中列出的函数是本项目使用的重要代码。这些库还提供了许多其他函数，可以根据研究人员或用户的需要用于其他操作或目的。
 
 ## 表 4.4：系统程序中使用库的关键函数。
 
@@ -1440,44 +1404,42 @@ MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功�
 | --- | --- | --- |
 | `ESPSoftwareSerial` | `begin()` | 初始化串口配置，如波特率、数据、校验位和停止位 |
 | `ESP8266WiFi` | `begin()` | 初始化 Wi-Fi 库的网络设置，如 SSID 和密码 |
-| `status()` | 检查 Wi-Fi 连接状态 |
-| `connect()` | 允许客户端连接到构造函数中指定的 IP 地址和端口 |
-| `print()` | 向客户端所连接的服务器打印数据 |
+| | `status()` | 检查 Wi-Fi 连接状态 |
+| | `connect()` | 允许客户端连接到构造函数中指定的 IP 地址和端口 |
+| | `print()` | 向客户端所连接的服务器打印数据 |
 | `ModbusMaster` | `begin()` | 分配 Modbus 从站 ID 和串口。 |
-| `readInputRegisters()` | 执行功能 `0 × 04` 从输入寄存器读取数据 |
-| `readHoldingRegisters()` | 执行功能 `0 × 03` 从保持寄存器读取数据 |
-| `Ku8MBSuccess()` | 检查 Modbus 事务是否成功 |
-| `getResponseBuffer()` | 从响应缓冲区中检索数据 |
+| | `readInputRegisters()` | 执行功能`0 × 04`从输入寄存器读取数据 |
+| | `readHoldingRegisters()` | 执行功能`0 × 03`从保持寄存器读取数据 |
+| | `Ku8MBSuccess()` | 检查 Modbus 事务是否成功 |
+| | `getResponseBuffer()` | 从响应缓冲区中检索数据 |
 | `NTPClient&WiFiUDP` | `NTPClient()` | 特定的 NTP 服务器和 UTC 时间偏移 |
-| `begin()` | 初始化 NTP 客户端 |
-| `update()` | 从 NTP 服务器获取当前日期和时间 |
-| `getSeconds()` | 返回当前秒数数据 |
+| | `begin()` | 初始化 NTP 客户端 |
+| | `update()` | 从 NTP 服务器获取当前日期和时间 |
+| | `getSeconds()` | 返回当前秒数数据 |
 
 ### 4.6.6 IoT 平台
 
-智能电表监控系统的云数据库和实时仪表板是使用 `ThingSpeak` 提供的服务实现的。这是一个 IoT 分析平台服务，允许用户在云端收集、可视化和分析实时数据流。它使 IoT 系统的原型设计变得简单，因为它简化了后端数据库的配置和用户界面设计的编码。它与 `MATLAB` 集成，提供强大的数据分析功能。可以使用第三方服务对数据执行警报消息和控制操作。`ThingSpeak` 为学生、研究人员和教育工作者提供免费许可证。免费许可证下提供的数据存储对于小型项目是足够的。除非用户删除，否则数据可以永久存储在云端。消息更新间隔限制为 15 秒，满足本项目的要求，因为系统需要每分钟向云端更新数据。此外，还有强大的社区支持，用户可以方便地交换信息。`ThingSpeak` 提供更多功能的付费许可证。
+智能电表监控系统的云数据库和实时仪表板是使用`ThingSpeak`提供的服务实现的。这是一个 IoT 分析平台服务，允许用户在云端收集、可视化和分析实时数据流。它使 IoT 系统的原型设计变得简单，因为它简化了后端数据库的配置和用户界面设计的编码。它与`MATLAB`集成，提供强大的数据分析功能。可以使用第三方服务对数据执行警报消息和控制操作。`ThingSpeak`为学生、研究人员和教育工作者提供免费许可证。免费许可证下提供的数据存储对于小型项目是足够的。除非用户删除，否则数据可以永久存储在云端。消息更新间隔限制为 15 秒，满足本项目的要求，因为系统需要每分钟向云端更新数据。此外，还有强大的社区支持，用户可以方便地交换信息。`ThingSpeak`提供更多功能的付费许可证。
 
 ### 4.6.7 ThingSpeak 的设置
 
-在 `ThingSpeak` 应用中，定义了通道（channels）来存储数据。在免费许可证下，每个通道有八个可以存储任意类型数据的字段，外三个位置数据字段和一个状态数据字段。一旦在通道中收集数据，可以使用 `ThingSpeak` 进行分析和可视化。关键设置是通道名称、描述和字段。首先为 `ThingSpeak` 通道创建一个唯一名称，并插入简短描述。对于本项目，通道设置如图 图 4.12 所示。
+在`ThingSpeak`应用中，定义了通道（channels）来存储数据。在免费许可证下，每个通道有八个可以存储任意类型数据的字段，另外三个位置数据字段和一个状态数据字段。一旦在通道中收集数据，可以使用`ThingSpeak`进行分析和可视化。关键设置是通道名称、描述和字段。首先为`ThingSpeak`通道创建一个唯一名称，并插入简短描述。对于本项目，通道设置如图 4.12 所示。
 
 ## 4.7 结果
 
-智能电表监控系统是根据设计构建的。图 4.14 显示了在万洞板上完成的系统电路。连接是通过根据原理图焊接组件完成的。组件在万洞板上的尺寸和排列设计为适合 DIN 导轨外壳。整个原型如图 图 4.15 所示。
+智能电表监控系统是根据设计构建的。图 4.14 显示了在万洞板上完成的系统电路。连接是通过根据原理图焊接组件完成的。组件在万洞板上的尺寸和排列设计为适合 DIN 导轨外壳。整个原型如图 4.15 所示。
 
 对原型进行了功能验证。将原型的电源线插在墙上的家用用电插座上，该插座额定单相电压水平为 240 V[AC]，并将笔记本电脑连接到专用插座作为负载抽电。使用工业标准表与电表的测量结果进行比较。
 
-
-
-
-
-图 4.16 显示了电表的电压测量值。电表的电压读数为 `244.3 V `，这与 `Janitza` 电表上的 `244 V ` 数值大致相同。`DDM18SD` 电表在显示屏上显示出更高的精度。[图 4.17 显示了电表的电流测量值。电表和 `Janitza` 表的电流读数相同，均为 `0.14 A `。[图 4.18 显示了电表的频率测量值。两个电表从电源测得的频率均为 `50 Hz `。因此，电表测量结果的准确性得到了保障。
+图 4.16 显示了电表的电压测量值。电表的电压读数为`244.3 V`，这与`Janitza`电表上的`244 V`数值大致相同。`DDM18SD`电表在显示屏上显示出更高的精度。图 4.17 显示了电表的电流测量值。电表和`Janitza`表的电流读数相同，均为`0.14 A`。图 4.18 显示了电表的频率测量值。两个电表从电源测得的频率均为`50 Hz`。因此，电表测量结果的准确性得到了保障。
 
 ![](img/b_9783110714043-004_fig_016.jpg)
 
-图 4.16：(a) `DDM18SD` 电表的电压读数，和 (b) `Janitza` 数字功率表的电压读数。
+图 4.16：(a) `DDM18SD`电表的电压读数，和 (b) `Janitza`数字功率表的电压读数。
 
 ![](img/b_9783110714043-004_fig_017.jpg)
+
+
 
 图 4.17：(a) `DDM18SD` 电表的电流读数，和 (b) `Janitza` 数字功率表的电流读数。
 
@@ -1485,7 +1447,7 @@ MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功�
 
 图 4.18：(a) `DDM18SD` 电表的频率读数，和 (b) `Janitza` 数字功率表的频率读数。
 
-`WeMos` 板连接到笔记本电脑的 USB 端口以从 `Arduino IDE` 加载系统程序。通过 `Arduino IDE` 中的串口监视器观察了这一过程。`WeMos` 与笔记本电脑之间的串口通信使用了 `9,600kbps` 的波特率。串口监视器必须使用相同的波特率才能读取数据。程序从配置软件串口通信、`Modbus` 通信、`Wi-Fi` 网络以及后端 `NTP` 客户端-服务器参数开始。然后，根据程序流程首先建立 `Wi-Fi` 连接。图 4.19 显示 `WeMos` 板在串口监视器上成功建立了 `Wi-Fi` 连接。随后启动 `NTP` 客户端，系统将持续向 `NTP` 服务器请求时间数据，以检查 `currentseconds` 值是否等于零（表示进入下一分钟）。每隔 1 分钟，将使用 `Modbus-RTU` 协议从电表的数据寄存器通过 `WeMos` 读取数据值。最后，数据被发送到 `ThingSpeak` 通道，整个过程循环进行。图 4.20 显示系统成功读取了电数值。串口监视器显示了系统程序成功运行预期输出。电压为 `244.4 V `，电流为 `0.14 A `，有功率为 `16.7 W`，频率为 `50 Hz `。随后使用 `HTTP POST` 方法将信息发送到 `ThingSpeak` 通道。
+`WeMos` 板连接到笔记本电脑的 USB 端口以从 `Arduino IDE` 加载系统程序。通过 `Arduino IDE` 中的串口监视器观察了这一过程。`WeMos` 与笔记本电脑之间的串口通信使用了 `9,600kbps` 的波特率。串口监视器必须使用相同的波特率才能读取数据。程序从配置软件串口通信、`Modbus` 通信、`Wi-Fi` 网络以及后端 `NTP` 客户端-服务器参数开始。然后，根据程序流程首先建立 `Wi-Fi` 连接。图 4.19 显示 `WeMos` 板在串口监视器上成功建立了 `Wi-Fi` 连接。随后启动 `NTP` 客户端，系统将持续向 `NTP` 服务器请求时间数据，以检查 `currentseconds` 值是否等于零（表示进入下一分钟）。每隔 1 分钟，将使用 `Modbus-RTU` 协议从电表的数据寄存器通过 `WeMos` 读取数据值。最后，数据被发送到 `ThingSpeak` 通道，整个过程循环进行。图 4.20 显示系统成功读取了电数值。串口监视器显示了系统程序成功运行预期输出。电压为 `244.4 V`，电流为 `0.14 A`，有功率为 `16.7 W`，频率为 `50 Hz`。随后使用 `HTTP POST` 方法将信息发送到 `ThingSpeak` 通道。
 
 ![](img/b_9783110714043-004_fig_019.jpg)
 
@@ -1498,10 +1460,6 @@ MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功�
 最后，系统在负载下运行了超过 `24 h` 以验证其可靠性和一致性。在观测期间对负载进行了操作，以观察消耗的变化。每分钟在 `ThingSpeak` 通道上收集一次数据，并在最后将最终数据集以 `CSV` 文件格式导出，供后续分析。需要收集的数据点总数为：每小时 60 分钟乘以每天 24 小时，等于每天 1,440 个数据点。
 
 导出的数据包含预期的数据点数量，显示了系统在 `24 h` 内每分钟为基础监测能量并将数据发送到云端的性能一致性。图 4.21 和 图 4.22 显示了系统在 `24 h` 内每分钟为基础监测能量并将数据发送到云端的性能一致性。
-
-
-
-
 
 图 4.24 显示了笔记本电脑在 24 小时内每分钟消耗的有功率。其趋势与“电流随时间变化”图相同。在下午 1 点记录到最大有功率为 101.9 W，此时笔记本电脑电池电量未完全充满。在其余时间里，有功率保持稳定。上午 10:30 之前的数值在 5 W 左右，之后则大约在 8 W 左右。在凌晨 12 点到上午 10:30 之间，有功率间歇性下降至零，因为笔记本电脑在睡眠模式下耗电极低，且在电量充满后会停止取电。另一方面，上午 10:30 之后，有功率没有降至零，因为用户开始使用它并运行程序，从而为了操作消耗更多的电。因此，可以从结果中解读用户 24 小时内的使用行为。
 
@@ -1541,66 +1499,83 @@ MATLAB 中的 `ModbusExplorer` 可用于测试能量表的远程电表读取功�
 
 [13] Energy Commission Malaysia. National Energy Balance 2017, 2019.
 
-
-
-
-
 ## 参考文献
 
 - [14] Hassanpour V., Rajabi S., Shayan Z., Haafezi Z., Arefi M. M. 使用 `Arduino` 和 `Modbus` 协议的低成本家庭自动化。2017 年第 5 届国际控制、仪表与自动化会议，`ICCIA 2018-January`, 2017, 284–289. https://doi.org/10.1109/ICCIAutom.2017.8258694
+
 - [15] Hlaing W., Thepphaeng S., Nontaboot V., Tangsunantham N., Sangsuwan T., Pira C. 用于物联网（IoT）的基于 `WiFi` 单相智能表实现。2017 年电气工程大会，`IEECON`, 2017 年 3 月, 8–10. https://doi.org/10.1109/IEECON.2017.8075793
+
 - [16] Joshi D. S. A., Kolvekar S., Raj Y. R., Singh S. S. 基于物联网的智能电表。Bonfring 国际通信工程研究期刊，6(特刊), 2016, 89–91, https://doi.org/10.9756/bijrce.8209.
+
 - [17] JyothiPrakash K. V., Chethana N. S., Tamkeen F., Kala C. S., Kavya N. R. 用于节能的设计的基于微控制器的电表（智能电表）。第 4 次国际通信与电子系统会议，`ICCES 2019`, Icces, 2019, 1252–1255. https://doi.org/10.1109/ICCES45898.2019.9002590
+
 - [18] Kalaithasan K., Radzi N. A. M., Abidin H. Z. 物联网在病态建筑综合征监测中的应用。印尼电气工程与计算机科学杂志，12(2), 2018, 505–512, https://doi.org/10.11591/ijeecs.v12.i2.pp505-512.
+
 - [19] Karthikeyan S., Bhuvaneswari P. T. V. 基于物联网的实时住宅电表监控系统。论文集–`TIMA 2017`: 第 9 届工业测量与自动化趋势国际会议，2017. https://doi.org/10.1109/TIMA.2017.80647
+
 - [20] Kugelstadt T. `RS-485` 设计指南，2018.
+
 - [21] Kumar A., Thakur S., Bhattacharjee P. 智慧城市中用于 `AMI` 的 `AMR` 功能电表实时监控——一种应用。论文集–2018 IEEE 第 4 次智能电子系统国际研讨会，`iSES`, 2018, 219–222. https://doi.org/10.1109/iSES.2018.00055
+
 - [22] Kunte S., Shaikh J. A. 用于配置 `modbus` 系统串口参数的用户定义函数实现，5(10), 2015, 1–5.
+
 - [23] Maxim Integrated. 使用 `RS-485` 可以走多远、多快，2018.
+
 - [24] Meetoo C., Bahadoorsingh S., Ramsamooj N., Sharma C. 无线住宅电力监控系统。2017 IEEE 曼彻 PowerTech，`Powertech`, 2017. https://doi.org/10.1109/PTC.2017.7981122
+
 - [25] Modbus 组织. 串行链路 `MODBUS` 规范与实施指南，卷 `V1.02`, 2006.
+
 - [26] Modbus 组织. `Modbus` 应用协议规范，`V1.1b3`, 2012.
+
 - [27] Ng T. F., Shabudin A. F. A., Hassan M. S. 马来西亚大学宿舍的能耗：能源审计与能效意识。在：Filho W. L. (编辑), 高等教育可持续发展理论与实践手册，世界可持续系列，卷 3, Springer Nature, 2017, 191–205, https://doi.org/10.1007/978-3-319-47895_23
+
 - [28] Pandit S., Sneha M., Nichal M. 使用物联网（IoT）的智能电表。`VJER`-Vishwakarma 工程研究期刊，1(2), 2017, 222–229.
+
 - [29] Patel H., Mody T., Goyal A. 基于 `Arduino` 的 `GSM` 智能电表。论文集–2019 年第 4 次物联网国际会议：智能创新与应用，`IoT-SIU`, 2019. https://doi.org/10.1109/IoT-SIU.2019.8774
+
 - [30] Ravindran S., Manju R., Thomas R. 基于变频器的 `MODBUS` 设计系统。2019 年嵌入式计算与设计国际研讨会论文，`ISED 2019`, 84–88. https://doi.org/10.1109/ISED48633
+
 - [31] Saha S., Mondal S., Saha A., Purkait P. 基于物联网的电表设计与实现。2018 IEEE IEEE 信号处理会议论文，`ASPCON 2018`, 19–23. https://doi.org/10.1109/ASPCON.87489
+
 - [32] SowmiyaM., John Praveen A., Subbulakshmi K. 使用 `modbus` 协议的主从站收发系统。工程与先进技术国际期刊，8(6) 特刊, 2019, 301–304. https://doi.org/10.35940/ijeat.F1080S219
+
 - [33] Sun C., Guo K., Xu Z., Ma J., Hu D. 基于树莓派的工业物联网云 `Modbus/MQTT` 网关设计与开发。论文集–2019 年中国自动化会议，`CAC 2019`, 2267–2271. https://doi.org/10.1109/CAC4863
+
 - [34] Tenaga National Berhad. `TNB` 智能电表用户指南，2020. https://www.mytnb.com.my/themes/user/pdf/Guide_FAQ_for_Smart_Meter_Customers_V1.1.pdf
+
 - [35] Urrea C., Morales C., Kern J. `Modbus-RTU` 串口协议中的错误检测与纠实现。国际关键基础设施保护杂志，15, 2016, 27–37, https://doi.org/10.1016/j.ijcip.2016.07.001
-- [36] Visalatchi S., Kamal Sandeep K. 使用 `arduino`& `GSM` 的智能电表与窃电控制。2017 年第 2 次技术融合国际会议，`I2CT 2017`, 2017-January, 858–861. https://doi.org/10.1109/I2CT.2017.8226
-- [37] Wang K., Peng D., Song L., Zhang H. 基于 `ARM Coretx-M0` 的 `Modbus` 通信协议实现。2014 年系统科学与工程国际会议论文集，`ICSSE 2014`, 69–73. https://doi.org/10.1109/ICSSE.2014.6887
 
 
 
-
-
-- [38]Zhao L., Wang P., Zhang Q., Zhang L. Multichannel temperature acquisition and monitoring system based on internet of things. Proceedings of the 32nd Chinese Control and Decision Conference, CCDC 2020, 1415–1419. https://doi.org/10.1109/CCDC49329.2020.9164086 →
-
-- [39]Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. Internet of things augmented a novel PSO-employed modified zeta converter-based photovoltaic maximum power tracking system: hardware realisation. IET Power Electronics, 13, 2020, 2775–2781. →
+- [36] Visalatchi S., Kamal Sandeep K. 使用`arduino` & `GSM`的智能电表与窃电控制。2017 年第 2 次技术融合国际会议，`I2CT 2017`，2017-January, 858–861。https://doi.org/10.1109/I2CT.2017.8226
+- [37] Wang K., Peng D., Song L., Zhang H. 基于`ARM Coretx-M0`的`Modbus`通信协议实现。2014 年系统科学与工程国际会议论文集，`ICSSE 2014`，69–73。https://doi.org/10.1109/ICSSE.2014.6887
+- [38] Zhao L., Wang P., Zhang Q., Zhang L. Multichannel temperature acquisition and monitoring system based on internet of things. Proceedings of the 32nd Chinese Control and Decision Conference, `CCDC 2020`, 1415–1419。https://doi.org/10.1109/CCDC49329.2020.9164086 →
+- [39] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. Internet of things augmented a novel PSO-employed modified zeta converter-based photovoltaic maximum power tracking system: hardware realisation. IET Power Electronics, 13, 2020, 2775–2781。→
 
 # 5 基于物联网（IoT）的智能电网
 
-Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amritansh Mehrotra, University of Petroleum and Energy Studies, Dehradun, India; Devender Kumar Saini, University of Petroleum and Energy Studies, Dehradun, India
+Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India；Amritansh Mehrotra, University of Petroleum and Energy Studies, Dehradun, India；Devender Kumar Saini, University of Petroleum and Energy Studies, Dehradun, India
 
-### 摘要
+## 摘要
+
 目前的电网与负载之间只有单向通信系统，这被称为独白。这使得电网无法与负载侧进行通信以自我管理。当两者之间存在通信方式时，我们可以之为对话。这使得普通电网变成了“智能电网”。智能电网代表了能源行业进入可靠性、可用性和效率新时代的机遇，这将有助于我们的经济和环境健康。
 
 为了使电网智能化，系统中必须添加新的传感器和测量仪器。这些仪器将获取电网以及需求侧的实时数据，并用于适当的监测和规划。收集和分析这些实时数据将存储在云端，并可以随地访问。为此，物联网（IoT）将被证明非常有用。在本章中，我们将从智能电网和物联网的基础开始，提供有关物联网和智能电网中使用的每个参数和仪器的信息。然后，我们将展示当今世界中使用这些技术的示例。我们还将讨论这种方法的优缺点。
 
-关键词：物联网（IoT），智能电网，物联网在智能电网中的应用。
+**关键词**：物联网（IoT），智能电网，物联网在智能电网中的应用。
 
 ## 5.1 引言
+
 电网可以理解为由互联网络组成的系统，用于从生产者向消费者输送电力 [1, 2, 3]。它也被称为电网、电力网或电气网 [4, 5, 6]。电气网的组成部分如下：
 
 1. **发电站**：发电站是电网上由发电厂发电的节点。发电可以通过热力发电厂、水电厂、核能、太阳能、风能等进行 [7, 8, 9, 10]。
 2. **变电站**：这些站点用于升压以供传输，或降压以供配电 [11, 12]。
-3. **高压线路**：这些传输线路用于将电力从发电地传输到配电。。它们具有良好的绝缘以便承受高电压 [13, 14]。
+3. **高压线路**：这些传输线路用于将电力从发电地传输到配电。它们具有良好的绝缘以便承受高电压 [13, 14]。
 4. **低压配电线**：这些用于连接客户。目前的电网与负载只有单向通信系统，被称为独白。这使得电网无法与负载通信。但如果电网能与负载通信，将对发电侧和消费侧都是非常有益的。当负载侧和发电侧之间存在增强可靠性和可持续性的双向通信时，我们称之为对话 [15]。电网被称为“智能电网”。现在我们进一步了解什么是智能电网以及普通电网如何变得智能。
 
 ### 5.1.1 什么是智能电网？
-智能电网是一种与负载侧通信的系统，以便了解负载的需求。智能电网由各种操作和能源措施组成，包括智能电表、现代电器、可再生和高效资源。智能电网是通过电网持续监测和更新确保用户安全的系统类型。这可以通过电网中的智能电表和监测系统来实现负载与电网之间的电子通信 [15]。在论文 [16] 中，根据距离定义了多种通信方法。智能电网的一个重要目标是向消费者传输高质量能源 [17]。智能电网的通信基础设施可以如图 5.1](#9783110713794_012982.xhtml_b_9783110714043-005_fig_001）所示 [18]。在后面的章节中，将讨论目前智能电网中使用的各种通信技术。
+
+智能电网是一种与负载侧通信的系统，以便了解负载的需求。智能电网由各种操作和能源措施组成，包括智能电表、现代电器、可再生和高效资源。智能电网是通过电网持续监测和更新确保用户安全的系统类型。这可以通过电网中的智能电表和监测系统来实现负载与电网之间的电子通信 [15]。在论文 [16] 中，根据距离定义了多种通信方法。智能电网的一个重要目标是向消费者传输高质量能源 [17]。智能电网的通信基础设施可以如图 5.1 所示 [18]。在后面的章节中，将讨论目前智能电网中使用的各种通信技术。
 
 智能电网将允许消费者参与、抵抗攻击、优化功率传输和更好的功率因数 [15]，尽管电力系统网络的任何变化都必须遵守电网代码协议 [19]。所有这一切可以通过信息技术的深度参与来实现。将在后续章节中讨论所使用的组件以及如何使它们同步工作。
 
@@ -1611,13 +1586,14 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 图 5.1：通信基础设施。
 
 ### 5.1.2 传统电网的结构
-在图 5.2](#9783110713794_012982.xhtml_b_9783110714043-005_fig_002)中可以可视化一个经典的电气网。在经典的电气网中，存在着单向通信。电网的一个组件无法与其他组件通信。
+
+在图 5.2 中可以可视化一个经典的电气网。在经典的电气网中，存在着单向通信。电网的一个组件无法与其他组件通信。
 
 ![](img/b_9783110714043-005_fig_002.jpg)
 
 图 5.2：信息共享 [7]。
 
-图 5.3](#9783110713794_012982.xhtml_b_9783110714043-005_fig_003)阐说明了电能生产的集中化、去中心化和分布式拓扑 [15]。
+图 5.3 阐明了电能生产的集中化、去中心化和分布式拓扑 [15]。
 
 ![](img/b_9783110714043-005_fig_003.jpg)
 
@@ -1627,27 +1603,19 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 图 5.4：发电分布 [45]。
 
-
-
-
-
-这些不同的发电分布情况讨论如下 [21]:
+这些不同的发电分布情况讨论如下 [21]：
 
 1. **集中式（Centralized）**：这指的是在集中设施中进行大规模发电。由于安全措施的，这些设施通常位于客户所在地之外。它们通过能够处理高电压的高压传输线与客户连接。这些发电单元包括化石燃料热电厂、水电站等。
-
 2. **去中心化（Decentralized）**：在这种情况下，发电负荷并不集中在单一发电单元上，而是轻微分布的。它们可以是小型能量发生器，可以为附近的城镇或地区提供电力。它们可以是独立运行，也可以根据需要与其他发电站连接。这些主要基于分布式能源发电分布系统的方法。
-
 3. **分布式（Distributed）**：这指的是位于使用地或其附近的小型发电单元。用户同时也是生产者的情况也包含在内。同样，这些单元可以是独立的，也可以通过网络相互连接以共享所产生的电。在后期阶段，它们将变成局部分布式能源网络系统。
 
 传统电网应转换为智能电网三个主要原因是：
 
-1. **能源需求增加**：
-    * 新技术的引入可能会在短期内产生极高的能源需求。一个例子是电动汽车的引入，这给传统电网带来了负担。
-
-2. **减少非法用电和损耗**：
-    * 世界许多地方存在非法用电。通过智能电网的帮助可以停止这些行为并减少损耗。
-    * 印度各地发生的非法窃电。由于这些原因，电力公司面临损失，电网的稳定性也遭到了破坏。
-
+1. **能源需求增加**
+   - 新技术的引入可能会在短期内产生极高的能源需求。一个例子是电动汽车的引入，这给传统电网带来了负担。
+2. **减少非法用电和损耗**
+   - 世界许多地方存在非法用电。通过智能电网的帮助可以停止这些行为并减少损耗。
+   - 印度各地发生的非法窃电。由于这些原因，电力公司面临损失，电网的稳定性也遭到了破坏。
 3. **增加现有工厂的生产和运输能力。**
 
 ### 5.1.3 通信系统的系统要求
@@ -1656,51 +1624,48 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 这些系统不仅应该快速，而且必须安全可靠，以便减少系统中的错误概率。
 
-主要要求如下 [18]:
+主要要求如下 [18]：
 
 1. **安全性**：某些信息对于计费和电网控制非常重要。这些信息应该存储在安全的地方。信息安全对于防御随时可能网络攻击也非常重要。
-
 2. **可靠性**：系统应该是可靠的。它在本质上应该是健壮的。这些已成为目前最优先的系统要求之一。系统变得不可靠的原因有很多：系统负荷、旧的电力基础设施等 [22]。为了实现这一点，可以使用具有适当带宽和安全的无线系统，以及增加容量、安全可靠性的有线技术。如果需要，也可以使用这些系统的混合体 [23]。
-
 3. **可扩展性**：智能电网应该具有足够的扩展性，以便于添加新组件。它应该能够处理高级的 Web 服务以及添加新的电表、数据采集器和新的可再生能源资源。它们在本质上应该是安全且自配置的 [24]。
-
 4. **服务质量**：发电与消费者之间的通信是智能电网的关键问题。性能下降可能由于任何原因发生，但这会影响系统的稳定性，因此我们需要能够避免这些困难且同时能满足通信要求的系统 [46]。
 
 ### 5.1.4 可用的通信技术
 
 目前有许多可用通信技术；其中一些列如下：
 
-1. ZigBee
-2. 无线网格 (Wireless mesh)
+1. `ZigBee`
+2. 无线网格（Wireless mesh）
 3. 蜂窝网络通信
-4. 电力线通信 (Powerline communication)
-5. 数字用户用户线 (DSL)
+4. 电力线通信（Powerline communication）
+5. 数字用户用户线（DSL）
 
 表 5.1：某些通信技术的规格 [5][16]。
 
 | 技术 | 频谱 | 数据传输率 | 范围 | 应用 | 局限性 |
 | --- | --- | --- | --- | --- | --- |
 | GSM | 900–1,800 MHz | 14.4 kbps | 10 km | AMI | 低 |
-| GPRS | 900–1,800 MHz | 170 kbps | 10 km | AMI | |
-| 3G | 1.92–1.98 GHz | 3.84 kbps 至 2 Mbps | 10 km | AMI | |
-| WiMAX | 2.5 GHz, 3.5 GHz, 5.8 GHz | 高达 75 Mbps | 10–50 km (LOS) 1–5 km (NLOS) | AMI | |
-| PLC | 30 MHz | 3 Mbps | 3 km | AMI | |
-| ZigBee | 2.4 GHz, 868–915 MHz | 250 kbps | 30–50 km | AMI | |
+| GPRS | 900–1,800 MHz | 170 kbps | 10 km | AMI |  |
+| 3G | 1.92–1.98 GHz | 3.84 kbps 至 2 Mbps | 10 km | AMI |  |
+| WiMAX | 2.5 GHz, 3.5 GHz, 5.8 GHz | 高达 75 Mbps | 10–50 km (LOS)，1–5 km (NLOS) | AMI |  |
+| PLC | 30 MHz | 3 Mbps | 3 km | AMI |  |
+| ZigBee | 2.4 GHz, 868–915 MHz | 250 kbps | 30–50 km | AMI |  |
 
-### 5.1.5 物联网 (IoT) 绪
+### 5.1.5 物联网（IoT）绪
 
-物联网 (IoT) 是通过先进信息通信技术 (ICT) 连接各种元素和对象的网络，并由复杂的数字化的传感器、电表和控制器组成 [25]。
+物联网（IoT）是通过先进信息通信技术（ICT）连接各种元素和对象的网络，并由复杂的数字化传感器、电表和控制器组成 [25]。
 
-物联网也被认为是信息领域的第三次革命。能源物联网 (IoE) 是处理信息技术结合的升级版本。物联网在智能电网中的存在增强了每个组件通过有线或无线网络共享信息的能力 [26]。
+物联网也被认为是信息领域的第三次革命。能源物联网（IoE）是处理信息技术结合的升级版本。物联网在智能电网中的存在增强了每个组件通过有线或无线网络共享信息的能力 [26]。
 
 在大量和多样化的设备、设备和能源存在的情况下，其行为、可靠性和变异性产生不可预测或混沌的性质。为了处理这些情况，需要收集并分析大量数据，以便在短时间内做出决策。这些数据应该快速安全地与目的地共享，并立即开始处理。物联网设备是配备了具有共享信息能力的微控制器和微处理器的电路板设备。
 
 这一切必须在确保数据和数字系统免受网络攻击或无意干扰的情况下进行。
 
-为了开发任何物联网项目，必须使用以下技术 [14]:
+为了开发任何物联网项目，必须使用以下技术 [14]：
 
-1. 射频识别 (RFID)
-2. 无线传感器网络 (WSN)
+1. 射频识别（RFID）
+2. 无线传感器网络（WSN）
 3. 中间件
 4. 云计算
 5. 物联网应用软件
@@ -1713,36 +1678,29 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 | 参数 | 2010 年以前 | 2010–2015 | 2015–2020 | 2020 年以后 |
 | --- | --- | --- | --- | --- |
-
-
-
-
-
-| 网络 | 传感器网络 | 自感知与自组织网络 | 传感器网络位置透明性 |
-| :--- | :--- | :--- | :--- | :--- |
-| 存储网络和电力网络 | | 混合网络技术 | 网络上下文感知 | 网络认知 自学习、自修复网络 | | |
-| 软件和算法 | 关系型数据库集成 | 面向物联网的 RDBMS | 基于事件的平台 | 传感器中间件 | 传感器网络中间件 | 邻近/定位算法 | 大规模开放语义软件模块 | 可组合算法 | 下一代基于物联网的社交软件 | 下一代基于物联网的企业级应用 | 目标导向软件 分布式智能，问题解决 | 物与物协作环境 | 面向用户的软件 | 无形物联网 | 易于部署的物联网软件 | 物人协作 | | |
-| 硬件 | RFID 标签和某些传感器 | 移动设备内置传感器 | 手机中的 NFC | 更小、更廉价的 MEMs 技术 | 多协议、多标准读取器 | 更多的传感器和执行器 | 安全、低成本标签（例如，`Silent Tags`） | 智能传感器（生化） 更多的传感器和执行器（微型传感器） | 纳米技术和新材料 | |
-| 数据处理 | 串行数据处理 并行数据处理 | 能量、频谱感知数据处理 | 上下文适应数据处理 | 环境感知数据处理和数据响应 | 认知处理与优化 | |
+| 网络 | 传感器网络 | 自感知与自组织网络 | 传感器网络位置透明性 | 存储网络和电力网络；混合网络技术；网络上下文感知；网络认知；自学习、自修复网络 |
+| 软件和算法 | 关系型数据库集成 | 面向物联网的 RDBMS；基于事件的平台；传感器中间件 | 传感器网络中间件；邻近/定位算法；大规模开放语义软件模块；可组合算法 | 下一代基于物联网的社交软件；下一代基于物联网的企业级应用；目标导向软件；分布式智能，问题解决；物与物协作环境；面向用户的软件；无形物联网；易于部署的物联网软件；物人协作 |
+| 硬件 | RFID 标签和某些传感器 | 移动设备内置传感器；手机中的 NFC | 更小、更廉价的 MEMs 技术；多协议、多标准读取器；更多的传感器和执行器 | 安全、低成本标签（例如，`Silent Tags`）；智能传感器（生化）；更多的传感器和执行器（微型传感器）；纳米技术和新材料 |
+| 数据处理 | 串行数据处理；并行数据处理 | 能量、频谱感知数据处理 | 上下文适应数据处理 | 环境感知数据处理和数据响应；认知处理与优化 |
 
 ## 5.2 智能电网网络中的物联网
 
-在智能电网中，更广泛的设备将处于控制之下这将这将电网具有更高的灵活性。这意味着电网中的许多组件可以由电网运行员控制。为了确保大量且各种设备得到适当控制，必须大幅增强电网的智能化。这只有通过使用大数据分析技术才能实现。
+在智能电网中，更广泛的设备将处于控制之下，这将使电网具有更高的灵活性。这意味着电网中的许多组件可以由电网运行员控制。为了确保大量且各种设备得到适当控制，必须大幅增强电网的智能化。这只有通过使用大数据分析技术才能实现。
 
 电力系统复兴的技术需求分为四层 [25, 28]：
 
-1.  **数据分析层**：这一层由数据可视化、高级计量架构（`AMI`）提供的数据分析、设备数据分析组成。
-2.  **应用层**：数据管理、采集以及设备监督包含在此层中 [27]。
-3.  **通信与控制层**：这一层包括 `SCADA` 系统、互联网协议辅助网络、双向有线或无线网络，如 `Wi-Fi`、`GPRS` 和 `PLC` `HomePlug`。
-4.  **电网边缘层的物理设备**：这包括监控和监测设备、存储、电压控制设备、保护、现代传感器以及用于电网开关 [28]。
+1. **数据分析层**：这一层由数据可视化、高级计量架构（`AMI`）提供的数据分析、设备数据分析组成。
+2. **应用层**：数据管理、采集以及设备监督包含在此层中 [27]。
+3. **通信与控制层**：这一层包括`SCADA`系统、互联网协议辅助网络、双向有线或无线网络，如`Wi-Fi`、`GPRS`和`PLC HomePlug`。
+4. **电网边缘层的物理设备**：这包括监控和监测设备、存储、电压控制设备、保护、现代传感器以及用于电网开关 [28]。
 
 ### 5.2.1 物联网在电力系统不同层次电网中的应用
 
 物联网可以用于电网的不同层次。这些层次包括：
 
-1.  **发电层**：在这一层进行发电。这由不同的发电厂完成。
-2.  **传输层**：在这一层，产生的电能从电站传输到变电站。为此，电压被升压，电力输送到高压传输线。
-3.  **配电层**：在这一层，变电站接收到的电通过传输线进一步供应给消费者。
+1. **发电层**：在这一层进行发电。这由不同的发电厂完成。
+2. **传输层**：在这一层，产生的电能从电站传输到变电站。为此，电压被升压，电力输送到高压传输线。
+3. **配电层**：在这一层，变电站接收到的电通过传输线进一步供应给消费者。
 
 图 5.5 给出了关于智能电网中物联网范式的构想。文中讨论了每个层次的应用。
 
@@ -1756,12 +1714,12 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 图 5.6 显示了物联网在发电层的应用。在这一层，它被用于从与电网连接的每个发电站进行实时数据采集。它可以用于收集有关每个发电厂的发电效率以及发电成本的信息。到为止，物联网仅关注需求侧，对发电侧的关注较少。将此方法应用于这一层次可以解锁效率和性能提升的进一步阶段。
 
-![](img/b_9783110714043-005_fig_006)
+![](img/b_9783110714043-005_fig_006.jpg)
 
 图 5.6：发电层中的物联网应用。在此层中它被用于：
 
-1.  **风电电**：风电规模正在快速发生变化。许多专家关注风电。此外，只有在拥有实时数据的情况下才能维持更好的能量运行 [29]。
-2.  **太阳能电**：在第一、第二次工业革命后，可再生资源得到了更多关注。全球变暖和气候变化也使人们采用了这些方法。在太阳能领域，监控模块和阵列是物联网执行的任务。它为电网提供了稳定性。
+1. **风电电**：风电规模正在快速发生变化。许多专家关注风电。此外，只有在拥有实时数据的情况下才能维持更好的能量运行 [29]。
+2. **太阳能电**：在第一、第二次工业革命后，可再生资源得到了更多关注。全球变暖和气候变化也使人们采用了这些方法。在太阳能领域，监控模块和阵列是物联网执行的任务。它为电网提供了稳定性。
 
 ### 5.2.3 用于传输部门的物联网
 
@@ -1769,36 +1727,34 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 对线路流量的实时监控使运行员能够自动管理拥堵电力系统或局部拥堵区域，特别是在紧急突发情况下。因此，运行员的灵活性可以得到提高 [30]。
 
-物联网设备可以嵌入传输网中，如 `sync node device`、塔架偏差传感器、气象传感器（温度和湿度传感器）、导体加速度传感器、风速传感器、漏电传感器和跨变传感器。这些设备有助于对导体和塔架进行增强监测。
+物联网设备可以嵌入传输网中，如`sync node device`、塔架偏差传感器、气象传感器（温度和湿度传感器）、导体加速度传感器、风速传感器、漏电传感器和跨变传感器。这些设备有助于对导体和塔架进行增强监测。
 
 ### 5.2.4 用于配电部门的物联网
 
-为了构建智能电网，配电网络的所有关键点应配备物联网。安装 `AMI` 是首要任务。这些系统在服务器、数据采集器和消费者之间建立了双向、一致且安全的连接。
+为了构建智能电网，配电网络的所有关键点应配备物联网。安装`AMI`是首要任务。这些系统在服务器、数据采集器和消费者之间建立了双向、一致且安全的连接。
 
 为了提高电网的可靠性，自愈是电网的关键方案。自愈应在故障后实时发生，以确保电网尽快恢复适当且理想的功能。
 
 配电层物联网的不同区域：
 
-1.  有源配电网
-2.  微电网
-3.  智能城市、建筑和家庭
-4.  工业物联网 (`IIoT`)
+1. 有源配电网
+2. 微电网
+3. 智能城市、建筑和家庭
+4. 工业物联网（`IIoT`）
 
 图 5.7 显示了配电层中的物联网集成 [25]。
 
 ![](img/b_9783110714043-005_fig_007.jpg)
 
-
-
-
-
 图 5.7：IoT 在配电层中的集成 [25]。
 
 ## 5.3 计量系统
 
-本节描述了智能能源电表的设计与开发。读数通过电压、电流和功率因（PF）传感器等传感器采集。数据包被传输到 `NodeMCU`，并由 `NodeMCU` 向封闭的服务器发送数据。
+本节描述了智能能源电表的设计与开发。读数通过电压、电流和功率因（PF）传感器等传感器采集。数据包被传输到`NodeMCU`，并由`NodeMCU`向封闭的服务器发送数据。
 
-在目前的电表系统中，读表员每天必须频繁往波以获取大量电表的读数。为了实现这一点，他们必须到达每个客户的所在地记录读数。由于需要处理海量数据，这可能会增加人为错误的概率。自动读表系统（AMR）在这里非常有用，因为它可以记录电表读数和状态，然后将这些数据发送到中心单元进行计费。此外，IoT 通过在公用事业公司与消费者之间提供简单安全的双向通信，简化了整个网络流程，如图图 5.8 所示。
+
+
+在目前的电表系统中，读表员每天必须频繁往返以获取大量电表的读数。为了实现这一点，他们必须到达每个客户的所在地记录读数。由于需要处理海量数据，这可能会增加人为错误的概率。自动读表系统（AMR）在这里非常有用，因为它可以记录电表读数和状态，然后将这些数据发送到中心单元进行计费。此外，IoT 通过在公用事业公司与消费者之间提供简单安全的双向通信，简化了整个网络流程，如图 5.8 所示。
 
 ![](img/b_9783110714043-005_fig_008.jpg)
 
@@ -1812,21 +1768,23 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 ## 5.4 现实世界示例
 
-许多欧洲国家 [33, 34]以及亚洲国家正计划使用 IoT 来实现电网的智能化。
+许多欧洲国家 [33, 34] 以及亚洲国家正计划使用 IoT 来实现电网的智能化。
 
-针对中国 [20]和台湾 [35]等国家的需求，已进行了详细研究。他们的工作包括对可能影响智能电网的所有参数进行研究，以及他们希望应用以解决这些问题的方法或基础设施。
+针对中国 [20] 和台湾 [35] 等国家的需求，已进行了详细研究。他们的工作包括对可能影响智能电网的所有参数进行研究，以及他们希望应用以解决这些问题的方法或基础设施。
 
-美国 [34]和欧洲国家等发达国家正期待建立这些智能电网。在不久的将来，每个国家拥有智能电网将成为一种品。只有这样，他们才能应对日益增长的能源需求以及能源领域即将发生的变化，例如电动汽车的引入和 `V2G` 技术 [36, 37, 38, 39, 40, 41, 42, 43, 44]。像印度这样的国家首先深入分析可能导致此类电网故障或失效的所有因素。只有在进行适当分析后，他们才会考虑建设此类电网。这些国家面临的主要问题是人口众多和能源需求巨大 [47]。
+美国 [34] 和欧洲国家等发达国家正期待建立这些智能电网。在不久的将来，每个国家拥有智能电网将成为一种品。只有这样，他们才能应对日益增长的能源需求以及能源领域即将发生的变化，例如电动汽车的引入和 `V2G` 技术 [36, 37, 38, 39, 40, 41, 42, 43, 44]。像印度这样的国家首先深入分析可能导致此类电网故障或失效的所有因素。只有在进行适当分析后，他们才会考虑建设此类电网。这些国家面临的主要问题是人口众多和能源需求巨大 [47]。
 
 ### 5.4.1 优点与缺点
 
-优点：
+**优点：**
+
 - 更好的客户服务
 - 更好的计费系统
 - 欺诈检测
 - 减少碳排放
 
-缺点：
+**缺点：**
+
 - 必须提供持续通信，系统才能正常工作。
 - 在紧急情况下，网络拥塞和性能问题会对系统造成巨大影响。
 - 在不利情况下，由于供应商无法保证持续供应，系统可靠性会降低。
@@ -1837,247 +1795,248 @@ Monika Yadav, University of Petroleum and Energy Studies, Dehradun, India; Amrit
 
 ## 参考文献
 
-[1] Yadav A., Pal N., Yadav M. 世界可再生能源部署的战略规划与挑战：对全球发展的影响。Environment and Sustainability, 22(1), Jan 2020, 297–315, 10.1007/s10668-018-0202-3.a, b
+[1] Yadav A., Pal N., Yadav M. 世界可再生能源部署的战略规划与挑战：对全球发展的影响。`Environment and Sustainability`, 22(1), Jan 2020, 297–315, 10.1007/s10668-018-0202-3.a, b
 
-[2] Priyadarshi N., Padmanaban S., Maroti P. K., Sharma A. 孤岛保护下变变工条件下基于 FPSO 的电网集成光伏系统深入研究。IEEE Systems Journal, 13, 2018, 1861–1871.→
+[2] Priyadarshi N., Padmanaban S., Maroti P. K., Sharma A. 孤岛保护下变变工条件下基于 `FPSO` 的电网集成光伏系统深入研究。`IEEE Systems Journal`, 13, 2018, 1861–1871. →
 
-[3] Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaabjerg F., Sharma A. 用于电网连接光伏/风电发电系统的基于模糊 SVPWM 的电网集成光伏-风电变变器实现。IET Power Application, 12, 2018, 962–971.→
+[3] Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaabjerg F., Sharma A. 用于电网连接光伏/风电发电系统的基于模糊 `SVPWM` 的电网集成光伏-风电变变器实现。`IET Power Application`, 12, 2018, 962–971. →
 
-[4] Bungu N. T., Naidoo R., Bansal R. C., Bettay M., Siti M. W., Bipath M. 通过智能计量的动态能源管理系统。Applied Energy, 280(11590), 2020, 1–12.→
+[4] Bungu N. T., Naidoo R., Bansal R. C., Bettay M., Siti M. W., Bipath M. 通过智能计量的动态能源管理系统。`Applied Energy`, 280(11590), 2020, 1–12. →
 
-[5] Bungu N. T., Bansal R. C., Naidoo R. 优单相智能电表设计。IET-The Journal of Engineering, 2017(13), Nov 2017, 1220–1224.a, b, c
+[5] Bungu N. T., Bansal R. C., Naidoo R. 优单相智能电表设计。`IET-The Journal of Engineering`, 2017(13), Nov 2017, 1220–1224.a, b, c
 
-[6] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 电网集成光伏系统的新型改进正弦余弦优化 MPPT 算法。IEEE Access, 7, 2019, 10467–10477.→
+[6] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 电网集成光伏系统的新型改进正弦余弦优化 `MPPT` 算法。`IEEE Access`, 7, 2019, 10467–10477. →
 
-[7] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Hossain E., Azam F. 用于电网集成的基于 Jaya 的混合光伏-燃料电池：实验性能评估。IEEE Access, 7, 2019, 82978–82990.a, b
+[7] Padmanaban S., Priyadarshi N., Holm-Nielsen J. B., Bhaskar M. S., Hossain E., Azam F. 用于电网集成的基于 `Jaya` 的混合光伏-燃料电池：实验性能评估。`IEEE Access`, 7, 2019, 82978–82990.a, b
 
-[8] Tyagi S. K. S., Mukherjee A., Pokhrel S. R., Hiran K. K. 智能农业物联网传感器网络中的智能和优化资源分配。IEEE Sensors Journal, 2020.→
+[8] Tyagi S. K. S., Mukherjee A., Pokhrel S. R., Hiran K. K. 智能农业物联网传感器网络中的智能和优化资源分配。`IEEE Sensors Journal`, 2020. →
 
-[9] Lakhwani K., Gianey H. K., Wireko J. K., Hiran K. K. 物联网 (Iot)：原则、范式和 IoT 应用。Bpb Publications, 2020.→
+[9] Lakhwani K., Gianey H. K., Wireko J. K., Hiran K. K. 物联网（`IoT`）：原则、范式和 IoT 应用。`Bpb Publications`, 2020. →
 
-[10] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Blaabjerg F., Bhaskar M. S. 波动光照强度下光伏电网集成的混合 ANFIS–PSO 的 MPPT 实验估计。IEEE Systems Journal, 14, 2020, 1218–1229.→
-
-
-
-
-
-## 参考文献
+[10] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Blaabjerg F., Bhaskar M. S. 波动光照强度下光伏电网集成的混合 `ANFIS–PSO` 的 `MPPT` 实验估计。`IEEE Systems Journal`, 14, 2020, 1218–1229. →
 
 [11] Priyadarshi N., Padmanaban N., Bhaskar M. S., Blaabjerg F., Holm-Nielsen J. B., Azam F., Sharma A. K. 基于李普诺夫控制方案的混合光伏-燃料电池单级电网接入研究。`IEEE Systems Journal`, 14, 2020, 3334–3342. →
 
 [12] Wireko J. K., Hiran K. K., Doshi R. 发展中国家物联网时代用户对新技术的文化性抵制：来自埃塞俄比亚的视角。`International Journal of Emerging Technology and Advanced Engineering`, 8(4), 2018, 96–105. →
 
-[13] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 采用混合 GSA–PSO 算法并用于水泵应用的 MPPT 新型 CUK–SEPIC 变换器光伏电力系统。`IET Power Electronics`, 13, 2020, 2824–2830. →
+[13] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 采用混合 `GSA–PSO` 算法并用于水泵应用的 `MPPT` 新型 `CUK–SEPIC` 变换器光伏电力系统。`IET Power Electronics`, 13, 2020, 2824–2830. →
 
-[14] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的基于 PSO 运的改进 Zeta 变换器光伏最大功率跟踪系统：硬件实现。`IET Power Electronics`, 13, 2020, 2775–2781. a, b
+[14] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的基于 `PSO` 运的改进 `Zeta` 变换器光伏最大功率跟踪系统：硬件实现。`IET Power Electronics`, 13, 2020, 2775–2781. a, b
 
-[15] Colak I., 智能电网简介，收于 2016 国际智能电网研讨会及证书课程，ISGWCP 2016, 2016 年 8 月, 1–5, doi: 10.1109/ISGWCP.2016.7548265. a, b, c
+[15] Colak I. 智能电网简介，收于 2016 国际智能电网研讨会及证书课程，`ISGWCP 2016`, 2016 年 8 月, 1–5, `doi: 10.1109/ISGWCP.2016.7548265`. a, b, c
 
-[16] Yadav M., Pal N., Saini D. K. 增强关键负载生存韧性的微网控制、存储和通信策略。`IEEE Access`, 8, 2020 年 9 月, 169047–169069, 10.1109/access.2020.3023087. →
+[16] Yadav M., Pal N., Saini D. K. 增强关键负载生存韧性的微网控制、存储和通信策略。`IEEE Access`, 8, 2020 年 9 月, 169047–169069, `10.1109/access.2020.3023087`. →
 
-[17] Bruno S., Lamonaca S., La Scala M., Rotondo G., Stecchi U. 分布式电网上通过智能电表进行负载控制，收于 2009 IEEE 布加勒斯特 PowerTech：迈向未来电网的创新，2009 年 6 月, 1–8, doi: 10.1109/PTC.2009.5282256. →
+[17] Bruno S., Lamonaca S., La Scala M., Rotondo G., Stecchi U. 分布式电网上通过智能电表进行负载控制，收于 2009 IEEE 布加勒斯特 PowerTech：迈向未来电网的创新，2009 年 6 月, 1–8, `doi: 10.1109/PTC.2009.5282256`. →
 
-[18] Güngör V. C., 等人. 智能电网技术：通信技术与标准。`IEEE Transactions on Industrial Informatics`, 7(4), 2011 年 11 月, 529–539, 10.1109/TII.2011.2166794. a, b
+[18] Güngör V. C., 等人. 智能电网技术：通信技术与标准。`IEEE Transactions on Industrial Informatics`, 7(4), 2011 年 11 月, 529–539, `10.1109/TII.2011.2166794`. a, b
 
-[19] Yadav M. 电网规范与再生能源（RE）接入的审查与合规性，2017, 访问日期：2020 年 11 月 6 日。[在线]. →
+[19] Yadav M. 电网规范与再生能源（RE）接入的审查与合规性，2017, 访问日期：2020 年 11 月 6 日。[在线]。 →
 
 [20] S. 等人，`solfdwlrqvwhuq`, 13–17, 2011. →
 
-[21] C. 等人. 分布式/去中心化再生系统。收：绿色能源与技术，无. 978331970223, Springer Verlag, 2018, 23–39. →
+[21] C. 等人. 分布式/去中心化再生系统。收：绿色能源与技术，无。`978331970223`, Springer Verlag, 2018, 23–39. →
 
-[22] Yang Q., J. A. 配电网分布式控制的通信基础设施。`IEEE Transactions on Industrial Informatics`, 7(2), 2011 年 5 月, 316–327, 10.1109/TII.2011.212390. →
+[22] Yang Q., J. A. 配电网分布式控制的通信基础设施。`IEEE Transactions on Industrial Informatics`, 7(2), 2011 年 5 月, 316–327, `10.1109/TII.2011.212390`. →
 
-[23] K. Mos., R. Kumar. 智能电网——可靠性视角，收于创新智能电网技术，ISGT, 2010 年 1 月, 1–8, doi: 10.1109/ISGT.2010.54346. →
+[23] K. Mos., R. Kumar. 智能电网——可靠性视角，收于创新智能电网技术，`ISGT`, 2010 年 1 月, 1–8, `doi: 10.1109/ISGT.2010.54346`. →
 
-[24] V. C., P. Han. 工业传感器网络：挑战、设计原理。`IEEE Transactions on Industrial Electronics`, 56(10), 2009 年 10 月, 4258–4265, 10.1109/TIE.2009.201574. →
+[24] V. C., P. Han. 工业传感器网络：挑战、设计原理。`IEEE Transactions on Industrial Electronics`, 56(10), 2009 年 10 月, 4258–4265, `10.1109/TIE.2009.201574`. →
 
-[25] Shahinzadeh H., J. Moradi, G. B. Gharehpetian, H. Nafisi, M. Abedi. 智能电网 IoT 架构，收于电力系统保护与自动化国际会议，IPAPS, 2019 年 2 月, 22–30, doi: 10.1109/IPAPS.2019.864194. a, b, c, d
+[25] Shahinzadeh H., J. Moradi, G. B. Gharehpetian, H. Nafisi, M. Abedi. 智能电网 IoT 架构，收于电力系统保护与自动化国际会议，`IPAPS`, 2019 年 2 月, 22–30, `doi: 10.1109/IPAPS.2019.864194`. a, b, c, d
 
 [26] Buyya R., A. Dastjerdi. 物联网：原理与范式。2016. →
 
-[27] Lee I., Lee K. 物联网（IoT）：企业的应用、投资与挑战。`Business Horizons`, 58(4), 2015 年 7 月, 431–440, 10.1016/j.bushor.2015.03.008. →
+[27] Lee I., Lee K. 物联网（IoT）：企业的应用、投资与挑战。`Business Horizons`, 58(4), 2015 年 7 月, 431–440, `10.1016/j.bushor.2015.03.008`. →
 
-[28] Al-Ali A. R., R. Aburba. 物联网在智能电网技术中的作用。`Journal of Computer and Communications`, 03(05), 2015 年 5 月, 229–233, 10.4236/jcc.2015.35029. a, b
+[28] Al-Ali A. R., R. Aburba. 物联网在智能电网技术中的作用。`Journal of Computer and Communications`, 03(05), 2015 年 5 月, 229–233, `10.4236/jcc.2015.35029`. a, b
 
-[29] Shahinzadeh H., G. B. Gharehpetian, M. Moazzami, J. Moradi, H. Hosseinian. 考虑病毒算法的智能电网风电场机组，收于 IEEE 2017 智能电网会议，SGC, 2018 年 3 月, 卷 2018, 1–9, doi: 10.1109/SGC.2017.830892. →
+[29] Shahinzadeh H., G. B. Gharehpetian, M. Moazzami, J. Moradi, H. Hosseinian. 考虑病毒算法的智能电网风电场机组，收于 IEEE 2017 智能电网会议，`SGC`, 2018 年 3 月, 卷 2018, 1–9, `doi: 10.1109/SGC.2017.830892`. →
 
-[30] Markovic D., D. Zivkovic, I. Popovic, C. Ckovic. 智能电网与云计算。`Renewable and Sustainable Energy Reviews`, 24, 2013, Elsevier Ltd, 566–577, 10.1016/j.rser.2013.03.068. →
+[30] Markovic D., D. Zivkovic, I. Popovic, C. Ckovic. 智能电网与云计算。`Renewable and Sustainable Energy Reviews`, 24, 2013, Elsevier Ltd, 566–577, `10.1016/j.rser.2013.03.068`. →
 
-[31] Faisal M., Z. Aung, R. J. Sanchez. 使用数据流挖掘检测系统保障高级计量基础设施。收于计算机科学讲义（包括人工智能讲义与生物信息学讲义），卷 729，`LNCS`, 2012, 96–111, 10.1007/978-3-642-30428-8. →
+[31] Faisal M., Z. Aung, R. J. Sanchez. 使用数据流挖掘检测系统保障高级计量基础设施。收于计算机科学讲义（包括人工智能讲义与生物信息学讲义），卷 729，`LNCS`, 2012, 96–111, `10.1007/978-3-642-30428-8`. →
 
 [32] Mufassirin M. M., L. Hanees. 基于 IOT 的智能能量读取与监控系统的开发，未，2018, 访问日期：2020 年 10 月 30 日。[在线]。 a, b, c
 
-[33] Ardito L., G. Procacci, G. Menga, M. Morisio. 欧洲智能电网技术概述。`Energies`, 6(1), 2013 年 1 月, 251–281, 10.3390/en6010251.
+[33] Ardito L., G. Procacci, G. Menga, M. Morisio. 欧洲智能电网技术概述。`Energies`, 6(1), 2013 年 1 月, 251–281, `10.3390/en6010251`.
 
-[34] Simões M. G. 等人. 欧洲与美国的智能电网技术进展，收于 IEEE 能源会议与展览：面向清洁能源未来的创新，ECCE, 2011, 383–390, doi: 10.1109/ECCE.2011.606379. a, b
+[34] Simões M. G. 等人. 欧洲与美国的智能电网技术进展，收于 IEEE 能源会议与展览：面向清洁能源未来的创新，`ECCE`, 2011, 383–390, `doi: 10.1109/ECCE.2011.606379`. a, b
 
-[35] Liou H. M. 台湾电网、智能电网与再生能源的发展。`Smart Grid and Renewable Energy`, 08(06), 2017, 163–177, 10.4236/sgre.2017.8601.
+[35] Liou H. M. 台湾电网、智能电网与再生能源的发展。`Smart Grid and Renewable Energy`, 08(06), 2017, 163–177, `10.4236/sgre.2017.8601`.
+
+- [39] ENEE 统计公报四月。ENEE。获取自 ENEE，2019 年 4 月，[`www.enee.hn/planificacion/2019/Junio/Boletin%20Estadistico%20Abril%202019.pdf`](http://www.enee.hn/planificacion/2019/Junio/Boletin%20Estadistico%20Abril%202019.pdf) →
+
+- [40] CREE 资率历史。电力监管委员会。获取自 HISTORIAL DE TARIFFS CREE，2019 年 12 月，[`www.cree.gob.hn/historial-de-Tariffs/`](https://www.cree.gob.hn/historial-de-Tariffs/) →
+
+- [41] 2020 年第一季度资率调整报告。电力监管委员会。获取自 2020 年第一季度资率调整报告，2020 年 1 月，[`www.cree.gob.hn/informe-trimestral-de-Tariffs/`](https://www.cree.gob.hn/informe-trimestral-de-Tariffs/) →
+
+- [42] UNITEC HN 能源观测中心。（2019 年 8 月 4 日）。UNITEC HN 能源观测中心。获取自 Gracia Pineda：[`public.tableau.com/profile/gp17447#!!/vizhome/EstadsticasElectricidadHonduras/EstadsticasENEE`](https://public.tableau.com/profile/gp17447%23%21/vizhome/EstadsticasElectricidadHonduras/EstadsticasENEE) →
+
+- [43] CREE 073 决议。电力监管委员会。获取自 CREE 073 决议，2016 年 4 月 20 日，[`www.cree.gob.hn/wp-content/uploads/2019/02/REGLAMENTO-PARA-EL-CALCULO-DE-TARIFFS-PROVISIONALES.compressed.pdf`](https://www.cree.gob.hn/wp-content/uploads/2019/02/REGLAMENTO-PARA-EL-CALCULO-DE-TARIFFS-PROVISIONALES.compressed.pdf) →
+
+- [44] CREE 148 决议。电力监管委员会。获取自 电力监管委员会，2019 年 6 月 24 日，[`cree.gob.hn/wp-content/uploads/2019/02/Reglamento-de-Tariffs.pdf`](https://cree.gob.hn/wp-content/uploads/2019/02/Reglamento-de-Tariffs.pdf) →
+
+- [45] T. Elowson, “在电网边缘推动数据中心增长,” 2018 年 7 月 10 日。[在线]。可用地址：[`www.joiscientific.com/fueling-data-center-growth-on-the-edge-of-the-grid/`](https://www.joiscientific.com/fueling-data-center-growth-on-the-edge-of-the-grid/)。[访问于 2021 年]。
+
+- [46] Yadav, M., Pal, N., & Saini, D. K. (2021). 使用分布式能源和隔离开器应对地震波的韧性配电电网规划：印度城市电网案例研究。再生能源。
+
+- [47] Debajyoti Bose, Devender K Saini, Monika Yadav, Saurabh Shrivastava and Nitish Parashar, “印度农村社区的去化太阳能接入及性能参数评估，” 可持续性与气候变化，第 14 卷第 2，2021 年 4 月。
+
+- [48] Aayush Shrivastava, D. K. Saini, “基于可再生能源的自适应保护（s）及继电配合的同行评审（基于可再生能源的自适应保护（s）及继电配合),” 电气工程最新进展，第 10 卷，第 3 期，第 274–285 页，2020 年。
+
+- [49] Debajyoti Bose, Devender K Saini, Monika Yadav, Saurabh Shrivastava and Nitish Parashar, 去中心化太阳能接入及印度农村社区的性能参数评估，可持续性与气候变化，第 14 卷，2021 年 4 月。[https://doi.org/10.1002/ieam.4373]
 
 
 
+- [50] D. K. Saini, R. Nair, M. Yadav and R. Venkatasubanian, 对无功功率的影响，IEEE Access，第 8 卷，第 18267–18292 页，2020 年。doi:10.1109/ACCESS.2020.302858
 
-- [39]ENEE 统计公报四月。ENEE。获取自 ENEE，2019 年 4 月，[`www.enee.hn/planificacion/2019/Junio/Boletin%20Estadistico%20Abril%202019.pdf`](http://www.enee.hn/planificacion/2019/Junio/Boletin%20Estadistico%20Abril%202019.pdf) →
-- [40]CREE 资率历史。电力监管委员会。获取自 HISTORIAL DE TARIFFS CREE，2019 年 12 月，[`www.cree.gob.hn/historial-de-Tariffs/`](https://www.cree.gob.hn/historial-de-Tariffs/) →
-- [41]2020 年第一季度资率调整报告。电力监管委员会。获取自 2020 年第一季度资率调整报告，2020 年 1 月，[`www.cree.gob.hn/informe-trimestral-de-Tariffs/`](https://www.cree.gob.hn/informe-trimestral-de-Tariffs/) →
-- [42]UNITEC HN 能源观测中心。(2019 年 8 月 4 日)。UNITEC HN 能源观测中心。获取自 Gracia Pineda：[`public.tableau.com/profile/gp17447#!!/vizhome/EstadsticasElectricidadHonduras/EstadsticasENEE`](https://public.tableau.com/profile/gp17447%23%21/vizhome/EstadsticasElectricidadHonduras/EstadsticasENEE) →
-- [43]CREE 073 决议。电力监管委员会。获取自 CREE 073 决议，2016 年 4 月 20 日，[`www.cree.gob.hn/wp-content/uploads/2019/02/REGLAMENTO-PARA-EL-CALCULO-DE-TARIFFS-PROVISIONALES.compressed.pdf`](https://www.cree.gob.hn/wp-content/uploads/2019/02/REGLAMENTO-PARA-EL-CALCULO-DE-TARIFFS-PROVISIONALES.compressed.pdf) →
-- [44]CREE 148 决议。电力监管委员会。获取自 电力监管委员会，2019 年 6 月 24 日，[`cree.gob.hn/wp-content/uploads/2019/02/Reglamento-de-Tariffs.pdf`](https://cree.gob.hn/wp-content/uploads/2019/02/Reglamento-de-Tariffs.pdf) →
-- [45]T. Elowson, “在电网边缘推动数据中心增长,” 2018 年 7 月 10 日。[在线]。可用地址：[`www.joiscientific.com/fueling-data-center-growth-on-the-edge-of-the-grid/`](https://www.joiscientific.com/fueling-data-center-growth-on-the-edge-of-the-grid/)。[访问于 2021 年]。 
-- [46]Yadav, M., Pal, N., & Saini, D. K. (2021). 使用分布式能源和隔离开器应对地震波的韧性配电电网规划：印度城市电网案例研究。再生能源。 
-- [47]Debajyoti Bose, Devender K Saini, Monika Yadav, Saurabh Shrivastava and Nitish Parashar, “印度农村社区的去化太阳能接入及性能参数评估，” 可持续性与气候变化，第 14 卷第 2，2021 年 4 月。 
-- [48]Aayush Shrivastava, D. K. Saini, “基于可再生能源的自适应保护（s）及继电配合的同行评审（基于可再生能源的自适应保护（s）及继电配合),” 电气工程最新进展，第 10 卷，第 3 期，第 274–285 页，2020 年。 
-- [49]Debajyoti Bose, Devender K Saini, Monika Yadav, Saurabh Shrivastava and Nitish Parashar, 去中心化太阳能接入及印度农村社区的性能参数评估，可持续性与气候变化，第 14 卷，2021 年 4 月。[https://doi.org/10.1002/ieam.4373 
-- [50]D. K. Saini, R. Nair, M. Yadav and R. Venkatasubanian, 对无功功率的影响，IEEE Access，第 8 卷，第 18267–18292 页，2020 年。doi:10.1109/ACCESS.2020.302858 
-- [51]D. K. Saini, R. Nair, M. Yadav and R. Prasad, 用于故障检测的改进算法，IEEE 电力电气，第 4 卷第 4 期，第 936–950 页，2018 年 12 月。doi:10.1109/TTE.2018.2859379  
+- [51] D. K. Saini, R. Nair, M. Yadav and R. Prasad，用于故障检测的改进算法，IEEE 电力电气，第 4 卷第 4 期，第 936–950 页，2018 年 12 月。doi:10.1109/TTE.2018.2859379
 
 # 6 使用粒子群算法实现遮影下的最大功率点跟踪
 
 Jia Shun Koh，马来西亚大学工程与技术学院
+
 Rodney H. G. Tan，马来西亚大学工程与技术学院
+
 Wei Hong Lim，马来西亚大学工程与技术学院
 
-### 摘要
+## 摘要
 
-本章介绍了使用粒子群算法（PSO）对受遮影影响的光伏（PV）板进行最大功率点跟踪（MPPT）控制。光伏板局部遮影会产生多个峰值，因此在动态变化的情况下跟踪全局峰值是一项挑战。MPPT PSO 使用直流变换器作为能量转换介质，将跟踪的功率传输到负载。PSO 算法通过读取光伏板输出功率并改变变换器的占空比来跟踪 MPP。MPPT PSO 在 MATLAB/Simulink 平台上实现，模型包含一个带有旁路二极管的光伏板、连接到负载的功率电子直流变换器，且算法编码在嵌入函数中。讨论了 PSO 算法的收敛和初始化标准。对不同的 PSO 参数组合（种群大小、加速度系数和权重）评估了最大功率跟踪性能。对每组参数的结果进行了讨论，并报告称种群大小为 4、惯性权重为 0.1，以及加速度系数 *c*[1] =0.8 和 *c*[2] =1.2 是本研究使用的 PSO 优设置。最后，还在动态变化的局部遮影条件下评估了 MPPT PSO，以评估其跟踪鲁棒性。所提方法的最佳平均跟踪时间和跟踪误差分别为 0.06s 和 0.15%，证明了其在实时应用中的可行性。本章深入探讨了 PSO 参数如何从跟踪时间、准确性和稳定性方面影响 MPPT 的性能。
+本章介绍了使用粒子群算法（PSO）对受遮影影响的光伏（PV）板进行最大功率点跟踪（MPPT）控制。光伏板局部遮影会产生多个峰值，因此在动态变化的情况下跟踪全局峰值是一项挑战。MPPT PSO 使用直流变换器作为能量转换介质，将跟踪的功率传输到负载。PSO 算法通过读取光伏板输出功率并改变变换器的占空比来跟踪 MPP。MPPT PSO 在 MATLAB/Simulink 平台上实现，模型包含一个带有旁路二极管的光伏板、连接到负载的功率电子直流变换器，且算法编码在嵌入函数中。讨论了 PSO 算法的收敛和初始化标准。对不同的 PSO 参数组合（种群大小、加速度系数和权重）评估了最大功率跟踪性能。对每组参数的结果进行了讨论，并报告称种群大小为 4、惯性权重为 0.1，以及加速度系数 `c[1] = 0.8` 和 `c[2] = 1.2` 是本研究使用的 PSO 优设置。最后，还在动态变化的局部遮影条件下评估了 MPPT PSO，以评估其跟踪鲁棒性。所提方法的最佳平均跟踪时间和跟踪误差分别为 0.06 s 和 0.15%，证明了其在实时应用中的可行性。本章深入探讨了 PSO 参数如何从跟踪时间、准确性和稳定性方面影响 MPPT 的性能。
 
-关键词：粒子群算法，最大功率点跟踪，直流变换器，局部遮影，
+关键词：粒子群算法，最大功率点跟踪，直流变换器，局部遮影
 
-## 6.1 引言
-
-
-
-
+## 6.1 引言
 
 1839 年，Antione-Cesar Becquerel 发现太阳光照射在特定材料上可以产生电。五年后，Charles Fritts 发明了第一个光伏（PV）电池。1883 年，第一块由多个太阳能电池组成的光伏面板被安装在纽约市的屋顶上。从那时起，研究人员在提高光伏面板效率方面付出了巨大努力。光伏面板的效率受其材料和工作功率点的影响。
 
-光伏面板板的特性由两条曲线表示：`I–V` 特性曲线和 `P–V` 曲线，`I–V`曲线的转折点和`P–V`曲线的峰值被称为最大功率点（MPP）[1, 2, 3, 4]。多个光伏面板通过串联和并联组成光伏阵列，以产生所需的电压和电流。
+光伏面板板的特性由两条曲线表示：`I–V` 特性曲线和 `P–V` 曲线，`I–V` 曲线的转折点和 `P–V` 曲线的峰值被称为最大功率点（MPP）[1, 2, 3, 4]。多个光伏面板通过串联和并联组成光伏阵列，以产生所需的电压和电流。
 
 1969 年，Blake 和 Hanson 观察到空间光伏阵列的热点故障，并建议利用旁路二极来解决这个问题[1]。当光伏面板被附近建筑或树木的阴影部分遮挡时，阴影区域的发电量将显著减少并作为负载。由于受遮挡太阳能电池组的电阻较小，其他电池产生的电流流经此处可能会加热太阳能电池并导致不可逆的损坏。因此，当电流超过某些阈值时，需要连接旁路二极以将电流引离受遮挡的太阳能电池。
 
 尽管旁路二极的应用解决了热点问题，但这种方法在光伏功率特性曲线中产生了另一个挑战，被称为多峰现象，由局部峰值和全局峰值组成，如图 6.1 所示。较低峰称为局部最大功率点（LMPP），最高峰称为全局最大功率点（GMPP）[5, 6, 7, 8, 9, 10]。光伏功率特性曲线中出现的最大峰数量等于所使用的旁路二极数量，其中在部分遮挡条件下经常遇到具有两个峰的光伏功率特性曲线[11, 12, 13]。
 
-Teo 等人在 2018 年的近期研究[31]解释了不同遮挡程度和数量的影响。由三组光伏电池组成的典型光伏面板的旁路二极工作原理如图 6.1 所示。一组未遮挡的光伏电池暴露在`764W/m²`的太阳辐射下，能够产生`6.685A`的电流，而另外两组受遮挡的光伏电池在`208W/m²`的辐射下产生`1.82A`的电流，因为它们无法产生满足负载的高电流。旁路二极的应用产生了具有多个峰的阶梯状`I–V`曲线和`P–V`功率曲线[14]。
+Teo 等人在 2018 年的近期研究[31]解释了不同遮挡程度和数量的影响。由三组光伏电池组成的典型光伏面板的旁路二极工作原理如图 6.1 所示。一组未遮挡的光伏电池暴露在 `764 W/m²` 的太阳辐射下，能够产生 `6.685 A` 的电流，而另外两组受遮挡的光伏电池在 `208 W/m²` 的辐射下产生 `1.82 A` 的电流，因为它们无法产生满足负载的高电流。旁路二极的应用产生了具有多个峰的阶梯状 `I–V` 曲线和 `P–V` 功率曲线[14]。
 
-![图 6.1: 有两组受遮挡电池的光伏面板](img/b9783110714043-006_fig_001.png)
+![图 6.1：有两组受遮挡电池的光伏面板](img/b9783110714043-006_fig_001.png)
 
-在图 6.2 中可以发现类似的观察结果。两组在`886W/m²`辐射下未遮挡的光伏电池组产生`7.7A`的电流，而`241W/m²`辐射下受遮挡的光伏电池组产生`2.109A`的电流。当负载大于`2.109A`电流时，后一组光伏电池将被旁路。
+在图 6.2 中可以发现类似的观察结果。两组在 `886 W/m²` 辐射下未遮挡的光伏电池组产生 `7.7 A` 的电流，而 `241 W/m²` 辐射下受遮挡的光伏电池组产生 `2.109 A` 的电流。当负载大于 `2.109 A` 电流时，后一组光伏电池将被旁路。
 
-![图 6.2: 有一组受遮挡电池的光伏面板](img/b9783110714043-006_fig_002.png)
+![图 6.2：有一组受遮挡电池的光伏面板](img/b9783110714043-006_fig_002.png)
 
-从图 6.1 和图 6.2 中观察到，全局峰值根据受遮挡的光伏电池组，位于光伏曲线左侧的低电压峰值或右侧的高电压峰值。这两组`P–V`功率曲线将用于评估第 6.4 节中 MPPT PSO 的性能。
+从图 6.1 和图 6.2 中观察到，全局峰值根据受遮挡的光伏电池组，位于光伏曲线左侧的低电压峰值或右侧的高电压峰值。这两组 `P–V` 功率曲线将用于评估第 6.4 节中 MPPT PSO 的性能。
 
 Karami 等对不同的 MPPT 技术、固定参数跟踪方法、传感器采集、实验、数学公式和 AI 预测进行了全面的综述[22]。根据 El-Khozondar 等[17]，扰扰观测法（P&O）、爬山法（HC）和增量电导法（IC）算法是广泛采用的 MPPT 算法[16, 17]。P&O 和 HC 因其实现简单、经济而闻名。这两种方法由于收敛速度慢，不适用于跟踪快速变化的辐射。IC 可以以更高的效率跟踪快速变化的辐射；但该算法计算开销大。此外，所有这些方法都面临部分遮挡导致的多峰曲线陷入局部峰值的问题。
 
-粒子群优化（PSO）由于其实现简单和计算成本低的特点，是一种广泛应用于解决 MPPT 跟踪问题的自然启发型算法。PSO 被认为是 Eberhart 和 Kennedy[15]提出的智能优化算法，其基础是鸟群觅食的社会行为[15]。PSO 是一种基于种群的随机算法，由具有不同速度、位置和适应度值的多个粒子组成。每个 PSO 粒子都被视为解决优化问题（如本章中的 MPPT 跟踪）的一种前景解决方案。在优化过程中，每个粒子可以根据其个人最佳位置和全局最佳位置调整速度，从而在解空间中进行搜索。对于第*i*个粒子，在每次`(k+1)`次迭代中，对应的速度`vi`和位置`xi`可以使用以下方程进行更新：
+粒子群优化（PSO）由于其实现简单和计算成本低的特点，是一种广泛应用于解决 MPPT 跟踪问题的自然启发型算法。PSO 被认为是 Eberhart 和 Kennedy[15]提出的智能优化算法，其基础是鸟群觅食的社会行为[15]。PSO 是一种基于种群的随机算法，由具有不同速度、位置和适应度值的多个粒子组成。每个 PSO 粒子都被视为解决优化问题（如本章中的 MPPT 跟踪）的一种前景解决方案。在优化过程中，每个粒子可以根据其个人最佳位置和全局最佳位置调整速度，从而在解空间中进行搜索。对于第 `i` 个粒子，在每次 `(k+1)` 次迭代中，对应的速度 `vi` 和位置 `xi` 可以使用以下方程进行更新：
 
 ```
 (6.1) vi = w*vi + c[1]*r1) + c[2]*r2)
 (6.2) xi = xi + vi
 ```
 
-
-
-
 其中 `c[1]` 和 `c[2]` 是加速度系数，设置范围在 0.1 到 2 之间，`w` 是惯性权重，用于表示粒子之前速度的影响，设置在 0 到 1 之间。`r[1]` 和 `r[2]` 是两个从均匀分布生成的随机数，值在 0 到 1 之间。`P[best]` 是第 `i` 个粒子记忆的局部最优位置，`G[best]` 是全局最优位置。在利用 PSO 解决 DC–DC 压变换器拓扑结构的 MPPT 跟踪问题背景下，每个 PSO 参数与相应电力电子参数之间的关系可以总结在表 6.1。
 
-### 表 6.1：PSO 与电力电子参数之间的关系。
+### 表 6.1：PSO 与电力电子参数之间的关系
 
 | PSO 参数 | 电力电子参数 |
 | --- | --- |
-| 当前位置 (`x[i]^k)`) | PWM 占空比 |
-| 当前速度 (`v[i]^k)`) | PWM 占空比的变化 |
+| 当前位置（`x[i]^k`） | PWM 占空比 |
+| 当前速度（`v[i]^k`） | PWM 占空比的变化 |
 | 适应度值 | 输出功率 |
-| 个人最佳位置 (`P[best]`) | 粒子粒子找到的最优占空比 |
-| 全局最佳位置 (`G[best]`) | 最优粒子找到的最佳占空比 |
+| 个人最佳位置（`P[best]`） | 粒子找到的最优占空比 |
+| 全局最佳位置（`G[best]`） | 最优粒子找到的最佳占空比 |
 
-所有 PSO 粒子的速度和位置首先随机初始化。对于单个粒子，速度和位置可以根据公式 (6.1 和 (6.2)) 在每次迭代中更新。PSO 的快速收敛特性使得种群能够在短时间内搜索最佳占空比，以控制变换器工作在 MPPT 模式。
+所有 PSO 粒子的速度和位置首先随机初始化。对于单个粒子，速度和位置可以根据公式（6.1）和（6.2）在每次迭代中更新。PSO 的快速收敛特性使得种群能够在短时间内搜索最佳占空比，以控制变换器工作在 MPPT 模式。
 
 ## 6.2 文献综述
 
-过去十年里，由于具有收敛快和实现简单的优点，PSO 成为太阳光伏研究社区中解决最大功率点跟踪（MPPT）问题最受青睐的方法 [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]。
+过去十年里，由于具有收敛快和实现简单的优点，PSO 成为太阳光伏研究社区中解决最大功率点跟踪（MPPT）问题最受青睐的方法[18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]。
 
-Kamejima 等提出了一种基于 PSO 的参数调优方法，以便各种阴影条件下实现 MPP [21]。PSO 参数初始化为 `w=0.4`、`c[1]=0.8` 和 `c[2]=1.2`，并最初以 0.2 的步长移动这些参数以分析最优性。在后期阶段，应用 0.05 的微调以达到最优。最终计算的系数为 `w=0.3`、`c[1]=1.05`、`c[2]=0.9`。此外，当粒子彼此太近时引入了排斥项，以防止它们在低照度条件下陷入局部区域。
+Kamejima 等提出了一种基于 PSO 的参数调优方法，以便各种阴影条件下实现 MPP[21]。PSO 参数初始化为 `w=0.4`、`c[1]=0.8` 和 `c[2]=1.2`，并最初以 0.2 的步长移动这些参数以分析最优性。在后期阶段，应用 0.05 的微调以达到最优。最终计算的系数为 `w=0.3`、`c[1]=1.05`、`c[2]=0.9`。此外，当粒子彼此太近时引入了排斥项，以防止它们在低照度条件下陷入局部区域。
 
-isha 等人使用参数为 `w=0.4`、`c[1]=1.2` 和 `c[2]=1.6` 的传统 PSO 来快速跟踪全局峰值 [20。满足收敛标准后，根据功率变化增加或减少占空比以持续跟踪全局峰值。
+isha 等人使用参数为 `w=0.4`、`c[1]=1.2` 和 `c[2]=1.6` 的传统 PSO 来快速跟踪全局峰值[20]。满足收敛标准后，根据功率变化增加或减少占空比以持续跟踪全局峰值。
 
-2015 年，Sudhakar Babu 等提出了一种计算粒子初始位置的改进 PSO [30]。使用 `w=0.4`、`c[1]=1.6` 和 `c[2]=1.8` 的 PSO 能够在零振荡状态下准确跟踪全局峰值。作者仅将 PSO 算法应用于三个计算粒子，与随机初始化的传统 PSO 相比，仍然存在 `w`、`c[1]` 和 `c[2]` 可能不是最优值的问题。
+2015 年，Sudhakar Babu 等提出了一种计算粒子初始位置的改进 PSO[30]。使用 `w=0.4`、`c[1]=1.6` 和 `c[2]=1.8` 的 PSO 能够在零振荡状态下准确跟踪全局峰值。作者仅将 PSO 算法应用于三个计算粒子，与随机初始化的传统 PSO 相比，仍然存在 `w`、`c[1]` 和 `c[2]` 可能不是最优值的问题。
 
-Zheng 等将 PSO 参数声明为 `w=0.85`、`c[1]=2`、`c[2]=1` 以避免陷入局部 MPP 并提高其全局搜索能力 [32]。在跟踪过程的后续阶段，调整参数设置为 `w=0.6`、`c[1]=1`、`c[2]=2` 以获得更好的局部搜索能力，旨在加速系统的收敛率。
+Zheng 等将 PSO 参数声明为 `w=0.85`、`c[1]=2`、`c[2]=1` 以避免陷入局部 MPP 并提高其全局搜索能力[32]。在跟踪过程的后续阶段，调整参数设置为 `w=0.6`、`c[1]=1`、`c[2]=2` 以获得更好的局部搜索能力，旨在加速系统的收敛率。
 
-Chao 等提出了一种多核 PSO 操作，在变化的照度下定位 GMPP [14]。多核 PSO 将光伏系统分为几组，每组由一个 PSO 操作处理。仿真结果显示，多核 PSO 操作可以将多连接 MPPT 系统的跟踪精度提高到 96% ，并将跟踪时间缩短到约 1.3 秒。
+Chao 等提出了一种多核 PSO 操作，在变化的照度下定位 GMPP[14]。多核 PSO 将光伏系统分为几组，每组由一个 PSO 操作处理。仿真结果显示，多核 PSO 操作可以将多连接 MPPT 系统的跟踪精度提高到 96%，并将跟踪时间缩短到约 1.3 秒。
 
-Liu 等将 PSO 与增量电导法（INC）相结合以有效地跟踪 GMPP [24]。当照度稳定时使用 INC 方法跟踪 GMPP，而种群大小为 20、`w=0.8` 且 `c[1]=c[2]=1.4` 的 PSO 则在照度变化时快速定位 GMPP。仿真结果显示，混合 PSO 和 INC 极大提高了 MPPT 效率。
+Liu 等将 PSO 与增量电导法（INC）相结合以有效地跟踪 GMPP[24]。当照度稳定时使用 INC 方法跟踪 GMPP，而种群大小为 20、`w=0.8` 且 `c[1]=c[2]=1.4` 的 PSO 则在照度变化时快速定位 GMPP。仿真结果显示，混合 PSO 和 INC 极大提高了 MPPT 效率。
 
-Grzesiak 等采用具有五个粒子的 PSO 来解决 MPPT 问题 [19]。除了用 HC 技术更新最佳粒子外，其余粒子的速度使用公式 (6.1) 更新，参数设置为 `w=0.73` 和 `c[1]=c[2]=1.4965`，以确保算法能够在不经历早收敛的情况下定位全局峰值。
+Grzesiak 等采用具有五个粒子的 PSO 来解决 MPPT 问题[19]。除了用 HC 技术更新最佳粒子外，其余粒子的速度使用公式（6.1）更新，参数设置为 `w=0.73` 和 `c[1]=c[2]=1.4965`，以确保算法能够在不经历早收敛的情况下定位全局峰值。
 
-Efendi 等应用参数为 `w=0.5` 且 `c[1]=c[2]=0.8` 的 MPPT PSO，结合 Sepic 变换器解决直流微电网系统上的局部阴影问题 [16]。具有与升降变换器相似特性的 Sepic 变换器可以遍历整个伏曲线。然而，Sepic 变换器具有脉冲电流，需要高电容和大电流处理能力的串联电容器，增加了整体成本。
+Efendi 等应用参数为 `w=0.5` 且 `c[1]=c[2]=0.8` 的 MPPT PSO，结合 Sepic 变换器解决直流微电网系统上的局部阴影问题[16]。具有与升降变换器相似特性的 Sepic 变换器可以遍历整个伏曲线。然而，Sepic 变换器具有脉冲电流，需要高电容和大电流处理能力的串联电容器，增加了整体成本。
 
-Mao 等在他们的中使用使用了 `c[1]`、`c[2]` 等于 0.6、0.8 以及最大 0.9 最小 0.4 的自适应权重的 PSO [25]。根据 Mao 等人的人的，较大的初始权重促进了探索搜索并加快了接近搜索空间有利区域的收敛速度。权重每次迭代减小直到直到 `w[min]` 以局部精化。这种时变惯性权重调整方法用于优化算法的全局和局部搜索。
+Mao 等在他们的中使用使用了 `c[1]`、`c[2]` 等于 0.6、0.8 以及最大 0.9 最小 0.4 的自适应权重的 PSO[25]。根据 Mao 等人的人的，较大的初始权重促进了探索搜索并加快了接近搜索空间有利区域的收敛速度。权重每次迭代减小直到直到 `w[min]` 以局部精化。这种时变惯性权重调整方法用于优化算法的全局和局部搜索。
 
+Koad 等人提出在 PSO 中应用数学方法——拉格朗日插值（LI），以在 2 ms 内并以 99.94% 的效率辅助搜索全局峰值[23]。根据作者所述，MPPT 的位置将位于 `V[oc]` 的 0.7 到 0.92 之间。LI 用于估计最大功率点（MPP）处变换器的占空比，并估算全局最大功率点（GMPP）的位置，该位置将作为 PSO 算法的初始粒子，并显著缩短达到 GMPP 的时间。使用的 PSO 参数为 `w=0.4`、`c[1]=0.8` 和 `c[2]=1.2`。与原始 PSO 相比，LI-PSO 在某些部分阴影条件（PSC）下，仅跟踪位于光伏曲线右侧 0.7–0.92 `V[oc]` 附近的点，而在峰值位于光伏曲线左侧的情况下，算法可能会失效。
 
+Eltamaly 等人强调了 PSO 算法在确定粒子初始值方面的挑战，以及由于频繁的重新初始化过程难以跟踪阴影模式的突然变化的缺点[18]。据报道，PSO 在满足收敛标准时也会停止收敛，且辐度的微小变化无法触发其重新初始化过程，导致粒子偏离 GMPP。Eltamaly 等人为 PSO 提出了一种创新的初始化技术，以解决传统随机初始化的两个局限性：
 
+1. 由于粒子在远离全局峰值的位置重新初始化导致收敛速度较慢；
+2. 速度的随机元素导致粒子陷入局部峰值，从而导致错过全局峰值。
 
-Koad 等人提出在 PSO 中应用数学方法——拉格朗日插值（LI），以在 2 ms 内并以 99.94% 的效率辅助搜索全局峰值[23]。根据作者所述，MPPT 的位置将位于 `V`[oc]` 的 0.7 到 0.92 之间。LI 用于估计最大功率点（MPP）处变器器的占空比，并估算全局最大功率点（GMPP）的位置，该位置将作为 PSO 算法的初始粒子，并显著缩短达到 GMPP 的时间。使用的 PSO 参数为 `w` = 0.4，`c`[1] =0.8 和 `c`[2] =1.2 与原始 PSO 相比，LI-PSO 在某些部分阴影条件（PSC）下，仅跟踪位于光伏曲线右侧 0.7–0.92 `V`[oc]` 附近的点，而在峰值位于光伏曲线左侧的情况下，算法可能会失效。
+扫描 PSO（SPSO）使用新方程来计算全局峰值的近似位置。该方程允许至少有一个粒子初始化在全局峰值附近，以防止过早收敛。SPSO 显著缩短了新 GMPP 的重新初始化和跟踪时间至仅 0.4 秒。
 
-Eltamaly 等人强调了 PSO 算法在确定粒子初始值方面的挑战，以及由于频繁的重新初始化过程难以跟踪阴影模式的突然变化的缺点[18]。据报道，PSO 在满足收敛标准时也会停止收敛，且辐度的微小变化无法触发其重新初始化过程，导致粒子偏离 GMPP。Eltamaly 等人为 PSO 提出了一种创新的初始化技术，以解决传统随机初始化的两个局限性：(a) 由于粒子在远离全局峰值的位置重新初始化导致收敛速度较慢；(b) 速度的随机元素导致粒子陷入局部峰值，从而导致错过全局峰值。扫描 PSO（SPSO）使用新方程来计算全局峰值的近似位置。该方程允许至少有一个粒子初始化在全局峰值附近，以防止过早收敛。SPSO 显著缩短了新 GMPP 的重新初始化和跟踪时间至仅 0.4 秒。
-
-Ram 等人在 MPPT 追踪中提出了 PSO 和 P&O 的混合方法。作者提到，P&O 仍然是最合适的方法，因为如果初始化正确，它可以保证在最大功率下运行[28]。PSO 可以达到 MPP 的粗略位置，切换到 P&O 时步长大幅缩小至仅 2%，从而减少稳态下的振荡。作者在 PSO 中使用了自适应权重，`w`[max] = 1，`w`[min] = 0.3，以及其他参数 `n` = 5，`c`[1] =1.4，`c`[2] =1.8。
+Ram 等人在 MPPT 追踪中提出了 PSO 和 P&O 的混合方法。作者提到，P&O 仍然是最合适的方法，因为如果初始化正确，它可以保证在最大功率下运行[28]。PSO 可以达到 MPP 的粗略位置，切换到 P&O 时步长大幅缩小至仅 2%，从而减少稳态下的振荡。作者在 PSO 中使用了自适应权重，`w[max]=1`，`w[min]=0.3`，以及其他参数 `n=5`、`c[1]=1.4`、`c[2]=1.8`。
 
 参考基于 PSO 的 MPPT 相关文献综述，似乎不同的 MPPT PSO 技术具有其特定的优缺点。还观察到大多数论文并没有详细阐述 PSO 的参数设置，某些论文引用了其他文献的设置，而有些甚至没有提到它们的参数设置。在 MPPT 应用背景下，理解每个 PSO 参数的行为和影响至关重要。尽管跟踪时间和跟踪误差是证明实时应用可行性的重要性能指标，但在大多数之前发表的作品中，这两个项的性能指标也未得到充分讨论。因此，本章展示了关于 PSO 参数（包括粒子数量、加速度和惯性）如何影响 MPPT 追踪性能的见解，以便对确定用于 MPPT 应用的最优 PSO 参数组合有深入的理解。
 
 ## 6.3 方法论
 
-MPPT PSO 系统使用 MATLAB/Simulink 实现，如图 6.3
+MPPT PSO 系统使用 MATLAB/Simulink 实现，如图 6.3 所示。
 
 图 6.3：MPPT 系统。
 
-###  伏 模型
+### 6.3.1 光伏模型
 
 光伏板由串联的太阳能电池组成，以产生足够的电流和电压[33][34][35][36][37][38][39]。基础太阳能电池实际上与 p-n 结并联的非复杂源[26]。
 
-光伏电池输出电流 `I`[o] 由方程 (6.3) 阐述，光电流 `I`[ph] 通过方程 (6.4) 与太阳辐射相关：
+光伏电池输出电流 `I[o]` 由方程（6.3）阐述，光电流 `I[ph]` 通过方程（6.4）与太阳辐射相关：
 
-```
+```text
 (6.3) I_{o} = N_{p}I_{ph} + N_{p}I_{rs}\left[e^{\frac{q(V + R_{s}I_{o})}{AKTN_{s}}} - 1\right] - N_{p}\frac{q(V + R_{s}I_{o})}{N_{s}R_{sh}}
 (6.4) I_{ph} = \frac{G}{1,000}\left[I_{sc} + k_{i}(T - T_{r})\right]
 ```
 
-其中 `N`[p], `N`[s] 是并联和串联的光伏电池数量，`R`[s], `R`[sh] 是串联和并联电阻，`V` 是输出电压，`q` 是电子电量（1.6 × 10⁻¹⁹ C），`A` 是 p–n 结理想因子，`K` 是玻尔兹曼常数（1.3806503 × 10⁻²³ J/K），`k`[i] 是短路电流系数，`T`, `T`[r] 是工作和参考温度，最后 `G` 是辐照。
+其中 `N[p]`、`N[s]` 是并联和串联的光伏电池数量，`R[s]`、`R[sh]` 是串联和并联电阻，`V` 是输出电压，`q` 是电子电量（1.6 × 10⁻¹⁹ C），`A` 是 p–n 结理想因子，`K` 是玻尔兹曼常数（1.3806503 × 10⁻²³ J/K），`k[i]` 是短路电流系数，`T`、`T[r]` 是工作和参考温度，最后 `G` 是辐照。
 
 ![](img/b_9783110714043-006_fig_004.jpg)
 
 图 6.4：带有三个太阳能电池组和三个旁路二极管的光伏板。
 
-
-
-
 本章研究使用的光伏（PV）面板模型基于商用 250 W 60 电池面板。来自数据表中的短路电流和开路电压分别为 8.75 A 和 36.6 V。由于所有 60 个电池均串联连接，因此单个电池的短路电流固定为 8.75 A。另一方面，每个电池的开路电压设置为 0.61 V。单晶电池每个电池的品质因子设置为 1.216。每个电池的串联电阻设置为 0.0018 欧姆。最后，旁路二极管设置为 0.6 V 正向电压降。
 
 ### 6.3.2 DC–DC 降压变换器
 
-DC–DC 降压变换器用于将输入电压降至负载所需的电压。Koutroulis [40] 开发了一种使用 DC–DC 降压变换器配合微控制器的 MPPT 系统，其中电压作为参考通过相应修改占空比来确定全局最大功率点（GMPP）。因此，它被广泛用于独立太阳能充电控制器应用，以降低光伏面板电压为电池负载充电。如图 6.5 所示，DC–DC 降压变换器电路由一个电感、一个肖特基二极管、两个电容和一个由栅极驱动器驱动的 MOSFET 作为主控制开关器件组成。降压变换器的工作原理如下：当 MOSFET 开启时，它从光伏面板提取功率并供给电感 `L` 和输出电容 `C[out]` 以及负载。当 MOSFET 关闭时，肖特基二极管 `D` 激活，允许电感将其电流放电到负载。通过 PWM 信号切换 MOSFET，可以控制负载所需的电压以及光伏面板看到的输入电阻，从而确定传输到负载的功率。光伏面板看到的降压变换器输入电阻 `R[in]` 由方程 (6.7) 决定，其中 `R[out]` 是负载电阻，`d` 是 PWM 占空比。
+DC–DC 降压变换器用于将输入电压降至负载所需的电压。Koutroulis[40]开发了一种使用 DC–DC 降压变换器配合微控制器的 MPPT 系统，其中电压作为参考通过相应修改占空比来确定全局最大功率点（GMPP）。因此，它被广泛用于独立太阳能充电控制器应用，以降低光伏面板电压为电池负载充电。如图 6.5 所示，DC–DC 降压变换器电路由一个电感、一个肖特基二极管、两个电容和一个由栅极驱动器驱动的 MOSFET 作为主控制开关器件组成。
+
+降压变换器的工作原理如下：当 MOSFET 开启时，它从光伏面板提取功率并供给电感 `L` 和输出电容 `C[out]` 以及负载。当 MOSFET 关闭时，肖特基二极管 `D` 激活，允许电感将其电流放电到负载。通过 PWM 信号切换 MOSFET，可以控制负载所需的电压以及光伏面板看到的输入电阻，从而确定传输到负载的功率。光伏面板看到的降压变换器输入电阻 `R[in]` 由方程（6.7）决定，其中 `R[out]` 是负载电阻，`d` 是 PWM 占空比。
 
 ![](img/b_9783110714043-006_fig_005.jpg)
 
 图 6.5：DC–DC 降压变换器工作区域。
 
-如图 6.5 所示，`R[eq(out)]` 是光伏模块看到的等效输出电阻，在使用降压变换器时，光伏的工作位于 IV 曲线的右侧，覆盖区域由所使用的负载电阻值决定 [29]。使用较小的负载电阻允许光伏曲线更大的覆盖范围。`R[out]` 的值可以通过方程 (6.5) 和 (6.6) ，其中 `V[MPP(max)]` 和 `I[MPP(max)]` 可以从光伏面板数据表中获得，在 STC-1000 W/m² 和 25 °C 下测量 [27]：
+如图 6.5 所示，`R[eq(out)]` 是光伏模块看到的等效输出电阻。在使用降压变换器时，光伏的工作位于 IV 曲线的右侧，覆盖区域由所使用的负载电阻值决定[29]。使用较小的负载电阻允许光伏曲线更大的覆盖范围。`R[out]` 的值可以通过方程（6.5）和（6.6）计算，其中 `V[MPP(max)]` 和 `I[MPP(max)]` 可以从光伏面板数据表中获得，在 STC-1000 W/m² 和 25 °C 下测量[27]：
 
-(6.5)$R_{{MPP}{({min})}} = \frac{V_{{MPP}{({max})}}}{I_{{MPP}{({max})}}}$(6.6)$R[out] < RMPP(min)${}R_{in} = \frac{R_{out}}{d}$
 
-降压变换器的关键电电 `L` 和电容 `C[out]` 值可以分别使用方程 (6.8) 和 (6.9) 进行估算，其中 `f` 是开关频率：
 
-(6.8)$L > \frac{\left( {1 - d} \right)R_{out}}{2f}$(6.9)$\mspace{-5040mu} C_{out} > \frac{\left( {1 - d} \right)}{16Lf^{2}}$
+(6.5)`$R_{{MPP}{({min})}} = \frac{V_{{MPP}{({max})}}}{I_{{MPP}{({max})}}}$`(6.6)`$R[out] < RMPP(min)${}R_{in} = \frac{R_{out}}{d}$`
 
-开关频率 `f` 设置为 7,812.5 Hz。电感 `L` 设置为 1mH，以使降压变换器能够在更宽的电阻负载下工作在连续电流模式。选择 2 Ω 的负载电阻 `R[out]` 以确保覆盖整个光伏曲线范围。输出电容 `C[out]` 不能设置得太大，以确保变换器的初始暂时间保持在最小值，因此 `C[out]` 设置为 47 µF。输入电容 `C[in]` 设置为 470 µF 以平滑光伏输出电压。
+降压变换器的关键电电`L`和电容`C[out]`值可以分别使用方程 (6.8) 和 (6.9) 进行估算，其中`f`是开关频率：
+
+(6.8)`$L > \frac{\left( {1 - d} \right)R_{out}}{2f}$`(6.9)`$\mspace{-5040mu} C_{out} > \frac{\left( {1 - d} \right)}{16Lf^{2}}$`
+
+开关频率`f`设置为 7,812.5 Hz。电感`L`设置为 1mH，以使降压变换器能够在更宽的电阻负载下工作在连续电流模式。选择 2 Ω 的负载电阻`R[out]`以确保覆盖整个光伏曲线范围。输出电容`C[out]`不能设置得太大，以确保变换器的初始暂时间保持在最小值，因此`C[out]`设置为 47 µF。输入电容`C[in]`设置为 470 µF 以平滑光伏输出电压。
 
 ## 6.4 MPPT PSO 算法模块
 
-MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所示。
+MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图 6.6 所示。
 
-
-
-对于真实环境，由部分阴影引起的全局峰可能位于功率曲线的左侧或右侧，有时局部峰与全局峰之间的距离非常接近。因此，拥有一个能够正确跟踪全局最大功率点（GMPP）的鲁棒跟踪算法至关重要。对于基于 PSO 的 MPPT 算法，其在跟踪时间、准确性和鲁棒性方面取决于其参数设置。因此，在本节中进行了大量的性能分析，以确定最优化参数设置，即粒子数量、加速度系数和惯性权重，以实现最佳的跟踪性能。图 6.2 所示的 PSC 下生成的光伏功率特性曲线用于分析 MPPT PSO 的跟踪性能。图 6.8(a–f 说明了带有四个粒子的 PSO 如何在 6 次迭代内逐渐定位全局峰值。这四个粒子在占空比值 0 到 1 之间随机初始化，如图图 6.8(a)所示。在每次迭代中，这些粒子逐渐向功率曲线最高功率的位置移动，如图图 6.8(b–e)所示。当所有粒子的个体最佳位置空空比小于 0.1 的范围内时，如图图 6.8(f)所示，认为满足收敛准则。全局最佳粒子是指能够定位功率曲线 GMPP 的最佳占空比值的解。
+对于真实环境，由部分阴影引起的全局峰可能位于功率曲线的左侧或右侧，有时局部峰与全局峰之间的距离非常接近。因此，拥有一个能够正确跟踪全局最大功率点（GMPP）的鲁棒跟踪算法至关重要。对于基于 PSO 的 MPPT 算法，其在跟踪时间、准确性和鲁棒性方面取决于其参数设置。因此，在本节中进行了大量的性能分析，以确定最优化参数设置，即粒子数量、加速度系数和惯性权重，以实现最佳的跟踪性能。图 6.2 所示的 PSC 下生成的光伏功率特性曲线用于分析 MPPT PSO 的跟踪性能。图 6.8(a–f) 说明了带有四个粒子的 PSO 如何在 6 次迭代内逐渐定位全局峰值。这四个粒子在占空比值 0 到 1 之间随机初始化，如图 6.8(a)所示。在每次迭代中，这些粒子逐渐向功率曲线最高功率的位置移动，如图 6.8(b–e)所示。当所有粒子的个体最佳位置空空比小于 0.1 的范围内时，如图 6.8(f)所示，认为满足收敛准则。全局最佳粒子是指能够定位功率曲线 GMPP 的最佳占空比值的解。
 
 ![](img/b_9783110714043-006_fig_008.png)
 
@@ -2085,7 +2044,7 @@ MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所�
 
 ### 6.5.1 粒子数量的性能评估
 
-该性能评估研究了粒子数量对 MPPT PSO 算法跟踪时间和跟踪准确性的影响。评估使用了如图图 6.2 所示的 PSC 下生成的光伏功率曲线，其中全局峰值处的最大功率记录为 131.8 W。加速度系数的参数设置为 `c[1]`= 1，`c[2]`= 1，惯性权重设置为 `w`= 0.5。同时，此性能评估中考虑的种群大小设置在三个到八个粒子之间。这是因为种群数量小于 3 的 PSO 容易出现早收敛，而种群数量为 8 则由于跟踪过程中长时间的震荡往往导致收敛速度缓慢。其中一次尝试中具有 4 个粒子的 MPPT PSO 的跟踪性能如图图 6.9 所示，观察到它能够在 0.038 s 内跟踪 131.8 W 的 GMPP。
+该性能评估研究了粒子数量对 MPPT PSO 算法跟踪时间和跟踪准确性的影响。评估使用了如图 6.2 所示的 PSC 下生成的光伏功率曲线，其中全局峰值处的最大功率记录为 131.8 W。加速度系数的参数设置为`c[1]`= 1，`c[2]`= 1，惯性权重设置为`w`= 0.5。同时，此性能评估中考虑的种群大小设置在三个到八个粒子之间。这是因为种群数量小于 3 的 PSO 容易出现早收敛，而种群数量为 8 则由于跟踪过程中长时间的震荡往往导致收敛速度缓慢。其中一次尝试中具有 4 个粒子的 MPPT PSO 的跟踪性能如图 6.9 所示，观察到它能够在 0.038 s 内跟踪 131.8 W 的 GMPP。
 
 ![](img/b_9783110714043-006_fig_009.jpg)
 
@@ -2103,7 +2062,7 @@ MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所�
 
 图 6.11：每个粒子数量的误差。
 
-为了突出跟踪时间与误差之间的权衡，不同种群数量 MPPT PSO 产生的平均跟踪时间和误差如图图 6.12 所示。结论是种群数量在 3 到 5 之间的 PSO 是合适的。
+为了突出跟踪时间与误差之间的权衡，不同种群数量 MPPT PSO 产生的平均跟踪时间和误差如图 6.12 所示。结论是种群数量在 3 到 5 之间的 PSO 是合适的。
 
 ![](img/b_9783110714043-006_fig_012.jpg)
 
@@ -2111,20 +2070,17 @@ MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所�
 
 ### 6.5.2 加速度系数的性能评估
 
-此性能评估旨在研究加速度系数对跟踪时间和准确性的影响。这是因为加速度系数 `c[1]` 和 `c[2]` 的最优设置可能根据特定问题而异。从所示的 PSO 速度更新方案可以看出，`c[1]` 和 `c[2]` 分别与种群的认知（个体最佳位置）和社会（全局最佳位置）部分相关。
+此性能评估旨在研究加速度系数对跟踪时间和准确性的影响。这是因为加速度系数`c[1]`和`c[2]`的最优设置可能根据特定问题而异。从所示的 PSO 速度更新方案可以看出，`c[1]`和`c[2]`分别与种群的认知（个体最佳位置）和社会（全局最佳位置）部分相关。
 
-同样，评估使用了如图图 6.2 所示的 PSC 条件下生成的光伏功率曲线。参考前一节的仿真结果，MPPT PSO 的种群大小设置为 4，惯性权重值保持为 `w`= 0.5。同时，加速度系数的值限制在 0.5 到 1.5 之间，因为 `c[1]` 和 `c[2]` 值过大或差异显著会导致跟踪时间变慢，甚至由于高震荡特性无法跟踪 MPP，如图图 6.13 所示。在此性能评估中，分析了具有四种加速度系数组合的 PSO 的 MPP 跟踪效率：(a) `c[1]`= 0.5，`c[2]` = 1.5，(b) `c[1]`= 0.8，`c[2]` 1.2，(c) `c[1]`= 1.2，`c[2]` 0.8 以及 (d) `c[1]`= 1.5，`c[2]`= 0.5。
+同样，评估使用了如图 6.2 所示的 PSC 条件下生成的光伏功率曲线。参考前一节的仿真结果，MPPT PSO 的种群大小设置为 4，惯性权重值保持为`w`= 0.5。同时，加速度系数的值限制在 0.5 到 1.5 之间，因为`c[1]`和`c[2]`值过大或差异显著会导致跟踪时间变慢，甚至由于高震荡特性无法跟踪 MPP，如图 6.13 所示。在此性能评估中，分析了具有四种加速度系数组合的 PSO 的 MPP 跟踪效率：(a) `c[1]`= 0.5，`c[2]`= 1.5，(b) `c[1]`= 0.8，`c[2]`= 1.2，(c) `c[1]`= 1.2，`c[2]`= 0.8 以及 (d) `c[1]`= 1.5，`c[2]`= 0.5。
 
 ![](img/b_9783110714043-006_fig_013.jpg)
 
-图 6.13：导致震荡的加速度系数 `c[1]`= 0.2 和 `c[2]`= 1.8。
+图 6.13：导致震荡的加速度系数`c[1]`= 0.2 和`c[2]`= 1.8。
 
+同样，对不同加速系数组合的 MPPT PSO 进行了 10 次连续测试，不同参数设置下实现的跟踪时间汇总在图 6.14 中。可以观察到，MPPT PSO 的跟踪性能受到两个加速系数之间差异的影响。值得注意的是，`c[1]`和`c[2]`之间较小的 MPPT PSO（例如`c[1]`= 0.8 和`c[2]`= 1.2）倾向于表现出更一致的跟踪时间性能，反之亦然（例如`c[1]`= 0.5 和`c[2]`= 1.5）。图 6.14 中的仿真结果也证明了 MPPT PSO 在实时 MPPT 应用中的可行性，因为不同加速系数组合实现的跟踪时间处于 0.02 到 0.18 s 之间。
 
-
-
-同样，对不同加速系数组合的 MPPT PSO 进行了 10 次连续测试，不同参数设置下实现的跟踪时间汇总在图 6.14 中。可以观察到，MPPT PSO 的跟踪性能受到两个加速系数之间差异的影响。值得注意的是，`c[1]` 和 `c[2]` 之间较小的 MPPT PSO（例如 `c[1]` 0.8 和 `c[2]` = 1.2）倾向于表现出更一致的跟踪时间性能，反之亦然（例如 `c[1]` = 0.5 和 `c[2]` = 1.5）。图 6.14 中的仿真结果也证明了 MPPT PSO 在实时 MPPT 应用中的可行性，因为不同加速系数组合实现的跟踪时间处于 0.02 到 0.18 s 之间。
-
-图 6.15 显示了不同加速系数组合下的 MPPT PSO 在 10 次连续尝试中产生的跟踪误差性能。观察到，当加速系数为 (a) `c[1]` = 0.5, `c[2]` = 1.5 以及 (d) `c[1]` = 1.5 和 `c[2]` = 0.5 的 MPPT PSO 时，它们更倾向于产生更大的跟踪误差，如图 6.14 所示。当 `c[1]` 和 `c[2]` 的加速系数差异显著时，由于探索与开发搜索之间的平衡不当，MPPT PSO 往往更容易陷入早收敛，导致较高的跟踪误差。相反，加速系数为 (b) `c[1]` = 0.8, `c[2]` = 1.2 以及 (c) `c[1]` = 1.2, `c[2]` = 0.8 的 MPPT PSO 被报道产生较低的跟踪误差，这是因为它们在寻找能够 MPPT 的最优占空比时，更好地平衡了探索与开发的强度。参考图 6.15，可以观察到当 `c[2]` 的值略高于 `c[1]` 时，MPPT PSO 在大多数尝试中能够产生最低的跟踪误差，从而使 MPPT PSO 获得最小误差。换句话说，应该稍微强调由全局最佳位置贡献的开发搜索，以便 MPPT PSO 能以最小误差收敛到全局峰值。
+图 6.15 显示了不同加速系数组合下的 MPPT PSO 在 10 次连续尝试中产生的跟踪误差性能。观察到，当加速系数为 (a) `c[1]`= 0.5, `c[2]`= 1.5 以及 (d) `c[1]`= 1.5 和`c[2]`= 0.5 的 MPPT PSO 时，它们更倾向于产生更大的跟踪误差，如图 6.14 所示。当`c[1]`和`c[2]`的加速系数差异显著时，由于探索与开发搜索之间的平衡不当，MPPT PSO 往往更容易陷入早收敛，导致较高的跟踪误差。相反，加速系数为 (b) `c[1]`= 0.8, `c[2]`= 1.2 以及 (c) `c[1]`= 1.2, `c[2]`= 0.8 的 MPPT PSO 被报道产生较低的跟踪误差，这是因为它们在寻找能够 MPPT 的最优占空比时，更好地平衡了探索与开发的强度。参考图 6.15，可以观察到当`c[2]`的值略高于`c[1]`时，MPPT PSO 在大多数尝试中能够产生最低的跟踪误差，从而使 MPPT PSO 获得最小误差。换句话说，应该稍微强调由全局最佳位置贡献的开发搜索，以便 MPPT PSO 能以最小误差收敛到全局峰值。
 
 ![](img/b_9783110714043-006_fig_014.jpg)
 
@@ -2134,7 +2090,7 @@ MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所�
 
 图 6.15: 加速系数跟踪误差性能。
 
-为了研究跟踪时间和误差性能之间的权衡，不同加速系数组合的 MPPT PSO 产生的平均跟踪时间和误差所示所示图 6.16 中。观察到，具有良好跟踪时间的 MPPT PSO 倾向于产生略微下降的跟踪误差，反之亦然。然而，所有加速系数组合的 MPPT PSO 产生的跟踪时间和误差仍在实时应用的接受范围内。通过在 MPPT 应用中优先考虑跟踪误差，加速系数 `c[1]` = 0.8 和 `c[2]` = 1.2 被确定为最优参数设置。
+为了研究跟踪时间和误差性能之间的权衡，不同加速系数组合的 MPPT PSO 产生的平均跟踪时间和误差如图 6.16 中所示。观察到，具有良好跟踪时间的 MPPT PSO 倾向于产生略微下降的跟踪误差，反之亦然。然而，所有加速系数组合的 MPPT PSO 产生的跟踪时间和误差仍在实时应用的接受范围内。通过在 MPPT 应用中优先考虑跟踪误差，加速系数`c[1]`= 0.8 和`c[2]`= 1.2 被确定为最优参数设置。
 
 ![](img/b_9783110714043-006_fig_016.jpg)
 
@@ -2142,65 +2098,59 @@ MPPT PSO 算法模块跟踪最大功率点。MPPT 的子系统如图图 6.6 所�
 
 ### 6.5.3 惯性权重性能评估
 
-除了加速系数外，PSO 粒子在每次迭代中的速度也受到惯性重的直接影响。因此，研究惯性权重如何影响跟踪时间是非常重要的。惯性权重的值应设置在 0.1 到 1 之间。在本节中，分析了值为 `w*` 0.1, `w*` 0.3, `w*` 0.5, `w*` 0.8 和 `w*` 1 的 MPPT PSO 跟踪性能。参考图 6.17，加速系数 `c[1]` = 0.8 和 `c[2]` = 1.2 被用于评估。
+除了加速系数外，PSO 粒子在每次迭代中的速度也受到惯性重的直接影响。因此，研究惯性权重如何影响跟踪时间是非常重要的。惯性权重的值应设置在 0.1 到 1 之间。在本节中，分析了值为`w*`= 0.1, `w*`= 0.3, `w*`= 0.5, `w*`= 0.8 和`w*`= 1 的 MPPT PSO 跟踪性能。参考图 6.17，加速系数`c[1]`= 0.8 和`c[2]`= 1.2 被用于评估。
 
 ![](img/b_9783110714043-006_fig_017.jpg)
 
 图 6.17: 惯性权重跟踪时间。
 
-观察到，MPPT PSO 的跟踪时间与惯性权重成正比，因为较大的惯性权重会导致较长的跟踪时间。尽管如此，不同惯性权重值的 MPPT PSO 总体跟踪时间仍然是实时应用接受。图 6.18 显示了不同惯性权重下 MPPT PSO 在 10 次尝试中产生的跟踪误差性能。观察到类似的趋势，具有较大惯性权重的 MPPT PSO 倾向于产生较大的跟踪误差，反之亦然。值得注意的是，惯性权重用于控制 MPPT PSO 的探索强度。虽然探索搜索有助于避免早收敛，但也容易导致过调过调问题。
+观察到，MPPT PSO 的跟踪时间与惯性权重成正比，因为较大的惯性权重会导致较长的跟踪时间。尽管如此，不同惯性权重值的 MPPT PSO 总体跟踪时间仍然是实时应用接受的。图 6.18 显示了不同惯性权重下 MPPT PSO 在 10 次尝试中产生的跟踪误差性能。观察到类似的趋势，具有较大惯性权重的 MPPT PSO 倾向于产生较大的跟踪误差，反之亦然。值得注意的是，惯性权重用于控制 MPPT PSO 的探索强度。虽然探索搜索有助于避免早收敛，但也容易导致过调问题。
 
 ![](img/b_9783110714043-006_fig_018.jpg)
 
 图 6.18: 惯性权重跟踪误差性能。
 
-不同惯性权重值的 MPPT PSO 产生的平均跟踪时间和误差性能之间的权衡所示图 6.19。观察到当惯性权重值变化时，跟踪时间和误差以相似的趋势变化。值得注意的是，不同惯性权重值的 MPPT PSO 产生的跟踪时间和误差都在实时应用的接受范围内。应根据系统需求为 MPPT PSO 设置不同的惯性权重值。例如，如果跟踪误差是系统的主要考虑因素，可以设置惯性权重为 `w*` 0.5。对于优先考虑快速跟踪时间的系统，应考虑 `w*` 0.1 的惯性权重。
+不同惯性权重值的 MPPT PSO 产生的平均跟踪时间和误差性能之间的权衡如图 6.19 所示。观察到当惯性权重值变化时，跟踪时间和误差以相似的趋势变化。值得注意的是，不同惯性权重值的 MPPT PSO 产生的跟踪时间和误差都在实时应用的接受范围内。应根据系统需求为 MPPT PSO 设置不同的惯性权重值。例如，如果跟踪误差是系统的主要考虑因素，可以设置惯性权重为`w*`= 0.5。对于优先考虑快速跟踪时间的系统，应考虑`w*`= 0.1 的惯性权重。
 
 ![](img/b_9783110714043-006_fig_019.jpg)
 
 图 6.19: 惯性权重跟踪时间与误差的相关性。
 
-
-
 由于光伏板上移动阴影的投射，太阳辐射强度的变化会导致全局峰值幅值的改变。根据局部阴影条件，相应的全局峰值可能位于光伏曲线的任何位置（即低电压或高电压区域）。
 
-提出的 `PSO` 算法在光照变化时将重新初始化，以追踪全局峰值的新位置。在本节中，评估了 `MPPT PSO` 的跟踪鲁棒性及其根据光照变化追踪全局峰值过渡的能力，评估基础基于先前分析确定的最优参数设置，包括种群大小（如 `4`）、加速系数（如 `c[1] = 0.8`、`c[2] = 1.2`）和惯性权重（如 `w = 0.1`）。
+提出的`PSO`算法在光照变化时将重新初始化，以追踪全局峰值的新位置。在本节中，评估了`MPPT PSO`的跟踪鲁棒性及其根据光照变化追踪全局峰值过渡的能力，评估基础基于先前分析确定的最优参数设置，包括种群大小（如`4`）、加速系数（如`c[1] = 0.8`、`c[2] = 1.2`）和惯性权重（如`w = 0.1`）。
 
-用于过渡跟踪测试的四条不同的光伏曲线所示图 6.20，其中 `GMPP1` 到 `GMPP4` 分别代表最大功率为 `61.4`、`93.1`、`64.8` 和 `31.4 W` 的光伏曲线。这四条光伏曲线用于测试 `MPPT PSO` 在每秒一次过渡的情况下对不同全局峰值位置的鲁棒性。
+用于过渡跟踪测试的四条不同的光伏曲线如图 6.20 所示，其中`GMPP1`到`GMPP4`分别代表最大功率为`61.4`、`93.1`、`64.8`和`31.4 W`的光伏曲线。这四条光伏曲线用于测试`MPPT PSO`在每秒一次过渡的情况下对不同全局峰值位置的鲁棒性。
 
 ![](img/b_9783110714043-006_fig_020.jpg)
 
 图 6.20：用于过渡跟踪评估的四条光伏曲线。
 
-同样，对 10 次连续尝试进行了过渡测试。记录了所有 4 次过渡的平均跟踪时间和跟踪误差。其中一次尝试的过渡跟踪性能所示图 6.21。
+同样，对 10 次连续尝试进行了过渡测试。记录了所有 4 次过渡的平均跟踪时间和跟踪误差。其中一次尝试的过渡跟踪性能如图 6.21 所示。
 
 ![](img/b_9783110714043-006_fig_021.png)
 
 图 6.21：其中一次尝试的过渡跟踪性能。
 
-结果显然，`MPPT PSO` 仅需 `0.029 s` 即可追踪第一个 `61.36 W` 的 `GMPP`。对于第二次过渡，`MPPT PSO` 需要重新初始化，观测到它在 `0.08 s` 内成功追踪了 `92.93 W` 的第二个全局峰值。同样在随后的过渡跟踪中也可以观察到，即 `MPPT PSO` 能够成功追踪 `64.77 W` 的第三个全局峰值和 `31.3 W` 的第四个全局峰值，时间分别为 `0.078` 和 `0.064 s`。
+结果显然，`MPPT PSO`仅需`0.029 s`即可追踪第一个`61.36 W`的`GMPP`。对于第二次过渡，`MPPT PSO`需要重新初始化，观测到它在`0.08 s`内成功追踪了`92.93 W`的第二个全局峰值。同样在随后的过渡跟踪中也可以观察到，即`MPPT PSO`能够成功追踪`64.77 W`的第三个全局峰值和`31.3 W`的第四个全局峰值，时间分别为`0.078`和`0.064 s`。
 
 图 6.22
 
 图 6.22：过渡平均跟踪时间评估。
 
-图 6.23 总结了 `MPPT PSO` 在 10 次连续尝试实现的实现的平均跟踪误差性能。可以观察到 `MPPT PSO` 能够达到 `0.15%` 的最低平均误差值。相反，产生的最高平均跟踪误差仅为 `6.6%`。虽然仍有改进空间进一步降低平均跟踪误差，但仿真结果显示 `MPPT PSO` 的跟踪性能对于实时 `MPPT` 应用来说足够良好。
+图 6.23 总结了`MPPT PSO`在 10 次连续尝试实现的平均跟踪误差性能。可以观察到`MPPT PSO`能够达到`0.15%`的最低平均误差值。相反，产生的最高平均跟踪误差仅为`6.6%`。虽然仍有改进空间进一步降低平均跟踪误差，但仿真结果显示`MPPT PSO`的跟踪性能对于实时`MPPT`应用来说足够良好。
 
 ![](img/b_9783110714043-006_fig_023.jpg)
 
 图 6.23：过渡平均跟踪误差评估。
 
-总之，根据先前的性能评估确定的最优参数设置证明 `PSO` 在动态变化的局部阴影条件下执行 `MPPT` 跟踪是有效的，且在 10 次连续尝试中均未失败。最后，本章介绍的 `MPPT PSO` 模型由作者提供，供读者在 Mathworks 官方 MATLAB 文件交换链接下载：
+总之，根据先前的性能评估确定的最优参数设置证明`PSO`在动态变化的局部阴影条件下执行`MPPT`跟踪是有效的，且在 10 次连续尝试中均未失败。最后，本章介绍的`MPPT PSO`模型由作者提供，供读者在 Mathworks 官方 MATLAB 文件交换链接下载：
 
-https://www.mathworks.com/matlabcentral/fileexchange/87142-mppt-tracking-based-on-particle-swarm-optimization
+`https://www.mathworks.com/matlabcentral/fileexchange/87142-mppt-tracking-based-on-particle-swarm-optimization`
 
 ## 6.6 结论
 
-由于光伏板上移动阴影的投射，太阳辐射强度的变化会导致全局峰值幅值的改变。根据局部阴影条件，相应的全局峰值可能位于光伏曲线的任何位置（即低电压或高电压区域）。提出的 `PSO` 算法在光照变化时将重新初始化，以追踪全局峰值的新位置。在本节中，根据先前分析确定的最优参数设置（即种群大小 `4`、加速系数 `c[1] = 0.8`、`c[2] = 1.2` 和惯性权重 `w = 0.1`），评估了 `MPPT PSO` 的跟踪鲁棒性及其根据光照变化追踪全局峰值过渡的能力。
-
-
-
-
+由于光伏板上移动阴影的投射，太阳辐射强度的变化会导致全局峰值幅值的改变。根据局部阴影条件，相应的全局峰值可能位于光伏曲线的任何位置（即低电压或高电压区域）。提出的`PSO`算法在光照变化时将重新初始化，以追踪全局峰值的新位置。在本节中，根据先前分析确定的最优参数设置（即种群大小`4`、加速系数`c[1] = 0.8`、`c[2] = 1.2`和惯性权重`w = 0.1`），评估了`MPPT PSO`的跟踪鲁棒性及其根据光照变化追踪全局峰值过渡的能力。
 
 ## 参考文献
 
@@ -2210,121 +2160,114 @@ https://www.mathworks.com/matlabcentral/fileexchange/87142-mppt-tracking-based-o
 
 [11] Adefarati T., Bansal R. C. 可再生能源分布式发电器并配电系统的集成：综述。`IET-Renewable Power Generation`, 10(7), 2016 年 7 月, 873–884. →
 
-[12] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 用于水泵应用的应用的混合 GSA–PSO 算法的新 CUK–SEPIC 转换器光伏功率系统。`IET Power Electronics`, 13, 2020, 2824–2830. →
+[12] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 用于水泵应用的混合 GSA–PSO 算法的新 CUK–SEPIC 转换器光伏功率系统。`IET Power Electronics`, 13, 2020, 2824–2830. →
 
 [13] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的基于采用 PSO 的改进型 zeta 转换器光伏最大功率跟踪系统：硬件实现。`IET Power Electronics`, 13, 2020, 2775–2781. →
 
-[14] Chao R. M., Nasirudin A., Wang I. K., Chen P. L. 部分阴影条件下分布式光伏系统最大功率点的多核 PSO 运行。`International Journal of Photoenergy`, 2016, https://doi.org/10.1155/2016/9754514. a, b
+[14] Chao R. M., Nasirudin A., Wang I. K., Chen P. L. 部分阴影条件下分布式光伏系统最大功率点的多核 PSO 运行。`International Journal of Photoenergy`, 2016, `https://doi.org/10.1155/2016/9754514`. a, b
 
-[15] Eberhart R., Kennedy J. 一种使用粒子群理论的新优化器。`Proceedings of the International Symposium on Micro Machine and Human Science`, 1995, https://doi.org/10.1109/mhs.1995.494215 →
+[15] Eberhart R., Kennedy J. 一种使用粒子群理论的新优化器。`Proceedings of the International Symposium on Micro Machine and Human Science`, 1995, `https://doi.org/10.1109/mhs.1995.494215` →
 
-[16] Efendi M. Z., Murdianto F. D., Setiawan R. E. 使用改进 PSO 的 MPPT sepie 转换器建模与仿真，以克服部分阴影对直流微网网的影响。`Proceedings IES-ETA 2017 – 工程技术与应用国际电子会议集`, 2017. https://doi.org/10.1109/ELECSYM.2017.8240370 a, b
+[16] Efendi M. Z., Murdianto F. D., Setiawan R. E. 使用改进 PSO 的 MPPT sepie 转换器建模与仿真，以克服部分阴影对直流微网的影响。`Proceedings IES-ETA 2017 – 工程技术与应用国际电子会议集`, 2017. `https://doi.org/10.1109/ELECSYM.2017.8240370` a, b
 
-[17] El-Khozondar H. J., El-Khozondar R. J., Matter K., Suntio T. 光伏阵列最大功率跟踪算法的研究研究。`Renewables: Wind, Water, and Solar`, 2016, https://doi.org/10.1186/s40807-016-0022-8. →
-
-[18] Eltamaly A. M., Al-Saud M. S., Abokhalil A. G., Farh H. M. H. 新型自适应粒子群优化在动态部分阴影变化下的光伏最大功率点跟踪。`Transactions of the Institute of Measurement and Control`, 2020, https://doi.org/10.1177/014233121986527 a, b
-
-[19] Grzesiak L. 部分阴影条件下使用随机搜索和确定性爬山的的光伏系统混合 MPPT 算法。`Power Electronics and Drives`, 2017, https://doi.org/10.5277/ped170212 a, b, c
-
-[20] Ishaque K., Salam Z., Amjad M., Mekhilef S. 减少稳态振动的改进型粒子群优化 (PSO) 光伏 MPPT。`IEEE Transactions on Power`, 2012, https://doi.org/10.1109/TPEL.2012.218573 a, b, c
-
-[21] Kamejima T., Phimmasone V., Kondo Y., Miyatake M. 光伏系统基于 PSO 的 MPPT 控制参数优化。`Proceedings of the International Conference on Power Electronics and Drive Systems`, 2011. https://doi.org/10.1109/PEDS.2011.614735 a, b
-
-[22] Karami N., Moubayed N., Outbib R. 不同 MPPT 技术的综述与分类。`Renewable and Sustainable Energy Reviews`, 2017, https://doi.org/10.1016/j.rser.2016.09.132 a, b
-
-[23] Koad R. B. A., Zobaa A. F., El-Shahat A. 基于粒子群优化的光伏系统新型 MPPT 算法。`IEEE Transactions on Sustainable Energy`, 2017, https://doi.org/10.1109/TSTE.2016.2606421 a, b
-
-[24] Liu J., Li J., Wu J., Zhou W. 屋顶光伏阵列的 PSO 和 INC 协同控制全局 MPPT 算法。`The Journal of Engineering`, 2017, https://doi.org/10.1049/joe.2017.0437 a, b
-
-[25] Mao M., Zhang L., Duan Q., Oghorada O. J. K., Duan P., Hu B. 用于部分阴影光伏阵列 MPPT 的两阶段粒子群优化算法。`International Journal of Green Energy`, 2017, https://doi.org/10.1080/15435075.2017.13247 a, b
-
-[26] Masmoudi F., Ben Salem F., Derbel N. 传统单晶太阳能电池单双二极模型提取。`第 13 届国际系统与设备会议`, 2016. https://doi.org/10.1109/SSD.2016.7473 a, b
-
-[27] Obukhov S., Ibrahim A., Zaki D. 离网系统优化的动态粒子群最大功率跟踪性能。`IEEE Access`, 2020, https://doi.org/10.1109/ACCESS.2020.296630 →
-
-[28] Ram J. P., Pillai D. S., Rajasekar N., Strachan M. 使用混合 ELPSO-PO 技术在太阳能应用中检测全局功率点。`IEEE Journal of Emerging and Selected Topics in Power Electronics`, 2020, https://doi.org/10.1109/JESTPE.2019.290099 a, b
-
-[29] Seyedmahmoud M., Soon T. K., Jamei E., Thirunavkarasu G. S., Horan B., Mekhilef S., Stojcevski A. 部分阴影下光蝙算法的光伏系统最大功率跟踪。`Sustainability (Switzerland)`, 2018, https://doi.org/10.3390/su10051347 →
-
-[30] Sudhakar Babu T., Rajasekar N., Sangeetha K. 改进粒子群优化技术用于均匀和部分阴影下的最大功率跟踪。`Applied Soft Journal`, 2015, https://doi.org/10.1016/j.asoc.2015.05.029 a, b
+[17] El-Khozondar H. J., El-Khozondar R. J., Matter K., Suntio T. 光伏阵列最大功率跟踪算法的研究。`Renewables: Wind, Water, and Solar`, 2016, `https://doi.org/10.1186/s40807-016-0022-8`. →
 
 
 
+[18] Eltamaly A. M., Al-Saud M. S., Abokhalil A. G., Farh H. M. H. 新型自适应粒子群优化在动态部分阴影变化下的光伏最大功率点跟踪。`Transactions of the Institute of Measurement and Control`, 2020, `https://doi.org/10.1177/014233121986527` a, b
 
+[19] Grzesiak L. 部分阴影条件下使用随机搜索和确定性爬山的的光伏系统混合 `MPPT` 算法。`Power Electronics and Drives`, 2017, `https://doi.org/10.5277/ped170212` a, b, c
 
-[32] Zheng Y., Wang W., Chen W., Li Q. 部分阴影条件下基于 PSO 的光伏系统 MPPT 研究。中国控制会议，CCC, 2016. `doi.org/10.1109/ChiCC.2016.7554738`, b
+[20] Ishaque K., Salam Z., Amjad M., Mekhilef S. 减少稳态振动的改进型粒子群优化（`PSO`）光伏 `MPPT`。`IEEE Transactions on Power`, 2012, `https://doi.org/10.1109/TPEL.2012.218573` a, b, c
 
-[33] Priyadarshi N., Sharma A. K., Priyam S. 带有 MPPT 的改进光伏电网接入的实际实现。国际可再生能源研究期刊， 7, 2017, 1180–1891. →
+[21] Kamejima T., Phimmasone V., Kondo Y., Miyatake M. 光伏系统基于 `PSO` 的 `MPPT` 控制参数优化。`Proceedings of the International Conference on Power Electronics and Drive Systems`, 2011. `https://doi.org/10.1109/PEDS.2011.614735` a, b
 
-[34] Priyadarshi N., Sharma A. K., Azam F. 基于光伏-风电-燃料电网接入的混合萤火虫非对称模糊逻辑控制器 MPPT。国际可再生能源研究期刊， 7, 2017, 1546–1560. →
+[22] Karami N., Moubayed N., Outbib R. 不同 `MPPT` 技术的综述与分类。`Renewable and Sustainable Energy Reviews`, 2017, `https://doi.org/10.1016/j.rser.2016.09.132` a, b
 
-[35] Priyadarshi N., Anand A., Sharma A. K., Azam F., Singh V. K., Sinha R. K. 使用 dSPACE DS 1104 控制器对变环境条件下基于 GA 的光伏系统最大功率点跟踪进行实验实现与测试。国际可再生能源研究期刊， 7, 2017, 255–265. →
+[23] Koad R. B. A., Zobaa A. F., El-Shahat A. 基于粒子群优化的光伏系统新型 `MPPT` 算法。`IEEE Transactions on Sustainable Energy`, 2017, `https://doi.org/10.1109/TSTE.2016.2606421` a, b
 
-[36] Priyadarshi N., Padmanaban S., Mihet-Popa L., Blaabjerg F., Azam F. 使用混合 ANFIS-FLOWER 授粉优化算法的无刷直流电机驱动光伏泵系统的最大功率点跟踪。MDPI Energies， 11, 2018, 1–16. →
+[24] Liu J., Li J., Wu J., Zhou W. 屋顶光伏阵列的 `PSO` 和 `INC` 协同控制全局 `MPPT` 算法。`The Journal of Engineering`, 2017, `https://doi.org/10.1049/joe.2017.0437` a, b
 
-[37] Kamalapathi K., Priyadarshi N., Padmanaban S., Holm-Nielsen J. B., Azam F., Umayal C., Ramachandaramurthy V. K. 用于功率因数校正的基于混合蛾蛾-火焰模糊逻辑控制器集成 Cuk 变换器馈电无刷直流电机。MDPI Electronics， 7, 2018, 288. →
+[25] Mao M., Zhang L., Duan Q., Oghorada O. J. K., Duan P., Hu B. 用于部分阴影光伏阵列 `MPPT` 的两阶段粒子群优化算法。`International Journal of Green Energy`, 2017, `https://doi.org/10.1080/15435075.2017.13247` a, b
 
-[38] Priyadarshi N., Padmanaban S., Lonel D., Mihet-Popa L., Hybrid A. F. 使用准 Z 源逆变器建模与控制进行光伏-风电微电网开发——实验研究。MDPI Energies， 11, 2018, 2277. →
+[26] Masmoudi F., Ben Salem F., Derbel N. 传统单晶太阳能电池单双二极模型提取。`第 13 届国际系统与设备会议`, 2016. `https://doi.org/10.1109/SSD.2016.7473` a, b
 
-[39] Priyadarshi N., Ramachandaramurthy V., Padmanaban K., Azam S. 带有单级 Cuk 变换器的独立式混合光伏-风电发电系统的蚁群算法优化 MPPT。MDPI Energies， 12, 2019, 167. →
+[27] Obukhov S., Ibrahim A., Zaki D. 离网系统优化的动态粒子群最大功率跟踪性能。`IEEE Access`, 2020, `https://doi.org/10.1109/ACCESS.2020.296630` →
 
-[40] Koutroulis, E., Kalaitzakis, K., & Voulgaris, N. C. (2001). 基于微控制器的光伏最大功率点跟踪控制系统的开发。IEEE 电子学 Transactions，16(1), 46–54. hhttps://doi.org/10.1109/63.903988
+[28] Ram J. P., Pillai D. S., Rajasekar N., Strachan M. 使用混合 `ELPSO-PO` 技术在太阳能应用中检测全局功率点。`IEEE Journal of Emerging and Selected Topics in Power Electronics`, 2020, `https://doi.org/10.1109/JESTPE.2019.290099` a, b
+
+[29] Seyedmahmoud M., Soon T. K., Jamei E., Thirunavkarasu G. S., Horan B., Mekhilef S., Stojcevski A. 部分阴影下光蝙算法的光伏系统最大功率跟踪。`Sustainability (Switzerland)`, 2018, `https://doi.org/10.3390/su10051347` →
+
+[30] Sudhakar Babu T., Rajasekar N., Sangeetha K. 改进粒子群优化技术用于均匀和部分阴影下的最大功率跟踪。`Applied Soft Journal`, 2015, `https://doi.org/10.1016/j.asoc.2015.05.029` a, b
+
+[32] Zheng Y., Wang W., Chen W., Li Q. 部分阴影条件下基于 `PSO` 的光伏系统 `MPPT` 研究。中国控制会议，`CCC`, 2016. `doi.org/10.1109/ChiCC.2016.7554738`, b
+
+[33] Priyadarshi N., Sharma A. K., Priyam S. 带有 `MPPT` 的改进光伏电网接入的实际实现。国际可再生能源研究期刊，7, 2017, 1180–1891. →
+
+[34] Priyadarshi N., Sharma A. K., Azam F. 基于光伏-风电-燃料电网接入的混合萤火虫非对称模糊逻辑控制器 `MPPT`。国际可再生能源研究期刊，7, 2017, 1546–1560. →
+
+[35] Priyadarshi N., Anand A., Sharma A. K., Azam F., Singh V. K., Sinha R. K. 使用 `dSPACE DS 1104` 控制器对变环境条件下基于 `GA` 的光伏系统最大功率点跟踪进行实验实现与测试。国际可再生能源研究期刊，7, 2017, 255–265. →
+
+[36] Priyadarshi N., Padmanaban S., Mihet-Popa L., Blaabjerg F., Azam F. 使用混合 `ANFIS-FLOWER` 授粉优化算法的无刷直流电机驱动光伏泵系统的最大功率点跟踪。`MDPI Energies`，11, 2018, 1–16. →
+
+[37] Kamalapathi K., Priyadarshi N., Padmanaban S., Holm-Nielsen J. B., Azam F., Umayal C., Ramachandaramurthy V. K. 用于功率因数校正的基于混合蛾蛾-火焰模糊逻辑控制器集成 `Cuk` 变换器馈电无刷直流电机。`MDPI Electronics`，7, 2018, 288. →
+
+[38] Priyadarshi N., Padmanaban S., Lonel D., Mihet-Popa L., Hybrid A. F. 使用准 `Z` 源逆变器建模与控制进行光伏-风电微电网开发——实验研究。`MDPI Energies`，11, 2018, 2277. →
+
+[39] Priyadarshi N., Ramachandaramurthy V., Padmanaban K., Azam S. 带有单级 `Cuk` 变换器的独立式混合光伏-风电发电系统的蚁群算法优化 `MPPT`。`MDPI Energies`，12, 2019, 167. →
+
+[40] Koutroulis, E., Kalaitzakis, K., & Voulgaris, N. C. (2001). 基于微控制器的光伏最大功率点跟踪控制系统的开发。IEEE 电子学 Transactions，16(1), 46–54. `https://doi.org/10.1109/63.903988`
 
 # 7 基于 IoT 的变电站无线监控
 
-Varsha Singh, 印度拉贾普国家理工学院; Simran Bajaj, 印度拉贾普国家理工学院; Shreyash Ganvir, 印度拉贾普国家理工学院; Swapnil Sahu, 印度拉贾普国家理工学院; Mahendra Gavel, 印度拉贾普国家理工学院。
+Varsha Singh, 印度拉贾普国家理工学院；Simran Bajaj, 印度拉贾普国家理工学院；Shreyash Ganvir, 印度拉贾普国家理工学院；Swapnil Sahu, 印度拉贾普国家理工学院；Mahendra Gavel, 印度拉贾普国家理工学院。
 
-### 摘要
-物联网（IoT）正在成为改变现代生活标准的革命性技术。IoT 允许通过远程服务器实现数据采集、通信和处理的实时集成。本章讨论了使用 `NodeMCU`（Wi-Fi 模块）、`Arduino Uno`（微控制器）、`Thing Speak Server` 和 `Blynk` 对变电站进行监控和控制的无线系统。使用各种传感器和电子元件监控变电站的电流、电压、功率因数、频率和温度等不同参数。该概念通过实验设置得到了验证。`NodeMCU` 是系统的控制中心，将数据发送到 `Thing Speak` 服务器，远程用户可以采取行动。根据接收的数据，用户可以控制断路器实现对系统的实时控制。收集准确的数据有助于分析和故障检测。IoT 的实时功能允许快速行动，从而减少延迟和风险。创新可以带来变电站的高效监控和控制。移动应用程序非常容易，有助于未来变电站的可视化。
+## 摘要
 
-关键词：`NodeMCU`、`ThingSpeak`、`Arduino`、变电站
+物联网（`IoT`）正在成为改变现代生活标准的革命性技术。`IoT` 允许通过远程服务器实现数据采集、通信和处理的实时集成。本章讨论了使用 `NodeMCU`（`Wi-Fi` 模块）、`Arduino Uno`（微控制器）、`ThingSpeak Server` 和 `Blynk` 对变电站进行监控和控制的无线系统。使用各种传感器和电子元件监控变电站的电流、电压、功率因数、频率和温度等不同参数。该概念通过实验设置得到了验证。`NodeMCU` 是系统的控制中心，将数据发送到 `ThingSpeak` 服务器，远程用户可以采取行动。根据接收的数据，用户可以控制断路器实现对系统的实时控制。收集准确的数据有助于分析和故障检测。`IoT` 的实时功能允许快速行动，从而减少延迟和风险。创新可以带来变电站的高效监控和控制。移动应用程序非常容易，有助于未来变电站的可视化。
+
+**关键词：** `NodeMCU`、`ThingSpeak`、`Arduino`、变电站
 
 ## 7.1 引言
-物联网或 IoT 允许各种机器、设备在无需人类干预的情况下通过互联网相互通信、访问和修改数据。工业物联网认为是智能技术 4.0 的关键。IoT 的应用广泛于交通、医疗保健和工业 1, 2, 3, 4。IoT 允许用户跟踪、监控并做出更好的决策。自动化减少了工作量并提高了效率。
 
-IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能电网和智能电表使用该技术为监控目的提供实时数据 5, 6。扬声器和智能灯具等各种电气设备带有 IoT 功能，提供了更好的终端用户体验。在可再生能源领域，IoT 被证明是极其有利的。由于太阳能和风电场位于远程地区，数据监控和分析通过 IoT 完成 7。使用提供的数据，用户可以优化维护计划、平衡需求曲线、管理负载并预测未来的发电。使用 IoT 技术，可再生能源部门变得更加高效可靠 8。
+物联网或 `IoT` 允许各种机器、设备在无需人类干预的情况下通过互联网相互通信、访问和修改数据。工业物联网认为是智能技术 4.0 的关键。`IoT` 的应用广泛于交通、医疗保健和工业 1, 2, 3, 4。`IoT` 允许用户跟踪、监控并做出更好的决策。自动化减少了工作量并提高了效率。
 
-电气系统中的传统电网正在变为 IoT 化，使其成为智能电网。智能电网允许通过数据驱动来优化发电。小型电气电路现在具有 IoT 功能，便于监控和控制。这些电路的硬件和软件价格便宜且市场上随处可见。这些各种设备的数据通过互联网处理并发送到云服务器。终端用户接收这些数据进行分析和监控。用户可能会采取控制。
+`IoT` 在多个领域取得了巨大进展，特别是电气工程领域。智能电网和智能电表使用该技术为监控目的提供实时数据 5, 6。扬声器和智能灯具等各种电气设备带有 `IoT` 功能，提供了更好的终端用户体验。在可再生能源领域，`IoT` 被证明是极其有利的。由于太阳能和风电场位于远程地区，数据监控和分析通过 `IoT` 完成 7。使用提供的数据，用户可以优化维护计划、平衡需求曲线、管理负载并预测未来的发电。使用 `IoT` 技术，可再生能源部门变得更加高效可靠 8。
 
-工业物联网（IIoT）已广泛应用于电气工程的各种系统。电力能源系统（EPES）中应用的基于 IoT 的智能可持续解决方案已在 9 中进行了讨论。电力能源系统中 IoT 的各种挑战已在 10 中进行了讨论。IoT 带来的主要优势是为公用事业提供实时反馈能力，通过增强的监控和控制功能更好地服务客户 10。Sharif 等人 11 为雾计算模块提出并优化了容错调度算法。在 12 中，研究了一种低成本智能电表用于测量电气参数。该电表能够适应电网的波动性，保持高水平的测量准确性。
+电气系统中的传统电网正在变为 `IoT` 化，使其成为智能电网。智能电网允许通过数据驱动来优化发电。小型电气电路现在具有 `IoT` 功能，便于监控和控制。这些电路的硬件和软件价格便宜且市场上随处可见。这些各种设备的数据通过互联网处理并发送到云服务器。终端用户接收这些数据进行分析和监控。用户可能会采取控制。
 
+工业物联网（`IIoT`）已广泛应用于电气工程的各种系统。电力能源系统（`EPES`）中应用的基于 `IoT` 的智能可持续解决方案已在 9 中进行了讨论。电力能源系统中 `IoT` 的各种挑战已在 10 中进行了讨论。`IoT` 带来的主要优势是为公用事业提供实时反馈能力，通过增强的监控和控制功能更好地服务客户 10。Sharif 等人 11 为雾计算模块提出并优化了容错调度算法。在 12 中，研究了一种低成本智能电表用于测量电气参数。该电表能够适应电网的波动性，保持高水平的测量准确性。
 
-
-
-
-在某些文献中讨论了使用 `IoT` 对变电站进行监控。在[13]中，讨论了基于 `FPGA`（现场可编程门阵列）的具有记录功能的 `IIoT`监控系统设计。使用 `raspberry pi` 和 `Codesys 61131-3`软件实现的 11kV 变电站自动化讨论于[14]。`IoT`系统也可用于变电站的预测性维护。在[15]中，使用一种智能连接器为微控制器供电，该微控制器控制发射器和传感器以估计连接器的电气接触电阻（`ECR`）[16, 17, 18, 19, 20, 21, 22, 23, 24]。
+在某些文献中讨论了使用 `IoT` 对变电站进行监控。在[13]中，讨论了基于 `FPGA`（现场可编程门阵列）的具有记录功能的 `IIoT` 监控系统设计。使用 `raspberry pi` 和 `Codesys 61131-3` 软件实现的 11kV 变电站自动化讨论于[14]。`IoT` 系统也可用于变电站的预测性维护。在[15]中，使用一种智能连接器为微控制器供电，该微控制器控制发射器和传感器以估计连接器的电气接触电阻（`ECR`）[16, 17, 18, 19, 20, 21, 22, 23, 24]。
 
 `IoT` 的应用几乎涵盖了每一项技术进展。在文献[25, 26, 27]中，讨论了 `IoT` 在医学领域的应用。在[25]中，提出了一种智能医疗服务系统，以增加医疗资源利用率并提高医疗流程效率。在[26]中，讨论了在医疗保健领域整合和应用 `IoT` 理念的想法。在[27]中，设计了一种适用于老人的基于 `IoT` 的智能健康箱，以便确保在正确的时间服用正确的药物。文献[28, 29, 30, 31, 32]讨论了机械领域的应用。在[28]中，通过持续监控电机讨论了机械故障系统。在[29]中，论文描述了一种基于 `IoT` 的污垢监控设备及其运行方法。`IoT` 在电气领域呈指数级增长。`IoT` 的应用之一是变电站监控。监控控制数据采集（`SCADA`）历史上一直用于监控运行在专用线路上的远程变电站以及变电站的远程控制电路。如今，发现变电站传输中的错误非常困难，由于变压器过热、线路过电流或电源功率因增大等错误[33, 34, 35, 36, 37, 38, 39, 40, 41, 42]。这些错误会导致数小时的机，因为很难在变电站中找到问题元件。通过传感器了解每个参数的值，可以轻松解决这些问题。这些参数可以通过 `NodeMCU`（`Wi-Fi` 模块）的帮助进行无线监控[43, 44, 45]。
 
 这些值的实时数据被无线传输到服务器。然后，通过比较哪个增加值导致了错误，就可以很容易监控错误区域。例如，如果测得变压器两端电压大于变压器的额定值，将有一个自动系统操作断路器并防止变压器损坏和意外停电。这种实现通过如电压传感器（`分压器`）、电流传感器（`ACS712`）、`施密特触发器`和用于频率测量的`异或门`等传感器来实现。
 
-## 7 引言
+## 7.2 本章结构
 
 本章的结构如下：
 
 - 第 7.2 节通过框图和流程图讨论方法的实现。
-- 第 7.3 节描述了所用组件。
+- 第 7.3 节描述所用组件。
 - 第 7.4 节展示硬件实现，随后是第 7.5 节的结果。
 - 第 7.6 节是本章的总结，随后是参考文献。
 
-## 7.2 所提方法的实现
+## 7.3 所提方法的实现
 
-`IoT` 在变电站的应用以框图的形式分多个阶段演示，如图图 7.1 所示。框图由微控制器（`Arduino Uno`）、Wi-Fi 模块（`NodeMCU`）、LCD 屏幕、各种传感器、变压器和继电器组成。
+`IoT` 在变电站的应用以框图的形式分多个阶段演示，如图 7.1 所示。框图由微控制器（`Arduino Uno`）、`Wi-Fi` 模块（`NodeMCU`）、`LCD` 屏幕、各种传感器、变压器和继电器组成。
 
 ![](img/b_9783110714043-007_fig_001.jpg)
 
 图 7.1：所提系统的框图。
 
-
-
-
-此外，微控制器连接到 Wi-Fi 模块，即 `NodeMCU`。`NodeMCU` 是一种为基于物联网的应用设计的开源固件和开发板。`NodeMCU` 负责将数据发送到云存储。它使用 `TCP/IP` 协议来实现这一点。用户现在能够通过互联网从世界上任何地方远程访问所有信息。`NodeMCU` 可以配置一个名为 `ThingSpeak` 的开源平台进行数据可视化。
+此外，微控制器连接到 `Wi-Fi` 模块，即 `NodeMCU`。`NodeMCU` 是一种为基于物联网的应用设计的开源固件和开发板。`NodeMCU` 负责将数据发送到云存储。它使用 `TCP/IP` 协议来实现这一点。用户现在能够通过互联网从世界上任何地方远程访问所有信息。`NodeMCU` 可以配置一个名为 `ThingSpeak` 的开源平台进行数据可视化。
 
 `ThingSpeak` 是一种物联网分析平台服务，允许我们在云端对信息的聚合、可视化和分析 [33]。变电站的实时数据如 `temperature`、`voltage`、`current`、功率因数和 `frequency` 在 `ThingSpeak` 云平台上进行可视化。根据需要，可以将数据配置为公共或私有。
 
 继电器和断路器连接到 `NodeMCU` 以控制变电站。`Relays` 是电子开关，用户通过它们可以确保对变电站的妥控制。用户可以远程指令 `relay` 动作并执行特定操作。例如：如果变压器的 `temperature` 超过特定阈值，用户可以远程通过 `relay` 切换变压器风。这确保了对变电站的良好控制。
 
-### 7.2.1 系统流程图
+### 7.3.1 系统流程图
 
 ![](img/b_9783110714043-007_fig_002.jpg)
 
@@ -2338,9 +2281,9 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 使用温度传感器 `DHT-11` 测量变压器的 `temperature`。数据在 `Arduino` 和 `NodeMCU` 中接收。使用开源平台 `ThingSpeak` 和 `Blynk` 访问存储在云端的数据并以图表的形式进行可视化。`Relay` 和断路器也连接用于控制变电站。数据也会在 `LCD Screen` 上显示。
 
-## 7.3 使用的组件
+## 7.4 使用的组件
 
-### 7.3.1 变压器
+### 7.4.1 变压器
 
 变压器是一种静态电气设备，将电能转换为磁能再次转换为电能。在电气系统和传输线路中，降压变器器广泛的应用 [40, 41, 42]。
 
@@ -2348,7 +2291,9 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.3：变压器。
 
-如图 7.3 所示，变压器用于将项目中的 `230 V` 电压降至 `12 V` 以供所有传感器使用。电路中使用的传感器和控制器需要 `5 V` 源。电路中使用的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是 `12-0-12 V`，可以作为 `12` 或 `24 V` 电压输出。`12-0-12 V` 是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将 `AC mains` 信号转换为 `DC` 供传感器使用。电路中的 `IC` 也在低电压下工作，通过电阻对进一步降压。
+
+
+如图 7.3 所示，变压器用于将项目中的`230 V`电压降至`12 V`以供所有传感器使用。电路中使用的传感器和控制器需要`5 V`源。电路中使用的`IC`也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是`12-0-12 V`，可以作为`12`或`24 V`电压输出。`12-0-12 V`是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将`AC mains`信号转换为`DC`供传感器使用。电路中的`IC`也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是`12-0-12 V`，可以作为`12`或`24 V`电压输出。`12-0-12 V`是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将`AC mains`信号转换为`DC`供传感器使用。电路中的`IC`也在低电压下工作，通过电阻对进一步降压。本项目中使用的变压器是`12-0-12 V`，可以作为`12`或`24 V`电压输出。`12-0-12 V`是中抽变压器。这种变压器通常用于整流电路。它连接到整流电路，然后将`AC mains`信号转换为`DC`供传感器使用。电路中的`IC`也在低电压下工作，通过电阻对进一步降压。
 
 ### 7.3.2 电流测量
 
@@ -2356,29 +2301,27 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.4：电流传感器 (ACS712)。
 
-电流测量是监控中的一个重要步骤。通过 `ACS712` 传感器，可以通过其电压测量电流。`ACS712` 是一种霍尔效应电流传感器，提供与流过的电流正比的输出电压。输出电压连接到 `Arduino` 的 `analog pin`。微控制器随后读取电压并根据传感器的灵敏度计算电流。
+电流测量是监控中的一个重要步骤。通过`ACS712`传感器，可以通过其电压测量电流。`ACS712`是一种霍尔效应电流传感器，提供与流过的电流正比的输出电压。输出电压连接到`Arduino`的`analog pin`。微控制器随后读取电压并根据传感器的灵敏度计算电流。
 
-实际上，电流有两种测量方法：直接测量和间接测量。在直接法中，使用 `ACS712` 传感器。在间接法中，使用分流电阻与负载串联，并测量电阻两端的电压。`ACS712` 通常更受青，因为它更精确且更容易集成到电路中。
+实际上，电流有两种测量方法：直接测量和间接测量。在直接法中，使用`ACS712`传感器。在间接法中，使用分流电阻与负载串联，并测量电阻两端的电压。`ACS712`通常更受青睐，因为它更精确且更容易集成到电路中。
 
-`ACS712` 有不同的灵敏度分，例如 `65 mV/A`、`100 mV/A` 和 `200 mV/A`。传感器的选择取决于预期电流范围。本项目使用的是 `100 mV/A` 版本。当电流为零时，`ACS712` 的输出电压为 `2.5 V`。当电流流动时，输出电压会根据方向增加或减少。可以使用公式计算电流：
+`ACS712`有不同的灵敏度分级，例如`65 mV/A`、`100 mV/A`和`200 mV/A`。传感器的选择取决于预期电流范围。本项目使用的是`100 mV/A`版本。当电流为零时，`ACS712`的输出电压为`2.5 V`。当电流流动时，输出电压会根据方向增加或减少。可以使用公式计算电流：
 
 `current = (V_out - V_offset) / sensitivity`
 
-其中 `V_out` 是测量电压，`V_offset` 是偏置电压。
+其中`V_out`是测量电压，`V_offset`是偏置电压。
 
 ### 7.3.3 电压测量
 
-电压测量可以通过微控制器直接完成。与电流测量不同，它不需要额外的传感器。对于超过 `5 V` 的电压，使用额外的分压电路。它由两个串联的电阻组成，即 `R1` 和 `R2`。待测量的电压 `Vm` 连接到这组电阻连接的一端，另一端连接到零电位。使用微控制器测量两个电阻之间的电压 `V1`。它与所需的电压 `Vm` 成正比。公式为
+电压测量可以通过微控制器直接完成。与电流测量不同，它不需要额外的传感器。对于超过`5 V`的电压，使用额外的分压电路。它由两个串联的电阻组成，即`R1`和`R2`。待测量的电压`Vm`连接到这组电阻连接的一端，另一端连接到零电位。使用微控制器测量两个电阻之间的电压`V1`。它与所需的电压`Vm`成正比。公式为：
+
 `Vm = V1 * (R1 + R2) / R1`
-
-
-
 
 (7.1)*V*[1] = *V*[*m*] × (*R*[2] ÷ (*R*[1] + *R*[2]))… ![](img/b_9783110714043-007_fig_006.jpg)
 
 图 7.6：整流电路。
 
-在这种情况下，输入是 12 V AC。为了对其进行测量，应将交流电压转换为直流电压。交流到直流的转换通过全波整流电路实现，如图图 7.6 所示。全波整流电路由四个二极管和一个用于滤波的电容器组成。该电路的输入是 12 V AC，输出是 12 V DC。整流电路的输出连接到由两个电阻组成的分压电路。此外，在接点处分接并连接到微控制器。
+在这种情况下，输入是 12 V AC。为了对其进行测量，应将交流电压转换为直流电压。交流到直流的转换通过全波整流电路实现，如图 7.6 所示。全波整流电路由四个二极管和一个用于滤波的电容器组成。该电路的输入是 12 V AC，输出是 12 V DC。整流电路的输出连接到由两个电阻组成的分压电路。此外，在接点处分接并连接到微控制器。
 
 ### 7.3.4 频率测量
 
@@ -2386,25 +2329,25 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.7：施密特触发器 (IC 7414)。
 
-频率是一个必须持续监测的重要参数，因为印度的每个交流电器工作频率均为 50 Hz，偏离此频率会严重影响电器的性能和工作。频率测量使用微控制器（`Arduino Uno`）进行，施密特触发器（`IC SN74LS14`）所示如图图 7.7。
+频率是一个必须持续监测的重要参数，因为印度的每个交流电器工作频率均为 50 Hz，偏离此频率会严重影响电器的性能和工作。频率测量使用微控制器（`Arduino Uno`）进行，施密特触发器（`IC SN74LS14`）如图 7.7 所示。
 
-施密特触发器是一种比较电路，它利用正反馈来实现滞回 [20)。它用于在将模拟信号转换为数字信号的同时去除其中的噪声。
+施密特触发器是一种比较电路，它利用正反馈来实现滞回 [20]。它用于在将模拟信号转换为数字信号的同时去除其中的噪声。
 
-在本章中，它用于将输入信号转换为方波。施密特触发器与 `Arduino Uno` 配合非常安全，因为它是一个 5 V IC，且输出电流低于 40 mA。输出方波的周期与输入波相同；因此，频率不会改变。施密特触发器的输出波形如图图 7.8 所示。
+在本章中，它用于将输入信号转换为方波。施密特触发器与`Arduino Uno`配合非常安全，因为它是一个 5 V IC，且输出电流低于 40 mA。输出方波的周期与输入波相同；因此，频率不会改变。施密特触发器的输出波形如图 7.8 所示。
 
 ![](img/b_9783110714043-007_fig_008.png)
 
 图 7.8：施密特触发器的输出。
 
-频率通过公式 *f* = 1/*T* 计算，其中 *T* 是周期的时长。周期使用 Arduino 中的 `PulseIn` 函数进行计算。`PulseIn` 函数接收两个参数，即引脚编号和值。该值可以是高电或低电。函数返回微秒单位的脉冲长度。例如，如果 `value` 为 `high`，函数将等待信号变为 `high`，开始计时，然后等待信号变为 `low` 并停止计时。
+频率通过公式`*f* = 1/*T*`计算，其中`*T*`是周期的时长。周期使用 Arduino 中的`PulseIn`函数进行计算。`PulseIn`函数接收两个参数，即引脚编号和值。该值可以是高电平或低电平。函数返回微秒单位的脉冲长度。例如，如果`value`为`high`，函数将等待信号变为`high`，开始计时，然后等待信号变为`low`并停止计时。
 
 一个周期的总时间是高电时间和低电时间之和：
 
-(7.2)*T*[on*]= *pulse* *high* = *PulseIn*(*Pin*, *HIGH*)…(7.3)*T*[off*] = *pulse* *low*  = *PulseIn*(*Pin*, *LOW*)…(7.4) *T* = *T*[on] + *T*[off] + …
+(7.2)*T*[on*] = *pulse* *high* = *PulseIn*(*Pin*, *HIGH*)…(7.3)*T*[off*] = *pulse* *low* = *PulseIn*(*Pin*, *LOW*)…(7.4) *T* = *T*[on] + *T*[off] + …
 
-方方波的频率通过以下公式计算：
+方波的频率通过以下公式计算：
 
-(7.5)*frequency* = 10⁶ ÷  (*pulse* *high* + *pulse* *low*)…
+(7.5)*frequency* = 10⁶ ÷ (*pulse* *high* + *pulse* *low*)…
 
 ### 7.3.5 功率因测量
 
@@ -2412,7 +2355,7 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.9：异或门 (IC 7486)。
 
-功率因是有有功率与视在功率之比。可以通过寻找供电电压和电流之间相位角的余弦来计算 [17]。功率因的测量是通过施密特触发器和异或门 `IC7486` 完成的。电压和电流波形使用施密特触发器（ST）转换为方波。两个方波通过 `IC7486` 经过异或门（图 7.9）。两个方波通过 `IC7486` 经过异或门（图 7.9）。异或门的输出在信号不同时为高电，在信号相同时为低电（图 7.9）。功率因的测量是通过使用施密特触发器和异或门 `IC7486` 完成的。电压和电流波形使用施密特触发器（ST）转换为方波。功率因的测量是通过 `PulseIn` 函数完成的，(7.6)*cos ϕ × 360…(7.7)*cos ϕ × 10⁶…
+功率因是有有功功率与视在功率之比。可以通过寻找供电电压和电流之间相位角的余弦来计算 [17]。功率因的测量是通过施密特触发器和异或门`IC7486`完成的。电压和电流波形使用施密特触发器（ST）转换为方波。两个方波通过`IC7486`经过异或门（图 7.9）。异或门的输出在信号不同时为高电平，在信号相同时为低电平（图 7.9）。功率因的测量是通过使用`PulseIn`函数完成的，(7.6)*cos ϕ × 360…(7.7)*cos ϕ × 10⁶…
 
 ### 7.3.6 温度测量
 
@@ -2420,7 +2363,7 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.10：温度传感器 (DHT11)。
 
-变压器的温度使用 `DHT11` 传感器测量，如图图 7.10。DHT11 传感器有三个引脚，分别为 `Vcc`、`data` 和 `ground`。传感器的工作电压为 3.5–5.5 V。它使用热电阻和电容湿度传感器测量周围空气。温度范围为 0 到 50 度，湿度范围为 20%–90%。传感器的精度为 ±1 度。传感器的输出给出 Arduino 的数字引脚。使用 `DHT` 库对湿度和温度数据。
+变压器的温度使用`DHT11`传感器测量，如图 7.10 所示。DHT11 传感器有三个引脚，分别为`Vcc`、`data`和`ground`。传感器的工作电压为 3.5–5.5 V。它使用热电阻和电容湿度传感器测量周围空气。温度范围为 0 到 50 度，湿度范围为 20%–90%。传感器的精度为 ±1 度。传感器的输出给出 Arduino 的数字引脚。使用`DHT`库对湿度和温度数据进行处理。
 
 ### 7.3.7 继电器
 
@@ -2430,9 +2373,9 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.11：继电器。
 
-继电器模块的结构非常简单（图 7.11）。它由一个线圈组成，一端作为 5 V 直流电源，另一端连接到开关设备，在我们的案例中开关设备是 `Arduino Uno`。线圈跨接一个反向二极管以保护开关设备免受尖峰电压的影响。线圈另一侧有两个主要工作点：常开（NO）和常闭（NC），它们由开关电路驱动，线圈产生的磁力强制触点从常开切换到常闭，反之亦然。
+继电器模块的结构非常简单（图 7.11）。它由一个线圈组成，一端作为 5 V 直流电源，另一端连接到开关设备，在我们的案例中开关设备是`Arduino Uno`。线圈跨接一个反向二极管以保护开关设备免受尖峰电压的影响。线圈另一侧有两个主要工作点：常开（NO）和常闭（NC），它们由开关电路驱动，线圈产生的磁力强制触点从常开切换到常闭，反之亦然。
 
-在所提出的工作中使用了八路 5 V 继电器（`FBA_PCB 板`）。继电器由整流器提供 5 V 电源。常开（NO）和常闭（NC）点连接到传输线路。当传输线路发生故障或变压器过热时，继电器会被触发。继器的信号点连接到 `NodeMCU`，有助于我们通过互联网无线控制继电器。
+在所提出的工作中使用了八路 5 V 继电器（`FBA_PCB 板`）。继电器由整流器提供 5 V 电源。常开（NO）和常闭（NC）点连接到传输线路。当传输线路发生故障或变压器过热时，继电器会被触发。继电器的信号点连接到`NodeMCU`，有助于我们通过互联网无线控制继电器。
 
 ### 7.3.8 微控制器
 
@@ -2440,12 +2383,9 @@ IoT 在多个领域取得了巨大进展，特别是电气工程领域。智能�
 
 图 7.12：Arduino UNO。
 
-微控制器用于嵌入系统中执行特定操作的单芯片 IC。简单的微控制器包含处理器、存储单元和输入输出引脚。对于变电站的无线监控，使用了 `Arduino Uno`。
+微控制器是用于嵌入系统中执行特定操作的单芯片 IC。简单的微控制器包含处理器、存储单元和输入输出引脚。对于变电站的无线监控，使用了`Arduino Uno`。
 
-
-
-
-Arduino `Uno` 开发板基于 8 位的 `ATmega328P` 微控制器（如图 7.12 所示）。该板的大脑是 8 位处理器。与此同时，还有复位按钮、电压调节器和振荡器等组件，用于提供额外功能。对于用户界面，它包含输入输出引脚。总共有 14 个数字输入输出引脚和 6 个模拟引脚。在 14 个数字引脚中，有 6 个引脚可以用于。编程开发板需要 `Arduino IDE`，可以从其官方网站轻松下载。`IC` 还可以通过 `Rx`、`Tx` 引脚建立通信。它可以与计算机和其他微控制器通信。
+Arduino`Uno`开发板基于 8 位的`ATmega328P`微控制器（如图 7.12 所示）。该板的大脑是 8 位处理器。与此同时，还有复位按钮、电压调节器和振荡器等组件，用于提供额外功能。对于用户界面，它包含输入输出引脚。总共有 14 个数字输入输出引脚和 6 个模拟引脚。在 14 个数字引脚中，有 6 个引脚可以用于 PWM。编程开发板需要`Arduino IDE`，可以从其官方网站轻松下载。`IC`还可以通过`Rx`、`Tx`引脚建立通信。它可以与计算机和其他微控制器通信。
 
 ### 7.3.9 NodeMCU
 
@@ -2453,13 +2393,13 @@ Arduino `Uno` 开发板基于 8 位的 `ATmega328P` 微控制器（如图 7.12 �
 
 图 7.13: NodeMCU。
 
-NodeMCU 是一个开源固件和开发板（图 7.13）。它包含了运行在 `ESP8266` Wi-Fi 上的固件以及基于 `ESP-12` 模块的硬件。它被广泛应用于物联网。`NodeMCU` 的工作电压为 3.3 V。时钟频率为 80 MHz。它具有 128 KB RAM 和 4 MB Flash。它有 11 个数字输入输出引脚和 1 个模拟引脚。它具有内置 Wi-Fi 的处理能力。它还兼容 `Arduino IDE`。可以通过 `Micro-USB` 连接为 `NodeMCU` 电。
+NodeMCU 是一个开源固件和开发板（图 7.13）。它包含了运行在`ESP8266` Wi-Fi 上的固件以及基于`ESP-12`模块的硬件。它被广泛应用于物联网。`NodeMCU`的工作电压为 3.3 V。时钟频率为 80 MHz。它具有 128 KB RAM 和 4 MB Flash。它有 11 个数字输入输出引脚和 1 个模拟引脚。它具有内置 Wi-Fi 的处理能力。它还兼容`Arduino IDE`。可以通过`Micro-USB`连接为`NodeMCU`供电。
 
 ### 7.3.10 ThingSpeak
 
-ThingSpeak 是一个开源应用程序，允许用户在互联网上存储和检索数据。它被广泛应用于物联网。它允许我们在云端对数据进行可视化和分析。像 `NodeMCU` 这样的物联网设备可以与 ThingSpeak 通信，以便可视化和分析实时数据。
+ThingSpeak 是一个开源应用程序，允许用户在互联网上存储和检索数据。它被广泛应用于物联网。它允许我们在云端对数据进行可视化和分析。像`NodeMCU`这样的物联网设备可以与 ThingSpeak 通信，以便可视化和分析实时数据。
 
-使用 ThingSpeak Write keys 将数据从 `NodeMCU` 上传到 ThingSpeak 服务器。ThingSpeak 服务器上有许多通道，通道通过特定的 `Write Key` 和 `Channel ID` 进行标识以用于上传数据。用户可以通过其提供的特定标签从任何地方访问这些通道，以便其他用户查看该通道。在 `Arduino IDE` 的代码中提及 `Write Key` 和 `Channel ID` 后，Wi-Fi 模块会将特定数据发送到指定 `id` 的服务器上。
+使用 ThingSpeak Write keys 将数据从`NodeMCU`上传到 ThingSpeak 服务器。ThingSpeak 服务器上有许多通道，通道通过特定的`Write Key`和`Channel ID`进行标识以用于上传数据。用户可以通过其提供的特定标签从任何地方访问这些通道，以便其他用户查看该通道。在`Arduino IDE`的代码中提及`Write Key`和`Channel ID`后，Wi-Fi 模块会将特定数据发送到指定`id`的服务器上。
 
 ### 7.3.11 Blynk
 
@@ -2477,41 +2417,41 @@ Blynk（图 7.14）是一个平台，允许 iOS 和 Android 设备创建用于�
 
 硬件设置如图 7.15 所示。所有使用的设备及其额定值如表 7.1 所示。
 
-变压器首先将 220 V 降压至 12 V，输出连接到负载。负载由变阻（滑动变阻）和感性负载组成。电流传感器（`ACS712`）与负载串联，将读数提供给 `Arduino`。电流传感器的输出给出施密特触发器以测量频率，随后给出 `IC 7486`（`异或门`）以测量功率因。
+变压器首先将 220 V 降压至 12 V，输出连接到负载。负载由变阻器（滑动变阻器）和感性负载组成。电流传感器（`ACS712`）与负载串联，将读数提供给`Arduino`。电流传感器的输出给出施密特触发器以测量频率，随后给出`IC 7486`（`异或门`）以测量功率因。
 
-全波整流电路并联在负载。电流传感器的输出给出施密特触发器以测量频率，随后给出 `IC 7486`（`异或门`）以测量功率因。
+全波整流电路并联在负载两端。电流传感器的输出给出施密特触发器以测量频率，随后给出`IC 7486`（`异或门`）以测量功率因。
 
-
-
-
-用于计算频率的波形如图图 7.19 所示。蓝色波形是通过密特触发器 IC 获得的，黄色波形是该 IC 的输入波形。`PulseIn` 函数计算矩形波形在高电平和平低电平下的持续时间。
+用于计算频率的波形如图 7.19 所示。蓝色波形是通过施密特触发器 IC 获得的，黄色波形是该 IC 的输入波形。`PulseIn`函数计算矩形波形在高电平和低电平下的持续时间。
 
 ```
 pulse_high = PulseIn(Pin, HIGH)
 pulse_low = PulseIn(Pin, LOW)
 frequency = 10⁶ (pulse_high + pulse_low)
 ```
+
 ![](img/b_9783110714043-007_fig_019.jpg)
 
 图 7.19：计算频率的波形。
 
 ### 7.5.4 功率因测量
 
-电路的功率因可以看紫色紫色峰，它们显示了电流和电压之间的相位差。为此，我们使用异或门来计算这个间隙。`XoR` 门的输入是电流和电压波形。这些波形首先被转换为方波，然后作为异或门 IC 的输入。将方波作为 `0` 和 `1` 给予 `XOR`，当输入为 `01` 或 `10` 时，`XOR` 的输出为 `1`。因此，当电流和电压波形存在差异时，可以看到输出为 `1` 的紫色峰。当电感发生变化时，该峰会在水平方向上扩展，从而准确地显示结果。此输出传递给 `Arduino`，并通过公式计算功率因。
+电路的功率因可以看紫色峰，它们显示了电流和电压之间的相位差。为此，我们使用异或门来计算这个间隙。`XoR`门的输入是电流和电压波形。这些波形首先被转换为方波，然后作为异或门 IC 的输入。将方波作为`0`和`1`给予`XOR`，当输入为`01`或`10`时，`XOR`的输出为`1`。因此，当电流和电压波形存在差异时，可以看到输出为`1`的紫色峰。当电感发生变化时，该峰会在水平方向上扩展，从而准确地显示结果。此输出传递给`Arduino`，并通过公式计算功率因。
 
-用于计算功率因的波形如图图 7.20 所示。在波形中，蓝色波形是电压波形，黄色波形是电流波形。使用 IC `7486` 作为 `XOR` 门获得了紫色波形。通过使用 `PulseIn` 函数计算波形高电平的持续时间，如第 7.3.4 节所示计算功率因。
+用于计算功率因的波形如图 7.20 所示。在波形中，蓝色波形是电压波形，黄色波形是电流波形。使用 IC`7486`作为`XOR`门获得了紫色波形。通过使用`PulseIn`函数计算波形高电平的持续时间，如第 7.3.4 节所示计算功率因。
 
 ![](img/b_9783110714043-007_fig_020.jpg)
 
+
+
 图 7.20：计算功率因的波形。
 
-所有测量数据都显示在 `ThingSpeak` 服务器上，如图图 7.21 所示。
+所有测量数据都显示在`ThingSpeak`服务器上，如图图 7.21 所示。
 
 ![](img/b_9783110714043-007_fig_021.jpg)
 
-图 7.21：ThingSpeak 中的数据可视化。
+图 7.21：`ThingSpeak`中的数据可视化。
 
-可以很容易地监控和可视化。`ThingSpeak` 窗口包含变压器温度、频率、输出电压和电流四个图形表示。所有接收的数据都是在极短延迟（几毫秒）后获取的实时数据。在 `Blynk` App 中也能看到相同的数据，如图图 7.22 所示。App 中显示了两个开关，即 `circuit breaker switch`（断路器开关）和 `Relay switch`（继电器开关）。用户需要需要手动操作断路器或继电器。
+可以很容易地监控和可视化。`ThingSpeak`窗口包含变压器温度、频率、输出电压和电流四个图形表示。所有接收的数据都是在极短延迟（几毫秒）后获取的实时数据。在`Blynk` App 中也能看到相同的数据，如图图 7.22 所示。App 中显示了两个开关，即`circuit breaker switch`（断路器开关）和`Relay switch`（继电器开关）。用户需要需要手动操作断路器或继电器。
 
 ![](img/b_9783110714043-007_fig_022.jpg)
 
@@ -2523,101 +2463,93 @@ frequency = 10⁶ (pulse_high + pulse_low)
 
 ## 参考文献
 
-[1] Glaroudis D., Iossifides A., Chatzimisios P. Survey, comparison and research of IoT protocols for smart farming. Computer Networks, 10737, 2019, 10.1016/j.com.2019.10737.](#9783110713794_018026.xhtml_xref_d106706e29300)
+[1] Glaroudis D., Iossifides A., Chatzimisios P. Survey, comparison and research of IoT protocols for smart farming. Computer Networks, 10737, 2019, 10.1016/j.com.2019.10737. [↗](#9783110713794_018026.xhtml_xref_d106706e29300)
 
-[2] Rahim M., Rahman M., Asyhari T., Bhuiyan M., Devarajan R. Evolution of IoT-enabled connectivity and applications in automotive industry. Vehicular Communications, 2020, 100285, 10.1016/j.vehcom.2020.100285.](#9783110713794_018026.xhtml_xref_d106706e29303)
+[2] Rahim M., Rahman M., Asyhari T., Bhuiyan M., Devarajan R. Evolution of IoT-enabled connectivity and applications in automotive industry. Vehicular Communications, 2020, 100285, 10.1016/j.vehcom.2020.100285. [↗](#9783110713794_018026.xhtml_xref_d106706e29303)
 
-[3] Mariselvam V., Dharshini M. IoT based detection of gas for management using integrated sensor. Materials Today: Proceedings, 2020, 10.1016/j.matpr.2020.05825.](#9783110713794_018026.xhtml_xref_d106706e29306)
+[3] Mariselvam V., Dharshini M. IoT based detection of gas for management using integrated sensor. Materials Today: Proceedings, 2020, 10.1016/j.matpr.2020.05825. [↗](#9783110713794_018026.xhtml_xref_d106706e29306)
 
-[4] Pasika S., Gandla S. Smart water monitoring system with cost-effective using IoT. Heliyon, 6, 2020, e04096. 10.1016/j.heliyon.2020.e04096.](#9783110713794_018026.xhtml_xref_d106706e29309)
+[4] Pasika S., Gandla S. Smart water monitoring system with cost-effective using IoT. Heliyon, 6, 2020, e04096. 10.1016/j.heliyon.2020.e04096. [↗](#9783110713794_018026.xhtml_xref_d106706e29309)
 
-[5] Barman B. K., Yadav S. N., Kumar S. IOT based energy meter for efficient energy utilization in smart grid, 2nd International Conference on Power, Energy and Environment: Towards Smart Technology (ICEPE), Shillong, India, 2018, pp. 1–5, 10.1109/EPETSG.2018.865801.](#9783110713794_018026.xhtml_xref_d106706e29317)
+[5] Barman B. K., Yadav S. N., Kumar S. IOT based energy meter for efficient energy utilization in smart grid, 2nd International Conference on Power, Energy and Environment: Towards Smart Technology (ICEPE), Shillong, India, 2018, pp. 1–5, 10.1109/EPETSG.2018.865801. [↗](#9783110713794_018026.xhtml_xref_d106706e29317)
 
-[6] Al-Ali A. R., Landolsi T., Hassan M. H., Ezzeddine M., Abdelsalam M., Baseet M. An IoT-based smart utility meter, 2nd International Conference on Smart Grid and Smart Cities (ICSGSC), Kuala Lumpur, 2018, 80–83, 10.1109/ICSGSC.2018.8541314.](#9783110713794_018026.xhtml_xref_d106706e29320)
+[6] Al-Ali A. R., Landolsi T., Hassan M. H., Ezzeddine M., Abdelsalam M., Baseet M. An IoT-based smart utility meter, 2nd International Conference on Smart Grid and Smart Cities (ICSGSC), Kuala Lumpur, 2018, 80–83, 10.1109/ICSGSC.2018.8541314. [↗](#9783110713794_018026.xhtml_xref_d106706e29320)
 
-[7] Aslam A., Mehmood U., Arshad M., Ishfaq A., Khan A., Sufyan M. Dye-sensitized solar cells (DSSCs) as a potential photovoltaic technology for the self-powered internet of things (IoTs). Solar Energy, 207, 2020, 874–892, 10.1016/j.solener.2020.07029.](#9783110713794_018026.xhtml_xref_d106706e29323)
+[7] Aslam A., Mehmood U., Arshad M., Ishfaq A., Khan A., Sufyan M. Dye-sensitized solar cells (DSSCs) as a potential photovoltaic technology for the self-powered internet of things (IoTs). Solar Energy, 207, 2020, 874–892, 10.1016/j.solener.2020.07029. [↗](#9783110713794_018026.xhtml_xref_d106706e29323)
 
-[8] Nizetic S., Šolić P., González-de-artaza D., Patrono L. Internet of Things (IoT): Opportunities, issues and challenges towards a smart and sustainable future. Journal of Cleaner Production, 274, 2020, 122877, 10.1016/j.jclepro.2020.122877.](#9783110713794_018026.xhtml_xref_d106706e29326)
+[8] Nizetic S., Šolić P., González-de-artaza D., Patrono L. Internet of Things (IoT): Opportunities, issues and challenges towards a smart and sustainable future. Journal of Cleaner Production, 274, 2020, 122877, 10.1016/j.jclepro.2020.122877. [↗](#9783110713794_018026.xhtml_xref_d106706e29326)
 
-[9] Bedi G., Venayagamoorthy G. K., Singh R., Brooks R. R., Wang K. Review of Internet of Things (IoT) in electric power and energy systems. IEEE Internet of Things Journal, 5(2), April 2018, 847–870, 10.1109/JIOT.2018.2802704.](#9783110713794_018026.xhtml_xref_d106706e29336)
+[9] Bedi G., Venayagamoorthy G. K., Singh R., Brooks R. R., Wang K. Review of Internet of Things (IoT) in electric power and energy systems. IEEE Internet of Things Journal, 5(2), April 2018, 847–870, 10.1109/JIOT.2018.2802704. [↗](#9783110713794_018026.xhtml_xref_d106706e29336)
 
-[10] Bedi G., Venayagamoorthy G. K., Singh R. Navigating the challenges of Internet of Things (IoT) for power and energy systems, 2016 Clemson Power Systems Conference (PSC), Clemson, SC, 2016, 1–5, 10.1109/PSC.2016.746285.](#9783110713794_018026.xhtml_xref_d106706e29339), [#9783110713794_018026.xhtml_xref_d106706e29340)
+[10] Bedi G., Venayagamoorthy G. K., Singh R. Navigating the challenges of Internet of Things (IoT) for power and energy systems, 2016 Clemson Power Systems Conference (PSC), Clemson, SC, 2016, 1–5, 10.1109/PSC.2016.746285. [↗](#9783110713794_018026.xhtml_xref_d106706e29339), [↗](#9783110713794_018026.xhtml_xref_d106706e29340)
 
-[11] Sharif A., Nickray M., Shahidinejad A. Fault-tolerant with load balancing scheduling in a fog-based IoT application. IET Communications, 14(16), 6 10 2020, 2646–2657, 10.1049/iet-com.2020.0080.](#9783110713794_018026.xhtml_xref_d106706e29345)
+[11] Sharif A., Nickray M., Shahidinejad A. Fault-tolerant with load balancing scheduling in a fog-based IoT application. IET Communications, 14(16), 6 10 2020, 2646–2657, 10.1049/iet-com.2020.0080. [↗](#9783110713794_018026.xhtml_xref_d106706e29345)
 
-[12] Paciello V., Carratù M., Abate F., Liguori C. A low cost smart power meter for IoT. Measurement, 136, 2019, 59–66, 10.1016/j.measurement.2018.12.069.](#9783110713794_018026.xhtml_xref_d106706e29348)
+[12] Paciello V., Carratù M., Abate F., Liguori C. A low cost smart power meter for IoT. Measurement, 136, 2019, 59–66, 10.1016/j.measurement.2018.12.069. [↗](#9783110713794_018026.xhtml_xref_d106706e29348)
 
-[13] Zhao L., Brandao Rocha Matsuo I., Zhou Y., Lee W. Design of an industrial IoT-based monitoring system for power substations. IEEE Transactions on Industry Applications, 55(6), Nov.-Dec. 2019, 5666–5674, 10.1109/TIA.2019.2940668.](#9783110713794_018026.xhtml_xref_d106706e29354)
+[13] Zhao L., Brandao Rocha Matsuo I., Zhou Y., Lee W. Design of an industrial IoT-based monitoring system for power substations. IEEE Transactions on Industry Applications, 55(6), Nov.-Dec. 2019, 5666–5674, 10.1109/TIA.2019.2940668. [↗](#9783110713794_018026.xhtml_xref_d106706e29354)
 
+[14] John A., Varghese R., Krishnan S. S., Thomas S., Swayambu T. A., Thasneem P. 使用树莓派实现的 11 kv 变电站自动化，2017 年国际电路、电力与计算技术会议 (ICCPCT), Kollam, 2017, 1–5, doi: 10.1109/ICCPCT.2017.8074264. →
 
+[15] Kadechkar A., Riba J.-R., Moreno-Eguilaz M., Pérez J. Smartconnector: 一种简化变电站预测性维护的自供电解决方案。IEEE Sensors Journal, 20(19), 2020 年 10 月 1 日, 11632–11641, 10.1109/JSEN.2020.2998157. →
 
+[16] [www.elprocus.com](http://www.elprocus.com) a, b
 
+[17] [www.instructables.com](http://www.instructables.com) a, b
 
-# 参考文献 
+[18] [www.arduino.cc](http://www.arduino.cc) →
 
-[14]John A., Varghese R., Krishnan S. S., Thomas S., Swayambu T. A., Thasneem P., 使用树莓派实现的 11 kv 变电站自动化，2017 年国际电路、电力与计算技术会议 (ICCPCT), Kollam, 2017, 1–5, doi: 10.1109/ICCPCT.2017.8074264. →
+[19] [`components101.com`](https://components101.com) →
 
-[15]Kadechkar A., Riba J.-R., Moreno-Eguilaz M., Pérez J. Smartconnector: 一种简化变电站预测性维护的自供电解决方案。IEEE Sensors Journal, 20(19), 2020 年 10 月 1 日, 11632–11641, 10.1109/JSEN.2020.2998157. →
+[20] [`internetofthingsagenda.techtarget.com/definition/microcontroller`](https://internetofthingsagenda.techtarget.com/definition/microcontroller) 微控制器 a, b
 
-[16][[www.elprocus.com](http://www.elprocus.com) a, b
+[21] [`www.electrical4u.com/step-down-transformers/`](https://www.electrical4u.com/step-down-transformers/) 降压变器 →
 
-[17][[www.instructables.com](http://www.instructables.com) a, b
+[22] [`components101.com/5v-relay-pinout-working-datasheet`](https://components101.com/5v-relay-pinout-working-datasheet) 5V 继电器引脚、工作原理及数据表 →
 
-[18][[www.arduino.cc](http://www.arduino.cc) →
+[23] [`www.rhydolabz.com/hardwares-relays-c-170_182/2channel-5v-relay-moduleblack-p-2580.html`](https://www.rhydolabz.com/hardwares-relays-c-170_182/2channel-5v-relay-moduleblack-p-2580.html) 双路 5V 继电器模块黑色 →
 
-[19][[`components101.com`](https://components101.com) →
+[24] Lu S., 等人. 物联网环境下结合关键算法的面向服务的智能医疗系统研究。中国通信学，16(9), 2019 年 9 月, 235–249, 10.23919/JCC.2019.09.018. →
 
-[20][[`internetofthingsagenda.techtarget.com/definition/microcontroller`](https://internetofthingsagenda.techtarget.com/definition/microcontroller) 微控制器 a, b
+[25] Lakkis S. I., Elshakankiri M. 医疗 care 系统系统中基于物联网的急救与运营服务，2017 年物联网业务模型、用户与网络，哥本哈根，2017, 1–5, doi: 10.1109/CTTE.2017.8260983. a, b
 
-[21][[`www.electrical4u.com/step-down-transformers/`](https://www.electrical4u.com/step-down-transformers/) 降压变器 →
+[26] Al-Mahmud O., Khan K., Roy R., Mashuque F. 针对老年人的物联网 (IoT) 智能健康盒，2020 年新兴技术会议 (INCET), Belgaum, 2020, 1–6, doi: 10.1109/INCET.2020.915394. a, b
 
-[22][[`components101.com/5v-relay-pinout-working-datasheet`](https://components101.com/5v-relay-pinout-working-datasheet) 5V 继电器引脚、工作原理及数据表 →
+[27] Kurtulus M., Irgi F., Namdar M., Basgumus A., Temirtas R. 基于物联网的故障检测系统，2020 年第四届多学科研究与创新技术国际会议 (ISMSIT), Istanbul, 2020, 1–7, doi: 10.1109/ISMSIT.2020.9255004. a, b
 
-[23][[`www.rhydolabz.com/hardwares-relays-c-170_182/2channel-5v-relay-moduleblack-p-2580.html`](https://www.rhydolabz.com/hardwares-relays-c-170_182/2channel-5v-relay-moduleblack-p-2580.html) 双路 5V 继电器模块黑色 →
+[28] Sharma S., Das S., Garg H., Hazara K. S., Das A. 基于物联网的发动机油泥监控：一种携式比度分析仪，2019 年第四届信息系统与计算机网络国际会议 (ISCON), Mathura, 2019, 155–158, doi: 10.1109/ISCON4772.2019.9036314. a, b
 
-[24]Lu S., 等人. 物联网环境下结合关键算法的面向服务的智能医疗系统研究。中国通信学，16(9), 2019 年 9 月, 235–249, 10.23919/JCC.2019.09.018. →
+[29] Ma S. IoT 应用解决方案：智能车辆，IET 通信技术与应用国际会议 (ICCTA), 北京, 2011, 636–641, 10.1049/cp.2011.0746. a, b
 
-[25]Lakkis S. I., Elshakankiri M., 医疗 care 系统系统中基于物联网的急救与运营服务，2017 年物联网业务模型、用户与网络，哥本哈根，2017, 1–5, doi: 10.1109/CTTE.2017.8260983. a, b
+[30] Wang S., Hou Y., Gao F., Ji X. 一种用于车辆监控的新物联网接入架构，2016 年 IEEE 第三届物联网世界论坛 (WF-IoT), Reston, VA, 2016, 639–642, 10.1109/WF-IoT.2016.7845396. →
 
-[26]Al-Mahmud O., Khan K., Roy R., Mashuque F. 针对老年人的物联网(IoT)智能健康盒，2020 年新兴技术会议(INCET), Belgaum, 2020, 1–6, doi: 10.1109/INCET.2020.915394. a, b
+[31] Rajendhar P., Kumar P. P., Venkatesh R. 基于`Zigbee`的变电站远程监控与控制无线系统，2017 年电气科学创新研究会议 (IICIRES), Nagapattinam, 2017, 1–4, 10.1109/IICIRES.2017.8078315. →
 
-[27]Kurtulus M., Irgi F., Namdar M., Basgumus A., Temirtas R. 基于物联网的故障检测系统，2020 年第四届多学科研究与创新技术国际会议(ISMSIT), Istanbul, 2020, 1–7, doi: 10.1109/ISMSIT.2020.9255004. a, b
+[32] Priyadarshi. N. ;, Padmanaban S., Maroti P. K., Sharma A. 带有抗孤岛保护的变工况条件下电网集成光伏系统基于`FPSO`的`MPPT`的深度实践研究。IEEE System Journal, 13, 2018, 1861–1871. →
 
-[28]Sharma S., Das S., Garg H., Hazara K. S., Das A. 基于物联网的发动机油泥监控：一种携式比度分析仪，2019 年第四届信息系统与计算机网络国际会议(ISCON), Mathura, 2019, 155–158, doi: 10.1109/ISCON4772.2019.9036314. a, b
+[33] Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaabjerg F., Sharma A. 用于并网光伏/风电发电系统的基于`FPSO MPPT`算法的电网集成光伏-风电系统的模糊`SVPWM`逆变器实现：硬件实现。IET Electric Power Application, 12, 2018, 962–971. a, b
 
-[29]Ma S., IoT 应用解决方案：智能车辆，IET 通信技术与应用国际会议(ICCTA), 北京, 2011, 636–641, 10.1049/cp.2011.0746. a, b
+[34] Bansal R. 智能电网环境中的电力系统，CRC Press，纽约，2019 →
 
-[30]Wang S., Hou Y., Gao F., Ji X. 一种用于车辆监控的新物联网接入架构，2016 年 IEEE 第三届物联网世界论坛(WF-IoT), Reston, VA, 2016, 639–642, 10.1109/WF-IoT.2016.7845396. →
+[35] Gajrani K., Bhargava A., Sharma K. 基于网络的海上风场性能，国际能源会议，孟买, 10–12. →
 
-[31]Rajendhar P., Kumar P. P., Venkatesh R. 基于 Zigbee 的变电站远程监控与控制无线系统，2017 年电气科学创新研究会议(IICIRES), Nagapattinam, 2017, 1–4, 10.1109/IICIRES.2017.8078315. →
+[36] Priyadarshi N., Padmanaban S., Holm-Nielsen J. 基于`ANFIS`的电网估计，14, 2020, 1218–1229. →
 
-[32]Priyadarshi. N. ;, Padmanaban S., Maroti P. K., Sharma A. 带有抗孤岛保护的变工况条件下电网集成光伏系统基于 FPSO 的 MPPT 的深度实践研究。IEEE System Journal, 13, 2018, 1861–1871. →
+[37] Priyadarshi N., Padmanaban S., Bhaskar M. S. 基于李雅普夫控制的电网集成的混合单级光伏燃料电池系统，14, 2020, 3334–3342. →
 
-[33]Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaabjerg F., Sharma A. 用于并网光伏/风电发电系统的基于 FPSO MPPT 算法的电网集成光伏-风电系统的模糊 SVPWM 逆变器实现：硬件实现。IET Electric Power Application, 12, 2018, 962–971. a, b
+[38] Gajrani K., Bhargava A. 基于`TCP/IP`网络的风电发电，国际清洁能源与技术会议，马来西亚吉隆坡，2019, 18–20. →
 
-[34]Bansal R. 智能电网环境中的电力系统，CRC Press，纽约，2019 →
+[39] Mbungu N. T., Bansal R. C., Bettay M. 通过智能电表的能量管理系统。Applied Energy, 280(11590), 2020, 1–12. →
 
-[35]Gajrani K., Bhargava A., Sharma K. 基于网络的海上风场性能，国际能源会议，孟买, 10–12. →
+[40] Priyadarshi N., Bhaskar M. S., Padmanaban N. 用于水泵应用的采用混合`GSA-PSO`的`CUK-SEPIC`变换器光伏光功率跟踪系统。IET Power Electronics, 13, 2020, 2824–2830. a, b
 
-[36]Priyadarshi N., Padmanaban S., Holm-Nielsen J. 基于 ANFIS 的电网估计，14, 2020, 1218–1229. →
+[41] Priyadarshi N., Holm-Nielsen J., Bhaskar M. S., Padmanaban N. 物联网增强的采用`PSO`的改进`zeta`变换器的光伏最大功率跟踪系统：硬件实现。IET Power Electronics, 13, 2020, 2775–2781. a, b
 
-[37]Priyadarshi N., Padmanaban S., Bhaskar M. S. 基于李雅普夫控制的电网集成的混合单级光伏燃料电池系统，14, 2020, 3334–3342. →
-
-[38]Gajrani K., Bhargava A. 基于 TCP/IP 网络的风电发电，国际清洁能源与技术会议，马来西亚吉隆坡，2019, 18–20. →
-
-[39]Mbungu N. T., Bansal R. C., Bettay M. 通过智能电表的能量管理系统。Applied Energy, 280(11590), 2020, 1–12. →
-
-[40]Priyadarshi N., Bhaskar M. S., Padmanaban N. 用于水泵应用的采用混合 GSA-PSO 的新型 CUK-SEPIC 变换器光伏光功率跟踪系统。IET Power Electronics, 13, 2020, 2824–2830. a, b
-
-[41]Priyadarshi N., Holm-Nielsen J., Bhaskar M. S., Padmanaban N. 物联网增强的采用 PSO 的改进 zeta 变换器的光伏最大功率跟踪系统：硬件实现。IET Power Electronics, 13, 2020, 2775–2781. a, b
-
-[42]Mbungu N. T., Bansal R. C., Naidoo R. 优化的单相智能电表设计。IET The Journal of Engineering, 2017(13), 2017 年 11 月, 1220–1224. a, b
-
-
-
-
+[42] Mbungu N. T., Bansal R. C., Naidoo R. 优化的单相智能电表设计。IET The Journal of Engineering, 2017(13), 2017 年 11 月, 1220–1224. a, b
 
 [43] Tyagi S. K. S., Mukherjee A., Pokhrel S. R., Hiran K. K. 智能农业物联网传感器网络中一种智能且优的资源分配方法。IEEE Sensors Journal, 2020. →
+
+
 
 [44] Lakhwani K., Gianey H. K., Wireko J. K., Hiran K. K. 物联网 (IoT): 原理、范式与应用，Bpb Publications, 2020. →
 
@@ -2626,19 +2558,22 @@ frequency = 10⁶ (pulse_high + pulse_low)
 # 8 基于机器学习和人工智能的智能电网大数据分析：综述
 
 Subin Koshy, 印度卡里卡特国立技术学院, 电气工程系
+
 S. Rahul, 印度卡里卡特国立技术学院, 电气工程系
+
 R. Sunitha, 印度卡里卡特国立技术学院, 电气工程系
+
 Elizabeth P. Cheriyan, 印度卡里卡特国立技术学院, 电气工程系
 
 ### 摘要
 
-可再生能源发电组合的令人兴奋的发展以及微电网的广泛引入，促进了现有电网潮流模式的重大变革。全球电网已通过引入先进的监测技术（如高级计量体系架构 (`AMI`)）、智能电表和相位测量单元 (`PMUs`)）而升级为智能电网（`SG`），这些技术收集了整个系统的高分辨率电测量值。这带来了海量数据，即`大数据`，需要对其进行高效处理以获取有价值的见解。具体而言，技术复杂性、安全性和数据集的集成是将海量数据集转化为有用见解需要解决的主要关注点。本章综述了大数据分析 (`BDA`) 及其在 `SG` 视角下的相关优势、挑战和进展。`BDA` 与可视化工具相结合，有助于`SG` 中的预测性决策过程。因此，数据分析在`SG` 的高效监测中发挥着重要作用。在信息和通信技术的整合下，传统电力系统中引入了一个信息层，用于收集、存储和处理来自智能电表和传感器实现的数据。大数据架构涉及数据聚合、存储和分析，它整合了`SG`对各种框架的需求以及卓越的计算能力，以响应客户需求。首先对大数据的特征、`SGs` 以及海量数据处理进行了描述，作为引言以说明在智能电网中集成先进数据挖掘的动机和可能的收益。文中还讨论了针对通用问题的特定原则和标准数据分析技术。本章的关键部分讨论了各种数据分析在 `SG` 中的高级应用，利用了机器学习 (`ML`) 和人工智能 (`AI`)。`SG` 受益于 `ML` 固有的泛化能力，能够从分散的测量单元提供可靠且快速的潮流预测，并具有卓越的计算性能和互操作性。本章探讨了许多利用各种 `ML` 方法来增强 `SG` 活动和管理的文献。我们将在本章介绍大数据分析和云基础设施，并阐述它们对 `SG` 的重要性。具体而言，我们将关注与 `SG` 网络物理保护和安全相关的计算问题及解决方案。
+可再生能源发电组合的令人兴奋的发展以及微电网的广泛引入，促进了现有电网潮流模式的重大变革。全球电网已通过引入先进的监测技术（如高级计量体系架构（`AMI`））、智能电表和相位测量单元（`PMUs`））而升级为智能电网（`SG`），这些技术收集了整个系统的高分辨率电测量值。这带来了海量数据，即`大数据`，需要对其进行高效处理以获取有价值的见解。具体而言，技术复杂性、安全性和数据集的集成是将海量数据集转化为有用见解需要解决的主要关注点。本章综述了大数据分析（`BDA`）及其在`SG`视角下的相关优势、挑战和进展。`BDA`与可视化工具相结合，有助于`SG`中的预测性决策过程。因此，数据分析在`SG`的高效监测中发挥着重要作用。在信息和通信技术的整合下，传统电力系统中引入了一个信息层，用于收集、存储和处理来自智能电表和传感器实现的数据。大数据架构涉及数据聚合、存储和分析，它整合了`SG`对各种框架的需求以及卓越的计算能力，以响应客户需求。首先对大数据的特征、`SGs`以及海量数据处理进行了描述，作为引言以说明在智能电网中集成先进数据挖掘的动机和可能的收益。文中还讨论了针对通用问题的特定原则和标准数据分析技术。本章的关键部分讨论了各种数据分析在`SG`中的高级应用，利用了机器学习（`ML`）和人工智能（`AI`）。`SG`受益于`ML`固有的泛化能力，能够从分散的测量单元提供可靠且快速的潮流预测，并具有卓越的计算性能和互操作性。本章探讨了许多利用各种`ML`方法来增强`SG`活动和管理的文献。我们将在本章介绍大数据分析和云基础设施，并阐述它们对`SG`的重要性。具体而言，我们将关注与`SG`网络物理保护和安全相关的计算问题及解决方案。
 
 关键词：人工智能，大数据分析，机器学习，智能电网，
 
 ## 8.1 引言
 
-智能电网 (`SG`) 涉及在现有电网中结合信息和数字通信框架，以促进双向通信和功率流，从而提高电力系统的安全、可靠性和效率 [1)。`SG` 还包括引入智能计量（增强设备性能的自动化、实时、数字系统）、有关电网运行和状态的通信以及分布式自动化。大数据和相关分析自监控控制和数据采集 (`SCADA`) 系统变得常见以来一直参与其中。分布在广阔地理区域的大量传感器为监测目的提供了海量数据。因此，`SG` 时代引入了大量数据，不仅来自传感器，还来自用于传统电力设备的改进型嵌入式计算设施 [2)。这不仅限于运行数据，因为随着设备专业性的增长，对实时计算系统的有效监测对于协调分布式计算环境变得至关重要。大数据定义为海量、全面且未经过滤的数据集，这些数据集无法用传统数据处理应用程序进行适当分析 [3)。对于大数据的多种解释之间存在共识。这是不同类别数据集和复杂策略引入的演进技术挑战，需要新的框架和技术来从数据中高效挖掘有价值的见解。数据挖掘技术依赖硬件和软件来有效处理大数据 [4)。大数据的属性通常使用“大数据的五个 V”来描述，如表 8.1 所示。
+智能电网（`SG`）涉及在现有电网中结合信息和数字通信框架，以促进双向通信和功率流，从而提高电力系统的安全、可靠性和效率 [1)。`SG`还包括引入智能计量（增强设备性能的自动化、实时、数字系统）、有关电网运行和状态的通信以及分布式自动化。大数据和相关分析自监控控制和数据采集（`SCADA`）系统变得常见以来一直参与其中。分布在广阔地理区域的大量传感器为监测目的提供了海量数据。因此，`SG`时代引入了大量数据，不仅来自传感器，还来自用于传统电力设备的改进型嵌入式计算设施 [2)。这不仅限于运行数据，因为随着设备专业性的增长，对实时计算系统的有效监测对于协调分布式计算环境变得至关重要。大数据定义为海量、全面且未经过滤的数据集，这些数据集无法用传统数据处理应用程序进行适当分析 [3)。对于大数据的多种解释之间存在共识。这是不同类别数据集和复杂策略引入的演进技术挑战，需要新的框架和技术来从数据中高效挖掘有价值的见解。数据挖掘技术依赖硬件和软件来有效处理大数据 [4)。大数据的属性通常使用“大数据的五个 V”来描述，如表 8.1 所示。
 
 表 8.1：涉及智能电网的大数据特征。
 
@@ -2650,16 +2585,12 @@ Elizabeth P. Cheriyan, 印度卡里卡特国立技术学院, 电气工程系
 | 价值 (Value) | 从数据中提取有价值的见解 |
 | 速度 (Velocity) | 数据速率 |
 
-更容易访问数学分析工具、数据分析和信号处理有助于从大数据中获取价值的见解。大数据分析 (`BDA`) 涉及分析算法和其他数据处理方法，这些方法处理可用数据以获得所需的格式输出。通常，基于 `SG` 的大数据分析可以细分为四类：
+更容易访问数学分析工具、数据分析和信号处理有助于从大数据中获取价值的见解。大数据分析（`BDA`）涉及分析算法和其他数据处理方法，这些方法处理可用数据以获得所需的格式输出。通常，基于`SG`的大数据分析可以细分为四类：
 
-1.  描述性分析 – 处理围绕 `SG` 周围正在发生的事情。
-2.  诊断性分析 – 处理其发生的原因，并试图确定 `SG` 事件背后的准确原因。
-3.  预测性分析 – 处理根据历史数据和特定置信水平估计可能发生的结果。
-4.  规范性分析 – 处理根据见解应该采取哪些策略以及应该驱动哪些决策。
-
-
-
-
+1. 描述性分析 – 处理围绕`SG`周围正在发生的事情。
+2. 诊断性分析 – 处理其发生的原因，并试图确定`SG`事件背后的准确原因。
+3. 预测性分析 – 处理根据历史数据和特定置信水平估计可能发生的结果。
+4. 规范性分析 – 处理根据见解应该采取哪些策略以及应该驱动哪些决策。
 
 为了实现更快速、更高效的数据处理，采用了基于人工智能（AI）的技术。人工智能涉及使机器或计算机通过逻辑、规则和决策树模仿人类智能的技术。因此，AI 是包含机器学习（ML）和深度学习（DL）概念的超集。机器学习基于 AI 且是 AI 的子集，在现代领域作为数字化解决方案的核心方面引起了极大关注。机器学习领域的先驱之一亚瑟·萨穆尔（Arthur Samuel）将其定义为一个研究领域，允许机器具有无需直接编程潜力 [5]。机器学习通过其强大且快速的处理技术帮助做出数据驱动决策并分析复杂的大数据。深度学习是机器学习的子集，由训练软件使用神经网络执行各种任务的算法组成 [6]。图 8.1 显示了包含 AI、ML 和 DL 的维恩图集。
 
@@ -2673,11 +2604,11 @@ Elizabeth P. Cheriyan, 印度卡里卡特国立技术学院, 电气工程系
 
 对于发电机、输配电供应商以及客户，SG 可能提供以下优势：
 
-*   需求管理：SG 促进消费者对能源使用的控制，并帮助供应商减少过度需求并防止过载场景。
-*   网络稳定性：SG 通过各种发电和需求控制技术确保供需平衡并控制电压水平。
-*   可靠网络：SG 帮助网络供应商远程预测和识别可能导致快速停电的故障。
-*   消费者赋权：SG 提供实时利用，允许客户监控其用量以从峰谷价格中获利并减少用电。
-*   可再生能源 (RES) 集成：SG 通过对能量调度做出决策并实时监控负载，使得波动性 RES 得以纳入。
+* 需求管理：SG 促进消费者对能源使用的控制，并帮助供应商减少过度需求并防止过载场景。
+* 网络稳定性：SG 通过各种发电和需求控制技术确保供需平衡并控制电压水平。
+* 可靠网络：SG 帮助网络供应商远程预测和识别可能导致快速停电的故障。
+* 消费者赋权：SG 提供实时利用，允许客户监控其用量以从峰谷价格中获利并减少用电。
+* 可再生能源 (RES) 集成：SG 通过对能量调度做出决策并实时监控负载，使得波动性 RES 得以纳入。
 
 ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求的突然变化、电力故障、突发变化以及可再生能源生产的波动或其他重大事件做出反应。ML 是 SG 中预测电力需求和不可靠能源发电量最流行的实现之一。ML 可以通过评估整个行业的设备故障数据来帮助避免系统故障，同时引导资产管理。除了监督 ML 外，无监督 ML 也可能有 SG 应用，例如开发需求画像。分布式工具通常用于：
 
@@ -2696,20 +2627,17 @@ ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求
 
 图 8.2：章节结构。
 
-
-
-
-由于测量数据量极大且频率极高，发电行业正面临着巨大的挑战。根据 Navigant 的研究分析，预计到 2022 年，部署的智能电表数量将达到 11 亿个[23]。高级电计量体系（`AMI`）通常在 15 分钟到 1 小时内收集能耗数据。通常，相量测量单元（`PMU`）以极高的采样率对交流电压和电流波形进行采样。相量集中器（`PDC`）以 30 Hz 的采样频率从数百个 `PMUs` 收集测量数据，每天产生约 50 GB 的数据[24]。大数据分析（BDA）为电力公用事业部门提供了一系列用于解决这些问题的工具。内存计算系统和并行计算框架（如`Hadoop`或`MapReduce`以及`Spark`）擅长处理广泛的数据集。流处理平台（如`Storm`、`Streams`和`Spark Streaming`）旨在实时解释数据并立即采取必要行动。大数据可用于增强短期发电活动并开展长期的有效规划。它们可以有效识别窃电、识别配电系统拓扑、评估与资产管理相关的风险、消费者细分与目标定位、获取收益流、预测负载、预测可持续发电等[25]。大数据框架需要数据聚合、仓库管理、分析，并整合 `SG` 需求，以建立多个具有卓越计算能力并能响应不同需求的平台。
+由于测量数据量极大且频率极高，发电行业正面临着巨大的挑战。根据 Navigant 的研究分析，预计到 2022 年，部署的智能电表数量将达到 11 亿个[23]。高级电计量体系（`AMI`）通常在 15 分钟到 1 小时内收集能耗数据。通常，相量测量单元（`PMU`）以极高的采样率对交流电压和电流波形进行采样。相量集中器（`PDC`）以 30 Hz 的采样频率从数百个`PMUs`收集测量数据，每天产生约 50 GB 的数据[24]。大数据分析（BDA）为电力公用事业部门提供了一系列用于解决这些问题的工具。内存计算系统和并行计算框架（如`Hadoop`或`MapReduce`以及`Spark`）擅长处理广泛的数据集。流处理平台（如`Storm`、`Streams`和`Spark Streaming`）旨在实时解释数据并立即采取必要行动。大数据可用于增强短期发电活动并开展长期的有效规划。它们可以有效识别窃电、识别配电系统拓扑、评估与资产管理相关的风险、消费者细分与目标定位、获取收益流、预测负载、预测可持续发电等[25]。大数据框架需要数据聚合、仓库管理、分析，并整合`SG`需求，以建立多个具有卓越计算能力并能响应不同需求的平台。
 
 选择大数据框架的核心特征[26]基于：
 
-*   编程模型
-*   编程语言
-*   数据源类型
-*   框架与现有机器学习库的集成程度
-*   容错处理方法
+* 编程模型
+* 编程语言
+* 数据源类型
+* 框架与现有机器学习库的集成程度
+* 容错处理方法
 
-在选择大数据框架时，还需要考虑监控数据的特征。考虑到这些特征，大数据框架是经过专门设计的，并且根据应用和特征的不同，最优框架会发生变化。为 `SG` 选择的大数据框架可能对于用于其他应用（如社交媒体或健康监测）的大数据框架并不有效或合适。Table 8.2 展示了基于 `SG` 的大数据框架在不同分层阶段使用的不同平台。
+在选择大数据框架时，还需要考虑监控数据的特征。考虑到这些特征，大数据框架是经过专门设计的，并且根据应用和特征的不同，最优框架会发生变化。为`SG`选择的大数据框架可能对于用于其他应用（如社交媒体或健康监测）的大数据框架并不有效或合适。Table 8.2 展示了基于`SG`的大数据框架在不同分层阶段使用的不同平台。
 
 #### 表 8.2：基于智能电网的大数据框架的不同平台。
 
@@ -2721,13 +2649,13 @@ ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求
 | 数据查询 | `IMPALA`、`HIVE`、`Apache Pig` |
 | 数据分析 | `Tableau`、`Mahout`、`SAMOA` |
 
-在缺乏框架的情况下，处理后的记录可能会冗余，导致与工作应用产生冲突，并对处理大数据的各部门职责产生误解。因此，框架必须分层定义大数据应用空白，并定义解决方案来整合它们。分层周期从 `SG` 数据的生成开始，到数据分析结束。这些小节将介绍这些主要阶段。](#9783110713794_020436.xhtml_b_9783110714043-008_s_008_s_002_s_001)
+在缺乏框架的情况下，处理后的记录可能会冗余，导致与工作应用产生冲突，并对处理大数据的各部门职责产生误解。因此，框架必须分层定义大数据应用空白，并定义解决方案来整合它们。分层周期从`SG`数据的生成开始，到数据分析结束。这些小节将介绍这些主要阶段。](#9783110713794_020436.xhtml_b_9783110714043-008_s_008_s_002_s_001)
 
 ### 8.2.1 数据生成
 
 传统的`SCADA`系统一直运行良好，直到 2003 年停电，这次停电影响了美国东北部和加拿大电网中部地区，持续了近一周才恢复运行[27]。事后分析表明，停电的发生由于对电力系统缺乏实时监控。因此，需要开发实时监控系统，随后对电力系统进行实时保护和控制。这导致了`PMU`的开发，它提供了电压、电流信号和频率的相量信息。测量数据可以通过全球定位卫星（`GPS`）系统传输到地理位置很遥远的控制中心或被称为`PDC`的中心位置，并带有时间标签。这种时间标记通过为从不同设施采集的`PMU`数据提供共同的采样参考，实现了同步。`PMUs`分布在电网沿线，放置在各种电压的变电站以及监控设备和传感器处。这种组合系统被称为广域监测系统（`WAMS`）。
 
-在涉及电网转型`SG` 的数据五要素特征中，最重要的是数据量和速度。`SG`监控数据产生自智能电表，每几秒采集一次[28]。数据产生自住宅、办公楼、制造工厂、太阳能发电场、风力发电机和众多电站。因此，获得的数据属于发电侧、输电侧或侧。数据收集自服务侧的多个来源，包括智能电表、`AMI`、传感器和`PMUs`。此外，来自气象中心的天气因素也可能产生影响。考虑到这些来源的数据，随着技术不断渗透整个`SG`（从发电侧到除了电侧），之外还有许多现代数据产生实体，例如电动汽车（`EV`）技术。它产生了多种数据，用于优化资源利用的模式分析和预测工作。在[29]中，提出了一种开发交通模式和估计电动汽车充电电力的数学模型。图 8.3 展示了与`SG`相关的数据源的总结。
+在涉及电网转型`SG`的数据五要素特征中，最重要的是数据量和速度。`SG`监控数据产生自智能电表，每几秒采集一次[28]。数据产生自住宅、办公楼、制造工厂、太阳能发电场、风力发电机和众多电站。因此，获得的数据属于发电侧、输电侧或侧。数据收集自服务侧的多个来源，包括智能电表、`AMI`、传感器和`PMUs`。此外，来自气象中心的天气因素也可能产生影响。考虑到这些来源的数据，随着技术不断渗透整个`SG`（从发电侧到除了电侧），之外还有许多现代数据产生实体，例如电动汽车（`EV`）技术。它产生了多种数据，用于优化资源利用的模式分析和预测工作。在[29]中，提出了一种开发交通模式和估计电动汽车充电电力的数学模型。图 8.3 展示了与`SG`相关的数据源的总结。
 
 ![](img/b_9783110714043-008_fig_003.jpg)
 
@@ -2735,13 +2663,11 @@ ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求
 
 ### 8.2.2 数据采集
 
-
-
-智能网（SG）的数据采集可以分为三个不同的阶段：数据提取、数据传输和预处理。中心化设备主动收集智能网中产生的数据。获取的数据被发送到集群主节点，例如基于 `Hadoop` 的主节点。原始数据处理后，会被传输到数据存储系统进行分析。鉴于数据集的复杂，获取的数据可能具有各种格式和细节，因此需要对其进行预处理。数据集成策略寻求整合来自各种源的数据以提供统一的数据视图[30]。测得的数据集可能包含时间戳、智能电表参考、发电或用电信息、传感器地理位置等细节。通常，在数据预处理中，会对错误和缺失数据进行重构或忽略以提高数据准确性。离群值通过将其限制在下限或上限阈值来处理。缺失数据可以使用各种插值技术进行处理。一个能够高效从各种源捕获、聚合并传输海量数据到中心化存储的分布式框架示例是 `Flume` [31]，它由 Apache 开发。
+智能网（SG）的数据采集可以分为三个不同的阶段：数据提取、数据传输和预处理。中心化设备主动收集智能网中产生的数据。获取的数据被发送到集群主节点，例如基于`Hadoop`的主节点。原始数据处理后，会被传输到数据存储系统进行分析。鉴于数据集的复杂，获取的数据可能具有各种格式和细节，因此需要对其进行预处理。数据集成策略寻求整合来自各种源的数据以提供统一的数据视图[30]。测得的数据集可能包含时间戳、智能电表参考、发电或用电信息、传感器地理位置等细节。通常，在数据预处理中，会对错误和缺失数据进行重构或忽略以提高数据准确性。离群值通过将其限制在下限或上限阈值来处理。缺失数据可以使用各种插值技术进行处理。一个能够高效从各种源捕获、聚合并传输海量数据到中心化存储的分布式框架示例是`Flume` [31]，它由 Apache 开发。
 
 ### 8.2.3 数据存储与处理
 
-一旦获取了智能网数据，必须对其进行高效处理，以提取有助于构建智能网动态图谱的洞察。这揭示了隐藏模式，检测数据中的相关性，并从海量测量集中预测潜在控制动作的趋势。因此，可以说数据可视化充当了原始测量数据与智能网中相应的采取控制措施之间的链接。`Hadoop` [32]是一个用于存储和处理大数据的开源平台。与其与其在成本昂贵的专用软件中存储和处理数据，不如它在标准化服务器上对海量数据进行并行存储。`Hadoop` 的基础由两个主要模块组成：名为 `Hadoop’s Distributed File System`（`HDFS`）[32] 和作为处理器的 `MapReduce` [33]。`Hadoop` 被视为大数据基础设施的重要组件。`HDFS` 设计用于在参考商品化硬件的 Google 文件系统（`GFS`）架构上运行。一个 `HDFS` 集群包含一个处理文件系统元数据的单一 `Name Node` 和多个不同的数据存储节点。文件被划分为一个或多个块，并放置在系列数据节点中。在这里，采集的智能网数据被碎片化为许多不同的帧，然后将这些碎片分配给数据节点。每个块在不同的数据节点上经过多次重建以防止数据丢失。`MapReduce` [33] 是 `Hadoop` 的计算工具，包含一个主节点和一个每个集群节点运行的从机。`Hadoop` 流行的开源版本包括 `Cloudera`、`MapR` 和 `Hortonworks`。美国标准与技术研究院（`NIST`）建立并发布了《智能网互操作性标准框架和路线图 1.0 版》，旨在为私营部门标准制定机构优先考虑、组织和促进需求的实施建立基础，这些机构包括类似于国际电工委员会（`IEC`）和 `IEEE` 的外国标准开发组织[34)。为了可靠地维护和运行智能网，必须对从服务网络收集的大数据进行评估，以使发电和用电保持一致。为了根据销售结果可靠地预测潜在收入，基于 AI 的 `ML` 技术的 `BDA` 模型是关重要的。图 8.4 显示了智能网数据处理技术的时间演变[35]。
+一旦获取了智能网数据，必须对其进行高效处理，以提取有助于构建智能网动态图谱的洞察。这揭示了隐藏模式，检测数据中的相关性，并从海量测量集中预测潜在控制动作的趋势。因此，可以说数据可视化充当了原始测量数据与智能网中相应的采取控制措施之间的链接。`Hadoop` [32]是一个用于存储和处理大数据的开源平台。与其与其在成本昂贵的专用软件中存储和处理数据，不如它在标准化服务器上对海量数据进行并行存储。`Hadoop`的基础由两个主要模块组成：名为`Hadoop’s Distributed File System`（`HDFS`）[32] 和作为处理器的`MapReduce` [33]。`Hadoop`被视为大数据基础设施的重要组件。`HDFS`设计用于在参考商品化硬件的 Google 文件系统（`GFS`）架构上运行。一个`HDFS`集群包含一个处理文件系统元数据的单一`Name Node`和多个不同的数据存储节点。文件被划分为一个或多个块，并放置在系列数据节点中。在这里，采集的智能网数据被碎片化为许多不同的帧，然后将这些碎片分配给数据节点。每个块在不同的数据节点上经过多次重建以防止数据丢失。`MapReduce` [33] 是`Hadoop`的计算工具，包含一个主节点和一个每个集群节点运行的从机。`Hadoop`流行的开源版本包括`Cloudera`、`MapR`和`Hortonworks`。美国标准与技术研究院（`NIST`）建立并发布了《智能网互操作性标准框架和路线图 1.0 版》，旨在为私营部门标准制定机构优先考虑、组织和促进需求的实施建立基础，这些机构包括类似于国际电工委员会（`IEC`）和`IEEE`的外国标准开发组织[34)。为了可靠地维护和运行智能网，必须对从服务网络收集的大数据进行评估，以使发电和用电保持一致。为了根据销售结果可靠地预测潜在收入，基于 AI 的`ML`技术的`BDA`模型是关重要的。图 8.4 显示了智能网数据处理技术的时间演变[35]。
 
 ![](img/b_9783110714043-008_fig_004.jpg)
 
@@ -2749,63 +2675,80 @@ ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求
 
 ### 8.2.4 数据查询与分析组件
 
-来自电力源和其他源的广泛数据导致了智能网大数据的形成。测得的智能网数据应动态传输以提高智能网性能。对这些数据进行分析为电网运行员提供建议性反馈措施，为研究人员验证数据挖掘和关联算法，并让客户了解其消费状况。智能网允许从安装在电站、变压器和负载中心的传感器整合即时报告。公用事业已经拥有了执行此前无法或实际上复杂的函数的资源。通过结合输出特性和负载统计数据，运营商可以理解消费者的负载和使用情况，以确保资源处于允许范围内。然而，智能网数据的共享必须与保护问题进行权衡。运行决策涉及连续的分析处理，例如特定的电力系统故障或事件，做出优化决策并监控所采取措施的影响评估，以及相应的模型动态调整。需求响应（`DR`）技术具有增加智能网可靠性的有效选择[36)。在[37]中，开发了一种基于 `DR` 的实时算法，为系统的负载设备提供优化控制。能量管理中心（`EMC`）计算零售价格和设备的购买能量[37]。智能网中使用的自适应分析的一般性概述如图图 8.5 所示。
+来自电力源和其他源的广泛数据导致了智能网大数据的形成。测得的智能网数据应动态传输以提高智能网性能。对这些数据进行分析为电网运行员提供建议性反馈措施，为研究人员验证数据挖掘和关联算法，并让客户了解其消费状况。智能网允许从安装在电站、变压器和负载中心的传感器整合即时报告。公用事业已经拥有了执行此前无法或实际上复杂的函数的资源。通过结合输出特性和负载统计数据，运营商可以理解消费者的负载和使用情况，以确保资源处于允许范围内。然而，智能网数据的共享必须与保护问题进行权衡。运行决策涉及连续的分析处理，例如特定的电力系统故障或事件，做出优化决策并监控所采取措施的影响评估，以及相应的模型动态调整。需求响应（`DR`）技术具有增加智能网可靠性的有效选择[36)。在[37]中，开发了一种基于`DR`的实时算法，为系统的负载设备提供优化控制。能量管理中心（`EMC`）计算零售价格和设备的购买能量[37]。智能网中使用的自适应分析的一般性概述如图图 8.5 所示。
 
 ![](img/b_9783110714043-008_fig_005.jpg)
 
 图 8.5：智能网中的自适应分析。
 
-## 8.3 智能网大数据分析的机器学习与人工智能方法
+## 8.3 智能网大数据分析的机器学习与人工智能方法
+
+测量与监测技术的最新进展显著导致了电力系统输配电侧测量数据量、多样性和产生速度的增加。`PMU`等高采样率设备的发展，为电力系统运行者和服务提供者提供了对电力系统高质量的广泛洞察，而这些信息是通过`SCADA`等传统数据采集方法无法观测到的。
 
 
-
-
-测量与监测技术的最新进展显著导致了电力系统输配电侧测量数据量、多样性和产生速度的增加。`PMU` 等高采样率设备的发展，为电力系统运行者和服务提供者提供了对电力系统高质量的广泛洞察，而这些信息是通过 `SCADA` 等传统数据采集方法无法观测到的。
 
 `PMUs` 提供了三相电压和电流相量的动态测量、高精度的高采样率频率及其变化率 [38]。事件检测 [39]、振动监控 [40]、状态估计 [41]、拓扑检测 [42] 等都是由于 `PMU` 数据的存在而成为现实的一些主要应用。
 
-人工神经网络 (`ANN`)、遗传算法 (`GA`)、强化学习 (`RL`) 和多智能体系统是解决分类、预测、联网、优化和监控策略的一些标准 AI 方法 [43]。缺乏复杂的自动化控制工具导致许多设备操作仍以手动方式或基础自动化阶段进行。在电网结构中引入 AI 将带来技术，并为 `SG` 提供创新方法来应对这些挑战。其中一个示例是使用智能技术优化可控负载，从而节省成本。图 8.6 展示了 `PMU` 网络、基于 `ML` 的事件预测技术与传统电力系统基础设施的结合。
+人工神经网络（`ANN`）、遗传算法（`GA`）、强化学习（`RL`）和多智能体系统是解决分类、预测、联网、优化和监控策略的一些标准 AI 方法 [43]。缺乏复杂的自动化控制工具导致许多设备操作仍以手动方式或基础自动化阶段进行。在电网结构中引入 AI 将带来技术，并为 `SG` 提供创新方法来应对这些挑战。其中一个示例是使用智能技术优化可控负载，从而节省成本。图 8.6 展示了 `PMU` 网络、基于 `ML` 的事件预测技术与传统电力系统基础设施的结合。
 
 ![](img/b_9783110714043-008_fig_006.jpg)
 
 图 8.6：结合了基于 `ML` 的事件预测技术和传统电力系统基础设施的 `SG` 网络。
 
-现代电力系统通常具有复杂的网络、系统动力学和监测技术，并对用户决策非常敏感。未来，这些智能技术、互联使用趋势、改进的性能和可靠性标准的结合将使传统的电力系统架构从物理框架转变为信息物理框架，涉及创新的建模、控制、监测、设计和诊断方法论。电网还将从开源平台和现有的 `ML` 解决方案中获益，将其基础设施转型为数据驱动的管理。`ML` 可以被解释为识别一个由可测量结果生成的未定义函数 `f`。该函数旨在收集数据中描述线性性的（或非线性）的属性。在数学上，它可以表示为：
+现代电力系统通常具有复杂的网络、系统动力学和监测技术，并对用户决策非常敏感。未来，这些智能技术、互联使用趋势、改进的性能和可靠性标准的结合将使传统的电力系统架构从物理框架转变为信息物理框架，涉及创新的建模、控制、监测、设计和诊断方法论。电网还将从开源平台和现有的 `ML` 解决方案中获益，将其基础设施转型为数据驱动的管理。
 
-(8.1)*f* : *X* → *Y*, *X* ∈ ℝ^(*n**x**m*), *Y* ∈ ℝ^(*n*);  *n*, *m* ∈ 1,  2, ↆ…,  *k*
+`ML` 可以被解释为识别一个由可测量结果生成的未定义函数 `f`。该函数旨在收集数据中描述线性性的（或非线性）的属性。在数学上，它可以表示为：
+
+```text
+(8.1) f : X → Y, X ∈ ℝ^(n×m), Y ∈ ℝ^n; n, m ∈ 1, 2, …, k
+```
 
 其中 `X`、`Y` 代表对应的输入输出标签，`f` 代表输入不可观测数据以获得合适决策的函数。本节探讨了 `ML` 和数据挖掘算法、过程和策略，这些方法可以适应于电力系统，用于研究、数据处理、回归和模式分类。常见的 `ML` 方法包括监督学习、无监督学习和强化学习。
 
 ### 8.3.1 监督学习方法概述
 
-在监督学习中，机器在适当标记数据的帮助下接受训练，并使用这些数据为给定的输入预测输出。监督学习的目标是通过将输出与输入 `x` 映射或建立关联来获得输出 `y`。观测集或样本集表示为 (`x`[`i`], `y`[`i`]), `i`  = 1,2,3, ↆ…*n*，其中 `x`[`i]` 代表特征，`y`[`i]` 代表第 `i` 个样本的标签。从非常不同的观点提出了多种方法来获取函数类 `H` 的“最优”映射。一种广泛采用的方法是将 `f` 识别为“正则化经验风险极小化”问题 [44]，其数学关系为：
+在监督学习中，机器在适当标记数据的帮助下接受训练，并使用这些数据为给定的输入预测输出。监督学习的目标是通过将输出与输入 `x` 映射或建立关联来获得输出 `y`。观测集或样本集表示为（`x[i]`，`y[i]`），`i = 1, 2, 3, …, n`，其中 `x[i]` 代表特征，`y[i]` 代表第 `i` 个样本的标签。
 
-(8.2)$\underset{f \in \mathbf{H}}{min}\frac{1}{n}\sum_{i=1}^{n}L(y_{i},f_{i}) + \frac{\lambda}{2}\|f\|$
+从非常不同的观点提出了多种方法来获取函数类 `H` 的“最优”映射。一种广泛采用的方法是将 `f` 识别为“正则化经验风险极小化”问题 [44]，其数学关系为：
 
-这为特定的函数 `f` 提供了效率，$\frac{\lambda}{2}\|f\|$ 是正则化项。两个监督学习任务可以被执行，即分类和回归。对于分类任务，输入是 `n` 维，输出 `y` 是整数；对于回归任务，输入是 `n` 维，输出 `y` 是实数。监督学习的阶段包括训练、验证和测试。
+```text
+(8.2) min_{f ∈ H} (1/n) Σ_{i=1}^{n} L(y_i, f_i) + (λ/2)||f||
+```
 
+这为特定的函数 `f` 提供了效率，`(λ/2)||f||` 是正则化项。两个监督学习任务可以被执行，即分类和回归。对于分类任务，输入是 `n` 维，输出 `y` 是整数；对于回归任务，输入是 `n` 维，输出 `y` 是实数。监督学习的阶段包括训练、验证和测试。
 
+### 8.3.2 无监督学习方法概述
 
+在监督学习系统中，可能会出现由于传感器数量限制或缺乏该领域专业知识导致标注数据受限的情况。因此，获取隐藏模式和相关见解是机器的任务。在某些实现中，一种被称为无监督学习的替代学习方法允许算法在数据集内学习有价值的函数特征。
 
+如今用于无监督学习最常见的方法之一是强化学习（`RL`），其初衷是为了解决电网中的随机最优控制问题 [55]。`RL` 方法广泛应用于各种领域，如系统控制 [56] 和迁移学习 [57]。将强化学习与迁移学习方法相结合的优势显而易见。因此，研究人员倾向于从全局局部视角进行知识迁移，以应对能源需求的波动。聚类、特征提取和重构是无监督学习实现的三个关键目标。
 
-### 8.3.2 无监督学习方法概述
+#### 8.3.2.1 选择合适的模型
 
-在监督学习系统中，可能会出现由于传感器数量限制或缺乏该领域专业知识导致标注数据受限的情况。因此，获取隐藏模式和相关见解是机器的任务。在某些实现中，一种被称为无监督学习的替代学习方法允许算法在数据集内学习有价值的函数特征。如今用于无监督学习最常见的方法之一是强化学习（`RL`），其初衷是为了解决电网中的随机最优控制问题 [55]。`RL` 方法广泛应用于各种领域，如系统控制 [56]和迁移学习 [57]。将强化学习与迁移学习方法相结合的优势显而易见。因此，研究人员倾向于从全局局部视角进行知识迁移，以应对能源需求的波动。聚类、特征提取和重构是无监督学习实现的三个关键目标。
+典型的预测分析或机器学习技术通过匹配（广义上）参数化或非参数模型来训练和预测数据。然而，并没有一种适用于所有数据和目标的范式。模型或方法的选择不当会导致错误的发现、假设或误导性的预测结果。
 
-#### 8.3.2.1 选择合适的模型
+因此，传统数据分析中的关键步骤是评估一组候选模型（模型类），然后选择最合适的一个。换句话说，模型选择包括从模型类中选择一个统计模型，并提供一组数据 [58]。
 
-典型的预测分析或机器学习技术通过匹配（广义上）参数化或非参数模型来训练和预测数据。然而，并没有一种适用于所有数据和目标的范式。模型或方法的选择不当会导致错误的发现、假设或误导性的预测结果。因此，传统数据分析中的关键步骤是评估一组候选模型（模型类），然后选择最合适的一个。换句话说，模型选择包括从模型类中选择一个统计模型，并提供一组数据 [58]。模型可以表示为 `M`[`m`] = `{p`[`θ`[`m`]] : `θ`[`m`] ∈ `H`[`m`]}`，这是一组概率密度函数，用于表示数据集 `z`[`1]`、`z`[`2]`、… `z`[`n`]`。`H`[`m]` 代表与 `M`[`m]` 关联的参数空间。模型类 `M`[`m`]` 中的 `m` 代表由 `m` ∈ `ℝ` 索引的模型集。`ℝ` 的基数根据样本量 `n` 选择。`d`[`m]` 代表模型中表示的参数维度。其最大对数似然值在 (8.3) 中表示为
+模型可以表示为 `M[m] = {p[θ[m]] : θ[m] ∈ H[m]}`，这是一组概率密度函数，用于表示数据集 `z[1]`、`z[2]`、…、`z[n]`。`H[m]` 代表与 `M[m]` 关联的参数空间。模型类 `M[m]` 中的 `m` 代表由 `m ∈ ℝ` 索引的模型集。`ℝ` 的基数根据样本量 `n` 选择。`d[m]` 代表模型中表示的参数维度。其最大对数似然值在（8.3）中表示为：
 
-(8.3) `l``n`, `m` 或 `lwidehat`[`n`, `m`], 其中 `θ̂`[`m`] = `argmax` x[`θ`[`m`] ∈ `H`[`m`]]`p``θ`[`m`
+```text
+(8.3) l[n, m] 或 l̂[n, m]，其中 θ̂[m] = argmax_{θ[m] ∈ H[m]} p_{θ[m]}
+```
 
-对于参数化框架，存在某些 `m` ∈ `M` 和某些 `θ`[`2]` ∈ `H`[`m]`，使得 `p****` = `p`[`θ**`]`，其中 `p****` 是相对于真实数据生成分布的分布。对于非参数化框架，模型类不考虑 `p****`。
+对于参数化框架，存在某些 `m ∈ M` 和某些 `θ[2] ∈ H[m]`，使得 `p* = p[θ*]`，其中 `p*` 是相对于真实数据生成分布的分布。对于非参数化框架，模型类不考虑 `p*`。
 
-#### 8.3.2.2 特征选择
+#### 8.3.2.2 特征选择
 
-任何数据分析系统效率的基础概念之一是识别出最具洞察力的数据趋势或函数——特征选择（`FS`）。随着当前技术的进步，电力系统研究目前可以实时传感器数据、需求和消费统计以及其他相关信息。在许多情况下，原始数据集格式极其多样，例如时间序列、独立数据库、调查等，必须对这些数据进行格式化，以推导出用于趋势识别或诊断应用的及时特征。这些特征与目标应用对齐，而其他由于相关性较小或过时会被忽略。如果机器学习方法使用无意义且重复的模式作为输入，其输出将无从中获益。因此，`FS` 的目的是从收集的数据中分类出最具洞察力的属性。在机器学习的数据挖掘术语中，最终的数据处理方法被称为特征工程。用于 `FS` 的技术主要分为过滤法、包装法和嵌入法 [59]。过滤法提取最显著的方面。表 8：各种特征选择技术。
+任何数据分析系统效率的基础概念之一是识别出最具洞察力的数据趋势或函数——特征选择（`FS`）。随着当前技术的进步，电力系统研究目前可以实时传感器数据、需求和消费统计以及其他相关信息。
+
+在许多情况下，原始数据集格式极其多样，例如时间序列、独立数据库、调查等，必须对这些数据进行格式化，以推导出用于趋势识别或诊断应用的及时特征。这些特征与目标应用对齐，而其他由于相关性较小或过时会被忽略。
+
+如果机器学习方法使用无意义且重复的模式作为输入，其输出将无从中获益。因此，`FS` 的目的是从收集的数据中分类出最具洞察力的属性。在机器学习的数据挖掘术语中，最终的数据处理方法被称为特征工程。
+
+用于 `FS` 的技术主要分为过滤法、包装法和嵌入法 [59]。过滤法提取最显著的方面。表 8：各种特征选择技术。
 
 | 参考文献 | 方法 | 目标 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | --- | Filter | 分类 |
 | --- | Wrapper | 回归 |
 | 60 | HSIC | ✓ |
@@ -2818,68 +2761,88 @@ ML 和 AI 可以在 SG 中做出及时且准确的决策，并对消费者需求
 | 67 | mRmR | ✓ |
 | 68 | QPFS | ✓ |
 
-### 8.3.3 分类问题
+### 8.3.3 分类问题
 
-最近，各种基于机器学习的技术被用于检测电力系统是否处于异常状态，并最终根据已知事件对相应状态进行分类。处理电力系统的一个复杂性方面是监控具有时间序列进展的数据源。这个问题通常通过在实际分类阶段之前提取特征来解决。特征提取涉及将涉及时间序列的数据洞察输出转换为标量。这种技术消耗更多时间，并且需要软件专家干预以防止过程中数据丢失。时间序列分类技术分为基于特征的方法和基于距离的方法。
+最近，各种基于机器学习的技术被用于检测电力系统是否处于异常状态，并最终根据已知事件对相应状态进行分类。处理电力系统的一个复杂性方面是监控具有时间序列进展的数据源。
 
-#### 8.3.3.1 基于特征的 (FB) 时间序列分类
+这个问题通常通过在实际分类阶段之前提取特征来解决。特征提取涉及将涉及时间序列的数据洞察输出转换为标量。这种技术消耗更多时间，并且需要软件专家干预以防止过程中数据丢失。时间序列分类技术分为基于特征的方法和基于距离的方法。
 
+#### 8.3.3.1 基于特征的（FB）时间序列分类
 
+在实际分类阶段之前，基于特征（`FB`）的方法会执行特征提取过程。通常考虑一个特定长度 `n` 的可移动窗口 `k`，以获得相对于原始信号 `v(t)` 的时间序列 `z[k]`，并在同一信号上计算出包含 `p` 个特征的范围 `x`。
 
+经常选择的参数包括方差、均值、最大值、最小值，这些都适用于时间序列。这些方法背后的概念是收集信号统计量并对特定类型的信号进行分类。原则上，对于弱平稳过程，使用二阶统计即可描述信号；然而，由于多种干扰因素，从实时情况下提取的信号并不是平性的，可能需要多种功能来总结深度内容 [69]。
 
+在考虑 `FB` 方法的学习过程中，通过定义一系列 `N` 观测以及设计矩阵 `D` 来构建学习律。
 
-在实际分类阶段之前，基于特征（FB）的方法会执行特征提取过程。通常考虑一个特定长度 `n` 的可移动窗口 `k` 以获得相对于原始信号 `v(t)` 的时间序列 `z[k]`，并在同一信号上计算出包含 `p` 个特征的范围 `x`。经常选择的参数包括方差、均值、最大值、最小值，这些都适用于时间序列。这些方法背后的概念是收集信号统计量并对特定类型的信号进行分类。原则上，对于弱平稳过程，使用二阶统计即可描述信号；然而，由于多种干扰因素，从实时情况下提取的信号并不是平性的，可能需要多种功能来总结深度内容[69]。在考虑 FB 方法的学习过程中，通过定义一系列 `N` 观测以及设计矩阵 `D` 来构建学习律。
-
+```text
+(8.4)
+D = [ x^(1)  y^(1)
+      x^(2)  y^(2)
+       .       .
+       .       .
+       .       .
+      x^(N)  y^(N) ] ∈ ℝ^(N×(p+1))
 ```
-(8.4)$D = \begin{bmatrix} \mathbf{x}^{(1)} & y^{(1)} \\ \mathbf{x}^{(2)} & y^{(2)} \\ . & . \\ . & . \\ . & . \\ x^{(N)} & y^{(N)} \end{bmatrix} \in \mathbb{R}^{N \times {({p + 1})}}\,$
-```
 
-随机森林（RF）和支持向量机（SVM）遵循 FB 方法的分类方法。表 8.6 列出了各种基于智能电网（SG）、使用 FB 时间序列计算的应用
+随机森林（`RF`）和支持向量机（`SVM`）遵循 `FB` 方法的分类方法。表 8.6 列出了各种基于智能电网（`SG`）、使用 `FB` 时间序列计算的应用。
 
-表 8.6：各种智能电网 FB 时间序列分类。
+表 8.6：各种智能电网 `FB` 时间序列分类。
 
 | 参考文献 | FB 方法 | 应用的数据源 | 应用 |
 | --- | --- | --- | --- |
-| [70] | 离散小波变换 (DWT)，神经网络 | PMU | 盗窃检测 |
-| [71] | 决策树，SVM | AMI | 事件与故障检测、隔离 |
-| [72] | 隐马尔可夫模型 (HMM) | PMU | 故障检测 |
-| [73] | 聚类、离群点检测、FB 气象、递归特征消除 | 气象 | 预测 |
-| [74] | 离散傅里叶变换 (DFT)，DWT，快速离散 s-变换 (FDST) | PMU | 故障检测与隔离 |
-| [75] | 半监督 SVM，多核学习 | PMU | 异常检测 |
+| [70] | 离散小波变换（`DWT`），神经网络 | `PMU` | 盗窃检测 |
+| [71] | 决策树，`SVM` | `AMI` | 事件与故障检测、隔离 |
+| [72] | 隐马尔可夫模型（`HMM`） | `PMU` | 故障检测 |
+| [73] | 聚类、离群点检测、`FB` 气象、递归特征消除 | 气象 | 预测 |
+| [74] | 离散傅里叶变换（`DFT`）、`DWT`、快速离散 `s`-变换（`FDST`） | `PMU` | 故障检测与隔离 |
+| [75] | 半监督 `SVM`，多核学习 | `PMU` | 异常检测 |
 
-### 8.3.3.2 基于距离的（DB）时间序列分类
+#### 8.3.3.2 基于距离的（DB）时间序列分类
 
-DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法的灵感源于一种可能性：提取特征可能非常耗时，且基于原始信号的信息被认为已经丢失了[76]。因此，由于干扰，直接的 DB 时间序列比较会导致不可理想的严重问题和性能下降。因此，有必要仔细选择距离参数，区分测量的复杂性与分类的精确性。使用 DB 分类的主要方法包括动态时间规整（DTW）技术。DB 分类技术进一步细分为参数化 DB、纯 DB 和基于还原的 DB。表 8.7 列出了各种基于智能电网、使用 FB 时间序列计算的应用
+`DB` 方法根据合适距离的原理跳过了特征提取阶段。这种方法的灵感源于一种可能性：提取特征可能非常耗时，且基于原始信号的信息被认为已经丢失了 [76]。
 
-表 8.7：各种智能电网 DB 时间序列分类。
+因此，由于干扰，直接的 `DB` 时间序列比较会导致不可理想的严重问题和性能下降。因此，有必要仔细选择距离参数，区分测量的复杂性与分类的精确性。
+
+使用 `DB` 分类的主要方法包括动态时间规整（`DTW`）技术。`DB` 分类技术进一步细分为参数化 `DB`、纯 `DB` 和基于还原的 `DB`。表 8.7 列出了各种基于智能电网、使用 `FB` 时间序列计算的应用。
+
+表 8.7：各种智能电网 `DB` 时间序列分类。
 
 | 参考文献 | DB 方法 | 应用的数据源 | 应用 |
 | --- | --- | --- | --- |
-| [70] | 动态时间规整 (DTW) | AMI | 盗窃检测 |
-| [77] | 小波 | PMU | 异常检测 |
+| [70] | 动态时间规整（`DTW`） | `AMI` | 盗窃检测 |
+| [77] | 小波 | `PMU` | 异常检测 |
 | [78] | 单类分类器 | 智能传感器 | 检测与隔离 |
-| [79] | 迭代希尔伯变换 | PMU | 监控 |
-| [80] | DWT | PMU | 故障检测 |
-| [81] | DWT | PMU | 检测与隔离 |
+| [79] | 迭代希尔伯变换 | `PMU` | 监控 |
+| [80] | `DWT` | `PMU` | 故障检测 |
+| [81] | `DWT` | `PMU` | 检测与隔离 |
 
 ## 8.4 云计算与物联网
 
-来自电网不同部分（即发电、输电和配电）的大数据必须安全、准确、经济地处理。云基础设施在处理和存储大数据方面起着重要作用[82]。为了理解云计算与大数据之间的关系，可以将云计算视作大数据活动的上层元素框架。云计算是一个转变信息基础设施并确保数据可用于决策的平台。云计算的实现主要是为了利用巨大的计算和存储资源[83]。同时，云系统的严格计算和存储技术支持大数据分析。云计算对大数据分析有益，因为它旨在解决访问和处理相关的问题，利用并行计算能力提高分析性能，并利用基于云的分布式存储技术增强大数据管理。
+来自电网不同部分（即发电、输电和配电）的大数据必须安全、准确、经济地处理。云基础设施在处理和存储大数据方面起着重要作用 [82]。
+
+为了理解云计算与大数据之间的关系，可以将云计算视作大数据活动的上层元素框架。云计算是一个转变信息基础设施并确保数据可用于决策的平台。云计算的实现主要是为了利用巨大的计算和存储资源 [83]。
+
+同时，云系统的严格计算和存储技术支持大数据分析。云计算对大数据分析有益，因为它旨在解决访问和处理相关的问题，利用并行计算能力提高分析性能，并利用基于云的分布式存储技术增强大数据管理。
 
 ### 8.4.1 相关的计算缺陷
 
-在智能电网系统中，海量数据的积累为各种监控算法带来了挑战和机遇。由于智能电网周围大量传感器和智能设备的完整数据集，框架可以更加清晰，获得更有意义且更精确的估计。然而，由于多个活动节点的加入，电力系统优化问题在计算上变得困难。本节将根据计算背景讨论挑战、需求和相关话题。
+在智能电网系统中，海量数据的积累为各种监控算法带来了挑战和机遇。由于智能电网周围大量传感器和智能设备的完整数据集，框架可以更加清晰，获得更有意义且更精确的估计。
+
+然而，由于多个活动节点的加入，电力系统优化问题在计算上变得困难。本节将根据计算背景讨论挑战、需求和相关话题。
 
 #### 8.4.1.1 智能电网挑战：安全
 
+与智能电网（`SG`）相关的大数据大部分通过云存储技术进行存储。然而，当需要传输的数据量不断扩大时，存储容量和网络带宽成为云系统的关键限制因素。
 
+智能传感器和电表的实施对数据传输的安全性提出了挑战，特别是在收集大量客户数据进行处理时。数据黑客攻击可以帮助入侵者了解某一区域的电力状况，并引发前所未有的电力系统事件。
 
-
-
-与智能电网（SG）相关的大数据大部分通过云存储技术进行存储。然而，当需要传输的数据量不断扩大时，存储容量和网络带宽成为云系统的关键限制因素。智能传感器和电表的实施对数据传输的安全性提出了挑战，特别是在收集大量客户数据进行处理时。数据黑客攻击可以帮助入侵者了解某一区域的电力状况，并引发前所未有的电力系统事件。此外，全球范围内已投入了巨额资金，因此必须满足适当的保护要求，以避免可能对电网或运行人员造成威胁的不可预损害。因此，识别智能电网中可能发生的威胁并采取相应的措施至关重要。
+此外，全球范围内已投入了巨额资金，因此必须满足适当的保护要求，以避免可能对电网或运行人员造成威胁的不可预损害。因此，识别智能电网中可能发生的威胁并采取相应的措施至关重要。
 
 ### 智能电网威胁分类
+
 因此，威胁被大致分为技术源和非技术源。技术源进一步分为基础设施、运营和数据管理方面的安全问题。
+
 - **基础设施安全**：这部分涉及与智能电网基础设施相关的安全方面，如发电机、变压器、计量设备等，并防范网络攻击和盗窃。
 - **运营安全**：确保系统数据安全、操作人员资质、基于系统状态的控制动作等。
 - **数据管理安全**：在确保操作人员和消费者隐私准则的同时，确保数据的实时监控和存储。
@@ -2891,77 +2854,110 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 图 8.7：智能电网威胁源分类。
 
 ### 著名的网络攻击案例
-震网病毒（Stuxnet）是为针对伊朗工业电力网络编写的，是记录在案的首次工业网络入侵。其可能的目标是纳坦兹（Natanz）的铀富集设施，该病毒通过修改可编程逻辑控制器导致离心机过热，随后导致迅速崩溃，使离心机完全失效[84]。
 
-夜龙行动（Operation Night Dragon）是 2006 年的一项跨国网络威胁命名，黑客使用了`SQL 注入`、`暴力破解`和`钓鱼攻击`等典型手段。在控制了这些计算机后，黑客上传了编程软件，以便网络管理员访问网络上的设备。这些技术随后协助目标公司网络访问机密数据[85]。
+震网病毒（Stuxnet）是为针对伊朗工业电力网络编写的，是记录在案的首次工业网络入侵。其可能的目标是纳坦兹（Natanz）的铀富集设施，该病毒通过修改可编程逻辑控制器导致离心机过热，随后导致迅速崩溃，使离心机完全失效 [84]。
 
-针对智能电网的其他常见攻击[86] 包括：
-- `沙毒病毒（Shamoon Virus）` [87)，目标是沙特阿美公司的`Microsoft Windows NT`用户。
-- `黑能量恶意软件（BlackEnergy malware）`，它导致了 2015 年 12 月乌克兰的网络攻击[88]。
+夜龙行动（Operation Night Dragon）是 2006 年的一项跨国网络威胁命名，黑客使用了 `SQL 注入`、`暴力破解` 和 `钓鱼攻击` 等典型手段。在控制了这些计算机后，黑客上传了编程软件，以便网络管理员访问网络上的设备。这些技术随后协助目标公司网络访问机密数据 [85]。
 
-系统意识不足被认为是北美大停电的根本原因[89]。网络攻击研究的重要性在于确保电力供应活动的安全有效。网络攻击可能导致损坏设施的平衡，或导致发电量不当的误导性需求[90]。此外，安全威胁可能会触发虚假报警，例如电力系统故障。其他智能电网扰动、电动汽车网络也可能发生。在[91]中，可以看到阻止与系统的接触恶意攻击将中断电站机器的运行。因此，实时网络攻击监控对于智能电网的稳定运行至关重要。因此，必要的在线和实时设备监控以检测并抵御计划的网络攻击[92]。
+针对智能电网的其他常见攻击 [86] 包括：
+
+- `沙毒病毒（Shamoon Virus）` [87]，目标是沙特阿美公司的 `Microsoft Windows NT` 用户。
+- `黑能量恶意软件（BlackEnergy malware）`，它导致了 2015 年 12 月乌克兰的网络攻击 [88]。
+
+系统意识不足被认为是北美大停电的根本原因 [89]。网络攻击研究的重要性在于确保电力供应活动的安全有效。网络攻击可能导致损坏设施的平衡，或导致发电量不当的误导性需求 [90]。
+
+此外，安全威胁可能会触发虚假报警，例如电力系统故障。其他智能电网扰动、电动汽车网络也可能发生。在 [91] 中，可以看到阻止与系统的接触恶意攻击将中断电站机器的运行。
+
+因此，实时网络攻击监控对于智能电网的稳定运行至关重要。因此，必要的在线和实时设备监控以检测并抵御计划的网络攻击 [92]。
 
 #### 8.4.1.2 智能电网攻击的检测
 
-网络攻击者的根本目的是破坏或欺骗智能电网的状态估计过程，从而引发大规模停电或利用能源市场价格[93]。美国网络应急响应小组（`US-CERT`）在 2012 年 10 月至 2013 年 5 月期间对整个基础设施部门响应了约 200 次网络相关事件[94]。从报告可以看出，约 53%的攻击针对能源部门，其次是关键制造业，其报告占比为 17%。图 8.8]中的图表展示了在上述期间发生的攻击分类。
+网络攻击者的根本目的是破坏或欺骗智能电网的状态估计过程，从而引发大规模停电或利用能源市场价格 [93]。美国网络应急响应小组（`US-CERT`）在 2012 年 10 月至 2013 年 5 月期间对整个基础设施部门响应了约 200 次网络相关事件 [94]。
+
+从报告可以看出，约 53% 的攻击针对能源部门，其次是关键制造业，其报告占比为 17%。图 8.8 中的图表展示了在上述期间发生的攻击分类。
 
 ![](img/b_9783110714043-008_fig_008.jpg)
 
-图 8.8：US-CERT 在 2012 年 10 月至 2013 年 5 月期间报告的攻击饼图。
+图 8.8：`US-CERT` 在 2012 年 10 月至 2013 年 5 月期间报告的攻击饼图。
 
+网络攻击的形式多样，包括虚假数据注入（`FDI`）、干扰和拒绝访问攻击。`FDI` 威胁向传感器测量值中引入欺骗性或虚假数据 [95]，干扰尝试通过添加噪声来破坏电表测量值，而拒绝访问威胁则阻碍设备对电表测量值的访问 [96]。
 
+电网（`SG`）是一个动态网络，系统任何部分的设备故障或入侵都可能在瞬间对整个电网造成重大灾难。为了确保适当且高效的响应，快速检测网络攻击至关重要。
 
+最快的变化检测框架非常有帮助，包括如欧几里得检测器 [97] 和基于余弦相似性指标的检测器 [98] 等识别策略。这些检测器是通用的，因为它们开发任何攻击原型。它们使用卡尔曼滤波等估计器测量真实电表读数与预测读数之间的变化，并识别超过定义阈值波动的异常。
 
+这些检测器不识别目标测量值或离群测量值之间的时间关系，并对每个样本做出判断。因此，它们无法区分由系统干扰等持续不规则因素产生的突发性和脉冲随机噪声。因此，需要更准确的通用攻击检测方案 [99]。
 
-网络攻击的形式多样，包括虚假数据注入（FDI）、干扰和拒绝访问攻击。FDI 威胁向传感器测量值中引入欺骗性或虚假数据 [95]，干扰尝试通过添加噪声来破坏电表测量值，而拒绝访问威胁则阻碍设备对电表测量值的访问 [96]。电网（SG）是一个动态网络，系统任何部分的设备故障或入侵都可能在瞬间对整个电网造成重大灾难。为了确保适当且高效的响应，快速检测网络攻击至关重要。最快的变化检测框架非常有帮助，包括如欧几里得检测器 [97] 和基于余弦相似性指标的检测器 [98] 等识别策略。这些检测器是通用的，因为它们开发任何攻击原型。它们使用卡尔曼滤波等估计器测量真实电表读数与预测读数之间的变化，并识别超过定义阈值波动的异常。这些检测器不识别目标测量值或离群测量值之间的时间关系，并对每个样本做出判断。因此，它们无法区分由系统干扰等持续不规则因素产生的突发性和脉冲随机噪声。因此，需要更准确的通用攻击检测方案 [99]。乌克兰电网在 2015 年 12 月 23 日遭受攻击，随后的停电影响了约 2 万公民并持续了数小时 [100]。传统检测器在样本达到特定阈值时将其识别为异常 [101]。更现代的方法通常被认为用于对离群测量值分类 [102]。此外，用于状态变量的马尔可夫图框架 [103] 首先在系统的正常工作条件下进行训练，然后通过比较新步骤与现有名义模型来识别异常行为。此外，[104] 中提供了一种步方法，侧重于最小二法（LS）状态估计器，用于检测针对传感器测量值、系统参数和网络拓扑的网络相关攻击，从而提高威胁防护。卡尔曼滤波 [105] 用于 FDI 攻击检测，而扩展卡尔曼滤波 [106] 用于在状态估计过程中约束离群值的影响。
+乌克兰电网在 2015 年 12 月 23 日遭受攻击，随后的停电影响了约 2 万公民并持续了数小时 [100]。传统检测器在样本达到特定阈值时将其识别为异常 [101]。更现代的方法通常被认为用于对离群测量值分类 [102]。
+
+此外，用于状态变量的马尔可夫图框架 [103] 首先在系统的正常工作条件下进行训练，然后通过比较新步骤与现有名义模型来识别异常行为。
+
+此外，[104] 中提供了一种步方法，侧重于最小二法（`LS`）状态估计器，用于检测针对传感器测量值、系统参数和网络拓扑的网络相关攻击，从而提高威胁防护。卡尔曼滤波 [105] 用于 `FDI` 攻击检测，而扩展卡尔曼滤波 [106] 用于在状态估计过程中约束离群值的影响。
 
 ### 8.4.2 网络安全：威胁的现状与范围
 
-当几年前引入 SCADA 系统时，主要挑战是公用事业基础设施的结构性破坏，因为它们使用了受传统物理隔离保护的独立且专用网络 [107]。在过去的几年里，SCADA 网络安装了 IoT 模块，这些模块通常通过局域网连接，暴露了多个漏洞和网络攻击 [108]。工业控制系统网络应急响应小组（ICS-CERT）在 2014 年传达，在检测到的 245 个事件中，有 79 个被识别为针对电力的关键基础设施事件 [109]。根据关注点，SCADA 目标可能分类为 [110]：
+当几年前引入 `SCADA` 系统时，主要挑战是公用事业基础设施的结构性破坏，因为它们使用了受传统物理隔离保护的独立且专用网络 [107]。
+
+在过去的几年里，`SCADA` 网络安装了 `IoT` 模块，这些模块通常通过局域网连接，暴露了多个漏洞和网络攻击 [108]。工业控制系统网络应急响应小组（`ICS-CERT`）在 2014 年传达，在检测到的 245 个事件中，有 79 个被识别为针对电力的关键基础设施事件 [109]。
+
+根据关注点，`SCADA` 目标可能分类为 [110]：
+
 1. 内部恶意——人员
 2. 内部非恶意——错误
 3. 外部机会主义——黑客
 
-通过安装设备良好的动态评估（DSA），在电力方面取得了实质性进展 [111]。考虑到频繁停电，能源供应商已经意识到双向通信的需求。网络相关攻击可以是拒绝服务（DoS）或欺骗。在过去的三十年里，机器学习算法已被证明非常有效。[112] 中提出的 SVM 方法用于处理 `Microsoft` 平台上的大数据。结果是有效的，但仍然缺乏足够的 IoT 应用来保护隐私和敏感数据。区块链技术 [113, 114] 为 IoT 应用提供了一个安全、集成且安全的框架。由于这种现代技术，消费者可能会面临挑战，因为他们的电力供应商可能会获取用户信息。同时，电力公用事业和电网运营商等能源供应商被迫通过高效整合分布式和绿色能源来升级发电并更有效地运行电厂。尽管许多用例实例很大程度上取决于消费者信息和隐私数据 [115]，但强有力的参与和高水平的支持至关重要。通过提供合理的匿名性（这实际上通过确保受保护的技术和标准，如身份验证和加密来实现），研究和评估对于实施隐私增强技术（PETs）、提高消费者意识以及应用潜在用例至关重要 [116]。除了电网传统的 CPS 外，新的创新（如电动汽车技术）通常形成了独立的网络物理网络。若干电动汽车连接到电网，以共享并优化从电网获取的电力与负载之间的平衡。车辆到网（V2G）方面将呈现出一种网络物理结构，其物理组件与通信和测量部分集成，这种结合形成了一个 CPS [29]。
-
-### 8.5 大数据分析：智能电网的应用
 
 
+通过安装设备良好的动态评估（DSA），在电力方面取得了实质性进展 [111]。考虑到频繁停电，能源供应商已经意识到双向通信的需求。网络相关攻击可以是拒绝服务（DoS）或欺骗。在过去的三十年里，机器学习算法已被证明非常有效。[112] 中提出的 SVM 方法用于处理 `Microsoft` 平台上的大数据。结果是有效的，但仍然缺乏足够的 IoT 应用来保护隐私和敏感数据。区块链技术 [113, 114] 为 IoT 应用提供了一个安全、集成且安全的框架。
 
+由于这种现代技术，消费者可能会面临挑战，因为他们的电力供应商可能会获取用户信息。同时，电力公用事业和电网运营商等能源供应商被迫通过高效整合分布式和绿色能源来升级发电并更有效地运行电厂。尽管许多用例实例很大程度上取决于消费者信息和隐私数据 [115]，但强有力的参与和高水平的支持至关重要。通过提供合理的匿名性（这实际上通过确保受保护的技术和标准，如身份验证和加密来实现），研究和评估对于实施隐私增强技术（PETs）、提高消费者意识以及应用潜在用例至关重要 [116]。
 
+除了电网传统的 CPS 外，新的创新（如电动汽车技术）通常形成了独立的网络物理网络。若干电动汽车连接到电网，以共享并优化从电网获取的电力与负载之间的平衡。车辆到网（V2G）方面将呈现出一种网络物理结构，其物理组件与通信和测量部分集成，这种结合形成了一个 CPS [29]。
 
-准确的电力系统故障和事件识别对于维持电网的高效运行至关重要。在传统电网中安装了多个传感器并分析跟踪设备。然而，由于报告数据具有复杂性，早期的缺陷或错误无法被直观可视化。人们已提出了许多指南以指导智能电网（SGs）中大数据的发展。遵循 2007 年《能源独立与安全法》（`EISA-2007`）对智能电网初始传统描述的监管框架[117]，智能电网通信和数据共享的标准化工作已经开始。包括 IEEE、国际标准化组织/国际电工委员会（`ISO/IEC`）、NIST、ITU-T 等在内的多个标准化组织一直在稳步演进并完成了标准化进程。`IEEE` 和 `NIST` 标准在本质上是通用的，而 `IEC` 和 `ITU-T` 的标准则是针对智能电网中特定的大数据挑战的。与大数据分析相关的标准列在表 8.8 中。
+### 8.5 大数据分析：智能电网的应用
+
+准确的电力系统故障和事件识别对于维持电网的高效运行至关重要。在传统电网中安装了多个传感器并分析跟踪设备。然而，由于报告数据具有复杂性，早期的缺陷或错误无法被直观可视化。
+
+人们已提出了许多指南以指导智能电网（SGs）中大数据的发展。遵循 2007 年《能源独立和安全法》（`EISA-2007`）对智能电网初始传统描述的监管框架 [117]，智能电网通信和数据共享的标准化工作已经开始。包括 IEEE、国际标准化组织/国际电工委员会（`ISO/IEC`）、NIST、ITU-T 等在内的多个标准化组织一直在稳步演进并完成了标准化进程。
+
+`IEEE` 和 `NIST` 标准在本质上是通用的，而 `IEC` 和 `ITU-T` 的标准则是针对智能电网中特定的大数据挑战的。与大数据分析相关的标准列在表 8.8 中。
 
 表 8.8：智能电网中与大数据分析相关的标准。
 
 | 参考文献 | 标准化组织 | 编号 | 标准内容 |
 | --- | --- | --- | --- |
 | [117] | IEEE | 1636–2009 | 存储和分析信息的应用接口 |
-| 1808–2011 | 输电线路采集和监控、检查和维护数据 | | |
-| 2200–2012 | 媒体客户端应用的流管理 | | |
-| P2302 | 云间互操作性与联邦 | | |
-| P2413 | IoT 架构框架标准 | | |
+|  |  | 1808–2011 | 输电线路采集和监控、检查和维护数据 |
+|  |  | 2200–2012 | 媒体客户端应用的流管理 |
+|  |  | P2302 | 云间互操作性与联邦 |
+|  |  | P2413 | IoT 架构框架标准 |
 | [118] | ISO/IEC | 42010–2011 | 设备和信息工程标准-描述 |
-| JTC 1/SC 6 | 通信和信息交换需求 | | |
-| JTC 1/SC 32 | 数据处理与交换标准 | | |
-| JTC 1/SC 38 | CC 和分布式平台 | | |
-| JTC 1/SC 39 | 可持续性、IT 和数据中心 | | |
-| JTC 1/SC 41 | IoT 及相关技术 | | |
-| JTC 1/WG 9 | 大数据 | | |
-| JTC 1/WG 10 | IoT | | |
-| JTC 1/WG 11 | 智慧城市 | | |
+|  |  | JTC 1/SC 6 | 通信和信息交换需求 |
+|  |  | JTC 1/SC 32 | 数据处理与交换标准 |
+|  |  | JTC 1/SC 38 | CC 和分布式平台 |
+|  |  | JTC 1/SC 39 | 可持续性、IT 和数据中心 |
+|  |  | JTC 1/SC 41 | IoT 及相关技术 |
+|  |  | JTC 1/WG 9 | 大数据 |
+|  |  | JTC 1/WG 10 | IoT |
+|  |  | JTC 1/WG 11 | 智慧城市 |
 | [119] | ITU-T | SG13 | 云计算、移动及未来代网络 |
-| SG20 | IoT、智慧城市及相关应用 | | |
-| Y.3600 | 大数据 – CC-相关需求 | | |
-| Y.3650 | 大数据网络框架 | | |
+|  |  | SG20 | IoT、智慧城市及相关应用 |
+|  |  | Y.3600 | 大数据 – CC-相关需求 |
+|  |  | Y.3650 | 大数据网络框架 |
 
 ### 8.5.1 故障检测
 
-通常，当电力系统故障发生在一个或多个参数不稳定，或者由于绝缘系统故障、操作员错误或结构损坏导致浪涌或故障时[120)。维持电力系统的稳定性是最重要之一，因为电力系统的故障会导致停电，影响整个社会的运行并导致巨大的收入损失。因此，防止此类灾难性事件至关重要，这需要智能电网具备高效的故障检测和识别系统。基于系统线路跟踪技术的故障检测是基于相量角和系统拓扑细节的[121]，该技术也已用于双线停电检测[122]。一种模型基于线性规划算法设计，通过模拟最坏情况的电网配置来预测电网的脆弱性[123]。在[124]中，推荐基于 `Petri` 网络的故障检测和识别方法来捕获配电网的安全。如果智能电网故障被定位并识别，后续阶段是确定其受影响的区域。基于 `Gaussian random field` 的故障定位建议在智能电网中使用相量测量[125]。一种基于 `wavelet` 方法被用于识别和定位故障[126]。在电力系统中，故障预测、诊断和定位通常被视为单一问题。多功能方法在智能电网中具有广泛的解决方案，包括检测和定位故障。近期，基于智能电网的 `ML` 技术[127]采用了数据驱动的方法来预测和检测电力系统故障。
+通常，当电力系统故障发生在一个或多个参数不稳定，或者由于绝缘系统故障、操作员错误或结构损坏导致浪涌或故障时 [120)。维持电力系统的稳定性是最重要之一，因为电力系统的故障会导致停电，影响整个社会的运行并导致巨大的收入损失。因此，防止此类灾难性事件至关重要，这需要智能电网具备高效的故障检测和识别系统。
+
+基于系统线路跟踪技术的故障检测是基于相量角和系统拓扑细节的 [121]，该技术也已用于双线停电检测 [122]。一种模型基于线性规划算法设计，通过模拟最坏情况的电网配置来预测电网的脆弱性 [123]。在 [124] 中，推荐基于 `Petri` 网络的故障检测和识别方法来捕获配电网的安全。
+
+如果智能电网故障被定位并识别，后续阶段是确定其受影响的区域。基于 `Gaussian random field` 的故障定位建议在智能电网中使用相量测量 [125]。一种基于 `wavelet` 方法被用于识别和定位故障 [126]。在电力系统中，故障预测、诊断和定位通常被视为单一问题。多功能方法在智能电网中具有广泛的解决方案，包括检测和定位故障。近期，基于智能电网的 `ML` 技术 [127] 采用了数据驱动的方法来预测和检测电力系统故障。
 
 ### 8.5.2 需求侧与发电
 
-智能电网运营商高度依赖发电与需求的平衡，以防止电网过载。引入 `RES` 和分布式能源使得平衡电力需求和发电更具挑战性。目前，估计能量需求和分布式发电对于识别需要多少发电机来满足当前需求至关重要。负荷建模和预测是大数据的特殊用途，根据周期分为长期、中期和短期[128]。长期和中期预测用于电力系统规划，而短期技术用于配电、定价和需求响应。基于大数据分析进行了大量的负荷预测。需求侧管理中的 `CC` 应用和智能电网中的 `DR` 已在分析[129]。一种针对大数据分析的智能电网预测综合方法已提供[130]。一些用于需求和发电预测管理的近期技术列在表 8.9 中。
+智能电网运营商高度依赖发电与需求的平衡，以防止电网过载。引入 `RES` 和分布式能源使得平衡电力需求和发电更具挑战性。目前，估计能量需求和分布式发电对于识别需要多少发电机来满足当前需求至关重要。
+
+负荷建模和预测是大数据的特殊用途，根据周期分为长期、中期和短期 [128]。长期和中期预测用于电力系统规划，而短期技术用于配电、定价和需求响应。基于大数据分析进行了大量的负荷预测。需求侧管理中的 `CC` 应用和智能电网中的 `DR` 已在分析 [129]。一种针对大数据分析的智能电网预测综合方法已提供 [130]。一些用于需求和发电预测管理的近期技术列在表 8.9 中。
 
 表 8.9：智能电网中的需求侧与发电管理。
 
@@ -2976,13 +2972,9 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 ### 8.5.3 需求响应与动态定价
 
-
-
-
-
 为了整合需求响应，必须考虑并估计需求端的能量灵活性。同时，由于非侵入式负荷监控（`NILM`）的帮助，新的智能电表应用程序有助于实时跟踪客户的用电水平并评估其消费行为。通过利用 `NILM`，可以计算所使用的仪器及其特定利用率。表 8.10 总结了智能电网（SG）中用于整合需求响应的各种技术。
 
- 表 8.10：智能电网中用于整合需求响应的不同技术。
+表 8.10：智能电网中用于整合需求响应的不同技术。
 
 | 参考文献 | 使用的原理 | 目的 |
 | --- | --- | --- |
@@ -2993,81 +2985,90 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 动态定价是让参与需求响应和电力交换的关键方法。在现实中，由于缺乏对消费者随时间变化的需求和能源习惯的了解，以及供应侧成本的不稳定性，动态定价极具困难。表 8.11 总结了智能电网中实施动态定价的各种技术。
 
- 表 8.11：智能电网中实施动态定价的不同技术。
+表 8.11：智能电网中实施动态定价的不同技术。
 
 | 参考文献 | 使用的原理 | 目的 |
 | --- | --- | --- |
 | [143] | 强化学习 | 在未知系统动力学的情况下进行动态定价 |
-| [144] | 强化学习 | 带有自动发电控制的需求响应 (DR) |
+| [144] | 强化学习 | 带有自动发电控制的需求响应（DR） |
 | [145] | 强化学习 | 供应商之间的受限能量交易 |
 | [146] | `Q-Learning` | 为智能电网市场中的代理开发电价策略 |
 
 ## 8.6 电动汽车
 
-大数据（BDA）有望应对由于电动汽车（EV）采用率增加而日益出的挑战，这反映了现代交通服务 [147]。电动汽车接受度的提高也被认为是减少 `CO2`[2] 污染的一种机制。通常，电动汽车的设计是通过存储并将电力传输到其他网络来增强电网，从而优化来自波动可再生能源（RES）的能量使用，并使用户能够在各种地点为其充电。根据所开展的研究，可靠性评估和电动汽车状态问题 [147]、驾驶行为 [148]、能源消耗与管理 [149] 以及电池功率是背景下的重点。管理电动汽车活动需要能够解决影响各种异质群体和个人的问题的方法，例如车主、充电桩所有者和供应商，他们具有不同的优先级和利益 [150]。一些 AI 方法涉及电动汽车的能量高效路线规划、旅行期间能量收集的最大化 [151]、拥堵管理 [152] 以及将电动汽车整合到智能电网 [153]。
+大数据（BDA）有望应对由于电动汽车（EV）采用率增加而日益出现的挑战，这反映了现代交通服务 [147]。电动汽车接受度的提高也被认为是减少 `CO2` [2] 污染的一种机制。
+
+通常，电动汽车的设计是通过存储并将电力传输到其他网络来增强电网，从而优化来自波动可再生能源（RES）的能量使用，并使用户能够在各种地点为其充电。根据所开展的研究，可靠性评估和电动汽车状态问题 [147]、驾驶行为 [148]、能源消耗与管理 [149] 以及电池功率是背景下的重点。
+
+管理电动汽车活动需要能够解决影响各种异质群体和个人的问题的方法，例如车主、充电桩所有者和供应商，他们具有不同的优先级和利益 [150]。一些 AI 方法涉及电动汽车的能量高效路线规划、旅行期间能量收集的最大化 [151]、拥堵管理 [152] 以及将电动汽车整合到智能电网 [153]。
 
 ### 8.6.1 电力系统监控与控制
 
-近期，关于如何将清洁能源整合到智能电网出现了一个新问题 [159] 140] 161] 162]。为了确保服务的稳定性，可以利用可再生能源来实现智能电网的多功能活动 [163] 164]。为了给不同的运行提供保护，输电系统（TSOs）必须能够收集电网状况数据，智能电网的主要数据源是 `AMI` [154]。来自 `PMUs`、传感器单元、智能电表和其他 `IEDs` 等各种设备的数据被视为输入信号，用于改进客户支持、预测建模、故障检测与诊断、停电、欺诈以及增强网络安全 [155]。智能电网监控包括基于 `AMI`、`PMU` 和智能设备的事件检测以及动态状态估计 [156]、广域态感知 [155]、孤岛检测 [157]、振荡监控 [40]、动态转角分析 [158] 以及资产管理 [156] 也通过大数据得到了增强。
+近期，关于如何将清洁能源整合到智能电网出现了一个新问题 [159] 140] 161] 162]。为了确保服务的稳定性，可以利用可再生能源来实现智能电网的多功能活动 [163] 164]。为了给不同的运行提供保护，输电系统（TSOs）必须能够收集电网状况数据，智能电网的主要数据源是 `AMI`。
 
+来自 `PMUs`、传感器单元、智能电表和其他 `IEDs` 等各种设备的数据被视为输入信号，用于改进客户支持、预测建模、故障检测与诊断、停电、欺诈以及增强网络安全 [155]。智能电网监控包括基于 `AMI`、`PMU` 和智能设备的事件检测以及动态状态估计 [156]、广域态感知 [155]、孤岛检测 [157]、振荡监控 [40]、动态转角分析 [158] 以及资产管理 [156]，也通过大数据得到了增强。
 
+随着电力系统中现代测量设备的使用，监控侧已经获取了海量数据。然而，大部分数据尚未被充分利用。许多用于测量和决策的工具仍在使用数据仓库等传统算法。然而，随着新颖的 `BDA` 的出现，一些核心概念（如清洗、降维等）得到了重新审视。
 
+最终，我们认识到了为了让电网运行者能够充分依赖 `BDA` 所需要采取的许多障碍和措施。本章介绍了先进的人工智能策略，这些策略旨在帮助许多智能电网（SG）应用，包括可再生能源（RES）接入、储能系统集成、需求响应（DR）管理、网络安全等。这些方法预计将进一步提高效率并简化智能电网运行。
 
-随着电力系统中现代测量设备的使用，监控侧已经获取了海量数据。然而，大部分数据尚未被充分利用。许多用于测量和决策的工具仍在使用数据仓库等传统算法。然而，随着新颖的 `BDA` 的出现，一些核心概念（如清洗、降维等）得到了重新审视。最终，我们认识到了为了让电网运行者能够充分依赖 `BDA` 所需要采取的许多障碍和措施。本章介绍了先进的人工智能策略，这些策略旨在帮助许多智能电网（SG）应用，包括可再生能源（RES）接入、储能系统集成、需求响应（DR）管理、网络安全等。这些方法预计将进一步提高效率并简化智能电网运行。通过实施整个电力系统（从发电侧到配电侧，包括维护活动）的自动化技术，智能电网将进一步发展。直到最近，大多数活动仍通过人工或基础程度的自动化完成。分布式自动化系统的引入有助于故障检测与恢复、经济优化、停电管理、电压调节、保护设备激活以及分布式能源资源（DER）集成。网络安全指南将为 `ML`、信息理论和基于知识的检测应用引入潜力。总之，实施 AI 策略可用于降低配电网能量损耗以提高能源效率。AI 技术还将实现对分布式能源的增强和集中控制，改进智能电网技术以进一步提升电网。智能电网是否通过创新和升级技术获益，具体取决于数据采集、存储和分析阶段。本章讨论了 `BDA`，探讨了其与智能电网的相关性，重点关注与机器学习和人工智能相关的挑战，以及信息物理安全性的相关性。
+通过实施整个电力系统（从发电侧到配电侧，包括维护活动）的自动化技术，智能电网将进一步发展。直到最近，大多数活动仍通过人工或基础程度的自动化完成。分布式自动化系统的引入有助于故障检测与恢复、经济优化、停电管理、电压调节、保护设备激活以及分布式能源资源（DER）集成。
+
+网络安全指南将为 `ML`、信息理论和基于知识的检测应用引入潜力。总之，实施 AI 策略可用于降低配电网能量损耗以提高能源效率。AI 技术还将实现对分布式能源的增强和集中控制，改进智能电网技术以进一步提升电网。
+
+智能电网是否通过创新和升级技术获益，具体取决于数据采集、存储和分析阶段。本章讨论了 `BDA`，探讨了其与智能电网的相关性，重点关注与机器学习和人工智能相关的挑战，以及信息物理安全性的相关性。
 
 ## 参考文献
 
-[1]Liu Q., Li P., Zhao W., Cai W., Yu S., Leung V. C. M. A survey on security threats and defensive techniques of machine learning: A data driven view. IEEE Access, 6, 2018, 12103–12117. →
+[1] Liu Q., Li P., Zhao W., Cai W., Yu S., Leung V. C. M. A survey on security threats and defensive techniques of machine learning: A data driven view. IEEE Access, 6, 2018, 12103–12117. →
 
-[2]Masera M., Bompard E. F., Profumo F., Hadjsaid N. Smart (Electricity) grids for smart cities: assessing roles and societal impacts. Proceedings of the IEEE, 106(4), April 2018, 613–625. →
+[2] Masera M., Bompard E. F., Profumo F., Hadjsaid N. Smart (Electricity) grids for smart cities: assessing roles and societal impacts. Proceedings of the IEEE, 106(4), April 2018, 613–625. →
 
-[3]Yu S., Liu M., Dou W., Liu X., Zhou S. Networking for big data: a survey. IEEE Communications Surveys & Tutorials, 19(1), 2017, 531–549. →
+[3] Yu S., Liu M., Dou W., Liu X., Zhou S. Networking for big data: a survey. IEEE Communications Surveys & Tutorials, 19(1), 2017, 531–549. →
 
-[4]Zikopoulos P., Eaton C. Understanding Big Data: Analytics for Enterprise Class Hadoop and Streaming Data, McGraw-hill Education, 2011. →
+[4] Zikopoulos P., Eaton C. Understanding Big Data: Analytics for Enterprise Class Hadoop and Streaming Data, McGraw-hill Education, 2011. →
 
-[5]Buczak A. L., Guven E. A survey of data mining and machine learning methods for cyber security intrusion detection. IEEE Communications Surveys & Tutorials, 18(2), 2016, 1153–1176. →
+[5] Buczak A. L., Guven E. A survey of data mining and machine learning methods for cyber security intrusion detection. IEEE Communications Surveys & Tutorials, 18(2), 2016, 1153–1176. →
 
-[6]Shrestha A., Mahmood A. Review of deep learning algorithms and architectures. IEEE Access, 7, 2019, 53040–53065. →
+[6] Shrestha A., Mahmood A. Review of deep learning algorithms and architectures. IEEE Access, 7, 2019, 53040–53065. →
 
-[7]IEEE Power & Energy Societ General Meeting 2014, [`www.pes-gm.org/2014/`](http://www.pes-gm.org/2014/), Accessed Oct 31, 2020 →
+[7] IEEE Power & Energy Societ General Meeting 2014, [`www.pes-gm.org/2014/`](http://www.pes-gm.org/2014/), Accessed Oct 31, 2020 →
 
-[8]IEEE PES Working Group on High Performance Computing for Grid Analysis and Operation, [`site.ieee.org/pes-hpcgrid/`](https://site.ieee.org/pes-hpcgrid/), Accessed Oct 31, 2020 →
+[8] IEEE PES Working Group on High Performance Computing for Grid Analysis and Operation, [`site.ieee.org/pes-hpcgrid/`](https://site.ieee.org/pes-hpcgrid/), Accessed Oct 31, 2020 →
 
-[9]Hilbert M., López P. The World’s Technological Capacity to Store, Communicate, and Compute Information, Science, New York, N.Y., 2011. a, b
+[9] Hilbert M., López P. The World’s Technological Capacity to Store, Communicate, and Compute Information, Science, New York, N.Y., 2011. a, b
 
-[10]Wang C., Li X., Liu Y., Wang H. The research on development and points in IoT in China power grid, Proceedings of International Conference on Inf. Sci., Electr. Eng. (ISEEE), vol. 1, Apr. 2014, pp. 245–248. →
+[10] Wang C., Li X., Liu Y., Wang H. The research on development and points in IoT in China power grid, Proceedings of International Conference on Inf. Sci., Electr. Eng. (ISEEE), vol. 1, Apr. 2014, pp. 245–248. →
 
-[11]Chen X., Sun L., Zhu Y., Chen H. Application of internet of things in power-line monitoring, proceedings of international conference on cyber-enabled distrib. Comput.Knowl. Discovery (Cyber), Oct. 2012, pp. 423–426. →
+[11] Chen X., Sun L., Zhu Y., Chen H. Application of internet of things in power-line monitoring, proceedings of international conference on cyber-enabled distrib. Comput. Knowl. Discovery (Cyber), Oct. 2012, pp. 423–426. →
 
-[12]Basit A., Sidhu G. S., Mahmood A. Efficient and autonomous energy management for the future smart homes. IEEE Transactions on Smart Grid, 8(2), Mar 2017, 917–926. →
+[12] Basit A., Sidhu G. S., Mahmood A. Efficient and autonomous energy management for the future smart homes. IEEE Transactions on Smart Grid, 8(2), Mar 2017, 917–926. →
 
-[13]Ashourpouri A., Ghosh A., Rajakaruna S. Droop based dispatch for residential loads in smart grid. International Journal of Emerging Power Systems, 19(3), 2018. →
+[13] Ashourpouri A., Ghosh A., Rajakaruna S. Droop based dispatch for residential loads in smart grid. International Journal of Emerging Power Systems, 19(3), 2018. →
 
-[14]Zeng J., Qiao W. Short-term power prediction using a support vector machine. Renewable energy, 52, Apr 2013, 118–127. →
+[14] Zeng J., Qiao W. Short-term power prediction using a support vector machine. Renewable energy, 52, Apr 2013, 118–127. →
 
-[15]Kazem H., Yousif J. H., Chaichan M. Modeling of daily solar system prediction using support vector machine for Oman. International Journal of Applied Engineering Research, 11(20), 2016, 10166–10172. →
+[15] Kazem H., Yousif J. H., Chaichan M. Modeling of daily solar system prediction using support vector machine for Oman. International Journal of Applied Engineering Research, 11(20), 2016, 10166–10172. →
 
-[16]Ucar F., Alcin O. F., Dandil B., Ata F. Power quality event detection using a fast extreme learning machine. Energies, 11(1), 2018, 145. →
+[16] Ucar F., Alcin O. F., Dandil B., Ata F. Power quality event detection using a fast extreme learning machine. Energies, 11(1), 2018, 145. →
 
-[17]Remani T., Jasmin E. A., Ahamed T. P. I. Residential load scheduling with renewable generation in the smart grid: a reinforcement learning approach. IEEE Systems Journal, 13(3), Sept 2019, 3283–3294. →
+[17] Remani T., Jasmin E. A., Ahamed T. P. I. Residential load scheduling with renewable generation in the smart grid: a reinforcement learning approach. IEEE Systems Journal, 13(3), Sept 2019, 3283–3294. →
 
-[18]Li B., Gangadhar S., Cheng S., Verma P. K. Predicting user comfort level using machine learning for smart grid environments, Proceedings of IEEE PES Innov. Smart Grid Technol. (ISGT), Jan. 2011, pp. 1–6 →
-
-[19]Alshareef S., Talwar S., Morsi W. G. A new approach based on wavelet design and machine learning for islanding detection of distributed generation. IEEE Transactions on Smart Grid, 5(4), Jul 2014, 1575–1583. →
-
-[20]Jiang H., et al. Big data-based approach to detect, locate, and enhance the stability of an unplanned microgrid islanding. Journal of Energy Engineering, 143(5), 2017, 04017045. →
-
-[21]Tan S., De D., Song W.-Z., Yang J., Das S. K. Survey of security advances in smart grid: A data driven approach. IEEE Communications Surveys & Tutorials, 19(1), 1st Quart. 2017, 397–422. →
-
-[22]Fan Z., et al. Smart grid communications: Overview of research challenges, solutions, and standardization activities. IEEE Communications Surveys & Tutorials, 15(1), 1st Quart., 2013, 21–38. →
-
-[23]Navigant Research, Smart electric meters, Advanced Metering Infrastructure, and Meter Communications: Global Market Analysis and Forecasts, Available from: [www.navigantresearch.com/research/smart-meters](http://www.navigantresearch.com/research/smart-meters), 2013. →
-
-[24]Xie L., Chen Y., Kumar P. R. Dimensionality reduction of synchrophasor data for early anomaly detection: linearized analysis. IEEE Transactions on Power Systems, 29(6), 2014, 2784–2794. →
+[18] Li B., Gangadhar S., Cheng S., Verma P. K. Predicting user comfort level using machine learning for smart grid environments, Proceedings of IEEE PES Innov. Smart Grid Technol. (ISGT), Jan. 2011, pp. 1–6 →
 
 
 
+[19] Alshareef S., Talwar S., Morsi W. G. A new approach based on wavelet design and machine learning for islanding detection of distributed generation. IEEE Transactions on Smart Grid, 5(4), Jul 2014, 1575–1583. →
 
+[20] Jiang H., et al. Big data-based approach to detect, locate, and enhance the stability of an unplanned microgrid islanding. Journal of Energy Engineering, 143(5), 2017, 04017045. →
+
+[21] Tan S., De D., Song W.-Z., Yang J., Das S. K. Survey of security advances in smart grid: A data driven approach. IEEE Communications Surveys & Tutorials, 19(1), 1st Quart. 2017, 397–422. →
+
+[22] Fan Z., et al. Smart grid communications: Overview of research challenges, solutions, and standardization activities. IEEE Communications Surveys & Tutorials, 15(1), 1st Quart., 2013, 21–38. →
+
+[23] Navigant Research, Smart electric meters, Advanced Metering Infrastructure, and Meter Communications: Global Market Analysis and Forecasts, Available from: [www.navigantresearch.com/research/smart-meters](http://www.navigantresearch.com/research/smart-meters), 2013. →
+
+[24] Xie L., Chen Y., Kumar P. R. Dimensionality reduction of synchrophasor data for early anomaly detection: linearized analysis. IEEE Transactions on Power Systems, 29(6), 2014, 2784–2794. →
 
 [25] Yu N., Shah S., Johnson R., Sherick R., Hong M., Loparo K., 配电网系统中的大数据分析, IEEE Innovative Smart Grid Technologies Conference, Washington, DC, 2015. →
 
@@ -3077,7 +3078,7 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 [28] Munshi A. A., Mohamed Y. A.-R. I. 智能电网分析的大数据框架. Electric Power Systems Research, 151, 2017, 369–380. →
 
-[29] Hampannavar S., Chavhan S., Mansani S., Yaragatti U. R. 支持智能电网 v2g 运行的聚合区域/停车场区域电动汽车交通模式分析与预测：一种信息物理系统实体. International Journal of Emerging Electric Power Systems, 21(1), 2020. a, b
+[29] Hampannavar S., Chavhan S., Mansani S., Yaragatti U. R. 支持智能电网 `v2g` 运行的聚合区域/停车场区域电动汽车交通模式分析与预测：一种信息物理系统实体. International Journal of Emerging Electric Power Systems, 21(1), 2020. a, b
 
 [30] Hu H., Wen Y., Chua T.-S., Li X. 面向可扩展的大数据分析系统：技术教程. IEEE Access, 2, May 2014, 652–687. →
 
@@ -3097,7 +3098,7 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 [38] Von Meier A., Culler D., Eachern A., Arghandeh R. 配电系统的同步相量测量, 创新电网会议 (ISGT), 2014, pp. 1–5. →
 
-[39] Liu S., 等. 数据驱动的电力系统不等间隔 PMU 数据和局部异常因子检测. IEEE Transactions on Smart Grid, 11(2), March 2020, 1630–1643. →
+[39] Liu S., 等. 数据驱动的电力系统不等间隔 `PMU` 数据和局部异常因子检测. IEEE Transactions on Smart Grid, 11(2), March 2020, 1630–1643. →
 
 [40] Kamwa I., Pradhan A. K., Joós G. 使用 teager-kaiser 算子的电力系统振动稳健检测与分析. IEEE Transactions on Power Systems, 26(1), Feb 2011, 323–333 a, b
 
@@ -3109,7 +3110,7 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 [44] Vapnik V. N., Vapnik V. 统计学习理论, 第 1 卷, Wiley, New York, 1998. →
 
-[45] Nguyen D., Barella R., Wallace S. A., Zhao X., Liang X. 基于 PMU 数据流监督学习的智能电网线路分类, 2015 第 6 届国际绿色与可持续计算会议 (IGSC), Las Vegas, NV, 2015, pp. 1–8 →
+[45] Nguyen D., Barella R., Wallace S. A., Zhao X., Liang X. 基于 `PMU` 数据流监督学习的智能电网线路分类, 2015 第 6 届国际绿色与可持续计算会议 (IGSC), Las Vegas, NV, 2015, pp. 1–8 →
 
 [46] Chang G., Chao J.-P., Huang H.-M., Chen C.-I., Chu S.-Y. 电压跌落和公用侧电容器开关瞬态的源位置追踪. IEEE Transactions on Power Delivery, 23(4), Oct 2008, 2124–2131. →
 
@@ -3125,141 +3126,135 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 [52] Zheng C., Malbasa Y., Kezunovic M. 用于同步相量的预测裕度回归树. IEEE Transactions on Power Systems, 28(2), 2013, 1978–1987. →
 
-[53] He M., Vittal Y., Zhang J. 缺失 PMU 数据的在线动态安全评估：数据挖掘方法. IEEE Transactions on Power Systems, 28(2), 2013, 1969–1977. →
+[53] He M., Vittal Y., Zhang J. 缺失 `PMU` 数据的在线动态安全评估：数据挖掘方法. IEEE Transactions on Power Systems, 28(2), 2013, 1969–1977. →
 
 [54] Karim M. A. I., Chenine M., Zhu K., Nordstrom L. 基于同步相量的电力系统故障数据挖掘, 第 3 届 IEEE PES 国际创新电网会议 (ISGT Europe 2012). IEEE, 2012, pp. 1–8. →
 
 [55] Ernst D., Glavic M., Capitanescu F., Wehenkel L. 强化学习与模型预测控制：电力系统问题中的对比. Transactions on Systems, Man, and Cybernetics, Part B: Cybernetics, 39(2), 2009, 517–529. →
 
+[56] Crites R., Barto A. 使用强化学习提升电梯性能，Advances Neural Information Processing Systems, Vol. 8, MIT Press, 1996, 1017–1023. →
+
+[57] Ammar H., Mocanu D., Taylor M., Driessens K., Tuyls K., Weiss G. 通过三路受限玻尔兹曼机实现强化学习任务之间的自动映射，Machine Learning and Knowledge Discovery in Databases, Vol. 8189 of Lecture Notes in Computer Science, 2013, pp. 449–464. →
+
+[58] Ding J., Tarokh V., Yang Y. 模型选择技术：概述。IEEE Signal Processing Magazine, 35(6), Nov 2018, 16–34. →
+
+[59] Chandrashekar G., Sahin F. 特征选择方法综。Computers & Electrical Engineering, 40(1), 2014, 16–28. →
+
+[60] Song L., Smola A., Gretton A., Bedo J., Borgwardt K. 通过依赖性最大化进行特征选择。Journal of Machine Learning Research, 13, 2012, 1393–1434. →
+
+[61] Li D., Zhou Y., Hu G., Spanos C. J. `AHU` 故障检测与诊断的优传感器配置与特征选择：IEEE Transactions on Industrial Informatics, 2016. →
+
+[62] Ravikumar P., Liu H., Lafferty J., Wasserman L. Spam：稀疏加性模型：第 20 届国际神经信息处理系统会议论文，Curran Associates Inc., 2007, pp. 1201–1208. →
+
+[63] Masaeli M., Dy J. G., Fung G. M. 从基于转换的降维到特征选择：第 27 届国际机器学习会议 (ICML-10) 论文，2010, pp. 751–758 →
+
+[64] Smyth G. K., et al. 用于评估微阵实验中差异表达的线性模型和经验贝叶斯方法。Statistical Applications in Genetics and Molecular Biology, 3(1), 2004, 3. →
+
+[65] Li F., Yang Y., Xing E. 从 Lasso 回归到特征向量机，NIPS, 2005, 779–786. →
+
+[66] Bedo J., Sanderson C., Kowalczyk A. 一种基于 `SVM` 递归特征消除的高效替代方案，在自然语言处理和生物信息学中的应用：澳澳洲联合人工智能会议，Springer, 2006, pp. 170–180 →
+
+[67] Peng H., Long F., Ding C. 基于最大依赖性、最大相关性和最小冗余互信息准则的特征选择。IEEE Transactions on Pattern Analysis and Machine Intelligence, 27(8), 2005, 1226–1238. →
+
+[68] Rodriguez-Lujan I., Huerta R., Elkan C., Cruz C. S. 二次规划特征选择。Journal of Machine Learning Research, 11, 2010, 1491–1516. →
+
+[69] Friedman J., Hastie T., Tibshirani R. 统计学习要素，Springer, Vol. 1, Berlin, 2009. →
+
+[70] Alshahrani S., Abbod M., Alamri B. 基于小波变换和神经网络的电网电质事件检测与分类 (SASG)，IEEE, 沙特阿拉伯，2015, 1–6. a, b
+
+[71] Jindal A., Dua A., Kaur K., Singh N. 用于电网窃电检测的决策树和 `SVM` 数据分析。IEEE Transactions on Industrial Informatics, 12(3), 2016, 1005–1016. →
+
+[72] Jiang H., Zhang J., Gao W., Wu Z. 基于数据驱动电网故障检测、识别与定位。IEEE Transactions on Smart Grid, 5(6), 2014, 2947–2956. →
+
+[73] Fan C., Xiao F., Wang S. 利用数据挖掘开发的次日建筑能耗和峰值需求预测模型。Applied Energy, 127, 2014, 1–10. →
+
+[74] Brahma S., Kavasseri R., Cao H., Chaudhuri N. R., Alexopoulos T., Cui Y. 使用 `PMU` 数据对电力系统动态事件进行实时识别及其应用与挑战。IEEE Transactions on Power Delivery, 32, 2017, 294–301. →
+
+[75] Ozay M., Esnaola I., Vural F. T., Kulkarni S. R., Poor H. V. 电网攻击检测的机器学习方法。IEEE Transactions on Neural Networks and Learning Systems, 27(8), 2016, 1773–1786. →
+
+[76] Schirru A., Susto G. A., Pampuri S., McLoone S. 从时间序列学习：监督聚合特征提取，2012 IEEE 第 51 届年度决策与控制会议 (CDC), IEEE, 2012, pp. 5254–5259. →
+
+[77] Kim D.-I., Chun T. Y., Yoon S.-H., Lee G., Shin Y.-J. 基于 `PMU` 数据的小波事件检测方法。IEEE Transactions on Smart Grid, 8, 2017, 1154–1162. →
 
 
 
+- [78] De Santis E., Livi L., Sadeghian A., Rizzi A. 通过差异学习与单类分类相结合方法对电网故障进行建模与识别。`Neurocomputing`, 170, 2015, 368–383. →
 
-- [56] Crites R., Barto A. 使用强化学习提升电梯性能，Advances Neural Information Processing Systems, Vol. 8, MIT Press, 1996, 1017–1023. →
+- [79] Afroni M. J., Sutanto D., Stirling D. 使用迭代 Hilbert-Huang 变换和 SAX 算法分析非稳态电质波形。`IEEE Transactions on Power Delivery`, 28(4), 2013, 2134–2144. →
 
-- [57] Ammar H., Mocanu D., Taylor M., Driessens K., Tuyls K., Weiss G. 通过三路受限玻尔兹曼机实现强化学习任务之间的自动映射，Machine Learning and Knowledge Discovery in Databases, Vol. 8189 of Lecture Notes in Computer Science, 2013, pp. 449–464. →
-
-- [58] Ding J., Tarokh V., Yang Y. 模型选择技术：概述。IEEE Signal Processing Magazine, 35(6), Nov 2018, 16–34. →
-
-- [59] Chandrashekar G., Sahin F. 特征选择方法综。Computers & Electrical Engineering, 40(1), 2014, 16–28. →
-
-- [60] Song L., Smola A., Gretton A., Bedo J., Borgwardt K. 通过依赖性最大化进行特征选择。Journal of Machine Learning Research, 13, 2012, 1393–1434. →
-
-- [61] Li D., Zhou Y., Hu G., Spanos C. J. AHU 故障检测与诊断的优传感器配置与特征选择：IEEE Transactions on Industrial Informatics, 2016. →
-
-- [62] Ravikumar P., Liu H., Lafferty J., Wasserman L. Spam：稀疏加性模型：第 20 届国际神经信息处理系统会议论文，Curran Associates Inc., 2007, pp. 1201–1208. →
-
-- [63] Masaeli M., Dy J. G., Fung G. M. 从基于转换的降维到特征选择：第 27 届国际机器学习会议 (ICML-10) 论文，2010, pp. 751–758 →
-
-- [64] Smyth G. K., et al. 用于评估微阵实验中差异表达的线性模型和经验贝叶斯方法。Statistical Applications in Genetics and Molecular Biology, 3(1), 2004, 3. →
-
-- [65] Li F., Yang Y., Xing E. 从 Lasso 回归到特征向量机，NIPS, 2005, 779–786. →
-
-- [66] Bedo J., Sanderson C., Kowalczyk A. 一种基于 SVM 递归特征消除的高效替代方案，在自然语言处理和生物信息学中的应用：澳澳洲联合人工智能会议，Springer, 2006, pp. 170–180 →
-
-- [67] Peng H., Long F., Ding C. 基于最大依赖性、最大相关性和最小冗余互信息准则的特征选择。IEEE Transactions on Pattern Analysis and Machine Intelligence, 27(8), 2005, 1226–1238. →
-
-- [68] Rodriguez-Lujan I., Huerta R., Elkan C., Cruz C. S. 二次规划特征选择。Journal of Machine Learning Research, 11, 2010, 1491–1516. →
-
-- [69] Friedman J., Hastie T., Tibshirani R. 统计学习要素，Springer, Vol. 1, Berlin, 2009. →
-
-- [70] Alshahrani S., Abbod M., Alamri B. 基于小波变换和神经网络的电网电质事件检测与分类 (SASG)，IEEE, 沙特阿拉伯，2015, 1–6. a, b
-
-- [71] Jindal A., Dua A., Kaur K., Singh N. 用于电网窃电检测的决策树和 SVM 数据分析。IEEE Transactions on Industrial Informatics, 12(3), 2016, 1005–1016. →
-
-- [72] Jiang H., Zhang J., Gao W., Wu Z. 基于数据驱动电网故障检测、识别与定位。IEEE Transactions on Smart Grid, 5(6), 2014, 2947–2956. →
-
-- [73] Fan C., Xiao F., Wang S. 利用数据挖掘开发的次日建筑能耗和峰值需求预测模型。Applied Energy, 127, 2014, 1–10. →
-
-- [74] Brahma S., Kavasseri R., Cao H., Chaudhuri N. R., Alexopoulos T., Cui Y. 使用 PMU 数据对电力系统动态事件进行实时识别及其应用与挑战。IEEE Transactions on Power Delivery, 32, 2017, 294–301. →
-
-- [75] Ozay M., Esnaola I., Vural F. T., Kulkarni S. R., Poor H. V. 电网攻击检测的机器学习方法。IEEE Transactions on Neural Networks and Learning Systems, 27(8), 2016, 1773–1786. →
-
-- [76] Schirru A., Susto G. A., Pampuri S., McLoone S. 从时间序列学习：监督聚合特征提取，2012 IEEE 第 51 届年度决策与控制会议 (CDC),IEEE, 2012, pp. 5254–5259. →
-
-- [77] Kim D.-I., Chun T. Y., Yoon S.-H., Lee G., Shin Y.-J. 基于 PMU 数据的小波事件检测方法。IEEE Transactions on Smart Grid, 8, 2017, 1154–1162. →
-
-- [78] De Santis E., Livi L., Sadeghian A., Rizzi A. 通过差异学习与单类分类相结合方法对电网故障进行建模与识别。Neurocomputing, 170, 2015, 368–383. →
-
-- [79] Afroni M. J., Sutanto D., Stirling D. 使用迭代 Hilbert-Huang 变换和 SAX 算法分析非稳态电质波形。IEEE Transactions on Power Delivery, 28(4), 2013, 2134–2144. →
-
-- [80] Elkalashy N., Lehtonen M., Darwish H. 基于 DWT 的中压网络中树木倾斜导致的高阻故障检测与分类。IEEE Transactions on Power Delivery, 23(1), 2008, 94–101.
+- [80] Elkalashy N., Lehtonen M., Darwish H. 基于 DWT 的中压网络中树木倾斜导致的高阻故障检测与分类。`IEEE Transactions on Power Delivery`, 23(1), 2008, 94–101.
 
 - [81] Youssef O. 基于波变换的分类，2001 IEEE/PES 输电与分配会议，vol. 1, 531–536.
 
-- [82] He X., Ai Q., Qiu R., Huang W., Piao L., Liu H. 基于随机矩阵理论的电网大数据架构。IEEE, 8(2), 2017, 674–686.
+- [82] He X., Ai Q., Qiu R., Huang W., Piao L., Liu H. 基于随机矩阵理论的电网大数据架构。`IEEE`, 8(2), 2017, 674–686.
 
-- [83] Chen M., Mao S., Liu Y. 大数据：综。Mobile Networks and Applications, 19(2), 2014, 171–209.
+- [83] Chen M., Mao S., Liu Y. 大数据：综。`Mobile Networks and Applications`, 19(2), 2014, 171–209.
 
-- [84] Langner R. Stuxnet：解析网络战武器。IEEE Security & Privacy, 9(3), 2011, 49–51.
+- [84] Langner R. Stuxnet：解析网络战武器。`IEEE Security & Privacy`, 9(3), 2011, 49–51.
 
-- [85] Miller B., Rowe D. C. SCADA 及关键基础设施事件调查。RIIT, 12, 2012, 51–56.
+- [85] Miller B., Rowe D. C. SCADA 及关键基础设施事件调查。`RIIT`, 12, 2012, 51–56.
 
 - [86] Lieskovan T., Hajny J., Cika P. 智能电网安全：综述与挑战，2019 第 11 届国际超现代电信与控制系统及研讨会 (ICUMT)，爱尔兰 Dublin，pp. 1–5.
 
-- [87] Bronk C., Tikk-Ringas E. 对沙特石油公司的的网络攻击。Survival, 55(2), 2013, 81–96.
+- [87] Bronk C., Tikk-Ringas E. 对沙特石油公司的的网络攻击。`Survival`, 55(2), 2013, 81–96.
 
-- [88] Nazario J. Blackenergyddos 机器人分析，Arbor Networks, 2007.
+- [88] Nazario J. Blackenergyddos 机器人分析，`Arbor Networks`, 2007.
 
+- [89] Dagle J. E. 电网停电的事后分析——测量系统的作用。`IEEE Power and Energy Magazine`, 4(5), 2006 年 9 月/10 月, 30–35. →
 
+- [90] Cai Y., Li Y., Cao Y., Li W., Zeng X. 智能电网中相互依赖特性对级联故障的建模与影响分析。`International Journal of Electrical Power & Energy Systems`, 89, 2017 年 7 月, 106–114. →
 
+- [91] Dondossola G., Szanto J., Masera M., Fovino I. N. 蓄意威胁对电变站控制系统的影响。`International Journal of Critical Infrastructures`, 4(nos. 1–2), 2008, 129–143. →
 
-
-- [89] Dagle J. E. 电网停电的事后分析——测量系统的作用。IEEE Power and Energy Magazine, 4(5), 2006 年 9 月/10 月, 30–35. →
-
-- [90] Cai Y., Li Y., Cao Y., Li W., Zeng X. 智能电网中相互依赖特性对级联故障的建模与影响分析。International Journal of Electrical Power & Energy Systems, 89, 2017 年 7 月, 106–114. →
-
-- [91] Dondossola G., Szanto J., Masera M., Fovino I. N. 蓄意威胁对电变站控制系统的影响。International Journal of Critical Infrastructures, 4(nos. 1–2), 2008, 129–143. →
-
-- [92] Ameli A., Hooshyar A., El-Saadany E., Youssef A. M. 自动发电控制系统的攻击检测与识别。IEEE Transactions on Power Systems, 33(5), 2018 年 9 月, 4760–4774. →
+- [92] Ameli A., Hooshyar A., El-Saadany E., Youssef A. M. 自动发电控制系统的攻击检测与识别。`IEEE Transactions on Power Systems`, 33(5), 2018 年 9 月, 4760–4774. →
 
 - [93] Xie L., Mo Y., Sinopoli B. 电力市场中的虚数据注入攻击，第一届 IEEE 智能电网通信国际会议论文，2010 年 10 月, pp. 226–231. →
 
 - [94] ICS-CERT 监测 [在线]. 可用：`https://us-cert.cisa.gov/sites/default/files/Monitors/ICS-CERT_Monitor_Apr-Jun2013.pdf`, 访问日期：2021 年 2 月 3 日. →
 
-- [95] Li S., Yilmaz Y., Wang X. 广域智能电网虚数据注入攻击的快速检测。IEEE Transactions on Smart Grid, 6(6), 2015 年 11 月, 2725–2735. →
+- [95] Li S., Yilmaz Y., Wang X. 广域智能电网虚数据注入攻击的快速检测。`IEEE Transactions on Smart Grid`, 6(6), 2015 年 11 月, 2725–2735. →
 
-- [96] Zhang Y., Wang L., Sun W., Green R. C., Alam M. 智能电网多层架构中的分布式入侵检测系统。IEEE Transactions on Smart Grid, 2(4), 2011 年 12 月, 796–808. →
+- [96] Zhang Y., Wang L., Sun W., Green R. C., Alam M. 智能电网多层架构中的分布式入侵检测系统。`IEEE Transactions on Smart Grid`, 2(4), 2011 年 12 月, 796–808. →
 
-- [97] Manandhar K., Cao X., Hu F., Liu Y. 使用卡尔曼滤波检测智能电网中包括虚数据注入攻击的故障和攻击。IEEE Transactions on Control of Network Systems, 1(4), 2014 年 12 月, 370–379. →
+- [97] Manandhar K., Cao X., Hu F., Liu Y. 使用卡尔曼滤波检测智能电网中包括虚数据注入攻击的故障和攻击。`IEEE Transactions on Control of Network Systems`, 1(4), 2014 年 12 月, 370–379. →
 
-- [98] Rawat D. B., Bajracharya C. 智能电网通信系统中虚数据注入攻击的检测。IEEE signal processing letters, 22(10), 2015 年 10 月, 1652–1656. →
+- [98] Rawat D. B., Bajracharya C. 智能电网通信系统中虚数据注入攻击的检测。`IEEE signal processing letters`, 22(10), 2015 年 10 月, 1652–1656. →
 
 - [99] Zhou Y., Miao Z. 智能电网状态估计中的网络攻击、检测与防护，2016 年北美电力研讨会 (NAPS), 科罗拉多州丹佛, 2016, pp. 1–6 →
 
-- [100] Liang G., Weller S. R., Zhao J., Luo F., Dong Z. Y. 2015 年乌克兰大停电：对虚数据注入攻击的影响。IEEE Transactions on Power Systems, 32(4), 2017 年 7 月, 3317–3318. →
+- [100] Liang G., Weller S. R., Zhao J., Luo F., Dong Z. Y. 2015 年乌克兰大停电：对虚数据注入攻击的影响。`IEEE Transactions on Power Systems`, 32(4), 2017 年 7 月, 3317–3318. →
 
 - [101] Liu Y., Ning P., Reiter M. 电网状态估计的虚数据注入攻击，第 16 次 ACM 安全会议论文，纽约, 2009, pp. 21–32. →
 
-- [102] Smalalak M., Liu L., Nguyen N., Zheng R. 使用机器学习检测智能电网中的隐蔽虚数据注入。IEEE Systems, 11(3), 2017 年 9 月, 1644–1652. →
+- [102] Smalalak M., Liu L., Nguyen N., Zheng R. 使用机器学习检测智能电网中的隐蔽虚数据注入。`IEEE Systems`, 11(3), 2017 年 9 月, 1644–1652. →
 
-- [103] Moslemi R., Mesbahi A., Velni J. 基于去中心协方差选择的智能电网攻击检测方法。IEEE Transactions on Smart Grid, 9(5), 2018 年 9 月, 4930–4941. →
+- [103] Moslemi R., Mesbahi A., Velni J. 基于去中心协方差选择的智能电网攻击检测方法。`IEEE Transactions on Smart Grid`, 9(5), 2018 年 9 月, 4930–4941. →
 
-- [104] Bretas A., Bretas N. G., Carvalho B., Baeyens E. 智能电网信息物理安全：一种创新。Electric Power Research, 149, 2017 年 8 月, 210–219. →
+- [104] Bretas A., Bretas N. G., Carvalho B., Baeyens E. 智能电网信息物理安全：一种创新。`Electric Power Research`, 149, 2017 年 8 月, 210–219. →
 
-- [105] Manandhar K., Cao X., Hu F., Liu Y. 使用卡尔曼滤波检测智能电网中包括虚数据注入攻击的故障和攻击。IEEE Transactions on Control of Network Systems, 1(4), 2014 年 12 月, 370–379. →
+- [105] Manandhar K., Cao X., Hu F., Liu Y. 使用卡尔曼滤波检测智能电网中包括虚数据注入攻击的故障和攻击。`IEEE Transactions on Control of Network Systems`, 1(4), 2014 年 12 月, 370–379. →
 
-- [106] Zhao J., Mili L., Abdelhadi A. 针对异常值和网络攻击的鲁棒动态状态估计器。IEEE Power Soc. Gen., 2017 年 7 月, pp. 1–5. →
+- [106] Zhao J., Mili L., Abdelhadi A. 针对异常值和网络攻击的鲁棒动态状态估计器。`IEEE Power Soc. Gen.`, 2017 年 7 月, pp. 1–5. →
 
 - [107] Feng C., Li T., Chan D. 通过包签名和 LSTM 网络进行工业系统的多级异常检测。第 47 次 IEEE/IFIP 可靠系统国际会议 (DSN), pp. 261–272, 2017 年 6 月. →
 
 - [108] Lopez Perez R., Adamsky F., Soua R., Engel T. 用于 SCADA 系统可靠攻击检测的机器学习。第 12 次 IEEE 大数据科学与工程国际会议 (TrustCom/BigDataSE), 纽约, 2018, pp. 633–638. →
 
-- [109] Alimi O. A., Ouahada K., Abu-Mahfouz A. M. 使用混合支持机和多层感知器神经网络算法对电力系统进行实时安全评估。Sustainability, 11(13), 2019 年 6 月, 3586. →
+- [109] Alimi O. A., Ouahada K., Abu-Mahfouz A. M. 使用混合支持机和多层感知器神经网络算法对电力系统进行实时安全评估。`Sustainability`, 11(13), 2019 年 6 月, 3586. →
 
 - [110] Jiang J., Yasakethu L. 通过单类 SVM 进行 SCADA 系统的异常检测。网络赋能计算知识发现国际会议，2013 年 10 月, 82–88. →
 
-- [111] Alimi O. A., Ouahada K., Abu-Mahfouz A. M. 电力系统安全与稳定性机器学习方法综述。IEEE Access, 8, 2020, 113512–113531. →
+- [111] Alimi O. A., Ouahada K., Abu-Mahfouz A. M. 电力系统安全与稳定性机器学习方法综述。`IEEE Access`, 8, 2020, 113512–113531. →
 
-- [112] Sabar N., Yi X., Song A. 用于大数据安全的多目标超启发式支持机。IEEE Access, 6, 2018, 421. →
+- [112] Sabar N., Yi X., Song A. 用于大数据安全的多目标超启发式支持机。`IEEE Access`, 6, 2018, 421. →
 
-- [113] Ali M., Vecchio M., Pincheira F., Rehmani M. 物联网中区块链的应用：综述。Communications Surveys & Tutorials, 21(2), 2019, 1676–1717. →
+- [113] Ali M., Vecchio M., Pincheira F., Rehmani M. 物联网中区块链的应用：综述。`Communications Surveys & Tutorials`, 21(2), 2019, 1676–1717. →
 
 - [114] Xu C., Wang K., Guo S. 基于区块链框架的开放大数据。2018 年 IEEE 会议 (ICC), 密苏里州堪萨斯, 1–6. →
 
-- [115] Lisovich M., Mulligan D., Wicker S. 从需求系统中推断个人信息。IEEE Security & Privacy, 8(1), 2010, 11–20. →
+- [115] Lisovich M., Mulligan D., Wicker S. 从需求系统中推断个人信息。`IEEE Security & Privacy`, 8(1), 2010, 11–20. →
 
-- [116] Knirsch F. 智能电网领域的隐私增强技术。Information Technology, 59(1), 2017, 13–22. →
+- [116] Knirsch F. 智能电网领域的隐私增强技术。`Information Technology`, 59(1), 2017, 13–22. →
 
 - [117] IEEE 标准 [在线]. 可用：`http://standards.ieee.org/`, 访问日期：2020 年 10 月 31 日. a, b
 
@@ -3267,233 +3262,63 @@ DB 方法根据合适距离的原理跳过了特征提取阶段。这种方法�
 
 - [119] ITU-T 标准 [在线]. 可用：`https://www.itu.int/`, 访问日期：2020 年 10 月 31 日. →
 
-- [120] Volk M., Junges S., Katoen J. P. 通过模型检查技术进行快速动态故障树分析。IEEE Transactions on Industrial Informatics, 14(1), 2018 年 1 月, 370–379. →
+- [120] Volk M., Junges S., Katoen J. P. 通过模型检查技术进行快速动态故障树分析。`IEEE Transactions on Industrial Informatics`, 14(1), 2018 年 1 月, 370–379. →
 
+- [121] Tate J. E., Overbye T. J. 使用相角量的线路故障检测。`IEEE Transactions on Power Systems`, 23(3), 2008 年 11 月, 1644–1652. →
 
+- [122] Tate J., Overbye T. 使用相角测量的双线路故障检测，`Proceedings of IEEE Power Energy Soc. Gen. Meet.`, Calgary, AB, Canada, 2009, pp. 1–5 →
 
+- [123] Chertkov M., Pan F., Stepanov M. G. 预测电网故障：静态过载的案例。`IEEE Transactions on Smart Grid`, 2(1), 2011 年 3 月, 162–172. →
 
+- [124] Calderaro V., Hadjicostis C. N., Piccolo A., Siano P. 基于 Petri 网建模的智能电网故障识别。`IEEE Transactions on Industrial Electronics`, 58(10), 2011 年 10 月, 4613–4623. →
 
-[121] Tate J. E., Overbye T. J. 使用相角量的线路故障检测。IEEE Transactions on Power Systems, 23(3), 2008 年 11 月, 1644–1652. →
+- [125] He M., Zhang J. 面向安全电电网故障检测与定位的依赖图方法。`IEEE Transactions on Smart Grid`, 2(2), 2011 年 6 月, 342–351. →
 
-[122] Tate J., Overbye T., 使用相角测量的双线路故障检测，Proceedings of IEEE Power Energy Soc. Gen. Meet., Calgary, AB, Canada, 2009, pp. 1–5 →
+- [126] Ning J., Wang J., Gao W., Liu C. 一种用于智能电网的小波数据压缩技术。`IEEE Transactions on Smart Grid`, 2(1), 2011 年 3 月, 212–218. →
 
-[123] Chertkov M., Pan F., Stepanov M. G. 预测电网故障：静态过载的案例。IEEE Transactions on Smart Grid, 2(1), 2011 年 3 月, 162–172. →
+- [127] Axelberg P. G. V., Gu I. Y.-H., Bollen M. H. J. 用于电压扰动分类的支持向量机。`IEEE Transactions on Power Delivery`, 22(3), 2007 年 7 月, 1297–1303. →
 
-[124] Calderaro V., Hadjicostis C. N., Piccolo A., Siano P. 基于 Petri 网建模的智能电网故障识别。IEEE Transactions on Industrial Electronics, 58(10), 2011 年 10 月, 4613–4623. →
+- [128] Ghorbanian M., Dolatabadi S. H., Siano P. 智能电网中的大数据问题：综述。`IEEE Systems Journal`, 13(4), 2019 年 12 月, 4158–4168. →
 
-[125] He M., Zhang J. 面向安全电电网故障检测与定位的依赖图方法。IEEE Transactions on Smart Grid, 2(2), 2011 年 6 月, 342–351. →
+- [129] Bera S., Misra S., Rodrigues J. J. P. C. 智能电网的云计算应用：综述。`IEEE Transactions on Parallel and Distributed Systems`, 26(5), 2015 年 5 月, 1477–1494. →
 
-[126] Ning J., Wang J., Gao W., Liu C. 一种用于智能电网的小波数据压缩技术。IEEE Transactions on Smart Grid, 2(1), 2011 年 3 月, 212–218. →
+- [130] Aman S., Simmhan Y., Prasanna V. K. 智能电网预测模型评估的整体性指标。`IEEE Transactions on Knowledge and Data Engineering`, 27(2), 2015 年 2 月, 475–488. →
 
-[127] Axelberg P. G. V., Gu I. Y.-H., Bollen M. H. J. 用于电压扰动分类的支持向量机。IEEE Transactions on Power Delivery, 22(3), 2007 年 7 月, 1297–1303. →
+- [131] Nose-Filho K., Lotufo A. D. P., Minussi C. R. 使用改进的通用回归神经网络进行短期多模态负载预测。`IEEE Transactions on Power Delivery`, 26(4), 2011 年 10 月, 2862–2869. →
 
-[128] Ghorbanian M., Dolatabadi S. H., Siano P. 智能电网中的大数据问题：综述。IEEE Systems Journal, 13(4), 2019 年 12 月, 4158–4168. →
+- [132] Ghelardoni L., Ghio A., Anguita D. 使用经验模态分解和支持向量回归的能量负载预测。`IEEE Transactions on Smart Grid`, 4(1), 2013 年 3 月, 549–556. →
 
-[129] Bera S., Misra S., Rodrigues J. J. P. C. 智能电网的云计算应用：综述。IEEE Transactions on Parallel and Distributed Systems, 26(5), 2015 年 5 月, 1477–1494. →
+- [133] Chen Y., et al. 短期负载预测：基于相似日的小波神经网络。`IEEE Transactions on Power Systems`, 25(1), 2010 年 2 月, 322–330. →
 
-[130] Aman S., Simmhan Y., Prasanna V. K. 智能电网预测模型评估的整体性指标。IEEE Transactions on Knowledge and Data Engineering, 27(2), 2015 年 2 月, 475–488. →
+- [134] Zhou K., Yang S., Shen C. 智能电网环境下电力负载分类综述。`Renewable and Sustainable Energy Reviews`, 24(Suppl. C), 2013, 103–110. →
 
-[131] Nose-Filho K., Lotufo A. D. P., Minussi C. R. 使用改进的通用回归神经网络进行短期多模态负载预测。IEEE Transactions on Power Delivery, 26(4), 2011 年 10 月, 2862–2869. →
+- [135] Chicco G. 电力分组的聚类方法概述与性能评估。`Energy`, 42(1), 2012, 68–80. →
 
-[132] Ghelardoni L., Ghio A., Anguita D. 使用经验模态分解和支持向量回归的能量负载预测。IEEE Transactions on Smart Grid, 4(1), 2013 年 3 月, 549–556. →
+- [136] Guan C., Luh P. B., Michel L. D., Wang Y., Friedland P. 极短期负载预测：带数据滤波的小波神经网络。`IEEE Transactions on Power Systems`, 28(1), 2013 年 2 月, 30–41. →
 
-[133] Chen Y., et al. 短期负载预测：基于相似日的小波神经网络。IEEE Transactions on Power Systems, 25(1), 2010 年 2 月, 322–330. →
+- [137] Hong W.-C. 混沌蚁优化在电力负载预测中的应用。`Energy Policy`, 38(10), 2010, 5830–5839. →
 
-[134] Zhou K., Yang S., Shen C. 智能电网环境下电力负载分类综述。Renewable and Sustainable Energy Reviews, 24(Suppl. C), 2013, 103–110. →
+- [138] Rasanen T., Voukantsis D., Niska H., Karatzas K., Kolehmainen M. 基于特定客户用电数据创建用电画像的方法。`Applied Energy`, 87(11), 2010, 3538–3545. →
 
-[135] Chicco G. 电力分组的聚类方法概述与性能评估。Energy, 42(1), 2012, 68–80. →
+- [139] Do Nascimento P. P. M. 深度学习技术的应用。`COPPE/UFRJ`, Brazil, 2016. →
 
-[136] Guan C., Luh P. B., Michel L. D., Wang Y., Friedland P. 极短期负载预测：带数据滤波的小波神经网络。IEEE Transactions on Power Systems, 28(1), 2013 年 2 月, 30–41. →
+- [140] Tornai K., Oláh A., Drenyovszki R., Kovács L., Levendszky J. 基于循环网络的智能电网分类。`IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT)`, Arlington, VA, Washington D.C., 2017. →
 
-[137] Hong W.-C. 混沌蚁优化在电力负载预测中的应用。Energy Policy, 38(10), 2010, 5830–5839. →
+- [141] Mocanu D. C., Mocanu E., Nguyen P. H., Gibescu M., Liotta A. 用于建筑实时能量分解的大数据挖掘。`IEEE International Conference on Systems, Man, and Cybernetics, SMC 2016`, Budapest, Hungary, Oct 9–12, 2016. →
 
-[138] Rasanen T., Voukantsis D., Niska H., Karatzas K., Kolehmainen M. 基于特定客户用电数据创建用电画像的方法。Applied Energy, 87(11), 2010, 3538–3545. →
+- [142] Ahmed S., Bouffard F. 使用强化学习的建筑负载管理。`8th IEEE Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)`, Vancouver, BC, Canada, Oct 3–5, 2017. →
 
-[139] Do Nascimento P. P. M. 深度学习技术的应用。COPPE/ UFRJ, Brazil, 2016. →
+- [143] Kim B. G., Zhang Y., Schaar M. V., Lee J. 基于强化学习的智能电网动态定价。`2014 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)`, Toronto, Ontario, Canada, Apr. 27–May 2, 2014. →
 
-[140] Tornai K., Oláh A., Drenyovszki R., Kovács L., Levendszky J. 基于循环网络的智能电网分类。IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT), Arlington, VA, Washington D.C., 2017. →
 
-[141] Mocanu D. C., Mocanu E., Nguyen P. H., Gibescu M., Liotta A. 用于建筑实时能量分解的大数据挖掘。IEEE International Conference on Systems, Man, and Cybernetics, SMC 2016, Budapest, Hungary, Oct 9–12, 2016. →
+\n[144] Jay D., Swarup K. 智能电网去监管市场中基于需求响应的自动发电。IEEE 6th International Conference on Power Systems (ICPS), New Delhi, India, Mar 4–6, 2016. →\n\n[145] Wang H., Huang T., Liao X. 不完整信息约束能量的强化学习。IEEE Transactions on Cybernetics, 47(10), 2017, 3404–3416.\n\n[146] Reddy P. P., Veloso M. 智能电网自治智能体的策略学习。Twenty-Second international conference on Artificial Intelligence, vol. 2, 2011, pp. 1446–1451.\n\n[147] Soares J., Borges N., Canizes B., Vale Z. 大数据背景下用于智能电网电动汽车的状态概率估计。Proceedings of IEEE Power Soc. Gen., Jul. 2015, pp. 1–5. →, [#9783110713794_020436.xhtml_xref_d106706e37211)\n\n[148] Lee C. H., Wu C. 提高电动汽车续航估计的新型大数据建模方法。IEEE Access, 3, 2015, 1980–1993.\n\n[149] Su W., Chow M.-Y. 基于 EDA 的大规模混合动力车辆充电性能评估。IEEE Transactions on Smart Grid, 3(1), 2012 年 3 月, 308–315.\n\n[150] Rigas E. S., Ramchurn S. D., Bassiliades N. 智能电网中的电动汽车管理：综述。IEEE Transactions on Intelligent Transportation Systems, 16(4), 2015 年 8 月, 1619–1635.\n\n[151] Ermon S., Xue Y., Gomes C., Selman B. 电动汽车电池使用优化的学习策略，机器学习与数据库知识发现。In: Flach P., Bie T., Cristianini N. (Eds), Vol.7524, Springer-Verlag, Berlin, Germany, 2012, ser. Lecture Notes in Computer Science, 195–210.\n\n[152] Storandt S., Funke S. 赋能电动出行：电池充电站的选址。Proceedings of 27th Conf. AAAI, 2013, pp. 1341–1347.\n\n## 参考文献\n\n[153] Gonzalez Vaya M., Andersson G., 日前电电力市场中插电式电动汽车聚集器的最优竞价策略, 第 10 届 EEM 国际会议论文集, 2013, 第 1–6 页 →\n\n[154] Karnouskos S., Terzidis O., Karnouskos P. 面向未来网络的高级电表基础设施, 德德勒特, Springer-Verlag, 荷兰, 2007, 597–606 页。→\n\n[155] Tu C., He X., Shuai Z., Jiang F. 智能电网中的大数据问题综述. 可再生与可持续能源综述, 79, (附录 C), 2017, 1099–1107 页。a, b\n\n[156] Chin W. L., Li W., Chen H. H. 基于物联网的智能电网通信中的能源大数据安全威胁. IEEE 通信杂志, 55(10), 2017 年 10 月, 70–75 页。a, b\n\n[157] Bayrak G., Kabalci E. 风光互补电站新型远距离孤孤网检测方法的实现, 可再生可持续能源革命, 58(附录 C), 2016, 1–15 页。→\n\n[158] Dasgupta S., Paramasivam M., Vaidya U., Ajjarapu V. 基于 PMU 的实时转子角监测无模型方法. IEEE 电力系统事务, 30(5), 2015 年 9 月, 2818–2819 页。→\n\n[159] Priyadarshi. N. ;., Padmanaban S., Maroti P. K., Sharma A. 变工况条件下带防孤网保护的电网集成光伏系统基于 FPSO 的 MPPT 深度实践研究. IEEE 系统期刊, 13, 2018, 1861–1871 页。→\n\n[160] Priyadarshi. N. ;., Padmanaban S., Maroti P. K., Sharma A. 针对风光发电的电网集成光伏系统基于 FPSO 的 SVPWM 控制实现. IET 电力应用, 13, 2020, 962–971 页。\n\n[161] Bansal R., Pandey J. 使用人工智能技术进行负载预测综述. 国际计算机应用期刊, 2005。\n\n[162] Kumar D., Mathur H., Bansal S. 使用 LSTM 进行孤岛电网负功率预测. 国际建模与仿真, 2021。→\n\n[163] Priyadarshi N., Padmanaban S., Bhaskar M., Stejerg F., Holm-Nielsen J., Azam K. 基于孤岛网保护的混合光伏系统的电网集成实现. IEEE 系统期刊, 14, 2020, 3334–3342 页。\n\n[164] Priyadarshi N., Padmanaban S., Bhaskar M., Stejerg F., Holm-Nielsen J., Azam K. 基于孤岛网保护的混合光伏系统的电网集成. IET 电力应用, 13, 2020, 2775–2781 页。\n\n## 9 效率效率太阳能跟踪\n\n### 摘要\n\n由于物联网 (IoT) 的巨大发展，机器学习在绿色能源领域已成为热门话题。在本章中介绍了一种太阳能采集技术。太阳能电池的效率很大程度上受表面温度的影响。可以通过热摄像头进行监测。采集的图像通过 NodeMCU 模块发送到云服务器。无人机通常可以覆盖很大的区域。可以使用神经网络提取精确的表面温度。该方法还包括一个提高效率的自动化系统。\n\n关键词：太阳能跟踪，绿色能源，机器学习，主动冷却\n\n## 9.1 引言\n\n随着技术的飞速发展和社会经济条件的改善，家电的使用在过去几年有所增加。曾经只有特权阶层才使用洗衣机和空调产品，但现在这已成为中产阶级的日常需求。结果就是用电增加。传统能源的快速枯竭也加剧了这种情况。化石燃料有限的挑战以及传统能源的有害影响，促使人们寻求环保能源。为了满足日益增长的需求，我们我们别无选择选择绿色能源。太阳能、风能、水能、潮能、生物能和地热能是典型的绿色能源来源。太阳能是其中最广泛使用的绿色能源。\n\n在夏季，随着环境温度升高，光伏（PV）太阳能板的表面温度升至 50–60 °C，甚至达到 80 °C，这阻止了其输出最佳功率 [4]。主动冷却技术（包括水冷和风冷）通过监测和维持电池温度来提高太阳能板的效率 [5]。Krauter 使用了薄水膜（1 mm）的反射最小化技术 [6]，该水膜流过电池板表面。随着当天光学性能和电池温度的改善，电气性能提升了 10.3%（在计算运行水泵消耗的能量后为 8.9%）。Saad 和 Masud [7] 通过在电网格格表面安装滴水装置，实现了光伏阵列的冷却，并在最高辐射条件下将设备效率提高了约 15%。Abdolzadeh 和 Ameri [8] 则通过向光伏电池正面浇水来增强光伏水泵运行，这得益于温度差的减小和电池反射的降低。结果显示，由于喷水的作用，电池强度得到了提高。\n\n光伏设备现在正越来越多在全球范围内部署。然而，安装中通常使用固定平板板设备，并通过地理定位获取预设角度。因此，由于一天之内和一年之中太阳能能量的波动，光伏系统产生的功率会迅速下降。Chaowanan 等人 [9] 提出了一种低成本的自动双轴太阳能跟踪系统，以实现太阳能最大化。该监测方法在伪方位系统中利用传感器的数字逻辑，沿着主轴（南—北）和次轴（东—西）旋转。\n\n得益于第四次工业革命物联网（IoT）的巨大进展，机器人技术已成为工业发展的一部分。电力部门也在采用物联网来提高可持续性和获得更好的效率 [10]。由于传感器和执行器的购买成本较低，IoT 正在变得越来越流行。IoT 理论概念将有线或无线节点连接到共享网络上特定机器的传感器和设备。通常，为了减少与有线网络相关的威胁，通常选择基于 IoT 的无线系统。考虑到不久后的需求，即任何计算机都是智能、数字化并联网的。为了获取更多信息，作者在 [6] 中检查了与 IoT 支持技术、协议和应用相关的某些技术细节。文中解释了 IoT 技术及其他新进展，例如区块链、大数据分析和云计算。Ankit 和 Suresh [11] 使用 IoT 开发了基于太阳能光伏的远程监控系统。他们主要关注了使用 GPRS 模块和微控制器的成本问题。Shrihariprasath [12] 提出了一个利用 IoT 概念监控太阳能光伏单元的模型。除了太阳能电池温度监测，IoT 系统还可以作为太阳能板和其他配件故障诊断的正确解决方案。Chagitha Ranhotigamage 和 Subhas Chandra Mukhopadhyay [13] 开发了一个模型，用于获取故障光伏阵列以实现及时的维护目的。\n\n即使是来自可再生能源的电力也必须在电网进行预测，因为容量和质量的变化可能会对整个电网的物理健康及其消费者生命周期的优越性产生负面影响。当发电厂数量增加时，仍需要确定最佳尺寸、位置和安装方案。\n\n本章介绍了智能太阳能跟踪、先进的冷却技术、基于 ML 的太阳能板智能健康状态监测热制图，以及基于 IoT 的智能绿色能量采集技术。\n\n全球初级能源生产的一个重要指标是发电[[28], [29], ... [33]]。在发电过程中，世界上主要的能源形式（煤炭、天然气、汽油和生物质）有很大一部分被消耗。在火力发电厂的转换过程中，超过 50%的能量输入作为损失耗散掉了。[图 9.4]显示了由 REN21 社区编制的 2008 年到 2018 年世界发电能力[[20]]。观察发现，全球可再生发电容量正在日益增长。尽管如此，世界仍然主要依赖于不可再生能源。\n\n![](img/b_9783110714043-009_fig_004.jpg)\n\n图 9.4：按能源分类的世界发电能力，2008–2018 [[20]]。\n\n## 9.2.1 世界可再生能源情景\n\n太阳能的输出潜力领先于所有替代能源。从 2012 年到 2018 年，从[图 9.5]中观察到，每年新增绿色能源中太阳能最高，而生物能和地热能最低。2018 年，可再生电力在发电领域的发展正以健康的速度发展。\n\n在国际上，估计部署了 181 GW，略高于 2017 年，总装机容量增加了 8%以上[[20]]。在经历了多年的稳步扩张后，新增容量的增速在当年保持了这一水平，到 2018 年底，全球绿色能源生产总容量约为 2,379 吉瓦。再次增加了约 100 GW 的太阳能光伏（PV）设备。在 2018 年，全球绿色电力基础设施的安装组成开始发生变化。到年底，水电极少占所用绿色电能总容量的 50%，下降到 48%以下。同一时期，风能增长到可再生能源输出潜力的约 25%，而太阳能首次触及 20%。总体而言，可再生能源已增加到占世界总发电容量的三分之一以上。\n\n![](img/b_9783110714043-009_fig_005.jpg)\n\n图 9.5：按技术分类的每年新增再生能源，2012–2018 [[20]]。\n\n## 9.2.2 世界太阳能光伏能源情景\n\n[图 9.6]显示了利用光伏电池的太阳太阳能生产能力。从图中可以观察到，中国产生的太阳能最多。中国和日本非常接近。最关键的一点是，全球太阳能的发展趋势非常积极。如图所示，2018 年的产量超过了 500 GW。\n\n![](img/b_9783110714043-009_fig_006.jpg)\n\n图 9.6：按国家和地区划分的太阳能光伏生产能力，2008–2018 [[20]]。\n\n## 9.3 物联网（IoT）概念\n\nIoT 是指一种通过互联网连接的设备系统，可以在没有人工干预的情况下接收和传输数据。我们世界上有线计算机比人类还多。IoT 将改变这个有线星球与公司及国家进行通信的方式。IoT 是一个当前的趋势概念，它预见了一个光明的前景，即普通物品将配备微控制器、数字通信接收器和协议栈，作为互联网不可分割的一部分进行相互交互[[21]]。因此，IoT 理念寻求让互联网变得更加沉浸式和无处不在。此外，通过实现对范围物体（如小型家用配件、CCTV 摄像头、跟踪设备、执行器、屏幕、电动汽车）的简单访问和接触，IoT 将鼓励开发许多利用海量数据的应用程序，为人们提供各种便利。这种模型也适用于许多领域，例如家庭自动化、工厂自动化、医疗辅助、老年援助、智能电力及智能电网调节、交通控制等[[22]]。[图 9.7]显示了不同领域的主要 IoT 应用。根据 Statista 的预测[[23]]，如[图 9.8]所示，智能设备的总数预计到 2025 年将达到 750 亿。\n\n![](img/b_9783110714043-009_fig_007.jpg)\n\n图 9.7：IoT 的应用。\n\n![](img/b_9783110714043-009_fig_008.jpg)\n\n图 9.8：IoT 的前景 [[10]]。\n\n## 9.4 用于可再生能源（RE）技术的智能系统\n\n对于计算机和 IoT 应用的程序员以及硬件工程师来说，对网络解决方案的偏好几乎令人眼迷。许多网络工具广为人知，如 Wi-Fi、`Bluetooth`、`ZigBee`和蜂窝`2G/3G/4G`。后续章节将解释一些最常用的技术。\n\n### 9.4.1 基于蓝牙的可再生能源系统\n\n`Bluetooth`被认为是无线技术基准，用于在固定和移动设备之间传输数据，并使用不同无线频段（2402 至 2480 MHz）的超高频无线电创建个人局域网。它最初被用作 RS232 数据电的替代方案。由于低功耗和低成本，它是一项热门技术。然而，短距离覆盖是该技术的局限。基于蓝牙系统的关键特征如下[[24]]:\n\n1.  技术：主要方案`Bluetooth 4.2`\n\n2.  带宽：2.4 GHz (ISM)\n\n3.  覆盖距离：约 50–150 米\n\n4.  数据传输范围：最高 1 Mbps\n\n### 9.4.2 基于 Wi-Fi 的可再生能源系统\n\n`Wi-Fi`网络通常对许多开发人员非常理想，特别是家庭环境中广泛使用的`Wi-Fi`。`Wi-Fi`通常以简单数据包的形式传输到系统的各个访问点。由于其巨大的现有基础设施、快速的数据传输以及容纳大量数据的能力，无需进一步解释基于 Wi-Fi 系统的可用性。基于 Wi-Fi 的系统的关键特征如下[[24]]:\n\n1.  技术：基于`802.11 n`\n\n2.  频率：2.4–5 GHz 频段\n\n3.  覆盖距离：约 50 米\n\n4.  数据传输范围：最高 600 Mbps；但正常范围为 150–200 Mbps。\n\n### 9.4.3 基于 GSM 的可再生能源系统\n\n本世纪的新兴技术之一是基于 `GSM`（全球移动通信系统）。它涉及一种独立嵌入式设备的架构，该设备可以不受距离限制地远程跟踪和监控多个设备。嵌入式领域常用的术语是发送和接收 `SMS`。基于 `GSM` 的系统的一些基本特征如下 [24]:\n\n1. 技术：全球移动通信系统 (`GSM`)/高速分组数据接入 (`HSPA`)\n\n2. 频带频率：900 到 2,100 MHz\n\n3. 覆盖距离：`GSM` 最大覆盖距离为 35 km；`HSPA` 为 200 km\n\n4. 数据传输范围：通用分组无线电服务 (`GPRS`) 为 35–170 kbps，全球演进增强型数据速率 (`EDGE`) 为 120–384 kbps，通用移动通信服务 (`UMTS`) 为 384 kbps 至 2 Mbps，高速分组数据接入 (`HSPA`) 为 600 kbps 至 10 Mbps\n\n## 9.5 基于 IoT 的高效太阳能光伏系统\n\n我们正处于第四次工业革命时代。如今，技术变得更加混合化。对于当代和后代来说，这种混合化是一份礼物。将现有理念与新技术相结合是提出的范式。通过传统的太阳能发电方法，增加了一些额外参数以提高所提太阳能板模型的性能。\n\n所提的高效 PV 模型如图 9.9 所示。为了保持太阳电池的表面温度，引入了自动水冷系统冷却系统的运行决策由基于 `IoT` 的智能操作系统做出。在所提系统中，`PV` 表面没有安装传统的热传感器。为了获得适当的温度映射，这里使用了无人机操作的热成像相机。这里使用 `ML` 算法来识别太阳能板的精确边界，以提取准确的数据。当 `PV` 太阳能板的表面温度达到预定义的参考点时，冷却设备开始自动运行。当达到所需的表面温度时，冷却机制将。。除了冷却系统，还使用了太阳能跟踪系统以最大化太阳辐射的收益。这种监控也由 `IoT` 自动完成。\n\n![](img/b_9783110714043-009_fig_009.jpg)\n\n图 9.9：带有主要组件的提高效 PV 模型框图。\n\n### 9.5.1 太阳跟踪\n\n从太阳 `PV` 模块提取的能量取决于太阳辐射。为了获得最佳能量产出，太阳采集器面板应与入射辐射保持自然状态。太阳跟踪器移动太阳采集器以跟随太阳的方向，并保持太阳采集器在理想倾斜角的取向。太阳监控系统显著提高了 `PV` 板的能量效率。可以使用以下标准对太阳能系统进行分类，如图 9.10 所示。\n\n![](img/b_9783110714043-009_fig_010.jpg)\n\n图 9.10：太阳跟踪系统的类型。\n\n太阳跟踪器根据运动机制可分为主动系统和被动系统，如图 9.11 所示。被动跟踪设备利用来自记忆材料的低沸特殊流体的压力差来改变跟踪单元的轴。压力差是由监控设备阴影侧和光照侧的热差异产生的。在压力差平衡之前，监控系统会移动，使其在恶劣条件下更容易扩展和观察。被动式机器很少使用，且运行不需要辅助电源。另一方面，主动式太阳跟踪设备由`微控制器`、`电动机`、`传感器`、`执行器`和`齿轮箱`等电机组件组成用于运行。\n\n![](img/b_9783110714043-009_fig_011.jpg)\n\n图 9.11：太阳跟踪系统：(a) 被动和(b) 主动 [3]。\n
 
-[142] Ahmed S., Bouffard F. 使用强化学习的建筑负载管理。8th IEEE Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON), Vancouver, BC, Canada, Oct 3–5, 2017. →
 
-[143] Kim B. G., Zhang Y., Schaar M. V., Lee J. 基于强化学习的智能电网动态定价。2014 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS), Toronto, Ontario, Canada, Apr. 27–May 2, 2014. →
+图 9.12 显示了开路太阳跟踪系统。开路控制系统使用精确算法确定`PV`跟踪系统的点。（此处注：由于原文末尾存在大量重复描述，译文已根据用户提供的实际文本进行清理。）
 
-[144] Jay D., Swarup K. 智能电网去监管市场中基于需求响应的自动发电。IEEE 6th International Conference on Power Systems (ICPS), New Delhi, India, Mar 4–6, 2016. →
+其中`P`[`SPη]`表示太阳能板的额定输出功率。`η`[`eelee]`是光伏模块在 25 °C 标准测试条件（STC）下的光电效率。`G`[`T]`表示光伏电池每小时接收的平均太阳辐射，而`G`[`T.STC]`表示在 STC 下估计的太阳辐照。
 
-[145] Wang H., Huang T., Liao X. 不完整信息约束能量的强化学习。IEEE Transactions on Cybernetics, 47(10), 2017, 3404–3416.
-
-[146] Reddy P. P., Veloso M. 智能电网自治智能体的策略学习。Twenty-Second international conference on Artificial Intelligence, vol. 2, 2011, pp. 1446–1451.
-
-[147] Soares J., Borges N., Canizes B., Vale Z. 大数据背景下用于智能电网电动汽车的状态概率估计。Proceedings of IEEE Power Soc. Gen., Jul. 2015, pp. 1–5. →, [#9783110713794_020436.xhtml_xref_d106706e37211)
-
-[148] Lee C. H., Wu C. 提高电动汽车续航估计的新型大数据建模方法。IEEE Access, 3, 2015, 1980–1993.
-
-[149] Su W., Chow M.-Y. 基于 EDA 的大规模混合动力车辆充电性能评估。IEEE Transactions on Smart Grid, 3(1), 2012 年 3 月, 308–315.
-
-[150] Rigas E. S., Ramchurn S. D., Bassiliades N. 智能电网中的电动汽车管理：综述。IEEE Transactions on Intelligent Transportation Systems, 16(4), 2015 年 8 月, 1619–1635.
-
-[151] Ermon S., Xue Y., Gomes C., Selman B. 电动汽车电池使用优化的学习策略，机器学习与数据库知识发现。In: Flach P., Bie T., Cristianini N. (Eds), Vol.7524, Springer-Verlag, Berlin, Germany, 2012, ser. Lecture Notes in Computer Science, 195–210.
-
-[152] Storandt S., Funke S. 赋能电动出行：电池充电站的选址。Proceedings of 27th Conf. AAAI, 2013, pp. 1341–1347.
-
-
-
-
-
-## 参考文献
-
-[153] Gonzalez Vaya M., Andersson G., 日前电电力市场中插电式电动汽车聚集器的最优竞价策略, 第 10 届 EEM 国际会议论文集, 2013, 第 1–6 页 →
-
-[154] Karnouskos S., Terzidis O., Karnouskos P. 面向未来网络的高级电表基础设施, 德德勒特, Springer-Verlag, 荷兰, 2007, 597–606 页。→
-
-[155] Tu C., He X., Shuai Z., Jiang F. 智能电网中的大数据问题综述. 可再生与可持续能源综述, 79, (附录 C), 2017, 1099–1107 页。a, b
-
-[156] Chin W. L., Li W., Chen H. H. 基于物联网的智能电网通信中的能源大数据安全威胁. IEEE 通信杂志, 55(10), 2017 年 10 月, 70–75 页。a, b
-
-[157] Bayrak G., Kabalci E. 风光互补电站新型远距离孤孤网检测方法的实现, 可再生可持续能源革命, 58(附录 C), 2016, 1–15 页。→
-
-[158] Dasgupta S., Paramasivam M., Vaidya U., Ajjarapu V. 基于 PMU 的实时转子角监测无模型方法. IEEE 电力系统事务, 30(5), 2015 年 9 月, 2818–2819 页。→
-
-[159] Priyadarshi. N. ;., Padmanaban S., Maroti P. K., Sharma A. 变工况条件下带防孤网保护的电网集成光伏系统基于 FPSO 的 MPPT 深度实践研究. IEEE 系统期刊, 13, 2018, 1861–1871 页。→
-
-[160] Priyadarshi. N. ;., Padmanaban S., Maroti P. K., Sharma A. 针对风光发电的电网集成光伏系统基于 FPSO 的 SVPWM 控制实现. IET 电力应用, 13, 2020, 962–971 页。
-
-[161] Bansal R., Pandey J. 使用人工智能技术进行负载预测综述. 国际计算机应用期刊, 2005。
-
-[162] Kumar D., Mathur H., Bansal S. 使用 LSTM 进行孤岛电网负功率预测. 国际建模与仿真, 2021。→
-
-[163] Priyadarshi N., Padmanaban S., Bhaskar M., Stejerg F., Holm-Nielsen J., Azam K. 基于孤岛网保护的混合光伏系统的电网集成实现. IEEE 系统期刊, 14, 2020, 3334–3342 页。
-
-[164] Priyadarshi N., Padmanaban S., Bhaskar M., Stejerg F., Holm-Nielsen J., Azam K. 基于孤岛网保护的混合光伏系统的电网集成. IET 电力应用, 13, 2020, 2775–2781 页。
-
-## 9 效率效率太阳能跟踪
-
-### 摘要
-由于物联网 (IoT) 的巨大发展，机器学习在绿色能源领域已成为热门话题。在本章中介绍了一种太阳能采集技术。太阳能电池的效率很大程度上受表面温度的影响。可以通过热摄像头进行监测。采集的图像通过 NodeMCU 模块发送到云服务器。无人机通常可以覆盖很大的区域。可以使用神经网络提取精确的表面温度。该方法还包括一个提高效率的自动化系统。
-
-关键词：太阳能跟踪，绿色能源，机器学习，主动冷却
-
-## 9.1 引言
-随着技术的飞速发展和社会经济条件的改善，家电的使用在过去几年有所增加。曾经只有特权阶层才使用洗衣机和空调产品，但现在这已成为中产阶级的日常需求。结果就是用电增加。传统能源的快速枯竭也加剧了这种情况。化石燃料有限的挑战以及传统能源的有害影响，促使人们寻求环保能源。为了满足日益增长的需求，我们我们别无选择选择绿色能源。太阳能、风能、水能、潮能、生物能和地热能是典型的绿色能源来源。太阳能是其中最广泛使用的绿色能源。
-
-
-
-
-在夏季，随着环境温度升高，光伏（PV）太阳能板的表面温度升至 50–60 °C，甚至达到 80 °C，这阻止了其输出最佳功率 [4]。主动冷却技术（包括水冷和风冷）通过监测和维持电池温度来提高太阳能板的效率 [5]。Krauter 使用了薄水膜（1 mm）的反射最小化技术 [6]，该水膜流过电池板表面。随着当天光学性能和电池温度的改善，电气性能提升了 10.3%（在计算运行水泵消耗的能量后为 8.9%）。Saad 和 Masud [7] 通过在电网格格表面安装滴水装置，实现了光伏阵列的冷却，并在最高辐射条件下将设备效率提高了约 15%。Abdolzadeh 和 Ameri [8] 则通过向光伏电池正面浇水来增强光伏水泵运行，这得益于温度差的减小和电池反射的降低。结果显示，由于喷水的作用，电池强度得到了提高。
-
-光伏设备现在正越来越多在全球范围内部署。然而，安装中通常使用固定平板板设备，并通过地理定位获取预设角度。因此，由于一天之内和一年之中太阳能能量的波动，光伏系统产生的功率会迅速下降。Chaowanan 等人 [9] 提出了一种低成本的自动双轴太阳能跟踪系统，以实现太阳能最大化。该监测方法在伪方位系统中利用传感器的数字逻辑，沿着主轴（南—北）和次轴（东—西）旋转。
-
-得益于第四次工业革命物联网（IoT）的巨大进展，机器人技术已成为工业发展的一部分。电力部门也在采用物联网来提高可持续性和获得更好的效率 [10]。由于传感器和执行器的购买成本较低，IoT 正在变得越来越流行。IoT 理论概念将有线或无线节点连接到共享网络上特定机器的传感器和设备。通常，为了减少与有线网络相关的威胁，通常选择基于 IoT 的无线系统。考虑到不久后的需求，即任何计算机都是智能、数字化并联网的。为了获取更多信息，作者在 [6] 中检查了与 IoT 支持技术、协议和应用相关的某些技术细节。文中解释了 IoT 技术及其他新进展，例如区块链、大数据分析和云计算。Ankit 和 Suresh [11] 使用 IoT 开发了基于太阳能光伏的远程监控系统。他们主要关注了使用 GPRS 模块和微控制器的成本问题。Shrihariprasath [12] 提出了一个利用 IoT 概念监控太阳能光伏单元的模型。除了太阳能电池温度监测，IoT 系统还可以作为太阳能板和其他配件故障诊断的正确解决方案。Chagitha Ranhotigamage 和 Subhas Chandra Mukhopadhyay [13] 开发了一个模型，用于获取故障光伏阵列以实现及时的维护目的。
-
-即使是来自可再生能源的电力也必须在电网进行预测，因为容量和质量的变化可能会对整个电网的物理健康及其消费者生命周期的优越性产生负面影响。当发电厂数量增加时，仍需要确定最佳尺寸、位置和安装方案。
-
-本章介绍了智能太阳能跟踪、先进的冷却技术、基于 ML 的太阳能板智能健康状态监测热制图，以及基于 IoT 的智能绿色能量采集技术。
-
-
-
-
-全球初级能源生产的一个重要指标是发电[[28], [29], ... [33]]。在发电过程中，世界上主要的能源形式（煤炭、天然气、汽油和生物质）有很大一部分被消耗。在火力发电厂的转换过程中，超过 50%的能量输入作为损失耗散掉了。[图 9.4]显示了由 REN21 社区编制的 2008 年到 2018 年世界发电能力[[20]]。观察发现，全球可再生发电容量正在日益增长。尽管如此，世界仍然主要依赖于不可再生能源。
-
-![](img/b_9783110714043-009_fig_004.jpg)
-
-图 9.4：按能源分类的世界发电能力，2008–2018 [[20]]。
-
-## 9.2.1 世界可再生能源情景
-
-太阳能的输出潜力领先于所有替代能源。从 2012 年到 2018 年，从[图 9.5]中观察到，每年新增绿色能源中太阳能最高，而生物能和地热能最低。2018 年，可再生电力在发电领域的发展正以健康的速度发展。
-
-在国际上，估计部署了 181 GW，略高于 2017 年，总装机容量增加了 8%以上[[20]]。在经历了多年的稳步扩张后，新增容量的增速在当年保持了这一水平，到 2018 年底，全球绿色能源生产总容量约为 2,379 吉瓦。再次增加了约 100 GW 的太阳能光伏（PV）设备。在 2018 年，全球绿色电力基础设施的安装组成开始发生变化。到年底，水电极少占所用绿色电能总容量的 50%，下降到 48%以下。同一时期，风能增长到可再生能源输出潜力的约 25%，而太阳能首次触及 20%。总体而言，可再生能源已增加到占世界总发电容量的三分之一以上。
-
-![](img/b_9783110714043-009_fig_005.jpg)
-
-图 9.5：按技术分类的每年新增再生能源，2012–2018 [[20]]。
-
-## 9.2.2 世界太阳能光伏能源情景
-
-[图 9.6]显示了利用光伏电池的太阳太阳能生产能力。从图中可以观察到，中国产生的太阳能最多。中国和日本非常接近。最关键的一点是，全球太阳能的发展趋势非常积极。如图所示，2018 年的产量超过了 500 GW。
-
-![](img/b_9783110714043-009_fig_006.jpg)
-
-图 9.6：按国家和地区划分的太阳能光伏生产能力，2008–2018 [[20]]。
-
-## 9.3 物联网（IoT）概念
-
-IoT 是指一种通过互联网连接的设备系统，可以在没有人工干预的情况下接收和传输数据。我们世界上有线计算机比人类还多。IoT 将改变这个有线星球与公司及国家进行通信的方式。IoT 是一个当前的趋势概念，它预见了一个光明的前景，即普通物品将配备微控制器、数字通信接收器和协议栈，作为互联网不可分割的一部分进行相互交互[[21]]。因此，IoT 理念寻求让互联网变得更加沉浸式和无处不在。此外，通过实现对范围物体（如小型家用配件、CCTV 摄像头、跟踪设备、执行器、屏幕、电动汽车）的简单访问和接触，IoT 将鼓励开发许多利用海量数据的应用程序，为人们提供各种便利。这种模型也适用于许多领域，例如家庭自动化、工厂自动化、医疗辅助、老年援助、智能电力及智能电网调节、交通控制等[[22]]。[图 9.7]显示了不同领域的主要 IoT 应用。根据 Statista 的预测[[23]]，如[图 9.8]所示，智能设备的总数预计到 2025 年将达到 750 亿。
-
-![](img/b_9783110714043-009_fig_007.jpg)
-
-图 9.7：IoT 的应用。
-
-![](img/b_9783110714043-009_fig_008.jpg)
-
-图 9.8：IoT 的前景 [[10]]。
-
-## 9.4 用于可再生能源（RE）技术的智能系统
-
-对于计算机和 IoT 应用的程序员以及硬件工程师来说，对网络解决方案的偏好几乎令人眼迷。许多网络工具广为人知，如 Wi-Fi、`Bluetooth`、`ZigBee`和蜂窝`2G/3G/4G`。后续章节将解释一些最常用的技术。
-
-### 9.4.1 基于蓝牙的可再生能源系统
-
-`Bluetooth`被认为是无线技术基准，用于在固定和移动设备之间传输数据，并使用不同无线频段（2402 至 2480 MHz）的超高频无线电创建个人局域网。它最初被用作 RS232 数据电的替代方案。由于低功耗和低成本，它是一项热门技术。然而，短距离覆盖是该技术的局限。基于蓝牙系统的关键特征如下[[24]]:
-
-1.  技术：主要方案`Bluetooth 4.2`
-2.  带宽：2.4 GHz (ISM)
-3.  覆盖距离：约 50–150 米
-4.  数据传输范围：最高 1 Mbps
-
-### 9.4.2 基于 Wi-Fi 的可再生能源系统
-
-`Wi-Fi`网络通常对许多开发人员非常理想，特别是家庭环境中广泛使用的`Wi-Fi`。`Wi-Fi`通常以简单数据包的形式传输到系统的各个访问点。由于其巨大的现有基础设施、快速的数据传输以及容纳大量数据的能力，无需进一步解释基于 Wi-Fi 系统的可用性。基于 Wi-Fi 的系统的关键特征如下[[24]]:
-
-1.  技术：基于`802.11 n`
-2.  频率：2.4–5 GHz 频段
-3.  覆盖距离：约 50 米
-4.  数据传输范围：最高 600 Mbps；但正常范围为 150–200 Mbps。
-
-### 9.4.3 基于 GSM 的可再生能源系统
-
-
-
-
-本世纪的新兴技术之一是基于 `GSM`（全球移动通信系统）。它涉及一种独立嵌入式设备的架构，该设备可以不受距离限制地远程跟踪和监控多个设备。嵌入式领域常用的术语是发送和接收 `SMS`。基于 `GSM` 的系统的一些基本特征如下 [24]:
-
-1. 技术：全球移动通信系统 (`GSM`)/高速分组数据接入 (`HSPA`)
-2. 频带频率：900 到 2,100 MHz
-3. 覆盖距离：`GSM` 最大覆盖距离为 35 km；`HSPA` 为 200 km
-4. 数据传输范围：通用分组无线电服务 (`GPRS`) 为 35–170 kbps，全球演进增强型数据速率 (`EDGE`) 为 120–384 kbps，通用移动通信服务 (`UMTS`) 为 384 kbps 至 2 Mbps，高速分组数据接入 (`HSPA`) 为 600 kbps 至 10 Mbps
-
-## 9.5 基于 IoT 的高效太阳能光伏系统
-
-我们正处于第四次工业革命时代。如今，技术变得更加混合化。对于当代和后代来说，这种混合化是一份礼物。将现有理念与新技术相结合是提出的范式。通过传统的太阳能发电方法，增加了一些额外参数以提高所提太阳能板模型的性能。
-
-所提的高效 PV 模型如图 9.9 所示。为了保持太阳电池的表面温度，引入了自动水冷系统冷却系统的运行决策由基于 `IoT` 的智能操作系统做出。在所提系统中，`PV` 表面没有安装传统的热传感器。为了获得适当的温度映射，这里使用了无人机操作的热成像相机。这里使用 `ML` 算法来识别太阳能板的精确边界，以提取准确的数据。当 `PV` 太阳能板的表面温度达到预定义的参考点时，冷却设备开始自动运行。当达到所需的表面温度时，冷却机制将。。除了冷却系统，还使用了太阳能跟踪系统以最大化太阳辐射的收益。这种监控也由 `IoT` 自动完成。
-
-![](img/b_9783110714043-009_fig_009.jpg)
-
-图 9.9：带有主要组件的提高效 PV 模型框图。
-
-### 9.5.1 太阳跟踪
-
-从太阳 `PV` 模块提取的能量取决于太阳辐射。为了获得最佳能量产出，太阳采集器面板应与入射辐射保持自然状态。太阳跟踪器移动太阳采集器以跟随太阳的方向，并保持太阳采集器在理想倾斜角的取向。太阳监控系统显著提高了 `PV` 板的能量效率。可以使用以下标准对太阳能系统进行分类，如图 9.10 所示。
-
-![](img/b_9783110714043-009_fig_010.jpg)
-
-图 9.10：太阳跟踪系统的类型。
-
-太阳跟踪器根据运动机制可分为主动系统和被动系统，如图 9.11 所示。被动跟踪设备利用来自记忆材料的低沸特殊流体的压力差来改变跟踪单元的轴。压力差是由监控设备阴影侧和光照侧的热差异产生的。在压力差平衡之前，监控系统会移动，使其在恶劣条件下更容易扩展和观察。被动式机器很少使用，且运行不需要辅助电源。另一方面，主动式太阳跟踪设备由`微控制器`、`电动机`、`传感器`、`执行器`和`齿轮箱`等电机组件组成用于运行。
-
-![](img/b_9783110714043-009_fig_011.jpg)
-
-图 9.11：太阳跟踪系统：(a) 被动和(b) 主动 [3]。
-
-图 9.12 显示了开路太阳跟踪系统。开路控制系统使用精确算法确定 `PV` 跟踪系统的点。（此处注：由于原文末尾存在大量重复描述，译文已根据用户提供的实际文本进行清理。）
-
-
-
-其中 `P`[`SPη]` 表示太阳能板的额定输出功率。`η`[`eelee]` 是光伏模块在 25 °C 标准测试条件 (STC) 下的光电效率。`G`[`T]` 表示光伏电池每小时接收的平均太阳辐射，而 `G`[`T.STC]` 表示在 STC 下估计的太阳辐照。
-
-降额系数用 `f`[`SP]` 表示，单位为 %。太阳光伏电池的实际温度用 `T`[`sp]` 表示。
+降额系数用`f`[`SP]`表示，单位为 %。太阳光伏电池的实际温度用`T`[`sp]`表示。
 
 ### 9.5.4 冷却系统
 
@@ -3527,7 +3352,7 @@ Sainthiya [27]] 开发了一种模型，通过在夏季和冬季使用前表面�
 
 ## 9.6 基于物联网系统的显著特征/重要性
 
-物联网（IoT）已成为最热门的技术领域之一，可以将任何传统电子家电或产品转换为智能设备。它在远程控制高科技机械方面一直并在持续发挥着关键作用。由于其灵活性和以下显著特征，研究人员和工业人士正在采用物联网。
+物联网（`IoT`）已成为最热门的技术领域之一，可以将任何传统电子家电或产品转换为智能设备。它在远程控制高科技机械方面一直并在持续发挥着关键作用。由于其灵活性和以下显著特征，研究人员和工业人士正在采用物联网。
 
 1. 以低成本从远处轻松访问所有关键植物或系统数据。
 2. 便捷的数据传输。
@@ -3539,7 +3364,7 @@ Sainthiya [27]] 开发了一种模型，通过在夏季和冬季使用前表面�
 
 ### 9.7.1 实验装置
 
-实验在一个主动太阳能跟踪系统中进行，其实验配置包括 PC、PLC、太阳传输器和一个万用表，所示图 9.16]。在 STC 下估计的太阳辐照由 `G[T.STC]` 表示。光伏电池每小时接收的平均太阳辐射由 `G[T]` 表示。太阳能板的额定输出功率为 `P[SP]`。降额系数用 `f[SP]` 表示，单位为 %。光伏模块在 25 °C 标准测试条件 (STC) 下的光电效率为 `η[eelee]`。
+实验在一个主动太阳能跟踪系统中进行，其实验配置包括 PC、PLC、太阳传输器和一个万用表，所示图 9.16]。在 STC 下估计的太阳辐照由`G[T.STC]`表示。光伏电池每小时接收的平均太阳辐射由`G[T]`表示。太阳能板的额定输出功率为`P[SP]`。降额系数用`f[SP]`表示，单位为 %。光伏模块在 25 °C 标准测试条件 (STC) 下的光电效率为`η[eelee]`。
 
 ```
 ![](img/b_9783110714043-009_fig_016.jpg)
@@ -3575,470 +3400,534 @@ Sainthiya [27]] 开发了一种模型，通过在夏季和冬季使用前表面�
 
 本章介绍了一种基于基于物联网的智能太阳能能量采集技术。本章早期讨论了当前的全球能源状况和绿色能源发展方法。为了更好地解释物联网的实施，还简要说明了物联网原理以及相关的通信技术。之后，还描述了提高太阳能发电效率的各种冷却方法、跟踪和监控系统。所提出的模型可以作为全球能源危机的良好解决方案。还包含了一些使用水冷系统和太阳能跟踪器的实验和模拟结果。通过实验和模拟获得的结果看起来良好，特别是使用太阳能跟踪系统带来了 28.52% 的提升。
 
+[2] Owusu P. A., Asumadu-Sarkodie S. 可再生能源能源、可持续性问题与气候变化缓解的综述。Cogent Engineering, 3(1), 2016, 10.1080/23311916.2016.1167990. →
 
+[3] Seme S., Štumberger B., Hadžiselimović M., Sredenšek K. 用于发电的光能光伏跟踪系统：综述。Energies, 13(6), 2020, 1–24, 10.3390/en13164224. a, b
 
+[4] Amber K. P., Akram W., Bashir M. A., Khan M. S., Kousar A. 太阳能光伏装置两种不同被动冷却技术的实验性能分析。Journal of Thermal Analysis and Calorimetry, 0123456789, 2020, 10.1007/s10973-020-09883-6. a, b
 
-[2]Owusu P. A., Asumadu-Sarkodie S. 可再生能源能源、可持续性问题与气候变化缓解的综述。Cogent Engineering, 3(1), 2016, 10.1080/23311916.2016.1167990. →
+[5] Prudhvi P., Sai P. C. 使用主动冷却提高太阳能光伏面板的效率，2012 第 11 届环境电气工程国际会议 EEEIC 2012 – 会议集, 1093–1097, 2012, doi: 10.1109/EEEIC.2012.6221543. →
 
-[3]Seme S., Štumberger B., Hadžiselimović M., Sredenšek K. 用于发电的光能光伏跟踪系统：综述。Energies, 13(6), 2020, 1–24, 10.3390/en13164224. a, b
+[6] Krauter S. 通过水流经光伏板正面增加电产量。Solar Energy Materials & Solar Cells, 82(1–2), 2004, 131–137, 10.1016/j.solmat.2004.01.011. a, b
 
-[4]Amber K. P., Akram W., Bashir M. A., Khan M. S., Kousar A. 太阳能光伏装置两种不同被动冷却技术的实验性能分析。Journal of Thermal Analysis and Calorimetry, 0123456789, 2020, 10.1007/s10973-020-09883-6. a, b
+[7] Odeh S., Behnia M. 使用水冷却提高光伏模块效率。Heat Transfer Engineering, 30(6), 2009, 499–505, 10.1080/01457630802529214. →
 
-[5]Prudhvi P., Sai P. C. 使用主动冷却提高太阳能光伏面板的效率，2012 第 11 届环境电气工程国际会议 EEEIC 2012 – 会议集, 1093–1097, 2012, doi: 10.1109/EEEIC.2012.6221543. →
+[8] Abdolzadeh M., Ameri M. 通过向光伏电池正面喷水提高光伏水泵系统的有效性。Renewable Energy, 34(1), 2009, 91–96, 10.1016/j.renene.2008.03.024. →
 
-[6]Krauter S. 通过水流经光伏板正面增加电产量。Solar Energy Materials & Solar Cells, 82(1–2), 2004, 131–137, 10.1016/j.solmat.2004.01.011. a, b
+[9] Jamroen C., Komkum P., Kohsri S., Himananto W., Panupintu S., Unkat S. 基于数字逻辑设计的低成本双轴太阳能跟踪系统：设计与实现。Sustainable Energy Technologies and Assessments, 37, 2019 年 10 月, 2020, 100618, 10.1016/j.seta.2019.100618. →
 
-[7]Odeh S., Behnia M. 使用水冷却提高光伏模块效率。Heat Transfer Engineering, 30(6), 2009, 499–505, 10.1080/01457630802529214. →
+[10] Zanella A., Bui N., Castellani A., Vangelista L., Zorzi M. 用于智慧城市的物联网。IEEE Internet Things Journal, 1(1), 2014, 22–32, 10.1109/JIOT.2014.2306328. a, b
 
-[8]Abdolzadeh M., Ameri M. 通过向光伏电池正面喷水提高光伏水泵系统的有效性。Renewable Energy, 34(1), 2009, 91–96, 10.1016/j.renene.2008.03.024. →
+[11] Kekre A., Gawre S. 使用 IoT 的太阳能光伏远程监控。信号处理与嵌入式系统创新国际会议 RISE, 2017, 2018 年 1 月, 619–623, 10.1109/RISE.2017.837827. →
 
-[9]Jamroen C., Komkum P., Kohsri S., Himananto W., Panupintu S., Unkat S. 基于数字逻辑设计的低成本双轴太阳能跟踪系统：设计与实现。Sustainable Energy Technologies and Assessments, 37, 2019 年 10 月, 2020, 100618, 10.1016/j.seta.2019.100618. →
+[12] Shriharipras B., Rathinasabathy V. 用于光伏功率单元的智能 IoT 系统。IEEE WFTR 2016 社会福利未来趋势世界会议, 2016, 10.1109/START.2016.758393. →
 
-[10]Zanella A., Bui N., Castellani A., Vangelista L., Zorzi M. 用于智慧城市的物联网。IEEE Internet Things Journal, 1(1), 2014, 22–32, 10.1109/JIOT.2014.2306328. a, b
+[13] Ranhotigage C., Mukhopadhyay S. 用于家用低成本无线网络的分布式太阳能面板测试与性能监控。IEEE Sensors, 11(10), 2011, 2583–2590, 10.1109/JS.2011.215024. →
 
-[11]Kekre A., Gawre S. 使用 IoT 的太阳能光伏远程监控。信号处理与嵌入式系统创新国际会议 RISE, 2017, 2018 年 1 月, 619–623, 10.1109/RISE.2017.837827. →
+[14] Woon W., Aung Z., Madnick S. 可再生能源整合的数据分析：第二次 ECML 2014 工作坊，Nancy, 2014 年 9 月 19 日, 修订论文。计算机科学讲义, 8817, 2014, 81–96, 10.1007/978-3-319-13290-7. →
 
-[12]Shriharipras B., Rathinasabathy V. 用于光伏功率单元的智能 IoT 系统。IEEE WFTR 2016 社会福利未来趋势世界会议, 2016, 10.1109/START.2016.758393. →
+[15] Lai J. P., Chang Y. M., Chen C. H., Pai F. 可再生能源预测中的机器学习模型综述。Applied Science, 10(17), 2020, 10.3390/app10175975. →
 
-[13]Ranhotigage C., Mukhopadhyay S. 用于家用低成本无线网络的分布式太阳能面板测试与性能监控。IEEE Sensors, 11(10), 2011, 2583–2590, 10.1109/JS.2011.215024. →
+[16] Khan P. W., Byun Y. C., Lee S. J., Kang D., Park H S. 基于机器学习的再生与非可再生能源消耗预测。Energies, 13(18), 2020, 10.3390/en1318470. →
 
-[14]Woon W., Aung Z., Madnick S. 可再生能源整合的数据分析：第二次 ECML 2014 工作坊，Nancy, 2014 年 9 月 19 日, 修订论文。计算机科学讲义, 8817, 2014, 81–96, 10.1007/978-3-319-13290-7. →
+[17] Bravo R., Friedrich D. 混合太阳能发电的两阶段优化。Solar Energy, 164, 2017 年 9 月, 2018, 187–199, 10.1016/j.solener.2018.01.078. →
 
-[15]Lai J. P., Chang Y. M., Chen C. H., Pai F. 可再生能源预测中的机器学习模型综述。Applied Science, 10(17), 2020, 10.3390/app10175975. →
+[18] Bahaidar H., Subhan A., Gandhidasan P. 高热气候条件下背表面冷却的 PV（光伏）模块的性能评估。Energy, 59, 2013, 445–453, 10.1016/j.energy.2013.07.050. a, b, c
 
-[16]Khan P. W., Byun Y. C., Lee S. J., Kang D., Park H S. 基于机器学习的再生与非可再生能源消耗预测。Energies, 13(18), 2020, 10.3390/en1318470. →
+[19] Basnet B., Chun H., Bang J. 用于光伏系统故障检测的智能故障检测模型。Journal of Sensors, 2020, 2020, 10.1155/2020/6960328. a, b, c
 
-[17]Bravo R., Friedrich D. 混合太阳能发电的两阶段优化。Solar Energy, 164, 2017 年 9 月, 2018, 187–199, 10.1016/j.solener.2018.01.078. →
+[20] REN21, Renewables 2019 全球状况报告，卷 105，第 7 期，2019 年 7 月。a, b, c, d, e
 
-[18]Bahaidar H., Subhan A., Gandhidasan P. 高热气候条件下背表面冷却的 PV（光伏）模块的性能评估。Energy, 59, 2013, 445–453, 10.1016/j.energy.2013.07.050. a, b, c
+[21] Shah S. H., Yaqoob I. 综述：物联网（IOT）技术、应用与挑战，2016 第 4 届 IEEE 智能电网会议。SEGE 2016，卷 i, 381–385, 2016, doi: 10.1109/SEGE.2016.758956. →
 
-[19]Basnet B., Chun H., Bang J. 用于光伏系统故障检测的智能故障检测模型。Journal of Sensors, 2020, 2020, 10.1155/2020/6960328. a, b, c
+[22] Chedd A., Sre Y., Attia H., Errahimi F. 能源监控解决方案的设计与实现。Applied Sciences, 10(7), 2020, 10.3390/app10072435. →
 
-[20]REN21, Renewables 2019 全球状况报告，卷 105，第 7 期，2019 年 7 月。a, b, c, d, e
+[23] Defined N., 2025 年的 IoT 设备。[在线：https://www.statista.com/471264/iot-number-connected-devices（物联网）。访问于 11 月 13 日]。→
 
-[21]Shah S. H., Yaqoob I. 综述：物联网（IOT）技术、应用与挑战，2016 第 4 届 IEEE 智能电网会议。SEGE 2016，卷 i, 381–385, 2016, doi: 10.1109/SEGE.2016.758956. →
+[24] IoT 技术，如蓝牙、GSM、Wifi。[在线：https://www.rs-online.com/designspark/eleven-internet-of-things-protocols-need-to-about](https://www.rs-online.com/designspark/eleven-internet-of-things-protocols-need-to-about）。访问于 11 月 13 日]。a, b, c
 
-[22]Chedd A., Sre Y., Attia H., Errahimi F. 能源监控解决方案的设计与实现。Applied Sciences, 10(7), 2020, 10.3390/app10072435. →
+[25] Jovanović U., Mančić D., Jovanović I., Petrušić Z. 使用非接触红外系统对光伏模块进行温度。Journal Electrical Engineering and Technology, 12(2), 2017, 904–910, 10.5370/JEET.2017.12.2.904. →
 
-[23]Defined N., 2025 年的 IoT 设备。[在线：https://www.statista.com/471264/iot-number-connected-devices（物联网）。访问于 11 月 13 日]。→
+[26] Abdallah S. R., Elsemary I. M., Altohamy A. A., Abdelrahman M. A., Attia A. A., Abdellatif O. E. 使用纳米流（Al2O3-水）对 PV/T 系统影响的实验研究。Thermal Science and Engineering Progress, 7, 2018, 1–7, 10.1016/j.tsep.2018.04.016. →
 
-[24]IoT 技术，如蓝牙、GSM、Wifi。[在线：https://www.rs-online.com/designspark/eleven-internet-of-things-protocols-need-to-about](https://www.rs-online.com/designspark/eleven-internet-of-things-protocols-need-to-about）。访问于 11 月 13 日]。a, b, c
-
-[25]Jovanović U., Mančić D., Jovanović I., Petrušić Z. 使用非接触红外系统对光伏模块进行温度。Journal Electrical Engineering and Technology, 12(2), 2017, 904–910, 10.5370/JEET.2017.12.2.904. →
-
-[26]Abdallah S. R., Elsemary I. M., Altohamy A. A., Abdelrahman M. A., Attia A. A., Abdellatif O. E. 使用纳米流（Al2O3-水）对 PV/T 系统影响的实验研究。Thermal Science and Engineering Progress, 7, 2018, 1–7, 10.1016/j.tsep.2018.04.016. →
-
-[27]Sainthiya H., Beniwal N. S., Garg N. 夏季和冬季条件下使用正面冷却法提高光伏模块的效率。Journal of Solar Energy Engineering, Transactions of the ASME, 140(6), 2018, 1–7, 10.1115/1.4040238. a, b
-
-
-
-
+[27] Sainthiya H., Beniwal N. S., Garg N. 夏季和冬季条件下使用正面冷却法提高光伏模块的效率。Journal of Solar Energy Engineering, Transactions of the ASME, 140(6), 2018, 1–7, 10.1115/1.4040238. a, b
 
 - [28] Priyadarshi. N. ;., Padmanaban S., Maroti P. K., Sharma A. 变工运行条件下具有抗孤岛保护的并网光伏系统基于 FPSO 的 MPPT 实践研究。IEEE System Journal, 13, 2018, 1861–1871. a, b
+
 - [29] Priyadarshi N., Padmanaban S., Bhaskar M. S., Blaabjerg F., Sharma A. 一种用于并网光伏/风电发电系统的、带有 FPSO MPPT 算法的基于模糊 SVPWM 的逆变器控制实现：硬件实现。IET Electric Power Applications, 12, 2018, 962–971. a, b
+
 - [30] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Blaabjerg F., Bhaskar M. S. 波动太阳辐度下光伏并网的混合 ANFIS–PSO 型 MPPT 实验估计。IEEE Systems Journal, 14, 2020, 1218–1229. a, b
+
 - [31] Priyadarshi N., Padmanaban N., Bhaskar M. S., Blaabjerg F., Holm-Nielsen J. B., Azam F., Sharma A. K. 基于李雅普夫控制方案的光伏-燃料电池电池级单级并网。IEEE Systems Journal, 14, 2020, 3334–3342. a, b
-- [32] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 采用 MPPT 算法的用于水泵应用的基于新型 CUK–SEPIC 变变器的光伏电力系统。IET Power Electronics, 13, 2020, 2824–2830. a, b
+
+- [32] Priyadarshi N., Bhaskar M. S., Padmanaban N., Blaabjerg F., Azam F. 采用算法 MPPT 的用于水泵应用的基于新型 CUK–SEPIC 变变器的光伏电力系统。IET Power Electronics, 13, 2020, 2824–2830. a, b
+
 - [33] Priyadarshi N., Padmanaban N., Holm-Nielsen J. B., Bhaskar M. S., Azam F. 物联网增强的基于 PSO 算法的改进型 Zeta 变变器光伏最大功率点跟踪系统：硬件实现。IET Power Electronics, 13, 2020, 2775–2781. a, b
 
 # 编辑简介
 
-![](img/b_9783110714043-010_ingr_001.png) **Neeraj Priyadarshi 博士**于 2010 年从印度维洛尔理工学院（VIT，维洛尔）获得电力电子与驱动方向的技术硕士学位，并从印度拉贾斯斯坦邦乌代浦尔政府技术与工程学院获得博士学位。Priyadarshi 博士曾在丹麦埃斯比尔格奥尔堡大学（Aalborg University, Esbjerg 6700）能源技术系生物能源与绿色工程专业完成博士后研究，并在丹麦赫宁奥尔胡斯大学（Aarhus University, Birk Centerpark 40, 7400, Herning）业务发展与技术部门 CTIF 全球胶囊（CGC）任职。此前曾任职于印度 BITT Ranchi、MIT Purnea、JK University、Geetanjali Institute、Global Institute 和 SS Group。他目前的研究方向包括电力电子、电力电子、电能质量以及太阳能发电。目前他隶于`Aalborg University, Esbjerg 6700` 以及 `CTIF Global Capsule (CGC), Department of Business Development and Technology, Aarhus University, Birk Centerpark 40, 7400, Herning`。此前他曾任于 BITT Ranchi、MIT Purnea、JK University、Geetanjali Institute、Global Institute 以及 SS Group（印度）。他目前的研究方向包括电力电子、电力电子、电能质量、太阳能发电。目前他隶属于`Aalborg University, Esbjerg 6700` 以及 `CTIF Global Capsule (CGC), Department of Business Development and Technology, Aarhus University, Birk Centerpark 40, 7400, Herning`。
-
-![](img/b_9783110714043-010_ingr_002.png) **Sanjeikumar Padmanaban 博士**于 2002 年从印度马德拉斯大学（University of Madras）获得电气工程学士学位，2006 年从印度蓬迪辟里大学（Pondicherry University）获得电气工程（荣誉）硕士学位，并于 2012 年从意大利博洛尼亚大学（University of Bologna）获得电气工程博士学位。目前他隶属于丹麦赫宁奥尔胡斯大学（Aarhus University, Birk Centerpark 40, 7400, Herning）业务发展与技术部门 CTIF 全球胶囊（CGC）以及沙特阿拉伯利雅德苏丹大学（Prince Sultan University, Riyadh, Saudi Arabia）再生能源实验室。2012 年至 2013 年，他曾在 VIT 大学担任副教授。2013 年，加入印度国立学院（National Institute of Technology, India）担任教师。2014 年，受卡塔尔国家研究基金（卡塔尔政府）资助，受邀在卡塔尔大学（Qatar University, Qatar）电气工程系担任访问研究员。2014 年曾在爱尔兰柏林理工学院（Dublin Institute of Technology, Ireland）开展研究活动。2016 年至 2018 年，他在南非约翰内斯堡大学（University of Johannesburg, South Africa）电气与电子工程系担任副教授。自 2018 年以来，他一直是丹麦埃斯比尔格奥尔堡大学（Aalborg University, Esbjerg, Denmark）能源技术系的教师。
+![](img/b_9783110714043-010_ingr_001.png) **Neeraj Priyadarshi 博士**于 2010 年从印度维洛尔理工学院（VIT，维洛尔）获得电力电子与驱动方向的技术硕士学位，并从印度拉贾斯斯坦邦乌代浦尔政府技术与工程学院获得博士学位。Priyadarshi 博士曾在丹麦埃斯比尔格奥尔堡大学（Aalborg University, Esbjerg 6700）能源技术系生物能源与绿色工程专业完成博士后研究，并在丹麦赫宁奥尔胡斯大学（Aarhus University, Birk Centerpark 40, 7400, Herning）业务发展与技术部门 CTIF 全球胶囊（CGC）任职。此前曾任职于印度 BITT Ranchi、MIT Purnea、JK University、Geetanjali Institute、Global Institute 和 SS Group。他目前的研究方向包括电力电子、电力电子、电能质量以及太阳能发电。目前他隶属于`Aalborg University, Esbjerg 6700`以及`CTIF Global Capsule (CGC), Department of Business Development and Technology, Aarhus University, Birk Centerpark 40, 7400, Herning`。
 
 
 
 
+![](img/b_9783110714043-010_ingr_002.png)
 
-![](img/b_9783110714043-010_ingr_003.png) **Kamal Kant Hiran 博士** 现任印度拉贾斯坦邦乌代浦尔（Udaipur）西尔·帕达帕特·辛汉尼亚大学（SPSU）工程学院助理教授，同时兼是丹麦哥本哈根奥尔尔堡大学的研究员。他在亚洲、非洲和欧洲的学术界和研究领域拥有 15 年以上的丰富经验。他曾担任西非利比利亚 BlueCrest 学院副教授兼学术负责人；西非加纳学术城市学院（Academic City College）系主任；印度拉贾斯坦邦斋浦尔阿米蒂大学（Amity University）高级讲师；印度拉贾斯坦邦斋浦尔苏雷什·甘·维哈大学（Suresh Gyan Vihar University）助理教授；阿杰梅政府工程学院访问讲师。他曾获得多项荣誉，包括在波兰华沙瓦举行的 `IEEE` 第 8 区会议的国际旅行资助；来自德国帕绍 `ITS` 欧洲组织的德国国际旅行资助；`IEEE` 利比亚分会创始人奖；`M. Tech (Hons.)` 金牌奖；`IEEE` 加纳分会奖 - 技术与专业活动主席；`IEEE` 高级会员认可、`IEEE` 学生分会奖、`Elsevier` 审稿人认可奖以及埃塞俄比亚贡达尔大学授予的最佳研究论文奖。他在 SCI/Scopus/Web of Science 期刊和会议上发表了 35 篇研究论文，并与国际出版社（德国 De Gruyter、新德里 BPB、美国 `IGI` Global）出版了 77 书。他是 `Elsevier`、`Springer`、`IEEE`、`Benthem Science` 和 `IGI` Global 等多家知名国际期刊的审稿人和编辑委员会成员。他是在印度、加纳、利比利亚、德国、丹麦、波兰、约旦和埃塞俄比亚组织的许多国际研讨会、工作坊和会议的活跃成员。
+**Sanjeikumar Padmanaban 博士**于 2002 年从印度马德拉斯大学（University of Madras）获得电气工程学士学位，2006 年从印度蓬迪辟里大学（Pondicherry University）获得电气工程（荣誉）硕士学位，并于 2012 年从意大利博洛尼亚大学（University of Bologna）获得电气工程博士学位。目前他隶属于丹麦赫宁奥尔胡斯大学（Aarhus University, Birk Centerpark 40, 7400, Herning）业务发展与技术部门 CTIF 全球胶囊（CGC）以及沙特阿拉伯利雅德苏丹大学（Prince Sultan University, Riyadh, Saudi Arabia）再生能源实验室。2012 年至 2013 年，他曾在 VIT 大学担任副教授。2013 年，加入印度国立学院（National Institute of Technology, India）担任教师。2014 年，受卡塔尔国家研究基金（卡塔尔政府）资助，受邀在卡塔尔大学（Qatar University, Qatar）电气工程系担任访问研究员。2014 年曾在爱尔兰柏林理工学院（Dublin Institute of Technology, Ireland）开展研究活动。2016 年至 2018 年，他在南非约翰内斯堡大学（University of Johannesburg, South Africa）电气与电子工程系担任副教授。自 2018 年以来，他一直是丹麦埃斯比尔格奥尔堡大学（Aalborg University, Esbjerg, Denmark）能源技术系的教师。
 
-![](img/b_9783110714043-010_ingr_004.png) **Jens Bo Holm-Nielsen 博士** 现任于奥尔尔堡大学能源技术系，并担任埃斯比约能源部门主管。基于这些研究和活动，他在 2009 年建立了生物能源与绿色工程中心，并担任该研究小组负责人。他在生物精炼概念和沼气生产——厌氧消化领域拥有丰富经验。在丹麦各省和欧洲各州开展了生物能源系统的实施项目。他曾担任该领域许多行业的技术顾问。他执行了许多项关于生物能源、生物精炼工艺、沼气全链和绿色工程研究方面的大型欧盟和联合国项目。他撰写了 300 多篇科学论文。他曾受邀以不同身份担任超过 500 多场各类国际会议的委员会成员，并是欧洲、中亚和中国国际会议、工作坊和培训项目的组织者。重点领域：可再生能源 - 可持续性 - 所有人的绿色就业。
+![](img/b_9783110714043-010_ingr_003.png)
 
-![](img/b_9783110714043-010_ingr_005.png) **Ramesh C. Bansal 教授** 在多个国家拥有超过 25 年的研究、教学与学习、认证、工业和学术领导的多元化经验。目前，他是沙沙大学电气工程系的教授，普雷托利亚大学的特聘（荣誉）教授。在此之前，他是南非普雷托利亚大学（UP）电子与计算机工程（ECE）系的教授及电力小组负责人。在任职普雷托利亚大学之前，他曾任职于昆兰大学、南太平洋大学、印度 `BITS` 比尼 以及印度广播电台土木建设部。Bansal 教授在与工业和政府组织合作方面拥有丰富经验。他在公用事业的 `BS` 和 `ME` 项目开发和交付方面做出了重大贡献。他在设计和交付专业工程师 `CPD` 程序方面具有丰富经验。他开展了研究和咨询，并从工业和政府组织获得了大量资金。Bansal 教授发表了超过 325 篇期刊文章，并在会议上发表了论文，出版了书籍和书籍章节。他的 Google 引用超过 12,500 次，h 指数为 50。他指导过 25 名博士生、4 名博士后，且目前正在指导 5 名博士生。他多元化的研究兴趣涵盖可再生能源（风能、光伏、微电网）、电力系统和智能电网领域。Bansal 教授是几本高誉期刊的编辑/副主，包括 `IEEE` Systems Journal、`IET` Renewable Power Generation 以及智能电网与可持续能源技术与经济杂志。他是 `IET-UK` 的会士和特许工程师、印度工程师学会院士以及 `IEEE-USA` 的高级会员。
+**Kamal Kant Hiran 博士**现任印度拉贾斯坦邦乌代浦尔（Udaipur）西尔·帕达帕特·辛汉尼亚大学（SPSU）工程学院助理教授，同时兼是丹麦哥本哈根奥尔尔堡大学的研究员。他在亚洲、非洲和欧洲的学术界和研究领域拥有 15 年以上的丰富经验。他曾担任西非利比利亚 BlueCrest 学院副教授兼学术负责人；西非加纳学术城市学院（Academic City College）系主任；印度拉贾斯坦邦斋浦尔阿米蒂大学（Amity University）高级讲师；印度拉贾斯坦邦斋浦尔苏雷什·甘·维哈大学（Suresh Gyan Vihar University）助理教授；阿杰梅政府工程学院访问讲师。
+
+他曾获得多项荣誉，包括在波兰华沙瓦举行的 `IEEE` 第 8 区会议的国际旅行资助；来自德国帕绍 `ITS` 欧洲组织的德国国际旅行资助；`IEEE` 利比亚分会创始人奖；`M. Tech (Hons.)` 金牌奖；`IEEE` 加纳分会奖——技术与专业活动主席；`IEEE` 高级会员认可、`IEEE` 学生分会奖、`Elsevier` 审稿人认可奖以及埃塞俄比亚贡达尔大学授予的最佳研究论文奖。他在 SCI/Scopus/Web of Science 期刊和会议上发表了 35 篇研究论文，并与国际出版社（德国 De Gruyter、新德里 BPB、美国 `IGI` Global）出版了 77 书。他是 `Elsevier`、`Springer`、`IEEE`、`Benthem Science` 和 `IGI` Global 等多家知名国际期刊的审稿人和编辑委员会成员。他是在印度、加纳、利比里亚、德国、丹麦、波兰、约旦和埃塞俄比亚组织的许多国际研讨会、工作坊和会议的活跃成员。
+
+![](img/b_9783110714043-010_ingr_004.png)
+
+**Jens Bo Holm-Nielsen 博士**现任于奥尔尔堡大学能源技术系，并担任埃斯比约能源部门主管。基于这些研究和活动，他在 2009 年建立了生物能源与绿色工程中心，并担任该研究小组负责人。他在生物精炼概念和沼气生产——厌氧消化领域拥有丰富经验。在丹麦各省和欧洲各州开展了生物能源系统的实施项目。他曾担任该领域许多行业的技术顾问。他执行了许多项关于生物能源、生物精炼工艺、沼气全链和绿色工程研究方面的大型欧盟和联合国项目。
+
+他撰写了 300 多篇科学论文。他曾受邀以不同身份担任超过 500 多场各类国际会议的委员会成员，并是欧洲、中亚和中国国际会议、工作坊和培训项目的组织者。
+
+**重点领域：**可再生能源 - 可持续性 - 所有人的绿色就业。
+
+![](img/b_9783110714043-010_ingr_005.png)
+
+**Ramesh C. Bansal 教授**在多个国家拥有超过 25 年的研究、教学与学习、认证、工业和学术领导的多元化经验。目前，他是沙沙大学电气工程系的教授，普雷托利亚大学的特聘（荣誉）教授。在此之前，他是南非普雷托利亚大学（UP）电子与计算机工程（ECE）系的教授及电力小组负责人。在任职普雷托利亚大学之前，他曾任职于昆兰大学、南太平洋大学、印度 `BITS` 比尼以及印度广播电台土木建设部。
+
+Bansal 教授在与工业和政府组织合作方面拥有丰富经验。他在公用事业的 `BS` 和 `ME` 项目开发和交付方面做出了重大贡献。他在设计和交付专业工程师 `CPD` 程序方面具有丰富经验。他开展了研究和咨询，并从工业和政府组织获得了大量资金。
+
+Bansal 教授发表了超过 325 篇期刊文章，并在会议上发表了论文，出版了书籍和书籍章节。他的 Google 引用超过 12,500 次，h 指数为 50。他指导过 25 名博士生、4 名博士后，且目前正在指导 5 名博士生。他多元化的研究兴趣涵盖可再生能源（风能、光伏、微电网）、电力系统和智能电网领域。
+
+Bansal 教授是几本高誉期刊的编辑/副主，包括 `IEEE` Systems Journal、`IET` Renewable Power Generation 以及智能电网与可持续能源技术与经济杂志。他是 `IET-UK` 的会士和特许工程师、印度工程师学会院士以及 `IEEE-USA` 的高级会员。
 
 # 索引
 
-*   abundant (丰富的)
-    *   ACS
-    *   active (活跃的)
-    *   active power (有功)
-    *   Advanced Metering Infrastructure (高级计量架构)
-    *   air cooling (风冷)
-    *   Arduino
-    *   Arduino Integrated Development Environment (Arduino 集成开发环境)
-    *   artificial intelligence (人工智能)
-    *   artificial neural network (人工神经网络)
-    *   ATmegaP
-    *   AutoCAD
-*   bandwidth frequency (带宽频率)
-    *   big data (大数据)
-    *   big data analytics (大数据分析)
-    *   big-Endian (大端序)
-    *   blockchain (区块链)
-    *   Bluetooth-based RE (基于蓝牙的可再生能源)
-    *   Blynk
-    *   byte order (字节序)
-*   capacitor bank (电容器组)
-    *   cell temperature (电芯温度)
-    *   CENTRAL PROCESSING UNIT (中央处理器)
-    *   Channel ID (通道 ID)
-    *   classification-based learning (基于分类的学习)
-    *   closed-loop (闭环)
-    *   cloud computing (云计算)
-    *   cloud database (云数据库)
-    *   commercial (商业的)
-    *   comparison (比较)
-    *   consistency (一致性)
-    *   control system (控制系统)
-    *   controller (控制器)
-    *   conventional (传统的)
-    *   conventional energy (传统能源)
-    *   conventional system (传统系统)
-    *   converter (变流器)
-    *   cooling system (冷却系统)
-    *   cost-effective (高效益的)
-    *   current (电流)
-    *   cybersecurity (网络安全)
-*   dashboard (仪表板)
-    *   data capturing (数据采集)
-    *   data points (数据点)
-    *   DC link (直流链路)
-    *   decision tree (决策树)
-    *   derivative controller (导数控制器)
-    *   DFIG (双馈感应电机)
-    *   DFIGs (双馈感应电机)
-    *   D-FLC (模糊逻辑控制器)
-    *   DHT-11
-    *   differential signal (差分信号)
-    *   dq reference frame (dq 坐标系)
-    *   DSO (数字示波器)
-*   EasyEDA
-    *   efficient (高效的)
-    *   EIA/TIA-485
-    *   electrical performance (电气性能)
-    *   electricity consumption (用电)
-    *   electricity information (电力信息)
-    *   enclosure (外壳)
-    *   encoding format (编码格式)
-    *   Energy Commission (马来西亚能源委员会)
-    *   energy efficiency (能效率)
-    *   energy management (能源管理)
-    *   energy meter (电表)
-    *   energy researchers (能源研究人员)
-    *   energy storage (储能)
-    *   environmental pollution (环境污染)
-    *   error (错误)
-    *   errors (错误)
-    *   ESP866
-    *   ESP866 Wi-Fi
-    *   ESPSoftwareSerial
-*   false data injection (虚假数据注入)
-    *   fault (故障)
-    *   fault diagnosis (故障诊断)
-    *   fixed speed (定速)
-    *   FLC (模糊控制器)
-    *   Force convection (强制对流)
-    *   FPGA (现场可逻辑门阵)
-    *   frequency (频率)
-    *   Function code (功能代码)
-    *   functionality validation (功能验证)
-    *   fuzzification (模糊化)
-    *   fuzzy logic controller (模糊逻辑控制器)
-    *   fuzzy rules (模糊规则)
-*   Gaussian membership (高斯隶属)
-    *   Gaussian wind speed (高斯风速)
-    *   generating capacity (发电容量)
-    *   generation (发电)
-    *   genetic algorithm (遗传算法)
-    *   GPRS
-    *   green energy (绿色能源)
-    *   grid (电网)
-    *   grid integration (电网接入)
-    *   grid side control (网侧控制)
-    *   grid side converter (网侧变流器)
-    *   GSC (网侧变流器)
-    *   GSM-based RE (基于 GSM 的可再生能源)
-*   Hall sensor (霍尔传感器)
-    *   hazardous emission (有害排放)
-    *   HIL real-time software (HIL 实时软件)
-    *   HIL SCADA (HIL 监控数据采集系统)
-    *   holding register (保持寄存器)
-    *   home automation (家居自动化)
-    *   hybrid (混合)
-    *   hybrid system (混合系统)
-*   IC SN74LS14
-    *   IEC
-    *   IEEE-754
-    *   industrial revolution (工业革命)
-    *   input register (输入寄存器)
-    *   Interconnection (互连)
-    *   internet connection (互联网连接)
-    *   Internet of things (物联网)
-    *   Introduction (引言)
-        *   communication technologies (通信技术)
-        *   electrical substation (变电站)
-        *   evolution of IoT (IoT 的演变)
-        *   generating stations (发电站)
-        *   grid (电网)
-        *   high-voltage transmission lines (高压输线)
-        *   Internet of energy (能源互联网)
-        *   IoT (物联网)
-        *   low-voltage distribution lines (低压配电线)
-        *   power factors (功率因子)
-        *   power grid (电网)
+- abundant (丰富的)
+  - ACS
+  - active (活跃的)
+  - active power (有功)
+  - Advanced Metering Infrastructure (高级计量架构)
+  - air cooling (风冷)
+  - Arduino
+  - Arduino Integrated Development Environment (Arduino 集成开发环境)
+  - artificial intelligence (人工智能)
+  - artificial neural network (人工神经网络)
+  - ATmegaP
+  - AutoCAD
 
+- bandwidth frequency (带宽频率)
+  - big data (大数据)
+  - big data analytics (大数据分析)
+  - big-Endian (大端序)
+  - blockchain (区块链)
+  - Bluetooth-based RE (基于蓝牙的可再生能源)
+  - Blynk
+  - byte order (字节序)
 
+- capacitor bank (电容器组)
+  - cell temperature (电芯温度)
+  - CENTRAL PROCESSING UNIT (中央处理器)
+  - Channel ID (通道 ID)
+  - classification-based learning (基于分类的学习)
+  - closed-loop (闭环)
+  - cloud computing (云计算)
+  - cloud database (云数据库)
+  - commercial (商业的)
+  - comparison (比较)
+  - consistency (一致性)
+  - control system (控制系统)
+  - controller (控制器)
+  - conventional (传统的)
+  - conventional energy (传统能源)
+  - conventional system (传统系统)
+  - converter (变流器)
+  - cooling system (冷却系统)
+  - cost-effective (高效益的)
+  - current (电流)
+  - cybersecurity (网络安全)
 
+- dashboard (仪表板)
+  - data capturing (数据采集)
+  - data points (数据点)
+  - DC link (直流链路)
+  - decision tree (决策树)
+  - derivative controller (导数控制器)
+  - DFIG (双馈感应电机)
+  - DFIGs (双馈感应电机)
+  - D-FLC (模糊逻辑控制器)
+  - DHT-11
+  - differential signal (差分信号)
+  - dq reference frame (dq 坐标系)
+  - DSO (数字示波器)
 
+- EasyEDA
+  - efficient (高效的)
+  - EIA/TIA-485
+  - electrical performance (电气性能)
+  - electricity consumption (用电)
+  - electricity information (电力信息)
+  - enclosure (外壳)
+  - encoding format (编码格式)
+  - Energy Commission (马来西亚能源委员会)
+  - energy efficiency (能效率)
+  - energy management (能源管理)
+  - energy meter (电表)
+  - energy researchers (能源研究人员)
+  - energy storage (储能)
+  - environmental pollution (环境污染)
+  - error (错误)
+  - errors (错误)
+  - ESP866
+  - ESP866 Wi-Fi
+  - ESPSoftwareSerial
+
+- false data injection (虚假数据注入)
+  - fault (故障)
+  - fault diagnosis (故障诊断)
+  - fixed speed (定速)
+  - FLC (模糊控制器)
+  - Force convection (强制对流)
+  - FPGA (现场可逻辑门阵)
+  - frequency (频率)
+  - Function code (功能代码)
+  - functionality validation (功能验证)
+  - fuzzification (模糊化)
+  - fuzzy logic controller (模糊逻辑控制器)
+  - fuzzy rules (模糊规则)
+
+- Gaussian membership (高斯隶属)
+  - Gaussian wind speed (高斯风速)
+  - generating capacity (发电容量)
+  - generation (发电)
+  - genetic algorithm (遗传算法)
+  - GPRS
+  - green energy (绿色能源)
+  - grid (电网)
+  - grid integration (电网接入)
+  - grid side control (网侧控制)
+  - grid side converter (网侧变流器)
+  - GSC (网侧变流器)
+  - GSM-based RE (基于 GSM 的可再生能源)
+
+- Hall sensor (霍尔传感器)
+  - hazardous emission (有害排放)
+  - HIL real-time software (HIL 实时软件)
+  - HIL SCADA (HIL 监控数据采集系统)
+  - holding register (保持寄存器)
+  - home automation (家居自动化)
+  - hybrid (混合)
+  - hybrid system (混合系统)
+
+- IC SN74LS14
+  - IEC
+  - IEEE-754
+  - industrial revolution (工业革命)
+  - input register (输入寄存器)
+  - Interconnection (互连)
+  - internet connection (互联网连接)
+  - Internet of things (物联网)
+  - Introduction (引言)
+    - communication technologies (通信技术)
+    - electrical substation (变电站)
+    - evolution of IoT (IoT 的演变)
+    - generating stations (发电站)
+    - grid (电网)
+    - high-voltage transmission lines (高压输线)
+    - Internet of energy (能源互联网)
+    - IoT (物联网)
+    - low-voltage distribution lines (低压配电线)
+    - power factors (功率因子)
+    - power grid (电网)
 
 # 智能电网
+
 - 传统电网结构
-    - 集中式
-    - 去中心化
-    - 分布式
-    - 能量发电分布
+  - 集中式
+  - 去中心化
+  - 分布式
+  - 能量发电分布
+
 - 通信系统需求
 
-# 物联网 (IoT)
+# 物联网（IoT）
+
 - 发电领域的 IoT
+
 - 智能电网网络中的 IoT
-    - 应用层
-    - IoT 在电力系统不同层级中的应用
-    - 通信与控制层
-    - 数据分析层
-    - 设备
-    - 配电部门的 IoT
-        - 配电网
-    - 发电部门的 IoT
-        - 光伏电站中的 IoT
-        - 风力发电厂中的 IoT
-    - 输电部门的 IoT
+  - 应用层
+  - IoT 在电力系统不同层级中的应用
+  - 通信与控制层
+  - 数据分析层
+  - 设备
+  - 配电部门的 IoT
+    - 配电网
+  - 发电部门的 IoT
+    - 光伏电站中的 IoT
+    - 风力发电厂中的 IoT
+  - 输电部门的 IoT
+
 - 智能电网网络中的 IoT：
-    - 网边缘层的物理设备
+  - 网边缘层的物理设备
+
 - IoT 平台
+
 - IoT 技术
+
 - IoT 智能单相电表能量监控系统
 
 # 关键词与技术
+
 - Janitza
+
 - k-近邻
+
 - 笔记本电脑
-    - LCD 屏幕
-    - 库
-    - 线性
-    - 小端序 (little-Endian)
+  - LCD 屏幕
+  - 库
+  - 线性
+  - 小端序 (little-Endian)
+
 - 机器学习
-    - 马来西亚电力标准
-    - Mamdani
-    - 主从式
-    - 数学建模
-    - MATLAB
-    - MATLAB 模型
-    - 最大功率点跟踪
-    - 隶属函数
-    - 计量系统
-        - 自动抄表系统
-        - NodeMCU
-    - 微控制器
-    - 移动医疗
-    - Modbus
-    - Modbus Explorer
-    - ModbusMaster
-    - Modbus-RTU
-    - 模式 4 I 型模糊逻辑控制器
-    - 模式 IV
-    - 模型性能
-    - 模式
-    - 监控系统
-    - 多路复
+  - 马来西亚电力标准
+  - Mamdani
+  - 主从式
+  - 数学建模
+  - MATLAB
+  - MATLAB 模型
+  - 最大功率点跟踪
+  - 隶属函数
+  - 计量系统
+    - 自动抄表系统
+    - NodeMCU
+  - 微控制器
+  - 移动医疗
+  - Modbus
+  - Modbus Explorer
+  - ModbusMaster
+  - Modbus-RTU
+  - 模式 4 I 型模糊逻辑控制器
+  - 模式 IV
+  - 模型性能
+  - 模式
+  - 监控系统
+  - 多路复
+
 - NodeMCU
-    - 非线性
-    - 不可再生能源
-    - 常闭
-    - 常开
-    - NTP
+  - 非线性
+  - 不可再生能源
+  - 常闭
+  - 常开
+  - NTP
+
 - 离群值
+
 - 无源式系统
-    - 峰峰值
-    - 性能参数
-    - 永磁
-    - 每分钟
-    - P-FLC
-    - 相位数据集中器
-    - 相位测量单元 (PMU)
-    - PI
-    - PI 控制器
-    - PII FLC
-    - PI 模式 4 I 型模糊逻辑控制器
-    - PI-T1FLC
-    - 倾角
-    - PLC
-    - 功率因子
-    - 发电
-    - 功率测量单元
-    - 电能质量
-    - 功率平滑
-    - 初步物理设计
-    - 建议的模糊模式 4
-    - 保护
-    - 保护设备
-    - PulseIn
-    - 光伏阵列
-    - 光伏太阳组件
-    - PWM (脉冲宽度调制)
+  - 峰峰值
+  - 性能参数
+  - 永磁
+  - 每分钟
+  - P-FLC
+  - 相位数据集中器
+  - 相位测量单元 (PMU)
+  - PI
+  - PI 控制器
+  - PII FLC
+  - PI 模式 4 I 型模糊逻辑控制器
+  - PI-T1FLC
+  - 倾角
+  - PLC
+  - 功率因子
+  - 发电
+  - 功率测量单元
+  - 电能质量
+  - 功率平滑
+  - 初步物理设计
+  - 建议的模糊模式 4
+  - 保护
+  - 保护设备
+  - PulseIn
+  - 光伏阵列
+  - 光伏太阳组件
+  - PWM (脉冲宽度调制)
+
 - 无功功率
-    - 实时
-    - 实时 HIL 模型
-    - 实时模型
-    - 实时监控
-    - 现实案例
-        - 优点
-        - 缺点
-    - 整流器
-    - 寄存器地址
-    - 强化学习
-    - 继电器
-    - 可靠性
-    - 可再生
-    - 住宅用
-    - 旋转坐标
-    - 转子侧
-    - RS-485
-    - RSC
-    - RTU
+  - 实时
+  - 实时 HIL 模型
+  - 实时模型
+  - 实时监控
+  - 现实案例
+    - 优点
+    - 缺点
+  - 整流器
+  - 寄存器地址
+  - 强化学习
+  - 继电器
+  - 可靠性
+  - 可再生
+  - 住宅用
+  - 旋转坐标
+  - 转子侧
+  - RS-485
+  - RSC
+  - RTU
+
 - 饱和输出
-    - SCADA
-    - 原理图
-    - 原理编辑器 (Schematic Editor)
-    - 施密特触发器
-    - 串行传输
-    - 点
-    - 调节时间
-    - 单精度浮点
-    - 从站标识符
-    - 智能电能表
-    - 智能电网
-    - 智能电表
-    - 太阳能能量采集
-    - 太阳辐射
-    - 太阳能板
-    - 太阳能跟踪器
-    - 太阳能跟踪
-    - 稳定性
-    - 独立模式
-    - 先进冷却
-    - 定子电压
-    - 变电站
-    - 监督学习
-    - 支持向量机
-    - 可持续性
-    - 系统架构
+
+
+
+# 术语表
+
+- SCADA
+- 原理图
+- 原理编辑器（Schematic Editor）
+- 施密特触发器
+- 串行传输
+- 点
+- 调节时间
+- 单精度浮点
+- 从站标识符
+- 智能电能表
+- 智能电网
+- 智能电表
+- 太阳能能量采集
+- 太阳辐射
+- 太阳能板
+- 太阳能跟踪器
+- 太阳能跟踪
+- 稳定性
+- 独立模式
+- 先进冷却
+- 定子电压
+- 变电站
+- 监督学习
+- 支持向量机
+- 可持续性
+- 系统架构
 - TCP/IP 协议
-    - 技术
-    - 技术
-    - 温度
-    - 国家电力公司 (Tenaga National Berhad)
-    - ThingSpeak
-    - 时间序列分类
-    - TNB
-    - 变压器
-    - 瞬态稳定性
-    - 瞬态
-    - 三角
-    - 触发
-    - 涡轮叶片
-    - II 型风电机
-    - III 型 DFIGs
-    - III 型风电机
-    - IV 型
-    - TYPHOON HIL
-    - Typhoon 软件
+- 技术
+- 温度
+- 国家电力公司（Tenaga National Berhad）
+- ThingSpeak
+- 时间序列分类
+- TNB
+- 变压器
+- 瞬态稳定性
+- 瞬态
+- 三角
+- 触发
+- 涡轮叶片
+- II 型风电机
+- III 型 DFIGs
+- III 型风电机
+- IV 型
+- TYPHOON HIL
+- Typhoon 软件
 - 无监督学习
-    - 用户界面
-    - UTC
+- 用户界面
+- UTC
 - 验证过的
-    - 验证
-    - 变速
-    - 电压
+- 验证
+- 变速
+- 电压
 - 水冷
-    - 波形
-    - WeMos
-    - 广域监控系统
-    - Wi-Fi
-    - 基于 Wi-Fi 的可再生能源
-    - 风能
-    - 风模型
-    - 词序
-    - 写键 (Write Key)
+- 波形
+- WeMos
+- 广域监控系统
+- Wi-Fi
+- 基于 Wi-Fi 的可再生能源
+- 风能
+- 风模型
+- 词序
+- 写键（Write Key）
 - XoR
 
-# De Gruyter 计算智能前沿 (Frontiers in Computational Intelligence)
+# De Gruyter 计算智能前沿（Frontiers in Computational Intelligence）
+
 ## 第 11 卷：网络犯罪 - 现代原理与算法
-Gulshan Gupta, Kavita Sharma (编辑)
-ISBN: `978-3-11-06773-9`
-PDF: `978-3-11-06774-8`
-EPUB: `978-3-11-06775-6`
+
+Gulshan Gupta, Kavita Sharma（编辑）
+
+ISBN：`978-3-11-06773-9`  
+PDF：`978-3-11-06774-8`  
+EPUB：`978-3-11-06775-6`
 
 ## 第 10 卷：用于可持续发展的区块链
-Deepak Khanchi, Ajay Vyas, Sanjeevumar Padman (编辑)
-ISBN: `978-3-11-06024-4`
-PDF: `978-3-11-06025-1`
-EPUB: `978-3-11-06025-7`
+
+Deepak Khanchi, Ajay Vyas, Sanjeevumar Padman（编辑）
+
+ISBN：`978-3-11-06024-4`  
+PDF：`978-3-11-06025-1`  
+EPUB：`978-3-11-06025-7`
 
 ## 第 9 卷：机器学习 - 新兴趋势
-Rik Das, Siddhartha Bhattaryya, Sudarshan Nandy (编辑)
-ISBN: `978-3-11-06085-3`
-PDF: `978-3-11-06098`
-EPUB: `978-3-11-06085`
+
+Rik Das, Siddhartha Bhattaryya, Sudarshan Nandy（编辑）
+
+ISBN：`978-3-11-06085-3`  
+PDF：`978-3-11-06098`  
+EPUB：`978-3-11-06085`
 
 ## 第 8 卷：物联网 - 挑战
-Abhishek Chatterjee, Pramod Singh, Vishal Jain (编辑)
-ISBN: `978-3-11-06109-7`
-PDF: `978-3-11-06114-3`
-EPUB: `978-3-11-06111-4`
+
+Abhishek Chatterjee, Pramod Singh, Vishal Jain（编辑）
+
+ISBN：`978-3-11-06109-7`  
+PDF：`978-3-11-06114-3`  
+EPUB：`978-3-11-06111-4`
 
 ## 第 7 卷：深度学习 - 研究与应用
-Vaclav Smala, Aboul Hassan, Susanta Chakraborty (编辑)
-ISBN: `978-3-11-06709-0`
-PDF: `978-3-11-06710-5`
-EPUB: `978-3-11-06709-2`
+
+Vaclav Smala, Aboul Hassan, Susanta Chakraborty（编辑）
+
+ISBN：`978-3-11-06709-0`  
+PDF：`978-3-11-06710-5`  
+EPUB：`978-3-11-06709-2`
 
 ## 第 6 卷：量子机器学习
-Indrajit Pan, Ashish Mani, Elizabeth Behrman (编辑)
-ISBN: `978-3-11-06706-4`
-PDF: `978-3-11-06707-0`
-EPUB: `978-3-11-06707-1`
+
+Indrajit Pan, Ashish Mani, Elizabeth Behrman（编辑）
+
+ISBN：`978-3-11-06706-4`  
+PDF：`978-3-11-06707-0`  
+EPUB：`978-3-11-06707-1`
 
 ## 第 5 卷：机器学习应用
-Surekha Borra, Nilanjan Dey, Mohamed Bouhlel (编辑)
-ISBN: `978-3-11-06211-0`
-PDF: `978-3-11-06214-3`
-EPUB: `978-3-11-06211-5`
+
+Surekha Borra, Nilanjan Dey, Mohamed Bouhlel（编辑）
+
+ISBN：`978-3-11-06211-0`  
+PDF：`978-3-11-06214-3`  
+EPUB：`978-3-11-06211-5`
 
 ## 第 4 卷：智能决策系统 - 信号处理
-Mohamed Salim, Mohammad Sharma, Kavita Gupta (编辑)
-ISBN: `978-3-11-06186-8`
-PDF: `978-3-11-06187-6`
-EPUB: `978-3-11-06187-1`
+
+Mohamed Salim, Mohammad Sharma, Kavita Gupta（编辑）
+
+ISBN：`978-3-11-06186-8`  
+PDF：`978-3-11-06187-6`  
+EPUB：`978-3-11-06187-1`
 
 ## 第 3 卷：大数据安全
-Shibakali Gupta, Indradip Banerjee, Siddhartha Bhattaryya (编辑)
-ISBN: `978-3-11-06058-4`
-PDF: `978-3-11-06060-5`
-EPUB: `978-3-11-06059-6`
+
+Shibakali Gupta, Indradip Banerjee, Siddhartha Bhattaryya（编辑）
+
+ISBN：`978-3-11-06058-4`  
+PDF：`978-3-11-06060-5`  
+EPUB：`978-3-11-06059-6`
 
 ## 第 2 卷：智能多媒体数据分析
-Siddhartha Bhattaryya, Indrajit Pan, Abhijit Das, Shibakali Gupta (编辑)
-ISBN: `978-3-11-05520-7`
-PDF: `978-3-11-05503-1`
-EPUB: `978-3-11-05503-3`
+
+Siddhartha Bhattaryya, Indrajit Pan, Abhijit Das, Shibakali Gupta（编辑）
+
+ISBN：`978-3-11-05520-7`  
+PDF：`978-3-11-05503-1`  
+EPUB：`978-3-11-05503-3`
 
 ## 第 1 卷：用于大数据分析的机器学习
-Siddhartha Bhattaryya, Hrishikesh Bhaumik, Anirban Mukherjee, Sourav De (编辑)
-ISBN: `978-3-11-05503-2`
-PDF: `978-3-11-05514-3`
-EPUB: `978-3-11-05507-7`
+
+Siddhartha Bhattaryya, Hrishikesh Bhaumik, Anirban Mukherjee, Sourav De（编辑）
+
+ISBN：`978-3-11-05503-2`  
+PDF：`978-3-11-05514-3`  
+EPUB：`978-3-11-05507-7`
 
 [www.degruyter.com](http://www.degruyter.com)
-

@@ -1,99 +1,107 @@
+
 # 编程语言探索指南
 
-
-
-
-
-
-
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_0_0.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_1.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_2.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_3.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_4.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_5.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_6.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_7.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_8.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_9.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_10.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_11.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_12.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_13.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_14.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_15.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_16.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_17.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_18.png)
-![](img/2cd8452ff5a372a7459559ad1d0834e4_0_19.png)
 
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_1.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_2.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_3.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_4.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_5.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_6.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_7.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_8.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_9.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_10.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_11.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_12.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_13.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_14.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_15.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_16.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_17.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_18.png)
+
+![](img/2cd8452ff5a372a7459559ad1d0834e4_0_19.png)
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_2_0.png)
 
 Ray Toal
+
 Rachel Rivera
+
 Alexander Schneider
+
 Eileen Choe
-
-
-
-
-
 
 致 Noëlle
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_6_0.png)
 
-
 前言 xiii
-
-
-
-
-
 
 5.4 块 86
 
-
-
-
 9.4 标记联合 178
+
 9.6 效应 182
 
-
-
 12.1 你好 Swift 244
+
 12.2 基础 245
+
 12.3 选项 252
+
 12.4 操作符 254
+
 12.5 协议 256
+
 12.6 扩展 258
+
 12.7 安全性 260
+
 12.8 计数 261
+
 12.9 Swift 总结 265
 
-
 ### 第 14 章 • 后记 305
+
 14.1 我们去了哪里 305
+
 14.1.1 函数 305
+
 14.1.2 类型 306
+
 14.1.3 表达式 307
+
 14.1.4 控制流 308
+
 14.1.5 并发 309
+
 14.1.6 模块化 310
+
 14.1.7 元编程 310
+
 14.2 未来展望 311
 
-
-
-
-
-
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_12_0.png)
-
-
-
-
 
 # 组织结构
 
@@ -137,11 +145,7 @@ Eileen Choe
 
 # 补充材料
 
-所有代码以及显示如何运行示例的测试都可以在在线仓库 https://github.com/rtoal/ple 中找到。我们还在仓库中包含了关于文中介绍语言的安装和工作的笔记，因为这些信息会发生变化。仓库还包含其他感兴趣的代码，并将随着编程语言的演进而增长和更新。错误说明、额外练习和奖励材料可以在配套网站 http://rtoal.github.io/ple/ 找到。
-
-
-
-
+所有代码以及显示如何运行示例的测试都可以在在线仓库 `https://github.com/rtoal/ple` 中找到。我们还在仓库中包含了关于文中介绍语言的安装和工作的笔记，因为这些信息会发生变化。仓库还包含其他感兴趣的代码，并将随着编程语言的演进而增长和更新。错误说明、额外练习和奖励材料可以在配套网站 `http://rtoal.github.io/ple/` 找到。
 
 # 致谢
 
@@ -149,17 +153,28 @@ Eileen Choe
 
 我们非常感谢本书制作过程中使用的以下商标和图像的所有者：
 
-- *Chris Williams 编写的非官方 JavaScript 代码*是根据 https://github.com/voodootikod/logo.js/blob/master/LICENSE 中的许可条款使用的。
+- *Chris Williams 编写的非官方 JavaScript 代码*是根据 `https://github.com/voodootikod/logo.js/blob/master/LICENSE` 中的许可条款使用的。
+
 - Logo 代码经 Jeremy Ashens 许可使用。
-- Lua 项目（© 1998, Lua，由 Alexandre Nakonechny 设计）根据 https://www.lua.org/images/ 的条款使用。
+
+- Lua 项目（© 1998, Lua，由 Alexandre Nakonechny 设计）根据 `https://www.lua.org/images/` 的条款使用。
+
 - Python 标志（Python 软件基金会的商标）经 Python 软件基金会委员会许可使用。
-- Ruby 标志（© 2006, Yukihiro Matsumoto）根据知识共享署名-相同共享 2.5 许可协议（https://www.ruby-lang.org/en/about/）使用。
+
+- Ruby 标志（© 2006, Yukihiro Matsumoto）根据知识共享署名-相同共享 2.5 许可协议（`https://www.ruby-lang.org/en/about/`）使用。
+
 - Julia 编程语言标志（由 Stefan Karpinski 设计）经 Jeff Bezanson 许可使用。
+
 - Java 标志经 Oracle 公司许可使用。Oracle 和 Java 是 Oracle 和/或其关联公司的注册商标。
+
 - Cloj 和 The Closure 标志版权所有 © 2007 Rich Hickey。该标志经 Hickey 先生许可使用。
+
 - Elm 标志经 Evan Czapicki 许可使用。
+
 - Erlang 编程语言的标志经爱立信（Ericsson）许可使用。
-- Go Gopher 由 Renee Flech 创建，采用知识共享署名 3.0 许可协议。（https://blog.golang.org/gopher）
+
+- Go Gopher 由 Renee Flech 创建，采用知识共享署名 3.0 许可协议。（`https://blog.golang.org/gopher`）
+
 - Swift 和 Swift 标志是 Apple Inc. 的商标，在美国及其他国家注册。该标志经 Apple Inc. 许可使用。
 
 我们还感谢 Taylor & Francis 的员工，包括高级收购编辑 Randi Cohen 和项目协调员 Marcus Fontaine，没有他们的工作，这本书将无法完成。
@@ -176,7 +191,7 @@ Eileen Choe
 
 如何如此？尝试写一个函数来计算数组中偶数的平方和。如果你只知道 C，你可能会这样思考这个练习：
 
-```
+```c
 int sum_of_even_squares(int* a, unsigned int length) {
     int total = 0;
     for (unsigned int i = 0; i < length; i++) {
@@ -190,7 +205,7 @@ int sum_of_even_squares(int* a, unsigned int length) {
 
 但这并不令人满意：变量 `i` 为什么要在那里？我们为什么要关心数组的索引？在 Swift 中，我们可以直接遍历数组元素。
 
-```
+```swift
 func sumOfSquares(_ a: [Int]) -> Int {
     var sum = 0
     for x in a {
@@ -207,12 +222,14 @@ func sumOfSquares(_ a: [Int]) -> Int {
 也许稍微好一点，但我们可以完全不同的方式表达解决方案。与其让 `for` 循环及其嵌套的 `if` 语句让每个单独元素负责整体计算，我们不如让数组来工作：
 
 1. 按元素进行选择或过滤，
+
 2. 在选定的元素上应用平方映射（Mapping），最后
+
 3. 通过求和将平方归约为单个值（Reducing）。
 
 许多流行语言都有这些操作。Ruby：
 
-```
+```ruby
 def sum_of_even_squares(a)
   a.select{|x| x % 2 == 0}.map{|x| x * x}.reduce(0, +)
 ```
@@ -256,18 +273,22 @@ def sum_even_squares(a):
 字面量是值的表示。以下是一些：
 
 - 95 是九十五的字面量。该值的其他表示形式包括 0xF（Ox 是十六进制数的常用前缀）、0b101111（b 表示二进制）和 0.09564（E 表示“乘以十次方”）。
+
 - true（有时为 True 或 T）是真的字面量；false（或 False 或 F）是假的字面量。
+
 - 引号字符 "Hello, how are you?” 是表示常用英语短语的字符串。
+
 - :alice（在语言中渲染为 alice）是一种被称为原子或符号的字面量。原子只代表自身，不代表其他任何东西。与字符串不同，它们不会分解为字符序列。
+
 - [98.6] 是值序列：零、真和九十八点六的字面量。
+
 - {latitude: 29.9792, longitude: 31.1344} 是吉萨金字塔位置的字面量。
+
 - x = x / 2 是一个表示减半参数的函数的字面量。该函数的替代形式包括 {%0 % 2}, #/(x % 2), lambda x: x / 2。
+
 - null（有时为 nil 或 None）是用于有意表示缺失值的字面量。
+
 - undefined 是用于指示某些值未知或故意未划分的字面量。将其理解为“我不知道”、“我不在”或“不关你的事”。
-
-
-
-
 
 # 编程探索
 
@@ -275,49 +296,43 @@ def sum_even_squares(a):
 
 表达式是字面量、变量和操作符的组合，通过求值产生一个值。某些表达式要求所有操作数都进行求值；而某些（例如常用的 && ("与")和 || ("或")）则不需要。下面是一个表达式求值的示例，假设 `s` 持有字符串 `y` 的 `indexOf('r')`，而 `y` 的值为 100，并且找到了值 `true`：
 
-- 7 * indexOfOf('r') + Math.sqrt(y) / 2 <= 0 || !found
-- 7 + 2 * Math.sqrt(y) / 2 <= 0 || !found
-- 14 + Math.sqrt(y) / 2 <= 0 || !found
-- 14 + Math.sqrt(100) / 2 <= 0 || !found
-- 14 + 10 / 2 <= 0 || !found
-- 14 + 5 <= 0 || !found
-- 19 <= 0 || !found
-- false || !found
-- !found
-- !true
-- !false
+```
+7 * indexOfOf('r') + Math.sqrt(y) / 2 <= 0 || !found
+7 + 2 * Math.sqrt(y) / 2 <= 0 || !found
+14 + Math.sqrt(y) / 2 <= 0 || !found
+14 + Math.sqrt(100) / 2 <= 0 || !found
+14 + 10 / 2 <= 0 || !found
+14 + 5 <= 0 || !found
+19 <= 0 || !found
+false || !found
+!found
+!true
+!false
+```
 
-例程（routine）是一个（通常带参数的）代码单元。作为子程序（subroutines）时，例程只能从开始开始；那些能够在调用时从产生的地方继续执行的是协程（coroutines）。某些语言使用“函数”（function）一词代替子程序；另一些语言仅将其用于返回值的子程序。协程在单条指令序列上交替执行，显式地将控制权交给彼此；而线程和进程独立运行，当它们的数量超过可用硬件执行单元的数量时，会被操作系统抢占。通常情况下，我们谈论线程共享内存，而进程维护自己的本地内存，并仅通过消息进行通信。
 
-类型（type）决定了一个具有某些规定行为的值集合。一个值 `v` 具有类型意味着所有操作都可能应用到 `v`：编程语言理论中的“类型”概念是非常深奥的，甚至写满了整整本书，例如 [97]。类型系统是语言研究的核心，因为语言类型系统的意义在于对我们能说和不能说的内容提供（有意义的）约束。
 
-我们有一种直觉，认为值属于某些类型——`true` 属于布尔类型，0.3 属于某种数值类型，而 "Hello" 属于字符串类型——但这些类型随语言不同而存在差异。某些语言对整数和非整数数值使用不同的类型。某些语言将类型组织成超类-子类关系，在任何需要期望超类值的地方可以使用子类值。某些语言将所有函数归为单一类型，而另一些语言则根据参数或返回值对函数进行类型划分：
+例程（`routine`）是一个（通常带参数的）代码单元。作为子程序（`subroutines`）时，例程只能从开始开始；那些能够在调用时从产生的地方继续执行的是协程（`coroutines`）。某些语言使用“函数”（`function`）一词代替子程序；另一些语言仅将其用于返回值的子程序。协程在单条指令序列上交替执行，显式地将控制权交给彼此；而线程和进程独立运行，当它们的数量超过可用硬件执行单元的数量时，会被操作系统抢占。通常情况下，我们谈论线程共享内存，而进程维护自己的本地内存，并仅通过消息进行通信。
+
+类型（`type`）决定了一个具有某些规定行为的值集合。一个值 `v` 具有类型意味着所有操作都可能应用到 `v`：编程语言理论中的“类型”概念是非常深奥的，甚至写满了整整本书，例如 [97]。类型系统是语言研究的核心，因为语言类型系统的意义在于对我们能说和不能说的内容提供（有意义的）约束。
+
+我们有一种直觉，认为值属于某些类型——`true` 属于布尔类型，`0.3` 属于某种数值类型，而 `"Hello"` 属于字符串类型——但这些类型随语言不同而存在差异。某些语言对整数和非整数数值使用不同的类型。某些语言将类型组织成超类-子类关系，在任何需要期望超类值的地方可以使用子类值。某些语言将所有函数归为单一类型，而另一些语言则根据参数或返回值对函数进行类型划分：
 
 # 引言 ■ 5
 
 | 语言 | 字面量 (x) return * x end | 类型 |
 | --- | --- | --- |
-| Lua | function (x) return * x end | function |
-| JavaScript | x => x * x | Object |
-| Elm | x -> x * x | number -> number |
-| Python | lambda x: x * x | function |
-| Julia | x -> x * x | Function |
-| Scala | (x: Int) => x * x | Int => Int |
-| Go | func (x int) { return x*x } | func(int) int |
+| Lua | `function (x) return * x end` | `function` |
+| JavaScript | `x => x * x` | `Object` |
+| Elm | `x -> x * x` | `number -> number` |
+| Python | `lambda x: x * x` | `function` |
+| Julia | `x -> x * x` | `Function` |
+| Scala | `(x: Int) => x * x` | `Int => Int` |
+| Go | `func (x int) { return x*x }` | `func(int) int` |
 
-与类型概念密切相关的是类（class），它是一种实例化具有特定内部结构的对象的类别。某些语言没有类，某些语言混淆了类型和状态的概念，并刻意区分它们。
+与类型概念密切相关的是类（`class`），它是一种实例化具有特定内部结构的对象的类别。某些语言没有类，某些语言混淆了类型和状态的概念，并刻意区分它们。
 
-语句（statement）执行某种动作。作为子程序（subroutines）时，例程（routine）只能从开始开始；那些能够在调用时从产生的地方继续执行的是协程（coroutines）。某些语言使用函数（function）代替子程序（subroutines）；协程（coroutines）在单条指令序列上交替执行，显式地将控制权交给彼此；而线程和进程独立运行，当它们的数量超过可用硬件执行单元的数量时，会被操作系统抢占。通常情况下，我们谈论线程共享内存，而进程维护自己的本地内存，并仅通过消息进行通信。
-
-类型（type）决定了一个具有某些规定行为的值集合。一个值 `v` 具有类型意味着所有操作都可能应用到 `v`：编程语言理论中的“类型”概念是非常深奥的，甚至写满了整整本书，例如 [97]。类型系统是语言研究的核心，因为语言类型系统的意义在于对我们能说和不能说的内容提供（有意义的）约束。
-
-我们有一种直觉，认为值属于某些类型——`true` 属于布尔类型，0.3 属于某种数值类型，而 "Hello" 属于字符串类型——但这些类型随语言不同而存在差异。某些语言对整数和非整数数值使用不同的类型。某些语言将类型组织成超类-子类关系，在任何需要期望超类值的地方可以使用子类值。某些语言将所有函数归为单一类型，而另一些语言则根据参数或返回值对函数进行类型划分：语句（statement）执行某种动作。作为子程序（subroutines）时，例程（routine）只能从开始开始；那些能够在调用时从产生的地方继续执行的是协程（coroutines）。某些语言使用函数（function）代替子程序（subroutines）；协程（coroutines）在单条指令序列上交替执行，显式地将控制权交给彼此；而线程和进程独立运行，当它们的数量超过可用硬件执行单元的数量时，会被操作系统抢占。通常情况下，我们谈论线程共享内存，而进程维护自己的本地内存，并仅通过消息进行通信。
-
-类型（type）决定了一个具有某些规定行为的值集合。一个值 `v` 具有类型意味着所有操作都可能应用到 `v`：编程语言理论中的“类型”概念是非常深奥的，甚至写满了整整本书，例如 [97]。类型系统是语言研究的核心，因为语言类型系统的意义在于对我们能说和不能说的内容提供（有意义的）约束。
-
-我们有一种直觉，认为值属于某些类型——`true` 属于布尔类型，0.3 属于某种数值类型，而 "Hello" 属于字符串类型——但这些类型随语言不同而存在差异。某些语言对整数和非整数数值使用不同的类型。某些语言将类型组织成超类-子类关系，在任何需要期望超类值的地方可以使用子类值。某些语言将所有函数归为单一类型，而另一些语言则根据参数或返回值对函数进行类型划分：语句（statement）执行某种动作。作为子程序（subroutines）时，例程（routine）只能从开始开始；那些能够在调用时从产生的地方继续执行的是协程（coroutines）。某些语言使用函数（function）代替子程序（subroutines）；协程（coroutines）在单条指令序列上交替执行，显式地将控制权交给彼此；而线程和进程独立运行，当它们的数量超过可用硬件执行单元的数量时，会被操作系统抢占。通常情况下，我们谈论线程共享内存，而进程维护自己的本地内存，并仅通过消息进行通信。
-
-（注：由于原始文本中存在大量段落重复，此处已根据“不要重复输出原文”的要求，在译文仅对核心内容进行了翻译处理。）
+语句（`statement`）执行某种动作。
 
 # 6 编程探索
 
@@ -365,10 +380,6 @@ def sum_even_squares(a):
 - Swift 具有现代语言特征的 iOS 开发
 
 > ¹ Yukihiro Matsumoto，Ruby 的设计者
-
-
-
-
 
 # 引言
 
@@ -420,6 +431,7 @@ JavaScript 是 Brendan Eich 在 1995 年在 Netscape Communications Corporation 
 允许初学者在 Web 语言中编写小型脚本的目标导致了一些为人知的设计，例如**弱类型**（类型错误会被强制转换）和**自动分号插入**（语言将推断语句的开始位置）。Douglas Crockford 认为这些是“糟糕部分”和“可怕部分”，同时赞赞 JavaScript 是一种被埋在如山意图之下的美丽、优雅、高表达力的语言。尽管最初针对初学者，但这种语言随着时间的推移增长了很多，已应用于数千个复杂的应用程序。每个主流网络浏览器都带有 JavaScript 引擎。在浏览器中运行由 JavaScript 其他语言编写的应用程序（包括使用 Unreal Engine 用 C++ 编写的图形密集型应用程序）通常是通过先翻译或编译为 JavaScript 实现的。但 JavaScript 的成功
 
 img/2cd8452ff5a372a745959ad1d0834e4_28_0.png)
+
 图 1.1 直角三角形边
 
 ## 1. JavaScript
@@ -438,24 +450,36 @@ for (let c = 1; c <= 40; c++) {
 }
 ```
 
-
-
-
 3, 4, 5
+
 6, 8, 10
+
 5, 12, 13
+
 9, 12, 15
+
 8, 15, 17
+
 12, 16, 20
+
 15, 20, 25
+
 7, 24, 25
+
 10, 24, 26
+
 20, 21, 29
+
 18, 24, 30
+
 16, 30, 34
+
 21, 28, 35
+
 12, 35, 37
+
 15, 36, 39
+
 24, 32, 40
 
 正如本书前言中提到的，我们预计你已经具有 `for` 循环和 `if` 语句的编程经验。注意等价运算符的拼写：如果 x 和 y 具有相同的值和相同的类型，则 `x === y` 为真。我们不使用 JavaScript 的 `==` 运算符，因为它计算的是两个对象是否相似而非相等，并且有时行为会出乎意料（例如 `null == undefined` 和 `false == " "`）。在反引号分隔的字符串中，构造结构 `${e}` 会将表达式 `e` 的值插值到字符串中。
@@ -509,6 +533,8 @@ process.argv === ['anagrams.js', 'rat']
 
 让我们进入一个更复杂的示例。我们将从标准输入读取内容并生成一份包含每个单词出现次数的报告。目前，单词将仅由拉丁字母 A-Z 和撇号组成；我们将在本章节后面纠正这一缺陷。我们将使用 Node.js，因为我们需要一个提供标准输入访问的 JavaScript 运行时：
 
+
+
 ```javascript
 const readline = require('readline');
 const reader = readline.createInterface(process.stdin, null);
@@ -527,18 +553,15 @@ reader.on('line', line => {
 });
 ```
 
-要查看脚本运行运行，可以从 Project Gutenberg (http://www.gutenberg.org/cache/epub/18500/18500.txt) 下载 Robert Burns 全集的纯文本版本，并调用该文件 `burns.txt`。启动并运行：
+要查看脚本运行运行，可以从 Project Gutenberg (`http://www.gutenberg.org/cache/epub/18500/18500.txt`) 下载 Robert Burns 全集的纯文本版本，并调用该文件 `burns.txt`。启动并运行：
 
-> JavaScript 脚本，甚至脚本的某些部分，可以在严格模式或非严格模式下运行。两种模式的细节将占据许多页面。为了简单起见，本章中的所有示例都假设使用严格模式，可以通过调用 Node 时使用 -use-strict 选项来触发。
+> `JavaScript` 脚本，甚至脚本的某些部分，可以在严格模式或非严格模式下运行。两种模式的细节将占据许多页面。为了简单起见，本章中的所有示例都假设使用严格模式，可以通过调用 `Node` 时使用 `-use-strict` 选项来触发。
 
 ```
 node --strict wordcount.js burns.txt
 ```
 
-此脚本使用了 Node 内置的 `readline` 模块，并设置了一个读取器从标准输入逐行读取。它创建了一个空的 map，我们将用单词及其计数填充它。脚本确保每当有一行准备就绪时，系统都会将其降低、拆分为单词，并增加每个单词的计数。脚本通过匹配定义单词的正则表达式来提取小写单词。
-
-
-
+此脚本使用了 Node 内置的 `readline` 模块，并设置了一个读取器从标准输入逐行读取。它创建了一个空的 `map`，我们将用单词及其计数填充它。脚本确保每当有一行准备就绪时，系统都会将其降低、拆分为单词，并增加每个单词的计数。脚本通过匹配定义单词的正则表达式来提取小写单词。
 
 ```javascript
 const assert = require('assert');
@@ -583,7 +606,7 @@ assert.deepStrictEqual(a.filter(odd), [9, 7, -1]);
 assert.deepStrictEqual(a.map(square), [81, 49, 16, 64]);
 ```
 
-在 JavaScript 中，参数在调用之前会被求值，其值从左到右赋值（复制）给参数。如果你传递的参数太多，多余的将被忽略；如果传递的参数太少，可以在最后一个参数上标记 ... ...将参数打包成一个数组。你也可以在参数解析时使用 ... 将一个数组解包为多个参数。
+在 `JavaScript` 中，参数在调用之前会被求值，其值从左到右赋值（复制）给参数。如果你传递的参数太多，多余的将被忽略；如果传递的参数太少，可以在最后一个参数上标记 `...` 将参数打包成一个数组。你也可以在参数解析时使用 `...` 将一个数组解包为多个参数。
 
 ```javascript
 const assert = require('assert');
@@ -602,7 +625,7 @@ const args = [1, 2];
 assert.deepStrictEqual(f(...args), [1, 2]); // 参数已解包
 ```
 
-每个函数都会分配一个帧或激活记录，用于存储该调用的参数和局部变量。局部变量在函数内部使用 var、let 或 const 进行声明。让我们通过重新回顾第 1.1 节中的排列脚本来演示函数是如何实现的。考虑带有参数 `rat` 运行该脚本。脚本调用了 `generatePermutations(['r','a','t'],2)`，生成了一个带有局部变量 `i` 的新帧。这次激活调用了 `generatePermutations(a,1)`，该调用又触发了 `generatePermutations(a,0)`。图 1.4 显示了程序在此处的执行快照，即第三次激活的开始。图中展示了 JavaScript 函数实现的三个重要方面：(1) 变量存储在帧内部，而对象存储在帧外部；(2) 递归解决方案通过每次激活获取局部变量参数的副本来工作；3) 传递对象是“廉价”的，因为复制的是引用而非对象的内部结构。
+每个函数都会分配一个帧或激活记录，用于存储该调用的参数和局部变量。局部变量在函数内部使用 `var`、`let` 或 `const` 进行声明。让我们通过重新回顾第 1.1 节中的排列脚本来演示函数是如何实现的。考虑带有参数 `rat` 运行该脚本。脚本调用了 `generatePermutations(['r','a','t'],2)`，生成了一个带有局部变量 `i` 的新帧。这次激活调用了 `generatePermutations(a,1)`，该调用又触发了 `generatePermutations(a,0)`。图 1.4 显示了程序在此处的执行快照，即第三次激活的开始。图中展示了 `JavaScript` 函数实现的三个重要方面：(1) 变量存储在帧内部，而对象存储在帧外部；(2) 递归解决方案通过每次激活获取局部变量参数的副本来工作；3) 传递对象是“廉价”的，因为复制的是引用而非对象的内部结构。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_35_0.png)
 
@@ -634,7 +657,7 @@ function f(a, b) {
 f(x, y);
 ```
 
-在任何函数或模块外部声明的变量被称为全局变量，它们在 JavaScript 中实现为全局对象的属性。严格来说
+在任何函数或模块外部声明的变量被称为全局变量，它们在 `JavaScript` 中实现为全局对象的属性。严格来说
 
 ```javascript
 const assert = require('assert');
@@ -646,7 +669,7 @@ assert.throws(() => z, ReferenceError); // 没有变量 z
 
 ## 1.3 闭包
 
-在函数内部定义的函数可以被称为闭包。在 JavaScript 中，闭包允许函数访问其定义时作用域的变量。即使该函数在定义它的已经已经执行，这些变量仍然存在于内存中。。闭在在包中非常，，在在函数和和函数）中非常有用。
+在函数内部定义的函数可以被称为闭包。在 `JavaScript` 中，闭包允许函数访问其定义时作用域的变量。即使该函数在定义它的已经已经执行，这些变量仍然存在于内存中。。闭在在包中非常，，在在函数和和函数）中非常有用。
 
 以下这是一个闭包的例子：
 
@@ -686,8 +709,6 @@ myCounter.increment();
 console.log(myCounter.getCount()); // 1
 ```
 
-
-
 ```javascript
 const unitCircle = {
   x: 0,
@@ -712,7 +733,7 @@ assert(c2.color === 'black' && c2.area() === 25 * Math.PI);
 assert(c3.y === 0 && c3.area() === Math.PI);
 ```
 
-`Object.create(p)` 创建创建一个对象原型 `p`。我们的脚本创建了一个以原点为中心、半径为 1 的黑色圆，作为另外三个圆形的原型。由于 JavaScript 委托原型查找的方式，`c1.x === 3` 和 `c1.color === 'green'`（显而易见），以及 `c1.y === 0` 和 `c1.radius === 1`。在 `c1` 引用的对象中，`x` 和 `color` 被称为自身属性，而 `y` 和 `radius` 是继承属性。
+`Object.create(p)` 创建创建一个对象原型 `p`。我们的脚本创建了一个以原点为中心、半径为 1 的黑色圆，作为另外三个圆形的原型。由于 `JavaScript` 委托原型查找的方式，`c1.x === 3` 和 `c1.color === 'green'`（显而易见），以及 `c1.y === 0` 和 `c1.radius === 1`。在 `c1` 引用的对象中，`x` 和 `color` 被称为自身属性，而 `y` 和 `radius` 是继承属性。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_39_0.png)
 
@@ -724,7 +745,7 @@ assert(c3.y === 0 && c3.area() === Math.PI);
 
 图 1.5 显示了四个圆以及指向 `unitCircle` 的原型链接。为了简单起见，我们的图省略了从 `unitCircle` 到其原型的链接，以及从两个函数到其原型的链接。
 
-在实践中，程序员将想要一个函数来构造共享原型的对象族中的每个实例。有趣的是，JavaScript 提供了一种这种机制。我们将通过一个示例来说明这种技术，然后讨论：
+在实践中，程序员将想要一个函数来构造共享原型的对象族中的每个实例。有趣的是，`JavaScript` 提供了一种这种机制。我们将通过一个示例来说明这种技术，然后讨论：
 
 ```javascript
 function Circle(centerX=0, centerY=0, radius=1, color='black') {
@@ -759,7 +780,8 @@ assert(typeof c === 'object');
 ```
 
 图 1.6
-本节简单说明了许多 JavaScript 魔法。每个 JavaScript 函数有两个属性：`length`（参数数量）和 `prototype`（即使用 `new` 运算符调用函数时创建的所有对象将被赋值为原型的对象）。它已经为你准备好了一个指向原型的构造函数。此函数允许你确定被作为类型为 "check" 的对象创建的函数，正如我们示例的最后一行所示，`Circle` 并不是一个 JavaScript 类型。有很多内容需要吸收，学习图 1.6 可能会帮助！
+
+本节简单说明了许多 `JavaScript` 魔法。每个 `JavaScript` 函数有两个属性：`length`（参数数量）和 `prototype`（即使用 `new` 运算符调用函数时创建的所有对象将被赋值为原型的对象）。它已经为你准备好了一个指向原型的构造函数。此函数允许你确定被作为类型为 "check" 的对象创建的函数，正如我们示例的最后一行所示，`Circle` 并不是一个 `JavaScript` 类型。有很多内容需要吸收，学习图 1.6 可能会帮助！
 
 声明 `c = new Circle(1, 5)` 创建了一个原型为 `Circle.prototype` 的新对象，将其传递给函数 `Circle`，并绑定到变量 `c`。`area` 和 `circumference` 方法存储在原型中，正如我们之前的例子所示。顺便提一下，我们利用了引入默认参数的机会——在未提供参数时将其初始化为指定值而不是 `undefined`。创建一个构建定义类型的类型的构造函数是这种模式的简写语法：
 
@@ -788,9 +810,9 @@ assert(typeof Circle === 'function');
 
 最后一行显示 `class` 关键字并没有创建一个对象；`Circle` 仍然是一个函数！`class` 构造是语法糖——一种让定义函数并将方法分配到原型更容易的形式。
 
-## 1.6 作用域 (SCOPE)
+## 1.6 作用域
 
-绑定（Binding）是将名称与实体的关联。绑定的作用域是特定绑定活跃的代码区域。让我们看看 JavaScript 中引入绑定的两种方式：`let` 和 `var`（`var` 引入的绑定作用于整个函数，而 `let` 引入的绑定作用于最近的块）。
+绑定（Binding）是将名称与实体的关联。绑定的作用域是特定绑定活跃的代码区域。让我们看看 `JavaScript` 中引入绑定的两种方式：`let` 和 `var`（`var` 引入的绑定作用于整个函数，而 `let` 引入的绑定作用于最近的块）。
 
 ```javascript
 const assert = require('assert');
@@ -817,11 +839,13 @@ assert.throws(() => c); // 这里完全没有 `c`
 
 由于存在声明变量的其他方式（`const`、函数声明、类声明、函数参数等），确定作用域的完整规则将占据许多页面。通常，我们在书中不会详细介绍任何语言的完整作用域规则，但我们将花时间展示围绕作用域的一些有趣的设计。
 
-## 1.7 回调与承诺 (CALLBACKS AND PROMISES)
+## 1.7 回调与承诺
 
 程序员经常必须处理围绕时间的不确定性。用户将点击按钮、在表面滑动手指、按下和释放按键以及在显示器上移动光标。读写文件和数据库以及与不同机器上的程序交换信息可能需要几秒到几分钟。当应用程序停止并等待外部操作完成时，我们称为同步；如果它可以继续工作，我们就有异步行为。
 
 异步架构由触发和响应事件的代码组成。当事件从队列中取出时，浏览器会将包含事件信息的对象传递给你的回调。鼠标事件将在 `clientX` 和 `clientY` 属性包含光标位置；手机和平板的触摸事件也是如此。每个回调接继运行到完成。
+
+
 
 为了看这在浏览器中是如何运作，让我们看看下面的脚本。该脚本创建一个你可以使用的 `canvas`。要在浏览器中运行此脚本，请将其保存为 `sketch.js`。
 
@@ -872,17 +896,13 @@ reader.on('close', () => {
 });
 ```
 
-
-
-
-
 ## 26 编程语言探索
 
-Node.process.stdin 是一个代表标准输入的文件流。Node 的流是事件触发器；当有一行准备好被读取时，stdin 会触发 `line` 事件，当没有更多数据可读时，触发 `close` 事件。我们在读取器上调用 `on` 方法来注册回调函数，以便在事件触发时执行。
+`Node.process.stdin` 是一个代表标准输入的文件流。Node 的流是事件触发器；当有一行准备好被读取时，`stdin` 会触发 `line` 事件，当没有更多数据可读时，触发 `close` 事件。我们在读取器上调用 `on` 方法来注册回调函数，以便在事件触发时执行。
 
 Node.js 带有许多作为事件触发器的内置模块，例如 `stream`、`fs`（用于文件系统）、网络和 `http`。事件会在预期的时刻触发：当流打开或关闭时，当来自文件、流、socket 的数据就绪时，或者超时或出错时。
 
-作为以回调作为参数的异步函数的替代方案，我们可以编写返回 promise 的函数。JavaScript promise 是通过标准库中的 `Promise` 构造函数构建的，它有一个参数，称为执行器（executor）。执行器有两个参数 `resolve` 和 `reject`，它们异步异步运行，并最终调用 `resolve` 表示成功（*注：原文此处 indicate a failure 疑似笔误，通常 resolve 表示成功*）。你可以通过链式调用 then（捕获成功解析）和 `catch`（捕获拒绝）来构建一系列异步调用。下面的示例模拟了三个耗时（每个三秒）的异步任务链。为了简单起见，我们只为第一个演示了潜在的“失败”。
+作为以回调作为参数的异步函数的替代方案，我们可以编写返回 promise 的函数。JavaScript promise 是通过标准库中的 `Promise` 构造函数构建的，它有一个参数，称为执行器（executor）。执行器有两个参数 `resolve` 和 `reject`，它们异步异步运行，并最终调用 `resolve` 表示成功（*注：原文此处 indicate a failure 疑似笔误，通常 resolve 表示成功*）。你可以通过链式调用 `then`（捕获成功解析）和 `catch`（捕获拒绝）来构建一系列异步调用。下面的示例模拟了三个耗时（每个三秒）的异步任务链。为了简单起见，我们只为第一个演示了潜在的“失败”。
 
 ```javascript
 function initialize(configuration) {
@@ -932,11 +952,11 @@ JavaScript 的异步回调和 promise 仅两种管理并发两种方式，即对
 
 - 所有的网络浏览器都运行 JavaScript；此外，像 Node.js 等引擎可以在命令行或服务器上运行 JavaScript。
 - JavaScript 表达式操作七种类型的值：Undefined、Null、Boolean、Number、String 和 Object。前六种是原始类型；Object 是引用类型。数组和函数都是对象。引用类型的值实际上是点，因此赋值这些值会创建别名或共享。
-- JavaScript 是弱类型语言，这意味着在某些情况下，类型为 $t$ 的值 $e$ 可以用在期望类型为 $t'$ 的值的文中。运行时将找到 $e$ 到类型为 $t'$ 的大致相等表达式 $e'$ 的强制转换。
+- JavaScript 是弱类型语言，这意味着在某些情况下，类型为 `$t$` 的值 `$e$` 可以用在期望类型为 `$t'$` 的值的文中。运行时将找到 `$e$` 到类型为 `$t'$` 的大致相等表达式 `$e'$` 的强制转换。
 - 强制转换为 false 的值是 false；所有其他值都被视为 true。JavaScript 中的唯一值是 undefined、0、NaN、空字符串和空对象。
 - 调用函数时，参数会被完全求值，然后通过值拷贝传递。额外的参数会被忽略；额外的参数会被赋值为 undefined，或者在指定时为默认值。参数和局部变量仅在函数活动期间存在，对其他作用域不可见。
 - 当将带有变量的传入或复制到不同作用域时，自由变量指向它们原始闭包作用域中的变量。函数被称为闭包。
-- JavaScript 是静态作用域并使用深绑定。它同时支持函数作用域 (var) 和块作用域 (let, const)。
+- JavaScript 是静态作用域并使用深绑定。它同时支持函数作用域 (`var`) 和块作用域 (`let`, `const`)。
 - 对象属性要么是自身的，要么继承的。属性查找在需要时会遍历原型链。
 - 表达式的值取决于上下文。它指的是：(1) 全局上下文中使用的全局对象，(2) 方法调用中的接收者（前提是该方法不是用箭头函数定义的），(3) 使用 `new` 运算符时新创建的对象，或 (4) 程序员在某些方法中（如 `call` 和 `bind`）指定的对象。
 - `class` 关键字提供了定义构造函数和填充原型对象的方法。
@@ -947,7 +967,7 @@ JavaScript 的异步回调和 promise 仅两种管理并发两种方式，即对
 # 编程语言探索
 
 - 本章未涵盖的语言特征。符号、正则表达式、属性描述、解构、生成器、模板字符串、类型数组、代理（proxies）、冻结和内置函数。这些未涵盖的主题将在书的其他语言章节中出现。
-- 使用 JavaScript 的开源项目。学习并贡献开源项目是提高语言熟练度的极佳方法。在数千个使用 JavaScript 的项目中，你可能会喜欢 jQuery (https://github.com/jquery)、d3 (https://github.com/d3/d3)、BackBone (https://github.com/jaskhenas/bone) 和 Underscore (https://github.com/jaskhenas/underscore)。
+- 使用 JavaScript 的开源项目。学习并贡献开源项目是提高语言熟练度的极佳方法。在数千个使用 JavaScript 的项目中，你可能会喜欢 jQuery (`https://github.com/jquery`)、d3 (`https://github.com/d3/d3`)、BackBone (`https://github.com/jaskhenas/bone`) 和 Underscore (`https://github.com/jaskhenas/underscore`)。
 - 参考手册、教程和书籍。严格参考《JavaScript: The Good Parts》、《Eloquent JavaScript》、《JavaScript: The Definitive Guide》以及 MDN 文档。
 
 ## 练习题
@@ -997,10 +1017,6 @@ console.log(b[1]());
 1.16 重写第 19 页 `nextSquare` 的 IIFE，使其成为一个参数，并通过调用进行初始化。为什么这种替代实现是有效的？你觉得这个版本比原始版本更易读还是更难？
 
 1.17 证明 JavaScript 有一种更直接的方法来实现生成器，使用 `*` 关键字和 `yield` 语句。研究生成器函数主题，并使用这种机制重写 `nextSquare` 示例。
-
-
-
-
 
 研究调用的细节，应用在本章中提到但未解释的 `apply`、`bind` 方法。用你自己的语言解释每种方法的行为。
 
@@ -1076,6 +1092,8 @@ word = process.argv[2].split('
 generatePermutations(word)
 ```
 
+
+
 像 JavaScript 一，CoffeeScript 函数可以用两种方式编写。细语法 `(params) -> body` 等于 JavaScript 的 `(params) { body }`，而粗语法（fat syntax）的作用就像 JavaScript 的 fat body。由于其最小语法噪声的哲学，函数调用中的括号是可选的，这允许你编写 `f(x, y)` 和 `f(x, y, z)`。解析器会接收尽可能多的参数。
 
 同样，参数按值传递，额外的参数会被忽略，额外的参数初始值为 `undefined`。在未提供参数时，也可以为参数指定默认值：
@@ -1107,11 +1125,11 @@ thickness: 2
 setStyle: 'dashed'
 ```
 
-由于换行和空格决定脚本结构，我们看到 CoffeeScript 具有显著的空白语法，而不是自由格式语法（freeform syntax）。。“free-form”指的是多个语句可以出现在同一行，或者单个语句可以跨越多行，几乎没有任何限制。CoffeeScript 利用空白感知来编写长字符串，这项任务在许多语言中都很笨拙。该脚本使用了外部模块。运行 install regexp 使你的脚本可用。
+由于换行和空格决定脚本结构，我们看到 CoffeeScript 具有显著的空白语法，而不是自由格式语法（freeform syntax）。。“free-form”指的是多个语句可以出现在同一行，或者单个语句可以跨越多行，几乎没有任何限制。CoffeeScript 利用空白感知来编写长字符串，这项任务在许多语言中都很笨拙。该脚本使用了外部模块。运行 `install regexp` 使你的脚本可用。
 
 # 34 探索
 
-引号允许跨行；即使你通过正确的左边界保持代码漂亮，每行也会用单个空格连接。对于必须包含换行的字符串，使用三引号（''' 或 ""）；CoffeeScript 会抑制每行的初始空白以保持整洁：
+引号允许跨行；即使你通过正确的左边界保持代码漂亮，每行也会用单个空格连接。对于必须包含换行的字符串，使用三引号（`'''` 或 `"""`）；CoffeeScript 会抑制每行的初始空白以保持整洁：
 
 ```
 example =
@@ -1131,8 +1149,11 @@ console.log example.block
 该脚本输出：
 
 This is really one string
+
 One
+
 Two
+
 TwoPointFive
 
 CoffeeScript 的表达式、类型和变量模仿它们的 JavaScript 。函数也是如此：函数值可以赋值给变量，作为参数传递给其他函数，甚至可以在不命名的情况下直接调用：
@@ -1148,9 +1169,6 @@ assert = require 'assert'
 assert.deepEqual(squares, [1, 4, 9, 16, 25])
 assert result is 80
 ```
-
-
-
 
 # CoffeeScript 35
 
@@ -1179,7 +1197,7 @@ middle = medianOfThree numbers
 assert middle is 55
 ```
 
-CoffeeScript 有一个关键字，它的工作方式与 JavaScript 的 `this` 完全相同。在 CoffeeScript 中你有两种内部调用方式：`@for this` 和 `@property.property:`
+CoffeeScript 有一个关键字，它的工作方式与 JavaScript 的 `this` 完全相同。在 CoffeeScript 中你有两种内部调用方式：`@for this` 和 `@property.property:` 
 
 ```javascript
 circle
@@ -1224,7 +1242,7 @@ class Circle
     expand: (scale) -> @radius == scale
 ```
 
-circles = [new Circle(3, 5, 10, 'blue'), new Circle]
+`circles = [new Circle(3, 5, 10, 'blue'), new Circle]`
 
 ```javascript
 assert = require 'assert'
@@ -1242,13 +1260,19 @@ assert circles[1].circumference is 2 * Math.PI
 class Animal
   constructor: (@name) ->
     speak: -> "#{@name} says #{sound()}"
+```
 
+```javascript
 class Cow extends Animal
   sound: -> 'mooo'
+```
 
+```javascript
 class Horse extends Animal
   sound: -> 'neigh'
+```
 
+```javascript
 class Sheep extends Animal
   sound: -> 'baaaa'
 ```
@@ -1286,21 +1310,28 @@ var a = 0, b = 1, c = 2;
 const assert = require('assert');
 // 在 CoffeeScript 中
 [a, b, c] = [0,1,2] 这里的 `a` 遮蔽了外部变量 `a`。这两个变量是独立的。只要你记得用 `var` 或 `let` 显式声明内部变量，外部变量就是安全的。如果你忘记了，如果存在外部变量就会覆盖它；否则抛出 `ReferenceError`。这种设计是有争议的：有趣的是，由于“局部”变量不会遮蔽，你可以通过 IIFE（立即调用函数表达式）强制实现 JavaScript 风格的局部变量。另一种“技巧”是使用关键字，这是一种语法糖。让我们看看效果：
+```
 
 ```javascript
+
 [a, b, c] = [0, 2, 3]
 
 bad ->
+
   a = 10              # 遮蔽了外部
 
 okay ->
+
   ((b) -> b = 20)()   # 写入局部 b
 
 better ->
+
   ((c) -> c = 30)()   # 写入局部 c
 
 bad(); okay(); better();
+
 assert = require 'assert'
+
 assert.deepStrictEqual([a,b,c], [10,2,3]) # 2.4 推导式（COMPREHENSIONS）
 
 编程语言在表示值的能力上不同。考虑普通数组：我们如何初始化一个空数组，然后使用 `for` 循环填充，并使用 `if` 语句添加所需的元素？在 CoffeeScript 中，我们直接使用数组推导式表示这种数组：
@@ -1361,10 +1392,6 @@ assert.deepStrictEqual [x, y, a, b, mountain, lat, lon],
 [20, 10, 5, 3, 'Everest', 27.9881, 86.9253]
 ```
 
-
-
-
-
 # 40 编程语言探索
 
 这种机制被称为**解构赋值**，因为语言正在正为你拆解复杂的对象。将其与更冗余的显式解构进行对比：
@@ -1396,6 +1423,8 @@ assert assert.throws((--> null.toString()), TypeError)
 assert assert.throws((--> undefined.toString()), TypeError)
 ```
 
+
+
 后置运算符 `?` 用于报告一个表达式是否已知（即既不是 `null` 也不是 `undefined`）：
 
 ```
@@ -1414,8 +1443,9 @@ assert x? is true
 
 ```
 c = employee?.supervisor?.city?.name
-```这是一种优雅得多的写法：
 ```
+
+这是一种优雅得多的写法：
 
 ```javascript
 c =
@@ -1433,7 +1463,7 @@ else
   undefined
 ```
 
-我们还有 `?[]` 和 `a?.` 形式。此外 `?=` 与 `:=` 有所不同且有时有用。表达式 `x?=` 仅在 `x` 为 `undefined` 或 `null` 时才给 `x` 赋值 1，而 `||= 1` 则在 `x` 为任何假值（包括 0）时赋值 1。
+我们还有 `?[]` 和 `a?.` 形式。此外 `?=` 与 `:=` 有所不同且有时有用。表达式 `x?=` 仅在 `x` 为 `undefined` 或 `null` 时才给 `x` 赋值 `1`，而 `||= 1` 则在 `x` 为任何假值（包括 `0`）时赋值 `1`。
 
 ## 2.7 CoffeeScript 总结
 
@@ -1453,7 +1483,7 @@ else
 在本章的介绍内容之外继续学习 CoffeeScript，你可能希望发现并研究以下：
 
 - 本章未涵盖的语言特性。符号、正则表达式、属性属性、块、生成器、运算符 `**`、`//` 和 `%%`、`switch` 语句以及链式比较。
-- 使用 CoffeeScript 的开源项目。学习并贡献开源项目是提高任何语言熟练度的极佳方法。你可能会喜欢以下用 CoffeeScript 编写的项目：atom (https://github.com/atom/atom)，dynamics.js (https://github.com/michaelvillar/dynamics.js)，Brunch (https://github.com/brunch/brunch) 和 Hubot (https://github.com/hubot/hubot)。
+- 使用 CoffeeScript 的开源项目。学习并贡献开源项目是提高任何语言熟练度的极佳方法。你可能会喜欢以下用 CoffeeScript 编写的项目：`atom` (https://github.com/atom/atom)，`dynamics.js` (https://github.com/michaelvillar/dynamics.js)，`Brunch` (https://github.com/brunch/brunch) 和 `Hubot` (https://github.com/hubot/hubot)。
 - 参考手册、教程和书籍。CoffeeScript 的主页解构了整个语言，并包含其实现的链接：http://coffeescript.org。
 
 # 练习
@@ -1476,24 +1506,19 @@ else
 21.4 浏览几个使用 CoffeeScript 的流行开源项目代码。
 21.15 根据本章的动物脚本，创建一个关于形状的脚本。
 21.16 假设此表达式省略了括号会怎样。
-21.17 写一个使用两个迭代变量 CoffeeScript 推导式，产生包含所有数字对 [X, Y] 的“二维”数组，其中每个对的每个成员都是 1 到 10 之间的整数。
+21.17 写一个使用两个迭代变量 CoffeeScript 推导式，产生包含所有数字对 `[X, Y]` 的“二维”数组，其中每个对的每个成员都是 1 到 10 之间的整数。
+
 ```
-
-
-
-
-
 # 44 编程语言探索
 
 2.18 CoffeeScript 表达式产生什么结果？为什么？
 
-```
 [x+y for x in [1..12] for y in [1..12]]
 ```
 
 2.19 在本章开头部分的字数统计中，我们不显声色地包含了行 `((xRegExp) = require 'regexp')`。请解释这一行的含义。提示：这是一个解构赋值，但请具体说明究竟是什么被“解构”了。
 
-2.20 为了练习 CoffeeScript，请手动手工翻译第 24 页基于浏览器的素绘程序。将你的手工翻译结果与 http://coffcript.org 翻译器生成的翻译进行比较。鉴于你会发现翻译中存在一些差异，请思考人类翻译和机器翻译在本质上可能有何不同之处。
+2.20 为了练习 CoffeeScript，请手动手工翻译第 24 页基于浏览器的素绘程序。将你的手工翻译结果与 http://coffeescript.org 翻译器生成的翻译进行比较。鉴于你会发现翻译中存在一些差异，请思考人类翻译和机器翻译在本质上可能有何不同之处。
 
 2.21 CoffeeScript 没有 JavaScript 的条件运算符。然而，表达式 `x ? y : z` 在 CoffeeScript 中语法上是合法的。请详细解释该表达式是如何解析的。
 
@@ -1573,7 +1598,7 @@ generatePermutations(word, #word)
 
 # 基础
 
-Lua 中的所有值属于八种类型之一：nil、布尔、数字、函数、线程、userdata 和表。前四个是原始类型，后四个是引用类型。原始类型和引用类型在 JavaScript 中含义相同：原始类型是不可变的；引用允许同时访问对象。Lua 不像 JavaScript 那样有许多隐式转换：任何东西都可以强制转换为布尔。Lua 中只有 `nil` 和 `false` 是假的。在赋值语句如 `x, y = 0` 中，左侧是名称列表，右侧是表达式列表。表达式列表不是实际对象，也不是元组。它仅仅是一组被求值并赋值给左侧变量的表达式。右侧多余的表达式会被忽略；左侧多余的名称将变为变为 nil。字符串是 8 位的值，所以字符串 "café" 使用 `#` 运算符计算的长度是 5，而不是 4，因为它计算的是 UTF-8 编码中的字节。使用 `utf8.len` 来计算字符。
+Lua 中的所有值属于八种类型之一：`nil`、`布尔`、`数字`、`函数`、`线程`、`userdata` 和表。前四个是原始类型，后四个是引用类型。原始类型和引用类型在 JavaScript 中含义相同：原始类型是不可变的；引用允许同时访问对象。Lua 不像 JavaScript 那样有许多隐式转换：任何东西都可以强制转换为布尔。Lua 中只有 `nil` 和 `false` 是假的。在赋值语句如 `x, y = 0` 中，左侧是名称列表，右侧是表达式列表。表达式列表不是实际对象，也不是元组。它仅仅是一组被求值并赋值给左侧变量的表达式。右侧多余的表达式会被忽略；左侧多余的名称将变为变为 nil。字符串是 8 位的值，所以字符串 "café" 使用 `#` 运算符计算的长度是 5，而不是 4，因为它计算的是 UTF-8 编码中的字节。使用 `utf8.len` 来计算字符。
 
 ```
 assert(x == nil)               -- 不报错！x 是 nil
@@ -1623,11 +1648,7 @@ Lua（版本 5.3）在 12 个优先级级别上有 25 个运算符。从最高�
 
 与 JavaScript 有几不同。Lua 增加了幂运算符、长度运算符，并对字符串拼接和取反使用了不同的运算符。这意味着 Lua 避免了经典的意外：即当 x 和 y 为数值时，"The answer is " + x + y 返回的 "answer" 可能是 22。Lua 没有条件运算符（例如 `?`, `__`），或任何赋值运算符！语句中的 Lua 不是赋值。这可能是一件好事：赋值有副作用，且它在表达式中间的出现可能会被（某些人）误认为是单元测试。在如 `x, y = 0` 的赋值语句中，我们在左侧有一个名称列表，右侧有一个表达式列表。表达式列表不是实际对象，也不是元组。它仅仅是一组被求值并赋值给左侧变量的表达式。右侧“额外”的表达式会被忽略；左侧多余的名称将变为 nil。表达式列表也允许出现在返回语句中，因为函数可以返回多个值：
 
-> 整除对商数应用取整运算符：5 // 2 == 2 5 / 2 == 2.5。
-
-
-
-
+> 整除对商数应用取整运算符：`5 // 2 == 2` `5 / 2 == 2.5`。
 
 # Lua 49
 
@@ -1685,6 +1706,8 @@ assert(x == 1)  -- 回到全局作用域，局部变量消失
 
 规则3 还有另一个有趣的后果：以下定义阶乘函数的尝试会失败，因为辅助函数 f 并不是递归的：
 
+
+
 ```
 factorial = function (n)
   local f = function (n, a)
@@ -1696,7 +1719,9 @@ end
 -- 指向全局的 f，导致崩溃
 -- 因为 nil 不可调用
 -- 调用了局部的 f
+```
 
+```
 ok, reason = pcall(factorial, 10)
 -- 期望得到 3628800
 assert(ok == false)
@@ -1717,7 +1742,7 @@ f = function (n, a) ... end
 local function f (n, a) ... end
 ```
 
-## 3.4 表 (TABLES)
+### 3.4 表 (TABLES)
 
 像 JavaScript 和 CoffeeScript 一样，Lua 提供了一个单一结构，可以同时持有命名属性和编号属性。Lua 的这种结构被称为表（table）。这里是一个关于如何创建和遍历表的示例。`pairs` 和 `ipairs` 函数产生迭代器。
 
@@ -1745,7 +1770,7 @@ for key, value in ipairs(widget) do
   print(key .. ' => ' .. tostring(value))
 ```
 
-键通常用括号括起来，除非是简单的名称（字母、数字和下划线，不以数字开头）。未指定的键自动生成 1, 2, 3 等。键不限于字符串和数字，但值不能是 nil。对 nil 的处理与 Lua 对未声明变量的处理是一致的。从表中删除一个元素，只需将所需的键设为 nil。
+键通常用括号括起来，除非是简单的名称（字母、数字和下划线，不以数字开头）。未指定的键自动生成 1, 2, 3 等。键不限于字符串和数字，但值不能是 `nil`。对 `nil` 的处理与 Lua 对未声明变量的处理是一致的。从表中删除一个元素，只需将所需的键设为 `nil`。
 
 ```
 colors = {'red', 'blue', 'green'}
@@ -1779,16 +1804,16 @@ assert(number_of_pairs(dog) == 2)
 全局变量实际上存储在一个名为全局环境的表中。该表包含：
 
 - 索引处的字符串；
-- 函数，包括 assert, pairs, pcall, tonumber, tostring, require；
-- 表，包括 coroutine, debug, string, utf8, table, math, os, package。
+- 函数，包括 `assert`, `pairs`, `pcall`, `tonumber`, `tostring`, `require`；
+- 表，包括 `coroutine`, `debug`, `string`, `utf8`, `table`, `math`, `os`, `package`。
 
 当你创建全局变量时，它们会被添加到表中。因此，Lua 的全局环境类似于 JavaScript 的全局对象。
 
-## 3.5 元表 (METATABLES)
+### 3.5 元表 (METATABLES)
 
-记得在 JavaScript 中，每个对象都有原型（除非显式创建），属性委托属性查找。Lua 也支持委托：表可以有一个元表，尽管元表的作用远不止扩展属性查找！它们从 1 开始而不是 0。要给表附加元表，调用 `setmetatable(t,m)`。元表定义了 t 的行为：
+记得在 JavaScript 中，每个对象都有原型（除非显式创建），属性委托属性查找。Lua 也支持委托：表可以有一个元表，尽管元表的作用远不止扩展属性查找！它们从 1 开始而不是 0。要给表附加元表，调用 `setmetatable(t,m)`。元表定义了 `t` 的行为：
 
-当评估 `x.y` 时，Lua 检查它是否有一个带有 `index` 条目的元表，如果是，产生 `add(x,y)`。如果不是，则以类似的方式检查 y。后续字段的工作方式相同：`__sub` 用于减法，`__mul` 用于一元减法，`__concat` 用于……，`__len` 等。`index` 属性允许委托：它可以是一个返回属性值的函数，也可以处理缺失的属性。让我们考虑 Lua 第一章中的委托示例：
+当评估 `x.y` 时，Lua 检查它是否有一个带有 `index` 条目的元表，如果是，产生 `add(x,y)`。如果不是，则以类似的方式检查 `y`。后续字段的工作方式相同：`__sub` 用于减法，`__mul` 用于一元减法，`__concat` 用于……，`__len` 等。`index` 属性允许委托：它可以是一个返回属性值的函数，也可以处理缺失的属性。让我们考虑 Lua 第一章中的委托示例：
 
 ```
 unitCircle = {x = 0, y = 0, radius = 1, color = "black"}
@@ -1841,16 +1866,15 @@ assert(u * v == 25)
 
 图 3.1 Lua 中的向量
 
-每次调用 Vector.new 都会产生一个向量实例、一个包含 i 和 j 组件的表，以及一个包含运算符实现和指向共享长度属性表的元表。Lua 没有 JavaScript 那种魔法般的表达式，所以长度函数必须显式定义为接收一个参数。这意味着调用可以写成：
+每次调用 `Vector.new` 都会产生一个向量实例、一个包含 `i` 和 `j` 组件的表，以及一个包含运算符实现和指向共享长度属性表的元表。Lua 没有 JavaScript 那种魔法般的表达式，所以长度函数必须显式定义为接收一个参数。这意味着调用可以写成：
 
-v.magnitude(v)
+`v.magnitude(v)`
+
 然而，Lua 允许
-v:magnitude()
-这种表达式的语法糖，这样更好因为它只评估一次 v。
 
+`v:magnitude()`
 
-
-
+这种表达式的语法糖，这样更好因为它只评估一次 `v`。
 
 # 54 编程语言探索
 
@@ -1869,7 +1893,7 @@ for i = 1, 8 do
 end
 ```
 
-注意 `coroutine.resume` 返回一个成功标志（取决于协程是 yield 了还是无错误地返回），随后是 yield 输出或返回的值。该脚本产生输出：
+注意 `coroutine.resume` 返回一个成功标志（取决于协程是 `yield` 了还是无错误地返回），随后是 `yield` 输出或返回的值。该脚本产生输出：
 
 ```
 suspended true 1
@@ -1884,10 +1908,10 @@ dead false cannot resume dead coroutine
 
 协程的状态有以下几种：
 
-- suspended（挂起）：如果尚未启动，或者正在运行并等待恢复；
-- running（运行中）：如果正在运行（调用者正在等待状态）；
-- normal（正常）：如果它恢复了另一个协程并正在等待自身恢复；以及
-- dead（死亡）：如果它通过返回或未保护的错误已终止。
+- `suspended`（挂起）：如果尚未启动，或者正在运行并等待恢复；
+- `running`（运行中）：如果正在运行（调用者正在等待状态）；
+- `normal`（正常）：如果它恢复了另一个协程并正在等待自身恢复；以及
+- `dead`（死亡）：如果它通过返回或未保护的错误已终止。
 
 协程允许我们构建一个包含并发活动的应用程序，每个活动都是独立编写的。一个游戏可能包含用于玩家、火山、龙卷风、瀑布的协程，以及一个处理用户输入的事件管理器。一次只有一个协程在运行（这是没有并行的并发），每个协程包含显式的 `yield` 和 `resume` 调用，并且在这些调用之间的执行时间不会过长。这种架构被称为协作式多任务，操作系统可以随时停止一个线程并将控制权交给另一个线程。
 
@@ -1907,12 +1931,12 @@ dead false cannot resume dead coroutine
 - 表（Tables）既用于数组（基于 1 的数值索引序列）也用于字典（键值对集合）。数值值和非索引值可以混合在单个表中；保持“数组部分”访问的高效取决于语言的实现。
 - 像 JavaScript 一样，Lua 的标准库实际上是对象的集合（例如 `io`、`os`、`math` 等）。
 - 表可以附加元表（metable）。元表可以自定义字段的读写方式，并重新定义操作符的含义。此外，元表可以用于构建在 JavaScript 中发现的相同的原型继承机制。
-- Lua 直接支持协程：在对象上调用 `coroutine.create` 会产生一个协程（类型为 `thread`）。协程可以被 yield 和返回，并且可以查询它们的状态。
+- Lua 直接支持协程：在对象上调用 `coroutine.create` 会产生一个协程（类型为 `thread`）。协程可以被 `yield` 和返回，并且可以查询它们的状态。
 
 为了在本章的介绍性材料之后继续学习 Lua，你可能希望找到并研究以下内容：
 
 - Lua 中未涵盖的语言特性：块（Chunks）、环境变量、垃圾回收元表、弱表（weak tables）、辅助库以及与 C 的互操作性（API）。
-- 使用 Lua 的开源项目。学习并贡献开源项目是提高任何语言熟练度的极佳方法。在许多使用 Lua 的项目中，你可能会喜欢 Luvit (https://github.com/luvit/luvit)、CorsixTH (https://github.com/CorsixTH/CorsixTH)、termtris (https://github.com/terylenorm/termtris) 和 PacPac (https://github.com/terylenorm/pacpac)。参考资料、教程和书籍。Lua 主页是 http://www.lua.org/。参考手册（截至 5.3 版本）可以在 http://www.lua.org/manual/5.3/ 免费获取。可以在 http://www.lua.org/docs.html#books 找到精选的 Lua 书。我们推荐由 Lua 创建者 Roberto Iusalimchi 编写的最新版本的《Programming in Lua》。你可能也喜欢少数涵盖游戏编程中使用 Lua 的书籍之一。
+- 使用 Lua 的开源项目。学习并贡献开源项目是提高任何语言熟练度的极佳方法。在许多使用 Lua 的项目中，你可能会喜欢 `Luvit` (https://github.com/luvit/luvit)、`CorsixTH` (https://github.com/CorsixTH/CorsixTH)、`termtris` (https://github.com/terylenorm/termtris) 和 `PacPac` (https://github.com/terylenorm/pacpac)。参考资料、教程和书籍。Lua 主页是 http://www.lua.org/。参考手册（截至 5.3 版本）可以在 http://www.lua.org/manual/5.3/ 免费获取。可以在 http://www.lua.org/docs.html#books 找到精选的 Lua 书。我们推荐由 Lua 创建者 Roberto Iusalimchi 编写的最新版本的《Programming in Lua》。你可能也喜欢少数涵盖游戏编程中使用 Lua 的书籍之一。
 
 # 练习
 
@@ -1979,7 +2003,6 @@ Python 以其文化闻名。Python 爱好者（Pythonistas）以编写优雅、�
 
 2008 年，Python 从版本 2 跳跃到版本 3。在此过程中，大量的语言怪癖、明显的问题以及语言的某些方面让人感到困惑
 
-
 # 编程语言探索
 
 对于新手来说，Python 在不考虑向后兼容性的情况下发生了完全改变。这使得某些组织将现有的 Python 2 代码升级到 Python 3 的成本非常巨大，而且在本书期间，Python 的版本被广泛使用！然而，本章将完全关于 Python 3。Python 3 是学习 Python 的首选方式：如果你以后需要退回到 Python 2，可以根据需要学习其差异。[19]
@@ -2000,6 +2023,8 @@ for c in range(1, 41):
 Python 像 CoffeeScript 一样使用缩进来定义结构。`range` 构造函数构建一个范围对象，包含底部但不包含顶端。范围按需产生值，因此不需要担心在迭代之前创建了大型列表。字符串格式化在 `format` 字符串中使用大括号；我们的空大括号表示我们想要对值使用默认格式化。如果我们想在三个对齐的列中显示值，可以写成：`{3d}:{3d}:{3d}`。
 
 现在让我们直接写一个实现 Heap 算法的字母异位脚本。（我们将在本章查看如何使用标准库中的排列生成器。）
+
+
 
 ```python
 import sys
@@ -2065,9 +2090,6 @@ assert type([1, False]) == bytes
 ```
 
 *(注：原文中存在大量重复的 OCR 错误文本，译文已根据逻辑内容进行去重处理)*
-
-
-
 
 # 64 编程语言探索
 
@@ -2155,21 +2177,26 @@ Python 变量要么是全局的，要么是局限于函数的。没有显式的�
 a, b = 1, 2
 
 def func():
+
     global a
+
     a = 3
+
     c = 4
+
     def inner():
+
         nonlocal c
+
         c = 5
+
     inner()
+
     print(a, c)
 
 func()
+
 print(a, c)
-
-
-
-
 
 # Python 69
 
@@ -2277,6 +2304,8 @@ for i in x:
 
 从头编写可迭代对象和迭代器可能有点麻烦，Python提供了生成器（generators）来简化可迭代序列的创建。生成器是通过调用包含 `yield` 语句的函数产生的。执行这样的函数不会调用函数体，而是返回一个生成器对象。这是一个产生到某个限制的 2 的幂次的生成器：
 
+
+
 ```python
 def powers_two(limit):
     value = 1
@@ -2296,14 +2325,20 @@ assert g.__next__() == 1
 assert g.__next__() == 2
 assert next(g) == 4
 assert next(g) == 8
+```
 
 有趣的是，我们可以写一个永远不会抛出 `StopIteration` 异常的迭代器——也就是说，无限序列：
 
 ```python
+
 def powers_two(limit):
+
     value = 1
+
     while True:
+
         yield value
+
 ```
 
 如果迭代方案足够简单，你可以使用生成器表达式创建一个生成器，它看起来是用括号而不是方括号。
@@ -2311,51 +2346,70 @@ def powers_two(limit):
 - 列表推导式。
   - 先计算所有元素。
   - 如果数据很大，生成很慢且浪费内存。
-  bad = [x*x for x in range(10**9)]
+  `bad = [x*x for x in range(10**9)]`
 - 生成器表达式。
   - 在迭代期间按需产生值。
   - 计算计算且几乎不消耗内存。
-  good = (x*x for x in range(10**9))
+  `good = (x*x for x in range(10**9))`
 
 # 编程语言探索
 
 标准库中的 `itertools` 模块包含许多构建和操作生成器的函数，包括 `permutations`，它可以构建产生序列排列的生成器。让我们用它来重写开头的脚本：
 
 ```python
+
 import sys
+
 from itertools import permutations
 
 if len(sys.argv) != 2:
+
     sys.stderr.write('Exactly one argument required\n')
+
     sys.exit(1)
 
 for word in ('.join(p) for p in permutations(sys.argv[1:])):
     print(word)
+
 ```
 
-如果用字符串 "rat" 调用，该调用产生一个产生 ('r','a','t'), ('r','t','a'), ('a','r','t') 等元组的生成器。通过遍历新生成器来打印每个字符串。
+如果用字符串 `"rat"` 调用，该调用产生一个产生 `('r','a','t')`, `('r','t','a')`, `('a','r','t')` 等元组的生成器。通过遍历新生成器来打印每个字符串。
 
-## 4.7 装饰器 (DECORATORS)
+## 4.7 装饰器
 
 对于某些情况，我们要在不重写源代码的情况下更改函数的行为。在 Python 中，函数（以及方法）可以被装饰。这里是最简单的装饰器之一，它可以打印函数被调用的时间以及持续时间：
 
 ```python
+
 import datetime
 
 def logged(func):
+
     def wrapper(*args, **kwargs):
+
         start = datetime.datetime.now()
+
         print('{} started at {}'.format(func.__name__, start))
+
         print('{} args={}'.format(kwargs))
+
         duration = datetime.datetime.now() - start
+
         print('{} took {}'.format(func.__name__, duration))
+
         return func(*args, **kwargs)
+
     return wrapper
 
 @logged
+
 def say_hello(name):
+
     print('Hello, {}'.format(name))
-# 定义前加上 `@logged` 装饰器等同于用 `logged(say_hello)` 定义它。装饰器语法并非必须，但它增加了大量的表达力：所有的代码都与主代码分离，让你一眼看出（而不混乱）应用程序应该做什么，并且知道它会被记录。
+
+```
+
+定义前加上 `@logged` 装饰器等同于用 `logged(say_hello)` 定义它。装饰器语法并非必须，但它增加了大量的表达力：所有的代码都与主代码分离，让你一眼看出（而不混乱）应用程序应该做什么，并且知道它会被记录。
 
 装饰器为跨切关注点（cross-cutting concerns）提供了良好的解决方案，例如日志记录、数据库事务维护、持久化、身份验证等。这些关注点被称为“跨切的”，因为人们不是围绕已认证与持久化的对象来组织系统；相反，这些关注点可以应用于任何地方。你经常看到带有 `@persistent`、`@transactional` 和 `@authenticated` 装饰器的 Python 代码。这里还有另一个。众所周知，简单应用定义
 
@@ -2363,18 +2417,19 @@ def say_hello(name):
 F(n) = \begin{cases} n & n \le 1 \\ F(n-1) + F(n-2) & \text{otherwise} \end{cases}
 ```
 
-会导致可怕的性能：计算 F(40) 会导致 331,160,281 次函数调用。对 F(50) 有超过 40 万亿次调用，对 F(100) 有超过京 ($10^{21}$) 次调用。问题是许多调用是重复的，从求值可以看出：
+会导致可怕的性能：计算 `F(40)` 会导致 331,160,281 次函数调用。对 `F(50)` 有超过 40 万亿次调用，对 `F(100)` 有超过京 ($10^{21}$) 次调用。问题是许多调用是重复的，从求值可以看出：
 
 ```
 F(40) = F(39) + F(38)
     = (F(38) + F(37)) + F(38)
 ```
 
-由于 F(38) 被调用了两次，我们应该在第一次调用后记录它的值，然后直接复用它的值，而不是重复调用两次。这种复用结果的技巧被称为记忆化（memoization），也适用于 F(37)、F(36) 等，将调用次数从 3.31 亿减少到 41 次。
+由于 `F(38)` 被调用了两次，我们应该在第一次调用后记录它的值，然后直接复用它的值，而不是重复调用两次。这种复用结果的技巧被称为记忆化（memoization），也适用于 `F(37)`、`F(36)` 等，将调用次数从 3.31 亿减少到 41 次。
 
 在 `fib` 函数内部执行记忆化会违反关注点分离原则，因此我们写一个装饰器：
 
-```pythondef memoized(f):
+```python
+def memoized(f):
     cache = {}
     def wrapper(*args):
         if args in cache:
@@ -2396,94 +2451,54 @@ print(fib(100))
 
 -- Python 是一门成熟的通用语言，在脚本、Web 框架和数据科学领域非常流行。它由 Guido van Rossum 创建并目前仍由他监督。
 
-
-
-
-
 # 编程语言探索
 
 - Python 拥有大量的内置类型，包括许多不同的数值类型和十多种集合类型。
-
 - Python 没有基本类型。所有值都是对象。所有对象都有一个 id 和类型。类型也是对象。
-
 - 通过定义类来创建新类型。（与 JavaScript 和 CoffeeScript 对比，在它们中 `class` 关键字定义的是一个函数。）
-
 - Python 中的类以及类型都是对象。（与 JavaScript、CoffeeScript 和 Lua 对比，在这些语言中继承对象的类型会产生该类型的字符串名称。）
-
 - Python 中的类型可以有超类和子类。通过对象类型链的路径将指向类型对象。超类-子类的关系用于属性查找。子类从其超类继承属性。
-
 - 因为类型可以拥有多个类型，该语言强制了搜索继承属性时必须遵循的祖类型线性顺序。这被称为方法解析顺序，或 MRO。
-
-- Python 局部变量通过局部作用域内的赋值引入。允许词法作用域的非本地变量进行读取；但要写入非本地或全局变量必须使用相应的关键字（如 global）。
-
+- Python 局部变量通过局部作用域内的赋值引入。允许词法作用域的非本地变量进行读取；但要写入非本地或全局变量必须使用相应的关键字（如 `global`）。
 - 许多标准运算符和函数可以通过在类中定义特殊方法来涵盖。这些特殊方法的名称如 `__add__`、`__eq__` 和 `__contains__`。
-
 - Python 通过迭代器和生成器支持延迟求值。生成器可以使用 `yield` 语句或生成器表达式创建。
-
 - 装饰器提供了增强函数和类行为的方法，而无需实际上在函数内部直接添加任何代码。
 
 要在在本章介绍性材料之外继续学习 Python，你可能希望找到以下内容：
 
 - 本章未涵盖的特性：异常、包、链式比较、集合和字典推导式、大量的额外内置函数、序列的完整细节、`pass` 语句、带 `del` 的语句、交互式输入、极其扩展的标准库，以及第三方库和框架的海量生态系统。
-
-- 使用 Python 的开源项目。贡献开源项目是提高任何语言熟练度的极佳方式。你可能会喜欢以下用 Python 编写：Requests (https://github.com/kennethritz/requests)、Flask (https://github.com/mitsahiko-flask)、Reddit (https://github.com/reddit/reddit) 和 Boto (https://github.com/boto/)。
-
-- 参考手册、教程和书籍。Python 主页为 https://www.python.org/。文档页面 https://docs.python.org/3/ 包含了指向官方教程、语言参考和库参考的链接。精选书籍列表可以在 https://wiki.python.org/moin/PythonBooks 找到。Google 发布了一门在线 Python 课程：https://developers.google.com/edu/python/。
+- 使用 Python 的开源项目。贡献开源项目是提高任何语言熟练度的极佳方式。你可能会喜欢以下用 Python 编写：Requests (`https://github.com/kennethritz/requests`)、Flask (`https://github.com/mitsahiko-flask`)、Reddit (`https://github.com/reddit/reddit`) 和 Boto (`https://github.com/boto/`)。
+- 参考手册、教程和书籍。Python 主页为 `https://www.python.org/`。文档页面 `https://docs.python.org/3/` 包含了指向官方教程、语言参考和库参考的链接。精选书籍列表可以在 `https://wiki.python.org/moin/PythonBooks` 找到。Google 发布了一门在线 Python 课程：`https://developers.google.com/edu/python/`。
 
 # 练习
 
 现在轮到你了。请通过下面的活动和研究问题继续探索 Python，并随时根据自己的想法进行扩展。
 
 - 4.1 找到 Python 主页并浏览官方教程、语言参考和库参考。
-
 - 4.2 安装 Python 并尝试 REPL。
-
 - 4.3 阅读关于开发 Python 3 的原因的介绍。描述 Python 3 中所做的三个主要的语言变化，这些变化被认为纠正了 Python 2 的缺陷或问题。
-
 - 4.4 在这一章中，我们已经了用于 `str` 类的 `format` 方法的几种用法，但我们使用的是默认格式。对数字和字符串进行格式化有哪些可用选项？
-
 - 4.5 内置类型 `enumerate` 通常用于什么？构造一个真实的示例来说明此类用法。
-
 - 4.6 扩展 4.2 节中的 `Circle` 类，添加 `circumference`、`str` 和 `repr` 方法。利用此学习学习后两者的语言约定。
-
 - 4.7 阅读《Python 之禅》（Zen of Python）。
-
 - 4.8 我们提到过 Python 类是命名空间。但类并不是语言中唯一的命名空间类型。研究并用示例描述 Python 中至少两个作为命名空间的构造结构。
-
 - 4.9 用你自己的话描述 Python 中函数和方法之间的区别。
-
 - 4.10 研究 `isinstance` 和 `issubclass` 函数。它们查看的是什么？如果可以，请找出在日常代码中使用支持和反对它们使用的理由。
-
 - 4.11 本章引入的“多重继承”术语是一个有趣的话题，许多人认为编程语言没有多重继承时通常更好。反对多重继承的理由是什么？
-
 - 4.12 用伪代码描述 Python 的 MRO。
-
 - 4.13 Python 的局部变量会遮蔽全局变量，但（正如我们在第 2 章中看到的）CoffeeScript 完全不允许遮蔽。研究这两种方法的区别。它们各自优缺点是什么？
-
 - 4.14 JavaScript 的 `let` 和 `local` 允许定义作用于块（`while` 语句体）的变量。这在 Python 中可能吗？为什么可能或为什么不可能？
-
 - 4.15 对本章实现的 `Vector` 类与第 3 节中编写的 `Vector` 类进行详细比较。
-
 - 4.16 如果你有一些空间数学经验，为点、向量、射线和平平面创建 Python 类，并在尽可能方便的情况下“重载”尽可能多的运算符。你的类应该包括减去两个点、将向量乘以数字、计算向量的点积和叉积以及确定平面的法线的功能。
-
 - 找出 (a) 类的属性，(b) 类的子类，以及 (c) 是否可以向现有类添加新属性。
-
 - 研究 Python 中的 `classmethod` 和 `staticmethod`。它们是什么？是如何实现的？
-
 - 本章开头的词汇计数示例使用了普通的字典。重写该脚本以使用标准库中的 `Counter` 对象。
-
 - 4.9 在这一章中，我们看到了关键字参数的打包示例，但没有在类中解包字典的示例。提供一个真实的示例。
-
 - 函数可以同时具有单星和双星参数吗？如果是，每种允许多少个？同时使用它们有什么用处？
-
 - 本章中的 `OneThree` 示例为迭代器和方法使用了不同的类。重写该示例使其只有一个类。提示：`__iter__` 方法将返回 `self`。相比之下，它的优缺点是什么？
-
 - Python 的 `range` 是迭代器吗？如果不是，为什么人们倾向于认为它是？
-
 - 使用 `time` 模块对本章中的 `fibonacci` 函数调用参数 40 的未缓存和缓存版本进行计时。
-
-- 计算机科学中的一个经典问题是 0-1 背包问题：给定容量为 C 的背包和一组物品 {(w₁, v₁), ..., (wn, vn)}，其权重为 wi，价值为 vi，找到总重量小于 C 的价值最高的物品集合。这里有一个直接的递归解决方案，它像斐波那契示例一样，最终会对相同的参数进行递归调用。实现这个直接的解决方案。生成一组随机权重和随机价值的物品，并分别在使用 `@memoized` 装饰器和不使用的情况下对解决方案进行计时。
-
+- 计算机科学中的一个经典问题是 0-1 背包问题：给定容量为 C 的背包和一组物品 `{(w₁, v₁), ..., (wn, vn)}`，其权重为 `wi`，价值为 `vi`，找到总重量小于 C 的价值最高的物品集合。这里有一个直接的递归解决方案，它像斐波那契示例一样，最终会对相同的参数进行递归调用。实现这个直接的解决方案。生成一组随机权重和随机价值的物品，并分别在使用 `@memoized` 装饰器和不使用的情况下对解决方案进行计时。
 - 考虑本章 `Vocalizer` 类的以下稍微修改。
 
 ```python
@@ -2494,14 +2509,8 @@ class Vocalizer:
 ```
 
 现在将 `Vocalizer` 添加到类的超类中，应该该类的任何对象的字符串表示都能语音化。你可以通过装饰器多次调用同一个函数吗？也就是说，你可以装饰一个类（例如使用 `@memoized`），使得装饰器添加一个 `vocalize` 方法？
-
 - 研究装饰器的类语法并使用这种语法编写一个 `@memoized` 装饰器。
-
 - 我们没有涵盖 Python 处理异步并发的方法。研究 `async` 和 `wait` 的用法，并在你选择的小应用程序中演示这些内容。
-
-
-
-
 
 # 第5 章
 
@@ -2525,7 +2534,7 @@ Ruby 的设计者对其语言的用途描述如下：“我希望看到 Ruby 帮
 
 我们的之旅将从三个标准示例和对语言的简要介绍开始。我们将介绍面向对象的范式，并展示 Ruby 如何让面向对象编程不仅可能而且变得自然。Ruby 是本书中第一个也是唯一一门让我们更喜欢面向对象的语言，我们将解释原因。然后，我们将介绍 Ruby 的两个重要特性：块（blocks）和混入（mixins）。在这些特性之后是关于访问控制的章节，与我们目前看到的四种语言相比，Ruby 让这一特性变得相对简单。最后，我们以 Ruby 的元编程功能结束介绍。
 
-### 5.1  HELLO RUBY
+### 5.1 HELLO RUBY
 
 我们从熟悉的列出小三角形尺寸测量的脚本开始：
 
@@ -2542,6 +2551,8 @@ end
 Ruby 展示了我们首次在 CoffeeScript 中看到的一些特性——使用 `{}` 的字符串插值和尾随 `if` 子句——但这个脚本绝对没有使用传统的 `for` 语句。相反，我们通过向对象 1 发送 `upto` 消息来启动脚本。该消息会从其接收者到其参数（包含参数）的范围内的每个值执行其块。
 
 接下来，让我们把运行中的字母变位词示例（使用 Heap's Algorithm的那个）翻译成 Ruby：
+
+
 
 ```ruby
 generatePermutations(a, n)
@@ -2575,15 +2586,9 @@ ARV[0].chars.permutation.each{|s| puts s.join}
 
 一行代码搞定一切：
 
-- 1. `ARV[0]` 是第一个命令行参数，一个字符串。
-- 2. `.chars` 生成一个包含该字符串每个字符的数组。
-- 3. `.permutation` 生成一个该数组所有排列的枚举器。（注：此处原文存在大量重复文本，已按要求去重）。
-
-（注：原文后续部分存在大量 OCR 识别重复错误，已根据逻辑进行清理处理。）
-
-
-
-
+- `ARV[0]` 是第一个命令行参数，一个字符串。
+- `.chars` 生成一个包含该字符串每个字符的数组。
+- `.permutation` 生成一个该数组所有排列的枚举器。
 
 # 82 编程语言探索
 
@@ -2679,10 +2684,6 @@ def r()
 end
 ```
 
-
-
-
-
 ```ruby
 class Dog
   def bark()
@@ -2701,7 +2702,7 @@ spot.bark
 spike.bite
 ```
 
-Spike 能够咬人，是因为方法查找从对象的单例类开始，然后沿着超类链向上。图 5.2 显示了这些对象之间的关系。
+`Spike` 能够咬人，是因为方法查找从对象的单例类开始，然后沿着超类链向上。图 5.2 显示了这些对象之间的关系。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_104_0.png)
 
@@ -2788,7 +2789,7 @@ p = map(&-(x) (x * 10))                  # 匿名 proc!
 p = map &(x) (x * 10))                     # 这里是可选的
 ```
 
-第一种形式 (Proc 或 proc) 应该谨慎使用，如果用得的话——这类 proc 会检查传递给它们的参数个数，并且 `return` 语句会从闭层方法返回！lambda 形式的行为则符合预期。
+第一种形式 (`Proc` 或 `proc`) 应该谨慎使用，如果用得的话——这类 proc 会检查传递给它们的参数个数，并且 `return` 语句会从闭层方法返回！lambda 形式的行为则符合预期。
 
 ```ruby
 def conversation()
@@ -2800,7 +2801,7 @@ def conversation()
 end
 ```
 
-conversation
+`conversation`
 
 当块包含将消息传递给块参数的单一表达式时，存在一种简洁的简写。以下两行代码的作用相同：
 
@@ -2815,7 +2816,7 @@ conversation
 
 ## 混入 (MIXINS)
 
-在章节中，我们看到了多重继承，但 Ruby 只允许一个超类。然而，我们可以使用模块在不同的类之间共享功能。这被称为混入 (mixins)。
+在章节中，我们看到了多重继承，但 Ruby 只允许一个超类。然而，我们可以使用模块在不同的类之间共享功能。这被称为混入 (`mixins`)。
 
 ```ruby
 module Speakable
@@ -2835,10 +2836,6 @@ end
 Dog.new.speak
 Cat.new.speak
 ```
-
-
-
-
 
 # Ruby 91
 
@@ -2883,9 +2880,9 @@ class BadAccount < Account
 end
 ```
 
-BadAccount.mess_up_log(a)    # 噢不！
+`BadAccount.mess_up_log(a)`    # 噢不！
 
-该轮使用 private（私有）了。私有方法只发送给 `self`。Ruby 通过让我们使用 `method(args)` 而不是 `object.method(args)` 来强制这一点，并将隐式接收者定义为 `self`。
+该轮使用 `private`（私有）了。私有方法只发送给 `self`。Ruby 通过让我们使用 `method(args)` 而不是 `object.method(args)` 来强制这一点，并将隐式接收者定义为 `self`。
 
 ```ruby
 # 将 log 方法私有化可以防止之前的攻击
@@ -2917,47 +2914,55 @@ def hello
 end
 ```
 
+
+
 除非 `Object` 类是每个类的祖先（那些显式派自 `Basic` 的类除外，见图 5.1），否则它的私有方法几乎可以在任何地方使用。我们获得了顶层函数的表象，但内部一切都是面向对象的消息传递。
 
-## 5.7 元编程
+### 5.7 元编程
 
-Ruby 允许我们创建类来模拟我们关注的事物。在典型的商业应用中，我们定义客户、物品、订单和购买记录。在日历应用中，我们创建联系人和预约。我们编写方法来提问，例如“过去30天内有多少客户使用了优惠券？”并执行操作，如“将所有排球鞋的价格降低 20%”。由于类、模块、方法和 proc 都是对象，我们可以查询并操作它们。查询和操作程序被称为元编程。最简单的元编程是查询程序被称为内省。Ruby 提供了大量的内省方法。其中，对于类 c、模块 m 和对象 o，有：
+Ruby 允许我们创建类来模拟我们关注的事物。在典型的商业应用中，我们定义客户、物品、订单和购买记录。在日历应用中，我们创建联系人和预约。我们编写方法来提问，例如“过去30天内有多少客户使用了优惠券？”并执行操作，如“将所有排球鞋的价格降低 20%”。由于类、模块、方法和 proc 都是对象，我们可以查询并操作它们。查询和操作程序被称为元编程。最简单的元编程是查询程序被称为内省。Ruby 提供了大量的内省方法。其中，对于类 `c`、模块 `m` 和对象 `o`，有：
 
-- c.superclass
-- m.name
-- m.included_modules
-- m.instance_methods
+- `c.superclass`
+
+- `m.name`
+
+- `m.included_modules`
+
+- `m.instance_methods`
+
 ...（此处省略列表）
 
 > 实现这一点的一种方法是直接写 `a.send(:log, 999)`，因为 `send` 不遵守访问控制。
 
-# Ruby 93
+#### Ruby 93
 
-- o.class
-- o.singleton_class
-- o.is_a?
-- o.respond_to?
-- o.methods
-- local_variables
-- global_variables
+- `o.class`
+
+- `o.singleton_class`
+
+- `o.is_a?`
+
+- `o.respond_to?`
+
+- `o.methods`
+
+- `local_variables`
+
+- `global_variables`
 
 前几个方法告诉我们关于类的信息——对象的类、类的父类以及由模块或类定义的方法。`respond_to?` 和 `methods` 关于类型。通常情况下，表达式的类型限制了行为；对操作数应用操作（例如符号乘以哈希）是类型错误，而不是类错误。
 
-
-
-
-
-## Ruby 95
+#### Ruby 95
 
 - Ruby 拥有丰富的元编程设施。对象、类和其他实体都可以进行内省。甚至可以在运行时通过程序化创建方法。
 
 在你在本章的介绍性内容之后继续学习 Ruby 时，你可能希望找到并研究以下内容：
 
-- **本章未涵盖的语言。** BEGIN 和 END 块、Herdocs、交替引号（%q, %Q 等）、嵌入文档、正则表达式、类变量、类方法、预定义变量、标准库。
+- **本章未涵盖的语言。** `BEGIN` 和 `END` 块、`Herdocs`、交替引号（`%q`, `%Q` 等）、嵌入文档、正则表达式、类变量、类方法、预定义变量、标准库。
 
-- **使用 Ruby 的开源项目。** 研究和贡献开源项目是提高你对任何语言熟练程度的极佳方式。你可以在 Ruby 中找到以下项目：Rails (https://github.com/rails/rails)、Homebrew (https://github.com/Homebrew)、Jekyll (https://github.com/jekyll/jekyll)、Sass (https://github.com/sass/sass) 以及 Vagrant (https://github.com/mitchellh/vagrant)。
+- **使用 Ruby 的开源项目。** 研究和贡献开源项目是提高你对任何语言熟练程度的极佳方式。你可以在 Ruby 中找到以下项目：`Rails` (`https://github.com/rails/rails`)、`Homebrew` (`https://github.com/Homebrew`)、`Jekyll` (`https://github.com/jekyll/jekyll`)、`Sass` (`https://github.com/sass/sass`) 以及 `Vagrant` (`https://github.com/mitchellh/vagrant`)。
 
-- **参考资料和教程。** Ruby 的主页位于 https://www.ruby-lang.org/。文档页面 https://www.ruby-lang.org/en/documentation/ 包含了指向入门指南、用户指南、语言参考和库参考的链接。学习该语言和探索高级特性的在线资源丰富；https://rubymonk.com 的 Ruby Monk 涵盖了广泛的技能。流行书籍包括《Ruby the Hard Way》[108] 和《Programming Ruby 1.9 & 2.0》[118]。Ruby 和大多数语言一样正在不断进化，因此请关注最新版本。
+- **参考资料和教程。** Ruby 的主页位于 `https://www.ruby-lang.org/`。文档页面 `https://www.ruby-lang.org/en/documentation/` 包含了指向入门指南、用户指南、语言参考和库参考的链接。学习该语言和探索高级特性的在线资源丰富；`https://rubymonk.com` 的 Ruby Monk 涵盖了广泛的技能。流行书籍包括《Ruby the Hard Way》[108] 和《Programming Ruby 1.9 & 2.0》[118]。Ruby 和大多数语言一样正在不断进化，因此请关注最新版本。
 
 # 练习
 
@@ -2967,17 +2972,17 @@ Ruby 允许我们创建类来模拟我们关注的事物。在典型的商业应
 
 5.2 比较 Python 和 Ruby 在查找不存在的键对应的值时是如何提供“默认值”的（主要区别可以在各自章节开头的字数计数示例中看到）。
 
-5.3 图 5.1 中的类层级结构是不完整的。例如，Exception 是一个庞大类层次结构的根。这个层次结构看起来是什么样的？还有其他遗漏的吗？
+5.3 图 5.1 中的类层级结构是不完整的。例如，`Exception` 是一个庞大类层次结构的根。这个层次结构看起来是什么样的？还有其他遗漏的吗？
 
-5.4 熟悉 Ruby 文档。查找关于以下方法的信息：to_s, to_i, to_a 和 to_h。这些方法分别定义在哪个类中？它们是做什么的？
+5.4 熟悉 Ruby 文档。查找关于以下方法的信息：`to_s`, `to_i`, `to_a` 和 `to_h`。这些方法分别定义在哪个类中？它们是做什么的？
 
-5.5 在 Python 中，7/2=3.5，而 7.0//2=3.0。后者表达式使用了地板除运算符。Ruby 有地板除运算符吗？如果有，是什么？如果没有，我们如何模拟它？
+5.5 在 Python 中，`7/2=3.5`，而 `7.0//2=3.0`。后者表达式使用了地板除运算符。Ruby 有地板除运算符吗？如果有，是什么？如果没有，我们如何模拟它？
 
-5.6 研究以下运算符：==, <=, &, . 和 -。编写一个短脚本（脚本），以意义的方式使用它们。Python 中对应的对应物分别是什么（如果有的话）？
+5.6 研究以下运算符：`==`, `<=`, `&`, `.` 和 `-`。编写一个短脚本（脚本），以意义的方式使用它们。Python 中对应的对应物分别是什么（如果有的话）？
 
 # 编程语言探索
 
-5.7 在 Ruby REPL 中执行以下实验。通过任何你能发现的方法，生成两个值为 "dog" 但对象 id 不同的字符串对象。对每个对象发送 `to_sym` 方法。比较每个符号的 object id。这个比较的结果告诉了你什么？
+5.7 在 Ruby REPL 中执行以下实验。通过任何你能发现的方法，生成两个值为 `"dog"` 但对象 id 不同的字符串对象。对每个对象发送 `to_sym` 方法。比较每个符号的 object id。这个比较的结果告诉了你什么？
 
 5.8 你可以创建数值型的 hash 键吗？字符串的？数组的？研究并描述任何对象可以用作 hash 键的精确条件。
 
@@ -3018,13 +3023,13 @@ class C; def b; end; end
 puts C.public_instance_methods(false)
 ```
 
-## Ruby 97
+#### Ruby 97
 
 特征是一个类的定义，后面是……什么？第二行是重定义还是扩展？运行脚本以找到这个问题的答案。然后在 Python 中运行相应的“实验”。你注意到区别了吗？
 
-- 5.14 Ruby  如何像 Lua 协程？它们有什么不同？
+- 5.14 Ruby 如何像 Lua 协程？它们有什么不同？
 
-- 5.15 Ruby 同时拥有 Method 和 UnboundMethod 类。它们之间的区别是什么？
+- 5.15 Ruby 同时拥有 `Method` 和 `UnboundMethod` 类。它们之间的区别是什么？
 
 - 5.16 在这一章中，我们没有提到 Ruby 的类变量和实例变量。查询这些特性。用自己的话解释它们，以及它们之间有什么区别。
 
@@ -3036,14 +3041,9 @@ puts C.public_instance_methods(false)
 
 - 5.20 ... 的 RubyVM: InstructionSequence
 
-- 5.22 ... 的模块: BasicObject, Object, Module, Kernel, Numeric, Float
+- 5.22 ... 的模块: `BasicObject`, `Object`, `Module`, `Kernel`, `Numeric`, `Float`
 
-
-
-
-
-
-## 6.1 HELLO JULIA
+# 6.1 HELLO JULIA
 
 我们将从常用的直三角形脚本开始：
 
@@ -3097,14 +3097,15 @@ for (word, count) in sort(collect(counts))
 end
 ```
 
-## Julia 101
+#### Julia 101
 
 在这里我们首先定义一个字典来存储每个单词的计数。我们限制字典的键为字符串，值必须是 64 位无符号整数。
+
 `eachline(STDIN)` 表达式为我们提供了一个标准输入的逐行迭代器。我们将每行转换为小写，并将其拆分为由小写字母 a-z（为了简单起见）和撇号组成的单词。对于每个单词，如果它在字典中，我们就限制其计数；否则，创建一个计数为 1 的新条目。`map-get(counts, word, 0)` 中的查找操作提供了一个方便的参数，当键不存在时返回该值。零是这里是完美的选择。
 
 `collect` 函数将（无序）数据转换为键值对的数组，我们可以按键对其进行排序，这正是我们的问题规范所要求的。解构迭代器和字符串插值使得整个脚本变得非常干练且简洁。
 
-## 6.2 基础知识
+# 6.2 基础知识
 
 从我们的介绍性程序中，你可能注意到 Julia 看起来有点像 Lua。结构化语句以关键字结束（例如 `while..end`、`for..end`、`if..elseif..end..end`、`try..catch..end`），索引从 1 开始而不是 0，局部变量通过 `local` 关键字引入，并且没有 `class` 关键字。Julia 的协程与 Lua 类似，但 Julia 了一些语法形式。除了 `function..end`，我们还有两种指定函数的方法：
 
@@ -3174,43 +3175,70 @@ julia`x
 
 这些是基础。Julia 的类型系统远超我们目前所看到的任何内容，因此我们下一节专门介绍它。
 
-## 6.3 类型
+# 6.3 类型
 
 Julia 的类型系统会让你想起 Python 和 Ruby 的类型：原始类型和引用类型之间没有区别，类型是对象（因此有一个名为 `Type` 的类型），类型被组织成层次结构（单继承），整数和浮点数有独立的类型，并且你可以定义自己的。Julia 的基本类型进一步区分了有符号和无符号整数，提供了各种长度的类型，并提供了理数。这些都是有趣的概念，我们将详细查看。
 
 > 图 A 内置类型的层次结构
 
 | | |
+
 |---|---|
+
 | Any | Char |
+
 | Real | AbstractString |
+
 | Bool | ASCIIString |
+
 | Signed | UTF32String |
+
 | Int8 | UTF8String |
+
 | Int16 | UTF16String |
+
 | Int32 | AbstractArray{T,N} |
+
 | Int64 | Array{T,N} |
+
 | Int128 | BitArray{T,N} |
+
 | Unsigned | SharedArray{T,N} |
+
 | UInt8 | Range{T} |
+
 | UInt16 | FloatRange<T:<AbstractFloat> |
+
 | UInt32 | OrdinalRange<T,S> |
+
 | UInt64 | StepRange<T,S> |
+
 | UInt128 | UnitRange<T:<Real> |
+
 | BigInt | Set{T} |
+
 | Rational<T:<Integer> | Function |
+
 | AbstractFloat | Regex |
+
 | Float | Type{T} |
+
 | Float32 | DataType |
+
 | Float64 | TypeConstructor |
+
 | BigFloat | Union |
+
 | Complex{T:<Real} | Symbol |
+
 | Expr | Void |
 
 ### 6.3.1 抽象类型
 
 每个类型要么是抽象的，要么是具体的。每个值都有一个具体的类型；例如。
+
 ¹ 你可以在附录 A 中找到这些各种数值类型的详细信息。
+
 ² Python 通过 abc 模块“支持”抽象类的概念，但 Julia 在语言本身直接提供了该概念的支持。
 
 # 104 编程语言探索
@@ -3231,11 +3259,17 @@ assert typeof(DataType) == DataType
 类型并不泛化其他类型；例如，抽象类型 `AbstractFloat` 泛化了 `Float16`、`Float32` 和 `BigFloat` 四种类型。调用 `typeof` 永远不会产生抽象类型，但你可以使用 `isa` 来检查在抽象类型中的“成员身份”：
 
 ```julia
+
 assert typeof(88) == Int64
+
 for t in [Int64, Integer, Signed, Real, Number, Any]:
+
     isa(88, t)
+
 end
 ```
+
+
 
 抽象类型并不允许类型有子类型。
 
@@ -3265,28 +3299,23 @@ speak(a::Animal) = "$(a.name) $(sound(a))"
 ```julia
 type Horse <: Animal
     name
+end
 sound(h::Horse) = "neigh"
 ```
 
 > 3并不是所有的语言都如此。许多其他语言允许具体类型拥有子类型。
 
-
-
-
-
 # Julia 105
 
 ```julia
 type Cow <: Animal
-name
+    name
 end
 sound(c::Cow) = "moooo"
-
 type Sheep <: Animal
-name
+    name
 end
 sound(s::Sheep) = "baaaa"
-
 s = Horse("CJ")
 @assert speak(s) == "CJ says neighbor"
 c = Cow("Bessie")
@@ -3367,9 +3396,6 @@ zeros(Int64, 2, 2) == [0 0; 0 0]
 ones(Int64, 2, 2) == [1 1; 1 1]
 ```
 
-
-
-
 注解在 Julia 中完全是可选的。某些语言（例如 CoffeeScript）没有类型注解的概念，而某些语言（例如 Java，将在下一章介绍）则要求所有语言都必须使用它们。
 
 ## 6.3.5 协变性、逆变性与不变性
@@ -3431,10 +3457,6 @@ assert times("ho", Uint64(3)) == "hoho"
 
 在之前的章节中，我们已经了一些内省的情况，例如向 Python 或 Ruby 类查询其方法列表，或向 JavaScript 函数查询它接受的参数数量。Julia 有几十个这样的函数。
 
-
-
-
-
 # Julia 113
 
 因此，宏对已知全局变量的使用不会被调用者无意中定义的名称所覆盖。
@@ -3446,7 +3468,6 @@ macro unless(condition, body)
   (:if !$condition)
     $(esc(body))
 end
-
 x, y = 0, 1
 unless (x == 5) begin
   y = 3
@@ -3456,7 +3477,6 @@ unless (x == 0) begin
   y = 5
 # 不应该执行
 end
-
 @Assert y == 3
 ```
 
@@ -3495,26 +3515,24 @@ factors = fetch(ref)
 @assert factors == Dict(234711901=>1,9323419=>1)
 ```
 
+
+
 在调用和获取结果之间，调用进程可以自由执行其他工作。当不需要等待中间工作时，调用者可以使用 `remotall_fetch`（代替 `remotall` 和 `fetch`）或 `@fetch`（代替 `@spawn` 和 `fetch`）来结合调用和获取。
 
-跨核并行编程的一个常见示例是通过在正方形 (0,0)...(1,1) 中生成随机点来计算 $\pi$ 的近似值。计算内切弧内（图 6.3 中 $x^2+y^2 < 1$ 的点 $(x,y)$）的随机点数量，除以正方形内的点总数，即可近似值 $\frac{\pi}{4}$。让我们在三个核心上并行生成百万个随机点：
+跨核并行编程的一个常见示例是通过在正方形 `(0,0)...(1,1)` 中生成随机点来计算 $\pi$ 的近似值。计算内切弧内（图 6.3 中 `x^2+y^2 < 1` 的点 `(x,y)`）的随机点数量，除以正方形内的点总数，即可近似值 $\frac{\pi}{4}$。让我们在三个核心上并行生成百万个随机点：
 
 ![](img/2cd8452ff5a372a7459559ad)
-
-
-
-
 
 # 练习
 
 现在轮到你了。请通过下方的活动和研究问题继续探索 Julia，并随时根据自己的想法进行扩展。
 
-- 6.1 找到首页。下载最新的发行版本并尝试 REPL。
-- 6.2 查阅 http://julia-demo.readthedocs.org/en/latest/stdl/base.html 上的标准库文档。
+- 6.1 找到首页。下载最新的发行版本并尝试 `REPL`。
+- 6.2 查阅 `http://julia-demo.readthedocs.org/en/latest/stdl/base.html` 上的标准库文档。
 - 6.3 研究并通过有趣的例子解释 `==`、`===` 和 `is` 之间的区别。`==` 运算符是浅层测试还是深层的质量测试？
 - 6.4 Julia 使用什么运算符进行字符串拼接？
 - 6.5 比较并对比 Python 和 Julia 在位置参数、可选参数和关键字参数及其对应参数方面的处理方法。针对每种语言提出此类问题，例如：位置参数和关键字可以是可选的吗？位置和关键字参数以及参数可以以任何顺序出现吗？
-- 6.6 定义一个函数 `fib` 来计算第 n 个斐波契数，使用尾递归和可选参数。调用 `fib(7)` 应该返回 13，通过以下调用：`fib(7) ⇒ fib(6,0,1) ⇒ fib(5,1,1) ⇒ fib(4,1,2) ⇒ fib(3,2,3) ⇒ fib(2,3,5) ⇒ fib(1,5,8) ⇒ fib(0,8,13) ⇒ 13`。
+- 6.6 定义一个函数 `fib` 来计算第 `n` 个斐波契数，使用尾递归和可选参数。调用 `fib(7)` 应该返回 `13`，通过以下调用：`fib(7) ⇒ fib(6,0,1) ⇒ fib(5,1,1) ⇒ fib(4,1,2) ⇒ fib(3,2,3) ⇒ fib(2,3,5) ⇒ fib(1,5,8) ⇒ fib(0,8,13) ⇒ 13`。
 - 6.7 如果你在在线文档和公共仓库中浏览 Julia 源码，你可能会发现 `local` 关键字相当少见。为什么要这样做？在什么情况下你会认为 `local` 关键字是必要的？
 - 6.8 Julia 表达式 `[1 2]` 和 `[1 2 3]` 具有相同的类型吗？如果是，类型是什么？
 - 6.9 给定两个表达式 `[1 3]` 和 `[1;3]`，它们的类型分别是什么？(b) 画出这些表达式所代表的数组（或矩阵）。
@@ -3530,7 +3548,7 @@ factors = fetch(ref)
 - 6.14 表达式 `[i+j/k for i=1:4, j=1:3, k=5]` 的类型是什么？Julia 如何推断出这个类型？
 - 6.15 在你使用的 Julia 版本中，对于以下泛型函数 `+`、`convert`、`length` 和 `and`，存在多少不同的方法。
 
-# 编程语言探索
+## 编程语言探索
 
 6.16 Julia 在任何地方使用了逆变（contravariance）吗？如果有，在哪里？如果没有，找到另一种使用了该特语言并给出示例。
 6.17 研究多重分发（multiple dispatch）优于单重分发（single dispatch）的优缺点。为什么 Julia 采用多重分发？
@@ -3590,9 +3608,6 @@ public class TripleApp {
 }
 ```
 
-
-
-
 ```java
 private static void generatePermutations(char[] a, int n) {
   if (n == 0) {
@@ -3605,7 +3620,6 @@ private static void generatePermutations(char[] a, int n) {
     generatePermutations(a, n-1);
   }
 }
-
 private static void swap(char[] a, int i, int j) {
   char saved = a[i];
   a[i] = a[j];
@@ -3625,7 +3639,6 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-
 public class TraditionalWordCountApp {
   public static void main(String[] args) {
     SortedMap<String, Integer> counts = new TreeMap<>();
@@ -3662,7 +3675,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-
 public class WordCountApp {
     public static void main(String[] args) {
         Pattern nonWord = Pattern.compile("[^a-z']+");
@@ -3678,9 +3690,6 @@ public class WordCountApp {
     }
 }
 ```
-
-
-
 
 # Java 125
 
@@ -3734,10 +3743,17 @@ abstract class Animal {
     public Animal(String name) {
         this.name = name;
     }
-    abstract String sound();
-    public String speak() {
-        return name + " says " + sound();
-    }
+}
+```
+
+
+
+```java
+abstract String sound();
+
+public String speak() {
+    return name + " says " + sound();
+}
 }
 ```
 
@@ -3792,7 +3808,7 @@ public class AnimalsApp {
 
 继承适用于字段和方法。子类不继承父类的构造函数；然而，它们可以在自己的构造函数内部通过 `super` 关键字引用父类构造函数。重定义具体父类方法或为抽象父类提供抽象方法实现的子类被称为重写（override）了该方法。程序员可以使用 `@Override` 注解来标记方法重写。
 
-## 7.3 接口 (INTERFACES)
+## 7.3 接口
 
 Java 接口定义了一组相关的常量和方法，提供了一个合约或程序接口（API），实现类必须遵循该合约。接口的作用（非常！）非常像抽象类；它定义了一个新的引用类型，可以包含抽象方法，并且不能实例化。虽然抽象类可以定义属于具体子类实例的（非静态）字段以及非公共方法，但接口不能。接口始终是 public、static 和 final 的（无论是否使用了这些修饰符），并且所有接口方法都是 public 的（无论是否写了该修饰符）。未标记为 `default` 或 `static` 的都是抽象的。
 
@@ -3807,7 +3823,7 @@ interface Drawable {
 
 最初，Java 接口只能包含抽象方法。因此，一个接口意味着会破坏实现该接口的现有类。现代 Java 允许接口定义默认方法和静态方法，并且都带有实现，因此库维护者可以将这些方法添加到接口中。虽然 `@Override` 注解是可选的，但它被认为是最佳实践。即使没有注解，方法名或签名中的拼写错误也会导致子类中产生一个新方法，从而导致运行时难以调试的错误。
 
-# 编程语言探索
+### 编程语言探索
 
 ```java
 interface Drawable {
@@ -3857,14 +3873,11 @@ interface Function {
 }
 ```
 
-
-
 ```java
 public class TwiceApp {
     private static double twice(Function f, double x) {
         return f.apply(f.apply(x));
     }
-
     public static void main(String[] args) {
         assert twice(x->x*2, 10) == 14;
         assert twice(Math::floor, -11.77) == -12;
@@ -3919,7 +3932,7 @@ public class CovariantArray {
 
 虽然数组是协变的，但其他集合（列表、集合等）则不是。在静态类型语言中，使用参数化类型来实现这些集合是有意义的。Java 将这些称为**泛型**（generic types），而这些是我们接下来的巡检重点。
 
-## 泛型
+### 泛型
 
 Java 倾向于使用静态类型，被称为泛型的参数化类型经常出现。列表和集合提供了一个典型的说明：
 
@@ -3928,7 +3941,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
-
 public class ListAndSetExample {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("do", "while", "if", "a");
@@ -3948,14 +3960,12 @@ Java 集合是不变变的（invariant），因此牛列表不能赋值给动物
 ```java
 import java.util.List;
 import java.util.Arrays;
-
 public class ChorusApp {
     public static void chorus(List<? extends Animal> animals) {
         for (Animal animal : animals) {
             System.out.println(animal.speak());
         }
     }
-
     public static void main(String[] args) {
         List<Cow> cows = Arrays.asList("Bessie");
         List<Sheep> sheep = Arrays.asList("Woolly");
@@ -3967,19 +3977,17 @@ public class ChorusApp {
 
 `? extends Animal` 信号着上界通配符，意味着类型参数可以是 `Animal` 或其任何子类。`HashSet<E>` 是标准库中的八种实现之一，包括 `TreeSet<E>` 和 `ConcurrentSkipListSet<E>`。
 
-# 语言探索
+### 语言探索
 
 让我们简单看一眼下界通配符，一个简单的例子。我们可以向羊集合、动物集合甚至是对象集合添加羊：
 
 ```java
 import java.util.Set;
 import java.util.HashSet;
-
 public class SheepAdder {
     public static void add(Set<? super Sheep> set, Sheep sheep) {
         set.add(sheep);
     }
-
     public static void main(String[] args) {
         Set<? super Object> s1 = new HashSet<>();
         Set<? super Animal> s2 = new HashSet<>();
@@ -4007,6 +4015,8 @@ public class MinMax<C extends Comparable> {
 }
 ```
 
+
+
 注意我们两个字段都持有类型 `C`，被限制为实现 `Comparable` 的类。通过对两个字段使用相同的类型，我们可以声明这两个字段具有相同的类型。通配符无法表达这种约束。
 
 为了完善我们的泛型，我们将查看可选（optional），这是一种缓解之前提到的“十亿美元错误”的方法。该错误，正如你记得的，是在每个引用类型中包含 `null` 值。对于一个类型为 `s` 的变量，表达式 `s.length()` 可能会失败——抛出 `NullPointerException` 或 NPE，当 `s` 为 `null` 时。静态类型在这里无法帮助我们：Java 类型系统没有纯非空字符串的类型。NPE 可能在任何时候发生，因此防御性程序员通常会在方法周围使用 `if-null` 检查。
@@ -4015,40 +4025,32 @@ public class MinMax<C extends Comparable> {
 
 `Comparable` 的唯一方法 `compareTo` 应该如下实现：如果 `x < y` 则从 `x.compareTo(y)` 返回一个负整数，如果 `x = y` 则返回零，如果 `x > y` 则返回一个正整数。
 
-
-
-
 分别对应 String 和 Person，并检查 name 字段是否为空，并在必要时让 boss 为空。诸如 `p.getBoss().getName()` 的表达式可能会在运行时失败。但我们希望编译器能对表达式进行类型检查，因此我们从 `java.util` 包中引入了 `Optional<T>`。将一个 optional 想象为一个包装器：它要么包裹了一个 person，要么是空的（图 7.2）。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_151_0.png)
 
-Optional.of(5)
+`Optional.of(5)`
 
-Optional.empty()
+`Optional.empty()`
 
 图 7.2 Optionals
 
 ```java
 import java.util.Optional;
 import java.util.Objects;
-
 class Person {
     private String name;
     private Optional<Person> boss;
-
     Person(String name, Optional<Person> boss) {
         this.name = Objects.requireNonNull(name);
         this.boss = boss;
     }
-
     Person(String name) {
         this(name, Optional.empty());
     }
-
     Person(String name, Person boss) {
         this(name, Optional.of(boss));
     }
-
     public String getName() {
         return name;
     }
@@ -4062,12 +4064,12 @@ class Person {
 
 optional 最常用的用法模式如下。假设 o 是一个 optional，x 是它包裹的值。那么：
 
-- o.isPresent() 返回 o 是否包裹了值。
-- o.ifPresent(f) 如果存在，则调用 f(x)，否则什么都不做。
-- o.orElse(y) 如果存在则返回 x，否则返回 y。
-- o.filter(p) 如果存在且 p(x) 为真，则返回 o；否则返回一个空的 optional。
-- o.map(f) 如果存在，则返回包裹后的 f(x)，否则返回一个空的 optional。
-- o.flatMap(f) 类似；我们将此留给练习题。
+- `o.isPresent()` 返回 o 是否包裹了值。
+- `o.ifPresent(f)` 如果存在，则调用 `f(x)`，否则什么都不做。
+- `o.orElse(y)` 如果存在则返回 `x`，否则返回 `y`。
+- `o.filter(p)` 如果存在且 `p(x)` 为真，则返回 `o`；否则返回一个空的 optional。
+- `o.map(f)` 如果存在，则返回包裹后的 `f(x)`，否则返回一个空的 optional。
+- `o.flatMap(f)` 类似；我们将此留给练习题。
 
 让我们通过一个小示例来感受一下这些方法：
 
@@ -4077,12 +4079,10 @@ public class OptionalDemo {
     public static void main(String[] args) {
         Person alice = new Person("Alice");
         Person bob = new Person("Bob");
-
         bob.getBoss().isPresent(p -> { assert alice;});
         alice.getBoss().isPresent(p -> { assert false;});
         assert alice.getBoss().orElse(bob) == bob;
         assert bob.getBoss().orElse(alice) == alice;
-
         Optional<Person> b = bob.getBoss();
         assert b.filter(p -> p.getName().startsWith("A")) == b;
         assert b.filter(p -> p.getName().startsWith("B")).isPresent();
@@ -4092,7 +4092,7 @@ public class OptionalDemo {
 }
 ```
 
-作为参考，Optional 类的公共方法（排除父类的重写方法）如下。在较短的空间内，我们展示了上界和下界通配符，以及几个函数接口¹⁰
+作为参考，`Optional` 类的公共方法（排除父类的重写方法）如下。在较短的空间内，我们展示了上界和下界通配符，以及几个函数接口¹⁰
 
 ```java
 static <T> Optional empty()
@@ -4111,7 +4111,7 @@ T orElseGet(Supplier<? extends T> excSupplier)
 
 在这一节中，我们仅仅触及 Java 泛型世界的冰角。我们没有空间涵盖无界通配符、类型化（reification）或捕获（capture）。要继续探索 Java 语言的领域，请参阅 Java Tutorial 中的 Generics [91] 或 Angelica Langer 的 Generics FAQ [74]。为了方便稍后对泛型的进一步讨论，我们将在 Rust 中进行涵盖。
 
-¹⁰简而言之，函数接口是：Consumer<T>，一个对 T 执行不返回内容的函数；Predicate<T>，一个从 T 到 bool 的函数；Function<T,U>，一个从 T 到 U 的函数；以及 Supplier，一个无参数并返回 T 的函数。
+¹⁰简而言之，函数接口是：`Consumer<T>`，一个对 T 执行不返回内容的函数；`Predicate<T>`，一个从 T 到 bool 的函数；`Function<T,U>`，一个从 T 到 U 的函数；以及 `Supplier`，一个无参数并返回 T 的函数。
 
 ## 7.6 线程 (THREADS)
 
@@ -4136,11 +4136,7 @@ public class Printer {
 
 线程自然会为应用程序引入非确定性。本节不是关于线程的论文，因此我们不会尝试定义这些术语。
 
-
-
-
-
--   并发数据结构。Java 的 `BlockingQueue` 和 `ConcurrentMap` 实现简化了某些并发应用程序的编写。例如，使用 `put` 在插入前阻塞直到队列有空间，而使用 `offer` 则尝试立即插入或在指定的持续时间内尝试插入（如果插入成功则返回 `true`，如果容量不足则返回 `false`）。在移除时，`take` 会阻塞直到队列不为空，而 `poll` 则尝试立即移除或在时间范围内移除，并在成功移除元素时返回结果。
+- 并发数据结构。Java 的 `BlockingQueue` 和 `ConcurrentMap` 实现简化了某些并发应用程序的编写。例如，使用 `put` 在插入前阻塞直到队列有空间，而使用 `offer` 则尝试立即插入或在指定的持续时间内尝试插入（如果插入成功则返回 `true`，如果容量不足则返回 `false`）。在移除时，`take` 会阻塞直到队列不为空，而 `poll` 则尝试立即移除或在时间范围内移除，并在成功移除元素时返回结果。
 
 并发编程的经典示例包括读写锁（Readers and Writers）、生产者-消费者边界缓冲区（Producer-Consumer Bounded Buffer）以及 Dijkstra 的哲学家晚餐问题（Dining Philosophers）[59]。我们将打破传统，构建一个小型模拟器，使用像 Dijkstra 例子中的食物，但没有共享餐具。
 
@@ -4162,7 +4158,6 @@ public class Agent extends Thread {
         log(action);
         Thread.sleep((int)(Math.random() * time/2 + time/2));
     }
-
     public static void main(String[] args) {
         for (int i = 0; i < 3; i++) {
             new Cook("Cook-" + i).start();
@@ -4182,7 +4177,6 @@ class Cook extends Restaurant.Agent {
         super(name);
         this.setDaemon(true);
     }
-
     @Override public void run() {
         try {
             while (true) {
@@ -4204,14 +4198,11 @@ Java 中所有的阻塞操作都可能抛出 `InterruptedException`；此异常�
 ```java
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
-
 public class Customer extends Restaurant.Agent {
     private BlockingQueue<Order> meal = new SynchronousQueue<>();
-
     Customer(String name) {
         super(name);
     }
-
     void serve(Order order) throws InterruptedException {
         meal.put(order);
     }
@@ -4243,36 +4234,45 @@ public class Customer extends Restaurant.Agent {
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeUnit;
-
 public class Order {
   private static BlockingQueue<Order> orders = new ArrayBlockingQueue<>(5);
-
   private String content;
   private Cook customer;
-
   private Order(Customer customer, String content) {
     this.customer = customer;
     this.content = content;
   }
-
   static boolean place(Customer customer, String content, int maxWait) throws InterruptedException {
     Order order = new Order(customer, content);
     return orders.offer(order, maxWait, TimeUnit.MILLISECONDS);
   }
+```
 
-  static Order begin() throws InterruptedException {
+
+
+```java
+static Order begin() throws InterruptedException {
+
     return orders.take();
+
   }
 
   void serve() throws InterruptedException {
+
     cook = (Cook)Thread.currentThread();
+
     customer.serve(this);
+
   }
 
   @Override
+
   public String toString() {
+
     return content + (cook == null ? " for " : " cooked by ") + cook.getName());
+
   }
+
 }
 ```
 
@@ -4282,21 +4282,31 @@ public class Order {
 
 ```java
 public class IntrospectionExample {
+
     public static void main(String[] args) throws Exception {
 
         // 在运行时检查类型
+
         Animal beast = new Cow("Bessie");
+
         assert beast instanceof Cow;
+
         assert beast.getClass() == Cow.class;
 
         // 通过名称获取对象
+
         assert Class.forName("Cow") == Cow.class;
 
         // 检查类
+
         assert Cow.class.getName() == "Cow"
+
         assert Cow.class.getSuperclass() == Animal.class;
+
         assert Animal.class.getDeclaredMethods().length == 2;
+
     }
+
 }
 ```
 
@@ -4304,29 +4314,47 @@ public class IntrospectionExample {
 
 ```java
 import java.lang.reflect.Constructor;
+
 import java.lang.reflect.Method;
+
 public class ReflectionExample {
+
     public static void main(String[] args) throws Exception {
+
         Class<?> c = Class.forName("Horse");
+
         Constructor<?> ctor = c.getConstructor(String.class);
+
         Animal h = Animal.class.cast(ctor.newInstance("CJ"));
+
         Method m = h.getClass().getMethod("speak");
+
         assert m.invoke(h).equals("CJ neigh");
+
     }
+
 }
 ```
 
-这里有一个非常惊讶的间接字段操作示例。`Integer` 类的对象有一个名为 `value` 的私有字段，存储其原始值。`setAccessible` 方法覆盖了限制访问，允许我们更改封装的值。请享受以下内容的输出：
+这里有一个非常惊讶的间接字段操作示例。`Integer`类的对象有一个名为`value`的私有字段，存储其原始值。`setAccessible`方法覆盖了限制访问，允许我们更改封装的值。请享受以下内容的输出：
 
 ```java
 import java.lang.reflect.Field;
+
 public class ThreeIsFive {
+
     public static void main(String[] args) throws Exception {
+
         Field v = Integer.class.getDeclaredField("value");
+
         v.setAccessible(true);
+
         v.set(3,5);
+
         System.out.printf("%d\n", 3);
+
     }
+
 }
 ```
 
@@ -4338,10 +4366,6 @@ public class ThreeIsFive {
 
 +   - 程序完全由类（和接口）组成。
 - Java 几乎到处使用静态类型，并在类型和类之间有强有区分。
-
-
-
-
 
 # 142 编程语言探索
 
@@ -4357,8 +4381,8 @@ public class ThreeIsFive {
 为了在本章的介绍性内容之外继续学习 Java，你可能希望找到并研究以下内容：
 
 - **本章未涵盖的语言特性。** 包、序列化、进程、`volatile` 与未检查异常的区别、作用域细节、类型擦除与类型具体化（reification）、原生成员、静态初始化器、嵌套类、枚举、注解和类加载器。
-- **使用 Java 的开源项目。** 学习和贡献开源项目是提高任何语言熟练程度的极佳方式。你可能会喜欢用 Java 编写的项目：Elasticsearch (https://github.com/elastic/elasticsearch)、Retrofit (https://github.com/square/retrofit)、Spring Framework (https://github.com/spring-projects/spring-framework) 和 Guava (https://github.com/google/ava)。
-- **参考资料、教程和书籍。** Java 和 Java 虚拟机定义在 https://docs.oracle.com/java/specs/ 的规范中；Oracle 的 Java 教程（https://docs.oracle.com/java/tutorial/）非常完整。关于标准库，请注意存在多个 Java平台，包括标准版、企业版和微版，每个版本都有可导航的在线文档。学习该语言和探索高级特性的在线资源非常丰富，甚至多不胜数。
+- **使用 Java 的开源项目。** 学习和贡献开源项目是提高任何语言熟练程度的极佳方式。你可能会喜欢用 Java 编写的项目：Elasticsearch (`https://github.com/elastic/elasticsearch`)、Retrofit (`https://github.com/square/retrofit`)、Spring Framework (`https://github.com/spring-projects/spring-framework`) 和 Guava (`https://github.com/google/ava`)。
+- **参考资料、教程和书籍。** Java 和 Java 虚拟机定义在 `https://docs.oracle.com/java/specs/` 的规范中；Oracle 的 Java 教程（`https://docs.oracle.com/java/tutorial/`）非常完整。关于标准库，请注意存在多个 Java平台，包括标准版、企业版和微版，每个版本都有可导航的在线文档。学习该语言和探索高级特性的在线资源非常丰富，甚至多不胜数。
 
 ## 练习题
 
@@ -4427,10 +4451,6 @@ public static boolean isNull(Object obj) {
 7.26 了解 Java 中类型擦除（type erasure）的概念。Java 设计者究竟为什么要设计这个特性？
 
 7.27 阅读关于 Kotlin、Cylon 和 Fantom 语言。它们声称修复了 Java 的哪些问题？
-
-
-
-
 
 # Clojure
 
@@ -4509,57 +4529,68 @@ Clojure 的文本代码是抽象语法树（见图 8.1）的直接翻译。这�
       (generatePermutations word (count word))))
 ```
 
-我们牺牲了一点性能：调用 `(swap a j)` 返回一个新的向量，但索引 i j 处的值已交换。我们稍后会讨论效率。现在，让我们关注脚本的许多有趣方面：
 
-- Clojure 使用 `(f y)` 语法用于函数调用（如 `inc`、`dec` 和 `count`）、特殊形式（如 `if`、`let` 和 `loop`）以及宏（如 `->`）。Clojure 在函数调用之前评估参数，但对宏和特殊形式不会这样做。
+
+我们牺牲了一点性能：调用`(swap a j)`返回一个新的向量，但索引`i j`处的值已交换。我们稍后会讨论效率。现在，让我们关注脚本的许多有趣方面：
+
+- Clojure 使用`(f y)`语法用于函数调用（如`inc`、`dec`和`count`）、特殊形式（如`if`、`let`和`loop`）以及宏（如`->`）。Clojure 在函数调用之前评估参数，但对宏和特殊形式不会这样做。
 
 # 8.2 基础知识
 
 理解 Clojure 从于理解它的执行模型，该模型由读取器（reader）和评估器（evaluator）定义。读取器从字符串中读取源代码，将文本解析为形式（forms）。每个形式随后将传递给评估器进行评估。读取器已知的形式以及它们代表的对象类型包括：
 
-- 整数：98, 98325679988812356249703, 03F。支持 2 到 36 之间的所有基数：我们可以将 512 写为 32o 或 7r1。类型为来自 `java.lang` 包的 `Byte`、`Short`、`Integer` 和 `Long`。如果使用 -2^63..2^63-1，BigInt 字面量的类型为 `Long`，否则为 `BigInt`。`byte`、`short`、`int` 和 `bigint` 函数创建所需类型的数字。
-- 双浮点数：2.54, 3E5, 0.0, -99.73。双精度类型是 `java.lang` 中的 `Float` 和 `Double`。使用 `float` 和 `double` 函数创建所需类型的对象。
-- 比例：22/7, 3/10。这些类型为 `clojure.Ratio`。
-- 大精度小数：3M, 78.2E900M。这些值的类型为 `java.math.BigDecimal`。可以使用 `bigdec` 函数从其他数字创建大精度小数。
-- 字符串："Hello"。用双引号括，并可能跨行。
-
-
-
-
+- 整数：`98`, `98325679988812356249703`, `03F`。支持 2 到 36 之间的所有基数：我们可以将 512 写为`32o`或`7r1`。类型为来自`java.lang`包的`Byte`、`Short`、`Integer`和`Long`。如果使用`-2^63..2^63-1`，BigInt 字面量的类型为`Long`，否则为`BigInt`。`byte`、`short`、`int`和`bigint`函数创建所需类型的数字。
+- 双浮点数：`2.54`, `3E5`, `0.0`, `-99.73`。双精度类型是`java.lang`中的`Float`和`Double`。使用`float`和`double`函数创建所需类型的对象。
+- 比例：`22/7`, `3/10`。这些类型为`clojure.Ratio`。
+- 大精度小数：`3M`, `78.2E900M`。这些值的类型为`java.math.BigDecimal`。可以使用`bigdec`函数从其他数字创建大精度小数。
+- 字符串：`"Hello"`。用双引号括，并可能跨行。
 
 # Clojure ■ 149
 
-- 字符：\z, \newline, \tab, \u263A。含义上与 Java 字符相同，但语法不同。
-- 布尔值：`true`, false。
-- Nil：像在 Java 中一样使用 `nil` 值。请注意，像 Lua 和 Ruby 一样，nil 和 false 是唯一的虚假值（falsy values）。
+- 字符：`\z`, `\newline`, `\tab`, `\u263A`。含义上与 Java 字符相同，但语法不同。
+- 布尔值：`true`, `false`。
+- Nil：像在 Java 中一样使用`nil`值。请注意，像 Lua 和 Ruby 一样，`nil`和`false`是唯一的虚假值（falsy values）。
 - 关键字：`:dog`, `:rat`。Clojure 中的关键字求值结果为其本身。始终如此。
 - 符号：`*`, `+`, `?`。符号引用全局变量、函数参数和类似的实体。
 - 列表：`(2 6 8 "ok")`。由空格分隔的形式，由括号限定。
 - 向量：`[list 1 2 3]`。由空格分隔的形式，由方括号限定。
 - 集合：`{[8] "hello"}`。
 - 映射：`{:jo "Aman" :ws "Asia" :ee "Tallinn"}`。键值对。键不需要是关键字，尽管在实践中它们通常是关键字。
-- 函数：`(*(+ 2 1))`。参数为 %1, %2 等。
+- 函数：`(*(+ 2 1))`。参数为`%1`, `%2`等。
 
-读取器处理注释、元数据映射、语法引用和引用、匿名函数、正则表达式。它还处理语法用法；例如，@x 指向 `(deref x)`，而 `'x `(quote x)`。我们将在本章节后面看到这些这些形式和构造。
+读取器处理注释、元数据映射、语法引用和引用、匿名函数、正则表达式。它还处理语法用法；例如，`@x`指向`(deref x)`，而`'x` `(quote x)`。我们将在本章节后面看到这些这些形式和构造。
 
-简单形式的求值结果为其本身，而向量、集合和映射形式会求值其元素并收集对象。符号的求值取决于该符号当前引用的内容。列表 $(f_1, f_2, \dots, f_n)$ 的求值会生成剩余的形式 $f_1$。如果 $f_1$ 求值结果宏（macro）或特殊形式（special form），它将作用于函数并应用于剩余的形式。否则 Clojure 会对其进行类型转换并继续求值 $f_2, \dots, f_n$。引用会抑制符号和列表的求值：`'x` 求值结果为包含三个元素的列表，而不是应用 b 和 c。
+简单形式的求值结果为其本身，而向量、集合和映射形式会求值其元素并收集对象。符号的求值取决于该符号当前引用的内容。列表`$(f_1, f_2, \dots, f_n)$`的求值会生成剩余的形式`f_1`。如果`f_1`求值结果宏（macro）或特殊形式（special form），它将作用于函数并应用于剩余的形式。否则 Clojure 会对其进行类型转换并继续求值`f_2, \dots, f_n`。引用会抑制符号和列表的求值：`'x`求值结果为包含三个元素的列表，而不是应用 b 和 c。
 
 Clojure 使用动态类型，并为类型预定义了许多符号：
 
 ```clojure
 (use clojure.test)
+
 (is (= (type 3) Long))
+
 (is (= (type 5.0) Double))
+
 (is (= (type 4/7) clojure.lang.Ratio))
+
 (is (= (type 5N) clojure.lang.BigInt))
+
 (is (= (type 5.88M) BigDecimal))
+
 (is (= (type "Hello World") String))
+
 (is (= (type \z) Character))
+
 (is (= (type false) Boolean))
+
 (is (= (type nil) nil))
+
 (is (= (type 'dog) clojure.lang.Symbol))
+
 (is (= (type :dog) clojure.lang.Keyword))
+
 (is (= (type Long) java.Class))
+
 (is (= (type java.Class) java.Class))
 ```
 
@@ -4569,11 +4600,17 @@ Clojure 使用动态类型，并为类型预定义了许多符号：
 
 ```clojure
 (use 'clojure.test)
+
 (is (= (+ 8 3 2 8))      ; 累加很多数字
+
 (is (= (+ 8 8)))               ; 是的，我们可以只加一个
+
 (is (= (+ 0)))            ; 0 是 + 的恒等元
+
 (is (= (+ 3 5 7 9 12))       ; 一个方便的排序测试
+
 (is not (< 8 9 10 22 80))
+
 (is (= (/ max 7 14 2 8 14)))
 ```
 
@@ -4581,41 +4618,51 @@ Clojure 使用动态类型，并为类型预定义了许多符号：
 
 ```clojure
 (use 'clojure.test)
+
 (is (= (type / 3 9) clojure.lang.Ratio))
+
 (is (= (type / 8 4) Long))
+
 (is (= (type / 3.0 9) Double))
 ```
 
-整数 +, -, *, inc 和 dec 函数可能会溢出，抛出 `ArithmeticException`；使用 +, *, inc 和 dec 可以自动提升为 BigInt
+整数 `+`, `-`, `*`, `inc` 和 `dec` 函数可能会溢出，抛出`ArithmeticException`；使用 `+`, `*`, `inc` 和 `dec` 可以自动提升为 BigInt
 
 ```clojure
 (use 'clojure.test)
+
 (let x [Long 16] max-long Long/MAX_VALUE)
+
 (is thrown ArithmeticException (* x x))
+
 (is (= (* x x) (bigint 30)))
+
 (is thrown ArithmeticException (inc max-long))
+
 (is (= (inc max-long) (+ 1 max-long))))
 ```
 
-集合是不可变的，并实现了基于值-引用-语义的等效性。许多常用操作适用于所有集合，如 count、empty? -not-empty 和 conj（conj 的缩写）。将一个集合和一个元素合并（conj）会返回一个包含所有元素以及 e 的新集合。
+集合是不可变的，并实现了基于值-引用-语义的等效性。许多常用操作适用于所有集合，如 `count`、`empty?` `-not-empty` 和 `conj`（conj 的缩写）。将一个集合和一个元素合并（conj）会返回一个包含所有元素以及 e 的新集合。
 
 ```clojure
 (use 'clojure.test)
+
 (let a-list [1 2 3] a-set #{1 2 3} a-map {1 2 3 4})
+
 (is (= (empty? a-list) false))
+
 (is (not-empty? a-list)))
+
 (is (= (map count [a-list a-set]) [3 3 3]))
+
 (is (= (count a-map) 4))               ; conj: 头部添加
+
 (is (= (conj a-list) (4 1 2 3)))    ; vec: 尾部添加
 ```
 
-
-
-
-
 # 8.4 持久化数据结构
 
-考虑一个包含 1000 个元素的列表，用符号 `a` 表示。表达式 `(conj a x)` 创建一个新的包含 1001 个元素的列表，其第一个元素是 `x` 的值。这个新列表应该包含 `a` 中每个元素的拷贝，还是两个列表共享结构（见图 8.3）？虽然通过共享进行连接尽可能高效，但缺点是对对其中一个列表的更改会（出乎意料地）影响另一个。然而，只要列表是不可变的，共享就是可行的！永远没有意外。
+考虑一个包含 1000 个元素的列表，用符号`a`表示。表达式`(conj a x)`创建一个新的包含 1001 个元素的列表，其第一个元素是`x`的值。这个新列表应该包含`a`中每个元素的拷贝，还是两个列表共享结构（见图 8.3）？虽然通过共享进行连接尽可能高效，但缺点是对对其中一个列表的更改会（出乎意料地）影响另一个。然而，只要列表是不可变的，共享就是可行的！永远没有意外。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_171_0.png)
 
@@ -4625,18 +4672,21 @@ Clojure 使用动态类型，并为类型预定义了许多符号：
 
 ```clojure
 (def a (list (repeat 1000 :dog))) ; 1000个dog的列表
+
 (def b (conj a :cat))         ; 新列表，cat 在头部
 ```
 
 ```clojure
 (use 'clojure.test)
+
 (is identical? a (rest b))
+
 (is (= (type a) clojure.lang.PersistentList))
 ```
 
-表达式 `(rest b)` 指向除 `b` 的第一个元素以外的序列，我们的脚本告诉它与 `a` 是相同的（即同一个内部对象）。由于列表保持为 `a` 且没有被修改销毁，仍然可以访问，我们称之为“持久化列表”。
+表达式`(rest b)`指向除`b`的第一个元素以外的序列，我们的脚本告诉它与`a`是相同的（即同一个内部对象）。由于列表保持为`a`且没有被修改销毁，仍然可以访问，我们称之为“持久化列表”。
 
-在列表头部添加元素没有效率成本，但我们如何向末尾添加元素呢？正如向量连接所要求的那样。拷贝向量的每个元素似乎是必要的，但如果我们使用树结构来使用向量元素，我们只需要对数数量的拷贝即可解决。在图 8.4 中，`v` 的值为 `[1 2 3 4 5 6]`。元素从左到右保留在叶子节点中。为了计算 `(conj v 7)`，我们向下移动到向量末的节点，在此过程中复制内部节点，并在可能的地方进行共享。这种路径复制（path copying）技术也适用于 `assoc` 等函数，我们在章节开头的示例中遇到过这些函数。
+在列表头部添加元素没有效率成本，但我们如何向末尾添加元素呢？正如向量连接所要求的那样。拷贝向量的每个元素似乎是必要的，但如果我们使用树结构来使用向量元素，我们只需要对数数量的拷贝即可解决。在图 8.4 中，`v`的值为`[1 2 3 4 5 6]`。元素从左到右保留在叶子节点中。为了计算`(conj v 7)`，我们向下移动到向量末的节点，在此过程中复制内部节点，并在可能的地方进行共享。这种路径复制（path copying）技术也适用于`assoc`等函数，我们在章节开头的示例中遇到过这些函数。
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_171_1.png)
 
@@ -4658,21 +4708,27 @@ Clojure 使用动态类型，并为类型预定义了许多符号：
 
 ```clojure
 (use 'clojure.test)
+
 (is (= fib 0) [0])
+
 (is (= fib 1) [0 1])
+
 (is (= fib 5) [0 1 2 3 5])
+
 (is (= fib 144) [0 1 2 3 5 8 13 21 34 55 89 144])
+
 (is (= fib 200) [0 1 2 3 5 8 13 21 34 55 89 144 ...])
+
 (println (fib 1200))
 ```
 
-我们开始将 `a` 绑定为 0，`b` 绑定为 1，`result` 绑定为 `(transient [0])`，这是一个包含单个元素 0 的瞬态向量。我们通过 `conj!` 添加新值；而不是 `conj`；那个感叹号 (`!`) 提醒读者正在发生某些寻常的事情，在这种情况下是变异（mutation）。在填充完向量后，我们创建并返回一个新的持久化向量。
+我们开始将`a`绑定为 0，`b`绑定为 1，`result`绑定为`(transient [0])`，这是一个包含单个元素 0 的瞬态向量。我们通过`conj!`添加新值；而不是`conj`；那个感叹号 (`!`) 提醒读者正在发生某些寻常的事情，在这种情况下是变异（mutation）。在填充完向量后，我们创建并返回一个新的持久化向量。
 
 Clojure 不会阻止你通过同时从多个线程中访问瞬态对象来误用它们。在多线程环境中，可变性需要责任。然而，Clojure 提供了几种确保并发安全的机制。我们现在转向这些内容。
 
 # 8.6 软件事务内存（SOFTWARE TRANSACTIONAL MEMORY）
 
-在 JVM 平台上运行时，Clojure 线程是 Java 线程。Java 的 `new Thread(r)`（其中 `r` 是可运行的）到 Clojure 的翻译是 `(Thread. r)`（末尾的点是表示构造函数的符号名称的一部分）。而 Java 表达式 `t.start()` 在 Clojure 中变为 `(.start t)`——方法在调用时带有一个前导点。以下脚本创建了 10 个线程，每个线程都以完全不同同步的方式打印星号列表：
+在 JVM 平台上运行时，Clojure 线程是 Java 线程。Java 的`new Thread(r)`（其中`r`是可运行的）到 Clojure 的翻译是`(Thread. r)`（末尾的点是表示构造函数的符号名称的一部分）。而 Java 表达式`t.start()`在 Clojure 中变为`(.start t)`——方法在调用时带有一个前导点。以下脚本创建了 10 个线程，每个线程都以完全不同同步的方式打印星号列表：
 
 ```clojure
 (do
@@ -4690,12 +4746,13 @@ Clojure 不会阻止你通过同时从多个线程中访问瞬态对象来误用
 5. 寄存器增加 100
 6. 将增加后的值（600）写入内存
 
-如果另一个线程在序列期间能够访问任何一个余额，资金可能会丢失。假设 $t_1$ 正在执行此序列。进一步假设 $t_2$ 将存款入储蓄账户。将整个传输放在事务中可以防止这种情况：
+如果另一个线程在序列期间能够访问任何一个余额，资金可能会丢失。假设 `$t_1$` 正在执行此序列。进一步假设 `$t_2$` 将存款入储蓄账户。将整个传输放在事务中可以防止这种情况：
 
 ```clojure
 (use 'clojure.test)
 
 (def savings (ref 10000))
+
 (def checking (ref 500))
 
 (is (and (= savings 10000) (= checking 500)))
@@ -4704,15 +4761,13 @@ Clojure 不会阻止你通过同时从多个线程中访问瞬态对象来误用
   (let [amount 100]
     (alter savings (- amount))
     (alter checking (+ amount))))
-
-(is (and (= savings 9900)))
 ```
 
 当你需要同步地访问多个对象时，这种方法非常好；任何在线程之外尝试修改 ref 的行为语言都会抛出异常。对于另一种场景——以异步方式访问单个对象——Clojure 提供了代理（agents）。
 
 ## 8.7 代理（AGENTS）
 
-Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。要更改代理管理的值，你需要分发一个操作（action）。操作仅仅是一个函数调用，在通过可选的验证测试后，为代理生成新值。该函数在由 Cloj 管理的线程池上异步执行；程序员从不启动线程或执行任何锁定。然而，这些线程是非守护线程，因此程序员必须显式地关闭代理。以下示例向计数器代理发送了 50,000 次操作，并带有验证函数确保计数器不会变成负数。它在假设队列操作仍在执行时打印值，但在两秒之后，队列操作需要更多时间来执行，值再次变化。最后，脚本关闭代理系统，终止任何未处理的操作。
+Vars、refs 和 agents 存储了可以通过`deref` (或`%`)获取的值。要更改代理管理的值，你需要分发一个操作（action）。操作仅仅是一个函数调用，在通过可选的验证测试后，为代理生成新值。该函数在由 Cloj 管理的线程池上异步执行；程序员从不启动线程或执行任何锁定。然而，这些线程是非守护线程，因此程序员必须显式地关闭代理。以下示例向计数器代理发送了 50,000 次操作，并带有验证函数确保计数器不会变成负数。它在假设队列操作仍在执行时打印值，但在两秒之后，队列操作需要更多时间来执行，值再次变化。最后，脚本关闭代理系统，终止任何未处理的操作。
 
 ```clojure
 (def counter agent :validator #(<= % 0))
@@ -4720,13 +4775,13 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 (dotimes 50000 (send counter + 1))
 
 (println @counter) ; 可能会小于 50000
+
 (Thread/sleep 2000)
+
 (println @counter) ; 很可能是 50000
+
 (shutdown-agents))
 ```
-
-
-
 
 注意，Clojure 基于代理（agent-based）的编程与“面向对象”编程之间存在强烈的哲学差异。在 OOP 中，我们关注具有内部状态和行为的对象，特别是针对特定对象或特定类型的对象。而代理，有状态但没有行为！你可以发送给代理的函数受到限制。动作是关注的中心。
 
@@ -4734,7 +4789,7 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 
 ## 8.8 经验问题 (THE EXPERIENCE PROBLEM)
 
-在之前的章节中，我们看到了牛、马、羊的各种实现，每种动物都发出自己特定类型的声音。通常，动物是通过类定义的，通过一个公共子类 `Animal` 规定每种动物都应该有一个名称，并通过返回一条说明动物（通过名称标记）声音的消息来说话。在接下来的脚本中，我们在 Clojure 中创建了这些类，并没有继承父类，而是定义了一个发声的协议（protocol），每个类将实现它。然而，与 Java 不同，但与 Python 类似，每个“方法”都需要一个接收者的显式参数。协议只指定行为而不指定状态，通常属于父类中的方法在 Clojure 中只是函数：
+在之前的章节中，我们看到了牛、马、羊的各种实现，每种动物都发出自己特定类型的声音。通常，动物是通过类定义的，通过一个公共子类`Animal`规定每种动物都应该有一个名称，并通过返回一条说明动物（通过名称标记）声音的消息来说话。在接下来的脚本中，我们在 Clojure 中创建了这些类，并没有继承父类，而是定义了一个发声的协议（protocol），每个类将实现它。然而，与 Java 不同，但与 Python 类似，每个“方法”都需要一个接收者的显式参数。协议只指定行为而不指定状态，通常属于父类中的方法在 Clojure 中只是函数：
 
 ```clojure
 (defprotocol Sounder
@@ -4747,7 +4802,7 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
   (sound [this] "moooo")
 
 (defrecord Sheep [name] Sounder
-  (sound [this] "baaaa"))
+  (sound [this] "baaaa")
 ```
 
 ```clojure
@@ -4755,19 +4810,13 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
   (str (.name animal) "says" (sound animal)))
 ```
 
-`defrecord` 宏接受一个类名、它应该实现的字段以及它需要的任何方法体。假设 Clojure 安装运行在 JVM 上，Clojure record 是真正的类（`java.lang.Class` 的实例），遵循通常的构造插值语法，例如 `(Horse "CJ")`，以及字段访问语法，例如 `(.name h)`。让我们验证一下：
+`defrecord` 宏接受一个类名、它应该实现的字段以及它需要的任何方法体。假设 Clojure 安装运行在 JVM 上，Clojure record 是真正的类（`java.lang.Class` 的实例），遵循通常的构造插值语法，例如`(Horse "CJ")`，以及字段访问语法，例如`(.name h)`。让我们验证一下：
 
 ```clojure
 (use 'clojure.test)
-(def h (Horse "CJ")
-(is (= (speak h) "CJ says neigh"))
-(def c (Cow "Bessie")
-(is (= (speak c) "Bessie says moooo"))
-(is (= (speak (Sheep "Little Lamb")) "Little Lamb says baaaa"))
-
-(is (= (type h) user.Horse)
-(is (= (type Horse) java.lang.Class))
 ```
+
+
 
 #158 编程语言探索 (Programming Language Explorations)
 
@@ -4775,7 +4824,9 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 
 ```clojure
 ; 添加一个新类
+
 (defrecord Dog [name] Sounder
+
   (sound [this] "woof"))
 ```
 
@@ -4783,16 +4834,23 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 
 ```clojure
 ; 添加新功能
+
 (defprotocol EmojiDescirable [emoji [this]])
+
 (extend-type Horse EmojiDescirable [emoji] [this] "\u83D\uDC0E")
+
 (extend-type Sheep EmojiDescirable [emoji] [this] "\u83D\uDC11")
+
 (extend-type Dog EmojiDescirable [emoji] [this] "\u83D\uDC15")
 ```
 
 ```clojure
 (println h)
+
 (println emoji)
+
 (println (Sheep "Woolie"))
+
 (println (Dog "Spike"))
 ```
 
@@ -4800,14 +4858,15 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 
 （注：由于原始文本存在大量重复和乱码，以上翻译已根据核心逻辑进行去重和对齐。）
 
-
-
-
 ```clojure
 (defmacro or
+
   ([] nil)
+
  ([x x]
+
  ([x & next]
+
   (let [or# or# or (-next)))))
 ```
 
@@ -4821,12 +4880,15 @@ Vars、refs 和 agents 存储了可以通过 `deref` (或 `%`) 获取的值。�
 
 ```clojure
 (let* or_4469_auto_ alpha
+
  (if or_4469_auto__
+
   or_4469_auto__
+
   (clojure.core/or beta gamma delta)))
 ```
 
-以哈希字符 # 结尾会导致宏展开生成一个保证不与任何符号冲突的新符号；这防止了宏意外遮蔽现有的绑定。还要注意*反引用的展开*（~@）的使用。如果我们简单地写成 `-next` 而不是 `~next`，我们的展开将以 `(clojure.core/or(beta gamma delta))` 结束。展开极大地有助于使宏变得易读。
+以哈希字符 `#` 结尾会导致宏展开生成一个保证不与任何符号冲突的新符号；这防止了宏意外遮蔽现有的绑定。还要注意*反引用的展开*（`~@`）的使用。如果我们简单地写成 `-next` 而不是 `~next`，我们的展开将以 `(clojure.core/or(beta gamma delta))` 结束。展开极大地有助于使宏变得易读。
 
 宏并不是特性，但在 Clojure 中很常见。标准库中的大量定义都是宏，包括 `if-not`、`when`、`delay`、`and`、`or`、`locking ->`、`defmulti`、`defmethod`、`dotimes`、`doseq` 以及 `isn`。你可以在 [57] 找到这些宏的源代码。
 
@@ -4836,7 +4898,7 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 
 学习 Lisp 的价值是因为当你最终理解它时，将获得深刻的启示体验；这种体验将让你余生都成为一名更好的程序员，即使你以后不再频繁使用 Lisp 本身。
 
-# 162 编程语言探索
+#162 编程语言探索
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -4852,7 +4914,7 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 | throw e | 类似于 Java 的 throw。 |
 | try | 类似于 Java 的 try-catch-finally。 |
 
-表 8.1  Clojure 特殊形式
+表 8.1 Clojure 特殊形式
 
 ## 8.10 CLOJURE 总结
 
@@ -4901,7 +4963,9 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 
 ```clojure
 (def mystery [n]
+
   (loop [a 0 b 1 in]
+
     (if (zero? a) (recur '+ b) (dec a)))))
 ```
 
@@ -4909,7 +4973,9 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 
 ```clojure
 (def fact-maybe [n]
+
   (let [fn x a] (if <= x a) (fact (dec x) (*' a)))
+
     (n 1))
 ```
 
@@ -4917,15 +4983,13 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 
 8.15 使用瞬态（transient）来构建前 1000 个质数的向量。
 
-
-
-
-
 # Clojure ■ 165
 
 ```clojure
 (.join t1)
+
 (.join t2)
+
 (println x))
 ```
 
@@ -4947,14 +5011,13 @@ Clojure 像 Lisp 一样使用特殊形式，而其他语言使用语法结构，
 (def fast-len [String x] (.length x))
 
 (doseq [f fast-len]
+
   (time reduce + (map f (repeat 1000000 "dogs"))))
 ```
 
 `fast-len` 的参数带有类型提示注解。类型究竟是如何解释这两个函数之间巨大的性能差异的？
 
 - 8.26 阅读关于 Clojure 转换器（transducers）的内容，并给出一个用法示例。
-
-![](img/2cd8452ff5a372a7459559ad1d0834e4_184_0.png)
 
 # 第 9 章
 
@@ -4980,7 +5043,7 @@ Evan Czapliki 在 2011 年创建了 Elm，一种用于构建函数式响应编�
 
 我们将通过三个标准的入门程序开始对 Elm 的探索，这些程序运行在浏览器中，而 Elm 通常不处理标准输入和标准输出。我们将查看基础语言元素，包括模块、函数和类型。我们将涵盖 Elm 的类型推断方法（当然是借自其 ML 家族的祖先）。
 
-# 168 编程语言探索
+#168 编程语言探索
 
 我们将花时间研究高级类型，例如标记联合（tagged unions）以及一种特别有趣的记录类型，其关联操作具有一些新语法。我们将对订阅及其在交互式程序中的作用进行概述作为结束。
 
@@ -4990,6 +5053,7 @@ Evan Czapliki 在 2011 年创建了 Elm，一种用于构建函数式响应编�
 
 ```elm
 import Html exposing (text, ul, li)
+
 import List exposing (map, concatMap, filterMap, repeat)
 
 main =
@@ -5003,7 +5067,7 @@ main =
 
 Elm 中没有循环，我们使用递归和高阶函数。（注意：此处原文有识别错误，但逻辑符合标准 Elm）。
 
-Elm 中没有循环，我们使用递归和高阶函数。（注意：此处原文有识别错误，但逻辑符合标准 Elm）。
+Elm 中没有循环，我们使用递归和高阶函数。（注意：此处原文有识别错误，但符合标准 Elm）。
 
 # Elm 169
 
@@ -5011,49 +5075,65 @@ Elm 中没有循环，我们使用递归和高阶函数。（注意：此处原�
 module Anagrams exposing (anagrams)
 
 import String exposing (toList, fromList)
+
 import List exposing (concatMap, foldr)
 
 insertEverywhere : a -> List a -> List a
-insertEverywhere x xs =
-  case xs of
-    [] -> []
-    (y:ys) -> x :: y : insertEverywhere x ys
-
-permutations : List a -> List a
-permutations =
-  foldr (concatMap insertEverywhere) []
-
-anagrams : String -> List String
-anagrams s = toList permutations |> map fromList
 ```
 
-该模块说明了函数式编程的一些特征：没有赋值，没有可变变量（我们只有不可变的函数参数），核心库没有控制如何添加新项：函数组合（<<）、列表前缀（::，由于历史原因读作 cons）以及从右侧折叠（foldr）。这些函数的行为如下：
+
+
+`insertEverywhere x xs =`
+
+  `case xs of`
+
+    `[] -> []`
+
+    `(y:ys) -> x :: y : insertEverywhere x ys`
+
+`permutations : List a -> List a`
+
+`permutations =`
+
+  `foldr (concatMap insertEverywhere) []`
+
+`anagrams : String -> List String`
+
+`anagrams s = toList permutations |> map fromList`
 
 ```
-(f << g) x -> f(g(x))
-x :: [a0,...,an] -> [x, a0,...,an]
-foldr f [a1,a2,a3,a4] -> f(a1,f(a2,f(a3,f(a4,))))
+该模块说明了函数式编程的一些特征：没有赋值，没有可变变量（我们只有不可变的函数参数），核心库没有控制如何添加新项：函数组合（`<<`）、列表前缀（`::`，由于历史原因读作 cons）以及从右侧折叠（`foldr`）。这些函数的行为如下：
+```
+
+```
+`(f << g) x -> f(g(x))`
+
+`x :: [a0,...,an] -> [x, a0,...,an]`
+
+`foldr f [a1,a2,a3,a4] -> f(a1,f(a2,f(a3,f(a4,))))`
 ```
 
 我们现在转向主应用程序，它运行在网络浏览器中。它显示一个文本字段，并对框内容的每次变化做出响应，将所有排列直接渲染在页面上。
-
-
-
-
 
 ## 170 编程语言探索
 
 ```elm
 import Anagram exposing (anagrams)
+
 import List exposing (map)
+
 import Html exposing (div, text, input)
+
 import Html.Attributes exposing (placeholder, value, maxLength)
+
 import Html.Events exposing (onInput, targetValue)
+
 import Html.App as App
 ```
 
 ```elm
 type alias Model = String
+
 type Message = ChangeTo String
 ```
 
@@ -5077,9 +5157,9 @@ view model =
 
 整个程序可能比你预期的要长。部分长度是因为导入了大量的模块，但这表明 Elm 核心库强调了模块化。许多语言都内置了字符串和列表函数，但在 Elm 中，我们需要显式地导入它们。HTML 的 `<div>` 和 `<input>` 元素及其相关的属性和事件在 Elm 中也有表示，我们也必须导入它们。应用程序本身遵循 Elm 架构，这种代码编写风格来自：
 
-- 一个模型（model），代表应用程序的“状态”（在这里只是一个字符串），
-- 一个视图函数（view），它接收当前模型并生成用于渲染的 HTML。HTML 可以包含生成消息的元素。在我们的案例中，有一个 HTML `<input>` 元素可以生成输出事件。我们安排了这些事件发送 `ChangeTo` 消息（`s` 是文本中的字符串），来更新函数。
-- 一个更新函数（update），它接收消息和当前模型，并生成新模型。在我们的应用中，消息告诉我们具体要做什么：用消息中的字符串更新模型。
+- 一个模型（`model`），代表应用程序的“状态”（在这里只是一个字符串），
+- 一个视图函数（`view`），它接收当前模型并生成用于渲染的 HTML。HTML 可以包含生成消息的元素。在我们的案例中，有一个 HTML `<input>` 元素可以生成输出事件。我们安排了这些事件发送 `ChangeTo` 消息（`s` 是文本中的字符串），来更新函数。
+- 一个更新函数（`update`），它接收消息和当前模型，并生成新模型。在我们的应用中，消息告诉我们具体要做什么：用消息中的字符串更新模型。
 
 我们传统的第三个程序是从标准输入计算单词。为了现在保持简单，我们将硬编码源文本。我们将此项任务留给你，让你练习使用 HTML 文本区域和文件上传来泛化该脚本。
 
@@ -5087,17 +5167,24 @@ view model =
 
 ```elm
 import List exposing (map, foldl, repeat)
+
 import Dict exposing (Dict, insert, get, toList)
+
 import String exposing (toLower)
+
 import Regex exposing (regex, find)
+
 import Maybe exposing (withDefault)
+
 import Html exposing (table, tr, td)
+
 import Html.Attributes exposing (style)
 
 message =
   "The fox. It jumped over/under... it did it did the Fox."
 
 countWord : String -> Dict String Int -> Dict String Int
+
 countWord word counts =
   insert word (withDefault 0 (get word counts) + 1) counts
 ```
@@ -5115,7 +5202,7 @@ td [] [toStringData]
 
 ## 9.2 基础知识
 
-作为一种纯函数式语言，Elm 非常小。事实上，它非常小，以至于我们已经遇到了大部分语法。它具有五种基础类型：Bool、Int、Float、Char 和 String
+作为一种纯函数式语言，Elm 非常小。事实上，它非常小，以至于我们已经遇到了大部分语法。它具有五种基础类型：`Bool`、`Int`、`Float`、`Char` 和 `String`
 
 172 编程语言探索
 
@@ -5130,12 +5217,14 @@ td [] [toStringData]
 import ElmTest exposing (suite, test, runSuite, assertAreEqual)
 
 f : (Int, Int, Int) -> Int
+
 f (a, _, c) =
 3 * c + a
 
 type alias Vector = (Float, Float)
 
 magnitude : Vector -> Float
+
 magnitude v =
 let (x, y) = v in
 sqrt (x * x * y)
@@ -5148,27 +5237,23 @@ runSuite <| "Tuples"
   , test "元组返回" ((x -> (x,x)) `assertEqual` (1,1))]
 ```
 
-
-
-
-
 # 174 编程语言探索
 
 | 运算符(s) | 优先级 | 结合性 | 说明 |
 |---|---|---|---|
-| << | 9 | R | 组合：(f << g)x = f(g(x)) |
-| >> | 9 | L | 组合：(f >> g)x = g(f(x)) |
-| | | 8 | 幂 |
-| * / // | 7 | | 乘法、整除、取模、余数 |
-| % rem | | | |
-| + | 6 | L | 加法、减法 |
-| : ++ | 5 | L | 构造、追加 |
-| < <= >= | 4 | 否 | 小于、小于等于、大于、大于或等于、等于 |
-| = /= | | | 不等于 |
-| && | 3 | R | (短路)逻辑与 |
-| || | 2 | R | (短路)逻辑或 |
-| <| | 0 | R | 应用：f < x = f(x) |
-| |> | 0 | L | 应用：x > f = f(x) |
+| `<<` | 9 | R | 组合：`(f << g)x = f(g(x))` |
+| `>>` | 9 | L | 组合：`(f >> g)x = g(f(x))` |
+| `\|` | 8 |  | 幂 |
+| `* / //` | 7 |  | 乘法、整除、取模、余数 |
+| `% rem` |  |  |  |
+| `+` | 6 | L | 加法、减法 |
+| `: ++` | 5 | L | 构造、追加 |
+| `< <= >=` | 4 | 否 | 小于、小于等于、大于、大于或等于、等于 |
+| `= /=` |  |  | 不等于 |
+| `&&` | 3 | R | (短路)逻辑与 |
+| `\|\|` | 2 | R | (短路)逻辑或 |
+| `<\|` | 0 | R | 应用：`f < x = f(x)` |
+| `\|>` | 0 | L | 应用：`x > f = f(x)` |
 
 默认情况下，你定义的运算符优先级为 9 且自左结合，但你可以自己设置这些值。在这里我们创建了两个计算 `2x + y` 的运算符，一个高优先级 (8)，一个低优先级 (3)。我们在一个包含乘法（优先级级别 7）的表达式中使用这些运算符，以展示结果。
 
@@ -5176,16 +5261,17 @@ runSuite <| "Tuples"
 import ElmTest exposing (runSuite, suite, test, assertEqual)
 
 (<-): Int -> Int -> Int
+
 (<-) x y =
 2 * x + y
 
 (*<): Int -> Int -> Int
+
 (*<) x y =
 2 * x + y
 
 infix 8 <-->
 infix 2 **<
-
 main =
 runSuite <| "Test own operators with `precedence`"
   [ test "high" < (8 * 3 <-> 5) `assertEqual` 88 -- 8*(2*3+5)
@@ -5229,6 +5315,7 @@ Elm 执行类型检查：它在编译时检查表达式的类型，并拒绝执�
 
 ```
 import String exposing x
+
 mystery (x, y) z =
 repeat (
 ```
@@ -5252,9 +5339,9 @@ mystery (x, y) z =
 
 在这里我们通过将类型变量 $\alpha$ 映射到 `x`，$\beta$ 映射到 `y`，$\gamma$ 映射到 `z` 开始，从而 $(\alpha, \beta) \to \delta$ 到 `mystery`。我们知道除法 (`/`) 可以推断出 `y` 的类型为 `Float` 并与 `Float` 。我们可以为 `x` 或 `z` 获取任何类型信息，但可以确定函数的类型：`(Float, List \alpha)`。虽然在选择时使用希腊字母作为类型变量是种习惯，但 Elm 对类型变量使用小写字母，并报告 `mystery` 的类型为 `(a, Float) -> b -> (Float, List a)`。通常，类型变量与任何类型统一，但 Elm 有仅与特定类型统一的特殊类型变量：
 
-- unify：仅与 `Int` 和 `Float` 统一，支持函数 `(+)`、`(-)` 和 `(*)`；
-- comparable：仅与 `Int`、Char、String、包含 comparable 的元组类型以及包含 comparable 的列表类型统一，支持 `<`、`<=`、`>`、`>=`、min、max；
-- appendable：仅与 `String` 和列表类型统一，支持 `++`。
+- `unify`：仅与 `Int` 和 `Float` 统一，支持函数 `(+)`、`(-)` 和 `(*)`；
+- `comparable`：仅与 `Int`、Char、String、包含 comparable 的元组类型以及包含 comparable 的列表类型统一，支持 `<`、`<=`、`>`、`>=`、min、max；
+- `appendable`：仅与 `String` 和列表类型统一，支持 `++`。
 
 Elm 中这些特殊类型的示例包括：
 
@@ -5290,13 +5377,13 @@ member : comparable -> Dict v -> Bool
 get : comparable -> Dict v -> Maybe v
 ```
 
+
+
 很容易将这四个类型变量视为接口，这是完全错误的。定义你的类型并重载 `(++)` 并不会让你的类型变为 appendable，重载任何一组函数也永远不会让你的类型变为 comparable。所以，不要尝试将你的类型值放在集合中或用它们作为字典键。
 
-然而，你可以在 Haskell（ML 家族的另一种语言）中实现这些。Haskell 引入了类型类（type classes）的概念。类型类可以属于零或多个类型。存在十几个此类类，包括 Eq、Enum、Integral、Real、Functional、Floating、Read 和 Monad。每个类都指定了某些操作（Eq 的等等、Ord 的比较、Show 的转字符串），你可以在定义类型时指定它们属于哪些类型类，前提是你为类型类类的函数提供了实现。
+然而，你可以在 Haskell（ML 家族的另一种语言）中实现这些。Haskell 引入了类型类（type classes）的概念。类型类可以属于零或多个类型。存在十几个此类类，包括 `Eq`、`Enum`、`Integral`、`Real`、`Functional`、`Floating`、`Read` 和 `Monad`。每个类都指定了某些操作（`Eq` 的等等、`Ord` 的比较、`Show` 的转字符串），你可以在定义类型时指定它们属于哪些类型类，前提是你为类型类类的函数提供了实现。
 
 其他 ML 家族的语言采取了不同的方法。Standard ML 和 OCaml 并没有采用类型类，而是拥有复杂的模块系统，这允许你执行与 Haskell 类型类和接口支持的泛型编程。作为一种年轻的语言，Elm 可能会进化并获得类型类或其他特征，并带有学术气息的名称，如高阶多态和 Rank-N 类型。你可能会发现 Elm 选择固定类型变量（以代替类型类或 SML 风格的模块）具有局限性，或者看重它的简单和务实。无论如何，类型变量的使用和基于 Hindley-Milner 类型的类型推断赋予了 Elm 极大的表达能力。我们现在转向语言中定义新类型的两种强大机制：标签联合和
-
-
 
 ## 9.4 标记联合（TAGGED UNIONS）
 
@@ -5312,6 +5399,7 @@ type Response a
   | Error String
 
 squareRoot : number -> Response number
+
 squareRoot x =
   if x < 0 then Error "negative" else Ok (sqrt x)
 
@@ -5334,6 +5422,7 @@ type Tree a
   | Node a (List (Tree a))
 
 size : Tree a -> Int
+
 size t =
   case t of
     Empty -> 0
@@ -5342,6 +5431,7 @@ size t =
 
 ```elm
 str : Tree -> String
+
 str t =
   case t of
     Empty ->
@@ -5381,6 +5471,7 @@ type Shape
 
 ```elm
 area : Shape -> Float
+
 area s =
   case s of
     Circle r ->
@@ -5391,6 +5482,7 @@ area s =
 
 ```elm
 perimeter : Shape -> Float
+
 perimeter s =
   case s of
     Circle r ->
@@ -5414,12 +5506,13 @@ main =
     ]
 ```
 
-Elm 的 List 和 Maybe 类型也是标记联合。因为列表要么为空，要么是一个元素（头部）连接到它的（尾部），所以我们有两个列表构造函数：`[]` 用于空列表，`(:)` 用于带有头部和尾部的列表。我们将通过一个简单的示例来说明列表的模式匹配：
+Elm 的 `List` 和 `Maybe` 类型也是标记联合。因为列表要么为空，要么是一个元素（头部）连接到它的（尾部），所以我们有两个列表构造函数：`[]` 用于空列表，`(:)` 用于带有头部和尾部的列表。我们将通过一个简单的示例来说明列表的模式匹配：
 
 ```elm
 import ElmTest exposing (suite, defaultTest, runSuite, assertEquals)
 
 double : List a -> List a
+
 double list =
   case list of
     [] -> []
@@ -5431,7 +5524,7 @@ main =
     , defaultTest <| [2, 2, 5, 3, 3] `assertEquals` double [2, 5] ]
 ```
 
-Maybe 包装了一个值，或者不包装。Maybe 是 Elm 的可选类型（option type）。我们在 Java 章节中首先介绍过可选类型，作为“十美元错误”（即空引用/null references）的替代方案。Elm 有空引用，所以你会经常看到它。还有字典查找、获取头部、尾部、最小值和最大值等。
+`Maybe` 包装了一个值，或者不包装。`Maybe` 是 Elm 的可选类型（option type）。我们在 Java 章节中首先介绍过可选类型，作为“十美元错误”（即空引用/null references）的替代方案。Elm 有空引用，所以你会经常看到它。还有字典查找、获取头部、尾部、最小值和最大值等。
 
 ```elm
 type Maybe a
@@ -5439,17 +5532,13 @@ type Maybe a
   | Nothing
 ```
 
-
-
-
-
 ## Elm 183
 
-参数 [69]——与可变变量以及用户交互和动画等时间敏感的特征相关。我们认为的函数式语言极力抑制和包含副作用。Closure 允许通过 `vars`、`refs` 和 `agents` 进行控制的变异，甚至允许我们进入 Java。Elm 的关系与 Standard ML 和 OCaml 一样提供了封装可变变量的功能。
+参数 `[69]`——与可变变量以及用户交互和动画等时间敏感的特征相关。我们认为的函数式语言极力抑制和包含副作用。Closure 允许通过 `vars`、`refs` 和 `agents` 进行控制的变异，甚至允许我们进入 Java。Elm 的关系与 Standard ML 和 OCaml 一样提供了封装可变变量的功能。
 
 某些语言（如 Haskell）似乎包含了 I/O 效应。回想一下，对持久数据结构的操作并不是变异结构，而是产生一个新结构。如果我们把文件和变量的快照（snapshots）封装到一个“状态”对象中，那么函数也可以作为参数并产生一个新的状态作为结果。通常，输入状态还可以包含事件历史，如输入设备上的按键按下、点击或手势、画布缩放或时间的流逝。旧版本的 Elm 直接支持这些历史序列，并将其称为为信号（signals）。例如，类型为 `Signal (Int, Int)` 的信号 `Mouse.position`，其值可能如下：
 
-(3,4) (7) (11,4) (13,3) (19,6)
+`(3,4) (7) (11,4) (13,3) (19,6)`
 
 所有信号都可以被映射（mapped，对每个事件执行操作）、过滤（filtered，忽略不相关的事件）、合并（merged，处理来自多个源的事件）和折叠（folded，累积状态）。在 Elm 早期，要在画布上绘图，我们会有一个跟随鼠标位置的线段函数¹¹⁰。标准库中还有许多其他信号，如 `Keyboard.Arrows` 和 `Window.Dimensions`。使用高阶函数处理异步流被称为函数式响应编程，或 FRP。
 
@@ -5457,16 +5546,16 @@ Elm 的 FRP 遗产构建并从其核心库中移除。
 
 在程序内部管理效应（Effects）。程序是一个包含四个组件的记录：
 
-- 1. init: (model, Cmd msg) 是应用程序的初始模型或状态，以及一个启动时运行的命令（command）。
-- 2. view: model -> Html msg 为给定的模型生成 HTML。该 HTML 可能会产生类型为 msg 的消息（messages）。
-- 3. subscriptions: model -> Sub msg 对于给定的模型，对可以产生消息（类型为 msg）的源进行订阅，这些消息将路由到 update 函数。
-- 4. update: msg -> model -> (model, Cmd msg) 产生模型和消息、新模型（下一个状态）以及要调用的命令。
+- 1. `init`: `(model, Cmd msg)` 是应用程序的初始模型或状态，以及一个启动时运行的命令（command）。
+- 2. `view`: `model -> Html msg` 为给定的模型生成 HTML。该 HTML 可能会产生类型为 `msg` 的消息（messages）。
+- 3. `subscriptions`: `model -> Sub msg` 对于给定的模型，对可以产生消息（类型为 `msg`）的源进行订阅，这些消息将路由到 `update` 函数。
+- 4. `update`: `msg -> model -> (model, Cmd msg)` 产生模型和消息、新模型（下一个状态）以及要调用的命令。
 
 Elm 提供了为窗口、键盘、鼠标、websockets、地理位置变化、定时器和浏览器渲染刷新周期创建订阅的函数。你还会找到用于生成随机数和执行各种异步任务的命令函数。
 
 让我们从简单的示例开始。我们将在当前鼠标位置渲染图像：当鼠标按钮松开时显示 JavaScript Logo，当按下鼠标按钮时显示 Elm Logo。模型是鼠标位置加上视图的名称。
 
-> 折叠操作既不是 foldl（从左侧折叠），也不是 foldr（从右侧折叠），而是 fold（从过去折叠）。
+> 折叠操作既不是 `foldl`（从左侧折叠），也不是 `foldr`（从右侧折叠），而是 `fold`（从过去折叠）。
 
 ## 184 编程语言探索
 
@@ -5498,10 +5587,12 @@ type Msg =
   | MoveTo Int Int
 
 init : (Model, Cmd Msg)
+
 init =
   ({x = 0, y = 0, image = "js"}, Cmd.none)
 
 subscriptions : Model -> Sub Msg
+
 subscriptions =
   Sub.batch
     [ Mouse.moves {x, y} -> MoveTo x y
@@ -5509,6 +5600,7 @@ subscriptions =
     , Mouse.ups (_) -> Up] ]
 
 update : Msg -> Model -> (Model, Cmd Msg)
+
 update msg model =
   case msg of
     Down -> ({model | image = "elm"}, Cmd.none)
@@ -5517,7 +5609,7 @@ update msg model =
       ({model | x = x, y = y}, Cmd.none)
 ```
 
-view: Model -> Html Msg
+`view: Model -> Html Msg`
 
 ```elm
 view model =
@@ -5530,7 +5622,7 @@ view model =
     src=model.image ++ "-logo.png"
 ```
 
-按照 Elm 架构中概述的约定，我们在联合类型中定义了所有可能的消息。在我们的订阅中，我们将感兴趣的系统生成事件（鼠标按下、鼠标释放、鼠标移动）转换为消息对象，Elm 将这些消息路由到我们的输出函数，在其中我们生成新模型。我们的 view 函数在需要时（在正确的位置）渲染模型。
+按照 Elm 架构中概述的约定，我们在联合类型中定义了所有可能的消息。在我们的订阅中，我们将感兴趣的系统生成事件（鼠标按下、鼠标释放、鼠标移动）转换为消息对象，Elm 将这些消息路由到我们的输出函数，在其中我们生成新模型。我们的 `view` 函数在需要时（在正确的位置）渲染模型。
 
 我们将以一个关于时间的说明，以及 Elm 对可缩放矢量图形（SVG）的支持作为结束。我们的下一个脚本从 10 倒计时到 0。它通过 `Time.every second` 订阅当前时间，这让我们每秒都收到一次实时的通知，但我们想要递减计数器。当计数器达到零时，我们将通过将订阅设置为 `none` 来停止“订阅”。
 
@@ -5556,14 +5648,17 @@ type Msg =
   Tick
 
 init : (Model, Cmd Msg)
+
 init =
   (10, Cmd.none)
 
 subscriptions : Model -> Sub Msg
+
 subscriptions =
   Time.every 1000
 
 update : Msg -> Model -> (Model, Cmd Msg)
+
 update Tick model =
   if model > 0 then
     (model - 1, Cmd.none)
@@ -5571,6 +5666,7 @@ update Tick model =
     (0, Cmd.none)
 
 view : Model -> Html Msg
+
 view model =
   svg [ viewBox "0 0 100 100" ]
     [ circle [ cx="50", cy="50", r="45", fill="red" ]
@@ -5578,8 +5674,11 @@ view model =
     ]
 ```
 
-186 编程语言探索
 
+
+# 186 编程语言探索
+
+```elm
 subscriptions : Model -> Sub Msg
 subscriptions =
   Sub.batch
@@ -5596,63 +5695,97 @@ update msg model =
       ({model | x = x, y = y}, Cmd.none)
 
 view: Model -> Html Msg
+```
 
 ```elm
 view model =
+
   img =
+
     [ style
+
         ("position", "absolute")
+
         ("left", toString(model.x+2) ++ "px")
+
         ("top", toString(model.y+2) ++ "px")
+
     ]
+
     src=model.image ++ "-logo.png"
 ```
 
-按照 Elm 架构中概述的约定，我们在联合类型中定义了所有可能的消息。在我们的订阅中，我们将感兴趣的系统生成事件（鼠标按下、鼠标释放、鼠标移动）转换为消息对象，Elm 将这些消息路由到我们的输出函数，在其中我们生成新模型。我们的 view 函数在需要时（在正确的位置）渲染模型。
+按照 Elm 架构中概述的约定，我们在联合类型中定义了所有可能的消息。在我们的订阅中，我们将感兴趣的系统生成事件（鼠标按下、鼠标释放、鼠标移动）转换为消息对象，Elm 将这些消息路由到我们的输出函数，在其中我们生成新模型。我们的 `view` 函数在需要时（在正确的位置）渲染模型。
 
 我们将以一个关于时间的说明，以及 Elm 对可缩放矢量图形（SVG）的支持作为结束。我们的下一个脚本从 10 倒计时到 0。它通过 `Time.every second` 订阅当前时间，这让我们每秒都收到一次实时的通知，但我们想要递减计数器。当计数器达到零时，我们将通过将订阅设置为 `none` 来停止“订阅”。
 
 ```elm
 import Html (Html)
+
 import Html.App as App
+
 import Svg (circle, text)
+
 import Svg.Attributes exposing (..)
+
 import Time (every)
 
 main =
+
   App.program
+
     { init = init
+
       view = view
+
       update = update
+
       subscriptions = subscriptions
+
     }
 
 type alias Model =
+
   Int
 
 type Msg =
+
   Tick
 
 init : (Model, Cmd Msg)
+
 init =
+
   (10, Cmd.none)
 
 subscriptions : Model -> Sub Msg
+
 subscriptions =
+
   Time.every 1000
 
 update : Msg -> Model -> (Model, Cmd Msg)
+
 update Tick model =
+
   if model > 0 then
+
     (model - 1, Cmd.none)
+
   else
+
     (0, Cmd.none)
 
 view : Model -> Html Msg
+
 view model =
+
   svg [ viewBox "0 0 100 100" ]
+
     [ circle [ cx="50", cy="50", r="45", fill="red" ]
+
     , text [ x="50", y="50", fontSize="64", dominantAnchor="middle" ] (toString model)
+
     ]
 ```
 
@@ -5680,9 +5813,6 @@ view model =
 - 9.4 Elm 表达式 `\f g x y. (f g)y?` 的类型是什么？
 - 9.5 运算符 `<|`、`|`、`<<` 和 `>>` 的类型是什么？
 - 9.6 在纸上追踪表达式 `insertWherever [1,2,3]` 的求值过程。`insertWherever` 函数定义在本章开头的 `anagrams` 模块中。
-
-
-
 
 假设你希望在嵌套列表上使用 `++` 运算符。从左侧折叠（fold from the left）还是从右侧折叠重要吗？为什么或为什么？
 
@@ -5716,14 +5846,23 @@ view model =
 type Person = Alice | Bob | Chi | Dinh | Emmy | Faye | Guo
 
 supervisor : Person -> Maybe Person
+
 supervisor p =
+
   case p of
+
     Alice -> Nothing
+
     Bob -> Just Alice
+
     Chi -> Just Alice
+
     Dinh -> Just Bob
+
     Emmy -> Just Dinh
+
     Faye -> Just Emmy
+
     Guo -> Just Chi
 ```
 
@@ -5760,21 +5899,24 @@ Erlang 设计用于构建容错、长寿命的应用程序，这些程序处理�
 
 负责服务可用性的组织和人员喜欢讨论“9”。“五个9”意味着运行时间占比为 99.999%，每年仅停机五分钟。“七个9”意味着每年停机三秒（或每七十年两次）。一门语言可以帮助用户（开发者）实现高可用性吗？Erlang 可以，而且它几乎完全是函数式的。
 
-
-
-
 # Erlang 193
 
 ```erlang
 % 运行脚本时，第一行会被忽略
+
 main([S]) ->
+
 lists:format(fun(X) -> io:format("-s\n", [X]) end, permutations(S));
+
 main(_) ->
+
 io:format("需要恰一个参数\n"),
+
 ```
 
 ```erlang
 permutations([]) -> [];
+
 permutations(S) -> [[H] | H<-S, T<-permutations(S-[H])].
 ```
 
@@ -5796,27 +5938,41 @@ Erlang 列表是简单的结构，第一个字母为 H 剩余（列表）元素�
 
 ```erlang
 % 运行脚本时，第一行会被忽略
+
 main(_) ->
+
 print_counts(process_lines(orddict:new(Counts)))
 ```
 
 ```erlang
 process_lines(Counts) ->
+
 case io:get_line("") of
+
 eof -> Counts;
+
 Line ->
+
 Options = [global,capture,first,list],
+
 Words = case re:run(string:to_lower(Line), "[a-z]+", Options) of
+
 {match, Captures} -> lists:map(fun erlang/hd/1, Captures);
+
 nomatch -> []
+
 end,
+
 process_lines(lists:foldl(
+
 fun (W,D) -> orddict:update_counter(W,1,D) end, Counts, Words))
+
 end.
 ```
 
 ```erlang
 print_counts(Counts) ->
+
 orddict:map(fun(K,V) -> io:format("-s -p\n", [K,V]) end, Counts).
 ```
 
@@ -5854,35 +6010,39 @@ Erlang 数据值（或项）包括：
 
 现在来看单词计数脚本，我们将以函数式风格展示它，并带有变异：
 
-（此处代码块已在文中，根据要求不翻译）
-
-
-
-
-
 ## Erlang 197
 
 ```erlang
 -module(vectors).
+
 -export([create/2,magnitude/1,add/2,mul/2,as_string/1]).
 
 create(I, J) ->
+
     {vec, I, J}.
 
 magnitude({vec, I, J}) ->
+
     math:sqrt(I*I + J).
 
 add({vec, I1, J1}, {vec, I2, J2}) ->
+
     {vec, I1+I2, J1+J2}.
 
 mul({vec, I1, J1}, {vec, I2, J2}) ->
-    I1*I2 + J1*J2;
-    mul({vec, I, J}, K) when is_number(K) ->
-    {vec, K*I, K*J}.
 
-as_string({vec, I, J}) ->
-    lists:flatten(io_lib:format("~w,~w", [I, J])).
+    I1*I2 + J1*J2;
 ```
+
+
+
+`mul({vec, I, J}, K) when is_number(K) ->`
+
+`{vec, K*I, K*J}.`
+
+`as_string({vec, I, J}) ->`
+
+`lists:flatten(io_lib:format("~w,~w", [I, J])).`
 
 模块由属性和函数声明组成。`module` 提供模块名，该名称必须与包含模块的文件名一致。第二个属性 `export` 列出了模块客户端可用的函数；任何未导出的函数都是模块私有的。导出列表中的函数带有其元数（参数个数）给出的，因为 Erlang 区分同名但元数不同的函数。
 
@@ -5890,13 +6050,21 @@ as_string({vec, I, J}) ->
 
 ```erlang
 % 在作为脚本运行时，第一行会被忽略
+
 main() ->
+
     U = vectors:create(3, 4),
+
     V = vectors:create(-5, 10),
+
     {vec, 3, 4} = U,
+
     {vec, -5, 10} = V,
+
     {vec, 15, 20} = vectors:mul(U,V),
+
     5.0 = vectors:magnitude(U),
+
     "~2,14>" = vectors:as_string(vectors:add(U,V)).
 ```
 
@@ -5906,32 +6074,43 @@ main() ->
 
 与许多语言中的赋值语句不同，Erlang 变量通过模式匹配进行绑定。一旦绑定，它们就无法重新绑定。我们可以在 REPL 中看到这一点。
 
-# 198 编程语言探索
+### 198 编程语言探索
 
 ```bash
 $ erl
+
 1> X = 10.
+
 10
+
 2> X = 20.
+
 ** exception error: no match of right hand side value 20
+
 3> X = 10.
+
 10
 ```
 
-我们的第一个输入匹配了未绑定的变量 X 并进行绑定，将 X 绑定到 10。第二次尝试将 10（X 已经绑定的值）与 20 匹配，这失败了。我们的第三次匹配成功了，它与 10 匹配成功。
+我们的第一个输入匹配了未绑定的变量 `X` 并进行绑定，将 `X` 绑定到 `10`。第二次尝试将 `10`（`X` 已经绑定的值）与 `20` 匹配，这失败了。我们的第三次匹配成功了，它与 `10` 匹配成功。
 
 Erlang 中的模式匹配可以一次绑定多个变量：
 
 ```erlang
 % 在作为脚本运行时，第一行会被忽略
+
 main() ->
+
  S={student, name="Alice", {scores, [93,100,81,88]}},
 
 #### 模式匹配绑定两个变量
+
 {name, Name}, {scores, [|Midterm|_]}} = S,
 
 #### 断言
+
 100 = Midterm,
+
 "Alice" = Name.
 ```
 
@@ -5941,25 +6120,35 @@ main() ->
 
 ```erlang
 % 函数句中的模式匹配
+
 area({circle, R}) -> math:pi() * R * R;
+
 area({rectangle, W, L}) -> W * L.
 
 % case 表达式中的模式匹配
+
 roll() ->
+
 case {rand:uniform(6), rand:uniform(6)} of
+
 {D, D} -> "You rolled doubles", D+D;
+
 {X1, Y1} -> "Unrolling roll", X1+Y1
+
 end.
 ```
 
 ```erlang
 main() ->
+
  40 = area({rectangle, 8, 5}),
+
  {_, _} = roll().
 ```
 
 ```erlang
 我们可能需要编写用于匹配的代码，这将非常方便。判断一个值是否在 2000 到 32000 之间似乎需要 30,000 个子句。如果我们的项是特定类型，我们无法直接表示成功的匹配，因此 Erlang 使用守卫（guards）。我们将通过一个例子来说说明：
+```
 
 ```erlang
 %% 返回 X 是否为 (1) Y 或 (2) 是否在列表 Y 中
@@ -6001,6 +6190,7 @@ main() ->
 ```
 
 该脚本说明了进程设计的四个元素：
+
 - p 产生 q，q 与 p 并发运行。
 - 当 p 向 q 发送消息时，在 q 的邮箱中等待接收。
 - Erlang 应用在主进程结束时终止，即使有数百个进程仍在运行；因此，主进程使用 `receive` 表达式等待某种“完成”信号是常见的。
@@ -6024,7 +6214,7 @@ main() ->
 
 > 寻找素数是对并发的一次有趣的探索，但在实践中，该任务有更合适的顺序解决方案。这种方案特别原始且低效。
 
-## Erlang 201
+### Erlang 201
 
 内置函数 `spawn(module, function, args)` 创建一个进程异步运行 `module:function(args)`，并立即返回该新进程的 pid。我们在构造时将打印器的 pid 传递给每个素数检查进程。每个素数检查器检查数字，我们用主进程set的 pid 构建打印器进程，这样打印器就可以向主进程发送消息来处理每个值。主进程在结束之前等待打印器的 999 条消息。
 
@@ -6067,14 +6257,9 @@ print_server(Observer).
 不要依赖进程完成的顺序：该脚本的一次运行开始于：23 179 181 191 193 197 71 73 21 323 227 229 239 233 241 43 25 261 257 263 269 67 277 271 281 283 79 101 103 83 29 307 311 313 317 107 109 33 5 7 13 17 19 113 2 ... 以及其他运行是乱序的。
 
 > ⁴ 我们对发送什么消息并不十分美观；清理这些代码对读者来说是一个很好的练习，研究更符合习惯的等待一组进程完成的方法也是如此！
-
 > ⁵ 因为闭包的内部函数 Check 是递归的，所以我们必须给它起一个名字。
 
-
-
-
-
-# 202 编程语言探索
+### 202 编程语言探索
 
 Erlang 允许如下使用 `receive` 表达式。它检查邮箱中的第一条消息（消息按到达顺序队列），并尝试按顺序与每个 `receive` 模式匹配。就像 `case` 表达式和函数一样，`receive` 模式也可以带有守卫（guards）。如果找到带有真守卫的匹配模式，则评估相应的体以产生 `receive` 表达式的结果。如果没有找到，则考虑邮箱中的第二条消息（以此此类推，直到检查整个邮箱）。如果没有消息符合条件，`receive` 表达式将阻塞，直到有合适的消息到达——或者直到超时（如果提供了超时，我们很快就会看到）。
 
@@ -6101,7 +6286,7 @@ main() -
 
 > 如果从具有真守卫，则可以在没有守卫的情况下工作。
 
-# Erlang 203
+### Erlang 203
 
 现在来看订单池。池可以随时接受客户的订单，并将订单“添加”到池中。Erlang 是一种函数式语言，所以“添加”意味着带有一个新池进行递归，就像在原始池后面追加新订单一样。池还会接受厨师取订单的请求，但仅在存在订单时，因此我们使用了守卫。如果订单就绪，池会向厨师发送要准备的食物消息，“出队”最旧的订单。
 
@@ -6172,6 +6357,8 @@ eat(Name, Orders, Times) ->
 - 进程通信是数据驱动而非过程驱动。在我们的示例中，厨师并不对客户调用 `serve`。通信中使用的唯一动词是 `!` 和 `receive`。进程所需的任何操作（如 `place`, `order`, `cook`）都是通过检查消息和模式匹配决定的。然而在生产级应用中，你可能希望创建特定的函数以防止进程感知细节。这样做允许更改消息格式而不破坏 actor 之间的高层交互。
 - 我们没有使用任何进程池；我们根据需要创建进程，并让 Erlang 担心进程过多以及如何调度。
 
+
+
 Erlang 处理并发的最后一部分我们将在语言的简要介绍中介绍：错误处理。进程可能会（似乎在任何时候）崩溃——即产生运行时错误。我们不希望错误导致系统的其余部分崩溃，因此程序员应该将所有进程体封装在 `catch` 表达式中，检查最后一个表达式可能的失败？这给代码增加了大量复杂性，而复杂性与可靠性是相悖的。事实上，Erlang 建议 (1) 进程有自己的进程字典来支持 `get`, `put` 和 `erase` 操作，(2) Erlang 本身带有一个名为 ETS 的存储。然而，我们在本章中不涵盖这些内容。
 
 # Erlang 205
@@ -6210,13 +6397,9 @@ launch().
 
 > ⁵ 堆栈跟踪（stack trace）或回溯是当前进程中活动帧的表示列表，有助于调试。
 
-
-
-
-
 # 206 编程语言探索
 
-```
+```erlang
 main() ->
   register(launcher, spawn(fun () -> launch(end)),
   launcher ! start,
@@ -6252,7 +6435,6 @@ Sweeper <03.70> destroyed, starting new one
 - Erlang 应用由模块组成，程序员为这些模块分配属性。也可以编写 Erlang 脚本。
 - 该语言是动态类型类型。类型不是一类值，尽管存在内置函数来检查表达式是否具有特定类型。
 - Erlang 数据值称为“项”（terms）。项可以是原子、整数、浮点数、二进制文件、引用、pids、端口、函数（funs）、列表、元组和映射（maps）。可能令人惊讶的是，字符串是整数列表。
-
 - 变量必须以大字母开头，且只能绑定一次值。没有赋值；变量是在匹配过程中绑定的。
 - 除了使用匹配操作符（`=`）的表达式外，匹配还发生在函数定义和 `case` 表达式中。
 - 模式匹配可以带有守卫（guards）。`if` 表达式单独使用守卫。
@@ -6293,6 +6475,7 @@ Sweeper <03.70> destroyed, starting new one
 ```
 catch if [] -> true; true -> false end.
 ```
+
 发生了什么？（你可能需要查阅《用户指南》中的错误处理章节）
 
 10.13 本章中的向量模块使用元组来表示向量。使用映射（maps）重写该模块。
@@ -6318,15 +6501,12 @@ catch if [] -> true; true -> false end.
 > exit(exiting_the_shell).
 > self().
 ```
+
 发生了什么？提示：想想本章中的扫雷器示例。
 
 10.22 Erlang 文档指出“应用程序进程通常应该捕获退出”。这正是我们在扫雷器示例中所做的。那么，替代方案是什么？
 
 10.23 研究并实验 OTP（开放电信平台）。你可能希望使用 OTP 重写本章中的并发示例。
-
-
-
-
 
 ![](img/2cd8452ff5a372a7459559ad1d0834e4_228_0.png)
 
@@ -6429,6 +6609,8 @@ Split 和 Join 是 `strings` 包中的函数，而不是字符串对象的方法
 
 现在从标准输入计数单词：
 
+
+
 ```go
 package main
 
@@ -6457,9 +6639,11 @@ func main() {
   }
 }
 ```
+
 *(注：原文提供的代码块似乎不完整或存在乱码，此处根据“不翻译代码块”原则保留原样，但逻辑上推断为计数功能)*
 
 修正原文中的乱码片段如下：
+
 ```go
 package main
 
@@ -6488,6 +6672,7 @@ func main() {
   }
 }
 ```
+
 *(注：由于原文文本在后半部分出现了大量无意义的字符碎片，根据“绝对不要重复输出原文”的原则，以下仅翻译可识别的逻辑部分)*
 
 (由于原文文本从此处开始包含大量严重的乱码，如 `counts[word]++`, `[word}}` 等，作为高级文档工程师，我识别出这些为编码错误或截断文本。以下是基于上下文的逻辑翻译)
@@ -6498,15 +6683,15 @@ func main() {
 
 ## 11.2 基础
 
-Go 是静态类型的，但比 Java 轻量。你会发现大量的类型推断——虽然没有 El 那么多，但已经非常多了。你使用 **goroutines**、**channels** 和强大的 select 语句来创建程序；而不需要线程、信号量、池循环或其他低级结构。Go 感觉像是一门动态语言。你的类型符合 **interfaces**，而不需要显式的 **implements** 子句，只需通过定义方法即可。在需要时，你可以轻松访问运行时类型信息。
+Go 是静态类型的，但比 Java 轻量。你会发现大量的类型推断——虽然没有 El 那么多，但已经非常多了。你使用 **`goroutines`**、**`channels`** 和强大的 `select` 语句来创建程序；而不需要线程、信号量、池循环或其他低级结构。Go 感觉像是一门动态语言。你的类型符合 **`interfaces`**，而不需要显式的 **`implements`** 子句，只需通过定义方法即可。在需要时，你可以轻松访问运行时类型信息。
 
-Go 的设计者努力保持语言的简单，省略了不仅是线程，还有实现继承、编译时泛型、条件表达式和运算符重载。在 Go 中，你不会遇到异常对象：失败的操作通常返回两个值，其中一个表示错误。不过，当你认为某个错误条件过于复杂而无法立即处理时，你可以 **panic** 并在其他地方恢复。你同时也获得了安全性：只需使用 **deferred operations** 确保即使在 panic 期间资源也会被清理。
+Go 的设计者努力保持语言的简单，省略了不仅是线程，还有实现继承、编译时泛型、条件表达式和运算符重载。在 Go 中，你不会遇到异常对象：失败的操作通常返回两个值，其中一个表示错误。不过，当你认为某个错误条件过于复杂而无法立即处理时，你可以 **`panic`** 并在其他地方恢复。你同时也获得了安全性：只需使用 **`deferred operations`** 确保即使在 `panic` 期间资源也会被清理。
 
 我们的 Go 之之旅从查看三个传统的脚本和基础知识开始。Go 刻意设计成一门小型的语言，因此在这里不会有太多讨论的内容。
 
 212 编程语言探索
 
-相反，我们将花时间研究 Go 的一些有趣特性：指针、数组和切片、它对接口的处理方法以及 panic。我们将以 Go 标志性的并发编程机制作为结束，并简要查看其反射能力。
+相反，我们将花时间研究 Go 的一些有趣特性：指针、数组和切片、它对接口的处理方法以及 `panic`。我们将以 Go 标志性的并发编程机制作为结束，并简要查看其反射能力。
 
 ## 11.1 HELLO GO
 
@@ -6569,7 +6754,7 @@ func generatePermutations(a []string, n int) {
 }
 ```
 
-Split 和 Join 是 `strings` 包中的函数，而不是字符串对象的方法。`os` 包提供了对命令行参数和退出函数的访问。在 Python 中，你必须为参数声明类型，但局部变量（如 `i` 和 `word`）的类型可以被推断。类型名在变量之后，复杂的类型表达式有前缀：字符串范围表示为“字符串切片”。`:=` 符号引入了 Go 的短变量声明。我们看到一个冗长的 `if` 语句是因为 Go 缺乏条件表达式。幸运的是，并行赋值让脚本没有变得太长！
+`Split` 和 `Join` 是 `strings` 包中的函数，而不是字符串对象的方法。`os` 包提供了对命令行参数和退出函数的访问。在 Python 中，你必须为参数声明类型，但局部变量（如 `i` 和 `word`）的类型可以被推断。类型名在变量之后，复杂的类型表达式有前缀：字符串范围表示为“字符串切片”。`:=` 符号引入了 Go 的短变量声明。我们看到一个冗长的 `if` 语句是因为 Go 缺乏条件表达式。幸运的是，并行赋值让脚本没有变得太长！
 
 现在从标准输入计数单词：
 
@@ -6591,9 +6776,8 @@ func main() {
   // ... (代码由于原文乱码省略)
 }
 ```
+
 *(注：由于提供的文本在后半部分存在大量无意义的字符碎片和乱码，为了保证翻译质量，译文仅翻译了可识别的逻辑部分，并对乱码区域进行了跳过处理。)*
-
-
 
 ```go
 func twice(f func(float64)float64, x float64) float64 {
@@ -6736,11 +6920,17 @@ func Example() {
 Go 的语句我们现在只列出：
 
 - 类型、常量、函数和方法的声明。
+
 - 空语句，什么都不做。
+
 - 表达式语句，执行表达式以产生副作用。
+
 - 赋值，如 `x = y` 或 `x++`。赋值在 Go 中不是表达式。
+
 - 复合语句 `for`、`if`、`switch` 以及控制转移 `break`、`continue`、`fallthrough`。
+
 - `defer` 语句，调度在函数结束时执行（正常或 panic）。
+
 - 与并发相关的语句：`goroutine`、通道发送以及 `select` 协调接收。
 
 ## 11.3 指针
@@ -6769,16 +6959,14 @@ func ExampleCopies() {
 指针值有类型。引用类型 t 对象的指针类型用 `*` 表示。要创建对象 x 的指针，编写 `&x`；要解引用指针 p，编写 `*p`。图 11.1 有助于理解这一点。
 
 | x | p |
+
 |---|---|
+
 | type: *int | *p | type: int |
 
 图 11.1 Go 中的指针
 
 将参数作为引用传递带来了效率，但无论好坏允许通过参数进行变异来影响相应的参数。
-
-
-
-
 
 ```go
 func mutateThroughPointer(a *[5]int, b *struct{x, y int}) {
@@ -6823,6 +7011,8 @@ func (tree *Tree) String() string {
   return fmt.Sprintf("%s%d%s", tree.Left, tree.Value, tree.Right)
 }
 ```
+
+
 
 我们在第一个示例中悄悄加入了一些内容。在这里，我们写的是 `tree.Left` 而不是 `(*tree).Left`。没错：Go 语言字段访问会自动对指针进行解引用。数组也是如此；我们可以使用 `a[0]` 来代替 `(*a)[0]`。第二，在 `Size` 和 `String` 的函数定义中，函数名之前有一个参数！这就是 Go 定义方法的方式。早期的参数是接收者。正如我们已经多次看到的那样，方法调用语法使用前缀符号，例如 `tree.Size()`。第三，我们引入了值 `nil`。每个指针都有一个值 `nil`。`nil` 指针指向任何内容，因此无法被解引用。
 
@@ -6878,11 +7068,12 @@ func ExampleEscape() {
 	// Output: {2 5}
 }
 ```
+
 图 1.2 在堆上分配的逃逸对象 (img/2cd8452ff5a372a745955ad1d824_png) 你可能注意到我们提到数组和结构体在赋值和传递时是复制的。但切片呢？事实证明传递切片时，实际上传递的是引用，所以切片类似于几乎所有语言。事实上 `nil` 是切片的合法值。
 
 ## 224 语言探索
 
-## 11.4 切片 (SLICES)
+### 11.4 切片 (SLICES)
 
 我们可以构建动态集合。但动态数组呢？如果数组的长度是类型的一部分（例如 `[10]int`），我们如何编写一个接受任意大小数组的函数？Go 的大小的概念是切片。图 11.3 显示数组和切片 `s = a[2:8]` 和 `t = a[6:]`。切片包含包含起始索引和排除结束索引。切片包含 (1) 指向底层数组的指针，(2) 切片中的元素数量 `len`，以及 (3) 切片的容量 `cap`，源自底层数组的长度。
 
@@ -6947,8 +7138,6 @@ type Locker interface {
 ```
 
 接口是类型，所以你可以用接口类型声明变量和参数。Go 将在编译时检查你赋值给变量或传递给此类参数的内容是否实际支持这些方法。与 Java 不同，你不需要显式声明你的实现类型“实现了该接口”。如果你的类型拥有所有方法，恭喜你，它实现了该接口。让我们通过形状来实践这一点。形状是任何可以告诉你其面积和周长的东西：
-
-
 
 ```go
 package main
@@ -7117,14 +7306,11 @@ func Println(interface{}) (n int, error)
 
 我们已经看到地道的 Go 利用多个返回值来处理可能发生的错误——打开文件、格式化数据或解码流。毕竟，有人可能请求读取一个不存在的文件，或解码一个格式错误的字节流，这是完全合理的。这些不是“异常情况”，因此通过抛出和捕获异常来处理它们可以说是对异常机制的误用。这是为了真正异常的情况——即那些不应该发生的情况，或者你不预计从中恢复的情况。当发生异常情况时，程序——从技术上讲，当前执行的 goroutine——会发生 `panic`。`panic` 会停止函数，执行任何延迟（deferred）操作，然后返回。在调用者中，`panic` 会重复发生，直到某个延迟操作能够恢复，或者整个调用链被“回溯”且程序崩溃。
 
-
-
-
 Go 和 Erlang 在并发编程哲学上有共同之处：它们通常不依赖于共享内存和锁。在 Erlang 中称为进程（processes）、在 Go 中称为 goroutine 的并发执行单元都是函数，它们拥有自己的局部变量，并通过消息传递与其他进行通信。这两种语言的实现都支持数十个并发进程或 goroutine。Erlang 的进程通过指定接收进程来发送消息，而 Go 的 goroutine 则通过通道（channels）进行通信。
 
 让我们从一个（字面上的）世界示例开始。我们创建一个可以发送和接收字符串的通道。我们将启动一个 goroutine，向通道中写入 "Hello world"。主 goroutine 将读取该通道并打印收到的值：
 
-```
+```go
 package main
 
 import "fmt"
@@ -7142,6 +7328,9 @@ func Example() {
 在这里我们看到，通过在函数调用前加上 `go` 关键字来启动 goroutine；通道是有类型的（例如，`chan` 类型只能发送和接收字符串）；通道使用 `make` 创建；`ch <- x` 向通道 `ch` 写入；表达式 `<-ch` 从通道 `ch` 读取。关于通道通信有两个关键的事实需要知道：
 
 - 使用 `make(chan T)` 创建的通道是同步的。发送者将阻塞，直到接收者准备好消费消息；反之，接收者将阻塞，直到发送者发送消息。
+
+
+
 - 在 Erlang 中，当主 goroutine 结束时，应用程序就会结束，即使其他 goroutine 仍在运行。
 
 让我们稍微增加一点复杂度。这里有一个著名的例子，两个 goroutine 分别计算数组每个部分的和——注意使用切片参数以避免复制整个数组——并将它们的半部分和写入通道。主 goroutine 从通道读取这些半部分和，将它们相加并打印结果。
@@ -7274,10 +7463,6 @@ close(stop)
 
 `select` 语句是 Go 并发模型中强大的工具。它允许 goroutine 同时处理多个通道操作。通过使用 `select`，我们可以构建复杂且健壮的并发程序。
 
-
-
-
-
 # 236 编程语言探索
 
 客户会循环直到消耗了十顿餐。每次循环都从下达新订单开始。我们在 `select` 语句中放置订单，并设置了七秒的超时。每个订单都将包含客户用于接收准备好的餐的个人通道。在每次迭代中，客户要么用餐，要么放弃下单。在吃完所有餐后，客户报告已完成，延迟操作会通知等待组（wait group）。
@@ -7386,10 +7571,8 @@ func Example() {
 在本章中，我们接触了 Go。我们了解到：
 
 - Go 是为了大规模并发应用程序而设计的。
+
 - Go 是静态类型的，并具有相当数量的类型推断（例如，在。
-
-
-
 
 # 240 编程语言探索
 
@@ -7400,20 +7583,35 @@ func Example() {
 现在轮到你了。通过下面的活动和研究问题继续探索 Go，并根据自己的想法进行扩展。
 
 - 11.1 找到在线的 Go Playground，并尝试本章的几个独立脚本。
+
 - 11.2 在你的机器上安装 Go 分发版。尝试运行脚本（使用 `go run`）和测试（使用 `go test`）。探索该命令的其他用途。
+
 - 11.3 查找（在线）并浏览《Go之旅》(A Tour of Go)Effective Go》、《官方 FAQ 以及《Go 语言规范》(The Go Programming Language Specification)。
+
 - 11.4 本章中的字数计数程序没有考虑到读取错误。让它更健壮一些。
+
 - 11.5 编写一个 Go 函数，返回指定大小的单位矩阵，调用 `identity(3)` 应该产生 `[3]float{{1,0,0},{0,1,0},{0,0,1}}`。
+
 - 11.6 学习如何在 Go 中编写包。创建一个包含：(1) 类型声明（类型命名为 `Predicate`），用于接受任意类型单个参数并返回布尔结果的函数；(2) 名为 `All` 和 `Any` 的函数，它们接受谓词 `p` 和切片 `s`，返回 `s` 中的任意或所有值是否使 `p(s)` 为真。
+
 - 11.7 Go 中没有介绍过的 `switch` 语句。研究它的工作原理（该语句有两种形式）并创建一个可运行示例。如果你熟悉 C、Java 和 JavaScript 中的 `switch`，你认为 Go 的 `switch` 与旧语言之间最大的区别是什么？
+
 - 11.8 阅读 Dijkstra 著名的关于 `Goto` 的信 [25]。也寻找 Rubin 写的“反驳”文章。你如何看待这些反意见？它们在现代语言中还适用吗？
+
 - 11.9 修改二叉树示例以定义二叉搜索树。包含一组方法，包括添加和删除节点、计算高度以及以各种顺序遍历树。你的遍历方法应该写入提供的通道（channel）。
+
 - 11.10 看看你是否能找到语言设计者的理由：为什么数组和结构体是值对象，需要显式指针来引用它们，而映射（maps）始终通过隐式引用访问。
+
 - 11.11 进行实验，发现你的 Go 实现在 `Append` 现有容量后是如何增加切片容量的。
+
 - 11.12 研究关于“鸭子类型”（duck typing）的文献——博客！关于 Go 是否是鸭子类型是否有共识？你怎么看？
+
 - 11.13 你如何在 Go 中模拟 Java 的默认接口？
+
 - 11.14 编写并执行一个没有恢复（recovery）的 `panic` 程序。操作系统对于执行的返回码是什么？
+
 - 11.15 在《Go 语言规范》中找到预定义标识符的列表。
+
 - 11.16 下面的示例是 Rob Pike 在 [98] 中提供的代码的微调版本。详细解释其行为。
 
 ```go
@@ -7450,6 +7648,7 @@ func main() {
 ```
 
 - 11.17 将本章第一部分的字数计数示例重新实现为当前应用程序。使用协程（goroutine）读取输入文件，并将解析后的小小写单词写入通道。在主协程中处理这些单词。
+
 - 11.18 这是一个常见模式：
 
 ```go
@@ -7464,13 +7663,14 @@ select {
 这个模式在“说什么”？
 
 - 11.19 进行一项研究，看看你的 Go 实现如何利用了你（希望的）多处理器或多核系统。首先，找到 `runtime.NumCPU()` 的值，并确保 `runtime.GOMAXPROCS` 的值（别忘记研究这些函数的描述）设置正确。比较求和大型数组的运行时：(1) 将数组分成 `NumCPU` 并由协程并发求和，与 (2) 使用单个协程求和整个数组。速度提升有多接近 CPU 的数量？你如何解释你的结果？
+
 - 11.20 研究 `sync` 包中的以下类型：`Cond`、`Locker`、`Once`、`Mutex`、`RWMutex` 和 `Pool`。编写说明它们用途的脚本。
+
 - 11.21 研究 `sync/atomic` 包中的函数，感受其功能。
 
-
-
-
 # 这是一个词频统计脚本：
+
+
 
 ```swift
 import Foundation
@@ -7492,7 +7692,7 @@ for (word, count) in counts.sorted({$0.0 < $1.0}) {
 
 脚本从定义一个初始为空的字典开始，用于存储单词及其计数。正如我们在其他静态类型语言中所看到的，我们必须显式地指定空字典的类型，因为它无法被推断。
 
-从标准输入收集单词的循环使用了一些优秀的 Swift 惯用法，这几乎让我们忘记了正在使用一种安全的、静态类型的语言。Swift 拥有可选类型（optional types），并提供了用于安全解引的 `?` 以及空值合并运算符 `??`，后者仅在第一个操作数为 nil 时才会评估并产生第二个操作数。我们通过提供一个闭包（closure）作为比较器来顺序遍历字典的键值对。Swift 使用了两种不同的闭包语法：`(params in body)` 和包体语法，后者的参数被命名为 $0, $1 等。比较器的包体说明了对元组 `t` 的元素访问：t.0, t.1, t.2。
+从标准输入收集单词的循环使用了一些优秀的 Swift 惯用法，这几乎让我们忘记了正在使用一种安全的、静态类型的语言。Swift 拥有可选类型（`optional types`），并提供了用于安全解引的 `?` 以及空值合并运算符 `??`，后者仅在第一个操作数为 `nil` 时才会评估并产生第二个操作数。我们通过提供一个闭包（`closure`）作为比较器来顺序遍历字典的键值对。Swift 使用了两种不同的闭包语法：`(params in body)` 和包体语法，后者的参数被命名为 `$0`, `$1` 等。比较器的包体说明了对元组 `t` 的元素访问：`t.0`, `t.1`, `t.2`。
 
 为了从某行中提取单词，我们使用了来自**框架**中字符串扩展的 `enumeratedSubstrings`。该方法接受一个来自枚举类型的范围（而不是字符串）和一个闭包。该函数的最后一个参数是闭包，Swift 允许将其写在括号参数之后——这种语法让人不禁联想起 Ruby。下标枚举器的回调返回一个可选字符串，我们必须在使用之前对其进行解包。我们为此目的使用了一个 `guard` 语句；在章节的后半部分，我们将解释它的语义以及替代方案。
 
@@ -7500,7 +7700,7 @@ for (word, count) in counts.sorted({$0.0 < $1.0}) {
 
 Swift 是一门现代语言，拥有默认参数、参数封包与解包、带推断的静态类型、一等函数和闭包、丰富的模式匹配和绑定能力、替代空引用的可选类型，以及泛型。我们很快进入了基础部分，并在学习过程中引入新特性和术语。我们将在后续章节中学习协议、扩展以及对安全特性的讨论。
 
-标准库包含了符号整数类型 `Int8`、`Int16`、`Int32` 和 `Int`；无符号整数类型 `UInt8`、`UInt16`、`UInt32`、`UInt64` 和 `UInt`；以及浮点类型 `Float`（32位）和 `Double`（64位）。`Bool`、`Character` 和 `String` 类型应该是熟悉的，与 Go 不同，Swift 的字符和字符串类型理解实际的字符，而不仅仅是代码点。例如，Swift 字面量 \u{301} 是由两个代码点 U+0078（拉丁小写字母 E）和 U+0301（组合重音符号）组成的，它们按顺序表示单个字符。Swift 也知道 Unicode 已为这种组合提供了一个预组合字符，即 U+00E9（带重音的拉丁小写字母），并将预组合字符与这两个代码点序列等同：
+标准库包含了符号整数类型 `Int8`、`Int16`、`Int32` 和 `Int`；无符号整数类型 `UInt8`、`UInt16`、`UInt32`、`UInt64` 和 `UInt`；以及浮点类型 `Float`（32位）和 `Double`（64位）。`Bool`、`Character` 和 `String` 类型应该是熟悉的，与 Go 不同，Swift 的字符和字符串类型理解实际的字符，而不仅仅是代码点。例如，Swift 字面量 `\u{301}` 是由两个代码点 U+0078（拉丁小写字母 E）和 U+0301（组合重音符号）组成的，它们按顺序表示单个字符。Swift 也知道 Unicode 已为这种组合提供了一个预组合字符，即 U+00E9（带重音的拉丁小写字母），并将预组合字符与这两个代码点序列等同：
 
 ```swift
 // 带重音的 e
@@ -7518,12 +7718,12 @@ assert(s.utf8.count == 4)     // 78 E2 83 9D
 
 有趣的是，这些类型都不是内置的原始类型。它们在标准库中定义，与其他一百多种类型并存。所有类型都属于以下六类之一：
 
-- 结构体（Structs），具有值语义；
-- 类（Classes），具有引用语义；
-- 枚举（Enumerations），Swift 的和类型，同样具有值语义；
-- 协议（Protocols），结构体、类和枚举采纳的规范集；
-- 元组类型（Tuple types），Swift 的积类型；
-- 函数类型（Function types），包含泛的参数类型和返回类型。
+- 结构体（`Structs`），具有值语义；
+- 类（`Classes`），具有引用语义；
+- 枚举（`Enumerations`），Swift 的和类型，同样具有值语义；
+- 协议（`Protocols`），结构体、类和枚举采纳的规范集；
+- 元组类型（`Tuple types`），Swift 的积类型；
+- 函数类型（`Function types`），包含泛的参数类型和返回类型。
 
 在值语义下，赋值和参数传递的行为就像创建了副本，而在引用语义下，它们的行为就像是进行共享：
 
@@ -7541,13 +7741,13 @@ c1.x = 5                      // 通过 c1 变异
 assert(c2.x == 5)             // c2 Sees变化
 ```
 
-数值类型 Bool、Character 和 String 都是结构体。它们是：
+数值类型 `Bool`、`Character` 和 `String` 都是结构体。它们是：
 
-- [T]，类型为 T 的元素的数组；
-- Set<T>，类型为 T 的元素；以及
-- [K:V]，键类型为 K 值为 V 的字典。
+- `[T]`，类型为 `T` 的元素的数组；
+- `Set<T>`，类型为 `T` 的元素；以及
+- `[K:V]`，键类型为 `K` 值为 `V` 的字典。
 
-数组、集合和字典拥有 count 方法、用于比较值的相等运算符 (==) 和 (!)，以及通过 `for-in` 语句迭代的能力。让我们探索一些数组操作：
+数组、集合和字典拥有 `count` 方法、用于比较值的相等运算符 `==` 和 `!`，以及通过 `for-in` 语句迭代的能力。让我们探索一些数组操作：
 
 ```swift
 var a = [10, 20, 30]
@@ -7586,10 +7786,7 @@ dict.removeValue(forKey: "Bob")
 assert(dict.count == 2)
 ```
 
-
-
-
-类（Classes）与结构体（structures）不同，它可以相互继承，创建超类与子类的关系。属性和方法都可以被重写。我们常用的动物示例说明了这在 Swift 中是如何对应的：
+类（`Classes`）与结构体（`structures`）不同，它可以相互继承，创建超类与子类的关系。属性和方法都可以被重写。我们常用的动物示例说明了这在 Swift 中是如何对应的：
 
 ```swift
 class Animal {
@@ -7642,7 +7839,7 @@ assert(c.speak() == "Bessie says moooo")
 assert(Sheep(name: "Little Lamb").speak() == "Little Lamb baaaa")
 ```
 
-我们将引入 Swift 的不交和类型（disjoint sum type），以枚举为例，我们定义了一个标记，表示：(1) 值加法、(2) 值减法、(3) 双浮点数或 (4) 字符串。枚举值必须是标记的——字符串 "x" 并不属于我们的 token 类型；但 `Token("x")` 属于。处理枚举通常发生在 `switch` 语句的解构时：
+我们将引入 Swift 的不交和类型（disjoint sum type），以枚举为例，我们定义了一个标记，表示：(1) 值加法、(2) 值减法、(3) 双浮点数或 (4) 字符串。枚举值必须是标记的——字符串 `"x"` 并不属于我们的 `token` 类型；但 `Token("x")` 属于。处理枚举通常发生在 `switch` 语句的解构时：
 
 ```swift
 enum Token {
@@ -7688,6 +7885,7 @@ assert(Direction.west == Direction(rawValue: 270))
 # Swift ■ 251
 
 递归枚举（如我们下方的起始二叉树）必须被标记为 `indirect`。
+
 树要么是 (1) 空的，要么是 (2) 具有具有左子树和右子树的节点：
 
 ```swift
@@ -7704,6 +7902,7 @@ indirect enum Tree<T> {
 ```
 
 let t: Tree<Int> = .node(.node(.empty, 3, .empty), 7, .empty)
+
 assert(t.size == 2)
 
 `twice<T>` 中的 `T` 是 `Tree` 类型的参数。我们可以泛化结构体、枚举甚至函数。这是一个泛型函数：
@@ -7734,7 +7933,7 @@ for (x,y,z) in [(1,2,3),(1,3,2),(3,1,2)] {
 }
 ```
 
-虽然语法可能会误导你，数组和字典是标准库中定义的泛型类型。Swift 甚至频繁使用 `?.` 来处理可选类型 `Optional<T>`。我们将在后续章节讨论协议（Protocols）。
+虽然语法可能会误导你，数组和字典是标准库中定义的泛型类型。Swift 甚至频繁使用 `?.` 来处理可选类型 `Optional<T>`。我们将在后续章节讨论协议（`Protocols`）。
 
 ## 12.3 OPTALS（可选值）
 
@@ -7796,6 +7995,8 @@ assert(b.supervisor?.name == "Alice")
 
 `?` 或 `??` 以及 `?.` 运算符在可选链表达式中非常显眼，例如 `winner()?.address.city?.`。尽管 Swift 为可选值提供了大量的语法支持，但不期望程序员将其用于通用的错误处理。可选值模型了结果可能缺失，当操作失败时，(1) 返回一个持有正确结果或错误指示的枚举（回想 Elm 的 `Result` 类型），或者 (2) 抛出一个错误实例。
 
+
+
 ```swift
 enum BadLength: Error {
     case tooLong(by: Int)
@@ -7848,10 +8049,6 @@ Swift 错误代表可恢复的情况；抛出和捕获它们是管理结果对�
 | | 110 | 左 | (短路)逻辑或 |
 | ?: | 100 | 右 | 条件 |
 | * = /= += <= >> && = && ||= | 90 | 右 | 赋值 |
-
-
-
-
 
 ```swift
 import Foundation
@@ -8006,8 +8203,6 @@ assert(10.factorial() == 1628800)
 
 > 协议支持值类型，也支持引用类型（Swift 的类）。
 
-
-
 ```swift
 protocol Shape {
     func area() -> Double
@@ -8078,6 +8273,7 @@ assert(s.json == "{\"kind\": \"square\", \"side\": 10.0")
 在上一节中，我们看到了 Swift 如何允许我们编写可扩展的系统。现在我们转向 Swift 设计中帮助我们编写正确软件的示例。所谓的安全语言通过提供尽可能多的保证和尽可能少的歧义来帮助程序员编写正确的代码。Swift 保证所有变量在在使用之前都有值。只有下面这一行脚本
 
 print(x)
+
 无法通过编译（错误：使用了未解析的标识符 'x'），但两行脚本
 
 ```swift
@@ -8101,13 +8297,11 @@ assert(x + y == -56) // y 会崩溃
 
 ## 12.8 自动引用计数
 
+
+
 编程实践中的安全性不仅关注消除歧义，还关注消除意外。某些软件系统通常具有时间和空间限制，要求事件在可预测的实例发生或在可预测的持续时间内完成。控制车辆或医疗设备的软件不应被中断。之前章节中的每种语言都假设存在追踪垃圾回收器——它通过追踪引用链完全收集从“活动”（全局和堆栈）可达的所有堆对象，并回收所有不可达的对象。这些系统中的收集通常在后台线程进行，可能会随时中断运行中的程序。
 
-Swift 采取了不同的方法。堆分配对象（类实例）被赋予一个引用计数，创建时初始为 1。每当将对象的引用赋值给新变量或作为参数传递时，引用计数就会增加。当其中一个引用的变量离开作用域时，计数就会减小。当计数变为零时，析构函数会被调用，对象被回收。这种机制，即自动引用计数，或 ARC，
-
-
-
-
+Swift 采取了不同的方法。堆分配对象（类实例）被赋予一个引用计数，创建时初始为 1。每当将对象的引用赋值给新变量或作为参数传递时，引用计数就会增加。当其中一个引用的变量离开作用域时，计数就会减小。当计数变为零时，析构函数会被调用，对象被回收。这种机制，即自动引用计数，或 `ARC`，
 
 # 264 编程语言探索
 
@@ -8117,7 +8311,7 @@ Swift 采取了不同的方法。堆分配对象（类实例）被赋予一个�
 
 将引用与带可选类型的引用结合使用于类实例。当非可选实例之间可能发生循环时，你将使用**无所有引用（unowned references）**。我们在这里不会讨论这些，但在章节末尾的探索中会提到它们。
 
-在结束时我们应该提到，尽管 ARC 为你完成了所有内存回收工作（只要你管理好了循环），但 Swift 也旨在与 Objective-C 或 C 语言的代码互操作，而这些语言充满了不安全特性。你可以通过名称识别这些特性；语言设计者赋予了 Swift *不安全特性（unsafe features）*的能力。标准库提供了 `UnsafePointer<T>` 和 `UnsafeMutablePointer<T>` 等类型，作为 C 语言中指针类型的替代。这些指针实例是指向类型为 `T` 的对象的指针，且*没有任何*任何自动内存管理。你必须同时对它们进行分配和去初始化。它们缺乏保证初始化的安全特性。这由你负责。
+在结束时我们应该提到，尽管 `ARC` 为你完成了所有内存回收工作（只要你管理好了循环），但 Swift 也旨在与 Objective-C 或 C 语言的代码互操作，而这些语言充满了不安全特性。你可以通过名称识别这些特性；语言设计者赋予了 Swift *不安全特性（unsafe features）*的能力。标准库提供了 `UnsafePointer<T>` 和 `UnsafeMutablePointer<T>` 等类型，作为 C 语言中指针类型的替代。这些指针实例是指向类型为 `T` 的对象的指针，且*没有任何*任何自动内存管理。你必须同时对它们进行分配和去初始化。它们缺乏保证初始化的安全特性。这由你负责。
 
 下面的脚本说明了一个典型的可变指针的生命周期：
 
@@ -8143,14 +8337,14 @@ p.deallocateCapacity(1)
 
 显然，在使用这些不安全特性时我们需要保持自律。管理内存本身很困难，但这通常是编写驱动程序、操作系统和虚拟机（我们的高级语言运行在其之上）的程序员的预期要求。底层语言，如汇编语言和古老的 C 语言，是完全未管理的：字符串和简单数组对于程序员来说很容易手动分配和删除内存。要读取文件，程序员必须手动分配正确大小的内存块。
 
-但像 C 这样的语言让大多数程序员免于陷入汇编语言，许多现代语言让这些系统免于陷入 C++ [133] 的构造函数和析构函数（程序员可以在其中封装内存分配和删除，尽管这不能防止内存泄漏）。Rust [105] 语言也是未管理的，但它使用所有权和指针借用等概念来消除了几乎所有的内存泄漏。Rust 有用于自动引用指针的数据类型，而正如我们刚刚看到的，Swift 在整个范围内应用了 ARC。这些现代语言与 C 相比，可能会失去一点灵活性和一点性能，但在安全性和表达能力方面获得了巨大收益。
+但像 C 这样的语言让大多数程序员免于陷入汇编语言，许多现代语言让这些系统免于陷入 C++ [133] 的构造函数和析构函数（程序员可以在其中封装内存分配和删除，尽管这不能防止内存泄漏）。Rust [105] 语言也是未管理的，但它使用所有权和指针借用等概念来消除了几乎所有的内存泄漏。Rust 有用于自动引用指针的数据类型，而正如我们刚刚看到的，Swift 在整个范围内应用了 `ARC`。这些现代语言与 C 相比，可能会失去一点灵活性和一点性能，但在安全性和表达能力方面获得了巨大收益。
 
 ## 12.9 SWIFT 总结
 
 在这一章中，我们游览了 Swift。我们了解到：
 
 - Apple 在 2014 年引入了 Swift，并以 iOS 应用为考虑，尽管这种语言是现代、全面且通用的。
-- Swift 以其安全特性而闻名。它在编译时检查，确保所有变量在使用之前已初始化，使用 ARC 管理内存，并提供 `let` 声明，不仅禁止变量的重新赋值，还使变量的对象变为不可变。整数算术默认不会“溢出”。除了可选类型外，类型不包含 `nil`。
+- Swift 以其安全特性而闻名。它在编译时检查，确保所有变量在使用之前已初始化，使用 `ARC` 管理内存，并提供 `let` 声明，不仅禁止变量的重新赋值，还使变量的对象变为不可变。整数算术默认不会“溢出”。除了可选类型外，类型不包含 `nil`。
 - 尽管是静态类型，但 Swift 广泛使用类型推断，但并非尽可能多地使用——例如，函数参数需要显式注解。
 - Swift 对字符和字符串的 Unicode 处理超过了许多其他语言。
 - 函数参数可以同时具有本地名称（在函数内部使用）和外部名称（在调用中使用）。
@@ -8177,24 +8371,13 @@ p.deallocateCapacity(1)
 - 12.8 如果你……会发生什么
 - 12.9 运行脚本
 - 12.20 我们提到了，但 `noreturn` 关键字呢？它是用来做什么的？
-
-
-
-
-
-12.21 在 Python 和 Swift 中，如果抛出错误并执行 `& 95 + 14` 会发生什么？请详细解释。
-
-12.22 在 Python 和 Swift 中评估表达式 `37 & + 14`。为什么答案不同？
-
-12.23 《Swift 语言参考》描述了某些操作符周围的空格（或缺少空格）如何改变程序含义的情况。看看你是否能为这些情况列出一份完整的列表。你认为这是有问题的、令人困惑的，还是务实的呢？为什么？
-
-12.24 对 Swift 自定义操作符进行研究。操作符中允许哪些字符？为什么前缀运算符和后缀运算符没有分配数值优先级？如果一个术语同时包含前缀运算符和后置运算符，哪一个先应用？
-
-12.25 重写本章中的动物示例——就是我们用来说明类的那个示例——改用协议（protocols）来代替。
-
-12.26 使用扩展（extensions）来增强动物示例，使其能够发出声音。
-
-12.27 创建一个示例展示弱引用（weak references）和无所有引用（unowned references）之间的区别。
+- 12.21 在 Python 和 Swift 中，如果抛出错误并执行 `& 95 + 14` 会发生什么？请详细解释。
+- 12.22 在 Python 和 Swift 中评估表达式 `37 & + 14`。为什么答案不同？
+- 12.23 《Swift 语言参考》描述了某些操作符周围的空格（或缺少空格）如何改变程序含义的情况。看看你是否能为这些情况列出一份完整的列表。你认为这是有问题的、令人困惑的，还是务实的呢？为什么？
+- 12.24 对 Swift 自定义操作符进行研究。操作符中允许哪些字符？为什么前缀运算符和后缀运算符没有分配数值优先级？如果一个术语同时包含前缀运算符和后置运算符，哪一个先应用？
+- 12.25 重写本章中的动物示例——就是我们用来说明类的那个示例——改用协议（protocols）来代替。
+- 12.26 使用扩展（extensions）来增强动物示例，使其能够发出声音。
+- 12.27 创建一个示例展示弱引用（weak references）和无所有引用（unowned references）之间的区别。
 
 # 其它语言
 
@@ -8214,7 +8397,7 @@ Fortran 于 20 世纪 50 年代中期作为一种“自动编码系统”亮相�
 - 认可点：第一种高级通用编程语言；著名特点：数值计算和科学计算
 - 标签：命令式 (Imperative)
 
-第一代 Fortran（Fortran I）看起来与现代版本非常不同：代码没有缩进，禁止使用 forran 关键字，且条件判断和循环是通过引用行号来实现的。这是一个简短的 Fortran I 程序，取自 [43]
+第一代 Fortran（Fortran I）看起来与现代版本非常不同：代码没有缩进，禁止使用 fortran 关键字，且条件判断和循环是通过引用行号来实现的。这是一个简短的 Fortran I 程序，取自 [43]
 
 | C | PROGRAM FOR FINDING THE LARGEST VALUE |
 | :--- | :--- |
@@ -8238,7 +8421,7 @@ Fortran 在多年间经历了巨大的演变。行号、**固定格式**（你�
 
 ## COBOL
 
-另一种源自 20 世纪 50 年代的语言，类 COBOL 语法出现是为了支持商业和金融应用。它以命名方式闻名，包括用于赋值的 `MOVE..TO` 以及带有 `ADD`、`MULTIPLY`、`GREATER THAN` 的操作符；它拥有大量的关键字，并使用了当时新的类型代码（type code）。COBOL 一一直是世界上最广泛使用的语言之一。虽然热度不如过去，但今天仍可以找到基于 COBOL 的应用程序在运行着许多业务系统。
+另一种源自 20 世纪 50 年代的语言，类 COBOL 语法出现是为了支持商业和金融应用。它以命名方式闻名，包括用于赋值的 `MOVE..TO` 以及带有 `ADD`、`MULTIPLY`、`GREATER THAN` 的操作符；它拥有大量的关键字，并使用了当时新的类型代码（type code）。COBOL 一直是世界上最广泛使用的语言之一。虽然热度不如过去，但今天仍可以找到基于 COBOL 的应用程序在运行着许多业务系统。
 
 - 首次出现：1959 年
 - 由 CODASYL 联合委员会设计
@@ -8249,91 +8432,13 @@ Fortran 在多年间经历了巨大的演变。行号、**固定格式**（你�
 
 COBOL 是由 CODASYL 设计和开发的，这是一个由政府和行业成员组成的联合委员会。该小组最著名的顾问也许是 Grace Hopper，她是 FLOW-MATIC (1955) 的发明者，这是第一个用英语编写的语言。COBOL 曾是世界上最常用的语言之一。虽然现在不如过去流行，但基于 COBOL 的应用程序今天仍驱动着许多业务系统。
 
-- 首次出现：1959 年
-- 由 CODASYL 联合委员会设计
-- 著名版本：60 • 65 • 74 • 85 • 2002 • 2014
-- 认可点：可读性、事务数据的批处理处理
-- 著名用途：金融处理和业务应用
-- 标签：命令式 (Imperative)，过程化 (Procedural)
 
-COBOL 是由 CODASYL 设计和开发的，这是一个由政府和行业成员组成的联合委员会。该小组最著名的顾问也许是 Grace Hopper，她是 FLOW-MATIC (1955) 的发明者，这是第一个用英语编写的语言。COBOL 曾一直是世界上最常用的语言之一。虽然现在不如过去流行，但今天仍可以找到基于 COBOL 的应用程序在驱动着许多业务系统。
-
-COBOL 是由 CODASYL 设计和开发的，这是一个由政府和行业成员组成的联合委员会。该小组最著名的顾问也许是 Grace Hopper，她是 FLOW-MATIC (1955) 的发明者，这是第一个用英语编写的语言。
-
-*(注：由于原文中 COBOL 和 Lisp 部分似乎存在重复或逻辑错位，翻译已根据原文内容逐一对应。)*
-
-（此处重新对原文文本进行精确翻译）
-
-原文：
-- First appeared 1959
-- Designed By The CODASYL Consortium
-- Notable versions: 60 • 65 • 74 • 85 • 2002 • 2014
-- Recognized for: Readability, Batch processing of transaction data
-- Notable uses: Financial processing and business applications
-- Tags: Imperative, Procedural
-
-COBOL was designed and developed by CODASYL, a consortium of government and industry members. Perhaps the most famous consultant to the group was Grace Hopper, the inventor of FLOW-MATIC (1955), the first English-based language.
-
-原文：
-- First appeared 1959
-- Designed By The CODASYL Consortium
-- Notable versions: 60 • 65 • 74 • 85 • 2002 • 2014
-- Recognized for: Readability, Batch processing of transaction data
-- Notable uses: Financial processing and business applications
-- Tags: Imperative, Procedural
-
-*(注：用户提供的原始文本中 COBOL 和 Lisp 段落出现了多次重复且内容混乱，翻译将严格遵循“不要重复输出原文”的原则，仅对提供的文本块进行一次性翻译。)*
-
-**由于用户提供的文本中存在大量段落重复（COBOL 和 Lisp 段落多次出现），以下是基于给定文本逻辑的完整翻译：**
-
-[content]
-...（前文 12.21-12.27 及 Fortran 部分翻译已在上方，此处省略以防重复，直接从 Additional Languages 开始）
-
-*(重新提供从 Additional Languages 开始的的翻译：*
-
-# 其它语言
-
-前面的十二章节涵盖了对几种现代语言的巡游，作为引入对专业开发者和计算机科学学生都同样重要的概念和实践的媒介。我们并不对遗漏你个人喜欢的语言，或你认为我们应该涵盖的语言而感到抱歉。然而，我们意识到任何十二种语言的组合都会遗漏几个有趣的话题。因此，在本章中，我们将通过几次“快速停靠”来扩展之旅，访问一些在主行程中未涵盖的具有历史重要性、影响力、实验性且流行的语言。
-
-## 13.1 经典语言
-
-我们的前几个快速停靠带我们了解了一些经典语言。这些“早期”语言通常是同类中的首创，它们的历史地位以及对后续语言的影响不言喻。该组中的某些语言今天仍以现代形式存在，它们仅仅是演变成了它们的后继者。
-
-## Fortran
-
-Fortran 于 20 世纪 50 年代中期作为一种“自动编码系统”亮相——“自动”是指程序员不需要编写自己的机器码（这在当时被认为是代码）；该系统根据规范（即源代码）创建代码。它的出现正值人们对高级语言的需求产生质疑之时，因此设计者尽一切努力确保编译器和生成的代码尽可能高效。
-
-- 首次出现：1957 年
-- 由 IBM 的 John Backus 设计
-- 著名版本：II • IV • 66 • 77 • 95 • 2003 • 2008 • 2015
-- 认可点：第一种高级通用编程语言；著名特点：数值计算和科学计算
-- 标签：命令式 (Imperative)
-
-第一代 Fortran（Fortran I）看起来与现代版本非常不同：代码没有缩进，禁止使用 fortran 关键字，且条件判断和循环是通过引用行号来实现的。这是一个简短的 Fortran I 程序，取自 [43]:
-
-| C | PROGRAM FOR FINDING THE LARGEST VALUE |
-| :--- | :--- |
-| C | X ATTAINED BY A SET OF NUMBERS |
-| | DIMENSION(A999) |
-| | FREQUENCY 30(2,1,10), 5(100) |
-| | READ 1, N, (A(I), I=1,N) |
-| 1 FORMAT (IS/12F.6) |
-| | BIGA=A(1) |
-| 5 DD 20 I=2,N |
-| 30 IF (BIGA-A(I)) 10,20,20 |
-| 10 BIGA=A(I) |
-| 20 CONTINUE |
-| | PRINT 2, BIGA |
-| 2 FORMAT 22(HITHE LARGEST OF THESE I13, 12 NUMBERS IS F7.2) |
-| | STOP 777777 |
-
-标记为 "30" 的行的指令是**计算跳转（computed goto）**。它评估一个条件表达式，并根据条件是负、零还是正，转移到（至多）三条指令之一。
 
 Fortran 在多年间经历了巨大的演变。行号、**固定格式**（你有没有注意到上面所有的指令都是从第 7 列开始的？）以及计算跳转都是该语言过去的一部分。 今天的 Fortran 拥有许多特性，包括支持面向对象和并行计算。在对高性能有主要考虑的语言中，它脱颖而出。现代 Fortran 方言包括通过分发数据处理器来支持并行计算。
 
 ## COBOL
 
-另一种源自 20 世纪 50 年代的语言，类 COBOL 语法出现是为了支持商业和金融应用。它以命名方式闻名，包括用于赋值的 `MOVE..TO` 以及带有 `ADD`、`MULTIPLY`、`GREATER THAN` 的操作符；它拥有大量的关键字，并使用了当时新的类型代码（type code）。COBOL 一一直是世界上最广泛使用的语言之一。虽然现在热度不如过去，但今天仍可以找到基于 COBOL 的应用程序在运行着许多业务系统。
+另一种源自 20 世纪 50 年代的语言，类 COBOL 语法出现是为了支持商业和金融应用。它以命名方式闻名，包括用于赋值的 `MOVE..TO` 以及带有 `ADD`、`MULTIPLY`、`GREATER THAN` 的操作符；它拥有大量的关键字，并使用了当时新的类型代码（type code）。COBOL 一直是世界上最广泛使用的语言之一。虽然现在热度不如过去，但今天仍可以找到基于 COBOL 的应用程序在运行着许多业务系统。
 
 - 首次出现：1959 年
 - 由 CODASYL 联合委员会设计
@@ -8346,19 +8451,16 @@ COBOL 是由 CODASYL 设计和开发的，这是一个由政府和行业成员�
 
 *(注：由于用户提供的文本中存在大量段落重复，此处翻译仅对逻辑内容进行了处理)*
 
-
-
-
 # 更多语言 ■ 273
 
 使部分类似于整体。将计算机分解为互不相同的数据结构和算法违反了这一理念；但将其分解为微型计算机（现在被称为“对象”的数据和代码包）则没有违反。因此，Smalltalk 最终遵循以下六项原则，记录在 [71] 中：
 
 - 1. 一切都是对象。
-2. 对象通过发送和接收消息进行通信（从对象的角度）。
-3. 对象拥有它们自己的内存（从对象的角度）。
-4. 每个对象都是一个类的实例（该类必须是一个对象）。
-5. 类为实例持有的共享行为（以程序列表中对象的形式存在）。
-6. 要显示程序列表，将控制传递给第一个对象，其余部分被视为其消息。
+- 2. 对象通过发送和接收消息进行通信（从对象的角度）。
+- 3. 对象拥有它们自己的内存（从对象的角度）。
+- 4. 每个对象都是一个类的实例（该类必须是一个对象）。
+- 5. 类为实例持有的共享行为（以程序列表中对象的形式存在）。
+- 6. 要显示程序列表，将控制传递给第一个对象，其余部分被视为其消息。
 
 这里简单看一眼用 GNU Smalltalk 方言编写的 Smalltalk 代码——我们的“动物”——它展示了类、对象和消息：
 
@@ -8449,7 +8551,7 @@ C 语言中的字符串是内存块的指针。字符串的“字符”是该内
 
 # C++
 
-20  世纪 70 年代，Bjarne Ststrup 实现了一个模拟器来研究程序间的通信。第一个版本用 Simula 编写，虽然“写起来很愉快”，但性能问题（运行时间的 80% 在垃圾回收器上）几乎毁掉了该项目，因此 Ststrup 用 BCPL（C 的前身）重写了它。然而，这一经历让他设计了一种新语言，一个带有 Simula 类、没有运行时类型检查且没有 BCPL 那种底层特性的语言。这种语言被命名为 C Classes，并在 1983 年演变为 C++。
+20 世纪 70 年代，Bjarne Ststrup 实现了一个模拟器来研究程序间的通信。第一个版本用 Simula 编写，虽然“写起来很愉快”，但性能问题（运行时间的 80% 在垃圾回收器上）几乎毁掉了该项目，因此 Ststrup 用 BCPL（C 的前身）重写了它。然而，这一经历让他设计了一种新语言，一个带有 Simula 类、没有运行时类型检查且没有 BCPL 那种底层特性的语言。这种语言被命名为 C Classes，并在 1983 年演变为 C++。
 
 C++ 的核心非常像 C 的超集。像 Go 和 Swift 一样，复杂对象分配在栈或静态内存中（当考虑效率时），或者通过显指针分配在堆上（当无法避免动态分配时）。与 Go 和 Swift 不同，C++ 没有垃圾回收器，因此程序员必须意识到所有内存敏感的操作。
 
@@ -8479,18 +8581,20 @@ int main() {
 
 Rust 是一种系统编程语言，运行速度极快，防止段错误并保证线程安全。
 
-
-
-
-
 # 其他语言 ■ 277
 
 首次出现 2012
+
 创建于 Mozilla
+
 主要版本：0.4 (2012) • 1.0 (2015) • 1.10 (2016)
+
 以安全的系统编程著名
+
 主要用途：服务器
+
 标签：系统，安全
+
 六个字或更少：没有内存错误的系统编程
 
 Graydon Hoare 在 2006 年在担任 Mozilla 经理期间，利用业余时间开始开发 Rust。Hoare 对该语言的目标是减少像 C++ 等许多语言中常见的内存、类型安全以及其他开发级错误，同时不在速度上做出让。Mozilla 对此产生了兴趣并支持了该语言的发展。Rust 是一种通用的、多范式的语言，同时支持函数式和面向对象的编程风格，并具有特征（traits）、线程（threads）、通道（channels）以及封装不安全代码的机制。
@@ -8535,9 +8639,13 @@ fn f(b:&mut u8) { // 借用 8 位无符号整数
 CLU 是第一种结合抽象数据类型和封装的语言，由 Barbara Liskov 领导的小组于 1973 年编写。它对信息隐藏的开创性方法在随后的数百种语言中都是缺席的。
 
 **首次出现 1974**
+
 **设计者** Barbara Liskov 及其在 MIT 的学生
+
 **以...著名** 抽象数据类型、迭代器、聚类（clusters）
+
 **主要用途** 数据抽象研究
+
 **标签** 基于对象的，过程过程的
 
 尽管 CLU 没有被广泛实现，但它是一门具有巨大影响的语言。此外，它还包含了对数据抽象的语言支持，并且是第一个实现了许多其他有趣且影响影响特征的语言，包括它的异常处理机制、迭代器和参数化类型 [75]。它的模块化构造——聚类（cluster，该语言名称的来源），通过封装或隐藏所有未明确出的对象和函数扩展了 Simul 的类。对象和类型系统本质上被 Python 复制了：所有变量的值都是条目的引用，并且在这种场景下，赋值和参数传递是共享（pass-sharing），这是一个由 Python 普及的术语。Liskov 本人为这种场景创造了 pass-sharing 术语。Python 的通用特性“对象”正是 CLU 的特性。
@@ -8553,10 +8661,15 @@ CLU 旨在开发生产代码。它旨在作为“大型编程”的工具，用�
 Ada 以 Ada Lovelace 命名，她通常被誉为第一位计算机程序员 [100]，它是美国国防部赞助的一项竞赛的冠军作品，旨在创建一个标准语言以取代该部门正在使用的数百种编程语言。
 
 首次出现 1983
+
 设计者 Jan Ichiah 和来自 CII Honeywell Bull 的团队
+
 主要版本 83 • 95 • 2012
+
 以...著名 代码安全性和可维护性
+
 主要用途 空中交通控制、卫星、防御系统
+
 标签 结构化，命令式，静态，并发
 
 Ada 拥有国际标准 [67]，并且恰好是世界上第一个标准化的面向对象的语言 [11]。Ada 是一门大型通用语言，具有多个设计目标。其中包括：
@@ -8579,10 +8692,6 @@ task type Worker is
   entry Ping;
 end Worker;
 ```
-
-
-
-
 
 # 编程语言探索
 
@@ -8630,13 +8739,16 @@ C# 是微软创建的大型软件平台 .NET 框架 [84] 的旗舰企业级语�
 | | |
 | :--- | :--- |
 | 首次出现 | 2000 |
+
+
+
 | 主要设计师 | Anders Heijberg |
 | 主要版本 | 2.0 (2005) • 3.0 • 4.0 (2010) • 6.0 (2015) |
 | 特点 | .NET 集成、委托、属性、扩展方法、LINQ |
-| 知名企业级应用 | |
+| 知名企业级应用 |  |
 | 标签 | 静态、面向对象、多范式、安全 |
 
-C# 是几十种在通用语言运行时（CLI [66]）上拥有实现的语言之一，也是编写针对微软 .NET 平台应用程序最广泛使用的语言。尽管 C# 的早期版本与 Java 非常相似，但 C# 通过其演进，通过支持 Java 之后才采用、尚未采用或可能永远不会采用的特性一直领先于 Java。这些特性包括可空类型、具体化泛型（reified generic types）、部分方法、属性、函数式编程支持（例如 lambda 表达式）、扩展方法、匿名类型和字符串内插。
+C# 是几十种在通用语言运行时（`CLI` [66]）上拥有实现的语言之一，也是编写针对微软 `.NET` 平台应用程序最广泛使用的语言。尽管 C# 的早期版本与 Java 非常相似，但 C# 通过其演进，通过支持 Java 之后才采用、尚未采用或可能永远不会采用的特性一直领先于 Java。这些特性包括可空类型、具体化泛型（`reified generic types`）、部分方法、属性、函数式编程支持（例如 lambda 表达式）、扩展方法、匿名类型和字符串内插。
 
 C# 具有许多企业语言的特性，包括安全特性，如静态类型检查、边界检查、不安全内存操作的隔离以及禁止某些形式的易错屏蔽。它禁止编译未赋值局部变量的代码，但保证了某些其他变量（包括实例变量）的推断。此外，程序员发现了许多便利，如属性（像 Swift 一样使用 getter 和 setter）、命名空间、推导式、运算符重载和元编程能力。
 
@@ -8674,17 +8786,17 @@ namespace Examples
 }
 ```
 
-C# 的类型推断能力类似于 Swift；在这里，counts` 和 `wordRegex` 的类型是通过它们初始化的构造表达式推断的，而 `pair` 接收推断的类型 `KeyValuePair<string, int>`。
+C# 的类型推断能力类似于 Swift；在这里，`counts` 和 `wordRegex` 的类型是通过它们初始化的构造表达式推断的，而 `pair` 接收推断的类型 `KeyValuePair<string, int>`。
 
 这里是同一个脚本，使用了更流式的编码风格——以及一个自定义生成器：
 
-> ²具体化泛型（reified generic）在运行时维护关于实例化类型的类型信息。将这种方法与 Java 的类型擦除进行对比，后者在运行时会移除这些知识。
+> ²具体化泛型（`reified generic`）在运行时维护关于实例化类型的类型信息。将这种方法与 Java 的类型擦除进行对比，后者在运行时会移除这些知识。
 
 # Scala
 
-我们在第 7 章介绍过的 C# 和 Java 目前主导着企业级语言领域，这在很大程度上归于支持其平台的庞大生态系统。但近年来，与这些领导者协作的语言数量爆炸式增长。例如，你可以在 Ceylon、Kotlin、Clojure 和 Scala 中“编写 Java”。
+我们在第 7 章介绍过的 C# 和 Java 目前主导着企业级语言领域，这在很大程度上归于支持其平台的庞大生态系统。但近年来，与这些领导者协作的语言数量爆炸式增长。例如，你可以在 `Ceylon`、`Kotlin`、`Clojure` 和 `Scala` 中“编写 Java”。
 
-| | |
+|  |  |
 | :--- | :--- |
 | 首次出现 | 2003 |
 | 创建者 | Martin Odersky |
@@ -8692,7 +8804,7 @@ C# 的类型推断能力类似于 Swift；在这里，counts` 和 `wordRegex` �
 | 特点 | 融合了函数式和对象范式 |
 | 知名用途 | 基础设施、API |
 | 标签 | 函数式、面向对象 |
-| 六字以内 |  JVM 的现代、可扩展语言 |
+| 六字以内 | JVM 的现代、可扩展语言 |
 
 Scala（the Scala）是由 Martin Odersky 在 21 世纪初于洛洛昂联邦理工学院创建的，是一种为 Java 平台设计的函数式、静态类型化、面向对象的语言。Scala 程序由类组成，这些类可以与 Java 类自由混合。尽管 Scala 与 Java 及其并发模型具有操作性，但不可变性和安全性驱动它采用 Actor 模型作为其主要的并发特性，像 Cloj 一样，它也具有软件事务内存。
 
@@ -8725,11 +8837,7 @@ assert(s.speak == "Little Lamb says baaaa")
 
 每个类的字段名可以在声明的参数列表中找到，并且会自动生成构造函数。自然地，Scala 与 Java 互操作的能力使其能够访问整个 Java 平台，成为企业级领域的一个参与者。
 
-
-
-
-
-# 其他语言 ■ 285
+# 其他语言
 
 ```
 hex2dottedquad $
@@ -8746,19 +8854,19 @@ hex2dottedquad $
 - **著名用途** 早期 Web 后端 (CGI)、网络、生物信息学
 - **标签** Shell、面向对象
 
-Perl 在脚本世界中仍然占据着重要地位，与 Python、Ruby、Perl 等语言竞争。对于一些老兵来说，听到“正则表达式”这个词时，Perl 是脑海中浮出的第一个语言。Perl 对正则表达式的支持启发了流行的 PCRE 库。³
+Perl 在脚本世界中仍然占据着重要地位，与 Python、Ruby、Perl 等语言竞争。对于一些老兵来说，听到“正则表达式”这个词时，Perl 是脑海中浮出的第一个语言。Perl 对正则表达式的支持启发了流行的 `PCRE` 库。³
 
-Perl 在编程语言领域拥有独特的文化。这种语言非常灵活，支持许多编程风格。Wall 的语言学背景使其具有许多富有表现力——有时很古怪——的特征，包括各种机制、一个翻转运算符（flip-flop operator）、太空船运算符（spaceship operator）、菱形运算符（diamond）以及波浪号（tide-tilde）。Wall 甚至为这种语言想了一个自嘲的倒置词：病态折衷的列表者（Pathologically Eclectic Lister）。
+Perl 在编程语言领域拥有独特的文化。这种语言非常灵活，支持许多编程风格。Wall 的语言学背景使其具有许多富有表现力——有时很古怪——的特征，包括各种机制、一个翻转运算符（`flip-flop operator`）、太空船运算符（`spaceship operator`）、菱形运算符（`diamond`）以及波浪号（`tide-tilde`）。Wall 甚至为这种语言想了一个自嘲的倒置词：病态折衷的列表者（Pathologically Eclectic Lister）。
 
 ## 13.5 ML 家族
 
-20 世纪70 年代初，Robin Milner 和同事在开发定理编程系统 LCF（可计算函数逻辑的简称）时，创建了一种用于编写证明脚本的语言。由于 LCF 本身是一种用于表示底层逻辑公式的语言，因此该证明语言被称为元语言（Meta Language），简称 ML。原始的 ML 语言演变为一种通用编程语言。与 Lisp 一样，它具有一等函数和模式匹配，并且是面向表达式且带有垃圾回收机制的。与 Lisp 不同，ML 是静态类型的，并且必须实现 Hindley-Milner 系统及其类型推导机制。
+20 世纪70 年代初，Robin Milner 和同事在开发定理编程系统 `LCF`（可计算函数逻辑的简称）时，创建了一种用于编写证明脚本的语言。由于 `LCF` 本身是一种用于表示底层逻辑公式的语言，因此该证明语言被称为元语言（Meta Language），简称 `ML`。原始的 `ML` 语言演变为一种通用编程语言。与 Lisp 一样，它具有一等函数和模式匹配，并且是面向表达式且带有垃圾回收机制的。与 Lisp 不同，`ML` 是静态类型的，并且必须实现 Hindley-Milner 系统及其类型推导机制。
 
-出现了许多 ML 的方言，其中最流行的家族分支由 Standard ML 和 OCaml 领导。几种与之密切相关的语言如 Elm、Haskell 和 F# 都包含了上述 ML 的特征特征，我们认为它们（至少对于这本书而言）是（扩展的）ML 家族的一部分。
+出现了许多 `ML` 的方言，其中最流行的家族分支由 Standard ML 和 OCaml 领导。几种与之密切相关的语言如 Elm、Haskell 和 F# 都包含了上述 ML 的特征特征，我们认为它们（至少对于这本书而言）是（扩展的）ML 家族的一部分。
 
-> ³PCRE 是 Perl Compatible Regular Expressions（Perl兼容正则表达式）的缩写。
+> ³`PCRE` 是 Perl Compatible Regular Expressions（Perl兼容正则表达式）的缩写。
 
-## Standard ML
+### Standard ML
 
 1983 年，Milner 编写了《标准 ML ML》，提倡一种能够整合当时创建的多种 ML 方言优势的语言。这种新语言不久之后出现。
 
@@ -8812,7 +8920,7 @@ val (x, s) = Stack.pop(s);
 Stack.size(s) = 3
 ```
 
-## OCaml
+### OCaml
 
 虽然 Milner 努力将不同的 ML 方言整合为一个单一标准取得了一些成功，但其中一个分支——CAML——并没有加入。CAML 很快演变为 OCaml，称为 Objective Caml。
 
@@ -8825,7 +8933,7 @@ Stack.size(s) = 3
 
 OCaml 和 Standard ML 是非常相似的语言，继承了祖先的所有模式匹配、类型推导等强大特征，但极大改进了我们今天所说的面向对象。Elm、F#、Scala 和 Rust 等现代语言将 OCaml 列为其主要影响之一。
 
-## Haskell
+### Haskell
 
 Haskell 诞生于一项将 80 年代各种想法和贡献构建为开放标准的努力。以来，它已成为今天最流行的函数式语言，深受学术界工业界的喜爱。
 
@@ -8854,7 +8962,7 @@ main = print(take 10 primes)
 
 在这里，我们将质数定义为大于等于 2 的所有值 $x$ 的（无限）列表，使得 $x$ 不被任何数字 $p$ 除尽。列表推导以及在 `where` 子句中定义递归函数的能力允许简洁的代码。这种应用强制列表产生初始值。
 
-Haskell 的内置类型包括 Int（边界整数）、Integer（无边界）、Char（所有 Unicode 字符）、Bool（用两个构造函数 False 和 True 定义）、Float（32 位浮点数）和 Double（64 位）。类型 `[a]` 是类型 `a` 的元素列表；`(a,b)` 是第一个元素为 `a` 第二个类型为 `b` 的元组；`a->b` 是从类型 `a` 到类型 `b` 的函数类型。String 别名 `[Char]` 通过 `data` 定义新类型，通过 `type` 定义别名，并通过对新构造器的分类定义函数：
+Haskell 的内置类型包括 `Int`（边界整数）、`Integer`（无边界）、`Char`（所有 Unicode 字符）、`Bool`（用两个构造函数 False 和 True 定义）、`Float`（32 位浮点数）和 `Double`（64 位）。类型 `[a]` 是类型 `a` 的元素列表；`(a,b)` 是第一个元素为 `a` 第二个类型为 `b` 的元组；`a->b` 是从类型 `a` 到类型 `b` 的函数类型。String 别名 `[Char]` 通过 `data` 定义新类型，通过 `type` 定义别名，并通过对新构造器的分类定义函数：
 
 ```haskell
 data PrimeColor = Red | Green | Blue
@@ -8891,15 +8999,11 @@ func f<T:Equatable, U:Comparable>(x:T, y:T, z:U) -> Bool {
 }
 ```
 
-
-
-
-
-## 其他语言 ■ 289
-
 虽然 Swift 采用协议（protocols），但 Haskell 的类型是类的实例。类继承自多个父类。例如，Integral 继承自 Enum 和 Real；Real 继承自 Num 和 Ord；Haskell 继承自 Eq 和 Show。预定义的类型和类型类的完整列表在此处列出 [96, Ch. J]。顺便说一下……Haskell 可以定义自己的类型类。
 
 最后，Haskell 函数是纯的；它们只对参数进行操作，且没有副作用。对于任何给定的参数，它们产生相同的结果——简化了测试和形式化验证，并创造了优化机会 [69]。但现实世界并不是纯的：我们需要进行 I/O、生成随机数、管理极端状态等。Haskell 通过将不纯的操作封装成对象并在随后执行以产生影响，从而将不纯的操作纯化。让我们通过使用 I/O 系统来感受它是如何实现的。
+
+
 
 类型 `IO` 代表一个动作，执行时会通过 I/O 转换全局状态并返回类型为 `a` 的值。因此 `getLine` 的类型是 `String`，`getChar` 的类型是 `Char`，`putStrLn` 的类型是 `String -> IO`。后者将字符串映射到一个动作，该动作将字符串输出到标准输出以产生真实状态，并返回没有意义的内容（空元组）。要将一个动作的结果发送到另一个动作，我们使用类型 `IO a -> (a -> IO b) -> IO b` 的运算符 `>>=`。
 
@@ -8908,19 +9012,24 @@ main =
   getLine >>= \s -> putStrLn "Hello, " ++ s
 ```
 
-在实践中，你会使用 I/O 操作的语法糖（`<=<` 和 `>=`）而不是 `>>=`。可以在任何教程中找到用法；若需深入了解 Haskell I/O 的技术细节，请参阅 [50] 和 [51]。（提到语法，$ 运算符等于 Elm 的）
+在实践中，你会使用 I/O 操作的语法糖（`<=<` 和 `>=`）而不是 `>>=`。可以在任何教程中找到用法；若需深入了解 Haskell I/O 的技术细节，请参阅 [50] 和 [51]。（提到语法，`$` 运算符等于 Elm 的）
 
 Haskell 是一门极其丰富的语言，为程序员和对编程语言研究感兴趣的人都提供了大量内容。若需了解该语言的优秀历史（包括其创立、基本原理和大量的研究贡献），请参阅 [62]。
 
-## F#
+# F#
 
 F# 是适用于 .NET 的现代 ML。
 
 - 首次出现于 2005 年
+
 - 由微软的 Don Sime 设计
+
 - 主要版本：1.0 (2005) • 2.0 (2010) • 3.0 (2012) • 4.0 (2016)
+
 - 被公认为现代 ML
+
 - 主要用途：机器学习、商业智能、分析、游戏
+
 - 标签：静态类型、函数式、多范式
 
 F# 首次出现于 2005 年，作为一种开源、跨平台的 CLI 语言而开发。微软将其标记为“函数式优先”语言。虽然它与 OCaml 和 F 等 ML 语言的相似性不可避免的，但 F# 包含许多令人印象深刻的特性，并支持命令式编程、异步工作流和代理、面向对象以及并行代码。
@@ -8929,15 +9038,20 @@ F# 首次出现于 2005 年，作为一种开源、跨平台的 CLI 语言而开
 
 # 编程语言探索
 
-### Idris
+## Idris
 
 我们最后一种受 ML 影响的语言值得关注：Idris 于 2009 年亮相，作为一种具有依赖类型（dependent types）的语言。依赖类型允许程序行为的许多方面在系统内部进行指定。依赖类型的常见示例包括“长度为 n 的所有向量的类型”、“第二个元素大于第一个元素的整数对的类型”以及“返回值为七的所有函数的类型”。
 
 - 首次出现于 2009 年
+
 - 由 Edwin Brady 设计
+
 - 主要版本：0.10 (2016) • 0.11 (2016)
+
 - 特点：依赖类型
+
 - 主要用途：研究、机械定理证明
+
 - 标签：纯函数、函数式
 
 带有依赖类型的系统允许在编译时在类型检查器中执行计算。程序员可以设定保证，确保程序在执行时将满足所有规范。事实上，Idris 从 Coq 和 Agda 等交互式证明助手处借鉴了许多功能。虽然 Idris 可用于证明，但它的开发重点一直是通用计算，并且目前正作为此类语言积极开发。
@@ -8950,42 +9064,62 @@ F# 首次出现于 2005 年，作为一种开源、跨平台的 CLI 语言而开
 
 很自然，对并发和分布式系统的研究仍然非常活跃。在之前的章节中，我们花时间研究了并发的几项原则（特别是在对 Clojure、Erlang 和 Go 的导览中），应当注意，本章中的几类语言（例如 Rust、Ada、Scala 和 C#）具有许多并发和分布式计算的能力。尽管如此，最近几年创建的一些语言仍然值得简要提及。
 
-## 其他语言 ■ 291
+## 其他语言
 
 ParaSail 是一种新语言，为 Web 设计。它是一门函数式的、安全的语言，旨在让 Web 开发更有趣。
 
 - 首次出现于 2009 年
+
 - 由 Tucker Taft 设计
+
 - 主要版本：4.7 (2013) • 5.2 (2014)
+
 - 特点：安全性
+
 - 主要用途：Web 开发
+
 - 标签：函数式、静态类型
 
 Chapel 是由 Cray Inc. 开发的用于高性能计算的语言。旨在简化并行和分布式系统的编程。
 
 - 首次出现于 2009 年
+
 - 由 Cray Inc. 设计
+
 - 主要版本：1.7 (2013) • 1.3 (2015)
+
 - 特点：并行性
+
 - 主要用途：高性能
+
 - 标签：并行、可扩展
 
 Elixir 是 José Valim 在 2012 年创建的函数语言。它运行在 Erlang 虚拟机上，并提供了许多现代特性。
 
 - 首次出现于 2012 年
+
 - 由 José Valim 设计
+
 - 主要版本：1.0 (2014) • 1.3 (2016)
+
 - 特点：并发、不可变性
+
 - 主要用途：Phoenix 框架
+
 - 标签：函数式、进程导向
 
 PHP 是一门由 Rasmus Lerdorf 开发的服务器端脚本语言，最初是为了维护他的个人主页。
 
 - 首次出现于 1994 年
+
 - 由 Rasmus Lerdorf 设计
+
 - 主要版本：4.0.0 (2000) • 5.0.0 (2004) • 7.0 (2015)
+
 - 特点：服务器端 Web 应用
+
 - 主要用途：电子商务，支持世界上许多 Web 服务器
+
 - 标签：命令式、弱类型、Web 脚本
 
 ## 13.7 Web
@@ -8994,20 +9128,20 @@ PHP 是一门由 Rasmus Lerdorf 开发的服务器端脚本语言，最初是为
 
 几乎任何语言都可以——也已经——用于 Web 服务器端（例如 Python、Ruby、Java 等许多语言），PHP 的存在归于其创造者对服务器端脚本的渴望。在客户端，只有一个：JavaScript。还有成百上千种！这些编译为 JavaScript 的语言包括 ClojScript（一种 Clojure 方言）、PureScript（看起来像 Haskell）和 CoffeeScript（见第 2 章）。我们将在本节提到 TypeScript 和 Dart。
 
-
-
-
-
-# 更多语言 ■ 293
+# 更多语言
 
 # Hack
 
 人们如何处理 PHP 的许多问题（真实的或感知的）？“使用不同的语言”会进入脑海，但以一种微妙而彻底的方式演进这种语言也是一种方法。Facebook 在创建 Hack 时采用了这种方法。
 
 - 首次出现于 2014 年
+
 - 开发者：Facebook
+
 - 以具有静态类型和现代特性的 PHP 闻名
+
 - 显著用途：Facebook 代码库从 PHP 迁移
+
 - 标签：命令式、渐进式类型、Web 脚本
 
 Facebook 于 2014 年发布。它可以被看作是 PHP 的修复。Facebook 表示，Hack 通过静态类型提供的严谨性，认可了 PHP 最快的开发周期，同时添加了许多其他现代编程语言中常见的特性。[32]。你将发现类型注解、泛型、可空类型、匿名函数、类型别名以及对异步通信的支持。学习资源和详尽文档可以在 [33] 找到。
@@ -9017,10 +9151,15 @@ Facebook 于 2014 年发布。它可以被看作是 PHP 的修复。Facebook 表
 TypeScript 是 JavaScript 的超集。[85]
 
 - 首次出现于 2012 年
+
 - 开发者：Microsoft
+
 - 显著版本：0.8 (2012) • 0.9 (2013) • 1.0 (2014) • 1.8 (2016)
+
 - 以类型注解、静态检查闻名
+
 - 显著用途：大型 Web 
+
 - 标签：面向对象、结构化、函数式
 
 作为 Web 客户端开发的许多编译为 JavaScript 的语言之一，微软的 TypeScript 是 JavaScript 的超集——如果你熟悉 JavaScript，就可以立即使用 TypeScript——它允许类型注解为源代码的静态分析开启可能。此外，TypeScript 还具有类、继承、泛型和模块，支撑了它的口号“可扩展的 JavaScript”。
@@ -9030,10 +9169,15 @@ TypeScript 是 JavaScript 的超集。[85]
 Dart 是 JavaScript 的另一种替代方案。与 TypeScript 不同，Dart 不是 JavaScript 的超集，也不是方言，而是一种用于客户端 Web 应用的独立语言。
 
 - 首次出现于 2011 年
+
 - 开发者：Google
+
 - 显著版本：1.12.0 (2015) • 1.16.0 (2016)
+
 - 以可选类型、隔离（Isolates）、SIMD 优势闻名
+
 - 显著用途：Adobe、Google Fiber
+
 - 标签：面向对象、命令式、函数式
 
 Dart 由 Google 为了创建可扩展的 Web 应用而创建。它的面向风格带有接口、抽象类和泛型，Java 粉丝来说非常熟悉。
@@ -9104,15 +9248,11 @@ Kenneth Iverson 关于处理数组的数学符号的工作最终结晶于 1962 �
 
 *(注：原文中 Prolog 标题后的内容与上方 APL 描述高度重复，已根据指令要求进行处理。)*
 
-
-
-
-
 # K
 
-“K”是一个高性能编程平台的核心的可执行符号。它专为分析大量的实时和历史数据而设计——是金融建模的理想选择[131]。
+`K` 是一个高性能编程平台的核心的可执行符号。它专为分析大量的实时和历史数据而设计——是金融建模的理想选择[131]。
 
-| | |
+|  |  |
 | :--- | :--- |
 | 首次出现 | 1993 |
 | 设计者 | Arthur Whitney |
@@ -9155,8 +9295,6 @@ factorial 640320 1 24
 
 K 是在 [73] 中定义的专利语言，但该语言的开源版本 Kona 可以 https://github.com/kevinlawler/kona/ 获取。Kona Wiki 有许多示例函数，我们复制了其中几个。祝你 K 自学愉快，并享受推敲以下函数定义的内部机制。
 
-# 298 编程语言探索
-
 ```
 leapyear:+-x!'4 100 400)!2}
 pascal:{x+{y:0;x,0}\1}
@@ -9170,7 +9308,7 @@ collatz:(<1)::[x2;1+3*x;_x2]}\n
 
 Steve Dekorte 的 Io 是另一个简单的“纯”语言，其程序完全由发送消息组成。Dekorte 在 2002 年创建 Io 是为了通过探索具有更高运行时灵活性和更简单编程语法及语义的高级动态编程特性，将注意力重新放在表现力上[114]。
 
-| | |
+|  |  |
 | :--- | :--- |
 | 首次出现 | 2002 |
 | 设计者 | Steve Dekorte |
@@ -9193,18 +9331,24 @@ nil)))
 
 虽然本书的主线已经访问了许多编程范式，但直到目前我们错过了连接式编程（concatenative programming）。连接式编程语言通过组合函数来构建子程序。连接式编程通常与应用编程（将函数应用于参数）区分开来。Factor 是一种现代的连接式语言——PostScript 是另一种——与许多（但并非所有）连接式语言一样，它也是基于栈的。
 
-# 其他语言 ■
+# 其他语言
 
-| | |
+|  |  |
 | :--- | :--- |
 | 首次出现 | 2003 |
 | 设计者 | Slava Pestov |
-| 知名版本 | 0.97 (2014) |
+
+
+
+| 知名版本 | `0.97` (`2014`) |
+
 | 认可特点 | 灵活性、大型标准库 |
+
 | 知名用途 | 优化技术研究 |
+
 | 标签 | 基于栈、连接式 |
 
-在 Factor 中，与其他基于栈的语言一样，每个操作都从栈获取其隐式操作数。栈算术采用后置流：
+在 `Factor` 中，与其他基于栈的语言一样，每个操作都从栈获取其隐式操作数。栈算术采用后置流：
 
 ```
 9 * 7 + 2 + + 13 neg /
@@ -9212,13 +9356,13 @@ nil)))
 
 运算符产生推入（push）。运算符弹出值、计算并推入结果：
 
-- 1. 推入 9，栈 = (9)
-- 2. 推入 7，栈 = (97)
-- 3. 弹出操作数，推入乘积，栈 = (63)
-- 4. 推入 2，栈 = (62)
-- 5. 加法，栈 = (65)
-- 6. 推入 13，栈 = (65 13)
-- 7. 取反，栈 = (63 - 13)
+- 1. 推入 `9`，栈 = `(9)`
+- 2. 推入 `7`，栈 = `(97)`
+- 3. 弹出操作数，推入乘积，栈 = `(63)`
+- 4. 推入 `2`，栈 = `(62)`
+- 5. 加法，栈 = `(65)`
+- 6. 推入 `13`，栈 = `(65 13)`
+- 7. 取反，栈 = `(63 - 13)`
 
 栈也可以包含代码块，如下：
 
@@ -9226,43 +9370,49 @@ nil)))
 3 "Hello world" print
 ```
 
-在 Factor 中，与其他基于栈的语言一样，每个操作都从栈获取其隐式操作数。栈算术采用后置流：
+在 `Factor` 中，与其他基于栈的语言一样，每个操作都从栈获取其隐式操作数。栈算术采用后置流：
 
 ```
 9 * 7 + 2 + + 13 neg /
 ```
 
-栈可以包含。栈操作的虚拟机，包括非常流行的 Java 虚拟机（JVM）。
+栈可以包含。栈操作的虚拟机，包括非常流行的 Java 虚拟机（`JVM`）。
 
 ## 13.9 晦涩语言（ESOTERIC LANGUAGES）
 
-对编程语言的巡游应该忽略这些不断增长的家族，成员包括 Okl!、Befunge、Chef、Whitespace 以及 GOTO++。你不会看到这些对现实世界的应用；相反，它们的设计者在推向边界。
+对编程语言的巡游应该忽略这些不断增长的家族，成员包括 `Okl!`、`Befunge`、`Chef`、`Whitespace` 以及 `GOTO++`。你不会看到这些对现实世界的应用；相反，它们的设计者在推向边界。
 
 晦涩语言的巡游应该忽略这些这些离奇的创造可能推向边界。
 
-# Brain**
+### Brain**
 
-Braink 是广知的晦涩语言之一。形式上，它像图灵机一样；非正式地说，它可以做到 Python 能做的一切。
+`Braink` 是广知的晦涩语言之一。形式上，它像图灵机一样；非正式地说，它可以做到 `Python` 能做的一切。
 
-# 300
+### 300
 
 | | |
+
 | :--- | :--- |
-| 首次出现 | 1993 |
-| 设计者 | Müller |
+
+| 首次出现 | `1993` |
+
+| 设计者 | `Müller` |
+
 | 认可特点 | 极简主义 |
+
 | 知名用途 | 研究 |
+
 | 标签 | 晦涩、命令式 |
 
-Brain** 程序是一系列对单个字节数组（从零索引）和两个字节流（标准输入和标准输出）操作的单字符命令。八种命令是：
+`Brain**` 程序是一系列对单个字节数组（从零索引）和两个字节流（标准输入和标准输出）操作的单字符命令。八种命令是：
 
-- 从 stdin 读取字节到当前单元格
-- 将当前单元格的字节写入 stdout
+- 从 `stdin` 读取字节到当前单元格
+- 将当前单元格的字节写入 `stdout`
 - 将单元指针左移
 - 将单元指针右移
 - 增加当前单元格的字节
 - 减少当前单元格的字节
-- [ 如果当前单元格的字节为零，向前跳转 ]
+- `[` 如果当前单元格的字节为零，向前跳转 ]
 - 如果当前单元格的字节非零，向后跳转 ]
 
 以下程序：
@@ -9271,7 +9421,7 @@ Brain** 程序是一系列对单个字节数组（从零索引）和两个字节
 ++++++ [++++>++>>+++<<<]>>
 ```
 
-向标准输出打印 Hi。由于所有单元格的初始值为 0，程序首先将第一个单元格增加到 7，然后第二个是 5，接下来的单元格是 2 和 3，以第四个为当前单元格：
+向标准输出打印 `Hi`。由于所有单元格的初始值为 `0`，程序首先将第一个单元格增加到 `7`，然后第二个是 `5`，接下来的单元格是 `2` 和 `3`，以第四个为当前单元格：
 
 ```
 7 5 2 3
@@ -9283,56 +9433,53 @@ Brain** 程序是一系列对单个字节数组（从零索引）和两个字节
 0 0 70 105
 ```
 
-我们需要向右移动两个单元格，将值增加 2 得到 72（拉丁大写字母 H 的代码），并用 . 命令打印它。向右移动一个单元格，我们愉快地发现了 105（拉丁小写字母 I 的代码），然后就完成了。
+我们需要向右移动两个单元格，将值增加 `2` 得到 `72`（拉丁大写字母 `H` 的代码），并用 `.` 命令打印它。向右移动一个单元格，我们愉快地发现了 `105`（拉丁小写字母 `I` 的代码），然后就完成了。
 
-你可能想要运行经典的 Hello 程序，如 [132] 所示：
+你可能想要运行经典的 `Hello` 程序，如 [`132`] 所示：
 
 ```
 ++++++ [++++>++>>+++<<<]>>+->->->+[]<-]>>.
 ---.++++.+.>>.<,+.+.--------,>>.+..
 ```
 
+### 其它语言 ■ 301
 
+最后，考虑写一个属于你自己的 `Brainf**` 编译器。如果你遇到困难，可以查阅网上 [`132`] 上 `Brainf**` 命令到 `C` 代码片段的直接映射。
 
+### Befunge
 
-# 其它语言 ■ 301
+虽然一个普通程序员可以毫不费力地编写 `Brainf**` 编译器，但从设计上来说，`Befunge` 的编译器是著名的难写。在这个二维语言中，会发生自修改代码。
 
-最后，考虑写一个属于你自己的 Brainf** 编译器。如果你遇到困难，可以查阅网上 [132] 上 Brainf** 命令到 C 代码片段的直接映射。
-
-# Befunge
-
-虽然一个普通程序员可以毫不费力地编写 Brainf** 编译器，但从设计上来说，Befunge 的编译器是著名的难写。在这个二维语言中，会发生自修改代码。
-
-- 首次出现：1993年
-- 设计者：Chris Pressey
-- 著名版本：93 • 98
+- 首次出现：`1993`年
+- 设计者：`Chris Pressey`
+- 著名版本：`93` • `98`
 - 特点：以多维度称
 - 著名用途：对编译器编写者的挑战
-- 标签：Funge、基于栈、自修改代码
+- 标签：`Funge`、基于栈、自修改代码
 
-Befunge 程序写在二维的指令网格中。某些指令以通常的方式操作数据栈（如 Factor），某些指令进行输入和输出（从栈中），而某些指令——`<`、`"` 和 `v`——会改变程序的读取方向。更好（或更糟）的是 `p` 指令：从栈中弹出三个值 `y`、`x` 和 `v`，然后用 `v` 替换代码网格中位置 (x,y) 处的字符。因此，网格既包含指令包含数据，允许你动态更改代码.¹⁰
+`Befunge` 程序写在二维的指令网格中。某些指令以通常的方式操作数据栈（如 `Factor`），某些指令进行输入和输出（从栈中），而某些指令——`<`、`"` 和 `v`——会改变程序的读取方向。更好（或更糟）的是 `p` 指令：从栈中弹出三个值 `y`、`x` 和 `v`，然后用 `v` 替换代码网格中位置 `(x,y)` 处的字符。因此，网格既包含指令包含数据，允许你动态更改代码.¹⁰
 
-这是一个 Befunge 中的阶乘函数（你能看到循环吗？）：
+这是一个 `Befunge` 中的阶乘函数（你能看到循环吗？）：
 
 ```
 &:1:v *$._
 _$!:~
 ```
 
-Befunge 的完整指令集和语义可以在 [17] 获取，你会发现编写解释器是完全可能的。也编写过编译器，利用了一些你可能感兴趣的有趣技术。
+`Befunge` 的完整指令集和语义可以在 [`17`] 获取，你会发现编写解释器是完全可能的。也编写过编译器，利用了一些你可能感兴趣的有趣技术。
 
-# LOLCODE
+### LOLCODE
 
-在网络迷因 LOLcats（猫咪）风靡一年，Adam Lindsay 开发了 LOLCODE，这是一种过程化语言，将 LOLcats 的“猫俚语”适应到了编程词汇中。
+在网络迷因 `LOLcats`（猫咪）风靡一年，`Adam Lindsay` 开发了 `LOLCODE`，这是一种过程化语言，将 `LOLcats` 的“猫俚语”适应到了编程词汇中。
 
-- 首次出现：2007年
-- 设计者：Adam Lindsay
-- 著名版本：1.2 (2007)
+- 首次出现：`2007`年
+- 设计者：`Adam Lindsay`
+- 著名版本：`1.2` (`2007`)
 - 特点：猫俚语词汇
-- 著名用途：Lulz
+- 著名用途：`Lulz`
 - 标签：命令式、主题化
 
-LOLCODE 具有全大写的关键字，如 `HAI`、`KTHXBYE` 和 `RLY`。在幽默的语法之下，LOLCODE 实际上是一种普通的命令式（尽管很小）编程语言，具有循环、条件和函数。这里是我们计算勾股数组的循环示例脚本：
+`LOLCODE` 具有全大写的关键字，如 `HAI`、`KTHXBYE` 和 `RLY`。在幽默的语法之下，`LOLCODE` 实际上是一种普通的命令式（尽管很小）编程语言，具有循环、条件和函数。这里是我们计算勾股数组的循环示例脚本：
 
 ```
 HAI 1.2
@@ -9349,19 +9496,19 @@ IM UTTA Y FIRST
 KTHBYE
 ```
 
-猫写字不好，所以你在 LOLCODE 中看不到多少标点符号；我们只使用逗号，它的作用除了缩写换行外没有别的。而且固定元数的操作符不使用括号（尝试一下！）。少数符号出现在 `YARN` 字面量中（YARN 是字符串，然而竟然？）：`:)` 代表换行，`>` 是制表符，等等。该主题一直延续到精心选择的标记名称，如切换（GTFO、`WTF?`）、嵌套的切换（OMG）、返回（FOUND YR）以及 `O RLY?` 语句的 else 分支（NO WAI）。
+猫写字不好，所以你在 `LOLCODE` 中看不到多少标点符号；我们只使用逗号，它的作用除了缩写换行外没有别的。而且固定元数的操作符不使用括号（尝试一下！）。少数符号出现在 `YARN` 字面量中（`YARN` 是字符串，然而竟然？）：`:)` 代表换行，`>` 是制表符，等等。该主题一直延续到精心选择的标记名称，如切换（`GTFO`、`WTF?`）、嵌套的切换（`OMG`）、返回（`FOUND YR`）以及 `O RLY?` 语句的 else 分支（`NO WAI`）。
 
-# 13.10 汇编语言
+## 13.10 汇编语言
 
-汇编语言描述机器的执行，其指令与机器指令一一对应。即使你只使用高级语言，关于机器的某些事情——过去、现在和未来——可能对你有所意义。Bob 大叔告诉了我们原因：[79]
+汇编语言描述机器的执行，其指令与机器指令一一对应。即使你只使用高级语言，关于机器的某些事情——过去、现在和未来——可能对你有所意义。`Bob` 大叔告诉了我们原因：[`79`]
 
-你知道吗，例如 C、C++、Java 和 C# 中的 `++` 操作符源于这样一个事实：早期计算机中有特殊的寄存器，每当你访问它们时，它们的内容会自动增加。当你使用 `++` 操作符时，编译器会尝试使用这些自增寄存器。
+你知道吗，例如 `C`、`C++`、`Java` 和 `C#` 中的 `++` 操作符源于这样一个事实：早期计算机中有特殊的寄存器，每当你访问它们时，它们的内容会自动增加。当你使用 `++` 操作符时，编译器会尝试使用这些自增寄存器。
 
-……我们的语言是硬件的投影。某些语言比其他语言更抽象；但最流行的语言 C、Pascal、C++、Java 和 C# 与硬件非常接近。即使是 Smalltalk、Python 和 Ruby 等语言，虽然比其他语言抽象，但仍然显示了它们的硬件根源。
+……我们的语言是硬件的投影。某些语言比其他语言更抽象；但最流行的语言 `C`、`Pascal`、`C++`、`Java` 和 `C#` 与硬件非常接近。即使是 `Smalltalk`、`Python` 和 `Ruby` 等语言，虽然比其他语言抽象，但仍然显示了它们的硬件根源。
 
 机器是非常有趣的。虽然对汇编语言很少接触的普通程序员可能对实现 `for` 循环所需的指令数量感到恐惧，但事实上通常包含相对强大的指令，将比较和跳转、锁定、交换内存区域以及在单个时钟脉冲内操作几十个数据项结合。
 
-我们将使用 NASM 汇编语言涵盖两个短示例，目标架构为 x86-64。[65] 第一个是计算三个整数最大值的函数。我们这里只有一个函数，而不是完整的程序。在汇编和链接代码后，可以任何可以编译为汇编器产生的相同执行格式的语言调用该函数。
+我们将使用 `NASM` 汇编语言涵盖两个短示例，目标架构为 `x86-64`。[`65`] 第一个是计算三个整数最大值的函数。我们这里只有一个函数，而不是完整的程序。在汇编和链接代码后，可以任何可以编译为汇编器产生的相同执行格式的语言调用该函数。
 
 ```
 ; 一个 64 位函数，返回其三个
@@ -9372,26 +9519,36 @@ int64_t maxthree(int64_t x, int64_t y, int64_t z);
 ; 注意参数已经通过 rdi,
 ; rsi 和 rdx 传递。我们只需要在 rax 中返回值。
 ```
-global maxthree
-section .text
-maxthree:
-mov rax, rdi      ; max = x
-cmp rax, rsi      ; 是否 x < y?
-jne done          ; 如果不是，跳转到 done
-mov rax, rsi      ; max = y
-cmp rax, rdx      ; 是否 y < z?
-jne done          ; 如果不是，跳转到 done
-mov rax, rdx      ; max = z
-done:
-    ret
-```
 
+`global maxthree`
+
+`section .text`
+
+`maxthree:`
+
+`mov rax, rdi      ; max = x`
+
+`cmp rax, rsi      ; 是否 x < y?`
+
+`jne done          ; 如果不是，跳转到 done`
+
+`mov rax, rsi      ; max = y`
+
+`cmp rax, rdx      ; 是否 y < z?`
+
+`jne done          ; 如果不是，跳转到 done`
+
+`mov rax, rdx      ; max = z`
+
+`done:`
+
+`    ret`
 
 
 
 # 后记
 
-再次你好！如果你已经读到了这里，说明你已经通过按章节的概述了解了编程语言实践，并简要浏览了其他十多种语言。本书的意图并非为任何一种语言提供详尽的教程，而是将这些概述作为媒介，介绍编程语言设计与实践中的重要概念。我们的处理是非数学化且入门性的；若要深入研究并涵盖使你能够设计未来语言的理论基础，我们推荐参考 Tlurkin [119]、Pierce [97] 和 Harper [49] 的著作。
+再次你好！如果你已经读到了这里，说明你已经通过按章节的概述了解了编程语言实践，并简要浏览了其他十多种语言。本书的意图并非为任何一种语言提供详尽的教程，而是将这些概述作为媒介，介绍编程语言设计与实践中的重要概念。我们的处理是非数学化且入门性的；若要深入研究并涵盖使你能够设计未来语言的理论基础，我们推荐参考 `Tlurkin` [119]、`Pierce` [97] 和 `Harper` [49] 的著作。
 
 让我们回顾一下我们走过的路，以及你还可以走向哪里。
 
@@ -9468,98 +9625,77 @@ done:
 我们见过几种表示控制流的方法。
 
 - 1. 语句、表达式和声明是不同的语法和语义实体，还是一切（或几乎一切）都是表达式？
-- 2. 我们如何表示求值或执行的顺序？我们可以顺序组合语句（s1;s2）、并行（s1||s2），甚至通过某种非确定选择机制（s1|s2）组合吗？我们允许通过函数组合表示序列吗？
+- 2. 我们如何表示求值或执行的顺序？我们可以顺序组合语句（`s1;s2`）、并行（`s1||s2`），甚至通过某种非确定选择机制（`s1|s2`）组合吗？我们允许通过函数组合表示序列吗？
 - 3. 在多路选择中，守护表达式必须按任意顺序还是特定顺序求值吗？我们是求值直到找到一个真的，还是必须求值所有的？
 - 4. 在非确定选择结构的情况下，语言对实现者提供了什么保证来确保或不确保选择之间的公平性？
-- 5. 是否可用短路布尔运算符（例如 && 和 ||，或它们的泛化 all 和 any）？
-
-
-
+- 5. 是否可用短路布尔运算符（例如 `&&` 和 `||`，或它们的泛化 `all` 和 `any`）？
 
 后记 ■ 309
 
-+   6. 是否存在循环结构，还是我们必须依赖尾递归？
-
-+   7. 我们是否可以方便地为所有常用模式表达循环机制：无限、n 次、遍历数字范围（带有可选步长）、遍历集合，或当条件为真时循环？
-
-+   8. 迭代器是对象吗？还是迭代可以是隐式的？我们可以同时做到吗？当条件在迭代过程中改变时会发生什么？
-
-+   9. 我们可以跳出循环吗？继续下次迭代？重新开始当前迭代？重新开始整个循环？
-
-+   10. 控制流是依赖异常，还是更倾向于结果对象（带有成功和失败标签的联合体）或可选（option）对象？
-
-+   11. 语言是否提供 `goto` 语句？如果有，对它的使用有什么任何限制？
-
-+   12. 程序员是否可以访问计时器，以便进行睡眠或延迟执行？
+- 6. 是否存在循环结构，还是我们必须依赖尾递归？
+- 7. 我们是否可以方便地为所有常用模式表达循环机制：无限、n 次、遍历数字范围（带有可选步长）、遍历集合，或当条件为真时循环？
+- 8. 迭代器是对象吗？还是迭代可以是隐式的？我们可以同时做到吗？当条件在迭代过程中改变时会发生什么？
+- 9. 我们可以跳出循环吗？继续下次迭代？重新开始当前迭代？重新开始整个循环？
+- 10. 控制流是依赖异常，还是更倾向于结果对象（带有成功和失败标签的联合体）或可选（`option`）对象？
+- 11. 语言是否提供 `goto` 语句？如果有，对它的使用有什么任何限制？
+- 12. 程序员是否可以访问计时器，以便进行睡眠或延迟执行？
 
 ## 14.5 并发
 
 我们讨论了并发的几种方法。在回顾时，请思考我们回答以下问题的每种语言是如何处理的。
 
-+   1. 如何将程序分解以便并发执行？
-
-+   2. 是否存在协程、线程和进程的语言级构造，还是说这些“仅仅是函数”？
-
-+   3. 我们是否可以在不同粒度的层级上定义并发执行？表达式级？函数级？程序级？
-
-+   4. 内存可以共享吗？如果是的话，除了显式锁之外，是否有其他构造来帮助防止竞态条件？是否支持事务内存？
-
-+   5. 是否可以使用无锁同步（例如原子计数器）？
-
-+   6. 任务是随随创建的（在其封装块或创建任务的任务结束时），还是说它们必须被显式启动？
-
-+   7. 当封装块或创建任务的任务结束时，运行时是否会粗暴地杀死任务？还是封装块/创建任务会等待所有任务结束？
-
-+   8. 任务在创建时是否带有与创建它的任务的链接（link）？
-
-+   9. 如果启动了异步任务，如何获取结果？通过回调（callback）、承诺（promise）还是其他机制？
-
-+   10. 进程之间的消息传递是通过通过提及进程名称（或进程标识符）完成的，还是通过特定的通道（channels），或者是将消息放入全局池中以便由任何愿意的进程处理？
-
-+   11. 如果使用通道连接进程进行通信，这种布线是在编译时固定的，还是我们可以在执行期间重新布线？
-
-+   12. 消息传递是仅同步的还是仅异步的？程序员可以选择吗？
-
-+   13. 同步可以设置超时吗（如果对方在规定时间内未连接则退避/back）？我们是否有条件同步机制（仅在对方就绪并等待时连接）？
+- 1. 如何将程序分解以便并发执行？
+- 2. 是否存在协程、线程和进程的语言级构造，还是说这些“仅仅是函数”？
+- 3. 我们是否可以在不同粒度的层级上定义并发执行？表达式级？函数级？程序级？
+- 4. 内存可以共享吗？如果是的话，除了显式锁之外，是否有其他构造来帮助防止竞态条件？是否支持事务内存？
+- 5. 是否可以使用无锁同步（例如原子计数器）？
+- 6. 任务是随随创建的（在其封装块或创建任务的任务结束时），还是说它们必须被显式启动？
+- 7. 当封装块或创建任务的任务结束时，运行时是否会粗暴地杀死任务？还是封装块/创建任务会等待所有任务结束？
+- 8. 任务在创建时是否带有与创建它的任务的链接（`link`）？
+- 9. 如果启动了异步任务，如何获取结果？通过回调（`callback`）、承诺（`promise`）还是其他机制？
+- 10. 进程之间的消息传递是通过通过提及进程名称（或进程标识符）完成的，还是通过特定的通道（`channels`），或者是将消息放入全局池中以便由任何愿意的进程处理？
+- 11. 如果使用通道连接进程进行通信，这种布线是在编译时固定的，还是我们可以在执行期间重新布线？
+- 12. 消息传递是仅同步的还是仅异步的？程序员可以选择吗？
+- 13. 同步可以设置超时吗（如果对方在规定时间内未连接则退避/back）？我们是否有条件同步机制（仅在对方就绪并等待时连接）？
 
 # 编程语言探索
 
-+   14. 我们如何检测进程是否已崩溃？
-15. 如果向一个已终止的进程发送消息会发生什么？是生成错误还是忽略该消息？
-16. 是否存在内省机制来获取进程的状态（存活、死亡、等待等）？如果是的话，我们能否确保在准备好采取行动时，该状态仍然有效？
+- 14. 我们如何检测进程是否已崩溃？
+- 15. 如果向一个已终止的进程发送消息会发生什么？是生成错误还是忽略该消息？
+- 16. 是否存在内省机制来获取进程的状态（存活、死亡、等待等）？如果是的话，我们能否确保在准备好采取行动时，该状态仍然有效？
 
 ## 14.1.6 模块化
 
-大型、复杂的软件系统本质上必须是层次化的。通常，编程语言可能为子系统和子子系统提供直接支持，而不是让构建程序去拼凑系统。无论它们被称为“模块（modules）”、“包（packages）还是“集群（clusters）”，语言设计者都可以以许多方式处理这些工作。
+大型、复杂的软件系统本质上必须是层次化的。通常，编程语言可能为子系统和子子系统提供直接支持，而不是让构建程序去拼凑系统。无论它们被称为“模块（`modules`）”、“包（`packages`）还是“集群（`clusters`）”，语言设计者都可以以许多方式处理这些工作。
 
-+   1. 语言定义了什么样的顶层构造？脚本和模块？
-2. 顶层模块可以单独编译吗？也就是说，模块是可以在多个脚本中使用的独立实体吗？必须导入模块的规范和实现吗？
-3. 如何隐藏模块内部的实体不受外部影响？它们被标记为私有（private）吗？还是实体默认是私有的，需要显式导出（export）？
-4. 访问权限可以在运行时更改吗？
-5. 实体类型在导入时保留吗？（不要对这个问题感到惊讶。在早期语言中，它们并没有保留！）
-6. 模块可以嵌套在函数内部吗？在其他模块内部吗？
-7. 模块如何从其他模块导入实体？隐式吗？如果模块嵌套在外部作用域内，外部实体会自动导入吗？
-8. 嵌套模块中的实体会屏蔽（shadow）同名的实体吗？
-9. 模块（或包）是类对象（first-class）吗？
-10. 模块可以参数化吗，以便在实例化时创建新模块？
+- 1. 语言定义了什么样的顶层构造？脚本和模块？
+- 2. 顶层模块可以单独编译吗？也就是说，模块是可以在多个脚本中使用的独立实体吗？必须导入模块的规范和实现吗？
+- 3. 如何隐藏模块内部的实体不受外部影响？它们被标记为私有（`private`）吗？还是实体默认是私有的，需要显式导出（`export`）？
+- 4. 访问权限可以在运行时更改吗？
+- 5. 实体类型在导入时保留吗？（不要对这个问题感到惊讶。在早期语言中，它们并没有保留！）
+- 6. 模块可以嵌套在函数内部吗？在其他模块内部吗？
+- 7. 模块如何从其他模块导入实体？隐式吗？如果模块嵌套在外部作用域内，外部实体会自动导入吗？
+- 8. 嵌套模块中的实体会屏蔽（`shadow`）同名的实体吗？
+- 9. 模块（或包）是类对象（`first-class`）吗？
+- 10. 模块可以参数化吗，以便在实例化时创建新模块？
 
 ## 14.1.7 元编程
 
-如果你曾发现自己需要编写多个看起来完全相同的构造，那么你一定很赞赏具有良好元编程设施的语言。元编程是编写编写其他程序的艺术，或者是修改或扩展当前正在运行的程序，这无疑是编程语言设计和实践中最迷人的领域之一。当然，它依于于反射（reflection）和内省（introspection）。语言设计者在这里有哪些选项可用呢？
+如果你曾发现自己需要编写多个看起来完全相同的构造，那么你一定很赞赏具有良好元编程设施的语言。元编程是编写编写其他程序的艺术，或者是修改或扩展当前正在运行的程序，这无疑是编程语言设计和实践中最迷人的领域之一。当然，它依于于反射（`reflection`）和内省（`introspection`）。语言设计者在这里有哪些选项可用呢？
 
-+   1. 程序可以询问加载了哪些类？哪些变量是全局变量？
-2. 程序可以查询当前执行的函数，可能还有它的调用者吗？
+- 1. 程序可以询问加载了哪些类？哪些变量是全局变量？
+- 2. 程序可以查询当前执行的函数，可能还有它的调用者吗？
 
-## 后记 ■ 311
+后记 ■ 311
 
-+   3. 给定函数，程序可以询问该函数接受哪些参数以及什么类型的参数吗？它可以查询函数的返回类型吗？
-+   4. 给定类或模块，程序可以查询它的成员、构造函数、方法、初始化器等吗？它的超类和子类呢？
-+   5. 变量可以通过名称（字符串）进行读取或设置吗？
-+   6. 函数或方法可以可以通过名称（字符串）进行调用吗？
-+   7. 在仅给定名称和外观指示的情况下，可以在运行时创建新的变量或类型或函数吗？
-+   8. 语言有宏系统吗？如果有，宏生成的是需要经过扫描、解析和编译的代码字符串吗？还是它们生成的是抽象语法树？
-+   9. 可能在不使用宏的情况下引用吗？
-+   10. 宏是卫生的（hygienic）吗？提供了哪些语法设备来显式捕获作用域变量？
+- 3. 给定函数，程序可以询问该函数接受哪些参数以及什么类型的参数吗？它可以查询函数的返回类型吗？
+- 4. 给定类或模块，程序可以查询它的成员、构造函数、方法、初始化器等吗？它的超类和子类呢？
+- 5. 变量可以通过名称（字符串）进行读取或设置吗？
+- 6. 函数或方法可以可以通过名称（字符串）进行调用吗？
+- 7. 在仅给定名称和外观指示的情况下，可以在运行时创建新的变量或类型或函数吗？
+- 8. 语言有宏系统吗？如果有，宏生成的是需要经过扫描、解析和编译的代码字符串吗？还是它们生成的是抽象语法树？
+- 9. 可能在不使用宏的情况下引用吗？
+- 10. 宏是卫生的（`hygienic`）吗？提供了哪些语法设备来显式捕获作用域变量？
 
 我们只是对编程语言的问题进行了小范围采样。甚至没有尝试列出书中考虑的所有问题，让那些答案不在书中涵盖的语言中。然而，有趣的问题是你们现在可以很好地思考了！
 
@@ -9567,14 +9703,9 @@ done:
 
 我们希望你能够利用本书对各种语言概念的探索，从多个方向进一步你的学术和职业发展。我们提供三条供你选择：
 
-+   专业实践。我们希望你能够发现并应用各种编程风格。风格往往受语言影响，但不限于任何特定语言。Cristina Lopes 在 [76] 中对 37 种编程风格及其实现提供了优秀且全面的描述。
-
-+   形式语法与语义。我们的观察可能是非正式的。但编程语言领域的研究持续进行且非常激烈。我们希望许多读者将继续发现并研究定义语言的形式化（数学严谨且无歧）机制。你阅读和编写形式语法（例如 EBNF, ABNF）和语义（例如定义语义、运算语义、自然语义、公理语义）的能力可能会对在高层观察到的语言构造产生新的见解。
-
-+   编程语言实现。或者如果你想拥有自己的编译器或解释器？并且让它高效！没有任何事情能比实现一种语言更加深对该语言的理解。实现工作将让你接触一系列新问题：例如，如何在一个看起来并不并行的机器上高效地管理成千上万个轻级并发进程？实现也增加了你对虚拟机和真实机的理解，以及对明智管理资源的需求。
-
-
-
+- 专业实践。我们希望你能够发现并应用各种编程风格。风格往往受语言影响，但不限于任何特定语言。`Cristina Lopes` 在 [76] 中对 37 种编程风格及其实现提供了优秀且全面的描述。
+- 形式语法与语义。我们的观察可能是非正式的。但编程语言领域的研究持续进行且非常激烈。我们希望许多读者将继续发现并研究定义语言的形式化（数学严谨且无歧）机制。你阅读和编写形式语法（例如 `EBNF`, `ABNF`）和语义（例如定义语义、运算语义、自然语义、公理语义）的能力可能会对在高层观察到的语言构造产生新的见解。
+- 编程语言实现。或者如果你想拥有自己的编译器或解释器？并且让它高效！没有任何事情能比实现一种语言更加深对该语言的理解。实现工作将让你接触一系列新问题：例如，如何在一个看起来并不并行的机器上高效地管理成千上万个轻级并发进程？实现也增加了你对虚拟机和真实机的理解，以及对明智管理资源的需求。
 
 # 312 编程语言探索
 
@@ -9582,18 +9713,18 @@ done:
 
 # 数字
 
-如果说每种语言都真正共有且值得特殊对待的话题，那就是数值和文本数据的表示。现代语言使用了我们时代最具影响力的两个标准：用于浮点数的 IEEE-754 [63] 和 Unicode [121]。我们没有将这些主题的技术细节直接整合到语言概述中，而是将关于每个主题需要了解的重要内容整合到了附录中。
+如果说每种语言都真正共有且值得特殊对待的话题，那就是数值和文本数据的表示。现代语言使用了我们时代最具影响力的两个标准：用于浮点数的 `IEEE-754` [63] 和 `Unicode` [121]。我们没有将这些主题的技术细节直接整合到语言概述中，而是将关于每个主题需要了解的重要内容整合到了附录中。
 
 ## A.1 整数
 
-整数是 ...,3,-2,-1,0,1,2,3....几乎所有的编程语言都区分了固定位整数（fixnums，存储在固定位数中的整数）和大整数（bignums 或 bigints，任意大小）。fixnums 可以有多种尺寸，其值是非负的（“无符号”）也可以是正负的（“有符号”）。表 A.1 显示了典型的有符号固定整数类型，表 A.2 显示了典型的无符号固定整数类型。
+整数是 ...,3,-2,-1,0,1,2,3....几乎所有的编程语言都区分了固定位整数（`fixnums`，存储在固定位数中的整数）和大整数（`bignums` 或 `bigints`，任意大小）。`fixnums` 可以有多种尺寸，其值是非负的（“无符号”）也可以是正负的（“有符号”）。表 A.1 显示了典型的有符号固定整数类型，表 A.2 显示了典型的无符号固定整数类型。
 
 | 位数 | 典型名称 | 范围 |
 |---|---|---|
-| 8 | i8, int8_t, byte | -128...127 |
-| 16 | i16, int16, int16_t, short | -32768...32767 |
-| 32 | i32, int32, int32_t, int | -2147483648...2147483647 |
-| 64 | i64, int64, int64_t, long | -9223372036854775808...9223372036854775807 |
+| 8 | `i8`, `int8_t`, `byte` | -128...127 |
+| 16 | `i16`, `int16`, `int16_t`, `short` | -32768...32767 |
+| 32 | `i32`, `int32`, `int32_t`, `int` | -2147483648...2147483647 |
+| 64 | `i64`, `int64`, `int64_t`, `long` | -9223372036854775808...9223372036854775807 |
 
 表 A.1 固定大小有符号整数
 
@@ -9601,10 +9732,10 @@ done:
 
 | 位数 | 范围 |
 |---|---|
-| 8 | u8, Uint8, uint8_t, unsigned byte | 0..255 |
-| 16 | u16, Uint16, uint16_t, unsigned short | 0..65535 |
-| 32 | u32, Uint32, uint32_t, unsigned int | 0..4294967295 |
-| 64 | u64, Uint64, uint64_t, unsigned long | 0..1844674407309551615 |
+| 8 | `u8`, `Uint8`, `uint8_t`, `unsigned byte` | 0..255 |
+| 16 | `u16`, `Uint16`, `uint16_t`, `unsigned short` | 0..65535 |
+| 32 | `u32`, `Uint32`, `uint32_t`, `unsigned int` | 0..4294967295 |
+| 64 | `u64`, `Uint64`, `uint64_t`, `unsigned long` | 0..1844674407309551615 |
 
 表 A.2 固定大小整数
 
@@ -9612,20 +9743,20 @@ done:
 
 浮点数通常在固定大小的存储位置中（但不一定是 32 或 64 位）表示整数和非整数值。前者的尺寸类型被称为单精度、`float`、`Float32` 或 `f32`。后者传统上的类型名为双精度、`double`、`Float64` 或 `f64`。JavaScript 将 64 位浮点类型称为 `number`，尽管程序员可以调用某些操作（`&, |, -, <<`）来访问 32 位整数。
 
-许多语言规定其浮点类型直接映射到 IEEE 754 规范 [63]，在该规范中，64 位格式为每个位分配以下含义：
+许多语言规定其浮点类型直接映射到 `IEEE 754` 规范 [63]，在该规范中，64 位格式为每个位分配以下含义：
 
-* 第 63 位是符号位，s
-* 第 62-52 位是指数，e
-* 第 51-0 位是尾数、权重或分数，f
+* 第 63 位是符号位，`s`
+* 第 62-52 位是指数，`e`
+* 第 51-0 位是尾数、权重或分数，`f`
 
 数值从位中计算得方式如下所示（见表 A.3）：
 
 * 如果 $1 < e < 2047$，值为 $(-1)^s \cdot (1 + f \cdot 2^{-52}) \cdot 2^{1023}$（“规范化数”）
 * 如果 $e = 0$，值为 $(-1)^s \cdot (f \cdot 2^{-52}) \cdot 2^{-1022}$（非规范化数”）
-* 如果 $e = 2048$，若 $f = 0$ 则值为 $(-1)^s \cdot \infty$，否则为 NaN。无穷大产生于超过最大有限数（$2^{1024} - 2^{1023}$，约为 $1.797 \times 10^{308}$）的操作，或非零值除以零，例如 $5.0/0$。$NaN$ 值产生于诸如 $0.0/0$ 等无意义的操作。随着数量的增加，可表示数字之间的间距变得更加明显。如果我们至少在测量距离，这就是 $0.1$ 和 $0.2$ 之间的相对差异（后者是前者的十倍）。浮点表示的不精确性经常会导致令人意料的结果，要么是因为结果不可表示，要么是由于舍入误差：$0.1 + 0.2 = 0.3000000000000004$，因为最接近 $0.1$ 的位是 $3bf99999999999a$，
-* 最接近 $0.2$ 的位是 $3fc9999999999a$，
-* 它们的和是 $3fd33333333333a$，
-* 但最接近 $0.3$ 的位是 $3fd33333333333b$。
+* 如果 $e = 2048$，若 $f = 0$ 则值为 $(-1)^s \cdot \infty$，否则为 `NaN`。无穷大产生于超过最大有限数（$2^{1024} - 2^{1023}$，约为 $1.797 \times 10^{308}$）的操作，或非零值除以零，例如 `5.0/0`。`NaN` 值产生于诸如 `0.0/0` 等无意义的操作。随着数量的增加，可表示数字之间的间距变得更加明显。如果我们至少在测量距离，这就是 `0.1` 和 `0.2` 之间的相对差异（后者是前者的十倍）。浮点表示的不精确性经常会导致令人意料的结果，要么是因为结果不可表示，要么是由于舍入误差：`0.1 + 0.2 = 0.3000000000000004`，因为最接近 `0.1` 的位是 `3bf99999999999a`，
+* 最接近 `0.2` 的位是 `3fc9999999999a`，
+* 它们的和是 `3fd33333333333a`，
+* 但最接近 `0.3` 的位是 `3fd33333333333b`。
 
 | 十进制 | 值 | 描述 |
 |---|---|---|
@@ -9652,27 +9783,31 @@ done:
 
 ## A.3 分数与小数
 
-**Ratio**（也称为 **rationals**）通过存储分子和分母来避免除法的舍入误差。因此，与其对浮点值 $0.1$ 和 $0.2$ 的和感到惊讶，我们反而可以加上十分分之一和五分之一得到三分之一。
+**Ratio**（也称为 **rationals**）通过存储分子和分母来避免除法的舍入误差。因此，与其对浮点值 `0.1` 和 `0.2` 的和感到惊讶，我们反而可以加上十分分之一和五分之一得到三分之一。
 
 Julia 语言有一个特殊的运算符 `//` 来构造分数：
 
-```
-julia> 1/10 + 1/5
-0.3000000000000000
-julia> 1//10 + 1/5
-3/10
-julia> typeof(ans)
-Rational{Int64}
-```
 
-Ruby 有一个 **Rational** 类；分数可以通过字符串或分子和分母构造：
+
+julia> 1/10 + 1/5
+
+0.3000000000000000
+
+julia> 1//10 + 1/5
+
+3/10
+
+julia> typeof(ans)
+
+Rational{Int64}
+
+Ruby 有一个 `Rational` 类；分数可以通过字符串或分子和分母构造：
 
 ```ruby
 >> 0.1+0.2
 => 0.3000000000000004
 >> Rational('1/10')+Rational(2,10)
 => (3/10)
-
 >> .class
 => Rational
 ```
@@ -9688,7 +9823,7 @@ user> (type *1)
 clojure.lang.Ratio
 ```
 
-金融应用通常从分母为10的幂的分数，被称为**小数类型**。小数表示物理上存储十进制位，只要存储了足够的位数，就可以精确计算。（支持小数类型的语言可能允许程序员显式设置位数。）例如，Python 的标准库中有一个小数类型：
+金融应用通常从分母为10的幂的分数，被称为 `小数类型`。小数表示物理上存储十进制位，只要存储了足够的位数，就可以精确计算。（支持小数类型的语言可能允许程序员显式设置位数。）例如，Python 的标准库中有一个小数类型：
 
 ```python
 >>> decimal import Decimal
@@ -9717,9 +9852,9 @@ U+1FOCE PLAYING CARD KING OF DIAMONDS
 U+1F563 STBERRY
 ```
 
+
+
 带有分配点的字符被称为编码字符，但它可能由多个编码字符组成一个“用户感知”的字符；我们称编码字符序列为字形簇（grapheme cluster），它通常会用自己的字形渲染。示例包括：
-
-
 
 # 318 编程字符序列
 
@@ -9736,19 +9871,21 @@ U+1F563 STBERRY
 | U+1F1E1 REGIONAL INDICATOR SYMBOL L | 黎巴国旗 |
 | U+1F1E7 REGIONAL INDICATOR SYMBOL B | |
 
-在某些情况下，单个 Unicode 字符就对应一个等价字形簇。例如，代码点 U+0065（LATIN SMALL LETTER E）结合 U+0303（COMBINING DIAERESIS 变音）表示的文本与单个代码点 U+00EB（LATIN SMALL LETTER E WITH DIAERESIS）相同，即 ë。你喜爱的编程语言可能无法原生地处理这些内容。
+在某些情况下，单个 Unicode 字符就对应一个等价字形簇。例如，代码点 `U+0065`（LATIN SMALL LETTER E）结合 `U+0303`（COMBINING DIAERESIS 变音）表示的文本与单个代码点 `U+00EB`（LATIN SMALL LETTER E WITH DIAERESIS）相同，即 `ë`。你喜爱的编程语言可能无法原生地处理这些内容。
 
 许多语言使用函数来根据给定代码点生成字符，或根据给定字符获取代码点。通常可以在字符串字面量中通过代码点指定字符；这种在 JavaScript、CoffeeScript、Ruby、July、Java、Scala 以及许多其他语言中都有效的字符串，包含一个特殊的字符：
 
+```
 "Have a nice day! \u0236"
+```
 
-除了 \u 后面跟四个十六进制数字外，你通常还会在 \x 后面跟两个字符，在 \u 后面跟两个字符，以及在 \u{...} 中跟任意一到八个字符。
+除了 `\u` 后面跟四个十六进制数字外，你通常还会在 `\x` 后面跟两个字符，在 `\u` 后面跟两个字符，以及在 `\u{...}` 中跟任意一到八个字符。
 
 # B.2 字符属性
 
-Unicode 字符看起来像是一个简单的实体，但实际上，除了名称和代码点，它还有大量的属性。这些属性包括它的区块（block）、类别、时代、脚本以及大量的规范化属性。你可以在 [130] 找到关于这些属性的更多信息，但我们想强调两个：区块和类别。
+Unicode 字符看起来像是一个简单的实体，但实际上，除了名称和代码点，它还有大量的属性。这些属性包括它的区块（block）、类别、时代、脚本以及大量的规范化属性。你可以在 `[130]` 找到关于这些属性的更多信息，但我们想强调两个：区块和类别。
 
-代码点空间被划分为 200 多个不同的区块。我们在这里展示几个（随机选择的）；完整列表请参阅 [120]；
+代码点空间被划分为 200 多个不同的区块。我们在这里展示几个（随机选择的）；完整列表请参阅 `[120]`；
 
 | 代码点范围 | 区块 |
 | 0000..07FF | 基础拉丁 |
@@ -9808,7 +9945,7 @@ Unicode 字符看起来像是一个简单的实体，但实际上，除了名称
 | Mn | 标记，非间距 |
 | Me | 标记，包围 |
 
-许多语言提供了标准库函数，用于判断字符是否属于特定类别。此外，许多正则表达式引擎允许使用模式 \p{Xx} 来匹配类别 Xx 中的任何字符。这些函数和匹配操作可能使用了内部的 Unicode 数据库。
+许多语言提供了标准库函数，用于判断字符是否属于特定类别。此外，许多正则表达式引擎允许使用模式 `\p{Xx}` 来匹配类别 `Xx` 中的任何字符。这些函数和匹配操作可能使用了内部的 Unicode 数据库。
 
 # B.3 字符编码
 
@@ -9868,55 +10005,51 @@ UTF-32 编码：
 | U+0303 | 00 00 03 03 | ̈ |
 | U+00EB | 00 00 00 EB | ë |
 
+类 (`Class`) 创建对象的实体。从类实例化的对象具有该类定义的结构和行为，尽管在某些语言中允许对实例进行自定义。
 
+类变量 (`Class Variable`) 属于类而非类实例的属性。
 
+闭包 (`Closure`) 带有自由变量的块或函数，这些变量从其定义的环境中获取值。
 
+代码点 (`Code Point`) 分配给字符集中某个字符的唯一、非负整数值。
 
-类 (Class) 创建对象的实体。从类实例化的对象具有该类定义的结构和行为，尽管在某些语言中允许对实例进行自定义。
+强制转换 (`Coercion`) 隐式应用的类型转换。
 
-类变量 (Class Variable) 属于类而非类实例的属性。
+推导式 (`Comprehension`) 通过一个生成组件的表达式定义的复合值。
 
-闭包 (Closure) 带有自由变量的块或函数，这些变量从其定义的环境中获取值。
+具体类 (`Concrete Class`) 允许拥有实例类。
 
-代码点 (Code Point) 分配给字符集中某个字符的唯一、非负整数值。
+并发 (`Concurrency`) 对独立且不同的计算活动进行建模和协调，这些活动的执行在时间上可能会重叠。
 
-强制转换 (Coercion) 隐式应用的类型转换。
+延续 (`Continuation`) 通俗来说，程序的“剩余部分”的表示。
 
-推导式 (Comprehension) 通过一个生成组件的表达式定义的复合值。
+协程 (`Coroutine`) 一种执行行，在程序员的显式控制下，它可以让位于其他协程并恢复。协程共享一个处理单元，因为同一时刻只有一个协程在执行。
 
-具体类 (Concrete Class) 允许拥有实例类。
+协变 (`Covariance`) `T<U>` 和 `T<V>` 之间存在子类型关系，其中 `T` 是参数化类型且 `U` 是 `V` 的子类型。
 
-并发 (Concurrency) 对独立且不同的计算活动进行建模和协调，这些活动的执行在时间上可能会重叠。
+柯里化函数 (`Curried Function`) 一个返回带单参数函数的单参数函数，与接受两个参数（或一对对象）的函数形成对比。
 
-延续 (Continuation) 通俗来说，程序的“剩余部分”的表示。
+悬挂指针 (`Dangling Pointer`) 一个在作用域内但引用的内存已释放的变量。
 
-协程 (Coroutine) 一种执行行，在程序员的显式控制下，它可以让位于其他协程并恢复。协程共享一个处理单元，因为同一时刻只有一个协程在执行。
+死锁 (`Deadlock`) 两个或多个竞争线程被阻塞的情况，每个线程都在等待对方完成。
 
-协变 (Covariance) T<U> 和 T<V> 之间存在子类型关系，其中 T 是参数化类型且 U 是 V 的子类型。
+小数类型 (`Decimal Type`) 存储数值数字位的数据类型。
 
-柯里化函数 (Curried Function) 一个返回带单参数函数的单参数函数，与接受两个参数（或一对对象）的函数形成对比。
+装饰器 (`Decorator`) 为另一个对象提供额外行为的对象。
 
-悬挂指针 (Dangling Pointer) 一个在作用域内但引用的内存已释放的变量。
+延迟执行 (`Deferred Execution`) 在未来某个点执行的代码块，通常是为了响应触发事件而执行。
 
-死锁 (Deadlock) 两个或多个竞争线程被阻塞的情况，每个线程都在等待对方完成。
+深拷贝 (`Deep Copy`) 一种递归遍历对象图的拷贝，复制所有被引用的值。
 
-小数类型 (Decimal Type) 存储数值数字位的数据类型。
+依赖类型 (`Dependent Type`) 依赖于值或约束的类型，例如高度为 8 的树的类型，或排序列表的类型。
 
-装饰器 (Decorator) 为另一个对象提供额外行为的对象。
+解引用 (`Dereference`) 对（指针）变量引用的对象求值。
 
-延迟执行 (Deferred Execution) 在未来某个点执行的代码块，通常是为了响应触发事件而执行。
+析构函数 (`Destructor`) 一组具有唯一键的键值对。也称为映射（map）。
 
-深拷贝 (Deep Copy) 一种递归遍历对象图的拷贝，复制所有被引用的值。
+判别联合 (`Discriminated Union`) 参见标记联合（tagged union）。
 
-依赖类型 (Dependent Type) 依赖于值或约束的类型，例如高度为 8 的树的类型，或排序列表的类型。
-
-解引用 (Dereference) 对（指针）变量引用的对象求值。
-
-析构函数 (Destructor) 一组具有唯一键的键值对。也称为映射（map）。
-
-判别联合 (Discriminated Union) 参见标记联合（tagged union）。
-
-动态语言 (Dynamic Language) 可以在运行时执行修改代码和添加类型等任务的语言。
+动态语言 (`Dynamic Language`) 可以在运行时执行修改代码和添加类型等任务的语言。
 
 ## 动态类型 (Dynamic Typing)
 某些表达式的类型在运行时未知的状态。
@@ -9991,7 +10124,7 @@ UTF-32 编码：
 实例 (Instance)
 类的对象。
 
-##  (Interface)
+## Interface
 为对象提供接口的结构。
 
 ## 互操作性 (Interoperability)
@@ -10044,7 +10177,7 @@ UTF-32 编码：
 2. （OOP）实例。
 
 ## 运算符重载 (Operator Overloading)
-允许单个运算符根据其参数具有不同的实现。例如，* 可以加载整数乘法、字符串重复、向量点积或标量积。
+允许单个运算符根据其参数具有不同的实现。例如，`*` 可以加载整数乘法、字符串重复、向量点积或标量积。
 
 ## 可选类型 (Option Type)
 包含或不包含值的类型。
@@ -10091,11 +10224,7 @@ UTF-32 编码：
 ## 引用 (Reference)
 引用另一个对象（被引用者）的对象。通常用于共享数据。引用可以被解引用以获取被引用者，但不会像代理那样代表引用。
 
-
-
-
-
-## 326 术语表
+# 326 术语表
 
 Regex 参见 Regular Expression（正则表达式）。
 一种根据大量广泛接受的机制（有时也包含特定编程语言的机制）描述字符串集合的模式。
@@ -10172,7 +10301,7 @@ Truthy（真值）在布尔上下文中被处理的方式（例如在评估条�
 
 Type（类型）由编程语言强制的具有共同行为的值集。
 
-Type Compatibility（类型兼容性）表达式 $e$ 与类型 $t$ 之间关系的属性，其中 $e$ 可以用于任何期望值为 $t$ 值的上下文中。
+Type Compatibility（类型兼容性）表达式 `e` 与类型 `t` 之间关系的属性，其中 `e` 可以用于任何期望值为 `t` 值的上下文中。
 
 Type Inference（类型推断）自动检测表达式的类型。
 
@@ -10196,81 +10325,7 @@ http://taylorandfrancis.com
 
 - [1] Dave Abrahams. Protocol-oriented Programming in Swift. https://developer.apple.com/videos/play/wwdc2015/408/, 2015. 在 Apple WWDC 2015 上演讲。
 - [2] The Apache Software Foundation. Apache Commons. https://commons.apache.org/
-- [3] Apple, Inc. iOS. http://www.apple.com/ios/
-- [4] Apple, Inc. Swift Standard Library Reference. https://developer.apple.com/reference/swift/185035-swift_standard_library_operators.
-- [5] Apple, Inc. Swift Standard Library Reference: UnsafeMutablePointer. https://developer.apple.com/reference/swift/unsafemutablepointer.
-- [6] Apple, Inc. The Swift Programming Language.
-- [7] Joe Armstrong. Programming Erlang: Software for a Concurrent World. Pragmatic Bookshelf, 2007.
-- [8] Joe Armstrong. Big changes to Erlang. http://joems.github.io/2014/02/big-changes-to-erlang.html, 2014.
-- [9] Jeremy Ashkenas. Lists that compile to JS. https://github.com/ashkenas/codescript/list-of-languages-compile-to-js.
-- [10] Jeremy Ashkenas. Erlang.
-- [11] Ada Association. Introducing Ada 95: Standard Object-Oriented Language.
-- [12] Gary Bernhardt. WAT. https://www.destroysoftware.com/talks/wat, 2012.
-- [13] Edwin Bray. Programming with algebraic effects and dependent types. SIGPLAN Notice 48(9):133–144, 2013.
-- [14] Trevor Burnham. Accelerated JavaScript Development. Pragmatic Bookshelf, 2nd edition, 2015.
-- [15] Mike Canton, Node.js in Action. Manning Publications, Greenwich, 2015.
-- [16] Luca Cardelli and Peter Wegner. On types, data abstraction, and polymorphism. ACM Surveys 17(4):471, 1985.
-- [17] Cat's Eye. Befunge-93. http://catseye.tk/befunge-93.
-- [18] Brad Chamberlain. Chapel: Parallel Programming. http://www.cray.com/chapel-programming/, 2013.
-- [19] Nick Coghlan. Python 3 & A. http://python-notes.org/questions_answers.
-- [20] Douglas Crockford. JavaScript: The Good Parts. O'Reilly, 2008.
-- [21] Bjarne Stacker, James Armstrong, Mike Williams, and Robert Varding. Erlang: The Movie. https://www.youtube.com/watch?v=xrIjssLE, 1990.
-- [22] Ericsson. Erlang Reference Manual User's Guide, Sequences. Ericsson AB, 2003-2016.
-- [23] Luis Damascus. Assignment in Programming. PhD thesis, University of Edinburgh, 1984.
-- [24] Unicode Consortium. Unicode Segmentation. Technical Report, 1992.
-- [25] Steve Dekorte. Go: A Language. http://golang.org/
-- [26] Edsger W. Dijkstra. Go statement considered harmful. Algorithm Bulletin, 31(7-7), March 1970.
-- [27] Edsger W. Dijkstra. The humble programmer. Communications of the ACM 15(10):859–866, October 1972.
-- [28] ECMA International. Standard ECMA-262. http://www.ecma-international.org/publications/standards/ecma-262.html.
-- [29] Melissa Elliott. PHP Masterpieces. http://phpmanualmasterpieces.tumblr.com.
-- [30] Epic Games. Unreal Engine Technology. https://www.unrealengine.com.
-
-
-
-
-# 参考文献 ■ 331
-
-[42] James Gosling, Henry McGilton. Java语言环境：白皮书。Sun Microsystems, 1995.
-
-[43] Paul Graham. Fortran I。http://www.paulgra.com/history.
-
-[44] Paul Graham. Lisp 引言。http://www.paulgra.com/quotes.
-
-[45] Paul Graham. 极客的复仇。http://www.paulgra.com/icad.
-
-[46] Paul Graham. Lisp 的根源。http://store.yahoo.com/lib/paulgraham/jsc.ps, 2002.
-
-[47] James Harper. 语言谜题。http://prog21.dadgam.com/38. [48] Robert Harper. 动态语言是静态语言（误译）：https://existential.wordpress.com/2011/03/19/dynamic-languages-are-static/, [49] Robert Harper. 编程语言基础。剑桥大学出版社, 第2版, 2016.
-
-[50] Haskell社区. IO 导论。https://wiki.haskell.org/Introduction_to_IO. [51] Haskell社区. IO 内部。https://wiki.haskell.org/io_inside. [52] Haskell社区. Rank-N 类型。https://wiki.haskell.org/Rank_N_types. [53] Geoffrey Harvey. 我们如何毁灭了发布。http://blog.safeshed.com/23, 2013. [54] Fred Hébert. 你用 Elang 太棒了！Sharp Press, 2013. [55] David Herman, Luke Wagner, and Alan Zakai (编). 汇编工作数据。http://ajms.org/spec/latest/ [56] Rich Hickey. Clojure。http://clojure.org/. [57] Rich Hickey. Clojure 库。https://github.com/cljure/blob/master/src/cljure/core.clj. [58] C. A. Hoare. 语言设计提示。斯坦福大学, 加利福尼亚, 1973. [59] C. A. Hoare. 通信进程。1985. [60] Tony Hoare. 空引用：十百万美元错误。InfoQ, 2009. [61] Allen Holm. 为什么 Get 和 Setter 方法很邪恶。Java 世界, 2003. [62] Paul Hud, John Hughes, Simon Peyton, and Philip Wadler. Haskell 历史：惰性类。第三届 ACM SIGPLAN 编程语言会议论文，HOPL, iii, 第12–55页，ACM. [63] IEEE P754. ANSI/IEEE 754-1985, 二进制浮点算术标准。IEEE, 纽约, 纽约. [64] IETF. JavaScript 对象表示 (JSON) 数据交换格式。RFC 7159, 互联网工程任务组, 2014. [65] Intel. Intel64 架构。http://www.intel.com/content/www/en/architecture-and-technology/microarchitecture/intel-64-architecture.html. [66] ISO. 通用语言基础设施 (CLI)。ISO/IEC 23271:2012, 国际标准组织，日内瓦，瑞士, 2012. [67] ISO. 信息技术——Ada 语言。ISO/IEC 8652:2012, 国际标准组织，日内瓦，瑞士, 2012. [68] Jovass. Javasass：http://jovass.github.io/javasass/. [69] Kris Jenkins. 什么是函数式编程？http://blog.jenster.com/2015/12/what-is-functional-programming., 2015. [70] Joyent. Node.js：http://nodejs.org. [71] Alan C. Kay. Smalltalk 早期历史。Thomas J. Bergin, Richard G. Gibson (编)，编程语言历史II，第511–598页，纽约, 1996. [72] 汗汗学院. JS 入门：绘制与动画。https://www.khanacademy.org/computing/programming/ [73] Kx Systems. 参考手册。1998. [74] Angelika Langer. 泛型。http://www.angelanger.com/GenericFAQ.html. [75] Barbara Lopes. CL 历史。Thomas J. Bergin, Richard G. Gibson (编)，编程语言历史II，第471–510页，纽约, 1996. [76] Cristina Lopes. 编程练习。Taylor & Francis, 2014. [77] Lua. PUC-Rio. 关于 Lua。http://www.lua.org/about. [78] Lua. PUC-Rio. Lua 5.3 手册。http://www.lua.org/manual/5.3/ [79] Robert C. Martin. 门外的野蛮人。https://blog.blight.com/uncle-bob/2011/12/The-Barbarians-at-the-Gates, 2011. [80] 松本裕弘. Ruby 1.9，Google Tech Talk。https://www.youtube.com/watch?v=EqJvB4, 2009. [81] Alex McCaw. 脚本小书。O'Reilly Media, 2012. [82] Steve McConnell. 代码完美（第二版）。Microsoft Press, 红蒙德, 华盛顿州, 2004. [83] Paul Merolla, Andrew Cassidy, Jun Sawada, Bryan Jackson, Chen Guo, Yuta Nakamura, Bernard Brezzo, Ivan Steever, Rathinakumar, Myron Flicker, Rajit Manohar, and Dharmendra. 具有扩展通信网络和接口的百万脉冲集成电路。Science, 345:668–672, 2014. [84] Microsoft. .NET。http://www.microsoft.com/net. [85] Microsoft. 可扩展的 TypeScript。https://www.typescript.org. [86] Robin Milner. 编程中的多态理论。计算机科学杂志，17(3):348-375, 1998. [87] Don Monroe. 神经形态计算。ACM，57(6):13-15, 2009. [88] Natasha Robert. 为什么 Swift 比 Go 好。http://blog.jenster.com/2015/12/what-is-functional-programming./ [89] Michael Nielsen. Lisp 如麦克斯韦方程。http://www.natashober.com/lisp-as-software/ [90] Chris Okasaki. 纯函数式数据结构。剑桥大学出版社, 1998. [91] Oracle. Java 教程：泛型。https://docs.oracle.com/javase/ [92] John Wagner. Spring 2：语言设计。计算机杂志，31(3):23-30, 1998. [93] OW2. ASM。http://www.paulgra.com/ [94] Palo Alto Research Center. Rust 语言。http://rust-lang.org/ [95] Tim Peters. PEP 20 目的与指南。https://www.python.org/dev/peps-0001/ [96] Simon Jones. Haskell 导论。ACM ，28(3):271–97, 1993. [97] Benjamin C. Pierce. 编程范式。MIT Press, 马萨诸塞, 2008. [98] Bob Pike. Python 3 方法解析顺序。https://www.python.org/mro. [99] Pivotal Software. Spring 框架。http://www.spring.io/ [100] Maria Popova. Python。http://www.python.org/ [101] Axel Reuschayer. JavaScript。O'Reilly, 2014. [102] Axel Reuschayer. JavaScript 内部。http://jovass.github.io/javasass/. [103] Axel Reuschayer. Javasass：http://jovass.github.io/javasass/. [104] Red Hat. Hibernate。http://hibernate.org/ [105] The Rust Community. Rust 语言。http://rust-lang.org/ [106] The Rust Project. Rust 书。https://doc.rust-lang.org/book/ [107] Franklin A. Sammet. 编程语言基础。Prentice-Hall, 1969.# 参考文献 ■ 334
-
-[108] Clay Shirky. 本体论（误译）：分类与标签。http://www.artima.com/intv/ontology.html, 2005.
-
-[109] Garrett Smith. Erlang 电影 II：延续。http://www.garrett.com/erlang-movie-sequel, 2013.
-
-[110] Simon Dekorte. Erlang：函数式编程。O'Reilly, 2013.
-
-[111] Steinberg. 我们在那里吗？与 Alan Kay 的对话。Open2P, 2003.
-
-[112] Io 语言指南。http://iolanguage.org/guide.html. [113] Bjarne Stroustrup. C++ 历史：1979-1991。SIGPLAN OOPS Messenger, 28(3):271–97, 1993. [114] S. Tucker Taft. ParaSail 语言。http://parasail-lang.org. [115] The Internet Society. Base62, Base32 和 Base64 编码方法。RFC 4648, 互联网工程任务组, 2005. [116] Dave Thomas, Andy Hunt, and Chad Fowler. Programming Ruby 1.9 & 2.0：实用程序员指南。Pragmatic Books, 2013. [117] Franklin A. Turbuk and David G. Gifford. 编程语言设计概念。MIT Press, 2008. [118] Inc. Unicode 块-9.0.0.txt。http://www.unicode.org/Public/9.0.0/ucd/. [119] The Unicode Consortium.http://www.unicode.org/. [120] Bill Venners. Ruby 的哲学。http://www.artima.com/intv/rubyP.html, 2003. [121] Bret Victor. 编程的未来。http://wrydream.com/dbx/, 2013. [122] Larry Wall, Thomas Christians, and Jonathan Orwant. Programming Perl，第三版。O'Reilly Media, Inc., 2000. [123] Berry Warsaw, Jeremy Hinton, David Godder, and Nick Coghlin. PEP 0001 目的与指南。https://www.python.org/dev/peps-0001/ [124] Eric Wastl. PHP 沙盒。http://www.phsadness.com. [125] Web Hypertext Application Working Group. Web Workers (HTML 实时标准)。https://html.whatwg.org/multipage/workers.html. [126] WebAssembly Community Group. WebAssembly。https://webassembly.github.io/
-
-
-
-
-
-- [130] Ken Whister 和 Asmuf Freitag. Unicode 字符属性模型. 技术报告 23, Unicode Consortium, 2016.
-- [131] Arthur Whitney. K. Vector, 10(1):74-79, 1993年7月.
-- [132] 维基百科. Brainfuck。
-- [133] 维基百科. C++
-- [134] 维基百科. Grace Hopper。
-- [135] 维基百科. Hindley-Milner 类型系统。
-- [136] 维基百科.编程范式。
-- [137] 维基百科.红黑树。
-- [138] 维基百科. Simula。
-- [139] 维基百科.标准流。
-- [140] 维基百科 静态程序分析。
-- [141] Steve Yegge. 名词王国中的执行。http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html, 2006.
-
+...
 # Taylor & Francis
 Taylor & Francis Group
 http://taylorandfrancis.com
@@ -10279,580 +10334,4 @@ http://taylorandfrancis.com
 
 A-0, 270
 抽象方法, 127
-抽象类型, 99, 103
-访问级别, 121
-动作, 156
-激活记录, 16, 222
-Ada, 279
-副词, 297
-代理, 156, 183, 289
-代数效应, 290
-Algol, xiv, xv, 271
-Algol 68, iii
-别名, 14
-ULU, 304
-祖先, 70, 90
-注解, 127
-APL, 295, 297
-应用编程语言, 273
-应用软件, 273
-应用程序
-Eln, 183
-ARC, 见自动引用计数
-参数, 16
-关键字, 101
-位置参数, 101
-汇编语言, 265, 302
-赋值, 2, 13
-异步, 24
-原子, 3, 194
-属性, 63, 197
-自动装箱, 123
-自动引用计数, 243, 261
-自动语义插入, 9
-Backus, John, xiii
-Bernhardt, Gary, 5
-大数据, xiii
-bigint, 313
-bignum, 313
-十美元错误, 123
-二进制
-Erlang, 194
-绑定, 23, 39
-双变体, 109
-块, 78, 86
-Factor, 299
-Ruby, 86
-带眉的, 277
-边界类型参数, 132
-Bourne Shell, 284
-Brain*k, 299
-总线, 304
-字节长度, 320
-C, 265, 274
-字符串, 275
-C++, 272, 275
-C#, 280
-可调用, 63
-回调, 24, 25, 24
-捕, 196
-CCS, 290
-通道, 211, 231
-缓冲, 232
-Chapel, 291
-字符, 317
-字符编码, 320
-字符长度, 320
-字符集, 317
-类, 5, 130, 273
-Clojure, 151
-经典继承, 70
-客户端-服务器, 292
-Clojure, 145
-评估器, 148
-ClojureScript, 292
-闭包, 8, 19, 245, 248
-Barton, Bob, 272
-BCPL, 276
-BDFL, 59
-Benefunge, 301
-行为, 273
-闭包表达式, 248
-CLU, xiii, 278
-聚类, 278
-COBOL, xiii, 270
-CODASYL, 270
-代码点, 317
-代码单元, 123
-强制, 15
-CoffeeScript, 31
-命令行参数, 11
-Common Lisp, 38, 192
-推导式, 88
-计算 goto, 270
-连接性编程, 298
-具体类型, 103
-并发, 27, 135, 290
-并发编程, 230
-合并, 150
-逆变体, 109
-协作多任务, 54
-协程, 4, 53
-宇宙级的, 229
-协变, 109
-崩溃, 196, 204, 229
-Cray, Inc., 291
-跨切关注, 73
-CSP, 290
-柯里化, 173
-自定义运算符, 255
-切, 296
-延迟求值, 74
-委托, 21
-依赖类型, 290
-解引用, 220
-解构, 250
-设备驱动程序, 265
-字典, 61, 171
-字典, 194
-维度, 106
-破坏性类型, 172
-破坏性和, 178
-分发, 105
-分布式计算, 113
-动态多态, 85
-动态类型, 129
-动态作用域, 188
-Eiffel, xiii
-engrass, 85
-Elixir, 291
-Elliott, Melissa, 5
-Elm, 167
-封装, 83
-编码字符, 317
-企业级, 278
-枚举, 250
-Erlang, 191
-错误, 253
-逃逸分析, 222
-逃逸实体, 222
-晦涩语言, 299
-Ethernet, 272
-Euclid, xiii, 272
-事件发射器, 24
-事件处理程序, 25
-事件对象, 25
-事件, 24
-异常, 5, 196
-捕, 5
-退出, 205
-退出信号, 205
-导出, 5
-表达式, 4
-表达式求值, 4
-表达式问题, 188
-进程, 138, 234
-Dahl, Ole-Jahan, 272
-悬空, 275
-Dart, 293
-数据流机器, 304
-十进制类型, 316
-声明, 16
-装饰的, 72, 122
-深绑定, 19
-深拷贝, 14
-默认隐式初始化, 260
-默认方法, 127
-默认包, 124
-默认参数值, 322
-延迟操作, 211
-确定初始化, 260
-初始化器, 261
-表达式表达式语言, 31
-扩展, 243, 245, 258
-外部参数名, 243, 244, 247
-十六进制, 317
-高阶函数, 15
-Hindley-Milner 类型系统, 175
-Hoary, 271
-同态, 160
-F#, 289
-Factor, 298
-虚假值, 15, 41
-字段, 124
-填充, 68
-Hopper, Grace, xiii, 270
-卫生, 113
-卫生宏, 99, 112
-过滤函数, 2
-固定格式化, 270
-固定长度编码, 320
-finals, 313
-浮点数, 314
-FLOW-MATIC, 270
-惯用法, 41
-Idris, 290
-立即调用函数表达式, 不变的, 12, 63
-命令式范式, 82
-实现返回, 248
-Fortran, xiii, 269
-帧, 16, 222, 275
-自由变量, 188
-自由形式, 33
-函数, 4
-声明, 197
-导入, 5
-不纯, 280
-无限大, 314
-信息隐藏, xiii
-Ingalls, Dan, 272
-继承, 65
-函数接口, 128
-函数式范式, 89
-函数式编程, 15, 169
-函数式响应编程, 183
-函子, 286
-未来, 113
-继承属性, 21
-iscue, 19
-实例, 22, 63
-实例方法, 258
-实例属性, 258
-实例变量, 83
-垃圾回收, 8
-垃圾回收器, 222
-生成器表达式, 71
-通用函数, 105, 110, 210
-通用类型, 130, 251
-全局对象, 18
-全局变量, 18
-字形, 317
-Go, 211
-Goldberg, 272
-整数, 313
-有符号, 313
-无符号, 313
-接口, 211, 225
-采纳, 256
-一致性, 256
-CoffeeScript 规则, 31
-协程, 211, 219, 231
-终止, 231, 235
-字形簇, 317
-守护, 198
-内部参数名, 247
-内部实现, 151
-内省, 92
-不变性, 109
-Io, 298
-隔离, 294
-迭代器, 70, 50, 70
-Java, xiii, 119, 271, 272
-Java 平台, xiv
-happy face, 318
-Haskell, 287
-K, 297
-Kay, Alan, xv, 271, 272
-关键字参数, 68
-语言分类, 7
-语言求值, 5
-语言标签, 7
-延迟结束, 200
-懒加载, 148
-词法课程, 19
-生命周期, 222
-记忆化, 73
-内存, 273, 262
-内存泄漏, 265
-Mesa, xiii
-消息, 4, 78, 273
-消息传递, 200
-元编程, 92, 298
-元表, 51
-方法, 192
-方法顺序, 65
-方法, 83, 110
-对象特定, 85
-混合, 88
-ML, xv, 285
-修饰, 124
-Modula, xiii
-模块算术
-模块, 5, 61, 189
-monad, 289, 290
-单数的, 289
-监器, 136
-Morgan Stanley, 297
-MRO, 65
-多方法, 158
-多分发, 99, 110
-多继承, 60, 65
-Linda, 290
-行号, 269
-Liskov, Barbosa, 278
-Lisp, xv, 271
-列表推导式, 192
-字面量, 3
-小型, 272
-LLVM, 243
-本地绑定, 151
-本地参数名, 244
-本地变量, 16
-逻辑范式, 82
-Lovelace, Ada, 279
-低级语言, 265
-低通配符, 132
-Lua, 45
-命名空间, 63
-NaN, 314
-收窄转换, 123
-欧式系统, 304
-空合并运算符, 245
-同义类型, 182
-非守护, 138
-非确定性, 136
-非严格语义, 287
-Nygaard, Kristen, 272
-机器指令, 302
-macOS, 243
-宏
-Clojure, 147
-邮箱箱, 200
-托管效应, 183
-evenmap, 214
-map 函数, 2
-Martin, Robert C., 见 Uncle Bob
-匹配器, 192
-矩阵, 106
-maybes, 168
-McCarthy, John, xiii
-对象, 78
-Object Pascal, xiii
-对象池, 63
-面向对象化, xii
-面向对象范式, 82
-Object-C, xiii
-对象, 273
-OCaml, 287
-操作系统, 265
-可选链式, 253
-可选值, 5
-可选类型, 294
-可选, 132
-重写, 127
-所有属性, 21
-所有者, 277
-原型链, 65
-公共方法, 90
-纯的, 287
-纯函数式语言, 196
-PureScript, 292
-谜题语言, 6
-Python, 59
-包, 5, 120, 124
-panic, 211
-Go, 229
-并行, 135
-并行编程, 113
-参数, 16
-参数化方法, 110
-参数化类型, 99, 103, 106
-限定, 122
-查询, 296
-查询表达式语法, 282
-引用, 111
-ParaSail, 291
-部分应用, 173
-按共享传递, 67, 278
-路径拷贝, 153
-模式匹配, 197
-PCRE, 285
-Perl, xiii, 285
-持久化, 153
-持久化数据结构, 8, 145
-R, xiii
-范围, 60, 245
-Ratios, 315
-原始类型, 250
-原始值, 252
-接收者, 19, 85
-记录, 171, 181
-递归点, 162
-reduce 函数, 2
-还原机器, 304
-引用计数, 261
-引用循环, 263
-引用语义, 246
-引用类型, 13
-引用, 13
-反射
-PHP, xiii, 292
-pid, 200
-PL/i, xiii
-游场, xvi
-指针, xvi, 220, 275
-后后缀, 299
-PostScript, 6, 298
-预组合, 246
-预声明标识符, 228
-预占, 135
-抢占式多任务, 54
-原始类型, 13
-私方法, 90
-过程, 4
-进程字典, 204
-进程标识符, 200
-进程, 4, 199
-积类型, 107
-编程范式, 82
-Prolog, xv, 296
-承诺, 26
-传播, 49
-保护调用, 49
-保护方法, 90
-协议, 157, 243, 256
-原型继承, 70
-原型, 20, 298
-Go, 237
-refs, 155
-寄存器, 303
-正则表达式, 13
-远程调用, 113
-远程方法, 115
-汇合, 279
-REPL, xvi
-舍入误差, 314
-例程, 4
-Ruby, 77
-runes, 214
-Rust, 256, 276
-安全语言, 260
-Scala, xiii
-Scheme, 6
-绑定作用域, 23, 37
-脚本语言, 45, 284
-Self, xiii
-
-
-
-
-
-# 342 索引
-
-- 序列 (sequence), 150
-- sh, 284
-- 影子 (shadow), 37, 66
-- 浅层绑定 (shallow binding), 19
-- 浅拷贝 (shallow copy), 14
-- 共享资源 (shared resource), 135
-- Shirky, Clay, 7
-- 短变量声明 (short variable declaration), 213
-- 简写参数名 (shorthand argument names), 248
-- 副效应 (side-effects), 182, 289
-- 信号 (signals), 183
-- 签名 (signatures)
-- ML, 286
-- 显著空白 (significant whitespace), 33
-- SIMD, 303
-- Simula, xii, 272
-- 单例类 (singleton class), 85
-- 切片 (slice), 106, 224
-- 切片字面量 (slice literals), 224
-- Smalltalk, xv, 272
-- 智能指针 (smart pointers), 276
-- 软件危机 (software crisis), xiii
-- 软件事务内存 (software transactional memory), xiv, 155
-- 特殊形式 (special forms), 147
-- splat, 33
-- 拼接 (splicing), 111
-- Sfr, 290
-- 栈 (stack), 222
-- Factor, 299
-- 堆栈轨迹 (stack trace), 205
-- 基于栈的 (stack-based), 298
-- Standard ML, 286
-- 状态 (state), 83
-- 语句 (statement), 5
-- 静态分析 (static analysis), 121
-- 静态方法 (static methods), 127
-- 静态类型 (static typing), 129
-- 静态作用域 (statically scoped), 128
-- 流 (stream), 26, 122
-- 严格 (strict), 287
-- 字符串 (string), 3, 320
-- 强引用 (strong references), 263
-- 结构化类型 (structural typing), 182
-- 结构化编程 (structured programming), xiii, 219
-- 结构 (structures)
-- ML, 286
-- 子类 (subclass), 65
-- 子程序 (subroutines), 4
-- 订阅 (subscription), 167, 183
-- 和类型 (sum type), 107
-- 超类 (superclass), 65, 80
-- Swift, 243
-- switch 语句 (switch statement), 250
-- sym, 3, 81
-- 同步 (synchronous), 24, 138
-- 同步队列 (synchronous queue), 139
-- 语法糖 (syntactic sugar), 23
-- 语法引用 (syntax quote), 160
-- 系统软件 (system software), 273
-- 系统语言 (systems language), 274
-- 表 (table), 45, 46, 50
-- 标签 (tag), 237
-- 标记联合体 (tagged union), 178
-- Elm, 172
-- 任务 (tasks), 136
-- 项 (terms), 194
-- 线程池 (thread pool), 136
-- 线程 (thread), 4
-- 抛出函数 (throw functions), 254
-- 超时 (time out), 138
-- 定时等待 (timed wait), 203
-- MTOWTDI, 285
-- 追踪垃圾回收器 (tracing garbage collector), 261
-- 转换 (transition), 155
-- 瞬态数据结构 (transient data structures), 154
-- 瞬态集合 (transients), 145
-- 译 (transpires), 31
-- 陷阱 (trap), 205
-- TrueNorth, 304
-- 真值 (truthy), 15
-- 元组 (tuple), 194
-- tvOS, 243
-- 类型 (type), 4, 130
-- 类型别名 (type alias), 172, 181
-- 类型对齐 (type aligning), 293
-- 类型注解 (type annotations), 169
-- 类型类 (type classes), 177, 287, 288
-- 类型约束 (type constraint), 101
-- 类型擦除 (type erasure), 144
-- 类型扩展 (type extension), 158
-- 类型提示 (type hint), 165
-- 类型推断 (type inference), 175, 248
-- 类型属性 (type property), 258
-- 类型变量 (type variables), 167, 169
-- TypeScript, 293
-- 无界通配符 (unbounded wildcards), 134
-- 解箱 (unboxing), 123
-- Uncle Bob, 302
-- 无参化 (unrying), 173
-- Unicode (Unicode), 317, 320
-- 块 (blocks), 318
-- 类别 (categories), 319
-- 合并 (unify), 176
--联合类型 (union types), 103
-- 类型 (unit type), 172
-- 无类型 (untyped), 130
-- 未托管 (unmanaged), 265
-- 无所有引用 (unowned references), 264
-- 反转义拼接 (unquote splicing), 161
-- 上界通配符 (upper bounded wildcard), 331
-- UTF-16, 320
-- UTF-32, 320
-- UTF-8, 320
-- Valim, José, 291
-- 值 (value), 3
-- 值语义 (value semantics), 246
-- van Rossum, Guido, 59
-- var
-- Clojure, 151
-- 变量 (variable), 4
-- 变长编码 (variable-length encoding), 320
-- 向量 (vector), 106
-- 动词 (verb), 297
-- Victor, Bret, 5
-- von Neumann, John, 304
-- 等待组 (wait group), 235
-- watchOS, 243
-- 弱引用 (weak reference), 263
-- 弱类型 (Weak typing), 9
-- 弱类型语言 (weakly-typed language), 155
-- Whitney, Arthur, 297
-- 宽转换 (widening conversion), 123
-- 通配符 (wildcard), 131
-- 包装 (wrap), 123
-- 产生 (yield), 53, 71, 74
-- 零值 (zero value), 214
-
+...

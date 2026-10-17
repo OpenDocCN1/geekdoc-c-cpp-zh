@@ -1,4 +1,3 @@
-# （4）：递归下降
 
 # 手把手教你做一个 C 语言编译器（4）：递归下降
 
@@ -6,10 +5,10 @@
 
 **本系列：**
 
-1.  [手把手教你做一个 C 语言编译器（0）：前言](http://blog.jobbole.com/97332/)
-2.  [手把手教你做一个 C 语言编译器（1）：设计](http://blog.jobbole.com/97350/)
-3.  [手把手教你做一个 C 语言编译器（2）：虚拟机](http://blog.jobbole.com/97359/)
-4.  [手把手教你做一个 C 语言编译器（3）：词法分析器](http://blog.jobbole.com/97375/)
+1. [手把手教你做一个 C 语言编译器（0）：前言](http://blog.jobbole.com/97332/)
+2. [手把手教你做一个 C 语言编译器（1）：设计](http://blog.jobbole.com/97350/)
+3. [手把手教你做一个 C 语言编译器（2）：虚拟机](http://blog.jobbole.com/97359/)
+4. [手把手教你做一个 C 语言编译器（3）：词法分析器](http://blog.jobbole.com/97375/)
 
 ## 什么是递归下降
 
@@ -19,7 +18,7 @@
 
 ## 终结符与非终结符
 
-没有学过编译原理的话可能并不知道什么是“终结符”，“非终结符”。这里我简单介绍一下。首先是 [BNF](https://zh.wikipedia.org/wiki/%E5%B7%B4%E7%A7%91%E6%96%AF%E8%8C%83%E5%BC%8F) 范式，就是一种用来描述语法的语言，例如，四则运算的规则可以表示如下：
+没有学过编译原理的话可能并不知道什么是“终结符”，“非终结符”。这里我简单介绍一下。首先是 [BNF](https://zh.wikipedia.org/wiki/%E5%B7%B4%E7%A7%91斯范式) 范式，就是一种用来描述语法的语言，例如，四则运算的规则可以表示如下：
 
 ```cpp
 <expr> ::= <expr> + <term>
@@ -31,40 +30,40 @@
          | <factor>
 
 <factor> ::= ( <expr> )
-           | Num 
+           | Num
 ```
 
-用尖括号 `&lt;&gt;` 括起来的就称作 **非终结符** ，因为它们可以用 `::=` 右侧的式子代替。`|` 表示选择，如 `&lt;expr&gt;` 可以是 `&lt;expr&gt; + &lt;term&gt;`、`&lt;expr&gt; - &lt;term&gt;`或 `&lt;term&gt;` 中的一种。而没有出现在`::=`左边的就称作 **终结符** ，一般终结符对应于词法分析器输出的标记。
+用尖括号 `<>` 括起来的就称作**非终结符**，因为它们可以用 `::=` 右侧的式子代替。`|` 表示选择，如 `<expr>` 可以是 `<expr> + <term>`、`<expr> - <term>` 或 `<term>` 中的一种。而没有出现在 `::=` 左边的就称作**终结符**，一般终结符对应于词法分析器输出的标记。
 
 ## 四则运算的递归下降
 
 例如，我们对 `3 * (4 + 2)` 进行语法分析。我们假设词法分析器已经正确地将其中的数字识别成了标记 `Num`。
 
-递归下降是从起始的非终结符开始（顶），本例中是 `&lt;expr&gt;`，实际中可以自己指定，不指定的话一般认为是第一个出现的非终结符。
+递归下降是从起始的非终结符开始（顶），本例中是 `<expr>`，实际中可以自己指定，不指定的话一般认为是第一个出现的非终结符。
 
 ```cpp
-1\. <expr> => <expr>
-2\.           => <term>        * <factor>
-3\.              => <factor>     |
-4\.                 => Num (3)   |
-5\.                              => ( <expr> )
-6\.                                   => <expr>           + <term>
-7\.                                      => <term>          |
-8\.                                         => <factor>     |
-9\.                                            => Num (4)   |
-10\.                                                        => <factor>
-11\.                                                           => Num (2) 
+1. <expr> => <expr>
+2.           => <term>        * <factor>
+3.              => <factor>     |
+4.                 => Num (3)   |
+5.                              => ( <expr> )
+6.                                   => <expr>           + <term>
+7.                                      => <term>          |
+8.                                         => <factor>     |
+9.                                            => Num (4)   |
+10.                                                        => <factor>
+11.                                                           => Num (2)
 ```
 
-可以看到，整个解析的过程是在不断对非终结符进行替换（向下），直到遇见了终结符（底）。而我们可以从解析的过程中看出，一些非终结符如`&lt;expr&gt;`被递归地使用了。
+可以看到，整个解析的过程是在不断对非终结符进行替换（向下），直到遇见了终结符（底）。而我们可以从解析的过程中看出，一些非终结符如 `<expr>` 被递归地使用了。
 
 ## 为什么选择递归下降
 
 从上小节对四则运算的递归下降解析可以看出，整个解析的过程和语法的 BNF 表示是二分接近的，更为重要的是，我们可以很容易地直接将 BNF 表示转换成实际的代码。方法是为每个产生式（即 `非终结符 ::= ...`）生成一个同名的函数。
 
-这里会有一个疑问，就是上例中，当一个终结符有多个选择时，如何确定具体选择哪一个？如为什么用 `&lt;expr&gt; ::= &lt;term&gt; * &lt;factor&gt;` 而不是 `&lt;expr&gt; ::= &lt;term&gt; / &lt;factor&gt;` ？这就用到了上一章中提到的“向前看 k 个标记”的概念了。我们向前看一个标记，发现是 `*`，而这个标记足够让我们确定用哪个表达式了。
+这里会有一个疑问，就是上例中，当一个终结符有多个选择时，如何确定具体选择哪一个？如为什么用 `<expr> ::= <term> * <factor>` 而不是 `<expr> ::= <term> / <factor>`？这就用到了上一章中提到的“向前看 k 个标记”的概念了。我们向前看一个标记，发现是 `*`，而这个标记足够让我们确定用哪个表达式了。
 
-另外，递归下下降方法对 BNF 方法本身有一定的要求，否则会有一些问题，如经典的“左递归”问题。
+另外，递归下降方法对 BNF 方法本身有一定的要求，否则会有一些问题，如经典的“左递归”问题。
 
 ## 左递归
 
@@ -82,7 +81,7 @@
 | <empty>
 
 <factor> ::= ( <expr> )
-| Num 
+| Num
 ```
 
 消除左递归的相关方法，这里不再多说，请自行查阅相关的资料。
@@ -95,55 +94,55 @@
 int expr();
 
 int factor() {
-int value = 0;
-if (token == '(') {
-match('(');
-value = expr();
-match(')');
-} else {
-value = token_val;
-match(Num);
-}
-return value;
+    int value = 0;
+    if (token == '(') {
+        match('(');
+        value = expr();
+        match(')');
+    } else {
+        value = token_val;
+        match(Num);
+    }
+    return value;
 }
 
 int term_tail(int lvalue) {
-if (token == '*') {
-match('*');
-int value = lvalue * factor();
-return term_tail(value);
-} else if (token == '/') {
-match('/');
-int value = lvalue / factor();
-return term_tail(value);
-} else {
-return lvalue;
-}
+    if (token == '*') {
+        match('*');
+        int value = lvalue * factor();
+        return term_tail(value);
+    } else if (token == '/') {
+        match('/');
+        int value = lvalue / factor();
+        return term_tail(value);
+    } else {
+        return lvalue;
+    }
 }
 
 int term() {
-int lvalue = factor();
-return term_tail(lvalue);
+    int lvalue = factor();
+    return term_tail(lvalue);
 }
 
 int expr_tail(int lvalue) {
-if (token == '+') {
-match('+');
-int value = lvalue + term();
-return expr_tail(value);
-} else if (token == '-') {
-match('-');
-int value = lvalue - term();
-return expr_tail(value);
-} else {
-return lvalue;
-}
+    if (token == '+') {
+        match('+');
+        int value = lvalue + term();
+        return expr_tail(value);
+    } else if (token == '-') {
+        match('-');
+        int value = lvalue - term();
+        return expr_tail(value);
+    } else {
+        return lvalue;
+    }
 }
 
 int expr() {
-int lvalue = term();
-return expr_tail(lvalue);
-} 
+    int lvalue = term();
+    return expr_tail(lvalue);
+}
 ```
 
 可以看到，有了 BNF 方法后，采用递归向下的方法来实现编译器是很直观的。
@@ -161,48 +160,48 @@ char *line = NULL;
 char *src = NULL;
 
 void next() {
-// skip white space
-while (*src == ' ' || *src == '\t') {
-src ++;
-}
+    // skip white space
+    while (*src == ' ' || *src == '\t') {
+        src++;
+    }
 
-token = *src++;
+    token = *src++;
 
-if (token >= '0' && token <= '9' ) {
-token_val = token - '0';
-token = Num;
+    if (token >= '0' && token <= '9') {
+        token_val = token - '0';
+        token = Num;
 
-while (*src >= '0' && *src <= '9') {
-token_val = token_val*10 + *src - '0';
-src ++;
-}
-return;
-}
+        while (*src >= '0' && *src <= '9') {
+            token_val = token_val * 10 + *src - '0';
+            src++;
+        }
+        return;
+    }
 }
 
 void match(int tk) {
-if (token != tk) {
-printf("expected token: %d(%c), got: %d(%c)\n", tk, tk, token, token);
-exit(-1);
+    if (token != tk) {
+        printf("expected token: %d(%c), got: %d(%c)\n", tk, tk, token, token);
+        exit(-1);
+    }
+    next();
 }
-next();
-} 
 ```
 
-最后是`main`函数：
+最后是 `main` 函数：
 
 ```cpp
 int main(int argc, char *argv[])
 {
-size_t linecap = 0;
-ssize_t linelen;
-while ((linelen = getline(&line, &linecap, stdin)) > 0) {
-src = line;
-next();
-printf("%d\n", expr());
+    size_t linecap = 0;
+    ssize_t linelen;
+    while ((linelen = getline(&line, &linecap, stdin)) > 0) {
+        src = line;
+        next();
+        printf("%d\n", expr());
+    }
+    return 0;
 }
-return 0;
-} 
 ```
 
 ## 小结

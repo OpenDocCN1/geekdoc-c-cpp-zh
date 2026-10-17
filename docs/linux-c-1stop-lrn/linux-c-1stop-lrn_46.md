@@ -1,3 +1,4 @@
+
 # 参考书目
 
 [ThinkCpp] *How To Think Like A Computer Scientist: Learning with C++*. Allen B. Downey.
@@ -26,7 +27,7 @@
 
 [人月神话] *The Mythical Man-Month: Essays on Software Engineering*. Frederick P. Brooks, Jr.. Anniversary Edition.
 
-[CodingStyle] *Linux 内核源代码目录下的 Documentation/CodingStyle 文件*.
+[CodingStyle] *Linux 内核源代码目录下的 `Documentation/CodingStyle` 文件*.
 
 [GDB] *Debugging with GDB: The GNU Source-Level Debugger*. 9\. Richard Stallman、Roland Pesch 和 Stan Shebs.
 
@@ -40,7 +41,7 @@
 
 [算法+数据结构=程序] *Algorithms + Data Structures = Programs*. Niklaus Wirth.
 
-[AssemblyHOWTO] *Linux Assembly HOWTO（[`tldp.org/HOWTO/Assembly-HOWTO/`](http://tldp.org/HOWTO/Assembly-HOWTO/)）很不幸，目前 tldp.org 被我们伟大的防火墙屏蔽了，请自己找代理访问*. Konstantin Boldyshev 和 Francois-Rene Rideau.
+[AssemblyHOWTO] *Linux Assembly HOWTO*（[`tldp.org/HOWTO/Assembly-HOWTO/`](http://tldp.org/HOWTO/Assembly-HOWTO/)）很不幸，目前 `tldp.org` 被我们伟大的防火墙屏蔽了，请自己找代理访问. Konstantin Boldyshev 和 Francois-Rene Rideau.
 
 [x86Assembly] *Introduction to 80x86 Assembly Language and Computer Architecture*. Richard C. Detmer.
 
@@ -48,7 +49,7 @@
 
 [SmashStack] *Smashing The Stack For Fun And Profit，网上到处都可以搜到这篇文章*. Aleph One.
 
-[BeganFORTRAN] *The New C: It All Began with FORTRAN（[`www.ddj.com/cpp/184401313`](http://www.ddj.com/cpp/184401313)）*. Randy Meyers.
+[BeganFORTRAN] *The New C: It All Began with FORTRAN*（[`www.ddj.com/cpp/184401313`](http://www.ddj.com/cpp/184401313)）. Randy Meyers.
 
 [具体数学] *Concrete Mathematics*. 2\. Ronald L. Graham、Donald E. Knuth 和 Oren Patashnik.
 
@@ -60,4 +61,4 @@
 
 [UNPv13e] *UNIX Network Programming, Volume 1: The Sockets Networking API*. 3\. W. Richard Stevens、Bill Fenner 和 Andrew M. Rudoff.
 
-[Unicode FAQ] *UTF-8 and Unicode FAQ, [`www.cl.cam.ac.uk/~mgk25/unicode.html`](http://www.cl.cam.ac.uk/~mgk25/unicode.html)*. Markus Kuhn.
+[Unicode FAQ] *UTF-8 and Unicode FAQ*, [`www.cl.cam.ac.uk/~mgk25/unicode.html`](http://www.cl.cam.ac.uk/~mgk25/unicode.html). Markus Kuhn.

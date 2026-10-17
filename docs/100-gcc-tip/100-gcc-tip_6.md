@@ -1,8 +1,10 @@
+
+
 # 函数属性
 
-# 禁止函数被优化掉
+## 禁止函数被优化掉
 
-## 例子
+### 例子
 
 ```cpp
 #if (GCC_VERSION > 4000)
@@ -20,21 +22,21 @@ debug_bb (basic_block bb)
 } 
 ```
 
-## 技巧
+### 技巧
 
-上面的例子是 gcc 的源码。使用 gcc 的扩展功能——函数属性`__attribute__ ((__used__))`，可以指定该函数是有用的，不能被优化掉。
+上面的例子是`gcc`的源码。使用`gcc`的扩展功能——函数属性`__attribute__ ((__used__))`，可以指定该函数是有用的，不能被优化掉。
 
-详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html#Function-Attributes)
+详情参见[`gcc`手册](https://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html#Function-Attributes)
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 强制函数 inline
+## 强制函数`inline`
 
-# 强制函数永远以 inline 的形式调用
+### 强制函数永远以`inline`的形式调用
 
-## 例子
+#### 例子
 
 ```cpp
 #if defined(__GNUC__)
@@ -49,12 +51,13 @@ FORCEDINLINE int add(int a,int b)
 } 
 ```
 
-## 技巧
+#### 技巧
 
-上面的例子是 gcc 的源码。使用 gcc 的扩展功能——函数属性`__attribute__ ((always_inline))`，可以指定该函数永远以 inline 的形式调用
+上面的例子是`gcc`的源码。使用`gcc`的扩展功能——函数属性`__attribute__ ((always_inline))`，可以指定该函数永远以`inline`的形式调用。
 
-详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Inline.html)
+详情参见[`gcc`手册](https://gcc.gnu.org/onlinedocs/gcc/Inline.html)
 
-## 贡献者
+#### 贡献者
 
-mengke
+`mengke`
+

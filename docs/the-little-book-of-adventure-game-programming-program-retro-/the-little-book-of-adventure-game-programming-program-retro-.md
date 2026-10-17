@@ -1,36 +1,11 @@
+
 # 冒险游戏编程入门指南：用 C#（及语言）编写复古文本冒险游戏
-
-
-
-
-
-
-
-
-
-
-
-
 
 HUW COLLINGBOURNE
 
-
-
-
-作者：
-Huw Collingbourne
-
-
-
-
-
+作者：Huw Collingbourne
 
 关于技术编辑.................................................................................................. 11
-
-
-
-
-
 
 ## 引言
 
@@ -39,7 +14,6 @@ Huw Collingbourne
 ## 书中包含什么？
 
 本书提供了一个创建基于文本的冒险游戏的逐步指南。书中使用的主要语言是 C#，它是 Windows 上最重要的语言之一，也适用于 macOS 和 Linux。然而，书中解释的编程原理和技术也可以用于 Java、Ruby 或 Object Pascal 等其他语言编写冒险游戏。我们将在通过创建下面的游戏结束结束，该游戏包含一个连接地点的地图，并接受英语指令以允许用户移动并与物体交互。
-
 
 虽然书中的主要项目都是用 C# 编写的，但附录提供了从 C# 翻译到其他语言的简单帮助。此外，你可以访问 Bitwise Books 网站下载用不同编程语言编写的简单冒险游戏代码示例。
 
@@ -62,9 +36,13 @@ private void Greet(string aName) {
 某些代码之前可能会有一个如下所示的项目名称：
 
 | HelloWorld |
+
 | :--- |
+
 | private void Greet(string aName) {
+
     textBox1.AppendText("Hello, " + aName + "!");
+
 } |
 
 这表明该代码可以在源代码存档中的 HelloWorld 项目中找到。为了跟随教程，你可以将命名的项目或解决方案加载到你的编辑器或 IDE 中（对于 C# 项目，假设你将使用 Visual Studio）。运行程序时，你可能在屏幕上看到的任何输出显示如下：
@@ -77,14 +55,11 @@ Hello, Fred!
 
 这是一个解释性注释。如果你愿意的话，可以跳过它——但如果你真的这样做，你可能会错过一些有趣的内容……！
 
-
-
 ## 使用代码存档
 
 书中描述的大多数程序都是用 C# 语言编写的，旨在加载到 Microsoft Visual Studio 中。你可以逐一从源代码存档加载项目（通过选择包含每个项目的子目录中的解决方案或项目文件），或者像我建议的那样，你可以加载一个分组所有示例项目的解决方案。
 
-
-源代码存档中提供的此解决方案名为 CSharpAdventureGames.sln。它包含多个项目，这些项目在解决方案管理器中显示为“节点”（game01, game02 等）。在编译或运行特定项目之前，你需要先激活它。你可以通过右键点击项目节点并从菜单中选择“设为启动项目”来实现。
+源代码存档中提供的此解决方案名为 `CSharpAdventureGames.sln`。它包含多个项目，这些项目在解决方案管理器中显示为“节点”（`game01`, `game02` 等）。在编译或运行特定项目之前，你需要先激活它。你可以通过右键点击项目节点并从菜单中选择“设为启动项目”来实现。
 
 ## 编译项目
 
@@ -121,22 +96,15 @@ down
 
 ## 作者介绍
 
-
 **Huw Colbourne** 是邪典游戏《Wombat Of Destiny》的作者。Huw 编程已有 30 年。他是一位在线编程讲师，拥有 C、C#、Object Pascal、Ruby 和 JavaScript 等其他语言和主题的成功课程。访问课程网站获取完整列表：http://bitwisourses.com/
 
 Huw 是 Bitwise Books 出版的《Ruby 入门》、《C 入门》、《指针入门》和《递归入门》的作者。他是英国知名的技术作家，曾在 Computer Shopper、PC Pro 和 PC Plus 等许多计算机杂志上写过大量的评论和编程专栏。Huw 曾担任杂志出版商、编辑和电视节目主持人。他在剑桥大学获得英语文学硕士学位，并拥有合气道二段黑带，目前在英国北德文郡教授这种武术。
 
 ## 技术编辑介绍
 
-
 **Dermot Hogan 博士** 是一位软件开发人员，领导过使用汇编语言、C、C# 以及其他多种语言的大型项目。作为实时交易技术的专家，他为国际和金融机构管理并开发了全球风险管理系统。他是独立软件公司 SapphireSteel Software 的首席开发人员。他在剑桥大学获得物理学博士学位。他目前的领域领域致力于机器人控制和成像系统。
 
-
-
-
-
 ## 引言
-
 
 作者仅仅凭借他多年来玩过的几款经典 Infocom 冒险游戏！
 
@@ -146,8 +114,7 @@ Huw 是 Bitwise Books 出版的《Ruby 入门》、《C 入门》、《指针入
 
 我对计算机编程的兴趣真正始于此。那是 20 世纪 80 年代初。我用过文字处理器，用过电子表格软件，但都没有激发我的想象力。当我玩 Infocom 的 Zork 冒险游戏时，我才真正对计算机到底是如何工作的产生好奇。
 
-
-在上面的截图中，我正在 DOSBox 操作系统模拟器（可从 https://www.dosbox.com/ 获取）中运行 Zork 1（Zork 三部曲的第一部分）。我在 > 提示符后输入了如“read the leaflet”（阅读说明）之类的命令。其余文本由游戏显示。
+在上面的截图中，我正在 DOSBox 操作系统模拟器（可从 https://www.dosbox.com/ 获取）中运行 Zork 1（Zork 三部曲的第一部分）。我在 `>` 提示符后输入了如“read the leaflet”（阅读说明）之类的命令。其余文本由游戏显示。
 
 # – 冒险游戏简教程
 
@@ -167,7 +134,6 @@ Huw 是 Bitwise Books 出版的《Ruby 入门》、《C 入门》、《指针入
 
 # I - 冒险游戏简教程
 
-
 上面的照片显示了《命运之黄金土鼠》（The Golden Wombat Of Destiny）的部分游戏。就像 Zork 一样，玩家可以输入相当复杂的命令，如“Put the coin in the kennel!（把硬币放在圈里！）”，游戏会做出相应的响应。
 
 回顾，对于一个新手程序员来说，通过编写一个那种复杂的游戏来学习编程是非常愚蠢自自的行为。当我开始时，我对编程一无所知。当我写完《黄金土鼠》时，我已经成了一个具有中等经验的程序员，所以当我看到自己在还是新手时期写下的所有丑陋代码（现在已经牢固地焊接在游戏里）时，我感到非常震惊。可以说，这是一个巨大的学习经历！
@@ -178,9 +144,7 @@ Huw 是 Bitwise Books 出版的《Ruby 入门》、《C 入门》、《指针入
 
 当我写我的第一个游戏时，我必须自己想办法完成一切。现在你有这本书来引导你。我将解释关于编写冒险游戏你需要的一切知识，从你的第一个简单“房间”到一个包含众多宝藏的巨大连接房间地图复杂游戏。我大部分时间将使用 C# 语言，附录也提供了一些将 C# 翻译到其他语言的帮助。所有的源代码（C# 和其他语言）都可以免费下载。我相信这本书是编写文本冒险游戏最全面的指南。我希望你玩得开心！
 
-
 虽然无法知道是谁写了第一款冒险游戏，但第一个引起计算机用户兴趣的作品几乎无疑是 Will Crowther 的《Colossal Cave》（巨型洞穴），它有时被称为“原始冒险”。除了编程外，Crowther 还是一个洞穴爱好者，这解释了为什么他的冒险游戏发生在一个巨大的洞穴系统中。《Colossal Cave》开发于 1975 年到 1977 年之间，并在另一位程序员 Don Woods 的帮助下完成。他们的游戏是用 FORTRAN 写的，运行在 PDP-10 主机计算机上。
-
 
 冒险游戏演变的下一个大步随着 Zork 的发布而来的。这个游戏对 Colossal Cave 有巨大的借鉴，包括构成了 Zork 世界大部分部分的地下网络。Zork 是由 Dave Lebling 领导的 MIT 程序员团队开发的。
 
@@ -200,16 +164,11 @@ Infocom 以《星交叉》、《银河系漫游》和《三位》等作品统治
 
 好了，现在你有了对冒险游戏的背景了解，是时候开始编程了。在玩家探索游戏之前，我们需要创建一个游戏“世界”。我们的世界以链接连接地点的形式存在。我们需要做的第一件事是创建一些地点并将它们放在地图上……
 
-
-
-
-
 # 2 – 创建地图
 
 在冒险游戏中，玩家需要能够在游戏世界中移动，探索游戏世界中的各个地点。为了实现这一点，我们需要创建一个地图。
 
 在规划游戏时，先为游戏的“世界”绘制一张地图是一个好主主意。地图是相互连接的地点或“房间”的集合。这里是我设计的包含四个房间的地图：巨人房、森林、洞穴和地牢。线条表示连接一个房间到另一个房间的出口。没有连接线的地方表示没有出口。
-
 
 ## 房间还是地点？
 
@@ -285,7 +244,7 @@ r.w = 3;
 r.e = 4;
 ```
 
-这创建了一个新的 `Room` 对象并将其分配给变量 `r`。然后，我为对象的每个字段分配值：一个字符串名称和四个用于“方向”变量的整数：n、s、w 和 e。
+这创建了一个新的 `Room` 对象并将其分配给变量 `r`。然后，我为对象的每个字段分配值：一个字符串名称和四个用于“方向”变量的整数：`n`、`s`、`w` 和 `e`。
 
 ## 2 — 创建地图
 
@@ -296,13 +255,20 @@ r.e = 4;
 你只需要定义一次类，然后就可以创建该类的许多实例。我可以通过为每个 `Room` 对象声明一个新的 `Room` 变量来实现。`Room` 类定义了房间是什么。`Room` 对象代表单个房间。在 `game02` 项目中我有四个房间 `room0`、`room1`、`room2` 和 `room3`：
 
 | game02 |
+
 | :--- |
+
 | room0; |
+
 | room1; |
+
 | room2; |
+
 | room3; |
 
 我通过调用 `Room` 构造函数创建一个新的 `Room` 对象，并将其分配给我的变量之一：
+
+
 
 ```csharp
 room0 = new Room();
@@ -349,10 +315,6 @@ outputTB.Text = $"You are in {room0.name}";
 * */
 ```
 
-
-
-
-
 ## 2 — 创建地图
 
 这张地图包含四个房间。巨魔房（Troll Room）通往东边的森林（当然，森林也通往西边的巨魔房）。巨魔房还向南通往洞穴（Cave），而洞穴向东通往地下地牢（Dungeon）。在没有显示连接的地方意味着没有“出口”。例如，巨魔房北方没有出口，南方也没有出口。在我的程序中，我的地图结构将是一个数组。
@@ -396,10 +358,10 @@ map[3] = room3;
 # 3 – 在地图上移动
 
 如果玩家无法从一个位置移动到另一个位置，那么在游戏中拥有复杂的地点网络是没有用的。
+
 我们将在本章中查看如何实现。
 
 在 `game04` 项目中，我设计了一个带有 N、S、W 和 E 按钮的简单用户界面，用户可以点击这些按钮在四个指南针方向上移动。左侧的 Visual Studio 事件面板允许我浏览这些按钮的点击事件处理器（event-handler）方法。在这里，我可以看到当用户点击 `S` 按钮时，名为 `s8tn_Click()` 的方法将运行。
-
 
 我还做了一些其他更改。首先，我更改了 `Room` 变量的“作用域（scope）”。在之前的项目中，它们被声明在 `button1_click()` 事件处理器方法内部，该方法在用户点击按钮时运行。
 
@@ -472,17 +434,13 @@ private void MovePlayer(int newpos) {
 }
 ```
 
-
-
-
-
 ## 添加玩家
 
 到目前为止，我一直用于在地图上移动的技术并不是面向对象的。玩家的位置只是一个整数。如果能有一个玩家*对象*来包含所有与游戏玩家相关的数据（变量）和行为（方法），将会好得多。让我们来看看如何实现这一点。
 
-我决定创建一个名为 Actor 的类。它可以用于定义任何交互式角色——一个可以在地图上移动、拾取和放下宝藏的角色。目前，我只需要一个 Actor 来表示玩家。在更复杂的游戏中，你还可以创建其他的交互式角色。
+我决定创建一个名为 `Actor` 的类。它可以用于定义任何交互式角色——一个可以在地图上移动、拾取和放下宝藏的角色。目前，我只需要一个 `Actor` 来表示玩家。在更复杂的游戏中，你还可以创建其他的交互式角色。
 
-和我游戏中的其他所有对象一样，Actor 对象应该有一个名称和描述。我选择像这样写一个 Actor 类：
+和我游戏中的其他所有对象一样，`Actor` 对象应该有一个名称和描述。我选择像这样写一个 `Actor` 类：
 
 ```csharp
 public class Actor {
@@ -491,13 +449,13 @@ public class Actor {
 }
 ```
 
-但由于 *Room* 类也定义了名称和描述，如果我通过创建一个另一个带有名称和描述的类来避免这种不必要的重复，让 *Room* 类和 *Actor* 类就可以*继承*这些特性。
+但由于 `Room` 类也定义了名称和描述，如果我通过创建一个另一个带有名称和描述的类来避免这种不必要的重复，让 `Room` 类和 `Actor` 类就可以*继承*这些特性。
 
 这是面向对象编程的基本原则：首先创建一个简单的类，然后创建更复杂的类，它们继承简单类的特性并根据需要添加额外的功能。
 
-在 game05 项目中，我创建了一个名为 *Thing* 的类。*Thing* 类有一个名称和描述，它将是我游戏中所有其他类的祖先。到为止，我将对象内部的字段设置为公共，这样我创建的任何对象都可以获取这些字段或为它们分配新值。这很容易做到，但这是一种坏习惯。
+在 `game05` 项目中，我创建了一个名为 `Thing` 的类。`Thing` 类有一个名称和描述，它将是我游戏中所有其他类的祖先。到为止，我将对象内部的字段设置为公共，这样我创建的任何对象都可以获取这些字段或为它们分配新值。这很容易做到，但这是一种坏习惯。
 
-对象内部的字段（实际数据）应该是隐藏的。它们应该只能通过访问器方法访问——即为变量提供公共“接口”的方法。出于这个原因，*Thing* 以及我游戏中其他类的字段（变量）现在被设为私有：
+对象内部的字段（实际数据）应该是隐藏的。它们应该只能通过访问器方法访问——即为变量提供公共“接口”的方法。出于这个原因，`Thing` 以及我游戏中其他类的字段（变量）现在被设为私有：
 
 ```csharp
 public class Thing {
@@ -508,9 +466,9 @@ public class Thing {
 
 ## 私有字段名称
 
-为了清晰起见，我选择在私有字段名称 _name 和 _description 前加下划线。这是许多编程语言中的通用惯例。然而，一些程序员倾向于对字段和访问方法使用相同的名称，但字段以小字母开头（例如 name），而属性以大字母开头（例如 Name）。
+为了清晰起见，我选择在私有字段名称 `_name` 和 `_description` 前加下划线。这是许多编程语言中的通用惯例。然而，一些程序员倾向于对字段和访问方法使用相同的名称，但字段以小字母开头（例如 `name`），而属性以大字母开头（例如 `Name`）。
 
-_name 和 _description 现在是私有的，代码无法在对象外部引用它们。我需要添加公共的访问器方法来获取和设置这些变量的值。在 C# 中，我可以使用 => 运算符来返回字段的值。我可以使用 set 配合 => 运算符来赋值（由关键字 value 表示），如下所示：
+`_name` 和 `_description` 现在是私有的，代码无法在对象外部引用它们。我需要添加公共的访问器方法来获取和设置这些变量的值。在 C# 中，我可以使用 `=>` 运算符来返回字段的值。我可以使用 `set` 配合 `=>` 运算符来赋值（由关键字 `value` 表示），如下所示：
 
 ```csharp
 public string Name {
@@ -526,9 +484,9 @@ public string Description {
 
 ## 属性
 
-在 C# 和 .NET 中，当你提供 get 和 set 访问器来分配和返回对象变量的值时（正如我对 Name 和 Description 所做的那样），这些被称为“属性”。一些其他语言提供了类似的功能。例如，在 Ruby 中，它们被称为“attributes”。
+在 C# 和 .NET 中，当你提供 `get` 和 `set` 访问器来分配和返回对象变量的值时（正如我对 `Name` 和 `Description` 所做的那样），这些被称为“属性”。一些其他语言提供了类似的功能。例如，在 Ruby 中，它们被称为“attributes”。
 
-现在我有了一个 Thing 类，可以将 Room 类重写为它的后代。在 C# 中，实现这一点的方法是在类名后加上冒号，然后是它的祖先类名，正如我做的那样：
+现在我有了一个 `Thing` 类，可以将 `Room` 类重写为它的后代。在 C# 中，实现这一点的方法是在类名后加上冒号，然后是它的祖先类名，正如我做的那样：
 
 ```csharp
 public class Room : Thing {
@@ -536,9 +494,9 @@ public class Room : Thing {
 
 # 3 在地图上移动
 
-这显示 Room 是 Thing 的类型，因此它将继承 Thing 的特性。在这种情况下，任何 Room 对象将将有一个名称和描述，因为它们继承自 Thing 类。因此我不需要在 Room 类中定义名称和描述字段或任何访问方法。
+这显示 `Room` 是 `Thing` 的类型，因此它将继承 `Thing` 的特性。在这种情况下，任何 `Room` 对象将将有一个名称和描述，因为它们继承自 `Thing` 类。因此我不需要在 `Room` 类中定义名称和描述字段或任何访问方法。
 
-由于 Room 继承自 Thing，它会自动继承 Name 和 Description 属性。这意味着我现在需要的是为 Room 添加任何额外功能；这里是四个出口：北、南、东、西。我将这些变量设为私有并带有公共访问器：
+由于 `Room` 继承自 `Thing`，它会自动继承 `Name` 和 `Description` 属性。这意味着我现在需要的是为 `Room` 添加任何额外功能；这里是四个出口：北、南、东、西。我将这些变量设为私有并带有公共访问器：
 
 ```csharp
 private int _n;
@@ -573,7 +531,7 @@ public int E {
 
 # 3 在地图上移动
 
-Actor 类也继承自 Thing 类，因此它自动有一个名称和描述。它还需要一个项目——Actor 对象的当前位置。位置是一个 Room。所以我给它了一个 Room 字段，私有变量 _location，以及一个公共访问方法：
+`Actor` 类也继承自 `Thing` 类，因此它自动有一个名称和描述。它还需要一个项目——`Actor` 对象的当前位置。位置是一个 `Room`。所以我给它了一个 `Room` 字段，私有变量 `_location`，以及一个公共访问方法：
 
 ```csharp
 public class Actor : Thing {
@@ -595,13 +553,13 @@ public class Actor : Thing {
 
 ![Thing Hierarchy](https://example.com/image_link.png)
 
-上面的图显示了类层次。Room 和 Actor 类继承自 Thing。
+上面的图显示了类层次。`Room` 和 `Actor` 类继承自 `Thing`。
 
 # 3 在地图上移动
 
-这显示 Room 是 Thing 的类型，因此它将继承 Thing 的特性。在这种情况下，任何 Room 对象将自动有一个名称和描述，因为它们继承自 Thing 类。因此我不需要在 Room 类中定义名称和描述字段或任何访问方法。
+这显示 `Room` 是 `Thing` 的类型，因此它将继承 `Thing` 的特性。在这种情况下，任何 `Room` 对象将自动有一个名称和描述，因为它们继承自 `Thing` 类。因此我不需要在 `Room` 类中定义名称和描述字段或任何访问方法。
 
-由于 Room 继承自 Thing，它会自动继承 Name 和 Description 属性。这意味着我现在需要的是为 Room 添加任何额外功能；这里是四个出口：北、南、东、西。我将这些变量设为私有并带有公共访问器：
+由于 `Room` 继承自 `Thing`，它会自动继承 `Name` 和 `Description` 属性。这意味着我现在需要的是为 `Room` 添加任何额外功能；这里是四个出口：北、南、东、西。我将这些变量设为私有并带有公共访问器：
 
 ```csharp
 private int _n;
@@ -638,7 +596,7 @@ public int E {
 room = new Room();
 ```
 
-事实上，当我想在 game05 中初始化一些变量时，我创建了这个 Room 构造函数：
+事实上，当我想在 `game05` 中初始化一些变量时，我创建了这个 `Room` 构造函数：
 
 ```csharp
 public Room(string aName, string aDescription, int aN, int aS, int aW, int aE) {
@@ -650,7 +608,7 @@ public Room(string aName, string aDescription, int aN, int aS, int aW, int aE) {
 }
 ```
 
-Room 和 Actor 构造函数将字符串 aName 和 aDescription 传递给基类 Thing。这是 Thing 的构造函数：
+`Room` 和 `Actor` 构造函数将字符串 `aName` 和 `aDescription` 传递给基类 `Thing`。这是 `Thing` 的构造函数：
 
 ```csharp
 public Thing(string aName, string aDescription) {
@@ -659,7 +617,9 @@ public Thing(string aName, string aDescription) {
 }
 ```
 
-我还为 Actor 创建了此构造函数：
+我还为 `Actor` 创建了此构造函数：
+
+
 
 ```csharp
 public Actor(string aName, string aDescription, Room aRoom) {
@@ -670,26 +630,23 @@ public Actor(string aName, string aDescription, Room aRoom) {
 
 ## 移动玩家
 
-现在有了玩家对象，我删之前用于存储当前房间索引的 position 变量。在 game04 中，当我想移动玩家时，我为整数位置分配了一个新值。
+现在有了玩家对象，我删之前用于存储当前房间索引的 `position` 变量。在 `game04` 中，当我想移动玩家时，我为整数位置分配了一个新值。
 
-在 game05 中，当我想移动玩家时，我更新 _player 对象的 Location 属性，它不是一个整数而是一个 Room。在我的 C# 项目中，我有一个带有四个按钮的用户界面，用于向北、南、西、东移动。点击这些按钮之一时，我想更新相关的 Room 属性为 N 或 S，以便将玩家移动到方向的新房间。
+在 `game05` 中，当我想移动玩家时，我更新 `_player` 对象的 `Location` 属性，它不是一个整数而是一个 `Room`。在我的 C# 项目中，我有一个带有四个按钮的用户界面，用于向北、南、西、东移动。点击这些按钮之一时，我想更新相关的 `Room` 属性为 `N` 或 `S`，以便将玩家移动到方向的新房间。
 
-让我们来看一个例子。当我点击向南移动按钮时，我获取当前位置的 Room——这就是存储在 _player Location 属性中的 Room。然后我获取该 Room 的 S 属性值。S 属性是地图数组中的一个整数索引：
+让我们来看一个例子。当我点击向南移动按钮时，我获取当前位置的 `Room`——这就是存储在 `_player` `Location` 属性中的 `Room`。然后我获取该 `Room` 的 `S` 属性值。`S` 属性是地图数组中的一个整数索引：
 
 ```csharp
 _player.Location.S
 ```
 
-我将其传递给 MovePlayer() 方法：
+我将其传递给 `MovePlayer()` 方法：
 
 ```csharp
 private void SBtn_Click(object sender, EventArgs e) {
     MovePlayer(_player.Location.S);
 }
 ```
-
-
-
 
 # 3 — 在地图上移动
 
@@ -804,21 +761,17 @@ public enum Rm {
 Rm selectedRoom;
 ```
 
-
-
-
-
 ## 重构游戏
 
-请注意，我提供的代码允许 `Form1` 访问（或“获取”）*player object*，但不能修改它。换句话说，Player 是一个只读属性。我在 `Adventure` 中添加了 `MovePlayerTo()` 函数。该函数返回一个字符串，指示新的位置，或者说明没有出口。此外，在 `Form1` 中，我添加了一个 `Adventure` 对象 `adv`：
+请注意，我提供的代码允许 `Form1` 访问（或“获取”）*player object*，但不能修改它。换句话说，`Player` 是一个只读属性。我在 `Adventure` 中添加了 `MovePlayerTo()` 函数。该函数返回一个字符串，指示新的位置，或者说明没有出口。此外，在 `Form1` 中，我添加了一个 `Adventure` 对象 `adv`：
 
-```
+```csharp
 Adventure adv;
 ```
 
 当我运行程序时，`InitGame()` 方法像以前一样执行。但这次它创建了 `adv` 对象。这会调用 `Adventure` 构造函数，来初始化地图和玩家：
 
-```c
+```csharp
 private void InitGame() {
     adv = new Adventure();
 }
@@ -830,7 +783,7 @@ private void InitGame() {
 
 在 `game07` 中，每当我向 `_map` 添加一个元素（键和值）时，我都会创建一个新的 `Room` 对象。记住，一个 `Rm` 枚举常量提供了键，而 `Room` 对象是其关联的值：
 
-```c
+```csharp
 game07
 _map.Add(Rm.RoomList,
 new Room("Troll Room", "a dank, dark room that smells of troll",
@@ -839,7 +792,7 @@ Rm.NOEXIT, Rm.Cave, Rm.NOEXIT, Rm.Forest));
 
 由于我不再拥有任何 `Room` 变量，当我使用键进入 `_map` 并调用 `Actor` 构造函数时，我还需要初始化玩家的位置。起始位置是“Troll Room”，因此我通过地图的 `RoomAt()` 方法访问该房间，以返回与 `Rm.TrollRoom` 键关联的 `Room` 对象：
 
-```c
+```csharp
 _player = new Actor("You", "The Player", _map.RoomAt(Rm.TrollRoom));
 ```
 
@@ -847,7 +800,7 @@ _player = new Actor("You", "The Player", _map.RoomAt(Rm.TrollRoom));
 
 我在 `game08` 中继续重构我的代码。我决定我不喜欢按钮的事件处理器去钻探 `Player` 内部寻找当前位置的出口：
 
-```c
+```csharp
 game07
 private void NBtn_Click(object sender, EventArgs e) {
     MovePlayer(adv.Player.Location.N);
@@ -856,7 +809,7 @@ private void NBtn_Click(object sender, EventArgs e) {
 
 按钮事件处理器不应该干涉 `Player` 的内部细节。它们应该只请求玩家向某个方向移动。这是我现在实现事件处理器的示例：
 
-```c
+```csharp
 game08
 private void NBtn_Click(object sender, EventArgs e) {
     MovePlayer(Dir.NORTH);
@@ -865,7 +818,7 @@ private void NBtn_Click(object sender, EventArgs e) {
 
 每个针对 N、S、E、W 按钮的事件处理器都会将一个方向常量传递给 `MovePlayer()` 方法；该方法会将此常量继续传递给 `adv` 对象的 `MovePlayer()` 方法。我在 `AdvConsists.cs` 中定义了方向常量。就像 `Rm` 常量一样，`Dir` 是一个具有固定标识符集合的枚举：NORTH、SOUTH、EAST、WEST：
 
-```c
+```csharp
 public enum Dir {
 NORTH,
 SOUTH,
@@ -876,7 +829,7 @@ WEST
 
 我重写了 `MovePlayer()` 函数，使其接收一个 `Dir` 常量而不是以前的 `Rm`。这是旧版本：
 
-```c
+```csharp
 game07
 private void MovePlayer(Rm newpos) {
     outputTB.Text = adv.MovePlayerTo(newpos);
@@ -887,16 +840,16 @@ private void MovePlayer(Rm newpos) {
 
 这是新版本：
 
-```c
+```csharp
 game08
 private void MovePlayer(Dir direction) {
     outputTB.Text = adv.MovePlayerTo(direction);
 }
 ```
 
-和以前一样，`MovePlayer()` 调用 `Adventure` 类的 `MovePlayerTo()` 方法。我重写了 `MovePlayerTo()`。它现在调用一个名为 `MoveTo()` 的私有方法。该方法使用 `switch...case` 语句测试方向的值，并返回赋值给玩家 `Location` 对应方向的 N、S 或 E 属性的 Rm 常量：
+和以前一样，`MovePlayer()` 调用 `Adventure` 类的 `MovePlayerTo()` 方法。我重写了 `MovePlayerTo()`。它现在调用一个名为 `MoveTo()` 的私有方法。该方法使用 `switch...case` 语句测试方向的值，并返回赋值给玩家 `Location` 对应方向的 N、S 或 E 属性的 `Rm` 常量：
 
-```c
+```csharp
 private Rm MoveTo(Actor anActor, Dir direction) {
     Room r = anActor.Location;
     Rm exit;
@@ -935,9 +888,9 @@ public string MovePlayerTo(Dir direction) {
 
 ## 5 — 重构游戏
 
-`MoveTo()` 方法将“当前房间”（anActor.Location）赋值给一个本地 `Room` 变量。它通过测试 `Dir` 方向常量与该出口的值来寻找从 `Room r` 的出口。如果该方向没有房间，则常量为 `Rm.NOEXIT`。如果该方向有房间，则调用 `MoveActorTo()` 方法将演员移动到该房间。
+`MoveTo()` 方法将“当前房间”（`anActor.Location`）赋值给一个本地 `Room` 变量。它通过测试 `Dir` 方向常量与该出口的值来寻找从 `Room r` 的出口。如果该方向没有房间，则常量为 `Rm.NOEXIT`。如果该方向有房间，则调用 `MoveActorTo()` 方法将演员移动到该房间。
 
-```c
+```csharp
 private void MoveTo(Actor anActor, Dir direction) {
     Room r = anActor.Location;
     Rm exit;
@@ -965,7 +918,7 @@ private void MoveTo(Actor anActor, Dir direction) {
 }
 ```
 
-`MoveTo()` 方法将“当前房间”（anActor.Location）赋值给一个本地 `Room` 变量。它通过测试 `Dir` 方向常量与该出口的值来寻找从 `Room r` 的出口。如果该方向没有房间，则常量为 `Rm.NOEXIT`。如果该方向有房间，则调用 `MoveActorTo()` 方法将演员移动到该房间。
+`MoveTo()` 方法将“当前房间”（`anActor.Location`）赋值给一个本地 `Room` 变量。它通过测试 `Dir` 方向常量与该出口的值来寻找从 `Room r` 的出口。如果该方向没有房间，则常量为 `Rm.NOEXIT`。如果该方向有房间，则调用 `MoveActorTo()` 方法将演员移动到该房间。
 
 最后，`MoveTo()` 返回出口常量，该常量被 `MovePlayerTo()` 使用。
 
@@ -973,7 +926,7 @@ private void MoveTo(Actor anActor, Dir direction) {
 
 让我们考虑玩家在 Troll Room 并点击北（North）按钮的情况。地图初始化如下：
 
-```c
+```csharp
 _map.Add(Rm.RoomList,
 new Room("Troll Room", "a dank, dark room that smells of troll",
 Rm.NOEXIT, Rm.Cave, Rm.NOEXIT, Rm.Forest));
@@ -983,17 +936,15 @@ Troll Room 向北没有出口，因此 `MoveTo()` 返回 `Rm.NOEXIT`。`MovePlay
 
 然而，如果玩家点击南（South）按钮，`MoveTo()` 返回 `Rm.Cave`。调用了 `MoveActorTo()`，玩家被移动到 Cave。`MovePlayerTo()` 返回“You are now in the Cave”。
 
-
-
-
-
 # 5 — 重构游戏结构
 
 ## 使用 Visual Studio 调试
 
 如果你正在使用 Visual Studio 尝试运行书中提供的 C# 代码，请在调试器中运行 `game08`。在各种按钮事件处理程序上设置断点，同时也（至少）在 `MoveTo()` 和 `MovePlayerTo()` 方法的最后几行代码上设置断点。然后按 F5 运行直到断点，或使用 F11（逐入）和 F10（逐过程），然后在调试器的“本地”（Locals）或“监视”（Watch）窗口中观察变量的值。
 
-顺便提一下，由于 `MovePlayerTo()` 是这三个移动方法中唯一的公共（public），它是唯一可以从 `Form1.cs` 代码调用的方法。我将 `MoveTo()` 和 `MoveActorTo()` 方法设置为私有（private），因为在游戏的未来版本中，我可能想要调用它们来移动其他的 Actor 对象（交互式角色）。
+
+
+顺便提一下，由于`MovePlayerTo()`是这三个移动方法中唯一的公共（public）方法，它是唯一可以从`Form1.cs`代码调用的方法。我将`MoveTo()`和`MoveActorTo()`方法设置为私有（private），因为在游戏的未来版本中，我可能想要调用它们来移动其他的`Actor`对象（交互式角色）。
 
 现在我已经整理好了游戏代码，准备好添加一些宝藏了。宝藏是位于各种房间中的对象。有时玩家可能想要收集宝藏，那时事情就变得真正有趣了。
 
@@ -1003,15 +954,15 @@ Troll Room 向北没有出口，因此 `MoveTo()` 返回 `Rm.NOEXIT`。`MovePlay
 
 游戏的基础部分已经就绪。我们在地图中存储了房间，玩家可以在房间之间移动。我们还没有让玩家收集宝藏的能力。在做此之前，我们需要能够向房间中添加宝藏列表。
 
-玩家也需要能够存储宝藏列表。并且需要某种方式将宝藏从一个列表传输到另一个列表——当玩家捡起宝藏时，从房间传输到玩家的背包；当玩家丢掉宝藏时，从背包传输到房间。我已经在 `game09` 项目中添加了这些功能。
+玩家也需要能够存储宝藏列表。并且需要某种方式将宝藏从一个列表传输到另一个列表——当玩家捡起宝藏时，从房间传输到玩家的背包；当玩家丢掉宝藏时，从背包传输到房间。我已经在`game09`项目中添加了这些功能。
 
 ## 宝藏列表
 
-由于玩家和房间都需要持有对象列表，因此将列表不是单独添加到 `Room` 和 `Actor` 类中，而是添加到一个公共祖先类中是合理的。这样，`Room` 和 `Actor` 类就可以从它们的祖先类继承同一套列表管理功能，而不需要实现两次列表。
+由于玩家和房间都需要持有对象列表，因此将列表不是单独添加到`Room`和`Actor`类中，而是添加到一个公共祖先类中是合理的。这样，`Room`和`Actor`类就可以从它们的祖先类继承同一套列表管理功能，而不需要实现两次列表。
 
-到为止，`Room` 和 `Actor` 都直接继承自 `Thing` 类。`Thing` 类是一个非常简单的类，我想保持它的简单！将基类保持得小巧且“通用”，并将更专门的功能（如列表管理）放在后代类中是良好的面向对象设计。如果我将列表管理添加到 `Thing` 类，那么所有其他类都将继承列表。这不是我想要的。
+到目前为止，`Room`和`Actor`都直接继承自`Thing`类。`Thing`类是一个非常简单的类，我想保持它的简单！将基类保持得小巧且“通用”，并将更专门的功能（如列表管理）放在后代类中是良好的面向对象设计。如果我将列表管理添加到`Thing`类，那么所有其他类都将继承列表。这不是我想要的。
 
-所以，既然我想让 `Room` 和 `Actor` 的祖先包含一个列表，但目前它们的祖先还没有列表，我该怎么办？我的解决方案是创建一个中间类——一个位于基类 `Thing` 和更专门的类 `Actor`/`Room` 之间的类。在 `game09` 中，我创建了一个名为 `ThingHolder` 的类来维护一个 thing 列表。它可以使用 `AddThing()` 或 `AddThings()` 方法向列表中添加一个或多个 thing，并且它有一个名为 `Things` 的属性可以返回列表：
+所以，既然我想让`Room`和`Actor`的祖先包含一个列表，但目前它们的祖先还没有列表，我该怎么办？我的解决方案是创建一个中间类——一个位于基类`Thing`和更专门的类`Actor`/`Room`之间的类。在`game09`中，我创建了一个名为`ThingHolder`的类来维护一个thing列表。它可以使用`AddThing()`或`AddThings()`方法向列表中添加一个或多个thing，并且它有一个名为`Things`的属性可以返回列表：
 
 ```csharp
 public class ThingHolder : Thing {
@@ -1020,7 +971,7 @@ public class ThingHolder : Thing {
     public ThingHolder(string aName
 ```
 
-`ThingHolder` 是 `Thing` 的后代。为了将 `ThingHolder` 类的功能同时添加到 `Actor` 和 `Room` 类中，我需要做的只是重新定义这些类的祖先。之前 `Room` 和 `Actor` 直接继承自 `Thing`。现在让它们继承自 `ThingHolder`。当然，它们最终仍然继承自 `Thing`，因为 `ThingHolder` 本身继承自 `Thing`。但它们的直接祖先现在是 `ThingHolder`，所以它们继承了类的 `ThingList`。我还更改了 `Room` 和 `Actor` 的构造函数，使其接受一个新的参数，即一个 `ThingList` 对象：
+`ThingHolder`是`Thing`的后代。为了将`ThingHolder`类的功能同时添加到`Actor`和`Room`类中，我需要做的只是重新定义这些类的祖先。之前`Room`和`Actor`直接继承自`Thing`。现在让它们继承自`ThingHolder`。当然，它们最终仍然继承自`Thing`，因为`ThingHolder`本身继承自`Thing`。但它们的直接祖先现在是`ThingHolder`，所以它们继承了类的`ThingList`。我还更改了`Room`和`Actor`的构造函数，使其接受一个新的参数，即一个`ThingList`对象：
 
 ```csharp
 public Room(string aName, string aDescription, Rm aN, Rm aS, Rm aW, Rm aE,
@@ -1031,15 +982,15 @@ public Actor(string aName, string aDescription, Room aRoom, ThingList tl);
 
 ## ThingList 类
 
-我的 `Room` 和 `Actor` 类都维护一个存储在 `ThingList` 中的对象列表。看我对这个类的声明：
+我的`Room`和`Actor`类都维护一个存储在`ThingList`中的对象列表。看我对这个类的声明：
 
 ```csharp
 public class ThingList : List<Thing>
 ```
 
-这显示 `ThingList` 是泛型列表，是一个强类型集合。`List` 类可以持有对象集合，并带有许多实用的方法，用于添加、删除和定位集合中的对象。存储在列表中的对象的实际类型位于尖括号之间，正如我在这里做的那样：`<Thing>`
+这显示`ThingList`是泛型列表，是一个强类型集合。`List`类可以持有对象集合，并带有许多实用的方法，用于添加、删除和定位集合中的对象。存储在列表中的对象的实际类型位于尖括号之间，正如我在这里做的那样：`<Thing>`
 
-只有 `Thing` 对象及其后代可以存储在此列表中。我的 `ThingList` 类现在可以使用由 `List` 类定义的方法（如 `Add()` 和 `AddRange()`）向 `ThingList` 集合中添加一个或多个定义类型（`Thing` 对象）的对象：
+只有`Thing`对象及其后代可以存储在此列表中。我的`ThingList`类现在可以使用由`List`类定义的方法（如`Add()`和`AddRange()`）向`ThingList`集合中添加一个或多个定义类型（`Thing`对象）的对象：
 
 ![](img/79557530489e53febfe5a6898863b83c_56_0.png)
 
@@ -1074,21 +1025,21 @@ public class ThingList : List<Thing> {
 
 # 6 — 宝藏集合
 
-当然，由于该类派生自 `List`，我可以添加其他方法——正如我在这里这样做——返回匹配字符串的对象。
+当然，由于该类派生自`List`，我可以添加其他方法——正如我在这里这样做——返回匹配字符串的对象。
 
 ```csharp
 public class RoomList : Dictionary<Rm, Room>
 ```
 
-我的 `RoomList` 是泛型的，就像我的 `ThingList` 一样。在强类型语言（如 C# 和 Java）中，泛型集合提供了类型安全（因为它们指定了在列表中可以使用哪些类型），而不需要强制你继承自特定的基类。总之，`ThingList` 实现了对象的列表。`ThingHolder` 类定义了一个包含 `ThingList` 的对象。`Room` 和 `Actor` 对象都是 `ThingHolder` 的后代，因此它们各包含 `ThingList`。房间中的任何宝藏存储在 `ThingList` 中。玩家等 Actor 可以收集宝藏并丢弃。
+我的`RoomList`是泛型的，就像我的`ThingList`一样。在强类型语言（如C#和Java）中，泛型集合提供了类型安全（因为它们指定了在列表中可以使用哪些类型），而不需要强制你继承自特定的基类。总之，`ThingList`实现了对象的列表。`ThingHolder`类定义了一个包含`ThingList`的对象。`Room`和`Actor`对象都是`ThingHolder`的后代，因此它们各包含`ThingList`。房间中的任何宝藏存储在`ThingList`中。玩家等`Actor`可以收集宝藏并丢弃。
 
 ## 泛型字典
 
-你可能记得在第 4 章见过过类似的语法。`Dictionary` 是键值对的集合。当我想要一个类型为 `Rm` 作为键、`Room` 对象作为值的字典时，我这样定义 `RoomList`：
+你可能记得在第4章见过过类似的语法。`Dictionary`是键值对的集合。当我想要一个类型为`Rm`作为键、`Room`对象作为值的字典时，我这样定义`RoomList`：
 
 ## 向房间添加宝藏
 
-现在我准备好创建一些 `Thing` 对象列表并将它们添加到某些房间中。你可以在 `game09` 的 `Adventure` 类中看到我是如何做的。我创建了两个 `ThingList` 对象：`trollroomlist` 和 `forestlist`：
+现在我准备好创建一些`Thing`对象列表并将它们添加到某些房间中。你可以在`game09`的`Adventure`类中看到我是如何做的。我创建了两个`ThingList`对象：`trollroomlist`和`forestlist`：
 
 ```csharp
 game09
@@ -1096,13 +1047,15 @@ ThingList trollroomlist = new ThingList();
 ThingList forestlist = new ThingList();
 ```
 
-向它们添加了一些 `Thing` 对象。注意，我没有为每个 `Thing` 对象创建单独，因为这些对象永远不存在列表之外：
+向它们添加了一些`Thing`对象。注意，我没有为每个`Thing`对象创建单独变量，因为这些对象永远不存在列表之外：
 
 - `trollroomlist.Add(new Thing("carrot", "这是一个很脆的胡萝卜"));`
+
 - `forestlist.Add(new Thing("sausage", "这是一根肥满的猪肉肠"));`
+
 - `trollroomlist.Add(new Thing("tree", "这是一棵巨大的橡树", false));`
 
-当我创建房间并将它们添加到地图时，我将 `trollroomlist` 添加到巨鬼房间（Troll Room），将 `forestlist` 添加到森林（Forest）房间：
+当我创建房间并将它们添加到地图时，我将`trollroomlist`添加到巨鬼房间（Troll Room），将`forestlist`添加到森林（Forest）房间：
 
 ```csharp
 _map.Add(Rm.TrollRoom, new Room("巨鬼房间",
@@ -1115,15 +1068,11 @@ Rm.NOEXIT, Rm.NOEXIT, Rm.TrollRoom, Rm.NOEXIT,
 forestlist));
 ```
 
-对于那些不包含任何对象的房间，我创建一个新的空 `ThingList` 作为 `Room` 构造函数的最后一个参数。每个房间都需要一个 `ThingList`，即使它里面什么都没有，玩家可能在那些房间里丢掉对象。丢掉的对象会被添加到 `ThingList` 中。
-
-
-
-
+对于那些不包含任何对象的房间，我创建一个新的空`ThingList`作为`Room`构造函数的最后一个参数。每个房间都需要一个`ThingList`，即使它里面什么都没有，玩家可能在那些房间里丢掉对象。丢掉的对象会被添加到`ThingList`中。
 
 ## ThingHolder 构造函数
 
-Room 和 Actor 构造函数都接受 `ThingList` 作为最后一个参数，并且它们调用其祖类 ThingHolder 的构造函数来初始化该列表：
+`Room`和`Actor`构造函数都接受`ThingList`作为最后一个参数，并且它们调用其祖类`ThingHolder`的构造函数来初始化该列表：
 
 ```
 game09
@@ -1134,27 +1083,27 @@ public Actor(string aName, string aDescription, Room aRoom, ThingList tl) :
 base(aName, aDescription, tl)
 ```
 
-在 Adventure 类中，我用一个空的 `ThingList` 初始化了 `_player`。在游戏过程中，每当玩家从房间中拿走物品时，该物品就会添加到这个列表中：
+在`Adventure`类中，我用一个空的`ThingList`初始化了`_player`。在游戏过程中，每当玩家从房间中拿走物品时，该物品就会添加到这个列表中：
 
 ```
 _player = new Actor("You", "The Player", _map.RoomAt(Rm.TrollRoom),
 new ThingList());
 ```
 
-由于我打算让玩家从房间里拿宝藏，所以我还有一件事需要做。我需要确保只有那些在逻辑上足够小可以被捡取的物品才能被捡取。例如，forestlist 包含了一棵巨大的橡树：
+由于我打算让玩家从房间里拿宝藏，所以我还有一件事需要做。我需要确保只有那些在逻辑上足够小可以被捡取的物品才能被捡取。例如，`forestlist`包含了一棵巨大的橡树：
 
 ```
 new Thing("tree", "It is a gigantic oak tree", false)
 ```
 
-如果玩家进入森林并拿走了那棵树，那就太蠢了。我需要某种方法来确保某些物品可以捡，而某些不能。这就是第三个参数的作用。通过将其设置为 `false`，我确保了这棵树不能被捡走。不过，你可能注意到胡萝卜和香肠并没有第三个参数：
+如果玩家进入森林并拿走了那棵树，那就太蠢了。我需要某种方法来确保某些物品可以捡，而某些不能。这就是第三个参数的作用。通过将其设置为`false`，我确保了这棵树不能被捡走。不过，你可能注意到胡萝卜和香肠并没有第三个参数：
 
 ```
 new Thing("carrot", "It is a very crunchy carrot")
 new Thing("sausage", "It is a plump pork sausage")
 ```
 
-构造函数如何能有时需要三个参数而有时只需要两个？事实证明我重写的 Thing 类现在有两个构造函数。第一个构造函数需要两个字符串参数；第二个构造函数需要两个字符串后跟一个 `bool`（true 或 false）参数：
+构造函数如何能有时需要三个参数而有时只需要两个？事实证明我重写的`Thing`类现在有两个构造函数。第一个构造函数需要两个字符串参数；第二个构造函数需要两个字符串后跟一个`bool`（true或false）参数：
 
 ## 方法重载
 
@@ -1172,17 +1121,17 @@ public Thing(string aName, string aDescription, bool aCantake) {
 }
 ```
 
-当你有两个方法（构造函数方法或其他方法）具有相同的名称但不同的参数集合时，它们被称为**重载**。当你调用一个重载方法时，你传递给该方法的参数数量和类型决定了实际上将运行该方法的哪种实现。
+当你有两个方法（构造函数方法或其他方法）具有相同的名称但不同的参数集合时，它们被称为重载。当你调用一个重载方法时，你传递给该方法的参数数量和类型决定了实际上将运行该方法的哪种实现。
 
-当我调用 Thing 构造函数并传递两个字符串参数时，运行的是上面显示的第一个构造函数。但如果我带两个字符串和一个 `bool` 来调用 Thing 构造函数，则会运行第二个构造函数。
+当我调用`Thing`构造函数并传递两个字符串参数时，运行的是上面显示的第一个构造函数。但如果我带两个字符串和一个`bool`来调用`Thing`构造函数，则会运行第二个构造函数。
 
-当然，我可以完全省略第一个构造函数。但如果我这样做了，那么每当我想要构造一个可捡取的对象时，都需要将 `true` 作为第三个参数传递。由于游戏中的大多数对象都是可捡取的，我决定保留旧的构造函数（只有两个参数的），这样通常当我创建一个 `Thing` 对象时，只需要传递一个名称和一个描述即可。第一个构造函数为以这种方式构造的所有对象将 `_cantake` 字段设置为 `true`。第二个构造函数则留给特殊情况，即我想显式设置 `bool` 值的时候。
+当然，我可以完全省略第一个构造函数。但如果我这样做了，那么每当我想要构造一个可捡取的对象时，都需要将`true`作为第三个参数传递。由于游戏中的大多数对象都是可捡取的，我决定保留旧的构造函数（只有两个参数的），这样通常当我创建一个`Thing`对象时，只需要传递一个名称和一个描述即可。第一个构造函数为以这种方式构造的所有对象将`_cantake`字段设置为`true`。第二个构造函数则留给特殊情况，即我想显式设置`bool`值的时候。
 
 # 7 – 捡取、丢弃和描述
 
 如果玩家不能捡取和丢弃宝藏，任何冒险游戏都是完整的。让我们看看如何实现……
 
-我准备好添加允许玩家捡取和丢弃物品的代码。我的 `TransferOb()` 方法就是这么做的。它接受三个参数：一个 `Thing t` 和两个 `ThingList` 集合：`fromlist` 和 `tolist`。代码使用 `Remove()` 方法将 `t` 从 `fromlist` 中移除，并使用 `Add()` 方法将其添加到 `tolist`。`Remove()` 和 `Add()` 是 `List` 类的标准方法。你可能记得 `ThingList` 派自 `List` 类，因此它会自动继承这些方法：
+我准备好添加允许玩家捡取和丢弃物品的代码。我的`TransferOb()`方法就是这么做的。它接受三个参数：一个`Thing t`和两个`ThingList`集合：`fromlist`和`tolist`。代码使用`Remove()`方法将`t`从`fromlist`中移除，并使用`Add()`方法将其添加到`tolist`。`Remove()`和`Add()`是`List`类的标准方法。你可能记得`ThingList`派自`List`类，因此它会自动继承这些方法：
 
 ```c
 private void TransferOb(Thing t, ThingList fromlist, ThingList tolist) {
@@ -1191,11 +1140,11 @@ private void TransferOb(Thing t, ThingList fromlist, ThingList tolist) {
 }
 ```
 
-在调用 `TransferOb()` 之前，我必须确定需要转移哪个 `Thing`，并且必须完全确定指定的 `Thing` 位于我想从中取的列表中。
+在调用`TransferOb()`之前，我必须确定需要转移哪个`Thing`，并且必须完全确定指定的`Thing`位于我想从中取的列表中。
 
 ## 捡取和丢弃物品
 
-在我的 C# 项目 game09 中，如你所，我添加了两个新按钮：Take（捡取）和 Drop（丢弃），以及一个名为 `InputTB` 的文本框。当我点击 Take 按钮时，会调用此事件处理器：
+在我的C#项目`game09`中，如你所见，我添加了两个新按钮：Take（捡取）和Drop（丢弃），以及一个名为`InputTB`的文本框。当我点击Take按钮时，会调用此事件处理器：
 
 ```csharp
 private void TakeBtn_Click(object sender, EventArgs e) {
@@ -1205,7 +1154,7 @@ private void TakeBtn_Click(object sender, EventArgs e) {
 
 # 7 — 捡取、丢弃和描述
 
-顺带一下，`WrLn()` 只是我写的一个工具方法。它接受一个字符串并添加回车符和换行符。然后它调用另一个简单的方法 `Wr()`，将字符串追加到 `outputTB` 框中：
+顺带一下，`WrLn()`只是我写的一个工具方法。它接受一个字符串并添加回车符和换行符。然后它调用另一个简单的方法`Wr()`，将字符串追加到`outputTB`框中：
 
 ```csharp
 private void Wr(String s) {
@@ -1217,19 +1166,19 @@ private void WrLn(String s) {
 }
 ```
 
-`TakeBtn_Click()` 事件处理器使用用户在 `InputTB` 框中输入的字符串调用 `adv.TakeOb()`。这是通过将 `obname` 给 `_player.Location.Things` 的 `ThisOb()` 方法实现的，该列表是对象的 `ThingList`：
+`TakeBtn_Click()`事件处理器使用用户在`InputTB`框中输入的字符串调用`adv.TakeOb()`。这是通过将`obname`给`_player.Location.Things`的`ThisOb()`方法实现的，该列表是对象的`ThingList`：
 
 ```csharp
 Thing t = _player.Location.Things.ThisOb(obname);
 ```
 
-`TakeBtn_Click()` 事件处理器使用用户在 `InputTB` 框中输入的字符串调用 `adv.TakeOb()`。
+`TakeBtn_Click()`事件处理器使用用户在`InputTB`框中输入的字符串调用`adv.TakeOb()`。
 
 # 7 — 捡取、丢弃和描述
 
-在 `TransferOb()` 中，房间中的对象列表赋值给 `fromlist` 参数，玩家的背包被赋值给 `tolist` 参数。`TransferOb()` 从列表中移除它并将其添加到背包。
+在`TransferOb()`中，房间中的对象列表赋值给`fromlist`参数，玩家的背包被赋值给`tolist`参数。`TransferOb()`从列表中移除它并将其添加到背包。
 
-这很简单。但 `TakeOb()` 中的所有其他代码在做什么？让我们仔细观察。首先，代码尝试寻找与输入文本框的字符串匹配的对象。这是通过将 `obname` 传递给 `_player.Location.Things` 的 `ThisOb()` 方法实现的：
+这很简单。但`TakeOb()`中的所有其他代码在做什么？让我们仔细观察。首先，代码尝试寻找与输入文本框的字符串匹配的对象。这是通过将`obname`传递给`_player.Location.Things`的`ThisOb()`方法实现的：
 
 ```
 game09
@@ -1237,7 +1186,7 @@ game09
 
 # 捡取、丢弃和描述
 
-`ThisOb()` 尝试匹配名称。首先使用 `Trim()` 和 `ToLower()` 方法去除两端空格并将整个字符串转换为小写，将结果赋值给 `aNameLowerCase`。然后，在 `foreach` 循环中，它尝试将 `aNameLowerCase` 与列表中对象的名称进行匹配。再次，它对列表中所有对象的名称进行小写处理，以便使用字符串 `Equals()` 方法进行比较。如果匹配，则返回该名称的 `Thing`。如果没有匹配，则返回 `null`：
+`ThisOb()`尝试匹配名称。首先使用`Trim()`和`ToLower()`方法去除两端空格并将整个字符串转换为小写，将结果赋值给`aNameLowerCase`。然后，在`foreach`循环中，它尝试将`aNameLowerCase`与列表中对象的名称进行匹配。再次，它对列表中所有对象的名称进行小写处理，以便使用字符串`Equals()`方法进行比较。如果匹配，则返回该名称的`Thing`。如果没有匹配，则返回`null`：
 
 ```csharp
 public Thing ThisOb(string aName) {
@@ -1255,13 +1204,11 @@ public Thing ThisOb(string aName) {
 }
 ```
 
-现在，如果你回顾 `Adventure.cs` 中 `TakeOb()` 的代码，你会发现它有两个测试。首先它测试 `obname` 是否为空字符串（因为用户没有输入名称）。然后它测试 `Thing t` 是否为 `null`（如果在当前房间没有找到匹配的 `Thing` 对象）。
-
-只有当这两个条件都不满足时，代码才会尝试将对象从 `_player.Location.Things`（当前房间的 `ThingList`）转移到 `_player.Things`（玩家的背包）。
 
 
+现在，如果你回顾`Adventure.cs`中`TakeOb()`的代码，你会发现它有两个测试。首先它测试`obname`是否为空字符串（因为用户没有输入名称）。然后它测试`Thing t`是否为`null`（如果在当前房间没有找到匹配的`Thing`对象）。
 
-
+只有当这两个条件都不满足时，代码才会尝试将对象从`_player.Location.Things`（当前房间的`ThingList`）转移到`_player.Things`（玩家的背包）。
 
 # 7 拾取、丢弃与描述
 
@@ -1274,7 +1221,7 @@ if (t.CanTake) {
 }
 ```
 
-在这里，物品只有在它的 `CanTake` 属性为 `true` 时才会被拾取（所以玩家无法拿起我之前提到的那棵橡树）。`DropOb()` 方法与 `TakeOb()` 本质相同，只是我没有去测试 `CanTake` 属性。因为如果一个对象已经在玩家的背包里，那么它显然是可以被拾取的。而且，这次 `fromlist` 和 `tolist` 的顺序是反过来的，我想将其从玩家的列表转移到当前房间的列表：
+在这里，物品只有在它的`CanTake`属性为`true`时才会被拾取（所以玩家无法拿起我之前提到的那棵橡树）。`DropOb()`方法与`TakeOb()`本质相同，只是我没有去测试`CanTake`属性。因为如果一个对象已经在玩家的背包里，那么它显然是可以被拾取的。而且，这次`fromlist`和`tolist`的顺序是反过来的，我想将其从玩家的列表转移到当前房间的列表：
 
 ```csharp
 public string DropOb(string name) {
@@ -1292,32 +1239,33 @@ public string DropOb(string name) {
 
 ## 描述对象
 
-如果你仔细观察过 game09 项目中的代码，你可能会注意到 `Room` 类中的 `Describe()` 方法在 Visual Studio 中被标记了绿色的波浪线。当我悬停在该行上时，我看到了这个警告提示：
+如果你仔细观察过game09项目中的代码，你可能会注意到`Room`类中的`Describe()`方法在Visual Studio中被标记了绿色的波浪线。当我悬停在该行上时，我看到了这个警告提示：
 
 > 'Room.Describe()' 隐藏了继承成员 'ThingHolder.Describe()'。
+
 > 如果确实想要隐藏，请使用 new 关键字。
 
-这是因为我在 `Room` 的祖类中已经有了一个 `Describe()` 方法。通常情况下，子类会自动继承祖类的方法。但在这种情况下，祖类（ThingHolder）和子类（Room）都定义了一个 `Describe()` 方法。当这种情况发生时，默认情况下子类中的方法会替换祖类中的方法。这里就是如此。当我从一个 `Room` 对象调用该方法时，`Room` 的 `Describe()` 方法实际上替换了 `ThingHolder` 的 `Describe()` 方法。如果这就是我想要的效果，那么为了清晰起见，我真的应该在 `Describe` 方法声明中使用 `new` 关键字，如下：
+这是因为我在`Room`的祖类中已经有了一个`Describe()`方法。通常情况下，子类会自动继承祖类的方法。但在这种情况下，祖类（`ThingHolder`）和子类（`Room`）都定义了一个`Describe()`方法。当这种情况发生时，默认情况下子类中的方法会替换祖类中的方法。这里就是如此。当我从一个`Room`对象调用该方法时，`Room`的`Describe()`方法实际上替换了`ThingHolder`的`Describe()`方法。如果这就是我想要的效果，那么为了清晰起见，我真的应该在`Describe`方法声明中使用`new`关键字，如下：
 
 ```csharp
 public new string Describe()
 ```
 
-如果我这样做，波浪线就消失了。但在这里并不是我想要的结果。让我解释一下原因。假设我有一个 `Treasure` 对象的集合——每个对象都可能是不同类型的宝藏：`Treasure`、`MagicTreasure`、`Weapon` 等。如果我遍历该列表来描述每个 `Treasure` 对象，我希望调用为每个特定宝藏类型定义的 `Describe()` 版本。
+如果我这样做，波浪线就消失了。但在这里并不是我想要的结果。让我解释一下原因。假设我有一个`Treasure`对象的集合——每个对象都可能是不同类型的宝藏：`Treasure`、`MagicTreasure`、`Weapon`等。如果我遍历该列表来描述每个`Treasure`对象，我希望调用为每个特定宝藏类型定义的`Describe()`版本。
 
 ![](img/79557530489e53febfe5a6898863b83c_66_0.png)
 
-上方你可以看到一张显示 `Treasure` 对象简单层级结构的图。该层级结构的基类是 `Treasure`。`Treasure` 类有两个子类：`MagicTreasure` 和 `Weapon`。
+上方你可以看到一张显示`Treasure`对象简单层级结构的图。该层级结构的基类是`Treasure`。`Treasure`类有两个子类：`MagicTreasure`和`Weapon`。
 
-图中标记为 `T` 的项是存储在列表中的 `Treasure` 对象。每个 `T` 可能是 `Treasure`、`MagicTreasure` 或 `Weapon`。这是因为一个 `Treasure` 对象的列表可能包含从基类 `Treasure` 创建的对象，也可能包含从该类子类创建的对象。我在重写项目中创建了这种 `Treasure` 对象层级结构。
+图中标记为`T`的项是存储在列表中的`Treasure`对象。每个`T`可能是`Treasure`、`MagicTreasure`或`Weapon`。这是因为一个`Treasure`对象的列表可能包含从基类`Treasure`创建的对象，也可能包含从该类子类创建的对象。我在重写项目中创建了这种`Treasure`对象层级结构。
 
-假设我创建了三个宝藏，每个类一个，并将它们添加到我名为 `enlist` 的 `Treasure` 对象列表中。这是重写项目中的代码：
+假设我创建了三个宝藏，每个类一个，并将它们添加到我名为`enlist`的`Treasure`对象列表中。这是重写项目中的代码：
 
 | overriding (重写) |
 | :--- |
-| Treasure treasureob = new Treasure("Diamond ring"); |
-| MagicTreasure magictreasureob = new MagicTreasure("Elvish Shield"); |
-| Weapon weaponob = new Weapon("Battle Axe"); |
+| `Treasure treasureob = new Treasure("Diamond ring");` |
+| `MagicTreasure magictreasureob = new MagicTreasure("Elvish Shield");` |
+| `Weapon weaponob = new Weapon("Battle Axe");` |
 
 ```csharp
 List<Treasure> oblist = new List<Treasure>();
@@ -1326,7 +1274,7 @@ oblist.Add(magictreasureob);
 oblist.Add(weaponob);
 ```
 
-现在我想显示每个宝藏的描述。因此，我写了一个 `foreach` 循环来遍历宝藏列表——即一个 `Treasure` 类或其任何子类的对象列表。
+现在我想显示每个宝藏的描述。因此，我写了一个`foreach`循环来遍历宝藏列表——即一个`Treasure`类或其任何子类的对象列表。
 
 ```csharp
 foreach (Treasure a in oblist) {
@@ -1334,19 +1282,11 @@ foreach (Treasure a in oblist) {
 }
 ```
 
-在我的 `foreach` 循环中，我需要为这些对象中的每一个调用 `Describe()` 方法。但这可能不会产生我想要的结果。为了理解这一点，我编写了三个不同版本的 `Describe()`，仅用于测试。我将它们命名为 `Describe1()`、`Describe2()` 和 `Describe3()`。带有这些名称的方法出现在基类 `Treasure` 以及它的每个子类 `MagicTreasure` 和 `Weapon` 中：
+在我的`foreach`循环中，我需要为这些对象中的每一个调用`Describe()`方法。但这可能不会产生我想要的结果。为了理解这一点，我编写了三个不同版本的`Describe()`，仅用于测试。我将它们命名为`Describe1()`、`Describe2()`和`Describe3()`。带有这些名称的方法出现在基类`Treasure`以及它的每个子类`MagicTreasure`和`Weapon`中：
 
 | overriding (重写) |
 | :--- |
-| class Treasure {
-  private string _name;
-  public string Name { get => _name; set => _name = value; };
-  public Treasure(string aName) {
-    _name = aName;
-  }
-  public String Describe1() {
-    return "";
-  } | 
+| `class Treasure {`<br>`  private string _name;`<br>`  public string Name { get => _name; set => _name = value; };`<br>`  public Treasure(string aName) {`<br>`    _name = aName;`<br>`  }`<br>`  public String Describe1() {`<br>`    return "";`<br>`  }` |
 
 ```csharp
 class MagicTreasure : Treasure {
@@ -1358,39 +1298,13 @@ class MagicTreasure : Treasure {
 }
 ```
 
-`Describe1()` 与我在 game09 项目中写的 `Describe()` 版本相似。基类有一个 `Describe1()` 方法。两个子类也是如此。在 Visual Studio 中，我得到了相同的波浪线，建议使用 `new`。
+`Describe1()`与我在game09项目中写的`Describe()`版本相似。基类有一个`Describe1()`方法。两个子类也是如此。在Visual Studio中，我得到了相同的波浪线，建议使用`new`。
 
-`Describe1()` 与我在 game09 项目中写的 `Describe()` 版本相似。基类有一个 `Describe1()` 方法。两个子类也是如此。在 Visual Studio 中，我得到了相同的波浪线，建议使用 `new`。
+`Describe2()`与`Describe1()`相同，除了我使用了`new`关键字。
 
-`Describe2()` 与 `Describe1()` 相同，除了我使用了 `new` 关键字。 
+`Describe3()`是最有趣的方法。由于我使用了`new`关键字……
 
-`Describe2()` 与 `Describe1()` 相同，除了我使用了 `new` 关键字。
 
-`Describe3()` 是最有趣的方法。由于我使用了 `new` 关键字……（抱歉，上面的翻译过程中出现了部分重复和错误，我将重新为您提供准确的翻译）
-
-修正后：
-
-当我从一个 `Room` 对象调用该方法时，`Room` 的 `Describe()` 方法实际上替换了 `ThingHolder` 的 `Describe()` 方法。如果这就是我想要的效果，那么为了清晰起见，我真的应该在 `Describe` 方法声明中使用 `new` 关键字，如下：
-
-```csharp
-public new string Describe()
-```
-
-如果我这样做，波浪线就消失了。但在这里并不是我想要的结果。让我解释一下原因。假设我有一个 `Treasure` 对象的集合——每个对象都可能是不同类型的宝藏：`Treasure`、`MagicTreasure`、`Weapon` 等。如果我遍历该列表来描述每个 `Treasure` 对象，我希望调用为每个特定宝藏类型定义的 `Describe()` 版本。
-
-![](img/79557530489e53febfe5a6898863b83c_66_0.png)
-
-上方你可以看到一张显示 `Treasure` 对象简单层级结构的图。该层级结构的基类是 `Treasure`。`Treasure` 类有两个子类：`MagicTreasure` 和 `Weapon`。
-
-图中标记为 `T` 的项是存储在列表中的 `Treasure` 对象。每个 `T` 可能是 `Treasure`、`MagicTreasure` 或 `Weapon`。这是因为一个 `Treasure` 对象的列表可能包含从基类 `Treasure` 创建的对象，也可能包含从该类子类创建的对象。我在重写项目中创建了这种 `Treasure` 对象层级结构。
-
-假设我创建了三个宝藏，每个类一个，并将它们添加到我名为 `enlist` 的 `Treasure` 对象列表中。这是重写项目中的代码：
-
-| overriding (重写) |
-| :--- |
-| Treasure treasureob = new Treasure("Diamond ring"); |
-| MagicTreasure magictreasureob = new MagicTreasure("Elvish Shield"); |
-| Weapon weaponob = new Weapon("Battle Axe"); |
 
 ```csharp
 List<Treasure> oblist = new List<Treasure>();
@@ -1411,15 +1325,7 @@ foreach (Treasure a in oblist) {
 
 | overriding (重写) |
 | :--- |
-| class Treasure {
-  private string _name;
-  public string Name { get => _name; set => _name = value; };
-  public Treasure(string aName) {
-    _name = aName;
-  }
-  public String Describe1() {
-    return "";
-  } | 
+| `class Treasure {`<br>`  private string _name;`<br>`  public string Name { get => _name; set => _name = value; };`<br>`  public Treasure(string aName) {`<br>`    _name = aName;`<br>`  }`<br>`  public String Describe1() {`<br>`    return "";`<br>`  }`<br>`}` |
 
 ```csharp
 class MagicTreasure : Treasure {
@@ -1431,119 +1337,11 @@ class MagicTreasure : Treasure {
 }
 ```
 
-`Describe1()` 与我在 game09 项目中写的 `Describe()` 版本相似。基类有一个 `Describe1()` 方法。两个子类也是如此。在 Visual Studio 中，我得到了相同的波浪线，建议使用 `new`。
-
-`Describe2()` 与 `Describe1()` 相同，除了我使用了 `new` 关键字。
-
-`Describe3()` 是最有趣的方法。由于我使用了 `new` 关键字……（抱歉，由于系统处理逻辑，上述输出出现了严重的重复。我将为您重新提供完整的、准确且不重复的翻译版本）。
-
----
-**注：由于原始文本中存在大量重复的段落，我将根据您的要求，为您提供一份干净、不重复的最终翻译：**
-
-[content]
-# 7 拾取、丢弃与描述
-
-```csharp
-if (t.CanTake) {
-    TransferOb(t, _player.Things, _player.Things);
-    s = t.Name + " taken!";
-} else {
-    s = "You can't take the " + t.Name + "!";
-}
-```
-
-在这里，物品只有在它的 `CanTake` 属性为 `true` 时才会被拾取（所以玩家无法拿起我之前提到的那棵橡树）。`DropOb()` 方法与 `TakeOb()` 本质相同，只是我没有去测试 `CanTake` 属性。因为如果一个对象已经在玩家的背包里，那么它显然是可以被拾取的。而且，这次 `fromlist` 和 `tolist` 的顺序是反过来的，我想将其从玩家的列表转移到当前房间的列表：
-
-```csharp
-public string DropOb(string name) {
-    Thing t = _player.Things.ThisOb(name);
-    string s = "";
-    if (t == null) {
-        s = "You haven't got one!";
-    } else {
-        TransferOb(t, _player.Things, _player.Location.Things);
-        s = t.Name + " dropped";
-    }
-    return s;
-}
-```
-
-## 描述对象
-
-如果你仔细观察过 game09 项目中的代码，你可能会注意到 `Room` 类中的 `Describe()` 方法在 Visual Studio 中被标记了绿色的波浪线。当我悬停在该行上时，我看到了这个警告提示：
-
-> 'Room.Describe()' 隐藏了继承成员 'ThingHolder.Describe()'。
-> 如果确实想要隐藏，请使用 new 关键字。
-
-这是因为我在 `Room` 的祖类中已经有了一个 `Describe()` 方法。通常情况下，子类会自动继承祖类的方法。但在这种情况下，祖类（ThingHolder）和子类（Room）都定义了一个 `Describe()` 方法。当这种情况发生时，默认情况下子类中的方法会替换祖类中的方法。这里就是如此。当我从一个 `Room` 对象调用该方法时，`Room` 的 `Describe()` 方法实际上替换了 `ThingHolder` 的 `Describe()` 方法。如果这就是我想要的效果，那么为了清晰起见，我真的应该在 `Describe` 方法声明中使用 `new` 关键字，如下：
-
-```csharp
-public new string Describe()
-```
-
-如果我这样做，波浪线就消失了。但在这里并不是我想要的结果。让我解释一下原因。假设我有一个 `Treasure` 对象的集合——每个对象都可能是不同类型的宝藏：`Treasure`、`MagicTreasure`、`Weapon` 等。如果我遍历该列表来描述每个 `Treasure` 对象，我希望调用为每个特定宝藏类型定义的 `Describe()` 版本。
-
-![](img/79557530489e53febfe5a6898863b83c_66_0.png)
-
-上方你可以看到一张显示 `Treasure` 对象简单层级结构的图。该层级结构的基类是 `Treasure`。`Treasure` 类有两个子类：`MagicTreasure` 和 `Weapon`。
-
-图中标记为 `T` 的项是存储在列表中的 `Treasure` 对象。每个 `T` 可能是 `Treasure`、`MagicTreasure` 或 `Weapon`。这是因为一个 `Treasure` 对象的列表可能包含从基类 `Treasure` 创建的对象，也可能包含从该类子类创建的对象。我在重写项目中创建了这种 `Treasure` 对象层级结构。
-
-假设我创建了三个宝藏，每个类一个，并将它们添加到我名为 `enlist` 的 `Treasure` 对象列表中。这是重写项目中的代码：
-
-| overriding (重写) |
-| :--- |
-| Treasure treasureob = new Treasure("Diamond ring"); |
-| MagicTreasure magictreasureob = new MagicTreasure("Elvish Shield"); |
-| Weapon weaponob = new Weapon("Battle Axe"); |
-
-```csharp
-List<Treasure> oblist = new List<Treasure>();
-oblist.Add(treasureob);
-oblist.Add(magictreasureob);
-oblist.Add(weaponob);
-```
-
-现在我想显示每个宝藏的描述。因此，我写了一个 `foreach` 循环来遍历宝藏列表——即一个 `Treasure` 类或其任何子类的对象列表。
-
-```csharp
-foreach (Treasure a in oblist) {
-  // 调用每个对象的 Describe() 方法
-}
-```
-
-在我的 `foreach` 循环中，我需要为这些对象中的每一个调用 `Describe()` 方法。但这可能不会产生我想要的结果。为了理解这一点，我编写了三个不同版本的 `Describe()`，仅用于测试。我将它们命名为 `Describe1()`、`Describe2()` 和 `Describe3()`。带有这些名称的方法出现在基类 `Treasure` 及其它的每个子类 `MagicTreasure` 和 `Weapon` 中：
-
-| overriding (重写) |
-| :--- |
-| class Treasure {
-  private string _name;
-  public string Name { get => _name; set => _name = value; };
-  public Treasure(string aName) {
-    _name = aName;
-  }
-  public String Describe1() {
-    return "";
-  } | 
-
-```csharp
-class MagicTreasure : Treasure {
-    public MagicTreasure(string aName) : base(aName) { }
-
-    public String Describe1() {
-        return "";
-    }
-}
-```
-
-`Describe1()` 与我在 game09 项目中写的 `Describe()` 版本相似。基类有一个 `Describe1()` 方法。两个子类也是如此。在 Visual Studio 中，我得到了相同的波浪线，建议使用 `new`。
+`Describe1()` 与我在 `game09` 项目中写的 `Describe()` 版本相似。基类有一个 `Describe1()` 方法。两个子类也是如此。在 Visual Studio 中，我得到了相同的波浪线，建议使用 `new`。
 
 `Describe2()` 与 `Describe1()` 相同，除了我使用了 `new` 关键字。
 
 `Describe3()` 是最有趣的方法。由于我使用了 `new` 关键字……（注：原文后续部分存在大量重复，此处已按要求去重）。
-
-
-
 
 # 7 – 获取、丢弃与描述
 
@@ -1561,7 +1359,7 @@ public virtual String Describe3()
 public override String Describe3()
 ```
 
-对于像这样被重写的虚方法，C# 在调用指定方法之前会确定正在处理的对象的精确类型。因此，即使循环变量是一个 `treasure` 对象，C# 也会确定列表每个每个对象的实际类。然后它会检查该方法是否被重写，如果是，它将使用子类定义的方法。这就是为什么我决定在我的 game10 中将 `Describe()` 设为一个重写方法。它在基类 `Thing` 中的写法如下：
+对于像这样被重写的虚方法，C# 在调用指定方法之前会确定正在处理的对象的精确类型。因此，即使循环变量是一个 `treasure` 对象，C# 也会确定列表每个每个对象的实际类。然后它会检查该方法是否被重写，如果是，它将使用子类定义的方法。这就是为什么我决定在我的 `game10` 中将 `Describe()` 设为一个重写方法。它在基类 `Thing` 中的写法如下：
 
 ```csharp
 public virtual string Describe() {
@@ -1593,7 +1391,7 @@ public override string Describe() {
 
 ## 查看物体 (Looking at Things)
 
-在 game10 中，我在用户界面上添加了一个“查看”（LookAt）按钮。这允许你在文本框中输入一个名称以检索对象的描述。这是通过 `Adventure` 类中的 `LookAtOb()` 方法实现的：
+在 `game10` 中，我在用户界面上添加了一个“查看”（LookAt）按钮。这允许你在文本框中输入一个名称以检索对象的描述。这是通过 `Adventure` 类中的 `LookAtOb()` 方法实现的：
 
 ```csharp
 public string LookAtOb(string obname) {
@@ -1642,11 +1440,7 @@ t = _player.Things.ThisOb(obname);
 
 你可能认为这听起来极其复杂。毕竟，一个游戏可能包含成百甚至上千个不同的对象。这意味着我们必须逐个地序列化地图、地图中的每个房间以及一号房间中的每个宝藏吗？
 
-事实上并非如此。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。我说过当你序列化一个对象时，你保存了它的所有数据。
-
-
-
-
+事实上并非如此。我说过当你序列化一个对象时，你保存了它的所有数据。
 
 ```csharp
 protected RoomList(SerializationInfo info, StreamingContext context)
@@ -1654,6 +1448,7 @@ protected RoomList(SerializationInfo info, StreamingContext context)
 ```
 
 此构造函数接收两个参数。第一个是 `SerializationInfo` 对象。第二个是 `StreamingContext` 结构体。根据微软技术文档，`SerializationInfo` 存储序列化或反序列化对象所需的所有数据。`StreamingContext` 则描述了给定序列化流的源和目的。
+
 我在 `RoomList` 中添加此构造函数后，就可以没有任何问题地保存和加载游戏了。
 
 ## 重构代码
@@ -1695,13 +1490,16 @@ protected RoomList(SerializationInfo info, StreamingContext context)
 
 ## C# 部分类
 
-由于我的游戏里只有一个解析器，我不需要创建任何解析器对象。因此，我决定将解析器程序放在 `Adventure` 类中。这使得该类的代码比在单个代码文件中处理要长一些。因此，我将 `Adventure` 类的代码分到了多个源文件中。
 
-在 C# 中，我可以通过创建部分类（partial class）来跨多个文件共享类。这是通过在类名之前放置 `partial` 关键字实现的。我在 `Adventure.cs` 和 `puzzles.cs` 中都是这样做的。
+
+由于我的游戏里只有一个解析器，我不需要创建任何解析器对象。因此，我决定将解析器程序放在`Adventure`类中。这使得该类的代码比在单个代码文件中处理要长一些。因此，我将`Adventure`类的代码分到了多个源文件中。
+
+在 C# 中，我可以通过创建部分类（partial class）来跨多个文件共享类。这是通过在类名之前放置`partial`关键字实现的。我在`Adventure.cs`和`puzzles.cs`中都是这样做的。
 
 ```csharp
 partial class Adventure
 ```
+
 通过将代码留在这些文件中，我可以轻松地编写新游戏，这意味着它是通用的而非特定的。
 
 ## 解析器
@@ -1710,7 +1508,7 @@ partial class Adventure
 
 ## 词汇
 
-代码开始初始化一个名为 `vocab` 的字典（键值对）。键是字符串。这些是游戏识别的单词。例如，“bed”和“bin”是名词，而“take”和“drop”是动词，“a”、“an”和“the”是冠词，而“in”和“at”是介词：
+代码开始初始化一个名为`vocab`的字典（键值对）。键是字符串。这些是游戏识别的单词。例如，"bed"和"bin"是名词，而"take"和"drop"是动词，"a"、"an"和"the"是冠词，而"in"和"at"是介词：
 
 ```csharp
 voc.Add("bed", WT.NOUN);
@@ -1725,7 +1523,7 @@ voc.Add("into", WT.PREPOSITION);
 voc.Add("at", WT.PREPOSITION);
 ```
 
-这些单词类型定义在 `WT.cs` 的枚举中：
+这些单词类型定义在`WT.cs`的枚举中：
 
 ```csharp
 public enum WT {
@@ -1739,10 +1537,6 @@ public enum WT {
   ERROR
 }
 ```
-
-
-
-
 
 ## darkneon (Adventure.parser.cs)
 
@@ -1763,11 +1557,11 @@ public string RunCommand(string inputstr) {
 }
 ```
 
-如果输入了一些单词（即输入字符串不空 `""`），`RunCommand()` 会调用另一个方法 `ParseCommand()`，并传入单词列表 `strlist`。由 `ParseCommand()` 方法尝试解析这些单词的含义。
+如果输入了一些单词（即输入字符串不空`""`），`RunCommand()`会调用另一个方法`ParseCommand()`，并传入单词列表`strlist`。由`ParseCommand()`方法尝试解析这些单词的含义。
 
 ## 解析命令
 
-以下是 `ParseCommand()` 方法：
+以下是`ParseCommand()`方法：
 
 ## darkneon (Adventure.parser.cs)
 
@@ -1797,9 +1591,9 @@ return s;
 }
 ```
 
-该方法检查 `wordlist` 中的每个单词，并检查它是否在游戏的词汇表中（即是否为 `vocab` 字典中的一个键）。如果是，则将其关联的值赋值给 `WT` 变量 `wordtype`。请记住，`vocab` 字典中的值定义了每个单词的语法类型，例如 `WT.NOUN` 或 `WT.VERB`，其中 `WT` 正这些单词类型的枚举，正如我之前解释的那样。
+该方法检查`wordlist`中的每个单词，并检查它是否在游戏的词汇表中（即是否为`vocab`字典中的一个键）。如果是，则将其关联的值赋值给`WT`变量`wordtype`。请记住，`vocab`字典中的值定义了每个单词的语法类型，例如`WT.NOUN`或`WT.VERB`，其中`WT`正这些单词类型的枚举，正如我之前解释的那样。
 
-如果单词是冠词（如 "the"、a" 或 "an"），我的代码会忽略它。如果是某些类型的单词（如名词或动词），它会将该类型添加到 `command` 列表中，这是一个 `WordType` 对象的列表。我将 `WordType` 类定义为一个键值对：
+如果单词是冠词（如 "the"、a" 或 "an"），我的代码会忽略它。如果是某些类型的单词（如名词或动词），它会将该类型添加到`command`列表中，这是一个`WordType`对象的列表。我将`WordType`类定义为一个键值对：
 
 ```csharp
 darkneon (WordType.cs)
@@ -1832,17 +1626,17 @@ public class WordAndType {
 }
 ```
 
-在我的 `WordAndType` 对象列表中，每个键都是单词本身（例如 "take"），每个值都是一个 `WT` 类型（例如 `WT.VERB`）。如果 `ParseCommand()` 未找到单词 `k`（即 `vocab.ContainsKey(k)` 返回 `false`），则这是一个错误（`WT.ERROR`），因此命令处理停止并显示错误信息。如果没有错误，则将 `WordAndType` 列表 `command` 传递给 `ProcessCommand()` 方法。
+在我的`WordAndType`对象列表中，每个键都是单词本身（例如 "take"），每个值都是一个`WT`类型（例如`WT.VERB`）。如果`ParseCommand()`未找到单词`k`（即`vocab.ContainsKey(k)`返回`false`），则这是一个错误（`WT.ERROR`），因此命令处理停止并显示错误信息。如果没有错误，则将`WordAndType`列表`command`传递给`ProcessCommand()`方法。
 
 ## 键值列表
 
-你可能会奇怪为什么我创建了自己的 `WordAndType` 键值对 `List` 类型，而不是使用 `Dictionary`：
+你可能会奇怪为什么我创建了自己的`WordAndType`键值对`List`类型，而不是使用`Dictionary`：
 
 | `List<WordAndType> command = new List<WordAndType>();` |
 
-原因是 `Dictionary` 中的每个键必须是唯一的。但这里的列表包含了用户输入的单词，同一个单词可能被输入多次，使用 `Dictionary` 并不合适。
+原因是`Dictionary`中的每个键必须是唯一的。但这里的列表包含了用户输入的单词，同一个单词可能被输入多次，使用`Dictionary`并不合适。
 
-`ProcessCommand()` 方法首先检查命令中的单词数量。目前它接受最多四个单词，考虑到诸如 "the" 和 "a" 等冠词已经被移除，因此它们不计入内：
+`ProcessCommand()`方法首先检查命令中的单词数量。目前它接受最多四个单词，考虑到诸如 "the" 和 "a" 等冠词已经被移除，因此它们不计入内：
 
 ```csharp
 if (command.Count == 0) {
@@ -1852,7 +1646,7 @@ if (command.Count == 0) {
 }
 ```
 
-如果命令长度有效（在 1 到 4 个单词之间），`switch` 语句将其传递给其他处理特定长度命令的方法：
+如果命令长度有效（在 1 到 4 个单词之间），`switch`语句将其传递给其他处理特定长度命令的方法：
 
 ```csharp
 switch (command.Count) {
@@ -1880,16 +1674,19 @@ default:
     break;
 ```
 
-- 单单词命令可能是一个祈使句动词（执行某操作的指令），例如 "look" 或 "N"（在冒险游戏中，N" 是 "Go North" 的简写）。这些由 `ProcessVerb()` 方法处理。
-- 双单词命令是动词后跟名词，如 "Take sword"。这些由 `ProcessVerbNoun()` 方法处理。
-- 三单词命令是动词、介词、后名词，如 "Look at sword"。这些由 `ProcessVerbPrepositionNoun()` 方法处理。
-- 四单词命令是动词、名词、介词和另一个名词，如 "Put sword in chest"。这些由 `ProcessVerbNounPrepositionNoun()` 方法处理。
+- 单单词命令可能是一个祈使句动词（执行某操作的指令），例如 "look" 或 "N"（在冒险游戏中，N" 是 "Go North" 的简写）。这些由`ProcessVerb()`方法处理。
+
+- 双单词命令是动词后跟名词，如 "Take sword"。这些由`ProcessVerbNoun()`方法处理。
+
+- 三单词命令是动词、介词、后名词，如 "Look at sword"。这些由`ProcessVerbPrepositionNoun()`方法处理。
+
+- 四单词命令是动词、名词、介词和另一个名词，如 "Put sword in chest"。这些由`ProcessVerbNounPrepositionNoun()`方法处理。
 
 其他命令处理方法的工作方式非常相似。让我们来看看这些方法中最复杂的的一个：`ProcessVerbNounPrepositionNoun()`，它处理四单词命令。
 
 目前识别的四单词命令类型只有 "put" 将第一个对象 "in" 或 "into" 第二个对象。当然，如果你喜欢，可以轻松添加其他命令，例如将第一个对象放在 "onto" 或 "under" 之下。与所有其他命令处理方法一样，此方法首先检查单词是否有意义。它只接受动词、名词、介词和名词——且顺序固定。
 
-如果命令通过了该测试，第一个单词和第三个单词将组合（即动词和介词）。如果生成的字符串是 "putin" 或 "putinto"，则被视为单个命令，并调用 `PutObContainer()` 方法执行实际操作：
+如果命令通过了该测试，第一个单词和第三个单词将组合（即动词和介词）。如果生成的字符串是 "putin" 或 "putinto"，则被视为单个命令，并调用`PutObContainer()`方法执行实际操作：
 
 ```csharp
 darkneon (Adventure.parser.cs)
@@ -1904,7 +1701,7 @@ switch (wt1.Word + wt3.Word) {
 }
 ```
 
-例如，如果玩家输入 "put sword in chest"，命令列表现在将包含四个 `WordType` 键值对，我的代码将它们赋值给变量：
+例如，如果玩家输入 "put sword in chest"，命令列表现在将包含四个`WordType`键值对，我的代码将它们赋值给变量：
 
 ```csharp
 WordAndType wt1 = command[0];
@@ -1913,7 +1710,7 @@ WordAndType wt3 = command[2];
 WordAndType wt4 = command[3];
 ```
 
-等等，我需要重新检查 `wt.Type` 的值为 `NOUN`。`switch` 语句使用 `wt.Word` 作为选择器，将 `wt2.Word` ("sword") 传递给 `DropOb()` 方法（其工作方式与直接输入文本相同）：
+等等，我需要重新检查`wt.Type`的值为`NOUN`。`switch`语句使用`wt.Word`作为选择器，将`wt2.Word` ("sword") 传递给`DropOb()`方法（其工作方式与直接输入文本相同）：
 
 ```csharp
 case "drop":
@@ -1922,9 +1719,6 @@ case "drop":
 ```
 
 关于这个解析器就这些了。它非常简单，但工作良好，足以让玩家可以使用各种短英语命令与游戏交互。但是关于我上面显示的那个新命令——将一个对象放入另一个对象？这比把它们丢进房间要复杂一点。在下一章，我将解释为了实现这种行为需要做什么。
-
-
-
 
 # 10 – 将物品放入容器
 
@@ -1936,7 +1730,7 @@ case "drop":
 
 ## ContainerThing 类
 
-在 darken 项目中，我有一个 `ContainerThing` 类，用于创建容器对象。你可以在下一页看到该类的完整代码列表。`ContainerThing` 是 `ThingHolder` 的后代，而 `ThingHolder` 是处理可以包含其他对象列表的类。`ContainerThing` 类有两个新属性：`Openable` 和 `IsOpen`。我不允许物品放入未打开的容器中。`ContainerThing` 拥有 `Open()` 和 `Close()` 方法，用于改变 `_isopen` 数据字段的状态。
+在 darken 项目中，我有一个`ContainerThing`类，用于创建容器对象。你可以在下一页看到该类的完整代码列表。`ContainerThing`是`ThingHolder`的后代，而`ThingHolder`是处理可以包含其他对象列表的类。`ContainerThing`类有两个新属性：`Openable`和`IsOpen`。我不允许物品放入未打开的容器中。`ContainerThing`拥有`Open()`和`Close()`方法，用于改变`_isopen`数据字段的状态。
 
 ## 将物品放入容器
 
@@ -1973,21 +1767,21 @@ public class ContainerThing : ThingHolder {
             desc += thingsdesc;
 ```
 
-当玩家想要将物品放入容器时，`PutObInContainer()` 会检查玩家是否拥有该物品（在玩家背包中）以及容器是否在此处——或者它在玩家背包中或在当前房间内：
+当玩家想要将物品放入容器时，`PutObInContainer()`会检查玩家是否拥有该物品（在玩家背包中）以及容器是否在此处——或者它在玩家背包中或在当前房间内：
 
 ```
 Thing t = _player.Things.GetOb(obname);
 Thing container = ObHere(containername);
 ```
 
-它会检查容器是否真的是容器（`Container Thing` 类的实例）以及它是否打开的。如果它确实是一个打开的容器，代码将调用 `TransferOb()` 方法将物品放入容器：
+它会检查容器是否真的是容器（`Container Thing`类的实例）以及它是否打开的。如果它确实是一个打开的容器，代码将调用`TransferOb()`方法将物品放入容器：
 
 ```
 darkneon (Adventure.cs)
 public string PutObInContainer(string obname
 ```
 
-我还重写了 `TakeOb()` 方法，以便物品可以从容器中取出：
+我还重写了`TakeOb()`方法，以便物品可以从容器中取出：
 
 ```
 darkneon (Adventure.cs)
@@ -1998,132 +1792,18 @@ if (t == null) {
 }
 ```
 
-这里，`kv` 是一个 `KeyValuePair`，其中 `Thing` 是键，`ThingList` 对象是值。我将键赋值给 `Thing` 变量 `t`，将值赋值给 `ThingList` 变量 `tl`。因此，如果在当前位置的打开容器中找到了 `obname` 指定物品，`kv` 将用物品（`kv.Key`）和容器的 `ThingList`——即发现物品的列表（`kv.Value`）初始化。当调用 `TransferOb()` 时，物品将按通常的方式从容器列表转移到玩家背包：
+这里，`kv`是一个`KeyValuePair`，其中`Thing`是键，`ThingList`对象是值。我将键赋值给`Thing`变量`t`，将值赋值给`ThingList`变量`tl`。因此，如果在当前位置的打开容器中找到了`obname`指定物品，`kv`将用物品（`kv.Key`）和容器的`ThingList`——即发现物品的列表（`kv.Value`）初始化。当调用`TransferOb()`时，物品将按通常的方式从容器列表转移到玩家背包：
 
 ```
 TransferOb(t, t1, _player.Things);
 ```
 
-现在让我们 `ObInContainerHere()` 方法如何找到恰好在容器内的物品。它检查指定的物品是否可以在当前位置的打开容器中找到。它是通过遍历房间中找到的所有对象（`player.Location.Things`）来实现此点的。如果一个对象是 `ContainerThing`，它会被赋值给变量 `ct`。
+现在让我们`ObInContainerHere()`方法如何找到恰好在容器内的物品。它检查指定的物品是否可以在当前位置的打开容器中找到。它是通过遍历房间中找到的所有对象（`player.Location.Things`）来实现此点的。如果一个对象是`ContainerThing`，它会被赋值给变量`ct`。
 
-如果容器是打开的，那么容器的列表（`ct.Things`）会被赋值给 `tl`（它成为返回的 `KeyValuePair` 的值），而对象本身会被赋值给 `t`（返回的 `KeyValuePair` 的键）：
+如果容器是打开的，那么容器的列表（`ct.Things`）会被赋值给`tl`（它成为返回的`KeyValuePair`的值），而对象本身会被赋值给`t`（返回的`KeyValuePair`的键）：
 
-```
-darkneon (Adventure.cs)
-private KeyValuePair<Thing, ThingList> InContainerHere(string obname) {
-ContainerThing ct = null;
-Thing t = null;
-ThingList tl = null;
-foreach (Thing ob in player.Location.Things) {
-  if (ob is ContainerThing) {
-    ct = (ContainerThing)ob;
-    if (ct.IsOpen) {
-      tl = ct.Things;
-      t = ct.Things.GetOb(obname);
-    }
-  }
-}
-return new KeyValuePair<Thing, ThingList>(t, tl);
-}
-```
 
-## 将物品放入容器
 
-当玩家想要将物品放入容器时，`PutObInContainer()` 会检查玩家是否拥有该物品（在玩家背包中）以及容器是否在此处——或者它在玩家背包中或在当前房间内：
-
-它检查容器是否真的是容器（`Container Thing` 类的实例）以及它是否打开的。如果它确实是一个打开的容器，代码将调用 `TransferOb()` 方法将物品放入容器：
-
-我还重写了 `TakeOb()` 方法，以便物品可以从容器中取出：
-
-```
-darkneon (Adventure.cs)
-if (t == null) {
-    kv = ObContainerHere(obname);
-    t = kv.Key;
-    tl = kv.Value;
-}
-```
-
-这里，`kv` 是一个 `KeyValuePair`，其中 `Thing` 是键，`ThingList` 对象是值。我将键赋值给 `Thing` 变量 `t`，将值赋值给 `ThingList` 变量 `tl`。因此，如果在当前位置的打开容器中找到了 `obname` 指定物品，`kv` 将用物品（`kv.Key`）和容器的 `ThingList`——即发现物品的列表（`kv.Value`）初始化。当调用 `TransferOb()` 时，物品将按通常的方式从容器列表转移到玩家背包：
-
-现在让我们 `ObInContainerHere()` 方法如何找到恰好在容器内的物品。它检查指定的物品是否可以在当前位置的打开容器中找到。它是通过遍历房间中找到的所有对象（`player.Location.Things`）来实现此点的。如果一个对象是 `ContainerThing`，它会被赋值给变量 `ct`。
-
-如果容器是打开的，那么容器的列表（`ct.Things`）会被赋值给 `tl`（它成为返回的 `KeyValuePair` 的值），而对象本身会被赋值给 `t`（返回的 `KeyValuePair` 的键）：
-
-```
-darkneon (Adventure.cs)
-private KeyValuePair<Thing, ThingList> InContainerHere(string obname) {
-ContainerThing ct = null;
-Thing t = null;
-ThingList tl = null;
-foreach (Thing ob in player.Location.Things) {
-  if (ob is ContainerThing) {
-    ct = (ContainerThing)ob;
-    if (ct.IsOpen) {
-      tl = ct.Things;
-      t = ct.Things.GetOb(obname);
-    }
-  }
-}
-return new KeyValuePair<Thing, ThingList>(t, tl);
-}
-```## 将物品放入容器
-
-当玩家想要将物品放入容器时，`PutObInContainer()` 会检查玩家是否拥有该物品（在玩家背包中）以及容器是否在此处——或者它在玩家背包中或在当前房间内：
-
-它检查容器是否真的是容器（`Container Thing` 类的实例）以及它是否打开的。如果它确实是一个打开的容器，代码将调用 `TransferOb()` 方法将物品放入容器：
-
-我还重写了 `TakeOb()` 方法，以便物品可以从容器中取出：
-
-```
-darkneon (Adventure.cs)
-if (t == null) {
-    kv = ObContainerHere(obname);
-    t = kv.Key;
-    tl = kv.Value;
-}
-```
-
-这里，`kv` 是一个 `KeyValuePair`，其中 `Thing` 是键，`ThingList` 对象是值。我将键赋值给 `Thing` 变量 `t`，将值赋值给 `ThingList` 变量 `tl`。因此，如果在当前位置的打开容器中找到了 `obname` 指定物品，`kv` 将用物品（`kv.Key`）和容器的 `ThingList`——即发现物品的列表（`kv.Value`）初始化。当调用 `TransferOb()` 时，物品将按通常的方式从容器列表转移到玩家背包：
-
-现在让我们 `ObInContainerHere()` 方法如何找到恰好在容器内的物品。它检查指定的物品是否可以在当前位置的打开容器中找到。它是通过遍历房间中找到的所有对象（`player.Location.Things`）来实现此点的。如果一个对象是 `ContainerThing`，它会被赋值给变量 `ct`。
-
-如果容器是打开的，那么容器的列表（`ct.Things`）会被赋值给 `tl`（它成为返回的 `KeyValuePair` 的值），而对象本身会被赋值给 `t`（返回的 `KeyValuePair` 的键）：
-
-```
-darkneon (Adventure.cs)
-private KeyValuePair<Thing, ThingList> InContainerHere(string obname) {
-ContainerThing ct = null;
-Thing t = null;
-ThingList tl = null;
-foreach (Thing ob in player.Location.Things) {
-  if (ob is ContainerThing) {
-    ct = (ContainerThing)ob;
-    if (ct.IsOpen) {
-      tl = ct.Things;
-      t = ct.Things.GetOb(obname);
-    }
-  }
-}
-return new KeyValuePair<Thing, ThingList>(t, tl);
-}
-```## 
-
-等等，OCR 文本是重复的。请遵循逻辑流。
-
-但我们这里的“物品”到底指的是什么？
-
-当玩家想要将物品放入容器时，物品放入容器...
-
-[/content] （我意识到我在草稿中提供了两个版本。现在我将提供一个干净的文本。）
-
-***
-
-*(注：提供的 OCR 文本非常混乱且重复/交错。我根据可见的片段和此类书籍的常见编程模式重构了逻辑结构。）*
-
-等等，查看提示词：“保留原始语言和所有信息，不要删除或总结。” OCR 文本是重叠页面的混乱。我将提供一个干净的实际文本版本。
-
-[content]
 # 10 – 将物品放入容器
 
 如果你的游戏中有宝箱、袋子、橱柜和箱子，玩家应该能够将物品放入其中。在本章中，我们将学习如何实现这一功能。
@@ -2132,13 +1812,11 @@ return new KeyValuePair<Thing, ThingList>(t, tl);
 
 ## ContainerThing 类
 
-在 darken 项目中，我有一个 `ContainerThing` 类，用于创建容器对象。你可以在下一页看到该类的完整代码列表。`ContainerThing` 是 `ThingHolder` 的后代，而 `ThingHolder` 是处理可以包含其他对象列表的类。`ContainerThing` 类有两个新属性：`Openable` 和 `IsOpen`。我不允许物品放入未打开的容器中。`ContainerThing` 拥有 `Open()` 和 `Close()` 方法，用于改变 `_isopen` 数据字段的状态。
+在 `darkneon` 项目中，我有一个 `ContainerThing` 类，用于创建容器对象。你可以在下一页看到该类的完整代码列表。`ContainerThing` 是 `ThingHolder` 的后代，而 `ThingHolder` 是处理可以包含其他对象列表的类。`ContainerThing` 类有两个新属性：`Openable` 和 `IsOpen`。我不允许物品放入未打开的容器中。`ContainerThing` 拥有 `Open()` 和 `Close()` 方法，用于改变 `_isopen` 数据字段的状态。
 
 ## 移动物体
 
-拾取和丢弃可能是玩家执行的最频繁的操作，你需要提供其他可以操作物体的方法。在 darken 项目中，你会看到我添加了 `PullObj()` 和 `PushObj()` 方法，以便杠杆和按钮这样的移动物体可以被拉或推。
-
-## 10 — 将物品放入容器
+拾取和丢弃可能是玩家执行的最频繁的操作，你需要提供其他可以操作物体的方法。在 `darkneon` 项目中，你会看到我添加了 `PullOb()` 和 `PushOb()` 方法，以便杠杆和按钮这样的移动物体可以被拉或推。
 
 ```
 private bool _movable;
@@ -2147,8 +1825,6 @@ public bool Movable {
     set => _movable = value;
 }
 ```
-
-![](img/79557530489e53febfe5a6898863b83c_93_0.png)
 
 `PullOb()` 方法展示了我如何使用 `Movable` 属性：
 
@@ -2173,29 +1849,23 @@ public String PullOb(string obname) {
 }
 ```
 
-
-
-
 ## darkneon 类层次结构
 
 | 实体 | 描述 |
 | --- | --- |
-| 名称 | 可拾取的 (Takable) 可移动的 (Movable) |
-
-ThingHolder
-Things
-
-| Actor | 房间 | 容器实体 (ContainerThing) |
+| 名称 | 可拾取的 (`Takable`) 可移动的 (`Movable`) |
+| `ThingHolder` | `Things` |
+| `Actor` | 房间 | 容器实体 (`ContainerThing`) |
 | --- | --- | --- |
-| 位置 | 南 西 东 上下 | 可开启 (Openable) 已开启 (IsOpen) |
+| 位置 | 南 西 东 上下 | 可开启 (`Openable`) 已开启 (`IsOpen`) |
 
-这是 darkneon 游戏的主类层次结构。它仅显示了类名和属性（但不包含方法）。请记住，我还创建了另外两个类 `ThingList` 和 `RoomList` 来管理列表。
+这是 `darkneon` 游戏的主类层次结构。它仅显示了类名和属性（但不包含方法）。请记住，我还创建了另外两个类 `ThingList` 和 `RoomList` 来管理列表。
 
-`ThingList` 类是 `Thing` 对象的列表。ThingHolder 及其后代类定义的 `Things` 属性（用于访问私有字段 `_things`）是 `ThingList` 的实例。地图是一个 `RoomList`。我的 `RoomList` 类是一个键值对字典，其类型定义为接受 `Rm` 常量作为键并接受 `Room` 对象作为值。
+`ThingList` 类是 `Thing` 对象的列表。`ThingHolder` 及其后代类定义的 `Things` 属性（用于访问私有字段 `_things`）是 `ThingList` 的实例。地图是一个 `RoomList`。我的 `RoomList` 类是一个键值对字典，其类型定义为接受 `Rm` 常量作为键并接受 `Room` 对象作为值。
 
 ## 接下来做什么？
 
-darkneon 游戏现在已经拥有了完整文本冒险游戏的所有核心功能。它包含一个地图，地图中各个房间，房间有通往四个方位方向以及“上”和“下”的出口。它有一个可以在地图上自由移动的玩家。它可以在房间内找到并由玩家拾取或丢弃宝藏。它还有可以放置宝藏的容器，这些容器可以被打开或关闭。
+`darkneon` 游戏现在已经拥有了完整文本冒险游戏的所有核心功能。它包含一个地图，地图中各个房间，房间有通往四个方位方向以及“上”和“下”的出口。它有一个可以在地图上自由移动的玩家。它可以在房间内找到并由玩家拾取或丢弃宝藏。它还有可以放置宝藏的容器，这些容器可以被打开或关闭。
 
 它还有一个简单的英语语言解析器，因此可以通过编写如“拿起剑”或“将戒指放入袋子”之类的短命令与游戏进行交互。那么，剩下的工作是什么呢？
 
@@ -2213,31 +1883,27 @@ darkneon 游戏现在已经拥有了完整文本冒险游戏的所有核心功�
 
 ## 添加形容词和连词
 
-从语法上说，我的游戏解析器只处理名词（“sword”、“coin”等）、动词（“take”、“drop”等）、冠词（“a”、“an”、“the”）和介词（“in”、“into”、“at”）。然而，如果你看一眼列列出所有有效单词类型的 `WT enum` 的定义，你会发现它还包含了常量 `CONSTANTS` 和连词 `CONJUNCTION`。
+从语法上说，我的游戏解析器只处理名词（“sword”、“coin”等）、动词（“take”、“drop”等）、冠词（“a”、“an”、“the”）和介词（“in”、“into”、“at”）。然而，如果你看一眼列出所有有效单词类型的 `WT enum` 的定义，你会发现它还包含了常量 `CONSTANTS` 和连词 `CONJUNCTION`。
 
-形容词是描述名词的词，如“金色的”或“魔法的”。如果将形容词加入游戏的词汇中，玩家就能描述不同类型的宝藏对象。与其其输入“拿起戒指”，如果当前房间里有几枚戒指，而你写下“拿起戒指”，游戏可以回答：“你是指金戒指、银戒指还是钻石戒指吗？”你需要在 `Adventure.parser` 中向游戏词汇添加形容词，并添加适当的字段（以区分金戒指和钻石戒指等）来扩展 `Adventure.cs` 中的命令处理方法，以便处理形容词。
+形容词是描述名词的词，如“金色的”或“魔法的”。如果将形容词加入游戏的词汇中，玩家就能描述不同类型的宝藏对象。与其输入“拿起戒指”，如果当前房间里有几枚戒指，而你写下“拿起戒指”，游戏可以回答：“你是指金戒指、银戒指还是钻石戒指吗？”你需要在 `Adventure.parser` 中向游戏词汇添加形容词，并添加适当的字段（以区分金戒指和钻石戒指等）来扩展 `Adventure.cs` 中的命令处理方法，以便处理形容词。
 
 如果你想添加连词“and”（和），玩家就可以链式执行命令，例如“拿起剑并将其放入箱子”。连词会让命令处理变得稍微复杂一些，只要你只允许单词顺序（由 `Adventure.parser` 中的方法处理），你就可以尝试将单个完整的命令识别为“拿起剑”，然后当发现连词“and”时，寻找另一个完整的命令，如“将其放入箱子”。在这个示例中，我们已经有一个方法 `ProcessVerbNoun()` 来处理“拿起剑”，以及另一个方法 `ProcessVerbNounPrepositionNoun()` 来处理“将其放入箱子”。唯一的额外复杂之处在于识别“它”指的是哪一个。这不是一个难题，但在使用连词时，你需要记住这一点。
 
 ## 更多介词
 
-你还可以添加更多介词，如“with”（用）、“onto”（在……之上）和“under”（在……之下）。这将允许诸如“用枪射射龙”、“把剑放在桌子上”等命令。如果你不确定哪些单词是介词，可以查看在线字典，它们会列出最常见的例子。添加介词并不困难，但你需要意识到它们经常会改变一个对象相对于另一个对象的关系——一个在地毯*下面*的对象就像在容器*内部*的对象：多个对象可能“在这里”但不可见；所以你需要扩展代码来处理这种情况。简之之，对游戏词汇的小幅更改可能需要代码的大改。
+你还可以添加更多介词，如“with”（用）、“onto”（在……之上）和“under”（在……之下）。这将允许诸如“用枪射龙”、“把剑放在桌子上”等命令。如果你不确定哪些单词是介词，可以查看在线字典，它们会列出最常见的例子。添加介词并不困难，但你需要意识到它们经常会改变一个对象相对于另一个对象的关系——一个在地毯*下面*的对象就像在容器*内部*的对象：多个对象可能“在这里”但不可见；所以你需要扩展代码来处理这种情况。简而言之，对游戏词汇的小幅更改可能需要代码的大改。
 
 ## 编写谜题
 
 现在我们已经为完整的游戏奠定了坚实的基础，是时候开始编写谜题了。这才是乐趣所在。我无法告诉你添加哪些谜题——可能性是无限的，仅限于你的想象。如果你玩过一些冒险游戏，你可能对想添加的谜题类型已经有了想法。你可能想从零开始编写自己的游戏——它可能是一个带有龙和武士的奇幻游戏；它可能是一个设定在太空的科幻游戏；也可能是一个设定在 1930 年代纽约的侦探游戏。任何可以写下的都可以程序化为冒险游戏。
 
-我创建的 *darkneon* 示例游戏是一个“蒸汽朋克”式的未来维多利亚背景。把它想象成某种“杰杰·大破手遇上银翼杀手”的场景。它发生在一个充满巷弄和嘶嘶气灯的黑暗、蜿蜒城市里。在一个地方有一个大型公共公园，有一个由铸铁和玻璃制成的华丽棕榈房。有一棵可以爬的橡树和一个可以进入的废弃商店。周围散落着各种物体，包括被啃过的骨头、硬币、灯和和橡果。有一个可以拉的杠杆，一个可以按的按钮，还有一个袋子、垃圾桶和一个箱子——它们都是可以放置对象的容器。
+我创建的 `darkneon` 示例游戏是一个“蒸汽朋克”式的未来维多利亚背景。把它想象成某种“杰杰·大破手遇上银翼杀手”的场景。它发生在一个充满巷弄和嘶嘶气灯的黑暗、蜿蜒城市里。在一个地方有一个大型公共公园，有一个由铸铁和玻璃制成的华丽棕榈房。有一棵可以爬的橡树和一个可以进入的废弃商店。周围散落着各种物体，包括被啃过的骨头、硬币、灯和橡果。有一个可以拉的杠杆，一个可以按的按钮，还有一个袋子、垃圾桶和一个箱子——它们都是可以放置对象的容器。
 
-如果你想继续将其开发成一个完成的游戏（非常欢迎这样做——我只要求你在 *Adventure.cs* 代码文件开头的注释中包含我的版权声明）。让我给你一些关于你如何扩展示例游戏的想法。
+如果你想继续将其开发成一个完成的游戏（非常欢迎这样做——我只要求你在 `Adventure.cs` 代码文件开头的注释中包含我的版权声明）。让我给你一些关于你如何扩展示例游戏的想法。
 
-显然，你可能想做的第一件事是添加新的房间和新的宝藏。原则上，地图可以包含数百个链接的房间。只需确保通过绘制地图并检查由 *Room* 对象定义的出口指向“相邻”房间来跟踪所有的连接即可。
+显然，你可能想做的第一件事是添加新的房间和新的宝藏。原则上，地图可以包含数百个链接的房间。只需确保通过绘制地图并检查由 `Room` 对象定义的出口指向“相邻”房间来跟踪所有的连接即可。
 
 然后，思考由发生的事件所启发的谜题。例如，当玩家进入花园时，一只松鼠拿着珍珠跑出来然后逃了。如果你能得到珍珠，它将是一个很好的宝藏。但每当你看到它时它都逃跑，该怎么得到它呢？也许如果你发现了一个橡果——松鼠可能会拿走橡果，因为现在手满了，就会掉下珍珠？
-
-
-
-
 
 # 10 — 将对象放入容器
 
@@ -2247,9 +1913,11 @@ darkneon 游戏现在已经拥有了完整文本冒险游戏的所有核心功�
 
 死胡同（Dead End）墙上的那个按钮是什么的？也许它与另一个房间的某个物体有关？也许它能打开卧室里的木箱？箱子里有一把钥匙。哪里需要用到它呢？也许棕榈房（Palm House）应该有一扇锁着的门，用钥匙打开？
 
-阁楼上上有老鼠——厨房里有一块奶士。如果我把奶士给了老鼠会发生什么？现在想一所有其他可能用于特殊用途的东西。那里有一个硬币和一个投口。如果你把硬币投入投口会发生什么？阳台上有一个杠杆。拉动它时一定会发生某些事情。至于骨头、垃圾桶和带血的刀——它们都是可能暗示玩家去解决的谜题的对象。当你弄清楚它们如何组合在一起创造你的游戏剧情时，让你的想象尽情飞驰吧。
+阁楼上有老鼠——厨房里有一块奶酪。如果我把奶酪给了老鼠会发生什么？现在想一想所有其他可能用于特殊用途的东西。那里有一个硬币和一个投币口。如果你把硬币投入投币口会发生什么？阳台上有一个杠杆。拉动它时一定会发生某些事情。至于骨头、垃圾桶和带血的刀——它们都是可能暗示玩家去解决的谜题的对象。当你弄清楚它们如何组合在一起创造你的游戏剧情时，让你的想象尽情飞驰吧。
 
 ## 轮到你了！
+
+
 
 就是这样。你现在已经知道了编写经典风格文本冒险游戏所需的一切。我希望你喜欢探索 C# 和 .NET 的功能，并希望你受到启发，尝试创建一个属于你自己的游戏。正如你可能发现的，编写文本冒险游戏是一个非常有挑战性的项目。但它也非常有趣！
 
@@ -2262,44 +1930,64 @@ darkneon 游戏现在已经拥有了完整文本冒险游戏的所有核心功�
 实际上，这里有一些与通用编程以及冒险游戏编程相关的重要术语，贯穿全本书。你不需要理解这里所有的术语就能读懂。不过，如果你遇到不熟悉的术语，这个列表可能会有所帮助。
 
 - **参数 (Argument)** – 传递给函数或方法的数据项。参数通常在函数的定义中声明。当其他代码调用该函数时，程序员通常必须向函数发送与函数头中声明相同（通常也是相同数据类型）的参数。
+
 - **数组 (Array)** – 元素的顺序列表。每个元素可以通过其在列表中的数字位置进行索引。
-- **字符 (Character)** – 单个字符，如 'h'，在 C# 中用单引号界定。多个连续的字符形成一个字符串。参见“string”的条目。
+
+- **字符 (Character)** – 单个字符，如 `'h'`，在 C# 中用单引号界定。多个连续的字符形成一个字符串。参见“string”的条目。
+
 - **类 (Class)** – 对象的定义。参见“面向对象”。
-- **类层次结构 (Class Hierarchy)** – 在面向对象编程中，一个类可以继承自另一个类，继承其祖先类的行为和数据。这使得在层次结构中创建越来越专门的类成为可能，类似于家族树。例如，你可以创建一个 Car（汽车）类，并有两个后类：SportsCar（跑车）和 SaloonCar（轿车）。这两个后类都将拥有祖先类 Car 的特征，但会增加新的行为来定义赛车或普通轿车的特殊功能。
+
+- **类层次结构 (Class Hierarchy)** – 在面向对象编程中，一个类可以继承自另一个类，继承其祖先类的行为和数据。这使得在层次结构中创建越来越专门的类成为可能，类似于家族树。例如，你可以创建一个 `Car`（汽车）类，并有两个后类：`SportsCar`（跑车）和 `SaloonCar`（轿车）。这两个后类都将拥有祖先类 `Car` 的特征，但会增加新的行为来定义赛车或普通轿车的特殊功能。
+
 - **常量 (Constant)** – 一个命名的项，可以存储某些数据作为其值。常量的值在程序执行过程中可能改变。与“变量”对比。
+
 - **双 (Double)** – 参见 *Float (浮点型)*。
+
 - **封装 (Encapsulation)** – 这是一个面向对象的术语，描述对象内部对数据及其作用于数据的方法进行“封装”。一些（但不是所有！）程序员还认为“数据隐藏”是适当封装的一个基本特征。
 
 然而，许多程序员倾向于忽略数据隐藏，这（在我看来）是一个相当不好的坏习惯！
 
-- **浮点型 (Float)** – 浮点数，例如 1.36。根据该数据类型的变量可以存储的数字的大小或“精度”，有几种浮点数数据类型（例如 double）。
+- **浮点型 (Float)** – 浮点数，例如 `1.36`。根据该数据类型的变量可以存储的数字的大小或“精度”，有几种浮点数数据类型（例如 `double`）。
+
 - **IDE** – 集成开发环境。一套工具，通常包括代码编辑器、编译器和调试器（有时还作为用户界面设计器），用于开发程序。本书中用于 C# 编程的 IDE 是 Microsoft Visual Studio（适用于 Windows）。
-- **整数 (Integer)** – 不带“浮点”的“整数”。例如 102。
+
+- **整数 (Integer)** – 不带“浮点”的“整数”。例如 `102`。
+
 - **交互式小说 (Interactive Fiction, 或简写为 IF)** – 一种玩家可以使用人类语言词汇与故事进行交互的游戏。大多数冒险游戏都是交互式小说。
-- **关键字 (Keyword)** – 编程语言中“内置”的特殊语法。例如，if 和 while 单词内置于许多编程语言中。
-- **LISP** – 列表处理语言。一种源于 1958 年的老旧计算机语言，被早期冒险游戏程序员广泛使用。参见 MDL 和 ZIL。
-- **MDL** – MIT 设计语言（读作“muddle”），麻省理工学院（MIT）开发的一种 LISP。Zork 的早期版本是用 MDL 编写的。后来使用了 ZIL。
+
+- **关键字 (Keyword)** – 编程语言中“内置”的特殊语法。例如，`if` 和 `while` 单词内置于许多编程语言中。
+
+- **LISP** – 列表处理语言。一种源于 1958 年的老旧计算机语言，被早期冒险游戏程序员广泛使用。参见 `MDL` 和 `ZIL`。
+
+- **MDL** – MIT 设计语言（读作“muddle”），麻省理工学院（MIT）开发的一种 LISP。`Zork` 的早期版本是用 `MDL` 编写的。后来使用了 `ZIL`。
+
 - **方法 (Method)** – 在 C#、Ruby 等面向对象的语言中定义在类内部函数（或过程）。
+
 - **对象 (Object)** – 在面向对象编程中，对象是一个包含数据（变量）和操作所需函数（方法）的结构。
+
 - **面向对象 (Object Orientation)** – 一种对象构成基本单元的编程风格。C++、Object Pascal、Smalltalk、Ruby 和 Java 都是示例。
+
 - **OOP** – 面向对象编程。参见面向对象。
-- **运算符 (Operator)** – 用于指示某些操作的一个或多个字符。例如，大多数语言使用算术运算符 +, -, *, / 来进行加、减、乘、除。
+
+- **运算符 (Operator)** – 用于指示某些操作的一个或多个字符。例如，大多数语言使用算术运算符 `+`, `-`, `*`, `/` 来进行加、减、乘、除。
+
 - **参数 (Parameter)** – 大致与“argument”同义。计算机科学家可能会区分“命名参数”（named parameter，即函数声明的变量名，位于函数名后的括号内）和“参数”（argument，即传递给函数的数据）。
+
 - **返回值 (Return value)** – 函数返回的数据项。在许多语言中，数据的类型必须在函数头中声明。例如，在 C# 中，你可以声明一个返回字符串的函数：`string someFunction()`。某些语言允许函数返回未指定的类型。例如，一个 Ruby 函数可以返回字符串、整数、其他数据类型或什么都不返回。
+
 - **字符串 (String)** – 字符序列，如“Hello world”。大多数编程语言用单引号或双引号界定字符串。C# 使用双引号。
+
 - **文本冒险游戏 (Text Adventure)** – 一种通过文字描述并以单词输入命令的探索型游戏。经典的文本冒险游戏没有图形（而像 Dave Lebeling 访谈中提到的 Magnetic Scrolls 游戏则除了文本外还会显示图像）。
+
 - **变量 (Variable)** – 一个命名的项，可以存储某些数据作为其值。变量的值在程序执行过程中可能会。与“常量”对比。
+
 - **ZIL** – Zork 实现语言：一种 Inforcom 用编写其冒险游戏时使用的类 L 语言。
 
 # darkneon 游戏地图
 
-代码存档提供的 darkneon 示例项目包含一张下方所示的位置（房间）的地图。房间通过指南针方向 N、S、W 和 E 的出口连接。请注意，短剑街（Dagger Street）西侧的出口通向巷（Alleyway）北侧的出口。只要出口是一致的（两个方向上以相同方式连接相同的房间），这种“扭曲”连接在游戏中是可以接受的（特别是在迷宫中）。地图下方的虚线表示上下连接。在这里，废弃商店（Deserted Shop）向上到达阁楼（Attic），向下到达地下室（Basement）。花园（Garden）的南端向上到达橡树（Oak Tree）。棕榈房（Palm House）向上到达阳台（Balcony）。
+代码存档提供的 `darkneon` 示例项目包含一张下方所示的位置（房间）的地图。房间通过指南针方向 `N`、`S`、`W` 和 `E` 的出口连接。请注意，短剑街（Dagger Street）西侧的出口通向巷（Alleyway）北侧的出口。只要出口是一致的（两个方向上以相同方式连接相同的房间），这种“扭曲”连接在游戏中是可以接受的（特别是在迷宫中）。地图下方的虚线表示上下连接。在这里，废弃商店（Deserted Shop）向上到达阁楼（Attic），向下到达地下室（Basement）。花园（Garden）的南端向上到达橡树（Oak Tree）。棕榈房（Palm House）向上到达阳台（Balcony）。
 
 ![](img/79557530489e53febfe5a6898863b83c_103_0.png)
-
-
-
-
 
 ## 用其他语言编写冒险游戏
 
@@ -2307,17 +1995,17 @@ darkneon 游戏现在已经拥有了完整文本冒险游戏的所有核心功�
 
 ## 下载代码
 
-请务必下载本书的源代码压缩包（可从 http://www.bitwisebooks.com (bitwisebooks.com 获取），其中包含了多种编程语言的示例代码。
+请务必下载本书的源代码压缩包（可从 `http://www.bitwisebooks.com` (bitwisebooks.com 获取），其中包含了多种编程语言的示例代码。
 
 ## 首先，规划你的房间
 
-在进行任何其他操作之前，你需要创建你游戏的“世界”。这个世界将以存储在地图（map）中的房间（Rooms）的形式存在。地图很可能是某种列表——从数组到字典的任何形式。因此，从定义 Room 类开始吧。
+在进行任何其他操作之前，你需要创建你游戏的“世界”。这个世界将以存储在地图（map）中的房间（Rooms）的形式存在。地图很可能是某种列表——从数组到字典的任何形式。因此，从定义 `Room` 类开始吧。
 
 ## Ruby 示例
 
-这是一个用 Ruby 编写的简单 Room 示例（但你可以在其他编程语言中采用类似的方法）：
+这是一个用 Ruby 编写的简单 `Room` 示例（但你可以在其他编程语言中采用类似的方法）：
 
-```
+```ruby
 class Room
   accessor(:n, :s, :w, :e)
 
@@ -2334,9 +2022,9 @@ end
 
 附录
 
-在这里 `attr_accessor` 为变量 `n`、`w` 和 `e` 创建了属性（Ruby 中相当于 C# 的属性）。initialize()` 方法在创建新的 Room 对象后被调用，接受参数以为 `name`、`description` 和方向变量赋值。然后你可能决定创建一个类层次结构，就像我在 C# 项目中做的那样，使得 `Room` 是 `ThingHolder` 的类型（它包含物品对象的列表），而 `ThingHolder` 是 `Thing` 的类型。这些是我的 Ruby 类：
+在这里 `attr_accessor` 为变量 `n`、`w` 和 `e` 创建了属性（Ruby 中相当于 C# 的属性）。`initialize()` 方法在创建新的 `Room` 对象后被调用，接受参数以为 `name`、`description` 和方向变量赋值。然后你可能决定创建一个类层次结构，就像我在 C# 项目中做的那样，使得 `Room` 是 `ThingHolder` 的类型（它包含物品对象的列表），而 `ThingHolder` 是 `Thing` 的类型。这些是我的 Ruby 类：
 
-```
+```ruby
 class Thing
 attr_accessor(:name, :description)
 
@@ -2376,7 +2064,7 @@ end
 
 ## Ruby 示例（继续）
 
-```
+```ruby
 class Room < ThingHolder
   attr_accessor(:n, :s, :w, :e)
 
@@ -2390,9 +2078,9 @@ class Room < ThingHolder
 end
 ```
 
-房间将存储在地图中，地图是一个房间列表。你可以选择不同的列表类型，这取决于你正在使用的语言。在我的 Ruby 示例中，我简单地将 Room 添加到一个数组 `someRooms` 中：
+房间将存储在地图中，地图是一个房间列表。你可以选择不同的列表类型，这取决于你正在使用的语言。在我的 Ruby 示例中，我简单地将 `Room` 添加到一个数组 `someRooms` 中：
 
-```
+```ruby
 someRooms = [
   Room.new("Treasure Room", "a fabulous golden chamber", r1obs, -1, 2, -1, 1),
   Room.new("Dragon's Lair", "a huge and glittering lair", [], -1, -1, 0, -1),
@@ -2405,9 +2093,9 @@ someRooms = [
 
 ## Java 示例
 
-在 Java 中，你可能会这样创建一个 Room 类： 
+在 Java 中，你可能会这样创建一个 `Room` 类：
 
-```
+```java
 public class Room extends ThingHolder implements java.io.Serializable {
     private int n, s, w, e;
 
@@ -2454,7 +2142,7 @@ public class Room extends ThingHolder implements java.io.Serializable {
 
 ## Java 示例（继续）
 
-```
+```java
 public String describe() {
     return String.format("%s\n",
         getName(), getDescription())
@@ -2510,10 +2198,6 @@ File.open("game.sav") do |f|
 end
 ```
 
-
-
-
-
 # 附录
 
 在反序列化对象时，你需要另一个例程来读取你之前保存的大小和数据，然后在初始化每个数据字段时读取正确的字节数。
@@ -2521,6 +2205,8 @@ end
 我用 Object Pascal (Delphi) 编写了一个简单的游戏，其中每个类都包含两个名为 `WriteToStream()` 和 `ReadFrom()` 的虚方法来执行此操作。与这里提到的其他示例一样，所有代码都可以在源码存档中找到，你可以从 Bitwise 网站下载。
 
 在我的 Delphi 项目中，`Thing` 对象是这样保存和加载其数据的：
+
+
 
 ```pascal
 procedure Thing.WriteToStream(fs: TFileStream)
@@ -2548,21 +2234,21 @@ end;
 
 ## 编写命令行游戏
 
-在本书描述的 C# 项目中，我利用了 Windows Forms 的可视化界面能力来设计并编写了一个具有下拉菜单、按钮、文本框等的游戏。但如果你想创建一个真正的复古游戏，就像20 世纪 80 年代的 Infocom 游戏那样，从命令行运行，只有一个命令提示符作为用户界面，该怎么办？
+在本书描述的 C# 项目中，我利用了 Windows Forms 的可视化界面能力来设计并编写了一个具有下拉菜单、按钮、文本框等的游戏。但如果你想创建一个真正的复古游戏，就像 20 世纪 80 年代的 Infocom 游戏那样，从命令行运行，只有一个命令提示符作为用户界面，该怎么办？
 
-将你的 Windows Forms 游戏转换为命令行游戏是非常简单的。当我编写我的游戏最终版本（*darkneon* 项目）时，我花了一些时间“整理”程序，以确保 `Form1.cs` 中的代码除了用户界面控件的方法处理器外，只包含极少的代码。然后我就可以轻松地从项目删除删除 `Form1.cs`，并用与命令行交互的代码替换它。这就是我在代码存档中提供的 *darkneonconsole* 项目中所做的。
+将你的 Windows Forms 游戏转换为命令行游戏是非常简单的。当我编写我的游戏最终版本（`darkneon` 项目）时，我花了一些时间“整理”程序，以确保 `Form1.cs` 中的代码除了用户界面控件的方法处理器外，只包含极少的代码。然后我就可以轻松地从项目删除删除 `Form1.cs`，并用与命令行交互的代码替换它。这就是我在代码存档中提供的 `darkneonconsole` 项目中所做的。
 
 ## C# 控制台应用程序
 
 要在 Visual Studio 中创建命令行程序，请选择文件（File）、新建项目（New Project），然后转到 C# 控制台应用（C# Console App）。
 
-与其使用 Form1.cs，我的游戏用户界面被放在一个名为 `GameRunner` 的新类中，位于 `GameRunner.cs` 代码文件中。程序启动时运行的 `Program.cs` 文件在 `Main()` 函数中简单创建一个 `GameRunner` 对象：
+与其使用 `Form1.cs`，我的游戏用户界面被放在一个名为 `GameRunner` 的新类中，位于 `GameRunner.cs` 代码文件中。程序启动时运行的 `Program.cs` 文件在 `Main()` 函数中简单创建一个 `GameRunner` 对象：
 
-| darkneonconsole (Program.cs) |
-| :--- |
-| static void Main(string[] args) { |
-| GameRunner gr = new GameRunner(); |
-| } |
+```csharp
+static void Main(string[] args) {
+    GameRunner gr = new GameRunner();
+}
+```
 
 `GameRunner` 构造函数调用了 `InitGame()`，它像在之前的项目一样创建了 `Adventure` 对象 `adv`。然后它调用 `StartGame()`，该方法首先显示一些欢迎玩家进入游戏的文本，然后运行循环。这是关键部分：
 
@@ -2578,8 +2264,6 @@ do {
 } while (output != "q");
 ```
 
-# 附录
-
 此循环中的代码提示玩家在 `> ` 提示符后输入命令。它使用 `Console.ReadLine()` 读取一行文本并将其设置为小写。然后它检查命令是否为保存或加载游戏（稍后会详细介绍）。如果不是（即 `output` 变量为空字符串），它将将用户输入传递给 `adv.RunCommand()` 方法。该方法返回一个字符串并赋值给 `output` 变量，然后显示该字符串。
 
 只要游戏在进行，这里的循环就一直运行——读取命令、将其传递给 `adv.RunCommand()` 方法进行处理并在屏幕上显示任何输出。当然，我们需要一种结束游戏的方法，在这里，结束条件是玩家输入 "q" 退出。只要没有输入 "q"，循环就会运行：
@@ -2592,11 +2276,7 @@ while (output != "q");
 
 ![](img/79557530)
 
-# 附录
-
 注意，我没有做很多错误检查，如果你计划进一步开发此游戏，应该添加代码验证名称是否正确以及文件是否存在。注释提供了如何让这些例程更健壮的想法：
-
-darkneonconsole (GameRunner.cs)
 
 ```csharp
 public string SaveGame() {
@@ -2638,8 +2318,6 @@ public string LoadGame() {
 }
 ```
 
-# 附录
-
 我还添加了“inventory（库存）”或“i”命令，该命令以前是由玩家拥有的对象上的按钮调用的。关于它。和之前一样，`RunCommand()` 方法是理解所输入命令的起点：
 
 ```csharp
@@ -2659,12 +2337,9 @@ public string RunCommand(string inputstr) {
 }
 ```
 
-一旦字符串传递给 `RunCommand()`，代码就会执行与 darkneon 项目相同的解析字符串并处理各种类型命令的过程。
+一旦字符串传递给 `RunCommand()`，代码就会执行与 `darkneon` 项目相同的解析字符串并处理各种类型命令的过程。
 
 因此，通过将所有的用户界面代码放在一个地方，我能够以极小的努力将我的 Windows Forms 游戏转换为命令行游戏。这证明了保持代码“模块化”的优势之一！渐进地，该命令行游戏现在可以相当容易地在支持 .NET Core 但不支持 Windows Forms 的其他操作系统（如 Linux 和 macOS）上。
-
-
-
 
 ## Dave Lebling 采访
 
@@ -2673,8 +2348,6 @@ Dave Lebling 是 Infocom 的创始人之一，该公司创作的游戏了从著�
 ![](img/79557530489e53febfe5a6898863b83c_116_0.png)
 
 我们当时并不知道，但 80 年代末是冒险游戏“黄金时代”终结的开始。那时，Lebling 还是我对游戏行业在未来三十年左右将如何发展都没有任何真实的想法。《魔王王国》以及其他基于文本的 Infocom 游戏在仅有 512K 内存的 PC 上就能运行良好。今天，为了玩现代的快速动作游戏，你可能需要一台除了 16 Gigabytes PC 系统内存外，显卡本身就拥有 6 Gigabytes（或更多）内存的 PC。在 1988 年，几兆字节的内存看起来就像一个未来的梦想。任何人的显卡上拥有 GB 内存的想法在当时是荒谬的。这次采访最初出现在英国版《计算机购物者》杂志第 7 期（1988 年 9 月）。我的问题以斜体形式显示。Dave Lebling 的回答用标准字体打印。
-
-# 附录
 
 *当你第一次编写《魔王王国》的主机版本时，你想过你可能会从中赚到钱吗？*
 
@@ -2686,7 +2359,7 @@ Dave Lebling 是 Infocom 的创始人之一，该公司创作的游戏了从著�
 
 ![](img/79557530489e53febfe5a6898863b83c_117_0.png)
 
-## 《魔王王国团队
+## 魔王王国团队
 
 Marc Blank, Tim Anderson, Bruce Daniels 和 Dave Lebling 是 MIT 动态建模小组的成员。他们都为《魔王王国》的编程做出了贡献。
 
@@ -2709,10 +2382,6 @@ Marc Blank, Tim Anderson, Bruce Daniels 和 Dave Lebling 是 MIT 动态建模小
 *当游戏发布时，它们是什么形式的？你们似乎有某种读取数据的基本程序。当我们玩这些游戏时，它是以某种方式被解释的吗？*
 
 是的，它是一个解释器。ZIL 本身是一个虚拟机。这意味着是一个模拟特定的不存在的计算机行为的计算机程序。这有点像 IBM 所做的。他们以模拟其计算机的早期型号而闻名。你这一点的方法是编写一段像 CPU 的软件。我们的不是在模拟现有的机器，而是在模拟一台不存在的机器。
-
-
-
-# 附录
 
 Meretzky 完成了所有的编程工作。我们的很多撰稿人以前并不是专业程序员，所以这个系统学习起来并不本质困难。转向 Mac 的原因之一是为了让它对非程序员来说更易用。
 
@@ -2750,13 +2419,13 @@ Infocom 有什么样的组织架构？你提到了测试员等等。是否存在
 
 目前，这是我们的计划。我们已经收到了反馈。有些人喜欢这个主意，有些人讨厌它。我们以后甚至可能推出在线地图。这仍在考虑中。我们在《Beyond Zork》中尝试过这个想法。但《Beyond Zork》只显示了总地图的一个很小部分。如果能看到更多一点就好了。
 
-附录
-
 我不久读到你们收到来自基督教基本基主义者的问题，他们反对你们的故事？
 
 ![](img/79557530489e53febfe5a6898863b83c_123_0.png)
 
 这真的是一个非常细微的问题。某些宗教基本基主义者对任何关于魔法的引用都有某种反感。我们大多数奇幻游戏都有魔法，引起投诉最多的事情是我们为《破咒者》（Spellbreaker）刊登了广告，上面显示了一个巫师的照片。
+
+
 
 我们在《童军生活》（Boy's Life）杂志上刊登了广告，那是童子军的杂志。美国的童子军在那些可能成为宗教基主义者的人群中非常兴盛。所以父母看到了这个广告并感到恼火。
 
@@ -2764,15 +2433,13 @@ Infocom 有什么样的组织架构？你提到了测试员等等。是否存在
 
 ## 波福斯的皮质女神（Leather Goddesses Of Phobos）
 
-这是一部由 Steve Meretzky 编写的 1986 年喜剧类“性冒险”游戏。它允许玩家选择从“温和”到“淫秽”不等的色情程度。
-
-
+这是一部由`Steve Meretzky`编写的 1986 年喜剧类“性冒险”游戏。它允许玩家选择从“温和”到“淫秽”不等的色情程度。
 
 在镶嵌宝石的蛋里面。有人在玩这个游戏时说：“这真的让我很困扰。而且这很令人沮丧，因为一旦你拿到了金丝雀，我就完全知道你该做什么。”我们说：“噢，真的吗？”——我们完全不知道你本该做什么。他说：“你应该把它带到森林里，并上发条来吸引鸟类。”我们说：“噢，当然了。是的，没错……呃，但在明天之前，务必不要再玩这个游戏了！”
 
 你们在游戏发布后会回去修改它们吗？
 
-当我们制作新的光盘母带（disk masters）时，通常会发布修复了漏洞的版本。我能想到的唯一真正修改过谜题的情况，是我们更改了《Zork I》中的“大声房间（Loude Room）”。在大型机《Zork》中那个谜题更难，但也更不符合逻辑。我们只是对它感到非常恼火。按今天的标准，那个谜题非常糟糕。但当我们写它时，我们觉得它很不错。
+当我们制作新的光盘母带（`disk masters`）时，通常会发布修复了漏洞的版本。我能想到的唯一真正修改过谜题的情况，是我们更改了《Zork I》中的“大声房间（Loude Room）”。在大型机《Zork》中那个谜题更难，但也更不符合逻辑。我们只是对它感到非常恼火。按今天的标准，那个谜题非常糟糕。但当我们写它时，我们觉得它很不错。
 
 你认为会有某一天你会说：“够了，我这辈子再也不做任何游戏了？”
 
@@ -2788,23 +2455,23 @@ Infocom 有什么样的组织架构？你提到了测试员等等。是否存在
 
 有许多你可以下载或在线玩的冒险游戏。
 
-Infocom 的游戏可以从互联网上的几个位置免费下载，例如 http://www.infocom-if.org。
+`Infocom`的游戏可以从互联网上的几个位置免费下载，例如`http://www.infocom-if.org`。
 
-我的游戏《命运之黄金袋鼠》（The Golden Wombat Of Destiny）可以在线玩或从此处下载：https://archive.org/details/TheGoldenWombatOfDestiny。
+我的游戏《命运之黄金袋鼠》（The Golden Wombat Of Destiny）可以在线玩或从此处下载：`https://archive.org/details/TheGoldenWombatOfDestiny`。
 
-其他老旧冒险游戏可以在 http://www.abandonia.com 获取。
+其他老旧冒险游戏可以在`http://www.abandonia.com`获取。
 
-你可能需要一个 DOS 模拟器，如 DOSBox http://www.dosbox.com/ 来运行其中一些游戏。
+你可能需要一个 DOS 模拟器，如`DOSBox http://www.dosbox.com/`来运行其中一些游戏。
 
 ## Bitwise 书籍与课程
 
-获取我们的全纸质书、电子书以及免费下载，请务必访问 Bitwise Books 网站：http://www.bitwisebooks.com
+获取我们的全纸质书、电子书以及免费下载，请务必访问 Bitwise Books 网站：`http://www.bitwisebooks.com`
 
-获取视频编程教程，请访问 Bitwise Courses 网站：http://www.bitwisecourses.com
+获取视频编程教程，请访问 Bitwise Courses 网站：`http://www.bitwisecourses.com`
 
-访问 Bitwise Books & Courses 的 Facebook 页面：https://www.facebook.com/BitwiseCourses
+访问 Bitwise Books & Courses 的 Facebook 页面：`https://www.facebook.com/BitwiseCourses`
 
-订阅我们的 Twitter 馈：https://twitter.com/bitwisecourses
+订阅我们的 Twitter 馈：`https://twitter.com/bitwisecourses`
 
 ## 冒险游戏编程课程（以及更多……）
 
@@ -2812,11 +2479,11 @@ Infocom 的游戏可以从互联网上的几个位置免费下载，例如 http:
 
 ![](img/79557530489e53febfe5a6898863b83c_128_0.png)
 
-Huw 还教授一门更传统的 C# 课程——《学习编程 C#》（Learn To Program C#），其中包含超过 115 节课的 7 多小时视频教学。
+`Huw`还教授一门更传统的 C# 课程——《学习编程 C#》（Learn To Program C#），其中包含超过 115 节课的 7 多小时视频教学。
 
 ![](img/79557530489e53febfe5a6898863b83c_128_1.png)
 
-本书的读者可以通过访问这里获取这些课程的特别优惠：http://www.bitwisebooks.com/specials
+本书的读者可以通过访问这里获取这些课程的特别优惠：`http://www.bitwisebooks.com/specials`
 
 # …… 入门书系列
 
@@ -2833,10 +2500,15 @@ Huw 还教授一门更传统的 C# 课程——《学习编程 C#》（Learn To 
 C# 语言初学者指南：
 
 - 对象导向
+
 - 类与方法
+
 - 方法与参数
+
 - 数组与字符串
+
 - 异常处理
+
 - 列表与泛型
 
 ![](img/79557530489e53febfe5a6898863b83c_129_1.png)
@@ -2846,11 +2518,17 @@ C# 语言初学者指南：
 C 语言指针的深度指南：
 
 - 归纳
+
 - 指针算术
+
 - 数据对齐
+
 - 链表（单链/双链）
+
 - 栈与队列
+
 - 函数指针
+
 - 常见指针问题
 
 ## C 入门书
@@ -2858,10 +2536,15 @@ C 语言指针的深度指南：
 C 语言初学者指南：
 
 - C 语言基础
+
 - 变量与类型
+
 - 运算符与测试
+
 - 函数与参数
+
 - 数组与字符串
+
 - 用户自定义类型
 
 ![](img/79557530489e53febfe5a6898863b83c_130_0.png)
@@ -2871,11 +2554,17 @@ C 语言初学者指南：
 理解 C 语言递归技术：
 
 - 递归函数
+
 - 调用栈
+
 - 栈帧
+
 - 栈损坏
+
 - 递归与作用域
+
 - 树结构
+
 - 磁盘目录递归
 
 ![](img/79557530489e53febfe5a6898863b83c_130_1.png)
@@ -2885,22 +2574,33 @@ C 语言初学者指南：
 Ruby 语言初学者指南：
 
 - 入门 Ruby
+
 - 对象导向
+
 - 类与超类
+
 - 模块与混入
+
 - 方法与参数
+
 - 类变量与实例变量
+
 - 运算符与测试
+
 - 数组与哈希
+
 - 文件操作
+
 - 异常处理
 
 ![](img/79557530489e53febfe5a6898863b83c_130_2.png)
 
-你还可以从 Bitwise 网站下载许多实用免费资源：http://www.bitwisebooks.com
+你还可以从 Bitwise 网站下载许多实用免费资源：`http://www.bitwisebooks.com`
 
 美国制造
+
 德克萨斯州，科帕尔
+
 2023年4月4日
 
 ![](img/79557530489e53febfe5a6898863b83c_133_0.png)

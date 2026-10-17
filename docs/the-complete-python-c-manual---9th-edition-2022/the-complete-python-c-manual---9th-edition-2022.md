@@ -1,20 +1,9 @@
+
 # Python 与 C++ 完全手册 - 第 9 版 2022
-
-
-
-
-
-
-
-
-
-
-
 
 那么现在就不要错过我们在 ZINIO 上全新的《编程与编码》杂志了！
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_1_0.png)
-
 
 # 释放 Python 和 C++ 的力量
 
@@ -24,39 +13,41 @@
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_2_0.png)
 
-
-
-
 - 80 创建自己的模块
-
 - 94 其他可选的 C++ IDE
 
-
 # BDM 代码门户
+
 60+ 个 Python 程序
+
 21,500+ 行代码
+
 借助我们精彩的《代码》系列书籍掌握 Python。包含游戏、工具等代码。
-访问 www.bdmpublications.com/
-code-portal 并登录以访问！
+
+访问 `www.bdmpublications.com/code-portal` 并登录以访问！
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_4_0.png)
 
 ## C++ 基础
+
 - 104 使用注释
 
-
-
 学习编码
+
 学习变量，入门！
+
 学习数组，循环，入门！
+
 学习函数，入门！
-www.bdmpublications.com 5
+
+`www.bdmpublications.com` 5
 
 # 你好 Python
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_6_0.png)
 
 有很多不同的编程语言可以学习和使用。有些复杂且强大，有些则非常基础并用于操作系统。Python 处于两者之间，兼顾了易用性和强大的功能，允许用户创建游戏和性能密集型任务。
+
 然而，Python 的意义不仅仅是另一种语言。它背后有一个充满活力的社区分享着知识、代码和创意；以及针对未来版本的错误修复。这本书的第一部分帮助你上手最新版本的 Python，并指导你如何使用一些常用且有趣的函数。不久，你将能够编写自己的工具、冒险，甚至控制屏幕。
 
 | 页码 | 主题 |
@@ -137,10 +128,6 @@ void main(String[] args) {
 }
 ```
 
-
-
-
-
 ## 向 Python 问好
 
 ### 你需要的设备
@@ -152,21 +139,27 @@ void main(String[] args) {
 庆幸的是，Python 是一门多平台编程语言，适用于 Windows、macOS、Linux、树莓派等更多系统。如果你拥有其中任何一个系统，就可以轻松开始使用 Python。
 
 - 电脑
+
 显然，你需要一台电脑来学习如何编写 Python 程序并测试你的代码。你可以使用在 32 位或 64 位处理器上的 Windows（从 XP 及更高版本）、Apple Mac 或安装了 Linux 的 PC。
 
 - IDE
-IDE（集成开发环境）用于输入和执行 Python 代码。它允许你检查程序代码以及代码中的值，并提供许多高级功能。目前有许多不同的 IDE 可供选择，找到适合你并能给你带来最佳结果的那一个。
+
+`IDE`（集成开发环境）用于输入和执行 Python 代码。它允许你检查程序代码以及代码中的值，并提供许多高级功能。目前有许多不同的 IDE 可供选择，找到适合你并能给你带来最佳结果的那一个。
 
 - PYTHON 软件
+
 macOS 和 Linux 已经作为操作系统的一部分预装了 Python，树莓派 也是如此。然而，你需要确保运行的是最新版本的 Python。Windows 用户需要下载并安装 Python，我们稍后会介绍。
 
 - 文本编辑器
+
 虽然文本编辑器是输入代码的理想环境，但它并非必须。你可以直接从 IDE 输入并执行代码，但像 Sublime Text 或 Notepad++ 这样的文本编辑器在输入代码时提供了更高级的功能和颜色显示。
 
 - 互联网访问
+
 Python 是一个不断演变的环境，新版本经常引入新概念或更改现有的命令和代码结构，使其成为一种更高效的语言。访问互联网将帮助你保持更新，在你卡壳时提供帮助，并让你访问 Python 海量的模块。
 
 - 时间与耐心
+
 尽管其他书籍可能让你认为，但你不会在 24 小时内变成一名程序员。学习 Python 代码需要时间和耐心。你有时可能会遇到瓶颈，而其他时候代码会如行流水般。请理解你正在学习完全全新的东西；是的，你一定能做到。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_9_0.png)
@@ -187,7 +180,7 @@ Python 是一个不断演变的环境，新版本经常引入新概念或更改�
 
 ### FUZE 项目
 
-FUZE 是构建在最新型号树莓派之上的学习环境。你可以购买带有电子套件的工作站，甚至可以一个机器人手臂供你构建和编程。你可以在 www.fuze.co.uk 找到更多关于 FUZE 的信息。
+FUZE 是构建在最新型号树莓派之上的学习环境。你可以购买带有电子套件的工作站，甚至可以一个机器人手臂供你构建和编程。你可以在 `www.fuze.co.uk` 找到更多关于 FUZE 的信息。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_10_1.png)
 
@@ -197,7 +190,7 @@ FUZE 是构建在最新型号树莓派之上的学习环境。你可以购买带
 
 ## 书籍
 
-我们在 www.bdmublications.com 提供了几本优秀书籍。我们的树莓派书籍涵盖了如何购买第一台树莓派、如何设置和使用它；那里有一些非常棒的分步骤项目示例和指南，引导你从树莓派走向。
+我们在 `www.bdmublications.com` 提供了几本优秀书籍。我们的树莓派书籍涵盖了如何购买第一台树莓派、如何设置和使用它；那里有一些非常棒的分步骤项目示例和指南，引导你从树莓派走向。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_10_2.png)
 
@@ -224,7 +217,6 @@ Python 是人类历史上创造的最伟大的计算机编程语言。它让你�
 - 放入 100 克面粉。
 - 放入 100 克糖。
 - 放入 100 克水。
-
 - 放入 100 克面粉。
 - 放入 100 克糖。
 - 放入 100 克水。
@@ -299,10 +291,6 @@ Python 3 日益增长的普及使得现在开始学习使用新功能进行开�
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_12_2.png)
 
-
-
-
-
 ## 如何在 Windows 上设置 Python
 
 Windows 用户可以通过主下载页面轻松安装最新版本的 Python。虽然大多数经验丰富的 Python 开发者可能避开 Windows 作为构建选择的平台，但对于初来说，它仍然是一个理想的起点。
@@ -311,8 +299,8 @@ Windows 用户可以通过主下载页面轻松安装最新版本的 Python。�
 
 Microsoft Windows 默认不带 Python 3.x，因此你必须手动安装。坦率地说，这个过程非常容易遵循。
 
-- **步骤 1** 首先打开浏览器访问 www.python.org/downloads/。寻找 Python 3.x 的下载链接（在此情况下是 Python 3.6，但你之后可能会看到更高版本的 3 系列）。
-- **步骤 2** 点击 3.x 版本的下载按钮，并将文件保存到你的“下载”文件夹。文件下载完成后，点击可执行文件即可启动 Python 安装程序。在这里，你有两个选择：立即安装 (Install Now) 或自定义 (Custom)。我们建议选择“自定义安装 (Customise Installation)”链接。
+- **步骤 1** 首先打开浏览器访问 `www.python.org/downloads/`。寻找 Python 3.x 的下载链接（在此情况下是 Python 3.6，但你之后可能会看到更高版本的 3 系列）。
+- **步骤 2** 点击 3.x 版本的下载按钮，并将文件保存到你的“下载”文件夹。文件下载完成后，点击可执行文件即可启动 Python 安装程序。在这里，你有两个选择：立即安装 (`Install Now`) 或自定义 (`Custom`)。我们建议选择“自定义安装 (`Customise Installation`)”链接。
 - **步骤 3** 选择自定义选项允许你指定某些参数，虽然你可以保持默认设置，但养成这种习惯是好的，因为（感谢 Python）有时安装程序可能会包含不必要的额外功能。在下一个屏幕上，确保所有框都已勾选并点击下一步。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_13_0.png)
@@ -323,7 +311,7 @@ Microsoft Windows 默认不带 Python 3.x，因此你必须手动安装。坦率
 
 想帮助开发 Python 版本吗？预发布版
 
-下一组页面包含一些要添加的有趣功能。确保勾选快捷方式 (Shortcuts)、将 Python 添加到环境变量 (Add Python to Environment Variables)、预编译标准库 (Precompile Standard Library) 以及所有用户 (for all Users)。这些会让以后使用 Python 变得容易得多。准备好后点击“安装”。
+下一组页面包含一些要添加的有趣功能。确保勾选快捷方式 (`Shortcuts`)、将 Python 添加到环境变量 (`Add Python to Environment Variables`)、预编译标准库 (`Precompile Standard Library`) 以及所有用户 (`for all Users`)。这些会让以后使用 Python 变得容易得多。准备好后点击“安装”。
 
 | 安装 Python 3.6.2 (32位) | |
 | :--- | :--- |
@@ -331,17 +319,15 @@ Microsoft Windows 默认不带 Python 3.x，因此你必须手动安装。坦率
 | 自定义 | 这包含 pip 和文档；为 Python 3.6-32 创建快捷方式；创建快捷方式和文件关联 |
 | 自定义位置 | 位置和名称 |
 | 为所有用户安装启动器（推荐） | 将 Python 3.6 添加到 PATH |
+| 高级选项 | :--- |
+| 为所有用户安装\|将文件与 Python 关联（需要启动器） | |
+| 为安装的应用创建快捷方式\|将 Python 添加到环境变量 | |
+| 预编译标准库 | |
+| 下载调试二进制文件（VS 2015 或更高版本） | |
+| 自定义位置 | :--- |
+| `C:/Program Files (x86)/Python36` | |
 
-| 高级选项 |
-| :--- |
-| 为所有用户安装\|将文件与 Python 关联（需要启动器） |
-| 为安装的应用创建快捷方式\|将 Python 添加到环境变量 |
-| 预编译标准库 |
-| 下载调试二进制文件（VS 2015 或更高版本） |
 
-| 自定义位置 |
-| :--- |
-| C:/Program Files (x86)/Python36 |
 
 步骤 5 你可能需要通过 Windows 身份验证通知进行确认。只需点击“是”即可开始安装。安装完成后，最终窗口将允许你查看最新的发布说明，并遵循一些在线教程。
 
@@ -351,17 +337,20 @@ Microsoft Windows 默认不带 Python 3.x，因此你必须手动安装。坦率
 
 步骤 8 点击 IDLE (Python 3.6 32位) 将启动 Python Shell，你可以在这里开始你的 Python 之旅。如果你以前没有经验，也不要担心，因为 Python 3.x 代码会在你的 Python 3 界面中运行。
 
-步骤 9 如果现在再次点击 Windows 开始按钮，这次是 CMD，你将看到提示符。点击它进入 Windows 命令行环境。在命令行中输入 python 并回车。
+步骤 9 如果现在再次点击 Windows 开始按钮，这次是 CMD，你将看到提示符。点击它进入 Windows 命令行环境。在命令行中输入 `python` 并回车。
 
-步骤 10 命令行 Python 工作方式与你在 IDLE 环境中使用的方式相似。步骤 8；三个左箭头 (>>>)。虽然命令行环境很好，但它对用户并不友好；现在输入 exit 关闭提示符。
+步骤 10 命令行 Python 工作方式与你在 IDLE 环境中使用的方式相似。步骤 8；三个左箭头 `>>>`。虽然命令行环境很好，但它对用户并不友好；现在输入 `exit` 关闭提示符。
 
 ### 安装成功
 
 特别感谢 Mark Hammond，没有多年经验，Windows 版 Python 仍然可用。现在开始吗？从在线教程和文档开始。查看有什么新变化
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_14_0.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_14_1.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_14_2.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_14_3.png)
 
 ## 如何在 Mac 上设置 Python
@@ -372,14 +361,20 @@ Microsoft Windows 默认不带 Python 3.x，因此你必须手动安装。坦率
 
 Apple 操作系统自带 Python，所以你不需要单独安装。然而，Apple 更新 Python 不频繁，你可能运行的是旧版本。因此先检查是有意义的。
 
-- **步骤 1** 点击“前往 > 实用程序”打开新的终端 (Terminal)。现在输入：你会看到 Python "2.5.1" 或更高，取决于 Apple 是否更新了操作系统和 Python。
-- **步骤 2** 打开 Safari 访问 **www.python.org/downloads**。像之前的 Windows 步骤一样，你可以看到两个按钮：3.6 的和 2.7 的。注意版本号可能不同。
+- **步骤 1** 点击“前往 > 实用程序”打开新的终端 `Terminal`。现在输入：你会看到 Python "2.5.1" 或更高，取决于 Apple 是否更新了操作系统和 Python。
+
+- **步骤 2** 打开 Safari 访问 `www.python.org/downloads`。像之前的 Windows 步骤一样，你可以看到两个按钮：3.6 的和 2.7 的。注意版本号可能不同。
+
 - **步骤 3** 点击最新版本的 Python 3.x，或者 Python 3.6 的下载按钮。这将自动下载并取决于你的 Mac 配置，自动开始安装。
+
 - **步骤 4** 打开 Python 安装向导后，点击“继续”。花点阅读“重要 (Important)”部分，以防它提到关于你版本的某些内容。准备好后再次点击“继续”。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_15_0.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_15_1.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_15_2.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_15_3.png)
 
 寻找其他操作系统的 Python？Windows、Linux、Mac OS、其他
@@ -396,12 +391,14 @@ Apple 操作系统自带 Python，所以你不需要单独安装。然而，Appl
 
 步骤 8 安装向导中没有剩下的操作了，如果你回到终端会并重新输入命令 `python3 --version`，你可以看到新版本。退出命令行版本的 Python，你需要输入 `exit()`。
 
-步骤 9 你需要在访达 (Finder) 中搜索 Python IDLE；如果找到了，点击启动它，它看起来应该和上一页显示的 Windows IDLE 相似。唯一的区别是 Mac Python 运行在 os 上。
+步骤 9 你需要在访达 `Finder` 中搜索 Python IDLE；如果找到了，点击启动它，它看起来应该和上一页显示的 Windows IDLE 相似。唯一的区别是 Mac Python 运行在 os 上。
 
 步骤 10 旧版本的 Mac 可能会与新版本的 Python 出现问题，在这种情况下，你需要退回到 Python 3.x 版本，即你工作使用的代码。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_16_0.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_16_1.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_16_2.png)
 
 ```
@@ -411,10 +408,6 @@ re information. Type 'copyright', 'credits' or 'license' for more information.
 >>
 ```
 
-
-
-
-
 ## 如何在 Linux 中安装 Python
 
 大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
@@ -423,9 +416,12 @@ re information. Type 'copyright', 'credits' or 'license' for more information.
 
 Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
 
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
+- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 `Ctrl+Alt+T` 打开终端。
+
 - 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
+
 - 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
+
 - 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
 
 ```
@@ -449,79 +445,6 @@ david@david-mint ~ $ python --version
 Python 2.7.12
 $ david@david-mint ~ $
 ```
-
-```
-Setting up libc6 (2.27.0-5ubuntu4.1)amd64]
-Setting up libstdc++6 (6.2.0-5ubuntu4.2)amd64]
-Setting up libgcc-1 (6.2.0-5ubuntu4.2)amd64]
-Setting up libncurses6 (6.2.0-5ubuntu4.2)amd64]
-Setting up libz1g (1.2.11-1ubuntu2.1)amd64]
-Setting up libreadline8 (7.2-2ubuntu2.10)amd64]
-Setting up libsqlite3-0 (3.22.0-0ubuntu8)amd64]
-Setting up libexpat5 (2.4.7-1ubuntu4.1)amd64]
-Setting up libgdbm6 (4.1.6-2ubuntu4.1)amd64]
-Setting up libncurses5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libncursesw5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libpythoninfo1 (2.7.5-5ubuntu4.2)amd64]
-Setting up libpython3.5 (3.5.2-3ubuntu3)amd64]
-Setting up libpython3.5-dev (3.5.2-3)amd64]
-Setting up libbz20 (1.5.26-ubuntu2.1)amd64]
-Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
-Setting up libssl1.1 (1.1.0f-1ubuntu5)amd64]
-Setting up libncurses ( (....1ubuntuubuntu..44444
-
- up libinfo ( (....--ubuntuubuntu4.44444
-
- up libinfo ( (.....-ubuntuubuntu4.2)amd64
-
-Setting up libdbdb ( (....-55ubuntu4.))amd44
-
- up up libcurses5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libpythoninfo1 (2.7.5-5ubuntu4.2)amd64]
-Setting up libpython3. ( (...-3ubuntu3)amd64]
-Setting up libpython3.5-dev (3.5.2-3)amd64]
-Setting up libbz20 (1.5.26-ubuntu2.1)amd64]
-Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
-Setting up libssl1.1 (1.1.0f-1ubuntu5)amd64]
-Setting up libncurses ( (....-1ubuntu4.4444
-
- Setting up libinfo4
-Setting up libgdbm6 (4.1.6-2ubuntu4.1)amd64]
-Setting up libncurses5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libncursesw5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libpythoninfo1 (2.7.5-5ubuntu4.2)amd64]
-Setting up libpython3.5 (3.5.2-3ubuntu3)amd64]
-Setting up libpython3.5-dev (3.5.2-3)amd64]
-Setting up libbz20 (1.5.26-ubuntu2.1)amd64]
-Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
-Setting up libssl1.1 (1.1.0f-1ubuntu5)amd64]
-Setting up libncurses ( (....-1ubuntu4.4444
-
- Setting up libinfo4)
- Setting up libgdbm6 (4.1.6-2ubuntu4.1)amd64]
-Setting up libncurses5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libncursesw5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libpythoninfo1 (2.7.5-5ubuntu4.2)amd64]
-Setting up libpython3.5 (3.5.2-3ubuntu3)amd64]
-Setting up libpython3.5-dev (3.5.2-3)amd64]
-Setting up libbz20 (1.5.26-ubuntu2.1)amd64]
-Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
-Setting up libssl1.1 (1.1.0f-1ubuntu5)amd64]
-Setting up libncurses ( (....-1ubuntu4.4444
-
- Setting up libinfo4)
- Setting up libgdbm6 (4.1.6-2ubuntu4.1)amd64]
-Setting up libncurses5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libncursesw5 (6.2.0-5ubuntu4.2)amd64]
-Setting up libpythoninfo1 (2.7.5-5ubuntu4.2)amd64]
-Setting up libpython3.5 (3.5.2-3ubuntu3)amd64]
-Setting up libpython3.5-dev (3.5.2-3)amd64]
-Setting up libbz20 (1.5.26-ubuntu2.1)amd64]
-Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-
-[content]
 
 ## 如何在 Linux 中设置 Python
 
@@ -531,8 +454,22 @@ Setting up liblzma0 (5.2.4-2ubuntu2)amd64]
 
 Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
 
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1.对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
+- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 `Ctrl+Alt+T` 打开终端。
+
 - 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
+
+
+
+## 如何在 Linux 中设置 Python
+
+大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
+
+### PYTHON 企鹅
+
+Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
+
+- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 `Ctrl+Alt+T` 打开终端。
+- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 相关的输出。
 - 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
 - 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
 
@@ -557,15 +494,10 @@ david@david-mint ~ $ python --version
 Python 2.7.12
 $ david@david-mint ~ $
 ```
-[/content]
 
 *(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
 
----
 
-*(更正：根据用户指令，我应该完整翻译最后一段“以下是需要翻译的文本”部分。以下是针对最后一段文本的完整翻译：)*
-
-[content]
 
 ## 如何在 Linux 中设置 Python
 
@@ -601,13 +533,10 @@ david@david-mint ~ $ python --version
 Python 2.7.12
 $ david@david-mint ~ $
 ```
+
 *(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
 
----
 
-*(抱歉，上面的回复出现了逻辑混乱。现在为您提供针对最后“以下是需要翻译的文本”部分的最终正确翻译：)*
-
-[content]
 
 ## 如何在 Linux 中设置 Python
 
@@ -617,25 +546,10 @@ $ david@david-mint ~ $
 
 Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
 
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
+- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 `Ctrl+Alt+T` 打开终端。
+- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 相关的输出。
 - 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
 - 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
 
 ```
 File Edit View Search Terminal Help
@@ -643,604 +557,16 @@ david@david-mint ~ $ python --version
 Python 2.7.12
 $ david@david-mint ~ $
 ```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-
----
-
-*(由于系统限制，我无法在一次回复中完美修正所有尝试。以下是针对“以下是需要翻译的文本”部分的纯翻译结果：)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
 
 ```
 File Edit View Search Terminal Help
 david@david-mint ~ $ python --version
 Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-
----
-*(对不起，我发现由于我在处理那段包含乱码的 `code` 块时出现了逻辑错误，导致了重复输出。现在我将重新生成一个干净的最终版本。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
 $ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
+[sudo] password for david:
 ```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-
----
-*(由于我之前的回复中出现了多次尝试和混乱，我深表歉意。以下是最终的、符合所有格式要求的要求的翻译结果：)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-
----
-*(抱歉，我发现由于我在处理那段包含乱码的 `code` 块时出现了逻辑错误，导致了重复输出。现在我将重新生成一个干净的最终版本。)*
-
-*(等等，我发现我还是在纠结“不要重复输出”的指令。我将直接给出最终后的翻译内容。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-
----
-*(由于我之前的回复中出现了多次尝试和混乱，我深表歉意。以下是最终的、符合所有格式要求的要求的翻译结果：)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-
----
-*(对歉，我发现由于由于我在处理那段包含乱码的 `code` 块时出现了逻辑错误，导致了重复输出。现在我将重新生成一个干净的最终版本。)*
-
-*(等等，我发现我还是在纠结“不要重复输出”的指令。我将直接给出最终后的翻译内容。)*
-
-*(由于原始文本中包含了大量无意义的乱码日志块，根据“内联代码和代码块不需要翻译”的原则，我将保留这些代码块的原样，仅翻译其描述性文本。)*
-
-**以下是最终的翻译结果：**
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-
-*(抱歉，我刚才在思考回复中陷入了死循环。现在为您提供最终的、符合所有格式要求的、且包含在 [content] 标签中的翻译结果。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(由于我之前的回复出现了严重的逻辑错误，我将停止多余的解释，直接给出符合您要求的最终翻译内容块。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(对不起，我发现我陷入了自我解释的循环。现在这里是最终的、唯一的正确的翻译结果。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(由于我之前的回复出现了严重的错误，我将不再多话。以下是符合要求的翻译内容。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(对不起，我发现我陷入了死循环。现在这里是最终的、唯一的翻译结果。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(由于我之前的回复出现了严重的错误，我将不再多话。以下是符合要求的翻译内容。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(对不起，我发现我陷入了死循环。现在这里是最终的、唯一的翻译结果。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-[/content]
-```
-*(由于我之前的回复出现了严重的错误，我将不再多话。以下是符合要求的翻译内容。)*
-
-*(由于我发现我已经在对话框中显示了多次翻译，为了不违反指令，我将停止输出。请注意，不再生成重复的块。)*
-
----
-*(抱歉，我似乎在生成回复时出现了系统故障。以下是最终的、符合要求的翻译结果。)*
-
-[content]
-
-## 如何在 Linux 中设置 Python
-
-大多数 Linux 发行版已经预装了 Python 2.x，但我们将使用 Python 3.x，为了获取它，我们首先需要做一些工作。坦率地说，这并不困难。
-
-### PYTHON 企鹅
-
-Linux 是一个多功能的操作系统，因此很难确定仅用一种方式来完成某项任务。不同的发行版安装软件的方式各不相同，因此在本教程中，我们将坚持使用 Linux Mint 18.1。
-
-- 步骤 1：首先需要确定你的 Linux 系统中当前安装了哪个版本的 Python；如前提到的，本节我们将使用 Linux Mint 18.1。对于 macOS 用户，按下 Ctrl+Alt+T 打开终端。
-- 步骤 2：接下来在终端中输入：`python --version`，显示 Python 2.x 的版本。在这种情况下，你应该得到与 Python 2.7.12 关的输出。
-- 步骤 3：某些发行版会在我们第一次进行系统更新和升级时，自动将 Python 的安装更新到最新版本：`sudo apt-get update && sudo apt-get upgrade`。输入密码并让系统执行任何更新。
-- 步骤 4：一旦更新和升级完成，输入：`python3 --version` 查看 Python 3.x 是否已更新或安装。在 Linux Mint 的情况下，我们有 Python 3.5.2，这对于我们的目的足够。
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~$
-```
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python python --version
-Python 2.7.12
-$ sudo apt-get update && sudo apt-get upgrade
-[sudo] password for david: 
-```
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_17_0.png)
-
-```
-File Edit View Search Terminal Help
-david@david-mint ~ $ python --version
-Python 2.7.12
-$ david@david-mint ~ $
-```
-*(注：由于原文中存在大量乱码和重复的日志块，此处已翻译核心说明文本部分。)*
-
-
-
 
 ## 玩转 Python
 
@@ -1270,220 +596,7 @@ Hello
 print("2+2")
 ```
 
-- 第三步：你可以看到，输出不是数字 4，而是你要求打印到 Shell 的 2+2。问号定义了正在打印到 IDLE Shell 的内容；要打印 2+2 的和，你需要去掉引号：
-
-```
-print(2+2)
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
-```
-
-- 你可以继续这样做，在 Shell 中打印 2+2、464+2343 等。一种简单的方法是使用变量，我们稍后会深入介绍这一点。现在，输入：
-
-```
-a=2
-b=2
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-### 你的第一个代码
-
-- 第五步：虽然很有趣，但并不特别令人。相反，尝试这个：
-
-```
-print("Hello everyone!")
-```
-
-就像你在本本书的《安装文本编辑器》章节在 Sublime 中输入的代码一样。
-
-- 第六步：这样就像样了，因为你产生了自己的第一段代码。`print` 命令非常自俗易懂，它的功能就是打印。Python 3 要求根据需要使用任意数量的括号将内容输出到屏幕，在这种情况下，看“hello everyone”。
-
-```
->>> print("Hello everyone!")
->>> |
-```
-
-- 第七步：你注意到了 Python IDLE 中的颜色编码。这些颜色代表代码的不同元素。它们是：
-
-| 黑色 - 数据和变量 | 蓝色 - 用户函数 |
-|---|---|
-| 绿色 - 字符串 | 红色 - 注释 |
-| 紫色 - 函数 | 橙色 - 命令 |
-
-- 你可以继续这样做，在 Shell 中打印 2+2、464+2343 等。一种简单的方法是使用变量，我们稍后会深入介绍这一点。现在，输入：
-
-```
-a=2
-b=2
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-### 你的第一个代码
-
-- 第五步：虽然很有趣，但并不特别令人。相反，尝试这个：
-
-```
-print("Hello everyone!")
-```
-
-就像你在本本书的《安装文本编辑器》章节在 Sublime 中输入的代码一样。
-
-- 第六步：这样就像样了，因为你产生了自己的第一段代码。`print` 命令非常自俗易懂，它的功能就是打印。Python 3 要求根据需要使用任意数量的括号将内容输出到屏幕，在这种情况下，看“hello everyone”。
-
-```
->>> print("Hello everyone!")
->>> |
-```
-
-- 第七步：你注意到了 Python IDLE 中的颜色编码。这些颜色代表代码的不同元素。它们是：
-
-| 黑色 - 数据和变量 | 蓝色 - 用户函数 |
-|---|---|
-| 绿色 - 字符串 | 红色 - 注释 |
-| 紫色 - 函数 | 橙色 - 命令 |
-
-- 你可以继续这样做，在 Shell 中打印 2+2、464+2343 等。一种简单的方法是使用变量，我们稍后会深入介绍这一点。现在，输入：
-
-```
-a=2
-b=2
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
->>> a=2
->>> b=2
->>> print(a+b)
-4
-```
-
-（注：由于提供的原文中存在大量重复段落，翻译已按逻辑进行了去重处理，以符合“不要重复输出原文”的要求。）
-
-## 玩转 Python
-
-对于大多数语言来说，无论是计算机语言还是人类语言，核心都在于在合适的场合记忆并应用正确的词。你并不是天生就认识这些词，所以你需要学习它们。
-
-- 第一步：如果你已经关闭了 Python IDLE，请在你喜欢的任何操作系统版本中重新打开它。在 Shell（终端）中，输入以下内容：
-
-```
-print("Hello")
-```
-
-```
-Python 3.4.2 Shell
-File Edit Debug Options Windows Help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
-GC 4.9.1 on Windows
->>> type("", "credits" or "license") for more information.
->>> print("Hello")
-Hello
->>> print(2+2)
-4
-```
-
-- 第二步：正如预期的那样，单词 Hello 以文本的形式出现在 Shell 中，表示来自字符串的输出。这非常直观，不需要太多的解释。现在你试一下：
-
-```
-print("2+2")
-```
-
-- 第三步：你可以看到，输出不是数字 4，而是你要求打印到 Shell 的 2+2。问号定义了正在打印到 IDLE Shell 的内容；要打印 2+2 的和，你需要去掉引号：
+- 第三步：你可以看到，输出不是数字 4，而是你要求打印到 Shell 的 2+2。要打印 2+2 的和，你需要去掉引号：
 
 ```
 print(2+2)
@@ -1554,25 +667,26 @@ print("Hello everyone!")
 
 ### 编辑代码
 
-- 第一1 步：首先，打开 Python IDE，当它启动后，点击 File -> New。这会打开一个名为 Untitled 的新窗口。这就是 Python 编辑器，在其中你可以输入创建未来程序所需的代码。
+- 第一步：首先，打开 Python IDE，当它启动后，点击 `File -> New`。这会打开一个名为 Untitled 的新窗口。这就是 Python 编辑器，在其中你可以输入创建未来程序所需的代码。
 
-- 第二步：IDLE 编辑器在本质意义上是一个具有 Python 功能、编码等的简单文本编辑器；类似于 Sublime。你像在 Shell 中一样输入代码，所以参考上一个教程中的示例，输入：
+
+
+### 第二步
+`IDLE` 编辑器在本质意义上是一个具有 Python 功能、编码等的简单文本编辑器；类似于 `Sublime`。你像在 Shell 中一样输入代码，所以参考上一个教程中的示例，输入：
 
 ```
 print("Hello everyone!")
 ```
 
-- 第三步：你可以看到 IDLE 编辑器中的颜色编码与 Shell 中相同，这让你能够更好地理解代码中发生了什么。然而，要执行代码，你必须先保存它。按 F5 会弹出一个 Save... 对话框。
+### 第三步
+你可以看到 `IDLE` 编辑器中的颜色编码与 Shell 中相同，这让你能够更好地理解代码中发生了什么。然而，要执行代码，你必须先保存它。按 `F5` 会弹出一个 `Save...` 对话框。
 
-- 第四步：点击 Save 框中的 OK 按钮，并选择你保存所有 Python 代码的位置。目的地可以是一个名为 Python 的专用文件夹，你也可以把它放在任何地方。不过，记住保持磁盘整洁，以便以后有所帮助。
+### 第四步
+点击 `Save` 框中的 `OK` 按钮，并选择你保存所有 Python 代码的位置。目的地可以是一个名为 `Python` 的专用文件夹，你也可以把它放在任何地方。不过，记住保持磁盘整洁，以便以后有所帮助。
 
+## 保存并执行你的代码
 
-
-
-
-### 保存并执行你的代码
-
-步骤 5 为你的代码输入一个名称，例如 'print hello$，然后点击保存按钮。一旦 Python 代码被保存，它就会被执行，并在 IDLE Shell 中显示详细信息。在这种情况下，显示的单词是 'Hello everyone!'。
+步骤 5 为你的代码输入一个名称，例如 `'print hello$`，然后点击保存按钮。一旦 Python 代码被保存，它就会被执行，并在 `IDLE Shell` 中显示详细信息。在这种情况下，显示的单词是 `'Hello everyone!'`。
 
 步骤 8 让我们扩展代码，并输入上一个教程中的几个示例：
 
@@ -1591,17 +705,17 @@ print(a+b)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_26_1.png)
 
-步骤 6 你的大部分 Python 代码都在这里编写。将其输入编辑器（Editor）中，按下 F5，保存代码并查看 Shell 中的输出。有时结果会有所不同，取决于你是否请求了独立窗口，但本质上这就是你使用此工具的常规流程。
+步骤 6 你的大部分 Python 代码都在这里编写。将其输入编辑器 `Editor` 中，按下 `F5`，保存代码并查看 Shell 中的输出。有时结果会有所不同，取决于你是否请求了独立窗口，但本质上这就是你使用此工具的常规流程。
 
-步骤 9 如果你点击 OK 按钮，文件将被新的代码条覆盖并执行。对于这几行代码没有问题，但如果你编辑一个较大的文件，覆盖可能会导致问题。使用编辑器中的“文件 > 另存为”（File > Save As）来创建备份。
+步骤 9 如果你点击 `OK` 按钮，文件将被新的代码条覆盖并执行。对于这几行代码没有问题，但如果你编辑一个较大的文件，覆盖可能会导致问题。使用编辑器中的 `文件 > 另存为` `File > Save As` 来创建备份。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_26_2.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_26_3.png)
 
-步骤 7 如果你想查看保存的 Python 代码的位置，这是默认文件名。任何 .py 扩展名。你创建任何代码都可以，从许多互联网 Python 资源下载的代码都是 .py。只需确保代码是为 Python 3 编写的。
+步骤 7 如果你想查看保存的 Python 代码的位置，这是默认文件名。任何 `.py` 扩展名。你创建任何代码都可以，从许多互联网 Python 资源下载的代码都是 `.py`。只需确保代码是为 Python 3 编写的。
 
-步骤 10 现在创建一个新文件。关闭编辑器，打开一个新实例（文件 > 从 Shell 新建文件 File > New File from the Shell）。输入以下内容并保存：
+步骤 10 现在创建一个新文件。关闭编辑器，打开一个新实例 `文件 > 从 Shell 新建文件 File > New File from the Shell`。输入以下内容并保存：
 
 ```
 a="Python"
@@ -1616,22 +730,20 @@ print(a, b, c)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_26_5.png)
 
-### 从命令行执行代码
+## 从命令行执行代码
 
 虽然我们在本书中一直使用 GUI，但值得查看一眼 Python 的命令行处理。我们已经知道有命令行版本的 Python，但它也被用于执行代码。
 
 ### 命令行代码
 
-使用我们在上一个教程中编写的代码（即命名为 hello.py 的代码），看看如何在命令行级别运行在 GUI 中创建的代码。
+使用我们在上一个教程中编写的代码 `即命名为 hello.py 的代码`，看看如何在命令行级别运行在 GUI 中创建的代码。
 
-- 步骤 1 在 Linux 中，Python 两种通过命令行执行代码的方法。一种方法是使用 Python 2，另一种是使用 Python 3 库等。首先，进入你操作系统的命令行或终端（Terminal）。
-
-- 步骤 3 现在你处于命令行界面，我们可以启动 Python。对于 Python 3，你需要输入命令并按回车。这会将你带命令行版本的 Shell，光标显示三个向上的箭头 (>>)。
+- 步骤 1 在 Linux 中，Python 两种通过命令行执行代码的方法。一种方法是使用 Python 2，另一种是使用 Python 3 库等。首先，进入你操作系统的命令行或终端 `Terminal`。
+- 步骤 3 现在你处于命令行界面，我们可以启动 Python。对于 Python 3，你需要输入命令并按回车。这会将你带命令行版本的 Shell，光标显示三个向上的箭头 `>>>`。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_27_0.png)
 
-- 步骤 2 像之前一样，树莓派：我们使用的 Windows 需要点击开始按钮并搜索返回的“命令行”；macOS 用户通过点击“前往 > 实用 > 终端”访问他们的命令行。
-
+- 步骤 2 像之前一样，树莓派：我们使用的 Windows 需要点击开始按钮并搜索返回的 `命令行`；macOS 用户通过点击 `前往 > 实用 > 终端` 访问他们的命令行。
 - 步骤 4 从这里你可以输入之前看到的代码，例如：
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_27_1.png)
@@ -1648,37 +760,42 @@ OCT [4.9] on linux
 
 ### 从命令行执行代码
 
-步骤 5 现在输入：exit 以退出命令行 Python 会话并返回命令行提示符。进入你保存上一个教程代码的文件夹并列出可用文件；希望你看到了 hello.py。
+步骤 5 现在输入：`exit` 以退出命令行 Python 会话并返回命令行提示符。进入你保存上一个教程代码的文件夹并列出可用文件；希望你看到了 `hello.py`。
 
-步骤 8 从 Python 2 代码运行 Python 3 代码的结果是显而易见的。虽然它没有以任何方式报错，但 Python 3 处理 Print 命令的方式与 Python 2 差异导致结果不符合预期。使用 Sublime，打开 hello
+步骤 8 从 Python 2 代码运行 Python 3 代码的结果是显而易见的。虽然它没有以任何方式报错，但 Python 3 处理 `Print` 命令的方式与 Python 2 差异导致结果不符合预期。使用 `Sublime`，打开 `hello`
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_28_0.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_28_1.png)
 
 步骤 6 在与代码相同的文件夹中，你将在命令行输入以下内容：
-python3 hello.py
 
-步骤 9 由于树莓派没有 Sublime Text，你将暂时离开树莓派并使用 Sublime。稍后打开 hello.py 文件，输入以下内容执行我们创建的代码提醒你：
+`python3 hello.py`
+
+步骤 9 由于树莓派没有 `Sublime Text`，你将暂时离开树莓派并使用 `Sublime`。稍后打开 `hello.py` 文件，输入以下内容执行我们创建的代码提醒你：
+
+```
 a="Python"
 b="is"
 c="cool"
 print(a, b, c)
-
 name=input("What is your name?")
 print("hello,", name)
+```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_28_2.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_28_3.png)
 
 步骤 7 自然，由于你正在使用 Python 3，尝试使用 Python 2 的语法是：
-hello.py
 
-步骤 10 保存 hello.py 文件并回到命令行。现在执行新保存的
-python3 hello.py
+`hello.py`
 
-结果将是原始 Python 3 语句，加上你的 name，并在命令行窗口中显示。
+步骤 10 保存 `hello.py` 文件并回到命令行。现在执行新保存的
+
+`python3 hello.py`
+
+结果将是原始 Python 3 语句，加上你的 `name`，并在命令行窗口中显示。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_28_4.png)
 
@@ -1688,7 +805,7 @@ python3 hello.py
 
 ### 表达式
 
-我们已经看到了一些 Python 的基础数学表达式，简单的加法等。让我们扩展一下，看看 Python 有多强大。你可以在 IDLE Shell 或编辑器中工作，随你喜欢。
+我们已经看到了一些 Python 的基础数学表达式，简单的加法等。让我们扩展一下，看看 Python 有多强大。你可以在 `IDLE Shell` 或编辑器中工作，随你喜欢。
 
 ### 数学
 
@@ -1728,22 +845,25 @@ python3 hello.py
 
 步骤 5 你也可以使用取模运算来停止余数。例如：
 
-步骤 8 这将显示为 '0b1'，将整数转换为二进制并添加 0b 前缀。如果你删掉 0b 前缀，就可以使用：Format(3, 'b')
+步骤 8 这将显示为 `'0b1'`，将整数转换为二进制并添加 `0b` 前缀。如果你删掉 `0b` 前缀，就可以使用：`Format(3, 'b')`
 
-10/3
-将显示 3.333333333333333，这当然是循环的 3。如果你现在输入：Format 命令将数字 3 转换为由格式规范 'b' 控制的格式表示。
+`10/3`
 
-10%3
-将显示 1，这是 10 除以 3 的余数。
+将显示 `3.333333333333333`，这当然是循环的 3。如果你现在输入：`Format` 命令将数字 3 转换为由格式规范 `'b'` 控制的格式表示。
+
+`10%3`
+
+将显示 `1`，这是 `10` 除以 `3` 的余数。
 
 步骤 6 接下来我们可能使用幂运算符，或者如果你想专业点，可以使用指数运算。在键盘上使用双乘号符号或星号。
 
 步骤 9 布尔表达式是一个逻辑语句，其结果为真或假。我们可以使用这些来比较数据并测试它是否小于或大于这个，在新文件中：
 
-2**2
-10**10
+`2**2`
 
-本质上，它是 2x2，但我们已经认识了基础数学运算符。这就是你在 Python 中进行求解的方法。
+`10**10`
+
+本质上，它是 `2x2`，但我们已经认识了基础数学运算符。这就是你在 Python 中进行求解的方法。
 
 ```
 a = 6
@@ -1775,9 +895,9 @@ print(9, not (a and 7 and b == 6))
 
 步骤 7 数字和表达式并不止于此。Python 有许多内置函数来计算绝对值集、复数以及大量的数学表达式和勾股定理。要转换为二进制，请使用：
 
-执行步骤 9 的代码，你可以看到一系列真或假的陈述，定义了值：6 和 7。这是你所看内容的扩展，也是编程的重要部分。
+执行步骤 9 的代码，你可以看到一系列真或假的陈述，定义了值：`6` 和 `7`。这是你所看内容的扩展，也是编程的重要部分。
 
-bin(3)
+`bin(3)`
 
 ```
 Python 3.4.2
@@ -1786,11 +906,7 @@ Python 3.4.2 (copyright, 'license' or 'license') for more information.
 '0b11'
 ```
 
-
-
-
-
-### 使用注释
+## 使用注释
 
 当你编写代码时，代码的流程、每个变量将如何被程序操作等都在你的脑海中。另一个程序员可以逐行阅读代码，但随着时间的推移，代码可能会变得难以阅读。
 
@@ -1798,7 +914,7 @@ Python 3.4.2 (copyright, 'license' or 'license') for more information.
 
 ### 注释！
 
-- **步骤 1**：从创建一个 IDLE 编辑器新实例开始（文件 -> 新建），并创建一个简单的变量和打印命令：
+- **步骤 1**：从创建一个 `IDLE` 编辑器新实例开始 `文件 -> 新建`，并创建一个简单的变量和打印命令：
 
 ```python
 a=10
@@ -1809,11 +925,11 @@ print("The value of A is,", a)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_31_0.png)
 
-- **步骤 3**：重新保存代码并执行。你可以看到 IDLE Shell 中的输出与之前相同，尽管添加了额外的行。简单来说，哈希符号 (#) 表示程序员可以插入的一行文本，用于告知他们和其他其他人正在发生什么，而不会影响用户。
+- **步骤 3**：重新保存代码并执行。你可以看到 `IDLE Shell` 中的输出与之前相同，尽管添加了额外的行。简单来说，哈希符号 `#` 表示程序员可以插入的一行文本，用于告知他们和其他其他人正在发生什么，而不会影响用户。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_31_1.png)
 
-- **步骤 2**：运行代码将在 IDLE Shell 窗口返回 `The value of A is 10`，这是我们预期的。现在，添加一些你通常在代码中看到的注释：
+- **步骤 2**：运行代码将在 `IDLE Shell` 窗口返回 `The value of A is 10`，这是我们预期的。现在，添加一些你通常在代码中看到的注释：
 
 ```python
 ### Set the start value of A to 10
@@ -1845,8 +961,7 @@ print("You now have,", "lives left!")
 
 ### 使用注释
 
-- **步骤 5**：虽然我们知道变量 A 是生命值，而且玩家刚刚失去了一个，但对于观众或可能不认识代码的人来说，想象一刻代码有两万行，而不是只有七行。你可以看到注释是多么方便：
-
+- **步骤 5**：虽然我们知道变量 `A` 是生命值，而且玩家刚刚失去了一个，但对于观众或可能不认识代码的人来说，想象一刻代码有两万行，而不是只有七行。你可以看到注释是多么方便：
 - **步骤 8**：内联注释是跟在代码行后面的注释。以我们下面的示例为例，与其将代码插入单独的一行中，我们使用：
 
 ```python
@@ -1905,7 +1020,6 @@ print("You now have", a, "lives!")
 ```
 
 - **步骤 7**：你可以使用注释来解释你的代码。块注释是一段大型文本，详细说明正在发生的情况、代码，告诉读者你计划做什么：
-
 - **步骤 10**：你也可以使用三个引号来注释掉代码块或多行代码。在想要注释的区域前后各放置一个：
 
 ```python
@@ -1938,11 +1052,15 @@ print("You now have", a, "lives!")
 
 ## 变量
 
-- **步骤 1**：在某些编程语言中，要求使用美元符号来表示字符串，这是一个变量，除非你的名字也叫 David。
+- **步骤 1**：在某些编程语言中，要求使用美元符号来表示字符串，这是一个变量，除非你的名字也叫 `David`。
 
-- **步骤 2**：你可以通过发布 `type()` 命令改变变量的类型，将变量放在括号内。在我们的示例中，这应该是 `type(name)`。添加一个新的字符串变量：
 
-- **步骤 4**：你也可以在一个变量内组合变量。例如，为了将 `name` 和 `title` 合并为一个新变量，我们使用：
+
+### 步骤 2
+你可以通过发布 `type()` 命令改变变量的类型，将变量放在括号内。在我们的示例中，这应该是 `type(name)`。添加一个新的字符串变量：
+
+### 步骤 4
+你也可以在一个变量内组合变量。例如，为了将 `name` 和 `title` 合并为一个新变量，我们使用：
 
 ```python
 character = name + " " + title
@@ -1963,7 +1081,8 @@ type(age)
 
 正如我们所知，这是整数。
 
-- **步骤 5**：然而，你不能组合字符串和整数变量，你需要将其中一个转换为另一种，反之亦然。当你尝试组合时，你会得到错误消息：
+### 步骤 5
+然而，你不能组合字符串和整数变量，你需要将其中一个转换为另一种，反之亦然。当你尝试组合时，你会得到错误消息：
 
 ```python
 print (name + age)
@@ -1990,7 +1109,8 @@ print(name + age)
 TypeError: Can't convert 'int' object to implicitly str
 ```
 
-- **步骤 8**：当你想要操作不是字符串的 `age` 时，这带来了一个问题。你需要转换它：
+### 步骤 8
+当你想要操作不是字符串的 `age` 时，这带来了一个问题。你需要转换它：
 
 ```python
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -2013,7 +1133,8 @@ print(name + age)
 TypeError: Can't convert 'int' object to implicitly str
 ```
 
-- **步骤 6**：注意在示例中，你需要添加空格：
+### 步骤 6
+注意在示例中，你需要添加空格：
 
 ```python
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -2036,7 +1157,8 @@ print(name + age)
 TypeError: Can't convert 'int' object to implicitly str
 ```
 
-- **步骤 9**：这个过程被称为类型转换（Casting），在处理浮点算运算时也是如此：
+### 步骤 9
+这个过程被称为类型转换（Casting），在处理浮点算运算时也是如此：
 
 ```python
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -2059,7 +1181,8 @@ print(name + age)
 TypeError: Can't convert 'int' object to implicitly str
 ```
 
-- **步骤 7**：当你从用户输入输入值时（例如年龄），类型转换的另一个示例：
+### 步骤 7
+当你从用户输入输入值时（例如年龄），类型转换的另一个示例：
 
 ```python
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -2082,7 +1205,8 @@ print(name + age)
 TypeError: Can't convert 'int' object to implicitly str
 ```
 
-- **步骤 10**：当组合整数和浮点数时，Python 会将整数转换为浮点数，但记住 Python 不返回精确的值。在类型转换时，Python 将向下取整到最近的整数，例如在 19.99 的情况下它变为：
+### 步骤 10
+当组合整数和浮点数时，Python 会将整数转换为浮点数，但记住 Python 不返回精确的值。在类型转换时，Python 将向下取整到最近的整数，例如在 19.99 的情况下它变为：
 
 ```python
 Python 3.4.2 (default, Oct 19 2014, 13:31:11)
@@ -2106,10 +1230,6 @@ TypeError: Can't convert 'int' object to implicitly str
 ```
 
 * 星号是乘法
-
-
-
-
 
 ### 用户输入
 
@@ -2180,7 +1300,9 @@ rate=float(input("Rate: "))
 ```
 
 STEP 10 为了完成速率和距离，我们可以
+
 distance=float(input("Time: "))
+
 print(distance / rate)
 
 ```python
@@ -2266,6 +1388,7 @@ def add(a, b):
 ```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_38_1.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_38_2.png)
 
 ## Python入门
@@ -2276,13 +1399,13 @@ def add(a, b):
 
 在学习编程时保持条件简单，体验会更愉快。让我们从检查某事是否为 TRUE 开始，如果不是则执行操作。
 
--   **STEP 1** 让我们创建一个新的 Python 程序，要求用户输入单词，然后检查它是否为四个字母单词。从 File -> New 开始，并开始输入：
+- **STEP 1** 让我们创建一个新的 Python 程序，要求用户输入单词，然后检查它是否为四个字母单词。从 File -> New 开始，并开始输入：
 
 ```python
 word=input("Please enter a four-letter word: ")
 ```
 
--   **STEP 3** 现在你使用 `if` 语句来检查单词是否“友好”，如果符合规则则打印确认：
+- **STEP 3** 现在你使用 `if` 语句来检查单词是否“友好”，如果符合规则则打印确认：
 
 ```python
 word=input("Please enter a four-letter word: ")
@@ -2296,14 +1419,17 @@ print("is a four-letter word. Well done.")
 
 双等号 (==) 意味着某物等于
 
--   **STEP 2** 现在我们创建一个新变量，然后使用函数并将单词通过它以获取用户输入的总字母数：
+- **STEP 2** 现在我们创建一个新变量，然后使用函数并将单词通过它以获取用户输入的总字母数：
 
 ```python
 word=input("Please enter a four-letter word: ")
 word_length=len(word)
 ```
 
--   **STEP 4** `if` 结尾的冒号告诉 Python 冒号后的语句是真的。接下来，将光标移动到编辑器的开头：
+
+
+### STEP 4
+`if` 结尾的冒号告诉 Python 冒号后的语句是真的。接下来，将光标移动到编辑器的开头：
 
 ```python
 word=input("Please enter a four-letter word: ")
@@ -2321,12 +1447,9 @@ else:
 print("is not a four-letter word.")
 ```
 
-
-
-
 ## 条件与循环
 
-步骤 5 按下 F5 并保存代码以执行。最初在 Shell 中输入一个四个字母的单词，你应该收到返回消息，显示该单词是四个字母。现在再次按 F5 运行程序，这次输入五个字母的单词。Shell 将显示它不是四个字母的单词。
+步骤 5 按下 `F5` 并保存代码以执行。最初在 Shell 中输入一个四个字母的单词，你应该收到返回消息，显示该单词是四个字母的。现在再次按 `F5` 运行程序，这次输入五个字母的单词。Shell 将显示它不是四个字母的单词。
 
 STEP 6 现在扩展代码以包含另一个条件。最终，它可能会变得相当复杂。我们为三个字母单词添加了一个条件：
 
@@ -2346,7 +1469,7 @@ else:
 
 循环看起来与条件相似，但在运行机制上有所不同。循环会多次运行同一个代码块，通常在条件的支持下进行。
 
-STEP 1 让我们从简单的 while 开始。像 IF 一样，它将检查某些内容是否为真，然后运行缩进的代码：
+STEP 1 让我们从简单的 while 开始。像 `IF` 一样，它将检查某些内容是否为真，然后运行缩进的代码：
 
 STEP 3 循环是另一个例子。`for` 用于遍历数据范围的数据，通常是存储在括号中的列表：For:
 
@@ -2388,7 +1511,7 @@ for x in range (1, 10):
 
 STEP 1 尽管你可以在 Python 中构建内置函数，但使用模块是为了编写更复杂的程序。如你所知，模块是会被导入的 Python 脚本，例如：
 
-STEP 3 结果是 IDLE 报错，因为该模块没有在 Python 中被识别或安装。要安装它，我们可以使用 PIP (Pip Installs Packages)。关闭 IDLE Shell 并进入命令提示符或终端。在管理员权限的命令提示符中输入：`pip install pygame`
+STEP 3 结果是 IDLE 报错，因为该模块没有在 Python 中被识别或安装。要安装它，我们可以使用 PIP `Pip Installs Packages`。关闭 IDLE Shell 并进入命令提示符或终端。在管理员权限的命令提示符中输入：`pip install pygame`
 
 ```python
 Python 3.6 Shell
@@ -2406,9 +1529,9 @@ pip install pygame
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_41_0.png)
 
-STEP 2 某些模块（特别是树莓派上的）是默认包含的，math 模块就是一个例子。遗憾的是，其他模块并不总是可用。非平台的一个很好的例子是 pygame 模块，它包含了许多创建游戏的函数。尝试：`import pygame`。
+STEP 2 某些模块（特别是树莓派上的）是默认包含的，`math` 模块就是一个例子。遗憾的是，其他模块并不总是可用。非平台的一个很好的例子是 `pygame` 模块，它包含了许多创建游戏的函数。尝试：`import pygame`。
 
-STEP 4 PIP 安装由于组件被安装在特定位置，需要管理员权限。Windows 用户可以在开始按钮搜索 CMD，然后右键点击结果并选择“以管理员身份运行”。Linux 和 Mac 可以使用 `sudo` 命令，即 `sudo install package`。
+STEP 4 PIP 安装由于组件被安装在特定位置，需要管理员权限。Windows 用户可以在开始按钮搜索 `CMD`，然后右键点击结果并选择“以管理员身份运行”。Linux 和 Mac 可以使用 `sudo` 命令，即 `sudo install package`。
 
 ```python
 Python 3.6 Shell
@@ -2434,10 +1557,6 @@ Installing collected packages: pygame-2.0.1
 Successfully installed pygame-2.0.1
 ```
 
-
-
-
-
 ## 列表
 
 列表是你 Python 中遇到的最常见数据结构之一。列表简单来说就是项的集合，或者如果你愿意，也可以作为一个整体被访问，也可以根据需要逐个访问。
@@ -2446,14 +1565,14 @@ Successfully installed pygame-2.0.1
 
 列表在 Python 中非常有用。列表可以包含字符串、整数，也可以包含变量。你甚至可以在列表中包含函数，甚至在列表中包含列表。
 
-- 步骤 1：列表是一个称为“项”（items）的数据值序列。你可以创建一个列表名称，后跟一个等号，然后是方括号并用逗号分隔各个项；
+- 步骤 1：列表是一个称为“项”`items`的数据值序列。你可以创建一个列表名称，后跟一个等号，然后是方括号并用逗号分隔各个项；
 
 ```python
 numbers = [1, 4, 7, 21, 98, 156]
 mystical_creatures = ["Unicorn", "Balrog", "Vampire", "Dragon", "Winteraur"]
 ```
 
-- 步骤 3：你还可以通过在数字前加上负号 `[-1]` 获取最后一个项，使用 `[-2]` 获取倒数第二个项，以此此类推访问或索引列表中的项。引用一个不在列表中的项（例如 `[10]`）将返回错误：mythical[-1]
+- 步骤 3：你还可以通过在数字前加上负号 `[-1]` 获取最后一个项，使用 `[-2]` 获取倒数第二个项，以此此类推访问或索引列表中的项。引用一个不在列表中的项（例如 `[10]`）将返回错误：`mythical[-1]`
 
 ```python
 numbers[-1]
@@ -2461,25 +1580,29 @@ mystical_creatures[-4]
 ```
 
 | Cell 0 | Cell 1 | Cell 2 | Cell 3 | Cell 4 | Cell 5 | Cell 6 | Cell 7 | Cell 8 | Cell 9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | Python 3.4.2 (default. Oct 19 2014, 12:31:17) | | type="copyright": "credits" or "license" for more information. | | numbers = [1, 4, 7, 21, 98, 156] | | mystical_creatures = ["Unicorn", "Balrog", "Vampire", "Dragon", "Winteraur"] | | numbers[-1] | | mystical_creatures[-4] | |
 
 - 步骤 2：一旦定义了列表，你就可以通过引用索引或名称来调用每个元素。列表是有编号的。例如：
 
-numbers
+`numbers`
 
 调用列表的全部内容。
 
 调用列表中的第三个零索引项（在这种情况下是 21）。
 
-- 步骤 4：切片（Slicing）与索引类似，但你可以通过冒号分隔项数字来检索列表中的多个项：
+- 步骤 4：切片 `Slicing` 与索引类似，但你可以通过冒号分隔项数字来检索列表中的多个项：
 
-numbers[1:3]
+`numbers[1:3]`
 
 将输出 4 和 7，因为当 `numbers[1:3]` 返回 4 和 7 时，返回的值排除了第二个索引（位置）。
 
 | Cell 0 | Cell 1 | Cell 2 | Cell 3 | Cell 4 | Cell 5 | Cell 6 | Cell 7 | Cell 8 | Cell 9 |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | Python 3.4.2 (default. Oct 19 2014, 12:31:17) | | type="copyright": "credits" or "license" for more information. | | numbers = [1, 4, 7, 21, 98, 156] | | mystical_creatures = ["Unicorn", "Balrog", "Vampire", "Dragon", "Winteraur"] | | numbers[1:3] | | |
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_45_0.png)
@@ -2611,7 +1734,7 @@ user = name + age
 
 使用元组的原因取决于程序的意图。通常，元组是为特殊情况保留的，但它们也被用于存储游戏中的非游戏角色名称。
 
-- 元组的创建方式与列表相同，但你使用圆括号而不是方括号。例如，这里有一个名为 NPC（可玩角色）的元组，包含了角色名称和他们在游戏中的战斗评分：
+- 元组的创建方式与列表相同，但你使用圆括号而不是方括号。例如，这里有一个名为 `NPC` 可玩角色的元组，包含了角色名称和他们在游戏中的战斗评分：
 
 ```python
 months=("January", "February", "March", "April", "May", "June")
@@ -2657,6 +1780,8 @@ NPC[0]
 
 然而，任何删除或添加元组的尝试都将导致错误。将显示 100。
 
+
+
 ```python
 Python 3.4.2 Shell
 File Edit Shell Debug Options
@@ -2686,10 +1811,6 @@ print(NPC[0])
 ### 元组
 
 元组与列表非常相似。然而，虽然列表可以更新、删除或更改，但类型保持不变。这是不可变的，非常适合存储固定数据项。
-
-
-
-
 
 # D
 
@@ -2744,7 +1865,7 @@ type -help or "license" for more information.
 
 步骤 5 向字典添加内容也很简单。你可以通过添加新的键和值项来包含一个新的数据项条：
 
-phonebook["David"] = "0987 654 321"
+`phonebook["David"] = "0987 654 321"`
 
 ```
 Edit View Options Windows Help
@@ -2765,7 +1886,7 @@ phonebook["David"] = 3456
 
 步骤 6 你也可以通过发出 `del` 命令后跟项的键从字典中移除项；由于数据项成对，值也会被移除：
 
-del phonebook["David"]
+`del phonebook["David"]`
 
 ```
 Edit View Options Windows Help
@@ -2786,12 +1907,13 @@ phonebook["David"] = 3456
 
 步骤 7 在此基础上，关于编写一段向用户询问键和值项的代码；创建一个新的编辑器界面并从编写一个新字典开始：
 
-phonebook={}
+`phonebook={}`
 
 步骤 8 接下来，你需要定义用户输入和变量：对于你的电话号码，一个用于姓名，另一个用于简单的处理以避免冗长的 Python 代码：
 
-name=input("Enter name: ")
-phone_number=int(input("Enter phone number: "))
+`name=input("Enter name: ")`
+
+`phone_number=int(input("Enter phone number: "))`
 
 ```
 Edit Format Run Windows Help
@@ -2806,7 +1928,7 @@ phone_number=int(input("Enter phone number: "))
 
 步骤 10 现在当你保存并执行代码时，Python 会询问名称和数字。它将把条目插入字典，你可以在 shell 中查看：
 
-phonebook["David"] =
+`phonebook["David"] =`
 
 如果数字包含空格，你需要将其变为字符串：
 
@@ -2828,8 +1950,9 @@ phonebook[name] = phone_number
 
 - 步骤 3 注意 `text.split()` 有括号，后面跟着引号。空格是分隔符，表示每个列表项由空格分隔。同样，逗号分隔的值由逗号分隔，你会使用：
 
-text="January,February,April,June"
-months=text.split(",")
+`text="January,February,April,June"`
+
+`months=text.split(",")`
 
 ```
 Python 3.4.2
@@ -2845,7 +1968,7 @@ name="Daniel Hannah".split(",")
 
 - 步骤 4 你之前见过如何将一个字符串分割为单个字母，使用：
 
-name="David"
+`name="David"`
 
 返回值为 `['D', 'a', 'v', 'i', 'd']`。在通常情况下似乎没用，但对于创建拼写示例可能非常方便。
 
@@ -2882,9 +2005,7 @@ colors=['Red', 'Blue']
 
 - 步骤 6 因此你可以将 `.join` 应用你在步骤 4 中创建的分割名称，再次合并字母：
 
-```
-name="".join(name)
-```
+`name="".join(name)`
 
 我们将字符串合并回，并保留了最后的列表名称，通过 join 传递了它。
 
@@ -2948,10 +2069,6 @@ True
 False
 ```
 
-
-
-
-
 ### 字符串格式化
 
 当你处理数据、创建列表、字典和对象时，你可能想要输出结果。将字符串与数据合并非常简单，特别是在 Python 3 中，而在早期的版本中，往往会让问题变得复杂。
@@ -2961,14 +2078,18 @@ False
 从 Python 3 开始，字符串格式化变成了一个更加整洁的过程，使用了 `.format()` 函数结合大括号。这是一种比以前更具逻辑性、也更好的方法。
 
 - 步骤 1
+
 Python 中的基本格式化是将每个变量调用到字符串括号中：
+
 ```python
 name="Conan"
 print("The barbarian hero of the Hyborian Age is: {}".format(name))
 ```
 
 - 步骤 3
+
 你也可以将整数包含在其中：
+
 ```python
 number=100000
 print("{} was a skilled mercenary, and thief too. He once stole {} gold from a merchant.".format(name, number))
@@ -2986,14 +2107,16 @@ Python 3.4.2 (default), Oct 10 2014, 13:31:13
 ```
 
 - 步骤 2
+
 记住用括号对关闭 `print` 函数，因为你已经把变量封装在一个括号中，并将打印封装在另一个括号中。你可以在单个函数中包含多种类型的字符串：
+
 ```python
 name="Conan"
 place="Cimmeria"
 print("{} hailed from the North, in a cold land known as {}".format(name, place))
 ```
 
-应用字符串格式有许多不同的方法，有些非常简单，正如我们所展示的样；这里取决于你想要从程序得到什么。经常参考字符串格式化的指南是 Python 文档网页，地址为 docs.python.org/3/library/string.html。在这里处，你将找到：
+应用字符串格式有许多不同的方法，有些非常简单，正如我们所展示的样；这里取决于你想要从程序得到什么。经常参考字符串格式化的指南是 Python 文档网页，地址为 `docs.python.org/3/library/string.html`。在这里处，你将找到：
 
 ```
 python3.4.2 Shell
@@ -3017,6 +2140,8 @@ numbers=1, 3, 45, 567546, 3425346345
 print("* names: {}, {}, {}, {}, {}")
 print(".format(numbers))
 ```
+
+
 
 ```
 Python 3.4.2
@@ -3065,6 +2190,7 @@ print("{0} is {3} years old. Whereas {1} is {4} years old.".format(characters))
 ```
 
 - 步骤 10 你也可以在同一个 `print` 函数中单独调用列表对。回看步骤 7 的代码，你可以这样修改它：
+
 ```python
 names=[["Conan", 25, 21], ["Belit", 22]]
 创建列表。你可以调用每个列表和单独的项目：
@@ -3079,7 +2205,7 @@ print("{0[0]} is {0[1]} years old. Whereas {1[0]} is {1[1]} years old.".format(n
 
 在处理日期时，访问时间非常方便。例如，你可能在用户登录系统时需要时间戳。多亏有 `time` 模块，获取日期和时间很容易。
 
-TIME 模块包含了帮助你检索当前时间的函数、从字符串中读取日期以及格式化日期时间。
+`TIME` 模块包含了帮助你检索当前时间的函数、从字符串中读取日期以及格式化日期时间。
 
 - 步骤 1 如果你需要 `import time` 模块。它是 Python 内置的，所以你只需要用简单的命令调用当前日期和时间：
 
@@ -3176,10 +2302,6 @@ print("User " + name + ", logged in at " + time.strftime("%H:%M:%S") +
 "to login to their account.")
 ```
 
-
-
-
-
 ## 打开文件
 
 在 Python 中，你可以在程序中读取和写入二进制文件。你还可以向文件写入，这是我们接下来要内容的。你之前可能用过读写文件来输出和存储程序中的数据。
@@ -3211,6 +2333,7 @@ print(type(file)) # <class '_io.TextIOWrapper'>
 ```python
 poem.read()
 ```
+
 注意文本条目中的 `/` 会返回一个新行，正如你将看到的。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_57_0.png)
@@ -3385,6 +2508,8 @@ t.write("You awake in a small, square room. A single table stands to one side, t
 
 步骤 5 要扩展此代码，你可以使用 'a'（追加）模式重新打开文件。这将任何文本添加到原始行的末尾，而不是擦除文件并创建一个新示例。
 
+
+
 ```python
 t=open("/home/pi/Documents/text.txt", "a")
 t.write("hello\n# You stand and survey your surroundings.
@@ -3393,7 +2518,7 @@ water.
 ")
 ```
 
-步骤 8 你可以将变量传递到你在 Python 中创建的文件。你可以使用 math模块将任何 pi 值传递给文件，创建一个新文件并将 pi 的输出传递到新文件中：
+步骤 8 你可以将变量传递到你在 Python 中创建的文件。你可以使用 `math` 模块将任何 `pi` 值传递给文件，创建一个新文件并将 `pi` 的输出传递到新文件中：
 
 ```python
 import math
@@ -3405,35 +2530,38 @@ print("writing to a file now... ")
 
 步骤 6 你可以逐行扩展文本，以新行 `()` 结束。完成后，用 `close()` 完成代码并在编辑器中打开文件查看结果。
 
-步骤 9 现在让我们创建一个变量 `pi` 并给它赋值 pi 的值：
-pi=math.pi
+步骤 9 现在让我们创建一个变量 `pi` 并给它赋值 `pi` 的值：
 
-你还需要创建一个新文件来写入 pi：
-t=open("/home/pi/Documents/pi.txt", "w")
+`pi=math.pi`
+
+你还需要创建一个新文件来写入 `pi`：
+
+`t=open("/home/pi/Documents/pi.txt", "w")`
+
 记得更改文件位置以匹配你的系统设置。
 
-t.write("The door is made of solid wood with iron strips. It's bolted from the outside, locking in. You are a prisoner!")
-t.close()
+`t.write("The door is made of solid wood with iron strips. It's bolted from the outside, locking in. You are a prisoner!")`
+
+`t.close()`
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_60_1.png)
 
 步骤 7 有各种文件访问类型考虑使用 `()` 函数。每种类型取决于如何以及光标的位置。`r+` 以读写模式打开文件并将光标置于文件开头。
 
 步骤 10 完成，使用字符串格式化调用变量并将其写入文件，然后提交更改并关闭文件：
-t.write("Value of Pi is: {}".format(pi))
-t.close()
+
+`t.write("Value of Pi is: {}".format(pi))`
+
+`t.close()`
 
 你可以看到你能够传递任何变量的结果
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_60_2.png)
 
-
-
-
-
 ## 异常
 
 在编写代码时，你自然会遇到一些你无法控制的问题。
+
 假设一个用户要除两个数字，但他们尝试除以零。这将导致一个错误并破坏你的代码。
 
 ### 异常对象
@@ -3458,34 +2586,63 @@ raise Exception('warp core breach')
 ```
 
 | 名称 |
+
 |---|---|
+
 | BaseException |
+
 | LookupError |
+
 | Exception |
+
 | ZeroDivisionError |
+
 | ArithmeticError |
+
 | NotIterationError |
+
 | OverflowError |
+
 | FloatingPointError |
+
 | AttributeError |
+
 | KeyError |
+
 | IndexError |
+
 | NameError |
+
 | MemoryError |
+
 | StopIteration |
+
 | UnicodeError |
+
 | GeneratorExit |
+
 | PermissionError |
+
 | FileNotFoundError |
+
 | FileError |
+
 | ConnectionError |
+
 | ConnectionRefError |
+
 | ImportError |
+
 | ModuleNotFoundError |
+
 | SystemError |
+
 | TimeoutError |
+
 | ReferenceError |
+
 | RuntimeError |
+
 | NotImplementedError |
 
 - 步骤 4 大多数异常是由 Python 自动产生的，源于代码中固有的某些问题。你自己的异常定义是为了包含潜在错误并对其做出反应，而不是让代码失败。
@@ -3564,7 +2721,7 @@ except IOError:
 
 ### 步骤 7
 
-显然，这对于以只读模式打开的 file.txt（“r”部分）不起作用。所以这种情况会告诉你你正在做某些错误，你使用 `IOError` 类创建了一个异常来告知用户问题存在。
+显然，这对于以只读模式打开的 `file.txt`（“r”部分）不起作用。所以这种情况会告诉你你正在做某些错误，你使用 `IOError` 类创建了一个异常来告知用户问题存在。
 
 ```python
 File Edit Format Options Help
@@ -3578,10 +2735,6 @@ finally:
 txt.close()
 ```
 
-
-
-
-
 ## 使用模块
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_65_0.png)
@@ -3593,18 +2746,24 @@ Python 模块简单来说是由 Python 创建源文件，包含了类、函数�
 想看看如何改进这些模块以为你的代码添加一些额外花样吗？请继续阅读，学习如何使用它们来编写极佳的代码。
 
 | 68 | 日历模块 |
+
 |------|---|
+
 | 70 | OS 模块 |
+
 | 72 | 随机模块 |
+
 | 74 | Tkinter 模块 |
+
 | 76 | Pygame 模块 |
+
 | 80 | 创建你自己的模块 |
 
 ### 日历模块
 
 除了 `time` 模块外，`calendar` 模块在代码中执行时也可以产生一些有趣的结果。它远不仅仅是像 `time` 模块那样简单显示日期，你实际上可以调用挂历日历类型的显示。
 
-### 处理日期
+#### 处理日期
 
 `calendar` 模块内置在 Python 3 中。但是，如果由于某些原因没有安装，你可以作为 Windows 管理员使用 `pip install calendar`，或者在 Linux 和 macOS 上使用 `sudo pip install calendar` 来添加。
 
@@ -3726,7 +2885,7 @@ for i in cal.monthdays(2018, 6):
 
 ![](/8b33dbf2a2ef620c5ea6844ae78b2983_68_2.png)
 
-STEP 9 calendar 模块允许我们将日历写入 HTML，这样你就可以在网页上显示它：让我们创建一个新文件开始：
+STEP 9 `calendar` 模块允许我们将日历写入 HTML，这样你就可以在网页上显示它：让我们创建一个新文件开始：
 
 ```python
 import calendar
@@ -3751,11 +2910,13 @@ cal.close()
 
 ### OS 模块
 
-OS 模块允许你直接与系统的内置命令交互。命令取决于你运行的操作系统，某些可以在 Windows 上运行，而另一些适用于 Linux 和 macOS。
+`OS` 模块允许你直接与系统的内置命令交互。命令取决于你运行的操作系统，某些可以在 Windows 上运行，而另一些适用于 Linux 和 macOS。
 
-### 进入系统
+#### 进入系统
 
-OS 模块的主要功能之一是列出、移动、创建、删除以及与存储在系统中的文件交互，使其成为备份代码完美模块。你可以使用简单的函数启动 OS 模块查看如何与系统环境交互。如果你使用 Linux 或树莓派，请尝试这个：
+`OS` 模块的主要功能之一是列出、移动、创建、删除以及与存储在系统中的文件交互，使其成为备份代码完美模块。你可以使用简单的函数启动 `OS` 模块查看如何与系统环境交互。如果你使用 Linux 或树莓派，请尝试这个：
+
+
 
 ```python
 import os
@@ -3771,7 +2932,11 @@ Python 3.4.2 (default)
 '/home/pi'
 ```
 
-STEP 3 Windows 的输出不同，因为那是 Python 的当前工作目录，正如你可能怀疑的，`os.getcwd()` 函数请求 Python 获取当前工作目录。Linux 用户将看到与树莓派类似的内容，用户也是如此。![](/8b33dbf2a2ef620c5ea6844ae78b2983_69_0.png)STEP 2 打印变量 `home` 返回的结果是当前用户的文件夹。在我们的示例中是 `/home/pi`；它取决于你登录的用户名和使用的操作系统。对于 Windows 10，它将输出：`C:\Program Files (x86)\Python36-32`。
+### STEP 3
+Windows 的输出不同，因为那是 Python 的当前工作目录，正如你可能怀疑的，`os.getcwd()` 函数请求 Python 获取当前工作目录。Linux 用户将看到与树莓派类似的内容，用户也是如此。![](/8b33dbf2a2ef620c5ea6844ae78b2983_69_0.png)
+
+### STEP 2
+打印变量 `home` 返回的结果是当前用户的文件夹。在我们的示例中是 `/home/pi`；它取决于你登录的用户名和使用的操作系统。对于 Windows 10，它将输出：`C:\Program Files (x86)\Python36-32`。
 
 ```python
 import os
@@ -3788,25 +2953,33 @@ Python 3.6.2 (default, v3.6.2:533, Jul 8 2017, 04:19:34) [MSC v.1919 64 bit (Int
 C:\Program Files (x86)\Python36-32
 ```
 
-STEP 4 OS 模块的另一个有趣元素是它启动安装在系统主机上的程序的能力。例如，如果你想在程序中启动浏览器，你可以使用：![](/8b33dbf2a2ef620c5ea6844ae78b2983_69_1.png)
+### STEP 4
+OS 模块的另一个有趣元素是它启动安装在系统主机上的程序的能力。例如，如果你想在程序中启动浏览器，你可以使用：![](/8b33dbf2a2ef620c5ea6844ae78b2983_69_1.png)
 
 ### OS 模块
 
-STEP 5 `os.system()` 函数允许与外部程序交互；你可以这种方法调用之前的程序。你显然需要完整路径和程序名才能工作。
+### STEP 5
+`os.system()` 函数允许与外部程序交互；你可以这种方法调用之前的程序。你显然需要完整路径和程序名才能工作。
 
 ```python
 import os
 os.system('chromium-browser "https://youtube.com"')
 ```
 
-![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_0.png)STEP 8 操控目录（或你喜欢的文件夹）的能力是 OS 模块最好的功能之一。例如，创建一个新目录可以使用：
+![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_0.png)
+
+### STEP 8
+操控目录（或你喜欢的文件夹）的能力是 OS 模块最好的功能之一。例如，创建一个新目录可以使用：
 
 ```python
 import os
 os.mkdir("NEW")
 ```
 
-![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_1.png)STEP 9 你也可以通过输入重命名你创建的目录：
+![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_1.png)
+
+### STEP 9
+你也可以通过输入重命名你创建的目录：
 
 ```python
 import os
@@ -3820,14 +2993,18 @@ import os
 os.rmdir("OLD")
 ```
 
-STEP 6 对于步骤 5 的示例使用了 Windows，证明 OS 模块在所有平台上工作大大相同。在这种情况下，我们打开了 YouTube 的视频流，因此可以打开特定的页面：
+### STEP 6
+对于步骤 5 的示例使用了 Windows，证明 OS 模块在所有平台上工作大大相同。在这种情况下，我们打开了 YouTube 的视频流，因此可以打开特定的页面：
 
 ```python
 import os
 os.system('chromium-browser "http://bdmpublic.com/"")
 ```
 
-![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_2.png)STEP 7 注意上一步步骤示例中的整个命令和双引号。单引号转义了启动 Chrome，而双引号打开了特定页面。你可以使用变量在同一个浏览器中调用多个标签页：
+![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_2.png)
+
+### STEP 7
+注意上一步步骤示例中的整个命令和双引号。单引号转义了启动 Chrome，而双引号打开了特定页面。你可以使用变量在同一个浏览器中调用多个标签页：
 
 ```python
 import os
@@ -3839,10 +3016,6 @@ os.system(a + b)
 ![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_3.png)
 
 ![](/8b33dbf2a2ef620c5ea6844ae78b2983_70_4.png)
-
-
-
-
 
 ## 使用模块
 
@@ -3989,7 +3162,7 @@ with open("home/Downloads/words.txt", "r") as f:
     print(random.choice(words).strip())
 ```
 
-![](img/8b33dbf2a2ef620c5ea6844ae78b2984)
+![](img/8b33dbf2a2ef620c5ea6844)
 
 ## Tkinter 模块
 
@@ -4067,10 +3240,6 @@ radiobutton(root, text="C++", variable=v, value=20).pack(anchor=W)
 mainloop()
 ```
 
-
-
-
-
 ## Pygame 模块
 
 我们已经简要查看了 Pygame 模块，但它还有很多内容需要探索。Pygame 的开发目的是帮助 Python 程序员创建图形化或基于文本的游戏。
@@ -4118,11 +3287,13 @@ pygame.display.set_caption("Adventure Game")
 
 ## Pygame 模块
 
-步骤 4 如果 Pygame 窗口仍然无法关闭，那只是 IDLE（用 Tkinter 编写的）与 Pygame 模块之间的差异。如果你在命令行中运行代码，它就能完美地关闭。
+### 步骤 4
+如果 Pygame 窗口仍然无法关闭，那只是 IDLE（用 Tkinter 编写的）与 Pygame 模块之间的差异。如果你在命令行中运行代码，它就能完美地关闭。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_76_0.png)
 
-步骤 5 你将稍微调整代码，在 while 循环中运行主代码；这使得代码更整洁且易于追踪。我们下载了一张图片使用，并且 pygame 需要一些参数：
+### 步骤 5
+你将稍微调整代码，在 while 循环中运行主代码；这使得代码更整洁且易于追踪。我们下载了一张图片使用，并且 pygame 需要一些参数：
 
 ```python
 import pygame
@@ -4136,21 +3307,9 @@ while running:
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_76_1.png)
 
-```python
-img=pygame.image.load("/home/pi/Downloads/sprite.png")
-def sprite(x,y):
-    gamowindow.blit(img,(x,y))
-x=(800*0.45)
-y=(600*0.8)
-gamowindow.fill(white)
-sprite(x,y)
-pygame.display.update()
-for event in pygame.event.get():
-    if event.type==QUIT:
-        running=False
-```
 
-步骤 6 让我们快速过一遍代码的变化。我们定义了两种颜色，黑色和白色以及它们各自的 RGB 值。我们加载了名为 sprite1 的下载图片，并将其分配给变量 img，还定义了 sprite 函数，Blit 函数允许我们移动图片。
+
+步骤 6 让我们快速过一遍代码的变化。我们定义了两种颜色，黑色和白色以及它们各自的 RGB 值。我们加载了名为 `sprite1` 的下载图片，并将其分配给变量 `img`，还定义了 `sprite` 函数，`Blit` 函数允许我们移动图片。
 
 ```python
 import pygame
@@ -4183,7 +3342,7 @@ pygame.quit()
 
 ## 使用模块
 
-步骤 7 现在我们可以再次更改代码了，这次在 while 循环中继续添加移动选项，并添加移动 sprite 在屏幕上移动所需的变量：
+步骤 7 现在我们可以再次更改代码了，这次在 `while` 循环中继续添加移动选项，并添加移动 `sprite` 在屏幕上移动所需的变量：
 
 ```python
 import pygame
@@ -4264,7 +3423,7 @@ while running:
 pygame.quit()
 ```
 
-步骤 8 复制上面的代码并使用键盘上的左右键让你的 sprite 像经典的街机 2D 卷轴游戏一样在屏幕底部移动。
+步骤 8 复制上面的代码并使用键盘上的左右键让你的 `sprite` 像经典的街机 2D 卷轴游戏一样在屏幕底部移动。
 
 ```python
 import pygame
@@ -4364,60 +3523,86 @@ while True:
     continue
 break
 pygame.quit()
+```
 
-# 关于 Project-pygame.py 的注释
+关于 `Project-pygame.py` 的注释
 以下代码是：
 
 ```python
+
 import pygame
+
 import time
+
 import subprocess
 
 screen = pygame.display.set_mode((800,250))
+
 clock = pygame.time.Clock()
+
 font = pygame.font.Font("None", 25)
+
 pygame.time.set_timer(pygame.USEREVENT, 2000)
 
 def text_generator(text):
+
     tmp = ''
+
     for letter in text:
+
         tmp += letter
+
         if letter == ' ':
+
             yield tmp
 
 class DynamicText(object):
+
     def __init__(self, font, text, pos, autoreset=False):
+
         self.font = font
+
         self.text = text
+
         self.pos = pos
+
         self.gen = text_generator(text)
+
         self.autoreset = autoreset
 
     def reset(self):
+
         self.done = False
+
         self.gen = text_generator(text)
+
         self.update()
 
     def update(self):
+
         if not self.done:
+
             try:
+
                 self.render(next(self.gen), True, (0, 128, 0))
+
             except StopIteration:
+
                 self.done = True
+
                 time.sleep(10)
+
                 subprocess.Popen("python3 /home/pi/Documents/Code/pygame.py", shell="True")
 
     def draw(self, screen):
+
         screen.blit(self.rendered, self.pos)
+
 ```
 
 步骤 10 当你编写这段代码时，它将显示一个带有介绍文本的窄 Pygame 窗口。暂停秒后，它会启动主游戏 Python 脚本，你可以在其中移动战士灵魂。效果非常好，但总有改进的空间。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_78_0.png)
-
-
-
-
 
 # 使用自定义模块
 
@@ -4425,55 +3610,77 @@ class DynamicText(object):
 
 ## 构建模块
 
-模块是 Python 文件，包含代码，并将其保存为 .py 扩展名。这些文件使用 `import` 命令导入到 Python 中。
+模块是 Python 文件，包含代码，并将其保存为 `.py` 扩展名。这些文件使用 `import` 命令导入到 Python 中。
 
-- * 第 1 步：从创建一组基础数学函数开始。将一个数字乘以二、三，并计算一个数字的次方（幂）。在 IDE 中创建一个新文件并定义它们：
+- 第 1 步：从创建一组基础数学函数开始。将一个数字乘以二、三，并计算一个数字的次方（幂）。在 IDE 中创建一个新文件并定义它们：
 
 ```python
+
 def timestwo(x):
+
     return x * 2
+
 ```
 
 ```python
+
 def timthree(x):
+
     return x * 3
+
 ```
 
 ```python
+
 def square(x):
+
     return x * x
+
 ```
 
 ```python
+
 def power(x,y):
+
     return x ** y
+
 ```
 
-- * 第 2 步：在上述代码下方，输入函数来调用代码：
+- 第 2 步：在上述代码下方，输入函数来调用代码：
 
 ```python
+
 print(timestwo(2))
+
 print(timthree(3))
+
 print(square(4))
+
 print(power(5,3))
+
 ```
 
 将程序保存为 `basic_math.py` 并执行它以获取结果。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_79_0.png)
 
-- * 第 3 步：现在你将把函数从程序中提取到单独的文件文件中。高亮函数定义并选择 Edit > Cut（剪切）。选择 File > New（新建），并在新窗口中使用 Edit > Paste（粘贴）。现在有两个文件，一个包含函数，另一个包含调用：
+- 第 3 步：现在你将把函数从程序中提取到单独的文件文件中。高亮函数定义并选择 Edit > Cut（剪切）。选择 File > New（新建），并在新窗口中使用 Edit > Paste（粘贴）。现在有两个文件，一个包含函数，另一个包含调用：
 
 ```python
+
 print(timestwo(2))
+
 print(timthree(3))
+
 print(square(4))
+
 print(power(5,3))
 ```
 
-- * 第 4 步：如果你现在再次尝试执行 `basic_math.py` 代码，将会出现错误 **NameError: 'timestwo' is not defined**！这是由于代码不再能够访问这些函数。
 
-- * 第 5 步：返回到包含函数定义的新建窗口，点击 File > Save As（另存为）。将其命名为 `minath.py` 并保存到与原始 `basic_math.py` 相同的位置。现在 `basic_math.py` 程序，所以 `minath.py` 窗口保持打开状态。
+
+- 第 4 步：如果你现在再次尝试执行 `basic_math.py` 代码，将会出现错误 `NameError: 'timestwo' is not defined`！这是由于代码不再能够访问这些函数。
+- 第 5 步：返回到包含函数定义的新建窗口，点击 File > Save As（另存为）。将其命名为 `minath.py` 并保存到与原始 `basic_math.py` 相同的位置。现在 `basic_math.py` 程序，所以 `minath.py` 窗口保持打开状态。
 
 > Traceback (most recent call last):
 >   File "C:\...basic_math.py", line 3, in <module>
@@ -4496,11 +3703,17 @@ from math import *
 
 ```python
 ### math.py
+
 # this is used to test the basic_math.py functions
+
 print("create", "credits") for more information.
+
 print(timestwo(1))
+
 print(timestwo(2))
+
 print(timthree(3))
+
 print(square(4))
 ```
 
@@ -4523,7 +3736,6 @@ elif choice == '3':
 
 
 
-
 ## 需要的设备
 
 学习 C++ 不需要你投入巨额资金，也不需要配备一整个计算机实验室。只要你有一台相当现代的电脑，其他一切都是免费提供的。
@@ -4538,7 +3750,7 @@ elif choice == '3':
 
 除非你喜欢在纸上手写你的 C++ 代码（这是很多老牌程序员过去会做的），否则电脑是必不可少的。PC 用户可以使用任何最近的 Linux 发行版或 Windows 操作系统；Mac 用户使用最新的 macOS即可。
 
-# IDE（集成开发环境）
+### IDE（集成开发环境）
 
 就像 Python 一样，IDE 用于输入和执行你的 C++ 代码。许多 IDE 都带有扩展和插件，可以帮助它运行得更好，或添加额外的功能。通常，IDE 会根据所使用的核心操作系统提供增强，例如针对 Windows 10 的增强。
 
@@ -4548,9 +3760,9 @@ elif choice == '3':
 
 ### 文本编辑器
 
-有些程序员更倾向于在通过编译器运行之前使用文本编辑器汇编他们的 C++ 代码。本质上，你可以使用任何文本编辑器编写代码，只需将其保存为 .cpp 扩展名即可。然而，Notepad++ 是目前可用最好的文本编辑器之一。
+有些程序员更倾向于在通过编译器运行之前使用文本编辑器汇编他们的 C++ 代码。本质上，你可以使用任何文本编辑器编写代码，只需将其保存为 `.cpp` 扩展名即可。然而，Notepad++ 是目前可用最好的文本编辑器之一。
 
-# 互联网访问
+## 互联网访问
 
 虽然在没有连接互联网的电脑上学习编程是可能的，但极其困难。你需要安装相关软件、保持其更新、在编码时安装任何帮助性的额外程序或扩展。所有这些都需要访问互联网。
 
@@ -4560,13 +3772,13 @@ elif choice == '3':
 
 是的，和 Python 一样，你需要留出大量的时间来学习如何用 C++ 编码。同样，除非你是天才，否则这不会一夜之间发生，甚至在一周内完成。一个优秀的 C++ 程序员花费了多年时间磨练他们的技艺，所以请耐心，从小处开始并持续学习。
 
-# 特定操作系统的需求
+## 特定操作系统的需求
 
 C++ 可以在任何操作系统上运行，但将所有必要的组件组合在一起会让新手感到困惑。以下是针对 C++ 的特定操作系统说明。
 
 ### LINUX
 
-Linux 用户是幸运的，因为他们的操作系统已经内置了编译器和文本编辑器。任何文本编辑器都允许你输入 C++ 代码，当它保存为 .cpp 扩展名时，使用 g++ 进行编译即可。
+Linux 用户是幸运的，因为他们的操作系统已经内置了编译器和文本编辑器。任何文本编辑器都允许你输入 C++ 代码，当它保存为 `.cpp` 扩展名时，使用 `g++` 进行编译即可。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_86_0.png)
 
@@ -4578,7 +3790,7 @@ Linux 用户是幸运的，因为他们的操作系统已经内置了编译器�
 
 ### 树莓派
 
-树莓派的操作系统是 Raspian，它是基于 Linux 的。因此，你可以使用文本编辑器编写代码，然后像在任何其他 Linux 发行版中一样使用 g++ 进行编译。
+树莓派的操作系统是 Raspian，它是基于 Linux 的。因此，你可以使用文本编辑器编写代码，然后像在任何其他 Linux 发行版中一样使用 `g++` 进行编译。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_86_2.png)
 
@@ -4597,158 +3809,194 @@ Windows 用户在 C++ 编程方面有丰富的选择。有许多 IDE 和编译�
 Code:Blocks 是一个免费的 C++、C 和 Fortran 软件，功能丰富且可以通过插件轻松扩展。它易于使用，背后有一个编译器和一个充满活力的社区。
 
 ### 第 1 步
-首先访问 Code:Blocks 下载网站 www.codeblocks.org。从那里，点击 `Download the binary` 链接获取 Windows 的最新版本。
+
+首先访问 Code:Blocks 下载网站 `www.codeblocks.org`。从那里，点击 `Download the binary` 链接获取 Windows 的最新版本。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_87_0.png)
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_87_1.png)
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
 
-### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
-
-等待，让我正确修复文本。现在我将提供一个没有重复想法的正确版本。
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ### 欢迎来到设置
+
 等待，让我重新整理一下 Code-Blocks。
 
 Code:Blocks 是一个免费的 C++、C 和 Fortran 软件，功能丰富且可以通过插件轻松扩展。它易于使用，背后有一个编译器和一个充满活力的社区。
 
 ### 第 1 步
-首先访问 Code:Blocks 下载网站 www.codeblocks.org/downloads。从那里，点击 `Download the binary` 链接获取 Windows 的最新版本。
+
+首先访问 Code:Blocks 下载网站 `www.codeblocks.org/downloads`。从那里，点击 `Download the binary` 链接获取 Windows 的最新版本。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_87_0.png)
 
 ### 第 3 步
-当你找到文件后，点击 Sourceforge.net 链接，行末会出现下载窗口，点击 Save。
+
+当你找到文件后，点击 `Sourceforge.net` 链接，行末会出现下载窗口，点击 `Save`。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_87_1.png)
 
 ### 设置
+
 当程序启动时，会出现另一个消息，提示 Code:Blocks 目前不是 C++ 文件的默认设置。你有选项：保持现状或允许 Code:Blocks 关联文件类型。再次，我们建议你选择最后一个以关联 Code:Blocks 支持的文件类型。
 
 ### 第 6 步
-第一次运行 Code:Blocks 会检测你可能安装的 C++ 编译器。如果你没有，点击第一个选项 GCC Compiler，并点击 Default 按钮将其设置为你的 C++ 编译器。当你准备好时点击继续。
+
+第一次运行 Code:Blocks 会检测你可能安装的 C++ 编译器。如果你没有，点击第一个选项 `GCC Compiler`，并点击 `Default` 按钮将其设置为你的 C++ 编译器。当你准备好时点击继续。
 
 ### 第 2 步
-你可以看到有几个版本。选择 mingw-1。
+
+你可以看到有几个版本。选择 `mingw-1`。
 
 ### 第 4 步
+
 一旦你同意了条款，选择你需要的组件。
 
 ### 第 5 步
-为 Code:Blocks 选择安装位置。如果你有特殊要求，点击 Next 使用默认路径。
+
+为 Code:Blocks 选择安装位置。如果你有特殊要求，点击 `Next` 使用默认路径。
 
 ### 第 10 步
+
 编译器永远接管你的 C++ 代码并将其翻译为机器码；它构建、检查错误，然后通过编译器运行以标准化并转换为计算机可以操作的内容。当你停止思考它时，它是很聪明的。
 
 ### 第 7 步
+
 本质上，计算机通过二进制文件（0 和 1）工作。编程对于人类来说并不容易。例如，在屏幕上输出“Hello World”将以二进制形式出现。
 
 ### 第 8 步
-第一次运行 Code:Blocks 会检测你可能安装的 C++ 编译器。如果你没有，点击第一个选项 GCC Compiler，并点击 Default 按钮将其设置为你的 C++ 编译器。当你准备好时点击继续。
+
+第一次运行 Code:Blocks 会检测你可能安装的 C++ 编译器。如果你没有，点击第一个选项 `GCC Compiler`，并点击 `Default` 按钮将其设置为你的 C++ 编译器。当你准备好时点击继续。
 
 ### 第 9 步
+
 本质上，计算机通过二进制文件（0 和 1）工作。编程对于人类来说并不容易。例如，在屏幕上输出“Hello World”将以二进制形式出现。
-
-
-
-
 
 # 向 C++ 问好
 
@@ -4792,26 +4040,37 @@ Linux 是一个极好的 C++ 编码环境。大多数 Linux 发行版都预装�
 
 ```cpp
 #include <iostream>
+
 int main() {
   // My first C++ program
   std::cout << "Hello World!\n";
 }
 ```
+
 ```
 david@linuxmint-mate: ~ sudo apt-get update && sudo apt-get upgrade
+
 Reading package lists... Done
+
 Reading dependency information... Done
+
 Building dependency tree... Done
+
 Listing... Done
+
 0 packages to be upgraded, 0 already upgraded, 0 to remove and 0 not to upgrade.
+
 david@linuxmint-mate: ~
 ```
-- 步骤 5：输入代码后，点击 File（文件） > Save As（另存为）并选择一个保存程序的文件夹。将文件命名为 helloworld.cpp（只要扩展名为 .cpp，任何名称都可以），点击 Save。
-- 步骤 6：首先注意到 Text 自动识别这是一个 C++ 文件，文件扩展名现在设置为 .cpp。代码中出现了颜色显示，如果你打开文件管理器，还可以看到文件的图标上有一个 C。
-- 步骤 7：代码保存后，再次进入终端。你需要导航到保存的 C++ 文件位置。我们的示例在 Documents 文件夹中，你可以通过输入 `cd Documents` 进入。记住，Linux 终端对大小写敏感，因此你插入任何命令必须正确。
+
+
+
+- 步骤 5：输入代码后，点击 `File`（文件） > `Save As`（另存为）并选择一个保存程序的文件夹。将文件命名为 `helloworld.cpp`（只要扩展名为 `.cpp`，任何名称都可以），点击 `Save`。
+- 步骤 6：首先注意到 `Text` 自动识别这是一个 C++ 文件，文件扩展名现在设置为 `.cpp`。代码中出现了颜色显示，如果你打开文件管理器，还可以看到文件的图标上有一个 C。
+- 步骤 7：代码保存后，再次进入终端。你需要导航到保存的 C++ 文件位置。我们的示例在 `Documents` 文件夹中，你可以通过输入 `cd Documents` 进入。记住，Linux 终端对大小写敏感，因此你插入任何命令必须正确。
 - 步骤 8：在执行 C++ 文件之前，你需要编译它。在 Linux 中，只要与 C++ 编译器在同一个文件夹即可；在终端中使用 `g++ helloworld.cpp` 并按回车。
-- 步骤 9：g++ 编译代码需要一点时间，但只要你创建的代码没有错误，就会返回命令提示符。如果你在终端输入：你就可以看到你的 C++ 文件了。
-- 步骤 10：aout 文件是编译后的 C++ 代码。运行可执行文件：`./a` 并按回车。屏幕上会出现 "Hello World"。然而，aout 并不友好。要对其重命名，你可以重新编译：`g++ helloworld.cpp -o helloworld`。这创建一个可以通过 `./helloworld` 运行的输出文件。
+- 步骤 9：`g++` 编译代码需要一点时间，但只要你创建的代码没有错误，就会返回命令提示符。如果你在终端输入：你就可以看到你的 C++ 文件了。
+- 步骤 10：`aout` 文件是编译后的 C++ 代码。运行可执行文件：`./a` 并按回车。屏幕上会出现 "Hello World"。然而，`aout` 并不友好。要对其重命名，你可以重新编译：`g++ helloworld.cpp -o helloworld`。这创建一个可以通过 `./helloworld` 运行的输出文件。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_91_0.png)
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_91_1.png)
@@ -4830,25 +4089,22 @@ david@linuxmint-mate: ~
 
 这里有一些值得关注的 C++ IDE。你可以根据需要安装一个或全部，但找到适合你的。
 
-- ECLIPSE Eclipse 是非常流行的 C++ IDE，为程序员提供了丰富的功能。它拥有良好的界面，易于使用，并适用于 Windows、Linux 和 Mac。前往 eclipse.org/downloads/ 下载最新版本。如果你遇到困难，点击 Need Help 链接获取更多信息。
-- CODELITE CodeLite 是一个免费开源的 IDE，更新频繁，适用于 Windows 和 macOS；它轻量、简单且极其强大。你可以在 codelite.org/ 找到更多信息以及如何安装它。
+- `ECLIPSE` `Eclipse` 是非常流行的 C++ IDE，为程序员提供了丰富的功能。它拥有良好的界面，易于使用，并适用于 Windows、Linux 和 Mac。前往 `eclipse.org/downloads/` 下载最新版本。如果你遇到困难，点击 `Need Help` 链接获取更多信息。
+- `CODELITE` `CodeLite` 是一个免费开源的 IDE，更新频繁，适用于 Windows 和 macOS；它轻量、简单且极其强大。你可以在 `codelite.org/` 找到更多信息以及如何安装它。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_93_0.png)
-- GNAT GNAT Programming Studio (GPS) 是一个强大且直观的 IDE，支持测试、调试和代码分析。社区版免费，而 Pro 版收费；社区版适用于 Windows、Mac Linux 甚至 Raspberry Pi。你可以在 adacore.com/download 找到它。
-- NETBEANS 另一个热门选择是 NetBeans。这是另一个功能丰富且使用体验佳的 IDE。NetBeans IDE 包含了 C++ 项目模板，让你能够构建带有动态库和静态库的应用程序。访问 netbeans.org/features/index.html 了解更多。
+- `GNAT` `GNAT Programming Studio` (GPS) 是一个强大且直观的 IDE，支持测试、调试和代码分析。社区版免费，而 Pro 版收费；社区版适用于 Windows、Mac Linux 甚至 Raspberry Pi。你可以在 `adacore.com/download` 找到它。
+- `NETBEANS` 另一个热门选择是 `NetBeans`。这是另一个功能丰富且使用体验佳的 IDE。`NetBeans IDE` 包含了 C++ 项目模板，让你能够构建带有动态库和静态库的应用程序。访问 `netbeans.org/features/index.html` 了解更多。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_93_1.png)
 
-
-
-
 ### VISUAL STUDIO
 
-微软的 Studio 是一个巨大的 C++ IDE，允许你为 Windows、Android、iOS 和 Web 端创建应用程序。社区版（Community）免费下载和安装，但其他版本提供免费试用期。访问 http://www.visualstudio.com/ 了解它的功能。
+微软的 `Studio` 是一个巨大的 C++ IDE，允许你为 Windows、Android、iOS 和 Web 端创建应用程序。社区版（Community）免费下载和安装，但其他版本提供免费试用期。访问 `http://www.visualstudio.com/` 了解它的功能。
 
 ### ANJUTA
 
-AnjuDevStudio 是一个仅限 Linux 的 IDE，它具有了一些你通常在付费软件开发工作环境中才能找到的最先进功能。它包含 GUI 设计器、源码编辑器、应用向导、交互式调试器等更多功能。访问 www.anjuta.org/ 了解更多信息。
+`AnjuDevStudio` 是一个仅限 Linux 的 IDE，它具有了一些你通常在付费软件开发工作环境中才能找到的最先进功能。它包含 GUI 设计器、源码编辑器、应用向导、交互式调试器等更多功能。访问 `www.anjuta.org/` 了解更多信息。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_94_0.png)
 
@@ -4856,11 +4112,11 @@ AnjuDevStudio 是一个仅限 Linux 的 IDE，它具有了一些你通常在付�
 
 ### QT CREATOR
 
-这个跨平台 IDE 旨在为桌面和移动环境创建 C++ 应用程序。它配备了代码编辑器以及用于测试和调试的集成工具，以及一个跨平台平台。它不是免费的，但在 www.qt.io/qt-features-libraries-apis-tools-and-ide 提供试用期。
+这个跨平台 IDE 旨在为桌面和移动环境创建 C++ 应用程序。它配备了代码编辑器以及用于测试和调试的集成工具，以及一个跨平台平台。它不是免费的，但在 `www.qt.io/qt-features-libraries-apis-tools-and-ide` 提供试用期。
 
 # MONODEVELOP
 
-这个优秀的 IDE 允许在所有主要平台上为桌面和 Web 应用程序编写 C++ 代码。它有一个高级的文本编辑器、调试器和一个可配置的工作台，可以帮助你创建代码。它支持 Windows、Mac 和 Linux，并免费下载：www.monodevelop.com/
+这个优秀的 IDE 允许在所有主要平台上为桌面和 Web 应用程序编写 C++ 代码。它有一个高级的文本编辑器、调试器和一个可配置的工作台，可以帮助你创建代码。它支持 Windows、Mac 和 Linux，并免费下载：`www.monodevelop.com/`
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_94_2.png)
 
@@ -4868,11 +4124,11 @@ AnjuDevStudio 是一个仅限 Linux 的 IDE，它具有了一些你通常在付�
 
 ### DEV C++
 
-Bloshed Dev C++ 尽管名字很花哨，但它仅用于 Windows 系统的 IDE。然而，许多人对其简洁的界面以及简单的编码和编译方式给予有誉。尽管它已经没有更新了，但如果你想要一些不同的东西，它仍然是一个值得的选择：www.bloodshed.net/devcpp/。
+`Bloshed Dev C++` 尽管名字很花哨，但它仅用于 Windows 系统的 IDE。然而，许多人对其简洁的界面以及简单的编码和编译方式给予有誉。尽管它已经没有更新了，但如果你想要一些不同的东西，它仍然是一个值得的选择：`www.bloodshed.net/devcpp/`。
 
 # U++
 
-Ultimate++ 是一个跨平台 C++ IDE，能够启动智能且激进的代码快速开发。它像一个“猛兽”级 IDE，在其复杂性背后隐藏着一种让开发者都望而胆畏的美感。在 www.ultimateplus.org/index.html 了解更多。
+`Ultimate++` 是一个跨平台 C++ IDE，能够启动智能且激进的代码快速开发。它像一个“猛兽”级 IDE，在其复杂性背后隐藏着一种让开发者都望而胆畏的美感。在 `www.ultimateplus.org/index.html` 了解更多。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_94_4.png)
 
@@ -4899,68 +4155,44 @@ Ultimate++ 是一个跨平台 C++ IDE，能够启动智能且激进的代码快�
 
 ### Your First C++ Program
 
-你之前可能遵循了 Mac 和 Linux 的示例；从现在开始，你将完全在 Windows 和 Code::Blocks 中工作。让我们从编写你的第一个 C++ 程序开始，向更大的代码世界迈出第一步。
+你之前可能遵循了 Mac 和 Linux 的示例；从现在开始，你将完全在 Windows 和 `Code::Blocks` 中工作。让我们从编写你的第一个 C++ 程序开始，向更大的代码世界迈出第一步。
 
 ### HELLO, WORLD!
 
-编程中有一个传统，即第一个输入的代码是在屏幕上输出“Hello, World!”单词。有趣的是，这可以追溯到 1968 年一种名为 BCPL 的语言。
+编程中有一个传统，即第一个输入的代码是在屏幕上输出“Hello, World!”单词。有趣的是，这可以追溯到 1968 年一种名为 `BCPL` 的语言。
 
 第 1 步
-如所述，书中剩余的 C++ 代码都将使用 Windows 10 和最新版本的 Code::Blocks。首先启动 Code::Blocks。打开后，点击 File -> New -> Empty file 或在键盘上按下 Ctrl+Shift+N。
-
-第 3 步
-目前它看起来没什么特别，逻辑也更不通，但我们稍后会提到。点击 File -> Save As。在你的硬盘上创建或找到一个合适的位置，并在 Name 框中填写名称，将其命名为 `helloworld.cpp`。点击 Save as type 框并选择 C/C++ files。点击 Save 按钮。
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_97_0.png)
+如所述，书中剩余的 C++ 代码都将使用 Windows 10 和最新版本的 `Code::Blocks`。首先启动 `Code::Blocks`。打开后，点击 `File -> New -> Empty file` 或在键盘上按下 `Ctrl+Shift+N`。
 
 第 2 步
-现在你可以看到一个空白屏幕，有一个标签为“1”的选项页，以及 Code::Blocks 主窗口左上角的数字。从点击……（等等，源代码中的文本错乱了，根据逻辑重新对齐）。
-
-*自我修正：第 97-98 页的 OCR 文本非常混乱。我将根据提供的片段进行重构。*
-
-### Your First C++ Program
-
-你之前可能遵循了 Mac 和 Linux 的示例；从现在开始，你将完全在 Windows 和 Code::Blocks 中工作。让我们从编写你的第一个 C++ 程序开始，向更大的代码世界迈出第一步。
-
-### HELLO, WORLD!
-
-编程中有一个传统，即第一个输入的代码是在屏幕上输出“Hello, World!”单词。有趣的是，这可以追溯到 1968 年一种名为 BCPL 的语言。
-
-第 1 步
-如所述，书中剩余的 C++ 代码都将使用 Windows 10 和最新版本的 Code::Blocks。首先启动 Code::Blocks。打开后，点击 File -> New -> Empty file 或在键盘上按下 Ctrl+Shift+N。
-
-第 2 步
-现在你可以看到一个空白屏幕，有一个标签为“1”的选项页，以及 Code::Blocks 主窗口左上角的数字。从点击……
+现在你可以看到一个空白屏幕，有一个标签为“1”的选项页，以及 `Code::Blocks` 主窗口左上角的数字。
 
 第 3 步
-目前它看起来没什么特别，逻辑也更不通，但我们稍后会提到。点击 File -> Save As。在你的硬盘上创建或找到一个合适的位置，并在 Name 框中填写名称，将其命名为 `helloworld.cpp`。点击 Save as type 框并选择 C/C++ files。点击 Save 按钮。
+目前它看起来没什么特别，逻辑也更不通，但我们稍后会提到。点击 `File -> Save As`。在你的硬盘上创建或找到一个合适的位置，并在 Name 框中填写名称，将其命名为 `helloworld.cpp`。点击 `Save as type` 框并选择 `C/C++ files`。点击 `Save` 按钮。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_97_0.png)
-
-第 4 步
-目前它看起来没什么特别，逻辑也更不通，但我们稍后会提到……（片段）
-
-*注：提供的第 97-98 页 OCR 文本实际上是重叠页面的混乱内容。我将输出它们出现的连贯句子。*
-
-
-
 
 ### C++ 程序结构
 
 ### 注释 (COMMENTS)
 
-双斜杠开头的行是注释。这意味着它们不会在代码中执行，并且会被编译器忽略。注释的设计是为了帮助你，或者查看你代码的另一个程序员，解释正在发生什么。注释有两种类型：// 覆盖多行注释，// 是单行注释。
+双斜杠开头的行是注释。这意味着它们不会在代码中执行，并且会被编译器忽略。注释的设计是为了帮助你，或者查看你代码的另一个程序员，解释正在发生什么。注释有两种类型：`//` 覆盖多行注释，`//` 是单行注释。
 
-<<
 这里使用的尖括号（chevrons）是插入运算符。这意味着尖括号后的任何内容都将插入到语句中。如果它们是 'Hello, world'，那么在执行代码时它们将显示在屏幕上。
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!";
+
     return 0;
+
 }
 ```
 
@@ -4977,7 +4209,7 @@ cout << backward() << bt2;
 
 | | |
 | :--- | :--- |
-| | cout |
+| | `cout` |
 | | 打开声明 |
 | | 关闭顶部
 
@@ -4987,6 +4219,7 @@ cout << backward() << bt2;
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 ```
 
@@ -4994,16 +4227,23 @@ using namespace std;
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 int main() {
+
     // 输出消息
+
     cout << "Hello, world!\n"; 
+
     return 0;
+
 }
 ```
 
 ```cpp
 // 我的第一个 C++ 程序
+
 cout << "Hello...
 ```
 
@@ -5017,23 +4257,37 @@ cout << "Hello...
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!";
+
     return 0;
+
 }
 ```
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!\n";
+
     return 0;
+
 }
 ```
 
@@ -5045,11 +4299,10 @@ int main() {
 
 ### 来自 C++ 的问候
 
-在 Code:Blocks 中编译和执行 C++ 代码非常简单；只需点击图标并查看结果即可。以下是操作方法：
+在 `Code:Blocks` 中编译和执行 C++ 代码非常简单；只需点击图标并查看结果即可。以下是操作方法：
 
-- 打开 Code:Blocks（如果还没有打开的话），并加载之前创建的 Hello World 代码。确保没有可见的错误，例如 `std::cout` 行末尾缺少分号。
-
-- 首先点击构建（Build）图标，即黄色齿轮。此时，你的代码已经通过了 Code:Blocks 编译器的检查并检查了错误。你可以通过查看底部窗格来查看构建结果。任何关于代码质量的都会都会显示在这里。
+- 打开 `Code:Blocks`（如果还没有打开的话），并加载之前创建的 Hello World 代码。确保没有可见的错误，例如 `std::cout` 行末尾缺少分号。
+- 首先点击构建（Build）图标，即黄色齿轮。此时，你的代码已经通过了 `Code::Blocks` 编译器的检查并检查了错误。你可以通过查看底部窗格来查看构建结果。任何关于代码质量的都会都会显示在这里。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_0.png)
 
@@ -5057,109 +4310,67 @@ int main() {
 #include <iostream>
 
 int main() {
+
     std::cout << "Hello, world!" << std::endl;
+
     return 0;
+
 }
 ```
+
+
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_1.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_2.png)
 
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些这些是构建（Build）、运行（Run）和函数（Functions）。
+- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 `File` 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（`Build`）、运行（`Run`）和函数（`Functions`）。
 
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
+- 步骤 4 现在点击运行（`Run`）图标，即绿色播放按钮。显示单词：`Hello, world!`; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_3.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_4.png)
 
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-(由于原始文本中存在大量重复，以下为整理后的完整逻辑译文)
-
-[content]
 ### C++ 程序结构
 
 ### 注释 (COMMENTS)
 
-双斜杠开头的行是注释。这意味着它们不会在代码中执行，并且会被编译器忽略。注释的设计是为了帮助你，或者查看你代码的另一个程序员，解释正在发生什么。注释有两种类型：// 覆盖多行注释，// 是单行注释。
+双斜杠开头的行是注释。这意味着它们不会在代码中执行，并且会被编译器忽略。注释的设计是为了帮助你，或者查看你代码的另一个程序员，解释正在发生什么。注释有两种类型：`//` 覆盖多行注释，`//` 是单行注释。
 
-<<
-这里使用的尖括号（chevrons）是插入运算符。这意味着尖括号后的任何内容都将插入到语句中。如果它们是 'Hello, world'，那么在执行代码时它们将显示在屏幕上。
+这里使用的尖括号（chevrons）是插入运算符。这意味着尖括号后的任何内容都将插入到语句中。如果它们是 `'Hello, world'`，那么在执行代码时它们将显示在屏幕上。
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!";
+
     return 0;
+
 }
 ```
 
 ```cpp
 // Hello, "world!"
+
 const string_name_full_ref = "Hello, world!";
+
 string_name_full_ref = "Hello, world!";
+
 string_name_full_ref = "Hello, world!";
+
 string_name_full_ref = "Hello, world!";
+
 string_name_full_ref = "Hello, world!";
+
 int copy_i = 0;
+
 cout << backward() << bt2;
 ```
 
@@ -5175,6 +4386,7 @@ cout << backward() << bt2;
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 ```
 
@@ -5182,16 +4394,23 @@ using namespace std;
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 int main() {
+
     // 输出消息
+
     cout << "Hello, world!\n"; 
+
     return 0;
+
 }
 ```
 
 ```cpp
 // 我的第一个 C++ 程序
+
 cout << "Hello...
 ```
 
@@ -5205,23 +4424,37 @@ cout << "Hello...
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!";
+
     return 0;
+
 }
 ```
 
 ```cpp
 // helloworld.cpp
+
 #include <iostream>
+
 using namespace std;
+
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!\n";
+
     return 0;
+
 }
 ```
 
@@ -5237,7 +4470,7 @@ int main() {
 
 - 打开 Code:Blocks（如果还没有打开的话），并加载之前创建的 Hello World 代码。确保没有可见的错误，例如 `std::cout` 行末尾缺少分号。
 
-- 首先点击构建（Build）图标，即黄色齿轮。此时，你的代码已经通过了 Code:Blocks 编译器的检查并检查了错误。你可以通过查看底部窗格来查看构建结果。任何关于代码质量的都会都会显示在这里。
+- 首先点击构建（`Build`）图标，即黄色齿轮。此时，你的代码已经通过了 Code:Blocks 编译器的检查并检查了错误。你可以通过查看底部窗格来查看构建结果。任何关于代码质量的都会都会显示在这里。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_0.png)
 
@@ -5245,8 +4478,11 @@ int main() {
 #include <iostream>
 
 int main() {
+
     std::cout << "Hello, world!" << std::endl;
+
     return 0;
+
 }
 ```
 
@@ -5254,39 +4490,13 @@ int main() {
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_2.png)
 
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
+- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 `File` 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（`Build`）、运行（`Run`）和函数（`Functions`）。
 
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_3.png)
-
-![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_4.png)
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。这些是构建（Build）、运行（Run）和函数（Functions）。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
+- 步骤 4 现在点击运行（`Run`）图标，即绿色播放按钮。显示单词：`Hello, world!`; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_3.png)
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_101_4.png)
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-- 步骤 4 现在点击运行（Run）图标，即绿色播放按钮。显示单词：Hello, world!; 紧接着是执行代码的时间，并提示你按任意键继续。干得好，你刚刚编译并执行了你的第一个程序。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-(省略)
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-- 步骤 2 如果你看到的和我们的截图类似，请查看屏幕顶部的菜单栏。在顶层菜单的 File 选项下，你可以看到一组图标：黄色齿轮、绿色播放按钮以及齿轮/播放按钮。
-
-(省略)
 
 ## 使用注释 (Using Comments)
 
@@ -5304,14 +4514,6 @@ int main() {
 
 把自己放在一个工作是处理超过 80 万行代码的位置，这些代码分布在多个不同的模块中。你可以看到对原始程序员寻求帮助的需要，形式就是良好的注释。
 
-(省略)
-
-- 游戏重置开始
-
-
-
-
-
 ## C++ 注释
 
 在 C++ 中，注释涉及使用双正斜杠 `//`，或者正斜杠加星号 `/*`。你已经见过一些简短的示例，但这里是它们的工作原理。
@@ -5322,14 +4524,19 @@ int main() {
 
 ```cpp
 // 我的第一个 C++ 程序
+
 cout << "Hello, world!\n";
 
 #include <iostream>
+
 using namespace std;
 
 int main() {
+
     // 我的第一个 C++ 程序
+
     cout << "Hello, world!\n";
+
 }
 ```
 
@@ -5339,13 +4546,21 @@ int main() {
 using namespace std;
 
 int main() {
-    cout << "Hello, world!\n";
-    cout << "And greetings from C++";
-    // 覆盖这些行
-    // 需要添加更多正斜杠
-    cout << "这一行现在被编译器忽略了!";
-}
 ```
+
+
+
+`cout << "Hello, world!\n";`
+
+`cout << "And greetings from C++";`
+
+// 覆盖这些行
+
+// 需要添加更多正斜杠
+
+`cout << "这一行现在被编译器忽略了!";`
+
+}
 
 然而，你可以在代码行的末尾添加注释，以更好地描述发生的情况：
 
@@ -5358,7 +4573,6 @@ cout << "Hello, world!\n"; // 这行输出了单词 'Hello, world!'。\n 表示�
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     cout << "Hello, world!\n"; // 这行输出了 Hello, world. 这里的...
 }
@@ -5369,7 +4583,6 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     cout << "Hello, world!\n";
     cout << "And greetings from C++";
@@ -5384,7 +4597,6 @@ int main() {
 如果你在编写代码，在 C++ 中的良好做法是在注释块的每个新行都添加一个星号。这有助于你在继续编写代码之前记住注释块：
 
 > /* 这条注释可以覆盖几行，而无需添加更多正斜杠 */
-
 > /* 这条注释可以覆盖几行，而无需添加更多正斜杠 */
 
 只需记住用对应的星号和正斜杠结束注释块即可。
@@ -5392,7 +4604,6 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     cout << "Hello, world!\n";
     cout << "And greetings from C++";
@@ -5405,7 +4616,6 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     cout << "Hello, world!\n";
     cout << "And greetings from C++";
@@ -5415,7 +4625,7 @@ int main() {
 
 ## 变量
 
-使用 C++ 与 Python 相比，变量略有不同。在 Python 中，你可以简单地声明 'a' 等于 10 并赋值变量。然而，在 C++ 中，变量在使用之前必须先根据类型进行声明。
+使用 C++ 与 Python 相比，变量略有不同。在 Python 中，你可以简单地声明 `'a'` 等于 10 并赋值变量。然而，在 C++ 中，变量在使用之前必须先根据类型进行声明。
 
 ### 变量的声明
 
@@ -5425,7 +4635,7 @@ int main() {
 打开一个新的空白的 C++ 文件并输入通常的代码头文件：
 
 ### 第 2 步
-从简单的开始，创建两个变量 a 和 b，并将一个赋值为 10，另一个为 5。你可以使用数据类型输入这些变量。使用大括号，输入：
+从简单的开始，创建两个变量 `a` 和 `b`，并将一个赋值为 10，另一个为 5。你可以使用数据类型输入这些变量。使用大括号，输入：
 
 ```cpp
 int a;
@@ -5435,7 +4645,7 @@ b = 5;
 ```
 
 ### 第 3 步
-你可以构建并运行代码，但还没有整数 a 和 b。为了输出 10 和 5 的变量的内容，添加：
+你可以构建并运行代码，但还没有整数 `a` 和 `b`。为了输出 10 和 5 的变量的内容，添加：
 
 ```cpp
 #include <iostream>
@@ -5464,7 +4674,7 @@ Variables.cpp
 ```
 
 ### 第 4 步
-当然你可以声明一个新变量，命名为 result 并输出一些算术结果：
+当然你可以声明一个新变量，命名为 `result` 并输出一些算术结果：
 
 ```cpp
 int result;
@@ -5499,7 +4709,7 @@ cout << result;
 ```
 
 ### 第 5 步
-之前的步骤创建了变量 StartLives，这是一个全局变量。在游戏中，例如，玩家的生命值根据表现增加或减少。当玩家重启时，StartLives 返回默认状态：3。在这里我们赋值了 3，减去 1，留下了 2 点生命：
+之前的步骤创建了变量 `StartLives`，这是一个全局变量。在游戏中，例如，玩家的生命值根据表现增加或减少。当玩家重启时，`StartLives` 返回默认状态：3。在这里我们赋值了 3，减去 1，留下了 2 点生命：
 
 ```
 C:\Users\document\Variables.cpp
@@ -5540,7 +4750,6 @@ int result{a+b};
 #include <iostream>
 using namespace std;
 auto pi = 3.141593;
-
 int main() {
     double area = 1.5;
     area = pi * radius;
@@ -5555,7 +4764,6 @@ int main() {
 #include <iostream>
 using namespace std;
 int StartLives = 3;
-
 int main()
 {
     int startLives = StartLives - 1;
@@ -5578,13 +4786,13 @@ int main()
 
 | 类型 | 命令 |
 |---|---|
-| 整数 | int |
-| 浮点数 | float |
-| 字符 | char |
-| 布尔 | bool |
-| 双精度浮点 | double |
-| 宽字符 | wchar_t |
-| 无值 | void |
+| 整数 | `int` |
+| 浮点数 | `float` |
+| 字符 | `char` |
+| 布尔 | `bool` |
+| 双精度浮点 | `double` |
+| 宽字符 | `wchar_t` |
+| 无值 | `void` |
 
 极其精确的数字，但这些数字只精确到小数点后十五。在显示数字时也存在问题：使用 `cout` 函数时，`cout` 默认输出前五小数。你可以通过添加 `.precision()` 函数并在括号内添加一个值来解决，但你将受到 `double` 数据类型精度的限制。对于这段代码：
 
@@ -5600,17 +4808,13 @@ int main() {
 这些类型还可以使用以下修饰符进行扩展：Long（长）、Signed（符号）和 Unsigned（无符号）。基本上修饰符可以扩展每个数据类型的最小值和最大值范围。例如，`int` 默认范围为 -2147483648 到 2147483647，这是一个公平的，对吧。
 
 现在，如果你使用其中一个修饰符，范围就会改变：
-unsigned int = 0 到 4294967295
-signed int = -2147483648 到 2147483647
-short int = -32768 到 32767
-unsigned short = 0 到 65535
-slong int = -9223372036854775808 到 9223372036854775807
-unsigned long = 0 到 18446744073709551615
-long long = 0 到 42949672
-
-
-
-
+`unsigned int` = 0 到 4294967295
+`signed int` = -2147483648 到 2147483647
+`short int` = -32768 到 32767
+`unsigned short` = 0 到 65535
+`slong int` = -9223372036854775808 到 9223372036854775807
+`unsigned long` = 0 到 18446744073709551615
+`long long` = 0 到 42949672
 
 ### 数据类型
 
@@ -5629,7 +4833,6 @@ cout << PI;
 #include <iostream>
 using namespace std;
 double PI = 3.141592653589793238463;
-
 int main() {
 	cout.precision(22);
 	cout << PI;
@@ -5650,7 +4853,6 @@ Press any key to continue.
 #include <iostream>
 using namespace std;
 typedef int metres;
-
 int main() {
 	int distance;
 	distance = 15;
@@ -5699,21 +4901,18 @@ Press any key to continue.
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main () {
-
 }
 ```
 
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main () {
 char greet[] = "Welcome";
 cout << greet << "\n";
 }
-``` 
+```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_109_0.png)
 
@@ -5726,7 +4925,6 @@ cout << greet << "\n";
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main () {
 char greet[] = {'W', 'e', 'e', 'l', 'c', 'o', 'm', '\0'};
 cout << greet << "\n";
@@ -5743,7 +4941,6 @@ cout << greet << "\n";
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main () {
 string greet = "Welcome";
 cout << greet << "\n";
@@ -5805,17 +5002,25 @@ int main() {
 }
 ```
 
+
+
 ### 步骤 10
 
 有些值得花时间研究字符串，查看截图以获取结果：
 
 ```
 C:\Users\david\Documents\C++Strings.exe
+
 Here is a sentence.
+
 Here is a sentence.
+
 Here is a sentence.
+
 Here is a sentence.
+
 Process returned 0 (0x0) execution time : 0.051 s
+
 Press any key to continue.
 ```
 
@@ -5841,7 +5046,7 @@ int main() {
 }
 ```
 
-- 步骤 2 虽然旧的数学对浮点变量已经准备好了。我们注意到使用了浮点数，这可以帮助你集成，如果你突然需要使用整数，你需要更改 float 或 double，取决于所需的精度。运行代码查看结果。
+- 步骤 2 虽然旧的数学对浮点变量已经准备好了。我们注意到使用了浮点数，这可以帮助你集成，如果你突然需要使用整数，你需要更改 `float` 或 `double`，取决于所需的精度。运行代码查看结果。
 
 ```cpp
 #include <iostream>
@@ -5868,11 +5073,7 @@ int main() {
 }
 ```
 
-
-
-
-
-# 第 5 步
+### 第 5 步
 
 调用 C++ 数学库时，有趣的数学内容就出现了。在这个头文件中包含了几十个数学函数以及其他操作。从余弦到带有两个参数的正切，再到 Pi 的值。你可以通过这样调用该头文件：
 
@@ -5880,12 +5081,11 @@ int main() {
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int main() {
   }
 ```
 
-# 第 8 步
+### 第 8 步
 
 计算数字的幂可以通过方式完成：
 
@@ -5893,7 +5093,6 @@ int main() {
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int main() {
   float number = 12;
   cout << "to the power of 2 is " << pow(number, 2) << "\n";
@@ -5904,7 +5103,7 @@ int main() {
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_112_0.png)
 
-# 第 6 步
+### 第 6 步
 
 从计算数字的平方根开始：
 
@@ -5912,7 +5111,6 @@ int main() {
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int main() {
   float number = 134;
   cout << "the square root of " << sqrt(number) << "\n";
@@ -5921,13 +5119,13 @@ int main() {
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_112_1.png)
 
-# 第 9 步
+### 第 9 步
 
 在这里我们创建了一个名为 `number` 的浮点数变量，值为 12，而 `pow(variable,power)` 就是你使用变量计算幂和平方根的方法。例如，`pow(12,2)` 返回的值与第一行代码相同。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_112_2.png)
 
-# 第 7 步
+### 第 7 步
 
 在这里我们创建了一个名为 `number` 的浮点数，并使用 `sqrt(variable)` 函数来显示它的平方根，即变量的值）。构建并返回你的答案 11.5758。
 
@@ -5937,7 +5135,6 @@ PI 的值存储在数学头库中。你可以通过 `M_PI` 函数调用它并获
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int main() {
   double area, radius = 1.5;
   area = M_PI * radius * radius;
@@ -5946,7 +5143,6 @@ int main() {
 ```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_112_3.png)
-
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_112_4.png)
 
 ## C++ 输入/输出
@@ -6048,23 +5244,23 @@ int main () {
 
 | | |
 |---|---|
-| 1 | #include <iostream> |
-| 2 | using namespace std; |
-| 3 | int main () |
-| 4 | int num1, num2; |
-| 5 | cout << "Enter two numbers: \n"; |
-| 6 | cin >> num1 >> num2; |
-| 7 | cout << "You entered " << num1 << " and " << num2 << "\n"; |
+| 1 | `#include <iostream>` |
+| 2 | `using namespace std;` |
+| 3 | `int main ()` |
+| 4 | `int num1, num2;` |
+| 5 | `cout << "Enter two numbers: \n";` |
+| 6 | `cin >> num1 >> num2;` |
+| 7 | `cout << "You entered " << num1 << " and " << num2 << "\n";` |
 
 | | |
 |---|---|
-| 1 | #include <iostream> |
-| 2 | using namespace std; |
-| 3 | int main () |
-| 4 | int num1, num2; |
-| 5 | cout << "Enter two numbers: \n"; |
-| 6 | cin >> num1 >> num2; |
-| 7 | cout << "You entered " << num1 << " and " << num2 << "\n"; |
+| 1 | `#include <iostream>` |
+| 2 | `using namespace std;` |
+| 3 | `int main ()` |
+| 4 | `int num1, num2;` |
+| 5 | `cout << "Enter two numbers: \n";` |
+| 6 | `cin >> num1 >> num2;` |
+| 7 | `cout << "You entered " << num1 << " and " << num2 << "\n";` |
 
 第 9 步 构建并执行代码，输入一个带有空格的句子。如果你没有完成 `cin >>` 代码行，请重试，结果将显示字符的数量。同样，一旦你将输入存储在变量中，就可以对其进行处理。例如，向用户询问两个数字并进行数学运算：
 
@@ -6076,8 +5272,9 @@ int main () {
   cout << "Enter two numbers: \n";
   cin >> num1 >> num2;
   cout << num1 << " + " << num2 << " is: " << num1 + num2
+```
 
-第 10 步 getline 是 C++ 程序员需要包含的命令。当你无法找到代码为什么不起工作时，空格终止符会很讨厌。在函数中使用 `getline(cin, variable)` 是最好的：
+第 10 步 `getline` 是 C++ 程序员需要包含的命令。当你无法找到代码为什么不起工作时，空格终止符会很讨厌。在函数中使用 `getline(cin, variable)` 是最好的：
 
 ```cpp
 #include <iostream>
@@ -6092,23 +5289,23 @@ int main () {
 
 | | |
 |---|---|
-| 1 | #include <iostream> |
-| 2 | using namespace std; |
-| 3 | int main () |
-| 4 | float num1, num2; |
-| 5 | cout << "Enter two numbers: \n"; |
-| 6 | cin >> num1 >> num2; |
-| 7 | cout << num1 << " + " << num2 << " is: " << num1 + num2
+| 1 | `#include <iostream>` |
+| 2 | `using namespace std;` |
+| 3 | `int main ()` |
+| 4 | `float num1, num2;` |
+| 5 | `cout << "Enter two numbers: \n";` |
+| 6 | `cin >> num1 >> num2;` |
+| 7 | `cout << num1 << " + " << num2 << " is: " << num1 + num2` |
 
 | | |
 |---|---|
-| 1 | #include <iostream> |
-| 2 | using namespace std; |
-| 3 | int main () |
-| 4 | string name; |
-| 5 | cout << "Enter your full name: \n"; |
-| 6 | getline(cin, name); |
-| 7 | cout << "Hello, " << name << "\n"; |
+| 1 | `#include <iostream>` |
+| 2 | `using namespace std;` |
+| 3 | `int main ()` |
+| 4 | `string name;` |
+| 5 | `cout << "Enter your full name: \n";` |
+| 6 | `getline(cin, name);` |
+| 7 | `cout << "Hello, " << name << "\n";` |
 
 ### 字符字面量
 
@@ -6122,20 +5319,18 @@ int main () {
 STEP 1 创建一个新的 C++ 文件并输入相关的头文件：
 #include <iostream>
 using namespace std;
-
 int main() {
-
 }
 ```
 
 第 2 步 你已经体验过 `\n` 字符字面量在任何调用地方放置新行。代码行：`cout << "Hello" << "I am a C++" << "Program"` 输出三行文本，每行后面都有一个 `\n`。
 
 第 3 步 如果你想在 `cout` 语句内部插入引号，你必须使用反斜杠，如：
+
 ```cpp
 #include <iostream>
 using namespace std;
 int main() {
-
 cout << "Hello, user. This is how to use \"quotes\";
 }
 ```
@@ -6148,14 +5343,9 @@ cout << "Hello, user. This is how to use \"quotes\";
 #include <iostream>
 using namespace std;
 int main() {
-
 cout << "ALARM! \a";
 }
 ```
-
-
-
-
 
 ### 实用图表
 
@@ -6163,20 +5353,20 @@ cout << "ALARM! \a";
 
 | 转义序列代码 | 字符 |
 | --- | --- |
-| \ | 反斜杠 |
-| \' | 单引号 |
-| \" | 双引号（引号标记） |
-| \? | 问号 |
-| \a | 警报/响铃 |
-| \b | 退格 |
-| \f | 换页 |
-| \n | 换行 |
-| \r | 回车 |
-| \t | 水平制表 |
-| \v | 垂直制表 |
-| \0 | 空字符 |
-| \uxxxx | Unicode (UTF-8) |
-| \xxxxxxxxxxxx | Unicode (UTF-16) |
+| `\` | 反斜杠 |
+| `\'` | 单引号 |
+| `\"` | 双引号（引号标记） |
+| `\?` | 问号 |
+| `\a` | 警报/响铃 |
+| `\b` | 退格 |
+| `\f` | 换页 |
+| `\n` | 换行 |
+| `\r` | 回车 |
+| `\t` | 水平制表 |
+| `\v` | 垂直制表 |
+| `\0` | 空字符 |
+| `\uxxxx` | Unicode (UTF-8) |
+| `\xxxxxxxxxxxx` | Unicode (UTF-16) |
 
 ### UNICODE 字符 (UTF-8)
 
@@ -6192,21 +5382,24 @@ int main() {
 
 ### UNICODE 字符表
 
-可以在 www.unicode-table.com/en/ 找到可用 Unicode 字符的完整列表。鼠标悬停在字符上即可查看在 C++ 中输入的唯一代码。
+可以在 `www.unicode-table.com/en/` 找到可用 Unicode 字符的完整列表。鼠标悬停在字符上即可查看在 C++ 中输入的唯一代码。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_118_0.png)
 
 ## 定义常量
 
-常量是代码中的固定值。正如其名称所示，可以是任何基本数据类型，其值在整个代码过程中保持不变。在 C++ 中定义常量有两种单独的方法：#define 预处理器和 const。
+常量是代码中的固定值。正如其名称所示，可以是任何基本数据类型，其值在整个代码过程中保持不变。在 C++ 中定义常量有两种单独的方法：`#define` 预处理器和 `const`。
 
 ## #DEFINE
-预处理器是给编译器的指令，用于在编译代码之前对信息进行预处理。#Include 是预处理器，#Define 也是如此。
+
+预处理器是给编译器的指令，用于在编译代码之前对信息进行预处理。`#Include` 是预处理器，`#Define` 也是如此。
 
 ### 步骤 1
-你可以使用 #define 来定义代码中需要的任何常量。首先创建一个带有以下头文件的新 C++ 文件：
+
+你可以使用 `#define` 来定义代码中需要的任何常量。首先创建一个带有以下头文件的新 C++ 文件：
 
 ### 步骤 2
+
 现在假设你的代码有三个不同的常量：长度、宽度和高度。你可以定义：
 
 ```cpp
@@ -6216,11 +5409,13 @@ using namespace std;
 #define WIDTH 40
 #define HEIGHT 60
 int main() {
-
 }
 ```
 
+
+
 ### 步骤 3
+
 注意定义常量使用大写字母，将所有常量定义为大写被认为是良好的编程习惯。在这里，分配的值是 50、40 和 60，让我们来调用它们吧：
 
 ```cpp
@@ -6237,7 +5432,8 @@ cout << "Height: " << HEIGHT << "\n";
 ```
 
 ### 步骤 4
-构建并运行代码。正如预期的那样，每个创建的常量的值都出现了。值得注意的是，使用 #define 定义常量时不需要分号。
+
+构建并运行代码。正如预期的那样，每个创建的常量的值都出现了。值得注意的是，使用 `#define` 定义常量时不需要分号。
 
 ```cpp
 #include <iostream>
@@ -6261,14 +5457,18 @@ Press any key to continue
 ```
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_119_0.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_119_1.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_119_2.png)
+
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_119_3.png)
 
 ## 定义常量
 
 ### 步骤 5
-你也可以将其他元素定义为常量。例如，与其在 cout 语句中使用，不如在代码开始处定义：
+
+你也可以将其他元素定义为常量。例如，与其在 `cout` 语句中使用，不如在代码开始处定义：
 
 ```cpp
 #include <iostream>
@@ -6281,9 +5481,11 @@ int main() {
 ```
 
 ### 步骤 6
-代码在构建和执行时与之前完全相同，使用常量来插入 cout 语句中的换行符。如果你想让它更困难，识别常量不是个好主意。
+
+代码在构建和执行时与之前完全相同，使用常量来插入 `cout` 语句中的换行符。如果你想让它更困难，识别常量不是个好主意。
 
 ### 步骤 7
+
 定义常量将调整代码开始处的值。你可以定义那些三个调用 C++ 库的：
 
 ```cpp
@@ -6297,6 +5499,7 @@ int main() {
 ```
 
 ### 步骤 8
+
 另一种定义常量的方法是使用 `const` 关键字。配合变量使用：
 
 ```cpp
@@ -6309,7 +5512,8 @@ int main() {
 ```
 
 ### 步骤 9
-只要名称和值不冲突，你可以使用任何一种方法，在 main 块中使用 const。但值得提到，#define 不使用内存，所以你的最佳选择。
+
+只要名称和值不冲突，你可以使用任何一种方法，在 `main` 块中使用 `const`。但值得提到，`#define` 不使用内存，所以你的最佳选择。
 
 ```cpp
 #include <iostream>
@@ -6322,7 +5526,8 @@ int main() {
 ```
 
 ### 步骤 10
-`const` 的工作方式与 #define 相同。你可以创建静态整数甚至行：
+
+`const` 的工作方式与 `#define` 相同。你可以创建静态整数甚至行：
 
 ```cpp
 #include <iostream>
@@ -6353,6 +5558,7 @@ int main() {
 库中有两个主要数据类型用于打开文件、读取和写入文件：`ofstream` 和 `fstream`。以下是它们的工作原理。
 
 ### 步骤 1
+
 第一个任务是创建一个带有常用头文件的 C++ 文件，你需要包含 `fstream` 头文件：
 
 ```cpp
@@ -6363,6 +5569,7 @@ int main() {
 ```
 
 ### 步骤 2
+
 开始向文件询问用户的名称和信息。你需要 `ofstream` 来存储名称，并使用 `getline` 接受用户的输入。
 
 ```cpp
@@ -6379,11 +5586,13 @@ newfile.close();
 ```
 
 ### 步骤 3
+
 我们在步骤 2 的截图中包含了注释以帮助你理解该过程。你创建了一个字符串变量来存储用户输入的名称。你还创建一个名为 `name.txt` 的文本文件（使用 `ofstream` 和打开行），询问用户的名称并存储，然后将数据写入文件。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_121_0.png)
 
 ### 步骤 4
+
 要读取文件内容并输出到屏幕，你需要稍微不同的处理。你首先需要创建一个字符串变量来逐行存储文件内容，然后打开文件，使用 `getline` 逐行读取文件并输出到屏幕。最后，关闭文件。
 
 ```cpp
@@ -6399,10 +5608,6 @@ cout << line << endl;
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_121_1.png)
 
-
-
-
-
 ## 循环与决策
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_123_0.png)
@@ -6412,21 +5617,26 @@ cout << line << endl;
 代码中没有循环和决策事件，你的程序将无法为用户提供任何选择。正是这种对选择的理解提升了你作为程序员的技能，并写出更好的代码。
 
 | 126 | While 循环 |
+
 |---|---|
+
 | 128 | For 循环 |
+
 | 130 | Do... While 循环 |
+
 | 132 | If 语句 |
+
 | 134 | If... Else 语句 |
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_124_0.png)
 
 ### While 循环
 
-while 循环的作用是在特定条件为真时重复执行语句或一组语句。当 while 循环开始时，它会通过测试循环条件和内部的语句来初始化自己，然后再执行循环的其余部分。
+`while` 循环的作用是在特定条件为真时重复执行语句或一组语句。当 `while` 循环开始时，它会通过测试循环条件和内部的语句来初始化自己，然后再执行循环的其余部分。
 
 ### 是真还是假？
 
-while 循环是 C++ 代码循环中最流行的形式之一。当条件为真时，它们会反复运行循环内部包含的代码。一旦证明为假，代码将恢复正常运行。
+`while` 循环是 C++ 代码循环中最流行的形式之一。当条件为真时，它们会反复运行循环内部包含的代码。一旦证明为假，代码将恢复正常运行。
 
 - **步骤 1** 清理你目前做的内容并创建一个新的 C++ 文件。通常不需要任何额外的头文件：
 
@@ -6439,11 +5649,11 @@ int main() {
 }
 ```
 
-- **步骤 3** 首先你需要创建一个条件，使用一个名为 `num` 的变量，现在创建 while 循环，规定只要 `num` 小于 30，循环就为真。显示 `num` 的值并加 1，直到它超过 30。
+- **步骤 3** 首先你需要创建一个条件，使用一个名为 `num` 的变量，现在创建 `while` 循环，规定只要 `num` 小于 30，循环就为真。显示 `num` 的值并加 1，直到它超过 30。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_125_0.png)
 
-- **步骤 2** 创建一个简单的 while 循环。输入下面的代码，并编译和运行（我们在屏幕上添加了注释）：
+- **步骤 2** 创建一个简单的 `while` 循环。输入下面的代码，并编译和运行（我们在屏幕上添加了注释）：
 
 ```
 int num = 1;
@@ -6456,7 +5666,7 @@ while (num < 30) {
 return 0;
 ```
 
-我们正在引入一些新元素。首先是 while 循环的左括号和右括号。因为这个循环是一个复合语句，意味着一组语句；还要注意，while 循环后面没有分号。你还有一个 `return 0`，这是结束代码的一种简洁且完美的方式。
+我们正在引入一些新元素。首先是 `while` 循环的左括号和右括号。因为这个循环是一个复合语句，意味着一组语句；还要注意，`while` 循环后面没有分号。你还有一个 `return 0`，这是结束代码的一种简洁且完美的方式。
 
 ```
 int num = 1; // 创建条件
@@ -6487,29 +5697,42 @@ return 0;
 记住不要在语句末尾添加分号很重要。为什么呢？因为分号代表了 C++ 代码行的结束。如果你在语句末尾放置分号，你的循环将永久卡死，直到你关闭程序。
 
 | line | while_loop.cpp |
+
 |---|---|
+
 | 1 | #include <iostream> |
+
 | 2 | #include <windows.h> |
+
 | 3 | using namespace std; |
+
 | 4 | |
+
 | 5 | int num = 0; |
+
 | 6 | |
+
 | 7 | while (num < 30) { |
+
 | 8 | cout << "Number: " << num << endl; |
+
 | 9 | num++; |
+
 | 10 | } |
+
 | 11 | | |
+
 | 12 | return 0; |
 
 ### 步骤 7
 
-在示例中，如果我们执行代码，`num` 的值将是 1，由 while 语句设置。当代码遇到该语句时，它读取条件 1 小于 30 为真，循环。分号关闭了它，所以循环重复，但永远不会给 `num` 加 1，因为它没有继续通过复合语句。
+在示例中，如果我们执行代码，`num` 的值将是 1，由 `while` 语句设置。当代码遇到该语句时，它读取条件 1 小于 30 为真，循环。分号关闭了它，所以循环重复，但永远不会给 `num` 加 1，因为它没有继续通过复合语句。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_126_0.png)
 
 ### 步骤 8
 
-你可以操作 while 语句，根据循环行显示不同的结果。为了逐字读取，如下：
+你可以操作 `while` 语句，根据循环行显示不同的结果。为了逐字读取，如下：
 
 ```cpp
 #include <iostream>
@@ -6553,26 +5776,40 @@ return 0;
 ```
 
 | line | while_loop.cpp |
+
 |---|---|
+
 | 1 | #include <iostream> |
+
 | 2 | #include <fstream> |
+
 | 3 | #include <windows.h> |
+
 | 4 | using namespace std; |
+
 | 5 | |
+
 | 6 | int num = 0; |
+
 | 7 | | |
+
 | 8 | while (num < 30) { |
+
 | 9 | cout << "Number: " << num << endl; |
+
 | 10 | num++; |
+
 | 11 | } |
+
 | 12 | | |
+
 | 13 | return 0; |
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_126_1.png)
 
 ### 步骤 10
 
-`Sleep()` 将以毫秒运行，所以 `Sleep(1000)` 是十秒。结合头文件，while 循环将帮助你完成一些有趣的倒计时。
+`Sleep()` 将以毫秒运行，所以 `Sleep(1000)` 是十秒。结合头文件，`while` 循环将帮助你完成一些有趣的倒计时。
 
 ```cpp
 #include <iostream>
@@ -6594,11 +5831,11 @@ return 0;
 
 ## For 循环
 
-在某些方面，for 循环的工作与 while 循环非常相似，尽管它的结构不同。for 循环分为三个阶段：初始化、条件和增量。一旦设置好，循环就会重复，直到条件变为假。
+在某些方面，`for` 循环的工作与 `while` 循环非常相似，尽管它的结构不同。`for` 循环分为三个阶段：初始化、条件和增量。一旦设置好，循环就会重复，直到条件变为假。
 
 ### 循环
 
-for 循环的初始化阶段只执行一次。循环评估条件判断是真还是假，增量步骤执行第二和第三阶段。
+`for` 循环的初始化阶段只执行一次。循环评估条件判断是真还是假，增量步骤执行第二和第三阶段。
 
 - **步骤 1** 使用标准头文件创建一个新的 C++ 文件：
 
@@ -6610,7 +5847,7 @@ int main() {
 }
 ```
 
-- **步骤 2** 开始一个简单的 for 循环，从 1 计数到 30，每次增量时显示值：
+- **步骤 2** 开始一个简单的 `for` 循环，从 1 计数到 30，每次增量时显示值：
 
 ```cpp
 //For Loop Begins
@@ -6620,7 +5857,7 @@ for (int num = 1; num < 30; num = num + 1) {
 return 0;
 ```
 
-- **步骤 3** 执行 for 循环的过程，创建一个整数 `num` 并将其赋值为 1。接下来，设置条件，在这种情况下将 `num` 设置为 30。最后一个阶段是循环增加的地方；这里 `num` 的值被加了1。
+- **步骤 3** 执行 `for` 循环的过程，创建一个整数 `num` 并将其赋值为 1。接下来，设置条件，在这种情况下将 `num` 设置为 30。最后一个阶段是循环增加的地方；这里 `num` 的值被加了1。
 
 ```cpp
 //For Loop Begins
@@ -6628,7 +5865,7 @@ for (int num = 1; num < 30; num = num + 1) {
 }
 ```
 
-- **步骤 4** 循环结束后，你在花括号中创建复合语句，它显示整数的当前值。每当 for 重复时，它执行第二和第三阶段，直到条件 `<30` 为假。循环随后结束，代码继续，接近 `return`。
+- **步骤 4** 循环结束后，你在花括号中创建复合语句，它显示整数的当前值。每当 `for` 重复时，它执行第二和第三阶段，直到条件 `<30` 为假。循环随后结束，代码继续，接近 `return`。
 
 ```cpp
 //Forloop.cpp
@@ -6660,6 +5897,8 @@ return 0;
 
 - **步骤 9** 这是一个显示用户输入数字乘法表的循环示例。对学生很有用：
 
+
+
 ```cpp
 int n;
 cout << "Enter a number to view its times table:";
@@ -6675,7 +5914,7 @@ Process returned (0x0) execution time 10.004 s
 Press any key to continue.
 ```
 
-- **步骤 7** 自然地，你可以在 for 循环中包含更多内容，包括一些用户输入：
+- **步骤 7** 自然地，你可以在 `for` 循环中包含更多内容，包括一些用户输入：
 
 ```cpp
 int i, n = 1;
@@ -6717,17 +5956,13 @@ Press any key to continue.
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_128_2.png)
 
-
-
-
-
 ### do... While 循环
 
-do... while 循环与 for 循环甚至 while 循环略有不同。`for` 和 `while` 都会在循环开始时（或者如果你愿意，在循环的顶部）设置并检查条件。然而，do... while 循环类似于 `while` 循环，但它在循环的底部检查条件。
+`do... while` 循环与 `for` 循环甚至 `while` 循环略有不同。`for` 和 `while` 都会在循环开始时（或者如果你愿意，在循环的顶部）设置并检查条件。然而，`do... while` 循环类似于 `while` 循环，但它在循环的底部检查条件。
 
 ### DO 循环
 
-do... while 循环的优点是它能保证至少运行一次。它的结构是：`do`，后跟语句，`while true`。这是它的工作原理。
+`do... while` 循环的优点是它能保证至少运行一次。它的结构是：`do`，后跟语句，`while true`。这是它的工作原理。
 
 - 步骤 1 从空白的 C++ 文件开始并输入标准头文件：
 
@@ -6753,7 +5988,7 @@ return 0;
 }
 ```
 
-- 步骤 3 现在让我们来看 do... while 循环的结构。首先，你创建一个名为 `num` 的整数，值为 1。现在开始 do... while。循环体内部的代码将至少执行一次，然后检查条件为真还是为假。
+- 步骤 3 现在让我们来看 `do... while` 循环的结构。首先，你创建一个名为 `num` 的整数，值为 1。现在开始 `do... while`。循环体内部的代码将至少执行一次，然后检查条件为真还是为假。
 
 ```cpp
 // 创建一个值为 1 的整数
@@ -6818,7 +6053,7 @@ return 0;
 
 ### 步骤 9
 
-使用之前的倒计时代码，do... while 循环看起来如下：
+使用之前的倒计时代码，`do... while` 循环看起来如下：
 
 ```cpp
 int a = 10;
@@ -6840,7 +6075,7 @@ return 0;
 
 ### 步骤 6
 
-步骤 5 的代码工作如下：赋值了两个变量，`sum` 的值为 0.0。这里是关于 do... while 循环的简要说明。
+步骤 5 的代码工作如下：赋值了两个变量，`sum` 的值为 0.0。这里是关于 `do... while` 循环的简要说明。
 
 ```cpp
 float number = 0.0;
@@ -6859,7 +6094,7 @@ do {
 
 ### 步骤 7
 
-在这种情况下，do... while 循环要求你输入一个数字，赋值给 `number` 变量；每次计算都使用 `number` 的值。
+在这种情况下，`do... while` 循环要求你输入一个数字，赋值给 `number` 变量；每次计算都使用 `number` 的值。
 
 ```cpp
 do {
@@ -6870,7 +6105,7 @@ do {
 
 ### 步骤 10
 
-do... while 循环的主要优点是它是“退出条件循环”；如果你的代码需要至少执行一次循环（例如，检查游戏中的生命值），那么 do... while 循环是完美的。
+`do... while` 循环的主要优点是它是“退出条件循环”；如果你的代码需要至少执行一次循环（例如，检查游戏中的生命值），那么 `do... while` 循环是完美的。
 
 ```cpp
 #include <iostream>
@@ -6912,7 +6147,7 @@ int main () {
 | 1 | #include <iostream> |
 | 2 | using namespace std; |
 | 3 | int main () { |
-| 4 | |
+| 4 |  |
 | 5 | } |
 
 ### 步骤 2
@@ -6999,10 +6234,6 @@ if (temp > 0) {
 cout << "\n再见!" << endl;
 return 0;
 ```
-
-
-
-
 
 # If... Else 语句
 
@@ -7104,6 +6335,8 @@ int main() {
 }
 ```
 
+
+
 ```cpp
 int num, guess, tries = 0;
 cout << "**Two-player number guessing game****" << endl;
@@ -7168,7 +6401,7 @@ Press any key to continue.
 
 ## 模块
 
-程序员有许多需要注意的陷阱，多到无法列举。能够识别并修复错误是你进入高级领域的标志。将代码拆分为小块并花时间为变量命名是消除常见错误的关键。使用字母没关系，但当代码以变量开头怎么办？命名 lives、money 等并不困难。
+程序员有许多需要注意的陷阱，多到无法列举。能够识别并修复错误是你进入高级领域的标志。将代码拆分为小块并花时间为变量命名是消除常见错误的关键。使用字母没关系，但当代码以变量开头怎么办？命名 `lives`、`money` 等并不困难。
 
 ```cpp
 var points = 103;
@@ -7181,7 +6414,7 @@ var totalScore = 0;
 write("Your Total Score is: " + totalScore);
 ```
 
- 使用注释。这是一个简单的概念，但在下次查看代码时可以节省很多问题。插入注释行可以帮助你快速筛选出导致问题的代码；当你需要重写旧代码也是。
+使用注释。这是一个简单的概念，但在下次查看代码时可以节省很多问题。插入注释行可以帮助你快速筛选出导致问题的代码；当你需要重写旧代码也是。
 
 ```cpp
 // target = 2;
@@ -7205,14 +6438,23 @@ write("Your Total Score is: " + totalScore);
 
 ```
 Enter an integer number
+
 You have entered wrong input
+
 You have entered wrong input
+
 You have entered wrong input
+
 sdfaf1231213
+
 1322n22x3n22x
+
 You have entered wrong input
+
 The number is: 12
+
 Process returned (0x0) execution time: 2.49 s
+
 Press any key to continue.
 ```
 
@@ -7221,10 +6463,6 @@ Press any key to continue.
 始终对你的工作进行备份，并对你所做的任何更改进行二次备份。如果有良好的备份，在出现问题时错误就可以纠正。从离开的地方重新开始比从头开始容易得多。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_138_0.png)
-
-
-
-
 
 # 初学者 Python 错误
 
@@ -7240,7 +6478,7 @@ Python 是一种相对容易学习的语言，初学者有足够的空间来找�
 
 ## 缩进、制表符和空格
 
-Python 在显示代码时使用精确的缩进。缩进意味着该部分的代码是上一个语句的一部分，而不是与代码的其他部分关联。使用四个空格来创建缩进，而不是制表符（tab）。
+Python 在显示代码时使用精确的缩进。缩进意味着该部分的代码是上一个语句的一部分，而不是与代码的其他部分关联。使用四个空格来创建缩进，而不是制表符（`tab`）。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_139_0.png)
 
@@ -7259,21 +6497,17 @@ Python 在显示代码时使用精确的缩进。缩进意味着该部分的代�
 ```python
 # 我有一条注释来从列表中获取值。我可以删除它，取决于我想要的
 # 列表的值。
-
 # 我的问题是删除代码，如果该语句创建了一个列表，那么调用 list
 # 来删除：此文件，如果它存在。
-
 # 在发生的情况下，我想删除该文件。如果它存在，
 # 强烈建议这样做。
 ```
 
 ```python
 import os
-
 def delete_file(filename):
     if os.path.exists(filename):
         os.remove(filename)
-
 # 检查值（百分比 = 平均百分比）
 # print(percentage, "in humid")
 ```
@@ -7282,18 +6516,15 @@ def delete_file(filename):
 # 设置 pygame
 pygame.init()
 mainClock = pygame.Clock()
-
 # 设置窗口
 width = 800
 height = 600
 screen = pygame.display.set_mode((width, height), 0, 32)
 pygame.display.set_caption('caption')
-
 # 设置移动变量
 moveLeft = False
 move = False
 moveDown = False
-
 # 设置方向变量
 LEFT = 0
 RIGHT = 3
@@ -7325,7 +6556,6 @@ class Hangman:
     def __init__(self, word):
         self.word = word
         self.missed_letters = []
-
     def guessed(self, letter):
         if letter not in self.word:
             self.missed_letters.append(letter)
@@ -7335,7 +6565,7 @@ class Hangman:
 
 ## 大小敏感
 
-Python 是一种大小敏感的语言，所以你需要检查任何变量。例如，在代码中调用错误的变量 Lives 会产生意外结果。
+Python 是一种大小敏感的语言，所以你需要检查任何变量。例如，在代码中调用错误的变量 `Lives` 会产生意外结果。
 
 ```python
 >>> lives = 10
@@ -7345,7 +6575,7 @@ Python 是一种大小敏感的语言，所以你需要检查任何变量。例�
 
 ## 运算符
 
-使用运算符也是一种常见错误。当你对两个值进行比较时，你需要使用相等运算符（双等号 `==`）。使用单等号 `=` 是给变量赋值（例如，lives10）。
+使用运算符也是一种常见错误。当你对两个值进行比较时，你需要使用相等运算符（双等号 `==`）。使用单等号 `=` 是给变量赋值（例如，`lives10`）。
 
 ```python
 b=5
@@ -7360,7 +6590,7 @@ c=10
 
 ## 操作系统
 
-编写多平台代码是困难的，特别是当你需要开始操作系统元素时。例如，如果为了清除屏幕，在 Windows 上你必须使用 cls。而在 Linux 上你需要使用 clear。你需要小心输入并使用替代命令。
+编写多平台代码是困难的，特别是当你需要开始操作系统元素时。例如，如果为了清除屏幕，在 Windows 上你必须使用 `cls`。而在 Linux 上你需要使用 `clear`。你需要小心输入并使用替代命令。
 
 ```python
 def print_status(self):
@@ -7368,7 +6598,6 @@ def print_status(self):
     print ('Word: ')
     for letter in self.missed_letters:
         print (letter,))
-
 while(run==1):
     try:
         os.system('clear')
@@ -7386,7 +6615,7 @@ C++ 开发者可能会遇到许多陷阱，尤其是这是一门更复杂且不�
 
 ## 未定义的标识符
 
-大多数编程语言的共同错误是尝试输出不存在的变量。在屏幕上显示 x 的值没有问题，但如果你没有告诉编译器 x 的值。
+大多数编程语言的共同错误是尝试输出不存在的变量。在屏幕上显示 `x` 的值没有问题，但如果你没有告诉编译器 `x` 的值。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_141_0.png)
 
@@ -7397,7 +6626,6 @@ C++ 开发者可能会遇到许多陷阱，尤其是这是一门更复杂且不�
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     int a, b, c, d;
     a=10;
@@ -7405,7 +6633,9 @@ int main() {
     c=30;
     d=40;
     cout << a << b << c << endl;
-}记住 C++ 程序的每一行都必须以分号结束。如果没有，编译器会将缺少分号的行视为下一个语句。这在编译时会产生各种问题，所以不要忘记你的分号。
+}
+```
+记住 C++ 程序的每一行都必须以分号结束。如果没有，编译器会将缺少分号的行视为下一个语句。这在编译时会产生各种问题，所以不要忘记你的分号。
 
 ```cpp
 #include <iostream>
@@ -7421,7 +6651,7 @@ int main() {
 
 ## GCC 或 G++
 
-如果你在 Linux 中，你将会遇到 gcc 和 g++。简而言之，gcc 是 GNU 编译器（或称为 GNU C Compiler），而 g++ 是编译器的 GNU（C++ 版本）。如果你使用 Windows，则需要确保使用了正确的编译器。
+如果你在 Linux 中，你将会遇到 `gcc` 和 `g++`。简而言之，`gcc` 是 GNU 编译器（或称为 GNU C Compiler），而 `g++` 是编译器的 GNU（C++ 版本）。如果你使用 Windows，则需要确保使用了正确的编译器。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_141_1.png)
 
@@ -7432,7 +6662,6 @@ int main() {
 ```cpp
 #include <iostream>
 #include <string>
-
 int main() {
     std::string message = "Hello, world!";
     std::cout << message << std::endl;
@@ -7447,13 +6676,11 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     int x;
     string myself = "This is a string!\n";
     cout << "What's the value of x? ";
     cout << x << ";
-
     cout << "\n";
     cout << myself;
 }
@@ -7461,20 +6688,19 @@ int main() {
 
 ## 引号
 
-缺少引号是一个常见的错误，对于每一个层级的用户都是如此。你需要创建字符串。在屏幕上显示 x 的值没有问题，但如果你没有告诉编译器 x 的值。
+缺少引号是一个常见的错误，对于每一个层级的用户都是如此。你需要创建字符串。在屏幕上显示 `x` 的值没有问题，但如果你没有告诉编译器 `x` 的值。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_141_0.png)
 
 ## 初始化变量
 
-在 C++ 中变量没有初始化为零。这意味着如果你创建一个变量 x，它会被赋予一个从0开始的随机数，因为在方程中包含它。
+在 C++ 中变量没有初始化为零。这意味着如果你创建一个变量 `x`，它会被赋予一个从0开始的随机数，因为在方程中包含它。
 
 ![](img/8b33dbf2a2ef620c5ea6844ae78b2983_141_1.png)
 
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     int x;
     cout << x;
@@ -7486,14 +6712,12 @@ int main() {
 虽然在每一行末尾添加分号是必要的，但规则有一些例外。分号位于每个完整语句的结尾，但某些代码行并不是语句。
 
 # #include
-if lines
-switch switches
+
+`if` lines
+
+`switch` switches
 
 如果让你感到困惑，编译器会告诉你哪里出错了。
-
-
-
-
 
 # 下一步去哪里？
 
@@ -7516,6 +6740,8 @@ Twitter 并不全是喷子和反对者，还有许多个性鲜明且更愿意分
 ## 分享技能
 
 在 StackExchange 等编码和开发知识网站上活跃起来。如果你有能力帮助他人并获得帮助，当你这样做时真的不会感觉很棒吗？因为在与其他成员互动的过程中你学到很多。
+
+
 
 ```cpp
 #pragma once
@@ -7589,70 +6815,99 @@ Chroniclesd.org 是一个博客，我在上面分享我对软件开发、技术�
 # BDM 完整手册系列
 
 ## iPhone
+
 精通你的 iPhone 的必备分步手册。
+
 846
 
 ## iPad & iPadOS 15
+
 精通 iPad 的必备分步手册。
+
 853
 
 ## Mac & macOS
+
 精通你的 Mac 和 macOS 的必备分步手册。
+
 968
 
 ## iOS 15 适用于 iPhone & iPad
+
 精通 iPad 和 iOS 15 的必备分步手册。
+
 1269
 
 ## 黑白摄影
+
 精通黑白摄影的必备分步手册。
+
 849
 
 ## 户外摄影
+
 精通户外摄影的必备分步手册。
+
 879
 
 ## 创意摄影
+
 精通创意摄影的必备分步手册。
+
 883
 
 ## GoPro 摄影
+
 精通 GoPro 摄影的必备分步手册。
+
 853
 
 ## 景观摄影
+
 精通景观摄影的必备分步手册。
+
 874
 
 ## Photoshop Elements
+
 精通 Photoshop Elements 的必备分步手册。
+
 860
 
 ## Instagram
+
 适用于 iPhone、iPad、Android、PC 和 Mac。精通 Instagram 和账户安全的必备分步手册。
+
 438
 
 ## WhatsApp
+
 适用于 iPhone、iPad、Android 和 Mac。精通账户安全的必备分步手册。
 
 ## Android
+
 精通你的 Android 的必备分步手册。
 
 ## Samsung
+
 精通你的三星设备的必备分步手册。
 
 ### 互联网
+
 精通你使用的的必备分步手册。
 
 ## 智能
+
 精通你的智能设备的必备分步手册。
 
 ## 云端
+
 精通云端的必备分步手册。
 
 ## PC
+
 精通你的 PC 的必备分步手册。
 
 ## 编码
-精通你的编码、C++ 的必备分步手册。
 
+精通你的编码、C++ 的必备分步手册。

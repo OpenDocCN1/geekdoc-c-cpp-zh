@@ -1,44 +1,43 @@
+
 # Express.js：Node.js Web 框架指南
 
+## 引言
 
+`ExpressJS` 是 `Node` 中最实用且有趣的框架之一。它被用于 `Web` 和移动应用程序的开发。这类应用程序在软件环境中使用最为广泛。这表明你有必要了解如何使用该框架进行开发。该框架拥有众多模块，可用于增强应用程序的视觉效果和体验。
 
-![](img/00001.jpeg)
+## 第 1 章 - `ExpressJS` 概述
 
+`ExpressJS` 是一个非常灵活的 `Node` 框架，为开发者开发 `Web` 和移动应用程序提供了许多功能。该框架可用于开发 `API`。在书中，我们将讨论 `ExpressJS` 的各种特性。
 
+## 第 2 章 - Session（会话）
 
-
-# 引言
-ExpressJS 是 Node 中最实用且有趣的框架之一。它被用于 Web 和移动应用程序的开发。这类应用程序在软件环境中使用最为广泛。这表明你有必要了解如何使用该框架进行开发。该框架拥有众多模块，可用于增强应用程序的视觉效果和体验。
-
-# 第 1 章- ExpressJS 概述
-ExpressJS 是一个非常灵活的 Node 框架，为开发者开发 Web 和移动应用程序提供了许多功能。该框架可用于开发 API。在书中，我们将讨论 ExpressJS 的各种特性。
-
-# 第 2 章- Session（会话）
-若要在 Express 中安装此功能，只需执行以下命令：
+若要在 `Express` 中安装此功能，只需执行以下命令：
 
 ```
 npm install express-session
 ```
 
-上述命令将 session 安装到你的系统中。要在你的程序中使用它，你必须使用 `require` 命令。如下所示：
+上述命令将 `session` 安装到你的系统中。要在你的程序中使用它，你必须使用 `require` 命令。如下所示：
 
 ```javascript
 var session = require('express-session')
 ```
 
-可以通过给定的 `options` 创建 session 中间件。你应该知道，会话数据不应该保存在 cookie 中，但在这里只存储了 session ID。会话数据存储在应用程序的服务器端。然而，`MemoryStore`（默认的服务器端会话存储）并不是为生产环境设计的。在大多数情况下，它会发生内存泄漏，且无法扩展到单个进程之外。它是为了调试目的而开发的。
+可以通过给定的 `options` 创建 `session` 中间件。你应该知道，会话数据不应该保存在 `cookie` 中，但在这里只存储了 `session ID`。会话数据存储在应用程序的服务器端。然而，`MemoryStore`（默认的服务器端会话存储）并不是为生产环境设计的。在大多数情况下，它会发生内存泄漏，且无法扩展到单个进程之外。它是为了调试目的而开发的。
 
-`express-session` 接受 options 对象中的以下属性：
+`express-session` 接受 `options` 对象中的以下属性：
 
-## Cookie
-这些是会话 ID Cookie 的设置。考虑下例示例：
+### Cookie
+
+这些是会话 ID `Cookie` 的设置。考虑下例示例：
 
 ```javascript
 { path: '/', httpOnly: true, secure: false, maxAge: null }
 ```
 
-## Genid
-这是一个用于生成新 session ID 的函数。提供的函数应该返回一个将用作 session ID 的字符串。如果在生成 ID 时需要向 `req` 附加值，则会将 `req` 作为第一个参数传递给函数。该默认值是一个函数，可以使用 `uid2` 来生成 ID。
+### Genid
+
+这是一个用于生成新 `session ID` 的函数。提供的函数应该返回一个将用作 `session ID` 的字符串。如果在生成 ID 时需要向 `req` 附加值，则会将 `req` 作为第一个参数传递给函数。该默认值是一个函数，可以使用 `uid2` 来生成 ID。
 
 注意：为了避免会话冲突，请确保生成的 ID 是唯一的，即它们之间应该是不同的。考虑下例示例，展示了如何实现这一点：
 
@@ -51,28 +50,38 @@ application.use(session({
 }))
 ```
 
-## Name
+### Name
+
 这是设置在响应中的 session cookie 的名称。注意，它是从请求中读取的。默认值为 `connect.sid`。对于那些在相同主机上运行多个应用程序的用户来说，session cookie 必须分开。为了实现这一点，必须在每个应用程序中设置不同的名称。
 
-## Proxy
-当你设置安全 cookie（secure cookies）时，必须信任反向代理。这可以通过标头 `X-Forwarded-Proto` 实现。默认值为 `undefined`。其可能的值解释如下：
-1. `true` - 将使用标头 `X-Forwarded-Proto`。
-2. `false` - 所有标头将被忽略，只有当存在直接的 `TLS/SSL` 连接时才会考虑连接。
-3. `undefined` - 将使用 Express 自身的 `trust proxy` 设置。
+### Proxy
 
-## Resave
+当你设置安全 cookie（secure cookies）时，必须信任反向代理。这可以通过标头 `X-Forwarded-Proto` 实现。默认值为 `undefined`。其可能的值解释如下：
+
+1. `true` - 将使用标头 `X-Forwarded-Proto`。
+
+2. `false` - 所有标头将被忽略，只有当存在直接的 `TLS/SSL` 连接时才会考虑连接。
+
+3. `undefined` - 将使用 `Express` 自身的 `trust proxy` 设置。
+
+### Resave
+
 强制将 session 保存回会话存储器。无论 session 是否被修改，这都会发生。其必要性取决于你的会话存储。然而，如果客户端发出并行请求，可能会产生竞态条件。
 
-## Rolling
+### Rolling
+
 将在每个响应中强制设置 cookie。过期日期也会重置。默认值为 `false`。
 
-## SaveUninitialized
+### SaveUninitialized
+
 通过此设置，未初始化的 session 将保存到会话存储器。未初始化的 session 是一个新的且未以任何方式修改的会话。默认设置为 `true`。然而，此设置已弃用，并预计在未来发生变化。
 
-## Required option
+### Required option
+
 这是用于对 session ID cookie 进行签名的密钥（secret）。它可以由密钥数组组成，也可以是单个密钥的字符串。如果你提供密钥数组，则只有数组中的第一个元素将用于对 session ID cookie 进行签名。其余元素将用于对请求中的签名进行验证。
 
-## Store
+### Store
+
 这是会话存储器的实例。它的默认值是一个新的 `MemoryStore` 实例。
 
 考虑下示例：
@@ -98,10 +107,6 @@ var session = {
 }
 ```
 
-
-
-
-
 ```javascript
 if (application.get('env') === 'production') {
   application.set('trust proxy', 1) // 信任第一个代理
@@ -110,11 +115,11 @@ if (application.get('env') === 'production') {
 application.use(session(session))
 ```
 
- `cookie.maxAge` 的默认设置为 `null`，它永远不会过期，这意味着该 cookie 将成为浏览器会话 cookie。只有当用户关闭浏览器后，cookie 才会被移除。同时 session 也会被移除。
+`cookie.maxAge` 的默认设置为 `null`，它永远不会过期，这意味着该 cookie 将成为浏览器会话 cookie。只有当用户关闭浏览器后，cookie 才会被移除。同时 session 也会被移除。
 
-`req.session`
+### `req.session`
 
-为了存储和访问 session 数据，你应该使用 `req.session` 属性，store 会将其初始化为 JSON。随后 session 对象将保持正常状态。考虑下面给出的示例，它展示了一个特定于用户的访问计数器：
+为了存储和访问 session 数据，你应该使用 `req.session` 属性，store 会将其初始化为 `JSON`。随后 session 对象将保持正常状态。考虑下面给出的示例，它展示了一个特定于用户的访问计数器：
 
 ```javascript
 application.use(session({ secret: ' my secret ', cookie: { maxAge: 50000 }}))
@@ -134,9 +139,9 @@ application.use(function(req, res, next) {
 })
 ```
 
-## Session.regenerate()
+#### Session.regenerate()
 
-当我们需要生成 session 时，会调用此方法。之后，一个新的 session 实例和 SID 将在 `req.session` 中初始化。如下：
+当我们需要生成 session 时，会调用此方法。之后，一个新的 session 实例和 `SID` 将在 `req.session` 中初始化。如下：
 
 ```javascript
 req.session.regenerate(function(error) {
@@ -144,7 +149,7 @@ req.session.regenerate(function(error) {
 })
 ```
 
-## Session.destroy()
+#### Session.destroy()
 
 通过此方法，session 将被销毁，`req.session` 也被移除。它将在下一次请求中被重新生成。如下所示：
 
@@ -154,7 +159,7 @@ req.session.destroy(function(error) {
 })
 ```
 
-## Session.reload()
+#### Session.reload()
 
 这用于重新加载 session，如下所示：
 
@@ -164,7 +169,7 @@ req.session.reload(function(error) {
 })
 ```
 
-## Session.save()
+#### Session.save()
 
 这用于保存 session，如下所示：
 
@@ -209,9 +214,9 @@ application.get('/bar', function (req, res, next) {
 })
 ```
 
-这就是在 ExpressJS 中使用 session 的。
+这就是在 `ExpressJS` 中使用 session 的。
 
-# 第 3 章- serve-index
+## 第 3 章 - serve-index
 
 这用于向特定路径提供带有目录列表的页面。可以通过执行以下命令进行安装：
 
@@ -223,47 +228,56 @@ application.get('/bar', function (req, res, next) {
 var svIndex = require('serve-index')
 ```
 
-API 将被包含在你的程序中。
+`API` 将被包含在你的程序中。
 
-## serveIndex(path, options)
+### serveIndex(path, options)
 
-这将返回一个中间件，用于提供你给给 `path` 目录的索引。这里的路径基于 `req.url` 的值。如果你想更改 URL 基础，请使用 `app.use`。
+这将返回一个中间件，用于提供你给给 `path` 目录的索引。这里的路径基于 `req.url` 的值。如果你想更改 `URL` 基础，请使用 `app.use`。
 
-serve index 的 options 对象接受以下属性：
+serve index 的 `options` 对象接受以下属性：
 
 **Filter（过滤器）**
+
 此过滤器函数应用于文件。其默认值为 `false`。它会为每个文件调用一次，使用的签名是 `filter(filename, index, files, dir)`。`filename` 是文件名，`index` 是数组索引，`files` 是文件数组，而 `dir` 是文件所在的绝对路径。
 
 **Hidden（隐藏文件）**
+
 这用于显示隐藏文件。其默认值为 `false`。
 
 **Icons（图标）**
+
 这用于显示图标。其默认值为 `false`。
 
 **Stylesheet（样式表）**
-这是一个指向 CSS 样式表的可选路径。其默认值是内置的样式表。
+
+这是一个指向 `CSS` 样式表的可选路径。其默认值是内置的样式表。
 
 **Template（模板）**
-这是一个指向 HTML 模板的可选路径，用于渲染 HTML 字符串。
+
+这是一个指向 `HTML` 模板的可选路径，用于渲染 `HTML` 字符串。
 
 **View（视图）**
+
 这是显示模式。
 
-# 第 4 章- cookie Sessions
+## 第 4 章 - cookie Sessions
 
-这是一个用于提供 session 的模块，以便无论访问者是否已验证都拥有一个 session。为了在程序中使用该 API，我们必须使用如下所示的 `require` 命令：
+这是一个用于提供 session 的模块，以便无论访问者是否已验证都拥有一个 session。为了在程序中使用该 `API`，我们必须使用如下所示的 `require` 命令：
 
 `var session = require(')`
 
 session 对象接受以下选项：
 
 **Name（名称）**
+
 这是 cookie 的名称。其默认值为 `session`。
 
 **Keys（密钥）**
+
 这是用于签名和验证 cookie 的密钥列表。设置的 cookie 总是使用 `keys[0]` 进行签名。其余密钥将用于验证，这将允许进行轮换。
 
 **Secret（密钥）**
+
 在未提供 `keys` 的情况下，此字符串将作为密钥使用。你还需要知道一些 cookie 选项。
 
 如果你需要删除特定的 session，请如下操作：
@@ -317,13 +331,11 @@ application.use(function (req, res, next) {
 // ... 此处应该添加逻辑 ...
 ```
 
-
-
 你必须注意，整个话对象（session object）将被编码并存储在 cookie 中。不同浏览器的 cookie 最大大小限制可能会被超过。如果话对象足够大，并在编码后超过了浏览器的限制，在大多数情况下，浏览器将拒绝或避免存储该 cookie。
 
-# 第 5 章- ExpressJS 中的 Morgan
+## 第 5 章 - `ExpressJS` 中的 Morgan
 
-这是一个用于 Node.js HTTP 请求的日志中间件。要在你的程序中使用该 API，你需要像下面所示使用 `require` 关键字：
+这是一个用于 `Node.js` HTTP 请求的日志中间件。要在你的程序中使用该 `API`，你需要像下面所示使用 `require` 关键字：
 
 ```javascript
 var morgan =  require('morgan')
@@ -331,17 +343,17 @@ var morgan =  require('morgan')
 
 使用以下格式来创建它：
 
-## `morgan(format, options)`
+### `morgan(format, options)`
 
 如上述格式所示，我们有两个参数或参数。
 
-Morgan 在 `options` 对象中接受以下属性：
+`Morgan` 在 `options` 对象中接受以下属性：
 
-### Immediate（立即）
+#### Immediate（立即）
 
 日志行应该在请求时写入，而不是在响应时写入。这意味着即使服务器本身崩溃，请求也始终会被记录，但我们无法记录来自响应的数据。
 
-### Skip（跳过）
+#### Skip（跳过）
 
 这是一个函数，用于确定是否跳过日志记录。默认值为 `false`。请考虑下例示例，它展示了如何调用该函数：
 
@@ -352,11 +364,11 @@ skip:  function (req, res) { return res.statusCode <  400 }
 })
 ```
 
-### Stream（流）
+#### Stream（流）
 
 这是一个用于写入日志行的输出流，其默认值为 `process.stdout`。
 
-考虑下例示例，它展示了如何以 Apache 组合格式将所有请求记录到 STDOUT。示例如下：
+考虑下例示例，它展示了如何以 `Apache` 组合格式将所有请求记录到 `STDOUT`。示例如下：
 
 ```javascript
 var express =  require('express')
@@ -370,9 +382,11 @@ application.get('/', function (req, res) {
 })
 ```
 
-## 原生 http 服务器
+### 原生 http 服务器
 
 下面提供了一个演示如何实现此操作的示例：
+
+
 
 ```javascript
 var fhandler =  require('finalhandler')
@@ -394,7 +408,7 @@ http.createServer(function (req, res) {
 
 ### 将日志写入文件
 
-考虑下例示例，它展示了如何以 Apache 组合格式将请求记录到我们的文件 `access.log` 中：
+考虑下例示例，它展示了如何以 Apache 组合格式将请求记录到我们的文件`access.log`中：
 
 ```javascript
 var express =  require('express')
@@ -414,7 +428,7 @@ application.get('/', function (req, res) {
 
 ### 日志文件轮转
 
-在下例示例中，应用程序将使用 `file-stream-rotator` 模块以 Apache 组合格式将所有请求记录到我们目录 `log/` 中的任何一个日志文件中。示例所示：
+在下例示例中，应用程序将使用`file-stream-rotator`模块以 Apache 组合格式将所有请求记录到我们目录`log/`中的任何一个日志文件中。示例所示：
 
 ```javascript
 var FStreamRotator =  require('file-stream-rotator')
@@ -443,7 +457,7 @@ application.get('/', function (req, res) {
 
 ### 自定义 token 格式
 
-在下一个应用中，我们将使用自定义 token 格式。它的工作原理为所有请求添加一个 ID，然后通过 `:id` token 显示它。以下是该应用：
+在下一个应用中，我们将使用自定义 token 格式。它的工作原理为所有请求添加一个 ID，然后通过`:id` token 显示它。以下是该应用：
 
 ```javascript
 var express =  require('express')
@@ -467,7 +481,7 @@ function assignId(req, res, next) {
 }
 ```
 
-# 第 6 章- CORS
+# 第 6 章 - CORS
 
 这是一个 Node.js 包，提供了一个 ExpressJS/Connect 中间件，用于启用 CORS 的各种选项。
 
@@ -496,6 +510,7 @@ application.get('/', function (req, res) {
 ```
 
 ## 为所有路由启用 CORS
+
 ```javascript
 var express =  require('express')
 var cors =  require('cors')
@@ -509,6 +524,7 @@ application.get('/', function (req, res) {
 ```
 
 ## 为特定路由启用 CORS
+
 ```javascript
 var express =  require('express')
 var cors =  require('cors')
@@ -520,6 +536,7 @@ application.get('/products/:id', cors(), function (req, res) {
 ```
 
 ## 为单条路由启用 CORS
+
 ```javascript
 var express =  require('express')
 var cors =  require('cors')
@@ -531,6 +548,7 @@ application.get('/products/:id', cors(), function (req, res) {
 ```
 
 ## 配置 CORS
+
 ```javascript
 var express =  require('express')
 var cors =  require('cors')
@@ -546,6 +564,7 @@ application.get('/products/:id', cors(cOptions), function (req, res) {
 ```
 
 ## 动态源配置 CORS
+
 ```javascript
 var express =  require('express')
 var cors =  require('cors')
@@ -610,10 +629,6 @@ application.get('/products/:id', cors(cOptionsDelegate), function (req, res) {
 })
 ```
 
-
-
-
-
 ```javascript
 callback(null, cOptions); // callback 需要两个参数：错误和选项
 
@@ -634,7 +649,7 @@ application.listen(80, function(){
 
 实现方法如下。
 
-# 第 7 章- Express-Paginate
+# 第 7 章 - Express-Paginate
 
 此模块与 MongoDB 等数据库的分页插件配合使用。
 
@@ -650,7 +665,7 @@ npm install -S express-paginate
 var paginate = require('express-paginate');
 ```
 
-使用 `paginate` 将创建一个新的 `express-paginate` 实例。考虑下面的示例：
+使用`paginate`将创建一个新的`express-paginate`实例。考虑下面的示例：
 
 ```javascript
 // # app.js
@@ -740,7 +755,7 @@ if paginate.hasPreviousPages || paginate.hasNextPages(pageCount)
           i.fa.fa-arrow-circle-right
 ```
 
-# 第 8 章- Multer
+# 第 8 章 - Multer
 
 这是 Node.js 中的一个中间件，用于处理“multipart/form-data”。它用于将文件上传到服务器。为了最大化其效率，它构建在“busboy”之上。你必须注意，任何非 multipart 表单都无法由 Multer 处理。
 
@@ -750,9 +765,11 @@ if paginate.hasPreviousPages || paginate.hasNextPages(pageCount)
 npm install --save multer
 ```
 
-它通过通过向“request”对象添加一个“body”和一个“file/files”对象来工作。在“body”对象中将存储表单字段的值。“file/files”对象将包含已上传服务器的文件。
+它通过向“request”对象添加一个“body”和一个“file/files”对象来工作。在“body”对象中将存储表单字段的值。“file/files”对象将包含已上传服务器的文件。
 
 考虑下面的示例，它展示了如何实现：
+
+
 
 ```javascript
 var express = require('express')
@@ -772,10 +789,6 @@ application.post('/photos/upload', uploadfile.array('photos', 12), function (req
 
 var cUpload = uploadfile.fields([{ name: 'avatar' }])
 ```
-
-
-
-
 
 为了让你捕获来自 `Multer` 的错误，只需手动调用该中间件函数。下例所示：
 
@@ -799,8 +812,8 @@ application.post('/profile', function (req, res) {
 
 这是 Node.js 中提供的一个中间件。它支持以下压缩算法：
 
-*   `deflate`
-*   `gzip`
+* `deflate`
+* `gzip`
 
 要在你的系统中安装此中间件，请执行以下命令：
 
@@ -1014,11 +1027,7 @@ application.use(function (error, req, res, next) {
 
 方法如下。
 
-
-
-
-
-## [Text body parser](https://github.com/expressjs/body-parser#bodyparsertextoptions)
+## Text body parser
 
 要安装它，只需执行以下命令：
 
@@ -1144,7 +1153,7 @@ Flash 消息可以如下所示：
 }
 ```
 
-## [method-override](https://github.com/expressjs/method-override)
+## method-override
 
 这用于覆盖 HTTP 动词。通过它，可以在客户端不支持的地方使用如 `DELETE` 和 `PUT` 之类的 HTTP 动词。要在系统中安装它，请执行以下命令：
 
@@ -1152,11 +1161,13 @@ Flash 消息可以如下所示：
 npm install method-override
 ```
 
+
+
 要使用此模块，你必须知道在任何需要请求方法的模块之前，必须先使用它。
 
-### 使用 header 进行覆盖
+## 使用 `header` 进行覆盖
 
-为了将 header 用于覆盖，header 名称 必须作为字符串参数传递给函数 `methodOverride`。为了进行该调用，必须向 POST 请求发送到带有该 header 作为被覆盖方法的 URL。考虑下面的示例，它展示了如何实现这一点：
+为了将 `header` 用于覆盖，`header` 名称必须作为字符串参数传递给函数 `methodOverride`。为了进行该调用，必须向 `POST` 请求发送到带有该 `header` 作为被覆盖方法的 `URL`。考虑下面的示例，它展示了如何实现这一点：
 
 ```javascript
 var connect = require('connect')
@@ -1175,45 +1186,45 @@ c.setRequestHeader('X-HTTP-Method-Override', 'DELETE')
 c.send()
 ```
 
-# 第 13 章- serve-favicon
+# 第 13 章- `serve-favicon`
 
 这是一个用于处理图标的中间件。通过执行以下命令可以安装该模块：
 
 ```bash
-npm install-favicon
+npm install -S serve-favicon
 ```
 
 考虑下面的示例，它展示了如何在 Express 中实现这一点：
 
 ```javascript
 var express = require('express')
-var favicon = require('favicon')
+var favicon = require('serve-favicon')
 var application = express()
 
-application.use(favicon('public/public'))
+application.use(favicon('public/favicon.ico'))
 
 application.listen(3000)
 ```
 
-在 connect 中，可以如下实现：
+在 `connect` 中，可以如下实现：
 
 ```javascript
 var connect = require('connect')
-var favicon = require('favicon')
+var favicon = require('serve-favicon')
 var application = connect()
 
-application.use(favicon('public/public'))
+application.use(favicon('public/favicon.ico'))
 
 application.listen(3000)
 ```
 
 ## vanilla http server
 
-这是一个可以在任何地方使用的中间件类型。下面的示例展示了如何配合 http 使用它：
+这是一个可以在任何地方使用的中间件类型。下面的示例展示了如何配合 `http` 使用它：
 
 ```javascript
 var http = require('http')
-var favicon = require('favicon')
+var favicon = require('serve-favicon')
 var finalhandler = require('finalhandler')
 
 var _favicon = favicon()
@@ -1232,9 +1243,9 @@ var server = http.createServer(function (req, res) {
 server.listen(3000)
 ```
 
-# 第 14 章- response-time
+# 第 14 章- `response-time`
 
-这是 node.js 的响应时间 header。它通过创建一个中间件来记录 HTTP 服务器请求的响应时间。在这种情况下，响应时间将是请求进入中间件到头部被写入客户端的时间。
+这是 `node.js` 的响应时间 `header`。它通过创建一个中间件来记录 `HTTP` 服务器请求的响应时间。在这种情况下，响应时间将是请求进入中间件到头部被写入客户端的时间。
 
 可以通过执行以下命令安装此模块：
 
@@ -1248,7 +1259,7 @@ npm install response-time
 var respTime = require('response-time')
 ```
 
-考虑下面的示例，它展示了如何在 Express 和 connect 中使用它：
+考虑下面的示例，它展示了如何在 Express 和 `connect` 中使用它：
 
 ```javascript
 var express = require('express')
@@ -1287,9 +1298,7 @@ http.createServer(function (req, res) {
 }).listen(3000)
 ```
 
-
-
-
+考虑下面的示例，它展示了如何将响应时间数据发送到 `StatsD`：
 
 ```javascript
 var express = require('express')
@@ -1318,9 +1327,9 @@ application.get('/', function (req, res) {
 })
 ```
 
-# 第 15 章 [express-namespace](https://github.com/expressjs/express-namespace)
+# 第 15 章 [`express-namespace`](https://github.com/expressjs/express-namespace)
 
-通过此模块，Express 引入了命名空间路由功能。要将其安装到系统中，可以执行以下命令：
+通过此模块，`Express` 引入了命名空间路由功能。要将其安装到系统中，可以执行以下命令：
 
 ```bash
 $ npm install express-namespace
@@ -1365,7 +1374,7 @@ application.namespace('/forum/:id', function(){
 当前的命名空间也可以通过 `app.currentNamespace` 访问。你还应该知道如何运行测试。然而，在此之前，请确保你已将所有子模块安装到系统中。可以通过执行以下命令来安装它们：
 
 ```bash
-$ git submodule update–init
+$ git submodule update --init
 ```
 
 可以通过执行以下命令运行测试：
@@ -1376,7 +1385,7 @@ $ make test
 
 这就是该模块的使用方法。
 
-# 第 16 章 [express-expose](https://github.com/expressjs/express-expose)
+# 第 16 章 [`express-expose`](https://github.com/expressjs/express-expose)
 
 此模块用于将对象、函数和原始 JS 暴露给客户端。此功能非常适合共享设置、工具函数以及用户的当前数据。辅助方法和局部变量也会暴露给客户端。
 
@@ -1398,7 +1407,7 @@ application = expose(application);
 application.expose(...);
 ```
 
-上述是在 express 4.x 中该模块的方法。在 express 2.x 和 3.x 中，可以如下所示操作：
+上述是在 `express 4.x` 中该模块的方法。在 `express 2.x` 和 `3.x` 中，可以如下所示操作：
 
 ```javascript
 var express = require('express');
@@ -1410,7 +1419,7 @@ application.expose(...);
 
 ## 如何暴露对象
 
-将对象暴露给客户端的一种方法是暴露属性，很可能还有 Express 的配置。当 `app.expose(object)` 被暴露时，这些属性将暴露到 `application.*`。下例展示了如何进行操作：
+将对象暴露给客户端的一种方法是暴露属性，很可能还有 `Express` 的配置。当 `app.expose(object)` 被暴露时，这些属性将暴露到 `application.*`。下例展示了如何进行操作：
 
 ```javascript
 application.set('views', __dirname + '/views');
@@ -1426,19 +1435,19 @@ application.expose(application.settings);
 application.expose({ en: 'English', fr: 'French' }, 'application', 'languages');
 ```
 
-然后你只需要将你的默认缓冲区输出到你的模板中。对于 jade 用户，可以如下所示操作：
+然后你只需要将你的默认缓冲区输出到你的模板中。对于 `jade` 用户，可以如下所示操作：
 
 ```html
 script!= javascript
 ```
 
-对于 EJS 用户，可以如下所示操作：
+对于 `EJS` 用户，可以如下所示操作：
 
 ```html
 <script><%- javascript %></script>
 ```
 
-原始 JavaScript 字符串也可以像下面所示暴露：
+原始 `JavaScript` 字符串也可以像下面所示暴露：
 
 ```javascript
 application.expose('var some = "variable";');
@@ -1483,12 +1492,12 @@ application.get('/', function(req, res){
 });
 ```
 
-# 第 17 章 connect-render
+# 第 17 章 `connect-render`
 
-这是 connect 中模板的辅助函数。可以通过执行以下命令安装：
+这是 `connect` 中模板的辅助函数。可以通过执行以下命令安装：
 
 ```bash
-$ render
+$ npm install connect-render
 ```
 
 它可以像下面所示使用：
@@ -1528,14 +1537,10 @@ function middleware(options) {}
 
 # 总结
 
-可以说 ExpressJS 是一个 Node 框架。它为开发者提供了一个可以用来创建 Web 和移动应用程序的框架。它拥有许多功能，开发者可以利用这些功能来创建他们的应用程序。它通过使用中间件工作。
+可以说 `ExpressJS` 是一个 `Node` 框架。它为开发者提供了一个可以用来创建 `Web` 和移动应用程序的框架。它拥有许多功能，开发者可以利用这些功能来创建他们的应用程序。它通过使用中间件工作。
 
-
-
-
-
-这些模块中的每一个都有自己对应的命令用于安装。要使用任何模块，你都必须从安装它开始。它支持会话（sessions）的使用，这在创建 Web 应用程序时非常有用。它提供了多种可用于开发目的的选项。你应该学习如何使用每个 `ExpressJS` 模块所提供的不同选项。
+这些模块中的每一个都有自己对应的命令用于安装。要使用任何模块，你都必须从安装它开始。它支持会话（`sessions`）的使用，这在创建 `Web` 应用程序时非常有用。它提供了多种可用于开发目的的选项。你应该学习如何使用每个 `ExpressJS` 模块所提供的不同选项。
 
 `serve-index` 模块用于向特定路径提供带有目录列表的页面。
 
-这在开发过程中非常有趣。通过 `cookie-sessions` 模块，可以提供访客会话，使得每个访问者（无论是否经过验证）都拥有自己的会话。这也是 `Express` 中最好且有趣的特性之一。这个 Node 框架即使对于初学者来说也非常容易学习。这本书将帮助你学习如何使用它。
+这在开发过程中非常有趣。通过 `cookie-sessions` 模块，可以提供访客会话，使得每个访问者（无论是否经过验证）都拥有自己的会话。这也是 `Express` 中最好且有趣的特性之一。这个 `Node` 框架即使对于初学者来说也非常容易学习。这本书将帮助你学习如何使用它。

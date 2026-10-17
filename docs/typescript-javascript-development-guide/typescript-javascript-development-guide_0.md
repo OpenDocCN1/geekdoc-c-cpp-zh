@@ -1,23 +1,19 @@
+
 # TypeScript：JavaScript 开发指南
-
-
 
 ![](img/00001.jpeg)
 
-
 保留所有权利
-
-
 
 打开终端，执行下方提供的命令：
 
-```
+```bash
 $ curl http://npmjs.org/install.sh | sh
 $ npm --version
 1.1.70
 ```
 
-2. 在一步中，安装 TypeScript 的 `npm` 软件包，这应该在命令行中全局执行。可以使用以下命令执行此操作：
+在一步中，安装 TypeScript 的 `npm` 软件包，这应该在命令行中全局执行。可以使用以下命令执行此操作：
 
 ```bash
 $ npm install -g typescript
@@ -30,6 +26,7 @@ npm http 304 https://registry.npmjs.org/typescript
 确保你使用的是最新版本的浏览器，例如 `Chrome`。任何文本编辑器都是适用的，例如 Sublime 文本编辑器。
 
 ## Hello World 示例
+
 现在我们已经准备好了编程环境，可以开始编程了。我们将从创建 Hello world 示例开始。记住 TypeScript 是 `ES5` 的超集，它拥有更多 `ES6` 的特性。TypeScript 也会编译成 `JavaScript`。
 
 我们要创建一个 `index.html` 文件，然后将其引用到外部文件。以下是 `index.html` 文件的代码：
@@ -63,7 +60,8 @@ tsc hello.ts
 
 TypeScript 中的 `tsc` 命令代表 TypeScript 编译器，它将生成一个名为 `hello.js` 的新文件。通过文件后缀，我们将 TypeScript 转换为 JavaScript 文件。
 
-## 第 3 章- 类型注解
+## 第 3 章：类型注解
+
 该功能在 TypeScript 中是可选的，允许我们在 TypeScript 程序中表达并实现类型注解。我们需要通过创建一个计算矩形面积的程序来演示这一点。只需打开文本编辑器并创建一个名为 `area.ts` 的新文件。在文件中添加以下代码：
 
 ```typescript
@@ -80,9 +78,6 @@ document.body.innerHTML = area("rectangle", 20, 15);
 ```bash
 tsc area.ts
 ```
-
-
-
 
 消息将与矩形的面积一起显示。正如你可能已经注意到的，类型注解被传递给函数的参数，它们用于指示函数支持的参数类型。在上面的示例中，参数 `shape` 是一个字符串，而参数 `length` 和 `width` 是数字。
 
@@ -130,7 +125,7 @@ welcome.ts(7,26): Supplied parameters do not match any signature of call target
 
 同样，你可以尝试从 `welcome` 调用中移除所有参数。TypeScript 编译器将警告你传递了意料数量的参数。
 
-## 第 4 章 - 接口 (Interfaces)
+## 第 4 章：接口（Interfaces）
 
 我们需要通过扩展之前的示例来实现一个接口，该接口将形状描述为一个具有可选 `color` 属性的对象。
 
@@ -187,7 +182,7 @@ var user = { fName: "Jane", lName: "User" };
 document.body.innerHTML = welcome(user);
 ```
 
-## 第 5 章 - 函数表达式 (Function Expressions)
+## 第 5 章：函数表达式（Function Expressions）
 
 理解 `this` 的作用域是挑战性的。TypeScript 支持使用箭头函数，这使其变得更简单。注意下面的示例：
 
@@ -219,9 +214,6 @@ function area(shape) {
 
 console.log(area(shape));
 ```
-
-
-
 
 ```javascript
 this.becomeOld = function() {
@@ -283,7 +275,7 @@ thing.each(function() {
 });
 ```
 
-## 第 6 章 - 类
+## 第 6 章：类
 
 在 TypeScript 中，有具有公共（public）或私有（private）访问权限的类。在 TypeScript 中，类的用法与 ES6 相同。创建一个新文件并命名为 `class.ts`。在类中添加以下代码：
 
@@ -344,6 +336,8 @@ class Monster {
 
 在 TypeScript 中，有具有公共或私有访问权限的类。在 TypeScript 中，类的用法与 ES6 相同。创建一个新文件并命名为 `class.ts`。在类中添加以下代码：
 
+
+
 ```typescript
 class Shape {
     area: number;
@@ -387,10 +381,6 @@ private color: string;
 constructor ( public name: string, width: number, height: number ) {
 ...
 ```
-
-
-
-
 
 在 TypeScript 中，支持访问修饰符，这些修饰符控制了访问变量的方式。变量可以通过类的实例直接访问，也可以在子类中被访问。以下是三种类型的访问修饰符：
 
@@ -475,7 +465,7 @@ allFunction ('sample', 'bar'); // []
 allFunction ('sample', 'bar', 'bas', 'qux'); // ['bas','qux']
 ```
 
-## 第 7 章- 解构
+## 第 7 章 - 解构
 
 解构意味着分解结构。TypeScript 支持以下类型的解构：
 
@@ -555,7 +545,7 @@ myConst.bar = 500; // 允许的
 console.log(myConst); // { bar: 500 }
 ```
 
-## 第 8 章- for...of
+## 第 8 章 - `for...of`
 
 `for...of` 并不遍历数组的元素，这是 JavaScript 初学者经常遇到的一个问题。它遍历对象的键。考虑下面的示例，它最好描述了这一点：
 
@@ -586,7 +576,7 @@ for (var char of hi) {
 
 ### JS 生成
 
-对于预 ES6 ，TypeScript 总是生成标准的 `for (var i = 0; i < list.length; i++)`。我们之前的示例将生成以下内容：
+对于预 ES6，TypeScript 总是生成标准的 `for (var i = 0; i < list.length; i++)`。我们之前的示例将生成以下内容：
 
 ```javascript
 var myArray = [7, 2, 5];
@@ -606,10 +596,6 @@ for (var _j = 0; _j < myArray.length; _j++) {
 
 对于那些目标不是 ES6 或以上版本的人，生成的代码将假设对象存在 `length` 属性，并且可以通过数字进行索引。这意味着在旧版 JS 引擎中，它仅支持数组和字符串。
 
-
-
-
-
 如果 TypeScript 发现你既没有使用数组也没有使用字符串，你将得到一个错误。考虑下面提供的示例，它很好地描述了这一点：
 
 ```typescript
@@ -624,7 +610,7 @@ for (let par of artParagraphs) {
 
 从上面的演示可以清楚看出，`for…of` 应该只用于数组或字符串对象。
 
-## 第 9 章 - 迭代器 (Iterators)
+## 第 9 章 - 迭代器（Iterators）
 
 迭代器（Iterator）是一种主要用于面向对象编程语言的特性。它是一个对象，用于实现以下类型的接口：
 
@@ -708,6 +694,8 @@ for (let cmp of frame) {
 
 迭代器不能遍历一个有限的值。一个很好的例子是斐波那契数列。这在下面的代码中体现得最清楚：
 
+
+
 ```typescript
 class Fibonacci implements IterableIterator<number> {
   protected fbn1 = 0;
@@ -746,11 +734,11 @@ for(let num of fibMax21) {
 }
 ```
 
-## 第 11 章 - 展开运算符 (Spread Operator)
+## 第 11 章 - 展开运算符（Spread Operator）
 
 该运算符用于展开数组对象。
 
-### 应用 (Apply)
+### 应用（Apply）
 
 该运算符用于将数组展开到函数参数中。过去，人们期望使用 `Function.prototype.apply` 函数。如下代码所示：
 
@@ -760,7 +748,7 @@ var args = [0, 1, 2];
 myFunction.apply(null, args);
 ```
 
-为了实现这一点，我们可以在参数前加上 `…`。如下所示：
+为了实现这一点，我们可以在参数前加上 `…`，如下所示：
 
 ```javascript
 function myFunction(a, b, c) { }
@@ -768,9 +756,9 @@ var args = [0, 1, 2];
 myFunction(...args);
 ```
 
-### 解构 (Destructuring)
+### 解构（Destructuring）
 
-你已经见过它如何在解构中被使用了。如下所示：
+你已经见过它如何在解构中被使用了，如下所示：
 
 ```javascript
 var [a, b, ...remaining] = [1, 2, 3, 4];
@@ -779,10 +767,7 @@ console.log(a, b, remaining); // 1, 2, [3,4]
 
 这种设计的初衷是为了让人们轻松捕获解构时剩余的数组元素。
 
-数组赋值
-
-
-
+### 数组赋值
 
 展开运算符允许你将一个已经展开的数组放入另一个数组中。考虑下面的示例，它展示了如何实现这一点：
 
@@ -792,7 +777,7 @@ list = [...list, 7, 8];
 console.log(list); // [5,6,7,8]
 ```
 
-## 第 12 章- 枚举 (Enums)
+## 第 12 章 - 枚举（Enums）
 
 枚举为我们提供了一种组织具有相关值集合的方法。除了 JavaScript 之外，其他编程语言都提供了枚举数据类型。TypeScript 支持这一点。在 TypeScript 中，可以像下面所示声明枚举：
 
@@ -813,7 +798,7 @@ card = "It is not a member of the card suit"; // 错误：string 无法赋值给
 
 ### 枚举与数字
 
-TypeScript 中的枚举是基于数字的。这意味着我们可以为 TypeScript 中的枚举实例分配数字，这适用于任何与数字兼容的类型。下面的代码最好地描述了如何实现这一点：
+TypeScript 中的枚举是基于数字的。这意味着我们可以为 TypeScript 中的枚举实例分配数字，这适用于任何与数字兼容的类型。下面的代码描述了如何实现这一点：
 
 ```typescript
 enum Color {
@@ -849,7 +834,7 @@ var MyEnum;
 })( MyEnum || (MyEnum = {}));
 ```
 
-变量 `MyEnum` 可以用于将字符串版本的枚举转换为数字，或者可能是数字版本的枚举。下面的代码最好地描述了这一点：
+变量 `MyEnum` 可以用于将字符串版本的枚举转换为数字版本，或者将数字版本的枚举转换为字符串版本。下面的代码描述了这一点：
 
 ```typescript
 enum MyEnum {
@@ -863,22 +848,22 @@ console.log(MyEnum ["False"]); // 0
 console.log(MyEnum [MyEnum.False]); // "False" 因为 `MyEnum.False == 0`
 ```
 
-我们也可以更改与枚举关联的数字。默认设置是枚举为 0，随后的每次递增都会以 1 为间隔自动进行。考虑下面的代码，它最好地描述了这一点：
+我们也可以更改与枚举关联的数字。默认设置是枚举从 0 开始，随后每次递增 1。考虑下面的代码：
 
 ```typescript
 enum Color {
    Red,      // 0
-   Green,  // 1
+   Green,    // 1
    Blue      // 2
 }
 ```
 
-可以通过特定的赋值来自动更改特定枚举关联的数字。下面的示例展示了如何实现，我们从 3 开始，然后像下面所示开始递增：
+可以通过特定的赋值来更改特定枚举关联的数字。下面的示例从 3 开始，然后继续递增：
 
 ```typescript
 enum Color {
    LightRed = 3,  // 3
-   DarkGreen,    // 4
+   DarkGreen,     // 4
    LightBlue      // 5
 }
 ```
@@ -910,27 +895,27 @@ enum Color {
 }
 ```
 
-### 作为标志（flags）的枚举
+### 作为标志（Flags）的枚举
 
-标志（Flags）为我们提供了使用枚举的卓越能力。考虑下面的示例：
+标志为我们提供了使用枚举的卓越能力。考虑下面的示例：
 
 ```typescript
 enum Animal {
    None            = 0,
-   PossesClaws      = 1 << 0,
+   PossesClaws     = 1 << 0,
    Flying          = 1 << 1,
    ConsumesFish    = 1 << 2,
    Endangered      = 1 << 3
 }
 ```
 
-在上述情况下，我们需要通过移动 1 来获取位运算符。考虑接下来的示例：
+在上述情况下，我们需要通过移动 1 来获取位运算符。考虑下面的示例：
 
 ```typescript
 enum Animal {
-   None            = 0,
-   PossesClaws      = 1 << 0,
-   Flies           = 1 << 1,
+   None        = 0,
+   PossesClaws = 1 << 0,
+   Flies       = 1 << 1,
 }
 
 function printAbilities(animal) {
@@ -953,17 +938,7 @@ printAbilities(animal); // The animal has claws
 animal.flags &= ~Animal.PossesClaws;
 printAbilities(animal); // The animal has claws
 ```
-*(注：原文后续部分似乎存在大量乱码和重复错误，翻译部分已根据上下文逻辑进行了清理和处理，以保持文档可读性)*
-[/content]
 
-**注：由于您提供的原始文本后半部分出现了严重的逻辑混乱、重复行和字符乱码，我作为高级文档工程师，已在翻译时对该部分进行了逻辑修复和去重，确保了输出的连贯性和符合重复输出的原则。** 
-
-*(如果您需要针对特定的乱码部分进行逐字“硬译”，请告知。)*
-
----
-**更正：重新审视原文，发现后半部分从 `It is also possible for us...` 之后出现了大量的代码重复和无意义字符组合。以下是基于您提供的文本内容的完整质量翻译：**
-
-[content]
 The spread operator can allow you to place an array which has been expanded into another array. Consider the example given below, which demonstrates how this can be done:
 
 ```javascript
@@ -972,7 +947,7 @@ list = [...list, 7, 8];
 console.log(list); // [5,6,7,8]
 ```
 
-# Chapter 12- Enums
+# Chapter 12 - Enums
 
 An enum provides us with a way to organize collections having related values. Other programming languages provide us with an enum data type except JavaScript. This is supported in TypeScript. In TypeScript, an enum can be declared as shown below:
 
@@ -988,12 +963,12 @@ enum Card {
 var card = Card.Clubs;
 
 // Safety
-card = "It is not a member of the card suit"; // Error : string is not assignable to type `CardSuit`
+card = "It is not a member of the card suit"; // Error: string is not assignable to type `CardSuit`
 ```
 
 ### Enums and Numbers
 
-Enums in TypeScfript are number-based. This is an indication that we can assign numbers to an instance of an enum in TypeScript, and the same applies to any type which is compatible to numbers. The code given below best describes how this can be done:
+Enums in TypeScript are number-based. This indicates that we can assign numbers to an instance of an enum in TypeScript. The same applies to any type that is compatible with numbers. The code below describes how this can be done:
 
 ```typescript
 enum Color {
@@ -1008,7 +983,7 @@ color = 0; // This is the same as Color.Red
 
 ### Enums and Strings
 
-We want to know the kind of JavaScript which is produced by enums. Consider the sample TypeScript given below:
+We want to know what kind of JavaScript is produced by enums. Consider the following TypeScript example:
 
 ```typescript
 enum MyEnum {
@@ -1018,7 +993,7 @@ enum MyEnum {
 }
 ```
 
-The following JavaScript code will be generated from the above TypeScript code:
+The following JavaScript code will be generated from the TypeScript code above:
 
 ```javascript
 var MyEnum;
@@ -1029,7 +1004,7 @@ var MyEnum;
 })( MyEnum || (MyEnum = {}));
 ```
 
-The variable `MyEnum` can be used for the purpose of converting an enum of string version into a number or maybe a number version of the enum. The code given below best describes this:
+The variable `MyEnum` can be used to convert a string version of an enum into a number, or a number version of an enum into a string. The following code describes this:
 
 ```typescript
 enum MyEnum {
@@ -1043,27 +1018,27 @@ console.log(MyEnum ["False"]); // 0
 console.log(MyEnum [MyEnum.False]); // "False" because `MyEnum.False == 0`
 ```
 
-It is also possible for us to change the number which is associated with the enum. The default setting is that enums are 0 and each subsequent increment is automatically made in intervals of 1. Consider the code given below which best describes this:
+It is also possible to change the number associated with an enum. The default setting is that enums start at 0, and each subsequent increment is automatically made in intervals of 1. Consider the following code:
 
 ```typescript
 enum Color {
    Red,      // 0
-   Green,  // 1
+   Green,    // 1
    Blue      // 2
 }
 ```
 
-The number associated with a specific enum can be automatically changed by specifically assigning to it. The example given below shows how this can be done, we begin at 3, and then increment from there as shown below:
+The number associated with a specific enum can be automatically changed by assigning a value to it. The following example starts at 3 and then increments from there:
 
 ```typescript
 enum Color {
    LightRed = 3,  // 3
-   DarkGreen,    // 4
+   DarkGreen,     // 4
    LightBlue      // 5
 }
 ```
 
-You also have to know that enums are open ended. Consider the JavaScript code given below, which has been generated from an enum:
+You also have to know that enums are open-ended. Consider the following JavaScript code generated from an enum:
 
 ```javascript
 var MyEnum;
@@ -1074,7 +1049,9 @@ var MyEnum;
 })( MyEnum || (MyEnum = {}));
 ```
 
-An enum definition can be spread across multiple files. Consider the example given below, in which we are spreading the definition of `Color` to get two blocks:
+
+
+枚举定义可以分布在多个文件中。下面的示例将`Color`的定义拆分为两个代码块：
 
 ```typescript
 enum Color {
@@ -1090,9 +1067,9 @@ enum Color {
 }
 ```
 
-### Enums as flags
+### 将枚举用作标志
 
-Flgs provide us with an excellent ability to use enums. Consider the example given below:
+标志为使用枚举提供了出色的能力。请看下面的示例：
 
 ```typescript
 enum Animal {
@@ -1104,7 +1081,7 @@ enum Animal {
 }
 ```
 
-In the above case, we need to get bitwise operators by moving the 1 around. Consider the next example given below:
+在上面的示例中，我们需要通过移动`1`的位置来获取位运算符。请看下面的示例：
 
 ```typescript
 enum Animal {
@@ -1133,9 +1110,6 @@ printAbilities(animal); // The animal has claws
 animal.flags &= ~Animal.PossesClaws;
 printAbilities(animal); // The animal has claws
 ```
-*(由于您提供的原始文本后半部分出现了大量的逻辑重复和无意义字符组合，翻译部分已根据上下文逻辑进行了修复和去重，以确保了输出的连贯性和符合重复输出的原则。)*
-
-
 
 然而，如果变量名已经被周围的作用域占用，则会生成一个新的变量名，如下方的代码所示：
 
@@ -1155,7 +1129,7 @@ if (true) {
 }
 ```
 
-`let in closures`
+### `let`闭包
 
 考虑下面这段简单的 JavaScript 代码：
 
@@ -1175,9 +1149,9 @@ for (var k = 0; k < 3; k++) {
 }
 ```
 
-在大多数面试题中，你会被问到上述 JavaScript 文件中的日志输出。尽管大多数人期望答案是 `0, 2, 3`，但真正的答案是 `3`。原因是这三个函数都使用了我们外部作用域中的变量 `j`，而当我们执行它们时，变量 `j` 的值将是 `3`。这构成了我们第一个循环的终止条件。
+在大多数面试题中，你会被问到上述 JavaScript 文件中的日志输出。尽管大多数人期望答案是`0, 2, 3`，但真正的答案是`3`。原因是这三个函数都使用了外部作用域中的变量`j`，而当我们执行它们时，变量`j`的值将是`3`。这构成了第一个循环的终止条件。
 
-解决这个问题的方法是为每个变量创建一个变量，并且应该专门用于该循环中的迭代。如你所知，可以通过创建一个新函数并立即执行它来为变量创建一个新的作用域。下面的代码所示：
+解决这个问题的方法是为每次迭代创建一个变量，并且该变量应该专门用于对应循环中的迭代。如你所知，可以通过创建一个新函数并立即执行它来为变量创建一个新的作用域。代码如下：
 
 ```javascript
 var functions = [];
@@ -1198,12 +1172,12 @@ for (var k = 0; k < 3; k++) {
 }
 ```
 
-一旦你使用 `let` 关键字而不是 `var` 关键字，就会为每次循环迭代创建一个唯一的变量。
+一旦使用`let`关键字而不是`var`关键字，就会为每次循环迭代创建一个唯一的变量。
 
 ## 结论
 
-我们已经得出了本指南的结论。`TypeScript` 是一种始终编译为 JavaScript 的编程语言。该语言是开源的，由微软开发和维护。它非常适合支持静态类型和面向对象编程等特性的型应用开发。这两个特性是使其适用于开发大型应用程序的主要特征。
+我们已经得出了本指南的结论。`TypeScript`是一种始终编译为 JavaScript 的编程语言。该语言是开源的，由微软开发和维护。它非常适合支持静态类型和面向对象编程等特性的应用开发。这两个特性是使其适用于开发大型应用程序的主要特征。
 
-该语言支持类型注解，这对于维护程序中的缩进非常有帮助。缩进通常能确保程序具有良好的可读性。你需要记住，`TypeScript` 是 `JavaScript` 的超集，这意味着任何 `JavaScript` 代码也是 `TypeScript` 代码。这就是为什么 `TypeScript` 始终编译为 `JavaScript` 的原因。要开始使用 `TypeScript` 编程，你必须先准备好环境。对于 Windows 用户，你只需要安装 Visual Studio，然后下载并安装必要的插件就可以开始编程了。
+该语言支持类型注解，这对于维护程序中的缩进非常有帮助。缩进通常能确保程序具有良好的可读性。你需要记住，`TypeScript`是`JavaScript`的超集，这意味着任何`JavaScript`代码也是`TypeScript`代码。这就是为什么`TypeScript`始终编译为`JavaScript`的原因。要开始使用`TypeScript`编程，你必须先准备好环境。对于 Windows 用户，你只需要安装 Visual Studio，然后下载并安装必要的插件就可以开始编程了。
 
-如果你在使用任何其他平台，则你需要依赖名为 `npm` 的 Node 包。确保你已经有一个文本编辑器和浏览器。一旦你安装了 `TypeScript` 的 `npm` 包，就可以开始编写你的 `TypeScript` 程序了。
+如果你在使用任何其他平台，则需要依赖名为`npm`的 Node 包。确保你已经有一个文本编辑器和浏览器。一旦你安装了`TypeScript`的`npm`包，就可以开始编写你的`TypeScript`程序了。

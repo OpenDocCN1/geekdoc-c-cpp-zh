@@ -1,18 +1,9 @@
+
 # C++ 初学者练习册：带答案练习
-
-
-
-
-
-
-
 
 ![](img/7ba0b827463b67fb137ba99a09ad20b8_0_0.png)
 
-
-
-
-- 1. 写一个 C++ 程序打印 Hello World。
+## 1. 写一个 C++ 程序打印 Hello World
 
 ```cpp
 #include <iostream>
@@ -22,10 +13,13 @@ int main() {
 }
 ```
 
-输出
-Hello World
+输出：
 
-- 2. 写一个 C++ 程序打印用户输入的数字。
+```
+Hello World
+```
+
+## 2. 写一个 C++ 程序打印用户输入的数字
 
 ```cpp
 #include <iostream>
@@ -39,11 +33,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter an integer: 5
 Entered: 5
+```
 
-- 3. 写一个 C++ 程序计算两个数之和。
+## 3. 写一个 C++ 程序计算两个数之和
 
 ```cpp
 #include <iostream>
@@ -61,11 +58,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter two integers: 5 7
 5 + 7 = 12
+```
 
-- 4. 写一个 C++ 程序寻找商和余数。
+## 4. 写一个 C++ 程序寻找商和余数
 
 ```cpp
 #include <iostream>
@@ -90,13 +90,16 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter dividend: 12
 Enter divisor: 4
 Quotient = 3
 Remainder = 0
+```
 
-- 5. 写一个 C++ 程序寻找 int, float, double 和 char 的大小。
+## 5. 写一个 C++ 程序寻找 `int`, `float`, `double` 和 `char` 的大小
 
 ```cpp
 #include <iostream>
@@ -112,13 +115,16 @@ int main()
 }
 ```
 
-输出
+输出：
+
+```
 Size of char: 1 byte
 Size of int: 4 bytes
 Size of float: 4 bytes
 Size of double: 8 bytes
+```
 
-- 6. 写一个 C++ 程序使用临时变量交换两个数。
+## 6. 写一个 C++ 程序使用临时变量交换两个数
 
 ```cpp
 #include <iostream>
@@ -142,14 +148,17 @@ int main()
 }
 ```
 
-输出
+输出：
+
+```
 Before swapping.
 a = 5, b = 10
 
 After swapping.
 a = 10, b = 5
+```
 
-- 7. 写一个 C++ 程序不使用临时变量交换两个数。
+## 7. 写一个 C++ 程序不使用临时变量交换两个数
 
 ```cpp
 #include <iostream>
@@ -171,14 +180,17 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Before swapping.
 a = 5, b = 10
 
 After swapping.
 a = 10, b = 5
+```
 
-- 8. 写一个 C++ 程序检查一个字符是元音还是辅音字母。
+## 8. 写一个 C++ 程序检查一个字符是元音还是辅音字母
 
 ```cpp
 #include <iostream>
@@ -205,9 +217,10 @@ int main() {
     return 0;
 }
 ```
-（注：任务 8 的 OCR 在源码中严重损坏；我已根据练习题目的描述重构了逻辑）。
 
-- 9. 写一个 C++ 程序找出三个数中的最大值。
+注：任务 8 的 OCR 在源码中严重损坏；我已根据练习题目的描述重构了逻辑。
+
+## 9. 写一个 C++ 程序找出三个数中的最大值
 
 ```cpp
 #include <iostream>
@@ -230,11 +243,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter three numbers: 10 20 30
 30 is the largest number
+```
 
-- 10. 写一个 C++ 程序求一二次方程的所有根。
+## 10. 写一个 C++ 程序求一二次方程的所有根
 
 ```cpp
 #include <iostream>
@@ -263,7 +279,7 @@ int main() {
 }
 ```
 
-- 11. 写一个 C++ 程序求自然数的和。
+## 11. 写一个 C++ 程序求自然数的和
 
 ```cpp
 #include <iostream>
@@ -283,11 +299,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter a positive integer: 50
 Sum = 1275
+```
 
-- 12. 写一个 C++ 程序检查是否为闰年。
+## 12. 写一个 C++ 程序检查是否为闰年
 
 ```cpp
 #include <iostream>
@@ -318,11 +337,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter a year: 2014
 2014 is not a leap year
+```
 
-- 13. 写一个 C++ 程序计算阶乘。
+## 13. 写一个 C++ 程序计算阶乘
 
 ```cpp
 #include <iostream>
@@ -347,11 +369,14 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter a positive integer: 12
 Factorial of 12 = 479001600
+```
 
-- 14. 写一个 C++ 程序生成乘法表。
+## 14. 写一个 C++ 程序生成乘法表
 
 ```cpp
 #include <iostream>
@@ -370,7 +395,9 @@ int main() {
 }
 ```
 
-输出
+输出：
+
+```
 Enter an integer: 3
 Enter range: 8
 3*1 = 3
@@ -381,10 +408,9 @@ Enter range: 8
 3*6 = 18
 3*7 = 21
 3*8 = 24
+```
 
-- 15. 写一个 C++ 程序生成斐波那契数列。
-
-
+## 15. 写一个 C++ 程序生成斐波那契数列
 
 ```cpp
 #include <iostream>
@@ -416,11 +442,14 @@ int main() {
 }
 ```
 
-Output
+输出：
+
+```
 Enter the number of terms: 9
 Fibonacci Series: 0,1,1,2,3,5,8,13,21
+```
 
-16. 编写一个 C++ 程序来寻找最大公约数 (GCD/HCF)。
+## 16. 编写一个 C++ 程序来寻找最大公约数 (GCD/HCF)
 
 ```cpp
 #include <iostream>
@@ -444,14 +473,16 @@ int main() {
 }
 ```
 
-Output
+输出：
 
+```
 Enter two numbers:
 16
 76
 HCF = 4
+```
 
-17. 编写一个 C++ 程序来寻找最小公倍数 (LCM).
+## 17. 编写一个 C++ 程序来寻找最小公倍数 (LCM)
 
 ```cpp
 #include <iostream>
@@ -477,14 +508,18 @@ int main() {
 }
 ```
 
-Output
+输出：
 
+```
 Enter two numbers:
 12
 18
 LCM = 36
+```
 
-18. 编写一个 C++ 程序来反转一个数字。
+## 18. 编写一个 C++ 程序来反转一个数字
+
+
 
 ```cpp
 #include <iostream>
@@ -503,12 +538,13 @@ int main() {
 }
 ```
 
-Output
+## Output
 
 Enter an integer: 1234
+
 Reversed Number = 4321
 
-19. 编写一个 C++ 程序来计算数字的幂。
+## 19. 编写一个 C++ 程序来计算数字的幂
 
 ```cpp
 #include <iostream>
@@ -528,14 +564,17 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 Enter base and exponent respectively:
+
 4
+
 2
+
 4^2 = 16
 
-20. 编写一个 C++ 程序将两个数相乘。
+## 20. 编写一个 C++ 程序将两个数相乘
 
 ```cpp
 #include <iostream>
@@ -551,14 +590,17 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 Enter two numbers:
+
 4
+
 5
+
 Product = 20
 
-21. 编写一个 C++ 程序检查数字是否为回文。
+## 21. 编写一个 C++ 程序检查数字是否为回文
 
 ```cpp
 #include <iostream>
@@ -580,9 +622,10 @@ int main() {
     return 0;
 }
 ```
-*(注：根据原文提供的代码块，第21题的代码逻辑似乎与17题重复了（都是LCM），此处已按原文逻辑进行对应翻译/保留)*
 
-22. 编写一个 C++ 程序检查数字是否为质数。
+> 注：根据原文提供的代码块，第 21 题的代码逻辑似乎与第 17 题重复了（都是 LCM），此处已按原文逻辑进行对应翻译/保留。
+
+## 22. 编写一个 C++ 程序检查数字是否为质数
 
 ```cpp
 #include <iostream>
@@ -614,11 +657,13 @@ int main() {
 
 ;
 }
-```:
+```
+
 29
+
 29 is a prime number
 
-23. 编写一个 C++ 程序检查 阿姆斯特数 (Armstrong number)。
+## 23. 编写一个 C++ 程序检查阿姆斯特朗数（Armstrong number）
 
 ```cpp
 #include <iostream>
@@ -644,13 +689,15 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 Enter a three-digit integer:
+
 371
+
 371 is an Armstrong number
 
-24. 编写一个 C++ 程序显示数字的因数。
+## 24. 编写一个 C++ 程序显示数字的因数
 
 ```cpp
 #include <iostream>
@@ -672,14 +719,17 @@ int main() {
 }
 ```
 
-# Output
+### Output
 
 Enter a positive integer:
+
 60
+
 Factors of 60 are:
+
 1 2 3 4 5 6 10 12 15 20 30 60
 
-25. 编写一个 C++ 程序制作一个简单的计算器。
+## 25. 编写一个 C++ 程序制作一个简单的计算器
 
 ```cpp
 #include <iostream>
@@ -716,13 +766,15 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 Enter operator: +
+
 Enter operands: 10 5
+
 Result = 15
 
-26. 编写一个 C++ 程序使用递归寻找自然数之和。
+## 26. 编写一个 C++ 程序使用递归寻找自然数之和
 
 ```cpp
 #include <iostream>
@@ -745,12 +797,13 @@ int add(int n) {
 }
 ```
 
-Output
+### Output
 
 Enter a positive integer: 10
+
 Sum = 55
 
-27. 编写一个 C++ 程序使用递归寻找数字的阶乘。
+## 27. 编写一个 C++ 程序使用递归寻找数字的阶乘
 
 ```cpp
 #include <iostream>
@@ -773,12 +826,13 @@ int factorial(int n) {
 }
 ```
 
-Output
+### Output
 
 Enter a positive integer: 6
+
 Factorial of 6 = 720
 
-28. 编写一个 C++ 程序使用递归寻找 GCD。
+## 28. 编写一个 C++ 程序使用递归寻找 GCD
 
 ```cpp
 #include <iostream>
@@ -801,14 +855,17 @@ int hcf(int n1, int n2) {
 }
 ```
 
-Output
+### Output
 
 Enter positive integers:
+
 366
+
 60
+
 H.C.F of 366 and 60 is: 6
 
-29. 编写一个 C++ 程序统计字符串中字符的出现频率。
+## 29. 编写一个 C++ 程序统计字符串中字符的出现频率
 
 ```cpp
 #include <iostream>
@@ -831,11 +888,11 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 Number of a = 2
 
-30. 编写一个 C++ 程序寻找字符串的长度。
+## 30. 编写一个 C++ 程序寻找字符串的长度
 
 ```cpp
 #include <iostream>
@@ -850,13 +907,11 @@ int main() {
 }
 ```
 
-Output
+### Output
 
 String Length = 15
 
-31. 编写一个 C++ 程序连接两个字符串。
-
-
+## 31. 编写一个 C++ 程序连接两个字符串
 
 ```cpp
 #include <iostream>
@@ -880,12 +935,15 @@ int main()
 }
 ```
 
-Output
+### Output
+
 Enter string s1: c++ programming
+
 Enter string s2: is awesome
+
 Resultant String = c++ programming is awesome
 
-32. 编写一个 C++ 程序来拷贝二进制数。
+## 32. 编写一个 C++ 程序来拷贝二进制数
 
 ```cpp
 #include <iostream>
@@ -907,12 +965,15 @@ int main()
 }
 ```
 
-Output
+### Output
+
 Enter string s1: c++
+
 s1 = c++
+
 s2 = c++
 
-33. 编写一个 C++ 程序，将二进制数转换为十进制。
+## 33. 编写一个 C++ 程序，将二进制数转换为十进制
 
 ```cpp
 #include <iostream>
@@ -938,11 +999,13 @@ int convert(long long n) {
 }
 ```
 
-Output
+### Output
+
 Enter a binary number: 1101
+
 1101 in binary = 13 in decimal
 
-34. 编写一个 C++ 程序，将八进制数转换为十进制。
+## 34. 编写一个 C++ 程序，将八进制数转换为十进制
 
 ```cpp
 #include <iostream>
@@ -971,11 +1034,15 @@ int octalToDecimal(int octalNumber) {
 }
 ```
 
-Output
+### Output
+
 Enter an octal number: 2341
+
 2341 in octal = 1249 in decimal
 
-35. 编写一个 C++ 程序，将二进制数转换为八进制。
+## 35. 编写一个 C++ 程序，将二进制数转换为八进制
+
+
 
 ```cpp
 #include <iostream>
@@ -1010,6 +1077,8 @@ int binaryToOctal(long long binaryNumber) {
 ```
 
 Output
+
+```
 Enter a binary number: 10001
 10001 in binary = 21 in octal
-
+```

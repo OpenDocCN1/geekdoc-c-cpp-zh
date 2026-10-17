@@ -1,35 +1,29 @@
+
 # 嵌入式系统的 C++
 
+## 介绍
 
-
-![](img/cover.jpeg)
-
-![](img/00001.jpeg)
-
-
-# 介绍
-
-面向对象代码的伟大之处在于，它可以让简单简单的问题看起来变得庞大且复杂。在书中，我假设读者对 C++ 已经非常熟悉。在整本书，我展示了 C++11 中一些不为人知的特性，例如类型特征、常量表达式和 OpenMP 支持。我得出的结论是 C++ 是完美的工具。
-
-等等，我需要重新检查细节，以提供文本的一一对应映射。
+面向对象代码的伟大之处在于，它可以让简单的问题看起来变得庞大且复杂。在书中，我假设读者对 `C++` 已经非常熟悉。在整本书中，我展示了 `C++11` 中一些不为人知的特性，例如类型特征、常量表达式和 `OpenMP` 支持。我得出的结论是`C++`是完美的工具。
 
 问题可以通过许多方式解决。我提供了一种替代方案并比较了性能。
 
-# 致谢
+## 致谢
 
-我要感谢我的表弟兼朋友 Andre。没有 Andre 的帮助，这本书将会单薄得多。我认为在我们两个之间
+我要感谢我的表弟兼朋友 `Andre`。没有 `Andre` 的帮助，这本书将会单薄得多。
 
-# C++ 代码风格。
+## C++ 代码风格
 
-#define `AND` `&&`
-#define `OR` `||`
-#define `EQ` `==`
+```
+#define AND &&
+#define OR ||
+#define EQ ==
+```
 
-在所有的源代码示例中，我尽力遵循了一致的 C/C++ 风格。在书中，我没有将大括号单独放在一行。唯一的唯一目的是为了让代码更短。更短的代码更有可能在较小的阅读器屏幕上显示。出于同样的原因，代码本身没有注释。希望注释的缺失通过穿插的解释得到了补偿。我使用了驼峰命名法。类型和类名以大写开头，变量以小写开头，而常量则全大写并用下划线分隔。
+在所有的源代码示例中，我尽力遵循了一致的 `C/C++` 风格。在书中，我没有将大括号单独放在一行，唯一的目的是为了让代码更短。更短的代码更有可能在较小的阅读器屏幕上显示。出于同样的原因，代码本身没有注释，希望注释的缺失通过穿插的解释得到了补偿。我使用了驼峰命名法。类型和类名以大写开头，变量以小写开头，而常量则全大写并用下划线分隔。
 
-# 软件原语。
+## 软件原语
 
-## 互斥
+### 互斥
 
 在多任务环境中，线程和中断会并发读写数据对象。可以使用不同的工具来同步不同上下文之间的访问，并创建线程安全的 API。可用工具包括信号量、操作系统提供的互斥锁，以及禁用中断、禁用部分中断、禁用操作系统调度器以及使用自旋锁。当我为实时操作系统或硬件提供的 API 编写封装时，我希望封装尽可能轻量。通常，我使用汇编指令的数量来衡量封装的开销。指令数量是 CPU 周期或执行时间的良好估计。
 
@@ -45,19 +39,15 @@ public:
 };
 ```
 
-在接下来的用法示例中，C++ 符 `auto` 告诉编译器自动提供正确的类型——C++11 编译器知道在某些情况下推导出某些变量类型。例如，C++ 编译器可以推断赋值左侧的返回类型或函数的返回类型。
+在接下来的用法示例中，`C++`符 `auto` 告诉编译器自动提供正确的类型——`C++11`编译器知道在某些情况下推导出某些变量类型。例如，`C++`编译器可以推断赋值左侧的返回类型或函数的返回类型。
 
+在 `main()` 函数中，编译器将调用输出函数两次，不会添加任何其他代码。当变量 `myDummyLock` 的作用域结束时，锁会被释放——调用析构函数 `~LockDummy`。该作用域可以是一个 `while` 循环。我不需要在函数每次返回之前调用"unlock"。`C++`编译器会确保析构函数总是被调用，且只被调用一次（更多关于 `RAII` 的信息请参见 [1]）。这种便利的服务不会产生任何性能开销。以下代码的输出将是：
 
-
-
-
-在 `main()` 函数中，编译器将调用输出函数两次，不会添加任何其他代码。当变量 `myDummyLock` 的作用域结束时，锁会被释放——调用析构函数 `~LockDummy`。该作用域可以 `while` 循环。我不需要在函数每次返回之前调用“unlock”。C++ 编译器会确保析构函数总是被调用，且只被调用一次（更多关于 RAII 的信息请参见 [1]）。这种便利的服务不会产生任何性能开销。以下代码的输出将是：
-
+```
 Locked context
-
 Protected context
-
 Lock is freed
+```
 
 ```cpp
 int testDummyLock() {
@@ -74,13 +64,12 @@ int testDummyLock() {
 
 我想通过另一个例子来强调这个观点。在下面的代码中，我在锁变量的声明周围设置了一个作用域。代码的输出将是：
 
+```
 Locked context
-
 Protected context
-
 Lock is freed
-
 End of main
+```
 
 ```cpp
 int main() {
@@ -93,7 +82,7 @@ int main() {
 }
 ```
 
-我的第二个锁是一个更真实的锁，它会禁用硬件中断。我假设有一个可以禁用和启用中断的 API。我正在对原始锁代码进行一些重构。首先，我使用模板，这是 C++ 的一个特性，允许你声明一个对泛型操作的类。我将重用模板 `Lock` 中的代码来处理不同的同步对象。模板 `Lock` 中的代码可以操作任何实现了两个公共方法（静态方法 `get()` 和 `release()`）的结构体或类。在这里我仔细地避免了多态，我不要求同步对象属于同一个类层次结构。禁用/启用中断 API 的封装器（它可能会写入硬件）不会是操作系统信号量封装器的子类/朋友/父类/关系/派生类。
+我的第二个锁是一个更真实的锁，它会禁用硬件中断。我假设有一个可以禁用和启用中断的 API。我正在对原始锁代码进行一些重构。首先，我使用模板，这是 `C++` 的一个特性，允许你声明一个对泛型操作的类。我将重用模板 `Lock` 中的代码来处理不同的同步对象。模板 `Lock` 中的代码可以操作任何实现了两个公共方法（静态方法 `get()` 和 `release()`）的结构体或类。在这里我仔细地避免了多态，我不要求同步对象属于同一个类层次结构。禁用/启用中断 API 的封装器（它可能会写入硬件）不会是操作系统信号量封装器的子类/朋友/父类/关系/派生类。
 
 禁用和启用中断的 API 如下：
 
@@ -107,7 +96,7 @@ static inline void interruptEnable(void) {
 }
 ```
 
-我正在描述一个同步对象。该类实现了两个方法：“get”和“release”。这两个方法都是“inline”的，这有助于优化器决定是否应该将方法的调用替换为方法的代码。最终结果将类似于在 C 中使用宏定义。`SynchroObject` 类中的默认构造函数是私有的，我不希望应用程序中出现这种类型的对象。到目前为止，我的 C++ 编译器还没有向我的执行文件添加任何对象代码。
+我正在描述一个同步对象。该类实现了两个方法："get"和"release"。这两个方法都是"inline"的，这有助于优化器决定是否应该将方法的调用替换为方法的代码。最终结果将类似于在 `C` 中使用宏定义。`SynchroObject` 类中的默认构造函数是私有的，我不希望应用程序中出现这种类型的对象。到目前为止，我的 `C++`编译器还没有向我的执行文件添加任何对象代码。
 
 ```cpp
 class SynchroObject {
@@ -122,7 +111,7 @@ public:
 };
 ```
 
-模板类 `Lock` 可以操作任何提供 `get/release` API 的同步对象类型。模板类 `Lock` 的所有方法都是“inline”的。C++ 编译器不会向对象代码添加任何函数，而是会将对 `Lock` 方法的调用替换为同步对象的 `get/release` 代码。
+模板类 `Lock` 可以操作任何提供 `get/release` API 的同步对象类型。模板类 `Lock` 的所有方法都是"inline"的。`C++`编译器不会向对象代码添加任何函数，而是会将对 `Lock` 方法的调用替换为同步对象的 `get/release` 代码。
 
 ```cpp
 template<typename Mutex> class Lock {
@@ -142,7 +131,7 @@ public:
 typedef Lock<SynchroObject> MyLock;
 ```
 
-`main()` 函数的输出将是两个单词：Disable, Enable
+`main()` 函数的输出将是两个单词：`Disable`, `Enable`
 
 ```cpp
 int main() {
@@ -153,15 +142,15 @@ int main() {
 }
 ```
 
-禁用和启用中断函数的封装开销完全为零。事实上，如果我检查反汇编，我会在主程序中看到两次对打印函数的调用，外无他物。我写了一些 C++ 代码，它们被优化成了空。我获得了什么？增值价值是什么？
+禁用和启用中断函数的封装开销完全为零。事实上，如果我检查反汇编，我会在主程序中看到两次对打印函数的调用，外无他物。我写了一些 `C++`代码，它们被优化成了空。我获得了什么？增值价值是什么？
 
-这段代码没有允许我在调用禁用中断后忘记启用中断。无论我的函数有多少个返回点或跳出循环的地方，C++ 编译器都会确保 `interruptEnable` 函数恰恰被调用一次。
+这段代码没有允许我在调用禁用中断后忘记启用中断。无论我的函数有多少个返回点或跳出循环的地方，`C++`编译器都会确保 `interruptEnable` 函数恰恰被调用一次。
 
-## 并行执行。
+### 并行执行
 
-有些人人在面对问题时，会想：“我知道了，我将使用线程”——然后他们就出了问题。
+有些人在面对问题时，会想："我知道了，我将使用线程"——然后他们就出了问题。
 
-我的系统中有一个四核 CPU。我的硬件支持 GCC 4.8 编译器。如果我使用编译标记 `-fopenmp` 编译下面的代码，我将得到输出“4”：
+我的系统中有一个四核 CPU。我的硬件支持 `GCC 4.8` 编译器。如果我使用编译标记 `-fopenmp` 编译下面的代码，我将得到输出 "4"：
 
 ```cpp
 void testReduction(void) {
@@ -174,9 +163,9 @@ void testReduction(void) {
 }
 ```
 
-如果没有 `-fopenmp` 标记，输出将是“1”。当 C++ 编译器遇到 pragma “omp parallel” 时，它会添加一段代码，根据系统中的核心数产生一个线程“团队”（在 Linux POSIX pthreads 中）。接下来的部分由线程组并行执行。
+如果没有 `-fopenmp` 标记，输出将是 "1"。当 `C++`编译器遇到 `pragma "omp parallel"` 时，它会添加一段代码，根据系统中的核心数产生一个线程"团队"（在 `Linux POSIX pthreads` 中）。接下来的部分由线程组并行执行。
 
-在我的系统上执行以下函数，使用 OpenMP 需要 ~0.179s，而不使用 OpenMP 则需要 ~0.322s：
+在我的系统上执行以下函数，使用 `OpenMP` 需要 ~0.179s，而不使用 `OpenMP` 则需要 ~0.322s：
 
 ```cpp
 volatile uint_fast8_t myArray[(size_t)512*1024*1024];
@@ -191,13 +180,9 @@ uint_fast32_t testOpenMPLoop() {
 }
 ```
 
-如果数组大小小于 1000 万条目，OpenMP 会启动，而单线程版本需要更的时间。
+如果数组大小小于 1000 万条目，`OpenMP` 会启动，而单线程版本需要更多的时间。
 
-
-
-
-
-我的第一个示例是一个循环缓冲区（cyclic buffer），它也被称为环形缓冲区（ring buffer）。生产者”向循环缓冲区的“尾部”（tail）添加对象，而“消费者”则从循环缓冲区的“头部”（head）提取对象。生产者的示例可以是一个中断服务程序，它从 UART 设备（RS232 端口）获取字符。“消费者”则是从应用程序主循环中调用的函数，用于处理来自 UART 的到达命令。`CyclicBuffer` 类是一个模板类，它应该帮助优化器为给定的整数类型和 CPU 架构生成尽可能高效的代码。
+我的第一个示例是一个循环缓冲区（cyclic buffer），它也被称为环形缓冲区（ring buffer）。"生产者"向循环缓冲区的"尾部"（tail）添加对象，而"消费者"则从循环缓冲区的"头部"（head）提取对象。生产者的示例可以是一个中断服务程序，它从 `UART` 设备（RS232 端口）获取字符。"消费者"则是从应用程序主循环中调用的函数，用于处理来自 `UART` 的到达命令。`CyclicBuffer` 类是一个模板类，它应该帮助优化器为给定的整数类型和 CPU 架构生成尽可能高效的代码。
 
 ```cpp
 template<typename  ObjectType, typename  Lock, std::size_t  Size>
@@ -257,7 +242,7 @@ inline  bool  CyclicBufferSimple<ObjectType, Lock, Size>::isFull() {
 }
 ```
 
-一个处理缓冲区索引回回的方法：
+一个处理缓冲区索引回绕的方法：
 
 ```cpp
 template<typename  ObjectType, typename  Lock, std::size_t  Size>
@@ -300,7 +285,7 @@ object = data[this->head];
 }
 ```
 
-实例化新类型 – 一个无所操作的锁：
+实例化新类型——一个无所操作的锁：
 
 `typedef Lock<SynchroObjectDummy> LockDummy;`
 
@@ -312,11 +297,11 @@ constexpr  size_t calculateCyclicBufferSize() {
 }
 ```
 
-我创建了一个 `CyclicBuffer` 类的对象来处理 8 位无符号整数。我使用了 `uint_fast8_t`，这是另一个针对移植性的 C++11 奇迹。类型 `uint_fast8_t` 允许 C++ 编译器选择至少有 8 位的最佳性能整数。在某些 CPU 上，32 位整数的操作比 8 位操作更快。如果性能比存储分配的内存更重要，选择 32 位整数而不是 8 位是有意义的。最小可能的 8 位无符号整数是 `uint_least8_t`，平台上可用的无符号整数是 `uintmax_t`。
+我创建了一个 `CyclicBuffer` 类的对象来处理 8 位无符号整数。我使用了 `uint_fast8_t`，这是另一个针对移植性的 `C++11` 特性。类型 `uint_fast8_t` 允许 `C++`编译器选择至少有 8 位的最佳性能整数。在某些 CPU 上，32 位整数的操作比 8 位操作更快。如果性能比存储分配的内存更重要，选择 32 位整数而不是 8 位是有意义的。最小可能的 8 位无符号整数是 `uint_least8_t`，平台上可用的无符号整数是 `uintmax_t`。
 
 `static CyclicBufferSimple<uint_fast8_t, LockDummy, calculateCyclicBufferSize()> myCyclicBuffer;`
 
-在用法示例中有一个来自 C++11 标准范围循环。主函数将打印数字 1, 3, 11：
+在用法示例中有一个来自 `C++11` 标准范围循环。主函数将打印数字 1, 3, 11：
 
 ```cpp
 int  main() {
@@ -331,7 +316,11 @@ int  main() {
 }
 ```
 
-让我们查看 GNUC 编译器为 Intel CPU 生成的单次 `add()` 方法调汇编代码。
+让我们查看 `GNU C` 编译器为 Intel CPU 生成的单次 `add()` 方法调用的汇编代码。
+
+
+
+# 汇编代码示例
 
 ```assembly
 xor %esi,%esi
@@ -350,9 +339,7 @@ cmp %r8,%rax
 movb $0x0,0x6011a0
 ```
 
-
-
-
+# C 代码示例
 
 ```cpp
 size_t tail = CyclicBufferIncrement(cyclicBuffer->tail, CYCLIC_BUFFRE_SIZE);
@@ -396,7 +383,7 @@ static inline bool CyclicBufferRemove(CyclicBuffer* cyclicBuffer, CYCLIC_BUFFER_
 }
 ```
 
-函数 `main` 输出数字 0,1,2,3
+函数`main`输出数字 0,1,2,3
 
 ```cpp
 int main() {
@@ -415,7 +402,7 @@ int main() {
 
 这段代码具有一些局限性。只有操作相同整数类型的循环缓冲区才能在同一个 C 源文件中使用。添加/删除函数只能在一个 C 文件中定义一次。
 
-对应的汇编代码包含调用 `add()` API 的 10 个操作码：
+对应的汇编代码包含调用`add()` API 的 10 个操作码：
 
 ```assembly
  return (index + 1);
@@ -481,13 +468,13 @@ xor    %r12d,%r12d
 
 在 Intel 上测量的 C 版本和 C++ 性能是相同的。
 
-## C++ 模板
+# C++ 模板
 
 要理解什么是递归，你必须首先理解递归。
 
 此时，一个耐心的读者会询问由于 C++ 模板和对象代码重复导致的“代码膨胀”。通常情况下，C 语言实现的内存占用应该更小，不是吗？
 
-在循环缓冲区的 C++ 实现中，所有方法都是内联的（inline），并且没有特定的“模板代码”。在一般情况下，对于代码中使用的每一对 `ObjectType`/Size`，C++ 编译器都会实例化一个类并将全套方法添加到应用程序代码中。一个仔细的 C++ 程序员应该将不需要模板参数的方法移动到基类中，并从该新类派生 `CyclicBuffer` 模板。将类型无关的代码移动到基类中通常被称为“代码提升”（code hoisting）。代码提升并不一定会导致性能损耗。在下面的示例中，我将基类命名为 `CyclicBufferBase`。基类的构造函数是保护的（protected）。应用程序只能创建子类的对象。
+在循环缓冲区的 C++ 实现中，所有方法都是内联的（inline），并且没有特定的“模板代码”。在一般情况下，对于代码中使用的每一对`ObjectType`/`Size`，C++ 编译器都会实例化一个类并将全套方法添加到应用程序代码中。一个仔细的 C++ 程序员应该将不需要模板参数的方法移动到基类中，并从该新类派生`CyclicBuffer`模板。将类型无关的代码移动到基类中通常被称为“代码提升”（code hoisting）。代码提升并不一定会导致性能损耗。在下面的示例中，我将基类命名为`CyclicBufferBase`。基类的构造函数是保护的（protected）。应用程序只能创建子类的对象。
 
 ```cpp
 class CyclicBufferBase {
@@ -526,7 +513,7 @@ return (index + 1);
 };
 ```
 
-模板类 `CyclicBuffer` 包含了依赖模板参数 `Size` 的数据以及取决于整数类型的添加/删除方法。`CyclicBuffer` 类派自 `CyclicBufferBase` 类，继承了 `CyclicBufferBase` 的所有方法，并暴露了 `CyclicBufferBase` 的所有方法。
+模板类`CyclicBuffer`包含了依赖模板参数`Size`的数据以及取决于整数类型的添加/删除方法。`CyclicBuffer`类派自`CyclicBufferBase`类，继承了`CyclicBufferBase`的所有方法，并暴露了`CyclicBufferBase`的所有方法。
 
 ```cpp
 template<typename ObjectType, typename Lock, std::size_t Size>
@@ -565,10 +552,7 @@ private:
 };
 ```
 
-
-
-
-我将通过声明一个新类 `Stack` 来开始关于内存池动态内存分配的讨论。模板类 `Stack` 与之前使用的 `CyclicBuffer` 类类似。`Stack` 类实现了两个方法：`push` 和 `pop`。
+我将通过声明一个新类`Stack`来开始关于内存池动态内存分配的讨论。模板类`Stack`与之前使用的`CyclicBuffer`类类似。`Stack`类实现了两个方法：`push`和`pop`。
 
 ```cpp
 template<typename ObjectType, typename Lock, std::size_t Size>
@@ -586,7 +570,7 @@ private:
 };
 ```
 
-基类 `StackBase` 包含 `top` 和 `size` 字段，以及一些有用的 API。
+基类`StackBase`包含`top`和`size`字段，以及一些有用的 API。
 
 ```cpp
 class StackBase {
@@ -613,7 +597,7 @@ protected:
 };
 ```
 
-`push` 和 `pop` 方法实现示例：
+`push`和`pop`方法实现示例：
 
 ```cpp
 template<typename ObjectType, typename Lock, std::size_t Size>
@@ -645,7 +629,7 @@ inline bool Stack<ObjectType, Lock, Size>::pop(ObjectType** object) {
 
 我的下一步工作是定义一个“原始”数据内存块。一个内存块是一个正确对齐的字节数组，可选情况下，它可以放置在特定的内存地址上。内存块的一个流行应用是 DMA 传输。数据缓冲区可以放在普通 RAM 中，也可以放在专用地址空间中。
 
-我定义了一个内存区域。我使用 `new` 运算符——定位 new 运算符（placement new）——将数据 `place` 在指定的地址。我的内存区域为了调试目的有一个名称。区域地址的类型为 `uintptr_t`，这是一个能够存储指针的无符号整数。
+我定义了一个内存区域。我使用`new`运算符——定位 new 运算符（placement new）——将数据`place`在指定的地址。我的内存区域为了调试目的有一个名称。区域地址的类型为`uintptr_t`，这是一个能够存储指针的无符号整数。
 
 ```cpp
 class MemoryRegion {
@@ -671,14 +655,16 @@ protected:
 };
 ```
 
-我创建了一个 `MemoryRegion` 类型的对象，并指向动态数据中的 `dmaMemoryData`区域：
+我创建了一个`MemoryRegion`类型的对象，并指向动态数据中的`dmaMemoryData`区域：
 
 ```cpp
 static uint8_t dmaMemoryDummy[512];
 static MemoryRegion dmaMemoryRegion("dmaMem", (uintptr_t)dmaMemoryDummy, sizeof(dmaMemoryDummy));
 ```
 
-我需要一个分配器。这是一个处理内存块分配的类。分配器处理正确的对齐。我将只使用一次（或很少）分配器代码。例如，当我用数据块填充我的内存池时，我需要一个分配器。在这里性能并不极端重要。`reset` 方法将所有分配的块“释放”回分配器。
+我需要一个分配器。这是一个处理内存块分配的类。分配器处理正确的对齐。我将只使用一次（或很少）分配器代码。例如，当我用数据块填充我的内存池时，我需要一个分配器。在这里性能并不极端重要。`reset`方法将所有分配的块“释放”回分配器。
+
+
 
 ```cpp
 class MemoryAllocatorRaw {
@@ -798,9 +784,6 @@ protected:
 };
 ```
 
-
-
-
 ```cpp
 mutable Statistics statistics;
 
@@ -867,7 +850,7 @@ free(uint8_t* block) {
 
 防止多次释放同一个块是相当容易的。如果数据块是连续内存的一部分，分配器可以提供一种基于块地址生成唯一索引的方法。内存池可以包含一个数组，其中块被标记为已分配或空闲，`free()` 方法可以根据此数组检查块。如果内存区域不是连续的，分配器可以实现一个哈希函数，将数据块的地址转换为唯一的数据块索引。
 
-## 运算符 new。
+## 运算符 new
 
 算法（名词）
 
@@ -899,7 +882,7 @@ static uint32_t myDynamicCyclicBufferData[calculateCyclicBufferSize()];
 CyclicBufferDynamic<uint32_t, LockDummy> myDynamicCyclicBuffer(calculateCyclicBufferSize(), &myDynamicCyclicBufferData);
 ```
 
-## I/O 访问。
+## I/O 访问
 
 需要多少个程序员才能换灯泡？不需要——这是一个硬件问题。
 
@@ -909,25 +892,25 @@ CyclicBufferDynamic<uint32_t, LockDummy> myDynamicCyclicBuffer(calculateCyclicBu
 
 | 地址 | 名称 | 寄存器 | 权限 |
 | :--- | :--- | :--- | :--- |
-| 0x0000 | PIO 启用寄存器 | PIO_PER | 只写 |
-| 0x0004 | PIO 禁用寄存器 | PIO_PDR | 只写 |
-| 0x0008 | PIO 状态寄存器 | PIO_PSR | 只读 |
-| 0x000C | 预留 | | |
-| 0x0010 | 输出启用寄存器 | PIO_OER | 只写 |
-| 0x0014 | 输出禁用寄存器 | PIO_ODR | 只写 |
-| 0x0018 | 输出状态寄存器 | PIO_OSR | 只读 |
-| 0x001C | 预留 | | |
-| 0x0020 | 未使用 | | |
-| 0x0024 | 未使用 | | |
-| 0x0028 | 未使用 | | |
-| 0x002C | 预留 | | |
-| 0x0030 | 设置输出数据寄存器 | PIO_SODR | 只写 |
-| 0x0034 | 清除输出数据寄存器 | PIO_CODR | 只写 |
-| 0x0038 | 输出状态寄存器 | PIO_ODSR | 只读 |
+| `0x0000` | PIO 启用寄存器 | `PIO_PER` | 只写 |
+| `0x0004` | PIO 禁用寄存器 | `PIO_PDR` | 只写 |
+| `0x0008` | PIO 状态寄存器 | `PIO_PSR` | 只读 |
+| `0x000C` | 预留 | | |
+| `0x0010` | 输出启用寄存器 | `PIO_OER` | 只写 |
+| `0x0014` | 输出禁用寄存器 | `PIO_ODR` | 只写 |
+| `0x0018` | 输出状态寄存器 | `PIO_OSR` | 只读 |
+| `0x001C` | 预留 | | |
+| `0x0020` | 未使用 | | |
+| `0x0024` | 未使用 | | |
+| `0x0028` | 未使用 | | |
+| `0x002C` | 预留 | | |
+| `0x0030` | 设置输出数据寄存器 | `PIO_SODR` | 只写 |
+| `0x0034` | 清除输出数据寄存器 | `PIO_CODR` | 只写 |
+| `0x0038` | 输出状态寄存器 | `PIO_ODSR` | 只读 |
 
 微控制器中有五个如 A、B、C、D、E 的块。寄存器从 `0xFFFFF00` 开始映射。想要修改只写寄存器的用户应向相关位写入 1。例如，用户应向 `PIO_SODR` 写入 `0x04`。
 
-## C 语言中的 I/O 访问。
+## C 语言中的 I/O 访问
 
 “用 C 或 C++ 编写就像在移除所有安全防护的情况下电锯” —— Bob Gray。
 
@@ -988,12 +971,11 @@ typedef enum {
 } PIO_NAME;
 ```
 
-
-
-
 ## PIO 配置指南
 
 将引脚配置为输出的函数：
+
+
 
 ```cpp
 static void enableOutput(PIO_NAME name, int pin, int value) {
@@ -1010,7 +992,7 @@ static void enableOutput(PIO_NAME name, int pin, int value) {
 }
 ```
 
-驱动 PIO A 引脚 2 置高函数可能如下所示：
+驱动 `PIO A` 引脚 2 置高函数可能如下所示：
 
 ```cpp
 static void main() {
@@ -1018,7 +1000,8 @@ static void main() {
 }
 ```
 
-### Intel 汇编
+## Intel 汇编
+
 这是 Intel 相关的汇编代码——正如预期的，有三个 32 位的移动：
 
 ```assembly
@@ -1042,7 +1025,8 @@ pio->PIO_OER = mask;
 4007fd:             00 00 00
 ```
 
-### ARM 汇编
+## ARM 汇编
+
 为 ARM 生成的汇编代码稍长。在 ARM 中，存储值之前应将地址加载到寄存器中。
 
 ```assembly
@@ -1064,7 +1048,8 @@ pio->PIO_PER = mask;
 pio->PIO_OER = mask;
 ```
 
-## C++ 封装实现
+# C++ 封装实现
+
 以下结构表示了用于封装 PIO 操作的 C++ 类：
 
 ```cpp
@@ -1102,13 +1087,11 @@ private:
 };
 ```
 
-
-
 对 PIO 寄存器的访问被封装在硬件模块类方法中。`HardwarePIO` 类中的方法是修改寄存器的唯一方式。C++ 实现允许在编译时捕获其他错误操作，例如读取或写入预留寄存器。
 
-在硬件模块中缓存所有写入值是非常容易。缓存或记录读写事务的一种方法是在硬件模块类中添加一个“影子”（shadow）接口字段。
+在硬件模块中缓存所有写入值是非常容易。在硬件模块类中添加一个“影子”（shadow）接口字段，是缓存或记录读写事务的一种方法。
 
-## 间接 I/O 访问。
+# 间接 I/O 访问
 
 在某些情况下，硬件可以通过串口接口访问。此类接口的一个例子是 `SPI`。为了简洁起见，我使用了直接访问 API。真实 SPI 设备的真实访问接口可以包含系统调用或对串口接口驱动的调用：
 
@@ -1156,21 +1139,29 @@ protected:
 
 其他类保持不变。
 
-# 代码 ROM 和数据 RAM。
+# 代码 ROM 和数据 RAM
 
 如果一开始没有成功，就把它称作版本 1.0。
 
-有一些非常流行的硬件平台，ROM 和 RAM 的区别非常重要。此类设备的一个例子是相当流行的 8 位微控制器 `Atmega`。在 `Atmega` MCU 中，代码不能放置在数据内存中，CPU 无法执行位于 RAM 中的代码。对代码内存中数据的任何访问都需要特殊指令。另一个例子是应用专用集成电路或 `ASICs`。`ASIC` 通常包含集成 ROM 和 RAM。集成的（也称为片上或芯片内）ROM 存储廉廉，因为在硅片上需要的空间较小。RAM 相对昂贵，因为每位内存需要更多逻辑，且集成电路（芯片）的平方英寸非常贵。RAM 消耗的功率大得多。我认为我们周围的大多数电子设备内部都有集成 ROM 和 RAM（通常是 `SRAM`）。通常，片上 RAM 远小于 ROM。
+有一些非常流行的硬件平台，ROM 和 RAM 的区别非常重要。此类设备的一个例子是相当流行的 8 位微控制器 `Atmega`。在 `Atmega` MCU 中，代码不能放置在数据内存中，CPU 无法执行位于 RAM 中的代码。对代码内存中数据的任何访问都需要特殊指令。
+
+另一个例子是应用专用集成电路或 `ASICs`。`ASIC` 通常包含集成 ROM 和 RAM。集成的（也称为片上或芯片内）ROM 存储廉价，因为在硅片上需要的空间较小。RAM 相对昂贵，因为每位内存需要更多逻辑，且集成电路（芯片）的平方英寸非常贵。RAM 消耗的功率大得多。
+
+我认为我们周围的大多数电子设备内部都有集成 ROM 和 RAM（通常是 `SRAM`）。通常，片上 RAM 远小于 ROM。
 
 ROM 有两种类型：可擦写和不可擦写。在 `Atmega` MCU 中，ROM 的不同区域可以由固件编程，前提是固件运行另一个区域。在 `ASICs` 中，ROM 通常是不可擦写的。ROM 的编程是 ASIC 生产过程的一部分。芯片离开工厂（`FAB`）后，ROM 无法被修改。
 
 如果没有足够的 RAM 来加载固件，那么部分固件代码应该位于芯片 ROM 中。对于 `ASIC`，这意味着基于 ROM 的固件部分只能在未来的芯片版本中进行更改。现代 ASIC 固件的高复杂度使得在 ASIC 验证过程中很难达到 100% 的代码覆盖。即使基于 ROM 的固件经过了完全验证和测试，仍有可能开发团队误解了某个协议，或者产品需求发生了变化。开发团队准备固件和硬件，是为了应对极可能出现的对 ROM 进行补丁的需求。
 
-本章涵盖了某些与 ROM 关的问题。
+本章涵盖了某些与 ROM 有关的问题。
 
-## C++ 初始化数据。
+## C++ 初始化数据
 
-至少有一个代码段、启动程序、常量和初始化数据是 ROM 的部分。初始化的非零数据将消耗双倍内存。初始化数据的初始化值是 ROM 的一部分。通常，启动过程会将值从 ROM 复制到 RAM。如果我检查编译器生成的对象文件，可以很容易找到字符串的初始化数据。有一些工具可以帮助检查对象文件、将不同段转储到单独的文件，并为 ROM 编程准备镜像。此类工具的一个例子是 `GNU objdump`。让我们来看一些 C++ 初始化数据的实际应用。以下代码产生两行输出：“Hello, world!”，紧接着是“Hello from main()!”。
+至少有一个代码段、启动程序、常量和初始化数据是 ROM 的部分。初始化的非零数据将消耗双倍内存。初始化数据的初始化值是 ROM 的一部分。通常，启动过程会将值从 ROM 复制到 RAM。
+
+如果我检查编译器生成的对象文件，可以很容易找到字符串的初始化数据。有一些工具可以帮助检查对象文件、将不同段转储到单独的文件，并为 ROM 编程准备镜像。此类工具的一个例子是 `GNU objdump`。
+
+让我们来看一些 C++ 初始化数据的实际应用。以下代码产生两行输出：“Hello, world!”，紧接着是“Hello from main()!”。
 
 ```cpp
 class HelloWorld {
@@ -1186,11 +1177,15 @@ int main() {
 }
 ```
 
-`main()` 函数只包含一个输出。负责初始化 C++ 对象 `helloWorld` 并打印第一行的实体运行在我操作系统中的对象加载器。在嵌入式系统中，这段代码通常是启动过程的一部分。`HelloWorld` 类的构造函数是“文本”，在 ROM 中只出现一次。`cout` 的参数（字符串）存在于内存中的两个地方：原始或“主副本”在 ROM 中，由加载器创建的第二个副本在 RAM 中。包含静态分配对象 `helloWorld` 地址的指针 `this` 也有两个副本。ROM 中有一个 `this` 指针的初始化值，RAM 中也有 `this` 指针。在 32 位 CPU 的 ROM 中，为 `helloWorld` 对象分配的空间至少包含 4 字节的 `this` 和 14 字节的零终止字符串。链接脚本负责代码和数据不同段的正确放置。如果 CPU 无法访问存储在代码内存中的数据，链接脚本应包含相关的分配指令。具体来说，常量数据段将被分配两次：在代码 ROM 地址空间和在 RAM 中。
+`main()` 函数只包含一个输出。负责初始化 C++ 对象 `helloWorld` 并打印第一行的实体运行在我操作系统中的对象加载器。在嵌入式系统中，这段代码通常是启动过程的一部分。
+
+`HelloWorld` 类的构造函数是“文本”，在 ROM 中只出现一次。`cout` 的参数（字符串）存在于内存中的两个地方：原始或“主副本”在 ROM 中，由加载器创建的第二个副本在 RAM 中。包含静态分配对象 `helloWorld` 地址的指针 `this` 也有两个副本。ROM 中有一个 `this` 指针的初始化值，RAM 中也有 `this` 指针。
+
+在 32 位 CPU 的 ROM 中，为 `helloWorld` 对象分配的空间至少包含 4 字节的 `this` 和 14 字节的零终止字符串。链接脚本负责代码和数据不同段的正确放置。如果 CPU 无法访问存储在代码内存中的数据，链接脚本应包含相关的分配指令。具体来说，常量数据段将被分配两次：在代码 ROM 地址空间和在 RAM 中。
 
 在通常情况下，链接脚本会添加全局变量，引用未初始化数据段 `bss` 的起始和结束地址、初始化数据，以及一个 `ctor` 函数表。通常，`ctor` 段是一个函数表，启动代码通过调用这些函数来初始化静态 C++ 对象。详细信息请参考你的链接器文档。
 
-## ROM 补丁。
+## ROM 补丁
 
 编程很像性爱。犯一个错，你就得提供一辈子的支持。
 
@@ -1209,13 +1204,15 @@ public:
 };
 ```
 
-加载可以打补丁的 ASIC 有两个阶段。在第一阶段，外部 CPU（也称为主机处理器）将某些固件加载到 ASIC RAM 中。有一个专用的硬件/启动固件支持将应用固件加载到 RAM 中。另一种方案是 ASIC 中的启动固件从某些外部可编程存储芯片加载应用固件，例如 `EEPROM` 或 `SPI FLASH`。第二阶段是启动程序跳转到 RAM 中的应用代码。如果主机处理器加载的代码在 `helloWorldStr` 地址处包含非零，则基于 ROM 的应用代码将打印新字符串。我将这种类型的补丁称为 A 类补丁。在 A 类补丁中，我修复函数的一部分。
+加载可以打补丁的 ASIC 有两个阶段。
 
+在第一阶段，外部 CPU（也称为主机处理器）将某些固件加载到 ASIC RAM 中。有一个专用的硬件/启动固件支持将应用固件加载到 RAM 中。另一种方案是 ASIC 中的启动固件从某些外部可编程存储芯片加载应用固件，例如 `EEPROM` 或 `SPI FLASH`。
 
+第二阶段是启动程序跳转到 RAM 中的应用代码。如果主机处理器加载的代码在 `helloWorldStr` 地址处包含非零，则基于 ROM 的应用代码将打印新字符串。我将这种类型的补丁称为 A 类补丁。在 A 类补丁中，我修复函数的一部分。
 
+对于 B 类补丁，我需要硬件支持。当 CPU 从特定地址或地址范围获取指令时——在下面的代码中，这是函数 `printHello()` 的地址——我希望“中断”执行并将控制权切换到位于 RAM 中的中断处理程序。
 
-
-对于 B 类补丁，我需要硬件支持。当 CPU 从特定地址或地址范围获取指令时——在下面的代码中，这是函数 `printHello()` 的地址——我希望“中断”执行并将控制权切换到位于 RAM 中的中断处理程序。默认的中断处理程序什么都不做。该处理程序是空的并直接返回，允许 `printHello()` 函数完成它的有用工作。补丁后的中断处理程序可以在允许 `printHello()` 函数打印它之前修改 RAM 中的字符串“Hello, world”。中断处理程序可以执行某些任意代码并将控制权返回给 `printHello()` 的调用者，完全跳过原始的打印代码。
+默认的中断处理程序什么都不做。该处理程序是空的并直接返回，允许 `printHello()` 函数完成它的有用工作。补丁后的中断处理程序可以在允许 `printHello()` 函数打印它之前修改 RAM 中的字符串“Hello, world”。中断处理程序可以执行某些任意代码并将控制权返回给 `printHello()` 的调用者，完全跳过原始的打印代码。
 
 ```cpp
 class HelloWorld {
@@ -1234,17 +1231,21 @@ cout << "Hello, world!" << endl;
 
 # 组合
 
-你是否注意到过 'C' 项目计划与 C++ 项目计划之间的区别？C++ 项目的规划阶段是 C 的三倍。这正是为了确保所有应该继承的都继承了，而不应该继承的没有。尽管如此，他们仍然会出错。
+你是否注意到过 `C` 项目计划与 C++ 项目计划之间的区别？C++ 项目的规划阶段是 C 的三倍。这正是为了确保所有应该继承的都继承了，而不应该继承的没有。尽管如此，他们仍然会出错。
 
-记得平均规模的 'C' 项目的长度吗？大约 6 个月。对于一个有妻有儿的男人来说，这段时间远远不足以维持体面的生活。拿同一个项目，用 C++ 设计，你会得到什么？我告诉你。一到两年。这难道不棒吗？
+记得平均规模的 `C` 项目的长度吗？大约 6 个月。对于一个有妻有儿的男人来说，这段时间远远不足以维持体面的生活。拿同一个项目，用 C++ 设计，你会得到什么？我告诉你。一到两年。这难道不棒吗？
 
-我将尝试为“创建任务”API 编写一个包装器。类似于 `pthread_create` 或 `FreeRTOS xTaskCreate` 等 API 的典型包装器是基于类（例如 `MyThread`）中的静态方法的。事实上，这是我知道的编写适用于大多数操作系统的可移植 C++ 包装器的唯一方法。我将适当地地展示这种方法的基本示例，不是因为它们迷人，而是因为一本合理的“嵌入式 C++”书籍对此有所期望。你可以自由跳转到下一段，我在那里将展示非可移植的 C++ 创建任务包装器代码。
+我将尝试为“创建任务” API 编写一个包装器。类似于 `pthread_create` 或 `FreeRTOS xTaskCreate` 等 API 的典型包装器是基于类（例如 `MyThread`）中的静态方法的。事实上，这是我知道的编写适用于大多数操作系统的可移植 C++ 包装器的唯一方法。
 
-## 静态（类）成员。
+我将适当地展示这种方法的基本示例，不是因为它们迷人，而是因为一本合理的“嵌入式 C++”书籍对此有所期望。你可以自由跳转到下一段，我在那里将展示非可移植的 C++ 创建任务包装器代码。
+
+## 静态（类）成员
 
 C 允许你射自己的脚。C++ 允许你重用子弹。
 
-我将从一个池中分配我的作业线程对象。例如，远程过程调用（Remote Procedure Call）的实现可以使用作业线程池在本地执行过程。从内存池分配线程对象比调用操作系统 API 创建新线程更快。`MemoryPool` 是一个通用的对象池，它静态地分配对象。这是对之前章节中内存池类的重用。我在这里跳过了了一些细节，例如池的名称、调试统计等。
+我将从一个池中分配我的作业线程对象。例如，远程过程调用（Remote Procedure Call）的实现可以使用作业线程池在本地执行过程。从内存池分配线程对象比调用操作系统 API 创建新线程更快。
+
+`MemoryPool` 是一个通用的对象池，它静态地分配对象。这是对之前章节中内存池类的重用。我在这里跳过了一些细节，例如池的名称、调试统计等。
 
 ```cpp
 template<typename Lock, typename ObjectType, size_t Size>
@@ -1272,6 +1273,8 @@ MemoryPool<Lock, ObjectType, Size>::MemoryPool() {
 ```
 
 分配和释放方法调用栈的 `pop` 和 `push` API：
+
+
 
 ```cpp
 template<typename Lock, typename ObjectType, size_t Size>
@@ -1306,7 +1309,7 @@ protected:
 };
 ```
 
-`JobThread` 构造函数创建一个二值信号量并产生（spawn）一个新的线程（这个特定动词的选择基于“taskSpawn”，它是 vxWorks 中的一个创建任务 API）。我在示例中假设使用 FreeRTOS API，但任何其他 API 在这里有效：
+`JobThread` 构造函数创建一个二值信号量并产生（spawn）一个新的线程（这个特定动词的选择基于`taskSpawn`，它是 vxWorks 中的一个创建任务 API）。我在示例中假设使用 FreeRTOS API，但任何其他 API 在这里有效：
 
 ```cpp
 template<typename JobType>
@@ -1368,7 +1371,7 @@ int main( void )
 }
 ```
 
-## 非静态成员。
+## 非静态成员
 
 “C 让你很容易射中自己的脚；C++ 让它变得更难，但当你这样做时，它会炸掉你的整个腿。”
 
@@ -1394,19 +1397,15 @@ void JobThread<JobType>::mainLoop() {
 }
 ```
 
-这个技巧之所以有效，是因为大多数（或所有？）C++ 编译器会将“this”（一个指向对象的指针）首先推入参数栈。如果 C 和 C++ 代码使用栈帧的方式不同，该技巧可能会失效。虚方法指针也可能失效。这总是可以通过暴力破解来解决——反汇编，并弄清楚如何正确调用成员函数。虚函数调用的实现不同编译器之间差异巨大。
-
-
-
-
+这个技巧之所以有效，是因为大多数（或所有？）C++ 编译器会将`this`（一个指向对象的指针）首先推入参数栈。如果 C 和 C++ 代码使用栈帧的方式不同，该技巧可能会失效。虚方法指针也可能失效。这总是可以通过暴力破解来解决——反汇编，并弄清楚如何正确调用成员函数。虚函数调用的实现不同编译器之间差异巨大。
 
 本文的读者可能会问，这个成员指针（pointer-to-member）练习的意义何在。我在调试器下运行应用程序时，有时我想使用绝对地址设置断点。我可以打印成员的绝对地址，并查看我的泛型类创建了多少个相同方法的实例。获取函数指针可以确保该函数不是“内联”函数。
 
-## 进程间通信。
+## 进程间通信
 
 无论如何，我讨厌多线程。多进程才是正道，应该是消息传递，而不是共享内存。那样无法扩展。我使用多线程是为了利用我所有的 16 个核心，或者说现在机器的平均核心数。大不了什么。我在数据中心有几千台服务器在等我，我该如何用线程来使用它们呢？– Alex Martelli。
 
-经典的进程间通信（IPC）设计模式是邮箱（mailbox）或消息队列。邮箱设计模式在 Windows 3.11 以及第一批真正的实时操作系统（如 `RT Kernel` 和 `vxWorks`）处于技术前沿时变得流行。某些操作系统支持消息队列 API。我将演示一个基于两个原语构建的消息队列：`semaphore`（信号量）和 `FIFO`（先进先出队列）。`Mailbox` 类是“对象组合”（[4],[5]）的一个示例。我使用了“邮箱拥有一个 FIFO”的关系。或者，我可以使用“邮箱是一个 FIFO”的公式，并从 `FIFO` 类派生——继承邮箱。不过度使用继承被认为是一种做法。
+经典的进程间通信（IPC）设计模式是邮箱（mailbox）或消息队列。邮箱设计模式在 Windows 3.11 以及第一批真正的实时操作系统（如`RT Kernel`和`vxWorks`）处于技术前沿时变得流行。某些操作系统支持消息队列 API。我将演示一个基于两个原语构建的消息队列：`semaphore`（信号量）和`FIFO`（先进先出队列）。`Mailbox`类是“对象组合”（[4],[5]）的一个示例。我使用了“邮箱拥有一个 FIFO”的关系。或者，我可以使用“邮箱是一个 FIFO”的公式，并从`FIFO`类派生——继承邮箱。不过度使用继承被认为是一种做法。
 
 邮箱 API 有两个方法：发送消息和等待消息 ([6])：
 
@@ -1456,7 +1455,7 @@ Mailbox<ObjectType, Lock>::Mailbox(const  char *name, size_t size) :
 }
 ```
 
-send 方法向 FIFO 添加消息并递增信号量值：
+`send`方法向 FIFO 添加消息并递增信号量值：
 
 ```cpp
 template<typename  ObjectType, typename  Lock>
@@ -1522,7 +1521,7 @@ res = fifo.remove(msg);
 }
 ```
 
-在示例应用程序中，中断（生产者）从 `UART` 设备读取数据，并将收集的数据发送到处理任务（消费者）。我的消息对象包含两个内容：一个消息事件和一些数据。消费者任务预计根据消息事件进行切换：
+在示例应用程序中，中断（生产者）从`UART`设备读取数据，并将收集的数据发送到处理任务（消费者）。我的消息对象包含两个内容：一个消息事件和一些数据。消费者任务预计根据消息事件进行切换：
 
 ```cpp
 enum EVENT {UART0, UART1};
@@ -1612,7 +1611,7 @@ protected:
 };
 ```
 
-add job API 向 FIFO 添加数据：
+`addJob` API 向 FIFO 添加数据：
 
 ```cpp
 template<typename  ObjectType, typename  Lock, std::size_t  Size>
@@ -1624,7 +1623,7 @@ void  PipelineTask<ObjectType, Lock, Size>::addJob(ObjectType &data) {
 }
 ```
 
-`doJob()` 方法从 FIFO 获取数据，对其进行递增——我假设数据类型支持 `operator++()`，并将数据推送到下一个阶段：
+`doJob()` 方法从 FIFO 获取数据，对其进行递增——我假设数据类型支持`operator++()`，并将数据推送到下一个阶段：
 
 ```cpp
 template<typename  ObjectType, typename  Lock, std::size_t  Size>
@@ -1648,7 +1647,7 @@ cout << "Stage:" << name << ", data=" << data << endl;
 }
 ```
 
-新类型 `MyPipelineTask`：
+新类型`MyPipelineTask`：
 
 ```cpp
 typedef PipelineTask<int, LockDummy, 3> MyPipelineTask;
@@ -1684,79 +1683,73 @@ void  testPipeline() {
 
 上面的代码生成输出：
 
+```
 Stage:1, data=1
 Stage:2, data=2
 Stage:3, data=3
+```
 
 流水线范式可以提高 CPU 的利用率，流水线使得更容易利用多核系统。
 
-## 日志（Log）。
+## 日志（Log）
 
 完美不是已经没有什么可增加的，而是已经没有什么可减少的——安托万·圣埃克佩里
 
 在一个 C 项目中，我看到过以下生成日志条目的代码：
 
+
+
+## 日志系统优化
+
+以下是一个基于 C 语言的日志系统实现，以及针对其性能优化的 C++ 方案。
+
+### 原始 C 语言实现
+
 ```cpp
 enum {
-
- LOG_LEVEL_INFO,
-
- LOG_LEVEL_ERROR,
-
- LOG_LEVEL_LAST,
-
+    LOG_LEVEL_INFO,
+    LOG_LEVEL_ERROR,
+    LOG_LEVEL_LAST,
 };
 
-static  const  char *LOG_LEVEL_NAME[] = {"INFO", "ERROR", “UKNOWN”};
+static const char *LOG_LEVEL_NAME[] = {"INFO", "ERROR", "UKNOWN"};
 
-#define LOG_INFO(fmt, ...) log_print(__LINE__, LOG_LEVEL_INFO, fmt, ##__VA_ARGS__ )
+#define LOG_INFO(fmt, ...) log_print(__LINE__, LOG_LEVEL_INFO, fmt, ##__VA_ARGS__)
+#define LOG_ERROR(fmt, ...) log_print(__LINE__, LOG_LEVEL_ERROR, fmt, ##__VA_ARGS__)
 
-#define LOG_ERROR(fmt, ...) log_print(__LINE__, LOG_LEVEL_ERROR, fmt, ##__VA_ARGS__ )
-
-static  void  log_print(int line, int level, const  char *fmt, ...)
-
+static void log_print(int line, int level, const char *fmt, ...)
 {
-
- va_list ap;
-
- printf("%s: line=%d, msg=", LOG_LEVEL_NAME[level], line);
-
-     va_start(ap, fmt);
-
- vprintf(fmt, ap);
-
-     va_end(ap);
-
+    va_list ap;
+    printf("%s: line=%d, msg=", LOG_LEVEL_NAME[level], line);
+    va_start(ap, fmt);
+    vprintf(fmt, ap);
+    va_end(ap);
 }
 
-void  testLog(void) {
-
-     LOG_INFO("This is info %d", 1);
-
-     LOG_ERROR("This is error %d", 2);
-
+void testLog(void) {
+    LOG_INFO("This is info %d", 1);
+    LOG_ERROR("This is error %d", 2);
 }
 ```
 
 在我的机器上，上面的代码生成输出：
 
+```
 INFO: line=402, msg=This is info 1
 ERROR: line=403, msg=This is error 2
+```
 
-
-
-
-对 log API 的调用非常频繁，图像的大小非常重要。调用 `log_print()` 会向栈中推入至少三个参数。我认为我可以节省一次推入操作——日志级别。在 C 语言实现中，我会添加 `log_print_info(...)` 和 `log_print_error(...)` 函数，它们反过来调用 `log_print()`，并相应地修复宏。在 C++ 中，我使用了一个模板。构造函数是原始 `log_print` 函数的精确拷贝，去掉了日志级别：
+对 `log` API 的调用非常频繁，图像的大小非常重要。调用 `log_print()` 会向栈中推入至少三个参数。我认为我可以节省一次推入操作——日志级别。在 C 语言实现中，我会添加 `log_print_info(...)` 和 `log_print_error(...)` 函数，它们反过来调用 `log_print()`，并相应地修复宏。在 C++ 中，我使用了一个模板。构造函数是原始 `log_print` 函数的精确拷贝，去掉了日志级别：
 
 ```cpp
-template <int  Level> class  Log {
+template <int Level> class Log {
 public:
- Log(int line, const  char *fmt, ...) {
- va_list ap;
- printf("%s: line=%d, msg=", LOG_LEVEL_NAME[Level], line);
-      va_start(ap, fmt);
- vprintf(fmt, ap);
-      va_end(ap);
+    Log(int line, const char *fmt, ...) {
+        va_list ap;
+        printf("%s: line=%d, msg=", LOG_LEVEL_NAME[Level], line);
+        va_start(ap, fmt);
+        vprintf(fmt, ap);
+        va_end(ap);
     }
 };
 ```
@@ -1764,78 +1757,89 @@ public:
 日志宏调用构造函数：
 
 ```cpp
-#define LOG_INFO(fmt, ...) Log<LOG_LEVEL_INFO>(__LINE__, fmt, ##__VA_ARGS__ )
-#define LOG_ERROR(fmt, ...) Log<LOG_LEVEL_ERROR>(__LINE__, fmt, ##__VA_ARGS__ )
+#define LOG_INFO(fmt, ...) Log<LOG_LEVEL_INFO>(__LINE__, fmt, ##__VA_ARGS__)
+#define LOG_ERROR(fmt, ...) Log<LOG_LEVEL_ERROR>(__LINE__, fmt, ##__VA_ARGS__)
 ```
 
-C++ 编译器为我生成了两个打印日志函数，并为每次调用 log API 节省了一次栈推入操作。`log` 类是一个“仿函数（functoid）”——它是一个增强版的函数。我可以使用基于普通类的仿函数，而不是像这样的模板：
+C++ 编译器为我生成了两个打印日志函数，并为每次调用 `log` API 节省了一次栈推入操作。`Log` 类是一个“仿函数（functoid）”——它是一个增强版的函数。我可以使用基于普通类的仿函数，而不是像这样的模板：
 
 ```cpp
-class  Log {
+class Log {
 public:
- Log(const  char *level) : level(level) {}
- void  print(int line, const  char *fmt, ...) const {
- va_list ap;
- printf("%s: line=%d, msg=", level, line);
-      va_start(ap, fmt);
- vprintf(fmt, ap);
-      va_end(ap);
+    Log(const char *level) : level(level) {}
+    void print(int line, const char *fmt, ...) const {
+        va_list ap;
+        printf("%s: line=%d, msg=", level, line);
+        va_start(ap, fmt);
+        vprintf(fmt, ap);
+        va_end(ap);
     }
 protected:
- const  char *level;
+    const char *level;
 };
-const  Log LogInfo("INFO");
-const  Log LogError("ERROR");
-#define LOG_INFO(fmt, ...) LogInfo.print(__LINE__, fmt, ##__VA_ARGS__ )
-#define LOG_ERROR(fmt, ...) LogError.print(__LINE__, fmt, ##__VA_ARGS__ )
+
+const Log LogInfo("INFO");
+const Log LogError("ERROR");
+
+#define LOG_INFO(fmt, ...) LogInfo.print(__LINE__, fmt, ##__VA_ARGS__)
+#define LOG_ERROR(fmt, ...) LogError.print(__LINE__, fmt, ##__VA_ARGS__)
 ```
 
 我舍弃了数组 `LOG_LEVEL_NAME`，现在扩展日志级别枚举变得更简单了。在目标代码中只有一个打印函数实例。代价是数据 RAM 中的几个字，或者两个 `Log` 类型的对象。代码和数据可以放在 ROM 中。
 
+### 二进制日志优化
+
 调用 `vprintf()` 不是固件开发人员经常的操作。事实上，代码会针对同一组格式化字符串反复调用 `vprintf()`。我只需要向控制台发送 `vprintf()` 的参数，以及源代码中的确切位置或目标文件中的偏移。
 
-下方的 `BinaryLog` 类仅处理“int” 类型的参数。源代码中的位置由“唯一”的文件标识符和源行号定义：
+下方的 `BinaryLog` 类仅处理“int”类型的参数。源代码中的位置由“唯一”的文件标识符和源行号定义：
 
 ```cpp
-class  BinaryLog {
+class BinaryLog {
 public:
- BinaryLog(int fileId, int line, int count, ...);
+    BinaryLog(int fileId, int line, int count, ...);
 };
 ```
 
-我假设有一个“sendData” API 可以向控制台发送任意数量的整数：
+我假设有一个 `sendData` API 可以向控制台发送任意数量的整数：
 
 ```cpp
 BinaryLog::BinaryLog(int fileId, int line, int count, ...) {
- const  int HEADER_SIZE = 3;
- int header[HEADER_SIZE];
+    const int HEADER_SIZE = 3;
+    int header[HEADER_SIZE];
     header[0] = fileId;
     header[1] = line;
     header[2] = count;
     sendDataStart();
     sendData(header, HEADER_SIZE);
- va_list ap;
+    va_list ap;
     va_start(ap, count);
- for (int j=0; j < count; j++) {
- int arg = va_arg(ap, int);
-      sendData(arg);
+    for (int j=0; j < count; j++) {
+        int arg = va_arg(ap, int);
+        sendData(arg);
     }
     va_end(ap);
     sendDataEnd();
 }
 ```
 
-我仿真中的“send data” API 看起来如下：
+我仿真中的 `sendData` API 看起来如下：
 
 ```cpp
-inline void  sendData(const  int data) {
-cout << dec << data << " ";
+inline void sendData(const int data) {
+    cout << dec << data << " ";
 }
-inline void  sendDataStart() {cout << endl;}
-inline void  sendDataEnd() {cout << endl;}
-void  sendData(const  int *data, int count) {
- for (int i = 0;i < count;i++) {
-cout << hex << data[i] << " ";
+
+inline void sendDataStart() {
+    cout << endl;
+}
+
+inline void sendDataEnd() {
+    cout << endl;
+}
+
+void sendData(const int *data, int count) {
+    for (int i = 0; i < count; i++) {
+        cout << hex << data[i] << " ";
     }
 }
 ```
@@ -1844,47 +1848,52 @@ cout << hex << data[i] << " ";
 
 ```cpp
 #define ARGUMENTS_COUNT(...) (sizeof((int[]){__VA_ARGS__})/sizeof(int))
-#define LOG_INFO(fmt, ...) BinaryLog(FILE_ID, __LINE__, ARGUMENTS_COUNT(__VA_ARGS__), __VA_ARGS__ )
-#define LOG_ERROR(fmt, ...) BinaryLog(FILE_ID, __LINE__, ARGUMENTS_COUNT(__VA_ARGS__), __VA_ARGS__ )
+#define LOG_INFO(fmt, ...) BinaryLog(FILE_ID, __LINE__, ARGUMENTS_COUNT(__VA_ARGS__), __VA_ARGS__)
+#define LOG_ERROR(fmt, ...) BinaryLog(FILE_ID, __LINE__, ARGUMENTS_COUNT(__VA_ARGS__), __VA_ARGS__)
 ```
 
 文件标识符由编译器在构建期间根据文件名生成。我使用了一个简单的哈希函数。真实的、如 MD5 哈希可以在 [7] 中找到。
 
 ```cpp
-constexpr  int hashData(const  char* s, int accumulator) {
- return *s ? hashData(s + 1, (accumulator << 1) : accumulator;
+constexpr int hashData(const char* s, int accumulator) {
+    return *s ? hashData(s + 1, (accumulator << 1) : accumulator;
 }
-constexpr  int hashMetafunction(const  char* s) {
- return hashData(s, 0);
+
+constexpr int hashMetafunction(const char* s) {
+    return hashData(s, 0);
 }
-constexpr  int FILE_ID = hashMetafunction(__FILE__);
+
+constexpr int FILE_ID = hashMetafunction(__FILE__);
 ```
 
 用法示例：
 
 ```cpp
 void testBinaryLog(void) {
- LOG_INFO("This is info %d %d", 1, 2);
- LOG_ERROR("This is error %d %d %d", 0, 1, 2);
+    LOG_INFO("This is info %d %d", 1, 2);
+    LOG_ERROR("This is error %d %d %d", 0, 1, 2);
 }
 ```
 
 在我的系统中，`test` 函数产生输出：
-`26140 511 1 2`
-`26140 512 0 1`
 
-我现在只需要一个短脚本 ([8]) 来为所有源文件计算文件标识符，根据文件标识符 `26140` 找到正确的文件，解析 c++ 文件中的 `511` 和 `51` 行，并生成两行可读的内容：
+```
+26140 511 1 2
+26140 512 0 1
+```
+
+我现在只需要一个短脚本 ([8]) 来为所有源文件计算文件标识符，根据文件标识符 `26140` 找到正确的文件，解析 c++ 文件中的 `511` 和 `512` 行，并生成两行可读的内容：
+
+```
 info 1 2
 error 0 1
+```
 
 另一个构建脚本可以确保格式字符串正确表示对宏的调用。通过移除昂贵的 `vprintf()` 调用，我节省了大量的 CPU 周期和带宽。二进制日志不使用任何静态数据，且 API 是线程安全的。我的系统生成的日志在处理之前需要额外的处理。
 
-
-
-
 当我在中断中调用系统日志时，我需要禁用中断。对于任务级的系统日志，一个互斥锁（mutex）可能足够了。具有相似性能的 C 语言方案需要一个宏。
 
-## 软件定时器。
+## 软件定时器
 
 C++：难以学习，且注生如此。
 
@@ -1901,9 +1910,9 @@ C++：难以学习，且注生如此。
 在启动定时器时，用户可以提供一个可选的应用程序数据指针，即 cookie。定时器类可以像所示的模板：
 
 ```cpp
-template<typename  CookieType> class  Timer {
+template<typename CookieType> class Timer {
 protected:
-    CookieType  cookie;
+    CookieType cookie;
 };
 ```
 
@@ -1914,24 +1923,24 @@ protected:
 `Timer` 类实现了一个不带参数的构造函数。我希望能够在不引入太多麻烦的情况下创建定时器的静态数组。`TimerList` 类（尚未声明）是 `Timer` 类的友元类，可以调用 `Timer` 的受保护方法。`start()` 方法是受保护的，因为应用程序应该使用 `TimerList` 方法启动定时器。
 
 ```cpp
-class  Timer {
+class Timer {
 public:
     Timer();
-    inline  void  stop();
-    bool  isRunning() const;
-    TimerID  getId() const;
-    inline  uintptr_t  getApplicationData() const;
-    SystemTime  getStartTime() const;
+    inline void stop();
+    bool isRunning() const;
+    TimerID getId() const;
+    inline uintptr_t getApplicationData() const;
+    SystemTime getStartTime() const;
 protected:
-    friend  class  TimerList;
-    TimerID  id;
-    uintptr_t  applicationData;
-    bool  running;
-    SystemTime  startTime;
-    inline  void  start();
-    inline  void  setApplicationData(uintptr_t applicationData);
-    inline  void  setId(TimerID id);
-    inline  void  setStartTime(SystemTime systemTime);
+    friend class TimerList;
+    TimerID id;
+    uintptr_t applicationData;
+    bool running;
+    SystemTime startTime;
+    inline void start();
+    inline void setApplicationData(uintptr_t applicationData);
+    inline void setId(TimerID id);
+    inline void setStartTime(SystemTime systemTime);
 };
 ```
 
@@ -1942,19 +1951,19 @@ Timer::Timer() {
     stop();
 }
 
-TimerID  Timer::getId() const {
-    return  id;
+TimerID Timer::getId() const {
+    return id;
 }
 
-SystemTime  Timer::getStartTime() const {
-    return  startTime;
+SystemTime Timer::getStartTime() const {
+    return startTime;
 }
 
-bool  Timer::isRunning() const {
-    return  running;
+bool Timer::isRunning() const {
+    return running;
 }
 
-void  Timer::stop() {
+void Timer::stop() {
     running = false;
 }
 
@@ -1962,46 +1971,46 @@ void Timer::start() {
     running = true;
 }
 
-void  Timer::setApplicationData(uintptr_t applicationData) {
+void Timer::setApplicationData(uintptr_t applicationData) {
     this->applicationData = applicationData;
 }
 
-uintptr_t  Timer::getApplicationData() const {
-    return  applicationData;
+uintptr_t Timer::getApplicationData() const {
+    return applicationData;
 }
 
-void  Timer::setId(TimerID id) {
+void Timer::setId(TimerID id) {
     this->id = id;
 }
 
-void  Timer::setStartTime(SystemTime systemTime) {
+void Timer::setStartTime(SystemTime systemTime) {
     this->startTime = systemTime;
 }
 ```
 
-系统时间通常是由中断增加的 tick 或从硬件读取读取的。在这个示例中，我使用了 `size_t` 类型。在更高级的设计中，`System Time` 类型和 `Timeout` 类型可以是两个类。定时器 API 只需要一个签名为 `bool isTimerExpired(SystemTime, Timeout, SystemTime)` 的函数。在下面的实现中，我处理了 `SystemTime` 溢出，假设定时器的超时时间相对于 `SystemTime` 的最大值是非常小的。
+系统时间通常是由中断增加的 tick 或从硬件读取的。在这个示例中，我使用了 `size_t` 类型。在更高级的设计中，`SystemTime` 类型和 `Timeout` 类型可以是两个类。定时器 API 只需要一个签名为 `bool isTimerExpired(SystemTime, Timeout, SystemTime)` 的函数。在下面的实现中，我处理了 `SystemTime` 溢出，假设定时器的超时时间相对于 `SystemTime` 的最大值是非常小的。
 
 ```cpp
-typedef  size_t  SystemTime;
-typedef  size_t  Timeout;
+typedef size_t SystemTime;
+typedef size_t Timeout;
 
-static  inline  bool  isTimerExpired(SystemTime startTime, Timeout timeout,
+static inline bool isTimerExpired(SystemTime startTime, Timeout timeout,
     SystemTime currentTime) {
     bool timerExpired = false;
-    SystemTime timerExpiartionTime = startTime + timeout;
+    SystemTime timerExpirationTime = startTime + timeout;
 
     timerExpired = timerExpired
-                || ((timerExpiartionTime >= currentTime)
+                || ((timerExpirationTime >= currentTime)
                     && (startTime < currentTime));
 
     timerExpired = timerExpired
-                || ((timerExpiartionTime >= currentTime)
+                || ((timerExpirationTime >= currentTime)
                     && (startTime > currentTime));
 
     timerExpired = timerExpired
-                || ((timerExpiartionTime <= currentTime)
+                || ((timerExpirationTime <= currentTime)
                     && (startTime > currentTime)
-                    && (timerExpiartionTime < startTime));
+                    && (timerExpirationTime < startTime));
     return timerExpired;
 }
 ```
@@ -2009,7 +2018,7 @@ static  inline  bool  isTimerExpired(SystemTime startTime, Timeout timeout,
 我的 API 拥有一个 C++11 类型的可能返回码枚举。C++11 `enum class` 不是整数，不能转换为整数。一个枚举的成员不能赋值给另一个枚举的成员。
 
 ```cpp
-enum  class TimerError {
+enum class TimerError {
     Ok, Stopped, Illegal, FreeTimer, NoRunningTimers
 };
 ```
@@ -2017,10 +2026,14 @@ enum  class TimerError {
 我需要一个处理定时器过期的应用程序回调。在更高级的设计中，回调可以是模板函数：
 
 ```cpp
-typedef  void (*ExpirationHandler)(const  Timer& timer);
+typedef void (*ExpirationHandler)(const Timer& timer);
 ```
 
-我将通过构造函数的参数提供一个同步 API。在基类 `TimerLock` 中，我将 get/release 接口设置为零。锁 API 将由派生类实现。虚函数的典型性能开销是 1 或 2 个操作码。
+
+
+## 同步 API 与定时器锁
+
+我将通过构造函数的参数提供一个同步 API。在基类 `TimerLock` 中，我将 `get`/`release` 接口设置为零。锁 API 将由派生类实现。虚函数的典型性能开销是 1 或 2 个操作码。
 
 ```cpp
 class  TimerLock {
@@ -2038,6 +2051,8 @@ public:
 protected:
 };
 ```
+
+## 动态环形缓冲区
 
 我需要一个通过 `operator[]` 使用堆动态分配的环形缓冲区。在之前的章节中，我讨论了 `operator[]` 以及无法从内存堆进行分配的情况。
 
@@ -2081,10 +2096,6 @@ CyclicBufferDynamic(size_t size) {
 ```
 
 其余代码与之前的实现相似：
-
-
-
-
 
 ```cpp
 template<typename ObjectType, typename Lock>
@@ -2152,6 +2163,8 @@ size_t CyclicBufferDynamic<ObjectType, Lock>::increment(size_t index) {
 
 `typedef CyclicBufferDynamic<Timer*, LockDummy> TimerCyclicBuffer;`
 
+## 定时器列表
+
 定时器列表保留了具有相同超时时间的定时器。定时器的过期时间取决于开始时间。定时器 API 假设系统中存在有限且数量较少的不同定时器（具有不同超时时间的定时器）。通常在开始编写代码之前，我已经知道系统中需要哪些定时器。`TimerList` 是“对象组合”的一个示例——我将简单对象（如 `FIFOs`）组合成更复杂的对象。与其使用环形缓冲区，可以使用内存池来实现空闲定时器列表 `freeTimers`。
 
 ```cpp
@@ -2212,7 +2225,7 @@ TimerError TimerList::startTimer(SystemTime currentTime, SystemTime &nearestExpi
 }
 ```
 
-保护方法 `_startTimer()` 将定时器从空闲定时器列表移动到运行定时器列表
+保护方法 `_startTimer()` 将定时器从空闲定时器列表移动到运行定时器列表：
 
 ```cpp
 TimerError TimerList::_startTimer(SystemTime currentTime, SystemTime &nearestExpirationTime, uintptr_t applicationData, const Timer **timer) {
@@ -2276,9 +2289,11 @@ TimerError TimerList::processExpiredTimers(SystemTime currentTime) {
 }
 ```
 
+## 定时器集合
+
 我将定时器列表分组为“集合”。例如，一组超时时间为 5 秒、20 秒、60 秒的低优先级定时器，以及一组高优先级定时器。不同的集合可以由运行在不同优先级的线程处理。我在编译时知道哪些定时器属于集合。
 
-`TimerSet` 类是“对象熟悉”([4], [5]) 的示例。`TimerSet` 类与 `TimerList` 类之间存在“感知”关系。可以通过其他对象访问组件对象（定时器列表），而不通过聚合对象 `TimerSet`。组件对象可以比聚合对象生存。
+`TimerSet` 类是“对象熟悉”([4]、[5]) 的示例。`TimerSet` 类与 `TimerList` 类之间存在“感知”关系。可以通过其他对象访问组件对象（定时器列表），而不通过聚合对象 `TimerSet`。组件对象可以比聚合对象生存。
 
 ```cpp
 class TimerSet {
@@ -2293,21 +2308,17 @@ public:
   }
   TimerError processExpiredTimers(SystemTime currentTime, SystemTime& expirationTime);
   bool addList(TimerList* list);
-};
-```
-
-
-
-
-
 protected:
   const char *name;
   TimerList **timerLists;
   size_t listCount;
   size_t size;
 };
+```
 
 `addList` API 填充了数组 `timerLists`：
+
+
 
 ```cpp
 bool TimerSet::addList(TimerList* list) {
@@ -2352,7 +2363,7 @@ SystemTime currentTime, SystemTime &expirationTime) {
 }
 ```
 
-最后是一个用用示例：
+最后是一个用法示例：
 
 ```cpp
 static void mainExpirationHandler(const Timer& timer) {
@@ -2392,7 +2403,7 @@ int main() {
 
 ## Lambda
 
-模数转换器 (ADC) 是一种将连续物理量（例如电压）转换为表示该量幅的数字的设备（[11]）。在我的应用程序中，我想读取 ADC 设备，在环形缓冲区中收集样本，运行一个简单的环形缓冲区（[12]）。ADC 看起来如下：
+模数转换器（ADC）是一种将连续物理量（例如电压）转换为表示该量幅度的数字的设备（[11]）。在我的应用程序中，我想读取 ADC 设备，在环形缓冲区中收集样本，运行一个简单的环形缓冲区（[12]）。ADC 看起来如下：
 
 ```cpp
 template<typename ObjectType, size_t Size>
@@ -2409,6 +2420,7 @@ protected:
 ```
 
 ADC 构造函数设置了初始值：
+
 ```cpp
 template<typename ObjectType, size_t Size>
 ADC(ObjectType initialValue) {
@@ -2417,6 +2429,7 @@ ADC(ObjectType initialValue) {
 ```
 
 `get()` 方法返回计算值：
+
 ```cpp
 template<typename ObjectType, size_t Size>
 double get() {
@@ -2425,6 +2438,7 @@ double get() {
 ```
 
 `add` 方法更新循环缓冲区并调用过滤器：
+
 ```cpp
 template<typename ObjectType, size_t Size>
 void add(ObjectType, Filter) {
@@ -2432,7 +2446,7 @@ void add(ObjectType, Filter) {
 }
 ```
 
-`Filter` 是一个函数指针。每个人中有三个（此处原文可能为误，意指“大多数人”）会使用以下示例，我使用了一个 Lambda 函数：
+`Filter` 是一个函数指针。大多数人会使用以下示例，我使用了一个 Lambda 函数：
 
 ```cpp
 static void test() {
@@ -2447,11 +2461,13 @@ static void test() {
 ```
 
 在桌面上这产生了：
-```
+
+```text
 ADC=3.999
 ```
 
 `ADC` 类被替换为：
+
 ```cpp
 class HardwareModule {
 public:
@@ -2470,53 +2486,75 @@ protected:
   ADC<double, 4> myc;
   HardwareModule hardwareModule;
 };
-```JobThread<ReadADC> jobThread;
+```
+
+```cpp
+JobThread<ReadADC> jobThread;
 ```
 
 ## 定点算术
 
-每个人中有三个（同上）对分数有困扰。在需要模数转换器的应用中，我需要定点算术（[13]）。定点算术比标量浮点代码快得多（二三倍）。不幸的是，定点算术不是 C++ 标准的一部分。GCC 编译器提供了支持（[14]）。定点算术的极佳示例请参考 Kurt Gunoth 的实现（[15]）。以下示例是四种算术操作的简单实现。在代码段中 `lhs` 和 `rhs` 代表算术运算符两侧的参数。带有单个成员 `scale` 的匿名枚举是一种有助于创建模板常量成员的技巧。
+很多人对分数有困扰。在需要模数转换器的应用中，我需要定点算术（[13]）。定点算术比标量浮点代码快得多（二三倍）。不幸的是，定点算术不是 C++ 标准的一部分。GCC 编译器提供了支持（[14]）。定点算术的极佳示例请参考 Kurt Gunoth 的实现（[15]）。
+
+以下示例是四种算术操作的简单实现。在代码段中，`lhs` 和 `rhs` 代表算术运算符两侧的参数。带有单个成员 `scale` 的匿名枚举是一种有助于创建模板常量成员的技巧。
 
 ```cpp
 template<typename IntType, const int FRACTION_BITS>
-class FixedPoint
-{
+class FixedPoint {
 public:
   typedef FixedPoint<IntType, FRACTION_BITS> T;
-  FixedPoint(){}
-  FixedPoint(double d) {v = (IntType)(d*scale);}
-  FixedPoint(const T &rhs) : v(rhs.v) { }
-  T& operator=(const T &rhs) {v = rhs.v;return *this;}
-  double toDouble() const {return double(v)/scale;}
-  friend T operator+(T lhs, const T &rhs) {T r;r.v = lhs.v + rhs.v;return r;}
-  friend T operator-(T lhs, const T &rhs) {T r;r.v = lhs.v - rhs.v;return r;}
+
+  FixedPoint() {}
+  FixedPoint(double d) { v = (IntType)(d * scale); }
+  FixedPoint(const T &rhs) : v(rhs.v) {}
+
+  T& operator=(const T &rhs) {
+    v = rhs.v;
+    return *this;
+  }
+
+  double toDouble() const {
+    return double(v) / scale;
+  }
+
+  friend T operator+(T lhs, const T &rhs) {
+    T r;
+    r.v = lhs.v + rhs.v;
+    return r;
+  }
+
+  friend T operator-(T lhs, const T &rhs) {
+    T r;
+    r.v = lhs.v - rhs.v;
+    return r;
+  }
+
   friend T operator*(T lhs, const T &rhs) {
     T r;
     r.v = (lhs.v * rhs.v) / scale;
     return r;
   }
+
 private:
   IntType v;
   enum { scale = 1 << FRACTION_BITS };
 };
 ```
 
-
-
-
-
 ```cpp
 friend T operator/(T lhs, const T &rhs) {
-    T r;
-    r.v = (lhs.v * scale)/rhs.v;
-    return r;
+  T r;
+  r.v = (lhs.v * scale) / rhs.v;
+  return r;
 }
 
-friend bool operator==(const T &lhs, const T &rhs) {return lhs.v == rhs.v;}
+friend bool operator==(const T &lhs, const T &rhs) {
+  return lhs.v == rhs.v;
+}
 
 protected:
-    int v;
-    enum{scale = 1<<FRACTION_BITS};
+  int v;
+  enum { scale = 1 << FRACTION_BITS };
 };
 ```
 
@@ -2524,103 +2562,123 @@ protected:
 
 ```cpp
 static void FixedPointTest() {
-    typedef FixedPoint<int_fast16_t, 3> FixedPoint_3;
-    FixedPoint_3 value(3.43188);
-    value = (2*(value+FixedPoint_3(1.4)-FixedPoint_3(1.4)))/2;
-    cout << value.toDouble() << endl;
+  typedef FixedPoint<int_fast16_t, 3> FixedPoint_3;
+
+  FixedPoint_3 value(3.43188);
+  value = (2 * (value + FixedPoint_3(1.4) - FixedPoint_3(1.4))) / 2;
+  cout << value.toDouble() << endl;
 }
 ```
 
 用法示例的输出：
+
+```text
 3.375
+```
 
 我可以通过定点算术模板的实例来扩展上一章中的组合 `ReadADC`。Lambda 函数看起来像这样：
 
 ```cpp
 class ReadADC {
 public:
-    ReadADC : myAdc(3.0) {}
-    typedef FixedPoint<int_fast16_t, 3> FPADC;
-    void run(void) {
-        FPADC sample = FPADC(hardwareModuleADC.read());
-        myAdc.add(sample,
-            [](FPADC current, FPADC sample) {
-                return current+(sample-current)/2;
-            });
-    }
+  ReadADC : myAdc(3.0) {}
+
+  typedef FixedPoint<int_fast16_t, 3> FPADC;
+
+  void run(void) {
+    FPADC sample = FPADC(hardwareModuleADC.read());
+
+    myAdc.add(
+      sample,
+      [](FPADC current, FPADC sample) {
+        return current + (sample - current) / 2;
+      }
+    );
+  }
+
 protected:
-    ADC<FPADC, 4> myAdc;
-    HardwareModuleADC hardwareModuleADC;
+  ADC<FPADC, 4> myAdc;
+  HardwareModuleADC hardwareModuleADC;
 };
 ```
 
-# 面试题。
+# 面试题
 
-智者将继承地球。- 经济学人，2011 年 1 月 20 日
+智者将继承地球。——《经济学人》，2011 年 1 月 20 日
 
 我知道对于你和我来说，编程并不是为了钱。但尽管如此，我的一些亲爱的读者还是必须考虑家庭。程序员是世界上薪水最高的职业之一。
 
-“随着技术的进步，对聪的报酬在增加。计算机极大地增加了信息的可用性，提高了对那些足够敏锐并能理解这些信息的人的需求。1991 年，拥有学士位的美国男工人平均薪水是中学毕业者的 2.5 倍；而现在这个比例是 3 倍”([16])。
+“随着技术的进步，对聪明人的报酬在增加。计算机极大地增加了信息的可用性，提高了对那些足够敏锐并能理解这些信息的人的需求。1991 年，拥有学士学位的美国男工人平均薪水是中学毕业者的 2.5 倍；而现在这个比例是 3 倍。”（[16]）
 
-一个熟练的软件开发者可以在美国、英国、加拿大、澳大利亚和其他国家获得六位数的薪水或等值报。在你和梦想工作之间，只隔着一次职业面试。
+一个熟练的软件开发者可以在美国、英国、加拿大、澳大利亚和其他国家获得六位数的薪水或等值报酬。在你和梦想工作之间，只隔着一次职业面试。
 
-如果你经常无法回答脑筋急转弯，也不要担心。在很多公司中，这类面试题是被禁止的。只有极少数人能够实时为一个难题找到解决方案。请相信，这些人已经被各地的谷歌和苹果公司聘佣了，他们并不会与你竞争这份工作。你的面试官可能并不期望得到正确答案，而是主要想看你是如何处理困难问题的。
+如果你经常无法回答脑筋急转弯，也不要担心。在很多公司中，这类面试题是被禁止的。只有极少数人能够实时为一个难题找到解决方案。请相信，这些人已经被各地的 Google 和 Apple 公司聘用了，他们并不会与你竞争这份工作。你的面试官可能并不期望得到正确答案，而是主要想看你是如何处理困难问题的。
 
 在本章中，我尝试收集了一小部分问题，你在申请实时、嵌入式、固件开发人员职位时可能会遇到。我跳过了图表、二叉树、水桶，因为这类问题很少出现在嵌入式系统开发者的技术面试中。
 
-## 通用编程。
+## 通用编程
+
+### 宏和日志函数
 
 Q. 下面代码的局限性是什么？是否存在潜在的问题？
 
 ```cpp
-#define LOG_CAT(fmt, ...) print_log("%s %d" fmt, __FUNCTION__, __LINE__, ##__VA_ARGS__ )
+#define LOG_CAT(fmt, ...) \
+  print_log("%s %d" fmt, __FUNCTION__, __LINE__, ##__VA_ARGS__)
 
-static inline void print_log(const char *fmt, ...)
-{
-    va_list ap;
-    va_start(ap, fmt);
-    vprintf(fmt, ap);
-    va_end(ap);
+static inline void print_log(const char *fmt, ...) {
+  va_list ap;
+
+  va_start(ap, fmt);
+  vprintf(fmt, ap);
+  va_end(ap);
 }
 ```
 
-A. 宏 `LOG_CAT` 假设 “fmt” 是一个常量字符串。例如，以下代码将无法编译：
+A. 宏 `LOG_CAT` 假设 `fmt` 是一个常量字符串。例如，以下代码将无法编译：
 
 ```cpp
-void testLogCat()
-{
-    char *f = "Test %d";
-    LOG_CAT(f, 1);
+void testLogCat() {
+  char *f = "Test %d";
+  LOG_CAT(f, 1);
 }
 ```
 
 对函数 `vprintf()` 的调用在某些平台上不是重入的。在其他平台上，`vprintf()` 使用栈上的一个大缓冲区，如果从中断中调用，可能会产生问题。
 
+### 中断处理程序
+
 Q. 以下中断处理程序有什么问题？尝试尽可能指出所有的潜在问题：
 
 ```cpp
 uint32_t Tick = 0;
-int MyTickIsr()
-{
-    Tick++;
-    printf("%s", __FUNCTION__);
-    return 0;
+
+int MyTickIsr() {
+  Tick++;
+  printf("%s", __FUNCTION__);
+  return 0;
 }
 ```
 
 A.
+
 1. 通常情况下中断处理程序不应该返回返回值。返回的结果取决于操作系统。
 2. 全局变量的增加是一个“读取-修改-写入”操作。当中断处理程序被调用时，另一个线程可能正处于修改 `tick` 值的过程中。
 3. 在许多系统中，`printf()` 不是可重入 API。如果 `printf()` 使用栈分配字符串，调用 `printf()` 可能会导致栈溢出。取决于实现，调用 `printf()` 可能需要大量时间。
 
+### FIFO 实现
+
 Q. 列出在“生产者”和“消费者”之间实现 FIFO（先进先出）的最常用方法。假设生产者产生 1 到 256 字节不同大小的数据块。
 
 A.
+
 1. 指针环形缓冲区，其中每个指针指向一个例如 16 字节数据块的链表。生产者从空闲块链表中分配数据块。
 2. 指针环形缓冲区，引用每个 256 字节的数据块。生产者从空闲块链表中分配数据块。
 3. 数据环形缓冲区，每个数据块的前面都加上数据块的大小。
 
-请准备好从内存和性能角度讨论每种方法的优缺点，以及 Linux 内核中的“skb”缓冲区、DMA 描述符、零拷贝数据处理。
+请准备好从内存和性能角度讨论每种方法的优缺点，以及 Linux 内核中的 `skb` 缓冲区、DMA 描述符、零拷贝数据处理。
+
+### 判断字节序
 
 Q. 写一个程序来判断机器是大端序还是小端序。
 
@@ -2628,9 +2686,10 @@ A. 在运行时可以使用此函数：
 
 ```cpp
 int isLittleEndian() {
-    short int data = 0x0001;
-    char *byte = (char *) &data;
-    return (byte[0] ? 1 : 0);
+  short int data = 0x0001;
+  char *byte = (char *)&data;
+
+  return (byte[0] ? 1 : 0);
 }
 ```
 
@@ -2641,6 +2700,8 @@ int isLittleEndian() {
 ```
 
 在 Linux 中，我们有一个宏 `BYTE_ORDER`。在 GCC 中，我们有宏 `__LITTLE_ENDIAN__`、`__BIG_ENDIAN__`、`__BYTE_ORDER__`。
+
+### 禁止类被继承
 
 Q. 写一个类，使得其他类无法继承它。
 
@@ -2649,148 +2710,16 @@ A. 解决方案基于单例设计模式——一个具有私有构造函数的�
 ```cpp
 class YouCanNotInheritMe {
 private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：原文示例中代码不完整，此处根据逻辑补全了类名)*
 
-*(注：原文提供的答案代码片段似乎有些杂乱，此处按题意进行了梳理)*
 
-```cpp
-class Singleton {
-private:
-    Singleton() {}
-public:
-    // 禁用拷贝构造和赋值
-    Singleton(const Singleton&) = delete;
-    void operator=(const Singleton&) = delete;
-};
-```
-*(注：由于原文示例 A 部分似乎存在多处代码粘贴错误，以下翻译基于其逻辑意图)*
 
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(重新审视原文杂乱部分)*：
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：原文中 A 答案后的代码块存在严重的格式混乱，此处翻译时保留了其核心逻辑)*
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：由于原文中 A 答案后的代码块存在严重的格式混乱，此处翻译时保留了其核心逻辑)*
-
-*(更正：根据原文提供的文本，A 答案部分确实非常混乱，以下为针对原文字符的翻译)*
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：原文文本在 A 答案后似乎混合了多个示例片段，此处仅翻译其可见的结构)*
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：由于原文文本存在多处重复和格式错误，我将提供最接近原文逻辑的翻译)*
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：由于原文文本存在多处重复和逻辑错误，我将提供最接近原文逻辑的翻译)*
-
-Q. 编写一个类，使得其他类无法继承该类。
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-
-Q. 编写一个类，使得其他类无法继承该类。
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-
-Q. 编写一个类，使得其他类无法继承该类。
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-
-Q. 编写一个类，使得其他类无法继承该类。
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-
-Q. 编写一个类，使得其他类无法继承该类。
-
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
-
-```cpp
-class YouCanNotInheritMe {
-private:
-    YouCanNotInheritMe() {}
-};
-```
-*(注：由于原文提供的文本在后半部分出现了大量的重复和代码块错误，我将基于文档的逻辑结构进行最终的清理翻译，以确保可读性)*
-
----
-**由于原文文本在“Q. 写一个类使得...” 之后存在严重的重复和代码块混乱，以下是基于原文逻辑整理后的最终完整翻译：**
-
-[content]
 在本章中，我尝试收集了一小部分问题，你在申请实时、嵌入式、固件开发人员职位时可能会遇到。我跳过了图表、二叉树、装水的桶，因为这类问题很少出现在嵌入式系统开发者的技术面试中。
 
-## 通用编程。
+## 通用编程
 
-Q. 下面代码的局限性是什么？是否存在潜在的问题？
+### 宏和日志函数
+
+**Q.** 下面代码的局限性是什么？是否存在潜在的问题？
 
 ```cpp
 #define LOG_CAT(fmt, ...) print_log("%s %d" fmt, __FUNCTION__, __LINE__, ##__VA_ARGS__ )
@@ -2804,7 +2733,7 @@ static inline void print_log(const char *fmt, ...)
 }
 ```
 
-A. 宏 `LOG_CAT` 假设 “fmt” 是一个常量字符串。例如，以下代码将无法编译：
+**A.** 宏 `LOG_CAT` 假设 `fmt` 是一个常量字符串。例如，以下代码将无法编译：
 
 ```cpp
 void testLogCat()
@@ -2814,12 +2743,15 @@ void testLogCat()
 }
 ```
 
-对函数 `vprintf()` 的调用在某些平台上不是重入的。在其他平台上，`vprintf()` 使用栈上的一个大缓冲区，如果从中断中调用，可能会产生问题。
+对函数 `vprintf()` 的调用在某些平台上不是可重入的。在其他平台上，`vprintf()` 使用栈上的一个大缓冲区，如果从中断中调用，可能会产生问题。
 
-Q. 以下中断处理程序有什么问题？尝试尽可能指出所有的潜在问题：
+### 中断处理程序
+
+**Q.** 以下中断处理程序有什么问题？尝试尽可能指出所有的潜在问题：
 
 ```cpp
 uint32_t Tick = 0;
+
 int MyTickIsr()
 {
     Tick++;
@@ -2828,26 +2760,33 @@ int MyTickIsr()
 }
 ```
 
-A.
-1. 通常情况下中断处理程序不应该返回返回值。返回的结果取决于操作系统。
+**A.**
+
+1. 通常情况下，中断处理程序不应该返回返回值。返回的结果取决于操作系统。
 2. 全局变量的增加是一个“读取-修改-写入”操作。当中断处理程序被调用时，另一个线程可能正处于修改 `tick` 值的过程中。
 3. 在许多系统中，`printf()` 不是可重入 API。如果 `printf()` 使用栈分配字符串，调用 `printf()` 可能会导致栈溢出。取决于实现，调用 `printf()` 可能需要大量时间。
 
-Q. 列出在“生产者”和“消费者”之间实现 FIFO 的最常用方法。假设生产者产生 1 到 256 字节不同大小的数据块。
+### 生产者和消费者之间的 FIFO
 
-A.
+**Q.** 列出在“生产者”和“消费者”之间实现 FIFO 的最常用方法。假设生产者产生 1 到 256 字节的不同大小的数据块。
+
+**A.**
+
 1. 指针环形缓冲区，其中每个指针指向一个例如 16 字节数据块的链表。生产者从空闲块链表中分配数据块。
 2. 指针环形缓冲区，引用每个 256 字节的数据块。生产者从空闲块链表中分配数据块。
 3. 数据环形缓冲区，每个数据块的前面都加上数据块的大小。
 
-请准备好从内存和性能角度讨论每种方法的优缺点，以及 Linux 内核中的“skb”缓冲区、DMA 描述符、零拷贝数据处理。
+请准备好从内存和性能角度讨论每种方法的优缺点，以及 Linux 内核中的 `skb` 缓冲区、DMA 描述符、零拷贝数据处理。
 
-Q. 写一个程序来判断机器是大端序还是小端序。
+### 判断机器的字节序
 
-A. 在运行时可以使用此函数：
+**Q.** 写一个程序来判断机器是大端序还是小端序。
+
+**A.** 在运行时可以使用此函数：
 
 ```cpp
-int isLittleEndian() {
+int isLittleEndian()
+{
     short int data = 0x0001;
     char *byte = (char *) &data;
     return (byte[0] ? 1 : 0);
@@ -2862,9 +2801,11 @@ int isLittleEndian() {
 
 在 Linux 中，我们有一个宏 `BYTE_ORDER`。在 GCC 中，我们有宏 `__LITTLE_ENDIAN__`、`__BIG_ENDIAN__`、`__BYTE_ORDER__`。
 
-Q. 写一个类，使得其他类无法继承该类。
+### 禁止类被继承
 
-A. 解决方案基于单例设计模式——一个具有私有构造函数的类：
+**Q.** 写一个类，使得其他类无法继承该类。
+
+**A.** 解决方案基于单例设计模式——一个具有私有构造函数的类：
 
 ```cpp
 class YouCanNotInheritMe {
@@ -2872,161 +2813,205 @@ private:
     YouCanNotInheritMe() {}
 };
 ```
-*(注：由于原文文本在后处存在大量重复，以上翻译已根据逻辑去除了冗余的重复内容)*
 
+### 内存缓存和结构体初始化
 
+在调用第二个 `memset` 时，数据缓存可能已经包含了字段 `a` 以及字段 `b` 的全部或部分。CPU 可能预测到了顺序写入，并提前加载数据缓存行。通常，缓存内存中的单行为 64 或 128 字节。
 
+函数 `initDataArrayC` 写入了字段 `c`，这会导致数据缓存行冲刷，并减慢第二个 `memset()` 的执行速度。
 
 ```cpp
 memset(dataArray.c, 0, sizeof(dataArray.c));
-}
 ```
 
-A. 在某些架构中，CPU 可能会预测数据使用情况并相应加载数据缓存行（cache lines）。通常，缓存内存中的单行为 64 或 128 字节。在 `initDataArrayC` 函数中，当调用第二个 `memset` 时，数据缓存可能已经包含了字段 “a” 以及字段 “b” 的全部或部分 —— CPU 预测到了顺序写入。函数 `initDataArrayC` 写入了字段 “c”，这会导致数据缓存行冲刷（flush），并减慢第二个 `memset()` 的执行速度。
+### 优化 `testFastSum`
 
-Q. 对下代码进行何种**单项修改**，可以提高 `testFastSum` 函数的性能？
+**Q.** 对下列代码进行何种**单项修改**，可以提高 `testFastSum` 函数的性能？
 
 ```cpp
 class FastSum {
 public:
     FastSum(int delta) : delta(delta) {}
-    virtual int sum(int a) { return delta+a; }
+    virtual int sum(int a) { return delta + a; }
     virtual ~FastSum() {}
+
 protected:
     int delta;
 };
 
-void testFastSum(int delta, int *result, int count) {
+void testFastSum(int delta, int *result, int count)
+{
     FastSum fastSum(delta);
+
     for (int i = 0; i < count; i++) {
         result[i] = fastSum.sum(i);
     }
 }
 ```
 
-A. **去虚化（Devirtualization）** —— 将虚方法 `sum()` 替换为非虚方法 —— 可以帮助。将虚函数调用替换为非虚调用每次迭代可以节省 2-3 条指令。如果 C++ 编译器的去虚化做得很好（`GCC` `4.8` 则不能），那么下一个选项是确保编译器内联构造函数 `FastSum` 和方法 `sum`。
+**A.** **去虚化（Devirtualization）**——将虚方法 `sum()` 替换为非虚方法——可以提高性能。将虚函数调用替换为非虚调用，每次迭代可以节省 2～3 条指令。
 
-Q. 下述代码存在一个竞态条件。它是什么？
+如果 C++ 编译器的去虚化做得很好（GCC 4.8 则不能），那么下一个选项是确保编译器内联构造函数 `FastSum` 和方法 `sum`。
+
+### 懒加载初始化中的竞态条件
+
+**Q.** 下述代码存在一个竞态条件。它是什么？
 
 ```cpp
 class LazyInitialization {
-    static LazyInitialization *getInstance() {
+    static LazyInitialization *getInstance()
+    {
         if (instance == nullptr) {
             MutexAB m;
+
             if (instance == nullptr) {
                 instance = new LazyInitialization();
             }
         }
+
         return instance;
     }
+
 private:
     LazyInitialization();
+
     static LazyInitialization *instance;
 };
 
 LazyInitialization *LazyInitialization::instance = nullptr;
 ```
 
-A. 线程 A 进入同步区域并初始化静态变量 “instance”。类 `LazyInitialization` 的构造函数可能还没有被调用，但变量 “instance” 可能已经被设置了。操作的确切顺序取决于编译器。此时线程 B 进入 `getInstance()` 方法并返回一个无效指针 —— 指向一个未完全初始对象的指针。另一个问题是，地址的赋值（一个 32 位或 64 位或其他变量）并不一定是原子操作，并且可能涉及两次内存写入事务。可以通过将变量 “instance” 声明为原子变量来修复代码：
+**A.** 线程 A 进入同步区域并初始化静态变量 `instance`。类 `LazyInitialization` 的构造函数可能还没有被调用，但变量 `instance` 可能已经被设置。操作的确切顺序取决于编译器。
+
+此时线程 B 进入 `getInstance()` 方法并返回一个无效指针——指向一个未完全初始化对象的指针。
+
+另一个问题是，地址的赋值（一个 32 位、64 位或其他变量）并不一定是原子操作，并且可能涉及两次内存写入事务。可以通过将变量 `instance` 声明为原子变量来修复代码：
 
 ```cpp
 atomic<LazyInitialization*> LazyInitialization::instance(nullptr);
 ```
 
-Q. 解释右值（rvalue）和左值（lvalue）。`++x` 和 `x++` 有什么区别？
+### 右值和左值
 
-A. 右值是临时值，在它们所生存的完整表达式结束时就会消失（“**在分号处**”）。例如，`1729`、`x + y`、`std::string("meow")` 和 `x++` 都是右值。左值是命名持久到单个表达式之外的对象。例如，`obj`、`*ptr`、`ptr[index]` 和 `++x` 都是左值。表达式 `x++` 是右值。它拷贝持久对象的原始值，修改持久对象，然后返回该拷贝。这个拷贝是临时的。`++x` 和 `x++` 都会增加 `x` 的值，但 `++x` 返回持久对象本身，而 `x++` 返回一个临时拷贝。
+**Q.** 解释右值（rvalue）和左值（lvalue）。`++x` 和 `x++` 有什么区别？
 
-Q. 解释以下函数中每一行发生了什么：
+**A.** 右值是临时值，在它们所生存的完整表达式结束时就会消失（“在分号处”）。例如，`1729`、`x + y`、`std::string("meow")` 和 `x++` 都是右值。
+
+左值是命名且持久到单个表达式之外的对象。例如，`obj`、`*ptr`、`ptr[index]` 和 `++x` 都是左值。
+
+表达式 `x++` 是右值。它拷贝持久对象的原始值，修改持久对象，然后返回该拷贝。这个拷贝是临时的。`++x` 和 `x++` 都会增加 `x` 的值，但 `++x` 返回持久对象本身，而 `x++` 返回一个临时拷贝。
+
+### 函数中的局部变量和字符串
+
+**Q.** 解释以下函数中每一行发生了什么：
 
 ```cpp
 const char *dataTest()
 {
     // 1.
     char *a = "123";
+
     // 2.
     char b[] = "123";
+
     // 3.
     const char *c = "123";
+
     // 4.
     static char d[] = "123";
+
     // 5.
     a[0] = '0';
+
     // .................
     // 6.
     return a;
+
     // .................
     // 7.
     return c;
+
     // ................
     // 8.
     return b;
 }
 ```
 
-A.
-1. 为局部变量 `a` 分配常量数据 ['1','2','3',0] 的地址。某些编译器会生成警告 —— 将 const 指针赋值给非 const 指针。
-2. 将数据 ['1','2','3',0] 在运行时拷贝到局部（栈上）数组。数组 `b` 的初始化在每次调用函数时都会完成。
-3. 与 1 相同，但修复了编译警告。
-4. 将数组 ['1','2','3',0] 在运行时拷贝到静态变量 `d`。拷贝仅由代码加载器执行一次。
+**A.**
+
+1. 为局部变量 `a` 分配常量数据 `['1', '2', '3', 0]` 的地址。某些编译器会生成警告：将 `const` 指针赋值给非 `const` 指针。
+2. 将数据 `['1', '2', '3', 0]` 在运行时拷贝到局部（栈上）数组。数组 `b` 的初始化在每次调用函数时都会完成。
+3. 与第 1 项相同，但修复了编译警告。
+4. 将数组 `['1', '2', '3', 0]` 在运行时拷贝到静态变量 `d`。拷贝仅由代码加载器执行一次。
 5. 尝试修改常量数据。在某些架构上，常量数据是只读的，此行可能会导致异常。
 6. 返回常量数据的指针。该指针是全局的，存在于程序地址空间中。
-7. 与 6 相同
+7. 与第 6 项相同。
 8. 返回局部（栈）变量的地址。地址 `b` 处的数据取决于架构。
 
-Q. 下面的 x86 汇编代码做什么：
+### 获取当前程序计数器
+
+**Q.** 下面的 x86 汇编代码做什么？
 
 ```assembly
 call next
+
 next:
 pop eax
 ```
 
-A. `call` 操作符将当前程序计数器（PC）推入栈中。随后的 `pop` 将 PC 值设置寄存器 `eax`。这段代码是获取当前 PC 值的一种方法。
+**A.** `call` 操作符将当前程序计数器（PC）推入栈中。随后的 `pop` 将 PC 值设置到寄存器 `eax`。这段代码是获取当前 PC 值的一种方法。
 
-Q. 实现一个用于分配 4 字节块的高效内存池。
+### 高效内存池
 
-A. 使用块本身的数据组织一个空块链表。初始时在第一个块（偏移量 0）中写入 “1” —— 下一个空块的偏移量。在第二个块（偏移量 1）中写入 “2”，以此此类推。代码示例如下：
+**Q.** 实现一个用于分配 4 字节块的高效内存池。
+
+**A.** 使用块本身的数据组织一个空块链表。初始时在第一个块（偏移量 0）中写入 `1`，表示下一个空块的偏移量；在第二个块（偏移量 1）中写入 `2`，以此类推。代码示例如下：
 
 ```cpp
 static const int POOL_SIZE = 7;
 static uint32_t fastPoolData[POOL_SIZE];
 static uint32_t fastPoolHead;
-static const int ALLOCATED_ENTRY = (POOL_SIZE+1);
+static const int ALLOCATED_ENTRY = (POOL_SIZE + 1);
+
 static inline uint32_t fastPoolGetNext(uint32_t node)
 {
     return fastPoolData[node];
 }
+
 static inline void fastPoolSetNext(uint32_t node, uint32_t next)
 {
     fastPoolData[node] = next;
 }
+
 void fastPoolInitialize()
 {
     fastPoolHead = 0;
-    for (int i = 0; i < POOL_SIZE-1; i++)
-    {
-        fastPoolSetNext(i, i+1);
+
+    for (int i = 0; i < POOL_SIZE - 1; i++) {
+        fastPoolSetNext(i, i + 1);
     }
-    fastPoolSetNext(POOL_SIZE-1, ALLOCATED_ENTRY);
+
+    fastPoolSetNext(POOL_SIZE - 1, ALLOCATED_ENTRY);
 }
+
 uint32_t *fastPoolAllocate()
 {
     uint32_t blockOffset = fastPoolHead;
-    if (blockOffset != ALLOCATED_ENTRY)
-    {
+
+    if (blockOffset != ALLOCATED_ENTRY) {
         fastPoolHead = fastPoolGetNext(blockOffset);
     }
+
     return &fastPoolData[blockOffset];
 }
+
 void fastPoolFree(uint32_t *block)
 {
     // 根据上下文简化了逻辑
 }
 ```
-（注：提供的内存池实现源文本是碎片化的；我已将其重构为贯的代码块，同时保持了提供的变量名和结构）。
 
-等一下，重新检查内存池实现的源文本以确保没有丢失语义：
+
 
 ```cpp
 static const int POOL_SIZE = 7;
@@ -3065,9 +3050,10 @@ void fastPoolFree(uint32_t *block)
 }
 ```
 
-Q. 实现 `itoa()` —— 将整数转换为字符串。
+### Q. 实现 `itoa()` —— 将整数转换为字符串
 
 A.
+
 ```cpp
 int itoa(int value, char *s, int size)
 {
@@ -3097,7 +3083,9 @@ int itoa(int value, char *s, int size)
 
 ## 位运算技巧
 
-Q. 你有两个数字 M 和 N，以及两个位置 i 和 j。写一个方法将 M 中 i 到 j 之间的位设置为 N。假设 i < j。例如，如果输入 M=0x00, N=0x10, i=0, j=5，则输出为 0x10。
+### Q. 你有两个数字 M 和 N，以及两个位置 i 和 j。写一个方法将 M 中 i 到 j 之间的位设置为 N。假设 i < j。
+
+例如，如果输入 M=0x00, N=0x10, i=0, j=5，则输出为 0x10。
 
 A. 你需要清除 N 中从 i 到 j 的位，并对 M 和 N 进行位或操作。使用 `uint32_t` 或类似类型可能是好主意 —— 与面试官讨论。
 
@@ -3107,11 +3095,11 @@ M = M & mask;
 M = M | (N << i);
 ```
 
-Q. 代码 `((n & (n-1)) == 0)` 表示什么？
+### Q. 代码 `((n & (n-1)) == 0)` 表示什么？
 
-如果 n 为零或为 2 的幂，该条件为真。
+如果 `n` 为零或为 2 的幂，该条件为真。
 
-Q. 如何找到最高置位？
+### Q. 如何找到最高置位？
 
 A. GCC 有一个内置函数 `__builtin_clz()`，它返回参数中导零的数量。另一种解决方案：
 
@@ -3123,7 +3111,7 @@ while (v >>= 1) {
 }
 ```
 
-Q. 如何无分支地设置或清除位？为什么需要它？
+### Q. 如何无分支地设置或清除位？为什么需要它？
 
 A. 你可以使用如下代码：
 
@@ -3133,19 +3121,16 @@ unsigned int mask;
 unsigned int w;
 w ^= (-f ^ w) & mask;
 ```
+
 取决于上下文和 CPU，无分支可以提高 5%-10% 的性能。另见 [17]。
 
-Q. 查找整数中的第一个置位。
+### Q. 查找整数中的第一个置位
 
-
-
-
-
-# 位运算
+#### 位运算
 
 A. 在 GCC 中，我们有一个内置函数 `__builtin_ffs()`。或者，你也可以使用类似下面的软件实现。请讨论涵盖 `x` 等于零情况的可能返回代码。
 
-```c
+```cpp
 int  findFirst(int x)
 {
   if (x == 0)
@@ -3160,7 +3145,9 @@ int  findFirst(int x)
 }
 ```
 
-Q. 如何清除整数中最低有效位以外的所有位？例如对于 `0x60`（2 位被设置），结果是 `0x20`（1 位被设置）。
+### Q. 如何清除整数中最低有效位以外的所有位？
+
+例如对于 `0x60`（2 位被设置），结果是 `0x20`（1 位被设置）。
 
 A. 用单行 C 代码即可实现（参见 [18]）：
 
@@ -3174,16 +3161,15 @@ x &= -x;
 x &= (~x+1)
 ```
 
-Q. 如何检查整数是否为偶数。
+### Q. 如何检查整数是否为偶数？
 
 A. 偶数的最低有效位为零：
 
 ```c
-
 ((x & 1) == 0)
 ```
 
-Q. 如何清除最右侧设置位？
+### Q. 如何清除最右侧设置位？
 
 A. 将整数减 1 并与自身进行按位与运算：
 
@@ -3191,7 +3177,7 @@ A. 将整数减 1 并与自身进行按位与运算：
 x & (x-1)
 ```
 
-Q. 如何设置最右边的零位？
+### Q. 如何设置最右边的零位？
 
 A. 将整数加 1 并与自身进行按位或运算：
 
@@ -3199,7 +3185,7 @@ A. 将整数加 1 并与自身进行按位或运算：
 x | (x+1)
 ```
 
-Q. 统计整数中的非零位。是否存在无分支解决方案？
+### Q. 统计整数中的非零位。是否存在无分支解决方案？
 
 A. 清除右位并检查结果是否为零（参见 [19]）：
 
@@ -3221,34 +3207,34 @@ int  countBits(int n)
 
 ### 下列哪些语句描述了用于 C 条件编译的条件？
 
-* 条件必须求值为 0 或 1
-* 条件可以取决于任何“const”变量的值
-* 条件可以使用 `sizeof` 根据标准数据类型的大小对依赖于编译的操作做出决定
-* 条件可以取决于环境变量的值
+- 条件必须求值为 0 或 1
+- 条件可以取决于任何“const”变量的值
+- 条件可以使用 `sizeof` 根据标准数据类型的大小对依赖于编译的操作做出决定
+- 条件可以取决于环境变量的值
 
 ### 如果将 ANSI C 运算符用于不同类型的操作数，以下哪项正确描述了操作数或结果的类型转换？
 
-* 操作数完全没有发生任何自动转换
-* 此操作将由编译器标记为错误
-* “窄”操作数被转换为“宽”操作数的类型以避免信息丢失
-* 操作数的值被改变以防止“窄”类型中可能的溢出
-* 将结果赋值给“窄”类型可能会丢失信息，但不非法
+- 操作数完全没有发生任何自动转换
+- 此操作将由编译器标记为错误
+- “窄”操作数被转换为“宽”操作数的类型以避免信息丢失
+- 操作数的值被改变以防止“窄”类型中可能的溢出
+- 将结果赋值给“窄”类型可能会丢失信息，但不非法
 
 ### 下列外围设备允许嵌入式系统使用双线或三线串行接口与其他设备通信？
 
-* 双向三态缓冲器
-* 地址译码器
-* 通用同步收发器
-* 数字模模拟转换器
-* 非易失性存储器
+- 双向三态缓冲器
+- 地址译码器
+- 通用同步收发器
+- 数字模模拟转换器
+- 非易失性存储器
 
 ### 下列哪些语句正确描述了 ANSI C 语言中的函数在嵌入式系统中的？
 
-* 链接的两个不同文件的全局函数名必须是唯一的
-* 函数可以通过值或指针调用
-* 函数不能返回多个值
-* 函数可以接受的最多参数数量为 12
-* 每个函数都必须返回一个值
+- 链接的两个不同文件的全局函数名必须是唯一的
+- 函数可以通过值或指针调用
+- 函数不能返回多个值
+- 函数可以接受的最多参数数量为 12
+- 每个函数都必须返回一个值
 
 ### 下列哪些语句正确描述了下面的 ANSI C 代码？
 
@@ -3259,28 +3245,28 @@ typedef  pchar (*pfuncpchar)();
 pfuncpchar  fpfuncpchar();
 ```
 
-* `pfuncpchar` 是一个返回 char 指针的函数指针
-* `fpfuncpchar` 是一个返回函数指针的 char 指针
-* `fpfuncpchar` 是一个返回返回 char 指针的函数指针
-* `fpfuncpchar` 是一个返回返回 char 指针的函数指针的函数
-* `funcpchar` 是一个返回 char 指针的函数
+- `pfuncpchar` 是一个返回 char 指针的函数指针
+- `fpfuncpchar` 是一个返回函数指针的 char 指针
+- `fpfuncpchar` 是一个返回返回 char 指针的函数指针
+- `fpfuncpchar` 是一个返回返回 char 指针的函数指针的函数
+- `funcpchar` 是一个返回 char 指针的函数
 
 ### 下列哪些语句正确描述了 ANSI C 中的按位右移运算符 `>>`？
 
-* 右侧运算符必须大于等于 1
-* 它将其左侧操作数的每个位向右移动，移动数为右侧运算符指定的位数
-* 它可以用于反转数字的符号
-* 对于无符号整数，它会在左侧空出的位填充零
-* 它可以用于将整数除以 2 的幂
+- 右侧运算符必须大于等于 1
+- 它将其左侧操作数的每个位向右移动，移动数为右侧运算符指定的位数
+- 它可以用于反转数字的符号
+- 对于无符号整数，它会在左侧空出的位填充零
+- 它可以用于将整数除以 2 的幂
 
-### 假设 ANSI C 采用补码表示法，以下哪些语句是正确的
+### 假设 ANSI C 采用补码表示法，以下哪些语句是正确的？
 
-* 表示为带符号整数的负值，如果表示为相同尺寸无符号整数，将表示为大于符号整数最大值的正值
-* 同一整数类型的带符号和无符号变范围在大小和数值最大最小值上是等价的
-* 整数类型的无符号版本范围是带符号版本的两倍
-* 带符号整数的表示多出一个符号位
+- 表示为带符号整数的负值，如果表示为相同尺寸无符号整数，将表示为大于符号整数最大值的正值
+- 同一整数类型的带符号和无符号变范围在大小和数值最大最小值上是等价的
+- 整数类型的无符号版本范围是带符号版本的两倍
+- 带符号整数的表示多出一个符号位
 
-### 在以下代码中，调用 print 函数可能看起来如下所示
+### 在以下代码中，调用 `print` 函数可能看起来如下所示：
 
 ```c
 void process (int (*p)(int, int, char*)) {
@@ -3294,11 +3280,11 @@ int main(void) {
 }
 ```
 
-* `p->report(b,a)`
-* `(*p)(b,a)`
-* `p(b,a)`
-* `(*p)(report, b, a)`
-* `report(b,a)`
+- `p->report(b,a)`
+- `(*p)(b,a)`
+- `p(b,a)`
+- `(*p)(report, b, a)`
+- `report(b,a)`
 
 ### 下面代码编译失败的正确修复是：
 
@@ -3322,22 +3308,22 @@ struct pair *op(int x) {
 }
 ```
 
-* `extern struct pair a[];`
-* 数组 `a` 的声明必须在 `op()` 的定义之前
-* 除非数组 `a` 在所有调用 `op()` 的文件中声明为 `extern`，否则返回的指针是的
-* 文件 A 中数组 `a` 的定义缺少 `extern` 关键字
-* 必须在文件 b 中指定数组的大小
-* 两个文件中 `struct pair` 的定义都缺少 `extern` 关键字
+- `extern struct pair a[];`
+- 数组 `a` 的声明必须在 `op()` 的定义之前
+- 除非数组 `a` 在所有调用 `op()` 的文件中声明为 `extern`，否则返回的指针是的
+- 文件 A 中数组 `a` 的定义缺少 `extern` 关键字
+- 必须在文件 b 中指定数组的大小
+- 两个文件中 `struct pair` 的定义都缺少 `extern` 关键字
 
-### 下列哪些是 ANSI C 中格式正确的 #define 指令？
+### 下列哪些是 ANSI C 中格式正确的 `#define` 指令？
 
-* `#define DIF(X,Y) (X-Y)`
-* `#define sqr(x) ((x)*(x))`
-* `#define mm_per_meter 1000;`
-* `#define SUM(X,Y) ((X)+(Y))`
-* `#define INCHES_FEET 12`
+- `#define DIF(X,Y) (X-Y)`
+- `#define sqr(x) ((x)*(x))`
+- `#define mm_per_meter 1000;`
+- `#define SUM(X,Y) ((X)+(Y))`
+- `#define INCHES_FEET 12`
 
-### 执行下面的 ANSI 代码的输出是什么
+### 执行下面的 ANSI 代码的输出是什么？
 
 ```c
 void f(void **p);
@@ -3355,13 +3341,13 @@ void f(void **pp) {
 }
 ```
 
-* 语法错误
-* `pk` 的地址
-* 垃圾值
-* 3
-* 2
+- 语法错误
+- `pk` 的地址
+- 垃圾值
+- 3
+- 2
 
-### for 循环完成后，输出数组的内容是什么
+### `for` 循环完成后，输出数组的内容是什么？
 
 ```c
 int encode (char, char);
@@ -3386,13 +3372,13 @@ int encode(char c , char t) {
 }
 ```
 
-* `\0`,`0`,`0`,`0`,`0`,`\0`
-* `M`,`A`,`\0`,`G`,`O`,`\0`,`\0`
-* `M`,`A`,`\0`,`G`,`X`,`\0`,`\0`
-* `\0`,`0`,:`,`\0`,`\0`,:`,`\0`
-* `:`,`:`,`:`,:::`\0`
+- `\0`,`0`,`0`,`0`,`0`,`\0`
+- `M`,`A`,`\0`,`G`,`O`,`\0`,`\0`
+- `M`,`A`,`\0`,`G`,`X`,`\0`,`\0`
+- `\0`,`0`,:`,`\0`,`\0`,:`,`\0`
+- `:`,`:`,`:`,:::`\0`
 
-### dump_port() 函数应该输出
+### `dump_port()` 函数应该输出
 
 ```c
 /* I/O 寄存器数量 */
@@ -3425,17 +3411,12 @@ int main(void) {
 }
 ```
 
-* D0 F0 FFFFFF0F 30F0
+- D0 F0 FFFFFF0F 30F0
+- `D000000` `F000000` `FFFFF0F` `F0300000`
+- `FFFFFFF` `F0300000` `20000000` `D0000000`
+- `FFFFFF0F` `30F0` `2` `D0`
 
-
-
-
-
-* `D000000` `F000000` `FFFFF0F` `F0300000`
-* `FFFFFFF` `F0300000` `20000000` `D0000000`
-* `FFFFFF0F` `30F0` `2` `D0`
-
-以下函数返回什么：
+### 以下函数返回什么？
 
 ```cpp
 unsigned int process(unsigned int x, int p, int n)
@@ -3444,21 +3425,21 @@ unsigned int process(unsigned int x, int p, int n)
 }
 ```
 
-* `x` 从位置 `n` 开始的 `p` 位
-* `x` 乘以 `2^(p-n)`
-* `x` 的从位置 `p` 开始的 `n` 位置为 1
-* `x` 在位置 `p` 的第 `n` 位
-* `x` 的从位置 `p` 开始的 `n` 位被取反
+- `x` 从位置 `n` 开始的 `p` 位
+- `x` 乘以 `2^(p-n)`
+- `x` 的从位置 `p` 开始的 `n` 位置为 1
+- `x` 在位置 `p` 的第 `n` 位
+- `x` 的从位置 `p` 开始的 `n` 位被取反
 
-程序必须在数字输出上产生脉冲宽度调制信号。值 0 由数字输出高电平（HIGH）表示，值 0xFFFF 由数字输出低电平（LOW）表示。哪种脉冲信号代表值 `0x7000`？
+### 程序必须在数字输出上产生脉冲宽度调制信号。值 0 由数字输出高电平（HIGH）表示，值 0xFFFF 由数字输出低电平（LOW）表示。哪种脉冲信号代表值 `0x7000`？
 
-* 30ms 周期，13.3ms 脉冲宽度
-* 2000Hz，563us 脉冲宽度
-* 100KHz，5.63us 脉冲宽度
-* 100KHz，4.38us 脉冲宽度
-* 20ms，11.25ms 脉冲宽度
+- 30ms 周期，13.3ms 脉冲宽度
+- 2000Hz，563us 脉冲宽度
+- 100KHz，5.63us 脉冲宽度
+- 100KHz，4.38us 脉冲宽度
+- 20ms，11.25ms 脉冲宽度
 
-以下哪个语句正确描述了下方的 C++ 代码段？
+### 以下哪个语句正确描述了下方的 C++ 代码段？
 
 ```cpp
 void foo(long l);
@@ -3466,13 +3447,13 @@ int i =12;
 foo(i);
 ```
 
-* `i` 被提升 `long` 以调用函数 `foo`。
-* 函数 `foo` 使用一个值为“12”的 `long` 调用。
-* 编译器实例化了一个接受 `int` 而不是 `long` 的新函数。
-* 函数 `foo` 使用一个值为“12”的 `int` 调用。
-* 函数 `foo` 使用一个未定义值的 `long` 调用。
+- `i` 被提升 `long` 以调用函数 `foo`。
+- 函数 `foo` 使用一个值为“12”的 `long` 调用。
+- 编译器实例化了一个接受 `int` 而不是 `long` 的新函数。
+- 函数 `foo` 使用一个值为“12”的 `int` 调用。
+- 函数 `foo` 使用一个未定义值的 `long` 调用。
 
-以下代码尝试按组（投诉、表扬、其他）对传入的邮件进行分类。在 for 循环中使用什么代码？
+### 以下代码尝试按组（投诉、表扬、其他）对传入的邮件进行分类。在 `for` 循环中使用什么代码？
 
 ```cpp
 enum class LetterType {complement, complaint, unknown};
@@ -3496,43 +3477,65 @@ LetterType getMailType(string letter)
 }
 ```
 
-* `if (happy.find(word)) happy.second++;if (sad.find(word)) sad.second++;`
-* `if (happy.find(word) != string::npos) happy.second++;if (sad.find(word) != string::npos) sad.second++;`
-* `if (happy.first.find(word)) happy.second++;if (sad.first.find(word)) sad.second++;`
-* `if (happy.first.find(word) != string::npos) happy++;if (sad.first::find(word) != string::npos) sad++;`
-* `if (happy.first.find(word) != string::npos) happy.second++;if (sad.first.find(word) != string::npos) sad.second++;`
+- `if (happy.find(word)) happy.second++;if (sad.find(word)) sad.second++;`
+
+
+
+- `if (happy.find(word) != string::npos) happy.second++;if (sad.find(word) != string::npos) sad.second++;`
+
+- `if (happy.first.find(word)) happy.second++;if (sad.first.find(word)) sad.second++;`
+
+- `if (happy.first.find(word) != string::npos) happy++;if (sad.first::find(word) != string::npos) sad++;`
+
+- `if (happy.first.find(word) != string::npos) happy.second++;if (sad.first.find(word) != string::npos) sad.second++;`
 
 以下哪些是 C++ 声明的不可更改指针，与声明指向某个不可更改内容的指针相区别？
 
-* `extern double *float;`
-* `extern const int *const reference_only;`
-* `extern const std::vector<int> *global_vector;`
-* `extern const void *anything;`
-* `extern float *const some_scalar;`
+- `extern double *float;`
+
+- `extern const int *const reference_only;`
+
+- `extern const std::vector<int> *global_vector;`
+
+- `extern const void *anything;`
+
+- `extern float *const some_scalar;`
 
 以下哪些操作是由 C++ `catch(...)` 语句执行的？
 
-* 捕获默认异常。
-* 忽略异常。
-* 捕获异常，将其传递给程序控制的下一层。
-* 禁用进一步异常的抛出。
+- 捕获默认异常。
+
+- 忽略异常。
+
+- 捕获异常，将其传递给程序控制的下一层。
+
+- 禁用进一步异常的抛出。
 
 以下哪个语句正确描述了编译器生成的构造函数？
 
-* 编译器生成的构造函数创建一个引用。
-* 编译器生成的构造函数调用了赋值操作。
-* 编译器生成的构造函数什么都不做。
-* 编译器生成的构造函数标记该对象。
-* 编译器生成的构造函数是默认的。
-* 编译器生成的构造函数执行对象的拷贝。
+- 编译器生成的构造函数创建一个引用。
+
+- 编译器生成的构造函数调用了赋值操作。
+
+- 编译器生成的构造函数什么都不做。
+
+- 编译器生成的构造函数标记该对象。
+
+- 编译器生成的构造函数是默认的。
+
+- 编译器生成的构造函数执行对象的拷贝。
 
 在重载一元运算符时，以下哪些语句是正确的？
 
-* 当运算符是成员时，没有参数。
-* 当运算符不是成员时，有一个参数。
-* 当运算符不是成员时，有任意数量的参数。
-* 当运算符是成员时，有一个参数。
-* 当运算符是成员时，没有参数。
+- 当运算符是成员时，没有参数。
+
+- 当运算符不是成员时，有一个参数。
+
+- 当运算符不是成员时，有任意数量的参数。
+
+- 当运算符是成员时，有一个参数。
+
+- 当运算符是成员时，没有参数。
 
 在下方的 C++ 代码段中，以下哪些正确描述了 `assert()` 的行为：
 
@@ -3545,25 +3548,35 @@ assert(val);
 }
 ```
 
-* 它将值记录到文件中
-* 在调试模式下它确保 `val` 为
-* 如果不是，则终止
-* 在调试模式下，它记录 `val`
-* 如果 `val` 为零，则终止。
+- 它将值记录到文件中
+
+- 在调试模式下它确保 `val` 为
+
+- 如果不是，则终止
+
+- 在调试模式下，它记录 `val`
+
+- 如果 `val` 为零，则终止。
 
 ## 脑筋急转弯
 
-Q. 潜艇位于线上，可以是负数。它每秒以恒速移动。是否有办法确保你击中潜艇？
+### 潜艇问题
 
-A. 在 `T` 秒后位置为 `v*T` 或 `(-v)`，其中 `v` 是绝对值。如果数字是正数，你可以对数字减 1 并计算你做了多少循环：`v*T` 或 `(-v)`。如果 `v=2`，循环次数为 100。如果数字是负数，循环次数为 100。如果数字为零，循环次数为 100。在位置 `T*(T+1)/2` 和 `(-T/2)` 处命中。
+**Q.** 潜艇位于线上，可以是负数。它每秒以恒速移动。是否有办法确保你击中潜艇？
 
-Q. 有一栋 100 层的楼。如果蛋从第 `N` 层或以上掉落它会破碎。如果从任何以下楼掉落则不会破碎。你有 2 块蛋。找到 `N`，同时最小化掉落次数。
+**A.** 在 `T` 秒后位置为 `v*T` 或 `(-v)`，其中 `v` 是绝对值。如果数字是正数，你可以对数字减 1 并计算你做了多少循环：`v*T` 或 `(-v)`。如果 `v=2`，循环次数为 100。如果数字是负数，循环次数为 100。如果数字为零，循环次数为 100。在位置 `T*(T+1)/2` 和 `(-T/2)` 处命中。
 
-A. 无论如何使用第一只蛋，我们对第二只蛋进行线性搜索。一个完美的系统是第一只蛋掉落次数加上第二只蛋掉落次数总是相同的。例如，如果第一只蛋掉落在 20 和 30（破碎），第二只蛋需要 9 步。当我们再次掉落第一只蛋时，我们将第二只蛋的潜在步骤减少到 8。这意味着我们必须在 39 层掉落第一只蛋。因此，第一只蛋从 `X` 开始，然后增加 `X-1`，`X-2`，……`X+(X-1)+(X-2)+1=100`。`X(X+1)/2=100`，`X=14`。[20]。
+### 鸡蛋掉落问题
 
-Q. 如何仅使用运算符 `+` 取反一个数字？
+**Q.** 有一栋 100 层的楼。如果蛋从第 `N` 层或以上掉落它会破碎。如果从任何以下楼掉落则不会破碎。你有 2 块蛋。找到 `N`，同时最小化掉落次数。
 
-A. 如果数字是正数，你可以对数字减 1 并计算你做了多少循环：
+**A.** 无论如何使用第一只蛋，我们对第二只蛋进行线性搜索。一个完美的系统是第一只蛋掉落次数加上第二只蛋掉落次数总是相同的。例如，如果第一只蛋掉落在 20 和 30（破碎），第二只蛋需要 9 步。当我们再次掉落第一只蛋时，我们将第二只蛋的潜在步骤减少到 8。这意味着我们必须在 39 层掉落第一只蛋。因此，第一只蛋从 `X` 开始，然后增加 `X-1`，`X-2`，……`X+(X-1)+(X-2)+1=100`。`X(X+1)/2=100`，`X=14`。[20]。
+
+### 仅使用运算符 `+` 取反数字
+
+**Q.** 如何仅使用运算符 `+` 取反一个数字？
+
+**A.** 如果数字是正数，你可以对数字减 1 并计算你做了多少循环：
 
 ```cpp
 int negate(int x) {
@@ -3577,7 +3590,9 @@ int negate(int x) {
 }
 ```
 
-Q. 发现以下函数中的错误（如果有的话）：
+### 发现函数中的错误
+
+**Q.** 发现以下函数中的错误（如果有的话）：
 
 ```cpp
 void mistake()
@@ -3589,17 +3604,17 @@ void mistake()
 }
 ```
 
-A. `printf` 永远不会执行。`for` 循环是一个死循环。
+**A.** `printf` 永远不会执行。`for` 循环是一个死循环。
 
-Q. 一个应用程序在运行时崩溃。它从不在同一个地方崩溃。应用程序是单线程的，并且只使用标准库。哪些编程错误可能导致这种情况？
+### 应用程序随机崩溃
 
-A. 崩溃由输入引起：用户输入或特定的硬件状态、栈溢出、尝试使用未分配（已释放）的内存。可以记录系统输入。有一些工具（valgrind）可以发现内存泄漏和访问未初始化内存。
+**Q.** 一个应用程序在运行时崩溃。它从不在同一个地方崩溃。应用程序是单线程的，并且只使用标准库。哪些编程错误可能导致这种情况？
 
-Q. 给定生成 0 到 4 之间整数的随机数生成器 `r5`，实现一个随机数生成器 `r7`。
+**A.** 崩溃由输入引起：用户输入或特定的硬件状态、栈溢出、尝试使用未分配（已释放）的内存。可以记录系统输入。有一些工具（`valgrind`）可以发现内存泄漏和访问未初始化内存。
 
+### 生成随机数 `r7`
 
-
-
+**Q.** 给定生成 0 到 4 之间整数的随机数生成器 `r5`，实现一个随机数生成器 `r7`。
 
 两个随机数之和并不是均匀分布的随机数。任何涉及随机生成数字之和的方案都是错误的。在以下代码中，第一次赋值生成了一个五位进制的两位数字——一个在 0 到 24 之间的随机数。下一行从随机数序列中移除了 21、22、23、24。该操作的结果是一系列 0 到 20 之间均匀分布的数字。通过对 7 取模完成了完成任务。
 
@@ -3626,23 +3641,41 @@ int random_7() {
 # 参考文献
 
 [1] RAII [http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization]
-[2] 单例模式 [http://en.wikipedia.org/wiki/Singleton_pattern]
-[3] 循环缓冲区 [https://github.com/larytet/emcpp/blob/master/src/CyclicBuffer.h]
-[4] 对象组合 [http://en.wikipedia.org/wiki/Object_composition]
-[5] 《设计模式：可复用面向对象软件元素》，1994, Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
-[6] 邮箱箱 [https://github.com/larytet/emcpp/blob/master/src/Mailbox.h]
-[7] Constexpr 哈希值 [https://github.com/mfontanini/Programs-Scripts/tree/master/constexpr_hashes]
-[8] Open TI [https://www.assembla.com/code/OpenTI/subversion/nodes/641/scripts]
-[9] 定计时 [https://github.com/larytet/emcpp/blob/master/src/Timers.h]
-[10] 接口类 [http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Interface_Class]
-[11] 模模转换器 [http://en.wikipedia.org/wiki/Analog-to-digital_converter]
-[12] 低通滤波器 [http://en.wikipedia.org/wiki/Low-pass_filter]
-[13] 定点算术 [https://en.wikipedia.org/wiki/Fixed-point_arithmetic]
-[14] GCC 中的定点类型 [https://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/Fixed-Point.html]
-[15] 来自 Kurt Guntheroth 的定点库 [http://www.guntheroth.com/]
-[16] 认知精英的兴起 [http://www.economist.com/node/17929013]
-[17] 位操作黑客 [http://graphics.stanford.edu/~seander/bithacks.html]
-[18] 你必须知道的低级位黑客 [http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/]
-[19] 谜题！[http://puddleoriddles.blogspot.co.il/]
-[20] Career cup [http://www.careercup.com/]
 
+[2] 单例模式 [http://en.wikipedia.org/wiki/Singleton_pattern]
+
+[3] 循环缓冲区 [https://github.com/larytet/emcpp/blob/master/src/CyclicBuffer.h]
+
+[4] 对象组合 [http://en.wikipedia.org/wiki/Object_composition]
+
+[5] 《设计模式：可复用面向对象软件元素》，1994, Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
+
+[6] 邮箱箱 [https://github.com/larytet/emcpp/blob/master/src/Mailbox.h]
+
+[7] Constexpr 哈希值 [https://github.com/mfontanini/Programs-Scripts/tree/master/constexpr_hashes]
+
+[8] Open TI [https://www.assembla.com/code/OpenTI/subversion/nodes/641/scripts]
+
+[9] 定计时 [https://github.com/larytet/emcpp/blob/master/src/Timers.h]
+
+[10] 接口类 [http://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Interface_Class]
+
+[11] 模模转换器 [http://en.wikipedia.org/wiki/Analog-to-digital_converter]
+
+[12] 低通滤波器 [http://en.wikipedia.org/wiki/Low-pass_filter]
+
+[13] 定点算术 [https://en.wikipedia.org/wiki/Fixed-point_arithmetic]
+
+[14] GCC 中的定点类型 [https://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/Fixed-Point.html]
+
+[15] 来自 Kurt Guntheroth 的定点库 [http://www.guntheroth.com/]
+
+[16] 认知精英的兴起 [http://www.economist.com/node/17929013]
+
+[17] 位操作黑客 [http://graphics.stanford.edu/~seander/bithacks.html]
+
+[18] 你必须知道的低级位黑客 [http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/]
+
+[19] 谜题！[http://puddleoriddles.blogspot.co.il/]
+
+[20] Career cup [http://www.careercup.com/]

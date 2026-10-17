@@ -1,13 +1,7 @@
+
 # FORTRAN 编程一天速成：FORTRAN 编程快速、简单高效学习初学者指南 (Fortran, Css, C++, C, C 编程... 编程, MYSQL, SQL 编程)
 
-
-
 ![](img/cover.jpeg)
-
-
-
-
-
 
 # 引言
 
@@ -31,13 +25,13 @@ FORTRAN（Formula Translation 的缩写）对于初学者来说实际上是一�
 
 ## 1.1 - 开始所需的准备工作
 
-要在这种编程语言中开始编写代码，需要的第一个工具是文本编辑器。有些人可能会推荐 Vim、Emacs 或其他文本编辑器，但任何工具都可以。重要的是，你的源代码应该保存为纯文本文件。这意味着你不能使用文字处理软件，因为这些应用程序不会以纯文本格式保存文件——它们包含了编译器无法理解的特殊格式。
+要在这种编程语言中开始编写代码，需要的第一个工具是文本编辑器。有些人可能会推荐 `Vim`、`Emacs` 或其他文本编辑器，但任何工具都可以。重要的是，你的源代码应该保存为纯文本文件。这意味着你不能使用文字处理软件，因为这些应用程序不会以纯文本格式保存文件——它们包含了编译器无法理解的特殊格式。
 
 运行 FORTRAN 还需要你需要一个编译器。现在有很多编译器，其中许多是免费的。对于绝对初学者来说，编译器是一个读取你编写的编程代码并将其翻译成机器可读代码程序（即你的计算机可以理解的内容）。在你编写并保存代码后，你必须运行编译器让你的计算机执行这些代码。
 
 为了让事情变得简单得多，你可能还想安装所谓的 IDE 或集成开发环境。它是一件软件程序，兼具文本编辑器和编译器的功能。IDE 有许多优点，它让编写代码和排查你编写的代码变得容易得多。
 
-如果你使用的是 Windows 机器，强烈建议使用 IDE，因为你会更熟悉图形用户界面。你可以根据意愿下载喜爱的 IDE，如 Photran、Plato 或任何其他开发环境。确保你熟悉它的界面，这样你就知道需要点击哪个按钮来执行代码，或者在需要逐条检查代码中的每个语句时应该进入菜单的哪个部分。
+如果你使用的是 Windows 机器，强烈建议使用 IDE，因为你会更熟悉图形用户界面。你可以根据意愿下载喜爱的 IDE，如 `Photran`、`Plato` 或任何其他开发环境。确保你熟悉它的界面，这样你就知道需要点击哪个按钮来执行代码，或者在需要逐条检查代码中的每个语句时应该进入菜单的哪个部分。
 
 IDE 已经理解了它们所构建的不同编程语言的语法。这意味着……
 
@@ -84,9 +78,6 @@ print *,'This is an output test'
 end program mytest
 ```
 
-
-
-
 这条语句将终止你刚刚编写的程序。
 
 某些版本的 FORTRAN 代码看起来略有不同。有些比其他的简单。上面的那一个应该非常容易理解。现在，你已经了解了 FORTRAN 中一个简单程序的结构。你所看到的包括以下内容：
@@ -96,7 +87,7 @@ end program mytest
 * 程序结束
 * 注释
 
-这种标准 FORTRAN 中的所有程序都以 `program <name of program>`语句开始，并以 `end program <name of program>` 语句结束，其中 `<name of program>` 是用户定义的值。
+这种标准 FORTRAN 中的所有程序都以`program <name of program>`语句开始，并以`end program <name of program>` 语句结束，其中 `<name of program>` 是用户定义的值。
 
 注释可以放在任何地方，因为它们不会被执行。请注意，语句或命令将从上到下顺序执行。在你提供计算机将执行的语句时，你必须提供一个逻辑上的顺序。
 
@@ -193,7 +184,7 @@ print *,a
 
 `character :: <variable name> * 15`
 
-`character ::` 部分声明你创建的变量类型。<variable name>` 部分是你想要赋予字符变量的名称。`*15` 部分指定字符串中有多少字符。以下是目前为止讨论的所有变量和数据类型的声明示例：
+`character ::` 部分声明你创建的变量类型。`<variable name>` 部分是你想要赋予字符变量的名称。`*15` 部分指定字符串中有多少字符。以下是目前为止讨论的所有变量和数据类型的声明示例：
 
 ```fortran
 program datatypes
@@ -207,9 +198,6 @@ real :: x
 
 end program datatypes
 ```
-
-
-
 
 你是否注意到上面的变量声明中有什么不同之处？如果你注意到了包含 `implicit none` 的那行或语句，说明你观察得非常细致。编程中最常见的错误之一就是对变量使用不当。在你的代码中添加 `implicit none` 会让 FORTRAN 检查你所有的变量声明，并确保它们都是正确的。在 FORTRAN 刚起的年代，编译器假设所有整数变量都以 `i` 到 `n` 之间的字母开头，不幸的是，这一点在今天仍然成立。如果你不包含 `implicit none` 语句，FORTRAN 编译器仍然会进行此类假设。
 
@@ -248,7 +236,7 @@ end program datatypes
 
 示例代码（涉及一个计算阶的循环函数）：
 
-```
+```fortran
 program loop_factorial
 
 implicit none
@@ -280,7 +268,7 @@ FORTRAN 可以用作编写令其他程序员印象深刻的程序的工具。然
 
 你也可以在 FORTRAN 中拆分表达式。这不仅提高了可读性，还能让程序顺利执行。如果出现算术错误，程序员可以更快地修改，而不需要修改整个程序。例如，为了获取复杂表达式的平方根，程序将如下所示：
 
-```
+```fortran
 t1 = ( d *f + t )
 t2 = log ( f * g)
 t3 = ( 1. )
@@ -313,13 +301,10 @@ t3 = ( 1. )
 * `Program-function`
 * `The program`
 
-
-
-
-
 子字符串（Sub-strings）顾其名，是字符串的一部分。它们是执行程序中的任何部分，如果程序员需要，就可以对它们进行提取。在示例中，子字符串可以是程序的任何部分，例如单个单词 This、is、Dana 和 Caulfield，也可以是整行字符串“This is Dana Caulfield.”和“I would like to give you a warm welcome.”。
 
 示例程序（执行）：
+
 ```
 This is Dana Caulfield.
 I would like to give you a warm welcome.
@@ -337,9 +322,12 @@ end program substring
 
 ## 3.4 - 拼接
 
-在 FORTRAN 等其他语言中，有一个称为“拼接”（concatenation）的术语，它由运算符 `//` 标记。它是描述程序之间被授予相互链接的属性。由于已建立的连接，主要目标是 (1) 关注更复杂的 FORTRAN 程序的另一个分支，或者 (2) 构建一个更稳固的框架。在某些情况下，这些链接涉及两个独立的程序；通常，主体是单个元素。
+
+
+在 FORTRAN 等其他语言中，有一个称为“拼接”（concatenation）的术语，它由运算符`//`标记。它是描述程序之间被授予相互链接的属性。由于已建立的连接，主要目标是 (1) 关注更复杂的 FORTRAN 程序的另一个分支，或者 (2) 构建一个更稳固的框架。在某些情况下，这些链接涉及两个独立的程序；通常，主体是单个元素。
 
 示例代码（声明）：
+
 ```fortran
 program string_concatenation
 implicit none
@@ -355,6 +343,7 @@ end program string_concatenation
 ```
 
 示例程序（执行）：
+
 ```
 This is Dana Caulfield.
 I would like to give you a warm welcome to Prescott Academy!
@@ -362,9 +351,10 @@ I would like to give you a warm welcome to Prescott Academy!
 
 ## 3.5 – 修剪
 
-使用 `trim` 函数可以对字符串进行修剪。它切掉不必要的行并继续执行所需的结果。由于程序中存在被称为末尾空格（trailing blanks）的无实质元素，修剪旨在消除杂并只留下核心部分。它允许编译器更快地读取命令。
+使用`trim`函数可以对字符串进行修剪。它切掉不必要的行并继续执行所需的结果。由于程序中存在被称为末尾空格（trailing blanks）的无实质元素，修剪旨在消除杂并只留下核心部分。它允许编译器更快地读取命令。
 
 示例程序：
+
 ```fortran
 program trim
 implicit none
@@ -377,19 +367,23 @@ end program trim
 ```
 
 示例程序（执行）：
+
 ```
 Dana Caulfield welcomes students to Prescott Academy!
 ```
 
 ## 3.6 - 字符串调整
 
-使用 `adjust` 函数可以对字符串进行调整。与上述 `trim` 函数一样，程序需要修改以使编译器运行得更快、更高效。与其从头开始编写程序，此函数允许你进行快速修正而不冒及其完整性的风险。特别是当程序相当长时，这种消除复杂分析的功能将非常有用。
+使用`adjust`函数可以对字符串进行调整。与上述`trim`函数一样，程序需要修改以使编译器运行得更快、更高效。与其从头开始编写程序，此函数允许你进行快速修正而不冒及其完整性的风险。特别是当程序相当长时，这种消除复杂分析的功能将非常有用。
 
 调整函数有两种类型：
+
 1. `adjustr` – 调整字符串右侧的，并将其修改为末尾空格。
+
 2. `adjustl` – 调整字符串左侧的，并将其修改为末尾空格。
 
 示例代码：
+
 ```fortran
 program adjust
 implicit none
@@ -410,6 +404,7 @@ end program adjust
 ```
 
 示例程序（执行）：
+
 ```
 Hi! I’m Dana Caulfield.
 Welcome to Prescott!
@@ -424,6 +419,7 @@ Welcome to Prescott!
 在 FORTRAN 中，你允许在一系列字符串中搜索子字符串。你可以取（至少）两个字符串，并检查字符串 #1 是否为字符串 #2 的子字符串。相反，你也可以检查字符串 #2 是否为字符串 #1 的子字符串。因此，当字符串 #1 的参数是字符串 #2 参数的子字符串时，编译器将返回零或一个整数。
 
 示例代码：
+
 ```fortran
 program search
 implicit none
@@ -440,6 +436,7 @@ end program search
 ```
 
 示例程序（执行）：
+
 ```
 Search is found: index 13
 ```
@@ -449,27 +446,37 @@ Search is found: index 13
 你知道为什么你可以存储数据或数据集合吗？原因在于数组的存在；它们负责存储一组类似的元素（例如字符、变量）。如果数据没有妥善存储，计算机几乎无法解释它们。
 
 关于数组的记忆：
+
 * 指定单个元素通过下标完成
+
 * `extent` 术语描述维度
+
 * `rank` 术语描述维度
+
 * `size` 术语描述元素
-* 它们具有 `dimension` 属性
+
+* 它们具有`dimension`属性
+
 * 它们链接到连续的内存位置
 
 数组有两种类型：
+
 1. 一维数组 – 作为向量的数组
+
 2. 二维数组 – 作为矩阵的数组
 
 ## 3.9 - 数组声明
 
-数组声明非常简单。规则是指定所需的维度；相应的，编译器可以确定涉及元素是 `real` 还是 `integer`。
+数组声明非常简单。规则是指定所需的维度；相应的，编译器可以确定涉及元素是`real`还是`integer`。
 
-例如，声明名为 `Caulfield Lair` 的包含 7 个元素的一维数组，代码如下：
+例如，声明名为`Caulfield Lair`的包含 7 个元素的一维数组，代码如下：
+
 ```fortran
 real, dimension (7) :: Caulfield Lair
 ```
 
-例如，声明一个名为 `Caulfield Lair` 的包含 7 x 7 个元素的二维数组，程序如下：
+例如，声明一个名为`Caulfield Lair`的包含 7 x 7 个元素的二维数组，程序如下：
+
 ```fortran
 integer, dimension (7, 7) :: Caulfield Lair
 ```
@@ -478,21 +485,19 @@ integer, dimension (7, 7) :: Caulfield Lair
 
 涉及数组的值赋值几乎轻而易举；你只需要输入数值。可以通过处理整个数组完成，或者按照建议，处理单个元素。
 
-例如，将值 `3.0` 赋值给名为 `Caulfield Lair` 的数组中的所有 7 个元素，程序如下：
+例如，将值`3.0`赋值给名为`Caulfield Lair`的数组中的所有 7 个元素，程序如下：
+
 ```fortran
 do i = 1, 7
   Caulfield Lair = i * 3.0
 end program do
 ```
 
-例如，将值 `3.0` 赋值给 `Caulfield Lair` 数组的第一个元素，程序如下：
+例如，将值`3.0`赋值给`Caulfield Lair`数组的第一个元素，程序如下：
+
 ```fortran
 Caulfield Lair (1) = 3
 ```
-
-
-
-
 
 ```fortran
           end program do
@@ -522,6 +527,7 @@ end program array
 ```
 
 示例程序（执行结果）：
+
 ```
 3.0
 6.0
@@ -546,13 +552,14 @@ end program array
              8
              9
 ```
+
 数组中的元素可以根据需要进行编号，但最好是将每个元素与一个下界值关联起来。这让你有机会确定哪些进程比其他进程更紧急。如果数字不是连续排列的，它们将在程序执行时自动进行重新编号。
 
 ## 3.12 - 什么是动态数组？
 
 动态数组与普通数组相似。区别在于，它们在编译过程中几乎是不可读的；只有在执行时才能被解释。因此，如果尚未介绍数组的概念，学习动态数组可能会成为一项挑战。
 
-动态数组使用 `allocatable` 属性进行声明。在声明期间，必须使用 `allocate` 属性指定维度。完成后，需要 `deallocate` 属性来释放创建的内存。例如，声明一个名为 `dynamic_array` 维度为 7 x 7 的动态数组，程序写法如下：
+动态数组使用`allocatable`属性进行声明。在声明期间，必须使用`allocate`属性指定维度。完成后，需要`deallocate`属性来释放创建的内存。例如，声明一个名为`dynamic_array`维度为 7 x 7 的动态数组，程序写法如下：
 
 ```fortran
 program darray
@@ -568,10 +575,12 @@ end program darray
 动态数组可以结合语句使用。这消除了混淆，特别是当需要处理多个数组时。通过定义参数定义，可以实现程序的无错误执行。
 
 语句类型：
-* `Where` 语句 – 允许使用数组内部的元素
-* `Data` 语句 – 侧重于多个数组的处理
 
-示例代码（`where` 语句）：
+* `Where`语句 – 允许使用数组内部的元素
+
+* `Data`语句 – 侧重于多个数组的处理
+
+示例代码（`where`语句）：
 
 ```fortran
 program sample_where
@@ -598,7 +607,8 @@ implicit none
 end program sample_where
 ```
 
-示例程序（`where` 语句执行结果）：
+示例程序（`where`语句执行结果）：
+
 ```
 The Array:
 7 8 9 10 11 12 13
@@ -618,7 +628,7 @@ The C Array:
 1 7 7 7 7 7 7
 ```
 
-示例代码（`data` 语句）：
+示例代码（`data`语句）：
 
 ```fortran
 program sample_data
@@ -645,7 +655,8 @@ implicit none
 end program sample_data
 ```
 
-示例程序（`data` 执行结果）：
+示例程序（`data`执行结果）：
+
 ```
 The D Array:
 1
@@ -660,22 +671,24 @@ The E Array:
 7 8 9 10 11 12 13
 ```
 
-
-
-
-
-结构组件是结构中的单个元素，例如之前定义的三个要素：数据类型、数据和结束类型。在满足要求后，你可以使用 `%` 为每个组件分配值。因此，你可以访问结构的部分，如果结果存疑，你只需查找这些成员，而无必遍历整个程序。例如，下方 `Math Class` 结构中的结构组件为 `column 1`、`column 2`、`column 3` 和 `column 4`。
+结构组件是结构中的单个元素，例如之前定义的三个要素：数据类型、数据和结束类型。在满足要求后，你可以使用`%`为每个组件分配值。因此，你可以访问结构的部分，如果结果存疑，你只需查找这些成员，而无必遍历整个程序。例如，下方`Math Class`结构中的结构组件为`column 1`、`column 2`、`column 3`和`column 4`。
 
 `type (Math Class) :: column 1`
+
 `type (Math Class) :: column 2`
+
 `type (Math Class) :: column 3`
+
 `type (Math Class) :: column 4`
 
 ### 赋值赋值：
 
 `column 1%name = Dana Caulfield`
+
 `column 2%name = Rachel Price`
+
 `column 3%name = Warren Amber`
+
 `column 4%name = Kate Victoria`
 
 ### 示例程序：
@@ -714,16 +727,16 @@ end program structure_sample
 
 ### 示例程序（执行结果）：
 
-```
-Dana Caulfield
-            column 1
-Rachel Price
-            column 2
-Warren Amber
-            column 3
-Kate Victoria
-            column 4
-```
+
+
+`Dana Caulfield`
+`column 1`
+`Rachel Price`
+`column 2`
+`Warren Amber`
+`column 3`
+`Kate Victoria`
+`column 4`
 
 ## 4.3 - 带数组创建的结构
 
@@ -823,11 +836,11 @@ end program arg_routine
 
 # 第 5 章：Kind 属性与流 (Streams)
 
-在 FORTRAN 的早期版本中，`real` 数字并不是只有一种，而是 2 种：(1) 默认 `real` 和 (2) 双精度 `real`。由于存在这两种类型，有时数据的呈现会出问题。此外，它可以测试程序的完整性。作为解决方案，程序员通常使用 kind 属性来增强精度。
+在 FORTRAN 的早期版本中，`real` 数字并不是只有一种，而是 2 种：(1) 默认 `real` 和 (2) 双精度 `real`。由于存在这两种类型，有时数据的呈现会出问题。此外，它可以测试程序的完整性。作为解决方案，程序员通常使用 `kind` 属性来增强精度。
 
 ## 5.1 - 什么是 Kind 属性？
 
-如所述，kind 属性负责提供更好的精度控制。它们被设计用于根据类别设置顺序并排列数据。由于各种类型的元素（例如实数数据和整数）可能存储在程序中，如果没有函数的帮助进行正确分类，它们最终会变得杂乱。
+如所述，`kind` 属性负责提供更好的精度控制。它们被设计用于根据类别设置顺序并排列数据。由于各种类型的元素（例如实数数据和整数）可能存储在程序中，如果没有函数的帮助进行正确分类，它们最终会变得杂乱。
 
 **示例代码（声明）：**
 
@@ -862,7 +875,7 @@ the default kind attribute for int is 4
 
 ## 5.2 - Determining Kind 属性的大小
 
-确定 kind 属性的大小在关注单个元素时特别有用。如果你想了解更多关于程序的性质，一种方法是使用函数查询。你可以执行的任务列表包括：确定小数的值、识别所需的位数以及查找数字的指数范围。
+确定 `kind` 属性的大小在关注单个元素时特别有用。如果你想了解更多关于程序的性质，一种方法是使用函数查询。你可以执行的任务列表包括：确定小数的值、识别所需的位数以及查找数字的指数范围。
 
 **示例代码（声明）：**
 
@@ -877,10 +890,6 @@ implicit none
 
     print *, ‘the precision of real (6) =’, precision (j)
 ```
-
-
-
-
 
 ```
 print *, ‘the precision of real (7) =’, precision (m)
@@ -911,6 +920,7 @@ end program obtain_kind
 ```
 
 示例程序（执行）：
+
 `the selected kind is (p = 5, r = 37) 24`
 
 ## 5.4 - 注释
@@ -948,9 +958,13 @@ end program stream_complex
 ```
 
 示例程序（执行）：
+
 `This is my array`
+
 3 4 5 6 7
+
 10 1 2 13 14
+
 17 18 19 20 21
 
 # 第 6 章：过程 – 子程序与外部函数
@@ -966,12 +980,17 @@ end program stream_complex
 编写过程是一个漫长的过程；你需要小心，因为这通常是你无法修改的程序。如果提交了有问题的行，整个程序可能会受到影响。
 
 关于过程需要记住的：
+
 - 给过程中的输入值赋值为 `in`
+
 - 给过程中使用的和/或参数赋值为 `inout`
+
 - 给过程中的输出值赋值为 `out`
 
 另外两种类型：
+
 1. `子程序`（Subroutines）——定义在`子程序子程序`中的过程。
+
 2. `外部函数`（External functions）——定义在`外部函数子程序`中的过程。
 
 ## 6.2 - 理解子程序
@@ -996,11 +1015,17 @@ end program call_subroutine
 ```
 
 示例程序（执行）：
+
 `Call before swap`
+
 `s = 4.0`
+
 `t = 5.0`
+
 `After swap`
+
 `s = 5.0`
+
 `t = 4.0`
 
 ## 6.3 - 理解外部过程
@@ -1044,20 +1069,22 @@ end program external_main
 ```
 
 示例程序（执行）：
+
 `Call before swap`
+
 `s = 4.0`
+
 `t = 5.0`
+
 `After swap`
+
 `s = 5.0`
+
 `t = 4.0`
 
 ## 6.4 – 理解递归过程
 
 递归过程（Recursive procedures）是调用它们自身的过程——无论是直接还是间接。它们倾向于重复过程以执行特定的任务。尽管它们被重复编写，但每个包含的元素对于整个程序来说都是不可缺少的。
-
-
-
-
 
 递归过程的声明要求在执行所需的操作之前调用 `recursive` 关键字。而且通常情况下，如果递归使用了过程，`result` 选项也需要出现在方程中。
 
@@ -1099,6 +1126,8 @@ end program internal_procedures
 
 示例程序：
 
+
+
 ```fortran
 program internal_main
 implicit none
@@ -1125,15 +1154,20 @@ end program internal_main
 示例程序（执行）：
 
 Call before swap
+
 s = 4.0
+
 t = 5.0
+
 Call after swap
+
 s = 5.0
+
 t = 4.0
 
 ## 6.6 - 过程与参数
 
-关于过程和参数已经出现了不同的讨论；其中最常见的是阐明了过程是否可以作为参数编写和使用的问题。在假设语句中定义了函数且存在实际参数的情况下，答案是肯定的，**过程可以创建创建参数**。
+关于过程和参数已经出现了不同的讨论；其中最常见的是阐明了过程是否可以作为参数编写和使用的问题。在假设语句中定义了函数且存在实际参数的情况下，答案是肯定的，过程可以创建创建参数。
 
 示例程序：
 
@@ -1151,7 +1185,7 @@ end program proc_arg
 
 ## 6.7 - 模块与过程
 
-虽然模块对于 FORTRAN 来说比较新，但它们对这种编程语言是非常重要的。引入模块是为了包含大量的元素，如数据、过程和定义。有了了模块，使用另一种编程语言的程序员也可以访问使用语言编写的大部分内容。
+虽然模块对于 FORTRAN 来说比较新，但它们对这种编程语言是非常重要的。引入模块是为了包含大量的元素，如数据、过程和定义。有了模块，使用另一种编程语言的程序员也可以访问使用语言编写的大部分内容。
 
 示例代码：
 
@@ -1247,8 +1281,8 @@ c = a ** b
 
 1. 括号 `()`
 2. 幂运算 `**`
-3. 乘法 `*` 和 除法 `/`
-4. 加法 `+` 和 减法 `-`
+3. 乘法 `*` 和除法 `/`
+4. 加法 `+` 和减法 `-`
 
 如果两个运算符具有相同的优先级，它们将从左到右求值。
 
@@ -1288,10 +1322,6 @@ c = 10 / (2 * 5)
 
 在这种情况下，括号内的乘法 `(2 * 5)` 先执行，得到 `10`，然后将 `10` 除以 `10`，得到 `1`。这就是 `c` 的值。
 
-
-
-
-
 一些初级程序员可能会疑惑，程序中为什么要包含空白（有时称为跳过位置，skip positions）。虽然也有一些人坚持在不包含这些空格的情况下编写程序，但大多数程序员更倾向于包含这些额外的空格来提高可读性。
 
 ## 7.3 - 特殊字符
@@ -1321,12 +1351,12 @@ c = 10 / (2 * 5)
 
 你现在已经接触了 FORTRAN 中的一些基础数学函数。这种编程语言在需要数学计算时真正展现出最佳性能。以下是你可以使用的内置函数。
 
-*   `tan(x)` – 此函数用于正切，并返回实数
-*   `atan(x)` – 此函数用于计算反正切，它也返回实数
-*   `sin(x)` – 用于正弦，并返回实数
-*   `cos(x)` – 此函数用于表示余弦，它也返回实数
-*   `abs(x)` – 此函数用于计算绝对值，可以返回实数或整数
-*   `sqrt(x)` – 是用于计算数字平方根的函数，它也返回实数
+- `tan(x)` – 此函数用于正切，并返回实数
+- `atan(x)` – 此函数用于计算反正切，它也返回实数
+- `sin(x)` – 用于正弦，并返回实数
+- `cos(x)` – 此函数用于表示余弦，它也返回实数
+- `abs(x)` – 此函数用于计算绝对值，可以返回实数或整数
+- `sqrt(x)` – 是用于计算数字平方根的函数，它也返回实数
 
 你可以在计算中使用这些内置函数。当然，FORTRAN 有许多函数，在书中列出所有函数将将是徒劳的。然而，根据列表中提供的函数，你可以练习在计算中编写包含不同变量的代码。你还应该注意，FORTRAN 中的三角函数是以弧度计算的。
 
@@ -1358,9 +1388,9 @@ WRITE 行也称为 WRITE 语句，是列表导向的输出（list-directed outpu
 
 关于 WRITE 行需要记住的点：
 
-*   在大多数情况下，如果它们的元素无法放入单行，计算机将自动将它们的显示移动到下一行
-*   它们的第二形式不包含任何变量；相反，它们只是引入一个空行
-*   它们需要新行来开始
+- 在大多数情况下，如果它们的元素无法放入单行，计算机将自动将它们的显示移动到下一行
+- 它们的第二形式不包含任何变量；相反，它们只是引入一个空行
+- 它们需要新行来开始
 
 示例程序：
 
@@ -1378,8 +1408,11 @@ end program write_line
 ```
 
 示例程序（执行结果）：
+
 target = 3.0 (hours)
+
 destination = 4.0 (kilometers)
+
 The target time to reach your destination is 12.0 hours
 
 ## 8.3 - READ 行
@@ -1388,12 +1421,12 @@ READ 行也称为 READ 语句，是列表导向的数据（list-directed data）
 
 关于 READ 行需要记住的点：
 
-*   如果以列表形式呈现，它们倾向于跳过一行
-*   如果它们需要输入值，则必须随输入一起引入新行
-*   它们的执行总是从搜索输入值和新的输入行开始
-*   它们可以处理有限的转换
-*   它们可以出现在多行
-*   它们需要新行来开始
+- 如果以列表形式呈现，它们倾向于跳过一行
+- 如果它们需要输入值，则必须随输入一起引入新行
+- 它们的执行总是从搜索输入值和新的输入行开始
+- 它们可以处理有限的转换
+- 它们可以出现在多行
+- 它们需要新行来开始
 
 示例程序：
 
@@ -1408,10 +1441,15 @@ end program read_line
 ```
 
 示例程序（执行结果）：
+
 name1 = Danafield
+
 school = Blackwell Academy
+
 height = 5 feet, 5 inches
+
 weight = 55 kilos
+
 eye = almond
 
 # 第 9 章：条件语句
@@ -1430,13 +1468,9 @@ end if
 
 ## 9.1 - 一些编程规范
 
-
-
-
-
 以下是一些编程规范。它们对编译器如何翻译你的代码没有直接影响。请看下方的代码是如何编写的：
 
-```
+```fortran
 if  (x == 1) then 
 print *,'turn left'
 !do you notice anything
@@ -1455,7 +1489,7 @@ end if
 
 为了解决这个困境，你可以按照如下方式编写你的 `if-then` 语句：
 
-```
+```fortran
 if  (userinput == 1) then
 <程序将执行一组语句>
 else if  (userinput == 2) then
@@ -1473,16 +1507,17 @@ end if
 
 当然，FORTRAN 中除了 `==` 或测试等等的运算符外，还有更多逻辑运算符。以下是你在编写代码时可以使用的其他逻辑运算符：
 
-| 不等于 | /= |
+| 运算符 | 定义 |
 | :--- | :--- |
-| 小于 | < |
-| 大于 | > |
-| 大于等于 | >= |
-| 小于等于 | <= |
+| `/=` | 不等于 |
+| `<` | 小于 |
+| `>` | 大于 |
+| `>=` | 大于等于 |
+| `<=` | 小于等于 |
 
 这里是一个使用不同逻辑运算符的示例代码。这段代码实际上使用了多个条件，其中一个条件语句嵌套在另一个语句之中：
 
-```
+```fortran
 if  (a > b) then
 if  (x <= y) then
 <执行这些语句>
@@ -1492,7 +1527,7 @@ end  if
 
 你可以在逻辑操作中使用的另一个构造是 `.and.`，你可以用它来满足不同的条件。考虑以下示例：
 
-```
+```fortran
 if  (a == b .and. c < d) then
 <执行这些语句>
 end  if
@@ -1512,19 +1547,25 @@ end  if
 
 ![thank-you](img/00001.jpeg)
 
-点击此处在 amazon.com 上发表评论
+点击此处在 `amazon.com` 上发表评论
+
+```c
 {
-printf( "Hello!\n" );
-getchar();
-return 0;
+    printf("Hello!\n");
+
+    getchar();
+
+    return 0;
 }
 ```
 
-正如第一行所示，代码使用了 `#include` 指令包含 `stdio.h`。在这种情况下，`stdio.h` 将为你提供函数 `printf` 和 `getchar`。
+
+
+正如第一行所示，代码使用了`#include`指令包含`stdio.h`。在这种情况下，`stdio.h`将为你提供函数`printf`和`getchar`。
 
 ### Main 声明
 
-之后，第二行包含 `int main()`。此行告诉编译器存在名为 `main` 的函数。`int` 表示 `main` 函数将返回一个整数。
+之后，第二行包含`int main()`。此行告诉编译器存在名为`main`的函数。`int`表示`main`函数将返回一个整数。
 
 ### 大括号
 
@@ -1532,21 +1573,16 @@ return 0;
 
 ### Printf()
 
-紧跟左大括号的 `printf` 函数是 `main` 函数中的第一行代码。像 `main` 函数一样，`printf` 内部也包含一个代码块，由于你在程序中包含了 `<stdio.h>`，它是已经创建。`printf` 函数的功能是将文本打印到程序的显示窗口中。
+紧跟左大括号的`printf`函数是`main`函数中的第一行代码。像`main`函数一样，`printf`内部也包含一个代码块，由于你在程序中包含了`<stdio.h>`，它是已经创建。`printf`函数的功能是将文本打印到程序的显示窗口中。
 
-`printf` 旁边是你想要打印的值或文本。它应该放在括号内以符合规范。代码想要打印的值是 Hello World! 为了确保 `printf` 识别你想打印的是字符串并正确显示文本，它应该包含在双引号内。
+`printf`旁边是你想要打印的值或文本。它应该放在括号内以符合规范。代码想要打印的值是 Hello World! 为了确保`printf`识别你想打印的是字符串并正确显示文本，它应该包含在双引号内。
 
 顺便说一下，在编程中，单个字符被称为字符，而字符序列被称为字符串。
-
-
-
-
 
 - [点击此处在亚马逊上查看《C Programming Success in a Day》。](http://www.amazon.com/Programming-Success-Day-programming-Developers-ebook/dp/B00Q3Y55PM)
 - [点击此处在亚马逊上查看《C Programming Professional Made Easy》。](http://www.amazon.com/Programming-Professional-Made-Easy-programming-ebook)
 - [点击此处在亚马逊上查看《JavaScript Programming Made Easy》](http://www.amazon.com/JavaScript-Professional-Programming-Made-Easy-ebook/dp/B00SDM365S)
-- [点击此处在亚马逊上查看《PHP Programming Professional Made Easy》。](http://www.amazon.com/PHP-Programming-Professional-Made-Easy-ebook/dp/B00RES3EWC)
+- [点击此处在亚马逊上查看《PHP Programming Professional Made Easy》。](http://www.amazon.com/PHP-Programming-Professional-Made-Easy-programming-ebook/dp/B00RES3EWC)
 - 点击此处在亚马逊上查看《C++ Programming Success in a Day》
 - [点击此处在亚马逊上查看《Windows 8 Tips for Beginners》。](http://www.amazon.com/Windows-Tips-Beginners-Networking-Technology-ebook/dp/B00RW2E6JA)
 - [点击此处在亚马逊上查看《HTML Professional Programming Made Easy》](http://www.amazon.com/HTML-Programming-Professional-Made-Easy-ebook/dp/B00SGGKHSU)
-

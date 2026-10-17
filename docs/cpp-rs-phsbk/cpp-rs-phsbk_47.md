@@ -1,3 +1,4 @@
+
 # 奇怪地反复出现的模板模式（CRTP）
 
 > 原文：[`cel.cs.brown.edu/crp/patterns/crtp.html`](https://cel.cs.brown.edu/crp/patterns/crtp.html)
@@ -55,7 +56,6 @@ int main() {
 ```
 
 ```rs
-
 trait Shape {
 
     fn area(&self) -> f64;
@@ -119,7 +119,6 @@ fn main() {
     println!("{}", square.twice_area());
 
 }
-
 ```
 
 Rust 中默认方法调用 `area` 静态执行无需额外操作的原因是，在 Rust 中对 `self` 的方法调用始终是静态解析的。这是可能的，因为 Rust 中没有具体类型之间的继承。尽管默认方法是在特质中定义的，但实际上它是实现结构的一部分。
@@ -188,7 +187,6 @@ int main() {
 ```
 
 ```rs
-
 // 不需要泛型类型：Self 已经
 
 // 指的是实现类型。
@@ -276,9 +274,8 @@ fn main() {
     println!("{}", x.0)
 
 }
-
 ```
 
 再次，`Self` 可以引用实现类型的原因是 Rust 不支持具体类型之间的继承。这与 C++ 相比，其中值可以在任何数量的具体类型中使用，因此不清楚 `Self` 应该引用哪种类型。
 
-<link rel="stylesheet" type="text/css" href="../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Curiously recurring template pattern (CRTP))
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Curiously recurring template pattern (CRTP))

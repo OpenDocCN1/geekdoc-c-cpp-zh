@@ -1,21 +1,11 @@
+
 # C# 泛式编程：从入门到精通 Monads
-
-
-
-
-
 
 ![](img/c0b8b96a0157eda20d597ec50a87edc6_0_0.png)
 
-
-
-
-
-
 我的函数式库 Functional.DotNet
+
 https://github.com/kinderbueno360/Functional.DotNet
-
-
 
 # 献辞
 
@@ -45,46 +35,47 @@ https://github.com/kinderbueno360/Functional.DotNet
 
 Carlos Bueno
 
-
-
-
-
-
-
-
 C 中现有的 Monad 库
 
 使用 .NET 8 和 C# 11 创建和使用简单的 Monads
-
 
 规划你的库
 
 设计与实现 Monads
 
-Maybe<T>
+`Maybe<T>`
+
 - 示例
+
 - 使用 Map
+
 - 使用 Bind
+
 - 使用 GetOrElse
+
 - 综合使用
 
-Either<L, R>
+`Either<L, R>`
 
-Validation<T>
-- 在 Web API 中使用 Validation<T>
-Try<T>：函数式地处理异常
+`Validation<T>`
+
+- 在 Web API 中使用`Validation<T>`
+
+`Try<T>`：函数式地处理异常
 
 示例
-- 运行 Try
-- Exceptional<T>
-- Exceptional<T> 的示例用法
-- 结论
 
+- 运行 Try
+
+- `Exceptional<T>`
+
+- `Exceptional<T>`的示例用法
+
+- 结论
 
 场景描述
 
 构建应用程序
-
 
 # 序言
 
@@ -124,10 +115,9 @@ Monads 在 C 中至关重要，是因为它们通过提供抽象计算上下文�
 
 在 C# 中，与许多其他语言一样，monads 并不是语言语法的显式部分，而是一种可以
 
-
 用于将函数式编程的优势带入我们的代码中。
 
-即使你以前从未听说过单例（monads），你可能在不知不觉的情况下已经它们。C# 和 .NET 中的许多构造，如 `Nullable<T>`、`IEnumerable<T>` 和 `Task<T>` 都遵循单例模式。通过显式理解单例，我们可以更有效地使用这些构造，并编写更健壮、更易维护的 C# 代码。
+即使你以前从未听说过单例（monads），你可能在不知不觉的情况下已经它们。C# 和 .NET 中的许多构造，如`Nullable<T>`、`IEnumerable<T>`和`Task<T>`都遵循单例模式。通过显式理解单例，我们可以更有效地使用这些构造，并编写更健壮、更易维护的 C# 代码。
 
 在接下来的章节中，我们将更深入地探索这些思想，提供实践示例和指导，帮助你掌握在 C# 代码中使用单例的方法。
 
@@ -166,7 +156,7 @@ string str = $"答案是 {number}";
 
 ### 结构体的 with 表达式（with Expressions for Structs）
 
-`with` 表达式之前适用于记录类型，现在扩展到了 C#11 的结构体。该功能允许你创建一个带有某些属性更改的新结构体。
+`with`表达式之前适用于记录类型，现在扩展到了 C#11 的结构体。该功能允许你创建一个带有某些属性更改的新结构体。
 
 ```csharp
 public struct Point
@@ -192,7 +182,7 @@ public void ExampleMethod(string? value)
 }
 ```
 
-在上面的代码中，如果 value 为空，将会自动抛出 `ArgumentNullException`。
+在上面的代码中，如果 value 为空，将会自动抛出`ArgumentNullException`。
 
 这些只是 C#11 函数式编程功能的一角。在接下来的章节中，当我们探索 C# 单例的世界时，我们将利用这些及更多功能。
 
@@ -218,7 +208,7 @@ public void ExampleMethod(string? value)
 
 ### 不可数据类型
 
-.NET 8 和 C# 提供了一系列函数式编程基础的不可变数据类型和结构，例如 `System.String`、`System.DateTime` 和记录类型。这些类型确保了数据的一致性并使代码更容易理解。
+.NET 8 和 C# 提供了一系列函数式编程基础的不可变数据类型和结构，例如`System.String`、`System.DateTime`和记录类型。这些类型确保了数据的一致性并使代码更容易理解。
 
 ### LINQ 和高级集合操作
 
@@ -226,7 +216,7 @@ public void ExampleMethod(string? value)
 
 ### 基于任务的异步编程
 
-.NET 中的 `Task` 和 `Task<T>` 类型为异步编程提供了一种模型，这种模型在本质上是函数式的。它们允许开发者以直观的线性风格编写非阻塞代码，避免了回调地狱。
+.NET 中的`Task`和`Task<T>`类型为异步编程提供了一种模型，这种模型在本质上是函数式的。它们允许开发者以直观的线性风格编写非阻塞代码，避免了回调地狱。
 
 ### 高性能函数式库
 
@@ -248,7 +238,7 @@ public void ExampleMethod(string? value)
 (C<T>, (T -> R)) -> C<R>
 ```
 
-Map 是接收一个包装类型 T 的泛型容器和一个将 T 转换为 R 的函数，并在将其应用到容器值后返回一个包装 R 的容器 C<R>。
+Map 是接收一个包装类型 T 的泛型容器和一个将 T 转换为 R 的函数，并在将其应用到容器值后返回一个包装 R 的容器`C<R>`。
 
 ![](img/c0b8b96a0157eda20d597ec50a87edc6_20_0.png)
 
@@ -256,10 +246,7 @@ Map 是接收一个包装类型 T 的泛型容器和一个将 T 转换为 R 的�
 
 描述单例的一个流行比喻是“提升世界”的概念。假设你有一组处理简单类型的函数，但现在你需要在提升的上下文中处理这些类型。
 
-这可能是处理异步操作（C# 中的 `Task<T>`）、可空类型（`Maybe<T>`）或值列表（`IEnumerable<T>`）。
-
-
-
+这可能是处理异步操作（C# 中的`Task<T>`）、可空类型（`Maybe<T>`）或值列表（`IEnumerable<T>`）。
 
 （在 C# 中为 SelectMany，在 Haskell 中为 >>=）：接收一个提升的值和一个作用于底层值的函数，并返回一个提升后的结果。它将函数应用于提升后的值，并在必要时对结果进行平铺。
 
@@ -345,6 +332,8 @@ C# 中的几个库已经利用了单的力量。这些库使用单的概念来�
 
 这里是一个简单的 Maybe 单的实现实现：
 
+
+
 ```csharp
 public sealed class Maybe<T>
 {
@@ -365,13 +354,13 @@ public sealed class Maybe<T>
 }
 ```
 
-要创建一个单语境，我们只需要用 Maybe<T> 包装一个值：
+要创建一个单语境，我们只需要用`Maybe<T>`包装一个值：
 
 ```csharp
 var maybeInt = new Maybe<int>(5);
 ```
 
-要提取值，我们检查 HasValue 是否为真，然后访问 Value 属性：
+要提取值，我们检查`HasValue`是否为真，然后访问`Value`属性：
 
 ```csharp
 if (maybeInt.HasValue)
@@ -380,7 +369,7 @@ if (maybeInt.HasValue)
 }
 ```
 
-这个 Maybe 单可以通过添加 Bind 和 Return 函数来改进，使其更加强大和灵活。我们将在未来的章节中探索这些概念。
+这个`Maybe`单可以通过添加`Bind`和`Return`函数来改进，使其更加强大和灵活。我们将在未来的章节中探索这些概念。
 
 ## 第 6 章：使用 .NET 8 和 C# 构建你自己的单库
 
@@ -392,17 +381,12 @@ if (maybeInt.HasValue)
 
 建立单库的第一步是规划它的结构并确定我们想要整合的单。我们的库将包含各种单，包括：
 
-- Maybe<T>：象征可能产生也可能产生值的计算。
-
-- Either<L, R>：表示可以产生两种类型之一的计算，通常用于可能失败的计算。
-
-- Validation<T>：用于需要验证检查的计算。
-
-- Try<T>：与 Either 类似但专门针对异常，惰性求值并通过 Run 调用。
-
-- Exceptional<T>：专门为处理异常设计的单。
-
-- Task<T>：.NET 中用于处理异步计算的知名单。
+- `Maybe<T>`：象征可能产生也可能产生值的计算。
+- `Either<L, R>`：表示可以产生两种类型之一的计算，通常用于可能失败的计算。
+- `Validation<T>`：用于需要验证检查的计算。
+- `Try<T>`：与`Either`类似但专门针对异常，惰性求值并通过`Run`调用。
+- `Exceptional<T>`：专门为处理异常设计的单。
+- `Task<T>`：.NET 中用于处理异步计算的知名单。
 
 ## 设计与实现单
 
@@ -410,19 +394,15 @@ if (maybeInt.HasValue)
 
 ### Maybe<T>
 
-我们在前一个章节中创建了一个原始的 Maybe<T>。现在，让我们通过添加功能来扩展它。
+我们在前一个章节中创建了一个原始的`Maybe<T>`。现在，让我们通过添加功能来扩展它。
 
-在这一节中，我们将通过添加三个重要的方法 Map、Bind 和 GetOrElse 来增强我们的 Maybe<T> 单。
+在这一节中，我们将通过添加三个重要的方法`Map`、`Bind`和`GetOrElse`来增强我们的`Maybe<T>`单。
 
-- Map：此方法用于转换 Maybe<T> 单内部的值。它接收一个从类型 T 到类型 R 的函数，如果值存在则将其应用。如果 Maybe<T> 单为 None，则返回 None。
-
-- Bind：此方法与 Map ，但它接收的函数返回 Maybe<R> 而不是简单的 R。这允许你链接可能失败的操作。
-
-- GetOrElse：此方法用于从 Maybe<T> 中提取值。如果 Maybe<T> 为 None，则返回一个默认值。
+- `Map`：此方法用于转换`Maybe<T>`单内部的值。它接收一个从类型`T`到类型`R`的函数，如果值存在则将其应用。如果`Maybe<T>`单为`None`，则返回`None`。
+- `Bind`：此方法与`Map`，但它接收的函数返回`Maybe<R>`而不是简单的`R`。这允许你链接可能失败的操作。
+- `GetOrElse`：此方法用于从`Maybe<T>`中提取值。如果`Maybe<T>`为`None`，则返回一个默认值。
 
 让我们查看代码以详细了解这些方法。
-
-
 
 ```csharp
 if (HasValue)
@@ -454,19 +434,19 @@ public T GetOrElse(T defaultValue)
 }
 ```
 
-在上面的代码中，你可以看到是如何为 `Maybe<T>` 单子定义 `Map`、`Bind` 和 `GetOrElse` 方法的。
+在上面的代码中，你可以看到是如何为`Maybe<T>`单子定义`Map`、`Bind`和`GetOrElse`方法的。
 
-`Map` 函数使用 `HasValue` 属性检查 Maybe 是否包含包含值。如果是，它将函数 `f` 应用于该值并封装在 `Some` 中。如果不是，它直接返回 `None`。
+`Map`函数使用`HasValue`属性检查`Maybe`是否包含包含值。如果是，它将函数`f`应用于该值并封装在`Some`中。如果不是，它直接返回`None`。
 
-`Bind` 函数也检查 Maybe 是否包含值。如果是，它将函数 `f` 应用于该值。这里的区别在于函数 `f` 返回一个 `Maybe<R>`，这允许你链式可能会失败的操作。
+`Bind`函数也检查`Maybe`是否包含值。如果是，它将函数`f`应用于该值。这里的区别在于函数`f`返回一个`Maybe<R>`，这允许你链式可能会失败的操作。
 
-`GetOrElse` 函数非常直观——如果值存在，则返回该值；否则，返回提供的默认值。
+`GetOrElse`函数非常直观——如果值存在，则返回该值；否则，返回提供的默认值。
 
-这些额外的方法使得 `Maybe<T>` 成为处理可能产生也可能不产生值的操作强大工具，并帮助我们避免空引用异常。
+这些额外的方法使得`Maybe<T>`成为处理可能产生也可能不产生值的操作强大工具，并帮助我们避免空引用异常。
 
 ## 示例 (Samples)
 
-假设我们有一个简单的函数 `Divide`，它接收两个整数并将它们的除法结果作为 `Maybe<double>` 返回。如果除数为 0，它返回 `None`；否则，它返回 `Some(result)`。
+假设我们有一个简单的函数`Divide`，它接收两个整数并将它们的除法结果作为`Maybe<double>`返回。如果除数为 0，它返回`None`；否则，它返回`Some(result)`。
 
 ```csharp
 public Maybe<double> Divide(int numerator, int denominator)
@@ -492,7 +472,7 @@ Maybe<int> result = number.Map(n => n * 2);
 Console.WriteLine(result.GetOrElse(0)); // 输出: 10
 ```
 
-在这个示例中，我们首先创建了一个包含数字 5 的 `Maybe<int>`。然后我们使用 `Map` 函数将数字乘以 2，产生一个包含数字 10 的新 `Maybe<int>`。如果原始的 `Maybe<int>` 是 `None`，`Map` 函数将导致 `None`。
+在这个示例中，我们首先创建了一个包含数字 5 的`Maybe<int>`。然后我们使用`Map`函数将数字乘以 2，产生一个包含数字 10 的新`Maybe<int>`。如果原始的`Maybe<int>`是`None`，`Map`函数将导致`None`。
 
 ### 使用 Bind
 
@@ -509,7 +489,7 @@ Maybe<double> result = numerator.Bind(n => denominator.Map(d => Divide(n, d)));
 Console.WriteLine(result.GetOrElse(0)); // 输出: 5
 ```
 
-在这个示例中，我们使用 `Bind` 链式调用了两个操作。外层的 `Bind` 操作提取分子，内的 `Map` 操作提取分母。然后我们使用这两个值调用 `Divide` 函数。如果分子或分母其中之一为 `None`，`Divide` 函数将不会被调用，结果将为 `None`。
+在这个示例中，我们使用`Bind`链式调用了两个操作。外层的`Bind`操作提取分子，内的`Map`操作提取分母。然后我们使用这两个值调用`Divide`函数。如果分子或分母其中之一为`None`，`Divide`函数将不会被调用，结果将为`None`。
 
 ### 使用 GetOrElse
 
@@ -522,11 +502,11 @@ int result = number.GetOrElse(0);
 Console.WriteLine(result); // 输出: 0
 ```
 
-在这个示例中，我们对一个为 `None` 的 `Maybe<int>` 调用了 `GetOrElse`。因为 `number` 是 `None`，`GetOrElse` 返回了我们提供的默认值，即 0。
+在这个示例中，我们对一个为`None`的`Maybe<int>`调用了`GetOrElse`。因为`number`是`None`，`GetOrElse`返回了我们提供的默认值，即 0。
 
 ## 汇总 (All together)
 
-假设我们有两个函数 `FindPerson` 和 `GetAge`。`FindPerson` 函数接收人的姓名并返回一个 `Maybe<Person>` 对象。如果没有找到该人，它返回 `None`；否则，它返回 `Some(person)`。`GetAge` 函数接收一个 `Person` 对象并返回人的年龄作为 `Maybe<int>` 返回。如果 `Person` 对象为空，它返回 `None`；否则它返回 `Some(age)`。
+假设我们有两个函数`FindPerson`和`GetAge`。`FindPerson`函数接收人的姓名并返回一个`Maybe<Person>`对象。如果没有找到该人，它返回`None`；否则，它返回`Some(person)`。`GetAge`函数接收一个`Person`对象并返回人的年龄作为`Maybe<int>`返回。如果`Person`对象为空，它返回`None`；否则它返回`Some(age)`。
 
 ```csharp
 public record Person
@@ -542,7 +522,7 @@ public Maybe<int> GetAge(Person person) =>
     person == null ? Maybe<int>.None : Maybe<int>.Some(person.Age);
 ```
 
-现在让我们使用 `Map`、`Bind` 和 `GetOrElse` 来查找人的年龄：
+现在让我们使用`Map`、`Bind`和`GetOrElse`来查找人的年龄：
 
 ```csharp
 string personName = "John";
@@ -554,13 +534,13 @@ int finalAge = age.GetOrElse(0);
 Console.WriteLine(finalAge); // 输出: 31
 ```
 
-在这个示例中，我们首先使用 `FindPerson` 根据姓名查找人。这给了我们一个 `Maybe<Person>` 对象。然后我们使用 `Bind` 提取 `Person` 对象并将其传递给 `GetAge`，这给了我们一个 `Maybe<int>` 对象。我们使用 `Map` 加 1，产生一个新的 `Maybe<int>` 对象。最后，我们使用 `GetOrElse` 从 `Maybe<int>` 对象中提取年龄。如果该链中的任何一步失败并结果为 `None`，`GetOrElse` 将返回我们提供的默认值，即 0。
+在这个示例中，我们首先使用`FindPerson`根据姓名查找人。这给了我们一个`Maybe<Person>`对象。然后我们使用`Bind`提取`Person`对象并将其传递给`GetAge`，这给了我们一个`Maybe<int>`对象。我们使用`Map`加 1，产生一个新的`Maybe<int>`对象。最后，我们使用`GetOrElse`从`Maybe<int>`对象中提取年龄。如果该链中的任何一步失败并结果为`None`，`GetOrElse`将返回我们提供的默认值，即 0。
 
-这些示例演示了如何使用 `Map`、`Bind` 和 `GetOrElse` 安全地处理可能产生也可能不产生值的操作，以及如何用一种清晰且可读的方式链式调用操作。
+这些示例演示了如何使用`Map`、`Bind`和`GetOrElse`安全地处理可能产生也可能不产生值的操作，以及如何用一种清晰且可读的方式链式调用操作。
 
 ## Either<L, R>
 
-`Either` 单子表示一个可能产生两种类型之一的计算。我们经常用它表示可能会失败的计算，其中 L 是错误类型，而 R 是成功类型。让我们来看一个基础实现：
+`Either`单子表示一个可能产生两种类型之一的计算。我们经常用它表示可能会失败的计算，其中`L`是错误类型，而`R`是成功类型。让我们来看一个基础实现：
 
 ```csharp
 public abstract class Either<L, R>
@@ -597,14 +577,14 @@ public abstract class Either<L, R>
 }
 ```
 
-这段代码定义了一个泛型 `Either<L, R>` 抽象类，它表示一个可以持有类型 L (左) 或 R (右) 值的类型。这是函数式编程语言中一种常见的类型，通常用于表示可以成功 (Right) 或失败 (Left) 的计算结果。`Either<L, R>` 类有两个具体的子类 `Left` 和 `Right`，分别表示相应类型的值。`Match` 方法在父类中是抽象的，并在每个子类中实现。该方法接收两个 `Func` 参数，一个处理左值，一个处理右值。这是此类类型中常用的模式匹配模式。
+这段代码定义了一个泛型`Either<L, R>`抽象类，它表示一个可以持有类型`L`(左) 或`R`(右) 值的类型。这是函数式编程语言中一种常见的类型，通常用于表示可以成功 (`Right`) 或失败 (`Left`) 的计算结果。`Either<L, R>`类有两个具体的子类`Left`和`Right`，分别表示相应类型的值。`Match`方法在父类中是抽象的，并在每个子类中实现。该方法接收两个`Func`参数，一个处理左值，一个处理右值。这是此类类型中常用的模式匹配模式。
 
-`Map` 和 `Bind` 是使 `Either` 单子的核心操作实现。
+`Map`和`Bind`是使`Either`单子的核心操作实现。
 
-- `Map`: 该方法允许你对 Either 对象的右值应用一个函数，如果 Either 对象是 Left，它直接返回该左值而不应用函数。该方法使用 `Match` 方法来决定采取的行动。
-- `Bind`: 该方法在其他上下文中也称为 `flatMap` 或 `SelectMany`。它允许你对 Either 对象的右值应用一个函数，该函数返回另一个 Either 对象。当你有一系列每个返回 Either 的计算时非常有用：你可以使用 `Bind` 将它们链式调用。如果任何计算失败（返回 Left），链将短路并立即返回该左值。
+- `Map`: 该方法允许你对`Either`对象的右值应用一个函数，如果`Either`对象是`Left`，它直接返回该左值而不应用函数。该方法使用`Match`方法来决定采取的行动。
+- `Bind`: 该方法在其他上下文中也称为`flatMap`或`SelectMany`。它允许你对`Either`对象的右值应用一个函数，该函数返回另一个`Either`对象。当你有一系列每个返回`Either`的计算时非常有用：你可以使用`Bind`将它们链式调用。如果任何计算失败（返回`Left`），链将短路并立即返回该左值。
 
-这里有一个如何使用此 Either 类的示例：
+这里有一个如何使用此`Either`类的示例：
 
 ```csharp
 // 一个可能会失败的函数
@@ -616,7 +596,6 @@ Either<string, int> TryParse(string str)
         return new Either<string, int>.Left("Failed to parse")
 }
 ```
-
 
 ```c
 // 使用：
@@ -653,9 +632,9 @@ var either = TryParse("4");
 either = either.Bind(DivideByTwo); // 如果解析成功，将数字除以 2
 ```
 
-在这个示例中，TryParse 是一个尝试将字符串转换为整数的函数。DivideByTwo 是另一个尝试将整数除以二的函数。如果整数不能被二整除，它将返回一个封装在 Left 中的错误消息。Bind 调用将这些计算链接在一起：如果解析成功，它将尝试将解析出的数字除以二。如果任何一个计算失败，它将短路并返回错误。
+在这个示例中，`TryParse`是一个尝试将字符串转换为整数的函数。`DivideByTwo`是另一个尝试将整数除以二的函数。如果整数不能被二整除，它将返回一个封装在`Left`中的错误消息。`Bind`调用将这些计算链接在一起：如果解析成功，它将尝试将解析出的数字除以二。如果任何一个计算失败，它将短路并返回错误。
 
-现在，让我们来看一个同时使用 Map 和 Bind 的示例：
+现在，让我们来看一个同时使用`Map`和`Bind`的示例：
 
 ```c
 // 一个可能失败的函数
@@ -676,29 +655,31 @@ Either<string, int> DivideByTwo(int number)
         return new Either<string, int>.Right(number / 2);
 ```
 
+
+
 ```c
 else
-return new Either<string, int>.Left("无法除以二");
+    return new Either<string, int>.Left("无法除以二");
 }
 
 // 使用：
 var either = TryParse("4");
 either = either
-.Map(x => x * 2)// 如果解析成功，将数字翻倍
-.Bind(DivideByTwo); // 然后，尝试除以二
+    .Map(x => x * 2) // 如果解析成功，将数字翻倍
+    .Bind(DivideByTwo); // 然后，尝试除以二
 ```
 
-在这个示例中，我们首先应用 Map 函数，在解析成功时将解析出的数字翻倍。然后，我们使用 Bind 将结果除以二。如果任何步骤失败，它将短路并返回错误。
+在这个示例中，我们首先应用`Map`函数，在解析成功时将解析出的数字翻倍。然后，我们使用`Bind`将结果除以二。如果任何步骤失败，它将短路并返回错误。
 
 ### Validation<T>
 
-我们之前探索了 Maybe 和 Either 单态（monads），它们提供了处理可选或二选一值的强大方式。现在，让我们检查 Validation 单态。当你想要累积错误而不是快速失败（fail-fast）时，这种单态特别有用，这在表单验证等情况下很常见，因为你希望一次性报告所有验证错误，而不是一个一个报告。
+我们之前探索了`Maybe`和`Either`单态（monads），它们提供了处理可选或二选一值的强大方式。现在，让我们检查`Validation`单态。当你想要累积错误而不是快速失败（fail-fast）时，这种单态特别有用，这在表单验证等情况下很常见，因为你希望一次性报告所有验证错误，而不是一个一个报告。
 
-Validation<T> 单态在我们在验证数据集时累积所有错误而不是在第一个错误处停止非常有用。这在 Web 开发中尤为有用，因为我们想要验证用户输入并一次性返回所有错误。
+`Validation<T>`单态在我们在验证数据集时累积所有错误而不是在第一个错误处停止非常有用。这在 Web 开发中尤为有用，因为我们想要验证用户输入并一次性返回所有错误。
 
-Validation<T> 类的基本结构与我们之前的 Maybe 和 Either<L, R> 单态相似。然而，它不像 Maybe 那样有 "Some" 和 "None" 情况，也不像 Either<L, R> 那样有 "Left" 和 "Right" 情况，我们将会有 "Valid" 和 "Invalid" 情况。
+`Validation<T>`类的基本结构与我们之前的`Maybe`和`Either<L, R>`单态相似。然而，它不像`Maybe`那样有`Some`和`None`情况，也不像`Either<L, R>`那样有`Left`和`Right`情况，我们将会有`Valid`和`Invalid`情况。
 
-这里是 Validation<T> 单态的代码：
+这里是`Validation<T>`单态的代码：
 
 ```c
 public abstract class Validation<T>
@@ -719,15 +700,16 @@ public abstract class Validation<T>
     public bool IsInvalid => !IsValid;
 
     // Map
-    // Map
     public Validation<U> Map<U>(Func<T, U> map)
-{
-return this switch
-{
-    Valid valid => new Validation<U>.Valid(map(valid.Value)),
-    Invalid invalid => new Validation<U>.Invalid(invalid.Errors),
-    _ => throw new NotImplementedException()
-};
+    {
+        return this switch
+        {
+            Valid valid => new Validation<U>.Valid(map(valid.Value)),
+            Invalid invalid => new Validation<U>.Invalid(invalid.Errors),
+            _ => throw new NotImplementedException()
+        };
+    }
+}
 ```
 
 ```c
@@ -735,7 +717,7 @@ return this switch
 public Validation<U> Bind<U>(Func<T, Validation<U>> bind)
 {
     return this switch
-{
+    {
         Valid valid => bind(valid.Value),
         Invalid invalid => new Validation<U>.Invalid(invalid.Errors),
         _ => throw new NotImplementedException()
@@ -748,16 +730,17 @@ public Validation<U> Bind<U>(Func<T, Validation<U>> bind)
 public U Match<U>(Func<T, U> onValid, Func<string[], U> onInvalid)
 {
     return this switch
-{
+    {
         Valid valid => onValid(valid.Value),
-Invalid invalid => onInvalid(invalid.Errors),
-  => throw new NotImplementedException()
-);
+        Invalid invalid => onInvalid(invalid.Errors),
+        _ => throw new NotImplementedException()
+    };
+}
 ```
 
-Valid 类封装了类型为 T 的有效值，而 Invalid 类封装了一个错误消息列表。IsValid 和 IsInvalid 属性允许我们快速检查验证状态。
+`Valid`类封装了类型为`T`的有效值，而`Invalid`类封装了一个错误消息列表。`IsValid`和`IsInvalid`属性允许我们快速检查验证状态。
 
-Map、Bind 和 Match 方法的工作方式与之前的单态类似。Map 允许我们转换 Valid 实例中的值，Bind 允许我们链式操作，而 Match 允许我们处理 Valid Valid 和 Invalid 情况。
+`Map`、`Bind`和`Match`方法的工作方式与之前的单态类似。`Map`允许我们转换`Valid`实例中的值，`Bind`允许我们链式操作，而`Match`允许我们处理`Valid`和`Invalid`情况。
 
 让我们从一个简单的示例开始：
 
@@ -775,11 +758,11 @@ Console.WriteLine(valid.Match(x => x.ToString(), errors => string.Join(",", erro
 Console.WriteLine(invalid.Match(x => x.ToString(), errors => string.Join(",", errors))); // 输出: "Negative number"
 ```
 
-现在，让我们看看如何在 Web API 中使用 Validation<T> 单态来验证用户输入。假设我们有一个具有 Name 和 Email 属性的 User 模型，并且我们想要验证这两个都不为空。
+现在，让我们看看如何在 Web API 中使用`Validation<T>`单态来验证用户输入。假设我们有一个具有`Name`和`Email`属性的`User`模型，并且我们想要验证这两个都不为空。
 
-通过这种方式，Map 允许我们在解析成功时转换 Valid 实例中的值，Bind 允许我们链式操作，而 Match 允许我们处理 Valid Valid 和 Invalid 情况。
+通过这种方式，`Map`允许我们在解析成功时转换`Valid`实例中的值，`Bind`允许我们链式操作，而`Match`允许我们处理`Valid`和`Invalid`情况。
 
-在现在，让我们看看如何在 Web API 中使用 Validation<T> 单态来验证用户输入。假设我们有一个具有 Name 和 Email 属性的 User 模型，并且我们想要验证这两个都不为空。
+在现在，让我们看看如何在 Web API 中使用`Validation<T>`单态来验证用户输入。假设我们有一个具有`Name`和`Email`属性的`User`模型，并且我们想要验证这两个都不为空。
 
 首先，我们为每个属性创建一个验证函数：
 
@@ -787,8 +770,8 @@ Console.WriteLine(invalid.Match(x => x.ToString(), errors => string.Join(",", er
 public Validation<string> ValidateName(string name)
 {
     return string.IsNullOrWhiteSpace(name)
-    ? new Validation<string>.Invalid("Name 不能为空")
-    : new Validation<string>.Valid(name);
+        ? new Validation<string>.Invalid("Name 不能为空")
+        : new Validation<string>.Valid(name);
 }
 ```
 
@@ -796,12 +779,12 @@ public Validation<string> ValidateName(string name)
 public Validation<string> ValidateEmail(string email)
 {
     return string.IsNullOrWhiteSpace(email)
-    ? new Validation<string>.Invalid("Email 不能为空")
-    : new Validation<string>.Valid(email);
+        ? new Validation<string>.Invalid("Email 不能为空")
+        : new Validation<string>.Valid(email);
 }
 ```
 
-然后我们可以使用这些函数来验证 User 模型：
+然后我们可以使用这些函数来验证`User`模型：
 
 ```csharp
 public Validation<User> ValidateUser(User user)
@@ -823,7 +806,7 @@ public Validation<User> ValidateUser(User user)
 }
 ```
 
-在控制器操作中，我们可以使用 Match 方法来处理有效和无效的情况，对有效情况返回 HTTP OK 响应，对无效情况返回 HTTP 400 请求：
+在控制器操作中，我们可以使用`Match`方法来处理有效和无效的情况，对有效情况返回 HTTP OK 响应，对无效情况返回 HTTP 400 请求：
 
 ```csharp
 app.Map("/user", (User user) =>
@@ -837,14 +820,11 @@ app.Map("/user", (User user) =>
 });
 ```
 
-通过这种方式，Validation<T> 单态允许我们以声明、表达性的方式进行验证，并保留所有的错误消息。
+通过这种方式，`Validation<T>`单态允许我们以声明、表达性的方式进行验证，并保留所有的错误消息。
 
 ## Try<T>: 函数式处理异常
 
-在传统的命令式编程中，错误处理通常通过异常完成。当发生错误时，会抛出异常，控制权跳转到可以处理该类型异常的最近 catch 块。这可能会
-
-
-控制流难以追踪，程序推理也变得困难。
+在传统的命令式编程中，错误处理通常通过异常完成。当发生错误时，会抛出异常，控制权跳转到可以处理该类型异常的最近`catch`块。这可能会控制流难以追踪，程序推理也变得困难。
 
 函数式编程提供了一种处理错误的替代方法，它可以使控制流更加清晰，程序更容易进行推理。函数不再抛出异常，而是返回一个代表成功计算或错误的值。调用者随后可以决定如何处理该错误。
 
@@ -885,7 +865,7 @@ public static Try<T> Of(Func<T> f)
 
 ```csharp
 // Map
-public Try<TResult> Map<TResult>(Func<T, TResult>) => Match(
+public Try<TResult> Map<TResult>(Func<T, TResult> f) => Match(
     onSuccess: t => Try<TResult>.Of(() => f(t)),
     onException: ex => new Try<TResult>.Exception(ex)
 );
@@ -893,7 +873,7 @@ public Try<TResult> Map<TResult>(Func<T, TResult>) => Match(
 
 ```csharp
 // Bind
-public Try<TResult> Bind<TResult>(Func<T, Try<TResult>>) => Match(
+public Try<TResult> Bind<TResult>(Func<T, Try<TResult>> f) => Match(
     onSuccess: t => f(t),
     onException: ex => new Try<TResult>.Exception(ex)
 );
@@ -901,77 +881,81 @@ public Try<TResult> Bind<TResult>(Func<T, Try<TResult>>) => Match(
 
 ```csharp
 public T GetOrElse(T defaultValue)
-=> Match(
-  onSuccess: t => t,
-  onException: _ => defaultValue
-);
+    => Match(
+        onSuccess: t => t,
+        onException: _ => defaultValue
+    );
 ```
 
-这个 `Try<T>` 类表示一个可能会抛出异常的计算。它是一个抽象类，有两个派类：`Success` 和 `Exception`。`Success` 类表示成功的计算并持有类型为 `T` 的结果，而 `Exception` 类表示失败的计算并持有导致失败的异常。
+这个`Try<T>`类表示一个可能会抛出异常的计算。它是一个抽象类，有两个派生类：`Success`和`Exception`。`Success`类表示成功的计算并持有类型为`T`的结果，而`Exception`类表示失败的计算并持有导致失败的异常。
 
-`Of` 方法用于从可能抛出异常的函数创建 `Try<T>` 实例。如果函数抛出异常，则返回 `Try<T>.Exception` 实例；否则，返回 `Try<T>.Success` 实例。
+`Of`方法用于从可能抛出异常的函数创建`Try<T>`实例。如果函数抛出异常，则返回`Try<T>.Exception`实例；否则，返回`Try<T>.Success`实例。
 
-`Map` 和 `Bind` 方法分别用于转换和链联 `Try<T>` 实例，这种方式保留了异常状态。如果 `Try<T>` 实例表示失败的计算，将跳过转换或链式操作并传播异常。
+`Map`和`Bind`方法分别用于转换和链联`Try<T>`实例，这种方式保留了异常状态。如果`Try<T>`实例表示失败的计算，将跳过转换或链式操作并传播异常。
 
-`GetOrElse` 方法用于在计算成功时检索结果，或在失败时返回默认值。
+`GetOrElse`方法用于在计算成功时检索结果，或在失败时返回默认值。
 
 ### 示例
 
-假设我们有一个可能会抛出 `DivideByZeroException` 的函数 `Divide`：
+假设我们有一个可能会抛出`DivideByZeroException`的函数`Divide`：
 
 ```csharp
 public static double Divide(double x, double y)
 {
-  return x / y;
+    return x / y;
 }
 ```
 
-我们可以将此函数封装在 `Try<T>` 中以处理可能的异常：
+我们可以将此函数封装在`Try<T>`中以处理可能的异常：
 
 ```csharp
 var tryResult = Try<double>.Of(() => Divide(10, 0));
 ```
 
-现在，`tryResult` 是一个表示除法操作结果的 `Try`。如果操作成功，`tryResult` 是带有除法结果的 `Try.Success`。如果操作抛出异常，`tryResult` 是带有已抛出异常的 `Try.Exception`。
+现在，`tryResult`是一个表示除法操作结果的`Try`。如果操作成功，`tryResult`是带有除法结果的`Try.Success`。如果操作抛出异常，`tryResult`是带有已抛出异常的`Try.Exception`。
 
-我们可以使用 `Map` 方法转换结果：
+我们可以使用`Map`方法转换结果：
 
 ```csharp
 var tryQuotientPlusOne = tryResult.Map(quotient => quotient + 1);
 ```
 
-如果 `tryResult` 是 `Try.Success`，`tryQuotientPlusOne` 就是带有商加 1 结果的 `Try.Success`。如果 `tryResult` 是 `Try.Exception`，`tryQuotientPlusOne` 就是同一个 `Try.Exception`。
+如果`tryResult`是`Try.Success`，`tryQuotientPlusOne`就是带有商加 1 结果的`Try.Success`。如果`tryResult`是`Try.Exception`，`tryQuotientPlusOne`就是同一个`Try.Exception`。
 
-我们可以使用 `Bind` 方法链联计算：
+我们可以使用`Bind`方法链联计算：
 
 ```csharp
 var tryReciprocal = tryResult.Bind(quotient => Try<double>.Of(() => 1 / quotient));
 ```
 
-如果 `tryResult` 是 `Try.Success`，`tryReciprocal` 是一个表示计算商倒数结果的 `Try`。如果 `tryResult` 是 `Try.Exception`，`tryReciprocal` 就是同一个 `Try.Exception`。
+如果`tryResult`是`Try.Success`，`tryReciprocal`是一个表示计算商倒数结果的`Try`。如果`tryResult`是`Try.Exception`，`tryReciprocal`就是同一个`Try.Exception`。
 
-我们可以使用 `Match` 方法同时处理成功和错误情况：
+我们可以使用`Match`方法同时处理成功和错误情况：
 
 ```csharp
 string message = tryResult.Match(
-onSuccess: quotient => $"The result is {quotient}.",
-onException: ex => $"An error occurred: {ex.Message}"
+    onSuccess: quotient => $"The result is {quotient}.",
+    onException: ex => $"An error occurred: {ex.Message}"
 );
 ```
 
-在这里，`message` 是一个字符串，包含带有商的成功消息或带有异常消息的错误消息。
+在这里，`message`是一个字符串，包含带有商的成功消息或带有异常消息的错误消息。
 
-最后，我们可以使用 `GetOrElse` 方法检索结果或默认值：
+最后，我们可以使用`GetOrElse`方法检索结果或默认值：
 
 ```csharp
 double quotient = tryResult.GetOrElse(0);
 ```
 
-在这里，如果操作成功，`quotient` 为商；如果操作抛出异常，则为 0。
+在这里，如果操作成功，`quotient`为商；如果操作抛出异常，则为 0。
 
-让我们看看如何遵循 AAA（安排、执行、断言）模式在单元测试中使用 `Try<T>`。我们将使用之前示例中的 `Divide` 函数和 `Try<T>`。
+让我们看看如何遵循 AAA（安排、执行、断言）模式在单元测试中使用`Try<T>`。我们将使用之前示例中的`Divide`函数和`Try<T>`。
 
+```csharp
 [Test]
+```
+
+
 
 ```csharp
 public void Divide_ByZero_ReturnTryException()
@@ -987,21 +971,19 @@ public void Divide_ByZero_ReturnTryException()
 }
 ```
 
-在这个测试中，`result` 是 `Try<double>.Exception`，因为除以零失败了。我们断言结果类型是正确的。
+在这个测试中，`result`是`Try<double>.Exception`，因为除以零失败了。我们断言结果类型是正确的。
 
+我们还为`Exceptional<T>`提供了一系列扩展方法，允许以流式方式链式操作。这些包括`Apply`、`Map`和`Bind`函数以及各自的重载。
 
+`Apply`函数将封装在`Exceptional<T>`中的函数应用到另一个`Exceptional<T>`，返回一个新的`Exceptional<T>`。
 
-我们还为 `Exceptional<T>` 提供了一系列扩展方法，允许以流式方式链式操作。这些包括 Apply、Map 和 Bind 函数以及各自的重载。
+`Map`函数将函数应用到`Exceptional<T>`内部的值（如果存在），并将结果重新封装回`Except<T>`。
 
-`Apply` 函数将封装在 `Exceptional<T>` 中的函数应用到另一个 `Exceptional<T>`，返回一个新的 `Exceptional<T>`。
+`Bind`函数与`Map`类似，但作为参数传递的函数返回`Exceptional<T>`，允许对返回`Exceptional<T>`的操作进行链式。
 
-`Map` 函数将函数应用到 `Exceptional<T>` 内部的值（如果存在），并将结果重新封装回 `Except<T>`。
+此外，我们提供了`Select`和`SelectMany`方法来支持 LINQ 查询语法。这是 C# 中的一项强大功能，允许`Exceptional<T>`与现有的 .NET 代码库无缝集成。
 
-`Bind` 函数与 `Map` 类似，但作为参数传递的函数返回 `Exceptional<T>`，允许对返回 `Exceptional<T>` 的操作进行链式。
-
-此外，我们提供了 `Select` 和 `SelectMany` 方法来支持 LINQ 查询语法。这是 C# 中的一项强大功能，允许 `Exceptional<T>` 与现有的 .NET 代码库无缝集成。
-
-现在，让我们通过一个示例来说明 `Exceptional<T>` 的用法。
+现在，让我们通过一个示例来说明`Exceptional<T>`的用法。
 
 ### Exceptional<T> 的示例用法
 
@@ -1019,7 +1001,7 @@ Exceptional<int> Divide(int x, int y)
 }
 ```
 
-该函数返回一个 `Exceptional<int>`，它封装了除法操作的结果。如果除法成功，它返回封装在 `Exceptional<T>` 中的结果。如果抛出了 `DivideByZeroException`，它会捕获异常并将其封装在 `Exceptional<T>` 中返回。
+该函数返回一个`Exceptional<int>`，它封装了除法操作的结果。如果除法成功，它返回封装在`Exceptional<T>`中的结果。如果抛出了`DivideByZeroException`，它会捕获异常并将其封装在`Exceptional<T>`中返回。
 
 让我们看看如何使用此函数并处理结果。
 
@@ -1043,9 +1025,9 @@ result = Divide(10, 0);
 DisplayResult(result); // 输出: "An error occurred: Attempted to divide by zero."
 ```
 
-在 `DisplayResult` 函数中，我们使用 `Match` 方法来显式处理 `Divide` 函数的两种可能结果。这使得在使用点清晰地表明了除法操作可能会失败，并要求我们处理失败的情况。
+在`DisplayResult`函数中，我们使用`Match`方法来显式处理`Divide`函数的两种可能结果。这使得在使用点清晰地表明了除法操作可能会失败，并要求我们处理失败的情况。
 
-现在，让我们看看如何使用 `Map` 和 `Bind` 函数。
+现在，让我们看看如何使用`Map`和`Bind`函数。
 
 ```csharp
 // 如果除法成功，则对结果进行平方
@@ -1057,15 +1039,15 @@ var squareResult = result.Map(value => value * value);
 var chainedResult = result.Bind(value => Divide(value, 2));
 ```
 
-在第一个示例中，我们使用 `Map` 对除法操作的结果进行平方。只有在除法成功时才会执行平方操作。如果发生异常，`Map` 将什么都不做且异常会被保留。
+在第一个示例中，我们使用`Map`对除法操作的结果进行平方。只有在除法成功时才会执行平方操作。如果发生异常，`Map`将什么都不做且异常会被保留。
 
-在第二个示例中，我们使用 `Bind` 在第一个操作的结果上执行另一个除法操作。只有在第一次操作成功时才会执行第二次除法。如果第一次除法发生异常，`Bind` 将什么都不做且异常会被保留。
+在第二个示例中，我们使用`Bind`在第一个操作的结果上执行另一个除法操作。只有在第一次操作成功时才会执行第二次除法。如果第一次除法发生异常，`Bind`将什么都不做且异常会被保留。
 
-当我们想要链接多个可能会抛出异常的操作时，`Exceptional<T>` 的威力就变得尤为显易。通过在 `Exceptional<T>` 中封装异常，我们可以轻松地链式操作并以清晰简洁的方式处理异常。
+当我们想要链接多个可能会抛出异常的操作时，`Exceptional<T>`的威力就变得尤为显易。通过在`Exceptional<T>`中封装异常，我们可以轻松地链式操作并以清晰简洁的方式处理异常。
 
 ### 任务
 
-异步编程是现代应用开发的一个关键方面，特别是在响应性是的 I/O 密集操作中。在 .NET 中，`Task<T>` 类型是管理这些操作的主要工具。`Task<T>` 是一个单子类型，为链接和转换异步计算提供了强大的方法。让我们深入研究 `Task<T>` 的单子操作，并通过示例说明其用法。
+异步编程是现代应用开发的一个关键方面，特别是在响应性是的 I/O 密集操作中。在 .NET 中，`Task<T>`类型是管理这些操作的主要工具。`Task<T>`是一个单子类型，为链接和转换异步计算提供了强大的方法。让我们深入研究`Task<T>`的单子操作，并通过示例说明其用法。
 
 ```csharp
 public static class TaskExtensions
@@ -1079,9 +1061,9 @@ public static Task<TResult> Map<TSource, TResult>(
 }
 ```
 
-`Map` 函数将投影应用到任务的结果。当你想要转换异步计算的结果时，它非常有用。例如，如果你有一个代表计数项目数的异步操作的 `Task<int>`，你可以使用 `Map` 将计数转换为字符串。
+`Map`函数将投影应用到任务的结果。当你想要转换异步计算的结果时，它非常有用。例如，如果你有一个代表计数项目数的异步操作的`Task<int>`，你可以使用`Map`将计数转换为字符串。
 
-接下来，让我们实现 `Bind`：
+接下来，让我们实现`Bind`：
 
 ```csharp
 // Bind
@@ -1093,9 +1075,9 @@ public static Task<TResult> Bind<TSource, TResult>(
 }
 ```
 
-`Bind` 函数允许我们将异步操作链在一起。它接受一个返回任务的函数，并将其应用于上一个任务的结果。调用 `Unwrap` 是必要的，因为没有它，我们将得到 `Task<Task<TResult>>`。`Unwrap` 将其展平为 `Task<TResult>`。
+`Bind`函数允许我们将异步操作链在一起。它接受一个返回任务的函数，并将其应用于上一个任务的结果。调用`Unwrap`是必要的，因为没有它，我们将得到`Task<Task<TResult>>`。`Unwrap`将其展平为`Task<TResult>`。
 
-下一个函数是 `GetOrElse`：
+下一个函数是`GetOrElse`：
 
 ```csharp
 // GetOrElse
@@ -1107,9 +1089,9 @@ public static Task<T> GetOrElse<T>(
 }
 ```
 
-`GetOrElse` 在任务失败时提供默认值。这是处理错误的方法，允许你的代码的其他部分忽略忽略失败。如果任务成功完成，`GetOrElse` 会传递结果。如果任务故障（抛出异常），`GetOrElse` 则返回默认值。
+`GetOrElse`在任务失败时提供默认值。这是处理错误的方法，允许你的代码的其他部分忽略忽略失败。如果任务成功完成，`GetOrElse`会传递结果。如果任务故障（抛出异常），`GetOrElse`则返回默认值。
 
-最后，我们有 `Recover`：
+最后，我们有`Recover`：
 
 ```csharp
 // Recover
@@ -1121,9 +1103,9 @@ public static Task<T> Recover<T>(
 }
 ```
 
-`Recover` 允许我们处理并从中恢复异常。如果任务抛出异常，它将其传递给恢复函数。
+`Recover`允许我们处理并从中恢复异常。如果任务抛出异常，它将其传递给恢复函数。
 
-让我们通过实现 `Select`、`SelectMany`、`Join` 和 `Where` 方法继续：
+让我们通过实现`Select`、`SelectMany`、`Join`和`Where`方法继续：
 
 ```csharp
 // Select
@@ -1161,8 +1143,8 @@ public static Task<TSource> Where<TSource>(
 
 以下是这些方法的原理：
 
-- `Select`：本质与 `Map` 相同。命名为 `Select` 是为了与 LINQ 一致。
-- `SelectMany`：同样，`SelectMany` 是 `Bind` 的另一个名称。这也是为了符合 LINQ。
+- `Select`：本质与`Map`相同。命名为`Select`是为了与 LINQ 一致。
+- `SelectMany`：同样，`SelectMany`是`Bind`的另一个名称。这也是为了符合 LINQ。
 - `Where`：此函数允许我们根据谓词过滤任务的结果。如果谓词无效，它将抛出异常。
 
 ```csharp
@@ -1188,10 +1170,7 @@ public static Task<TResult> Join<TOuter, Tinner, TKey, TResult>(
 }
 ```
 
-在这个版本的 `Join` 中，外部和内部任务都必须完成，并且它们的键（由 `outerKey` 和 `innerKey` 提供）必须匹配。如果匹配，`Join` 将使用 `resultSelector` 组合结果。
-
-
-
+在这个版本的`Join`中，外部和内部任务都必须完成，并且它们的键（由`outerKey`和`innerKey`提供）必须匹配。如果匹配，`Join`将使用`resultSelector`组合结果。
 
 ## 示例 2：使用 Bind (或 LINQ 中的 SelectMany)
 
@@ -1207,7 +1186,7 @@ Task<int> bindTask = task.Bind(x => Task.FromResult(x * x));
 Console.WriteLine(await bindTask); // 输出: 25
 ```
 
-在这个示例中，我们不是对结果进行简单的转换，而是使用 `Bind` 根据第一个任务的结果创建一个新任务。
+在这个示例中，我们不是对结果进行简单的转换，而是使用`Bind`根据第一个任务的结果创建一个新任务。
 
 ## 示例 3：使用 OrElse 进行恢复
 
@@ -1223,7 +1202,7 @@ Task<int> recoveredTask = task.OrElse(Task.FromResult(0));
 Console.WriteLine(await recoveredTask); // 输出: 0
 ```
 
-在这种情况下，我们创建了一个立即抛出异常的故障任务。使用 `OrElse`，我们可以从错误中恢复并提供一个以结果 0 完成的备用任务。
+在这种情况下，我们创建了一个立即抛出异常的故障任务。使用`OrElse`，我们可以从错误中恢复并提供一个以结果 0 完成的备用任务。
 
 ## 示例 4：使用 Where
 
@@ -1264,7 +1243,8 @@ try
 ```
 
 在这个示例中，我们尝试根据键连接两个任务。然而，由于键不匹配，因此抛出了异常。
-如果键匹配，`Join` 函数将使用提供的结果选择器函数合并两个任务的结果。
+
+如果键匹配，`Join`函数将使用提供的结果选择器函数合并两个任务的结果。
 
 通过使用这些单子操作（monadic operations），我们可以以简洁且可读的方式构建复杂的异步操作流水线。这使得在异步和并发场景下的错误处理和控制流更容易管理。
 
@@ -1272,7 +1252,7 @@ try
 
 在本章分享的概念和代码是在 .NET 8 中使用 C# 构建你自己的单数结构的起点。这段单数世界之旅才刚刚开始，我希望它能激发你对函数式编程的奇心和兴趣。
 
-我们深入探讨了理论，然后将其带回 C# 的实践领域，探索了如何利用单数的力量来编写更整洁、更易维护且抗错误的代码。我们探索了几个示例，例如 `Maybe<T>`、`Exceptional<T>`、`Validation<T>`、`Try<T>`、`Either<T>` 和 `Task<T>`，每个示例都提供了处理控制流、错误处理和数据转换的不同方法。
+我们深入探讨了理论，然后将其带回 C# 的实践领域，探索了如何利用单数的力量来编写更整洁、更易维护且抗错误的代码。我们探索了几个示例，例如`Maybe<T>`、`Exceptional<T>`、`Validation<T>`、`Try<T>`、`Either<T>`和`Task<T>`，每个示例都提供了处理控制流、错误处理和数据转换的不同方法。
 
 记住，函数式编程和单数的使用并不是非黑即白的命题。你可以逐渐将这些概念引入到现有的项目中，并随着时间的推移看到其益处。
 
@@ -1293,16 +1273,15 @@ try
 我们的客户 Let's Lend Bank 希望开发一个贷款审批系统。该系统将具有以下要求：
 
 - **验证贷款请求：** 每个贷款请求都必须经过验证。请求必须具有有效的客户 ID、正的贷款金额以及 1 到 30 年之间的期限。
-
 - **检查客户信用评分：** 必须从外部服务获取客户的信用评分。如果服务失败或返回错误，贷款审批过程应该失败。
-
 - **检查客户贷款历史：** 客户的贷款历史也从另一个外部服务获取。同样，如果服务失败或返回错误，贷款审批过程应该失败。
-
 - **计算贷款审批：** 如果所有之前的步骤都成功，则将计算是否批准贷款。
 
 ## 构建应用程序
 
 让我们开始定义系统的基础模型。
+
+
 
 ```csharp
 public class LoanRequest
@@ -1450,14 +1429,12 @@ app.MapPost("/approve", async (LoanRequest request, ICreditScoresService creditS
 app.Run();
 ```
 
-
-
 ```csharp
 }
 }
 ```
 
-现在，让我们来实现贷款审批逻辑。我们将创建一个 `LoanService`，它利用 `ICreditscoresService` 和 `ILLoanHistoryService` 来验证贷款请求并计算贷款审批结果。
+现在，让我们来实现贷款审批逻辑。我们将创建一个`LoanService`，它利用`ICreditscoresService`和`ILLoanHistoryService`来验证贷款请求并计算贷款审批结果。
 
 ```csharp
 public class LoanService
@@ -1495,7 +1472,7 @@ private LoanApproval CalculateLoanApproval(Creditscore creditscore, LoanHistory 
 }
 ```
 
-我们的 API 在 `/loanapproval` 处有一个的 POST 端点，它将在请求体中接收 `LoanRequest`，并返回 `LoanApproval` 或错误消息。
+我们的 API 在`/loanapproval`处有一个的 POST 端点，它将在请求体中接收`LoanRequest`，并返回`LoanApproval`或错误消息。
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
@@ -1526,9 +1503,9 @@ app.MapPost("/loanapproval", async (LoanService loanService, LoanRequest loanReq
 app.Run();
 ```
 
-在此代码段中，我们首先为服务设置了依赖注入。然后，我们定义了贷款审批的 POST 端点。我们使用 `LoanService` 和 `LoanRequest` 作为映射函数的参数。`LoanService` 由 DI 系统注入，而 `LoanRequest` 则从请求体中自动进行模型绑定。
+在此代码段中，我们首先为服务设置了依赖注入。然后，我们定义了贷款审批的 POST 端点。我们使用`LoanService`和`LoanRequest`作为映射函数的参数。`LoanService`由 DI 系统注入，而`LoanRequest`则从请求体中自动进行模型绑定。
 
-`LoanService.ApproveLoan` 方法返回一个 `Either<string, LoanApproval>`，我们将其匹配为 `ActionResult`。如果贷款审批成功（即 `Either` 为 `Valid`），我们返回一个带有 `LoanApproval` 的 `OkObjectResult`。如果发生错误（即 `Either` 为 `Invalid`），我们返回一个带有错误消息的 `BadRequestObjectResult`。
+`LoanService.ApproveLoan`方法返回一个`Either<string, LoanApproval>`，我们将其匹配为`ActionResult`。如果贷款审批成功（即`Either`为`Valid`），我们返回一个带有`LoanApproval`的`OkObjectResult`。如果发生错误（即`Either`为`Invalid`），我们返回一个带有错误消息的`BadRequestObjectResult`。
 
 在这里，我们单数方法的威力显现出来。尽管我们正在处理涉及错误处理和异步操作的复杂业务逻辑，我们的 API 端点逻辑仍然保持极其简洁且易于理解。这种方法使我们能够构建健壮且易于维护的 API，处理现实世界的复杂性。这只是单数如何在实际应用中使用一个简单示例。在现实中，验证和计算逻辑将复杂得多，并且需要更复杂的错误处理。但正如你看到的，使用单数允许我们以一种非常优雅且可读的方式处理错误和异步操作。
 
@@ -1538,16 +1515,13 @@ app.Run();
 
 在整本书中，我们开启了一段充实的旅程，探索了 C# 和 .NET 领域单数的世界。我们深入研究了函数式编程的本质，并发现单数作为一种强大的抽象，如何为解决代码中的复杂性提供优雅的解决方案。
 
-我们从理解函数式编程的核心概念开始，逐渐揭开了单数的迷纱。我们看到 `Maybe<T>`、`Either<L, R>`、`Validation<T>`、`Try<T>`、`Exceptional<T>` 和 `Task<T>` 单数可以使我们的代码更加健壮、可读且易于维护。此外，我们并没有停留在理论层面；我们将这些概念应用于实际的现实场景中，例如银行系统中的贷款审批流程，证明了它们对软件设计和架构的深远影响。
+我们从理解函数式编程的核心概念开始，逐渐揭开了单数的迷纱。我们看到`Maybe<T>`、`Either<L, R>`、`Validation<T>`、`Try<T>`、`Exceptional<T>`和`Task<T>`单数可以使我们的代码更加健壮、可读且易于维护。此外，我们并没有停留在理论层面；我们将这些概念应用于实际的现实场景中，例如银行系统中的贷款审批流程，证明了它们对软件设计和架构的深远影响。
 
 我们的之旅并没有此结束。函数式编程和单数的世界是巨大且不断演变的。总有更多需要学习、更多需要理解的模式以及更多等待发现的应用。以下是你进一步提高知识和专业能力的的一些后续步骤：
 
-- 探索更复杂的单数模式：还有更复杂的单数，如 `State`、`Reader`、`Writer` 和 `Cont`（延续）单数。理解这些可以进一步增强你的编程技能。
-
+- 探索更复杂的单数模式：还有更复杂的单数，如`State`、`Reader`、`Writer`和`Cont`（延续）单数。理解这些可以进一步增强你的编程技能。
 - 深入研究函数式数据结构：学习列表、树和图等不可变的函数式数据结构，可以为你提供数据处理的新视角。
-
 - .NET 函数式库：有几个库为 .NET 提供了高级的函数式编程构建，例如 LanguageExt 和 FSharp。探索这些库可以让你获得开箱即用的工具，并深化你对函数式编程的理解。
-
 - 学习更多函数式语言：F#、Haskell 或 Scala 等语言具有函数式编程特性。
 
 # 录 / 更多资源
@@ -1578,19 +1552,17 @@ app.Run();
 
 ## 视频资源
 
+
+
 - Coursera 上的 "Functional Programming Principles in Scala"。
 - Pluralsight 上的 "Haskell Fundamentals"。
 
 ## 播客
 
-- "Functional Geekery":关于函数式编程的播客，软件工程师在那里讨论他们进入函数式编程的经历并分享见解。
-- "LambdaCast":旨在弥合函数式编程学术界与工业程序员需求之间差距的播客。
+- "Functional Geekery"：关于函数式编程的播客，软件工程师在那里讨论他们进入函数式编程的经历并分享见解。
+- "LambdaCast"：旨在弥合函数式编程学术界与工业程序员需求之间差距的播客。
 
-
-
-
-
-其他
+## 其他
 
 - StackOverflow：StackOverflow 上的函数式编程标签是提问和从他人经验中学习的绝佳场所。
 
@@ -1600,7 +1572,6 @@ app.Run();
 
 Carlos Bueno 是 CSL Luxembourg 的一名软件架构师，专注于交付高质量的软件解决方案，并侧重于函数式编程。凭借在该领域的丰富经验，Carlos 擅长最新的编程技术和最佳实践，确保创建高效、易于维护且卓越的代码。
 
-Carlos 是多本具有影响力的书籍的作者。他的第一本书《O Guia do Mestre Programador: pensando como pirata, evoluindo como jedi》（《大师程序员指南：像海盗一样思考，像绝地武士一样进化）由 Casa do Código 出版，在帮助开发者提升技能和扩展知识方面发挥了关键性作用。他的最新著作《Functional C#: Embracing Functional Programming in a C# World》是一份详尽指南，向读者介绍了函数式编程的概念和技术，特别是在 C# 编程语言方面。这本书探讨了函数式编程的优势及其与面向对象编程的比较，使其成为现代软件开发者无足珍贵的资源。
+Carlos 是多本具有影响力的书籍的作者。他的第一本书《O Guia do Mestre Programador: pensando como pirata, evoluindo como jedi》（《大师程序员指南：像海盗一样思考，像绝地武士一样进化》）由 Casa do Código 出版，在帮助开发者提升技能和扩展知识方面发挥了关键性作用。他的最新著作《Functional C#: Embracing Functional Programming in a C# World》是一份详尽指南，向读者介绍了函数式编程的概念和技术，特别是在 C# 编程语言方面。这本书探讨了函数式编程的优势及其与面向对象编程的比较，使其成为现代软件开发者无足珍贵的资源。
 
 在职业追求之外，Carlos 是一位自行车爱好者，喜欢探索新路线并参加各种自行车活动。他还会投入闲时间玩视频游戏、参与角色扮演游戏，并跟进编程和技术的最新进展。
-

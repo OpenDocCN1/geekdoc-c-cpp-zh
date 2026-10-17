@@ -1,7 +1,8 @@
+
 # 第五章 编程经验——符号表
 
 > 来源：[`github.com/oxnz/ooc/blob/master/tex/chapter0x05.tex`](https://github.com/oxnz/ooc/blob/master/tex/chapter0x05.tex)
-> 
+>
 > 译者：[oxnz](https://github.com/oxnz)
 
 一个结构体明智的加长，以此来共享基本结构的功能，可以帮助省去笨重的`union`的使用。特别在具有动态绑定，我们得到了一种统一的且完美健壮的方式处理消息传递。一旦基本机制就位，一个新的扩展类就可以重用基本代码容易的添加。
@@ -13,26 +14,26 @@
 在 3.2 节中我们实现了函数`scan()`，从主程序获取一行输入并在每次调用返回一个输入符号。如果我们想引进关键字，命名常量等等，我们需要扩展`scan()`。像浮点数一样，我们提取字符数字串以供深入分析：
 
 ```cpp
- #define ALNUM    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
-                    "abcdefghijklmnopqrstuvwxyz" \
-                    "_" "0123456789"
+#define ALNUM    "ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
+                  "abcdefghijklmnopqrstuvwxyz" \
+                  "_" "0123456789"
 
-    static enum tokens scan (const char * buf) {
-        static const char * bp;
+static enum tokens scan (const char * buf) {
+    static const char * bp;
+    …
+    if (isdigit(* bp) || * bp == '.')
         …
-        if (isdigit(* bp) || * bp == '.')
-            …
-        else if (isalpha( *bp) || *bp == '_') {
-            char buf[BUFSIZ];
-            int len = strspn(bp, ALNUM);
+    else if (isalpha( *bp) || *bp == '_') {
+        char buf[BUFSIZ];
+        int len = strspn(bp, ALNUM);
 
-            if (len >= BUFSIZ)
-                error("name too long: %-.10s…", bp);
+        if (len >= BUFSIZ)
+            error("name too long: %-.10s…", bp);
 
-            strncpy(buf, bp, len), buf[len] = '\0', bp += len;
-            token = screen(buf);
-        }
-        ... 
+        strncpy(buf, bp, len), buf[len] = '\0', bp += len;
+        token = screen(buf);
+    }
+    ...
 ```
 
 一旦我们有了一个标识符，我们让新函数`screen()`来决定它的`token`值应当是什么。如果有必要，`screen()`将会存放一个解析器可以识别的符号描述到全局变量`symbol`中。
@@ -49,10 +50,10 @@ static void * factor (void) {
         case VAR:
             result = symbol;
             break;
-        ... 
+        ...
 ```
 
-`VAR`是一个当`screen()`发现适当的标识符的时候放到`token`中的唯一值。有关标识符的附加信息被放到全局变量 symbol 中。在这种情况下，`symbol`包含一个节点来标示变量作为表达式树中的一个叶子。`screen()`要么找到变量再符号表中或者使用描述`Var`去创建它。
+`VAR`是一个当`screen()`发现适当的标识符的时候放到`token`中的唯一值。有关标识符的附加信息被放到全局变量`symbol`中。在这种情况下，`symbol`包含一个节点来标示变量作为表达式树中的一个叶子。`screen()`要么找到变量再符号表中或者使用描述`Var`去创建它。
 
 识别一个赋值有点复杂。如果我们的计算器允许如下两种语法的声明，它将会是舒适的：
 
@@ -116,7 +117,7 @@ struct Name {            /* base structure */
 }; 
 ```
 
-我们的符号从不死亡：他们的名字是预定义的常量字符串还是存储的用户自定义变量动态字符串是没有关系的--我们将不会回收他们。
+我们的符号从不死亡：他们的名字是预定义的常量字符串还是存储的用户自定义变量动态字符串是没有关系的——我们将不会回收他们。
 
 在我们可以定义一个符号之前，我们需要输入它到符号表。这不能通过调用`new(Name, ...)`来处理，因为我们想要支持更多比`Name`复杂的符号，并且我们想要隐藏符号表的实现。相反的，我们提供一个函数`install()`，它需要一个`Name`对象并把它插入到符号表中。这里给出符号表接口文件`Name.h`：
 
@@ -126,7 +127,7 @@ void install (const void * symbol);
 int screen (const char * name); 
 ```
 
-识别器必须插入像`LET`的关键字到符号表中，在他们被`screener`发现之前。这些关键字可以被定义进一个常量表结构中--它对`install()`没有影响。下面的函数被用来初始化识别：
+识别器必须插入像`LET`的关键字到符号表中，在他们被`screener`发现之前。这些关键字可以被定义进一个常量表结构中——它对`install()`没有影响。下面的函数被用来初始化识别：
 
 ```cpp
 #include "Name.h"
@@ -148,9 +149,9 @@ static void initName (void) {
 
 ## 父类的实现--`Name`
 
-通过名字搜索符号是一个标准问题。不幸的是，ANSI 标准没有定义一个合适的库函数来解决它。`bsearch()`--有序表中的二分查找--比较接近，但是如果我们想要插入一个单独的新符号，我们不得不调用`qsort()`来设置阶段给后续搜索。
+通过名字搜索符号是一个标准问题。不幸的是，ANSI 标准没有定义一个合适的库函数来解决它。`bsearch()`——有序表中的二分查找——比较接近，但是如果我们想要插入一个单独的新符号，我们不得不调用`qsort()`来设置阶段给后续搜索。
 
-UNIX 系统很可能提供两三个函数家族来处理动态增长表。`lsearch()`--线性搜索一个数组并在`end(!)`添加--不是完全高校的。`hsearch()`--一个结构体哈希表由一个文本和一个信息指针组成--维护一个固定大小的表并且强制一个尴尬的结构体入口。`tsearch()`--一个二叉树具有任意比较和删除--是最常用的家族但是很没有效率，如果初始符号从一个有序序列中安装。
+UNIX 系统很可能提供两三个函数家族来处理动态增长表。`lsearch()`——线性搜索一个数组并在`end(!)`添加——不是完全高校的。`hsearch()`——一个结构体哈希表由一个文本和一个信息指针组成——维护一个固定大小的表并且强制一个尴尬的结构体入口。`tsearch()`——一个二叉树具有任意比较和删除——是最常用的家族但是很没有效率，如果初始符号从一个有序序列中安装。
 
 在一个 UNIX 系统上，`tsearch()`有可能是最好的折衷。对于一个可移植的实现具有二元线程树可以在`[Sch87]`找到。然而，如果这个家族不可用，或者如果我们不能保证一个随机的初始化，我们应当查看一个简单的设备来实现。一个小心实现的`bsearch()`可以很容易的被扩展来支持存储的数组插入：
 
@@ -187,11 +188,11 @@ void * binary (const void * key,
 } 
 ```
 
-`memmove()`移动数组的末尾，`memcpy()`插入`key`。我们假定数组之外还有空间并且我们通过`nelp`纪录我们已经加入了一个元素--`binary()`和标准函数`bsearch()`只需要地址而不是变量的值包含饿了表中元素的个数。
+`memmove()`移动数组的末尾，`memcpy()`插入`key`。我们假定数组之外还有空间并且我们通过`nelp`纪录我们已经加入了一个元素——`binary()`和标准函数`bsearch()`只需要地址而不是变量的值包含饿了表中元素的个数。
 
 > `memmove()`复制字节即使源和目标区域重叠；`memcpy()`并不如此，但是它更具效率
 
-给出一个通用搜索和入口的方式，我们可以很轻易的管理我们的符号表。首先我们需要比较一个 key 和表中的元素：
+给出一个通用搜索和入口的方式，我们可以很轻易的管理我们的符号表。首先我们需要比较一个`key`和表中的元素：
 
 ```cpp
 static int cmp (const void * _key, const void * _elt) {
@@ -202,7 +203,7 @@ static int cmp (const void * _key, const void * _elt) {
 } 
 ```
 
-作为一个键值，我们只传递一个指向输入符号文本的指针的地址。表中的元素当然是`Name` 结构体，并且我们只查看他们的`.name`成员。
+作为一个键值，我们只传递一个指向输入符号文本的指针的地址。表中的元素当然是`Name`结构体，并且我们只查看他们的`.name`成员。
 
 搜索和入口通过适用适当的参数对`binary()`进行调用来实现。由于我们事先不知道符号个数，我们确保一直有空间让我们扩招表：
 
@@ -223,7 +224,7 @@ static struct Name ** search (const char ** name) {
 
 `NAMES`是一个定义的常量具有初始分配的表项；每次我们用完，我们都是表的大小加倍。
 
-`search()`适用指向要查找的文本的地址指针作为参数并且返回表项的地址。如果文本未找到，`binary()`就插入`key`--也就是说，只有指向文本的指针，而不是一个`struct Name`--到表中。这个策略是为了`screen()`的利益，它只新建一个表元素，如果一个输入中的标识符是未知的：
+`search()`适用指向要查找的文本的地址指针作为参数并且返回表项的地址。如果文本未找到，`binary()`就插入`key`——也就是说，只有指向文本的指针，而不是一个`struct Name`——到表中。这个策略是为了`screen()`的利益，它只新建一个表元素，如果一个输入中的标识符是未知的：
 
 ```cpp
 int screen (const char * name) {
@@ -253,7 +254,7 @@ void install (const void * np) {
 
 `install()`比较简单。我们接受一个`Name`对象并且让`search()`在符号表中找到它。`install()`被假定来只处理新符号，所以我们应当总是能够插入对象替换它的名字。否则，如果`search()`真的找到一个符号，我们就有麻烦了。
 
-## 子类的事先--Var
+## 子类的事先--`Var`
 
 `screen()`调用`new()`来创建一个新的变量符号并且返回它到识别器，并插入它到一个表达式树中。因此，`Var`必须创建可以项节点行为的符号表项，也就是说，当定义`struct Var`的时候，我们需要扩展一个`struct Name`来继承在符号表中存在的能力并且我们必须支持动态绑定的函数可以适用于表达式节点。我们描述接口在`Var.h`中:
 
@@ -279,6 +280,8 @@ static void freeVar (void * tree) {
 就如在 4.6 节中讨论的，通过提供一个值的访问函数来简化代码。
 
 创建一个变量需要分配一个`struct Var`，插入一个变量名的动态副本，并且标识值`VAR`被识别器规定：
+
+
 
 ```cpp
 static void * mkVar (va_list ap) {

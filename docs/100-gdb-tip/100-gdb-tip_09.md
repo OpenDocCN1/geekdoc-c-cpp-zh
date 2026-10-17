@@ -1,8 +1,9 @@
+
 # 汇编
 
-# 设置汇编指令格式
+## 设置汇编指令格式
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -18,9 +19,9 @@ int main(void){
 } 
 ```
 
-## 技巧
+### 技巧
 
-在 Intel x86 处理器上，gdb 默认显示汇编指令格式是 AT&T 格式。例如：
+在 Intel x86 处理器上，`gdb` 默认显示汇编指令格式是 AT&T 格式。例如：
 
 ```cpp
 (gdb) disassemble main
@@ -34,7 +35,7 @@ Dump of assembler code for function main:
 End of assembler dump. 
 ```
 
-可以用“set disassembly-flavor”命令将格式改为 intel 格式：
+可以用`set disassembly-flavor`命令将格式改为 Intel 格式：
 
 ```cpp
 (gdb) set disassembly-flavor intel
@@ -49,17 +50,17 @@ Dump of assembler code for function main:
 End of assembler dump. 
 ```
 
-目前“set disassembly-flavor”命令只能用在 Intel x86 处理器上，并且取值只有“intel”和“att”。
+目前`set disassembly-flavor`命令只能用在 Intel x86 处理器上，并且取值只有“intel”和“att”。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)
+详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 在函数的第一条汇编指令打断点
+## 在函数的第一条汇编指令打断点
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -75,9 +76,9 @@ int main(void){
 } 
 ```
 
-## 技巧
+### 技巧
 
-通常给函数打断点的命令：“b func”（b 是 break 命令的缩写），不会把断点设置在汇编指令层次函数的开头，例如：
+通常给函数打断点的命令：`b func`（`b`是`break`命令的缩写），不会把断点设置在汇编指令层次函数的开头，例如：
 
 ```cpp
 (gdb) b main
@@ -101,7 +102,7 @@ Dump of assembler code for function main:
 End of assembler dump. 
 ```
 
-可以看到程序停在了第三条汇编指令（箭头所指位置）。如果要把断点设置在汇编指令层次函数的开头，要使用如下命令：“b *func”，例如：
+可以看到程序停在了第三条汇编指令（箭头所指位置）。如果要把断点设置在汇编指令层次函数的开头，要使用如下命令：`b *func`，例如：
 
 ```cpp
 (gdb) b *main
@@ -127,13 +128,13 @@ End of assembler dump.
 
 可以看到程序停在了第一条汇编指令（箭头所指位置）。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 自动反汇编后面要执行的代码
+## 自动反汇编后面要执行的代码
 
-## 例子
+### 例子
 
 ```cpp
 (gdb) set disassemble-next-line on
@@ -172,7 +173,7 @@ Temporary breakpoint 1, main (argc=1, argv=0x7fffffffdf38, envp=0x7fffffffdf48) 
 => 0x0000000000400416 <puts@plt+6>: 68 00 00 00 00  pushq  $0x0 
 ```
 
-## 技巧
+### 技巧
 
 如果要在任意情况下反汇编后面要执行的代码：
 
@@ -192,13 +193,13 @@ Temporary breakpoint 1, main (argc=1, argv=0x7fffffffdf38, envp=0x7fffffffdf48) 
 (gdb) set disassemble-next-line off 
 ```
 
-## 贡献者
+### 贡献者
 
-teawater
+`teawater`
 
-# 将源程序和汇编指令映射起来
+## 将源程序和汇编指令映射起来
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -218,9 +219,9 @@ int main(void) {
 } 
 ```
 
-## 技巧一
+### 技巧一
 
-可以用“disas /m fun”（disas 是 disassemble 命令缩写）命令将函数代码和汇编指令映射起来，以上面代码为例：
+可以用`disas /m fun`（`disas`是`disassemble`命令缩写）命令将函数代码和汇编指令映射起来，以上面代码为例：
 
 ```cpp
 (gdb) disas /m main
@@ -263,7 +264,7 @@ End of assembler dump.
 
 可以看到每一条 C 语句下面是对应的汇编代码。
 
-## 技巧二
+### 技巧二
 
 如果只想查看某一行所对应的地址范围，可以：
 
@@ -272,7 +273,7 @@ End of assembler dump.
 Line 13 of "foo.c" starts at address 0x4004e9 <main+37> and ends at 0x40050c <main+72>. 
 ```
 
-如果只想查看这一条语句对应的汇编代码，可以使用“`disassemble [Start],[End]`”命令：
+如果只想查看这一条语句对应的汇编代码，可以使用`disassemble [Start],[End]`命令：
 
 ```cpp
 (gdb) disassemble 0x4004e9, 0x40050c
@@ -290,17 +291,17 @@ Dump of assembler code from 0x4004e9 to 0x40050c:
 End of assembler dump. 
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)
+详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)。
 
-## 贡献者
+### 贡献者
 
-nanxiao
+`nanxiao`
 
-xmj
+`xmj`
 
-# 显示将要执行的汇编指令
+## 显示将要执行的汇编指令
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -316,9 +317,9 @@ int main(void){
 } 
 ```
 
-## 技巧
+### 技巧
 
-使用 gdb 调试汇编程序时，可以用“`display /i $pc`”命令显示当程序停止时，将要执行的汇编指令。以上面程序为例：
+使用`display /i $pc`命令显示当程序停止时，将要执行的汇编指令。以上面程序为例：
 
 ```cpp
 (gdb) start
@@ -343,19 +344,21 @@ change_var () at a.c:4
 
 可以看到打印出了将要执行的汇编指令。此外也可以一次显示多条指令：
 
+
+
 ```cpp
 (gdb) display /3i $pc
 2: x/3i $pc
 => 0x400474 <change_var>:       push   %rbp
    0x400475 <change_var+1>:     mov    %rsp,%rbp
-   0x400478 <change_var+4>:     movl   $0x64,0x2003de(%rip)        # 0x600860 <global_var> 
+   0x400478 <change_var+4>:     movl   $0x64,0x2003de(%rip)        # 0x600860 <global_var>
 ```
 
 可以看到一次显示了`3`条指令。
 
 取消显示可以用`undisplay`命令。
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Auto-Display.html)
+详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Auto-Display.html)。
 
 ## 贡献者
 
@@ -365,7 +368,7 @@ nanxiao
 
 ## 技巧
 
-用 gdb 调试程序时，如果想查看寄存器的值，可以使用“i registers”命令（i 是 info 命令缩写），例如:
+用`gdb`调试程序时，如果想查看寄存器的值，可以使用`i registers`命令（`i`是`info`命令缩写），例如：
 
 ```cpp
 (gdb) i registers
@@ -392,10 +395,10 @@ ss             0x2b     43
 ds             0x0      0
 es             0x0      0
 fs             0x0      0
-gs             0x0      0 
+gs             0x0      0
 ```
 
-以上输出不包括浮点寄存器和向量寄存器的内容。使用“i all-registers”命令，可以输出所有寄存器的内容：
+以上输出不包括浮点寄存器和向量寄存器的内容。使用`i all-registers`命令，可以输出所有寄存器的内容：
 
 ```cpp
 (gdb) i all-registers
@@ -431,19 +434,19 @@ gs             0x0      0
     st5            0        (raw 0x00000000000000000000)
     st6            0        (raw 0x00000000000000000000)
     st7            0        (raw 0x00000000000000000000)
-    ...... 
+    ......
 ```
 
-要打印单个寄存器的值，可以使用“i registers regname”或者“p $regname”，例如：
+要打印单个寄存器的值，可以使用`i registers regname`或者`p $regname`，例如：
 
 ```cpp
 (gdb) i registers eax
 eax            0xf7dd9f60       -136470688
 (gdb) p $eax
-$1 = -136470688 
+$1 = -136470688
 ```
 
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Registers.html).
+参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Registers.html)。
 
 ## 贡献者
 
@@ -460,12 +463,12 @@ int main(void)
 {
         printf("Hello, world\n");
         return 0;
-} 
+}
 ```
 
 ## 技巧
 
-使用“disassemble /r”命令可以用 16 进制形式显示程序的原始机器码。以上面程序为例：
+使用`disassemble /r`命令可以用`16`进制形式显示程序的原始机器码。以上面程序为例：
 
 ```cpp
 (gdb) disassemble /r main
@@ -481,10 +484,10 @@ End of assembler dump.
 (gdb) disassemble /r 0x0000000000400534,+4
 Dump of assembler code from 0x400534 to 0x400538:
    0x0000000000400534 <main+4>: bf e0 05 40 00  mov    $0x4005e0,%edi
-End of assembler dump. 
+End of assembler dump.
 ```
 
-详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)
+详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Machine-Code.html)。
 
 ## 贡献者
 

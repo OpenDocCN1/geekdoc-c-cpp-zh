@@ -1,6 +1,5 @@
+
 # 整洁架构：软件结构与设计的工艺指南（Robert C. Martin 系列）
-
-
 
 ![](img/00178.jpeg)
 
@@ -12,119 +11,85 @@ EPUB 是一种开放的行业标准电子书格式。然而，阅读设备和应
 
 ![images](img/00001.jpeg)
 
-
-
 ![images](img/00002.jpeg)
 
-波士顿 • 科伦布 • 印第安波利斯 • 纽约 • 旧金山 • 阿姆斯特丹 • 开普敦 迪拜 • 伦敦 • 马德里 • 米兰 • 慕尼黑 • 巴黎 • 蒙特利尔 • 多伦多 • 德里 • 墨西哥城 圣保罗 • 悉尼 • 香港 • 首尔 • 新加坡 • 台北 • 东
-
-
-
-
-
-
-
-
-
-
-
+波士顿 • 科伦布 • 印第安纳波利斯 • 纽约 • 旧金山 • 阿姆斯特丹 • 开普敦 • 迪拜 • 伦敦 • 马德里 • 米兰 • 慕尼黑 • 巴黎 • 蒙特利尔 • 多伦多 • 德里 • 墨西哥城 • 圣保罗 • 悉尼 • 香港 • 首尔 • 新加坡 • 台北 • 东
 
 1 17
 
-本书献给我我亲爱的妻子、我四个出色的孩子以及他们的家庭，包括我那五个孙子孙——他们是我生活的甜点。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+本书献给我亲爱的妻子、我四个出色的孩子以及他们的家庭，包括我那五个孙子孙女——他们是我生活的甜点。
 
 - 结论
-### 第四部分 组件原则](#part0024.html_part4)
+- [第四部分 组件原则](#part0024.html_part4)
 - 链接器
 - 通用重用原则
 - 结论
 
-
-
-
-
-
 ## 物理地址
+
 ## 结论
-
-
-
 
 ## 结论
 
 ## 请求与响应模型
+
 ## 可测试的架构
+
 ## 典型场景
 
 ### 测试与架构
 
 ## 跨越溪流
 
+## 结论
 
 ## 结论
-## 结论
+
 ## 非对称婚姻
 
 ## 按功能包
+
 ### 组织与封装
+
 ## 索引
 
-
 当我们谈论软件架构时，软件在本质上是递归和分形的，它们被刻画和勾勒在代码之中。一切都是细节。相互锁的细节层次也对建筑的架构做出了贡献，但在软件中讨论物理规模是没有意义的。软件具有结构——许多种结构和许多类型的结构——但其多样性超过了在建筑中发现的物理结构范围。你甚至可以非常有说服力地论证，软件中的设计活动和关注比建筑架构更多——从这个意义上说，认为软件架构比建筑架构更具“架构性”也是合理的！
+
 这本书的标题是 `Clean Architecture`（整洁架构）。这是一个大胆的名字。有些人甚至会认为它傲慢。那么，我为什么选择这个标题，我又为什么要写这本书呢？
+
 *架构规则是通用的！*
 
-
-
 Kent Beck
+
 Bill Degnan
-
-
-
-
-
 
 ## 22
 
-### 洁洁架构
+### 整洁架构
 
 ![Image](img/00082.jpeg)
 
 在过去的几十年里，我们看到了关于系统架构的一系列观点。这些包括：
 
-* 六边形架构（也称为端口和适配器），由 Alistair Cockburn 开发，并被 Steve Freeman 和 Nat Pryce 在他们出色的著作 *Growing Object Oriented Software with Tests* 中采用。
-* 来自 James Coplien 和 Trygve Reenskaug 的 DCI
-* BCE，由 Ivar Jacobson 从他的书籍 *Object Oriented Software Engineering: A Use-Case Driven Approach* 中引入。
+- 六边形架构（也称为端口和适配器），由 Alistair Cockburn 开发，并被 Steve Freeman 和 Nat Pryce 在他们出色的著作 *Growing Object Oriented Software with Tests* 中采用。
+- 来自 James Coplien 和 Trygve Reenskaug 的 DCI。
+- BCE，由 Ivar Jacobson 从他的书籍 *Object Oriented Software Engineering: A Use-Case Driven Approach* 中引入。
 
 尽管这些架构在细节上各有不同，但它们非常相似。它们都有相同的目标，即关注点分离。它们都通过将软件划分为层来实现这种分离。每种架构都至少有一层用于业务规则，以及另一层用于用户和系统界面的。
 
-这些架构中的每一种所产的系统都具有以下特征：
+这些架构中的每一种所产生的系统都具有以下特征：
 
-* `独立于框架。` 架构不依赖于某些功能丰富的软件库的存在。这允许你将此类框架作为工具，而不是强迫将你的系统塞进它们有限的限制中。
-* `可测试。` 可以在没有 UI、数据库、Web 服务器或任何其他外部元素的情况下测试业务规则。
-* `独立于 UI。` UI 可以轻松更改，而无需更改系统的其他部分。例如，可以用控制台 UI 替换 Web UI，而无需更改业务规则。
-* `独立于数据库。` 你可以将 `Oracle` 或 `SQL Server` 交换为 `Mongo`、`BigTable`、`CouchDB` 或其他。你的业务规则不受数据库限制。
-* `独立于任何外部机构。` 事实上，你的业务规则完全不知道外部世界的接口。
+- `独立于框架。`架构不依赖于某些功能丰富的软件库的存在。这允许你将此类框架作为工具，而不是强迫将你的系统塞进它们有限的限制中。
+- `可测试。`可以在没有 UI、数据库、Web 服务器或任何其他外部元素的情况下测试业务规则。
+- `独立于 UI。`UI 可以轻松更改，而无需更改系统的其他部分。例如，可以用控制台 UI 替换 Web UI，而无需更改业务规则。
+- `独立于数据库。`你可以将 `Oracle` 或 `SQL Server` 交换为 `Mongo`、`BigTable`、`CouchDB` 或其他。你的业务规则不受数据库限制。
+- `独立于任何外部机构。`事实上，你的业务规则完全不知道外部世界的接口。
 
 图 22.1 中的图表试图将所有这些架构整合到一个单一的可操作想法中。
 
 ![Image](img/00083.jpeg)
 
-**图 22.1** 洁洁架构
+**图 22.1** 整洁架构
 
 ## 依赖规则
 
@@ -138,24 +103,21 @@ Bill Degnan
 
 同样，在外层中声明的数据格式不应被内层圆使用，特别是当这些格式是由外层的框架生成的。我们不希望外层的任何东西影响内层圆。
 
-#### 实体 (Entities)
+### 实体（Entities）
 
 实体封装了企业的关键业务规则。实体可以是带有方法的对象，也可以是一组数据结构和函数。只要实体可以被企业中的许多应用程序使用，这并不重要。
 
 如果你没有企业，只是编写单个应用程序，那么这些实体就是应用程序的业务对象。它们封装了最通用、最高级的规则。当外部发生变化时，它们最不容易改变。例如，你不会预期这些对象受到页面导航或安全性的影响。任何特定应用程序的操作更改都不应影响实体层。
 
-#### 用例 (Use Cases)
+### 用例（Use Cases）
 
 用例层的软件包含了特定的业务规则。它封装并实现了系统所有的用例。这些用例协调数据在实体之间的流动，并指导这些实体使用它们各自的关键业务规则来实现用例的目标。
 
 我们不期望这一层的更改会影响实体。我们也不期望该层受到外部因素（如数据库、UI 或任何常用框架）更改的影响。用例层与这些关注点隔离开。
 
-
-
-
 然而，我们预料应用程序运行的更改将影响用例，因此也会影响该层中的软件。如果用例的细节发生变化，那么该层中的某些代码肯定会受到影响。
 
-### 接口适配器 (INTERFACE ADAPTERS)
+### 接口适配器（INTERFACE ADAPTERS）
 
 接口适配器层中的软件是一组适配器，它们将数据从最便于用例和实体处理的格式转换为最便于某些外部代理（如数据库或 Web）处理的格式。例如，正是这一层将完整地包含 GUI 的 MVC 架构。演示者（presenters）、视图（views）和控制器（controllers）都属于接口适配器层。模型（models）可能只是从控制器传递到用例，然后从用例传回演示者和视图的数据结构。
 
@@ -163,7 +125,7 @@ Bill Degnan
 
 该层还包含了任何其他必要的适配器，用于将数据从某些外部形式（如外部服务）转换为用例和实体使用的内部形式。
 
-### 框架和驱动程序 (FRAMEWORKS AND DRIVERS)
+### 框架和驱动程序（FRAMEWORKS AND DRIVERS）
 
 图 22.1 中模型的最外层通常由框架和工具组成，例如数据库和 Web 框架。通常情况下你不会在这一层中编写大量代码，除了与内部下一个圆圈通信的胶水代码外。
 
@@ -173,7 +135,7 @@ Bill Degnan
 
 图 22.1 中的圆圈是示意性的：你可能会发现自己需要的不仅仅是这四个。没有规则规定你必须始终只有这四个。然而，依赖规则（Dependency Rule）始终适用。源代码的依赖始终指向内部。随着你向内部移动，抽象级别和策略增加。最外层的圆圈由低级的具体细节组成。随着你向内部移动，软件变得更加抽象，并封装了高级别的策略。最内层的圆圈是最通用且层次最高级。
 
-### 跨越边界 (CROSSING BOUNDARIES)
+### 跨越边界（CROSSING BOUNDARIES）
 
 图 22.1 图右下角是一个我们如何跨越圆圈边界的示例。它展示了控制器和演示者与下一层的用例进行通信。注意控制流：它始于控制器，经过用例，最后在演示者中执行。同样注意源代码依赖：每一个都指向内部的用例。
 
@@ -191,7 +153,7 @@ Bill Degnan
 
 因此，当我们跨越边界传递数据时，它总是以便于内层圆圈的形式存在。
 
-### 典型场景 (A TYPICAL SCENARIO)
+### 典型场景（A TYPICAL SCENARIO）
 
 图 22.2 图显示了一个使用数据库的基于 Web 的 `Java` 系统的典型场景。Web 服务器从用户处收集输入数据并交给左上角的 `Controller`。`Controller` 将这些数据封装成一个普通的 Java 对象（POJO），并通过 `InputBoundary` 将此对象传递给 `UseCaseInteractor`。`UseCaseInteractor` 解析这些数据并使用它们来控制 `Entities` 的运行。它还使用 `DataAccessInterface` 从 `Database` 将这些 `Entities` 使用的数据调入内存。完成后，`UseCaseInteractor` 从 `Entities` 收集数据并构造出另一个普通的 Java 对象作为 `OutputData`。然后，`OutputData` 通过 `OutputBoundary` 接口传递给 `Presenter`。
 
@@ -209,9 +171,6 @@ Bill Degnan
 
 遵循这些简单的规则并不困难，它们将为未来的开发避免很多烦恼。通过将软件分层并遵循依赖规则，你将创建一个从本质上可测试的系统，以及随之带来的所有好处。当系统的任何外部部分过时时（例如数据库或 Web 框架），你可以以最小的代价替换这些过时的元素。
 
-
-
-
 `Humble Object`（谦卑对象）模式是一种设计模式，最初被识别为一种帮助单元测试人员将难以测试的行为与易测试的行为分离开的方法。其思想非常简单：将行为分为两个模块或类。其中一个模块是“谦卑的（humble）”，它包含了所有被精简到最本质的、难以测试的行为。另一个模块则包含了从该谦卑对象中提取出的所有可测试行为。
 
 例如，GUI 很难进行单元测试，因为很难编写能够查看屏幕并检查相应元素是否显示在上面的测试。然而，GUI 的大部分行为实际上是易测试的。使用 `Humble Object` 模式，我们可以将这两种行为分离到两个不同的类中，称为 `Presenter`（演示器）和 `View`（视图）。
@@ -220,11 +179,11 @@ Bill Degnan
 
 `View` 是难以测试的谦卑对象。该对象中的代码保持尽可能简单。它将数据移动到 GUI 中，但不对这些数据进行处理。
 
-`Presenter` 是可测试的对象。它的工作是接收应用程序的数据并对其进行格式化以便展示，以便 `View` 可以简单地将其移动到屏幕上。例如，如果应用程序想要在字段中显示日期，它会向 `Presenter` 传递一个 `Date` 对象。`Presenter` 然后会将该数据格式化为适当的字符串，并将其放在名为 `View Model` 的简单数据结构中，`View` 可以那里找到它。
+`Presenter` 是可测试的对象。它的工作是接收应用程序的数据并对其进行格式化以便展示，以便 `View` 可以简单地将其移动到屏幕上。例如，如果应用程序想要在字段中显示日期，它会向 `Presenter` 传递一个 `Date` 对象。`Presenter` 然后会将该数据格式化为适当的字符串，并将其放在名为 `View Model` 的简单数据结构中，`View` 可以在那里找到它。
 
-如果应用程序想要在屏幕上显示金额，它可能会向 `Presenter` 传递一个 `Currency` 对象。`Presenter` 将根据适当的小位数和货币标记对该对象进行格式化，创建一个可以放在 `View Model` 中的字符串。如果该货币值为应变为红色，则会相应设置 `View model` 中一个简单的布尔标记。
+如果应用程序想要在屏幕上显示金额，它可能会向 `Presenter` 传递一个 `Currency` 对象。`Presenter` 将根据适当的小数位数和货币标记对该对象进行格式化，创建一个可以放在 `View Model` 中的字符串。如果该货币值为应变为红色，则会相应设置 `View Model` 中一个简单的布尔标记。
 
-屏幕上的每个按钮都有一个名称。该名称是 `View Model` 中的一个字符串，由 `Presenter` 放置。如果这些按钮应该是灰色，`Presenter` 将在 `View model` 中设置适当的布尔标记。每个菜单项名称都是 `View model` 中的一个字符串，由 `Presenter` 加载。每个单选按钮、复选框和文本字段的名称都由 `Presenter` 加载到 `View model` 中相应的字符串和布尔值中。应该显示在屏幕上的数字表格由 `Presenter` 加载到 `View model` 中格式化良好的字符串表格中。
+屏幕上的每个按钮都有一个名称。该名称是 `View Model` 中的一个字符串，由 `Presenter` 放置。如果这些按钮应该是灰色，`Presenter` 将在 `View Model` 中设置适当的布尔标记。每个菜单项名称都是 `View Model` 中的一个字符串，由 `Presenter` 加载。每个单选按钮、复选框和文本字段的名称都由 `Presenter` 加载到 `View Model` 中相应的字符串和布尔值中。应该显示在屏幕上的数字表格由 `Presenter` 加载到 `View Model` 中格式化良好的字符串表格中。
 
 屏幕上出现的任何内容以及应用程序具有某种控制权的内容，在 `View Model` 中都以字符串、布尔值或枚举的形式表示。`View` 除了从 `View Model` 加载数据到屏幕上外，没有别的事情可做。因此，`View` 是谦卑的。
 
@@ -236,7 +195,7 @@ Bill Degnan
 
 在用例交互器（use case interactors）和数据库之间是数据库网关（database gateways）。这些网关是多态接口，包含了应用程序在数据库上执行的每个创建、读取、更新或删除操作的方法。例如，如果应用程序需要知道昨天登录的所有用户的姓氏，那么 `UserGateway` 接口将有一个名为 `getLastNamesOfUsersWhoLoggedInAfter` 的方法，它接受一个 `Date` 作为参数并返回姓氏列表。
 
-请记住，我们不允许在用例层中使用 SQL；相反，我们使用具有适当方法的网关接口。这些网关由数据库层中的类实现。该实现就是谦卑对象。它只是使用 SQL（或任何数据库接口）来访问每个方法所需的数据。相比之下，交互器是不谦卑的，因为它们封装了特定特定的业务规则。尽管它们不谦卑，但这些交互器是可测试的，因为网关可以用适当的存根（stubs）和测试双胞（test-doubles）替换。
+请记住，我们不允许在用例层中使用 SQL；相反，我们使用具有适当方法的网关接口。这些网关由数据库层中的类实现。该实现就是谦卑对象。它只是使用 SQL（或任何数据库接口）来访问每个方法所需的数据。相比之下，交互器是不谦卑的，因为它们封装了特定的业务规则。尽管它们不谦卑，但这些交互器是可测试的，因为网关可以用适当的存根（stubs）和测试双胞（test-doubles）替换。
 
 ### 数据映射器
 
@@ -252,15 +211,13 @@ Bill Degnan
 
 服务又如何？如果你的应用程序必须与其他服务通信，或者如果你的应用程序提供一组服务，我们会发现 `Humble Object` 模式创建一个服务边界吗？
 
-当然会！应用程序将数据加载到简单的数据结构中，然后将这些结构跨边界传递给能够正确格式化数据并发送到外部服务的模块。在输入端，服务监听器将从服务接口接收数据并将其格式化为应用程序可以使用简单数据结构。然后该数据结构被跨越服务边界。
+当然会！应用程序将数据加载到简单的数据结构中，然后将这些结构跨边界传递给能够正确格式化数据并发送到外部服务的模块。在输入端，服务监听器将从服务接口接收数据并将其格式化为应用程序可以使用的简单数据结构。然后该数据结构被跨越服务边界。
 
 ## 结论
 
 在每个架构边界处，我们可能都会发现附近存在 `Humble Object` 模式。跨越边界的通信几乎总是涉及某些简单的数据结构，边界经常会将难以测试的部分与易测试的部分隔离开。
 
----
-
-### 部分边界
+## 部分边界
 
 ![Image](img/00086.jpeg)
 
@@ -274,30 +231,29 @@ Bill Degnan
 
 
 
-
 显然，这种部分边界所需的代码量和准备设计工作与完整边界是相同的。然而，它不需要管理多个组件。它没有版本号跟踪或发布管理的负担。这种差异不应被轻视。
 
-这是 `FitNesse` 早期的设计策略。`FitNesse` 的 web 服务器组件被设计为可以与 `FitNesse` 的 wiki 和测试部分分离。这种想法是，我们可能希望使用该 web 组件来创建其他基于 web 的应用程序。同时，我们也不希望用户不得不下载两个组件。记住，我们的设计目标之一是“下载即用”。我们的意图是让用户下载一个 jar 文件并执行它，而无需去寻找其他 jar 文件、解决版本兼容性问题等等。
+这是`FitNesse`早期的设计策略。`FitNesse`的 web 服务器组件被设计为可以与`FitNesse`的 wiki 和测试部分分离。这种想法是，我们可能希望使用该 web 组件来创建其他基于 web 的应用程序。同时，我们也不希望用户不得不下载两个组件。记住，我们的设计目标之一是“下载即用”。我们的意图是让用户下载一个 jar 文件并执行它，而无需去寻找其他 jar 文件、解决版本兼容性问题等等。
 
-`FitNesse` 的故事也指出了这种方法的危险之处。随着时间的推移，当人们明显发现永远不需要独立的 web 组件时，web 组件与 wiki 组件之间的分离开始变弱。依赖关系开始以错误的方向跨越边界。如今，要重新将它们分离将是一项苦力差事。
+`FitNesse`的故事也指出了这种方法的危险之处。随着时间的推移，当人们明显发现永远不需要独立的 web 组件时，web 组件与 wiki 组件之间的分离开始变弱。依赖关系开始以错误的方向跨越边界。如今，要重新将它们分离将是一项苦力差事。
 
 ### 一维边界
 
 完整的架构边界使用互惠的边界接口来维持两个方向的隔离。在两个方向上保持分离在初始设置和持续维护上都是昂贵的。
 
-一种为以后扩展为完整边界提供位置的简单结构如图图 24.1
+一种为以后扩展为完整边界提供位置的简单结构如图图 24.1。
 
 **图 24.1** 策略模式
 
-很清楚，这为未来的架构边界铺平了道路。必要的依赖倒置已经到位，试图将 `Client` 与 `ServiceImpl` 隔离开。同样很清楚的是，这种分离可能会迅速退化，如图中那个难看的虚箭头所示。如果没有互惠接口，除了开发者和架构师的勤勉和自律外，没有任何能阻止这种后道的产生。
+很清楚，这为未来的架构边界铺平了道路。必要的依赖倒置已经到位，试图将`Client`与`ServiceImpl`隔离开。同样很清楚的是，这种分离可能会迅速退化，如图中那个难看的虚箭头所示。如果没有互惠接口，除了开发者和架构师的勤勉和自律外，没有任何能阻止这种后道的产生。
 
 ### 外观模式
 
-更简单的边界是外观模式（Facade pattern），如图图 24.2
+更简单的边界是外观模式（Facade pattern），如图图 24.2。
 
 **图 24.2** 外观模式
 
-然而，注意 `Client` 对所有这些服务类都有间接依赖。在静态语言中，其中一个 `Service` 类源代码的更改将强制 `Client` 重新编译。此外，你可以想象使用这种结构创建后道是多么容易。
+然而，注意`Client`对所有这些服务类都有间接依赖。在静态语言中，其中一个`Service`类源代码的更改将强制`Client`重新编译。此外，你可以想象使用这种结构创建后道是多么容易。
 
 ## 结论
 
@@ -315,9 +271,9 @@ Bill Degnan
 
 例如，考虑一个简单的电脑游戏。很容易想象这三个组件。UI 处理从玩家到游戏规则的所有消息。游戏规则在某种持久化数据结构中存储游戏状态。但这些就是全部了吗？
 
-### 猎杀雾兽 (HUNT THE WUMPUS)
+### 猎杀雾兽（HUNT THE WUMPUS）
 
-让我们给这些骨架增加血肉。假设这个游戏是 1972 年著名的《Hunt the Wumpus》冒险游戏。这个基于文本的游戏使用了简单的命令，如 GO EAST（向东）和 SHOOT WEST（向西射）。玩家输入命令，计算机响应玩家看到、闻到、听到和体验的内容。玩家在一个洞穴系统中搜猎一只 Wumpus，必须避开伏击的陷阱、深坑和其他危险。如果你感兴趣，在网络上很容易找到该游戏的规则。
+让我们给这些骨架增加血肉。假设这个游戏是 1972 年著名的《Hunt the Wumpus》冒险游戏。这个基于文本的游戏使用了简单的命令，如`GO EAST`（向东）和`SHOOT WEST`（向西射）。玩家输入命令，计算机响应玩家看到、闻到、听到和体验的内容。玩家在一个洞穴系统中搜猎一只 Wumpus，必须避开伏击的陷阱、深坑和其他危险。如果你感兴趣，在网络上很容易找到该游戏的规则。
 
 假设我们将保留基于文本的 UI，但将其与游戏规则解耦，以便我们的版本可以在不同的市场使用不同的语言。游戏规则将使用与语言的 API 与 UI 组件通信，而 UI 将将该 API 翻译成相应的人类语言。
 
@@ -347,16 +303,13 @@ Bill Degnan
 
 **图 25.3** 修改后的图表
 
-图 25.3 中的图表变得有点复杂，但不应该包含任何意外。虚线轮廓表示抽象组件，它们定义了由上方或下方组件实现的 API。例如，`Language` API 由 `English` 和 `Spanish` 实现。
+图 25.3 中的图表变得有点复杂，但不应该包含任何意外。虚线轮廓表示抽象组件，它们定义了由上方或下方组件实现的 API。例如，`Language` API 由`English`和`Spanish`实现。
 
+如果我们观察`Language`内部，会发现同样的情况：由`TextDelivery`内部代码实现的多态`Boundary`接口，以及由`TextDelivery`使用并由`Language`实现的多态`Boundary`接口。
 
+在每种情况下，由这些`Boundary`接口定义的 API 都归上游组件所有。
 
-
-如果我们观察 `Language` 内部，会发现同样的情况：由 `TextDelivery` 内部代码实现的多态 `Boundary` 接口，以及由 `TextDelivery` 使用并由 `Language` 实现的多态 `Boundary` 接口。
-
-在每种，由这些 `Boundary` 接口定义的 API 都归上游组件所有。
-
-变体（如 `English`、`SMS` 和 `CloudData`）是由抽象 API 组件中定义的多态接口提供的，并由服务它们的具体组件实现。例如，我们期望在 `Language` 中定义的多态接口由 `English` 和 `Spanish` 实现。
+变体（如`English`、`SMS`和`CloudData`）是由抽象 API 组件中定义的多态接口提供的，并由服务它们的具体组件实现。例如，我们期望在`Language`中定义的多态接口由`English`和`Spanish`实现。
 
 我们可以通过消除所有变体并仅关注 API 组件来简化这张图。图 25.4 显示了这幅图表。
 
@@ -364,17 +317,17 @@ Bill Degnan
 
 **图 25.4** 简化后的图
 
-注意，图 25.4 中的图表取向是，使得所有的箭头都指向上方。这使得 `GameRules` 位于顶部。这种取向是有意义的，因为 `GameRules` 是包含最高策略的组件。
+注意，图 25.4 中的图表取向是，使得所有的箭头都指向上方。这使得`GameRules`位于顶部。这种取向是有意义的，因为`GameRules`是包含最高策略的组件。
 
-考虑信息流的方向。所有输入都通过左下角的 `TextDelivery` 组件来自用户。这些信息流经 `Language` 组件上升，被翻译成发送给 `GameRules` 的命令。`GameRules` 处理用户输入并将适当的数据发送到右下角的 `DataStorage`。
+考虑信息流的方向。所有输入都通过左下角的`TextDelivery`组件来自用户。这些信息流经`Language`组件上升，被翻译成发送给`GameRules`的命令。`GameRules`处理用户输入并将适当的数据发送到右下角的`DataStorage`。
 
-`GameRules` 然后输出传回给 `Language`，`Language` 将 API 翻译回相应的语言，然后通过 `TextDelivery` 将该语言传递给用户。
+`GameRules`然后输出传回给`Language`，`Language`将 API 翻译回相应的语言，然后通过`TextDelivery`将该语言传递给用户。
 
-这种组织有效地将数据流分为两个流^(2)。左侧的流关注与用户的通信，右侧的流关注数据持久化。两个流在顶部^(3) 汇合于 `GameRules`，它是处理通过这两个流的数据的最终处理器。
+这种组织有效地将数据流分为两个流^(2)。左侧的流关注与用户的通信，右侧的流关注数据持久化。两个流在顶部^(3)汇合于`GameRules`，它是处理通过这两个流的数据的最终处理器。
 
 ### 流的交汇
 
-是否总是像像这个例子一样，有两个数据流？不，完全不是。想象一下我们想在网络上和多个玩家玩“捉迷幻兽”（Hunt the Wumpus）。在这种情况下，我们需要一个网络组件，如图 25.5 所示。这种组织将数据流划分为三个流，都由 `GameRules` 控制。
+是否总是像像这个例子一样，有两个数据流？不，完全不是。想象一下我们想在网络上和多个玩家玩“捉迷幻兽”（Hunt the Wumpus）。在这种情况下，我们需要一个网络组件，如图 25.5 所示。这种组织将数据流划分为三个流，都由`GameRules`控制。
 
 ![Image](img/00094.jpeg)
 
@@ -386,19 +339,19 @@ Bill Degnan
 
 此时，你可能在想所有的流最终都会汇合在顶部的单个组件中。如果生活真那么简单就好了！现实要复杂得多。
 
-考虑用于“捉迷幻兽”的 `GameRules` 组件。部分游戏规则涉及地图的机制。它们知道洞穴是如何连接的，以及每个洞穴位于哪些对象。它们知道如何让玩家从一个洞穴移动到另一个洞穴，以及如何确定玩家必须处理的事件。
+考虑用于“捉迷幻兽”的`GameRules`组件。部分游戏规则涉及地图的机制。它们知道洞穴是如何连接的，以及每个洞穴位于哪些对象。它们知道如何让玩家从一个洞穴移动到另一个洞穴，以及如何确定玩家必须处理的事件。
 
-还有另一组更高级别的策略——知道玩家健康状况以及特定事件成本或收益的策略。这些策略可能会导致玩家逐渐失去健康值，或通过发现食物获得健康值。低级机制策略会向这种高级策略声明事件，例如 `FoundFood` 或 `FellInPit`。高级策略随后会管理玩家的状态（如图 25.6 所示）。最终，该策略将决定玩家的胜负。
+还有另一组更高级别的策略——知道玩家健康状况以及特定事件成本或收益的策略。这些策略可能会导致玩家逐渐失去健康值，或通过发现食物获得健康值。低级机制策略会向这种高级策略声明事件，例如`FoundFood`或`FellInPit`。高级策略随后会管理玩家的状态（如图 25.6 所示）。最终，该策略将决定玩家的胜负。
 
 ![Image](img/00095.jpeg)
 
 **图 25.6** 高级策略管理玩家
 
-这是一个架构边界吗？我们是否需要一个将 `MoveManagement` 与 `PlayerManagement` 隔离开的 API？嗯，让我们这变得更有趣一点，加入微服务吧。
+这是一个架构边界吗？我们是否需要一个将`MoveManagement`与`PlayerManagement`隔离开的 API？嗯，让我们这变得更有趣一点，加入微服务吧。
 
-假设我们有一个大型多人版本的“捉迷幻兽”。`MoveManagement` 在玩家的计算机上进行本地处理，但 `PlayerManagement` 由服务器处理。`PlayerManagement` 为所有连接的 `MoveManagement` 组件提供微服务 API。
+假设我们有一个大型多人版本的“捉迷幻兽”。`MoveManagement`在玩家的计算机上进行本地处理，但`PlayerManagement`由服务器处理。`PlayerManagement`为所有连接的`MoveManagement`组件提供微服务 API。
 
-图 25.7 中的图表以某种简略的方式描绘了这种场景。`Network` 元素比描述的复杂一点——但你可能仍然能理解这一点。在这种情况下，`MoveManagement` 和 `PlayerManagement` 之间存在一个完整的架构边界。
+图 25.7 中的图表以某种简略的方式描绘了这种场景。`Network`元素比描述的复杂一点——但你可能仍然能理解这一点。在这种情况下，`MoveManagement`和`PlayerManagement`之间存在一个完整的架构边界。
 
 ![Image](img/00096.jpeg)
 
@@ -408,7 +361,7 @@ Bill Degnan
 
 这一切意味着什么？为什么我要这样一个荒谬简单的程序（它用 200 行 Kornshell 代码就能实现），并用所有这些疯狂的架构边界对其进行推演？
 
-这个例子旨在说明架构边界无处不在。我们作为架构师，必须谨慎地识别何时需要它们。我们还必须意识到，这种边界在完全实现时是昂昂的。同时，我们必须承认，当这种边界被忽视时，以后添加它们将非常昂贵——即使在有完善测试套件和重构纪律的情况下也是如此。
+这个例子旨在说明架构边界无处不在。我们作为架构师，必须谨慎地识别何时需要它们。我们还必须意识到，这种边界在完全实现时是昂贵的。同时，我们必须承认，当这种边界被忽视时，以后添加它们将非常昂贵——即使在有完善测试套件和重构纪律的情况下也是如此。
 
 那么我们架构师该怎么办？答案令人遗憾的。一方面，多年来一些非常聪明的人告诉我们，我们不应该预判抽象的需求。这是 YAGNI 哲学：“你不会需要它的。”这条信息中蕴含智慧，因为过度工程通常比工程不足要糟糕得多。另一方面，当你发现自己确实需要一个本不存在的架构边界时，添加这样一个边界的成本和风险可能非常高。
 
@@ -421,28 +374,24 @@ Bill Degnan
 这需要敏锐的观察。
 
 1. 应该很清楚，我们不会对像这种简易的游戏应用清洁架构方法。毕竟，整个程序可能只需要 200 行代码或更少的代码。在这种情况下，我们使用一个简单的程序作为具有显著架构边界的大型系统的代理。
-
 2. 如果你对箭头的方向感到困惑，请记住它们指向源代码依赖的方向，而不是数据流的方向。
-
-3. 在很久以前，我们会把那个顶部组件称为中心变换。参见 *Practical Guide to Structured Systems Design*, 第 2 版，Meilir Page-Jones, 1988。
+3. 在很久以前，我们会把那个顶部组件称为中心变换。参见 *Practical Guide to Structured Systems Design*，第 2 版，Meilir Page-Jones, 1988。
 
 ## 26 主组件
 
 ![Image](img/00097.jpeg)
 
-在每个系统中，至少有一个组件负责创建、协调和监督其他组件。我将这个组件称为 `Main`。
+在每个系统中，至少有一个组件负责创建、协调和监督其他组件。我将这个组件称为`Main`。
 
 ### 最终细节
 
+`Main`组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的`Factories`（工厂）、`Strategies`（策略）以及其他全局设施，然后将控制权交给系统的高抽象部分。
 
+正是在这个`Main`组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到`Main`中，`Main`应该正常地分发这些依赖，而不使用该框架。
 
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`（工厂）、`Strategies`（策略）以及其他全局设施，然后将控制权交给系统的高抽象部分。
+将`Main`视为所有肮脏组件中最脏的一个。
 
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
-
-将 `Main` 视为所有肮脏组件中最脏的一个。
-
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的`Main`组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
 
 点击此处查看代码图像
 
@@ -509,7 +458,148 @@ public class Main implements HtwMessageReceiver {
   };
 ```
 
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
+现在这里是`main`函数。注意它是如何使用`HtwFactory`来创建游戏的。它传递了类的名称`htw.game.HuntTheWumpusFacade`，因为那个类比`Main`还要肮脏得多。这防止了该类的变化导致`Main`重新编译/部署。
+
+点击此处查看代码图像
+
+
+
+```java
+public static void main(String[] args) throws IOException {
+
+  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
+                              new Main());
+  createMap();
+
+  BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+
+  game.makeRestCommand().execute();
+  while (true) {
+    System.out.println(game.getPlayerCavern());
+    System.out.println("Health: " + hitPoints + " arrows: " +
+                        game.getQuiver());
+    HuntTheWumpus.Command c = game.makeRestCommand();
+    System.out.println(">");
+    String command = br.readLine();
+    if (command.equalsIgnoreCase("e"))
+      c = game.makeMoveCommand(EAST);
+    else if (command.equalsIgnoreCase("w"))
+      c = game.makeMoveCommand(WEST);
+    else if (command.equalsIgnoreCase("n"))
+      c = game.makeMoveCommand(NORTH);
+    else if (command.equalsIgnoreCase("s"))
+      c = game.makeMoveCommand(SOUTH);
+    else if (command.equalsIgnoreCase("r"))
+      c = game.makeRestCommand();
+    else if (command.equalsIgnoreCase("sw"))
+      c = game.makeShootCommand(WEST);
+    else if (command.equalsIgnoreCase("se"))
+      c = game.makeShootCommand(EAST);
+    else if (command.equalsIgnoreCase("sn"))
+      c = game.makeShootCommand(NORTH);
+    else if (command.equalsIgnoreCase("ss"))
+      c = game.makeShootCommand(SOUTH);
+    else if (command.equalsIgnoreCase("q"))
+      return;
+    c.execute();
+  }
+}
+```
+
+同样注意，`main`创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+
+最后，注意`main`创建了地图。
+
+点击此处查看代码图像
+
+```java
+private static void createMap() {
+
+  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+  while (nCaverns-- > 0)
+    caverns.add(makeName());
+  for (String cavern : caverns) {
+    maybeConnectCavern(cavern, NORTH);
+    maybeConnectCavern(cavern, SOUTH);
+  }
+// ... (代码省略) ...
+```
+
+`Main`组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的`Factories`、`Strategies`以及其他全局设施，然后将控制权交给系统的高抽象部分。
+
+正是在这个`Main`组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到`Main`中，`Main`应该正常地分发这些依赖，而不使用该框架。
+
+将`Main`视为所有肮脏组件中最脏的一个。
+
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的`Main`组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+
+点击此处查看代码图像
+
+```java
+public class Main implements HtwMessageReceiver {
+
+  private static HuntTheWumpus game;
+
+  private static int hitPoints = 10;
+
+  private static final List<String> caverns = new ArrayList<>();
+
+  private static final String[] environments = new String[]{
+    "bright",
+    "humid",
+    "dry",
+    "creepy",
+    "ugly",
+    "foggy",
+    "hot",
+    "cold",
+    "drafty",
+    "dreadful"
+  };
+
+  private static final String[] shapes = new String[] {
+    "round",
+    "square",
+    "oval",
+    "irregular",
+    "long",
+    "craggy",
+    "rough",
+    "tall",
+    "narrow"
+  };
+
+  private static final String[] cavernTypes = new String[] {
+    "cavern",
+    "room",
+    "chamber",
+    "catacomb",
+    "crevasse",
+    "cell",
+    "tunnel",
+    "passageway",
+    "hall",
+    "expanse"
+  };
+
+  private static final String[] adornments = new String[] {
+  "smelling of sulfur",
+  "with engravings on the walls",
+  "with a bumpy floor",
+  "",
+  "littered with garbage",
+  "spattered with guano",
+  "with piles of Wumpus droppings",
+  "with bones scattered around",
+  "with a corpse on the floor",
+  "that seems to vibrate",
+  "that feels stuffy",
+  "that fills you with dread"
+  };
+```
+
+现在这里是`main`函数。注意它是如何使用`HtwFactory`来创建游戏的。它传递了类的名称`htw.game.HuntTheWumpusFacade`，因为那个类比`Main`还要肮脏得多。这防止了该类的变化导致`Main`重新编译/部署。
 
 点击此处查看代码图像
 
@@ -556,9 +646,9 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+同样注意，`main`创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
 
-最后，注意 `main` 创建了地图。
+最后，注意`main`创建了地图。
 
 点击此处查看代码图像
 
@@ -572,16 +662,17 @@ private static void createMap() {
     maybeConnectCavern(cavern, NORTH);
     maybeConnectCavern(cavern, SOUTH);
   }
+}
 // ... (代码省略) ...
 ```
 
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
+`Main`组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的`Factories`、`Strategies`以及其他全局设施，然后将控制权交给系统的高抽象部分。
 
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
+正是在这个`Main`组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到`Main`中，`Main`应该正常地分发这些依赖，而不使用该框架。
 
-将 `Main` 视为所有肮脏组件中最脏的一个。
+将`Main`视为所有肮脏组件中最脏的一个。
 
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的`Main`组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
 
 点击此处查看代码图像
 
@@ -648,7 +739,149 @@ public class Main implements HtwMessageReceiver {
   };
 ```
 
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
+现在这里是`main`函数。注意它是如何使用`HtwFactory`来创建游戏的。它传递了类的名称`htw.game.HuntTheWumpusFacade`，因为那个类比`Main`还要肮脏得多。这防止了该类的变化导致`Main`重新编译/部署。
+
+点击此处查看代码图像
+
+
+
+```java
+public static void main(String[] args) throws IOException {
+
+  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
+                              new Main());
+  createMap();
+
+  BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+
+  game.makeRestCommand().execute();
+  while (true) {
+    System.out.println(game.getPlayerCavern());
+    System.out.println("Health: " + hitPoints + " arrows: " +
+                        game.getQuiver());
+    HuntTheWumpus.Command c = game.makeRestCommand();
+    System.out.println(">");
+    String command = br.readLine();
+    if (command.equalsIgnoreCase("e"))
+      c = game.makeMoveCommand(EAST);
+    else if (command.equalsIgnoreCase("w"))
+      c = game.makeMoveCommand(WEST);
+    else if (command.equalsIgnoreCase("n"))
+      c = game.makeMoveCommand(NORTH);
+    else if (command.equalsIgnoreCase("s"))
+      c = game.makeMoveCommand(SOUTH);
+    else if (command.equalsIgnoreCase("r"))
+      c = game.makeRestCommand();
+    else if (command.equalsIgnoreCase("sw"))
+      c = game.makeShootCommand(WEST);
+    else if (command.equalsIgnoreCase("se"))
+      c = game.makeShootCommand(EAST);
+    else if (command.equalsIgnoreCase("sn"))
+      c = game.makeShootCommand(NORTH);
+    else if (command.equalsIgnoreCase("ss"))
+      c = game.makeShootCommand(SOUTH);
+    else if (command.equalsIgnoreCase("q"))
+      return;
+    c.execute();
+  }
+}
+```
+
+同样注意，`main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+
+最后，注意 `main` 创建了地图。
+
+点击此处查看代码图像
+
+```java
+private static void createMap() {
+
+  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+  while (nCaverns-- > 0)
+    caverns.add(makeName());
+  for (String cavern : caverns) {
+    maybeConnectCavern(cavern, NORTH);
+    maybeConnectCavern(cavern, SOUTH);
+  }
+}
+// ... (代码省略) ...
+```
+
+`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的`Factories`、`Strategies`以及其他全局设施，然后将控制权交给系统的高抽象部分。
+
+正是在这个`Main`组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到`Main`中，`Main`应该正常地分发这些依赖，而不使用该框架。
+
+将`Main`视为所有肮脏组件中最脏的一个。
+
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的`Main`组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+
+点击此处查看代码图像
+
+```java
+public class Main implements HtwMessageReceiver {
+
+  private static HuntTheWumpus game;
+
+  private static int hitPoints = 10;
+
+  private static final List<String> caverns = new ArrayList<>();
+
+  private static final String[] environments = new String[]{
+    "bright",
+    "humid",
+    "dry",
+    "creepy",
+    "ugly",
+    "foggy",
+    "hot",
+    "cold",
+    "drafty",
+    "dreadful"
+  };
+
+  private static final String[] shapes = new String[] {
+    "round",
+    "square",
+    "oval",
+    "irregular",
+    "long",
+    "craggy",
+    "rough",
+    "tall",
+    "narrow"
+  };
+
+  private static final String[] cavernTypes = new String[] {
+    "cavern",
+    "room",
+    "chamber",
+    "catacomb",
+    "crevasse",
+    "cell",
+    "tunnel",
+    "passageway",
+    "hall",
+    "expanse"
+  };
+
+  private static final String[] adornments = new String[] {
+  "smelling of sulfur",
+  "with engravings on the walls",
+  "with a bumpy floor",
+  "",
+  "littered with garbage",
+  "spattered with guano",
+  "with piles of Wumpus droppings",
+  "with bones scattered around",
+  "with a corpse on the floor",
+  "that seems to vibrate",
+  "that feels stuffy",
+  "that fills you with dread"
+  };
+```
+
+现在这里是`main`函数。注意它是如何使用`HtwFactory`来创建游戏的。它传递了类的名称`htw.game.HuntTheWumpusFacade`，因为那个类比`Main`还要肮脏得多。这防止了该类的变化导致`Main`重新编译/部署。
 
 点击此处查看代码图像
 
@@ -695,9 +928,9 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+同样注意，`main`创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
 
-最后，注意 `main` 创建了地图。
+最后，注意`main`创建了地图。
 
 点击此处查看代码图像
 
@@ -715,13 +948,13 @@ private static void createMap() {
 // ... (代码省略) ...
 ```
 
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
+`Main`组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的`Factories`、`Strategies`以及其他全局设施，然后将控制权交给系统的高抽象部分。
 
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
+正是在是在这个`Main`组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到`Main`中，`Main`应该正常地分发这些依赖，而不使用该框架。
 
-将 `Main` 视为所有肮脏组件中最脏的一个。
+将`Main`视为所有肮脏组件中最脏的一个。
 
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的`Main`组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
 
 点击此处查看代码图像
 
@@ -788,429 +1021,11 @@ public class Main implements HtwMessageReceiver {
   };
 ```
 
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
+现在这里是`main`函数。注意它是如何使用`HtwFactory`来创建游戏的。它传递了类的名称`htw.game.HuntTheWumpusFacade`，因为那个类比`Main`还要肮脏得多。这防止了该类的变化导致`Main`重新编译/部署。
 
 点击此处查看代码图像
 
-```java
-public static void main(String[] args) throws IOException {
 
-  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
-                              new Main());
-  createMap();
-
-  BufferedReader br =
-    new BufferedReader(new InputStreamReader(System.in));
-
-  game.makeRestCommand().execute();
-  while (true) {
-    System.out.println(game.getPlayerCavern());
-    System.out.println("Health: " + hitPoints + " arrows: " +
-                        game.getQuiver());
-    HuntTheWumpus.Command c = game.makeRestCommand();
-    System.out.println(">");
-    String command = br.readLine();
-    if (command.equalsIgnoreCase("e"))
-      c = game.makeMoveCommand(EAST);
-    else if (command.equalsIgnoreCase("w"))
-      c = game.makeMoveCommand(WEST);
-    else if (command.equalsIgnoreCase("n"))
-      c = game.makeMoveCommand(NORTH);
-    else if (command.equalsIgnoreCase("s"))
-      c = game.makeMoveCommand(SOUTH);
-    else if (command.equalsIgnoreCase("r"))
-      c = game.makeRestCommand();
-    else if (command.equalsIgnoreCase("sw"))
-      c = game.makeShootCommand(WEST);
-    else if (command.equalsIgnoreCase("se"))
-      c = game.makeShootCommand(EAST);
-    else if (command.equalsIgnoreCase("sn"))
-      c = game.makeShootCommand(NORTH);
-    else if (command.equalsIgnoreCase("ss"))
-      c = game.makeShootCommand(SOUTH);
-    else if (command.equalsIgnoreCase("q"))
-      return;
-    c.execute();
-  }
-}
-```
-
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
-
-最后，注意 `main` 创建了地图。
-
-点击此处查看代码图像
-
-```java
-private static void createMap() {
-
-  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
-  while (nCaverns-- > 0)
-    caverns.add(makeName());
-  for (String cavern : caverns) {
-    maybeConnectCavern(cavern, NORTH);
-    maybeConnectCavern(cavern, SOUTH);
-  }
-}
-// ... (代码省略) ...
-```
-
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
-
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
-
-将 `Main` 视为所有肮脏组件中最脏的一个。
-
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
-
-点击此处查看代码图像
-
-```java
-public class Main implements HtwMessageReceiver {
-
-  private static HuntTheWumpus game;
-
-  private static int hitPoints = 10;
-
-  private static final List<String> caverns = new ArrayList<>();
-
-  private static final String[] environments = new String[]{
-    "bright",
-    "humid",
-    "dry",
-    "creepy",
-    "ugly",
-    "foggy",
-    "hot",
-    "cold",
-    "drafty",
-    "dreadful"
-  };
-
-  private static final String[] shapes = new String[] {
-    "round",
-    "square",
-    "oval",
-    "irregular",
-    "long",
-    "craggy",
-    "rough",
-    "tall",
-    "narrow"
-  };
-
-  private static final String[] cavernTypes = new String[] {
-    "cavern",
-    "room",
-    "chamber",
-    "catacomb",
-    "crevasse",
-    "cell",
-    "tunnel",
-    "passageway",
-    "hall",
-    "expanse"
-  };
-
-  private static final String[] adornments = new String[] {
-  "smelling of sulfur",
-  "with engravings on the walls",
-  "with a bumpy floor",
-  "",
-  "littered with garbage",
-  "spattered with guano",
-  "with piles of Wumpus droppings",
-  "with bones scattered around",
-  "with a corpse on the floor",
-  "that seems to vibrate",
-  "that feels stuffy",
-  "that fills you with dread"
-  };
-```
-
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
-
-点击此处查看代码图像
-
-```java
-public static void main(String[] args) throws IOException {
-
-  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
-                              new Main());
-  createMap();
-
-  BufferedReader br =
-    new BufferedReader(new InputStreamReader(System.in));
-
-  game.makeRestCommand().execute();
-  while (true) {
-    System.out.println(game.getPlayerCavern());
-    System.out.println("Health: " + hitPoints + " arrows: " +
-                        game.getQuiver());
-    HuntTheWumpus.Command c = game.makeRestCommand();
-    System.out.println(">");
-    String command = br.readLine();
-    if (command.equalsIgnoreCase("e"))
-      c = game.makeMoveCommand(EAST);
-    else if (command.equalsIgnoreCase("w"))
-      c = game.makeMoveCommand(WEST);
-    else if (command.equalsIgnoreCase("n"))
-      c = game.makeMoveCommand(NORTH);
-    else if (command.equalsIgnoreCase("s"))
-      c = game.makeMoveCommand(SOUTH);
-    else if (command.equalsIgnoreCase("r"))
-      c = game.makeRestCommand();
-    else if (command.equalsIgnoreCase("sw"))
-      c = game.makeShootCommand(WEST);
-    else if (command.equalsIgnoreCase("se"))
-      c = game.makeShootCommand(EAST);
-    else if (command.equalsIgnoreCase("sn"))
-      c = game.makeShootCommand(NORTH);
-    else if (command.equalsIgnoreCase("ss"))
-      c = game.makeShootCommand(SOUTH);
-    else if (command.equalsIgnoreCase("q"))
-      return;
-    c.execute();
-  }
-}
-```
-
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
-
-最后，注意 `main` 创建了地图。
-
-点击此处查看代码图像
-
-```java
-private static void createMap() {
-
-  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
-  while (nCaverns-- > 0)
-    caverns.add(makeName());
-  for (String cavern : caverns) {
-    maybeConnectCavern(cavern, NORTH);
-    maybeConnectCavern(cavern, SOUTH);
-  }
-}
-// ... (代码省略) ...
-```
-
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
-
-正是在是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
-
-将 `Main` 视为所有肮脏组件中最脏的一个。
-
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
-
-点击此处查看代码图像
-
-```java
-public class Main implements HtwMessageReceiver {
-
-  private static HuntTheWumpus game;
-
-  private static int hitPoints = 10;
-
-  private static final List<String> caverns = new ArrayList<>();
-
-  private static final String[] environments = new String[]{
-    "bright",
-    "humid",
-    "dry",
-    "creepy",
-    "ugly",
-    "foggy",
-    "hot",
-    "cold",
-    "drafty",
-    "dreadful"
-  };
-
-  private static final String[] shapes = new String[] {
-    "round",
-    "square",
-    "oval",
-    "irregular",
-    "long",
-    "craggy",
-    "rough",
-    "tall",
-    "narrow"
-  };
-
-  private static final String[] cavernTypes = new String[] {
-    "cavern",
-    "room",
-    "chamber",
-    "catacomb",
-    "crevasse",
-    "cell",
-    "tunnel",
-    "passageway",
-    "hall",
-    "expanse"
-  };
-
-  private static final String[] adornments = new String[] {
-  "smelling of sulfur",
-  "with engravings on the walls",
-  "with a bumpy floor",
-  "",
-  "littered with garbage",
-  "spattered with guano",
-  "with piles of Wumpus droppings",
-  "with bones scattered around",
-  "with a corpse on the floor",
-  "that seems to vibrate",
-  "that feels stuffy",
-  "that fills you with dread"
-  };
-```
-
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
-
-点击此处查看代码图像
-
-```java
-public static void main(String[] args) throws IOException {
-
-  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
-                              new Main());
-  createMap();
-
-  BufferedReader br =
-    new BufferedReader(new InputStreamReader(System.in));
-
-  game.makeRestCommand().execute();
-  while (true) {
-    System.out.println(game.getPlayerCavern());
-    System.out.println("Health: " + hitPoints + " arrows: " +
-                        game.getQuiver());
-    HuntTheWumpus.Command c = game.makeRestCommand();
-    System.out.println(">");
-    String command = br.readLine();
-    if (command.equalsIgnoreCase("e"))
-      c = game.makeMoveCommand(EAST);
-    else if (command.equalsIgnoreCase("w"))
-      c = game.makeMoveCommand(WEST);
-    else if (command.equalsIgnoreCase("n"))
-      c = game.makeMoveCommand(NORTH);
-    else if (command.equalsIgnoreCase("s"))
-      c = game.makeMoveCommand(SOUTH);
-    else if (command.equalsIgnoreCase("r"))
-      c = game.makeRestCommand();
-    else if (command.equalsIgnoreCase("sw"))
-      c = game.makeShootCommand(WEST);
-    else if (command.equalsIgnoreCase("se"))
-      c = game.makeShootCommand(EAST);
-    else if (command.equalsIgnoreCase("sn"))
-      c = game.makeShootCommand(NORTH);
-    else if (command.equalsIgnoreCase("ss"))
-      c = game.makeShootCommand(SOUTH);
-    else if (command.equalsIgnoreCase("q"))
-      return;
-    c.execute();
-  }
-}
-```
-
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
-
-最后，注意 `main` 创建了地图。
-
-点击此处查看代码图像
-
-```java
-private static void createMap() {
-
-  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
-  while (nCaverns-- > 0)
-    caverns.add(makeName());
-  for (String cavern : caverns) {
-    maybeConnectCavern(cavern, NORTH);
-    maybeConnectCavern(cavern, SOUTH);
-  }
-}
-// ... (代码省略) ...
-```
-
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
-
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
-
-将 `Main` 视为所有肮脏组件中最脏的一个。
-
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
-
-点击此处查看代码图像
-
-```java
-public class Main implements HtwMessageReceiver {
-
-  private static HuntTheWumpus game;
-
-  private static int hitPoints = 10;
-
-  private static final List<String> caverns = new ArrayList<>();
-
-  private static final String[] environments = new String[]{
-    "bright",
-    "humid",
-    "dry",
-    "creepy",
-    "ugly",
-    "foggy",
-    "hot",
-    "cold",
-    "drafty",
-    "dreadful"
-  };
-
-  private static final String[] shapes = new String[] {
-    "round",
-    "square",
-    "oval",
-    "irregular",
-    "long",
-    "craggy",
-    "rough",
-    "tall",
-    "narrow"
-  };
-
-  private static final String[] cavernTypes = new String[] {
-    "cavern",
-    "room",
-    "chamber",
-    "catacomb",
-    "crevasse",
-    "cell",
-    "tunnel",
-    "passageway",
-    "hall",
-    "expanse"
-  };
-
-  private static final String[] adornments = new String[] {
-  "smelling of sulfur",
-  "with engravings on the walls",
-  "with a bumpy floor",
-  "",
-  "littered with garbage",
-  "spattered with guano",
-  "with piles of Wumpus droppings",
-  "with bones scattered around",
-  "with a corpse on the floor",
-  "that seems to vibrate",
-  "that feels stuffy",
-  "that fills you with dread"
-  };
-```
-
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
-
-点击此处查看代码图像
 
 ```java
 public static void main(String[] args) throws IOException {
@@ -1492,145 +1307,7 @@ public class Main implements HtwMessageReceiver {
 
 点击此处查看代码图像
 
-```java
-public static void main(String[] args) throws IOException {
 
-  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
-                              new Main());
-  createMap();
-
-  BufferedReader br =
-    new BufferedReader(new InputStreamReader(System.in));
-
-  game.makeRestCommand().execute();
-  while (true) {
-    System.out.println(game.getPlayerCavern());
-    System.out.println("Health: " + hitPoints + " arrows: " +
-                        game.getQuiver());
-    HuntTheWumpus.Command c = game.makeRestCommand();
-    System.out.println(">");
-    String command = br.readLine();
-    if (command.equalsIgnoreCase("e"))
-      c = game.makeMoveCommand(EAST);
-    else if (command.equalsIgnoreCase("w"))
-      c = game.makeMoveCommand(WEST);
-    else if (command.equalsIgnoreCase("n"))
-      c = game.makeMoveCommand(NORTH);
-    else if (command.equalsIgnoreCase("s"))
-      c = game.makeMoveCommand(SOUTH);
-    else if (command.equalsIgnoreCase("r"))
-      c = game.makeRestCommand();
-    else if (command.equalsIgnoreCase("sw"))
-      c = game.makeShootCommand(WEST);
-    else if (command.equalsIgnoreCase("se"))
-      c = game.makeShootCommand(EAST);
-    else if (command.equalsIgnoreCase("sn"))
-      c = game.makeShootCommand(NORTH);
-    else if (command.equalsIgnoreCase("ss"))
-      c = game.makeShootCommand(SOUTH);
-    else if (command.equalsIgnoreCase("q"))
-      return;
-    c.execute();
-  }
-}
-```
-
-同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
-
-最后，注意 `main` 创建了地图。
-
-点击此处查看代码图像
-
-```java
-private static void createMap() {
-
-  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
-  while (nCaverns-- > 0)
-    caverns.add(makeName());
-  for (String cavern : caverns) {
-    maybeConnectCavern(cavern, NORTH);
-    maybeConnectCavern(cavern, SOUTH);
-  }
-}
-// ... (代码省略) ...
-```
-
-`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
-
-正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
-
-将 `Main` 视为所有肮脏组件中最脏的一个。
-
-考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
-
-点击此处查看代码图像
-
-```java
-public class Main implements HtwMessageReceiver {
-
-  private static HuntTheWumpus game;
-
-  private static int hitPoints = 10;
-
-  private static final List<String> caverns = new ArrayList<>();
-
-  private static final String[] environments = new String[]{
-    "bright",
-    "humid",
-    "dry",
-    "creepy",
-    "ugly",
-    "foggy",
-    "hot",
-    "cold",
-    "drafty",
-    "dreadful"
-  };
-
-  private static final String[] shapes = new String[] {
-    "round",
-    "square",
-    "oval",
-    "irregular",
-    "long",
-    "craggy",
-    "rough",
-    "tall",
-    "narrow"
-  };
-
-  private static final String[] cavernTypes = new String[] {
-    "cavern",
-    "room",
-    "chamber",
-    "catacomb",
-    "crevasse",
-    "cell",
-    "tunnel",
-    "passageway",
-    "hall",
-    "expanse"
-  };
-
-  private static final String[] adornments = new String[] {
-  "smelling of sulfur",
-  "with engravings on the walls",
-  "with a bumpy floor",
-  "",
-  "littered with garbage",
-  "spattered with guano",
-  "with piles of Wumpus droppings",
-  "with bones scattered around",
-  "with a corpse on the floor",
-  "that seems to vibrate",
-  "that feels stuffy",
-  "that fills you with dread"
-  };
-```
-
-现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
-
-点击此处查看代码图像
 
 ```java
 public static void main(String[] args) throws IOException {
@@ -1908,9 +1585,291 @@ public class Main implements HtwMessageReceiver {
   };
 ```
 
-27
+现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
 
-SERVICES: GREAT AND SMALL
+点击此处查看代码图像
+
+
+
+```java
+public static void main(String[] args) throws IOException {
+
+  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
+                              new Main());
+  createMap();
+
+  BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+
+  game.makeRestCommand().execute();
+  while (true) {
+    System.out.println(game.getPlayerCavern());
+    System.out.println("Health: " + hitPoints + " arrows: " +
+                        game.getQuiver());
+    HuntTheWumpus.Command c = game.makeRestCommand();
+    System.out.println(">");
+    String command = br.readLine();
+    if (command.equalsIgnoreCase("e"))
+      c = game.makeMoveCommand(EAST);
+    else if (command.equalsIgnoreCase("w"))
+      c = game.makeMoveCommand(WEST);
+    else if (command.equalsIgnoreCase("n"))
+      c = game.makeMoveCommand(NORTH);
+    else if (command.equalsIgnoreCase("s"))
+      c = game.makeMoveCommand(SOUTH);
+    else if (command.equalsIgnoreCase("r"))
+      c = game.makeRestCommand();
+    else if (command.equalsIgnoreCase("sw"))
+      c = game.makeShootCommand(WEST);
+    else if (command.equalsIgnoreCase("se"))
+      c = game.makeShootCommand(EAST);
+    else if (command.equalsIgnoreCase("sn"))
+      c = game.makeShootCommand(NORTH);
+    else if (command.equalsIgnoreCase("ss"))
+      c = game.makeShootCommand(SOUTH);
+    else if (command.equalsIgnoreCase("q"))
+      return;
+    c.execute();
+  }
+}
+```
+
+同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+
+最后，注意 `main` 创建了地图。
+
+点击此处查看代码图像
+
+```java
+private static void createMap() {
+
+  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+  while (nCaverns-- > 0)
+    caverns.add(makeName());
+  for (String cavern : caverns) {
+    maybeConnectCavern(cavern, NORTH);
+    maybeConnectCavern(cavern, SOUTH);
+  }
+}
+// ... (代码省略) ...
+```
+
+`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
+
+正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
+
+将 `Main` 视为所有肮脏组件中最脏的一个。
+
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+
+点击此处查看代码图像
+
+```java
+public class Main implements HtwMessageReceiver {
+
+  private static HuntTheWumpus game;
+
+  private static int hitPoints = 10;
+
+  private static final List<String> caverns = new ArrayList<>();
+
+  private static final String[] environments = new String[]{
+    "bright",
+    "humid",
+    "dry",
+    "creepy",
+    "ugly",
+    "foggy",
+    "hot",
+    "cold",
+    "drafty",
+    "dreadful"
+  };
+
+  private static final String[] shapes = new String[] {
+    "round",
+    "square",
+    "oval",
+    "irregular",
+    "long",
+    "craggy",
+    "rough",
+    "tall",
+    "narrow"
+  };
+
+  private static final String[] cavernTypes = new String[] {
+    "cavern",
+    "room",
+    "chamber",
+    "catacomb",
+    "crevasse",
+    "cell",
+    "tunnel",
+    "passageway",
+    "hall",
+    "expanse"
+  };
+
+  private static final String[] adornments = new String[] {
+  "smelling of sulfur",
+  "with engravings on the walls",
+  "with a bumpy floor",
+  "",
+  "littered with garbage",
+  "spattered with guano",
+  "with piles of Wumpus droppings",
+  "with bones scattered around",
+  "with a corpse on the floor",
+  "that seems to vibrate",
+  "that feels stuffy",
+  "that fills you with dread"
+  };
+```
+
+现在这里是 `main` 函数。注意它是如何使用 `HtwFactory` 来创建游戏的。它传递了类的名称 `htw.game.HuntTheWumpusFacade`，因为那个类比 `Main` 还要肮脏得多。这防止了该类的变化导致 `Main` 重新编译/部署。
+
+点击此处查看代码图像
+
+```java
+public static void main(String[] args) throws IOException {
+
+  game = HtwFactory.makeGame("htw.game.HuntTheWumpusFacade",
+                              new Main());
+  createMap();
+
+  BufferedReader br =
+    new BufferedReader(new InputStreamReader(System.in));
+
+  game.makeRestCommand().execute();
+  while (true) {
+    System.out.println(game.getPlayerCavern());
+    System.out.println("Health: " + hitPoints + " arrows: " +
+                        game.getQuiver());
+    HuntTheWumpus.Command c = game.makeRestCommand();
+    System.out.println(">");
+    String command = br.readLine();
+    if (command.equalsIgnoreCase("e"))
+      c = game.makeMoveCommand(EAST);
+    else if (command.equalsIgnoreCase("w"))
+      c = game.makeMoveCommand(WEST);
+    else if (command.equalsIgnoreCase("n"))
+      c = game.makeMoveCommand(NORTH);
+    else if (command.equalsIgnoreCase("s"))
+      c = game.makeMoveCommand(SOUTH);
+    else if (command.equalsIgnoreCase("r"))
+      c = game.makeRestCommand();
+    else if (command.equalsIgnoreCase("sw"))
+      c = game.makeShootCommand(WEST);
+    else if (command.equalsIgnoreCase("se"))
+      c = game.makeShootCommand(EAST);
+    else if (command.equalsIgnoreCase("sn"))
+      c = game.makeShootCommand(NORTH);
+    else if (command.equalsIgnoreCase("ss"))
+      c = game.makeShootCommand(SOUTH);
+    else if (command.equalsIgnoreCase("q"))
+      return;
+    c.execute();
+  }
+}
+```
+
+同样注意 `main` 创建了输入流并包含了游戏的主循环，解释简单的输入，但随后将所有处理推给了其他更高层次的组件。
+
+最后，注意 `main` 创建了地图。
+
+点击此处查看代码图像
+
+```java
+private static void createMap() {
+
+  int nCaverns = (int) (Math.random() * 30.0 + 10.0);
+  while (nCaverns-- > 0)
+    caverns.add(makeName());
+  for (String cavern : caverns) {
+    maybeConnectCavern(cavern, NORTH);
+    maybeConnectCavern(cavern, SOUTH);
+  }
+}
+// ... (代码省略) ...
+```
+
+`Main` 组件是终极细节——最底层的策略。它是系统的初始入口点。除了操作系统之外，没有任何东西依赖于它。它的工作是创建所有的 `Factories`、`Strategies` 以及其他全局设施，然后将控制权交给系统的高抽象部分。
+
+正是在这个 `Main` 组件中，应该由依赖注入框架注入依赖。一旦这些依赖被注入到 `Main` 中，`Main` 应该正常地分发这些依赖，而不使用该框架。
+
+将 `Main` 视为所有肮脏组件中最脏的一个。
+
+考虑下面这个来自最新版本《捕逐恶兽》（Hunt the Wumpus）的 `Main` 组件。注意它是如何加载所有我们不希望代码主体知道的字符串的。
+
+点击此处查看代码图像
+
+```java
+public class Main implements HtwMessageReceiver {
+
+  private static HuntTheWumpus game;
+
+  private static int hitPoints = 10;
+
+  private static final List<String> caverns = new ArrayList<>();
+
+  private static final String[] environments = new String[]{
+    "bright",
+    "humid",
+    "dry",
+    "creepy",
+    "ugly",
+    "foggy",
+    "hot",
+    "cold",
+    "drafty",
+    "dreadful"
+  };
+
+  private static final String[] shapes = new String[] {
+    "round",
+    "square",
+    "oval",
+    "irregular",
+    "long",
+    "craggy",
+    "rough",
+    "tall",
+    "narrow"
+  };
+
+  private static final String[] cavernTypes = new String[] {
+    "cavern",
+    "room",
+    "chamber",
+    "catacomb",
+    "crevasse",
+    "cell",
+    "tunnel",
+    "passageway",
+    "hall",
+    "expanse"
+  };
+
+  private static final String[] adornments = new String[] {
+  "smelling of sulfur",
+  "with engravings on the walls",
+  "with a bumpy floor",
+  "",
+  "littered with garbage",
+  "spattered with guano",
+  "with piles of Wumpus droppings",
+  "with bones scattered around",
+  "with a corpse on the floor",
+  "that seems to vibrate",
+  "that feels stuffy",
+  "that fills you with dread"
+  };
+```
+
+## 27
+
+# SERVICES: GREAT AND SMALL
 
 ![Image](img/00098.jpeg)
 
@@ -1919,21 +1878,19 @@ Service-oriented “architectures” and micro-service “architectures” have 
 - Services seem to be strongly decoupled from each other. As we shall see, this is only partially true.
 - Services appear to support independence of development and deployment. Again, as we shall see, this is only partially true.
 
-### SERVICE ARCHITECTURE?
+## SERVICE ARCHITECTURE?
 
 First, let’s consider the notion that using services, by their nature, is an architecture. This is patently untrue. The architecture of a system is defined by boundaries that separate high-level policy from low-level detail and follow the Dependency Rule. Services that simply separate application behaviors are little more than expensive function calls, and are not architecturally significant.
 
 This is not to say that all services *should* be architecturally significant. There are often substantial benefits to creating services that separate functionality across processes and platforms—whether they obey the Dependency Rule or not.
 
-A helpful analogy is the organization of functions. The architecture of a monolithic or component-based system is defined by certain function calls that cross architectural boundaries and follow the Dependency Rule. Many other functions in those systems, however, simply separate one behavior from another and are not architecturally significant.
-
-So it is with services. Services are, after all, just function calls across process and/or platform boundaries. Some of those services are architecturally significant, and some aren’t. Our interest, in this chapter, is with the former.
-
-### SERVICE BENEFITS?
 
 
+一个有用的类比是函数的组织方式。单体或基于组件的系统架构，由某些跨越架构边界并遵循依赖规则的函数调用所定义。然而，这些系统中的许多其他函数只是将一种行为与另一种行为分离，并不具有架构上的重要性。
 
+服务也是如此。毕竟，服务只是跨进程和/或平台边界的函数调用。其中一些服务在架构上具有重要意义，而另一些则不然。在本章中，我们关注的是前者。
 
+### 服务的好处？
 
 前一个标题中的问号表示，本节将挑战当前服务架构的流行正统观点。让我们逐一探讨这些优点。
 
@@ -1949,7 +1906,7 @@ So it is with services. Services are, after all, just function calls across proc
 
 ## 独立开发与部署的谬误
 
-服务的另一个所谓优点是它们可以由专门的团队拥有和运营。该团队可以作为 devOps 策略的一部分，负责服务的编写、维护和运行。这种开发和部署的独立性被认为是`可扩展的`。人们认为，大型企业系统可以由几十、数百甚至数千个可以独立开发和部署的服务构建。系统的开发、维护和运行可以分配给相应数量的独立团队。
+服务的另一个所谓优点是它们可以由专门的团队拥有和运营。该团队可以作为 devOps 策略的一部分，负责服务的编写、维护和运行。这种开发和部署的独立性被认为是可扩展的。人们认为，大型企业系统可以由几十、数百甚至数千个可以独立开发和部署的服务构建。系统的开发、维护和运行可以分配给相应数量的独立团队。
 
 这种信念有其事实性依据——但仅是部分。首先，历史证明，大型企业系统既可以通过单体架构和基于组件的系统构建，也可以通过基于服务的系统构建。因此，服务并不是构建可扩展系统的唯一选择。
 
@@ -2004,9 +1961,6 @@ So it is with services. Services are, after all, just function calls across proc
 ### 组件化服务
 
 明显的问题是：我们能对服务也这样做吗？答案自然是：可以！服务不需要是微型单体。相反，服务可以使用 SOLID 原则进行设计，并赋予组件结构，以便在不更改服务内现有组件的情况下向其添加新组件。
-
-
-
 
 将 Java 中的服务想象成一个或多个 jar 文件中的一组抽象类。将每个新功能或功能扩展想象成另一个 jar 文件，它包含了扩展第一个 jar 文件中抽象类的类。这样一来，部署新功能就不再是重新部署服务的问题，而是简单地将新的 jar 文件添加到这些服务的类加载路径（load paths）中即可。换句话说，添加新功能符合开闭原则。
 
@@ -2076,8 +2030,6 @@ So it is with services. Services are, after all, just function calls across proc
 
 #### 结构耦合
 
-
-
 这种演进的分离是必要的，因为随着时间的推移，测试往往会变得越来越具体和特殊。相比之下，生产代码往往倾向于变得越来越抽象和通用。强结构耦合阻止了——或至少阻碍了——这种必要的演进，并防止生产代码达到其应有的通用性和灵活性。
 
 ## 安全
@@ -2128,9 +2080,6 @@ Doug 的陈述让我意识到，这些认可的固件定义是错误的，或者
 
 考虑另一个例子：命令消息通过串口到达此系统。意不意外的是，这里有一个消息处理器/分发器。消息处理器知道消息的格式，能够解析它们，然后将消息分发到可以处理请求的代码中。这些都不意外，异常的是消息处理器/分发器与与 `UART` 交互的代码位于同一个文件中。消息处理器被 `UART` 细节污染了。消息处理器本可以是具有可能长寿的软件，但它现在是固件。
 
-
-
-
 作为通过 App-titude 测试期间产生的代码示例，请查看这些位于小型嵌入式系统文件中的函数：
 
 点击此处查看代码图像
@@ -2160,6 +2109,8 @@ void uC_Sleep(void) { ... }
 ### 包含领域逻辑的函数
 
 点击此处查看代码图像
+
+
 
 ```
 float calc_RPM(void) { ... }
@@ -2218,7 +2169,7 @@ void Sensor_init(void) { ... }
 
 ### 目标硬件的瓶颈
 
-嵌入式开发者必须处理许多特殊问题，而非嵌入式开发者则不需要——例如，有限的内存空间、实时性限制和截止日期、有限的 I/O、不常规的用户界面，以及与真实世界的传感器和连接。大多数时候，硬件与软件和固件同步开发。作为此类此类系统开发代码的工程师，你可能没有地方可以运行代码。如果这还不够糟糕，一旦你拿到硬件，硬件很可能会有缺陷，从而拖慢你的进度。
+嵌入式开发者必须处理许多特殊问题，而非嵌入式开发者则不需要——例如，有限的内存空间、实时性限制和截止日期、有限的 I/O、不常规的用户界面，以及与真实世界的传感器和连接。大多数时候，硬件与软件和固件同步开发。作为此类系统开发代码的工程师，你可能没有地方可以运行代码。如果这还不够糟糕，一旦你拿到硬件，硬件很可能会有缺陷，从而拖慢你的进度。
 
 ### 清洁的嵌入式架构是可测试的
 
@@ -2229,26 +2180,26 @@ void Sensor_init(void) { ... }
 分层有许多形式。让我们从三层开始，如图 29.1 所示。在底部是硬件。随着技术的进步，部件会过时、功耗更低或提供更好的性能。作为一名嵌入式工程师，你必须处理不可避免的硬件变化。
 
 ![Image](img/00105.jpeg)
+
 **图 29.1** 三层
 
 硬件与系统其余部分的分离是肯定的，如图 29.2 所示。当你试图通过 App-titude 测试时，问题往往从这里开始。如果你不小心放置内容的位置，以及一个模块被允许知道的范围，代码将非常难以更改。我指的不仅仅是硬件变化时，还包括用户请求更改时，或者需要修复 bug 时。
 
 ![Image](img/00106.jpeg)
+
 **图 29.2** 硬件必须与系统部分分离
 
-软件与固件的混合是一种反模式。表现出这种反模式的代码会抵抗变化。此外，更改是危险的，往往会导致意想不到的后果。微小的更改也需要对整个系统进行全面的回归测试。如果你没有创建仪器化测试，做好准备忍受手动测试的无——然后你就可以收到错误报告了。
+软件与固件的混合是一种反模式。表现出这种反模式的代码会抵抗变化。此外，更改是危险的，往往会导致意想不到的后果。微小的更改也需要对整个系统进行全面的回归测试。如果你没有创建仪器化测试，做好准备忍受手动测试的痛苦——然后你就可以收到错误报告了。
 
 #### 硬件是一个细节
 
 软件与固件之间的边界通常没有代码与硬件之间的边界那样清晰，如图 29.3 所示。作为嵌入式软件开发人员，你的工作之一就是巩固这条线。软件与固件之间边界的名称是硬件抽象层（HAL）（图 29.4）。这不是一个新主意：在 Windows 时代之前就有。
 
 ![Image](img/00107.jpeg)
+
 **图 29.3** 软件与固件之间的边界比代码与硬件之间的边界要模糊
 
 `HAL` 的存在是为了在其之上的软件，其 API 应该根据该软件的需求进行定制。例如，固件可以将字节和字节数组存储在闪存中。相反，应用程序需要在某些持久化机制中存储和读取键值对。软件不应该关心键值对是存储在闪存、旋转磁盘、云端还是核心内存中。`HAL` 提供服务，它不会向软件暴露它是如何实现的。闪存实现是一个应该对软件隐藏的细节。
-
-
-
 
 作为另一个例子，LED 被绑定到一个 GPIO 位。固件可以提供对 GPIO 位的访问，其中 HAL（硬件抽象层）可能会提供 `Led_TurnOn(5)`。这是一个相当底层的硬件抽象层。让我们考虑从硬件视角切换到软件/产品视角来提高抽象层次。LED 指示的是什么？假设它指示的是电量低。在某个层级上，固件（或板级支持包）可以提供 `Led_TurnOn(5)`，而 HAL 提供 `Indicate_LowBattery()`。你可以看到 HAL 表达了应用程序所需的服务。你也可以看到层与层之间可以相互包含。这更像是一种重复的分形模式，而不是一组有限的预定义层。GPIO 分配是应该对软件隐藏的细节。
 
@@ -2327,9 +2278,6 @@ typedef char               Int_8;
 
 软件通过 OS 访问操作环境的服务。OS 是分离软件与固件的层（图 29.5）。直接使用 OS 会导致问题。例如，如果你的 RTOS 供应商被另一公司收购，版税增加了或质量下降了怎么办？如果你的需求发生了变化，而你的 RTOS 不具备你现在需要的功能怎么办？你不得不修改大量的代码。
 
-
-
-
 清晰的嵌入式架构通过`操作系统抽象层` (OSAL) (图 29.6) 将软件与操作系统隔离离开。在某些情况下，实现这一层可能只需要更改函数的名称。在其他情况下，它可能涉及将几个函数封装在一起。
 
 ![Image](img/00110.jpeg)
@@ -2383,13 +2331,19 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 # 读累了记得休息一会
 
 **公众号：古德宁**
+
 *   电子书下载
+
 *   书单分享
+
 *   书友交流
 
 **网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
+
 *   电子书下载
+
 *   打包资源分享
+
 *   学习资源分享
 
 ## 30 数据库是一个细节
@@ -2401,9 +2355,6 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 我意识到这些是激进的话。相信我，我经历过这种争论。所以让我明确一下：我说的不是数据模型。你在应用程序内部为数据赋予的结构对架构具有重要意义。但数据库不是数据模型。数据库是一个软件。数据库是一个提供访问数据的工具。从架构的角度来看，该工具是无关的，因为它是一个低级细节——一种机制。优秀的架构师不会允许低级机制污染系统架构。
 
 ### 关系型数据库
-
-
-
 
 为什么软件系统和软件企业会被数据库系统主导？为什么 `Oracle`、`MySQL` 和 `SQL Server` 如此显赫？简而言之：是因为磁盘。
 
@@ -2426,6 +2377,8 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 尽管磁盘曾经如此流行，但它们现在是一个正在消失的物种。很快它们就会像磁带、软碟和 CD 一样消失。它们正在被 `RAM` 取代。
 
 问自己一个问题：当所有磁盘都消失，所有数据都存储在 `RAM` 中，你将如何组织这些数据？你会将其组织成表并使用 `SQL` 访问吗？你会将其组织成文件并通过目录访问吗？
+
+
 
 当然不。你会将其组织成链表、树、哈希表、栈、队列或任何其他数无数的数据结构，并使用指针或引用来访问它们——因为程序员正是这么做的。
 
@@ -2458,8 +2411,6 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 最后，那位硬件开发人员跳过我的头升为了软件经理。最后，他们在那个糟糕的系统里引入了一个 `RDBMS`。而且，最后，他们是完全正确的，而我是错的。
 
 请注意，不是出于工程原因：在这一点上我是正确的。我反对将 `RDBMS` 引入系统的架构核心是正确的。我之所以错，是因为我们的客户期望我们有一个关系型数据库。他们并不知道用它来做什么。他们没有任何现实的方法来使用我们系统中的关系型数据。但这并不重要：我们的客户完全期望一个 `RDBMS`。它已经变成了所有软件购买者清单上的一个勾选项目。这没有工程上的理由——理性与此无关。这是一种非理性的、外部的且完全毫无根据的需求，但它是真实存在的。
-
-
 
 这种需求从何而来？它源于当时数据库供应商所采用的高效营销活动。他们成功地说服了高层执行官，让他们公司的“数据资产”需要保护，而他们提供的数据库系统是提供这种保护的理想手段。
 
@@ -2511,8 +2462,6 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 
 结果简单来说：`GUI` 是一个细节。Web 是一个 `GUI`。所以 Web 是一个细节。而且，作为架构师，你希望将这样的细节放在边界之后，使它们与你的核心业务逻辑分离。
 
-
-
 框架已经变得非常流行。通常来说，这是一件好事。世界上有很多免费、强大且实用的框架。
 
 然而，框架并不是架构——尽管有些框架试图成为架构。
@@ -2542,8 +2491,11 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 风险是什么？这里有几点供你考虑。
 
 - 框架的架构通常并不干净。框架倾向于违反依赖规则（Dependency Rule）。他们要求你将他们的代码继承到你的业务对象中——即你的`Entities`！他们希望将他们的框架耦合到最内层的圈中。一旦进入，那个框架就再也不会离开了。结婚戒指戴在了你的手指上；它将一直留在那那里。
+
 - 框架可能会帮助你实现应用程序的一些早期功能。然而，随着你的产品的成熟，它可能会超出框架设施的能力。如果你已经戴上了那枚结婚戒指，你会发现随着时间的推移，框架对你的阻碍会越来越大。
+
 - 框架可能会朝着你认为没有帮助的方向演进。你可能会受困于升级到那些对你没有帮助的新版本。你甚至可能会发现你使用过的旧功能消失了，或者以你难以跟上的方式发生了变化。
+
 - 可能会出现一个全新的、更好的框架，而你希望自己能够切换到它。
 
 ## 解决方案
@@ -2604,9 +2556,6 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 
 四个参与者显而易见。根据单一职责原则，这四个参与者将是系统主要的变更来源。每当添加新功能或更改现有功能时，都会为了服务这些参与者之一而采取步骤。因此，我们希望划分系统，使得对一个参与者的更改不会影响任何其他参与者。
 
-
-
-
 图 33.1 中所示的用例并不是完整的列表。例如，你不会找到登录或注出的用例。之所以省略这些内容，仅仅是为了控制本书中的问题规模。如果我包含所有不同的用例，那么这一章将不得不自成一本书。
 
 请注意图 33.1 中间的虚线用例。它们是`abstract`（抽象）^(1)用例。抽象用例是一种设定通用策略的用例，由另一个用例来具体实现。如你所见，`作为查看者查看目录`和`作为购买者查看目录`用例都继承自`查看目录`抽象用例。
@@ -2661,66 +2610,69 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 
 ### 按包分区 (PACKAGE BY LAYER)
 
+
+
 第一种可能也是最简单的设计方法是传统的水平分层架构，我们根据从技术角度的功能来分离代码。这通常被称为“按包分区”。图 34.1 展示了这作为 UML 类图可能的样子。
 
 在这种典型的分层架构中，我们有一层 Web 代码、一层“业务逻辑”和一层持久化。换句话说，代码被水平切割成层，并用作分组相似类型的方法。在“严格分层架构”中，层应该只依赖于相邻的下层。在 Java 中，层通常由包来实现的。如图 34.1 所示，层之间的所有依赖都向下。在这个示例中，我们有以下 Java 类型：
 
-• `OrdersController`: Web 控制器，类似于 Spring MVC 控制器，处理来自 Web 的请求。
-
-• `OrdersService`: 定义与订单相关的业务逻辑的接口。
-
-• `OrdersServiceImpl`:订单服务的实现.^(1)
-
-• `OrdersRepository`: 定义如何访问持久化订单信息的接口。
-
-• `JdbcOrdersRepository`: 仓库接口的实现。
+- `OrdersController`：Web 控制器，类似于 Spring MVC 控制器，处理来自 Web 的请求。
+- `OrdersService`：定义与订单相关的业务逻辑的接口。
+- `OrdersServiceImpl`：订单服务的实现。^(1)
+- `OrdersRepository`：定义如何访问持久化订单信息的接口。
+- `JdbcOrdersRepository`：仓库接口的实现。
 
 ![Image](img/00118.jpeg)
 
 **图 34.1** 按包分区
 
-
-
-
-
 在“表现层数据分层”中，马丁·福勒（Martin Fowler）提到，采用这种分层架构是一个很好的入门方法。他并非孤单。你发现的许多书籍、教程、培训课程和示例代码也会引导你走创建分层架构之路。这是一种让东西运行起来非常快的方法，而不会引入巨大的复杂性。正如马丁指出的，问题在于，一旦你的软件规模和复杂性增加，你很快就会发现仅仅有三个大桶代码是不够的，你将需要进一步的模块化。
 
 另一个问题是，正如鲍鲍叔（Uncle Bob）已经说过的那样，分层架构并没有体现任何关于业务领域的特征。将来自两个完全不同业务领域的分层架构代码放在一起，它们看起来可能惊人地相似：Web 层、服务层（services）和仓库层（repositories）。分层架构还有另一个巨大问题，但我们稍后讨论。
 
-## 按功能分包 (PACKAGE BY FEATURE)
+## 按功能分包（PACKAGE BY FEATURE）
 
 组织代码的另一种选择是采用“按功能分包”风格。这是一种基于相关功能、领域概念或聚合根（使用领域驱动设计的术语）的垂直切分。在我见过的典型实现中，所有类型都被放置在单个 Java 包中，该包的命名反映了所归组的概念。
 
-通过这种方法，如图 34.2
+通过这种方法，如图 34.2。
+
+![Image](img/00119.jpeg)
 
 **图 34.2** 按功能分包
 
-## 端口与适配器 (PORTS AND ADAPTERS)
+## 端口与适配器（PORTS AND ADAPTERS）
 
-正如鲍鲍叔所说，如“端口与适配器”、“六边形架构”、“边界、控制器、实体”等方法，旨在创建一种架构，其中专注于业务/领域的代码是独立的，并且分离于技术实现细节（如框架和数据库）。总而言之，你经常会看到此类代码库由一个“内部”（领域）和一个“外部”（基础设施）组成，正如图 34.3
+正如鲍鲍叔所说，如“端口与适配器”、“六边形架构”、“边界、控制器、实体”等方法，旨在创建一种架构，其中专注于业务/领域的代码是独立的，并且分离于技术实现细节（如框架和数据库）。总而言之，你经常会看到此类代码库由一个“内部”（领域）和一个“外部”（基础设施）组成，正如图 34.3。
+
+![Image](img/00120.jpeg)
 
 **图 34.3** 具有内部和外部的代码库
 
-“内部”区域包含所有的领域概念，而“外部”区域包含与外部世界的交互（例如，UI、数据库、第三方集成）。这里的主要规则是“外部”依赖于“内部”——绝不反反亦之。图 34.4
+“内部”区域包含所有的领域概念，而“外部”区域包含与外部世界的交互（例如，UI、数据库、第三方集成）。这里的主要规则是“外部”依赖于“内部”——绝不反之。图 34.4。
+
+![Image](img/00121.jpeg)
 
 **图 34.4** 查看订单用例
 
 同样值得指出，这是 UML 类图可能样子的简化版本，因为缺少了交互器（interactors）以及跨越依赖边界进行数据序列化的对象。
 
-## 按组件分包 (PACKAGE BY COMPONENT)
+## 按组件分包（PACKAGE BY COMPONENT）
 
-尽管我完全赞同关于 SOLID、REP、CCP 和 CRP 的讨论以及书中的大部分建议，但关于如何组织代码，我得出了略有不同的结论。因此，我在这里介绍另一种选择，我称之为“按组件分包”。为了给你提供一些背景，我的职业生涯大部分时间都在构建企业级软件，主要使用 Java，跨越了多个不同的业务领域。这些软件系统也差异巨大。许多是基于 Web 的，但另一些是客户端-服务器、分布式、基于消息的或其他。尽管技术不同，但共同主题是，大多数此类软件系统的架构都是基于传统的分层架构的。
+尽管我完全赞同关于 SOLID、REP、CCP 和 CRP 的讨论以及书中的大部分建议，但关于如何组织代码，我得出了略有不同的结论。因此，我在这里介绍另一种选择，我称之为“按组件分包”。
 
-我已经提到了为什么分层架构应该被认为是糟糕的几个原因，但这并不是全部。分层架构的目的是分离具有相同功能的代码。 Web 内容与业务逻辑分离，而业务逻辑又与数据访问分离。正如我们在 UML 类图中看到的，从实现的角度来看，一个层通常等同于一个 Java 包。从代码访问性的角度来看，为了让 `OrdersController` 能够对 `OrdersService` 有依赖，`OrdersService` 接口需要被标记为 `public`。同样，`OrdersRepository` 接口需要被标记为 `public`，以便在仓库包之外被 `OrdersServiceImpl` 类看到。
+为了给你提供一些背景，我的职业生涯大部分时间都在构建企业级软件，主要使用 Java，跨越了多个不同的业务领域。这些软件系统也差异巨大。许多是基于 Web 的，但另一些是客户端-服务器、分布式、基于消息的或其他。尽管技术不同，但共同主题是，大多数此类软件系统的架构都是基于传统的分层架构的。
+
+我已经提到了为什么分层架构应该被认为是糟糕的几个原因，但这并不是全部。分层架构的目的是分离具有相同功能的代码。Web 内容与业务逻辑分离，而业务逻辑又与数据访问分离。正如我们在 UML 类图中看到的，从实现的角度来看，一个层通常等同于一个 Java 包。
+
+从代码访问性的角度来看，为了让 `OrdersController` 能够对 `OrdersService` 有依赖，`OrdersService` 接口需要被标记为 `public`。同样，`OrdersRepository` 接口需要被标记为 `public`，以便在仓库包之外被 `OrdersServiceImpl` 类看到。
 
 在严格的分层架构中，依赖箭头应该始终向下，层仅依赖于相邻的下层。这回到了创建一个良好的、整洁的无循环依赖图，通过引入关于代码库中元素如何相互依赖的规则来实现。这里的大问题是，我们可以通过引入不理想的依赖来作弊，但仍然创建一个良好的无循环依赖图。
 
-假设你聘佣了一位新加入团队的人员，并给这位新人另一个与订单相关的用例去实现。由于这个人是新人，他想留下深刻印象并尽可能快实现这个用例。在喝着咖啡坐了几分钟后，新人发现了一个现有的 `OrdersController` 类，因此他认为新的订单相关网页的代码应该放在那里。但它需要来自数据库的某些 `orders` 数据。新人产生了一个灵感：“噢，那里也已经构建了一个 `OrdersRepository` 接口。我只需将实现类注入到我的控制器中即可。完美！”在又捣捣了几分钟后，网页运行了。但结果生成的 UML 图如图 34.5 所示。
+假设你聘佣了一位新加入团队的人员，并给这位新人另一个与订单相关的用例去实现。由于这个人是新人，他想留下深刻印象并尽可能快实现这个用例。在喝着咖啡坐了几分钟后，新人发现了一个现有的 `OrdersController` 类，因此他认为新的订单相关网页的代码应该放在那里。但它需要来自数据库的某些 `orders` 数据。新人产生了一个灵感：“噢，那里也已经构建了一个 `OrdersRepository` 接口。我只需将实现类注入到我的控制器中即可。完美！”
 
-依赖箭头仍然指向下方，但 `OrdersController` 现在对于某些用例还额外跳过了 `OrdersService`。这种组织通常被称为*松散分层架构*（relaxed layered architecture），因为允许层跳过其相邻的层。在某些情况下，这是预期的结果——例如，如果你正在尝试遵循 CQRS 模式。在许多其他情况下，跳过业务逻辑层是不理想的，特别是当该业务逻辑负责确保对单个记录的授权访问时，例如。
+在又捣捣了几分钟后，网页运行了。但结果生成的 UML 图如图 34.5 所示。
 
-
-
+依赖箭头仍然指向下方，但 `OrdersController` 现在对于某些用例还额外跳过了 `OrdersService`。这种组织通常被称为松散分层架构（relaxed layered architecture），因为允许层跳过其相邻的层。在某些情况下，这是预期的结果——例如，如果你正在尝试遵循 CQRS 模式。在许多其他情况下，跳过业务逻辑层是不理想的，特别是当该业务逻辑负责确保对单个记录的授权访问时，例如。
 
 虽然新的用例行得通，但它的实现方式可能并不是我们预期的那样。当我作为顾问访问各个团队时，我经常看到这种情况，这通常在团队开始可视化其代码库真实面貌时表现出来（往往是第一次）。
 
@@ -2734,19 +2686,23 @@ OSAL 可以帮助提供测试点，使得软件层中价值贵的应用代码可
 
 这种方法有点粗糙，但可以奏效，能够报告团队定义的违反架构原则的违规行为，并（希望）让构建失败。这两种方法的问题在于它们都是可能出错的，而且反馈循环比应该的要长。如果不加检查，这种做法会将代码库变成一个“大泥球”。^(6) 如果可能的话，我个人想使用编译器来强制执行我的架构。
 
-这引入了“按组件划分”（package by component）的选项。这是对我们目前所看到的所有方法的混合处理，其目标是将与单个粗粒度组件相关的所有封装到单个 Java 包中。它是关于从以服务为中心的视角来看待软件系统，这也是我们在微服务架构中看到的。。正如端口和适配器（ports and adapters）将 Web 视为仅仅一种交付机制一样，“按组件划分”将用户界面与这些粗粒度组件隔离开来。图 34.6 显示了“查看订单”用例可能看起来的样子。
+这引入了“按组件划分”（package by component）的选项。这是对我们目前所看到的所有方法的混合处理，其目标是将与单个粗粒度组件相关的所有封装到单个 Java 包中。它是关于从以服务为中心的视角来看待软件系统，这也是我们在微服务架构中看到的。正如端口和适配器（ports and adapters）将 Web 视为仅仅一种交付机制一样，“按组件划分”将用户界面与这些粗粒度组件隔离开来。图 34.6 显示了“查看订单”用例可能看起来的样子。
 
 本质上，这种方法将“业务逻辑”和持久化代码封装成一个整体，我称之为“组件”。鲍叔在书早早部分介绍了他对“组件”的定义，说：
 
-*组件是部署的单元。它们是可以作为系统的一部分部署的最小实体。在 Java 中，组件就是 jar 文件。*
+> 组件是部署的单元。它们是可以作为系统的一部分部署的最小实体。在 Java 中，组件就是 jar 文件。
 
 ![Image](img/00123.jpeg)
 
 **图 34.6** 查看订单用例
 
-我对组件的定义略有不同：“位于整洁接口背后的相关功能分组，它存在于应用程序等执行环境内部。”这个定义源于我的“C4 软件架构模型”，^(7)，这是一种简单的层次化方法，通过容器、组件和类（或代码）来思考软件系统的静态结构。它指出一个软件系统由一个或多个容器（例如 Web 应用程序、移动端应用、独立应用程序、数据库、文件系统）组成，每个容器包含一个或多个组件，而这些组件反过来由一个或多个类（或代码）实现。每个组件是否位于单独的 jar 文件是一个正交的问题。
+我对组件的定义略有不同：“位于整洁接口背后的相关功能分组，它存在于应用程序等执行环境内部。”这个定义源于我的“C4 软件架构模型”，^(7)，这是一种简单的层次化方法，通过容器、组件和类（或代码）来思考软件系统的静态结构。
 
-“按组件划分”方法的一个关键优势是，如果你正在编写需要处理 `orders` 的代码，那么只有一个地方可以去——`OrdersComponent`。在组件内部仍然保持着关注点分离，因此业务逻辑与数据持久化是的，但那是消费者不需要知道的组件实现细节。这类似于如果你采用微服务或面向服务的架构（SOA）后可能得到的结果——一个独立的 `OrdersService`，它封装了与处理订单相关的所有内容。关键区别在于解耦模式。你可以将单体应用程序中定义良好的组件视为通向微服务架构的垫脚石。
+它指出一个软件系统由一个或多个容器（例如 Web 应用程序、移动端应用、独立应用程序、数据库、文件系统）组成，每个容器包含一个或多个组件，而这些组件反过来由一个或多个类（或代码）实现。每个组件是否位于单独的 jar 文件是一个正交的问题。
+
+“按组件划分”方法的一个关键优势是，如果你正在编写需要处理 `orders` 的代码，那么只有一个地方可以去——`OrdersComponent`。在组件内部仍然保持着关注点分离，因此业务逻辑与数据持久化是的，但那是消费者不需要知道的组件实现细节。
+
+这类似于如果你采用微服务或面向服务的架构（SOA）后可能得到的结果——一个独立的 `OrdersService`，它封装了与处理订单相关的所有内容。关键区别在于解耦模式。你可以将单体应用程序中定义良好的组件视为通向微服务架构的垫脚石。
 
 ### 细节隐藏在实现中
 
@@ -2768,10 +2724,6 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 
 **图 34.7** 四种架构方法都是相同的
 
-
-
-
-
 从左到右，在“按层划分”（package by layer）的方法中，`OrdersService` 和 `OrdersRepository` 接口需要是 `public` 的，因为它们拥有定义包之外类的入站依赖。相比之下，实现类（`OrdersServiceImpl` 和 `JdbcOrdersRepository`）可以设置为更严格的权限（包保护 package protected）。没有人需要了解它们；它们是实现细节。
 
 在“按功能划分”（package by feature）的方法中，`OrdersController` 提供了进入该包的唯一入口，因此其他所有内容都可以设置为包受保护。这里的巨大缺陷是，除非通过控制器，否则代码库中该包之外的任何其他都无法访问与订单相关的信息。这可能是理想的，也可能不理想。
@@ -2780,15 +2732,19 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 
 ![Image](img/00125.jpeg)
 
-**图 34.8** 灰色显示的类型是可以采用更严格的访问修符类型的地方
+**图 34.8** 灰色显示的类型是可以采用更严格的访问修饰符类型的地方
 
-最后，在“按组件划分”（package by component）的方法中，`OrdersComponent` 接口拥有来自控制器的入站依赖，但其他所有内容都可以设置为包受保护。`public` 类型越少，潜在的依赖就越少。现在，该包之外的代码没有办法直接使用 `OrdersRepository` 接口或实现，因此我们可以依赖编译器来强制这一架构原则。你可以在 .NET 中通过 `internal` 关键字执行相同的操作，尽管你需要为每个组件创建一个单独的程序集。
+最后，在“按组件划分”（package by component）的方法中，`OrdersComponent` 接口拥有来自控制器的入站依赖，但其他所有内容都可以设置为包受保护。`public` 类型越少，潜在的依赖就越少。
+
+现在，该包之外的代码没有办法直接使用 `OrdersRepository` 接口或实现，因此我们可以依赖编译器来强制这一架构原则。你可以在 .NET 中通过 `internal` 关键字执行相同的操作，尽管你需要为每个组件创建一个单独的程序集。
 
 为了绝对起见，我在这里描述的与单体应用程序有关，其中所有代码都存在于单一源代码树中。如果你正在构建这样的应用程序（许多人确实是），我绝对鼓励你依靠编译器来强制执行你的架构原则，而不是依赖自律和编译后工具。
 
 ### 其它解耦模式
 
-除了你正在使用的编程语言外，通常还有其他方法可以解耦你的源代码依赖。对于 Java，你拥有像 OSGi 这样的模块框架，以及新的 Java 9 模块系统。使用模块系统时，如果使用得当，你可以区分 `public` 类型和已发布（published）的类型。例如，你可以创建一个 `Orders` 模块，其中所有的类型都标记为 `public`，但只发布其中一小部分类型供外部使用。这已期待已，但我热情 Java 9 模块系统将为我们提供另一个构建更好软件的工具，并再次激发人们对设计思维的兴趣。
+除了你正在使用的编程语言外，通常还有其他方法可以解耦你的源代码依赖。对于 Java，你拥有像 OSGi 这样的模块框架，以及新的 Java 9 模块系统。
+
+使用模块系统时，如果使用得当，你可以区分 `public` 类型和已发布（published）的类型。例如，你可以创建一个 `Orders` 模块，其中所有的类型都标记为 `public`，但只发布其中一小部分类型供外部使用。这已期待已，但我热情 Java 9 模块系统将为我们提供另一个构建更好软件的工具，并再次激发人们对设计思维的兴趣。
 
 另一个选项是在源代码级别解耦依赖，通过将代码拆分为不同的源代码树中。如果以端口和适配器为例，我们可以有三个源代码树：
 
@@ -2796,7 +2752,9 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 - Web 端的源代码：`OrdersController`
 - 数据持久化的源代码：`JdbcOrdersRepository`
 
-后两个源代码树对业务和领域代码有编译时依赖，而领域代码本身对 Web 或数据持久化代码一无所知。从实现的角度来看，你可以通过在构建工具（例如 Maven、Gradle、MSBuild）中配置单独的模块或项目来实现这一点。理想情况下，你会重复这种模式，为应用程序中的每一个组件拥有一个单独的源代码树。尽管如此，这是一个非常理想化的解决方案，因为以这种方式拆分源代码会带来现实世界的性能、复杂性和维护问题。
+后两个源代码树对业务和领域代码有编译时依赖，而领域代码本身对 Web 或数据持久化代码一无所知。从实现的角度来看，你可以通过在构建工具（例如 Maven、Gradle、MSBuild）中配置单独的模块或项目来实现这一点。
+
+理想情况下，你会重复这种模式，为应用程序中的每一个组件拥有一个单独的源代码树。尽管如此，这是一个非常理想化的解决方案，因为以这种方式拆分源代码会带来现实世界的性能、复杂性和维护问题。
 
 一些人在处理端口和适配器代码时遵循的更简单的方法是仅使用两个源代码树：
 
@@ -2809,15 +2767,15 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 
 **图 34.9** 域和基础设施代码
 
-这种组织源代码的方法也有效，但请注意潜在的权衡。这就是我所说的“端口和适配器的外围环路反模式”。法国巴黎有一条名为 Boulevard Périphérique 的环城公路，它允许你绕过巴黎而无需进入城市复杂的区域。将所有的基础设施代码放在单一的源代码树中，意味着应用程序中一个区域（例如 Web 控制器）的基础设施代码极有可能直接调用应用程序另一个区域（例如数据库存储库）的代码，而无需经过域层。如果你忘记对该代码应用适当的访问修符，情况会是如此。
+这种组织源代码的方法也有效，但请注意潜在的权衡。这就是我所说的“端口和适配器的外围环路反模式”。
+
+法国巴黎有一条名为 Boulevard Périphérique 的环城公路，它允许你绕过巴黎而无需进入城市复杂的区域。将所有的基础设施代码放在单一的源代码树中，意味着应用程序中一个区域（例如 Web 控制器）的基础设施代码极有可能直接调用应用程序另一个区域（例如数据库存储库）的代码，而无需经过域层。如果你忘记对该代码应用适当的访问修饰符，情况会是如此。
 
 ### 结论：缺失的建议
 
-这一章的重点在于强调，如果不考虑实现策略的复杂性，你最理想的设计意图也可能瞬间化毁。思考如何将你理想的设计映射到代码结构上，如何组织这些代码，以及在运行时和编译时应用哪些解耦模式。在适用情况下保留选项，但要务实，并考虑到你的团队规模、他们的技能水平、解决方案的复杂性以及你的时间和预算限制。还要考虑使用编译器来帮助你强制执行所选的架构风格，并注意其他领域（如数据模型）中的耦合。细节在实现之中。
+这一章的重点在于强调，如果不考虑实现策略的复杂性，你最理想的设计意图也可能瞬间化毁。思考如何将你理想的设计映射到代码结构上，如何组织这些代码，以及在运行时和编译时应用哪些解耦模式。
 
-
-
-
+在适用情况下保留选项，但要务实，并考虑到你的团队规模、他们的技能水平、解决方案的复杂性以及你的时间和预算限制。还要考虑使用编译器来帮助你强制执行所选的架构风格，并注意其他领域（如数据模型）中的耦合。细节在实现之中。
 
 为了揭示优秀架构的原理，让我们回顾自 1970 年以来我参与过的一些项目，开启 45 年的历程。其中一些项目从架构角度来看非常有趣；另一些项目则因为从中汲取的教训，以及它们如何影响后续项目而变得有趣。
 
@@ -2825,7 +2783,7 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 
 ## 工会会计系统
 
-20  世纪 60 年代后期，一家名为 ASC Tabulating 的公司与卡车司机工会 705 分会签署了一份合同，提供一套会计系统。ASC 选择用于实现该系统的计算机是一台 `GE Datanet 30`，如图 A.1 所示。
+20 世纪 60 年代后期，一家名为 ASC Tabulating 的公司与卡车司机工会 705 分会签署了一份合同，提供一套会计系统。ASC 选择用于实现该系统的计算机是一台 `GE Datanet 30`，如图 A.1 所示。
 
 ![Image](img/00128.jpeg)
 
@@ -2847,13 +2805,15 @@ Java 的访问修饰符并不完美，^(8)，但忽略它们无异于自找。Ja
 
 ![Image](img/00129.jpeg)
 
+
+
 **图 A.2** 带有盘片的数据存储单元
 
 *由 Ed Thelen 提供，ed-thelen.org*
 
-Datanet 30 最著名的声名在于它能够以相对较高的速度驱动大量的异步终端。这正是 ASC 所需要的。
+`Datanet 30` 最著名的声名在于它能够以相对较高的速度驱动大量的异步终端。这正是 `ASC` 所需要的。
 
-ASC 位于伊利诺伊州的湖布鲁夫（Lake Bluff），位于芝加哥北 30 英里。705 分会处位于芝加哥市中心。工会希望十左右的数据录入员使用 `CRT` 终端（图 A.4）向系统输入数据。他们会使用 `ASR35` 电打字（图 A.5）打印报告。
+`ASC` 位于伊利诺伊州的湖布鲁夫（Lake Bluff），位于芝加哥北 30 英里。705 分会处位于芝加哥市中心。工会希望十左右的数据录入员使用 `CRT` 终端（图 A.4）向系统输入数据。他们会使用 `ASR35` 电打字（图 A.5）打印报告。
 
 ![Image](img/00130.jpeg)
 
@@ -2863,7 +2823,7 @@ ASC 位于伊利诺伊州的湖布鲁夫（Lake Bluff），位于芝加哥北 30
 
 `CRT` 终端的运行速度为每秒 30 个字符。对于 20 世纪 60 年代后期来说这是一个很不错的速率了，因为当时的调制调器并不先进。
 
-ASC 从电话公司租赁了十多条专用电话线和两倍数量的 300 波调制调器，以将 Datanet 30 连接到这些终端。
+`ASC` 从电话公司租赁了十多条专用电话线和两倍数量的 300 波调制调器，以将 `Datanet 30` 连接到这些终端。
 
 这些计算机并没有自带操作系统。它们甚至没有文件系统。你得到的是一个汇编器。
 
@@ -2879,7 +2839,7 @@ ASC 从电话公司租赁了十多条专用电话线和两倍数量的 300 波�
 
 原始系统是由一位顾问用汇编语言编写的，他以某种方式成功地将整个程序挤进了 16K 空间。
 
-正如你所想象的那样，那台巨大的 Datanet 30 是一台运行和维护成本极其昂贵的机器。负责软件运行的软件顾问也很贵。此外，小型计算机正在变得流行，而且价格便宜得多。
+正如你所想象的那样，那台巨大的 `Datanet 30` 是一台运行和维护成本极其昂贵的机器。负责软件运行的软件顾问也很贵。此外，小型计算机正在变得流行，而且价格便宜得多。
 
 ![Image](img/00132.jpeg)
 
@@ -2887,9 +2847,9 @@ ASC 从电话公司租赁了十多条专用电话线和两倍数量的 300 波�
 
 *经 Joe Mabel 许可*
 
-1971 年，我才 18 岁时，ASC 雇佣了我以及两个极客范儿的朋友，用将整个工会会计系统替换为一套基于 `Varian 620/f` 小型型计算机的系统（图 A.6）。
+1971 年，我才 18 岁时，`ASC` 雇佣了我以及两个极客范儿的朋友，用将整个工会会计系统替换为一套基于 `Varian 620/f` 小型型计算机的系统（图 A.6）。
 
-Varian 机器拥有 16 位总线和 `32K` 磁芯内存。周期时间约为 1 微秒。它比 Datanet 30 强大得多。它使用了 IBM 非常成功的 `2314` 磁盘技术，允许我们在直径仅 14 英寸的盘片上存储 30 兆。
+`Varian` 机器拥有 16 位总线和 `32K` 磁芯内存。周期时间约为 1 微秒。它比 `Datanet 30` 强大得多。它使用了 IBM 非常成功的 `2314` 磁盘技术，允许我们在直径仅 14 英寸的盘片上存储 30 兆。
 
 当然，我们仍然没有操作系统。没有文件系统。没有高级语言。我们只有汇编器。但我们应付过去了。
 
@@ -2903,14 +2863,13 @@ Varian 机器拥有 16 位总线和 `32K` 磁芯内存。周期时间约为 1 �
 
 当然，当你的 UI 以每秒 30 个字符的速度运行时，你的程序会花费大量时间等待。我们有充足的时间在磁盘上进行程序交换，以保持所有终端以最快速度运行。没有人抱怨过响应时间。
 
-我们编写了一个管理中断和 I/O 的抢占式内核（supervisor）。我们编写了应用程序；我们编写了磁盘驱动程序、终端驱动程序、磁带驱动程序以及系统中的其他所有内容。系统中没有一个比特不是我们编写的。尽管这是一个经历了过多的 80 小时工作周的挣，但我们在 8 到 9 个月内让这头猛兽运转了起来。该系统的架构非常简单（图 A.7）。当一个应用程序启动时，它会产生输出直到其特定的终端缓冲区满。然后内核会将应用程序换出，并换入一个新的应用程序。内核会继续以每秒 30 个字符滴出终端缓冲区的内容，直到它几乎为空。然后它会把应用程序换回以再次填充缓冲区。
+我们编写了一个管理中断和 I/O 的抢占式内核（supervisor）。我们编写了应用程序；我们编写了磁盘驱动程序、终端驱动程序、磁带驱动程序以及系统中的其他所有内容。系统中没有一个比特不是我们编写的。尽管这是一个经历了过多的 80 小时工作周的挣，但我们在 8 到 9 个月内让这头猛兽运转了起来。
+
+该系统的架构非常简单（图 A.7）。当一个应用程序启动时，它会产生输出直到其特定的终端缓冲区满。然后内核会将应用程序换出，并换入一个新的应用程序。内核会继续以每秒 30 个字符滴出终端缓冲区的内容，直到它几乎为空。然后它会把应用程序换回以再次填充缓冲区。
 
 ![Image](img/00134.jpeg)
 
 **图 A.7** 系统架构
-
-
-
 
 这种边界是依赖正常的——也就是说，依赖*顺着*控制流方向。应用程序对管理器有编译时依赖，且控制流从应用程序传递到管理器。这种边界防止了应用程序知道输出将流向哪种设备。
 
@@ -2918,7 +2877,7 @@ Varian 机器拥有 16 位总线和 `32K` 磁芯内存。周期时间约为 1 �
 
 # 激光修测
 
-1973 年，我加入了芝加哥的一家名为 Teradyne Applied Systems (TAS) 的公司。这是 Teradyne Inc. 的一个部门，总部位于波士顿。我们的产品是一种系统，使用功率相对较高的激光将电子元件修测到非常精细的公差。
+1973 年，我加入了芝加哥的一家名为 Teradyne Applied Systems (`TAS`) 的公司。这是 Teradyne Inc. 的一个部门，总部位于波士顿。我们的产品是一种系统，使用功率相对较高的激光将电子元件修测到非常精细的公差。
 
 在那个时代，制造商会将电子元件丝印在陶瓷基板上。这些基板的大小大约为 1 英寸见方。元件通常是电阻——即阻电流流的器件。
 
@@ -2954,18 +2913,15 @@ Varian 机器拥有 16 位总线和 `32K` 磁芯内存。周期时间约为 1 �
 
 我们的程序大约有 20,000 行代码，需要近 30 分钟才能编译。在此期间遇到磁带读取错误的概率大约为 1/10。如果汇编器遇到磁带错误，它会摇响控制台上的铃，然后在打印机上打印出一系列错误信息。你可以在整个实验室里听到这令人疯狂的铃声。你还能听到那位可怜程序员的咒骂声，因为他刚刚发现那 30 分钟的编译必须重新开始。
 
-
-
-
 那是 20 世纪 70 年代初软件的典型。
 
-### 铝压铸监控
+## 铝压铸监控
 
 20 世纪 70 年代中期，当欧佩（OPEC）实施石油禁运、汽油短缺导致愤怒的司机在加油站发生冲突时，我开始在奥岸海洋公司（OMC）工作。这是 Johnson 马和 Lawnboy 割草机的母公司。
 
-OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，为公司所有的电机和产品制造压铸铝零件。铝在巨大的熔炉中熔化，然后用大桶运送到几十台独立运行的铝压铸机上。每台机器都有一个人工操作员，负责设置模具、循环机器并提取新铸出的零件。这些操作员的工资是根据产量支付的。
+`OMC` 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，为公司所有的电机和产品制造压铸铝零件。铝在巨大的熔炉中熔化，然后用大桶运送到几十台独立运行的铝压铸机上。每台机器都有一个人工操作员，负责设置模具、循环机器并提取新铸出的零件。这些操作员的工资是根据产量支付的。
 
-我被聘来负责一个车间自动化项目。OMC 购买了一台 `IBM System/7`——这是 IBM 对小型机的回应。我们将这台计算机连接到车间内所有的压铸机上，这样我们就可以计数并记录每台机器的循环时间。我们的工作是收集所有信息并在 3270 绿屏显示器上展示。
+我被聘来负责一个车间自动化项目。`OMC` 购买了一台 `IBM System/7`——这是 IBM 对小型机的回应。我们将这台计算机连接到车间内所有的压铸机上，这样我们就可以计数并记录每台机器的循环时间。我们的工作是收集所有信息并在 3270 绿屏显示器上展示。
 
 使用的语言是汇编语言。而且，在这台计算机上执行的每一行代码都是我们编写的。这里没有操作系统，没有子程序库，也没有框架。它只是原始代码。
 
@@ -2977,31 +2933,31 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 从架构的角度来看，这里没什么好学的，除了一点以外。`System/7` 有一个非常有趣的指令叫做“设置程序中断”（`SPI`）。它允许你触发处理器的中断，使其能够处理任何其他队列中的低优先级中断。如今，在 Java 中，我们将其称为 `Thread.yield()`。
 
-### 4-TEL
+## 4-TEL
 
-1976 年 10 月，在被 OMC 开除后，我回到了 Teradyne 的另一个部门——我在那里呆了 12 年。我负责的产品名为 `4-TEL`。它的目的是每晚测试电话服务区内的每一条电话线，并生成一份包含所有需要维修线路的报告。它还允许电话测试人员详细测试特定的电话线路。
+1976 年 10 月，在被 `OMC` 开除后，我回到了 Teradyne 的另一个部门——我在那里呆了 12 年。我负责的产品名为 `4-TEL`。它的目的是每晚测试电话服务区内的每一条电话线，并生成一份包含所有需要维修线路的报告。它还允许电话测试人员详细测试特定的电话线路。
 
 该系统起初的架构与 Laser Trim 系统相似。它是一个用汇编语言编写的单体应用，没有任何显著的边界。但在我加入公司时，情况即将发生变化。
 
-该系统由位于服务中心（SC）的测试人员使用。一个服务中心覆盖许多交换局（CO），每个交换局可以处理多达 10,000 条线路。拨号和测量硬件必须位于交换局内部。因此，`M365` 计算机被放在了那里。我们将这些计算机称为交换局线路测试仪（COLT）。另一台 `M365` 放在服务中心；它被称为服务区域计算机（SAC）。SAC 拥有几个调制解调器，可以拨入 COLT 并以 300 波特（30 cps）的速度通信。
+该系统由位于服务中心（SC）的测试人员使用。一个服务中心覆盖许多交换局（CO），每个交换局可以处理多达 10,000 条线路。拨号和测量硬件必须位于交换局内部。因此，`M365` 计算机被放在了那里。我们将这些计算机称为交换局线路测试仪（COLT）。另一台 `M365` 放在服务中心；它被称为服务区域计算机（SAC）。`SAC` 拥有几个调制解调器，可以拨入 `COLT` 并以 300 波特（30 cps）的速度通信。
 
-最初，COLT 计算机负责一切，包括所有的控制台通信、菜单和报告。SAC 只是一个简单的复用器，接收 COLT 的输出并显示在屏幕上。
+最初，`COLT` 计算机负责一切，包括所有的控制台通信、菜单和报告。`SAC` 只是一个简单的复用器，接收 `COLT` 的输出并显示在屏幕上。
 
 这种设置的问题在于 300 cps 真的非常慢。测试人员不喜欢看着字符在屏幕上滴滴地移动，特别是当他们只对少数关键数据位感兴趣时。而且在那个时代，`M365` 的内存非常昂贵，而程序很大。
 
-解决方案是将负责拨号和测量线路的软件部分与分析结果和打印报告的部分分开。后者将移动到 SAC 中，而前者保留在 COLT 中。这将使得 COLT 变成一台更小的机器，内存也少得多，并会大大加快终端的响应速度，因为报告将在 SAC 中生成。
+解决方案是将负责拨号和测量线路的软件部分与分析结果和打印报告的部分分开。后者将移动到 `SAC` 中，而前者保留在 `COLT` 中。这将使得 `COLT` 变成一台更小的机器，内存也少得多，并会大大加快终端的响应速度，因为报告将在 `SAC` 中生成。
 
-结果非常成功。屏幕更新非常快（一旦拨通了相应的 COLT），COLT 的内存占用缩小了许多。
+结果非常成功。屏幕更新非常快（一旦拨通了相应的 `COLT`），`COLT` 的内存占用缩小了许多。
 
-边界非常清晰且高度解耦。SAC 和 COLT 之间交换极短的数据包。这些数据包是极简单的 DSL 形式，代表如“拨号 XXXX”或“测量”之类的原始命令。
+边界非常清晰且高度解耦。`SAC` 和 `COLT` 之间交换极短的数据包。这些数据包是极简单的 DSL 形式，代表如“拨号 XXXX”或“测量”之类的原始命令。
 
-`M365` 是从磁带加载的。那些磁带驱动器非常昂贵且不太可靠——特别是在电话交换局的工业环境中。此外，相对于 COLT 内部的其他电子设备，`M365` 是一台昂贵的机器。因此，我们启动了一个项目，用基于 `8085` 微处理器的微型计算机替换 `M365`。
+`M365` 是从磁带加载的。那些磁带驱动器非常昂贵且不太可靠——特别是在电话交换局的工业环境中。此外，相对于 `COLT` 内部的其他电子设备，`M365` 是一台昂贵的机器。因此，我们启动了一个项目，用基于 `8085` 微处理器的微型计算机替换 `M365`。
 
 新计算机由三个部分组成：一个带有 `8085` 的处理器板、一个带有 32K RAM 的 RAM 板，以及三块带有 12K ROM 的 ROM 板。这些 ROM 板放入与 `M365` 相同的外壳，每块包含 12K 的只读存储。
 
-`M365` 相对于 COLT 内部的电子设备是一台昂贵的机器。这些板板带有 Intel 2708 EPROM（可擦编程只读存储器）芯片。图 A.8 显示了这样的一个芯片。我们通过暴露紫外线来擦这些芯片。
+`M365` 相对于 `COLT` 内部的电子设备是一台昂贵的机器。这些板板带有 Intel 2708 EPROM（可擦编程只读存储器）芯片。图 A.8 显示了这样的一个芯片。我们通过暴露紫外线来擦这些芯片。
 
-我的伙伴 CK 和将 COLT 的 `M365` 汇编程序翻译成 `8085` 汇编语言。这种翻译是手工完成的，花了大约六个月。最终结果是 30K 的 `8085` 代码。
+我的伙伴 CK 和将 `COLT` 的 `M365` 汇编程序翻译成 `8085` 汇编语言。这种翻译是手工完成的，花了大约六个月。最终结果是 30K 的 `8085` 代码。
 
 我们的开发环境有 64K RAM 而没有 ROM，因此我们可以将编译后的二进制文件下载到 RAM 中进行测试。一旦程序运行，我们就切换到 EPROM。我们烧录 30 块芯片并将其插入 ROM 板对应的槽中。每个芯片都贴有标签，以便哪个芯片进入哪个槽。
 
@@ -3015,10 +2971,7 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 为什么我们必须更改所有 30 块芯片？每当我们从 30K 可执行文件中添加或删除代码时，每个指令的加载地址都会改变。它还改变了我们调用的子程序和函数的地址。因此，无论变化多么微小，每一块芯片都会受到影响。
 
-
-
-
-有一天，我的老板来找我，让我解决那个问题。他说我们需要一种方法，可以在不需要每次更换所有 30 块芯片的情况下修改固件。我们针对这个问题脑风暴了一段时间，然后启动了“向量化”（Vectorization）项目。这花了我三个月的时间。
+有一天，我的老板来找我，让我解决那个问题。他说我们需要一种方法，可以在不需要每次更换所有 30 块芯片的情况下修改固件。我们针对这个问题脑暴了一段时间，然后启动了“向量化”（Vectorization）项目。这花了我三个月的时间。
 
 这个想法非常简单且优雅。我们将一个 30K 的程序分成了 32 个可以独立编译的源文件，每个文件都小于 1K。在每个源文件的开头，我们告诉编译器在哪个地址加载生成的程序（例如，对于要插入到 `C4` 位置的芯片，使用 `ORG C400`）。
 
@@ -3044,7 +2997,7 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 ## 服务区域电脑
 
-4-TEL 服务区域电脑 (SAC) 基于一台 M365 最小型计算机。该系统通过专用调制器或拨号调制器与外外所有的 COLT 通信。它会命令这些 COLT 测量电话线路，接收原始结果，然后对这些结果进行复杂的分析，以识别并定位任何故障。
+4-TEL 服务区域电脑（SAC）基于一台 `M365` 最小型计算机。该系统通过专用调制器或拨号调制器与外外所有的 `COLT` 通信。它会命令这些 `COLT` 测量电话线路，接收原始结果，然后对这些结果进行复杂的分析，以识别并定位任何故障。
 
 ### 派遣裁定
 
@@ -3062,7 +3015,9 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 #### 架构
 
-该系统是 1976 年用 M365 汇编语言编写的。这是一个大约 60,000 行的单体巨型程序。操作系统是一个基于轮询的自研非抢占式任务调度器。我们称其为 `MPS`（多处理系统）。M365 计算机没有内置栈，因此特定任务的变量存储在内存的特殊区域，并在每次上下文切换时进行交换。共享变量通过锁和信号量管理。重入性问题和竞态条件是常存在的问题。
+
+
+该系统是 1976 年用 `M365` 汇编语言编写的。这是一个大约 60,000 行的单体巨型程序。操作系统是一个基于轮询的自研非抢占式任务调度器。我们称其为 `MPS`（多处理系统）。`M365` 计算机没有内置栈，因此特定任务的变量存储在内存的特殊区域，并在每次上下文切换时进行交换。共享变量通过锁和信号量管理。重入性问题和竞态条件是常存在的问题。
 
 设备控制逻辑或 UI 逻辑与系统的业务规则之间没有任何隔离。例如，调制器控制代码可能散布在大部分业务规则和 UI 代码中。我们没有尝试将其收集到一个模块中或抽象接口。调制器的控制是在位级别上由散布在系统各处的代码完成的。
 
@@ -3084,16 +3039,13 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 我们让它运行了，但那是所能想象的最糟糕的黑操作。正是因为这次失败，我学会了将硬件与业务规则隔离、以及抽象接口的价值。
 
-
-
-
 ## 天空中的宏大重设计
 
 到了 20 世纪 80 年代，生产自己的微型计算机和计算机架构的想法开始变得过时。市场上出现了许多微型计算机，让它们运行起来比继续依赖 20 世纪 60 年代末的专用计算机架构更便宜、也更标准。这一点，加上 SAC 软件糟糕的架构，促使我们的技术管理层开始对 SAC 系统进行全面的重构。
 
 新系统将使用 `C` 语言编写，并在磁盘上使用 `UNIX` 操作系统，运行在 `Intel 8086` 微型计算机上。我们的硬件人员开始研发新的计算机硬件，一组精选的软件开发人员——“虎队小组”（The Tiger Team）被委托负责重写工作。
 
-我就不会用最初那次失败的细节来让你们无聊了。可以说，第一支虎队小组在投入了两个到三年的时间在一个从未产出任何成果的软件项目后，彻底失败了。
+我就不会用最初那次失败的细节来让你们无聊了。可以说，第一支虎队小组在投入了两个到三个年的时间在一个从未产出任何成果的软件项目后，彻底失败了。
 
 一两年后，大概是 1982 年，流程再次启动。目标是在 `C` 语言和 `UNIX` 环境下，在我们设计的设计的性能惊人的 `80286` 硬件上，对 SAC 进行彻底且完全的重新。我们将那台计算机命名为“深思”（Deep Thought）。
 
@@ -3109,7 +3061,7 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 当然，当时没有认真尝试将这些更改整合到位于美国的软件中。这在网络技术实现跨洋传输大型代码库之前很久以前。这些英国开发人员简单地分叉了美国的代码，并根据需要对其进行修改。
 
-这无疑导致了困难。大西洋两岸都发现了需要在另一侧进行修复的 漏洞。但由于模块已经发生了巨大变化，因此很难判断在美国完成的修复在英国是否有效。
+这无疑导致了困难。大西洋两岸都发现了需要在另一侧进行修复的漏洞。但由于模块已经发生了巨大变化，因此很难判断在美国完成的修复在英国是否有效。
 
 在经历了几年的心如火煎之后，并在安装了一条连接美国和英国办公室的高吞吐量线路后，他们进行了一次严肃的尝试，将这两个分支重新整合在一起，使差异成为一个配置问题。这次努力在第一次、第二次和第三次尝试时都失败了。这两个代码库尽管极其相似，但仍然太不同了，无法重新整合——特别是在当时瞬息万变的市场环境中。
 
@@ -3125,9 +3077,9 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 此外，我们使用的汇编器是由自己的程序员编写的。它运行在我们的 `M365` 计算机上，使用“激光修边”部分描述的卡带操作系统。
 
-由于命运使然，我们的首席`硬件` 工程师说服了我们的首席执行官，我们需要一台`真正的`计算机。他实际上并不知道要用它做什么，但他有很大的影响力。于是我们购买了一台 `PDP-11/60`。
+由于命运使然，我们的首席硬件工程师说服了我们的首席执行官，我们需要一台真正的计算机。他实际上并不知道要用它做什么，但他有很大的影响力。于是我们购买了一台 `PDP-11/60`。
 
-当时作为一名低微的软件开发人员的我喜若狂狂。我`确切地`知道用那台计算机做什么。我下定决心，这将会是`我的`机器。
+当时作为一名低微的软件开发人员的我喜若狂狂。我确切地知道用那台计算机做什么。我下定决心，这将会是我的机器。
 
 当手册在机器交付几个月前到达时，我把它们带回家并狼吞虎咽。等计算机交付时，我已经知道如何在极其亲密的层上操作硬件和软件——至少，达到了自学所能达到的亲密程度。
 
@@ -3135,17 +3087,13 @@ OMC 在伊利诺伊州的沃基根（Waukegan）拥有一个巨大的设施，�
 
 五十兆字节！这个数字似乎是无限的！我记得在深夜走在办公室的走廊里，像西方的坏巫一样咯咯大笑着：“五十兆字节！哈哈哈哈哈哈哈哈！”
 
-
-
-
-
 BOSS 调用来阻塞任务的形式如下：
 
-```
+```c
 block(eventCheckFunction);
 ```
 
-此调用挂起了了当前任务，将 `eventCheckFunction` 放入轮询列表，并将其与新阻塞的任务关联。随后，它在轮询循环中等待，调用轮询列表中的每个函数，直到其中一个返回 `true`。然后，与该函数关联的任务便被允许运行。
+此调用挂起了当前任务，将 `eventCheckFunction` 放入轮询列表，并将其与新阻塞的任务关联。随后，它在轮询循环中等待，调用轮询列表中的每个函数，直到其中一个返回 `true`。然后，与该函数关联的任务便被允许运行。
 
 换句话说，正如我之前提到的，这是一个简单的非抢占式任务调度器。
 
@@ -3203,23 +3151,17 @@ pCCU 就此诞生。
 
 奇怪，不是吗？我们工程了一种如今无处不在、我们完全不会考虑的解决方案。但在那时……
 
-#### 架构
+### 架构
 
 该系统的架构非常简单，但有一些有趣的特点我想强调一下。首先，两个单元都使用了我们的 8085 技术，且都是用 `C` 编写并使用 `BOSS`。但相似性到此为止结束。
 
 这个项目我们只有两个人。我是项目负责人，Mike Carew 是我的亲密助手。我负责 `DLU` 的设计和编码；Mike 负责 `DRU`。
 
+`DLU` 的架构基于数据流模型。每个任务执行一个微小且专注的工作，然后通过队列将其输出传递给队列中的下一个任务。你可以将其想象成 UNIX 中的管道与过滤器模型。该架构非常复杂：一个任务可能会填充一个由许多其他任务维护的队列；其他任务则可能填充一个仅由单个任务维护的队列。
 
+想象一下流水线。流水线上的每个位置都有一个单一、简单且高度专注的任务要执行。然后产品移动到流水线上的下一个位置。有时流水线会分成许多条线，有时这些线又会重新合并成单条线。这就是 `DLU`。
 
-
-
-#### 架构
-
-DLU 的架构基于数据流模型。每个任务执行一个微小且专注的工作，然后通过队列将其输出传递给队列中的下一个任务。你可以将其想象成 UNIX 中的管道与过滤器模型。该架构非常复杂：一个任务可能会填充一个由许多其他任务维护的队列；其他任务则可能填充一个仅由单个任务维护的队列。
-
-想象一下流水线。流水线上的每个位置都有一个单一、简单且高度专注的任务要执行。然后产品移动到流水线上的下一个位置。有时流水线会分成许多条线，有时这些线又会重新合并成单条线。这就是 DLU。
-
-Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一个任务，简单地在该任务中完成该终端的所有工作。没有队列，没有数据流。只有许多相同的大任务，每个任务都管理自己的终端。
+Mike 的 `DRU` 采用了一种截然不同的方案。他为每个终端创建一个任务，简单地在该任务中完成该终端的所有工作。没有队列，没有数据流。只有许多相同的大任务，每个任务都管理自己的终端。
 
 这与流水线是相反的。在这种情况下，类比是许多专家级建筑师，每个人都建造一整个产品。
 
@@ -3227,14 +3169,14 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 
 ## VRS
 
-随着 20 世纪 80 年代的发展，新的技术不断出现。其中一项技术就是对`voice` 的计算机控制。
+随着 20 世纪 80 年代的发展，新的技术不断出现。其中一项技术就是对 `voice` 的计算机控制。
 
 4-Tel 系统的功能之一是技术人员能够定位电缆故障。操作步骤如下：
 
-* 局端的测试员使用我们的系统来确定故障的大致距离（单位为英尺）。精度大约在 20% 以内。测试员将派遣一名电缆维修人员前往该位置附近合适的接入点。
-* 电缆维修人员到达后，会拨打测试员电话并请求开始故障定位流程。测试员将调用 4-Tel 系统的故障定位功能。系统将开始测量该故障线路的电特性，并在屏幕上打印信息，要求执行某些操作，例如剥开电缆或短接电缆。
-* 测试员告诉技术人员系统想要哪些操作，技术人员在操作完成后告诉测试员。测试员随后告诉系统操作已完成，系统继续测试。
-* 在经过两次或三次这样的交互后，系统会计算出新的故障距离。电缆维修人员随后开车前往该位置并重新开始流程。
+- 局端的测试员使用我们的系统来确定故障的大致距离（单位为英尺）。精度大约在 20% 以内。测试员将派遣一名电缆维修人员前往该位置附近合适的接入点。
+- 电缆维修人员到达后，会拨打测试员电话并请求开始故障定位流程。测试员将调用 4-Tel 系统的故障定位功能。系统将开始测量该故障线路的电特性，并在屏幕上打印信息，要求执行某些操作，例如剥开电缆或短接电缆。
+- 测试员告诉技术人员系统想要哪些操作，技术人员在操作完成后告诉测试员。测试员随后告诉系统操作已完成，系统继续测试。
+- 在经过两次或三次这样的交互后，系统会计算出新的故障距离。电缆维修人员随后开车前往该位置并重新开始流程。
 
 想象一下，如果电缆维修人员在电线杆上或站在底座旁可以自己操作系统，会有好多少。这正是新的语音技术允许我们做的。电缆维修人员可以直接拨入我们的系统，通过拨号音调指导系统，并听用悦耳的声音读给他们听的结果。
 
@@ -3248,7 +3190,7 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 
 最终的胜者是 `VRS`：语音响应系统（Voice Response System）。
 
-#### 架构
+### 架构
 
 我没有参与这个系统的开发，但我听说了发生的事情。我要告诉你们的故事是道道而来的，但在大多数情况下，我认为它是正确的。
 
@@ -3290,6 +3232,8 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 
 这是世界上第一个语音信箱系统，我们拥有它的专利。
 
+
+
 我们构建了该系统所有的硬件——计算机板、内存板、语音/电信板，一切硬件。主板是我之前提到的 `Deep Thought`，Intel 80286 处理器。
 
 每个语音板支持一条电话线。它们由电话接口、语音编解码器、一些内存和一个 Intel 80186 微机组成。
@@ -3297,9 +3241,6 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 主板的软件是用 `C` 语言编写的。操作系统是 `MP/M-86`，一种早期的命令行驱动、多处理磁盘操作系统。`MP/M` 是穷人版的 `UNIX`。
 
 语音板的软件是用汇编语言编写的，没有操作系统。`Deep Thought` 与语音板之间的通信通过共享内存进行。
-
-
-
 
 该系统的架构在今天会被称为`面向服务`。每一条电话线都由一个运行在 `MP/M` 下的监听进程进行监控。当来电时，会启动一个初始处理进程并将通话传递给它。随着通话从一个状态转移到另一个状态，相应的处理进程会被启动并接管控制权。
 
@@ -3309,7 +3250,7 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 
 我不会说这个系统的架构在本书所指的意义上是“整洁”的；它不是一种“插件”架构。然而，它确实显示了真实边界的迹象。服务是可以独立部署的，并存在各自的责任领域内。既有高层进程也有低层进程，许多依赖关系的方向都是正确的。
 
-#### ER 的终结
+### ER 的终结
 
 遗憾的是，这个产品的营销并不成功。Teradyne 是一家销售测试设备的公司。我们并不懂如何进入办公设备市场。
 
@@ -3319,7 +3260,7 @@ Mike 的 DRU 采用了一种截然不同的方案。他为每个终端创建一�
 
 另一方面，你不能怪我那些现在困扰我们生活的烦人机器。
 
-#### CRAFT 分发系统
+### CRAFT 分发系统
 
 ER 作为产品已经失败了，但我们仍然拥有所有的硬件和软件，可以用来增强现有的产品线。此外，我们在 `VRS` 上的营销成功说服了我们，应该提供一种语音响应系统，与电话技师进行交互，且不依赖于我们的测试系统。
 
@@ -3351,24 +3292,23 @@ ER 作为产品已经失败了，但我们仍然拥有所有的硬件和软件�
 
 我们的问题是解码这些半自由字符串，解释并修复任何错误，然后将其转换为语音输出，以便我们可以读给在电线杆上的维修人员听。这需要非常灵活的解析和数据表示技术。
 
-#### CLEAR COMMUNICATIONS
+### CLEAR COMMUNICATIONS
 
 1988 年，一群 Teradyne 员工离开公司成立名为 Clear Communications 的初创公司。我在几个月后加入了他们。我们的任务是为一套系统开发软件，监控 T1 线的通信质量——这些线路是跨国长途通信的数字线路。愿景是一个巨大的显示器，上面有美国地图，交叉分布的 T1 线，如果线路恶化则会闪烁红色。
 
-记住，在 1988 年图形用户界面是全新的。Apple Macintosh 才出生五年。Windows 在那时是个笑话。但 Sun Microsystems 正在构建具有可靠 X-Windows GUI 的 Sparcstations。所以我们选择了 Sun——因此选择了 C 和 UNIX。
-
-
-
+记住，在 1988 年图形用户界面是全新的。Apple Macintosh 才出生五年。Windows 在那时是个笑话。但 Sun Microsystems 正在构建具有可靠 X-Windows GUI 的 Sparcstations。所以我们选择了 Sun——因此选择了 `C` 和 `UNIX`。
 
 这是一家初创公司。我们每周工作 70 到 80 小时。我们有愿景。我们有动力。我们有意志。我们有能量。我们有专业知识。我们有股权。我们有百万翁梦。我们满口胡言。
 
-C 代码从我们身体的每一个孔隙涌出。我们把它塞到这里，推到那里。我们在空中构筑了巨大的城堡。我们有流程、有消息队列，还有宏大且极佳的架构。我们从零开始编写了一个完整的七层 ISO 通信栈——一直到数据链路层。
+`C` 代码从我们身体的每一个孔隙涌出。我们把它塞到这里，推到那里。我们在空中构筑了巨大的城堡。我们有流程、有消息队列，还有宏大且极佳的架构。我们从零开始编写了一个完整的七层 ISO 通信栈——一直到数据链路层。
 
 我们写了 GUI 代码。粘糊糊的代码（GOOEY CODE）！天哪！我们写了超级粘糊糊的代码。
 
-我个人写了一个名为 `gi()` 的 3000 行 C 函数；它的名字代表图形解释器（Graphic Interpreter）。那是胶质代码的一件杰作。这不是我在 Clear 公司写的唯一垃圾代码，但它是我最臭名昭著的一个。
+我个人写了一个名为 `gi()` 的 3000 行 `C` 函数；它的名字代表图形解释器（Graphic Interpreter）。那是胶质代码的一件杰作。这不是我在 Clear 公司写的唯一垃圾代码，但它是我最臭名昭著的一个。
 
-## 架构？你在开玩笑吗？这是一家初创公司。我们没时间搞架构。写代码吧，该死的！为了你们的命写代码！
+### 架构？你在开玩笑吗？
+
+这是一家初创公司。我们没时间搞架构。写代码吧，该死的！为了你们的命写代码！
 
 于是我们写代码。一直在写。一直写。但是，在三年后，我们失败的是卖掉公司。噢，我们确实有一两个安装用户。但市场对我们宏大的愿景并不特别感兴趣，我们的风险投资人也变得非常厌烦。
 
@@ -3376,13 +3316,13 @@ C 代码从我们身体的每一个孔隙涌出。我们把它塞到这里，推
 
 然后，我接了一个改变一切的电话。
 
-## 铺垫
+### 铺垫
 
 在那个电话之前的两年前，发生了两件意义意义。
 
 首先，我成功地与一家附近的公司建立了 `uucp` 连接，那家公司通过 `uucp` 连接到另一个接入了互联网的设施。当然，这些连接都是拨号上网。我们的主 Sparcstation（我办公桌上的那台）使用一个 1200-bps 的调制调器每天拨打两次我们的 `uucp` 主。这让我们有了电子邮件和 Netnews（一个人们讨论有趣话题的早期社交网络）。
 
-其次，Sun 发布了 C++ 编译器。我从 1983 年起就对 C++ 和面向对象（OO）感兴趣，但编译器很难获得。所以当机会出现时，我立刻切换了语言。我抛下了那 3000 行的 C 函数，在 Clear 开始编写 C++ 代码。我学习了……
+其次，Sun 发布了 C++ 编译器。我从 1983 年起就对 C++ 和面向对象（OO）感兴趣，但编译器很难获得。所以当机会出现时，我立刻切换了语言。我抛下了那 3000 行的 `C` 函数，在 Clear 开始编写 C++ 代码。我学习了……
 
 我读了书。当然，我读了 Bjarne Stroustrup 写的《C++ 编程语言》（*The C++ Programming Language*）和《C++ 参考手册》（*The Annotated C++ Reference Manual*，*The ARM*）。我读了 Rebecca Wirfs-Brock 那本关于责任驱动设计的优秀书籍：《面向对象软件设计》（*Designing Object Oriented Software*）。我读了 Peter Coad 写的 *OOA*、*OOD* 和 *OOP*。我读了 Adele Goldberg 写的《*Smalltalk-80*》。我读了 James O. Coplien 写的《高级 C++ 编程风格与惯用法》（*Advanced C++ Programming Styles and Idioms*）。但也许最重要的，是我读了 Grady Booch 写的《面向应用的面向对象设计》（*Object Oriented Design with Applications*）。
 
@@ -3394,7 +3334,7 @@ C 代码从我们身体的每一个孔隙涌出。我们把它塞到这里，推
 
 而所有这些辩论，也许还有其中的一些道理，引起了我的关注……
 
-## 鲍伯叔
+### 鲍伯叔
 
 Clear 的工程师中有一个叫 Billy Vogel 的年轻人。Billy 给每个人都起起了外号。他叫我“鲍伯叔”（Uncle Bob）。我怀疑，尽管我的名字确实叫 Bob，但他是在随口提到了 J. R. “Bob” Dobbs（参见 [`en.wikipedia.org/wiki/File:Bobdobbs.png`](https://en.wikipedia.org/wiki/File:Bobdobbs.png)）。
 
@@ -3402,7 +3342,7 @@ Clear 的工程师中有一个叫 Billy Vogel 的年轻人。Billy 给每个人�
 
 然后，某一天，电话响了。
 
-## 电话
+### 电话
 
 是一个猎头。他听说了我的名字，说我是一个懂 C++ 和面向对象设计的人。我不确定是怎么知道的，但我怀疑与我在 Netnews 上的活跃有关。
 
@@ -3410,24 +3350,25 @@ Clear 的工程师中有一个叫 Billy Vogel 的年轻人。Billy 给每个人�
 
 我的脸色变了。我知道这是怎么了。我不知道为什么知道的，但我知道。这是 Grady Booch 的公司。我从眼前看到了与 Grady Booch 合作的机会！
 
-## ROSE
+### ROSE
 
 我于 1990 年以合同程序员的身份加入了 Rational。我当时正在开发 ROSE 产品。这是一个允许程序员绘制 Booch 图（Buch diagrams）的工具——Grady 在《面向应用的面向对象分析与设计》（*Object-Oriented Analysis and Design with Applications*）中写过这些图（图 A.9 显示了一个示例）。
 
 ![Image](img/0013.jpeg)
+
 **图 A.9** Booch 图
 
 Booch 记法非常强大。它预示了 UML。
 
 ROSE 是一个巨大的 C++ 应用程序。它由层组成，并有严格执行的依赖规则。那个规则并不是我在书中描述的那个规则。我们没有将依赖指向高层策略。相反，我们将依赖指向了更传统的流控制方向。GUI 指向表示层，表示层指向操作规则，操作指向数据库。最终，正是这种没有将依赖指向策略的失败，导致了该产品最终的终结。
 
-## 辩论持续
+### 辩论持续
 
 当然，我没有停止在 Netnews 上辩论。事实上，我大幅增加了我在网络上的活跃度。我开始为《C++ Report》写文章。而且，在 Grady 的帮助下，我开始写我的第一本书：《使用 Booch 方法设计面向对象的 C++ 应用程序》（*Designing Object-Oriented C++ Applications Using the Booch Method*）。
 
 有一件事困扰着我。这看起来很反常，但却是事实。没有人叫我“鲍伯叔”。我发现我很怀念它。于是我犯了一个错误，在我的电子邮件和 Netnews 签名中加入了“鲍伯叔”。这个名字就留了下来。最终我意识到这是一个非常好的品牌。
 
-ROSE 的架构
+### ROSE 的架构
 
 ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析”为内部表示；该表示随后通过规则进行处理并存储在面向对象的数据库中。
 
@@ -3435,16 +3376,13 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 
 那个数据库可能是我们最大的实践错误。我们想要魔法，但得到的却巨大的、缓慢的、具有侵入性的且昂贵的第三方框架，它通过在几乎每一个层面上阻碍我们的进展，让我们的生活变得像地狱一样。
 
-
-
-
 那个数据库并不是我们犯下的唯一错误。事实上，最大的错误是过度架构。它的层级比我在这里描述的要多得多，而且每一层都有自己的通信开销。这显著降低了团队的生产力。
 
 事实上，在经历了多年的工作、艰艰的斗争以及两次冷平平的发布后，整个工具被废弃了，并被一个由威斯康星州的一个小团队编写的可爱小应用程序所取代。
 
 因此我学到，伟架构有时会导致巨大的失败。架构必须足够灵活，以适应问题的大小。当你真正只需要一个可爱的小桌面工具时，却为企业级进行架构设计，那是失败的方程式。
 
-## 建筑师注册考试
+### 建筑师注册考试
 
 在 20 世纪 90 年代初，我成为了一名真正的顾问。我环游世界，教人们什么是这种新的面向对象（OO）事物。我的咨询重点主要是面向对象系统的设计和架构。
 
@@ -3486,11 +3424,13 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 
 我们履行了日期和承诺。我们的客户很满意。我们也很开心。生活很美好。
 
-但我们学到了一个教训：在你先制作出一个可用的框架之前，你无法创建一个可重用的框架。可重用的框架要求你与*几个*可重用的应用程序共同构建它们。
+但我们学到了一个教训：在你先制作出一个可用的框架之前，你无法创建一个可重用的框架。可重用的框架要求你与几个可重用的应用程序共同构建它们。
 
 ## 结
 
 正如我在开头所说的，这个附录在某种程度上是自传性的。我列出了认为对架构有影响的项目亮点。当然，我也提到了一些与本书技术内容无关但很有意义的事件。
+
+
 
 当然，这只是部分历史。在几十年里，我参与了许多其他项目。我也特意将这段历史停在 20 世纪 90 年代初——因为我还有本关于 90 年代后期的书要写。
 
@@ -3503,10 +3443,6 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 想象一下那个磁盘的质量。想象一下它的动能！有一天，我们看到金属屑从机柜按钮处掉。我们联系了维护人员。他建议我们关闭设备。当他来修理时，他说一个轴承磨损了。然后他告诉我们一些故事，这些磁盘如果不修理，可能会脱离固定，撞过混凝土墙，并嵌入停车场的汽车里。
 
 `阴极射线管：单色、绿屏、ASCII 显示。`
-
-
-
-
 
 [7]. 它们有一个小小的透明塑料窗，让你看到内部的硅片，并允许紫外线擦除数据。
 
@@ -3526,25 +3462,26 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 
 ### 数字
 
-- 3DBB 共享内存系统，Craft Dispatch System 考古学项目，363
-- 4-TEL，考古学项目
-- BOSS，351–352
-- C 语言，349–351
-- DLU/DRU，354–356
+- `3DBB` 共享内存系统，Craft Dispatch System 考古学项目，363
+- `4-TEL`，考古学项目
+- `BOSS`，351–352
+- `C` 语言，349–351
+- `DLU/DRU`，354–356
 - 概述，339–344
-- pCCU，352–354
-- SAC（服务区域计算机），344–349
-- VRS，357–359
-- 8085 计算机，考古学项目
-- 4-TEL，341
-- BOSS，351
-- C 语言与，349–351
-- DLU/DRU，356
-- Intel 8086 微微计算机，SAC 考古学项目，347–348
+- `pCCU`，352–354
+- `SAC`（服务区域计算机），344–349
+- `VRS`，357–359
+- `8085` 计算机，考古学项目
+- `4-TEL`，341
+- `BOSS`，351
+- `C` 语言与，349–351
+- `DLU/DRU`，356
+- Intel `8086` 微微计算机，`SAC` 考古学项目，347–348
 
 ### A
 
 #### 抽象类
+
 - 结论，132
 - 依赖倒转原则与，87
 - 无用区域中的残留，129–130
@@ -3554,14 +3491,15 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 - 抽象工厂，89–90
 
 #### 抽象
-- 稳定性原则。*参见* SAP（稳定抽象原则）
+
+- 稳定性原则。*参见* `SAP`（稳定抽象原则）
 - 源代码依赖与，87
 - 稳定，88–89
 - 访问修饰符，架构包，316–319
 - 无意重复，154–155
 - 参与者（Actors），62–65
 - 地址段，可重定位二进制文件，99–100
-- ADP（无环依赖）打破，117–118
+- `ADP`（无环依赖）打破，117–118
 - 依赖图受影响，118
 - 依赖图中循环的影响，115–117
 - 消除循环，113–115
@@ -3569,56 +3507,55 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 - 概述，112
 - 每周构建，112–113
 - 压铸监控考古学项目，338–339
-- APIs，测试，252–253
+- `APIs`，测试，252–253
 - 应用程序测试，258–261
 - 应用程序规则，用例，192–193, 204
 
 #### 架构师
+
 - 最小化资源的目标，160
 - 注册考古学项目，370–373
 - 与策略分离细节，142
 
 #### 架构
+
 - 洁洁。*参见* 洁洁架构
 - 洁洁嵌入式。*参见* 洁洁嵌入式架构
 - 设计与，4
-- DLU/DRU 考古学项目，356
+- `DLU/DRU` 考古学项目，356
 - 艾森威尔矩阵：重要性与紧急性，16–17
 - 编写正确的软件，2
 - 不变性与，52
 - 独立性。*参见* 独立性
-- ISP 与，86
-- LSP 与，80
+- `ISP` 与，86
+- `LSP` 与，80
 - 插件，170–171
-- ROSE 考古学产品，368–370
-- SAC 考古学项目，345–347
+- `ROSE` 考古学产品，368–370
+- `SAC` 考古学项目，345–347
 - 作为函数的上，18
 - 作为软件价值，14–15
 - 稳定性，122–126
 - 测试，213
 - 三个大关注点，24
 - 函数价值与，15–16
-- VRS 考古学项目，358–359
+- `VRS` 考古学项目，358–359
 
 #### 架构考古学项目
-- 4-TEL，339–344
+
+- `4-TEL`，339–344
 - 压铸监控，338–339
 - 注册考古学项目，370–373
 - 自 1970 年起，325–326
 - 基础与，351–352
-- C 语言，349–351
+- `C` 语言，349–351
 - Craft Dispatch System，363
-- DLU/DRU，354–356
+- `DLU/DRU`，354–356
 - 电子接收，359–361
-- ROSE 考古学产品，368–370
-- SAC 考古学项目，345–347
+- `ROSE` 考古学产品，368–370
+- `SAC` 考古学项目，345–347
 - 服务区域计算机，344–349
 - 工会会计，326–334
-- VRS，357–359
-
-
-
-
+- `VRS`，357–359
 
 目的，197
 
@@ -3628,9 +3565,9 @@ ROSE 的架构类似于一个优秀编译器的架构。图形记法被“解析
 
 归档（Archives），作为组件的聚合，96
 
-制品（Artifacts），OCP，70
+制品（Artifacts），`OCP`，70
 
-ASC 制表，Union 会计考古学项目，326–334
+`ASC` 制表，Union 会计考古学项目，326–334
 
 作业（Assignment），以及函数式编程，23
 
@@ -3644,7 +3581,7 @@ ASC 制表，Union 会计考古学项目，326–334
 
 基类，框架，293
 
-BCE 体系架构，202
+`BCE` 体系架构，202
 
 Beck, Kent，258–261
 
@@ -3670,17 +3607,17 @@ Beck, Kent，258–261
 
 就职于，367
 
-参与 ROSE 产品开发，368–369
+参与 `ROSE` 产品开发，368–369
 
-### BOSS (基本操作系统和调度器)
+### `BOSS`（基本操作系统和调度器）
 
 考古学项目，351–352
 
-在 DLU/DRU 考古学项目中的，356
+在 `DLU/DRU` 考古学项目中的，356
 
 ### 边界（Boundaries）
 
-在 4-TEL 考古学项目中，340–341
+在 `4-TEL` 考古学项目中，340–341
 
 结论，173
 
@@ -3694,7 +3631,7 @@ FitNesse 程序，163–165
 
 在 Laser Trim 考古学项目中，338
 
-层级与。*参见* 层与边界（Layers and boundaries)
+层级与。*参见* 层与边界（Layers and boundaries）
 
 概述，159–160
 
@@ -3778,7 +3715,7 @@ GUI 之间的边界，169–170
 
 请求/响应模型以及，193–194
 
-在 SAC 考古学项目中的，346–347
+在 `SAC` 考古学项目中的，346–347
 
 用……分离组件，165–169
 
@@ -3786,7 +3723,7 @@ GUI 之间的边界，169–170
 
 用于用例的，193–194
 
-### C
+## C
 
 继承中的，40
 
@@ -3796,11 +3733,11 @@ GUI 之间的边界，169–170
 
 多态中的，42
 
-ROSE 应用，369–370
+`ROSE` 应用，369–370
 
 削弱封装，36–37
 
-### C#
+### `C#`
 
 组件中的组件，125
 
@@ -3810,21 +3747,21 @@ ROSE 应用，369–370
 
 削弱封装，36–37
 
-*C 语言（Kernighan & Ritchie）*351
+*C 语言（Kernighan & Ritchie）* 351
 
-C4 架构模型，314–315
+`C4` 架构模型，314–315
 
 Carew, Mike，356
 
-CASE（计算机辅助工程）工具，368
+`CASE`（计算机辅助工程）工具，368
 
-案例研究。*参见* 视频销售案例（Video sales case study)
+案例研究。*参见* 视频销售案例（Video sales case study）
 
-### C++
+### `C++`
 
 射线管（CRT）终端，Union 会计考古项目，328–329
 
-### CCP（封闭类原则）
+### `CCP`（封闭类原则）
 
 层级解耦，152–153
 
@@ -3836,271 +3773,364 @@ CASE（计算机辅助工程）工具，368
 
 稳定依赖原则和，120
 
-
-
-
-
 ## 张力图，108–110
 
-# CCU/CMU (COLT 控制单元/COLT 测量单元), pCCU 考古项目，353–354
+# `CCU/CMU`（COLT 控制单元/COLT 测量单元），`pCCU` 考古项目，353–354
 
-## CDS (任务分发系统)，考古项目
+## `CDS`（任务分发系统），考古项目
+
 ## 概述，361–363
 
-# 电话局线路测试仪。*参见* COLTs (电话局线路测试仪)
+# 电话局线路测试仪。*参见* `COLTs`（电话局线路测试仪）
 
-# 电话局 (COs),4-TEL 考古项目，339–340
+# 电话局（`COs`），`4-TEL` 考古项目，339–340
 
 ## 修改，软件易用性，14–15
 
 ## Church, Alonzo，22–23, 50
 
-# CICS-COBOL 程序，铝合金压铸考古项目，339
+# `CICS-COBOL` 程序，铝合金压铸考古项目，339
 
-## 类 (Classes)
+## 类（Classes）
+
 ## 抽象。*参见* 抽象类
-## 通用重用原则，107–108
-## DIP 和，89
-## LSP 在引导继承中的使用，78
-## 将进程划分为，71–72
-## 重用/释放等效原则，105
-## SRP 示例，67
 
-# 洁洁架构 (Clean architecture)
+## 通用重用原则，107–108
+
+## `DIP` 和，89
+
+## `LSP` 在引导继承中的使用，78
+
+## 将进程划分为，71–72
+
+## 重用/释放等效原则，105
+
+## `SRP` 示例，67
+
+# 洁洁架构（Clean architecture）
+
 ## 特质，201–203
+
 ## 结论，209
+
 ## 依赖规则，203–207
+
 ## 框架往往会违反，293
+
 ## 典型场景，208
+
 ## 使用层和边界，223–226
 
-# 洁洁嵌入式架构 (Clean embedded architecture)
+# 洁洁嵌入式架构（Clean embedded architecture）
+
 ## 能力测试，258–261
+
 ## 结论，273
-## 不要向 HAL 的用户暴露硬件细节，265–269
-## DRY 条件编译指令，272
+
+## 不要向 `HAL` 的用户暴露硬件细节，265–269
+
+## `DRY` 条件编译指令，272
+
 ## 硬件是细节，263–264
+
 ## 可测试的嵌入式架构，262
+
 ## 层，262–263
+
 ## 操作系统是细节，269–271
+
 ## 概述，255–258
+
 ## 面向接口和可替换性编程，271–272
+
 ## 目标硬件瓶颈，261
 
-# [Cleancoders.com](http://Cleancoders.com), 297
+# [Cleancoders.com](http://Cleancoders.com)，297
 
-## 清晰通信 (Clear Communications),364–367
+## 清晰通信（Clear Communications），364–367
+
 ## 电话电话，367
+
 ## 设置，366
+
 ## Uncle Bob，367
 
 ## Clojure，50–51, 53–54
 
 ## Codd, Edgar，278
 
-## 代码 (Code)
+## 代码（Code）
+
 ## 在铝合金压铸考古项目中，338–339
+
 ## 生产力下降/成本增加，5–7
+
 ## 过度自信的愚蠢，9–12
+
 ## 开发成本上升，8–9
-## SAC 项目中，345
+
+## `SAC` 项目中，345
+
 ## 混乱的签名，7–8
+
 ## 源码依赖。*参见* 源码依赖
 
-## 代码组织 (Code organization)
-## 结论，321
-## 魔鬼在细节中，315–316
-## 其他解耦模式，319–320
-## 概述，303–304
-## 按组件包，310–315
-## 按功能包，306–307
-## 按层包，304–306
-## 端口与适配器，308–310
-## 与封装对比，316–319
-## 内聚，单一责任原则，63
-## -TEL 考古项目中的 COLTs (电话局线路测试仪)，4,340–344
-## pCCU 考古项目，352–354
-## 服务区域考古项目，344–349
-## 通用封闭原则。*参见* 通用封闭原则 (CCP)
-## 通用重用原则。*参见* 通用重用原则 (CRP)
+## 代码组织（Code organization）
 
-## 通信 (Communications)
+## 结论，321
+
+## 魔鬼在细节中，315–316
+
+## 其他解耦模式，319–320
+
+## 概述，303–304
+
+## 按组件包，310–315
+
+## 按功能包，306–307
+
+## 按层包，304–306
+
+## 端口与适配器，308–310
+
+## 与封装对比，316–319
+
+## 内聚，单一责任原则，63
+
+## `-TEL` 考古项目中的 `COLTs`（电话局线路测试仪），4, 340–344
+
+## `pCCU` 考古项目，352–354
+
+## 服务区域考古项目，344–349
+
+## 通用封闭原则。*参见* 通用封闭原则（`CCP`）
+
+## 通用重用原则。*参见* 通用重用原则（`CRP`）
+
+## 通信（Communications）
+
 ## 跨部署边界，179
+
 ## 跨本地进程边界，180
+
 ## 跨服务边界，180–181
+
 ## 跨源码级解耦边界，178
+
 ## 康威律，149
+
 ## 作为单体组件间的函数调用，178
+
 ## 在解耦模式中，155–157
+
 ## 比较并交换算法，54
+
 ## 编译型语言，96
 
-## 编译器 (Compilers)
+## 编译器（Compilers）
+
 ## 用来实施架构原则，319
+
 ## 源码位置，97–98
+
 ## 可重定位二进制文件，99–100
+
 ## 组件架构，视频案例研究，300–302
 
-## 基于组件的系统 (Component-based systems)
+## 基于组件的系统（Component-based systems）
+
 ## 构建可扩展，241
-## 使用 SOLID 设计服务，245–246
+
+## 使用 `SOLID` 设计服务，245–246
+
 ## 函数调用，240
+
 ## 针对跨切关注点的面向对象方法，244–245
 
-## 组件内聚 (Component cohesion)
+## 组件内聚（Component cohesion）
+
 ## 通用封闭原则，105–107
+
 ## 通用重用原则，107–108
+
 ## 结论，110
+
 ## 概述，104
+
 ## 重用/释放等效原则，104–105
+
 ## 张力图，108–110
 
-## 组件耦合 (Component coupling)
-## ADP。*参见* 无环依赖原则 (ADP)
+## 组件耦合（Component coupling）
+
+## `ADP`。*参见* 无环依赖原则（`ADP`）
+
 ## 结论，132
+
 ## 脆弱测试问题，251
+
 ## 概述，111
-## 稳定抽象原则。*参见* 稳定抽象原则 (SAP)
+
+## 稳定抽象原则。*参见* 稳定抽象原则（`SAP`）
+
 ## 稳定依赖原则，120–126
+
 ## 自顶向下设计，118–119
 
-# 组件依赖图 (Component dependency graph)
+# 组件依赖图（Component dependency graph）
+
 ## 打破组件循环并恢复为 DAG，117–118
+
 ## 循环中的影响，115–117
+
 ## 团队组件架构，137–138
 
-## 组件 (Components)
+## 组件（Components）
+
 ## 具体的，91
+
 ## 部署，178–179
+
 ## 历史，96–99
+
 ## 链接器，100–102
+
 ## 概述，96
-
-
-
-
 
 ## 索引
 
 ## B
-- `按包划分,`, 313–315
-- `将进程划分为类/将类划分为进程`, 71–72
-- `原则`, 93
-- `可重定位性`, 99–100
-- `系统测试`, 250
+
+- `按包划分`，313–315
+- `将进程划分为类/将类划分为进程`，71–72
+- `原则`，93
+- `可重定位性`，99–100
+- `系统测试`，250
 
 ### C
-- `计算机辅助软件工程 (CASE) 工具`, 368
-- `具体组件, 依赖反转原则`, 91
-- `并发任务, BOSS 考古项目`, 351–352
-- `并发更新`, 52–53
-- `Constantine, Larry`, 29
-- `控制, 流.`, *参见* 控制流
-- `程序控制结构`, 27–28
-- `控制, 传递`, 22
-- `控制器 (Controllers)`
-    - `在洁洁架构中`, 203, 205
-    - `洁洁架构场景`, 207–208
-    - `跨越圆边界`, 206
-- `康威法则`, 149
-- `铜线, pCCU 考古项目`, 352–354
-- `在核心代码中避免使用框架`, 293
-- `COs (中心局)`, 4-TEL 考古项目`, 339–340
-- `耦合.`, *参见* 组件耦合
-    - `避免允许框架渗透`, 293
-    - `导致过早决策`, 160
-- `工艺分发系统 (Craft Dispatch System).`, *参见* CDS (工艺分发系统), 考古项目
-- `关键业务数据`, 190–191
-- `关键业务规则`, 190–193
+
+- `计算机辅助软件工程（CASE）工具`，368
+- `具体组件，依赖反转原则`，91
+- `并发任务，BOSS 考古项目`，351–352
+- `并发更新`，52–53
+- `Constantine, Larry`，29
+- `控制，流`。*参见* 控制流
+- `程序控制结构`，27–28
+- `控制，传递`，22
+- `控制器（Controllers）`
+  - `在洁洁架构中`，203, 205
+  - `洁洁架构场景`，207–208
+  - `跨越圆边界`，206
+- `康威法则`，149
+- `铜线，pCCU 考古项目`，352–354
+- `在核心代码中避免使用框架`，293
+- `COs（中心局）`，`4-TEL` 考古项目，339–340
+- `耦合`。*参见* 组件耦合
+  - `避免允许框架渗透`，293
+  - `导致过早决策`，160
+- `工艺分发系统（Craft Dispatch System）`。*参见* `CDS`（工艺分发系统），考古学项目
+- `关键业务数据`，190–191
+- `关键业务规则`，190–193
 - `跨切关注点`
-    - `设计服务来处理`, 247
-    - `面向对象的方法`, 244–245
-- `跨越数据流`, 226
+  - `设计服务来处理`，247
+  - `面向对象的方法`，244–245
+- `跨越数据流`，226
 
 ## R
-- `CRP (通用复用原则)`
-    - `对组件组合产生的影响`, 118
-    - `概述`, 107–108
-    - `张力图`, 108–110
-- `CRT (阴极射线管) 终端, 联合会计考古项目`, 328–329
+
+- `CRP`（通用复用原则）
+  - `对组件组合产生的影响`，118
+  - `概述`，107–108
+  - `张力图`，108–110
+- `CRT`（阴极射线管）终端，联合会计考古项目，328–329
 
 ## Cycles
-- `循环 (Cycles)`
-    - `打破`, 117–118
-    - `在依赖图中的影响`, 115–117
-    - `消除依赖`, 113–115
-    - `每周构建问题`, 112–113
+
+- `循环（Cycles）`
+  - `打破`，117–118
+  - `在依赖图中的影响`，115–117
+  - `消除依赖`，113–115
+  - `每周构建问题`，112–113
 
 ## D
+
 - `D`
-    - `指标, 离主序列的距离`, 130–132
-- `DAGs (有向无环图)`
-    - `策略架构框架`, 184
-    - `组件的循环`, 117–118
-    - `定义`, 114
-- `Dahl, Johan`, 22
+  - `指标，离主序列的距离`，130–132
+- `DAGs`（有向无环图）
+  - `策略架构框架`，184
+  - `组件的循环`，117–118
+  - `定义`，114
+- `Dahl, Johan`，22
 - `数据`
-    - `洁洁架构场景`, 207–208
-    - `跨边界的依赖规则`, 207
-    - `架构中的关注关注`, 24
-    - `映射器 (mappers)`, 214–215
-    - `与功能分离`, 66
-    - `数据模型.`, 278
+  - `洁洁架构场景`，207–208
+  - `跨边界的依赖规则`，207
+  - `架构中的关注关注`，24
+  - `映射器（mappers）`，214–215
+  - `与功能分离`，66
+  - `数据模型`，278
 - `数据存储`
-    - `Laser 项目`, 335
-    - `由于磁盘导致的数据库普遍性`, 279–280
-    - `联合会计项目`, 327–328
+  - `Laser` 项目，335
+  - `由于磁盘导致的数据库普遍性`，279–280
+  - `联合会计项目`，327–328
 - `数据库`
-    - `独立于洁洁架构的`, 202
-    - `洁洁架构场景`, 207–208
-    - `创建可测试架构的`, 198
-    - `解耦层`, 153
-    - `解耦用例`, 153
-    - `依赖规则`, 205
-    - `业务规则之间的边界`, 165
-    - `网关`, 214
-    - `Hunt the Wumpus 冒险游戏`, 222–223
-    - `独立开发性`, 47
-    - `开发中的开放选项`, 141, 197
-    - `插件架构`, 171
-    - `关系型`, 278
-    - `Zone of Pain 中的模式`, 129
-    - `用边界线分离组件`, 165–169
+  - `独立于洁洁架构的`，202
+  - `洁洁架构场景`，207–208
+  - `创建可测试架构的`，198
+  - `解耦层`，153
+  - `解耦用例`，153
+  - `依赖规则`，205
+  - `业务规则之间的边界`，165
+  - `网关`，214
+  - `Hunt the Wumpus` 冒险游戏，222–223
+  - `独立开发性`，47
+  - `开发中的开放选项`，141, 197
+  - `插件架构`，171
+  - `关系型`，278
+  - `Zone of Pain 中的模式`，129
+
+
+
+- `用边界线分离组件`, 165–169
+
 - `数据库细节`
-    - `逸闻`, 281–283
-    - `结论`, 283
-    - `细节`, 281
-    - `如果没有磁盘的话`, 280–281
-    - `概述`, 277–278
-    - `性能`, 281
-    - `关系型数据库`, 278
-    - `为什么数据库系统如此普遍`, 279–280
+
+  - `逸闻`, 281–283
+  - `结论`, 283
+  - `细节`, 281
+  - `如果没有磁盘的话`, 280–281
+  - `概述`, 277–278
+  - `性能`, 281
+  - `关系型数据库`, 278
+  - `为什么数据库系统如此普遍`, 279–280
+
 - `DCI-系统架构`, 202
+
 - `死锁，来自可变变量`, 52
+
 - `解耦 (Decoupling)`
-    - `作为谬误`, 240
-    - `独立部署`, 154, 241
-    - `独立开发`, 153, 241
-    - `kitty 问题`, 242–243
-    - `模式`, 151–158
-    - `测试目的`, 252–253
+
+  - `作为谬误`, 240
+  - `独立部署`, 154, 241
+  - `独立开发`, 153, 241
+  - `kitty 问题`, 242–243
+  - `模式`, 151–158
+  - `测试目的`, 252–253
+
 - `DeMarco, Tom`, 29
-
-
-
-
 
 # 依赖注入框架，主组件，232
 
 # 依赖倒置，44–47
 
 ## 依赖管理
+
 - 指标。*查看 ADP (无环依赖原则)*
 - 通过完整的架构边界，218
 - 通过单体系统中的多态，177
 - 视频销售案例研究，302
 
 ## 依赖规则
+
 - 洁洁架构与，203–206
 - 洁洁架构场景，207–208
 - 跨越边界，206
@@ -4119,6 +4149,7 @@ CASE（计算机辅助工程）工具，368
 - 哪些数据跨越了边界，207
 
 ## 部署
+
 - 架构决定了的易易性，150
 - 组件，178–180
 - 作为部署单元的组件，96
@@ -4127,6 +4158,7 @@ CASE（计算机辅助工程）工具，368
 - 部署层级解耦模式，156–157, 178–179
 
 ## 设计
+
 - 的方法。*查看 代码组织*
 - 架构对比，4
 - 导致生产力下降/代码成本增加，5–7
@@ -4139,6 +4171,7 @@ CASE（计算机辅助工程）工具，368
 - *使用 Booch 方法设计面向对象的 C++ 应用*，369
 
 ## 细节
+
 - 数据库是。*查看 数据库是细节*
 - 不要向 HAL（硬件抽象层）的用户暴露硬件，265–269
 - 框架是，291–295
@@ -4148,6 +4181,7 @@ CASE（计算机辅助工程）工具，368
 - Web 是，285–289
 
 # 开发者
+
 - 生产力下降/代码成本增加，5–7
 - 艾森豪威尔的重要性与紧急性矩阵，17
 - 过度自信的愚蠢，9–12
@@ -4157,12 +4191,14 @@ CASE（计算机辅助工程）工具，368
 - 作为利益相关者，18
 
 # 开发
+
 - 架构对的影响，137–138
 - 独立的。*查看 独立开发*
 - 架构的支持作用，149–150
 - 测试的支持作用，250
 
 # 设备
+
 - 定义，142–143
 - UI 的 IO，288–289
 - 垃圾邮件案例，144–145
@@ -4171,6 +4207,7 @@ CASE（计算机辅助工程）工具，368
 - 数字化革命与电信公司，352–354
 
 # Dijkstra, Edsger
+
 - 将自律应用于编程，27
 - 结构化编程的发现，22
 - 历史，26
@@ -4178,6 +4215,7 @@ CASE（计算机辅助工程）工具，368
 - 关于测试，31
 
 # DIP (依赖倒置原则)
+
 - 打破组件循环，117–118
 - 结论，91
 - 具体组件，91
@@ -4193,9 +4231,11 @@ CASE（计算机辅助工程）工具，368
 - 稳定原则，127
 
 # 有向环图。*查看 有向环图*
+
 # 有向控制，74
 
 # 磁盘
+
 - 如果没有，280–281
 - 流行性，279–280
 - 艾森豪威尔的，326–330
@@ -4208,18 +4248,16 @@ CASE（计算机辅助工程）工具，368
 - 不要重复（DRY）原则，272
 - DSL（领域特定语言），Laser 案例项目，337
 
-
-
-
-
 # 嵌入式架构。*参见* 清洁嵌入式架构
 
 ## 封装
+
 - 在定义 OOP 时，35–37
 - 组织结构对比，316–319
 - 对 `public` 的过度使用，316
 
 ## 实体
+
 - 业务规则和，190–191
 - 洁洁架构场景，207–208
 - 创建可测试架构，198
@@ -4228,11 +4266,13 @@ CASE（计算机辅助工程）工具，368
 - 用例对比，191–193
 
 ## 枚举
+
 - 迪斯特拉关于序列/选择的证明，28
 - EPROM（可擦除可只读存储器）芯片，4
 - TEL 考古项目，341–343
 
 ## ER (电子接待员)
+
 - 考古项目，359–361
 - Craft Dispatch 系统，362–364
 - ETS（教育测试服务），370–372
@@ -4240,6 +4280,7 @@ CASE（计算机辅助工程）工具，368
 - 事件溯源存储交易，54–55
 
 ## 可执行文件
+
 - 单体应用的部署，176–178
 - 组件的链接，96
 - 外部洁洁架构独立性，202
@@ -4247,13 +4288,15 @@ CASE（计算机辅助工程）工具，368
 - 外部引用，编译器，100
 
 ## F
--  Fac 面模式，部分边界，220
+
+- Fac 面模式，部分边界，220
 - 入入/出度指标，组件稳定性，122–123
 - Feathers, Michael，58
 - 文件系统的延迟缓解，279–280
 - 通过防火墙的边界交叉，176
 
 ### 固件
+
 - 在 4-TEL 考古项目，343–344
 - 定义，256–257
 - 消除目标硬件瓶颈，262–263
@@ -4262,13 +4305,16 @@ CASE（计算机辅助工程）工具，368
 - 停止编写这么多，257–258
 
 ### Fitesse 程序
+
 - 概述，163–165
 - 部分边界，218
 
 ### `FLD` (字段标记数据)
+
 - Craft Dispatch 考古项目，363
 
 ### 控制流
+
 - 跨边界，206
 - 依赖管理，案例研究，302
 - 动态多态，177–178
@@ -4276,9 +4322,11 @@ CASE（计算机辅助工程）工具，368
 - Fowler, Martin，305–306
 
 ### 脆弱的测试
+
 - 251
 
 ### 框架
+
 - 基于架构的，197
 - 洁洁架构独立于，202
 - 在没有框架的情况下创建可测试架构，198
@@ -4287,6 +4335,7 @@ CASE（计算机辅助工程）工具，368
 - 作为工具，而非生活方式，198
 
 ### 框架的细节
+
 - 非对称结合，292–293
 - 结论，295
 - 框架作者，292
@@ -4297,11 +4346,13 @@ CASE（计算机辅助工程）工具，368
 - 函数调用，作为服务，240
 
 ### 函数式解构
+
 - 最佳实践，32
 - 在结构化编程中，29
 - 函数式指针，OOP，22, 23
 
 ### 函数式编程
+
 - 结论，56
 - 事件溯源，54–55
 - 历史，22–23
@@ -4311,6 +4362,7 @@ CASE（计算机辅助工程）工具，368
 - 整数的示例，50–51
 
 ### 函数
+
 - 避免重写，89
 - 拆解为部分（函数式解构），29
 - 架构中的三个关注点之一，24
@@ -4319,10 +4371,12 @@ CASE（计算机辅助工程）工具，368
 - SRP 示例，67
 
 ## G
+
 - 数据库网关，214
 - GE Datanet 计算机，30Union Accounting 考古项目，326–330
 
 ### Goto 语句
+
 - 用迭代控制结构替换 Dijkstra，27
 - 迪斯特拉关于其有害性的声明，28–29
 - 结构化编程的历史，22
@@ -4339,924 +4393,658 @@ CASE（计算机辅助工程）工具，368
 - 网页是，288
 
 ## H
+
 - HAL（硬件抽象层）
-- 避免向用户暴露硬件细节，265–269
-- 作为软件/固件之间的边界，264
-- DRY 条件编译指令，272
-- 操作系统是细节和，269–271
+  - 避免向用户暴露硬件细节，265–269
+  - 作为软件/固件之间的边界，264
+  - DRY 条件编译指令，272
+  - 操作系统是细节和，269–271
 
 ## 硬件
+
 - 通过层消除目标硬件瓶颈，262–263
 - 固件随着演进而过时，256
 - 在 SAC 考古项目中，346–347
 - 头文件，面向接口编程，272
 
 ## 高层策略
+
 - 与低级输入/输出策略解耦，185–186
 - 与细节分离，140–142
-
-
-
-
-
-分割数据流, 227–228
-
-放置何处, 126
-
-人力资源，架构师最小化的目标, 160
+- 分割数据流, 227–228
+- 放置何处, 126
+- 人力资源，架构师最小化的目标, 160
 
 # 谦逊对象模式 (Humble Object pattern)
 
-数据映射器, 214–215
-
-数据库逃逸, 214
-
-呈现器(Presenters)与视图(Views), 212–213
-
-作为一种形式的呈现器, 212
-
-测试与架构, 213
-
-理解, 212
+- 数据映射器, 214–215
+- 数据库逃逸, 214
+- 呈现器(Presenters)与视图(Views), 212–213
+- 作为一种形式的呈现器, 212
+- 测试与架构, 213
+- 理解, 212
 
 # 狩猎跳鼠游戏 (Hunt the Wumpus game)
 
-层与边界。*参见* 层与边界
-
-主组件来自, 232–237
+- 层与边界。*参见* 层与边界
+- 主组件来自, 232–237
 
 # 我
 
-IBM System/7, 铝合金压铸考古项目, 338–339
-
-If/then/else 语句, 22, 27
-
-不可变性, 52–54
-
-实施策略。*参见* 代码组织
-
-重要性，紧急性对比 艾森豪威尔矩阵, 16–17
-
-入入依赖，稳定性指标, 122–123
+- IBM System/7, 铝合金压铸考古项目, 338–339
+- If/then/else 语句, 22, 27
+- 不可变性, 52–54
+- 实施策略。*参见* 代码组织
+- 重要性，紧急性对比 艾森豪威尔矩阵, 16–17
+- 入入依赖，稳定性指标, 122–123
 
 # 独立性 (Independence)
 
-结论, 158
-
-解耦层, 151–152
-
-解耦模式, 153
-
-解耦用例, 152
-
-部署, 150
-
-开发, 149–150
-
-重复, 154–155
-
-独立部署性, 154
-
-独立开发性, 153–154
-
-留出选择空间, 150–151
-
-运行, 149
-
-概述, 147–148
-
-解耦模式类型, 155–158
-
-用例, 148
+- 结论, 158
+- 解耦层, 151–152
+- 解耦模式, 153
+- 解耦用例, 152
+- 部署, 150
+- 开发, 149–150
+- 重复, 154–155
+- 独立部署性, 154
+- 独立开发性, 153–154
+- 留出选择空间, 150–151
+- 运行, 149
+- 概述, 147–148
+- 解耦模式类型, 155–158
+- 用例, 148
 
 # 独立组件 (Independent components)
 
-计算稳定性指标, 123
-
-理解, 121
+- 计算稳定性指标, 123
+- 理解, 121
 
 # 独立部署性 (Independent deployability)
 
-在 4-TEL 考古项目, 344
-
-作为服务的谬误, 241
-
-猫咪问题示例, 242–243
-
-在处理横切关注点的面向对象方法中, 244–245
-
-概述, 154
+- 在 4-TEL 考古项目, 344
+- 作为服务的谬误, 241
+- 猫咪问题示例, 242–243
+- 在处理横切关注点的面向对象方法中, 244–245
+- 概述, 154
 
 # 独立开发性 (Independent developability)
 
-作为服务的谬误, 241
-
-猫咪问题示例, 242–243
-
-在处理横切关注点的面向对象方法中, 244–245
-
-概述, 153–154
-
-关于 UI 和数据库, 47
-
-Dijkstra 关于迭代的归纳法, 28
+- 作为服务的谬误, 241
+- 猫咪问题示例, 242–243
+- 在处理横切关注点的面向对象方法中, 244–245
+- 概述, 153–154
+- 关于 UI 和数据库, 47
+- Dijkstra 关于迭代的归纳法, 28
 
 # 信息隐藏 (Information hiding)
 
-开闭原则, 74–75
+- 开闭原则, 74–75
 
 # 继承关系 (Inheritance relationships)
 
-跨边界, 206
-
-定义 OOP, 37–40
-
-依赖反转, 46
-
-依赖管理, 302
-
-指导性, 78
+- 跨边界, 206
+- 定义 OOP, 37–40
+- 依赖反转, 46
+- 依赖管理, 302
+- 指导性, 78
 
 # 输入/输出 (Input/output)
 
-用例的业务规则, 193–194
-
-高层策略与低层的解耦, 185–187
-
-策略层级距离, 184
-
-用边界分离组件, 169–170
-
-整数，函数编程示例, 50–51
-
-集成，每周构建, 112–113
-
-接口适配器, 依赖规则, 205
-
-接口分离原则。*参见* 接口分离原则
+- 用例的业务规则, 193–194
+- 高层策略与低层的解耦, 185–187
+- 策略层级距离, 184
+- 用边界分离组件, 169–170
+- 整数，函数编程示例, 50–51
+- 集成，每周构建, 112–113
+- 接口适配器, 依赖规则, 205
+- 接口分离原则。*参见* 接口分离原则
 
 # IO 设备 (IO device)
 
-UNIX 函数, 41–44
-
-Web 是, 288–289
-
-隔离，测试, 250–251
+- UNIX 函数, 41–44
+- Web 是, 288–289
+- 隔离，测试, 250–251
 
 # 接口分离原则 (ISP - Interface Segregation Principle)
 
-架构与, 86
-
-与通用重用原则对比, 108
-
-结论, 86
-
-定义, 59
-
-语言类型与, 85
-
-概述, 84–85
-
-迭代, 27–28
+- 架构与, 86
+- 与通用重用原则对比, 108
+- 结论, 86
+- 定义, 59
+- 语言类型与, 85
+- 概述, 84–85
+- 迭代, 27–28
 
 # J
 
-Jacobson, Ivar, 196, 202
+- Jacobson, Ivar, 196, 202
 
 # Jar 文件 (Jar files)
 
-组件架构, 301
-
-作为组件的, 96
-
-创建部分边界, 219
-
-定义组件的功能, 313
-
-设计基于组件的服务, 245–246
-
-下载并运行的规则, 163
-
-源层级模式, 176
+- 组件架构, 301
+- 作为组件的, 96
+- 创建部分边界, 219
+- 定义组件的功能, 313
+- 设计基于组件的服务, 245–246
+- 下载并运行的规则, 163
+- 源层级模式, 176
 
 # Java
 
-抽象组件, 125
-
-*参见* 代码组织
-
-作为组件, 96
-
-DIP 和, 37
-
-导入语句, 184
-
-ISP 示例, 84–85
-
-标准库, 293
-
-模块, 319
-
-按层划分, 304–306
-
-整数, 50–51
-
-弱化封装, 36–37
-
-循环的, 118
-
-垃圾示例, 144–145
+- 抽象组件, 125
+- *参见* 代码组织
+- 作为组件, 96
+- DIP 和, 37
+- 导入语句, 184
+- ISP 示例, 84–85
+- 标准库, 293
+- 模块, 319
+- 按层划分, 304–306
+- 整数, 50–51
+- 弱化封装, 36–37
+- 循环的, 118
+- 垃圾示例, 144–145
 
 # K
 
-猫咪问题示例, 242–243
+- 猫咪问题示例, 242–243
 
 # L
 
-整洁架构与, 223–226
-
-狩猎跳鼠游戏, 222–223
-
-4-TEL 考古项目, 344
-
-概述, 334–338
+- 整洁架构与, 223–226
+- 狩猎跳鼠游戏, 222–223
+- 4-TEL 考古项目, 344
+- 概述, 334–338
 
 # 分分架构 (Layered architecture)
 
-按层划分代码组织, 304–306
-
-松弛的, 311–312
-
-为什么被认为是坏的, 310–311
+- 按层划分代码组织, 304–306
+- 松弛的, 311–312
+- 为什么被认为是坏的, 310–311
 
 # 层 (Layers)
 
-代码组织的方法, 304–306
-
-使用整洁架构的, 202–203
-
-解耦, 151–152
-
-重复的, 155
-
-消除目标硬件瓶颈, 262–263
-
-独立开发性, 154
-
-
-
-
-
--   交叉溪流，226
-
--   寻找 Wumpus 冒险游戏，222–223
-
--   概述，221–222
-
--   划分溪流，227–228
-
--   Leiningen 工具，模块管理，104
+- 代码组织的方法, 304–306
+- 使用整洁架构的, 202–203
+- 解耦, 151–152
+- 重复的, 155
+- 消除目标硬件瓶颈, 262–263
+- 独立开发性, 154
+- 交叉溪流，226
+- 寻找 Wumpus 冒险游戏，222–223
+- 概述，221–222
+- 划分溪流，227–228
+- Leiningen 工具，模块管理，104
 
 # 层 (Level)
 
--   保护层级与，74
-
--   策略与，184–187
+- 保护层级与，74
+- 策略与，184–187
 
 # 库 (Libraries)
 
--   源代码位置，97–98
-
--   可重定位二进制文件，99–100
-
--   生命周期，架构支持系统，137
-
--   链接器，与加载器分离，100–102
-
--   Liskov, Barbara，78
-
--   Liskov 替换原则 (LSP)。*另阅* LSP (Liskov 替换原则)
-
--   LISP 语言，函数式编程，23
-
--   Lisp 语言，整数平方示例，50–51
+- 源代码位置，97–98
+- 可重定位二进制文件，99–100
+- 生命周期，架构支持系统，137
+- 链接器，与加载器分离，100–102
+- Liskov, Barbara，78
+- Liskov 替换原则 (LSP)。*另阅* LSP (Liskov 替换原则)
+- LISP 语言，函数式编程，23
+- Lisp 语言，整数平方示例，50–51
 
 # 加载器 (Loaders)
 
--   链接，100–102
-
--   可重定位二进制文件，99–100
-
--   本地进程边界，179–180
+- 链接，100–102
+- 可重定位二进制文件，99–100
+- 本地进程边界，179–180
 
 # LSP (Liskov 替换原则)
 
--   架构与，80
-
--   结论，82
-
--   定义，59
-
--   引导继承的使用，78
-
--   概述，78
-
--   正方形/矩形示例问题，79
-
--   违反，80–82
+- 架构与，80
+- 结论，82
+- 定义，59
+- 引导继承的使用，78
+- 概述，78
+- 正方形/矩形示例问题，79
+- 违反，80–82
 
 # M
 
--   M365 计算机
+- M365 计算机
+  - 4-TEL 考古项目，340–341
+  - Laser Trim 考古项目，335–338
+  - SAC 考古项目，345–347
+- 信箱，本地进程通过其通信，180
 
--   4-TEL 考古项目，340–341
+# 主组件 (Main component)
 
--   Laser Trim 考古项目，335–338
-
--   SAC 考古项目，345–347
-
--   信箱，本地进程通过其通信，180
-
-# 主组件 (Main component) 
-
--   结论，237
-
--   作为具体组件，91
-
--   定义，232
-
--   面向对象编程，40
-
--   多态性，45
-
--   发布产生的小影响，115
-
--   作为终极细节，232–237
+- 结论，237
+- 作为具体组件，91
+- 定义，232
+- 面向对象编程，40
+- 多态性，45
+- 发布产生的小影响，115
+- 作为终极细节，232–237
 
 # 主序列 (Main Sequence)
 
--   通过...避免排除区 (Zones of Exclusion)，130
-
--   定义抽象/稳定性之间的关系，127–128
-
--   与...的距离，130–132
-
--   痛苦区 (Zone of Pain)，129
-
--   无用之区 (Zone of Uselness)，129–130
-
--   维护，对架构的影响，139–140
-
--   营销活动，数据库供应商，283
-
--   主运行程序 (MOP)，Laser Trim 考古项目，336
+- 通过...避免排除区 (Zones of Exclusion)，130
+- 定义抽象/稳定性之间的关系，127–128
+- 与...的距离，130–132
+- 痛苦区 (Zone of Pain)，129
+- 无用之区 (Zone of Uselness)，129–130
+- 维护，对架构的影响，139–140
+- 营销活动，数据库供应商，283
+- 主运行程序 (MOP)，Laser Trim 考古项目，336
 
 # 数学 (Mathematics)
 
--   与科学对比，30
-
--   ...的学科，27–28
-
--   Maven 工具，模块管理，104
-
--   McCarthy, John，23
+- 与科学对比，30
+- ...的学科，27–28
+- Maven 工具，模块管理，104
+- McCarthy, John，23
 
 # 内存 (Memory)
 
--   早期布局，98–99
-
--   本地进程与，179
-
--   RAM。*另阅* RAM
-
--   合并，示例，65
-
--   消息队列，本地进程通过其通信，180
+- 早期布局，98–99
+- 本地进程与，179
+- RAM。*另阅* RAM
+- 合并，示例，65
+- 消息队列，本地进程通过其通信，180
 
 # 指标 (Metrics)
 
--   抽象，127
-
--   与主序列的距离，130–132
-
--   Meyer, Bertrand，70
+- 抽象，127
+- 与主序列的距离，130–132
+- Meyer, Bertrand，70
 
 # 微服务架构 (Micro-service architecture)
 
--   在 Craft Dispatch 考古项目中，362–363
-
--   解耦模式，153
-
--   部署策略，138
-
--   ...的流行，239
-
--   Modems，SAC 考古项目，346–347
+- 在 Craft Dispatch 考古项目中，362–363
+- 解耦模式，153
+- 部署策略，138
+- ...的流行，239
+- Modems，SAC 考古项目，346–347
 
 # 模块 (Modules)
 
--   通用复用原则 (Common Reuse Principle),107–108
-
--   定义，62
-
--   管理工具，104
-
--   公共类型与.类型，319
-
--   复用/发布等效原则 (Reuse/Release Equivalence Principle),105
+- 通用复用原则 (Common Reuse Principle),107–108
+- 定义，62
+- 管理工具，104
+- 公共类型与.类型，319
+- 复用/发布等效原则 (Reuse/Release Equivalence Principle),105
 
 # 单体架构 (Monoliths)
 
--   构建可扩展系统，241
-
--   部署层组件对比.，179
-
--   部署的，176–178
-
--   函数调用，240
-
--   静态链接的本地进程，180
-
--   线程，179
-
--   摩尔定律，101
-
--   MOP (主运行程序)，Laser Trim 考古项目，336
+- 构建可扩展系统，241
+- 部署层组件对比.，179
+- 部署的，176–178
+- 函数调用，240
+- 静态链接的本地进程，180
+- 线程，179
+- 摩尔定律，101
+- MOP (主运行程序)，Laser Trim 考古项目，336
 
 # 晨后综合症 (Morning after syndrome)
 
--   消除以解决依赖循环，113–115
-
--   管理依赖关系以防止，118
-
--   概述，112
-
--   每周构建问题，112–113
-
--   MPS (多处理系统)，SAC 考古项目，345–346
-
--   可变性 (Mutability)，52
-
--   可变变量，51–54
-
--   国家委员会，370–372
-
--   .NET 作为 DLLs，96
-
--   新的，Nygaard，22
-
--   对象关系数据库，368–370
-
--   *面向对象的设计与应用 (Object Oriented Design with Applications)* (Booch),366, 368
-
--   面向对象编程
-
--   结论，47
-
--   用于横切关注点，244–245
-
--   依赖倒置，44–47
-
--   单体架构的部署，177
-
--   封装，35–37
-
--   ...历史，22
-
--   继承，37–40
-
--   概述，34–35
-
--   多态性，40–43
-
--   多态性的力量，43–44
-
--   *面向对象软件工程 (Object Oriented Software Engineering)* (Jacobson),196, 202
-
--   对象关系映射 (ORMs)，214–215
-
-# 对象 (Objects)
-
--   对象，在 4-TEL 考古项目中发明，344
-
-# OCP (开闭原则)
-
--   诞生，142
-
--   与通用关闭原则对比，106
-
--   结论，75
-
--   在 Craft Dispatch 系统考古项目中，363
-
--   定义，59
-
--   依赖管理，302
-
--   设计组件化服务，246
+- 消除以解决依赖循环，113–115
+- 管理依赖关系以防止，118
+- 概述，112
+- 每周构建问题，112–113
 
 
 
+- MPS（多处理系统），SAC 考古项目，345–346
+- 可变性（Mutability），52
+- 可变变量，51–54
+- 国家委员会，370–372
+- `.NET` 作为 DLLs，96
+- 新的，Nygaard，22
+- 对象关系数据库，368–370
+- *面向对象的设计与应用（Object Oriented Design with Applications）*（Booch），366, 368
+- 面向对象编程
+  - 结论，47
+  - 用于横切关注点，244–245
+  - 依赖倒置，44–47
+  - 单体架构的部署，177
+  - 封装，35–37
+  - ...历史，22
+  - 继承，37–40
+  - 概述，34–35
+  - 多态性，40–43
+  - 多态性的力量，43–44
+- *面向对象软件工程（Object Oriented Software Engineering）*（Jacobson），196, 202
+- 对象关系映射（ORMs），214–215
 
+# 对象（Objects）
+- 对象，在 4-TEL 考古项目中发明，344
 
-方向控制, 74
+# OCP（开闭原则）
+- 诞生，142
+- 与通用关闭原则对比，106
+- 结论，75
+- 在 Craft Dispatch 系统考古项目中，363
+- 定义，59
+- 依赖管理，302
+- 设计组件化服务，246
+- 方向控制，74
+- 信息隐藏，74–75
+- 概述，70
+- 思想实验，71–74
 
-信息隐藏, 74–75
+OMC（外挂机机公司），铝压铸考古项目，338–339
 
-概述, 70
+一维边界，219
 
-思想实验, 71–74
+开闭原则。*参见* OCP（开闭原则）
 
-OMC (外挂机机公司), 铝压铸考古项目, 338–339
+操作系统抽象层（OSAL），洁洁嵌入式架构，270–271
 
-一维边界, 219
+操作系统（OS），是细节，269–271
 
-开闭原则。*参见* OCP (开闭原则)
+# 操作（Operations）
+- 支持系统的架构，138–139, 149
+- 为用例解耦，153
+- 受...变化影响的用例，204
 
-操作系统抽象层 (OSAL), 洁洁嵌入式架构, 270–271
+## 选项，保持开放（Options, keeping open）
+- 良好的架构使系统容易更改，150–151
+- 运行架构，149
+- 架构的目的，140–142, 197
+- 通过解耦模式，153
+- 组织 vs. 封装，316–319
 
-操作系统 (OS), 是细节, 269–271
+ORMs（对象关系映射器），214–215
 
-# 操作 (Operations)
+OS（操作系统），是细节，269–271
 
-支持系统的架构, 138–139, 149
+OSAL（操作系统抽象层），洁洁嵌入式架构，270–271
 
-为用例解耦, 153
+震荡，Web 作为众多者之一，285–289
 
-受...变化影响的用例, 204
+出向依赖，稳定性指标，122–123
 
-## 选项，保持开放 (Options, keeping open)
-
-良好的架构使系统容易更改, 150–151
-
-运行架构, 149
-
-架构的目的, 140–142, 197
-
-通过解耦模式, 153
-
-组织 vs. 封装, 316–319
-
-ORMs (对象关系映射器), 214–215
-
-OS (操作系统), 是细节, 269–271
-
-OSAL (操作系统抽象层), 洁洁嵌入式架构, 270–271
-
-震荡，Web 作为众多者之一, 285–289
-
-出向依赖, 稳定性指标, 122–123
-
-过度自信的 愚蠢, 9–12
+过度自信的愚蠢，9–12
 
 # P
+- 按组件包，310–315, 318
+- 按功能包，306–307, 317
 
-按组件包, 310–315, 318
+## 按层包（Package by layer）
+- 访问修饰符，317–318
+- 代码的水平分层，304–306
+- 为什么它被认为是坏的，310–311
 
-按功能包, 306–307, 317
-
-## 按层包 (Package by layer)
-
-访问修饰符, 317–318
-
-代码的水平分层, 304–306
-
-为什么它被认为是坏的, 310–311
-
-包，组织 vs. 封装, 316–319
+包，组织 vs. 封装，316–319
 
 Page-Jones, Meilir, 29
 
-# 部分边界 (Partial boundaries)
-
-结论, 220
-
-外外观 (facades), 220
-
-一维边界, 219
-
-实施的原因, 217–218
-
-跳过最后一步, 218–219
-
-补丁, 在 4-TEL 考古项目, 344
-
-CCU, 考古项目, 352–354
-
-PDP-11/60 计算机, 349–351
-
-性能，作为低层, 281
-
-端口与适配器的外围反模式, 320–321
-
-物理寻, 145–146
-
-# 插件架构 (Plugin architecture)
-
-在 4-TEL 考古项目, 344
-
-为了设备独立性, 44
-
-为了变化轴绘制边界, 173
-
-将低层组件到高层组件, 187
-
-主组件作为, 237
-
-从...假设开始, 170–171
-
-# 指针 (Pointers)
-
-创建多态行为, 43
-
-函数的, 22–23
-
-# 策略 (Policy)
-
-在洁洁架构中, 203
-
-高层。*参见* 高层策略
-
-概述, 183–184
-
-作为...的陈述, 183
-
-拆分数据流, 227–228
-
-多态分发, 4-TEL 考古项目, 344
-
-# 多态 (Polymorphism)
-
-用动态跨越圆边界, 206
-
-依赖倒置, 44–47
-
-动态的控制流, 177–178
-
-在面向对象编程中, 22, 40–43
-
-...的力量, 43–44
-
-# 端口与适配器 (Ports and adapters)
-
-访问修饰符, 318
-
-代码组织方法, 308–310
-
-用源码树解耦依赖, 319–320
-
-...的外围反模式, 320–321
-
-位置稳定性，组件, 122–123
-
-过早的...耦合, 160–163
-
-“表现层分层”, 305–306
-
-# 展示器 (Presenters)
-
-在洁洁架构中, 203, 205
-
-洁洁架构场景, 207–208
-
-组件架构, 301
-
-跨圆边界, 206
-
-# 展示器与 (Presenters and)
-
-数据映射器, 214–215
-
-谦逊对象模式, 212
-
-...的概述, 211–212
-
-监听器, 215
-
-测试与架构, 213
-
-# 过程 (Processes)
-
-划分类/分离类, 71–72
-
-# 处理器 (Processor)
-
-是细节, 265–269
-
-可变性与, 52
-
-# 生产力 (Productivity)
-
-下降，代码成本增加, 5–7
-
-混乱的迹象, 8–9
-
-# 编程语言 (Programming languages)
-
-在...中的抽象, 125–126
-
-组件, 96
-
-动态类型的, 88
-
-ISP 与, 85
-
-静态类型的, 87
-
-函数式语言中的变量, 51
-
-# 编程范式 (Programming paradigms)
-
-函数式编程。*参见* 函数式编程
-
-历史上的, 19–20
-
-面向对象编程。*参见* 面向对象编程
-
-概述, 21–24
-
-结构化编程。*参见* 结构化编程
-
-证明 (Proof)
-
-
-
-
-## 纪律，27–28
-
-## 缺乏结构化编程，30–31
+# 部分边界（Partial boundaries）
+- 结论，220
+- 外观（facades），220
+- 一维边界，219
+- 实施的原因，217–218
+- 跳过最后一步，218–219
+
+补丁，在 4-TEL 考古项目，344
+
+CCU，考古项目，352–354
+
+PDP-11/60 计算机，349–351
+
+性能，作为低层，281
+
+端口与适配器的外围反模式，320–321
+
+物理寻址，145–146
+
+# 插件架构（Plugin architecture）
+- 在 4-TEL 考古项目，344
+- 为了设备独立性，44
+- 为了变化轴绘制边界，173
+- 将低层组件到高层组件，187
+- 主组件作为，237
+- 从...假设开始，170–171
+
+# 指针（Pointers）
+- 创建多态行为，43
+- 函数的，22–23
+
+# 策略（Policy）
+- 在洁洁架构中，203
+- 高层。*参见* 高层策略
+- 概述，183–184
+- 作为...的陈述，183
+- 拆分数据流，227–228
+
+多态分发，4-TEL 考古项目，344
+
+# 多态（Polymorphism）
+- 用动态跨越圆边界，206
+- 依赖倒置，44–47
+- 动态的控制流，177–178
+- 在面向对象编程中，22, 40–43
+- ...的力量，43–44
+
+# 端口与适配器（Ports and adapters）
+- 访问修饰符，318
+- 代码组织方法，308–310
+- 用源码树解耦依赖，319–320
+- ...的外围反模式，320–321
+
+位置稳定性，组件，122–123
+
+过早的...耦合，160–163
+
+“表现层分层”，305–306
+
+# 展示器（Presenters）
+- 在洁洁架构中，203, 205
+- 洁洁架构场景，207–208
+- 组件架构，301
+- 跨圆边界，206
+
+# 展示器与（Presenters and）
+- 数据映射器，214–215
+- 谦逊对象模式，212
+- ...的概述，211–212
+- 监听器，215
+- 测试与架构，213
+
+# 过程（Processes）
+- 划分类/分离类，71–72
+
+# 处理器（Processor）
+- 是细节，265–269
+- 可变性与，52
+
+# 生产力（Productivity）
+- 下降，代码成本增加，5–7
+- 混乱的迹象，8–9
+
+# 编程语言（Programming languages）
+- 在...中的抽象，125–126
+- 组件，96
+- 动态类型的，88
+- ISP 与，85
+- 静态类型的，87
+- 函数式语言中的变量，51
+
+# 编程范式（Programming paradigms）
+- 函数式编程。*参见* 函数式编程
+- 历史上的，19–20
+- 面向对象编程。*参见* 面向对象编程
+- 概述，21–24
+- 结构化编程。*参见* 结构化编程
+
+## 证明（Proof）
+- 纪律，27–28
+- 缺乏结构化编程，30–31
 
 ## 代理，与框架一起使用，293
 
 ## 公共类型
-误用，315–316
-vs. 在模块中发布的类型，319
+- 误用，315–316
+- vs. 在模块中发布的类型，319
 
 ## Python
-DIP 和，88
-ISP 和，85
+- DIP 和，88
+- ISP 和，85
 
 ## R
 ### 竞态条件
-由于可变变量，52
-防止并发更新和，53
+- 由于可变变量，52
+- 防止并发更新和，53
 
 ### RAM
-4-TEL 考古学项目，341, 343–344
-替换磁盘，280–281
-Rational (公司)，367, 368
+- 4-TEL 考古学项目，341, 343–344
+- 替换磁盘，280–281
+
+Rational（公司），367, 368
+
 RDBMS（关系型数据库管理系统），279–283
-实时操作系统 (RTOS) 详情，269–271
-关系型数据库管理系统 (RDBMS)，279–283
+
+实时操作系统（RTOS）详情，269–271
+
+关系型数据库管理系统（RDBMS），279–283
+
 关系型数据库，278, 281–283
+
 松散分层架构，311–312
 
 ## 发布
-组件依赖图中的循环的影响，115–117
-消除依赖循环，113–115
-新组件编号，113
-针对新组件的重用/发布等效原则，104–105
+- 组件依赖图中的循环的影响，115–117
+- 消除依赖循环，113–115
+- 新组件编号，113
+- 针对新组件的重用/发布等效原则，104–105
+
 远程终端，DLU/DRU 考古学项目，354–356
+
 REP（复用/发布等效原则），104–105, 108–110
+
 请求模型，业务规则，193–194
+
 ReSharper，插件参数，172–173
+
 响应模型，业务规则，193–194
+
 REST，在开发中保留选项，141
-可重用性。*参见* CRP (通用重用原则)
-重用/发布等效原则 (REP)，104–105, 108–110
+
+可重用性。*参见* CRP（通用重用原则）
+
+重用/发布等效原则（REP），104–105, 108–110
 
 ## 风险
-架构应该缓解的成本，139–140
-框架的成本，293–294
+- 架构应该缓解的成本，139–140
+- 框架的成本，293–294
+
 ROM 主板，4-TEL 考古学项目，341
+
 ROSE 产品，考古学项目，368–370
+
 RTOS（实时操作系统）详情，269–271
 
 ## Ruby
-作为 gem 文件的组件，96
-DIP 和，88
-ISP 和，85
+- 作为 gem 文件的组件，96
+- DIP 和，88
+- ISP 和，85
+
 RVM 工具，管理，104
 
 ## S
 ### SAC（服务区域）
-使用 4-TEL，340–341
-架构，345–347
-结论，349
-分发确定，345
-DLU/DRU 考古学项目，354–356
-欧洲，348–349
-重大重设计，347–348
-概述，344
+- 使用 4-TEL，340–341
+- 架构，345–347
+- 结论，349
+- 分发确定，345
+- DLU/DRU 考古学项目，354–356
+- 欧洲，348–349
+- 重大重设计，347–348
+- 概述，344
 
 ### SAP（稳定抽象原则）
-避免排除区域，130
-与主序列的距离，130–132
-绘制边界线，173
-引论，126–127
-主序列，127–130
-测量抽象，127
-高层策略放在哪里，126
+- 避免排除区域，130
+- 与主序列的距离，130–132
+- 绘制边界线，173
+- 引论，126–127
+- 主序列，127–130
+- 测量抽象，127
+- 高层策略放在哪里，126
+
 SC（服务中心），4-TEL 考古学项目，339–340
 
 ### 可扩展性
-猫咪问题与服务，242–243
-构建不仅是构建选项，241
+- 猫咪问题与服务，242–243
+- 构建不仅是构建选项，241
+
 Schmidt, Doug，256–258
+
 科学方法，证明陈述为假，30–31
+
 更改架构的范围，15
+
 尖叫式架构。*参见* Architecture, screaming
 
 ### SDP（稳定依赖原则）
-抽象组件，125–126
-并非所有组件都应该是这样的，124–125
-并非所有组件应该是稳定的，123–125
+- 抽象组件，125–126
+- 并非所有组件都应该是这样的，124–125
+- 并非所有组件应该是稳定的，123–125
 
 ### SAP（稳定抽象原则）
-抽象组件，125–126
-与主序列的距离，130–132
-绘制边界线，173
-引论，126–127
-主序列，127–130
-测量抽象，127
-高层策略放在哪里，126
+- 抽象组件，125–126
+- 与主序列的距离，130–132
+- 绘制边界线，173
+- 引论，126–127
+- 主序列，127–130
+- 测量抽象，127
+- 高层策略放在哪里，126
+
 SC（服务中心），4-TEL 考古学项目，339–340
 
 ### SDP（稳定依赖原则）
-抽象组件，125–126
-并非所有组件都应该是，124–125
-并非所有组件应该是稳定的，123–125
-
-
-
+- 抽象组件，125–126
+- 并非所有组件都应该是，124–125
+- 并非所有组件应该是稳定的，123–125
 
 # 洁洁架构
-
-洁洁的嵌入式架构将操作系统与...离开来，270
-
-组件。*参见* 组件
-
-通过分层消除目标硬件瓶颈，262–263
-
-固件与...之间的模糊界限，263–264
-
-正确实现，1–2
-
-SOLID 原则，58
-
-架构的价值对比行为，14–18
+- 洁洁的嵌入式架构将操作系统与...分离开来，270
+- 组件。*参见* 组件
+- 通过分层消除目标硬件瓶颈，262–263
+- 固件与...之间的模糊界限，263–264
+- 正确实现，1–2
+- SOLID 原则，58
+- 架构的价值对比行为，14–18
 
 ## 软件开发
-
-为了架构而非功能而战，18
-
-像门门一样，31
+- 为了架构而非功能而战，18
+- 像门门一样，31
 
 ## 软件复用
-
-通用复用原则（Common Reuse Principle），107–108
-
-可复用组件与，104
-
-复用/发布等效原则（Reuse/Release Equivalence Principle），104–105
+- 通用复用原则（Common Reuse Principle），107–108
+- 可复用组件与，104
+- 复用/发布等效原则（Reuse/Release Equivalence Principle），104–105
 
 ## SOLID 原则
-
-依赖倒置原则（Dependency Inversion Principle）。*参见* DIP（依赖倒置原则)
-
-使用...设计基于组件的服务，245–246
-
-历史，57–59
-
-接口隔离原则（Interface Segregation Principle）。*参见* ISP（接口隔离原则)
-
-里氏夫替换原则（Liskov Substitution Principle）。*参见* LSP（里氏夫替换原则)
-
-处理横切问题的面向对象（OO）方法，244–245
-
-开闭原则（Open-Closed Principle）。*参见* OCP（开闭原则)
-
-单一职责原则（Single Responsibility Principle）。*参见* SRP（单一职责原则)
-
-源代码，编译，97–98
+- 依赖倒置原则（Dependency Inversion Principle）。*参见* DIP（依赖倒置原则）
+- 使用...设计基于组件的服务，245–246
+- 历史，57–59
+- 接口隔离原则（Interface Segregation Principle）。*参见* ISP（接口隔离原则）
+- 里氏夫替换原则（Liskov Substitution Principle）。*参见* LSP（里氏夫替换原则）
+- 处理横切问题的面向对象（OO）方法，244–245
+- 开闭原则（Open-Closed Principle）。*参见* OCP（开闭原则）
+- 单一职责原则（Single Responsibility Principle）。*参见* SRP（单一职责原则）
+- 源代码，编译，97–98
 
 ## 源代码依赖
-
-通过...创建跨越边界，176
-
-跨越圆边界，206
-
-解耦，184–185, 319
-
-依赖倒置，44–47
-
-作为本地进程，180
-
-OCP 示例，72
-
-仅引用抽象，87–88
-
-UI 组件通过...复用游戏规则，222–223
+- 通过...创建跨越边界，176
+- 跨越圆边界，206
+- 解耦，184–185, 319
+- 依赖倒置，44–47
+- 作为本地进程，180
+- OCP 示例，72
+- 仅引用抽象，87–88
+- UI 组件通过...复用游戏规则，222–223
 
 源代码树，解耦依赖，319–321
 
@@ -5273,90 +5061,60 @@ SPI（程序中断）指令，铝压铸考古项目，339
 函数式编程中的整数，50–51
 
 SRP（单一职责原则）
-
-意外重复，63–65
-
-通用闭合原则（Common Closure Principle），106–107
-
-结论，66–67
-
-解耦层，152
-
-定义的，59
-
-依赖管理，302
-
-良好架构中的，71
-
-将策略分组为组件，186–187
-
-保持更改局部化，118
-
-合并，65
-
-...的概述，61–63
-
-解决方案，66–67
-
-用例分析，299
-
-在哪里划分边界，172–173
+- 意外重复，63–65
+- 通用闭合原则（Common Closure Principle），106–107
+- 结论，66–67
+- 解耦层，152
+- 定义的，59
+- 依赖管理，302
+- 良好架构中的，71
+- 将策略分组为组件，186–187
+- 保持更改局部化，118
+- 合并，65
+- ...的概述，61–63
+- 解决方案，66–67
+- 用例分析，299
+- 在哪里划分边界，172–173
 
 稳定性，测量，122–123
 
 抽象与...之间的关系，127–130
 
-SAP。*参见* SAP（稳定抽象原则)
+SAP。*参见* SAP（稳定抽象原则）
 
 理解，120–121
 
-稳定抽象原则（Stable Abstractions Principle）。*参见* SAP（稳定抽象原则)
+稳定抽象原则（Stable Abstractions Principle）。*参见* SAP（稳定抽象原则）
 
 ## 稳定组件
-
-抽象组件作为，125–126
-
-在痛苦区域（Zone of Pain）中是无的，129
-
-并非所有组件应该是，123–125
-
-将高层策略置于，126
-
-稳定抽象原则（Stable Abstractions Principle），126–127
-
-稳定依赖原则（Stable Dependencies Principle）。*参见* SDP（稳定依赖原则)
+- 抽象组件作为，125–126
+- 在痛苦区域（Zone of Pain）中是无用的，129
+- 并非所有组件应该是，123–125
+- 将高层策略置于，126
+- 稳定抽象原则（Stable Abstractions Principle），126–127
+- 稳定依赖原则（Stable Dependencies Principle）。*参见* SDP（稳定依赖原则）
 
 ## 利益相关者
-
-变更成本的范围对比形状，15
-
-架构优于功能的地位，18
-
-软件系统提供的价值，14
+- 变更成本的范围对比形状，15
+- 架构优于功能的地位，18
+- 软件系统提供的价值，14
 
 ## 状态
-
-变异引起的并发问题，53
-
-存储事务但不存储，54–55
+- 变异引起的并发问题，53
+- 存储事务但不存储，54–55
 
 静态分析工具，架构违规，313
 
 静态与动态多态，177
 
 ## 策略模式
-
-创建一维边界，219
-
-处理横切问题的面向对象（OO）方法，244–245
+- 创建一维边界，219
+- 处理横切问题的面向对象（OO）方法，244–245
 
 ## 流，数据
-
-洁洁架构与，224–226
-
-跨越，226
-
-227–228
+- 洁洁架构与，224–226
+- 跨越，226
+- 227–228
 
 结构耦合，252
 
@@ -5379,13 +5137,10 @@ Dijkstra 的 goto 语句，28–29
 ...的价值，31–32
 
 ## 替换
+- 子类型，定义，78
+- 面向接口编程和，271–272
 
-子类型，定义，78
-
-面向接口编程和，271–272
-
-## **T**
-
+## T
 目标硬件瓶颈，261, 262
 
 TAS（Teradyne Applied Systems），334–338, 339–344
@@ -5393,51 +5148,45 @@ TAS（Teradyne Applied Systems），334–338, 339–344
 模板方法模式，处理横切问题的面向对象（OO）方法，244–245
 
 ## 测试边界
-
-结论，253
-
-为了可测试性设计，251
-
-脆弱测试问题（Fragile Tests Problem），251
-
-...的概述，249–250
-
-测试 API，252–253
-
-测试作为系统组件，250
+- 结论，253
+- 为了可测试性设计，251
+- 脆弱测试问题（Fragile Tests Problem），251
+- ...的概述，249–250
+- 测试 API，252–253
+- 测试作为系统组件，250
 
 ## 可测试架构
-
-创建洁洁架构，202
-
-洁洁的嵌入式架构作为，262–272
-
-
-
-
+- 创建洁洁架构，202
+- 洁洁的嵌入式架构作为，262–272
 
 # 概述
-概述的，198
+- 概述的，198
 
 ## 测试
-测试与架构，213
-
-### 演示者与视图，212–213
+- 测试与架构，213
+- 演示者与视图，212–213
 - 在结构化编程中，31
 - 单元。*参见* 单元测试
 - 通过 Humble Object 模式，212
 
 ## 线程
-可变性与，52
+- 可变性与，52
 - 执行调度/顺序，179
 
 ## 三层“架构”（作为拓扑结构），161
+
 ## 自顶向下设计，组件结构，118–119
+
 ## 事务内存，53
+
 ## 事务，存储，54–55
+
 ## 传递性依赖，违反软件原则，75
+
 ## 问题工单，CDS 考古项目，362–364
+
 ## 真正的重复，154–155
+
 ## 转身，阿兰（Alan），23
 
 # U
@@ -5454,24 +5203,31 @@ UI（用户界面）。*参见* GUI（图形用户界面）
 - 针对...编程，271–272
 - 降低...波动性，88
 - SAC 考古项目，346
-- UML 类图
+
+UML 类图
 - 按层包，304–305, 310
 - 端口与适配器，308–310
 - 宽松弛分层架构，311–312
-- 鲍伯叔叔（Uncle Bob），367, 369
-- UNIFY 数据库系统，VRS 考古项目，358–359
-- Union 会计系统，考古项目，326–334
+
+鲍伯叔叔（Uncle Bob），367, 369
+
+UNIFY 数据库系统，VRS 考古项目，358–359
+
+Union 会计系统，考古项目，326–334
 
 ## 单元测试
 - 创建可测试架构，198
 - 组件依赖图中的循环影响，116–117
 - 通过 Humble Object 模式，212
-- UNIX，IO 驱动函数，41–44
-- 升级，框架的风险，293
-- 紧急性，艾森豪威尔重要性与紧急性矩阵，16–17
+
+UNIX，IO 驱动函数，41–44
+
+升级，框架的风险，293
+
+紧急性，艾森豪威尔重要性与紧急性矩阵，16–17
 
 ## 用例
-架构必须支持，148
+- 架构必须支持，148
 - ...的业务规则，191–194
 - 整洁架构情景，207–208
 - 与...的过早耦合，160
@@ -5486,10 +5242,12 @@ UI（用户界面）。*参见* GUI（图形用户界面）
 - 视频案例研究，298–300
 
 ## 用户界面
-- GUI。*参见* GUI（图形用户界面)
-- UI。*参见* UI（用户界面)
-- 痛苦区域，129
-- Uucp 连接，366
+- GUI。*参见* GUI（图形用户界面）
+- UI。*参见* UI（用户界面）
+
+痛苦区域，129
+
+Uucp 连接，366
 
 # V
 价值，软件系统架构（结构），14–15
@@ -5498,8 +5256,10 @@ UI（用户界面）。*参见* GUI（图形用户界面）
 - 架构的资深程度，18
 - 功能与架构，15–16
 - 概述，14
-- 变量，功能语言，51
-- Varian 620/min 计算机，Union 考古项目，331–334
+
+变量，功能语言，51
+
+Varian 620/min 计算机，Union 考古项目，331–334
 
 ## 视频案例研究
 - 组件架构，300–302
@@ -5514,131 +5274,164 @@ UI（用户界面）。*参见* GUI（图形用户界面）
 ## 视图
 - 组件架构，301
 - 演示者与，212–213
-- Vignette Grande，架构师考试，371–372
-- 视觉，172
-- 冯·诺依曼（Von Neumann），34
-- Voice 考古项目，346–364
-- 语音响应系统，357–359
-- 易变组件，118
-- 可测试性设计，251
-- 放置于易变部分，126
-- 抽象/稳定性之间的关系，128
-- 痛苦区域，129
-- 无用区域，129–130
+
+Vignette Grande，架构师考试，371–372
+
+视觉，172
+
+冯·诺依曼（Von Neumann），34
+
+Voice 考古项目，346–364
+
+语音响应系统，357–359
+
+易变组件，118
+
+可测试性设计，251
+
+放置于易变部分，126
+
+抽象/稳定性之间的关系，128
+
+痛苦区域，129
+
+无用区域，129–130
 
 # W
 Web
-作为应用程序的交付系统，197–198
+- 作为应用程序的交付系统，197–198
 - ...的依赖规则，205
 - 是细节，285–289
-- Web 服务器
-在没有...的情况下创建可测试架构，198
+
+Web 服务器
+- 在没有...的情况下创建可测试架构，198
 - 以保持开放，141, 197
 - 编写自己的，163–165
-- 每周构建，112–113
+
+每周构建，112–113
+
+
+
 - Wiki 文本，架构成功故事，164
 
 # Y
+
 Yourdon，埃德（Ed），29
 
 # Z
-排除区域
+
+## 排除区域
+
 避免，130
+
 - 抽象/稳定性之间的关系，128
 - 痛苦区域，129
 - 无用区域，129–130
 
-
-
-
-
-![Image](img/#part0016.html_pch5ex01)![Image](img/#part0016.html_pch5ex02)![Image](img/#part0016.html_pch5ex03)![Image](img/#part0016.html_pch5ex04)![Image](img/#part0016.html_pch5ex05)![Image](img/#part0016.html_pch5ex06)![Image](img/#part0016.html_pch5ex07)![Image](img/#part0016.html_pch5ex08)]
+![Image](img/#part0016.html_pch5ex01)![Image](img/#part0016.html_pch5ex02)![Image](img/#part0016.html_pch5ex03)![Image](img/#part0016.html_pch5ex04)![Image](img/#part0016.html_pch5ex05)![Image](img/#part0016.html_pch5ex06)![Image](img/#part0016.html_pch5ex07)![Image](img/#part0016.html_pch5ex08)
 
 # 读累了记得休息一会哦~
 
-**公众号：古德猫宁李**
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+公众号：古德猫宁李
 
-**网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 书单分享
+- 书友学习交流
 
-![Image](img/#part0016.html_pch5ex09)![Image](img/#part0016.html_pch5ex010)![Image](img/#part0016.html_pch5ex011)]
+网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
+
+![Image](img/#part0016.html_pch5ex09)![Image](img/#part0016.html_pch5ex010)![Image](img/#part0016.html_pch5ex011)
 
 ## 代码片段
-![Image](img/#part0017.html_pch6ex01)![Image](img/#part0017.html_pch6ex02)![Image](img/#part0017.html_pch6ex03)![Image](img/#part0017.html_pch6ex04)]
+
+![Image](img/#part0017.html_pch6ex01)![Image](img/#part0017.html_pch6ex02)![Image](img/#part0017.html_pch6ex03)![Image](img/#part0017.html_pch6ex04)
 
 ## 代码片段
+
 # 读累了记得休息一会哦~
 
-**公众号：古德猫宁李**
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+公众号：古德猫宁李
 
-**网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 书单分享
+- 书友学习交流
 
-![Image](img/#part0021.html_pch9ex01)![Image](img/#part0021.html_pch9ex02)![Image](img/#part0021.html_pch9ex03)![Image](img/#part0021.html_pch9ex04)![Image](img/#part0021.html_pch9ex05)]
+网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
+
+![Image](img/#part0021.html_pch9ex01)![Image](img/#part0021.html_pch9ex02)![Image](img/#part0021.html_pch9ex03)![Image](img/#part0021.html_pch9ex04)![Image](img/#part0021.html_pch9ex05)
 
 ## 代码片段
-![Image](img/#part0025.html_pch12ex01)]
+
+![Image](img/#part0025.html_pch12ex01)
 
 ## 代码片段
+
 ![Image](img/#part0029.html_pch15ex01)
 
 # 读累了记得休息一会哦~
 
-**公众号：古德猫宁李**
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+公众号：古德猫宁李
 
-**网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 书单分享
+- 书友学习交流
+
+网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
 
 ## 代码片段
-![Image](img/#part0033.html_pch19ex01)]
+
+![Image](img/#part0033.html_pch19ex01)
 
 ## 代码片段
-![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex02)![Image](img/#part0040.html_pch26ex02)]
+
+![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex01)![Image](img/#part0040.html_pch26ex02)![Image](img/#part0040.html_pch26ex02)
 
 # 读累了记得休息一会哦~
 
-**公众号：古德猫宁李**
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+公众号：古德猫宁李
 
-**网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 书单分享
+- 书友学习交流
+
+网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
 
 ![Image](img/#part0040.html_pch26ex03)
 
 ## 代码片段
-![Image](img/#part0043.html_pch29ex01)![Image](img/#part0043.html_pch29ex02)![Image](img/#part0043.html_pch29ex03)![Image](img/#part0043.html_pch29ex04)![Image](img/#part0043.html_pch29ex05)![Image](img/#part0043.html_pch29ex06)![Image](img/#part0043.html_pch29ex07)![Image](img/#part0043.html_pch29ex08)![Image](img/#part0043.html_pch29ex09)]
+
+![Image](img/#part0043.html_pch29ex01)![Image](img/#part0043.html_pch29ex02)![Image](img/#part0043.html_pch29ex03)![Image](img/#part0043.html_pch29ex04)![Image](img/#part0043.html_pch29ex05)![Image](img/#part0043.html_pch29ex06)![Image](img/#part0043.html_pch29ex07)![Image](img/#part0043.html_pch29ex08)![Image](img/#part0043.html_pch29ex09)
 
 ## 代码片段
+
 # 读累了记得休息一会哦~
 
-**公众号：古德猫宁李**
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+公众号：古德猫宁李
 
-**网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)**
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
+
+网站：[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
 
 ![Image](img/#part0051.html_pappaex01)
-

@@ -1,32 +1,26 @@
+
 # Asp.Net Core Web API API 开发使用指南
-
-
-
-
-
-
-
-
-
-
 
 作者：
 
 **Sardar Mudassar Ali Khan**
 
 高级软件工程师
+
 科学研究员
+
 C# Corner 博客作者
 
 # 作者序言
 
 欢迎大家阅读《使用 Asp.Net Core Web API 开发 API》，这本书讨论的话题基于行业实战知识。在书中，我们将学习完整的项目，并从头到尾讨论该项目。我们将应用所有的软件开发原则、设计架构、设计模式以及泛型（Generics），这些技术对于软件产品的开发非常有益。我们将使用不同的软件架构，从头到尾构建一个完整的应用程序架构。
 
-
-
 SARDAR MUDASSAR ALI KHAN
+
 C# Corner 作者
+
 高级软件工程师
+
 科学研究员
 
 # 献辞
@@ -35,10 +29,7 @@ C# Corner 作者
 
 本书的纯粹奉献给我的父母、我们的灵魂导师——老师和朋友们。老师们在需要时总是通过全力的支持来激励和鼓励我们。
 
-
-
 SARDAR MUDASSAR ALI KHAN
-
 
 # 致谢
 
@@ -50,35 +41,15 @@ SARDAR MUDASSAR ALI KHAN
 
 在本书的 asp.net core web API 中的 API 开发中，我们采用了一种开发软件产品的实用方法。本书分为四个部分，每部分都有其维度。在书中，我们将解释功能全项目，以及如何使用以下架构来构建应用程序。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 出版社 – C# Corner
+
 编辑团队 – Archie Vankar, Deepak Tewatia
+
 出版团队 – Praveen Kumar, Amit Kumar
+
 推广与媒体 – Rohit Tomar, Rohit Sharma
 
-
-
-# 1
-
-# 什么是 REST 架构？
+# 1 什么是 REST 架构？
 
 概述
 
@@ -95,10 +66,6 @@ SARDAR MUDASSAR ALI KHAN
 - 数据访问层
 - 业务访问层
 - 表示层
-
-
-
-
 
 ## 什么是 RESTful Web 服务？
 
@@ -120,7 +87,6 @@ RESTful 实现的关键特性如下：
 
 如下所示。
 
-
 ### 请求头（Request Header）
 
 这些是随请求一同发送的额外指令；它们可能定义了所需的响应类型或授权详情。
@@ -129,13 +95,11 @@ RESTful 实现的关键特性如下：
 
 在向 REST Web 服务发送 POST 请求时，随请求发送的数据通常在请求体中发送。在 POST 调用中，客户端告诉 REST Web 服务它想向服务器上添加一个资源，因此请求体将包含需要添加到服务器的资源详情。如下所示。
 
-
 ### 响应体（Response Body）
 
 这是响应的主体。因此，在我们的 RESTful API 示例中，如果我们通过 GET 请求查询 Web 服务，服务器将以 JSON 格式返回响应，根据人员 ID 为我们提供人员详情。
 
 ### 用于发布数据
-
 
 ### 将数据发布到数据库后的响应
 
@@ -165,7 +129,6 @@ Web 资源最初定义在万维网上，它非常通用且抽象，包含了今�
 - OPTIONS：用于描述资源的通信选项。
 - TRACE：用于环回测试。
 
-
 ## 为什么选择 RESTful 服务
 
 RESTful 变得流行是因为以下特性：
@@ -188,9 +151,6 @@ REST 架构基于以下特性：
 
 REST 架构基于以下几个特性，并在下方阐述。任何 RESTful Web 服务都必须遵守以下规定才能被称为 RESTful；这些特性被称为设计原则。
 
-
-
-
 在调用 Web 服务之前，客户端可以与之进行交互。分层系统需要是透明的，以便客户端和服务器之间的交互不会受到任何方式的影响。
 
 ## RESTful Web 服务接口
@@ -199,20 +159,20 @@ REST 架构基于以下几个特性，并在下方阐述。任何 RESTful Web �
 
 HTTP 方法的详情如下：
 
-- **POST** 用于通过 RESTful Web 服务将数据从 Web 服务器发布到数据库。
-- **GET** 用于从数据库中获取所有记录的列表，可以是所有记录，也可以基于特定的个人 ID 或员工。
-- **DELETE** 用于从数据库中删除所有记录或根据特定 ID 进行删除。
-- **PUT** 用于根据特定 ID 替换或更新记录。
-- **PATCH** 方法提供一个实体，该实体包含应用于使用 HTTP Request-URI 请求的资源更改列表。
-- **OPTIONS** OPTIONS 方法表示请求由 Request-URI 标识的请求/响应链上可用通信选项的信息。
-- **TRACE** Trace 方法沿目标资源路径执行消息回溯测试，提供了一种实用的调试机制。
+- `POST` 用于通过 RESTful Web 服务将数据从 Web 服务器发布到数据库。
+- `GET` 用于从数据库中获取所有记录的列表，可以是所有记录，也可以基于特定的个人 ID 或员工。
+- `DELETE` 用于从数据库中删除所有记录或根据特定 ID 进行删除。
+- `PUT` 用于根据特定 ID 替换或更新记录。
+- `PATCH` 方法提供一个实体，该实体包含应用于使用 HTTP Request-URI 请求的资源更改列表。
+- `OPTIONS` OPTIONS 方法表示请求由 Request-URI 标识的请求/响应链上可用通信选项的信息。
+- `TRACE` Trace 方法沿目标资源路径执行消息回溯测试，提供了一种实用的调试机制。
 
 ## 在 Asp.net Core Web API 中创建你的第一个 RESTful Web 服务
 
 步骤 1：首先，在 Visual Studio 中创建 Asp.net Core Web API。
 
-
 什么是 REST 架构
+
 20
 
 ## 配置你的新项目
@@ -231,9 +191,7 @@ HTTP 方法的详情如下：
 
 下面的图片是根据我们的初始步骤构建的项目结构。
 
-
 步骤 3：首先，在数据访问层中添加 Person 模型。
-
 
 代码如下：
 
@@ -302,7 +260,6 @@ namespace DAL.Interface
 
 ### 步骤 5：在你添加的 Repository 类中应用 Repository 模式。
 
-
 ### 代码如下：
 
 ```csharp
@@ -355,13 +312,13 @@ namespace DAL.Repository
 
 添加 Data 文件夹，并在所有项目中添加 SQL Server 包。
 
-
 然后在 API 项目中引用包。
-
 
 现在修改解决方案中的 Start-up 类。
 
 Start-up 文件的代码如下：
+
+
 
 ```csharp
 using BAL.Service;
@@ -432,11 +389,7 @@ namespace AspNetCOREWebAPrud
 }
 ```
 
-然后在你的 Application Db Context 类中添加 DB Set 属性。
-
-
-
-
+然后在你的 `ApplicationDbContext` 类中添加 `DB Set` 属性。
 
 ### DbContext 类的代码如下
 
@@ -467,11 +420,9 @@ namespace DAL.Data
 
 ### 第 7 步现在开始迁移命令以在数据库中创建表。
 
-
-执行命令后，我们在数据访问层（Data Access Layer）中有了迁移文件夹，其中包含了 Person 表的定义。
+执行命令后，我们在数据访问层（Data Access Layer）中有了迁移文件夹，其中包含了 `Person` 表的定义。
 
 ### 第 8 步添加 Repository Person 类，然后根据接口中定义的动作实现接口和相应的操作。
-
 
 ### 代码 ID如下。
 
@@ -535,7 +486,7 @@ namespace DAL.Repository
 
 ### 第 10 步
 
-再次修改 Start Up 类，通过添加 Transient 来注册业务层类和数据访问层类。
+再次修改 `Start Up` 类，通过添加 `Transient` 来注册业务层类和数据访问层类。
 
 ### Start-up 的代码如下。
 
@@ -613,10 +564,9 @@ namespace AspNetCORE5WebAPICrud
 
 ### 第 9 步添加用于 GET POST 和 DELETE 的 Person Details API Controller
 
-
-
-
 ### Controller 的代码如下
+
+
 
 ```csharp
 using BAL.Service;
@@ -718,30 +668,21 @@ namespace AspNetCOREWebAPICrud.Controllers
 }
 ```
 
-
-
-
-
-#### Web API 服务中的 GET All 端点
+## Web API 服务中的 GET All 端点
 
 我们为所有操作都设置了独立的端点。通过访问 GET 端点从数据库获取所有人员记录，该请求将发送到控制器，而在控制器中，我们有从数据库中获取所有记录的独立端点。
 
-
-#### 通过用户邮箱获取记录的 GET 端点
+## 通过用户邮箱获取记录的 GET 端点
 
 我们为所有操作都设置了独立的端点，例如通过访问 GET 端点从数据库根据用户邮箱获取人员，该请求将发送到控制器，而在控制器中，我们有根据用户邮箱从数据库获取记录的独立端点。
 
-
-#### 通过用户邮箱删除记录的端点
+## 通过用户邮箱删除记录的端点
 
 我们为所有操作都设置了独立的端点，例如通过访问 DELETE 端点从数据库根据用户邮箱删除人员记录，该请求将发送到控制器，而在控制器中，我们有根据用户邮箱从数据库删除记录的独立端点。
 
-
-
-#### 通过用户邮箱更新记录的 Update 端点
+## 通过用户邮箱更新记录的 Update 端点
 
 我们为所有操作都设置了独立的端点，例如通过访问 UPDATE 端点从数据库根据用户邮箱更新人员记录，该请求将发送到控制器，而在控制器中，我们有根据用户邮箱从数据库更新记录的独立端点。
-
 
 ## 测试 RESTful Web 服务
 
@@ -752,7 +693,6 @@ namespace AspNetCOREWebAPICrud.Controllers
 在浏览器中运行项目。测试人员将看到 Swagger UI。
 
 ### 步骤 2 测试 POST 端点
-
 
 ## 结论
 
@@ -806,21 +746,17 @@ namespace AspNetCOREWebAPICrud.Controllers
 
 已为 DAL 和 BAL 添加了引用
 
-
 现在，将数据访问层项目引用添加到业务层中。
 
 - 右键点击业务访问层（Business access layer），然后点击 Add 按钮 => Project References
 
 记住我们已经在项目中包含了 DAL 和 BAL 的引用，所以不要在业务层中添加表示层的引用。我们只需要在业务层中添加 DAL 层的引用
 
-
 ### DAL 的项目引用已添加到 BAL
-
 
 ### 项目结构
 
 此项目中使用三层架构，包括数据访问层、业务层和表示层。
-
 
 ### 表示层 (PL)
 
@@ -834,7 +770,6 @@ namespace AspNetCOREWebAPICrud.Controllers
 
 数据访问层包含辅助业务访问层编写业务逻辑的方法。数据访问层的主要目标是与数据库接口
 
-
 ### 配置需要遵循的步骤
 
 - 添加数据访问层项目引用。
@@ -842,14 +777,9 @@ namespace AspNetCOREWebAPICrud.Controllers
 - 在添加业务访问层后，我们需要先添加数据访问层的引用。
 - 右键点击项目并添加新项目。
 
-
 使用三层架构在 Asp.Net Core 中进行 API 开发 56
 
 在添加业务访问层和数据访问层后，我们需要先添加数据访问层的引用。
-
-
-
-
 
 ```csharp
 using Microsoft.AspNetCore.Identity;
@@ -863,25 +793,33 @@ namespace JWTTokenAuthInAspNetCore6_DAL.Models
 {
     public class AppUser : IdentityUser
     {
+```
 ```csharp
 public int Id { get; set; }
+
 public string? Name { get; set; }
+
 public string? AccountType { get; set; }
+
 public string? PhoneNo { get; set; }
+
 public string? Password { get; set; }
+
 public string? ShopName { get; set; }
+
 public string? BusinessType { get; set; }
+
 public string? UserRole { get; set; }
+
 public bool? IsDeleted { get; set; }
 ```
     }
 }
 ```
 
-# 仓库 (Repository)
+## 仓库 (Repository)
 
 在 Repository 文件夹中，我们为每个模型添加了仓库类。我们编写了使用 Entity Framework 与数据库通信的 CRUD（增删改查）函数。我们添加了继承 contract 文件夹中接口的仓库类。
-
 
 ```csharp
 using JWTTokenAuthInAspNet6_DAL_Contracts;
@@ -906,7 +844,6 @@ namespace JWTTokenAuthInAspNet6_DAL.Repositories
             _logger = logger;
         }
 ```
-
 ```csharp
 public async Task<AppUser> Create(AppUser appuser)
 {
@@ -923,7 +860,6 @@ public async Task<AppUser> Create(AppUser appuser)
   }
 }
 ```
-
 ```csharp
 public void Delete(AppUser appuser)
 {
@@ -939,12 +875,10 @@ public void Delete(AppUser appuser)
   }
 }
 ```
-
 ```csharp
 public IEnumerable<AppUser> GetAll()
 {
 ```
-
 ```csharp
 try
 {
@@ -959,7 +893,6 @@ catch (Exception)
     throw;
 }
 ```
-
 ```csharp
 public AppUser GetById(int Id)
 {
@@ -983,7 +916,6 @@ public AppUser GetById(int Id)
 }
 }
 ```
-
 ```csharp
 public void Update(AppUser appuser)
 {
@@ -991,7 +923,6 @@ public void Update(AppUser appuser)
     {
         if (appuser != null)
 ```
-
 ```csharp
 {
 var obj = _appDbContext.Update(appuser);
@@ -1026,6 +957,8 @@ catch (Exception) {
 
 ## 示例 (Example)
 
+
+
 ```csharp
 using JWTWokenAuthInAspNet6_DAL.Contracts;
 using JWTWokenAuthInAspNet6_DAL.Models;
@@ -1050,9 +983,6 @@ namespace JWTWokenAuthInAspNet6_BAL.Services
         // 创建方法
 ```
 
-
-
-
 - 存储库层
 - 服务层
 - I 自定义服务接口
@@ -1068,19 +998,19 @@ namespace JWTWokenAuthInAspNet6_BAL.Services
 - 输出
 - 结论
 
-## 引言
+# 引言
 
 在本章中，我们将介绍使用 Asp.Net 6 Web API 的洋葱架构（Onion Architecture）。洋葱架构由 Jeffrey Palermo 于2008年引入，这种架构为我们提供了一种更好的构建应用程序的方法；使用这种架构，我们的应用程序具有更好的测试性、可维护性，并且对数据库和等基础设施的依赖较低。洋葱架构解决了耦合和关注点分离等常见问题。
 
-## 什么是洋葱架构
+# 什么是洋葱架构
 
 在洋葱架构中，我们拥有领域层、存储库层、服务层和表示层。洋葱架构解决了我们在企业级应用中面临的耦合和关注点分离的问题。洋葱架构还解决了三层架构和 N 层架构中遇到的问题。在洋葱架构中，我们的层级之间通过接口进行通信。
 
-## Asp.Net Core Web API 中的洋葱架构
+# Asp.Net Core Web API 中的洋葱架构
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_70_0.png)
 
-## 洋葱架构中的层
+# 洋葱架构中的层
 
 洋葱架构使用了“层”的概念，但它与 N 层架构和三层架构不同。
 
@@ -1100,7 +1030,7 @@ namespace JWTWokenAuthInAspNet6_BAL.Services
 
 在 API 的情况下，表示层通过 HTTP 请求以 JSON 对象的形式向我们展示数据库的对象数据。但在前端应用的情况下，我们通过消费 API 并使用 UI 展示数据。
 
-## 洋葱架构的优势
+# 洋葱架构的优势
 
 - 洋葱架构为代码提供了更好的可维护性，因为代码依赖于层。
 - 它为单元测试提供了更好的测试性；我们可以在不同的层中编写独立的测试用例，而不会影响应用程序中的其他模块。
@@ -1109,13 +1039,13 @@ namespace JWTWokenAuthInAspNet6_BAL.Services
 - 在运行时将为应用程序提供完整的实现。
 - 外部层永远不依赖于外部层。
 
-## 洋葱架构的实现
+# 洋葱架构的实现
 
 现在我们将使用洋葱架构开发该项目。
 
 首先，你需要使用 Visual Studio 创建一个 Asp.Net Core Web 项目。创建项目后，我们将层添加到项目中；在添加了所有层后，我们的项目结构将如下所示。
 
-## 项目结构。
+## 项目结构
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_72_0.png)
 
@@ -1127,9 +1057,9 @@ namespace JWTWokenAuthInAspNet6_BAL.Services
 
 右键点击解决方案（Solution），然后点击添加（add）选项。
 
-## 使用洋葱架构在 Asp.Net.Core 中开发 API
+# 使用洋葱架构在 Asp.Net.Core 中开发 API
 
-# Models 
+## Models
 
 首先，你需要添加 Models 文件夹，将用于创建数据库实体。在 Models 文件夹中，我们将创建以下数据库实体。
 
@@ -1291,10 +1221,6 @@ namespace DomainLayer.Data
 }
 ```
 
-
-
-
-
 添加 DB Set 属性后，我们需要使用程序包管理器控制添加迁移并运行 `Command-Migration` 命令。
 
 `add-migration OnionArchitectureV1`
@@ -1357,6 +1283,8 @@ namespace RepositoryLayer.IRepository
 ### Repository
 
 现在我们创建一个继承泛型 `IRepository` 接口的泛型 Repository。泛型 Repository 代码所示：
+
+
 
 ```csharp
 using DomainLayer.Data;
@@ -1443,28 +1371,28 @@ namespace RepositoryLayer.Repository
 }
 ```
 
-我们将在服务层中使用此 Repository。
+我们将在服务层中使用此 `Repository`。
 
 ## Service 层
 
-此层用于与表现层（presentation layer）和 Repository 层通信。服务层持有实体的所有的业务逻辑。在服务层中，接口与其实现是分离的，以实现松耦合和关注点分离。
+此层用于与表现层（`presentation layer`）和 `Repository` 层通信。服务层持有实体的所有的业务逻辑。在服务层中，接口与其实现是分离的，以实现松耦合和关注点分离。
 
-现在我们需要向解决方案中添加一个新项目作为服务层，我们将遵循在应用程序中添加类项目的相同过程，但在这里添加项目后，还需要进行一些额外工作，即添加 Repository 层的引用。
+现在我们需要向解决方案中添加一个新项目作为服务层，我们将遵循在应用程序中添加类项目的相同过程，但在这里添加项目后，还需要进行一些额外工作，即添加 `Repository` 层的引用。
 
 ## 使用洋葱架构在 Asp.Net Core 中开发 API
 
-我们新的服务层包含了 Repository 层的引用。
+我们新的服务层包含了 `Repository` 层的引用。
 
 在服务层中，我们将创建两个文件夹。
 
-- ICustomServices
-- CustomServices
+- `ICustomServices`
+- `CustomServices`
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_84_0.png)
 
 ### ICustom Service
 
-现在在 ICustomServices 文件夹中，我们将创建 `ICustomServices` 接口。该接口持有方法的签名，我们将在下方的 `ICustomServices` 接口代码中实现这些方法：
+现在在 `ICustomServices` 文件夹中，我们将创建 `ICustomServices` 接口。该接口持有方法的签名，我们将在下方的 `ICustomServices` 接口代码中实现这些方法：
 
 ```csharp
 using DomainLayer.Models;
@@ -1617,8 +1545,6 @@ namespace ServiceLayer.CustomServices
 
 ### Result Service
 
-
-
 ```csharp
 using DomainLayer.Models;
 using RepositoryLayer.IRepository;
@@ -1629,6 +1555,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 ```
+
+
 
 ```csharp
 namespace ServiceLayer.CustomServices
@@ -1957,7 +1885,10 @@ namespace OnionArchitectureIn6WebAPI.Controllers
 
         [HttpGet(nameof(GetStudentById))]
 ```
+
 img/ecf1b6ddef03c95166d23c4cb85_98_0.png
+
+
 
 ```csharp
         public IActionResult GetStudentById(int Id)
@@ -2006,9 +1937,6 @@ img/ecf1b6ddef03c95166d23c4cb85_98_0.png
         {
             if (student != null)
 ```
-
-
-
 ```csharp
 {
   _customService.Update(student);
@@ -2042,15 +1970,19 @@ public IActionResult DeleteStudent(Student student)
 
 ### Students
 
-- GET /api/Students/GetStudentId
-- GET /api/Students/GetAllStudents
-- POST /api/Students/CreateStudent
-- POST /api/Students/UpdateStudent
-- DELETE /api/Students/DeleteStudent
+- GET `/api/Students/GetStudentId`
+
+- GET `/api/Students/GetAllStudents`
+
+- POST `/api/Students/CreateStudent`
+
+- POST `/api/Students/UpdateStudent`
+
+- DELETE `/api/Students/DeleteStudent`
 
 ### Schemas
 
-现在我们可以看到，当我们调用 GetAllStudent 端点时，我们可以在 JSON 项目中看到来自数据库的学生数据。
+现在我们可以看到，当我们调用 `GetAllStudent` 端点时，我们可以在 JSON 项目中看到来自数据库的学生数据。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_101_0.png)
 
@@ -2137,6 +2069,7 @@ public IActionResult DeleteStudent(Student student)
 ![](img/6d3def03c95166d6223c24cb862_108_0.png) 现在点击 Raw 并选择 JSON。如果我们想在数据库中创建新用户，我们必须将 JSON 对象发送到端点，然后通过 Postman UI 发布到端点，从而在数据库中创建完整的用户对象。
 
 ![](img/6d3def03c95166d6223c24cb862_108_1.png)
+
 ![](img/6d3def03c95166d6223c24cb862_109_0.png) 现在你可以看到 API 给我们的服务器响应，这表明我们使用 Postman 在数据中已创建了新记录。
 
 ## 在 Postman 中测试 Delete 调用
@@ -2221,21 +2154,24 @@ public IActionResult DeleteStudent(Student student)
 
 ![](img/6d3def03c95166d6223c24cb862_116_0.png)
 
-
-
-
-
 ## 在 Swagger 中测试 POST 调用
 
 在这里我们将发送包含以下属性的 JSON 对象：
 
 - {
+
   "id": 0,
+
   "userName": "string",
+
   "userPassword": "string",
+
   "userEmail": "string",
+
   "createdAt": "2021-04-16T20:38:41.062Z",
+
   "isDeleted": true
+
 }
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_117_0.png)
@@ -2256,7 +2192,7 @@ public IActionResult DeleteStudent(Student student)
 
 现在你可以看到 API 给了我们的服务器响应 == true，这表明根据我们使用 Swagger 发送的 JSON 对象，数据库中已创建了一条新记录。
 
-### ### 在 Swagger 中测试 DELETE 调用
+### 在 Swagger 中测试 DELETE 调用
 
 对于删除人员的操作，我们有一个独立的端点从数据库中删除员工（Delete Employee），我们必须将 JSON 对象发送到该端点，然后数据通过 Swagger UI 提交调用控制器中的 DELETE Person 端点，随后人员对象将从数据库中删除。
 
@@ -2270,7 +2206,7 @@ public IActionResult DeleteStudent(Student student)
 
 在上面的两张图中，你可以看到点击删除端点后我们的服务器响应为 true，这表明根据我们指定的邮箱，记录已从数据库中删除。
 
-## ## 在 Swagger 中测试 GET 调用
+## 在 Swagger 中测试 GET 调用
 
 如果我们想从数据库中获取所有人员数据记录，我们将使用 Swagger 在 Web 服务中访问 GET 端点，在服务器请求完成后，所有数据将通过我们的 GETALLPerson 端点提供给我们。
 
@@ -2295,28 +2231,46 @@ public IActionResult DeleteStudent(Student student)
 ![](img/ecf1b6d3def03c95166d6223c24cb862_123_0.png)
 
 - {
+
   "id": 0,
+
   "userName": "Mudassar Ali Khan",
+
   "userPassword": "178593454@",
+
   "userEmail": "mudassarali.official@gmail.com",
+
   "createdAt": "2021-04-16T20:41:15.432Z",
+
   "isDeleted": false
+
 }
 
 更新为下面的 JSON 对象：
 
 - {
+
   "id": 0,
+
   "userName": "Sardar Mudassar Ali Khan",
+
+
+
+```json
   "userPassword": "178593454@",
+
   "userEmail": "mudassarali.official@gmail.com",
+
   "createdAt": "2021-04-16T20:41:15.432Z",
+
   "isDeleted": false
+
 }
+```
 
 # 使用 Swagger 进行 API 测试
 
-数据成功提交后，你可以看到我们的服务器响应为 true，这表明我们的数据已成功提交到数据库。
+数据成功提交后，你可以看到我们的服务器响应为 `true`，这表明我们的数据已成功提交到数据库。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_124_0.png)
 
@@ -2328,14 +2282,15 @@ public IActionResult DeleteStudent(Student student)
 
 ## 总结
 
-Swagger (Open API) 是一种用于描述和记录 REST API 的与语言无关的规范。它允许机器和开发者在无需直接访问项目源代码的情况下理解机器的工作原理和功能。Swagger (Open API) 的主要目标是尽量减少连接微服务的工作量。Swagger 配合开源工具集使用，用于设计、构建和使用 Restful Web 服务。Swagger 包含了自动化文档代码生成。Swashbuckle 的三个主要组件：
-- Swashbuckle.AspNetCore 是用于暴露 Swagger 的中间件
-- Swashbuckle.AspNetCore.SwaggerGen 从你的控制器和模型构建 Swagger 对象，此包与 Swagger 中间件结合以自动暴露 Swagger
-- Swashbuckle.AspNetCore.UI 是 Swagger UI 的嵌入版本，通过解释 Swagger 来构建一个高度可定制的实用工具，用于解释 Web 功能。
+`Swagger` (`Open API`) 是一种用于描述和记录 REST API 的与语言无关的规范。它允许机器和开发者在无需直接访问项目源代码的情况下理解机器的工作原理和功能。`Swagger` (`Open API`) 的主要目标是尽量减少连接微服务的工作量。`Swagger` 配合开源工具集使用，用于设计、构建和使用 Restful Web 服务。`Swagger` 包含了自动化文档代码生成。`Swashbuckle` 的三个主要组件：
+
+- `Swashbuckle.AspNetCore` 是用于暴露 `Swagger` 的中间件
+- `Swashbuckle.AspNetCore.SwaggerGen` 从你的控制器和模型构建 `Swagger` 对象，此包与 `Swagger` 中间件结合以自动暴露 `Swagger`
+- `Swashbuckle.AspNetCore.UI` 是 `Swagger UI` 的嵌入版本，通过解释 `Swagger` 来构建一个高度可定制的实用工具，用于解释 Web 功能。
 
 ## 结论
 
-现在关于 Open Swagger，它是记录 Restful API 的最佳 Open API。作为一名开发者，我在使用 Swagger 测试 restful API 方面有丰富的经验，可以发送完整对象并以高效的方式获取响应。在完成 .NET Core 配置后，可以享受 Swagger 的便利。
+现在关于 Open Swagger，它是记录 Restful API 的最佳 Open API。作为一名开发者，我在使用 `Swagger` 测试 restful API 方面有丰富的经验，可以发送完整对象并以高效的方式获取响应。在完成 `.NET Core` 配置后，可以享受 `Swagger` 的便利。
 
 # 在 Azure 上部署应用
 
@@ -2344,15 +2299,15 @@ Swagger (Open API) 是一种用于描述和记录 REST API 的与语言无关的
 - 部署步骤
 - 结论
 
-App Service 让你快速构建、部署和扩展企业级 Web、移动应用，并在完全托管的平台上运行，满足性能、可扩展性和合规性要求。
+`App Service` 让你快速构建、部署和扩展企业级 Web、移动应用，并在完全托管的平台上运行，满足性能、可扩展性和合规性要求。
 
-打开 Azure 门户
+## 打开 Azure 门户
 
 首先你需要打开 Azure 账户，然后选择你想部署应用的 Azure 订阅。区域对于应用的部署成本非常重要，所以我选择了“美国中部”（Central US）。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_128_0.png)
 
-创建 Azure 资源组
+## 创建 Azure 资源组
 
 现在选择 Azure 订阅并创建 Azure 资源组。
 
@@ -2366,13 +2321,13 @@ App Service 让你快速构建、部署和扩展企业级 Web、移动应用，�
 
 ## 选择运行时栈
 
-在选择名称和资源组后，为你的应用选择运行时，我的应用使用的是 Microsoft Azure .NET 6 最新稳定版本。
+在选择名称和资源组后，为你的应用选择运行时，我的应用使用的是 Microsoft Azure `.NET 6` 最新稳定版本。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_130_0.png)
 
 ## 创建 App Service Plan
 
-App Service Plan 定义了运行 Web 应用的一组计算资源。这些计算资源类似于传统托管中的服务器场。一个或多个应用可以部署在相同的计算资源（同一个 App Service Plan）上。
+`App Service Plan` 定义了运行 Web 应用的一组计算资源。这些计算资源类似于传统托管中的服务器场。一个或多个应用可以部署在相同的计算资源（同一个 `App Service Plan`）上。
 
 ## 选择定价计划
 
@@ -2380,13 +2335,9 @@ App Service Plan 定义了运行 Web 应用的一组计算资源。这些计算�
 
 ## 现在我们的应用开发和测试目的是我们选择了 Dev/Test
 
+## 选择部署选项
 
-
-
-
-## 选择部署选项。
-
-启用 GitHub Actions 以持续部署您的应用。GitHub Actions 是一个自动化框架，每当存储库中进行新提交时，它可以构建、测试并部署您的应用。如果您的代码在 GitHub 上，请在此处选择您的存储库，我们将添加工作流文件以自动将您的应用部署到 App Service。如果您的代码不在 GitHub 上，请在创建 Web 应用后转到部署中心来设置部署。
+启用 `GitHub Actions` 以持续部署您的应用。`GitHub Actions` 是一个自动化框架，每当存储库中进行新提交时，它可以构建、测试并部署您的应用。如果您的代码在 GitHub 上，请在此处选择您的存储库，我们将添加工作流文件以自动将您的应用部署到 `App Service`。如果您的代码不在 GitHub 上，请在创建 Web 应用后转到部署中心来设置部署。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_133_0.png)
 
@@ -2396,7 +2347,7 @@ App Service Plan 定义了运行 Web 应用的一组计算资源。这些计算�
 
 ## 选择 Azure 监控选项
 
-Azure Monitor Application Insights 是一种为开发者和 DevOps 专业人员提供的应用程序性能管理 (APM) 服务。在下方启用它以自动监控您的应用程序。它将检测性能异常，并包含强大的分析工具，帮助您诊断问题并理解用户实际上对您的应用做了什么。
+`Azure Monitor Application Insights` 是一种为开发者和 DevOps 专业人员提供的应用程序性能管理 (`APM`) 服务。在下方启用它以自动监控您的应用程序。它将检测性能异常，并包含强大的分析工具，帮助您诊断问题并理解用户实际上对您的应用做了什么。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_134_0.png)
 
@@ -2423,6 +2374,7 @@ Azure Monitor Application Insights 是一种为开发者和 DevOps 专业人员�
 摘要
 
 - Web 应用
+
   由 Microsoft 提供
 
 详情
@@ -2501,9 +2453,11 @@ App Service 计划（新建）
 - 支持 Node.js、Java、.NET 等更多
 
 尚未部署过？
+
 使用部署中心发布您的代码或设置部署
 
 正在启动新的 Web 应用？
+
 遵循我们的快速入门指南，在几分钟内准备好 Web 应用
 
 ## 发布配置文件
@@ -2512,291 +2466,15 @@ App Service 计划（新建）
 
 ## 应用程序状态
 
- DOTNET-Auth-API
+DOTNET-Auth-API
 
 - .NET 配置文件。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
 
-## 应用程序状态
+# 部署
 
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## Microsoft Azure
-
-## 您的应用正在运行并等待您的内容
-
-您的应用已上线，但我们还没有您的内容。如果您已经部署了，您的内容可能需要 5 分钟才能显示。请稍后回来。
-
-- 支持 Node.js、Java、.NET 等更多
-
-尚未部署过？
-使用部署中心发布您的代码或设置部署
-
-正在启动新的 Web 应用？
-遵循我们的快速入门指南，在几分钟内准备好 Web 应用
-
-## 发布配置文件
-
-现在您需要点击 Azure URL。
-
-## 应用程序状态
-
- DOTNET-Auth-API
-
-- .NET 配置文件。
-
-![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)
-
-## 应用程序状态
-
-现在您可以看到我们的应用程序已经在 Azure 云上上线了。
-
-## 部署
-
-## 部署 
-
-部署 部署 部署 概述
+## 部署 概述
 
 - 简介
 - 部署过程
@@ -2822,7 +2500,9 @@ App Service 计划（新建）
 
 ## 步骤 3 在应用程序中设置服务器数据库连接字符串
 
-在您的应用程序 appsettings.json 中设置 Live 连接字符串
+在您的应用程序 `appsettings.json` 中设置 Live 连接字符串
+
+
 
 ```json
 {
@@ -2840,7 +2520,7 @@ App Service 计划（新建）
 
 ## 步骤 4 发布您的项目
 
-在创建项目并完成 QA 部分最后的测试后，现在是时候部署您的网站了。现在进入 Visual Studio 2019 中的解决方案管理器。
+在创建项目并完成 QA 部分最后的测试后，现在是时候部署您的网站了。现在进入 `Visual Studio 2019` 中的解决方案管理器。
 
 右键点击您的项目并选择发布选项。
 
@@ -2869,13 +2549,9 @@ App Service 计划（新建）
 
 选择导入配置文件后点击下一步。
 
-
-
-
-
 ![](img/ecf1b6d3def03c95166d6223c24cb862_150_0.png)
 
-但你脑中会产生一个疑问：如何获取支持 Asp.net core 网站应用程序的托管服务器的发布配置登录信息，然后进入部署选项获取发布配置文件并将其下载到本地系统呢？
+但你脑中会产生一个疑问：如何获取支持 `Asp.net core` 网站应用程序的托管服务器的发布配置登录信息，然后进入部署选项获取发布配置文件并将其下载到本地系统呢？
 
 | 密码 | ******** [修改] |
 | :--- | :--- |
@@ -2886,35 +2562,35 @@ App Service 计划（新建）
 
 你可以在控制面板中找到此类选项，只需获取发布配置文件并将该文件下载到你的系统中即可。
 
-然后，在 Visual Studio 中通过“浏览”选项从下载的位置上传该文件。
+然后，在 `Visual Studio` 中通过“浏览”选项从下载的位置上传该文件。
 
-在 Visual Studio 中上传发布配置设置后，点击“完成”（Finish）选项，即可获得下述的好处。
+在 `Visual Studio` 中上传发布配置设置后，点击“完成”`Finish`选项，即可获得下述的好处。
 
-## 现在点击更多操作 (More Actions)。
+## 现在点击更多操作 `More Actions`。
 
-## 点击编辑 (Edit)。
+## 点击编辑 `Edit`。
 
-## 点击连接 (Connection)。
+## 点击连接 `Connection`。
 
-所有信息将自动从上传的发布配置文件中获取，并且信息将自动保存到 Visual Studio 中以备日后部署。
+所有信息将自动从上传的发布配置文件中获取，并且信息将自动保存到 `Visual Studio` 中以备日后部署。
 
-## 步骤 5 验证连接 (Validate the Connection)
+## 步骤 5 验证连接 `Validate the Connection`
 
-在此步骤中，Visual Studio 会验证与服务器的连接，然后你就可以将应用程序发布到服务器上。
+在此步骤中，`Visual Studio` 会验证与服务器的连接，然后你就可以将应用程序发布到服务器上。
 
-现在你可以看到 Visual Studio 已验证了与服务器的连接，现在我们准备好发布应用程序了。
+现在你可以看到 `Visual Studio` 已验证了与服务器的连接，现在我们准备好发布应用程序了。
 
-现在点击下一步 (Next)
+现在点击下一步 `Next`
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_154_0.png)
 
-点击保存设置 (Save the Setting)
+点击保存设置 `Save the Setting`
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_154_1.png)
 
-## 现在点击发布 (Publish)
+## 现在点击发布 `Publish`
 
-但在发布之前，请检查你的应用程序是否已处于发布（Release）模式，且 Webhost 环境应处于生产（Production）模式。
+但在发布之前，请检查你的应用程序是否已处于发布 `Release` 模式，且 Webhost 环境应处于生产 `Production` 模式。
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_155_0.png)
 
@@ -2926,7 +2602,7 @@ App Service 计划（新建）
 
 ## 结论
 
-在本章中，我们学习了如何使用 Visual Studio 发布我们的 asp.net Core Web应用程序，在下一篇文章中，我们将学习如何使用 FileZilla 软件 FTP 部署我们的应用程序。
+在本章中，我们学习了如何使用 `Visual Studio` 发布我们的 `asp.net Core` Web应用程序，在下一篇文章中，我们将学习如何使用 `FileZilla` 软件 FTP 部署我们的应用程序。
 
 > "快乐编程"
 
@@ -2952,7 +2628,7 @@ App Service 计划（新建）
 
 ## 关于我们
 
-CSharp Inc. 总部位于宾夕法尼亚州费城，是一个全球软件开发者在线社区。C Corner 在 2022 年服务了 2940 万访问者。我们发布关于尖端软件开发主题的最新新闻和文章。开发者在此处分享知识，并与内容、论坛和章节建立联系。数千名成员从我们的每月活动、网络研讨会和会议中受益。所有会议均由全球科技会议（Global Tech Conferences）管理，这是 CSharp Inc. 的一家兄弟公司。我们还提供职业成长工具，如职业建议、简历编写、培训、认证、书籍、白皮书以及视频。我们还通过职位招聘板将开发者与潜在雇主联系起来。访问 C# Corner
+`CSharp Inc.` 总部位于宾夕法尼亚州费城，是一个全球软件开发者在线社区。`C Corner` 在 2022 年服务了 2940 万访问者。我们发布关于尖端软件开发主题的最新新闻和文章。开发者在此处分享知识，并与内容、论坛和章节建立联系。数千名成员从我们的每月活动、网络研讨会和会议中受益。所有会议均由全球科技会议 `Global Tech Conferences` 管理，这是 `CSharp Inc.` 的一家兄弟公司。我们还提供职业成长工具，如职业建议、简历编写、培训、认证、书籍、白皮书以及视频。我们还通过职位招聘板将开发者与潜在雇主联系起来。访问 C# Corner
 
 ## 更多书籍
 
@@ -2967,4 +2643,3 @@ CSharp Inc. 总部位于宾夕法尼亚州费城，是一个全球软件开发�
 ![](img/ecf1b6d3def03c95166d6223c24cb862_160_4.png)
 
 ![](img/ecf1b6d3def03c95166d6223c24cb862_160_5.png)
-

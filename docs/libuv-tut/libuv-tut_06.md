@@ -1,12 +1,13 @@
-# 进程
 
-# Processes
+#我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。进程
+
+## Processes
 
 libuv 提供了相当多的子进程管理函数，并且是跨平台的，还允许使用 stream，或者说 pipe 完成进程间通信。
 
-在 UNIX 中有一个共识，就是进程只做一件事，并把它做好。因此，进程通常通过创建子进程来完成不同的任务（例如，在 shell 中使用 pipe）。 一个多进程的，通过消息通信的模型，总比多线程的，共享内存的模型要容易理解得多。
+在 UNIX 中有一个共识，就是进程只做一件事，并把它做好。因此，进程通常通过创建子进程来完成不同的任务（例如，在 shell 中使用 pipe）。一个多进程的、通过消息通信的模型，总比多线程的、共享内存的模型要容易理解得多。
 
-当前一个比较常见的反对事件驱动编程的原因在于，其不能很好地利用现代多核计算机的优势。一个多线程的程序，内核可以将线程调度到不同的 cpu 核心中执行，以提高性能。但是一个 event-loop 的程序只有一个线程。实际上，工作区可以被分配到多进程上，每一个进程执行一个 event-loop，然后每一个进程被分配到不同的 cpu 核心中执行。
+当前一个比较常见的反对事件驱动编程的原因在于，其不能很好地利用现代多核计算机的优势。一个多线程的程序，内核可以将线程调度到不同的 CPU 核心中执行，以提高性能。但是一个 event-loop 的程序只有一个线程。实际上，工作区可以被分配到多进程上，每一个进程执行一个 event-loop，然后每一个进程被分配到不同的 CPU 核心中执行。
 
 ## Spawning child processes
 
@@ -44,15 +45,15 @@ int main() {
 
 ##### Note
 
-> 由于上述的 options 是全局变量，因此被初始化为 0。如果你在局部变量中定义 options，请记得将所有没用的域设为 0
+> 由于上述的`options`是全局变量，因此被初始化为 0。如果你在局部变量中定义`options`，请记得将所有没用的域设为 0。
 
 ```cpp
 uv_process_options_t options = {0}; 
 ```
 
-`uv_process_t`只是作为句柄，所有的选择项都通过`uv_process_options_t`设置，为了简单地开始一个进程，你只需要设置 file 和 args，file 是要执行的程序，args 是所需的参数（和 c 语言中 main 函数的传入参数类似）。因为`uv_spawn`在内部使用了[execvp](http://man7.org/linux/man-pages/man3/exec.3.html)，所以不需要提供绝对地址。遵从惯例，**实际传入参数的数目要比需要的参数多一个，因为最后一个参数会被设为 NULL**。
+`uv_process_t`只是作为句柄，所有的选择项都通过`uv_process_options_t`设置。为了简单地开始一个进程，你只需要设置`file`和`args`。`file`是要执行的程序，`args`是所需的参数（和 C 语言中`main`函数的传入参数类似）。因为`uv_spawn`在内部使用了[`execvp`](http://man7.org/linux/man-pages/man3/exec.3.html)，所以不需要提供绝对地址。遵从惯例，**实际传入参数的数目要比需要的参数多一个，因为最后一个参数会被设为`NULL`**。
 
-在函数`uv_spawn`被调用之后，`uv_process_t.pid`会包含子进程的 id。
+在函数`uv_spawn`被调用之后，`uv_process_t.pid`会包含子进程的 ID。
 
 回调函数`on_exit()`会在被调用的时候，传入 exit 状态和导致 exit 的信号。
 
@@ -82,15 +83,17 @@ void on_exit(uv_process_t *req, int64_t exit_status, int term_signal) {
 
 通过使用下面标识的按位或的值设置`uv_process_options_t.flags`的值，可以定义子进程的行为：
 
-> *   `UV_PROCESS_SETUID`-将子进程的执行用户 id（UID）设置为`uv_process_options_t.uid`中的值。
-> *   `UV_PROCESS_SETGID`-将子进程的执行组 id(GID)设置为`uv_process_options_t.gid`中的值。
->     只有在 unix 系的操作系统中支持设置用户 id 和组 id，在 windows 下设置会失败，`uv_spawn`会返回`UV_ENOTSUP`。
-> *   `UV_PROCESS_WINDOWS_VERBATIM_ARGUMENTS`-在 windows 上，`uv_process_options_t.args`参数不要用引号包裹。此标记对 unix 无效。
-> *   `UV_PROCESS_DETACHED`-在新会话(session)中启动子进程，这样子进程就可以在父进程退出后继续进行。请看下面的例子：
+- `UV_PROCESS_SETUID`：将子进程的执行用户 ID（UID）设置为`uv_process_options_t.uid`中的值。
+- `UV_PROCESS_SETGID`：将子进程的执行组 ID（GID）设置为`uv_process_options_t.gid`中的值。
+
+  只有在 UNIX 系的操作系统中支持设置用户 ID 和组 ID，在 Windows 下设置会失败，`uv_spawn`会返回`UV_ENOTSUP`。
+
+- `UV_PROCESS_WINDOWS_VERBATIM_ARGUMENTS`：在 Windows 上，`uv_process_options_t.args`参数不要用引号包裹。此标记对 UNIX 无效。
+- `UV_PROCESS_DETACHED`：在新会话（session）中启动子进程，这样子进程就可以在父进程退出后继续进行。请看下面的例子。
 
 ## Detaching processes
 
-使用标识`UV_PROCESS_DETACHED`可以启动守护进程(daemon)，或者是使得子进程从父进程中独立出来，这样父进程的退出就不会影响到它。
+使用标识`UV_PROCESS_DETACHED`可以启动守护进程（daemon），或者是使得子进程从父进程中独立出来，这样父进程的退出就不会影响到它。
 
 #### detach/main.c
 
@@ -123,17 +126,17 @@ int main() {
 
 ## Sending signals to processes
 
-libuv 打包了 unix 标准的`kill(2)`系统调用，并且在 windows 上实现了一个类似用法的调用，但要注意：所有的`SIGTERM`，`SIGINT`和`SIGKILL`都会导致进程的中断。`uv_kill`函数如下所示：
+libuv 打包了 UNIX 标准的`kill(2)`系统调用，并且在 Windows 上实现了一个类似用法的调用，但要注意：所有的`SIGTERM`、`SIGINT`和`SIGKILL`都会导致进程的中断。`uv_kill`函数如下所示：
 
 ```cpp
 uv_err_t uv_kill(int pid, int signum); 
 ```
 
-对于用 libuv 启动的进程，应该使用`uv_process_kill`终止，它会以`uv_process_t`作为第一个参数，而不是 pid。当使用`uv_process_kill`后，记得使用`uv_close`关闭`uv_process_t`。
+对于用 libuv 启动的进程，应该使用`uv_process_kill`终止，它会以`uv_process_t`作为第一个参数，而不是 PID。当使用`uv_process_kill`后，记得使用`uv_close`关闭`uv_process_t`。
 
 ## Signals
 
-libuv 对 unix 信号和一些[windows 下类似的机制](http://docs.libuv.org/en/v1.x/signal.html#signal)，做了很好的打包。
+libuv 对 UNIX 信号和一些[Windows 下类似的机制](http://docs.libuv.org/en/v1.x/signal.html#signal)，做了很好的打包。
 
 使用`uv_signal_init`初始化 handle（`uv_signal_t`），然后将它与 loop 关联。为了使用 handle 监听特定的信号，使用`uv_signal_start()`函数。每一个 handle 只能与一个信号关联，后续的`uv_signal_start`会覆盖前面的关联。使用`uv_signal_stop`终止监听。下面的这个小例子展示了各种用法：
 
@@ -206,13 +209,13 @@ int main() {
 
 ##### Note
 
-> `uv_run(loop, UV_RUN_NOWAIT)`和`uv_run(loop, UV_RUN_ONCE)`非常像，因为它们都只处理一个事件。但是不同在于，UV_RUN_ONCE 会在没有任务的时候阻塞，但是 UV_RUN_NOWAIT 会立刻返回。我们使用`NOWAIT`，这样才使得一个 loop 不会因为另外一个 loop 没有要处理的事件而挨饿。
+> `uv_run(loop, UV_RUN_NOWAIT)`和`uv_run(loop, UV_RUN_ONCE)`非常像，因为它们都只处理一个事件。但是不同在于，`UV_RUN_ONCE`会在没有任务的时候阻塞，但是`UV_RUN_NOWAIT`会立刻返回。我们使用`NOWAIT`，这样才使得一个 loop 不会因为另外一个 loop 没有要处理的事件而挨饿。
 
-当向进程发送`SIGUSR1`，你会发现 signal_handler 函数被激发了 4 次，每次都对应一个`uv_signal_t`。然后 signal_handler 调用 uv_signal_stop 终止了每一个`uv_signal_t`，最终程序退出。对每个 handler 函数来说，任务的分配很重要。一个使用了多个 event-loop 的服务器程序，只要简单地给每一个进程添加信号 SIGINT 监视器，就可以保证程序在中断退出前，数据能够安全地保存。
+当向进程发送`SIGUSR1`，你会发现`signal_handler`函数被激发了 4 次，每次都对应一个`uv_signal_t`。然后`signal_handler`调用`uv_signal_stop`终止了每一个`uv_signal_t`，最终程序退出。对每个 handler 函数来说，任务的分配很重要。一个使用了多个 event-loop 的服务器程序，只要简单地给每一个进程添加信号`SIGINT`监视器，就可以保证程序在中断退出前，数据能够安全地保存。
 
 ## Child Process I/O
 
-一个正常的新产生的进程都有自己的一套文件描述符映射表，例如 0，1，2 分别对应`stdin`，`stdout`和`stderr`。有时候父进程想要将自己的文件描述符映射表分享给子进程。例如，你的程序启动了一个子命令，并且把所有的错误信息输出到 log 文件中，但是不能使用`stdout`。因此，你想要使得你的子进程和父进程一样，拥有`stderr`。在这种情形下，libuv 提供了继承文件描述符的功能。在下面的例子中，我们会调用这么一个测试程序：
+一个正常的新产生的进程都有自己的一套文件描述符映射表，例如 0、1、2 分别对应`stdin`、`stdout`和`stderr`。有时候父进程想要将自己的文件描述符映射表分享给子进程。例如，你的程序启动了一个子命令，并且把所有的错误信息输出到 log 文件中，但是不能使用`stdout`。因此，你想要使得你的子进程和父进程一样，拥有`stderr`。在这种情形下，libuv 提供了继承文件描述符的功能。在下面的例子中，我们会调用这么一个测试程序：
 
 #### proc-streams/test.c
 
@@ -273,9 +276,9 @@ int main() {
 } 
 ```
 
-这时你启动 proc-streams，也就是在 main 中产生一个执行 test 的子进程，你只会看到“This is stderr”。你可以试着设置 stdout 也继承父进程。
+这时你启动`proc-streams`，也就是在 main 中产生一个执行 test 的子进程，你只会看到“This is stderr”。你可以试着设置 stdout 也继承父进程。
 
-同样可以把上述方法用于流的重定向。比如，把 flag 设为`UV_INHERIT_STREAM`，然后再设置父进程中的`data.stream`，这时子进程只会把这个 stream 当成是标准的 I/O。这可以用来实现，例如[CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface)。
+同样可以把上述方法用于流的重定向。比如，把 flag 设为`UV_INHERIT_STREAM`，然后再设置父进程中的`data.stream`，这时子进程只会把这个 stream 当成是标准的 I/O。这可以用来实现，例如 [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface)。
 
 一个简单的 CGI 脚本的例子如下：
 
@@ -297,9 +300,11 @@ int main() {
 } 
 ```
 
-CGI 服务器用到了这章和[网络](http://luohaha.github.io/Chinese-uvbook/source/networking.html)那章的知识，所以每一个 client 在中断连接后，都会被发送 10 个 tick。
 
-#### cgi/main.c
+
+CGI我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。服务器用到了这章和[网络](http://luohaha.github.io/Chinese-uvbook/source/networking.html)那章的知识，所以每一个`client`在中断连接后，都会被发送 10 个 tick。
+
+### `cgi/main.c`
 
 ```cpp
 void on_new_connection(uv_stream_t *server, int status) {
@@ -315,54 +320,54 @@ void on_new_connection(uv_stream_t *server, int status) {
     }
     else {
         uv_close((uv_handle_t*) client, NULL);
-    } 
+    }
 ```
 
 上述代码中，我们接受了连接，并把 socket（流）传递给`invoke_cgi_script`。
 
-#### cgi/main.c
+### `cgi/main.c`
 
 ```cpp
- args[1] = NULL;
+args[1] = NULL;
 
-    /* ... finding the executable path and setting up arguments ... */
+/* ... finding the executable path and setting up arguments ... */
 
-    options.stdio_count = 3;
-    uv_stdio_container_t child_stdio[3];
-    child_stdio[0].flags = UV_IGNORE;
-    child_stdio[1].flags = UV_INHERIT_STREAM;
-    child_stdio[1].data.stream = (uv_stream_t*) client;
-    child_stdio[2].flags = UV_IGNORE;
-    options.stdio = child_stdio;
+options.stdio_count = 3;
+uv_stdio_container_t child_stdio[3];
+child_stdio[0].flags = UV_IGNORE;
+child_stdio[1].flags = UV_INHERIT_STREAM;
+child_stdio[1].data.stream = (uv_stream_t*) client;
+child_stdio[2].flags = UV_IGNORE;
+options.stdio = child_stdio;
 
-    options.exit_cb = cleanup_handles;
-    options.file = args[0];
-    options.args = args;
+options.exit_cb = cleanup_handles;
+options.file = args[0];
+options.args = args;
 
-    // Set this so we can close the socket after the child process exits.
-    child_req.data = (void*) client;
-    int r;
-    if ((r = uv_spawn(loop, &child_req, &options))) {
-        fprintf(stderr, "%s\n", uv_strerror(r)); 
+// Set this so we can close the socket after the child process exits.
+child_req.data = (void*) client;
+int r;
+if ((r = uv_spawn(loop, &child_req, &options))) {
+    fprintf(stderr, "%s\n", uv_strerror(r));
 ```
 
-cgi 的`stdout`被绑定到 socket 上，所以无论 tick 脚本程序打印什么，都会发送到 client 端。通过使用进程，我们能够很好地处理读写并发操作，而且用起来也很方便。但是要记得这么做，是很浪费资源的。
+cgi 的`stdout`被绑定到 socket 上，所以无论 tick 脚本程序打印什么，都会发送到`client`端。通过使用进程，我们能够很好地处理读写并发操作，而且用起来也很方便。但是要记得这么做，是很浪费资源的。
 
 ## Pipes
 
 libuv 的`uv_pipe_t`结构可能会让一些 unix 程序员产生困惑，因为它像魔术般变幻出`|`和[`pipe(7)`](http://man7.org/linux/man-pages/man7/pipe.7.html)。但这里的`uv_pipe_t`并不是 IPC 机制里的匿名管道（在 IPC 里，pipe 是匿名管道，只允许父子进程之间通信。FIFO 则允许没有亲戚关系的进程间通信，显然 llibuv 里的`uv_pipe_t`不是第一种）。`uv_pipe_t`背后有[unix 本地 socket](http://man7.org/linux/man-pages/man7/unix.7.html)或者[windows 实名管道](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365590.aspx)的支持，可以实现多进程间的通信。下面会具体讨论。
 
-#### Parent-child IPC
+### Parent-child IPC
 
 父进程与子进程可以通过单工或者双工管道通信，获得管道可以通过设置`uv_stdio_container_t.flags`为`UV_CREATE_PIPE`，`UV_READABLE_PIPE`或者`UV_WRITABLE_PIPE`的按位或的值。上述的读／写标记是对于子进程而言的。
 
-#### Arbitrary process IPC
+### Arbitrary process IPC
 
 既然本地 socket 具有确定的名称，而且是以文件系统上的位置来标示的（例如，unix 中 socket 是文件的一种存在形式），那么它就可以用来在不相关的进程间完成通信任务。被开源桌面环境使用的[`D-BUS`系统](http://www.freedesktop.org/wiki/Software/dbus/)也是使用了本地 socket 来作为事件通知的，例如，当消息来到，或者检测到硬件的时候，各种应用程序会被通知到。mysql 服务器也运行着一个本地 socket，等待客户端的访问。
 
 当使用本地 socket 的时候，客户端／服务器模型通常和之前类似。在完成初始化后，发送和接受消息的方法和之前的 tcp 类似，接下来我们同样适用 echo 服务器的例子来说明。
 
-#### pipe-echo-server/main.c
+### `pipe-echo-server/main.c`
 
 ```cpp
 int main() {
@@ -383,24 +388,24 @@ int main() {
         return 2;
     }
     return uv_run(loop, UV_RUN_DEFAULT);
-} 
+}
 ```
 
-我们把 socket 命名为 echo.sock，意味着它将会在本地文件夹中被创造。对于 stream API 来说，本地 socekt 表现得和 tcp 的 socket 差不多。你可以使用[socat](http://www.dest-unreach.org/socat/)测试一下服务器：
+我们把 socket 命名为`echo.sock`，意味着它将会在本地文件夹中被创造。对于 stream API 来说，本地 socekt 表现得和 tcp 的 socket 差不多。你可以使用[socat](http://www.dest-unreach.org/socat/)测试一下服务器：
 
-```cpp
-$ socat - /path/to/socket 
+```bash
+$ socat - /path/to/socket
 ```
 
 客户端如果想要和服务器端连接的话，应该使用：
 
 ```cpp
-void uv_pipe_connect(uv_connect_t *req, uv_pipe_t *handle, const char *name, uv_connect_cb cb); 
+void uv_pipe_connect(uv_connect_t *req, uv_pipe_t *handle, const char *name, uv_connect_cb cb);
 ```
 
-上述函数，name 应该为 echo.sock。
+上述函数，`name`应该为`echo.sock`。
 
-#### Sending file descriptors over pipes
+### Sending file descriptors over pipes
 
 最酷的事情是本地 socket 可以传递文件描述符，也就是说进程间可以交换文件描述符。这样就允许进程将它们的 I/O 传递给其他进程。它的应用场景包括，负载均衡服务器，分派工作进程等，各种可以使得 cpu 使用最优化的应用。libuv 当前只支持通过管道传输**TCP sockets 或者其他的 pipes**。
 
@@ -408,7 +413,7 @@ void uv_pipe_connect(uv_connect_t *req, uv_pipe_t *handle, const char *name, uv_
 
 工人进程很简单，文件描述符将从主进程传递给它。
 
-#### multi-echo-server/worker.c
+### `multi-echo-server/worker.c`
 
 ```cpp
 uv_loop_t *loop;
@@ -420,12 +425,12 @@ int main() {
     uv_pipe_open(&queue, 0);
     uv_read_start((uv_stream_t*)&queue, alloc_buffer, on_new_connection);
     return uv_run(loop, UV_RUN_DEFAULT);
-} 
+}
 ```
 
 `queue`是另一端连接上主进程的管道，因此，文件描述符可以传送过来。在`uv_pipe_init`中将`ipc`参数设置为 1 很关键，因为它标明了这个管道将被用来做进程间通信。因为主进程需要把文件 handle 赋给了工人进程作为标准输入，因此我们使用`uv_pipe_open`把 stdin 作为 pipe（别忘了，0 代表 stdin）。
 
-#### multi-echo-server/worker.c
+### `multi-echo-server/worker.c`
 
 ```cpp
 void on_new_connection(uv_stream_t *q, ssize_t nread, const uv_buf_t *buf) {
@@ -456,26 +461,26 @@ void on_new_connection(uv_stream_t *q, ssize_t nread, const uv_buf_t *buf) {
     else {
         uv_close((uv_handle_t*) client, NULL);
     }
-} 
+}
 ```
 
 首先，我们调用`uv_pipe_pending_count`来确定从 handle 中可以读取出数据。如果你的程序能够处理不同类型的 handle，这时`uv_pipe_pending_type`就可以用来决定当前的类型。虽然在这里使用`accept`看起来很怪，但实际上是讲得通的。`accept`最常见的用途是从其他的文件描述符（监听的 socket）获取文件描述符（client 端）。这从原理上说，和我们现在要做的是一样的：从 queue 中获取文件描述符（client）。接下来，worker 可以执行标准的 echo 服务器的工作了。
 
 我们再来看看主进程，观察如何启动 worker 来达到负载均衡。
 
-#### multi-echo-server/main.c
+### `multi-echo-server/main.c`
 
 ```cpp
 struct child_worker {
     uv_process_t req;
     uv_process_options_t options;
     uv_pipe_t pipe;
-} *workers; 
+} *workers;
 ```
 
 `child_worker`结构包裹着进程，和连接主进程和各个独立进程的管道。
 
-#### multi-echo-server/main.c
+### `multi-echo-server/main.c`
 
 ```cpp
 void setup_workers() {
@@ -510,17 +515,17 @@ void setup_workers() {
         worker->options.file = args[0];
         worker->options.args = args;
 
-        uv_spawn(loop, &worker->req, &worker->options); 
+        uv_spawn(loop, &worker->req, &worker->options);
         fprintf(stderr, "Started worker %d\n", worker->req.pid);
     }
-} 
+}
 ```
 
 首先，我们使用酷炫的`uv_cpu_info`函数获取到当前的 cpu 的核心个数，所以我们也能启动一样数目的 worker 进程。再次强调一下，务必将`uv_pipe_init`的 ipc 参数设置为 1。接下来，我们指定子进程的`stdin`是一个可读的管道（从子进程的角度来说）。接下来的一切就很直观了，worker 进程被启动，等待着文件描述符被写入到他们的标准输入中。
 
 在主进程的`on_new_connection`中，我们接收了 client 端的 socket，然后把它传递给 worker 环中的下一个可用的 worker 进程。
 
-#### multi-echo-server/main.c
+### `multi-echo-server/main.c`
 
 ```cpp
 void on_new_connection(uv_stream_t *server, int status) {
@@ -541,7 +546,7 @@ void on_new_connection(uv_stream_t *server, int status) {
     else {
         uv_close((uv_handle_t*) client, NULL);
     }
-} 
+}
 ```
 
 `uv_write2`能够在所有的情形上做了一个很好的抽象，我们只需要将 client 作为一个参数即可完成传输。现在，我们的多进程 echo 服务器已经可以运转起来啦。

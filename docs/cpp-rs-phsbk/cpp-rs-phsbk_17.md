@@ -1,3 +1,4 @@
+
 # 哨兵值
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/null/sentinel_values.html`](https://cel.cs.brown.edu/crp/idioms/null/sentinel_values.html)
@@ -10,7 +11,7 @@
 
 在 Rust 中类似的情况会使用类型 `Option<Box<LargeStructure>>`。
 
-```rs
+```cpp
 #include <memory>
 
 class LargeStructure {
@@ -24,35 +25,25 @@ parse(char *data, size_t len) {
 
   // on failure
   return nullptr;
-} 
+}
 ```
 
-```rs
+```rust
+#![allow(unused)]
 
-#![allow(unused)] fn main() { struct LargeStructure {
+fn main() {
+    struct LargeStructure {
+        field: i32,
+        // 许多字段 ...
+    }
 
-    field: i32,
+    fn parse(data: &[u8]) -> Option<Box<LargeStructure>> {
+        // ...
 
-    // 许多字段 ...
-
+        // 失败时
+        None
+    }
 }
-
-fn parse(
-
-    data: &[u8],
-
-) -> Option<Box<LargeStructure>> {
-
-    // ...
-
-    // 失败时
-
-    None
-
-}
-
-}
-
 ```
 
 `Box<T>` 类型在表示堆上某个 `T` 的唯一所有者指针方面与 `std::unique_ptr<T>` 具有相同的意义，但与 `std::unique_ptr` 不同，它不能为空。当与 `Box<T>` 结合使用时，Rust 的 `Option<T>`（在 C++ 中类似于 `std::optional<T>`）可以表示可选指针，例如 `Optional<Box<T>>`。在这些情况（以及一些其他情况）中，编译器利用 `Box` 不能为空的事实，将表示优化为与 `Box<T>` 相同的大小。
@@ -65,7 +56,7 @@ fn parse(
 
 在 Rust 中，`Option` 类型用于此目的。在零值确实无法产生的情况下，例如下面的 GCD 算法，可以使用类型 `NonZero<T>` 来表示这一点。与 `Option<Box<T>>` 一样，编译器优化表示以利用未使用的值（在这种情况下为 `0`），以确保 `Option<NonZero<T>>` 的表示与 `Option<T>` 的表示相同。
 
-```rs
+```cpp
 #include <algorithm>
 
 int gcd(int a, int b) {
@@ -80,95 +71,88 @@ int gcd(int a, int b) {
     a = temp;
   }
   return std::abs(a);
-} 
+}
 ```
 
-```rs
-
+```rust
 use std::num::NonZero;
 
-fn gcd(
-
-    mut a: i32,
-
-    mut b: i32,
-
-) -> Option<NonZero<i32>> {
-
+fn gcd(mut a: i32, mut b: i32) -> Option<NonZero<i32>> {
     如果 a 等于 0 或 b 等于 0 {
-
         return None;
-
     }
 
     while b != 0 {
-
         let temp = b;
-
         b = a % b;
-
         a = temp;
-
     }
 
     // 在这一点上，a 保证不会是
-
     // 零。来自 `NonZero::new` 的 `Some` 情况
-
     // 与 `Some` 的意义不同
-
     // 从此函数返回，但在这里
-
     // 碰巧一致。
-
     NonZero::new(a.abs())
-
 }
 
 fn main() {
-
-assert!(gcd(5, 0) == None); assert!(gcd(0, 5) == None); assert!(gcd(5, 1) == NonZero::new(1)); assert!(gcd(1, 5) == NonZero::new(1)); assert!(gcd(2 * 2 * 3 * 5 * 7, 2 * 2 * 7 * 11) == NonZero::new(2 * 2 * 7)); assert!(gcd(2 * 2 * 7 * 11, 2 * 2 * 3 * 5 * 7) == NonZero::new(2 * 2 * 7)); }
-
+    assert!(gcd(5, 0) == None);
+    assert!(gcd(0, 5) == None);
+    assert!(gcd(5, 1) == NonZero::new(1));
+    assert!(gcd(1, 5) == NonZero::new(1));
+    assert!(
+        gcd(2 * 2 * 3 * 5 * 7, 2 * 2 * 7 * 11)
+            == NonZero::new(2 * 2 * 7)
+    );
+    assert!(
+        gcd(2 * 2 * 7 * 11, 2 * 2 * 3 * 5 * 7)
+            == NonZero::new(2 * 2 * 7)
+    );
+}
 ```
 
 作为旁注，也可以通过在整个算法中保留非零属性来避免在末尾进行冗余的零检查，并且无需使用不安全的 Rust。
 
-```rs
-
+```rust
 use std::num::NonZero;
 
 fn gcd(x: i32, mut b: i32) -> Option<NonZero<i32>> {
-
     if b == 0 {
-
         return None;
-
     }
 
     // a 是保证非零的，所以我们记录这个事实在 a 的类型中。
-
     let mut a = NonZero::new(x)?;
 
     while let Some(temp) = NonZero::new(b) {
-
         b = a.get() % b;
-
         a = temp;
-
     }
 
     Some(a.abs())
-
 }
 
 fn main() {
-
-assert!(gcd(5, 0) == None); assert!(gcd(0, 5) == None); assert!(gcd(5, 1) == NonZero::new(1)); assert!(gcd(1, 5) == NonZero::new(1)); assert!(gcd(2 * 2 * 3 * 5 * 7, 2 * 2 * 7 * 11) == NonZero::new(2 * 2 * 7)); assert!(gcd(2 * 2 * 7 * 11, 2 * 2 * 3 * 5 * 7) == NonZero::new(2 * 2 * 7)); }
-
+    assert!(gcd(5, 0) == None);
+    assert!(gcd(0, 5) == None);
+    assert!(gcd(5, 1) == NonZero::new(1));
+    assert!(gcd(1, 5) == NonZero::new(1));
+    assert!(
+        gcd(2 * 2 * 3 * 5 * 7, 2 * 2 * 7 * 11)
+            == NonZero::new(2 * 2 * 7)
+    );
+    assert!(
+        gcd(2 * 2 * 7 * 11, 2 * 2 * 3 * 5 * 7)
+            == NonZero::new(2 * 2 * 7)
+    );
+}
 ```
 
 ## `std::optional`
 
-在 C++中，`std::optional`用作哨兵值的情况下，Rust 中的`Option`可以用于相同的目的。这两者之间的主要区别在于，安全的 Rust 需要显式检查值是否为`None`，而在 C++中，可以尝试访问值而不进行检查（这可能导致未定义的行为）。
+在 C++ 中，`std::optional` 用作哨兵值的情况下，Rust 中的 `Option` 可以用于相同的目的。这两者之间的主要区别在于，安全的 Rust 需要显式检查值是否为 `None`，而在 C++ 中，可以尝试访问值而不进行检查（这可能导致未定义的行为）。
 
-<link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Sentinel values)
+<link rel="stylesheet" type="text/css" href="../../quiz/style.css">
+
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Sentinel%20values)

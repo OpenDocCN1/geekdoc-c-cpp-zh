@@ -1,111 +1,94 @@
+
 # C# 设计模式
 
-
-
-
-
-# 致谢
+## 致谢
 
 本书是我在设计模式方面过去一年学习成果的汇编。这是一段非常有趣的旅程，我在技能方面获得了宝贵的资产。
 
-我谨向所有朋友以及 c-sharpcorner.com 上的朋友们给予我的鼓励表示感谢。
+我谨向所有朋友以及 `c-sharpcorner.com` 上的朋友们给予我的鼓励表示感谢。
 
-
-
-# 1. 单例模式
+## 1. 单例模式
 
 这是 23 种设计模式中最流行的模式。该模式讲述了高效的实例管理。
 
-## 挑战
+### 挑战
 
-你正在开发一个应用程序，该应用程序需要将日志信息记录到名为 **Application.Log** 的文件中。日志由名为 **LogManager** 的类管理。LogManager 通过其构造函数对文件保持锁定。
+你正在开发一个应用程序，该应用程序需要将日志信息记录到名为 `Application.Log` 的文件中。日志由名为 `LogManager` 的类管理。`LogManager` 通过其构造函数对文件保持锁定。
 
-LogManager 实例可以在整个应用程序中创建，这将导致异常。除此之外，LogManager 类只需要一个实例。
+`LogManager` 实例可以在整个应用程序中创建，这将导致异常。除此之外，`LogManager` 类只需要一个实例。
 
 上述问题可以使用单例模式解决。
 
-## 定义
+### 定义
 
 > GoF 定义："确保一个类只有一个实例，并提供一个全局访问点"
 
-## 实现
+### 实现
 
 要实现上述规范，我们必须执行以下操作：
 
-+   - 使构造函数私有并仅创建 1 个实例
-+   - 创建一个静态属性来访问实例
+- 使构造函数私有并仅创建 1 个实例
+- 创建一个静态属性来访问实例
 
 以下是根据单例模式修改后的类定义。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_5_0.png)
 
-以下是 LogManager 类中包含的代码。
+以下是 `LogManager` 类中包含的代码。
 
-```
 ```csharp
 public class LogManager
 {
     private static LogManager _instance;
-
     public static LogManager Instance
     {
         get
         {
             if (_instance == null)
                 _instance = new LogManager();
-
             return _instance;
         }
     }
-
     private LogManager()  // Constructor as Private
     {
         _fileStream = File.OpenWrite(GetExecutionFolder() + "\\Application.log");
         _streamWriter = new StreamWriter(_fileStream);
     }
-
     private FileStream _fileStream;
     private StreamWriter _streamWriter;
-
     public void WriteLog(string message)
     {
         StringBuilder formattedMessage = new StringBuilder();
         formattedMessage.AppendLine("Date: " + DateTime.Now.ToString());
         formattedMessage.AppendLine("Message: " + message);
-
         _streamWriter.WriteLine(formattedMessage.ToString());
         _streamWriter.Flush();
     }
-
     public string GetExecutionFolder()
     {
         return Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
     }
 }
 ```
-```
 
-你可以看到这里的构造函数是私有的。由于它是私有的，外部类无法创建 LogManager 实例。
+你可以看到这里的构造函数是私有的。由于它是私有的，外部类无法创建 `LogManager` 实例。
 
-```
 ```csharp
 private LogManager()  // Constructor as Private
 {
     --
 }
 ```
-```
 
-你可以看到新的 Instance 属性，它是静态的。它也确保只创建一个实例。
+你可以看到新的 `Instance` 属性，它是静态的。它也确保只创建一个实例。
 
-```
+```csharp
 public static LogManager Instance
 {
     get
     {
         if (_instance == null)
             _instance = new LogManager();
-
         return _instance;
     }
 }
@@ -113,7 +96,7 @@ public static LogManager Instance
 
 要调用写入方法，我们可以使用以下代码：
 
-```
+```csharp
 LogManager.Instance.WriteLog("Test Writing");
 ```
 
@@ -123,23 +106,23 @@ LogManager.Instance.WriteLog("Test Writing");
 
 使用单例的优点如下：
 
-+   - 实例重用使内存管理更有效
-+   - 避免了文件锁定开销
+- 实例重用使内存管理更有效
+- 避免了文件锁定开销
 
 单例的局限性如下：
 
-+   - 将构造函数设为私有会带来限制
-+   - 在多线程中使用时开销更大（但在 .Net 中是线程安全的）
+- 将构造函数设为私有会带来限制
+- 在多线程中使用时开销更大（但在 .Net 中是线程安全的）
 
-## 总结
+### 总结
 
-在本章中，我们看到了什么是单例模式以及使用 C#.NET 实现它的一个可能方法。Multiton 是另一种经常与单例进行比较的模式。
+在本章中，我们看到了什么是单例模式以及使用 C#.NET 实现它的一个可能方法。`Multiton` 是另一种经常与单例进行比较的模式。
 
-# 2. 命令模式
+## 2. 命令模式
 
 在本章中，我试图展示命令设计模式的使用。这是一种流行的模式，它利用了良好的面向对象结构，并简化了在应用程序中实现撤销功能的逻辑。
 
-## 挑战
+### 挑战
 
 你正在开发一个绘画应用程序。对于每次画笔划动，你需要提供撤销功能。
 
@@ -147,28 +130,28 @@ LogManager.Instance.WriteLog("Test Writing");
 
 你的方法是什么？
 
-## 应用程序屏幕截图
+### 应用程序屏幕截图
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_8_0.png)
 
-## 类图
+### 类图
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_10_0.png)
 
-当应用程序运行时，用户将看到一个空白的白色屏幕，并有一组可供选择的颜色。默认选择的画笔为方形，点击画布后会在画布上绘制一个新的方形。默认选择的颜色为蓝色，存储在变量 _activeColor 中。
+当应用程序运行时，用户将看到一个空白的白色屏幕，并有一组可供选择的颜色。默认选择的画笔为方形，点击画布后会在画布上绘制一个新的方形。默认选择的颜色为蓝色，存储在变量 `_activeColor` 中。
 
 在表单级别声明的变量为：
 
-```
+```csharp
 private ShapeEnum _activeShape = ShapeEnum.Square;
 private Color _activeColor = Color.Blue;
 private Bitmap _bitmap;
 private Graphics _graphics;
 ```
 
-对于每次鼠标按下操作，将创建一个新的方形类。这意味着如果进行 10 次点击，将创建 10 个方形类并调用 Do() 操作。枚举变量 _activeShape 用于跟踪用户当前选择的形状。鼠标按下事件将如下所示。
+对于每次鼠标按下操作，将创建一个新的方形类。这意味着如果进行 10 次点击，将创建 10 个方形类并调用 `Do()` 操作。枚举变量 `_activeShape` 用于跟踪用户当前选择的形状。鼠标按下事件将如下所示。
 
-```
+```csharp
 private void Canvas_MouseDown(object sender, MouseEventArgs e)
 {
     // Each mouse down creates a new command class instance
@@ -177,10 +160,6 @@ private void Canvas_MouseDown(object sender, MouseEventArgs e)
         command = new SquareCommand(_bitmap, _activeColor, e.X, e.Y);
     else if (_activeShape == ShapeEnum.Rectangle)
 ```
-
-
-
-
 
 ```csharp
 command = new SquareCommand(_bitmap, _activeColor, e.X, e.Y);
@@ -198,7 +177,7 @@ RefreshUI();
 private Stack<ICommand> _commandStack = new Stack<ICommand>();
 ```
 
-### Inside the SquareCommand Class
+#### Inside the SquareCommand Class
 
 我们可以看一下 `SquareCommand` 类。`SquareCommand` 和 `RectangleCommand` 类的实现将相同，只是 `Do()` 操作中绘制相应形状的部分不同。
 
@@ -256,7 +235,7 @@ public class SquareCommand : ICommand
 
 `Undo()` 方法只是通过从 x、y 位置开始遍历每个像素，使用 `Bitmap.SetPixel` 方法恢复之前的像素值。
 
-### Performing the Undo() on clicking Undo button
+#### Performing the Undo() on clicking Undo button
 
 由于我们将每个操作封装到带有参数的类中并记录到命令栈中，现在调用 `Undo()` 方法变得更容易。请注意，单击 Undo 按钮时，我们必须从栈中移除最后一个操作实例并调用其 `Undo()` 方法。
 
@@ -276,11 +255,11 @@ private void UndoButton_Click(object sender, EventArgs e)
 }
 ```
 
-# 3. Adapter Pattern
+## 3. Adapter Pattern
 
 你们大多数人可能听说过适配器模式。它是我们应用程序中常用的模式，但往往在不知不觉中使用。适配器模式是 23 种设计模式之一。在本章中，我想用一个简单的例子来探讨这种模式。
 
-## Challenge
+### Challenge
 
 你正在处理一个 Square 类。你需要使用 Calculator 类来求其面积。但 Calculator 类只接受 Rectangle 类作为输入。如何解决这个场景？
 
@@ -288,11 +267,11 @@ private void UndoButton_Click(object sender, EventArgs e)
 |---|---|
 | ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_14_0.png) | ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_14_1.png) |
 
-## Definition
+### Definition
 
 GoF 定义："将一个类的接口转换成客户端期望的另一个接口。适配器让原本由于接口不兼容而无法协同工作的类能够一起工作。"
 
-## Implementation
+### Implementation
 
 以下是 Rectangle 和 Calculator 的类定义。
 
@@ -341,11 +320,11 @@ public class CalculatorAdapter
 }
 ```
 
-CalculatorAdapter 执行以下功能：
+`CalculatorAdapter` 执行以下功能：
 
 - 接收 Square 参数
 - 将 Square 转换为 Rectangle
-- 调用原始的 Calculator.GetArea() 方法
+- 调用原始的 `Calculator.GetArea()` 方法
 - 返回接收到的值
 
 调用代码如下所示：
@@ -367,21 +346,25 @@ ResultLabel.Text = "Area: " + area.ToString();
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_16_0.png)
 
-## Note
+### Note
 
 我们可以使用接口来展示上述模式的其他示例。为了简单起见，我避免了接口。在现实生活中，交流电到直流电的适配器就是适配器模式的一个例子，因为它使不兼容的设备和电源能够协同工作。
 
-## Summary
+### Summary
 
 在本章中，我们探讨了适配器模式。当处理不兼容的类型时，该模式很有用。相关源代码包含我们讨论的示例应用程序。
 
-# 4. Decorator Pattern
+## 4. Decorator Pattern
 
 在本章中，我想演示装饰器模式。它提供了一种在运行时添加职责的新方法，从而成为子类化的良好替代方案。
 
-## Challenge
+### Challenge
 
-你今天有一个 Album 类，现在还是空的。明天客户想要在上面放一棵圣诞树。你需要在不修改 Album 类的情况下实现这一点。
+
+
+# 4. 装饰器模式
+
+你今天有一个`Album`类，现在还是空的。明天客户想要在上面放一棵圣诞树。你需要在不修改`Album`类的情况下实现这一点。
 
 如何在运行时实现这一点？
 
@@ -395,11 +378,11 @@ GoF 定义："动态地为对象附加额外的职责。装饰器提供了一种
 
 ## Example:
 
-我们将修改原始的 Album 类以在其上加入圣诞树。这可能不是最好的方法。有一个更好的方法。我们仍然可以保持 Album 类不变，并在其上添加圣诞树。所有操作都在运行时进行——这就是它的精妙之处。
+我们将修改原始的`Album`类以在其上加入圣诞树。这可能不是最好的方法。有一个更好的方法。我们仍然可以保持`Album`类不变，并在其上添加圣诞树。所有操作都在运行时进行——这就是它的精妙之处。
 
 ## Some more examples
 
-我们可以看到现实生活中的控件，如 Form、Button 等。会有内置功能的 Form 类。用户仍然可以使用它并添加新控件/扩展功能。在这里，我们基本上是从现有的 Form/Button 类派生并添加新方法或属性。
+我们可以看到现实生活中的控件，如`Form`、`Button`等。会有内置功能的`Form`类。用户仍然可以使用它并添加新控件/扩展功能。在这里，我们基本上是从现有的`Form`/`Button`类派生并添加新方法或属性。
 
 上述方法与装饰器模式的区别在于，装饰器模式是在运行时完成的。
 
@@ -407,25 +390,25 @@ GoF 定义："动态地为对象附加额外的职责。装饰器提供了一种
 
 因此，我们基本上可以得出结论，每当需要更改时，可能的解决方案可以是：
 
-
-
 +   - 修改原始类
+
 +   - 继承原始类并创建子类实例
+
 +   - 使用装饰器模式并仍然使用原始类实例
 
 这里我们将看到如何使用装饰器模式来帮助解决以下场景。
 
 ## 需求
 
-这里的需求是提供一个默认的 Album 对象，并根据用户在运行时的动态需求，向相册中绘制其他图片。
+这里的需求是提供一个默认的`Album`对象，并根据用户在运行时的动态需求，向相册中绘制其他图片。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_18_0.png)
 
 ## 设计
 
-我们的第一个类是 Album 类，它有一个 Graphics 对象作为参数。
+我们的第一个类是`Album`类，它有一个`Graphics`对象作为参数。
 
-它包含一个虚方法 `Draw()`，用于清除 graphics 对象。
+它包含一个虚方法`Draw()`，用于清除`graphics`对象。
 
 ```
 public class Album
@@ -457,7 +440,7 @@ public virtual void Draw()
 
 ## 装饰器
 
-我们添加一个名为 AlbumDecorator 的类，它将作为所有装饰器的基类。
+我们添加一个名为`AlbumDecorator`的类，它将作为所有装饰器的基类。
 
 ```
 public abstract class AlbumDecorator : Album
@@ -476,9 +459,9 @@ public abstract class AlbumDecorator : Album
 }
 ```
 
-它在构造函数中接受一个 Album 类作为参数。
+它在构造函数中接受一个`Album`类作为参数。
 
-这里有从 AlbumDecorator 派生的 ChristmasTreeDecorator、SantaClausDecorator、StarDecorator：
+这里有从`AlbumDecorator`派生的`ChristmasTreeDecorator`、`SantaClausDecorator`、`StarDecorator`：
 
 ```
 public class ChristmasTreeDecorator : AlbumDecorator
@@ -486,11 +469,11 @@ public class SantaClausDecorator : AlbumDecorator
 public class StarDecorator : AlbumDecorator
 ```
 
-每个从 AlbumDecorator 派生的类都有自己的图片要绘制。
+每个从`AlbumDecorator`派生的类都有自己的图片要绘制。
 
 ## 调用
 
-在主窗体中，我们创建一个 Album 类的实例，并将其赋值给窗体字段 `_album`。
+在主窗体中，我们创建一个`Album`类的实例，并将其赋值给窗体字段`_album`。
 
 ```
 private Album _album;
@@ -498,20 +481,20 @@ _album = new Album(_graphics);
 _album.Draw();
 ```
 
-在运行时，当用户想要一棵圣诞树时，就会创建一个 ChristmasTreeDecorator 实例。
+在运行时，当用户想要一棵圣诞树时，就会创建一个`ChristmasTreeDecorator`实例。
 
 ```
 _album = new ChristmasTreeDecorator(_album);
 _album.Draw();
 ```
 
-在上面的代码中，我们可以看到调用了相同的 `_album.Draw()` 方法。
+在上面的代码中，我们可以看到调用了相同的`_album.Draw()`方法。
 
 ## 工作原理
 
-每当我们调用装饰器类的 `Draw()` 方法时，它又会调用原始的 `Album.Draw()`。之后，它会调用自己的 `Draw()` 方法。通过这种方式，我们可以将同一个相册实例传递给多个装饰器。如果有 10 个装饰器，那么所有装饰器的 `Draw()` 方法都会被调用。
+每当我们调用装饰器类的`Draw()`方法时，它又会调用原始的`Album.Draw()`。之后，它会调用自己的`Draw()`方法。通过这种方式，我们可以将同一个相册实例传递给多个装饰器。如果有 10 个装饰器，那么所有装饰器的`Draw()`方法都会被调用。
 
-你可以通过在 StarDecorator 的 `Draw()` 方法中设置断点来测试这一点。
+你可以通过在`StarDecorator`的`Draw()`方法中设置断点来测试这一点。
 
 ## 注意
 
@@ -530,6 +513,7 @@ _album.Draw();
 你正在开发一个游戏应用程序。玩家可以在两种不同的枪支之间进行选择：
 
 +   1. 装有 5 发子弹的手枪
+
 +   2. 装有 20 发子弹的榴弹发射器
 
 在普通的编码场景中，如果玩家更换枪支，我们必须在开火方法、绘制枪支方法、子弹动画方法中做大量的 if 判断。
@@ -548,13 +532,15 @@ GoF 定义：“定义一系列算法，将每个算法封装起来，并使它�
 
 涉及的核心类有：
 
-+   - Gamer
-+   - 实现 IGun 的 PistolGun
-+   - 实现 IGun 的 GrenadeLauncher
++   - `Gamer`
 
-每当用户更换枪支时，Gamer.Gun 属性会在 PistolGun 和 GrenadeLauncher 实例之间切换。
++   - 实现`IGun`的`PistolGun`
 
-这里，IGun 接口提取了不同枪支之间不同的部分。
++   - 实现`IGun`的`GrenadeLauncher`
+
+每当用户更换枪支时，`Gamer.Gun`属性会在`PistolGun`和`GrenadeLauncher`实例之间切换。
+
+这里，`IGun`接口提取了不同枪支之间不同的部分。
 
 ```
 public interface IGun
@@ -620,7 +606,9 @@ public class Gamer
 你正在创建用于制作比萨和汉堡的机器。当我们仔细观察时，会发现所有机器都有一些共同的操作，并且顺序相同。
 
 +   - 启动
+
 +   - 生产
+
 +   - 停止
 
 启动操作包括启动机器、进行系统检查以排查故障，以及打开指示灯。
@@ -642,12 +630,14 @@ GoF 定义：“定义一个操作中的算法的骨架，将一些步骤延迟�
 因此，我们可以定义算法的骨架（或调用顺序）如下：
 
 +   1. 启动
+
 +   2. 生产
+
 +   3. 停止
 
 我们可以看到所有机器都有这个执行顺序。只有生产操作会有所不同。
 
-因此，创建一个 `Execute()` 方法来实现这一点，如下所示：
+因此，创建一个`Execute()`方法来实现这一点，如下所示：
 
 ```
 public class Machine
@@ -661,7 +651,7 @@ public class Machine
 }
 ```
 
-通过调用 `Execute()` 方法，我们可以按正确的顺序调用所有 3 个方法。将 `Execute()` 方法作为基类中的 public 方法，我们可以将 `Produce()` 方法设为 virtual，以便它可以被重写。为了更大的定制性，我们将所有 3 个方法都设为 virtual。
+通过调用`Execute()`方法，我们可以按正确的顺序调用所有 3 个方法。将`Execute()`方法作为基类中的 public 方法，我们可以将`Produce()`方法设为 virtual，以便它可以被重写。为了更大的定制性，我们将所有 3 个方法都设为 virtual。
 
 ## 注意
 
@@ -669,7 +659,7 @@ public class Machine
 
 对于抽象方法，我们需要在派生类中覆盖它们。基类中不会有任何默认实现。
 
-修改后的 Machine 类如下所示：
+修改后的`Machine`类如下所示：
 
 ```
 public class Machine
@@ -698,9 +688,9 @@ public class Machine
 }
 ```
 
-请注意，该类使用了 **virtual** 关键字，以便派生类可以覆盖。
+请注意，该类使用了`virtual`关键字，以便派生类可以覆盖。
 
-派生类 PizzaMachine 如下所示：
+派生类`PizzaMachine`如下所示：
 
 ```
 public class PizzaMachine : Machine
@@ -712,7 +702,7 @@ public class PizzaMachine : Machine
 }
 ```
 
-派生类 BurgerMachine 如下所示：
+派生类`BurgerMachine`如下所示：
 
 ```
 public class BurgerMachine : Machine
@@ -724,11 +714,11 @@ public class BurgerMachine : Machine
 }
 ```
 
-请注意，它们都派生自 **Machine** 类，并使用关键字 **override** 来自定义实现 `Produce()` 方法。
+请注意，它们都派生自`Machine`类，并使用关键字`override`来自定义实现`Produce()`方法。
 
 ## 执行
 
-现在我们可以使用基类的 `Execute()` 方法来执行 PizzaMachine。
+现在我们可以使用基类的`Execute()`方法来执行`PizzaMachine`。
 
 ```
 new PizzaMachine().Execute();
@@ -736,21 +726,21 @@ new PizzaMachine().Execute();
 
 让我们检查执行顺序是如何工作的。
 
-+   1. 调用 Machine.Execute()
-+   2. 调用 Machine.Start()
-+   3. 调用 PizzaMachine.Produce()
-+   4. 调用 Machine.Stop()
++   1. 调用`Machine.Execute()`
 
-请注意上面的步骤 3，执行从 Machine 类转移到 PizzaMachine 类。这就是模板方法模式的力量所在。在这里，执行顺序得以保持，并完成了自定义生产。
++   2. 调用`Machine.Start()`
+
++   3. 调用`PizzaMachine.Produce()`
+
++   4. 调用`Machine.Stop()`
+
+请注意上面的步骤 3，执行从`Machine`类转移到`PizzaMachine`类。这就是模板方法模式的力量所在。在这里，执行顺序得以保持，并完成了自定义生产。
 
 ## 注意
 
 上述代码工作的底层细节涉及虚方法表（VMT），基类方法地址存储在一个表中。派生类将为派生方法提供新地址。这将替换原始基类的方法地址。
 
 控制流如下图所示。
-
-
-
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_27_0.png)
 
@@ -780,9 +770,9 @@ public class Member
 }
 ```
 
-你需要执行一个操作，选择所有年龄大于18的Member。
+你需要执行一个操作，选择所有年龄大于18的`Member`。
 
-一种解决方案是添加一个名为IsAboveEighteen的新属性，并通过遍历项目并与当前日期比较来设置值。但这需要更多处理。
+一种解决方案是添加一个名为`IsAboveEighteen`的新属性，并通过遍历项目并与当前日期比较来设置值。但这需要更多处理。
 
 我们可以使用访问者模式实现同样的效果，通过添加一个属性，该属性基于现有属性进行操作并返回值。
 
@@ -792,7 +782,7 @@ GoF定义：“表示一个作用于对象结构中各元素的操作。访问�
 
 ## 实现
 
-引入一个名为 IsAboveEighteen 的新属性，并在 getter 中实现代码以读取 DateOfBirth 属性来计算值。
+引入一个名为`IsAboveEighteen`的新属性，并在 getter 中实现代码以读取`DateOfBirth`属性来计算值。
 
 ```
 public class Member
@@ -816,7 +806,7 @@ public class Member
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_30_0.png)
 
-以下单元测试对新属性进行操作，并显示 IsAboveEighteen 为 true 的结果。
+以下单元测试对新属性进行操作，并显示 `IsAboveEighteen` 为 true 的结果。
 
 ```
 [TestMethod()]
@@ -846,13 +836,15 @@ public void IsAboveEighteenTest()
 
 在SQL Server中，可以使用计算列实现相同的功能。尽管访问者模式是一种面向对象扩展，我们也可以在数据库中使用这个概念。
 
-让我们通过一个简单的示例来探讨。我们有一个表来存储具有 Quantity 和 Price 的 Transaction。表中填充了数据。我们需要获取 TotalPrice，即 Quantity 乘以 Price。无需进行任何数据更新，我们可以使用如下所示的计算列来实现结果。
+让我们通过一个简单的示例来探讨。我们有一个表来存储具有`Quantity`和`Price`的`Transaction`。表中填充了数据。我们需要获取`TotalPrice`，即`Quantity`乘以`Price`。无需进行任何数据更新，我们可以使用如下所示的计算列来实现结果。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_31_1.png)
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_31_2.png)
 
 结果如下所示：
+
+
 
 |   | Id | Item | Quantity | Price | TotalPrice |
 |---|---|---|---|---|---|
@@ -872,7 +864,7 @@ public void IsAboveEighteenTest()
 
 ## 挑战
 
-根据颜色选择，需要通知n个窗体。实现此目标的一种方法是遍历所有可用的窗体并通知它们。这会导致不必要的迭代和通知。
+根据颜色选择，需要通知`n`个窗体。实现此目标的一种方法是遍历所有可用的窗体并通知它们。这会导致不必要的迭代和通知。
 
 如何提供更好的解决方案？
 
@@ -911,17 +903,17 @@ public interface IObserver
 }
 ```
 
-在上面的示例中，我们使用了一个具有 ColorChanged 方法的观察者接口。因此，感兴趣的观察者应实现此接口以获得通知。
+在上面的示例中，我们使用了一个具有 `ColorChanged` 方法的观察者接口。因此，感兴趣的观察者应实现此接口以获得通知。
 
 只会有一个主题和多个观察者。
 
 ## 注册与注销
 
-在上面的接口中，观察者可以使用 Register() 方法获取更改通知。任何时候，它都可以使用 Unregister() 方法取消注册通知。
+在上面的接口中，观察者可以使用 `Register()` 方法获取更改通知。任何时候，它都可以使用 `Unregister()` 方法取消注册通知。
 
 ## 通知
 
-Notify() 方法负责调用监听的观察者。
+`Notify()` 方法负责调用监听的观察者。
 
 ## 关联
 
@@ -931,17 +923,17 @@ Notify() 方法负责调用监听的观察者。
 
 ## 使用代码
 
-相关代码有一个主窗体，其中主题是一个名为 ColorSubject 的类。
+相关代码有一个主窗体，其中主题是一个名为 `ColorSubject` 的类。
 
 ## 应用程序截图
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_36_0.png)
 
-运行相关项目时，我们会看到一个颜色选择器窗体，它充当主题。所有其他窗体都是监听 ColorChanged 事件的观察者。
+运行相关项目时，我们会看到一个颜色选择器窗体，它充当主题。所有其他窗体都是监听 `ColorChanged` 事件的观察者。
 
 ## 注意
 
-.Net 中的多播事件模型也可以被视为观察者模式。在这里，感兴趣的一方使用主题（可能是一个按钮）注册一个方法，每当按钮被点击（一个事件）时，它调用注册的观察者（订阅者）。
+`.Net` 中的多播事件模型也可以被视为观察者模式。在这里，感兴趣的一方使用主题（可能是一个按钮）注册一个方法，每当按钮被点击（一个事件）时，它调用注册的观察者（订阅者）。
 
 ## 小结
 
@@ -949,16 +941,13 @@ Notify() 方法负责调用监听的观察者。
 
 ## 代码解释
 
-以下是名为 Robot 的主类的截图。该类包含一个名为 Peripherals 的属性，用于配置添加的外设：如 CPU 为 Intel，Monitor 为 Samsung 等。
+以下是名为 `Robot` 的主类的截图。该类包含一个名为 `Peripherals` 的属性，用于配置添加的外设：如 CPU 为 Intel，Monitor 为 Samsung 等。
 
-添加外设后，我们可以调用 Create() 方法。它将遍历 Peripherals 字典并调用适当的方法来集成外设。这允许我们在运行时选择外设以及顺序。
+添加外设后，我们可以调用 `Create()` 方法。它将遍历 `Peripherals` 字典并调用适当的方法来集成外设。这允许我们在运行时选择外设以及顺序。
 
-如果 Peripherals 字典包含 CPU，则调用 AssembleCPU() 方法。
+如果 `Peripherals` 字典包含 CPU，则调用 `AssembleCPU()` 方法。
 
-如果 Peripherals 字典包含 Monitor，则调用 AssembleMonitor() 方法。
-
-
-
+如果 `Peripherals` 字典包含 Monitor，则调用 `AssembleMonitor()` 方法。
 
 ```csharp
 public partial class Robot : UserControl
@@ -996,7 +985,7 @@ public partial class Robot : UserControl
 }
 ```
 
-The class Peripheral is an enumeration as following:
+The class `Peripheral` is an enumeration as following:
 
 ```csharp
 public enum Peripheral
@@ -1013,20 +1002,21 @@ public enum Peripheral
 
 # 10. Chain of Responsibility Pattern
 
-Chain of Responsibility 是 Gang of Four 的 23 种设计模式之一。它是一个有趣的模式，与 Observer 模式类似。本章我们将探索 Chain of Responsibility 模式。
+`Chain of Responsibility` 是 Gang of Four 的 23 种设计模式之一。它是一个有趣的模式，与 Observer 模式类似。本章我们将探索 `Chain of Responsibility` 模式。
 
 我使用相同的 Challenge 和 Solution 风格来解释这种模式。
 
 ## Challenge
 
-你正在开发一个应用程序，其中 **Logic** 类生成各种消息。消息有两种类型。
+你正在开发一个应用程序，其中 `Logic` 类生成各种消息。消息有两种类型。
 
 - Normal Priority
+
 - High Priority
 
-Normal Priority 消息应由 **Logger** 类处理，而 High Priority 消息由 **Emailer** 类处理。
+Normal Priority 消息应由 `Logger` 类处理，而 High Priority 消息由 `Emailer` 类处理。
 
-你必须做出设计，使得 **Logic** 类无需考虑消息的正确处理器。它只需发送消息即可。
+你必须做出设计，使得 `Logic` 类无需考虑消息的正确处理器。它只需发送消息即可。
 
 设计将如何进行？
 
@@ -1040,7 +1030,7 @@ Normal Priority 消息应由 **Logger** 类处理，而 High Priority 消息由 
 
 ## Implementation
 
-以下是 Logic 类的定义：
+以下是 `Logic` 类的定义：
 
 ```csharp
 public class Logic
@@ -1055,9 +1045,9 @@ public class Logic
 }
 ```
 
-从上面的代码可以看出，Logic 类有一个类型为 IReceiver 的属性。在 CreateMessage 方法中，该 Receiver 用于处理消息。因此只有一个接收器由 Logic 类实例注册。
+从上面的代码可以看出，`Logic` 类有一个类型为 `IReceiver` 的属性。在 `CreateMessage` 方法中，该 `Receiver` 用于处理消息。因此只有一个接收器由 `Logic` 类实例注册。
 
-以下是 Message 类和 MessagePriority 枚举的定义：
+以下是 `Message` 类和 `MessagePriority` 枚举的定义：
 
 ```csharp
 public class Message
@@ -1075,7 +1065,7 @@ public enum MessagePriority
 }
 ```
 
-以下是 Receiver 接口和实现类：
+以下是 `Receiver` 接口和实现类：
 
 ```csharp
 public interface IReceiver
@@ -1147,6 +1137,7 @@ public class Emailer : IReceiver
 链条将执行直到：
 
 - Message is processed
+
 - Receiver chain exhausted
 
 ## Code Execution
@@ -1157,9 +1148,11 @@ public class Emailer : IReceiver
 
 这里链条构建如下：
 
-- Logic 类持有第一个接收器，即 Logger
-- Logger 类持有下一个接收器，即 Emailer
-- Emailer 类有一个 null 接收器，表示链的结束
+- `Logic` 类持有第一个接收器，即 `Logger`
+
+- `Logger` 类持有下一个接收器，即 `Emailer`
+
+- `Emailer` 类有一个 `null` 接收器，表示链的结束
 
 以下代码描述了上述链的创建：
 
@@ -1168,7 +1161,7 @@ Logic logic = new Logic();
 logic.Receiver = new Logger(new Emailer(null));
 ```
 
-Note: Please note that the advantage of this pattern is decoupling of sender and receiver. The sender does not think about the right receiver. Instead it will pass the request and the appropriate receiver should process it. The above example can be written using a list of receivers in the Logic class with a Boolean property mentioning whether the message is processed or not.
+Note: Please note that the advantage of this pattern is decoupling of sender and receiver. The sender does not think about the right receiver. Instead it will pass the request and the appropriate receiver should process it. The above example can be written using a list of receivers in the `Logic` class with a Boolean property mentioning whether the message is processed or not.
 
 ## Comparing Observer and Chain of Responsibility
 
@@ -1191,13 +1184,17 @@ Note: Please note that the advantage of this pattern is decoupling of sender and
 你正在创建 ORM（对象关系映射）框架。框架可在不同的数据库中使用，例如：
 
 - Sql Server
+
 - Oracle
+
 - MS Access
+
 - OleDb
 
 根据数据库类型，你需要创建相关的类，例如：
 
 - SqlConnection, SqlCommand when Sql server
+
 - OracleConnection, OracleCommand when Oracle etc.
 
 如何在不实现它们的情况下创建一族相关对象？
@@ -1236,16 +1233,18 @@ namespace System.Data.Common
 
 从上面的代码可以看出，相关类作为一个族包含在内，而无需进入实现细节。
 
-抽象类 DbProviderFactory 包含相关的抽象类：DbCommand、DbConnection 等。
+抽象类 `DbProviderFactory` 包含相关的抽象类：`DbCommand`、`DbConnection` 等。
 
 ## Concrete Implementations
 
-ADO.NET 提供了上述抽象类 DbProviderFactory 的以下实现。
+
+
+ADO.NET 提供了上述抽象类 `DbProviderFactory` 的以下实现。
 
 - `System.Data.SqlClient.SqlClientFactory`
 - `System.Data.OleDb.OleDbFactory`
 
-上述类实现了基类中的所有抽象方法。因此它将提供 DbConnection 的具体实现，即 SqlConnection，DbCommand 的具体实现即 SqlCommand 等。
+上述类实现了基类中的所有抽象方法。因此它将提供 `DbConnection` 的具体实现，即 `SqlConnection`，`DbCommand` 的具体实现即 `SqlCommand` 等。
 
 从上述类实例化后，我们可以开始使用具体实现，如以下代码所示。
 
@@ -1262,10 +1261,6 @@ command.ExecuteNonQuery();
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_46_0.png)
 
-
-
-
-
 ## 摘要
 
 在本章中，我们通过内置的 ADO.NET `DbProviderFactory` 类了解了抽象工厂模式的使用。在下一章工厂方法模式中，将使用上述讨论的代码。因此，本章不附带任何源代码。
@@ -1280,7 +1275,7 @@ command.ExecuteNonQuery();
 
 因此，对于每个数据库操作，你需要根据枚举 `DatabaseType` 创建正确的数据库类。
 
-```
+```csharp
 public void InsertRecord()
 {
     if (AppContext.DatabaseType == DatabaseType.SqlServer)
@@ -1316,7 +1311,7 @@ GoF 定义：“定义一个用于创建对象的接口，但让子类决定实�
 
 优点是质量更高、代码更少。这里我们必须定义一个名为 `DbProviderFactory` 的抽象类。（ADO.NET 已经包含它）
 
-```
+```csharp
 public abstract class DbProviderFactory
 {
     public virtual DbCommand CreateCommand();
@@ -1329,7 +1324,7 @@ public abstract class DbProviderFactory
 
 然后，我们可以从上述抽象类派生出具体类。
 
-```
+```csharp
 public class SqlClientFactory : DbProviderFactory
 {
     public override DbConnection CreateConnection()
@@ -1348,7 +1343,7 @@ public class SqlClientFactory : DbProviderFactory
 
 类似地，Oracle 实现如下：
 
-```
+```csharp
 public class OracleClientFactory : DbProviderFactory
 {
     public override DbConnection CreateConnection()
@@ -1367,18 +1362,20 @@ public class OracleClientFactory : DbProviderFactory
 
 现在我们准备用工厂方法类替换 `Insert()` 方法代码。这里我们使用 `AppInit()` 代码来创建将在整个应用程序中使用的工厂。
 
-```
+```csharp
 public void AppInit()
 {
     if (AppContext.DatabaseType == DatabaseType.SqlServer)
         AppContext.DbProviderFactory = SqlClientFactory.Instance;
 ```
 
-```
+```csharp
 else if (AppContext.DatabaseType == DatabaseType.Oracle)
     AppContext.DbProviderFactory = OracleClientFactory.Instance;
 }
+```
 
+```csharp
 // NewInsertRecord method
 private void NewInsertRecord()
 {
@@ -1490,15 +1487,13 @@ GoF 定义：“为另一个对象提供代理或占位符以控制对其的访�
 
 以下是带有数据的应用程序：
 
-
-
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_57_0.png)
 
 ## 旧代码
 
 以下是旧代码，其中应用程序被迫在 Excel COM 对象以及向单元格赋值的方法上投入过多思考。
 
-```
+```csharp
 //Start Excel and get Application object.
 Microsoft.Office.Interop.Excel.Application oXL = new Microsoft.Office.Interop.Excel.Application();
 oXL.Visible = true;
@@ -1525,7 +1520,7 @@ foreach (Employee employee in _list)
     values[2] = employee.Salary.ToString();
 ```
 
-```
+```csharp
 oSheet.get_Range("A" + i.ToString(), "C" + i.ToString()).Value = values;
     i++;
 }
@@ -1538,12 +1533,12 @@ oXL.UserControl = true;
 
 ## 使用代理模式的新代码
 
-```
+```csharp
 ExcelProxy proxy = new ExcelProxy();
 proxy.Save(_list);
 ```
 
-这段代码只有两行，而 Excel COM 对象的创建、单元格值赋值等操作都由 ExcelProxy 类来处理。
+这段代码只有两行，而 Excel COM 对象的创建、单元格值赋值等操作都由 `ExcelProxy` 类来处理。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_58_0.png)
 
@@ -1569,13 +1564,13 @@ proxy.Save(_list);
 
 ## 挑战
 
-你正在开发一个数据库应用程序。经常需要执行 UPDATE 和 DELETE SQL 查询。每次都需要创建 SqlConnection 和 SqlCommand 类，将连接赋值给命令，然后执行查询。
+你正在开发一个数据库应用程序。经常需要执行 UPDATE 和 DELETE SQL 查询。每次都需要创建 `SqlConnection` 和 `SqlCommand` 类，将连接赋值给命令，然后执行查询。
 
-```
+```csharp
 SqlConnection connection = new SqlConnection("connection string");
 SqlCommand command = new SqlCommand();
 command.Connection = connection;
-command.CommandText = &quot;UPDATE Customer SET Processed=1&quot;;
+command.CommandText = "UPDATE Customer SET Processed=1";
 command.ExecuteNonQuery();
 ```
 
@@ -1589,13 +1584,13 @@ GoF 定义：“为一个系统中的一组接口提供统一的接口。外观�
 
 借助外观模式，我们可以改善这种情况。我们不难发现，每种情况下只有查询语句不同——连接字符串等参数对整个应用程序来说是通用的。
 
-```
+```csharp
 SQLFacade.ExecuteSQL("UPDATE query here..");
 ```
 
-使用外观模式后，代码就像上面那样。复杂的代码被转移到了后台的 SQLFacade 类中。
+使用外观模式后，代码就像上面那样。复杂的代码被转移到了后台的 `SQLFacade` 类中。
 
-```
+```csharp
 namespace FacadePattern
 {
     public class SQLFacade
@@ -1607,13 +1602,14 @@ namespace FacadePattern
             command.Connection = connection;
             command.CommandText = sql;
             command.ExecuteNonQuery();
+
+            return true;
+        }
+    }
+}
 ```
 
-```
-return true;
-}
-}
-```
+
 
 如下图所示，外观模式让代码更完善：
 
@@ -1632,11 +1628,11 @@ return false;
 }
 ```
 
-在 AddJob() 方法中，我们可以看到，只有当 JobState 处于 Ready 状态时，新作业才会被接受。此时该方法会返回 true。如果有另一个作业正在运行，则新作业不会被加入队列，并返回 false。
+在 `AddJob()` 方法中，我们可以看到，只有当 `JobState` 处于 `Ready` 状态时，新作业才会被接受。此时该方法会返回 `true`。如果有另一个作业正在运行，则新作业不会被加入队列，并返回 `false`。
 
-因此，Job 对象会根据内部状态改变其行为。
+因此，`Job` 对象会根据内部状态改变其行为。
 
-# 应用程序
+## 应用程序
 
 随附的应用程序包含我们讨论过的类。执行 Windows 应用程序并单击 Assign Job 按钮后，您可以看到以下屏幕：
 
@@ -1660,7 +1656,7 @@ return false;
 
 ## 挑战
 
-你正在开发一个姓名打印应用程序。需要处理一个具有以下属性的 Bank 类。
+你正在开发一个姓名打印应用程序。需要处理一个具有以下属性的 `Bank` 类。
 
 ```
 public class Bank
@@ -1685,7 +1681,7 @@ public class Bank
 }
 ```
 
-为了打印姓名，Print() 方法的调用方式如下：
+为了打印姓名，`Print()` 方法的调用方式如下：
 
 ```
 Print(_bank.Manager);
@@ -1693,7 +1689,7 @@ Print(_bank.Accountant);
 Print(_bank.Cashier);
 ```
 
-现在，上述 Bank 对象中新增了 Branch 类型的 Bank。现在情况变得更加复杂。如何采取更好的方法？
+现在，上述 `Bank` 对象中新增了 `Branch` 类型的 `Bank`。现在情况变得更加复杂。如何采取更好的方法？
 
 ## 定义
 
@@ -1701,9 +1697,9 @@ GoF 定义：“提供一种按顺序访问聚合对象中各个元素的方法�
 
 ## 实现
 
-我们可以使用迭代器模式来改进上述挑战场景。无需每次都调用 Print() 方法，可以使用迭代器来获取 Bank 对象中的姓名。
+我们可以使用迭代器模式来改进上述挑战场景。无需每次都调用 `Print()` 方法，可以使用迭代器来获取 `Bank` 对象中的姓名。
 
-我们引入一个名为 **BankIterator** 的新类，它实现了 IEnumerable：
+我们引入一个名为 `BankIterator` 的新类，它实现了 `IEnumerable`：
 
 ```
 public class BankIterator : IEnumerable
@@ -1724,9 +1720,9 @@ public class BankIterator : IEnumerable
 }
 ```
 
-该类使用一个 ArrayList 来保存 Manager、Accountant、Cashier 的姓名。由于它继承了 IEnumerable，因此必须实现 GetEnumerator() 方法。幸运的是，我们可以直接返回 list.GetEnumerator()。
+该类使用一个 `ArrayList` 来保存 `Manager`、`Accountant`、`Cashier` 的姓名。由于它继承了 `IEnumerable`，因此必须实现 `GetEnumerator()` 方法。幸运的是，我们可以直接返回 `list.GetEnumerator()`。
 
-新的 Print() 方法调用如下所示：
+新的 `Print()` 方法调用如下所示：
 
 ```
 BankIterator iterator = new BankIterator(_bank);
@@ -1737,7 +1733,8 @@ foreach (string name in iterator)
 这从以下方面改善了这种情况：
 
 - 通过迭代可以更方便地访问姓名
-- 在 Bank 类中引入新的 Name 属性时具有更高的灵活性
+
+- 在 `Bank` 类中引入新的 `Name` 属性时具有更高的灵活性
 
 以下是类图的快照：
 
@@ -1745,7 +1742,7 @@ foreach (string name in iterator)
 
 ## 注意
 
-从 C# 2.0 开始，迭代器模式通过 foreach 实现。foreach 允许顺序访问集合中的元素。IEnumerator 接口用于实现迭代器模式。
+从 C# 2.0 开始，迭代器模式通过 `foreach` 实现。`foreach` 允许顺序访问集合中的元素。`IEnumerator` 接口用于实现迭代器模式。
 
 ```
 public interface IEnumerator
@@ -1756,17 +1753,13 @@ public interface IEnumerator
 }
 ```
 
-在执行 foreach 时，首先会调用 Reset() 方法将位置定位到集合的第一个元素。然后，在每次迭代中调用 MoveNext() 方法。Current 属性从集合中返回当前对象。数组、List、HashSet 等对 IEnumerator 接口的实现，使我们能够使用同一个 foreach 循环对它们进行迭代。
+在执行 `foreach` 时，首先会调用 `Reset()` 方法将位置定位到集合的第一个元素。然后，在每次迭代中调用 `MoveNext()` 方法。`Current` 属性从集合中返回当前对象。数组、`List`、`HashSet` 等对 `IEnumerator` 接口的实现，使我们能够使用同一个 `foreach` 循环对它们进行迭代。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_67_1.png)
 
 ## 参考
 
 http://msdn.microsoft.com/en-us/library/dscyy5s0(v=vs.80).aspx
-
-
-
-
 
 ## 小结
 
@@ -1780,16 +1773,19 @@ http://msdn.microsoft.com/en-us/library/dscyy5s0(v=vs.80).aspx
 
 您正在开发一个管理航班校验的航空公司应用程序。如您所知，飞机起飞前要经过一系列检查，以确保每个部件的健康状态、燃油量等。
 
-我们的 Flight 类包含以下组件类：
+我们的 `Flight` 类包含以下组件类：
 
-- Engine
-- Wheels
-- Cockpit
-- Aviation
+- `Engine`
 
-每个组件类都有一个名为 Start() 的方法。调用该方法时，它会通过名为 IsReady() 的方法来确保组件的当前状态有效。如果 IsReady() 方法返回 true，该组件类就会检查其他组件的 IsReady() 方法。
+- `Wheels`
 
-例如，Engine 类分别通过 Wheels 和 Aviation 的 IsReady() 方法来确保它们处于有效状态。而 Cockpit 则检查自身、Engine 和 Aviation 的状态。因此，类之间存在耦合和代码重复。当引入新的组件类时，这种情况会变得更糟。
+- `Cockpit`
+
+- `Aviation`
+
+每个组件类都有一个名为 `Start()` 的方法。调用该方法时，它会通过名为 `IsReady()` 的方法来确保组件的当前状态有效。如果 `IsReady()` 方法返回 `true`，该组件类就会检查其他组件的 `IsReady()` 方法。
+
+例如，`Engine` 类分别通过 `Wheels` 和 `Aviation` 的 `IsReady()` 方法来确保它们处于有效状态。而 `Cockpit` 则检查自身、`Engine` 和 `Aviation` 的状态。因此，类之间存在耦合和代码重复。当引入新的组件类时，这种情况会变得更糟。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_69_0.png)
 
@@ -1804,7 +1800,9 @@ GoF 定义：“定义一个对象，封装一组对象如何交互。中介者�
 我们可以通过引入中介者模式来改进上述情况。通过引入中介者，组件类之间不再直接通信。所有组件都与一个新的中介者类通信。其优点有：
 
 - 组件之间松散耦合
+
 - 集中式管理
+
 - 更改代码时更灵活
 
 新方法如下所示：
@@ -1879,13 +1877,13 @@ public class Cockpit
 }
 ```
 
-请注意，Aviation 类的 IsReady() 方法返回 false。FlightMediator 构造函数将所有的组件类作为输入。IsReady() 方法会检查所有关联组件的 IsReady() 方法，以确保校验正确。
+请注意，`Aviation` 类的 `IsReady()` 方法返回 `false`。`FlightMediator` 构造函数将所有的组件类作为输入。`IsReady()` 方法会检查所有关联组件的 `IsReady()` 方法，以确保校验正确。
 
 运行 Windows Forms 应用程序后，您会看到以下界面。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_72_0.png)
 
-单击 FlightMediator 按钮，您会看到颜色变为红色，因为返回的状态为 false。
+单击 `FlightMediator` 按钮，您会看到颜色变为红色，因为返回的状态为 `false`。
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_72_1.png)
 
@@ -1895,9 +1893,9 @@ public class Cockpit
 
 # 19. 备忘录模式
 
-在本章中，我想尝试一下备忘录模式。备忘录模式提供了一种面向对象的方式来保存对象的状态。这个状态称为备忘录（Memento），以后可以用来恢复该对象。
+在本章中，我想尝试一下备忘录模式。备忘录模式提供了一种面向对象的方式来保存对象的状态。这个状态称为备忘录（`Memento`），以后可以用来恢复该对象。
 
-Memento 在英语中的意思是“对过去事件的提醒”。
+`Memento` 在英语中的意思是“对过去事件的提醒”。
 
 ## 挑战
 
@@ -1913,21 +1911,21 @@ GoF 定义：“在不违反封装的前提下，捕获并外部化一个对象�
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_73_0.png)
 
-以下是 Drawing 类的定义：
+以下是 `Drawing` 类的定义：
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_74_0.png)
 
-AddLine() 方法允许在图形上添加线条。这些信息作为状态存储在 _list 对象中。
+`AddLine()` 方法允许在图形上添加线条。这些信息作为状态存储在 `_list` 对象中。
 
-CreateMemento() 方法允许在不违反封装的情况下获取内部状态的副本。
+`CreateMemento()` 方法允许在不违反封装的情况下获取内部状态的副本。
 
-RestoreMemento() 方法允许将状态恢复到给定的备忘录。
+`RestoreMemento()` 方法允许将状态恢复到给定的备忘录。
 
-以下是 Memento 类的定义：
+以下是 `Memento` 类的定义：
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_74_1.png)
 
-它包含一个 State 属性，用于保存 Drawing 类的状态。
+它包含一个 `State` 属性，用于保存 `Drawing` 类的状态。
 
 ## 执行应用程序
 
@@ -1957,9 +1955,9 @@ RestoreMemento() 方法允许将状态恢复到给定的备忘录。
 
 ## 挑战
 
-您正在开发一个应用程序，其设置存储在 Settings 类中。类的属性在构造函数中被赋值。这涉及调用配置文件、安全数据库、用户配置文件数据库等。
+您正在开发一个应用程序，其设置存储在 `Settings` 类中。类的属性在构造函数中被赋值。这涉及调用配置文件、安全数据库、用户配置文件数据库等。
 
-您需要将上述实例传递给某个库中的组件。该组件可能会随意修改这些属性，因此我们只能发送 Settings 的另一个实例。由于实例创建的开销很大，我们需要创建上述实例的一个副本。
+您需要将上述实例传递给某个库中的组件。该组件可能会随意修改这些属性，因此我们只能发送 `Settings` 的另一个实例。由于实例创建的开销很大，我们需要创建上述实例的一个副本。
 
 最佳方法是什么？
 
@@ -1975,11 +1973,7 @@ GoF 定义：“使用原型实例指定要创建的对象的种类，并通过�
 
 创建新对象并修改它。从修改后的对象创建原型。
 
-System.Object 类包含一个名为 MemberwiseClone() 的新方法，它提供当前对象的浅拷贝。浅拷贝仅涉及复制
-
-
-
-值类型。结合 ICloneable 接口，我们可以为 Settings 类提供一个 Clone() 方法，该方法调用 MemberwiseClone()。
+`System.Object` 类包含一个名为 `MemberwiseClone()` 的新方法，它提供当前对象的浅拷贝。浅拷贝仅涉及复制值类型。结合 `ICloneable` 接口，我们可以为 `Settings` 类提供一个 `Clone()` 方法，该方法调用 `MemberwiseClone()`。
 
 ```csharp
 public class Settings : ICloneable
@@ -2030,7 +2024,7 @@ public class Settings : ICloneable
 
 ## 执行应用程序
 
-现在我们可以尝试操作类实例。首先我们创建一个 Settings 实例（这是一个 3 秒的延迟过程）。之后我们对 Settings 实例进行克隆并修改属性。我们可以看到新的实例是使用 Clone() 方法创建的。
+现在我们可以尝试操作类实例。首先我们创建一个 `Settings` 实例（这是一个 3 秒的延迟过程）。之后我们对 `Settings` 实例进行克隆并修改属性。我们可以看到新的实例是使用 `Clone()` 方法创建的。
 
 ```csharp
 static void Main(string[] args)
@@ -2048,10 +2042,12 @@ static void Main(string[] args)
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_79_0.png)
 
+
+
 我们可以从上面的代码看出：
 
-1. 实例 1 是使用 new 关键字创建的
-2. 实例 2 是使用 Clone() 方法创建的
+1. 实例 1 是使用 `new` 关键字创建的
+2. 实例 2 是使用 `Clone()` 方法创建的
 3. 修改实例 2 不会影响实例 1
 
 至此，我们对原型模式的实验就结束了。
@@ -2065,7 +2061,7 @@ http://sourcemaking.com/design_patterns/prototype
 在本章中我们探索了原型模式。原型模式的使用可以总结为：
 
 - 使用所需属性更快地创建实例
-- 实例创建时可以避免使用 new 关键字
+- 实例创建时可以避免使用 `new` 关键字
 - 为抽象工厂模式提供一种替代方案
 - 在运行时指定实例属性
 
@@ -2093,7 +2089,7 @@ GoF 定义："将抽象与其实现分离，以便两者可以独立变化"
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_82_0.png)
 
-这里具体的 Logger 实现派生自 AbstractLogger 类。具体的 TransactionBL 派生自 AbstractBL 类。AbstractBL 类持有对 Logger（抽象 Logger）的引用。
+这里具体的 Logger 实现派生自 `AbstractLogger` 类。具体的 `TransactionBL` 派生自 `AbstractBL` 类。`AbstractBL` 类持有对 `Logger`（抽象 Logger）的引用。
 
 使用如上所示的桥接模式，实现与抽象解耦。它允许在不修改 BL 类的情况下对 Logger 类进行未来扩展。
 
@@ -2134,7 +2130,7 @@ Console.ReadKey(false);
 
 ## 挑战
 
-你正在开发一个绘图应用程序，允许在画布上创建线条和圆圈。Line 和 Circle 类为你完成了这项工作。你需要将绘图与拥有各自应用程序副本的多个用户进行通信。当前使用上述类的序列化进行绘图持久化会产生大尺寸文件，并且不允许通过聊天窗口发送消息。如何提供更小尺寸、更易于通信的持久化解决方案？
+你正在开发一个绘图应用程序，允许在画布上创建线条和圆圈。`Line` 和 `Circle` 类为你完成了这项工作。你需要将绘图与拥有各自应用程序副本的多个用户进行通信。当前使用上述类的序列化进行绘图持久化会产生大尺寸文件，并且不允许通过聊天窗口发送消息。如何提供更小尺寸、更易于通信的持久化解决方案？
 
 ## 定义
 
@@ -2148,10 +2144,10 @@ GoF 定义："给定一种语言，为其语法定义一种表示形式，以及
 
 以下是我们绘图应用程序涉及的类：
 
-- 一个 Line 类
-- 一个 Circle 类
+- 一个 `Line` 类
+- 一个 `Circle` 类
 
-解释器 Execute() 方法的主体如下所示：
+解释器 `Execute()` 方法的主体如下所示：
 
 ```
 public void Execute(string commands, Graphics graphics)
@@ -2208,10 +2204,6 @@ public void Execute(string commands, Graphics graphics)
 }
 ```
 
-
-
-
-
 以下是类图：
 
 ![](img/10a39e9a5b1ae55cb003d638eba7aaa0_87_0.png)
@@ -2257,15 +2249,15 @@ http://www.dofactory.com/Patterns/PatternInterpreter.aspx#_self1
 
 ## 定义
 
-GoF 定义：“将对象组合成树形结构以表示整体-部分层次结构。组合模式让客户端可以统一地处理单个对象和对象组合”
+GoF 定义："将对象组合成树形结构以表示整体-部分层次结构。组合模式让客户端可以统一地处理单个对象和对象组合"
 
 ## 实现
 
 我们可以在上述场景中使用组合设计模式。一旦我们的解决方案实现，总部只需要考虑分支。分支将考虑各自的时钟。
 
-我们的解决方案中有 2 个类：Office 和 Clock。Office 类可以表示总部和分支。Clock 类管理用于更改时间的时钟控件。
+我们的解决方案中有 2 个类：`Office` 和 `Clock`。`Office` 类可以表示总部和分支。`Clock` 类管理用于更改时间的时钟控件。
 
-我们需要引入一个接口，由 Office 和 Clock 类实现。
+我们需要引入一个接口，由 `Office` 和 `Clock` 类实现。
 
 ```csharp
 interface IComponent
@@ -2275,13 +2267,13 @@ interface IComponent
 }
 ```
 
-Add() 方法确保添加类型为 IComponent 的组件。可用于添加 Office 或 Clock 实例。
+`Add()` 方法确保添加类型为 `IComponent` 的组件。可用于添加 `Office` 或 `Clock` 实例。
 
-SetTime() 方法可用于更改当前时间。
+`SetTime()` 方法可用于更改当前时间。
 
 ## 类实现
 
-以下是 Office 和 Clock 类的实现：
+以下是 `Office` 和 `Clock` 类的实现：
 
 ```csharp
 class Office : IComponent
@@ -2316,7 +2308,7 @@ class Clock : IComponent
 }
 ```
 
-请注意，Office 类的 SetTime() 实现负责通知所有添加的 IComponent 实例。因此总部可以通知所有分支。分支将通知所有时钟实例。
+请注意，`Office` 类的 `SetTime()` 实现负责通知所有添加的 `IComponent` 实例。因此总部可以通知所有分支。分支将通知所有时钟实例。
 
 ## 创建实例
 
@@ -2365,4 +2357,3 @@ http://www.oodesign.com
 ## 源代码
 
 电子书的源代码可在 http://jeanpaulva.com 上找到。
-

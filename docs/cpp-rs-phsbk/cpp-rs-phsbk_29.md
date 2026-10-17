@@ -1,3 +1,4 @@
+
 # 类型等效
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/type_equivalents.html`](https://cel.cs.brown.edu/crp/idioms/type_equivalents.html)
@@ -25,7 +26,7 @@
 
 在 C++ 中，`size_t` 传统上仅用于索引、大小和偏移量。在 Rust 中，`usize` 也是这样，它是指针大小的无符号整数类型。指针大小的有符号整数类型 `isize` 遵循类似的传统。
 
-一些原始的 C++ 和 POSIX 类型（如 `ssize_t` 和 `off_t` 作为返回类型）不映射到 `isize`，因为错误情况是用 `std::io::Result` 表示，而不是用负数作为 哨兵值。其他类型（如 `fpos_t` 或 `off_t` 作为参数类型）则表示为普通的 `u64` 或在 Rust 中有更明确的表示。
+一些原始的 C++ 和 POSIX 类型（如 `ssize_t` 和 `off_t` 作为返回类型）不映射到 `isize`，因为错误情况是用 `std::io::Result` 表示，而不是用负数作为哨兵值。其他类型（如 `fpos_t` 或 `off_t` 作为参数类型）则表示为普通的 `u64` 或在 Rust 中有更明确的表示。
 
 | C++ 类型 | Rust 类型 |
 | --- | --- |
@@ -49,7 +50,7 @@ Rust 中与 `float16_t` 和 `float128_t`（`f16` 和 `f128`）相对应的类型
 
 ### 原始内存类型
 
-在 C++ 中，使用 `char`、`unsigned char` 或 `byte` 的指针或数组来表示原始内存。在 Rust 中，使用 `u8` 的数组（`[u8; N]`）、向量（`Vec<u8>`）或切片（`&[u8]`）来完成相同的目标。然而，以这种方式访问另一个 Rust 值的底层内存需要不安全 Rust。有 库 可以创建围绕这种访问的安全包装，用于诸如序列化或与硬件交互等目的。
+在 C++ 中，使用 `char`、`unsigned char` 或 `byte` 的指针或数组来表示原始内存。在 Rust 中，使用 `u8` 的数组（`[u8; N]`）、向量（`Vec<u8>`）或切片（`&[u8]`）来完成相同的目标。然而，以这种方式访问另一个 Rust 值的底层内存需要不安全 Rust。有库可以创建围绕这种访问的安全包装，用于诸如序列化或与硬件交互等目的。
 
 ### 字符和字符串类型
 
@@ -76,7 +77,7 @@ Rust 还包括用于平台特定字符串表示及其字符串切片的类型：
 | 表示字节 | 向量、数组或 `u8` 的切片 |
 | 与操作系统交互 | `OsString` 和 `&OsStr` |
 | 表示 UTF-8 | `String` |
-| 表示 UTF-16 | 使用 一个库 |
+| 表示 UTF-16 | 使用一个库 |
 
 ### 布尔类型
 
@@ -86,72 +87,53 @@ Rust 中的 `bool` 类型与 C++ 中的 `bool` 类型类似。与 C++ 不同，R
 
 在 C++ 中，`void` 表示函数不返回值。由于 Rust 是面向表达式的，所有函数都返回值。在 `void` 的位置，Rust 使用单位类型 `()`。当函数没有声明返回类型时，`()` 是返回类型。
 
-```rs
+```cpp
 #include <iostream>
 
 void process() {
     std::cout
         << "Does something, but returns nothing."
         << std::endl;
-} 
+}
 ```
 
-```rs
-
-#![allow(unused)] fn main() { fn process() {
-
-    println!("Does something but returns nothing.");
-
+```rust
+#![allow(unused)]
+fn main() {
+    fn process() {
+        println!("Does something but returns nothing.");
+    }
 }
-
-}
-
 ```
 
 由于单位类型只有一个值（也写作 `()`），该类型的值不提供任何信息。这也意味着返回值可以省略，就像上面的示例一样。以下示例使单位类型的用法明确。
 
-```rs
-
-#![allow(unused)] fn main() { fn process() -> () {
-
-    let () = println!("Does something but returns nothing.");
-
-    ()
-
+```rust
+#![allow(unused)]
+fn main() {
+    fn process() -> () {
+        let () = println!("Does something but returns nothing.");
+        ()
+    }
 }
-
-}
-
 ```
 
 单位类型和单位值的语法类似于空元组的语法。本质上，类型就是这样。以下示例展示了某些等效类型，尽管没有特殊的语法或语言集成。
 
-```rs
-
+```rust
 struct Pair<T1, T2>(T1, T2); // 与 (T1, T2) 相同
-
 struct Single<T>(T); // 只包含一个值 (T1) 的元组
-
 struct Unit; // 与 () 相同
-
 // 也可以写成
-
 // struct Unit();
 
 fn main() {
-
-    let pair = Pair(1,2.0);
-
+    let pair = Pair(1, 2.0);
     let single = Single(1);
-
     let unit = Unit;
-
     // 也可以写成
-
     // let unit = Unit();
-
 }
-
 ```
 
 使用单位类型而不是 `void` 允许在需要值的环境中（例如，在 C++ 中会返回 `void` 的函数调用）使用单位类型（如函数调用），这特别有助于定义和使用泛型函数，而不需要像 `std::is_void` 那样为 `void` 类型进行特殊处理。
@@ -202,13 +184,15 @@ C++ 和 Rust 容器都拥有自己的元素。然而，在两者中，元素类�
 
 对于映射和集合，与容器通过哈希或比较函数参数化相比，类型要求键类型实现 `std::hash::Hash`（无序）或 `std::cmp::Ord`（有序）特性。要使用具有不同哈希或比较函数的容器，必须使用具有不同特性实现的包装类型。
 
-由 STL 提供的许多 C++ 容器类型在 Rust 中没有等效类型。其中许多类型在第三方 库 中有等效可用。
+由 STL 提供的许多 C++ 容器类型在 Rust 中没有等效类型。其中许多类型在第三方库中有等效可用。
 
 在 C++ 和 Rust 中使用这些类型的一个显著不同之处在于 `Vec<T>` 和数组 `[T; N]` 类型，可以从这些类型中便宜地创建数据的一部分或全部的切片引用 `&[T]` 或 `&mut [T]`。因此，当定义一个不修改向量长度且不需要静态知道数组中元素数量的函数时，将参数作为 `&[T]` 或 `&mut [T]` 而不是所有类型的引用更为习惯。
 
+
+
 在 C++ 中，如果可能的话，最好使用开始和结束迭代器或范围而不是 `span`，因为迭代器更通用。同样，在 Rust 中，使用实现 `IntoIter<&T>` 或 `IntoIter<&mut T>` 的泛型类型，而不是 `&[T]` 也是如此。
 
-```rs
+```cpp
 #include <iterator>
 #include <vector>
 
@@ -222,31 +206,24 @@ void go(InputIter first, InputIter last) {
 int main() {
   std::vector<int> v = {1, 2, 3};
   go(v.begin(), v.end());
-} 
+}
 ```
 
 ```rs
-
 use std::iter::IntoIterator;
 
 fn go<'a>(iter: impl IntoIterator<Item = &'a mut i32>) {
-
     for x in iter {
-
         // ...
-
     }
-
 }
 
 fn main() {
-
     let mut v = vec![1, 2, 3];
-
     go(&mut v);
-
 }
-
 ```
 
-<link rel="stylesheet" type="text/css" href="../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Type equivalents)
+<link rel="stylesheet" type="text/css" href="../quiz/style.css">
+
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Type%20equivalents)

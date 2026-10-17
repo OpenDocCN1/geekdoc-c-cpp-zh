@@ -1,3 +1,4 @@
+
 # 06. 事件循环实现
 
 本章将介绍一个 echo 服务器的真实 C++代码。
@@ -265,6 +266,8 @@ static bool try_one_request(Conn *conn) {
 
 `STATE_RES` 状态的代码：
 
+
+
 ```cpp
 static void state_res(Conn *conn) {
     while (try_flush_buffer(conn)) {}
@@ -338,12 +341,11 @@ L_DONE:
 
 练习：
 
-1.  尝试在事件循环中使用 `epoll` 而不是 `poll`。这应该很容易。
+1. 尝试在事件循环中使用`epoll`而不是`poll`。这应该很容易。
 
-1.  我们正在使用 `memmove` 来回收读取缓冲区的空间。然而，在每次请求上使用 `memmove` 是不必要的，只需在 `read` 之前执行 `memmove` 的代码即可。
+2. 我们正在使用`memmove`来回收读取缓冲区的空间。然而，在每次请求上使用`memmove`是不必要的，只需在`read`之前执行`memmove`的代码即可。
 
-1.  在 `state_res` 函数中，对单个响应执行了 `write` 操作。在流水线场景中，我们可以缓冲多个响应，并在最后通过单个 `write` 调用来刷新它们。请注意，写入缓冲区可能在中间已满。
+3. 在`state_res`函数中，对单个响应执行了`write`操作。在流水线场景中，我们可以缓冲多个响应，并在最后通过单个`write`调用来刷新它们。请注意，写入缓冲区可能在中间已满。
 
-> +   [06_client.cpp](https://build-your-own.org/redis/06/06_client.cpp.htm)
-> +   
-> +   [06_server.cpp](https://build-your-own.org/redis/06/06_server.cpp.htm)
+> + [06_client.cpp](https://build-your-own.org/redis/06/06_client.cpp.htm)
+> + [06_server.cpp](https://build-your-own.org/redis/06/06_server.cpp.htm)

@@ -1,11 +1,10 @@
+
 # 100 个 C 语言示例初学者指南
-
-
 
 ![](img/image_rsrc27X.jpg)
 
-
 ## 1. Hello, World 程序
+
 ```c
 #include <stdio.h>
 
@@ -16,6 +15,7 @@ printf("Hello, World!");
 ```
 
 ## 2. 两个数相和
+
 ```c
 #include <stdio.h>
 
@@ -30,6 +30,7 @@ int main() {
 ```
 
 ## 3. 数的阶乘
+
 ```c
 #include <stdio.h>
 
@@ -47,6 +48,7 @@ int main() {
 ```
 
 ## 4. 斐波那契数列
+
 ```c
 #include <stdio.h>
 
@@ -70,6 +72,7 @@ int main() {
 ```
 
 ## 5. 检查质数
+
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -99,6 +102,7 @@ int main() {
 # 组-2
 
 ## 1. 检查奇偶
+
 ```c
 #include <stdio.h>
 
@@ -115,6 +119,7 @@ int main() {
 ```
 
 ## 2. 打印乘法表
+
 ```c
 #include <stdio.h>
 
@@ -130,6 +135,7 @@ int main() {
 ```
 
 ## 3. 计算单利
+
 ```c
 #include <stdio.h>
 
@@ -144,6 +150,7 @@ int main() {
 ```
 
 ## 4. 摄氏度到华华度转换
+
 ```c
 #include <stdio.h>
 
@@ -158,6 +165,7 @@ int main() {
 ```
 
 ## 5. 找出三个数中的最大值
+
 ```c
 #include <stdio.h>
 
@@ -178,6 +186,7 @@ int main() {
 # 组-3
 
 ## 1. 检查闰年
+
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -202,6 +211,7 @@ int main() {
 ```
 
 ## 2. 计算数的幂
+
 ```c
 #include <stdio.h>
 
@@ -223,6 +233,7 @@ int main() {
 ```
 
 ## 3. 翻转数字
+
 ```c
 #include <stdio.h>
 
@@ -241,6 +252,7 @@ int main() {
 ```
 
 ## 4. 交换两个数
+
 ```c
 #include <stdio.h>
 
@@ -258,6 +270,7 @@ int main() {
 ```
 
 ## 5. 计算最大公约数 (GCD)
+
 ```c
 #include <stdio.h>
 
@@ -270,10 +283,12 @@ int gcd(int a, int b) {
 
 // 注意：原文中的 main 函数存在逻辑错乱，
 // 但核心逻辑已保留。
+```
 
 # 组-4
 
 ## 1. 自然数之和
+
 ```c
 #include <stdio.h>
 
@@ -290,6 +305,7 @@ int main() {
 ```
 
 ## 2. 打印数组元素
+
 ```c
 #include <stdio.h>
 
@@ -305,6 +321,7 @@ int main() {
 ```
 
 ## 3. 计算圆面积
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -320,6 +337,7 @@ int main() {
 ```
 
 ## 4. 字符串长度
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -334,6 +352,7 @@ int main() {
 ```
 
 ## 5. 打印字符的 ASCII 值
+
 ```c
 #include <stdio.h>
 
@@ -349,6 +368,7 @@ int main() {
 # SET-5
 
 ## 1. 计算三角形面积
+
 ```c
 #include <stdio.h>
 
@@ -363,6 +383,7 @@ int main() {
 ```
 
 ## 2. 数字位之和
+
 ```c
 #include <stdio.h>
 
@@ -381,6 +402,7 @@ int main() {
 ```
 
 ## 3. 检查阿姆斯特斯特数
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -404,6 +426,7 @@ int main() {
 ```
 
 ## 4. 使用递归打印斐波那契数列
+
 ```c
 #include <stdio.h>
 
@@ -425,6 +448,7 @@ int main() {
 ```
 
 ## 5. 使用递归计算幂
+
 ```c
 #include <stdio.h>
 
@@ -444,9 +468,10 @@ int main() {
 }
 ```
 
-## SET-6
+# SET-6
 
 ## 1. 计算两个数的最小公倍数 (LCM)
+
 ```c
 #include <stdio.h>
 
@@ -470,9 +495,20 @@ int main() {
 ```
 
 ## 2. 检查数字是否为完美数
+
 ```c
 #include <stdio.h>
+```
 
+
+
+# C 语言编程题集（SET-5 至 SET-9）
+
+## SET-5
+
+### 1. 检查数字是否为完数
+
+```c
 int isPerfectNumber(int num) {
     int sum = 0;
     for (int i = 1; i <= num / 2; i++) {
@@ -492,23 +528,16 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     if (isPerfectNumber(num)) {
-        // 逻辑在此
-
-
-
-
-
-```c
-printf("%d is a perfect number.", num);
-} else {
-    printf("%d is not a perfect number.", num);
-}
-
-return 0;
+        printf("%d is a perfect number.", num);
+    } else {
+        printf("%d is not a perfect number.", num);
+    }
+    return 0;
 }
 ```
 
-## 3. 反转数组
+### 2. 反转数组元素
+
 ```c
 #include <stdio.h>
 
@@ -527,7 +556,8 @@ int main() {
 }
 ```
 
-## 4. 求数组元素之和
+### 3. 求数组元素之和
+
 ```c
 #include <stdio.h>
 
@@ -543,7 +573,8 @@ int main() {
 }
 ```
 
-## 5. 检查数字是否为回文
+### 4. 检查数字是否为回文
+
 ```c
 #include <stdio.h>
 
@@ -572,7 +603,8 @@ int main() {
 
 ## SET-6
 
-## 1. 数组按升序排序
+### 1. 数组按升序排序
+
 ```c
 #include <stdio.h>
 
@@ -597,7 +629,8 @@ int main() {
 }
 ```
 
-## 2. 检查字符串是否为回文
+### 2. 检查字符串是否为回文
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -626,7 +659,8 @@ int main() {
 }
 ```
 
-## 3. 统计字符串中元音和辅音的数量
+### 3. 统计字符串中元音和辅音的数量
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -657,7 +691,8 @@ int main() {
 }
 ```
 
-## 4. 寻找数组中的最大元素
+### 4. 寻找数组中的最大元素
+
 ```c
 #include <stdio.h>
 
@@ -675,7 +710,8 @@ int main() {
 }
 ```
 
-## 5. 使用函数计算数字的幂
+### 5. 使用函数计算数字的幂
+
 ```c
 #include <stdio.h>
 
@@ -699,7 +735,8 @@ int main() {
 
 ## SET-7
 
-## 1. 寻找数组中的最小元素
+### 1. 寻找数组中的最小元素
+
 ```c
 #include <stdio.h>
 
@@ -717,7 +754,8 @@ int main() {
 }
 ```
 
-## 2. 输出两个数的最大公约数 (HCF)
+### 2. 输出两个数的最大公约数 (HCF)
+
 ```c
 #include <stdio.h>
 
@@ -739,7 +777,8 @@ int main() {
 }
 ```
 
-## 3. 输出指定区间内的质数
+### 3. 输出指定区间内的质数
+
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -765,7 +804,8 @@ int main() {
 }
 ```
 
-## 4. 检查数字是否为平方数
+### 4. 检查数字是否为平方数
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -788,7 +828,8 @@ int main() {
 }
 ```
 
-## 5. 检查数字是否为强数
+### 5. 检查数字是否为强数
+
 ```c
 #include <stdio.h>
 
@@ -825,7 +866,8 @@ int main() {
 
 ## SET-8
 
-## 1. 使用递归求自然数之和
+### 1. 使用递归求自然数之和
+
 ```c
 #include <stdio.h>
 
@@ -843,7 +885,8 @@ int main() {
 }
 ```
 
-## 2. 统计字符串中的单词数
+### 2. 统计字符串中的单词数
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -865,7 +908,8 @@ int main() {
 }
 ```
 
-## 3. 计算数组元素的平均值
+### 3. 计算数组元素的平均值
+
 ```c
 #include <stdio.h>
 
@@ -882,7 +926,8 @@ int main() {
 }
 ```
 
-## 4. 使用递归计算数字的阶乘
+### 4. 使用递归计算数字的阶乘
+
 ```c
 #include <stdio.h>
 
@@ -900,7 +945,8 @@ int main() {
 }
 ```
 
-## 5. 计算矩形的面积
+### 5. 计算矩形的面积
+
 ```c
 #include <stdio.h>
 
@@ -914,9 +960,14 @@ int main() {
 }
 ```
 
-# SET-9
+## SET-9
 
-## 1. 寻找矩阵对角线元素之和
+### 1. 寻找矩阵对角线元素之和
+
+
+
+## 1. 计算矩阵主对角线元素之和
+
 ```c
 #include <stdio.h>
 
@@ -940,6 +991,7 @@ int main() {
 ```
 
 ## 2. 找出数组中偶数和与奇数和之差
+
 ```c
 #include <stdio.h>
 
@@ -959,10 +1011,6 @@ int main() {
 }
 ```
 
-
-
-
-
 ```c
 sumEven += arr[i];
 } else {
@@ -978,7 +1026,7 @@ return 0;
 }
 ```
 
-### 3. 一个数字是否为 Disarium 数:
+## 3. 一个数字是否为 Disarium 数
 
 ```c
 #include <stdio.h>
@@ -1012,7 +1060,7 @@ int main() {
 }
 ```
 
-### 4. 打印杨辉三角形:
+## 4. 打印杨辉三角形
 
 ```c
 #include <stdio.h>
@@ -1046,7 +1094,7 @@ int main() {
 }
 ```
 
-### 5. 使用 Switch Case 实现一个简单的计算器:
+## 5. 使用 Switch Case 实现一个简单的计算器
 
 ```c
 #include <stdio.h>
@@ -1083,7 +1131,7 @@ int main() {
 
 ## SET-10
 
-### 1. 数组降序排序:
+### 1. 数组降序排序
 
 ```c
 #include <stdio.h>
@@ -1108,7 +1156,7 @@ int main() {
 }
 ```
 
-### 2. 打印空心矩形图案:
+### 2. 打印空心矩形图案
 
 ```c
 #include <stdio.h>
@@ -1129,7 +1177,7 @@ int main() {
 }
 ```
 
-### 3. 实现冒泡排序:
+### 3. 实现冒泡排序
 
 ```c
 #include <stdio.h>
@@ -1157,7 +1205,7 @@ int main() {
 }
 ```
 
-### 4. 反转字符串:
+### 4. 反转字符串
 
 ```c
 #include <stdio.h>
@@ -1181,7 +1229,7 @@ int main() {
 }
 ```
 
-### 5. 十进制转二进制:
+### 5. 十进制转二进制
 
 ```c
 #include <stdio.h>
@@ -1207,7 +1255,7 @@ int main() {
 
 ## SET-11
 
-### 1. 矩阵乘法:
+### 1. 矩阵乘法
 
 ```c
 #include <stdio.h>
@@ -1250,7 +1298,7 @@ int main() {
 }
 ```
 
-### 2. 寻找矩阵主对线上下的元素之和:
+### 2. 寻找矩阵主对线上下的元素之和
 
 ```c
 #include <stdio.h>
@@ -1276,27 +1324,13 @@ int main() {
 }
 ```
 
-### 3. 计算 3x3 矩阵的行列式:
+### 3. 计算 3x3 矩阵的行列式
 
-```c
-#include <stdio.h>
-int main() {
-    int matrix[3][3];
-    int i, j;
-    long determinant = 0;
-    printf("Enter the 9 elements of the matrix: \n");
-    for (i = 0; i < 3; i++)
-        for (j = 0; j < 3; j++)
-            scanf("%d", &matrix[i][j]);
-    // 此处省略具体的行列式计算逻辑，保持原文结构一致
-    printf("The determinant of the 3x3 matrix is: %ld", determinant);
-    return 0;
-}
-```
 
-## SET-12
 
-### 1. 检查矩阵是否为对称矩阵:
+# SET-12
+
+## 1. 检查矩阵是否为对称矩阵
 
 ```c
 #include <stdio.h>
@@ -1328,7 +1362,7 @@ int main() {
 }
 ```
 
-### 2. 寻找两个数的最大公约数 (GCD):
+## 2. 寻找两个数的最大公约数 (GCD)
 
 ```c
 #include <stdio.h>
@@ -1337,10 +1371,6 @@ int gcd(int a, int b) {
         return a;
 }
 ```
-
-
-
-
 
 ```c
 return gcd(b, a % b);
@@ -1479,7 +1509,7 @@ int main() {
 }
 ```
 
-## SET-13
+# SET-13
 
 ## 1. 生成到指定数字的斐波那契数列
 
@@ -1609,7 +1639,7 @@ int main() {
 }
 ```
 
-## SET-14
+# SET-14
 
 ## 1. 计算圆的面积和周长
 
@@ -1684,6 +1714,9 @@ int main() {
 
 ## 4. 计算正弦序列
 
+
+
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -1725,7 +1758,7 @@ int main() {
 }
 ```
 
-## SET-15
+# SET-15
 
 ## 1. 计算数字的平方根
 
@@ -1797,10 +1830,6 @@ void decimalToOctal(int decimalNumber) {
 }
 ```
 
-
-
-
-
 ```c
 decimalNumber /= 8;
 
@@ -1828,560 +1857,485 @@ return 0;
 ```
 
 ## 4. 找到数组中的最大值和最小元素
+
 ```c
 #include <stdio.h>
 
 int main() {
+    int array[] = {4, 2, 6, 8, 1, 9};
+    int n = sizeof(array) / sizeof(array[0]);
+    int max = array[0];
+    int min = array[0];
 
-int array[] = {4, 2, 6, 8, 1, 9};
-int n = sizeof(array) / sizeof(array[0]);
-int max = array[0];
-int min = array[0];
+    for (int i = 1; i < n; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
 
-for (int i = 1; i < n; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
 
-if (array[i] > max) {
-max = array[i];
-}
+    printf("Maximum element in array: %d\n", max);
+    printf("Minimum element in array: %d\n", min);
 
-if (array[i] < min) {
-min = array[i];
-}
-}
-
-printf("Maximum element in array: %d\n", max);
-printf("Minimum element in array: %d\n", min);
-
-return 0;
-
+    return 0;
 }
 ```
 
 ## 5. 检查字符串是否为回文
+
 ```c
 #include <stdio.h>
 #include <string.h>
 
 int isPalindrome(char str[]) {
+    int length = strlen(str);
 
-int length = strlen(str);
-for (int i = 0; i < length / 2; i++) {
+    for (int i = 0; i < length / 2; i++) {
+        if (str[i] != str[length - i - 1]) {
+            return 0;
+        }
+    }
 
-if (str[i] != str[length - i - 1]) {
-return 0;
-}
-}
-return 1;
+    return 1;
 }
 
 int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
 
-char str[100];
-printf("Enter a string: ");
-scanf("%s", str);
+    if (isPalindrome(str)) {
+        printf("%s is a palindrome.", str);
+    } else {
+        printf("%s is not a palindrome.", str);
+    }
 
-if (isPalindrome(str)) {
-printf("%s is a palindrome.", str);
-} else {
-printf("%s is not a palindrome.", str);
-}
-
-return 0;
+    return 0;
 }
 ```
 
 # SET-16
 
 ## 1. 检查一个数字是否为质数
+
 ```c
 #include <stdio.h>
 
 int isPrime(int num) {
+    if (num <= 1) {
+        return 0;
+    }
 
-if (num <= 1) {
-return 0;
-}
-for (int i = 2; i * i <= num; i++) {
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return 0;
+        }
+    }
 
-if (num % i == 0) {
-return 0;
-}
-}
-return 1;
+    return 1;
 }
 
 int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
 
-int num;
-printf("Enter a positive integer: ");
-scanf("%d", &num);
+    if (isPrime(num)) {
+        printf("%d is a prime number.", num);
+    } else {
+        printf("%d is not a prime number.", num);
+    }
 
-if (isPrime(num)) {
-printf("%d is a prime number.", num);
-} else {
-printf("%d is not a prime number.", num);
-}
-
-return 0;
+    return 0;
 }
 ```
 
 ## 2. 计算数字的阶阶
+
 ```c
 #include <stdio.h>
 
 unsigned long long factorial(int n) {
-
-if (n == 0) {
-return 1;
-} else {
-return n * factorial(n - 1);
-}
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
 }
 
 int main() {
+    int n;
+    printf("Enter a non-negative integer: ");
+    scanf("%d", &n);
+    printf("Factorial of %d = %llu", n, factorial(n));
 
-int n;
-printf("Enter a non-negative integer: ");
-scanf("%d", &n);
-printf("Factorial of %d = %llu", n, factorial(n));
-
-return 0;
+    return 0;
 }
 ```
 
-### 3. 使用插入排序排序数组
+## 3. 使用插入排序排序数组
+
 ```c
 #include <stdio.h>
 
 void insertionSort(int arr[], int n) {
+    int i, key, j;
 
-int i, key, j;
-for (i = 1; i < n; i++) {
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
 
-key = arr[i];
-j = i - 1;
-while (j >= 0 && arr[j] > key) {
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
 
-arr[j + 1] = arr[j];
-j = j - 1;
-}
-arr[j + 1] = key;
-}
+        arr[j + 1] = key;
+    }
 }
 
 void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
 
-for (int i = 0; i < n; i++) {
-
-printf("%d ", arr[i]);
-}
-printf("\n");
+    printf("\n");
 }
 
 int main() {
+    int arr[] = {12, 11, 13, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-int arr[] = {12, 11, 13, 5, 6};
-int n = sizeof(arr) / sizeof(arr[0]);
-insertionSort(arr, n);
-printf("Sorted array: \n");
-printArray(arr, n);
+    insertionSort(arr, n);
+    printf("Sorted array: \n");
+    printArray(arr, n);
 
-return 0;
+    return 0;
 }
 ```
 
 ## 4. 使用递归计算自然数之和
+
 ```c
 #include <stdio.h>
 
 int sumOfNaturalNumbers(int n) {
-
-if (n != 0) {
-return n + sumOfNaturalNumbers(n - 1);
-} else {
-return n;
-}
+    if (n != 0) {
+        return n + sumOfNaturalNumbers(n - 1);
+    } else {
+        return n;
+    }
 }
 
 int main() {
+    int num;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    printf("Sum of first %d natural numbers: %d", num, sumOfNaturalNumbers(num));
 
-int num;
-printf("Enter a positive integer: ");
-scanf("%d", &num);
-printf("Sum of first %d natural numbers: %d", num, sumOfNaturalNumbers(num));
-
-return 0;
+    return 0;
 }
 ```
 
 ## 5. 使用递归计算数字的幂
+
 ```c
 #include <stdio.h>
 
 long long power(int base, int exponent) {
-
-if (exponent != 0) {
-return (base * power(base, exponent - 1));
-} else {
-return 1;
-}
+    if (exponent != 0) {
+        return (base * power(base, exponent - 1));
+    } else {
+        return 1;
+    }
 }
 
 int main() {
+    int base, exponent;
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &base, &exponent);
+    printf("%d^%d = %lld", base, exponent, power(base, exponent));
 
-int base, exponent;
-printf("Enter base and exponent: ");
-scanf("%d %d", &base, &exponent);
-printf("%d^%d = %lld", base, exponent, power(base, exponent));
-
-return 0;
+    return 0;
 }
 ```
 
 # SET-17
 
-### 1. 计算两个数的的最大公约数 (GCD) 和最小公倍数 (LCM)
+## 1. 计算两个数的的最大公约数 (GCD) 和最小公倍数 (LCM)
+
 ```c
 #include <stdio.h>
 
 int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
 
-if (b == 0) {
-return a;
-}
-return gcd(b, a % b);
+    return gcd(b, a % b);
 }
 
 int lcm(int a, int b) {
-
-return (a * b) / gcd(a, b);
+    return (a * b) / gcd(a, b);
 }
 
 int main() {
+    int num1, num2;
+    printf("Enter positive integers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+    printf("LCM of %d and %d is %d", num1, num2, lcm(num1, num2));
 
-int num1, num2;
-printf("Enter positive integers: ");
-scanf("%d %d", &num1, &num2);
-printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
-printf("LCM of %d and %d is %d", num1, num2, lcm(num1, num2));
-
-return 0;
+    return 0;
 }
 ```
 
 ## 2. 无临时变量交换两个数字
+
 ```c
 #include <stdio.h>
 
 int main() {
+    int num1, num2;
+    printf("Enter numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Before swapping: a = %d, b = %d\n", num1, num2);
 
-int num1, num2;
-printf("Enter numbers: ");
-scanf("%d %d", &num1, &num2);
-printf("Before swapping: a = %d, b = %d\n", num1, num2);
-num1 = num1 + num2;
-num2 = num1 - num2;
-num1 = num1 - num2;
-printf("After swapping: a = %d, b = %d\n", num1, num2);
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
 
-return 0;
+    printf("After swapping: a = %d, b = %d\n", num1, num2);
+
+    return 0;
 }
 ```
 
 ## 3. 检查一个数字是否为平方数
+
 ```c
 #include <stdio.h>
 
 int isSquare(int num) {
+    for (int i = 1; i * i <= num; i++) {
+        if (num == i * i) {
+            return 1;
+        }
+    }
 
-for (int i = 1; i * i <= num; i++) {
-
-if (num == i * i) {
-return 1;
-}
-}
-return 0;
+    return 0;
 }
 
 int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
 
-int num;
-printf("Enter a number: ");
-scanf("%d", &num);
+    if (isSquare(num)) {
+        printf("%d is a perfect square.", num);
+    } else {
+        printf("%d is not a perfect square.", num);
+    }
 
-if (isSquare(num)) {
-printf("%d is a perfect square.", num);
-} else {
-printf("%d is not a perfect square.", num);
-}
-
-return 0;
+    return 0;
 }
 ```
 
 ## 4. 计算数字的各位之和
+
 ```c
 #include <stdio.h>
 
 int sumOfDigits(int num) {
+    if (num == 0) {
+        return 0;
+    }
 
-if (num == 0) {
-return 0;
-}
-return (num % 10) + sumOfDigits(num / 10);
+    return (num % 10) + sumOfDigits(num / 10);
 }
 
 int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Sum of digits of %d = %d", num, sumOfDigits(num));
 
-int num;
-printf("Enter a number: ");
-scanf("%d", &num);
-printf("Sum of digits of %d = %d", num, sumOfDigits(num));
-
-return 0;
+    return 0;
 }
 ```
 
 ## 5. 打印字符的 ASCII 值
+
 ```c
 #include <stdio.h>
 
 int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+    printf("ASCII value of %c is %d", ch, ch);
 
-char ch;
-printf("Enter a character: ");
-scanf(" %c", &ch);
-printf("ASCII value of %c is %d", ch, ch);
-
-return 0;
+    return 0;
 }
 ```
 
 # SET-18
 
 ## 1. 计算三角形的面积
+
 ```c
 #include <stdio.h>
 
 int main() {
+    float base, height, area;
+    printf("Enter the base of the triangle: ");
+    scanf("%f", &base);
+    printf("Enter the height of the triangle: ");
+    scanf("%f", &height);
 
-float base, height, area;
-printf("Enter the base of the triangle: ");
-scanf("%f", &base);
-printf("Enter the height of the triangle: ");
-scanf("%f", &height);
-area = 0.5 * base * height;
-printf("Area of the triangle = %.2f", area);
+    area = 0.5 * base * height;
+    printf("Area of the triangle = %.2f", area);
 
-return 0;
+    return 0;
 }
 ```
 
 ## 2. 检查数字是否为回文
+
 ```c
 #include <stdio.h>
 
 int isPalindrome(int num) {
+    int reversedNum = 0, originalNum = num;
 
-int reversedNum = 0, originalNum = num;
-while (num != 0) {
+    while (num != 0) {
+        reversedNum = reversedNum * 10 + num % 10;
+        num /= 10;
+    }
 
-reversedNum = reversedNum * 10 + num % 10;
-num /= 10;
-}
-return reversedNum == originalNum;
+    return reversedNum == originalNum;
 }
 
 int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
 
-int num;
-printf("Enter a number: ");
-scanf("%d", &num);
+    if (isPalindrome(num)) {
+        printf("%d is a palindrome.", num);
+    } else {
+        printf("%d is not a palindrome.", num);
+    }
 
-if (isPalindrome(num)) {
-printf("%d is a palindrome.", num);
-} else {
-printf("%d is not a palindrome.", num);
-}
-
-return 0;
+    return 0;
 }
 ```
 
 ## 3. 检查一个年份是否为闰年
+
 ```c
 #include <stdio.h>
 
 int isLeapYear(int year) {
+    if (year % 400 == 0) {
+        return 1;
+    }
 
-if (year % 400 == 0) {
-return 1;
-}
-if (year % 100 == 0) {
-return 0;
-}
-if (year % 4 == 0) {
-return 1;
-}
-return 0;
+    if (year % 100 == 0) {
+        return 0;
+    }
+
+    if (year % 4 == 0) {
+        return 1;
+    }
+
+    return 0;
 }
 
 int main() {
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
 
-int year;
-printf("Enter a year: ");
-scanf("%d", &year);
+    if (isLeapYear(year)) {
+        printf("%d is a leap year.", year);
+    } else {
+        printf("%d is not a leap year.", year);
+    }
 
-if (isLeapYear(year)) {
-printf("%d is a leap year.", year);
-} else {
-printf("%d is not a leap year.", year);
-}
-
-return 0;
+    return 0;
 }
 ```
 
 ## 4. 计算集合的幂集（递归方法）
-```c
-#include <stdio.h>
-#include <math.h>
 
-void printPowerSet(char *set, int set_size) {
 
-unsigned int pow_set_size = pow(2, set_size);
-int counter, j;
-for (counter = 0; counter < pow_set_size; counter++) {
-
-for (j = 0; j < set_size; j++) {
-
-if (counter & (1 << j))
-printf("%c", set[j]);
-}
-printf("\n");
-}
-}
-}
-
-int main() {
-
-char set[] = {'a', 'b', 'c'};
-printPowerSet(set, 3);
-
-return 0;
-}
-```
-
-## 5. 计算 N 个数的平均值和标准差
-```c
-#include <stdio.h>
-#include <math.h>
-
-int main() {
-
-int n, i;
-float num[100], sum = 0.0, mean, standardDeviation = 0.0;
-printf("Enter the number of data: ");
-scanf("%d", &n);
-printf("Enter %d elements: ", n);
-for (i = 0; i < n; ++i) {
-
-scanf("%f", &num[i]);
-sum += num[i];
-}
-mean = sum / n;
-for (i = 0; i < n; ++i)
-standardDeviation += pow(num[i] - mean, 2);
-printf("Mean = %.2f\n", mean);
-printf("Standard Deviation = %.2f", sqrt(standardDeviation / n));
-
-return 0;
-}
-```
 
 # SET-19
 
 ## 1. 计算数字的幂
+
 ```c
 #include <stdio.h>
 
 long long power(int base, int exponent) {
-
-long long result = 1;
-while (exponent != 0) {
-
-result *= base;
---exponent;
-}
-return result;
+    long long result = 1;
+    while (exponent != 0) {
+        result *= base;
+        --exponent;
+    }
+    return result;
 }
 
 int main() {
-
-int base, exponent;
-printf("Enter the base number: ");
-scanf("%d", &base);
-printf("Enter the exponent: ");
-scanf("%d", &exponent);
-printf("%d raised to the power of %d is %lld", base, exponent, power(base, exponent));
-
-return 0;
+    int base, exponent;
+    printf("Enter the base number: ");
+    scanf("%d", &base);
+    printf("Enter the exponent: ");
+    scanf("%d", &exponent);
+    printf("%d raised to the power of %d is %lld", base, exponent, power(base, exponent));
+    return 0;
 }
 ```
 
 ## 2. 实现冒泡排序
+
 ```c
 #include <stdio.h>
 
 void bubbleSort(int array[], int size) {
-
-for (int step = 0; step < size - 1; ++step) {
-
-for (int i = 0; i < size - step - 1; ++i) {
-
-if (array[i] > array[i + 1]) {
-
-// 交换
-int temp = array[i];
-array[i] = array[i + 1];
-array[i + 1] = temp;
-}
-}
-}
+    for (int step = 0; step < size - 1; ++step) {
+        for (int i = 0; i < size - step - 1; ++i) {
+            if (array[i] > array[i + 1]) {
+                // 交换
+                int temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+            }
+        }
+    }
 }
 
 int main() {
-
-int data[] = {9, 5, 1, 4, 3};
-int size = sizeof(data) / sizeof(data[0]);
-bubbleSort(data, size);
-
-return 0;
+    int data[] = {9, 5, 1, 4, 3};
+    int size = sizeof(data) / sizeof(data[0]);
+    bubbleSort(data, size);
+    printf("升序排列后的数组:\n");
+    for (int i = 0; i < size; ++i) {
+        printf("%d  ", data[i]);
+    }
+    return 0;
 }
 ```
 
-
-
-
-
-```c
-bubbleSort(data, size);
-
-printf("升序排列后的数组:\n");
-
-for (int i = 0; i < size; ++i) {
-    printf("%d  ", data[i]);
-}
-
-return 0;
-}
-```
-
-### 3. 实现选择排序：
+## 3. 实现选择排序
 
 ```c
 #include <stdio.h>
+
 void selectionSort(int array[], int size) {
     for (int step = 0; step < size - 1; ++step) {
         int min_idx = step;
@@ -2409,11 +2363,12 @@ int main() {
 }
 ```
 
-### 4. 检查字符串是否为另一个字符串的子串：
+## 4. 检查字符串是否为另一个字符串的子串
 
 ```c
 #include <stdio.h>
 #include <string.h>
+
 int isSubstring(char str1[], char str2[]) {
     if (strstr(str1, str2) != NULL) {
         return 1;
@@ -2436,10 +2391,11 @@ int main() {
 }
 ```
 
-### 5. 实现一个简单的计算器：
+## 5. 实现一个简单的计算器
 
 ```c
 #include <stdio.h>
+
 int main() {
     char operator;
     double num1, num2;
@@ -2473,11 +2429,12 @@ int main() {
 
 # SET-20
 
-### 1. 使用数组实现队列：
+## 1. 使用数组实现队列
 
 ```c
 #include <stdio.h>
 #define SIZE 5
+
 int items[SIZE];
 int front = -1, rear = -1;
 
@@ -2550,10 +2507,11 @@ int main() {
 }
 ```
 
-### 2. 计算单利：
+## 2. 计算单利
 
 ```c
 #include <stdio.h>
+
 int main() {
     float principle, rate, time, simpleInterest;
     printf("输入本金: ");
@@ -2568,11 +2526,12 @@ int main() {
 }
 ```
 
-### 3. 计算复利：
+## 3. 计算复利
 
 ```c
 #include <stdio.h>
 #include <math.h>
+
 int main() {
     float principle, rate, time, compoundInterest;
     printf("输入本金: ");
@@ -2587,10 +2546,11 @@ int main() {
 }
 ```
 
-### 4. 打印前 n 项斐波那契数列：
+## 4. 打印前 n 项斐波那契数列
 
 ```c
 #include <stdio.h>
+
 void printFibonacci(int n) {
     int a = 0, b = 1, c, i;
     if (n <= 0)
@@ -2614,10 +2574,11 @@ int main() {
 }
 ```
 
-### 5. 使用迭代法计算阶阶乘：
+## 5. 使用迭代法计算阶乘
 
 ```c
 #include <stdio.h>
+
 unsigned long long factorial(unsigned int n) {
     unsigned long long fact = 1;
     for (int i = 1; i <= n; ++i) {
@@ -2634,4 +2595,3 @@ int main() {
     return 0;
 }
 ```
-

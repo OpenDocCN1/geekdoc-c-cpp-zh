@@ -1,20 +1,5 @@
+
 # C 编程入门指南：实用方法
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 1.- 介绍
 
@@ -32,7 +17,7 @@
 
 ### 示例和练习
 
-感兴趣的学生可以获取课程示例和额外练习，还可以使用代码 lq5hhp 注册加入 Google Classroom 课堂 https://classroom.google.com/。
+感兴趣的学生可以获取课程示例和额外练习，还可以使用代码 `lq5hhp` 注册加入 Google Classroom 课堂 https://classroom.google.com/。
 
 注册后，我们可以继续学习更高级的主题，并就课程中涉及的主题提出问题或咨询。
 
@@ -68,11 +53,12 @@ Visual Studio 是一个基于项目的开发工具，项目可以使用不同的
 
 为了能够执行我们的示例，我们将安装适用于控制台的 C/C++ 包。
 
-安装 Visual Studio 后，我们必须创建一个名为 courseC 的“Windows 控制台应用程序”项目，放在 c:\ 文件夹中。
+安装 Visual Studio 后，我们必须创建一个名为 `courseC` 的“Windows 控制台应用程序”项目，放在 `c:\` 文件夹中。
 
 开发环境提供了许多选项：创建项目、编译、调试、执行……我们将在整个课程中看到所有这些。
 
 注意：
+
 如果你使用 Windows 以外的操作系统，可以尝试在 https://repl.it 上运行示例，你可以在那里用多种语言进行测试，包括 C 语言。
 
 ## 4.- 你的第一个C程序
@@ -123,7 +109,7 @@ Visual Studio 是一个基于项目的开发工具，项目可以使用不同的
 
 现在我们将用 C 语言编写第一个程序。
 
-打开 VisualStudio，转到“文件 - 打开项目 - courseC”。
+打开 VisualStudio，转到“文件 - 打开项目 - `courseC`”。
 
 复制以下代码片段：
 
@@ -151,10 +137,6 @@ int main ()
 
 这些要遵循的步骤就是我们所说的程序算法。
 
-
-
-
-
 ### Phase 2. 编辑程序
 
 一旦我们知道要做什么，就必须思考如何将该功能翻译成我们选择的编程语言，在本例中为 C。
@@ -177,7 +159,7 @@ int main ()
 
 如果我们的程序此时使用了编译器或操作系统的外部功能，则会添加对外部源的引用。
 
-链接过程完成后，会生成一个可执行文件（Windows 下为 .exe）。
+链接过程完成后，会生成一个可执行文件（Windows 下为 `.exe`）。
 
 ### Phase 5. 执行
 
@@ -209,7 +191,7 @@ int main ()
 
 我们将修改第一个程序并查看其效果，编译、链接和执行。
 
-我们可以用 /* */ 或 // 为程序添加注释
+我们可以用 `/* */` 或 `//` 为程序添加注释
 
 注释中写的所有内容都将被编译器忽略。
 
@@ -217,7 +199,7 @@ int main ()
 
 我们可以为第一个示例添加注释。
 
-现在我们去掉 printf 末尾的分号并编译。
+现在我们去掉 `printf` 末尾的分号并编译。
 
 如果我们的程序在编译时有语法错误，IDE 会向我们显示，以便我们可以解决它们。
 
@@ -242,23 +224,19 @@ int main ()
 
 这些行告诉编译器在何处查找未在此模块中定义的功能的定义。
 
-Pch.h 是所谓的预编译头，是外部定义的预编译版本，用于使编译过程更快。
+`Pch.h` 是所谓的预编译头，是外部定义的预编译版本，用于使编译过程更快。
 
-- 函数 main
+- 函数 `main`
 
-```
-int main ()
-```
-
-每个 C 程序都必须包含 main 函数，它是我们程序的入口点。
+每个 C 程序都必须包含 `main` 函数，它是我们程序的入口点。
 
 - 关键字
 
 我们的 C 程序将包含语言的一系列保留关键字，不能用作其他变量或函数的名称。
 
-- 外部函数 printf 和参数
+- 外部函数 `printf` 和参数
 
-printf 函数是 iostream 模块中定义的外部函数并添加
+`printf` 函数是 `iostream` 模块中定义的外部函数并添加
 
 ## 11.- 基本概念 .. 内存 位和字节
 
@@ -271,7 +249,9 @@ printf 函数是 iostream 模块中定义的外部函数并添加
 计算机的内存以字节的倍数表示
 
 1 千字节（或 1KB）为 1,024 字节。
+
 1 兆字节（或 1MB）为 1,024 千字节，即 1,048,576 字节。
+
 1 千兆字节（或 1GB）为 1,024 兆字节，即 1,073,741,824 字节
 
 ## 12.- 变量。 整数和实数
@@ -283,7 +263,8 @@ printf 函数是 iostream 模块中定义的外部函数并添加
 ### 整数变量
 
 是存储没有小数的整数的变量。
-变量的类型为 **int**
+
+变量的类型为 `int`
 
 整数例如为 -10、5、23000
 
@@ -313,21 +294,23 @@ int main (void)
 
 变量不能以数字开头
 
-例如 Var1、age、name551nteger
+例如 `Var1`、`age`、`name551nteger`
 
 ### 字符变量
 
 是存储字符的变量
-字符变量的类型为 **char**
 
-例如
-car = 'A';
+字符变量的类型为 `char`
+
+例如 `car = 'A';`
 
 ### 实数变量
 
 这些是可以存储带小数点的数字的变量。
+
 小数点用 . 表示（不是用 ,，如西班牙语）
-实数变量的类型为 **float**
+
+实数变量的类型为 `float`
 
 例如 2.9 34.89
 
@@ -361,7 +344,7 @@ int main (void)
 variable = value;
 ```
 
-### 运算 +, -, *, /
+### 运算 `+`, `-`, `*`, `/`
 
 例如
 
@@ -379,6 +362,7 @@ division = 12.2/2.5;
 如果算术表达式中存在实数，则会被转换为实数值
 
 例如
+
 ```
 float vreal;
 int ventera;
@@ -392,6 +376,7 @@ vreal = ventera * 10.5;
 有时为了代码清晰，我们可以强制从一种类型转换为另一种类型
 
 例如
+
 ```
 float vactual;
 int ventera;
@@ -425,11 +410,11 @@ int main (void)
 }
 ```
 
-首先我们声明将要使用的变量，price_less 和 price_with_vat 为实数，VAT 为整数。
+首先我们声明将要使用的变量，`price_less` 和 `price_with_vat` 为实数，`VAT` 为整数。
 
 然后我们要求用户输入不含增值税的价格值和增值税值。
 
-要请求用户输入数据，我们可以使用函数 scanf_s 或 scanf，具体取决于编译器版本。
+要请求用户输入数据，我们可以使用函数 `scanf_s` 或 `scanf`，具体取决于编译器版本。
 
 请求数据后，我们计算含增值税的价格并在屏幕上显示。
 
@@ -438,10 +423,6 @@ int main (void)
 在本节中，我们将讨论如何做出决策以定义程序的流程。
 
 我们将学习 C 中用于根据条件做出选择的各种语句。
-
-
-
-
 
 ## 17.- 逻辑比较
 
@@ -544,6 +525,8 @@ if (!(age > 18))
 
 例如，要在屏幕上显示你是否 20、30 或 40 岁。
 
+
+
 ```c
 /* options */
 #include <stdio.h>
@@ -595,7 +578,9 @@ int main(void)
 ### 问题定义
 
 编写一个基础计算器。
+
 用户将以 `x op y` 的形式输入运算
+
 计算机将显示运算结果。
 
 例如 `10.2 + 5.5`，`20.8 - 2.5`。
@@ -603,7 +588,9 @@ int main(void)
 ### 算法定义
 
 - 我们必须定义两个变量，`number1` 和 `number2`，以及要执行的运算（`+`、`-`、`*`、 `/`）。
+
 - 用户将被要求以 `x op y` 格式输入数字和运算。
+
 - 程序将计算运算结果并在屏幕上显示。
 
 ```c
@@ -819,20 +806,22 @@ char cad[] = "this is a phrase";
 ```
 
 - 连接两个字符串：`strcat(cad1, cad2);`
+
   - 它将 `cad2` 复制到 `cad1` 的末尾。
+
   - 注意 `cad1` 的大小。
+
 - 字符串的字符数：`strlen(cad);`
+
 - 比较字符串。
 
+`strcmp (cad1, cad2)`
 
+- 0 if `cad1 = cad2`
 
+- <0 if `cad1 < cad2`
 
-
-strcmp (cad1, cad2)
-
-- 0 if cad1 = cad2
-- <0 if cad1 < cad2
-- >0 if cad1 > cad2
+- >0 if `cad1 > cad2`
 
 ### Example
 
@@ -974,20 +963,23 @@ In this class we will see, perhaps, the most advanced functionality of the C lan
 In C we can define variables of a particular type that store values that we can access in our program
 
 E.g.
-int number = 2;
 
-In our program we can access the variable "number" through its name.
+`int number = 2;`
+
+In our program we can access the variable `number` through its name.
 
 The variables is a representation of a memory space that has a physical address.
 
 E.g.
-When we define the variable number, the compiler assigns it in memory address 12000.
+
+When we define the variable `number`, the compiler assigns it in memory address 12000.
 
 In our program instead of accessing the variable by the memory address, we access through its name and the compiler itself is in charge of mapping the name of the variable with its physical memory address.
 
 A pointer is a special type of variable that allows you to store the physical address of another variable, so that we can access it through an indirection.
 
 E.g.
+
 ```c
 int number = 2;
 int *number;
@@ -996,10 +988,13 @@ number = &number;
 *number = 3;
 ```
 
-In this example number is a pointer that will point to an integer variable.
-With the number assignment = &number, we are indicating that the pointer points to the variable number.
+In this example `number` is a pointer that will point to an integer variable.
 
-When assigning a value with *number = 3, we are indirectly modifying the variable number to which the pointer points.
+With the `number = &number` assignment, we are indicating that the pointer points to the variable `number`.
+
+
+
+When assigning a value with `*number = 3`, we are indirectly modifying the variable `number` to which the pointer points.
 
 ### Pointers are used
 
@@ -1020,11 +1015,11 @@ Depending on the scope where the variable is defined, the compiler allocates mem
 
 For global variables, the compiler allocates the memory of the variables in a separate data segment.
 
-The programmer can allocate memory dynamically at run time with the malloc function to which the number of bytes of the memory to be reserved is passed.
+The programmer can allocate memory dynamically at run time with the `malloc` function to which the number of bytes of the memory to be reserved is passed.
 
-The reserved memory is created in a data segment HEAP used only for dynamic memory.
+The reserved memory is created in a data segment `HEAP` used only for dynamic memory.
 
-The malloc function returns a pointer to the reserved memory area.
+The `malloc` function returns a pointer to the reserved memory area.
 
 E.g.
 
@@ -1032,11 +1027,11 @@ E.g.
 int *p = (int *) malloc (200);
 ```
 
-The malloc function reserves 200 bytes of memory and returns an untyped pointer to the reserved zone.
+The `malloc` function reserves 200 bytes of memory and returns an untyped pointer to the reserved zone.
 
 An explicit casting is done to indicate that there are integers in the memory area.
 
-The pointer p points to the reserved area with malloc.
+The pointer `p` points to the reserved area with `malloc`.
 
 The dynamic allocation of memory will allow us to manage quantities of data at the moment the program is executed and not at the moment of compilation.
 
@@ -1048,9 +1043,9 @@ The previous case can also be defined in the form
 int *p = (int *) malloc (100 * sizeof (int));
 ```
 
-It should be noted that the memory reserved with malloc is controlled by the programmer, not the compiler, and it is he who must release it when he does not use it.
+It should be noted that the memory reserved with `malloc` is controlled by the programmer, not the compiler, and it is he who must release it when he does not use it.
 
-The free function must be used to free the dynamically allocated memory.
+The `free` function must be used to free the dynamically allocated memory.
 
 E.g.
 
@@ -1085,14 +1080,15 @@ A function can be defined in the form
 
 ### Return name (parameters)
 
-**Return** is the value that will return the function and can be a data type (int, float ...) or **void** that is used to indicate that no value returns.
+`Return` is the value that will return the function and can be a data type (`int`, `float` ...) or `void` that is used to indicate that no value returns.
 
-**Name** is the identifier of the function
+`Name` is the identifier of the function
 
-**Parameters** is a separate list with commas of variables that we will pass to the function.
+`Parameters` is a separate list with commas of variables that we will pass to the function.
 
 E.g.
-float CalculateVat (float price, float vat)
+
+`float CalculateVat (float price, float vat)`
 
 ### Parameter by value
 
@@ -1148,7 +1144,7 @@ Sometimes we have information regarding an entity that we want to have grouped.
 
 For example, if we want to have data of age, weight, height ... on a person instead of have a variable for each attribute we could have it grouped in a data structure.
 
-In C we can group variables in a struct
+In C we can group variables in a `struct`
 
 Example
 
@@ -1161,7 +1157,7 @@ struct person
 };
 ```
 
-In this way we can define variable of type person, E.g
+In this way we can define variable of type `person`, E.g
 
 ```c
 struct person peter;
@@ -1184,16 +1180,13 @@ We can define a pointer to a structure of the form
 struct person *p;
 ```
 
-
-
-
 ### 用 & 符号给指针赋值
 
 ```c
 p = &peter;
 ```
 
-通过 -> 符号访问结构体的字段。
+通过 `->` 符号访问结构体的字段。
 
 ```c
 p -> height = 180;
@@ -1213,4 +1206,4 @@ p -> height = 180;
 
 我对计算机科学和信息技术充满热情，也希望激发更多人对这一领域的热情。
 
-在我的博客 https://evginformatica.blogspot.com 上，你可以找到关于编程的在线课程、教程和电子书。
+在我的博客 `https://evginformatica.blogspot.com` 上，你可以找到关于编程的在线课程、教程和电子书。

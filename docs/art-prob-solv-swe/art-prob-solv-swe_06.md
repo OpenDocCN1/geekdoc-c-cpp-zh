@@ -1,7 +1,7 @@
+
 # 第三章：如何有效解决软件问题
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter3.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter3.html)
-
 
 当遇到具有挑战性的问题时，软件专业人士通常会依赖经验来寻找解决方案。然而，尤其是这本书中讨论的众多 MySQL 问题，仅凭经验很难确定问题的根本原因。因此，需要科学的方法来分析和解决这些问题。
 
@@ -123,13 +123,13 @@ PGO（基于配置文件优化）在低并发情况下有效提高吞吐量。�
 
 ![](img/55494ad835ef85da7c96ba7a54419912.png)
 
-图 3-3\. 重做日志优化官方工作日志的描述。
+图 3-3. 重做日志优化官方工作日志的描述。
 
 为了解决重做日志的可扩展性问题，开发者已经将这个问题细分为以下子问题：
 
 ![](img/dbf161ee92fcb84b37550763ee075e40.png)
 
-图 3-4\. 重做日志优化官方工作日志的要求。
+图 3-4. 重做日志优化官方工作日志的要求。
 
 这涉及到对日志缓冲区的无锁并发写入，为处理写入和刷新过程而专设的线程，等等。
 
@@ -170,28 +170,28 @@ PGO（基于配置文件优化）在低并发情况下有效提高吞吐量。�
 这里是逻辑推理的原则 [15]，它可以在如何进行逻辑推理方面提供一些帮助：
 
 ```cpp
-1\.  ask for reasons before accepting a conclusion,
-2\.  give an argument to support your conclusion,
-3\.  design your reasons to imply the conclusion,
-4\.  recognize the value of having more relevant information,
-5\.  weigh the pros and cons,
-6\.  consider the possible courses of action,
-7\.  look at the consequences of these various courses of action,
-8\.  evaluate the consequences,
-9\.  consider the probabilities that those various consequences will actually occur,
-10\.  delay making important decisions when practical,
-11\.  assess what is said in light of the situation,
-12\.  use your background knowledge and common sense in drawing conclusions,
-13\.  remember that extraordinary statements require extraordinarily good evidence,
-14\.  defer to the expert,
-15\.  remember that firmer conclusions require better reasons,
-16\.  be consistent in your own reasoning,
-17\.  be on the lookout for inconsistency in the reasoning of yourself and others,
-18\.  check to see whether explanations fit all the relevant facts,
-19\.  you can make your opponent's explanation less believable by showing that there are 
+1.  ask for reasons before accepting a conclusion,
+2.  give an argument to support your conclusion,
+3.  design your reasons to imply the conclusion,
+4.  recognize the value of having more relevant information,
+5.  weigh the pros and cons,
+6.  consider the possible courses of action,
+7.  look at the consequences of these various courses of action,
+8.  evaluate the consequences,
+9.  consider the probabilities that those various consequences will actually occur,
+10.  delay making important decisions when practical,
+11.  assess what is said in light of the situation,
+12.  use your background knowledge and common sense in drawing conclusions,
+13.  remember that extraordinary statements require extraordinarily good evidence,
+14.  defer to the expert,
+15.  remember that firmer conclusions require better reasons,
+16.  be consistent in your own reasoning,
+17.  be on the lookout for inconsistency in the reasoning of yourself and others,
+18.  check to see whether explanations fit all the relevant facts,
+19.  you can make your opponent's explanation less believable by showing that there are 
      alternative explanations that haven't been ruled out,
-20\.  stick to the subject,
-21\.  don't draw a conclusion until you've gotten enough evidence. 
+20.  stick to the subject,
+21.  don't draw a conclusion until you've gotten enough evidence. 
 ```
 
 ## 3.5 逻辑推理：解决复杂问题的关键
@@ -211,6 +211,8 @@ PGO（基于配置文件优化）在低并发情况下有效提高吞吐量。�
 在许多情况下，获取关键问题解决信息的难度远超过解决问题本身的挑战。
 
 ## 3.7 常见问题解决框架
+
+
 
 在软件行业，面对问题时，最初的直觉通常是检查其他人是否遇到过类似的问题。然而，在问题解决过程中，个人经常依赖个人经验来提出解决方案，有时没有坚实的基础。怀疑可能指向网络故障或配置问题，促使采取各种行动，这些行动可能只是暂时缓解问题，而没有解决其根本原因。提问者和解决问题的人通常优先考虑快速修复，可能会忽视逻辑推理的关键作用。
 

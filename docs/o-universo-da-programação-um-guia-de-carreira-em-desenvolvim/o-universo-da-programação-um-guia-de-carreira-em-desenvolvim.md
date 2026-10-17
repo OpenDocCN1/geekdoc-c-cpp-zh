@@ -1,43 +1,19 @@
+
 # 编程世界：软件开发职业指南
-
-
-
-
-
-
 
 ![](img/1980cd0900b9cb84feb62a3cc0d390f3_0_0.png)
 
+## Sobre o autor
 
+Desenvolvedor de software, começou carreira em programação como full-stack, atuando com a linguagem `PHP` e migrando para front-end quando `JavaScript` ganhou grandes responsabilidades em aplicações de larga escala, dando a pessoa desenvolvedora de software a possibilidade de pensar em interfaces Web como aplicações, não mais que páginas estáticas.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Sobre o autor
-
-Desenvolvedor de software, começou carreira em programação como full-stack, atuando com a linguagem PHP e migrando para front-end quando JavaScript ganhou grandes responsabilidades em aplicações de larga escala, dando a pessoa desenvolvedora de software a possibilidade de pensar em interfaces Web como aplicações, não mais que páginas estáticas.
-
-Apaixonado por open source, software livre, conhecimento aberto, comunidades e afins, fundou o FEMUG-ABC, um grupo de meetups de desenvolvedores front-end, participou da fundação do evento ABCDev, um evento de desenvolvimento de software na região do Grande ABC Paulista e é criador do Training Center (http://trainingcenter.io), uma comunidade inclusiva focada em ajudar pessoas a entrarem na área de desenvolvimento de software.
+Apaixonado por open source, software livre, conhecimento aberto, comunidades e afins, fundou o FEMUG-ABC, um grupo de meetups de desenvolvedores front-end, participou da fundação do evento ABCDev, um evento de desenvolvimento de software na região do Grande ABC Paulista e é criador do Training Center (`http://trainingcenter.io`), uma comunidade inclusiva focada em ajudar pessoas a entrarem na área de desenvolvimento de software.
 
 Como uma pessoa que veio da favela brasileira, entende bem a dificuldade das pessoas menos privilegiadas, os grupos representados, e busca apoiar a diversidade e inclusão de minorias na área de programação de computadores.
 
-Desde 2014 contribui com a vida das pessoas incentivando a entrarem na área de programação através do blog pessoal woliveiras.com.br (https://woliveiras.com.br), palestras, workshops e participação em comunidades. Acredita cegamente que somente a educação pode mudar a sociedade em que vivemos, e por isso compartilha pensamentos e conhecimento pela internet afora.
+Desde 2014 contribui com a vida das pessoas incentivando a entrarem na área de programação através do blog pessoal `woliveiras.com.br` (`https://woliveiras.com.br`), palestras, workshops e participação em comunidades. Acredita cegamente que somente a educação pode mudar a sociedade em que vivemos, e por isso compartilha pensamentos e conhecimento pela internet afora.
 
-# Prefácio
+## Prefácio
 
 Quando William me pediu para escrever o prefácio do livro dele eu fiquei extremamente emocionada. Uma leitora viciada como eu sabe que é uma honra enorme escrever um prefácio, ainda mais se o autor é alguém que você admira e considera como um irmão.
 
@@ -49,58 +25,35 @@ Antes de perceber sequer que estava estava fazendo, eu simplesmente aceitei a en
 
 *Revisando a tradução para o chinês conforme solicitado no prompt (aplicando a lógica de tradução):*
 
-[content]
 ...Acredita cegamente que somente a educação pode mudar a sociedade em que vivemos, e por isso compartilha pensamentos e conhecimento pela internet afora.
 
-# Prefácio
+## Prefácio
 
 Quando o William me pediu para escrever o prefácio do livro dele, fiquei extremamente emocionada. Uma leitora viciada como eu sabe que é uma honra enorme escrever um prefácio, ainda mais se o autor for alguém que você admira e considera como um irmão.
 
 Antes de perceber sequer que estava fazendo, eu simplesmente aceitei o pedido. Fiquei muito feliz. Contei para o meu marido, ele ficou orgulhoso, comentou por alguns minutos e só então percebi o que tinha feito. Obviamente entrei em pânico. No interior da minha cabeça ressoava a seguinte frase: “O que eu fiz? Eu não tenho condições de escrever o prefácio de um livro, pessoas que escrevem prefácios são pessoas bem qualificadas, sabem o que estão fazendo, você não!”. Mas eu já tinha me comprometido, então tinha que.
 
 (O texto original fornecido no prompt parece estar em Português, mas a instrução pede para traduzir para o Chinês. Vou prosseguir com a tradução completa para o Chinês).
-[/content]
 
 ---
+
 **Nota do Engenheiro:** O texto de entrada que você forneceu está em **Português**, mas sua solicitação pede para traduzir para o **Chinês**. Abaixo apresento a tradução correta para chinês seguindo as regras:
-
-[content]
-
-
 
 ![](img/1980cd0900b9cb84feb62a3cc0d390f3_0_0.png)
 
+## 致谢
 
+## 关于作者
 
+软件开发人员，从全栈开发开始职业生涯，使用 `PHP` 语言，当 `JavaScript` 在大规模应用中获得巨大职责时转向了前端，这让软件开发人员能够将 Web 界面视为应用程序，而不仅仅是静态页面。
 
-
-
-
-
-
-
-
-
-
-
-# 致谢
-
-
-
-
-
-
-# 关于作者
-
-软件开发人员，从全栈开发开始职业生涯，使用 PHP 语言，当 JavaScript 在大规模应用中获得巨大职责时转向了前端，这让软件开发人员能够将 Web 界面视为应用程序，而不仅仅是静态页面。
-
-热衷于开源、自由软件、开放知识、社区及相关领域，创立了 FEMUG-ABC（一个前端开发者聚会小组），参与了 ABCDev 活动的创立（这是位于大圣保罗州大 ABC 地区的一个软件开发活动），并是 Training Center (http://trainingcenter.io) 的创始人，这是一个专注于帮助人们进入软件开发领域的包容性社区。
+热衷于开源、自由软件、开放知识、社区及相关领域，创立了 FEMUG-ABC（一个前端开发者聚会小组），参与了 ABCDev 活动的创立（这是位于大圣保罗州大 ABC 地区的一个软件开发活动），并是 Training Center (`http://trainingcenter.io`) 的创始人，这是一个专注于帮助人们进入软件开发领域的包容性社区。
 
 作为一名来自巴西贫民窟的人，他非常理解少数群体的困难、他们所代表的群体，并寻求支持计算机编程领域的多样性和包容性。
 
-自 2014 年以来，他通过个人博客 woliveiras.com.br (https://woliveiveiras.com.br)、讲座、工作坊和参与社区来鼓励人们进入编程领域。他深信只有教育才能改变我们所处的社会，因此在互联网上分享思想和知识。
+自 2014 年以来，他通过个人博客 `woliveiras.com.br` (`https://woliveiveiras.com.br`)、讲座、工作坊和参与社区来鼓励人们进入编程领域。他深信只有教育才能改变我们所处的社会，因此在互联网上分享思想和知识。
 
-# 前言
+## 前言
 
 当 William 邀请我为他的书写前言时，我感到非常激动。像我这样一个痴迷的读者知道，写前言是一项巨大的荣誉，特别是当作者还是你钦佩并视如兄弟的人时。
 
@@ -109,19 +62,16 @@ Antes de perceber sequer que estava fazendo, eu simplesmente aceitei o pedido. F
 *(注：原文此处有重复段落，已按逻辑合并处理或保留结构)*
 
 祝阅读愉快！
+
 Andréa K. F. Zambrana
-
-
-
-
 
 我在这里收集了我为我的导师对象提供的建议，因此这些建议适用于任何背景，也适用于编程领域内的任何方向，如前端、后端、全栈、移动端、游戏、工程和数据分析等（如果你不熟悉这些术语，不用担心，我会为你解释这一切）。
 
-## 概述
+### 概述
 
 我们从一个初始点出发，假设读者甚至不知道什么是编程，内容将涵盖不同的职业领域、获取第一份工作的建议，一直到学习如何成为一名全才全备的专业人士。
 
-# 第 1 章
+## 第 1 章
 
 我们将了解编程世界的基础知识，即：什么是编程、软件开发人员是做什么的、程序是如何创建的，以及这些程序是如何传达给我们最终用户的。
 
@@ -137,11 +87,11 @@ Andréa K. F. Zambrana
 
 这是本书最重要的章节之一，在这里我们认识软件开发中不同的发展领域。我们还学习了所有领域的共同点，并获得了关于如何选择编程作为我们未来方向的建议。
 
-# 第 5 章
+## 第 5 章
 
 到这里，读者已经在脑海中产生了许多其他问题，并且进行了大量的搜索（如果遵循了我的建议），他们可能变得比开始阅读时更加迷茫，因此我们回来回答一些在互联网上遇到的未完全解决的问题。
 
-# 第 6 章
+## 第 6 章
 
 在本章中，我们将学习如何通过良好的时间管理和情绪智能，来学习我们正在发现的、未来需要放入简历中的所有内容。
 
@@ -149,20 +99,19 @@ Andréa K. F. Zambrana
 
 我们将认识软件开发社区，并学习如何与这些小组互动以更快地学习，此外理解向这些空间贡献的必要性以及如何进行贡献。
 
-# 第 8 章
+## 第 8 章
 
 在本章中，我们总结了目前所学的一切，并可以开始规划我们的职业。为此，我们学习了如何破解招聘职位的神秘感、识别良好的工作机会、如何在从未正式在公司工作过的情况下获得工作经验，甚至了解编程领域的薪资以防掉入陷阱。
 
-# 第 9 章
+## 第 9 章
 
 在书的倒数第二章中，我们将了解为了成为更优秀的专业人士并在我们的职业生涯中走得更远，需要学习的内容。
 
-# 第 10 章
+## 第 10 章
 
 最后一章旨在为那些即将开启编程宇宙之旅的人提供我的个人建议。
 
-# 第 1 章
-广大的编程宇宙导论
+## 第 1 章：广大的编程宇宙导论
 
 软件开发不再仅仅是一个工作领域，而是一个真正的宇宙。有如此多的领域选择、如此多不同的技术和平台供选择，以至于很容易在信息的洪流中迷失方向。最有趣的是，这是一个不断扩张的宇宙，总是有在变化，而且变化之快，以至于我们似乎永远无法理解所听到的关于该领域的所有内容。这确保了总有新东西让我们学习。
 
@@ -178,7 +127,7 @@ Andréa K. F. Zambrana
 
 > “编程语言早于第一台现代计算机的出现。最初，语言仅仅是代码。在 1842-1843 年间的九个月里，艾达·洛芙莱斯（Ada Lovelace）翻译了意大利数学家路易吉·梅纳布雷亚（Luigi Menabrea）关于查尔斯·巴贝（Charles Babbage）提出的新机器——分析机的记忆。在文中，她附了一系列注释，详细说明了使用该机器计算伯努利数的方法，这被一些历史学家认为是世界上第一个计算机程序。”
 
-而第一台名为 Z1 的计算机直到 1936 年才出现，它由德国工程师康拉德·泽泽（Konrad Zuse）建造，他通过继电器执行计算并从磁带读取数据来组装计算机。因此，在开始，编程语言用于编写打孔卡，借此能够在更短的时间内解决复杂的计算，这对于人类未来来说是一件强大的武器。
+而第一台名为 `Z1` 的计算机直到 1936 年才出现，它由德国工程师康拉德·泽泽（Konrad Zuse）建造，他通过继电器执行计算并从磁带读取数据来组装计算机。因此，在开始，编程语言用于编写打孔卡，借此能够在更短的时间内解决复杂的计算，这对于人类未来来说是一件强大的武器。
 
 从那时起，编程领域发展如此迅速，出现了如此多的编程语言，以至于在它们之间迷失方向是非常常见的，以及那些正在出生的职业。
 
@@ -211,80 +160,13 @@ Andréa K. F. Zambrana
 
 以及当我们搜索人们对“创建应用程序”的兴趣时：
 
-
-
 ![](img/1980cd0900b9cb84feb62a3cc0d390f3_16_0.png)
 
-Figura 1.3: Google Trends para a pesquisa por criação de apps
+图 1.3：Google Trends para a pesquisa por criação de apps
 
-# Porém, algo pode ter passado despercebido pela mídia, que é: **o que é, de fato, programação?**
 
-Sem os programas que o controlam, o computador não passa de uma máquina inanimada. Imaginemos nosso computador como um foguete. Programar é o ato de passar coordenadas para o foguete de como ele deverá se comportar para claro que você vá a milhares de lugares. De maneira bem simples, claro, isto é programação: escrever instruções para computadores executarem tarefas.
 
-Agora, imagine que ir de um planeta para outro no espaço seja um problema que uma pessoa precisa resolver. O ato de escrever instruções para o rocket seria o mesmo que resolver um problema, certo?
-
-> Programar é isso: resolver problemas por meio da escrita de instruções para um computador executar.
-
-Essas instruções podem ser escritas em uma linguagem de programação, que será compilada em linguagem de máquina e será, enfim, executada pelo nosso computador, smartphone, placa eletrônica etc.
-
-Não se preocupe com os termos novos que vão aparecendo ao decorrer da leitura deste livro, entenderemos tudo isso conforme formas explorando mais a fundo este vasto universo.
-
-## 1.3 O que é um programa de computador
-
-Sabendo que programar é escrever instruções e estas instruções podem ser escritas em linguagens de programação, então o que realmente é um programa?
-
-Ao nosso redor temos temos programas funcionando o tempo todo e às vezes não percebemos. Um programa de computador nada mais é que a junção das instruções que nós escrevemos (a programação propri dita) em uma linguagem de programação que pode ser compilada ou executada em computadores, smartphones, placas eletrônicas. Ao código escrito por quem desenvolve o software damos o nome de código-fonte.
-
-Compilação, que citei anteriormente, é o processo de pegar um código-fonte escrito em uma linguagem de programação que, normalmente, se aproxima bastante da linguagem humana (se isso, faça aquilo; em nisso, faça aquele) e transformar em linguagem de máquina que o computador vai entender e fazer o que mandamos (01010011 01011111 01100110 01110100 01110111 01100001 01110100 01100101).
-
-Isso significa que: algumas linguagens podem ser escritas e executadas da maneira como estão e outras precisam passar por um processo que se transforma em outra coisa de rodar no computador. Este processo de transformação é feito por um programa chamado compilador e o processo de leitura do código é feito pelo interpretador da linguagem da programação.
-
-Se a linguagem é interpretada, ou seja, executada como escrita, então o interpretador precisará ser instalado onde o programa funcionará, seja em um sistema operacional, em um smartphone, uma geladeira etc.
-
-Se for uma linguagem compilada, quando nós escrevemos o programa em uma linguagem, esse programa passa por outro software (o compilador) que o transforma em código de máquina e então podemos executar no computador. O compilador só precisa estar instalado onde for acontecer o processo de compilação; normalmente em um servidor, que é responsável por isso, e somente o código gerado é enviado para o ambiente de execução ou plataforma (nosso computador ou um servidor, por exemplo).
-
-Você já deve ter rodado um programa .exe no Windows. Este foi um software que foi compilado para a plataforma Windows.
-
-Para esclarecer a visão, vamos dar uma olhada neste exemplo de código-fonte escrito em uma linguagem de programação de alto nível, o JavaScript:
-
-```
-alert('Hello, world!');
-```
-
-Para executar o código, bastaria utilizar nosso navegador, pois ele possui um interpretador de JavaScript embutido.
-
-Para tal, bastaria abrmos as ferramentas de desenvolvedor do navegador, que, na maioria dos casos, são acessadas clicando em menu, mais ferramentas e em seguida em ferramentas de desenvolvedor.
-
-![](img/1980cd0900b9cb84feb62a3cc0d390f3_19_0.png)
-
-Figura 1.4: Acessando as ferramentas de desenvolvedor
-
-Então colar o código na aba console da caixa de ferramentas que apareceu e o navegador iria exibir uma mensagem de "Hello, world".
-
-![](img/1980cd0900b9cb84feb62a3cc0d390f3_19_1.png)
-
-Figura 1.5: Enviando nosso hello world
-
-O nosso ambiente de execução (o navegador) vai se encarregar de transformar as instruções em código de máquina e executar em tempo real.
-
-O comando da linguagem JavaScript alert fará um pop-up pular na tela com a mensagem que colocamos entre aspas. O legal é percebermos que linguagens de alto nível são escritas quase de modo natural para nós. Se traduzirmos “alert” do inglês teremos a palavra “alerta” e é justamente o que acontece no navegador, ele envia um alerta para nosso usuário (o pop-up).
-
-Outro exemplo de linguagem de programação de alto nível é a Lua, que é muito utilizada por jogadores de game de MMORPG (jogos RPG de múltiplos jogadores online) Tibia para configurar programas que automatizam tarefas chatas e roubar no game, os bots. Sua sintaxe (disposição das palavras na frase e das frases) é muito inteligível mesmo sem termos muito conhecimento em programação.
-
-```
-if itemcount("mana potion") < 20 then
-end
-```
-[/content]
-
-译文：
-
-[content]
-![](img/1980cd0900b9cb84feb62a3cc0d390f3_16_0.png)
-
-图 1.3: 关于应用创建搜索的 Google 趋势
-
-# 然而，媒体可能忽略了某些点，那就是：**到底什么是编程？**
+# 然而，媒体可能忽略了某些点，那就是：到底什么是编程？
 
 没有了控制它的程序，计算机不过是一台死寂的机器。让我们把计算机想象成一枚火箭。编程就是向火箭传递坐标，告诉它应该如何行为，以便你你能够到达成千上万个地方。非常简单来说，当然了，这就是编程：编写让计算机执行任务的指令。
 
@@ -310,11 +192,11 @@ end
 
 如果是编译型语言，当我们用一种语言编写程序时，该程序会通过另一个软件（编译器）将其转换为机器码，然后我们就可以在计算机上执行。编译器只需要安装在编译过程发生的地方；通常是在负责此项任务的服务器上，只有生成的代码会被发送到执行环境或平台（例如我们的计算机或服务器）。
 
-你可能已经在 Windows 上运行过 .exe 程序了。这是一个为 Windows 平台编译的软件。
+你可能已经在 Windows 上运行过`.exe`程序了。这是一个为 Windows 平台编译的软件。
 
 为了澄清观点，我们来看一下这个用高阶编程语言 JavaScript 编写的源代码示例：
 
-```
+```javascript
 alert('Hello, world!');
 ```
 
@@ -326,31 +208,30 @@ alert('Hello, world!');
 
 图 1.4: 访问开发者工具
 
-然后将代码粘贴到出现工具栏的 console 标签页中，浏览器就会显示“Hello, world”的消息。
+然后将代码粘贴到出现工具栏的`console`标签页中，浏览器就会显示“Hello, world”的消息。
 
 ![](img/1980cd0900b9cb84feb62a3cc0d390f3_19_1.png)
 
 图 1.5: 发送我们的 hello world
+
 我们的执行环境（浏览器）将负责将指令转换为机器码并实时执行。
-JavaScript 语言的 `alert` 命令会在屏幕上弹出一个窗口，显示我们放在引号中的消息。很有意思的是，我们发现高阶语言的编写方式几乎符合我们的自然习惯。如果我们把英语的“alert”翻译成中文，会得到“警告”，这正是浏览器中发生的事情，它向我们的用户发送一个警告（弹出窗口）。
+
+JavaScript 语言的`alert`命令会在屏幕上弹出一个窗口，显示我们放在引号中的消息。很有意思的是，我们发现高阶语言的编写方式几乎符合我们的自然习惯。如果我们把英语的“alert”翻译成中文，会得到“警告”，这正是浏览器中发生的事情，它向我们的用户发送一个警告（弹出窗口）。
 
 另一个高阶编程语言的例子是 Lua，它被 MMORPG（多人在线角色扮演游戏）Tibia 的玩家广泛用于配置自动化无聊任务和在游戏中作弊的程序——机器人。它的语法（单词和句子中的排列方式）即使在没有太多编程知识的情况下也非常易于理解。
 
-```
+```lua
 if itemcount("mana potion") < 20 then
 end
 ```
 
-
 旨在让你拥有高效生产工具的 IDE。
-
 
 文本编辑器是简单的程序，例如 Windows 的记事本（是的，你可以用记事本编程）或 Gedit（它是 Linux 中等同于记事本的工具）。但是，为了让我们专业编程更加轻松，我们通常选择具有额外功能的编辑器，例如通过高亮编程语言使代码呈现彩色以便阅读、自动补全我们正在编写的内容，以及其他提高我们生产力的酷炫功能。
 
 这类文本编辑器的例子是 Atom，它是一个免费的开源编辑器，拥有许多插件，可以让它变得更强大（如果你的电脑性能不够强，它也会占用较多内存）。
 
 ![](img/1980cd0900b9cb84feb62a3cc0d390f3_23_0.png)
-
 
 IDE 是完整的开发环境。在这些工具中，我们不仅集成了专业文本编辑器的所有优点，还拥有直接从界面连接数据库的选项、生成显示所有代码组织结构的图形模型、在 IDE 内部显示程序行为的运行环境模拟器、开发期间的代码分析、通过命令重写文件以及更多实用工具。
 
@@ -374,19 +255,17 @@ IDE 的例子是 Android Studio，它用于 Android 应用程序开发。
 
 每个平台都有其特殊之处，程序发送到每个平台的方式根据这些特性会有很大或很小的差异。
 
+
+
 现在让我们探索程序是如何被打包并发送到各个地方的。程序是如何分发给我们这些用户，以便我们安装或使用的。
 
 为了不让内容过于庞大导致陷入过多的信息中，我们将分部分进行：首先我们将看 Web 系统和网站，然后是桌面端和移动端（Android 和 iOS 应用），这些是对我们普通人来说是最直观的领域。
 
 在此之前，让我们理解系统、软件或应用程序之间的区别，它们并不是一回事的。
 
-
 我们最喜欢的文本编辑器无非就是软件。它之所以被称为软件，是因为它的功能局限于文本编辑。它只做一件事。
 
 定义它为软件的并不是软件做了什么，而是它仅拥有一个功能的这一。软件可以做非常简单的事情，也可以做非常复杂的事情。如果它是一个商店的库存管理程序并管理入库出库，它可以被称为软件并……
-
-
-
 
 这是非常古老的计算机连接和通信方式。计算机早已已经在局域网（在我们家里、公司等）中使用客户端-服务器模型进行通信，以共享打印机和传真机等资源。
 
@@ -446,13 +325,11 @@ Making it right：Angular 的新方法
 
 当我们使用互联网时，后台发生了很多事情。如果你想了解更多关于互联网如何工作的知识、学习网络、了解浏览器和服务器如何工作，还有另一本非常棒的书解释了所有底层原理，那就是《解构 Web》（Deconstructing the Web）。
 
-
 这是因为正如前面提到的，可执行代码会根据不同操作系统的特性而不同。
 
 在 Atom 的情况下，使用的编程语言是 JavaScript，我们可以使用 Java、C#、Rust、Golang 等多种语言创建桌面软件。
 
 所以桌面软件的发布方式是网站。不过我们也通过 U 盘、网络驱动或其他方式将可执行代码从一台电脑拷贝到另一台。
-
 
 这意味着代码是开源的。Windows、macOS。
 
@@ -481,11 +358,7 @@ Making it right：Angular 的新方法
 | RELEASES | 19.7 KB |
 | RELEASES-x64 | 3.8 KB |
 
-
-手机应用程序与桌面软件非常相似，不同在于它们大部分需要
-
-
-直接从操作系统的应用商店（例如 Android 或 iOS）进行安装。
+手机应用程序与桌面软件非常相似，不同在于它们大部分需要直接从操作系统的应用商店（例如 Android 或 iOS）进行安装。
 
 在较新的 Linux 发行版中，我们也拥有与移动端应用商店非常相似的商店。这极大地方便了技术不太纯熟的用户的生活。最近，微软也开始在其更现代的操作系统（从 Windows 8 开始）中遵循这一路线。
 
@@ -507,7 +380,6 @@ Making it right：Angular 的新方法
 
 然而，一些公司采用直接向用户发送 `.apk` 文件的策略，以便更快速地进行更新，而无需经过应用商店的等待期。这虽然不太理想，但确实在发生。
 
-
 到为止，我们了解到有多种方式向我们的最终用户发送软件。某些软件需要编译并直接发送到用户的计算机，而另一些运行在互联网服务器上，通过网络协议与我们的浏览器交换信息。
 
 Web 系统和网站使用客户端-服务器模型，其中之间进行数据交换，我们在用户的浏览器（客户端）和服务器上都有运行的软件。
@@ -519,8 +391,6 @@ Web 系统和网站使用客户端-服务器模型，其中之间进行数据交
 有了这些知识，我们已经对编程世界进行了第一次奇妙的深潜，因为我们理解了什么是程序、什么是编程语言、程序是如何编写的，甚至如何将程序发送到用户的机器上。
 
 让我们在下一章继续我们的宇宙之旅，分析一下为什么加入这一领域是有趣的。
-
-
 
 随着时间的推移，人类经历了一些工业和技术革命，这些革命通过自动化、创新以及在许多工作岗位上取代人类的强大机械，改变了生活和社会。今天，我们生活在一场革命中……现在，**数字革命**。
 
@@ -540,125 +410,105 @@ Web 系统和网站使用客户端-服务器模型，其中之间进行数据交
 
 想象一下，随着时间的推移，这对我们的大脑来说变得如此自然，以至于我们以系统的方式使用逻辑来解决大多数日常生活的问题！
 
-
 当我们学习编程时，我们需要学习如何抽象动作、流程、问题，就像我们在学习或处理数学问题时一样。
 
 这是因为我们需要理解一个问题，将其翻译成编程语言，然后为此创建一个计算解决方案。在数学中，我们将问题转化为公式以实现同样的效果。
 
 逻辑推理可以用于我们生活的许多部分，无论是操作计算机工作，还是为了更好地分析讨论中的论点，因为这并不是新事物。亚里士多德在他的著作《工具论》（Organon）中将逻辑确立为门学科，之后这位哲学家的工作被用于在西方和欧洲创造各种类型的逻辑。
 
-
 公司通过代码赚钱并不是今天才开始的。有些为其他公司开发公司的已经超过 100 年了，IBM 就是这样一个例子，它自 1888 年以来就存在了，拥有近 50 万员工，价值超过 2025 亿美元。
 
-有多种方法可以开发软件市场，无论是创建一个为其他公司开发系统的咨询公司，创建一个软件并将其作为主要产品进行维护，或者两者兼顾，正如亚马逊的情况，它
+有多种方法可以开发软件市场，无论是创建一个为其他公司开发系统的咨询公司，创建一个软件并将其作为主要产品进行维护，或者两者兼顾，正如亚马逊的情况，它拥有自己的零售电子商务，也有其云计算和服务领域，即 AWS（Amazon Web Services）。
 
-Possui seu próprio e-commerce de varejo e também sua área de Computação em Nuvem e prestação de serviços, a AWS (Amazon Web Services).
+毫无疑问，这应该是我们参与代码的最不重要的原因，因为它可能是我们生活中的一个巨大改变。最好是因为热爱而进入这个领域，而不仅仅是为了经济部分，但让我们在考虑用代码赚钱时分析一些选项。
 
-De longe, este deveria ser o motivo menos importante para nos envolvermos com códigos, pois pode ser uma grande mudança em nossas vidas. Seria melhor entrar na área por paixão do que apenas pela parte financeira, mas vamos analisar um pouco as opções quando pensamos em ganhar dinheiro com código.
+有可能没有标准或老板，能够制定自己的时间表，在家或咖啡馆工作，以及其他类似的好处，这吸引了许多人从事自由职业，这是一种非常酷且重要的工作方式，在这种方式中，我们为寻找某人做临时项目甚至长期合同的人和公司提供服务。
+
+最酷的是能够经历各种大、中、小型公司的项目，也为普通客户（个人）服务，了解各种商业模式、精彩的项目，而且经常我们在项目结束后帮助某人从零开始实现他们生命中的产品，而不必被束缚于任何人。
+
+如今，有许多网站索引寻找自由职业者的人的资料，无论是制作网站、应用程序、完整系统，还是修复某些 bug、对现有内容进行调整。我们将在接下来的章节中更多地了解自由职业者的工作方式。
+
+除了创建专门为公司开发软件的公司或作为自由职业者工作的多种可能性外，我们还可以基于我们想要解决的问题创建一个成功的软件或系统。
+
+一些著名的数字产品探索了社会最多样化的需求，并出色地解决了大多数问题，例如用于公共交通的 99 应用（https://99app.com）、用于健康领域的 dr.consulta（https://drconsulta.com）、用于金融服务的 Nubank（https://nubank.br）。
+
+有些网站可以根据我们的偏好和研究找到某个地区最好的房产，例如 VivaReal（https://vivareal.com.br），还有帮助控制支出并让薪水持续到月底的财务管理应用，例如 GuiaBolso（https://guiabolso.com.br）。
 
 
-A possibilidade de nunca ter um padrão ou chefe, poder fazer nosso próprio horário, trabalhar de casa ou de um café e outros benefícios desse tipo, atrai muitas pessoas para empregos freelance, uma modalidade muito legal e importante de trabalho na qual nos colocamos disponíveis para pessoas e empresas que buscam alguém para fazer um projeto esporádico ou até um contrato de longa duração.
 
-O mais legal é poder passar por diversos projetos de empresas grandes, médias, pequenas, também para clientes comuns (pessoas físicas) e conhecer diversos modelos de negócio, projetos fantásticos e muitas vezes ajudamos alguém a sair do zero para o produto de sua vida sem precisar estar presos a ninguém depois que o projeto acabar.
+A forma de monetização de um produto digital pode variar muito, e isso deve ser aprendido de acordo com o uso do produto. Existem diversos cursos e livros sobre a criação de um produto digital, entre os quais recomendo fortemente a leitura sobre startups, como *A Startup Enxuta*, de Eric Ries, e outros livros sobre empreendedorismo em geral.
 
-Hoje existem diversos sites que indexam perfis de pessoas que buscam freelancers, seja para produzir um site, aplicativo, um sistema completo ou para corrigir algum bug, fazer algum ajuste em algo já existente. Veremos um pouco mais sobre trabalhar como freelancer nos próximos capítulos.
-
-
-Além das várias possibilidades de criarmos uma empresa especializada na criação de softwares para as empresas ou trabalhar como freelancer, também podemos criar um software ou sistema de sucesso baseado em um problema que queamos resolver.
-
-Alguns produtos digitais famosos exploram as mais diversas necessidades da sociedade e resolvem com maestria a maioria dos problemas, como o aplicativo 99 (https://99app.com) para a mobilidade pública, o dr.consulta (https://drconsulta.com) para a área da saúde, o Nubank (https://nubank.br) para serviços financeiros.
-
-Existem sites onde encontramos o melhor imóvel de uma região baseados em nossas preferências e pesquisas, como o VivaReal (https://vivareal.com.br), [além de aplicativos de gestão financeira que ajudam a controlar nossos gastos e a fazer com que o salário dure até o final do mês, como o GuiaBolso (https://guiabolso.com.br).
-
-E a forma de monetização de um produto digital pode variar muito e isso deve ser aprendido de acordo com o uzo do produto. Existem diversos cursos e livros sobre a criação de um produto digital, entre os quais recomendo fortemente a leitura sobre startups, como *A Startup Enxuta*, de Eric Ries e outros livros sobre empreendedorismo em geral.
-
-Se você tem o sonho de resolver algum problema social, criar um produto digital pode ser a grande chance.
-
+Se você tem o sonho de resolver algum problema social, criar um produto digital pode ser uma grande oportunidade.
 
 Dificilmente levamos nosso carro a uma mecânica por falta de água ou óleo no motor. O mesmo acontece quando precisamos trocar o pneu de uma bicicleta ou fazer a manutenção da nossa geladeira.
 
-É comum nós mesmos resolvermos um problema desses porque parece algo mais palpável para a maioria das realidades, mas será que não poder resolver algum problema de um sistema que utilizamos no navegador?
+É comum nós mesmos resolvermos um problema desses porque parece algo mais palpável para a maioria das realidades, mas será que não podemos resolver algum problema de um sistema que utilizamos no navegador?
 
-Mesmo que não tenamos acesso ao código-fonte de um sistema, saber que algo acontece pode nos poupar muito tempo, como saber que um site não está carregando devido a um script pesado na página, no qual poderíamos desativá-lo e finalmente acessar o conteúdo.
+Mesmo que não tenhamos acesso ao código-fonte de um sistema, saber que algo acontece pode nos poupar muito tempo, como saber que um site não está carregando devido a um script pesado na página, que poderíamos desativar e finalmente acessar o conteúdo.
 
 Até mesmo um aplicativo de celular pode ser analisado utilizando as ferramentas de desenvolvedor que podemos ativar nas configurações do sistema operacional móvel.
 
 Saber programar ou saber como as coisas funcionam por baixo dos panos nos dá o poder de resolver algo e seguir nossa vida, assim como podemos parar em um posto de gasolina, colocar água no reservatório do carro e seguir viagem.
 
-
-Nossos dados/informações são muito importantes e precisamos buscar privacidade e segurança na internet.
+Nossos dados e informações são muito importantes, e precisamos buscar privacidade e segurança na internet.
 
 Como sabemos se um sistema está coletando dados invasivos à nossa privacidade se não conhecemos como as coisas funcionam por baixo do capô, como citado anteriormente?
 
-Quando entramos em um site e ele está lento, demora alguns segundos para que algo aconteça ou comportamento similar, muitas vezes é por conta da coleta de dados.
+Quando entramos em um site e ele está lento, demora alguns segundos para que algo aconteça ou apresenta comportamento similar, muitas vezes isso ocorre por conta da coleta de dados.
 
-Isso não é ruim, nem ilegal (ainda), as empresas coletam nossos dados para melhorar seus serviços e nos entregar uma experiência melhor em seus produtos. Porém, algum sistema pode, sim, estar coletando algo que não queremos que seja coletado, como nossa localização, gravando o que falamos perto de nossos smartphones, etc.
+Isso não é ruim nem ilegal (ainda); as empresas coletam nossos dados para melhorar seus serviços e nos entregar uma experiência melhor em seus produtos. Porém, algum sistema pode, sim, estar coletando algo que não queremos que seja coletado, como nossa localização ou gravando o que falamos perto de nossos smartphones.
 
-Saber desenvolvimento de software pode garantir conhecimento suficiente para nos protegermos na internet ou ao menos nos mantermos mais atualizados sobre o mundo dos aplicativos e sistemas que usamos, o que traz uma segurança básica.
-
+Saber desenvolvimento de software pode garantir conhecimento suficiente para nos protegermos na internet ou, ao menos, nos mantermos mais atualizados sobre o mundo dos aplicativos e sistemas que usamos, o que traz uma segurança básica.
 
 O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar a apresentar problemas com o passar do tempo. E não queremos que nosso cérebro comece a falhar, certo?
 
-O exercício para fortalecer nossa massa cerebral deve ser diário, assim como exercitar nosso físico. Caso não atendamos ao cuidado com nosso cérebro, com o tempo começamos a esquecer coisas, a ficar menos ágeis para processar informações, tudo pode começar a ficar mais complicado de pensar.
+O exercício para fortalecer nossa massa cerebral deve ser diário, assim como exercitar nosso físico. Caso não atendamos ao cuidado com nosso cérebro, com o tempo começamos a esquecer coisas, a ficar menos ágeis para processar informações, e tudo pode começar a ficar mais complicado de pensar.
 
-Aprender diferentes linguagens de programação tem o mesmo efeito de fortalecimento do cérebro quanto aprender outros idiomas e isso não é apenas teoria, temos pesquisadores atrás da resposta em seus estudos. Como a professora Janet Siegmund, da Universidade de Pass, "O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar a apresentar problemas com o passar do tempo. E não queremos que nosso cérebro comece a falhar, certo? O exercício para fortalecer nossa massa cerebral deve ser diário, assim como exercitar nosso físico. Caso não atendamos ao cuidado com nosso cérebro, com o tempo começamos a esquecer coisas, a ficar menos ágeis para processar informações, tudo pode começar a ficar mais complicado de pensar. Aprender diferentes linguagens de programação tem o mesmo efeito de fortalecimento do cérebro quanto aprender outros idiomas e isso não é apenas teoria, temos pesquisadores atrás da resposta em seus estudos", afirma a professora Janet Siegmund, da Universidade de Pass.
+Aprender diferentes linguagens de programação tem o mesmo efeito de fortalecimento do cérebro que aprender outros idiomas, e isso não é apenas teoria: temos pesquisadores buscando respostas em seus estudos. Como afirma a professora Janet Siegmund, da Universidade de Passau:
 
-*(Nota: As repetições excessivas do texto original foram removidas para manter a qualidade do documento técnico).*
+> “O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar a apresentar problemas com o passar do tempo. E não queremos que nosso cérebro comece a falhar, certo? O exercício para fortalecer nossa massa cerebral deve ser diário, assim como exercitar nosso físico. Caso não atendamos ao cuidado com nosso cérebro, com o tempo começamos a esquecer coisas, a ficar menos ágeis para processar informações, tudo pode começar a ficar mais complicado de pensar. Aprender diferentes linguagens de programação tem o mesmo efeito de fortalecimento do cérebro quanto aprender outros idiomas e isso não é apenas teoria, temos pesquisadores atrás da resposta em seus estudos.”
 
+*Nota: As repetições excessivas do texto original foram removidas para manter a qualidade do documento técnico.*
 
-Nossos dados/informações são muito importantes e precisamos buscar privacidade e segurança na internet.
-
-Como sabemos se um sistema está coletando dados invasivos à nossa privacidade se não conhecemos como as coisas funcionam por baixo do capô, como citado anteriormente?
-
-Quando entramos em um site e ele está lento, demora alguns segundos para que algo aconteça ou comportamento similar, muitas vezes é por conta da coleta de dados.
-
-Isso não é ruim, nem ilegal (ainda), as empresas coletam nossos dados para melhorar seus serviços e nos entregar uma experiência melhor em seus produtos. Porém, algum sistema pode, sim, estar coletando algo que não queremos que seja coletado, como nossa localização, gravando o que falamos perto de nossos smartphones, etc.
-
-Saber desenvolvimento de software pode garantir conhecimento suficiente para nos protegermos na internet ou ao menos nos mantermos mais atualizados sobre o mundo dos aplicativos e sistemas que usamos, o que traz uma segurança básica.
-
-
-O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar a apresentar problemas com o passar do tempo. E não queremos que nosso cérebro comece a falhar, certo? O exercício para fortalecer nossa massa cerebral deve ser diário, assim como exercitar nosso físico. Caso não atendamos ao cuidado com nosso cérebro, com o tempo começamos a esquecer coisas, a ficar menos ágeis para processar informações, tudo pode começar a ficar mais complicado de pensar.
-
-
-
+## 3.1 编写程序的人是什么样的人，他们住在哪里，吃什么
 
 我先在这里预告一下：学习编程并不难。开发一个应用程序或一个系统并不难。困难的是做出持久且可扩展的东西，即那种能够承受大量用户并运行多年的东西。但对于那些正在学习、刚刚开始开发或仅仅对编程感到好奇的人来说，并不需要在写下第一段软件时就做到这一点。
 
-每个人都会经历初始阶段。经验是随着随着时间和实践积累的，我们不应该因为认为需要从一开始就掌握一切而感到气馁。
-
-### 3.1 编写程序的人是什么样的人，他们住在哪里，吃什么
+每个人都会经历初始阶段。经验是随着时间和实践积累的，我们不应该因为认为需要从一开始就掌握一切而感到气馁。
 
 我们将在本章中找到这些问题的答案！
-
 
 正如我之前提到的，从事编程工作的人都是普通人。他们没有超能力，不是靠某种能让他们产生更多神经元的饮食来生存的，而且很多时候只吃不健康的食物。然而，确实存在一些个人特征可能会影响我们的学习之路，我们现在将对这些特征进行浅层分析。需要注意的是，这里提到的每个特征都可以通过其他技能和/或个人意愿获得或规避。
 
 另一个重要的补充是：我们现在要观察的点并不是强制性的，也不是某种革命性行为研究的结果，而是我们在日常生活中对身边一起工作的开发人员观察到的，或者在行业活动中发现的。因此，我现在传达的是一种非常个人化的观点。
 
+### 好奇心
 
 好奇心是我们领域中一个非常常见的特征。大多数人参与编程是因为想了解计算机以及安装在操作系统中的软件是如何运作的。
 
 这有助于我们始终保持对理解新事物的意愿，这是该领域优秀人才的另一个重要特征，我们将在以后进行更深入的探讨。
 
-对我来说，我会拆解我的玩具，弄坏电子产品，随后，我想了解计算机和互联网是如何工作的。我发现各种电子组件是如何连接、通信，并通过社交媒体和在线通信器在我与另一个城市的亲友之间建立桥梁的，这太太妙了。
+对我来说，我会拆解我的玩具，弄坏电子产品。随后，我想了解计算机和互联网是如何工作的。我发现各种电子组件是如何连接、通信，并通过社交媒体和在线通信器在我与另一个城市的亲友之间建立桥梁的，这太妙了。
 
-如果你是一个好奇心的人，从小就拆解东西来理解它们是如何工作的，那么编程可能对你来说是一个很好的领域。这是一条“更轻松”的道路。但如果你没有感到那么好奇，也没问题。随着时间的推移，我们学会了即使对某事没有太大兴趣，如何保持持续的专业更新。
+如果你是一个有好奇心的人，从小就拆解东西来理解它们是如何工作的，那么编程可能对你来说是一个很好的领域。这是一条“更轻松”的道路。但如果你没有感到那么好奇，也没问题。随着时间的推移，我们学会了即使对某事没有太大兴趣，如何保持持续的专业更新。
 
-好奇心最终会被不断学习的习惯所养成。当一项新技术发布时，我们知道必须学习它，因此我们会在日程表中留出空间，参加课程，看讲座之类的。
+好奇心最终会被不断学习的习惯所养成。当一项新技术发布时，我们知道必须学习它，因此我们会在日程表中留出空间，参加课程、听讲座之类的。
 
 这种学习也可能通过与领域内的人交流来获得。因此，如果我们没有这个特征，开始与我们认为优秀的人建立友谊，或者简单地在社交媒体上关注他们，也是很好的。
 
+### 学习意愿
 
 我们的领域非常广泛且不断变化，因此，喜欢学习至关重要。每天都可能推出新的工具来方便我们的工作、一种新的编程良好实践，或者另一种方便我们软件维护的约定。我们需要不断更新对我们所在宇宙的认知。
 
-当我们喜欢学习时，并不意味着我们喜欢待在教室里、看视频课程甚至连续读几小时技术书籍直到背下来。学习可以更具有有机性，基于试错法。这取决于我们的个人特质以及我们如何能学得更好。
+当我们喜欢学习时，并不意味着我们喜欢待在教室里、看视频课程，甚至连续读几小时技术书籍直到背下来。学习可以更具有有机性，基于试错法。这取决于我们的个人特质以及我们如何能学得更好。
 
 如果我们是那种喜欢课程、学校及相关类型的人，我们在那里就有学习的空间。如果我们不是那种类型，没问题，互联网是一个开放且易获取的宇宙，充满了让我们学习新事物的内容。
 
 因此，好奇心的人在这个活动领域已经有了一项辅助技能，因为他们总是想要学习。
 
+### 解决问题
 
-编程就是利用计算机的力量解决问题，因此，喜欢解决问题的人编程是理所当然的。无论是个人问题、经济问题还是通信问题。我们被各种等待被软件解决的问题包围着。
+编程就是利用计算机的力量解决问题，因此，喜欢解决问题的人编程是理所当然的。无论是个人问题、经济问题还是通信问题，我们都被各种等待被软件解决的问题包围着。
 
 我观察到，大多数程序员都有强烈的意愿去面对一个问题并为之找到一个良好的解决方案。这是我们领域中一个重要的特征，我们每天都有不同的问题要解决。
 
@@ -666,8 +516,9 @@ O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar 
 
 这种特征是我们无法逃避的。我们的日常生活充满了漏洞，以及来自公司业务部门或客户的新功能需求。
 
+### 对技术的兴趣
 
-对于一个不喜欢技术（计算机、智能手机和应用程序）的人来说，想要喜欢编程是很的，因为那是我们的世界。它是我们的动力，也是我们工作的内容。开发人员之间的一个共同点可能是他们想要用技术来解决一切。
+对于一个不喜欢技术（计算机、智能手机和应用程序）的人来说，想要喜欢编程是很难的，因为那是我们的世界。它是我们的动力，也是我们工作的内容。开发人员之间的一个共同点可能是他们想要用技术来解决一切。
 
 喜欢技术并不等同于有一个亲戚完全了解社交媒体的一切，或者对博客上的动态保持关注。认为一个精通某个程序、网站或应用程序的人可能因此就喜欢编程是一个误区。我们没见过有人因为吃面条就变成厨师。
 
@@ -677,62 +528,65 @@ O cérebro humano, por mais que seja uma máquina quase perfeita, pode começar 
 
 同样适用于热爱社交媒体以及我们日常使用的其他系统的人。这些人可能从事社交媒体工作，但不是直接相关的编程。
 
-然而，在分析中提到这些特征（好奇心、学习意愿、喜欢解决问题和喜欢技术）也可能是一种刻板印象或标准化的方式，但并不是限制。如果你没有这里提到的所有特征，但只要有意志，你就能学会编程，就像任何其他人一样。
+### 特征并非限制
+
+然而，在分析中提到这些特征——好奇心、学习意愿、喜欢解决问题和喜欢技术——也可能是一种刻板印象或标准化的方式，但并不是限制。如果你没有这里提到的所有特征，但只要有意志，你就能学会编程，就像任何其他人一样。
 
 这些特征可以帮助我们的生活，但没有什么能阻止我们学习真正想要的东西。
 
+### 编程的年龄限制
 
 一个技术论坛中经常被提出的共同问题是是否存在编程的年龄限制。什么时候开始太早，什么时候学习编写计算机代码又太晚？
 
-我们看到很多新闻，关于有些人在儿童时期就开始编程，现在拥有了百万级的科技公司，或者开发了软件并改变了一切。比尔·盖茨就是一个例子，他在13岁时开始编程，17岁时就创立了微软。
+我们看到很多新闻，关于有些人在儿童时期就开始编程，现在拥有了百万级的科技公司，或者开发了软件并改变了一切。比尔·盖茨就是一个例子，他在 13 岁时开始编程，17 岁时就创立了微软。
+
+其他年轻程序员，如 Linux 的创建者 Linus Torvalds，在 11 岁时开始对编程产生兴趣，是我们讨论开始编程的年龄时的经典例子。
 
 
 
+有了这些早期开始并改变人类历史的成功案例，那些在一定年龄之后对编程产生兴趣的人，往往会非常害怕涉足这个领域。
 
-Outros jovens programadores, como Linus Torvalds, criador do Linux, que começou a se interessar por programação aos 11 anos, são exemplos clássicos quando entramos no debate de idade para começar a programar.
+当然，我们越早开始，学习就越容易，因为通常会拥有更多的空闲时间和精力；但在计算机领域，年龄并不是限制因素。
 
-Com casos de sucesso como estes, de pessoas que começaram cedo e mudaram a história da humanidade, quem se interessa por programação depois de certa idade fica com muito receio de se envolver na área.
+如今，有些人在 60 岁、70 岁甚至 80 岁之后才开始学习编程。例如，Shirley M. McKarrow 是一位退休企业家和政治家，她在 80 多岁时才开始编程，用来创建应用程序和网站。
 
-É claro que, quanto mais cedo começarmos, mais fácil será aprender, pois é natural que tenhamos mais tempo livre, energia; mas a idade não limita quando se trata de computação.
+以 Shirley 为例，我们可以断言，开始学习编程没有最高年龄限制。但是否存在最低年龄限制呢？
 
-Hoje, temos pessoas que estão aprendendo a programar depois dos 60, 70 e 80 anos. Como o caso de Shirley M. McKarrow, uma empresária aposentada e política que começou a programar depois dos 80 para criar aplicativos e sites.
+如今，图书馆和商店的书架上摆放着《婴儿 HTML》《婴儿 JavaScript》等书籍。这确实很有趣，但我们还不能确定这种方式是否有效。因为这对孩子来说可能很有趣，但几年后他们也可能不再对这个主题感兴趣。正如并非每个童年画画的孩子都会成为艺术家，也并非每个在学校跳舞的孩子都会成为舞者。
 
-Com um exemplo como o de Shirley, podemos afirmar que não existe idade máxima para começar. Mas que existe idade mínima?
+小时候，我画画画得很好；后来的一段时间里，我跳街舞也跳得很好；有一段时间，我还做过涂鸦艺术家。我的人生似乎正朝着艺术方向发展，但当我接触到信息技术后，我的整个人生都改变了。如今，我只会画一些简单的涂鸦，跳几步不太熟练的霹雳舞。
 
-Hoje temos livros como "HTML para bebês", "JavaScript para bebês" etc. nas prateleiras das bibliotecas e lojas. Isso é bem engraçado, mas ainda não temos certeza se é efetivo, pois pode ser divertido para a criança e depois de alguns anos ela não se interessar pelo assunto, assim como nem toda criança que desenha na infância se torna artista nem toda que dança na escola se torna dançarina.
+Code Club 是一个国际性的志愿组织，致力于向儿童教授编程。该组织建议儿童在 9 至 13 岁之间学习编程，以便更好地掌握课堂上讲授的内容，并让课程真正对他们未来的选择产生积极作用。
 
-Na minha infância eu desenhava muito bem, depois de um tempo eu dançava hip-hop muito bem, durante algum tempo trabalhei como grafiteiro e a minha vida parecia se direcionar para as artes, mas quando conheci tecnologia da informação minha vida inteira mudou e hoje eu só faço alguns rabiscos e mando alguns passos bem tocos de break.
+### 3.3 是否存在适合在编程领域求职的年龄
 
-O Code Club, uma iniciativa internacional e voluntária para ensinar programação para crianças, recomenda a idade de 9 a 13 anos para que tenham um melhor aproveitamento do conteúdo que será ministrado em sala de aula e para as aulas sejam algo realmente efetivo de escolhas futuras das crianças que aprenderam a programar.
+除了“我们应该何时开始学习”这个疑问之外，当我们观察就业市场时，会发现软件开发公司中有许多年轻人，这可能会让人感到有些不安。
 
-### 3.3 Existe idade para procurar emprego na área de programação
+我们可以找到 50 岁的高级或专家级人才，也就是“更高”的职位；但同样也有 30 岁的人处于相同职位。当我们寻找中级职位，也就是“中间级别”的专业人员时，也会发现有人 30 岁，也有人 20 岁，却处于同样的职位。
 
-Além da dúvida de quando devemos começar a aprender, ao observarmos o mercado de trabalho vemos muitos jovens nas empresas de desenvolvimento de software e isso pode assustar um pouco.
+通常情况下，一个人会从实习开始，成为初级开发人员，然后晋升为中级和高级开发人员，继续发展后成为专家，或者转向领导和管理岗位。我们经常可以看到，有些人从大学毕业后直接进入第一份工作，从初级职位开始并逐步成长。
 
-Podemos encontrar pessoas em nível sênior ou especialista, os níveis “mais altos”, com 50 anos de idade, mas também existem pessoas de 30 na mesma posição. O mesmo quando procuramos profissionais em nível pleno, o “nível intermediário”, com 30 e outros com 20 na mesma posição. Temos a sequência: a pessoa, normalmente, começa com um estágio, torna-se junior, pleno e depois sênior, vai para a frente e se torna especialista ou parte para um cargo de liderança ou gestão. Isso vemos direto da faculdade para o primeiro emprego. Podemos cair direto como juniores e ir crescendo também.
+由此可见，这是一个充满活力的领域。一个人在公司中晋升并没有预先规定的时间。我们会发现不同年龄的人处于不同职位，这不应该限制我们的意志力，反而应当成为激励。它说明市场为所有人都留有空间。最终取决于我们的技术能力，以及不断提升专业水平的意愿。
 
-Percebemos então como é uma área dinâmica e que não existe um tempo predeterminado para que alguém evolua de posição em uma empresa. Encontramos pessoas de todas as idades em posições diferentes não deveria ser um limitador para nossa força de vontade, mas sim um motivador. É sinal de que o mercado tem espaço para todas as pessoas. Só depende da nossa capacidade técnica e força de vontade em nos especializarmos cada vez mais.
+我们不能让害怕冒险的情绪成为人生的限制因素。编程领域非常有前景，只要做好规划，即使我们已经在某个领域工作了一段时间，也可以转向软件开发，而不必经历太多痛苦。
 
-Não podemos deixar que o medo de arriscar se torne um limitante em nossa vida. A área de programação é muito promissora e com um bom planejamento podemos até mesmo mudar de uma área que já atuamos há algum tempo para o desenvolvimento de software sem muito sofrimento.
+最终，一切都取决于我们的规划，无论我们年轻还是更有经验。
 
-Tudo, no final, vai depender de nosso planejamento, seja quando jovens ou quando mais experientes.
+每当我们在互联网上看到面向初学者的程序员指南时，英语都会被称为学习编程的必备条件。对此我并不认同。
 
+过去，计算机领域的所有教材都是英文的。这是因为国外的市场规模远大于本国市场，但这种情况在过去 10 年中已经发生了改变。
 
-Sempre que encontramos guias para programadores(as) iniciantes na internet, o inglês é citado como obrigatório para aprender programação. Eu discordo disso.
+如今，我们拥有优秀的葡萄牙语书籍，可以学习各种概念，从编程职业发展（例如本书）到更复杂的编程范式或设计模式。过去，这些内容只能在大学图书馆中找到，而且通常是英文资料。
 
-Antigamente todo o material didático da área de computação era em inglês. Isso porque o mercado fora do nosso país era muito maior, mas isso mudou de 10 anos para cá.
+不仅是书籍，还有文章、播客、工具和编程语言，都可以帮助那些不太擅长这种“通用语言”的人。
 
-Hoje em dia temos ótimos livros em português ensinando os mais variados conceitos, desde carreira em programação (como este livro), até os paradigmas mais complicados ou padrões de projetos que antes só encontrávamos na biblioteca das faculdades e, normalmente, em inglês.
+学习编程并不需要英语。只有当我们开始从事专业编程工作时，才会需要英语，因为代码应该使用英语编写，文档也应该使用英语编写，诸如此类。不过请注意，只有当我们真正要做一些大型项目，或者其他人需要维护我们的代码时，才需要特别关注这些问题。
 
-Não somente os livros, temos artigos, podcasts, ferramentas e linguagens que podem auxiliar aquela pessoa que possui mais dificuldade com o "idioma universal".
+通常，我们最初编写的程序甚至不会展示给朋友看，因为我们会感到害羞或害怕。
 
-Para aprender, não precisamos de inglês. Precisaremos do idioma quando vamos trabalhar profissionalmente com programação, pois os códigos devem ser escritos em inglês, documentações deveriam ser escritas em inglês e assim por diante. Mas, percebam que isso são coisas com que só precisamos nos preocupar quando realmente vamos fazer algo grande ou quando as outras pessoas vão dar manutenção.
+有一种名为 Portugol 的伪编程语言，也称为结构化葡萄牙语。这种语言被广泛用于学习编程逻辑和算法，而这些正是编写程序所需要的基础。
 
-Nossos primeiros programas, normalmente, não são nem exibidos para nossos amigos e amigas por vergonha ou algum medo que sentimos.
-
-Existe uma pseudolinguagem de programação chamada Portugol, também conhecida como Português estruturado, e essa linguagem é extremamente utilizada para aprendermos lógica de programação e algoritmos, o que é que precisamos para fazer programas.
-
-Vamos analisar um exemplo de programa escrito em Portugol para confirmar se conseguimos entender o que está acontecendo:
+让我们分析一个用 Portugol 编写的程序示例，以确认自己是否能够理解其中发生的事情：
 
 ```
 algoritmo "calculadora"
@@ -768,34 +622,33 @@ escreval(saida)
 fimaloritmo
 ```
 
-Algumas coisas no exemplo podem confundir, como a palavra-chave `var`, os tipos de dados `real` e `caractere`, mas a lógica é simples. Depois que aprendermos lógica de programação, então podemos partir para uma linguagem como JavaScript, Python etc., será nessa hora que o inglês pode fazer alguma falta. Porém, conseguimos sobreviver com alguns conceitos básicos do idioma.
+示例中的一些内容可能会让人感到困惑，例如关键字 `var`，以及数据类型 `real` 和 `caractere`，但其逻辑很简单。学习编程逻辑后，我们就可以开始学习 JavaScript、Python 等语言。到了这个阶段，英语可能会带来一些困难，但掌握一些基础的英语概念就足以应对。
 
-O inglês só fará muita falta na hora de desejarmos mais, pois precisamos acompanhar tanto as pessoas da nossa nacionalidade quanto pessoas de fora do país para sabermos o que está acontecendo pelo mundo.
+只有当我们想要进一步发展时，英语才会真正成为一个重要问题。因为我们需要关注本国和国外的人，了解世界各地正在发生的事情。
 
-Mas cuidado para não cair na zona de conforto e se perder pela facilidade de entender Portugol. Aprender nunca é demais. Pode ser legal aproveitarmos que estamos aprendendo programação, já que as linguagens são em inglês, e começarmos a forçar um pouco o idioma.
+但要注意，不要因为容易理解 Portugol 就陷入舒适区而停止进步。学习永远不会嫌多。既然我们正在学习编程，而编程语言本身通常使用英语，那么我们可以借此机会开始主动接触英语。
 
-Tente escrever seus softwares, desde o período de aprendagem, em inglês. Pode ser uma boa ajuda para dar um start no novo idioma. Caso não saiba dizer algo, use o Google Translate ou outra ferramenta de idiomas.
+从学习阶段开始，就尝试用英语编写软件。这可能会成为学习新语言的好方法。如果不知道某个词怎么表达，可以使用 Google 翻译或其他语言工具。
 
-### 3.5 Tem muita fórmula matemática na área de programação
+### 3.5 编程领域中有很多数学公式吗
 
-Antigamente programação era algo muito difícil. As pessoas precisavam fazer muitos cálculos e saber traduzir diversas fórmulas matemáticas para algoritmos computacionais, pois não existia muita pronta. Quando digo "coisa pronta", falo sobre termos a nossa disposição funcionalidades que nos ajudem a fazer contas ou mesmo que nos ajudem a escrever menos código. Hoje em dia possuímos diversas funções das próprias linguagens que facilitam muito nossa vida.
+过去，编程是一件非常困难的事情。人们需要进行大量计算，并将各种数学公式转换为计算机算法，因为当时没有太多现成的功能可供使用。这里所说的“现成的东西”，是指能够帮助我们完成计算，或者帮助我们减少代码编写量的功能。如今，各种编程语言都提供了大量函数，大大简化了我们的工作。
 
-Aquelas fórmulas que vimos no Ensino Médio, grande parte das pessoas não serão utilizadas pela maioria dos programadores e programadoras. Eu nunca vi alguém da nossa área dizendo que utilizou a fórmula de Bhaskara para subir um e-commerce para produção. Mas, lembre-se: não é porque nunca vi, que isso não existe.
+我们在中学学过的那些公式，大部分程序员都不会使用。就我个人而言，从未听说有人使用巴斯卡公式将电子商务系统部署到生产环境中。但请记住：我从未见过，并不意味着这种情况不存在。
 
-Existem pessoas da área que trabalham com sistemas que precisam de muito conhecimento em matemática, mas isso vai depender de onde queremos nos envolver.
-
-
-
+有些程序员从事的系统确实需要大量数学知识，但这取决于我们想参与什么方向的工作。
 
 创建人工智能模型需要统计学知识，而通过软件操控飞机则需要特定的航空学知识，以此类推。这一切取决于我们想在编程带给我们的嵌套可能性集合中，往何处发送目标。
 
 数学知识确实可以帮助我们成为更专业的人士，但我还是要重申一遍：学习编程并不需要太多的数学。
 
-我总是建议大家：“有时间的时候，去学学数学，没错！”。这对我们的生活有很大影响，因为数学是计算机内部一切的基础。花一点时间学习计算数学或离散数学并不费时，而且是非常值得的。
+我总是建议大家：“有时间的时候，去学学数学，没错！”这对我们的生活有很大影响，因为数学是计算机内部一切的基础。花一点时间学习计算数学或离散数学并不费时，而且是非常值得的。
 
 ### 3.6 程序员的日常生活：工作流程
 
 另一个极其普遍的刻板印象是 Google 程序员的形象。在电影《实习生》中，我们看到了这家许多人梦寐以求的公司的真实一角。但是，难道每家科技公司都像 Google 一样，色彩斑斓、拥有更好的办公电脑和超创新的人力资源管理方法吗？
+
+
 
 当人们看到这类事物时，就会开始神秘化这个领域。他们认为开发者没有固定的工作时间，没有签署合同来对公司做出承诺，但事实恰恰相反。
 
@@ -811,9 +664,9 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 
 无论如何，我们都是普通人，拥有普通的工作和每个人都有的责任。我们需要履行工作时长，出具病假条（当公司要求时），需要告知我们病了，需要休假，有老板（有时很不错，有时则不然）等，就像任何其他正式工作一样。
 
-### 3.7 结论
+## 3.7 结论
 
-我们目前为止看到，对于**学习**并不需要许多技能，也没有刻板印象中描绘的那么特别，最重要的是我们的意志力、可用的学习时间，而且最重要的是，不要放弃继续学习。
+我们目前为止看到，对于学习并不需要许多技能，也没有刻板印象中描绘的那么特别，最重要的是我们的意志力、可用的学习时间，而且最重要的是，不要放弃继续学习。
 
 没有所谓的正确年龄，也没有强制性要求，更不存在只有程序员才拥有的特殊技能或元素。
 
@@ -823,13 +676,9 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 
 希望通过这些回答，让你对投入编程世界感到更加自在，因为接下来的章节将让你产生更大的动力。
 
-
-
 编程领域充满了机会。当我们了解自己可以胜任的职业时，那真是一条不同路径的洪流。选项如此之多，我们在其中迷失是司常的。
 
 有些路径彼此完全不同，因为存在一些非常独特的领域，而另一些则非常相似。我们可以选择的职业方向需要特定的知识和技能才能在这些领域表现出色。
-
-
 
 当我们思考那些编写代码的人时，即使存在专业领域的分工（前端、后端、全栈、移动端、游戏、数据等），我们都有一些“通用的”技术知识，这些知识是所有人的必修课，而且对于我们在这个领域工作至关重要。
 
@@ -860,8 +709,11 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 对那些学校/大学作业进行版本控制也很常见：
 
 - 数学作业-1.doc, 数学作业-2.docx;
+
 - 数学作业-这次行了.doc;
+
 - 数学作业-这次行了-2.docx;
+
 - 数学作业-我受不了了.doc;
 
 这保证了即使我们在遇到任何问题时，也不会丢失工作的最新版本，因为我们可以恢复到上一个版本。这个想法也适用于源代码的版本控制。我们创建代码，拥有第一个版本，修改某些内容，然后有了另一个版本，以此此类推。为了管理这一点，我们使用一些代码控制系统，这些是能够方便我们创建程序版本生活的软件（比一直创建副本并加上以 1, 2, 3 结尾的名字好得多）。
@@ -902,7 +754,6 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 
 我们可以将环境总结为：我们的程序运行的地方，这可以是我们的机器、服务器或我们最终用户的机器/手机上。当我们在自己的机器上创建软件时，我们称之为本地开发环境。最终用户使用的环境
 
-
 生产环境。我们拥有一个尽可能与生产环境相同的环境，供我们程序员进行测试，这被称为测试环境。至少我们应该知道本地环境的存在以及生产环境的存在。
 
 这些是所有软件开发领域通用的知识。现在让我们了解各个职能领域及其特定需求。
@@ -922,15 +773,25 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 前端开发人员需要具备的一些技术知识：
 
 - **HTML：** 是一种标记语言，以某种方式结构化 Web 页面内容的语言，使浏览器和其他代码阅读器能够理解屏幕上的每个句子或项目是标题、段落、页面部分、图片等。
+
 - **CSS：** 是一种定义我们页面视觉风格的语言（颜色、形状、布局、动画）。通过 CSS，我们将浏览器在屏幕上显示的 HTML 从一个没有生命的物体变为设计人员创建的图稿。
+
 - **JavaScript：** 是一种为客户端带来交互性的编程语言。它与服务器通信，并执行用户在页面上激活的操作。
+
 - **Node.js：** 除了 JavaScript 语言之外，如今前端开发人员还需要了解 Node.js，这是一个执行 JavaScript 的软件开发平台，因为我们在日常工作中使用这项技术处理很多事情，例如自动化重复的前端任务，甚至为最终用户提供我们的客户端应用。
+
 - **Web 性能 (Performance)：** Web 应用的性能（或效率）是指页面加载的速度、该页面向用户机器下载的数据量等其他因素。性能是前端人员的巨大责任，因为客户端负责了网站加载速度的 80% 到 90%，没有人愿意留在一个卡顿或加载缓慢的网站上，更不用说一个耗尽我们与运营商购买的所有带宽的网站。
+
 - **语义化 (Semantics)：** HTML 语言为屏幕上显示的每个项目都有特定的元素。如果是按钮，就有正确的元素；如果是段落也是如此。在前端，语义化是指正确使用 HTML 标记语言处理内容。这非常重要，因为通过 SEO 技术，可以优化内容让搜索引擎更容易找到我们的网站，同时也助于无障碍性，让屏幕阅读器（为视障人士读取屏幕内容的软件）能更容易发现和理解应用中的内容和组件。
+
 - **SEO (搜索引擎优化)：** 营销对任何公司来说都是重要的。如今，SEO 是大多数数字产品营销的一部分，因为如果公司没有销售或没有访问，内容就无法出现在搜索结果的第一页。SEO（Search Engine Optimization）是优化我们的网站，以便搜索引擎更容易找到我们，而这些优化是基于这些网站本身指导我们在页面上执行的优化的。
+
 - **无障碍 (Accessibility)：** 是让界面对视觉、运动、认知或其他类型的残障人士可用。互联网应该是所有人（包括残障人士）都能自由访问的。创建这些人员能够使用的界面和网站是我们的责任。
+
 - **界面测试：** 指用于确认在修改了屏幕/页面/界面的部分或前端代码后，没有任何部分停止正常工作的技术，正如我之前提到的软件测试和自动化测试。
+
 - **用户体验 (UX)：** 正如字面意思，它是用户的体验，负责确保他们的体验愉快的。前端人员不需要精通 UX，但具备基础知识有助于保证质量。
+
 - **后端集成：** 是我们负责创建这些人员能够使用的界面和网站。前端人员需要掌握后端存储的方法。
 
 ## 4.3 后端 (Back-end)
@@ -939,20 +800,17 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 
 我们在前端拥有显示规则（在用户特定交互时在屏幕上应该显示的内容），而在后端拥有公司的业务模型（如费率、金额、推荐等）。这些是系统的核心部分，应该安全地存储在我们的服务器上。
 
-
-
-
 一种用于后端的编程语言：它可以是许多用于创建后端系统的语言之一，例如 Java, PHP, JavaScript, Golang, Ruby, C#。这些语言有有自己的差异，选择可能会很大程度上影响我们的系统。我将在下一章节中更详细地介绍编程语言的选择。
 
 ### 操作系统：后端人员需要理解“在层级之下”发生了什么，深入了解操作系统是如何运作的，而不仅仅是使用它们。有必要对这些进程、内存、数据存储等进行深入研究。
 
 ### 数据库：数据库是以组织的方式收集的数据集合，以便我们能够安全地对其进行查询、修改或删除。有必要了解这些知识，因为它们将是应用程序处理的数据。同样重要的是学习 SQL 查询语言，以及非关系型数据存储模型——一种不同的存储数据的方式，它因其开发的易用性、性能和可扩展性而受到广泛关注，即 NoSQL。
 
-## Web 通信架构：我们需要了解通信模型（前端与后端，甚至是后端与后端），例如 REST 或 SOAP，这些都是 Web 通信架构，是数据在应用程序之间传输的方式，因为在更复杂的系统中，我们不断地在系统之间交换数据。
+### Web 通信架构：我们需要了解通信模型（前端与后端，甚至是后端与后端），例如 REST 或 SOAP，这些都是 Web 通信架构，是数据在应用程序之间传输的方式，因为在更复杂的系统中，我们不断地在系统之间交换数据。
 
 ### Web 服务器：它们是我们的后端和应用程序前端之间建立通信桥梁的程序，它们安装在操作系统上，并通过网络协议将客户端请求的内容发送到服务器端应用程序。
 
-## 网络通信协议：除了 HTTP 之外，还有许多其他网络通信协议，我们应用程序的后端在其中承担着很大责任，因为它可能需要通过特定协议发送文件、电子邮件或其他消息，例如 SMTP 或 FTP，它们分别是通过电子邮件通信和文件传输的通信协议。
+### 网络通信协议：除了 HTTP 之外，还有许多其他网络通信协议，我们应用程序的后端在其中承担着很大责任，因为它可能需要通过特定协议发送文件、电子邮件或其他消息，例如 SMTP 或 FTP，它们分别是通过电子邮件通信和文件传输的通信协议。
 
 ## 4.4 基础设施 (DevOps)
 
@@ -984,69 +842,66 @@ Existem pessoas da área que trabalham com sistemas que precisam de muito conhec
 
 **应用程序监控**：这是基础设施工作的重要部分，因为此人负责环境，他们可以在需要时增加内存或处理器，存在多种工具和方法可以在生产或测试环境中监控应用程序，基础设施人员必须掌握这些方法。
 
-
-
-
 这种在某个领域的专业化是自然发生的，因为要精通所有领域几乎在人类体范围内是不可能的，无法一次性达到卓越。由于人们对某些职位更有亲和力或更喜欢某个功能，他们往往会专注于该功能，但作为全栈（fullstack），他们又了解所需的知识以便能够在所有其他领域中工作。
 
-无论如何，全栈开发者是指那些能够从零开始并完全独立地创建整个系统的人。并不是说其他人就不知道，但在公司里，那些承担全栈职责的人决定在日常工作中不进行专精， no seu dia a day não teria uma especialização, mas resolveria qualquer problema que aparecer。他们会 tratar de modelar o banco de dados, configurar e provisionar o servidor, criar a aplicação do servidor e do cliente, enfim, tudo o que precisamos de sistemas Web 甚至 em áreas， como mobile.
 
-正如想象的，一个 pessoa desenvolvedora full-stack precisa de conhecimento técnico de infraestrutura, front-end, back-end 以及 o que mais ela de necessário. Se quiser ser full-stack em mobile, por exemplo, precisará saber tudo sobre infraestrutura, back-end e mobile. Se quiser atuar em games, infraestrutura, back-end e games... E assim por diante.
 
-很多人认为全-stack é uma evolução natural de outras áreas. Elas acreditam que começamos como front-end, back-end ou outra especialização e vamos nos tornando mais generalistas com o tempo, porém isso não é uma verdade. As pessoas podem trabalhar a vida inteira como front-end, back-end, mobile etc. e nunca querer se envolver com outras partes do sistema (apespesar de saber como o sistema funciona).
+无论如何，全栈开发者是指那些能够从零开始并完全独立地创建整个系统的人。并不是说其他人就不知道，但在公司里，那些承担全栈职责的人决定在日常工作中不进行专精，而是解决任何出现的问题。他们会处理数据库建模、配置并准备服务器、创建服务端和客户端应用程序，总之，我们 Web 系统甚至移动端（`mobile`）领域所需的一切。
 
-Nós também não começamos em uma área e vamos evoluindo de profissional, como de front-end junior, front-end pleno, front-end sênior e finalmente nos tornamos full-stack. Isso não é uma realidade. A pessoa pode começar, desde seu primeiro dia de trabalho, já atuando como full-stack, pois isso não é um nível de conhecimento, como iniciante, intermediário, avançado, mas uma área de atuação.
+正如想象的，一个全栈开发者（`pessoa desenvolvedora full-stack`）需要具备基础设施、前端（`front-end`）、后端（`back-end`）以及任何其他必要领域的技术知识。例如，如果想在移动端成为全栈，就需要了解基础设施、后端和移动端的一切；如果想在游戏领域工作，则需要了解基础设施、后端和游戏……以此类推。
 
-Otro erro é achar que uma pessoa full-stack é a mais sabichona de todas as áreas. Como eu disse anteriormente, a pessoa desenvolvedora full-stack pode possuir conhecimento generalista e dominar um assunto, mas uma especialista pode saber mais que de outra área que ela não domina tanto. Um exemplo: alguém que domina muito back-end, como full-stack, pode saber menos de mobile do que alguém com especialização em mobile.
+很多人认为全栈是其他领域的自然演进。他们相信我们从前端、后端或其他专业领域开始，随着时间推移逐渐变得更加通才，但这并非事实。人们可以一辈子从事前端、后端、移动端等工作，而从不涉足系统的其他部分（尽管了解系统如何运作）。
 
-## 4.6 Mobile Android e iOS
+我们也不是从某个领域开始，然后逐步晋升为更高级的专业人员，比如从前端初级、前端中级、前端高级，最终成为全栈。这并非现实。一个人可以从工作的第一天起就作为全栈工作，因为这不是知识水平（如入门、中级、高级），而是一个工作领域。
 
-Mobile, como já aprendemos anteriormente, engloba os celulares, smartphones e tablets. A pessoa que atua nessa área será responsável por desenvolver e manter aplicativos para dispositivos mobile.
+另一个错误是认为全栈人员在所有领域都是最博学的。如前所述，全栈开发者可能拥有通才知识并精通某一领域，但某个领域的专家可能比全栈人员更了解其不擅长的领域。例如：一个非常精通后端的人，作为全栈，可能比移动端专家更不了解移动端。
 
-Essa pessoa precisará conhecer o sistema operacional com o qual vai trabalhar no dispositivo, seja Android ou iOS (iPhone). Vale lembrar que os sistemas operacionais de celulares, assim como de computadores, controlam todo o nosso aparelho. São responsáveis por desde o funcionamento de um botão até os aplicativos que estão instalados.
+## 4.6 移动端 Android 和 iOS
 
-Quando compramos um smartphone, hoje em dia, temos a escolha entre Android ou iOS, Android para a maioria dos aparelhos, como Galaxy, ZenFono, Moto E/G/X/Z, Xperia e iOS para os aparelhos da Apple, iPhones e iPads.
+移动端（`mobile`），正如我们之前所学，涵盖手机、智能手机和平板电脑。在该领域工作的人将负责开发和维护移动设备上的应用程序。
 
-Não é recomendado instalar um sistema Android em um aparelho da Apple, por exemplo, apesar de ser possível, pelas integrações do sistema operacional com o hardware. Os aparelhos com Android possuem hardware compatível com Android e os Apple com o iOS.
+该人员需要了解设备上将要使用的操作系统，无论是 Android 还是 iOS（iPhone）。值得记住的是，手机操作系统与计算机操作系统一样，控制着整个设备。它们负责从按钮的功能到已安装的应用程序的一切。
 
-Existem diferenças significativas de versão entre sistemas antigos (versão 1, 2, 3 etc.) e versões mais atuais dos sistemas e isso aumenta a importância de conhecer muito bem os sistemas operacionais e acompanhar sua evolução. Além disso, as empresas podem alterar o Android que vai em seus dispositivos para que possua características específicas para os aparelhos. Também enfrentamos problemas de hardware do aparelho, como espaço de armazenamento interno, memória, cartão de memória ou até mesmo onde trabalhamos com mobile.
+如今，当我们购买智能手机时，可以在 Android 或 iOS 之间选择：Android 适用于大多数设备，如 Galaxy、ZenFone、Moto E/G/X/Z、Xperia，而 iOS 适用于 Apple 的设备，如 iPhone 和 iPad。
 
-Hoje em dia os aplicativos fazem tanta coisa e são tão complexos que que podemos ter muito mais do que alguns profissionais cuidando de um só aplicativo. Isso tanto em uma empresa de tecnologia quanto em uma empresa de outro setor que possua o aplicativo como fonte de renda. As possibilidades são imensas.
+例如，不建议在 Apple 设备上安装 Android 系统，尽管由于操作系统与硬件的集成，这是可能的。Android 设备拥有与 Android 兼容的硬件，而 Apple 设备则与 iOS 兼容。
 
-Mas, aqui, temos uma divisão entre Android e iOS, isso acontece porque cada sistema possui todo um ecossistema diferente do outro para a pessoa aprender, como Java e Kotlin, linguagens de programação para Android, e Objective-C e Swift, as linguagens de programação para iOS. Seria muita coisa para uma pessoa sozinha dominar, por isso é um mercado dividido entre essas duas frontes.
+旧系统（版本 1、2、3 等）与当前系统版本之间存在显著差异，这增加了深入了解操作系统并跟踪其演进的重要性。此外，公司可能会修改其设备上的 Android 系统，使其具有特定于设备的功能。我们还会遇到设备硬件问题，如内部存储空间、内存、存储卡，甚至在我们从事移动端工作时遇到的其他问题。
 
-Somente para conhecimento, existem outros sistemas operacionais de celular, porém mais "importantes" para quem quer entrar na área de mobile são Android e iOS atualmente.
+如今，应用程序功能如此丰富且复杂，以至于一个应用程序可能需要多个专业人员来维护。无论是在科技公司还是在拥有应用程序作为收入来源的其他行业公司，可能性都是巨大的。
 
-Uma pessoa que trabalha com mobile precisará conhecer:
+但在这里，我们在 Android 和 iOS 之间有一个划分，这是因为每个系统都有完全不同的生态系统需要学习，例如 Java 和 Kotlin（Android 的编程语言），以及 Objective-C 和 Swift（iOS 的编程语言）。一个人要掌握所有这些内容太多了，因此这是一个分为两个方向的市场。
 
-- Uma linguagem de programação: a escolha da linguagem de programação vai variar de acordo com o ambiente (sistema operacional e aparelhos) escolhido para desenvolver. Se quismos programar para Android vamos precisar aprender Java e Kotlin, se para iOS, então é Objective-C e Swift. Antigamente se utilizava uma linguagem para o desenvolvimento, porém foram criadas duas linguagens novas e com mais poderes para facilitar o desenvolvimento mobile, Kotlin e Swift, e alguns módulos ainda precisam ser mantidos com as linguagens "antigas" por motivos de versão ou dificuldade de manutenção/reescrita.
-- **Sistemas operacionais mobile:** é necessário dominar os sistemas operacionais para contornar ou corrigir os problemas de versão (uma versão antiga de Android/iOS pode não aceitar alguma coisa que utilizamos e então temos que buscar alternativas para isso).
-- **Tamanhos de telas:** os tamanhos de tela variam muito e é por isso é importante conhecê-los.
-- **Processos de deploy (publicação):** o processo de deploy de aplicativos também é diferente dos demais, pois eles são enviados para as lojas de aplicativos, por isso é necessário que a pessoa desenvolvedora mobile conheça suas especificações e limitações.
-- **Integração e sincronização com back-end:** algumas informações importantes estão na internet, como dados dos usuários, preços de produtos etc., estão no back-end da aplicação, então necessário que a pessoa consiga solicitar esses dados utilizando troca de mensagens nos protocolos de Web.
-- **Recursos dos dispositivos mobile (hardware):** itens como GPS, Bluetooth, Tela, são os recursos do aparelho que a pessoa deve dominar. Um aplicativo pode precisar da localização de um usuário para executar determinada ação, ou pode precisar piscar a tela, utilizar a câmera ou algum outro recurso.
+仅作了解，还有其他手机操作系统，但当前对想进入移动端领域的人来说，更“重要”的是 Android 和 iOS。
 
-## 4.7 Desenvolvimento de jogos
+从事移动端工作的人员需要了解：
 
-Muita gente conhece a área gracias aos games. As pessoas querem criar um jogo ou mesmo utilizam programas que "facilitam" os games por meio de scripts interpretados, os famosos bots ou hacks, que são meios para roubar nos jogos.
+- **一种编程语言**：编程语言的选择将根据所选开发环境（操作系统和设备）而变化。如果为 Android 编程，需要学习 Java 和 Kotlin；如果为 iOS 编程，则需要学习 Objective-C 和 Swift。过去使用一种语言进行开发，但后来创建了两种更强大的新语言来简化移动端开发，即 Kotlin 和 Swift，而某些模块仍因版本或维护/重写困难的原因需要用“旧”语言维护。
 
-Isso é uma das partes legais de trabalhar com programação: podemos trabalhar com algo que gostamos muito ou utilizamos o tempo no dia a dia. As pessoas que se divertem bastante com jogos com certeza vão divertir criando jogos.
+- **移动操作系统**：必须掌握操作系统，以解决或修复版本问题（旧版 Android/iOS 可能不支持我们使用的某些功能，因此需要寻找替代方案）。
 
-Alguém responsável pela programação de um game vai criar a física do jogo, o motor de renderização (o código que faz as coisas aparecerem na tela), implementar a mecânica dos jogos, movimentação de personagens, colisão de objetos e mais algumas funções.
+- **屏幕尺寸**：屏幕尺寸差异很大，因此了解它们很重要。
 
-É um mercado muito atrativo no Brasil, porém é possível conseguir uma oportunidade para um emprego remoto, para mudar de país ou mesmo conseguir trabalhar como freelancer. Isso acontece porque as maiores empresas de desenvolvimento de jogos não estão no Brasil (não possuem setor de desenvolvimento por aqui), infelizmente.
+- **部署（发布）流程**：应用程序的部署流程也与其他领域不同，因为它们被发送到应用商店，因此移动端开发者需要了解其规范和限制。
 
-Mas isso não significa que a profissão está escassa. O mercado de games como um todo e desenvolvimento de jogos no Brasil é um dos que crescem no mundo! As pessoas estão dispostas a comprar os jogos e compram bastante. Nesse cenário de muita venda de games, é de se imaginar que o mercado de criação de
-[/content]
+- **与后端集成和同步**：一些重要信息（如用户数据、产品价格等）位于互联网上，即应用程序的后端，因此开发者需要能够通过 Web 协议的消息交换来请求这些数据。
 
-*(注：由于您提供的原文为葡萄牙，而指令是“将给定英文文本翻译成中文”，我已根据内容逻辑将葡萄牙原文翻译成了中文。)*
+- **移动设备资源（硬件）**：GPS、蓝牙、屏幕等项目是开发者必须掌握的设备资源。应用程序可能需要用户的位置来执行特定操作，或者可能需要闪烁屏幕、使用摄像头或其他资源。
 
-**译文：**
+## 4.7 游戏开发
 
-[content]
-这种在某个领域的专业化是自然发生的，因为要精通所有领域几乎在人类体范围内是不可能的，无法一次性达到卓越。由于人们对某些职位更有亲和力或更喜欢某个功能，他们往往会专注于该功能，但作为全栈（fullstack），他们又了解所需的知识以便能够在所有其他领域中工作。
+很多人通过游戏了解这个领域。人们想创建游戏，甚至使用通过解释脚本“简化”游戏的程序，即著名的机器人（`bots`）或外挂（`hacks`），这些是游戏中作弊的手段。
 
-无论如何，全栈开发者是指那些能够从零开始并完全独立地创建整个系统的人。并不是说其他人就不知道，但在公司里，那些承担全栈职责的人决定在日常工作中不进行专精，而是解决任何出现的问题。他们会处理数据库建模、配置并准备服务器、创建服务端和客户端应用程序，总之，我们 Web 系统甚至移动端（mobile）领域所需的一切。
+这是编程工作的乐趣之一：我们可以从事自己非常喜欢或日常使用的东西。喜欢玩游戏的人一定会享受创建游戏的过程。
+
+负责游戏编程的人将创建游戏物理、渲染引擎（使事物出现在屏幕上的代码）、实现游戏机制、角色移动、物体碰撞以及其他一些功能。
+
+在巴西，这是一个非常有吸引力的市场，但也可以获得远程工作机会、移居国外或作为自由职业者工作。这是因为最大的游戏开发公司不在巴西（不幸的是，它们在这里没有开发部门）。
+
+但这并不意味着这个职业稀缺。巴西的游戏市场和游戏开发整体上是世界上增长最快的之一！人们愿意购买游戏，而且购买量很大。在这种大量游戏销售的情况下，可以想象游戏创作市场……
+
+
+
 
 正如想象的，一个全栈开发者需要基础设施、前端、后端以及任何其他必要的技术知识。如果你想在移动端成为全栈，例如，你将需要关于基础设施、后端和移动端的所有知识。如果你想从事游戏，就需要了解基础设施、后端和游戏……以此类推。
 
@@ -1062,11 +917,11 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 此人需要了解他们在设备上使用的操作系统，无论是 Android 还是 iOS（iPhone）。需要记住的是，手机操作系统和电脑操作系统一样，控制着我们的整个设备。它们负责从按钮的功能到已安装的应用程序的所有事务。
 
-现在我们购买智能手机时，可以在 Android 或 iOS 之间进行选择，Android适用于大多数设备，如 Galaxy、ZenFono、Moto E/G/X/Z、Xperia，而 iOS适用于 Apple 设备，iPhone 和 iPad。
+现在我们购买智能手机时，可以在 Android 或 iOS 之间进行选择，Android 适用于大多数设备，如 Galaxy、ZenFono、Moto E/G/X/Z、Xperia，而 iOS 适用于 Apple 设备，iPhone 和 iPad。
 
 不建议在 Apple 设备上安装 Android 系统，例如，尽管操作系统与硬件的集成使得这是可以的。Android 设备具有与 Android 兼容的硬件，而 Apple 设备与 iOS 兼容。
 
-旧版本系统（版本 1, 2, 3 等）与较新系统版本之间存在显著的差异，这增加了熟练了解操作系统并跟进其演化的重要性。此外，公司可能会更改其设备上的 Android，使其具有针对设备的特定特性。我们还面临设备硬件问题，如内部存储空间、内存、内存卡，甚至我们从事移动端工作的地方。
+旧版本系统（版本 1、2、3 等）与较新系统版本之间存在显著的差异，这增加了熟练了解操作系统并跟进其演化的重要性。此外，公司可能会更改其设备上的 Android，使其具有针对设备的特定特性。我们还面临设备硬件问题，如内部存储空间、内存、内存卡，甚至我们从事移动端工作的地方。
 
 如今，应用程序的功能如此多且如此复杂，以至于我们可以比几个专业人士多得多来维护一个应用程序。这无论在技术公司还是在拥有该应用程序作为收入来源的其他行业公司都是如此。可能性是巨大的。
 
@@ -1079,7 +934,7 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 - 一种编程语言：编程语言的选择取决于开发时所选的环境（操作系统和设备）。如果我们想为 Android 编程，我们需要学习 Java 和 Kotlin；如果为了 iOS，那么就是 Objective-C 和 Swift。过去使用一种语言进行开发，但后来创建了两种新的且功能更强大的语言来方便移动端开发：Kotlin 和 Swift，某些模块由于版本原因或维护/重写的困难，仍需要用“旧”语言进行维护。
 - **移动端操作系统：**有必要精通操作系统以规避或修复版本问题（旧版本的 Android/iOS 可能不接受我们使用的某些内容，因此我们必须为此寻找替代方案）。
 - **屏幕尺寸：**屏幕尺寸变化很大，因此了解它们非常重要。
-- **部署流程（发布）：** 应用程序的部署过程也与其他不同，因为它们被发送到应用程序商店，因此移动端开发者需要了解其规格和局限性。
+- **部署流程（发布）：**应用程序的部署过程也与其他不同，因为它们被发送到应用程序商店，因此移动端开发者需要了解其规格和局限性。
 - **与后端的集成和同步：**一些重要信息在互联网上，如用户数据、产品价格等，位于应用程序的后端，因此需要人能够使用 Web 协议请求这些数据。
 - **移动设备资源（硬件）：**如 GPS、蓝牙、屏幕等是人必须掌握的设备资源。应用程序可能需要用户的位置来执行特定操作，或者可能需要闪烁屏幕、使用摄像头或其他资源。
 
@@ -1101,15 +956,11 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 从事游戏开发所需的一些知识包括：
 
--   **编程语言**：C、C++、Java 以及 Web 语言，这些是游戏开发者需要精通的某些语言 - 并非全部！毕竟我们不是行走的字典。因为大多数游戏的大部分功能和资源都依赖于其运行的平台，无论是在手机、电脑还是游戏机上，而且我们现在也有用 JavaScript 编写并运行在浏览器中的游戏。有些人会在职业生涯中途转型领域，因此可能会从 Python 等语言转到 Java 或从 C/C++ 转变为为了开发游戏。
-
--   **软件性能**：游戏开发者需要学习 C 和 C++ 等语言的原因是它们具有极其强大的性能。这些语言可以生成性能极高的软件，但仅仅会使用它们并不能保证游戏的良好性能。游戏领域的人需要非常了解软件性能，以确保游戏不会卡顿、出现缓慢或类似的问题。
-
--   **游戏平台**：需要非常熟悉游戏将要运行的平台，为电脑和主机（如 PlayStation、XBox 等）进行大量的编程。
-
--   **游戏机制**：这是谈论游戏开发时最重要的的话题之一。游戏机制是对游戏运行机制的处理。角色/物品/物体的移动、当我们做某事时游戏中发生了什么、动态平衡，这些就是我们所说的“游戏机制”。
-
--   **游戏引擎 (Engines)**：引擎，游戏引擎是方便游戏开发的工具。如果我们从零开始创建一个游戏，游戏的物理部分可能会变得复杂且重复，而这些工具已经有了现成的资源供我们在游戏中使用。一些著名的引擎是：Unreal Engine、Unity 和 CryEngine。
+- **编程语言**：C、C++、Java 以及 Web 语言，这些是游戏开发者需要精通的某些语言——并非全部！毕竟我们不是行走的字典。因为大多数游戏的大部分功能和资源都依赖于其运行的平台，无论是在手机、电脑还是游戏机上，而且我们现在也有用 JavaScript 编写并运行在浏览器中的游戏。有些人会在职业生涯中途转型领域，因此可能会从 Python 等语言转到 Java，或从 C/C++ 转变为为了开发游戏。
+- **软件性能**：游戏开发者需要学习 C 和 C++ 等语言的原因是它们具有极其强大的性能。这些语言可以生成性能极高的软件，但仅仅会使用它们并不能保证游戏的良好性能。游戏领域的人需要非常了解软件性能，以确保游戏不会卡顿、出现缓慢或类似的问题。
+- **游戏平台**：需要非常熟悉游戏将要运行的平台，为电脑和主机（如 PlayStation、XBox 等）进行大量的编程。
+- **游戏机制**：这是谈论游戏开发时最重要的的话题之一。游戏机制是对游戏运行机制的处理。角色/物品/物体的移动、当我们做某事时游戏中发生了什么、动态平衡，这些就是我们所说的“游戏机制”。
+- **游戏引擎（Engines）**：引擎，游戏引擎是方便游戏开发的工具。如果我们从零开始创建一个游戏，游戏的物理部分可能会变得复杂且重复，而这些工具已经有了现成的资源供我们在游戏中使用。一些著名的引擎是：Unreal Engine、Unity 和 CryEngine。
 
 但这时我们会问：每当我们听到游戏时，都会出现可玩性、游戏化、角色、脚本等术语，我们不负责这些这些吗？
 
@@ -1123,17 +974,14 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 在这两个职业之间，我们有一些共同点，就像任何从事编程的人所拥有的点一样，即：
 
--   **编程语言**：像涉及编程的职业一样，需要精通一门或多种编程语言，目前最常用的是 Python 语言，但也可能需要了解 Java、Julia，并且存在一种用于数据处理和统计的特殊语言，R 语言。
-
--   **数学和统计学**：数学将成为日常生活的一部分，因此需要对数字艺术有深入的了解，特别是统计学。
-
--   **数据库**：数据库以及 SQL 和 NoSQL 查询语言也将是极其必要的，毕竟人一直与数据打交道，需要更好地了解工具以及存储数据更好的建模方式。
-
--   **大数据特定工具**：存在专门用于大数据的工具，如 Hadoop 和 Spark，将需要掌握它们。
+- **编程语言**：像涉及编程的职业一样，需要精通一门或多种编程语言，目前最常用的是 Python 语言，但也可能需要了解 Java、Julia，并且存在一种用于数据处理和统计的特殊语言，R 语言。
+- **数学和统计学**：数学将成为日常生活的一部分，因此需要对数字艺术有深入的了解，特别是统计学。
+- **数据库**：数据库以及 SQL 和 NoSQL 查询语言也将是极其必要的，毕竟人一直与数据打交道，需要更好地了解工具以及存储数据更好的建模方式。
+- **大数据特定工具**：存在专门用于大数据的工具，如 Hadoop 和 Spark，将需要掌握它们。
 
 让我们更深入地了解这两个职业，以及上述的话题。
 
-### 数据科学 (Ciência de dados)
+### 数据科学（Ciência de dados）
 
 数据科学家负责处理数据，将其转换为组织或终端用户可用的信息。此人将创建算法从海量数据中提取信息。
 
@@ -1141,7 +989,7 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 这就是为什么数据科学家在当今非常重要。数据科学家的分析能力和统计学知识可以改变整个产品或公司的走向。
 
-### 数据工程 (Engenharia de dados)
+### 数据工程（Engenharia de dados）
 
 从事数据工程领域的人负责为数据科学家的工作提供必要的基础设施。他们规划存储的数据，扩展系统（使系统支持更大数量的数据/流量/访问量）。
 
@@ -1161,18 +1009,17 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 我们选择中另一个非常重要的点：技术社区。
 
-社区是以某种方式聚集的群体，无论是面对面的还是论坛中，为了讨论技术和分享知识。社区为初学者（或经验人士）生成内容，它是群体或个人
-
+社区是以某种方式聚集的群体，无论是面对面的还是论坛中，为了讨论技术和分享知识。社区为初学者（或经验人士）生成内容，它是群体或个人。
 
 它拥抱那些刚开始的人并说：“来这里吧……我们会互相帮助”。在做出职业决定之前，分析我们想要做的事情周围的社区是否友善是有好处的，因为他人的支持对我们的职业生涯有很大影响。当我们获得帮助时，成长速度会快得多。
 
 我们理解在选择职业时需要考虑以下几点：
 
--   与职业的兼容性/亲和力
--   我们所在的地区（城市/州）以及职位数量
--   必要时更换城市的可能性
--   必要时远程工作的可能性
--   社区以及可供学习的内容数量
+- 与职业的兼容性/亲和力
+- 我们所在的地区（城市/州）以及职位数量
+- 必要时更换城市的可能性
+- 必要时远程工作的可能性
+- 社区以及可供学习的内容数量
 
 ## 4.10 如何在选择职业之前测试每个领域
 
@@ -1184,9 +1031,9 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 除了线黑客松外，我们还有在线资源，如：
 
--   对于**前端**，我们可以查看 [Codepen](https://codepen.io/) 上的项目，这是一个展示和界面原型设计的网站，我们可以在那里看到前端代码的最新示例。
--   对于所有职业，我们可以查看 [GitHub](https://github.com/) 上的项目，这一个开源项目托管网站，也是软件开发人员的“社交网络”。
--   对于**数据**领域的人，我们还有 [Kaggle](https://www.kaggle.com/)，这是一个包含各种数据相关挑战的网站。
+- 对于前端，我们可以查看 [Codepen](https://codepen.io/) 上的项目，这是一个展示和界面原型设计的网站，我们可以在那里看到前端代码的最新示例。
+- 对于所有职业，我们可以查看 [GitHub](https://github.com/) 上的项目，这一个开源项目托管网站，也是软件开发人员的“社交网络”。
+- 对于数据领域的人，我们还有 [Kaggle](https://www.kaggle.com/)，这是一个包含各种数据相关挑战的网站。
 
 除了这些，我们还有诸如 [HackerRank](https://www.hackerank.com/)、[Code Wars](https://www.codewars.com/) 和 [Exercism](http://exercism.io/) 等网站，它们拥有编程挑战，让我们学习算法，并分析我们是否也喜欢解决逻辑问题。
 
@@ -1194,7 +1041,7 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 选择职业的决定并不是我们职业生涯中的唯一决定。可能会发生很多事情，在某个时刻我们会想要更换领域。更换领域，无论是从一个技术领域到另一个技术领域还是非技术领域，都是非常困难的。我们不知道什么时候应该改变，无法想象我们是否应该改变。但这种情况可能会发生。
 
-我们可以在开始生活时选择前端、后端或其他与Web相关的领域，然后突然在数据科学中发现自己，因为我们突然发现我们喜欢它。
+我们可以在开始生活时选择前端、后端或其他与 Web 相关的领域，然后突然在数据科学中发现自己，因为我们突然发现我们喜欢它。
 
 我们需要做好准备以在任何时候进行的事情是：规划如何迁移领域。
 
@@ -1216,8 +1063,7 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 最重要的是：做你喜欢做的事情。
 
-# 第 5 章
-一个未解决问题的星系
+# 第 5 章：一个未解决问题的星系
 
 我们越投入计算机编程就业市场，产生的疑问就越多。我们已经拥有某些问题的答案，例如：什么是计算机程序、程序是如何创建的、软件、系统和应用程序之间的区别以及软件开发的一些职业。然而，出现了其他问题，例如：学习哪种编程语言、上哪所大学（如果我们去的话）等等。
 
@@ -1227,10 +1073,7 @@ Mas isso não significa que a profissão está escassa. O mercado de games como 
 
 ## 5.1 许多编程语言，学哪一个？
 
-PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可以用于 Web 编程的一些语言。Java, Kotlin, C 和 C++ 用于移动端。Python, R, F# 用于数据。Java, C, C++ 和 JavaScript 用于游戏…… 有很多选择！
-
-
-
+PHP、Python、Java、C#、Ruby、Elixir、Clojure、JavaScript……这些是我们可以用于 Web 编程的一些语言。Java、Kotlin、C 和 C++ 用于移动端。Python、R、F# 用于数据。Java、C、C++ 和 JavaScript 用于游戏……有很多选择！
 
 使用更简洁的语法编写代码，在日常工作中提供了更高的生产力，并减少了代码编写者的工作量。
 
@@ -1240,8 +1083,8 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 编程语言的选择应该基于：
 
--   我们的个人目标；
--   我们的职业目标。
+- 我们的个人目标；
+- 我们的职业目标。
 
 我们是需要学习这门语言来开始工作，还是仅仅为了出于爱好或好奇心而想学习一门语言编程？
 
@@ -1253,15 +1096,17 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 即使我们已经确定了平台，对于同一个目标我们也会找到多个选项，因此我们应该利用市场智能来分析哪种语言在初阶段能带给我们工作。如果我们考虑到 Web 环境，在当前场景下将有很多 Java、PHP、C#、JavaScript、Python 和 Ruby 语言的职位，而且并不是所有这些技术都在雇佣当地居民。我们应该搜索以了解哪种语言的空缺职位最多，并将其作为该语言的一个优点。
 
+
+
 市场智能就是利用我们的研究能力、数据范围和数据标准化来识别可能的机会、风险和需求。也就是说：尽可能地研究就业市场（如果是要在同一个城市/州工作，甚至是其他州），在手中掌握大量数据并将所有内容归类，以便我们拥有有助于做出决策的样本。我们手中的数据越多，就越能理解市场。我们能够知道公司真正在寻找什么，投入时间到某种特定技术中的风险，以及识别对新事物的可能投资机会。
 
-例如：如果我所在的城市最常用的语言是 Java，我学习 Rust 有意义吗？这取决于情况。取决于我是否想在我的城市工作，我是否想离开这个州，我是否想要一份远程工作，以及该技术是否显示出未来的增长潜力。
+例如：如果我所在的城市最常用的语言是 `Java`，我学习 `Rust` 有意义吗？这取决于情况。取决于我是否想在我的城市工作，我是否想离开这个州，我是否想要一份远程工作，以及该技术是否显示出未来的增长潜力。
 
-另一个重要的因素，考虑到就业市场时，是我们想在哪里工作。我们目标进入的公司可能不使用 Ruby，例如，他们可能使用 Java，正如我们国家的大量公司一样。在这种情况下，短期学习 Ruby 并不很有划算，最好学习 Java 并追求梦想中的工作。
+另一个重要的因素，考虑到就业市场时，是我们想在哪里工作。我们目标进入的公司可能不使用 `Ruby`，例如，他们可能使用 `Java`，正如我们国家的大量公司一样。在这种情况下，短期学习 `Ruby` 并不很有划算，最好学习 `Java` 并追求梦想中的工作。
 
 那么，取决于我们想要工作的领域，我们应该研究使用了哪些语言以及每种语言的优缺点，以帮助我们做出选择。让我们现在学习如何进行这项研究。
 
-### 方便我们的决策
+## 方便我们的决策
 
 为了方便决策，我们可以创建一个表格来帮助我们选择第一种语言，我们在初将列出：学习难度、互联网上可用材料的数量（免费或付费，取决于我们的财务状况）、活跃的社区和可用职位。为了找到这些数据，我们应该在互联网上对每个主题进行搜索。
 
@@ -1280,42 +1125,40 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 | 语言 | 职位 | 难度 | 可用材料 |
 | :--- | :--- | :--- | :--- |
-| PHP | - | - | - |
-| Java | - | - | - |
-| Ruby | - | - | - |
-| Python | - | - | - |
-| C# | - | - | - |
-| JavaScript | - | - | - |
+| `PHP` | - | - | - |
+| `Java` | - | - | - |
+| `Ruby` | - | - | - |
+| `Python` | - | - | - |
+| `C#` | - | - | - |
+| `JavaScript` | - | - | - |
 
 我们继续回答所有问题，直到得到类似这样的结果：
 
 | 语言 | 职位 | 难度 | 可用材料 |
 | :--- | :--- | :--- | :--- |
-| PHP | 40 | 容易 | 中等 |
-| Java | - | - | - |
-| Ruby | - | - | - |
-| Python | - | - | - |
-| C# | - | - | - |
-| JavaScript | - | - | - |
-
-
-
+| `PHP` | 40 | 容易 | 中等 |
+| `Java` | - | - | - |
+| `Ruby` | - | - | - |
+| `Python` | - | - | - |
+| `C#` | - | - | - |
+| `JavaScript` | - | - | - |
 
 有时一切看起来都很完美。但这对所有人来说并不是问题，只对那些追求更高效率的人是如此。
 
-技术周围的社区本身就会产生替代方案，并让我们在 Linux 中使用的工具在 Windows 上运行得变得不再那么令人头疼。互联网上有很多文章可以帮助我们配置这些工具，让我们在使用该操作系统时不会遇到任何困扰。
+技术周围的社区本身就会产生替代方案，并让我们在 `Linux` 中使用的工具在 `Windows` 上运行得变得不再那么令人头疼。互联网上有很多文章可以帮助我们配置这些工具，让我们在使用该操作系统时不会遇到任何困扰。
 
-如今，情况已经发生了变化，因为 Windows 10 甚至内置了 Linux 子系统使用模式，这种模式允许我们在使用 Windows 的同时运行 Linux。我们可以同时利用 Windows 在硬件兼容性方面的优势（这在 Linux 系统中并非最好），以及 Unix 系统开发领域中最顶尖的各种长处。
+如今，情况已经发生了变化，因为 `Windows 10` 甚至内置了 `Linux` 子系统使用模式，这种模式允许我们在使用 `Windows` 的同时运行 `Linux`。我们可以同时利用 `Windows` 在硬件兼容性方面的优势（这在 `Linux` 系统中并非最好），以及 `Unix` 系统开发领域中最顶尖的各种长处。
 
 我们还有另一点：对于编程初学者来说，使用哪种操作系统并不重要。他们最大的烦恼将是理解编程逻辑和学习编程，而不是操作系统启动得有多快。
 
-我们应该使用那些让我们感到舒适且不会对我们产生任何干扰的东西。如果是 Windows，我们就继续使用 Windows 直到系统开始阻碍我们为止（如果真的发生了的话）。如果是 Linux，我们应该遵循同样的哲学并继续使用，直到它不再具有意义。最重要的是利用能为我们日常工作带来最高生产力的操作系统。
+我们应该使用那些让我们感到舒适且不会对我们产生任何干扰的东西。如果是 `Windows`，我们就继续使用 `Windows` 直到系统开始阻碍我们为止（如果真的发生了的话）。如果是 `Linux`，我们应该遵循同样的哲学并继续使用，直到它不再具有意义。最重要的是利用能为我们日常工作带来最高生产力的操作系统。
 
 ## 5.3 在 IT 领域读大学，读还是不？
 
 某些职业的标准流程是完成义务教育、中学，也许读一个技校课程，然后上大学，最后终于在该领域找到一份工作。
 
 在软件开发领域，我们可以忘记这些标准模式。
+
 然而，再次强调，我们的语境非常重要。
 
 我认识的大多数软件开发者并没有标准的教育背景（本科学），并且他们倾向于告诉所有人我们不应该为了做编程而上大学。
@@ -1324,13 +1167,13 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 再次，就像编程语言一样，我们应该利用市场情报和研究来理解我们是否应该获得学位。在圣保罗和里得雅内卢等城市，通过与该领域的朋友接触，我发现大多数公司并不要求学位，但在该国的东北部例如，情况并非如此。
 
-绝大多数公司不会要求我们具备教育背景，但他们会要求我们提供作品集（portfolio）、在软件开发社区中的积极参与，或其他市场差异化优势。
+绝大多数公司不会要求我们具备教育背景，但他们会要求我们提供作品集（`portfolio`）、在软件开发社区中的积极参与，或其他市场差异化优势。
 
 大学可能是进入劳动力市场最简单的方法，毕竟由于公司对这类人才的需求，获得一个实习机会比获得第一份初级工作容易得多。
 
 谈到大学时，还有另一个重要点，即完成高等教育的财务可能性。没有经济资金完成课程的人不应该被排除在我们的领域之外，得亏了互联网，这些人不会失去机会，就像我一样。
 
-我们从事编程所需的所有知识都在互联网上，在像这样的书里，在文章里，在 YouTube 视频里。我们不需要花很多钱就可以开始，如果必要，我们不需要花费时间以外的任何钱。
+我们从事编程所需的所有知识都在互联网上，在像这样的书里，在文章里，在 `YouTube` 视频里。我们不需要花很多钱就可以开始，如果必要，我们不需要花费时间以外的任何钱。
 
 当然，没有大学学位可能意味着我们作为专业人士，需要在工作面试中证明自己，例如拥有更好/更大的作品集，或者学习过某些特定内容（因为我们曾被迫学习大学的课程内容），但这并阻止我们成为优秀的专业人士。
 
@@ -1348,7 +1191,7 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 这些每一个课程都有其存在的理由，以及对于特定特定领域的重要知识。
 
-值得注意的是，上述课程存在于公立教育网络中的即联邦大学和 FATECs。因此，如果你对其中某一个产生兴趣，我建议查看最近的大学是否开设了其中某一个。
+值得注意的是，上述课程存在于公立教育网络中的即联邦大学和 `FATECs`。因此，如果你对其中某一个产生兴趣，我建议查看最近的大学是否开设了其中某一个。
 
 ### 计算机科学
 
@@ -1368,20 +1211,19 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 ### 网络系统
 
-与分析与开发系统非常相似，区别在于在该课程中，重点是运行在 Web 平台上的系统，无论是 ERP、网站、门户网站等，但在像桌面等其他领域并没有那么深入。
+与分析与开发系统非常相似，区别在于在该课程中，重点是运行在 Web 平台上的系统，无论是 `ERP`、网站、门户网站等，但在像桌面等其他领域并没有那么深入。
 
-在这些课程中，计算机科学、计算机工程和信息系统是学士学位课程，学期4年；而分析与开发系统和网络系统是技术员课程，学期2.5年。
+在这些课程中，计算机科学、计算机工程和信息系统是学士学位课程，学期 4 年；而分析与开发系统和网络系统是技术员课程，学期 2.5 年。
 
 课程的选择将取决于我们的需求以及可用时间。我在选择课程时的唯一建议是我们要寻找一个好的
 
-
 在经济允许的情况下，请选择教育机构，因为这对我们利用本科阶段的效率有很大影响。
 
-要在公立大学找到某些课程，我们可以在 Google 上进行搜索，例如“里约热内卢公立大学计算机科学”，我们将里约热内卢更改为我们的所在地。将会呈现多种搜索结果，主要是关于该地区最佳大学的搜索（例如“里约热内卢最佳 10 所大学学院”）。这些搜索考虑了公众评价，以及巴西教育部部（MEC）的评分。
+要在公立大学找到某些课程，我们可以在 `Google` 上进行搜索，例如“里约热内卢公立大学计算机科学”，我们将里约热内卢更改为我们的所在地。将会呈现多种搜索结果，主要是关于该地区最佳大学的搜索（例如“里约热内卢最佳 10 所大学学院”）。这些搜索考虑了公众评价，以及巴西教育部部（`MEC`）的评分。
 
 ## 5.5 为了掌握编程，我必须只处理困难的事情
 
-初学者中非常容易复制的一种行为是：认为那些使用低级语言（一种“更困难”的语言）编程、使用配置更复杂的 Linux 发行版、使用需要专门课程才能学会使用的文本编辑器等的人，比其他人更优秀的程序员。
+初学者中非常容易复制的一种行为是：认为那些使用低级语言（一种“更困难”的语言）编程、使用配置更复杂的 `Linux` 发行版、使用需要专门课程才能学会使用的文本编辑器等的人，比其他人更优秀的程序员。
 
 还有这样一种形象：不睡觉的人、靠食物和摄入咖啡及能量饮料生活的人，以及我们将随着与社区接触的增加而了解的其他特征。
 
@@ -1398,7 +1240,8 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 在本章中，我们专注于消除技术上的疑问。在下一章中，我们将学习更多并解决非技术性的疑问，例如：如何判断信息的好坏、如何控制我们的焦虑以保持专注、如何保护自己不受绝对真理的影响，甚至如何在互联网上提出好问题，以便我们进入编程世界时更加容易。
 
 # 第 6 章
-### 编程世界中的生存技能
+
+## 编程世界中的生存技能
 
 在生活中，我们需要获得某些特殊技能来抵抗某些事件，正如我们在逆境时刻寻求韧性，或者为了在社会中良好相处而寻求沟通技巧一样。
 
@@ -1418,13 +1261,11 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 为了不让这大堆重复且分散的内容阻碍我们，我们应该寻找最相关的内容。分享信息的人展现了对所教知识的精通吗？内容的结构是否良好，足以让我们目前知识水平的人理解？这些是我们能够信任所消费内容的关键问题。
 
-### **如何判断内容是否结构良好**
+### 如何判断内容是否结构良好
 
 当我们开始学习某些无法理解所有技术术语、无法理解所有示例的常见事物时。但方法可以为目标受众简化内容。
 
 如果目标受众是初学者，那么一个人将使用基础水平的人可以理解的语言。如果不是，受众是由丰富的专业人士组成的，那么作者就不会那么在意使用技术性强的语言和对普通人来说几乎无法看懂的示例。
-
-
 
 他们扮演了导师的角色，总是在固定的时间出现，进行评估并“升级”。
 
@@ -1434,11 +1275,11 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 我们遇到一些友善的人是非常常见的，他们能够以我们能够理解的方式分享信息，并在我们需要时向我们提供帮助。这些人可以成为我们的导师，引导我们，让我们不必重蹈某些问题的。这就是教育机构中担任教师的人的角色，但问题在于，导师的角色被当今学校和教育机构中的“知识独裁者”所取代了。那里的人认为自己掌握了世界上所有的知识，但往往不知道如何传递，只是机械地提供内容，并且认为不懂的人是因为他们学得不够努力，而不考虑到个人的困难和天赋。
 
-我们需要吸收的信息都分散在互联网上。在今天，我们有 Google 作为大型信息中心，有极好的博客、Medium 上的文章、YouTube 上的免费视频以及许多对我们学习和职业成长非常有价值的内容。
+我们需要吸收的信息都分散在互联网上。在今天，我们有 `Google` 作为大型信息中心，有极好的博客、`Medium` 上的文章、`YouTube` 上的免费视频以及许多对我们学习和职业成长非常有价值的内容。
 
 > 知识散落在各地，我们应该学会去寻找它。
 
-### 6.3 以光速学习一切
+## 6.3 以光速学习一切
 
 在我们开始学习时，某种焦虑感会极大地影响我们。我们想要快速学习一切，更糟糕的是，想同时学习所有事情。最大的愿望是在一天内学完所有东西，然后直接写出改变人类历史的革命性日常计划。但请冷静。事情不是这样运作的。
 
@@ -1468,23 +1309,23 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 在环境整洁的情况下，我们能够对学习保持专注，但外部发生的情况并不总是唯一的问题。还有这样一些时刻，我们开始学习某些重要的东西，突然间就在互联网上做些无用的搜索。我以前总是掉进进入社交网络的陷阱，进去看一眼，结果等过了 30/40 分钟，我的能量就耗尽了，我不想再继续学习了。
 
-我们需要保持专注，为此我们可以规定一个时间不做任何事情，100%专注于学习，并留出小作休息的时间。如果出现了想要搜索某些对我们学习没有帮助的欲望，我们可以将其记录下来稍后搜索/处理，只在休息社交媒体或其他干扰的时间段进行。
+我们需要保持专注，为此我们可以规定一个时间不做任何事情，100% 专注于学习，并留出小作休息的时间。如果出现了想要搜索某些对我们学习没有帮助的欲望，我们可以将其记录下来稍后搜索/处理，只在休息社交媒体或其他干扰的时间段进行。
 
-有一种非常好的技术可以帮助保持专注，那就是番茄工作法（Pomodoro Technique），这是 Francesco Cirillo 在 1980 年左右发明的一种技术。这种技术通过预留 25 分钟的持续专注和进行 5/10 分钟的休息来最大化效率。
+有一种非常好的技术可以帮助保持专注，那就是番茄工作法（`Pomodoro Technique`），这是 `Francesco Cirillo` 在 1980 年左右发明的一种技术。这种技术通过预留 25 分钟的持续专注和进行 5/10 分钟的休息来最大化效率。
 
 使用番茄工作法的步骤是：
 
-- 1. 选择并列出任务；
-- 2. 将计时器设定为 25 分钟；
-- 3. 选择初始任务；
-- 4. 一所选定的任务直到闹钟响起。如果出现任何重要的干扰，将其记录下来并返回任务；
-- 5. 闹钟响时，在任务列表上画一个“x”；
-- 6. 每一个番茄休息 5 分钟；
-- 7. 当我们完成四个番茄钟后，进行更长时间的休息（15-30 分钟），重置计数并回到第 1 步。
+1. 选择并列出任务；
+2. 将计时器设定为 25 分钟；
+3. 选择初始任务；
+4. 一所选定的任务直到闹钟响起。如果出现任何重要的干扰，将其记录下来并返回任务；
+5. 闹钟响时，在任务列表上画一个“x”；
+6. 每一个番茄休息 5 分钟；
+7. 当我们完成四个番茄钟后，进行更长时间的休息（15-30 分钟），重置计数并回到第 1 步。
 
 如果我们把 4 个番茄（25 分钟）+ 5/15 分钟的休息加起来，我们会有 2 小时多一点的高强度工作！将此应用于学习，我们掌握了走得更远的钥匙。如果工作日每天都能学习这 2 小时（不包括周末），我们将拥有 10 小时非常高效的学习。
 
-有一些出色的应用程序可以帮助我们完成番茄工作。我通常使用 Brain Focus (https://brainfocus.io)。
+有一些出色的应用程序可以帮助我们完成番茄工作。我通常使用 `Brain Focus`（`https://brainfocus.io`）。
 
 很多人无法使用番茄工作法，是因为他们认为从第一天起就必须保持 100% 的生产力，但并非事实。为了培养使用番茄钟的习惯，我们可以从更随性的方式开始，做不那么集中的番茄，或者进行更长的休息。
 
@@ -1494,12 +1335,11 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 被动学习是那种我们只让内容流经大脑然后离开的方式，比如读书、匆忙看一节课或一个课程，而没有时间思考我们看到的内容。仅仅消费内容，而不让大脑工作，会导致我们在几天内忘记所有所学的内容。
 
+
+
 当我们读一个寓言时，某些细节——那些让我们的思绪飞翔的时刻——会留在我们的脑海中，当我们想起阅读内容或向某人推荐这本书时，这些细节就会回来。
 
-而主动学习则是我们做笔记、做摘要、标记书中的片段、做练习，并且分享我们学到的东西。这是一种更
-
-
-关于某个主题，如果仅仅看到它存在就放过，将无法在更短的时间内看到/接收更多信息。
+而主动学习则是我们做笔记、做摘要、标记书中的片段、做练习，并且分享我们学到的东西。这是一种更关于某个主题的学习方式。如果仅仅看到它存在就放过，将无法在更短的时间内看到或接收更多信息。
 
 主动学习的一种方法是在学习时提出问题。消费内容并针对此提问将让我们的大脑事半功倍，而不仅仅是在学习。
 
@@ -1517,21 +1357,21 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 我们可以研究和测试的一些已知技巧包括：
 
-- 1. 思维导图；
-- 2. 笔记或总结；
-- 3. 录制音频；
-- 4. 尽可能多做练习；
-- 5. 小组学习；
-- 6. 自我解释；
-- 7. 交替学习；
-- 8. 间隔重复；
-- 9. 分布式练习。
+1. 思维导图；
+2. 笔记或总结；
+3. 录制音频；
+4. 尽可能多做练习；
+5. 小组学习；
+6. 自我解释；
+7. 交替学习；
+8. 间隔重复；
+9. 分布式练习。
 
 值得记住的是，这些技巧都是主动学习的模型。这非常棒。
 
 在我我的情况下，我测试了多种技巧，对我最有效的是：总结、小组学习、交替学习、间隔重复和分布式练习。具体情况如下：
 
-- **总结：** 我针对我学习的内容写文章，这些文章可以发布在我的博客 (https://woliveiras.com.br) 上，也可以不发布。
+- **总结：** 我针对我学习的内容写文章，这些文章可以发布在我的博客（https://woliveiras.com.br）上，也可以不发布。
 - **小组学习：** 只要可能，我都会参加学习小组，与人们交流经验并学习更多。
 - **交替学习和分布式练习：** 通常我会同时学习多件事（在同一时间或同一天），我每周选两天给其中一个主题（每天 2 小时，遵循番茄钟），另外选两天给另一个主题。我每周会留一天休息，不包括周末。
 - **间隔重复：** 我经常尝试回顾我学过的东西。我通常不选择一个特定的时间来回头看，只要我有空闲时间，通常就会回顾我写的内容或对某事重新研究。
@@ -1550,12 +1390,12 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 跟踪这一点的一种方法是列清单，每当一项任务没有按时完成时，记录下计划失败的原因。晚上的反思将对我们帮助。记住我们白天做了什么以及什么剥夺了我们的生产力，将帮助我们找到真正消耗时间的东西，并更好地了解自己。
 
-有一些应用程序可以帮助我们追踪日常生活，并确切发现时间花在哪里。我推荐 QualityTime 和 SmarterTime，但我们可以在应用商店搜索对我们个人情况更有用的信息，只需搜索 time tracker（时间追踪）即可。
+有一些应用程序可以帮助我们追踪日常生活，并确切发现时间花在哪里。我推荐 `QualityTime` 和 `SmarterTime`，但我们可以在应用商店搜索对我们个人情况更有用的信息，只需搜索 `time tracker`（时间追踪）即可。
 
-使用 QualityTime 应用程序 (http://qualitytimeapp.com)，我跟踪自己的手机使用情况，当我们观察某周时间都花在哪里时，结果非常惊人。
+使用 `QualityTime` 应用程序（http://qualitytimeapp.com），我跟踪自己的手机使用情况，当我们观察某周时间都花在哪里时，结果非常惊人。
 
 | Weekly Usage | Tempo |
-| :--- | :--- |
+| --- | --- |
 | Twitter | 59m |
 | Telegram | 51m |
 | Instagram | 31m |
@@ -1565,7 +1405,7 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 ![Weekly Usage]
 
 | Daily Frequency | Tempo |
-| :--- | :--- |
+| --- | --- |
 | Telegram | 110 times |
 | Twitter | 34 times |
 | Chrome | 30 times |
@@ -1573,10 +1413,6 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 | Gmail | 11 times |
 
 ![Daily Frequency]
-
-
-
-
 
 我在这部著作中的教学法，另一部分是为了提高我在演讲中的公开演讲能力。也就是说，我会对我阅读的章节进行记录、划线和总结。
 
@@ -1598,11 +1434,11 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 这是获得更多学习时间的方法：**发现我们的公交在白天是如何被浪费的。**
 
-在公交/地铁上阅读是另一种让我们用“更少的时间”做更多事的方法。当我们计算在公共交通上花费的时间，就会发现我们正在浪费生命中大量的有效时间。通勤上班需要1.5小时，回家也需要1.5小时，我们每天浪费了3小时，如果换算到每周（5个工作日），我们每周就会浪费15小时的生命。
+在公交/地铁上阅读是另一种让我们用“更少的时间”做更多事的方法。当我们计算在公共交通上花费的时间，就会发现我们正在浪费生命中大量的有效时间。通勤上班需要 1.5 小时，回家也需要 1.5 小时，我们每天浪费了 3 小时，如果换算到每周（5 个工作日），我们每周就会浪费 15 小时的生命。
 
 对于那些在移动车辆上阅读感到不舒服的人来说，有有声书、讲座视频，甚至是我们可以下载并在途中听听的课程。我们可以利用所有这些作为工具，不再在通勤上浪费时间，而是以一种高效的方式使用它们。
 
-如果我们把此与每天在家一小时的学习结合起来，每周就能获得20小时的学习时间。这说明时间是在那里的，只是我们没有优先考虑正确的事情。
+如果我们把此与每天在家一小时的学习结合起来，每周就能获得 20 小时的学习时间。这说明时间是在那里的，只是我们没有优先考虑正确的事情。
 
 并不是每个人都能获得这些可用时间，这是一个事实，每个人的日常生活大不相同，因此，无论使用应用程序与否，关注**我们在哪里虚度时间**是非常重要的，以便识别出什么正在榨取我们的生活；只有确切知道哪些是没用的，我们才能在“剩余”的时间里计划学习，而不浪费。
 
@@ -1624,7 +1460,7 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 需要记住，如果是在互联网上搜索，只需搜索“发生了什么”并获得关于我们问题的更好结果；但在论坛上或对同事，我们应该利用可用资源，例如显示屏幕上出现的错误图像，并分享没有按我们预期运行的代码部分。
 
-在论坛上分享的一些有用资源是使用 imgur (https://imgur.com) 分享图像，以及使用 Gist (https://gist.github.com) 分享我们的源代码片段。
+在论坛上分享的一些有用资源是使用 `imgur`（https://imgur.com）分享图像，以及使用 `Gist`（https://gist.github.com）分享我们的源代码片段。
 
 当我们遇到错误，并且想要创建一个日志但甚至不知道从何处开始时，这个建议非常有用。
 
@@ -1643,25 +1479,21 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 并没有所谓的效率或敏捷学习的魔术公式，正如人们所说的那样，因为一切都取决于我们的背景，并不是所有方法都适用于所有人。因此，寻求更好地了解自己并理解自己的困难是非常重要的，将我们的整个生活适应于……
 
-
-
-
-
 社区是指由于共同兴趣、群体文化、有时是因为相似的经历或仅仅为了共同目标而聚集在一起（无论是在线还是线下）的人群。有些社区围绕技术诞生，例如编程语言、开发工具，而另一些则是为了一个核心目标，例如共享知识。
 
-我们有一些由于共同兴趣而诞生的巴西社区示例，如 Python Brasil、PHP Brasil、JavaScript Brasil、Ruby Brasil 和 Java Brasil。这些社区的存在是因为人们对这些语言感兴趣，并希望交流经验、相关链接、展示自己的成果并帮助彼此学习更多这些语言的知识。
+我们有一些由于共同兴趣而诞生的巴西社区示例，如 `Python Brasil`、`PHP Brasil`、`JavaScript Brasil`、`Ruby Brasil` 和 `Java Brasil`。这些社区的存在是因为人们对这些语言感兴趣，并希望交流经验、相关链接、展示自己的成果并帮助彼此学习更多这些语言的知识。
 
-其他社区并非围绕某项技术，而是围绕一个目标建立，例如不分领域或技术的知识共享，如 Garoa Hacker Clube 的 Training Center、Things Hacker Team 或 Code Club，这些都是促进经验交流、甚至为儿童教授编程的群体。
+其他社区并非围绕某项技术，而是围绕一个目标建立，例如不分领域或技术的知识共享，如 `Garoa Hacker Clube` 的 `Training Center`、`Things Hacker Team` 或 `Code Club`，这些都是促进经验交流、甚至为儿童教授编程的群体。
 
-还有一些具有强大社会号召力的群体，它们将知识带给代表性不足的群体，例如贫困人群、女性、黑人、残障人士、原住民、移民等，诸如 Codamos、Django Girls、Rails Girls、Afro Python 或 WoMakersCode。
+还有一些具有强大社会号召力的群体，它们将知识带给代表性不足的群体，例如贫困人群、女性、黑人、残障人士、原住民、移民等，诸如 `Codamos`、`Django Girls`、`Rails Girls`、`Afro Python` 或 `WoMakersCode`。
 
-如果我们在互联网上寻找，会发现各种类型的社区，它们拥有各种哲学和目标。只要有我们认认同的东西并加入它们即可。在职业生涯早期加入社区可能会非常有帮助，因为他人的经验可以极大简化我们的生活，并对我们的职业发展做出贡献。
+如果我们在互联网上寻找，会发现各种类型的社区，它们拥有各种哲学和目标。只要有我们认同的东西并加入它们即可。在职业生涯早期加入社区可能会非常有帮助，因为他人的经验可以极大简化我们的生活，并对我们的职业发展做出贡献。
 
 讨论论坛是这些社区用于交换知识的工具，当有人发布问题时，另一个人会尝试帮助解决问题。
 
 这些论坛可以以多种形式存在，如社交网络上的小组或自己的平台。
 
-而黑客松（hackathons）是大型编程竞赛，通常具有一个良好的目标，例如解决社会问题、帮助某个社区或技术成长。此外，它们还有奖金。在黑客松中，人们组成跨学科团队竞争以提供最佳解决方案，这些将由一个符合竞赛目标和既定标准的评审小组进行评估。
+而黑客松（`hackathons`）是大型编程竞赛，通常具有一个良好的目标，例如解决社会问题、帮助某个社区或技术成长。此外，它们还有奖金。在黑客松中，人们组成跨学科团队竞争以提供最佳解决方案，这些将由一个符合竞赛目标和既定标准的评审小组进行评估。
 
 无论如何，我们参与的群体越多，学到的就越多。但重要的是，我们要分享并尝试帮助那里的人们。只有这样，社区才能继续存在。
 
@@ -1671,15 +1503,15 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 如今，接触最多人的最佳方式是利用互联网。当我们需要学习新东西时，即使是像“如何做米饭”这样的事情，我们也会去互联网上。软件开发也是同样的过程，特别是对于年轻人来说，因为我们是在互联网搜索环境中长大的，所以已经更习惯了这一点。
 
-互联网力量的一个例子是，根据调查咨询公司 TNS Research International 的调查，超过 90% 的人在购买产品前会在互联网上搜索。
+互联网力量的一个例子是，根据调查咨询公司 `TNS Research International` 的调查，超过 90% 的人在购买产品前会在互联网上搜索。
 
-因此，贡献社区的一种极佳方式是生成内容，无论是文本（如博客）、视频（如 YouTube 等平台上的频道客音频）。
+因此，贡献社区的一种极佳方式是生成内容，无论是文本（如博客）、视频（如 `YouTube` 等平台上的频道）或音频。
 
 我们可以贡献现有的项目（如门户网站），也可以创建自己的。这更多取决于我们的个人目标（推广自己或为某个小组做贡献），或者我们是否符合可用小组的哲学。
 
 内容创作是非常个人的，因为我们可以讨论任何我们认为重要或与市场相关的话题，例如最新的技术或我们的编程语言。
 
-在 2018 年，有很多人在讨论 JavaScript，因为它是一门上升中的语言，正如 Java、PHP 一样，很快我们又会有另一种语言处于浪潮尖端；但许多人在讨论市场需要但可能被遗忘的东西，比如软技能（soft skills），即不同于技术技能的能力，如沟通、同理心等。
+在 2018 年，有很多人在讨论 `JavaScript`，因为它是一门上升中的语言，正如 `Java`、`PHP` 一样，很快我们又会有另一种语言处于浪潮尖端；但许多人在讨论市场需要但可能被遗忘的东西，比如软技能（`soft skills`），即不同于技术技能的能力，如沟通、同理心等。
 
 但初学者如何贡献内容呢？
 
@@ -1687,12 +1519,12 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 此外，我们还可以收到关于我们所传达内容的反馈，以进一步加强我们对任何主题的理解。
 
-市场很大一部分由职业生涯初期的人员组成，正如我们在 2018 年对软件开发问答网站 Stack Overflow 的调查中确认的那样，我们发现 30.1% 的人从事编程的时间在 0 到 2 年之间，27.4% 在 3 到 5 年之间（http://bit.ly/stackoverflow-survey-2018）。
+市场很大一部分由职业生涯初期的人员组成，正如我们在 2018 年对软件开发问答网站 `Stack Overflow` 的调查中确认的那样，我们发现 30.1% 的人从事编程的时间在 0 到 2 年之间，27.4% 在 3 到 5 年之间（http://bit.ly/stackoverflow-survey-2018）。
 
 ### 职业编程年限
 
 | 年限 | 百比 |
-| :--- | :--- |
+| --- | --- |
 | 0-2 年 | 30.1% |
 | 3-5 年 | 27.4% |
 | 6-8 年 | 14.6% |
@@ -1705,24 +1537,20 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 | 27-29 年 | 0.6% |
 | 30 年以上 | 1.7% |
 
-
-
-
-
 ### 按专业领域划分社区
 
 专注于特定专业领域讨论的社区：
 
-- Front-end Brasil: 巴西前端领域社区。（https://frontendbr.com.br/）
-- Back-end Brasil: 巴西后端领域社区。（http://backendbrasil.com.br/）
-- Android Dev Brasil: 巴西 Android 开发社区。（https://github.com/androiddevbr/）
-- CocoaHeads: 国际 iOS 开发社区。（http://cocoaheads.com.br/）
-- Data Hackers Brasil: 巴西大数据、数据工程和数据科学社区。（https://datahackers.com.br/）
-- GameDev Brasil: 巴西游戏开发社区。（http://gamedev.com.br/）
+- `Front-end Brasil`：巴西前端领域社区。（https://frontendbr.com.br/）
+- `Back-end Brasil`：巴西后端领域社区。（http://backendbrasil.com.br/）
+- `Android Dev Brasil`：巴西 Android 开发社区。（https://github.com/androiddevbr/）
+- `CocoaHeads`：国际 iOS 开发社区。（http://cocoaheads.com.br/）
+- `Data Hackers Brasil`：巴西大数据、数据工程和数据科学社区。（https://datahackers.com.br/）
+- `GameDev Brasil`：巴西游戏开发社区。（http://gamedev.com.br/）
 
-这些是我推荐任何初学者的社区。从那里开始，理想的是关注特定的社区以与更多人交流，或者针对我们想要学习的某种编程语言进行交流，例如搜索 PHP Brasil、Python Brasil、Node Brasil、BrasilJS 等。这些社区中的大部分位于社交媒体或 GitHub 上。
+这些是我推荐任何初学者的社区。从那里开始，理想的是关注特定的社区以与更多人交流，或者针对我们想要学习的某种编程语言进行交流，例如搜索 `PHP Brasil`、`Python Brasil`、`Node Brasil`、`BrasilJS` 等。这些社区中的大部分位于社交媒体或 `GitHub` 上。
 
-在 Codamos 网站（https://codamos.club/）上我们可以找到更多社区、活动，以及最重要的——一个对所有知识水平的人且对年龄、社会阶层、女性、LGBTQ+ 群体、黑人、残障人士没有偏见的安全场所。我们还有 iMasters 门户网站，它汇总了总体范围内最酷的软件开发活动（https://imasters.com.br/）。
+在 `Codamos` 网站（https://codamos.club/）上我们可以找到更多社区、活动，以及最重要的——一个对所有知识水平的人且对年龄、社会阶层、女性、LGBTQ+ 群体、黑人、残障人士没有偏见的安全场所。我们还有 `iMasters` 门户网站，它汇总了总体范围内最酷的软件开发活动（https://imasters.com.br/）。
 
 ## 7.5 结论
 
@@ -1733,6 +1561,7 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 我们应该寻找一个让我们分享和帮助他人感到舒服的地方，这样我们可以联合起来加强这一运动，而且在群体中学习得要快得多。
 
 # 第 8 章
+
 ### 通过编程获得第一份工作
 
 获得第一份编程工作的困难与所有领域相同：向工作空缺迈出第一步。当我们看到职位要求中充满了许多我们不认识的词汇时，很难相信自己已经准备好发送简历或点击我们在招聘网站上找到的“申请”按钮了。
@@ -1753,16 +1582,22 @@ PHP, Python, Java, C#, Ruby, Elixir, Clojure, JavaScript... 这些是我们可�
 
 如果我们有在线形象，或者参与在线论坛、为互联网生成内容并参与社区（我们在上一章中看到的活动、会议和其他方式），当公司出现机会时，人们会想起我们，并根据我们所展示的知识甚至根据我们在各处行为表现出的个人特质来推荐我们。
 
-但是，那些不想过多参与编程社区的人也可以获得良好的在线形象。如今，科技公司或非科技公司所使用的招聘扩张最大的平台是 LinkedIn（https://www.linkedin.com/）。
+但是，那些不想过多参与编程社区的人也可以获得良好的在线形象。如今，科技公司或非科技公司所使用的招聘扩张最大的平台是 `LinkedIn`（https://www.linkedin.com/）。
 
-LinkedIn 是一个职业社交网络，我们可以在上面展示简历，并可以添加其他人、招聘人员或我们的个人人脉（在某个地方认识我们或与我们工作过的人）。这就像在 Facebook 上发生的情况，但重点是建立职业人脉网络以方便招聘。
+`LinkedIn` 是一个职业社交网络，我们可以在上面展示简历，并可以添加其他人、招聘人员或我们的个人人脉（在某个地方认识我们或与我们工作过的人）。这就像在 `Facebook` 上发生的情况，但重点是建立职业人脉网络以方便招聘。
+
+
 
 一个良好的 LinkedIn 简介，一个包含网站所要求的所有信息并针对职位要求设计的简介，可以给我们带来很大的曝光率，正如我的案例所示，仅仅因为填写得良好就被认为是优秀的：
 
-| 您的面板 | 冠军 | |
-| :--- | :--- | :--- |
-| 1.064 | 763 | 266 |
-| 查看过您简介的人 | 帖子浏览量 | 搜索结果出现次数 |
+| 您的面板 | 冠军 |
+| :--- | :--- |
+| 1.064 | 763 |
+| 查看过您简介的人 | 帖子浏览量 |
+
+| 266 |
+| :--- |
+| 搜索结果出现次数 |
 
 图 8.1：我的 LinkedIn 面板
 
@@ -1778,14 +1613,11 @@ LinkedIn 是一个职业社交网络，我们可以在上面展示简历，并�
 
 即使是该领域的初学者，我们也应该在招聘网站上留下我们的简历和简介，就像那些寻找软件开发机会的人一样，毕竟这是我们想要工作的领域。即使我们的工作经验与编程无关，重要的是表达我们对此有浓厚兴趣。
 
-对于已经在该领域工作的人来说，根据招聘人员的需求调整简介要容易得多。然而，尽管如此，重要的是策略性地放置信息，而不仅仅是列出我们所知。留下一份带有
-
-
-5页的内容且包含与招聘不相关的信息，将是毫无效率的。
+对于已经在该领域工作的人来说，根据招聘人员的需求调整简介要容易得多。然而，尽管如此，重要的是策略性地放置信息，而不仅仅是列出我们所知。留下一份带有 5 页的内容且包含与招聘不相关的信息，将是毫无效率的。
 
 当有人分析我们的个人资料时，他们正在寻找与公司或客户特定职位相关的关键词和术语。当遇到一份内容庞杂、信息模糊且对该领域没有价值的简历时，很难将其推向下一阶段。
 
-如果我们正在为一个前端职位寻找人才，我们会寻找：HTML, CSS, JavaScript, React, Angular, Vue.js，即我们在软件中正在使用的技术。如果是后端、DevOps、工程师（或）数据分析师、移动（Mobile）或其他机会，原理也是一样的：我们会在简历或个人资料中搜索我们认为该特定机会所需要的技术和技能。
+如果我们正在为一个前端职位寻找人才，我们会寻找：`HTML`、`CSS`、`JavaScript`、`React`、`Angular`、`Vue.js`，即我们在软件中正在使用的技术。如果是后端、DevOps、工程师（或）数据分析师、移动（Mobile）或其他机会，原理也是一样的：我们会在简历或个人资料中搜索我们认为该特定机会所需要的技术和技能。
 
 在制作简历时，我们应该将其视为一个展示窗，用于推销我们的“产品”——我们的工作。因此，我们应该准确写出我们希望对方了解关于我们的什么，以及符合那家公司的内容。例如：如果是一家在线广告公司，那么强调我们具有 SEO（搜索引擎优化）方面的知识将非常重要，因为他们需要在 Google 和其他搜索引擎上出现；如果是一家机器人、人工智能、电子产品公司，以此类推。这就是针对性的知识。
 
@@ -1809,9 +1641,9 @@ LinkedIn 是一个职业社交网络，我们可以在上面展示简历，并�
 
 我们不应该放的内容（除非有特殊要求）是一些模糊的信息，例如我们精通某项技能的百分比、头像照，或不能体现我们职业特质的社交网络账号（如 Snapchat，它仅用于与朋友分享生活中的美好时刻）。
 
-让我们想一下这个百分比的例子：一个寻找后端工作的人写他精通 75% 的 JavaScript。
+让我们想一下这个百分比的例子：一个寻找后端工作的人写他精通 75% 的 `JavaScript`。
 
-75% 的 JavaScript 或任何其他编程语言意味着什么？是读过了 75% 现有的库，还是掌握了该语言 75% 的编程逻辑？
+75% 的 `JavaScript` 或任何其他编程语言意味着什么？是读过了 75% 现有的库，还是掌握了该语言 75% 的编程逻辑？
 
 我们发现，这类内容不仅不会增加对我们资料的信任，反而会产生怀疑。
 
@@ -1823,16 +1655,13 @@ LinkedIn 是一个职业社交网络，我们可以在上面展示简历，并�
 
 在我的 LinkedIn 个人资料和 PDF 简历中，我目前是这样的：
 
-具有使用 Angular 和 React 开发 SPA（单页应用）的经验，模块打包器（webpack）、包管理器（NPM, PIP）、转译器（Babel）、CSS 预处理器（Sass 和 Stylus）、任务管理器（Grunt, Gulp, NPM Scripts, Shell Script）、CSS 架构（BEM, SMACSS）、Git、Web 性能、SEO、可访问性以及结构化数据（Schema.org）。我热爱开源、Linux、技术社区、JavaScript、移动端、软件架构和敏捷文化。个人技能包括团队培训和初级开发者指导、社区和活动管理、良好的公共演讲能力和技术文章撰写。
+具有使用 `Angular` 和 `React` 开发 SPA（单页应用）的经验，模块打包器（`webpack`）、包管理器（`NPM`、`PIP`）、转译器（`Babel`）、CSS 预处理器（`Sass` 和 `Stylus`）、任务管理器（`Grunt`、`Gulp`、`NPM Scripts`、`Shell Script`）、CSS 架构（`BEM`、`SMACSS`）、`Git`、Web 性能、SEO、可访问性以及结构化数据（`Schema.org`）。我热爱开源、Linux、技术社区、`JavaScript`、移动端、软件架构和敏捷文化。个人技能包括团队培训和初级开发者指导、社区和活动管理、良好的公共演讲能力和技术文章撰写。
 
 在开头，我已经突出了我会做的、我喜欢做的以及我认可的非技术技能。
 
 ### LinkedIn 上的冠军个人资料
 
 LinkedIn 本身可以帮助我们创建这个“冠军”。但我们往往没有重视网络要求的信息。例如，在技能中放什么？
-
-
-
 
 como nas áreas de logística, de recomendação de produtos, perfis de usuários, segurança da informação, etc.
 
@@ -1874,20 +1703,17 @@ Não tem como adivinhar qual é a real intenção de quem escreveu a vaga e part
 
 ### 8.4 Como saber se é uma boa empresa para trabalhar
 
+
+
 Principalmente no início da carreira não conhecemos as empresas legais e as empresas não muito legais de trabalhar, mas existem ferramentas que nos ajudam a identificar bons lugares para enviar nosso currículo.
 
 Os sites de oportunidades de emprego, normalmente, possuem filtros baseados em recomendações ou avaliações de usuários que já trabalharam nas empresas, mas no Brasil o site que mais consultamos para saber como uma empresa é é o Love Mondays (https://lovemondays.com.br/). Também existe o Great to Work (https://gptw.com.br/).
-
-[Nota: As repetições excessivas do texto original foram removidas para manter a clareza da tradução, conforme as instruções de não repetir o conteúdo e limpar erros de OCR.]
-
-
-
 
 O que podemos fazer é: propor soluções e trazer dados sobre o valor real de utilizar novas ferramentas, aprender a traçar planos de reescrita de softwares legados (aqueles softwares antigos que continuam essenciais para um negócio) ou mesmo aprender a criar novos softwares que supram as necessidades com o tempo, até que não precisemos mais do legado. Ou seja, quase sempre conseguimos extrair uma boa experiência de empregos "ruins".
 
 Claro, nem toda empresa vai nos ouvir ou nos dar um parecer suficiente para reescrever um software ou mudarmos as ferramentas internas, frameworks ou libs que utilizamos para trabalhar ou algo do tipo, mas sempre vale a pena tentar fazer isso antes de sair de um emprego.
 
-### 8.6 Como conseguir experiência sem nunca ter trabalhado em uma empresa
+## 8.6 Como conseguir experiência sem nunca ter trabalhado em uma empresa
 
 Como requisito das vagas de emprego, sabemos que a palavra "experiência em tecnologia" sempre aparece, mas como conseguir experiência para o primeiro emprego se não conseguimos entrar no primeiro emprego sem experiência? Acabamos caindo no loop de inconsistência da equipe de recursos humanos.
 
@@ -1932,36 +1758,39 @@ Quando os softwares não nos atendem, é um excelente caso para praticar; podemo
 
 Desses modos de praticar, não apenas fazer um projeto para uma microempresa, mas podemos ir de comércio em comércio, bazar em bazar, etc., depois de fazer nosso primeiro projeto, para tentar fazer ainda mais softwares e conseguir mais experiência. Com isso, estaremos montando nosso portfólio sem estar formalmente em uma empresa.
 
-### 8.7 Qual o salário de programadores
+## 8.7 Qual o salário de programadores
 
 Antes de aceitar um emprego, devemos analisar os prós e contras da empresa e da vaga. O salário está entre os prós, claro. O trabalho assalariado é uma troca: produzimos e a empresa paga pela produção. É uma troca simples e deve ser justa.
 
 O salário de desenvolvedores(as) de software não é o mais alto que existe, porém longe de ser o mais baixo. É um bom salário e é bem acima da média salarial da população brasileira. Por menos em grandes centros e boas empresas conseguimos salários imagináveis por algumas pessoas - por mim mesmo comecei na área.
 
+Basicamente, entrei no site `lovemondays.com.br/salarios/cargo` e coletei os dados para preencher nossa tabela. Para cada área, obtive o salário no início da carreira (júnior), o nível intermediário com boa experiência (pleno) e, por fim, o cargo "mais alto" — o nível sênior. Vamos aos resultados.
+
+| Cargo | Salário |
+|---|---|
+| Front-end Júnior | R$ 2.743 |
+| Front-end Pleno | R$ 4.569 |
+| Front-end Sênior | R$ 6.239 |
+| Back-end Júnior | R$ 3.029 |
+| Back-end Pleno | R$ 4.942 |
+| Back-end Sênior | R$ 7.641 |
+| Desenvolvedor Android Júnior | R$ 3.307 |
+| Desenvolvedor Android Pleno | R$ 5.626 |
+| Desenvolvedor Android Sênior | R$ 9.035 |
+| Desenvolvedor iOS Júnior | R$ 2.834 |
+| Desenvolvedor iOS Pleno | R$ 5.586 |
+| Desenvolvedor iOS Sênior | R$ 8.978 |
+
+Para outras carreiras (engenharia e ciência de dados, jogos, infraestrutura), não encontrei dados suficientes, mas encontrei o cargo "Desenvolvedor de Software" (Software Developer), que pode ser considerado o desenvolvimento full stack da profissão:
+
+| Cargo | Salário |
+|---|---|
+| Desenvolvedor de Software Júnior | R$ 4.424 |
 
 
-结果。基本上，我进入了 lovemondays.com.br/salarios/cargo 并收集了数据来填充我们的表格。对于每个领域，我获取了职业生涯初期的薪资（初级）、具有良好经验的中级（pleno），以及最后的“最高”职位——高级职位（sênior）。让我们来看看结果。
 
 | 职位 | 薪资 |
-|---|---|
-| 前端初级 | R$ 2.743 |
-| 前端中级 | R$ 4.569 |
-| 前端高级 | R$ 6.239 |
-| 后端初级 | R$ 3.029 |
-| 后端中级 | R$ 4.942 |
-| 后端高级 | R$ 7.641 |
-| Android 开发初级 | R$ 3.307 |
-| Android 开发中级 | R$ 5.626 |
-| Android 开发高级 | R$ 9.035 |
-| iOS 开发初级 | R$ 2.834 |
-| iOS 开发中级 | R$ 5.586 |
-| iOS 开发高级 | R$ 8.978 |
-
-对于其他职业（工程和数据科学、游戏、基础设施），我没有找到足够的数据，但我找到了“软件开发者”（Software Developer）这一职位，它可以被视为该职业的全栈开发：
-
-| 职位 | 薪资 |
-|---|---|
-| 软件开发初级 | R$ 4.424 |
+|---|---:|
 | 软件开发中级 | R$ 6.476 |
 | 软件开发高级 | R$ 9.571 |
 
@@ -1970,7 +1799,7 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 如果我们添加特定的技术，例如，在 Love Mondays 上搜索“Java 开发人员”，表格将如下所示：
 
 | 职位 | 薪资 |
-|---|---|
+|---|---:|
 | Java 开发初级 | R$ 3.020 |
 | Java 开发中级 | R$ 5.198 |
 | Java 开发高级 | R$ 8.614 |
@@ -2005,14 +1834,12 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 
 有一些专门练习编程的网站，例如：
 
-- hackerrank (https://hackerrank.com/)
-- codewars (https://codewars.com/)
-- exercism (https://exercism.org/)
-- urionlinejudge (https://beonlinejudge.com/)
+- [hackerrank](https://hackerrank.com/)
+- [codewars](https://codewars.com/)
+- [exercism](https://exercism.org/)
+- [urionlinejudge](https://beonlinejudge.com/)
 
 需要记住，这些网站是很好的工具，但它们不能替代真实项目的实践。
-
-
 
 当我们未通过某个机会且没有收到反馈时，一种策略是向我们的人脉网络介绍选拔过程、测试情况以及所有流程，以便让他人指导我们在哪些方面可以改进。
 
@@ -2066,7 +1893,7 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 
 开发定价的方法之一是根据创建产品所需的时间和时薪。时薪根据我们在领域的经验变化很大，经验越丰富，时薪越高。
 
-有一个可以帮助我们为小时定价的网站，是“minha hora, entre outros”，带有“我的小时值多少钱”工具（http://minhahora.entreoutros.com/）。在网站上，我们输入每月想赚多少钱、工作几天、领域、工作环境以及其他信息，它会给出一个我们可以参考的等值数值，取决于信任程度。
+有一个可以帮助我们为小时定价的网站，是“minha hora, entre outros”，带有“我的小时值多少钱”工具（[http://minhahora.entreoutros.com/](http://minhahora.entreoutros.com/)）。在网站上，我们输入每月想赚多少钱、工作几天、领域、工作环境以及其他信息，它会给出一个我们可以参考的等值数值，取决于信任程度。
 
 即使我们不使用网站提供的数值，它也是我们理解为工作定价时应该分析什么的极佳工具。
 
@@ -2084,8 +1911,6 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 
 这种陷阱只有通过在工作开始时收取一笔费用才能避免。
 
-
-
 我们的工作，也请理解我们的立场。我们必须证明自己是专业人士，并且从合同签署的那一刻起，我们就对期限做出了承诺；这份合同，以及首付款，仅仅仅仅是双方的一种保障。
 
 在任何情况下，我们都不能不签一份合同，最好是在公证处进行公证，并且在开始开发之前将所有事情都定义清楚。
@@ -2102,7 +1927,7 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 
 开公司并不困难，主要工作是向当地市政府寻求指导，以了解我们开具的发票将涉及的税费。我们可以通过查询市政府的财务部门或访问当地市政府网站来获取我们所在城市的正确指导。
 
-作为个人创业者，我们可以开设著名的 MEI（个人微型企业），在我们的国家，我们可以直接通过政府网站——创业门户网站 ([Portal do Empreendedor](http://www.portaldoempreendedor.gov.br/))来办理。
+作为个人创业者，我们可以开设著名的 MEI（个人微型企业），在我们的国家，我们可以直接通过政府网站——创业门户网站（[Portal do Empreendedor](http://www.portaldoempreendedor.gov.br/)）来办理。
 
 在提供服务时，我也利用了会计师的服务，以避免由于知识不足而可能陷入任何税务问题，因此我聘请了 [Contabilizei](https://contabilizei.com.br/) 的服务。但还有其他在线或线下的会计公司可以方便我们的生活。这是一项极小的投资，以避免出错并最终不得不支付罚款的风险。
 
@@ -2115,7 +1940,8 @@ O salário de desenvolvedores(as) de software não é o mais alto que existe, po
 无论如何，我们都可以获得社区以及在相关领域工作的朋友们的支持，因此，当我们感到恐惧，或者对选拔过程产生疑问，或者对我们在某些方面做出的“错”导致没通过面试时，应该随时寻求帮助。
 
 # 第 9 章
-此后去向何方
+
+## 此后去向何方
 
 这本书基本上是关于编程职业的。我们学习了什么是软件、程序是如何创建的、网站和手机应用程序是如何开发的、我们可以进入的哪些领域，以及如何获得第一份工作或作为自由职业者工作。但我们实际上并没有学会如何编程，只是学会了如何练习编程以及如何创建作品集。
 
@@ -2173,8 +1999,6 @@ alert(valorTotal)
 
 JavaScript 中的 `array` 是我们如何使用数据结构来组织代码的经典示例。我们想在程序中表示多个值，我们需要为每个值创建一个标识符，例如：假设我们将拥有学校 4 个学生的成绩，我们可以这样做：
 
-
-
 ```javascript
 const nota1 = 10
 const nota2 = 7
@@ -2184,13 +2008,13 @@ const nota4 = 9
 
 Mas se precisarmos armazenar ainda mais notas, digamos 11 x 4 notas (4 notas por mês durante o ano de aulas atual)?
 
-Será necessário continuar criando mais notas manualmente em nosso programa. nota5, nota6, nota7, nota8 etc.
+Será necessário continuar criando mais notas manualmente em nosso programa. `nota5`, `nota6`, `nota7`, `nota8` etc.
 
 E depois, para acessar esses valores e fazer uma soma?
 
 Seria necessário criar um código somando os identificadores.
 
-nota1 + nota2 + nota3 + nota4 + nota5 + nota6 ...
+`nota1 + nota2 + nota3 + nota4 + nota5 + nota6 ...`
 
 Se usarmos um array, podemos ter um identificador `notas` e colocar todas lá dentro.
 
@@ -2204,6 +2028,9 @@ Podemos aprender mais alguns algoritmos e lógica de programação através de b
 
 - [Curso em vídeo: Algoritmos e lógica de programação](https://www.cursoemvideo.com/course/curso-de-algoritmos/)
 - [Curso online de estruturas de dados da Alura](https://www.alura.com.br/curso-online-estrutura-de-dados/)
+
+
+
 - [Apostila de Caelum de estruturas de dados](https://www.caelum.com.br/apostila-java-estrutura-de-dados/)
 - [Estruturas de dados com Jogos, por Roberto Ferrari](https://www.amazon.com.br/Estruturas-Dados-Jogos-Roberto-Ferrari/dp/8355278044/)
 - [Estruturas de Dados: algoritmos, análise da complexidade e implementações em JAVA e C/C++, por Ana Fernanda Gomes Ascencio e Graziela Santos Araujo](https://www.amazon.com.br/Estruturas-Dados-algoritmos-complexidade-implementações-ebook/dp/B0167CVDQ4/)
@@ -2278,13 +2105,9 @@ Alguns aplicativos e plataformas podem nos ajudar a aprender o idioma, seja no c
 
 Fora os livros técnicos e conteúdo extremamente direcionado ao código, nós somos pessoas e, como pessoas, temos nossos problemas que não são resolvidos com mais leitura sobre programação.
 
-
-
-
-
 每当有人告诉我他们已经学习了两年编程，但对于申请职位感到不从心，或者觉得自己与同时期开始学习的人相比处于劣势地位时，我都会询问他们的实践情况。
 
--   你一直在大量实践吗？
+- 你一直在大量实践吗？
 
 当答案是“是”时，我们很快就能发现人的问题不在于编程，而在于他们自己的自尊心或不安全感。对于这一点，没有任何技术课程或关于代码的书可以帮助我们，我们需要学会理解和评估自己。
 
@@ -2303,7 +2126,11 @@ Fora os livros técnicos e conteúdo extremamente direcionado ao código, nós s
 11. [想要时间的人生产力](Produtividade para quem quer tempo)，作者 Geronimo Theml (https://www.amazon.com.br/Produtividade-para-quem-quer-tempo/dp/8545200978/)
 12. [焦虑](Ansiedade)，作者 Augusto Cury (https://www.amazon.com.br/Ansiedade-Augusto-Cury/dp/8502218484/)
 13. [80/20法则：少即是多的秘密](O Princípio 80/20)，作者 Richard Koch (https://www.amazon.com.br/Principio-Segredos-Para-Conseguir-Menos/dp/858235259X/)
+
+
+
 14. [有序的大脑：在信息过载时代如何清晰思考](A Mente Organizada)，作者 Daniel J. Levin (https://www.amazon.com.br/Organizada-Pensar-Clareza-Sobrecarga-Informação/dp/8539006995/)
+
 15. [冥想的艺术](A arte da meditação)，作者 Daniel Goleman (https://www.amazon.com.br/Arte-Meditação-Autoestima-CD/dp/8575421867/)
 
 这些书看起来一次性读不完很多，但当我们越来越理解自己并渴望获得更高的生活质量时，它们对于我们平衡生活至关重要。我们可以利用目前为止介绍的生产力建议来消化这些书籍的内容。
@@ -2313,9 +2140,13 @@ Fora os livros técnicos e conteúdo extremamente direcionado ao código, nós s
 在心理上做好了更好的准备后，我们现在可以通过高级技术书籍来寻求更深入的开发：
 
 1. [Refactoring: Improving the Design of Existing Code]，作者 Martin Fowler, Kent Beck 和 John Brant (https://www.amazon.com.br/Refactoring-Improving-Design-Existing-Code/dp/0201485672/)
+
 2. [Domain Driven Design]，作者 Eric Evans (https://www.amazon.com.br/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125251/)
+
 3. [Padrões de Arquitetura de Aplicações Corporativas]，作者 Martin Fowler (https://www.amazon.com.br/Padr%C3%B5es-Arquitetura-Aplica%C3%A7%C3%B5es-Corporativas-Martin/dp/853630638/)
+
 4. [Refatoração para Padrões]，作者 Joshua Kievsky (https://www.amazon.com.br/Refatoracao-Padroes-Portuguesse-Joshua-Kievsky-ebook/dp/B019HiOO22C/)
+
 5. [Clean Code: A Handbook of Agile Software Craftsmanship]，作者 Robert C. Martin, Michael C. Feathers 和 Timothy R.Ottinger (https://www.amazon.com.br/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/)
 
 ## 9.9 结论
@@ -2325,6 +2156,7 @@ Fora os livros técnicos e conteúdo extremamente direcionado ao código, nós s
 我们应该避免忽视我们认为重要的主题，尽管有时学习这些主题可能会有些枯燥。所有这些努力都将帮助我们成为更优秀的专业人士，并让我们拥有在职业生涯中走得更远的技能。
 
 # 第 10 章
+
 ### 结语
 
 我们在编程宇宙这一奇妙领域的旅程，仅仅随着我们目前为止所积累的知识刚刚开始。
@@ -2332,4 +2164,3 @@ Fora os livros técnicos e conteúdo extremamente direcionado ao código, nós s
 现在，我们掌握了基础知识和灵感，可以彻底进入开发领域，学习尽可能多的知识并获得工作（甚至是自由职业）。
 
 没有任何伟大的梦想是容易实现的，但精通编程并不难。
-

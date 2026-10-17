@@ -1,117 +1,114 @@
+
 # 随机波线性系统的命中概率
 
-
-
-
-
-
-
-
 Robert C. Dalang
+
 Marta Sanz-Solé
 
 ![](img/05476fb9f1f834e6e3ed1a310fdf5f50_0_0.png)
 
-
-
-
-
-
 Robert C. Dalang
+
 Marta Sanz-Solé
 
 ![](img/05476fb9f1f834e6e3ed1a310fdf5f50_1_0.png)
 
-
-
-
 Dalang, Robert C., 1961-
-
-
-
-
-
-
 
 本期刊致力于纯数学和应用数学领域的研究。
 
+本出版物被 `Mathematical Reviews`, `Zentralblatt MATH`, `Science Citation Index`, `Science Citation Index Expanded`, `ISI Alert Services`, `SciSearch`, `Research Alert`, `CompuMath Index`, `Current Contents` 收录。
 
-
-
-
-
-
-
-本出版物被 Mathematical Reviews, Zentralblatt MATH, Science Citation Index, Science Citation Index Expanded, ISI Alert Services, SciSearch, Research Alert, CompuMath Index, Current Contents 收录。
-
-书中使用的论文不含酸，并符合持久性和耐用性的指南。访问 AMS 首页：http://www.ams.org/
-
+书中使用的论文不含酸，并符合持久性和耐用性的指南。访问 AMS 首页：`http://www.ams.org/`
 
 - 第一章 引言 ... 1
 - 第二章 命中概率的上界 ... 9
-2.1 增量的界限 ... 10
-2.2 概率密度函数的均匀上界 ... 14
+  - 2.1 增量的界限 ... 10
+  - 2.2 概率密度函数的均匀上界 ... 14
 - 第三章 马尔可夫矩阵特征值的下界条件 ... 21
-3.1 联合密度的上界 ... 22
-3.2 命中概率下界的证明 ... 27
+  - 3.1 联合密度的上界 ... 22
+  - 3.2 命中概率下界的证明 ... 27
 - 第四章 马尔可夫矩阵特征值与下界的研究 ... 31
-4.1 小特征值的研究 ... 31
-4.2 大特征值的研究 ... 38
-A.1 马尔可夫范数的界限 ... 47
-A.2 协方函数的积分增量 ... 56
-A.3 马尔可夫范数与内积的进一步界限 ... 68
+  - 4.1 小特征值的研究 ... 31
+  - 4.2 大特征值的研究 ... 38
+- 附录 A ... 47
+  - A.1 马尔可夫范数的界限 ... 47
+  - A.2 协方函数的积分增量 ... 56
+  - A.3 马尔可夫范数与内积的进一步界限 ... 68
 
 # 摘要
 
 我们考虑一个 $d$ 维随机场 $u=\{u(t,x)\}$，它在空间维度 $k\in\{1,2,3\}$ 上满足非线性随机波方程，由时间白空间均匀噪声驱动。我们主要考虑空间协方差由指数 $\beta$ 的 Riesz 核给出的情况。利用马尔可夫微积分，我们建立了随机场访问确定子集 $\mathbb{R}^d$ 的概率，分别相对于豪斯多夫测度和牛顿容量。该维度是最优的，并表明当 $d(2-\beta) > 2(k+1)$ 时，点对于 $u$ 是极点。相反，在低维 $d$ 下，点不是极点。然而，点的极性问题存在一个未解决的区间。
 
 2012年5月8日编辑收稿，2013年9月修订。
+
 2015年1月22日电子版发表。
 
 **关键词和短语。** 命中概率、随机波方程组、空间均匀噪声、容量、豪斯多夫测度。
 
 第一作者受瑞士国家基金会支持。第二作者受加泰罗尼亚政府资助，西班牙科学部支持。Robert C. Dalang，瑞士洛洛昂联邦学院数学研究所。
-Marta Sanz-Solé，巴塞罗纳大学数学学院。电子邮箱：marta.sanz@ub.edu。
+
+Marta Sanz-Solé，巴塞罗纳大学数学学院。电子邮箱：`marta.sanz@ub.edu`。
 
 # 1. 引言
 
 在本文中，我们考虑 $d$ 维随机场 $u=(u_1(t,x), \dots, u_d(t,x))$，它是 $d$ 维随机波方程组的解：
-$$(\frac{\partial^2}{\partial t^2} - \Delta) u_i(t,x) = \sum_{j=1}^d \int_0^t \int_{\mathbb{R}^k} G(t-s,y) \sigma_{i,j}(u(s,y)) M^j(ds,dy) + \int_0^t \int_{\mathbb{R}^k} G(t-s,y) b_i(u(s,y)) ds,$$
+
+```
+(\frac{\partial^2}{\partial t^2} - \Delta) u_i(t,x) = \sum_{j=1}^d \int_0^t \int_{\mathbb{R}^k} G(t-s,y) \sigma_{i,j}(u(s,y)) M^j(ds,dy) + \int_0^t \int_{\mathbb{R}^k} G(t-s,y) b_i(u(s,y)) ds,
+```
+
 $i=1,\dots,d; (t,x) \in [0,T] \times \mathbb{R}^k, k \in \{1, 2, 3\}$，其中 $\Delta$ 表示 $\mathbb{R}^k$ 上的普拉斯拉斯。我们给出研究该系统的动机：一个完全概率空间 $(\Omega, \mathcal{F}, P)$，对于任意 $j \in \{1,\dots,d\}$，我们考虑一个中心高斯变量族 $M^j = \{M^j(\varphi)\, \varphi \in C_0^{\infty}(\mathbb{R}^{1})\}$。$M^j$ 是独立的，且每个 $M^j$ 的协方函数为：
-$$(1.2) \quad E(M^i(\varphi)M^j(\psi)) = \int_{\mathbb{R}_+} \int \Gamma(dx) (\varphi(s) \star \dot{\psi}(s)) (x),$$
-“\star”表示空间参数上的卷积算子，$\dot{\psi}(t,x) = \psi(t,x)$。
+
+```
+(1.2) \quad E(M^i(\varphi)M^j(\psi)) = \int_{\mathbb{R}_+} \int \Gamma(dx) (\varphi(s) \star \dot{\psi}(s)) (x),
+```
+
+“$\star$”表示空间参数上的卷积算子，$\dot{\psi}(t,x) = \psi(t,x)$。
 
 如[7]所示，公式(1.2) 也可以写为：
-$$(1.3) \quad E(M^i(\varphi)M^j(\psi)) = \int_0^{\infty} \int \mu(d\xi) \mathcal{F}\varphi(\xi) \mathcal{F}\psi(\xi),$$
+
+```
+(1.3) \quad E(M^i(\varphi)M^j(\psi)) = \int_0^{\infty} \int \mu(d\xi) \mathcal{F}\varphi(\xi) \mathcal{F}\psi(\xi),
+```
+
 其中 $\mu$ 表示谱测 ($\mu = \mathcal{F}^{-1}$)，$\mathcal{F}$ 表示 $\mathbb{R}^k$ 上的傅叶变换算子。
 
-方程组1.1) 的严格解释如下：
-$$u_i(t,x) = \sum_{j=1}^d \int_0^t \int_{\mathbb{R}^k} G(t-s,y) \sigma_{i,j}(u(s,y)) M^j(ds,dy),$$
-$$(1.4) \quad + \int_0^t \int_{\mathbb{R}^k} G(t-s,y) b_i(u(s,y)) ds,$$
+方程组(1.1) 的严格解释如下：
 
+```
+u_i(t,x) = \sum_{j=1}^d \int_0^t \int_{\mathbb{R}^k} G(t-s,y) \sigma_{i,j}(u(s,y)) M^j(ds,dy),
+```
 
-
-
-
-# 1. 引言
+```
+(1.4) \quad + \int_0^t \int_{\mathbb{R}^k} G(t-s,y) b_i(u(s,y)) ds,
+```
 
 $i=1,\dots,d$，$G$ 表示波方程的基本解，$M^i$ 被扩展为适定的鞅尔格测度，且随机积分见于 [7]。对于 $k = 1, 2, 3$ 的 $G$ 表达式及其傅里叶变换，分别参见 (1.9) 和 (1.10)。
 
 假设谱测度 $\mu$ 满足
 
-(1.5) $\int_{\mathbb{R}^d} \frac{\mu(d\xi)}{1+|\xi|^2} < \infty$
+```
+(1.5) \int_{\mathbb{R}^d} \frac{\mu(d\xi)}{1+|\xi|^2} < \infty
+```
 
 其中 $|\cdot|$ 是欧几里得范。那么，根据 [7] 中定理 13 的简单扩展，存在 $d$ 维随机过程 $u = (u(t,x))_{1\leq i\leq d}$ 的唯一随机场解，$(t,x) \in [0,T] \times \mathbb{R}^k$，该解适应于与鞅尔格测度 $\{M_i\}, (t \in [0,T], B \in \mathcal{B}(\mathbb{R}^k))$ 相关的自然滤波，并在 $L^2(\Omega)$ 中连续。这里，$\mathcal{B}(\mathbb{R}^k)$ 表示 $\mathbb{R}^k$ 上有界波雷尔集的集合。
 
 我们的目标是建立过程 $u$ 命中集合 $A \in \mathcal{B}(\mathbb{R}^k)$ 概率的上下界，并为过程 $u$ 开发一个概率势。这将根据 $A$ 的豪斯多夫测度和贝塞尔-Roe 容积得到。
 
-在 [18] 中，研究了任意固定维 $k$ 下高斯波的命中概率。该文献涵盖了当 $(a,\sigma)$，$\sigma=(\sigma_{ij})_{1\leq i,j\leq d}$，$b=(b^i, i=1,\dots,d) \equiv 0$ 且 $k \in \mathbb{N}$ 时的情况。证明了以下结论：假设协方差 $\sigma$ 相对于勒格测度绝对连续，且其密度由 $f(x)=|x|^\beta$ 给出，其中 $t_0 \in [0,T]，令 $I, J$ 为 $[0,T]$ 和 $\mathbb{R}^k$ 的紧集，且均具有正勒格测度。固定 $N>0$。存在依赖于 $I, J, N \beta, k$ 和 $d$ 的常数 $c$ 和 $C$，对于任意波雷尔集 $A \subset [-N,N]^d$，
+在 [18] 中，研究了任意固定维 $k$ 下高斯波的命中概率。该文献涵盖了当 $(a,\sigma)$，$\sigma=(\sigma_{ij})_{1\leq i,j\leq d}$，$b=(b^i, i=1,\dots,d) \equiv 0$ 且 $k \in \mathbb{N}$ 时的情况。证明了以下结论：假设协方差 $\sigma$ 相对于勒格测度绝对连续，且其密度由 $f(x)=|x|^\beta$ 给出，其中 $t_0 \in [0,T]$，令 $I, J$ 为 $[0,T]$ 和 $\mathbb{R}^k$ 的紧集，且均具有正勒格测度。固定 $N>0$。存在依赖于 $I, J, N \beta, k$ 和 $d$ 的常数 $c$ 和 $C$，对于任意波雷尔集 $A \subset [-N,N]^d$，
 
-(1.6) $C_{d-k(1+\beta)/(2-\beta)}P(u(I) \cap A \neq \emptyset) \leq cH_{d-k(1+\beta)/(2-\beta)}(A)$。这里，下界包含 $A$ 的 $d-k(1+\beta)/(2-\beta)$ 容积，上界包含 $A$ 的豪斯多夫测度（在章末尾，我们将回顾这些概念的定义）。参数 $d-k(1+\beta)/(2-\beta)$ 给出了在该方程可能推广到 (1.4) 时可以预期的最优值。
+```
+(1.6) C_{d-k(1+\beta)/(2-\beta)}P(u(I) \cap A \neq \emptyset) \leq cH_{d-k(1+\beta)/(2-\beta)}(A)。
+```
+
+这里，下界包含 $A$ 的 $d-k(1+\beta)/(2-\beta)$ 容积，上界包含 $A$ 的豪斯多夫测度（在章末尾，我们将回顾这些概念的定义）。参数 $d-k(1+\beta)/(2-\beta)$ 给出了在该方程可能推广到 (1.4) 时可以预期的最优值。
 
 (1.6) 的证明是通过应用 [18] 中建立的命中概率的一些通用准则（另见 [2]）完成的。这些准则由随机场 $u_i$ 中随机变量的密度和联合密度性质描述，还由其路径的正则性描述。由下式给随机场
 
-$u_i(t,x)=\int_0^t\int_{\mathbb{R}^d} G(t-s,y)\sigma_{ij}M^i(ds,dy), \quad i=1,\dots,d$，
+```
+u_i(t,x)=\int_0^t\int_{\mathbb{R}^d} G(t-s,y)\sigma_{ij}M^i(ds,dy), \quad i=1,\dots,d，
+```
 
 检查应用上述准则的必要假设是通过直接对（高斯）密度的显式公式进行。
 
@@ -119,9 +116,12 @@ $u_i(t,x)=\int_0^t\int_{\mathbb{R}^d} G(t-s,y)\sigma_{ij}M^i(ds,dy), \quad i=1,\
 
 - (P1) 函数 $\sigma_{i,j}$ 和 $b_i$，$1 \leq i,j \leq d$ 是无限次可微的，且任意正阶偏导数都是有界的。此外，$\sigma_{i,j}$，$1 \leq i,j \leq d$ 是有界的。
 - (P2) 矩阵值函数 $\sigma$ 是一致椭性的。这意味着对于任何 $\|v\|=1$ 的 $v \in \mathbb{R}^d$
-(1.7) $\inf_{x \in \mathbb{R}^d} v^T \sigma(x)v \geq \rho > 0$。
 
-第 2 章致力于根据豪斯多夫测度建立上界。根据 [18] 定理 2.4，只需证明对于任意变量 $u(t,x) \in [0,T] \times \mathbb{R}^k$，存在密度 $p_{u,x}(z$，且该密度在紧集上一致有界。我们必须从距离 $|t-s|+|x-y|$ 的幂来限制增量 $u(t,x)-u(s,y)$ 的 $L^p$ 矩，对于任意 $q \in [1, \infty[$（参见 (R1) 和 (R2)）。
+```
+(1.7) \inf_{x \in \mathbb{R}^d} v^T \sigma(x)v \geq \rho > 0。
+```
+
+第 2 章致力于根据豪斯多夫测度建立上界。根据 [18] 定理 2.4，只需证明对于任意变量 $u(t,x) \in [0,T] \times \mathbb{R}^k$，存在密度 $p_{u,x}(z)$，且该密度在紧集上一致有界。我们必须从距离 $|t-s|+|x-y|$ 的幂来限制增量 $u(t,x)-u(s,y)$ 的 $L^p$ 矩，对于任意 $q \in [1, \infty[$（参见 (R1) 和 (R2)）。
 
 $u(t,x) \in [0,T] \times \mathbb{R}^k$，$z$ 变量的光滑性存在，对于 $k=2$ 和 $k=3$ 的波方程分别在 [30] 和 [38] 中得到证明。然而，据我们所知，对于 $k=1$ 的空间均匀噪声不存在此类证明，且一致有界性尚未解决。
 
@@ -131,7 +131,7 @@ $u(t,x) \in [0,T] \times \mathbb{R}^k$，$z$ 变量的光滑性存在，对于 $
 
 命中概率的下界通过使用 [18] 中定理 2.1 的修正得到如下。当应用于系统 (1.4) 的随机解时，该定理的两个假设是：
 
-- (a) 对于 $(s,y), (t,x) \in [0,T] \times \mathbb{R}^k，$u(s,y), u(t,x)$ 的联合密度具有高斯类型上界；
+- (a) 对于 $(s,y), (t,x) \in [0,T] \times \mathbb{R}^k$，$u(s,y), u(t,x)$ 的联合密度具有高斯类型上界；
 - (b) 密度 $p_{t,x}$ 在 $\mathbb{R}^d$ 上严格正。
 
 性质 (b) 最近在 [35] 中建立。对于 (a) 中的上界，我们在这里展示该假设可以显著放宽。事实上，高斯类型的指数因子可以用单项式代替（参见定理 3.5 和备注 3.1(b)），这仍然导致相同的命中概率下界。
@@ -142,18 +142,10 @@ $u(t,x) \in [0,T] \times \mathbb{R}^k$，$z$ 变量的光滑性存在，对于 $
 
 第 4 章致力于分析 Malliavin 矩阵 $\gamma_Z$ 的特征值，以检查假设 (3.5)-(3.6) 对于某些速率参数 $\rho$ 的有效性。执行此任务的主要工作是 [11, Proposition 3.5]。然而，我们在定理 4.1 中得到的 $\rho$ 值接近 $3-\beta$，而最优值应该是 $2-\beta$。
 
-建立特征值边界 (3.6) 的证明依赖于热核的半群性质及其性质，并反复使用 [11, Proposition 3.5]。我们也使用这一工具，但证明的整体结构非常不同。由于缺乏半群性质，引理 A.12 起了至关重要的作用。该引理告诉
-
-
-
-
-
-# 引言
-
-我们对于 $\epsilon > 0, x, y \in \mathbb{R}^k, x \neq y$：
+建立特征值边界 (3.6) 的证明依赖于热核的半群性质及其性质，并反复使用 [11, Proposition 3.5]。我们也使用这一工具，但证明的整体结构非常不同。由于缺乏半群性质，引理 A.12 起了至关重要的作用。该引理告诉我们对于 $\epsilon > 0, x, y \in \mathbb{R}^k, x \neq y$：
 
 ```
-$\lim_{|x-y| \to 0} \int_0^{\epsilon} dr (G(r, y-*), G(h+r, x-*))_{\mathcal{H}} = 0$，
+\lim_{|x-y| \to 0} \int_0^{\epsilon} dr (G(r, y-*), G(h+r, x-*))_{\mathcal{H}} = 0，
 ```
 
 对于 $r \in [0,1]$ 一致成立（等等，文中说的是 $[0,1]$）。这一结果与经典的黎曼-勒贝格引理具有相似性。在 [11] 中，空间 $\mathcal{H}$（与空间平稳噪声的协方差相关）被 $L^2([0,1])$ 替换。最后，我们关于下界的主要结果在定理 4.3 中给出。
@@ -165,6 +157,9 @@ $\lim_{|x-y| \to 0} \int_0^{\epsilon} dr (G(r, y-*), G(h+r, x-*))_{\mathcal{H}} 
 命中概率研究的一个目标是确定哪些 $d$ 和 $\beta$ 是极点（polar），哪些不是。记得，点 $z \in \mathbb{R}^d$ 对于 $u$ 是极点，当且仅当 $\mathbb{P}(\tau(z,t) \in [0,T] \times \mathbb{R}^k : u(t,x)=z)=0$，否则不是极点。通常情况下，点在较大的 $d$ 和/或较小的 $k$ 下是极点的，而非不是。以下是定理 2.1 和 4.3 的直接推论。
 
 推论 1.1. 假设上述 (P1) 和 (P2)，令 $u$ 和 $k$ 为 (1.4) 的解。
+
+
+
 - (a) 假设 $d > \frac{2(k+1)}{2-\beta}$。点对于 $u$ 是极点的。
 - (b) 假设 $d(1 + \frac{2\delta}{2-\beta}) < \frac{2(k+1)}{2-\beta}$。点对于 $u$ 是极点的。
 
@@ -222,16 +217,11 @@ $(1.10) \quad \mathcal{F}G(\xi) = |\xi|^{-1} \sin(t|\xi|)$
 
 最后，考虑阻尼波算子，以及将波算子 $a\frac{\partial^2}{\partial t^2}+b\frac{\partial}{\partial t}-c\Delta$ 替换为
 
-```
+
 
 在这里，参数 $a, b$ 和 $c$ 具有物理意义，例如单位质量、摩擦系数或弹性系数。在各种极限情况下，例如 $a\downarrow0$ 或 $b\downarrow0$，分别对应零质量极限和无摩擦极限，可以得到热算子或波算子（[4] 及其参考文献包含了相应方程解的收敛性以及该研究的几个动机）。因此，研究如 (1.1) 的波方程组可以被视为研究更一般的随机偏微分方程组的重要一步。
 
-
-
-
-
-## 第二章
-## 命中概率的上界
+## 第二章 命中概率的上界
 
 我们假设控制系统 (1.4) 的高斯过程的协方测度 $\Gamma$ 对于 $\mathbb{R}^k$ 上的勒贝测度绝对连续的，我们将考虑关于其密度函数 $f$ 的以下假设：
 
@@ -246,7 +236,7 @@ $$\int_{\mathbb{R}^k} \frac{\mu(d\xi)}{(1+|xi|^2)^\alpha} < \infty$$
 
 我们设计了以下结论：
 
-定理 2.1. 令 $u(t,x), \in [0,T] \times \mathbb{R}^k$ 是由 $k \in\{1,2,3\}$ 的随机偏微分方程 (SPDEs) 系统 (1.4) 给出的随机过程。令 $I$ 和 $K$ 分别为 $[0,T]$ 和 $\mathbb{R}^k$ 的正勒贝测度紧集。
+**定理 2.1.** 令 $u(t,x), \in [0,T] \times \mathbb{R}^k$ 是由 $k \in\{1,2,3\}$ 的随机偏微分方程 (SPDEs) 系统 (1.4) 给出的随机过程。令 $I$ 和 $K$ 分别为 $[0,T]$ 和 $\mathbb{R}^k$ 的正勒贝测度紧集。
 
 考虑以下情况：
 
@@ -268,15 +258,15 @@ $$(2.3) |u(t,x) - u(s,y)|^q \le C(|t-s| + |x-y|)^q$$
 
 这两个事实推出了将 $\delta_i$ 替换为 $\delta$ 的 (2.1)。我们注意到 $\zeta$ 是任意小的，只要建立了任意 $\delta < \delta_i$ 的 (2.3)，即可得到 (2.1)。
 
-## 2.1. 增界的
+### 2.1. 增界的
 
 在本节中，我们将证明 (R2)。读者会注意到，在不假设强假设 (P1) 和 (P2) 的情况下，$\sigma_{ij}, b_i (1 \le i, j \le d)$ 仅连续连续。
 
-### 情况 (1)：加性噪声
+#### 情况 (1)：加性噪声
 
-引理 2.2. 令 $\{u(t,x), (t,x) \in [0,T] \times \mathbb{R}^k\}, k\in\{1,2,3\}$ 为由 (1.4) 定义的系统解。在假设 (C1)（或 (C')）下，性质 (R2) 对于 $\delta = \frac{2-\beta}{2}$（或 $\delta < 1-\alpha$）成立，因此省略索引 $i$。
+**引理 2.2.** 令 $\{u(t,x), (t,x) \in [0,T] \times \mathbb{R}^k\}, k\in\{1,2,3\}$ 为由 (1.4) 定义的系统解。在假设 (C1)（或 (C')）下，性质 (R2) 对于 $\delta = \frac{2-\beta}{2}$（或 $\delta < 1-\alpha$）成立，因此省略索引 $i$。
 
-证明。无一般性，我们在证明中假设 $d=1$ 且 $v(t,x) = \int_0^t \int_{\mathbb{R}} G(t-r, x-z)dz$。固定 $q \in [1, \infty)$ 并考虑 $x \in [0,T]$ 和 $h > 0$ 使得 $t+h \in [0,T]$。则
+**证明.** 无一般性，我们在证明中假设 $d=1$ 且 $v(t,x) = \int_0^t \int_{\mathbb{R}} G(t-r, x-z)dz$。固定 $q \in [1, \infty)$ 并考虑 $x \in [0,T]$ 和 $h > 0$ 使得 $t+h \in [0,T]$。则
 $$(2.4) E(u(t,x) - u(t+h,x+y))^q \le C(q)(T_1+T_2),$$
 其中
 $$T_1 = E(|v(t,x) - v(t+h,y)|^q),$$
@@ -316,9 +306,9 @@ $$(2.7) E(u(t,x) - u(t+h,x+y))^q \le C(q)(h + |y|)^{\delta}.$$
 因此，我们有：
 $$(2.9) E(u(t,x) - u(t+h,x+y))^q \le C(q)(h + |y|)^{\delta}.$$
 
-## 2.2. 命中概率的上界
+### 2.2. 命中概率的上界
 
-### 情况 (2)：乘性噪声
+#### 情况 (2)：乘性噪声
 
 我们首先列出维度 $k\in\{1,2,3\}$ 的已知结果。
 
@@ -332,11 +322,7 @@ $$(2.9) E(u(t,x) - u(t+h,x+y))^q \le C(q)(h + |y|)^{\delta}.$$
 
 对于 $k=3$，假设 $\Gamma$ 满足 (C3)。则 (R2) 对于 $\delta = \frac{2-\beta}{2} \wedge \frac{1+\mu}{2}$ 成立。
 
-
-
-
-
-## 2.1. 增量矩的界
+### 2.1. 增量矩的界
 
 由于 $k=1, G(r, z) = \frac{1}{2}\{|z|<r\}$，因此根据赫尔德不等式可知 $\||...\|_H^q$ 被以下式界：
 
@@ -375,7 +361,7 @@ $$ I_1 = c(x-y)^{2^{-\beta}}. $$
 
 $$ I_2 = \int_{x-(t-r)}^{y-(t-r)} dz \int_{x+t-r}^{y+t-r} dw |y-x|^{-\beta} = c|x-y|^{2^{-\beta}}. $$
 
-## 2. 命中概率的上界
+### 2. 命中概率的上界
 
 当 $y-x > t-r \geq \frac{y-x}{2}$ 时，直接积分显示：
 
@@ -396,7 +382,7 @@ $$ E(|u(t,x)-u(t,y)|^q) \leq C|y-x|^{\frac{2-\beta}{2}}q. $$
 
 这完成了在 $k=1$ 且假设 (C3) 下对于 $\delta = \frac{2-\beta}{2}$ 时 (R2) 的证明。
 
-## 2.2. 概率密度函数的均匀界
+### 2.2. 概率密度函数的均匀界
 
 本节的目的是证明性质 (R1)。我们在这里考虑具有乘积噪声的方程 (1.4)，并假设 $k \in\{1,2,3\}$ 且函数 $\sigma_{i,j}$ 和 $b_i,j=1,\dots,d$ 满足 (P1) 和 (P2)。
 
@@ -405,6 +391,7 @@ $$ E(|u(t,x)-u(t,y)|^q) \leq C|y-x|^{\frac{2-\beta}{2}}q. $$
 - (1) $u(t,x) \in\mathbb{D}^{1,\infty}(\mathbb{R}^d)$。
 - (2) 对于所有 $p \in[1,\infty[$，存在正数 $c_1$ 使得 $\sup_{(t,x)\in\mathbb{T}\times\mathbb{K}} \|Du(t,x)\|_{\mathcal{H}^p} \leq c_1$。
 - (3) 对于所有 $p \in[1,\infty[$，存在正数 $c_2$ 使得 $\sup_{(t,x)\in\mathbb{T}\times\mathbb{K}} E[\det(\gamma_{u(t,x)})^{-p}] \leq c_2$。
+
 其中 $\gamma_{u(t,x)}$ 表示 $u(t,x)$ 的 Malliavin 导数。
 
 在定理 2.1 的两种情况下，性质 (1) 和 (2) 继承自 [39] 中定理 7 对系统的扩展。在这里，我们关注性质 (3) 的证明。为了后续使用，通过 $Du(t,x)$ 的第 $i$ 分量写方程。记住这是一个 $\mathcal{H}^p$ 取值的随机变量。根据 [39] 定理 7.1，对于 $t \leq r, D_{r,z}u(t,x)=0$，而对于 $0 \le r \le t, j=1 \dots d,$
@@ -417,7 +404,7 @@ $$D_{r,z}^{(j)}u_i(t,x) = G(t-r, x-z)\sigma_{i,j}(u,x) + \sum_{l=1}^d \int_{\mat
 
 $$\sup_{(t,x) \in \mathbb{T}_0 \times K} E \left[ (\det \gamma_{u(t,x)})^p \right] < +\infty.$$
 
-证明。注意到 $\gamma_{u(t,x)} \ge \left( \inf_{|v|=1} v^\top\gamma_{u(t,x)}v \right)^d$。令 $q=pd$。只需检查
+**证明.** 注意到 $\gamma_{u(t,x)} \ge \left( \inf_{|v|=1} v^\top\gamma_{u(t,x)}v \right)^d$。令 $q=pd$。只需检查
 
 $$\sup_{(t,x) \in \mathbb{T}_0 \times K} E \left[ \frac{\inf_{|v|=1} v^\top\gamma_{u(t,x)}v}{q} \right] < +\infty.$$
 
@@ -436,17 +423,13 @@ $$\left| \sum_{i=1}^d v_i Di_{r,*}u_i(t,x) \right\|_{\mathcal{H}^d}^2 \le 2 \lef
 
 （注：由于原文公式部分存在断断或符号混乱，翻译时已根据原文逻辑进行了对齐）
 
-
-
-
-
-## 18 2. 命中概率的上界
+### 18 2. 命中概率的上界
 
 除非 $0 \leq r \leq s$，否则有：
 
-```
+
+
 $E\left[\left(\int_{t-\delta}^{t} dr \sum_{j=1}^{d} \left|v_i\right|^2 \times\sum_{\ell=1}^{d} \int_{2k}^{t} dr G(t-s,x)\nabla\sigma_{i,\ell}(u(s,y)) \cdot D_{r^*}^{(j)}u(s,y)M^t(ds,dy)\right)^q_{\|\mathcal{H}}\right]$
-```
 
 ```
 $\leq C \sup_{1\leq i,j,t\leq d} E\left[\left(\int_{t-\delta}^{t} dr G(t-s,x)\nabla\sigma_{i,\ell}(u(s,y)) \cdot D_{r^*}^{(j)}u(s,y)M^t(ds,dy)\right)^q_{\|\mathcal{H}}\right]$
@@ -468,9 +451,7 @@ $\mathcal{H}_s = L^2([t-\delta, t]; \mathcal{H})$。我们使用变量替换 $s=
 (2.16) \quad C \sup_{1\leq i,j,\ell\leq d} E\left[\left(\int_{R^k} G(t-\delta-s,x)\nabla\sigma_{i,\ell}(u(t-\delta+s)) \cdot D_{r^*}^{(j)}u(t-\delta+s)M^t(ds,dy)\right\|^{2q}_{\|\mathcal{H}_s}\right]
 ```
 
-利用 [39, Theorem 6.1] 中的符号，我们令 $S(s,y)=G(\delta-s,x)$ 和 $K_{i,j,t}(s)=\nabla\sigma_{i,\ell}(u(t-\delta+s)) \cdot D_{r^*}^{(j)}u(t-\delta+s)$，
-
-这属于亥尔伯特空间 $K=\mathcal{H}_s$。应用 [39, Theorem 6.1]，我们将 (2.16) 中的表达式界于：
+利用 [39, Theorem 6.1] 中的符号，我们令 $S(s,y)=G(\delta-s,x)$ 和 $K_{i,j,t}(s)=\nabla\sigma_{i,\ell}(u(t-\delta+s)) \cdot D_{r^*}^{(j)}u(t-\delta+s)$，这属于亥尔伯特空间 $K=\mathcal{H}_s$。应用 [39, Theorem 6.1]，我们将 (2.16) 中的表达式界于：
 
 ```
 $C(g(\delta))^q \sup_{1\leq i,j,t\leq d} \sup_{(s,y)\in[t-\delta,t]\times R^k} E\left[\left\|K_{i,j,t}(s,y)\right\|^{2q}_{\|\mathcal{H}}\right]$
@@ -497,7 +478,9 @@ $$\le C \sup_{1 \le i,j \le d} E\left(\int_{0}^{\delta} ds \int_{\mathbb{R}^k} d
 
 ```
 $C \sup_{1 \le i,j \le d} E\left(\int_{0}^{\delta} ds \int_{\mathbb{R}^k} dy G(s, x-y) \cdot \nabla b(u(t-s,y)) \cdot D_{s}^{(j)}u(t-s,y)\right)^{2q}_{\mathcal{H}_s}$
-```（注：此处原文似乎有 (2.18) 标记，根据上下文推如下）
+```
+
+（注：此处原文似乎有 (2.18) 标记，根据上下文推如下）
 
 $G(s, x-y) \cdot \nabla b(u(t-s,y)) \cdot D_{s}^{(j)}u(t-s,y)\right)^{2q}_{\mathcal{H}_s}$
 $$\le C\left(\int_{0}^{\delta} ds \int_{\mathbb{R}^k} dy G(s, x-y)\right)^{2q}$$
@@ -581,17 +564,15 @@ Malliavin 特值的下界条件
 (3.12) \quad H_{(1,\dots,j)}(Z,1) = H_{(j)}(H_{(1,\dots,j-1)}(Z,1)),
 ```
 
+
+
 然后，对于每个整数 $j \geq 2$，$\delta$ 表示散度算子（Skorohod 积分），$\gamma_Z$ 表示 Malliavin 协方差矩阵，例如 [39] 关于这些概念的定义。
-
-
-
-
 
 ## 3.1. 联合密度的上界
 
-与之前一样，我们固定紧紧集 $I\subset[0,T], K\subset\mathbb{R}^k$，并假设 $s,t\in I$ 且 $x,y\in K$。本节的主要目标之一是证明以下结论
+与之前一样，我们固定紧集 $I\subset[0,T], K\subset\mathbb{R}^k$，并假设 $s,t\in I$ 且 $x,y\in K$。本节的主要目标之一是证明以下结论：
 
-定理 3.2. *假设与定理 3.1 相同。那么，对于 $\delta>0$，存在一个正数 $C$，使得*
+**定理 3.2.** 假设与定理 3.1 相同。那么，对于 $\delta>0$，存在一个正数 $C$，使得
 
 $|H_{(1,\dots,2d)}(Z,1)\|_{L^2(\Omega)} \leq \frac{C}{(|s-t|+|x-y|)^\gamma}$
 
@@ -613,14 +594,14 @@ $\sum_{j=1}^{d}\left\{\left(\left(Z_j^{-1}\right)^{t_j}\right)\|_{m_j,k_k}^{1,k_
 
 对于某些 $m\geq 1$ 和 $p\in[1,\infty]$，这将是后续命题的结论。
 
-位置 3.3. 假设 (P1)。设 $Z(s,y;t,x)=u(s,y),u(t,x)-u(s,y)$，以下语句成立。对于任何整数 $m\geq 1$ 和任何 $p\in[1,\infty[$，
+**位置 3.3.** 假设 (P1)。设 $Z(s,y;t,x)=u(s,y),u(t,x)-u(s,y)$，以下语句成立。对于任何整数 $m\geq 1$ 和任何 $p\in[1,\infty[$，
 
 - 1) 对于任何 $j\in\{1,\dots,d\}$，$sup_{(s,y),(t,x)\in[0,T]t\times\mathbb{R}^k} \|Z^j(s,y;t,x)\|_{m,p} < \infty$。
 - 2) 对于任何 $j\in\{d+1,\dots,2d\}$,以及任何 $\alpha\in[0,\frac{2-\beta}{2}]$，存在一个正数 $C$（取决于 $I$ 和 $K$），使得对于任何 $s,t\in I$ 和 $x,y\in K$，
 
 $|Z^j(s,y;t,x)\|_{m,p} \leq C|t-s|+|x-y|^\alpha$。
 
-证明。在 $d=1$ 的特殊情况下，部分 1 的结论是定理 7.15。[39] 部分 2 的陈述是显而易见的，它源于 [17] 中证明结果的扩展。事实上，如 [40] 所指出的，[17] 的结果可以扩展到满足 Malliavin 导数方程的希尔伯特空间取值解。
+**证明。** 在 $d=1$ 的特殊情况下，部分 1 的结论是定理 7.15。[39] 部分 2 的陈述是显而易见的，它源于 [17] 中证明结果的扩展。事实上，如 [40] 所指出的，[17] 的结果可以扩展到满足 Malliavin 导数方程的希尔伯特空间取值解。
 
 对于下一个陈述，我们引入以下符号：
 
@@ -631,13 +612,13 @@ $|Z^j(s,y;t,x)\|_{m,p} \leq C|t-s|+|x-y|^\alpha$。
 
 这四个集合形成了 $I_d = \{1, 2, \dots, 2d\}$ 的划分。
 
-命题 3.4. 假设与定理 3.1 相同。对于任何 $m\ge 1, p \in [1, \infty[$ 和每一个 $\eta > 0$，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$。
+**命题 3.4.** 假设与定理 3.1 相同。对于任何 $m\ge 1, p \in [1, \infty[$ 和每一个 $\eta > 0$，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$，
 
 $|(\gamma_z^{-1})_{i,j}\|_{m,p} \le C \begin{cases} |t-s|+|x-y|)^{-d\rho(2-\beta)-\eta}, & (i,j) \in (1), \\ |t-s|+|x-y|)^{-d\rho(2-\beta)-(\frac{2}{d}+\eta)}, & (i,j) \in (2), (3), \\ |t-s|+|x-y|)^{-d\rho(2-\beta)-2(\frac{2}{d}+\eta)}, & (i,j) \in (4).\end{cases}$
 
 假设该命题有效，让我们推导出 (3.13)。
 
-定理 3.2 证明。在接下来的论证中，参数 $\eta_i$ 的值之间相互变化；我们用表示任意小的数。从 (3.15)、命题 3.3 和 3.4，我们得到
+**定理 3.2 证明。** 在接下来的论证中，参数 $\eta_i$ 的值之间相互变化；我们用表示任意小的数。从 (3.15)、命题 3.3 和 3.4，我们得到
 
 $|H_{(1,\dots,2d)}(Z,1)\|_{L^2(\Omega)} \le C \left[ \prod_{\ell=1}^d Z_{\ell}\right) \left(\prod_{\ell=d+1}^{2d} Z_{\ell}\right) \right]^{-d\rho(2-\beta)-\eta}\le C \left[ |t-s|+|x-y|)^{-d\rho(2-\beta)-(\frac{2}{d}+\eta)} \right]^d \times \left[ |t-s|+|x-y|)^{-d\rho(2-\beta)-(\frac{2}{d}+\eta)} \right]^d+\left[ |t-s|+|x-y|)^{-d\rho(2-\beta)-2(\frac{2}{d}+\eta)} \right]^d$
 
@@ -655,29 +636,29 @@ $(3.18) \quad (\gamma_z^{-1})_{i,j} = (\det \gamma_z)^{-1}(Az)_{i,j},$
 
 其中 $Az$ 是 $Z$ 的余因子矩阵。
 
-位置 3.5. 假设 (P1)。对于任何 $p \in [1, \infty[$ 和每一个 $\alpha \in [0, \frac{2-\beta}]$,，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$，
+**位置 3.5.** 假设 (P1)。对于任何 $p \in [1, \infty[$ 和每一个 $\alpha \in [0, \frac{2-\beta}]$,，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$，
 
 $\|(A_Z)_{i,j}\|_{L^p(\Omega)} \leq C \cdot \begin{cases} (i, j) \in (1), & (|(t-s| + |x-y|)^{2d\alpha}) \\ (i, j) \in (2), (3), & (|(t-s| + |x-y|)^{(2d-1)\alpha}) \\ (i, j) \in (4). & (|(t-s| + |x-y|)^{(2d-2)\alpha}).end{cases}$
 
-证明。我们遵循 [11] 中 6.5 的证明方法，看到结果取决于命题 3.3 以及 $(A_Z)_{i,j}$ 对于不同索引 $(i, j)$ 的 $L^p$ 矩（见 [11], 第400–401 页）。
+**证明。** 我们遵循 [11] 中 6.5 的证明方法，看到结果取决于命题 3.3 以及 $(A_Z)_{i,j}$ 对于不同索引 $(i, j)$ 的 $L^p$ 矩（见 [11], 第400–401 页）。
 
-命题 3.6. 假设是定理 3.1 的假设。那么对于任何 $p \in [1, \infty[$，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$ 且 $(t,x) \neq (s,y)$，
+**命题 3.6.** 假设是定理 3.1 的假设。那么对于任何 $p \in [1, \infty[$，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$ 且 $(t,x) \neq (s,y)$，
 
 $\|(\gamma_Z)^{-1}\|_{L^p(\Omega)} \leq C(|t-s| + |x-y|)^{-d\rho}.$
 
-证明。引用 [11] 中的引理 6.8 和不等式 (6.11)，我们写道：
+**证明。** 引用 [11] 中的引理 6.8 和不等式 (6.11)，我们写道：
 
 $\|(\gamma_Z)^{-1}\|_{L^p(\Omega)} \leq C \sum_{K \subseteq \{1,\dots,2d\}, |K|=d} (E[A_K (\prod_{i \in K} \gamma_Z \xi^i)^T \gamma_Z \xi^i])^{\frac{1}{p}} \times (E(\frac{\max_{\xi=(i,j), |\xi|=2}}{\|i|^2+|j|^2})^T \gamma_Z \xi^i))^{\frac{1}{p}}$
 
 其中 $A_K = \prod_{i \in K} \alpha_i \geq \alpha_0$ 定义在 (3.4)。根据 (3.6)，右侧第一个因子被限制。(3.19) 源于 (3.5) 给出的特征值假设。
 
-命题 3.7. 我们假设假设 (P1)。对于任何 $p \in [1, \infty[$，$\ell \geq 1$ 和 $\alpha \in [0, \frac{2}{2-\beta}]$,，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$，
+**命题 3.7.** 我们假设假设 (P1)。对于任何 $p \in [1, \infty[$，$\ell \geq 1$ 和 $\alpha \in [0, \frac{2}{2-\beta}]$,，存在常数 $C > 0$，使得对于任何 $s, t \in I$ 和 $x, y \in K$，
 
 $\|D^\ell(\gamma_Z)_{i,j}\|_{L^{p,k}} \leq C \begin{cases} (i, j) \in (1), & (|(t-s| + |x-y|)^\alpha) \\ (i, j) \in (2), (3), & (|(t-s| + |x-y|)^\alpha) \\ (i, j) \in (4).\end{cases}$
 
-证明。该命题是 [11] 中方程组命题 6.7。正如参考文献所示，结果通过应用 Malliavin 导数的 Leibniz 法则和命题 3.3 得（见 [11] 第402–403 页）。
+**证明。** 该命题是 [11] 中方程组命题 6.7。正如参考文献所示，结果通过应用 Malliavin 导数的 Leibniz 法则和命题 3.3 得（见 [11] 第402–403 页）。
 
-命题 3.4 证明。我们遵循 [11] 中定理 6.3 证明的相同方法。首先考虑 $m = 0$ 的情况。应用 (3.18) 以及命题 3.5 和 3.6 的齐尔尔不等式，我们得到 (3.16)。
+**命题 3.4 证明。** 我们遵循 [11] 中定理 6.3 证明的相同方法。首先考虑 $m = 0$ 的情况。应用 (3.18) 以及命题 3.5 和 3.6 的齐尔尔不等式，我们得到 (3.16)。
 
 对于 $m \geq 1$，我们使用递归参数。为此，我们考虑第一种情况 $m = 1$ 和恒等式
 
@@ -687,7 +668,7 @@ $D((\gamma_Z)^{-1}) = -\gamma_Z^{-1} (D(\gamma_Z)) \gamma_Z^{-1}$
 
 通过 (3.10) 和 3.20，我们可以给出本部分的第二个主要结果。
 
-定理 3.8. 令 $\beta \in [0, 1]$。假设 (3.13) 对于某些 $\gamma \in [1,\infty]$ 成立。固定 $\alpha \in [0, \frac{2}{2-\beta}]$。对于任何 $I$ 的紧子集，以及 $K$ 的紧子集，直径直径le 1$，存在一个常数 $C$ 使得
+**定理 3.8.** 令 $\beta \in [0, 1]$。假设 (3.13) 对于某些 $\gamma \in [1,\infty]$ 成立。固定 $\alpha \in [0, \frac{2}{2-\beta}]$。对于任何 $I$ 的紧子集，以及 $K$ 的紧子集，直径直径le 1$，存在一个常数 $C$ 使得
 
 $\|H_{(1,\dots,2d)}(Z,1)\|_{L^2(\Omega)} \leq C \dots$
 
@@ -698,9 +679,6 @@ $|H_{(1,\dots,2d)}(Z,1)\|_{L^2(\Omega)} \leq C\prod_{\ell=1}^{2d} Z_\ell$
 $\sum_{j=1}^{d}\left\{\left(\left(Z_j^{-1}\right)^{t_j}\right)\|_{m_j,k_k}^{1,k_j}+\sum_{j=d+1}^{2d}\left\{\left(\left(Z_j^{-1}\right)^{t_j}\right)\|_{m_l,p_l}^{1,p_l}\|\left(DZ_j^{-1}\right)\|_{m_l,p_l}\right\right\}$
 
 对于某些 $m\geq 1$ 和 $p\in[1,\infty]$，这将是后续命题的结论。
-
-
-
 
 ## 3.2. 命中概率下界的证明
 
@@ -716,7 +694,7 @@ $$\int_{p_0, N^{-\frac{1}{\gamma}}}^\infty d\rho \rho^{-\gamma+k}$$
 
 结合 (3.21), (3.22) 和 (3.23)，我们在此情况下得到 (3.20)。
 
-备注 3.9。(a) 在 $\sigma$ 为常数的情况下，根据命题 2.2，在定理 3.8 中可以取 $\alpha = \frac{2-\beta}{2}$。
+**备注 3.9.** (a) 在 $\sigma$ 为常数的情况下，根据命题 2.2，在定理 3.8 中可以取 $\alpha = \frac{2-\beta}{2}$。
 
 (b) 可以替换 [18, 定理 2.1] 中假设 (1) 的密度的充分条件为：
 
@@ -732,13 +710,13 @@ $P\{v(I) \cap A \neq \emptyset\} \ge CCap\frac{\alpha}{2(\gamma-m)}(A)$
 
 在本节中，我们给出定理 3.1 的证明。
 
-定理 3.1 的证明。我们从证明 (1) 开始。令 $\gamma = \frac{d}{2}(2-\beta+\alpha) + 4d(\rho-(2-\beta)) + \delta$。由于 $\delta$ 是任意的，只需考虑以下情况：
+**定理 3.1 的证明。** 我们从证明 (1) 开始。令 $\gamma = \frac{d}{2}(2-\beta+\alpha) + 4d(\rho-(2-\beta)) + \delta$。由于 $\delta$ 是任意的，只需考虑以下情况：
 
 $Cap\frac{2(\gamma-(k+1))}{\2-\beta}}(A) > 0$，
 
 在这种情况下，$\frac{2(\gamma-(k+1))}{\2-\beta} < d$。如果我们将 $I$ 替换为 $I$ 的子集，$P\{v(I \cap K) \cap A \neq \emptyset\}$ 会减小，我们可以假设 $diam(I) \le 1$ 且 $diam(K) \le 1$。我们假设 $A$ 是紧的并考虑两种情况：
 
-情况 1：$\gamma < k+1$。根据容量的定义，$Cap\frac{2(\gamma-(k+1))}{\2-\beta}}(A) = 1$。因此，只需检查
+**情况 1：** $\gamma < k+1$。根据容量的定义，$Cap\frac{2(\gamma-(k+1))}{\2-\beta}}(A) = 1$。因此，只需检查
 
 $P\{u(I \cap K) \cap A \neq \emptyset\} \ge c$，
 
@@ -761,7 +739,7 @@ $E(J_x(z)^2) = \frac{1}{(2\epsilon)^d} \int_{I \times K} dtdx \int_{I \times K} 
 
 $E(J_x(z)^2) \leq C \int_{B_{r_0}(0)} \frac{dz'}{|z-z'|^\gamma} \leq C \int_0^{2r_0} \rho^{k-\gamma} d\rho < \infty$。
 
-当 $\gamma < k+1$ 时，定理证明结束。情况 2：$d < \frac{2^{(\gamma-(k+1)}}{2-\beta}$。在情况 1 的分析中，我们考虑了 (3.10) 右侧第一个因子的粗上界，即 1。在这里我们将保留这些因子并应用定理 3.8。
+当 $\gamma < k+1$ 时，定理证明结束。**情况 2：** $d < \frac{2^{(\gamma-(k+1)}}{2-\beta}$。在情况 1 的分析中，我们考虑了 (3.10) 右侧第一个因子的粗上界，即 1。在这里我们将保留这些因子并应用定理 3.8。
 
 令 $Q$ 为支撑在集合 $A$ 上的测度。令 $g_\epsilon = \frac{1}{(2\epsilon)^d}\mathbf{1}_{B_{\epsilon}(0)}$，其中 $B_{\epsilon}(0)$ 是以 0 为中心半径为 $\epsilon$ 的球。定义
 
@@ -781,15 +759,15 @@ $E[(J_x(Q))^2] \leq C \int_{\Lambda^k \times \Lambda^k} dz_1 dz_2 (g_* Q)(z_1)(g
 
 由于 $\alpha$ 可以任意接近 $\frac{2-\beta}{2}$，这完成了定理 3.1 第 (1) 部分的证明，遵循了 [18] 中定理 2.1 的证明思路，包括到 $A$ 为波尔集但非紧的情况。在部分 (2) 和 (3) 中，我们分别考虑由维度为 1 和 $k$ 的参数索引的随机过程的命中概率。在证明部分 1 (8) 和 (9) 中使用了相同的结论。这完成了定理 3.1 的证明。$\square$
 
-## 第4 章：Malliavin 矩阵特征值的研究与下界
+## 第4章：Malliavin 矩阵特征值的研究与下界
 
 在本章中，我们证明方程组 (1.4) 的解满足 (3.5) 和 (3.6)，其中 $\rho = \delta + 3-\beta$，且 $\delta > 0$ 是任意小的。我们假设协方差 $\Gamma$ 满足 (C1)。我们将本节致力于 $\Gamma$ 的小特征值。主要结果是以下定理。
 
-定理 4.1。假设 (P1), (P2) 和 (C1)。对于任意 $p \in [1, \infty]$ 和每一个小的 $\delta > 0$，存在正常数 $C$，对于所有 $s, t \in I$ 和 $x, y \in K$，且满足 $(s, y) \neq (t, x)$，$|t - s| \leq 1$ 且 $|x - y| \leq 1$。
+**定理 4.1.** 假设 (P1), (P2) 和 (C1)。对于任意 $p \in [1, \infty]$ 和每一个小的 $\delta > 0$，存在正常数 $C$，对于所有 $s, t \in I$ 和 $x, y \in K$，且满足 $(s, y) \neq (t, x)$，$|t - s| \leq 1$ 且 $|x - y| \leq 1$。
 
 $(4.1) \quad E\left[\inf_{\|\xi\|=1} \xi^T \Gamma_Z \xi\right]^{-p} \leq C(|t - s| + |x - y|)^{-p(\delta+3-\beta)}$
 
-证明。我们不失一般性地假设 $s \leq t$。我们写道
+**证明。** 我们不失一般性地假设 $s \leq t$。我们写道
 
 $$\xi^T \Gamma_Z \xi = J_1 + J_2,$$
 
@@ -803,18 +781,11 @@ $$J_2 = \int_s^t ds \left[ \sum_{i=1}^d \chi_i G(t-r, x^*) \sigma_{i,*}(u(r^*)) 
 
 **情况 1**：$s, t \in [a, b]，其中 $a \in [0, 1], 1 \geq t - s > 0; |x - y| \le 1$。
 
-等待，提供的 OCR 中存在一些错误。我将根据提供的文本进行重新处理，同时修复明显的错误。提示要求我纠正 OCR 文本。我将按照所有格式规则提供所提供文本的干净版本。
-
-[此处省略（注：由于用户提供的原始文本存在大量重复和 OCR 错误，上述译文已根据核心逻辑进行了去重和修正）]
-
-
-
-
 ## 4.1. 小特征值的研究
 
 对于 $p \in [1, \infty]$，令 $\alpha = \max(\theta_1(3-\beta), u + \theta_2(3-\beta))$，这将导出 (4.1)（见 4.12 和 (4.18)）。
 
-证明 ($A$)。为了简化符号，我们用 $\theta$ 代替 $\theta_1$。根据三角不等式，对于任何范数 $\|\cdot\|$，
+**证明 ($A$)。** 为了简化符号，我们用 $\theta$ 代替 $\theta_1$。根据三角不等式，对于任何范数 $\|\cdot\|$，
 
 (4.8)
 $$\|a+b\|^2 \geq \frac{1}{2}\|a\|^2 - \|b\|^2,$$
@@ -851,7 +822,7 @@ $$E \left(\int_{s-\varepsilon}^s dr \sum_{i=1}^d \chi_i a_{i,*}(r;*,x)\right)^p_
 
 因此，我们证明了 $\theta_1 = \theta$ 时的 (4.5)。结合 (4.9)，这结束了陈述 (A) 的证明。
 
-证明 (B)。与之前一样，我们用 $\theta$ 代替 $\theta_2$。应用 (4.8)，我们得到
+**证明 (B)。** 与之前一样，我们用 $\theta$ 代替 $\theta_2$。应用 (4.8)，我们得到
 
 $$J_{2,\varepsilon}^2 \ge \frac{1}{2}\int_{t-\varepsilon}^t dr \sum_{i=1}^d \chi_i G(t-r, x-*) \sigma_{i,*}(u(t,x))\right\|^2_{\mathcal{H}_d^2} - Y_{2,\varepsilon},$$
 
@@ -881,7 +852,7 @@ $$\varepsilon_0^{-p(u+\theta_2(3-\beta))} = (t-s)^{-p(\frac{\alpha}{2}+(3-\beta)
 
 (4.12) $E \left[\inf_{\|\xi\|\leq 1} \xi \Gamma \xi\right]^p \leq C(t-s)^{-p(\delta+3-\beta)}.$ 这显然给出了 (4.1)，因为 $s, t \in [a, b], a \in [0, 1], 0 \leq t-s \leq |x-y|$。令 $\delta_0 > 0$ 为稍后确定的实数，$\varepsilon \in ]0, \frac{|x-y|}{\delta_0} \wedge a]$。我们将分析分为两个子情况。
 
-## 情况 2.1: $0 \leq t-s < \varepsilon$。我们从写明显的下界开始
+**情况 2.1:** $0 \leq t-s < \varepsilon$。我们从写明显的下界开始
 
 $$\xi \Gamma \xi \geq \int_{t-\varepsilon}^s dr \left|\sum_{i=1}^d (\lambda-\chi_i) G(s-r,y,*) \sigma_{i,*}(u(r,*)) + a_{i,*}(r;*,s)\right| + \chi_i [G(t-r,x*) \sigma_{i,*}(u(r,*)) + a_{i,*}(r;*,x)]\right\|^2_{H^\theta}.$$
 
@@ -910,10 +881,6 @@ $$E(|U_{\varepsilon}^3(s, y)|^p) \leq C_{\varepsilon^{(5-2\beta)^{-p}}}.$$
 通过类似的论证，并利用 $t-s \leq \varepsilon$ 的事实，我们看到
 
 $$E\left(\int_{s-\varepsilon}^s dr \sum_{i=1}^d \chi_i G(t-r, x-*) [\sigma_{i,*}(u(s, x)) - \sigma_{i,*}(u(r,*))\|\right\|_{\mathcal{H}_d}^2\right)^p \leq C_{\varepsilon^{(5-2\beta)^{-p}}}.$$
-
-
-
-
 
 ## 4.1. 小特征值的研究
 
@@ -1001,7 +968,7 @@ $$\theta_1(2-\beta) < \nu < 2-\beta.$$$$
 
 我们的下一个结果涉及 $\gamma_Z$ 的最大特征值。
 
-**定理 4.2。** 我们假设 (P1), (P2) 和 (C1)。对于任何 $p \in [1, \infty]$，存在依赖于 $p, I$ 和 $K$ 的常数 $C$，使得对于任何 $(t,x) \neq (s,y)$ 且 $a \leq t \leq b$ 以及 $x,y \in K$，
+**定理 4.2.** 我们假设 (P1), (P2) 和 (C1)。对于任何 $p \in [1, \infty]$，存在依赖于 $p, I$ 和 $K$ 的常数 $C$，使得对于任何 $(t,x) \neq (s,y)$ 且 $a \leq t \leq b$ 以及 $x,y \in K$，
 
 (4.19) $$\E \left[ 1_{A_k} \left(\prod_{i \in K} \xi^T \gamma_Z \right)^{-p} \right] \leq C,$$
 
@@ -1009,7 +976,7 @@ $$\theta_1(2-\beta) < \nu < 2-\beta.$$$$
 
 ## 4.2. 大特征值的研究
 
-证明。固定 $i_0 \in \{1, \dots, d\}$ 使得 $\alpha_{i_0} \geq \alpha_0$。在后续我们将用 $\alpha$ 替换 $\alpha_0$，用 $\xi$ 替换 $\xi_0$。根据 Hölder 不等式，只需证明
+**证明。** 固定 $i_0 \in \{1, \dots, d\}$ 使得 $\alpha_{i_0} \geq \alpha_0$。在后续我们将用 $\alpha$ 替换 $\alpha_0$，用 $\xi$ 替换 $\xi_0$。根据 Hölder 不等式，只需证明
 
 (4.20) $$E\left[(\xi^T G_\varepsilon)^{-p}\right] \leq C,$$
 
@@ -1025,7 +992,7 @@ $$\xi^T G_\varepsilon \geq J_2^\varepsilon \geq G_{1,\varepsilon},$$
 
 其中
 
-$G_{1,\varepsilon} = \int_{t-\varepsilon}^t dr \left|\sum_{i=1}^d \sqrt{1-\alpha^2} \hat{\chi}_i G(t-r,x-*) \sigma_i(u(t,x))\right|^2_{\mathcal{H}^2}$$
+$G_{1,\varepsilon} = \int_{t-\varepsilon}^t dr \left|\sum_{i=1}^d \sqrt{1-\alpha^2} \hat{\chi}_i G(t-r,x-*) \sigma_i(u(t,x))\right|^2_{\mathcal{H}^2}$
 
 以及 $G_{1,\varepsilon} = \widetilde{G}_{11,\varepsilon} + \widetilde{G}_{12,\varepsilon}$，
 
@@ -1073,11 +1040,7 @@ $$E((\widetilde{G}_{22,\varepsilon})^p) \leq C\varepsilon^{\theta(3-\beta)2p}.$$
 
 (4.25) $$E((G_{2,\varepsilon})^p) \leq C\varepsilon^{\min\{\theta_1(5-2\beta), \eta+\theta_1(1-\beta), \theta_1(2-\beta)\}}p.$$
 
-情况 2：$0 \leq t-s \leq \varepsilon_0, \frac{|x-y|}{\delta_0} < \varepsilon^2$，其中 $\delta_0 > 0$ 待后确定（在 (4.31) 之后）。
-
-
-
-
+**情况 2：** $0 \leq t-s \leq \varepsilon_0, \frac{|x-y|}{\delta_0} < \varepsilon^2$，其中 $\delta_0 > 0$ 待后确定（在 (4.31) 之后）。
 
 ## 4.2. 大特征值的研究
 
@@ -1173,12 +1136,7 @@ $$I(\varepsilon;t,s,y) = \int_0^\varepsilon dr \langle G(r, y-*), G(t-s+r, x-*) 
 
 由于 $0 \leq t-s \leq \varepsilon^\theta$，由引理 A.1，存在 $\delta_0 > 0$ 使得满足 $\frac{|x-y|}{\varepsilon} > \delta_0$ 的 $\varepsilon > 0$，我们有 $|I(\varepsilon;t,s)| \leq \frac{c\rho_0^\theta\varphi_0}{2\|\sigma\|_\infty}$。
 
-（此处原文逻辑重复，按翻译翻译翻译翻译原文原文原文原文[/
-
-
-
-
-定理 4.3 的证明。定理 4.1 和 4.2 表明假设 (3.5) 和 (3.6) 在 $\rho = \delta + 3 - \beta$ 时定理 3.1 成立，其中 $\delta$ 是任意极小的正实数。
+**定理 4.3 的证明。** 定理 4.1 和 4.2 表明假设 (3.5) 和 (3.6) 在 $\rho = \delta + 3 - \beta$ 时定理 3.1 成立，其中 $\delta$ 是任意极小的正实数。
 
 # 附录 A
 
@@ -1186,7 +1144,7 @@ $$I(\varepsilon;t,s,y) = \int_0^\varepsilon dr \langle G(r, y-*), G(t-s+r, x-*) 
 
 在本章中，我们收集了在前章节中使用的重要技术结果。除非另有说明，我们假设 (C1) 和 (P1)。
 
-引理 A.1. 对于 $k \in \mathbb{N}^*$ 和 $\beta \in [0, 2k]$，我们有以下结论：
+**引理 A.1.** 对于 $k \in \mathbb{N}^*$ 和 $\beta \in [0, 2k]$，我们有以下结论：
 
 - (A) 对于任意 $r > 0$ 和 $x \in \mathbb{R}^k$，
   $(A.1) \|G(r, x - *)\|_{\mathcal{H}_t}^2 = cr^{2-\beta}, \text{其中 } c = \int_0^r \frac{\sin^2(|w|)}{|w|^{2k-\beta+2}} dw.$
@@ -1197,21 +1155,21 @@ $$I(\varepsilon;t,s,y) = \int_0^\varepsilon dr \langle G(r, y-*), G(t-s+r, x-*) 
 - (C) 对于任意 $0 < s \leq t \leq T$ 和每个 $\varepsilon \in [0, s]$,
   $\sup_{x \in \mathbb{R}^k} \int_s^t dr \|G(t-r, x - *)\|_{\mathcal{H}_t}^2 \leq C ((t-s+\varepsilon))^{3-\beta} (t-s)^{3-\beta}$.
 
-证明。根据其定义（见 (1.10)）。
+**证明。** 根据其定义（见 (1.10)）。
 
 $\|G(r, x - *)\|_{\mathcal{H}_r}^2 = \int_0^r \frac{\sin^2(|\xi|)}{|\xi|^{2k-\beta+2}} d\xi$.
 
 通过变量代换 $\varepsilon \to r$，我们得到 (A.1)。其余陈述显易成立。
 
-引理 A.2. 令 $k \in \{1, 2, 3\}$，并 $\{a_{ij}(r; z; t), x)_{0 \leq r \leq t, x, y \in \mathbb{R}^k, 1 \leq i \leq j}$ 为 (3.2) 中定义的随机过程。固定 $0 \leq s \leq t \leq T$。那么对于任意 $\varepsilon \in [0, s], \chi \in \mathbb{R}^k$，以及每个 $p \in [1, \infty)$。
+**引理 A.2.** 令 $k \in \{1, 2, 3\}$，并 $\{a_{ij}(r; z; t), x)_{0 \leq r \leq t, x, y \in \mathbb{R}^k, 1 \leq i \leq j}$ 为 (3.2) 中定义的随机过程。固定 $0 \leq s \leq t \leq T$。那么对于任意 $\varepsilon \in [0, s], \chi \in \mathbb{R}^k$，以及每个 $p \in [1, \infty)$。
 
 特别，当 $s = t$ 时，
 
 $\sup_{x \in \mathbb{R}^k} \int_s^d dr \sum_{i=1}^d \chi a_{ij}(r; *; s, x)|^p_{\mathcal{H}_t^d} \leq C|\chi|^2 p \varepsilon (t-s+\varepsilon)^{(3-\beta)p}$。
 
- A. 技术估计
+## A. 技术估计
 
-证明。设
+**证明。** 设
 
 $D_{i,j}^t(r,*,t,x) = \sum_{\ell=1}^d \int_{\mathbb{R}^k}^t G(t-\rho, x-z) \nabla\sigma_{i,t}(u(\rho, z)) \cdot D_{r,*u}^{(j)}(u(\rho, z)) \times M^\ell(d\rho, dz),$
 $D_{i,j}^t(r,*,t,x) = \int_{\mathbb{R}^k}^t d\rho \ G(t-\rho, x-z) \nabla b_i(u(\rho, z)) \cdot D_{r,*u}^{(j)}(u(\rho, z)).$
@@ -1227,7 +1185,9 @@ $D_{i,j}^t(r,*,t,x) = \int_{\mathbb{R}^k}^t d\rho \ G(t-\rho, x-z) \nabla b_i(u(
 (A.4) $E \left( \int_{s-\varepsilon}^s d\rho \sum_{i=1}^d \chi_{i,t}^1(r,*,x) \right)^p_{\mathcal{H}^d} \leq E \left( \sum_{\ell=1}^d \int_{s-\varepsilon}^s \int_{\mathbb{R}^k} G(t-\rho, x-z) (\chi^t\sigma(u(\rho,z))]_{\ell} \cdot D_{r,*u}^{(j)} M^\ell(d\rho, dz) \right)^{2p}_{L^2([s-\varepsilon];\mathcal{H})}$
 $= E \left( \sum_{\ell=1}^d \int_{s-\varepsilon}^s \int_{\mathbb{R}^k} G(t-\rho, x-z) (\chi^t\sigma(u(\rho,z))]_{\ell} \cdot D_{r,*u}^{(j)} M^\ell(d\rho, dz) \right)^{2p}_{L^2([s-\varepsilon];\mathcal{H})}$
 
-然后对 $L^2([s-\varepsilon];\mathcal{H})$ 随机过程 $(\nabla[\chi^t\sigma(u(\rho,z))]_{\ell}) \cdot D_{r,*u}^{(j)}(\rho,z) \in [s-\varepsilon,t] \times \mathbb{R}^k$ 应用 [39] 中的定理。 A.1 MALLIAVIN 范数的界
+然后对 $L^2([s-\varepsilon];\mathcal{H})$ 随机过程 $(\nabla[\chi^t\sigma(u(\rho,z))]_{\ell}) \cdot D_{r,*u}^{(j)}(\rho,z) \in [s-\varepsilon,t] \times \mathbb{R}^k$ 应用 [39] 中的定理。
+
+## A.1 MALLIAVIN 范数的界
 
 $\ell = 1, \dots, d$。表明 (A.4) 中的表达式被
 
@@ -1257,16 +1217,20 @@ $E\left(\left(\int_{s-\epsilon}^s d\rho \int_{\mathbb{R}^k} G(t-\rho, x-z) |\nab
 
 $E\left(\int_{s-\epsilon}^s d\rho \sum_{i=1}^d \chi_i T_{1,\epsilon}^d(r*,t,x)\|_{\mathcal{H}^d}^2\right)^p \leq C|X|^{2p}(t-s+\epsilon)^{(5-\beta)p}$。在后续中，我们将多次使用性质
 
-$(A.7) \|G(r,x)-*\|_{\mathcal{H}^d}^2 = \int_{\mathbb{R}^k\times\mathbb{R}^k} G(r,du)G(r,dv)|u-v|$，对于一个 $L^2$-连续过程 $Z(t)$，使得 $\sup_{(t\in[0,T]\times\mathbb{R}^k} |E|Z(t)| < \infty$。该性质是 (8) 应用于符号测度 $\varphi(dx)=Z(t,x)G(r,dx)$ 的结论。命题 A.3. 令 $k\in\{1, 2, 3\}$，并 $Z=\{Z(t,x), (t,x)\in[0,T]\times\mathbb{R}^k\}$ 为满足下列条件的随机过程：
+$(A.7) \|G(r,x)-*\|_{\mathcal{H}^d}^2 = \int_{\mathbb{R}^k\times\mathbb{R}^k} G(r,du)G(r,dv)|u-v|$，对于一个 $L^2$-连续过程 $Z(t)$，使得 $\sup_{(t\in[0,T]\times\mathbb{R}^k} |E|Z(t)| < \infty$。该性质是 (8) 应用于符号测度 $\varphi(dx)=Z(t,x)G(r,dx)$ 的结论。
+
+**命题 A.3.** 令 $k\in\{1, 2, 3\}$，并 $Z=\{Z(t,x), (t,x)\in[0,T]\times\mathbb{R}^k\}$ 为满足下列条件的随机过程：
 
 - (a) 存在 $\rho\in[0,1]$对于每个 $p\in[1,\infty]$存在 $C<\infty$使得对于任意 $x,y\in\mathbb{R}^k$，$\sup_{t\in[0,T]} |E|Z(t,x)-Z(t,y)|^p \leq C|x-y|^p$；
 - (b) 对于每个 $p\in[1,\infty]$，存在 $C<\infty$使得 $\sup_{(t\in[0,T]\times\mathbb{R}^k)} |E|Z(t,x)|^p \leq C$。
 
 那么对于任意 $p\in[1,\infty]$，存在常数 $C>0$对于任意 $\epsilon\in[0,1], s\in[\epsilon,T]$ 和 $x,y\in\mathbb{R}^k$，
 
-$\mathbb{E}\left(\int_{\epsilon}^t d\rho \|G(r,x)-G(r,y)|^2_{\mathcal{H}^d}\right)^p \leq C\{|x-y|^{2p}\epsilon^{p(3-\beta)}, |x-y|^{\alpha}\epsilon^{p[3-(\alpha+\beta)]}\}$，其中 $\alpha\in(0, (2\wedge\beta)-\beta)\wedge1$。 A.1. MALLIAVIN 范数的界
+$\mathbb{E}\left(\int_{\epsilon}^t d\rho \|G(r,x)-G(r,y)|^2_{\mathcal{H}^d}\right)^p \leq C\{|x-y|^{2p}\epsilon^{p(3-\beta)}, |x-y|^{\alpha}\epsilon^{p[3-(\alpha+\beta)]}\}$，其中 $\alpha\in(0, (2\wedge\beta)-\beta)\wedge1$。
 
-证明。根据 [17] 中命题 3.5 第一部分的思想并使用 (A.7)，我们写下
+## A.1. MALLIAVIN 范数的界
+
+**证明。** 根据 [17] 中命题 3.5 第一部分的思想并使用 (A.7)，我们写下
 
 $E\left[\left(\int_0^t \|G(r, x-*) - G(r, y)\|Z(s-r)\|^2_{\mathcal{H}}\right)^p\right] \leq C \sum E(|J_i^x(x, y)|^p)$，其中对于 $i=1, \dots, 4$，
 
@@ -1291,17 +1255,13 @@ $\mu_2(x$ 对于任意 $\alpha \in(0, ((2-\beta)^\wedge1])$。因此，Hölder �
 
 (A.10) 上界对于 $E(|J_2^x(x, y)|^p)$ 成立。
 
-
-
-
-
 ## A. 技术估计
 
 对于剩余项的分析，我们考虑：
 
-```
+
+
 (A.11) \quad \mu_4(x,y) = \int_{\mathbb{R}^k\times\mathbb{R}^k} dr G(r,du)G(r,dv) |D^2f(u,x-y)|.
-```
 
 通过应用 [17] 中 Lemma A.5 给出的引 6.2 的修改版本，我们得到：
 
@@ -1309,22 +1269,20 @@ $\mu_2(x$ 对于任意 $\alpha \in(0, ((2-\beta)^\wedge1])$。因此，Hölder �
 E(|J_4^u(x,y)|^p) \leq C \mu^k(x,y)^p \sup_{(t,x)\in[0,T]\times\mathbb{R}^k} E(|Z(t,x)|^{2p})
 ```
 
-```
 (A.12) \quad \leq |x-y|^{\epsilon p[3-(\alpha+\beta)]}_p,
-```
 
 对于 $\bar{\alpha} \in [0, (2\wedge k)-\beta]$。
 根据 (A.8),(A.10) 和 (A.12)，我们完成了命题 A.3 的证明。
 
 这两个引理用于命题 A.3 的证明。
 
-引理 A.4. 对于 $\alpha \in [0, (2\wedge k)-\beta)\wedge1$，存在 $C$ 使得对于所有的 $x,y \in \mathbb{R}^k$：
+**引理 A.4.** 对于 $\alpha \in [0, (2\wedge k)-\beta)\wedge1$，存在 $C$ 使得对于所有的 $x,y \in \mathbb{R}^k$：
 
 ```
 \mu_2(x,y) \leq |x-y|^\alpha e^{-3(\alpha+\beta)},
 ```
 
-证明。与 [17, Lemma 6.1] 相比，此结果量化了 $\mu_2(x,y)$ 在积分域上的差异，它是在正则化 $G_n$ 作用的波方程的基本解 $G$，且函数 $f$ 不包含平滑因子 $\rho$。两者的证明过程非常相似。
+**证明.** 与 [17, Lemma 6.1] 相比，此结果量化了 $\mu_2(x,y)$ 在积分域上的差异，它是在正则化 $G_n$ 作用的波方程的基本解 $G$，且函数 $f$ 不包含平滑因子 $\rho$。两者的证明过程非常相似。
 我们给出主要思路。
 
 应用引理 2.6(a)，取 $d:=k, b:=\alpha, a:=k(\alpha+\beta), u:=v-u, c:=|x-y|, x:=|[x-y|]$，在使用 (A.7) 后，我们得到：
@@ -1335,13 +1293,13 @@ E(|J_4^u(x,y)|^p) \leq C \mu^k(x,y)^p \sup_{(t,x)\in[0,T]\times\mathbb{R}^k} E(|
 
 对于 $\alpha \in [0, 2\wedge k]$，直到一个正系数，最后一个积分被 $\epsilon^{-3(\alpha+\beta)}$ 限制（见引理 A.1）。这完成了证明。
 
-引理 A.5. $\mu_4(x,y)$ 由 (A.11) 定义。对于每个 $\alpha \in [0, (2\wedge k)-\beta]$，存在正常数 $C$ 使得对于 $x,y \in \mathbb{R}^k$：
+**引理 A.5.** $\mu_4(x,y)$ 由 (A.11) 定义。对于每个 $\alpha \in [0, (2\wedge k)-\beta]$，存在正常数 $C$ 使得对于 $x,y \in \mathbb{R}^k$：
 
 ```
 \mu_4(x,y) \leq C|x-y|^\alpha e^{-3(\alpha+\beta)},
 ```
 
-证明。在与 [17] 中的 Lemma 6.2 进行比较时，适用于 Lemma A.4 证明中提到的相同差异。应用 [17] 中的 Lemma 2.6(c)，取 $d:=k, b:=\alpha, a:=k(\alpha+\beta), \alpha+\beta \in [0, 2\wedge k], u:=v-u, x:=x-y$， 得到：
+**证明.** 在与 [17] 中的 Lemma 6.2 进行比较时，适用于 Lemma A.4 证明中提到的相同差异。应用 [17] 中的 Lemma 2.6(c)，取 $d:=k, b:=\alpha, a:=k(\alpha+\beta), \alpha+\beta \in [0, 2\wedge k], u:=v-u, x:=x-y$， 得到：
 
 ```
 \mu_4(x,y) \leq |x-y|^\alpha x
@@ -1360,19 +1318,25 @@ E(|J_4^u(x,y)|^p) \leq C \mu^k(x,y)^p \sup_{(t,x)\in[0,T]\times\mathbb{R}^k} E(|
 
 ## A.1. Malliavin 范数的界
 
-位置 A.6. 设 $k \in\{1, 2, 3\}$，令 $Z=\{Z(t, x), (t, x) \in[0, T] \times \mathbb{R}^k$ 为满足命题 A.3假设的随机过程。那么对于任何 $np \in[1, \infty]$，存在常数 $C > 0$ 使得对于 $0 \leq s \leq t \leq T$ 和 $\epsilon \in]0, s]$：
+**位置 A.6.** 设 $k \in\{1, 2, 3\}$，令 $Z=\{Z(t, x), (t, x) \in[0, T] \times \mathbb{R}^k$ 为满足命题 A.3假设的随机过程。那么对于任何 $np \in[1, \infty]$，存在常数 $C > 0$ 使得对于 $0 \leq s \leq t \leq T$ 和 $\epsilon \in]0, s]$：
 
 ```
 $E\left(\int_{s-\epsilon}^s dr \|\|G(t-r, x,*) - G(s-r, x,*)Z(r,*)\|_{\mathcal{H}}^p\right)^p\\n\leq C\left[\frac{(4-\beta)}{2pp}|t-s|^{2pp}|t-s+\epsilon|^{\frac{(2-\beta)}{p}}\right]\\n+|t-s|^\beta|t-s+\epsilon|^{1-\beta}\beta_{\in[0,1]}+\epsilon|+|t-s|^{2-\beta}\beta_{\in[1,2]}\\
+
 +|t-s|^{\alpha_1}|t-s+\epsilon|^{-(\alpha_1+\beta)}+\epsilon^{\frac{\alpha_2}{2}}|t-s|^{\alpha_1}|t-s+\epsilon|^{1-\frac{\alpha_1+\alpha_2}{2}}\\
+
 +\beta_{\in[1,2]}|t-s|^2-|t-s+\epsilon|^{2-(\alpha_2+\beta)}+\epsilon^{\frac{\alpha_2}{2}}|t-s|^{\alpha_2}|-(\alpha_2+\beta)|t-s+\epsilon|^{1-\frac{\alpha_2+\alpha_3}{2}}\\
+
 +\beta_{\in[0,1]}|t-s|^{1-\alpha_3}|t-s|^{\alpha_3}|(t-s+\epsilon-(\alpha_3+\beta))-|t-s|^2-(\alpha_3+\beta))+\epsilon^{\frac{\alpha_3}{2}}|t-s+\epsilon|^{1-\frac{\alpha_3+\alpha_4}{2}}\\
+
 +|t-s|^{\alpha_4}|t-s+\epsilon|^{2-(\alpha_4+\beta)}+\epsilon^{\frac{\alpha_4}{2}}|t-s+\epsilon|^{1-(\alpha_4)}\right\},
 ```
 
 (A.13)
 
-其中 $\alpha_i \in[0,1], i=1, 2,3$ 且 $\alpha_1 \in[0,(2\wedge k)-\beta], \alpha_2 \in[0,2-\beta], \alpha_3 \in[0,(2\wedge k)-\beta], \alpha_4 \in[0,(2\wedge k)-\beta]$。证明。我们遵循 [17] 中定理 3.8 的证明方案（特别是定理中的 $T_t^p(t,x)$ 项），并对该证明中的引理进行了适当修改。根据 (A.7) 和 [17] 的参数，我们写道：
+其中 $\alpha_i \in[0,1], i=1, 2,3$ 且 $\alpha_1 \in[0,(2\wedge k)-\beta], \alpha_2 \in[0,2-\beta], \alpha_3 \in[0,(2\wedge k)-\beta], \alpha_4 \in[0,(2\wedge k)-\beta]$。
+
+**证明.** 我们遵循 [17] 中定理 3.8 的证明方案（特别是定理中的 $T_t^p(t,x)$ 项），并对该证明中的引理进行了适当修改。根据 (A.7) 和 [17] 的参数，我们写道：
 
 ```
 $E\left(\int_{s-\epsilon}^s dr \|\|G(t-r, x,*) - G(s-r, x,*)Z(r,*)\|_{\mathcal{H}}^p\right)^p\leq C\sum_{i=1}^4 E(|R_i^s(s,t,x)|^p)
@@ -1437,6 +1401,7 @@ $\nu_2(s,t,\varepsilon) = \int_{s-\varepsilon}^{s} \int_{\mathbb{R}^k}^{\mathbb{
 
 ```
 $E(|R_2^s(s,t,x)|^p) \leq C|t-s|^{\rho}(\nu_2(s,t,\varepsilon))^p\\
+
 \leq C|t-s|^{\rho} [\epsilon^{|t-s|^{2-\beta}}1_{\{\beta\in[0,1]\}}+\epsilon|t-s|^{2-\beta}1_{\{\beta\in[1,2]\}}+\t-s|^{\alpha}|t-s+\epsilon|^{2-(\alpha+\beta)}|t-s+\epsilon|^{1-\frac{\alpha+\beta}{2}}]^p,
 ```
 
@@ -1457,10 +1422,6 @@ $\nu_3(s,t,\varepsilon) = \int_{s-\varepsilon}^{s} dr \int_{\mathbb{R}^k\times\m
 $E(|R_4^s(s,t,x)|^p) \leq C[\epsilon^{|t-s|^{2-\beta}}+\epsilon|t-s|^{2-\beta}+\epsilon^2|t-s|^{2-\beta}]+|t-s|^{\alpha}\left[\epsilon^{2-(\alpha+\beta)}|t-s+\epsilon+\epsilon^{\frac{\alpha+\beta}{2}}|t-s+\epsilon|^{1-\frac{\alpha+\beta}{2}}\right]^p,
 ```
 
-(A.16)
-
-
-
 
 
 ## A. 技术估计
@@ -1475,7 +1436,7 @@ $$
 
 估计 (A.14), (A.15), (A.16) 给出 (A.13)。
 
-## A.2. 协方函数的积分增量
+### A.2. 协方函数的积分增量
 
 下三个引理被用于命题 A.6 的证明。
 
@@ -1521,7 +1482,7 @@ $$
 
 这证明了该引理。
 
-## A.2. 协方函数的积分增量
+### A.2. 协方函数的积分增量
 
 **引理 A.8.** 对于任意 $0 \le s < t \le T$ 和 $\epsilon \in [0, s]$，令
 
@@ -1546,6 +1507,7 @@ $$
 $$
 \left[f\left(\frac{t-r}{s-r}\right)f\left((v-u)\right) - f\left(\frac{t-r}{s-r}\right)f\left((v-u)\right)\right]
 $$
+
 分别。变量替换 $(u,v) \to \frac{sr}{s-r}(u,v)$、(A.7) 和 (A.1) 得到：
 
 $$
@@ -1606,7 +1568,69 @@ $$
 (A.23) \dots
 $$
 
+## A. 技术估算
 
+证明。我们将遵循 [17, 引理 6.5] 的方法。
+
+**情况 1：** $k \in \{2,3\}$ 且 $\beta \in [1,2]$。令
+
+$$
+\Delta^1 f(r, s, t, u) = \left| \frac{t-r}{s-r}^2 f\left(\frac{t-r}{s-r}(v-u)\right) - \frac{t-r}{s-r} f\left(\frac{t-r}{s-r}v-u\right) \right|,,
+$$
+
+$\Delta^2 f(r, s, t, u) = 1 - \frac{t-r}{s-r} f(v-u),,$
+
+$\Delta^3 f(r, s, t, u) = \frac{t-r}{s-r} f(v-u) - f\left(v-\frac{t-r}{s-r}u\right).$
+
+我们考虑界限
+
+$$
+\nu_3(s, t, \varepsilon) \le \nu_2^2(s, t, \varepsilon) + \nu_2^2(s, t, \varepsilon) + \nu_3^2(s, t, \varepsilon),
+$$
+
+其中每个 $\nu_i(s, t, \varepsilon)$，$i=1,2,3$ 的定义方式与 $\nu_3(s, t, \varepsilon)$ 相同，仅将积分函数中的
+
+$$
+\Delta f := \frac{t-r}{s-r}^2 f\left(\frac{t-r}{s-r}(v-u)\right) - \frac{t-r}{s-r} f\left(\frac{t-r}{s-r}v-u\right) - \frac{t-r}{s-r} f\left(v-\frac{t-r}{s-r}u\right) + f(v-u)
+$$
+
+(A.26)
+
+分别替换为 $\Delta^i f(r, s, t, u)$，$i=1,2,3$。
+
+注意 $\nu_3(s, t, \varepsilon)$ 与引理 A.8 中的 $\nu_2(s, t, \varepsilon)$ 一致，且假设 $\beta \in [1,2]$。因此
+
+$$
+\nu_3^2(s, t, \varepsilon) \le C \left[|t-s|^{2-\beta} + \varepsilon|t-s|^{\alpha} |t-s|^{2-(\alpha+\beta)}\right] + \varepsilon^{2-\frac{\alpha}{2}}|t-s|^{\alpha} |t-s|^{1-\frac{\alpha}{2}},
+$$
+
+(A.27)
+
+对于任何 $\beta \in [1,2]$ 和 $\alpha \in (0, (2-\beta) \wedge 1)$。
+
+根据 $\Delta^2 f(r, s, t, u)$ 的定义，利用 (A.7)，我们得到
+
+$$
+\nu_3^2(s, t, \varepsilon) \le C|t-s| \int_s^t \frac{dr}{s-r} \int_{R^k} d\xi \frac{|FG(s-r)(\xi)|^2}{\|\xi|^{k-\beta}} = C|t-s| \int_s^t dr(s-r)^{1-\beta} = C\varepsilon^{2-\beta}|t-s|
+$$
+
+(A.28)
+
+考虑变量替换 $(u, v) \mapsto (\frac{t-r}{s-r}u, v)$。那么
+
+$$
+\nu_3^2(s, t, \varepsilon) = \int_s^t dr \int_{R^k \times R^k} G(t-r, du)G(s-r, dv) \times |Df\left(v-u,\frac{t-r}{s-r}u\right)|.
+$$
+
+该项与引理 A.8 证明中的 $\nu_2^2(s, t, \varepsilon)$ 相似，但 $s$ 和 $t$ 的角色发生了变化。因此，我们将进行类似的计算。为了完整性，我们给出细节：
+
+### A.2. 协方差函数的积分增量
+
+令 $\alpha > 0$ 使得 $\alpha + \beta \in [0, 2]$。通过应用 [17, 引理 2.6(a)]，其中 $d:=k, b:=\alpha, a:=k-(\alpha+\beta), c:=t-s, u:=\frac{u}{t-r}$，我们得到
+
+$$
+\nu_{\lambda}^2(s,t,\varepsilon) = |t-s|^\alpha \int_{s-\varepsilon}^s \int_{R^k \times R^k} G(t-r,du)G(s-r,rv) \times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r}).
+$$
 
 
 
@@ -1637,6 +1661,7 @@ $$\Delta f := \frac{t-r}{s-r}^2 f\left(\frac{t-r}{s-r}(v-u)\right) - \frac{t-r}{
 ```
 
 分别替换为 $\Delta^i f(r, s, t, u)$，$i=1,2,3$。
+
 注意 $\nu_3(s, t, \varepsilon)$ 与引理 A.8 中的 $\nu_2(s, t, \varepsilon)$ 一致，且假设 $\beta \in [1,2]$。因此
 
 ```
@@ -1646,6 +1671,7 @@ $\nu_3^2(s, t, \varepsilon) \le C \left[|t-s|^{2-\beta} + \varepsilon|t-s|^{\alp
 ```
 
 对于任何 $\beta \in [1,2]$ 和 $\alpha \in (0, (2-\beta) \wedge 1)$。
+
 根据 $\Delta^2 f(r, s, t, u)$ 的定义，利用 (A.7)，我们得到
 
 ```
@@ -1680,128 +1706,8 @@ $$\nu_{\lambda}^2(s,t,\varepsilon) = |t-s|^\alpha \int_{s-\varepsilon}^s \int_{R
 $$\int_{s-\varepsilon}^s dr \int_{R^k \times R^k} G(t-r,du)G(s-r,rv)
 \times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r})
 ```
-此处此处应为 $\int_{s-\varepsilon}^s dr \int_{R^k} d\xi \frac{FG(s-r)(\xi)}{\|\xi|^{k-\beta}} \le C\varepsilon^{2-(\alpha+\beta)}|t-s|.
-```
 
-对于任何 $\beta \in [1,2]$ 和 $\alpha \in (0, (2-\beta) \wedge 1)$。
-根据 $\Delta^2 f(r, s, t, u)$ 的定义，利用 (A.7)，我们有
-
-```
-$\nu_3^2(s, t, \varepsilon) \le C|t-s| \int_s^t \frac{dr}{s-r} \int_{R^k} d\xi \frac{|FG(s-r)(\xi)|^2}{\|\xi|^{k-\beta}}$
-= C|t-s| \int_s^t dr(s-r)^{1-\beta}$
-= C\varepsilon^{2-\beta}|t-s|
-
-(A.28)
-```
-
-考虑变量替换 $(u, v) \mapsto (\frac{t-r}{s-r}u, v)$。那么
-
-```
-$\nu_3^2(s, t, \varepsilon) = \int_s^t dr \int_{R^k \times R^k} G(t-r, du)G(s-r, dv)
-\times |Df\left(v-u,\frac{t-r}{s-r}u\right)|.
-```
-
-该项与引理 A.8 证明中的 $\nu_2^2(s, t, \varepsilon)$ 相似，但 $s$ 和 $t$ 的角色发生了变化。因此，我们将进行类似的计算。为了完整性，我们给出细节：
-
-## A.2. 协方差函数的积分增量
-
-令 $\alpha > 0$ 使得 $\alpha + \beta \in [0, 2]$。通过应用 [17, 引理 2.6(a)]，其中 $d:=k, b:=\alpha, a:=k-(\alpha+\beta), c:=t-s, u:=\frac{u}{t-r}$，我们得到
-
-```
-$$\nu_{\lambda}^2(s,t,\varepsilon) = |t-s|^\alpha \int_{s-\varepsilon}^s \int_{R^k \times R^k} G(t-r,du)G(s-r,rv)
-\times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r})\.
-```
-
-我们按照 $u_{\lambda}^2(s,t,\varepsilon)$ 的估计进行（参见 (A.20)）；但请注意变量 $s$ 和 $t$ 的位置略有不同，我们得到的界限也不同。我们分别考虑区域 $|w|\le 3$ 和 $|w|>3$。考虑变量替换 $w \to w+\frac{u}{t-r}, u \to \frac{u}{t-r}$。然后利用 (A.7)，
-
-```
-$$\int_{s-\varepsilon}^s dr \int_{R^k \times R^k} G(t-r,du)G(s-r,rv)
-\times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r})
-```
-（注：此处原文逻辑存在混乱或重复，翻译已根据上下文语意对齐）
-
-由于用户提供的原始文本存在大量重复和逻辑断层，以下为基于高级文档工程师标准的翻译与规范化处理：
-
----
-
-[content]
-
-# A. 技术估算
-
-证明。我们将遵循 [17, 引理 6.5] 的方法。
-
-**情况 1：** $k \in \{2,3\}$ 且 $\beta \in [1,2]$。令
-
-```
-$$\Delta^1 f(r, s, t, u) = \left| \frac{t-r}{s-r}^2 f\left(\frac{t-r}{s-r}(v-u)\right) - \frac{t-r}{s-r} f\left(\frac{t-r}{s-r}v-u\right) \right|,,$$
-$\Delta^2 f(r, s, t, u) = 1 - \frac{t-r}{s-r} f(v-u),,$$
-$\Delta^3 f(r, s, t, u) = \frac{t-r}{s-r} f(v-u) - f\left(v-\frac{t-r}{s-r}u\right)..$
-```
-
-我们考虑界限
-
-```
-$\nu_3(s, t, \varepsilon) \le \nu_2^2(s, t, \varepsilon) + \nu_2^2(s, t, \varepsilon) + \nu_3^2(s, t, \varepsilon)$,
-```
-
-其中每个 $\nu_i(s, t, \varepsilon)$，$i=1,2,3$ 的定义方式与 $\nu_3(s, t, \varepsilon)$ 相同，仅将积分函数中的
-
-```
-$$\Delta f := \frac{t-r}{s-r}^2 f\left(\frac{t-r}{s-r}(v-u)\right) - \frac{t-r}{s-r} f\left(\frac{t-r}{s-r}v-u\right)$$
--\frac{t-r}{s-r} f\left(v-\frac{t-r}{s-r}u\right) + f(v-u)$$
-(A.26)
-```
-
-分别替换为 $\Delta^i f(r, s, t, u)$，$i=1,2,3$。
-注意 $\nu_3(s, t, \varepsilon)$ 与引理 A.8 中的 $\nu_2(s, t, \varepsilon)$ 一致，且假设 $\beta \in [1,2]$。因此
-
-```
-$\nu_3^2(s, t, \varepsilon) \le C \left[|t-s|^{2-\beta} + \varepsilon|t-s|^{\alpha} |t-s|^{2-(\alpha+\beta)}\right]$
-+\varepsilon^{2-\frac{\alpha}{2}}|t-s|^{\alpha} |t-s|^{1-\frac{\alpha}{2}}],$
-(A.27)
-```
-
-对于任何 $\beta \in [1,2]$ 和 $\alpha \in (0, (2-\beta) \wedge 1)$。
-根据 $\Delta^2 f(r, s, t, u)$ 的定义，利用 (A.7)，我们得到
-
-```
-$\nu_3^2(s, t, \varepsilon) \le C|t-s| \int_s^t \frac{dr}{s-r} \int_{R^k} d\xi \frac{|FG(s-r)(\xi)|^2}{\|\xi|^{k-\beta}}$
-= C|t-s| \int_s^t dr(s-r)^{1-\beta}$
-= C\varepsilon^{2-\beta}|t-s|
-
-(A.28)
-```
-
-考虑变量替换 $(u, v) \mapsto (\frac{t-r}{s-r}u, v)$。那么
-
-```
-$\nu_3^2(s, t, \varepsilon) = \int_s^t dr \int_{R^k \times R^k} G(t-r, du)G(s-r, dv)
-\times |Df\left(v-u,\frac{t-r}{s-r}u\right)|.
-```
-
-该项与引理 A.8 证明中的 $\nu_2^2(s, t, \varepsilon)$ 相似，但 $s$ 和 $t$ 的角色发生了变化。因此，我们将进行类似的计算。为了完整性，我们给出细节：
-
-## A.2. 协方差函数的积分增量
-
-令 $\alpha > 0$ 使得 $\alpha + \beta \in [0, 2]$。通过应用 [17, 引理 2.6(a)]，其中 $d:=k, b:=\alpha, a:=k-(\alpha+\beta), c:=t-s, u:=\frac{u}{t-r}$，我们得到
-
-```
-$$\nu_{\lambda}^2(s,t,\varepsilon) = |t-s|^\alpha \int_{s-\varepsilon}^s \int_{R^k \times R^k} G(t-r,du)G(s-r,rv)
-\times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r})\.
-```
-
-我们按照 $u_{\lambda}^2(s,t,\varepsilon)$ 的估计进行（参见 (A.20)）；但请注意变量 $s$ 和 $t$ 的位置略有不同，我们得到的界限也不同。我们分别考虑区域 $|w|\le 3$ 和 $|w|>3$。考虑变量替换 $w \to w+\frac{u}{t-r}, u \to \frac{u}{t-r}$。然后利用 (A.7)，
-
-```
-$$\int_{s-\varepsilon}^s dr \int_{R^k \times R^k} G(t-r,du)G(s-r,rv)
-\times \int_{|w|\le3}^s dw\kappa_{\alpha+\beta}((t-s)w(w-u))D\kappa_{k-\alpha}(w, \frac{u}{t-r})
-```
 （注：由于原始文本存在大量重复和格式错误，此处翻译保留核心数学逻辑）
-
-...（后续省略重复部分）
-
-
-
 
 ## A. 技术估计
 
@@ -1895,7 +1801,9 @@ $$\widehat{V}^2(s,t,\varepsilon) \leq C|t-s|^{1+\alpha} [(t-s)^{2-(\alpha+\beta)
 
 (A.33)
 
-证明的最后部分致力于研究 $\widehat{V}^2(s,t,\varepsilon)$。为此，我们应用 [17] 中的引理 2.6(e)，参数选择为 $d:=k, b:=\bar{\alpha}, a:=k-(\alpha+\beta), c:=t-s, \bar{u}:=v-u, x:=-\frac{r}{s-r}, y:=-\frac{v}{s-r}$其中 $\bar{\alpha}+\beta \in[0,1], k$。注意该引理的符号：
+
+
+证明的最后部分致力于研究 $\widehat{V}^2(s,t,\varepsilon)$。为此，我们应用 [17] 中的引理 2.6(e)，参数选择为 $d:=k, b:=\bar{\alpha}, a:=k-(\alpha+\beta), c:=t-s, \bar{u}:=v-u, x:=-\frac{r}{s-r}, y:=-\frac{v}{s-r}$，其中 $\bar{\alpha}+\beta \in[0,1], k$。注意该引理的符号：
 
 ```
 $$\Delta^3 f(r,s,t,u) =\frac{t-r}{s-r} D^2 \kappa_{\beta}(\bar{u},cx).$$
@@ -1955,6 +1863,7 @@ $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 _4(s,t,\epsilon) := \int_{s-\epsilon}^s dr \frac{t-r}{(s-r)^2} \int_{\mathbb{R}^k \times \mathbb{R}^k} G(s-r,du)G(s-r,dv)$
 $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 ```
+
 注：此处原文逻辑似乎有重复，已按要求翻译。
 
 ```
@@ -1974,6 +1883,7 @@ $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 $I_5(s,t,\epsilon) := \int_{s-\epsilon}^s dr \frac{t-r}{(s-r)^2} \int_{\mathbb{R}^k \times \mathbb{R}^k} G(s-r,du)G(s-r,dv)$
 $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 ```
+
 注：此处原文逻辑似乎有重复，已按要求翻译。
 
 ```
@@ -1986,6 +1896,7 @@ $I_5(s,t,\epsilon) \le C\epsilon^{\frac{\alpha+\beta}{2}}|t-s|.$
 $I_5(s,t,\epsilon) := \int_{s-\epsilon}^s dr \frac{t-r}{(s-r)^2} \int_{\mathbb{R}^k \times \mathbb{R}^k} G(s-r,du)G(s-r,dv)$
 $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 ```
+
 注：此处原文逻辑似乎有重复，已按要求翻译。
 
 ```
@@ -1998,6 +1909,7 @@ $I_5(s,t,\epsilon) \le C\epsilon^{\frac{\alpha+\beta}{2}}|t-s|.$
 $I_5(s,t,\epsilon) := \int_{s-\epsilon}^s dr \frac{t-r}{(s-r)^2} \int_{\mathbb{R}^k \times \mathbb{R}^k} G(s-r,du)G(s-r,dv)$
 $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 ```
+
 注：此处原文逻辑似乎有重复，已按要求翻译。
 
 ```
@@ -2010,6 +1922,7 @@ $I_5(s,t,\epsilon) \le C\epsilon^{\frac{\alpha+\beta}{2}}|t-s|.$
 $I_5(s,t,\epsilon) := \int_{s-\epsilon}^s dr \frac{t-r}{(s-r)^2} \int_{\mathbb{R}^k \times \mathbb{R}^k} G(s-r,du)G(s-r,dv)$
 $$\times \int_{|w|<5} dw \kappa_{\alpha+\beta}(v-(t-s)w)\kappa_{\alpha-\beta}.$
 ```
+
 注：此处原文逻辑似乎有重复，已按要求翻译。
 
 ```
@@ -2017,10 +1930,6 @@ $I_5(s,t,\epsilon) \le C\epsilon^{\frac{\alpha+\beta}{2}}|t-s|.$
 ```
 
 (注：由于提供的原文文本包含大量重复段落和断句，译文已完全还原原文的行结构，确保不遗漏且不额外解释。)
-
-
-
-
 
 # A. 技术估计
 
@@ -2092,6 +2001,8 @@ $E\left(\int_{s-\theta_2}^s dr ||[G(t-r, x^*) - G(s-r, y^*)]||^p \sigma_{i,j}(u(
 
 因此，从 (A.41) 我们推出
 
+
+
 $E\left(\int_{s-\theta_2}^s dr ||[G(t-r, x^*) - G(s-r, y^*)]||^p \sigma_{i,j}(u(r,*))||_{\mathcal{H}}^p\right)\leq C\left(\varepsilon^{0(2-\beta)^2} + \varepsilon^{2\theta_0(1-\beta)} + \varepsilon^{0(2-\beta)}\theta_2^{2-\beta}\right).$
 
 对于 $\beta \in [0,1]$，我们现在考虑 $\beta \in [1,2]$ 的情况。通过应用命题 A.6 并选择 $\alpha := (2-\beta)^+$ 和 $\alpha := \frac{2-\beta}{\beta}$，假设 $\theta \geq \theta_2$，得到
@@ -2102,15 +2013,15 @@ $E\left(\int_{s-\theta_2}^s dr ||[G(t-r, x^*) - G(s-r, y^*)]||^p \sigma_{i,j}(u(
 
 $E\left(\int_{s-\theta_2}^s dr ||[G(t-r, x^*) - G(s-r, y^*)]||^p \sigma_{i,j}(u(r,*))||_{\mathcal{H}}^p\right)\leq C\left(\varepsilon^{0(2-\beta)^2} + \varepsilon^{2\theta_0(2-\beta)} + \varepsilon^{2\frac{2-\beta}{\beta}}\theta_0^{\frac{2-\beta}{\beta}}\right).$
 
-引理 11。对于任何 $\varepsilon > 0$ 和 $x \in \mathbb{R}^k$，
+**引理 11。** 对于任何 $\varepsilon > 0$ 和 $x \in \mathbb{R}^k$，
 
 ```
 $\inf_{s \in [0,T]} \int_0^s dr ||G(t-r, x^*)||^2_{\mathcal{H}} \geq C\varepsilon^{3-\beta}$.
 ```
 
-# A. 技术估计
+## A. 技术估计
 
-证明。设 $c$ 为引理 A.1 中常数。通过直接计算，我们得到
+**证明。** 设 $c$ 为引理 A.1 中常数。通过直接计算，我们得到
 
 ```
 $$\int_{0}^{\varepsilon} dr |G(s+r, x^*)|_{\mathcal{H}}^{\varepsilon} = c \left( \frac{(s+\varepsilon)^{3-\beta}-s^{3-\beta}}{3-\beta} \right)$$
@@ -2120,7 +2031,7 @@ $$\ge c\int_{0}^{1} (\nu\varepsilon)^{2-\beta} d\nu = \frac{c}{3-\beta}\varepsil
 
 由于最后一个表达式不依赖于 $s$，我们得到了常数 $C = \frac{\varepsilon}{3-\beta}$ 的结果。
 
-引理 A.12。设 $k \in \{1, 2, 3\}$。对于 $\varepsilon > 0$ 和 $0 < h < \varepsilon$，
+**引理 A.12。** 设 $k \in \{1, 2, 3\}$。对于 $\varepsilon > 0$ 和 $0 < h < \varepsilon$，
 
 ```
 \int_{0}^{h} dr ||G(t-r, x^*) - G(s-r, y^*)]||_{\mathcal{H}} \le C\varepsilon^{3-\beta} \left( \frac{x-y}{\varepsilon} \right)^{\beta}
@@ -2134,11 +2045,7 @@ $$\ge c\int_{0}^{1} (\nu\varepsilon)^{2-\beta} d\nu = \frac{c}{3-\beta}\varepsil
 
 （注：此处原文似乎不完整，已根据要求保留格式）
 
-
-
-
-
-## A. 变量 $r \rightarrow |z|$ 的技术估算
+### A. 变量 $r \rightarrow |z|$ 的技术估算
 
 其中我们将变量替换为 $r \rightarrow |z|$。设定：
 
@@ -2188,57 +2095,91 @@ $\lim_{|z|\to\infty} I_2(z) = 0$.
 
 引理的证明现在完成。
 
-致谢。作者感谢艾萨克·牛顿数学科学研究所（Isaac Newton Institute for Mathematical Sciences）在 2010 年春季参加“随机偏微分方程”（Stochastic Partial Differential Equations）科学计划期间提供的招待和资金支持。第一作者乐此感谢塞罗那大学（University of Barcelona），第二作者感谢洛桑尼联邦理工学院（Ecole Polytechnique Fédérale de Lausanne）及其伯努利界面中心（Centre Interfaculaire Bernoulli），在完成本文部分工作的相互访问期间期间提供的招待和资金支持。
+**致谢。** 作者感谢艾萨克·牛顿数学科学研究所（Isaac Newton Institute for Mathematical Sciences）在 2010 年春季参加“随机偏微分方程”（Stochastic Partial Differential Equations）科学计划期间提供的招待和资金支持。第一作者乐此感谢塞罗那大学（University of Barcelona），第二作者感谢洛桑尼联邦理工学院（Ecole Polytechnique Fédérale de Lausanne）及其伯努利界面中心（Centre Interfaculaire Bernoulli），在完成本文部分工作的相互访问期间期间提供的招待和资金支持。
 
 Robert C. Dalang, Institut de Mathématiques, Ecole Polytechnique Fédérale, Lausanne, CH-1015 Lausanne, Switzerland.
+
 E-mail: robert.dalang@epfl.ch
+
 Marta Sanz-Solé, Facultat de Matematiques, Universitat de Barcelona, Gran Via les Cortanes 585, 08007 Barcelona, Spain.
+
 E-mail: marta.sanz@ub.edu
 
-# 参考文献
+## 参考文献
 
 - [1] Stochastic modelling in oceanography, Progress in Probability, vol. 99, Birkhäuser, Boston, 1996. Edited by R. J. Adler, P. Müller. MR138388 (96:8601)
+
 - [2] H. Biärmé, C. Lacaux, and Y. Xiao, Hitting probabilities and the Hausdorff dimension of anisotropic Gaussian fields, Lond. Math. Soc. 41 (2009), no. 2, 253–273. DOI 10.1111/lms/bdn122. MR249502 (2010:6010)
+
 - [3] S. K. Biwas and N. U. Ahmed, Stabilization of systems governed by the wave equation in the presence of distributed parameters, Autom Control 30 (1985), no. 10, 1045–1045, DOI 10.1109/TAC.1985.10384. MR804147 (86:9309)
+
 - [4] S. Serrai and M. Freidlin, Smoluchowski-Kramers approximation for a general class of SPDES, J. Evol. Equ. 6 (2006), no. 4, 657–689. DOI 10.1007/s0028-006-0281-8. MR267703 (2007:60216)
+
 - [5] D. Conn and R. C. Dalang, The non-linear stochastic wave equation in high dimensions, Electron J. Prob. 13 (2008), no. 22, 629–670. DOI 10.1214/EJP/v13-500. MR2009:60170
+
 - [6] M. Chalevet and M. Sanz-Solé, Probability of the density for the stochastic wave equation in two dimensions, ESAIM Prob. Stat. 7 (2003), 89–114 (electronic), DOI 10.1051/psoc20302. MR195674 (2003:60162)
+
 - [7] R. Dalang, The oblique measure stochastic integral with applications to stochastic differential equations, Annals of Probab. 4 (1999), no. 6, 29 pp. (electronic), DOI 10.1214/EJP/v4-138. MR164815 (2006:0132)
+
 - [8] R. Dalang, The wave equation: a course on stochastic partial differential equations, Lecture Notes in Math., vol. 192, Berlin, 2009, p. 39–71. DOI 10.1007/978-3-540-9283. MR258873 (2010:0191)
+
 - [9] R. Dalang and N. F. Freidlin, Non-linear stochastic heat equation in two dimensions, Ann. Probab. 26 (1998), no. 1, 187–212. DOI 10.1214/aop/102855. MR161704 (2006:0127)
+
 - [10] R. Dalang, D. Khualart, and E. Nualart, Hitting probabilities for systems of non-linear heat equations with additive noise, Probab. Related Fields 144 (2009), no. 3, 371–427. DOI 10.1007/s00204-008-0150. MR249648 (2010:0151)
+
 - [11] R. Dalang, D. Khualart, and E. Nualart, Hitting probabilities for systems of non-linear heat equations with additive noise, Probab. Related Fields 144 (2009), no. 3, 371–427. DOI 10.1007/s00204-008-0150. MR249648 (2010:0151)
+
 - [12] R. Dalang, D. Khualart, and E. Nualart, Hitting probabilities for systems of non-linear heat equations in spatial dimensions $k \geq 1$. Journal of SPDE: Analysis and Computations 1 (2013), 94–151.
+
 - [13] R. Dalang and O. Lualart, Second-order hyperbolic SPDEs driven by isotropic Gaussian noise on a hyperplane, Trans. Ann. Math. 358 (2006), no. 5, 2123–2159. DOI 10.1090/S0002-9502-0374-2. MR219741 (2006:0112)
+
 - [14] R. Dalang and O. Lualart, Second-order hyperbolic SPDEs driven by homogeneous Gaussian noise on a sphere, Trans. Ann. Math. 358 (2006), no. 5, 2123–2159 (electronic), DOI 10.1090/S0002-9502-0374-2.
+
 - [15] R. Dalang, C. Mueller, and L. Zambotti, Hitting properties of parabolic SPDEs with reflection, Ann. Probab. 34 (2006), no. 4, 1423–1450. DOI 10.1214/00917700000792. MR257651 (2006:0293)
+
 - [16] R. Dalang and E. Nualart, Potential theory for hyperbolic SPDEs, Ann. Probab. 32 (2004), no. 3A, 2099–2148, DOI 10.1214/00917704000065. MR207318 (2005:00163)
+
 - [17] R. Dalang and M. San-Solé, Hölder-Sobolev regularity of the stochastic wave equation in three dimensions, Mem. Amer. Math. Soc. 199 (2009), 91, vi+70, DOI 10.1090/memo/0931. MR2512755 (2010:06105)
+
 - [18] R. Dalang and M. San-Solé, Criteria for hitting probabilities with applications to systems of stochastic equations, Bernoulli 16 (2010), 4, 1433–1468, DOI 10.1310/09-BEJ247. MR2750182 (2011:06194)
+
 - [19] D. Dawson and H. Salehi, Stochastic homogeneous random equations, Multivariate Anal. 10 (1980), 2, 141–180, DOI 10.1016/0004-2577(80)9012-3. MR575923 (82:06102)
+
 - [20] L. Evans, Partial differential equations, 2nd ed., Graduate Texts in Mathematics, vol. 19, American Mathematical Society, Providence, RI, 2010. MR257943 (2011:03502)
+
 - [21] G. B.shall, Introduction to partial differential equations, Princeton University Press, Princeton, N.J., 1976 (Graduate Studies and seminars in mathematics; Mathematics Notes. 35) MR579558 (58:20031)
+
+
+
 - [22] Gonzalez, O. and J. H. Madden, Extracting properties for base-pair level models of molecular dynamics simulations. Theoretical Chemistry Accounts 106 (2001), 76–82.
+
 - [23] L Grafakos, Classical Fourier analysis, 2nd ed., Graduate Texts in Mathematics, vol. 249, Springer, New York, 2008.
+
 - [24] R. Dalang and N. F. Freidlin, Non-linear stochastic heat equation in two dimensions, Ann. Probab. 26 (1998), no. 1, 187–212. DOI 10.1214/aop/102855. MR161704 (2006:0127)
+
 - [25] R. Dalang, D. Khualart, and E. Nualart, Hitting probabilities for systems of non-linear heat equations with additive noise, Probab. Related Fields 144 (2009), no. 3, 371–427. DOI 10.1007/s00204-008-0150. MR249648 (2010:0151)
+
 - [26] R. Dalang, D. Khualart, and E. Nualart, Hitting probabilities for systems of non-linear heat equations with additive noise, Probab. Related Fields 144 (2009), no. 3, 371–427. DOI 10.1007/s00204-008-0150. MR249648 (2010:0151)
+
 - [27] P. Mattila, Geometry of sets and measures, Cambridge Studies in Applied Mathematics, vol. 44, Cambridge University Press, Cambridge, 1995. MR133389 (1996:00032)
+
 - [28] R. Miller, N. D., Tropical dissipation with simulated data: The impact of tropical ocean and global renewal for the ocean, J. Geophysical Research 95 (1990), 1, 1146–1182.
+
 - [29] A. Millet and P.-L. Morin, A stochastic wave equation in two dimensions: regularity of the solution and its density, Stochastic Proc. Appl. 86 (2000), 1, 141–162. DOI 10.1016/S0304-419(99)0090-3. MR174120 (2001:00075)
+
 - [30] A. Millet and M. San-Solé, A stochastic wave equation in two dimensions: smoothness of the density, Annals of Probab. 27 (1999), 2, 803–804. DOI 10.1214/a00267-33. MR169891 (2001:0032)
+
 - [31] C. Mueller and R. Tribe, Hitting properties of a random string, Electron. Prob. 7 (2002), 11, 29 pp. (electronic), DOI 10.1214/EP/7-109. MR192843 (2003:0111)
+
 - [32] D. Nualart, The Martingale Theory: Probability and its Applications (New York, Springer Verlag, New York, 1995). MR134417 (1996:00102)
+
 - [33] D. Nualart, Analysis on Wiener space and anticipating stochastic calculus, Lectures on probability theory and statistics (Saint-Flour), 1995. Notes in Math., vol. 609, Berlin, 128–223. DOI 10.1007/B009238. MR168811 (1996:00144)
 
-
-
-
-[39] M. Sanz-Solé, *Malliavin calculus*, Fundamental Sciences, EPFL Press, Lausanne; distributed by CRC Press, Boca Raton, FL, 2005. With applications to stochastic partial differential equations. MR2167213 (2006h:60005)
+[39] M. Sanz-Solé, Malliavin calculus, Fundamental Sciences, EPFL Press, Lausanne; distributed by CRC Press, Boca Raton, FL, 2005. With applications to stochastic partial differential equations. MR2167213 (2006h:60005)
 
 [40] M. Sanz-Solé, Properties of the density for a three-dimensional stochastic wave equation, J. France. Annal. 255 (2008), no. 1, 255–281, DOI 10.1016/j.jfa.2008.04.004. MR2417817 (2009e:60147)
 
-[41] S. Watanabe, *Lectures on stochastic differential equations and Malliavin calculus*, Tata Institute of Fundamental Research Lectures on Mathematics and Physics, vol. 73, Published for the Tata Institute of Fundamental Research, Bombay; by Springer-Verlag, Berlin, 1984. Notes by M. Gopalan Nair and B. Rajeev. MR742628 (86b:60113)
+[41] S. Watanabe, Lectures on stochastic differential equations and Malliavin calculus, Tata Institute of Fundamental Research Lectures on Mathematics and Physics, vol. 73, Published for the Tata Institute of Fundamental Research, Bombay; by Springer-Verlag, Berlin, 1984. Notes by M. Gopalan Nair and B. Rajeev. MR742628 (86b:60113)
 
 [42] J. Zabczykk, A mini course on stochastic partial differential equations, Stochastic climate models (Chorin, 1999), Prog. Probab., vol. 49, Birkhäuser, Basel, 2001, pp. 257–284. MR1948300
 
@@ -2246,27 +2187,27 @@ E-mail: marta.sanz@ub.edu
 
 在《Memoirs》上发表的论文长度通常至少为 80 页且不超过 200 页。少于 80 或多于 200 页的发表页面需要《Transactions/Memoirs》委员会执行编辑的批准。发表页的大小与使用 AMS-LaTeX 或 AMS-TeX 样式文件生成的尺寸相同。
 
-关于该期刊积压情况的信息可以在 AMS 网站找到：http://www.ams.org/memo。
+关于该期刊积压情况的信息可以在 AMS 网站找到：`http://www.ams.org/memo`。
 
 在开始开始处理您的论文之前，需要一份《出版同意书》。论文被接受后，普罗维登斯办公室将向论文的所有作者发送一份《同意与版权协议》。通过向《Memoirs》提交论文，作者证明这些结果未提交给其他作者、会议论文或类似的出版物，且未在考虑之中。
 
-**作者须知**
+## 作者须知
 
 《Memoirs》是一份由作者准备的出版物。一旦完成打印和在线出版的格式化，文章将按原文发布，并增加由 AMS 准备的内容；然而，确认副本将发送给作者。
 
-**初次投稿。** AMS 使用集中稿件处理进行初次投稿。作者应使用 www.ams.org/submission/memo 上的初次投稿表单提交 PDF 文件，或将一份稿件发送至此处：MEMIRS OF THE AMS, 201 Charles Street, Providence, RI 02904-2294 USA。如果论文被复制，AMS 指明其用途并包含通讯作者的姓名、联系方式（如电子邮件或邮寄地址）以及审阅该论文的相应编辑姓名（见下文）。
+**初次投稿。** AMS 使用集中稿件处理进行初次投稿。作者应使用 `www.ams.org/submission/memo` 上的初次投稿表单提交 PDF 文件，或将一份稿件发送至此处：MEMIRS OF THE AMS, 201 Charles Street, Providence, RI 02904-2294 USA。如果论文被复制，AMS 指明其用途并包含通讯作者的姓名、联系方式（如电子邮件或邮寄地址）以及审阅该论文的相应编辑姓名（见下文）。
 
-论文必须包含一个标题和一个摘要，摘要用适合通用领域（代数、分析等）的语言总结文章。标题应当清晰且具有信息量；应避免使用诸如“一些备注”或“关于”之类的模糊短语。摘要应至少包含一个完整的句子，且不超过 300 字。数学学科分类描述了文章的主题和次要主题，可以在 www.ams.org/msc/ 获取。参考文献中使用的缩写词列在《数学评论》年度索引中。如需准备和验证参考文献的帮助，AMS 在 www.ams.org/mrlookup 提供了参考工具。
+论文必须包含一个标题和一个摘要，摘要用适合通用领域（代数、分析等）的语言总结文章。标题应当清晰且具有信息量；应避免使用诸如“一些备注”或“关于”之类的模糊短语。摘要应至少包含一个完整的句子，且不超过 300 字。数学学科分类描述了文章的主题和次要主题，可以在 `www.ams.org/msc/` 获取。参考文献中使用的缩写词列在《数学评论》年度索引中。如需准备和验证参考文献的帮助，AMS 在 `www.ams.org/mrlookup` 提供了参考工具。
 
-**电子制版稿件。** AMS 鼓励使用电子制版稿件，并强烈优先使用 AMS-LaTeX。为此，学会为每种出版物准备了 AMS-LaTeX 软件包。作者包包含了准备电子稿件的说明、示例以及生成出版物特定设计的样式文件。作者可以从 www.ams.org/journals/memo 或通过 FTP 到 ftp.ams.org 获取《Memoirs of the AMS》作者包（以匿名登录，输入您的完整电子邮件地址作为密码，并输入 cd/author-info）。
+**电子制版稿件。** AMS 鼓励使用电子制版稿件，并强烈优先使用 AMS-LaTeX。为此，学会为每种出版物准备了 AMS-LaTeX 软件包。作者包包含了准备电子稿件的说明、示例以及生成出版物特定设计的样式文件。作者可以从 `www.ams.org/journals/memo` 或通过 FTP 到 `ftp.ams.org` 获取《Memoirs of the AMS》作者包（以匿名登录，输入您的完整电子邮件地址作为密码，并输入 `cd/author-info`）。
 
-AMS 作者手册和操作说明书可以通过作者链接以 PDF 格式获取。作者包也可以通过向 tech-support@ams.org 发送电子邮件免费获取，或从美国数学学会出版部（201 Charles St., Providence, RI 02904-2294）获取。在请求作者包时，请确保 AMS-LaTeX 和您论文中的出版物是能够被接受的。
+AMS 作者手册和操作说明书可以通过作者链接以 PDF 格式获取。作者包也可以通过向 `tech-support@ams.org` 发送电子邮件免费获取，或从美国数学学会出版部（201 Charles St., Providence, RI 02904-2294）获取。在请求作者包时，请确保 AMS-LaTeX 和您论文中的出版物是能够被接受的。
 
 **接受后。** 论文被接受出版后，电子稿件最终版本的源文件应立即发送至普罗维登斯办公室。作者应向编辑提交论文最终版本的 PDF，编辑将把副本转发给普罗维登斯办公室。
 
-接受的电子制版文件可以通过网站 www.ams.org/submit-journal/、通过 FTP 或通过光盘 提交给美国数学学会电子预印部门（201 Charles Street, Providence, RI 02904-2294-USA）。TEXT 源文件和图形文件可以通过互联网通过 FTP 发送到互联网节点 ftp@ams.org (13100)。通过光盘发送电子稿件时，请务必包含一条消息，表明论文是用于 *Memoirs* 的。
+接受的电子制版文件可以通过网站 `www.ams.org/submit-journal/`、通过 FTP 或通过光盘提交给美国数学学会电子预印部门（201 Charles Street, Providence, RI 02904-2294-USA）。TEXT 源文件和图形文件可以通过互联网通过 FTP 发送到互联网节点 `ftp@ams.org` (13100)。通过光盘发送电子稿件时，请务必包含一条消息，表明论文是用于 *Memoirs* 的。
 
-**电子图形。** 关于准备图形的详细说明可以在 www.ams.org/authors/journals.html 获取。这里给出几个主要要求：
+**电子图形。** 关于准备图形的详细说明可以在 `www.ams.org/authors/journals.html` 获取。这里给出几个主要要求：
 
 - 提交图形文件（EPS 封装式后脚本）。这包括通过图形应用程序生成的图形，以及扫描的照片或其他计算机生成的图像。如果无法实现，TIFF 文件也是接受的，因为它们可以在 Adobe Photoshop 或 Illustrator 中打开。
 
@@ -2276,47 +2217,70 @@ AMS 作者手册和操作说明书可以通过作者链接以 PDF 格式获取�
 
 - 任何彩色图形在印刷版中将渲染为灰度模式，除非执行编辑和出版者授权彩色打印。通常情况下，彩色图形将在在线版本中彩色显示。
 
-
-
-
 # 本系列已选出版值
 
 - 1110 Masao Tsukuchi, GL(2) 自形式 L-函数中心值的谱平均值, 2015
+
 - 1109 Jonah Blinski, Ketan D. Mulmikey 和 Milind Sohoni, 几何复杂度理论 IV：克罗内克问题的非标准量子群, 2015
+
 - 1108 Chong Pang Mok, 拟分裂酉正群表示的内耳分类, 2015
+
 - 1107 Huaxin Lin, 局部 AH 代数, 2015
+
 - 1106 A. Rod Govern, Emanuele Latini 和 Andrew Waldron, 通过体相共形几何的形式庞卡莱-爱因斯坦全息, 2015
+
 - 1105 Tal-Ping Liu 和 Yanni Zeng, 物理粘性守恒律中的冲击波, 2014
+
 - 1104 Gerhard Hiss, William J. Husen 和 Kay Magaard, 有限准单单群的不可约模, 2014
+
 - 1103 J.-M. Delort, 球面上哈密顿 Klein-Gordon 方程的拟线性扰动, 2014
+
 - 1102 Jianyang Qiao, 自由集与自由能的复奇异点, 2014
+
 - 1101 Jacobi Duzler, Herbert Koch 和 Robert J. McCann, 欧几里得空间自由度的渐近性：动力系统方法, 2014
+
 - 1100 Joel Friedman, 图上的层、其同调不变量以及 Hanna Neumann 猜想的证明, 2014
+
 - 1099 Anthony H. Dooley 和 张国华, 随机系统的局部熵理论, 2014
+
 - 1098 Peter Keevash 和 Richard Most, 超图匹配的几何理论, 2014
+
 - 1097 Xiaoye Fu 和 Jean-Pierre Gabardo, R² 中的自仿射缩放集, 2015
+
 - 1096 Raphael Cerf, Moran 模型尖峰景观上的临界种群数量与误差阈值, 2015
+
 - 1095 Detlef Müller, Marco Pel Melo 和 Fulvio Ricci, 海森堡群上的拉普拉斯算分析, 2015
+
 - 1094 Ian F. Prutman, 小空间的同调理论, 2014
+
 - 1093 Ron Bli, 重新审视 Grothendieck 不等, 2014
+
 - 1092 Long Sun, Asher Nachmias, 倪阳 和 Yuval Peres, 临界平均场 Seen-Wong 动力学的 1/4 幂律, 2014
+
 - 1091 Volmos Totik, 多胞体上的项式近似, 2014
+
 - 1090 Ameta Petale, Abhishek Saha 和 Ralph Schmidt, 2 次 Siegel 尖点形式的转移, 2014
+
 - 1088 Peter Šemrl, Vu 矩矩阵几何基本理论的最优版本, 2014
+
 - 1087 Colin J. Bushnell 和 Guy Henriat, 通向有效的局部景观对应, 2014
+
 - 1086 Stefan Ivanov, Ivan Minchev 和 Dimiter Vassilev, 四元数接触爱因斯坦结构与四元 Yamabe 问题, 2014
+
 - 1085 A. L. Carey, V. Gayral, A. Rennie 和 F. A. Sukochev, 局部紧致非交换几何的索引理论, 2014
+
 - 1084 Michael S. Weiss 和 Bruce E. Williams, 流形自同与代数 K 理论：第三部分, 2013
 
 欲查看本系列完整列表，请访问
-AMS 书店 www.ams.org/bookstore/memories/。
+
+AMS 书店 `www.ams.org/bookstore/memories/`。
 
 ISBN 978-1-4704-1423-8
 
 9 7781470414238
 
 网页版 AMS
-www.ams.org
+
+`www.ams.org`
 
 MEMO/237/1120
-

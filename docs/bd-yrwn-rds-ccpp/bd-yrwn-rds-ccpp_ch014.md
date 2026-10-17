@@ -1,22 +1,17 @@
+
 # 13. 堆数据结构和 TTL
 
 Redis 的主要用途是作为缓存服务器，一种管理缓存大小的方法是通过显式设置 TTL（生存时间）。TTL 可以使用定时器实现。不幸的是，上一章中的定时器是固定值（使用链表）；因此，需要一个排序数据结构来实现任意和可变的超时；堆数据结构是一个流行的选择。与之前使用的 AVL 树相比，堆数据结构具有使用空间更少的优点。
 
 对堆数据结构的快速回顾：
 
-1.  堆是一个二叉树，打包到一个数组中；树的布局是固定的。父子关系是隐式的，堆元素中不包含指针。
-
-1.  树的唯一约束是父节点不大于其子节点。
-
-1.  元素的值可以更新。如果值发生变化：
-
-    +   其值比之前更大：它可能比其孩子更大，如果是这样，就与最小的孩子交换，这样父子和约束就再次满足。现在其中一个孩子比之前更大，继续这个过程，直到达到叶子节点。
-
-    +   其值更小：同样，将其与其父节点交换，直到达到根节点。
-
-1.  新元素作为叶子节点添加到数组的末尾。保持上述约束。
-
-1.  当从堆中移除一个元素时，用数组中的最后一个元素替换它，然后像更新其值一样维护约束。
+1. 堆是一个二叉树，打包到一个数组中；树的布局是固定的。父子关系是隐式的，堆元素中不包含指针。
+2. 树的唯一约束是父节点不大于其子节点。
+3. 元素的值可以更新。如果值发生变化：
+   - 其值比之前更大：它可能比其孩子更大，如果是这样，就与最小的孩子交换，这样父子和约束就再次满足。现在其中一个孩子比之前更大，继续这个过程，直到达到叶子节点。
+   - 其值更小：同样，将其与其父节点交换，直到达到根节点。
+4. 新元素作为叶子节点添加到数组的末尾。保持上述约束。
+5. 当从堆中移除一个元素时，用数组中的最后一个元素替换它，然后像更新其值一样维护约束。
 
 代码列表开始：
 
@@ -281,30 +276,18 @@ static void do_ttl(std::vector<std::string> &cmd, std::string &out) {
 
 练习：
 
-1.  基于堆的定时器向服务器添加 `O(log(n))` 操作，这可能会成为足够多键的数量时的瓶颈。你能想到针对大量定时器的优化方法吗？
+1. 基于堆的定时器向服务器添加 `O(log(n))` 操作，这可能会成为足够多键的数量时的瓶颈。你能想到针对大量定时器的优化方法吗？
+2. 真实的 Redis 并不使用排序来实现过期，找出它是如何实现的，并列出两种方法的优缺点。
 
-1.  真实的 Redis 并不使用排序来实现过期，找出它是如何实现的，并列出两种方法的优缺点。
-
-> +   [13_server.cpp](https://build-your-own.org/redis/13/13_server.cpp.htm)
-> +   
-> +   [avl.cpp](https://build-your-own.org/redis/13/avl.cpp.htm)
-> +   
-> +   [avl.h](https://build-your-own.org/redis/13/avl.h.htm)
-> +   
-> +   [common.h](https://build-your-own.org/redis/13/common.h.htm)
-> +   
-> +   [hashtable.cpp](https://build-your-own.org/redis/13/hashtable.cpp.htm)
-> +   
-> +   [hashtable.h](https://build-your-own.org/redis/13/hashtable.h.htm)
-> +   
-> +   [heap.cpp](https://build-your-own.org/redis/13/heap.cpp.htm)
-> +   
-> +   [heap.h](https://build-your-own.org/redis/13/heap.h.htm)
-> +   
-> +   [list.h](https://build-your-own.org/redis/13/list.h.htm)
-> +   
-> +   [test_heap.cpp](https://build-your-own.org/redis/13/test_heap.cpp.htm)
-> +   
-> +   [zset.cpp](https://build-your-own.org/redis/13/zset.cpp.htm)
-> +   
-> +   [zset.h](https://build-your-own.org/redis/13/zset.h.htm)
+> + [13_server.cpp](https://build-your-own.org/redis/13/13_server.cpp.htm)
+> + [avl.cpp](https://build-your-own.org/redis/13/avl.cpp.htm)
+> + [avl.h](https://build-your-own.org/redis/13/avl.h.htm)
+> + [common.h](https://build-your-own.org/redis/13/common.h.htm)
+> + [hashtable.cpp](https://build-your-own.org/redis/13/hashtable.cpp.htm)
+> + [hashtable.h](https://build-your-own.org/redis/13/hashtable.h.htm)
+> + [heap.cpp](https://build-your-own.org/redis/13/heap.cpp.htm)
+> + [heap.h](https://build-your-own.org/redis/13/heap.h.htm)
+> + [list.h](https://build-your-own.org/redis/13/list.h.htm)
+> + [test_heap.cpp](https://build-your-own.org/redis/13/test_heap.cpp.htm)
+> + [zset.cpp](https://build-your-own.org/redis/13/zset.cpp.htm)
+> + [zset.h](https://build-your-own.org/redis/13/zset.h.htm)

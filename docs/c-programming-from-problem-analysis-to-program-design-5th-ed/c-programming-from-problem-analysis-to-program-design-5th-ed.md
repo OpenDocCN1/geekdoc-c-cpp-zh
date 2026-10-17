@@ -1,10 +1,8 @@
+
 # C++ 编程：从问题分析到程序设计 [第5版]
 
-
-
-
-
 这些是非合法的枚举类型，因为没有任何一个值是标识符。
+
 然而，以下是合法的枚举类型：
 
 如果一个值已经在某个枚举类型中使用，则它不能在同一个块的任何其他枚举类型中使用。同样的规则也适用于在任何块之外定义的枚举类型。示例 8–4 阐了这一概念。
@@ -37,7 +35,7 @@ VOLLEYBALL};
 
 定义了一个名为 `sports` 的枚举类型。语句：
 
-popularSport, mySport;
+`popularSport, mySport;`
 
 将 `popularSport` 和 `mySport` 声明为类型 `sports` 的变量。
 
@@ -51,7 +49,7 @@ popularSport = FOOTBALL;
 
 将 `FOOTBALL` 存储在 `popularSport` 中。语句：
 
-mySport = popularSport;
+`mySport = popularSport;`
 
 将 `popularSport` 的值 copies 复制到 `mySport` 中。
 
@@ -299,11 +297,6 @@ void printEnum(courses registered)
 }
 ```
 
-
-
-
-
-
 ```cpp
 case CPP:
 out << "CPP";
@@ -379,14 +372,17 @@ typedef existingTypeName newTypeName;
 > 示例 8-6
 
 语句：
+
 `typedef int integer;`
 
 为数据类型 `int` 创建了别名 `integer`。同样，该语句：
 
 `typedef double real;`
+
 为数据类型 `double` 创建了别名 `real`。该语句：
 
 `typedef double decimal;`
+
 为数据类型 `double` 创建了别名 `decimal`。
 
 使用 `typedef` 语句，你可以创建自己的布尔数据类型，如 8-7 所示。
@@ -396,7 +392,6 @@ typedef existingTypeName newTypeName;
 回想第 4 章，记得 C++ 中的逻辑（布尔）表达式求的值为 1 或 0，这些实际上是 `int` 值。作为一个逻辑值，1 代表真，0 代表假。考虑以下语句：
 
 ![](img/b08b54ded82fc9e3d8d95107a5b40e44_7_0.png)
-
 
 ```cpp
 typedef int Boolean; // 第1行
@@ -429,14 +424,13 @@ flag = TRUE;
 
 输出 玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
 
-两个玩家玩这个游戏。每个人通过键盘输入选择。每个玩家输入 R 代表石头，P 代表纸，或 S 代表剪刀。输出玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
 
-两个玩家玩这个游戏。每个人通过键盘输入选择。每个玩家输入 R 代表石头，P 代表纸，或 S 代表剪刀。输出玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
+
+两个玩家玩这个游戏。每个人通过键盘输入选择。每个玩家输入 `R` 代表石头，`P` 代表纸，或 `S` 代表剪刀。输出玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
 
 ### 编程示例：剪刀石头布游戏
 
-
-两个玩家玩这个游戏。每个人通过键盘输入选择。每个玩家输入 R 代表石头，P 代表纸，或 S 代表剪刀。输出玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
+两个玩家玩这个游戏。每个人通过键盘输入选择。每个玩家输入 `R` 代表石头，`P` 代表纸，或 `S` 代表剪刀。输出玩家的选择以及每局的获胜者。游戏结束后，应该输出总局数和该玩家胜的次数。
 
 我们将使用枚举类型来描述物体。
 
@@ -446,13 +440,13 @@ enum objectType {ROCK, PAPER, SCISSORS};
 
 该程序分为以下函数，并对它们进行了详细说明：
 
-- displayRules：显示关于游戏的信息。
-- validSelection：检查玩家的选择是否有效。
-- retrievePlay：由于枚举类型无法直接读取，该函数转换输入（R, r, P, p, S 或 s）并返回对象类型。
-- gameResult：输出玩家的选择和获胜者。
-- main：协调游戏。
+- `displayRules`：显示关于游戏的信息。
+- `validSelection`：检查玩家的选择是否有效。
+- `retrievePlay`：由于枚举类型无法直接读取，该函数转换输入（`R`, `r`, `P`, `p`, `S` 或 `s`）并返回对象类型。
+- `gameResult`：输出玩家的选择和获胜者。
+- `main`：协调游戏。
 
-变量（在 main 中）：
+变量（在 `main` 中）：
 
 ```cpp
 int gameCount;
@@ -460,7 +454,7 @@ int winCount1;
 int winCount2;
 ```
 
-displayRules 函数没有参数。它仅由解释游戏和规则的输出语句组成。基本上，该函数的定义为：
+`displayRules` 函数没有参数。它仅由解释游戏和规则的输出语句组成。基本上，该函数的定义为：
 
 ```cpp
 void displayRules() {
@@ -481,7 +475,7 @@ void displayRules() {
 }
 ```
 
-validSelection 函数检查玩家的选择是否有效。让我们使用 switch 语句来检查有效选择。该函数的定义为：
+`validSelection` 函数检查玩家的选择是否有效。让我们使用 `switch` 语句来检查有效选择。该函数的定义为：
 
 ```cpp
 bool validSelection(char selection) {
@@ -499,10 +493,6 @@ bool validSelection(char selection) {
 }
 ```
 
-
-
-
-
 ```cpp
 case 's':
     return true;
@@ -511,7 +501,7 @@ case 's':
 }
 ```
 
-函数 `retrievePlay`：由于枚举无法直接读取，此函数转换输入的选择（R, r, P, p, S, s）并返回相应的对象类型。该函数有一个参数，类型为 `char`。它是一个返回值的函数，返回一个 `objectType` 类型的值。在伪代码中，该函数的算法如下：
+函数 `retrievePlay`：由于枚举无法直接读取，此函数转换输入的选择（`R`, `r`, `P`, `p`, `S`, `s`）并返回相应的对象类型。该函数有一个参数，类型为 `char`。它是一个返回值的函数，返回一个 `objectType` 类型的值。在伪代码中，该函数的算法如下：
 
 ```
 if selection is 'R' or 'r'
@@ -550,12 +540,12 @@ object retrievePlay(char selection)
 
 函数 `gameResult`：此函数决定游戏是平局还是哪位玩家获胜。它输出玩家的选择和游戏的胜者。显然，该函数有三个参数：玩家 1 的选择、玩家 2 的选择以及一个用于返回胜者的参数。在伪代码中，该函数为：
 
-- a. 如果 player1 和 player2 的选择相同，则这是一场平局。
+- a. 如果 `player1` 和 `player2` 的选择相同，则这是一场平局。
 - b. 否则
     - 1. 确定获胜的对象（调用函数 `winningObject`）。
-2. 输出每个玩家的选择。
-3. 确定胜者。
-4. 通过引用参数将胜者返回给函数 `main`，以便 `main` 函数可以更新获胜者的胜利次数。
+    - 2. 输出每个玩家的选择。
+    - 3. 确定胜者。
+    - 4. 通过引用参数将胜者返回给函数 `main`，以便 `main` 函数可以更新获胜者的胜利次数。
 
 该函数的定义如下：
 
@@ -620,7 +610,7 @@ void convertEnum(objectType) {
 }
 ```
 
-函数 `winningObject`：为了决定游戏的胜者，你会查看玩家的选择以及游戏规则。例如，如果一个玩家选择 ROCK 而另一个选择 PAPER，那么选择 PAPER 的玩家获胜。换句话说，`winningObject` 函数接收两个 `objectType` 类型的对象，并返回获胜的对象。显然，该函数有两个 `objectType` 类型的参数，返回值也是 `objectType` 类型。
+函数 `winningObject`：为了决定游戏的胜者，你会查看玩家的选择以及游戏规则。例如，如果一个玩家选择 `ROCK` 而另一个选择 `PAPER`，那么选择 `PAPER` 的玩家获胜。换句话说，`winningObject` 函数接收两个 `objectType` 类型的对象，并返回获胜的对象。显然，该函数有两个 `objectType` 类型的参数，返回值也是 `objectType` 类型。
 
 ```cpp
 objectType winningObject(objectType play1, objectType play2) {
@@ -666,6 +656,8 @@ void displayResults(int gCount, int wCount1, int wCount2) {
 7. 输出游戏结果。
 
 ## 程序列表
+
+
 
 ```cpp
 #include <iostream>
@@ -835,8 +827,7 @@ void displayResults(int gCount, int wCount1, int wCount2) {
 }
 ```
 
-
-
+## C++ 命名空间机制
 
 在后续章节中，除非另有说明，C++ 语法适用于所有标准。首先，我们将讨论 ANSI/ISO 标准 C++ 的命名空间机制，该机制在第 2 章中介绍。
 
@@ -882,6 +873,7 @@ namespace_name::identifier
 ```
 
 回在 C++ 中，`::` 被称为作用域解析运算符。
+
 要访问 `globalType` 的成员 `RATE`，需要以下语句：
 
 `globalType::RATE`
@@ -895,14 +887,21 @@ namespace_name::identifier
 为了简化对命名空间的访问，ANSI/ISO 标准 C++ 提供了 `using`语句。`using` 语句的语法如下：
 
 - a. 简化所有命名空间成员的访问：
+
   `using namespace namespace_name;`
+
 - b. 简化特定命名空间成员的访问：
+
   `using namespace_name::identifier;`
 
 例如，`using`语句：
+
 `using namespace globalType;`
+
 简化了对 `globalType` 命名空间所有成员的访问。语句：
+
 `using globalType::RATE;`
+
 简化了对 `globalType` 命名空间成员 `RATE` 的访问。
 
 在 C++ 中，`using` 是保留字。你通常将 `using`语句放在命名空间声明之后。例如，对于命名空间 `globalType`，你通常如下编写：
@@ -987,7 +986,7 @@ int main() {
 }
 ```
 
-string 类型
+## `string` 类型
 
 在第 2 章中，你被介绍了 `string` 类型。回想在 ANSI/ISO C++ 语言之前，标准 C++ 库并没有提供 `string` 类型。编译器供应商通常提供他们定义的字符串类型，且字符串操作的语法和语义随语言而异；`string` 类型是用户定义的类型，也是 C++ 语言的一部分；C++ 标准库提供了它。在使用 `string` 类型之前，程序必须包含 `string` 头文件：
 
@@ -1014,7 +1013,6 @@ string name = "William Jacob";
 ```cpp
 string str1, str2, str3;
 ```
-
 
 语句：
 
@@ -1060,20 +1058,22 @@ str1 = str1 + " Mickey";
 
 > 若要运算符 + 能够与字符串数据类型配合使用，+ 的操作数必须是一个字符串变量。例如，以下语句将无法工作：
 
+
+
 ```
 str1 = "Hello " + "there!"; //非法
 str2 = "Sunny Day " + ' '! //非法
 ```
 
-如果 str1 = "Hello there"，则语句：
+如果 `str1 = "Hello there"`，则语句：
 
 ```
 str1[6] = 'T';
 ```
 
-将 t 替换为字符 T。记住，字符串变量中第一个字符的位置是 0。因此，由于 t 是 str1 中的第七个字符，它的位置是 6。
+将 t 替换为字符 T。记住，字符串变量中第一个字符的位置是 0。因此，由于 t 是 `str1` 中的第七个字符，它的位置是 6。
 
-在 C++ 中，[] 被称为数组下标运算符。
+在 C++ 中，`[]` 被称为数组下标运算符。
 
 如前文所示，通过使用数组下标运算符结合字符的位置，你可以访问字符串中的单个字符。
 
@@ -1145,17 +1145,29 @@ int main() {
 **示例运行：** 在下面的示例运行中，用户输入被阴影显示。
 
 - Line 3: Name = William Jacob
+
 - Line 5: str1 = Hello There
+
 - Line 7: str2 = Hello There
+
 - Line 10: str2 = Sunny Day
+
 - Line 14: str3 = Hello There
+
 - Line 16: str3 = Hello There
+
 - Line 18: str1 = Hello Mickey
+
 - Line 20: str1[6] = t
+
 - Line 22: str1 = Hello There
+
 - Line 23: Enter a string with no blanks: Programming
+
 - Line 28: The string you entered = Programming
+
 - Line 29: Enter a sentence: Testing string operations
+
 - Line 32: The sentence is: Testing string operations
 
 上述输出是不言自明的，而其推导过程留给你们作为练习。
@@ -1164,29 +1176,46 @@ int main() {
 
 数据类型 `string` 有一个数据类型 `string::size_type` 以及一个命名常量 `string::npos`，定义如下：
 
-| string::size_type | 一个无符号整数（数据）类型 |
-| string::npos | （数据）类型 `string:string::size_type` 的最大值，在许多机器上该数字为 4294967295 |
+| `string::size_type` | 一个无符号整数（数据）类型 |
+
+| `string::npos` | （数据）类型 `string:string::size_type` 的最大值，在许多机器上该数字为 4294967295 |
 
 数据类型 `string` 包含了几个其他用于字符串处理的函数。下表描述了这些函数。在表中，我们假设 `strVar` 是字符串变量，而 `str` 是字符串变量、字符串常量或字符数组（数组将在第9章中讨论）。
 
 #### 表格 8-1 某些字符串函数
 
 | 表达式 | 效果 |
-| :--- | :--- |
-| strVar.at(index) | 返回指定位置的元素。 |
-| strVar[index] | 返回指定位置的元素。 |
-| strVar.append(n, ch) | 向 strVar 追加 n 个 ch；`pos` 和 `n` 类型为 `string:size_type`；`ch` 为字符。 |
-| strVar.append(str) | 向 strVar 追加 str。 |
-| strVar.clear() | 删除 strVar 中的所有字符。 |
-| strVar.compare(str) | 比较 strVar 和 str。（此操作在第4章中讨论。） |
-| strVar.empty() | 如果 strVar 为空返回 true，否则返回 false。 |
-| strVar.erase() | 删除 strVar 中的所有字符。 |
-| strVar.erase(pos, n) | 从 strVar 位置 pos 开始删除 n 个字符。 |
-| strVar.find(str) | 返回 str 在 strVar 中首次出现的索引。如果未找到，则返回特殊值 `string::npos`。 |
-| strVar.find(str, pos) | 返回 strVar 中从 pos 之后首次找到 str 的索引。 |
-| strVar.find_first_of(str, pos) | 返回 strVar 中 str 任意字符首次出现的索引。搜索从 pos 开始。 |
-| strVar.find_first_not_of(str, pos) | 返回 strVar 中任何不在 str 中的字符首次出现的索引。搜索从 pos 开始。 |
-| strVar.insert(pos, n, ch) | 在 strVar 中插入 n 次 ch 的出现；`pos` 和 `n` 类型为 `string:size_type`；`ch` 为字符。 |
-| strVar.insert(pos, str) | 将 str 的所有字符插入 strVar 的索引 pos 处。 |
-| strVar.length() | 返回类型为 `string::size_type` 的值，表示 strVar 的字符数。 |
 
+| :--- | :--- |
+
+| `strVar.at(index)` | 返回指定位置的元素。 |
+
+| `strVar[index]` | 返回指定位置的元素。 |
+
+| `strVar.append(n, ch)` | 向 `strVar` 追加 n 个 `ch`；`pos` 和 `n` 类型为 `string:size_type`；`ch` 为字符。 |
+
+| `strVar.append(str)` | 向 `strVar` 追加 `str`。 |
+
+| `strVar.clear()` | 删除 `strVar` 中的所有字符。 |
+
+| `strVar.compare(str)` | 比较 `strVar` 和 `str`。（此操作在第4章中讨论。） |
+
+| `strVar.empty()` | 如果 `strVar` 为空返回 true，否则返回 false。 |
+
+| `strVar.erase()` | 删除 `strVar` 中的所有字符。 |
+
+| `strVar.erase(pos, n)` | 从 `strVar` 位置 `pos` 开始删除 n 个字符。 |
+
+| `strVar.find(str)` | 返回 `str` 在 `strVar` 中首次出现的索引。如果未找到，则返回特殊值 `string::npos`。 |
+
+| `strVar.find(str, pos)` | 返回 `strVar` 中从 `pos` 之后首次找到 `str` 的索引。 |
+
+| `strVar.find_first_of(str, pos)` | 返回 `strVar` 中 `str` 任意字符首次出现的索引。搜索从 `pos` 开始。 |
+
+| `strVar.find_first_not_of(str, pos)` | 返回 `strVar` 中任何不在 `str` 中的字符首次出现的索引。搜索从 `pos` 开始。 |
+
+| `strVar.insert(pos, n, ch)` | 在 `strVar` 中插入 n 次 `ch` 的出现；`pos` 和 `n` 类型为 `string:size_type`；`ch` 为字符。 |
+
+| `strVar.insert(pos, str)` | 将 `str` 的所有字符插入 `strVar` 的索引 `pos` 处。 |
+
+| `strVar.length()` | 返回类型为 `string::size_type` 的值，表示 `strVar` 的字符数。 |

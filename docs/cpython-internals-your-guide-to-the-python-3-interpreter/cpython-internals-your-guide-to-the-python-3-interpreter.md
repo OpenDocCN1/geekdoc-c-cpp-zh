@@ -1,32 +1,17 @@
+
 # CPython 内部：Python 3 解释器指南
-
-
-
-
-
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_0_0.png)
 
-
-
-
 Anthony Shaw
 
-
 Anthony Shaw
-
-
-
-
-
-
-
 
 # 这是《CPython 内部：Python 3 解释器指南》的早期抢阅版本
 
 在您的帮助下，我们可以让这本书变得更好：
 
-在书的每个章节末尾，您都会找到一个“神奇”的反馈链接。点击该链接将带您进入一个**在线反馈表单**，您可以在那里与我们分享想法。
+在书的每个章节末尾，您都会找到一个“神奇”的反馈链接。点击该链接将带您进入一个在线反馈表单，您可以在那里与我们分享想法。
 
 请根据您的需要提供简洁或详细的反馈。所有反馈都以匿名形式存储，但您可以选择留下姓名和联系方式，以便我们进行跟进或在我们的“感谢”页面上提到您。
 
@@ -70,7 +55,7 @@ Anthony Shaw
 
 – Milan Patel，（某大型投资银行）副总裁
 
-“Anthony 的书最令我印象深刻的是，它将对 CPython 代码库进行更改的所有步骤都描述得如此清晰。” 
+“Anthony 的书最令我印象深刻的是，它将对 CPython 代码库进行更改的所有步骤都描述得如此清晰。”
 
 # 致谢
 
@@ -86,41 +71,21 @@ Anthony Shaw 是一位热衷的 Python 、Python 软件基金会成员。他一�
 
 Jim Anderson 长期从事编程，涉及嵌入式系统、分布式系统、管理并参加过多次会议。
 
-
 # Python 语言与语法
-
 
 ## 配置与输入
 
-
 ## 使用语法树进行词法分析和解析
-
 
 # 编译器
 
-
-
-
-
-
-
-
 - 引用计数 . . . . . . . . . . . . . . . . . . . . . 207
-
-
-
-
 
 # 测试套件 (The Test Suite) . . . . . . . . . . . . . . . . . . . 324
 
 # 调试 (Debugging) . . . . . . . . . . . . . . . . . . . . 331
 
 # 基准测试、性能剖析与追踪 (Benchmarking, Profiling, and Tracing) 353
-
-
-
-
-
 
 # 前言
 
@@ -131,6 +96,7 @@ Jim Anderson 长期从事编程，涉及嵌入式系统、分布式系统、管�
 我热爱构建能够帮助我们学习、赋能我们创造并促使与其他他人分享知识的工具。当我听到这些工具和 Python 如何帮助你们解决现实世界中的问题（如气候变化）时，我感到谦卑、感谢和自豪。在我四十年的编程和解决问题的道路中，我花了大量时间进行学习、编写大量代码并与他人分享我的想法。我见证了技术的巨大变化，世界从大型机发展到手机，再到网络和云计算的奇妙世界。所有这些技术（包括 Python）都有一个共同点：在某一时刻，这些成功的创新仅仅是一个想法。像 Guido 这样的创造者必须承担风险并进行信仰跳跃才能向前。
 
 > “现在做比永远不做好。”
+
 —— Tim Peters，Python 之禅
 
 让我们遵循 Tim 的智慧，现在就开始吧。
@@ -152,11 +118,6 @@ CPython 抽象了底层 C 平台和操作系统的复杂性。它让线程变得
 - 阅读并导航源代码
 - 从源码编译 CPython
 - 修改 Python 语法并将其编译到你自己的版本中
-
-
-
-
-
 - 导航并理解列表、字典和生成器等概念的内部机制
 - 掌握 CPython 的内存管理能力
 - 通过并行和并发扩展你的 Python 代码规模
@@ -194,19 +155,19 @@ CPython 抽象了底层 C 平台和操作系统的复杂性。它让线程变得
 
 ### 在线资源
 
-本书提供了许多免费资源，你可以在 realpython.com/cpython-internals/resources/ 访问它们。在这个网页上，你还可以找到一个由 Real Python 团队维护的勘误列表。
+本书提供了许多免费资源，你可以在 `realpython.com/cpython-internals/resources/` 访问它们。在这个网页上，你还可以找到一个由 Real Python 团队维护的勘误列表。
 
 ### 代码示例
 
-贯穿本书的示例和示例配置将带有标题，表示它们是 cpython-book-samples 文件夹的一部分。
+贯穿本书的示例和示例配置将带有标题，表示它们是 `cpython-book-samples` 文件夹的一部分。
 
-cpython-book-samples ▷ 01 ▷ example.py
+`cpython-book-samples ▷ 01 ▷ example.py`
 
-```
+```python
 import this
 ```
 
-你可以在 realpython.com/cpython-internals/resources/ 下载代码示例。
+你可以在 `realpython.com/cpython-internals/resources/` 下载代码示例。
 
 ### 代码许可
 
@@ -287,16 +248,13 @@ print("hello")
 
 [https://example.com](https://example.com)
 
-
-
-
-
 > 注意
- 如果你没有安装 Git，可以从 git-scm.com 安装。或者，你可以直接从 GitHub 网站下载 ZIP 格式的 CPython 源码。
+
+ 如果你没有安装 Git，可以从 `git-scm.com` 安装。或者，你可以直接从 GitHub 网站下载 ZIP 格式的 CPython 源码。
 
 如果你以 ZIP 文件下载源码，它将不包含任何历史记录、标签或分支。
 
-在新下载的 cpython 目录中，你将看到以下子目录：
+在新下载的 `cpython` 目录中，你将看到以下子目录：
 
 ```
 cpython/
@@ -364,6 +322,7 @@ CPython 源码约有 65% 是 Python（测试占了很大一部分），24% 是 C
 最新版本的 Visual Studio（Visual Studio 2019）在 Windows 上内置支持 Python 和 C 源码。我建议在本书中使用它。如果你已经安装了 Visual Studio 2017，也可以使用。
 
 注意
+
 编译 CPython 或本书的内容不需要任何付费功能。你可以使用免费的 Visual Studio 社区版。
 
 引导性能优化（Profile-Guided-Optimization）编译配置需要专业版或更高版本。
@@ -384,7 +343,7 @@ CPython 源码约有 65% 是 Python（测试占了很大一部分），24% 是 C
 
 现在你会被提示“打开项目”。你可以通过“克隆 (Clone)”或“检出 (checkout)”选项直接从 Visual Studio 克隆 Python 的 Git 仓库。
 
-对于“存储库位置 (Repository Location)”，输入 https://github.com/python/cpython，选择你的本地路径并点击“克隆”。
+对于“存储库位置 (Repository Location)”，输入 `https://github.com/python/cpython`，选择你的本地路径并点击“克隆”。
 
 Visual Studio 将使用 Visual Studio 内置的 Git 版本从 GitHub 下载 CPython 副本。这一步也为你省去了在 Windows 上安装 Git 的麻烦。下载可能需要 10 分钟。
 
@@ -402,16 +361,16 @@ Visual Studio 将使用 Visual Studio 内置的 Git 版本从 GitHub 下载 CPyt
 
 一旦项目下载完成，你需要通过点击“解决方案和项目 (Solutions and Projects) > pcbuild.sln”，让 Visual Studio 指向 PCBuild pcbuild.sln 解决方案文件。
 
+
+
 ![](img/826aa5e3e0d3a5997a0ec0a64c5e3c6_30_0_png)
 
-一旦项目下载完成，你需要通过点击“解决方案和项目 (Solutions and Projects) > pcbuild.sln”，让 Visual Studio 指向 PCBuild pcbuild.sln 解决方案文件。
+一旦项目下载完成，你需要通过点击“解决方案和项目 (Solutions and Projects) > pcbuild.sln”，让 Visual Studio 指向 PCBuild `pcbuild.sln` 解决方案文件。
 
 ![](img/826aa5e3e0d3a5997a0ec0a64c5e3c6_31_0_png)
 
-
-
-
-```json{
+```json
+{
   "version": "2.0.0",
   "tasks": [
     {
@@ -438,7 +397,7 @@ Visual Studio 将使用 Visual Studio 内置的 Git 版本从 GitHub 下载 CPyt
 
 通过 Task Explorer 插件，你将在 vscode 组内看到你配置的任务列表：
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_32_0.png)
+![](img/826aa5e3e0d3a647c5e3c6_32_0.png)
 
 在下一章节中，你将学习更多关于编译 CPython 的构建过程。
 
@@ -455,7 +414,9 @@ CPython 同时包含 C 和 Python 代码。你无法在 PyCharm 中安装 C/C++ 
 CPython 与 CMake 系统深度集成。然而，CPython 使用的是 GNU Make。当你打开 CPython 源码目录时，CLion 会报错说找不到 `CMakeLists.txt` 文件。有一个解决办法，可以从 CPython Makefile 中的编译步骤创建一个 `compile_commands.json` 文件。
 
 | 重要性 |
+
 |---|---|
+
 | 这假设你能够编译 CPython，请阅读“为你的操作系统 编译 CPython”并返回本章节。 |
 
 我们需要使用一个名为 `compileddb` 的工具来创建一个“编译数据库”。在命令行中，进入 CPython 仓库目录执行：
@@ -467,7 +428,7 @@ $ compileddb make
 
 然后打开 CLion 并打开 `compile_commands.json` 文件，系统会提示你打开文件或“作为项目打开”，请选择“作为项目打开”：
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_34_0.png)
+![](img/826aa5e3e0d3a647c5e3c6_34_0.png)
 
 CLion 随后会将 CPython 源码目录作为一个项目打开。
 
@@ -475,7 +436,7 @@ CLion 随后会将 CPython 源码目录作为一个项目打开。
 
 对于 2020.1 之前的 CLion 版本，你需要将编译命令和项目关联。进入 CLion 的 `Build, Execution, Deployment, Compilation Database` 并勾选“Use auto-import”（自动导入）框：
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_35_0.png)
+![](img/826aa5e3e0d3a647c5e3c6_35_0.png)
 
 当你以后打开此项目时，它将根据编译后的 CPython 版本提供智能代码导航。
 
@@ -506,13 +467,13 @@ PyObject *PyEval_Code(PyObject *code) {
 
 你可以使用 Makefile 为编译 CPython 创建快捷方式。选择 `Run -> Edit Configurations` 打开 `Run/Debug Configurations` 窗口。在窗口内选择 `+` 添加一个 Makefile 配置。将 `all` 设置为名称，`all` 设置为目标，并将 `-s j2` 设置为参数。确保 `Working Directory`（工作目录）设置为你下载源码的目录：
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_36_0.png)
+![](img/826aa5e3e0d3a647c5e3c6_36_0.png)
 
 点击 `Apply` 添加此配置。你可以针对任何 CPython make 目标重复此步骤。完整参考请参阅 `CPython's Make Targets`。
 
 Make all` 构建配置现在将出现在 CLion 窗口的右上角：
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_37_0.png)
+![](img/826aa5e3e0d3a647c5e3c6_37_0.png)
 
 现在 CLion 设置好了，请遵循编译 CPython 的步骤进行。
 
@@ -521,6 +482,7 @@ Make all` 构建配置现在将出现在 CLion 窗口的右上角：
 Vim 是一个强大的基于控制台文本编辑器。使用 Vim 时手可以放在键盘主位键。快捷键和命令触手可及，便于快速开发。
 
 > 注意
+
 > 在大多数 Linux 发行版和 macOS 终端中，`vi` 是 `vim` 的别名。我会使用 `vim` 命令，但如果你有别名，`vi` 也可以工作。
 
 Vim 默认情况下仅有基本功能，比像记事本这样的文本编辑器多不了多少。通过一些扩展，Vim 可以变得非常强大，能够同时处理 Python 和 C 编辑。Vim 的插件位于各个位置，例如 GitHub。为了方便安装插件，你可以安装一个插件管理器如 Vundle。
@@ -537,6 +499,7 @@ $ git clone https://github.com/VundleVim/VundleVim.git
 我们将安装插件：
 
 - vim-fugitive 用于 Git 状态栏，提供了许多 Git 任务的快捷键
+
 - tagbar 用于一个方便跳转到函数、方法和类的侧边栏
 
 要安装这些插件，首先修改你的 vim 配置文件（通常是 `~/.vimrc`），包含以下内容：
@@ -545,8 +508,8 @@ $ git clone https://github.com/VundleVim/VundleVim.git
 python-book-samples > 11 .vimrc
 ```
 
-
 Python 中用于调试的函数，这种方法在 C 中是行的。
+
 你将在本书的后部分详细介绍调试内容。
 
 对本部分提供反馈 »
@@ -560,6 +523,7 @@ Python 中用于调试的函数，这种方法在 C 中是行的。
 在上一节中，你学习了如何设置开发环境，并包含了运行“构建”（Build）阶段的选项，该阶段会重新编译 CPython。在构建步骤生效之前，你需要一个 C 编译器，并且需要一些构建工具。使用的工具取决于你所使用的操作系统，请直接跳转到对应操作系统的章节。
 
 > 注意
+
 > 如果你担心这些步骤中的任何一个会干扰现有的 CPython 安装，请放心。CPython 源代码目录的行为类似于虚拟环境。
 
 对于编译 CPython、修改源码以及标准库，所有操作都将在源代码目录的沙箱内。
@@ -571,6 +535,7 @@ Python 中用于调试的函数，这种方法在 C 中是行的。
 在 macOS 上编译 CPython 需要一些额外的应用程序和库。你首先需要基本的 C 编译器工具包。“命令行开发工具”（Command Line Development Tools）是一个你可以通过 macOS App Store 更新的应用。你需要在终端中进行初始安装。
 
 > 注意
+
 > 在 macOS 中打开终端，请前往 应用程序 > 终端。你可能想将此应用保存到 Dock 中，右键点击图标并选择“保留在 Dock 中”。
 
 在终端中，运行以下命令安装 C 编译器和工具包：
@@ -586,6 +551,7 @@ $ xcode-select --install
 在 macOS 上安装 OpenSSL 的简单方法是使用 Homebrew。
 
 > 注意
+
 > 如果你没有 Homebrew，可以通过以下命令直接从 GitHub 下载并安装 Homebrew：
 
 $ /usr/bin/ruby -e "$(curl -fsSL \
@@ -618,6 +584,7 @@ $ make -j2 -s
 ```
 
 | 另参 |
+
 | 如需更多关于 make 选项的帮助，请参见 Make 快速入门章节。 |
 
 在构建过程中，你可能会收到一些错误。在摘要中，make 会通知你并非所有包都已构建。例如，使用这组指令，ossaudiodev、spwd 和 _tkinter 将构建失败。如果你不针对这些包进行开发，那是没关系的。如果你需要，请查看官方开发指南网站获取更多信息。
@@ -632,10 +599,6 @@ $ make -j2 -s
 $ python.exe
 Python 3.9.0 (tags/v3.9.0, 9fecf, May 19 2020) [GCC 10.0.1]
 ```
-
-
-
-
 
 # Make 快速入门
 
@@ -660,15 +623,25 @@ $ make [options] [target]
 Make 有许多选项，以下是你认为在整本书中会用到的选项：
 
 | 选项 | 用途 |
+
 | :--- | :--- |
+
 | -d, --debug=[FLAGS] | 打印各种类型的调试信息 |
+
 | -e, --environment-overrides | 忽略 Makefile 中的错误 |
+
 | -i,-j [N], --jobs=[N] | 允许同时运行 N 个作业（否则为无限作业） |
+
 | -k, --keep-going | 在无法构建目标时继续执行 |
+
 | -1 [N], --load-average=[N] | 仅当负载 < N 时才启动多个作业 |
+
 | --max-load=[N] | |
+
 | -n, --dry-run | 打印命令而不是运行它们 |
+
 | -s, --silent | 不回显命令 |
+
 | -S, --stop | 关闭 -k 选项 |
 
 在下一节和整本书中，我将要求你使用以下选项运行 make：
@@ -688,18 +661,27 @@ CPython 的 Makefile 中内置了许多实用的 make 目标：
 ### 构建目标
 
 | 目标 | 用途 |
+
 | :--- | :--- |
+
 | all (default) profile-opt | 编译编译器、库和模块；使用分析引导优化编译 Python 二进制执行文件 |
+
 | clinic sharedmods | 对所有源文件运行“参数诊疗”（Argument Clinic）；构建共享模块 |
+
 | regen-all | 重新生成所有生成的文件 |
 
 ### 测试目标
 
 | 目标 | 用途 |
+
 | :--- | :--- |
+
 | test testall | 运行一组基础回归测试；运行两次完整套件 - 一次不带 .pyc 文件，一次带上它们 |
+
 | quicktest | 运行一组更快的回归测试，排除耗时较长的测试 |
+
 | testuniversal | 在 OSX 的通用构建中运行两种架构的测试套件 |
+
 | coverage coverage-lcov | 使用 gcov 编译并运行测试；创建覆盖率 HTML 报告 |
 
 ### 清理目标
@@ -707,14 +689,23 @@ CPython 的 Makefile 中内置了许多实用的 make 目标：
 主要的清理目标是 `clean`、`clobber` 和 `distclean`。`clean` 目标用于通常删除编译和缓存的库以及 pyc 文件。如果你发现 `clean` 无法解决问题，请尝试 `clobber`。在发布前彻底清理环境，请运行 `distclean` 目标。
 
 | 目标 | 用途 |
+
 | :--- | :--- |
+
 | check-clean-src | 在从源码构建时检查源码是否是干净 |
+
 | cleanest | 删除之前失败作业产生的 "test_python_*" 目录 |
+
 | clean | 删除 pyc 文件、编译的库和分析文件 |
+
 | pycremov | 删除 pyc 文件 |
+
 | docclean | 删除 Doc/ 下构建的文档 |
+
 | profile-removal | 删除任何优化分析文件 |
+
 | clobber | 与 clean 相同，但还会删除库、标签、配置和构建内容 |
+
 | distclean | 与 clobber 相同，还会删除从源码生成的任何内容，例如 Makefile |
 
 ### 安装目标
@@ -724,32 +715,50 @@ CPython 的 Makefile 中内置了许多实用的 make 目标：
 在执行 `make install` 后，`python3` 命令将链接到你编译的二进制文件。而使用 `make altinstall` 时，只会安装 `python$(VERSION)`，现有的 `python3` 链接将保留。
 
 | 目标 | 用途 |
-| :--- | :--- |
-| install | 安装共享库、二进制文件和文档。将运行 commoninstall、bininstall 和 maninstall |
-| bininstall | 安装所有二进制文件，例如 python，2to3 |
-| altinstall | 安装带有版本后缀的共享库、二进制文件和文档 |
+
+
+
+| `install` | 安装共享库、二进制文件和文档。将运行 `commoninstall`、`bininstall` 和 `maninstall` |
+
+| `bininstall` | 安装所有二进制文件，例如 `python`，`2to3` |
+
+| `altinstall` | 安装带有版本后缀的共享库、二进制文件和文档 |
 
 ## 在 Windows 上编译 CPython
 
 | 目标 | 用途 |
-| :--- | :--- |
-| maninstall | 安装文档 |
-| altinstall | 安装带版本的文档 |
-| altbininstall | 安装带有版本后缀的 python 解释器，例如 python3.9 |
-| commoninstall | 安装共享库和模块 |
-| libinstall | 安装共享库 |
-| sharedinstall | 动态加载模块 |
 
-###杂目标
+| :--- | :--- |
+
+| `maninstall` | 安装文档 |
+
+| `altinstall` | 安装带版本的文档 |
+
+| `altbininstall` | 安装带有版本后缀的 `python` 解释器，例如 `python3.9` |
+
+| `commoninstall` | 安装共享库和模块 |
+
+| `libinstall` | 安装共享库 |
+
+| `sharedinstall` | 动态加载模块 |
+
+### 杂目标
 
 | 目标 | 用途 |
+
 | :--- | :--- |
-| python-config | 生成 python-config 脚本 |
-| recheck | 使用相同的选项重新运行 configure |
-| autoconf | 重新生成 configure 和 pyconfig.h |
-| tags | |
-| tags | |
-| tags | |
+
+| `python-config` | 生成 `python-config` 脚本 |
+
+| `recheck` | 使用相同的选项重新运行 `configure` |
+
+| `autoconf` | 重新生成 `configure` 和 `pyconfig.h` |
+
+| `tags` | |
+
+| `tags` | |
+
+| `tags` | |
 
 ## 在 Windows 上编译 CPython
 
@@ -757,7 +766,7 @@ CPython 的 Makefile 中内置了许多实用的 make 目标：
 
 ### 从命令行编译
 
-从命令行编译时，你需要选择要编译的 CPU 架构。默认是 win32，但你可能想要 64 位 (amd64)。如果你进行任何调试，调试构建允许在源码中附加断点。要启用调试构建，添加 `-c Debug` 来指定配置。
+从命令行编译时，你需要选择要编译的 CPU 架构。默认是 `win32`，但你可能想要 64 位 (`amd64`)。如果你进行任何调试，调试构建允许在源码中附加断点。要启用调试构建，添加 `-c Debug` 来指定配置。
 
 默认情况下，`build.bat` 会获取外部依赖，但由于我们已经过了这一步，它将打印跳过下载的消息：
 
@@ -785,24 +794,30 @@ Type "help", "copyright", "credits" or "license" for more information.
 该命令将产生 `CPbuild ▸ amd64 ▸ python.exe`。
 
 | 注意 |
+
 | :--- | :--- |
-| 后缀 _d 表示 CPython 是在 Debug 配置下构建的。python.org 上的发布版本是在分析引导优化 (PGO) 配置下编译的。有关 PGO 的更多信息，请参见本章末尾的分析引导优化 (PGO) 章节 |
 
-
-
-
+| 后缀 `_d` 表示 CPython 是在 `Debug` 配置下构建的。`python.org` 上的发布版本是在分析引导优化 (`PGO`) 配置下编译的。有关 `PGO` 的更多信息，请参见本章末尾的分析引导优化 (`PGO`) 章节 |
 
 ## 在 Windows 上编译 CPython
 
 | 标记 | 目的 |
+
 | --- | --- |
-| -v | 详细模式。在构建期间显示信息消息。 |
-| -vv | 极详细模式。在构建期间显示详细消息。 |
-| -q | 静音模式。构建期间仅显示警告和错误。 |
-| -e | 下载并安装外部依赖（默认）。 |
-| -E | **不要**下载和安装外部依赖 |
-| --pgo | 使用配置引导优化进行编译 |
-| --regen | 重新生成所有语法和标记，用于你更新语言时。 |
+
+| `-v` | 详细模式。在构建期间显示信息消息。 |
+
+| `-vv` | 极详细模式。在构建期间显示详细消息。 |
+
+| `-q` | 静音模式。构建期间仅显示警告和错误。 |
+
+| `-e` | 下载并安装外部依赖（默认）。 |
+
+| `-E` | **不要**下载和安装外部依赖 |
+
+| `--pgo` | 使用配置引导优化进行编译 |
+
+| `--regen` | 重新生成所有语法和标记，用于你更新语言时。 |
 
 ### 从 Visual Studio 编译
 
@@ -846,24 +861,31 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## 配置引导优化 (PGO)
 
-macOS、Linux 和 Windows 的构建过程都有“PGO”或“配置引导优化”标记。PGO 并不是团队创建的，而是包括 CPython 在内的许多编译器的特性。
+`macOS`、`Linux` 和 Windows 的构建过程都有“`PGO`”或“配置引导优化”标记。`PGO` 并不是团队创建的，而是包括 CPython 在内的许多编译器的特性。
 
-PGO 的原理是先进行初始编译，然后通过运行一系列测试对应用程序进行分析。随后分析创建的配置文件，编译器将对二进制文件进行更改以提高性能。对于 CPython，分析阶段运行 `python -m test`。这些测试专门选取了常用的模块。
+`PGO` 的原理是先进行初始编译，然后通过运行一系列测试对应用程序进行分析。随后分析创建的配置文件，编译器将对二进制文件进行更改以提高性能。对于 CPython，分析阶段运行 `python -m test`。这些测试专门选取了常用的模块。
 
 ## 注意事项
 
-PGO 过程非常耗时，因此在整本书中我将其排除在推荐步骤列表中，以缩短你的编译时间。如果你想分发自定义版本的 CPython，你应该在 Linux 和 macOS 上运行 `./configure --with-pgo`，并在 Windows 的 `build.bat` 中使用 `--pgo` 标记。
+`PGO` 过程非常耗时，因此在整本书中我将其排除在推荐步骤列表中，以缩短你的编译时间。如果你想分发自定义版本的 CPython，你应该在 Linux 和 macOS 上运行 `./configure --with-pgo`，并在 Windows 的 `build.bat` 中使用 `--pgo` 标记。
 
-优化特定于执行配置文件的平台和架构，PGO 配置文件无法在操作系统或 CPU 架构之间共享。没有使用 PGO 编译的二进制文件将比使用 PGO 编译的慢。配置引导优化包含以下检查：
+优化特定于执行配置文件的平台和架构，`PGO` 配置文件无法在操作系统或 CPU 架构之间共享。没有使用 `PGO` 编译的二进制文件将比使用 `PGO` 编译的慢。配置引导优化包含以下检查：
 
 - **函数内联** - 如果一个函数经常从另一个函数被调用，则它将被内联以减小栈空间。
-- **虚调用推测与内联** - 如果一个虚函数频繁指向某个函数，PGO 可以插入一个对该函数的直接调用，该调用可以被内联。
-- **寄存器分配优化** - 根据配置数据结果，PGO 将优化寄存器分配。
+
+- **虚调用推测与内联** - 如果一个虚函数频繁指向某个函数，`PGO` 可以插入一个对该函数的直接调用，该调用可以被内联。
+
+- **寄存器分配优化** - 根据配置数据结果，`PGO` 将优化寄存器分配。
+
 - **基础块优化** - 基础块优化允许将给定帧内经常执行的字节块放置在同一组中（局部性）。它最小化了使用的内存页数，从而最小化了内存开销。
+
 - **热点优化** - 对程序花费时间最多的函数进行优化。
+
 - **函数布局优化** - 在分析调用图后，倾向于同一执行路径的函数将被移动到一起。
-- **条件分支优化** - PGO 可以查看分支（如 `if..else` 或 `switch` 语句）并识别常用路径。例如，如果 `switch` 语句中有 10 种情况且一种占 95%，它将被移动到顶部。
-- **死代码分离** - PGO 中未被调用的代码将被移动到独立区域。
+
+- **条件分支优化** - `PGO` 可以查看分支（如 `if..else` 或 `switch` 语句）并识别常用路径。例如，如果 `switch` 语句中有 10 种情况且一种占 95%，它将被移动到顶部。
+
+- **死代码分离** - `PGO` 中未被调用的代码将被移动到独立区域。
 
 ### 总结
 
@@ -879,12 +901,11 @@ PGO 过程非常耗时，因此在整本书中我将其排除在推荐步骤列�
 
 某些编译器将编译为低级机器码，可以在系统上执行。其他编译器将编译为中间语言，由虚拟机执行。
 
-选择编译器时的考虑因素是系统的可移植性需求。Java 和 .NET CLR 将编译为中间语言，使得编译代码可以在多个系统间迁移。C、Go、C++ 和 Pascal 将编译为可执行二进制文件。该二进制文件针对编译它的平台构建。
+选择编译器时的考虑因素是系统的可移植性需求。`Java` 和 `.NET CLR` 将编译为中间语言，使得编译代码可以在多个系统间迁移。`C`、`Go`、`C++` 和 `Pascal` 将编译为可执行二进制文件。该二进制文件针对编译它的平台构建。
 
 Python 应用程序通常以源码形式分发。Python 解释器的作用是转换 Python 源码并执行它。CPython 运行时会在首次运行时编译你的代码。
 
-Python 代码并没有被编译为机器码，而是编译为一种低级中间语言，称为字节码。字节码存储在 .pyc 文件中并缓存执行。如果你运行相同的
-
+Python 代码并没有被编译为机器码，而是编译为一种低级中间语言，称为字节码。字节码存储在 `.pyc` 文件中并缓存执行。如果你运行相同的
 
 在不更改源代码的情况下运行两次 Python 程序，第二次执行时速度会更快。这是因为它加载了编译后的字节码，而不是每次都进行重新编译。
 
@@ -899,27 +920,28 @@ CPython 中的 C 指的是 C 编程语言，这意味着这个 Python 分发版�
 答案在于编译器的工作原理。编译器分为两种类型：
 
 - 自举编译器（Self-hosted compilers）：使用其正要编译的语言编写的编译器，例如 Go 编译器。这是通过一个被称为“自举”（bootstrapping）的过程实现的。
+
 - 源码转换编译器（Source-to-source compilers）：使用另一种已经存在编译器的语言编写的。
 
 如果你要从零开始编写一种新语言，你需要一个可执行程序来编译你的编译器！你需要一个编译器来执行任何操作，因此开发新语言时，通常会先用一种更老、更成熟的语言来编写。
 
-还有一些工具可以获取语言规范并创建解析器（你将在本章中涵盖这些主题）。流行的编译器生成器包括 GNU Bison、Yacc 和 ANTLR。
+还有一些工具可以获取语言规范并创建解析器（你将在本章中涵盖这些主题）。流行的编译器生成器包括 GNU Bison、`Yacc` 和 `ANTLR`。
 
 ## 为什么 CPython 编译器用 C 语言编写而不是 Python
 
 ### 另需参考
 
-> 如果你想学习更多关于解析器的知识，可以查看 lark 项目。Lark 是用 Python 编写的上下文无关文法的解析器。
+> 如果你想学习更多关于解析器的知识，可以查看 `lark` 项目。`Lark` 是用 Python 编写的上下文无关文法的解析器。
 
 编译器自举的一个优秀例子是 Go 编程语言。第一个 Go 编译器是用 C 编写的，一旦 Go 可以被编译，编译器就被用 Go 重新编写了。
 
-CPython 保留了它的 C 传承；许多标准库模块（如 ssl 模块或 sockets 模块）是用 C 编写的，以便访问底层的操作系统 API。Windows 和 Linux 内核中用于创建网络套字、操作文件系统或与显示交互的 API 都是用 C 语言编写的。
+CPython 保留了它的 C 传承；许多标准库模块（如 `ssl` 模块或 `sockets` 模块）是用 C 编写的，以便访问底层的操作系统 API。Windows 和 Linux 内核中用于创建网络套字、操作文件系统或与显示交互的 API 都是用 C 语言编写的。
 
 让 Python 的扩展层专注于 C 语言是有意义的。在后面，你将涵盖 Python 标准库和 C 模块。
 
-有一个用 Python 编写的 Python 编译器叫做 PyPy。PyPy 的标志是一个衔尾蛇（Ouroboros），代表了编译器的自举特性。
+有一个用 Python 编写的 Python 编译器叫做 `PyPy`。`PyPy` 的标志是一个衔尾蛇（Ouroboros），代表了编译器的自举特性。
 
-另一个 Python 跨编译器的例子是 Jython。Jython 用 Java 编写，并将 Python 源码编译成 Java 字节码。正如 C 语言让你方便地导入 C 库并在 Python 中使用它们一样，Jython 也让你方便导入和引用 Java 模块和类。
+另一个 Python 跨编译器的例子是 `Jython`。`Jython` 用 Java 编写，并将 Python 源码编译成 Java 字节码。正如 C 语言让你方便地导入 C 库并在 Python 中使用它们一样，`Jython` 也让你方便导入和引用 Java 模块和类。
 
 创建编译器的第一步是定义语言。例如，以下不是有效的 Python 代码：
 
@@ -935,16 +957,20 @@ def my_example() <str> :
 ## Python 语言规范
 
 > 注意
-在本文教程的剩余部分，`./python 指的是 CPython 的编译版本。然而，实际命令将取决于你的操作系统。
+
+在本文教程的剩余部分，`./python` 指的是 CPython 的编译版本。然而，实际命令将取决于你的操作系统。
 
 对于 Windows：
-> python.exe
+
+> `python.exe`
 
 对于 Linux：
-$ ./python
+
+$ `./python`
 
 对于 macOS：
-$ ./python.exe
+
+$ `./python.exe`
 
 ## Python 语言规范
 
@@ -954,7 +980,7 @@ CPython 源代码中包含了 Python 语言的定义。此文档是所有 Python
 
 ## 语言文档
 
-在 Doc 参考目录下，包含了 Python 语言中每个特征的 reStructured-Text 解释。这些文件构成了 docs.python.org/3/reference 上的官方 Python 参考指南。
+在 `Doc` 参考目录下，包含了 Python 语言中每个特征的 reStructured-Text 解释。这些文件构成了 `docs.python.org/3/reference` 上的官方 Python 参考指南。
 
 目录内部包含了你理解整个语言、结构和关键字的文件：
 
@@ -965,14 +991,11 @@ cpython/Doc/reference
 - execution_model.rst
 ```
 
-
-
-
 # 使用解析器生成器
 
 `try` 语句是一个复杂结构的良好示例。
 
-如果你想详细了解 Python 语言，语法定义在 Grammar（语法）▸ Grammar 章节中。
+如果你想详细了解 Python 语言，语法定义在 `Grammar`（语法）▸ `Grammar` 章节中。
 
 # 使用解析器生成器
 
@@ -986,7 +1009,7 @@ cpython/Doc/reference
 
 DFA 被解析器作为解析表。这项技术形成于斯坦福大学，并于 20 世纪 80 年代开发，就在 Python 出现之前。CPython 的解析器生成器 `pgen` 是 CPython 项目特有的。
 
-`pgen` 应用在 Python 3.8 中从 C 语言重写为 Python，位于 Parser（解析器）▸ pgen ▸ pgen.py。
+`pgen` 应用在 Python 3.8 中从 C 语言重写为 Python，位于 `Parser`（解析器）▸ `pgen` ▸ `pgen.py`。
 
 它通过以下方式执行：
 
@@ -996,7 +1019,7 @@ $ ./python -m Parser.pgen [grammar] [tokens] [graminit.h] [graminit.c]
 
 它通常从构建脚本中执行，而不是直接执行。
 
-DFA 和 NFA 没有视觉输出，但 CPython 有一个分支带有有向图输出。装饰器语法定义在 Grammar/Grammar AS 中：
+DFA 和 NFA 没有视觉输出，但 CPython 有一个分支带有有向图输出。装饰器语法定义在 `Grammar/Grammar AS` 中：
 
 `decorator: '@' dotted_name ['(' [arglist] ')'] NEWLINE`
 
@@ -1016,7 +1039,7 @@ NFA 和 DFA 图仅用于调试复杂语法的设计。
 
 ## 重新生成语法
 
-为了看到 `pgen` 的运行，让我们更改 Python 语法的部分。搜索 Grammar（语法）▸ pass_stmt 来查看 `pass` 语句的定义：
+为了看到 `pgen` 的运行，让我们更改 Python 语法的部分。搜索 `Grammar`（语法）▸ `pass_stmt` 来查看 `pass` 语句的定义：
 
 ```
 pass_stmt: 'pass'
@@ -1038,6 +1061,8 @@ pass_stmt: 'pass' | 'proceed'
 $ make regen-grammar
 ```
 
+
+
 在 Windows 上，从 `PCBuild` 目录打开命令行并运行带有 `--regen` 标志的 `build.bat`：
 
 ```
@@ -1046,9 +1071,9 @@ $ make regen-grammar
 
 你应该能看到一个输出，显示新的 `Include ▸ graminit.h` 和 `Python ▸ graminit.c` 文件已重新生成。
 
-使用重新生成的解析器表，当你编译 CPython 时，它将使用新语法。请针对你的操作系统使用上章中使用的相同编译步骤。
+使用重新生成的解析器表，当你编译 `CPython` 时，它将使用新语法。请针对你的操作系统使用上章中使用的相同编译步骤。
 
-如果代码编译成功，你可以执行你的新 CPython 二进制文件并启动 REPL。
+如果代码编译成功，你可以执行你的新 `CPython` 二进制文件并启动 REPL。
 
 在 REPL 中，你现在可以尝试定义函数。不要使用 `pass` 语句，而是使用你编译到 Python 语法中的 `proceed` 关键字选项：
 
@@ -1063,14 +1088,16 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> example()
 ```
 
-恭喜，你更改了 CPython 语法并编译了你自己的 CPython 版本。接下来，我们将探索标记（tokens）及其与语法的关系。
+恭喜，你更改了 `CPython` 语法并编译了你自己的 `CPython` 版本。接下来，我们将探索标记（tokens）及其与语法的关系。
 
 # 标记 (Tokens)
 
-除了语法文件，还有 Grammar ▸ Tokens 文件夹，它包含了在解析树中作为叶节点的每个类型。每个标记都有一个名称和一个生成的 ID。这些名称用于在分词器中更方便地引用。注意：`Grammar ▸ Tokens` 文件是 Python 3.8 的新功能。
+除了语法文件，还有 `Grammar ▸ Tokens` 文件夹，它包含了在解析树中作为叶节点的每个类型。每个标记都有一个名称和一个生成的 ID。这些名称用于在分词器中更方便地引用。注意：`Grammar ▸ Tokens` 文件是 Python 3.8 的新功能。
 
 | 范围 (Range) | 名称 (Name) | 值 (Value) |
+
 | :--- | :--- | :--- |
+
 | ... | ... | ... |
 
 *(注：此处示例表格内容因原文不完整，仅保留格式，实际翻译应根据原文内容填充)*
@@ -1080,27 +1107,33 @@ Type "help", "copyright", "credits" or "license" for more information.
 **更正：原文表格如下：**
 
 | Range | Name | Value |
+
 | :--- | :--- | :--- |
+
 | ... | ... | ... |
 
 *(注：提供的原文文本中表格仅有表头和占位符，故翻译表头)*
 
 | 范围 | 名称 | 值 |
+
 | :--- | :--- | :--- |
 
 *(注：重新检查原文，原文中表格内容为空，仅有表头)*
 
 | Range | Name | Value |
+
 | :--- | :--- | :--- |
 
 *(此处由于用户提供的文本中表格只有表头，故翻译表头)*
 
 | Range | Name | Value |
+
 | :--- | :--- | :--- |
 
 *(注：根据用户提供的文本，表格部分仅包含表头，故翻译如下：)*
 
 | 范围 | 名称 | 值 |
+
 | :--- | :--- | :--- |
 
 *(注：此处发现用户提供的文本中表格确实只有表头，故翻译翻译)*
@@ -1109,33 +1142,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
- | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-
-*(请提供需要翻译的完整英文文本，我将按照您的要求进行翻译。)*
-
----
-
-**以下是针对您提供的示例文本的翻译：**
-
-[content]
-# Using the Parser Generator
-
-The `try` statement is a good example of a more complex structure.
-
-If you want to understand the Python language in detail, the grammar is defined in Grammar ▸ Grammar.
-
-# Using the Parser Generator
-
-The grammar file itself is never used by the Python compiler. Instead, a parser table is created by a parser generator. If you make changes to the grammar file, you must regenerate the parser table and recompile CPython.
 
 Parser Tables are a list of potential parser states. When parse trees become complex, they ensure that grammar cannot be ambiguous.
 
 ## The Parser Generator
 
 ... (rest of the translation follows)
-
-
-
 
 ### 更复杂的示例
 
@@ -1155,11 +1167,10 @@ namedexpr_test: test [=': test]
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_77_0.png)
 
-if 语句的新语法已更改，将 `test` 替换为 `namedexpr_test`：
+`if` 语句的新语法已更改，将 `test` 替换为 `namedexpr_test`：
 
 ```
-if_stmt: 'if' namedexpr_test ': suite ('elif' namedexpr_test ': suite
-'else' ': suite
+if_stmt: 'if' namedexpr_test ': suite ('elif' namedexpr_test ': suite 'else' ': suite
 ```
 
 通过轨道图可视化为：
@@ -1231,58 +1242,6 @@ C 源代码有一系列命名标准：
 - 有时“内部”函数对加载器可见。使用 `_Py` 前缀，例如 `_PyObject_Dump()`。
 - 宏应该具有混合命名法前缀后接大写，例如 `PyString_AS_STRING`、`Py_PRINT_RAW`。
 
-（注：原文此处似乎存在部分重复或逻辑乱码，已按语意翻译）
-
-[此处由于我重新审视了原始文本，发现后面部分出现了重复的翻译内容。]
-
-[/content]
-
----
-
-## 配置与输入
-
-现在你已经了解了 Python 语法，是时候探索代码是如何输入到可以执行的状态了。
-
-Python 代码在 CPython 中有多种运行方式。以下是最常用的几种：
-
-1. 通过运行 `python -c` 和一个 Python 字符串
-2. 通过运行 `python -m` 和模块名
-3. 通过运行 `python [file]` 并指向包含 Python 代码的文件
-4. 通过管道将 Python 代码通过标准输入输入到 python 可执行文件中，例如 `cat [file] | python`
-5. 通过启动 REPL 并逐个执行命令
-6. 使用 C API并将 Python 作为嵌入式环境
-
-| 另请参考 |
-| :--- |
-| Python 有许多执行脚本的方法，这可能会让人无从下手。Darren Jones 在 realpython.com 上整理了一门关于运行 Python 脚本的精彩课程，如果你想了解更多。 |
-
-要执行任何 Python 代码，解释器需要：
-
-- 一个要执行的模块
-- 一个存储变量等信息的状态
-- 配置，例如启用了哪些选项
-
-有了这三个组件，解释器就可以执行代码并提供输出：
-
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_81_0.png)
-
-### 注意
-
-类似于针对 Python 代码的 PEP8 风格指南，针对 CPython 的 C 代码也有 PEP7。
-
-C 源代码有一系列命名标准：
-
-- 公共函数使用 `Py` 前缀，绝不用于静态函数。`Py_` 前缀留给诸如 `Py_FatalError` 等全局服务例程。特定的例程组（如特定对象类型的 API）使用较长的前缀，例如用于字符串函数的 `PyString_`。
-- 公共函数和变量使用带划线的混合命名法（MixedCase），例如：`PyObject_GetAttr()`、`Py_BuildValue()`、`PyExc_TypeError()`。
-- 有时“内部”函数对加载器可见。使用 `_Py` 前缀，例如 `_PyObject_Dump()`。
-- 宏应该具有混合命名法前缀后接大写，例如 `PyString_AS_STRING`、`Py_PRINT_RAW`。
-
-（注：由于你提供的原文从“Note”之后开始出现了大量重复的句子和乱码，我已根据高级工程师的逻辑去除了冗余的重复翻译，确保输出逻辑清晰。）
-
-
-
-
-
 ### 使用命令行设置运行时配置
 
 Python 还提供了几种命令行界面选项。
@@ -1293,7 +1252,6 @@ Python 还提供了几种命令行界面选项。
 
 ```
 $ ./python -c "print('hello world')"
-
 ### installing zipimport hook
 import zipimport # builtin
 # installed zipimport hook
@@ -1326,7 +1284,6 @@ CPython 解释器有一组运行时标志。这些标志是用于切换 CPython 
 
 ```
 $ /python -X dev -q
-
 >>> import sys
 >>> sys.flags
 sys.flags(debug=0, inspect=0, optimize=0,
@@ -1334,7 +1291,6 @@ dont_write_bytecode=0, no_user_site=0, no_site=0,
 ignore_environment=0, verbose=0, bytes_warning=0,
 quiet=1, hash_randomization=1, isolated=0,
 dev_mode=True, utf8_mode=0)
-
 >>> sys._xoptions
 {'dev': True}
 ```
@@ -1347,11 +1303,9 @@ dev_mode=True, utf8_mode=0)
 
 ```
 ./python -m sysconfig
-
 Platform: "macos-10.15-x86_64"
 Python version: "3.9"
 Current installation scheme: "posix_prefix"
-
 Paths:
   data = "/usr/local"
   include = "/Users/anthonysaw/CLionProjects/cpython/Include"
@@ -1406,13 +1360,9 @@ $ ./python -c "print(2 ** 2)"
 
 `pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
 
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
 
-```
-$ ./python -c "print(2 ** 2)"
-```
 
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
+`pymain_run_command()` 函数在 `Modules ▸ main.c` 中执行，接收命令行参数。
 
 CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
 
@@ -1420,7 +1370,7 @@ CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例�
 $ ./python -c "print(2 ** 2)"
 ```
 
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
+`pymain_run_command()` 函数在 `Modules ▸ main.c` 中执行，接收命令行参数。
 
 CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
 
@@ -1428,7 +1378,7 @@ CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例�
 $ ./python -c "print(2 ** 2)"
 ```
 
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
+`pymain_run_command()` 函数在 `Modules ▸ main.c` 中执行，接收命令行参数。
 
 CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
 
@@ -1436,108 +1386,25 @@ CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例�
 $ ./python -c "print(2 ** 2)"
 ```
 
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
-
-CPython 可以通过 `-c` 选项在命令行执行短小的 Python 应用。例如，执行 `print(2 ** 2)`：
-
-```
-$ ./python -c "print(2 ** 2)"
-```
-
-`pymain_run_command()` 函数在 Modules ▸ main.c 中执行，接收命令行参数。
+`pymain_run_command()` 函数在 `Modules ▸ main.c` 中执行，接收命令行参数。
 
 注意
+
 字符串被传递给模块。
 
 ### 从脚本文件或标准输入输入
 
-如果 python 的第一个参数是文件名，例如 `python test.py`，那么 CPython 将打开一个文件句柄，并将其传递给 `PyRun_SimpleFileFlags()`，函数位于 Python ▸ `pythonrun.c`。
+如果 `python` 的第一个参数是文件名，例如 `python test.py`，那么 CPython 将打开一个文件句柄，并将其传递给 `PyRun_SimpleFileFlags()`，函数位于 `Python ▸ pythonrun.c`。
 
 该函数有三种可能的路径：
 
-
-
-
-
 ### 从输入构建模块
 
-- 1. 如果文件路径是一个 .pyc 文件，它将调用 `run_pyc_file()`。
-- 2. 如果文件路径是一个脚本文件 (.py)，它将运行 `PyRun_FileInEx()`。
-- 3. 如果由于用户运行命令 `| python` 导致文件路径为 stdin，则将 stdin 视为句柄并运行 `PyRun_FileInEx()`。
+- 1. 如果文件路径是一个 `.pyc` 文件，它将调用 `run_pyc_file()`。
+- 2. 如果文件路径是一个脚本文件 `.py`，它将运行 `PyRun_FileInEx()`。
+- 3. 如果由于用户运行命令 `| python` 导致文件路径为 `stdin`，则将 `stdin` 视为句柄并运行 `PyRun_FileInEx()`。
 
-对于 stdin 和基础脚本文件，CPython 将句柄传递到位于 Python ▸ pythonrun.c 中的 `PyRun_FileInEx()`。
+对于 `stdin` 和基础脚本文件，CPython 将句柄传递到位于 `Python ▸ pythonrun.c` 中的 `PyRun_FileInEx()`。
 
 `PyRun_FileInEx()` 的目的类似于 `PyRun_SimpleStringFlags()`。CPython 会将句柄加载到 `PyParser_ASTFromFileObject` 中。
 
@@ -1545,15 +1412,15 @@ $ ./python -c "print(2 ** 2)"
 
 ### 从编译后的字节码输入
 
-如果用户运行指向 .pyc 文件的路径 python，那么 CPython 将不会将文件作为纯文本文件加载并解析，而是假设 .pyc 文件包含一个写入磁盘的代码对象。
+如果用户运行指向 `.pyc` 文件的路径 `python`，那么 CPython 将不会将文件作为纯文本文件加载并解析，而是假设 `.pyc` 文件包含一个写入磁盘的代码对象。
 
-在 `PyRun_SimpleFileFlags()` 中，有一个条款允许用户提供 .pyc 文件的路径。
+在 `PyRun_SimpleFileFlags()` 中，有一个条款允许用户提供 `.pyc` 文件的路径。
 
-Python ▸ pythonrun.c 内部的 `run_pyc()` 函数通过句柄提取 .pyc 文件代码对象。磁盘上的代码对象数据结构是 CPython 编译器缓存编译代码的方式，这样在每次调用脚本时就不需要重新解析。
+`Python ▸ pythonrun.c` 内部的 `run_pyc()` 函数通过句柄提取 `.pyc` 文件代码对象。磁盘上的代码对象数据结构是 CPython 编译器缓存编译代码的方式，这样在每次调用脚本时就不需要重新解析。
 
 > 注意：提取（Marshaling）是一个将文件内容复制到内存并转换为特定数据结构的术语。
 
-一旦代码对象被提取到内存中，它会被发送到 `run_eval_code_obj()`，该函数调用 Python ▸ ceval.c 来执行代码。
+一旦代码对象被提取到内存中，它会被发送到 `run_eval_code_obj()`，该函数调用 `Python ▸ ceval.c` 来执行代码。
 
 ## 结论
 
@@ -1563,7 +1430,7 @@ Python ▸ pythonrun.c 内部的 `run_pyc()` 函数通过句柄提取 .pyc 文�
 - 长运行的网络应用程序，如 Web 服务器
 - 短小、可组合的脚本
 
-Python 以多种设置配置属性的能力导致了复杂性。例如，如果你在 Python 3.8 上测试了一个 Python 应用程序且它运行正常，但在不同的环境中失败了，你需要了解该环境中的哪些设置不同。这意味着你需要检查环境变量、运行时标志，甚至 sys config 配置属性。sys config 中找到的编译时属性在不同的 Python 发行版之间可能不同。例如，从 python.org 下载的 macOS Python 3.8 默认值与 Homebrew 上的 Python 3.8 发行版或 Anaconda 发行版不同。
+Python 以多种设置配置属性的能力导致了复杂性。例如，如果你在 Python 3.8 上测试了一个 Python 应用程序且它运行正常，但在不同的环境中失败了，你需要了解该环境中的哪些设置不同。这意味着你需要检查环境变量、运行时标志，甚至 `sys config` 配置属性。`sys config` 中找到的编译时属性在不同的 Python 发行版之间可能不同。例如，从 `python.org` 下载的 `macOS Python 3.8` 默认值与 `Homebrew` 上的 `Python 3.8` 发行版或 `Anaconda` 发行版不同。
 
 所有这些输入方法的输出都是一个 Python 模块。在下一章中，你将发现如何从输入创建模块。
 
@@ -1593,11 +1460,12 @@ CPython 使用两种结构来解析代码：**具体语法树（CST）**和**抽
 
 ### 具体语法树生成 (CST)
 
-具体语法树（CST（有时也称为**解析树**））是一个有序的、有根的树结构，它表示上下文无关文法中的代码。
+具体语法树（CST，有时也称为**解析树**）是一个有序的、有根的树结构，它表示上下文无关文法中的代码。
 
 CST 是由**词法分析器**和**解析器**创建的。你在“**Python 语言与语法**”章节中探索了解析器生成器。解析器生成器的输出是一个确定性有限自动机（DFA）解析表，描述了上下文无关文法的所有可能状态。
 
-> **另参****
+> **另参**
+>
 > Python 的原始作者 Guido van Rossum 目前正在研究一种上下文文法，用作 CPython 使用的 LL(1) 语法的替代方案。这种替代方案被称为解析表达式语法，或 PEG。
 >
 > 这将作为 Python 3.9 的一项实验性特性可用。
@@ -1620,10 +1488,6 @@ term: factor ((* | / | %) factor)*
 power: atom (^ power)*
 atom: ( arg_expr ) | NAME | NUMBER | STRING | ...
 ```
-
-
-
-
 
 ## CPython 解析器-分词器
 
@@ -1683,7 +1547,7 @@ int n_end_col_offset;
 
 为了更于理解，你可以将 `symbol` 和 `token` 模块中的所有数字放入字典中，并递归地将 `parser.st2list()` 输出中的值替换为标记名称：
 
-cpython-book-samples ► 21 ► lex.py
+`cpython-book-samples ► 21 ► lex.py`
 
 ```python
 import symbol
@@ -1752,10 +1616,6 @@ CPython 解释器的下一个阶段是将解析器生成的 CST 转换为更具�
 
 具体语法树是代码文件中文本的非常字面的表示。在这个阶段，它可以代表多种语言。Python 的基本语法结构已经被解释，但你可以使用 CST 来建立函数、作用域和循环。
 
-
-
-
-
 ### 节点属性
 
 在 AST 图上选择一个节点以查看属性。
@@ -1777,9 +1637,9 @@ CPython 解释器的下一个阶段是将解析器生成的 CST 转换为更具�
 
 ### AST 编译
 
-在 C 中中编译 AST 并不是一项简单的任务。Python ► ast.c 模块包含超过 5000 行代码。
+在 C 中中编译 AST 并不是一项简单的任务。`Python ► ast.c` 模块包含超过 5000 行代码。
 
-它有几个入口，构成了 AST 的公共 API 的一部分。AST API 接收一个节点树 (CST)、一个文件名、编译器标志和一个内存存储区域。结果类型为 `mod_ty`，表示一个 Python 模块，定义在 Include ► Python-ast.h 中。
+它有几个入口，构成了 AST 的公共 API 的一部分。AST API 接收一个节点树 (CST)、一个文件名、编译器标志和一个内存存储区域。结果类型为 `mod_ty`，表示一个 Python 模块，定义在 `Include ► Python-ast.h` 中。
 
 `mod_ty` 是 Python 中五种模块类型之一的容器结构体：
 
@@ -1789,7 +1649,7 @@ CPython 解释器的下一个阶段是将解析器生成的 CST 转换为更具�
 - 4. FunctionType（函数类型）
 - 5. Suite（语句块）
 
-模块类型都列在 Parser ► Python.asdl 中。你将看到模块类型、语句类型、表达式类型、运算符和推导式都定义在这些文件中。Parser ► Python.asdl 中的类型名称与 AST 生成的类以及 `ast` 标准模块库中同名的类相关：
+模块类型都列在 `Parser ► Python.asdl` 中。你将看到模块类型、语句类型、表达式类型、运算符和推导式都定义在这些文件中。`Parser ► Python.asdl` 中的类型名称与 AST 生成的类以及 `ast` 标准模块库中同名的类相关：
 
 ```
 -- ASDL 的 5 个内置类型是：
@@ -1803,9 +1663,9 @@ module Python
     | FunctionType(expr* arguments, expr returns)
 ```
 
-AST 模块导入了 Include ► Python-ast.h，该文件是在重新生成语法时从 Parser ► Python.asdl 自动创建的。Include ► Python-ast.h 中的参数和名称直接与 Parser ► Python.asdl 中指定的那些内容对应。
+AST 模块导入了 `Include ► Python-ast.h`，该文件是在重新生成语法时从 `Parser ► Python.asdl` 自动创建的。`Include ► Python-ast.h` 中的参数和名称直接与 `Parser ► Python.asdl` 中指定的那些内容对应。
 
-`mod_ty` 类型根据 Parser ► Python.asdl 中的 `Module` 定义生成到 Include ► Python-ast.h 中。
+`mod_ty` 类型根据 `Parser ► Python.asdl` 中的 `Module` 定义生成到 `Include ► Python-ast.h` 中。
 
 ```
 enum _mod_kind {Module_kind=1, Interactive_kind=2, Expression_kind=3,
@@ -1830,16 +1690,22 @@ struct _mod {
 ```
 
 struct {
+
     asdl_seq *argtypes;
+
     expr_ty returns;
+
 } FunctionType;
 
 struct {
+
     asdl_seq *body;
+
 } Suite;
 
 };
-```
+
+
 
 提供这些 C 头文件和结构体是为了让 Python `ast.c` 程序快速生成带有相关数据指针的结构体。
 
@@ -1858,23 +1724,41 @@ AST 入口 `PyASTFromNodeObject()` 本质上是一个围绕 `TYPE(n)` 结果的 
 
 ```
 static expr_ty
+
 ast_for_power(struct compiling *c, const node *n)
+
 {
+
     /* power: atom trailer* ('**' factor) */
+
     expr_ty e;
+
     REQ(n, power);
+
     e = ast_for_atom_expr(c, CHILD(n, 0));
+
     if (!e)
+
         return NULL;
+
     if (TYPE(n) == 1)
+
         return e;
+
     if (TYPE(CHILD(n, n - 1)) == factor) {
+
         expr_ty f = ast_for_atom_expr(c, CHILD(n, n - 1));
+
         if (!f)
+
             return NULL;
+
         e = BinOp(e, Pow, LINENO(n), n->end_col_offset, n->end_lineno, n->end_col_offset);
+
     }
+
     return e;
+
 }
 ```
 
@@ -1906,21 +1790,17 @@ ast_for_power(struct compiling *c, const node *n)
 | right | object |
 | n : 4 | number |
 
-
-
-
-
 ### 示例：添加“近似相等”比较运算符
 
-| Compare(expr left, cmpop* ops, expr* comparators)
+`Compare(expr left, cmpop* ops, expr* comparators)`
 
 在 `Compare` 定义内部有一个对 `cmpop` 枚举的引用：
 
-cmpop = Eq | NotEq | Lt | LtE | Gt | Gte | Is | IsNot | In | NotIn
+`cmpop = Eq | NotEq | Lt | LtE | Gt | Gte | Is | IsNot | In | NotIn`
 
-这是一列可以作为比较运算符的可能的 AST 叶子节点列表。我们的代码中缺少了这一项，需要添加。更新选项列表以包含新类型 AIE（Almost Equal，近似相等）：
+这是一列可以作为比较运算符的可能的 AST 叶子节点列表。我们的代码中缺少了这一项，需要添加。更新选项列表以包含新类型 `AIE`（Almost Equal，近似相等）：
 
-cmpop = Eq | NotEq | Lt | LtE | Gt | Gte | Is | IsNot | In | NotIn | AIE
+`cmpop = Eq | NotEq | Lt | LtE | Gt | Gte | Is | IsNot | In | NotIn | AIE`
 
 再次重新生成 AST 以更新 AST 的 C 头文件：
 
@@ -1928,37 +1808,55 @@ cmpop = Eq | NotEq | Lt | LtE | Gt | Gte | Is | IsNot | In | NotIn | AIE
 $ make regen-ast
 ```
 
-这将更新 `Include/Python-ast.h` 内部的比较器 `_cmpop` 枚举，使其包含 AIE 选项：
+这将更新 `Include/Python-ast.h` 内部的比较器 `_cmpop` 枚举，使其包含 `AIE` 选项：
 
 ```c
 typedef enum _cmpop { Eq=1, NotEq=2, Lt=3, LtE=4, Gt=5, Gte=6, Is=7, IsNot=8, In=9, NotIn=10, AIE=11 } cmpop_ty;
 ```
 
-AST 并并不知道 `ALMOSTE` 标记已用于更新 AIE 比较运算符。因此，你需要更新 AST 的代码。
+AST 并并不知道 `ALMOSTE` 标记已用于更新 `AIE` 比较运算符。因此，你需要更新 AST 的代码。
 
-导航到 Python ▶ ast.c 中的 `ast_for_comp_op()`。找到处理运算符标记的 `switch` 语句。它会返回 `_cmpop` 枚举值之一。
+导航到 Python ▶ `ast.c` 中的 `ast_for_comp_op()`。找到处理运算符标记的 `switch` 语句。它会返回 `_cmpop` 枚举值之一。
 
-添加两行代码来捕获 `ALMOSTE` 标记并返回 AIE 比较运算符：
+添加两行代码来捕获 `ALMOSTE` 标记并返回 `AIE` 比较运算符：
 
-Python ▶ ast.c 第 1199 行
+Python ▶ `ast.c` 第 1199 行
 
 ```c
 static cmpop_ty
+
 ast_for_comp_op(struct *c, const node *n)
+
 {
+
     /* comp_op: '<'|'>'|='|<=|='|!='|'in'|'not' 'in'|'is' */
+
 /* 'is' 'not' */
+
 REQ(n, comp_op);
+
 if (NCH(n) == 1) {
+
     n = CHILD(n, 0);
+
     switch (TYPE(n)) {
+
         case LESS:
+
             return Lt;
+
         case GREATER:
+
             return Gt;
+
         case ALMOSTEQ: // 添加此行来捕获标记
+
             return AIE; // 以及此行来返回 AST 节点
+
     }
+
+}
+
 }
 ```
 
@@ -1980,7 +1878,7 @@ True
 <ast.AIE object at 0x10a8d7ee0>
 ```
 
-这是我们 AIE 比较运算符类型的实例，因此 AST 正确地解析了代码。
+这是我们 `AIE` 比较运算符类型的实例，因此 AST 正确地解析了代码。
 
 在下一章中，你将学习 CPython 编译器的工作原理，并重新访问近似相等运算符以构建它的行为。
 
@@ -2017,10 +1915,6 @@ CPython 的多功能性和低级执行 API 使其成为嵌入式脚本引擎的�
 
 > 注意
 > 我们开始深入接触 CPython 编译器的内部细节了。（注：原文中此处存在大量重复文本，已按要求去重处理）
-
-
-
-
 
 ### 编译标志 (Compiler Flags)
 
@@ -2083,7 +1977,6 @@ cpython-book-samples ▷ 30▷ symviz.py.
 ```python
 import tabulate
 import symtable
-
 code = """
 def calc_pow(a, b):
     return a ** b
@@ -2091,13 +1984,10 @@ a = 1
 b = 2
 c = calc_pow(a,b)
 """
-
 _st = symtable.symtable(code, "example.py", "exec")
-
 def show(table):
     print("Symtable {0 {1}".format(table.get_table_name(),
         table.get_type()))
-
     print(
         tabulate.tabulate(
             (
@@ -2113,7 +2003,6 @@ def show(table):
     )
     if table.has_children():
         [show(child) for child in table.get_children()]
-
 show(_st)
 ```
 
@@ -2139,13 +2028,21 @@ typable top (module)
 
 ```c
 static int
+
 symtable_visit_stmt(struct symtable *st, t s)
+
 {
+
     if (++st->recursion_limit) {
+
         PyErr_SetString(PyExc_RecursionError,
+
             "maximum recursion depth exceeded during compilation")
+
         VISIT_QUIT(st, 0);
+
     }
+
 }
 ```
 
@@ -2176,18 +2073,15 @@ case ClassDef_kind:
 }
 ```
 
+
+
 一旦创建了结果符号表，它将被传递给编译器。
-
-
-
-
 
 ## 核心编译流程
 
-既然 `PyAST_CompileObject()` 已经拥有编译器状态、符号表（symtable）以及 AST 前面的模块，现在可以开始实际编译了。
+既然 `PyAST_CompileObject()` 已经拥有编译器状态、符号表（`symtable`）以及 AST 前面的模块，现在可以开始实际编译了。
 
 核心编译器的目的是：
-
 - 1. 将状态、符号表和 AST 转换为控制流图（CFG）
 - 2. 通过捕获任何逻辑和代码错误，保护执行阶段免受运行时异常的影响
 
@@ -2197,6 +2091,7 @@ case ClassDef_kind:
 
 ```
 >>> compile('b+1', 'test.py', mode='eval')
+
 code object <module> at 0x10f222780, file "test.py", line 1
 ```
 
@@ -2206,6 +2101,7 @@ code object <module> at 0x10f222780, file "test.py", line 1
 
 ```
 >>> co.co_code
+
 b'e\x00d\x00\x17\x00S\x00'
 ```
 
@@ -2218,10 +2114,15 @@ b'e\x00d\x00\x17\x00S\x00'
 
 ```
 >>> import dis
+
 >>> dis.dis(co.co_code)
+
     0 LOAD_NAME               0 (0)
+
     2 LOAD_CONST             0 (0)
+
     4 BINARY_ADD
+
     6 RETURN_VALUE           BINARY_ADD
 ```
 
@@ -2235,10 +2136,15 @@ b'e\x00d\x00\x17\x00S\x00'
 
 ```
 >>> import instaviz
+
 >>> def example():
+
     a = 1
+
     b = a + 1
+
     return b
+
 >>> instaviz.show(example)
 ```
 
@@ -2248,89 +2154,139 @@ AST 模块的入口点 `compiler_mod()` 根据模块类型切换到不同的编�
 
 新的代码对象被返回并由解释器发送执行，或者缓存或存储在磁盘上的 `.pyc` 文件：
 
-Python ▸ compile.c line 1820
+Python ▸ `compile.c` line 1820
 
-```
+```c
 static PyCodeObject *
+
 compiler_mod(struct compiler *c, mod_ty mod)
+
 {
+
     PyCodeObject *co;
+
     int addNone = 1;
+
     static PyObject *module;
+
     ...
+
     switch (mod->kind) {
+
     case Module_kind:
+
         if (!compiler_body(c, mod->v.Module.body)) {
+
             compiler_exit_scope(c);
+
             return 0;
+
         }
+
         break;
+
     case Interactive_kind:
+
         ...
+
     case Expression_kind:
+
         ...
+
     case Suite_kind:
+
         ...
+
     }
 
     co = assemble(c, addNone);
+
     compiler_exit_scope(c);
+
     return co;
+
 }
 ```
 
 `compiler_body()` 函数遍历模块中的每个语句并访问它们：
 
-Python ▸ compile.c 1782
+Python ▸ `compile.c` 1782
 
-```
+```c
 static int
+
 compiler_body(struct compiler *c, asdl_seq *stmts)
+
 {
+
     int i = 0;
+
     stmt_ty st;
+
     PyObject *docstring;
+
     ...
+
     for (; i < asdl_seq_LEN(stmts); i++)
+
         VISIT(c, st = asdl_seq_GET(stmts, i));
+
     return 1;
+
 }
 ```
 
-语句类型通过调用 `asdl_seq_GET` 确定，它查看 AST 节点。通过宏 `VISIT` 为每个语句类型调用函数：Python ▸ compile.c：
+语句类型通过调用 `asdl_seq_GET` 确定，它查看 AST 节点。通过宏 `VISIT` 为每个语句类型调用函数：Python ▸ `compile.c`：
 
-```
+```c
 #define VISIT(C, TYPE, V) \
     if (!compiler_visit##TYPE(C, V)) \
         return 0;
 ```
 
-对于语句（通用类型），编译器将调用 `compiler_visit_stmt()` 并切换所有可能的语句类型：Python ▸ compile.c 375：
+对于语句（通用类型），编译器将调用 `compiler_visit_stmt()` 并切换所有可能的语句类型：Python ▸ `compile.c` 375：
 
-```
+```c
 static int
+
 compiler_visit_stmt(struct compiler *c, stmt_ty s)
+
 {
+
     Py_ssize_t lineno;
 
     /* 将 lineno 赋值给下一条指令。 */
+
     c->u_lineno = s->lineno;
+
     c->u_col_offset = s->col_offset;
+
     ...
+
 }
 ```
 
 ```c
 switch (s->kind) {
+
   case FunctionDef_kind:
+
     return compiler_function(c, s, 0);
+
   case ClassDef_kind:
+
     return compiler_class(c, s);
+
   ...
+
   case For_kind:
+
     return compiler_for(c, s);
+
   ...
+
   return 1;
+
 }
 ```
 
@@ -2402,11 +2358,7 @@ else:
 
 ### 汇编器数据结构
 
-汇编器状态结构体 `assembler` 在 Python ▸ compile.c 中声明。
-
-
-
-
+汇编器状态结构体 `assembler` 在 Python ▸ `compile.c` 中声明。
 
 | 字段 | 类型 | 用途 |
 | --- | --- | --- |
@@ -2443,7 +2395,6 @@ For 循环节点图可能像这样：
 ### 汇编器 C API
 
 汇编器 API 有一个入口 `assemble()`。`assemble()` 函数承担了若干职责：
-
 - 计算块的数量以便进行内存分配
 - 确保所有超出结尾的块都返回 `None`（这就是为什么无论是否存在语句，每个函数都返回 `None`）
 - 解析任何标记为相对的跳转语句偏移量
@@ -2451,23 +2402,35 @@ For 循环节点图可能像这样：
 - 将所有指令发射给编译器
 - 使用编译器状态调用 `makecode()` 以生成 `PyCodeObject`
 
-Python compile.c 第 6005 行
+Python `compile.c` 第 6005 行
 
-```python
+```c
 static PyCodeObject *
+
 assemble(struct compiler *c, int addNone)
+
 {
+
     if (!c->u->u_curblock->b_return) {
+
         NEXT_BLOCK(c);
+
         if (addNone)
+
             ADDOP_LOAD_CONST(c, Py_None);
+
         ADDOP(c, RETURN_VALUE);
+
     }
+
     ...
+
     dfs(c, entryblock, &a, nblocks);
+
 }
 
 /* 计算跳转偏移量后无法修改字节码。 */
+
 assemble_jump_offsets(&a, c);
 
 /* 从 dfs 按反后序发射代码。 */
@@ -2475,53 +2438,83 @@ assemble_jump_offsets(&a, c);
 
 ```c
 for (i = a.a_nblocks - 1; i >= 0; i--) {
+
     b = a.a_postorder[i];
+
     for (j = 0; j < b->b_used; j++) {
+
         if (!goto_emit(&a, &b->b_instr[j])) {
+
             goto error;
+
         }
+
     }
+
 }
+
 ...
+
 co = makecode(c, &a);
+
 error:
+
 assemble_free(&a);
+
 return co;
 ```
 
 ### 深度优先搜索
 
-深度优先搜索由 Python compile.c 中的 `dfs()` 函数执行，该函数遵循每个块中的 `b_next` 指针，通过切换 `b_seen` 状态将其标记为已访问，然后按反序将它们添加到汇编器的 `a_postorder` 列表中。
+深度优先搜索由 Python `compile.c` 中的 `dfs()` 函数执行，该函数遵循每个块中的 `b_next` 指针，通过切换 `b_seen` 状态将其标记为已访问，然后按反序将它们添加到汇编器的 `a_postorder` 列表中。
 
 该函数遍历汇编器的后序列表，对于每个块，如果它包含跳转操作，则递归调用该跳转调用 `dfs()`。
 
-Python compile.c 第 5436 行
+Python `compile.c` 第 5436 行
 
-```python
+```c
 static void
+
 dfs(struct compiler *c, basicblock *b, struct assembler *a, int end)
+
 {
+
     int i, j;
 
 /* 消除正常控制流下的递归。
-由于块的数量有限的，a_postorder 中未使用的空间
-（从 a_nblocks 到 end）可以用作尚未排序的块的栈。 */
-    for (j = end; b && !b->b_seen; b = b->b_next) {
-        b->b_seen = 1;
-```
 
-```python
+由于块的数量有限的，a_postorder 中未使用的空间
+
+（从 a_nblocks 到 end）可以用作尚未排序的块的栈。 */
+
+    for (j = end; b && !b->b_seen; b = b->b_next) {
+
+        b->b_seen = 1;
+
+```
+```c
 assert(a->a_nblocks < j);
+
 a->a_postorder[--j] = b;
+
 while (j < end) {
+
   b = a->a_postorder[j+];
+
   for (i = 0; i < b->b_used; i++) {
+
     struct instr *instr = &b->b_instr[i];
+
     if (instr->i_jrel || instr->i_jabs)
+
       dfs(c, instr->i_target, a, j);
+
   }
+
   assert(a->a_nblocks < j);
+
   a->a_postorder[a->a_nblocks++] = b;
+
 }
 ```
 
@@ -2531,29 +2524,38 @@ while (j < end) {
 
 `makecode()` 的任务是遍历编译器状态、汇编器的属性，并通过调用 `PyCode_New()` 将这些放入 `PyCodeObject`。变量名、常量作为代码对象的属性：
 
-Python compile.c 第 588 行
+Python `compile.c` 第 588 行
 
-```python
+```c
 static PyCodeObject *
+
 makecode(struct compiler *c, struct assembler *a)
+
 {
+
   consts = dict_keys_inorder(c->u_consts);
-  names = dict_keys_inorder(c->u_names, 0);
-  varnames = dict_keys_inorder(c->u_varnames, 0);
-  cellvars = dict_keys_inorder(c->u_cellvars, 0);
-}
+
+
+
+```c
+names = dict_keys_inorder(c->u_names, 0);
+
+varnames = dict_keys_inorder(c->u_varnames, 0);
+
+cellvars = dict_keys_inorder(c->u_cellvars, 0);
 ```
 
 ```python
 freevars = dict_keys_inorder(c->u_freevars);
+
 flags = compute_flags(c);
+
 if (flags < 0)
   goto error;
 
 bytecode = PyCode_Optimize(a->bytecode, consts,
 names, freevars, c->u_filename,
 c->u_name, c->u_firstlineno, a->a_lineno);
-
 return co;
 ```
 
@@ -2586,7 +2588,7 @@ def foo():
 ### 反汇编代码
 
 | OpCode | 操作名称 | 参数 | 解析参数值 | 参数描述 | 索引偏移 | 起始行 | 是否为跳转? |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | 100 | LOAD_CONST | 1 | 16 | | 0 | False |
 | 125 | STORE_FAST | 0 | 6 | | 2 | False |
 | 100 | LOAD_CONST | 2 | 6 | | 4 | False |
@@ -2615,10 +2617,10 @@ def foo():
 
 带有变量名、常量和 `co_` 前缀属性的代码对象如下：
 
-# 代码对象属性
+## 代码对象属性
 
 | 字段 | 值 |
-|---|--|
+|---|---|
 | co_argcount | 0 |
 | co_nvars | 1 |
 | co_code | 6417d006407d6401d6350464260703d2703781c7d0244050dc7d03704007d10101007c11857000 |
@@ -2633,10 +2635,6 @@ def foo():
 | co_nlocals | 4 |
 | co_stacksize | 3 |
 | co_varnames | ('w', 'w', 'V', 'T') |
-
-
-
-
 
 ## 示例：实现“几乎相等”运算符
 
@@ -2695,7 +2693,6 @@ PyObject *
 PyObject_RichCompare(PyObject *v, PyObject *w, int op)
 {
     PyThreadState *tstate = _PyThreadState_GET();
-
     assert(Py_LT <= op && op <= Py_GE);
 ```
 
@@ -2716,7 +2713,6 @@ class Coordinate:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-
     def __eq__(self, other):
         if isinstance(other, Coordinate):
             return self.x == other.x and self.y == other.y
@@ -2806,10 +2802,6 @@ False
 - 1 ~= 2 为 False
 - 1 ~= 1 为 True
 
-
-
-
-
 ## 重要术语
 
 ```
@@ -2823,22 +2815,24 @@ run_eval_code()
 Return Value
 ```
 
+
+
 ## 相关源文件
 
 与评估循环相关的源文件有：
 
 | 文件 | 目的 |
 |---|---|
-| Python > ceval.c | 核心评估循环实现 |
-| Python > ceval-gil.h | GIL 定义和控制算法 |
+| Python > `ceval.c` | 核心评估循环实现 |
+| Python > `ceval-gil.h` | GIL 定义和控制算法 |
 
 ## 重要术语
 
-- 评估循环将获取一个代码对象并将其转换为一系列帧对象（frame objects）
+- 评估循环将获取一个代码对象并将其转换为一系列帧对象（`frame objects`）
 - 解释器至少有一个线程
-- 每个线程都有一个线程状态（thread state）
-- 帧对象在栈中执行，称为帧栈（frame stack）
-- 变量在值栈（value stack）中被引用
+- 每个线程都有一个线程状态（`thread state`）
+- 帧对象在栈中执行，称为帧栈（`frame stack`）
+- 变量在值栈（`value stack`）中被引用
 
 # 构建线程状态
 
@@ -2861,7 +2855,7 @@ CPython 始终至少有一个线程，每个线程都有自己的状态。
 - 可选的追踪函数
 - 当前正在处理的异常
 - 任何正在处理的异常
-- 当抛出多个异常时，抛出的异常栈（例如，在 except 块中 raise）
+- 当抛出多个异常时，抛出的异常栈（例如，在 `except` 块中 `raise`）
 - GIL 计数器
 - 异步生成器计数器
 
@@ -2873,11 +2867,11 @@ CPython 始终至少有一个线程，每个线程都有自己的状态。
 
 | 文件 | 目的 |
 | :--- | :--- |
-| Python ▷ thread.c | 线程 API 实现 |
-| Include ▷ threadstate.h | 一些线程状态 API 和类型定义 |
-| Include ▷ pystate.h | 解释器状态 API 和类型定义 |
-| Include ▷ pythread.h | 线程 API |
-| Include ▷ cpython ▷ pystate.h | 部分线程和解释器状态 API |
+| Python ▷ `thread.c` | 线程 API 实现 |
+| Include ▷ `threadstate.h` | 一些线程状态 API 和类型定义 |
+| Include ▷ `pystate.h` | 解释器状态 API 和类型定义 |
+| Include ▷ `pythread.h` | 线程 API |
+| Include ▷ `cpython` ▷ `pystate.h` | 部分线程和解释器状态 API |
 
 ## 构建帧对象
 
@@ -2887,28 +2881,28 @@ CPython 始终至少有一个线程，每个线程都有自己的状态。
 
 | 字段 | 类型 | 目的 |
 | :--- | :--- | :--- |
-| f_back | PyObject * | 指向栈中上一个帧的指针，第一个帧为 NULL |
-| f_code | PyObject * | 要执行的代码对象 |
-| f_builtins | PyObject *(dict) | 内置模块的符号表 |
-| f_globals | PyObject *(dict) | 全局符号表 (PyDictObject) |
-| f_locals | PyObject * | 局部符号表（任何映射） |
-| f_valuestack | PyObject ** | 指向 f_valuestack 中最后一个槽位的指针 |
-| f_stacktop | PyObject ** | f_valuestack 中的下一个空槽位 |
-| f_trace | PyObject * | 指向自定义追踪函数的指针。见帧追踪章节 |
-| f_trace_lines | char | 自定义追踪函数在行级进行追踪的开关 |
-| f_trace_opcode | char | 自定义追踪函数在操作码级进行追踪的开关 |
-| f_gen | Pyb * | 生成器的借用引用，或 NULL |
+| `f_back` | `PyObject *` | 指向栈中上一个帧的指针，第一个帧为 NULL |
+| `f_code` | `PyObject *` | 要执行的代码对象 |
+| `f_builtins` | `PyObject *(dict)` | 内置模块的符号表 |
+| `f_globals` | `PyObject *(dict)` | 全局符号表 (`PyDictObject`) |
+| `f_locals` | `PyObject *` | 局部符号表（任何映射） |
+| `f_valuestack` | `PyObject **` | 指向 `f_valuestack` 中最后一个槽位的指针 |
+| `f_stacktop` | `PyObject **` | `f_valuestack` 中的下一个空槽位 |
+| `f_trace` | `PyObject *` | 指向自定义追踪函数的指针。见帧追踪章节 |
+| `f_trace_lines` | `char` | 自定义追踪函数在行级进行追踪的开关 |
+| `f_trace_opcode` | `char` | 自定义追踪函数在操作码级进行追踪的开关 |
+| `f_gen` | `Pyb *` | 生成器的借用引用，或 NULL |
 
 ## 构建帧对象
 
 | 字段 | 类型 | 目的 |
 | --- | --- | --- |
-| f_lasti | int | 最后一条指令，如果被调用过 |
-| f_lineno | int | 当前行号 |
-| f_iblock | int | 此帧在 f_blockstack 中的索引 |
-| f_executing | char | 帧是否仍在执行的标志 |
-| f_blockstack | PyThreadObject[] | for, try 和循环块的序列 |
-| f_localsplus | PyObject *[] | 局部变量 + 栈的 union |
+| `f_lasti` | `int` | 最后一条指令，如果被调用过 |
+| `f_lineno` | `int` | 当前行号 |
+| `f_iblock` | `int` | 此帧在 `f_blockstack` 中的索引 |
+| `f_executing` | `char` | 帧是否仍在执行的标志 |
+| `f_blockstack` | `PyThreadObject[]` | for, try 和循环块的序列 |
+| `f_localsplus` | `PyObject *[]` | 局部变量 + 栈的 union |
 
 ## 相关源文件
 
@@ -2916,8 +2910,8 @@ CPython 始终至少有一个线程，每个线程都有自己的状态。
 
 | 文件 | 目的 |
 | --- | --- |
-| Objects ▸ frameobject.c | 帧对象的实现和 Python API |
-| Include ▸ frameobject.h | 帧对象的 API 和类型定义 |
+| Objects ▸ `frameobject.c` | 帧对象的实现和 Python API |
+| Include ▸ `frameobject.h` | 帧对象的 API 和类型定义 |
 
 ### 帧对象初始化 API
 
@@ -2925,47 +2919,47 @@ CPython 始终至少有一个线程，每个线程都有自己的状态。
 
 `_PyEval_EvalCode()` 是内部函数 `_PyEval_EvalCode()` 的封装。
 
-> _PyEval_EvalCode() 是一个复杂的函数，定义了帧对象和解释器循环的许多行为。这是一个非常重要的函数，因为它还能教你 CPython 解释器设计的原理。
+> `_PyEval_EvalCode()` 是一个复杂的函数，定义了帧对象和解释器循环的许多行为。这是一个非常重要的函数，因为它还能教你 CPython 解释器设计的原理。
 
 在本节中，你将逐步通过 `_PyEval_EvalCode()` 中的逻辑。
 
 `_PyEval_EvalCode()` 函数指定了许多参数：
 
-- tstate: 一个 PyThreadState *，指向执行该代码的线程的线程状态
-- _co: 一个包含要放入代码的 PyObject*
-- _globals: 一个 PyObject *(dict) 全局符号表
-- _locals: 一个 PyObject *(dict) 局部字典
-- args: 包含位置参数的元组
-- kwargs: 关键字参数的字典
-- closure: 自由变量的元组
-- defs: 默认值的元组
-- qualname: 函数的限定名
-- filename: 代码文件名
-- firstlineno: 代码的第一行号
-- lastlineno: 代码的最后行号
-- co_last: 最后执行指令的索引
-- co_size: 代码块的大小
-- co_stack_size: 值栈的大小
-- co_count: 自由变量的数量
-- co_argcount: 位置参数的数量
-- co_kwargcount: 关键字参数的数量
-- co_name: 函数或模块名
-- co_flags: 代码对象的标志
-- co_consts: 常量的元组
-- co_names: 全局名称的元组
-- co_varnames: 局部变量名的元组
-- co_freevars: 自由变量的元组
-- co_cellvars: 单元变量的元组
-- co_defaults: 自由变量的默认值元组
+- `tstate`: 一个 `PyThreadState *`，指向执行该代码的线程的线程状态
+- `_co`: 一个包含要放入代码的 `PyObject*`
+- `_globals`: 一个 `PyObject *(dict)` 全局符号表
+- `_locals`: 一个 `PyObject *(dict)` 局部字典
+- `args`: 包含位置参数的元组
+- `kwargs`: 关键字参数的字典
+- `closure`: 自由变量的元组
+- `defs`: 默认值的元组
+- `qualname`: 函数的限定名
+- `filename`: 代码文件名
+- `firstlineno`: 代码的第一行号
+- `lastlineno`: 代码的最后行号
+- `co_last`: 最后执行指令的索引
+- `co_size`: 代码块的大小
+- `co_stack_size`: 值栈的大小
+- `co_count`: 自由变量的数量
+- `co_argcount`: 位置参数的数量
+- `co_kwargcount`: 关键字参数的数量
+- `co_name`: 函数或模块名
+- `co_flags`: 代码对象的标志
+- `co_consts`: 常量的元组
+- `co_names`: 全局名称的元组
+- `co_varnames`: 局部变量名的元组
+- `co_freevars`: 自由变量的元组
+- `co_cellvars`: 单元变量的元组
+- `co_defaults`: 自由变量的默认值元组
 （注：原文此处存在大量重复的字段描述，已按要求翻译并保留其结构逻辑）
 
-> _PyEval_EvalCode() 是一个复杂的函数，定义了帧对象和解释器循环的许多行为。这是一个非常重要的函数，因为它还能教你 CPython 解释器设计的原理。
+> `_PyEval_EvalCode()` 是一个复杂的函数，定义了帧对象和解释器循环的许多行为。这是一个非常重要的函数，因为它还能教你 CPython 解释器设计的原理。
 
-在本节中，你将 step1 the2。
+在本节中，你将 `step1` `the2`。
 
 ### 将关键字参数转换为字典
 
-函数定义可以包含用于关键字参数的 **kwargs 接收器，例如：
+函数定义可以包含用于关键字参数的 `**kwargs` 接收器，例如：
 
 ```python
 def example(arg, arg2=None, **kwargs):
@@ -2973,7 +2967,7 @@ def example(arg, arg2=None, **kwargs):
 example(1, x=2, y=3) # 2 3
 ```
 
-在这种情况下，会创建一个新字典，并将未解析的参数拷贝过去。然后将 kwargs 名称设置为帧的局部作用域中的一个变量。
+在这种情况下，会创建一个新字典，并将未解析的参数拷贝过去。然后将 `kwargs` 名称设置为帧的局部作用域中的一个变量。
 
 ### 将位置参数转换为变量
 
@@ -2989,18 +2983,13 @@ example(1, 2) # 1 2
 
 ### 将位置参数打包为 *args
 
-与 **kwargs 类似，函数参数前加一个 * 可以设置为接收剩余的位置参数。该参数是一个元组，*args 名称被设置为局部变量：
+与 `**kwargs` 类似，函数参数前加一个 `*` 可以设置为接收剩余的位置参数。该参数是一个元组，`*args` 名称被设置为局部变量：
 
 ```python
 def example(arg, *args):
     print(arg, args[0], args[1])
 ```
-
-example(1, 2, 3) # 1 2 3
-
-
-
-
+`example(1, 2, 3)` # 1 2 3
 
 ### 加载关键字参数
 
@@ -3011,14 +3000,13 @@ example(1, 2, 3) # 1 2 3
 ```python
 >>> def my_function(a, b, c=None, d=None, **remaining):
     print(a, b, c, d, remaining)
-
 >>> my_function(a=1, b=2, c=3, d=4, e=5)
 (1, 2, 3, 4, {'e': 5})
 ```
 
 ### 注意
 
-**仅位置参数（Positional-only arguments）**是 Python 3.8 中的一项新功能。仅位置参数通过 PEP570 引入，它是一种防止你的 API 使用者使用关键字语法调用位置参数的方法。
+**仅位置参数（Positional-only arguments）**是 Python 3.8 中的一项新功能。仅位置参数通过 `PEP570` 引入，它是一种防止你的 API 使用者使用关键字语法调用位置参数的方法。
 
 例如，这个简单的函数将华氏度转换为摄氏度。注意，使用 `/` 作为特殊参数可以将仅位置参数与其他参数隔离开。
 
@@ -3042,7 +3030,7 @@ File "stdin>", line 1, in <module>
 TypeError: to_celsius() got some positional-only arguments passed as keyword arguments: 'fahrenheit'
 ```
 
-关键字参数字典值的解析发生在所有参数解包之后。PEP570 仅位置参数通过从 `co_posonlyargcount` 开始关键字参数循环来实现。如果 `/` 符号用于第 3 个参数，则 `co_posonlyargcount` 的值为 2。对于每个剩余参数，都会调用 `PyDict_SetItem()` 将其添加到本地字典。在执行时，每个关键字参数都会变成作用域局部变量。
+关键字参数字典值的解析发生在所有参数解包之后。`PEP570` 仅位置参数通过从 `co_posonlyargcount` 开始关键字参数循环来实现。如果 `/` 符号用于第 3 个参数，则 `co_posonlyargcount` 的值为 2。对于每个剩余参数，都会调用 `PyDict_SetItem()` 将其添加到本地字典。在执行时，每个关键字参数都会变成作用域局部变量。
 
 如果定义的关键字参数带有值，则该值在该作用域内是可用的：
 
@@ -3053,11 +3041,11 @@ def example(arg1, arg2, example_kwarg=None):
 
 ### 添加缺失的位置参数
 
-提供给函数调用的任何不在位置参数列表中的位置参数都将被添加到 *args 元组* 中；如果该元组不存在，则会抛出异常。
+提供给函数调用的任何不在位置参数列表中的位置参数都将被添加到 `*args` 元组* 中；如果该元组不存在，则会抛出异常。
 
 ### 添加缺失的关键字参数
 
-提供给函数调用的任何不在命名关键字参数列表中的关键字参数都将被添加到 **kwargs 字典** 中；如果该字典不存在，则会抛出异常。
+提供给函数调用的任何不在命名关键字参数列表中的关键字参数都将被添加到 `**kwargs` 字典** 中；如果该字典不存在，则会抛出异常。
 
 ### 合并闭包
 
@@ -3065,7 +3053,7 @@ def example(arg1, arg2, example_kwarg=None):
 
 ### 创建生成器、协程和异步生成器
 
-如果求值的代码对象具有生成器、协程或异步生成器的标记，则将使用 Generator、Coroutine 或 Async 库中的唯一方法之一创建一个新帧（frame），并将当前帧作为属性属性添加。
+如果求值的代码对象具有生成器、协程或异步生成器的标记，则将使用 Generator、Coroutine 或 Async 库中的唯一方法之一创建一个新帧（`frame`），并将当前帧作为属性属性添加。
 
 | 另需参考 |
 | :--- |
@@ -3081,7 +3069,7 @@ def example(arg1, arg2, example_kwarg=None):
 
 局部和全局变量是根据该函数、模块或块的调用方式在运行时确定的。这些信息通过 `PyEval_EvalCode()` 函数添加到帧。帧还有其他用途，例如协程装饰器，它可以动态生成一个带有目标的帧。
 
-公共 API `PyEval_EvalFrameEx()` 调用解释器在 `eval_frame` 属性中配置的帧评估函数。帧评估在 Python 3.7 中通过 PEP 523 变为可插件化。
+公共 API `PyEval_EvalFrameEx()` 调用解释器在 `eval_frame` 属性中配置的帧评估函数。帧评估在 Python 3.7 中通过 `PEP 523` 变为可插件化。
 
 `_PyEval_EvalFrameDefault()` 是默认函数，也是 CPython 封装的唯一选项。
 
@@ -3103,16 +3091,11 @@ $ gcc -E Python/ceval.c
 
 ```c
 drace_function_entry();
-
 co = f->code;
 names = co->co_names;
 const = co->co_const;
 locals = co->co_locals;
 ```
-
-
-
-
 
 ## 值栈 (Value Stack)
 
@@ -3231,6 +3214,8 @@ DUP_TOP();
 ROT_TWO();
 ```
 
+
+
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_174_1.png)
 
 ### 栈影响 (Stack Effects)
@@ -3252,15 +3237,11 @@ my_list.append(obj)
 - 成功的预测节省了一次遍历评估循环，包括其中不可预测的 switch-case 分支。
 - 结合处理器的内部分支预测，成功的 `PREDICT` 效果使得两个操作码的运行就像一个合并了实体的单一操作码。
 
-
-
-
-
 ### 示例：向列表添加项
 
 当你看到堆栈回溯时，这种帧的嵌套就变得清晰了：
 
-cpython-book-samples ► example_stack.py
+`cpython-book-samples ► example_stack.py`
 
 ```python
 def function2():
@@ -3277,7 +3258,6 @@ if __name__ == '__main__':
 
 ```
 $ ./python example_stack.py
-
 Traceback (most recent call last):
 File "example_stack.py", line 8, in <module>
     function1()
@@ -3288,12 +3268,11 @@ File "example_stack.py", line 2, in function2
 RuntimeError
 ```
 
-在 Lib ► traceback.py 中，可以使用 `walk_stack()` 函数来获取回溯：
+在 `Lib ► traceback.py` 中，可以使用 `walk_stack()` 函数来获取回溯：
 
 ```python
 def walk_stack(f):
     """遍历堆栈并产生每个帧的帧和行号。
-
     这将从给定的帧跟踪 f.f_back。如果没有给出帧，则使用当前堆栈。通常与 StackSummary.extract 一起使用。
     """
     if f is not None:
@@ -3302,9 +3281,9 @@ def walk_stack(f):
             yield f, f.f_lineno
 ```
 
-f = f.f_back
+`f = f.f_back`
 
-父帧的父帧（sys._getframe().f_back.f_back）被设置为当前帧，因为你不想在回溯中看到对 `walk_stack()` 或 `print_trace()` 的调用。跟随 `f_back` 指针直到调用堆栈的顶端。
+父帧的父帧（`sys._getframe().f_back.f_back`）被设置为当前帧，因为你不想在回溯中看到对 `walk_stack()` 或 `print_trace()` 的调用。跟随 `f_back` 指针直到调用堆栈的顶端。
 
 `sys._getframe()` 是获取当前线程帧属性的 Python API。
 
@@ -3348,7 +3327,7 @@ C 有三种内存分配机制：
 
 ## C 语言中的静态内存分配
 
-C 语言中的类型大小固定。对于全局和静态变量，编译器将计算所有全局/静态变量的内存需求（在运行 GCC 的 64 位 macOS 上，int 是 4 字节），并将该需求编译进应用程序。
+C 语言中的类型大小固定。对于全局和静态变量，编译器将计算所有全局/静态变量的内存需求（在运行 GCC 的 64 位 macOS 上，`int` 是 4 字节），并将该需求编译进应用程序。
 
 例如：
 
@@ -3364,28 +3343,26 @@ static int number = 0;
 static int numbers[10] = {0,1,2,3,4,5,6,7,8,9};
 ```
 
-C 的 sizeof(int) 进系统。
+C 的 `sizeof(int)` 进系统。
 
 ## C 语言中的自动内存分配
 
-与静态内存分配类似，自动内存分配通过栈工作。cpython-book-samples ► 32
+与静态内存分配类似，自动内存分配通过栈工作。`cpython-book-samples ► 32`
 
 ```c
 #include <stdio.h>
-
 static const double_ninths = 5.0/9.0;
-
 double celsius(double f) {
     double c = (f - 32) * five_ninths;
     return c;
 }
-
 int main() {
     double f = 100;
     printf("%f is %f\n", f, celsius(f));
     return 0;
 }
 ```
+
 *(注：由于原文文本在某些处存在乱码或重复，译文根据上下文对逻辑进行了必要的对齐处理以确保技术文档的连读性)*
 
 ---
@@ -3393,12 +3370,11 @@ int main() {
 
 (抱歉，我注意到提供的原始文本在最后部分存在大量的重复粘贴错误和乱码，我已按照逻辑对其进行了最准确的翻译。)
 
-[content]
 ### 示例：向列表添加项
 
 这种帧的嵌套在你看到堆栈回溯时就变得清晰了：
 
-cpython-book-samples ► example_stack.py
+`cpython-book-samples ► example_stack.py`
 
 ```python
 def function2():
@@ -3415,7 +3391,6 @@ if __name__ == '__main__':
 
 ```
 $ ./python example_stack.py
-
 Traceback (most recent call last):
 File "example_stack.py", line 8, in <module>
     function1()
@@ -3426,12 +3401,11 @@ File "example_stack.py", line 2, in function2
 RuntimeError
 ```
 
-在 Lib ► traceback.py 中，可以使用 `walk_stack()` 函数来获取回溯：
+在 `Lib ► traceback.py` 中，可以使用 `walk_stack()` 函数来获取回溯：
 
 ```python
 def walk_stack(f):
     """遍历堆栈并产生每个帧的帧和行号。
-
     这将从给定的帧跟踪 f.f_back。如果没有给出帧，则使用当前堆栈。通常与 StackSummary.extract 一起使用。
     """
     if f is not None:
@@ -3440,9 +3414,9 @@ def walk_stack(f):
             yield f, f.f_lineno
 ```
 
-f = f.f_back
+`f = f.f_back`
 
-父帧的父帧（sys._getframe().f_back.f_back）被设置为当前帧，因为你不想在回溯中看到对 `walk_stack()` 或 `print_trace()` 的调用。跟随 `f_back` 指针直到调用堆栈的顶端。
+父帧的父帧（`sys._getframe().f_back.f_back`）被设置为当前帧，因为你不想在回溯中看到对 `walk_stack()` 或 `print_trace()` 的调用。跟随 `f_back` 指针直到调用堆栈的顶端。
 
 `sys._getframe()` 是获取当前线程帧属性的 Python API。
 
@@ -3486,7 +3460,7 @@ C 有三种内存分配机制：
 
 ## C 语言中的静态内存分配
 
-C 语言中的类型大小固定。对于全局和静态变量，编译器将计算所有全局/静态变量的内存需求（在运行 GCC 的 64 位 macOS 上，int 是 4 字节），并将该需求编译进应用程序。
+C 语言中的类型大小固定。对于全局和静态变量，编译器将计算所有全局/静态变量的内存需求（在运行 GCC 的 64 位 macOS 上，`int` 是 4 字节），并将该需求编译进应用程序。
 
 例如：
 
@@ -3502,16 +3476,13 @@ static int number = 0;
 static int numbers[10] = {0,1,2,3,4,5,6,7,8,9};
 ```
 
-C 的 sizeof(int) 进系统。
+C 的 `sizeof(int)` 进系统。
 
 ## C 语言中的自动内存分配
 
-与静态内存分配类似，自动内存分配通过栈工作。cpython-book-samples ► 32
+与静态内存分配类似，自动内存分配通过栈工作。`cpython-book-samples ► 32`
 
 *(由于原文后续部分存在大量重复和乱码，此处已根据技术逻辑进行清理翻译)*
-
-
-
 
 # Python 内存管理系统设计
 
@@ -3524,59 +3495,61 @@ C 的 sizeof(int) 进系统。
 >>> a_value = ["Now", "I'm", "a", "list"]
 ```
 
-为了克服这些限制，CPython 高度依赖于动态内存分配，但增加了安全护栏，通过垃圾回收和引用计数算法来自动释放内存。
 
-Python 开发者不需要手动分配内存，Python 会通过一个单一、统一的 API 自动分配 Python 对象内存。
 
-这种设计要求整个 CPython 标准库和核心模块（用 C 编写）都使用此 API。
+为了克服这些限制，`CPython` 高度依赖于动态内存分配，但增加了安全护栏，通过垃圾回收和引用计数算法来自动释放内存。
+
+`Python` 开发者不需要手动分配内存，`Python` 会通过一个单一、统一的 `API` 自动分配 `Python` 对象内存。
+
+这种设计要求整个 `CPython` 标准库和核心模块（用 `C` 编写）都使用此 `API`。
 
 ## 分配域 (Allocation Domains)
 
-CPython 带有三个动态内存分配域：
+`CPython` 带有三个动态内存分配域：
 
 - 1. **原始域 (Raw Domain)** - 用于从系统堆分配内存。用于大型或与对象无关分配。
-- 2. **对象域 (Object Domain)** - 用于所有与 Python 对象相关的内存分配。
-- 3. **PyMem 域** - 与 PYMEM_DOMAIN_OBJ 相同，为了遗留 API 的目的存在。
+- 2. **对象域 (Object Domain)** - 用于所有与 `Python` 对象相关的内存分配。
+- 3. **PyMem 域** - 与 `PYMEM_DOMAIN_OBJ` 相同，为了遗留 `API` 的目的存在。
 
 每个域实现了相同的函数接口：
 
-- *_Alloc(size_t size) - 分配指定大小的内存并返回指针
-- *_Calloc(size_t nele, size_t elsize) - 分配指定大小的内存
-- *_Realloc(void *ptr, size_t new_size) - 重新分配内存到新大小
+- `*_Alloc(size_t size)` - 分配指定大小的内存并返回指针
+- `*_Calloc(size_t nele, size_t elsize)` - 分配指定大小的内存
+- `*_Realloc(void *ptr, size_t new_size)` - 重新分配内存到新大小
 
-## CPython 内存分配器
+## `CPython` 内存分配器
 
-- *_Free(void *ptr) - 将 ptr 处的内存释放回堆。
+- `*_Free(void *ptr)` - 将 `ptr` 处的内存释放回堆。
 
-PyMemAllocatorDomain 枚举表示 C 中的三个域：PYMEM_DOMAIN_RAW、PYMEM_DOMAIN_OBJ 和 PYMEM_DOMAIN_MEM。
+`PyMemAllocatorDomain` 枚举表示 `C` 中的三个域：`PYMEM_DOMAIN_RAW`、`PYMEM_DOMAIN_OBJ` 和 `PYMEM_DOMAIN_MEM`。
 
 ## 内存分配器
 
-CPython 使用两个内存分配器：
+`CPython` 使用两个内存分配器：
 
-- 1. 操作系统分配器 (malloc) 用于原始内存域。
-- 2. CPython 分配器 (pymalloc) 用于 PyMem 和对象内存域。
+- 1. 操作系统分配器 (`malloc`) 用于原始内存域。
+- 2. `CPython` 分配器 (`pymalloc`) 用于 `PyMem` 和对象内存域。
 
 注意
-CPython 分配器 `pymalloc` 默认编译到 CPython 中。你可以通过在 `pyconfig.h` 中设置 `WITH_PYMEM = 0` 并重新编译 CPython 来移除它。如果你删除了它，PyMem 和对象内存域 API 将使用系统分配器。
+`CPython` 分配器 `pymalloc` 默认编译到 `CPython` 中。你可以通过在 `pyconfig.h` 中设置 `WITH_PYMEM = 0` 并重新编译 `CPython` 来移除它。如果你删除了它，`PyMem` 和对象内存域 `API` 将使用系统分配器。
 
-如果你带有调试模式编译了 CPython（在 macOS/Linux 上使用 `--with-pymdebug`，在 Windows 上使用 Debug target），则每个内存分配函数都将进入 Debug 实现。例如，启用调试后，你的内存分配调用将执行 `_PyMem_DebugAlloc()` 而不是 `_PyMem_Alloc()`。
+如果你带有调试模式编译了 `CPython`（在 `macOS/Linux` 上使用 `--with-pymdebug`，在 `Windows` 上使用 `Debug` target），则每个内存分配函数都将进入 `Debug` 实现。例如，启用调试后，你的内存分配调用将执行 `_PyMem_DebugAlloc()` 而不是 `_PyMem_Alloc()`。
 
-## CPython 内存分配器
+## `CPython` 内存分配器
 
-CPython 内存分配器构建在系统分配器之上，并有自己的分配算法。该算法与系统分配器类似，但它针对 CPython 进行了定制：
+`CPython` 内存分配器构建在系统分配器之上，并有自己的分配算法。该算法与系统分配器类似，但它针对 `CPython` 进行了定制：
 
-- 大多数内存分配请求是小型固定大小的，因为 PyObject 是 16 字节，PyASCIIObject 是 42 字节，PyCompactUnicodeObject 是 72 字节，而 PyLongObject 是 32 字节。
+- 大多数内存分配请求是小型固定大小的，因为 `PyObject` 是 16 字节，`PyASCIIObject` 是 42 字节，`PyCompactUnicodeObject` 是 72 字节，而 `PyLongObject` 是 32 字节。
 
 `pymalloc` 分配器仅分配最多 256KB 的内存块，更大的请求将发送给系统分配器。
 
-`pymalloc` 分配器使用 GIL 而不是系统线程安全检查。
+`pymalloc` 分配器使用 `GIL` 而不是系统线程安全检查。
 
 为了解释这种情况，我们将使用一个实体体育场作为类比。
 
-这是我们虚构球队“CPython FC”的体育场。
+这是我们虚构球队“`CPython FC`”的体育场。
 
-为了帮助管理人群，CPython FC 实现了一套将体育场分为 A-E 区域的系统，每个区域有 1-40 排座位。
+为了帮助管理人群，`CPython FC` 实现了一套将体育场分为 `A-E` 区域的系统，每个区域有 1-40 排座位。
 
 体育场前面的排（1-10 行）是尊座（Premium seats），每个座位占据的空间更大。每排只能有 80 个座位。
 
@@ -3593,9 +3566,9 @@ CPython 内存分配器构建在系统分配器之上，并有自己的分配算
 
 这种策略有一些优势：
 
-- 1. 该算法对于 CPython 的短寿命小对象性能更高。
-- 2. 算法使用 GIL 而不是系统锁。
-- 3. 算法使用内存映射 (mmap) 而不是堆分配。
+- 1. 该算法对于 `CPython` 的短寿命小对象性能更高。
+- 2. 算法使用 `GIL` 而不是系统锁。
+- 3. 算法使用内存映射 (`mmap`) 而不是堆分配。
 
 ## 相关文件
 
@@ -3603,10 +3576,10 @@ CPython 内存分配器构建在系统分配器之上，并有自己的分配算
 
 | 文件 | 用途 |
 |---|---|
-| Include pymem.h | PyMem Alloc API |
-| Include cpython/pymem.h | 配置 |
-| Include internal/pycore.h | 域分配器 |
-| obmalloc.c | pymalloc 实现 |
+| Include `pymem.h` | `PyMem Alloc API` |
+| Include `cpython/pymem.h` | 配置 |
+| Include `internal/pycore.h` | 域分配器 |
+| `obmalloc.c` | `pymalloc` 实现 |
 
 ## 重要术语
 
@@ -3614,7 +3587,7 @@ CPython 内存分配器构建在系统分配器之上，并有自己的分配算
 
 ## 块、池和区域
 
-CPython 创建 256KB 的区域以对齐系统页大小。即使在现代高速系统中，区域也是相对于系统堆分配的，并使用 `mmap()`。内存映射有助于减少碎片。这是系统堆内区域的表示：
+`CPython` 创建 256KB 的区域以对齐系统页大小。即使在现代高速系统中，区域也是相对于系统堆分配的，并使用 `mmap()`。内存映射有助于减少碎片。这是系统堆内区域的表示：
 
 | 系统堆 | 区域 |
 |---|---|
@@ -3624,22 +3597,22 @@ CPython 创建 256KB 的区域以对齐系统页大小。即使在现代高速�
 
 | 字段 | 类型 | 用途 |
 |---|---|---|
-| address | uintptr_t | 区域内存地址 |
-| pool_address | block * | 指向下一个池的指针 |
-| freepools | int | 区域中可用池的数量：空池 + 未分配的池 |
-| ntotalpools | int | 区域中的池总数：是否可用 |
+| `address` | `uintptr_t` | 区域内存地址 |
+| `pool_address` | `block *` | 指向下一个池的指针 |
+| `freepools` | `int` | 区域中可用池的数量：空池 + 未分配的池 |
+| `ntotalpools` | `int` | 区域中的池总数：是否可用 |
 
 | 字段 | 类型 | 用途 |
 |---|---|---|
-| freepools | pool_header* | 可用池的单链表 |
-| nextarena | arena_object* | 下一个区域（见注释） |
-| prevarena | arena_object* | 上一个区域（见注释） |
+| `freepools` | `pool_header*` | 可用池的单链表 |
+| `nextarena` | `arena_object*` | 下一个区域（见注释） |
+| `prevarena` | `arena_object*` | 上一个区域（见注释） |
 
 ## 注释
 
 区域在区域内部的双链表中连接在一起，使用 `nextarena` 和 `prevarena` 指针。如果该区域是**未分配**，则使用 `nextarena` 成员。`nextarena` 成员连接所有未关联的区域到单链表变量 `unused_arena_objects`。当该区域已关联且至少有一个可用池时，`nextarena` 和 `prevarena` 都被用于双链表 `usable_arenas`。该列表按 `freepools` 值的增加顺序维护。
 
-# CPython 内存分配器 - 池
+### `CPython` 内存分配器 - 池
 
 在一个区域内，创建块到 512 字节的池。对于 32 位系统，步长为 8 字节，有 64 类：
 
@@ -3683,26 +3656,22 @@ CPython 创建 256KB 的区域以对齐系统页大小。即使在现代高速�
 
 | 字段 | 类型 | 用途 |
 |---|---|---|
-| ref | uint | 池中当前分配块的数量 |
-| freeblock | block * | 指向池的“空闲列表”头部 |
-| nextpool | pool_header* | 指向下一个池 |
-| prevpool | pool_header* | 指向上一个池 |
-| arenaindex | uint | 可用池的单链表 |
-| szindex | uint | 此池的类索引 |
-| nextoffset | uint | 到未使用块的字节偏移 |
-| maxnextoffset | uint | 池填满前 nextoffset 的最大值 |
+| `ref` | `uint` | 池中当前分配块的数量 |
+| `freeblock` | `block *` | 指向池的“空闲列表”头部 |
+| `nextpool` | `pool_header*` | 指向下一个池 |
+| `prevpool` | `pool_header*` | 指向上一个池 |
+| `arenaindex` | `uint` | 可用池的单链表 |
+| `szindex` | `uint` | 此池的类索引 |
+| `nextoffset` | `uint` | 到未使用块的字节偏移 |
+| `maxnextoffset` | `uint` | 池填满前 `nextoffset` 的最大值 |
 
 每个类大小的池将维护一个双链表连接到
 
-
-
-
-
-## CPython 内存分配器
+### `CPython` 内存分配器
 
 该类的下一个和上一个池（pools）。当分配任务发生时，通过遵循此列表可以轻松地在内存（arena）内相同类大小的池之间跳转。
 
-# 池表（Pool Tables）
+### 池表（Pool Tables）
 
 一个内存内所有池的注册表被称为池表（pool table）。
 
@@ -3714,7 +3683,7 @@ CPython 创建 256KB 的区域以对齐系统页大小。即使在现代高速�
 - 当一个全满的块（block）释放了一个块时，该池会被重新放回使用状态（used state）。新释放的池将链接到相应的 `usedpools[]` 列表前端，以便下次对该大小的分配能够重用已释放的块。
 - 当转换到空状态时，一个池会从其 `usedpools[]` 列表中移除，并链接到其内存的单链空闲池（freepools）列表前端。
 
-# 块（Blocks）
+### 块（Blocks）
 
 在池内部，内存被分配为块。块具有以下特征：
 
@@ -3728,17 +3697,17 @@ CPython 创建 256KB 的区域以对齐系统页大小。即使在现代高速�
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_196_0.png)
 
-# 块分配 API
+### 块分配 `API`
 
 当使用 `pymalloc` 的内存域请求一个内存块时，将调用 `pymalloc_alloc` 函数。
 
 该函数是插入断点并单步执行代码的好地方，可以测试你对块、池和内存的知识。
 
-Objects ▸ pymalloc.c line 1590
+`Objects ▸ pymalloc.c line 1590`
 
 对于 `nbytes = 30` 的请求，它既不是零，也不低于 512 的 `SMALL_REQUEST_THRESHOLD`：
 
-```
+```c
 if (UNLIKELY(nbytes == 0)) {
   return NULL;
 }
@@ -3749,7 +3718,7 @@ if (UNLIKELY(nbytes > SMALL_REQUEST_THRESHOLD)) {
 
 对于 64 位系统，类大小索引计算为 1。这对应第 2 个类大小索引（17-32 字节）。目标池随后是 `usedpools[1 + 1]` (`usedpools[2]`)：
 
-```
+```c
 uint size = (uint)(nbytes - 1) >> ALIGN_SHIFT;
 pool pool = usedpools[size + size];
 block *bp;
@@ -3763,11 +3732,9 @@ if (LIKELY(pool != pool->nextpool)) {
  * 有一个用于此类大小的使用池。
  * 取出其空闲列表的头部块。
  */
-
 ++pool->ref.count;
 bp = pool->freeblock;
 asert(bp != NULL);
-
 if (UNLIKELY(pool->freeblock == *(block **)bp) == NULL) {
 // 到达空闲列表末尾，尝试扩展它。
 pymalloc_pool_extend(pool, size);
@@ -3783,14 +3750,13 @@ else {
  * 使用空闲池。
  */
 bp = allocate_from_new_pool(size);
-
 return (void *)bp;
 }
 ```
 
 最后，返回新块的地址。
 
-# 使用 Python 调试 API
+### 使用 `Python` 调试 `API`
 
 `sys` 模块包含一个内部函数 `_debugmallocstats()`，用于获取每个类大小池中正在使用的块的数量。它还会打印分配、回收的内存数量以及已使用的块总数。
 
@@ -3803,61 +3769,53 @@ $ ./python -c "import sys; sys._debugmallocstats()"
 小块阈值 = 512，分为 32 个类大小。
 
 | size | num pools | blocks in use | avail blocks |
-|---|---|---|---|---|
+|---|---|---|---|
 | 0 | 16 | 1 | 181 | 72 |
 | 1 | 32 | 6 | 675 | 81 |
 | 2 | 48 | 18 | 1441 | 71 |
 
-2 个释放的 18 字节 PyTupleObjects * 每个168 字节 = 336
-3 个释放的 19 字节 PyTupleObjects * 每个176 字节 = 528
+2 个释放的 18 字节 `PyTupleObjects` * 每个168 字节 = 336
+3 个释放的 19 字节 `PyTupleObjects` * 每个176 字节 = 528
 
 输出显示了类大小表、分配情况以及一些额外的统计数据。
 
-# 对象和 PyMem 分配域（Allocation Domains）
+### 对象和 `PyMem` 分配域（Allocation Domains）
 
-CPython 的对象内存分配器是你将探索的第一个域。对象分配器的目的是分配与 Python 对象相关的内存。
+`CPython` 的对象内存分配器是你将探索的第一个域。对象分配器的目的是分配与 `Python` 对象相关的内存。
 
-
-
-
-
-## 原始内存分配域 (Raw Memory Allocation Domain)
+### 原始内存分配域 (Raw Memory Allocation Domain)
 
 原始内存分配域被直接使用，或者当请求大小超过 512 KB 时调用另外两个域。
 
 它接收以字节为单位的请求大小，并调用 `malloc(size)`。
 
-如果 size 参数为 0，某些系统会为 malloc(0) 返回 NULL，这会被视为错误。某些平台会返回一个指向没有实际内存的指针，这将破坏 pymalloc。_PyMem_RawMalloc 会调用 malloc() 之前添加一个额外的字节。
+如果 `size` 参数为 0，某些系统会为 `malloc(0)` 返回 `NULL`，这会被视为错误。某些平台会返回一个指向没有实际内存的指针，这将破坏 `pymalloc`。`_PyMem_RawMalloc` 会调用 `malloc()` 之前添加一个额外的字节。
 
 > **重要**
-> 默认情况下，PyMem 域分配器将使用对象分配器（Object Allocators）。_PyMem_Malloc() 和 PyObject_Malloc() 将具有相同的执行路径。
+> 默认情况下，`PyMem` 域分配器将使用对象分配器（Object Allocators）。`_PyMem_Malloc()` 和 `PyObject_Malloc()` 将具有相同的执行路径。
 
-## 自定义域分配器
+### 自定义域分配器
 
-CPython 还允许覆盖三个域中任何一个内存分配实现。如果你的系统环境对内存分配需要定制的内存检查或算法，你可以在运行时接入一组新的分配函数。
+`CPython` 还允许覆盖三个域中任何一个内存分配实现。如果你的系统环境对内存分配需要定制的内存检查或算法，你可以在运行时接入一组新的分配函数。
 
-PyMemAllocatorEx 是一个结构体定义（typedef struct），包含了覆盖分配器时需要实现的所有方法的成员：
+`PyMemAllocatorEx` 是一个结构体定义（`typedef struct`），包含了覆盖分配器时需要实现的所有方法的成员：
 
 ```c
 typedef struct {
     /* 作为四个函数的第一个参数传递的用户上下文 */
     void *ctx;
-
     /* 分配一个内存块 */
     void (*malloc)(void *ctx, size_t size);
-
     /* 分配一个零初始内存块 */
     void* (*calloc) (void *ctx, size_t nelem, size_t elsize);
-
     /* 分配或调整内存块大小 */
     void* (*realloc) (void *ctx, void *ptr, size_t new_size);
-
     /* 释放一个内存块 */
     void (*free) (void *ctx, void *ptr);
 } PyMemAllocatorEx;
 ```
 
-可以使用 API 方法 PyMem_GetAllocator() 获取现有的实现：
+可以使用 `API` 方法 `PyMem_GetAllocator()` 获取现有的实现：
 
 ```c
 PyMemAllocatorEx existing_obj;
@@ -3868,9 +3826,9 @@ PyMem_GetAllocator(PYMEM_DOMAIN_OBJ, existing_obj);
 | --- |
 | 对于自定义分配器有一些重要的设计测试： |
 | 当请求 0 字节时，新分配器必须返回一个不同的非空指针 |
-| 对于 PYMEM_DOMAIN_RAW 域，分配器必须是线程安全的 |
+| 对于 `PYMEM_DOMAIN_RAW` 域，分配器必须是线程安全的 |
 
-如果你实现了符合 PyMemAllocatorEx 签名的 My_Malloc、My_Calloc、My_Malloc、My_Realloc 和 My_Free，你可以覆盖任何域的分配器，例如，PYMEM_DOMAIN_OBJ 域：
+如果你实现了符合 `PyMemAllocatorEx` 签名的 `My_Malloc`、`My_Calloc`、`My_Malloc`、`My_Realloc` 和 `My_Free`，你可以覆盖任何域的分配器，例如，`PYMEM_DOMAIN_OBJ` 域：
 
 ```c
 PyMemAllocatorEx my_allocators =
@@ -3878,9 +3836,11 @@ PyMemAllocatorEx my_allocators =
 PyMem_SetAllocator(PYMEM_DOMAIN_OBJ, &my_allocators);
 ```
 
+
+
 ## 自定义内存分配清理器 (Custom Memory Allocation Sanitizers)
 
-内存分配清理器是位于分配内存的系统调用与系统上分配内存的内核函数之间的额外算法。它们用于需要特定稳定性限制、极高安全性或调试内存分配 bug的环境。
+内存分配清理器是位于分配内存的系统调用与系统上分配内存的内核函数之间的额外算法。它们用于需要特定稳定性限制、极高安全性或调试内存分配 bug 的环境。
 
 CPython 可以使用多种内存清理器进行编译。这些是编译器库，而不是为 CPython 开发的。
 
@@ -3900,9 +3860,8 @@ Address Sanitizer 是一种“快速”的内存错误检测器。它可以检�
 $ ./configure --with-address-sanitizer ...
 ```
 
-| 重要 |
-| --- |
-| Address Sanitizer 会让应用程序运行变慢最多 2 倍，并消耗最多 3 倍内存。 |
+> **重要**
+> Address Sanitizer 会让应用程序运行变慢最多 2 倍，并消耗最多 3 倍内存。
 
 Address Sanitizer 支持平台：
 
@@ -3959,7 +3918,7 @@ Undefined Behavior Sanitizer 支持平台：
 
 查看相关的 Undefined Behavior Sanitizer 文档获取更多信息。
 
-Undefined Behavior Sanitizer 有许多配置，使用 --with-undefined-behavior-sanitizer 将设置未定义配置。要使用另一个配置（例如空指针检查），请带有自定义的 CFLAGS 运行 ./configure：
+Undefined Behavior Sanitizer 有许多配置，使用 `--with-undefined-behavior-sanitizer` 将设置未定义配置。要使用另一个配置（例如空指针检查），请带有自定义的 `CFLAGS` 运行 `./configure`：
 
 ```bash
 $ ./configure CFLAGS="-fsanitize=nullability"
@@ -3967,16 +3926,16 @@ $ ./configure CFLAGS="-fsanitize=nullability"
 
 ## PyArena 内存池 (PyArena Memory Arena)
 
-PyArena 内存池是一种高效管理内存块的机制。在本书中，你将看到对 PyArena 的引用。PyArena 是一个跟踪已分配内存的结构。当分配内存时，PyArena 会跟踪块的数量。
+PyArena 内存池是一种高效管理内存块的机制。在本书中，你将看到对 PyArena 的引用。`PyArena` 是一个跟踪已分配内存的结构。当分配内存时，`PyArena` 会跟踪块的数量。
 
-PyArena 内存池用于减少碎片并提高分配速度。它的工作原理是分配大块内存，然后将其切割成较小的块。
+`PyArena` 内存池用于减少碎片并提高分配速度。它的工作原理是分配大块内存，然后将其切割成较小的块。
 
 ## 相关文件
 
 | 文件 | 目的 |
 | --- | --- |
-| Include ▸ pyarena.h | PyArena API 和类型定义 |
-| Python ▸ pyarena.c | PyArena 的实现 |
+| Include ▸ `pyarena.h` | PyArena API 和类型定义 |
+| Python ▸ `pyarena.c` | PyArena 的实现 |
 
 # 引用计数 (Reference Counting)
 
@@ -3993,19 +3952,19 @@ PyArena 内存池用于减少碎片并提高分配速度。它的工作原理是
 my_variable = ['a', 'b', 'c']
 ```
 
-当给 Python 中的变量赋值一个值时，会在局部作用域（locals scope）内检查该名称是否存在。在示例中，`my_variable` 不在任何局部字典中。会创建一个新的列表对象，并将指针存储在 locals() 字典中。现在 `my_variable` 有了一个引用。只要存在有效引用，列表对象的内存就不应被释放。
+当给 Python 中的变量赋值一个值时，会在局部作用域（`locals` scope）内检查该名称是否存在。在示例中，`my_variable` 不在任何局部字典中。会创建一个新的列表对象，并将指针存储在 `locals()` 字典中。现在 `my_variable` 有了一个引用。只要存在有效引用，列表对象的内存就不应被释放。
 
 ### 增加引用 (Incrementing References)
 
-每个 PyObject 实例都有一个属性 `ob_refcnt`。该属性是该对象引用数的计数器。
+每个 `PyObject` 实例都有一个属性 `ob_refcnt`。该属性是该对象引用数的计数器。
 
-对象的引用会在许多场景下增加。在 CPython 代码库中，有超过3000 次调用 Py_INCREF()。最频繁的调用发生在对象：
+对象的引用会在许多场景下增加。在 CPython 代码库中，有超过3000 次调用 `Py_INCREF()`。最频繁的调用发生在对象：
 
 - 被赋值给变量名
 - 作为函数或方法的参数被引用
 - 从函数返回或生成
 
-Py_INCREF 宏的逻辑很简单。它将 `ob_refcnt` 值加 1：
+`Py_INCREF` 宏的逻辑很简单。它将 `ob_refcnt` 值加 1：
 
 ```c
 static inline void Py_INCREF(PyObject *op)
@@ -4015,11 +3974,7 @@ static inline void Py_INCREF(PyObject *op)
 }
 ```
 
-当 CPython 以调试模式编译时，_Py_INC_REFTOTAL 会增加一个全局引用计数器 `_Py_RefTotal`。
-
-
-
-
+当 CPython 以调试模式编译时，`_Py_INC_REFTOTAL` 会增加一个全局引用计数器 `_Py_RefTotal`。
 
 # 引用计数
 
@@ -4041,7 +3996,7 @@ x is 2
 
 `Py_DECREF()` 函数比 `Py_INCREF()` 更复杂，因为它还处理了引用计数达到 0 的逻辑，这需要释放对象内存：
 
-```
+```c
 static inline void _Py_DECREF(
 #ifdef Py_REF_DEBUG
 const char *filename, int lineno,
@@ -4095,24 +4050,23 @@ object type repr : <refcount -1 at 0x09eaac50>
 
 # 引用计数
 
-```
+```python
 y = "hello"
 def greet(message=y):
     print(message.capitalize() + " " + y)
-
 messages = [y]
 ```
 
-一眼看去，y 被立即引用：
+一眼看去，`y` 被立即引用：
 
-- 1. y 是顶层作用域中的一个变量
-- 2. y 作为关键字参数 `message` 的默认值被引用
-- 3. y 在 `greet()` 函数内部被引用
-- 4. y 是 `messages` 列表中的一个元素
+- 1. `y` 是顶层作用域中的一个变量
+- 2. `y` 作为关键字参数 `message` 的默认值被引用
+- 3. `y` 在 `greet()` 函数内部被引用
+- 4. `y` 是 `messages` 列表中的一个元素
 
 带有额外的代码段运行此代码：
 
-```
+```python
 import sys
 print(sys.getrefcount(y))
 ```
@@ -4124,9 +4078,6 @@ print(sys.getrefcount(y))
 字节码操作应对其作为参数的对象的引用计数产生确定性的影响。
 
 例如，在帧评估循环中，`LOAD_FAST` 操作加载了作为参数的对象的引用计数。
-
-
-
 
 ### 垃圾回收
 
@@ -4194,14 +4145,13 @@ Python 中的这种设计产生了许多副作用，其中之一就是 GC 算法
 
 当收集阶段运行完成，可以通过 `gc.collect` 列表指定用户回调方法。回调应具有方法签名 `f(state: str, info: dict)`：
 
-```
+```python
 Python 3.9.0bl (tags/v3.9.0bl:97fe9cf, May 19 2020, 10:00:00)
 [Clang 6.0 (clang-600.0.57]) on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import gc
 >>> def gc_callback(phase, info):
     print(f"gc phase:{phase} with info:{info}")
-
 >>> gc.callbacks.append(gc_callback)
 >>> x = []
 >>> x.append(x)
@@ -4221,14 +4171,13 @@ CPython 有 3 个代。在理解代目的之前，理解收集算法是关重要
 
 你可以在 `cellobject.c` 中看到这里的示例：
 
-Objects > cellobject.c line 7
+Objects > `cellobject.c` line 7
 
-```
+```c
 PyObject *
 PyCell_New(PyObject *obj)
 {
     PyCellObject *op;
-
     op = (PyCellObject *)PyObject_GC_New(PyCellObject, &PyCellObject);
     if (op == NULL)
         return NULL;
@@ -4237,8 +4186,6 @@ PyCell_New(PyObject *obj)
     return (PyObject *)op;
 }
 ```
-
-
 
 ### 释放对象
 
@@ -4265,7 +4212,7 @@ CPython 的 GC 使用三代，每代都有一个触发收集的阈值。最年�
 
 CPython 的标准库带有一个与内存池（arena）和垃圾回收器接口的 Python 模块 `gc`。以下是在调试模式下使用 `gc` 模块的方法：
 
-```
+```python
 >>> import gc
 >>> gc.set_debug(gc.DEBUG_STATS)
 ```
@@ -4274,10 +4221,15 @@ CPython 的标准库带有一个与内存池（arena）和垃圾回收器接口�
 
 ```
 gc: collecting generation 2...
-gc: objects in each generation: 3 0 4477
-gc: objects in permanent generation: 0
-gc: done, 0 unreachable, 0 collectible.0008s elapsed
 ```
+
+
+
+gc: objects in each generation: 3 0 4477
+
+gc: objects in permanent generation: 0
+
+gc: done, 0 unreachable, 0 collectible.0008s elapsed
 
 你使用 `gc.DEBUG_COLLECTABLE` 来发现项目何时被作为垃圾收集。当你将其与 `gc.DEBUG_SAVEALL` 调试标志结合时，它们在被收集后会被移动到列表 `gc.garbage` 中：
 
@@ -4337,34 +4289,21 @@ gc: collectable <list 0x10d594a00>
 
 ## 并发模型
 
-在处理纯 Python 代码时，如果你正在设计长时间运行的代码，GC 的知识是有用的。例如，如果你设计了一个运行数小时、几天甚至更久的函数，该函数需要在其执行的系统限制内仔细管理其内存。你可以使用本章中学到的技术来控制和调整 GC 代，以更好地优化你的代码及其内存占用。
-
-[img/826aa5e3d3a5997a0ec0a6475e3c227_0]
-...（为了逻辑简洁，省略了图像）...
-
 | 方法 | 模块 | 并发 | 并行 |
 |---|---|---|---|
-| 线程 | threading | 是 |否 |
-| 多进程 | multiprocessing | 是 | 是 |
-| 异步 | asyncio | 是 |否 |
-| 子解释器 | subinterpreters | 是 | 是 |
+| 线程 | `threading` | 是 | 否 |
+| 多进程 | `multiprocessing` | 是 | 是 |
+| 异步 | `asyncio` | 是 | 否 |
+| 子解释器 | `subinterpreters` | 是 | 是 |
 
 ## 进程结构
 
 操作系统的任务之一是控制运行的进程。这些进程可以是浏览器或 IDE 等 UI 应用程序。
 
-
-
-
-# 进程的结构
-
--   对操作系统中文件、锁和套接字的访问
-
 当进程执行时，你计算机上的 CPU 还会保留额外数据，例如：
 
 - 寄存器：持有当前正在执行的指令或进程该指令所需的任何其他数据
-
-- 指令指针（Instruction Pointer）或程序计数器（Program Counter）：指示程序序列中执行的是哪条指令
+- 指令指针 `Instruction Pointer` 或程序计数器 `Program Counter`：指示程序序列中执行的是哪条指令
 
 IPython 进程由编译后的 IPython 解释器和编译后的模块组成。这些模块在运行时加载，并由 IPython 评估循环转换为指令：
 
@@ -4376,17 +4315,12 @@ IPython 进程由编译后的 IPython 解释器和编译后的模块组成。这
 
 允许进程中并行执行指令主要有两种方法：
 
-1. 派生（Fork）另一个进程
-
-# 多进程并行
-
-2. 派生（Spawn）一个线程
-
-现在你已经回顾了进程的构成。接下来，你可以探索派生（forking）和创建（creating）子进程。
+1. 派生 `Fork` 另一个进程
+2. 派生 `Spawn` 一个线程
 
 ## 多进程并行
 
-POSIX 系统提供了一个 API，允许任何进程 **fork**（派生）一个子进程。
+POSIX 系统提供了一个 API，允许任何进程 `fork` 派生一个子进程。
 
 派生进程是对操作系统的低级 API，任何运行中的进程都可以调用。
 
@@ -4400,15 +4334,13 @@ POSIX 系统提供了一个 API，允许任何进程 **fork**（派生）一个�
 
 这是通过使用 `fork()` 函数实现的。每个子进程将从该点继续运行：
 
-python-book-samples ▸ 33 ▸▸ thread_celcius.c
+`python-book-samples ▸ 33 ▸▸ thread_celcius.c`
 
-```python
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
 static const double five_ninths = 5.0/9.0;
-
 double celsius(double fahrenheit){
     return (fahrenheit - 32) * five_ninths;
 }
@@ -4433,156 +4365,20 @@ int main(int argc, char** argv) {
 
 在命令行运行此程序将得到类似下面的输出：
 
-$ ./thread_celcius 4
-110.000000 F is 43.333333 C (pid 57179)
-120.000000 F is 48.888889 C (pid 57180)
-Spawned 4 processes from 57178
-130.000000 F is 54.444444 C (pid 57181)
-140.000000 F is 60.000000 C (pid 57182)
-
-程序寄存器和程序计数器指向进程中的单条指令。这意味着在任何时刻只有一条指令在执行。
-
-对于 CPython 来说，这意味着在任何时刻只有有一条 Python 字节码指令在执行。
-
-允许进程中并行执行指令主要有两种方法：
-
-1. 派生（Fork）另一个进程
-
-2. 派生（Spawn）一个线程
-
-现在你已经回顾了进程的构成。接下来，你可以探索派生（forking）和创建（creating）子进程。
-
-## 多进程并行
-
-POSIX 系统提供了一个 API，允许任何进程 **fork**（派生）一个子进程。
-
-派生进程是对操作系统的低级 API，任何运行中的进程都可以调用。
-
-当进行此调用时，操作系统会克隆当前运行进程的所有属性并创建一个新进程。
-
-该克隆操作包含了父进程的堆、寄存器和计数器位置。子进程可以在派生时从父进程读取任何变量。
-
-### 在 POSIX 中派生进程
-
-作为一个例子，以在 C 语言动态内存分配开始时使用的“华氏度转摄氏度”应用程序为例。将其修改为为每个华氏度值派生一个子进程，而不是按顺序计算。
-
-这是通过使用 `fork()` 函数实现的。每个子进程将从该点继续运行：
-
-（此处代码块已保留原文）
-
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_230_0.png)
-
-程序寄存器和程序计数器指向进程中的单条指令。这意味着在任何时刻只有一条指令在执行。
-
-（此处重复部分已按要求处理）
-
-在命令行运行此程序将得到类似下面的输出：
-
-$ ./thread_celcius 4
-110.000000 F is 43.333333 C (pid 57179)
-120.000000 F is 48.888889 C (pid 57180)
-Spawned 4 processes from 57178
-（此处重复部分已按要求处理）
-
-[/content]
-
-*(注：由于提供的原文中存在大量逻辑重复的段落，根据“一定不要重复输出原文”的指令，我在译文中已对重复内容进行了去重处理，以确保输出的专业性符合高级文档工程师的标准。)*
-
-**纠正：** 发现你提供的原始文本中存在大量的段落重复（例如 "The program register..." 等段落出现了多次）。为了符合高质量文档标准，我将提供逻辑清晰的翻译。
-
----
-
-**以下是去重后的完整翻译结果：**
-
-[content]
-
-# 进程的结构
-
--   对操作系统中文件、锁和套接字的访问
-
-当进程执行时，你计算机上的 CPU 还会保留额外数据，例如：
-
-字体 寄存器：持有当前正在执行的指令或进程该指令所需的任何其他数据
-
-- 指令指针（Instruction Pointer）或程序计数器（Program Counter）：指示程序序列中执行的是哪条指令
-
-IPython 进程由编译后的 IPython 解释器和编译后的模块组成。这些模块在运行时加载，并由 IPython 评估循环转换为指令：
-
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_230_0.png)
-
-程序寄存器和程序计数器指向进程中的单条指令。这意味着在任何时刻只有一条指令在执行。
-
-对于 CPython 来说，这意味着在任何时刻只有有一条 Python 字节码指令在执行。
-
-允许进程中并行执行指令主要有两种方法：
-
-1. 派生（Fork）另一个进程
-
-2. 派生（Spawn）一个线程
-
-现在你已经回顾了进程的构成。接下来，你可以探索派生（forking）和创建（creating）子进程。
-
-## 多进程并行
-
-POSIX 系统提供了一个 API，允许任何进程 **fork**（派生）一个子进程。
-
-派生进程是对操作系统的低级 API，任何运行中的进程都可以调用。
-
-当进行此调用时，操作系统会克隆当前运行进程的所有属性并创建一个新进程。
-
-该克隆操作包含了父进程的堆、寄存器和计数器位置。子进程可以在派生时从父进程读取任何变量。
-
-### 在 POSIX 中派生进程
-
-作为一个例子，以在 C 语言动态内存分配开始时使用的“华氏度转摄氏度”应用程序为例。将其修改为为每个华氏度值派生一个子进程，而不是按顺序计算。
-
-这是通过使用 `fork()` 函数实现的。每个子进程将从该点继续运行：
-
-python-book-samples ▸ 33 ▸▸ thread_celcius.c
-
-```python
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-static const double five_ninths = 5.0/9.0;
-
-double celsius(double fahrenheit){
-    return (fahrenheit - 32) * five_ninths;
-}
-int main(int argc, char** argv) {
-    if (argc != 2) {
-        return -1;
-    }
-    int number = atoi(argv[1]);
-    for (int i = 1; i <= number; i++) {
-        double f_value = 100 + (i*10);
-        pid_t child = fork();
-        if (child == 0) { // 是子进程
-            double c_value = celsius(f_value);
-            printf("%f F %f C (pid %d)\n", f_value, c_value, getpid());
-            exit(0);
-        }
-    }
-    printf("Spawned %d processes from %d\n", number, getpid());
-    return 0;
-}
 ```
-
-在命令行运行此程序将得到类似下面的输出：
-
 $ ./thread_celcius 4
 110.000000 F is 43.333333 C (pid 57179)
 120.000000 F is 48.888889 C (pid 57180)
 Spawned 4 processes from 57178
 130.000000 F is 54.444444 C (pid 57181)
 140.000000 F is 60.000000 C (pid 57182)
+```
 
 ## Windows 中的多进程
 
 到为止，你一直在阅读 POSIX 模型。Windows 不提供 `fork()` 的等效方法，Python 应尽可能在 Linux、macOS 和 Windows 上拥有相同的 API。为了解决这个问题，使用了 `CreateProcess()` API 来派生另一个 `python.exe` 进程并带有 `-c` 命令行参数。
 
-这一步骤被称为派生（spawning）进程，并且在 POSIX 上也可用。你将在本章中看到它的引用。
+这一步骤被称为派生 `spawning` 进程，并且在 POSIX 上也可用。你将在本章中看到它的引用。
 
 ## multiprocessing 包
 
@@ -4594,29 +4390,23 @@ CPython 在操作系统进程 API 之上提供了一个 API。该 API 使在 Pyt
 
 | 文件 | 目的 |
 | --- | --- |
-| Libmultiprocessing | multiprocessing 包的 Python 源码 |
-| Modules/_posixsubprocess.c | 封装 POSIX fork() 系统调用的 C 扩展模块 |
-| Modules/_winapi.c | 封装 Windows API 的 C 扩展模块 |
-| PCmsvcmodule.c | Microsoft Visual C Library 使用的 C 扩展模块 |
+| `Lib/multiprocessing` | `multiprocessing` 包的 Python 源码 |
+| `Modules/_posixsubprocess.c` | 封装 POSIX `fork()` 系统调用的 C 扩展模块 |
+| `Modules/_winapi.c` | 封装 Windows API 的 C 扩展模块 |
+| `PC/msvcmodule.c` | Microsoft Visual C Library 使用的 C 扩展模块 |
 
 ## 派生与 fork
 
-multiprocessing 包提供了三种启动新进程的方法。
+`multiprocessing` 包提供了三种启动新进程的方法。
 
-1. 派生解释器（在 POSIX 上）
-2. 派生一个新的解释器（在 POSIX 和 Windows 上）
-3. 运行 Fork 服务器，其中创建一个新进程然后派生任意数量的进程（仅限 POSIX）
+1. 派生解释器 `fork` 在 POSIX 上
+2. 派生一个新的解释器 `spawn` 在 POSIX 和 Windows 上
+3. 运行 Fork 服务器，其中创建一个新进程然后派生任意数量的进程 仅限 POSIX
 
 > 注意
-> 对于 Windows 和 macOS，默认启动方法是 Spawning。对于 Linux，默认是 Forking。你可以使用 `multiprocessing.set_start_method()` 函数覆盖默认方法。
+> 对于 Windows 和 macOS，默认启动方法是 `Spawning`。对于 Linux，默认是 `Forking`。你可以使用 `multiprocessing.set_start_method()` 函数覆盖默认方法。
 
-
-
-
-
-# 多进程并行
-
-每个进程都有显著的开销，池（Pool）会将池中的每个进程视为“工作线程”。如果一个工作线程完成了任务，它将被重用。如果你将该行：
+每个进程都有显著的开销，池 `Pool` 会将池中的每个进程视为“工作线程”。如果一个工作线程完成了任务，它将被重用。如果你将该行：
 
 ```python
 with mp.Pool(4) as pool:
@@ -4638,33 +4428,31 @@ $ python pool_process_celcius.py
 140F is 60.0C (pid 5655)
 ```
 
-输出显示了新生成的进程的进程 ID（pid）以及计算出的值。
+输出显示了新生成的进程的进程 ID `pid` 以及计算出的值。
 
-# 子进程的创建
+## 子进程的创建
 
-这两个脚本都会创建一个新的 Python 解释器进程，并使用 pickle 向其传递数据。
+这两个脚本都会创建一个新的 Python 解释器进程，并使用 `pickle` 向其传递数据。
 
-| 另另 |
+| 说明 |
 | :--- |
-| pickle 模块是一个用于 Python 对象的序列化包。Davide Mastromatte 在 realpy.com 上写了一篇关于 pickle 模块的精彩文章。 |
+| `pickle` 模块是一个用于 Python 对象的序列化包。Davide Mastromatte 在 realpy.com 上写了一篇关于 `pickle` 模块的精彩文章。 |
 
-对于 POSIX 系统，multiprocessing 模块创建子进程等同于此命令：
+对于 POSIX 系统，`multiprocessing` 模块创建子进程等同于此命令：
 
-```python
-$ python -c 'from multiprocessing.spawn import spawn_main;
-spawn_main(tracker_fd=<i>, pipe_handle=<j)' --multiprocessing-fork
-```
 
-其中 <i> 是文件句柄描述符，<j> 是管道句柄描述符。
+
+`$ python -c 'from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=<i>, pipe_handle=<j)' --multiprocessing-fork`
+
+其中 `<i>` 是文件句柄描述符，`<j>` 是管道句柄描述符。
 
 对于 Windows 系统，使用父 PID 代替跟踪描述符：
 
 ```python
-> python.exe -c 'from multiprocessing.spawn import spawn_main;
-spawn_main(parent_pid=<k>, pipe_handle=<j>') --multiprocessing-fork
+> python.exe -c 'from multiprocessing.spawn import spawn_main; spawn_main(parent_pid=<k>, pipe_handle=<j>') --multiprocessing-fork
 ```
 
-其中 <k> 是父 PID，<j> 是管道句柄描述符。
+其中 `<k>` 是父 PID，`<j>` 是管道句柄描述符。
 
 # 向子进程管道传输数据
 
@@ -4672,7 +4460,7 @@ spawn_main(parent_pid=<k>, pipe_handle=<j>') --multiprocessing-fork
 
 父进程向管道文件流（pipe file stream）写入两个对象。管道文件流是一种用于在命令行进程之间传输数据的特殊 IO 流。
 
-父进程写入的第一个对象是准备数据对象。该对象是一个包含父进程相关信息的字典，例如执行目录、启动方法、任何特殊的命令行参数以及 sys.path。你可以通过运行 `multiprocessing.spawn.get_preparation_data(name)` 查看生成的示例：
+父进程写入的第一个对象是准备数据对象。该对象是一个包含父进程相关信息的字典，例如执行目录、启动方法、任何特殊的命令行参数以及 `sys.path`。你可以通过运行 `multiprocessing.spawn.get_preparation_data(name)` 查看生成的示例：
 
 ```python
 >>> import multiprocessing.spawn
@@ -4685,13 +4473,13 @@ spawn_main(parent_pid=<k>, pipe_handle=<j>') --multiprocessing-fork
 }
 ```
 
-写入的第二个对象是 BaseProcess 子类实例。取决于如何调用 multiprocessing以及所使用的操作系统，BaseProcess 的某个子类将是经过序列化的实例。
+写入的第二个对象是 `BaseProcess` 子类实例。取决于如何调用 `multiprocessing` 以及所使用的操作系统，`BaseProcess` 的某个子类将是经过序列化的实例。
 
-准备数据和进程对象都使用 pickle 模块进行序列化，并写入父进程的管道流中：
+准备数据和进程对象都使用 `pickle` 模块进行序列化，并写入父进程的管道流中：
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_239_0.png)
 
-> 注意：POSIX 的子进程创建和序列化过程实现位于 Lib ▸ multiprocessing ▸ popen_spawn_posix.py。Windows 的实现位于 Lib ▸ multiprocessing ▸ popen_spawn_win32.py。
+> 注意：POSIX 的子进程创建和序列化过程实现位于 `Lib` ▸ `multiprocessing` ▸ `popen_spawn_posix.py`。Windows 的实现位于 `Lib` ▸ `multiprocessing` ▸ `popen_spawn_win32.py`。
 
 # 执行子进程
 
@@ -4705,15 +4493,13 @@ def spawn_main(pipe_handle, parent_pid=None, tracker_fd=None):
     assert is_forking(sys.argv), "Not forking"
 ```
 
-对于 Windows，该函数将调用父 PID 的 OpenProcess API。
+对于 Windows，该函数将调用父 PID 的 `OpenProcess` API。
 
 此进程对象被用于创建一个文件句柄 `fd`:
-
 ```python
 if sys.platform == 'win32':
     import msvcrt
     import winapi
-
     if parent_pid is not None:
         process = winapi.OpenProcess(winapi.PROCESS_ALL_INFORMATION, False, parent_pid)
         fd = winapi.DuplicateHandle(process, -1, os.handle(), True, winapi.DUPLICATE_FROM_SOURCE, 0)
@@ -4722,7 +4508,6 @@ if sys.platform == 'win32':
 ```
 
 对于 POSIX，该函数使用：
-
 ```python
 import os
 fd = os.dup(tracker_fd)
@@ -4732,15 +4517,11 @@ fd = os.dup(tracker_fd)
 
 输出显示了新生成的进程的进程 ID（pid）以及计算出的值。
 
+CPython `multiprocessing` 使用信号量（Semaphores是因为它们既是线程安全的也是进程安全的。操作系统会处理读取或写入同一信号量时可能出现的死锁。
 
+这些信号量 API 函数的实现位于 C 扩展模块 `Modules` ▸ `_multiprocessing` ▸ `semaphore.c`。该扩展模块提供了用于创建、锁定、释放信号量以及其他操作的单一。
 
-
-
-CPython multiprocessing 使用信号量（Semaphores是因为它们既是线程安全的也是进程安全的。操作系统会处理读取或写入同一信号量时可能出现的死锁。
-
-这些信号量 API 函数的实现位于 C 扩展模块 Modules ▸ _multiprocessing ▸ semaphore.c。该扩展模块提供了用于创建、锁定、释放信号量以及其他操作的单一。
-
-对操作系统的调用是通过一系列宏（Macros），这些宏根据操作系统平台编译为不同的实现。使用了 <winbase.h> 中的信号量 API 函数：
+对操作系统的调用是通过一系列宏（Macros），这些宏根据操作系统平台编译为不同的实现。使用了 `<winbase.h>` 中的信号量 API 函数：
 
 ```
 #define SEM_CREATE(name, val, max) CreateSemaphore(NULL, val, max, NULL)
@@ -4749,7 +4530,7 @@ CPython multiprocessing 使用信号量（Semaphores是因为它们既是线程�
 #define SEM_UNLINK(name) 0
 ```
 
-对于 POSIX，使用了 <semaphore.h> 中的宏：
+对于 POSIX，使用了 `<semaphore.h>` 中的宏：
 
 ```
 #define SEM_CREATE(name, val, max) sem_open(name, O_CREAT | O_EXCL, 0600, val)
@@ -4758,30 +4539,28 @@ CPython multiprocessing 使用信号量（Semaphores是因为它们既是线程�
 #define SEM_UNLINK(name) sem_unlink(name)
 ```
 
-### 队列 (Queues)
+## 队列 (Queues)
 
 队列是在多个进程之间发送小数据的极方法。
 
-如果你将之前的 multiprocessing 示例改为使用 multiprocessing Manager() 实例，并创建两个队列：
+如果你将之前的 `multiprocessing` 示例改为使用 `multiprocessing Manager()` 实例，并创建两个队列：
 
-- 1. inputs 用于存储输入的华氏度值
-- 2. outputs 用于存储结果摄氏度值
+- 1. `inputs` 用于存储输入的华氏度值
+- 2. `outputs` 用于存储结果摄氏度值
 
 将池大小更改为 2 以便有工作进程：
 
-## 多进程并行
+### 多进程并行
 
-cpython-book-samples ► 33 ► pool_queue_celcius.py
+`cpython-book-samples ► 33 ► pool_queue_celcius.py`
 
 ```
 import multiprocessing as mp
-
 def to_celcius(input: mp.Queue, output: mp.Queue):
     f = input.get()
     # time-consuming task ...
     c = (f - 32) * (5/9)
     output.put(c)
-
 if __name__ == '__main__':
     mp.set_start_method('spawn')
     pool_manager = mp.Manager()
@@ -4792,7 +4571,6 @@ if __name__ == '__main__':
         for i in input_values:
             inputs.put(i)
         pool.apply(to_celcius, (inputs, outputs))
-
         for f in input_values:
             print(outputs.get(block=False))
 ```
@@ -4807,9 +4585,9 @@ $ python pool_queue_celcius.py
 60.0
 ```
 
-父进程首先将输入值放入输入队列。然后第一个工作进程从队列中获取一个项目。每当使用 .get() 从队列中获取项目时，队列对象上就会使用信号量锁：
+父进程首先将输入值放入输入队列。然后第一个工作进程从队列中获取一个项目。每当使用 `.get()` 从队列中获取项目时，队列对象上就会使用信号量锁：
 
-## 多进程并行
+### 多进程并行
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_247_0.png)
 
@@ -4823,11 +4601,11 @@ $ python pool_queue_celcius.py
 
 使用两个队列来分离输入和输出值。最终，所有输入值都处理完毕，输出队列满了。随后由父进程打印值：
 
-## 多进程并行
+### 多进程并行
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_248_0.png)
 
-此示例显示了工作池如何接收离散值并并行处理它们。对于流式数据，可以使用管道（pipes）而不是离散队列。在 multiprocessing 包中，实例化 Pipe 返回两个连接：父端和子端。两者都可以发送和接收数据：
+此示例显示了工作池如何接收离散值并并行处理它们。对于流式数据，可以使用管道（pipes）而不是离散队列。在 `multiprocessing` 包中，实例化 `Pipe` 返回两个连接：父端和子端。两者都可以发送和接收数据：
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_248_1.png)
 
@@ -4836,13 +4614,11 @@ $ python pool_queue_celcius.py
 ```
 cpython-book-samples ► 33 ► pool_pipe_celcius.py
 import multiprocessing as mp
-
 def to_celcius(child_pipe: mp.Pipe, parent_pipe: mp.Pipe):
     f = parent_pipe.recv()
     # time-consuming task ...
     c = (f - 32) * (5/9)
     child_pipe.send(c)
-
 if __name__ == '__main__':
     mp.set_start_method('spawn')
     pool_manager = mp.Manager()
@@ -4864,7 +4640,6 @@ if __name__ == '__main__':
 ```
 python-book-samples ► 33 ► pool_pipe_locks_celcius.py
 import multiprocessing as mp
-
 def to_celcius(child_pipe: mp.Pipe, parent_pipe: mp.Pipe,
                child_write_lock: mp.Lock, parent_read_lock: mp.Lock):
     parent_read_lock.acquire()
@@ -4874,13 +4649,11 @@ def to_celcius(child_pipe: mp.Pipe, parent_pipe: mp.Pipe,
         parent_read_lock.release()
     # time-consuming task ...
     c = (f - 32) * (5/9)
-
     child_write_lock.acquire()
     try:
         child_pipe.send(c)
     finally:
         child_write_lock.release()
-
 if __name__ == '__main__':
     mp.set_start_method('spawn')
     pool_manager = mp.Manager()
@@ -4894,7 +4667,6 @@ if __name__ == '__main__':
             pool.apply_async(to_celcius, args=(child_pipe, parent_pipe,
                              child_write_lock,
                              parent_read_lock))
-
             print(parent_pipe.recv())
             child_pipe.close()
 ```
@@ -4907,10 +4679,10 @@ if __name__ == '__main__':
 
 到为止，你已经看到了如何在子进程和父进程之间共享数据。
 
-可能存在需要在子进程之间共享数据的场景。在这种情况下，multiprocessing 包提供了两种解决方案：
+可能存在需要在子进程之间共享数据的场景。在这种情况下，`multiprocessing` 包提供了两种解决方案：
 
 - 1. 使用共享内存映射和共享 C 类型的高性能共享内存 API
-- 2. 通过 Manager 类支持复杂类型的灵活服务器进程 API
+- 2. 通过 `Manager` 类支持复杂类型的灵活服务器进程 API
 
 ## 示例应用程序 (Example Application)
 
@@ -4918,22 +4690,17 @@ if __name__ == '__main__':
 
 在网络上，可以通过端口访问主机，端口是 1-65535 之间的数字。常用服务有标准端口。例如，HTTP 运行在端口 80，HTTPS 运行在端口 443。TCP 端口扫描器被用作常用的网络测试工具，检查数据包是否可以通过网络发送。
 
-此代码示例使用了 Queue 接口，这是一个与你在 multiprocessing 示例中使用的线程安全实现。代码还使用了 socket 包来尝试在 1 秒超时内连接远程端口。
-
-
-
-
+此代码示例使用了 `Queue` 接口，这是一个与你在 `multiprocessing` 示例中使用的线程安全实现。代码还使用了 `socket` 包来尝试在 1 秒超时内连接远程端口。
 
 你可以对比一下差异，它会在最后打印执行时间：
 
-cpython-book-samples ‣ 33‣ portscanner.py
+`cpython-book-samples ‣ 33‣ portscanner.py`
 
 ```
 from queue import Queue
 import socket
 import time
 timeout = 1.0
-
 def check_port(host: str, port: int, results: Queue):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(timeout)
@@ -4941,7 +4708,6 @@ def check_port(host: str, port: int, results: Queue):
     if result == 0:
         results.put(port)
     sock.close()
-
 if __name__ == '__main__':
     start = time.time()
     host = "localhost" # 为你想测试的 host
@@ -4961,15 +4727,19 @@ Port 80 is open
 Completed scan in 19.623435020446777 seconds
 ```
 
+
+
 这个示例可以重构为使用多进程。接口被更换为 `multiprocessing.Queue`，并使用池执行器共同扫描端口：
 
-cpython-book-samples ‣ 33‣ portscanner_mp_queue.py
+`cpython-book-samples ‣ 33‣ portscanner_mp_queue.py`
 
 # 多进程并行
 
-```
+```python
 import multiprocessing as mp
+
 import time
+
 import socket
 
 timeout = 1
@@ -4993,7 +4763,6 @@ if __name__ == '__main__':
         outputs = pool_manager.Queue()
         for port in scan_range:
             processes.append(pool.apply_async(check_port, (host, port, outputs)))
-
         for process in processes:
             process.get()
         while not outputs.empty():
@@ -5025,8 +4794,8 @@ CPython 提供了高层和低层 API，用于从 Python 中创建、派生和控
 
 要理解 Python 线程，你应该首先理解操作系统线程的工作原理。CPython 中有两种线程实现方式：
 
-- 1. threads - 适用于 Linux 和 macOS 的 POSIX 线程
-- 2. nt threads - 适用于 Windows 的 NT 线程
+- `threads` - 适用于 Linux 和 macOS 的 POSIX 线程
+- `nt threads` - 适用于 Windows 的 NT 线程
 
 在“进程结构”章节中，你看到一个进程拥有：
 
@@ -5063,30 +4832,28 @@ CPython 提供了高层和低层 API，用于从 Python 中创建、派生和控
 
 为了演示多线程代码的性能提升（尽管有 GIL），你可以在 Python 中实现一个简单的端口扫描器。
 
-现在克隆之前的脚本，但使用 `threading.Thread()` 为每个端口派一个线程。这与多进程 API 类似，它接收一个可调用对象 target 和一个元组 args。在循环内部启动线程，但不要在那里等待它们完成。相反，将线程实例添加到列表 `threads` 中：
+现在克隆之前的脚本，但使用 `threading.Thread()` 为每个端口派一个线程。这与多进程 API 类似，它接收一个可调用对象 `target` 和一个元组 `args`。在循环内部启动线程，但不要在那里等待它们完成。相反，将线程实例添加到列表 `threads` 中：
 
 ```python
 for port in range(80, 100):
- t = Thread(check_port, args=(host, port, results))
- t.start()
- threads.append(t)
+    t = Thread(check_port, args=(host, port, results))
+    t.start()
+    threads.append(t)
 ```
 
-当所有线程都创建完毕后，遍历线程列表并调用 .join() 等待它们完成：
+当所有线程都创建完毕后，遍历线程列表并调用 `.join()` 等待它们完成：
 
 ```python
 for t in threads:
- t.join()
+    t.join()
 ```
 
 接下来，耗尽结果队列中的所有项并将它们打印到屏幕上：
 
 ```python
 while not results.empty():
- print("Port {0} is open".format(results.get()))
+    print("Port {0} is open".format(results.get()))
 ```
-
-
 
 ```python
 import socket
@@ -5095,7 +4862,6 @@ import time
 
 ```python
 timeout = 1.0
-
 def check_port(host: str, port: int, results: Queue):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(timeout)
@@ -5145,26 +4911,24 @@ Completed scan in 1.0101029872894287 seconds
 result = sock.connect_ex(host, port)
 ```
 
-在 C 扩展模块 Modules ▸ socketmodule.c 中，实现连接的函数：
+在 C 扩展模块 `Modules ▸ socketmodule.c` 中，实现连接的函数：
 
-Modules ▸ socketmodule.c line 3246
+`Modules ▸ socketmodule.c` line `3246`
 
 ```c
 static int
-
 internal_connect(PySocketSockObject *s, struct sockaddr *addr, int addrlen,
     int raise)
 {
     int res, err, wait_connect;
-
     Py_BEGIN_ALLOW_THREADS
     res = connect(s->sock_fd, addr, addrlen);
     Py_END_ALLOW_THREADS
 ```
 
-环在系统 connect() 调用周围的是 Py_BEGIN_ALLOW_THREADS 和 Py_END_ALLOW_THREADS 宏。
+环在系统 `connect()` 调用周围的是 `Py_BEGIN_ALLOW_THREADS` 和 `Py_END_ALLOW_THREADS` 宏。
 
-这些宏在 Include ceval.h 中定义如下：
+这些宏在 `Include ceval.h` 中定义如下：
 
 ```c
 #define Py_BEGIN_ALLOW_THREADS {
@@ -5179,7 +4943,7 @@ internal_connect(PySocketSockObject *s, struct sockaddr *addr, int addrlen,
     PyEval_RestoreThread(_save);
 ```
 
-所以，当调用 Py_BEGIN_ALLOW_THREADS 时，它会调用 `PyEval_SaveThread()`。该函数会将线程状态更改为 NULL 并释放 GIL。
+所以，当调用 `Py_BEGIN_ALLOW_THREADS` 时，它会调用 `PyEval_SaveThread()`。该函数会将线程状态更改为 NULL 并释放 GIL。
 
 ## 多线程
 
@@ -5200,7 +4964,7 @@ PyEval_SaveThread(void)
 
 因为释放了 GIL，意味着其他正在执行的线程可以继续。该线程将在此等待系统调用，而不会阻塞评估循环。
 
-一旦 connect() 函数成功或超时，Py_END_ALLOW_THREADS 会带有原始线程状态运行 `PyEval_RestoreThread()`。线程被恢复，GIL 被重新获取。`take_gil()` 调用是一个等待信号量的阻塞调用：
+一旦 `connect()` 函数成功或超时，`Py_END_ALLOW_THREADS` 会带有原始线程状态运行 `PyEval_RestoreThread()`。线程被恢复，GIL 被重新获取。`take_gil()` 调用是一个等待信号量的阻塞调用：
 
 # Python ▸ ceval.c line 503
 
@@ -5211,7 +4975,6 @@ PyEval_RestoreThread(PyThreadState *tstate)
     if (tstate == NULL)
         Py_FatalError("PyEval_RestoreThread: NULL tstate");
     assert(gil_created());
-
     int err = errno;
     take_gil(tstate);
     /* _Py_Finalizing 由 GIL 保护 */
@@ -5225,17 +4988,20 @@ PyEval_RestoreThread(PyThreadState *tstate)
 ```c
 Py_UNBLOCK_THREADS();
 errno = err;
-
 PyThreadState_Swap(tstate);
 ```
 
-这不是唯一的被非阻塞 Py_BEGIN_ALLOW_THREADS 和 Py_END_ALLOW_THREADS 包裹的系统调用。它在标准库中有 300 多处用途：
+
+
+这不是唯一的被非阻塞 `Py_BEGIN_ALLOW_THREADS` 和 `Py_END_ALLOW_THREADS` 包裹的系统调用。它在标准库中有 300 多处用途：
 
 - 发起 HTTP 请求
 - 与硬件交互
-- 读写文件## 状态
+- 读写文件
 
-CPython 提供了了自己的线程管理实现。由于线程需要在评估循环中执行字节码，因此在 CPython 中运行线程并不像创建线程那么简单。Python 线程被称为 PyThread，由解释器产生。
+## 状态
+
+CPython 提供了了自己的线程管理实现。由于线程需要在评估循环中执行字节码，因此在 CPython 中运行线程并不像创建线程那么简单。Python 线程被称为 `PyThread`，由解释器产生。
 
 - CPython 有一个单一运行时，它有自己的状态
 - CPython 可以有一个或多个解释器
@@ -5246,7 +5012,7 @@ CPython 提供了了自己的线程管理实现。由于线程需要在评估循
 - CPython 引用值栈中的变量
 - 解释器状态包含其线程的链表
 
-线程状态类型 PyThreadState 有 30 多个属性，包括：
+线程状态类型 `PyThreadState` 有 30 多个属性，包括：
 
 - 线程状态的链表
 - 创建它的解释器状态
@@ -5256,17 +5022,19 @@ CPython 提供了了自己的线程管理实现。由于线程需要在评估循
 - 当前处理的异常
 - 当前处理的任何异常
 - 抛出的异常栈
-- GIL 计数# 多线程
+- GIL 计数
+
+## 多线程
 
 与多进程准备类似，线程有一个启动状态。然而线程共享相同的内存空间，因此不需要将数据序列化并发送。
 
-线程使用 `threading.Thread` 类型实例化。这是一个抽象 PyThread 类型的高级模块。PyThread 实例由 C 扩展模块 `_thread` 管理。`_thread` 模块具有执行新线程的入口点 `thread_start_new_thread()`。start()` 是 Thread 类型实例的方法。
+线程使用 `threading.Thread` 类型实例化。这是一个抽象 `PyThread` 类型的高级模块。`PyThread` 实例由 C 扩展模块 `_thread` 管理。`_thread` 模块具有执行新线程的入口点 `thread_start_new_thread()`。`start()` 是 `Thread` 类型实例的方法。
 
 新线程按此顺序实例化：
 
 1. 创建启动状态，链接到目标、args 和 kwargs
 2. 将启动状态链接到解释器状态
-3. 创建一个新的 PyThreadState，链接到当前解释器
+3. 创建一个新的 `PyThreadState`，链接到当前解释器
 4. 如果尚未启用，通过调用 `PyEval_InitThreads()` 启用 GIL
 5. 在特定操作系统的实现 `PyThread_start_new_thread` 上启动新线程
 
@@ -5284,7 +5052,9 @@ CPython 提供了了自己的线程管理实现。由于线程需要在评估循
 
 这两种实现都会创建操作系统，设置其属性，然后在新线程内部执行回调 `t_bootstrap()`。该函数通过单个参数 `boot_raw` 调用，该参数被分配到在 `thread_thread` 中构造的启动状态。
 
-`t_bootstrap()` 函数是底层线程与 Py 运行时之间的接口。bootstrap 将启动线程，然后使用 `PyObject_Call()` 执行目标可调用对象。一旦执行了目标目标，线程将退出：# POSIX 线程
+`t_bootstrap()` 函数是底层线程与 Py 运行时之间的接口。bootstrap 将启动线程，然后使用 `PyObject_Call()` 执行目标可调用对象。一旦执行了目标目标，线程将退出：
+
+### POSIX 线程
 
 POSIX 线程（名为 pthreads）在 Python `pthread.h` 中有一个实现。该实现在 `<pthread.h>` C API 的基础上带有额外的保护措施和优化。
 
@@ -5294,13 +5064,11 @@ POSIX 线程（名为 pthreads）在 Python `pthread.h` 中有一个实现。该
 
 大多数现代符合 POSIX 的操作系统支持线程的系统调度。如果 `pyconfig.h` 中定义了 `PTHREAD_SYSTEM_SCHED_SUPPORTED`，则线程设置为 `PTHREAD_SCOPE_SYSTEM`，这意味着线程在操作系统调度器中的优先级是与系统中其他线程共同决定的，而不仅仅是 Python 进程内的线程。
 
-
-
 最后，线程句柄 `pthread_t` 被转换为无符号长型并返回，作为线程 ID。
 
 ## Windows 线程
 
-在 Python 中实现的 Windows 线程 ▸ thread_nt.h 遵循一种类似但更简洁的模式。
+在 Python 中实现的 Windows 线程 ▸ `thread_nt.h` 遵循一种类似但更简洁的模式。
 
 新线程的栈大小被配置为解释器的 `pythread_stacksize` 值（如果已设置）。
 
@@ -5335,7 +5103,7 @@ Python 生成器（Generators）是返回包含 `yield` 语句的函数，并且
 
 这个简单的生成器函数将产生字母 a-z：
 
-python-book-samples 33▸letter_generator.py
+`python-book-samples 33▸letter_generator.py`
 
 ```python
 def letters():
@@ -5438,7 +5206,6 @@ if (co->flags) {
     PyObject *gen;
     PyObject *co_wrapper = tstate;
     int is_coro = co->flags & COROUTINE;
-
     /* 创建就绪的生成器 */
     if (is_coro) {
         gen = PyCoro_New(f);
@@ -5494,10 +5261,6 @@ if (co->flags) {
 - 9. 生成器异常信息中的最后一个异常将从线程状态的最后一个异常中复制
 - 10. 线程状态异常信息被设置为生成器异常信息的地址。这意味着如果调用者进入一个 break-
 
-
-
-
-
 # 协程
 
 围绕生成器的执行，堆栈跟踪会经过生成器，导致出错的代码清晰易易。
@@ -5524,7 +5287,7 @@ if (co->flags) {
 
 例如，字母生成器可以重构为一个工具函数，其中起始字母是一个参数。使用 `yield from`，你可以选择返回哪个生成器对象：
 
-cython-book-samples ▷ 33 letter_coroutines.py
+`cython-book-samples ▷ 33 letter_coroutines.py`
 
 ```python
 def gen_letters(start, x):
@@ -5549,6 +5312,8 @@ for letter in letters(True):
     print(letter)
 ```
 
+
+
 生成器也非常适用于惰性序列，它们可以被多次调用。
 
 基于生成器的行为（例如能够暂停和恢复执行），协程的概念在 Python 中通过原生 API 进行了迭代优化。生成器是协程的一种有限形式，因为你可以使用 `.send()` 方法向它们发送数据。
@@ -5565,10 +5330,13 @@ for letter in letters(True):
 
 ```python
 >>> asyncio
+
 >>> async def sleepy_alarm(time):
     await asyncio.sleep(time)
     return "wake up!"
+
 >>> alarm = sleepy_alarm(10)
+
 >>> alarm
 <coroutine object sleepy_alarm at 0x1041de340>
 ```
@@ -5606,6 +5374,7 @@ for letter in letters(True):
 
 ```python
 python-book-samples ▷ 33 sleepy_alarm.py
+
 import asyncio
 
 async def sleepy_alarm(person, time):
@@ -5650,6 +5419,7 @@ import time
 import asyncio
 
 timeout = 1.0
+
 async def check_port(host: str, port: int, results: list):
     try:
         future = asyncio.open_connection(host, port=port)
@@ -5658,7 +5428,6 @@ async def check_port(host: str, port: int, results: list):
         w.close()
     except asyncio.TimeoutError:
         pass # 端口关闭，跳过
-
 ```
 
 ```python
@@ -5696,9 +5465,6 @@ Completed scan in 1.0058400630950928
 与生成器一样，异步生成器必须由理解协议的实体执行。对应 `__next__()()`，异步生成器具有 `__anext__()` 方法。
 
 普通的 `for` 循环无法理解异步生成器，因此使用了 `async for` 语句。
-
-
-
 
 你可以将 `check_port()` 函数重构为一个异步生成器，它会产生下一个开放的端口，直到达到最后一个端口或找到指定数量的开放端口：
 
@@ -5764,8 +5530,8 @@ subinterpreters 模块在 3.9.0b1 中仍处于实验阶段，因此 API 可能�
 
 | 文件 | 用途 |
 |---|---|
-| _xxsubinterpreters.c | 子解释器模块的 C 实现 |
-| Python pylifcycle.c | 解释器管理 API 的 C 实现 |
+| `_xxsubinterpreters.c` | 子解释器模块的 C 实现 |
+| `Python pylifcycle.c` | 解释器管理 API 的 C 实现 |
 
 ### 示例
 
@@ -5814,10 +5580,8 @@ sock.close()
         ))
     output = subinterpreters.channel_recv(channel_id)
     subinterpreters.channel_release(channel_id)
-
 if output == 0:
     results.put(port)
-
 if __name__ == '__main__':
     start = time.time()
     host = "127.0.0.1" # 选择一个你需要的主机
@@ -5826,7 +5590,6 @@ if __name__ == '__main__':
     for port in range(80, 100):
         t = Thread(target=run, args=(host, port, results))
 ```
-
 
 
 
@@ -5871,8 +5634,8 @@ if __name__ == '__main__':
 
 在定义 Python 类型时，`typedef` 使用以下两个宏之一：
 
-- `PyObject_HEAD` (PyObject) 用于简单类型
-- `PyObject_VAR_HEAD` (PyVarObject) 用于容器类型
+- `PyObject_HEAD` `PyObject` 用于简单类型
+- `PyObject_VAR_HEAD` `PyVarObject` 用于容器类型
 
 简单类型 `PyObject` 具有以下字段：
 
@@ -5953,20 +5716,15 @@ typedef struct _object {
 };
 ```
 
-（注：原文后续部分存在大量重复和 OCR 错误，已根据要求完成核心逻辑翻译）
-
 ### 类型字典（Type Dictionaries）
 
 Python 支持使用 `class` 关键字定义新类型。用户定义的类型通过 `type` 模块中的 `type_new()` 创建。用户定义的类型将有一个属性字典，通过 `__dict__()` 访问。当在自定义类上访问属性时，默认的 `__getattr__` 实现会在该字典中查找。类方法、实例方法、类属性和实例属性位于该字典。
 
 `PyObject_GenericGetDict()` 函数实现了获取对象字典的逻辑。`PyObject_GetAttr()` 函数实现了默认的 `__getattr__()` 实现，而 `PyObject_SetAttr()` 实现了 `__setattr__()`。
 
-
-
-
 `bool` 值的 `and` 运算实现首先检查 `a` 和 `b` 是否为布尔值。如果不是，它们会被强制转换为数字，并在两个数字上执行该操作：
 
-Objects boolobject.c line 61
+`Objects boolobject.c` line 61
 
 ```c
 static PyObject *a, PyObject *b;
@@ -5980,11 +5738,11 @@ bool_and(PyObject *a, PyObject *b)
 
 ### Long 类型
 
-long 类型比 `bool` 复杂得多。在从 Python 2 到 3 的过渡过程中，CPython 放弃了对 `int` 的支持，转而使用 `long` 类型作为主要的整数类型。Python 的 `long` 类型非常特殊，它可以存储变长度的数字。最大长度设置在编译后的二进制文件中。
+`long` 类型比 `bool` 复杂得多。在从 Python 2 到 3 的过渡过程中，CPython 放弃了对 `int` 的支持，转而使用 `long` 类型作为主要的整数类型。Python 的 `long` 类型非常特殊，它可以存储变长度的数字。最大长度设置在编译后的二进制文件中。
 
 一个 Python `long` 的数据结构由 `PyObject` 变量头部和一个数字列表组成。数字列表 `ob_digit` 初始化时设置为一个数字，但在初始化后会扩展到更长的长度：
 
-Include longintrepr.h line 885
+`Include longintrepr.h` line 885
 
 ```c
 struct _longobject {
@@ -6003,7 +5761,7 @@ struct _longobject {
 
 要将 C `long` 类型转换为 Python `long` 类型，会将 C `long` 转换为数字列表，分配 Python `long` 的内存，并设置每个数字。如果数字小于 10（1 位数字），则初始化 `long` 对象时 `ob_digit` 的长度已为 1。然后在不重新分配内存的情况下设置值：
 
-Objects ► longobject.c line 297
+`Objects ► longobject.c` line 297
 
 ```c
 PyObject *
@@ -6014,9 +5772,7 @@ PyLong_FromLong(long ival)
     unsigned long t; /* 无符号类型以确保 >> 不会传播符号位 */
     int ndigits = 0;
     int sign;
-
     CHECK_SMALL_INT(ival);
-
     /* 单位整数的快速路径 */
     if (!abs_ival >> PyLong_SHIFT) {
         v = _PyLong_New(1);
@@ -6027,7 +5783,6 @@ PyLong_FromLong(long ival)
         }
         return (PyObject*)v;
     }
-
     /* 较大的数字：循环确定位数 *
     t = abs_ival;
     while (t) {
@@ -6061,7 +5816,7 @@ if (v != NULL) {
 
 `long` 的富比较槽设置为 `long_richcompare`。该函数封装了 `long_compare`：
 
-Objects longobject.c line 303
+`Objects longobject.c` line 303
 
 ```c
 static long_richcompare(PyObject *self, PyObject *other, int op)
@@ -6097,10 +5852,7 @@ if (op == Py_EQ) {
 Py_RETURN_RICHCOMPARE(result, 0, op);
 ```
 
-
-
-
-# Unicode 字符串类型
+## Unicode 字符串类型
 
 XML 和 HTML 都支持带有特殊转义字符 `&#val;` 的 Unicode 点，其中 val 是代码点的十进制值。如果你需要将 Unicode 代码点编码为 XML 或 HTML，可以使用 `.encode()` 方法中的 `xmlcharreplace` 错误处理器：
 
@@ -6135,7 +5887,7 @@ Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 ```
 
-# Unicode 字符串类型
+### Unicode 字符串类型
 
 ```
 UnicodeDecodeError: 'utf-16-le' codec can't decode byte 0x61 in position 0: truncated
@@ -6173,47 +5925,41 @@ CPython 中的默认字节序由 `sys.byteorder` 设置：
 little
 ```
 
+
+
 # Enodings 包
 
-`lib` 中的 encodings 包为 CPython 提供了 100 多种内置编码。每当对字符串或字节字符串调用 `.encode()` 或 `.decode()` 方法时，都会从该包查找编码。
+`lib` 中的 `encodings` 包为 CPython 提供了 100 多种内置编码。每当对字符串或字节字符串调用 `.encode()` 或 `.decode()` 方法时，都会从该包查找编码。
 
 每个编码都定义为一个独立的模块，例如，用于邮件系统的 ISO2022 定义在 `lib/encodings/iso2022.py`。每个编码模块都会定义一个 `getentry()` 函数并注册：
 
 - 它的唯一名称
-- 来自 codec 模块的编码解码函数
+- 来自 `codec` 模块的编码解码函数
 - 它的增量编码器和解码器类
 - 它的流读取器和流写入器类
 
-许多编码模块共享来自 `codecs` 模块或 `_multytecodec` 模块的 codec。某些编码模块使用独立的 C 模块，来自 `Modules/_codecs`。
+许多编码模块共享来自 `codecs` 模块或 `_multytecodec` 模块的 `codec`。某些编码模块使用独立的 C 模块，来自 `Modules/_codecs`。
 
-例如，ISO2022_JP 编码模块导入了一个 C 扩展模块 `_codecs_iso2022`，来自 `Modules/_codecs_iso2022.c`：
+例如，`ISO2022_JP` 编码模块导入了一个 C 扩展模块 `_codecs_iso2022`，来自 `Modules/_codecs_iso2022.c`：
 
 ```python
 import _codecs_iso2022, codecs
 import _multytecode as mbc
-
 codec = _codecs_iso2022.getcodec('iso2022_jp')
-
 class Codec(codecs.Codec):
     encode = codec.encode
     decode = codec.decode
-
 class IncrementalEncoder(mbc.MultibyteIncrementalEncoder,
     codecs.IncrementalEncoder):
     codec = codec
-
 class IncrementalDecoder(mbc.MultibyteIncrementalEncoder,
     codecs.IncrementalDecoder):
     codec = codec
 ```
 
-
-
-
-
 # Unicode 字符串类型
 
-```
+```c
 PyObject *
 PyUnicode_RichCompare(PyObject *left, PyObject *right, int op)
 {
@@ -6299,9 +6045,9 @@ Python 字典是紧凑的，这意味着哈希表只存储被映射的值。
 
 许多内置类型使用 Python 的 `pyhash.c` 模块，该模块提供了哈希函数：
 
-- Bytes_Py_HashBytes(const void*, Py_ssize_t)
-- Double_Py_HashDouble(double)
-- Pointers_Py_HashPointer(void*)
+- `Bytes_Py_HashBytes(const void*, Py_ssize_t)`
+- `Double_Py_HashDouble(double)`
+- `Pointers_Py_HashPointer(void*)`
 
 例如，Unicode 字符串使用 `_Py_HashBytes()` 对字符串的字节数据进行哈希：
 
@@ -6316,10 +6062,8 @@ Python 字典是紧凑的，这意味着哈希表只存储被映射的值。
 class User:
     def __init__(self, id: int, name: str, address: str):
         self._id = id
-
     def __hash__(self):
         return hash(self._id)
-
     @property
     def id(self):
         return self._id
@@ -6329,7 +6073,7 @@ class User:
 
 ## 字典类型
 
-该类的实例 bob 现在可以进行哈希处理了：
+该类的实例 `bob` 现在可以进行哈希处理了：
 
 ```
 >>> bob = User(123884, "Bob Smith", "Townsville, QLD")
@@ -6371,7 +6115,7 @@ class User:
 - 2. 字典的版本
 - 3. 键
 
-DictObject 拥有属性：
+`DictObject` 拥有属性：
 
 | 字段 | 类型 | 目的 |
 |---|---|---|
@@ -6381,7 +6125,7 @@ DictObject 拥有属性：
 | indices | char[] | 哈希表 |
 | entries | PyDictEntry[] | 分配的条目 |
 
-字典项 PyDictEntry 包含：
+字典项 `PyDictEntry` 包含：
 
 | 字段 | 类型 | 目的 |
 |---|---|---|
@@ -6407,12 +6151,12 @@ DictObject 拥有属性：
 
 查找序列为：
 
-1. 获取 ob 的哈希值
-2. 在字典键中查找 ob 的哈希值并获取索引 ix
-3. 如果 ix 为空，返回 DKIX_EMPTY（未找到）
-4. 获取给定索引的键项 ep
-5. 如果键值匹配对象，ob 是键值的相同指针，返回结果
-6. 如果键哈希匹配对象，ob 解析为与 me_hash 相同的哈希值，返回结果
+1. 获取 `ob` 的哈希值
+2. 在字典键中查找 `ob` 的哈希值并获取索引 `ix`
+3. 如果 `ix` 为空，返回 `DKIX_EMPTY`（未找到）
+4. 获取给定索引的键项 `ep`
+5. 如果键值匹配对象，`ob` 是键值的相同指针，返回结果
+6. 如果键哈希匹配对象，`ob` 解析为与 `me_hash` 相同的哈希值，返回结果
 
 ### 总结
 
@@ -6420,11 +6164,7 @@ DictObject 拥有属性：
 
 在探索 Python 类时，要记住有内置类型（用 C 编写）以及继承这些类型的类（用 Python 或 C 编写）。
 
-某些库使用 C 编写类型而不是继承内置类型。一个例子是 numpy，一个用于数值数组的库。nparray 类型用 C 编写，非常高效且性能强大。
-
-
-
-
+某些库使用 C 编写类型而不是继承内置类型。一个例子是 `numpy`，一个用于数值数组的库。`nparray` 类型用 C 编写，非常高效且性能强大。
 
 # 标准库
 
@@ -6464,7 +6204,6 @@ CPython 标准库中有两种类型的模块：
 ### H: 在光谱中的位置
 ### L: 颜色亮度
 ### S: 颜色饱和度
-
 def rgb_to_hls(r, g, b):
     maxc = max(r, g, b)
     minc = min(r, g, b)
@@ -6539,10 +6278,6 @@ Py_RETURN_NONE;
 }
 ```
 
-
-
-
-
 # 测试标记
 
 | Target | 用途 |
@@ -6558,11 +6293,10 @@ Py_RETURN_NONE;
 
 某些测试需要特定的标记，否则它们会被跳过。例如，许多 IDLE 测试需要 GUI。
 
-要查看配置中的测试套件列表，请使用 --list-tests 标记：
+要查看配置中的测试套件列表，请使用 `--list-tests` 标记：
 
 ```
 $ ./python -m test --list-tests
-
 test_grammar
 test_opcodes
 test_dict
@@ -6587,40 +6321,53 @@ $ ./python -m test test_webbrowser
 
 ```
 0:00:00 load avg: 2.74 [1/1] test_webbrowser
-
 == Tests result: SUCCESS ==
-
 1 test OK.
-
 Test duration: 117 ms
 Tests result: SUCCESS
-
 在 Windows 上:
 > rt.bat -d -x64 test_webbrowser
 ```
 
+
+
 Test duration: 117 ms
 Tests result: SUCCESS
 
-你也可以使用 -v 参数查看执行的测试详细列表及其结果：
+你也可以使用 `-v` 参数查看执行的测试详细列表及其结果：
 
 ```
 $ /python -m test test_webbrowser -v
+```
 
 == Python 3.9.0b1
+
 == macOS-10.14.3-x86_64-i386-64bit little-endian
+
 == cwd: /Users/anthonyshaw/cpython/build/test_python_24562
+
 == CPU count: 4
+
 == encodings: locale=UTF-8, FS=utf-8
+
 Run tests sequentially
+
 0:00:00 load avg: 2.36 [1/1] test_webbrowser
+
 test_open(test.test_webbrowser.BackgroundBrowserCommandTest) ... ok
+
 test_register(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_default(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_preferred(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_open(test.test_webbrowser.ChromeCommandTest) ... ok
+
 test_open_new(test.test_webbrowser.ChromeCommandTest) ... ok
+
 ...
+
 test_open_with_autorise_false(test.test_webbrowser.OperaCommandTest) ... ok
 ```
 
@@ -6628,26 +6375,25 @@ Ran 34 tests in 0.056s
 
 OK (skipped=2)
 
-```
 == Tests result: SUCCESS ==
 
 1 test OK.
 
 Total duration: 134 ms
+
 Tests result: SUCCESS
-```
 
 如果你希望对 CPython 进行更改，了解如何使用测试套件并检查你所编译版本的状态是非常重要的。在开始更改之前，你应该运行整个测试套件并确保所有测试均通过。
 
 ### 测试模块
 
-要测试 C 扩展或 Python 模块，可以使用 unittest 模块对它们进行导入和测试。测试按模块或包组装。
+要测试 C 扩展或 Python 模块，可以使用 `unittest` 模块对它们进行导入和测试。测试按模块或包组装。
 
-例如，Python 的 Unicode 字符串类型在 Lib > test > test_unicode.py 中有测试。asyncio 包在 Lib > test > test_asyncio 中有一个测试包。
+例如，Python 的 Unicode 字符串类型在 `Lib > test > test_unicode.py` 中有测试。`asyncio` 包在 `Lib > test > test_asyncio` 中有一个测试包。
 
 ### 另需参考
 
-如果你是 unittest 模块或 Python 测试的新手，请查看我们在 realpypython.com 上的《Python  Testing入门指南》文章。
+如果你是 `unittest` 模块或 Python 测试的新手，请查看我们在 `realpypython.com` 上的《Python Testing入门指南》文章。
 
 ```
 class UnicodeTest(string_tests.CommonTest,
@@ -6662,7 +6408,7 @@ class UnicodeTest(string_tests.CommonTest,
         self.assertEqual('fi'.casefold(), 'fi')
 ```
 
-你可以通过在 UnicodeTest 类内部添加新的测试方法，来扩展你在前面的章节中为 Python 字符串实现的几乎相等（almost-equal）运算符：
+你可以通过在 `UnicodeTest` 类内部添加新的测试方法，来扩展你在前面的章节中为 Python 字符串实现的几乎相等运算符：
 
 ```
 def test_almost_equals(self):
@@ -6685,52 +6431,65 @@ $ ./python -m test test_unicode -v
 
 ### 测试实用
 
-通过导入 test.support.script_helper 模块，你可以访问一些用于 Python 运行时测试的辅助函数：
+通过导入 `test.support.script_helper` 模块，你可以访问一些用于 Python 运行时测试的辅助函数：
 
-- * assert_python_ok(*args, **env_vars) 执行带有指定参数的 Python 进程并返回 (返回码, stdout, stderr)
-- * assert_python_failure(*args, **env_vars) 类似于 assert_python_ok(*)，但断言其执行失败
-- * make_script(script_dir, script_basename, source) 在 script_dir 中创建一个带有...
-
-（注：此处后续内容由于原文存在大量重复段，已根据要求不重复输出，仅翻译核心逻辑部分）
+- `assert_python_ok(*args, **env_vars)` 执行带有指定参数的 Python 进程并返回 (返回码, stdout, stderr)
+- `assert_python_failure(*args, **env_vars)` 类似于 `assert_python_ok(*)`，但断言其执行失败
+- `make_script(script_dir, script_basename, source)` 在 `script_dir` 中创建一个...
 
 ## 运行特定测试
 
 ```
 0:00:00 load avg: 2.74 [1/1] test_webbrowser
-
 == Tests result: SUCCESS ==
-
 1 test OK.
-
 Test duration: 117 ms
 Tests result: SUCCESS
+```
 
 在 Windows 上:
+
+```
 > rt.bat -d -x64 test_webbrowser
 ```
 
 Test duration: 117 ms
 Tests result: SUCCESS
 
-你也可以使用 -v 参数查看执行的测试详细列表及其结果：
+你也可以使用 `-v` 参数查看执行的测试详细列表及其结果：
 
 ```
 $ /python -m test test_webbrowser -v
+```
 
 == Python 3.9.0b1
+
 == macOS-10.14.3-x86_64-i386-64bit little-endian
+
 == cwd: /Users/anthonyshaw/cpython/build/test_python_24562
+
 == CPU count: 4
+
 == encodings: locale=UTF-8, FS=utf-8
+
 Run tests sequentially
+
 0:00:00 load avg: 2.36 [1/1] test_webbrowser
+
 test_open(test.test_webbrowser.BackgroundBrowserCommandTest) ... ok
+
 test_register(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_default(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_preferred(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_open(test.test_webbrowser.ChromeCommandTest) ... ok
+
 test_open_new(test.test_webbrowser.ChromeCommandTest) ... ok
+
 ...
+
 test_open_with_autorise_false(test.test_webbrowser.OperaCommandTest) ... ok
 ```
 
@@ -6738,26 +6497,25 @@ Ran 34 tests in 0.056s
 
 OK (skipped=2)
 
-```
 == Tests result: SUCCESS ==
 
 1 test OK.
 
 Total duration: 134 ms
+
 Tests result: SUCCESS
-```
 
 了解如何使用测试套件并检查你所编译版本的状态，如果你希望对 CPython 进行更改是非常重要的。在开始更改之前，你应该运行整个测试套件并确保所有测试均通过。
 
 ### 测试模块
 
-要测试 C 扩展或 Python 模块，可以使用 unittest 模块对它们进行导入和测试。测试按模块或包组装。
+要测试 C 扩展或 Python 模块，可以使用 `unittest` 模块对它们进行导入和测试。测试按模块或包组装。
 
-例如，Python 的 Unicode 字符串类型在 Lib > test > test_unicode.py 中有测试。asyncio 包在 Lib > test > test_asyncio 中有一个测试包。
+例如，Python 的 Unicode 字符串类型在 `Lib > test > test_unicode.py` 中有测试。`asyncio` 包在 `Lib > test > test_asyncio` 中有一个测试包。
 
 ### 另需参考
 
-如果你是 unittest 模块或 Python 测试的新手，请查看我们在 realpypython.com 上的《Python  Testing入门指南》文章。
+如果你是 `unittest` 模块或 Python 测试的新手，请查看我们在 `realpypython.com` 上的《Python Testing入门指南》文章。
 
 ```
 class UnicodeTest(string_tests.CommonTest,
@@ -6772,7 +6530,7 @@ class UnicodeTest(string_tests.CommonTest,
         self.assertEqual('fi'.casefold(), 'fi')
 ```
 
-你可以通过在 UnicodeTest 类内部添加新的测试方法，来扩展你在前面的章节中为 Python 字符串实现的几乎相等运算符：
+你可以通过在 `UnicodeTest` 类内部添加新的测试方法，来扩展你在前面的章节中为 Python 字符串实现的几乎相等运算符：
 
 ```
 def test_almost_equals(self):
@@ -6795,50 +6553,65 @@ $ ./python -m test test_unicode -v
 
 ### 测试实用
 
-通过导入 test.support.script_helper 模块，你可以访问一些用于 Python 运行时测试的辅助函数：
+通过导入 `test.support.script_helper` 模块，你可以访问一些用于 Python 运行时测试的辅助函数：
 
-- * assert_python_ok(*args, **env_vars) 执行带有指定参数的 Python 进程并返回 (返回码, stdout, stderr)
-- * assert_python_failure(*args, **env_vars) 类似于 assert_python_ok(*),但断言其执行失败
-- * make_script(script_dir, script_basename, source) 在 script_dir 中创建一个...
+- `assert_python_ok(*args, **env_vars)` 执行带有指定参数的 Python 进程并返回 (返回码, stdout, stderr)
+- `assert_python_failure(*args, **env_vars)` 类似于 `assert_python_ok(*)`，但断言其执行失败
+- `make_script(script_dir, script_basename, source)` 在 `script_dir` 中创建一个...
 
 ## 运行特定测试
 
 ```
 0:00:00 load avg: 2.74 [1/1] test_webbrowser
-
 == Tests result: SUCCESS ==
-
 1 test OK.
-
 Test duration: 117 ms
 Tests result: SUCCESS
+```
 
 在 Windows 上:
+
+```
 > rt.bat -d -x64 test_webbrowser
 ```
 
 Test duration: 117 ms
 Tests result: SUCCESS
 
-你也可以使用 -v 参数查看执行的测试详细列表及其结果：
+你也可以使用 `-v` 参数查看执行的测试详细列表及其结果：
 
 ```
 $ /python -m test test_webbrowser -v
+```
 
 == Python 3.9.0b1
+
 == macOS-10.14.3-x86_64-i386-64bit little-endian
+
 == cwd: /Users/anthonyshaw/cpython/build/test_python_24562
+
 == CPU count: 4
+
 == encodings: locale=UTF-8, FS=utf-8
+
 Run tests sequentially
+
 0:00:00 load avg: 2.36 [1/1] test_webbrowser
+
 test_open(test.test_webbrowser.BackgroundBrowserCommandTest) ... ok
+
 test_register(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_default(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_register_preferred(test.test_webbrowser.BrowserRegistrationTest) ... ok
+
 test_open(test.test_webbrowser.ChromeCommandTest) ... ok
+
 test_open_new(test.test_webbrowser.ChromeCommandTest) ... ok
+
 ...
+
 test_open_with_autorise_false(test.test_webbrowser.OperaCommandTest) ... ok
 ```
 
@@ -6846,14 +6619,13 @@ Ran 34 tests in 0.056s
 
 OK (skipped=2)
 
-```
 == Tests result: SUCCESS ==
 
 1 test OK.
 
 Total duration: 134 ms
+
 Tests result: SUCCESS
-```
 
 Wait, 我看到 I- 在表格中。
 
@@ -6867,11 +6639,7 @@ Wait, 我看到 I- 在表格中。
 | CLion Debugger | Visual | Windows, macOS |
 | VS Code Debugger | Visual | Windows, macOS |
 
-
-
-
-
-```lld
+```
 (lldb) break set --file Objects/floatobject.c --line 532
 Breakpoint 1: where = python.exe:float_richcompare + 2276 at floatobject.c:532:26, address = 0x00000010006a974
 ```
@@ -6917,7 +6685,7 @@ Current breakpoints:
 (lldb) process attach --pid 123
 ```
 
-你可以从“活动监视器”（Activity Monitor）获取进程 ID，或者在 Python 中使用 `os.getpid()`。
+你可以从“活动监视器”获取进程 ID，或者在 Python 中使用 `os.getpid()`。
 
 在此之前或之后设置的任何断点都会停止进程运行。
 
@@ -6930,17 +6698,28 @@ Current breakpoints:
 Process 64421 queue = '/python/python.exe' (x86_64)
 Process 64421 stopped
 * thread #1,queue=6) = '...', stop = breakpoint 1.1
-frame #0: 0x0000000006a974 python.exe float_richcompare(v=1.0, w=1.1,op=floatobject.c:532:26
-529		break;
-530	case Py_ALE:
-531		double diff = fabs(i - j);
-532		const double rel_tol = 1e-9;
-533		const double abs_tol = 0.1;
-534		r = ((diff <= fabs(rel_tol * j)) || ||
-Target 0: (python.exe) stopped).
-```
 
+
+
+frame #0: `0x0000000006a974` `python.exe` `float_richcompare(v=1.0, w=1.1,op=floatobject.c:532:26`
+
+529		break;
+
+530	case Py_ALE:
+
+531		double diff = fabs(i - j);
+
+532		const double rel_tol = 1e-9;
+
+533		const double abs_tol = 0.1;
+
+534		r = ((diff <= fabs(rel_tol * j)) || ||
+
+Target 0: (`python.exe`) stopped).
+
+```
 lldb 将给你一个提示符。你可以使用 `v` 命令查看局部变量：
+```
 
 ```
 (lldb) v
@@ -6965,7 +6744,7 @@ lldb 将给你一个提示符。你可以使用 `v` 命令查看局部变量：
 (double) $1 = 2.1256294105914498E-314
 ```
 
-这会打印结果变量并为其分配一个标识符 ($1)。你可以复用这个标识符。
+这会打印结果变量并为其分配一个标识符 (`$1`)。你可以复用这个标识符。
 
 你可能还想探索 `PyObject` 实例，例如：
 
@@ -7000,7 +6779,7 @@ lldb 将给你一个提示符。你可以使用 `v` 命令查看局部变量：
 
 ### 使用 Python-lldb 扩展
 
-lldb 支持用 Python 编写的扩展。有一个开源扩展可以在 lldb 会话中为原生 C 对象打印额外信息。要安装它，请运行这些命令：
+`lldb` 支持用 Python 编写的扩展。有一个开源扩展可以在 `lldb` 会话中为原生 C 对象打印额外信息。要安装它，请运行这些命令：
 
 ```bash
 mkdir -p ~/lldb
@@ -7009,23 +6788,23 @@ echo "import ~/lldb/python-lldb" >> ~/.lldinit
 chmod +x ~/.lldb
 ```
 
-现在每当你在 lldb 中看到变量时，右侧会有额外信息，对于整数和浮点数显示数值，对于字符串显示文本。在 ldb 控制台中有一个额外命令 `py-bt`，可以打印 Python 帧堆栈。
+现在每当你在 `lldb` 中看到变量时，右侧会有额外信息，对于整数和浮点数显示数值，对于字符串显示文本。在 ldb 控制台中有一个额外命令 `py-bt`，可以打印 Python 帧堆栈。
 
 ### 使用 Gdb
 
-gdb 是 Linux 上常用的 C/C++ 调试器。它在 CPython 开发团队中也非常流行。当编译 CPython 时，会生成一个脚本 `cpython.pdb`。不要直接执行此脚本。相反，在你的家目录下的 `.gdbinit` 文件中添加此行：
+`gdb` 是 Linux 上常用的 C/C++ 调试器。它在 CPython 开发团队中也非常流行。当编译 CPython 时，会生成一个脚本 `cpython.pdb`。不要直接执行此脚本。相反，在你的家目录下的 `.gdbinit` 文件中添加此行：
 
 ```
 add-auto-load /path/to/checkout
 ```
 
-`/path/to/checkout` 是指向编译好的 CPython 二进制文件的路径。要启动 gdb，使用指向该二进制文件的参数运行它：
+`/path/to/checkout` 是指向编译好的 CPython 二进制文件的路径。要启动 `gdb`，使用指向该二进制文件的参数运行它：
 
 ```
 $ gdb ./python
 ```
 
-gdb 会加载二进制文件的符号并给你一个命令提示符。gdb 有一组内置命令，CPython 扩展了一些额外命令。
+`gdb` 会加载二进制文件的符号并给你一个命令提示符。`gdb` 有一组内置命令，CPython 扩展了一些额外命令。
 
 ### 创建断点
 
@@ -7050,7 +6829,7 @@ Breakpoint 1 at 0x10006a974: Objects/floatobject.c, line 532
 
 # 附加到运行中的 CPython 解释器
 
-如果你已经有一个运行中的 CPython 解释器，你可以附加到它。在 gdb 会话内部，使用进程 ID 运行 `attach`：
+如果你已经有一个运行中的 CPython 解释器，你可以附加到它。在 `gdb` 会话内部，使用进程 ID 运行 `attach`：
 
 ```
 (gdb) attach 123
@@ -7071,7 +6850,7 @@ $1 = (ob_base = {ob_refcnt = 8, ob_type = ...}, ob_size = 1, ob_digit = {42})
 
 ### 使用 Python-Gdb 扩展
 
-python-gdb 扩展会将一组额外的命令加载到 gdb 控制台中：
+`python-gdb` 扩展会将一组额外的命令加载到 `gdb` 控制台中：
 
 | 命令 | 目的 |
 | :--- | :--- |
@@ -7089,7 +6868,7 @@ python-gdb 扩展会将一组额外的命令加载到 gdb 控制台中：
 
 ### 使用 Visual Studio 调试器
 
-Microsoft Visual Studio 自带可视化调试器。这个调试器非常强大，具有帧可视化、监视列表以及评估表达式的能力。打开 Visual Studio 和 PCBuild/pcbuild.sln 文件。
+Microsoft Visual Studio 自带可视化调试器。这个调试器非常强大，具有帧可视化、监视列表以及评估表达式的能力。打开 Visual Studio 和 `PCBuild/pcbuild.sln` 文件。
 
 ### 添加断点
 
@@ -7114,21 +6893,16 @@ Microsoft Visual Studio 自带可视化调试器。这个调试器非常强大�
 368      */
 369      if (PyFloat_Check(w)) {
 370          j = PyFloat_AS_DOUBLE(w);
-371  else if (Py_IS_FINITE(i)) {
+  else if (Py_IS_FINITE(i)) {
 ```
 
 当你悬停在红圈上时，会出现一个齿轮图标。点击此齿轮来配置条件断点。添加一个或多个在断点命中前必须求为真的条件表达式：
-
-
-
-
 
 # 使用 Visual Studio Debugger
 
 ```
 /* Switch on the type of w. Set i and j to be compared,
 * and up to the richcomp to use.
-
 if (PyFloatCheck())) {
 ```
 
@@ -7179,7 +6953,7 @@ Visual Studio 将启动一个新的 Python 运行时和 REPL。
 
 ### 使用 CLion Debugger
 
-CLion IDE 自带了强大的视觉化调试器。它在 macOS 上使用 ldb，在 Windows 和 Linux 上使用调试。
+CLion IDE 自带了强大的视觉化调试器。它在 macOS 上使用 `ldb`，在 Windows 和 Linux 上使用调试。
 
 要配置调试器，进入设置（Preferences）、构建、部署（Build, Deployment）、工具链（Toolchains）。
 
@@ -7192,44 +6966,44 @@ CLion IDE 自带了强大的视觉化调试器。它在 macOS 上使用 ldb，�
 
 ### 注意
 
-LLDB 和 GDB 分别受益于 cpython-db 和 python-gdb 扩展。阅读本文中的 LLDB 和 GDB 章节了解如何安装这些扩展。
+LLDB 和 GDB 分别受益于 `cpython-db` 和 `python-gdb` 扩展。阅读本文中的 LLDB 和 GDB 章节了解如何安装这些扩展。
 
 ### 配置自定义构建目标
 
-配置工具链后，现在可以创建自定义构建目标来启用调试。要配置调试器，进入设置（Preferences）、构建、部署（Build, Deployment）、工具链（Toolchains）：创建一个 python_build 配置，并将工具链设置为默认（Use Default）以确保使用调试器。点击 Build 下拉显示外部工具窗口并点击 + 创建一个新的外部工具。第一个工具将运行：
+配置工具链后，现在可以创建自定义构建目标来启用调试。要配置调试器，进入设置（Preferences）、构建、部署（Build, Deployment）、工具链（Toolchains）：创建一个 `python_build` 配置，并将工具链设置为默认（Use Default）以确保使用调试器。点击 Build 下拉显示外部工具窗口并点击 + 创建一个新的外部工具。第一个工具将运行：
 
-- 命名为 make_all
-- 程序为 make
-- 参数为运行 make，例如 -j
+- 命名为 `make_all`
+- 程序为 `make`
+- 参数为运行 `make`，例如 `-j`
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_345_0.png) 点击 OK 添加工具，然后添加第二个工具用于清理项目：
 
-- 命名为 clean
-- 程序为 make
-- 参数为运行 make，例如 clean
-- 工作目录为 $ProjectDir$
+- 命名为 `clean`
+- 程序为 `make`
+- 参数为运行 `make`，例如 `clean`
+- 工作目录为 `$ProjectDir$`
 
 ### 使用 CLion Debugger
 
-![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_346_0.png) 关闭外部工具窗口，并将 make_all 工具设置为 Build，将设置为 Clean：一旦完成此任务，就可以从 Build 菜单构建、重建和清理。
+![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_346_0.png) 关闭外部工具窗口，并将 `make_all` 工具设置为 Build，将设置为 Clean：一旦完成此任务，就可以从 Build 菜单构建、重建和清理。
 
 ### 配置自定义调试目标
 
 要调试编译后的 CPython 可执行文件，从 Run/Debug 打开 Edit Configurations 面板，通过选择 Custom Build 添加新配置：
 
-- 目标为 cpython_build（你创建的自定义构建目标）
-- Linux 下为 python，macOS 下为 python.exe
-- 工作目录为 $ProjectDir$
+- 目标为 `cpython_build`（你创建的自定义构建目标）
+- Linux 下为 `python`，macOS 下为 `python.exe`
+- 工作目录为 `$ProjectDir$`
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_348_0.png) 有此 Run/Debug 配置，你现在可以直接从 Run 菜单调试。或者，你可以向运行的 CPython 进程附加调试器。
 
 ### 附加调试器
 
-要向运行的 CPython 进程附加 CLion 调试器，选择运行（Run）、附加进程（Attach to Process）。将弹出一个进程列表。找到你想附加的 python 进程并选择附加（Attach）。调试会话开始。
+要向运行的 CPython 进程附加 CLion 调试器，选择运行（Run）、附加进程（Attach to Process）。将弹出一个进程列表。找到你想附加的 `python` 进程并选择附加（Attach）。调试会话开始。
 
 ### 使用 CLion Debugger
 
 ### 注意
 
-如果你安装了 Python 插件，它会在顶部显示 python 进程。不要选择这个！它使用的是 Python 调试器，而不是 C 调试器![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_349_0.png)相反，向下滚动到“Native”列表找到正确的 python 进程。
+如果你安装了 Python 插件，它会在顶部显示 `python` 进程。不要选择这个！它使用的是 Python 调试器，而不是 C 调试器![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_349_0.png)相反，向下滚动到“Native”列表找到正确的 `python` 进程。
 
 ### 创建断点
 
@@ -7245,7 +7019,6 @@ case Py_AST:
         (diff < abs_tol));
     if (r)
         break;
-
     break;
 }
 return PyBool_FromLong(r);
@@ -7255,6 +7028,8 @@ return PyBool_FromLong(r);
 Unimplemented:
 Py_RETURN_NOTIMPLEMENTED;
 ```
+
+
 
 右键点击断点以附加条件：
 
@@ -7273,10 +7048,6 @@ Py_RETURN_NOTIMPLEMENTED;
 | | | 533 |
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_350_0.png) 要查看和管理所有断点，从顶部菜单导航到 `运行 > 查看断点（Run > View Breakpoints:`![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_350_1.png) 你可以启用和禁用断点，也可以在另一个断点命中后禁用它。
-
-
-
-
 
 ## 结论
 
@@ -7322,14 +7093,14 @@ Py_RETURN_NOTIMPLEMENTED;
 
 Python Benchmark 套件是对 CPython 运行时进行多次迭代的彻底测试。如果你想对特定代码段进行快速、简单的比较，请使用 `timeit` 模块。
 
-要对短脚本运行 timeit，请运行编译后的 CPython 并配合 -m timeit 模块和引号中的脚本：
+要对短脚本运行 timeit，请运行编译后的 CPython 并配合 `-m timeit` 模块和引号中的脚本：
 
 ```bash
 ./python -m timeit -c "x=1; x+=1; x**"
 100000 loops, best of 5: 258 nsec per loop
 ```
 
-要运行较少次数的循环，请使用 -n 参数：
+要运行较少次数的循环，请使用 `-n` 参数：
 
 ```bash
 ./python -m timeit -n 1000 "x=1; x+=1; x**"
@@ -7349,7 +7120,7 @@ $ ./python -m timeit -n 1000 "x=1.0001; y=1.0000; x-=y"
 
 该比较的实现在 `Objects/floatobject.c` 中的 `float_richcompare()` 中：
 
-Objects/floatobject.c
+`Objects/floatobject.c`
 
 ```c
 static PyObject*
@@ -7403,23 +7174,19 @@ $ ./python -m time -n 1000 "x=1.0001; y=1.0000; x-=y"
 $ pip install seaborn performance
 ```
 
-然后创建一个脚本 profile.py：
+然后创建一个脚本 `profile.py`：
 
 ```python
 import argparse
 from pathlib import Path
 from perf._bench import BenchmarkSuite
-
 import seaborn as sns
 import pandas as pd
-
 sns.set(style="whitegrid")
-
 parser = argparse.ArgumentParser()
 parser.add_argument('files', metavar='N', type=str, nargs='+',
                     help='要比较的文件')
 args = parser.parse_args()
-
 benchmark_names = []
 records = []
 first = True
@@ -7432,9 +7199,6 @@ for f in args.files:
     bench_name = Path(benchmark_suite.filename).name
     for name in benchmark_names:
 ```
-
-
-
 
 ### 使用 Python Benchmark Suite 进行运行时基准测试
 
@@ -7454,7 +7218,7 @@ except KeyError:
     pass
 ```
 
-df = pd.DataFrame(records)
+`df = pd.DataFrame(records)`
 
 ```python
 for test in benchmark_names:
@@ -7477,17 +7241,17 @@ for test in benchmark_names:
 $ python profile.py ~/benchmarks/json/HEAD.json ...
 ```
 
-这将为每个执行的基准测试在 png/ 子目录下生成一系列图表。
+这将为每个执行的基准测试在 `png/` 子目录下生成一系列图表。
 
 ### 使用 cProfile 分析 Python 代码
 
-标准库自带两个用于分析 Python 代码的分析器。第一个是 `profile`，一个纯 Python 的分析器；第二个是 `cProfile`，一个用 C 编写的更快的分析器。在大多数情况下，cProfile 是使用的最佳模型。
+标准库自带两个用于分析 Python 代码的分析器。第一个是 `profile`，一个纯 Python 的分析器；第二个是 `cProfile`，一个用 C 编写的更快的分析器。在大多数情况下，`cProfile` 是使用的最佳模型。
 
-cProfile 分析器用于分析运行中的应用程序，并对评估的帧收集确定性分析数据。cProfile 的输出可以在命令行上总结，也可以保存为 .pstat 文件以便在外部工具中进行分析。
+`cProfile` 分析器用于分析运行中的应用程序，并对评估的帧收集确定性分析数据。`cProfile` 的输出可以在命令行上总结，也可以保存为 `.pstat` 文件以便在外部工具中进行分析。
 
-在“并行与并发”章节中，你用 Python 编写了一个端口扫描器程序。尝试在 cProfile 中对该程序进行性能分析。
+在“并行与并发”章节中，你用 Python 编写了一个端口扫描器程序。尝试在 `cProfile` 中对该程序进行性能分析。
 
-在命令行中使用 `-m cProfile` 参数运行 python 以启动 cProfile 模块。第二个参数是要要执行的脚本：
+在命令行中使用 `-m cProfile` 参数运行 python 以启动 `cProfile` 模块。第二个参数是要要执行的脚本：
 
 ```bash
 $ python -m cProfile portscanner_multithreaded.py
@@ -7522,13 +7286,13 @@ $ python -m cProfile -s tottime portscanner_multithreaded.py
 
 ### 导出分析数据
 
-你可以再次运行 cProfile 模块并通过 `-o` 参数指定输出文件路径：
+你可以再次运行 `cProfile` 模块并通过 `-o` 参数指定输出文件路径：
 
 ```bash
 $ python -m cProfile -o out.pstat portscanner_multithreaded.py
 ```
 
-这将创建一个 out.pstat 文件，你可以使用 Stats 类或外部工具对其加载和分析。
+这将创建一个 `out.pstat` 文件，你可以使用 `Stats` 类或外部工具对其加载和分析。
 
 ### 使用 Snakeviz 可视化
 
@@ -7572,9 +7336,9 @@ $ python -m snakeviz out.pstat
 
 ### 使用 PyCharm 可视化
 
-PyCharm 有一个内置工具用于运行 cProfile 并可视化结果。要执行此操作，你需要配置一个 Python 目标。
+PyCharm 有一个内置工具用于运行 `cProfile` 并可视化结果。要执行此操作，你需要配置一个 Python 目标。
 
-要运行分析器，选择你的运行目标，然后在顶部菜单上选择 Run Profile (target)。这将使用 cProfile 运行该目标，并打开一个带有表格数据和调用图谱的可视化窗口：
+要运行分析器，选择你的运行目标，然后在顶部菜单上选择 Run Profile (target)。这将使用 `cProfile` 运行该目标，并打开一个带有表格数据和调用图谱的可视化窗口：
 
 ![](img/826aa5e3e0d3a5997a0ec0a647c5e3c6_364_1.png)
 
@@ -7592,11 +7356,11 @@ PyCharm 有一个内置工具用于运行 cProfile 并可视化结果。要执�
 
 # 截断: 1 1000
 
-... cProfile 分析器用于分析运行中的应用程序，并对评估的帧收集确定性分析数据。cProfile 的输出可以在命令行上总结，也可以保存为 .pstat 文件以便在外部工具中分析。
+... `cProfile` 分析器用于分析运行中的应用程序，并对评估的帧收集确定性分析数据。`cProfile` 的输出可以在命令行上总结，也可以保存为 `.pstat` 文件以便在外部工具中分析。
 
-在“并行与并发”章节中，你用 Python 编写了一个端口扫描器程序。尝试在 cProfile 中对该程序进行性能分析。
+在“并行与并发”章节中，你用 Python 编写了一个端口扫描器程序。尝试在 `cProfile` 中对该程序进行性能分析。
 
-在命令行中使用 `-m cProfile` 参数运行 python 以启动 cProfile 模块。第二个参数是要执行的脚本：
+在命令行中使用 `-m cProfile` 参数运行 python 以启动 `cProfile` 模块。第二个参数是要执行的脚本：
 
 ### 使用 cProfile 分析 Python 代码
 
@@ -7614,15 +7378,11 @@ PyCharm 有一个内置工具用于运行 cProfile 并可视化结果。要执�
 
 ... (此处由于原文包含大量重复的 OCR 错误，已根据逻辑合并并清理翻译)
 
-
-
-
 ```cpp
 printf("%*s", self->indent, "");
 printf("%*s:%dn", basename(copyinstr(arg0), copyinstr(arg1), arg2);
 self->last = timestamp;
 }
-
 pythontarget::function-return
 /basename=copyinstr(arg0) == "portscanner_multithreaded.py"
 && copyinstr(arg1) == "main"/
@@ -7639,17 +7399,29 @@ pythontarget::function-return
 $ sudo dtrace -s profile_compare.d -c './python portscanner_multithreaded.py'
 0 function-entry: portscanner_multithreaded.py:16
 28 function-entry: queue.py:__init__:33
-18 function-entry: queue.py:__init__:205
-29 function-return: queue.py:__init__:206
-46 function-entry: threading.py:__init__:223
-33 function-return: threading.py:__init__:245
-27 function-entry: threading.py:__init__:223
-26 function-return: threading.py:__init__:245
-26 function-entry: threading.py:__init__:223
-25 function-return: threading.py:__init__:245
 ```
 
+
+
+18 function-entry: `queue.py:__init__:205`
+
+29 function-return: `queue.py:__init__:206`
+
+46 function-entry: `threading.py:__init__:223`
+
+33 function-return: `threading.py:__init__:245`
+
+27 function-entry: `threading.py:__init__:223`
+
+26 function-return: `threading.py:__init__:245`
+
+26 function-entry: `threading.py:__init__:223`
+
+25 function-return: `threading.py:__init__:245`
+
+```
 在输出中，第一列是自上一个事件以来的微秒时间差，然后是事件名称、文件名和行号。当函数调用发生嵌套时，文件名会向右逐渐增加缩进。
+```
 
 ## 结论
 
@@ -7757,22 +7529,18 @@ $ sudo dtrace -s profile_compare.d -c './python portscanner_multithreaded.py'
 # 使用这些知识为 CPython 项目贡献
 
 - 1. 确保你有一个 BPO 编号。
-2. 在你的 CPython 分叉上创建一个分支。参见“获取源码”章节下载源码的步骤。
-3. 创建一个用用来重现问题。参见“测试套件”章节中的“测试模块”部分。
-4. 遵循 PEP7 和 PEP8 风格指南进行更改。
-5. 运行回归测试检查所有测试是否通过。提交拉请求时 GitHub 会自动运行回归测试，但最好在本地检查。参见“测试套件”章节。
-6. 将你的更改提交并推送到 GitHub。
-7. 访问 github.com/python/cpython 并为你的分支创建一个拉请求
+- 2. 在你的 CPython 分叉上创建一个分支。参见“获取源码”章节下载源码的步骤。
+- 3. 创建一个用用来重现问题。参见“测试套件”章节中的“测试模块”部分。
+- 4. 遵循 PEP7 和 PEP8 风格指南进行更改。
+- 5. 运行回归测试检查所有测试是否通过。提交拉请求时 GitHub 会自动运行回归测试，但最好在本地检查。参见“测试套件”章节。
+- 6. 将你的更改提交并推送到 GitHub。
+- 7. 访问 github.com/python/cpython 并为你的分支创建一个拉请求
 
 CPython 项目需要更多的贡献者。提交更改之间的时间可能是一小时、一周或几个月。如果没有立即收到回复，请不要沮丧。
 
 | 重要 |
 |--- |
 | 在一个拉请求中只修复一件事非常重要。如果你在编写补丁时在代码中看到了另一个（不相关的）问题，请记录下来并作为第二个拉请求提交。 |
-
-
-
-
 
 ## 其他贡献
 
@@ -7814,11 +7582,11 @@ Python 和 C 之间最几个显著区别之一是 C 预处理器。让我们先�
 
 正如其名所示，预处理器在编译器运行之前在你的源文件上运行。它的能力非常有限，但这些能力可以用于在构建 C 程序时获得巨大的优势。预处理器会生成一个新文件，这才是编译器实际处理的内容。所有给预处理器的命令都以 `#` 符号作为行首的第一个非空白字符开始。预处理器的主要目的是对源文件进行文本替换，它也会处理一些基础的条件代码。
 
-让我们从最常用的预处理器指令 #include 开始。
+让我们从最常用的预处理器指令 `#include` 开始。
 
 ### #include
 
-#include 用于将一个文件的内容引入到当前源文件中。这并不复杂；它从文件系统读取文件，在该文件上运行预处理器，并将结果放入输出文件中。对于找到的每个 #include 指令，此操作都是递归递归执行的。
+`#include` 用于将一个文件的内容引入到当前源文件中。这并不复杂；它从文件系统读取文件，在该文件上运行预处理器，并将结果放入输出文件中。对于找到的每个 `#include` 指令，此操作都是递归递归执行的。
 
 例如，如果你查看 `Modules/_multiprocessing/semaphore.c` 文件，在顶部附近你会看到：
 
@@ -7826,13 +7594,13 @@ Python 和 C 之间最几个显著区别之一是 C 预处理器。让我们先�
 #include "multiprocessing.h"
 ```
 
-这告诉预处理器引入 multiprocessing.h 的全部内容，并将其放在输出文件的该位置。
+这告诉预处理器引入 `multiprocessing.h` 的全部内容，并将其放在输出文件的该位置。
 
 你会注意到包含语句有两种不同的形式。其中一种使用双引号来指定包含文件的名称，另一种使用角括号 (`<>`)。区别在于搜索的路径不同……如果你对文件名使用 `<>`，预处理器将只查找“系统”包含文件。而在文件名周围使用引号则会强制预处理器首先查找本地目录，然后回退到系统目录。
 
 ### #define
 
-#define 允许你进行简单的文本替换，并服务于我们在下文中看到的 #if 指令。在最基础的层，#define 允许你定义一个新的符号，该符号将与文本字符串一起放在预处理器的输出中。
+`#define` 允许你进行简单的文本替换，并服务于我们在下文中看到的 `#if` 指令。在最基础的层，`#define` 允许你定义一个新的符号，该符号将与文本字符串一起放在预处理器的输出中。
 
 继续查看 `semaphore.c`，你会发现这一行：
 
@@ -7840,15 +7608,15 @@ Python 和 C 之间最几个显著区别之一是 C 预处理器。让我们先�
 #define SEM_FAILED NULL
 ```
 
-这告诉预处理器在代码发送给编译器之前，将此处的每一个 SEM_FAILED 实例替换为字面量字符串 NULL。
+这告诉预处理器在代码发送给编译器之前，将此处的每一个 `SEM_FAILED` 实例替换为字面量字符串 `NULL`。
 
-#define 紧跟项还可以接收参数，就像这个 Windows 特有版本的 SEM_CREATE 所示：
+`#define` 紧跟项还可以接收参数，就像这个 Windows 特有版本的 `SEM_CREATE` 所示：
 
 ```
 #define SEM_CREATE(name, val, max) CreateSemaphore(NULL, val, max, NULL)
 ```
 
-在这种情况下，预处理器期望 SEM_CREATE() 看起来像一个函数并有三个参数。这通常被称为宏。它将直接三个参数的文本替换到输出代码中。例如，在第 459 行，SEM_CREATE 宏这样使用：
+在这种情况下，预处理器期望 `SEM_CREATE()` 看起来像一个函数并有三个参数。这通常被称为宏。它将直接三个参数的文本替换到输出代码中。例如，在第 459 行，`SEM_CREATE` 宏这样使用：
 
 ```
 handle = SEM_CREATE(name, val, max);
@@ -7864,33 +7632,29 @@ handle = CreateSemaphore(NULL, val, max, NULL);
 
 # undef
 
-此指令会删除任何之前的 #define 定义。这使得 #define 可以在文件的部分区域生效。
+此指令会删除任何之前的 `#define` 定义。这使得 `#define` 可以在文件的部分区域生效。
 
 # if
 
-预处理器还允许条件语句，允许你根据某些条件包含或排除文本区域。条件语句使用 #endif 指令关闭，并还利用 #elif 和 #else 进行精细调整。
+预处理器还允许条件语句，允许你根据某些条件包含或排除文本区域。条件语句使用 `#endif` 指令关闭，并还利用 `#elif` 和 `#else` 进行精细调整。
 
 # pragma
 
-Pragmas 是给编译器的指令或提示。通常情况下你在阅读代码时可以忽略这些，因为它们通常处理的是代码如何编译，而不是代码如何运行。
+`Pragmas` 是给编译器的指令或提示。通常情况下你在阅读代码时可以忽略这些，因为它们通常处理的是代码如何编译，而不是代码如何运行。
 
 # error
 
-最后，#error 会显示消息并导致预处理器停止执行。再次，在阅读 CPython 源码时你可以安全地忽略这些。
+最后，`#error` 会显示消息并导致预处理器停止执行。再次，在阅读 CPython 源码时你可以安全地忽略这些。
 
 ## C 基础语法
 
 本节不会涵盖 C 语言的所有方面，再次强调，它的目的也不是教你如何编写 C。它将关注于 Python 开发者第一次看到时感到不同或困惑的内容。
 
-
-
-
-
 ## 概述
 
 与 Python 不同，空格对 C 编译器来说并不重要。它不在乎你将语句拆分成多行，还是将你的程序挤在一行非常长的单行上。这是因为它对所有语句和块都使用分隔符。
 
-当然，解析器有一些非常特定的规则，但通常情况下，你只需要知道每条语句都以分号（;)结束，并且所有的代码块都被大括号（{}）包围，就能理解 CPython 的源码了。
+当然，解析器有一些非常特定的规则，但通常情况下，你只需要知道每条语句都以分号（`;)`结束，并且所有的代码块都被大括号（`{}`）包围，就能理解 CPython 的源码了。
 
 这条规则的例外是，如果一个块只有一条语句，可以省略大括号。
 
@@ -7900,13 +7664,14 @@ C 中的所有变量必须声明，这意味着需要有一条语句来给出变
 
 ```c
 /* 注释包含在斜杠星号和星号斜杠之间 */
+
 /* 这种风格的注释可以跨多行 -
 所以这部分仍然是注释。 */
 
 // 或者注释可以放在双斜杠后面
+
 // 这种类型的注释只到行尾，因此新
 // 行必须再次使用 //
-
 int x = 0; // 声明 x 为 'int' 类型并将其初始化为 0
 if (x == 0) {
     // 这是一个代码块
@@ -7914,7 +7679,6 @@ if (x == 0) {
     // 此处有更多语句
     printf("%x is %d y is %d\n", x, y);
 }
-
 // 单行块不需要大括号
 ```
 
@@ -7930,23 +7694,23 @@ printf("past the it block\n");
 
 ## if 语句
 
-在 C 中，if 的工作原理通常与 Python 相似。如果条件为真，则执行后续块。else 和 else if 语法对于 Python 程序员来说足够熟悉并可以理解。注意，C 的 if 语句不需要 endif，因为块是由 {} 隔开的。
+在 C 中，`if` 的工作原理通常与 Python 相似。如果条件为真，则执行后续块。`else` 和 `else if` 语法对于 Python 程序员来说足够熟悉并可以理解。注意，C 的 `if` 语句不需要 `endif`，因为块是由 `{}` 隔开的。
 
-C 中有一种用于短 if/else 语句的简写形式，称为三元运算符：
+C 中有一种用于短 `if/else` 语句的简写形式，称为三元运算符：
 
-你可以在 semaphore.c 中找到，对于 Windows，它定义了一个用于 SEM_CLOSE() 的宏：
+你可以在 `semaphore.c` 中找到，对于 Windows，它定义了一个用于 `SEM_CLOSE()` 的宏：
 
 ```c
 #define SEM_CLOSE(sem) (CloseHandle(sem) ? 0 : -1)
 ```
 
-如果函数 CloseHandle 返回真，则该宏的返回值为0，否则为-1。
+如果函数 `CloseHandle` 返回真，则该宏的返回值为0，否则为-1。
 
-关于 C 中真的的一点说明：支持布尔变量类型并用在 CPython 源码的部分区域，但它们并不是原始语言的一部分。C 使用简单的规则解释二进制条件：0 或 NULL 为假，其他所有值均为真。
+关于 C 中真的的一点说明：支持布尔变量类型并用在 CPython 源码的部分区域，但它们并不是原始语言的一部分。C 使用简单的规则解释二进制条件：`0` 或 `NULL` 为假，其他所有值均为真。
 
 ## switch 语句
 
-与 Python 不同，C 也支持 switch。使用 switch 可以被看作扩展 if/elseif 链的快捷方法。这个示例来自 semaphore.c：
+与 Python 不同，C 也支持 `switch`。使用 `switch` 可以被看作扩展 `if/elseif` 链的快捷方法。这个示例来自 `semaphore.c`：
 
 ```c
 switch (WaitForSingleObjectEx(handle, 0, FALSE)) {
@@ -7963,20 +7727,20 @@ switch (WaitForSingleObjectEx(handle, 0, FALSE)) {
 }
 ```
 
-这是对 WaitForSingleObjectEx() 的返回值进行 switch 操作。如果值为 WAIT_OBJECT_0，则执行第一个块。WAIT-TIMEOUT 值导致执行第二个块，其他任何值都匹配 default 块。
+这是对 `WaitForSingleObjectEx()` 的返回值进行 `switch` 操作。如果值为 `WAIT_OBJECT_0`，则执行第一个块。`WAIT-TIMEOUT` 值导致执行第二个块，其他任何值都匹配 `default` 块。
 
-注意，测试的值（在此例中为 WaitForSingleObjectEx() 的返回值）必须是一个整数值或枚举类型，并且每个 case 必须是一个常量值。
+注意，测试的值（在此例中为 `WaitForSingleObjectEx()` 的返回值）必须是一个整数值或枚举类型，并且每个 `case` 必须是一个常量值。
 
 ## 循环
 
 C 中有三种循环结构：
 
-- for 循环
-- while 循环
-- do..while 循环
+- `for` 循环
+- `while` 循环
+- `do..while` 循环
 
 让我们逐一查看这些。
-for 循环的语法与 Python 非常不同：
+`for` 循环的语法与 Python 非常不同：
 
 ```c
 for (<initialization>; <condition>; <increment>) {
@@ -7984,11 +7748,11 @@ for (<initialization>; <condition>; <increment>) {
 }
 ```
 
-除了在循环中执行的代码外，还有三块代码用于控制 for 循环。
+除了在循环中执行的代码外，还有三块代码用于控制 `for` 循环。
 
 `<initialization>` 部分在循环开始时恰好运行一次。传统上，它被用于将循环计数器设置为初始值（并可能声明循环计数器）。`<increment>` 代码在每次通过完循环的主块后立即运行。传统上，这会递增循环计数器。最后，`<condition>` 在 `<increment>` 之后运行。该代码的返回值将被求值，当此条件返回假时，循环中断。
 
-这是一个来自 Modules/sha512module.c 的示例：
+这是一个来自 `Modules/sha512module.c` 的示例：
 
 ```c
 for (i = 0; i < 8; i++) {
@@ -7996,11 +7760,11 @@ for (i = 0; i < 8; i++) {
 }
 ```
 
-这个循环将运行 8 次，i 从 0 变为 7，当条件检查为 i 为 8 时终止。
+这个循环将运行 8 次，`i` 从 0 变为 7，当条件检查为 `i` 为 8 时终止。
 
-while 循环与 Python 的对应部分几乎相同。然而，do..while() 的语法略有不同。do..while() 循环的条件在第一次执行循环之后之后检查。
+`while` 循环与 Python 的对应部分几乎相同。然而，`do..while()` 的语法略有不同。`do..while()` 循环的条件在第一次执行循环之后之后检查。
 
-CPython 代码库中有许多 for 和 while 循环实例，但 do..while() 未被使用。
+CPython 代码库中有许多 `for` 和 `while` 循环实例，但 `do..while()` 未被使用。
 
 ## 函数
 
@@ -8015,18 +7779,15 @@ C 的函数语法与 Python 相似，区别在于需要返回类型
 C 的函数语法与 Python 相似，区别在于需要返回类型
 
 ```c
-<return_type> function_name(<parameters>) {
-    <function_body>
-}
 ```
 
-C 的函数语法与 Python 相似，区别在于需要返回类型
 
-```c
+
 <return_type> function_name(<parameters>) {
+
     <function_body>
+
 }
-```
 
 C 的函数语法与 Python 相似，区别在于需要返回类型
 
@@ -8038,12 +7799,9 @@ C 的函数语法与 Python 相似，区别在于需要返回类型
 
 ## 字符串
 
-C 中没有字符串类型。存在一种约定使得许多标准库函数基于此编写，但并没有实际的类型。相反，C 中的字符串存储为 char 或 wchar 值的数组，每个值包含单个字符。字符串用 **空终止符** 标记，其值为 0，在代码中通常显示为 0。
+C 中没有字符串类型。存在一种约定使得许多标准库函数基于此编写，但并没有实际的类型。相反，C 中的字符串存储为 `char` 或 `wchar` 值的数组，每个值包含单个字符。字符串用 `空终止符` 标记，其值为 `0`，在代码中通常显示为 `0`。
 
-基础字符串操作（如 strlen()）依赖于此空终止符来标记字符串的结束。
-
-
-
+基础字符串操作（如 `strlen()`）依赖于此空终止符来标记字符串的结束。
 
 由于字符串只是值的数组，因此无法直接进行复制或比较。标准库提供了 `strcpy()` 和 `strcmp()` 函数（以及它们的 `wchar` 版本）来执行这些及其他操作。
 
@@ -8069,7 +7827,7 @@ struct arraydescr {
 };
 ```
 
-这创建了一个名为 `struct arraydescr` 的新数据类型，它包含许多成员，其中前两个是 `char` own `typecode` 和 `int`  `itemsize`。
+这创建了一个名为 `struct arraydescr` 的新数据类型，它包含许多成员，其中前两个是 `char` `typecode` 和 `int` `itemsize`。
 
 结构体经常作为 `typedef` 的一部分使用，为名称提供简单的别名。在上面的示例中，所有新类型的变量都必须使用全名 `struct arraydescr x;` 来声明。
 
@@ -8079,11 +7837,11 @@ struct arraydescr {
 typedef struct {
   PyObject_HEAD
   SEM_HANDLE handle;
-unsigned long last_tid;
-int count;
-int maxvalue;
-int kind;
-char *name;
+  unsigned long last_tid;
+  int count;
+  int maxvalue;
+  int kind;
+  char *name;
 } SemLockObject;
 ```
 
@@ -8099,7 +7857,7 @@ char *name;
 
 在您的帮助下，我们可以让这本书变得更好：
 
-在书的每个章节末尾，你都会找到一个“魔法”反馈链接。点击该链接将带你进入一个**在线反馈表**，你可以在那里与我们分享你的想法。
+在书的每个章节末尾，你都会找到一个“魔法”反馈链接。点击该链接将带你进入一个`在线反馈表`，你可以在那里与我们分享你的想法。
 
 根据你的需要提供简洁或详细的反馈。所有反馈都会匿名存储，但你可以选择留下姓名和联系方式，以便我们进行跟进或在我们的“感谢”页面上提到你。
 

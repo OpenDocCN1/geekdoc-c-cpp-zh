@@ -1,36 +1,29 @@
-# Library 3\. Utility
 
-# Utility 库如何改进你的程序？
+# Library 3. Utility
 
 ## Utility 库如何改进你的程序？
 
-*   编译期断言 `BOOST_STATIC_ASSERT`
+- 编译期断言 `BOOST_STATIC_ASSERT`
+- 安全的析构 `checked_delete` 和 `checked_array_delete`
+- 禁止复制 `noncopyable`
+- `operator&` 被重载时用 `addressof` 取得对象地址
+- 用 `enable_if` 和 `disable_if` 控制重载与特化
 
-*   安全的析构 `checked_delete` 和 `checked_array_delete`
+有些工具还不够组成它们自己的库，因此它们与其它实体被集合到一起。这就形成了 Boost.Utility，收集了一些没有更合适地方存放的、有用的工具。它们很有用，应该被加入到 Boost，但它们又太小，不足以形成自己的库。本章介绍 Boost.Utility 中最基本的以及最广泛使用的工具。
 
-*   禁止复制 `noncopyable`
+我们将从 `BOOST_STATIC_ASSERT` 开始，它是一个在编译期判断整型常量表达式的工具。然后，我们看看当你通过一个指向不完整类型的指针 `delete` 对象时，即当被删除的对象的内存布局未知时，会发生什么。`checked_delete` 使得这个讨论更为有趣。我们还会看到 `noncopyable` 如何防止一个类被复制，这也是本章最重要的主题。然后我们将看到 `addressof`，它用于阻止那些重载了 `operator&` 的险恶的程序员[1]的病态行为。最后，我们将测试 `enable_if`，它非常有用，可用于在名字查找时控制函数重载与模板特化是否被考虑。
 
-*   `operator&`被重载时用 `addressof`取得对象地址
-
-*   用`enable_if` 和 `disable_if`控制重载与特化
-
-有些工具还不够组成它们自己的库，因此它们与其它实体被集合到一起。这就形成了 Boost.Utility，收集了一些没有更合适地方存放的、有用的工具。它们很有用，应该被加入到 Boost，但它们又太小，不足以形成自己的库。本 章介绍 Boost.Utility 中最基本的以及最广泛使用的工具。
-
-我们将从 `BOOST_STATIC_ASSERT`开始，它是一个在编译期判断整型常量表达式的工具。然后，我们看看当你通过一个指向不完整类型的指针`delete`对象时，即当被删除的对象的内存布局未知时，会发生什么。`checked_delete` 使得这个讨论更为有趣。我们还会看到 `noncopyable` 如何防止一个类被复制，这也是本章最重要的主题。然后我们将看到 `addressof`, 它用于阻止那些重载了`operator&`的险恶的程序员[1]的病态行为。最后，我们将测试 `enable_if`, 它非常有用，可用于在名字查找时控制函数重载与模板特化是否被考虑。
-
-> [1] 如果你认为我说的不对，请把你认为最合理的重载了`operator&`的用例发给我。
-
-# BOOST_STATIC_ASSERT
+> [1] 如果你认为我说的不对，请把你认为最合理的重载了 `operator&` 的用例发给我。
 
 ## BOOST_STATIC_ASSERT
 
-### 头文件: `"boost/static_assert.hpp"`
+### 头文件：`"boost/static_assert.hpp"`
 
-在运行期执行断言可能是你经常用到的，也是非常合理的。它是测试前置条件、后置条件以及不变式的好方 法。执行运行期断言有很多不同的方法，但是在编译期你如何进行断言呢？当然，唯一的方法就是让编译器产生一个错误，这是很平常的事情(我在无意中都做过几 千次了)，但如何从错误信息中获得有意义的信息却不是那么明显的。而且，即使你在一个编译器上找到了办法，也很难把它移植到其它编译器上。这就是使用 `BOOST_STATIC_ASSERT`的原因。它可以在不同的平台上使用，正如我们即将看到的。
+在运行期执行断言可能是你经常用到的，也是非常合理的。它是测试前置条件、后置条件以及不变式的好方法。执行运行期断言有很多不同的方法，但是在编译期你如何进行断言呢？当然，唯一的方法就是让编译器产生一个错误，这是很平常的事情（我在无意中都做过几千次了），但如何从错误信息中获得有意义的信息却不是那么明显的。而且，即使你在一个编译器上找到了办法，也很难把它移植到其它编译器上。这就是使用 `BOOST_STATIC_ASSERT` 的原因。它可以在不同的平台上使用，正如我们即将看到的。
 
 ### 用法
 
-要开始使用静态断言，就要包含头文件 `"boost/static_assert.hpp"`. 该头文件定义了宏[2] `BOOST_STATIC_ASSERT`. 作为它的第一个使用范例，我们来看看如何在类作用域中使用它。考虑一个泛化的类，它要求实例化时所用的类型是一个整数类型。我们不想为所有类型提供特化， 因此我们需要在编译期进行测试，以确保我们的类的确是用一个整数类型进行实例化的。现在，我们先提前一点使用另一个 Boost 库来进行测试，它就是 Boost.Type_traits. 我们使用一个称为`is_integral`的断言，它对它的参数执行一个编译期求值，正如你从它的名字可以猜到的一样，求值的结果是表明该类型是否一个整数类型。
+要开始使用静态断言，就要包含头文件 `"boost/static_assert.hpp"`。该头文件定义了宏[2] `BOOST_STATIC_ASSERT`。作为它的第一个使用范例，我们来看看如何在类作用域中使用它。考虑一个泛化的类，它要求实例化时所用的类型是一个整数类型。我们不想为所有类型提供特化，因此我们需要在编译期进行测试，以确保我们的类的确是用一个整数类型进行实例化的。现在，我们先提前一点使用另一个 Boost 库来进行测试，它就是 Boost.Type_traits。我们使用一个称为 `is_integral` 的断言，它对它的参数执行一个编译期求值，正如你从它的名字可以猜到的一样，求值的结果是表明该类型是否一个整数类型。
 
 > [2] 是的，它是一个宏。你知道，宏也可以很有用的。
 
@@ -42,7 +35,7 @@
 
 template <typename T> class only_compatible_with_integral_types {
   BOOST_STATIC_ASSERT(boost::is_integral<T>::value);
-}; 
+};
 ```
 
 有了这个断言，在实例化类 `only_compatible_with_integral_types` 时如果试图使用一个非整型的类型，就会导致一个编译期的失败。输出信息取决于编译器，但在多数编译器下输出信息会惊人地一致。
@@ -50,14 +43,14 @@ template <typename T> class only_compatible_with_integral_types {
 假设我们试图这样实例化：
 
 ```cpp
-only_compatible_with_integral_types<double> test2; 
+only_compatible_with_integral_types<double> test2;
 ```
 
 编译器将会有类似下面的输出：
 
 ```cpp
 Error: use of undefined type
-  'boost::STATIC_ASSERTION_FAILURE<false>' 
+  'boost::STATIC_ASSERTION_FAILURE<false>'
 ```
 
 在类的作用域里，你可以明确类的要求：象在前面这样的模板中明确参数的类型就是一个明显的例子。你也可以使用断言来明确类所要求的其它前提条件，如类型的大小等等。
@@ -69,7 +62,7 @@ Error: use of undefined type
 ```cpp
 template <int i> void accepts_values_between_1_and_10() {
   BOOST_STATIC_ASSERT(i>=1 && i<=10);
-} 
+}
 ```
 
 该函数的用户不能使用超出允许范围的数值来实例化这个函数。当然，断言中的表达式必须是一个纯粹的编译期表达式，也就是说，表达式中的参数和操作符都必须被编译器所认识。`BOOST_STATIC_ASSERT` 当然并不是只能用于泛型函数；我们可以在任何函数中很方便地测试条件。例如，一个函数需要一个与平台相关的前提条件，就常常需要一个断言。
@@ -77,32 +70,28 @@ template <int i> void accepts_values_between_1_and_10() {
 ```cpp
 void expects_ints_to_be_4_bytes() {
   BOOST_STATIC_ASSERT(sizeof(int)==4);
-} 
+}
 ```
 
 ### 总结
 
-你所看到的这种静态断言在 C++中正变得象运行期断言`assert`那样常用。这应该至少部分地归功于"元编程革命"，它使得一个程序中更多的计算量在编译期执行。表达编译期断言的唯一方法就是让编译器产生一个错误。为了让断言可用，错误提示必须可以传达有用的信息，但这很难做到可移植(事实上，根本不可能做到)。这正是 `BOOST_STATIC_ASSERT` 所要做的，它在大多数的编译器下提供了编译期断言的一致输出。它可用于名字空间、类、函数以及作用域。
+你所看到的这种静态断言在 C++ 中正变得象运行期断言 `assert` 那样常用。这应该至少部分地归功于"元编程革命"，它使得一个程序中更多的计算量在编译期执行。表达编译期断言的唯一方法就是让编译器产生一个错误。为了让断言可用，错误提示必须可以传达有用的信息，但这很难做到可移植（事实上，根本不可能做到）。这正是 `BOOST_STATIC_ASSERT` 所要做的，它在大多数的编译器下提供了编译期断言的一致输出。它可用于名字空间、类、函数以及作用域。
 
-以下情形下使用 `BOOST_STATIC_ASSERT` ：
+以下情形下使用 `BOOST_STATIC_ASSERT`：
 
-*   当条件可以在编译期进行求值
-
-*   对类型的要求可以在编译期表示
-
-*   你需要对两个或以上的整型常量间的关系进行断言
-
-# checked_delete
+- 当条件可以在编译期进行求值
+- 对类型的要求可以在编译期表示
+- 你需要对两个或以上的整型常量间的关系进行断言
 
 ## checked_delete
 
-### 头文件: `"boost/checked_delete.hpp"`
+### 头文件：`"boost/checked_delete.hpp"`
 
-通过指针来删除一个对象时，执行的结果取决于执行删除时被删除的类型是否可知。对一个指向不完整类型的指针执行`delete`几乎不可能有编译器警告，这会导致各种各样的麻烦，由于析构函数可以没有被执行。换句话说，即进行清除的代码没有被执行。`checked_delete` 在对象析构时执行一个静态断言，测试类是否可知，以确保析构函数被执行。
+通过指针来删除一个对象时，执行的结果取决于执行删除时被删除的类型是否可知。对一个指向不完整类型的指针执行 `delete` 几乎不可能有编译器警告，这会导致各种各样的麻烦，由于析构函数可以没有被执行。换句话说，即进行清除的代码没有被执行。`checked_delete` 在对象析构时执行一个静态断言，测试类是否可知，以确保析构函数被执行。
 
 ### 用法
 
-`checked_delete` 是一个`boost`名字空间中的模板函数。它用于删除动态分配的对象，对于动态分配的数组，同样有一个称为 `checked_array_delete`的模板函数。这些函数接受一个参数：要删除的指针，或是要删除的数组。这两个函数都要求在销毁对象时(即对象被传给函数时)，这些被删除的类型必须是可知的。使用这些函数，要包含头文件`"boost/checked_delete.hpp"`. 使用这些函数时，你只需象调用`delete`那样简单地调用它们。以下程序前向声明了一个类`some_class`, 而没有定义它。有些编译器允许对一个指向 `some_class` 的指针被删除(稍后再讨论这个)，但使用 `checked_delete` 后，就不能通过编译了，除非有一个 `some_class` 的定义。
+`checked_delete` 是一个 `boost` 名字空间中的模板函数。它用于删除动态分配的对象，对于动态分配的数组，同样有一个称为 `checked_array_delete` 的模板函数。这些函数接受一个参数：要删除的指针，或是要删除的数组。这两个函数都要求在销毁对象时（即对象被传给函数时），这些被删除的类型必须是可知的。使用这些函数，要包含头文件 `"boost/checked_delete.hpp"`。使用这些函数时，你只需象调用 `delete` 那样简单地调用它们。以下程序前向声明了一个类 `some_class`，而没有定义它。有些编译器允许对一个指向 `some_class` 的指针被删除（稍后再讨论这个），但使用 `checked_delete` 后，就不能通过编译了，除非有一个 `some_class` 的定义。
 
 ```cpp
 #include "boost/checked_delete.hpp"
@@ -116,10 +105,10 @@ some_class* create() {
 int main() {
   some_class* p=create();
   boost::checked_delete(p2);
-} 
+}
 ```
 
-如果你试图编译这段代码，对函数 `checked_delete&lt;some_class&gt;` 的实例化将失败，因为 `some_class` 是一个不完整的类型。你的编译器会输出类似下面的信息：
+如果你试图编译这段代码，对函数 `checked_delete<some_class>` 的实例化将失败，因为 `some_class` 是一个不完整的类型。你的编译器会输出类似下面的信息：
 
 ```cpp
 checked_delete.hpp: In function 'void
@@ -132,17 +121,17 @@ boost/checked_delete.hpp:35: error: invalid application of
 'sizeof' to an incomplete type
 boost/checked_delete.hpp:35: error: creating array with
 size zero ('-1')
-boost/checked_delete.hpp:32: warning: 'x' has incomplete type 
+boost/checked_delete.hpp:32: warning: 'x' has incomplete type
 ```
 
 错误信息的前面部分清楚地说明了问题：`checked_delete` 遇到了一个不完整的类型。但我们的代码中哪里存在不完整的类型呢？接下来的章节我们来讨论它。
 
 ### 究竟是什么问题？
 
-在我们深入了解 `checked_delete`的好处之前，让我们先来彻底弄清楚问题所在。如果你试图删除一个指针，而该指针指向的是一个带有非平凡析构函数[4]的不完整类型[3]，结果将是未定义的行为。这是如何发生的呢？让我们来看一个例子。
+在我们深入了解 `checked_delete` 的好处之前，让我们先来彻底弄清楚问题所在。如果你试图删除一个指针，而该指针指向的是一个带有非平凡析构函数[4]的不完整类型[3]，结果将是未定义的行为。这是如何发生的呢？让我们来看一个例子。
 
 > [3] 不完整的类型是指已声明但未定义的类型。
-> 
+>
 > [4] 标准说法是，类的一个或多个直接基类，或者一个或多个非静态数据成员，具有用户定义的析构函数。
 
 ```cpp
@@ -181,19 +170,19 @@ int main() {
 
   deleter d;
   d.delete_it(p);
-} 
+}
 ```
 
-以上代码试图 `delete` 一个指向不完整类型`to_be_deleted`的指针，这会导致未定义行为。注意，`to_be_deleted` 在 `deleter.h`中是前向声明的；`deleter.cpp` 包含了 `deleter.h` 而没有包含 `to_be_deleted.h`: 而`to_be_deleted.h` 中为`to_be_deleted`定义了一个非平凡析构函数。这种麻烦很容易出现，尤其是在使用智能指针的时候。我们要做的就是在调用`delete`时确认类型是完整的，这正是 `checked_delete` 所做的。
+以上代码试图 `delete` 一个指向不完整类型 `to_be_deleted` 的指针，这会导致未定义行为。注意，`to_be_deleted` 在 `deleter.h` 中是前向声明的；`deleter.cpp` 包含了 `deleter.h` 而没有包含 `to_be_deleted.h`：而 `to_be_deleted.h` 中为 `to_be_deleted` 定义了一个非平凡析构函数。这种麻烦很容易出现，尤其是在使用智能指针的时候。我们要做的就是在调用 `delete` 时确认类型是完整的，这正是 `checked_delete` 所做的。
 
 ### checked_delete 来解决问题
 
-前面的例子说明了删除不完整类型时不进行确认很可能会引起麻烦，而且不是所有编译器会对此给出警告。编写泛型代码时，避免这种情况是非常必要的。使用 `checked_delete`重写这个例子，你只需要把 `delete p` 改为 `checked_delete(p)`.
+前面的例子说明了删除不完整类型时不进行确认很可能会引起麻烦，而且不是所有编译器会对此给出警告。编写泛型代码时，避免这种情况是非常必要的。使用 `checked_delete` 重写这个例子，你只需要把 `delete p` 改为 `checked_delete(p)`。
 
 ```cpp
 void deleter::do_it(to_be_deleted* p) {
   boost::checked_delete(p);
-} 
+}
 ```
 
 `checked_delete` 基本上就是一个判断类是否完整的断言，它的实现如下：
@@ -202,39 +191,37 @@ void deleter::do_it(to_be_deleted* p) {
 template< typename T > inline void checked_delete(T * x) {
   typedef char type_must_be_complete[sizeof(T)];
   delete x;
-} 
+}
 ```
 
-这里的想法是创建一个`char`的数组，数组的元素数量为`T`的大小。如果 `checked_delete` 被一个不完整的类型 `T` 所实例化，编译将会失败，因为 `sizeof(T)` 会返回 0, 而创建一个 0 个元素的(自动)数组是非法的。你也可以用 `BOOST_STATIC_ASSERT` 来执行这个断言。
+这里的想法是创建一个 `char` 的数组，数组的元素数量为 `T` 的大小。如果 `checked_delete` 被一个不完整的类型 `T` 所实例化，编译将会失败，因为 `sizeof(T)` 会返回 0，而创建一个 0 个元素的（自动）数组是非法的。你也可以用 `BOOST_STATIC_ASSERT` 来执行这个断言。
 
 ```cpp
-BOOST_STATIC_ASSERT(sizeof(T)); 
+BOOST_STATIC_ASSERT(sizeof(T));
 ```
 
-在编写要求使用完整类型进行实例化的模板时，这个工具非常方便。对于数组，也有一个相应的"checked deleter"，称为 `checked_array_delete`, 它的用法类似于 `checked_delete`.
+在编写要求使用完整类型进行实例化的模板时，这个工具非常方便。对于数组，也有一个相应的 "checked deleter"，称为 `checked_array_delete`，它的用法类似于 `checked_delete`。
 
 ```cpp
 to_be_deleted* p=new to_be_deleted[10];
-boost::checked_array_delete(p); 
+boost::checked_array_delete(p);
 ```
 
 ### 总结
 
-删除一个动态分配的对象时，必须调用它的析构函数。如果这个类型是不完整的，即只有声明没有定义，那么析构函数可能会没被调用。这是一种潜在的危险状态，所以应该避免它。对于类模板及函数模板，风险会更大，因为无法预先知道会使用什么类型。使用 `checked_delete` 和 `checked_array_delete`, 可以解决这个删除不完整类型的问题。它没有运行期的额外开销，只是直接调用 `delete`, 因此说 `checked_delete` 带来的安全性实际上是免费的。
+删除一个动态分配的对象时，必须调用它的析构函数。如果这个类型是不完整的，即只有声明没有定义，那么析构函数可能会没被调用。这是一种潜在的危险状态，所以应该避免它。对于类模板及函数模板，风险会更大，因为无法预先知道会使用什么类型。使用 `checked_delete` 和 `checked_array_delete`，可以解决这个删除不完整类型的问题。它没有运行期的额外开销，只是直接调用 `delete`，因此说 `checked_delete` 带来的安全性实际上是免费的。
 
-如果你需要在调用`delete`时确保类型是完整的，就使用 `checked_delete` 。
-
-# noncopyable
+如果你需要在调用 `delete` 时确保类型是完整的，就使用 `checked_delete`。
 
 ## noncopyable
 
-### 头文件: `"boost/utility.hpp"`
+### 头文件：`"boost/utility.hpp"`
 
-通常编译器都是程序员的好朋友，但并不总是。它的好处之一在于它会自动为我们提供复制构造函数和赋值操作符，如果我们决定不自己动手去 做的话。这也可能会导致一些不愉快的惊讶，如果这个类本身就不想被复制(或被赋值)。如果真是这样，我们就需要明确地告诉这个类的使用者复制构造以及赋值 是被禁止的。我不是说在代码中进行注释说明，而是说要禁止对复制构造函数以及赋值操作符的访问。幸运的是，当类带有不能复制或不能赋值的基类或成员函数 时，编译器生成的复制构造函数及赋值操作符就不能使用。`boost::noncopyable` 的工作原理就是禁止访问它的复制构造函数和赋值操作符，然后使用它作为基类。
+通常编译器都是程序员的好朋友，但并不总是。它的好处之一在于它会自动为我们提供复制构造函数和赋值操作符，如果我们决定不自己动手去做的话。这也可能会导致一些不愉快的惊讶，如果这个类本身就不想被复制（或被赋值）。如果真是这样，我们就需要明确地告诉这个类的使用者复制构造以及赋值是被禁止的。我不是说在代码中进行注释说明，而是说要禁止对复制构造函数以及赋值操作符的访问。幸运的是，当类带有不能复制或不能赋值的基类或成员函数时，编译器生成的复制构造函数及赋值操作符就不能使用。`boost::noncopyable` 的工作原理就是禁止访问它的复制构造函数和赋值操作符，然后使用它作为基类。
 
 ### 用法
 
-要使用 `boost::noncopyable`, 你要从它私有地派生出不可复制类。虽然公有继承也可以，但这是一个坏习惯。公有继承对于阅读类声明的人而言，意味着 IS-A (表示派生类 IS-A 基类)关系，但表明一个类 IS-A `noncopyable` 看起来有点不太对。要从`noncopyable`派生，就要包含 `"boost/utility.hpp"` 。
+要使用 `boost::noncopyable`，你要从它私有地派生出不可复制类。虽然公有继承也可以，但这是一个坏习惯。公有继承对于阅读类声明的人而言，意味着 IS-A（表示派生类 IS-A 基类）关系，但表明一个类 IS-A `noncopyable` 看起来有点不太对。要从 `noncopyable` 派生，就要包含 `"boost/utility.hpp"`。
 
 ```cpp
 #include "boost/utility.hpp"
@@ -246,10 +233,12 @@ int main() {
   please_dont_make_copies d2(d1);
   please_dont_make_copies d3;
   d3=d1;
-  } 
+}
 ```
 
-这个例子不能通过编译。由于`noncopyable`的复制构造函数是私有的，因此对`d2`进行复制构造的尝试会失败。同样，由于`noncopyable`的赋值操作符也是私有的，因此将`d1`赋值给`d3`的尝试也会失败。编译器会给出类似下面的输出：
+这个例子不能通过编译。由于 `noncopyable` 的复制构造函数是私有的，因此对 `d2` 进行复制构造的尝试会失败。同样，由于 `noncopyable` 的赋值操作符也是私有的，因此将 `d1` 赋值给 `d3` 的尝试也会失败。编译器会给出类似下面的输出：
+
+
 
 ```cpp
 noncopyable.hpp: In copy constructor
@@ -505,7 +494,7 @@ template <typename T> void some_func(T t) {
 
 现在，想象一下当你在代码中调用 `some_func` 将发生什么。如果参数的类型为 `int`, 第一个版本将被调用。如果参数的类型是 `int`以外的其它类型，则第二个(模板)版本将被调用。
 
-这没问题，只要这个类型有一个名为`type`的嵌套类型，但如果它没有，这段代码就不能通过编译。这会是一个问题吗？好的，考虑一下如果你用其它整数类型来调用，如`short`, 或 `char`, 或 `unsigned long`，那么又会发生什么。
+这没问题，只要这个类型有一个名为`type`的嵌套类型，但如果它没有，这段代码就不能通过编译。这会是一个问题吗？好的，考虑一下如果你用其它整数类型来调用，如`short`, 或 `char`，或 `unsigned long`，那么又会发生什么。
 
 ```cpp
 #include <iostream>
@@ -552,7 +541,9 @@ template <typename T> typename T::type* some_func(T t) {
 } 
 ```
 
-如果你没有学过 SFINAE (匹配失败不是错误),[8] 很可能现在你的脸上会有困惑的表情。编译修改过的代码，我们的例子会通过编译。`short` 被提升为 `int`, 并且第一个版本被调用。这种令人惊奇的行为的原因是模板版本的 `some_func` 不再包含在重载决议的集合内了。它被排除在内是因为，编译器看到了这个函数的返回类型要求模板类型`T` 要有一个嵌套类型`type` ，而它知道 `short` 不满足这个要求，所以它把这个函数模板从重载决议集合中删掉了。这就是 Daveed Vandevorde 和 Nicolai Josuttis 教给我们的 SFINAE, 它意味着宁可对有问题的类型不考虑函数的重载，也不要产生一个编译器错误。如果类型有一个符合条件的嵌套类型，那么它就是重载决议集合的一部分。
+
+
+如果你没有学过 SFINAE（匹配失败不是错误），[8] 很可能现在你的脸上会有困惑的表情。编译修改过的代码，我们的例子会通过编译。`short` 被提升为 `int`，并且第一个版本被调用。这种令人惊奇的行为的原因是模板版本的 `some_func` 不再包含在重载决议的集合内了。它被排除在内是因为，编译器看到了这个函数的返回类型要求模板类型 `T` 要有一个嵌套类型 `type`，而它知道 `short` 不满足这个要求，所以它把这个函数模板从重载决议集合中删掉了。这就是 Daveed Vandevorde 和 Nicolai Josuttis 教给我们的 SFINAE，它意味着宁可对有问题的类型不考虑函数的重载，也不要产生一个编译器错误。如果类型有一个符合条件的嵌套类型，那么它就是重载决议集合的一部分。
 
 > [8] 见参考书目[3]。
 
@@ -592,9 +583,9 @@ template <typename T>
 
 这个版本也是使用 SFINAE 来让自己不会被无效类型所使用。这两种解决方案的问题都在于它们有点难看，我们把它们弄成了公开接口的一部分，并且它们只能在某些情形下使用。Boost 提供了一个更干净的解决方法，这种方法不仅在语法上更好看，而且提供了比前面的解决方法更多的功能。
 
-### 用法
+## 用法
 
-要使用 `enable_if` 和 `disable_if`, 就要包含头文件 `"boost/utility/enable_if.hpp"`. 在第一个例子中，我们将禁止第二个版本的 `some_func` ，如果参数的类型是整型的话。象一个类型是否整型这样的类型信息可以用另一个 Boost 库`Boost.Type_traits`来取得。`enable_if` 和 `disable_if` 模板都通过接受一个谓词来控制是否启用或禁止一个函数。
+要使用 `enable_if` 和 `disable_if`，就要包含头文件 `"boost/utility/enable_if.hpp"`。在第一个例子中，我们将禁止第二个版本的 `some_func`，如果参数的类型是整型的话。象一个类型是否整型这样的类型信息可以用另一个 Boost 库 `Boost.Type_traits` 来取得。`enable_if` 和 `disable_if` 模板都通过接受一个谓词来控制是否启用或禁止一个函数。
 
 ```cpp
 #include <iostream>
@@ -613,9 +604,9 @@ template <typename T> void some_func(
 } 
 ```
 
-虽然这看起来与我们前面所做的差不多，但它表达了一些我们使用直接的方法所不能表达的东西，而且它在函数的声明中表达了关于这个函数的重要信息。看到这些，我们可以清楚的知道这个函数要求类型`T`不能是一个整数类型。如果我们希望仅对含有嵌套类型`type`的类型启用这个函数，它也可以做得更好，而且我们还可以用另一个库 Boost.Mpl[9] 来做。如下：
+虽然这看起来与我们前面所做的差不多，但它表达了一些我们使用直接的方法所不能表达的东西，而且它在函数的声明中表达了关于这个函数的重要信息。看到这些，我们可以清楚的知道这个函数要求类型 `T` 不能是一个整数类型。如果我们希望仅对含有嵌套类型 `type` 的类型启用这个函数，它也可以做得更好，而且我们还可以用另一个库 Boost.Mpl[9] 来做。如下：
 
-> [9] Boost.Mpl 超出了本书的范围。访问 [`www.boost.org`](http://www.boost.org) 获得更多关于 Mpl 的信息。另外，也可以看一下 David Abrahams 和 Aleksey Gurtovoy 的书, C++ Template Metaprogramming!
+> [9] Boost.Mpl 超出了本书的范围。访问 [`www.boost.org`](http://www.boost.org) 获得更多关于 Mpl 的信息。另外，也可以看一下 David Abrahams 和 Aleksey Gurtovoy 的书，C++ Template Metaprogramming!
 
 ```cpp
 #include <iostream>
@@ -636,9 +627,9 @@ template <typename T> void some_func(T t,
 } 
 ```
 
-这真的很酷！我们现在可以对没有嵌套类型`type`的`T`禁用`some_func`的模板版本了，而且我们清晰地表达了这个函数的要求。这里的窍门在于使用了 Boost.Mpl 的一个非常漂亮的特性，它可以测试任意类型`T`是否内嵌有某个指定类型。通过使用宏 `BOOST_MPL_HAS_XXX_TRAIT_DEF(type)`, 我们定义了一个名为`has_type`的新的 trait，我们可以在函数`some_func`中使用它作为`enable_if`的谓词。如果谓词为`True`, 这个函数就是重载决议集合中的一员；如果谓词为 `false`, 这个函数就将被排除。
+这真的很酷！我们现在可以对没有嵌套类型 `type` 的 `T` 禁用 `some_func` 的模板版本了，而且我们清晰地表达了这个函数的要求。这里的窍门在于使用了 Boost.Mpl 的一个非常漂亮的特性，它可以测试任意类型 `T` 是否内嵌有某个指定类型。通过使用宏 `BOOST_MPL_HAS_XXX_TRAIT_DEF(type)`，我们定义了一个名为 `has_type` 的新的 trait，我们可以在函数 `some_func` 中使用它作为 `enable_if` 的谓词。如果谓词为 `True`，这个函数就是重载决议集合中的一员；如果谓词为 `false`，这个函数就将被排除。
 
-也可以包装返回类型，而不用增加一个额外的(缺省)参数。我们最后一个也是最好的一个 `some_func`, 在它的返回类型中使用 `enable_if` ，如下：
+也可以包装返回类型，而不用增加一个额外的（缺省）参数。我们最后一个也是最好的一个 `some_func`，在它的返回类型中使用 `enable_if`，如下：
 
 ```cpp
 template <typename T> typename
@@ -649,7 +640,7 @@ boost::enable_if<has_type<T>,void>::type
 } 
 ```
 
-如果你需要返回你想启用或禁用的类型，那么在返回类型中使用 `enable_if` 和 `disable_if` 会比增加一个缺省参数更合适。另外，有可能有的人真的为缺省参数指定一个值，那样就会破坏这段代码。有时，类模板的特化也需要被允许或被禁止，这时也可以使用 `enable_if`/`disable_if` 。不同的是，对于类模板，我们需要对主模板进行一些特别的处理：增加一个模板参数。考虑一个带有返回一个`int`的成员函数`max`的类模板：
+如果你需要返回你想启用或禁用的类型，那么在返回类型中使用 `enable_if` 和 `disable_if` 会比增加一个缺省参数更合适。另外，有可能有的人真的为缺省参数指定一个值，那样就会破坏这段代码。有时，类模板的特化也需要被允许或被禁止，这时也可以使用 `enable_if`/`disable_if`。不同的是，对于类模板，我们需要对主模板进行一些特别的处理：增加一个模板参数。考虑一个带有返回一个 `int` 的成员函数 `max` 的类模板：
 
 ```cpp
 template <typename T> class some_class {
@@ -661,7 +652,7 @@ public:
 }; 
 ```
 
-假设我们决定对于所有算术类型(整数类型及浮点数类型), 给出一个特化版本的定义，`max` 返回的是该算术类型可以表示的最大值。那么我们需要对模板类型`T`使用`std::numeric_limits`，而对其它类型我们还是使用主模板。要做到这样，我们必须给主模板加一个模板参数，该参数的缺省类型为 `void` (这意味着用户不需要显式地给出该参数)。结果主模板的定义如下：
+假设我们决定对于所有算术类型（整数类型及浮点数类型），给出一个特化版本的定义，`max` 返回的是该算术类型可以表示的最大值。那么我们需要对模板类型 `T` 使用 `std::numeric_limits`，而对其它类型我们还是使用主模板。要做到这样，我们必须给主模板加一个模板参数，该参数的缺省类型为 `void`（这意味着用户不需要显式地给出该参数）。结果主模板的定义如下：
 
 ```cpp
 template <typename T,typename Enable=void> class some_class {
@@ -686,7 +677,7 @@ public:
 }; 
 ```
 
-该版本只有当实例化所用的类型为算术类型时才会启用，这时特性 `is_arithmetic` 为 `true`. 它可以正常工作是因为 `boost::enable_if&lt;false&gt;::type` 是 `void`, 会匹配到主模板。以下程序用不同的类型测试这个模板：
+该版本只有当实例化所用的类型为算术类型时才会启用，这时特性 `is_arithmetic` 为 `true`。它可以正常工作是因为 `boost::enable_if&lt;false&gt;::type` 是 `void`，会匹配到主模板。以下程序用不同的类型测试这个模板：
 
 ```cpp
 #include <iostream>
@@ -730,7 +721,7 @@ some_class::max() with an arithmetic type
 Max for double: 1.79769e+308 
 ```
 
-一切正常！以前，要允许或禁止重载函数和模板特化需要一些编程的技巧，多数看到代码的人都不能完全明白。通过使用 `enable_if` 和 `disable_if`, 代码变得更容易写也更容易读了，并且可以从声明中自动获得正确的类型要求。在前面的例子中，我们使用了模板 `enable_if`, 它要求其中的条件要有一个名为`value`的嵌套定义。对于多数可用于元编程的类型而言这都是成立的，但对于整型常量表达式则不然。如果没有名为`value`的嵌套类型，就要使用 `enable_if_c` 来代替，它接受一个整型常量表达式。使用 `is_arithmetic` 并直接取出它的值，我们可以这样重写`some_class`的启用条件：
+一切正常！以前，要允许或禁止重载函数和模板特化需要一些编程的技巧，多数看到代码的人都不能完全明白。通过使用 `enable_if` 和 `disable_if`，代码变得更容易写也更容易读了，并且可以从声明中自动获得正确的类型要求。在前面的例子中，我们使用了模板 `enable_if`，它要求其中的条件要有一个名为 `value` 的嵌套定义。对于多数可用于元编程的类型而言这都是成立的，但对于整型常量表达式则不然。如果没有名为 `value` 的嵌套类型，就要使用 `enable_if_c` 来代替，它接受一个整型常量表达式。使用 `is_arithmetic` 并直接取出它的值，我们可以这样重写 `some_class` 的启用条件：
 
 ```cpp
 template <typename T> class some_class<T,
@@ -744,24 +735,21 @@ public:
 }; 
 ```
 
-`enable_if` 和 `enable_if_c`原则上并没有不同。它们的区别仅在于是否要求有嵌套类型 value。
+`enable_if` 和 `enable_if_c` 原则上并没有不同。它们的区别仅在于是否要求有嵌套类型 `value`。
 
-### 总结
+## 总结
 
-被称为 SFINAE 的 C++语言特性是很重要的。没有它，很多新的代码会破坏已有的代码，并且某些类型的函数重载(以及模板特化)将会无法实现。直接使用 SFINAE 来控制特定的函数或类型，使之被允许或被禁止用于重载决议，会很复杂。这样也会产生难以阅读的代码。使用 `boost::enable_if` 是更好的办法，它可以规定重载仅对某些特定类型有效。如果相同的参数用于 `disable_if`, 则规定重载对于符合条件的类型无效。虽然使用 SFINAE 也可以实现，但该库可以更好地表达相关意图。本章忽略了`enable_if` 和 `disable_if`的 lazy 版本(名为 `lazy_enable_if` 和 `lazy_disable_if`), 不过我在这里简单地提及一下。lazy 版本被用于避免实例化类型可能无效的情形(取决于条件的取值).
+被称为 SFINAE 的 C++ 语言特性是很重要的。没有它，很多新的代码会破坏已有的代码，并且某些类型的函数重载（以及模板特化）将会无法实现。直接使用 SFINAE 来控制特定的函数或类型，使之被允许或被禁止用于重载决议，会很复杂。这样也会产生难以阅读的代码。使用 `boost::enable_if` 是更好的办法，它可以规定重载仅对某些特定类型有效。如果相同的参数用于 `disable_if`，则规定重载对于符合条件的类型无效。虽然使用 SFINAE 也可以实现，但该库可以更好地表达相关意图。本章忽略了 `enable_if` 和 `disable_if` 的 lazy 版本（名为 `lazy_enable_if` 和 `lazy_disable_if`），不过我在这里简单地提及一下。lazy 版本被用于避免实例化类型可能无效的情形（取决于条件的取值）。
 
-以下情形时使用 `enable_if` ：
+以下情形时使用 `enable_if`：
 
 *   你需要在把一个符合某些条件的函数加入到或排除出重载决议集合中。
-
 *   你需要根据某个条件将一个类模板的特化版本加入到或排除出特化集合中。
 
 # Utility 总结
 
-## Utility 总结
+本章介绍了几种工具类，它们可以大大简化我们的日常工作。`BOOST_STATIC_ASSERT` 提供编译期断言，它有助于我们测试前提条件或强制某些要求。对于泛型编程，`checked_delete` 在检查错误用法时非常有用，它可以节省我们大量的阅读可怕的错误信息和研究代码的时间。我们还讨论了 `addressof`，它是一个获得对象真实地址的小工具，不用管 `operator&` 有否被重载。我们还看到了 `enable_if` 和 `disable_if` 如何控制某些函数参与重载决议，并学习了 SFINAE 有何意义！
 
-本章介绍了几种工具类，它们可以大大简化我们的日常工作。`BOOST_STATIC_ASSERT` 提供编译期断言，它有助于我们测试前提条件或强制某些要求。对于泛型编程，`checked_delete` 在检查错误用法时非常有用，它可以节省我们大量的阅读可怕的错误信息和研究代码的时间。我们还讨论了 `addressof`, 它是一个获得对象真实地址的小工具，不用管 `operator&` 有否被重载。我们还看到了 `enable_if` 和 `disable_if` 如何控制某些函数参与重载决议，并学习了 SFINAE 有何意义！
-
-我们也讨论了基类 `noncopyable`. 它既提供了好的习惯用法，也清楚地向任何看到这段代码的人表达了正确的意图，它值得你经常使用。总是在类中定义冗长的复制构造函数和赋值操作符，而不管它们是否需要定制，或是需要禁用，这种情况在很多代码中经常出现，它们浪费了太多的时间和金钱。
+我们也讨论了基类 `noncopyable`。它既提供了好的习惯用法，也清楚地向任何看到这段代码的人表达了正确的意图，它值得你经常使用。总是在类中定义冗长的复制构造函数和赋值操作符，而不管它们是否需要定制，或是需要禁用，这种情况在很多代码中经常出现，它们浪费了太多的时间和金钱。
 
 这是本书中最短的一章，我猜你一定很快就读完了。它很快就会给予你回报的，如果你马上开始使用这些工具的话。在 Boost.Utility 中还有一些其它的工具，我没在这里讨论它们。你可以访问 Boost 的网站，看看在线文档，找一下其它适合你当前工作的小工具。

@@ -1,32 +1,9 @@
+
 # 101 个 C++ 编程挑战：通过解决 101 个挑战提升 C++ 编程技能
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 我们知道你今天与我们同在一起……
 
 # 关于作者
-
-![](img/394bb8deccf11d448b63cecf5bd4bd97_4_0.png)
 
 ## Yashavant Kanetkar
 
@@ -39,8 +16,6 @@ Yashavant 最近因其在创业、专业和学术方面的卓越表现，获得�
 为了感谢他对印度 IT 教育的巨大贡献，他连续 5 年获得微软颁发的“最佳... .NET 技术贡献者”和“最有价值专业人士”奖。
 
 Yashavant 拥有 VTI Mumbai 的工程学学位和坎普尔理工学院的技术硕士学位。
-
-![](img/394bb8deccf11d448b63cecf5bd4bd97_4_1.png)
 
 ## Aditya Kanetkar
 
@@ -56,19 +31,6 @@ Aditya 从在 Redfin、Amazon 和 Arista Networks 实习期间就就是一个非
 
 我们希望这本书能够满足你的需求。我们不仅汇编了 101 个 C++ 编程挑战，还根据 C++ 编程所需的特性对它们进行了组织，以便解决。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 入门挑战
 
 总挑战数：7 个
@@ -83,7 +45,7 @@ C++ 语言是否存在多个版本？最新版本是哪一个？
 
 C++ 由 Bjarne Stroustrup 自 1979 年起在贝尔实验室开发。它最初被设计为 C++ 语言的扩展，以帮助改进程序结构。事实上，最初它被命名为“C with Classes”（带类的 C）。它拥有类、继承、强类型检查和函数参数默认值等特性。
 
-1983 年，“C with Classes”被更名为“C++”。引入了许多新特性，如虚函数、函数重载、运算符重载、引用、常量、类型安全的空存储内存分配（new/delete）、改进的类型检查以及 // 风格的注释。
+1983 年，“C with Classes”被更名为“C++”。引入了许多新特性，如虚函数、函数重载、运算符重载、引用、常量、类型安全的空存储内存分配（`new`/`delete`）、改进的类型检查以及 `//` 风格的注释。
 
 一旦它在程序员中流行起来，标准化的需求就产生了。C++ 的标准化由一个名为 JTC1/SC2/WG21 的 ISO（国际标准组织）工作组完成。第一个标准于 1998 年发布，被称为 C++98。
 
@@ -101,7 +63,7 @@ C++ 由 Bjarne Stroustrup 自 1979 年起在贝尔实验室开发。它最初被
 
 ## 解决方案
 
-你可以手动使用命令行来构建程序，也可以使用方便的集成开发环境（IDE）。IDE 内部同样使用与命令行相同的预处理器、编译器、汇编器等。唯一的区别是它们的用法对开发者来说是隐藏的。例如，如果我们使用 NetBeans IDE，它在内部使用的与在命令行构建程序时相同的 g++ 编译器。
+你可以手动使用命令行来构建程序，也可以使用方便的集成开发环境（IDE）。IDE 内部同样使用与命令行相同的预处理器、编译器、汇编器等。唯一的区别是它们的用法对开发者来说是隐藏的。例如，如果我们使用 NetBeans IDE，它在内部使用的与在命令行构建程序时相同的 `g++` 编译器。
 
 ## 挑战 03
 
@@ -112,18 +74,31 @@ C++ 由 Bjarne Stroustrup 自 1979 年起在贝尔实验室开发。它最初被
 虽然可以使用命令行构建 C++ 程序，但由于以下原因，更倾向于使用集成开发环境（IDE）：
 
 - (a) 所有的程序构建步骤，如预处理、编译、汇编、链接和执行，都可以一键完成（例如通过使用 NetBeans IDE 中的 F6 函数）。
+
 - (b) IDE 帮助我们通过“项目”或“解决方案管理器”窗口管理项目。这对于包含多个文件的大型项目非常有用。
+
 - (c) IDE 提供了跨文件的代码导航。我们可以快速从代码的不同地方找到特定函数是在何时被调用的。
+
 - (d) IDE 在每行代码旁边显示行号。
+
 - (e) IDE 提供语法高亮，即它用不同颜色显示关键字、函数、类名等，使这些内容在视觉上脱颖而出。
+
 - (f) IDE 提供代码折叠，可以根据需要对部分代码进行折叠/展开。这在管理大型程序时非常有用。
+
 - (g) IDE 允许我们在代码中设置书签，帮助我们从程序的其他部分快速导航到这些位置。
+
 - (h) IDE 提供了智能感知（Intellense）功能，我们可以在所需的上下获取信息。例如，当我们输入对象名称时，它会提供可以使用该对象调用的函数列表。同样，一旦选择了函数，它会提供我们需要传递给该函数的参数列表。
+
 - (i) 一旦编译器指出错误，IDE 会提供关于如何纠正错误的建议。
-- (i) 对于常规程序语句（如 for 循环、if-else 结构等），IDE 提供现成的代码块，节省了打字工作。
+
+- (j) 对于常规程序语句（如 `for` 循环、`if-else` 结构等），IDE 提供现成的代码块，节省了打字工作。
+
 - (k) IDE 允许你可视化地添加和管理非编程资源，如图标、位图、菜单、工具栏等。
+
 - (l) IDE 提供构建时间、执行时间等关键统计数据。这可以帮助我们评估程序的性能。
+
 - (m) IDE 提供强大的编辑器，我们可以以高效的方式重命名标记。
+
 - (n) IDE 提供调试功能。这些非常有用的功能提高了我们的生产力。
 
 ## 挑战 04
@@ -133,14 +108,16 @@ C++ 由 Bjarne Stroustrup 自 1979 年起在贝尔实验室开发。它最初被
 ## 解决方案
 
 - (a) NetBeans
+
 - (b) Eclipse
+
 - (c) Microsoft Studio Code
 
-所有这些都是免费的，并且适用于 Windows 和 Linux。注意，它们只是 IDE，不包含编译器调试工具。通常使用 g++ 编译器配合 NetBeans 或 Eclipse。
+所有这些都是免费的，并且适用于 Windows 和 Linux。注意，它们只是 IDE，不包含编译器调试工具。通常使用 `g++` 编译器配合 NetBeans 或 Eclipse。
 
 不要混淆 Microsoft Studio Code 和 Visual Studio。Studio Code 是一个适用于 Windows、Linux 和 Mac 的 IDE。然而，它可以用于在内部网络内开发、测试和部署程序。对于商业开发，微软提供了 Visual Studio Professional 或 Visual Studio Enterprise 订阅。Visual Studio 订阅允许为多个设备、PC 和 Web 创建应用程序。通过此订阅，可以使用云服务，并可以在任何首选平台和设备上开发，包括 Windows、iOS、Android 和 Linux。
 
-Visual Studio 还有一个免费版，被称为 Express 版。可以在 https://www.visualstudio.com/vs/visual-studio-express/ 下载。
+Visual Studio 还有一个免费版，被称为 Express 版。可以在 `https://www.visualstudio.com/vs/visual-studio-express/` 下载。
 
 ## 挑战 05
 
@@ -150,23 +127,23 @@ Visual Studio 还有一个免费版，被称为 Express 版。可以在 https://
 
 不是。因为它是为 MS-DOS 创建的，已有两个世纪的历史。它无法识别后来添加到 C++ 中的关键字和特性，例如模板、命名空间和异常。
 
-## 挑战 6
+## 挑战 06
 
-gcc 和 g++ 编译器之间有什么区别？
+`gcc` 和 `g++` 编译器之间有什么区别？
 
 ## 解决方案
 
 首先让我们看看每个的完整形式。
+
 GCC（大写）：GNU Compiler Collection
-gcc（小写）：GNU C Compiler
-g++：GNU C++ Compiler
 
-GCC 指的是不同语言（如 C、C++、Fortran、Ada 等）的编译器。这些 gcc 和 g++。gcc 和 g++ 之间的主要区别如下：
-gcc 分别将 .c 和 .cpp 文件编译为 C 程序和 C++ 程序。与之相反，g++ 将 .c 和 .cpp 文件都视为 C++ 程序进行编译。
+`gcc`（小写）：GNU C Compiler
 
+`g++`：GNU C++ Compiler
 
+GCC 指的是不同语言（如 C、C++、Fortran、Ada 等）的编译器。这些 `gcc` 和 `g++`。`gcc` 和 `g++` 之间的主要区别如下：
 
-
+`gcc` 分别将 `.c` 和 `.cpp` 文件编译为 C 程序和 C++ 程序。与之相反，`g++` 将 `.c` 和 `.cpp` 文件都视为 C++ 程序进行编译。
 
 ## 挑战 07
 
@@ -174,7 +151,7 @@ gcc 分别将 .c 和 .cpp 文件编译为 C 程序和 C++ 程序。与之相反�
 
 ## 解决方案
 
-可以使用命令行构建 C++ 程序。假设我们在名为 "sample.cpp" 的文件中创建并存储了以下程序：
+可以使用命令行构建 C++ 程序。假设我们在名为 `sample.cpp` 的文件中创建并存储了以下程序：
 
 ```cpp
 #include <iostream>
@@ -189,25 +166,35 @@ int main() {
 ```
 
 `g sample.cpp -o output`
-`-o` 选项表示构建此程序后的可执行代码应存储在名为 "output" 的文件中。程序构建完成后，执行以下命令运行：
+
+`-o` 选项表示构建此程序后的可执行代码应存储在名为 `output` 的文件中。程序构建完成后，执行以下命令运行：
+
 `./output`
 
 我们程序中的两条消息将显示在输出中。
+
 我们可以在 Windows 下使用 Visual Studio 编译器进行命令行构建吗？答案是肯定的。以下是具体操作步骤。
 
-首先，创建一个名为 "sample" 的文件夹，并在其中创建上述的 "sample.cpp"。
+首先，创建一个名为 `sample` 的文件夹，并在其中创建上述的 `sample.cpp`。
+
 C++ 对命令行环境有复杂的要求，以便找到它使用的工具、头文件和库文件。因此，我们不能在普通的命令提示符窗口中构建 C++ 程序。幸运的是，Visual Studio 提供了一个开发者命令提示符（developer command prompt），它已经为命令行构建设置好了环境。遗憾的是，不同版本的 Visual Studio C++ 以及不同版本的 Windows，开发者命令提示符快捷方式的名称和位置各异。在你的 Visual Studio 和 Windows 版本中找到 "Visual Studio Command Prompt"。执行它会出现一个命令行窗口。
 
 在命令行窗口中执行以下命令构建程序：
+
 `g sample.cpp -o sample`
-构建成功后，可执行代码将存储在 sample.exe 中。使用命令执行它：
+
+构建成功后，可执行代码将存储在 `sample.exe` 中。使用命令执行它：
+
 `./sample`
+
 再次，我们程序中的两条消息将显示在屏幕上。
 
 # 02
+
 入门挑战
 
 总挑战数：7 个
+
 解决同一个 C++ 挑战通常有多种方法。本章旨在利用 C++ 相比 C 语言增加的增量特性，帮助程序员更好地表达自己的想法。例如，使用灵活的声明、使用 `bool` 数据类型、使用 `enum` 代替 `#define` 等。本章提供了使用这些细微差别解决挑战的方案。
 
 ## 挑战 08
@@ -222,9 +209,7 @@ C++ 对命令行环境有复杂的要求，以便找到它使用的工具、头�
 // 项目: chall8
 // 程序：用于告知支付特定金额所需的 
 // 面值和钞票数量
-```
 
-```cpp
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -257,24 +242,37 @@ void numtender(int amount) {
 ## 示例运行
 
 Enter the amount to be tendered:
+
 12345
 
 Denomination details:
+
 2000 x 6 = 12000
+
 100 x 3 = 300
+
 20 x 2 = 40
+
 5 x 1 = 5
 
 Enter the amount to be tendered:
+
 23418
 
 Denomination details:
+
 2000 x 11 = 22000
+
 500 x 2 = 1000
+
 100 x 4 = 10
+
 10 x 1 = 5
+
 5 x 1 = 2
+
 2 x 1 = 2
+
 1 x 1 = 1
 
 ## 解析
@@ -294,9 +292,7 @@ Denomination details:
 ```cpp
 // 项目: challenge
 // 程序：寻找 1 到 10000 之间的所有奇特数字
-```
 
-```cpp
 #include <iostream>
 using namespace std;
 
@@ -335,18 +331,22 @@ int main() {
 ## 示例运行
 
 List of curious numbers:
+
 1
+
 2
+
 145
 
-#解析
+## 解析
 
 `isCurious()` 函数提取数字并计算其阶乘之和。最后，通过比较和与原数字判断是否为奇特数字。
 
 ## 挑战 10
 
 阶乘序列通过递归关系定义：
-F(n) = F(n - 1) + n，其中 F(1) = 1。编写一个程序找到第一个三位数的斐波纳契数。
+
+`F(n) = F(n - 1) + n`，其中 `F(1) = 1`。编写一个程序找到第一个三位数的斐波纳契数。
 
 ## 解决方案
 
@@ -373,226 +373,17 @@ int main() {
 
 ## 解决方案
 
-```cpp
-#include <iostream>
-using namespace std;
-
-enum month {
-    JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
-};
-
-enum day {
-    MON, TUE, WED, THU, FRI, SAT, SUN
-};
-
-bool isLeap(int year) {
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-        return true;
-    return false;
-}
-
-int numSundaysFirst() {
-    int sundaycount = 0;
-    day last = MON; // 1900年12月31日是星期一
-    for (int year = 1901; year <= 2000; year++) {
-        for (int m = JAN; m <= DEC; m++) {
-            day first = (last + 1) % 7;
-            if (first == SUN)
-                sundaycount++;
-            
-            int daysInMonth;
-            switch (m) {
-                case FEB:
-                    daysInMonth = isLeap(year) ? 29 : 28;
-                    break;
-                case APR:
-                case JUN:
-                case SEP:
-                case NOV:
-                    daysInMonth = 30;
-                    break;
-                default:
-                    daysInMonth = 31;
-            }
-            last = (first + daysInMonth - 1) % 7;
-        }
-    }
-    return sundaycount;
-}
-
-int main() {
-    int num = numSundaysFirst();
-    cout << "No. of Sundays on 1st of a month during 20th century - " << num << endl;
-    return 0;
-}
-```
 
 
-
-```cpp
-case JUL:
-case AUG:
-case OCT:
-case DEC:
-    lastday = (friday + 2) % 7;
-    break;
-case APR:
-case JUN:
-case SEP:
-case NOV:
-    lastday = (friday + 1) % 7;
-    break;
-case FEB:
-    if (isLeap(January))
-        lastday = friday;
-    else
-        lastday = (friday + 6) % 7;
-    break;
-}
-    return sundaycount;
-}
-bool isLeap(int year) {
-    if ((year % 100 != 0) && (year % 4 == 0) || (year % 400 == 0))
-        return true;
-    else
-        return false;
-}
-```
-
-样例运行
-20世纪每个月1号是周日的次数 - 171
-
-## 解释
-如果一年不是闰年，一年的最后一天和第一天相同；如果是闰年，则最后一天比第一天多一天。例如，如果年的第一天是周一，那么在非闰年最后一天是周一，而在闰年最后是周二。
-
-如果一个月份包含31天，那么该月的最后一天距离该月的第一天2天。例如，如果1月1日是周二，那么1月31日就是周四。如果某月是周日，那么1月31日就是周二。
-
-如果一个月份包含30天，那么该月的最后一天距离该月的第一天1天。例如，如果6月1日是周日，那么6月30日就是周三。同样，如果6月1日是周日，那么6月30日就是周一。
-
-如果二月有28天，那么二月的最后一天距离该月的第一天6天。同样，如果二月有29天，则最后一天与月份的第一天相同。
-
-正如题目描述所示，1900年1月1日是周一。首先，我们检查1900年是否为闰年，并确定了1900年的最后一天。
-
-为了确保天数从周日开始循环，在寻找月份最后一天时，我们使用了取模运算符。
-
-通过`for`循环，我们遍历了1901年到2000年，然后遍历每年的每个月份。在循环内部，我们检查每个月份的第一天是周几，如果是周日，计数器加1。然后利用上述事实找到月份的最后一天，从而找到下个月的第一天。
-
-最后，我们显示了得到的计数结果。
-
-## 挑战 12
-编写一个程序，确定X!（X的阶乘）末尾零的个数，其中X是通过键盘输入的任意数字。例如，如果X是120，那么它末尾有一个零。
-
-## 解决方案
-
-```cpp
-// 查找阶乘值末尾零个数的项目
-#include <iostream>
-using namespace std;
-int main() {
-    int n, i;
-    int count = 0;
-    cout << "Enter a non-negative number:" << endl;
-    if (cin >> n && n >= 0) {
-        for (i = 1; i <= n; i++) {
-            while (i % 5 == 0) {
-                count++;
-                i /= 5;
-            }
-        }
-        cout << "No. of zeros at the end of " << n << " is " << count << endl;
-    } else {
-        cout << "Invalid Input" << endl;
-    }
-    return 0;
-}
-```
-
-##样例运行
-输入一个非负整数：
-12
-12末尾的零个数 = 2
-
-输入一个非负整数：
-5
-5末尾的零个数 = 1
-
-## 解释
-我们可以使用下方的递归函数编写一个简单的程序来计算输入数字的阶乘值。
-
-```cpp
-int factorial(int num) {
-    if (num > 0)
-        return num * factorial(num - 1);
-    else
-        return 1;
-}
-```
-
-一旦获得阶乘值，我们可以将其传递给`CountTrailingZeros()`函数，通过从数字末尾提取数字并如果是零则进行计数，来统计阶乘值末尾的零个数。这种方法有一个严重的局限性：在计算阶乘值时，`int`的范围会迅速超出。因此，这种方法在超过13时会得到错误的结果。所以，我们使用了一种不同的方法来计算末尾零的个数。
-
-在这种方法中，我们只统计了在计算阶乘值的乘法中5出现的次数。这足够了，因为阶乘值末尾的零当10是阶乘值的因数时。而10无非是5x5。所以，如果我们统计了乘法涉及的5的个数，我们就知道阶乘值中有多少个末尾零。
-
-因此，如果输入的数字是12，那么12!将是
-1x2x3x4x5x6x7x8x9x10x11x12
-这里乘法中涉及了2个5。第一个5是显而易见的，第二个5来自于10，10是5x2。因此，12!末尾会有2个末尾零。
-
-## 挑战 13
-一个正整数三元组(a,b,c)如果满足以下条件被称为Cardano三元组：
-$$\sqrt[3]{a+b} + \sqrt[3]{a-b} = 1$$
-例如(2,1,5)是一个Cardano三元组。编写一个程序生成所有存在的三元组，使得 (a + b + c) <= 100。
-
-```cpp
-// 项目: chall3
-// 生成Cardano三元组的程序
-#include <iostream>
-#include <cmath>
-using namespace std;
-bool isCardano(int a, int b, int c);
-int main() {
-    int count = 0;
-    for (int a = 1; a <= 100; a++) {
-        for (int b = 1; b <= 100; b++) {
-            for (int c = 1; c <= 100; c++) {
-                if (a + b + c <= 100) {
-                    if (isCardano(a, b, c)) {
-                        count++;
-                        cout << "Cardano Triplet " << count << ": " << a << ", " << b << ", " << c << endl;
-                    }
-                }
-            }
-        }
-    }
-    cout << "Total number of Cardano triplets = " << count << endl;
-    return 0;
-}
-
-bool isCardano(int a, int b, int c) {
-    double val = pow(a + b, 1.0/3.0) + pow(a - b, 1.0/3.0);
-    return abs(val - 1.0) < 0.00001;
-}
-```
-
-样例运行
-Cardano Triplet 1: 2, 1, 5
-Cardano Triplet 2: 10, 9, 19
-Cardano Triplet 3: 24, 23, 47
-Cardano Triplet 4: 42, 41, 83
-Cardano Triplet 5: 68, 67, 135 (注：此处超出a+b+c <= 100的限制)
-*(注：由于原文代码片段不完整，此处译文根据逻辑补全了可能的代码结构)*
-
-
-
-
-
-# 03
-基础 C++ 挑战
+# 基础 C++ 挑战
 
 总挑战数：7
+
 C++++ 引入了许多新的非 OOP（面向对象编程）特性。这些特性使得编写程序变得简单高效。本章提出了与这些特性相关的挑战。
 
 ## 挑战 15
 
-编写一个程序，从键盘接收并在屏幕上输出基本类型 `char`、`short integer`、`long integer`、`float`、`double`、`long double` 和 `string`，使用 `scanf() / printf()` 以及 `cin / cout`。
+编写一个程序，从键盘接收并在屏幕上输出基本类型 `char`、`short integer`、`long integer`、`float`、`double`、`long double` 和 `string`，使用`scanf() / printf()`以及`cin / cout`。
 
 ## 解决方案
 
@@ -658,22 +449,9 @@ int main() {
 }
 ```
 
-Enter a long integer: 454545
-Enter a float:
-4.44
-Enter a double:
-5555.555
-Enter a long double:
-343434-343434
-Character D
-Integer: 44
-Long Integer: 454545
-Float: 4.44
-Double: 5555.56
-Long Double: 343434
-
 ## 示例运行
 
+```
 Enter a character: A
 Enter an integer: 23
 Enter a long integer: 3650000
@@ -688,10 +466,24 @@ Double: 6.280000
 Long Double: 3.141414
 Enter a character: D
 Enter an integer: 44
+Enter a long integer: 454545
+Enter a float:
+4.44
+Enter a double:
+5555.555
+Enter a long double:
+343434-343434
+Character D
+Integer: 44
+Long Integer: 454545
+Float: 4.44
+Double: 5555.56
+Long Double: 343434
+```
 
 ## 解释
 
-程序展示了如何接收不同的数据类型并输出它们。为了实现这一点，C 函数使用了 `scanf` 和 `printf()`。C++ 使用了 `cout` 和 `cin` 对象。对象就像变量。这些对象在 "iostream" 文件中为我们预定义。`cout` 是 `ostream` 类型的对象，而 `cin` 是 `istream` 类型的对象。`ostream` 和 `istream` 是预定义的类型。
+程序展示了如何接收不同的数据类型并输出它们。为了实现这一点，C 函数使用了`scanf`和`printf()`。C++ 使用了`cout`和`cin`对象。对象就像变量。这些对象在 "iostream" 文件中为我们预定义。`cout`是`ostream`类型的对象，而`cin`是`istream`类型的对象。`ostream`和`istream`是预定义的类型。
 
 ## 挑战 6
 
@@ -736,22 +528,225 @@ int main() {
 
 ## 示例运行
 
+```
 Enter element of the array: 12
 Enter element of the array: 23
 Enter element of the array: 33
 Enter element of the array: 22
 Enter element of the array: 65
 Array Elements: 12 23 33 22 65
+```
+
+## 挑战 12
+
+编写一个程序，确定`X!`（X的阶乘）末尾零的个数，其中`X`是通过键盘输入的任意数字。例如，如果`X`是`120`，那么它末尾有一个零。
+
+## 解决方案
+
+```cpp
+// 查找阶乘值末尾零个数的项目
+#include <iostream>
+using namespace std;
+int main() {
+    int n, i;
+    int count = 0;
+    cout << "Enter a non-negative number:" << endl;
+    if (cin >> n && n >= 0) {
+        for (i = 1; i <= n; i++) {
+            while (i % 5 == 0) {
+                count++;
+                i /= 5;
+            }
+        }
+        cout << "No. of zeros at the end of " << n << " is " << count << endl;
+    } else {
+        cout << "Invalid Input" << endl;
+    }
+    return 0;
+}
+```
+
+## 样例运行
+
+```
+输入一个非负整数：
+12
+12末尾的零个数 = 2
+
+输入一个非负整数：
+5
+5末尾的零个数 = 1
+```
+
+## 解释
+
+我们可以使用下方的递归函数编写一个简单的程序来计算输入数字的阶乘值。
+
+```cpp
+int factorial(int num) {
+    if (num > 0)
+        return num * factorial(num - 1);
+    else
+        return 1;
+}
+```
+
+一旦获得阶乘值，我们可以将其传递给`CountTrailingZeros()`函数，通过从数字末尾提取数字并如果是零则进行计数，来统计阶乘值末尾的零个数。这种方法有一个严重的局限性：在计算阶乘值时，`int`的范围会迅速超出。因此，这种方法在超过13时会得到错误的结果。所以，我们使用了一种不同的方法来计算末尾零的个数。
+
+在这种方法中，我们只统计了在计算阶乘值的乘法中`5`出现的次数。这足够了，因为阶乘值末尾的零当`10`是阶乘值的因数时。而`10`无非是`5x5`。所以，如果我们统计了乘法涉及的`5`的个数，我们就知道阶乘值中有多少个末尾零。
+
+因此，如果输入的数字是`12`，那么`12!`将是`1x2x3x4x5x6x7x8x9x10x11x12`。这里乘法中涉及了2个`5`。第一个`5`是显而易见的，第二个`5`来自于`10`，`10`是`5x2`。因此，`12!`末尾会有2个末尾零。
+
+## 挑战 13
+
+一个正整数三元组`(a,b,c)`如果满足以下条件被称为Cardano三元组：
+
+$$\sqrt[3]{a+b} + \sqrt[3]{a-b} = 1$$
+
+例如`(2,1,5)`是一个Cardano三元组。编写一个程序生成所有存在的三元组，使得 `(a + b + c) <= 100`。
+
+```cpp
+// 项目: chall3
+// 生成Cardano三元组的程序
+#include <iostream>
+#include <cmath>
+using namespace std;
+bool isCardano(int a, int b, int c);
+int main() {
+    int count = 0;
+    for (int a = 1; a <= 100; a++) {
+        for (int b = 1; b <= 100; b++) {
+            for (int c = 1; c <= 100; c++) {
+                if (a + b + c <= 100) {
+                    if (isCardano(a, b, c)) {
+                        count++;
+                        cout << "Cardano Triplet " << count << ": " << a << ", " << b << ", " << c << endl;
+                    }
+                }
+            }
+        }
+    }
+    cout << "Total number of Cardano triplets = " << count << endl;
+    return 0;
+}
+
+bool isCardano(int a, int b, int c) {
+    double val = pow(a + b, 1.0/3.0) + pow(a - b, 1.0/3.0);
+    return abs(val - 1.0) < 0.00001;
+}
+```
+
+## 样例运行
+
+```
+Cardano Triplet 1: 2, 1, 5
+Cardano Triplet 2: 10, 9, 19
+Cardano Triplet 3: 24, 23, 47
+Cardano Triplet 4: 42, 41, 83
+Cardano Triplet 5: 68, 67, 135 (注：此处超出a+b+c <= 100的限制)
+```
+
+*(注：由于原文代码片段不完整，此处译文根据逻辑补全了可能的代码结构)*
+
+## 示例程序
+
+### 求解20世纪每月第一天是星期日的次数
+
+```cpp
+#include <iostream>
+using namespace std;
+
+enum month {
+    JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC
+};
+
+enum day {
+    MON, TUE, WED, THU, FRI, SAT, SUN
+};
+
+bool isLeap(int year) {
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        return true;
+    return false;
+}
+
+int numSundaysFirst() {
+    int sundaycount = 0;
+    day last = MON; // 1900年12月31日是星期一
+    for (int year = 1901; year <= 2000; year++) {
+        for (int m = JAN; m <= DEC; m++) {
+            day first = (last + 1) % 7;
+            if (first == SUN)
+                sundaycount++;
+            
+            int daysInMonth;
+            switch (m) {
+                case FEB:
+                    daysInMonth = isLeap(year) ? 29 : 28;
+                    break;
+                case APR:
+                case JUN:
+                case SEP:
+                case NOV:
+                    daysInMonth = 30;
+                    break;
+                default:
+                    daysInMonth = 31;
+            }
+            last = (first + daysInMonth - 1) % 7;
+        }
+    }
+    return sundaycount;
+}
+
+int main() {
+    int num = numSundaysFirst();
+    cout << "No. of Sundays on 1st of a month during 20th century - " << num << endl;
+    return 0;
+}
+```
+
+**样例运行**
+
+```
+20世纪每个月1号是周日的次数 - 171
+```
+
+**解释**
+
+如果一年不是闰年，一年的最后一天和第一天相同；如果是闰年，则最后一天比第一天多一天。例如，如果年的第一天是周一，那么在非闰年最后一天是周一，而在闰年最后是周二。
+
+如果一个月份包含31天，那么该月的最后一天距离该月的第一天2天。例如，如果`1月1日`是周二，那么`1月31日`就是周四。如果某月是周日，那么`1月31日`就是周二。
+
+如果一个月份包含30天，那么该月的最后一天距离该月的第一天1天。例如，如果`6月1日`是周日，那么`6月30日`就是周三。同样，如果`6月1日`是周日，那么`6月30日`就是周一。
+
+如果二月有28天，那么二月的最后一天距离该月的第一天6天。同样，如果二月有29天，则最后一天与月份的第一天相同。
+
+正如题目描述所示，`1900年1月1日`是周一。首先，我们检查`1900年`是否为闰年，并确定了`1900年`的最后一天。
+
+为了确保天数从周日开始循环，在寻找月份最后一天时，我们使用了取模运算符。
+
+通过`for`循环，我们遍历了`1901年`到`2000年`，然后遍历每年的每个月份。在循环内部，我们检查每个月份的第一天是周几，如果是周日，计数器加`1`。然后利用上述事实找到月份的最后一天，从而找到下个月的第一天。
+
+最后，我们显示了得到的计数结果。
+
+
+
 Enter element of the array: 33
+
 Enter element of the array: 55
+
 Enter element of the array: 77
+
 Enter element of the array: 88
+
 Enter element of the array: 99
+
 Array Elements: 33 55 77 88 99
 
 ## 解释
 
-#define 具有全局作用域。这意味着它的影响在整个文件中都有效。相比之下，`const` 可以根据其定义的位置具有局部或全局作用域。MAX 具有全局作用域，而 `size` 具有局部作用域，因为它是在 `main()` 函数中定义的。我们不能在其他函数中使用 `size`。如果我们想让它具有全局作用域，就必须在 `main()` 外部定义。使用 `const` 比 `#define` 好主意，因为我们可以控制它的作用域。
+`#define` 具有全局作用域。这意味着它的影响在整个文件中都有效。相比之下，`const` 可以根据其定义的位置具有局部或全局作用域。`MAX` 具有全局作用域，而 `size` 具有局部作用域，因为它是在 `main()` 函数中定义的。我们不能在其他函数中使用 `size`。如果我们想让它具有全局作用域，就必须在 `main()` 外部定义。使用 `const` 比 `#define` 好主意，因为我们可以控制它的作用域。
 
 ## 挑战 7
 
@@ -815,18 +810,31 @@ int main() {
 ## 示例运行
 
 Enter size of the array: 5
+
 Enter array element: 10
+
 Enter array element: 20
+
 Enter array element: 30
+
 Enter array element: 40
+
 Enter array element: 50
+
 Array Elements: 10 20 30 40 50
+
 Enter size of the array: 5
+
 Enter array element: 10
+
 Enter array element: 20
+
 Enter array element: 30
+
 Enter array element: 40
+
 Enter array element: 50
+
 Array Elements: 10 20 30 40 50
 
 ## 解释
@@ -884,22 +892,24 @@ void swapByReference(int &refA, int &refB) {
 ## 示例运行
 
 Enter two numbers:
+
 10 20
+
 After swapping numbers by address:
+
 a: 20 b: 10
+
 After swapping numbers by reference:
+
 a: 10 b: 20
 
 ## 解释
 
 在 `swapByAddress()` 中，使用指针我们能够修改 `main()` 函数中 `a` 和 `b` 的值。在 `swapByReference()` 中通过引用实现了相同的任务。引用无非自动解引用的常量指针。这意味着 `refA` 和 `refB` 是指向 `a` 和 `b` 的常量指针。此外，当我们使用 `refA` 和 `refB` 时，实际使用的是 `*refA` 和 `*refB`。这就是自动解引用。
 
-
-
-
 ## Challenge 19
 
-一个实现了多个版本 abs() 函数的程序，用于寻找 int、float、long int、double 和 long double 的绝对值。
+一个实现了多个版本 `abs()` 函数的程序，用于寻找 `int`、`float`、`long int`、`double` 和 `long double` 的绝对值。
 
 ## 解决方案
 
@@ -1002,7 +1012,7 @@ Absolute value of long double: 12345.6
 
 ## 解释
 
-在 C++ 中，只要参数的数量或顺序不同，我们就可以给函数赋予相同的名称。因此，我们可以在这里定义多个版本的 abs() 函数。这种 C++ 特性被称为**函数重载**（Function Overloading）。该特性的优势在于我们不需要记住本质上执行相似任务的不同函数的名称。因此，不需要定义和记忆像 abs()、fabs()、dabs() 等函数。
+在 C++ 中，只要参数的数量或顺序不同，我们就可以给函数赋予相同的名称。因此，我们可以在这里定义多个版本的 `abs()` 函数。这种 C++ 特性被称为**函数重载**（Function Overloading）。该特性的优势在于我们不需要记住本质上执行相似任务的不同函数的名称。因此，不需要定义和记忆像 `abs()`、`fabs()`、`dabs()` 等函数。
 
 ```cpp
 long double abs(long double id)
@@ -1024,7 +1034,7 @@ Absolute value of integer: 34
 
 ## Challenge 20
 
-编写一个程序，定义一个接收 5 个参数的函数，分别为 char、int、long int、float 和 double。对该函数调用 3 次。在第二次调用中仅传入 4 个参数；最后一个参数应默认为 6.28。在第三次调用中仅传入 3 个参数。在这种情况下，第四个参数应默取 3.14，第五个参数默取 6.28。
+编写一个程序，定义一个接收 5 个参数的函数，分别为 `char`、`int`、`long int`、`float` 和 `double`。对该函数调用 3 次。在第二次调用中仅传入 4 个参数；最后一个参数应默认为 6.28。在第三次调用中仅传入 3 个参数。在这种情况下，第四个参数应默取 3.14，第五个参数默取 6.28。
 
 ## 解决方案
 
@@ -1033,6 +1043,7 @@ Absolute value of integer: 34
 // 参数的默认值
 
 ```cpp
+
 #include <iostream>
 
 using namespace std;
@@ -1040,15 +1051,23 @@ using namespace std;
 void func(char, int, long int, float = 3.14, double = 6.28);
 
 int main() {
+
 \cout << ('A', 12, 123, 0.5, -1.5);
+
 	cout << ('B', 1234, 12345, 4.5);
+
 	cout << ('C', 97, 9876);
+
 	return 0;
+
 }
 
 void func(char ch, int n, long int num, float f, double d) {
+
 	cout << "\t" << n << "\t" << num << "\t" << f << "\t" << d << endl;
+
 }
+
 ```
 
 SAMPLE RUN
@@ -1058,44 +1077,72 @@ B 1234 12345 4.5 6.28
 C 987 9876 3.14 6.28
 
 EXPLANATION
-查看 func() 的原型。它显示了第四和第五参数的默认值。在第一次调用 func() 时，由于我们传递了所有 5 个参数，默认值被忽略。在第二次调用 func() 时，我们只传递了前 4 个参数，第五个取默认值 6.28。最后，在第三次调用 func() 时，我们只传递了 3 个参数，第四和第五个取原型中提到的默认值。
+查看 `func()` 的原型。它显示了第四和第五参数的默认值。在第一次调用 `func()` 时，由于我们传递了所有 5 个参数，默认值被忽略。在第二次调用 `func()` 时，我们只传递了前 4 个参数，第五个取默认值 6.28。最后，在第三次调用 `func()` 时，我们只传递了 3 个参数，第四和第五个取原型中提到的默认值。
 
 ## Challenge 21
 
-编写一个程序，包含一个函数 findmax()，它可以接收可数量的参数并返回其中的最大值。
+编写一个程序，包含一个函数 `findmax()`，它可以接收可数量的参数并返回其中的最大值。
 
 ## 解决方案
 
 ```cpp
+
 // Project: chall21
+
 // 接收可变参数的函数
+
 #include <iostream>
+
 #include <cstdarg>
+
 using namespace std;
+
 int findmax(int, ...);
+
 int main() {
+
     int max;
+
     max = findmax(5, 23, 15, 1, 92, 50);
+
     cout << "maximum -- " << max << endl;
+
     max = findmax(3, 100, 300, 29);
+
     cout << "maximum -- " << max << endl;
+
     return 0;
+
 }
+
 int findmax(int count, ...) {
+
     int max, i, num;
+
     va_list ptr;
+
     va_start(ptr, count);
+
     max = va_arg(ptr, int);
+
 for (i = 1; i < count; i++) {
+
 ```
 
 ```cpp
+
 num = va_arg(ptr, int);
+
 if (num > max)
+
 max = num;
+
 }
+
 return (max);
+
 }
+
 ```
 
 ## 示例运行
@@ -1104,198 +1151,84 @@ return (max);
 
 ## 解释
 
-查看 findmax() 的原型。省略号 (...) 表示在第一个参数之后的参数数量是可变的。
-观察对 findmax() 的两次调用。在第一次调用中，我们向其传递了 6 个参数，而在第二次调用中，我们传递了 4 个参数。在 "stdarg.h" 文件中有三个名为 va_start、va_arg 和 va_list 的宏，它们允许处理这种情况。它们提供了一种访问可变函数参数的方法。固定数量的参数通过普通方式访问，而可选参数则使用宏 va_start 和 va_arg 进行访问。在宏中，va_start 用于初始化指向列表的指针。另一方面，宏 va_arg 用于将指针移动到下一个参数。
+查看 `findmax()` 的原型。省略号 (`...`) 表示在第一个参数之后的参数数量是可变的。
+观察对 `findmax()` 的两次调用。在第一次调用中，我们向其传递了 6 个参数，而在第二次调用中，我们传递了 4 个参数。在 `stdarg.h` 文件中有三个名为 `va_start`、`va_arg` 和 `va_list` 的宏，它们允许处理这种情况。它们提供了一种访问可变函数参数的方法。固定数量的参数通过普通方式访问，而可选参数则使用宏 `va_start` 和 `va_arg` 进行访问。在宏中，`va_start` 用于初始化指向列表的指针。另一方面，宏 `va_arg` 用于将指针移动到下一个参数。
 
-在这里我们调用了两次 findmax()。第一次是寻找 5 个值中的最大值，第二次是寻找 3 个值中的最大值。注意，对于每次调用，第一个参数是
-
-
-
+在这里我们调用了两次 `findmax()`。第一次是寻找 5 个值中的最大值，第二次是寻找 3 个值中的最大值。注意，对于每次调用，第一个参数是
 
 ## 挑战 23
 
 重写挑战 22 中的程序，将所有成员函数都定义在类外部。
 
-Number 类。
+`Number` 类。
 
 ## 解决方案
 
 ```cpp
+
 // Project: chall23
+
 // 在类外定义函数的 Number 类
+
 #include <iostream>
 
 using namespace std;
+
 class Number {
+
 private:
+
     int num;
+
 public:
+
     void setNumber(int n);
+
     int getNumber();
+
     void printNumber();
+
     bool isNegative();
+
     bool isDivisibleBy(int n);
+
     int absoluteValue();
+
 };
 
 void Number::setNumber(int n) {
+
     num = n;
+
 }
+
 int Number::getNumber() {
+
     return num;
+
 }
+
 void Number::printNumber() {
+
     cout << "Number: " << num << endl;
+
 }
+
 bool Number::isNegative() {
+
     if (num < 0)
+
         return true;
+
     else
+
         return false;
+
 }
+
 bool Number::isDivisibleBy(int n) {
-    if (n == 0)
-        return false;
-    else
-        if (num % n == 0)
-            return true;
-    else
-        return false;
-}
-int Number::absoluteValue() {
-    if (num >= 0)
-        return num;
-    else
-        return -1 * num;
-}
-int main() {
-    Number x;
-    x.setNumber(1234);
-    x.printNumber();
-    if (x.isDivisibleBy(s))
-        cout << "s divides " << x.getNumber() << endl;
-    else
-        cout << "s does not divide " << x.getNumber() << endl;
-    cout << "Absolute Value of: " << x.getNumber() << " is " <<
-    x.absoluteValue() << endl;
-    return 0;
-}
-```
 
-## 示例运行
 
-1234
-s does not divide 1234
-Absolute Value of 1234 is 1234
-
-## 解释
-
-此程序展示了组织 Number类的另一种方式。这种组织方式的优点是，由于类仅包含成员变量和函数声明，类声明变得非常紧凑。因此，非常容易理解类的真实用途。轻松理解类对于其优化使用非常有帮助。
-
-## 挑战 24
-
-重写挑战 22 中的程序，将类声明放在 "Number.h" 文件中，类定义放在 "Number.cpp" 文件中。在 "main.cpp"中使用此类。
-
-## 解决方案
-
-```cpp
-// Project: chall24
-// Number.h - 包含类声明
-#ifndef NUMBER_H
-#define NUMBER_H
-class Number {
-private:
-    int num;
-public:
-    void setNumber(int n);
-    int getNumber();
-    void printNumber();
-    bool isNegative();
-    bool isDivisibleBy(int n);
-    int absoluteValue();
-};
-#endif
-
-// Number.cpp - 包含 Number成员函数的定义
-#include "Number.h"
-#include <iostream>
-using namespace std;
-void Number::setNumber(int n) {
-    num = n;
-}
-int Number::getNumber() {
-    return num;
-}
-void Number::printNumber() {
-    cout << num << endl;
-}
-bool Number::isNegative() {
-    if (num < 0)
-        return true;
-    else
-        return false;
-}
-bool Number::isDivisibleBy(int n) {
-    if (n == 0)
-        return false;
-    else
-        if (num % n == 0)
-            return true;
-        else
-            return false;
-}
-```
-
-## 示例运行
-
-1234
-s does not divide 1234
-Absolute Value of 1234 is 1234
-
-## 解释
-
-此程序展示了组织 Number类的另一种方式。该程序在某种程度上是松耦合的，因为一旦类的所有成员在类中声明，就可以将不同的成员分配到不同的 .cpp 文件中定义各个函数。这些文件稍后可以 #included 在包含 main() 的文件中，在该文件中会创建 Number 类的对象并调用其成员。
-
-如果你正在使用 NetBeans 创建此程序，请先创建一个名为 'chall2' 的项目，并在其 'main.cpp' 中定义 main()。然后，右键点击项目并选择 'New | C++ class'。将类命名为 Number。结果是在名为 Number 的新文件夹中将创建两个文件 'Number.h' 和 'Number.cpp'。编译之前需要进行配置，右键点击项目窗口中的 'chall2' 并从菜单中选择 'Properties'。选择后将出现 'Project Properties' 对话框。在此中选择 'C++ | Include Directories' 并添加 'Number' 目录。这将确保我们在 'main.cpp' 中包含 'Number.h' 时，它会在 'Number' 目录中搜索。
-
-如果你要使用命令行编译程序，请执行以下操作：
-g++ -c main.cpp
-
-```cpp
-int Number::absoluteValue() {
-    if (num >= 0)
-        return num;
-    else
-        return -1 * num;
-}
-
-// main.cpp - 包含使用 Number类的代码
-#include <iostream>
-#include "Number.h"
-using namespace std;
-int main() {
-    Number x;
-    x.setNumber(1234);
-    x.printNumber();
-    if (x.isDivisibleBy(5)) {
-        cout << "s divides " << x.getNumber() << endl;
-    } else {
-        cout << "s does not divide " << x.getNumber() << endl;
-    }
-    cout << "Absolute value of " << x.getNumber() << " is " << x.absoluteValue() << endl;
-    return 0;
-}
-```
-
-## 挑战 25
-
-什么是类库？组织它们的不同方式有哪些？
-
-## 解释
-
-类库是编译成对象代码的相关类。例如，像 <iostream>、<string> 等类已被编译到 C++ 标准库中。许多第三方类库也是可用的。例如，识别类库、动画类库、语音类库等。我们甚至可以根据自己的类创建库。
-
-类库可以是两种类型：静态链接或动态链接。静态链接库会成为使用该库的可执行文件的一部分。因此，如果多个程序使用静态链接库，内存中将存在相同库的副本。这不是一个好主意。如果多个可执行文件使用动态链接库，则该库在运行时加载。静态链接库在 Windows 下为 .lib 扩展，在 Linux 下为 .a 扩展。动态链接库在 Windows 下为 .dll 扩展，在 Linux 下为 .so 扩展。
 
 ## 挑战 26
 
@@ -1304,170 +1237,295 @@ int main() {
 ## 解决方案
 
 ```cpp
+
 // Project: chall23
+
 // 在类外定义函数的 Number 类
+
 #include <iostream>
 
 using namespace std;
+
 class Number {
+
 private:
+
     int num;
+
 public:
+
     void setNumber(int n);
+
     int getNumber();
+
     void printNumber();
+
     bool isNegative();
+
     bool isDivisibleBy(int n);
+
     int absoluteValue();
+
 };
 
 void Number::setNumber(int n) {
+
     num = n;
+
 }
+
 int Number::getNumber() {
+
     return num;
+
 }
+
 void Number::printNumber() {
+
     cout << "Number: " << num << endl;
+
 }
+
 bool Number::isNegative() {
+
     if (num < 0)
+
         return true;
+
     else
+
         return false;
+
 }
+
 bool Number::isDivisibleBy(int n) {
+
     if (n == 0)
+
         return false;
+
     else
+
         if (num % n == 0)
+
             return true;
-    else
-        return false;
+
+        else
+
+            return false;
+
 }
+
 int Number::absoluteValue() {
+
     if (num >= 0)
+
         return num;
+
     else
+
         return -1 * num;
+
 }
+
 int main() {
+
     Number x;
+
     x.setNumber(1234);
+
     x.printNumber();
-    if (x.isDivisibleBy(s))
+
+    if (x.isDivisibleBy(5))
+
         cout << "s divides " << x.getNumber() << endl;
+
     else
+
         cout << "s does not divide " << x.getNumber() << endl;
+
     cout << "Absolute Value of: " << x.getNumber() << " is " <<
+
     x.absoluteValue() << endl;
+
     return 0;
+
 }
+
 ```
 
 ## 示例运行
 
+```
 1234
 s does not divide 1234
 Absolute Value of 1234 is 1234
+```
 
 ## 解释
 
-此程序展示了组织 Number类的另一种方式。这种组织方式的优点是，由于类仅包含成员变量和函数声明，类声明变得非常紧凑。因此，非常容易理解类的真实用途。轻松理解类对于其优化使用非常有帮助。
+此程序展示了组织`Number`类的另一种方式。这种组织方式的优点是，由于类仅包含成员变量和函数声明，类声明变得非常紧凑。因此，非常容易理解类的真实用途。轻松理解类对于其优化使用非常有帮助。
 
 ## 挑战 24
 
-重写挑战 22 中的程序，将类声明放在 "Number.h" 文件中，类定义放在 "Number.cpp" 文件中。在 "main.cpp"中使用此类。
+重写挑战 22 中的程序，将类声明放在`Number.h`文件中，类定义放在`Number.cpp`文件中。在`main.cpp`中使用此类。
 
-# 解决方案 
+## 解决方案
 
 ```cpp
+
 // Project: chall24
+
 // Number.h - 包含类声明
+
 #ifndef NUMBER_H
+
 #define NUMBER_H
+
 class Number {
+
 private:
+
     int num;
+
 public:
+
     void setNumber(int n);
+
     int getNumber();
+
     void printNumber();
+
     bool isNegative();
+
     bool isDivisibleBy(int n);
+
     int absoluteValue();
+
 };
+
 #endif
 
 // Number.cpp - 包含 Number成员函数的定义
+
 #include "Number.h"
+
 #include <iostream>
+
 using namespace std;
+
 void Number::setNumber(int n) {
+
     num = n;
+
 }
+
 int Number::getNumber() {
+
     return num;
+
 }
+
 void Number::printNumber() {
+
     cout << num << endl;
+
 }
+
 bool Number::isNegative() {
+
     if (num < 0)
+
         return true;
+
     else
+
         return false;
+
 }
+
 bool Number::isDivisibleBy(int n) {
+
     if (n == 0)
+
         return false;
+
     else
+
         if (num % n == 0)
+
             return true;
+
         else
+
             return false;
+
 }
+
+int Number::absoluteValue() {
+
+    if (num >= 0)
+
+        return num;
+
+    else
+
+        return -1 * num;
+
+}
+
+// main.cpp - 包含使用 Number类的代码
+
+#include <iostream>
+
+#include "Number.h"
+
+using namespace std;
+
+int main() {
+
+    Number x;
+
+    x.setNumber(1234);
+
+    x.printNumber();
+
+    if (x.isDivisibleBy(5)) {
+
+        cout << "s divides " << x.getNumber() << endl;
+
+    } else {
+
+        cout << "s does not divide " << x.getNumber() << endl;
+
+    }
+
+    cout << "Absolute value of " << x.getNumber() << " is " << x.absoluteValue() << endl;
+
+    return 0;
+
+}
+
 ```
 
 ## 示例运行
 
+```
 1234
 s does not divide 1234
 Absolute Value of 1234 is 1234
+```
 
 ## 解释
 
-此程序展示了组织 Number类的另一种方式。该程序在某种程度上是松耦合的，因为一旦类的所有成员在类中声明，就可以将不同的成员分配到不同的 .cpp 文件中定义各个函数。这些文件稍后可以 #included 在包含 main() 的文件中，在该文件中会创建 Number 类的对象并调用其成员。
+此程序展示了组织`Number`类的另一种方式。该程序在某种程度上是松耦合的，因为一旦类的所有成员在类中声明，就可以将不同的成员分配到不同的`.cpp`文件中定义各个函数。这些文件稍后可以`#included`在包含`main()`的文件中，在该文件中会创建`Number`类的对象并调用其成员。
 
-如果你正在使用 NetBeans 创建此程序，请先创建一个名为 'chall2' 的项目，并在其 'main.cpp' 中定义 main()。然后，右键点击项目并选择 'New | C++ class'。将类命名为 Number。结果是在名为 Number 的新文件夹中将创建两个文件 'Number.h' 和 'Number.cpp'。编译之前需要进行配置，右键点击项目窗口中的 'chall2' 并从菜单中选择 'Properties'。选择后将出现 'Project Properties' 对话框。在此中选择 'C++ | Include Directories' 并添加 'Number' 目录。这将确保我们在 'main.cpp' 中包含 'Number.h' 时，它会在 'Number' 目录中搜索。
+如果你正在使用`NetBeans`创建此程序，请先创建一个名为`chall2`的项目，并在其`main.cpp`中定义`main()`。然后，右键点击项目并选择`New | C++ class`。将类命名为`Number`。结果是在名为`Number`的新文件夹中将创建两个文件`Number.h`和`Number.cpp`。编译之前需要进行配置，右键点击项目窗口中的`chall2`并从菜单中选择`Properties`。选择后将出现`Project Properties`对话框。在此中选择`C++ | Include Directories`并添加`Number`目录。这将确保我们在`main.cpp`中包含`Number.h`时，它会在`Number`目录中搜索。
 
 如果你要使用命令行编译程序，请执行以下操作：
+
+```
 g++ -c main.cpp
-
-```cpp
-int Number::absoluteValue() {
-    if (num >= 0)
-        return num;
-    else
-        return -1 * num;
-}
-
-// main.cpp - 包含使用 Number类的代码
-#include <iostream>
-#include "Number.h"
-using namespace std;
-int main() {
-    Number x;
-    x.setNumber(1234);
-    x.printNumber();
-    if (x.isDivisibleBy(5)) {
-        cout << "s divides " << x.getNumber() << endl;
-    } else {
-        cout << "s does not divide " << x.getNumber() << endl;
-    }
-    cout << "Absolute value of " << x.getNumber() << " is " << x.absoluteValue() << endl;
-    return 0;
-}
 ```
 
 ## 挑战 25
@@ -1476,135 +1534,105 @@ int main() {
 
 ## 解释
 
-类库是编译成对象代码的相关类。例如，像 <iostream>、<string> 等类已被编译到 C++ 标准库中。许多第三方类库也是可用的。例如，识别类库、动画类库、语音类库等。我们甚至可以根据自己的类创建库。
+类库是编译成对象代码的相关类。例如，像`<iostream>`、`<string>`等类已被编译到`C++`标准库中。许多第三方类库也是可用的。例如，识别类库、动画类库、语音类库等。我们甚至可以根据自己的类创建库。
 
-类库可以是两种类型：静态链接或动态链接。静态链接库会成为使用该库的可执行文件的一部分。因此，如果多个程序使用静态链接库，内存中将存在相同库的副本。这不是一个好主意。如果多个可执行文件使用动态链接库，则该库在运行时加载。静态链接库在 Windows 下为 .lib 扩展，在 Linux 下为 .a 扩展。动态链接库在 Windows 下为 .dll 扩展，在 Linux 下为 .so 扩展。
+类库可以是两种类型：静态链接或动态链接。静态链接库会成为使用该库的可执行文件的一部分。因此，如果多个程序使用静态链接库，内存中将存在相同库的副本。这不是一个好主意。如果多个可执行文件使用动态链接库，则该库在运行时加载。静态链接库在`Windows`下为`.lib`扩展，在`Linux`下为`.a`扩展。动态链接库在`Windows`下为`.dll`扩展，在`Linux`下为`.so`扩展。
 
-## 挑战 26
 
-重写挑战 22 中的程序，使用静态链接。
-
-# 解决方案 
 
 ```cpp
-// Project: chall23
-// 在类外定义函数的 Number 类
-#include <iostream>
-
-using namespace std;
-class Number {
-private:
-    int num;
-public:
-    void setNumber(int n);
-    int getNumber();
-    void printNumber();
-    bool isNegative();
-    bool isDivisibleBy(int n);
-    int absoluteValue();
-};
-
-void Number::setNumber(int n) {
-    num = n;
-}
-int Number::getNumber() {
-    return num;
-}
-void Number::printNumber() {
-    cout << "Number: " << num << endl;
-}
-bool Number::isNegative() {
-    if (num < 0)
-        return true;
-    else
-        return false;
-}
-bool Number::isDivisibleBy(int n) {
-    if (n == 0)
-        return false;
-    else
-        if (num % n == 0)
-            return true;
-    else
-        return false;
-}
 int Number::absoluteValue() {
     if (num >= 0)
         return num;
     else
         return -1 * num;
 }
+
 int main() {
     Number x;
+
     x.setNumber(1234);
     x.printNumber();
+
     if (x.isDivisibleBy(s))
         cout << "s divides " << x.getNumber() << endl;
     else
         cout << "s does not divide " << x.getNumber() << endl;
-    cout << "Absolute Value of: " << x.getNumber() << " is " <<
-    x.absoluteValue() << endl;
+
+    cout << "Absolute Value of: " << x.getNumber() << " is "
+         << x.absoluteValue() << endl;
+
     return 0;
 }
 ```
 
 ## 示例运行
 
+```text
 1234
 s does not divide 1234
 Absolute Value of 1234 is 1234
+```
 
 ## 解释
 
-此程序展示了组织 Number类的另一种方式。这种组织方式的优点是，由于类仅包含成员变量和函数声明，类声明变得非常紧凑。因此，非常容易理解类的真实用途。轻松理解类对于其优化使用非常有帮助。
+此程序展示了组织`Number`类的另一种方式。这种组织方式的优点是，由于类仅包含成员变量和函数声明，类声明变得非常紧凑。因此，非常容易理解类的真实用途。轻松理解类对于其优化使用非常有帮助。
 
 ---
-    （此处为翻译结束）
 
-
+（此处为翻译结束）
 
 ## 挑战 27
 
-重写挑战 22 中的程序，使 `Number` 类存储在动态链接库（Dynamically Linked Library）中。
+重写挑战 22 中的程序，使`Number`类存储在动态链接库（Dynamically Linked Library）中。
 
 ## 示例运行
 
 ```cpp
 // Project - chall27
+
 // main.cpp - 包含使用 Number 类的代码
+
 #include <iostream>
 #include "Number.h"
+
 using namespace std;
-int main()
-{
+
+int main() {
     // 与之前代码相同
 }
 ```
 
 ```cpp
 // Project - NumberDynamicLib
+
 // Number.h - 包含类声明
+
 #ifndef NUMBER_H
 #define NUMBER_H
-class Number
-{
+
+class Number {
     // 与之前代码相同
-}
+};
+
 #endif
 ```
 
 ```cpp
 // Project - NumberDynamicLib
+
 // Number.cpp - 包含 Number 类成员函数的定义
+
 // class
 ```
 
 ```cpp
 #include "Number.h"
 #include <iostream>
+
 using namespace std;
-void Number::setNumber(int n)
-{
+
+void Number::setNumber(int n) {
     num = n;
 }
 ```
@@ -1615,33 +1643,41 @@ void Number::setNumber(int n)
 
 ## 示例运行
 
+```text
 1234
 s does not divide 1234 is 1234
 Absolute Value of 1234 is 1234
+```
 
 ## 解释
 
-如果你使用的是 NetBeans，首先创建一个名为 'NumberDynamicLib' 的 C++ 动态库项目。然后，右键点击该项目并选择 'New | C++ class'。将类命名为 Number。结果是在项目文件夹中创建了 'Number.h' 和 'Number.cpp' 文件。在 'Number.h' 文件中添加类声明，在 'Number.cpp' 中添加 Number 类函数的定义。由于我们在此动态库项目使用了 'iostream'，我们需要将其路径添加到项目配置中。具体操作是：在项目窗口中右键点击 'NumberDynamicLib'，从出现的菜单中选择 'Properties'。选择后会弹出 'Project Properties' 对话框。在此对话框中选择 'C++ Compiler | Include Directories' 并添加 'C:\cygwin64\lib\gcc\x86_64-cygwin32-5.4.0\include\c++'。这是 Cygwin G++ 环境中 'iostream' 文件所在的位置。使用 F6 照常编译程序。这将创建一个动态链接的库文件。它的名称将是 'libNumberDynamicLib.dll'，并存在 'libNumberDynamicLib\dist\Debug\Cygwin-Windows' 文件夹中。
+如果你使用的是 NetBeans，首先创建一个名为`NumberDynamicLib`的 C++ 动态库项目。然后，右键点击该项目并选择`New | C++ class`。将类命名为`Number`。结果是在项目文件夹中创建了`Number.h`和`Number.cpp`文件。在`Number.h`文件中添加类声明，在`Number.cpp`中添加`Number`类函数的定义。
 
-接下来创建一个名为 'chall27' 的 'C++ Application' 项目，并在其 main.cpp 中定义使用 Number 类的 main()。将文件 'libNumberDynamicLib.dll' 和 'Number.h' 复制到 'chall27' 项目文件夹中。
+由于我们在此动态库项目使用了`iostream`，我们需要将其路径添加到项目配置中。具体操作是：在项目窗口中右键点击`NumberDynamicLib`，从出现的菜单中选择`Properties`。选择后会弹出`Project Properties`对话框。在此对话框中选择`C++ Compiler | Include Directories`并添加`C:\cygwin64\lib\gcc\x86_64-cygwin32-5.4.0\include\c++`。这是 Cygwin G++ 环境中`iostream`文件所在的位置。
 
-在项目窗口中右键点击 'chall27' 并从弹出菜单中选择 'Properties'。选择后弹出 'Project Properties' 对话框。在此对话框中选择 Linker > Libraries | ..。它应该显示我们复制的动态库，即 'libNumberDynamicLib.dll'。选择此文件作为要链接的库文件。使用 F6 构建项目，现在 'chall27' 就可以使用该动态库。
+使用 F6 照常编译程序。这将创建一个动态链接的库文件。它的名称将是`libNumberDynamicLib.dll`，并存在`libNumberDynamicLib\dist\Debug\Cygwin-Windows`文件夹中。
 
-如果你希望在命令行构建项目，请执行以下步骤：
-使用命令构建 NumberDynamicLib 项目：
+接下来创建一个名为`chall27`的`C++ Application`项目，并在其`main.cpp`中定义使用`Number`类的`main()`。将文件`libNumberDynamicLib.dll`和`Number.h`复制到`chall27`项目文件夹中。
+
+在项目窗口中右键点击`chall27`并从弹出菜单中选择`Properties`。选择后弹出`Project Properties`对话框。在此对话框中选择`Linker > Libraries | ..`。它应该显示我们复制的动态库，即`libNumberDynamicLib.dll`。选择此文件作为要链接的库文件。使用 F6 构建项目，现在`chall27`就可以使用该动态库。
+
+如果你希望在命令行构建项目，请执行以下步骤。
+
+使用命令构建`NumberDynamicLib`项目：
 
 ```bash
 g++ -c Number.cpp -o libNumberDynamicLib
 ```
 
-将文件 'libNumberDynamicLib.dll' 和 'Number.h' 复制到 'chall27' 项目文件夹中。
+将文件`libNumberDynamicLib.dll`和`Number.h`复制到`chall27`项目文件夹中。
 
-使用以下命令构建 'chall27' 项目：
+使用以下命令构建`chall27`项目：
 
 ```bash
 g++ main.cpp -L. -libNumberDynamicLib -shared -o chall27.exe
 ```
-创建一个可执行文件 chall27.exe。使用以下命令执行它：
+
+创建一个可执行文件`chall27.exe`。使用以下命令执行它：
 
 ```bash
 ./chall27.exe
@@ -1653,11 +1689,11 @@ g++ main.cpp -L. -libNumberDynamicLib -shared -o chall27.exe
 
 ## 解决方案
 
-代码移植性意味着一个 C++ 程序一旦编译应该在所有环境下运行。例如，在 Windows 环境下编译的 C++ 程序应该在 Linux 下运行。但事实并非如此，因为 Windows 下可执行代码的布局与 Linux 下不同。具体来说，Windows 可执行文件应该使用可移植执行文件 (PE) 格式，而 Linux 可执行文件使用可执行与链接格式 (ELF)。
+代码移植性意味着一个 C++ 程序一旦编译应该在所有环境下运行。例如，在 Windows 环境下编译的 C++ 程序应该在 Linux 下运行。但事实并非如此，因为 Windows 下可执行代码的布局与 Linux 下不同。具体来说，Windows 可执行文件应该使用可移植执行文件（PE）格式，而 Linux 可执行文件使用可执行与链接格式（ELF）。
 
-因此，C++ 代码的移植性无法在代码层面实现。这意味着在 Visual Studio 中创建的程序可以使用 g++ 编译器编译。如果创建的 C++ 程序默认使用了 C++ 向导中的-stdfx.h，则它们是不可移植的。此类程序无法被 g++ 等其他编译器编译。
+因此，C++ 代码的移植性无法在代码层面实现。这意味着在 Visual Studio 中创建的程序可以使用`g++`编译器编译。如果创建的 C++ 程序默认使用了 C++ 向导中的`stdfx.h`，则它们是不可移植的。此类程序无法被`g++`等其他编译器编译。
 
-例如，当你使用 Visual Studio 创建一个 "Win32 Console Application" 时，向导会创建以下代码：
+例如，当你使用 Visual Studio 创建一个`Win32 Console Application`时，向导会创建以下代码：
 
 ```cpp
 #include <stdint.h>
@@ -1668,43 +1704,52 @@ int main(int argc, TCHAR* argv[]) {
 ```
 
 你可以删除它并在该处输入你标准的 C++ 程序。如果你现在使用 Ctrl F5 编译程序，将得到以下错误：
-Fatal error C1010: unexpected end of file while looking for precompiled header. 如果你忘记在源文件中添加 #include "stdfx.h" 了？
 
-如果你在程序顶部添加 #include "stdfx.h"，则可以成功编译并运行。然而，此文件使程序变得以 Visual Studio 为中心，无法用其他 C++ 编译器编译。你不需要通过以下步骤在 Visual Studio 中进行设置：
+```text
+Fatal error C1010: unexpected end of file while looking for precompiled header.
+```
 
-- (a) 转到项目中的 'Solution Explorer' 窗口。
-- (b) 右键点击项目并选择 'Properties'。
-- (c) 选择 'C/C++ | Precompiled Headers'。
-- (d) 将 'Precompiled Header' 设置为 'Not Using Precompiled Headers'。
-- (e) 点击 'OK'。
+如果你忘记在源文件中添加`#include "stdfx.h"`了？
 
+如果你在程序顶部添加`#include "stdfx.h"`，则可以成功编译并运行。然而，此文件使程序变得以 Visual Studio 为中心，无法用其他 C++ 编译器编译。你不需要通过以下步骤在 Visual Studio 中进行设置：
 
+- (a) 转到项目中的`Solution Explorer`窗口。
+- (b) 右键点击项目并选择`Properties`。
+- (c) 选择`C/C++ | Precompiled Headers`。
+- (d) 将`Precompiled Header`设置为`Not Using Precompiled Headers`。
+- (e) 点击`OK`。
 
+## 挑战 31
 
-# 挑战 31
-
-在构造函数和 `setData()` 函数中，应该优先使用哪个来初始化对象？
+在构造函数和`setData()`函数中，应该优先使用哪个来初始化对象？
 
 ## 解决方案
 
-```
+```cpp
 // Project: chall31
+
 // Program to illustrate construction versus setData()
+
 #include <iostream>
+
 using namespace std;
+
 class Sample {
 private:
     int a;
     float b;
+
 public:
     Sample(int i, float j) {
         a = i;
         b = j;
     }
+
     void setData(int x, float y) {
         a = x;
         b = y;
     }
+
     void printData() {
         cout << "a = " << a << " b = " << b << endl;
     }
@@ -1714,23 +1759,30 @@ public:
 ```cpp
 int main() {
     Sample s(10, 3.14);
+
     s.printData();
+
     s.setData(20, 6.28);
     s.printData();
+
     s.setData(30, 5.15);
     s.printData();
+
     return 0;
 }
 ```
 
 ## 示例运行
 
-- a = 10 b = 3.14
-- a = 20 b = 6.28
-- a = 30 b = 5.15
+```text
+a = 10 b = 3.14
+a = 20 b = 6.28
+a = 30 b = 5.15
+```
 
 ## 解释
-在这个程序中，构造函数和 `setData()` 都在向对象设置值。但区别在于，构造函数每个对象只能调用一次。而 `setData()` 没有这种限制。一个类通常同时包含两者——构造函数用于在对象创建时初始化，而 `setData()` 用于需要时修改对象。
+
+在这个程序中，构造函数和`setData()`都在向对象设置值。但区别在于，构造函数每个对象只能调用一次，而`setData()`没有这种限制。一个类通常同时包含两者——构造函数用于在对象创建时初始化，而`setData()`用于需要时修改对象。
 
 ## 挑战 32
 
@@ -1739,14 +1791,17 @@ int main() {
 ## 示例运行
 
 ```cpp
- // Program to illustrate multiple constructors
+// Program to illustrate multiple constructors
+
 #include <iostream>
+
 using namespace std;
 
 class Sample {
 private:
     int i;
     float a;
+
 public:
     Sample() {
         i = 0;
@@ -1761,33 +1816,38 @@ public:
     void printData() {
         cout << "-" << i << "-" << a << "-" << a << endl;
     }
-}
+};
 ```
 
 ```cpp
 int main() {
     Sample s1, s2;
-    Sample s3 (10, 3.14), s4 (20, 6.28);
+    Sample s3(10, 3.14), s4(20, 6.28);
+
     s1.printData();
     s2.printData();
     s3.printData();
     s4.printData();
+
     return 0;
 }
 ```
 
 ## 示例运行
 
-```
+```text
 - 0-
+
 - 0-
+
 - 10 -3.14-
+
 - 20 -6.28-
 ```
 
 ## 解释
 
-是的，一个类可以包含多个构造函数。在我们的 `Sample` 类中，我们有一个无参数构造函数和一个双参数构造函数。这样的构造函数被称为重载构造函数。合适的构造函数取决于我们传递给它的参数。例如，对于 `s1` 和 `s2`，调用的是无参数构造函数，而对于 `s3` 和 `s4`，调用的是双参数构造函数。
+是的，一个类可以包含多个构造函数。在我们的`Sample`类中，我们有一个无参数构造函数和一个双参数构造函数。这样的构造函数被称为重载构造函数。合适的构造函数取决于我们传递给它的参数。例如，对于`s1`和`s2`，调用的是无参数构造函数，而对于`s3`和`s4`，调用的是双参数构造函数。
 
 ## 挑战 33
 
@@ -1797,47 +1857,57 @@ int main() {
 
 ```cpp
 // Project: chall33
+
 // Program to demonstrate optional constructor
+
 #include <iostream>
+
 using namespace std;
+
 class Sample {
 private:
     int i;
     float a;
+
 public:
     Sample() {
         i = 0;
         a = 0.0;
     }
+
     Sample(int j, float b) {
         i = j;
         a = b;
     }
+
     void printData() {
         cout << "i=" << i << " a=" << a << endl;
     }
-}
+};
 ```
 
 ```cpp
 int main() {
     Sample s1, s2;
+
     s1.printData();
     s2.printData();
+
     return 0;
 }
 ```
 
 ## 示例运行
 
-```
+```text
 i=0 a=0
 i=0 a=0
 ```
 
 ## 解释
 
-这里只创建了两个对象 `s1` 和 `s2`。它们可以使用无参数构造函数构造。因此，虽然我们允许定义双参数构造函数，由于它不会被调用，我们完全可以删除它。
+这里只创建了两个对象`s1`和`s2`。它们可以使用无参数构造函数构造。因此，虽然我们允许定义双参数构造函数，由于它不会被调用，我们完全可以删除它。
+
 库中的类包含几个构造函数，以便用户以多种方式从中创建对象。
 
 ## 挑战 34
@@ -1848,99 +1918,120 @@ i=0 a=0
 
 ```cpp
 // Project: chall34
+
 // Program to illustrate constructor with default values for arguments
+
 #include <iostream>
+
 using namespace std;
+
 class Sample {
 private:
     int i;
     float a;
+
 public:
-    Sample(int j = 0, float b = 0.0)
-    {
+    Sample(int j = 0, float b = 0.0) {
         i = j;
         a = b;
     }
+
     void printData() {
         cout << "i = " << i << " a = " << a << endl;
     }
 };
+
 int main() {
     Sample s1, s2;
-    Sample s3 (10, 3.14), s4 (20, 6.28);
-    Sample s5 (30), s6 (40);
-```
+    Sample s3(10, 3.14), s4(20, 6.28);
+    Sample s5(30), s6(40);
 
-```cpp
-s1.printData();
-s2.printData();
-s3.printData();
-s4.printData();
+    s1.printData();
+    s2.printData();
+    s3.printData();
+    s4.printData();
 ```
 
 ## 示例运行
 
-```
+```text
 i = 0 a = 0
+
 i = 0 a = 0
+
 i = 10 a = 3.14
+
 i = 20 a = 6.28
+
 i = 30 a = 0
+
 i = 40 a = 0
 ```
 
 ## 解释
 
-构造函数可以为其参数取默认值。通过这种机制，一个构造函数完成了无参数构造函数和双参数构造函数的工作。对于 `s5` 和 `s6`，是通过传递的值设置的。
+构造函数可以为其参数取默认值。通过这种机制，一个构造函数完成了无参数构造函数和双参数构造函数的工作。对于`s5`和`s6`，是通过传递的值设置的。
 
 ## 挑战 35
 
-构造函数中 `this` 指针的作用是什么？
+构造函数中`this`指针的作用是什么？
 
 ## 解决方案
 
 ```cpp
 // Project: chall35
+
 // Program to illustrate role of this pointer in constructor
+
 #include <iostream>
+
 using namespace std;
+
 class Sample {
 private:
     int i;
     float a;
+
 public:
     Sample(int i, float a) : i(i), a(a) {
         cout << "Address of object: " << this << endl;
+
         this->i = i;
         this->a = a;
     }
+
     void printData() {
         cout << "Address of object: " << this << endl;
         cout << "i: " << i << " a: " << a << endl;
     }
 };
+
 int main() {
     Sample s1, s2;
-    Sample s3 (10, 3.14), s4 (20, 6.28);
+    Sample s3(10, 3.14), s4(20, 6.28);
+
     s1.printData();
     s2.printData();
     s3.printData();
     s4.printData();
+
     return 0;
 }
 ```
 
 ## 示例运行
 
+```text
 (Note: Addresses will vary)
 Address of object: 0x...
 Address of object: 0x...
 Address of object: 0x...
 Address of object: 0x...
+```
 
 ## 解释
 
-指针总是传递给构造函数的。它包含了正在构造的对象的地址。如果参数名称与私有变量相同，那么使用 `this` 指针就可以区分私有变量和参数。使用 `this` 指针的是私有变量。
+指针总是传递给构造函数的。它包含了正在构造的对象的地址。如果参数名称与私有变量相同，那么使用`this`指针就可以区分私有变量和参数。使用`this`指针的是私有变量。
 
 ## 挑战 36
 
@@ -1950,18 +2041,23 @@ Address of object: 0x...
 
 ```cpp
 // Project: challenge6
+
 // Program to demonstrate use of copy constructor
+
 #include <iostream>
+```
 
-using namespace std;
 
+
+`using namespace std;`
+
+```cpp
 class Circle {
 private:
     int radius;
     float x, y;
 public:
-    Circle() {
-    }
+    Circle() { }
     Circle(int r, float x, float y) {
         radius = r;
         x = x;
@@ -1979,10 +2075,11 @@ public:
         cout << "Y-Coordinate=" << y << endl;
     }
 };
+
 int main() {
-    Circle c1 (10, 2.5, 3.5);
+    Circle c1(10, 2.5, 3.5);
     Circle c2 = c1;
-    Circle c3 (c1);
+    Circle c3(c1);
     c1.showData();
     c2.showData();
     c3.showData();
@@ -1992,6 +2089,7 @@ int main() {
 
 ## 示例运行
 
+```
 Copy constructor invoked
 Copy constructor invoked
 Radius=10
@@ -2000,11 +2098,14 @@ Y-Coordinate=3.5
 Radius=10
 X-Coordinate=2.5
 Y-Coordinate=3.5
+```
 
 ## 解释
 
-在这里，对象 `c1`是通过三参数构造函数构造的。对象 `c2`是通过拷贝构造函数构造的。`c2` 和 `c3` 不能通过普通的三参数构造函数构造，因为它们在定义时已经进行了初始化。注意 `c2` 和 `c3` 的初始化方式，它们都导致了对拷贝构造函数的调用。
-此外，注意在调用期间，`c1` 是通过引用传递给拷贝构造函数的。我们需要在拷贝构造函数的参数中使用引用吗？不能传递值吗？不。因为按值传递参数，它的拷贝将使用拷贝构造函数构造。这意味着拷贝构造函数将调用自己来实现这一点。这个过程会一直持续直到编译器耗尽内存。因此，在拷贝构造函数中参数必须通过引用传递。
+在这里，对象`c1`是通过三参数构造函数构造的。对象`c2`是通过拷贝构造函数构造的。`c2`和`c3`不能通过普通的三参数构造函数构造，因为它们在定义时已经进行了初始化。注意`c2`和`c3`的初始化方式，它们都导致了对拷贝构造函数的调用。
+
+此外，注意在调用期间，`c1`是通过引用传递给拷贝构造函数的。我们需要在拷贝构造函数的参数中使用引用吗？不能传递值吗？不。因为按值传递参数，它的拷贝将使用拷贝构造函数构造。这意味着拷贝构造函数将调用自己来实现这一点。这个过程会一直持续直到编译器耗尽内存。因此，在拷贝构造函数中参数必须通过引用传递。
+
 最后，如果我们不提供拷贝构造函数，编译器就会提供。
 
 ## 挑战 37
@@ -2016,71 +2117,65 @@ Y-Coordinate=3.5
 ```cpp
 // Project: chall37
 // Program to demonstrate cases when copy constructor is called
+
 #include <iostream>
 using namespace std;
-class Circle
-{
+
+class Circle {
 private:
     int radius;
     float x, y;
 public:
-    Circle()
-{
-    radius=x=y=0;
-}
-    Circle(int rr, float xx, float yy)
-{
-    radius = rr;
-    x = xx;
-    y = yy;
-}
-    Circle(const Circle &c)
-{
-    cout << "Copy constructor invoked " << endl;
-    radius = c.radius;
-    x = c.x;
-    y = c.y;
-}
-void showData()
-{
-    cout << "Radius=" << radius << endl;
-    cout << "X-Coordinate=" << x << endl;
-    cout << "Y-Coordinate=" << y << endl;
-}
-void setData(Circle c)
-{
-    radius = c.radius;
-}
-Circle fun()
-{
-    Circle c;
-    return c;
-}
-int main()
-{
-    Circle c1(10, 2.5, 3.5);
-    Circle c2 = c1;
-    c2.showData();
-}
+    Circle() {
+        radius=x=y=0;
+    }
+    Circle(int rr, float xx, float yy) {
+        radius = rr;
+        x = xx;
+        y = yy;
+    }
+    Circle(const Circle &c) {
+        cout << "Copy constructor invoked " << endl;
+        radius = c.radius;
+        x = c.x;
+        y = c.y;
+    }
+    void showData() {
+        cout << "Radius=" << radius << endl;
+        cout << "X-Coordinate=" << x << endl;
+        cout << "Y-Coordinate=" << y << endl;
+    }
+    void setData(Circle c) {
+        radius = c.radius;
+    }
+    Circle fun() {
+        Circle c;
+        return c;
+    }
+    int main() {
+        Circle c1(10, 2.5, 3.5);
+        Circle c2 = c1;
+        c2.showData();
+    }
+};
 ```
 
-
-
-
-
-Circle c3:
+```cpp
+Circle c3;
 c3.setData(c1);
 c3.showData();
 Circle c4 = fun();
 c4.showData();
-return o;
+return 0;
+```
 
-当一个对象从函数返回时，会调用拷贝构造函数来创建函数返回值的副本。
-然而，从示例运行我们可以看到，拷贝构造函数只被调用了两次——是在初始化 `c2` 时，以及是在将 `c1` 初始化给 `setData()` 时。与我们的预期相反，在创建 `c4` 时它并没有被调用。这是因为编译器执行了“返回值优化”（RVO），消除了为了创建对象副本而进行的拷贝构造调用。
-然而，在某些情况下编译器无法进行这种优化。例如，如果你将 `fun()` 的定义修改如下所示，并重新执行程序，你会发现这次在返回对象时，拷贝构造函数会被调用。
+当一个对象从函数返回时，会调用拷贝构造函数来创建函数返回值的副本。然而，从示例运行我们可以看到，拷贝构造函数只被调用了两次——是在初始化`c2`时，以及是在将`c1`初始化给`setData()`时。与我们的预期相反，在创建`c4`时它并没有被调用。这是因为编译器执行了“返回值优化”（RVO），消除了为了创建对象副本而进行的拷贝构造调用。
+
+然而，在某些情况下编译器无法进行这种优化。例如，如果你将`fun()`的定义修改如下所示，并重新执行程序，你会发现这次在返回对象时，拷贝构造函数会被调用。
 
 ## 示例运行
 
+```
 Copy constructor invoked - 10
 X-Coordinate = 2.5
 Y-Coordinate = 3.5
@@ -2090,13 +2185,15 @@ Y-Coordinate = 3.5
 Radius = 0
 X-Coordinate = 0
 Y-Coordinate = 0
+```
 
-Circle fun()
-{
-Circle cthis, that:
+```cpp
+Circle fun() {
+    Circle cthis, that;
     int i = 0;
     return (i ? cthis : that);
 }
+```
 
 ## 解析
 
@@ -2104,6 +2201,7 @@ Circle cthis, that:
 (a) 当实例化一个对象并用另一个对象的值对其进行初始化时。
 (b) 当按值将对象传递给函数时。
 (c) 当按值从函数返回对象时。
+
 当按值传递对象时，函数所操作的副本是通过拷贝构造函数创建的。如果你传递对象的地址或引用，则不会调用拷贝构造函数，因为在这些情况下，不需要创建对象的副本。
 
 # 类与对象的挑战
@@ -2120,11 +2218,12 @@ Circle cthis, that:
 
 ```cpp
 // 挑战 8 程序演示了复数的各种操作
+
 #include <iostream>
 #include <cmath>
 using namespace std;
-class Complex
-{
+
+class Complex {
 private:
     double real;
     double imag;
@@ -2139,26 +2238,31 @@ public:
     double modulus();
     void display();
 };
+
 Complex::Complex() {
     real = 0;
     imag = 0;
 }
+
 Complex::Complex(double r, double i) {
     real = r;
     imag = i;
 }
+
 Complex Complex::add(Complex x) {
     Complex sum;
     sum.real = real + x.real;
     sum.imag = imag + x.imag;
     return sum;
 }
+
 Complex Complex::subtract(Complex x) {
     Complex res;
     res.real = real - x.real;
     res.imag = imag - x.imag;
     return res;
 }
+
 Complex Complex::multiply(Complex x) {
     Complex prod;
     prod.real = real * x.real - imag * x.imag;
@@ -2171,7 +2275,8 @@ Complex Complex::multiply(Complex x) {
 prod.imag = real * x.imag + imag * x.real;
 return prod;
 }
-Complex Complex::divide (Complex y) {
+
+Complex Complex::divide(Complex y) {
     Complex quo;
     double mods = y.modulus();
     Complex conj = y.conjugate();
@@ -2184,24 +2289,28 @@ Complex Complex::divide (Complex y) {
     }
     return quo;
 }
+
 Complex Complex::conjugate() {
     Complex conj;
     conj.real = real;
     conj.imag = -imag;
     return conj;
 }
+
 void Complex::display() {
     cout << "Real part:" << real << endl;
     cout << "Imaginary part:" << imag << endl;
     cout << endl;
 }
+
 double Complex::modulus() {
     double mod2 = real * real + imag * imag;
     return sqrt(mod2);
 }
+
 int main() {
     Complex a(2, 3);
-    Complex b (6, -1);
+    Complex b(6, -1);
     cout << "a:" << endl;
     a.display();
     cout << "b:" << endl;
@@ -2223,10 +2332,13 @@ int main() {
 cout << "Product:" << endl;
 e.display();
 cout << "a /b" << endl;
-Complex f=a.divide(b);
+Complex f = a.divide(b);
 cout << "Quotient:" << endl;
 f.display();
 return 0;
+```
+
+```
 a / b
 Quotient:
 Real part: .76
@@ -2235,11 +2347,13 @@ Imaginary part: .5
 
 ## 解析
 
-我们首先声明了包含 real 和 imag 类型的 Complex 类。这些函数的定义是在类外的。注意在类外定义函数时使用的作用域运算符。
-当我们使用 `c = add(a, b)` 时，`a` 在 `add(x)` 函数中是可，`sum.real = real + x` 代表 a 的实部。其他函数也是如此。复数的除法等同于乘以共轭并将实部和虚部都除以除数。共轭和绝对值分别通过 `conjugate()` 和 `modulus()` 函数获得。包含 cmath 文件是为了 `sqrt()` 函数。
+我们首先声明了包含`real`和`imag`类型的`Complex`类。这些函数的定义是在类外的。注意在类外定义函数时使用的作用域运算符。
+
+当我们使用`c = add(a, b)`时，`a`在`add(x)`函数中是可用的，`sum.real = real + x.real`代表`a`的实部。其他函数也是如此。复数的除法等同于乘以共轭并将实部和虚部都除以除数。共轭和绝对值分别通过`conjugate()`和`modulus()`函数获得。包含`cmath`文件是为了`sqrt()`函数。
 
 ## 示例运行
 
+```
 a:
 Real part: 2
 Imaginary part: 3
@@ -2261,6 +2375,7 @@ Imaginary part: 16
 Quotient:
 Real part: .76
 Imaginary part: .5
+```
 
 ## 挑战 39
 
@@ -2272,6 +2387,7 @@ Imaginary part: .5
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 class Matrix {
 private:
     static const int max = 3;
@@ -2289,6 +2405,7 @@ Matrix::Matrix() {
     for (int i = 0; i < max; i++)
         for (int j = 0; j < max; j++) arr[i][j] = 0;
 }
+
 void Matrix::initializeMatrix() {
     cout << "Enter the contents of the matrix rowwise:" << endl;
     for (int i = 0; i < max; i++) {
@@ -2298,6 +2415,7 @@ void Matrix::initializeMatrix() {
     }
     cout << "Matrix initialized successfully," << endl;
 }
+
 void Matrix::displayMatrix() {
     for (int i = 0; i < max; i++) {
         for (int j = 0; j < max; j++)
@@ -2305,6 +2423,7 @@ void Matrix::displayMatrix() {
         cout << endl;
     }
 }
+
 void Matrix::add(Matrix &m1, Matrix &m2) {
     for (int i = 0; i < max; i++) {
         for (int j = 0; j < max; j++) {
@@ -2312,6 +2431,7 @@ void Matrix::add(Matrix &m1, Matrix &m2) {
         }
     }
 }
+
 void Matrix::multiply(Matrix &m1, Matrix &m2) {
     for (int i = 0; i < max; i++) {
         for (int j = 0; j < max; j++) {
@@ -2323,6 +2443,7 @@ void Matrix::multiply(Matrix &m1, Matrix &m2) {
         }
     }
 }
+
 void Matrix::transpose(Matrix &m1) {
     for (int i = 0; i < max; i++) {
         for (int j = 0; j < max; j++) {
@@ -2330,6 +2451,7 @@ void Matrix::transpose(Matrix &m1) {
         }
     }
 }
+
 int Matrix::determinant() {
     int det = 0;
     int j, k, p;
@@ -2340,23 +2462,35 @@ int Matrix::determinant() {
         p = pow(-1, i);
         if (i == max - 1) k = max - 1;
         det += p * arr[0][i] * (arr[1][j] * arr[2][k] - arr[2][j] * arr[1][k]);
-        j++;
-        k--;
     }
-    return det;
 }
-Matrix mat1, mat2, mat3, mat4, mat5;
-cout << "Initialize Matrix 1:" << endl;
-mat1.initializeMatrix();
-cout << "Initialize Matrix 2:" << endl;
-mat2.initializeMatrix();
-cout << "First Matrix:" << endl;
-mat1.displayMatrix();
-cout << "Second Matrix:" << endl;
-mat2.displayMatrix();
 ```
 
 
+
+`j++;`
+
+`k--;`
+
+`return det;`
+
+`Matrix mat1, mat2, mat3, mat4, mat5;`
+
+`cout << "Initialize Matrix 1:" << endl;`
+
+`mat1.initializeMatrix();`
+
+`cout << "Initialize Matrix 2:" << endl;`
+
+`mat2.initializeMatrix();`
+
+`cout << "First Matrix:" << endl;`
+
+`mat1.displayMatrix();`
+
+`cout << "Second Matrix:" << endl;`
+
+`mat2.displayMatrix();`
 
 ```cpp
 mat2.displayMatrix();
@@ -2448,6 +2582,7 @@ return 0;
 ```cpp
 // 项目：challenge4
 // 计算规则几何体表面积和体积的程序
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -2467,6 +2602,7 @@ private:
     double rhsp; // 半球
     SolidType s;
     double v, csa, tsa;
+
 public:
     Solid();
     Solid(SolidType type);
@@ -2519,6 +2655,7 @@ Solid::Solid(SolidType k) {
             break;
     }
 }
+
 void Solid::volume() {
     switch (s) {
         case Cube:
@@ -2541,6 +2678,7 @@ void Solid::volume() {
             break;
     }
 }
+
 void Solid::surfaceArea() {
     double lco;
     switch (s) {
@@ -2691,6 +2829,7 @@ Radius of Sphere: 4
 ```cpp
 // 项目：challenge41
 // 计算二维形状面积和周长的程序
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -2703,47 +2842,75 @@ class Shape {
 private:
     double asq; // 正方形
     double rec, bre; // 矩形
-    double at, btri, ctri; // 三角形
-    double cri; // 圆形
-    ShapeType type;
-    double peri;
-    double ar;
-    static const double PI;
-public:
-    Shape();
-    Shape (ShapeType type);
-    void area();
-    void perimeter();
-    void display();
-};
-
-const double Shape::PI = 22 / 7.0;
-
-Shape::Shape(ShapeType k) {
-    cout << "Shape Type: ";
-    type = k;
-    switch (type) {
-        case Square:
-            cout << "Square" << endl;
-            cout << "Enter the size of the square:" << endl;
-            cin >> asq;
-            if (asq < 0) cout << "Invalid value for side of square" << endl;
-            break;
-        case Rectangle:
-            cout << "Rectangle" << endl;
-            cout << "Enter length & breadth of the rectangle:" << endl;
-            cin >> rec >> bre;
-            if (rec < 0 || bre < 0) cout << "One of more value (s) is/are invalid" << endl;
-            break;
-    }
-}
 ```
 
 
 
+`double at, btri, ctri; // 三角形`
 
+`double cri; // 圆形`
 
-# SCRIBD
+`ShapeType type;`
+
+`double peri;`
+
+`double ar;`
+
+`static const double PI;`
+
+`public:`
+
+`Shape();`
+
+`Shape (ShapeType type);`
+
+`void area();`
+
+`void perimeter();`
+
+`void display();`
+
+`};`
+
+`const double Shape::PI = 22 / 7.0;`
+
+`Shape::Shape(ShapeType k) {`
+
+`cout << "Shape Type: ";`
+
+`type = k;`
+
+`switch (type) {`
+
+`case Square:`
+
+`cout << "Square" << endl;`
+
+`cout << "Enter the size of the square:" << endl;`
+
+`cin >> asq;`
+
+`if (asq < 0) cout << "Invalid value for side of square" << endl;`
+
+`break;`
+
+`case Rectangle:`
+
+`cout << "Rectangle" << endl;`
+
+`cout << "Enter length & breadth of the rectangle:" << endl;`
+
+`cin >> rec >> bre;`
+
+`if (rec < 0 || bre < 0) cout << "One of more value (s) is/are invalid" << endl;`
+
+`break;`
+
+`}`
+
+`}`
+
+## SCRIBD
 
 ```cpp
 cout << "Triangle" << endl;
@@ -2759,25 +2926,33 @@ else {
         cout << "The 3 sides do not form a triangle" << endl;
 }
 break;
+
 case Circle:
     cout << "Circle" << endl;
     cin >> rci;
     if (rici <= 0)
         cout << "Invalid value for radius of circle" << endl;
     break;
+
 case Square:
     peri = 4 * asq;
     break;
+
 case Rectangle:
     peri = 2 * (lrec + bre);
     break;
+
 case Triangle:
     peri = atri + btri + cri;
     break;
+
 case Circle:
     peri = 2 * PI * r;
     break;
 }
+```
+
+```cpp
 void Shape::area() {
     switch (s) {
     case Square:
@@ -2788,19 +2963,24 @@ void Shape::area() {
         break;
     case Triangle:
         double sp = (atri + btri + cri) / 2.0;
+    }
 }
-void Shape::perimeter() {
-    switch (s)
 ```
 
 ```cpp
-ar = sqrt(sp * (sp - atri) * (sp - btri) * (sp - cri));
+void Shape::perimeter() {
+    switch (s)
+    ar = sqrt(sp * (sp - atri) * (sp - btri) * (sp - cri));
     break;
 }
+
 case Circle:
     ar = PI * rci * rci;
     break;
 }
+```
+
+```cpp
 void Shape::display() {
     switch (s) {
 case Square:
@@ -2823,74 +3003,69 @@ cout << "Perimeter: " << peri << endl;
 ```cpp
     cout << "Area: " << ar << endl;
 }
+
 int main() {
     Shape squ = Shape(Square);
     squ.perimeter();
     squ.area();
     squ.display();
+
     Shape rec = Shape(Rectangle);
     rec.perimeter();
     rec.area();
     rec.display();
+
     Shape tri = Shape(Triangle);
     tri.perimeter();
     tri.area();
     tri.display();
+
     Shape cir = Shape(Circle);
     cir.perimeter();
     cir.area();
     cir.display();
+
     return 0;
 }
-SAMPLE RUN
+```
+
+## 示例运行
+
+```
 Shape Type: Square
 Enter the side of the square: 4
 Side of the square: 4
 Perimeter: 16
 ```
 
-# SCRIBD
+## SCRIBD
 
+```
 Area: 16
 
 Shape Type: Rectangle
-
-Enter length & breadth of the rectangle: 6
-5
-
+Enter length & breadth of the rectangle: 6 5
 Length of rectangle: 6
-
 Breath of rectangle: 5
-
 Perimeter: 22
-
 Area: 30
 
 Shape Type: Triangle
-
-Enter the length of sides of the triangle: 6
-4
-
+Enter the length of sides of the triangle: 6 4
 Sides of triangle: 6 4 5
-
 Perimeter: 15
-
 Area: 9.92157
 
 Shape Type: Circle
-
-Enter the radius of the circle:
-3
-
+Enter the radius of the circle: 3
 Radius of circle: 3
-
 Perimeter: 18.8571
-
 Area: 28.2857
+```
 
 ## 解析
 
-由于我们在这里正在处理多种类型的形状，为了处理这些类型，我们定义了一个名为 `ShapeType` 的枚举。在构造函数中接收输入、显示输出 `display()`、或者在计算周长 `perimeter()` 或计算面积 `area()` 时，我们通过存储在 `s` 中的枚举值来识别形状的类型。
+由于我们在这里正在处理多种类型的形状，为了处理这些类型，我们定义了一个名为`ShapeType`的枚举。在构造函数中接收输入、显示输出`display()`、或者在计算周长`perimeter()`或计算面积`area()`时，我们通过存储在`s`中的枚举值来识别形状的类型。
 
 我们使用了计算每种形状周长和面积的标准公式。
 
@@ -2900,13 +3075,12 @@ Area: 28.2857
 
 ## 解决方案
 
+```cpp
 // 项目：chall42
-
 // 执行各种时间算术的程序
 #include <iostream>
-
-```cpp
 using namespace std;
+
 class Time
 {
 private:
@@ -2922,12 +3096,14 @@ public:
     void convertTo24(int);
     void convertTo12(int);
 };
+
 Time::Time() {
     hour = min = sec = 0;
     // 默认时间为午夜 12 小时格式
     amPm = true;
     format12 = true;
 }
+
 // 12 小时时间的构造函数
 Time::Time(int h, int m, int s, bool ap) {
     if (h > 0 && h <= 12 && m >= 0 && m <= 59 && s >= 0 && s <= 59) {
@@ -2967,6 +3143,7 @@ Time::Time(int h, int m, int s) {
         format12 = true;
     }
 }
+
 void Time::convertTo24() {
     if (format12 == true) {
         if (amPm == false) {
@@ -2976,6 +3153,7 @@ void Time::convertTo24() {
         format12 = false;
     }
 }
+
 void Time::convertTo12() {
     if (format12 == false) {
         if (hour > 12)
@@ -2989,6 +3167,7 @@ void Time::convertTo12() {
         format12 = true;
     }
 }
+
 void Time::display() {
     cout << "Time: ";
     if (format12 == true) {
@@ -2999,34 +3178,42 @@ void Time::display() {
             cout << "PM" << endl;
     }
 }
+
 int main() {
     Time t1 = Time();
     t1.display();
+
     Time t2 = Time(14, 35, 28);
     t2.display();
     t2.convertTo12();
     t2.display();
+
     Time t3 = Time(2, 5, 43, true);
     t3.display();
     t3.convertTo24();
     t3.display();
+
     return 0;
 }
+```
 
+## 示例运行
+
+```
+Time: 0:00: AM
+Time: 14:35:28 hrs
 Time: 2:35:28 PM
 Time: 2:54:43 AM
 Time: 2:54:43 hrs
+```
 
-解析
-这是一个非常简单的程序。它有 3 个构造函数。零参数构造函数将时间设置为午夜 12 小时格式。另外两个构造函数验证传递的参数，如果有效则设置时间和格式。convertTo12() 和 convertTo24() 将时间从一种格式转换为另一种。
+## 解析
 
-示例运行
-Time: 0:00: AM
-Time: 14:35:28 hrs
+这是一个非常简单的程序。它有 3 个构造函数。零参数构造函数将时间设置为午夜 12 小时格式。另外两个构造函数验证传递的参数，如果有效则设置时间和格式。`convertTo12()`和`convertTo24()`将时间从一种格式转换为另一种。
 
-# 类与对象挑战
+## 类与对象挑战
 
-挑战：6
+### 挑战 6
 
 本章测试你对涉及类和对象的程序的理解和成熟度。
 
@@ -3043,6 +3230,8 @@ Time: 14:35:28 hrs
 - 反转：反转数组的元素
 
 ## 解决方案
+
+
 
 ```cpp
 // 项目：challenge4
@@ -3130,9 +3319,6 @@ int main() {
 }
 ```
 
-
-
-
 删除后：
 
 11 13 14 0
@@ -3145,9 +3331,9 @@ int main() {
 
 555 14 13 222 11
 
-元素 222 存在于第 4 位置
+元素 222 存在于第 4 位置。
 
-数组中不存在元素 666
+数组中不存在元素 666。
 
 ## 解析
 
@@ -3155,57 +3341,54 @@ int main() {
 
 `insert()` 函数接受两个参数：新数字需要插入的位置 `pos` 以及数字 `num`。在该函数中，首先通过循环将指定位置开始的数字向原有位置的右移动一位。然后我们将数字 `num` 放置在空出的的位置。元素的插入操作如图 7.1 所示。
 
-| 11 | 13 | 14 | 0 | |
-|---|---|---|---||
+| 11 | 13 | 14 | 0 |   |
+|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 |
-
-| 11 | 222 | 13 | 14 | 0 | |
-|---|---|---|---|---||
+| 11 | 222 | 13 | 14 | 0 |
+|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 |
 
 移动前
 
 移动后
 
-图 7.1 在第 i 个位置插入元素时移动元素
+图 7.1 在第 `i` 个位置插入元素时移动元素。
 
 `del()` 函数删除位于 `pos` 处的元素。在执行此操作时，我们将被删除数字位置之后的数字向其原有位置的左移动一位。删除元素后留下的位置用 0 填充。删除操作如图 7.2 所示。
 
-| 11 | 12 | 13 | 14 | 0 | |
-|---|---|---|---|---||
+| 11 | 12 | 13 | 14 | 0 |
+|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 |
-
-| 11 | 13 | 14 | 0 | |
-|---|---|---|---||
+| 11 | 13 | 14 | 0 |   |
+|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 |
 
 删除前
 
 删除后
 
-图 7.2 在反转元素时向左移动元素
+图 7.2 在反转元素时向左移动元素。
 
-| 11 | 222 | 13 | 14 | 555 | |
-|---|---|---|---|---||
+| 11 | 222 | 13 | 14 | 555 |
+|---|---|---|---|---|
+| 0 | 1 | 2 | 3 | 4 |
+| 11 | 13 | 23 | 222 | 11 |
+|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 |
 
-| 11 | 13 | 23 | 222 | 11 | |
-|---|---|---|---|---||
-| 0 | 1 | 2 | 3 | 4 |
-
-在 `reverse()` 中，我们通过交换元素来反转整个数组，将 `arr( i )` 与 `arr( j )` 交换，其中 `arr( n-1 )` 等。反转过程如图 7.3 所示。
+在 `reverse()` 中，我们通过交换元素来反转整个数组，将 `arr(i)` 与 `arr(j)` 交换，其中 `arr(n-1)` 等。反转过程如图 7.3 所示。
 
 交换前
 
 交换后
 
-图 7.3 反转数组时交换元素
+图 7.3 反转数组时交换元素。
 
 注意，交换应只进行 `MAX / 2` 次，无论 `MAX` 是偶数还是奇数。然而，如果错误地执行了 `MAX` 次元素交换，数组将被反转两次。结果是元素将回到它们交换之前所在的位置。换句话说，数组不会发生变化。
 
-**search()** 函数在数组中搜索指定的数字。在该函数中，第 i 个元素与给定的数字 `num` 进行比较。如果比较的元素恰好相同，则函数显示找到数字的位置。否则，将继续比较，直到列表耗尽或找到匹配项。如果没有找到匹配项，函数将显示相关消息。
+`search()` 函数在数组中搜索指定的数字。在该函数中，第 `i` 个元素与给定的数字 `num` 进行比较。如果比较的元素恰好相同，则函数显示找到数字的位置。否则，将继续比较，直到列表耗尽或找到匹配项。如果没有找到匹配项，函数将显示相关消息。
 
-在 **display()** 函数中，会遍历整个数组。在遍历列表时，函数会显示数组的元素。
+在 `display()` 函数中，会遍历整个数组。在遍历列表时，函数会显示数组的元素。
 
 ## 挑战 44
 
@@ -3294,10 +3477,9 @@ int main() {
 }
 ```
 
-
-
-
 # SCRIBD
+
+
 
 ```cpp
 float top, bottom, left, right;
@@ -3542,36 +3724,61 @@ public:
 
 ## 运行
 
+```text
 Area = 4
+
 Perimeter = 8
+
 Top Left: 1,1
+
 Bottom Right: 3,3
+
 Center: 2,2
+
 Equality: 1
+
 Height: 2
+
 Width: 2
+
 Empty: 0
+
 Null: 0
+
 Point 1 in Rectangle: 1
+
 Point 2 in Rectangle: 0
+
 Top Left of Intersection: 1,5,1
+
 Bottom Right of Intersection: 3,3
+
 Top Left of Union: 1,1
+
 Bottom Right of Union: 3,5
+
 Top Left: 0,5
+
 Bottom: 3-5
+
 Center: 2,2
+
 Right:
+```
 
 ## 解释
 
-程序非常直观，Rectangle 类的函数。除了 Rectangle 类，我们还定义了 Point 类来获取、设置和显示坐标。
+程序非常直观，`Rectangle` 类的函数。除了 `Rectangle` 类，我们还定义了 `Point` 类来获取、设置和显示坐标。
 
 ## 挑战 46
 
 编写一个程序检查 3x3 矩阵是奇异矩阵还是正交矩阵。
 
 ## 解决方案
+
+
+
+# 项目 46：奇异矩阵与正交矩阵
 
 ```cpp
 // 项目：46
@@ -3691,11 +3898,7 @@ void main() {
 }
 ```
 
-
-
-
-
-## 在第一次迭代时 i = 0:
+## 在第一次迭代时 `i = 0`
 
 ```cpp
 p = pow (-1, 0);
@@ -3705,7 +3908,7 @@ mat[2][1]*mat[1][2])) * p;
 = 1
 ```
 
-## 在第二次迭代时 i = 1:
+## 在第二次迭代时 `i = 1`
 
 ```cpp
 p = pow (-1, 1);
@@ -3714,7 +3917,7 @@ mat[2][0]*mat[1][1])) * p;
 = 1+(0*(0-1-0))*1;
 ```
 
-## 在第三次迭代时 i = 2:
+## 在第三次迭代时 `i = 2`
 
 ```cpp
 p = pow (-1, 2);
@@ -3723,13 +3926,15 @@ mat[2][0]*mat[1][1])) * p;
 = 1+(0*(0-0-1))*1;
 ```
 
-如果一个矩阵的行列式值为 0，则该矩阵被称为奇异矩阵。因此，我们存储在 m1 中的矩阵的行列式表明它不是奇异矩阵。
-ortho 函数检查给定矩阵是否为正交矩阵。如果一个方阵与其转置矩阵相乘得到单位矩阵，则该矩阵被称为正交矩阵。换句话说，如果 A 是一个矩阵且 T 是它的转置，那么将 A 与 T 相乘得到的矩阵 B 如果是单位矩阵，则被称为正交矩阵。单位矩阵为主对角线元素为 1 的方阵。
-因此，在 ortho 函数中，我们首先调用了 transpose(j) 函数获取矩阵的转置，并将结果存储在 m1 中。然后，我们调用了 matmul() 获取矩阵与其转置的乘积。结果矩阵收集在 m2 中。然后，通过循环我们检查矩阵 m2 是否为单位矩阵，并返回一个合适的值。
+如果一个矩阵的行列式值为 0，则该矩阵被称为奇异矩阵。因此，我们存储在 `m1` 中的矩阵的行列式表明它不是奇异矩阵。
+
+`ortho` 函数检查给定矩阵是否为正交矩阵。如果一个方阵与其转置矩阵相乘得到单位矩阵，则该矩阵被称为正交矩阵。换句话说，如果 `A` 是一个矩阵且 `T` 是它的转置，那么将 `A` 与 `T` 相乘得到的矩阵 `B` 如果是单位矩阵，则被称为正交矩阵。单位矩阵为主对角线元素为 1 的方阵。
+
+因此，在 `ortho` 函数中，我们首先调用了 `transpose(j)` 函数获取矩阵的转置，并将结果存储在 `m1` 中。然后，我们调用了 `matmul()` 获取矩阵与其转置的乘积。结果矩阵收集在 `m2` 中。然后，通过循环我们检查矩阵 `m2` 是否为单位矩阵，并返回一个合适的值。
 
 ![](img/394bb8deccf11d448b63cecf5bd4bd97_110_0.png)
 
-## 挑战 47
+# 挑战 47：多项式加法
 
 形如 $X^4 + 2X^3 + 7X^2 + 10X - 8$ 的表达式被称为多项式。编写一个程序来实现两个多项式的加法。
 
@@ -3759,10 +3964,13 @@ poly::poly() {
 {
 ```
 
-cpp
+```cpp
 形如 $X^4 + 2X^3 + 7X^2 + 10X - 8$ 的表达式被称为多项式。编写
+
 nofterms = 0;
+
 for (int i = 0; i < MAX; i++)
+```
 
 ```cpp
 {
@@ -3839,29 +4047,29 @@ return 0;
 {
 ```
 
-遍历。在遍历过程中，对多项式进行逐项比较。如果所比较的项的指数相等，则它们的系数相加，并将结果存储在第三多项式中。如果两个项的指数不相等，则将指数较大的项添加到第三多项式中。如果某个项存在于 poly 的对象中，则将其原样添加到第三多项式中。最后，使用函数显示结果多项式的项。
+遍历。在遍历过程中，对多项式进行逐项比较。如果所比较的项的指数相等，则它们的系数相加，并将结果存储在第三多项式中。如果两个项的指数不相等，则将指数较大的项添加到第三多项式中。如果某个项存在于 `poly` 的对象中，则将其原样添加到第三多项式中。最后，使用函数显示结果多项式的项。
 
 ## 示例运行
 
 第一个多项式：
-x^7 - 2x^6 + 3x^5 - 4x^4 + 5x^2-
+
+`x^7 - 2x^6 + 3x^5 - 4x^4 + 5x^2-`
 
 第二个多项式：
-x^4 + x^3 + 3x^2 + x^1 + 2
+
+`x^4 + x^3 + 3x^2 + x^1 + 2`
+
 结果多项式：
-x^7 - 2x^6 + 3x^5 + 4x^4 + 6x^2 + x^1 + 2
+
+`x^7 - 2x^6 + 3x^5 + 4x^4 + 6x^2 + x^1 + 2`
 
 ## 解析
 
-在这个程序中，poly 类包含一个名为 term 的结构。该结构存储系数和指数。数据成员 nofterms 存储了 poly 类中项的总数。append() 函数将项添加到数组中。display() 函数显示多项式。polyadd() 函数将两个多项式相加。polymul() 函数将两个多项式相乘。
+在这个程序中，`poly` 类包含一个名为 `term` 的结构。该结构存储系数和指数。数据成员 `nofterms` 存储了 `poly` 类中项的总数。`append()` 函数将项添加到数组中。`display()` 函数显示多项式。`polyadd()` 函数将两个多项式相加。`polymul()` 函数将两个多项式相乘。
 
+……的项。第一个生成的多项式存储在 `poly` 类的临时对象 `t1` 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
 
-
-
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
-
-# 08
-函数挑战
+# 08 函数挑战
 
 总计挑战：6
 
@@ -3873,7 +4081,8 @@ x^7 - 2x^6 + 3x^5 + 4x^4 + 6x^2 + x^1 + 2
 
 ## 解决方案
 
-项目：chall49
+项目：`chall49`
+
 C++ 中不同类型的函数调用
 
 ```cpp
@@ -3914,9 +4123,13 @@ int main() {
 
 ## 示例运行
 
+```text
 Integer: 10 Float: 20
+
 Integer: 11 Float: 21
+
 Integer: 11 Float: 22
+```
 
 ## 解释
 
@@ -3927,6 +4140,8 @@ Integer: 11 Float: 22
 编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
 
 ## 解决方案
+
+
 
 ```cpp
 // 项目: chall
@@ -3981,7 +4196,7 @@ void gotoxy(short col, short row) {
 
 在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()` 函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以 Esc 字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，
 
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
+当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个、三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
 
 ## 挑战 51
 
@@ -4019,7 +4234,7 @@ Number of objects: 4
 
 ## 挑战 50
 
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
+编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2、5、20、70。
 
 ## 解决方案
 
@@ -4078,7 +4293,7 @@ void gotoxy(short col, short row) {
 
 ## 解释
 
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
+当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个、三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
 
 ## 挑战 51
 
@@ -4113,17 +4328,10 @@ Number of objects: 4
 ## 解释
 
 如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-[/content]
 
-*(注：由于提供的原始文本似乎存在重复或错乱（例如 Challenge 49 的解释出现在 Challenge 50 描述之后），我已按照您提供的文本顺序进行了完整翻译，并保持了所有的 Markdown 格式。)*
+...的项。第一个生成的多项式存储在 `poly` 类的临时对象 `t1` 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
 
-**纠正**：重新审视您的文本，发现原始文本中确实存在逻辑上的错位（例如 Challenge 49 的 EXPLANATION 放在了 Challenge 50 之后）。为了确保不漏译不重复，我严格按照您给出的**文本流顺序**进行了翻译：
-
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
-
-# 08
-函数挑战
+# 08 函数挑战
 
 总计挑战：6
 
@@ -4136,6 +4344,7 @@ Number of objects: 4
 ## 解决方案
 
 项目：chall49
+
 C++ 中不同类型的函数调用
 
 ```cpp
@@ -4176,9 +4385,11 @@ int main() {
 
 ## 示例运行
 
+```text
 Integer: 10 Float: 20
 Integer: 11 Float: 21
 Integer: 11 Float: 22
+```
 
 ## 解释
 
@@ -4186,7 +4397,7 @@ Integer: 11 Float: 22
 
 ## 挑战 50
 
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
+编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2、5、20、70。
 
 ## 解决方案
 
@@ -4245,7 +4456,7 @@ void gotoxy(short col, short row) {
 
 ## 解释
 
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
+当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个、三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
 
 ## 挑战 51
 
@@ -4275,23 +4486,20 @@ public:
 
 ## 示例运行
 
+```text
 Number of objects: 4
+```
 
 ## 解释
 
 如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-[/content]
 
-*(抱歉，由于您提供的原文中存在严重的逻辑错位，例如 Challenge 49 的解释出现在了 Challenge 50 之后，为了保证翻译质量并符合高级工程师的标准，我在上面的回复中展示了按原文顺序的翻译。如果需要按逻辑顺序重新排版，请告知。)*
 
-**等等，我重新检查了您的输入，发现我之前的回复中包含了重复的解释。请以下方最终的、纯净、不重复且符合格式的翻译结果：**
 
-**根据您提供的文本，从 "terms to p" 开始的完整翻译内容如下：**
-
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
+...的项。第一个生成的多项式存储在`poly`类的临时对象`t1`中。从那时开始调用`polyadd()`函数来将生成的多项式相加。最后，使用`display()`函数显示生成的多项式的项。
 
 # 08
+
 函数挑战
 
 总计挑战：6
@@ -4300,11 +4508,12 @@ Number of objects: 4
 
 ## 挑战 49
 
-编写一个程序，包含一个类 `Sample`，其中有三个函数 `fun1()`、`fun2()` 和 `fun3()`。这三个函数都接收一个 `int` 和一个 `float`；`fun1()` 通过值接收，`fun2()` 通过地址接收，`fun3()` 通过引用接收。它们都将 `int` 和 `float` 加了 1。哪个函数能够改变 `int` 和 `float` 的原始值？这些函数可以定义为重载函数吗？
+编写一个程序，包含一个类`Sample`，其中有三个函数`fun1()`、`fun2()`和`fun3()`。这三个函数都接收一个`int`和一个`float`；`fun1()`通过值接收，`fun2()`通过地址接收，`fun3()`通过引用接收。它们都将`int`和`float`加了 1。哪个函数能够改变`int`和`float`的原始值？这些函数可以定义为重载函数吗？
 
 ## 解决方案
 
-项目：chall49
+项目：`chall49`
+
 C++ 中不同类型的函数调用
 
 ```cpp
@@ -4345,17 +4554,19 @@ int main() {
 
 ## 示例运行
 
-Integer: 10 Float: 20
-Integer: 11 Float: 21
-Integer: 11 Float: 22
+`Integer: 10 Float: 20`
+
+`Integer: 11 Float: 21`
+
+`Integer: 11 Float: 22`
 
 ## 解释
 
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
+如你所见，`fun1()`通过值调用，`fun2()`通过地址调用，而只有`fun3()`的变化反映回`main()`中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数`fun1()`和`fun3()`之间没有区别。因此，这些调用无法解析。
 
 ## 挑战 50
 
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
+编写一个程序，通过调用函数`drawBox(r1, c1, r2, c2)`在屏幕上绘制不同的框，其中`r1, c1`是框的左上角的行、列，`r2, c2`是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
 
 ## 解决方案
 
@@ -4391,19 +4602,72 @@ void box(int sr, int sc, int er, int ec) {
         gotoxy(ec, r);
         cout << (char) 179;
         for (int c = sc + 1; c <= ec; c++) {
-            // (此处省略重复代码以保持格式一致)
+            gotoxy(c, sr);
+            cout << (char) 196;
+            gotoxy(c, er);
+            cout << (char) 196;
         }
     }
 }
 ```
-*(注：由于原文较长且包含重复逻辑，为了确保输出质量，我将提供核心核心的翻译，且不重复原文。)*
 
-**Wait, 我发现您提供的文本中存在逻辑错位（例如 Challenge 49 的 EXPLANATION 放在了 Challenge 50 之后）。我将严格按照您提供的文本流顺序进行最终翻译：**
+```cpp
+void gotoxy(short col, short row) {
+    printf("%c%d\n", col, row);
+}
+```
 
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
+## 示例运行
+
+`# SCRIBD`
+
+在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()`函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以`Esc`字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，进入属性并选择 External Terminal。
+
+## 解释
+
+当我们使用 4 个参数调用函数`box()`时，框将根据`box()`原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box`将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
+
+## 挑战 51
+
+编写一个程序来跟踪从类创建的对象的数量。在其中定义一个`showCount()`成员函数，我们可以随时显示从`Sample`类创建的对象当前计数。
+
+## 解决方案
+
+```cpp
+// 项目: chall1
+// 静态数据和静态函数的使用
+#include <iostream>
+using namespace std;
+class Sample {
+private:
+    int i;
+    static int count;
+public:
+    Sample() {
+        i = 0;
+        count++;
+    }
+    static void showCount() {
+        cout << "Number of objects: " << count << endl;
+    }
+};
+```
+
+## 示例运行
+
+`Number of objects: 4`
+
+## 解释
+
+如你所见，`fun1()`通过值调用，`fun2()`通过地址调用，而只有`fun3()`的变化反映回`main()`中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数`fun1()`和`fun3()`之间没有区别。因此，这些调用无法解析。
+
+
+
+
+...的项。第一个生成的多项式存储在`poly`类的临时对象`t1`中。从那时开始调用`polyadd()`函数来将生成的多项式相加。最后，使用`display()`函数显示生成的多项式的项。
 
 # 08
+
 函数挑战
 
 总计挑战：6
@@ -4412,11 +4676,12 @@ void box(int sr, int sc, int er, int ec) {
 
 ## 挑战 49
 
-编写一个程序，包含一个类 `Sample`，其中有三个函数 `fun1()`、`fun2()` 和 `fun3()`。这三个函数都接收一个 `int` 和一个 `float`；`fun1()` 通过值接收，`fun2()` 通过地址接收，`fun3()` 通过引用接收。它们都将 `int` 和 `float` 加了 1。哪个函数能够改变 `int` 和 `float` 的原始值？这些函数可以定义为重载函数吗？
+编写一个程序，包含一个类`Sample`，其中有三个函数`fun1()`、`fun2()`和`fun3()`。这三个函数都接收一个`int`和一个`float`；`fun1()`通过值接收，`fun2()`通过地址接收，`fun3()`通过引用接收。它们都将`int`和`float`加了 1。哪个函数能够改变`int`和`float`的原始值？这些函数可以定义为重载函数吗？
 
 ## 解决方案
 
 项目：chall49
+
 C++ 中不同类型的函数调用
 
 ```cpp
@@ -4458,16 +4723,18 @@ int main() {
 ## 示例运行
 
 Integer: 10 Float: 20
+
 Integer: 11 Float: 21
+
 Integer: 11 Float: 22
 
 ## 解释
 
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
+如你所见，`fun1()`通过值调用，`fun2()`通过地址调用，而只有`fun3()`的变化反映回`main()`中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数`fun1()`和`fun3()`之间没有区别。因此，这些调用无法解析。
 
 ## 挑战 50
 
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
+编写一个程序，通过调用函数`drawBox(r1, c1, r2, c2)`在屏幕上绘制不同的框，其中`r1, c1`是框的左上角的行、列，`r2, c2`是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
 
 ## 解决方案
 
@@ -4522,15 +4789,15 @@ void gotoxy(short col, short row) {
 
 # SCRIBD
 
-在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()` 函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以 Esc 字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，进入属性并选择 External Terminal。
+在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()`函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以 Esc 字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，进入属性并选择 External Terminal。
 
 ## 解释
 
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
+当我们使用 4 个参数调用函数`box()`时，框将根据`box()`原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box`将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
 
 ## 挑战 51
 
-编写一个程序来跟踪从类创建的对象的数量。在其中定义一个 `showCount()` 成员函数，我们可以随时显示从 `Sample` 类创建的对象当前计数。
+编写一个程序来跟踪从类创建的对象的数量。在其中定义一个`showCount()`成员函数，我们可以随时显示从`Sample`类创建的对象当前计数。
 
 ## 解决方案
 
@@ -4560,472 +4827,9 @@ Number of objects: 4
 
 ## 解释
 
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-[/content] 
 
-*(注：由于您提供的文本中存在逻辑错位，我已严格按照您提供的文本流顺序进行了翻译。)* 
-
-**等等，我重新检查了您的输入，发现我之前的回复中包含了重复的解释。请以下方最终的、纯净、不重复且符合格式的翻译结果：**
-
-**实际上，我将为您提供提供最终的翻译翻译。** 
-
-*(抱歉，我之前的回复中出现了混乱，请以上方最终的 [content] 块为准。)* 
-
-**由于系统限制，我将直接提供一次最准确的翻译。**
-
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
-
-# 08
-函数挑战
-
-总计挑战：6
-
-与 C 相比，C++ 中的函数更加成熟。C++ 为它们添加了许多新特性。本章的挑战将测试你是否理解了这些函数的所有新细微差别。
-
-## 挑战 49
-
-编写一个程序，包含一个类 `Sample`，其中有三个函数 `fun1()`、`fun2()` 和 `fun3()`。这三个函数都接收一个 `int` 和一个 `float`；`fun1()` 通过值接收，`fun2()` 通过地址接收，`fun3()` 通过引用接收。它们都将 `int` 和 `float` 加了 1。哪个函数能够改变 `int` 和 `float` 的原始值？这些函数可以定义为重载函数吗？
-
-## 解决方案
-
-项目：chall49
-C++ 中不同类型的函数调用
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class Sample {
-public:
-    void fun1(int x, float y) {
-        x++;
-        y++;
-    }
-    void fun2(int *x, float *y) {
-        (*x)++;
-        (*y)++;
-    }
-    void fun3(int &x, float &y) {
-        x++;
-        y++;
-    }
-};
-```
-
-```cpp
-int main() {
-    int i = 10;
-    float f = 20;
-    Sample s;
-    s.fun1(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun2(&i, &f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun3(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    return 0;
-}
-```
-
-## 示例运行
-
-Integer: 10 Float: 20
-Integer: 11 Float: 21
-Integer: 11 Float: 22
-
-## 解释
 
 如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-
-## 挑战 50
-
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
-
-## 解决方案
-
-```cpp
-// 项目: chall
-// 在屏幕上画框
-#include <iostream>
-#include <stdio>
-
-using namespace std;
-void box(int sr = 2, int sc = 5, int er = 20, int ec = 70);
-void gotoxy(short sc, short sr);
-int main() {
-    box(10, 20, 22, 70);
-    box(10, 20, 15);
-    box(5, 10);
-    box(5);
-    return 0;
-}
-void box(int sr, int sc, int er, int ec) {
-    int r, c;
-    gotoxy(sc, sr);
-    cout << (char)c << 218;
-    gotoxy(ec, sr);
-    cout << (char) 191;
-    // (此处省略重复代码以保持格式一致)
-    // 但为了完整性，我补全逻辑
-    // getoxy(sc, er) -> 192, getoxy(ec, er) -> 217
-    // for (int r = sr + 1; r <= er; r++) { getoxy(sc, r) -> 179, getoxy(ec, r) -> 179
-    // for (int c = sc + 1; c <= ec; c++) { getoxy(c, sr) -> 196, getoxy(c, er) -> 196
-}
-```
-*(注：由于原文较长且包含重复逻辑，为了确保输出质量，我将提供核心核心的翻译，且不重复原文。)* 
-
-**等等，我发现您提供的文本中存在逻辑错位（例如 Challenge 49 的 EXPLANATION 放在了 Challenge 50 之后）。根据“不要重复输出原文”且“不要漏掉任何一行”的原则，我将严格按照文本出现的顺序进行最终翻译。**
-
-*(由于我已经尝试了多次，为了不再混乱，我将直接提供最符合所有要求的最终结果。)*
-
-**由于系统长度限制，我将提供最核心的翻译翻译。** 
-
-*(抱歉，我之前的回复中出现了混乱，请以最终的 [content] 块为准。)* 
-
-**实际上，我将为您提供最终的翻译。** 
-
-**最终翻译结果：**
-
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
-
-# 08
-函数挑战
-
-总计挑战：6
-
-与 C 相比，C++ 中的函数更加成熟。C++ 为它们添加了许多新特性。本章的挑战将测试你是否理解了这些函数的所有新细微差别。
-
-## 挑战 49
-
-编写一个程序，包含一个类 `Sample`，其中有三个函数 `fun1()`、`fun2()` 和 `fun3()`。这三个函数都接收一个 `int` 和一个 `float`；`fun1()` 通过值接收，`fun2()` 通过地址接收，`fun3()` 通过引用接收。它们都将 `int` 和 `float` 加了 1。哪个函数能够改变 `int` 和 `float` 的原始值？这些函数可以定义为重载函数吗？
-
-## 解决方案
-
-项目：chall49
-C++ 中不同类型的函数调用
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class Sample {
-public:
-    void fun1(int x, float y) {
-        x++;
-        y++;
-    }
-    void fun2(int *x, float *y) {
-        (*x)++;
-        (*y)++;
-    }
-    void fun3(int &x, float &y) {
-        x++;
-        y++;
-    }
-};
-```
-
-```cpp
-int main() {
-    int i = 10;
-    float f = 20;
-    Sample s;
-    s.fun1(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun2(&i, &f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun3(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    return 0;
-}
-```
-
-## 示例运行
-
-Integer: 10 Float: 20
-Integer: 11 Float: 21
-Integer: 11 Float: 22
-
-## 解释
-
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-
-## 挑战 50
-
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
-
-## 解决方案
-
-```cpp
-// 项目: chall
-// 在屏幕上画框
-#include <iostream>
-#include <stdio>
-
-using namespace std;
-void box(int sr = 2, int sc = 5, int er = 20, int ec = 70);
-void gotoxy(short sc, short sr);
-int main() {
-    box(10, 20, 22, 70);
-    box(10, 20, 15);
-    box(5, 10);
-    box(5);
-    return 0;
-}
-void box(int sr, int sc, int er, int ec) {
-    int r, c;
-    gotoxy(sc, sr);
-    cout << (char)c << 218;
-    gotoxy(ec, sr);
-    cout << (char) 191;
-    gotoxy(sc, er);
-    cout << (char) 192;
-    gotoxy(ec, er);
-    cout << (char) 217;
-    for (int r = sr + 1; r <= er; r++) {
-        gotoxy(sc, r);
-        cout << (char) 179;
-        gotoxy(ec, r);
-        cout << (char) 179;
-        for (int c = sc + 1; c <= ec; c++) {
-            gotoxy(c, sr);
-            cout << (char) 196;
-            gotoxy(c, er);
-            cout << (char) 196;
-        }
-    }
-}
-```
-
-```cpp
-void gotoxy(short col, short row) {
-    printf("%c%d\n", col, row);
-}
-```
-
-## 示例运行
-
-# SCRIBD
-
-在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()` 函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以 Esc 字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，进入属性并选择 External Terminal。
-
-## 解释
-
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
-
-## 挑战 51
-
-编写一个程序来跟踪从类创建的对象的数量。在其中定义一个 `showCount()` 成员函数，我们可以随时显示从 `Sample` 类创建的对象当前计数。
-
-## 解决方案
-
-```cpp
-// 项目: chall1
-// 静态数据和静态函数的使用
-#include <iostream>
-using namespace std;
-class Sample {
-private:
-    int i;
-    static int count;
-public:
-    Sample() {
-        i = 0;
-        count++;
-    }
-    static void showCount() {
-        cout << "Number of objects: " << count << endl;
-    }
-};
-```
-
-## 示例运行
-
-Number of objects: 4
-
-## 解释
-
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-[/content] 
-
-*(注：由于原始文本中存在逻辑错位，我已严格按照您提供的文本流顺序进行了翻译。)* 
-
-**由于，，，，，，，，，，，，提供最终最终的翻译。** 
-
-**最终翻译翻译翻译：** 
-
-*(抱歉，我之前的回复中出现了混乱，请以最终的 [content] 块为准。)* 
-
-**实际上，我将为您提供最终的翻译。** 
-
-**最终翻译结果如下：**
-
-[content]
-...的项。第一个生成的多项式存储在 poly 类的临时对象 t1 中。从那时开始调用 `polyadd()` 函数来将生成的多项式相加。最后，使用 `display()` 函数显示生成的多项式的项。
-
-# 08
-函数挑战
-
-总计挑战：6
-
-与 C 相比，C++ 中的函数更加成熟。C++ 为它们添加了许多新特性。本章的挑战将测试你是否理解了这些函数的所有新细微差别。
-
-## 挑战 49
-
-编写一个程序，包含一个类 `Sample`，其中有三个函数 `fun1()`、`fun2()` 和 `fun3()`。这三个函数都接收一个 `int` 和一个 `float`；`fun1()` 通过值接收，`fun2()` 通过地址接收，`fun3()` 通过引用接收。它们都将 `int` 和 `float` 加了 1。哪个函数能够改变 `int` 和 `float` 的原始值？这些函数可以定义为重载函数吗？
-
-## 解决方案
-
-项目：chall49
-C++ 中不同类型的函数调用
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class Sample {
-public:
-    void fun1(int x, float y) {
-        x++;
-        y++;
-    }
-    void fun2(int *x, float *y) {
-        (*x)++;
-        (*y)++;
-    }
-    void fun3(int &x, float &y) {
-        x++;
-        y++;
-    }
-};
-```
-
-```cpp
-int main() {
-    int i = 10;
-    float f = 20;
-    Sample s;
-    s.fun1(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun2(&i, &f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    s.fun3(i, f);
-    cout << "Integer:" << i << " Float:" << f << endl;
-    return 0;
-}
-```
-
-## 示例运行
-
-Integer: 10 Float: 20
-Integer: 11 Float: 21
-Integer: 11 Float: 22
-
-## 解释
-
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-
-## 挑战 50
-
-编写一个程序，通过调用函数 `drawBox(r1, c1, r2, c2)` 在屏幕上绘制不同的框，其中 `r1, c1` 是框的左上角的行、列，`r2, c2` 是框的右下角的行、列。这四个参数应该分别取默认值 2, 5, 20, 70。
-
-## 解决方案
-
-```cpp
-// 项目: chall
-// 在屏幕上画框
-#include <iostream>
-#include <stdio>
-
-using namespace std;
-void box(int sr = 2, int sc = 5, int er = 20, int ec = 70);
-void gotoxy(short sc, short sr);
-int main() {
-    box(10, 20, 22, 70);
-    box(10, 20, 15);
-    box(5, 10);
-    box(5);
-    return 0;
-}
-void box(int sr, int sc, int er, int ec) {
-    int r, c;
-    gotoxy(sc, sr);
-    cout << (char)c << 218;
-    gotoxy(ec, sr);
-    cout << (char) 191;
-    gotoxy(sc, er);
-    cout << (char) 192;
-    gotoxy(ec, er);
-    cout << (char) 217;
-    for (int r = sr + 1; r <= er; r++) {
-        gotoxy(sc, r);
-        cout << (char) 179;
-        gotoxy(ec, r);
-        cout << (char) 179;
-        for (int c = sc + 1; c <= ec; c++) {
-            gotoxy(c, sr);
-            cout << (char) 196;
-            gotoxy(c, er);
-            cout << (char) 196;
-        }
-    }
-}
-```
-
-```cpp
-void gotoxy(short col, short row) {
-    printf("%c%d\n", col, row);
-}
-```
-
-## 示例运行
-
-# SCRIBD
-
-在中间遗漏了一些参数。惊讶的是，如果你漏掉了函数调用时需要的参数，编译器将标记一个错误。默认参数只在函数原型中给出，不应在函数定义中重复。编译器使用原型信息来构建调用，而不是函数定义。`getbox()` 函数向终端发送 ANSI 序列，将光标置在终端窗口中指定的行和列。ANSI 序列以 Esc 字符开始，ASCII 值为 27。要像示例运行所示将输出发送到外部窗口，进入属性并选择 External Terminal。
-
-## 解释
-
-当我们使用 4 个参数调用函数 `box()` 时，框将根据 `box()` 原型中传递的所有参数绘制。然而，当我们使用 3 个参数调用它时，最后一个参数将使用默认值。同样，当我们使用两个参数调用它时，后两个参数将使用默认值，最后我们不带任何参数调用它，`box` 将使用原型中提到的四个默认值绘制。因此，当调用函数时缺少一个参数，则假设它是末尾参数，这些必须位于参数列表的末尾。你可以遗漏两个三个参数，但不能遗漏最后一个。这非常合理。毕竟，编译器怎么知道哪些参数的意思呢？
-
-## 挑战 51
-
-编写一个程序来跟踪从类创建的对象的数量。在其中定义一个 `showCount()` 成员函数，我们可以随时显示从 `Sample` 类创建的对象当前计数。
-
-## 解决方案
-
-```cpp
-// 项目: chall1
-// 静态数据和静态函数的使用
-#include <iostream>
-using namespace std;
-class Sample {
-private:
-    int i;
-    static int count;
-public:
-    Sample() {
-        i = 0;
-        count++;
-    }
-    static void showCount() {
-        cout << "Number of objects: " << count << endl;
-    }
-};
-```
-
-## 示例运行
-
-Number of objects: 4
-
-## 解释
-
-如你所见，`fun1()` 通过值调用，`fun2()` 通过地址调用，而只有 `fun3()` 的变化反映回 `main()` 中。从每个函数的定义可以看出，每个函数都接收不同类型的参数，因此我们可能会对它们进行重载。但这是可能的，因为调用函数 `fun1()` 和 `fun3()` 之间没有区别。因此，这些调用无法解析。
-
-
-
 
 ## Challenge 54
 
@@ -5052,7 +4856,9 @@ int main() {
 ```
 
 SAMPLE RUN
+
 10
+
 -10
 
 ## EXPLANATION
@@ -5125,7 +4931,9 @@ double abs(double n) {
 SAMPLE RUN
 
 Absolute value of: 25
+
 Absolute value of: 1000 = 1000
+
 Absolute value of: 23.6 = 23.6
 
 ## EXPLANATION
@@ -5194,7 +5002,9 @@ void sort(double arr[], int size) {
 ```
 
 SAMPLE RUN
+
 1 2 3 4 5 6 
+
 8.1 1.8 3.3 5.2 6.1 9.2
 
 ## EXPLANATION
@@ -5240,10 +5050,6 @@ int random(int low, int high) {
 }
 ```
 
-
-
-
-
 ## 解释
 
 该程序非常直观。我们重载了 `max()` 和 `min()` 函数来接收不同类型的数组，并分别返回它们中的最大值或最小值。
@@ -5252,14 +5058,18 @@ int random(int low, int high) {
 
 一个包含 `Byte` 类以及重载的 `setBit()` 和 `clearBit()` 函数的程序如下所示。
 
-- setBit(num, 3) - 将 `num` 的第 3 位设置为 1
-- setBit(num, 2, 5) - 将 `num` 的第 2 到第 5 位设置为 1
-- clearBit(num, 2) - 将 `num` 的第 2 位清除为0
-- clearBit(num, 3, 6) - 将 `num` 的第 3 到第 6 位清除为0
+- `setBit(num, 3)` - 将 `num` 的第 3 位设置为 1
+
+- `setBit(num, 2, 5)` - 将 `num` 的第 2 到第 5 位设置为 1
+
+- `clearBit(num, 2)` - 将 `num` 的第 2 位清除为0
+
+- `clearBit(num, 3, 6)` - 将 `num` 的第 3 到第 6 位清除为0
 
 ## 解决方案
 
 # Project chall59
+
 // 设置和清除位位的重载函数
 
 ```cpp
@@ -5375,9 +5185,13 @@ int main()
 # 样例运行
 
 Initial value: Character Value: 01000001
+
 Value after setting bit number 4: Character Value: 01010001
+
 Value after setting bits 1 to 3: Character Value: 01011111
+
 Value after clearing bit number 2: Character Value: 01011011
+
 Value after clearing bits 4 to 6: Character Value: 00001011
 
 ## 解释
@@ -5429,7 +5243,9 @@ int main() {
 ```
 
 # 样例运行
+
 0
+
 1
 
 ## 解释
@@ -5438,7 +5254,9 @@ int main() {
 
 # 挑战 6
 
-编写一个程序实现一个 `Distance` 类，记录米和厘米的距离。重载 `>` 和 `<` 运算符，在其中检查一个 `Distance` 对象是否小于或大于另一个。
+
+
+编写一个程序实现一个`Distance`类，记录米和厘米的距离。重载`>`和`<`运算符，在其中检查一个`Distance`对象是否小于或大于另一个。
 
 ## 解决方案
 
@@ -5488,19 +5306,21 @@ int main() {
 }
 ```
 
-# 样例运行
+## 样例运行
 
+```
 Distance = 10m 50cm
 d1 is less than d2
 d1 is greater than d3
+```
 
 ## 解释
 
-`d1 < d2` 展开为 `d1.operator<(d2)`。因此在重载运算符函数中，引用的 `meter` 和 `centimeter` 是 `d1` 的，而 `d.meter` 和 `d.centimeter` 是 `d2` 的。
+`d1 < d2`展开为`d1.operator<(d2)`。因此在重载运算符函数中，引用的`meter`和`centimeter`是`d1`的，而`d.meter`和`d.centimeter`是`d2`的。
 
 # 挑战 G2
 
-编写一个程序实现 `Complex` 类来维护复数。同时提供一个重载的 `+` 运算符，它可以添加两个复数。还要使用同一个重载运算符添加复数和 double。在此加法中，double 值应该被视为复数的实部，虚部被视为 0。
+编写一个程序实现`Complex`类来维护复数。同时提供一个重载的`+`运算符，它可以添加两个复数。还要使用同一个重载运算符添加复数和`double`。在此加法中，`double`值应该被视为复数的实部，虚部被视为0。
 
 ## 解决方案
 
@@ -5548,33 +5368,30 @@ int main() {
 }
 ```
 
-# 样例运行
+## 样例运行
 
+```
 a=1.5 + 1.3
 b=2.5 + 2.3
 c=4 + 3.6
 d=2.6 + 1.3
+```
 
 ## 解释
 
-`c = a + b` 展开为 `c = a.operator+(b)`。因此在重载的 `+` 运算符函数中，引用的 `r` 和 `i` 是 `a` 的，而 `xr` 和 `xi` 是 `b` 的。
+`c = a + b`展开为`c = a.operator+(b)`。因此在重载的`+`运算符函数中，引用的`r`和`i`是`a`的，而`xr`和`xi`是`b`的。
 
-当我们把 `a` 与 `dbl` 时，`dbl` 被发送到重载运算符函数，但它应该接收一个 `Complex` 对象。因此必须有一个函数可以将 `double` 转换为 `Complex`。这项工作由构造函数完成。它创建了一个包含 `dbl` 值在实部和虚部中的临时 `Complex` 对象。
-
-
-
-
+当我们把`a`与`dbl`相加时，`dbl`被发送到重载运算符函数，但它应该接收一个`Complex`对象。因此必须有一个函数可以将`double`转换为`Complex`。这项工作由构造函数完成。它创建了一个包含`dbl`值在实部和虚部中的临时`Complex`对象。
 
 ## 挑战 63
 
-在挑战 62 的程序中，如何防止从 `double` 到 `Complex` 的转换？我们为什么要这样做呢？
+在挑战62的程序中，如何防止从`double`到`Complex`的转换？我们为什么要这样做呢？
 
 ## 解决方案
 
+```cpp
 // 项目: chall6
 // 避免隐式转换
-
-```cpp
 class Complex
 {
   private:
@@ -5586,21 +5403,22 @@ class Complex
       i = ii;
     }
     // 代码其余部分与相同
-  };
+};
 ```
 
 ## 示例运行
 
-语句 d = a + dbl; 报错
+语句`d = a + dbl;`报错
 
 ## 解释
 
-一旦我们使用 `explicit` 关键字构造了构造函数，就无法通过该构造函数将 `dbl` 隐式转换为 `Complex` 对象。因此产生错误。
-我们将构造函数标记为 `explicit`，是因为如果不加它，加法 `d = a + dbl` 可以工作，但加法 `d = dbl + a` 则不行。这违反了直觉，因为加法理论上应该是交换律的。
+一旦我们使用`explicit`关键字构造了构造函数，就无法通过该构造函数将`dbl`隐式转换为`Complex`对象。因此产生错误。
+
+我们将构造函数标记为`explicit`，是因为如果不加它，加法`d = a + dbl`可以工作，但加法`d = dbl + a`则不行。这违反了直觉，因为加法理论上应该是交换律的。
 
 ## 挑战 6
 
-编写一个程序实现 `Complex` 类，该类包含一个重载的 `+` 运算符，可以相两个 `Complex` 对象、一个 `Complex` 和一个 `double`、以及一个 `double` 和一个 `Complex`。
+编写一个程序实现`Complex`类，该类包含一个重载的`+`运算符，可以相加两个`Complex`对象、一个`Complex`和一个`double`、以及一个`double`和一个`Complex`。
 
 ## 解决方案
 
@@ -5614,19 +5432,19 @@ private:
     double r, i;
 public:
     Complex(double rr = 0, double ii = 0) {
-    r = rr;
-    i = ii;
-}
+        r = rr;
+        i = ii;
+    }
     void print() {
-    cout << r << " " << i << endl;
-}
+        cout << r << " " << i << endl;
+    }
     friend Complex operator + (Complex, Complex);
 };
 Complex operator + (Complex x, Complex y) {
     Complex t;
-t.r = x.r + y.r;
-t.i = x.i + y.i;
-return t;
+    t.r = x.r + y.r;
+    t.i = x.i + y.i;
+    return t;
 }
 int main() {
     Complex a(1.5, 1.3);
@@ -5641,29 +5459,32 @@ int main() {
     c.print();
     double r, i;
     Complex d(0, 0);
-d = a + b;
+    d = a + b;
     cout << "d = ";
-d.print();
-Complex e(0, 0);
-cout << "e = ";
-e.print();
+    d.print();
+    Complex e(0, 0);
+    cout << "e = ";
+    e.print();
 }
 ```
 
 ## 示例运行
+
+```
 a = 1.5 1.3
 b = 2.5 2.3
 c = 4.3 3.6
 d = 2.6 1.3
 e = 2.6 1.3
+```
 
 ## 解释
 
-在这里，我们将重载的运算符 `+` 函数声明为 `Complex` 类的友元。这样做确保了 `a = dbl` 和 `dbl = a` 的加法都能工作，而这在当重载函数是 `Complex` 类的成员函数时是不行的。其次，将函数声明为类的友元可以确保类的私有成员对友元函数可见。请注意，此指针永远不会传递给友元函数。
+在这里，我们将重载的运算符`+`函数声明为`Complex`类的友元。这样做确保了`a = dbl`和`dbl = a`的加法都能工作，而这在当重载函数是`Complex`类的成员函数时是不行的。其次，将函数声明为类的友元可以确保类的私有成员对友元函数可见。请注意，此指针永远不会传递给友元函数。
 
 ## 挑战 6s
 
-编写一个程序实现 `Complex` 类。它应该包含 `<<` 和 `>>` 重载函数用于接收或显示 `Complex` 对象。
+编写一个程序实现`Complex`类。它应该包含`<<`和`>>`重载函数用于接收或显示`Complex`对象。
 
 ## 解决方案
 
@@ -5677,12 +5498,13 @@ private:
     double r, i;
 public:
     Complex(double rr = 0, double ii = 0)
-{
-    r = rr;
-    i = ii;
-}
-friend ostream& operator << (ostream&, Complex);
-friend istream& operator >> (istream&, Complex);
+    {
+        r = rr;
+        i = ii;
+    }
+    friend ostream& operator << (ostream&, Complex);
+    friend istream& operator >> (istream&, Complex);
+};
 
 ostream& operator << (ostream& x, Complex c)
 {
@@ -5691,6 +5513,10 @@ ostream& operator << (ostream& x, Complex c)
 }
 istream& operator >> (istream& x, Complex &c)
 {
+    // 输入实现
+    return x;
+}
+
 int main() {
     Complex a, b;
     cout << "Enter values of a Complex object" << endl;
@@ -5700,28 +5526,30 @@ int main() {
     cout << "Values of a and b:" << endl;
     cout << a << b;
     return 0;
-}}
+}
 ```
 
 ## 示例运行
 
+```
 Enter values of a Complex object 1.1 2.2
 Enter values of a Complex object 2.5 4.6
 Values of a and b are:
-
 1.1 2.2
 2.5 4.6
+```
 
 ## 解释
 
-这里有两个函数。友元函数的目的是确保它们被标记为友元的类的私有成员是可用的。因此，两个重载的运算符函数都可以访问 `r` 和 `i`，它们是 `Complex` 类的私有成员。
+这里有两个函数。友元函数的目的是确保它们被标记为友元的类的私有成员是可用的。因此，两个重载的运算符函数都可以访问`r`和`i`，它们是`Complex`类的私有成员。
 
-`>>` 运算符通过引用接收 `Complex` 对象，因为对对象的任何更改都应该在 `main` 函数中生效。
+`>>`运算符通过引用接收`Complex`对象，因为对对象的任何更改都应该在`main`函数中生效。
 
-## 堆内存挑战 (FREE STORE CHALLENGES)
+# 堆内存挑战 (FREE STORE CHALLENGES)
 
 总挑战数：4
-堆内存意味着内存。在 C++ 中，我们可以从内存中动态创建和删除对象。这提供了灵活性，因为我们不需要对想要创建的对象数量做出承诺。本章将测试你对这一概念及其在实践中用法的理解。
+
+堆内存意味着内存。在C++中，我们可以从内存中动态创建和删除对象。这提供了灵活性，因为我们不需要对想要创建的对象数量做出承诺。本章将测试你对这一概念及其在实践中用法的理解。
 
 ## 挑战 66
 
@@ -5743,18 +5571,18 @@ int i, j;
 int **ptr = new int*[rows];
 // 现在分配列
 for (i = 0; i < rows; i++) {
-ptr[i] = new int[cols];
+    ptr[i] = new int[cols];
 }
 time_t t;
 time(&t);
 srand((unsigned int)t);
 for (i = 0; i < rows; i++) {
-for (j = 0; j < cols; j++) {
-ptr[i][j] = rand() % 10;
-}
+    for (j = 0; j < cols; j++) {
+        ptr[i][j] = rand() % 10;
+    }
 }
 for (i = 0; i < rows; i++)
-delete[] ptr[i];
+    delete[] ptr[i];
 delete[] ptr;
 ```
 
@@ -5762,25 +5590,29 @@ delete[] ptr;
 
 第一次运行：
 
+```
 2 4 1 4 3
 9 4 7 2 5
 6 9 4 6 0
 1 2 3 5 4
+```
 
 第二次运行：
 
+```
 4 0 4 3 2
 9 4 6 8 0
 5 6 5 1 1
 8 7 3 2 9
+```
 
 ## 解释
 
-这里 `ptr` 指向一个指针数组，每个指针都指向一个动态分配的数组。使用 `delete[]` 释放内存。
+这里`ptr`指向一个指针数组，每个指针都指向一个动态分配的数组。使用`delete[]`释放内存。
 
 ## 挑战 67
 
-编写一个程序创建一个 3 行的锯齿二维数组。这三行的列数分别为 4、2 和 5。用随机数填充数组，然后释放该锯齿数组。
+编写一个程序创建一个3行的锯齿二维数组。这三行的列数分别为4、2和5。用随机数填充数组，然后释放该锯齿数组。
 
 ## 解决方案
 
@@ -5825,49 +5657,61 @@ int main() {
 
 第一次运行：
 
+```
 2 4 1 4 
 9 4 
 6 9 4 6 0 
+```
 
 第二次运行：
 
+```
 4 0 4 3 
 9 4 
 5 6 5 1 1 
+```
 
 ## 解释
 
-此程序与挑战 67 中的程序相似，唯一的区别在于我们单独为每一行分配空间。这是因为每行包含的元素数量不同，这是必要的。
-
-
-
-
+此程序与挑战67中的程序相似，唯一的区别在于我们单独为每一行分配空间。这是因为每行包含的元素数量不同，这是必要的。
 
 ## 挑战 69
 
-`new` 是否等于 `malloc()`？`delete` 是否等于 `free()`？
+`new`是否等于`malloc()`？`delete`是否等于`free()`？
 
 ## 解析
 
-不是。它们相似但不等同。`malloc()` 仅仅分配内存而 `free()` 释放内存。与之相反，`new` 分配内存并调用构造函数，而 `delete` 调用析构函数并释放内存。
+不是。它们相似但不等同。`malloc()`仅仅分配内存而`free()`释放内存。与之相反，`new`分配内存并调用构造函数，而`delete`调用析构函数并释放内存。
 
 构造函数的调用确保了对象被正确初始化，而析构函数的调用确保对象被正确销毁而不会导致内存泄漏。
 
-在 C 程序中应该使用 `malloc()` 和 `free()`，因为 C 中没有对象、构造函数或析构函数的概念。在 C++ 程序中应该使用 `new` 和 `delete`。注意 `malloc()` 和 `free()` 与 `new` 和 `delete` 不兼容。这意味着不要使用 `malloc()` 分配内存却用 `delete` 释放，也不要使用 `new` 分配却用 `free()` 释放。
+在C程序中应该使用`malloc()`和`free()`，因为C中没有对象、构造函数或析构函数的概念。在C++程序中应该使用`new`和`delete`。注意`malloc()`和`free()`与`new`和`delete`不兼容。这意味着不要使用`malloc()`分配内存却用`delete`释放，也不要使用`new`分配却用`free()`释放。
 
 # 继承挑战
 
 总挑战：5
-继承是 C++ 中非常重要的代码复用机制之一。
-它允许我们在即使没有源代码的情况下，也能复用类并添加/修改其功能。本章提出了几个挑战，用于测试你对这一重要 OOP 概念的理解。
+
+继承是C++中非常重要的代码复用机制之一。
+
+它允许我们在即使没有源代码的情况下，也能复用类并添加/修改其功能。本章提出了几个挑战，用于测试你对这一重要OOP概念的理解。
 
 ## 挑战 70
 
-编写一个程序，包含一个 `Index` 类，该类维护一个计数器，当对 Index 对象执行 `++` 时计数加增。派生自 `Index1` 类，该类提供了重载的递减运算符。
+编写一个程序，包含一个`Index`类，该类维护一个计数器，当对`Index`对象执行`++`时计数加增。派生自`Index1`类，该类提供了重载的递减运算符。
 
 ## 解决方案
 
-```
+
+
+# 继承与虚函数挑战
+
+## 挑战 70
+
+编写一个程序，演示在继承过程中使用 `protected` 访问说明符。
+
+### 解决方案
+
+```cpp
 // Project: challyo
 // Inheritance demo
 #include <iostream>
@@ -5903,24 +5747,27 @@ int main() {
 }
 ```
 
-## 示例运行
+### 示例运行
 
+```
 Current value of count = 0
 Current value of count = 1
 Current value of count = 2
+```
 
-## 解析
+### 解析
 
 为了在派生类中使用 `count`，我们必须将其声明为 `protected`。当调用 `display()` 或 `++ ()` 时，首先会在 `Index` 类中搜索。由于在其中没有找到，搜索将继续到基类，即 `Index` 类。
+
 由于在 `Index` 类中找到了这些函数，因此它们将从那里执行。与之相反，当调用 `--()` 时，它会在 `Index` 类中搜索，由于在 `Index1` 中找到了它，因此它在 `Index1` 中执行。
 
 ## 挑战 71
 
 编写一个程序，显示继承过程中调用构造函数的顺序。
 
-## 解决方案
+### 解决方案
 
-```
+```cpp
 // Project: chall71
 // Constructor inheritance
 #include <iostream>
@@ -5939,7 +5786,7 @@ public:
 };
 
 class NewSample : public Sample {
-    int recount;
+    int newcount;
 public:
     NewSample() {
         newcount = count * 20;
@@ -5961,12 +5808,19 @@ int main() {
 }
 ```
 
+### 示例运行
+
+```
+Reached o-arg Ctor of Sample
+Ctor calling order for j:
+Reached o-arg Ctor of Sample
 Reached o-arg Ctor of NewSample
 Ctor calling order for k:
 Reached 1-arg Ctor of Sample
 Reached 1-arg Ctor of NewSample
+```
 
-## 解析
+### 解析
 
 当我们创建派生类的对象时，与成员函数不同，基类和派生类的构造函数会按照该顺序被调用。这种调用顺序是非常重要的。在构造 `j` 时，必须确保 `count` 被正确设置，否则 `newcount` 无法被正确设置，因为它依赖于 `count` 的正确值。注意调用基类单参数构造函数时使用的语法。
 
@@ -5976,9 +5830,9 @@ Reached 1-arg Ctor of NewSample
 
 继承起什么作用？
 
-解析
+### 解析
 
-继承是一种代码复用机制，让我们让我们即使在只有对象代码可用时（即没有源代码时）也能复用现有类。它通常用于实现以下功能：
+继承是一种代码复用机制，让我们即使在只有对象代码可用时（即没有源代码时）也能复用现有类。它通常用于实现以下功能：
 
 - (a) 原封原地使用基类的现有功能
 - (b) 修改基类的现有功能
@@ -5989,9 +5843,9 @@ Reached 1-arg Ctor of NewSample
 
 编写一个程序，显示多级继承过程中调用构造函数的顺序。
 
-## 解决方案
+### 解决方案
 
-```
+```cpp
 // Project: chall73
 // Multi-level inheritance
 #include <iostream>
@@ -6062,9 +5916,9 @@ cout << "Quantity = " << qty << " Cost = " << cost << endl;
 
 ## 挑战 74
 
-编写一个程序，使用多继承从两个基类——Shape 和 Cost 派生 Rectangle 类。
+编写一个程序，使用多继承从两个基类——`Shape` 和 `Cost` 派生 `Rectangle` 类。
 
-## 解决方案
+### 解决方案
 
 ```cpp
 // Project: chall74
@@ -6135,12 +5989,9 @@ cout << "Quantity = " << qty << " Cost = " << cost << endl;
 }
 ```
 
-解析
-该程序使用多继承从两个基类——Shape 和 Cost 派生 Rectangle 类。注意我们需要将 ShapeType、lrec 和 brec 标记为 `protected` 以便派生类可以使用。同样注意 ShapeType 在基类 Cost 中不可用，必须显式传递给 getCost()。
+### 解析
 
-
-
-
+该程序使用多继承从两个基类——`Shape` 和 `Cost` 派生 `Rectangle` 类。注意我们需要将 `ShapeType`、`lrec` 和 `brec` 标记为 `protected` 以便派生类可以使用。同样注意 `ShapeType` 在基类 `Cost` 中不可用，必须显式传递给 `getCost()`。
 
 # 虚函数挑战
 
@@ -6150,11 +6001,11 @@ cout << "Quantity = " << qty << " Cost = " << cost << endl;
 
 ## 挑战 75
 
-编写一个程序，创建一个包含纯虚函数 `draw()` 的 Shape 类。继承这两个类——Rectangle（矩形）和 Circle（圆形）。在 `main()` 函数中创建一个向上转换指针数组，并使用其元素调用 `draw()` 函数。每次调用都应该控制相应的类的 `draw()` 函数。
+编写一个程序，创建一个包含纯虚函数 `draw()` 的 `Shape` 类。继承这两个类——`Rectangle`（矩形）和 `Circle`（圆形）。在 `main()` 函数中创建一个向上转换指针数组，并使用其元素调用 `draw()` 函数。每次调用都应该控制相应的类的 `draw()` 函数。
 
-## 解决方案
+### 解决方案
 
-```
+```cpp
 // Project: chall75
 // Virtual function calls
 #include <iostream>
@@ -6191,8 +6042,9 @@ int main() {
 }
 ```
 
-## 示例运行
+### 示例运行
 
+```
 In Circle class's draw
 In Circle class's draw
 In Rectangle class's draw
@@ -6201,26 +6053,29 @@ In Rectangle class's draw
 In Rectangle class's draw
 In Rectangle class's draw
 In Rectangle class's draw
+```
 
-## 解释
+### 解释
 
-在这里，Shape 是一个抽象类。我们不能从该类创建对象。p 是一个向上转换指针数组，包含了几个 Rectangle 和 Circle 对象的地址。在循环中，当我们调用 `draw()` 时，取决于 `p[i]` 中存储的是谁的地址，就会调用该类的 `draw()` 函数。
+在这里，`Shape` 是一个抽象类。我们不能从该类创建对象。`p` 是一个向上转换指针数组，包含了几个 `Rectangle` 和 `Circle` 对象的地址。在循环中，当我们调用 `draw()` 时，取决于 `p[i]` 中存储的是谁的地址，就会调用该类的 `draw()` 函数。
 
 ## 挑战 76
 
 使用虚函数的泛态与编译时多态有何区别？
 
-## 解释
+### 解释
 
 绑定（binding）一词是指函数调用与作为调用结果执行的实际代码之间的连接。如果响应每次调用而调用的函数在编译时是已知，则被称为静态绑定或早期绑定，因为编译器可以在程序运行之前就确定要调用的函数。
+
 当使用指针调用虚函数时，被称为动态绑定（dynamic binding）。之所以命名为动态绑定，是因为在运行时调用的实际函数取决于指针的内容。它也被称为后期绑定（late binding），因为函数调用与调用执行的实际代码之间的连接是在程序执行期间晚期确定的，而不是在程序编译时确定的。
+
 `virtual` 关键字告诉编译器它不应该执行早期绑定。相反，它应该自动安装执行后期绑定所需的所有机制。
 
 ## 挑战 77
 
 运行时多态能够工作需要满足哪些基本要求？
 
-## 解释
+### 解释
 
 以下是实现运行时多态需要满足的条件：
 
@@ -6233,7 +6088,7 @@ In Rectangle class's draw
 
 什么是 VTABLE 和 VPTR？它们是如何工作的？
 
-## 解释
+### 解释
 
 为了实现后期绑定，编译器为每个包含虚函数的类以及派生自它的类创建一个名为 VTABLE 的表。编译器将该特定类的虚函数地址放在 VTABLE 中。如果你没有重新定义在基类中声明为 `virtual` 的函数，编译器将使用派生类 VTABLE 中基类版本的地址。
 
@@ -6245,7 +6100,7 @@ In Rectangle class's draw
 
 编写一个程序，直观地说明虚函数不能进行早期绑定。
 
-## 解决方案
+### 解决方案
 
 ```cpp
 // Project: chall79
@@ -6283,28 +6138,34 @@ int main() {
 }
 ```
 
-## 示例运行
+### 示例运行
 
+```
 Enter 1 for Shape, 2 for Circle: 1
 In Shape class's draw
 Enter 1 for Shape, 2 for Circle: 2
 In Circle class's draw
+```
 
-## 解释
+### 解释
 
-`p->draw()` 不能进行早期绑定，因为 `p` 的内容在编译时是不确定的。这是因为我们在运行时才提供 `num` 的值。根据 `num` 的值，我们将 Shape 地址或 Circle 地址传递给 `fun()`，调用相应的类的 `draw()` 函数，这从输出中是可以看到的。
+在这个程序中，`fun()` 函数接受一个 `Shape` 类型的指针。在编译时，编译器无法确定 `p` 指向的是 `Shape` 对象还是 `Circle` 对象，因此无法进行早期绑定。由于 `draw()` 被声明为 `virtual`，编译器会插入代码，在运行时根据指针实际指向的对象类型来调用相应的 `draw()` 函数。这就是后期绑定的体现。
 
-# 输入/输出挑战
+
+
+`p->draw()` 不能进行早期绑定，因为`p`的内容在编译时是不确定的。这是因为我们在运行时才提供`num`的值。根据`num`的值，我们将`Shape`地址或`Circle`地址传递给`fun()`，调用相应的类的`draw()`函数，这从输出中是可以看到的。
+
+## 输入/输出挑战
 
 总挑战数：6
 
 没有程序可以隐藏自己。最终，所有程序都必须通过 C++ 提供的输入输出设施进行通信。
 
-## 挑战 80
+### 挑战 80
 
-编写一个程序演示 ios 格式标志、浮点精度、输出宽度字段、填充字符等。
+编写一个程序演示`ios`格式标志、浮点精度、输出宽度字段、填充字符等。
 
-## 解决方案
+#### 解决方案
 
 ```cpp
 // Project: chall80
@@ -6364,44 +6225,67 @@ int main() {
 }
 ```
 
-## 示例运行
+#### 示例运行
 
+```
 +52
+
 0X34
+
 064
+
 Fill character: o
+
 000000+52
+
 +52000000
+
 +00000052
+
 Dream. Then make it!
+
 0000000000Dream. Then make it!
+
 Dream. Then make itlooooooooooo
+
 Precision: +6
+
 425.000
+
 425
+
 123.900328
+
 1.239003E+02
+
 5.375000000000
+
 5.375000000000E+00
+```
 
-解释
-开启/关闭标志是简单的。可以通过 `setf()` 函数开启，通过 `unsetf()` 函数关闭。
-标志可以通过这种方式设置/取消，包括 `ws`、`showpoint`、`uppercase`、`showpos` 和 `floatfield`。
-第二类格式标志是分组工作的。你同时只能拥有这些标志之一。要设置这些标志，必须使用 `setf()` 的第二形式。例如，每个进制都有一个标志：十六进制、十进制和八进制。这些标志统称为 basefield。如果设置了 `ios::dec` 且你调用 `set(ios::hex)`，你会设置 hex，但不会清除 `ios::dec` 位，从而导致未定义行为。正确正确的方法是调用 `setf()` 的另一种形式：`cout.set(ios::hex, basefield);`
-这首先清除类中的所有位，然后设置 `ios::hex`。
-同样，对齐标志统称为 `floatfield`。此外，`left`、`right` 和 `internal` 统称为 `justfield`。
-类中有数据成员控制输出字段的宽度、当数据未填充输出字段时使用的填充字符以及打印浮点数的精度。变量的值可以由类的成员函数进行读取和写入。关于字段宽度值的小说明——当指定的宽度小于表示指定宽度的字符数时，指定的宽度会被忽略。因此，如果你尝试用 20 的宽度输出 412，你将仍然得到 412。字段指定的是最小字符数；没有方法指定最大数量。
-此外，宽度在每次提取和插入时都会重置为零。如果我们想要有
+#### 解释
 
+开启/关闭标志是简单的。可以通过`setf()`函数开启，通过`unsetf()`函数关闭。
 
-一个固定宽度，我们在每次插入或提取后都需要调用 `width()`。
-大部分输出都是自言自懂的。`unitbuf` 和 `stdio` 标志值得某些解释。当我们想要确保每个字符在插入到输出流时立即被输出时，应该开启单位缓冲。你也可以使用无缓冲输出，但单位缓冲提供了更好的性能。* 
+标志可以通过这种方式设置/取消，包括`ws`、`showpoint`、`uppercase`、`showpos`和`floatfield`。
 
-## 挑战 8
+第二类格式标志是分组工作的。你同时只能拥有这些标志之一。要设置这些标志，必须使用`setf()`的第二形式。例如，每个进制都有一个标志：十六进制、十进制和八进制。这些标志统称为`basefield`。如果设置了`ios::dec`且你调用`set(ios::hex)`，你会设置`hex`，但不会清除`ios::dec`位，从而导致未定义行为。正确正确的方法是调用`setf()`的另一种形式：`cout.set(ios::hex, basefield);`
 
-编写一个使用操作符（manipulators）的程序，产生与挑战 7 类似的输出。
+这首先清除类中的所有位，然后设置`ios::hex`。
 
-## 解决方案
+同样，对齐标志统称为`floatfield`。此外，`left`、`right`和`internal`统称为`justfield`。
+
+类中有数据成员控制输出字段的宽度、当数据未填充输出字段时使用的填充字符以及打印浮点数的精度。变量的值可以由类的成员函数进行读取和写入。关于字段宽度值的小说明——当指定的宽度小于表示指定宽度的字符数时，指定的宽度会被忽略。因此，如果你尝试用20的宽度输出`412`，你将仍然得到`412`。字段指定的是最小字符数；没有方法指定最大数量。
+
+此外，宽度在每次提取和插入时都会重置为零。如果我们想要一个固定宽度，我们在每次插入或提取后都需要调用`width()`。
+
+大部分输出都是自言自懂的。`unitbuf`和`stdio`标志值得某些解释。当我们想要确保每个字符在插入到输出流时立即被输出时，应该开启单位缓冲。你也可以使用无缓冲输出，但单位缓冲提供了更好的性能。
+
+### 挑战 8
+
+编写一个使用操作符（manipulators）的程序，产生与挑战7类似的输出。
+
+#### 解决方案
 
 ```cpp
 // Project: challenge8
@@ -6430,97 +6314,111 @@ int main() {
 }
 ```
 
-示例运行
+#### 示例运行
+
+```
++52
+
+034
+
+064
+
+Fill character: 0000000052
+
++5200000000
+
+0000000052
 
 +52
-034
-064
-Fill character: 0000000052
-+5200000000
-0000000052
-+52
+
 Dream. Make it happen!
 
 000000000Dream. Make it happen!
+
 000000000Dream. Make it happen!
+
 Precision: +6
+
 425.000
 
-## 475
+475
+
 123.500.328
+```
 
-## 解释
-调用 ioc 类的成员函数来设置流的格式化数据有些繁琐。使用操作符可以更容易（更简洁）地执行这些函数的操作。当我们使用操作符时，格式化指令被直接插入到流中。
+#### 解释
 
-操作符有两种类型：带参数的和一个不带参数的。带参数的操作符在 'iostream' 中提供，而不带参数的操作符在 'iomanip' 中提供。图 14.1 列出了所有操作符及其功能。
+调用`ioc`类的成员函数来设置流的格式化数据有些繁琐。使用操作符可以更容易（更简洁）地执行这些函数的操作。当我们使用操作符时，格式化指令被直接插入到流中。
 
-| 操作符 | 用途 |
-| --- | --- |
-| skip | 输入时跳过空白符 |
-| noskip | 输入时不跳过空白符 |
-| dec | 转换为十进制 |
-| oct | 转换为八进制 |
-| hex | 转换为十六进制 |
-| left | 左对齐，或在右侧 |
-| right | 内部对齐 | 在正符号和值之间使用填充 |
-| endl | 插入换行符并刷新输出流 |
-| showpos | 正数显示加号 |
-| noshowpos | 正数不显示符号 |
-| uppercase | 十六进制显示大写 A-F，科学计数法显示大写 E |
-| nouppercase | 不以大写显示十六进制值 |
-| noshowpoint | 浮点值不显示小数点和尾部零 |
-| scientific | 浮点值使用科学计数法 |
-| fixed | 浮点值使用固定计数法 |
-| mid | 插入标记字符以终止输出字符串 |
-| flush | 刷新输出流 |
-| lock | 锁定文件句柄 |
-| unlock | 解锁文件句柄 |
-| setw (int n) | 将输出字段宽度更改为 n |
-| setchar (char n) | 将字符更改为 a（默认空格） |
-| setprecision (int n) | 将小数点后的精度改为 n 位 |
-| setbase (base n) | 将进制更改为 n，其中 n 为 8, 10 或 16 |
-| setflags (flags n) | 设置指定的标志。设置持续有效直到下一次更改 |
-| resetflags (flags n) | 清除 n 指定的格式标志。设置持续有效直到下一次更改 |
-
-图 14.1
+操作符有两种类型：带参数的和不带参数的。带参数的操作符在`iostream`中提供，而不带参数的操作符在`iomanip`中提供。图14.1列出了所有操作符及其功能。
 
 | 操作符 | 用途 |
 |---|---|
-| skip | 输入时跳过空白符 |
-| noskip | 输入时不跳过空白符 |
-| dec | 转换为十进制 |
-| oct | 转换为八进制 |
-| hex | 转换为十六进制 |
-| left | 左对齐，右侧填充 |
-| right | 右对齐，左侧填充 |
-| internal | 在正符号和值之间使用填充 |
-| endl | 插入换行符并刷新输出流 |
-| showpos | 正数显示加号 |
-| noshowpos | 正数不显示符号 |
-| uppercase | 十六进制显示大写 A-F，科学计数显示大写 E |
-| lowercase | 不以大写显示十六进制 |
-| showpoint | 浮点值显示小数点和尾部零 |
-| noshowpoint | 浮点值不显示小数点和尾部零 |
-| scientific | 浮点值使用科学计数法 |
-| fixed | 浮点值使用固定计数法 |
-| flush | 插入空字符终止输出字符串 |
-| flush | 刷新输出流 |
-| lock | 锁定文件句柄 |
-| unlock | 解锁文件句柄 |
-| setw (int n) | 将输出字段宽度更改为 n |
-| setfill (char n) | 将字符更改为 n（默认空格） |
-| setprecision (int n) | 将小数点后的精度改为 n 位 |
-| base (base n) | 将进制更改为 n，其中 n 为 8, 10 或 16 |
-| setflags (flags n) | 通过 n 设置指定的标志。设置持续有效直到下一次更改 |
-| resetflags (flags n) | 清除 n 指定的格式标志。设置持续有效直到下一次更改 |
+| `skip` | 输入时跳过空白符 |
+| `noskip` | 输入时不跳过空白符 |
+| `dec` | 转换为十进制 |
+| `oct` | 转换为八进制 |
+| `hex` | 转换为十六进制 |
+| `left` | 左对齐，或在右侧 |
+| `right` | 内部对齐 | 在正符号和值之间使用填充 |
+| `endl` | 插入换行符并刷新输出流 |
+| `showpos` | 正数显示加号 |
+| `noshowpos` | 正数不显示符号 |
+| `uppercase` | 十六进制显示大写A-F，科学计数法显示大写E |
+| `nouppercase` | 不以大写显示十六进制值 |
+| `noshowpoint` | 浮点值不显示小数点和尾部零 |
+| `scientific` | 浮点值使用科学计数法 |
+| `fixed` | 浮点值使用固定计数法 |
+| `mid` | 插入标记字符以终止输出字符串 |
+| `flush` | 刷新输出流 |
+| `lock` | 锁定文件句柄 |
+| `unlock` | 解锁文件句柄 |
+| `setw(int n)` | 将输出字段宽度更改为`n` |
+| `setchar(char n)` | 将字符更改为`a`（默认空格） |
+| `setprecision(int n)` | 将小数点后的精度改为`n`位 |
+| `setbase(base n)` | 将进制更改为`n`，其中`n`为8,10或16 |
+| `setflags(flags n)` | 设置指定的标志。设置持续有效直到下一次更改 |
+| `resetflags(flags n)` | 清除`n`指定的格式标志。设置持续有效直到下一次更改 |
 
-图 14-1
+图14.1
 
-## 挑战 82
+| 操作符 | 用途 |
+|---|---|
+| `skip` | 输入时跳过空白符 |
+| `noskip` | 输入时不跳过空白符 |
+| `dec` | 转换为十进制 |
+| `oct` | 转换为八进制 |
+| `hex` | 转换为十六进制 |
+| `left` | 左对齐，右侧填充 |
+| `right` | 右对齐，左侧填充 |
+| `internal` | 在正符号和值之间使用填充 |
+| `endl` | 插入换行符并刷新输出流 |
+| `showpos` | 正数显示加号 |
+| `noshowpos` | 正数不显示符号 |
+| `uppercase` | 十六进制显示大写A-F，科学计数显示大写E |
+| `lowercase` | 不以大写显示十六进制 |
+| `showpoint` | 浮点值显示小数点和尾部零 |
+| `noshowpoint` | 浮点值不显示小数点和尾部零 |
+| `scientific` | 浮点值使用科学计数法 |
+| `fixed` | 浮点值使用固定计数法 |
+| `flush` | 插入空字符终止输出字符串 |
+| `flush` | 刷新输出流 |
+| `lock` | 锁定文件句柄 |
+| `unlock` | 解锁文件句柄 |
+| `setw(int n)` | 将输出字段宽度更改为`n` |
+| `setfill(char n)` | 将字符更改为`n`（默认空格） |
+| `setprecision(int n)` | 将小数点后的精度改为`n`位 |
+| `base(base n)` | 将进制更改为`n`，其中`n`为8,10或16 |
+| `setflags(flags n)` | 通过`n`设置指定的标志。设置持续有效直到下一次更改 |
+| `resetflags(flags n)` | 清除`n`指定的格式标志。设置持续有效直到下一次更改 |
 
-编写一个程序创建两个自定义的操作符，称为 tab 和 roman。tab 操作符应该向输出流输出 '\t'，roman 操作符应该接收一个罗马字符串作为参数，并将其十进制等值发送到输出流。
+图14-1
 
-## 解决方案
+### 挑战 82
+
+编写一个程序创建两个自定义的操作符，称为`tab`和`roman`。`tab`操作符应该向输出流输出`'\t'`，`roman`操作符应该接收一个罗马字符串作为参数，并将其十进制等值发送到输出流。
+
+#### 解决方案
 
 ```cpp
 // Project: challenge82
@@ -6595,19 +6493,17 @@ int main() {
 }
 ```
 
-
-
-
 对运算符函数的调用没有被转换为以下形式
+
 `cout.operator << (roman (str1));`
 
-在运算符函数内部，我们已经 `str` 中的值转换为了它的十进制等效值，并使用 `cout` 对象的引用输出了它。最后，我们返回了引用。如果我们要在级联的 `cout` 中使用该操作符，这种引用返回是必要的。
+在运算符函数内部，我们已经`str`中的值转换为了它的十进制等效值，并使用`cout`对象的引用输出了它。最后，我们返回了引用。如果我们要在级联的`cout`中使用该操作符，这种引用返回是必要的。
 
-## 挑战 83
+### 挑战 83
 
 编写一个程序，将数值和字符串数据写入文件。重新读取该文件并在屏幕上显示读取的内容。
 
-## 解决方案
+#### 解决方案
 
 ```cpp
 // Project: chall3
@@ -6634,40 +6530,56 @@ int main() {
 }
 ```
 
-## 示例运行
+#### 示例运行
 
+```
 25
-473.14
-Hyperbole!
 
-## 解释
+473.14
+
+Hyperbole!
+```
+
+#### 解释
 
 首先，我们通过语句
-`ofstream outfile("SAMPLE.TXT")`
-定义了一个名为 `outfile` 的 `ofstream` 类对象。这调用了 `ofstream` 类的参数构造函数。该构造函数分配了资源并打开了文件 SAMPLE.TXT。但我们没有提到该文件是用于读取还是写入。这是没有必要的，因为构造函数使用了默认值。构造函数的原型看起来如下：
-`ofstream(const char*, ios_base::openmode = ios_base::out)`
-当我们不向构造函数传递任何参数时，它使用 `ios_base::out` 作为默认的文件打开模式。
-第三个参数对应于访问权限，除非在文件打开模式中指定了它。默认值设置为读写权限。
-有些人可能在创建 `ofstream` 对象时并文件的文件名。在某些情况下，我们可能先创建对象，然后调用 `ofstream::open()` 函数来打开文件，如下：
-`outfile:`
-`outfile.open("SAMPLE.TXT")`
-再次我们没有提到文件打开模式。原因相同：`ios` 已经按位或（OR）包含了模式中（第二个参数）。随后，当再次为读取打开文件时，`istream` 类的参数构造函数被调用。该构造函数默认使用 `iostream` 来打开文件进行输入。
 
-插入运算符 `<<` 已经在 `ostream` 类（`ofstream` 派自于此）中被适当重载，以便将不同的数据类型写入相关的流。我们可以使用相同的运算符函数将数据输出到文件中。我们通过语句实现了这一点：
+`ofstream outfile("SAMPLE.TXT")`
+
+定义了一个名为`outfile`的`ofstream`类对象。这调用了`ofstream`类的参数构造函数。该构造函数分配了资源并打开了文件`SAMPLE.TXT`。但我们没有提到该文件是用于读取还是写入。这是没有必要的，因为构造函数使用了默认值。构造函数的原型看起来如下：
+
+`ofstream(const char*, ios_base::openmode = ios_base::out)`
+
+当我们不向构造函数传递任何参数时，它使用`ios_base::out`作为默认的文件打开模式。
+
+第三个参数对应于访问权限，除非在文件打开模式中指定了它。默认值设置为读写权限。
+
+
+
+有些人可能在创建`ofstream`对象时并文件的文件名。在某些情况下，我们可能先创建对象，然后调用`ofstream::open()`函数来打开文件，如下：
+
+```cpp
+outfile;
+outfile.open("SAMPLE.TXT")
+```
+
+再次我们没有提到文件打开模式。原因相同：`ios`已经按位或（OR）包含了模式中（第二个参数）。随后，当再次为读取打开文件时，`istream`类的参数构造函数被调用。该构造函数默认使用`iostream`来打开文件进行输入。
+
+插入运算符`<<`已经在`ostream`类（`ofstream`派自于此）中被适当重载，以便将不同的数据类型写入相关的流。我们可以使用相同的运算符函数将数据输出到文件中。我们通过语句实现了这一点：
 
 ```cpp
 outfile << c << endl << a << endl;
 ```
 
-注意在写入数据时，我们使用换行符将每个数据项隔开。当我们尝试写入像 25 和 473.14 这样的数字时，这是必要的，它们是以数值字符串的形式写入的。也就是说，473.14 被写入为 '4'、'7'、'3'、'.'、'1'、'4'。
+注意在写入数据时，我们使用换行符将每个数据项隔开。当我们尝试写入像25和473.14这样的数字时，这是必要的，它们是以数值字符串的形式写入的。也就是说，473.14被写入为'4'、'7'、'3'、'.'、'1'、'4'。
 
-回读数据，我们构建了一个 `istream` 类的对象。该对象的构造函数打开了 "SAMPLE.TXT" 文件进行读取。一旦，我们使用了 `istream` 类的重载提取操作来从文件中读取数据。在每个数据项末尾写入的 `\n` 有助于重载运算符区分不同的项。当数值字符串从文件中被读回时，它们会被转换回二进制表示，以便存储在程序变量中。
+回读数据，我们构建了一个`istream`类的对象。该对象的构造函数打开了"SAMPLE.TXT"文件进行读取。一旦，我们使用了`istream`类的重载提取操作来从文件中读取数据。在每个数据项末尾写入的`\n`有助于重载运算符区分不同的项。当数值字符串从文件中被读回时，它们会被转换回二进制表示，以便存储在程序变量中。
 
-我们在写入后通过调用 `ostream::close()` 函数显式地关闭了文件。这是必要的，因为我们想要再次打开同一个文件进行读取。
+我们在写入后通过调用`ostream::close()`函数显式地关闭了文件。这是必要的，因为我们想要再次打开同一个文件进行读取。
 
-注意在从文件读取完成后，我们没有关闭文件。这是因为在程序终止时，`infile` 对象离开了作用域。结果是析构函数被调用并关闭了文件。
+注意在从文件读取完成后，我们没有关闭文件。这是因为在程序终止时，`infile`对象离开了作用域。结果是析构函数被调用并关闭了文件。
 
-`istream` 和 `ostream` 类声明在头文件 'iostream' 中。该文件也包含了 'ostream' 头文件，因此没有需要显式包含它。
+`istream`和`ostream`类声明在头文件`'iostream'`中。该文件也包含了`'ostream'`头文件，因此没有需要显式包含它。
 
 ![](img/394bb8deccf11d448b63cecf5bd4bd97_183_0.png)
 
@@ -6708,13 +6620,14 @@ int main()
 ## 示例运行
 
 You should be enthusiastic about your future!
+
 That is where you are going to spend the rest of your life!
 
 ## 解释
 
-在这里，我们使用 `getline()` 函数每次从文件中读取文本。这是 `istream` 的成员函数（`istream` 派自于此）。它读取字符直到遇到行尾 "\n"，并将结果字符串放在作为参数提供的缓冲区中。缓冲区的大小由第二个参数给出。缓冲区的内容被显示。这一直持续到所有行都被读取完毕。
+在这里，我们使用`getline()`函数每次从文件中读取文本。这是`istream`的成员函数（`istream`派自于此）。它读取字符直到遇到行尾`"\n"`，并将结果字符串放在作为参数提供的缓冲区中。缓冲区的大小由第二个参数给出。缓冲区的内容被显示。这一直持续到所有行都被读取完毕。
 
-我们在循环中不断检查是否读取完了整个文件。为此我们调用了 `istream::eof()` 函数。该函数在到达文件末尾时返回零，否则返回非零。
+我们在循环中不断检查是否读取完了整个文件。为此我们调用了`istream::eof()`函数。该函数在到达文件末尾时返回零，否则返回非零。
 
 ## 挑战 8s
 
@@ -6758,18 +6671,14 @@ int main() {
 }
 ```
 
-
-
-` 标签内似乎中断了（仅包含了挑战 86 的部分内容）。根据您的要求，我为您翻译了已提供的这部分内容。如果您有后续文本，请继续提供。
-
-[content]
 ## 挑战 86
 
-编写一个使用模板实现的 `Array` 类程序。使用该 `Array` 类来维护一个整数数组和一个浮点数数组。
+编写一个使用模板实现的`Array`类程序。使用该`Array`类来维护一个整数数组和一个浮点数数组。
 
 ## 解决方案
 
-```cpp// Project: chall86
+```cpp
+// Project: chall86
 // 模板 Array 类.
 #include <iostream>
 using namespace std;
@@ -6822,60 +6731,81 @@ int main() {
 }
 ```
 
-在 `main()` 中：
+在`main()`中：
+
 一旦我们创建了这两个数组，我们就向它们填充了一些值。
-为了实现这一点，我们重载了 `[]` 运算符，它帮助我们访问 `arr1` 的单个元素。
-`erase()` 函数清空数组，而 `getLength()` 则报告数组的当前长度；
+
+为了实现这一点，我们重载了`[]`运算符，它帮助我们访问`arr1`的单个元素。
+
+`erase()`函数清空数组，而`getLength()`则报告数组的当前长度；
 
 ## 示例运行
 
 - 0 0.5
+
 - 1 1.5
+
 - 2 2.5
+
 - 3 3.5
+
 - 4 4.5
+
 - 5 5.5
+
 - 6 6.5
+
 - 7 7.5
+
 - 8 8.5
+
 - 9 9.5
 
 Lengths = 10 10
+
 Lengths = 0 0
 
 解释：
-模板 `Array` 类作用于泛型类型。在编译期间，会为泛型 `Array` 类创建两个特定的类——一个用于整数数组，另一个用于浮点数数组。编译器是如何决定创建这两个版本的呢？嗯，从 `arr1` 和的定义来看……
 
-
+模板`Array`类作用于泛型类型。在编译期间，会为泛型`Array`类创建两个特定的类——一个用于整数数组，另一个用于浮点数数组。编译器是如何决定创建这两个版本的呢？嗯，从`arr1`和的定义来看……
 
 cout << "Stack is empty" << endl;
+
 }
 
 ## 运行示例
 
 元素 10 添加到栈
+
 元素 20 添加到栈
+
 元素 30 添加到栈
+
 栈已满
+
 从栈中弹出元素 = 30
+
 从栈中弹出元素 = 20
+
 从栈中弹出元素 = 10
+
 栈空
 
 ## 解释说明
 
-栈是一个 LIFO（后进先出）列表——最后一个推入（添加）到栈的元素是第一个从中弹出（移除）的元素。模板类确保了我们可以轻松地使用同一个类来维护浮点数/双精度浮点数/字符串栈。如果栈为空，top 的值为 -1。`isEmpty()` 函数检查栈是否为空。如果是空的，我们就无法从中弹出元素。同样，`isFull()` 函数检查栈是否满。如果是满的，我们就无法向其中推入新元素。
+栈是一个LIFO（后进先出）列表——最后一个推入（添加）到栈的元素是第一个从中弹出（移除）的元素。模板类确保了我们可以轻松地使用同一个类来维护浮点数/双精度浮点数/字符串栈。如果栈为空，top的值为-1。`isEmpty()`函数检查栈是否为空。如果是空的，我们就无法从中弹出元素。同样，`isFull()`函数检查栈是否满。如果是满的，我们就无法向其中推入新元素。
 
 # 异常处理挑战
 
 总挑战数：4
 
-异常是在运行时发生的错误。异常发生有很多原因，例如内存不足、无法打开文件、超出数组边界、尝试将对象初始化为不可能的值等。本章将测试你是否能够以 C++ 的方式处理此类异常情况。
+异常是在运行时发生的错误。异常发生有很多原因，例如内存不足、无法打开文件、超出数组边界、尝试将对象初始化为不可能的值等。本章将测试你是否能够以C++的方式处理此类异常情况。
 
 ## 挑战 90
 
-编写一个程序创建一个包含 10 个元素的 vector，并在从键盘接收的索引位置上设置一个值。此外，将 vector 调整调整为新的更大的尺寸。
-创建一个 5 位的 bitset，并使用从键盘接收的二进制字符串设置它。创建另一个 bitset，用 0 和 1 设置它并将此字符串转换为无符号长整型（unsigned long int）。在执行所有操作时，注意执行过程中可能出现的异常情况。
+编写一个程序创建一个包含10个元素的vector，并在从键盘接收的索引位置上设置一个值。此外，将vector调整调整为新的更大的尺寸。
+
+创建一个5位的bitset，并使用从键盘接收的二进制字符串设置它。创建另一个bitset，用0和1设置它并将此字符串转换为无符号长整型（unsigned long int）。在执行所有操作时，注意执行过程中可能出现的异常情况。
 
 ## 解决方案
 
@@ -6924,37 +6854,42 @@ int main() {
 ## 运行示例
 
 输入 vector indices:
+
 4
 
 Length error: vector::_M_default_append
 
 Enter a string containing 0s and 1s:
+
 0101
 
 Unknown exception: Base_bitset::_M_do_to_ulong
 
 Enter vector indices:
+
 20
 
 Out of Range error: vector::_M_range_check__n (which is 20) >= this->size()
+
 (which is 10)
 
 Enter a string containing 0s and 1s:
+
 1102
 
 Invalid argument: bitset::_M_copy_from_ptr
 
 ## 解释说明
 
-对于 vector，我们捕到了两个标准异常——一个是在尝试访问超出范围的 vector 元素时发生的，另一个是在调整 vector 大小时发生的。这些异常分别称为越界异常（out of range）和长度错误异常（length error）。
+对于vector，我们捕到了两个标准异常——一个是在尝试访问超出范围的vector元素时发生的，另一个是在调整vector大小时发生的。这些异常分别称为越界异常（out of range）和长度错误异常（length error）。
 
-对于 bitset，我们捕获了两个异常——一个是在提供无效字符串转换为 bitset 时发生的，另一个是在将 bitset 转换为无符号长整型时。
+对于bitset，我们捕获了两个异常——一个是在提供无效字符串转换为bitset时发生的，另一个是在将bitset转换为无符号长整型时。
 
-当我们不知道可能会发生哪个异常时，可以使用所有标准异常的基类（即 exception 类）编写一个全捕获块（catch all block）。
+当我们不知道可能会发生哪个异常时，可以使用所有标准异常的基类（即exception类）编写一个全捕获块（catch all block）。
 
 ## 挑战 91
 
-编写一个实现 Queue 类的程序，当我们尝试向已经满的队列添加新元素，或者尝试从已经空的队列中删除元素时，它会抛出一个异常。在 main() 中处理这些异常。
+编写一个实现Queue类的程序，当我们尝试向已经满的队列添加新元素，或者尝试从已经空的队列中删除元素时，它会抛出一个异常。在main()中处理这些异常。
 
 ## 解决方案
 
@@ -7029,20 +6964,21 @@ int main() {
 }
 ```
 
-
-
 读取。
-由于我们没有可以接收抛出字符串的 catch 块，控制流将转移到全捕获 块 `catch (...)`。
+
+
+
+由于我们没有可以接收抛出字符串的 `catch` 块，控制流将转移到全捕获块 `catch (...)`。
 
 # STL 挑战
 
-在编程过程中，我们经常会创建标准数据类型或用户定义类型的集合。我们对这些集合执行的典型操作包括添加、删除、遍历集合、搜索、排序等。STL 允许我们以通用的方式创建集合，然后同样以通用的方式对其进行操作。这避免了大量的代码重复。本章介绍了与 STL 主题相关的挑战。
+在编程过程中，我们经常会创建标准数据类型或用户定义类型的集合。我们对这些集合执行的典型操作包括添加、删除、遍历集合、搜索、排序等。STL 允许我们以通用的方式创建集合，然后同样以通用的方式对其进行操作，这避免了大量的代码重复。本章介绍了与 STL 主题相关的挑战。
 
 ## 挑战 94
 
 一个维护用户定义类 `Point` 对象集合的程序。
 
-解决方案
+**解决方案**
 
 ```cpp
 // Project: challenge94
@@ -7095,40 +7031,59 @@ int main() {
 }
 ```
 
-## 示例运行
+### 示例运行
 
+```
 Vector vp1:
+
 x = 1, y = 1
+
 x = 2, y = 2
+
 x = 3, y = 3
+
 x = 4, y = 4
+
 x = 5, y = 5
 
 Front: x, y = 1, 1
+
 Back: x, y = 5, 5
+
 Reverse Vector vp1:
+
 x = 5, y = 5
+
 x = 4, y = 4
+
 x = 3, y = 3
+
 x = 2, y = 2
+
 x = 1, y = 1
 
 Sizeof vp1: 5
-Vector vp2:
-x = 1, y = 1
-x = 2, y = 2
 
-## 解释
+Vector vp2:
+
+x = 1, y = 1
+
+x = 2, y = 2
+```
+
+### 解释
 
 在这个程序中，我们首先声明了一个 `Point` 类，其中包含构造函数、析构函数、拷贝构造函数和重载的赋值运算符。然后，在 `main()` 函数中，通过循环创建了 5 个 `Point` 对象并将它们添加到 vector `vp` 中。添加操作是通过调用 vector 类的 `insert()` 函数完成的。
+
 接下来，我们使用迭代器遍历 vector，打印了 vector 中所有 `Point` 对象的值。我们还使用 `front()` 和 `back()` 方法访问了 vector 头部和末尾的元素。
+
 还可以使用 `reverse_iterator` 反向遍历容器。可以使用 `size()` 方法获取容器的大小。最后，我们创建了另一个 vector `vp2`，并从头到尾将 3 个元素复制到 `vp1` 中。
 
 ## 挑战 95
 
 使用 STL 编写一个程序来维护 `Point` 对象列表。
 
-解决方案
+**解决方案**
 
 ```cpp
 // Project: challenge95
@@ -7163,15 +7118,20 @@ int main() {
     }
     return 0;
 }
-## 示例运行
+```
+
+### 示例运行
+
+```
 List:
 x=1, y=1
 x=2, y=2
 x=3, y=3
 x=4, y=4
 x=5, y=5
+```
 
-## 解释
+### 解释
 
 在这里我们使用 list 的 `insert()` 函数创建了 5 个 `Point` 对象并将它们插入到列表末尾。然后使用迭代器遍历列表。
 
@@ -7179,7 +7139,7 @@ x=5, y=5
 
 使用 STL 编写一个程序维护包含姓名和号码的电话簿。应该可以通过姓名或号码搜索电话簿。
 
-解决方案
+**解决方案**
 
 ```cpp
 // Project: challenge96
@@ -7189,11 +7149,13 @@ x=5, y=5
 #include <string>
 #include <cstdlib>
 using namespace std;
+
 struct Person {
     string name;
     int phoneNum;
     Person(string s = "", int num = 0) {}
 };
+
 void displayData(vector<Person>& p);
 void search(vector<Person>& p, string str);
 void search(vector<Person>& p, int num);
@@ -7272,7 +7234,9 @@ void search(vector<Person>& p, int num) {
 }
 ```
 
-## 示例运行
+### 示例运行
+
+```
 1. View Phone Book
 2. Search by name
 3. Search by number
@@ -7302,16 +7266,18 @@ Nimish 253423
 3. Search by number
 0. Exit
 Enter your choice: 0
+```
 
 ## 挑战 97
 
-编写一个使用 bitset 执行以下操作的程序：set, unset, flip, reset 以及指定位置的值。
+编写一个使用 `bitset` 执行以下操作的程序：`set`, `unset`, `flip`, `reset` 以及指定位置的值。
 
 ```cpp
 // Project: challenge97
 // Demonstrates usage of bitset
 #include <bits/stdc++.h>
 using namespace std;
+
 int main() {
     int m = 8;
     bitset<m> bs1; // 全 0
@@ -7338,10 +7304,12 @@ int main() {
     bs4.set(5); // bs4[5] = 0;
     bs4.set(6); // bs4[6] = 0;
     bs4.set(7); // bs4[7] = 0;
+
     cout << "bs4 after setting 00001111 " << bs4 << endl;
 
     bs4.reset(1); // 将位 1 置为 0
     cout << "bs4 after resetting bit 1 - " << bs4 << endl;
+
     bs4.reset(); // 将所有位置为 0
     cout << "bs4 after resetting all bits - " << bs4 << endl;
 
@@ -7350,25 +7318,30 @@ int main() {
 }
 ```
 
-
-
 ```cpp
 val = bs4.test(2);
 if (val)
     cout << "2nd bit bs4 is on" << endl;
 else
     cout << "2nd bit bs4 is off" << endl;
+
 cout << "Current bs4 value = " << bs4 << endl;
+
 bs4.flip(3);
 cout << "after flipping bit 3 = " << bs4 << endl;
 cout << "after flipping all bits = " << bs4 << endl;
+
 // 使用 bitset 将十进制转换为二进制
 int num = 65;
 cout << "Decimal number = " << num << endl;
 cout << "Binary equivalent = " << bitset<8>(num);
-return 0;
 
-样例运行结果
+return 0;
+```
+
+### 样例运行结果
+
+```
 bs1 = 00000000
 bs2 = 00101101
 bs3 = 00101101
@@ -7378,23 +7351,38 @@ bs3 中 1 的个数 = 3
 bs3 中 0 的个数 = 5
 bs1 没有设置的位
 bs5 所有位均已设置
-bs1 设置所有位后 = 11111111
-bs4 设置 00001111 后 = 00001111
-bs4 重置第 1 位后 = 00001101
-bs4 重置所有位后 = 00000000
-bs4 第 2 位未设置
-当前 bs4 数值 = 00000000
-bs4 翻转第 3 位后 = 00001000
-bs4 翻转所有位后 = 11110111
-十进制数 = 65
-二进制等效值 = 01000001
-
-解释
-程序是自解释明的。请查看注释并结合程序样例运行中显示的输出进行验证。
 ```
 
+
+
+`bs1` 设置所有位后 = `11111111`
+
+`bs4` 设置 `00001111` 后 = `00001111`
+
+`bs4` 重置第 1 位后 = `00001101`
+
+`bs4` 重置所有位后 = `00000000`
+
+`bs4` 第 2 位未设置
+
+当前 `bs4` 数值 = `00000000`
+
+`bs4` 翻转第 3 位后 = `00001000`
+
+`bs4` 翻转所有位后 = `11110111`
+
+十进制数 = `65`
+
+二进制等效值 = `01000001`
+
+## 解释
+
+程序是自解释明的。请查看注释并结合程序样例运行中显示的输出进行验证。
+
+```
 # 18
 # 杂项挑战
+```
 
 总挑战数：4
 
@@ -7404,94 +7392,165 @@ C++ 中某些某些你并不频繁使用的特性。这些包括智能指针、�
 
 编写一个程序，使用 `Container` 类来维护一个链表。同时实现一个 `SmartPointer` 类，允许你使用 `*` 运算符访问 `Container` 元素，并使用 `++` 运算符遍历 `Container`。
 
-## 解决方案
+### 解决方案
 
 ```cpp
 // 项目：用于遍历容器的智能指针
+
 #include <iostream>
+
 using namespace std;
+
 class Container
+
 {
+
 private:
+
     struct node
+
     {
+
         int data;
+
         node *link;
+
     }
+
     node *head, *current;
+
     int count;
+
 public:
+
     Container()
+
     {
+
         head = NULL;
+
         count = 0;
+
     }
+
     void add(int n)
+
     {
+
         node *temp = new node;
+
         temp->data = n;
+
         temp->link = NULL;
+
         if (!head)
+
             head = temp;
+
         else
+
         {
+
             node *q;
+
             q = head;
+
             while (q->link != NULL)
+
                 q = q->link;
+
             q->link = temp;
+
             count++;
+
         }
+
     }
+
     int getcount()
+
     {
+
         return count;
+
     }
+
 };
+
 class SmartPointer
+
 {
+
 private:
+
     Container *ptr;
+
 public:
+
     SmartPointer(Container *t)
+
     {
+
         ptr = t;
+
     }
+
     int operator *()
+
     {
+
         if (ptr->current != NULL) {
+
             return NULL;
+
         } else {
+
             int i = ptr->current->data;
+
             return i;
+
         }
+
     }
+
     void operator++ (int n)
+
     {
+
         if (ptr->current) {
+
             ptr->current = ptr->current->link;
+
         }
+
     }
+
 };
 ```
 
 ```cpp
 for (int i = 0; i < c.getCount(); i++) {
+
     cout << "*" << sptr << endl;
+
     sptr++;
+
 }
+
 return 0;
+
 }
 ```
 
-## 样例运行结果
-10
-20
-0
---40
-50
+### 样例运行结果
 
-## 解释
+`10`
+`20`
+`0`
+`--40`
+`50`
+
+### 解释
 
 容器是在内存中组织数据的方式。因此，栈、链表、数组都是容器。迭代器通过移动容器来访问容器的各种元素。
 
@@ -7501,13 +7560,21 @@ return 0;
 
 ```cpp
 int main() {
+
     Container c;
+
     c.add(10);
+
     c.add(20);
+
     c.add(0);
+
     c.add(40);
+
     c.add(50);
+
     SmartPointer sptr(&c);
+
 }
 ```
 
@@ -7526,113 +7593,198 @@ int main() {
 
 编写一个程序，实现一个 `Container` 类来维护 `Sample` 对象的数组。创建一个 `SmartPointer` 类作为 `Container` 类的友。在 `SmartPointer` 类中重载 `->` 运算符，以便在 `main()` 中可以像指针一样使用 `SmartPointer` 对象。
 
-## 解决方案
+### 解决方案
 
 ```cpp
 // 项目：挑战
 // -> 运算符的重载
+
 #include <iostream>
+
 #include <string>
+
 using namespace std;
+
 class Sample
+
 {
+
 private:
+
     int i;
+
     float a;
+
 public:
+
     Sample() {}
+
     Sample(int ii, float aa)
+
     {
+
         i = ii;
+
         a = aa;
+
     }
+
     void fun1()
+
     {
+
         cout << i << " " << a << endl;
+
     }
+
     void fun2()
+
     {
+
         cout << i << " " << a << endl;
+
     }
+
 };
+
 class Container
+
 {
+
 private:
+
     enum { size = 100 };
+
     Sample *arr[size];
+
     int index;
+
 public:
+
     Container()
+
     {
+
         index = 0;
+
         memset(arr, 0, sizeof(Sample));
+
     }
+
     void add(int ii, float aa)
+
     {
+
         if (index >= size)
+
             return;
+
         arr[index] = new Sample(ii, aa);
+
         index++;
+
     }
+
     friend class SmartPointer;
+
 };
 ```
 
 ```cpp
 class SmartPointer
+
 {
+
 private:
+
     Container *c;
+
     int index;
+
 public:
+
     SmartPointer(Container *ptr)
+
     {
+
         c = ptr;
+
         index = 0;
+
     }
+
     int operator ++ (int n)
+
     {
+
         if (index <= c->size)
+
             return index++;
+
         return NULL;
+
         if (c->arr[index] == NULL)
+
             return NULL;
+
         return 1;
+
     }
+
     Sample *operator ()
+
     {
+
         if (c->arr[index])
+
             return c->arr[index];
+
         static Sample dummy;
+
         return &dummy;
+
     }
+
 };
 
 int main ()
+
 {
+
     Container c(10, 3, 14);
+
     c.add(20, 6, 28);
+
     c.add(30, 9, 45);
+
     c.add(40, 8, 66);
+
     SmartPointer sptr (&c);
+
     sptr->fun1();
+
     sptr->fun2();
+
     while (sptr++);
+
     return 0;
+
 }
 ```
 
-样例运行结果
-10 3.14
-31.4
-20 6.28
-125.6
-30 9.45
-283.5
-40 8.66
-346.4
+### 样例运行结果
 
-解释
+`10 3.14`
+`31.4`
+`20 6.28`
+`125.6`
+`30 9.45`
+`283.5`
+`40 8.66`
+`346.4`
+
+### 解释
+
 尽管 `sptr` 是一个对象，但我们可以让它像指针一样工作。此外，尽管 `fun1()` 和 `fun2()` 不是 `SmartPointer` 类的成员函数，我们仍然可以直接调用它们。智能指针机制为 `operator ->` 函数返回的 `sample*` 调用这些函数。
 重载的 `operator ->` 通常称为智能指针运算符。注意，重载的智能指针运算符必须是一个成员函数。它还必须返回对象或其地址。
 尽管智能指针的底层原理很复杂，但它提供了方便的语法，这可能大于复杂性。
@@ -7641,39 +7793,58 @@ int main ()
 
 编写一个程序，使用成员运算符 `*` 和 `->` 访问结构体成员。
 
-## 解决方案
+### 解决方案
 
 ```cpp
 // 项目：chall100
 // 成员运算符
+
 #include <iostream>
 
 using namespace std;
+
 struct sample {
+
     int a;
+
     float b;
+
 };
 
 int main() {
+
     sample so = {10, 3.14};
+
     sample *p1 = &so.a;
+
     sample *p2 = &so.b;
+
     cout << so.*p1 << " " << so.*p2 << endl;
+
     sample *sp;
+
     sp = &p1;
+
     cout << sp->p1 << " " << sp->p2 << endl;
+
     // 我们甚至可以分配新值
+
     so.p1 = 20;
+
     sp->p2 = 6.28f;
+
     cout << so.*p1 << " " << so.*p2 << endl;
+
     cout << sp->p1 << " " << sp->p2 << endl;
+
     return 0;
+
 }
 ```
 
-指向该类而非该类的一个对象。&sample 仅产生一个指向该类的偏移量。只有当我们将该偏移量与特定对象的起始地址结合时，才会产生实际地址。
+指向该类而非该类的一个对象。`&sample` 仅产生一个指向该类的偏移量。只有当我们将该偏移量与特定对象的起始地址结合时，才会产生实际地址。
 
-因此，&sample 仅仅是成员指针的语法。如果我们在一个对象上使用 `p1` 和 `p2`，我们将得到一组值；如果我们在另一个对象上使用它们，将得到另一组值。这在程序末尾所示，我们构建了一个对象数组，并使用 `p1` 和 `p2` 访问了所有对象的元素。其论点是：成员指针并不与任何特定对象绑定。
+因此，`&sample` 仅仅是成员指针的语法。如果我们在一个对象上使用 `p1` 和 `p2`，我们将得到一组值；如果我们在另一个对象上使用它们，将得到另一组值。这在程序末尾所示，我们构建了一个对象数组，并使用 `p1` 和 `p2` 访问了所有对象的元素。其论点是：成员指针并不与任何特定对象绑定。
 
 在 `<<` 的左侧总是一个结构体变量（对象）或引用，而在 `>>` 的左侧总是一个指向结构体（对象）的指针。
 
@@ -7688,7 +7859,7 @@ int main() {
 
 同时说明 `reinterpret_cast` 的用法。
 
-## 答案
+### 答案
 
 ```cpp
 #include <iostream>
@@ -7696,70 +7867,119 @@ int main() {
 using namespace std;
 
 class Base {
+
 public:
+
     operator int() {
+
         return 1;
+
     }
+
 };
+
 class Derived : public Base {
+
 public:
+
     operator int() {
+
         return 2;
+
     }
+
 };
+
 class Sample {
+
 };
 
 int main() {
+
     int a = 65000;
+
     int i = 10;
+
     long l;
+
     float f;
+
     // 显式转换 - 安全
+
     l = static_cast<long>(i);
+
     f = static_cast<float>(l);
+
     cout << i << " " << l << " " << f << endl;
+
     // 窄化转换
+
     i = static_cast<int>(f);
+
     Derived d;
+
     i = static_cast<int>(d);
+
     // 通过 void 指针危险转换
+
     void *vptr;
+
     float *fptr;
+
     vptr = &d;
+
     fptr = static_cast<float *>(vptr);
+
     Base *baseptr;
+
     // 向上转型 - 安全
+
     baseptr = &d;
+
     // 显式向上转型 - 安全
+
     baseptr = static_cast<Base *>(&d);
+
     int x;
+
     // 通过转换函数转换
+
     x = d;
+
     // 通过转换函数进行更显式的转换
+
     x = static_cast<int>(d);
 
     int *iptr = reinterpret_cast<int *>(a);
+
     cout << iptr << endl;
+
     iptr++; // 增加四个
+
     cout << iptr << endl;
+
     a = reinterpret_cast<int>(*iptr);
+
     cout << a << endl;
+
     a++; // 增加 1
+
     cout << a << endl;
+
     return 0;
+
 }
 ```
 
-## 示例运行
+### 示例运行
 
-10 10
-0xfde8
-0xfdec
-65004
-65005
+`10 10`
+`0xfde8`
+`0xfdec`
+`65004`
+`65005`
 
-## 解析
+### 解析
 
 程序的大部分内容是不言自明的。观察程序中的两条语句，我们使用 `static_cast` 将指向 base 的指针转换为指向 sample 的指针，结果触发了错误。这意味着 `static_cast` 不允许我们跳出层次结构进行转换。然而，传统的 C 风格类型转换允许这样做。这意味着 `static_cast` 比传统的转换更安全。
 

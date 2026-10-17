@@ -1,7 +1,7 @@
+
 # 第七章：MySQL 8.0 相比 MySQL 5.7 的关键改进
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter7.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter7.html)
-
 
 MySQL 8.0 在 MySQL 5.7 的基础上引入了大量的改进。它不仅增强了功能并增加了执行计划中对哈希连接的支持，更重要的是，极大地提高了可扩展性。这些进步为未来的改进奠定了坚实的基础。
 
@@ -9,13 +9,11 @@ MySQL 8.0 在 MySQL 5.7 的基础上引入了大量的改进。它不仅增强�
 
 早期开源数据库管理系统代码通常在整个内核中使用粗粒度闩锁。相比之下，InnoDB 采用了更精细的方法，为不同的内核组件（如锁管理器和缓冲池）使用单独的闩锁 [19]。
 
-MySQL 8.0 引入了额外的改进，以增强 InnoDB 存储引擎的可扩展性。以下是相关的改进：
+MySQL 8.0 引入了额外的改进，以增强 `InnoDB` 存储引擎的可扩展性。以下是相关的改进：
 
-1.  **重做日志优化**：对重做日志的增强促进了后续的性能改进。
-
-1.  **锁-sys 闩锁分片**：锁-sys 闩锁已被分片，类似于读写锁，以提高事务锁定。
-
-1.  **trx-sys 闩锁拆分和分片**：尽管闩锁竞争仍然存在，但 trx-sys 的优化为 MVCC ReadView 的未来改进奠定了坚实的基础。
+1. **重做日志优化**：对重做日志的增强促进了后续的性能改进。
+2. **锁-sys 闩锁分片**：锁-sys 闩锁已被分片，类似于读写锁，以提高事务锁定。
+3. **trx-sys 闩锁拆分和分片**：尽管闩锁竞争仍然存在，但 `trx-sys` 的优化为 MVCC `ReadView` 的未来改进奠定了坚实的基础。
 
 以下将详细讨论这些显著的扩展性改进。
 
@@ -23,15 +21,14 @@ MySQL 8.0 引入了额外的改进，以增强 InnoDB 存储引擎的可扩展�
 
 预写日志是 ARIES 风格并发和恢复中的基本、无处不在的组件，它代表了显著的潜在瓶颈，尤其是在频繁对数据进行小更改的 OLTP 工作负载中。确定了两个与数据库系统可扩展性相关的障碍，每个都挑战着软件架构的不同层面 [3]：
 
-1.  大量的小型 I/O 请求可能会使磁盘饱和。
-
-1.  当事务序列化访问内存中的日志数据结构时，会出现竞争。
+1. 大量的小型 I/O 请求可能会使磁盘饱和。
+2. 当事务序列化访问内存中的日志数据结构时，会出现竞争。
 
 上述潜在瓶颈在 MySQL 5.7 中有所体现。有关重做日志优化的详细信息，请参阅“*MySQL 8.0：新的无锁、可扩展 WAL 设计*”，其中复杂性在于如何在新设计中确保日志序列号（LSN）的顺序。文章还强调了以下改进 [27]：
 
 *我们为与重做日志写入相关的特定任务引入了专用线程。用户线程不再直接写入重做文件。他们只需等待需要将重做刷新到磁盘，但尚未刷新时。*
 
-这次改进完全改变了之前的机制，为可扩展性奠定了坚实的基础。以下 git log 详细说明了对重做日志进行的特定优化。
+这次改进完全改变了之前的机制，为可扩展性奠定了坚实的基础。以下 `git log` 详细说明了对重做日志进行的特定优化。
 
 ```cpp
 commit 6be2fa0bdbbadc52cc8478b52b69db02b0eaff40
@@ -87,13 +84,12 @@ Date:   Wed Feb 14 09:33:42 2018 +0100
 
 图中的结果显示，在并发级别为 100 时吞吐量有显著提升，但在高并发级别时有所下降。这种下降可以归因于两个潜在原因：
 
-1.  **未解决的根本性缺陷**：在转换过程中，可能没有完全解决根本性问题。
-
-1.  **多队列瓶颈的干扰**：可能出现类似多队列瓶颈相互干扰的问题。尽管在某些方面的性能有所提升，但在高并发情况下，其他瓶颈却变得更加严重。
+1. **未解决的根本性缺陷**：在转换过程中，可能没有完全解决根本性问题。
+2. **多队列瓶颈的干扰**：可能出现类似多队列瓶颈相互干扰的问题。尽管在某些方面的性能有所提升，但在高并发情况下，其他瓶颈却变得更加严重。
 
 广泛的研究表明，优化理论上应该提高吞吐量。重做日志优化使用类似于组提交的机制来减少 I/O 开销。用户线程不是立即刷新重做日志内容，而是写入日志缓冲区并等待，而专用线程则批量刷新日志到磁盘，并在过程完成后通知用户线程。这种方法预计在高并发情况下将显著减少 I/O 操作。因此，最可能引起性能问题的原因是其他队列中的瓶颈加剧。
 
-实施重做日志优化极具挑战性，没有它，达到数百万 tpmC 的吞吐量几乎是不可能的。
+实施重做日志优化极具挑战性，没有它，达到数百万 `tpmC` 的吞吐量几乎是不可能的。
 
 广泛的测试表明，在低并发条件下，这些优化表现良好，并显著加速了 TPC-C 数据加载过程。具体细节如下图所示：
 
@@ -103,19 +99,19 @@ Date:   Wed Feb 14 09:33:42 2018 +0100
 
 TPC-C 数据加载过程涉及高达 100MB 的大事务。以前，加载 1000 个仓库需要 77 分钟，但经过优化后，现在只需 16 分钟。这表明重做日志优化对于处理大事务非常有效。
 
-为了评估这种优化的真正价值，对 MySQL 5.7.36 进行了可伸缩性增强。这个过程首先应用了 trx-sys 补丁，然后是 lock-sys 补丁，以评估吞吐量提升的程度。具体细节如下图所示：
+为了评估这种优化的真正价值，对 MySQL 5.7.36 进行了可伸缩性增强。这个过程首先应用了 `trx-sys` 补丁，然后是 `lock-sys` 补丁，以评估吞吐量提升的程度。具体细节如下图所示：
 
 ![image-20240829100209917](img/df038ca81523ec4f6d21b7b7763c1a57.png)
 
 图 7-3. 重做日志优化的间接影响。
 
-从图中可以看出，在应用了 trx-sys 和 lock-sys 扩展性补丁后，MySQL 5.7.36 的吞吐量有所提升。然而，它并没有从根本上解决扩展性问题，尤其是与改进后的 MySQL 8.0.27 版本相比。差距仍然很大。为了识别 250 并发时的瓶颈，可以检查以下*perf*工具的截图。
+从图中可以看出，在应用了 `trx-sys` 和 `lock-sys` 扩展性补丁后，MySQL 5.7.36 的吞吐量有所提升。然而，它并没有从根本上解决扩展性问题，尤其是与改进后的 MySQL 8.0.27 版本相比。差距仍然很大。为了识别 250 并发时的瓶颈，可以检查以下 `perf` 工具的截图。
 
 ![image](img/4990fe18db5d697cf145e29c175acd0c.png)
 
-图 7-4. 在 250 并发时的*perf*工具截图。
+图 7-4. 在 250 并发时的 `perf` 工具截图。
 
-从图中可以看出，瓶颈是**prepare_write**，这恰好对应于 MySQL 5.7.36 版本中写入重做日志缓冲区的瓶颈。
+从图中可以看出，瓶颈是 `prepare_write`，这恰好对应于 MySQL 5.7.36 版本中写入重做日志缓冲区的瓶颈。
 
 ```cpp
 /** Prepare to write the mini-transaction log to the redo log buffer.
@@ -161,7 +157,7 @@ ulint mtr_t::Command::prepare_write() {
 
 在 MySQL 5.7 中，锁系统遇到了严重的 latch 竞争问题，在高并发下严重影响了吞吐量。在事务执行期间，频繁的锁定和解锁操作需要获取全局 latch。当许多用户线程竞争这个全局 latch 时，MySQL 的可扩展性成为一个主要问题。
 
-Lock-sys 优化是 MySQL 8.0 中进行的第二大改进。以下 git log 描述了 lock-sys 优化的具体细节。
+`Lock-sys` 优化是 MySQL 8.0 中进行的第二大改进。以下 `git log` 描述了 `lock-sys` 优化的具体细节。
 
 ```cpp
 commit 1d259b87a63defa814e19a7534380cb43ee23c48
@@ -190,21 +186,23 @@ Date:   Wed Feb 5 14:12:22 2020 +0100
       RB:23836 
 ```
 
-理论上对全局 Latch 进行分片可以显著提高在高并发情况下的可扩展性。基于对 lock-sys 优化前后的程序，使用 BenchmarkSQL 比较不同并发情况下的 TPC-C 吞吐量，具体结果如下所示：
+理论上对全局 Latch 进行分片可以显著提高在高并发情况下的可扩展性。基于对 `lock-sys` 优化前后的程序，使用 `BenchmarkSQL` 比较不同并发情况下的 TPC-C 吞吐量，具体结果如下所示：
 
 ![image-20240829100432417](img/3c0335016408372c44248e78157f2f26.png)
 
-图 7-7\. 不同并发级别下 lock-sys 优化的影响。
+图 7-7. 不同并发级别下 lock-sys 优化的影响。
 
-从图中可以看出，优化 lock-sys 在高并发条件下显著提高了吞吐量，而在低并发条件下由于冲突较少，效果不太明显。
+从图中可以看出，优化 `lock-sys` 在高并发条件下显著提高了吞吐量，而在低并发条件下由于冲突较少，效果不太明显。
 
 ### 7.1.3 trx-sys 中的 Latch Splitting
 
-MySQL 中的 trx-sys 子系统与 MVCC 密切相关，主要涉及读操作。对重做日志和 lock-sys 的改进主要与写操作相关。
+MySQL 中的 `trx-sys` 子系统与 MVCC 密切相关，主要涉及读操作。对重做日志和 `lock-sys` 的改进主要与写操作相关。
 
-MySQL 5.7 使用全局 Latch 来同步 trx-sys 内部的各种操作。为了增强读能力，解决这个 Latch 瓶颈至关重要。然而，复杂的逻辑使得修改变得具有挑战性。
+MySQL 5.7 使用全局 Latch 来同步 `trx-sys` 内部的各种操作。为了增强读能力，解决这个 Latch 瓶颈至关重要。然而，复杂的逻辑使得修改变得具有挑战性。
 
-在 MySQL 8.0 中，全局 Latch 被最初分割。为 *serialization_list* 引入了一个新的 Latch，允许绕过全局 Latch 并减少其上的竞争压力。以下 git log 描述了这些优化的具体细节。
+在 MySQL 8.0 中，全局 Latch 被最初分割。为 `serialization_list` 引入了一个新的 Latch，允许绕过全局 Latch 并减少其上的竞争压力。以下 `git log` 描述了这些优化的具体细节。
+
+
 
 ```cpp
 commit e66d48b0c73d5fec278f81784bd5697502990263
@@ -240,9 +238,9 @@ Date:   Mon Mar 1 15:52:30 2021 +0100
 
 从图中可以看出，优化在 150 并发时有效。然而，超过 200 并发后，吞吐量不仅没有增加，实际上还下降了。这种在高并发水平下的下降主要是由于其他队列瓶颈的干扰。
 
-### 7.1.4 trx-sys 的 Latch Sharding
+## 7.1.4 trx-sys 的 Latch Sharding
 
-在 MySQL 8.0 中，对 trx-sys 子系统进行了进一步的扩展性改进。*rw_trx_set* 已被划分为多个分片，每个分片都有自己的 Latch。这显著减少了全局 Latch 在读操作上的竞争。以下 git log 描述了这些优化的具体细节。
+在 MySQL 8.0 中，对 trx-sys 子系统进行了进一步的扩展性改进。`rw_trx_set` 已被划分为多个分片，每个分片都有自己的 Latch。这显著减少了全局 Latch 在读操作上的竞争。以下 git log 描述了这些优化的具体细节。
 
 ```cpp
 commit bc95476c0156070fd5cedcfd354fa68ce3c95bdb
@@ -272,7 +270,7 @@ Date:   Tue May 25 18:12:20 2021 +0200
 
 从图中可以看出，这种改进显著提高了 TPC-C 吞吐量，在 200 并发时达到峰值。值得注意的是，在 300 并发时，影响减弱，这主要是由于与 MVCC ReadView 相关的 trx-sys 子系统中的持续可扩展性问题。这个问题将在下一章中进一步讨论。
 
-### 7.1.5 总结
+## 7.1.5 总结
 
 上述一系列的可扩展性改进为在 MySQL 中实现高吞吐量奠定了坚实的基础。没有这些变化，后续的改进将失去其意义。因此，MySQL 8.0 在可扩展性方面取得了显著的进步。
 
@@ -380,9 +378,9 @@ void Deadlock_notifier::notify(const ut::vector<const trx_t *> &trxs_on_cycle,
 
 在此背景下，出现了一些考虑因素：
 
-1.  **对性能测试的影响：**广泛的错误日志和由此产生的中断可能会潜在地扭曲性能评估，导致对系统能力的评估不准确。
+1. **对性能测试的影响：**广泛的错误日志和由此产生的中断可能会潜在地扭曲性能评估，导致对系统能力的评估不准确。
 
-1.  **CATS 算法的有效性：**CATS 算法的性能提升可能需要重新评估。如果广泛的错误日志输出对性能有显著影响，其实际有效性可能不如最初认为的那么高。
+2. **CATS 算法的有效性：**CATS 算法的性能提升可能需要重新评估。如果广泛的错误日志输出对性能有显著影响，其实际有效性可能不如最初认为的那么高。
 
 设置`innodb_print_all_deadlocks=OFF`或从`Deadlock_notifier::notify`函数中移除所有日志，重新编译 MySQL，并使用帕累托分布运行 SysBench 读写测试。详细信息见以下图表：
 
@@ -414,13 +412,13 @@ void Deadlock_notifier::notify(const ut::vector<const trx_t *> &trxs_on_cycle,
 
 在这一轮测试中，FIFO 算法继续优于 CATS 算法。与 SysBench Pareto 测试中的改进相比，BenchmarkSQL TPC-C 测试中 CATS 算法性能的下降可以归因于以下原因：
 
-1.  **额外开销**：CATS 算法本身引入了一些额外的开销。
+1. **额外开销**：CATS 算法本身引入了一些额外的开销。
 
-1.  **NUMA 环境问题**：CATS 算法可能在 NUMA 环境中无法发挥最佳性能。
+2. **NUMA 环境问题**：CATS 算法可能在 NUMA 环境中无法发挥最佳性能。
 
-1.  **冲突严重程度**：在 TPC-C 测试中，冲突严重程度比在 SysBench Pareto 测试中要轻微。
+3. **冲突严重程度**：在 TPC-C 测试中，冲突严重程度比在 SysBench Pareto 测试中要轻微。
 
-1.  **不同的并发场景**：SysBench 创建的并发场景与 BenchmarkSQL 中的场景有显著差异。
+4. **不同的并发场景**：SysBench 创建的并发场景与 BenchmarkSQL 中的场景有显著差异。
 
 最后，在 1000 个仓库和不同并发级别下再次进行了标准的 TPC-C 测试。具体细节如下所示：
 
@@ -429,6 +427,8 @@ void Deadlock_notifier::notify(const ut::vector<const trx_t *> &trxs_on_cycle,
 图 7-21\. 消除干扰后，CATS 对 BenchmarkSQL 吞吐量的影响。
 
 从图中可以看出，在低冲突场景下，两种算法之间几乎没有差异。换句话说，在冲突较少的情况下，CATS 算法并没有提供显著的优势。
+
+
 
 总体而言，虽然 CATS 在 Pareto 测试中显示出一些改进，但比预期的要少。CATS 算法显著减少了事务死锁，可能比 FIFO 算法导致更少的性能下降。当抑制死锁日志时，这些算法之间的差异最小，澄清了围绕 CATS 算法性能的困惑。
 
@@ -456,15 +456,11 @@ MySQL 8.0 引入了哈希连接。对于相同的 SQL 查询，使用带有提�
 
 值得注意的是，在以下条件下，MySQL 8.0 中的哈希连接增强了连接性能[13]：
 
-1.  没有可用的索引
-
-1.  查询是 I/O 受限的
-
-1.  表的大部分内容被访问
-
-1.  在多个表中存在选择性条件
-
-1.  增加 join_buffer_size 可以进一步提高性能
+1. 没有可用的索引。
+2. 查询是 I/O 受限的。
+3. 表的大部分内容被访问。
+4. 在多个表中存在选择性条件。
+5. 增加 `join_buffer_size` 可以进一步提高性能。
 
 哈希连接的引入是 MySQL 8.0 的一个重要特性，为减少响应时间提供了有希望的解决方案。
 
@@ -488,7 +484,8 @@ Date:   Wed May 6 16:32:13 2020 +0200
 
     The algorithm is described in the paper "Dynamic Programming Strikes Back" by
     Neumann and Moerkotte. There is a somewhat extended version of the paper
-    (that also contains a few corrections) in Moerkotte's treatise "Building Query  Compilers". Some critical details are still missing, which we've had to fill in
+    (that also contains a few corrections) in Moerkotte's treatise "Building Query
+    Compilers". Some critical details are still missing, which we've had to fill in
     ourselves. We don't currently implement the extension to generalized
     hypergraphs, but it should be fairly straightforward to do later.
 
@@ -503,14 +500,14 @@ Date:   Wed May 6 16:32:13 2020 +0200
     dependencies, short of some shared header files for bit manipulations. It is
     tested using unit tests and microbenchmarks.
 
-    Change-Id: I7912c09ab69a17e607ee3b8fb2af2bd7602e54ec 
+    Change-Id: I7912c09ab69a17e607ee3b8fb2af2bd7602e54ec
 ```
 
-从上述内容可以看出，超图算法实现的原理在论文“动态规划卷土重来” [35] 中进行了详细阐述。这突显了其在实现过程中涉及的高度复杂性。
+从上述内容可以看出，超图算法实现的原理在论文“动态规划卷土重来”[35] 中进行了详细阐述。这突显了其在实现过程中涉及的高度复杂性。
 
-基于成本的查询优化器对于数据库管理系统的整体性能至关重要，尤其是在寻找最佳连接顺序方面。基于使用动态规划的效率较高的*DPccp*算法，引入了一种新的算法*DPhyp*，以有效地处理复杂的连接谓词。通过将查询图建模为超图并分析其连通子图，*DPhyp*改善了非内连接的优化，与先前方法相比提供了实质性的性能提升。
+基于成本的查询优化器对于数据库管理系统的整体性能至关重要，尤其是在寻找最佳连接顺序方面。基于使用动态规划的效率较高的 `DPccp` 算法，引入了一种新的算法 `DPhyp`，以有效地处理复杂的连接谓词。通过将查询图建模为超图并分析其连通子图，`DPhyp` 改善了非内连接的优化，与先前方法相比提供了实质性的性能提升。
 
-随着硬件的进步，高复杂度算法变得可行。尽管某些算法可能不在多项式时间内运行，但现代计算机可以有效地处理大型 NP 完全问题。动态规划技术，虽然仍然是指数级的，但对于中等实例大小越来越可行，通常达到时间复杂度为 O(2^n)。
+随着硬件的进步，高复杂度算法变得可行。尽管某些算法可能不在多项式时间内运行，但现代计算机可以有效地处理大型 NP 完全问题。动态规划技术，虽然仍然是指数级的，但对于中等实例大小越来越可行，通常达到时间复杂度为 `O(2^n)`。
 
 然而，在使用超图算法时，应将参与连接的表的数量控制在合理的范围内，以避免潜在的性能问题。在 TPC-C 中进行了复杂连接操作的性能比较，包括启用和未启用超图优化。详细结果如下图所示：
 
@@ -520,13 +517,13 @@ Date:   Wed May 6 16:32:13 2020 +0200
 
 从图中可以看出，启用超图算法的执行时间为 0.88 秒，而禁用它则将时间缩短到 0.03 秒。这证明了使用超图算法对性能的显著影响。在许多情况下，超图的额外开销可能很大。如果 MySQL 的默认执行计划导致性能缓慢，超图算法可能会提供有价值的改进。
 
-让我们进一步通过以下图中显示的*perf*火焰图来分析超图算法的性能。
+让我们进一步通过以下图中显示的 `perf` 火焰图来分析超图算法的性能。
 
 ![](img/016861ff478ed8cbf861ab045a71f3fb.png)
 
 图 7-25\. 超图算法的典型火焰图。
 
-从图中可以看出，超图算法（超图*）消耗了大量的计算资源。目前它以单线程模式运行，超图算法的优化潜力巨大。
+从图中可以看出，超图算法（超图）消耗了大量的计算资源。目前它以单线程模式运行，超图算法的优化潜力巨大。
 
 由于 MySQL 缺乏查询计划缓存，使用超图算法构建最优执行计划耗时较长，这对其在生产环境中的有效使用构成了挑战。
 
@@ -534,9 +531,9 @@ Date:   Wed May 6 16:32:13 2020 +0200
 
 ## 7.4 使用 Binlog 压缩节省成本
 
-从 MySQL 8.0.20 版本开始，支持 binlog 压缩，但默认情况下是禁用的。可以通过设置 *binlog_transaction_compression* 参数来启用它，并且可以使用 *binlog_transaction_compression_level_zstd* 参数调整 *zstd* 压缩级别，默认级别为 3。
+从 MySQL 8.0.20 版本开始，支持 binlog 压缩，但默认情况下是禁用的。可以通过设置 `binlog_transaction_compression` 参数来启用它，并且可以使用 `binlog_transaction_compression_level_zstd` 参数调整 `zstd` 压缩级别，默认级别为 3。
 
-在同一数据中心内使用 Group Replication 集群，使用 BenchmarkSQL 检查了 binlog 压缩对 TPC-C 吞吐量和并发性的影响。主节点和从节点都配置了 *binlog_transaction_compression* 参数。具体测试结果如下图所示：
+在同一数据中心内使用 Group Replication 集群，使用 BenchmarkSQL 检查了 binlog 压缩对 TPC-C 吞吐量和并发性的影响。主节点和从节点都配置了 `binlog_transaction_compression` 参数。具体测试结果如下图所示：
 
 ![image-20240829101915930](img/3f5357ee2ff758a709d1e16c5a40f1a7.png)
 
@@ -550,20 +547,20 @@ Date:   Wed May 6 16:32:13 2020 +0200
 
 图 7-27\. BenchmarkSQL 测试后 binlog 压缩的影响。
 
-从图中可以看出，binlog 压缩对 TPC-C 测试有明显的积极影响。值得注意的是，设置 *binlog_row_image=minimal* 可以显著减小 binlog 的大小，但它对性能的影响较小。具体细节如下图所示：
+从图中可以看出，binlog 压缩对 TPC-C 测试有明显的积极影响。值得注意的是，设置 `binlog_row_image=minimal` 可以显著减小 binlog 的大小，但它对性能的影响较小。具体细节如下图所示：
 
 ![image-20240829101956608](img/cd7718f0c275f3cde86b00d06d4b0b1e.png)
 
-图 7-28\. *binlog_row_image=minimal* 对 BenchmarkSQL 性能的影响。
+图 7-28\. `binlog_row_image=minimal` 对 BenchmarkSQL 性能的影响。
 
-最后，让我们比较 *binlog_row_image=minimal* 和 *binlog_row_image=full* 之间的 binlog 大小。具体细节如下图所示：
+最后，让我们比较 `binlog_row_image=minimal` 和 `binlog_row_image=full` 之间的 binlog 大小。具体细节如下图所示：
 
 ![image-20240829102020166](img/d64733af5ac5decd5731b014911e152b.png)
 
-图 7-29\. BenchmarkSQL 测试后 *binlog_row_image=minimal* 的影响。
+图 7-29\. BenchmarkSQL 测试后 `binlog_row_image=minimal` 的影响。
 
-从图中可以看出，设置 *binlog_row_image=minimal* 也可以显著减小 binlog 的大小。
+从图中可以看出，设置 `binlog_row_image=minimal` 也可以显著减小 binlog 的大小。
 
-总体而言，MySQL 8.0 提供了有效的解决方案来解决 binlog 消耗大量 I/O 空间的问题。用户可以利用 binlog 压缩，并在可行的情况下，通过使用 *binlog_row_image=minimal* 来进一步减小 binlog 的大小，从而节省存储成本。需要注意的是，压缩比可能因不同的应用程序而异。
+总体而言，MySQL 8.0 提供了有效的解决方案来解决 binlog 消耗大量 I/O 空间的问题。用户可以利用 binlog 压缩，并在可行的情况下，通过使用 `binlog_row_image=minimal` 来进一步减小 binlog 的大小，从而节省存储成本。需要注意的是，压缩比可能因不同的应用程序而异。
 
 下一章

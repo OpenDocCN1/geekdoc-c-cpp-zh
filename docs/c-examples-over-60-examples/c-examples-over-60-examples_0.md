@@ -1,16 +1,15 @@
+
 # C++ 示例：超过 60 个示例
-
-
 
 ![](img/cover00133.jpeg)
 
-
 ## 基础语法
+
 - `HelloWorld.cpp` ——————————> p. 5
 - `DataTypes.cpp` ———————————> p. 6
 - `Variables.cpp` ———————————> p. 7
 - `Constant.cpp` ————————————> p. 8
-- `TypeCast.cpp` ————————————> p. 9
+- `TypeCast.cpp` ———————————> p. 9
 - `ArithmeticOps.cpp` ———————> p. 10
 - `RelationalOps.cpp` ———————> p. 11
 - `AssignmentOps.cpp` ———————> p. 12
@@ -35,6 +34,7 @@
 - `CIN.cpp` —————————————————> p. 32
 
 ## 面对象
+
 - `Classes.cpp` —————————————> p. 33
 - `Constructor.cpp` —————————> p. 34
 - `Inheritance.cpp` —————————> p. 36
@@ -43,6 +43,7 @@
 - `Polymorphism.cpp` ————————> p. 41
 
 ## 指针
+
 - `Pointer.cpp` —————————————> p. 43
 - `PointerToNull.cpp` ———————> p. 44
 - `PointerToVoid.cpp` ———————> p. 45
@@ -55,6 +56,7 @@
 - `PointerToAClass.cpp` —————> p. 52
 
 ## 示例程序
+
 - `TempConverter.cpp` ———————> p. 53
 - `ChemElement.h` ———————————> p. 54
 - `PeriodicTable.cpp` ———————> p. 55
@@ -64,6 +66,7 @@
 - `FibRecursion.cpp` ————————> p. 60
 
 ## 高级进
+
 - `IO.cpp` ——————————————————> p. 61
 - `FileIO.cpp` —————————————> p. 62
 - `ErrorHandling.cpp` ———————> p. 64
@@ -81,11 +84,12 @@
 - `Game.cpp` —————————————> p. 79
 
 ## 作者的话
+
 非常感谢你的购买，以及你对学习奇妙编程语言的兴趣。“C++ 示例”包含了 50 多个功能完全、易于使用且独特的示例。不需要先前的编程知识，不过，之前的知识大有帮助。唯一的要求是耐心、奉献和对学习的热情。不过，为了不让你对学习 C++望而，我将解释如何创建、编译和运行一个 `.cpp` 源文件。
 
 为了创建一个可编辑的 `.cpp` 源文件，你首先需要选择一个文本编辑器，我将使用 `emacs`。因此，要创建一个 `.cpp` 源文件，请在命令行中输入以下命令：
 
-```
+```bash
 emacs SourceFile.cpp
 ```
 
@@ -106,6 +110,7 @@ g++ SourceFile.c -o SourceFile
 ## 感谢
 
 ### HelloWorld.cpp
+
 ```cpp
 #include <iostream>//代替 <stdio.h> 尽管那样也可以用
 
@@ -132,13 +137,16 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 Hello World!
 --Hello World—
 ```
 
 ### DataTypes.cpp
+
 ```cpp
 #include <iostream>
 #include <limits.h>//因为我们基本上是在写 c，所以我们可以这样做
@@ -169,8 +177,10 @@ void: 无类型
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 1 bytes in a char
 Unsigned Data Types range from 0 - MAXSIZE
 Signed data takes into account negative range.
@@ -180,6 +190,7 @@ A char is 1 byte(8 bits), so the max value is (2⁸)-1
 ```
 
 ### Variables.cpp
+
 ```cpp
 #include <iostream>
 #include <math.h>//带有数学函数
@@ -205,12 +216,15 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 b: 1
 ```
 
 ### Constant.cpp
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -230,12 +244,15 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 MAX: 100
 ```
 
 ### TypeCast.cpp
+
 ```cpp
 #include <iostream>
 #include <stdio.h>
@@ -261,8 +278,10 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 decimal before: 3.14159
 decimal after: 3
 e before: 2.71828
@@ -270,22 +289,19 @@ e after: 2
 ```
 
 ### ArithmeticOps.cpp
+
 ```cpp
 #include <iostream>
 using namespace std;
 ```
 
-
-
-
-
-## 算术运算符
+#### 算术运算符
 
 作者 | 邮箱 | 日期
 
 什么是算术运算符：它们允许你对数据类型进行算术运算。
 
-它们包括：`+`, `-`, `/`, `*`, `++`, `--`, `%`
+它们包括：`+`、`-`、`/`、`*`、`++`、`--`、`%`
 
 ```cpp
 int main(){
@@ -305,13 +321,14 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 1+1: 2
 1++: 2
 5%3: 2
 ```
 
-## 关系运算符
+#### 关系运算符
 
 `RelationalOps.cpp`
 
@@ -324,7 +341,7 @@ using namespace std;
 
 什么是关系运算符：它们执行比较测试。
 
-它们包括： `>`, `>=`, `<`, `<=`, `==`, `!=`
+它们包括： `>`、`>=`、`<`、`<=`、`==`、`!=`
 
 它们比较两个值。
 */
@@ -345,14 +362,15 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 1<2: 1
 1>2: 0
 5%3 == 2: 1
 5%3 != 2: 0
 ```
 
-## 赋值运算符
+#### 赋值运算符
 
 `AssignmentOps.cpp`
 
@@ -366,7 +384,7 @@ using namespace std;
 赋值运算符允许你给变量赋值，
 同时对该变量执行操作。
 
-它们包括：`+=`, `-=`, `*=`, `/=`, 和 `%=`
+它们包括：`+=`、`-=`、`*=`、`/=` 和 `%=`
 */
 int main(){
   //使用任何算术运算
@@ -382,12 +400,13 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 awesome before: 99
 awesome after: 109
 ```
 
-## 杂运算符
+#### 杂运算符
 
 `MiscOps.cpp`
 
@@ -415,13 +434,18 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 4
 ```
 
-## if 语句
+#### if 语句
 
 `IfStatement.cpp`
+
+
+
+# C++ 控制流示例
 
 ```cpp
 #include <iostream>
@@ -456,14 +480,15 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 Else code executed, 当所有都不通过时...
 Condition is true…
 ```
 
 ## 三元运算符
 
-`TernaryOperator.cpp`
+文件：`TernaryOperator.cpp`
 
 ```cpp
 /*
@@ -489,13 +514,14 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 outcome: 0
 ```
 
 ## 逻辑运算符
 
-`LogicalOps.cpp`
+文件：`LogicalOps.cpp`
 
 ```cpp
 #include <iostream>
@@ -504,7 +530,7 @@ using namespace std;
 /*
 作者 | 邮箱 | 日期
 
-逻辑运算符：逻辑运算符允许你在 if 语句中测试多个布尔值。它们包括逻辑与运算符 (&&)、非运算符 (!), 和逻辑或运算符 (||)
+逻辑运算符：逻辑运算符允许你在 if 语句中测试多个布尔值。它们包括逻辑与运算符 (&&)、非运算符 (!) 和逻辑或运算符 (||)
 */
 int main(){
   int test = 222;
@@ -526,13 +552,14 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 Else If code executed, 其余跳过...
 ```
 
 ## switch 语句
 
-`Switch.cpp`
+文件：`Switch.cpp`
 
 ```cpp
 #include <iostream>
@@ -565,13 +592,14 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 No matched
 ```
 
 ## for 循环
 
-`ForLoop.cpp`
+文件：`ForLoop.cpp`
 
 ```cpp
 #include <iostream>
@@ -583,7 +611,7 @@ No matched
 ForLoop：如何创建和使用 for 循环，当你创建一个 for 循环时，首先初始化某个计数器变量，通常是一个名为 "i" 的 int。其次，你设置某些条件来测试每个。一旦条件为假，for 循环就会终止。第三，你设置步长。通常是递增 1，但你可以递增、递减、除法等。
 */
 int main(){
-  for(int i =0; i<=10;//初始化，条件，步长
+  for(int i = 0; i<=10;/*初始化，条件，步长*/ 
     printf("i : %d \n",i);
   }
   return 0;
@@ -591,7 +619,8 @@ int main(){
 ```
 
 输出：
-```
+
+```text
 i : 0
 i : 1
 i : 2
@@ -607,7 +636,7 @@ i : 10
 
 ## 嵌套 for
 
-`NestedFor.cpp`
+文件：`NestedFor.cpp`
 
 ```cpp
 #include <iostream>
@@ -631,7 +660,9 @@ int main(){
 ```
 
 输出：
-```1 2 3 4 5 6 7 8 9 10 11 12 
+
+```text
+1 2 3 4 5 6 7 8 9 10 11 12 
 2 4 6 8 10 12 14 16 18 20 22 24 
 3 6 9 12 15 18 21 24 27 30 33 36 
 4 8 12 16 20 24 28 32 36 40 44 48 
@@ -647,15 +678,13 @@ int main(){
 
 ## while 循环
 
-`WhileLoop.cpp`
+文件：`WhileLoop.cpp`
 
+```cpp
 #include <iostream>
+```
 
-
-
-
-
-## while 循环 (While Loops)
+### while 循环 (While Loops)
 
 本文介绍如何创建和使用 while 循环。当你不知道循环将运行多久时，while 循环非常有用，例如获取用户输入或从文件中读取。
 
@@ -671,7 +700,8 @@ int main(){
 ```
 
 ### 输出:
-```
+
+```text
 x : 0
 x : 1
 x : 2
@@ -719,7 +749,8 @@ int main(){
 ```
 
 ### 输出:
-```
+
+```text
 number_list[2]: 9
 number_list[0] before: 3
 number_list[0] after: 55
@@ -763,7 +794,8 @@ int main(){
 ```
 
 ### 输出:
-```
+
+```text
 box[0][0]: 0	box[0][1]: 1	box[0][2]: 2	box[0][3]: 3	
 box[1][0]: 10	box[1][1]: 11	box[1][2]: 12	box[1][3]: 13	
 box[2][0]: 20	box[2][1]: 21	box[2][2]: 22	box[2][3]: 23	
@@ -772,104 +804,30 @@ box[3][0]: 30	box[3][1]: 31	box[3][2]: 32	box[3][3]: 33
 
 ### String.cpp
 
-```cpp
-#include <iostream>
-#include <string.h>
-using namespace std;
-/*
-作者 | 邮箱 | 日期
-String: C++ 中的字符串是字符的字符串。一个一维字符数组。你可以将字符串想象为一个单词或句子。
-*/
-int main(){
-  //你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7]={'H','e','l','l','o','\0','!'}; // 注：原文示例中此处代码不全，按逻辑翻译
-  // 修正：原文代码在此处较乱，此处按原意翻译
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 原文此处似乎缺失内容，仅根据结构翻译
-  // 重新对齐原文逻辑翻译：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 考虑到原文文本片段化，直接翻译注释逻辑：
-  // 重新审视原文内容：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 此处原文文本存在断裂，仅翻译注释：
-  // 实际上原文中该部分应翻译如下：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 抱歉，原文中 name[7] 后面没有完整内容，按意图翻译：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  // 重新根据用户提供的原始文本进行精确翻译：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  /* 发现原文文本中 char name[7] 后面直接接了注释，以下为对应翻译： */
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 注：原文此处代码不完整，仅翻译注释
-  // 再次检查用户提供的原文：
-  // char name[7]
-  // //you can initialize these arrays the same way but you need to include the null byte character '\0'
-  // 翻译：
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 重新对齐原文为：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  // 注意：由于用户提供的文本在 String.cpp 部分比较乱，以下是基于文本原始片段的还原翻译：
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  /* 重新开始 String.cpp 的严格翻译 */
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 此处原文代码不全，仅翻译注释
-  // 实际上，用户提供的原文 String.cpp 文本存在大量混乱，我将按行翻译：
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  // 考虑到文本质量，我将直接翻译可识别的行：
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  // 抱歉，我发现 String.cpp 的原文文本似乎存在粘贴错误，以下是基于可见可见的直接翻译：
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  /* 重新审视原文，String.cpp 的内容如下： */
-  // you can initialize these arrays the same way but you need to include the null byte character '\0'
-  // char name[7]
-  // 后面是乱码。
-  // 我将跳过乱码，只翻译有效部分：
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 
-  // 实际上，我应该直接给出一个干净的翻译。
-  // 重新翻译 String.cpp：
-  
-  // C++ 中的字符串是字符的字符串。
-  // 一个数组维字符数组。你可以将字符串想象为一个单词单词句子句子。
-  // 
-  // 你可以以相同的方式初始化这些数组，但你需要包含空空字节 '\ '\0'
-  // 
-  
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  // 
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  // 
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  // 
-  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  // 
-   
-[/content]
 
-*(注：由于用户提供的 `String.cpp` 原文中 `char name[7]` 之后没有具体内容，我仅翻译了可见的注释和结构。该部分文本似乎存在格式错误或缺失，我已确保了注释翻译的准确性。)*
 
----
 
-**等等，我发现 `String.cpp` 的原文文本确实非常混乱，我重新为你生成一份完整的、格式正确的翻译结果：**
+## `while` 循环（While Loops）
 
-[content]
-
-## while 循环 (While Loops)
-
-如何创建和使用 while 循环。当你不知道循环将运行多久时，while 循环非常有用，例如获取用户输入或从文件中读取。
+如何创建和使用 `while` 循环。当你不知道循环将运行多久时，`while` 循环非常有用，例如获取用户输入或从文件中读取。
 
 ```cpp
-int main(){
+int main() {
   int x = 0;
-  while(x<10){
+
+  while (x < 10) {
     printf("x : %d \n", x);
-    x++;watch out for infinite loop, comment out to see what happens…, terminate with cntrl+c
+
+    x++; // 注意无限循环。取消注释以查看会发生什么，使用 Ctrl+C 终止。
   }
+
   return 0;
 }
 ```
 
-### 输出:
-```
+### 输出
+
+```text
 x : 0
 x : 1
 x : 2
@@ -882,42 +840,56 @@ x : 8
 x : 9
 ```
 
-### Array.cpp
+## `Array.cpp`
 
 ```cpp
 #include <iostream>
 #include <math.h>
+
 using namespace std;
 
 /*
 作者 | 邮箱 | 日期
+
 Array: 如何声明和初始化数组。数组类似于一组相同数据类型的列表。
 */
-int main(){
-  //将创建一个恰好容纳数据的数组
-  int number_list[]={3, 6, 9, 12, 15};//索引从 0 到长度-1
-  cout<<"number_list[2]: "<<number_list[2]<<"\n";
-  cout<<"number_list[0] before: "<<number_list[0]<<"\n";
-  number_list[0]= 55;//合法
-  cout<<"number_list[0] after: "<<number_list[0]<<"\n";
-  //或者你可以初始化一个已知大小的数组
+
+int main() {
+  // 将创建一个恰好容纳数据的数组
+  int number_list[] = {3, 6, 9, 12, 15}; // 索引从 0 到长度 - 1
+
+  cout << "number_list[2]: " << number_list[2] << "\n";
+
+  cout << "number_list[0] before: " << number_list[0] << "\n";
+
+  number_list[0] = 55; // 合法
+
+  cout << "number_list[0] after: " << number_list[0] << "\n";
+
+  // 或者你可以初始化一个已知大小的数组
   int new_list[10];
-  for(int i = 0; i < 10;i++){
-    new_list[i]=pow(i,2);//对每个 i 进行平方
-    cout<<"new_list["<<i<<"]: "<<new_list[i]<<"\n";
+
+  for (int i = 0; i < 10; i++) {
+    new_list[i] = pow(i, 2); // 对每个 i 进行平方
+    cout << "new_list[" << i << "]: " << new_list[i] << "\n";
   }
-  //可以使用数组的单个成员来初始化相同的数据类型
+
+  // 可以使用数组的单个成员来初始化相同的数据类型
   int member = new_list[9];
-  cout<<"member: "<<member<<"\n";
-  //获取任何数组大小的方法是知道该数组包含的数据类型
-  cout<<"size of out new_list[]: "<<sizeof(new_list)/sizeof(int)<<"\n";
-  //稍后我们将介绍数组作为函数
+
+  cout << "member: " << member << "\n";
+
+  // 获取任何数组大小的方法是知道该数组包含的数据类型
+  cout << "size of out new_list[]: " << sizeof(new_list) / sizeof(int) << "\n";
+
+  // 稍后我们将介绍数组作为函数
   return 0;
 }
 ```
 
-### 输出:
-```
+### 输出
+
+```text
 number_list[2]: 9
 number_list[0] before: 3
 number_list[0] after: 55
@@ -935,68 +907,81 @@ member: 81
 size of out new_list[]: 10
 ```
 
-### ArrayTwo.cpp
+## `ArrayTwo.cpp`
 
 ```cpp
 #include <iostream>
+
 /*
 作者 | 邮箱 | 日期
-ArrayTwo: 如何声明和初始化一个二维数组。二维数组类似于数组中的数组。你可以有 3D 数组、4D 数组，尽管这些在实际操作中可能并不可行且追踪非常复杂。
+
+ArrayTwo: 如何声明和初始化一个二维数组。二维数组类似于数组中的数组。
+你可以有 3D 数组、4D 数组，尽管这些在实际操作中可能并不可行且追踪非常复杂。
 */
-int main(){
-  /*2D 数组，数组中的数组。按行、列组织，注意双循环。这可以用于遍历二维数组或初始化二维数组。 */
-  //按行和列初始化
-  int box[4][4]={{0, 1, 2, 3},
-                 {10, 11, 12, 13},
-                 {20, 21, 22, 23},
-                 {30, 31, 32, 33}};
-  for(int r = 0; r<4;r++){
-    for(int c = 0; c<4; c++){嵌套 for 循环
+
+int main() {
+  /*
+  2D 数组，数组中的数组。按行、列组织，注意双循环。
+  这可以用于遍历二维数组或初始化二维数组。
+  */
+
+  // 按行和列初始化
+  int box[4][4] = {
+      {0, 1, 2, 3},
+      {10, 11, 12, 13},
+      {20, 21, 22, 23},
+      {30, 31, 32, 33}};
+
+  for (int r = 0; r < 4; r++) {
+    for (int c = 0; c < 4; c++) { // 嵌套 for 循环
       printf("box[%d][%d]: %d\t", r, c, box[r][c]);
     }
+
     printf("\n");
   }
+
   return 0;
 }
 ```
 
-### 输出:
-```
-box[0][0]: 0	box[0][1]: 1	box[0][2]: 2	box[0][3]: 3	
-box[1][0]: 10	box[1][1]: 11	box[1][2]: 12	box[1][3]: 13	
-box[2][0]: 20	box[2][1]: 21	box[2][2]: 22	box[2][3]: 23	
-box[3][0]: 30	box[3][1]: 31	box[3][2]: 32	box[3][3]: 33	
+### 输出
+
+```text
+box[0][0]: 0	box[0][1]: 1	box[0][2]: 2	box[0][3]: 3
+box[1][0]: 10	box[1][1]: 11	box[1][2]: 12	box[1][3]: 13
+box[2][0]: 20	box[2][1]: 21	box[2][2]: 22	box[2][3]: 23
+box[3][0]: 30	box[3][1]: 31	box[3][2]: 32	box[3][3]: 33
 ```
 
-### String.cpp
+## `String.cpp`
 
 ```cpp
 #include <iostream>
 #include <string.h>
+
 using namespace std;
+
 /*
 作者 | 邮箱 | 日期
-String: C++ 中的字符串是字符的字符串。一个一维字符数组。你可以将字符串想象为一个单词或句子。
+
+String: C++ 中的字符串是字符的字符串。一个一维字符数组。
+你可以将字符串想象为一个单词或句子。
 */
-int main(){
-  //你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
-  char name[7] = {'H','e','l','l','o','\0','!'}; // 注：原文此处代码不完整，仅翻译注释逻辑
-}
 
+int main() {
+  // 你可以以相同的方式初始化这些数组，但你需要包含空字节字符 '\0'
+  char name[7] = {'H', 'e', 'l', 'l', 'o', '\0', '!'};
 
+  // cout << "i: " << i << "\n"; // 不起作用，只有在下述情况下
+  // 当 i 的作用域局限于 main 函数时，或者它是全局变量时，才会起作用
 
-
-```cpp
-//cout<<"i: "<<i<<"\n";//不起作用，只有在下述情况下
-
-//当 i 的作用域局限于 main 函数时，或者它是全局变量时，才会起作用
-
-return 0;
+  return 0;
 }
 ```
 
-Output:
-```
+### 输出
+
+```text
 i: 0
 i: 1
 i: 2
@@ -1009,80 +994,98 @@ i: 8
 i: 9
 ```
 
-### Struct.cpp
+## `Struct.cpp`
 
 ```cpp
 #include <iostream>
 #include <string.h>
+
 using namespace std;
 
 /*
 作者 | 邮箱 | 日期
-Struct: 如何声明和初始化结构体
+
+Struct: 如何声明和初始化结构体。
 结构体的数据结构，你可以把它们认为是数组，但它们可以包含不同的数据类型。
 */
+
 int main() {
-  struct Person{
-    string name;//这种方式为了方便比较有用，
-                   //然而有时了解
-                   //你正在处理的数据的大小是非常有用的
-                   // 比如知道 char[] 的大小
+  struct Person {
+    string name; // 这种方式为了方便比较有用，
+                 // 然而有时了解
+                 // 你正在处理的数据的大小是非常有用的
+                 // 比如知道 char[] 的大小
     int age;
-  }; //不要忘记这个分号
+  }; // 不要忘记这个分号
 
   struct Person doEasy;
+
   doEasy.name = "Doeasy";
-  doEasy.age = 100;//我们在 MiscOps.cpp 中学习过的点运算符
-  cout<<"Name: "<<doEasy.name <<"\nAge: " << doEasy.age <<"\n";
+  doEasy.age = 100; // 我们在 MiscOps.cpp 中学习过的点运算符
+
+  cout << "Name: " << doEasy.name << "\nAge: " << doEasy.age << "\n";
+
   return 0;
 }
 ```
 
-Output:
-```
+### 输出
+
+```text
 Name: Doeasy
 Age: 100
 ```
 
-### StructArray.cpp
+## `StructArray.cpp`
 
 ```cpp
 #include <iostream>
 #include <string.h>
+
 using namespace std;
 
 /*
 作者 | 邮箱 | 日期
-StructArray: 如何初始化结构体数组。就像任何
-合法的数据类型一样，你可以拥有一个数据结构数组。
+
+StructArray: 如何初始化结构体数组。就像任何合法的数据类型一样，
+你可以拥有一个数据结构数组。
 */
-struct Person{
+
+struct Person {
   string name;
   int age;
-}Person;
+} Person;
 
 int main() {
-  //注意双大括号
-  //我们正在数组内初始化 Person 结构体
-  Person contacts[3]={{"Frank",23},{"Lisa",34},{"Bell", 20}};
+  // 注意双大括号
+  // 我们正在数组内初始化 Person 结构体
+  Person contacts[3] = {{"Frank", 23}, {"Lisa", 34}, {"Bell", 20}};
+
   struct Person individual;
+
   individual.name = "DoEasy";
   individual.age = 99;
+
   struct Person friends[1];
-  //只是向你展示你可以使用所有已知的
-  //关于数组的技巧
+
+  // 只是向你展示你可以使用所有已知的关于数组的技巧
   friends[0] = individual;
-  for(int i = 0; i < 3; i++) {
-    cout<<"Contacts["<<i<<"]"<<"\n";
-    cout<<"\t<<"Name: "<<contacts[i].name<<"\tAge:"
-    <<contacts[i].age<<"\n";
+
+  for (int i = 0; i < 3; i++) {
+    cout << "Contacts[" << i << "]"
+         << "\n";
+    cout << "\t"
+         << "Name: " << contacts[i].name << "\tAge:"
+         << contacts[i].age << "\n";
   }
+
   return 0;
 }
 ```
 
-Output:
-```
+### 输出
+
+```text
 Contacts[0]
 Name: Frank
 Age: 23
@@ -1094,46 +1097,70 @@ Name: Bell
 Age: 20
 ```
 
-### Typedef.cpp
+## `Typedef.cpp`
 
 ```cpp
 #include <iostream>
 #include <string.h>
+
 using namespace std;
 
 /*
 作者 | 邮箱 | 日期
-Typedef: 如何使用 typedef，C++ 中的 typedef 将数据类型
-重命名为名称，这对结构体非常有用。
+
+Typedef: 如何使用 typedef。C++ 中的 typedef 将数据类型重命名为名称，
+这对结构体非常有用。
 */
+
 int main() {
-  //typedef 是一个关键字，可以在任何地方使用
-  //它用于给类型一个新名字
+  // typedef 是一个关键字，可以在任何地方使用
+  // 它用于给类型一个新名字
   typedef unsigned char BYTE;
-  //现在可以用 BYTE 代替 unsigned char
-  BYTE b = (2*2*2)-1;
-  printf("Max value can hold: %d\n",b);
-  //还可以有一个数组
-  typedef struct Person{
+
+  // 现在可以用 BYTE 代替 unsigned char
+  BYTE b = (2 * 2 * 2) - 1;
+
+  printf("Max value can hold: %d\n", b);
+
+  // 还可以有一个数组
+  typedef struct Person {
     char name[];
     int age;
-  }Person;//在声明结构体时不要忘记这个
-  Person doEasy; 
-  strcpy(doEasy.name,"DOEASY");
+  } Person; // 在声明结构体时不要忘记这个
+
+  Person doEasy;
+
+  strcpy(doEasy.name, "DOEASY");
   doEasy.age = 100;
-  printf("Name: %s\nAge: %d\n",doEasy.name,doEasy.age);
+
+  printf("Name: %s\nAge: %d\n", doEasy.name, doEasy.age);
+
   return 0;
 }
 ```
 
-Output:
-```
+### 输出
+
+```text
 Max value can hold: 25
 Name: DOEASY
 Age: 100
 ```
 
-### CIN.cpp
+## `CIN.cpp`
+
+
+
+
+# C++ 编程教程
+
+## 概述
+
+本教程通过多个示例程序，介绍 C++ 中的基础语法、面向对象编程（类、构造函数、继承、多态、访问修饰符）、函数重载以及指针操作。
+
+---
+
+## Input.cpp
 
 ```cpp
 #include<iostream>
@@ -1167,8 +1194,9 @@ int main() {
 }
 ```
 
-Output:
-```
+**输出：**
+
+```cpp
 Enter an int: 100
 Enter another number to add: 100
 Enter a string: word
@@ -1179,10 +1207,12 @@ The string is: word
 The quotient is: 1.25
 ```
 
-### Classes.cpp
+---
+
+## Classes.cpp
 
 ```cpp
-#include <iostream
+#include <iostream>
 using namespace std;
 
 /*
@@ -1205,7 +1235,7 @@ void Person::printPerson() {
 
 int main() {
   Person p1;//p1 是一个对象，类的实例
-  p1.name = “DoEasy”;
+  p1.name = "DoEasy";
   p1.age = 100;
   //在实例 p1 内部调用 printPerson() 方法
   p1.printPerson();//我们正在从类的实例调用 printPerson 方法
@@ -1214,12 +1244,15 @@ int main() {
 }
 ```
 
-Output:
-```
+**输出：**
+
+```cpp
 Name: DoEasy Age 100
 ```
 
-### Constructor.cpp
+---
+
+## Constructor.cpp
 
 ```cpp
 #include <iostream>
@@ -1272,15 +1305,18 @@ int main() {
 }
 ```
 
-Output:
-```
+**输出：**
+
+```cpp
 p1:
 Name: No Set Age: -1
 p2:
 Name: DoEasy Age: 100
 ```
 
-### Inheritance.cpp
+---
+
+## Inheritance.cpp
 
 ```cpp
 #include <iostream>
@@ -1289,7 +1325,7 @@ using namespace std;
 
 /*
 作者 | 邮箱 | 日期
-Inheritance: 在 C++ 中，你可以将“父类”基因传递给另一个“子类”或“派生类”。这节省了编写额外代码的时间，并能够重复你的代码。
+Inheritance: 在 C++ 中，你可以将"父类"基因传递给另一个"子类"或"派生类"。这节省了编写额外代码的时间，并能够重复你的代码。
 */
 //父类
 class SpaceBody{
@@ -1338,14 +1374,10 @@ public:
   //这个被声明为公共
   void print() {
     SpaceBody::print();
-    cout<<"Name: “<<getName();//不要忘记打印名称
+    cout<<"Name: "<<getName();//不要忘记打印名称
   }
 };
 ```
-
-
-
-
 
 // 调用父类函数
 
@@ -1354,6 +1386,7 @@ SpaceBody::print();
 ```
 
 // 此成员声明在 public 之外，所以我们需要
+
 // 遵循这种格式
 
 ```cpp
@@ -1369,18 +1402,21 @@ int main(){
   Planet earth ("Earth", 45555.9, 890.99);
   earth.print();
   /*请注意：在 Planet 类型类对象上，我们可以使用
-     getMass() 或 “AstroBody”类内的任何函数，
+     getMass() 或 "AstroBody"类内的任何函数，
      Planet 拥有 AstroBody 内部的所有函数*/
 }
 ```
 
 **输出：**
-```
+
+```cpp
 Name: Earth
 Mass: 45555.9Radius: 890.99
 ```
 
-### AccessModifiers.cpp
+---
+
+## AccessModifiers.cpp
 
 ```cpp
 #include <iostream>
@@ -1450,20 +1486,23 @@ int main(){
   //name 是私有的，所以它只能通过 Planet 类内的公共函数访问
   //这就是为什么我们创建了 getName() 等函数
   earth.setName("MARS");
-  //你需要来自 “Planet 类”内部的函数来更改它
+  //你需要来自 "Planet 类"内部的函数来更改它
   earth.print();
 }
 ```
 
 **输出：**
-```
+
+```cpp
 Name: Earth
 Mass: 45555.9Radius: 890.99
 Name: MARS
 Mass: 45555.9Radius: 890.99
 ```
 
-### FunctionOverloading.cpp
+---
+
+## FunctionOverloading.cpp
 
 ```cpp
 #include <iostream>
@@ -1496,12 +1535,15 @@ int main(){
 ```
 
 **输出：**
-```
+
+```cpp
 int: 100
 float: DoEasy
 ```
 
-### Polymorphism.cpp
+---
+
+## Polymorphism.cpp
 
 ```cpp
 #include <iostream>
@@ -1576,12 +1618,15 @@ int main(){
 ```
 
 **输出：**
-```
+
+```cpp
 Printed from SpaceBody.
 Printed from Planet.
 ```
 
-### Pointer.cpp
+---
+
+## Pointer.cpp
 
 ```cpp
 #include <stdio.h>
@@ -1611,14 +1656,17 @@ int main(){
 ```
 
 **输出：**
-```
+
+```cpp
 Address of number: 0x7fff5f31be8
 Address of two: 0x7fff5f31be4
 Address of where int is stored: 0x7fff5f31be8
 What The Pointer is Pointing to: 1
 ```
 
-### PointerToNull.cpp
+---
+
+## PointerToNull.cpp
 
 ```cpp
 #include <stdio.h>
@@ -1630,7 +1678,7 @@ int main(){
   int *p;
   p = NULL;//我们现在有一个指向 NULL 的指针
   int *cp = NULL;
-  printf("p: %p\n",p);%p 是指针的占位符
+  printf("p: %p\n",p); //%p 是指针的占位符
   printf("p==cp: %d\n",p==cp);//1 为真，0 为假
   //可以在 if 语句中使用空指针
   //下面等于：p != NULL
@@ -1646,7 +1694,10 @@ int main(){
 ```
 
 **输出：**
-```
+
+
+
+```text
 p: 0x0
 p==cp: 1
 p is null
@@ -1683,13 +1734,10 @@ int main(){
 ```
 
 **输出：**
-```
+
+```text
 Address of p: 0x7fff5c39cba8
 ```
-
-
-
-
 
 `sizeof(p)`: 8
 
@@ -1723,8 +1771,9 @@ int main(){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Address: 0x7fff54958ba8
 Dereference: 100
 ```
@@ -1758,8 +1807,9 @@ int main(){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Memory address of x: 0x7fff5bf59ba8
 Memory address of p1: 0x7fff5bf59ba0
 Dereference of p1: 1000
@@ -1796,8 +1846,9 @@ int main(){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Memory Address of index 0 : 0x7fff5ec02bbc
 *(p + 0) : 777
 Memory Address of index 1 : 0x7fff5ec02bc0
@@ -1842,8 +1893,9 @@ int* returnArray(int numbers[], int size){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Returning array: 0x7fff56879b9c
 We will now dereference each element in array
 Array[0]:
@@ -1893,8 +1945,9 @@ void printStruct(struct Person *person){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Size of Struct: 24
 address[0] : 0x7fff5ec02bca0
 address[1] : 0x7fff5ec02bc18
@@ -1926,8 +1979,9 @@ int add(int x, int y){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 r: 13
 ```
 
@@ -1975,8 +2029,9 @@ int main(){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Name: DoEasy
 Age: 100
 ```
@@ -2007,22 +2062,15 @@ int main(){
 }
 ```
 
-Output:
-```
+**Output:**
+
+```text
 Enter degrees in F:
 0
 tempF: 0.00
 tempC: -17.78
 tempK: 255.37
 ```
-
-## ChemicalElement.h
-
-/*
-
-
-
-
 
 ## ChemicalElement.h
 
@@ -2082,7 +2130,8 @@ int main(){
 ```
 
 **输出：**
-```
+
+```text
 Printing Water:
 Hydrogen: 1.00
 Hydrogen: 1.00
@@ -2119,7 +2168,8 @@ int main(){
 ```
 
 **输出：**
-```
+
+```text
 Array Populated:
 Average: 39.00
 ```
@@ -2142,20 +2192,24 @@ int main(){
   return 0;
 }
 ```
+
 **输出 1：**
-```
+
+
+
+### 输出 2：
+
+```text
 Heads
 ```
-**输出 2：**
-```
-Heads
-```
-**输出 3：**
-```
+
+### 输出 3：
+
+```text
 tails
 ```
 
-### GuessThePassPhrase.c
+## GuessThePassPhrase.c
 
 ```cpp
 #include<iostream>
@@ -2200,8 +2254,10 @@ int equals(char* guess, char* password){
   return 1;
 }
 ```
+
 **输出：**
-```
+
+```text
 Guess the password: these
 Guess the password: are
 Guess the password: some
@@ -2209,7 +2265,7 @@ Guess the password: guesses
 You win the password was: Password
 ```
 
-### Recursion.cpp
+## Recursion.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2241,8 +2297,10 @@ int fibonacci(int n){
     return fibonacci(n-1)+fibonacci(n-2);
 }
 ```
+
 **输出：**
-```
+
+```text
 Populating Array
 fibArray[0]: 0
 fibArray[1]: 1
@@ -2256,7 +2314,7 @@ fibArray[8]: 21
 fibArray[9]: 34
 ```
 
-### IO.cpp
+## IO.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2295,14 +2353,16 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 Check output.txt for content.
 Read: This is the first line.
 Read: This is the second line.
 ```
 
-### FileIO.cpp
+## FileIO.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2332,13 +2392,15 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 Hello, File!
 Testing IO.
 ```
 
-### Binary.cpp
+## Binary.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2369,13 +2431,15 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 ID: 1, Value: 10.5
 ID: 2, Value: 20.5
 ```
 
-### Struct.cpp
+## Struct.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2405,14 +2469,16 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 Student: Alice, Age: 20, Grade: 9.50
 Student: Bob, Age: 21, Grade: 8.00
 Student: Charlie, Age: 19, Grade: 9.20
 ```
 
-### Pointer.cpp
+## Pointer.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2436,15 +2502,13 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
-```
+
+```text
 Before swap: x=10, y=20
 After swap: x=20, y=10
 ```
-
-
-
-
 
 用户创建了头文件。
 
@@ -2459,12 +2523,13 @@ int main(){
 ```
 
 Output:
-```
+
+```text
 Name: DoEasy
 Age: 100
 ```
 
-### CommandLine.cpp
+## CommandLine.cpp
 
 ```cpp
 #include <stdio.h>
@@ -2493,17 +2558,19 @@ int main(int argc, char *argv[]){
 ```
 
 Execution:
+
 `./CommandLine These Are the Args`
 
 Output:
-```
+
+```text
 Command Line Arg[1]:These
 Command Line Arg[2]:Are
 Command Line Arg[3]:the
 Command Line Arg[4]:Args
 ```
 
-### MemoryManagement.cpp
+## MemoryManagement.cpp
 
 ```cpp
 #include <stdio.h>
@@ -2541,14 +2608,15 @@ int main(){
 ```
 
 Output:
-```
+
+```text
 sizeof(): 8
 address: 0x7fff5c8e3b90
 name: doeasy
 about_name: This string can be as big as the malloc…
 ```
 
-### DynamicString.cpp
+## DynamicString.cpp
 
 ```cpp
 /*
@@ -2587,12 +2655,13 @@ int main(){
 ```
 
 Output:
-```
+
+```text
 Enter a sentence: this sentence can be any length
 You entered: this sentence can be any length
 ```
 
-### DynamicIntArray.cpp
+## DynamicIntArray.cpp
 
 ```cpp
 #include<stdio.h>
@@ -2626,7 +2695,8 @@ int main(){
 ```
 
 Output:
-```
+
+```text
 Enters numbers, press enter to add a number:
 0
 2
@@ -2637,7 +2707,13 @@ number[1]: 2
 That was 3 numbers.
 ```
 
-### ArrayAnalysis.cpp
+## ArrayAnalysis.cpp
+
+
+
+# C 语言数组与游戏开发示例
+
+## 1. 数组分析示例
 
 ```cpp
 #include<stdio.h>
@@ -2665,11 +2741,11 @@ int main(){
   printf("\tSmallest %d\n", small);
   return 0;
 }
+```
 
-/*
-创建一个长度为 size 的数组，包含 [0, range] 之间的随机数。
-当你返回数组时，必须返回一个指针，稍后可以遍历。
-*/
+`initArray()`：创建一个长度为`size`的数组，包含`[0, range]`之间的随机数。当你返回数组时，必须返回一个指针，稍后可以遍历。
+
+```cpp
 int* initArray(int size, int range){
   srand(time(0));
   int* num = (int*)malloc(sizeof(int));
@@ -2680,24 +2756,22 @@ int* initArray(int size, int range){
   //返回 numbers 的第一个地址
   return num;
 }
+```
 
-/*
-average 计算数组的平均值。
-我们是将数组传递到函数中。
-具体来说，我们向函数传递一个指针，然后我们可以对成员使用指针算术。
-这样做时，传入大小也是比较好的。
-*/
+`average()`：计算数组的平均值。我们是将数组传递到函数中。具体来说，我们向函数传递一个指针，然后我们可以对成员使用指针算术。这样做时，传入大小也是比较好的。
+
+```cpp
 double average(int* numbers, int size){
   double total = 0;
   for(int i = 0; i < size; i++)
     total += *(numbers+i);
   return total/(double)size;
 }
+```
 
-/*
-biggest: 找到数组中的最大数。
-我们将使用上述相同的技术。
-*/
+`biggest()`：找到数组中的最大数。我们将使用上述相同的技术。
+
+```cpp
 int biggest(int* numbers, int size){
   int biggest = *numbers;
   //初始化第一个 为第一个元素
@@ -2707,11 +2781,11 @@ int biggest(int* numbers, int size){
   }
   return biggest;
 }
+```
 
-/*
-smallest: 找到数组中的最小数。
-我们将使用上述相同的技术。
-*/
+`smallest()`：找到数组中的最小数。我们将使用上述相同的技术。
+
+```cpp
 int smallest(int* numbers, int size){
   int smallest = *numbers;
   //初始化 smallest 为第一个元素
@@ -2723,13 +2797,16 @@ int smallest(int* numbers, int size){
 }
 ```
 
-Output:
+输出示例：
+
 ```
 Analyzing Array:
 Average 60.30
 Biggest 90
 Smallest 0
 ```
+
+## 2. 井字游戏示例
 
 ### TicTacToe.h
 
@@ -2784,7 +2861,8 @@ int main(){
 }
 ```
 
-Output:
+输出示例：
+
 ```
 [ ][ ][ ]
 [ ][ ][ ]
@@ -2794,17 +2872,19 @@ Output:
 [ ][ ][ ]
 ```
 
+## 3. 国际象棋游戏示例
+
 ### Pieces.h
 
 ```cpp
 /*
 Author | Email | Date
+*/
 ```
 
+**棋盘与棋子定义**
 
-
-## 棋子 (Pieces)
-Pieces：包含国际象棋游戏中出现的棋子。
+`Pieces`：包含国际象棋游戏中出现的棋子。
 
 ```c
 char *board[8][8];
@@ -2856,9 +2936,11 @@ void printBoard(){
 }
 ```
 
-## Moves.h
+### Moves.h
+
 作者 | 邮箱 | 日期
-Moves：包含国际象棋游戏中出现的移动规则。
+
+`Moves`：包含国际象棋游戏中出现的移动规则。
 
 ```c
 int checkPawnMove(char *p, int fromr, int fromc, int tor, int toc){
@@ -2890,7 +2972,8 @@ void movePawn(char *piece, int r, int c, int tor, int toc){
 }
 ```
 
-## Game.cpp
+### Game.cpp
+
 ```cpp
 #include <stdio.h>
 #include "pieces.h"
@@ -2911,16 +2994,18 @@ int main(){
 }
 ```
 
-## 结
-总之，通过这些示例我们仅仅触及了皮毛。然而，现在你已经有了一个很好的基础可以进行构建。所以，尽管出去开始构建、调试，并在自己的代码中寻找乐趣吧。请访问我的网站获取更多信息：
+## 总结与进一步学习
+
+总之，通过这些示例我们仅仅触及了皮毛。然而，现在你已经有了一个很好的基础可以进行构建。所以，尽管出去开始构建、调试，并在自己的代码中寻找乐趣吧。
+
+请访问我的网站获取更多信息：
 
 [tfoss0001.github.io](http://tfoss0001.github.io)
 
 想要趣味且互动性的视频教程，请查看我的 YouTube 频道：
 
-DoEasy Productions
+`DoEasy Productions`
 
 该频道上有播放列表，可以引导你学习这些示例，并为你自己的程序提供灵感。非常感谢。
 
 -Torin Foss
-

@@ -1,12 +1,11 @@
 
-
 # 裸金属 C++ 实践指南
 
 > 来源：[`arobenko.github.io/bare_metal_cpp/#_data_serialisation`](https://arobenko.github.io/bare_metal_cpp/#_data_serialisation)
 
 ## 概述
 
-有时我会遇到这样的问题：C++是否适合嵌入式开发，尤其是裸机开发。有多篇文章认为 C++优于 C，你可以在 C++中做的一切都可以在 C 中做，并且还有许多额外的功能，甚至应该用于裸机开发。然而，我没有找到很多关于如何使用 C++的优势和提升开发过程与传统的使用“C”编程语言方法的实际指南或教程。通过这本书，我希望解释并展示如何实现**软实时系统**，而不需要优先考虑中断，也不需要任何复杂的实时任务调度。希望它能帮助某人开始使用 C++进行嵌入式裸机开发。
+有时我会遇到这样的问题：`C++`是否适合嵌入式开发，尤其是裸机开发。有多篇文章认为`C++`优于`C`，你可以在`C++`中做的一切都可以在`C`中做，并且还有许多额外的功能，甚至应该用于裸机开发。然而，我没有找到很多关于如何使用`C++`的优势和提升开发过程与传统的使用“`C`”编程语言方法的实际指南或教程。通过这本书，我希望解释并展示如何实现**软实时系统**，而不需要优先考虑中断，也不需要任何复杂的实时任务调度。希望它能帮助某人开始使用`C++`进行嵌入式裸机开发。
 
 本作品受[Commons Attribution-NonCommercial-ShareAlike 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)的许可。
 
@@ -14,45 +13,45 @@
 
 ### 受众
 
-本文档的主要目标受众是希望更好地理解裸机开发的专业 C++开发者，了解如何在嵌入式环境中使用他们喜欢的编程语言，并可能将他们的 C++技能提升到“专家”水平。为什么是**专业**开发者？因为裸机平台有很多限制。在大多数情况下，将没有异常和运行时类型信息（RTTI）的支持。在许多情况下，动态内存分配也将被排除。为了能够有效地使用 C++，你必须对现有的 C++惯用用法、构造和 STL 内容有深入的了解。你必须知道你喜欢的数据结构是如何实现的，以及是否可以在你的环境中重用它们。如果无法直接使用 STL（或任何其他库）代码，你必须实现它的简化版本，并且最好知道库开发者是如何实现该功能的，以及如何使其适应你环境的限制。
+本文档的主要目标受众是希望更好地理解裸机开发的专业`C++`开发者，了解如何在嵌入式环境中使用他们喜欢的编程语言，并可能将他们的`C++`技能提升到“专家”水平。为什么是**专业**开发者？因为裸机平台有很多限制。在大多数情况下，将没有异常和运行时类型信息（`RTTI`）的支持。在许多情况下，动态内存分配也将被排除。为了能够有效地使用`C++`，你必须对现有的`C++`惯用用法、构造和`STL`内容有深入的了解。你必须知道你喜欢的数据结构是如何实现的，以及是否可以在你的环境中重用它们。如果无法直接使用`STL`（或任何其他库）代码，你必须实现它的简化版本，并且最好知道库开发者是如何实现该功能的，以及如何使其适应你环境的限制。
 
-对于具有中级 C++知识的专业嵌入式开发者，这份文档也可能很有用。他们可能会从许多 C++洞察中受益，并会有几次“我没想到我能做到这一点！”这样的顿悟时刻。
+对于具有中级`C++`知识的专业嵌入式开发者，这份文档也可能很有用。他们可能会从许多`C++`洞察中受益，并会有几次“我没想到我能做到这一点！”这样的顿悟时刻。
 
-如果你的 C++知识仅限于多态和虚函数，如果模板元编程对你来说毫无意义，那么你可能还没有准备好在嵌入式环境中使用 C++，这份文档可能也会过于复杂而难以理解。
+如果你的`C++`知识仅限于多态和虚函数，如果模板元编程对你来说毫无意义，那么你可能还没有准备好在嵌入式环境中使用`C++`，这份文档可能也会过于复杂而难以理解。
 
-我想强调的是，这**不是一个 C++ 教程**。网上有很多资源教授传统的 C++，包括操作系统服务、异常和 RTTI。我个人的观点是，在使用裸机世界之前，你必须掌握在常规环境下的 C++。
+我想强调的是，这**不是一个`C++`教程**。网上有很多资源教授传统的`C++`，包括操作系统服务、异常和`RTTI`。我个人的观点是，在使用裸机世界之前，你必须掌握在常规环境下的`C++`。
 
 ### C++ 的流行度
 
-C++ 在基于 Linux 的嵌入式系统中相当流行。然而，在裸机开发中并不那么流行。为什么？可能是因为它的复杂性。仅仅了解 C++ 语法是不够的。为了有效地使用它，开发者必须知道标准模板库（STL）提供了什么，在为特定平台开发时什么可以使用，什么不可以使用。对 STL 的精通也不够，开发者应该对模板元编程有一定的熟练程度。尽管有人认为模板因为可执行代码膨胀而危险，但我认为模板是开发者的朋友，但必须知道这些危险并知道如何有效地使用模板。但再次强调，要正确地做到这一点，需要时间和努力。
+`C++`在基于`Linux`的嵌入式系统中相当流行。然而，在裸机开发中并不那么流行。为什么？可能是因为它的复杂性。仅仅了解`C++`语法是不够的。为了有效地使用它，开发者必须知道标准模板库（`STL`）提供了什么，在为特定平台开发时什么可以使用，什么不可以使用。对`STL`的精通也不够，开发者应该对模板元编程有一定的熟练程度。尽管有人认为模板因为可执行代码膨胀而危险，但我认为模板是开发者的朋友，但必须知道这些危险并知道如何有效地使用模板。但再次强调，要正确地做到这一点，需要时间和努力。
 
-另一个原因，为什么 C++ 不用于裸机开发，是因为在许多项目（如果不是大多数项目）中，软件是由硬件开发者编写的，至少在最初阶段是为了确保硬件按预期工作。对于他们来说，“C”编程语言是一个自然的选择。当然，大多数硬件开发者缺乏软件开发的专业知识。他们可能难以编写高质量的“C”代码，更不用说“C++”了。当软件达到一定复杂度时，它会被转交给不允许从头开始重新实现的软件工程师。他们被告知：“这段代码几乎可以工作，只需修复几个错误，实现这个简短的功能集，我们就可以继续了。丢弃现有的代码是浪费，我们没有时间重新实现它。”
+另一个原因，为什么`C++`不用于裸机开发，是因为在许多项目（如果不是大多数项目）中，软件是由硬件开发者编写的，至少在最初阶段是为了确保硬件按预期工作。对于他们来说，“`C`”编程语言是一个自然的选择。当然，大多数硬件开发者缺乏软件开发的专业知识。他们可能难以编写高质量的“`C`”代码，更不用说“`C++`”了。当软件达到一定复杂度时，它会被转交给不允许从头开始重新实现的软件工程师。他们被告知：“这段代码几乎可以工作，只需修复几个错误，实现这个简短的功能集，我们就可以继续了。丢弃现有的代码是浪费，我们没有时间重新实现它。”
 
-最后一个原因，我认为，是一个心理原因。人们宁愿在群体中犯错，也不愿自己正确。当大多数基于 Linux 的嵌入式系统产品正在使用“C”进行开发时，选择“C++”会感觉风险和自然，尽管从技术角度来看后者是一个更好的选择。
+最后一个原因，我认为，是一个心理原因。人们宁愿在群体中犯错，也不愿自己正确。当大多数基于`Linux`的嵌入式系统产品正在使用“`C`”进行开发时，选择“`C++`”会感觉风险和自然，尽管从技术角度来看后者是一个更好的选择。
 
 ### C++ 的好处
 
-选择 C++ 而不是 C 的主要原因是**代码重用**。多亏了模板，在 C++ 中实现通用的代码块，使其能够在项目之间重用，比在 C 中要容易得多。当从头开始实现所有内容时，使用 C++ 而不是 C 在开发工作量方面可能不会带来任何显著的优势，甚至可能增加工作量。然而，一旦开发出了通用组件，下一个项目的整个开发过程将会因为重用之前的组件而变得更加容易和快速。
+选择`C++`而不是`C`的主要原因是**代码重用**。多亏了模板，在`C++`中实现通用的代码块，使其能够在项目之间重用，比在`C`中要容易得多。当从头开始实现所有内容时，使用`C++`而不是`C`在开发工作量方面可能不会带来任何显著的优势，甚至可能增加工作量。然而，一旦开发出了通用组件，下一个项目的整个开发过程将会因为重用之前的组件而变得更加容易和快速。
 
 ### 本书内容
 
-本文档介绍了可以在裸机开发中使用的几个概念，并展示了如何使用当时最新（撰写时）的 C++11 标准实现它们。
+本文档介绍了可以在裸机开发中使用的几个概念，并展示了如何使用当时最新（撰写时）的`C++11`标准实现它们。
 
-通用组件的代码作为“嵌入式 C++ 库”项目“embxx”的一部分实现，可以在[`github.com/arobenko/embxx`](https://github.com/arobenko/embxx)找到。它拥有 GPLv3 许可证。
+通用组件的代码作为“嵌入式`C++`库”项目“`embxx`”的一部分实现，可以在[`github.com/arobenko/embxx`](https://github.com/arobenko/embxx)找到。它拥有`GPLv3`许可证。
 
-也有一个项目实现了多个简单的裸机应用程序，使用 [embxx](https://github.com/arobenko/embxx) 可以在 RaspberryPi 平台上运行。源代码可以在 [`github.com/arobenko/embxx_on_rpi`](https://github.com/arobenko/embxx_on_rpi) 找到。它也拥有 GPLv3 许可证。
+也有一个项目实现了多个简单的裸机应用程序，使用 [`embxx`](https://github.com/arobenko/embxx) 可以在`RaspberryPi`平台上运行。源代码可以在 [`github.com/arobenko/embxx_on_rpi`](https://github.com/arobenko/embxx_on_rpi) 找到。它也拥有`GPLv3`许可证。
 
-两个项目都需要 gcc 版本 4.7 或更高版本，因为需要 C++11 支持。它们还使用 [CMake](http://www.cmake.org) 作为它们的构建系统。代码已经与以下免费工具链进行了测试：
+两个项目都需要`gcc`版本 4.7 或更高版本，因为需要`C++11`支持。它们还使用 [`CMake`](http://www.cmake.org) 作为它们的构建系统。代码已经与以下免费工具链进行了测试：
 
 +   Launchpad 上的 [GNU Tools for ARM Embedded Processors](https://launchpad.net/gcc-arm-embedded)
 
 +   [Sourcery CodeBench Lite Edition](http://www.mentor.com/embedded-software/sourcery-tools/sourcery-codebench/editions/lite-edition/)
 
-整个文档以 ARM 平台为中心。目前我并不尝试涵盖其他内容。
+整个文档以`ARM`平台为中心。目前我并不尝试涵盖其他内容。
 
-在 Linux 环境中编译 Raspberry Pi 示例应用程序，请按照以下步骤操作：
+在`Linux`环境中编译`Raspberry Pi`示例应用程序，请按照以下步骤操作：
 
-+   检出 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目
++   检出 [`embxx_on_rpi`](https://github.com/arobenko/embxx_on_rpi) 项目
 
 ```cpp
 > git clone https://github.com/arobenko/embxx_on_rpi.git
@@ -66,13 +65,13 @@ C++ 在基于 Linux 的嵌入式系统中相当流行。然而，在裸机开发
 > cd build
 ```
 
-+   生成 makefiles
++   生成`makefiles`
 
 ```cpp
 > cmake ..
 ```
 
-注意，cmake 的最后一个参数是源树根的相对或绝对路径。另外注意，[embxx](https://github.com/arobenko/embxx) 库将在此过程中作为外部 git 子模块检出。
+注意，`cmake`的最后一个参数是源树根的相对或绝对路径。另外注意，[`embxx`](https://github.com/arobenko/embxx) 库将在此过程中作为外部`git`子模块检出。
 
 +   构建应用程序
 
@@ -82,19 +81,19 @@ C++ 在基于 Linux 的嵌入式系统中相当流行。然而，在裸机开发
 
 +   从 `<build_dir>/image/<app_name>/kernel.img` 中获取生成的镜像
 
-CMake 提供以下构建类型，我认为它们是自解释的：
+`CMake`提供以下构建类型，我认为它们是自解释的：
 
-+   None（默认）
++   `None`（默认）
 
-+   Debug
++   `Debug`
 
-+   Release
++   `Release`
 
-+   MinSizeRel
++   `MinSizeRel`
 
-+   RelWithDebInfo
++   `RelWithDebInfo`
 
-要指定所需的构建类型，请使用 cmake 实用工具的 `-DCMAKE_BUILD_TYPE=<value>` 选项：
+要指定所需的构建类型，请使用`cmake`实用工具的 `-DCMAKE_BUILD_TYPE=<value>` 选项：
 
 ```cpp
 > cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -102,7 +101,7 @@ CMake 提供以下构建类型，我认为它们是自解释的：
 
 如果未指定构建类型，默认类型是**None**，这与**Debug**类似，但没有 `-g` 编译选项，即不进行优化也不生成调试信息。
 
-可以指定交叉编译工具链的前缀。默认期望 `arm-none-eabi-`，即 `arm-none-eabi-gcc`、`arm-none-eabi-g++` 和 `arm-none-eabi-as` 用于编译源代码。如果这些实用工具在环境搜索路径中找不到，那么您应该通过传递 `-DCROSS_COMPILE=<prefix>` 选项到 cmake 来指定前缀：
+可以指定交叉编译工具链的前缀。默认期望 `arm-none-eabi-`，即 `arm-none-eabi-gcc`、`arm-none-eabi-g++` 和 `arm-none-eabi-as` 用于编译源代码。如果这些实用工具在环境搜索路径中找不到，那么您应该通过传递 `-DCROSS_COMPILE=<prefix>` 选项到`cmake`来指定前缀：
 
 ```cpp
 > cmake -DCROSS_COMPILE=/opt/arm-none-eabi-2013.05/bin/arm-none-eabi- ..
@@ -114,7 +113,7 @@ CMake 提供以下构建类型，我认为它们是自解释的：
 > VERBOSE=1 make
 ```
 
-[embxx](https://github.com/arobenko/embxx) 库有 doxygen 生成的文档。可以在 [发布工件](https://github.com/arobenko/embxx/releases) 中找到。
+[`embxx`](https://github.com/arobenko/embxx) 库有`doxygen`生成的文档。可以在 [发布工件](https://github.com/arobenko/embxx/releases) 中找到。
 
 ### 贡献
 
@@ -122,15 +121,15 @@ CMake 提供以下构建类型，我认为它们是自解释的：
 
 ### 离线读取
 
-本书源代码托管在 [github](https://github.com/arobenko/bare_metal_cpp_src) 上，本书的 PDF 和 HTML 版本可以从 [release_artifacts](https://github.com/arobenko/bare_metal_cpp_src/releases) 下载。
+本书源代码托管在 [github](https://github.com/arobenko/bare_metal_cpp_src) 上，本书的`PDF`和`HTML`版本可以从 [release_artifacts](https://github.com/arobenko/bare_metal_cpp_src/releases) 下载。
 
 ## 了解您的编译器输出
 
-在裸机开发中成功使用 C++语言及其库，了解编译器从 C++源代码生成的二进制代码非常重要。本节将引导您通过构建简单测试应用程序并分析它们的二进制代码的过程。
+在裸机开发中成功使用`C++`语言及其库，了解编译器从`C++`源代码生成的二进制代码非常重要。本节将引导您通过构建简单测试应用程序并分析它们的二进制代码的过程。
 
 ### 测试应用程序
 
-[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目包含几个简单的测试应用程序，这些应用程序仅用于二进制代码分析，不应在目标平台上执行。这些应用程序位于 [src/test_cpp](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp) 目录中。为了正确分析编译器为生产环境生成的代码，让我们以发布模式编译所有应用程序：
+[`embxx_on_rpi`](https://github.com/arobenko/embxx_on_rpi) 项目包含几个简单的测试应用程序，这些应用程序仅用于二进制代码分析，不应在目标平台上执行。这些应用程序位于 [src/test_cpp](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp) 目录中。为了正确分析编译器为生产环境生成的代码，让我们以发布模式编译所有应用程序：
 
 ```cpp
 > git clone https://github.com/arobenko/embxx_on_rpi.git
@@ -146,23 +145,23 @@ CMake 提供以下构建类型，我认为它们是自解释的：
 
 让我们尝试编译一个无限循环的简单应用程序，称为 [test_cpp_simple](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_simple)。
 
-要成功地将所有生成的对象链接起来，需要一个链接脚本。它说明了哪些代码/数据段需要在什么地址加载，以及定义了可能由源代码需要的几个符号。[这里](http://www.delorie.com/gnu/docs/binutils/ld_6.html)是一个关于链接脚本语法的良好手册，[这里](https://github.com/arobenko/embxx_on_rpi/blob/master/src/raspberrypi.ld)是我用来为 Raspberry Pi 平台链接应用程序的链接脚本。
+要成功地将所有生成的对象链接起来，需要一个链接脚本。它说明了哪些代码/数据段需要在什么地址加载，以及定义了可能由源代码需要的几个符号。[这里](http://www.delorie.com/gnu/docs/binutils/ld_6.html)是一个关于链接脚本语法的良好手册，[这里](https://github.com/arobenko/embxx_on_rpi/blob/master/src/raspberrypi.ld)是我用来为`Raspberry Pi`平台链接应用程序的链接脚本。
 
 根据您的编译器，链接可能会失败，因为某些符号缺失。例如，当应用程序使用异常支持编译时，需要 `__exidx_start` 和 `__exidx_end`，或者如果标准库包含清零 `.bss` 段的代码，可能需要 `__bss_start__` 和 `__bss_end__`。
 
 每个应用程序都必须有一个启动代码，通常用汇编语言编写。这个启动代码必须执行以下步骤：
 
-1.  在适当的位置（通常在地址 0x0000）写入中断向量表。
+1.  在适当的位置（通常在地址 `0x0000`）写入中断向量表。
 
 1.  为每个运行时模式设置栈指针。
 
-1.  清零 .bss 段
+1.  清零 `.bss` 段
 
-1.  调用全局（静态）对象的构造函数（仅适用于 C++）
+1.  调用全局（静态）对象的构造函数（仅适用于`C++`）
 
 1.  调用主函数。
 
-可能会发生编译器为您生成一些启动代码的情况，尤其是如果您没有从编译中排除标准库（stdlib）。为了检查这是否是这种情况，我们需要分析成功编译和链接的图像二进制文件的汇编列表。测试应用程序的所有生成文件都将位于`<build_dir>/src/test_cpp/<app_name>`。汇编列表文件将具有`kernel.list`名称。
+可能会发生编译器为您生成一些启动代码的情况，尤其是如果您没有从编译中排除标准库（`stdlib`）。为了检查这是否是这种情况，我们需要分析成功编译和链接的图像二进制文件的汇编列表。测试应用程序的所有生成文件都将位于`<build_dir>/src/test_cpp/<app_name>`。汇编列表文件将具有`kernel.list`名称。
 
 **旁注**：可以使用以下命令生成汇编列表：
 
@@ -170,13 +169,13 @@ CMake 提供以下构建类型，我认为它们是自解释的：
 > arm-none-eabi-objdump -D -S app_binary > app.list
 ```
 
-打开列表文件，查找包含**CRT**字符串的函数。**CRT**代表“C 运行时”。当使用[这个](https://launchpad.net/gcc-arm-embedded)编译器时，编译器生成的函数被称为`_mainCRTStartup`。让我们更仔细地看看这个函数做了什么。
+打开列表文件，查找包含**CRT**字符串的函数。**CRT**代表“`C`运行时”。当使用[这个](https://launchpad.net/gcc-arm-embedded)编译器时，编译器生成的函数被称为`_mainCRTStartup`。让我们更仔细地看看这个函数做了什么。
 
 ```cpp
 00008198 <_mainCRTStartup>:
 ```
 
-加载 RAM 末端的地址并将其值赋给堆栈指针（sp）。
+加载`RAM`末端的地址并将其值赋给堆栈指针（`sp`）。
 
 ```cpp
  8198:	e59f30f0 	ldr	r3, [pc, #240]	; 8290 <_mainCRTStartup+0xf8>
@@ -185,7 +184,7 @@ CMake 提供以下构建类型，我认为它们是自解释的：
     81a4:	e1a0d003 	mov	sp, r3
 ```
 
-为各种模式设置 sp 的值，堆栈的大小由编译器本身确定。
+为各种模式设置`sp`的值，堆栈的大小由编译器本身确定。
 
 ```cpp
  81a8:	e10f2000 	mrs	r2, CPSR
@@ -242,13 +241,15 @@ CMake 提供以下构建类型，我认为它们是自解释的：
  8284:	eb000010 	bl	82cc <main>
 ```
 
+
+
 如果由于某种原因`main`函数返回，则调用退出函数，该函数可能必须实现为无限循环或跳回启动代码的开始处。
 
 ```cpp
  8288:	eb000008 	bl	82b0 <exit>
 ```
 
-接下来是局部数据
+接下来是局部数据：
 
 ```cpp
  828c:	00080000 	andeq	r0, r8, r0
@@ -304,7 +305,7 @@ reset:
     stmia r1!,{r2,r3,r4,r5,r6,r7,r8,r9}
 ```
 
-请注意，位于地址 0x0000 的中断向量表包含指向适当处理器的分支指令，而不仅仅是处理器的地址。让我们更仔细地看看这些分支指令在我们的汇编列表文件中的样子：
+请注意，位于地址`0x0000`的中断向量表包含指向适当处理器的分支指令，而不仅仅是处理器的地址。让我们更仔细地看看这些分支指令在我们的汇编列表文件中的样子：
 
 ```cpp
 _entry:
@@ -342,7 +343,7 @@ _entry:
     8048:	000082b4 			; <UNDEFINED> instruction: 0x000082b4
 ```
 
-分支指令将中断函数的地址加载到“pc”寄存器。然而，函数的地址存储在某个地方，编译器生成对该存储的访问使用相对于当前“pc”寄存器的相对偏移。这就是为什么我们必须复制不仅仅是分支指令，还要复制存储中断例程地址的区域：
+分支指令将中断函数的地址加载到`pc`寄存器。然而，函数的地址存储在某个地方，编译器生成对该存储的访问使用相对于当前`pc`寄存器的相对偏移。这就是为什么我们必须复制不仅仅是分支指令，还要复制存储中断例程地址的区域：
 
 ```cpp
  ;@ Copy interrupt vector to its place
@@ -398,7 +399,7 @@ readr.c:(.text._read_r+0x20): undefined reference to `_read'
 collect2: error: ld returned 1 exit status
 ```
 
-符号 `__exidx_start` 和 `__exidx_end` 用于指示 `.ARM.exidx` 部分的开始和结束。它用于异常处理。它们必须在链接脚本中定义：
+符号`__exidx_start`和`__exidx_end`用于指示`.ARM.exidx`部分的开始和结束。它用于异常处理。它们必须在链接脚本中定义：
 
 ```cpp
 .ARM.exidx :
@@ -409,13 +410,13 @@ collect2: error: ld returned 1 exit status
 } >RAM
 ```
 
-动态内存分配将需要实现 `_sbrk` 函数，该函数将用于为 C/C++ 堆管理分配内存块。
+动态内存分配将需要实现`_sbrk`函数，该函数将用于为 C/C++ 堆管理分配内存块。
 
 所有其他符号都需要正确支持由 C++ 堆管理系统使用的异常。[这里](https://sourceware.org/newlib/libc.html#Syscalls) 是一个很好的资源，列出了开发者可能需要实现的所有系统调用，以使应用程序编译成功。
 
-现在，在成功编译后，仔细查看我们编译的两个示例应用程序的映像大小。路径是 `<build_dir>/src/test_cpp/test_cpp_simple/kernel.img` 和 `<build_dir>/src/test_cpp/test_cpp_vector/kernel.img`。
+现在，在成功编译后，仔细查看我们编译的两个示例应用程序的映像大小。路径是`<build_dir>/src/test_cpp/test_cpp_simple/kernel.img`和`<build_dir>/src/test_cpp/test_cpp_vector/kernel.img`。
 
-**旁注**：可以使用以下指令从 elf 二进制文件生成映像：> arm-none-eabi-objcopy <elf_executable> -O binary <binary_image_path>
+**旁注**：可以使用以下指令从 elf 二进制文件生成映像：`arm-none-eabi-objcopy <elf_executable> -O binary <binary_image_path>`
 
 你可能会注意到，[test_cpp_vector](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_vector) 图像的大小比 [test_cpp_simple](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_simple) 大约多 100K。这是由于 C++ 堆管理和异常处理引起的。让我们尝试看看如果将“C++”堆替换为不带异常的“C”堆，应用程序的大小会发生什么变化。你将不得不覆盖所有负责内存分配/释放的全局 C++ 操作符：
 
@@ -463,7 +464,9 @@ void operator delete[](void *p,  std::nothrow_t) noexcept
 }
 ```
 
-请重新编译 [test_cpp_vector](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_vector) 应用程序，创建其映像，并查看其大小。它将更接近 [test_cpp_simple](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_simple) 映像的大小。实际上，你可能甚至不需要之前实现的大多数系统调用函数。尝试逐个删除它们，看看链接器是否仍然报告对这些符号的“未定义引用”。
+
+
+请重新编译[test_cpp_vector](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_vector)应用程序，创建其映像，并查看其大小。它将更接近[test_cpp_simple](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_simple)映像的大小。实际上，你可能甚至不需要之前实现的大多数系统调用函数。尝试逐个删除它们，看看链接器是否仍然报告对这些符号的“未定义引用”。
 
 **结论**：使用 C++堆会带来显著的代码大小开销。在裸机开发中使用 C++时，覆盖`new`和`delete`操作符的实现，使用`malloc`和`free`是一个好的做法。请注意，在这种情况下，如果内存分配失败，将返回[nullptr](http://en.cppreference.com/w/cpp/types/nullptr_t)而不是抛出[std::bad_alloc](http://en.cppreference.com/w/cpp/memory/new/bad_alloc)异常，因此要小心第三方 C++库，这些库依赖于抛出异常，并且没有检查从[operator new](http://en.cppreference.com/w/cpp/memory/new/operator_new)返回的值。
 
@@ -486,7 +489,7 @@ main.cpp:34:42: error: exception handling disabled, use -fexceptions to enable
      throw std::runtime_error("Some error");
 ```
 
-然而，尽管编译选项禁止了异常，标准库中的所有 `throw` 语句都被编译进去了，导致整个异常处理支持代码的额外开销都包含在最终的二进制映像中。测试应用程序 [test_cpp_exceptions](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_exceptions) 包含简单的代码，会导致异常被抛出：
+然而，尽管编译选项禁止了异常，标准库中的所有`throw`语句都被编译进去了，导致整个异常处理支持代码的额外开销都包含在最终的二进制映像中。测试应用程序[test_cpp_exceptions](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_exceptions)包含简单的代码，会导致异常被抛出：
 
 ```cpp
 std::vector<int> v;
@@ -503,9 +506,9 @@ v.at(100) = 0;
    15f6c:	00013868 	andeq	r3, r1, r8, ror #16
 ```
 
-我们还可以看到，生成的列表中存在多个与异常相关的函数，例如 `__cxa_allocate_exception`、`__cxa_throw`、`_ZSt20__throw_out_of_rangePKc`、`_ZSt21__throw_bad_exceptionv` 等... 由于异常处理，二进制映像的大小也将非常大（约 125KB）。
+我们还可以看到，生成的列表中存在多个与异常相关的函数，例如`__cxa_allocate_exception`、`__cxa_throw`、`_ZSt20__throw_out_of_rangePKc`、`_ZSt21__throw_bad_exceptionv`等……由于异常处理，二进制映像的大小也将非常大（约 125KB）。
 
-如果你希望使用可能会抛出异常的 STL 类，例如 `std::string`、`std::vector`，但又不愿意为异常处理支付额外的代码空间成本，你将不得不做两件事。首先，确保你的代码运行中不会发生异常条件，即如果 `throw` 语句即将执行，这意味着你的代码中存在错误。其次，覆盖编译器尝试使用的所有 "__throw_*" 函数的定义。为了识别所有这些函数，你将不得不暂时禁用标准库的使用，通过将 `-nostdlib` 编译选项传递给 `gcc` 编译器。对于上面的代码示例，不使用标准库的编译将因错误信息而失败：
+如果你希望使用可能会抛出异常的 STL 类，例如`std::string`、`std::vector`，但又不愿意为异常处理支付额外的代码空间成本，你将不得不做两件事。首先，确保你的代码运行中不会发生异常条件，即如果`throw`语句即将执行，这意味着你的代码中存在错误。其次，覆盖编译器尝试使用的所有`__throw_*`函数的定义。为了识别所有这些函数，你将不得不暂时禁用标准库的使用，通过将`-nostdlib`编译选项传递给`gcc`编译器。对于上面的代码示例，不使用标准库的编译将因错误信息而失败：
 
 ```cpp
 main.cpp.o: In function `main':
@@ -513,7 +516,7 @@ main.cpp:(.text.startup+0x8): undefined reference to `std::__throw_out_of_range(
 collect2: error: ld returned 1 exit status
 ```
 
-让我们尝试覆盖 `std::__throw_out_of_range(char const*)`:
+让我们尝试覆盖`std::__throw_out_of_range(char const*)`：
 
 ```cpp
 namespace std
@@ -527,15 +530,15 @@ void __throw_out_of_range(char const*)
 }
 ```
 
-这次编译将成功。现在让我们编译包含标准库的结果代码（不使用 `-nostdlib` 选项）并检查二进制映像大小。使用我的编译器，大小为 1.3KB，这比使用异常处理时的 120KB 要好得多。
+这次编译将成功。现在让我们编译包含标准库的结果代码（不使用`-nostdlib`选项）并检查二进制映像大小。使用我的编译器，大小为 1.3KB，这比使用异常处理时的 120KB 要好得多。
 
-**结论**：在 C++裸机开发中，排除异常处理支持是一个众所周知且广泛使用的实践。即使使用了相关的编译选项（GNU 编译器中的 `-fno-exceptions` 和 `-fno-unwind-tables`），仍然需要覆盖编译器使用的和标准库提供的各种 `__throw_*` 函数。
+**结论**：在 C++裸机开发中，排除异常处理支持是一个众所周知且广泛使用的实践。即使使用了相关的编译选项（GNU 编译器中的`-fno-exceptions`和`-fno-unwind-tables`），仍然需要覆盖编译器使用的和标准库提供的各种`__throw_*`函数。
 
 ### RTTI
 
-**运行时类型信息** 也是传统 C++的核心特性之一。它允许在运行时检索对象类型信息（使用 [typeid](http://en.cppreference.com/w/cpp/language/typeid) 操作符）以及检查继承层次结构（使用 [dynamic_cast](http://en.cppreference.com/w/cpp/language/dynamic_cast)）。RTTI 仅在存在多态行为时才可用，即类至少有一个虚函数。
+**运行时类型信息**也是传统 C++的核心特性之一。它允许在运行时检索对象类型信息（使用[typeid](http://en.cppreference.com/w/cpp/language/typeid)操作符）以及检查继承层次结构（使用[dynamic_cast](http://en.cppreference.com/w/cpp/language/dynamic_cast)）。RTTI 仅在存在多态行为时才可用，即类至少有一个虚函数。
 
-让我们尝试分析使用 RTTI 时生成的代码。在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目中的 [test_cpp_rtti](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_rtti) 应用程序中包含以下代码。
+让我们尝试分析使用 RTTI 时生成的代码。在[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中的[test_cpp_rtti](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_rtti)应用程序中包含以下代码：
 
 ```cpp
 struct SomeClass
@@ -544,7 +547,7 @@ struct SomeClass
 };
 ```
 
-在某个 *.cpp 文件中：
+在某个`.cpp`文件中：
 
 ```cpp
 void SomeClass::someFunc()
@@ -552,21 +555,21 @@ void SomeClass::someFunc()
 }
 ```
 
-在 `main` 函数的某个地方：
+在`main`函数的某个地方：
 
 ```cpp
 SomeClass someClass;
 someClass.someFunc();
 ```
 
-让我们打开列表文件，看看里面发生了什么。`SomeClass::someFunc()` 的地址似乎为 `0x8300`：
+让我们打开列表文件，看看里面发生了什么。`SomeClass::someFunc()`的地址似乎为`0x8300`：
 
 ```cpp
 00008300 <_ZN9SomeClass8someFuncEv>:
     8300:	e12fff1e 	bx	lr
 ```
 
-`SomeClass` 类的虚拟表必须在 `.rodata` 部分中，并包含 `SomeClass::someFunc()` 函数的地址，即它内部必须有 `0x8300` 的值：
+`SomeClass`类的虚拟表必须在`.rodata`部分中，并包含`SomeClass::someFunc()`函数的地址，即它内部必须有`0x8300`的值：
 
 ```cpp
 Disassembly of section .rodata:
@@ -579,7 +582,7 @@ Disassembly of section .rodata:
     9c1c:	00000000 	andeq	r0, r0, r0
 ```
 
-可以看到，编译器在除了我们实现的单个虚拟函数之外，还向虚拟表添加了一些条目。地址 `0x9c04` 也位于 `.rodata` 部分中。这是一个类型相关表：
+可以看到，编译器在除了我们实现的单个虚拟函数之外，还向虚拟表添加了一些条目。地址`0x9c04`也位于`.rodata`部分中。这是一个类型相关表：
 
 ```cpp
 00009c04 <_ZTI9SomeClass>:
@@ -588,7 +591,7 @@ Disassembly of section .rodata:
     9c0c:	00000000 	andeq	r0, r0, r0
 ```
 
-`0x9c28` 和 `0x9bf8` 都是 `.rodata*` 部分的地址。`0x9bf8` 地址似乎包含一些数据：
+`0x9c28`和`0x9bf8`都是`.rodata*`部分的地址。`0x9bf8`地址似乎包含一些数据：
 
 ```cpp
 00009bf8 <_ZTS9SomeClass>:
@@ -597,9 +600,9 @@ Disassembly of section .rodata:
     9c00:	00007373 	andeq	r7, r0, r3, ror r3
 ```
 
-经过仔细观察，我们可能将此数据解码为 `9SomeClass` ascii 字符串。
+经过仔细观察，我们可能将此数据解码为`9SomeClass` ascii 字符串。
 
-地址 `0x9c28` 位于某些类型相关信息表中：
+地址`0x9c28`位于某些类型相关信息表中：
 
 ```cpp
 00009c20 <_ZTVN10__cxxabiv117__class_type_infoE>:
@@ -619,7 +622,7 @@ Disassembly of section .rodata:
 
 编译器如何使用这些表对我们来说兴趣不大。有趣的是代码大小的开销。让我们检查二进制映像的大小。使用我的编译器，它略大于 13KB。
 
-对于某些裸机平台，可能不希望甚至不可能将这么多额外的二进制代码添加到二进制映像中。GNU 编译器 (`gcc`) 提供了使用 `-no-rtti` 选项禁用 **RTTI** 的能力。让我们检查使用此选项时 `SomeClass` 类的虚拟表：
+对于某些裸机平台，可能不希望甚至不可能将这么多额外的二进制代码添加到二进制映像中。GNU 编译器（`gcc`）提供了使用`-no-rtti`选项禁用**RTTI**的能力。让我们检查使用此选项时`SomeClass`类的虚拟表：
 
 ```cpp
 Disassembly of section .rodata:
@@ -630,25 +633,21 @@ Disassembly of section .rodata:
     832c:	00000000 	andeq	r0, r0, r0
 ```
 
-虚拟表现在看起来要简单得多，只有一个指向 `SomeClass::someFunc()` 虚拟函数的指针。不需要额外的代码大小开销来维护类型信息。如果上面的应用程序在没有异常（使用 `-fno-exceptions` 和 `-fno-unwind-tables`）以及没有 RTTI 支持（使用 `-no-rtti`）的情况下编译，二进制映像大小将约为 1.3KB，这要好得多。
+虚拟表现在看起来要简单得多，只有一个指向`SomeClass::someFunc()`虚拟函数的指针。不需要额外的代码大小开销来维护类型信息。如果上面的应用程序在没有异常（使用`-fno-exceptions`和`-fno-unwind-tables`）以及没有 RTTI 支持（使用`-no-rtti`）的情况下编译，二进制映像大小将约为 1.3KB，这要好得多。
 
-然而，如果使用 `-no-rtti` 选项，编译器将不允许使用 [typeid](http://en.cppreference.com/w/cpp/language/typeid) 操作符以及 [dynamic_cast](http://en.cppreference.com/w/cpp/language/dynamic_cast)。在这种情况下，开发者需要想出其他解决方案来区分不同类型的对象（但具有相同的 '祖先'）在运行时。有多种惯用法可以使用，例如使用简单的 C 语言风格的 `switch` 在某些类型枚举成员上，或者使用对象的多态行为来执行 [双重分派](http://en.wikipedia.org/wiki/Double_dispatch)。
+然而，如果使用`-no-rtti`选项，编译器将不允许使用[typeid](http://en.cppreference.com/w/cpp/language/typeid)操作符以及[dynamic_cast](http://en.cppreference.com/w/cpp/language/dynamic_cast)。在这种情况下，开发者需要想出其他解决方案来区分不同类型的对象（但具有相同的“祖先”）在运行时。有多种惯用法可以使用，例如使用简单的 C 语言风格的`switch`在某些类型枚举成员上，或者使用对象的多态行为来执行[双重分派](http://en.wikipedia.org/wiki/Double_dispatch)。
 
-**结论**：在裸机 C++ 开发中，禁用 **R**un **T**ime **T**ype **I**nformation (RTTI) 以及消除异常处理是非常常见的。它允许在最终二进制映像中节省大约 10KB 的空间开销。
+**结论**：在裸机 C++开发中，禁用**R**un **T**ime **T**ype **I**nformation（RTTI）以及消除异常处理是非常常见的。它允许在最终二进制映像中节省大约 10KB 的空间开销。
 
-### 移除标准库和 C++ 运行时
+### 移除标准库和 C++运行时
 
-由于平台 RAM/ROM 的限制，可能需要排除对异常和 RTTI 的支持（使用`-fno-exceptions` `-fno-unwind-tables` `-fno-rtti`编译），甚至还需要排除动态内存分配。后者包括向编译器传递`-nostdlib`选项。在排除标准库的情况下，编译器不会提供启动代码的帮助，开发者将不得不实现所有启动阶段：
+由于平台 RAM/ROM 的限制，可能需要排除对异常和 RTTI 的支持（使用`-fno-exceptions`、`-fno-unwind-tables`、`-fno-rtti`编译），甚至还需要排除动态内存分配。后者包括向编译器传递`-nostdlib`选项。在排除标准库的情况下，编译器不会提供启动代码的帮助，开发者将不得不实现所有启动阶段：
 
-+   更新中断向量表
-
-+   为所有执行模式设置正确的栈指针
-
-+   将`.bss`段清零
-
-+   调用全局对象的初始化函数
-
-+   调用“main”函数。
+- 更新中断向量表
+- 为所有执行模式设置正确的栈指针
+- 将`.bss`段清零
+- 调用全局对象的初始化函数
+- 调用“main”函数
 
 [这里](https://github.com/arobenko/embxx_on_rpi/blob/master/src/asm/startup.s)是一个此类启动代码的示例。
 
@@ -676,6 +675,8 @@ decltype(std::placeholders::_4) _4;
 ### 静态对象
 
 让我们分析初始化静态对象的代码。[test_cpp_statics](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_statics)是一个简单的应用程序，其中包含两个静态对象，一个在全局作用域中，另一个在函数作用域中。
+
+
 
 ```cpp
 class SomeObj
@@ -730,8 +731,8 @@ main.cpp:(.text.startup+0x3c): undefined reference to `__cxa_guard_release'
 这意味着编译器试图使静态变量的初始化线程安全。为了编译它，你必须自己实现锁定功能，或者通过添加`-fno-threadsafe-statics`编译选项允许编译器以不安全的方式执行。我认为在裸机开发中使用此选项相当安全，前提是你确保静态变量不在中断上下文中访问，或者在启用任何中断之前在`main()`函数的开始处初始化。要获取此类对象的引用而不使用它，只需这样做就足够了：
 
 ```cpp
- auto& local = SomeObj::instanceLocal();
-    static_cast<void>(local);
+auto& local = SomeObj::instanceLocal();
+static_cast<void>(local);
 ```
 
 现在，让我们分析`globalObj`的初始化。`.init.array`部分包含指向初始化函数`_GLOBAL__sub_I__ZN7SomeObj9globalObjE`的指针。
@@ -757,28 +758,28 @@ main.cpp:(.text.startup+0x3c): undefined reference to `__cxa_guard_release'
 	...
 ```
 
-上述代码将全局对象的地址（`0x00008168`）加载到**r0**中，并将初始化参数加载到**r1**和**r2**中，然后调用`SomeObj`的构造函数。
+上述代码将全局对象的地址（`0x00008168`）加载到`r0`中，并将初始化参数加载到`r1`和`r2`中，然后调用`SomeObj`的构造函数。
 
 请记住，在调用`main()`函数之前，从`.init.array`部分调用所有初始化函数。
 
 在链接器文件中：
 
 ```cpp
- .init.array :
-    {
-        __init_array_start = .;
-        *(.init_array)
-        *(.init_array.*)
-        __init_array_end = .;
-    } > RAM
+.init.array :
+{
+    __init_array_start = .;
+    *(.init_array)
+    *(.init_array.*)
+    __init_array_end = .;
+} > RAM
 ```
 
 在启动代码中：
 
 ```cpp
- ;@ Call constructors of all global objects
-    ldr r0, =__init_array_start
-    ldr r1, =__init_array_end
+;@ Call constructors of all global objects
+ldr r0, =__init_array_start
+ldr r1, =__init_array_end
 
 globals_init_loop:
     cmp     r0,r1
@@ -787,20 +788,20 @@ globals_init_loop:
     blxlt   r2
     blt     globals_init_loop
 
-    ;@ Main function
-    bl main
-    b reset ;@ restart if main function returns
+;@ Main function
+bl main
+b reset ;@ restart if main function returns
 ```
 
 然而，如果未显式排除标准库的编译，标准库提供的`__libc_init_array`可能被使用：
 
 ```cpp
- ;@ Call constructors of all global objects
-    bl	__libc_init_array
+;@ Call constructors of all global objects
+bl	__libc_init_array
 
-    ;@ Main function
-    bl main
-    b reset ;@ restart if main function returns
+;@ Main function
+bl main
+b reset ;@ restart if main function returns
 ```
 
 让我们也分析`SomeObj::instanceLocal()`中`localObj`的初始化。
@@ -824,11 +825,11 @@ globals_init_loop:
     811c:	00008174 	andeq	r8, r0, r4, ror r1
 ```
 
-上述代码将表示对象已初始化的标志的地址加载到**r4**中，然后将其值加载到**r3**中，并使用`tst`指令进行检查。如果标志指示对象尚未初始化，则调用对象的构造函数，并在返回对象地址之前更新标志值。请注意，`tst r3, #1`指令在**r3**的值和整数值**#1**之间执行二进制**AND**操作，然后下一个`bne`指令在结果不为 0 时执行分支，即对象已经初始化。
+上述代码将表示对象已初始化的标志的地址加载到`r4`中，然后将其值加载到`r3`中，并使用`tst`指令进行检查。如果标志指示对象尚未初始化，则调用对象的构造函数，并在返回对象地址之前更新标志值。请注意，`tst r3, #1`指令在`r3`的值和整数值`#1`之间执行二进制`AND`操作，然后下一个`bne`指令在结果不为 0 时执行分支，即对象已经初始化。
 
 **结论**：访问全局对象的成本略低于访问局部静态对象，因为后者访问涉及检查对象是否已初始化。
 
-#### 自定义析构函数
+### 自定义析构函数
 
 那么，具有非平凡析构函数的静态对象的销毁又如何呢？让我们在上面的类中添加一个析构函数并尝试编译：
 
@@ -841,7 +842,7 @@ public:
 }
 ```
 
-在某个*.cpp 文件中：
+在某个`*.cpp`文件中：
 
 ```cpp
 SomeObj::~SomeObj() {}
@@ -903,9 +904,9 @@ void* __dso_handle = nullptr;
     81bc:	00000000 	andeq	r0, r0, r0
 ```
 
-事实上，调用构造函数紧接着调用`__aeabi_atexit`，其中对象地址在**r0**（第一个参数），析构函数地址在**r1**（第二个参数），`__dso_handle`地址在**r2**（第三个参数）。
+事实上，调用构造函数紧接着调用`__aeabi_atexit`，其中对象地址在`r0`（第一个参数），析构函数地址在`r1`（第二个参数），`__dso_handle`地址在`r2`（第三个参数）。
 
-**结论**：设计“main”函数包含无限循环并永不返回，以节省全局/静态对象析构功能的实现。
+**结论**：设计`main`函数包含无限循环并永不返回，以节省全局/静态对象析构功能的实现。
 
 ### 抽象类
 
@@ -942,10 +943,9 @@ Derived::~Derived()
 void Derived::func()
 {
 }
-[source, c++]
 ```
 
-在“main”函数的某个地方：
+在`main`函数的某个地方：
 
 ```cpp
 Derived obj;
@@ -963,7 +963,7 @@ CMakeFiles/04_test_abstract_class.dir/Derived.cpp.o: In function `Derived::~Deri
 Derived.cpp:(.text+0x3c): undefined reference to `operator delete(void*)'
 ```
 
-`__cxa_pure_virtual` 是一个函数，当函数是纯虚函数时，编译器将其地址写入虚拟表。它可能由于某些不自然的指针滥用或在尝试在抽象基类的析构函数中调用纯虚函数时被调用。在正常应用程序运行中不应调用此函数。如果发生这种情况，则意味着存在一个错误。使用无限循环或以某种方式向开发者报告错误（例如闪烁 led）来实现此函数是相当安全的。
+`__cxa_pure_virtual`是一个函数，当函数是纯虚函数时，编译器将其地址写入虚拟表。它可能由于某些不自然的指针滥用或在尝试在抽象基类的析构函数中调用纯虚函数时被调用。在正常应用程序运行中不应调用此函数。如果发生这种情况，则意味着存在一个错误。使用无限循环或以某种方式向开发者报告错误（例如闪烁 LED）来实现此函数是相当安全的。
 
 ```cpp
 extern "C" void __cxa_pure_virtual()
@@ -972,7 +972,7 @@ extern "C" void __cxa_pure_virtual()
 }
 ```
 
-尽管 `operator delete(void*)` 的需求相当奇怪，源代码中并没有动态内存分配。这需要调查。让我们模拟该函数并检查编译器的输出：
+尽管`operator delete(void*)`的需求相当奇怪，源代码中并没有动态内存分配。这需要调查。让我们模拟该函数并检查编译器的输出：
 
 ```cpp
 void operator delete(void *)
@@ -980,7 +980,9 @@ void operator delete(void *)
 }
 ```
 
-类的虚拟表位于 `.rodata` 部分：
+类的虚拟表位于`.rodata`部分：
+
+
 
 ```cpp
 Disassembly of section .rodata:
@@ -1000,14 +1002,14 @@ Disassembly of section .rodata:
     81cc:	000080e8 	andeq	r8, r0, r8, ror #1
 ```
 
-两个类的最后一个条目都指向 `AbstractBase::nonOverridenFunc` 函数：
+两个类的最后一个条目都指向`AbstractBase::nonOverridenFunc`函数：
 
 ```cpp
 000080e8 <_ZN12AbstractBase16nonOverridenFuncEv>:
     80e8:	e12fff1e 	bx	lr
 ```
 
-**Derived** 类的虚拟表中的第三个条目指向 `Derived::func` 函数，而 **AbstractBase** 类的虚拟表中的第三个条目指向 `__cxa_pure_virtual`，正如预期的那样。
+`Derived`类的虚拟表中的第三个条目指向`Derived::func`函数，而`AbstractBase`类的虚拟表中的第三个条目指向`__cxa_pure_virtual`，正如预期的那样。
 
 ```cpp
 0000810c <_ZN7Derived4funcEv>:
@@ -1017,7 +1019,7 @@ Disassembly of section .rodata:
     815c:	eafffffe 	b	815c <__cxa_pure_virtual>
 ```
 
-虚拟表中的前两个条目指向两个不同的析构函数实现。第一个条目包含正常析构函数实现的地址，而第二个条目包含第二个析构函数实现的地址，该实现会在对象销毁后调用 operator delete（具有 `_ZdlPv` 符号）：
+虚拟表中的前两个条目指向两个不同的析构函数实现。第一个条目包含正常析构函数实现的地址，而第二个条目包含第二个析构函数实现的地址，该实现会在对象销毁后调用`operator delete`（具有`_ZdlPv`符号）：
 
 ```cpp
 000080d8 <_ZN12AbstractBaseD1Ev>:
@@ -1062,14 +1064,14 @@ Disassembly of section .rodata:
     8158:	e12fff1e 	bx	lr
 ```
 
-看起来，当存在虚拟析构函数时，编译器将不得不支持直接调用析构函数以及使用 operator delete。在前一种情况下，编译器将使用虚拟表中的第一个条目来调用析构函数，而在后一种情况下，编译器将使用第二个条目。让我们尝试在我们的 `main` 函数中添加以下行：
+看起来，当存在虚拟析构函数时，编译器将不得不支持直接调用析构函数以及使用`operator delete`。在前一种情况下，编译器将使用虚拟表中的第一个条目来调用析构函数，而在后一种情况下，编译器将使用第二个条目。让我们尝试在我们的`main`函数中添加以下行：
 
 ```cpp
 basePtr->~AbstractBase();
 delete basePtr;
 ```
 
-编译器将向 `main` 函数添加以下指令：
+编译器将向`main`函数添加以下指令：
 
 ```cpp
  8190:	e59d3004 	ldr	r3, [sp, #4]
@@ -1082,13 +1084,13 @@ delete basePtr;
     81ac:	e12fff33 	blx	r3
 ```
 
-虚拟表的地址被写入 **r3**，然后 **r3** 的值被覆盖为要调用的析构函数的地址，并通过 `blx` 指令执行调用。第一次调用从虚拟表的第一个条目中获取析构函数的地址，而第二次调用从第二个条目（偏移量为 `#4`）中获取地址。这正是预期的。
+虚拟表的地址被写入`r3`，然后`r3`的值被覆盖为要调用的析构函数的地址，并通过`blx`指令执行调用。第一次调用从虚拟表的第一个条目中获取析构函数的地址，而第二次调用从第二个条目（偏移量为`#4`）中获取地址。这正是预期的。
 
-**结论**：即使没有动态内存分配，拥有虚拟析构函数可能也需要实现 `operator delete(void*)`。
+**结论**：即使没有动态内存分配，拥有虚拟析构函数可能也需要实现`operator delete(void*)`。
 
 ### 模板
 
-模板因其产生的代码膨胀而臭名昭著。一些组织明确禁止在其内部 C++ 编码标准中使用模板。然而，模板是一个非常强大的工具，如果不使用模板，编写通用的源代码，在多个独立的项目/平台上重用，而且不产生任何显著的性能损失，是非常困难（如果不是不可能）的。我认为那些害怕或不允许使用模板的开发者，将不得不反复实现相同的概念/模块，这些差异是项目/平台特定的。要正确掌握模板，我们必须看到当使用模板时，编译器生成的汇编代码重复。让我们尝试编译一个简单的应用程序 [test_cpp_templates](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_templates)，该应用程序使用具有不同输入参数类型的模板函数：
+模板因其产生的代码膨胀而臭名昭著。一些组织明确禁止在其内部 C++ 编码标准中使用模板。然而，模板是一个非常强大的工具，如果不使用模板，编写通用的源代码，在多个独立的项目/平台上重用，而且不产生任何显著的性能损失，是非常困难（如果不是不可能）的。我认为那些害怕或不允许使用模板的开发者，将不得不反复实现相同的概念/模块，这些差异是项目/平台特定的。要正确掌握模板，我们必须看到当使用模板时，编译器生成的汇编代码重复。让我们尝试编译一个简单的应用程序[test_cpp_templates](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_templates)，该应用程序使用具有不同输入参数类型的模板函数：
 
 ```cpp
 template <typename T>
@@ -1118,7 +1120,7 @@ int main(int argc, const char** argv)
 }
 ```
 
-你可能会注意到函数 `func` 使用了两个参数，一个是 `int` 类型，另一个是 `unsigned` 类型。这两种类型具有相同的大小，应该生成几乎相同的代码。让我们看看 `main` 函数生成的代码：
+你可能会注意到函数`func`使用了两个参数，一个是`int`类型，另一个是`unsigned`类型。这两种类型具有相同的大小，应该生成几乎相同的代码。让我们看看`main`函数生成的代码：
 
 ```cpp
 00008504 <main>:
@@ -1175,7 +1177,7 @@ struct SomeTemplateClass
 };
 ```
 
-请注意未使用的虚拟模板参数 `TDummy`。现在，我们在 `main` 函数中添加两个额外的调用：
+请注意未使用的虚拟模板参数`TDummy`。现在，我们在`main`函数中添加两个额外的调用：
 
 ```cpp
 int main(int argc, const char** argv)
@@ -1209,7 +1211,7 @@ int main(int argc, const char** argv)
 
 [标签分派](http://www.generic-programming.org/languages/cpp/techniques.php#tag_dispatching) 是 C++ 开发中广泛使用的一种惯用法。本书的以下章节中广泛使用了它。
 
-让我们尝试在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目中编译 [test_cpp_tag_dispatch](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_tag_dispatch) 应用程序，并查看编译器生成的代码。
+让我们尝试在[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中编译[test_cpp_tag_dispatch](https://github.com/arobenko/embxx_on_rpi/tree/master/src/test_cpp/test_cpp_tag_dispatch)应用程序，并查看编译器生成的代码。
 
 ```cpp
 struct Tag1 {};
@@ -1294,6 +1296,8 @@ Dispatcher::otherFunc<Tag2>();
 
 编译器生成的代码如下所示：
 
+
+
 ```cpp
 000080fc <main>:
     ...
@@ -1330,9 +1334,9 @@ void __assert_fail (const char *expr, const char *file, unsigned int line, const
 
 该属性指定此函数不会返回，因此编译器将生成对其的调用，而不设置任何返回地址。
 
-从上述所有陈述中得出的结论是，使用标准的 `assert()` 宏是可能的，但有些不够灵活。只能从上述函数中访问全局变量，即如果需要闪烁一个 LED 来指示断言失败，那么其控制必须通过全局变量来访问，这有点不美观。这种方法的另一个缺点是，没有方便的手段来更改断言失败功能的行为，并在一段时间后恢复原始行为。这种行为可能有助于更好地识别失败的断言位置。例如，通过在某个函数的入口处激活特定的 LED 来覆盖默认的断言失败行为，并在函数返回时恢复原始的断言失败行为。
+从上述所有陈述中得出的结论是，使用标准的`assert()`宏是可能的，但有些不够灵活。只能从上述函数中访问全局变量，即如果需要闪烁一个 LED 来指示断言失败，那么其控制必须通过全局变量来访问，这有点不美观。这种方法的另一个缺点是，没有方便的手段来更改断言失败功能的行为，并在一段时间后恢复原始行为。这种行为可能有助于更好地识别失败的断言位置。例如，通过在某个函数的入口处激活特定的 LED 来覆盖默认的断言失败行为，并在函数返回时恢复原始的断言失败行为。
 
-下面是处理断言检查和失败的一种更好的方法的简要描述。代码位于 [embxx](https://github.com/arobenko/embxx) 库中，可以在 [这里](https://github.com/arobenko/embxx/blob/master/embxx/util/Assert.h) 查阅。
+下面是处理断言检查和失败的一种更好的方法的简要描述。代码位于[embxx](https://github.com/arobenko/embxx)库中，可以在[这里](https://github.com/arobenko/embxx/blob/master/embxx/util/Assert.h)查阅。
 
 为了解决上述问题并以 C++的方式处理断言，我们必须创建一个通用的断言失败处理抽象类：
 
@@ -1418,7 +1422,7 @@ private:
 };
 ```
 
-`reset` 成员函数注册新的管理断言失败行为的对象，并返回先前的对象，这可以在以后用来恢复原始行为。
+`reset`成员函数注册新的管理断言失败行为的对象，并返回先前的对象，这可以在以后用来恢复原始行为。
 
 我们将需要一个新宏来检查断言条件并调用已注册的失败行为：
 
@@ -1436,7 +1440,7 @@ private:
 #endif // #ifndef NDEBUG
 ```
 
-然后，在条件检查失败的情况下，`GASSERT()` 宏检查是否已注册任何自定义的断言失败功能，并调用其虚拟的 `fail` 函数。如果没有，则执行无限循环。
+然后，在条件检查失败的情况下，`GASSERT()`宏检查是否已注册任何自定义的断言失败功能，并调用其虚拟的`fail`函数。如果没有，则执行无限循环。
 
 为了完整地展示整个过程，我们必须提供一个方便的方式来注册新的断言失败行为：
 
@@ -1467,7 +1471,7 @@ private:
 };
 ```
 
-从现在起，我们只需实例化 `EnableAssert` 对象，并带有我们想要的行为。请注意，`EnableAssert` 类的构造函数可以接收任何数量的参数，并将它们转发到内部 `assert_` 对象的构造函数。
+从现在起，我们只需实例化`EnableAssert`对象，并带有我们想要的行为。请注意，`EnableAssert`类的构造函数可以接收任何数量的参数，并将它们转发到内部`assert_`对象的构造函数。
 
 ```cpp
 int main (int argc, const char* argv[])
@@ -1480,7 +1484,7 @@ int main (int argc, const char* argv[])
 }
 ```
 
-如果需要临时覆盖之前的断言失败行为，只需创建另一个 `EnableAssert` 对象。一旦后者超出作用域（对象被销毁），之前的行将恢复。
+如果需要临时覆盖之前的断言失败行为，只需创建另一个`EnableAssert`对象。一旦后者超出作用域（对象被销毁），之前的行将恢复。
 
 ```cpp
 int main (int argc, const char* argv[])
@@ -1497,11 +1501,11 @@ int main (int argc, const char* argv[])
 }
 ```
 
-**总结**：上述描述的方法提供了一种灵活且方便的方式来控制如何将各种调试模式检查的失败报告给开发者。所有在 [embxx](https://github.com/arobenko/embxx) 库中的模块都使用 `GASSERT()` 宏来验证它们的先决条件和后置条件以及内部假设。
+**总结**：上述描述的方法提供了一种灵活且方便的方式来控制如何将各种调试模式检查的失败报告给开发者。所有在[embxx](https://github.com/arobenko/embxx)库中的模块都使用`GASSERT()`宏来验证它们的先决条件和后置条件以及内部假设。
 
 ### 回调
 
-如同在 C++的优势章节中提到的，选择 C++而不是 C 的主要原因在于代码复用。当有一些通用的代码片段试图使用特定平台的代码，并且需要从后者接收某种类型的通知时，就产生了对某种通用回调机制的需求。C++提供了[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)类来实现这一目的，可以提供任何可调用的对象，例如[lambda 函数](http://en.cppreference.com/w/cpp/language/lambda)或[std::bind](http://en.cppreference.com/w/cpp/utility/functional/bind)表达式：
+如同在 C++的优势章节中提到的，选择 C++而不是 C 的主要原因在于代码复用。当有一些通用的代码片段试图使用特定平台的代码，并且需要从后者接收某种类型的通知时，就产生了对某种通用回调机制的需求。C++提供了[`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function)类来实现这一目的，可以提供任何可调用的对象，例如[lambda函数](http://en.cppreference.com/w/cpp/language/lambda)或[`std::bind`](http://en.cppreference.com/w/cpp/utility/functional/bind)表达式：
 
 ```cpp
 class LowLevelPeripheral {
@@ -1541,7 +1545,7 @@ private:
 };
 ```
 
-使用[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)存在两个问题。它使用动态内存分配，并且在未先分配可调用对象的情况下调用函数时抛出异常。因此，[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)可能不适合在大多数裸机项目中使用。我们将不得不实现类似的功能，但不需要动态内存分配和异常。以下是一些关于如何实现此类函数类的简要说明。`StaticFunction`类的实现是[embxx](https://github.com/arobenko/embxx)库的一部分，其完整代码列表可以在[这里](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)查看。
+使用[`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function)存在两个问题。它使用动态内存分配，并且在未先分配可调用对象的情况下调用函数时抛出异常。因此，[`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function)可能不适合在大多数裸机项目中使用。我们将不得不实现类似的功能，但不需要动态内存分配和异常。以下是一些关于如何实现此类函数类的简要说明。`StaticFunction`类的实现是[embxx](https://github.com/arobenko/embxx)库的一部分，其完整代码列表可以在[这里](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)查看。
 
 无法使用动态内存分配的限制要求使用存储大小的额外参数：
 
@@ -1550,7 +1554,7 @@ template <typename TSignature, std::size_t TSize = sizeof(void*) * 3>
 class StaticFunction;
 ```
 
-在大多数情况下，回调对象将包含指向成员函数的指针、指向处理对象的指针和一些额外的单个参数。这就是指定默认存储空间等于 3 个指针大小的原因。“签名”模板参数与[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)中的完全相同，加上一个可选的存储区域大小模板参数：
+在大多数情况下，回调对象将包含指向成员函数的指针、指向处理对象的指针和一些额外的单个参数。这就是指定默认存储空间等于 3 个指针大小的原因。“签名”模板参数与[`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function)中的完全相同，加上一个可选的存储区域大小模板参数：
 
 ```cpp
 typedef embxx::util::StaticFunction<void (int)> MyCallback;
@@ -1580,6 +1584,8 @@ private:
 ```
 
 `StaticFunction`对象需要能够将其内部数据成员存储为任何类型的可调用对象，并在其`operator()`成员函数中调用它。为了支持这一功能，我们需要额外的辅助类：
+
+
 
 ```cpp
 class StaticFunction<TRet (TArgs...), TSize>
@@ -1694,7 +1700,7 @@ private:
 
 请注意，赋值运算符必须在将新的可调用对象存储在其位置之前调用之前分配给它的函数的析构函数。
 
-还要注意，使用[static_assert](http://en.cppreference.com/w/cpp/language/static_assert)进行编译时检查，以确保存储区中要存储的对象的大小不超过分配的大小，以及对齐要求仍然保持。
+还要注意，使用`static_assert`进行编译时检查，以确保存储区中要存储的对象的大小不超过分配的大小，以及对齐要求仍然保持。
 
 函数的调用实现方式如下：
 
@@ -1718,15 +1724,11 @@ public:
 
 要完成`StaticFunction`类的实现，以下逻辑也必须实现：
 
-1.  检查`StaticFunction`对象是否有效，即是否有任何可调用对象分配给它。
-
-1.  默认构造函数 - 函数无效，无法调用。
-
-1.  复制/移动构造函数 + 复制/移动赋值功能。
-
-1.  清除函数（使其无效）。
-
-1.  支持分配给的可调用对象中的`const`和非常量`operator()`。这需要`StaticFunction`及其内部`Invoker`和`InvokerBound<…>`类的`const`和非常量`operator()`实现。
+1. 检查`StaticFunction`对象是否有效，即是否有任何可调用对象分配给它。
+2. 默认构造函数——函数无效，无法调用。
+3. 复制/移动构造函数，以及复制/移动赋值功能。
+4. 清除函数，使其无效。
+5. 支持分配给它的可调用对象中的`const`和非常量`operator()`。这需要`StaticFunction`及其内部`Invoker`和`InvokerBound<…>`类的`const`和非常量`operator()`实现。
 
 所有这些我都留给读者作为练习。要查看上述功能描述的完整实现，请打开[这个链接](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)。
 
@@ -1734,9 +1736,9 @@ public:
 
 在嵌入式开发中，另一个基本需求是能够序列化数据。大多数嵌入式产品从某种传感器读取数据，并通过某种有线或无线串行接口与控制中心通信。
 
-在通过通信链路发送数据之前，必须将其序列化到缓冲区中，并在接收时，从另一端的缓冲区中反序列化字节。数据可以使用大端或小端序列化，这取决于所使用的通信协议。`[embxx](https://github.com/arobenko/embxx)` 库提供了一个通用的代码，具有从任何缓冲区中读取和写入整数值的能力。[这里](https://github.com/arobenko/embxx/blob/master/embxx/io/access.h) 是下面描述的函数的源代码。
+在通过通信链路发送数据之前，必须将其序列化到缓冲区中，并在接收时，从另一端的缓冲区中反序列化字节。数据可以使用大端或小端序列化，这取决于所使用的通信协议。`embxx`库提供了一个通用的代码，具有从任何缓冲区中读取和写入整数值的能力。[这里](https://github.com/arobenko/embxx/blob/master/embxx/io/access.h)是下面描述的函数的源代码。
 
-以下（在命名空间 `embxx::io` 中定义）的函数支持使用任何类型的迭代器读取和写入整数值：
+以下（在命名空间`embxx::io`中定义）的函数支持使用任何类型的迭代器读取和写入整数值：
 
 ```cpp
 template <typename T, typename TIter>
@@ -1780,7 +1782,7 @@ auto value2 = embxx::io::readBig<std::uint32_t>(iter);
 auto value3 = embxx::io::readBig<std::uint64_t>(iter);
 ```
 
-另一个例子是将数据序列化到具有 `push_back()` 成员函数的容器中，例如 [std::vector](http://en.cppreference.com/w/cpp/container/vector) 或环形缓冲区。数据将被添加到现有数据的末尾：
+另一个例子是将数据序列化到具有`push_back()`成员函数的容器中，例如[`std::vector`](http://en.cppreference.com/w/cpp/container/vector)或环形缓冲区。数据将被添加到现有数据的末尾：
 
 ```cpp
 std::vector<std::uint8_t> buf;
@@ -1793,7 +1795,7 @@ embxx::io::writeBig(value2, iter);
 embxx::io::writeBig(value3, iter);
 ```
 
-根据通信协议，可能需要仅序列化值的一部分。例如，某些通信协议字段定义为只有 3 个字节。在这种情况下，值可能存储在 `std::uint32_t` 类型的变量中。有一组类似的函数，但它们有一个额外的模板参数，指定要读取/写入的字节数：
+根据通信协议，可能需要仅序列化值的一部分。例如，某些通信协议字段定义为只有3个字节。在这种情况下，值可能存储在`std::uint32_t`类型的变量中。有一组类似的函数，但它们有一个额外的模板参数，指定要读取/写入的字节数：
 
 ```cpp
 template <std::size_t TSize, typename T, typename TIter>
@@ -1809,7 +1811,7 @@ template <typename T, std::size_t TSize, typename TIter>
 T readLittle(TIter& iter);
 ```
 
-因此，读取/写入 3 个字节的代码如下：
+因此，读取/写入3个字节的代码如下：
 
 ```cpp
 auto value = embxx::io::readBig<std::uint32_t, 3>(iter);
@@ -1866,7 +1868,7 @@ template <typename T, std::size_t TSize, typename TIter>
 T readData(TIter& iter, const traits::endian::Little& endian);
 ```
 
-`traits::endian::Big` 和 `traits::endian::Little` 被定义为空标签类：
+`traits::endian::Big`和`traits::endian::Little`被定义为空标签类：
 
 ```cpp
 namespace traits
@@ -1886,6 +1888,8 @@ struct Little {};
 
 例如：
 
+
+
 ```cpp
 template <typename TTraits>
 class SomeClass
@@ -1904,7 +1908,7 @@ private:
 };
 ```
 
-因此，上面的代码不知道用于序列化数据的端序。它作为名为 `Endianness` 的 `Traits` 类的内部类型提供。编译器将生成对适当的 `writeData()` 函数的调用，该函数随后将其转发到 `writeBig()` 或 `writeLittle()`。
+因此，上面的代码不知道用于序列化数据的端序。它作为名为`Endianness`的`Traits`类的内部类型提供。编译器将生成对适当的`writeData()`函数的调用，该函数随后将其转发到`writeBig()`或`writeLittle()`。
 
 使用大端序序列化数据时，特性应该定义为以下内容：
 
@@ -1921,11 +1925,11 @@ someClassObj.serialise(iter); // Will serialise using big endian
 
 上文所述的界面非常易于使用且方便，并且使用直接的方法实现起来相当简单。然而，任何模板参数的变化都会创建一个新的二进制代码实例，如果不小心使用，可能会产生大量的代码膨胀。考虑以下情况：
 
-+   有符号整数与无符号整数的读写。序列化/反序列化代码在这两种情况下是相同的，但在实例化函数时不会被视为如此。为了优化这种情况，需要仅对无符号值实现读写操作，而“有符号”函数则成为前者的包装器。在检索部分有符号值时，别忘了执行符号扩展操作。
++ 有符号整数与无符号整数的读写。序列化/反序列化代码在这两种情况下是相同的，但在实例化函数时不会被视为如此。为了优化这种情况，需要仅对无符号值实现读写操作，而“有符号”函数则成为前者的包装器。在检索部分有符号值时，别忘了执行符号扩展操作。
 
-+   对于任何长度的值，即任何类型的读写操作（例如`(unsigned) char`、`(unsigned) short`、`(unsigned) int`等）都或多或少是相同的。为了优化这种情况，需要内部函数，该函数接收序列化值的长度作为运行时参数，而上述函数只是它的包装器。
++ 对于任何长度的值，即任何类型的读写操作（例如`(unsigned) char`、`(unsigned) short`、`(unsigned) int`等）都或多或少是相同的。为了优化这种情况，需要内部函数，该函数接收序列化值的长度作为运行时参数，而上述函数只是它的包装器。
 
-+   迭代器的使用也需要谨慎。例如，读取值可以使用常规的`iterator`，也可以使用`const_iterator`，即指向常量值的迭代器。这两种不同的迭代器类型，如果都使用，将会重复“读取”功能：
++ 迭代器的使用也需要谨慎。例如，读取值可以使用常规的`iterator`，也可以使用`const_iterator`，即指向常量值的迭代器。这两种不同的迭代器类型，如果都使用，将会重复“读取”功能：
 
 ```cpp
 char buf[128] = {…};
@@ -1943,11 +1947,11 @@ auto value2 = embxx::io::readBig<std::uint16_t>(iter2);
 
 上文所述的所有考虑点都需要相当复杂的序列化/反序列化功能的实现，涉及多个抽象级别，这超出了本书的范围。尝试自己实现它将是一个很好的练习。另一个选择是直接从[embxx](https://github.com/arobenko/embxx)库中获取代码。
 
-### 静态（固定大小）队列
+## 静态（固定大小）队列
 
 几乎总是需要某种队列功能。循环缓冲区在执行速度和内存消耗之间提供了一个良好的折衷方案（例如与[std::deque](http://en.cppreference.com/w/cpp/container/deque)相比）。如果你的产品允许使用动态内存分配和/或异常处理，那么[boost::circular_buffer](http://www.boost.org/doc/libs/1_55_0/doc/html/circular_buffer.html)可能是一个不错的选择。然而，如果使用动态内存分配不是一个选项，那么除了在编译时已知最大长度的 C 数组或[std::array](http://en.cppreference.com/w/cpp/container/array)上实现循环缓冲区之外别无选择。[这里](https://github.com/arobenko/embxx/blob/master/embxx/container/StaticQueue.h)是来自[embxx](https://github.com/arobenko/embxx)库的`StaticQueue`功能的实现。我不会过多地深入细节或解释每一行代码。相反，我将强调几个必须考虑的重要点。
 
-#### 无效操作
+### 无效操作
 
 总是可能尝试执行无效操作，例如访问队列边界之外的元素，或者在队列满时插入新元素，或者在队列为空时弹出元素等。在 C++中处理这些情况的传统方式是抛出异常。然而，在嵌入式编程，尤其是在裸机编程中，这不是一个选项。处理这些错误的正确方式是在预条件上断言。在[embxx](https://github.com/arobenko/embxx)库中的`StaticQueue`实现使用了前面描述的`GASSERT()`宏。这些检查仅在非发布模式（`NDEBUG`未定义）下编译，并且在失败的情况下将调用开发者编写的特定于项目的代码来报告断言失败。
 
@@ -1965,7 +1969,7 @@ public:
 };
 ```
 
-#### 元素的构建/销毁
+### 元素的构建/销毁
 
 当队列被创建时，它不包含任何元素。然而，它必须包含未初始化的空间，以便将来可以创建元素。该空间必须足够大并且正确对齐。
 
@@ -2031,7 +2035,7 @@ public:
 };
 ```
 
-#### 迭代
+### 迭代
 
 经常需要遍历队列中的元素。标准的顺序随机访问容器，如[std::array](http://en.cppreference.com/w/cpp/container/array)、[std::vector](http://en.cppreference.com/w/cpp/container/vector)或[std::deque](http://en.cppreference.com/w/cpp/container/deque)，可以使用简单的指针（或围绕它的包装类）作为迭代器，因为每个元素的地址都大于其前驱元素的地址。在迭代过程中增加指针就足以访问下一个元素。然而，在循环队列/缓冲区中，可能存在队列开始地址大于队列结束地址的情况：
 
@@ -2067,7 +2071,7 @@ public:
 };
 ```
 
-#### 复制队列
+### 复制队列
 
 在队列之间复制/移动元素时必须小心。编译器不知道存储在队列中的元素的正确类型，以及在编译时队列中有效元素的数量是未知的。当使用默认的复制/移动构造函数和/或赋值运算符时，编译器将在队列之间存储空间的原始字节之间生成代码。这可能适用于基本类型或 POD 结构体，但这并不是正确的复制方式。在构造或复制/移动赋值运算符的情况下，需要使用复制/移动构造函数，以及在不复制/移动未使用空间中的垃圾数据的情况下，对有效元素进行赋值。
 
@@ -2109,9 +2113,12 @@ public:
 };
 ```
 
-#### 优化代码生成
+### 优化代码生成
 
-正如我们在模板章节中都知道并确认的那样，任何模板参数值的差异都会创建新的可执行代码实例。这意味着，即使有多个相同类型但大小不同的队列，也可能以不可接受的方式膨胀可执行文件。解决这个问题的最佳方法是将基类定义为仅模板化存储值的类型，并实现队列的全部逻辑，而派生的`StaticQueue`类只需提供必要的存储区域并重用（包装）基类中实现的所有函数：
+正如我们在模板章节中都知道并确认的那样，任何模板参数值的差异都会创建新的可执行代码实例。这意味着，即使有多个相同类型但大小不同的队列，也可能以不可接受的方式膨胀可执行文件。解决这个问题的最佳方法是将基类定义为仅模板化存储值的类型，并实现队列的全部逻辑，而派生的`StaticQueue`类只需提供必要的存储区域并重用（包装）基类中实现的所有函数。
+
+
+
 
 ```cpp
 namespace details
@@ -2189,9 +2196,8 @@ private:
 
 大多数裸机嵌入式产品只需要两种操作模式：
 
-+   中断（或服务）模式
-
-+   非中断（或用户）模式。
+- 中断（或服务）模式
+- 非中断（或用户）模式
 
 在中断模式下执行代码的任务是响应硬件事件（中断），通过执行最小的工作来更新各种状态寄存器，并在适用的情况下安排在非中断模式下执行的事件处理。在大多数项目中，中断处理程序没有被优先级排序，并且下一个硬件事件（中断）不会处理，直到之前调用的中断处理程序返回，即 CPU 准备好返回非中断模式。因此，中断处理程序尽快完成其工作非常重要。
 
@@ -2284,7 +2290,7 @@ int main(int argc, const char* argv[])
 
 上述方法在用 C 编程语言开发的裸机项目中广泛使用。使用 C++语言内置特性和 STL 中现成的类可以简化代码的复杂性，并实现正确的事件异步处理，这更容易调试和维护。
 
-我建议使用由[std::bind()](http://en.cppreference.com/w/cpp/utility/functional/bind)表达式或[lambda 函数](http://en.cppreference.com/w/cpp/language/lambda)创建的可调用对象队列。传统的 C++方法将是使用[std::list](http://en.cppreference.com/w/cpp/container/list)的[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)对象。然而，这些类使用动态内存分配并抛出异常，这可能不适合每个裸机项目。无论如何，让我们使用这两个类来展示这个想法：
+我建议使用由[`std::bind()`](http://en.cppreference.com/w/cpp/utility/functional/bind)表达式或[lambda 函数](http://en.cppreference.com/w/cpp/language/lambda)创建的可调用对象队列。传统的 C++方法将是使用[`std::list`](http://en.cppreference.com/w/cpp/container/list)的[`std::function`](http://en.cppreference.com/w/cpp/utility/functional/function)对象。然而，这些类使用动态内存分配并抛出异常，这可能不适合每个裸机项目。无论如何，让我们使用这两个类来展示这个想法：
 
 ```cpp
 typedef std::list<std::function<void ()> > Queue;
@@ -2340,7 +2346,7 @@ void gpioInterruptHandler()
         addHandlerFromInterrupt(
             []()
             {
-		 // Will be executed in non-interrupt event loop.
+             // Will be executed in non-interrupt event loop.
                  handleButtonPressStart();
             });
     }
@@ -2370,7 +2376,7 @@ int main(int argc, const char* argv[])
 
 这种方法允许对一些具有许多子阶段和忙碌等待的复杂事件进行处理，同时仍然允许其他独立事件被处理。所有处理程序都按照它们被推入队列的顺序执行。有一种能力可以将多个附加参数与函数调用一起绑定，这减少了需要全局变量来传递值的必要性。没有必要维护各种事件 ID 的列表，明确定义状态机（的）阶段，或实现独立线程（任务）之间的复杂任务切换。
 
-现在，让我们尝试消除动态内存分配和可能的异常。实现这一点的唯一方法是在编译时有一个常量，指定队列的最大大小。直观的实现是使用[StaticQueue](https://github.com/arobenko/embxx/blob/master/embxx/container/StaticQueue.h)来存储[StaticFunction](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)对象，这些对象在基本需求章节中描述。然而，[StaticFunction](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)类的定义需要一个编译时常量来指定存储所有可调用对象数据的区域的大小。它必须足够大，以容纳将被推入队列的任何可能的可调用对象。例如：
+现在，让我们尝试消除动态内存分配和可能的异常。实现这一点的唯一方法是在编译时有一个常量，指定队列的最大大小。直观的实现是使用[`StaticQueue`](https://github.com/arobenko/embxx/blob/master/embxx/container/StaticQueue.h)来存储[`StaticFunction`](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)对象，这些对象在基本需求章节中描述。然而，[`StaticFunction`](https://github.com/arobenko/embxx/blob/master/embxx/util/StaticFunction.h)类的定义需要一个编译时常量来指定存储所有可调用对象数据的区域的大小。它必须足够大，以容纳将被推入队列的任何可能的可调用对象。例如：
 
 ```cpp
 typedef embxx::util::StaticFunction<void (), sizeof(void*) * 10>  Func;
@@ -2406,7 +2412,10 @@ handlers.push_back(
 
 ![StaticFunction 的队列图像](img/36e66af77d4ca9c42efd7df19150f1d0.png)
 
-很明显，可能会浪费很多空间，这种方法必须进行优化。如果我们能够将可调用对象一个接一个地推入队列，而不考虑它们的实际大小，只需一点额外的空间开销（如 v-table 指针），这将帮助我们运行时检索对象的大小，并在可调用对象完成其工作后从这样的队列中移除适当数量的字节？
+
+
+
+很明显，可能会浪费很多空间，这种方法必须进行优化。如果我们能够将可调用对象一个接一个地推入队列，而不考虑它们的实际大小，只需一点额外的空间开销（如 `v-table` 指针），这将帮助我们运行时检索对象的大小，并在可调用对象完成其工作后从这样的队列中移除适当数量的字节？
 
 ![优化队列图像](img/c04b0d3fa1439415bce8174fb65ba142.png)
 
@@ -2414,11 +2423,9 @@ handlers.push_back(
 
 为了正确支持此类队列，我们必须：
 
-1.  在调用每个处理程序时使用相同的接口实现多态行为。
-
-1.  实现多态行为以检索单个处理程序的大小，以便知道在调用处理程序后需要从队列中移除多少字节。
-
-1.  当推送的处理程序无法适应队列末尾和分配空间末尾之间的区域时，需要正确处理环绕情况。
+1. 在调用每个处理程序时使用相同的接口实现多态行为。
+2. 实现多态行为以检索单个处理程序的大小，以便知道在调用处理程序后需要从队列中移除多少字节。
+3. 当推送的处理程序无法适应队列末尾和分配空间末尾之间的区域时，需要正确处理环绕情况。
 
 所需类的代码将如下所示：
 
@@ -2569,9 +2576,9 @@ while (true) {
 
 剩下的唯一事情是创建一个方便且通用的接口，以便能够从中断和非中断上下文添加新的处理程序以执行。
 
-#### 线程类比
+## 线程类比
 
-在深入实现此类接口之前，我想将中断/非中断执行模式与两个线程之间的类比。线程间通信是通过锁（如[std::mutex](http://en.cppreference.com/w/cpp/thread/mutex)）和条件变量（如[std::condition_variable_any](http://en.cppreference.com/w/cpp/thread/condition_variable_any)）管理的。使用这个类比，处理程序执行循环（在非中断线程中执行）可以像这样实现：
+在深入实现此类接口之前，我想将中断/非中断执行模式与两个线程之间的类比。线程间通信是通过锁（如`std::mutex`）和条件变量（如`std::condition_variable_any`）管理的。使用这个类比，处理程序执行循环（在非中断线程中执行）可以像这样实现：
 
 ```cpp
 std::mutex lock_;
@@ -2614,7 +2621,7 @@ bool addHandler(TTask&& task)
 
 如果我们将中断和非中断执行模式视为两个线程，则非中断线程中的锁定相当于禁用中断；而等待条件变量被通知相当于等待中断（在 ARM 架构中使用`WFI`或`WFE`指令）而通知可以自动，因为挂起的中断或使用`SEV`指令实现。然而，我们的中断和非中断模式线程与传统的线程略有不同。非中断模式的线程可以随时被中断模式中断，而中断模式的“线程”不会被中断，实际上也不需要保护自己免受其他线程干预。
 
-上文所述的非中断上下文中事件处理循环的整个逻辑是通用的，除了锁定（禁用中断）和等待新处理程序被添加（等待中断）这些是平台和架构特定的。正如我之前提到的，使用 C++ 而不是 C 进行裸机开发的整体想法是能够在提供最小平台特定硬件控制功能的同时编写和重用通用代码。`embxx` [库](https://github.com/arobenko/embxx) 提供了一个 [EventLoop](https://github.com/arobenko/embxx/blob/master/embxx/util/EventLoop.h) 类，它接受锁定和条件变量类作为模板参数，并在非中断上下文中管理新处理程序的安全添加和有序执行。
+上文所述的非中断上下文中事件处理循环的整个逻辑是通用的，除了锁定（禁用中断）和等待新处理程序被添加（等待中断）这些是平台和架构特定的。正如我之前提到的，使用 C++ 而不是 C 进行裸机开发的整体想法是能够在提供最小平台特定硬件控制功能的同时编写和重用通用代码。`embxx`库提供了一个`EventLoop`类，它接受锁定和条件变量类作为模板参数，并在非中断上下文中管理新处理程序的安全添加和有序执行。
 
 ```cpp
 The class definition looks like this:
@@ -2728,7 +2735,9 @@ public:
 };
 ```
 
-[EventLoop](https://github.com/arobenko/embxx/blob/master/embxx/util/EventLoop.h) 类公开以下接口：
+`EventLoop`类公开以下接口：
+
+
 
 ```cpp
 template <std::size_t TSize, typename Tlock, typename TCond>
@@ -2792,7 +2801,7 @@ public:
 
 如果需要，可以在此处找到参考实现：[这里](https://github.com/arobenko/embxx/blob/master/embxx/util/EventLoop.h)。
 
-#### 忙循环
+## 忙循环
 
 上文所述的事件循环是实现软实时系统的一种简单方便的方法。然而，此类架构的主要规则是：**不要执行忙循环**！这意味着，如果在进行下一阶段之前确实需要执行忙等待，可以通过让其他事件也被处理来实现。`EventLoop` 类还提供了一个 `busyWait()` 成员函数，它正是这样做的。
 
@@ -2840,9 +2849,9 @@ public:
 };
 ```
 
-### 设备-驱动程序-组件
+## 设备-驱动程序-组件
 
-现在，在理解了事件循环是什么以及如何在 C++ 中实现它之后，我想在进入实际示例之前，先描述一下 **设备-驱动程序-组件** 堆栈的概念。
+现在，在理解了事件循环是什么以及如何在 C++ 中实现它之后，我想在进入实际示例之前，先描述一下**设备-驱动程序-组件**堆栈的概念。
 
 ![Image: 设备-驱动程序-组件堆栈](img/fdb9009ed5adde6403f5c0424c2eabc4.png)
 
@@ -2854,25 +2863,21 @@ public:
 
 对于任何异步事件处理，需要几个主要操作：
 
-1.  开始操作。
-
-1.  完成操作。
-
-1.  取消操作。
-
-1.  暂停操作。
-
-1.  恢复挂起操作。
+1. 开始操作。
+2. 完成操作。
+3. 取消操作。
+4. 暂停操作。
+5. 恢复挂起操作。
 
 外围设备章节中描述的所有外围设备都将遵循相同的操作方案，略有变化，例如有额外的参数或中间阶段。
 
-#### 开始异步操作
+### 开始异步操作
 
 ![Image: Starting Asynchronous Operation](img/d55ee44d2098506f24f632ed26580331.png)
 
-任何非中断上下文操作都是从事件循环执行的事件处理器或从事件循环开始执行之前在`main()`函数中调用的处理器发起。正在执行的处理程序在某个**组件**中调用某个函数，该函数请求**驱动程序**执行某些异步操作，并提供在操作完成时执行的回调对象。**驱动程序**将提供的回调对象和其他参数存储在其内部数据结构中，然后将请求转发到**设备**，**设备**相应地配置硬件并启用所有必需的中断。
+任何非中断上下文操作都是从事件循环执行的事件处理器或从事件循环开始执行之前在 `main()` 函数中调用的处理器发起。正在执行的处理程序在某个**组件**中调用某个函数，该函数请求**驱动程序**执行某些异步操作，并提供在操作完成时执行的回调对象。**驱动程序**将提供的回调对象和其他参数存储在其内部数据结构中，然后将请求转发到**设备**，**设备**相应地配置硬件并启用所有必需的中断。
 
-#### 完成异步操作
+### 完成异步操作
 
 当适当的中断发生时，第一个意识到异步操作完成的是**设备**。它必须以某种方式向**驱动程序**报告完成。如前所述，**设备**是一个平台特定的层，位于**设备-驱动程序-组件**堆栈的底部，并且不了解使用它的通用**驱动程序**层。**设备**必须提供一种设置操作完成报告对象的方法。**驱动程序**通常在构造/初始化阶段分配此类对象：
 
@@ -2882,17 +2887,19 @@ public:
 
 ![Image: Completing Asynchronous Operation](img/592317061421f4e71798666cec91c43f.png)
 
-注意，操作可能会失败，由于某些硬件故障，这就是为什么在两次回调调用中都有`status`参数报告成功和/或错误条件的原因。
+注意，操作可能会失败，由于某些硬件故障，这就是为什么在两次回调调用中都有 `status` 参数报告成功和/或错误条件的原因。
 
-#### 取消异步操作
+### 取消异步操作
 
-必须能够取消正在进行的异步操作。例如，某些**组件**在某个硬件外围设备上激活异步操作请求的同时，向计时器发送异步等待请求以测量操作超时。如果首先调用超时回调，则需要取消挂起的异步操作。或者相反，一旦读取成功，应该取消超时测量。然而，取消可能有点棘手。异步事件处理的主要要求之一是**组件**的回调**必须**被调用，并且只**被调用一次**。这创造了一种情况，使得取消可能失败。例如，异步操作的回调被安排在事件循环中执行，但尚未被后者执行。这使我们有必要提供取消请求是否成功的指示。简单的布尔返回值就足够了。
+必须能够取消正在进行的异步操作。例如，某些**组件**在某个硬件外围设备上激活异步操作请求的同时，向计时器发送异步等待请求以测量操作超时。如果首先调用超时回调，则需要取消挂起的异步操作。或者相反，一旦读取成功，应该取消超时测量。然而，取消可能有点棘手。
+
+异步事件处理的主要要求之一是**组件**的回调**必须**被调用，并且只**被调用一次**。这创造了一种情况，使得取消可能失败。例如，异步操作的回调被安排在事件循环中执行，但尚未被后者执行。这使我们有必要提供取消请求是否成功的指示。简单的布尔返回值就足够了。
 
 ![图片：取消异步操作](img/7e861c7f6aa0619952a0894a92db0c2e.png)
 
-当取消操作成功时，**组件**的回调对象会被调用，`status`参数指定操作已被`中止`。
+当取消操作成功时，**组件**的回调对象会被调用，`status` 参数指定操作已被`中止`。
 
-取消操作失败的一种可能情况是，当回调被安排在事件循环中执行时，但在尝试取消时尚未执行。在这种情况下，**驱动程序**知道没有挂起的异步操作，可以立即返回`false`。
+取消操作失败的一种可能情况是，当回调被安排在事件循环中执行时，但在尝试取消时尚未执行。在这种情况下，**驱动程序**知道没有挂起的异步操作，可以立即返回 `false`。
 
 ![图片：取消异步操作失败 1](img/54d7755ee1623080c3da41f98d5a14ee.png)
 
@@ -2902,7 +2909,7 @@ public:
 
 在这种情况下，**设备**必须能够适当地处理这种竞态条件，通过在检查完成回调是否执行之前暂时禁用中断。**驱动程序**还必须能够处理中断上下文中的非中断执行。
 
-#### 暂停/恢复异步操作
+### 暂停/恢复异步操作
 
 可能存在一个 **Driver**，它需要同时支持多个异步操作，同时管理这些请求的内部队列并将它们逐个发送到 **Device**。在这种情况下，需要防止在事件循环（非中断）上下文中尝试访问内部数据结构时，在中断模式下调用“操作完成”回调。**Device** 必须提供 `suspendOp()` 和 `resumeOp()` 来抑制回调的调用，并允许其再次调用。通常，挂起意味着禁用中断而不停止当前操作，而恢复意味着重新启用它们。
 
@@ -2910,7 +2917,7 @@ public:
 
 注意，`suspendOp()` 请求还必须指示挂起是否成功，或者完成回调是否已经在中断模式下被调用，就像取消操作一样。在操作成功挂起后，它必须被**恢复**或**取消**。
 
-#### **Device** 函数调用上下文
+### **Device** 函数调用上下文
 
 让我们考虑当 **Driver** 同时支持多个异步操作并内部排队，同时逐个向 **Device** 发送启动请求的情况。
 
@@ -2932,6 +2939,12 @@ public:
 另一种方法是使用 [tag dispatching idiom](http://www.generic-programming.org/languages/cpp/techniques.php#tag_dispatching)，我决定在 [embxx](https://github.com/arobenko/embxx) 库中使用它。
 
 它在 [embxx/device/context.h](https://github.com/arobenko/embxx/blob/master/embxx/device/context.h) 中定义了两个额外的标签结构体：
+
+
+
+## 设备、驱动与组件模型
+
+### 上下文标签
 
 ```cpp
 namespace embxx
@@ -2956,7 +2969,7 @@ struct Interrupt {};
 } // namespace embxx
 ```
 
-然后，几乎由 **Device** 类定义的每个成员函数都必须指定额外的标签参数来指示上下文：
+然后，几乎由 `Device` 类定义的每个成员函数都必须指定额外的标签参数来指示上下文：
 
 ```cpp
 class MyDevice
@@ -2979,7 +2992,7 @@ public:
 };
 ```
 
-**Driver** 类将使用相关临时上下文对象作为最后一个参数调用 **Device** 函数：
+`Driver` 类将使用相关临时上下文对象作为最后一个参数调用 `Device` 函数：
 
 ```cpp
 class MyDriver
@@ -3008,7 +3021,7 @@ private:
 };
 ```
 
-如果某些函数需要在，比如说 `EventLoop` 上下文中调用，而不在 `Interrupt` 上下文中支持，那么只需要实现支持的变体就足够了。如果 **Driver** 层尝试使用不支持上下文标签参数调用该函数，编译将失败：
+如果某些函数需要在，比如说 `EventLoop` 上下文中调用，而不在 `Interrupt` 上下文中支持，那么只需要实现支持的变体就足够了。如果 `Driver` 层尝试使用不支持上下文标签参数调用该函数，编译将失败：
 
 ```cpp
 class MyDevice
@@ -3046,9 +3059,9 @@ private:
 };
 ```
 
-#### 报告错误
+### 报告错误
 
-当向**驱动程序**和/或**组件**发出异步操作请求时，必须有一种方式来报告操作的成功/失败状态，如果失败，则提供有关失败原因的一些额外信息。将此类信息作为回调函数对象的第一个参数是开发人员中广泛使用的一种约定。
+当向驱动程序和/或组件发出异步操作请求时，必须有一种方式来报告操作的成功/失败状态，如果失败，则提供有关失败原因的一些额外信息。将此类信息作为回调函数对象的第一个参数是开发人员中广泛使用的一种约定。
 
 在大多数情况下，错误代码的数值就足够了。
 
@@ -3150,7 +3163,7 @@ if (es) {
 }
 ```
 
-按照惯例，任何在[embxx](https://github.com/arobenko/embxx)库中实现的**驱动程序**和/或**组件**提供的异步请求的回调函数都将接收`const embxx::error::ErrorStatus&`作为其第一个参数：
+按照惯例，任何在[embxx](https://github.com/arobenko/embxx)库中实现的驱动程序和/或组件提供的异步请求的回调函数都将接收`const embxx::error::ErrorStatus&`作为其第一个参数：
 
 ```cpp
 void callback(const embxx::error::ErrorStatus& es, ... /* some other parameters */)
@@ -3167,9 +3180,9 @@ void callback(const embxx::error::ErrorStatus& es, ... /* some other parameters 
 }
 ```
 
-#### 合作
+### 合作
 
-如上图所示，**驱动程序**必须能够访问**设备**以及**事件循环**对象。然而，前者并不知道后者的确切类型。为了编写完全通用的代码，必须将**设备**和**事件循环**类型作为模板参数提供：
+如上图所示，驱动程序必须能够访问设备以及事件循环对象。然而，前者并不知道后者的确切类型。为了编写完全通用的代码，必须将设备和事件循环类型作为模板参数提供：
 
 ```cpp
 template <typename TDevice, typename TEventLoop>
@@ -3193,7 +3206,7 @@ private:
 };
 ```
 
-**组件**只需要对**设备**和可能**事件循环**的访问。后者的引用可以从**设备**对象本身检索：
+组件只需要对设备和可能事件循环的访问。后者的引用可以从设备对象本身检索：
 
 ```cpp
 template <typename TDevice, typename TEventLoop>
@@ -3229,9 +3242,9 @@ private:
 };
 ```
 
-#### 存储回调对象
+### 存储回调对象
 
-**驱动程序**需要向**设备**提供一个回调对象，以便在适当的中断发生时调用。**组件**也提供了一个回调对象，在异步操作完成、取消或由于某些错误条件而终止时在非中断上下文中调用。这些回调对象需要存储在某个地方。在传统的 C++中，最佳做法是使用[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)。
+驱动程序需要向设备提供一个回调对象，以便在适当的中断发生时调用。组件也提供了一个回调对象，在异步操作完成、取消或由于某些错误条件而终止时在非中断上下文中调用。这些回调对象需要存储在某个地方。在传统的 C++中，最佳做法是使用[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)。
 
 ```cpp
 template <typename TDevice, typename TEventLoop>
@@ -3259,9 +3272,9 @@ private:
 };
 ```
 
-使用[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)有两个问题：异常和动态内存分配。可以通过确保函数对象在没有正确分配对象的情况下永远不会被调用，并覆盖适当的`__throw_*`函数来移除异常处理代码从二进制图像中（在异常章节中描述）。然而，在这种情况下无法消除动态内存分配，这减少了**驱动程序**代码可以重用的裸机产品的数量，即它使得**驱动程序**类不是完全通用的。
+使用[std::function](http://en.cppreference.com/w/cpp/utility/functional/function)有两个问题：异常和动态内存分配。可以通过确保函数对象在没有正确分配对象的情况下永远不会被调用，并覆盖适当的`__throw_*`函数来移除异常处理代码从二进制图像中（在异常章节中描述）。然而，在这种情况下无法消除动态内存分配，这减少了驱动程序代码可以重用的裸机产品的数量，即它使得驱动程序类不是完全通用的。
 
-通过将回调存储类型定义为**驱动程序**的模板参数来解决问题：
+通过将回调存储类型定义为驱动程序的模板参数来解决问题：
 
 ```cpp
 template <typename TDevice,
@@ -3279,7 +3292,7 @@ private:
 
 ## 外设
 
-在本章中，我将描述并给出多个示例，说明如何在结合使用 Device-Driver-Component 模型和 事件循环 的同时驱动和控制多个硬件外设。
+在本章中，我将描述并给出多个示例，说明如何在结合使用 Device-Driver-Component 模型和事件循环的同时驱动和控制多个硬件外设。
 
 这里提供的所有通用、平台无关的代码都是作为 [embxx](https://github.com/arobenko/embxx) 库的一部分实现的，而平台（树莓派）特定的代码则来自 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目。
 
@@ -3287,13 +3300,15 @@ private:
 
 [src/app](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app) 目录包含几个简单的应用程序，例如闪烁 led 或响应按钮按下。
 
-应用程序之间还共享一些常见的**组件**类。它们位于 [src/component](https://github.com/arobenko/embxx_on_rpi/tree/master/src/component) 目录中。
+应用程序之间还共享一些常见的组件类。它们位于 [src/component](https://github.com/arobenko/embxx_on_rpi/tree/master/src/component) 目录中。
 
-为了编译所有应用程序，请遵循 本书内容 中描述的说明。
+为了编译所有应用程序，请遵循本书内容中描述的说明。
 
 ### 函数配置
 
-在 ARM 平台上，每个引脚都需要配置为 gpio 输入、gpio 输出或具有微控制器支持的几种替代功能之一。定义在 [src/device/Function.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Function.h) 和 [src/device/Function.cpp](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Function.cpp) 中的 `device::Function` 类实现了简单的接口，允许每个**设备**类配置它使用的引脚。
+
+
+在 ARM 平台上，每个引脚都需要配置为 GPIO 输入、GPIO 输出或具有微控制器支持的几种替代功能之一。定义在 [src/device/Function.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Function.h) 和 [src/device/Function.cpp](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Function.cpp) 中的 `device::Function` 类实现了简单的接口，允许每个设备类配置它使用的引脚。
 
 ```cpp
 class Function
@@ -3318,11 +3333,11 @@ public:
 };
 ```
 
-每个实现的**设备**类在其构造函数中都将接收到对 `Function` 对象的引用，并将必须使用它来配置所需的引脚。
+每个实现的设备类在其构造函数中都将接收到对 `Function` 对象的引用，并将必须使用它来配置所需的引脚。
 
 ### 中断管理
 
-还有一个所有**设备**都会使用的组件。它是定义在 [src/device/InterruptMgr.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/InterruptMgr.h) 中的 `device::InterruptMgr`。这个类对象的 主要职责是控制全局级别的中断，从各种**设备**中注册中断处理程序，并在发生中断时调用适当的处理程序。
+还有一个所有设备都会使用的组件。它是定义在 [src/device/InterruptMgr.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/InterruptMgr.h) 中的 `device::InterruptMgr`。这个类对象的主要职责是控制全局级别的中断，从各种设备中注册中断处理程序，并在发生中断时调用适当的处理程序。
 
 `device::InterruptMgr` 的接口定义如下：
 
@@ -3369,9 +3384,9 @@ private:
 };
 ```
 
-每个驱动程序都将使用 `registerHandler()` 成员函数来注册其成员函数作为其 `IrqId` 的处理程序。`enableInterrupt()` 和 `disableInterrupt()` 也被**设备**对象用于控制其在全局级别上的中断。
+每个驱动程序都将使用 `registerHandler()` 成员函数来注册其成员函数作为其 `IrqId` 的处理程序。`enableInterrupt()` 和 `disableInterrupt()` 也被设备对象用于控制其在全局级别上的中断。
 
-为了使用上面描述的**中断管理器**，每个应用程序都必须实现适当的中断处理程序，该处理程序将检索`device::InterruptMgr`对象的引用（通过全局/静态变量）并调用其`handleInterrupt()`函数，该函数反过来检查适当的寄存器状态并调用已注册的处理程序。请注意，处理程序将在中断上下文中执行。
+为了使用上面描述的中断管理器，每个应用程序都必须实现适当的中断处理程序，该处理程序将检索 `device::InterruptMgr` 对象的引用（通过全局/静态变量）并调用其 `handleInterrupt()` 函数，该函数反过来检查适当的寄存器状态并调用已注册的处理程序。请注意，处理程序将在中断上下文中执行。
 
 代码看起来可能像这样：
 
@@ -3383,7 +3398,7 @@ void interruptHandler()
 }
 ```
 
-也可能需要通过在`CPS`寄存器中切换`i`标志来启用/禁用所有中断。同一[src/device/InterruptMgr.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/InterruptMgr.h)文件提供了两个用于此目的的函数：
+也可能需要通过在 `CPS` 寄存器中切换 `i` 标志来启用/禁用所有中断。同一 [src/device/InterruptMgr.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/InterruptMgr.h) 文件提供了两个用于此目的的函数：
 
 ```cpp
 namespace device
@@ -3411,11 +3426,11 @@ void disable()
 
 ### 计时器
 
-在裸机开发中，通常在第一个应用程序中闪烁 LED（而不是编写“Hello world”）。然而，大多数教程展示了如何使用循环同步等待一段时间，然后改变 LED 的状态。我将描述如何使用计时器中断结合事件循环异步地完成它。
+在裸机开发中，通常在第一个应用程序中闪烁 LED，而不是编写“Hello world”。然而，大多数教程展示了如何使用循环同步等待一段时间，然后改变 LED 的状态。我将描述如何使用计时器中断结合事件循环异步地完成它。
 
-几乎每个嵌入式平台通常都有一个或两个计时器外设。这样的外设可以被编程在一段时间后提供中断。然而，可能需要多个计时器，它们可以在同一时间独立激活。很明显，应该有一个实体接收来自各种**组件**的非中断上下文中的所有等待请求，然后在内部排队等待请求，编程计时器外设在一段时间后提供中断，并最终通过回调在非中断（事件循环）上下文中向适当的**组件**报告完成。
+几乎每个嵌入式平台通常都有一个或两个计时器外设。这样的外设可以被编程在一段时间后提供中断。然而，可能需要多个计时器，它们可以在同一时间独立激活。很明显，应该有一个实体接收来自各种组件的非中断上下文中的所有等待请求，然后在内部排队等待请求，编程计时器外设在一段时间后提供中断，并最终通过回调在非中断（事件循环）上下文中向适当的组件报告完成。
 
-这样的实体可以是一个通用的（平台无关的）**驱动程序**，如果它提供了平台特定的**设备**对象，该对象公开一些预定义的公共接口并控制实际的平台特定硬件。
+这样的实体可以是一个通用的（平台无关的）驱动程序，如果它提供了平台特定的设备对象，该对象公开一些预定义的公共接口并控制实际的平台特定硬件。
 
 ![图像：计时器管理器](img/a67cc244c849a27e966eb416cae967dd.png)
 
@@ -3423,7 +3438,7 @@ void disable()
 
 #### 分配等待完成回调
 
-正如设备驱动组件章节中描述的那样，**驱动程序**需要提供当计时器中断发生时被调用的“等待完成”回调对象。分配通常在**驱动程序**的初始化/构造阶段进行：
+正如设备驱动组件章节中描述的那样，驱动程序需要提供当计时器中断发生时被调用的“等待完成”回调对象。分配通常在驱动程序的初始化/构造阶段进行：
 
 ![图像：分配回调](img/dccb7071cbc5d9b688d5cee035031989.png)
 
@@ -3431,27 +3446,27 @@ void disable()
 
 ![图像：开始异步等待](img/4953a6e35964e8156cef471025c09521.png)
 
-**驱动程序**必须能够支持来自各种**组件**的多个等待请求，并相应地管理内部队列。在上面的图表中，定时器外设是在第一次`asyncWait()`请求上激活的。当发出第二个请求时（假设`timeout1 < timeout2`且现有的等待不应停止），**驱动程序**必须防止在中断上下文中报告当前计划好的计时器倒计时的完成，同时干扰内部数据结构的更新。通过调用**设备**的`suspendWait()`成员函数来禁用中断。对`suspendWait()`的调用返回`true`，这意味着中断已成功禁用，可以安全地更新内部数据结构。如果对`suspendWait()`的调用返回`false`，则表示中断已经发生，没有正在进行的等待，即第二个`asyncWait()`实际上成为新序列中的第一个。
+驱动程序必须能够支持来自各种组件的多个等待请求，并相应地管理内部队列。在上面的图表中，定时器外设是在第一次 `asyncWait()` 请求上激活的。当发出第二个请求时（假设 `timeout1 < timeout2` 且现有的等待不应停止），驱动程序必须防止在中断上下文中报告当前计划好的计时器倒计时的完成，同时干扰内部数据结构的更新。通过调用设备的 `suspendWait()` 成员函数来禁用中断。对 `suspendWait()` 的调用返回 `true`，这意味着中断已成功禁用，可以安全地更新内部数据结构。如果对 `suspendWait()` 的调用返回 `false`，则表示中断已经发生，没有正在进行的等待，即第二个 `asyncWait()` 实际上成为新序列中的第一个。
 
-也可能存在`timeout2 < timeout1`的情况，这意味着必须重新评估超时请求的顺序，并重新编程新的等待。
+也可能存在 `timeout2 < timeout1` 的情况，这意味着必须重新评估超时请求的顺序，并重新编程新的等待。
 
 ![Image: Starting Asynchronous Wait](img/2f3e997cdf3fb5e2d15e799c32da9232.png)
 
-**驱动程序**必须能够取消现有的计时器倒计时，评估自第一次请求以来经过的时间，评估新的值以重新编程计时器**设备**倒计时。
+驱动程序必须能够取消现有的计时器倒计时，评估自第一次请求以来经过的时间，评估新的值以重新编程计时器设备倒计时。
 
 #### 完成异步等待
 
 ![Image: Completing Asynchronous Wait](img/4b0b39503611d334698c8651189078e3.png)
 
-由于**驱动程序**可能接收到多个独立的等待请求，它必须在中断模式下运行时重新编程下一个等待（如果存在）。请注意传递给**设备**的`startWait()`成员函数的`InterruptCtx()`标签参数。它表示请求是在中断上下文中执行的，而相同的请求使用`EventLoopCtx()`作为标签参数来指定调用是在事件循环（非中断）上下文中执行的。
+由于驱动程序可能接收到多个独立的等待请求，它必须在中断模式下运行时重新编程下一个等待（如果存在）。请注意传递给设备的 `startWait()` 成员函数的 `InterruptCtx()` 标签参数。它表示请求是在中断上下文中执行的，而相同的请求使用 `EventLoopCtx()` 作为标签参数来指定调用是在事件循环（非中断）上下文中执行的。
 
 #### 取消异步等待
 
-如果有请求取消当前正在执行的等待，**驱动程序**必须接收到关于已过时间的通知，并在存在的情况下重新编程下一个等待。
+如果有请求取消当前正在执行的等待，驱动程序必须接收到关于已过时间的通知，并在存在的情况下重新编程下一个等待。
 
 ![Image: Canceling Asynchronous Operation](img/d422cfa87fbdddd84638c0791d06f5e3.png)
 
-如果取消请求是针对某些尚未转发到**设备**的其他等待，**驱动程序**只需更新其内部数据结构，而无需取消当前正在执行的计时器倒计时。
+如果取消请求是针对某些尚未转发到设备的其他等待，驱动程序只需更新其内部数据结构，而无需取消当前正在执行的计时器倒计时。
 
 ![Image: Canceling Asynchronous Operation](img/321c0ca2833bfecef585015ffb75db37.png)
 
@@ -3509,7 +3524,7 @@ public:
         }
 
     private:
-	MyTimerDriver& mgr_;
+        MyTimerDriver& mgr_;
         Handle handle_;
     };
 
@@ -3529,7 +3544,7 @@ private:
 };
 ```
 
-**Driver**本身只有一个公共函数`allocTimer()`。它用于分配`Timer`对象。所有等待和/或取消请求都直接向这个定时器对象发出，该对象被声明为**Driver**类的`friend`，即它能够使用其句柄调用后者的私有函数。`Timer`的析构函数确保句柄被正确地无效化。
+`Driver` 本身只有一个公共函数 `allocTimer()`。它用于分配 `Timer` 对象。所有等待和/或取消请求都直接向这个定时器对象发出，该对象被声明为 `Driver` 类的 `friend`，即它能够使用其句柄调用后者的私有函数。`Timer` 的析构函数确保句柄被正确地无效化。
 
 ```cpp
 MyTimerDriver driver(...);
@@ -3540,13 +3555,13 @@ timer.cancelWait();
 ...
 ```
 
-第二种方法比第一种方法更安全，并且在[embxx](https://github.com/arobenko/embxx)库中实现了此类通用“定时器管理 Driver”。
+第二种方法比第一种方法更安全，并且在 [embxx](https://github.com/arobenko/embxx) 库中实现了此类通用“定时器管理 Driver”。
 
 #### 指定等待时长
 
-定时器**Device**是平台特定的。某些平台可能支持微秒级的等待时长粒度，而其他平台只能达到毫秒级。这通常取决于系统时钟速度。然而，当使用通用**Driver**和/或**Component**时，需要能够编写与平台无关的代码，该代码能够执行指定时长等待，而不管使用的**Device**是什么。C++11 标准的**标准模板库（STL**）提供了方便的[日期和时间实用工具](http://en.cppreference.com/w/cpp/chrono)，使得这种使用成为可能。
+定时器 `Device` 是平台特定的。某些平台可能支持微秒级的等待时长粒度，而其他平台只能达到毫秒级。这通常取决于系统时钟速度。然而，当使用通用 `Driver` 和/或 `Component` 时，需要能够编写与平台无关的代码，该代码能够执行指定时长等待，而不管使用的 `Device` 是什么。C++11 标准的标准模板库（STL）提供了方便的[日期和时间实用工具](http://en.cppreference.com/w/cpp/chrono)，使得这种使用成为可能。
 
-如果**Device**使用[std::chrono::duration](http://en.cppreference.com/w/cpp/chrono/duration)类型声明最小等待时长单位，**Driver**可以使用[std::chrono::duration_cast](http://en.cppreference.com/w/cpp/chrono/duration/duration_cast)将请求的等待时长转换为支持的时长单位。
+如果 `Device` 使用 [std::chrono::duration](http://en.cppreference.com/w/cpp/chrono/duration) 类型声明最小等待时长单位，`Driver` 可以使用 [std::chrono::duration_cast](http://en.cppreference.com/w/cpp/chrono/duration/duration_cast) 将请求的等待时长转换为支持的时长单位。
 
 ```cpp
 class MyTimerDevice
@@ -3562,9 +3577,9 @@ public:
 };
 ```
 
-在上面的示例中，最小支持的时长单位（`WaitTimeUnitDuration`）被声明为 1 毫秒。请注意，`startWait()`成员函数期望接收等待单元的数量，即毫秒作为其第一个参数。
+在上面的示例中，最小支持的时长单位（`WaitTimeUnitDuration`）被声明为 1 毫秒。请注意，`startWait()` 成员函数期望接收等待单元的数量，即毫秒作为其第一个参数。
 
-然后可以像这样定义**Driver**类的`asyncWait()`成员函数：
+然后可以像这样定义 `Driver` 类的 `asyncWait()` 成员函数：
 
 ```cpp
 template <typename TDevice, ...>
@@ -3591,13 +3606,13 @@ public:
 };
 ```
 
-在上面的示例中，下面的调用将正确调整时长，并使用任何**Device**测量相同的超时时间，无论后者在其`startWait()`成员函数中期望的是毫秒还是微秒。
+在上面的示例中，下面的调用将正确调整时长，并使用任何 `Device` 测量相同的超时时间，无论后者在其 `startWait()` 成员函数中期望的是毫秒还是微秒。
 
 ```cpp
 timer.asyncWait(std::chrono::seconds(5), ...);
 ```
 
-如果开发者在**Driver**只支持毫秒级粒度的情况下尝试执行几个微秒的等待，编译将失败。
+如果开发者在 `Driver` 只支持毫秒级粒度的情况下尝试执行几个微秒的等待，编译将失败。
 
 ```cpp
 timer.asyncWait(std::chrono::microseconds(5), ...);
@@ -3605,11 +3620,13 @@ timer.asyncWait(std::chrono::microseconds(5), ...);
 
 #### Driver 实现
 
-定时器管理**Driver**是一个通用层。它必须在任何平台上与任何暴露正确接口的定时器**Device**对象一起工作。
+定时器管理 `Driver` 是一个通用层。它必须在任何平台上与任何暴露正确接口的定时器 `Device` 对象一起工作。
 
-这样的 **驱动程序** 已经在 [embxx](https://github.com/arobenko/embxx) 库中作为 `embxx::driver::TimerMgr` 实现，位于 [embxx/driver/TimerMgr.h](https://github.com/arobenko/embxx/blob/master/embxx/driver/TimerMgr.h)，而平台特定（树莓派）外设控制对象在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目中作为 `device::Timer` 实现，位于 [src/device/Timer.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Timer.h)。
 
-`embxx::driver::TimerMgr` 的定义如下：
+
+这样的`驱动程序`已经在 [embxx](https://github.com/arobenko/embxx) 库中作为`embxx::driver::TimerMgr`实现，位于 [embxx/driver/TimerMgr.h](https://github.com/arobenko/embxx/blob/master/embxx/driver/TimerMgr.h)，而平台特定（树莓派）外设控制对象在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目中作为`device::Timer`实现，位于 [src/device/Timer.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Timer.h)。
+
+`embxx::driver::TimerMgr`的定义如下：
 
 ```cpp
 template <typename TDevice,
@@ -3644,15 +3661,15 @@ private:
 };
 ```
 
-`TDevice` 模板参数是定时器外设的平台特定控制类。
+`TDevice`模板参数是定时器外设的平台特定控制类。
 
-`TEventLoop` 模板参数是 事件循环 的类。
+`TEventLoop`模板参数是事件循环的类。
 
-`TMaxTimers` 模板参数指定了 `TimerMgr` 将能分配的最大定时器对象数量。此参数是必需的，因为 `embxx::driver::TimerMgr` 是设计用于没有动态内存分配的系统。如果允许动态内存分配，那么在不限定的条件下实现类似功能就相当容易了。
+`TMaxTimers`模板参数指定了`TimerMgr`将能分配的最大定时器对象数量。此参数是必需的，因为`embxx::driver::TimerMgr`是设计用于没有动态内存分配的系统。如果允许动态内存分配，那么在不限定的条件下实现类似功能就相当容易了。
 
-`TTimeoutHandler` 模板参数指定了超时回调对象的类型。此对象必须具有 `void (const embxx::error::ErrorStatus&)` 签名，并暴露类似于 [std::function](http://en.cppreference.com/w/cpp/utility/functional/function) 或 `embxx::util::StaticFunction` 的接口。
+`TTimeoutHandler`模板参数指定了超时回调对象的类型。此对象必须具有`void (const embxx::error::ErrorStatus&)`签名，并暴露类似于 [std::function](http://en.cppreference.com/w/cpp/utility/functional/function) 或`embxx::util::StaticFunction`的接口。
 
-`embxx::driver::TimerMgr` 提供以下公共接口：
+`embxx::driver::TimerMgr`提供以下公共接口：
 
 ```cpp
 template <...>
@@ -3684,7 +3701,7 @@ private:
 };
 ```
 
-读者可能会注意到 `embxx::driver::TimerMgr` 仅公开了一个函数：`Timer allocTimer();`。此函数返回一个简单的 `TimerMgr::Timer` 对象，可用于安排新的等待以及取消之前的等待请求。此外，请注意 `TimerMgr::Timer` 类被声明为 `TimerMgr` 的 `friend`。这是为了允许从 `TimerMgr::Timer` 无缝地将等待/取消请求委托给 `TimerMgr`，后者负责管理多个同时进行的等待请求并将它们逐个委托给实际的硬件控制对象。
+读者可能会注意到`embxx::driver::TimerMgr`仅公开了一个函数：`Timer allocTimer();`。此函数返回一个简单的`TimerMgr::Timer`对象，可用于安排新的等待以及取消之前的等待请求。此外，请注意`TimerMgr::Timer`类被声明为`TimerMgr`的`friend`。这是为了允许从`TimerMgr::Timer`无缝地将等待/取消请求委托给`TimerMgr`，后者负责管理多个同时进行的等待请求并将它们逐个委托给实际的硬件控制对象。
 
 然后，LED 闪烁应用程序（在 [src/app/app_led_flash](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_led_flash) 中实现）可以像下面的代码一样简单：
 
@@ -3756,7 +3773,7 @@ int main() {
 
 #### 平台特定定时器设备
 
-如前所述，`embxx::driver::TimerMgr` 是一个通用的 **驱动程序** 类，它执行了管理调度独立等待请求的大部分工作。它需要来自底层定时器 **设备** 对象的支持来编程代码运行的平台上的实际硬件。`embxx::driver::TimerMgr` 定义为接收 **设备** 类作为模板参数，以及在构造函数中接收对 **设备** 定时器对象的引用。**驱动程序** 不了解确切的 **设备** 类型，但期望它暴露某些公共接口：
+如前所述，`embxx::driver::TimerMgr`是一个通用的`驱动程序`类，它执行了管理调度独立等待请求的大部分工作。它需要来自底层定时器`设备`对象的支持来编程代码运行的平台上的实际硬件。`embxx::driver::TimerMgr`定义为接收`设备`类作为模板参数，以及在构造函数中接收对`设备`定时器对象的引用。`驱动程序`不了解确切的`设备`类型，但期望它暴露某些公共接口：
 
 ```cpp
 template <typename TDevice, typename TEventLoop, ...>
@@ -3768,22 +3785,22 @@ public:
 };
 ```
 
-定时器控制 **设备** 类必须公开以下公共接口：
+定时器控制`设备`类必须公开以下公共接口：
 
-1.  将`WaitTimeUnitDuration`类型定义为[std::chrono::duration](https://en.cppreference.com/w/cpp/chrono/duration)的变体，该类型指定了**设备**支持的单一等待单元的持续时间。
+1. 将`WaitTimeUnitDuration`类型定义为[std::chrono::duration](https://en.cppreference.com/w/cpp/chrono/duration)的变体，该类型指定了`设备`支持的单一等待单元的持续时间。
 
     ```cpp
     typedef std::chrono::duration<...> WaitTimeUnitDuration;
     ```
 
-1.  设置从定时器中断调用的回调对象的函数：
+2. 设置从定时器中断调用的回调对象的函数：
 
     ```cpp
     template <typename TFunc>
     void setWaitCompleteCallback(TFunc&& func);
     ```
 
-1.  在事件循环（非中断）和中断上下文中启动定时器倒计时的函数：
+3. 在事件循环（非中断）和中断上下文中启动定时器倒计时的函数：
 
     ```cpp
     void startWait(
@@ -3794,25 +3811,25 @@ public:
         embxx::device::context::Interrupt context);
     ```
 
-1.  在事件循环（非中断）上下文中取消定时器倒计时的函数。如果等待实际上被取消，则该函数必须返回 true，如果没有等待正在进行，则返回 false。
+4. 在事件循环（非中断）上下文中取消定时器倒计时的函数。如果等待实际上被取消，则该函数必须返回 true，如果没有等待正在进行，则返回 false。
 
     ```cpp
     bool cancelWait(embxx::device::context::EventLoop context);
     ```
 
-1.  在事件循环（非中断）上下文中挂起倒计时（在实际的等待倒计时未停止时禁用中断）的函数。如果等待实际上被挂起，则该函数必须返回 true，如果没有等待正在进行，则返回 false。对该函数的调用将跟随`resumeWait()`或`cancelWait()`。
+5. 在事件循环（非中断）上下文中挂起倒计时（在实际的等待倒计时未停止时禁用中断）的函数。如果等待实际上被挂起，则该函数必须返回 true，如果没有等待正在进行，则返回 false。对该函数的调用将跟随`resumeWait()`或`cancelWait()`。
 
     ```cpp
     bool suspendWait(embxx::device::context::EventLoop context);
     ```
 
-1.  在事件循环（非中断）上下文中恢复倒计时的函数。
+6. 在事件循环（非中断）上下文中恢复倒计时的函数。
 
     ```cpp
     void resumeWait(embxx::device::context::EventLoop context);
     ```
 
-1.  获取最后一次执行等待的已过时间的函数。它将在`cancelWait()`之后立即被调用。
+7. 获取最后一次执行等待的已过时间的函数。它将在`cancelWait()`之后立即被调用。
 
     ```cpp
     WaitTimeUnitDuration::rep getElapsed(embxx::device::context::EventLoop context) const;
@@ -3836,7 +3853,7 @@ closer.c:(.text._close_r+0x18): undefined reference to `_close'
 /usr/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/libc.a(lib_a-fstatr.o): In function `_fstat_r':
 fstatr.c:(.text._fstat_r+0x1c): undefined reference to `_fstat'
 /usr/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/libc.a(lib_a-isattyr.o): In function `_isatty_r':
-isattyr.c:(.text._isatty_r+0x18): undefined reference to `_isatty'
+isattyr.c:(.text._isattyr+0x18): undefined reference to `_isatty'
 /usr/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/libc.a(lib_a-lseekr.o): In function `_lseek_r':
 lseekr.c:(.text._lseek_r+0x20): undefined reference to `_lseek'
 /usr/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/libc.a(lib_a-readr.o): In function `_read_r':
@@ -3868,37 +3885,38 @@ extern "C" int _write(int file, char *ptr, int len)
 
 在这种情况下，对`printf`函数的调用将是阻塞的，并且不会返回，直到所有字符逐个写入 UART，这需要大量的执行时间。这种方法适用于快速且简单的调试，但当项目增长时将很快变得不切实际。
 
-为了使 `printf` 的执行快速，必须有一种中断驱动的组件，负责缓冲所有提供的字符，并使用“**TX 缓冲寄存器空闲**”这类中断异步逐个将它们转发到 UART。
+为了使`printf`的执行快速，必须有一种中断驱动的组件，负责缓冲所有提供的字符，并使用“`TX 缓冲寄存器空闲`”这类中断异步逐个将它们转发到 UART。
 
-使用 `printf` 进行日志记录的一个缺点是需要指定打印变量的输出格式：
 
-```cpp
-std::int32_t i = ...; // some value
+
+使用`printf`进行日志记录的一个缺点是需要指定打印变量的输出格式：
+
+```cpp我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。std::int32_t i = ...; // some value
 printf("Value = %d\n");
 ```
 
-如果打印变量的类型发生变化，开发者必须记得更新格式字符串中的类型。这也是为什么许多 C++开发者更喜欢使用流而不是 `printf` 的原因：
+如果打印变量的类型发生变化，开发者必须记得更新格式字符串中的类型。这也是为什么许多 C++ 开发者更喜欢使用流而不是`printf`的原因：
 
 ```cpp
 std::int32_t i = ...; // some value
 std::cout << "Value = " << i << std::endl;
 ```
 
-即使打印变量的类型发生变化，编译器也会生成对适当的重载 `operator<<` 的调用，值将被正确打印。开发者还必须实现缺失的 `_write` 函数，以便将提供的字符写入某个地方（在我们的例子中是 UART 接口）。
+即使打印变量的类型发生变化，编译器也会生成对适当的重载`operator<<`的调用，值将被正确打印。开发者还必须实现缺失的`_write`函数，以便将提供的字符写入某个地方（在我们的例子中是 UART 接口）。
 
-然而，在裸机开发中使用 C++流通常不是一个选择。它们使用异常来处理错误情况，以及[区域设置](http://en.cppreference.com/w/cpp/locale/locale)来进行格式化。使用 [GNU Tools for ARM Embedded Processors](https://launchpad.net/gcc-arm-embedded) 编译器编译简单的输出语句，生成的映像大小超过 500KB。
+然而，在裸机开发中使用 C++ 流通常不是一个选择。它们使用异常来处理错误情况，以及[区域设置](http://en.cppreference.com/w/cpp/locale/locale)来进行格式化。使用 [GNU Tools for ARM Embedded Processors](https://launchpad.net/gcc-arm-embedded) 编译器编译简单的输出语句，生成的映像大小超过 500KB。
 
-总结上述所有内容，使用标准的 [printf](http://en.cppreference.com/w/cpp/io/c/fprintf) 函数或 [输出流](http://en.cppreference.com/w/cpp/io/basic_ostream) 进行调试日志记录可能存在问题，尤其是在内存较小且不允许使用动态内存分配和异常的系统。我们的最终目标将是创建一个标准输出流接口，用于调试日志记录，同时使用 Device-Driver-Component 模型和 事件循环，其中大部分代码是通用的，只有一小部分是针对管理写入 UART 接口的单个字符的平台特定部分。
+总结上述所有内容，使用标准的 [printf](http://en.cppreference.com/w/cpp/io/c/fprintf) 函数或 [输出流](http://en.cppreference.com/w/cpp/io/basic_ostream) 进行调试日志记录可能存在问题，尤其是在内存较小且不允许使用动态内存分配和异常的系统。我们的最终目标将是创建一个标准输出流接口，用于调试日志记录，同时使用 Device-Driver-Component 模型和事件循环，其中大部分代码是通用的，只有一小部分是针对管理写入 UART 接口的单个字符的平台特定部分。
 
 在 UART 接口上的异步读写操作与前面在设备驱动组件章节中描述的通用编程和处理异步事件的方式非常相似。
 
-#### 向 UART 写入
+## 向 UART 写入
 
 **阶段 1** - 在事件循环（非中断）上下文中，从**组件**层向**驱动程序**发送异步缓冲写入请求。
 
 ![图片：异步写入请求](img/1f23d34c2bb100dda32ca47d2e438b85.png)
 
-**组件**调用**驱动器**的`asyncWrite()`成员函数，并提供缓冲区的指针、缓冲区的大小以及写入完成后要调用的回调对象。`asyncWrite()`函数需要能够接收任何类型的可调用对象，例如[std::bind](http://en.cppreference.com/w/cpp/utility/functional/bind)表达式或[lambda 函数](http://en.cppreference.com/w/cpp/language/lambda)。为了实现这一点，函数必须是模板化的：
+**组件**调用**驱动器**的`asyncWrite()`成员函数，并提供缓冲区的指针、缓冲区的大小以及写入完成后要调用的回调对象。`asyncWrite()`函数需要能够接收任何类型的可调用对象，例如 [std::bind](http://en.cppreference.com/w/cpp/utility/functional/bind) 表达式或 [lambda 函数](http://en.cppreference.com/w/cpp/language/lambda)。为了实现这一点，函数必须是模板化的：
 
 ```cpp
 class CharacterDriver
@@ -3951,21 +3969,21 @@ void canWriteCallback()
 
 **阶段 3** - 通知调用者完成情况：
 
-一旦整个缓冲区被发送到 **设备** 进行写入，**驱动程序** 意识到将不再执行更多写入操作。然而，它不会报告完成，直到 **设备** 本身调用适当的回调指示操作确实已完成。将识别操作何时完成的职责转移到 **设备** 将在稍后需要时需要，那时我们希望重用相同的 **驱动程序** 用于 I2C 和 SPI 外设。在所有先前操作中的字符都已写入后，了解外设内部 Tx FIFO 是否为空将非常重要。
+一旦整个缓冲区被发送到**设备**进行写入，**驱动程序**意识到将不再执行更多写入操作。然而，它不会报告完成，直到**设备**本身调用适当的回调指示操作确实已完成。将识别操作何时完成的职责转移到**设备**将在稍后需要时需要，那时我们希望重用相同的**驱动程序**用于 I2C 和 SPI 外设。在所有先前操作中的字符都已写入后，了解外设内部 Tx FIFO 是否为空将非常重要。
 
 ![图片：通知调用者完成](img/8e530f50bca824ce889ecad3c8fbb1dd.png)
 
-一旦 **驱动程序** 从 **设备**（仍在中断上下文中）收到通知，表示写入操作已完成，它将使用 [std::bind](http://en.cppreference.com/w/cpp/utility/functional/bind) 表达式将提供的回调对象与错误状态和实际传输的字节数捆绑在一起，并将可调用对象发送到 事件循环 以在事件循环（非中断）上下文中执行。
+一旦**驱动程序**从**设备**（仍在中断上下文中）收到通知，表示写入操作已完成，它将使用 [std::bind](http://en.cppreference.com/w/cpp/utility/functional/bind) 表达式将提供的回调对象与错误状态和实际传输的字节数捆绑在一起，并将可调用对象发送到事件循环以在事件循环（非中断）上下文中执行。
 
-#### 从 UART 读取
+## 从 UART 读取
 
 从 UART 的读取操作以非常相似的方式进行。
 
-**阶段 1** - 从 **组件** 层向事件循环（非中断）上下文中的 **驱动程序** 发送异步缓冲区读取请求。
+**阶段 1** - 从**组件**层向事件循环（非中断）上下文中的**驱动程序**发送异步缓冲区读取请求。
 
 ![图片：异步读取请求](img/608ac57466ab250b39f488a4b120a8a6.png)
 
-**驱动程序** 的 `asyncRead()` 成员函数应允许回调为任何类型的可调用对象（但当然必须暴露预定义的签名）。
+**驱动程序**的`asyncRead()`成员函数应允许回调为任何类型的可调用对象（但当然必须暴露预定义的签名）。
 
 ```cpp
 class CharacterDriver
@@ -3988,25 +4006,25 @@ public:
 回调的实现可能如下：
 
 ```cpp
- void canReadCallback()
-    {
-        while(device_.canRead(InterruptContext())) {
-            if ((readBufStart_ + readBufSize_) <= currentReadBufPtr_) {
-                break;
-            }
-
-            auto ch = device_.read(InterruptContext());
-            *currentReadBufPtr_ = ch;
-            ++currentReadBufPtr_;
+void canReadCallback()
+{
+    while(device_.canRead(InterruptContext())) {
+        if ((readBufStart_ + readBufSize_) <= currentReadBufPtr_) {
+            break;
         }
+
+        auto ch = device_.read(InterruptContext());
+        *currentReadBufPtr_ = ch;
+        ++currentReadBufPtr_;
     }
+}
 ```
 
 **阶段 3** - 通知调用者完成：
 
 ![图片：通知调用者完成](img/33a83c0be75b520214c954774d258999.png)
 
-#### 取消异步操作
+## 取消异步操作
 
 取消流程与 Device-Driver-Component 章节中描述的非常相似：
 
@@ -4014,7 +4032,7 @@ public:
 
 如果取消操作成功，回调必须使用指示操作已中止的错误代码调用（`embxx::error::ErrorCode::Aborted`）。
 
-取消操作不成功的一个可能情况是，当回调被发布到事件循环以执行时，但在尝试取消时尚未执行。在这种情况下，**驱动程序** 意识到没有挂起的异步操作，可以立即返回 `false`。
+取消操作不成功的一个可能情况是，当回调被发布到事件循环以执行时，但在尝试取消时尚未执行。在这种情况下，**驱动程序**意识到没有挂起的异步操作，可以立即返回`false`。
 
 ![图片：取消读取](img/445034b4edb611b0168373383791eee9.png)
 
@@ -4022,13 +4040,13 @@ public:
 
 ![图片：取消读取](img/e0da1847dc7bfd273cd06b82865c02db.png)
 
-#### 读取 "Until"
+## 读取 "Until"
 
-可能存在需要执行部分读取的情况，例如直到遇到特定字符。在这种情况下，**Driver** 负责监控传入的字符，并在缓冲区读取完成之前取消读取操作：
+可能存在需要执行部分读取的情况，例如直到遇到特定字符。在这种情况下，**Driver**负责监控传入的字符，并在缓冲区读取完成之前取消读取操作：
 
 ![Image: Notifying caller about completion](img/0a896be41f04e713ace306cf9f7f3273.png)
 
-注意，之前 **Driver** 在事件循环（非中断）上下文中调用 **Device** 的 `cancelRead()` 成员函数，而在“读取直到”情况下，取消操作发生在中断模式下。这要求 **Device** 为两种模式都实现这些函数：
+注意，之前**Driver**在事件循环（非中断）上下文中调用**Device**的`cancelRead()`成员函数，而在“读取直到”情况下，取消操作发生在中断模式下。这要求**Device**为两种模式都实现这些函数：
 
 ```cpp
 class MyDevice
@@ -4039,7 +4057,7 @@ public:
 };
 ```
 
-**Driver** 类的 `asyncReadUntil()` 成员函数应该能够接收任何定义了 `bool operator()(CharType ch) const` 的无状态谓词对象。当接收到期望的字符时，谓词调用应返回 `true`，并且读取操作必须停止。
+**Driver**类的`asyncReadUntil()`成员函数应该能够接收任何定义了`bool operator()(CharType ch) const`的无状态谓词对象。当接收到期望的字符时，谓词调用应返回`true`，并且读取操作必须停止。
 
 ```cpp
 class MyDriver
@@ -4057,7 +4075,7 @@ public:
 };
 ```
 
-这允许在评估字符时使用复杂条件。例如，当遇到 `'\r'` 或 `'\n'` 时停止：
+这允许在评估字符时使用复杂条件。例如，当遇到`'\r'`或`'\n'`时停止：
 
 ```cpp
 typedef embxx::error::ErrorStatus EmbxxErrorStatus;
@@ -4075,9 +4093,9 @@ driver_.asyncReadUntil(
         });
 ```
 
-#### Device 实现部分
+## Device 实现部分
 
-在本节中，我将尝试更详细地描述 **Device** 类需要为 **Driver** 正确工作提供什么。首先，它需要定义使用的字符类型：
+在本节中，我将尝试更详细地描述**Device**类需要为**Driver**正确工作提供什么。首先，它需要定义使用的字符类型：
 
 ```cpp
 class MyDevice
@@ -4087,7 +4105,7 @@ public:
 };
 ```
 
-**Driver** 层将在其内部函数中重用字符的定义：
+**Driver**层将在其内部函数中重用字符的定义：
 
 ```cpp
 template<typename TDevice, ...>
@@ -4100,7 +4118,7 @@ public:
 };
 ```
 
-需要能够从 **Driver** 记录回调对象，以便通知后者关于读取/写入下一个字符的能力以及操作完成的情况。
+需要能够从**Driver**记录回调对象，以便通知后者关于读取/写入下一个字符的能力以及操作完成的情况。
 
 ```cpp
 class MyDevice
@@ -4139,11 +4157,10 @@ private:
 
     OpAvailableHandler canWriteHandler_;
     OpCompleteHandler writeCompleteHandler_;
-
 };
 ```
 
-`OpAvailableHandler` 和 `OpCompleteHandler` 类型可以是硬编码为 `std::function<void ()>` 和 `std::function<void (const embxx::error::ErrorStatus&)>`，或者作为模板参数传递：
+`OpAvailableHandler`和`OpCompleteHandler`类型可以是硬编码为`std::function<void ()>`和`std::function<void (const embxx::error::ErrorStatus&)>`，或者作为模板参数传递：
 
 ```cpp
 template <typename TCanReadHandler,
@@ -4156,7 +4173,6 @@ public:
     ... // setters are as above
 
 private:
-
     TCanReadHandler canReadHandler_;
     TReadCompleteHandler readCompleteHandler_;
 
@@ -4165,9 +4181,15 @@ private:
 };
 ```
 
-选择“模板参数选项”在多个应用程序之间重用相同的 **Device** 类时很有用，这些应用程序属于同一产品线。
+选择“模板参数选项”在多个应用程序之间重用相同的**Device**类时很有用，这些应用程序属于同一产品线。
 
 下一个阶段是实现所有必需的函数：
+
+
+
+## 设备控制接口示例
+
+以下代码展示了一个典型的设备控制类接口定义：
 
 ```cpp
 class MyDevice
@@ -4207,7 +4229,7 @@ public:
 };
 ```
 
-注意，可能存在针对被控制的外设的特定配置函数。例如，UART 的波特率、奇偶校验、流控制。这种配置几乎总是平台和/或产品特定的，通常在应用程序启动时执行。这与本书中引入的 Device-Driver-Component 模型无关。
+注意，可能存在针对被控制的外设的特定配置函数。例如，`UART`的波特率、奇偶校验、流控制。这种配置几乎总是平台和/或产品特定的，通常在应用程序启动时执行。这与本书中引入的`Device-Driver-Component`模型无关。
 
 ```cpp
 class MyDevice
@@ -4218,11 +4240,11 @@ public:
 };
 ```
 
-[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目有多个应用程序使用 UART1 接口进行日志记录。所有这些应用程序的外设控制代码都是相同的，并在 [src/device/Uart1.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Uart1.h) 中实现。
+[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目有多个应用程序使用`UART1`接口进行日志记录。所有这些应用程序的外设控制代码都是相同的，并在[src/device/Uart1.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Uart1.h)中实现。
 
-#### Driver 实现部分
+## Driver 实现部分
 
-**Driver** 必须是一段通用的代码，可以与任何 **Device** 控制对象（只要它公开了正确的公共接口）以及任何应用程序（包括没有动态内存分配的应用程序）重用。
+**Driver**必须是一段通用的代码，可以与任何**Device**控制对象（只要它公开了正确的公共接口）以及任何应用程序（包括没有动态内存分配的应用程序）重用。
 
 首先，我们需要引用**设备**以及事件循环对象：
 
@@ -4381,7 +4403,7 @@ private:
 };
 ```
 
-上面的示例代码可能可行，但它违反了 C++的一个基本原则：“你应该只为你所用的付费”。在用 UART 进行日志记录的情况下，外围设备没有输入，保留用于管理“读取”操作所需的“读取”数据成员是一种浪费。让我们通过使用模板特化和使用“特质”聚合结构来减少模板参数的数量，来尝试稍微改善一下这种情况。
+上面的示例代码可能可行，但它违反了`C++`的一个基本原则：“你应该只为你所用的付费”。在用`UART`进行日志记录的情况下，外围设备没有输入，保留用于管理“读取”操作所需的“读取”数据成员是一种浪费。让我们通过使用模板特化和使用“特质”聚合结构来减少模板参数的数量，来尝试稍微改善一下这种情况。
 
 ```cpp
 struct MyOutputTraits
@@ -4406,7 +4428,7 @@ struct MyOutputTraits
 };
 ```
 
-请注意，在上面的特质结构中，允许挂起的“读取”请求数量被指定为 0，即不允许读取操作。“读取完成”和“读取直到谓词”类型是不相关的，被指定为[std::nullptr_t](http://en.cppreference.com/w/cpp/types/nullptr_t)。**驱动程序**对象的实例化必须考虑到这一点，并且不包括任何与“读取”相关的功能。为了实现这一点，**驱动程序**类需要有两个独立的“读取”和“写入”子功能。这可以通过从两个基类继承来实现。
+请注意，在上面的特质结构中，允许挂起的“读取”请求数量被指定为`0`，即不允许读取操作。“读取完成”和“读取直到谓词”类型是不相关的，被指定为[std::nullptr_t](http://en.cppreference.com/w/cpp/types/nullptr_t)。**驱动程序**对象的实例化必须考虑到这一点，并且不包括任何与“读取”相关的功能。为了实现这一点，**驱动程序**类需要有两个独立的“读取”和“写入”子功能。这可以通过从两个基类继承来实现。
 
 ```cpp
 template <typename TDevice,
@@ -4449,6 +4471,8 @@ public:
 ```
 
 现在，基于队列大小的模板特化应该可以完成这项工作：
+
+
 
 ```cpp
 template <typename TDevice,
@@ -4515,39 +4539,39 @@ public:
 
 为了支持这个扩展，**设备**类也必须实现一些额外的功能：
 
-1.  新的读写请求可以在中断上下文中由**驱动程序**发出，在先前的操作报告完成之后。
+1. 新的读写请求可以在中断上下文中由**驱动程序**发出，在先前的操作报告完成之后。
 
-    ```cpp
-    class MyDevice
-    {
-    public:
-        void startRead(std::size_t length, InterruptContext context);
-        void startWrite(std::size_t length, InterruptContext context);
-    };
-    ```
+```cpp
+class MyDevice
+{
+public:
+    void startRead(std::size_t length, InterruptContext context);
+    void startWrite(std::size_t length, InterruptContext context);
+};
+```
 
-1.  当向**驱动程序**发出新的异步读写请求时，它必须能够防止中断上下文回调被调用，以避免在内部数据结构上发生竞争：
+2. 当向**驱动程序**发出新的异步读写请求时，它必须能够防止中断上下文回调被调用，以避免在内部数据结构上发生竞争：
 
-    ```cpp
-    class MyDevice
-    {
-    public:
-        bool suspendRead(EventLoopContext context);
-        void resumeRead(EventLoopContext context)
-        bool suspendWrite(EventLoopContext context);
-        void resumeWrite(EventLoopContext context);
-    };
-    ```
+```cpp
+class MyDevice
+{
+public:
+    bool suspendRead(EventLoopContext context);
+    void resumeRead(EventLoopContext context)
+    bool suspendWrite(EventLoopContext context);
+    void resumeWrite(EventLoopContext context);
+};
+```
 
-    请注意`suspend*()`函数的布尔返回值。它们类似于`cancel*()`函数，有一个指示是否暂停回调调用或当前没有正在进行的操作。
+请注意`suspend*()`函数的布尔返回值。它们类似于`cancel*()`函数，有一个指示是否暂停回调调用或当前没有正在进行的操作。
 
-这样的通用**驱动程序**已经在[embxx/driver/Character.h](https://github.com/arobenko/embxx/blob/master/embxx/driver/Character.h)文件中的[embxx](https://github.com/arobenko/embxx)库中实现。该**驱动程序**被称为“Character”，因为它一次读取/写入提供的缓冲区中的一个字符。
+这样的通用**驱动程序**已经在`/embxx/driver/Character.h`文件中的`embxx`库中实现。该**驱动程序**被称为“Character”，因为它一次读取/写入提供的缓冲区中的一个字符。
 
-#### 字符回显应用程序
+### 字符回显应用程序
 
-现在，是时候做一些实际的事情了。[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中的[app_uart1_echo](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_uart1_echo)应用程序实现了简单的单个字符回显。
+现在，是时候做一些实际的事情了。`embxx_on_rpi`项目中的`app_uart1_echo`应用程序实现了简单的单个字符回显。
 
-在[app_uart1_echo](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_uart1_echo)应用程序中，[System.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/app/app_uart1_echo/System.h)文件定义了**设备**和**驱动程序**层：
+在`app_uart1_echo`应用程序中，`System.h`文件定义了**设备**和**驱动程序**层：
 
 ```cpp
 class System
@@ -4646,7 +4670,7 @@ int main() {
     return 0;
 ```
 
-#### 流式打印接口
+### 流式打印接口
 
 如前所述，我们的最终目标是有标准输出流接口，用于调试输出，该接口异步工作，没有任何阻塞的忙等待。这样的接口必须是一个通用的**组件**，在非中断上下文中工作，同时使用最近介绍的通用“字符”**驱动程序**与平台特定的“Uart”**设备**一起使用。
 
@@ -4691,9 +4715,9 @@ private:
 
 “输出流缓冲区”需要支持两个主要操作：
 
-1.  将新的单个字符推送到缓冲区的末尾。
+1. 将新的单个字符推送到缓冲区的末尾。
 
-1.  清除所有（或部分）已写入的字符，即激活与**驱动程序**的异步写入。
+2. 清除所有（或部分）已写入的字符，即激活与**驱动程序**的异步写入。
 
 当推送一个新字符时，可能会出现内部缓冲区已满的情况。在这种情况下，需要丢弃推送的字符，并且必须有指示“推送”操作是否成功的标志。函数可以返回`bool`来指示操作的成功，或者返回`std::size_t`来通知调用者已写入多少个字符。如果返回`0`，则表示字符没有被写入。
 
@@ -4724,7 +4748,7 @@ std::copy(data.begin(), data.end(), std::back_inserter(outStreamBuf));
 outStreamBuf.flush();
 ```
 
-在上面的示例中，[std::back_inserter](http://en.cppreference.com/w/cpp/iterator/back_inserter)需要一个容器来定义`push_back()`成员函数：
+在上面的示例中，`std::back_inserter`需要一个容器来定义`push_back()`成员函数：
 
 ```cpp
 template <...>
@@ -4740,7 +4764,9 @@ public:
 };
 ```
 
-也可能需要遍历已写入但尚未刷新的字符，并在调用`flush()`之前更新其中的一些字符。换句话说，“输出流缓冲区”必须被视为随机访问容器：
+也可能需要遍历已写入但尚未刷新的字符，并在调用`flush()`之前更新其中的一些字符。换句话说，“输出流缓冲区”必须被视为随机访问容器。
+
+
 
 ```cpp
 template <...>
@@ -4807,7 +4833,7 @@ private:
 };
 ```
 
-这样的“输出流缓冲区”已经在[embxx/io/OutStreamBuf.h](https://github.com/arobenko/embxx/blob/master/embxx/io/OutStreamBuf.h)文件中实现，该文件位于[embxx](https://github.com/arobenko/embxx)库中。
+这样的“输出流缓冲区”已经在[`embxx/io/OutStreamBuf.h`](https://github.com/arobenko/embxx/blob/master/embxx/io/OutStreamBuf.h)文件中实现，该文件位于[`embxx`](https://github.com/arobenko/embxx)库中。
 
 下一个阶段将是定义“输出流”类，这将允许打印以 null 结尾的字符串以及各种整数值。
 
@@ -4893,7 +4919,7 @@ private:
 };
 ```
 
-我们还将需要数值基表示和操作符。不幸的是，使用`std::oct`、`std::dec`或`std::hex`操作符将需要包含标准库头文件 [<ios>](http://en.cppreference.com/w/cpp/header/ios)，这反过来又包含其他标准流相关头文件，这些头文件定义了一些静态对象，这些静态对象又是在标准库中定义和实例化的。这与我们编写不使用标准库的泛型代码的主要目标相矛盾。最好是自己定义这样的操作符：
+我们还将需要数值基表示和操作符。不幸的是，使用`std::oct`、`std::dec`或`std::hex`操作符将需要包含标准库头文件[`<ios>`](http://en.cppreference.com/w/cpp/header/ios)，这反过来又包含其他标准流相关头文件，这些头文件定义了一些静态对象，这些静态对象又是在标准库中定义和实例化的。这与我们编写不使用标准库的泛型代码的主要目标相矛盾。最好是自己定义这样的操作符：
 
 ```cpp
 enum Base
@@ -5014,7 +5040,7 @@ stream << "var1=" << dec << setw(4) << var1 << "; var2=" << hex
 stream.flush();
 ```
 
-另一个有用的操作符是在末尾添加'\n'以及调用`flush()`，就像使用标准输出流时`std::endl`所做的那样：
+另一个有用的操作符是在末尾添加`'\n'`以及调用`flush()`，就像使用标准输出流时`std::endl`所做的那样：
 
 ```cpp
 enum Endl
@@ -5049,13 +5075,13 @@ stream << "var1=" << dec << setw(4) << var1 << "; var2=" << hex
        << setfill('0') << var2 << endl;
 ```
 
-**总结**： "输出流" 对象将给定的整数值转换为可打印字符，并使用 "输出流缓冲区" 的 `pushBack()` 成员函数将这些字符进一步传递。对 `flush()` 的请求也会传递。当 "输出流缓冲区" 收到刷新内部缓冲区的请求时，它激活 "字符" **驱动程序**，然后它使用 "UART" **设备**逐个将字符写入串行接口。作为这种合作的结果，"打印" 语句非常快，不需要等待所有字符写入函数返回，就像通常使用 `printf()` 一样。所有字符都在后台使用中断写入，而应用程序的主线程继续执行，不会停滞。
+**总结**： “输出流”对象将给定的整数值转换为可打印字符，并使用“输出流缓冲区”的`pushBack()`成员函数将这些字符进一步传递。对`flush()`的请求也会传递。当“输出流缓冲区”收到刷新内部缓冲区的请求时，它激活“字符”驱动程序，然后它使用“UART”设备逐个将字符写入串行接口。作为这种合作的结果，“打印”语句非常快，不需要等待所有字符写入函数返回，就像通常使用`printf()`一样。所有字符都在后台使用中断写入，而应用程序的主线程继续执行，不会停滞。
 
-这样的 "输出流" 已经在 [embxx/io/OutStream.h](https://github.com/arobenko/embxx/blob/master/embxx/io/OutStream.h) 文件中的 [embxx](https://github.com/arobenko/embxx) 库中实现。
+这样的“输出流”已经在[`embxx/io/OutStream.h`](https://github.com/arobenko/embxx/blob/master/embxx/io/OutStream.h)文件中的[`embxx`](https://github.com/arobenko/embxx)库中实现。
 
 #### 日志记录
 
-通常，调试日志应该在条件编译下，例如仅在 **DEBUG** 模式下，而在 **RELEASE** 模式下编译时排除打印代码。
+通常，调试日志应该在条件编译下，例如仅在`DEBUG`模式下，而在`RELEASE`模式下编译时排除打印代码。
 
 ```cpp
 #ifndef NDEBUG
@@ -5095,7 +5121,7 @@ const auto MinLogLevel = log::Info;
     } while (false)
 ```
 
-在这种情况下，所有低于 `log::Info` 级别的日志尝试都会被编译器优化掉，因为 `if` 语句在编译时已知评估为 `false`：
+在这种情况下，所有低于`log::Info`级别的日志尝试都会被编译器优化掉，因为`if`语句在编译时已知评估为`false`：
 
 ```cpp
 LOG(stream, log::Debug, "This message is not printed." << endl);
@@ -5103,7 +5129,9 @@ LOG(stream, log::Info, "This message IS printed." << endl);
 LOG(stream, log::Warning, "This message IS printed also." << endl);
 ```
 
-能够在日志语句中添加一些自动格式化功能会很好，例如打印日志级别和/或添加 '\n' 并在末尾刷新。例如，下面的代码
+能够在日志语句中添加一些自动格式化功能会很好，例如打印日志级别和/或添加`'\n'`并在末尾刷新。例如，下面的代码
+
+
 
 ```cpp
 LOG(stream, log::Debug, "This is DEBUG message.");
@@ -5111,7 +5139,7 @@ LOG(stream, log::Info, "This is INFO message.");
 LOG(stream, log::Warning, "This is WARNING message.");
 ```
 
-生成以下输出
+生成以下输出：
 
 ```cpp
 [DEBUG]: This is DEBUG message.
@@ -5119,7 +5147,7 @@ LOG(stream, log::Warning, "This is WARNING message.");
 [WARNING]: This is WARNING message.
 ```
 
-在末尾添加 `'\n'` 字符和调用 `flush()`。
+在末尾添加`'\n'`字符并调用`flush()`。
 
 当使用某种类型的包装日志类以及相关的格式化程序时，这很容易实现。例如：
 
@@ -5175,7 +5203,7 @@ private:
     } while (false)
 ```
 
-可以通过暴露相同的接口来定义格式化程序，但它包装了原始的 `StreamLogger` 或另一个格式化程序。例如，让我们定义一个在输出完成时调用流成员函数 `flush()` 的格式化程序：
+可以通过暴露相同的接口来定义格式化程序，但它包装了原始的`StreamLogger`或另一个格式化程序。例如，让我们定义一个在输出完成时调用流成员函数`flush()`的格式化程序：
 
 ```cpp
 template <typename TNextLayer>
@@ -5225,7 +5253,7 @@ typedef
     > Log;
 ```
 
-同样的 `SLOG()` 宏将适用于此日志记录器，并具有额外的格式化：
+同样的`SLOG()`宏将适用于此日志记录器，并具有额外的格式化：
 
 ```cpp
 OutStream stream(... /* construction params */);
@@ -5233,7 +5261,7 @@ Log log(stream);
 SLOG(log, log::Debug, "This is DEBUG message.\n");
 ```
 
-让我们再添加一个能够打印任何值（特别是 `'\n'`）的格式化程序。
+让我们再添加一个能够打印任何值（特别是`'\n'`）的格式化程序：
 
 ```cpp
 template <typename T, typename TNextLayer>
@@ -5270,7 +5298,7 @@ private:
 };
 ```
 
-定义一个在添加 `'\n'` 字符后调用底层流 `flush()` 成员函数的日志记录器的函数如下：
+定义一个在添加`'\n'`字符后调用底层流`flush()`成员函数的日志记录器的函数如下：
 
 ```cpp
 typedef embxx::io::OutStream<...> OutStream;
@@ -5286,7 +5314,7 @@ typedef
     > Log;
 ```
 
-虽然构造函数将需要指定在调用 `flush()` 之前打印在末尾的字符。
+虽然构造函数将需要指定在调用`flush()`之前打印在末尾的字符：
 
 ```cpp
 OutStream stream(...);
@@ -5339,7 +5367,7 @@ private:
 };
 ```
 
-定义一个日志记录器，它在开头打印这样的前缀并在末尾打印 `'\n'` 以及调用 `flush()` 的函数如下：
+定义一个日志记录器，它在开头打印这样的前缀并在末尾打印`'\n'`以及调用`flush()`的函数如下：
 
 ```cpp
 typedef
@@ -5356,11 +5384,11 @@ typedef
     > Log;
 ```
 
-这样的`StreamLogger`与多个格式化程序一起已在[embxx](https://github.com/arobenko/embxx)库的[embxx/util/StreamLogger.h](https://github.com/arobenko/embxx/blob/master/embxx/util/StreamLogger.h)文件中实现。
+这样的`StreamLogger`与多个格式化程序一起已在[`embxx`](https://github.com/arobenko/embxx)库的[`embxx/util/StreamLogger.h`](https://github.com/arobenko/embxx/blob/master/embxx/util/StreamLogger.h)文件中实现。
 
 #### 日志应用程序
 
-[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中的[app_uart1_logging](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_uart1_logging)应用程序实现了每秒增加一次的简单计数器的日志记录：
+[`embxx_on_rpi`](https://github.com/arobenko/embxx_on_rpi)项目中的[`app_uart1_logging`](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_uart1_logging)应用程序实现了每秒增加一次的简单计数器的日志记录：
 
 ```cpp
 namespace log = embxx::util::log;
@@ -5413,7 +5441,7 @@ int main() {
 }
 ```
 
-[System.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/app/app_uart1_logging/System.h)文件定义了整个输出堆栈：
+[`System.h`](https://github.com/arobenko/embxx_on_rpi/blob/master/src/app/app_uart1_logging/System.h)文件定义了整个输出堆栈：
 
 ```cpp
 class System
@@ -5482,6 +5510,8 @@ private:
 };
 ```
 
+
+
 此应用程序将以下输出发送到 UART 接口，每秒出现一个新行：
 
 ```cpp
@@ -5491,7 +5521,7 @@ private:
 ...
 ```
 
-#### 缓冲输入
+## 缓冲输入
 
 在许多系统中，UART 接口也用于同一板上的各种微控制器或外部设备之间的通信。当有传入的消息时，字符必须在它们可以被某些**组件**处理之前存储在某个缓冲区中。就像我们有“输出流缓冲区”用于缓冲传出字符一样，我们必须有“输入流缓冲区”用于缓冲传入的字符。
 
@@ -5600,7 +5630,7 @@ public:
 };
 ```
 
-#### 摩尔斯电码应用程序
+## 摩尔斯电码应用程序
 
 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中的[app_uart1_morse](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_uart1_morse)应用程序实现了在“输入流缓冲区”中缓冲输入字符，并使用[莫尔斯电码](http://en.wikipedia.org/wiki/Morse_code)方法通过闪烁板载 LED 来显示它们。
 
@@ -5785,11 +5815,11 @@ private:
 
 `nextLetter()`成员函数等待缓冲区中有一个字符可用，然后将它映射到序列并从缓冲区中移除。如果存在映射，它将调用`nextSyllable()`成员函数以启动闪烁序列。该函数激活 LED 并等待基于提供的点或划持续时间的相关时间。超时后，LED 熄灭并启动新的等待。然而，如果达到序列的末尾，等待将持续`InterSpacing`持续时间，然后再次调用`nextLetter()`成员函数，否则等待将持续`Spacing`持续时间，然后再次调用`nextSyllable()`以激活 LED 并等待序列中的下一个周期。
 
-#### 摘要
+## 摘要
 
 经过相当大的努力，我们创建了一个完整的通用堆栈，用于在串行接口（如 UART）上执行异步输入/输出操作。它可以在多个独立的项目中重用，同时在堆栈的底部提供平台特定的低级设备控制对象。
 
-### GPIO
+## GPIO
 
 在许多情况下，GPIO 输入不需要在中断发生时同时处理。它可以很容易地使用设备驱动组件模型在事件循环（非中断）上下文中调度执行。
 
@@ -5799,7 +5829,9 @@ private:
 
 让我们更详细地了解所有这些阶段。
 
-#### 配置
+### 配置
+
+
 
 ![Image: GPIO 寄存器处理程序](img/90e3ce14c1196f65aa782b230c17f3b2.png)
 
@@ -5807,7 +5839,7 @@ private:
 
 硬件也必须正确配置：输入/输出线路、上升/下降沿上的中断等。此类配置是平台/产品特定的，不属于本书中介绍的通用设备-驱动程序-组件模型的一部分。因此，产品特定的**组件**必须获取对设备对象的访问权限，并根据需要对其进行配置。
 
-#### 开始连续异步读取操作
+## 开始连续异步读取操作
 
 **驱动程序**必须能够支持在不同输入上执行多个异步读取操作。这意味着它必须通过请求**设备**暂停回调调用（即禁用中断）来保护对内部数据结构的访问。此外，为了遵循我们迄今为止使用的模式，必须在第一次读取请求时请求或启用**设备**的操作，并在最后一次读取请求时取消或禁用它。
 
@@ -5815,71 +5847,71 @@ private:
 
 读者可能会注意到，在第一次`asyncReadCont()`请求时，**驱动程序**向**设备**发出了`suspend()`请求，并返回了`false`。这意味着**设备**对 GPIO 输入的监控尚未开始。这就是为什么接下来会调用`enable()`的原因。在第二次`asyncReadCont()`请求中，`suspend()`的调用返回了`true`，随后是`resume()`。
 
-#### 报告 GPIO 输入事件
+## 报告 GPIO 输入事件
 
 现在，每当相关的 GPIO 中断发生时，**驱动程序**的处理程序就会在中断模式上下文中被调用。它负责在事件循环（非中断）上下文中调度**组件**的处理程序的执行。
 
 ![Image: GPIO 中断报告](img/1b681a9229882a3589b8ae8b5839b8a9.png)
 
-#### 取消连续读取操作
+## 取消连续读取操作
 
 当不再需要监控某些输入时，**组件**可以请求**驱动程序**取消连续的异步读取操作。如果最后记录的异步读取操作被取消，**驱动程序**负责让**设备**知道不再需要 GPIO 中断。
 
 ![Image: GPIO 取消读取](img/b5b76c4f10ec0cf51f3d62624461ef41.png)
 
-#### GPIO 设备
+## GPIO 设备
 
 根据上述信息，平台特定的 GPIO 控制**设备**对象必须提供以下公共接口：
 
-1.  定义引脚识别类型。
+1. 定义引脚识别类型。
 
-    ```cpp
-    typedef unsigned PinIdType;
-    ```
+   ```cpp
+   typedef unsigned PinIdType;
+   ```
 
-1.  用于在发生中断时调用回调对象的功能。回调参数必须提供有关引脚的信息以及导致中断的最终输入值。回调对象必须实现以下签名：“void (PinIdType, bool)”其中第一个参数是引脚，第二个参数是输入值。
+2. 用于在发生中断时调用回调对象的功能。回调参数必须提供有关引脚的信息以及导致中断的最终输入值。回调对象必须实现以下签名："void (PinIdType, bool)"其中第一个参数是引脚，第二个参数是输入值。
 
-    ```cpp
-    template <typename TFunc>
-    void setHandler(TFunc&& func);
-    ```
+   ```cpp
+   template <typename TFunc>
+   void setHandler(TFunc&& func);
+   ```
 
-1.  用于启动/启用 GPIO 输入监控的功能。
+3. 用于启动/启用 GPIO 输入监控的功能。
 
-    ```cpp
-    void start(embxx::device::context::EventLoop context);
-    ```
+   ```cpp
+   void start(embxx::device::context::EventLoop context);
+   ```
 
-1.  用于取消/禁用 GPIO 输入监控的功能。
+4. 用于取消/禁用 GPIO 输入监控的功能。
 
-    ```cpp
-    bool cancel(embxx::device::context::EventLoop context);
-    ```
+   ```cpp
+   bool cancel(embxx::device::context::EventLoop context);
+   ```
 
-1.  用于启用/禁用单个引脚的 GPIO 中断的功能。
+5. 用于启用/禁用单个引脚的 GPIO 中断的功能。
 
-    ```cpp
-    void setEnabled(
-        PinIdType pin,
-        bool enabled,
-        embxx::device::context::EventLoop context);
-    ```
+   ```cpp
+   void setEnabled(
+       PinIdType pin,
+       bool enabled,
+       embxx::device::context::EventLoop context);
+   ```
 
-1.  用于在中断模式下挂起回调调用，即禁用 GPIO 中断。
+6. 用于在中断模式下挂起回调调用，即禁用 GPIO 中断。
 
-    ```cpp
-    bool suspend(embxx::device::context::EventLoop context);
-    ```
+   ```cpp
+   bool suspend(embxx::device::context::EventLoop context);
+   ```
 
-1.  用于在中断模式下恢复挂起的回调调用，即启用 GPIO 中断。
+7. 用于在中断模式下恢复挂起的回调调用，即启用 GPIO 中断。
 
-    ```cpp
-    void resume(embxx::device::context::EventLoop context);
-    ```
+   ```cpp
+   void resume(embxx::device::context::EventLoop context);
+   ```
 
-针对 RaspberryPi 平台的这种 GPIO 控制 **设备** 类已在[src/device/Gpio.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Gpio.h)文件中实现，该文件位于[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中。
+针对 RaspberryPi 平台的这种 GPIO 控制**设备**类已在[src/device/Gpio.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Gpio.h)文件中实现，该文件位于[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目中。
 
-#### GPIO 驱动程序
+## GPIO 驱动程序
 
 首先，我们需要**设备**以及事件循环对象的引用：
 
@@ -5923,7 +5955,7 @@ public:
 };
 ```
 
-与迄今为止的任何异步操作一样，回调必须接收状态信息作为其第一个参数，以及可能作为第二个参数的输入值。当使用`cancelReadCont()`取消操作时，回调必须最后一次被调用，状态指定操作已“中止”。
+与迄今为止的任何异步操作一样，回调必须接收状态信息作为其第一个参数，以及可能作为第二个参数的输入值。当使用`cancelReadCont()`取消操作时，回调必须最后一次被调用，状态指定操作已"中止"。
 
 **驱动程序**应该是一段通用的代码，可以在多个独立的产品中重用，包括那些没有动态内存分配和/或异常的产品。这意味着**驱动程序**类必须接收它将要支持的引脚的最大数量以及回调存储的类型。
 
@@ -5964,9 +5996,9 @@ private:
 
 **驱动程序**不做任何特别的事情，它只是接收**设备**通知的 GPIO 中断，根据**设备**提供的引脚信息定位适当的已注册**组件**的回调对象，并使用**事件循环**在事件循环（非中断）上下文中调度**组件**的回调以及关于输入值的详细信息。
 
-这种通用的 GPIO **驱动程序**已经在[embxx/driver/Gpio.h](https://github.com/arobenko/embxx/blob/master/embxx/driver/Gpio.h)文件中实现，该文件位于[embxx](https://github.com/arobenko/embxx)库中。
+这种通用的 GPIO**驱动程序**已经在[embxx/driver/Gpio.h](https://github.com/arobenko/embxx/blob/master/embxx/driver/Gpio.h)文件中实现，该文件位于[embxx](https://github.com/arobenko/embxx)库中。
 
-#### 按钮组件
+## 按钮组件
 
 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目有一个简单的按钮**组件**，在[src/component/Button.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/component/Button.h)中实现。它配置提供的 GPIO 线路作为输入，并具有上升和下降沿中断。它还提供了一个简单的接口，以便能够监控按钮的按压和释放。
 
@@ -5993,7 +6025,7 @@ public:
 };
 ```
 
-#### 按钮按压监控应用
+## 按钮按压监控应用
 
 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目还包含一个名为 [app_button](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_button) 的简单应用程序。它监控连接到 GPIO 线之一的单个按钮的按下和释放。当按钮被按下时，LED 灯亮 1 秒钟，并将 "Button Pressed" 字符串记录到 UART。当按钮释放时，仅将 "Button Released" 字符串记录到 UART，而不会影响 LED 状态。如果在 LED 亮起 1 秒钟之前检测到新的按钮按下，LED 保持亮起，并重新开始 1 秒钟的计时器倒计时。
 
@@ -6079,22 +6111,23 @@ void buttonReleased()
 }
 ```
 
-### I2C
+## I2C
 
 [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) 是串行通信总线。它在嵌入式开发中非常流行，主要用于与各种低速外围设备通信，例如 EEPROM 和各种传感器。
 
-I2C 的控制和使用非常适合本书中描述的 Device-Driver-Component 模型。它是一个串行接口，控制 **设备** 对象将不得不逐个读取/写入字符，就像与 UART 一样。如果我们能重用之前实现的字符 **驱动程序** 那就太好了。然而，I2C 是多主/多从总线，在启动读取和/或写入操作时需要指定从设备 ID（或地址）。
+I2C 的控制和使用非常适合本书中描述的 Device-Driver-Component 模型。它是一个串行接口，控制**设备**对象将不得不逐个读取/写入字符，就像与 UART 一样。如果我们能重用之前实现的字符**驱动程序**那就太好了。然而，I2C 是多主/多从总线，在启动读取和/或写入操作时需要指定从设备 ID（或地址）。
 
-#### ID 适配器
+## ID 适配器
 
-很明显，需要某种类型的 **ID 设备适配器**。它将使用额外的 ID 参数构建，并将负责将所有 API 调用从字符 **驱动程序** 转发到 I2C **设备**，同时添加一个额外的 ID 参数。
+很明显，需要某种类型的**ID 设备适配器**。它将使用额外的 ID 参数构建，并将负责将所有 API 调用从字符**驱动程序**转发到 I2C**设备**，同时添加一个额外的 ID 参数。
 
 ![图片：使用 ID 适配器](img/b53298dd7361c1f5e475378b3c82990c.png)
 
 这种适配器的实现非常简单直接：
 
-```cpp
-template <typename TDevice>
+
+
+```cpp我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。template <typename TDevice>
 class IdAdaptor
 {
 public:
@@ -6205,15 +6238,15 @@ private:
 
 相同的适配器类在 [embxx](https://github.com/arobenko/embxx) 库的 [embxx/device/IdDeviceCharAdapter.h](https://github.com/arobenko/embxx/blob/master/embxx/device/IdDeviceCharAdapter.h) 文件中实现。
 
-#### 操作队列
+## 操作队列
 
-I2C 协议允许同一总线上存在多个独立的从设备。这意味着可能有多个独立的 **组件** 与不同的 I2C 设备（例如 EEPROM 和温度传感器）通信，但必须共享相同的 **设备** 控制对象，并且可以并行向其发出读写请求。为了解决这个问题，必须有一种操作排队设施，负责排队所有对 **设备** 的读写请求，并依次发出。
+I2C 协议允许同一总线上存在多个独立的从设备。这意味着可能有多个独立的组件与不同的 I2C 设备（例如 EEPROM 和温度传感器）通信，但必须共享相同的设备控制对象，并且可以并行向其发出读写请求。为了解决这个问题，必须有一种操作排队设施，负责排队所有对设备的读写请求，并依次发出。
 
 对象使用图如下：
 
 ![图片：使用操作队列](img/68d05676fa65cb1c6dc3c67e44b905ea.png)
 
-此队列是一段平台/产品无关的代码，它应该在不使用动态内存分配和/或异常的情况下实现。这意味着它应该接收各种**驱动器**对象的数量，这些对象可以独立地向它发出读写请求（即内部队列的大小），作为一个模板参数，并且可能使用静态（固定大小）队列来排队所有传入的请求。它还应接收回调存储类型，以报告何时可以读取/写入新字符，以及何时读写操作完成。
+此队列是一段平台/产品无关的代码，它应该在不使用动态内存分配和/或异常的情况下实现。这意味着它应该接收各种驱动器对象的数量，这些对象可以独立地向它发出读写请求（即内部队列的大小），作为一个模板参数，并且可能使用静态（固定大小）队列来排队所有传入的请求。它还应接收回调存储类型，以报告何时可以读取/写入新字符，以及何时读写操作完成。
 
 ```cpp
 template <typename TDevice,
@@ -6232,7 +6265,7 @@ private:
 };
 ```
 
-当`TSize`模板参数设置为`1`时，不需要所有排队功能，`DeviceOpQueue`类可能成为一个简单的透传内联类，使用模板特化：
+当 `TSize` 模板参数设置为 `1` 时，不需要所有排队功能，`DeviceOpQueue` 类可能成为一个简单的透传内联类，使用模板特化：
 
 ```cpp
 template <typename TDevice>
@@ -6266,15 +6299,15 @@ public:
 };
 ```
 
-此队列也在[embxx](https://github.com/arobenko/embxx)库中实现。它位于[embxx/device/DeviceOpQueue.h](https://github.com/arobenko/embxx/blob/master/embxx/device/DeviceOpQueue.h)文件中。
+此队列也在 [embxx](https://github.com/arobenko/embxx) 库中实现。它位于 [embxx/device/DeviceOpQueue.h](https://github.com/arobenko/embxx/blob/master/embxx/device/DeviceOpQueue.h) 文件中。
 
-请注意，ID 适配器和[[peripherals-i2c-operations_queue]](#peripherals-i2c-operations_queue)都是**设备**层类。它们作为包装实际外围控制**设备**的包装器，以便向上层**驱动器**暴露正确的接口。
+请注意，ID 适配器和 [[peripherals-i2c-operations_queue]](#peripherals-i2c-operations_queue) 都是设备层类。它们作为包装实际外围控制设备的包装器，以便向上层驱动器暴露正确的接口。
 
-#### I2C 设备
+## I2C 设备
 
-剩下的唯一事情是正确实现 I2C 控制设备，该设备可以被`DeviceOpQueue`使用，而`DeviceOpQueue`反过来又被`IdAdaptor`使用。`IdAdaptor`对象可以与现有的用于 UART 外围设备的`Character`**驱动器**一起使用。
+剩下的唯一事情是正确实现 I2C 控制设备，该设备可以被 `DeviceOpQueue` 使用，而 `DeviceOpQueue` 反过来又被 `IdAdaptor` 使用。`IdAdaptor` 对象可以与现有的用于 UART 外围设备的 `Character` 驱动器一起使用。
 
-根据上述信息，特定平台的 I2C 控制**设备**对象必须提供以下公共接口：
+根据上述信息，特定平台的 I2C 控制设备对象必须提供以下公共接口：
 
 ```cpp
 class I2CDevice
@@ -6332,33 +6365,34 @@ public:
 };
 ```
 
-在 RaspberryPi 平台上控制**I2C0**接口的此类设备在[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目的[src/device/I2C0.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/I2C0.h)文件中实现。
+在 RaspberryPi 平台上控制 I2C0 接口的此类设备在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目的 [src/device/I2C0.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/I2C0.h) 文件中实现。
 
-#### EEPROM 访问应用程序
+## EEPROM 访问应用程序
 
-[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目包含一个名为[app_i2c0_eeprom](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_i2c0_eeprom)的应用程序。它实现了对连接到同一 I2C0 总线但具有不同地址的 2 个 EEPROM 的并行访问。EEPROM 同时以读写操作独立访问。这些操作由包装实际 I2C 控制**设备**并逐个转发请求的`DeviceOpQueue`对象排队和管理。
+[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目包含一个名为 [app_i2c0_eeprom](https://github.com/arobenko/embxx_on_rpi/tree/master/src/app/app_i2c0_eeprom) 的应用程序。它实现了对连接到同一 I2C0 总线但具有不同地址的 2 个 EEPROM 的并行访问。EEPROM 同时以读写操作独立访问。这些操作由包装实际 I2C 控制设备并逐个转发请求的 `DeviceOpQueue` 对象排队和管理。
 
-### SPI
+## SPI
 
-[SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus)也是一种相当流行的串行通信接口。在它使用本书中描述的设备-驱动器-组件模型方面，它与 I2C 非常相似。主要区别是：
+[SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) 也是一种相当流行的串行通信接口。在它使用本书中描述的设备-驱动器-组件模型方面，它与 I2C 非常相似。主要区别是：
 
-1.  SPI 使用“芯片选择”识别方法而不是外围设备的“地址”。
+1. SPI 使用“芯片选择”识别方法，而不是外围设备的“地址”。
+2. SPI 是一个双向链接——总是会并行执行读取和写入操作（而不是只有读取或只有写入）。
 
-1.  SPI 是一个双向链接 - 总是会并行执行读取和写入操作（而不是只有读取或只有写入）。
+“芯片选择”从机识别将需要与 I2C 集成时使用的相同的“ID 适配器”。
 
-“芯片选择”从机识别将需要与 I2C 集成时使用的相同的 "**ID 适配器**"。
-
-就像 I2C 一样，[SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) 是一个多从机总线。它允许将多个独立设备连接到 SPI 接口的相同 MISO/MOSI/CLK 线。这意味着需要与 I2C 集成时使用的相同的 "**操作队列**"。由于 SPI 是一个双向链接，所以 "**操作队列**" 必须能够转发，例如，读取操作请求到实际的 **设备**，即使对同一从设备的“写入”操作已经在进行中。
+就像 I2C 一样，[SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) 是一个多从机总线。它允许将多个独立设备连接到 SPI 接口的相同 MISO/MOSI/CLK 线。这意味着需要与 I2C 集成时使用的相同的“操作队列”。由于 SPI 是一个双向链接，所以“操作队列”必须能够转发，例如，读取操作请求到实际的设备，即使对同一从设备的“写入”操作已经在进行中。
 
 这意味着对象的用法图与 I2C 完全相同。
 
 ![图像：使用操作队列](img/68d05676fa65cb1c6dc3c67e44b905ea.png)
 
-上图中的所有中间层（字符 **驱动程序**、ID 适配器、操作队列）都必须允许同时发出读取和写入操作。这成为特定产品 **组件** 的责任，使其意识到使用了哪种类型的 **设备**，并且如果实际 **设备**（如 I2C）不支持，则不要并行发出这些请求。
+上图中的所有中间层（字符驱动程序、ID 适配器、操作队列）都必须允许同时发出读取和写入操作。这成为特定产品组件的责任，使其意识到使用了哪种类型的设备，并且如果实际设备（如 I2C）不支持，则不要并行发出这些请求。
 
-#### SPI 设备
+## SPI 设备
 
-根据上述信息，特定平台 SPI 控制设备对象必须提供并实现与 I2C **设备** 完全相同的接口：
+根据上述信息，特定平台 SPI 控制设备对象必须提供并实现与 I2C 设备完全相同的接口：
+
+
 
 ```cpp
 class SpiDevice
@@ -6416,28 +6450,34 @@ public:
 };
 ```
 
-在 RaspberryPi 平台上控制 **SPI0** 接口的此类设备在 [embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi) 项目的 [src/device/Spi0.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Spi0.h) 文件中实现。
+在 RaspberryPi 平台上控制`SPI0`接口的此类设备在[embxx_on_rpi](https://github.com/arobenko/embxx_on_rpi)项目的[src/device/Spi0.h](https://github.com/arobenko/embxx_on_rpi/blob/master/src/device/Spi0.h)文件中实现。
 
 #### 其他细微差别
 
-SPI 经常与外部持久存储设备一起使用，例如 SD 卡。这些设备在 `MOSI` 线上的块写入操作和它们在 `MISO` 线上发送关于操作完成确认之间可能会有一些显著的延迟。SPI **设备** 必须不断读取传入的字节，直到接收到预期的 `ACK`/`NACK` 字节，而不释放 `CS`（芯片选择）。如果负责管理 SPI 闪存内存的 **组件** 只发出单个“读取”操作以等待此类确认，提供的缓冲区可能会在接收到所需的字节之前就满了。在这种情况下，SPI 控制设备对象不知道新的“读取”请求可能随后到来，并必须释放 `CS`，这是不希望的。
+SPI 经常与外部持久存储设备一起使用，例如 SD 卡。这些设备在`MOSI`线上的块写入操作和它们在`MISO`线上发送关于操作完成确认之间可能会有一些显著的延迟。SPI 设备必须不断读取传入的字节，直到接收到预期的`ACK`/`NACK`字节，而不释放`CS`（芯片选择）。
 
-为了解决这个问题，UART 章节中描述的字符**驱动程序**必须扩展以支持同时执行多个读写操作。这种扩展基于提供的`Traits`类中的`ReadQueueSize`/`WriteQueueSize`值。这些值表示可以发送给**驱动程序**的最大并发读写操作数。负责的**组件**必须同时执行 2 或 3 次“读取直到”操作以等待预期的响应。一旦第一个缓冲区填满，**驱动程序**将发布**组件**的回调对象以在事件循环上下文中执行，同时调用**设备**的`startRead()`成员函数以在中断上下文中填充下一个挂起的“读取直到”操作，以填充第二个缓冲区。**设备**负责继续其读取操作而不释放`CS`线。当第二个缓冲区被填充时，**组件**有足够的时间识别填充的缓冲区中没有响应，并重新向**驱动程序**发出“读取直到”请求，同时重用相同的缓冲区。这个“读取直到”请求的循环必须继续，直到遇到预期的响应或操作超时，超时是通过异步等待请求到定时器独立测量的。负责的**组件**对象必须管理对字符**驱动程序**的操作以及事件循环上下文中的定时器，并在执行来自另一个回调的回调时取消一个。
+如果负责管理 SPI 闪存内存的组件只发出单个“读取”操作以等待此类确认，提供的缓冲区可能会在接收到所需的字节之前就满了。在这种情况下，SPI 控制设备对象不知道新的“读取”请求可能随后到来，并必须释放`CS`，这是不希望的。
+
+为了解决这个问题，UART 章节中描述的字符驱动程序必须扩展以支持同时执行多个读写操作。这种扩展基于提供的`Traits`类中的`ReadQueueSize`/`WriteQueueSize`值。这些值表示可以发送给驱动程序的最大并发读写操作数。
+
+负责的组件必须同时执行 2 或 3 次“读取直到”操作以等待预期的响应。一旦第一个缓冲区填满，驱动程序将发布组件的回调对象以在事件循环上下文中执行，同时调用设备的`startRead()`成员函数，以在中断上下文中填充下一个挂起的“读取直到”操作，从而填充第二个缓冲区。
+
+设备负责继续其读取操作而不释放`CS`线。当第二个缓冲区被填充时，组件有足够的时间识别填充的缓冲区中没有响应，并重新向驱动程序发出“读取直到”请求，同时重用相同的缓冲区。
+
+这个“读取直到”请求的循环必须继续，直到遇到预期的响应或操作超时。超时是通过异步等待请求到定时器独立测量的。负责的组件对象必须管理对字符驱动程序的操作以及事件循环上下文中的定时器，并在执行来自另一个回调的回调时取消一个。
 
 #### 外部存储
 
-如前所述，SPI 通常与外部持久存储一起使用，例如 SD 卡。为了正确支持它，必须有一种`SpiFlash`管理**组件**，该组件负责实现适当的[通信协议](https://www.sdcard.org/downloads/pls/simplified_specs/part1_410.pdf)，同时提供必要的公共接口。所需的最小接口必须能够：
+如前所述，SPI 通常与外部持久存储一起使用，例如 SD 卡。为了正确支持它，必须有一种`SpiFlash`管理组件，该组件负责实现适当的[通信协议](https://www.sdcard.org/downloads/pls/simplified_specs/part1_410.pdf)，同时提供必要的公共接口。所需的最小接口必须能够：
 
-1.  异步初始化设备。
+1. 异步初始化设备。
+2. 异步读取数据块。
+3. 异步写入数据块。
 
-1.  异步读取数据块。
-
-1.  异步写入数据块。
-
-一旦这样的**组件**被实现和测试，下一个阶段将是实现适当的文件系统（FAT32）管理**组件**，使用前者的异步函数。这将允许在处理所有其他事件的同时处理耗时的文件系统读写操作，而不会创建任何性能瓶颈，也不需要任何复杂的独立任务调度。
+一旦这样的组件被实现和测试，下一个阶段将是实现适当的文件系统（FAT32）管理组件，使用前者的异步函数。这将允许在处理所有其他事件的同时处理耗时的文件系统读写操作，而不会创建任何性能瓶颈，也不需要任何复杂的独立任务调度。
 
 ### 其他
 
 有许多其他外围设备或协议（例如 I2S、USB、单线）。实现和主要概念应该与迄今为止涵盖的外围设备非常相似。在这个阶段，我并不打算在本书中实现它。至少在近期内不会。
 
-各种微控制器也可能支持对某些外设的 [DMA](http://en.wikipedia.org/wiki/Direct_memory_access) 访问。在这种情况下，UART 章节中提到的 `Character` **驱动程序** 必须替换为某种 `Block` **驱动程序**，这将允许同时发出多个读写请求，并且只会从 **设备** 接收“操作完成”通知。我将其实施留作读者的练习。至少目前是这样。
+各种微控制器也可能支持对某些外设的[DMA](http://en.wikipedia.org/wiki/Direct_memory_access)访问。在这种情况下，UART 章节中提到的`Character`驱动程序必须替换为某种`Block`驱动程序，这将允许同时发出多个读写请求，并且只会从设备接收“操作完成”通知。我将其实施留作读者的练习。至少目前是这样。

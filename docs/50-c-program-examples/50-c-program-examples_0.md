@@ -1,12 +1,11 @@
+
+
 # 50 个 C++ 程序示例
-
-
 
 ![](img/image_rsrcZH.jpg)
 
-
-
 ## 1. Hello World
+
 ```cpp
 #include <iostream>
 
@@ -17,6 +16,7 @@ int main() {
 ```
 
 ## 2. 基础输入输出
+
 ```cpp
 #include <iostream>
 
@@ -30,6 +30,7 @@ int main() {
 ```
 
 ## 3. 算术运算
+
 ```cpp
 #include <iostream>
 
@@ -43,7 +44,8 @@ int main() {
 }
 ```
 
-## 4. 条件判断语句 (if-else)
+## 4. 条件判断语句（if-else）
+
 ```cpp
 #include <iostream>
 
@@ -62,7 +64,8 @@ int main() {
 }
 ```
 
-## 5. 循环 (for 循环)
+## 5. 循环（for 循环）
+
 ```cpp
 #include <iostream>
 
@@ -75,7 +78,8 @@ int main() {
 }
 ```
 
-## 6. 循环 (while 循环)
+## 6. 循环（while 循环）
+
 ```cpp
 #include <iostream>
 
@@ -90,7 +94,8 @@ int main() {
 }
 ```
 
-## 7. 循环 (do-while 循环)
+## 7. 循环（do-while 循环）
+
 ```cpp
 #include <iostream>
 
@@ -106,6 +111,7 @@ int main() {
 ```
 
 ## 8. 数组
+
 ```cpp
 #include <iostream>
 
@@ -120,6 +126,7 @@ int main() {
 ```
 
 ## 9. 函数
+
 ```cpp
 #include <iostream>
 
@@ -135,6 +142,7 @@ int main() {
 ```
 
 ## 10. 递归
+
 ```cpp
 #include <iostream>
 
@@ -154,6 +162,7 @@ int main() {
 ```
 
 ## 11. 字符串
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -166,6 +175,7 @@ int main() {
 ```
 
 ## 12. 字符串输入输出
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -180,6 +190,7 @@ int main() {
 ```
 
 ## 13. 字符串拼接
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -194,6 +205,7 @@ int main() {
 ```
 
 ## 14. 字符串长度
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -207,6 +219,7 @@ int main() {
 ```
 
 ## 15. 字符串比较
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -224,6 +237,7 @@ int main() {
 ```
 
 ## 16. 字符串数组
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -238,6 +252,7 @@ int main() {
 ```
 
 ## 17. 多维数组
+
 ```cpp
 #include <iostream>
 
@@ -254,6 +269,7 @@ int main() {
 ```
 
 ## 18. 指针
+
 ```cpp
 #include <iostream>
 
@@ -267,6 +283,7 @@ int main() {
 ```
 
 ## 19. 动态内存分配
+
 ```cpp
 #include <iostream>
 
@@ -284,6 +301,7 @@ int main() {
 ```
 
 ## 20. 结构体
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -304,6 +322,7 @@ int main() {
 ```
 
 ## 21. 类与对象
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -328,6 +347,7 @@ int main() {
 ```
 
 ## 22. 类构造函数
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -354,6 +374,7 @@ int main() {
 ```
 
 ## 23. 类继承
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -384,6 +405,7 @@ int main() {
 ```
 
 ## 24. 运算符重载
+
 ```cpp
 #include <iostream>
 
@@ -410,6 +432,7 @@ int main() {
 ```
 
 ## 25. 异常处理
+
 ```cpp
 #include <iostream>
 
@@ -429,6 +452,7 @@ int main() {
 ```
 
 ## 26. 文件输入输出
+
 ```cpp
 #include <iostream>
 #include <fstream>
@@ -442,10 +466,6 @@ int main() {
   return 0;
 }
 ```
-
-
-
-
 
 ```cpp
 std::cout << "File written successfully." << std::endl;
@@ -481,7 +501,12 @@ int main() {
 
 ## 28. 写入与读取二进制数据
 
-```cpp
+
+
+
+以下是用C++编写的二进制文件读写示例：
+
+```
 #include <iostream>
 #include <fstream>
 
@@ -515,7 +540,7 @@ int main() {
 
 ## 29. 模板函数
 
-```cpp
+```
 #include <iostream>
 template <typename T>
 T max(T a, T b) {
@@ -533,7 +558,7 @@ int main() {
 
 ## 30. 模板类
 
-```cpp
+```
 #include <iostream>
 template <typename T>
 class Pair {
@@ -554,7 +579,7 @@ int main() {
 
 ## 31. 标准模板库 (STL) Vector
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 
@@ -573,7 +598,7 @@ int main() {
 
 ## 32. STL 迭代器
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 
@@ -589,7 +614,7 @@ int main() {
 
 ## 33. STL Map
 
-```cpp
+```
 #include <iostream>
 #include <map>
 
@@ -608,7 +633,7 @@ int main() {
 
 ## 34. STL Sets
 
-```cpp
+```
 #include <iostream>
 #include <set>
 
@@ -627,7 +652,7 @@ int main() {
 
 ## 35. Lambda 表达式
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -647,7 +672,7 @@ int main() {
 
 ## 36. C++ 算法
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -674,7 +699,7 @@ int main() {
 
 ## 37. C++ 线程
 
-```cpp
+```
 #include <iostream>
 #include <thread>
 
@@ -691,7 +716,7 @@ int main() {
 
 ## 38. 互锁与线程同步
 
-```cpp
+```
 #include <iostream>
 #include <thread>
 #include <mutex>
@@ -716,7 +741,7 @@ int main() {
 
 ## 39. C++ 智能指针
 
-```cpp
+```
 #include <iostream>
 #include <memory>
 
@@ -730,7 +755,7 @@ int main() {
 
 ## 40. Lambda 捕获
 
-```cpp
+```
 #include <iostream>
 
 int main() {
@@ -745,7 +770,7 @@ int main() {
 
 ## 41. C++ RAII (资源获取初始化)
 
-```cpp
+```
 #include <iostream>
 #include <fstream>
 
@@ -777,7 +802,7 @@ int main() {
 
 ## 42. C++ 移动语义
 
-```cpp
+```
 #include <iostream>
 #include <vector>
 
@@ -792,7 +817,7 @@ int main() {
 
 ## 43. C++ 类型别名 (using)
 
-```cpp
+```
 #include <iostream>
 using Age = int;
 
@@ -805,7 +830,7 @@ int main() {
 
 ## 44. C++ 枚举
 
-```cpp
+```
 #include <iostream>
 enum Color { RED, GREEN, BLUE };
 
@@ -820,7 +845,7 @@ int main() {
 
 ## 45. C++ 枚举类
 
-```cpp
+```
 #include <iostream>
 enum class Color { RED, GREEN, BLUE };
 
@@ -835,7 +860,7 @@ int main() {
 
 ## 46. C++ 标准输入输出操纵符
 
-```cpp
+```
 #include <iostream>
 #include <iomanip>
 
@@ -850,7 +875,7 @@ int main() {
 
 ## 47. C++ 位运算运算符
 
-```cpp
+```
 #include <iostream>
 
 int main() {
@@ -874,7 +899,7 @@ int main() {
 
 ## 48. C++ 异常类
 
-```cpp
+```
 #include <iostream>
 #include <stdexcept>
 
@@ -890,7 +915,7 @@ int main() {
 
 ## 49. C++ 闭包 (std::function)
 
-```cpp
+```
 #include <iostream>
 #include <functional>
 
@@ -905,18 +930,13 @@ int main() {
 
 ## 50. C++ 自定义迭代器
 
+
+
 ```cpp
 #include <iostream>
 #include <vector>
 
 class MyIterator {
-```
-
-
-
-
-
-```cpp
 private:
     int index;
     std::vector<int>& data;
@@ -945,4 +965,3 @@ int main() {
 ```
 
 感谢
-

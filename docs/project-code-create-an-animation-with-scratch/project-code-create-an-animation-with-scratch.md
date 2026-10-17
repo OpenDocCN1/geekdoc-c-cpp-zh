@@ -1,5 +1,5 @@
-# 项目代码：Scratch 创建动画
 
+# 项目代码：Scratch 创建动画
 
 Falkirk Community Trust  
 30124 03079891 4
@@ -18,16 +18,17 @@ Falkirk Community Trust Libraries
 
 ## Using Scratch
 
-Scratch is a programming language designed by MIT (Massachusetts Institute of Technology) that lets you create your own interactive stories, animations, games, music and art. Rather than using a complex computer language, it uses easy-to-understand coding blocks. To get the most out of this book, you will need to be able to use a computer and you will need to load Scratch onto your computer. Always check with an adult if it is OK to download files from the Internet to your computer. Go to: **https://scratch.mit.edu**
+Scratch is a programming language designed by MIT (Massachusetts Institute of Technology) that lets you create your own interactive stories, animations, games, music and art. Rather than using a complex computer language, it uses easy-to-understand coding blocks. To get the most out of this book, you will need to be able to use a computer and you will need to load Scratch onto your computer. Always check with an adult if it is OK to download files from the Internet to your computer. Go to: `https://scratch.mit.edu`
 
 First, do Scratch’s ‘Getting Started with Scratch’ tutorial, found by going to ‘Create’ on the home page, and then look in the ‘Tips’ menu. You can also work on Scratch offline. Scroll to the bottom of the homepage and click on Offline Editor in the Support menu. Follow the instructions to install it on your computer.
 
-Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab. See http://scratch.mit.edu  
-Images and illustrations from Scratch included in this book have been developed by the Lifelong Kindergarten Group at the MIT Media Lab (see http://scratch.mit.edu) and made available under the Creative Commons Attribution-ShareAlike 2.0 licence (https://creativecommons.org/licenses/by-sa/2.0/deed.en). The third party trademarks used in this book are the property of their respective owners, including the Scratch name and logo. The owners of these trademarks have not endorsed, authorised or sponsored this book.
+Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab. See `http://scratch.mit.edu`
+
+Images and illustrations from Scratch included in this book have been developed by the Lifelong Kindergarten Group at the MIT Media Lab (see `http://scratch.mit.edu`) and made available under the Creative Commons Attribution-ShareAlike 2.0 licence (`https://creativecommons.org/licenses/by-sa/2.0/deed.en`). The third party trademarks used in this book are the property of their respective owners, including the Scratch name and logo. The owners of these trademarks have not endorsed, authorised or sponsored this book.
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_5_2.png)
 
-To load the projects that you will use in this book, go to: www.alixwoodbooks.co.uk/projectcode/downloads.php and select ‘Animation’. Save the folder somewhere on your computer where you will be able to find it again. You will need to open files in this folder as you go through the project.
+To load the projects that you will use in this book, go to: `www.alixwoodbooks.co.uk/projectcode/downloads.php` and select ‘Animation’. Save the folder somewhere on your computer where you will be able to find it again. You will need to open files in this folder as you go through the project.
 
 ## All About Animation
 
@@ -93,10 +94,10 @@ Code that is used more than once can be made into a sub-routine. You write some 
 
 Scratch lets you make blocks of your own code. To make a simple sub-routine in Scratch, click on the ‘More Blocks’ tab and click ‘Make a Block’. Name the block: `STEP`. Next, add these blocks from the coloured menu tabs:
 
-- MOVE 1 step
-- WAIT 0.5 secs
+- `MOVE 1 step`
+- `WAIT 0.5 secs`
 
-To use the STEP sub-routine in your code, put your STEP block inside a repeat loop as shown.
+To use the `STEP` sub-routine in your code, put your `STEP` block inside a repeat loop as shown.
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_12_0.png)
 
@@ -105,10 +106,6 @@ To use the STEP sub-routine in your code, put your STEP block inside a repeat lo
 You can use a loop inside another loop. This is called a ‘nested loop’. Try acting out this nested loop. Face an object, and then turn 90 degrees to the right four times. You have performed a loop. Now clap each time your feet move. The clap is the nested loop.
 
 Try out your new loop skills in the Scratch project on the next page.
-
-
-
-
 
 ## PROJECT PAGE: GET LOOPING!
 
@@ -148,11 +145,13 @@ Three more blocks set where Avery starts walking from. These blocks place her at
 
 ## CREATE A CHARACTER
 
-You can have fun making a Scratch animation exactly how you want it. There are many different sprites to choose from as your main character. Open a new Scratch project by clicking on ‘File’, then ‘New’ in the dropdown menu. Choose sprites from the Scratch library by clicking on the sprite image next to the words ‘New sprite’.
+
+
+You can have fun making a Scratch animation exactly how you want it. There are many different sprites to choose from as your main character. Open a new Scratch project by clicking on `File`, then `New` in the dropdown menu. Choose sprites from the Scratch library by clicking on the sprite image next to the words `New sprite`.
 
 ### Get creative
 
-If you don’t like any of those, you can create your own! Choose the paintbrush tool from the ‘New sprite’ menu and a blank page will appear. Use the paintbrush or shapes, such as the line, rectangle and circle, to create your sprite. Choose colours from the menu at the bottom and use the slider to change the size of your paintbrush. Create more than one costume (position) for your sprite by clicking on the ‘paint new costume’ paintbrush tool.
+If you don’t like any of those, you can create your own! Choose the paintbrush tool from the `New sprite` menu and a blank page will appear. Use the paintbrush or shapes, such as the line, rectangle and circle, to create your sprite. Choose colours from the menu at the bottom and use the slider to change the size of your paintbrush. Create more than one costume for your sprite by clicking on the `paint new costume` paintbrush tool.
 
 ## Snap!
 
@@ -178,16 +177,16 @@ Decisions are an important part of coding. Decisions mean a computer can make ch
 
 You can create many types of decision in coding, but they all follow the same basic format:
 
-DECISION   CONDITION   ACTION
+`DECISION   CONDITION   ACTION`
 
 This may sound confusing, but it is easy really. You probably use the words IF, WHEN or WHILE every day and they have the same meaning in code as they do in real life. IF you are hungry, what should you do?
 
-In coding, the CONDITION is what you are testing for. The CONDITION must always be either true or false. So if you are testing to see IF you are hungry, then ...
+In coding, the `CONDITION` is what you are testing for. The `CONDITION` must always be either true or false. So if you are testing to see IF you are hungry, then ...
 
 - yes = true
 - no = false
 
-The ACTION part is what you do if the CONDITION is true. So IF you are hungry, the ACTION is that you will eat.
+The `ACTION` part is what you do if the `CONDITION` is true. So IF you are hungry, the `ACTION` is that you will eat.
 
 ### What else?
 
@@ -195,7 +194,7 @@ The simplest of decisions is the IF statement. This usually includes a THEN part
 
 For example, the coder can tell the computer, ‘IF this happens THEN do this.’ Sometimes an ELSE part is also added. This allows the coder to tell the computer, ‘IF this happens THEN do this or ELSE do that,’ for example:
 
-IF hungry THEN eat or ELSE keep playing.
+`IF hungry THEN eat or ELSE keep playing.`
 
 ### The IF-THEN-ELSE game
 
@@ -223,19 +222,14 @@ An example might be: ‘IF I pat my head, THEN you hop on one leg, or ELSE stick
 Adding decisions to our project will make it more intelligent. Open the Scratch project named `animation2.sb2`.
 
 - 1. The first decision to add is a ‘when’ statement at the start of the code. This tells the computer: ‘When I click on the green flag, start the animation’. (The green start flag and red stop button are at the top right of the Scratch project screen.)
-
 - 2. The next decision adds a little more intelligence to Avery’s walking. At the moment she walks back and forth a set number of paces. We have made it more intelligent by sensing when Avery reaches the edge of the screen, using a block of IF code.
 
 This block makes Avery walk a few paces and then check if she has reached the edge. IF she has, the code turns her around.
-
-- 3. Make another sub-routine called JUMP.
+- 3. Make another sub-routine called `JUMP`.
 
 Changing the ‘Y’ value makes Avery move up and down. The first ‘change’ block moves her up 60 ‘steps’ and the second 60 steps back down again, with a small delay in between.
-
-- 4. Note that there is a red mark on the path. If the computer senses that Avery is touching the red mark, the CONDITION (IF touching colour red?) is met (true). The computer then runs the code for the IF-THEN statement with the JUMP sub-routine and Avery will jump in the air.
-
+- 4. Note that there is a red mark on the path. If the computer senses that Avery is touching the red mark, the `CONDITION` (`IF touching colour red?`) is met (true). The computer then runs the code for the IF-THEN statement with the `JUMP` sub-routine and Avery will jump in the air.
 - 5. We can also make Avery do something if the condition was not met, or false. This tells the computer, ‘IF Avery is touching the red, THEN think nothing and jump’, ELSE think “Hmmm”.
-
 - 6. Now, when you click the green flag, Avery walks across the screen, thinking ‘Hmmm’. She turns around at the edges of the screen. Whenever she touches the red mark, she thinks nothing and jumps up and down four times. This continues until you click on the stop symbol.
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_20_0.png)
@@ -251,36 +245,39 @@ IF/ELSE decisions are really useful. They mean you are not limited to making a d
 Data is any collection of information, such as numbers or measurements. Different types of operators control how the computer uses the data.
 
 Some maths operators are:
-- add +
-- subtract -
-- multiply ×
-- divide ÷
+
+- add `+`
+- subtract `-`
+- multiply `×`
+- divide `÷`
 
 Some comparison operators are:
-- less than <
-- greater than >
-- equal to =
+
+- less than `<`
+- greater than `>`
+- equal to `=`
 
 Logic operators are:
-- AND
-- OR
-- NOT
+
+- `AND`
+- `OR`
+- `NOT`
 
 ### Logic operators
 
 The answer to ‘am I hungry?’ is either ‘yes’ (true) or ‘no’ (false). What if you wanted to know ‘am I hungry and is it lunchtime?’.
 
-Logic operators are used in coding because they test for more than one thing at a time, using the words AND and OR.
+Logic operators are used in coding because they test for more than one thing at a time, using the words `AND` and `OR`.
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_21_1.png)
 
 ### AND logic
 
-AND logic tests to see if the answer to more than one question is true. For example: IF hungry AND lunchtime THEN eat.
+`AND` logic tests to see if the answer to more than one question is true. For example: `IF hungry AND lunchtime THEN eat.`
 
 Each condition (question) is still either true or false, but the result of the combined test - whether we are hungry AND it is lunchtime - is also either true or false.
 
-The AND logic works like this:
+The `AND` logic works like this:
 
 | Condition | Result |
 | --- | --- |
@@ -289,56 +286,128 @@ The AND logic works like this:
 | NOT hungry (false) AND lunchtime (true) | = false (don’t eat) |
 | NOT hungry (false) AND NOT lunchtime (false) | = false (don’t eat) |
 
+### OR logic
+
+`OR` logic tests to see if at least one condition is true. For example: `IF hungry OR lunchtime THEN eat.`
+
+The `OR` logic works like this:
+
+| Condition | Result |
+| --- | --- |
+| Hungry (true) OR lunchtime (true) | = true (eat) |
+| Hungry (true) OR NOT lunchtime (false) | = true (eat) |
+| NOT hungry (false) OR lunchtime (true) | = true (eat) |
+| NOT hungry (false) OR NOT lunchtime (false) | = false (don’t eat) |
+
+## PROJECT PAGE: USING OPERATORS
+
+Open the Scratch project named `animation3.sb2`.
+
+- 1. The first decision to add is a ‘when’ statement at the start of the code. This tells the computer: ‘When I click on the green flag, start the animation’. (The green start flag and red stop button are at the top right of the Scratch project screen.)
+- 2. The next decision adds a little more intelligence to Avery’s walking. At the moment she walks back and forth a set number of paces. We have made it more intelligent by sensing when Avery reaches the edge of the screen, using a block of IF code.
+
+This block makes Avery walk a few paces and then check if she has reached the edge. IF she has, the code turns her around.
+- 3. Make another sub-routine called `JUMP`.
+
+Changing the ‘Y’ value makes Avery move up and down. The first ‘change’ block moves her up 60 ‘steps’ and the second 60 steps back down again, with a small delay in between.
+- 4. Note that there is a red mark on the path. If the computer senses that Avery is touching the red mark, the `CONDITION` (`IF touching colour red?`) is met (true). The computer then runs the code for the IF-THEN statement with the `JUMP` sub-routine and Avery will jump in the air.
+- 5. We can also make Avery do something if the condition was not met, or false. This tells the computer, ‘IF Avery is touching the red, THEN think nothing and jump’, ELSE think “Hmmm”.
+- 6. Now, when you click the green flag, Avery walks across the screen, thinking ‘Hmmm’. She turns around at the edges of the screen. Whenever she touches the red mark, she thinks nothing and jumps up and down four times. This continues until you click on the stop symbol.
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_20_0.png)
+
+IF/ELSE decisions are really useful. They mean you are not limited to making a decision to either do or not do something. You can do something ELSE, if the answer to your IF question is false.
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_20_1.png)
+
+## WHAT'S AN OPERATOR?
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_21_0.png)
+
+Data is any collection of information, such as numbers or measurements. Different types of operators control how the computer uses the data.
+
+Some maths operators are:
+
+- add `+`
+- subtract `-`
+- multiply `×`
+- divide `÷`
+
+Some comparison operators are:
+
+- less than `<`
+- greater than `>`
+- equal to `=`
+
+Logic operators are:
+
+- `AND`
+- `OR`
+- `NOT`
+
+### Logic operators
+
+The answer to ‘am I hungry?’ is either ‘yes’ (true) or ‘no’ (false). What if you wanted to know ‘am I hungry and is it lunchtime?’.
+
+Logic operators are used in coding because they test for more than one thing at a time, using the words `AND` and `OR`.
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_21_1.png)
+
+### AND logic
+
+`AND` logic tests to see if the answer to more than one question is true. For example: `IF hungry AND lunchtime THEN eat.`
+
+Each condition (question) is still either true or false, but the result of the combined test - whether we are hungry AND it is lunchtime - is also either true or false.
+
+The `AND` logic works like this:
+
+| Condition | Result |
+| --- | --- |
+| Hungry (true) AND lunchtime (true) | = true (eat) |
+| Hungry (true) AND NOT lunchtime (false) | = false (don’t eat) |
+| NOT hungry (false) AND lunchtime (true) | = false (don’t eat) |
+| NOT hungry (false) AND NOT lunchtime (false) | = false (don’t eat) |
+
+### OR logic
+
+`OR` logic tests to see if at least one condition is true. For example: `IF hungry OR lunchtime THEN eat.`
+
+The `OR` logic works like this:
+
+| Condition | Result |
+| --- | --- |
+| Hungry (true) OR lunchtime (true) | = true (eat) |
+| Hungry (true) OR NOT lunchtime (false) | = true (eat) |
+| NOT hungry (false) OR lunchtime (true) | = true (eat) |
+| NOT hungry (false) OR NOT lunchtime (false) | = false (don’t eat) |
+
+## PROJECT PAGE: USING OPERATORS
+
+Open the Scratch project named `animation3.sb2`.
+
+- 1. The first decision to add is a ‘when’ statement at the start of the code. This tells the computer: ‘When I click on the green flag, start the animation’.
+- 2. The next decision adds a little more intelligence to Avery’s walking. At the moment she walks back and forth a set number of paces. We have made it more intelligent by sensing when Avery reaches the edge of the screen, using a block of IF code.
+- 3. Make another sub-routine called `JUMP`.
+- 4. Note that there is a red mark on the path. If the computer senses that Avery is touching the red mark, the `CONDITION` (`IF touching colour red?`) is met (true). The computer then runs the code for the IF-THEN statement with the `JUMP` sub-routine and Avery will jump in the air.
+- 5. We can also make Avery do something if the condition was not met, or false. This tells the computer, ‘IF Avery is touching the red, THEN think nothing and jump’, ELSE think “Hmmm”.
+- 6. Now, when you click the green flag, Avery walks across the screen, thinking ‘Hmmm’. She turns around at the edges of the screen. Whenever she touches the red mark, she thinks nothing and jumps up and down four times.
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_20_0.png)
+
+## PROJECT PAGE: USING OPERATORS
+
+Open the Scratch project named `animation3.sb2`.
+
+- 1. The first decision to add is a ‘when’ statement at the start of the code. This tells the computer: ‘When I click on the green flag, start the animation’.
+- 2. The next decision adds a little more intelligence to Avery’s walking. At the moment she walks back and forth a set number of paces. We have made it more intelligent by sensing when Avery reaches the edge of the screen, using a block of IF code.
+- 3. Make another sub-routine called `JUMP`.
+- 4. Note that there is a red mark on the path. If the computer senses that Avery is touching the red mark, the `CONDITION` (`IF touching colour red?`) is met (true). The computer then runs the code for the IF-THEN statement with the `JUMP` sub-routine and Avery will jump in the air.
+- 5. We can also make Avery do something if the condition was not met, or false. This tells the computer, ‘IF Avery is touching the red, THEN think nothing and jump’, ELSE think “Hmmm”.
+- 6. Now, when you click the green flag, Avery walks across the screen, thinking ‘Hmmm’. She turns around at the edges of the screen. Whenever she touches the red mark, she thinks nothing and jumps up and down four times.
+
+![](img/0db0bd1c1343c511fdd2e24659c41ae8_20_0.png)
 
 
-标签内，并且没有多余内容。
-
-最后，检查是否有需要保留的英文术语。比如“Scratch” 保留，“Avery” 保留，因为是人名。“animation3.sb2” 保留。
-
-注意“Avery” 我们翻译为“艾弗里”，这是音译。
-
-“Ouch” 翻译为“哎哟”。
-
-“pop” 在代码块中不翻译。
-
-现在，整合所有翻译。
-
-注意原文中有些地方有“- 1” 这样的列表，我们保留。
-
-另外，注意“PROJECT PAGE:” 后面有换行，我们保留。
-
-现在，写出最终答案。[content]
-
-### 或逻辑
-
-或逻辑用于测试是否只有*一个*条件为真。例如：
-
-如果我累了 或 天黑了 那么 进入室内。
-
-或逻辑的工作原理如下：
-
-累了（真）或 天黑（真）= 真（进入室内）
-累了（真）或 天不黑（假）= 真（进入室内）
-不累（假）或 天黑（真）= 真（进入室内）
-不累（假）或 天不黑（假）= 假（不进入室内）
-
-所以如果我们的条件中*任意一个*为真，整个测试就为真。只有当你既不累且天不黑时，测试才为假。
-
-![](img/0db0bd1c1343c511fdd2e24659c41ae8_22_0.png)
-
-### 条件运算符
-
-条件运算符让我们能够提出更复杂的问题。你可能想知道自己*有多饿*。如果你有点饿，你会吃一个苹果。如果你非常饿，你会吃一顿饭。对于这些问题，我们使用 > 或 < 符号，它们表示一边比另一边大。
-
-4 > 2 表示 4 大于 2
-2 < 4 表示 2 小于 4
-
-你可以用 1 到 10 的等级来表示你有多饿。
-
-如果 1 = 不饿，10 = 饿极了，那么你可以说：
-如果 饥饿 > 7 那么 吃午饭
-如果 饥饿 < 3 那么 继续玩
-如果 饥饿 > 3 且 饥饿 < 7 那么 吃一个苹果
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_22_1.png)
 
@@ -347,18 +416,19 @@ The AND logic works like this:
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_22_2.png)
 
 ## 项目页面：
-添加运算符
 
-到目前为止，我们只在代码中提出了简单的问题，例如“我们是否碰到了红点？”或“我们是否到达了屏幕边缘？”。当我们需要提出更具体的问题时，就需要使用运算符积木。打开名为“animation3.sb2”的Scratch项目。
+### 添加运算符
 
-1 艾弗里无论从哪个方向走过红色标记时都会跳跃。如果我们只想让她向右移动时跳跃，就需要使用两个运算符：AND 和 =。这两个条件——碰到红色标记和移动方向为 90（右）——必须同时满足，她才会跳跃。
+到目前为止，我们只在代码中提出了简单的问题，例如“我们是否碰到了红点？”或“我们是否到达了屏幕边缘？”。当我们需要提出更具体的问题时，就需要使用运算符积木。打开名为`animation3.sb2`的Scratch项目。
+
+1. 艾弗里无论从哪个方向走过红色标记时都会跳跃。如果我们只想让她向右移动时跳跃，就需要使用两个运算符：`AND`和`=`。这两个条件——碰到红色标记和移动方向为 90（右）——必须同时满足，她才会跳跃。
 
 ```
 if touching color ? and direction = 90 then
 jump
 ```
 
-2 第三个决策使用 =、> 和 <，以及两个 AND 运算符。记住“>”表示大于，“<”表示小于。这一次，当艾弗里向右走，并且她在屏幕上的位置在 1 到 40 之间（刚好超过一半）时，艾弗里会做一个空翻。和跳跃一样，空翻是一个子程序。
+2. 第三个决策使用`=`、`>`和`<`，以及两个`AND`运算符。记住“`>`”表示大于，“`<`”表示小于。这一次，当艾弗里向右走，并且她在屏幕上的位置在 1 到 40 之间（刚好超过一半）时，艾弗里会做一个空翻。和跳跃一样，空翻是一个子程序。
 
 ```
 if direction = 90 and x position > 0 and x position < 41 then
@@ -381,9 +451,11 @@ Somersault
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_26_0.png)
 
-- 1 要将代码应用到背景，首先选择你的背景，然后点击“脚本”。
-- 2 从“事件”、“控制”和“外观”菜单中选择你需要的积木。将这些积木拖到合适的位置，如上图所示。
-- 3 当你点击绿旗时，背景颜色将每两秒改变一次。你可以通过调整“等待2秒”框中的数字来改变颜色变化的速度。在不同的背景上试试，看看你最喜欢哪一个。
+1. 要将代码应用到背景，首先选择你的背景，然后点击“脚本”。
+
+2. 从“事件”、“控制”和“外观”菜单中选择你需要的积木。将这些积木拖到合适的位置，如上图所示。
+
+3. 当你点击绿旗时，背景颜色将每两秒改变一次。你可以通过调整`等待2秒`框中的数字来改变颜色变化的速度。在不同的背景上试试，看看你最喜欢哪一个。
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_26_1.png)
 
@@ -404,13 +476,12 @@ Somersault
 ## 想一想
 
 - 你认为以下内容是输入还是输出？
-- 
-- - 输入你的名字
-- - 在屏幕上显示消息
-- - 打印图片
-- - 滑动触摸屏
-- 
-- （答案在第32页）
+  - 输入你的名字
+  - 在屏幕上显示消息
+  - 打印图片
+  - 滑动触摸屏
+
+（答案在第32页）
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_27_1.png)
 
@@ -449,27 +520,28 @@ IF nothing happens THEN
 在下一页尝试向你的代码添加一些用户交互。
 
 ## 项目页面：
-用户交互
 
-如何添加一些用户交互。打开名为“animation4.sb2”的Scratch项目。
+### 用户交互
+
+如何添加一些用户交互。打开名为`animation4.sb2`的Scratch项目。
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_29_0.png)
 
 现在有两个角色——艾弗里和一只蝙蝠。艾弗里会来回走动，直到你告诉她做别的事情。我们还使用与第23页改变颜色背景相同的方法添加了一个阴森旋转的森林背景，只是从菜单中选择了“旋转”而不是“颜色”。
 
-1 艾弗里可能会有点害怕这片阴森的森林。你可以用这段代码（右侧）让她上下跳跃。按住鼠标按钮直到她跳起来。“如果鼠标按下？那么”积木会让计算机寻找用户交互，以检查鼠标是否被点击。
+1. 艾弗里可能会有点害怕这片阴森的森林。你可以用这段代码（右侧）让她上下跳跃。按住鼠标按钮直到她跳起来。`如果鼠标按下？那么`积木会让计算机寻找用户交互，以检查鼠标是否被点击。
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_29_1.png)
 
-2 你可以使用这段代码并按住键盘上的向上箭头键，让艾弗里做空翻或跳跃。
+2. 你可以使用这段代码并按住键盘上的向上箭头键，让艾弗里做空翻或跳跃。
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_29_2.png)
 
-3 你看不到蝙蝠角色，但如果你按下空格键，蝙蝠会从屏幕顶部飞下来。如果蝙蝠撞到艾弗里，它会说“哎哟”，你会听到爆裂声。如果蝙蝠没撞到，它就会消失。
+3. 你看不到蝙蝠角色，但如果你按下空格键，蝙蝠会从屏幕顶部飞下来。如果蝙蝠撞到艾弗里，它会说“哎哟”，你会听到爆裂声。如果蝙蝠没撞到，它就会消失。
 
-第26页的“如果-那么”积木会让计算机测试是否发生了用户交互（按下了向上箭头键）。如果发生了，它会根据艾弗里行进的方向运行“空翻”或“跳跃”子程序。
+第26页的`如果-那么`积木会让计算机测试是否发生了用户交互（按下了向上箭头键）。如果发生了，它会根据艾弗里行进的方向运行`空翻`或`跳跃`子程序。
 
-4 点击蝙蝠角色，看看使其与艾弗里交互的代码是如何编写的。
+4. 点击蝙蝠角色，看看使其与艾弗里交互的代码是如何编写的。
 
 ```
 If touching Avery Walking ? then
@@ -477,12 +549,9 @@ say Ouch! for 0.25 secs
 play sound pop
 ```
 
-这段“如果-那么”代码块会让计算机测试蝙蝠是否碰到艾弗里。如果碰到了，它就运行代码。但它也依赖于用户交互才能工作。如果用户按空格键的时机不对，代码的“如果-那么”部分就不会运行。
+这段`如果-那么`代码块会让计算机测试蝙蝠是否碰到艾弗里。如果碰到了，它就运行代码。但它也依赖于用户交互才能工作。如果用户按空格键的时机不对，代码的`如果-那么`部分就不会运行。
 
-5 点击绿旗启动完成的动画。通过按空格键让蝙蝠动起来。看看你是否能把握好蝙蝠动画的时机，让它说出“哎哟”。尝试按组合键，看看所有动画的运行效果。
-
-
-
+5. 点击绿旗启动完成的动画。通过按空格键让蝙蝠动起来。看看你是否能把握好蝙蝠动画的时机，让它说出“哎哟”。尝试按组合键，看看所有动画的运行效果。
 
 ## 调试
 
@@ -512,7 +581,7 @@ play sound pop
 
 ### 思考一下
 
-加载名为 “animation5.sb2” 的项目。你能发现这段代码中的 bug 吗？Avery 本应来回走动。在 Scratch 中运行这段代码，看看会发生什么。然后尝试调试代码，让 Avery 像她在第 10 页的第一个项目中那样走过屏幕。
+加载名为 `animation5.sb2` 的项目。你能发现这段代码中的 bug 吗？Avery 本应来回走动。在 Scratch 中运行这段代码，看看会发生什么。然后尝试调试代码，让 Avery 像她在第 10 页的第一个项目中那样走过屏幕。
 
 （答案见第 32 页）
 
@@ -536,125 +605,69 @@ forever
 
 ## 词汇表
 
-动画师 制作动画卡通片的人。
-
-代码 给计算机的一组指令。
-
-条件 指计算机程序检查某个陈述是真还是假。
-
-造型 在 Scratch 中，指每个角色被绘制成的不同造型；当它们一个接一个显示时，会产生动画的错觉。
-
-迭代 计算机使用的一种过程，其中一系列操作会重复多次。
-
-逻辑的 遵循逻辑或推理规则的。
-
-操作系统 计算机中的主程序，控制计算机的工作方式，并使其他程序能够运行。
-
-程序 一组分步指令，告诉计算机对数据执行某些操作。
-
-旋转 使……围绕轴线或中心转动。
-
-运行 操作（程序）。
-
-角色 一个简单的二维位图角色，可以在更大的场景中移动。
-
-符号 用来代替一个词或一组词的字母、字符或符号。
-
-翻译 将文字或其他指令从一种语言转换为另一种语言。
-
-用户 操作计算机程序的人。
+- 动画师：制作动画卡通片的人。
+- 代码：给计算机的一组指令。
+- 条件：指计算机程序检查某个陈述是真还是假。
+- 造型：在 Scratch 中，指每个角色被绘制成的不同造型；当它们一个接一个显示时，会产生动画的错觉。
+- 迭代：计算机使用的一种过程，其中一系列操作会重复多次。
+- 逻辑的：遵循逻辑或推理规则的。
+- 操作系统：计算机中的主程序，控制计算机的工作方式，并使其他程序能够运行。
+- 程序：一组分步指令，告诉计算机对数据执行某些操作。
+- 旋转：使……围绕轴线或中心转动。
+- 运行：操作（程序）。
+- 角色：一个简单的二维位图角色，可以在更大的场景中移动。
+- 符号：用来代替一个词或一组词的字母、字符或符号。
+- 翻译：将文字或其他指令从一种语言转换为另一种语言。
+- 用户：操作计算机程序的人。
 
 ![](img/0db0bd1c1343c511fdd2e24659c41ae8_33_0.png)
 
 ## 索引
 
-+   **动画** 4–5, 10, 12, 13, 16, 21, 22, 25, 27, 29
-+   
-+   **舞台背景** 22–23
-+   
-+   **背景** 22–23
-+   
-+   **二进制** 6, 7
-+   
-+   **角色** 12–13, 22
-+   
-+   **编程积木** 7, 9, 10, 11, 16, 17, 20, 21, 23, 26, 27, 29
-+   
-+   **颜色变化** 23, 26
-+   
-+   **计算机** 4, 5, 6, 7, 8, 13, 14, 15, 17, 18, 21, 22, 24, 25, 26, 27, 28
-+   
-+   **条件** 14, 17, 18, 19, 20
-
-+   **数据** 18
-+   
-+   **决策** 14–15, 16–17, 20
-+   
-+   **如果** 14, 15, 16, 17
-+   
-+   **如果/否则** 14, 15, 17
-+   
-+   **事件** 23, 25
-+   
-+   **假** 14, 17, 18, 19
-+   
-+   **手翻书** 4
-+   
-+   **输入** 24
-+   
-+   **交互** 24, 25, 26–27
-+   
-+   **界面** 25
-+   
-+   **迭代** 8
-
-+   **按键** 25, 26, 27
-+   
-+   **键盘** 24, 26
-+   
-+   **逻辑**
-+   
-+   **与** 18
-+   
-+   **或** 19
-+   
-+   **循环** 8–9, 10–11
-+   
-+   **嵌套循环** 9, 10, 11
-+   
-+   **鼠标** 5, 24, 25, 26
-+   
-+   **操作系统** 24
-+   
-+   **运算符** 18–19, 20–21
-+   
-+   **条件运算符** 19, 20
-+   
-+   **逻辑的** 18, 19, 20
-+   
-+   **输出** 24
-
-+   **程序** 6, 7, 24, 25, 28
-+   
-+   **旋转** 21
-+   
-+   **屏幕** 10, 11, 13, 16, 17, 20, 21, 24, 25, 26, 27, 29
-+   
-+   **角色** 5, 10, 12, 13, 22, 26, 27, 28
-+   
-+   **故事板** 13
-+   
-+   **子程序** 9, 11, 16, 17, 20, 21, 27
-+   
-+   **符号** 17, 19
-+   
-+   **创意工具** 22
-+   
-+   **绘制** 12, 22
-+   
-+   **触摸屏** 24
-+   
-+   **真** 14, 17, 18, 19
+- **动画** 4–5, 10, 12, 13, 16, 21, 22, 25, 27, 29
+- **舞台背景** 22–23
+- **背景** 22–23
+- **二进制** 6, 7
+- **角色** 12–13, 22
+- **编程积木** 7, 9, 10, 11, 16, 17, 20, 21, 23, 26, 27, 29
+- **颜色变化** 23, 26
+- **计算机** 4, 5, 6, 7, 8, 13, 14, 15, 17, 18, 21, 22, 24, 25, 26, 27, 28
+- **条件** 14, 17, 18, 19, 20
+- **数据** 18
+- **决策** 14–15, 16–17, 20
+- **如果** 14, 15, 16, 17
+- **如果/否则** 14, 15, 17
+- **事件** 23, 25
+- **假** 14, 17, 18, 19
+- **手翻书** 4
+- **输入** 24
+- **交互** 24, 25, 26–27
+- **界面** 25
+- **迭代** 8
+- **按键** 25, 26, 27
+- **键盘** 24, 26
+- **逻辑**
+  - **与** 18
+  - **或** 19
+- **循环** 8–9, 10–11
+  - **嵌套循环** 9, 10, 11
+- **鼠标** 5, 24, 25, 26
+- **操作系统** 24
+- **运算符** 18–19, 20–21
+  - **条件运算符** 19, 20
+  - **逻辑的** 18, 19, 20
+- **输出** 24
+- **程序** 6, 7, 24, 25, 28
+- **旋转** 21
+- **屏幕** 10, 11, 13, 16, 17, 20, 21, 24, 25, 26, 27, 29
+- **角色** 5, 10, 12, 13, 22, 26, 27, 28
+- **故事板** 13
+- **子程序** 9, 11, 16, 17, 20, 21, 27
+- **符号** 17, 19
+- **创意工具** 22
+- **绘制** 12, 22
+- **触摸屏** 24
+- **真** 14, 17, 18, 19
 
 ## 答案
 
@@ -666,4 +679,4 @@ forever
 
 **第 24 页**  输入姓名和滑动触摸屏都是输入。显示消息和打印图片都是输出。
 
-**第 29 页**  bug 出在第一个“面向方向”积木上。它应该是 90，而不是 0。
+**第 29 页**  bug 出在第一个`面向方向`积木上。它应该是 90，而不是 0。

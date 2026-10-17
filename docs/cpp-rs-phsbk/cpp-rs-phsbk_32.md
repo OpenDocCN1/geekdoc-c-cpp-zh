@@ -1,3 +1,4 @@
+
 # 重载
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/overloading.html`](https://cel.cs.brown.edu/crp/idioms/overloading.html)
@@ -19,23 +20,15 @@ int twice(int x) {
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { fn twice(x: f64) -> f64 {
-
     x + x
-
 }
 
 // error[E0428]: the name `twice` is defined multiple times
-
 // fn twice(x: i32) -> i32 {
-
 //     x + x
-
 // }
-
 }
-
 ```
 
 实际上，即使是在 C++中，上述示例也可能会以更结构化的方式实现，甚至使用模板。
@@ -50,23 +43,14 @@ T twice(T x) {
 ```
 
 ```rs
-
 #![allow(unused)] fn main() { fn twice<T>(x: T) -> T::Output
-
 where
-
     T: std::ops::Add<T>,
-
     T: Copy,
-
 {
-
     x + x
-
 }
-
 }
-
 ```
 
 ## 重载方法
@@ -76,109 +60,68 @@ where
 当存在多个具有相同名称的方法，因为方法为多个特性定义时，必须在调用位置通过指定特性来区分所需的方法。
 
 ```rs
-
 trait TraitA {
-
     fn go(&self) -> String;
-
 }
 
 trait TraitB {
-
     fn go(&self) -> String;
-
 }
 
 struct MyStruct;
 
 impl MyStruct {
-
     fn go(&self) -> String {
-
         "称为固有方法".to_string()
-
     }
-
 }
 
 impl TraitA for MyStruct {
-
     fn go(&self) -> String {
-
         "称为特性 A 方法".to_string()
-
     }
-
 }
 
 impl TraitB for MyStruct {
-
     fn go(&self) -> String {
-
         "称为特性 B 方法".to_string()
-
     }
-
 }
 
 fn main() {
-
     let my_struct = MyStruct;
-
     // 调用固有方法
-
     println!("{}", my_struct.go());
-
     // 调用来自 TraitA 的方法
-
     println!("{}", TraitA::go(&my_struct));
-
     // 调用来自 TraitB 的方法
-
     println!("{}", TraitB::go(&my_struct));
-
 }
-
 ```
 
 这种情况的一个例外是，当方法都来自同一个泛型特性，并且实现有不同的类型参数时。在这种情况下，如果签名足以确定要使用哪个实现，则不需要指定特性来解析方法。这在使用[`From`特性](https://doc.rust-lang.org/std/convert/trait.From.html)时很常见。
 
 ```rs
-
 struct Widget;
 
 impl From<i32> for Widget {
-
     fn from(x: i32) -> Widget {
-
         Widget
-
     }
-
 }
 
 impl From<f32> for Widget {
-
     fn from(x: f32) -> Widget {
-
         Widget
-
     }
-
 }
 
 fn main() {
-
     // 调用<Widget as From<i32>>::from
-
     let w1 = Widget::from(5);
-
     // 调用<Widget as From<f32>>::from
-
     let w2 = Widget::from(1.0);
-
 }
-
 ```
 
 ## 重载运算符
@@ -205,209 +148,121 @@ int main() {
 ```
 
 ```rs
-
 #[derive(Clone, Copy)]
-
 struct Vec2 {
-
     x: f64,
-
     y: f64,
-
 }
 
 impl std::ops::Add for &Vec2 {
-
     type Output = Vec2;
-
     // 注意，这里的 self 类型是 &Vec2。
-
     fn add(self, other: Self) -> Vec2 {
-
         Vec2 {
-
             x: self.x + other.x,
-
             y: self.y + other.y,
-
         }
-
     }
-
 }
 
 fn main() {
-
     let a = Vec2 { x: 1.0, y: 2.0 };
-
     let b = Vec2 { x: 3.0, y: 4.0 };
-
     let c = &a + &b;
-
 }
-
 ```
 
-此外，有时最好为各种引用类型的组合提供特质实现，特别是对于实现 `Copy 特质` 的类型，因为它们可能希望使用或不需要引用。对于上面的例子，需要定义四个实现。
+此外，有时最好为各种引用类型的组合提供特质实现，特别是对于实现 `Copy` 特质的类型，因为它们可能希望使用或不需要引用。对于上面的例子，需要定义四个实现。
 
 ```rs
-
 #[derive(Clone, Copy)]
-
 struct Vec2 {
-
     x: f64,
-
     y: f64,
-
 }
 
 impl std::ops::Add<&Vec2> for &Vec2 {
-
     type Output = Vec2;
-
     fn add(self, other: &Vec2) -> Vec2 {
-
         Vec2 {
-
             x: self.x + other.x,
-
             y: self.y + other.y,
-
         }
-
     }
-
 }
 
 // 如果 Vec2 不那么小，可能希望在下面重用空间
-
 // 实现细节，因为它们需要所有者。
-
 impl std::ops::Add<Vec2> for &Vec2 {
-
     type Output = Vec2;
-
     fn add(self, other: Vec2) -> Vec2 {
-
         Vec2 {
-
             x: self.x + other.x,
-
             y: self.y + other.y,
-
         }
-
     }
-
 }
 
 impl std::ops::Add<&Vec2> for Vec2 {
-
     type Output = Vec2;
-
     fn add(self, other: &Vec2) -> Vec2 {
-
         Vec2 {
-
             x: self.x + other.x,
-
             y: self.y + other.y,
-
         }
-
     }
-
 }
 
 impl std::ops::Add<Vec2> for Vec2 {
-
     type Output = Vec2;
-
     fn add(self, other: Vec2) -> Vec2 {
-
         Vec2 {
-
             x: self.x + other.x,
-
             y: self.y + other.y,
-
         }
-
     }
-
 }
 
 fn main() {
-
     let a = Vec2 { x: 1.0, y: 2.0 };
-
     let b = Vec2 { x: 3.0, y: 4.0 };
-
     let c = a + b;
-
 }
-
 ```
 
 通过定义宏可以解决重复问题。
 
 ```rs
-
 #[derive(Clone, Copy)]
-
 struct Vec2 {
-
     x: f64,
-
     y: f64,
-
 }
 
 macro_rules! impl_add_vec2 {
-
     ($lhs:ty, $rhs:ty) => {
-
         impl std::ops::Add<$rhs> for $lhs {
-
             type Output = Vec2;
-
             fn add(self, other: $rhs) -> Vec2 {
-
                 Vec2 {
-
                     x: self.x + other.x,
-
                     y: self.y + other.y,
-
                 }
-
             }
-
         }
-
     };
-
 }
 
 impl_add_vec2!(&Vec2, &Vec2);
-
 impl_add_vec2!(&Vec2, Vec2);
-
 impl_add_vec2!(Vec2, &Vec2);
-
 impl_add_vec2!(Vec2, Vec2);
 
 fn main() {
-
     let a = Vec2 { x: 1.0, y: 2.0 };
-
     let b = Vec2 { x: 3.0, y: 4.0 };
-
     let c = a + b;
-
 }
-
 ```
 
 ## 默认参数
@@ -432,29 +287,19 @@ int main() {
 ```
 
 ```rs
-
 use std::ops::Shl;
 
 fn shift(
-
     x: u32,
-
     shift_amount: Option<u32>,
-
 ) -> u32 {
-
     let a = shift_amount.unwrap_or(2);
-
     x.shl(a)
-
 }
 
 fn main() {
-
     let res = shift(7, None); // 向右移位 2
-
 }
-
 ```
 
 ## 无关的重载
@@ -466,41 +311,24 @@ Rust 中完全的临时重载缺乏鼓励了定义特质，这些特质捕捉了
 这在 Rust 中常见于构造器静态方法的命名约定。它们不是都命名为 `new` 并带有不同的参数，而是通常被赋予形式为 `from_something` 的名称（[通常是这样的命名方式](https://rust-lang.github.io/api-guidelines/naming.html)），其中 `something` 根据构造的值而变化，或者如果适当，则使用更具体的名称。
 
 ```rs
-
 #![allow(unused)] fn main() { struct Vec3 {
-
     x: f64,
-
     y: f64,
-
     z: f64,
-
 }
 
 impl Vec3 {
-
     fn from_x(x: f64) -> Vec3 {
-
         Vec3 { x, y: 0.0, z: 0.0 }
-
     }
-
     fn from_y(y: f64) -> Vec3 {
-
         Vec3 { x: 0.0, y, z: 0.0 }
-
     }
-
     fn diagonal(d: f64) -> Vec3 {
-
         Vec3 { x: d, y: d, z: d }
-
     }
-
 }
-
 }
-
 ```
 
 这与 `From` 和 `Into` 特质支持的转换方法不同，这些方法具有额外的目的，即支持泛型函数上的特质界限，这些函数应该接受任何可转换为特定类型的类型。

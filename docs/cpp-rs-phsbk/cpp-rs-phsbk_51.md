@@ -1,3 +1,4 @@
+
 # Tests
 
 > 原文：[`cel.cs.brown.edu/crp/etc/tests.html`](https://cel.cs.brown.edu/crp/etc/tests.html)
@@ -10,11 +11,11 @@
 
 在 Rust 中，测试的处理方式类似。与 C++ 不同，测试注册机制和测试驱动程序都是由 Rust 本身提供的。
 
-此外，测试的组织方式也不同。在 C++ 中，单元测试是在被测试的单元之外单独定义的文件中定义的。在 Rust 中，它们通常在同一个文件中定义，通常在 `test` 子模块中，模块的包含由 `test` 功能标志通过 `#[cfg(test)]` 注解控制。
+此外，测试的组织方式也不同。在 C++ 中，单元测试是在被测试的单元之外单独定义的文件中定义的。在 Rust 中，它们通常在同一个文件中定义，通常在`test`子模块中，模块的包含由`test`功能标志通过`#[cfg(test)]`注解控制。
 
 下面的示例定义了一个小的类及其测试。在 C++ 中，这涉及到创建三个单独的文件：一个接口的头文件、接口的实现以及测试驱动程序。在 Rust 中，这一切都在一个文件中完成。
 
-```rs
+```cpp
 // counter.h
 #ifndef COUNTER_H
 #define COUNTER_H
@@ -59,71 +60,50 @@ BOOST_AUTO_TEST_CASE(test_counter_increment) {
 } 
 ```
 
-```rs
-
-#![allow(unused)] fn main() { // counter.rs
+```rust
+#![allow(unused)]
+fn main() {
+// counter.rs
 
 pub struct Counter(u32);
 
 impl Counter {
-
     pub fn new() -> Counter {
-
         Counter(0)
-
     }
 
     pub fn get(&self) -> u32 {
-
         self.0
-
     }
 
     pub fn increment(&mut self) {
-
         self.0 += 1;
-
     }
-
 }
 
 #[cfg(test)]
-
 mod test {
-
     use super::*;
 
     #[test]
-
     fn counter_initialize() {
-
         let c = Counter::new();
-
         assert_eq!(0, c.get());
-
     }
 
     #[test]
-
     fn counter_increment() {
-
         let mut c = Counter::new();
-
         c.increment();
-
         assert_eq!(1, c.get());
-
     }
-
 }
-
 }
-
 ```
 
-在被测试的模块内定义单元测试的好处是使被测试模块的内部结构对测试代码可见。这使得在不暴露给程序的其他部分的情况下（如在 C++ 中通过在头文件中包含声明并将测试固定点作为 `friend` 声明）对内部组件进行单元测试成为可能。
+在被测试的模块内定义单元测试的好处是使被测试模块的内部结构对测试代码可见。这使得在不暴露给程序的其他部分的情况下（如在 C++ 中通过在头文件中包含声明并将测试固定点作为`friend`声明）对内部组件进行单元测试成为可能。
 
-在 C++ 中运行测试涉及链接到 `boost_unit_test_framework`。在 Rust 中，可以使用 `cargo test` 运行测试。如果不使用 Cargo，可以通过将标志 `--test` 传递给 rustc 来编译测试，并运行生成的可执行文件。
+在 C++ 中运行测试涉及链接到`boost_unit_test_framework`。在 Rust 中，可以使用`cargo test`运行测试。如果不使用 Cargo，可以通过将标志`--test`传递给`rustc`来编译测试，并运行生成的可执行文件。
 
 ## 集成测试
 

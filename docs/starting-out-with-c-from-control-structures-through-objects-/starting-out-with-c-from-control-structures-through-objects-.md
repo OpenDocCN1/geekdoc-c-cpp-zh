@@ -1,40 +1,21 @@
+
 # C++ 入门指南：从控制结构到对象，附录 O：奇数复习题答案
 
+## 附录 O：奇数复习题答案
 
+### 第 1 章
 
-
-
-# 附录 O：奇数复习题答案
-
-# 第 1 章
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 31. 层级结构图：
+#### 31. 层级结构图：
 
 ![](img/3af3ad0d2f1fe20139551695356e239f_1_0.png)
 
-33. 7
+#### 33. 7
 
-35. 365
+#### 35. 365
 
-# 第 2 章
+### 第 2 章
 
-
-
-
+```cpp
 {
   cout << "Two mandolins likes creatures in the\n\n\n";
   cout << "dark\n\n\n";
@@ -42,28 +23,24 @@
   cout << " George Barker\n\n\n";
   return 0;
 }
-
-
-
-
+```
 
 B) 4
 C) 2
 D) 6
 E) 1
 
+`ReadCredit;`
 
-
-
-ReadCredit;
 显示“输入客户已使用的信誉额度：”
-ReadUsed.
 
-# 附录 O：奇数复习题答案
+`ReadUsed.`
 
-availableCredit = maxCredit - creditUsed;
+`availableCredit = maxCredit - creditUsed;`
+
 显示“客户的可用信誉额度为 $”
-显示 availableCredit.
+
+显示 `availableCredit`.
 
 ```cpp
 #include <iostream>
@@ -103,20 +80,24 @@ int main() {
 }
 ```
 
-cin >> number1 >> number2;
+`cin >> number1 >> number2;`
+
 赋值语句应该读取：
-quotient = static_cast<float>(number1) / number2;
+
+`quotient = static_cast<float>(number1) / number2;`
+
 最后一条语句缺少分号。
 
-# 附录 O：奇数复习题答案
+### 第 3 章
 
-main 函数头头应该是：
+`main` 函数头头应该是：
 
 ```cpp
 int main()
 ```
 
 复合赋值运算符使用不当。
+
 语句应该是：
 
 ```cpp
@@ -131,33 +112,19 @@ getline >> name;
 getline(cin, name);
 ```
 
-35. 6 12
+#### 35. 6 12
 
-37. 分钟：612000.0000
+#### 37. 分钟：612000.0000
+
 小时：10200.0332
+
 天：425.0014
+
 月份：13.9726
+
 年：1.1644
 
-# 第 4 章
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 附录 O：奇数复习题答案
-
-
+### 第 4 章
 
 ```cpp
 31. if (y == 0)
@@ -189,38 +156,13 @@ else
     cout << str1;
 ```
 
+59. `if/else` 结构应该用大括号括起来。62 `switch` 语句不能测试关系表达式。应该使用 `if-else` 语句。
 
+### 第 5 章
 
-
-
-
-
-
-
-
-59. if/else 结构应该用大括号括起来。62 switch 语句不能测试关系表达式。应该使用 if-else 语句。
-
-# 第 5 章
-
-
-
-# 附录 O：奇数复习题
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### 35.
 ```cpp
-35. int product = 0, num;
+int product = 0, num;
 while (product < 100)
 {
     cin >> num;
@@ -228,16 +170,18 @@ while (product < 100)
 }
 ```
 
+#### 37.
 ```cpp
-37. for (int row = 0; row < 1000; row++)
+for (int row = 0; row < 1000; row++)
     for (int col = 0; col < 15; col++)
         cout << '#';
     cout << endl;
 }
 ```
 
+#### 39.
 ```cpp
-39. for (int row = 0; row < 1000; row++)
+for (int row = 0; row < 1000; row++)
 {
     for (int col = 0; col < 15; col++)
         cout << '#';
@@ -245,8 +189,9 @@ while (product < 100)
 }
 ```
 
+#### 41.
 ```cpp
-41. char sure = 'X';
+char sure = 'X';
 while (sure != 'Y' && sure != 'N')
 {
     cout << "Are you sure you want to ";
@@ -254,8 +199,9 @@ while (sure != 'Y' && sure != 'N')
 }
 ```
 
+#### 43.
 ```cpp
-43. int x = 50;
+int x = 50;
 while (x > 0)
 {
     cout << x << " seconds to go.\n";
@@ -263,8 +209,9 @@ while (x > 0)
 }
 ```
 
+#### 45.
 ```cpp
-45. ifstream inputFile("Numbers.txt");
+ifstream inputFile("Numbers.txt");
 int number;
 while (inputFile >> number)
 cout << number << endl;
@@ -272,43 +219,32 @@ inputFile.close();
 ```
 
 47. false
-
 49. false
-
 51. false
-
 53. false
-
 55. false
-
 57. true
-
 59. true
-
 61. false
-
 63. true
 
-67. while 语句末尾不应该有分号。可以认为 bigNum 应该定义为 long 类型。
-count 应该初始化为 1。
+67. `while` 语句末尾不应该有分号。可以认为 `bigNum` 应该定义为 `long` 类型。
 
-69. do-while 循环测试的表达式应该是 choice == 1 而不是 choice = 1。
+`count` 应该初始化为 1。
 
+69. `do-while` 循环测试的表达式应该是 `choice == 1` 而不是 `choice = 1`。
 
+### 第 6 章
 
-
-
-# 附录 O：奇数复习题答案
-
-- 15. value
-- 17. local
-- 19. global
-- 21. local
-- 23. return
-- 25. last
-- 27. reference
-- 29. reference
-- 31. parameter lists
+- 15. `value`
+- 17. `local`
+- 19. `global`
+- 21. `local`
+- 23. `return`
+- 25. `last`
+- 27. `reference`
+- 29. `reference`
+- 31. `parameter lists`
 
 ```cpp
 33. double half(double num)
@@ -351,7 +287,7 @@ count 应该初始化为 1。
 average = (value1 + value2 + value3) / 3.0;
 ```
 
-该函数定义为 double 但没有返回任何值。
+该函数定义为 `double` 但没有返回任何值。
 
 59. 参数应该定义为：
 
@@ -360,12 +296,13 @@ int &value
 cin >> value;
 ```
 
-# 第 7 章
+### 第 7 章
 
-- 35. 序列 (sequence)
-- 37. push_back
-- 41. for (int i = 0; i < 20; i++)
-    cout << names[i] << endl;
+- 35. 序列 (`sequence`)
+- 37. `push_back`
+- 41. `for (int i = 0; i < 20; i++)`
+
+    `cout << names[i] << endl;`
 
 ```cpp
 43. const int SIZE = 10;
@@ -417,14 +354,13 @@ for (col = 0; col < NUM_COLS; col++)
 
 - 61. False
 
-# 第 8 章
+### 第 8 章
 
+### 第 9 章
 
-# 第 9 章
+- 17. 拼接 (`concatenate`)
 
-
-- 17. 拼接 (concatenate)
-    strcpy(str, name);
+    `strcpy(str, name);`
 
 ```cpp
 31. int wCount(char *str)
@@ -439,22 +375,31 @@ for (col = 0; col < NUM_COLS; col++)
 }
 ```
 
-- 43. isupper 函数只能用于测试字符，而不是字符串。
+- 43. `isupper` 函数只能用于测试字符，而不是字符串。
 - 45. 编译器不会分配足够的空间来容纳两个字符串。
 
-# 第 11 章
+### 第 11 章
 
-   info.lastName = "Smith"
-   info.middleName = "Bart"
-   info.firstName = "William"
+`info.lastName = "Smith"`
 
-- C) cout << info.lastName << endl;
-cout << info.middleName << endl;
-cout << info.firstName << endl;
-- 7. A) "Canton"
-B) "Haywood"
+`info.middleName = "Bart"`
+
+`info.firstName = "William"`
+
+- C) `cout << info.lastName << endl;`
+
+`cout << info.middleName << endl;`
+
+`cout << info.firstName << endl;`
+
+- 7. A) `"Canton"`
+
+B) `"Haywood"`
+
 C) 978
-D) 未初始化 (uninitialized)
+
+D) 未初始化 (`uninitialized`)
+
 - 11. 0 1 2
 
 ```cpp
@@ -498,7 +443,6 @@ return local;
 }
 ```
 
-
 ```cpp
 31. union Items
 {
@@ -510,8 +454,8 @@ return local;
 Items x;
 ```
 
-- 33. num = 452;
-- 35. enum Pets(DOGS, CATS, BIRDS, HAMSTERS);
+- 33. `num = 452;`
+- 35. `enum Pets(DOGS, CATS, BIRDS, HAMSTERS);`
 - 37. True
 - 39. False
 - 41. False
@@ -523,24 +467,13 @@ Items x;
 - 53. True
 - 55. True
 - 57. 结构声明没有标签。
-- 67. x 和 y 不能同时有效使用。
+- 67. `x` 和 `y` 不能同时有效使用。
 
-# 第 12 章
+### 第 12 章
 
 - 3. 内容会被擦除。（换句话说，文件被截断）。
-
-
-
-
-
-# 附录 O：奇数复习题答案
-
-
-
-
-
-- 23. put
-- 31. sequential
+- 23. `put`
+- 31. `sequential`
 
 ```cpp
 41. fstream places("places.dat", ios::in | ios::out);
@@ -567,16 +500,17 @@ file.open("info.dat", ios::in | ios::out);
 69. 文件类标志应该是 `ios::in`。此外，`get` 成员函数不能用于读取字符串。
 
 71. 文件类标志应该是 `ios::out`。此外，最后一行应该是：
+
 `dataFile.write(reinterpret_cast<char *>(&dt), sizeof(dt));`
 
-## 第13 章
+### 第13 章
 
 - 15. 类的职责是类负责知道的事情以及类负责执行的动作。
 - 23. 访问修符
-- 35. default
-- 37. ~
-- 39. default
-- 41. constructor, destructor
+- 35. `default`
+- 37. `~`
+- 39. `default`
+- 41. `constructor`, `destructor`
 
 ```cpp
 43. class Circle
@@ -592,6 +526,8 @@ file.open("info.dat", ios::in | ios::out);
         { return 3.14159 * radius * radius; }
 }
 ```
+
+
 
 ```cpp
 45. class Circle
@@ -612,36 +548,35 @@ file.open("info.dat", ios::in | ios::out);
 }
 ```
 
-- 47. Circle[5] = { 12, 7, 14, 8 };
+- 47. `Circle[5] = { 12, 7, 14, 8 };`
 
 | Animal | Medication | Nurse |
 | :--- | :--- | :--- |
 | Doctor | Invoice | Customer |
 | Patient | Client |
 
-
 ```cpp
 void DumbBell::setWeight(int w)
 ```
 
-DumbBell(200); 应该是：
+`DumbBell(200);` 应该是：
 
 ```cpp
 bar.setWeight(200);
 ```
 
-bar.weight 不能在类外部访问，因为类之前出现了访问修符，使其默认为私。该语句将无法工作。
+`bar.weight` 不能在类外部访问，因为类之前出现了访问修符，使其默认为私。该语句将无法工作。
 
-## 第14 章
+# 第14 章
 
+## 附录 O：奇数复习题答案
 
-# 附录 O：奇数复习题答案
 - 29. before
 - 37. 聚合
 - 49. True
 - 57. True
 - 59. 拷贝构造函数的参数应该是引用变量。
-- 61. 重载的 + 函数头应该是：
+- 61. 重载的 `+` 函数头应该是：
 
 ```cpp
 void operator+(const Point &right)
@@ -652,19 +587,19 @@ void operator+(const Point &right)
 ```cpp
 ```
 
-## 第15 章
+# 第15 章
 
 - 1. 当一个对象是另一个对象的特殊版本时，它们之间存在“是”的关系。这意味着一个类是另一个类的特殊版本。
 - 3. 基类访问规范规定了派生类如何继承基类的成员。成员访问规范规定了类外部代码如何访问成员。
 - 5. 不。
 - 7. 当派生类有一个与基类函数同名的函数，且基类函数不是虚拟的时，称该函数在派生类中被重定义。然而，如果基类函数是虚拟的，则称该函数被重写（覆盖）。
 - 9. 抽象基类不被实例化，而是作为类的基类。抽象基类代表了所有派自它的类的通用、抽象形式。当它拥有一个或多个虚拟函数时，它是抽象的。
-
 - 15. private
 - 23. 基类版本。
-- 35. class SoundSystem : public CDplayer, public Tuner, public CasettePlayer
-- 37. class B
-{
+- 35. `class SoundSystem : public CDplayer, public Tuner, public CasettePlayer`
+- 37. `class B`
+
+```
     private:
         int m;
     protected:
@@ -676,9 +611,11 @@ void operator+(const Point &right)
         int getN();
         virtual int calc()
         { return m * n; }
-}
-class D : public B
-{
+```
+
+`class D : public B`
+
+```
 protected:
         float q;
         float r;
@@ -689,15 +626,9 @@ protected:
         float getR();
         virtual float calc()
         { return q * r; }
-};
-
-
-
-
-
+```
 
 ## 附录 O：奇数复题解答
-
 
 # 第 16 章
 
@@ -713,10 +644,14 @@ protected:
 - 19. 特化的 (specialized)
 - 21. 关联的 (associative)
 - 23. bad_alloc
+
+```cpp
 char * allocBlock(int size)
 {
   char *ptr;
   try {
+```
+
 ```
     cout << arr[i] << endl;
 }
@@ -735,7 +670,7 @@ binary_search(vect.begin(), vect.end(), 7);
 - 43. 错误
 - 45. 正确
 - 47. `try` 块必须出现在 `catch` 块之前。
-- 49. 返回语句应为 `return * number;` 
+- 49. 返回语句应为 `return * number;`
 - 51. 类型参数 `T2` 未被使用。
 - 53. 语句应为 `count << valueSet[2] << endl;`
 
@@ -784,9 +719,9 @@ rear = (rear + 1) % queueSize;
 
 # 第 19 章
 
-- 1. 对于问题 12：num <= 0
-   对于问题 13：num > 0
-   对于问题 14：pos < size - 1
+- 1. 对于问题 12：`num <= 0`
+   对于问题 13：`num > 0`
+   对于问题 14：`pos < size - 1`
 - 3. 递归函数的效率较低，因为与每次函数调用相关的开销。
 - 5. 程序最终将耗尽栈内存并终止。
 - 7. 边界情况 (base case)
@@ -818,21 +753,32 @@ int findLargest(const int arr[], int start, int end)
 - 9. 叶子节点 (leaf node)
 - 11. 中序 (inorder)、前序 (preorder) 和后序 (posteriori)
 - 13. (递归函数)
-    显示中序 (节点指针)
-    如果指针不为空
-        显示中序 (节点指针 -> 左侧)。
-        显示节点的值。
-        显示中序 (节点指针 -> 右侧)。
-    结束如果
-    显示 InOrder
+
+显示中序 (节点指针)
+
+如果指针不为空
+
+    显示中序 (节点指针 -> 左侧)。
+    显示节点的值。
+    显示中序 (节点指针 -> 右侧)。
+
+结束如果
+
+显示 InOrder
+
 - 15. (递归函数)
-    显示后序 (节点指针)
-    如果指针不为空
-        显示后序 (节点指针 -> 左侧)。
-        显示后序 (节点指针 -> 右侧)。
-        显示节点的值。
-    结束如果
-    显示 Post Order
+
+显示后序 (节点指针)
+
+如果指针不为空
+
+    显示后序 (节点指针 -> 左侧)。
+    显示后序 (节点指针 -> 右侧)。
+    显示节点的值。
+
+结束如果
+
+显示 Post Order
 
 ## 附录 O：奇数复题解答
 
@@ -845,4 +791,3 @@ int findLargest(const int arr[], int start, int end)
 - 21. 正确
 - 23. 正确
 - 25. 错误
-

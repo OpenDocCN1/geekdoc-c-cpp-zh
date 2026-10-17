@@ -1,45 +1,9 @@
+
 # 英语语料语言学：时间、空间与体裁变异：Icame 32选论文（语言与计算机——实用语言学研究）
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/6910650ad69df72c967df4c631af744d_3_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 语料语言学的新进展以及语言变异与变化的研究
+## 语料语言学的新进展以及语言变异与变化的研究
 
 Kristin Bech 和 Gisle Andersen
 
@@ -47,25 +11,11 @@ Kristin Bech 和 Gisle Andersen
 
 语料使用者的任务是评估语料是否适用于其研究问题。并非所有的语料都适用于所有的类型的研究问题。
 
-这种温和的告诫来自 Stig Johansson (2012: 54)，他在奥斯陆举办了 ICAME 32 会议。这是对 Meyer 在 2004 年文章《你真的能在语言语料中研究语言变异吗？》中警告语的回应，或者说是完全赞同。在文中，Johansson 讨论了文本分布中的社会和情境因素，以及研究问题与语料数据解释之间的密切关系。他遗憾于语料语言学与社会语言学之间明显的鸿沟，这体现在《语言变异与变化手册》（Chambers 等人，2002）中仅包含了一篇关于语料的文章。然而，Stig Johansson 的格右号是“坚持下去（jobba soldier on）”，他并不是一个容易放弃的人，他对未来的建议包括超越语料语言学以开发新方法。
-
-语料语言学的新进展以及语言变异与变化的研究
-Kristin Bech 和 Gisle Andersen
-奥斯陆大学与 NHH 挪威经济学院
-
-语料使用者的任务是评估语料是否适用于其研究问题。并非所有的语料都适用于所有的类型的研究问题。
-
-这种温和的告诫来自 Stig Johansson (2012: 54)，他在奥斯陆举办了 ICAME 32 会议。这是对 Meyer 在 2004 年文章《你真的能在语言语料中研究语言变异吗？》中警告语的回应，或者说是完全赞同。在文中，Johansson 讨论了文本分布中的社会和情境因素，以及研究问题与语料数据解释之间的密切关系。他遗憾于语料语言学与社会语言学之间明显的鸿沟，这体现在《语言变异与变化手册》（Chambers 等人，2002）中仅包含了一篇关于语料的文章。然而，Stig Johansson 的格右号是“坚持下去（jobba soldier on）”，他并不是一个容易放弃的人，他对未来的建议包括超越语料语言学以开发新方法。
-
-（注：原文后续存在大量重复段落，根据指令“不要重复输出原文”，此处仅保留核心内容并确保翻译逻辑连贯，已剔除冗余的重复部分。）
-
-
-
-
+这种温和的告诫来自 Stig Johansson (2012: 54)，他在奥斯陆举办了 ICAME 32 会议。这是对 Meyer 在 2004 年文章《你真的能在语言语料中研究语言变异吗？》中警告语的回应，或者说是完全赞同。在文中，Johansson 讨论了文本分布中的社会和情境因素，以及研究问题与语料数据解释之间的密切关系。他遗憾于语料语言学与社会语言学之间明显的鸿沟，这体现在《语言变异与变化手册》（Chambers 等人，2002）中仅包含了一篇关于语料的文章。然而，Stig Johansson 的格言是“坚持下去（jobba soldier on）”，他并不是一个容易放弃的人，他对未来的建议包括超越语料语言学以开发新方法。
 
 ## 语料语言学的新进展
 
-时间上的变异：英语历史中的语料研究
+### 时间上的变异：英语历史中的语料研究
 
 Christian Cairn 的文章探讨了在描述语言过去阶段时，基于语料的描述所面临的最重要局限性之一，即使对于英语这样记录详实的语言也是如此，即可用数据普遍局限于书面媒介。通过观察一种特定的分裂句结构——类型为 *What I did was called the police*（我做的事是叫警察）的特殊分裂句，Maire 展示了利用语料研究口语变化的价值。他通过关注两种证据讨论了研究“实时真实口语”的潜力：一方面是20世纪的录音，特别是第一次世界大战声机委员会（World War 1 Phonographische Kommission）的录音，他认为这是“研究历史方言学的独特资源”；另一方面是口语体裁，它们通过“间接”提供了有关口语语言历史的信息。利用来自文学在线（LION）数据库、老贝利法院判决（Old Bailey proceedings）以及 COHA 和 COCA 语库的数据，他能够阐明这种与口语英语密切相关的焦点结构的发展，从而展示了语料语言学家如何处理英语早期阶段的口语。
 
@@ -73,27 +23,17 @@ Lilo Moessner 比较了17世纪科学家罗伯特·鲍耳（Robert Boyle）的�
 
 Gjertud Stenbrenden 的工作聚焦于大元音变（GVS），她最近在博士论文中显示，大元音变很可能比以往所声称的时间要早。在这篇文章中，她考虑了中英语 ū 的双元音化拼写，利用了早期和晚期中英语的语言图谱（LAME 和 LAEME）。ū 的拼写通常是 `<u>`，这意味着当出现如 `<u>` 和 `<ow>` 这样的不规则拼写时，它们可能指示双元音化。然而，问题在于，这些双字母组合被盎格鲁-诺曼抄写员用来代表像法语那样的单元音 /u/。因此，
 
-4 Kristin Bech & Gisle Andersen
-
 拼写具有歧义性。然而，Stenbrenden 指出，必须根据其所在的整个正字系统来评估不规则拼写，在这种情况下，某些情况下像 `<u>` 这样的拼写可以作为双元音化（即元音推移）的证据。Stenbrenden 的严谨研究得出结论：这些不规则拼写确实表明双元音化早在13世纪中期就开始了，但直到15世纪才有了无可争议的证据。
 
-空间上的变异：英语当代特征的语料研究
+### 空间上的变异：英语当代特征的语料研究
 
 Christopher Koch 和 Tobias Bernaisch 关注印度次大陆地区使用的英语变体，统称为南亚英语。他们的论文聚焦于所谓的“新非宾语结构”（NDTs；参见 Hoffman and Mukherjee 2007），即在现代英语中可以以非宾语结构形式证实的，但在其历史来源变体（英国英语）的现代版本中无法被证实的动词。诸如 GIFT、BRIEF 和 INFORM 这样的动词在这些变体中用于双宾语结构（例如：*to get him a dream*），这种结构源自英国英语中如 *GIVE* 等语义上属于非宾语动词的类别。作者假设，在英语语言已获得坚固宪法承认的南亚英语变体中（即印度英语、巴基斯坦英语和斯里兰卡英语），并非 NDTs 都能被证实的；而在英语在各自宪法中未植根或基本植根的变体中，NDTs 的发生频率较低，如孟加拉国英语、马尔代夫英语（SAVE）和尼泊尔英语。通过使用南亚英语变体的数据，并辅以谷歌高级搜索工具（GAST）的搜索，作者通过考虑六种南亚英语变体的频率和词汇多样性，为该假设提供了至少部分的支持。他们表明，这种情况在所有所调查的变体中都存在，但印度英语似乎具有特殊地位，只有在这一变体中，NDTs 在报纸以及更广泛的文本样本中才能以较高的频率被证实。
 
 Xinue Yao 和 Peter Collins 也关注英语的区域变体，他们考察了英国、美国、澳洲和新西兰英语四种变体中的完成时（PP）结构，涉及其分布、体裁变异和功能属性。作者在功能上区分了持续完成（continuative）、结果完成（resultant）和实验完成（experimental perfects），并探讨了 PP 的各种解读是代表了不同的语义结构，还是单一意义的不同关系。他们认为，这类理论问题应当通过对自然发生的语言数据进行详细分析来阐明，并且
 
-## 语料语言学的新进展
-
 研究显示功能类别的分布对体裁非常敏感，因为实验完成时通常出现在学术写作中，而结果完成时常见于新闻报道。Johan Elness 文章的起点是 Leech 和 Fallon (1992) 提出的印象，即美国和英国之间存在显著的文化差异，这是通过对 Brown 语料库词汇频率的研究得出的。利用一系列较新的语料库作为类似比较的基础，Elness 测试了以下观点：美国是一个更现代、军事化且动态的社会，而英国更关注家庭和情感生活的“女性”价值观。他检查了英国和美国语料库中的各种特征，特别是男性与女性代词的使用、词汇动词的频率，以及一组在1961 年在美国或英国英语中过度代表的“通用文化术语”。与 1961 年数据的比较显示，尽管男性代词仍占多数，但在较新的语料库中平衡变得更加平均，这种发展在即兴对话中进展得更为顺利。关于基于变体的文化术语，研究检测到明显的趋同趋势，差异逐渐缩小。在可能的情况下，Elness 还将澳大利亚英语和新西兰英语纳入比较。这两个大洋洲变体系统性地使自己处于美国英语和英国英语之间，并且它们在追求更大性别平等方面处于领先地位。
 
 Kathrin Luckmann de Lopez 文章考察了泰恩斯英语（Tyneside English）中呼唤词 man 的使用。分类 man 是困难的，因为这个元素在语法上被限制在末尾，与通常位于句首的呼唤词不同，而且 man 具有多种不同的功能，并非所有功能都与之相关。她接着继续考虑了 man 的各种功能，作为召唤注意的典型呼唤功能、man 的文本和交互功能，并发现 man 确实具有所有这些功能，但典型功能频率最低，而人际功能（如表达团结、无礼、模拟无礼和缓和）在她的数据中频率最高。她还考虑了韵律，并显示 man 的使用在很大程度上与语调轮廓和起伏相吻。man 在泰恩斯英语中的泛泛，加上其典型的人际功能和在局部声调中的出现，使她能够
-
-
-
-
-
-# 6 Kristin Beck & Gisle Andersen
 
 结论认为男性被用作泰赛德（Tyneside）地区地区工人阶级身份的标记。
 
@@ -109,37 +49,52 @@ Natassia Schütz 的贡献涉及学术用途英语（EAP），词汇教学在该
 
 编辑部感谢贡献者遵守截止日期，仔细考虑并采纳审稿人对文章的意见，并对编辑提出的问题和要求做出了迅速回应。我们也非常感谢审稿人，他们的相关意见使作者能够改进文章。
 
-8 Kristin Beck & Gisle Andersen
-
-## # 参考文献
+## 参考文献
 
 - Andersen, G. (即待出版), 'Using the corpus-driven method to chart pragmatic neologisms', in: H. Pichler (ed.) New directions in discourse-pragmatic variation and change. Cambridge: Cambridge University Press.
+
 - Andersen, G. (2010), 'How to use corpus linguistics in sociolinguistics', in: A. O'Keefe and M. McCarthy (eds.) The Routledge handbook of corpus linguistics. London and New York: Routledge, 54-61.
+
 - Andersen, and G. Hofland (2012), 'Building a large corpus based on newspapers on the web', in: G. Andersen (ed.) Exploring newspaper language: using the web to create and investigate a large corpus of modern Norwegian. Amsterdam: 1-30.
+
 - Baker, P. (2009), 'The BE06 corpus of British English and recent language change', International journal of corpus linguistics, 14(3): 312-337.
+
 - Biber, D. (1998), Variation across speech and writing. Cambridge: Cambridge University Press.
+
 - Jambers, J. K. Prudgill and N. Seilling (eds.) (2002), The handbook of language variance and change. Maiden, MA: Blackwell.
+
 - Claridge, C. (2008), 'Historical corpora', in: A. Lüding and K. Mytó (eds.) Corpus linguistics (Handbücher für Sprach- und Kommunikationswissenschaft 29/1). Berlin: Mouton de Groyer. 242-259.
+
 - Davies, M. (2009), 'The 385+ word corpus of Contemporary American English (1990-2008+): design, architecture, and linguistic insights', International journal of corpus linguistics, 14(2): 159-190.
+
 - Gabrielas, C., T. McNerney, P. J. Diggle and P. Baker (2012), 'The peaks and troughs of corpus-based contextual analysis', International journal of corpus linguistics, 17(2): 151-175.
+
 - Gries, S. T. and M. Hilpert (2008), 'The identification of stages in diachronic data: variability-based neighbour clustering', Corpora, 3(1): 59-81.
+
 - Hoffman, S. J. Mukherjee (2007), 'Ditransitive verbs in Indian English and British English: a corpus-linguistic study', AAA - Regeln aus Linguistik und Amerikanistik, 32(1): 5-52.
+
 - Johansson, S. (2012), 'Interpreting textual distribution: social and situational factors', in: S. Yamazaki and R. Riley (eds.) Approaching language through corpus. A Festschrift in honour of Toshio Saito. Berlin: Peter Lang. 25-63.
+
+
+
 - Leech, G. (2012), 'Why linguistic forms decline and disappear? The neglected side of recent change in Standard English', paper presented at CICC2012, Jaën.
-
-
-
-
 
 ## 语库语言学的新进展
 
 Meyer, C. F. (2004), ‘你真的能在语言语库中研究语言变异吗？’,American speech, 79(4): 339-355.
+
 Millar, N. (2009), ‘TIME中的模态动词’,International journal of corpus linguistics, 14(2): 191-220.
+
 Renouf, A. (2007), ‘追踪英国媒体中的词汇生产力与创造力’,in: J. Munat (ed.) Lexical creativity, texts and contexts. Amsterdam: John. Benjamins. 61-90.
+
 Renouf, A. (1993), ‘时间中的词：来自动态语料语库的初步发现：设计、分析与利用。’,in: J. Aarts, P. De Haan and N. Oostdijk (eds.) English language corpora. Amsterdam: Rodopi, 279-288.
+
 Schneider, E. W. (2007), 后殖民英语：世界各地的变体。Cambridge: Cambridge University Press.
+
 Sincclair, J. M. (2004), 信任测试：语言、语库与话语。London: Routledge.
+
 Swales, J. (1990), 体裁分析：学术与研究环境中的英语。Cambridge: Cambridge University Press.
+
 Torgersen, E. N., C. Gabrielatos, S. Hoffman and S. Fox (2011), ‘伦敦英语中语用标记的基于语库的研究’,Corpus linguistics and linguistic theory, 7(1): 93-118.
 
 ## 编写口语英语的语库历史：分裂结构难以捉摸的过去
@@ -161,9 +116,11 @@ Christian Mair
 对于历史语言学家来说，只要可以假设记录话语仅仅是记录在纸上，那么使用写作来记录话语是没有问题的。然而，这种对新技术无害的假设可能只在识字的最早期阶段是合理的，例如当古英语的抄写员首次尝试使用稍微修改过的拉丁字母为后世记录他们人民的口头诗歌时。到古英语晚期，英语已经拥有了基于西撒克森方言的标准正统，而现代早期英语的“登堡”革命毫无疑问地让书面语言的历史日益遵循其自身的动态机制。结果是，虽然书面英语和口语英语无疑实例化相同的底层语法，但个体结构在两种模态中出现的频率存在巨大差异，以至于一个专注于如 (1) 所示类型结构的普通人，不太可能在自发言中出现如 (2) 中复杂的标准前置语：
 
 - (1) what is a common occurrence you'll have somebody coming into a college to go along with it on the work desired or dance with the desired and you'll go along to that workshop and will be full of bodied students [..] (DCPSE DI A01)
+
 - (2) In a recent paper (Kendall-Cook et al, 1990), we demonstrated a modified sodium deoxy sulphate polypeptide electrophoresis (SDS-PAGE) method for visualization of factor VIII heavy chain (FVIII HC) polypeptides (FLOB 109)
 
 (1) what is a common occurrence you'll have somebody coming into a college to go along with it on the work desired or dance with the desired and you'll go along to that workshop and will be full of bodied students [..] (DCPSE DI A01)
+
 (2) In a recent paper (Kendall-Cook et al, 1990), we demonstrated a modified sodium deoxy sulphate polypeptide electrophoresis (SDS-PAGE) method for visualization of factor VIII heavy chain (FVIII HC) polypeptides (FLOB 109)
 
 省略 `that` 的变体符合这些要求：一个具有整体主-谓-补结构的复杂复合句，其中主语体现为限制从句，补语体现为名词句。这种分析对于省略 `that` 的变体是不可能的。从结构上说，后部分作为独立的主句工作——使得第一部分（what is a common occurrence）成为不完整的片段。
@@ -175,13 +132,10 @@ Christian Mair
 相比之下，示例 (2) 所示的复杂名词短语前置是一种信息最大化的手段，这在大多数口语交流类型中并不是优先考虑的。语音和写作语法偏好的这种明显对比提出了两个问题：
 
 - (a) 我们的基于语库的历史真的是英语的历史，还是仅仅书面（标准）语言的历史，可能误导甚至忽略了非口语的发展？
+
 - (b) 如果是这样，我们能否恢复大部分丢失或淹没的口语历时性？毕竟，像示例 (1) 所示的结构可能不是新发明，而是有自己的历史。
 
 目前
-
-
-
-
 
 ## 14 基督教·迈尔 (Christian Mair)
 
@@ -198,7 +152,9 @@ Christian Mair
 第一个设计用于研究现代口语持续变化的通用语料库是 DCPSE（现代英语历时语料库），它涵盖了 20 世纪 50 年代后期到 90 年代初的时期。作为一个约 900,000 字、将口语还原为正字转录的小型语料库，它特别适用于研究高频的形态句法特征，例如以下类型的变异：
 
 - (3a) What I did to call the police. [带 to 不定式]
+
 - (3b) What I did was call the police. [不带 to 不定式]
+
 - (3c) What I did I was called the police. [有限分裂句]
 
 这是 wh-分裂句（或“伪分裂句”）的一种特定子类型，Quirk 等人将其定义为“本质上是一个带有名词性从句作为主语或补语的 SVC 句子”（1985: 1387）。在我们的示例中，名词性或“分裂”句（*what I did*）包含了动词 do 的形式而非其他动词，在 (3a) 和 (3b) 中，分裂成分实现为标记或未标记的不定式句。虽然这在现代英语的两部主要参考语法（Quirk et al. 1985: 1387-1389, Huddleston and Pullum 2002: 1420-1423）以及 Biber 等人（1999: 959-960）中被认可，但这些参考语法并未说明它们也受到持续历时变化的影响，而20 世纪显示出从旧的 (3a) 向历史较近变体 (3b) 的明显趋势。这种趋势在 Brown 系列语料库和 DCPSE 的“实时”分析中表现得非常明显（Mair 2012）。对国际英语语料库（MICE*）十个子语料库的同步跨变比较显示，该语料库集中代表的许多新英语（均为母语变体）都受到了这一发展的影响。
@@ -206,14 +162,12 @@ Christian Mair
 注意，在随后的分析中，伪分裂句的定义比参考语法要宽泛，不仅包括 what-分裂句，还包括可能的修饰性数量词或序数以及形容词作为 all/the only/first/next/last thing：
 
 - (3d) All/the thing/the next thing I did was to call the police. [带 to 不定式]
+
 - (3e) All/the thing/the next thing was calling [不带 to 不定式]
+
 - (3f) All/the thing/the next thing I did was called the police. [有限句]
 
 这种扩展并没有问题（尽管 Tognini-Bonelli 1992; Caude 2009: 57-58 有不同观点）。与 What I did was call the police 和 I called the police 不同，前者在真值上是完全等值的。然而，它们在话语功能和对信息结构的影响上具有可比性。此外，结构 (3d) 和 (3e) 的“松散”变体比核心伪分裂句早两个世纪（Taugrott 2008）。
-
-
-
-
 
 # 基于语料库的口语英语写作
 
@@ -229,141 +183,145 @@ Christian Mair
 
 尽管这些录音并没有构成一个平衡的英语语料库。说话者被要求阅读圣经中的章节，特别是《浪子比喻》（路加福音 XV, 11-32），讲述民间故事，朗诵诗歌，某些歌曲或在某些情况下简单地计数。考虑到当时的录音技术和编译者的研究重点，非正式对话的记录既不可行也不符合理想。综合考虑来看，这些数据是研究历史方言语音学的独特资源，其质量完全符合仪器语音学
 
-分析的标准：
-
 ## 18 Christian Mair
 
 分析，如下所示对一个诺福克知情者的长高后元音和重读中心元音（词汇集 GOOSE 和 STRUT）的测量所示：
 
 | TextGrid Nortf0880-1 | File Edit Query View Select Interval Boundary Tier Spectrum Pch Intensity Formant Pulses |
+
 |---|---|---|---|---|---|---|---|---|---|------|
+
 | two | | | | | | | | 2.175911 0.687599 2.25670 | | | |
+
 | 0.3009 | | | | | | | | | | | | | | |
+
 | -156 | | | | | | | | | | | | | | |
+
 | 5000 Hz | | | | | | | | | | | | | | |
+
 | 6 Hz | | | | | | | | | | | | | | |
+
 | Gr 1 | | | | | | | | | | | | | | |
+
 | 2 | | | | | | | | | | | | | | |
+
 | 3 | | | | | | | | | | | | | | |
+
 | 4 | | | | | | | | | | | | | | |
+
 | 5 | | | | | | | | | | | | | | | |
+
 | 6 | | | | | | | | | Nortf0880-1 | | |
+
 | 7 | | | | | | | | | m | | | |
+
 | 8 | | | | | | | | | rdp | | | |
+
 | 9 | | | | | | | | | vowels | | | | |
+
+
+
 | 1.991590 1.991590 | 0.183421 | 0.687599 | 0.553192 | | | | | | |
 
 可见部分：0.817262 秒
+
 总时长：115.45542 秒
 
 图 1 “two sons”中元音的测量，由出生于 19 世纪 90 年代的诺福克知情者于 1971 年记录。
 
-由于短语 two sons——源自圣经中的浪子比喻——在许多其他录音中反复出现，不同说话者之间的比较研究是可行的。然而，对于上述提出的问题（如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代），材料并没有给出答案。
+由于短语 `two sons`——源自圣经中的浪子比喻——在许多其他录音中反复出现，不同说话者之间的比较研究是可行的。然而，对于上述提出的问题（如 `(3c)` 和 `(3f)` 所示的“口语”类型伪分裂构造的年代），材料并没有给出答案。
 
 ## 3. 代说语言：反映在语音生成基因中的语言
 
-(3c) 和 (3f) 的历史，即 What/All 概念类型。对于如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代，材料并没有给出答案。
+`(3c)` 和 `(3f)` 的历史，即 `What/All` 概念类型。对于如 `(3c)` 和 `(3f)` 所示的“口语”类型伪分裂构造的年代，材料并没有给出答案。
 
-1915 年，普鲁士王皇家留声机委员会由几位主要是来自柏林的语言学家创立，他们意识到大量战俘的存在是一个独特的机会，可以记录来自具有不同语言和文化背景的人群的语音和音乐。奥古斯特·布兰德尔（August Brandl, (1855-1940)）是该小组的活跃成员，并帮助收集了大量的民歌和方言录音，并在 20 世纪 20 年代的的一些出版物中对其进行了分析——这在当时是非常具有创新的——通常将录音包含在胶胶片中（例如，柏林 1926-27）。
+1915 年，普鲁士王皇家留声机委员会由几位主要是来自柏林的语言学家创立，他们意识到大量战俘的存在是一个独特的机会，可以记录来自具有不同语言和文化背景的人群的语音和音乐。奥古斯特·布兰德尔（`August Brandl`, (1855-1940)）是该小组的活跃成员，并帮助收集了大量的民歌和方言录音，并在 20 世纪 20 年代的的一些出版物中对其进行了分析——这在当时是非常具有创新的——通常将录音包含在胶胶片中（例如，柏林 1926-27）。
 
-由于随后的政治事件——第二次世界大战和冷战期间的德国分裂是最著名的——这部分宝贵的数据在很大程度上被遗忘了。幸运的是，作为柏林声音档案馆一部分的大部分录音在 20 世纪 90 年代数字化了，尽管不是专业的语言学项目，而是作为一个观察柏林数字遗产的广泛项目的一部分（Ziegler 2000; Mahnhold 2003, Lange 2010）。英国图书馆获取了 821 个柏林声音文件的副本，并将其纳入其名为“英国及英联邦国家读物柏林声音档案馆”（Lautarchiv British & Commonwealth Readings，C1315）的收藏中。这些记录中的一小部分已供任何人听到⁴。
+由于随后的政治事件——第二次世界大战和冷战期间的德国分裂是最著名的——这部分宝贵的数据在很大程度上被遗忘了。幸运的是，作为柏林声音档案馆一部分的大部分录音在 20 世纪 90 年代数字化了，尽管不是专业的语言学项目，而是作为一个观察柏林数字遗产的广泛项目的一部分（`Ziegler 2000`; `Mahnhold 2003`, `Lange 2010`）。英国图书馆获取了 821 个柏林声音文件的副本，并将其纳入其名为“英国及英联邦国家读物柏林声音档案馆”（`Lautarchiv British & Commonwealth Readings`，`C1315`）的收藏中。这些记录中的一小部分已供任何人听到⁴。
 
-尽管这些录音并没有构成一个平衡的英语语料库。说话者被要求阅读圣经中的章节，特别是《浪子比喻》（路加福音 XV, 11-32），讲述民间故事，朗诵诗歌，某些歌曲或在某些情况下简单地计数。考虑到当时的录音技术和编译者的研究重点，非正式对话的记录既不可行也不符合理想。综合考虑来看，这些数据是研究历史方言语音学的独特资源，其质量完全符合仪器语音学
-
-分析，如下所示对一个诺福克知情者的长高后元音和重读中心元音（词汇集 GOOSE 和 STRUT）的测量所示：
+尽管这些录音并没有构成一个平衡的英语语料库。说话者被要求阅读圣经中的章节，特别是《浪子比喻》（路加福音 XV, 11-32），讲述民间故事，朗诵诗歌，某些歌曲或在某些情况下简单地计数。考虑到当时的录音技术和编译者的研究重点，非正式对话的记录既不可行也不符合理想。综合考虑来看，这些数据是研究历史方言语音学的独特资源，其质量完全符合仪器语音学分析，如下所示对一个诺福克知情者的长高后元音和重读中心元音（词汇集 `GOOSE` 和 `STRUT`）的测量所示：
 
 | TextGrid Nortf0880-1 | File Edit Query View Select Interval Boundary Tier Spectrum Pch Intensity Formant Pulses |
+
 |---|---|---|---|---|---|---|---|---|---|------|
+
 | two | | | | | | | 2.175911 0.687599 2.25670 | | | |
+
 | 0.3009 | | | | | | | | | | | | | | | |
+
 | -156 | | | | | | | | | | | | | | | | |
+
 | 5000 Hz | | | | | | | | | | | | | | | | |
+
 | 6 Hz | | | | | | | | | | | | | | | | |
+
 | Gr 1 | | | | | | | | | | | | | | | | |
+
 | 2 | | | | | | | | | | | | | | | | |
+
 | 3 | | | | | | | | | | | | | | | | |
+
 | 4 | | | | | | | | | | | | | | | | | |
+
 | 5 | | | | | | | | | | | | | | | | | |
-| 6 | | | | | | | | | Nortf0880-1 | | | | | | | | |
+
+| 6 | | | | | | | | | Nortf0880-1 | | | | | | | |
+
 | 7 | | | | | | | | | m m | | | | | | | |
+
 | 8 | | | | | | | | | r r | | | | | | | | |
+
 | 9 | | | | | | | | | vowels | | | | | | | |
+
 | 1.991590 1.991590 | 0.183421 | 0.687599 | 0.553192 | | | | | | |
 
 可见部分：0.817262 秒
+
 总时长：115.45542 秒
 
 图 1 “two sons”中元音的测量，由出生于 19 世纪 90 年代的诺福克知情者于 1971 年记录。
-
-由于短语 two sons——源自圣经中的浪子比喻——在许多其他录音中反复出现，不同说话者之间的比较研究是可行的。然而，对于上述提出的问题（如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代），材料并没有给出答案。
-
-## 3. 代说语言：反映在语音生成基因中的语言
-
-(3c) 和 (3f) 的历史，即 What/All 概念类型。对于如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代，材料并没有给出答案。
-
-1915 年，普鲁士王皇家留声机委员会由几位主要是来自柏林的语言学家创立，他们意识到大量战俘的存在是一个独特的机会，可以记录来自具有不同语言和文化背景的人群的语音和音乐。奥古斯特·布兰德尔（August Brandl, (1855-1940)）是该小组的活跃成员，并帮助收集了大量的民歌和方言录音，并在 20 世纪 20 年代的的一些出版物中对其进行了分析——这在当时是非常具有创新的——通常将录音包含在胶胶片中（例如，柏林 1926-27）。
-
-由于随后的政治事件——第二次世界大战和冷战期间的德国分裂是最著名的——这部分宝贵的数据在很大程度上被遗忘了。幸运的是，作为柏林声音档案馆（Berliner Lautarchiv）一部分的大部分录音在 20 世纪 90 年代数字化了，尽管不是专业的语言学项目，而是作为一个观察柏林数字遗产的广泛项目的一部分（Ziegler 2000; Mahnhold 2003, Lange 2010）。英国图书馆获取了 821 个柏林声音文件的副本，并将其纳入其名为“英国及英联邦国家读物柏林声音档案馆”（Lautarchiv British & Commonwealth Readings，C1315）的收藏中。这些记录中的一小部分已供任何人听到⁴。
-
-尽管这些录音并没有构成一个平衡的英语语料库。说话者被要求阅读圣经中的章节，特别是《浪子比喻》（路加福音 XV, 11-32），讲述民间故事，朗诵诗歌，某些歌曲或在某些情况下简单地计数。考虑到当时的录音技术和编译者的研究重点，非正式对话的记录既不可行也不符合理想。综合考虑来看，这些数据是研究历史方言语音学的独特资源，其质量完全符合仪器语音学
-
-分析，如下所示对一个诺福克知情者的长高后元音和重读中心元音（词汇集 GOOSE 和 STRUT）的测量所示：
-
-图 1 “two sons”中元音的测量，由出生于 19 世纪 90 年代的诺福克知情者于 1971 年记录。
-
-由于短语 two sons——源自圣经中的浪子比喻——在许多其他录音中反复出现，不同说话者之间的比较研究是可行的。然而，对于上述提出的问题（如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代），材料并没有给出答案。
-
-## 3. 代说语言：反映在语音生成基因中的语言
-
-(3c) 和 (3f) 的历史，即 What/All 概念类型。对于如 (3c) 和 (3f) 所示的“口语”类型伪分裂构造的年代，材料并没有给出答案。
-
-（注：此处由于输入文本重复，已根据指令要求不重复输出重复的翻译内容）
-
-
-
-
 
 ## 编写基于语料库的口语历史
 
-说，而且这些特征可以通过语料库方法检索。(Culpepper Kytö 2010: 81)
+说，而且这些特征可以通过语料库方法检索。(`Culpepper Kytö 2010: 81`)
 
-在确定了该结构的年代后，我们现在可以开始探索它的起源。它是通过由连词明确标记的从句还原而来的吗？例如：what I did was that I called the police $\leftarrow$ what I did was that I called the police？还是将其更好地理解为一种特殊的结构，这种结构在非正式口语中涌现出突现语法（Hopper 2001, 2004），并因为被认为是不合语法的（anacutholic）而被阻止进入书面语——就像错位句或代词$^8$ 通常会在书面文本中被删减一样？
+在确定了该结构的年代后，我们现在可以开始探索它的起源。它是通过由连词明确标记的从句还原而来的吗？例如：`what I did was that I called the police` ← `what I did was that I called the police`？还是将其更好地理解为一种特殊的结构，这种结构在非正式口语中涌现出突现语法（`Hopper 2001, 2004`），并因为被认为是不合语法的（`anacutholic`）而被阻止进入书面语——就像错位句或代词⁸ 通常会在书面文本中被删减一样？
 
-从纯粹的时间角度来看，还原分析是可能的。LION 包含了以下由连词引导的及物句实例，该实例产生于未标记形式的最早文献记录之前的几十年：
+从纯粹的时间角度来看，还原分析是可能的。`LION` 包含了以下由连词引导的及物句实例，该实例产生于未标记形式的最早文献记录之前的几十年：
 
-- (12) No Madam (I answer'd) 'tis Blasius but Izadora has done it, that glorious confession she made him in his favour was the essentially cause of it, all that Blasius did, was he kill'd me not, 'twas vnecall'd Daughter gave me my Life by giving me that makes us value [...] (Roger Boyle, Earl of Orrery, Parthenissa I [1655], Literature Online database)
+- (12) No Madam (I answer'd) 'tis Blasius but Izadora has done it, that glorious confession she made him in his favour was the essentially cause of it, all that Blasius did, was he kill'd me not, 'twas vnecall'd Daughter gave me my Life by giving me that makes us value [...] (`Roger Boyle, Earl of Orrery, Parthenissa I [1655]`, `Literature Online database`)
 
 然而，为了使还原分析具有合理性而非仅仅是可能的，我们期望所谓的完整变体比还原形式更常见。事实显然并非如此，因为 `that` 从句和对应的未标记形式直到 $20$ 世纪都同样稀少：
 
-- (13) He a Tradesman?'Tis me Scandal, he was never one. All that he did was, that was very obliging, very official, and as he was a great Conisseur of Stuffs, he used to pick them up every where, where 'em carried to his House and gave 'em to his Friends for Mony. (Henry Baker and James Miller, The Cit Turn'd Gentleman [1739], Literature Online database)
+- (13) He a Tradesman?'Tis me Scandal, he was never one. All that he did was, that was very obliging, very official, and as he was a great Conisseur of Stuffs, he used to pick them up every where, where 'em carried to his House and gave 'em to his Friends for Mony. (`Henry Baker and James Miller, The Cit Turn'd Gentleman [1739]`, `Literature Online database`)
 
-- ([...] The just Thing the Rogues did, That when the Spaniards came on Shore, they gave me letter to, and gave them Provisions and other Relief, as I had ordered them to do [...] (Daniel Defoe, The Farther Adventures of Robinson Crusoe [1719], Literature online database)
+- ([...] The just Thing the Rogues did, That when the Spaniards came on Shore, they gave me letter to, and gave them Provisions and other Relief, as I had ordered them to do [...] (`Daniel Defoe, The Farther Adventures of Robinson Crusoe [1719]`, `Literature online database`)
 
-- (15) “I told you no lie,” said Hawkins, to stand to his ground. “All I did was that I didn’t answer your letters because I couldn’t get out of that accused engagement, and I didn’t know what to say to you, and then the next thing I knew you were engaged, without a word of explanation to me or anything.” (E. Oc. Somerville & Martin Ross, The Real Charlotte [1894], Literature Online database)
+- (15) “I told you no lie,” said Hawkins, to stand to his ground. “All I did was that I didn’t answer your letters because I couldn’t get out of that accused engagement, and I didn’t know what to say to you, and then the next thing I knew you were engaged, without a word of explanation to me or anything.” (`E. Oc. Somerville & Martin Ross, The Real Charlotte [1894]`, `Literature Online database`)
 
-Literature Online 中呈现出的相似分布出现在另一个主要语料库：美国历史英语语料库 (COHA)。在 20 世纪下半叶之前，几乎没有可用的证据，而在在这个晚阶段，统计数据并不支持得出深远的结论。因此，在第三人称现在时（搜索字符串为 `does is`）中，我们发现了 1996 年以来的七个不带 `out` 的相关例子和一个带 `that` 的例子。这两种变体由 (16) 和 (17) 所示：
+`Literature Online` 中呈现出的相似分布出现在另一个主要语料库：美国历史英语语料库 (`COHA`)。在 20 世纪下半叶之前，几乎没有可用的证据，而在在这个晚阶段，统计数据并不支持得出深远的结论。因此，在第三人称现在时（搜索字符串为 `does is`）中，我们发现了 1996 年以来的七个不带 `out` 的相关例子和一个带 `that` 的例子。这两种变体由 (16) 和 (17) 所示：
 
-(16) And Clinton has been lucky. The first few years had some necks and had to miss a couple of games, but he hasn’t anything really serious. Now what this is points to the offseason and how crucial the offseason conditioning and training and the rehab is, how crucial that will be for his ultimate success to continue on. (COHA, Washington Post, 2006)
+(16) And Clinton has been lucky. The first few years had some necks and had to miss a couple of games, but he hasn’t anything really serious. Now what this is points to the offseason and how crucial the offseason conditioning and training and the rehab is, how crucial that will be for his ultimate success to continue on. (`COHA`, `Washington Post`, 2006)
 
-(17) On its first day of operation in 1932, 48,611 cars crossed the skyway; according to the Department of Transportation. The thing that the Pulaski Skyway does is allows you to leap over all the railways, the Meadowlands, the industrial wastes that pepper that area,” said Jeffrey M. Zupan, a senior fellow for transportation for the Regional Plan Association. (COHA, New York Times, 2007)
+(17) On its first day of operation in 1932, 48,611 cars crossed the skyway; according to the Department of Transportation. The thing that the Pulaski Skyway does is allows you to leap over all the railways, the Meadowlands, the industrial wastes that pepper that area,” said Jeffrey M. Zupan, a senior fellow for transportation for the Regional Plan Association. (`COHA`, `New York Times`, 2007)
 
-另一个涵盖 17 世纪后期到 20 世纪的可靠数据来源是《老贝利法院记录》(Old Bailey Proceedings)。然而，使用与 Literature Online 类似的策略，并没有发现任何相关的例子。这些程序在呈现证人的形态语法时并没有像预期中那样具有口语化，或者该数据库中的文本量太小，不足以对所研究的极稀有结构进行历史文献记录。使用 Google N-gram 视图 (Michel et al. 2010) 时面临的是相反的问题。对 `did that` 等字符串的搜索限制在 1600 年至 1800 年的关键时期，产生了数百个例子，但结果的质量仍很大待定。在过滤掉无关和重复的返回¹或来自较晚时期被错误分配到早期的结果后，剩下的数据很大程度上与 Literature Online 的数据重叠。
+另一个涵盖 17 世纪后期到 20 世纪的可靠数据来源是《老贝利法院记录》(`Old Bailey Proceedings`)。然而，使用与 `Literature Online` 类似的策略，并没有发现任何相关的例子。这些程序在呈现证人的形态语法时并没有像预期中那样具有口语化，或者该数据库中的文本量太小，不足以对所研究的极稀有结构进行历史文献记录。使用 Google N-gram 视图 (`Michel et al. 2010`) 时面临的是相反的问题。对 `did that` 等字符串的搜索限制在 1600 年至 1800 年的关键时期，产生了数百个例子，但结果的质量仍很大待定。在过滤掉无关和重复的返回¹或来自较晚时期被错误分配到早期的结果后，剩下的数据很大程度上与 `Literature Online` 的数据重叠。
 
-我们从 COHA 和其他提到的基于口语的数据库转向美国当代英语语料库 (COCA)，它包含了媒体语境中正字转写的真实口语。在这些转录的口语数据中，我们看到了一个完全不同的局面，统计数据现在清楚显示带 `that` 的变体是一个边缘选项。搜索 `what I did was I`（包括 `did` 之后`was` 之后或两者都有逗号的变体）返回 55 个相关命中，而 `what I did was that`（包括 `did` 之后`was` 之后或两者都有逗号的变体）返回 22 个相关命中：
+我们从 `COHA` 和其他提到的基于口语的数据库转向美国当代英语语料库 (`COCA`)，它包含了媒体语境中正字转写的真实口语。在这些转录的口语数据中，我们看到了一个完全不同的局面，统计数据现在清楚显示带 `that` 的变体是一个边缘选项。搜索 `what I did was I`（包括 `did` 之后`was` 之后或两者都有逗号的变体）返回 55 个相关命中，而 `what I did was that`（包括 `did` 之后`was` 之后或两者都有逗号的变体）返回 22 个相关命中：
 
-- (18) “What I did was that I went to the store,” said him. (COCA, 1995)
+- (18) “What I did was that I went to the store,” said him. (`COCA`, 1995)
 
-- (19) “What I did was that I forgot my keys,” said her. (COCA, 1992)
+- (19) “What I did was that I forgot my keys,” said her. (`COCA`, 1992)
 
-- (20) “What I did was that I finished the project,” said him. (COCA, 1994)
+- (20) “What I did was that I finished the project,” said him. (`COCA`, 1994)
 
-- (21) “What I did was that I missed the bus,” said her. (COCA, 1998)
+- (21) “What I did was that I missed the bus,” said her. (`COCA`, 1998)
 
-- (22) “What I did was that I saw the movie,” said him. (COCA, 2007)
+- (22) “What I did was that I saw the movie,” said him. (`COCA`, 2007)
 
-- (23) “What I did was that I cleaned the room,” said her. (COCA, 2001)
+- (23) “What I did was that I cleaned the room,” said her. (`COCA`, 2001)
 
-- (24) “What I did was that I called the doctor,” said him. (COCA, 2005)
+- (24) “What I did was that I called the doctor,” said him. (`COCA`, 2005)
 
 ## 编写基于语料库的口语历史
 
@@ -373,123 +331,119 @@ Literature Online 中呈现出的相似分布出现在另一个主要语料库�
 
 总之，口语历史研究是一项困难且充满挑战的工程，被困在一个我们可以明确表述的悖论中。对于近期的录音时代，我们可以听到声音，但仍然需要通过将录音与其社会语言学和文化背景联系起来来“阅读”声音。在录音技术出现之前，我们必须从书面材料中字面上阅读过去的声音，因此必须担心在没有声音的情况下究竟“听”到了什么。
 
-
-
-
-
 # 基于语料库的口语历史写作
 
 ## 注释
 
-- 1 提到的两项研究还记录了次要的额外变体，例如 What I should have done is called the police [过去分词] 或 What I am calling the police [V-ing形式]，这些在目前的论证中可以忽略。从 16 世纪开始的该结构的早期历史已在 Traugott 2008 中得到研究。20 世纪英语中标记与未标记不定式之间的变异在 Rohdenberg (1998, 2000, 2006) 的几篇论文中得到了分析，尽管并非从历时视角出发。
 
-- 2 DCPSE 在近期数据上与 ICE-GB 有重叠。语料库之间共享的音频文件作为 ICE-GB 包的一部分提供。
 
-- 3 Holz 的研究处于其他语音变化和方言起源的实时研究背景下，其首最典型的例子是 Gordon、Hay 等人对早期新西兰英语的研究（例如 Gordon et al. 2004; Trudill et al. 2003）。与本案例一样，该小组的工作灵感来自对独特规模和质量记录材料的（重新）发现。
+- 1 提到的两项研究还记录了次要的额外变体，例如 `What I should have done is called the police` [过去分词] 或 `What I am calling the police` [V-ing形式]，这些在目前的论证中可以忽略。从 16 世纪开始的该结构的早期历史已在 `Traugott 2008` 中得到研究。20 世纪英语中标记与未标记不定式之间的变异在 `Rohdenberg (1998, 2000, 2006)` 的几篇论文中得到了分析，尽管并非从历时视角出发。
 
-- 4 见 http://sounds.bl.uk/Accents-and-dialects/Berliner-Lautarchisch-British-Commonwealth-recordings。
+- 2 `DCPSE` 在近期数据上与 `ICE-GB` 有重叠。语料库之间共享的音频文件作为 `ICE-GB` 包的一部分提供。
 
-- 5 英国图书馆的 http://sounds.bl.uk 提供的受访者名为“Fred Eccles”，出生日期为1888年（条目后期修正为1898年）。同一录音由 Brandl (1927) 以胶片唱片出版，并附有转录和注释，他也确认了1898年这一日期 (1927: 9)。
+- 3 `Holz` 的研究处于其他语音变化和方言起源的实时研究背景下，其首最典型的例子是 `Gordon、Hay` 等人对早期新西兰英语的研究（例如 `Gordon et al. 2004; Trudill et al. 2003`）。与本案例一样，该小组的工作灵感来自对独特规模和质量记录材料的（重新）发现。
 
-- 6 指定的分裂句（clefts）通过对字符串 DO + BE + 1 / you / he / she / it / we / they 的七次搜索完成，使用了 LION 的词元还原搜索和对拼写变异敏感的搜索选项。对于带有连接词 *that* 的备选结构（DO + BE + THAT + 1 等，下文将报告），系统负荷过重，导致搜索字符串数量必须倍增，并漏掉了包含非标准模式的字符串。
+- 4 见 `http://sounds.bl.uk/Accents-and-dialects/Berliner-Lautarchisch-British-Commonwealth-recordings`。
 
-- 7 或者，如果计入来自思妥克斯基《死生活》企鹅经典译本的例子，它进入了 LION：“Well, the first thing we did was, we went into a public house.”
+- 5 英国图书馆的 `http://sounds.bl.uk` 提供的受访者名为“Fred Eccles”，出生日期为1888年（条目后期修正为1898年）。同一录音由 `Brandl (1927)` 以胶片唱片出版，并附有转录和注释，他也确认了1898年这一日期 `(1927: 9)`。
 
-- 8 参见诸如结构：“the kids, don’t you love them?”、“I met again in the pub, the old fool”，展示了位移（dislocation），以及“a new toy he was very keen for his kids to get it too”，展示了复制代词（copy pronoun）。
+- 6 指定的分裂句（clefts）通过对字符串 `DO + BE + 1 / you / he / she / it / we / they` 的七次搜索完成，使用了 `LION` 的词元还原搜索和对拼写变异敏感的搜索选项。对于带有连接词 `*that*` 的备选结构（`DO + BE + THAT + 1` 等，下文将报告），系统负荷过重，导致搜索字符串数量必须倍增，并漏掉了包含非标准模式的字符串。
+
+- 7 或者，如果计入来自思妥克斯基《死生活》企鹅经典译本的例子，它进入了 `LION`：`Well, the first thing we did was, we went into a public house.`
+
+- 8 参见诸如结构：`the kids, don’t you love them?`、`I met again in the pub, the old fool`，展示了位移（dislocation），以及 `a new toy he was very keen for his kids to get it too`，展示了复制代词（copy pronoun）。
 
 ## Christian Mair（克里斯·马尔）
 
-由于 COCA 和 COHA 中的搜索对标点符号敏感，我也搜索了 *does, is*。尽管有此预防，搜索仍会漏掉逗号以外的材料介入在动词 *do* 和 *be* 之间的情况，例如：“The only thing we did to help was to take a little of the stuff out of the spare drum and store it in two drums, to leave him room”（COCA,  fiction, 1961）。此类例子是 Rohdenburg (2006) 论证的核心，他假设结构上更显性的变体（在他案例中是 *to-infinitive*）倾向于在结构更复杂的环境中出现（在他那里以及由介入材料引起的环境中）。然而，这一因素与有限类补语分布的可能相关性可以调查，但与 Rohdenburg 不同（他研究的是更常见的不定式补语），我没有统计学上关键规模的数据量。
+由于 `COCA` 和 `COHA` 中的搜索对标点符号敏感，我也搜索了 `*does, is*`。尽管有此预防，搜索仍会漏掉逗号以外的材料介入在动词 `do` 和 `be` 之间的情况，例如：`The only thing we did to help was to take a little of the stuff out of the spare drum and store it in two drums, to leave him room`（`COCA`, fiction, 1961）。此类例子是 `Rohdenburg (2006)` 论证的核心，他假设结构上更显性的变体（在他案例中是 `to-infinitive`）倾向于在结构更复杂的环境中出现（在他那里以及由介入材料引起的环境中）。然而，这一因素与有限类补语分布的可能相关性可以调查，但与 `Rohdenburg` 不同（他研究的是更常见的不定式补语），我没有统计学上关键规模的数据量。
 
-一个典型的例子如下，来自本扬的《天游历记》：“But that which put glory into all he *did was that* out of pure love to his country,”——无论这是否代表相关的结构——它返回了几十次。
+一个典型的例子如下，来自本扬的《天游历记》：`But that which put glory into all he *did was that* out of pure love to his country,`——无论这是否代表相关的结构——它返回了几十次。
 
 ## 参考文献
 
-(a) 参考的语料库和数据库
-- COCA – 现代美国英语语料库，Mark Davies（布里根姆大学）编译，http://corpus.byu.edu/coca/
-- COHA – 历史美国英语语料库，Mark Davies（布里根姆大学）编译，http://corpus.byu.edu/coha/
-- DCPSE – 现代口语英语历时语料库，Bas Aarts（伦敦大学学院）编译，http://www.ucl.ac.uk/english-projects/dcpse/
-- FLOB – LOB语料库的弗莱堡更新，Christian Mair（弗莱堡大学）编译，http://icame.uni.de/cd/
-- Google ngram Viewer，http://books.google.com/ngrams/
-- LION – 文学英语，Chadwick Healey，http://lion.chadwick.com/.
-- Old Bailey Corpus（老贝贝利法院语料库），Magnus Huber（吉森大学）编译，http://www.ui-giessen.de/oldbaileycorpus/; 另另参见 Old Bailey Online，http://www.oldbaileyonline.org/
+### (a) 参考的语料库和数据库
 
-(b) 引用著作
-- Andersen, G. (2010), ‘How to use corpus linguistics in sociolinguistics’,收录于 A. O’Keeeffe and M. McCarthy (编.) *The Routledge handbook of corpus linguistics*. London: Routledge, 547-562.
+- `COCA` – 现代美国英语语料库，`Mark Davies`（布里根姆大学）编译，`http://corpus.byu.edu/coca/`
+- `COHA` – 历史美国英语语料库，`Mark Davies`（布里根姆大学）编译，`http://corpus.byu.edu/coha/`
+- `DCPSE` – 现代口语英语历时语料库，`Bas Aarts`（伦敦大学学院）编译，`http://www.ucl.ac.uk/english-projects/dcpse/`
+- `FLOB` – `LOB`语料库的弗莱堡更新，`Christian Mair`（弗莱堡大学）编译，`http://icame.uni.de/cd/`
+- `Google ngram Viewer`，`http://books.google.com/ngrams/`
+- `LION` – 文学英语，`Chadwick Healey`，`http://lion.chadwick.com/.`
+- `Old Bailey Corpus`（老贝贝利法院语料库），`Magnus Huber`（吉森大学）编译，`http://www.ui-giessen.de/oldbaileycorpus/`; 另另参见 `Old Bailey Online`，`http://www.oldbaileyonline.org/`
+
+### (b) 引用著作
+
+- `Andersen, G. (2010)`, ‘How to use corpus linguistics in sociolinguistics’,收录于 `A. O’Keeeffe and M. McCarthy (编.) The Routledge handbook of corpus linguistics`. London: Routledge, 547-562.
 
 # 基于语料库的口语历史写作
 
-Biber, D., et al. (1999), The Longman grammar of spoken and written English. London: Longman.
+`Biber, D., et al. (1999)`, The Longman grammar of spoken and written English. London: Longman.
 
-Brandl, A. (1926-1927), Englische Dialekte. Series of pamphlets. Berlin: Preußische Bibliothek.
+`Brandl, A. (1926-1927)`, Englische Dialekte. Series of pamphlets. Berlin: Preußische Bibliothek.
 
-Brandl, A. (1927), Englische Dialekte – Norfolk. 6. Berlin: Preußische Bibliothek.
+`Brandl, A. (1927)`, Englische Dialekte – Norfolk. 6. Berlin: Preußische Bibliothek.
 
-Calude, A. (2009), Cleft constructions in spoken English. Saarbrücken:
+`Calude, A. (2009)`, Cleft constructions in spoken English. Saarbrücken:
 
-Collins, D. E. (2001), Reanimated voices: speech reporting in a historical perspective. Amsterdam: Benjamin.
+`Collins, D. E. (2001)`, Reanimated voices: speech reporting in a historical perspective. Amsterdam: Benjamin.
 
-Culper, J., and M. Kytö (2010), Early Modern English dialogues: spoken interaction as writing. Cambridge: CUP.
+`Culper, J., and M. Kytö (2010)`, Early Modern English dialogues: spoken interaction as writing. Cambridge: CUP.
 
-Gordon, E., Campbell, J., Maclagan, A. and Turnbull (2004), New Zealand English: its origins and evolution. Cambridge: CUP.
+`Gordon, E., Campbell, J., Maclagan, A. and Turnbull (2004)`, New Zealand English: its origins and evolution. Cambridge: CUP.
 
-Harrington, J. S. and C. Watson (2005), ‘Deepening or lessening the divide between diphtongs: an analysis of the Queen’s Broadcasts’,收录于 W. castle and J. Mackenzie (编.) A figure of speech: festschrift for Jonathan Layer. NJ: Lawrence Erbaum. 227-261.
+`Harrington, J. S. and C. Watson (2005)`, ‘Deepening or lessening the divide between diphtongs: an analysis of the Queen’s Broadcasts’,收录于 `W. castle and J. Mackenzie (编.) A figure of speech: festschrift for Jonathan Layer`. NJ: Lawrence Erbaum. 227-261.
 
-Holz, J. (in progress), Dialect levelling and coordination in 20th century Britain: PhD dissertation, University of Freiburg. Br.
+`Holz, J. (in progress)`, Dialect levelling and coordination in 20th century Britain: PhD dissertation, University of Freiburg. Br.
 
-Hopper, P. (2001), ‘Grammatical constructions and their discourse: prototype or family resemblance?',收录于 M. Pütz and S. Niemer (编.) Applied linguistics: theory and language acquisition. Berlin: Mouton de Gruyter. 109-129.
+`Hopper, P. (2001)`, ‘Grammatical constructions and their discourse: prototype or family resemblance?',收录于 `M. Pütz and S. Niemer (编.) Applied linguistics: theory and language acquisition`. Berlin: Mouton de Gruyter. 109-129.
 
-Hopper, P. (2004), ‘The openness of grammatical constructions’, Linguistic Society 40:239-256.
+`Hopper, P. (2004)`, ‘The openness of grammatical constructions’, Linguistic Society 40:239-256.
 
-Huddleston, R. and G. Pullum (2002) The Cambridge grammar of the English language. Cambridge: CUP.
+`Huddleston, R. and G. Pullum (2002)` The Cambridge grammar of the English language. Cambridge: CUP.
 
-Jespersen, O. (1949), a modern English grammar on principles. Copenhagen Allen & Unwin.
+`Jespersen, O. (1949)`, a modern English grammar on principles. Copenhagen Allen & Unwin.
 
-Lange, B. (2010), ‘Archiv und Zukunft: Zwei Aufnahmen für das Humboldt-Front’, Trajekte 10:4-6.
+`Lange, B. (2010)`, ‘Archiv und Zukunft: Zwei Aufnahmen für das Humboldt-Front’, Trajekte 10:4-6.
 
-Mahrenz, J.-K. (2003), ‘Zum Archiv und seiner wissenschaftlichen Erließung durch die Datenbank IMAGO’,收录于 M. Bröcker (编.) Berichte aus dem ICTM-National-Komitee Deutschland. Bamberg: Universitätsbibliothek 131-152. 电子版：http://www.iasa.de/files/203 Archiv.pdf (访问于2010年6月16日)。
+`Mahrenz, J.-K. (2003)`, ‘Zum Archiv und seiner wissenschaftlichen Erließung durch die Datenbank IMAGO’,收录于 `M. Bröcker (编.) Berichte aus dem ICTM-National-Komitee Deutschland`. Bamberg: Universitätsbibliothek 131-152. 电子版：`http://www.iasa.de/files/203 Archiv.pdf` (访问于2010年6月16日)。
 
-Mair, C. (2012), ‘Using small corpora of written and spoken English document ongoing grammatical change: the case of speculative clefts in 20th century English’,收录于 M. Krug and J. Schlüter (编.) Research in language variation and change. Cambridge: Cambridge University Press.
+`Mair, C. (2012)`, ‘Using small corpora of written and spoken English document ongoing grammatical change: the case of speculative clefts in 20th century English’,收录于 `M. Krug and J. Schlüter (编.) Research in language variation and change`. Cambridge: Cambridge University Press.
 
-Mair, C., and C. Winkle (2012), ‘Change from to-infinitive to bare infinitive in specifically cleft sentences: data from World English’,收录于 M. Hundt and U. Gut (编.) Mapping unity in diversity worldwide. Amsterdam: Benjamins, 2012. 243-262.
+`Mair, C., and C. Winkle (2012)`, ‘Change from to-infinitive to bare infinitive in specifically cleft sentences: data from World English’,收录于 `M. Hundt and U. Gut (编.) Mapping unity in diversity worldwide`. Amsterdam: Benjamins, 2012. 243-262.
 
-Michel, J-B., et al. (2010), ‘Quantitative analysis of culture using millions of digitized books’, Science 329:644, 2010年12月16日在线发布。
+`Michel, J-B., et al. (2010)`, ‘Quantitative analysis of culture using millions of digitized books’, Science 329:644, 2010年12月16日在线发布。
 
-Miller, J., and R. Weiner (1985), Spontaneous spoken language: syntax and discourse. Oxford: Clarendon.
+`Miller, J., and R. Weiner (1985)`, Spontaneous spoken language: syntax and discourse. Oxford: Clarendon.
 
-Molin, S. (2007), ‘The Hansard hazard. Gauging the accuracy of British transcripts’, Corpora 2:187-210.
+`Molin, S. (2007)`, ‘The Hansard hazard. Gauging the accuracy of British transcripts’, Corpora 2:187-210.
 
-Moore, C. (2011), Quoting speech in Early English. Cambridge: CUP.
+`Moore, C. (2011)`, Quoting speech in Early English. Cambridge: CUP.
 
-Price, J. (2008), ‘New news old news: a sociophononic study of spoken Australian English in news broadcast speech’, Arbeiten aus Linguistik und Amerikanistik 33: 285-310.
+`Price, J. (2008)`, ‘New news old news: a sociophononic study of spoken Australian English in news broadcast speech’, Arbeiten aus Linguistik und Amerikanistik 33: 285-310.
 
-Quirk, R., et al. (??), A comprehensive grammar of the English language. London: London.
+`Quirk, R., et al. (??)`, A comprehensive grammar of the English language. London: London.
 
-Rohdenburg, G. (1998), ‘Clarifying structural relationships in cases of increased complexity in English’,收录于 R. Schulze (编.) Making meaningful choices in English. Tübingen: Narr. 189-205.
+`Rohdenburg, G. (1998)`, ‘Clarifying structural relationships in cases of increased complexity in English’,收录于 `R. Schulze (编.) Making meaningful choices in English`. Tübingen: Narr. 189-205.
 
-Rohdenburg, G. (2000), ‘The complexity principle as a factor determining grammatical variation and change in English’,收录于 I. Plag and K. P. Schneider (编.) Language use, language acquisition and language history: (most) employ empirical studies in honour of Rüdiger Zimmermann. Trier: WVT. 25-44.
+`Rohdenburg, G. (2000)`, ‘The complexity principle as a factor determining grammatical variation and change in English’,收录于 `I. Plag and K. P. Schneider (编.) Language use, language acquisition and language history: (most) employ empirical studies in honour of Rüdiger Zimmermann`. Trier: WVT. 25-44.
 
-Rohdenburg, G. (2006), ‘Processing complexity and competing sentential variants in present-day English’,收录于 W. Kürchner and R. Rapp (编.) Linguistik international: Festschrift für Heinrich Weber. Lengerich: Pabst. 51-67.
+`Rohdenburg, G. (2006)`, ‘Processing complexity and competing sentential variants in present-day English’,收录于 `W. Kürchner and R. Rapp (编.) Linguistik international: Festschrift für Heinrich Weber`. Lengerich: Pabst. 51-67.
 
-Short, M., E. Semino and M. Wynne (2002), ‘Revisiting the notion of faithfulness in discourse presentation using a corpus approach’, Language and Literature 11:325-355.
+`Short, M., E. Semino and M. Wynne (2002)`, ‘Revisiting the notion of faithfulness in discourse presentation using a corpus approach’, Language and Literature 11:325-355.
 
-Tognini Bonelli, E. (1992), “All I’m saying is...”: the correlation of form and function in pseudo-cleft sentences’, Literary and Linguistic Computing 2:30-41.
+`Tognini Bonelli, E. (1992)`, “All I’m saying is...”: the correlation of form and function in pseudo-cleft sentences’, Literary and Linguistic Computing 2:30-41.
 
-Traugott, E. (2008), “All that he endeavoured to prove was...”: On the emergence of grammatical constructions in dialogic contexts’,收录于 R. Cooper and R. Kempton (编.) Language in flux: dialogue coordination, language variation, change and evolution. London: Kings College Publications. 143-177.
+`Traugott, E. (2008)`, “All that he endeavoured to prove was...”: On the emergence of grammatical constructions in dialogic contexts’,收录于 `R. Cooper and R. Kempton (编.) Language in flux: dialogue coordination, language variation, change and evolution`. London: Kings College Publications. 143-177.
 
+`Trudgill, P., G. Lewis and M. Maclagan (2003)`,‘语言考古学：新西兰英语中的苏格兰输入》，《英语语言学杂志》31: 103-124。
 
+`Trudgill, P., E. E. Gordon, G. Lewis and M. Maclagan (2000)`,‘新方言形成中的决定论》，《语言学杂志》26: 299-318。
 
-
-
-Trudgill, P., G. Lewis and M. Maclagan (2003),‘语言考古学：新西兰英语中的苏格兰输入》，《英语语言学杂志》31: 103-124。
-
-Trudgill, P., E. E. Gordon, G. Lewis and M. Maclagan (2000),‘新方言形成中的决定论》，《语言学杂志》26: 299-318。
-
-Ziegler, S. (2000),‘声学收藏集：留声机档案馆与声学档案馆中的历史性录音文献》，收于：H. Bredkamp, J. Bruning and C. Weber (编)《自然与艺术的剧场》。柏林：Henschel.197-207。
+`Ziegler, S. (2000)`,‘声学收藏集：留声机档案馆与声学档案馆中的历史性录音文献》，收于：`H. Bredkamp, J. Bruning and C. Weber (编)《自然与艺术的剧场》`。柏林：Henschel.197-207。
 
 ## 话语社群及其写作风格：罗伯特·波义的案例研究
 
-Lilo Moessner
+`Lilo Moessner`
 
 亚琛工业大学 (RWTH Aachen)
 
@@ -499,6 +453,8 @@ Lilo Moessner
 
 ### 1. 引言
 
+
+
 话语社群概念最有影响力的定义之一由 John Swales (1990: 25-27)给出。他建立了识别话语社群的六个属性：它们拥有一组共同的公共目标；发展出独特的相互连接机制（主要用于信息和反馈）；所有目标都在社群特定的体裁中追求；其话语包含专业术语；其成员在社群相关的课题和话语实践方面具有适当的专业知识。尽管他指出他的定义并没有将话语社群限制在学术语境中，但话语社群概念最频繁地用于学术语言的分析和描述（Duff 2010; Hyland 2011; Noguchi 2006; Römer 2008）。Hyland (2000 [2004]: 8f) 讨论了将个人学术学科视为符合 Swales 标准的话语社群的可能性。其成员了解所在学科的研究目标，成功参与学科内的话语活动，在与同事的会议上交换信息并获取反馈，使用接受的体裁和适当的术语，并能列出其学科领先专家。
 
 尽管毫无疑问现代意义上的医学和科学在今天是不同的学科，但这两个学科的现代英语文本有时在电子语料库中被归在一起（Biber and Gray 2011:14），这表明它们的语言特征非常相似。此外，利用医学数据分析“科学”文本语言结构的研究也是如此（González-Álvarez and Pérez-Guerra 1998, Taavitsaiten 2001, 2005）。在《历史语体代表性语料库》（ARCHER）中，“医学”和“科学”被视为文本类别，但缺乏基于此的全面历时性研究。在第一部分我将证明医学和科学文本（自然科学意义上的）的语言特征彼此存在足够差异，足以被解释为反映了两个学科的话语实践。
@@ -507,17 +463,11 @@ Swales (1990: 30) 对话语社群的定义意味着个人可能属于多个话�
 
 作为两个社群的成员，可以假定波义遵循了其同时人的做法。这两个假设均被反驳，波义偏离的写作风格被解释为其作者身份的体现。18世纪医学和科学话语社群对波义成就的认可，被视为其写作风格同样受到赞誉和模仿的动力。这一假设通过对17世纪医学和科学文本、波义的医学和科学文本以及18世纪医学和科学文本的历时性分析得到了检验。对它们语言特征的比较在波义写作风格方面弱支持该假设，在医学写作风格方面则强有力支持。结论认为，未来的研究应该将科学和医学视为自17世纪起就是不同的学科，且语言学家应更多关注波义的医学文本。
 
-话语社群及其写作风格
-
-33
+## 话语社群及其写作风格
 
 话语社群之间具有共同的交流机制，波义偏离的写作风格将通过 Hyland (2009) 的作者身份概念来解决。在著名的语言学家中，Debbie Cameron 和 John Swales，他发现他们的写作风格存在显著差异。它们在常用词的使用上存在差异，体现在 Cameron 语料库中的于 Swales 语料库中的高频项目中。基于他们的写作，Hyland 建立了这两个语言学家的作者身份，即 Debbie Cameron 的案例是“果断且具有攻击性的身份”，而 John Swales 的案例是“好奇学者的身份”（Hyland 2009:50）。本文将论证，波义利用他作为17世纪科学领军人物的地位（参见 Hall 1965: 110-115）以及当代医学的专家身份（参见 Hunter 1997: 326-330），为自己创造了一个能够偏离这两个学科话语实践的作者身份。波义作者身份的主要特征是对实验的投入以及对精确性的追求。这种刻画完全基于波义语言属性的分析，与 Harwood (1994: 42) 在关于波义修辞的文章中得出的结论一致：“通过系统地培养一个包含‘绅士’、‘外行’和‘博学者’属性的人格，他[=波义]可以为其神学主题（尽管并非神）和医学主题（尽管并非医生）的写作辩护”。最后一个要解决的问题是波义的写作风格与18世纪科学医学代表之间的关系。这种比较是由波义对18世纪科学（Hall 1965）和医学（Kaplan 1993）的影响引发的。要检验的假设是波义预示了18世纪科学医学话语社群中实践的写作风格方面。
 
 在第二部分，我将描述本文使用的数据和研究方法。主体部分（第三部分）将涵盖对数据的分析和对结果的讨论：将波义的一组医学和科学文本与17世纪的医学医学专家和领先科学家进行同步比较（3.1节），17世纪和18世纪科学（包括波义的文本）的历时比较（3.2节），以及18世纪医学文本（包括波义的文本）的历时比较（3.3节）。在最后部分（第四部分），我将总结研究的主要发现并得出一些结论。
-
-
-
-
 
 ## 2. 数据与研究方法
 
@@ -528,9 +478,13 @@ Boyle 作品的标准版由 Hunter 和 Davis（伦敦: 1999-2000）出版，共 
 表 1：Boyle语料库的结构和大小
 
 | 医学 | 用途 | 血液 | 特殊医学 | 医学水合 | 实验与观察 | 总大小 |
+
 | --- | --- | --- | --- | --- | --- | --- |
+
 | 科学 | 大 | 6,119 | 6,172 | 6,166 | 6,183 | 6,165 | 30,805 |
+
 | 文本 | 新实验 | 6,260 | 连续与例子 | 持续 | 孔隙率 | 运动 | 6,228 | 31,169 |
+
 | 总大小 | | | | | | | 61,974 |
 
 17 世纪和 18 世纪的对照语料库具有类似的结构和大小。科学文本基于副本版；大部分下载自早期英语书籍在线（Early English Books Online）和十八世纪收藏在线（Eighteenth Century Collections Online）。它们必须通过人工键入。大多数文本来自相同来源；John Archer 和 Thomas Sydenham 的文本取自早期现代英语医学文本（Early Modern English Medical Texts）语料库中的“通用论著和教科”部分。对照语料库的结构和大小如表 2 和表 3 所示；涉及文本的参考文献详目列在附录中。
@@ -538,17 +492,25 @@ Boyle 作品的标准版由 Hunter 和 Davis（伦敦: 1999-2000）出版，共 
 表 2：17世纪对照语料库的结构和大小
 
 | 医学 | 文本 | Elkes | Turner | Maynwaringge | Archer | Sydenham | 总大小 |
+
 | --- | --- | --- | --- | --- | --- | --- | --- |
+
 | 科学 | 大 | 6,339 | 6,111 | 6,188 | 6,395 | 6,258 | 31,291 |
+
 | 文本 | 力量 | 6,380 | 6,372 | 6,292 | 6,177 | 6,115 | 31,366 |
+
 | 总大小 | 大 | | Sinclair | Gregg | Ray | | 62,627 |
 
 表 3：18世纪对照语料库的结构和大小
 
 | 医学 | 文本 | Cheshire | Tennent | Andree | Coe | Alexander | 大 | | |
+
 |---|---|---|---|---|---|---|---|---|
+
 | 科学 | 大 | 6,089 | 6,233 | 6,061 | 6,136 | 5,821 | | 30,340 |
+
 | | 文本 | Cotes | Baker | Hales | Shaw | Emerson | | 31,591 |
+
 | | 大 | 6,134 | 6,205 | 6,410 | 6,115 | 6,727 | | 61,931 |
 
 本文采用的研究方法遵循了 Biber (1998) 为 20 世纪英语建立的多维分析（MD analysis）原则。该方法假设：
@@ -565,15 +527,12 @@ Boyle 作品的标准版由 Hunter 和 Davis（伦敦: 1999-2000）出版，共 
 因子分析产生了五个因子，这些因子被解释为变异的维度。每个变异维度的语言特征的标准化频率被相加。这些总和产生了文本维度得分。
 
 Biber 的因子分析生成了以下标签：
+
 - 维度 1：参与性 vs 信息性
 - 维度 2：叙述性 vs 非叙述性
 - 维度 3：显性 vs 情境相关
 - 维度 4：说服性
 - 维度 5：抽象性 vs 非抽象性
-
-
-
-
 
 ## 38 Lilo Moessner
 
@@ -584,9 +543,11 @@ Biber 的因子分析生成了以下标签：
 17 世纪医学与科学文本写作风格的差异在维度 3 上最大，其次是维度 2（参见表 5 中的阴影单元格）。17 世纪的医学和科学文本在维度 2 得分均为负值（参见表 4）。这意味着它们的特征是缺乏叙述性（即过去时动词、体貌形式和第三人称代词），这在科学文本中比医学文本更为明显。在维度 3 上，两种文本的负分表明其作者并不倾向于显性指代系统，因为这需要频繁使用从句。之前的因子分析显示，从句频率低与时间、地点副词频率高相关。它们将文本事件与外部结构联系起来。这就是为什么这种指代策略被称为“情境依赖指代”。这也是 17 世纪科学文本甚至当代医学文本中偏偏的指代类型。示例 (1) 和 (2) 说明了维度 3 上不同的写作风格。
 
 - (1) 如果你将大拇指浸入管*此处*（*therin*）的口，并轻轻反转它，你将看到管内的水银比那看似空虚的地方移动得更快（尽管并非没有阻力和沸腾）；而汞会以这种剧烈波动向管子的下凹末端移动，这会让你意识到管子可能会被撞击或破碎：如果你让外界空气进入汞周围的空腔，这些现象可能都不会发生。在运动的*期间*（*Interim Interim*），你的大拇指将被吸引并吸入管口，这不免伴随着相当的疼痛。
+
 （120 单词，17 世纪科学，地点副词（斜体））
 
 - (2) 让患者在右臂放血，量为十盎司，*第二天*（*next day*）服用此药剂。他们提取了一抽份桂皮、四颗大无花、两又半份仙草叶。一打司灵菌片：将它们放入足够的水中煮至四盎司；过滤；并溶解一盎司曼纳水、一盎司玫瑰溶解糖浆中。但如果他无法服用药剂，让他在清晨四点服用两格令较大的豆蔻末（Puls Cochiae）。*次日*（*Day following*）再次开启血管，抽取与之前等量的血液，*后天*（*Day after*）再次服用下剂药，此后每三天重复一次。
+
 （134 单词，17 世纪医学，时间副词（斜体））
 
 这两段文字长度相等，但一个关系从句也没有。示例 (1) 源自 17 世纪的文本描述了一个关于水银的实验，副词*此处*（*therin*）规定了关闭动作的位置。示例 (2) 源自 17 世纪的医学文本是关于放血和导泻治疗假性腹膜炎的，六个副词指示了不同步骤应采取的适当措施。
@@ -599,18 +560,20 @@ Biber 的因子分析生成了以下标签：
 
 （此处后续为重复内容，已略）
 
-
-
-
-
 # 42 Lilo Moessner
 
 | | 17世纪科学 | 鲍莱科学 | 18世纪科学 |
+
 |---|---|---|---|
+
 | D1 | | | |
+
 | D2 | | | |
+
 | D3 | | | |
+
 | D4 | | | |
+
 | D5 | | | |
 
 图 2：科学子语料库的平均移动距离（mtd）比较
@@ -640,11 +603,17 @@ Biber 的因子分析生成了以下标签：
 表 8：医学语料库的历时分析⁶
 
 | | 17 世纪医学 | 鲍莱医学 | 18 世纪医学 |
+
 |---|---|---|---|
+
 | 维度 1 | -1.18 | 1.73 | -23.39 |
+
 | 维度 2 | 3.79 | 0.79 | 0.98 |
+
 | 维度 3 | -6.85 | 5.23 | -1.03 |
+
 | 维度 4 | 0.47 | -1.02 | 2.13 |
+
 | 维度 5 | -1.22 | 0.94 | 0.08 |
 
 扫一眼表 8 中的 mtd，就可以推测出鲍莱子语料库与18 世纪子语料库之间的相似性，大于鲍莱子语料库与17 世纪子语料库之间的相似性。这种主观假设得到了表 9 数值和图 3 可视化的证实：
@@ -652,7 +621,11 @@ Biber 的因子分析生成了以下标签：
 表 9：mtd 之间的差异
 
 | | 17 世纪医学 | 鲍莱医学 | 18 世纪医学 |
+
 |---|---|---|---|
+
+
+
 | 维度 1 | 2.91 | 25.12 | 22.21 |
 | 维度 2 | 4.57 | 0.19 | 4.77 |
 | 维度 3 | 11.05 | 5.23 | 5.82 |
@@ -668,10 +641,10 @@ Biber 的因子分析生成了以下标签：
 图 3：语料库的 mtd 比较
 
 (8) 坐骨神经痛是这种疾病，因为它发生在身体被称为 Scion 的部位，是由恶性性质和停留在该处的大量体液引起的，因为它们无法向下通过：其治疗方法是灌肠、催吐、导泻和药膏，我们缓解体液；我们清理胃部，导泻排出身体，药膏则巧妙地溶解并缓解；因此通过这些方法，你可以帮助坐骨神经痛。
+
 (95 单词，17 世纪医学)
 
 (9) 但这种不幸被治愈了，他的疼痛也完全痊愈了，他现在是一个强壮健康的人，对于头骨里有一个如此宽大多样的钙结石并没有感到任何不便；除了他的头部容易感冒。但我之所以提到这段叙述的原因，那些值得记忆的情况是这样的：当我问他上次取出的那块骨有多大时？他告诉我，只有一半的
-
 
 他的一根手指（不是大拇指）的指甲，其大小和形状几乎像鱼鳞一样薄。
 
@@ -713,7 +686,7 @@ Biber 的因子分析生成了以下标签：
 - Atkinson, D. (1992). *医学与科学*.
 - Atkinson, D. (1996). *科学与写作*.
 - Atkinson, D. (1999). *语言话语*.
-- Biber, D. (1988). *MD分析*. 
+- Biber, D. (1988). *MD分析*.
 - Biber, D. and Finegan, E. (1997). *比较研究*.
 - Duffy, P. A. (2010). *进入学术话语的语言社会化*. *应用语言评论*.
 - Gotti, M. (1996). *科学写作与写作*.
@@ -724,16 +697,13 @@ Biber 的因子分析生成了以下标签：
 - Hyland, K. (2009). *约束与创造*.
 - Hyland, K. (2011). *学术话语*.
 
-
-
-
 ## 50 Lilo Moessner
 
 Kaplan, B. B. (1993), 《物理学中有用真理的揭：罗伯特·波义的医学议程》。巴尔的摩与伦敦：约翰霍普金斯大学出版社。
 
-Lo, I. and A. Montoya Reyes (2007), 〈科学写作：遵循罗伯特·波义在实验论文中的原则——1704年与1998年》，阿利坎西亚英语研究杂志 20: 119-137。
+Lo, I. and A. Montoya Reyes (2007), 〈科学写作：遵循罗伯特·波义在实验论文中的原则——1704年与1998年〉，阿利坎西亚英语研究杂志 20: 119-137。
 
-Messner, L. (2008), 〈17世纪科学家著作中的变异与变化》，载：Dury, R., M. Gotti and M. Dossena (编）《英语历史语言学2006：科学体裁》。伯恩：语言与语义变化。阿姆斯特丹/费城：约翰·本杰明。75-93。
+Messner, L. (2008), 〈17世纪科学家著作中的变异与变化〉，载：Dury, R., M. Gotti and M. Dossena (编）《英语历史语言学2006：科学体裁》。伯恩：语言与语义变化。阿姆斯特丹/费城：约翰·本杰明。75-93。
 
 Messner, L. (2006), 〈实验论文的诞生】，载：Bhatia, V. K. and M. Gotti (编）《专业体裁的探索》。伯恩：彼特·朗。59-77。
 
@@ -741,7 +711,7 @@ Noguchi, J. (2006), 《科学综述文章：科学构建中的机机体裁》。
 
 《牛津英语字典》。访问 oed.com>
 
-Römer, U. (2008), 〈识别是否可能？学术写作中评价性实现的语料库方法》，《语言功能》 15/115-130。
+Römer, U. (2008), 〈识别是否可能？学术写作中评价性实现的语料库方法〉，《语言功能》 15/115-130。
 
 Swales, J. (1990), 《体裁分析：学术与研究环境》。剑桥：剑桥大学出版社。
 
@@ -779,7 +749,7 @@ Boyle, Robert (1685), 〈关于空气孔性的考量】，载：Hunter and Davis
 
 Hunter, Michael and Edward B. Davis (编)(1999-2000), 《波义著作集》，14卷。
 
-## II. 17世纪科学语料库
+### II. 17世纪科学语料库
 
 Gregg, Hugh (1691), 〈科学中的奇闻》。伦敦：斯特拉福德。
 
@@ -791,7 +761,7 @@ Ray, John (1692), 《关于流体重量、力和压力的论述》。伦敦：�
 
 Sinclair, George (1672), 《水力学》。
 
-## III. 17世纪医学语料库
+### III. 17世纪医学语料库
 
 Archer, John (1671), 《显微镜的使用》。伦敦：爱德华·。
 
@@ -802,9 +772,6 @@ Maywaring, Everard (1668), 〈士兵药箱及乡村衣橱中的实用发现与�
 Sydenham, Thomas (1695), 《西登汉治疗疾病的完整方法及其症状描述》。伦敦：H·纽曼与理查德·帕克。
 
 Turner, Robert (1654), 《微观世界：人体的精确描绘及其各种疾病及最有效的疗法》。伦敦：爱德华·阿。
-
-
-
 
 音位现在除了传统的单元音外，还有双元音变体稳定了它们，这导致了进一步的双元音化，并引发了元音移（这一假设在 Minkova and Stockwell 2003 中得到了充分发展）。这是一种可能的场景，但难以验证；本文的目的之一就是考虑现有的中英语（ME）拼写证据是否支持元音移，从而反驳 Stockwell 和 Minkova 的观点。
 
@@ -839,21 +806,26 @@ Turner, Robert (1654), 《微观世界：人体的精确描绘及其各种疾病
 | | 593 | ooure | OUR | Nt | 1350–1450 |
 | | 220 | fellos | FOWL | Li | 1350–1450 |
 | Bensin | | | THOUSAND | Wlt | 1390 |
+
+
+
 | Whitehall | | naw | NOW | Nt | 1483 |
+
 | | | tawn | | Nt | 1483 |
+
 | Hunt & Bensin | | owit | OUT | Ely/W Nfk | 1320–1330 |
+
 | | | mothit | MOUTH | Ely/W Nfk | 1320–1330 |
+
 | Zachrisson | | abaught | ABOUT | Nfk | 1440–70 |
+
 | | | aur | OUR | Ex | 1475–88 |
 
 ## 4. 讨论
 
-有两个 LAEME 来源对早期中英语（eME）/u/ 的反射都有不规则拼写；两种语言都已本地化到西中部。索引号为 278 的来源语言本地化到沃特斯特郡，日期于 13 世纪中期，其异常拼写数量较多：例如 `<about>` ABOUT, `<heose>` `<heo>` 和 `<heou>` HOW, `<peou(u)>` 和 `<peu>` THOU。该来源在中英语 /// 中使用 `<u>`，这表明不规则拼写显示了双元音化；即它们被称为“偶然拼写”。索引号为 1100 的来源（赫福德郡）拥有 `<fuol>` FOWL 和 `<howleyin>` HOWL，两者似乎都在元音核心上产生了一个滑音。该来源的主形式 `<u>` 与中英语 /u/ 的两种不规则拼写同时变化。然而，有人指出（Minkova，邮件 20.viii.2011）`<howleyin>` 在文中处于韵脚位置，并要求它有三个或四个音节（弱音），因此在 [l] 之前插入了弱音，这在语音学上是非常自然的。尽管如此，HOWL 的滑音可以在需要三或四音节单词的地方使用的事实，支持了它可能指示早期双元音化的观点；由于其双部结构，带有某种滑音的双元音比单元音更可能产生额外的音节。尽管如此，后期且更规则的拼写来自西中部这一事实，反对使用 1100 来源的形式来支持观点。278 来源的异常拼写情况完全不同：补充的是，Wor 出现不规则拼写的词汇都是高频词，这支持了扩散论者的观点，即高频词汇似乎是某些变化的“先导”（例如 Byee and Poilee 2006）。
+有两个 `LAEME` 来源对早期中英语（`eME`）/u/ 的反射都有不规则拼写；两种语言都已本地化到西中部。索引号为 278 的来源语言本地化到沃特斯特郡，日期于 13 世纪中期，其异常拼写数量较多：例如 `<about>` ABOUT, `<heose>` `<heo>` 和 `<heou>` HOW, `<peou(u)>` 和 `<peu>` THOU。该来源在中英语 /// 中使用 `<u>`，这表明不规则拼写显示了双元音化；即它们被称为“偶然拼写”。索引号为 1100 的来源（赫福德郡）拥有 `<fuol>` FOWL 和 `<howleyin>` HOWL，两者似乎都在元音核心上产生了一个滑音。该来源的主形式 `<u>` 与中英语 /u/ 的两种不规则拼写同时变化。然而，有人指出（Minkova，邮件 20.viii.2011）`<howleyin>` 在文中处于韵脚位置，并要求它有三个或四个音节（弱音），因此在 [l] 之前插入了弱音，这在语音学上是非常自然的。尽管如此，HOWL 的滑音可以在需要三或四音节单词的地方使用的事实，支持了它可能指示早期双元音化的观点；由于其双部结构，带有某种滑音的双元音比单元音更可能产生额外的音节。尽管如此，后期且更规则的拼写来自西中部这一事实，反对使用 1100 来源的形式来支持观点。278 来源的异常拼写情况完全不同：补充的是，Wor 出现不规则拼写的词汇都是高频词，这支持了扩散论者的观点，即高频词汇似乎是某些变化的“先导”（例如 Byee and Poilee 2006）。
 
 林肯郡、威摩兰郡、约克郡西部、约克郡东部和坎布里郡可能被视为指示 [au] 处的双元音化。Britain（2002）认为它们是早期中英语 /o:/ 的反射，因为（a）古英语 /o/ 和 /u/ 的反射在北部部分发生了合并，并且（b）根据假设北部 /o:/+w 的演后阶段，其已演变为 [w:] > [w:] > [au] > [iu]（此时中英语 /o/ 的反射与 /u/ 合并），考虑到中英语 /o/ 的现代反射范围从 [i], [x], [o], [jy], [i] 到 [e], [ɛ], [o]）（Britain 2002）。这些拼写全部出现在北部中英语（以及林肯郡）中这一事实可能支持其解释。
-
-
-
 
 # 58 Gjertrud F. Stenbrand
 
@@ -863,21 +835,15 @@ Zachrisson (1913) 在《帕顿信件》（诺福郡，1440-70）和《塞利文�
 
 答案……并不难寻找。传统的拼写 `ou` 如果字面意思是 `o+u`，绝不代表它在16世纪大部分时间里可能的双元音发音……法国语法学家 Mason (1622) 将 *how* 记为 *haow*，这无疑表明其发音与我们并不接近。双元音总是很难精确分析。
 
-表1中列出的一些拼写乍看去可能仍然不起眼。这些是：`<thowand>` THOMAS 'John Dauntsye先生的遗嘱'（Towbridge，威尔特郡档案局，D1/2/5），日期为1390年，由 Michael Benskin 确定源于威尔特郡（私人通信）；`<clow>` 对应 `kl 'cloth'`，`<ow>` OUT，`<mow/<moth>` MOUTH，以及在一份被定定为公元1320-1330年的医学配方集中发现的一系列类似拼写，该合集被确定源于伊利/西诺福克郡（Hunt and Benskin 2001）。另一个类似的拼写 `<towen>` TOWN 出现在 LAEME 中，它是约克郡东部的源文本，并可追溯到14世纪早期。它们的价值证据在于它们似乎指示了一个双音节（或可能是三音节）核心；否则，很难解释后面那个不符合词源的 `<|` 或 `<e`。然而，Hunt 和 Benskin (2001) 将上述列出的拼写驳回为“决定性的类比拼写”（Hunt and Benskin 2001: 202），理由是古英语 `nath` 在其双音节形式之外产生了新的单音节形式。不能拼写为 `<nowit>` 和 `<nout>` 的类比，以及传统拼写为 `<out>` 或 `<out>` 的 `<nout>` OUT，也可以拼写为 `<owit>` 或 `<out>`。这无疑是文中许多 `<owit(h>` 等词背后的逻辑，但它们确实可能指示一个双元音，因为代表 `not` 的 `<nit>` 几乎意味着 `<nit>(t)`（带有元音连读和 `[a:]` 古英语 `ā`）。如果允许的话，在伊利/西诺福克郡，反射元音 `m` 的双元化出现在1320–30年之后。
+表1中列出的一些拼写乍看去可能仍然不起眼。这些是：`<thowand>` THOMAS 'John Dauntsye先生的遗嘱'（Towbridge，威尔特郡档案局，D1/2/5），日期为1390年，由 Michael Benskin 确定源于威尔特郡（私人通信）；`<clow>` 对应 `kl 'cloth'`，`<ow>` OUT，`<mow/<moth>` MOUTH，以及在一份被定定为公元1320-1330年的医学配方集中发现的一系列类似拼写，该合集被确定源于伊利/西诺福克郡（Hunt and Benskin 2001）。另一个类似的拼写 `<towen>` TOWN 出现在 `LAEME` 中，它是约克郡东部的源文本，并可追溯到14世纪早期。它们的价值证据在于它们似乎指示了一个双音节（或可能是三音节）核心；否则，很难解释后面那个不符合词源的 `<|` 或 `<e`。然而，Hunt 和 Benskin (2001) 将上述列出的拼写驳回为“决定性的类比拼写”（Hunt and Benskin 2001: 202），理由是古英语 `nath` 在其双音节形式之外产生了新的单音节形式。不能拼写为 `<nowit>` 和 `<nout>` 的类比，以及传统拼写为 `<out>` 或 `<out>` 的 `<nout>` OUT，也可以拼写为 `<owit>` 或 `<out>`。这无疑是文中许多 `<owit(h>` 等词背后的逻辑，但它们确实可能指示一个双元音，因为代表 `not` 的 `<nit>` 几乎意味着 `<nit>(t)`（带有元音连读和 `[a:]` 古英语 `ā`）。如果允许的话，在伊利/西诺福克郡，反射元音 `m` 的双元化出现在1320–30年之后。
 
 中世纪英语 `ũ` 的双元化 59
 
-最后一点是考虑 `ug/ug` 中 `g` 的晚期元音化，根据 Stockwell 和 Minkova 的说法，这破坏了 `/u:/` 并导致了进一步的双元化，引发了“大元音变”（GVS）。从 LAEME 中提取的拼写显示 `g` 的元音化可能始于12世纪（参见 Stenbrenden 2011 中的表6.4）。然而，大多数 `eg. fugal FOWL` 的拼写在重读元音后仍有一个辅音。保留这个辅音是否有任何意义？它可能标志着与历史长元音 `/u/` 的一致。换句话说，Stockwell 和 Minkova 可能是正确的，元音后的 `g` 元音化从未产生单元音，而是双元音。另一方面，在 LAEME 来源中，`ũ` 之后很少不符合词源的辅音用法（例如`<foule>` FOUL（出现在一份格洛斯特郡的源文件中，可追溯到13世纪最后四分之一、14世纪中期和15世纪中期)）。
+最后一点是考虑 `ug/ug` 中 `g` 的晚期元音化，根据 Stockwell 和 Minkova 的说法，这破坏了 `/u:/` 并导致了进一步的双元化，引发了“大元音变”（GVS）。从 `LAEME` 中提取的拼写显示 `g` 的元音化可能始于12世纪（参见 Stenbrenden 2011 中的表6.4）。然而，大多数 `eg. fugal FOWL` 的拼写在重读元音后仍有一个辅音。保留这个辅音是否有任何意义？它可能标志着与历史长元音 `/u/` 的一致。换句话说，Stockwell 和 Minkova 可能是正确的，元音后的 `g` 元音化从未产生单元音，而是双元音。另一方面，在 `LAEME` 来源中，`ũ` 之后很少不符合词源的辅音用法（例如`<foule>` FOUL（出现在一份格洛斯特郡的源文件中，可追溯到13世纪最后四分之一、14世纪中期和15世纪中期)）。
 
 中世纪英语 `ũ` 的双元化 59
 
-最后一点是考虑 `ug/ug` 中 `g` 的晚期元音化，根据 Stockwell 和 Minkova 的说法，这破坏了 `/u:/` 并导致了进一步的双元化，引发了“大元音变”（GVS）。从 LAEME 中提取的拼写显示 `g` 的元音化可能始于12世纪（参见 Stenbrenden 2011 中的表6.4）。然而，大多数 `eg. fugal FOWL` 的拼写在重读元音后仍有一个辅音。保留这个辅音是否有任何意义？它可能标志着与历史长元音 `/u/` 的一致。换句话说，Stockwell 和 Minkova 可能是正确的，元音后的 `g` 元音化从未产生单元音，而是双元音。另一方面，在 LAEME 来源中，`ũ` 之后很少不符合词源的辅音用法（例如`<foule>` FOUL（出现在一份格洛斯特郡的源文件中，可追溯到13世纪最后四分之一、14世纪中期和15世纪中期)）。
-
-等等，文本 `de-mid-thteenth century` 是我思维中的幻觉。让我重新仔细读文本。
-
-
-
-
+最后一点是考虑 `ug/ug` 中 `g` 的晚期元音化，根据 Stockwell 和 Minkova 的说法，这破坏了 `/u:/` 并导致了进一步的双元化，引发了“大元音变”（GVS）。从 `LAEME` 中提取的拼写显示 `g` 的元音化可能始于12世纪（参见 Stenbrenden 2011 中的表6.4）。然而，大多数 `eg. fugal FOWL` 的拼写在重读元音后仍有一个辅音。保留这个辅音是否有任何意义？它可能标志着与历史长元音 `/u/` 的一致。换句话说，Stockwell 和 Minkova 可能是正确的，元音后的 `g` 元音化从未产生单元音，而是双元音。另一方面，在 `LAEME` 来源中，`ũ` 之后很少不符合词源的辅音用法（例如`<foule>` FOUL（出现在一份格洛斯特郡的源文件中，可追溯到13世纪最后四分之一、14世纪中期和15世纪中期)）。
 
 中英语（ME）/ū 的双元音化
 
@@ -999,6 +965,9 @@ Zachrisson (1913) 在《帕顿信件》（诺福郡，1440-70）和《塞利文�
 | 156 | c.1240 | Som | u, ou |
 | 157 | c.1240 | Som | u, ou, w |
 | 118 | c.1240-50 | Chs | u ((v, o)) |
+
+
+
 | 119 | c.1240-50 | Un. | u ((o, v)) |
 | 120 | c.1240-50 | Un. | u |
 | 121 | c.1240-50 | Un. | u |
@@ -1036,10 +1005,7 @@ Zachrisson (1913) 在《帕顿信件》（诺福郡，1440-70）和《塞利文�
 | 136 | 13b2 | Chs | ou/ow, w, ey |
 | 137 | 13b2 | Cam | u ((o)) |
 | 141 | 13b2 | Un. | u |
-| 142 | 13b2 | Kt | u ((o)) | ... (truncated for brevity in this logic flow)
-
-
-
+| 142 | 13b2 | Kt | u ((o)) |
 
 Bybee, J. (2001), 《音系与语言使用》。Cambridge: Cambridge University Press.
 
@@ -1069,7 +1035,7 @@ MALEME: 见 McIntosh 等人。
 
 McIntosh, A., M. Samuels, M. Bensin 等人 (1986), 《晚期中世纪英语语言地图》。第I-IV卷。Aberdeen: Aberdeen University Press.
 
-Minkova, D. and R.P. Stockwell (2003), 〈英语元音移动与“最优”双元音：是否存在逻辑上的演变？》，收于: Holt, D.E. (编) 《最优性理论与语言变化》。Amsterdam: Kluwer Academic Publishers. 169-190.
+Minkova, D. and R.P. Stockwell (2003), 〈英语元音移动与“最优”双元音：是否存在逻辑上的演变？〉，收于: Holt, D.E. (编) 《最优性理论与语言变化》。Amsterdam: Kluwer Academic Publishers. 169-190.
 
 Mitchell, A.G. and A. Delbridge (1965), 《澳大利亚英语发音》。Sydney: Oxford and Robertson.
 
@@ -1085,11 +1051,11 @@ Stenbrenden, G.F. (2011), 《约1150-1500年英语长元音变化的年代学与
 
 Stockwell, R.P. (1972), 〈英语大元音移动解释中的问题】，收于: Smith, M.E. (编) 《纪念乔治·特拉格的语言学研究》。海牙: Mouton. 344-362.
 
-Stockwell, R.P. (1978), 〈英语元音移动中的持续性》，收于: Fisiak, J. (编) 《历史音学的最新进展》。海牙: Mouton. 337-348.
+Stockwell, R.P. (1978), 〈英语元音移动中的持续性〉，收于: Fisiak, J. (编) 《历史音学的最新进展》。海牙: Mouton. 337-348.
 
-Stockwell, R.P. (1985), 〈对开放音节中高元音降低这一英语现象的替代性解释评估》，收于: Eaton, R. 等人 (编) 《第四届国际英语语言学会议论文集》。Philadelphia: John Benjamins. 303-318.
+Stockwell, R.P. (1985), 〈对开放音节中高元音降低这一英语现象的替代性解释评估〉，收于: Eaton, R. 等人 (编) 《第四届国际英语语言学会议论文集》。Philadelphia: John Benjamins. 303-318.
 
-Stockwell, R.P. (2006), 〈英语元音移动早期证据 <ei> 拼写状态》，收于: Schaefer, U. (编) 《标准化的起源：14世纪的语言与文化》。Frankfurt am Main: Peter Lang. 175-180.
+Stockwell, R.P. (2006), 〈英语元音移动早期证据 <ei> 拼写状态〉，收于: Schaefer, U. (编) 《标准化的起源：14世纪的语言与文化》。Frankfurt am Main: Peter Lang. 175-180.
 
 Stockwell, R.P. and D. Minkova (1988a), 〈英语元音移动：凝聚力与解释的问题】，收于: Kastovsky, D. and G. Bauer (编) 《重新审视》。Tübingen: Gunter Narr Verlag. 355-394.
 
@@ -1130,10 +1096,6 @@ Christopher Koch 和 Tobias Bernhard，吉森大学
 
 基于上述标准，印度英语显然符合南亚区域中心的资格。关于其内称命名的稳定程度，Mukherjee（2007: 163）提出，根据 Schneider（2003, 2007）的术语，“印度英语可能被视为第 4 阶段演化的稳定态，并存有第 3 阶段的特征”，在进步和保守力量的共同压力下保持着“稳定的平衡”。换句话说，印度英语变体无疑已经背离了英国英语的标准，转而采用一种区域开发的英语模型。此外，印度的教学实践和产品在印度以外的南亚国家非常受欢迎，这反映在许多尼泊尔毕业生希望在印度大学接受高等教育（参见 Kachru 1994: 548）。在这种背景下，有趣的是，斯里兰卡在“我们的方式说英语”（一种斯里兰卡英语变体）政府运动的背景下，系统地从印度购买英语教学能力。因此，印度英语教材具有很高的跨国相关性。结合萨尔曼·鲁西迪和阿鲁恩达蒂·罗伊等人的长期文学传统，印度英语变体的稳定和编码自然地从其他印度语言中借用了词汇和形式模板。
 
-
-
-
-
 # 南亚英语中的动词补足
 
 （参见 Sedlatschek 2009；Bernaisch 和 Lange 即将出版），这种现象受到如《印度英语使用指南》（参见 Nihalani 等人 2004）或印度英语在线词典等出版物的推动。简而言之，因此可以认为，根据 Kachru (1998: 97) 的参数，印度英语有潜力成为南亚地区其他英语变种的语言中心。
@@ -1162,50 +1124,48 @@ Schneider (2003, 2007) 关于后殖民英语演变的动态模型假设，新英
 
 ### 2.1 数据：南亚英语（SAVE）语料库与 BNC 新闻
 
-直到最近，对南亚英语结构特征的研究在可用数据方面一直有限。虽然网络搜索（例如使用谷歌高级搜索工具 GAST）对于词汇层面的分析可能是可以接受的方案（尽管结果不是无偏的），但由于搜索引擎本身的设计以及搜索引擎对于支持的表达式广为人知的局限性，它们无法用于基于更复杂、更抽象搜索模式的分析，因此离线语料库可能被认为是此类研究的唯一合适基础。然而，本文构想的研究类型有若干要求，目前尚无南亚标准语料库满足：适用于识别 NDT 任务的数据 1) 必须远大于常见的百万词规模；2) 需要能够复杂表达式进行搜索；3) 应该涵盖广泛的南亚英语变种。
 
 
-
-
+直到最近，对南亚英语结构特征的研究在可用数据方面一直有限。虽然网络搜索（例如使用谷歌高级搜索工具 `GAST`）对于词汇层面的分析可能是可以接受的方案（尽管结果不是无偏的），但由于搜索引擎本身的设计以及搜索引擎对于支持的表达式广为人知的局限性，它们无法用于基于更复杂、更抽象搜索模式的分析，因此离线语料库可能被认为是此类研究的唯一合适基础。然而，本文构想的研究类型有若干要求，目前尚无南亚标准语料库满足：适用于识别 `NDT` 任务的数据 1) 必须远大于常见的百万词规模；2) 需要能够复杂表达式进行搜索；3) 应该涵盖广泛的南亚英语变种。
 
 # 克里斯托弗·科赫 & 托比亚斯·伯纳伊施
 
-英语也提供了可比的数据。此外，语料库文本的出版日期不应有巨大差异。南亚英语（SAVE）语料库（参见 Bernaisch 等 2011）满足了所有要求，它提供了一个包含 1800 万词的正式书面英语数据库，这些数据取自所有具有深厚社会语言根源的南亚国家主要国家报纸的在线档案，即孟加拉国、印度、马尔代夫、尼泊尔、巴基斯坦和斯里兰卡。⁴
+英语也提供了可比的数据。此外，语料库文本的出版日期不应有巨大差异。南亚英语（`SAVE`）语料库（参见 Bernaisch 等 2011）满足了所有要求，它提供了一个包含 1800 万词的正式书面英语数据库，这些数据取自所有具有深厚社会语言根源的南亚国家主要国家报纸的在线档案，即孟加拉国、印度、马尔代夫、尼泊尔、巴基斯坦和斯里兰卡。⁴
 
-基于在收集 3000 万词的《State报》数据库（Mukherjee and Hoffmann 2006）以及 Schill (2011) 使用的 1 亿词《印度时报》语料库中成功实施的方法，SAVE 从每个南亚英语国家国家的两份主要报纸档案中选取了 300 万词（每份档案 150 万词），从而为研究提供了来自相同文本体裁的类比数据。表 1 概述了所使用的档案以及所含数据的时间跨度。此外，报纸数据可以被视为更平衡的数据集的有价值替代方案，特别是在无法获得此类平衡数据的情况下（参见 Andersen and Hofland 2012）。在某些变体缺乏标准语法或词典的环境下，报纸语言往往充当了隐性收集的角色，这主要归功于其由编辑过程带来的相对较高的语言标准（该过程应消除大多数转瞬即逝的形式以及学习者的错误）（参见 von Hundt 2006）。所有这些属性使得 SAVE 成为比较结构研究的一个极具吸引力的选择。
+基于在收集 3000 万词的《State报》数据库（Mukherjee and Hoffmann 2006）以及 Schill (2011) 使用的 1 亿词《印度时报》语料库中成功实施的方法，`SAVE` 从每个南亚英语国家国家的两份主要报纸档案中选取了 300 万词（每份档案 150 万词），从而为研究提供了来自相同文本体裁的类比数据。表 1 概述了所使用的档案以及所含数据的时间跨度。此外，报纸数据可以被视为更平衡的数据集的有价值替代方案，特别是在无法获得此类平衡数据的情况下（参见 Andersen and Hofland 2012）。在某些变体缺乏标准语法或词典的环境下，报纸语言往往充当了隐性收集的角色，这主要归功于其由编辑过程带来的相对较高的语言标准（该过程应消除大多数转瞬即逝的形式以及学习者的错误）（参见 von Hundt 2006）。所有这些属性使得 `SAVE` 成为比较结构研究的一个极具吸引力的选择。
 
-表 1：SAVE 的国家组成部分、使用的报纸档案以及数据的出版日期
+表 1：`SAVE` 的国家组成部分、使用的报纸档案以及数据的出版日期
 
 | 国家 | 使用的报纸档案 | 数据出版日期 |
 | :--- | :--- | :--- |
-| 孟加拉国 | 每日明星 (Daily Star) | 2003-2006 |
-| | 新时代 (New Age) | 2005-2007 |
-| 印度 | 《State人报》(The Statesman) | 2002-2005 |
-| | 《印度时报》(The Times of India) | 2002-2005 |
-| 马尔代夫 | 迪维希观察者 (Dhivehi Observer) | 2004-2007 [2008] |
-| | 迷你新闻 (Minivan News) | 2004-2008 |
-| 尼泊尔 | 尼泊尔时报 (Nepali Times) | 2000-2007 |
-| 巴基斯坦 | 喜马拉雅时报 (The Himalayan Times) | [2000] 2002-2008 |
-| | 每日时代 (Daily Times) | 2002-2006 |
-| | 黎明报 (Dawn) | 2002-2007 |
-| 斯里兰卡 | 每日镜 (Daily Mirror) | 2002 |
-| | 每日新闻 (Daily News) | 2001-2005 |
+| 孟加拉国 | 每日明星 (`Daily Star`) | 2003-2006 |
+| | 新时代 (`New Age`) | 2005-2007 |
+| 印度 | 《State人报》(`The Statesman`) | 2002-2005 |
+| | 《印度时报》(`The Times of India`) | 2002-2005 |
+| 马尔代夫 | 迪维希观察者 (`Dhivehi Observer`) | 2004-2007 [2008] |
+| | 迷你新闻 (`Minivan News`) | 2004-2008 |
+| 尼泊尔 | 尼泊尔时报 (`Nepali Times`) | 2000-2007 |
+| 巴基斯坦 | 喜马拉雅时报 (`The Himalayan Times`) | [2000] 2002-2008 |
+| | 每日时代 (`Daily Times`) | 2002-2006 |
+| | 黎明报 (`Dawn`) | 2002-2007 |
+| 斯里兰卡 | 每日镜 (`Daily Mirror`) | 2002 |
+| | 每日新闻 (`Daily News`) | 2001-2005 |
 
-英国国家语料库，或更准确地说，其报纸部分（下简称“BNC news”），包含约 900 万词，被用作参考数据的原因有二。首先，本文的核心关注在于追踪南亚英语结构演变的路径，这些演变主要体现在南亚英语（变体）自身的动词补足语上，表现为各南亚变体与其历史输入变体英国英语之间的系统性结构差异，这种差异独立于其具体的起源（例如由当地语言触发的接触引入、来自美国英语的结构影响等）。其次，SAVE 和 BNC news 中的体裁相对同质，这就是为什么结构差异更有可能源于跨变体差异，而非体裁相关的异质性。⁶
+英国国家语料库，或更准确地说，其报纸部分（下简称“`BNC news`”），包含约 900 万词，被用作参考数据的原因有二。首先，本文的核心关注在于追踪南亚英语结构演变的路径，这些演变主要体现在南亚英语（变体）自身的动词补足语上，表现为各南亚变体与其历史输入变体英国英语之间的系统性结构差异，这种差异独立于其具体的起源（例如由当地语言触发的接触引入、来自美国英语的结构影响等）。其次，`SAVE` 和 `BNC news` 中的体裁相对同质，这就是为什么结构差异更有可能源于跨变体差异，而非体裁相关的异质性。⁶
 
 ## 2.2 非双及物动词（NDTs）与识别方法
 
-遵循 Mukherjee and Hoffmann (2006: 157) 建议的方法（他们通过以下概念界定了 NDTs 组：“动词在 I 型模式中（即双宾语结构）的出现，这定义了该动词为双及物动词一类的成员”），我们为数据集生成了一份所有在双宾语结构中使用的动词列表。
+遵循 Mukherjee and Hoffmann (2006: 157) 建议的方法（他们通过以下概念界定了 `NDTs` 组：“动词在 I 型模式中（即双宾语结构）的出现，这定义了该动词为双及物动词一类的成员”），我们为数据集生成了一份所有在双宾语结构中使用的动词列表。
 
 ## 3. 分析
 
-本文的分析部分分为三个小节。在 3.1 中，我们详细讨论了 NDTs 的频率和分布。基于搜索，我们在 3.2 中为南亚英语中 NDTs 的使用提供了进一步的实证证据。在 3.3 中，双及物结构中 NDTs 的作用占据了核心地位。
+本文的分析部分分为三个小节。在 3.1 中，我们详细讨论了 `NDTs` 的频率和分布。基于搜索，我们在 3.2 中为南亚英语中 `NDTs` 的使用提供了进一步的实证证据。在 3.3 中，双及物结构中 `NDTs` 的作用占据了核心地位。
 
 ### 3.1 SAVE 国家组成部分的 NDTs 频率
 
-SAVE 国家组成部分中 NDTs 的出现情况如表 2 所示。结合 SAVE 获取的 NDTs 绝对频率，我们为双宾语结构中 NDTs 的词汇多样性提供了数据。
+`SAVE` 国家组成部分中 `NDTs` 的出现情况如表 2 所示。结合 `SAVE` 获取的 `NDTs` 绝对频率，我们为双宾语结构中 `NDTs` 的词汇多样性提供了数据。
 
-表 2：SAVE 中 NDTs 的绝对频率、不同类型和词汇多样性
+表 2：`SAVE` 中 `NDTs` 的绝对频率、不同类型和词汇多样性
 
 | 孟加拉国 | 马尔代夫 | 印度 | 斯里兰卡 | 尼泊尔 | 巴基斯坦 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1213,143 +1173,142 @@ SAVE 国家组成部分中 NDTs 的出现情况如表 2 所示。结合 SAVE 获
 | 不同类型 | 14 | 14 | 10 | 16 | 17 | 10 |
 | 词汇多样性 | 48.28% | 37.84% | 23.81% | 31.37% | 31.48% | 17.54% |
 
-尽管 SAVE 各组成部分之间 NDTs 的绝对频率存在统计学上的显著差异（x²13.1111, df=5, p<0.05），但表 2 证明 NDTs 在每个南亚英语数据集中都是可存在的。孟加拉国 (29) 和巴基斯坦 (57) 分别产生了最低和最高的 NDTs 总频率，马尔代夫为 37，印度为 42，斯里兰卡为 51，尼泊尔为 54。词汇多样性从孟加拉国的 48.28% 到巴基斯坦的 17.54% 的趋势，与 NDTs 的总频率在很大程度上呈反比关系，即从 NDTs 绝对频率较低到具有更多新双及物结构的结构，其词汇多样性几乎呈现一致的下降趋势。
-
-
-
-
+尽管 `SAVE` 各组成部分之间 `NDTs` 的绝对频率存在统计学上的显著差异（`x²13.1111, df=5, p<0.05`），但表 2 证明 `NDTs` 在每个南亚英语数据集中都是可存在的。孟加拉国 (29) 和巴基斯坦 (57) 分别产生了最低和最高的 `NDTs` 总频率，马尔代夫为 37，印度为 42，斯里兰卡为 51，尼泊尔为 54。词汇多样性从孟加拉国的 48.28% 到巴基斯坦的 17.54% 的趋势，与 `NDTs` 的总频率在很大程度上呈反比关系，即从 `NDTs` 绝对频率较低到具有更多新双及物结构的结构，其词汇多样性几乎呈现一致的下降趋势。
 
 # 南亚英语中的动词补足
 
-各自的教学材料、对英语的接触（通过不同媒体）可能会促进或阻碍内源性命名标准（endonymative standards）的发展，但非双宾语结构（NDTs）的普遍性与宪法地位之间的性仍然值得讨论。NDTs 的数量最低出现在 SAVE-BAN 和 SAVE-MAL 中，即基于英语不具有官方地位的社会语言学背景下产生的文本生成的数据集。在印度、斯里兰卡和巴基斯坦，英语享有不同程度的宪法承认，这可能在某种程度上影响了 NDT 在各自 SAVE 组件中更强的存在感。就这一论点而言，尼泊尔可能是例外中的异类，但有证据表明，尽管尼泊尔没有赋予英语官方地位，但居住在尼泊尔的英语母语者在印度接受过教育（参见 Kachru 1994: 548），因此受益于印度对英语的普遍支持。
+各自的教学材料、对英语的接触（通过不同媒体）可能会促进或阻碍内源性命名标准（endonymative standards）的发展，但非双宾语结构（`NDTs`）的普遍性与宪法地位之间的性仍然值得讨论。`NDTs` 的数量最低出现在 `SAVE-BAN` 和 `SAVE-MAL` 中，即基于英语不具有官方地位的社会语言学背景下产生的文本生成的数据集。在印度、斯里兰卡和巴基斯坦，英语享有不同程度的宪法承认，这可能在某种程度上影响了 `NDT` 在各自 `SAVE` 组件中更强的存在感。就这一论点而言，尼泊尔可能是例外中的异类，但有证据表明，尽管尼泊尔没有赋予英语官方地位，但居住在尼泊尔的英语母语者在印度接受过教育（参见 Kachru 1994: 548），因此受益于印度对英语的普遍支持。
 
-第三，一项针对约 270 万词的英语通用语（English-language-franca）数据集的 NDT 早期语料库研究表明，非双宾语结构在这些交流场景中缺失（与 Sven Sachs 的私下交流）。这种情况可能被视为：NDTs 与内圈（参见 Mukherjee and Hoffmann 2006: 165）以及外圈英语变体的关联更为紧密，这些变体纯将英语作为促进内容导向型交流的通用语。
+第三，一项针对约 270 万词的英语通用语（English-language-franca）数据集的 `NDT` 早期语料库研究表明，非双宾语结构在这些交流场景中缺失（与 Sven Sachs 的私下交流）。这种情况可能被视为：`NDTs` 与内圈（参见 Mukherjee and Hoffmann 2006: 165）以及外圈英语变体的关联更为紧密，这些变体纯将英语作为促进内容导向型交流的通用语。
 
-关于 NDT 的词汇多样性，人们确实倾向于这样认为：较低的词汇多样性结合高总频率（例如巴基斯坦数据 17.45% 以及在某种程度上也有尼泊尔数据 31.48% 的情况），表明了某些 NDT 发生了特定于变体的发展，即从 Mukherjee 和 Hoffmann (2006: 165) 所描述的“句法无形成”向更稳定的动词结构关联转变。示例 (2) 和 (3) 显示了此类动词结构实例，其出现频率比尼泊尔数据中更高。
+关于 `NDT` 的词汇多样性，人们确实倾向于这样认为：较低的词汇多样性结合高总频率（例如巴基斯坦数据 17.45% 以及在某种程度上也有尼泊尔数据 31.48% 的情况），表明了某些 `NDT` 发生了特定于变体的发展，即从 Mukherjee 和 Hoffmann (2006: 165) 所描述的“句法无形成”向更稳定的动词结构关联转变。示例 (2) 和 (3) 显示了此类动词结构实例，其出现频率比尼泊尔数据中更高。
 
-- (2) Ramechpatrick, 10月16日 毛主义者干部是自由运输企业家，在 Dashain 节即将到来之际向他们捐了钱。<NP_HT_2007-10-16>
-- (3) 仅仅来自所谓的“低代表性阶层”并不意味着无论能力如何某人都能获得特殊待遇。<NP_HT_2005-07-15>
+- (2) Ramechpatrick, 10月16日 毛主义者干部是自由运输企业家，在 Dashain 节即将到来之际向他们捐了钱。`<NP_HT_2007-10-16>`
+
+- (3) 仅仅来自所谓的“低代表性阶层”并不意味着无论能力如何某人都能获得特殊待遇。`<NP_HT_2005-07-15>`
 
 然而，这一主张无法通过现有数据证实，因为我们的数据中缺乏可能特定于变体的动词结构关联，而大量动词在基础双宾语模式中仅出现一次。图 1 提供了在双宾语结构中被证实的动词的数据集特定概述。
 
 ![](img/6910650ad69df72c967df4c631af744d_84_0.png)
 
-图 1：SAVE 国家组件中 NDTs 的概览
+图 1：`SAVE` 国家组件中 `NDTs` 的概览
 
-图 1 需要如下解释：紧邻代表 SAVE 各自国家组件的国家描绘图的词元项（lemmata）列表，代表仅在相关相关数据集中出现的 NDTs（例如，ADMIT, BRIEF, CARRY 等仅在 SAVE-MAL 中出现）。横跨多个国家描绘图的词元则表示它们是特定的 SAVE 组件共有的（例如，EXTEND 被 SAVE-PAK、MAL、SAVE_IND 和 SAVE-SL 共享）。图 1 显示，虽然有许多 NDT 在多个数据集中反复出现（例如 SAVE-PAK、SAVE-IND 和 SAVE-SL 中的 SUBMIT），但与此形成的是，绝大多数双宾语结构在 SAVE 的所有组件中仅出现一次。然而，当涉及到 NDTs 的绝对频率时，PROVIDE 在很大程度上可以解释为各个南亚英语所建立的绝对频率和词汇多样性程度，这是因为该动词在所有 NDTs 中出现频率最高。因此，对词汇多样性数值的解释特别需要考虑到，这些值在很大程度上取决于单个动词不定冠词的出现频率，将在 3.3 节中仔细审查。尽管如此，根据这些观察，似乎相对安全地说，将 NDTs 描述为词汇标记界面（lexismar interface）的一种低频、临时现象，似乎充分涵盖了所研究南亚英语祖源背景中这种结构特征的普遍性。基于现有数据，似乎没有迹象表明特定的动词-结构组合在某些南亚变体中比其他变体更稳固地制度化（正如 NDTs 词汇多样性的差异可能暗示的那样），而且创建 NDTs 的语义结构模板是所有南亚英语变体共有的。
+图 1 需要如下解释：紧邻代表 `SAVE` 各自国家组件的国家描绘图的词元项（lemmata）列表，代表仅在相关相关数据集中出现的 `NDTs`（例如，`ADMIT`, `BRIEF`, `CARRY` 等仅在 `SAVE-MAL` 中出现）。横跨多个国家描绘图的词元则表示它们是特定的 `SAVE` 组件共有的（例如，`EXTEND` 被 `SAVE-PAK`、`MAL`、`SAVE_IND` 和 `SAVE-SL` 共享）。图 1 显示，虽然有许多 `NDT` 在多个数据集中反复出现（例如 `SAVE-PAK`、`SAVE-IND` 和 `SAVE-SL` 中的 `SUBMIT`），但与此形成的是，绝大多数双宾语结构在 `SAVE` 的所有组件中仅出现一次。然而，当涉及到 `NDTs` 的绝对频率时，`PROVIDE` 在很大程度上可以解释为各个南亚英语所建立的绝对频率和词汇多样性程度，这是因为该动词在所有 `NDTs` 中出现频率最高。因此，对词汇多样性数值的解释特别需要考虑到，这些值在很大程度上取决于单个动词不定冠词的出现频率，将在 3.3 节中仔细审查。尽管如此，根据这些观察，似乎相对安全地说，将 `NDTs` 描述为词汇标记界面（lexismar interface）的一种低频、临时现象，似乎充分涵盖了所研究南亚英语祖源背景中这种结构特征的普遍性。基于现有数据，似乎没有迹象表明特定的动词-结构组合在某些南亚变体中比其他变体更稳固地制度化（正如 `NDTs` 词汇多样性的差异可能暗示的那样），而且创建 `NDTs` 的语义结构模板是所有南亚英语变体共有的。
 
-在此背景下，咨询更大且经过上下文重建的数据集无疑是有前景的，并深入研究某些南亚英语中特定变体中的 NDTs 确实是非反复的临时形成，还是可以在多种南亚英语中证实其使用模式。将咨询 GAST 以对特定的新双宾语结构提供额外说明。
+在此背景下，咨询更大且经过上下文重建的数据集无疑是有前景的，并深入研究某些南亚英语中特定变体中的 `NDTs` 确实是非反复的临时形成，还是可以在多种南亚英语中证实其使用模式。将咨询 `GAST` 以对特定的新双宾语结构提供额外说明。
 
 ## 3.2 通过 GAST 的 NDTs
 
-SAVE 数据中跨变体范围最广的 NDTs——EXTEND, SUBMIT 和 SUPPLY 是 GAST 搜索的基础，因为它们在多种南亚英语中的可证实性（见图 1）可能表明这些动词具有泛南亚性质。基于这一背景，通过 GAST 检查在南亚英语中的 EXTEND, SUBMIT 和 SUPPLY，以补充这些动词在南亚英语中出现的 NDTs 变体。由于无法通过 GAST 独立对带有标记的结构进行搜索，我们选择了动词 + a/the 来调查 NDTs。更具体地说，我们搜索了所有南亚英语中的 extend, extends, 以及以及代词 you, her, it, us, them 以及定冠词或不定冠词（例如孟加拉国的 .bd 或斯里兰卡的 .lk）。尽管这一程序只产生了这些动词的部分快照，但表 3 的结果仍然为南亚英语中 NDTs 的普遍性提供了可比的视角。
+`SAVE` 数据中跨变体范围最广的 `NDTs`——`EXTEND`, `SUBMIT` 和 `SUPPLY` 是 `GAST` 搜索的基础，因为它们在多种南亚英语中的可证实性（见图 1）可能表明这些动词具有泛南亚性质。基于这一背景，通过 `GAST` 检查在南亚英语中的 `EXTEND`, `SUBMIT` 和 `SUPPLY`，以补充这些动词在南亚英语中出现的 `NDTs` 变体。由于无法通过 `GAST` 独立对带有标记的结构进行搜索，我们选择了动词 + a/the 来调查 `NDTs`。更具体地说，我们搜索了所有南亚英语中的 `extend`, `extends`, 以及以及代词 `you`, `her`, `it`, `us`, `them` 以及定冠词或不定冠词（例如孟加拉国的 `.bd` 或斯里兰卡的 `.lk`）。尽管这一程序只产生了这些动词的部分快照，但表 3 的结果仍然为南亚英语中 `NDTs` 的普遍性提供了可比的视角。
 
-表 3：南亚英语 EXTEND, SUBMIT 和 SUPPLY 的绝对（abs.）和相对（rel.）频率
+表 3：南亚英语 `EXTEND`, `SUBMIT` 和 `SUPPLY` 的绝对（abs.）和相对（rel.）频率
 
-| Domain | EXTEND | SUBMIT | SUPPLY |
+| Domain | `EXTEND` | `SUBMIT` | `SUPPLY` |
 | :--- | :--- | :--- | :--- |
 | | size | abs. | rel(%) | abs. | rel(%) | abs. | rel(%) |
-| GASTBAN | 0.64% | 16 | 0.01 | 28 | 0.01 | 77 | 0.00 |
-| GASTIND | 91.06% | 148,044 | 98.97 | 216,877 | 99.03 | 3,879,143 | 99.40 |
-| GASTMAL | 0.24% | 1 | 0.00 | 2 | 0.00 | 2 | 0.00 |
-| GASTNEP | 0.69% | 14 | 0.01 | 28 | 0.01 | 48 | 0.00 |
-| GASTPAK | 5.40% | 1,413 | 0.94 | 1,890 | 0.86 | 23,238 | 0.60 |
-| GASTSL | 1.96% | 90 | 0.06 | 184 | 0.08 | 80 | 0.00 |
+| `GASTBAN` | 0.64% | 16 | 0.01 | 28 | 0.01 | 77 | 0.00 |
+| `GASTIND` | 91.06% | 148,044 | 98.97 | 216,877 | 99.03 | 3,879,143 | 99.40 |
+| `GASTMAL` | 0.24% | 1 | 0.00 | 2 | 0.00 | 2 | 0.00 |
+| `GASTNEP` | 0.69% | 14 | 0.01 | 28 | 0.01 | 48 | 0.00 |
+| `GASTPAK` | 5.40% | 1,413 | 0.94 | 1,890 | 0.86 | 23,238 | 0.60 |
+| `GASTSL` | 1.96% | 90 | 0.06 | 184 | 0.08 | 80 | 0.00 |
 | TOTAL | 100.00% | 149,578 | 100.00 | 219,009 | 100.00 | 3,902,588 | 100.00 |
 
-绝对频率显示，在快速粗略的方法中，每个国家级领域中基础双宾语模式下的每个动词都出现了。除了 GAST-SL 是例外外，双宾语结构中的 SUBMIT 和 SUPPLY 在每个领域中的检索频率都比 EXTEND 高。
+绝对频率显示，在快速粗略的方法中，每个国家级领域中基础双宾语模式下的每个动词都出现了。除了 `GAST-SL` 是例外外，双宾语结构中的 `SUBMIT` 和 `SUPPLY` 在每个领域中的检索频率都比 `EXTEND` 高。
 
-EXTEND, SUBMIT 和 SUPPLY 的相对频率必须结合领域大小的数据进行考虑。根据 Greffenette 和 Nioche (2000) 采用的方法，为每个国家级领域产生英语文本大小的估计（以词数计算）。然后将六个特定领域的估计值相加，结果代表了南亚领域英语的总量。同样，例如 GAST-SL 的领域大小（1.96%）是斯里兰卡国家级领域（2,318,293,651）占六个南亚领域总量（118,104,842,593）的比例。
-
-
-
-
+`EXTEND`, `SUBMIT` 和 `SUPPLY` 的相对频率必须结合领域大小的数据进行考虑。根据 Greffenette 和 Nioche (2000) 采用的方法，为每个国家级领域产生英语文本大小的估计（以词数计算）。然后将六个特定领域的估计值相加，结果代表了南亚领域英语的总量。同样，例如 `GAST-SL` 的领域大小（1.96%）是斯里兰卡国家级领域（2,318,293,651）占六个南亚领域总量（118,104,842,593）的比例。
 
 # 南亚英语中的动词补足语
 
-经研究，每个动词在特定领域的相对频率本应与其相应的领域大小相对应。然而，事实显然并非如此。在 GAST-IND 中，这三个动词在基本双宾语模式中的出现频率根据其相应的相对领域大小，即 EXTEND、SUBMIT 和 SUPPLY，但其被证实的频率均低于其余 GAST 搜索结果的预期值。因此，GAST 数据为基于 SAVE 的研究提供了了许多有价值的见解。
+经研究，每个动词在特定领域的相对频率本应与其相应的领域大小相对应。然而，事实显然并非如此。在 `GAST-IND` 中，这三个动词在基本双宾语模式中的出现频率根据其相应的相对领域大小，即 `EXTEND`、`SUBMIT` 和 `SUPPLY`，但其被证实的频率均低于其余 `GAST` 搜索结果的预期值。因此，`GAST` 数据为基于 `SAVE` 的研究提供了了许多有价值的见解。
 
-首先，这些数据证实了新双宾语动词（NDTs）在泛南亚的特征，即它们可以通过每个特定领域的搜索得到证实。在线文本呈现了不同的视角：并不像 SAVE 分析所暗示的那样，在巴基斯坦英语、斯里兰卡英语或尼泊尔英语中 NDT 的出现频率并不高，这在 GAST 搜索中得到了反映。GAST 搜索为孟加拉国英语和马尔迪夫英语中 NDT 的出现频率有限提供了进一步证据，同时也显示了 SUBMIT 和 EXTEND 在书面英语结构中以显著的稳定性再次出现。关于印度英语，已有研究表明，某些动词与所谓的“转移引起的运动”（TCM）结构（参见 Goldberg 1995）（SUBMIT 就是其中之一）其倾向化程度高于其输入变体英语或其他南亚变英语，如斯里兰卡英语（参见 Schilk et al. 2012: 155）。这种“更高程度的及物性”（Mukherjee and Schilk 2008: 174）被认为是部分解释印度英语数据中双宾语结构中 SUBMIT 高度的因素之一，更广泛地说，也是解释印度英语数据中 NDT 广泛的可证实性的因素。
+首先，这些数据证实了新双宾语动词（`NDTs`）在泛南亚的特征，即它们可以通过每个特定领域的搜索得到证实。在线文本呈现了不同的视角：并不像 `SAVE` 分析所暗示的那样，在巴基斯坦英语、斯里兰卡英语或尼泊尔英语中 `NDT` 的出现频率并不高，这在 `GAST` 搜索中得到了反映。`GAST` 搜索为孟加拉国英语和马尔迪夫英语中 `NDT` 的出现频率有限提供了进一步证据，同时也显示了 `SUBMIT` 和 `EXTEND` 在书面英语结构中以显著的稳定性再次出现。关于印度英语，已有研究表明，某些动词与所谓的“转移引起的运动”（`TCM`）结构（参见 Goldberg 1995）（`SUBMIT` 就是其中之一）其倾向化程度高于其输入变体英语或其他南亚变英语，如斯里兰卡英语（参见 Schilk et al. 2012: 155）。这种“更高程度的及物性”（Mukherjee and Schilk 2008: 174）被认为是部分解释印度英语数据中双宾语结构中 `SUBMIT` 高度的因素之一，更广泛地说，也是解释印度英语数据中 `NDT` 广泛的可证实性的因素。
 
 ## 3.3 作为 NDT 的 PROVIDE
 
-在我们英国英语参考数据中，未出现在基本双宾语模式中的动词中，PROVIDE 在 SAVE 的每个国家部分中双宾语结构中的出现频率最高（见表 2）。新双宾语结构中的 PROVIDE 由来自 SAVE-SL 的 (4) 和 SAVE-MAL 的 (5) 文本举例。
+在我们英国英语参考数据中，未出现在基本双宾语模式中的动词中，`PROVIDE` 在 `SAVE` 的每个国家部分中双宾语结构中的出现频率最高（见表 2）。新双宾语结构中的 `PROVIDE` 由来自 `SAVE-SL` 的 (4) 和 `SAVE-MAL` 的 (5) 文本举例。
 
-- (4) 我们只会提供现代设备。 <LK_DN_2002-01-23>
-- (5) 他们只是说他们知道港口项目的日期，他们不会提供电力。 <MV_MN_2006-08-25>
+- (4) 我们只会提供现代设备。 `<LK_DN_2002-01-23>`
 
-对于印度英语，PROVIDE 在基本双宾语模式中的高频率已被记录（参见 Mukherjee and Hoffmann 2006: 158f），本研究可以补充这一观察结果，即 PROVIDE 是所研究的每种南亚英语中最频繁的 NDT。在此背景下，值得注意的是，直接宾语位置实体的语义剖面在我们的数据集之间是相对同的。表 4 显示了根据直接宾语语义类别排列的 PROVIDE 频率（参见 Bresnan and Hay 2008）。
+- (5) 他们只是说他们知道港口项目的日期，他们不会提供电力。 `<MV_MN_2006-08-25>`
 
-表 4：SAVE 中 PROVIDE 直接宾语的语义类别
+对于印度英语，`PROVIDE` 在基本双宾语模式中的高频率已被记录（参见 Mukherjee and Hoffmann 2006: 158f），本研究可以补充这一观察结果，即 `PROVIDE` 是所研究的每种南亚英语中最频繁的 `NDT`。在此背景下，值得注意的是，直接宾语位置实体的语义剖面在我们的数据集之间是相对同的。表 4 显示了根据直接宾语语义类别排列的 `PROVIDE` 频率（参见 Bresnan and Hay 2008）。
 
-| | SAVE-BAN | | SAVE-MAL | | SAVE-SL | | |
+表 4：`SAVE` 中 `PROVIDE` 直接宾语的语义类别
+
+| | `SAVE-BAN` | | `SAVE-MAL` | | `SAVE-SL` | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | | abs. | rel. (%) | abs. | rel. (%) | abs. | rel. (%) |
 | 语义类别 | abs | 8 | 57.14 | 10 | 55.56 | 19 | 59.38 |
 | | con | 3 | 21.43 | 6 | 33.33 | 8 | 25.00 |
 | | inf | 3 | 21.43 | 2 | 11.11 | | 15.63 |
-| | SAVE-IND | | SAVE-PAK | | | | |
+| | `SAVE-IND` | | `SAVE-PAK` | | | | |
 | 语义类别 | abs. | rel. (%) | abs. | rel. (%) | abs. | rel. (%) |
 | | abs | 16 | 50.00 | 16 | 44.44 | 30 | 62.50 |
 | | con | 11 | 34.38 | 12 | 33.33 | 12 | 25.00 |
 | | inf | 5 | 15.63 | | 8 | 22.22 | 6 | 12.50 |
 
-对于每个数据集，PROVIDE 最频繁地用于抽象实体（“abs”，如 *help*），其次是具体实体（“con”，如 *food*）和信息实体（“inf”）。SAVE-BAN 在“con”和“inf”实体上仅显示出细微偏差。在这些数据集之间，各个语义类别的频率没有统计学上的显著差异（χ*=4.638, df=10, p<05），这进一步证实了 PROVIDE 在双宾语结构中的语义范围在相关南亚英语中是统一的。因此，可以认为 PROVIDE 是泛南亚语义稳定的 NDT，可以在所有南亚英语中具有相同的范围。然而，根据美国英语的结构见解，这种解释仍需进行批判性的重新评估，并作为后续讨论的起点。
+对于每个数据集，`PROVIDE` 最频繁地用于抽象实体（“abs”，如 *help*），其次是具体实体（“con”，如 *food*）和信息实体（“inf”）。`SAVE-BAN` 在“con”和“inf”实体上仅显示出细微偏差。在这些数据集之间，各个语义类别的频率没有统计学上的显著差异（`χ*=4.638, df=10, p<05`），这进一步证实了 `PROVIDE` 在双宾语结构中的语义范围在相关南亚英语中是统一的。因此，可以认为 `PROVIDE` 是泛南亚语义稳定的 `NDT`，可以在所有南亚英语中具有相同的范围。然而，根据美国英语的结构见解，这种解释仍需进行批判性的重新评估，并作为后续讨论的起点。
 
 ## 4 讨论与结论
 
-在关于南亚英语 NDT 的当前讨论中，需要考虑的是我们在英国英语结构发展的背景下（南亚英语直接或间接变体，如尼泊尔英语的情况，参见 McArthur 2003: 329）了 NDT 的“新”。作为结果，我们使用英国英语作为基准来发现 NDT，并意识地忽略了其他（母语）英语变体的实证数据，而这些变体本可以与南亚英语 NDT 进行比较。尽管如此，我们注意到 PROVIDE 被描述为在美式英语等变体中已建立良好的双宾语结构类型（Mukherjee and Hoffmann 2006: 158），为此 (6) 和 (7) 提供了来自国家语料库书写部分的美国英语示例。
-
-- (6) 美国提供了其防御朝鲜所需的军事援助，迫使朝鲜克制其导弹计划。<WR-016_p72>
-- (7) 在这里，Ellison 利用对种族间暴力的关注，为读者提供了一个白男孩成长的讽刺故事。<WRJO-439_p83>
-
-尽管我们的论文主要关注南亚英语与英国英语之间的结构差异，但示例 (6) 和 (7) 表明，有必要用早前的研究（例如 Mukherjee and Hoffmann 2006; Hoffmann and Mukherjee 2007）补充 a) 历数据和 b) 额外数据。在解释 NDT 的起源时，对更广泛数据库的需求变得尤为明显。有三种一般假设：第一，可能是 Letner (1992: 225) 所提的，英语已变为南亚英语，引发了 NDT 的派生，并随着时间的推移被邻近变体吸收。尼泊尔英语可能被认为是印度在南亚地区的一个实例。第二，可能是 NDT 通过各南亚国家英语与本土语言之间的长期接触独立产生的。示例 (8) 证明了当地语言语法结构对相应英语变体的潜在影响。
-
-(8) I provide him information.
-Man denawa eyata thoruru.
-Man sapayanawa eyata thoruru. [主语] [动词] [间宾语] [直接宾语]
-
-(8) 中的新双宾语结构 provide him 至少有两个等效语，在斯里兰多数语中复制了英语成分顺序。Man denawa eyata thoruru 字面翻译为“I give information”（在斯里兰卡语中，information 与 GIVE 比与 PROVIDE 更常搭配），而更正式的形式 Man sapayanawa eyata thoruru 代表 provide him information。无论是否存在搭配限制或正式程度的差异，示例 (8) 表明从斯里兰卡语到英语的逐字翻译（即南亚本土语言与英语之间语言接触场景可能的结果）至少具有导致相关英语变体中出现新双宾语结构的潜力。此外，示例 (8) 仅作为一个指示，说明在追溯 NDT 起源时需要考虑语言接触情况；接触诱发的语言变化机制在南亚英语的其他语法特征中已得到证实（如 Bernaisch and Lage 即将出版），这就是为什么语言接触在 NDT 背景下也是一个相关因素。第三，对 PROVIDE 的进一步仔细检查无疑引发了问题：我们是否正在目睹美国英语对南亚语言生态的影响。因此，扩大南亚英语研究范围可能是理想的，英国英语由于历史原因已合法地作为南亚英语结构发展的比较手段，可以通过额外的参考变体进行补充，特别是其在南亚媒体中存在的美国英语，以及可能存在于南亚与澳大利亚大陆之间迁移路径的澳大利亚英语。只有在历时数据和额外参考数据的基础上，才能勾勒出南亚英语 NDT 的起源及其结果，从而评估这些场景（可能现实地）在多大程度上解释了所研究南亚英语中 NDT 的证实性。
-
-尽管如此，同步分析为南亚英语中的 NDT 提供了相对清晰的见解。结果表明，这种词汇现象并不局限于印度英语（新双宾语结构在早期已得到证实，参见 Mukherjee and Hoffmann 2006），而是非英国英语中使用的动词-结构组合出现在所有所涵盖的南亚英语中。基于 SAVE 数据和 GAST 分析的补充视角指向了印度英语在所研究南亚英语中的特殊地位，因为只有在这种变体中，NDTs 在报纸写作和书面文本环境中以较高的频率得到证实。尽管在尼泊尔和巴基斯坦对应的 G 搜索中更明显地显示 NDT 在更广泛的书面文本中并不频繁。因此可以假设这表明尼泊尔和巴基斯坦英语优秀作者对这些创新形式的限制，然而这些形式似乎对更广泛的社区没有产生可追溯的影响。相比之下，创新的词汇形式似乎是英语母语者以及处于方言梯度较低水平的变体说话者共享的。
 
 
+在关于南亚英语 `NDT` 的当前讨论中，需要考虑的是我们在英国英语结构发展的背景下（南亚英语直接或间接变体，如尼泊尔英语的情况，参见 `McArthur 2003: 329`）了 `NDT` 的“新”。作为结果，我们使用英国英语作为基准来发现 `NDT`，并意识地忽略了其他（母语）英语变体的实证数据，而这些变体本可以与南亚英语 `NDT` 进行比较。尽管如此，我们注意到 `PROVIDE` 被描述为在美式英语等变体中已建立良好的双宾语结构类型（`Mukherjee and Hoffmann 2006: 158`），为此 `(6)` 和 `(7)` 提供了来自国家语料库书写部分的美国英语示例。
 
+- `(6)` 美国提供了其防御朝鲜所需的军事援助，迫使朝鲜克制其导弹计划。`<WR-016_p72>`
 
+- `(7)` 在这里，`Ellison` 利用对种族间暴力的关注，为读者提供了一个白男孩成长的讽刺故事。`<WRJO-439_p83>`
+
+尽管我们的论文主要关注南亚英语与英国英语之间的结构差异，但示例 `(6)` 和 `(7)` 表明，有必要用早前的研究（例如 `Mukherjee and Hoffmann 2006`; `Hoffmann and Mukherjee 2007`）补充 a) 历数据和 b) 额外数据。在解释 `NDT` 的起源时，对更广泛数据库的需求变得尤为明显。有三种一般假设：第一，可能是 `Letner (1992: 225)` 所提的，英语已变为南亚英语，引发了 `NDT` 的派生，并随着时间的推移被邻近变体吸收。尼泊尔英语可能被认为是印度在南亚地区的一个实例。第二，可能是 `NDT` 通过各南亚国家英语与本土语言之间的长期接触独立产生的。示例 `(8)` 证明了当地语言语法结构对相应英语变体的潜在影响。
+
+`(8)` `I provide him information.`
+
+`Man denawa eyata thoruru.`
+
+`Man sapayanawa eyata thoruru.` [主语] [动词] [间宾语] [直接宾语]
+
+`(8)` 中的新双宾语结构 `provide him` 至少有两个等效语，在斯里兰多数语中复制了英语成分顺序。`Man denawa eyata thoruru` 字面翻译为“I give information”（在斯里兰卡语中，information 与 `GIVE` 比与 `PROVIDE` 更常搭配），而更正式的形式 `Man sapayanawa eyata thoruru` 代表 `provide him information`。无论是否存在搭配限制或正式程度的差异，示例 `(8)` 表明从斯里兰卡语到英语的逐字翻译（即南亚本土语言与英语之间语言接触场景可能的结果）至少具有导致相关英语变体中出现新双宾语结构的潜力。此外，示例 `(8)` 仅作为一个指示，说明在追溯 `NDT` 起源时需要考虑语言接触情况；接触诱发的语言变化机制在南亚英语的其他语法特征中已得到证实（如 `Bernaisch and Lage` 即将出版），这就是为什么语言接触在 `NDT` 背景下也是一个相关因素。第三，对 `PROVIDE` 的进一步仔细检查无疑引发了问题：我们是否正在目睹美国英语对南亚语言生态的影响。因此，扩大南亚英语研究范围可能是理想的，英国英语由于历史原因已合法地作为南亚英语结构发展的比较手段，可以通过额外的参考变体进行补充，特别是其在南亚媒体中存在的美国英语，以及可能存在于南亚与澳大利亚大陆之间迁移路径的澳大利亚英语。只有在历时数据和额外参考数据的基础上，才能勾勒出南亚英语 `NDT` 的起源及其结果，从而评估这些场景（可能现实地）在多大程度上解释了所研究南亚英语中 `NDT` 的证实性。
+
+尽管如此，同步分析为南亚英语中的 `NDT` 提供了相对清晰的见解。结果表明，这种词汇现象并不局限于印度英语（新双宾语结构在早期已得到证实，参见 `Mukherjee and Hoffmann 2006`），而是非英国英语中使用的动词-结构组合出现在所有所涵盖的南亚英语中。基于 `SAVE` 数据和 `GAST` 分析的补充视角指向了印度英语在所研究南亚英语中的特殊地位，因为只有在这种变体中，`NDTs` 在报纸写作和书面文本环境中以较高的频率得到证实。尽管在尼泊尔和巴基斯坦对应的 `G` 搜索中更明显地显示 `NDT` 在更广泛的书面文本中并不频繁。因此可以假设这表明尼泊尔和巴基斯坦英语优秀作者对这些创新形式的限制，然而这些形式似乎对更广泛的社区没有产生可追溯的影响。相比之下，创新的词汇形式似乎是英语母语者以及处于方言梯度较低水平的变体说话者共享的。
 
 南亚英语中的动词补足 85
 
-印度英语，因此在几种交流语境中引发了持续高频的非及物动词（NDTs）。
+印度英语，因此在几种交流语境中引发了持续高频的非及物动词（`NDTs`）。
 
-针对最初的假设，印度、巴基斯坦和斯里兰卡的英语数据至少在部分证实了以下预期：即（当地）英语变体的宪法支持可能体现在更高频率的 NDT 上。尼泊尔语新闻数据中 NDT 频率高得惊人，可能源于 SAVE-NEP 库中相应的尼泊尔语英语使用者在印度接受的高等教育。在印度大学的尼泊尔学生可能习得了印度英语的结构细微差别，并将其带入了尼泊尔英语中。基于这种从印度英语到尼泊尔英语的潜在结构性转移，Bernaisch 和 Lange（即将出版）提供了一种解释，即尼泊尔英语可能代表了“一种后殖民英语的平方版……因为是印度英语而非英国英语，为可能的新一轮发展提供了详尽的目标变体”。
+针对最初的假设，印度、巴基斯坦和斯里兰卡的英语数据至少在部分证实了以下预期：即（当地）英语变体的宪法支持可能体现在更高频率的 `NDT` 上。尼泊尔语新闻数据中 `NDT` 频率高得惊人，可能源于 `SAVE-NEP` 库中相应的尼泊尔语英语使用者在印度接受的高等教育。在印度大学的尼泊尔学生可能习得了印度英语的结构细微差别，并将其带入了尼泊尔英语中。基于这种从印度英语到尼泊尔英语的潜在结构性转移，`Bernaisch` 和 `Lange`（即将出版）提供了一种解释，即尼泊尔英语可能代表了“一种后殖民英语的平方版……因为是印度英语而非英国英语，为可能的新一轮发展提供了详尽的目标变体”。
 
-本文为研究开辟了若干途径。从方法论的角度来看，如果不仅允许代词，还允许直接宾语位置出现非名词性名词短语，那么为南亚英语中的 NDT 绘制更完整的蓝图将是有益的。此外，将现有数据与（早期的）文本材料进行补充将有助于 NDT 的发展，从而为潜在语言专家关于 NDT 在南亚何地起源提供见解。从概念上讲，对一组非洲英语变体复制本研究也可能很有趣，以建立这种 NDT 中体现的创造性词汇潜力在多大程度上与其他非亚洲 ESL（英语作为第二语言）变体共享，并调查 NDT 是否构成了一种泛南亚的普遍结构特征，在统一南亚语言空间的同时将其与南亚以外的其他变体区分开来。
+本文为研究开辟了若干途径。从方法论的角度来看，如果不仅允许代词，还允许直接宾语位置出现非名词性名词短语，那么为南亚英语中的 `NDT` 绘制更完整的蓝图将是有益的。此外，将现有数据与（早期的）文本材料进行补充将有助于 `NDT` 的发展，从而为潜在语言专家关于 `NDT` 在南亚何地起源提供见解。从概念上讲，对一组非洲英语变体复制本研究也可能很有趣，以建立这种 `NDT` 中体现的创造性词汇潜力在多大程度上与其他非亚洲 `ESL`（英语作为第二语言）变体共享，并调查 `NDT` 是否构成了一种泛南亚的普遍结构特征，在统一南亚语言空间的同时将其与南亚以外的其他变体区分开来。
 
 ## 注释
 
-- 1 http://www.dailews.lk/2010/07/20/fea03.asp (2012年6月11日)
-- 2 http://www.amritt.com/IndianEnglish.html (2012年6月11日)
-- 3 动词 will 的原型将用大写字母给出，动词词形将使用斜体。
-- 4 SAVE 库是由德国科学基金会资助的项目“南亚英语中的动词补足：网络语料库中不及物动词的研究 (MU 1683/3-1)”编制的。
-- 5 由于其规模少于要求的 150 万字，来自《Dhivehi Observer》和《喜马拉雅时代》档案的数据必须用第二份报纸的数据补充，从而扩展了包含材料的时间跨。这通过方括号中的日期指示。
+- 1 `http://www.dailews.lk/2010/07/20/fea03.asp` (2012年6月11日)
 
-Christopher Koch & Tobias Bernaisch
+- 2 `http://www.amritt.com/IndianEnglish.html` (2012年6月11日)
 
-然而，必须注意到，BNC 数据与 SAVE 库之间存在 10-15 年的时间差。由于由于原因，我们不能排除本研究中报告的 NDT 可能也出现在更近期的英国报纸文本中。
+- 3 动词 `will` 的原型将用大写字母给出，动词词形将使用斜体。
 
-我们感谢 Benedikt Heller（吉森路图斯·李比锡大学）为我们提供了一个极好的早期版本 Perl 脚本。
+- 4 `SAVE` 库是由德国科学基金会资助的项目“南亚英语中的动词补足：网络语料库中不及物动词的研究 (`MU 1683/3-1`)”编制的。
 
-提出的词汇多样性衡量标准需要非常仔细地解释：a) 由于该值对绝对频率的（差异）敏感，它仅允许在相似规模的 NDT 集合之间进行词汇多样性比较（参见 Schneider 和 Zipp 即将出版）；b) 对于像 NDT 这样低频率的现象，某些动词-构造组合的频繁出现可能会损害该衡量标准的信息价值。
+- 5 由于其规模少于要求的 150 万字，来自《`Dhivehi Observer`》和《喜马拉雅时代》档案的数据必须用第二份报纸的数据补充，从而扩展了包含材料的时间跨。这通过方括号中的日期指示。
 
-关于通过搜索引擎对在线文本进行语言分析的基础及其缺点和潜在陷阱的深入讨论，请参见 Fletcher (2007)。
+`Christopher Koch & Tobias Bernaisch`
 
-由于在 GAST 中无法在不引起 Google 安全防护冲突的情况下进行基于脚本的搜索，由于查询量巨大，搜索是在一周内进行的。理想情况下，搜索应该同时进行以确保结果具有最大的可比性，但由于时间限制，手头的数据并非如此。
+然而，必须注意到，`BNC` 数据与 `SAVE` 库之间存在 10-15 年的时间差。由于由于原因，我们不能排除本研究中报告的 `NDT` 可能也出现在更近期的英国报纸文本中。
 
-GAST 报告的数字对应于 Google 在给定查询结果顶部给出的第一个（估计）值。我们意识到这些数字只是粗略估计，而且在浏览不同的搜索结果页面时，Google 甚至会调整这些估计值。尽管如此，相对于英国英语和斯里兰卡英语的透明度在印度英语的词汇组中并不统一。
+我们感谢 `Benedikt Heller`（吉森路图斯·李比锡大学）为我们提供了一个极好的早期版本 `Perl` 脚本。
 
-本文的主要任务之一是揭示南亚英语的词汇构成在多大程度上脱离了英国英语，或者换句话说，双宾语结构在熟练的 ESL 使用者中使用何种程度。相应的，示例 (6) 和 (7) 是通过 Treebank 项目（参见 Ulrich 和 Poisel 2012）检索的，存储于埃尔兰根-纽伦堡大学。
+提出的词汇多样性衡量标准需要非常仔细地解释：a) 由于该值对绝对频率的（差异）敏感，它仅允许在相似规模的 `NDT` 集合之间进行词汇多样性比较（参见 `Schneider` 和 `Zipp` 即将出版）；b) 对于像 `NDT` 这样低频率的现象，某些动词-构造组合的频繁出现可能会损害该衡量标准的信息价值。
 
-另注意 (5) 中的美国英语拼写 harbor。
+关于通过搜索引擎对在线文本进行语言分析的基础及其缺点和潜在陷阱的深入讨论，请参见 `Fletcher (2007)`。
+
+由于在 `GAST` 中无法在不引起 `Google` 安全防护冲突的情况下进行基于脚本的搜索，由于查询量巨大，搜索是在一周内进行的。理想情况下，搜索应该同时进行以确保结果具有最大的可比性，但由于时间限制，手头的数据并非如此。
+
+`GAST` 报告的数字对应于 `Google` 在给定查询结果顶部给出的第一个（估计）值。我们意识到这些数字只是粗略估计，而且在浏览不同的搜索结果页面时，`Google` 甚至会调整这些估计值。尽管如此，相对于英国英语和斯里兰卡英语的透明度在印度英语的词汇组中并不统一。
+
+本文的主要任务之一是揭示南亚英语的词汇构成在多大程度上脱离了英国英语，或者换句话说，双宾语结构在熟练的 `ESL` 使用者中使用何种程度。相应的，示例 `(6)` 和 `(7)` 是通过 `Treebank` 项目（参见 `Ulrich` 和 `Poisel 2012`）检索的，存储于埃尔兰根-纽伦堡大学。
+
+另注意 `(5)` 中的美国英语拼写 `harbor`。
 
 在“南亚英语中的动词补足：网络语料库中不及物动词的研究”项目中，对 3,500 个实例的分析显示，代词出现在间接宾语位置。
 
@@ -1357,85 +1316,109 @@ GAST 报告的数字对应于 Google 在给定查询结果顶部给出的第一�
 
 ## 参考文献
 
-- Andersen, G. and Hofland (2012), 《基于网络新闻的大型语料库》，在：G. Andersen (编) 《探索语言》。Amsterdam: John Benjamin 1-28.
-- Balasubramanian, C. (2009), 印度英语变体。Amsterdam: John Benjamin.
-- Baumgardner, R. J. (1993), 巴基斯坦英语。Karachi: Oxford University Press.
-- Bernaisch, T. C. Mukherjee and Schilk (2011), 南亚英语 (SAVE) 手册。Giessen: Department Department.
-- Bernaisch, T. and Lange (即将出版), 亚洲英语中的焦点标记类型学。
-- Bresnan, J. and Hay (2008), 《语法：对新西兰和美国英语的影响》，Lingua, 118(2): 245-259.
-- Fernando, S. (2008), 英语作为一种技能。Colombo: Public Survey and Research Unit (PSRU).
-- Fletcher, W.H. (2007), 《检索网络：承诺与问题、工具与技术》，在：M. Mundt, Helsauf and Bier (编) 《语料语言学与网络》。Amsterdam: Rodopi 25-45.
-- Grefenst, G. and Nioche (2000), 网络上英语和非英语使用的估计，《基于内容的多媒体访问》。Paris: 12-14.
-- Goldberg, A. E. (1995), 《构造：论结构的方法》。Chicago/IL: The University of Chicago.
-- Hoffmann, S. and Mukherjee (2007), 《印度英语和英国英语中的双及物动词：语料语言学研究》，AAA - Arbeiten aus Anglistik und Amerikanistik, 32(1):5-21.
-- Hundt, M. (2006), 《印度英语中的集合名词在内圈和外圈英语中》，Journal of English Linguistics, 34(3): 206-232.
-- Kachru, B. B. (1994), 《南亚英语》，在：R. Burchfield (编) 《英语史》第5 卷。英国及海外英语：发展》。Cambridge University Press. 497-553.
-- Kachru, B. B. (1998), 《作为亚洲语言的英语》，Links & Letters, 5: 89-108.
-- Leitner, G. (1992), 《作为多中心语言的英语》，在：M. Clyne (编) 《多中心语言：不同国家的标准》。Berlin: Mouton de Gruyter 179-237.
-- McArthur, T. (2003), 《世界英语牛津指南》。New York: Oxford University Press.
-- Mendis, D. and H. Rambukwella (2010), 《斯里兰卡英语》，在：A. Kirkpatrick (编) 《世界英语劳特奇手册》。London/New York: Routledge. 181-196.
-- Mukherjee, J. (2007), 《新英语演变中的稳定状态：现代印度英语作为一种平衡》，Journal of English Linguistics, 35(2): 152-177.
-- Mukherjee, J., (2076), 《南亚英语 - 双重规范取向与语料库的作用：斯里兰卡的辩论现状》。
-- Mukherjee, J. and S. Hoffmann (2006), 《描述新英语的动词补足特征：印度英语的一项试点研究》，全球英语, 27(2): 147-173.
-- Mukherjee, J. and M. Schilk (2008), 《印度英语和英国英语变体中的动词补足偏好》，在：T. Nevalainen, I. Taavitsainen, P. Path and M. Korhonen (编) 《语言变化的动态：过去与现在的语料库证据》。Amsterdam: John Benjins 163-181.
-- Nihalan, R. K. Tongue, P. Hosali and J. Crowther (2004), 《印度和英国英语：用法与发音手册》。New Delhi: Oxford University Press.
-- Rajapakase, A. (2008), 《斯里兰卡布尔人语言的描述性分析》，在：D. Fernando and D. Mendis (编) 《为了平等、就业和赋权：第四届 SLELTA 英语教师协会国际会议论文集》。Colombo: SLELTA 48-58.
-- Schilk, M. (2011), 印度英语词类的结构化。Amsterdam: John Benjins.
-- Schilk, M., T. Bernaisch and J. Mukherjee (2012), 《南亚英语词汇统一与多样性映射：跨变体的动词补足偏好》，在：M. Hundt and U. Gut (编) 《全球统一与多样性映射：新英语语料库研究》。Amsterdam: John Benjins 137-166.
+- `Andersen, G. and Hofland (2012)`, 《基于网络新闻的大型语料库》，在：`G. Andersen` (编) 《探索语言》。`Amsterdam: John Benjamin` 1-28.
 
+- `Balasubramanian, C. (2009)`, 印度英语变体。`Amsterdam: John Benjamin`.
 
+- `Baumgardner, R. J. (1993)`, 巴基斯坦英语。`Karachi: Oxford University Press`.
 
+- `Bernaisch, T. C. Mukherjee and Schilk (2011)`, 南亚英语 (`SAVE`) 手册。`Giessen: Department Department`.
 
+- `Bernaisch, T. and Lange` (即将出版), 亚洲英语中的焦点标记类型学。
+
+- `Bresnan, J. and Hay (2008)`, 《语法：对新西兰和美国英语的影响》，`Lingua`, 118(2): 245-259.
+
+- `Fernando, S. (2008)`, 英语作为一种技能。`Colombo: Public Survey and Research Unit (PSRU)`.
+
+- `Fletcher, W.H. (2007)`, 《检索网络：承诺与问题、工具与技术》，在：`M. Mundt, Helsauf and Bier` (编) 《语料语言学与网络》。`Amsterdam: Rodopi` 25-45.
+
+- `Grefenst, G. and Nioche (2000)`, 网络上英语和非英语使用的估计，《基于内容的多媒体访问》。`Paris: 12-14`.
+
+- `Goldberg, A. E. (1995)`, 《构造：论结构的方法》。`Chicago/IL: The University of Chicago`.
+
+- `Hoffmann, S. and Mukherjee (2007)`, 《印度英语和英国英语中的双及物动词：语料语言学研究》，`AAA - Arbeiten aus Anglistik und Amerikanistik`, 32(1):5-21.
+
+- `Hundt, M. (2006)`, 《印度英语中的集合名词在内圈和外圈英语中》，`Journal of English Linguistics`, 34(3): 206-232.
+
+- `Kachru, B. B. (1994)`, 《南亚英语》，在：`R. Burchfield` (编) 《英语史》第5 卷。英国及海外英语：发展》。`Cambridge University Press`. 497-553.
+
+- `Kachru, B. B. (1998)`, 《作为亚洲语言的英语》，`Links & Letters`, 5: 89-108.
+
+- `Leitner, G. (1992)`, 《作为多中心语言的英语》，在：`M. Clyne` (编) 《多中心语言：不同国家的标准》。`Berlin: Mouton de Gruyter` 179-237.
+
+- `McArthur, T. (2003)`, 《世界英语牛津指南》。`New York: Oxford University Press`.
+
+- `Mendis, D. and H. Rambukwella (2010)`, 《斯里兰卡英语》，在：`A. Kirkpatrick` (编) 《世界英语劳特奇手册》。`London/New York: Routledge`. 181-196.
+
+- `Mukherjee, J. (2007)`, 《新英语演变中的稳定状态：现代印度英语作为一种平衡》，`Journal of English Linguistics`, 35(2): 152-177.
+
+- `Mukherjee, J., (2076)`, 《南亚英语 - 双重规范取向与语料库的作用：斯里兰卡的辩论现状》。
+
+- `Mukherjee, J. and S. Hoffmann (2006)`, 《描述新英语的动词补足特征：印度英语的一项试点研究》，全球英语, 27(2): 147-173.
+
+- `Mukherjee, J. and M. Schilk (2008)`, 《印度英语和英国英语变体中的动词补足偏好》，在：`T. Nevalainen, I. Taavitsainen, P. Path and M. Korhonen` (编) 《语言变化的动态：过去与现在的语料库证据》。`Amsterdam: John Benjins` 163-181.
+
+- `Nihalan, R. K. Tongue, P. Hosali and J. Crowther (2004)`, 《印度和英国英语：用法与发音手册》。`New Delhi: Oxford University Press`.
+
+- `Rajapakase, A. (2008)`, 《斯里兰卡布尔人语言的描述性分析》，在：`D. Fernando and D. Mendis` (编) 《为了平等、就业和赋权：第四届 SLELTA 英语教师协会国际会议论文集》。`Colombo: SLELTA` 48-58.
+
+- `Schilk, M. (2011)`, 印度英语词类的结构化。`Amsterdam: John Benjins`.
+
+- `Schilk, M., T. Bernaisch and J. Mukherjee (2012)`, 《南亚英语词汇统一与多样性映射：跨变体的动词补足偏好》，在：`M. Hundt and U. Gut` (编) 《全球统一与多样性映射：新英语语料库研究》。`Amsterdam: John Benjins` 137-166.
 
 # 南亚英语中的动词补足语
 
-Schneider, E. W. (2003), '新英语的动态：从身份构建到方言诞生', 语言, 79(2): 233-281.
+`Schneider, E. W. (2003)`, '新英语的动态：从身份构建到方言诞生', 语言, 79(2): 233-281.
 
-Schneider, E. W. (2007), 《后殖民英语：世界各地的变体》。剑桥大学大学出版社。
+`Schneider, E. W. (2007)`, 《后殖民英语：世界各地的变体》。剑桥大学大学出版社。
 
-Schneider, G. and L. Zipp (待出版), '在新英语中发现新的动词-介词组合', 收于 M. Huber and J. Mukherjee (编) 《语料语言学与英语变异：关注非母语英语》。赫尔辛基: VARIENG.
+`Schneider, G. and L. Zipp` (待出版), '在新英语中发现新的动词-介词组合', 收于 `M. Huber and J. Mukherjee` (编) 《语料语言学与英语变异：关注非母语英语》。赫尔辛基: `VARIENG`.
 
-Sedlatchek, A. (2009), 《当代印度英语：差异与变化：基于语料的研究》。阿姆斯特丹: John Benjamins.
+`Sedlatchek, A. (2009)`, 《当代印度英语：差异与变化：基于语料的研究》。阿姆斯特丹: `John Benjamins`.
 
-Stefanowitz, A. and S. Gries (2003), '共构：调查词汇与结构的相互作用', 国际语料语言学杂志, 8(2): 209-243.
+`Stefanowitz, A. and S. Gries (2003)`, '共构：调查词汇与结构的相互作用', 国际语料语言学杂志, 8(2): 209-243.
 
-Uhrig, P. and T. Proisl (2012), 埃尔根树树库。埃尔根大学。在线地址：<http://treebank.info/>。
+`Uhrig, P. and T. Proisl (2012)`, 埃尔根树树库。埃尔根大学。在线地址：`<http://treebank.info/>`。
 
-Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词动词', 收于 M. Hundt and U. Gut (编) 《全球统一与多样性地图：新英语基于语料的研究》。阿姆斯特丹: John Benjamins. 167-196.
+`Zipp, L. and T. Bernais (2012)`, '跨英语第一、第二语言变体的助词动词', 收于 `M. Hundt and U. Gut` (编) 《全球统一与多样性地图：新英语基于语料的研究》。阿姆斯特丹: `John Benjamins`. 167-196.
 
 # 英语现在完成时的功能变异：一项跨变体研究
 
-姚新悦与 Peter Collins
+`姚新悦` 与 `Peter Collins`
+
 新南威尔士大学
 
 摘要
-本文考查了当代英国英语、美国英语、澳大利亚英语和新西兰英语中现在完成时结构的分布与功能。数据主要源自国际英语语料库（ICE），涵盖了四种主要语体：对话、新闻、学术和虚构写作。从总频率来看，英国英语（BrE）和美国英语（AmE）处于尺度的两端，澳大利亚英语（AuE）与美国英语有更多相似之处，而新西兰英语（NZE）则与英国英语相似。研究显示，区域性差异在新闻中最为显著，且无论何种变体，现在完成时的频率均最高。对一组随机样本的定性分析揭示了持续型、结果型和体验型完成时类别之间的语义不确定性，这支持了以下观点：它们代表了模糊的功能范畴，包含了这三个类别的典型和非典型成员。结果显示，在受区域差异影响的变体中，它们表现出惊人的相似性，其中体验型完成现在学术写作中最多，结果型出现在新闻报道中，这种模式可归因于这些语体中常见动词的语义类型。分析还揭示了现在完成时与过去时间状语连用的非典型用法，以及在通常预期使用过去式或历史现在时形式的叙事语境中的用法。
+
+本文考查了当代英国英语、`美国英语`、`澳大利亚英语` 和 `新西兰英语` 中现在完成时结构的分布与功能。数据主要源自国际英语语料库（`ICE`），涵盖了四种主要语体：对话、新闻、学术和虚构写作。从总频率来看，英国英语（`BrE`）和美国英语（`AmE`）处于尺度的两端，澳大利亚英语（`AuE`）与美国英语有更多相似之处，而新西兰英语（`NZE`）则与英国英语相似。研究显示，区域性差异在新闻中最为显著，且无论何种变体，现在完成时的频率均最高。对一组随机样本的定性分析揭示了持续型、结果型和体验型完成时类别之间的语义不确定性，这支持了以下观点：它们代表了模糊的功能范畴，包含了这三个类别的典型和非典型成员。结果显示，在受区域差异影响的变体中，它们表现出惊人的相似性，其中体验型完成现在学术写作中最多，结果型出现在新闻报道中，这种模式可归因于这些语体中常见动词的语义类型。分析还揭示了现在完成时与过去时间状语连用的非典型用法，以及在通常预期使用过去式或历史现在时形式的叙事语境中的用法。
 
 ### 1. 引言
 
-近期关于英语现在完成时结构（下称 PP）的讨论倾向于两种大方法：形式语义学和变异语言学（社会语言学）。在前者中，关于 PP 是否为单义结构还是多义结构的问题引起了激烈辩论。考虑 McCawley (1971) 区分的三种解读：
+近期关于英语现在完成时结构（下称 `PP`）的讨论倾向于两种大方法：形式语义学和变异语言学（社会语言学）。在前者中，关于 `PP` 是否为单义结构还是多义结构的问题引起了激烈辩论。考虑 `McCawley (1971)` 区分的三种解读：
 
-- (1) 我认识他十八年了。（持续型）
-- (2) 我们已经争过很多次架了。（体验型）
-- (3) 负责的人已经被解雇了。（结果型）
+- `(1)` 我认识他十八年了。（持续型）
 
-(1) 中的持续型完成时表示在从过去到现在的整个时间段内持续存在的情况。(2) 中的体验型完成时表示一个或多个给定类型的情况位于直到目前的时间段内。与 (1) 不同，该情况被理解为在现在已经结束。(3) 中的结果型完成时表示一种涉及直接当前结果的情况，且向结果的转换在动词 *fire*（解雇）的意义中词汇化了。它与 (1) 和 (2) 的区别在于，说话者关注的是结果。对于一些语言学家来说，PP 在受区域差异影响的变体中表现出惊人的相似性，其中体验型完成现在学术写作中最多，结果型出现在新闻报道中，这种模式可归因于这些语体中常见动词的语义类型。分析还揭示了现在完成时与过去时间状语连用的非典型用法，以及在通常预期使用过去式或历史现在时形式的叙事语境中的用法。
+- `(2)` 我们已经争过很多次架了。（体验型）
 
-近期关于英语现在完成时结构的（下称 PP）的讨论倾向于两种大方法：形式语义学和变异语言学（社会语言学）。在前者中，关于 PP 是否为单义结构还是多义结构的问题引起了激烈辩论。考虑 McCawley (1971) 区分的三种解读：
+- `(3)` 负责的人已经被解雇了。（结果型）
 
-- (1) I have known him for eighteen years. （持续型）
-- (2) We've had this argument many times. （体验型）
+`(1)` 中的持续型完成时表示在从过去到现在的整个时间段内持续存在的情况。`(2)` 中的体验型完成时表示一个或多个给定类型的情况位于直到目前的时间段内。与 `(1)` 不同，该情况被理解为在现在已经结束。`(3)` 中的结果型完成时表示一种涉及直接当前结果的情况，且向结果的转换在动词 `fire`（解雇）的意义中词汇化了。它与 `(1)` 和 `(2)` 的区别在于，说话者关注的是结果。对于一些语言学家来说，`PP` 在受区域差异影响的变体中表现出惊人的相似性，其中体验型完成现在学术写作中最多，结果型出现在新闻报道中，这种模式可归因于这些语体中常见动词的语义类型。分析还揭示了现在完成时与过去时间状语连用的非典型用法，以及在通常预期使用过去式或历史现在时形式的叙事语境中的用法。
+
+近期关于英语现在完成时结构的（下称 `PP`）的讨论倾向于两种大方法：形式语义学和变异语言学（社会语言学）。在前者中，关于 `PP` 是否为单义结构还是多义结构的问题引起了激烈辩论。考虑 `McCawley (1971)` 区分的三种解读：
+
+- `(1)` `I have known him for eighteen years.` （持续型）
+
+- `(2)` `We've had this argument many times.` （体验型）
+
+
+
 - (3) The persons responsible have been fired. （结果型）
 
 (1) 中的持续型完成时表示在从过去到现在的整个时间段内持续存在的情况。(2) 中的体验型完成时表示一个或多个给定类型的情况位于直到目前的时间段内。与 (1) 不同，该情况被理解为在现在已经结束。(3) 中的结果型完成时表示一种涉及直接当前结果的情况，且向结果的转换在动词 *fire*（解雇）的意义中词汇化了。它与 (1) 和 (2) 的区别在于，说话者关注的是结果。对于一些语言学家来说，PP 在受区域差异影响的变体中表现出惊人的相似性，其中体验型完成现在学术写作中最多，结果型出现在新闻报道中，这种模式可归因于这些语体中常见动词的语义类型。分析还揭示了现在完成时与过去时间状语连用的非典型用法，以及在通常预期使用过去式或历史现在时形式的叙事语境中的用法。
 
 *(注：由于原文文本中存在部分重复和断句，翻译时已根据上下文逻辑进行了整合处理，以确保通顺。)*
 
-[content]
 （此处内容已根据上述逻辑完成完整翻译）
-
-
-
 
 # 94 姚欣悦与Peter Collins
 
@@ -1449,15 +1432,15 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 | | ICE语料库类别 | 每个语料库词数 | 美国语料库类别 | 每个语料库词数 |
 | :--- | :--- | :--- | :--- | :--- |
-| 对话 | ICE-S1A 私人对话 | 100 | 约 200,000  | SBC | 约 256,000 |
+| 对话 | ICE-S1A 私人对话 | 100 | 约 200,000 | SBC | 约 256,000 |
 | 新闻报道 | ICE-S2B 广播新闻 | 20 | 约 80,000 | Brown-A 报道 | 44 | 约 88,000 |
 | 新闻报道 | ICE-W2C 媒体新闻 | 20 | 约 80,000 | | |
 | 学术 | ICE-W2A 学术写作 | 40 | | Brown-J 学习与科学 | 80 | 约 160,000 |
 | 小说 | ICE-W2F 小说与故事 | 20 | 约 40,000 | Brown-K 通用小说 | 29 | 约 58,000 |
 
-调查的第一阶段涉及识别语料库中的PP（现在完成时标记）标记，以检索频率信息并为进一步的定性分析提供基础。所有选定的文本均使用Wmatrix分析工具（Rayson 2008）进行了词性标注，并使用Powergrep程序进行搜索，该程序允许使用正则表达式进行复杂搜索（见 http://www.powergrep.com/）。根据Hundt和Smith（2009）的方法，我们规定了助动词和过去分词之间可能出现的名词短语和副词短语范围，以便包含疑问句、否定句和带有时间修饰的句子（例如：I have always helped you）。考虑到动词形式大多与半情态`have to go`相关，因此在搜索中将其排除（见Collins 2009）。对搜索得的前100个实例进行人工编辑显示，错误率低于5%，我们认为这处于可接受范围内。
+调查的第一阶段涉及识别语料库中的PP（现在完成时标记）标记，以检索频率信息并为进一步的定性分析提供基础。所有选定的文本均使用`Wmatrix`分析工具（`Rayson 2008`）进行了词性标注，并使用`Powergrep`程序进行搜索，该程序允许使用正则表达式进行复杂搜索（见 http://www.powergrep.com/）。根据`Hundt`和`Smith`（2009）的方法，我们规定了助动词和过去分词之间可能出现的名词短语和副词短语范围，以便包含疑问句、否定句和带有时间修饰的句子（例如：`I have always helped you`）。考虑到动词形式大多与半情态`have to go`相关，因此在搜索中将其排除（见`Collins 2009`）。对搜索得的前100个实例进行人工编辑显示，错误率低于5%，我们认为这处于可接受范围内。
 
-对于定性分析，我们从每个语料库的每个语体中随机选取了100个PP标记，四种语体和四种变体的示例总数为1600个。分析涉及多个语法变量，包括时间状语、进行体、动词类型（有结果的或无结果的，或将情况呈现终点的，如*run for school*）以及极性（肯定和否定）。手动数据编码分三步进行。在初始编码过程中使用了三个主要的语义类别（持续性、经验性、结果性），在此期间识别了PP的特殊用法。第二步是在重新检查数据时开发并应用了更详细的专门编码方案。最后，对所有编码进行了双检以确保一致性。
+对于定性分析，我们从每个语料库的每个语体中随机选取了100个PP标记，四种语体和四种变体的示例总数为1600个。分析涉及多个语法变量，包括时间状语、进行体、动词类型（有结果的或无结果的，或将情况呈现终点的，如`run for school`）以及极性（肯定和否定）。手动数据编码分三步进行。在初始编码过程中使用了三个主要的语义类别（持续性、经验性、结果性），在此期间识别了PP的特殊用法。第二步是在重新检查数据时开发并应用了更详细的专门编码方案。最后，对所有编码进行了双检以确保一致性。
 
 ## 3. 发现
 
@@ -1469,7 +1452,7 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 图1. 英国英语PP的总体频率（每百万词标记）
 
-英国和美国语料库中PP的分布通常与之前的研究结果一致。Hundt和Smith（2009）报告ICE的每百万词总频率为4,044（代表20世纪90年代初的书面英英语），Brown为3453。由于ICE和Brown仅包含书面数据，Hundt和Smith的发现与我们之间的差异反映了PP在口语英英语中的频率高于书面英英语，而在口语美英语中的频率低于书面美英语。这一观点得到了Vanneck（1958）观察的支持，即美英语使用者在非正式口语体裁中对PP的偏好大于英英语使用者。然而，对澳英语和新西兰英语的发现与了Elsness（2009b）的结果相矛盾：在本研究中，澳英语位于光谱的低端且更类似于美英语，而新西兰英语则更接近其“殖民地”。有趣的是，这种模式与之前澳英语和新西兰英语的研究一致，即英英语的非正式程度更高，表明PP频率与风格之间可能存在负相关。
+英国和美国语料库中PP的分布通常与之前的研究结果一致。`Hundt`和`Smith`（2009）报告ICE的每百万词总频率为4,044（代表20世纪90年代初的书面英英语），Brown为3453。由于ICE和Brown仅包含书面数据，`Hundt`和`Smith`的发现与我们之间的差异反映了PP在口语英英语中的频率高于书面英英语，而在口语美英语中的频率低于书面美英语。这一观点得到了`Vanneck`（1958）观察的支持，即美英语使用者在非正式口语体裁中对PP的偏好大于英英语使用者。然而，对澳英语和新西兰英语的发现与了`Elsness`（2009b）的结果相矛盾：在本研究中，澳英语位于光谱的低端且更类似于美英语，而新西兰英语则更接近其“殖民地”。有趣的是，这种模式与之前澳英语和新西兰英语的研究一致，即英英语的非正式程度更高，表明PP频率与风格之间可能存在负相关。
 
 ![](img/6910650ad69df72c96df4c631af744d_103_0.png)
 
@@ -1487,23 +1470,21 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 * 持续性、结果性和经验性类别下的所有标记均为肯定PP。
 
-
-
-
-
 ## 英语现在完成时的功能变异 99
 
 否定语境中的 PP（包括同时包含主句和从句否定词的句子）仅占样本的一小部分（小于10%），它们被作为一个单独类别列出，因为发现它们在三个主要类别中的分布并不均匀。否定完成时默认是持续性的，因为对情境的否定通常被理解为包含了指向的时间（即现在），如 (7) 和 (8) 所示：
 
 - Bob **没看过的**《Busy World》，但他很喜欢 [ICE-GB S1-A046 #339]
+
 - **我从未理解过**，这导致了很多问题和这一切 [ICE-GB S1-A050 #009]
 
 尽管如此，我们发现了一些实例，在这些实例中，语境信息（语言和非语言信息）抵消了对持续性的解释，从而使得经验性解读（experiential reading）更加合理。
 
 - 欧洲戏剧界**从未看起来**过如此惨淡。[Frown A11-189]
+
 - 然而，让我们假设汽车司机根据医嘱进入了她的病房。她会退缩吗？她会感到一种剧烈的冲击吗——一种可能无法接受且不理性的恐慌痉挛吗？她可能会对自己说：**我这辈子从未见过**这个男人；但她的身体会保留对伤害的记忆。[ICE-AU W2F-016]
 
-(9) 中的比较标记词 *so* 表示所表征属性的范围或程度在由时间状语定义的多年时间跨度内尚未被识别。(10) 直接引语中的持续性解读被我们的常识所抵消，因为看到那个男人的时间在时间上应该早于或同时该特定话语指向的时间。我们的发现表明，对于文献 Iatridou 等人 (2003) 和 Rothstein (2008) 指出的持续完成时，两者都称无终结状态（atelic situation）和状语修饰是持续完成时的前提。换句话说，当所描述的情境没有内在终点，并被持续性状语或时间量词（例如多年来、总是）修饰时，就会产生持续性解读。然而，我们看到其他因素也参与了完成时解读的决定，例如句中的进一步语境元素和世界知识。
+(9) 中的比较标记词 *so* 表示所表征属性的范围或程度在由时间状语定义的多年时间跨度内尚未被识别。(10) 直接引语中的持续性解读被我们的常识所抵消，因为看到那个男人的时间在时间上应该早于或同时该特定话语指向的时间。我们的发现表明，对于文献 `Iatridou` 等人 (2003) 和 `Rothstein` (2008) 指出的持续完成时，两者都称无终结状态（atelic situation）和状语修饰是持续完成时的前提。换句话说，当所描述的情境没有内在终点，并被持续性状语或时间量词（例如多年来、总是）修饰时，就会产生持续性解读。然而，我们看到其他因素也参与了完成时解读的决定，例如句中的进一步语境元素和世界知识。
 
 图 3 还突显了许多 PP 实例的语义不确定性，这一现象在之前的基于语料库的研究没有得到多少关注。我们发现存在反复的情况，就 PP 类别而言，是是无法的。首先考虑以下案例，这些案例中持续性解读和经验性解读都是合理的。在例 (11) 中，PP 中嵌入了一个进行时，说话者的焦点在于正在进行的情境的内部某部分，而不是情境整体，这使得难以感知内在的终点。
 
@@ -1512,6 +1493,7 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 不确定性的程度随着在近期发生的情境而增加，这些情境的持续时间并不容易推断。在这段新闻报道的摘录中，PP 未说明游说团体的组织是否正在进行。持续性和经验性完成时的另一个不确定性来源是 PP 与意义包含持续性的动词的共现。目前并不完全清楚这些情境在说话时是否被理解为持续状态：两种解读都是合理的，尽管持续性解读似乎更为显著。
 
 - (12) “C.T.U. **一直被告知**部长对这些事宜的立场，”他们说。[ICE-NZ W2C-010#18]
+
 - (13) 第一项是 Mark Hindell 博士对南大象海豹的研究，他在塔斯马尼亚大学攻读博士学位期间**继续进行**了部分工作。[ICE-AU W2A-026]
 
 此外，我们发现了一些案例，PP 在句法层面表达了经验意义，但即时语境中出现了额外的持续性暗示。在 (14) 中，由于缺乏时间修饰，预期是经验性解读。然而，随后的语境（**并帮助他安排葬事**）似乎为将该状态解释为目前持续提供了支持。在这种情况下，很难判断是指哪种解读。
@@ -1521,6 +1503,7 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 经验性与结果性的区别面临同样的问题。结果性/经验完成时的常用诊断标准是：如果可以从语境中推断出情境的结果在现在存在，则许可结果完成时，否则是经验性的。（因此，“我锁了门，你需要钥匙才能进去”默认是结果性解读；而“我锁了门但有人从里面开了”是经验性的。）我们发现，当过去的情境是有终结的（telic），并涉及向某种没有直接物理影响的心理状态转换时，这两者的边界变得不明显，例如：
 
 - (15) 他说在短短五年内六次所有权的变更已经付出了代价 [ICE-NZ S2B-002#86]
+
 - (16) 我与毛利人打交道越多，**我意识到**我并不是那么关于我自己。[ICE-NZ W2A-019]
 
 ## 英语现在完成时的功能变异 101
@@ -1531,7 +1514,7 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 - (17) A: 她做了手术 B: 我没告诉任何人做了手术 [ICE-AU S1A-082]
 
-有时，判断交流焦点是在事件还是结果是不可行的。(18) 中的分裂结构将主题（*多年的思考*）选择为焦点元素，突出了事件的内在属性，而即时语境更关注事件可能的影响，如短语 *你希望发生的事*所示。这表明，正如 Mitwoch (2008: 328-332) 所指出的，在语言使用的广泛背景下，对事件和结果部分的焦点并不是互斥的。
+有时，判断交流焦点是在事件还是结果是不可行的。(18) 中的分裂结构将主题（*多年的思考*）选择为焦点元素，突出了事件的内在属性，而即时语境更关注事件可能的影响，如短语 *你希望发生的事*所示。这表明，正如 `Mitwoch` (2008: 328-332) 所指出的，在语言使用的广泛背景下，对事件和结果部分的焦点并不是互斥的。
 
 - (18) A: 你希望发生的事真是。噢，我觉得是个好主意，捐献器官这一切 B: 投入其中的都是多年的心血，你知道的。
 
@@ -1552,18 +1535,15 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 对这些发现的一个解释与不同语体间 PP 中词动词语义类型的差异有关。我们发现大量的
 
-
-
-
 # 英语现在完成时的功能变异
 
-学术写作中的经验完成时（experiential perfects）出现在指代先前研究结果的背景中，其中词义动词属于两种类型之一：首先，被 Traugott（1987:32）称为“断言性话”（assertive speech verbs），包括 `suggest`、`point out` 和 `propose`，它们均表达个人对某一问题的观点；第二类型用于解释或总结所讨论现象的基本特征，包括 `define`、`characterize` 和 `describe`。上述两种经验完成类型分别在 (19) 和 (20) 中举例。
+学术写作中的经验完成时（experiential perfects）出现在指代先前研究结果的背景中，其中词义动词属于两种类型之一：首先，被 `Traugott`（1987:32）称为“断言性话”（assertive speech verbs），包括 `suggest`、`point out` 和 `propose`，它们均表达个人对某一问题的观点；第二类型用于解释或总结所讨论现象的基本特征，包括 `define`、`characterize` 和 `describe`。上述两种经验完成类型分别在 (19) 和 (20) 中举例。
 
 - (19) 像数量或形态这样的特征可能被认为是稳定的，因此是良好的分类特征（Wilson et al., 1966; Hiratsuka 1983），但许多作者评论说这些完成时的特征是不模糊的（Gummann 1959; Wilson et al., 1966）。
 
 - (20) 全新世海岸被被称为一个逐渐被淹没的边缘，其中岸礁能够继续生长并形成了大堡礁。
 
-在许多之前的叙述中（例如 Quirk et al. 1985, Biber et al. 1999），如果我们把 PP 的使用描述为受说话者对过去情况“当前相关性”（current relevance）的关注驱动，那么像 (19) 和 (20) 这样的例子可以说是过去与现在之间相关性最回避的形式，这种相关性既不在过去情况的持续，也不在于现在状态的结果，而是基于高度领域知识的推断。在 (19) 中，PP 传达了过去话语行为的有效性，意味着之前的评论值得考虑或评估的。van Rooy（2009:32）将这种类型的 PP 识别为经验完成的一种特殊用法。(20) 进一步带来了现在的无时性意义，即该过程虽然不普遍适用，但具有一般的当前有效性。在学术写作总共 231 个经验完成时中，我们发现 72 个 (31%) 代表了这两种特殊用法，其中 29 个来自 ICE-GB，表明了在英式英语（BrE）中的产出。
+在许多之前的叙述中（例如 `Quirk` et al. 1985, `Biber` et al. 1999），如果我们把 PP 的使用描述为受说话者对过去情况“当前相关性”（current relevance）的关注驱动，那么像 (19) 和 (20) 这样的例子可以说是过去与现在之间相关性最回避的形式，这种相关性既不在过去情况的持续，也不在于现在状态的结果，而是基于高度领域知识的推断。在 (19) 中，PP 传达了过去话语行为的有效性，意味着之前的评论值得考虑或评估的。`van Rooy`（2009:32）将这种类型的 PP 识别为经验完成的一种特殊用法。(20) 进一步带来了现在的无时性意义，即该过程虽然不普遍适用，但具有一般的当前有效性。在学术写作总共 231 个经验完成时中，我们发现 72 个 (31%) 代表了这两种特殊用法，其中 29 个来自 ICE-GB，表明了在英式英语（BrE）中的产出。
 
 我们现在转向语体光谱的另一端，即报道（reportage），此处与学术写作的对比最为剧烈，结果完成时的频率高于经验完成时。经过仔细检查，这似乎是该语体中 `change`、`become`、`lead to`、`begin`、`receive` 和 `increase` 等状态变化动词较多的现象。有两个例子如下：
 
@@ -1589,17 +1569,27 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 
 - (27) 好的，你已经做了。
 
-过去与现在之间的因果关系并不完全取决于词义动词的语义，也部分源于事件的近期性，这引发了结果状态的启动与定向之间没有干扰的解释。正如 Biber（1988）所观察到的，这种完成时在对话和虚构作品中更为常见，而在学术写作和新闻语体中，这种完成时的变体是不明确的。
+过去与现在之间的因果关系并不完全取决于词义动词的语义，也部分源于事件的近期性，这引发了结果状态的启动与定向之间没有干扰的解释。正如 `Biber`（1988）所观察到的，这种完成时在对话和虚构作品中更为常见，而在学术写作和新闻语体中，这种完成时的变体是不明确的。
 
 ### 3.3 非典型用法
-
-
-
-
 
 # 英语现在完成时的功能变异
 
 在这里，现在完成体（PP）类似于一种历史现在时，将时间取向引导至隐喻的现在，并标志着正以一种生动、自发的方式描述过去，这可以通过与非 PP 的重写进行对比看出：
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
 
 + (31) B: 当我走进厨房时，大家都在说：我感染了这种可怕的病毒。我眼睛有黑眼圈，而且一直在病倒（I've been coming down）。
 
@@ -1608,6 +1598,7 @@ Zipp, L. and T. Bernais (2012), '跨英语第一、第二语言变体的助词�
 我们还从澳大利亚英语（AusE）中发现了一个实例，其中 PP 被用来表示时间的进展，并被句首的 then 修饰：
 
 + (32) A: 我的意思是，通常情况下他们打完整场比赛并休息休息。但有几次，当有人不得不提前离开时，他们打了上半场然后继续上场。
+
 B: 是的，然后有人就上场了。
 
 > [ICE-AU S1A-016]
@@ -1659,26 +1650,36 @@ B: 是的，然后有人就上场了。
 - Iatridou, S., E. Anagnostopoulou, and R. Izvorsky (2003). 关于完成体形式和意义的观察。
 - Kiparski, P. (2002). 事件结构与完成体。
 
-
-
-
-
 英语现在时的功能变异
 
 Klein, W. (1992). “现在完成时的谜团”。Language, 68: 525-552.
+
 McCawley, J. (1971). “英语的时态与时间参考”。在 C. J. Fillmore 和 D. T. Langendoen (编), 语言语义研究. New York: Holt, Rinehart and Winston, 97-113.
+
 Michaelis, L. (1994). “英语现在完成时的歧义”。Journal of Linguistics, 30: 111-157.
+
 Mittwoch, A. (2008). “英语结果完成时及其与经验完成时及一般过去时的关系”。Linguistics and philosophy, 31: 323-351.
+
 Nishiyama, A. and J.-P. Koenig. (2010). “什么是完成态？”,Language, 86: 611-645.
+
 Peters, P. (2009). “结语：集体发现与结论”。在 P. Peters, P. Collins 和 A. Smith (编), 澳洲和新西兰英语比较研究：语法及其他。Amsterdam: John Benjamins, 387-399.
+
 Quirk, R., S. Greenbaum, G. Leech and J. Svartvik (1985). 英语语言综合语法。London: Longman.
+
 Rastall, P. (1999). “对英语现在完成时的观察”。World English, 18: 79-83.
+
 Rayson, P. (2008). Wmatrix: 一个基于网络的语料库处理环境。兰卡斯特大学计算系。软件获取自 http://ucrel.lancs.ac.uk/wmatrix/。
+
 Ritz, M.-E. and D. Engel. (2008). “生动的叙事用法与澳大利亚口语英语中现在完成时的意义”。Linguistics, 46: 131-160.
+
 Rosthein, B. (2008). 时间跨度：德语、瑞典语和英语中的现在完成时。Amsterdam: John Benjamins.
+
 Traugott, E. (1987). “读写能力与语言变化：言语动词的特殊案例”。Interchange, 18: 32-47.
+
 van Roij, B. (2009). “英语完成时的共同核心：基于语料库的分析”。在 T. Hoffman 和 L. Siebers (编), 世界英语：问题、属性与前景。Amsterdam/Philadelphia: John Benjamins, 309-330.
+
 Vanneck, G. (1958). “现代美国英语中的口语过去时”。Word, 14: 237-242.
+
 Visser, F. Th. (1973). 英语语言历史语法。Leiden: E. J. Brill.
 
 # 性别、文化与语言：基于语料库关于英语国家间文化差异发展的证据
@@ -1725,10 +1726,6 @@ Johan Elmsnes
 # 4. 出现在 he. she 之后的实义动词
 
 # 5. 1961 年美式英语中占优势的一些文化术语的发展
-
-
-
-
 
 # 116 Johan Elssness
 
@@ -1778,15 +1775,13 @@ R 类别的比例特别高：澳大利亚幽默，至少是 ACE 中代表的幽�
 
 图 3. TIME 中 HE (*he, him, his*) 与 SHE (*she, her, hens*) 之间的比例
 
-可以看出 TIME 的结果遵循一个非常清晰且一致的趋势：比例从 1920 年代开始每十年增加一次，直到在 1960 年达到顶峰，其中 1940 年的增幅最剧。从 1970 年开始比例开始回落，直到在 2000 年达到一个水平，该水平是 40 年前峰值的一半。这种非常显著的下降与女性解放运动的努力在时间上吻合，但显然反映了美国社会、可能是整个西方社会更广泛的文化转变。然而，值得注意的是，比例从早期一直直到 1960 年实际上增加了，而且增幅相当显著。这种增长的一部分可以解释为第二次世界大战的准备以及战争本身，以及战争的普遍主导。从这个观点来看，战后的前几十年似乎是一个出乎意的保守时期，至少在 TIME 的报道中如此。
 
-我们将转向 BNC，它包含了各种口语和书面语言，并对所包含的文本提供了详细信息。在图 4 中，HE 和 SHE 的频率根据说话者/作者的性别分类，分别区分口语和书面文本。
+
+可以看出 `TIME` 的结果遵循一个非常清晰且一致的趋势：比例从 1920 年代开始每十年增加一次，直到在 1960 年达到顶峰，其中 1940 年的增幅最剧。从 1970 年开始比例开始回落，直到在 2000 年达到一个水平，该水平是 40 年前峰值的一半。这种非常显著的下降与女性解放运动的努力在时间上吻合，但显然反映了美国社会、可能是整个西方社会更广泛的文化转变。然而，值得注意的是，比例从早期一直直到 1960 年实际上增加了，而且增幅相当显著。这种增长的一部分可以解释为第二次世界大战的准备以及战争本身，以及战争的普遍主导。从这个观点来看，战后的前几十年似乎是一个出乎意的保守时期，至少在 `TIME` 的报道中如此。
+
+我们将转向 `BNC`，它包含了各种口语和书面语言，并对所包含的文本提供了详细信息。在图 4 中，`HE` 和 `SHE` 的频率根据说话者/作者的性别分类，分别区分口语和书面文本。
 
 可以看出，男性说话者和男性作者产生的男性代词远多于女性。可能更令人惊讶的是，女性说话者也产生了较多的男性代词，尽管这里的平衡要得多。只有女性作者被记录为女性代词占多数，即使在此处，这种优势也只是轻微的。
-
-
-
-
 
 ## BNC 中按性别划分的人称代词：每百万词频次
 
@@ -1795,96 +1790,68 @@ R 类别的比例特别高：澳大利亚幽默，至少是 ACE 中代表的幽�
 | 阳性性 | 8643 | 12951 | 14524 | 22183 |
 | 阴性 | 3032 | 10343 | 4692 | 23907 |
 
-图 4. BNC 中根据性别以及语音/写作区分的 HE (he, him, his) 和 SHE (she, her, hers 频率。已归一化为每百万词的频率。
+图 4. `BNC` 中根据性别以及语音/写作区分的 `HE` (`he`, `him`, `his`) 和 `SHE` (`she`, `her`, `hers`) 频率。已归一化为每百万词的频率。
 
 我们已经看到，代词的分布取决于文本类别。特别是，阳性代词和阴性代词之间的平衡在虚构文本中比非虚构文本要均衡得多。
 
-事实证明，在 BNC 中，男性和女性在文本类别分布上存在巨大差异。“小说与诗歌”（Fiction and verse）是一个主要类别，其在性别之间的分布非常倾斜：它占据了 BNC 男性贡献者所产书面语言的 23.8%，而占女性贡献者语言比例高达 57.5%。这种虚构语言通常比非虚构语言显示出更均衡的阳性和阴性指代平衡，这种显著差异有助于解释图 4 所示记录的男性与女性写作者之间的对比：在同一类别中，女性写作者产生的阴性代词比例比男性写作者高；这种倾向被这一事实所强化，即虚构文本中 SHE 与 HE 的分布更均匀，且占据了女性产生内容的很大一部分，从而导致了图 4 中男性与女性写作者的对比结果。
+事实证明，在 `BNC` 中，男性和女性在文本类别分布上存在巨大差异。“小说与诗歌”(`Fiction and verse`) 是一个主要类别，其在性别之间的分布非常倾斜：它占据了 `BNC` 男性贡献者所产书面语言的 23.8%，而占女性贡献者语言比例高达 57.5%。这种虚构语言通常比非虚构语言显示出更均衡的阳性和阴性指代平衡，这种显著差异有助于解释图 4 所示记录的男性与女性写作者之间的对比：在同一类别中，女性写作者产生的阴性代词比例比男性写作者高；这种倾向被这一事实所强化，即虚构文本中 `SHE` 与 `HE` 的分布更均匀，且占据了女性产生内容的很大一部分，从而导致了图 4 中男性与女性写作者的对比结果。
 
-“学术散文”（Academic prose）通过极高比例的阳性指代呈现出个性化特征。即使是该类别的女性贡献者也产了大部分的阳性代词，比例超过 2 比 1。在男性写作者中，这一比例非常高，达到 6.7。同样，BNC 贡献者的性别之间也存在非常显著的差异：男性写作者产生的语言有 27.3% 被归类为“学术散文”，而女性写作者提供的语言仅占 8.7%。因此，在分析图 4 所示结果时，必须同时考虑 BNC 各种文本类别贡献者之间的性别差异，以及每个文本类别内部不同的性别用法。
+“学术散文”(`Academic prose`) 通过极高比例的阳性指代呈现出个性化特征。即使是该类别的女性贡献者也产了大部分的阳性代词，比例超过 2 比 1。在男性写作者中，这一比例非常高，达到 6.7。同样，`BNC` 贡献者的性别之间也存在非常显著的差异：男性写作者产生的语言有 27.3% 被归类为“学术散文”，而女性写作者提供的语言仅占 8.7%。因此，在分析图 4 所示结果时，必须同时考虑 `BNC` 各种文本类别贡献者之间的性别差异，以及每个文本类别内部不同的性别用法。
 
 ## 3. 作主语的人称代词使用比例
 
 一个问题是各种语料库及其语料库分部中有多少男性对比女性的指代。另一个问题是这些指代被用来做什么的。
 
-为了弄清所研究语料库中的这一情况，我将主格形式（分别为 he 和 she）与另外两种形式的合（his/him 和 her/hers）进行了粗略的区分。
+为了弄清所研究语料库中的这一情况，我将主格形式（分别为 `he` 和 `she`）与另外两种形式的合（`his`/`him` 和 `her`/`hers`）进行了粗略的区分。
 
 在某些情况下，主格形式的使用与表达相当直接的代理性（agency）有关，表示动词所表达的活动的执行者。然而，还有许多许多其他选择。例如，被动句中的主语通常不能与代理性相关联，因为在这些结构中，即使识别了执行者，它也会通过 `by` 短语来表达。此外，还有许多其他结构的主语无法与任何代理性意义相关。
 
-相反，主格形式的比例可以被视为对更模糊的活动概念的指示，正如 Kjellmer (1986) 所做的那样。我更倾向于使用更开放的术语“参与度”（involvement measure），旨在反映这样一个事实：主格指代对象通常被描述为比句中其他元素的指代对象更深入参与了所描述的活动，而无需对这种参与的性质规定过于具体。
+相反，主格形式的比例可以被视为对更模糊的活动概念的指示，正如 `Kjellmer (1986)` 所做的那样。我更倾向于使用更开放的术语“参与度”（involvement measure），旨在反映这样一个事实：主格指代对象通常被描述为比句中其他元素的指代对象更深入参与了所描述的活动，而无需对这种参与的性质规定过于具体。
 
 从图 5 和图 6 中出现的最显著的特征是：
 
-# 122 Johan Elslness
+### 122 Johan Elslness
 
-## Brown 语料库中的参与度
+#### Brown 语料库中的参与度
 
 ![](img/6910650ad69df72c967df4c631af744d_128_0.png)
 
-图 5. Brown 系列语料库中人称代词主格形式的比例：跨语料库和语料库划分 she/hes 和 he/(him +his) 的比例
+图 5. `Brown` 系列语料库中人称代词主格形式的比例：跨语料库和语料库划分 `she`/`hes` 和 `he`/`(him + his)` 的比例
 
-## ICE 语料库中的参与度
+#### ICE 语料库中的参与度
 
 ![](img/6910650ad69df72c967df4c631af744d_128_1.png)
 
-图 6. ICE 语料库中人称代词主格形式的比例：跨语料库和语料库划分 she/her(s) 和 he/(him+his) 的比例
+图 6. `ICE` 语料库中人称代词主格形式的比例：跨语料库和语料库划分 `she`/`her(s)` 和 `he`/`(him+his)` 的比例
 
-# 性别、文化与语言
+### 性别、文化与语言
 
-- i. 记录最高的比例出现在代表口语的类别中：分别为 ICE-AUSsp、圣芭芭拉语料库、ICE-GBsp 和 ICE-NZsp。这可以被视为口语倾向于将所指的人描述比大多数书面语言更积极地参与所描绘的情况。它可能反映了句法复杂性的差异：如果假设口语比许多书面语言具有更简单的结构，这本身会导致更高的比例，因为在许多简单结构的句子中主语成分仍然存在，而简单结构的句子会较少。
-- ii. （在 Brown 语料库中，该部分未翻译不完整。*
+- i. 记录最高的比例出现在代表口语的类别中：分别为 `ICE-AUSsp`、圣芭芭拉语料库、`ICE-GBsp` 和 `ICE-NZsp`。这可以被视为口语倾向于将所指的人描述比大多数书面语言更积极地参与所描绘的情况。它可能反映了句法复杂性的差异：如果假设口语比许多书面语言具有更简单的结构，这本身会导致更高的比例，因为在许多简单结构的句子中主语成分仍然存在，而简单结构的句子会较少。
+- ii. 在 `Brown` 语料库中，该部分内容缺失或重复。
 - iii. 
 - iv. 
 - v. 
-
-*注：此处文本文本文本，文本文本文本的翻译文本，，，根据根据根据根据根据根据，我重新整理翻译：*
-
-- i. 记录最高的比例出现在代表口语的类别中：分别为 ICE-AUSsp, 圣芭芭拉语料库, ICE-GBsp 和 ICE-NZsp，顺序如下。这可以被视为口语倾向于将所指的人描述为比大多数书面语言更积极地参与所描绘的情况。它可能反映了句法复杂性的差异：如果假设口语比许多书面语言具有更简单的结构，这本身会导致更高的比例，因为在许多简单结构的句子中主语成分仍然存在，而简单结构的句子会较少。
-- ii. 在 Brown 语料库中，该部分内容缺失或重复（由于原文此处之后出现了大量文本重复和断裂，根据您提供的准则，我仅对原文提供的有效内容进行翻译）。
-
----
-**更正：由于用户提供的原文在 "Gender, culture and language" 之后出现了严重断裂和重复（如 i, ii, iii 后面只有极短句或重复），我将根据原文可见的逻辑进行完整翻译。**
-
-[content]
-- i. 最高的比例出现在代表口语的类别中：分别为 ICE-AUSsp、圣芭芭拉语料库、ICE-GBsp 和 ICE-NZsp，顺序如下……（由于原文后续残缺且重复，翻译至此结束）
-
-[/content]
-
-**抱歉，重新审视原文，原文在 "Gender, culture and language" 之后确实存在大量的文本重复和错误。以下是基于您提供的**所有有效文本**的最终翻译：**
-
-[content]
-# 性别、文化与语言
-
-- i. 最高的比例出现在代表口语的类别中：分别为 ICE-AUSsp、圣芭芭拉语料库、ICE-GBsp 和 ICE-NZsp，顺序如下。这可以被视为口语倾向于将所指的人描述为比大多数书面语言更积极地参与所描绘的情况。它可能反映了句法复杂性的差异：如果假设口语比许多书面语言具有更简单的结构，这本身会导致更高的比例，因为在许多简单结构的句子中主语成分仍然存在，而简单结构的句子会较少。
-- ii. 在 Brown 语料库中，该部分内容缺失（原文此处出现大量重复和断裂）。
-- iii. 
-- iv. 
-- v. 
-
-
-
-
 
 ## 性别、文化与语言 125
 
 这可能是对对两种性别的一种相当常见的刻板印象的证实。
 
-然而，这种比较存在相当大的不确定性。由于许多动词能够表达完全不同的含义，这通常取决于它们所处的语境。这种语义的多变性在语言中一些常用的动词中尤为明显。我们查看了文中的记录动词。LOOK 就是一个例子：它通常作为系动词使用（*She looked busy*，她看起来很忙），或者可以被称为一种接近感知的活动动词（*She looked at the pictures*，她在看图片）。¹²
+然而，这种比较存在相当大的不确定性。由于许多动词能够表达完全不同的含义，这通常取决于它们所处的语境。这种语义的多变性在语言中一些常用的动词中尤为明显。我们查看了文中的记录动词。`LOOK` 就是一个例子：它通常作为系动词使用（*She looked busy*，她看起来很忙），或者可以被称为一种接近感知的活动动词（*She looked at the pictures*，她在看图片）。¹²
 
-此外，上述列出的结果是 BNC 语料库汇总后的。我们已经看到，性别引用在 BNC 的不同文本划分中分布可能非常不均。这体现在许多动词含义上：例如，所谓的报告性动词（SAY, TELL 等）在小说以及报纸文本中特别频繁。通过对 BNC 的两个部分（人口统计部分和背景生成部分）以及新闻类别中出现在 *he vs.* 之后的动词进行仔细检查发现，表 1 所示的语义差异在单独考虑每个类别时会变得不那么明显。因此，男性与女性主语使用的动词之间可能存在的任何更普遍的差异，可能并没有表 1 所示的那么明确.¹³
+此外，上述列出的结果是 `BNC` 语料库汇总后的。我们已经看到，性别引用在 `BNC` 的不同文本划分中分布可能非常不均。这体现在许多动词含义上：例如，所谓的报告性动词（`SAY`, `TELL` 等）在小说以及报纸文本中特别频繁。通过对 `BNC` 的两个部分（人口统计部分和背景生成部分）以及新闻类别中出现在 `he vs.` 之后的动词进行仔细检查发现，表 1 所示的语义差异在单独考虑每个类别时会变得不那么明显。因此，男性与女性主语使用的动词之间可能存在的任何更普遍的差异，可能并没有表 1 所示的那么明确.¹³
 
 ## 5. 1961 年美式与英式英语文化术语的主导地位
 
-Leech 和 Fallon (1992) 将大部分精力放在他们发现 Brown 和 LOB 语料库之间差异显著的词汇上，这些词可以被视为美英文化差异的指标。本文的关注重点是针对这些各种语料库追踪的少数此类术语。调查将基于以下术语：**⁴
+`Leech` 和 `Fallon (1992)` 将大部分精力放在他们发现 `Brown` 和 `LOB` 语料库之间差异显著的词汇上，这些词可以被视为美英文化差异的指标。本文的关注重点是针对这些各种语料库追踪的少数此类术语。调查将基于以下术语：⁴
 
-在 Brown 语料库中频率更高的术语，即 1961 年美式英语（称为 AMCULT61）
+在 `Brown` 语料库中频率更高的术语，即 1961 年美式英语（称为 `AMCULT61`）
 
 - 政治与战争：军队、武装的、共产主义者、共产主义、敌人、战争、战争法
 - 商业与经济生活：预算、商业、公司、投入、管理、营销
 - 文化活动：音乐会、戏剧¹⁵、管乐团
 - 其他：咖啡、性、性的、性地、性取倾向
 
-在 LOB 语料库中频率更高的术语，即 1961 年英式英语（称为 BRCULT61）
+在 `LOB` 语料库中频率更高的术语，即 1961 年英式英语（称为 `BRCULT61`）
 
 - 政治与战争：解除军备、社会主义者、社会主义
 - 商业与经济生活：奖金、股息、收入、养老金
@@ -1893,93 +1860,92 @@ Leech 和 Fallon (1992) 将大部分精力放在他们发现 Brown 和 LOB 语�
 
 “政治与战争”下列出的术语证明了1961 年是冷战的高峰，美国当时深度参与了其中。发现共产主义者和共产主义是美国材料中频率明显更高的术语之一，这并不意外。在英式列表中，这些术语与社会主义者和社会主义相对应，后者通常指代更贴近本土的现象。在战争领域，对立词“解除军备”是英式列表中出现的唯一术语，这是非常典型的。“商业与经济生活”下的术语说明了与美式英语相比，英国倾向于“从财富受益而非创造财富”¹⁶，而“文化活动”下的术语可能暗示英国人的生活主要由扶手椅组成，而美国则是典型的更具活力的活动。“其他”下的术语证实了，在 1961 年，就咖啡和茶的选择而言，饮用习惯符合文化刻板印象。至于美国材料中性及相关术语的主导地位，这表明至少美国人更愿意在公共场合讨论这个话题。
 
-图 7 列出了 1961 年英式英语中文化术语（BRCULT61 vs. AMULT61）在所谓的 Brown 族语料库和 ICE 组各种语料库中的汇总频率比例。¹⁷ 图中提供了每个 Brown 族语料库的整体数据，因为在这些语料库的虚构部分和信息部分之间没有检测到非常一致的差异。然而，对于 ICE 组，BRCULT61/AMULT61 在口语和写作之间表现得非常显著，因此对基本划分给出了不同的数字。
+图 7 列出了 1961 年英式英语中文化术语（`BRCULT61` vs. `AMULT61`）在所谓的 `Brown` 族语料库和 `ICE` 组各种语料库中的汇总频率比例。¹⁷ 图中提供了每个 `Brown` 族语料库的整体数据，因为在这些语料库的虚构部分和信息部分之间没有检测到非常一致的差异。然而，对于 `ICE` 组，`BRCULT61`/`AMULT61` 在口语和写作之间表现得非常显著，因此对基本划分给出了不同的数字。
 
-如预期的那样，记录的比例在大多数情况下远低于 1，即发现 AMULT61 术语比 BRCULT61 术语频繁，但由于 AMULT61 中包含了更多术语。我们的关注必须是调查得出的各种比例之间的比较。
+如预期的那样，记录的比例在大多数情况下远低于 1，即发现 `AMULT61` 术语比 `BRCULT61` 术语频繁，但由于 `AMULT61` 中包含了更多术语。我们的关注必须是调查得出的各种比例之间的比较。
 
-如果我们先关注 1961 年和 1991/2 年美式与英式英语的集中程度（图 7 左侧的四列），将会看到美式/英式的差异在 1961 年比一个代之后大得多：Brown 的比例 0.40 是最低的，意味着在语料库中 AMULT61 术语的汇总频率是 BRCULT61 术语的二半倍；相反，LOB 显示了所有比例中最高的，圣芭芭罗拉语料库是一个很特殊的例外。Brown 和 LOB 之间的显著差异是一个可以预测的结果，因为作为比较基础的文化术语正是因为它们在 Brown 和 LOB 中分别被过度代表而被选定的。
+如果我们先关注 1961 年和 1991/2 年美式与英式英语的集中程度（图 7 左侧的四列），将会看到美式/英式的差异在 1961 年比一个代之后大得多：`Brown` 的比例 0.40 是最低的，意味着在语料库中 `AMULT61` 术语的汇总频率是 `BRCULT61` 术语的二半倍；相反，`LOB` 显示了所有比例中最高的，圣芭芭罗拉语料库是一个很特殊的例外。`Brown` 和 `LOB` 之间的显著差异是一个可以预测的结果，因为作为比较基础的文化术语正是因为它们在 `Brown` 和 `LOB` 中分别被过度代表而被选定的。
 
-性别、文化与语言 127
+### 性别、文化与语言 127
 
 ## Brown 和 ICE 语料库中的文化术语
-比例 BRCULT61/AMCULT61
+
+比例 `BRCULT61`/`AMCULT61`
 
 ![](img/6910650ad69df72c967df4c63)
-图 7. Brown 和 ICE 语料库中的文化术语：BRCULT61/AMCULT61
 
-图 7 列出了 1961 年英式英语中文化术语（BRCULT61 vs. AMULT61）在所谓的 Brown 族语料库和 ICE 组各种语料库中的汇总频率比例。¹⁷ 图中提供了每个 Brown 族语料库的整体数据，因为在这些语料库的虚构部分和信息部分之间没有检测到非常一致的差异。然而，对于 ICE 组，BRCULT61/AMULT61 在口语和写作之间表现得非常显著，因此对基本划分给出了不同的数字。
+图 7. `Brown` 和 `ICE` 语料库中的文化术语：`BRCULT61`/`AMCULT61`
 
-如预期的那样，记录的比例在大多数情况下远低于 1，即发现 AMULT61 术语比 BRCULT61 术语频繁，但由于 AMULT61 中包含了更多术语。我们的关注必须是调查得出的各种比例之间的比较。
+图 7 列出了 1961 年英式英语中文化术语（`BRCULT61` vs. `AMULT61`）在所谓的 `Brown` 族语料库和 `ICE` 组各种语料库中的汇总频率比例。¹⁷ 图中提供了每个 `Brown` 族语料库的整体数据，因为在这些语料库的虚构部分和信息部分之间没有检测到非常一致的差异。然而，对于 `ICE` 组，`BRCULT61`/`AMULT61` 在口语和写作之间表现得非常显著，因此对基本划分给出了不同的数字。
 
+如预期的那样，记录的比例在大多数情况下远低于 1，即发现 `AMULT61` 术语比 `BRCULT61` 术语频繁，但由于 `AMULT61` 中包含了更多术语。我们的关注必须是调查得出的各种比例之间的比较。
 
+## 《时代》中的文化术语
 
-
-
-# 《时代》中的文化术语
 每百万字
 
 | | 1920s | 1930s | 1940s | 1950s | 1960s | 1970s | 1980s | 1990s | 2000s |
 |---|---|---|---|---|---|---|---|---|---|
-| AMCULT61 | 1840 | 1917 | 2963 | 2842 | 2240 | 2056 | 2047 | 1202 | 1737 |
-| BRCULT61 | 1410 | 1571 | 1263 | 1321 | 1181 | 1188 | 1143 | 1202 | 1260 |
+| `AMCULT61` | 1840 | 1917 | 2963 | 2842 | 2240 | 2056 | 2047 | 1202 | 1737 |
+| `BRCULT61` | 1410 | 1571 | 1263 | 1321 | 1181 | 1188 | 1143 | 1202 | 1260 |
 
-图 8。《时代》杂志中 AMCULT61 和 BRCULT61 在不同年代的出现次数。已按每百万字频率归一化。
+图 8.《时代》杂志中 `AMCULT61` 和 `BRCULT61` 在不同年代的出现次数。已按每百万字频率归一化。
 
-然而，我们首先转向《时代》杂志记录的结果，这让我们有机会研究在 20 世纪大部分时间里 AMCULT61 和 BRCULT61 的发展，尽管这受限于所有数据均源自美式英语（AmE）文本类别这一事实。
+然而，我们首先转向《时代》杂志记录的结果，这让我们有机会研究在 20 世纪大部分时间里 `AMCULT61` 和 `BRCULT61` 的发展，尽管这受限于所有数据均源自美式英语（AmE）文本类别这一事实。
 
-出乎意料的是，AMCULT61 的数字始终高于两者。有趣的是 AMCULT61 和 BRCULT61 随时间的变化。可以看出，这两组术语在该语料库的前两个年代（从 1920 年代到 1930 年代）均出略微增长。然后，AMCULT61 在 1940 年代出现非常陡峭的进一步增长，随后显而易见地经历了20 世纪最剧烈的下降；由于该年代的前半叶世界许多地区都被第二次世界大战的暴行所侵吞，与 AMCULT61 相关的硬性数值（其中若干个与战争行为直接相关）在该年代具有特殊性也是预料之。我们看到 AMCULT61 的结果随后开始下降，一直持续到 2000 年代。然而，在《时代》语料库的最后一个年代，AMCULT61 的数字仅比第一个年代（1920 年代）略低。
+出乎意料的是，`AMCULT61` 的数字始终高于两者。有趣的是 `AMCULT61` 和 `BRCULT61` 随时间的变化。可以看出，这两组术语在该语料库的前两个年代（从 1920 年代到 1930 年代）均出略微增长。然后，`AMCULT61` 在 1940 年代出现非常陡峭的进一步增长，随后显而易见地经历了20 世纪最剧烈的下降；由于该年代的前半叶世界许多地区都被第二次世界大战的暴行所侵吞，与 `AMCULT61` 相关的硬性数值（其中若干个与战争行为直接相关）在该年代具有特殊性也是预料之。我们看到 `AMCULT61` 的结果随后开始下降，一直持续到 2000 年代。然而，在《时代》语料库的最后一个年代，`AMCULT61` 的数字仅比第一个年代（1920 年代）略低。
 
-BRCULT61 数字的变化明显不显著。在这里，1930 年代代表了一个高点，但随后的下降较为温和，且在不同年代间并不保持一致。记录的频率在最后十年中上升，使得 1980 年代成为构成 BRCULT61 的许多术语相关的软性数值记录最低的年代。
+`BRCULT61` 数字的变化明显不显著。在这里，1930 年代代表了一个高点，但随后的下降较为温和，且在不同年代间并不保持一致。记录的频率在最后十年中上升，使得 1980 年代成为构成 `BRCULT61` 的许多术语相关的软性数值记录最低的年代。
 
-# 《时代》中的性与政治
+## 《时代》中的性与政治
+
 每百万字
 
 | | 1920s | 1930s | 1940s | 1950s | 1960s | 1970s | 1980s | 1990s | 2000s |
 |---|---|---|---|---|---|---|---|---|---|
-| SEX | 56 | 58 | 56 | 81 | 140 | 245 | 205 | 388 | 274 |
-| COMMUNISM | 159 | 201 | 493 | 941 | 519 | 327 | 224 | 149 | 42 |
-| SOCIALISM | 128 | 127 | 120 | 138 | 100 | 86 | 96 | 39 | 9 |
+| `SEX` | 56 | 58 | 56 | 81 | 140 | 245 | 205 | 388 | 274 |
+| `COMMUNISM` | 159 | 201 | 493 | 941 | 519 | 327 | 224 | 149 | 42 |
+| `SOCIALISM` | 128 | 127 | 120 | 138 | 100 | 86 | 96 | 39 | 9 |
 
-图 9。《时代》杂志中 SEX（sex, sexes, sexually, sexuality）、COMMUNISM（communism, communists）和 SOCIALISM（socialism, socialists）在不同年代的出现次数。已按每百万字频率归一化。
+图 9.《时代》杂志中 `SEX`（`sex`, `sexes`, `sexual`, `sexuality`）、`COMMUNISM`（`communism`, `communists`）和 `SOCIALISM`（`socialism`, `socialists`）在不同年代的出现次数。已按每百万字频率归一化。
 
 图 8 的结果证实了 20 世纪末文化趋同的印象，这种趋势在这里一直持续到 21 世纪的第一个年代：在这个美国语料库中，典型的美式术语频率在某些年代有所下降，而典型的英式术语频率在最后十年上升。
 
-我们将仔细观察构成 AMCULT61 和 BRCULT61 的三个术语在《时代》中的频率。图 9 给出了 SEX（sex, sexes, sexual, sexuality）、COMMUNISM（communism, communists）——均来自 AMCULT61，以及 SOCIALISM（socialism, socialists）——来自 BRCULT61 的记录频率。
+我们将仔细观察构成 `AMCULT61` 和 `BRCULT61` 的三个术语在《时代》中的频率。图 9 给出了 `SEX`（`sex`, `sexes`, `sexual`, `sexuality`）、`COMMUNISM`（`communism`, `communists`）——均来自 `AMCULT61`，以及 `SOCIALISM`（`socialism`, `socialists`）——来自 `BRCULT61` 的记录频率。
 
-在这三个术语中——或许并不令人意外——SEX 被认为是最成功的一个，因为它在 1920 年代处于非常低的水平，被其他两个术语远远压倒，最终在 2000 年代成为明显的胜者，速度是其他术语的几倍。记录的结果有力地说明并提醒我们，自 20 世纪中叶以来，“性”话题在公共领域（尤其是在美国）日益凸显，这恰好是金赛西报告（Kinsey reports）出现的年代⁸。也许是巧合的是，在美国由共和党政府执政的年代（ 1980 年代里根时期和 2000 年代布什时期），SEX 的记录数字有所下降⁹。
+在这三个术语中——或许并不令人意外——`SEX` 被认为是最成功的一个，因为它在 1920 年代处于非常低的水平，被其他两个术语远远压倒，最终在 2000 年代成为明显的胜者，速度是其他术语的几倍。记录的结果有力地说明并提醒我们，自 20 世纪中叶以来，“性”话题在公共领域（尤其是在美国）日益凸显，这恰好是金赛西报告（`Kinsey reports`）出现的年代⁸。也许是巧合的是，在美国由共和党政府执政的年代（ 1980 年代里根时期和 2000 年代布什时期），`SEX` 的记录数字有所下降⁹。
 
-# COCA 中的文化术语
-BRCULT61/AMCULT61 比例
+## COCA 中的文化术语
+
+`BRCULT61`/`AMCULT61` 比例
 
 | | 所有章节 | 口语 | 小说 | 杂志 | 学术 |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 1990-1994 | 0,65 | 0,52 | 1,22 | 0,62 | 0,51 | 0,75 |
 | 1995-1999 | 0,77 | 0,85 | 1,24 | 0,78 | 0,58 | 0,73 |
 | 2000-2004 | 0,84 | 0,92 | 1,36 | 0,87 | 0,60 | 0,76 |
 | 2005-2009 | 0,88 | 0,88 | 1,25 | 0,99 | 0,61 | 0,89 |
 | 2010-2011 | 0,90 | 1,00 | 1,11 | 0,86 | 0,68 | 1,01 |
 
-图 10。COCA 中 BRCULT61 和 AMCULT61 之间的比例：按时期和文本类别划分。
-
-对于 COMMUNISM，该术语显示出非常戏剧的发展：在 1920 年代有一个平缓的开始，在 2000 年代有一个平缓的结束，但在 1950 年代达到了无可比拟的高点。后者由于在美国的“猎共产”年代，也是国际舞台受冷战主导的年代，因此这一高数字并不意外。值得注意的是，1920 年代和 1930 年代的数字为何如此低。毕竟，1920 年代是共产主义者巩固对俄罗斯统治的年代，1930 年代是莫斯科审判和其他极端事件年代。尽管如此，COMMUNISM 的数字在这些年代仍保持在较低水平，直到 1940 年代世界局势发生变化才开始爆发。在某种程度上这通过二战前该术语更多使用得到了补偿⁰。
-
-最后，SOCIALISM 被证实是美国的一种具有影响的术语和意识形态。其数字在整个范围内持续，并在最后几乎可以忽略不计。
-
-我们将转向 COCA，它为研究跨文本类别的 BRCULT61 和 AMCULT61 的出现情况提供了良好的机会，以及过去二十年的历时变化。比例列于图 10。
-
-对于所有章节（或文本类别），该比例在近几十年增加的趋势得到了证实。在美式英语语料库中，再次看到这种增长一直持续到 21 世纪。基础数据显示，这里两边的差距都在缩小。然而，所有章节的总比例仍保持低于 1，即 AMCULT61 术语仍 BRCULT61 更频繁，尽管平衡逐渐变得均衡。
-
-除一个例外外，这种趋势也适用于每个单独的文本类别，尽管并非所有情况下每个时期之间都保持一致。例外是小说（Fiction），其随时间的发展看起来有些无常；至少没有证据表明该类别的 BRCULT61/AMCULT61 比例有任何增长。然而，令人震惊的是，小说是唯一一个比例始终高于 1 的类别，这意味着在该类别中，记录的 BRCULT61 频率无例外高于 AMCULT61。这一结果必须结合上述图 7 来看，其中 ICE 口语章节的比例明显高于书面章节（更不用说在圣芭芭罗拉语料库中记录的极高比例了）。可以假设，与这些章节一样，小说文本将围绕日常话题展开，并有更多典型的 BRCULT61 软性术语，特别是在对话段落中。
-
-矛盾的是，COCA 的口语部分显示的比例较低，但请记住这部分由公共广播语言组成——例如政治评论——通常不关注日常话题，而 ICE 的口语部分则更多。
-
-最后，图 11 给出了 BNC 中 BRCULT61 和 AMCULT61 的归一化结果，按该语料库区分的文本类别划分。在大多数情况下，可以看出 AMCULT61 的频率远高于 BRCULT61。在小说情况下，两个数字都很低，尤其是 AMCULT61。这证实了：一方面，构成 BRCULT61 和 AMCULT61 的文化术语在小说中并不特别频繁；另一方面，AMCULT61 的硬性数值尤其罕见。
-
-另一个 BRCULT61 高于 AMCULT61 的类别可以被视为口语人口统计（Spoken demographic）²¹。确实，在这种即兴对话类别中，BRCULT61 的频率是 AMCULT61 的三倍以上，这一结果与另一个口语类别语境驱动（Context-governed）完全不同。这证实了这种印象：情境是有利于 BRCULT61 某些术语的因素。
+图 10. `COCA` 中 `BRCULT61` 和 `AMCULT61` 之间的比例：按时期和文本类别划分。
 
 
 
+对于 `COMMUNISM`，该术语显示出非常戏剧的发展：在 1920 年代有一个平缓的开始，在 2000 年代有一个平缓的结束，但在 1950 年代达到了无可比拟的高点。后者由于在美国的“猎共产”年代，也是国际舞台受冷战主导的年代，因此这一高数字并不意外。值得注意的是，1920 年代和 1930 年代的数字为何如此低。毕竟，1920 年代是共产主义者巩固对俄罗斯统治的年代，1930 年代是莫斯科审判和其他极端事件年代。尽管如此，`COMMUNISM` 的数字在这些年代仍保持在较低水平，直到 1940 年代世界局势发生变化才开始爆发。在某种程度上这通过二战前该术语更多使用得到了补偿⁰。
 
+最后，`SOCIALISM` 被证实是美国的一种具有影响的术语和意识形态。其数字在整个范围内持续，并在最后几乎可以忽略不计。
+
+我们将转向 `COCA`，它为研究跨文本类别的 `BRCULT61` 和 `AMCULT61` 的出现情况提供了良好的机会，以及过去二十年的历时变化。比例列于图 10。
+
+对于所有章节（或文本类别），该比例在近几十年增加的趋势得到了证实。在美式英语语料库中，再次看到这种增长一直持续到 21 世纪。基础数据显示，这里两边的差距都在缩小。然而，所有章节的总比例仍保持低于 1，即 `AMCULT61` 术语仍 `BRCULT61` 更频繁，尽管平衡逐渐变得均衡。
+
+除一个例外外，这种趋势也适用于每个单独的文本类别，尽管并非所有情况下每个时期之间都保持一致。例外是小说（Fiction），其随时间的发展看起来有些无常；至少没有证据表明该类别的 `BRCULT61`/`AMCULT61` 比例有任何增长。然而，令人震惊的是，小说是唯一一个比例始终高于 1 的类别，这意味着在该类别中，记录的 `BRCULT61` 频率无例外高于 `AMCULT61`。这一结果必须结合上述图 7 来看，其中 ICE 口语章节的比例明显高于书面章节（更不用说在圣芭芭罗拉语料库中记录的极高比例了）。可以假设，与这些章节一样，小说文本将围绕日常话题展开，并有更多典型的 `BRCULT61` 软性术语，特别是在对话段落中。
+
+矛盾的是，`COCA` 的口语部分显示的比例较低，但请记住这部分由公共广播语言组成——例如政治评论——通常不关注日常话题，而 ICE 的口语部分则更多。
+
+最后，图 11 给出了 BNC 中 `BRCULT61` 和 `AMCULT61` 的归一化结果，按该语料库区分的文本类别划分。在大多数情况下，可以看出 `AMCULT61` 的频率远高于 `BRCULT61`。在小说情况下，两个数字都很低，尤其是 `AMCULT61`。这证实了：一方面，构成 `BRCULT61` 和 `AMCULT61` 的文化术语在小说中并不特别频繁；另一方面，`AMCULT61` 的硬性数值尤其罕见。
+
+另一个 `BRCULT61` 高于 `AMCULT61` 的类别可以被视为口语人口统计（Spoken demographic）²¹。确实，在这种即兴对话类别中，`BRCULT61` 的频率是 `AMCULT61` 的三倍以上，这一结果与另一个口语类别语境驱动（Context-governed）完全不同。这证实了这种印象：情境是有利于 `BRCULT61` 某些术语的因素。
 
 # 性别、文化与语言
 
@@ -1987,10 +1953,10 @@ BRCULT61/AMCULT61 比例
 
 | | 全部 | 新闻 | 非学术散文 | 学术 | 小说与诗歌 | 其他书面语 | 未发表书面语 | 口语统计 | 口语语境 |
 |---|---|---|---|---|---|---|---|---|---|
-| BRCULT61 | 1131 | 958 | 1264 | 1139 | 863 | 1321 | 1095 | 1112 | 1037 |
-| AMCULT61 | 1474 | 1688 | 2007 | 1555 | 811 | 1441 | 1987 | 411 | 1124 |
+| `BRCULT61` | 1131 | 958 | 1264 | 1139 | 863 | 1321 | 1095 | 1112 | 1037 |
+| `AMCULT61` | 1474 | 1688 | 2007 | 1555 | 811 | 1441 | 1987 | 411 | 1124 |
 
-图 11. BNC 中 BRCULT61 和 AMCULT61 在不同文本类别中的频率。已归一化为每百万词频率。
+图 11. BNC 中 `BRCULT61` 和 `AMCULT61` 在不同文本类别中的频率。已归一化为每百万词频率。
 
 ## 6. 总结
 
@@ -2000,7 +1966,7 @@ BRCULT61/AMCULT61 比例
 
 用在 `she` 之后的动词往往更有可能引起认知意义，而用在 `he` 之后的词则表示活动和运动，但这种差异被证明很大程度上取决于文本类别。
 
-对于 1961 年美式英语（AmE）较之英式英语（BrE）出现频率过高的广义文化术语集（Brown/LOB），通过更广泛的近期语料库对其进行了追踪。可以检测到明显的趋同趋势。事实上，1961 年在美式英语中频率较高的与商业和战争相关的少数核心术语，在20 世纪90 年代初的英式英语中变得越来越多。TIME 语料库提供的长期视角表明，在美式英语材料中，1961 年典型的美式术语在最近几十年中频率降低，而典型的英式术语则变得增多。
+对于 1961 年美式英语（AmE）较之英式英语（BrE）出现频率过高的广义文化术语集（Brown/LOB），通过更广泛的近期语料库对其进行了追踪。可以检测到明显的趋同趋势。事实上，1961 年在美式英语中频率较高的与商业和战争相关的少数核心术语，在20 世纪90 年代初的英式英语中变得越来越多。`TIME` 语料库提供的长期视角表明，在美式英语材料中，1961 年典型的美式术语在最近几十年中频率降低，而典型的英式术语则变得增多。
 
 在可以将澳大利亚和新西兰英语纳入比较的情况下，这些变体通常位于美式英语和英式英语之间，新西兰英语（NZE）有时比澳大利亚英语（AusE）更接近美式英语。这两种澳洲英语变体似乎都处于性别平等发展的前沿。
 
@@ -2014,19 +1980,12 @@ BRCULT61/AMCULT61 比例
 - 在线获取：http://www.linguistics.ucsb.edu/research/sbcorpus_obtaining.html。
 - 即使将 `his` 和 `her` 作为限定词而非代词计入统计，也是如此。
 - Kjellmer (1986: 164) 发现，与这些形式相比，`himself` 和 `herself` 可以忽略不计。他还认为 `he` 和 `she` 的性别中性用法（例如泛指的 `he` 和用于船只的 `she`）极其罕见。
-
 - 使用美式英语与英式英语的比例而非具体数字是为了简化陈述。由于记录频率的规模被这些比例所掩盖，在特别相关的情况下偶尔会标出绝对频率。
-
-- 各类语料库的构成非常相似。BROWN、LOB 和 ARC 都包含以下十五类别：A“新闻：报道”、B“新闻：社论”、C“新闻：评论”、D“宗教”、E“技能、贸易与爱好”、F“民间传说”、G“信函、传记、随笔”、H“杂项”、J“学习与科学写作”、K“普通小说”、L“神秘与侦探小说”、M“科幻小说”、N“冒险与西部小说”、P“浪漫与爱情故事”、R“幽默”。ACE 包含相同内容，但对小说类别有更精细的划分，增加了 S“历史小说”和 W“女性小说”作为独立类别，而 SMC 则将所有小说类别合并。除了情态动词外，无论功能如何，BE、DO、HAVE、BECOME 和 GET 的所有出现情况均排除在统计之外。
-
-- 随后将情态动词以及 BE、DO、HAVE、BECOME 和 GET 的完整形式和缩写形式排除在统计之外。Kjellmer (1986，特别是第170页）讨论了不同动词成为男性与女性指代典型的可能性。另见 Cheshire (1985) 和 Tannen (1991)。
-
+- 各类语料库的构成非常相似。`BROWN`、`LOB` 和 `ARC` 都包含以下十五类别：A“新闻：报道”、B“新闻：社论”、C“新闻：评论”、D“宗教”、E“技能、贸易与爱好”、F“民间传说”、G“信函、传记、随笔”、H“杂项”、J“学习与科学写作”、K“普通小说”、L“神秘与侦探小说”、M“科幻小说”、N“冒险与西部小说”、P“浪漫与爱情故事”、R“幽默”。`ACE` 包含相同内容，但对小说类别有更精细的划分，增加了 S“历史小说”和 W“女性小说”作为独立类别，而 `SMC` 则将所有小说类别合并。除了情态动词外，无论功能如何，`BE`、`DO`、`HAVE`、`BECOME` 和 `GET` 的所有出现情况均排除在统计之外。
+- 随后将情态动词以及 `BE`、`DO`、`HAVE`、`BECOME` 和 `GET` 的完整形式和缩写形式排除在统计之外。Kjellmer (1986，特别是第170页）讨论了不同动词成为男性与女性指代典型的可能性。另见 Cheshire (1985) 和 Tannen (1991)。
 - 我不想深入讨论文本的倾斜方向是否使 BNC 在任何意义上对男性与女性产出具有代表性。作为词位，即屈变化形式也被计入统计。总共数了 55 种形式。除了 Hofland 和 Johansson (1982) 以及 Leech 和 Fallon (1992) 之外，使用了 WordSmith 程序（见 Scott 2001）来检查 Brown 和 LOB 之间的频率差异。避免的术语是英美之间一些明显的差异，例如个人和地理名称（如 Macmillan, London, Washington），以及像 `soccer` 和 `football` 这样的术语。该列表并非旨在穷尽。确实，在大多数术语中，像 `drama` 这样的词可能更多是处于隐喻意义而非字面意义。尽管如此，它仍可以作为文化指标使用，正如 Leech 和 Fallon (1992) 所做的那样。见 Leech 和 Fallon (1992) 的初始引言。
-
-- 为了让读者了解记录频率的规模，可以提到 BNC 中记录了 942 个 BRCULT61 术语，对应 2353 个 AMCULT61 术语，而在 LOB 中的数值大致相同。
-
-显然，`sex` 可以指性别，也可以指性活动。最近几十年中，用 `gender` 代替 `sex` 表达的趋势被 TIME 语料库所捕捉。然而，`gender(s)` 的频率相对于 `sex` 仍然较低，且从 1990 年代到 2000 年代有所下降。TIME 语料库中 1920 年代的合并频率为每百万词为 8，1990 年代为 25。
-
+- 为了让读者了解记录频率的规模，可以提到 BNC 中记录了 942 个 `BRCULT61` 术语，对应 2353 个 `AMCULT61` 术语，而在 LOB 中的数值大致相同。
+- 显然，`sex` 可以指性别，也可以指性活动。最近几十年中，用 `gender` 代替 `sex` 表达的趋势被 `TIME` 语料库所捕捉。然而，`gender(s)` 的频率相对于 `sex` 仍然较低，且从 1990 年代到 2000 年代有所下降。`TIME` 语料库中 1920 年代的合并频率为每百万词为 8，1990 年代为 25。
 - BNC 的这一类别在 Rayson 等人 (2007) 中进行了详细分析。
 
 ## 参考文献
@@ -2039,9 +1998,10 @@ BRCULT61/AMCULT61 比例
 - Oakes, M. P. and M. Farrow (2007)...
 - Rayson, P., G. Lee and M. Hodges (1997)...
 
+英国国家语料库，*International journal of corpus linguistics* 2/1: 133-152。
 
-英国国家语料库，*International journal of corpus linguistics* 2/1: 133-152.
 Scott, M. (2001), ‘比较语料库并通过 WordSmith Tools 计算机程序套件识别关键词、语汇排序和频率分布》，收于：G. Mohsen, A. Henry and R. L. Roseberry (编) *小语料库研究与英语教学：理论与实践*。阿姆斯特丹与费城：John Benjamins. 47-67。
+
 Tannen, D. (1991), 《你并不懂：*对话中的女性与男性*》。伦敦：Virago Press。
 
 # 泰因赛德英语中的句末词 man
@@ -2052,53 +2012,51 @@ Kathrin Luckmann de Lopez
 
 ### 摘要
 
-本文探讨了 i) 将 man 视为呼语的分类，ii) 它的语用功能以及 iii) 它在泰因赛德英语中索引区域身份的“宏观功能”。研究结果表明，泰因赛德的 man 与其他呼语不同，它主要履行文本和人际功能，挑战了以往对呼语的定义。在数据中，man 的句法移动性受到限制，仅出现在句末；它的频率很高，且主要出现在与泰因赛德英语相关的语调模式中。男性和女性都可以使用该呼语来称呼任何性别的个人或（混合或同性）群体。它可以表达工人阶级的团结和“泰因赛德属性”（Geerness）。
+本文探讨了 i) 将 `man` 视为呼语的分类，ii) 它的语用功能以及 iii) 它在泰因赛德英语中索引区域身份的“宏观功能”。研究结果表明，泰因赛德的 `man` 与其他呼语不同，它主要履行文本和人际功能，挑战了以往对呼语的定义。在数据中，`man` 的句法移动性受到限制，仅出现在句末；它的频率很高，且主要出现在与泰因赛德英语相关的语调模式中。男性和女性都可以使用该呼语来称呼任何性别的个人或（混合或同性）群体。它可以表达工人阶级的团结和“泰因赛德属性”（Geerness）。
 
 ### 1. 引言
 
-man 通常被归类为“呼语”。呼语可以出现在不同的位置（句首、句中、句末），本质上履行三种语用功能：它们引起听话者的注意，识别预期的接收者，并“在说话者与参与者之间建立或维持社会关系”（Leech 1999: 108）。吸引注意力似乎是使用呼语的主要原因。对于 man 而言，当它出现在句首或句中时，这一功能尤为明显。然而，在本研究所考虑的泰因赛德英语样本中，man 更多出现在话语或句法单元的末尾.¹在句末位置，man 主要履行文本、互动和人际功能（我唯一的愿望就是再次变成周五，哥们，(AWP 1,7 00:45:40); 我们打保龄球之前大家都在去洗澡。你在撒谎，哥们。(GS 2 00:14:20)）。作为研究基础的电视剧《再见，皮特》（AWP）和《乔治迪岸边》（GS）为分析这一特征的语用功能提供了易于获取的资源。泰因赛德英语之所以有趣且特殊，在于它被频繁使用，并出现在陈述句的局部语调轮廓（上升平台模式和升降）中，而大多数英语方言都有明显的降调。我将提出 man 是泰因赛德地区区域身份的标记。
+`man` 通常被归类为“呼语”。呼语可以出现在不同的位置（句首、句中、句末），本质上履行三种语用功能：它们引起听话者的注意，识别预期的接收者，并“在说话者与参与者之间建立或维持社会关系”（Leech 1999: 108）。吸引注意力似乎是使用呼语的主要原因。对于 `man` 而言，当它出现在句首或句中时，这一功能尤为明显。然而，在本研究所考虑的泰因赛德英语样本中，`man` 更多出现在话语或句法单元的末尾.¹在句末位置，`man` 主要履行文本、互动和人际功能（我唯一的愿望就是再次变成周五，哥们，(AWP 1,7 00:45:40); 我们打保龄球之前大家都在去洗澡。你在撒谎，哥们。(GS 2 00:14:20)）。作为研究基础的电视剧《再见，皮特》（AWP）和《乔治迪岸边》（GS）为分析这一特征的语用功能提供了易于获取的资源。泰因赛德英语之所以有趣且特殊，在于它被频繁使用，并出现在陈述句的局部语调轮廓（上升平台模式和升降）中，而大多数英语方言都有明显的降调。我将提出 `man` 是泰因赛德地区区域身份的标记。
 
-这项关于泰因赛德英语中句末呼语 man 的语用功能的语料驱动研究，将展示 man 通常如何被使用，将其与我数据中的呈现方式进行比较，并描述它可以出现的位置。随后我将检查该特征在多大程度上与当地语调模式相吻。在论文的第二部分，我将把第一部分的分析结果与索引当地身份的显性元功能联系起来。索引性（Indexicality）是语言形式与某些社会特征相关起来的过程，从而充当说话者社会身份的指针。我将根据数据中该标记的使用和功能、其频率、与韵律特征的共现，以及 man 对当地语音社区的可能显著性，提供支持特定泰因赛德工人阶级索引的详细证据。
+这项关于泰因赛德英语中句末呼语 `man` 的语用功能的语料驱动研究，将展示 `man` 通常如何被使用，将其与我数据中的呈现方式进行比较，并描述它可以出现的位置。随后我将检查该特征在多大程度上与当地语调模式相吻。在论文的第二部分，我将把第一部分的分析结果与索引当地身份的显性元功能联系起来。索引性（Indexicality）是语言形式与某些社会特征相关起来的过程，从而充当说话者社会身份的指针。我将根据数据中该标记的使用和功能、其频率、与韵律特征的共现，以及 `man` 对当地语音社区的可能显著性，提供支持特定泰因赛德工人阶级索引的详细证据。
 
 # 2. 先前的研究与分类
 
-在《朗曼英语语法》（Longman Grammar）中，man 被归类为呼语，更具体地归类为“亲昵词”（familiariser），一种表示友谊的词。因此，它用于信号友好的关系，通常发生在平等者之间。其他常见的亲昵词有 mate、buddy、guys。泰因赛德英语中发现的常见亲昵形式包括 hinny（Biber et al. 1999:110）和 pet（Wales 2006）。man 是一种常见的呼语，与大英国有关；在美国 ways，它的使用与工人阶级有关，且该特征在美式英语中更常见（Dunkling 1990:167）。
+在《朗曼英语语法》（Longman Grammar）中，`man` 被归类为呼语，更具体地归类为“亲昵词”（familiariser），一种表示友谊的词。因此，它用于信号友好的关系，通常发生在平等者之间。其他常见的亲昵词有 `mate`、`buddy`、`guys`。泰因赛德英语中发现的常见亲昵形式包括 `hinny`（Biber et al. 1999:110）和 `pet`（Wales 2006）。`man` 是一种常见的呼语，与大英国有关；在美国 ways，它的使用与工人阶级有关，且该特征在美式英语中更常见（Dunkling 1990:167）。
 
-man 作为呼语的特殊用法尚未得到广泛研究。作为呼语的 man 是研究对象，泛指关于呼语的研究，包括 Biber et al. 1999；Carver and McCarthy 2009；Alba-Juez (2009) 关于英语和西班牙语中 man 的比较文章。泰因赛德在 Wales (2006) 中被描述为一种“叹词/呼语”（2006: 73）。Beal (2008) 将 man 作为呼语的示例，它是泰因赛德发现的区域称呼，“常用于表达烦恼或情绪”（ibid.: 400）。Wright (1988) 列出了 man 作为针对任何性别或年龄的亲昵称呼，“常用于句末以加强强调”（1988）。
+`man` 作为呼语的特殊用法尚未得到广泛研究。作为呼语的 `man` 是研究对象，泛指关于呼语的研究，包括 Biber et al. 1999；Carver and McCarthy 2009；Alba-Juez (2009) 关于英语和西班牙语中 `man` 的比较文章。泰因赛德在 Wales (2006) 中被描述为一种“叹词/呼语”（2006: 73）。Beal (2008) 将 `man` 作为呼语的示例，它是泰因赛德发现的区域称呼，“常用于表达烦恼或情绪”（ibid.: 400）。Wright (1988) 列出了 `man` 作为针对任何性别或年龄的亲昵称呼，“常用于句末以加强强调”（1988）。
 
-将 man 归类为呼语是显而易见的。在形式上，呼语是一个名词短语，或通常是名词短语，通常是单名词，正如 man 的情况。Leech (1999: 107-108) 确定的呼语三种语用功能是：1）引起注意，2）识别，3） 建立或维持社会关系。呼语通常指向听话者（Biber et al.: 108）。关于人际功能，其他关注人际层面的语用标记，如“促进标记”（Holmes 1986: 3）、“团结标记”（Fraser 1996）或“人际标记”（Ajmeer 2002: 153）。
+将 `man` 归类为呼语是显而易见的。在形式上，呼语是一个名词短语，或通常是名词短语，通常是单名词，正如 `man` 的情况。Leech (1999: 107-108) 确定的呼语三种语用功能是：1）引起注意，2）识别，3） 建立或维持社会关系。呼语通常指向听话者（Biber et al.: 108）。关于人际功能，其他关注人际层面的语用标记，如“促进标记”（Holmes 1986: 3）、“团结标记”（Fraser 1996）或“人际标记”（Ajmeer 2002: 153）。
 
 尽管 Leech 注意到呼语在功能上类似于边缘状语、感叹词或话语标记，因为它们“可以松地附着在句子结构上”（1999: 107），但他并未说明这些类别之间或呼语与语用标记之间存在什么关系，以及如何相互区分。Carter and McCarthy (2006: 231-234) 指出了呼语和语用标记共同的特征，即呼语在标记话语边界、轮次管理以及减轻对听话者面子的威胁方面的功能。Fraser (1996) 将呼语视为语用标记的附属品。她的四种语用标记是“基础型”、“平行型”、“评论型”和“话语标记”。在 Fraser 看来，呼语标记传递了句子表达之外的额外信息。对于呼语而言，这种额外信息包括传达称呼对象：“通过使用[呼语]，例如 waiter，信息是”（1996: 185）。这比 Leech 或 Carter and McCarthy 的分类要窄，后者在总和之外，还包含了人际功能（Leech 1999, Carter and McCarthy 2006）、互动管理和话语功能（Carter and McCarthy 2006）。
 
-Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）可以被描述为呼语的一个典型功能，与吸引注意的功能（Leech 的第一个功能）并列，因为它是上述呼呼定义的一部分，并镜像了其指向称呼或召唤对话者的呼格词源。然而，将这种典型的定义应用于泰因赛德的 man 时存在问题。这种困难与 man 的句法位置有关。
+Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）可以被描述为呼语的一个典型功能，与吸引注意的功能（Leech 的第一个功能）并列，因为它是上述呼呼定义的一部分，并镜像了其指向称呼或召唤对话者的呼格词源。然而，将这种典型的定义应用于泰因赛德的 `man` 时存在问题。这种困难与 `man` 的句法位置有关。
 
-来自 Alba-Juez (2009: 173) 的示例说明了 man 在句中可能的句法移动性。句首位置：Man, I’m scared；句中位置：We were, ... man, accused of robbery;
-
-
-
-
+来自 Alba-Juez (2009: 173) 的示例说明了 `man` 在句中可能的句法移动性。句首位置：`Man, I’m scared`；句中位置：`We were, ... man, accused of robbery;`
 
 ## Kathrin Luckmann de Lopez
 
-末尾位置：*小心，伙计！* 第四种位置是“独立位置”，即 *Man!*（男人！Leech 1999: 115）。Leech (1999) 认为，句法位置与呼语所承担的功能之间存在相关性：
+末尾位置：*小心，伙计！* 第四种位置是“独立位置”，即 `Man!`（男人！Leech 1999: 115）。Leech (1999) 认为，句法位置与呼语所承担的功能之间存在相关性：
 
 > [...] 句首呼语将引起注意的功能……与标别出合适的听话者（们）的功能……在一起；而句末呼语更有可能将[第二种]功能……与调节、维持或强化说话人与听话者之间社会关系的功能相结合。（1999: 116）
 
-在本文分析中，*man* 仅出现在末尾位置，Leech 将该位置与强化团结感的功能联系起来。显而易见，即使泰恩赛德（Tyneside）的 *man* 在语法上被限制在末尾，这并没有限制它的潜力。
+在本文分析中，`man` 仅出现在末尾位置，Leech 将该位置与强化团结感的功能联系起来。显而易见，即使泰恩赛德（Tyneside）的 `man` 在语法上被限制在末尾，这并没有限制它的潜力。
 
-我采取了更宽泛的呼语定义，以体现 *man* 的许多功能，但将其视为语用标记（pragmatic markers）的一个子类。考虑到呼语与人际标记之间显著的功能重叠，这种做法是恰当的，这反可能表明泰恩赛德的 *man* 以及一般的通用呼语是整个类别的典型。
+我采取了更宽泛的呼语定义，以体现 `man` 的许多功能，但将其视为语用标记（pragmatic markers）的一个子类。考虑到呼语与人际标记之间显著的功能重叠，这种做法是恰当的，这反可能表明泰恩赛德的 `man` 以及一般的通用呼语是整个类别的典型。
 
 ## 3. 数据与方法
 
-本分析的基础语料库由电视剧《再见，伙计》（Auf Wiedersehen, Pet, AWP）的对话组成，该剧包含了 1983 年第一季的前三集。我之所以采用电视对话来构建一个可以转录的多模态语料库（代表一种文本语料库），是因为：例如，泰恩赛德的语料数据（如 NECTE 语料库）主要由访谈数据组成。在这里，像 *man* 这样的特征不太可能被激发。使用传统语料库进行此类研究的另一个问题是，用户获取音频文件的限制，而这些文件对于识别功能具有重要信息。在本研究中，我按照语料语言学的惯例，对该标记进行了上下文驱动的分类。基于该特征的频率在整个剧中保持稳定的假设，选择了前三集，总计约 135 分钟的对话。
 
-这部喜剧剧 AWP 拍摄于 20 世纪 80 年代，当时英格兰北部以及其他地区因钢铁厂、造船厂和矿山的关闭而遭受痛苦，导致了失业以及向南方和海外的移民。
+
+本分析的基础语料库由电视剧《再见，伙计》（Auf Wiedersehen, Pet, `AWP`）的对话组成，该剧包含了 1983 年第一季的前三集。我之所以采用电视对话来构建一个可以转录的多模态语料库（代表一种文本语料库），是因为：例如，泰恩赛德的语料数据（如 `NECTE` 语料库）主要由访谈数据组成。在这里，像 *man* 这样的特征不太可能被激发。使用传统语料库进行此类研究的另一个问题是，用户获取音频文件的限制，而这些文件对于识别功能具有重要信息。在本研究中，我按照语料语言学的惯例，对该标记进行了上下文驱动的分类。基于该特征的频率在整个剧中保持稳定的假设，选择了前三集，总计约 135 分钟的对话。
+
+这部喜剧剧 `AWP` 拍摄于 20 世纪 80 年代，当时英格兰北部以及其他地区因钢铁厂、造船厂和矿山的关闭而遭受痛苦，导致了失业以及向南方和海外的移民。
 
 自 20 世纪 20 年代以来，每年离开东北部的人从 5,000（70 年代）到 80,000 人（1927-28 年）不等。净流失仍在持续，东南部仍然是移民最频繁的目的地（54%）。（Younger 1992: 170）
 
-根据 AWP 第 2 集第 2 场的一处参考，1983 年德国建筑工地上有 3 万名英国工人。在剧中，三位乔治亚亚德人（Geordie）砌瓦工 Neville 和 Oz 离开泰恩赛德，在德国杜塞尔多夫的一个建筑工地寻找工作。他们与同胞们——来自布里斯斯托尔的 Bomber、来自伦敦的 Wayne、来自黑地地区的 Barry 以及来自利物浦的 Moxey——在一起生活。建筑工们把周工资寄给家里人，或者把钱花在酒和娱乐上。虽然从 AWP 中收集的任何数据可能被认为是过时的，但选择该剧是由于与其他电视剧相比，它具有独特的真实性。AWP 取得了巨大成功，“最伟大的电视喜剧剧之一”（Billen 2002: 46）。Coles (2004: 115) 证实了第一季的真实性源于编剧们讲述得“很有味道”，以及角色的真实性：“不仅政治尖锐、幽默阴暗，而且人物具有他们的时代感”（¹）。“伟大的乔治亚三剑客并不是乔治亚人的刻板印象，²，“每个工人阶级家庭都有 [Dennis] 这样的人。”Oz 被描述为“典型的乔治亚类型”，而在当时的另一部喜剧剧《Whatever Happened to the Likely Lords》中他被称为‘Nev’；这三个人与泰恩赛德地区有紧密的联系：Tim Healy (Dennis) 来自纽卡斯尔泰的 Benwell，Kevin Whately (Neville) 和 Jimmy Nail (Oz) 出现在诺森伯兰郡赫克斯姆附近的 Humshaugh 和纽卡斯尔泰。³
+根据 `AWP` 第 2 集第 2 场的一处参考，1983 年德国建筑工地上有 3 万名英国工人。在剧中，三位乔治亚亚德人（Geordie）砌瓦工 Neville 和 Oz 离开泰恩赛德，在德国杜塞尔多夫的一个建筑工地寻找工作。他们与同胞们——来自布里斯斯托尔的 Bomber、来自伦敦的 Wayne、来自黑地地区的 Barry 以及来自利物浦的 Moxey——在一起生活。建筑工们把周工资寄给家里人，或者把钱花在酒和娱乐上。虽然从 `AWP` 中收集的任何数据可能被认为是过时的，但选择该剧是由于与其他电视剧相比，它具有独特的真实性。`AWP` 取得了巨大成功，“最伟大的电视喜剧剧之一”（Billen 2002: 46）。Coles (2004: 115) 证实了第一季的真实性源于编剧们讲述得“很有味道”，以及角色的真实性：“不仅政治尖锐、幽默阴暗，而且人物具有他们的时代感”（¹）。“伟大的乔治亚三剑客并不是乔治亚人的刻板印象，²，“每个工人阶级家庭都有 [Dennis] 这样的人。”Oz 被描述为“典型的乔治亚类型”，而在当时的另一部喜剧剧《Whatever Happened to the Likely Lords》中他被称为‘Nev’；这三个人与泰恩赛德地区有紧密的联系：Tim Healy (Dennis) 来自纽卡斯尔泰的 Benwell，Kevin Whately (Neville) 和 Jimmy Nail (Oz) 出现在诺森伯兰郡赫克斯姆附近的 Humshaugh 和纽卡斯尔泰。³
 
-电视剧和戏剧一样，是建构的，因此是一种文化建构，而非自然语言的实例。因此，结论仅适用于“现实世界”，尽管可以得出有趣的观察。正如 Quaglio (2009) 所示，利用电视进行语言分析在方法论上是稳妥的，并能产生重要的见解。考虑到其变位的模式、其在电视剧《朋友》中的形式和频率，Tagliamonte 和 Roberts (2005) 得出结论，“媒体语言实际上反映了语言正在发生的情况”，并且“[fɪ] 看起来 so 的使用与其存在某种相关性”（2005: 296）。通过引用真人秀《Geordie Shore》（GS）的例子，我将证明 *man* 在剧中的真实性。GS 是一部 2011 年的真人秀，Gary 和 Charlotte 在纽卡斯尔的一住了六周，镜头跟着他们移动。Man 是一种语言表达，同时传递了文本和人际意义。在文本衔接层面，它起到关注的作用。
+电视剧和戏剧一样，是建构的，因此是一种文化建构，而非自然语言的实例。因此，结论仅适用于“现实世界”，尽管可以得出有趣的观察。正如 Quaglio (2009) 所示，利用电视进行语言分析在方法论上是稳妥的，并能产生重要的见解。考虑到其变位的模式、其在电视剧《朋友》中的形式和频率，Tagliamonte 和 Roberts (2005) 得出结论，“媒体语言实际上反映了语言正在发生的情况”，并且“[fɪ] 看起来 so 的使用与其存在某种相关性”（2005: 296）。通过引用真人秀《Geordie Shore》（`GS`）的例子，我将证明 *man* 在剧中的真实性。`GS` 是一部 2011 年的真人秀，Gary 和 Charlotte 在纽卡斯尔的一住了六周，镜头跟着他们移动。`Man` 是一种语言表达，同时传递了文本和人际意义。在文本衔接层面，它起到关注的作用。
 
 ## 4. 功能
 
@@ -2108,11 +2066,11 @@ Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）�
 
 引起听话者（们）的注意，加上具体指向某人（对应 Fraser 对呼语的狭义定义，1996: 185），是最核心的呼语功能之一，因为呼语最初是一种用于称呼或呼唤某人的语法格。这一功能通常由句首标记填充（例如：Honey，能用一下烟灰缸吗？Leech 1999: 110）。然而，在感叹句或另一个呼语的之后，句末的 *man* 也可以属于这一类。
 
-- (1) Dennis: Barry, man, 滚蛋吧！（AWP 3,6: 00:39:42）
+- (1) Dennis: Barry, man, 滚蛋吧！（`AWP` 3,6: 00:39:42）
 
 呼语 Barry 用于在可能的听话者群体中指向个人；*man* 在这里起到吸引注意的功能。在例子 (2) 中，Sophie 在厨房里追着 James，试图让他听她的。
 
-- (2) Sophie: 抱一下吧，伙计。抱一下。（GS 1: 00:14:30）
+- (2) Sophie: 抱一下吧，伙计。抱一下。（`GS` 1: 00:14:30）
 
 ### 4.2 文本和互动功能
 
@@ -2120,12 +2078,9 @@ Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）�
 
 通过使用 *man*，可以在信息结构上为话中的某部分分配显著性，使其显得比句中的其他元素更重要（参见 Wright 1988: 27 中的“强调功能”）。例子 (3) 是焦点的一个例子，强调了“他们的领地”。
 
-
-
-
 泰因赛德英语中的句末词 *man* 145
 
-+   (3) Dennis: 我们在他们的地盘上上，**哥们儿。** AWP 2,1: 00:04:52
++   (3) Dennis: 我们在他们的地盘上上，**哥们儿。** `AWP` 2,1: 00:04:52
 
 由于 *man* 出现在正在进行的交流中间，它显然不具有引起注意或识别听话者的功能。Fraser (1999: 942, 1996: 180) 将实现这种焦点功能的元素称为“焦点粒子”（focus particles）或“强调标记”（emphasis markers）。它们属于并行的语用标记词，但属于“评论标记”（commentary markers）这一类，因为它们出现在基本信息之后（同上：169）。
 
@@ -2133,7 +2088,7 @@ Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）�
 
 在对 [...] 的某些对话分析中，我们发现同一个人在几乎每个语调组的末尾重复使用该标记，在这种情况下，其功能不是标记轮次转换，而是语调组的变化（Alba-Juez 2009: 178）。
 
-+   (4) Oz: 我起初是让她她去的，**哥们儿。** AWP 3,1: 00:06:01
++   (4) Oz: 我起初是让她她去的，**哥们儿。** `AWP` 3,1: 00:06:01
 
 在这里，Oz 不仅发出了话语和轮次的结束信号，还表明他希望转移话题和讨论（关于他是否应该给妻子寄钱）。同样，**man** 并不是用来指称特定的听话者的；而是针对参与这次讨论的每一个人。
 
@@ -2143,47 +2098,47 @@ Fraser 关于识别特定听话者的呼语功能（Leech 的第二个功能）�
 
 人际或表达性功能包含了社交交换的结构化，并通过主观地表达对前序或后续话语的反应，与“说话者态度的表达”有关，表达理解、犹豫，或在人际间表达亲密、合作或礼貌（Brinton 2006: 310）。在维持和强化社交关系的功能上，*man* 可以被用作团结（SOLIDARITY）的标记。这一类别涵盖了信号亲和、鼓励、钦佩和共情的功能。
 
-+   (5) Oz: 我懂你的感受，**哥们儿。** AWP 1,2: 00:22:59
++   (5) Oz: 我懂你的感受，**哥们儿。** `AWP` 1,2: 00:22:59
 
 另一个通过 *man* 表达男性团结的例子见于6)。小伙子们在出发出去狂欢夜生活之前，一种仪式之一是刮掉胸毛。
 
 Kathrin Luckmann de Lopez
 
 (6) James: 顺得真妈的，哥们儿。
-Gary: 太棒了，哥们儿。Veet 就是未来。(GS 1: 00:29:35)
+
+Gary: 太棒了，哥们儿。Veet 就是未来.(`GS` 1: 00:29:35)
 
 然而，除了被用于信号友谊关系外，*man* 也可以用于相反的目的：礼貌（POLITENESS）的标记（Alba-Juez 2009: 172; 177）。对陌生人或上级说出的熟悉词很容易被感知为不礼貌，甚至可以刻意产生不礼貌的效果。7. Busse (2006) 举了一个莎士比亚《李尔王》中 *man* 的例子，由于使用的语境，它显然是不礼貌的：
 
-[...] 李尔内心的动荡以及他无法应对现状的事实体现在他对格洛斯特的回答中：“你听懂我说话了吗，哥们儿？” (Lr 2.2.228) 他通过选择一个贬级的、直接且粗鲁的泛指呼语：*man*，给格洛斯特施加压力。(Busse 2006: 448, 原文重音)
+[...] 李尔内心的动荡以及他无法应对现状的事实体现在他对格洛斯特的回答中：“你听懂我说话了吗，哥们儿？” (Lr 2.2.228) 他通过选择一个贬级的、直接且粗鲁的泛指呼语：*man*，给格洛斯特施加压力.(Busse 2006: 448, 原文重音)
 
-AWP 中有一个场景，其中 Oz 挑战了主管 Ulrich 先生。那是周五下午，建筑工们在工头办公室外等承包商到达。他通常不会迟到。建筑工们变得焦躁起来，要求向主管询问承包商在哪里。
+`AWP` 中有一个场景，其中 Oz 挑战了主管 Ulrich 先生。那是周五下午，建筑工们在工头办公室外等承包商到达。他通常不会迟到。建筑工们变得焦躁起来，要求向主管询问承包商在哪里。
 
-(7) Oz: 我们不知道他在哪儿，**哥们儿。** (AWP 3,1: 00:02:07)
+(7) Oz: 我们不知道他在哪儿，**哥们儿。** (`AWP` 3,1: 00:02:07)
 
-在这里，Wales 对其强调用法的描述（在愤怒或情绪中，参见 193）暗示 *man* 经常出现在活跃、甚至是激烈的交流中，如下文 AWP 中的 (10)。此外，将其归类为“扩张性的”（同上：73）可能暗示了难以捉摸的属性所结合了不礼貌和焦点功能。根据 Beal (2008) 的观点，该特征的主要功能是表达“恼或不耐烦”。为了说明这一功能，Beal 给出了例子：我没法去度假了，哥们儿。我真希望我可以去，其中“说话者暗示面试者问了她愚蠢的问题，即‘你去哪儿度假？’”（同上：400-401）。Alba-Juez 还强调了礼貌功能和 *man/mojo*，解释说在某些场合，这可能也成为更大程度或较小程度不礼貌的标记……，以及不赞同或不信的标记。(Alba-Juez 2009: 172)
+在这里，Wales 对其强调用法的描述（在愤怒或情绪中，参见 193）暗示 *man* 经常出现在活跃、甚至是激烈的交流中，如下文 `AWP` 中的 (10)。此外，将其归类为“扩张性的”（同上：73）可能暗示了难以捉摸的属性所结合了不礼貌和焦点功能。根据 Beal (2008) 的观点，该特征的主要功能是表达“恼或不耐烦”。为了说明这一功能，Beal 给出了例子：我没法去度假了，哥们儿。我真希望我可以去，其中“说话者暗示面试者问了她愚蠢的问题，即‘你去哪儿度假？’”（同上：400-401）。Alba-Juez 还强调了礼貌功能和 *man/mojo*，解释说在某些场合，这可能也成为更大程度或较小程度不礼貌的标记……，以及不赞同或不信的标记.(Alba-Juez 2009: 172)
 
 这些礼貌的方面与 Fraser 的其他一个并行语用标记“说话者标记”（speaker marker）的功能对应，它“信号一个说话者表达恼怒的信息，但通常并不清楚听话者还是情况是‘愤怒’的目标（1996: 185）。”在例子 (8) 中，很容易替换为如 *damn it* 这样的表达（另一个说话者标记），而不会改变话语的意思。
 
 +   (8) 闭嘴，**哥们儿**，Oz！
 
-
-
-
 # 泰因赛德英语中的句末词 man
 
-在《街区女孩》(GS) 中有一个场景，Gary 提议大家像“一个大大家庭”一样一起出去，且不要带任何人回家。Jay 的回应是：
+在《街区女孩》(`GS`) 中有一个场景，Gary 提议大家像“一个大大家庭”一样一起出去，且不要带任何人回家。Jay 的回应是：
 
-- (12) Jay: 滚蛋吧哥们儿，man。 (GS 2 00:35:15)
+- (12) Jay: 滚蛋吧哥们儿，man。 (`GS` 2 00:35:15)
 
-Greg 在采访室里解释道：“Gary 和 Jay 没关系，他们会互相开玩笑的。但是……只有我和他，我们现在有点尴尬了，之类的。”（参见 GS 2 00:35:09）。因此，Jay 的反应显然表达了不耐烦。他还有 Vicky 的陪伴可以期待。
+Greg 在采访室里解释道：“Gary 和 Jay 没关系，他们会互相开玩笑的。但是……只有我和他，我们现在有点尴尬了，之类的。”（参见 `GS` 2 00:35:09）。因此，Jay 的反应显然表达了不耐烦。他还有 Vicky 的陪伴可以期待。
 
 在不礼貌行为的情况下，听者将一个可能的威胁感知为真诚，从而将其转化为一种归属感。不礼貌的功能与回避语（hedge）或软化词的功能是竞争的，因为两者都能减弱主信息的力度。
 
 示例 (13) 说明了在 Carter 和 McCarthy (2006) 定义意义上 `man` 作为**回避语（HEDGE）**的功能：“说话者通常会避免听起来很生硬和武断，存在多种标记来回避（即表达断言的程度）”（同上页：223）。
 
 - (13) Moxey: 这一点都不好笑，你，这个通知了分部的家伙。
+
 Oz: 对他们来说这更没劲了。你听起来就像像一只患有哮喘的矿井马。
-Moxey: 噢，离我的脸远点，Oz。（AWP 3,1: 00:07:20)
+
+Moxey: 噢，离我的脸远点，Oz。（`AWP` 3,1: 00:07:20)
 
 Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“像患有哮喘的矿井马”这个夸张的例子。这种缓解功能被 Fraser 分类为呼语（vocatives）不同，他将其归类为“评论标记”（1996: 183）。
 
@@ -2191,21 +2146,23 @@ Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“�
 
 ## 5. 结果
 
-利用该剧的数据，我们可以假设与其他英语变体相比，`man` 在泰因赛德英语中出现频率非常高。在 135 分钟的 AWP 中，它出现了 86 次。即每分钟 0.64 次，或者大约每两分钟一次。作为说明，我详细分析了 30 分钟的 AWP 中出现在附加句位置的词汇选择，`man` 实际上是出现频率最高的项（比较附录中的表 3）。在这 30 分钟的调查中，泰因赛德人的言语中有 22 个 `man` 标记，15 个 `you know`，疑问词 `eh` 出现了八次，随后是 `isn't it`、`like` 和 `pet`。所有其他形式出现三次或更少，名字除外。剧中的其他角色在片段中完全没有使用 `man`。在非泰因赛德人的言语中，语用标记 `then`、`you know` 和标记 `innit` 占据了句尾位置。同样受到青爱的亲昵词是 `man` 和 `lad`。
+利用该剧的数据，我们可以假设与其他英语变体相比，`man` 在泰因赛德英语中出现频率非常高。在 135 分钟的 `AWP` 中，它出现了 86 次。即每分钟 0.64 次，或者大约每两分钟一次。作为说明，我详细分析了 30 分钟的 `AWP` 中出现在附加句位置的词汇选择，`man` 实际上是出现频率最高的项（比较附录中的表 3）。在这 30 分钟的调查中，泰因赛德人的言语中有 22 个 `man` 标记，15 个 `you know`，疑问词 `eh` 出现了八次，随后是 `isn't it`、`like` 和 `pet`。所有其他形式出现三次或更少，名字除外。剧中的其他角色在片段中完全没有使用 `man`。在非泰因赛德人的言语中，语用标记 `then`、`you know` 和标记 `innit` 占据了句尾位置。同样受到青爱的亲昵词是 `man` 和 `lad`。
 
 ### 5.1 句法位置
 
 与 Alba-Juez 分析的底层变体中的 `man` 不同（后者在所有位置都出现），在剧集的数据中，`man` 只出现在句尾位置，参见示例 (14)–(16)。
 
 - (14) 哎，好嘞，Bomber 要带我们去妓院了，man。（1, 4: 00:31:41）
+
 - (15) 怎么了，man!（2, 3: 00:18:27）
+
 - (16) 必须买保险，man，否则你拿不到绿卡把车开出英国。（1, 2: 00:17:21）
 
-在 AWP 中泰因赛德人的言语中，`man` 可以是从句单位的标记，如 (14) 和 (16)，也可以是非从句单位，如 (15)。`man` 回溯性关注前面的句子（it has to be insured），之后开始一个独立的从句。`man` 不单独出现在句或中间位置。泰因赛德的 `man` 似乎被限制在句尾，因为 AWP 中的所有 86 个标记都出现在这个位置。
+在 `AWP` 中泰因赛德人的言语中，`man` 可以是从句单位的标记，如 (14) 和 (16)，也可以是非从句单位，如 (15)。`man` 回溯性关注前面的句子（it has to be insured），之后开始一个独立的从句。`man` 不单独出现在句或中间位置。泰因赛德的 `man` 似乎被限制在句尾，因为 `AWP` 中的所有 86 个标记都出现在这个位置。
 
 ### 5.2 功能
 
-如上述，句首呼语倾向于履行与句尾呼语不同的功能。这解释了 AWP 数据中我称之为“呼语”功能的 `man` 出现次数较少（9%）。对于 Leech (1999) 来说，聚焦功能并不是典型的呼语类型。在 AWP 中，它是句尾的一个显著功能（30%）。被 Alba-Juez 识别为主要交互调节器的 `man` 在 AWP 中相对频率（6%）。最大的功能类别涵盖了面向人际关系的、表达友好关系或对信息的不满。总而言，AWP 中 `man` 的人际功能占 55%。在人际功能中，表达团结（20%）和表达不礼貌或嘲讽不礼貌（23%）是最大的子类别且几乎相等。回避功能出现在 AWP 12% 的 `man` 实例中。表 1 总结了功能分析的结果。
+如上述，句首呼语倾向于履行与句尾呼语不同的功能。这解释了 `AWP` 数据中我称之为“呼语”功能的 `man` 出现次数较少（9%）。对于 Leech (1999) 来说，聚焦功能并不是典型的呼语类型。在 `AWP` 中，它是句尾的一个显著功能（30%）。被 Alba-Juez 识别为主要交互调节器的 `man` 在 `AWP` 中相对频率（6%）。最大的功能类别涵盖了面向人际关系的、表达友好关系或对信息的不满。总而言，`AWP` 中 `man` 的人际功能占 55%。在人际功能中，表达团结（20%）和表达不礼貌或嘲讽不礼貌（23%）是最大的子类别且几乎相等。回避功能出现在 `AWP` 12% 的 `man` 实例中。表 1 总结了功能分析的结果。
 
 表 1：根据语用功能划分 `man` 的频率
 
@@ -2216,17 +2173,17 @@ Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“�
 | 交互 | 信号发言结束 | 5 (6%) |
 | 人际 | 表达团结，表达不礼貌或嘲讽不礼貌，软化 | 17 (20%), 10 (12%) |
 
-只有 9% 的标记用于吸引听者的注意力，使得 Fraser 的呼语功能成为 AWP 库中频率最低的功能。在其更广泛的定义（Leech 1997:109）中，52% 的 `man` 用法呼语（“团结”、“不礼貌”和“呼语”），尽管 Leech 未明确提到用于定义社会关系的亲昵词或回避功能。Carter 和 McCarthy 的呼语定义中包含（文本和交互）涵盖了所有 `man` 实例的 36%。
+只有 9% 的标记用于吸引听者的注意力，使得 Fraser 的呼语功能成为 `AWP` 库中频率最低的功能。在其更广泛的定义（Leech 1997:109）中，52% 的 `man` 用法呼语（“团结”、“不礼貌”和“呼语”），尽管 Leech 未明确提到用于定义社会关系的亲昵词或回避功能。Carter 和 McCarthy 的呼语定义中包含（文本和交互）涵盖了所有 `man` 实例的 36%。
 
 ### 5.3 与性别相关的用法
 
-在 AWP 数据中，`man` 用于男性和女性，但受限于现有数据，无法对目标群体做出过多说明。没有 `man` 的出现导致了女性贡献的总体较低。这可能是因为 AWP 主要由男性组成。女性角色留在场景较少的纽卡塞尔。在 GS 中，`man` 的使用频率似乎没有性别偏见。在大约 90 分钟的 GS 中，男性使用了 8 次 `man`，女性使用了 7 次。例如 Charlotte 与女孩聊天；混合性别称呼也是明显的。在以下示例中，通过称呼 Vicky 为 `man` 以及 Jay 描述的睡前依偎的吸引力产生了一种喜剧效果。
+在 `AWP` 数据中，`man` 用于男性和女性，但受限于现有数据，无法对目标群体做出过多说明。没有 `man` 的出现导致了女性贡献的总体较低。这可能是因为 `AWP` 主要由男性组成。女性角色留在场景较少的纽卡塞尔。在 `GS` 中，`man` 的使用频率似乎没有性别偏见。在大约 90 分钟的 `GS` 中，男性使用了 8 次 `man`，女性使用了 7 次。例如 Charlotte 与女孩聊天；混合性别称呼也是明显的。在以下示例中，通过称呼 Vicky 为 `man` 以及 Jay 描述的睡前依偎的吸引力产生了一种喜剧效果。
 
-(17) Jay: Vicky, man。我们显然互相吸引，句号。（GS 2 00:41:15）。
+(17) Jay: Vicky, man。我们显然互相吸引，句号。（`GS` 2 00:41:15）。
 
 # 6. 泰因赛德语调
 
-下文将描述泰因赛德英语在韵律上与其他变体的区别之处。随后，我将回顾 AWP 库中 86 处 `man` 出现在语调环境中。
+下文将描述泰因赛德英语在韵律上与其他变体的区别之处。随后，我将回顾 `AWP` 库中 86 处 `man` 出现在语调环境中。
 
 根据 Wells (2006: 153)，“句尾呼语通常有重音，但附属于前面的 IP [语调短语] 作为（尾音的一部分）”。同样，非焦点的副词和状语，包括句尾语用标记，如 *know*、*then* 和 *sort of*，是不重音的 (Wells 2006: 158-9)。我们预计句尾的 `man` 无论履行什么语用功能都有重音。
 
@@ -2234,24 +2191,23 @@ Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“�
 
 在其更广泛的定义中，52% 的 `man` 用法是呼语（“团结”、“不礼貌”和“呼语”），尽管 Leech 未明确提到用于定义社会关系的亲昵词或回避功能。Carter 和 McCarthy 的呼语定义中包含（文本和交互）涵盖了所有 `man` 实例的 36%。
 
-
-
-
 泰因赛德英语中的句末词 man
 
 153
 
-事实上，在我的数据中，与 *man* 共同出现的局部声调的比例远高于 Pellowe 和 Jones (1978) 发现的比例。所有声调中约 61% 为平调，而 Pellowe 和 Jones 数据中这一比例为 20%；25% 为降调，而 Pellowe 和 Jones 为 14%。虽然在 Pellowe 和 Jones 的研究中，比例最大的语调轮是降调（28%），但在我的数据中 *man* 出现的语调中，频率最高的声调是平调和降调。这种显著差异可能是由于我的语料库中的对话更具互动性。它也可能表明句末 *man* 与局部语调之间存在相关性。强调标记位置的语调模式可能频繁使用了句末特征，如附录表 3 所示。
 
-除了倾向于在局部语调内实现的强烈倾向外，似乎并没有一种与 *man* 相关的“典型”语调模式，也没有一组与典型实现形式相关的中心功能。尽管如此，某些声调组合比其他组合对某些功能来说更“典型”。例如，带有力度逐渐增强的高升调仅与（实际）不礼貌相关，而与委婉语或假装不礼貌无关。
 
-由于说话者使用韵律信息（例如旋律和停顿）来划分话语单位，同时这些信息也作为听者解码话语的韵律线（参见 Swerts and Gelykun 1994: 23），轮次结束功能可能帮助听者消除歧义。根据 Wells (2006: 25) 的观点，“通过在[陈述句]中使用降调，我们表明说的话可能是完整且无保留的。降调转变为信号终结”。非降调可能让听者困惑说话者是否已经结束了轮次。在泰因赛德英语中，取代语调标记终结的是 *man* 和其他标记，它们可以补偿局部韵律中固有的不清晰性缺失。
+事实上，在我的数据中，与 `man` 共同出现的局部声调的比例远高于 Pellowe 和 Jones (1978) 发现的比例。所有声调中约 61% 为平调，而 Pellowe 和 Jones 数据中这一比例为 20%；25% 为降调，而 Pellowe 和 Jones 为 14%。虽然在 Pellowe 和 Jones 的研究中，比例最大的语调轮是降调（28%），但在我的数据中 `man` 出现的语调中，频率最高的声调是平调和降调。这种显著差异可能是由于我的语料库中的对话更具互动性。它也可能表明句末 `man` 与局部语调之间存在相关性。强调标记位置的语调模式可能频繁使用了句末特征，如附录表 3 所示。
+
+除了倾向于在局部语调内实现的强烈倾向外，似乎并没有一种与 `man` 相关的“典型”语调模式，也没有一组与典型实现形式相关的中心功能。尽管如此，某些声调组合比其他组合对某些功能来说更“典型”。例如，带有力度逐渐增强的高升调仅与（实际）不礼貌相关，而与委婉语或假装不礼貌无关。
+
+由于说话者使用韵律信息（例如旋律和停顿）来划分话语单位，同时这些信息也作为听者解码话语的韵律线（参见 Swerts and Gelykun 1994: 23），轮次结束功能可能帮助听者消除歧义。根据 Wells (2006: 25) 的观点，“通过在[陈述句]中使用降调，我们表明说的话可能是完整且无保留的。降调转变为信号终结”。非降调可能让听者困惑说话者是否已经结束了轮次。在泰因赛德英语中，取代语调标记终结的是 `man` 和其他标记，它们可以补偿局部韵律中固有的不清晰性缺失。
 
 ## 7. 作为区域认同标记的 man
 
-为了探讨是什么使 *man* 变得具有典型的乔治人（Geordie）特征，我将仔细观察它是否是一种语言特征，以及哪些因素可能导致其显著性。显著性由 Kerwill 和 Williams（初步）定义为“语言项或特征的某种属性，使其在某些方面感知和认知上变得突出”（2002: 81）。
+为了探讨是什么使 `man` 变得具有典型的乔治人（Geordie）特征，我将仔细观察它是否是一种语言特征，以及哪些因素可能导致其显著性。显著性由 Kerwill 和 Williams（初步）定义为“语言项或特征的某种属性，使其在某些方面感知和认知上变得突出”（2002: 81）。
 
-我已经证明了 *man* 绝大多数出现在平调和降调中。根据 Beal (1999: 184)，这种语调本身“对于泰因赛德英语而言具有高度的显著性”。在声调上来看，*man* 只有 12 种非局部的升、降调实现（见表 2）。
+我已经证明了 `man` 绝大多数出现在平调和降调中。根据 Beal (1999: 184)，这种语调本身“对于泰因赛德英语而言具有高度的显著性”。在声调上来看，`man` 只有 12 种非局部的升、降调实现（见表 2）。
 
 根据 Kerwill 和 Williams 的观点，显著性的前提条件是“其存在与否之间的差异在心理声学上是可察觉的”（2002: 105），并且某些因素可以增加显著性：
 
@@ -2259,33 +2215,31 @@ Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“�
 
 因此，存在一种倾向于显著突出的语言内部因素。此外，为了避免循环论证，必须考虑一种语言外因素。产生显著性的语言外因素可以是“认知、语用、互动、社会心理学和人口统计学的”（同上: 105）。
 
-泰因赛德英语中的重音位置可以明确说在韵律上是突出的，因为局部的降调和平调包含了标记位置。鉴于呼唤词的语用和互动功能，也存在一种语言外因素。尽管 *man*并不局限于这种方言，但它在泰因赛德英语中的高频率可能为其被视为局部特征提供了充分理由。此外，*man* 与局部词汇特征一起，如 *why* 和 *away*。综合来看，所有点强烈表明 *man* 在 Kerwill 和 Williams (2002) 提出的集合中是显著的。*man* 出商品、方言文学和非虚构作品的泰因赛德语言表述中，指向了语言外因素的存在。
+泰因赛德英语中的重音位置可以明确说在韵律上是突出的，因为局部的降调和平调包含了标记位置。鉴于呼唤词的语用和互动功能，也存在一种语言外因素。尽管 `man` 并不局限于这种方言，但它在泰因赛德英语中的高频率可能为其被视为局部特征提供了充分理由。此外，`man` 与局部词汇特征一起，如 `why` 和 `away`。综合来看，所有点强烈表明 `man` 在 Kerwill 和 Williams (2002) 提出的集合中是显著的。`man` 出商品、方言文学和非虚构作品的泰因赛德语言表述中，指向了语言外因素的存在。
 
 泰因赛德人为他们的“乔治语言”感到自豪，包括区域性的称呼（参见 Donald 2006）。呼唤词的索引价值变得显而易见，简单的事实是，马克杯、帽子和连帽衫等形式的商品，上面印着仿纽约洋队标志设计的“Y I man”。
 
-英国东北部 *man* 的早期例子在 Wales (2006) 中被引用。她认为在《牧羊奴谭》（14世纪）中，乔叟并非在讽刺北方口音，而是包含了许多显著的语音特征和东北部的形态。此外，Wales 指出 *man* 这一特征的使用（见 72–3）：“Of com, man, atanes”（1.4074，引自 Wales 2006: 73，强调见原文）。
+英国东北部 `man` 的早期例子在 Wales (2006) 中被引用。她认为在《牧羊奴谭》（14世纪）中，乔叟并非在讽刺北方口音，而是包含了许多显著的语音特征和东北部的形态。此外，Wales 指出 `man` 这一特征的使用（见 72–3）：“Of com, man, atanes”（1.4074，引自 Wales 2006: 73，强调见原文）。
 
-乔治方言书籍包括《Learn Yersel’s Geordie》、其续作《Advanced Geordie Palaver》、《The Geordie Bible》、方言词典、歌曲集、笑话集和食谱。尽管在 Dobson 的《Yersel’s Geordie》中没有广泛讨论 *man*，但在叙述中有许多实例。这里有一个例子，除了话语特征外，还包含了局部特征的表述。
+乔治方言书籍包括《Learn Yersel’s Geordie》、其续作《Advanced Geordie Palaver》、《The Geordie Bible》、方言词典、歌曲集、笑话集和食谱。尽管在 Dobson 的《Yersel’s Geordie》中没有广泛讨论 `man`，但在叙述中有许多实例。这里有一个例子，除了话语特征外，还包含了局部特征的表述。
 
-然而，*man* 也可以出现在非虚构作品中，即学术论文的标题中。（Williamson 1990: 251）和（Rowe 2007: 360）是两个例子。
-
-
+然而，`man` 也可以出现在非虚构作品中，即学术论文的标题中。（Williamson 1990: 251）和（Rowe 2007: 360）是两个例子。
 
 # 156 Kathrin Luckmann de Lopez
 
-乔治人（Geordie）身份的构成受社区历史的影响。东北部拥有平底船和矿工的历史，可能促进了 *man* 作为一种团结标记的广泛使用。在德国鲁尔区——一个在结构上与泰因赛德（Tyneside）相似、拥有内陆港口、煤矿开采和重工业的地区，“矿工”一词 *Kumpel* 演变为并指代一个你可以信任的亲密朋友。Younger (1992) 描述了苦难如何塑造泰因赛德社区的身份，并培养了强烈的工人阶级团结感。
+乔治人（Geordie）身份的构成受社区历史的影响。东北部拥有平底船和矿工的历史，可能促进了 `man` 作为一种团结标记的广泛使用。在德国鲁尔区——一个在结构上与泰因赛德（Tyneside）相似、拥有内陆港口、煤矿开采和重工业的地区，“矿工”一词 `Kumpel` 演变为并指代一个你可以信任的亲密朋友。Younger (1992) 描述了苦难如何塑造泰因赛德社区的身份，并培养了强烈的工人阶级团结感。
 
 整个诺布里亚无论是农村还是城市，似乎都是在苦难中出生和成长；斗争似乎是人与地方之间的共同纽带。在我的童年，整个天际线都标志着船厂起重机和矿井设备等斗争与工作的符号。现在，我看到这些乔治人重新展现出的友好是社区对艰难时期的回。。回到家时，我想起的绝不是那些严厉的脸庞。(ibid: 172-3)
 
-尽管 *man* 和泛指的熟悉词在英国英语中比美国英语频率少（Leech 1999: 110, 113），但在泰因赛德英语中，*man* 是一个普遍特征。*man* 的数量使用、其对句末位置的限制以及与其他呼语区分的特定功能分布，加上它在局部语调中的出现，使得该标记可用于索引当地的、特别是乔治工人阶级的身份.^9
+尽管 `man` 和泛指的熟悉词在英国英语中比美国英语频率少（Leech 1999: 110, 113），但在泰因赛德英语中，`man` 是一个普遍特征。`man` 的数量使用、其对句末位置的限制以及与其他呼语区分的特定功能分布，加上它在局部语调中的出现，使得该标记可用于索引当地的、特别是乔治工人阶级的身份.^9
 
 ## 8. 结论
 
-在 AWP 数据中，*man* 仅出现在句末，可以履行呼语、话语、人际和人际功能。每个实例履行的功能从使用语境中变得清晰。听觉信息对于引导分类很有帮助。在本研究中，这对于表达不礼貌（而非模拟不礼貌或婉语）的 *man* 实例尤为如此。遵循具有单一核心的呼语狭义定义，将限制理解和描述呼语多功能现实情况的能力，正如 AWP 中泰因赛德 *man* 的示例所示。
+在 AWP 数据中，`man` 仅出现在句末，可以履行呼语、话语、人际和人际功能。每个实例履行的功能从使用语境中变得清晰。听觉信息对于引导分类很有帮助。在本研究中，这对于表达不礼貌（而非模拟不礼貌或婉语）的 `man` 实例尤为如此。遵循具有单一核心的呼语狭义定义，将限制理解和描述呼语多功能现实情况的能力，正如 AWP 中泰因赛德 `man` 的示例所示。
 
-泰因赛德英语中的 *man* 显然可以针对男性和女性。尽管在 AWP 中女性使用该特征的情况尚未出现，但补充示例表明，女性经常且无意识地对任何性别的听者使用 *man*，且没有功能限制。
+泰因赛德英语中的 `man` 显然可以针对男性和女性。尽管在 AWP 中女性使用该特征的情况尚未出现，但补充示例表明，女性经常且无意识地对任何性别的听者使用 `man`，且没有功能限制。
 
-说话者使用 *man* 来索引泰因赛德（工人阶级）身份。在分析的数据中，非泰因赛德人完全没有使用呼语（除 Holly 外，所有参与者在调查的节文中至少使用过一次 *man*，参见
+说话者使用 `man` 来索引泰因赛德（工人阶级）身份。在分析的数据中，非泰因赛德人完全没有使用呼语（除 Holly 外，所有参与者在调查的节文中至少使用过一次 `man`，参见
 
 ## 泰因赛德英语中的句末 man
 
@@ -2310,52 +2264,6 @@ Oz 抱怨 Moxey 的冷气让他无法入睡，他插入了该标记来软化“�
 7 2006 年，根据《每日邮件报》（“乔治工人对‘pet’说再见”），纽卡斯尔市议会对员工组织了平等与多样性培训，建议官员谨慎使用 henry 和 love 等区域称呼，因为其他人可能会认为被冒犯。
 
 8 Wales (2006) 提到 how-aye 是一种‘典型的乔治感叹词’，并将 why-aye 或 why-eye (man) 描述为强调性的‘赞同[标记]’ (2006)。
-[/content] (Wait, 我注意到我在思考块中重复了一些片段，我将提供最终的版本)。
-
-FINAL FINAL VERSION:
-[content]
-# 156 Kathrin Luckmann de Lopez
-
-乔治人（Geordie）身份的构成受社区历史的影响。东北部拥有平底船和矿工的历史，可能促进了 *man* 作为一种团结标记的广泛使用。在德国鲁尔区——一个在结构上与泰因赛德（Tyneside）相似、拥有内陆港口、煤矿开采和重工业的地区，“矿工”一词 *Kumpel* 演变为并指代一个你可以信任的亲密朋友。Younger (1992) 描述了苦难如何塑造泰因赛德社区的身份，并培养了强烈的工人阶级团结感。
-
-整个诺布里亚无论是农村还是城市，似乎都是在苦难中出生和成长；斗争似乎是人与地方之间的共同纽带。在我的童年，整个天际线都标志着船厂起重机和矿井设备等斗争与工作的符号。现在，我看到这些乔治人重新展现出的友好是社区对艰难时期的回。家里时，我想起的绝不是那些严厉的脸庞。(ibid: 172-3)
-
-尽管 *man* 和泛指的熟悉词在英国英语中比美国英语频率少（Leech 1999: 110, 113），但在泰因赛德英语中，*man* 是一个普遍特征。*man* 的数量使用、其对句末位置的限制以及与其他呼语区分的特定功能分布，加上它在局部语调中的出现，使得该标记可用于索引当地的、特别是乔治工人阶级的身份.^9
-
-## 8. 结论
-
-在 AWP 数据中，*man* 仅出现在句末，可以履行呼语、话语、人际和人际功能。每个实例履行的功能从使用语境中变得清晰。听觉信息对于引导分类很有帮助。在本研究中，这对于表达不礼貌（而非模拟不礼貌或婉语）的 *man* 实例尤为如此。遵循具有单一核心的呼语狭义定义，将限制理解和描述呼语多功能现实的能力，正如 AWP 中泰因赛德 *man* 的示例所示。
-
-泰因赛德英语中的 *man*显然可以针对男性和女性。尽管在 AWP 中女性使用该特征的情况尚未出现，但补充示例表明，女性经常且无意识地对任何性别的听者使用 *man*，且没有功能限制。
-
-说话者使用 *man* 来索引泰因赛德（工人阶级）身份。在分析的数据中，非泰因赛德人完全没有使用呼语（除 Holly 外，所有参与者在调查的节文中至少使用过一次 *man*，参见
-
-## 泰因赛德英语中的句末 man
-
-（见下文注释 4），这并不意味着它不能出现在泰因赛德之外，参见上文相关章节。同时，AWP 中的泰因赛德角色对其使用非常频繁，并且在绝大多数情况下与泰因赛德英语中显著的局部语调模式重合。提供的证据支持呼语作为当地身份标记的功能。社会群体与所描述的语言特征之间的索引关系似乎经受了该自我形象的近期变化，这在更现代的系列 GS 中显而易见。随着泰因赛德及其居民在 21 世纪重新定义自己，抛弃了污垢，乔治语言的某些方面似乎仍然是当地认同的恒不变因素。
-
-## 注释
-
-+ 1 泰因赛德“包括纽卡斯尔泰因赛德本身及其周边城市地区，曾跨越达姆郡和诺坎布兰郡的边界，现在构成泰恩威尔郡大区。其口音被称为 Geordie [...] —— 这个名字也适用于其传统方言，当然也适用于来自泰因赛德的人”(Wells 1982: 374)。
-
-+ 2 Scannell (1996) 描述了日常剧剧中角色的感官真实性：“演员在扮演角色时将他们描造成‘真实的人’，作为具有个性的个人……[这些虚构世界中的人们被认知的方式与现实世界中的人们被认知的方式相同。这无疑是此类故事显著且独特的特征，使我们能够解释它们对许多跟随者来说真实且生活的效应]。他认同观众与故事中角色以及现实生活中家庭之间的平行时间关系，即“观众和听众的寿命与故事中角色的生活同步展开”(158-159)。
-
-+ 3 《Whatever Happened to the Lovely Ladies》的成本“几乎没有乔治人色彩。James Bloom 来自桑德兰，Rodney Bees 是约克郡人。即使 Brigit Forsyth，可爱的 Thelma 也来自爱丁堡”(Maconie 2007: 293)。
-
-+ 4 节目的所有参与者认为自己是乔治人，尽管 Holly 的身份存在一定争议（Jay 在采访室里说：“如果你来自米德尔堡，你很可能是来自火星的。要成为乔治人，你必须出生在纽卡斯尔。她看起来不像个乔治人，说话也不像乔治人。她不是我们的乔治人，她不是我们中的一个。(GS 1,2 00:15:00))），但似乎没有人对 Charlotte 的‘乔治性（Geordiness）’有异议，她来自桑德兰（一个‘Mackem’）(cf. Beal et al. 2012:ff)。
-
-## Kathrin Luckmann de Lopez
-
-5 目前尚不清楚-Juez (2009) 基于哪种或变体进行观察，因为她使用了 BNC 的数据以及美国电视节目作为示例。
-
-6 严格来说，焦点（focus）是一个话语概念，而强调（emphasis）是一个韵律特征。在英语中，焦点信息通常也是强调的 (cf. Fleischman and Yaguello 2004: 132)。为了使问题复杂化，在描述具有话语功能的标记时，强调与焦点交叉使用。
-
-7 2006 年，根据《每日邮件报》（“乔治工人对‘pet’说再见”），纽卡斯尔市议会对员工组织了平等与多样性培训，建议官员谨慎使用 henry 和 love 等区域称呼，因为其他人可能会认为被冒犯。
-
-8 Wales (2006) 提到 how-aye 是一种‘典型的乔治感叹词’，并将 why-aye 或 why-eye (man) 描述为强调性的‘赞同[标记]’ (2006)。
-
-
-
 
 # 160 Kathrin Luckmann Lopez
 
@@ -2384,6 +2292,36 @@ Rowe, C., (2007), ‘He didn’t go coll ti di that, man! 泰因赛德英语中 
 Scannell, P. (1996), 广播、电视与现代生活：一种现象学方法。牛津：Blackwell。
 
 Donald, S. (2006), ‘Yakkin Genius is mind, pet’,《卫报》8月18日。在线获取：http://www.guardian.co.uk/media/2006/aug/18/britishidentityandsociety.localgovernment. 访问于2012年5月。
+
+
+
+# 160 Kathrin Luckmann Lopez
+
+Kerswell, P. and A. Williams (2002), “显著性”作为语言变化的解释因素：来自英国英格兰城市方言平等的证据，收录于: M. C. Jones and E. Esch (eds.) 语言变化。内部、外部和语言外因素的相互作用。柏：de Gruyter. 81-110。
+
+Kiesling, S.F. (2004), “Dude”,美国英语, 79: 281-305。
+
+Klemola, J and M.J. Jones (1999), “利兹英语方言语库项目”,收录于: C. Upton and K. Wales (eds.) 英语方言变异：1998年哈尔德·奥顿会议论文。英语研究。17-30。
+
+Kuiper, K. (1994), “新西兰英语中的体育公式：男性团结的两种模型”,收录于: J. Cheshire (ed.) 世界英语。剑桥：大学出版社。200-209。
+
+Labov, W. (1991) [1972], 社会语言学模式。费城：宾夕法尼亚大学出版社。
+
+Leech, G. (1999), “美国和英国英语对话中元音的分布与功能”,收录于: H. Hasselgard and S. Okfell (eds.) 出自语库：纪念西格·约翰森的研究。阿姆斯特丹：107-120。
+
+Local, J.K. (1986), “泰因河语调研究中的模式与特征”,收录于: C. Lewis-Jones (ed.) 话语中的语调。伦敦：Crown Helm。181-198。
+
+Maconie, S. (2007), 祭司与偏见。寻找北方。阅读：Ebury Press。
+
+Pellowe, J. and V. Jones (1978), “论泰因赛德口语中的语调变异性”,收录于: P. Trudgill (ed.) 英国英语社会语言学模式。伦敦：Arnold。101-121。
+
+Quaglio, P. (2009). 电视对话：情景剧《朋友记》对比自然对话。阿姆斯特丹：Benjamins。
+
+Rowe, C., (2007), “He didn’t go coll ti di that, man! 泰因赛德英语中 (and to) 的研究”,语言科学, 29: 360-371。
+
+Scannell, P. (1996), 广播、电视与现代生活：一种现象学方法。牛津：Blackwell。
+
+Donald, S. (2006), “Yakkin Genius is mind, pet”,《卫报》8月18日。在线获取 http://www.guardian.co.uk/media/2006/aug/18/britishidentityandsociety.localgovernment. 访问于2012年5月。
 
 Swerts, M. and R. Gelkens (1999), ‘韵律作为口语话语中信息流的标记’.语言与演讲, 37: 21-43。
 
@@ -2460,19 +2398,19 @@ Younger, P.L. (1992), ‘词尾’,收录于 R. Cols and B. Lancaster (eds.). �
 | | yeah | 0 | 1 |
 | | Right dislocation | 10 | 2 |
 
- (Wait, the source has "e.g. I love, me." at the end of the table in the prompt text, let me re-check).
-Actually, the prompt ends with: `| e.g. I love, me. | 10 | 2 |`
-
 # 162 Kathrin Luckmann Lopez
 
 他们发布了一项新出的文化政策：口语和书面新英语中的竞争形式。Cristina Suárez-Gómez & Elena Seoane
+
 巴莱利亚群岛大学与维戈大学
 
 ### 摘要
 
+
+
 本文旨在评估口语和书面东亚英语中用于表示现在意义的形式的变异，即香港、新加坡、菲律宾和印度英语（在ICE国际英语语库中代表的英语）。对这三百万词口语新英语（使用英国英语平行语库作为基准）的初步分析显示，在现代英语倾向于使用 `have` 分词的（Huddleston and Pullum 2002:143）语境中，使用了不同的变体，即使用 `ever` 和 `never` 表示近期过去，使用 `yet` 表示结果（Suárez-Gomez and Seoane 2011；cf. Miller 2000:327-331）。在本文中，我们衡量新英语在相同语境中这种变异的影响，以识别与口语和书面英国英语相比，完成时生成模式的差异，并观察口语英语中的替代形式在多程度上传播到了书面英语。结果显示此类形式也出现在书面语言中，因此代表了亚洲英语范式中的整合变体。
 
-### 1. 引言
+# 1. 引言
 
 本文分析了新英语中完成意义表达的变异，即“从过去开始持续现在”的时间内动作的表达（Huddleston and Pullum 2002:1），这在英语语法中通过 `have` 分词进行编码（参见 Quirk et al. 1985:192-195; Biber et al. 1999:467; Huddleston and Pullum 2002:143）。完成意义表达的变异一直是许多英语变体广泛研究的主题（例如，Miller 2000, 2004 用于自发非正式英语；Ellis 1997, 2009 和 Smith 2009 用于美国英语；Miller 2004 用于苏格兰英语；Hickey 2004, Kirk 2009 和 Seiemund 2009 用于爱尔兰英语）。然而，新英语（NEs）领域仍需要工作，特别是定量研究。用 Shastri（1992:274）的话说，模糊特征[关于形态语法变异]要么是难以捉摸的，主张（……）要么基于印象判断，要么基于可用数据，且在与标准数据库比较时，结果在统计学上是非单一的。（……）所有点表明，在我们对变体特征做出任何判断之前，需要基于大型数据库进行系统的定量研究。
 
@@ -2482,170 +2420,11 @@ Actually, the prompt ends with: `| e.g. I love, me. | 10 | 2 |`
 - S
 - E
 - R, S
-- I ate (一般过去时)
-- I have eaten (现在完成时)
-- I eat (现在时)
+- I ate （一般过去时）
+- I have eaten （现在完成时）
+- I eat （现在时）
 
 图1：T关系（Reichenbach 1947）：时间从左向右流动。E（事件点）、R（参考点）和S（说话点）
-
-在之前的研究中（Suárez-Gómez and Seoane 2011），我们使用英国英语（BrE）平行语库作为基准，分析了三百万词亚洲新英语（AsEs）。这项初步研究限于现代标准英语倾向于使用过去分词的语境，即使用 `just` 表示近期过去，使用 `ever` 和 `never` 表示经验意义，以及使用 `yet` 表示结果意义（Miller 2000:327-331；Huddleston and Pullum 2002:143）。数据显示英国英语和亚洲英语中都存在变异，且亚洲英语在表达方面比英国英语产生了更多变体。
-
-[/content] (Wait, I noticed the provided text in the prompt had a bit of a weird order with the table and headers mixed up. I will re-translate based on the logical flow of the provided source text while maintaining the structure). 
-
-Actually, looking at the prompt's "need to be translated" section, it is scrambled. I will provide the translation of the text as it appears in that specific block, following the Markdown rules.
-
-*Self-correction*: The user provided a block of text "need to be translated" which contains headers, references, and a table. I must translate it in the order provided. 
-
-Wait, the provided text is:
-1. # 160 Kathrin Luckmann Lopez
-2. References list
-3. # Appendix
-4. Table 3
-5. # 162 Kathrin Luckmann Lopez
-6. "They have published a new cultural policy..."
-7. # Abstract
-8. "This paper aims to assess..."
-9. # 1. Introduction
-10. "This paper analyzes..."
-11. Image link
-12. List items for figure
-13. Figure 1 caption text.
-
-I will translate it exactly as it is ordered in the block.
-
-[content]
-
-# 160 Kathrin Luckmann Lopez
-
-Kerswell, P. and A. Williams (2002), “显著性”作为语言变化的解释因素：来自英国英格兰城市方言平等的证据，收录于: M. C. Jones and E. Esch (eds.) 语言变化。内部、外部和语言外因素的相互作用。柏：de Gruyter. 81-110。
-
-Kiesling, S.F. (2004), “Dude”,美国英语, 79: 281-305。
-
-Klemola, J and M.J. Jones (1999), “利兹英语方言语库项目”,收录于: C. Upton and K. Wales (eds.) 英语方言变异：1998年哈尔德·奥顿会议论文。英语研究。17-30。
-
-Kuiper, K. (1994), “新西兰英语中的体育公式：男性团结的两种模型”,收录于: J. Cheshire (ed.) 世界英语。剑桥：大学出版社。200-209。
-
-Labov, W. (1991) [1972], 社会语言学模式。费城：宾夕法尼亚大学出版社。
-
-Leech, G. (1999), “美国和英国英语对话中元音的分布与功能”,收录于: H. Hasselgard and S. Okfell (eds.) 出自语库：纪念西格·约翰森的研究。阿姆斯特丹：107-120。
-
-Local, J.K. (1986), “泰因河语调研究中的模式与特征”,收录于: C. Lewis-Jones (ed.) 话语中的语调。伦敦：Crown Helm。181-198。
-
-Maconie, S. (2007), 祭司与偏见。寻找北方。阅读：Ebury Press。
-
-Pellowe, J. and V. Jones (1978), “论泰因赛德口语中的语调变异性”,收录于: P. Trudgill (ed.) 英国英语社会语言学模式。伦敦：Arnold。101-121。
-
-Quaglio, P. (2009). 电视对话：情景剧《朋友记》对比自然对话。阿姆斯特丹：Benjamins。
-
-Rowe, C., (2007), “He didn’t go coll ti di that, man! 泰因赛德英语中 (and to) 的研究”,语言科学, 29: 360-371。
-
-Scannell, P. (1996), 广播、电视与现代生活：一种现象学方法。牛津：Blackwell。
-
-Donald, S. (2006), “Yakkin Genius is mind, pet”,《卫报》8月18日。在线获取 http://www.guardian.co.uk/media/2006/aug/18/britishidentityandsociety.localgovernment. 访问于2012年5月。
-
-Swerts, M. and R. Gelkens (1999), “韵律作为口语话语中信息流的标记’.语言与演讲, 37: 21-43。
-
-Taglomione, S. and Roberts (2005), “So weird; so cool; 电视剧《朋友记》中加强词的使用”,收录于: 美国英语, 80: 280-300。
-
-Trudill, P. (1986), 接触方言。牛津：Blackwell。
-
-Wales, K. (2006), 北英英语。剑桥：大学出版社。
-
-Watt, D. and L. Milroy (1999), “纽卡斯尔三个元音的变异变化模式：这种方言平等’,收录于: P. Foulkes and G Clause-final man in Tyneside Docherty (eds.) 城市声音：不列颠群岛口音研究。伦敦：Arnold, 25-46。
-
-Wells, J.C. (1982), 英语口音2：英国群岛。剑桥：剑桥大学出版社。
-
-Wells, J.C. (2006), 英语语调。剑桥：剑桥大学出版社。
-
-Williamson, J. (1990), “Divven’t write that, man’: 泰因赛德方言形式对儿童自由写作的影响’,教育研究, 16: 251-260。
-
-Wright, J. (ed.) (1898), 英语方言字典。伦敦：Frowde。
-
-Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). 地区主义的乔迪根源。爱丁堡：爱丁堡大学出版社, 169-179。
-
-## 附录
-
-表3：说话人来源的30分钟分析中占据最后位置的项目
-
-| 特征类型 | 泰因赛人 | 非泰因赛人 |
-|---|---|---|
-| 熟化词 | man | 22 | 0 |
-| | kid/kidda | 3 | 0 |
-| | son | 3 | 1 |
-| | mate | 3 | 1 |
-| | lad | 1 | 1 |
-| | pal | 1 | 0 |
-| 亲昵称 | pet | 4 | 0 |
-| | love | 1 | 0 |
-| | my dear | 0 | 1 |
-| | my old duck | 0 | 1 |
-| 尊称 | sir | 2 | 0 |
-| | chief | 1 | 0 |
-| 名字 | Oz | 1 | 0 |
-| | Neville/Nev | 9 | 1 |
-| | Dennis/Den | 5 | 1 |
-| | 其他 (Barry, Brenda, London) | 5 | 0 |
-| 侮辱 | you lunatic | 0 | 1 |
-| 语用标记 | you know | 15 | 4 |
-| | like | 5 | 2 |
-| | then | 3 | 6 |
-| | anyway | 2 | 0 |
-| | but | 2 | 0 |
-| | you see | 2 | 0 |
-| | you know what I mean | 1 | 0 |
-| | really | 1 | 1 |
-| | though | 1 | 1 |
-| 疑问句标记 | eh | 8 | 1 |
-| | isn't it | 7 | 0 |
-| | alright/right | 3 | 2 |
-| | will ye | 3 | 0 |
-| | aren't ye | 1 | 0 |
-| | could ya | 1 | 0 |
-| | didn't it | 1 | 0 |
-| | didn't we | 1 | 0 |
-| | do ye | 1 | 0 |
-| | doesn't it | 1 | 1 |
-| | don't you | 1 | 1 |
-| | innit | 1 | 5 |
-| | is it | 1 | 1 |
-| | won't I | 1 | 0 |
-| | wouldn't we | 1 | 0 |
-| | is there | 0 | 2 |
-| | aren't we | 0 | 1 |
-| | do they | 0 | 1 |
-| | does it | 0 | 1 |
-| | did I | 0 | 1 |
-| | yeah | 0 | 1 |
-| | Right dislocation | 10 | 2 |
-
-# 162 Kathrin Luckmann Lopez
-
-他们发布了一项新出的文化政策：口语和书面新英语中的竞争形式。Cristina Suárez-Gómez & Elena Seoane
-巴莱利亚群岛大学与维戈大学
-
-### 摘要
-
-本文旨在评估口语和书面东亚英语中用于表示现在意义的形式的变异，即香港、新加坡、菲律宾和印度英语（在ICE国际英语语库中代表的英语）。对这三百万词口语新英语（使用英国英语平行语库作为基准）的初步分析显示，在现代英语倾向于使用 `have` 分词的（Huddleston and Pullum 2002:143）语境中，使用了不同的变体，即使用 `ever` 和 `never` 表示近期过去，使用 `yet` 表示结果（Suárez-Gomez and Seoane 2011；cf. Miller 2000:327-331）。在本文中，我们衡量新英语在相同语境中这种变异的影响，以识别与口语和书面英国英语相比，完成时生成模式的差异，并观察口语英语中的替代形式在多程度上传播到了书面英语。结果显示此类形式也出现在书面语言中，因此代表了亚洲英语范式中的整合变体。
-
-### 1. 引言
-
-本文分析了新英语中完成意义表达的变异，即“从过去开始持续现在”的时间内动作的表达（Huddleston and Pullum 2002:1），这在英语语法中通过 `have` 分词进行编码（参见 Quirk et al. 1985:192-195; Biber et al. 1999:467; Huddleston and Pullum 2002:143）。完成意义表达的变异一直是许多英语变体广泛研究的主题（例如，Miller 2000, 2004 用于自发非正式英语；Ellis 1997, 2009 和 Smith 2009 用于美国英语；Miller 2004 用于苏格兰英语；Hickey 2004, Kirk 2009 和 Seiemund 2009 用于爱尔兰英语）。然而，新英语（NEs）领域仍需要工作，特别是定量研究。用 Shastri（1992:274）的话说，模糊特征[关于形态语法变异]要么是难以捉摸的，主张（……）要么基于印象判断，要么基于可用数据，且在与标准数据库比较时，结果在统计学上是非单一的。（……）所有点表明，在我们对变体特征做出任何判断之前，需要基于大型数据库进行系统的定量研究。
-
-![](img/6910650ad69df72967df4c631af74d_170_0.png)
-
-- R, E
-- S
-- E
-- R, S
-- I ate (一般过去时)
-- I have eaten (现在完成时)
-- I eat (现在时)
-
-图1：T关系（Reichenbach 1947）：时间从左向右流动。E（事件点）、R（参考点）和S（说话点）
-
-
-
-
 
 # 口语与书面新英语的竞争
 
@@ -2681,20 +2460,28 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 
 我们使用了国际英语语料库（ICE）中针对这些变体的所有可用口语和书面材料。我们意识到，英语母语变体并不完全符合语法中所编码的内容，因此这样的研究需要一个参考语料库（参见 Sharma 2001: 347）。出于这一原因，我们分析了整个英国英语 ICE-GB 语料库，并将其作为基准语料库。样本包含约五百万字：每个地理变体一个，其中 60% 为口语材料，40% 为书面材料（语料库构成见 Greenbaum 1996）。附录中的表 I 显示了样本包含的文本。
 
-我们使用 AntConc 3.2.1 检索程序检索示例，共生成了超过 15,000 个 *just, ever, never* 和 *yet* 的示例。过滤后，我们获得了 2,044 个示例，并将其存储在 SPSS 15.0 数据库中。示例进入不同的语义类别很大程度上取决于语言背景。然而，语义分类并不总是直观的，在某些情况下发现了多个示例。因此，我们对示例进行了单独编码，比较了结果并讨论了编码中的差异。
+我们使用 `AntConc 3.2.1` 检索程序检索示例，共生成了超过 15,000 个 *just, ever, never* 和 *yet* 的示例。过滤后，我们获得了 2,044 个示例，并将其存储在 `SPSS 15.0` 数据库中。示例进入不同的语义类别很大程度上取决于语言背景。然而，语义分类并不总是直观的，在某些情况下发现了多个示例。因此，我们对示例进行了单独编码，比较了结果并讨论了编码中的差异。
 
 ### 2.2 亚洲英语口语与书面中的一般频率
 
 我们分析的总体结果如表 1。我们决定从计数中排除 60 个's + 过去分词'示例，如 (5) 所示，因为 's' 可以被解释为 has 或 is（总计：1,984）。
 
 (5) Normally you see finish his faces a little than this jacked <ICE-PHI:W2B-017#70:1>
+
 (6) Really didn't see you for a time long and <ICE-Ind:S1A-097#216:2>
+
 (7) I have just listen to her once. used to blame me if I were the worst person in the world. <ICE-HK:W1B-012#71:2>
+
 (8) I have just listen to her once. <ICE-HK:W1B-009#98:2>
+
 (9) Just finished us uh ninety one. <ICE-SIN:S1A-035#209:2>
+
 (10) I mean to be a real guy so know for him and I feel that <ICE-SIN:S1A-058#44:1>
+
 (11) This one I got at a bargain I went there the shop just opening they gave me very price <ICE-SIN:S1A-084#356:2>
+
 (12) Whether it will into my list or not have decided but'll recorded as the trial to everything <ICE-SIN:S2B-004#107:1>
+
 (13) Have you ever tries to fall in love with? <ICE-SIN:S1A-064#73:1>
 
 表1：亚洲英语和英国英语中结合 just, ever, never 的完成形式
@@ -2714,10 +2501,6 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 亚洲变体与英国英语（BrE）之间的比较（参见总计列）表明，在两种变体中，所选语境中表达意义最方式（尽管不是唯一方式）都是标准的 have + 过去分词构造。然而，这种趋势在英国英语中更为明显，占所有案例的 65.5%，在亚洲英语中为占 55.5%。在两种变体中，频率最高的形式都是过去式，但在亚洲英语中更为常见（34% 对 31%）。使用 have + 过去分词与过去式之间的差异在统计学上是显著的（p < 0.5）。
 
 两种形式 (7) 和 (8) 似乎是亚洲英语中相当固定的形式，因为它们出现了 104 处（占 4.7% 和 2.2% 的案例），而它们在英国英语中的存在是残留或不存在的（因为没有原形形式，没有 have + 原形形式）。对于表 1 中的其余形式，它们在英国英语中的频率也较低，占所有形式的 1.4%，而在亚洲英语中，它们被用于 3.4% 的案例。因此，亚洲英语在分析语境中具有更多表达意义的变体，且标准 have + 过去分词以外的形式在这些变体中的频率比英国英语高（且几乎与标准形式一样，因为所有这些形式加起来在亚洲英语中占 44.5%，在英国英语中占 34.5%）。至于语体对完成意义形式使用的影响，在英国英语中，书面语与符合英语语法确立的内容之间存在强关联，这种关联倾向于 have + 过去分词短语。唯一的例外是过去式，它在任何情况下都不到发生次数的分之一（19.3%）。关于亚洲变体，是书面语更接近英国英语变体，在最常用形式（have + 过去分词和过去式）的使用上数值相似，且几乎没有非标准形式。但在口语模式中，我们看到了大多数替代变体，在这一方面它与英国英语有很大不同。
-
-
-
-
 
 ## 口语与书面语新英语中的竞争形式
 
@@ -2748,31 +2531,29 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 
 在口语亚洲英语中表现出最大的变异，占非完成时形式的 17%。
 
+
+
 表3. 使用副词 just 的最近过去
 
 | 形式 | 亚洲口语 | 亚洲书面语 | 英国英语口语 | 英国英语书面 |
-|---|---|---|---|
+|---|---|---|---|---|
 | 完成时 | 157 (35.7%) | 62 (51.2%) | 72 (52.5%) | 26 (86.7%) |
 | 过去式 | 244 (55.4%) | 53 (43.8%) | 61 (44.5%) | 2 (6.7%) |
 | 其他 | 39 (8.9%) | 6 (4.9%) | 5 (2.8%) | 2 (2.0%) |
 | 总计 | 440 | 165 | 180 | 50 |
 
-同样注意的是英国英语的结果，ever and never 的经验意义表达显示了完成时与过去式的竞争。惊讶的是，这发生在口语和书面英国英语中（不具有统计意义），过去式占比超过 35%。事实上，这是英国英语转向过去式多于亚洲英语的意义类型，仿佛亚洲英语滞后于使用简单过去时表达 ever and never 的新趋势。最后，正如表4所示，这也是所有变体中模式对完成时影响最弱的结构。
+同样注意的是英国英语的结果，`ever` 和 `never` 的经验意义表达显示了完成时与过去式的竞争。惊讶的是，这发生在口语和书面英国英语中（不具有统计意义），过去式占比超过 35%。事实上，这是英国英语转向过去式多于亚洲英语的意义类型，仿佛亚洲英语滞后于使用简单过去时表达 `ever` 和 `never` 的新趋势。最后，正如表4所示，这也是所有变体中模式对完成时影响最弱的结构。
 
 表4. 使用副词 ever and never 的经验意义
 
 | 形式 | 亚洲口语 | 亚洲书面语 | 英国英语口语 | 英国英语书面 |
-|---|---|---|---|
+|---|---|---|---|---|
 | 完成时 | 266 (52.9%) | 109 (66.0%) | 107 (59.4%) | 31 (62.0%) |
 | 过去式 | 150 (29.8%) | 53 (32.1%) | 68 (37.8%) | 18 (36.0%) |
 | 其他 | 87 (17.3%) | 3 (1.8%) | 5 (2.8%) | 1 (2.0%) |
 | 总计 | 503 | 165 | 180 | 50 |
 
-最后，关于结果实例（与话语结合），have + 过去分词在以往关于口语话语的研究中已被证明是一个“终结语境”（参见 Seoane 和 Suárez-Gómez 2010; Suárez-Gómez 和 Seoane 2011），这种趋势在本文关于书面话语的数据中得到了明显的强调。卡方检验显示，模式和变体之间没有统计学上的显著差异：在所有极少数的合成完成时实例中，都发现了该功能。这与美国英语的文献形成对比，据报道完成时在此类背景下通常更青睐（例如：Did the children come home yet? 参见 Hundt 和 Smith 2009: 53）。
-
-
-
-
+最后，关于结果实例（与话语结合），`have + 过去分词` 在以往关于口语话语的研究中已被证明是一个“终结语境”（参见 Seoane 和 Suárez-Gómez 2010; Suárez-Gómez 和 Seoane 2011），这种趋势在本文关于书面话语的数据中得到了明显的强调。卡方检验显示，模式和变体之间没有统计学上的显著差异：在所有极少数的合成完成时实例中，都发现了该功能。这与美国英语的文献形成对比，据报道完成时在此类背景下通常更青睐（例如：`Did the children come home yet?` 参见 Hundt 和 Smith 2009: 53）。
 
 口语与书面新英语中的竞争形式 173
 
@@ -2792,7 +2573,7 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 表 6. 各地区变体的形式分布及使用 just, (n)ever yet 的情况
 
 | 现在完成时 | 过去式 | 其他 | 总计 |
-|---|---|---|---|---|
+|---|---|---|---|
 | 香港口语 | 242 (53.5%) | 122 (27.0%) | 88 (19.5%) | 452 |
 | 香港书面 | 87 (60.8%) | 48 (33.6%) | 8 (5.6%) | 143 |
 | 印度英语口语 | 89 (57.8%) | 53 (34.4%) | 12 (7.8%) | 154 |
@@ -2812,7 +2593,7 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 
 图 3. 各地区变体及模式下使用 just, (n)ever 和 yet 的形式分布
 
-表 6 和图 3 显示，在口语和书面模式下，所有亚洲变体的 `have + 过去分词` 结构比例均低于英国英语参考语料库。除了印度英语外，所有亚洲变体的共同点是：在口语模式下结合 just, (n)ever 和 yet 时，表达意义的替代方式比例显著高于书面模式（香港英语、中国英语和菲律宾英语 p < 0.5）。然而，在印度英语中，口语和书面模式之间的差异并未产生统计学上的显著结果。因此，除了印度英语外，所有研究的变体都证实了模式的影响。
+表 6 和图 3 显示，在口语和书面模式下，所有亚洲变体的 `have + 过去分词` 结构比例均低于英国英语参考语料库。除了印度英语外，所有亚洲变体的共同点是：在口语模式下结合 `just`, `(n)ever` 和 `yet` 时，表达意义的替代方式比例显著高于书面模式（香港英语、中国英语和菲律宾英语 p < 0.5）。然而，在印度英语中，口语和书面模式之间的差异并未产生统计学上的显著结果。因此，除了印度英语外，所有研究的变体都证实了模式的影响。
 
 跨国语料库分析方法揭示了地理变体之间的进一步差异。一方面，口语香港英语和中国英语是使用替代形式最频繁的变体，因为接近 20% 的案例来自标准现在完成时和合成过去式以外的类别。另一方面，菲律宾英语在口语仅有 1.4% 的时间使用替代形式，频率低于英国英语，且在书面模式中为 0%（与中国英语一样）。菲律宾英语的特点是在口语中特别倾向于用过去式形式来表达完成意义，这一结果是意料之中的，因为菲律宾英语的输入变体是美式英语，美式英语中过去式表达这种意义尤为频繁（Miller 2000: 337; Hundt and Smith 2009）。至于印度英语，它显示出与英国英语相似的值，尤其是在口语中。
 
@@ -2820,7 +2601,7 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 
 ## 2.5 文本类型变异
 
-这里考察的最后一个变量是文本类型对在包含副词 (n)ever 和 yet 的结构中选择表达完成意义之形式的影响。表 1 显示，模式（口语对比书面）是影响变体的强有力因素。图 4 和图 5 列出了不同类型的口语和书面语之间的差异（见附录表 II 和 III）。
+这里考察的最后一个变量是文本类型对在包含副词 `(n)ever` 和 `yet` 的结构中选择表达完成意义之形式的影响。表 1 显示，模式（口语对比书面）是影响变体的强有力因素。图 4 和图 5 列出了不同类型的口语和书面语之间的差异（见附录表 II 和 III）。
 
 ![](img/6910650ad69df72c967df4c631af744d_181_0.png)
 
@@ -2830,27 +2611,23 @@ Younger, P.L. (1992), “词尾’,收录于: R. Cols and B. Lancaster (eds.). �
 
 ![](img/6910650ad69df72c967df4c631af744d_182_0.png) 图 5. 英国英语中按文本类型的形式分布
 
-
-
-
-
 # 178 Cristina Suárez-Gómez & Elena Seoane
 
-以及 Suárez-Gómez 即将出版。然而，我们的比较分析表明，尽管它们的外部历史不同，但亚洲变体强化了 Schneider (2007) 的整体观点以及许多特征，例如形式的选择是由副词和所表达的意义决定的。我们的语库数据显示，在所有变体中：i) 近期过去的完成时（使用 just）仅是少数结构；ii) 经验性完成时（使用 ever 和 never）与一般过去时存在强力竞争；iii) 完成时结构占据主导地位——尽管在用 yet 表达结果性意义时并非完全如此。
+以及 Suárez-Gómez 即将出版。然而，我们的比较分析表明，尽管它们的外部历史不同，但亚洲变体强化了 Schneider (2007) 的整体观点以及许多特征，例如形式的选择是由副词和所表达的意义决定的。我们的语库数据显示，在所有变体中：i) 近期过去的完成时（使用 `just`）仅是少数结构；ii) 经验性完成时（使用 `ever` 和 `never`）与一般过去时存在强力竞争；iii) 完成时结构占据主导地位——尽管在用 `yet` 表达结果性意义时并非完全如此。
 
 最后，与语态一起，文本类型似乎也会影响沿参与程度和详尽程度等参数的变异，尽管这个问题需要一种考虑了这些及其他参数的多维度分析。
 
 ## 致谢
 
-两位作者对本工作做出了相同贡献。我们感谢本书的编辑以及一位匿名审稿人对本文早期版本给出的宝贵意见。还特别感谢西班牙科学与创新部以及欧洲区域发展基金（资助编号：HUM2007-60706, FILO; FFI2011-26693-C02-01 和 FFI2011-26693-C02-02）。
+两位作者对本工作做出了相同贡献。我们感谢本书的编辑以及一位匿名审稿人对本文早期版本给出的宝贵意见。还特别感谢西班牙科学与创新部以及欧洲区域发展基金（资助编号：`HUM2007-60706`, `FILO`; `FFI2011-26693-C02-01` 和 `FFI2011-26693-C02-02`）。
 
 # Notes
 
-- 例如，Van Rooy (2009: 318) 将“与指向时间有某种联系”的情况分类为经验情境，例如 They’ve already moved（他们已经搬家了）。根据 Miller (2004)，我们将此例归类为结果性的，因为该情境的结果——他们住在新房子——是关注焦点。
+- 例如，Van Rooy (2009: 318) 将“与指向时间有某种联系”的情况分类为经验情境，例如 `They’ve already moved`（他们已经搬家了）。根据 Miller (2004)，我们将此例归类为结果性的，因为该情境的结果——他们住在新房子——是关注焦点。
 
-- 无法与美国英语进行比较，因为 ICE-USA 的口语部分尚未可用。
+- 无法与美国英语进行比较，因为 `ICE-USA` 的口语部分尚未可用。
 
-- 它包括以下类别：不规则变化（如 driven）、补齐变化（been）、根元音变化 + [t]（kept）以及根元音变化 + [d]（told）。
+- 它包括以下类别：不规则变化（如 `driven`）、补齐变化（`been`）、根元音变化 + `[t]`（`kept`）以及根元音变化 + `[d]`（`told`）。
 
 ## 参考文献
 
@@ -2904,6 +2681,8 @@ Miller, J. (2004), ‘Perfective constructions in spoken and non-standard Englis
 
 Miller, J. (2006), ‘Spoken and written English’, in: B. Barts and A. McMahon (eds.) The handbook of English languages. Oxford: 670-691.
 
+
+
 Quirk, R., S. Greenbaum, G. Leech and J. Stvartik (1985). A comprehensive grammar of the English language. London: Macmillan.
 
 Reichenbach, H. (1947), Elements of symbolic logic. New York: Macmillan.
@@ -2935,65 +2714,105 @@ Van Rooy, B. (2009), ‘The shared core of perfect across Englishes: A corpus-ba
 表 I. ICE（国际英语语库）中的文本类型 (http://ice-corpora.net/ice/design.htm)
 
 | 口语 | 对话 | 私人 | 直接对话 |
+
 | --- | --- | --- | --- |
+
 | | | 公共 | 电话 |
+
 | | | | 课堂 |
+
 | | | | 广播讨论 |
+
 | | | | 会会辩论 |
+
 | | | | 法律质询 |
+
 | | | | 商业交易 |
+
 | | 独白 | 无脚本 | 自发评论 |
+
 | | | | 无脚本演讲 |
+
 | | | | 演示 |
+
 | | | | 法律陈述 |
+
 | | | | 广播新闻 |
+
 | | | | 广播演讲 |
+
 | | | | 非广播演讲 |
+
 | | | 有脚本 |  |
+
 | 书面 | 非印刷 | 学生写作 | 学生论文 |
-
-
-
-
 
 ## 182 Cristina Suárez-Gómez & Elena Seoane
 
 | | | 考试试卷 |
+
 | --- | --- | --- |
+
 | 印刷体 | 书信 | 社会信函 |
+
 | | 学术写作 | 商务信函 |
+
 | | | 人文学 |
+
 | | | 社会科学 |
+
 | | | 自然科学 |
+
 | | | 技术科学 |
+
 | | 通俗写作 | 人文学 |
+
 | | | 社会科学 |
+
 | | | 自然科学 |
+
 | | | 技术科学 |
+
 | 报告文学 | 新闻新闻报道 |
+
 | | 指导性写作 | 行政写作 |
+
 | | | 技能/爱好 |
+
 | 说服性写作 | 新闻编辑 |
+
 | 创意写作 | 小说与短篇小说 |
 
 表 II. 亚洲英语中各类型完美意义形式的分布（数字对应图 4）
 
 | 现在完成时 | 过去时 | 其他 | 总计 |
+
 | --- | --- | --- | --- |
+
 | 印刷体 | 147 (70.3%) | 58 (27.8%) | 4 (1.9%) | 209 |
+
 | 非印刷体写作 | 82 (58.6%) | 50 (35.3%) | 8 (5.7%) | 140 |
+
 | 有稿口语 | 64 (80%) | 13 (16.2%) | 3 (3.8%) | 80 |
+
 | 无稿口语 | 537 (50.3%) | 384 (35.9%) | 147 (13.8%) | 1068 |
+
 | 总计 | 830 | 505 | 162 | 1497 |
 
 表 III. 英国英语中各类型完美意义形式的分布（数字对应图 5）
 
 | 现在完成时 | 过去时 | 其他 | 总计 |
+
 | --- | --- | --- | --- |
+
 | 印刷体 | 40 (71.4%) | 14 (25%) | 2 (3.6%) | 56 |
+
 | 非印刷体写作 | 51 (81%) | 7 (11.1%) | 5 (7.9%) | 63 |
+
 | 有稿口语 | 25 (86.2%) | 4 (13.8%) | 0 | 29 |
+
 | 无稿口语 | 203 (59.9%) | 127 (37.5%) | 9 (2.6%) | 339 |
+
 | 总计 | 319 | 152 | 16 | 487
 
 # 探索学术话语的对话性：医学研究论文中的异质语言参与
@@ -3020,9 +2839,6 @@ Daniel Lees Fryer
 
 在另一项研究中，Hernando Rodrigo（2010）探索了在线文章作者如何调节其身份。通过一个包含 Hyland（2005）模型的框架，Hernando Rodrigo（2010）分析了频率（13.5/1000 字和 1/7000 字），但对于医学论文，这些是相似的（4.2/1000 字和 4.9/1000 字）。Hernando Rodrigo（2010）的结论之一是与在线文章作者不同，医学论文作者必须在主张作者身份（投射自己的声音）与参与读者之间取得平衡，这构成了该文本类型相关学科惯例的重要部分。
 
-
-
-
 文本中的分布情况以及它们的一些典型体现。本文还结合前人的工作对这些发现进行了解释。
 
 ## 2. 建模（异质性）参与
@@ -3032,11 +2848,13 @@ Daniel Lees Fryer
 如下例（1），是一个异质性言述，它为替代性命题构建了背景。该言述是“但当前交际语境中可用命题的数量之一”（同上：105），即“膝关节骨全厚程度可能不会进展为骨关节炎”。相比之下，示例（2）是单质性的，一个裸白的陈述。它没有诉诸论证，至少没有“在该言述所占据的简短文本时刻”（同上：99），根据语境，可以被假设为理所当然的或有待讨论的。
 
 - 1. 膝关节骨全厚程度可能进展为骨关节炎。“‘异质性’”
+
 - 2. 在基线和随访第 3 年和 6 年收集了心电图。“‘单质性’”
 
 异质性参与的资源被分为不同的功能类别，可以以系统网络的形式显示，作为一种选择系统或意义潜力系统（见图 1）。在最广泛的层面（图 1 左侧），异质性资源可以根据其是否是“对角收缩的”（diagonically contractive）还是“对角扩张的”（diagonically expansive）进行分类；即它们是“为了挑战、防御或限制话语中替代性立场和声音的范围”（同上：102）（‘收缩’），还是为了对这些外部声音做出让步（‘扩张’）。在（3）中，例如，文本声音通过“显示”（shows），通过对齐或保证归因于外部来源（近期发表的研究）的投影主张的有效性，来防御任何实际或潜在的对立立场。相反，在（4）中，文本声音通过“建议”（suggest），似乎允许实际或潜在的对立立场或命题存在，扩展或开启了 Martin 和 White（2005）所说的“对话空间”，即对同一主题的、先验和预期观点的不同构建的背景（参见第 1 节开头的引用，来自 Bakhtin 1981）。
 
 - (3) [...] 近期发表的研究显示，糖蛋白 IIb/IIIa 拮剂的益处至少维持六个月。【收缩’】
+
 - (4) 民意调查和消费者协会调查显示，整个欧洲和英国的高值率较高。【扩张’】
 
 ![](img/6910650ad69df72c967df4c631af744d_193_0.png)
@@ -3046,6 +2864,8 @@ Daniel Lees Fryer
 在更细致的层面（见图 1），可以在不同类型的对话收缩方式，即以某种方式关闭对话空间的资源之间进行区分。这些区分基于某些对话替代方案是被拒绝或取代（‘否认’/disclaim），还是“通过某种作者身份的插值、强调或干预，对话替代方案被面对、挑战、压倒或以其他方式排除”（Martin and White 2005: 117-118）（‘宣称’/proclaim）。
 
 根据 Martin 和 White（同上：118），‘否认’有两个子类型：一种是文本声音似乎拒绝了某些对立立场（‘否定’/deny），另一种是它寻求替换或取代某些对立立场（‘反驳’/counter）。
+
+
 
 ‘否定’特征通常由 `not`, `no`, `none`, `nothing` 以及类似的否定形式指示。例如在（5）中，否定意味着对替代性正面立场的承认和拒绝或否定。Martin 和 White（同上）认为，在对话术语中，否定“必然带有正面性；但‘正面性并不[通常不]带有负面性’”。正是这种否定的属性，使得该言述是异质性的而非单质性的，即治疗长达 2 年是有益的。
 
@@ -3060,6 +2880,7 @@ Daniel Lees Fryer
 ‘一致’特征被进一步分类为‘确认’或‘承认’，前者通常由 `naturally` 和 `obviously` 实现，后者由 `admitted` 实现。在（7）中，文本声音表明其立场是可能的替代立场之一，允许方案的对话空间。
 
 - (7) 显然，没有使用此类方案。【确认’】
+
 - (8) 承认，我们没有包含对照组。【承认’】
 
 ‘支持’特征通常由报告性动词如 `show`, `prove` 等实现。在（9）中，文本声音支持了限制了观点的范围。
@@ -3076,14 +2897,11 @@ Daniel Lees Fryer
 
 ‘考虑’类别通常由在其他地方处理情态、委婉语和证据性的资源实现（例如 Halliday and Mattheisen 2004: 143–150, 613–625；Hyland 1996; Chafe 1986），包括情态限定和状语（如 `may.`, `probably`）以及某些“证据词”（如 `seems`, `suggests`, `apparently`）（见 Martin and White 2005: 104-111）。在（12）中，`may` 从对话视角将命题编码为多个可能的替代命题之一，例如“激活蛋白 C 可能不会改善严重脓毒症的预后”。
 
-
-
-
 190 Daniel Lees Fryer
 
 (12) [...] 激活蛋白 C 的治疗可能会改善严重脓血症的预后。【‘考虑/entertain’】
 
-归因分为两个子类：“承认”（acknowledge）和“疏离”（distance）。如上所述，这两类之间的基本区别在于文本声音所采取的位置。例如，在(13)中，文本声音承认了之前研究的发现，但对于作者关于该命题的态度没有明确指示。另一方面，在(14)中，文本声音似乎与归因材料保持疏离。⁸“承认”通常由报告动词如 say（说）、report（报道）、state（陈述）表示，而“疏离”则由 claim（声称）、maintain（坚持）表示。
+归因分为两个子类：“承认”（acknowledge）和“疏离”（distance）。如上所述，这两类之间的基本区别在于文本声音所采取的位置。例如，在(13)中，文本声音承认了之前研究的发现，但对于作者关于该命题的态度没有明确指示。另一方面，在(14)中，文本声音似乎与归因材料保持疏离。⁸“承认”通常由报告动词如 `say`（说）、`report`（报道）、`state`（陈述）表示，而“疏离”则由 `claim`（声称）、`maintain`（坚持）表示。
 
 (13) 有报道氯丙酰脲会导致血压升高。【‘承认’】
 
@@ -3100,7 +2918,9 @@ Daniel Lees Fryer
 ![](img/6910650ad69df72c967df4c631af744d_197_0.png)
 
 HERS，在4.1和6.8年的随访后，激素疗法并未增加或减少冠心病（CHD）女性的心脑血管事件风险。25
+
 WHI将这些发现扩展到更广泛的女性群体，包括较年轻的女性和无明显CHD的女性，并表明这种风险可能会持续多年。
+
 与CHD不同，雌激素加孕体激素组的卒中额外风险在第一年并未出现，但在第二年出现并持续到第五年。初步分析表明，组间血压的微小差异对卒中增加的解释贡献不大（数据未显示）。
 
 图2. UAM CorpusTool标注窗口截图，显示 `may`（灰色高亮）被标注为编码“entertain”特征。
@@ -3120,7 +2940,9 @@ WHI将这些发现扩展到更广泛的女性群体，包括较年轻的女性�
 # 医学研究论文中的异质性参与
 
 HERS，在4.1和6.8年的随访后，激素疗法并未增加或减少冠心病（CHD）女性的心脑血管事件风险。25
+
 WHI将这些发现扩展到更广泛的女性群体，包括较年轻的女性和无明显CHD的女性，并表明这种风险可能会持续多年。
+
 与CHD不同，雌激素加孕体激素组的卒中额外风险在第一年并未出现，但在第二年出现并持续到第五年。初步分析表明，组间血压的微小差异对卒中增加的解释贡献不大（数据未显示）。
 
 图2. UAM CorpusTool标注窗口截图，显示 `may`（灰色高亮）被标注为编码“entertain”特征。
@@ -3144,10 +2966,6 @@ WHI将这些发现扩展到更广泛的女性群体，包括较年轻的女性�
 (19) 然而，尚不清楚对于高胆固醇患者，是否可以通过降脂疗法预防心血管事件。【‘counter’‘deny’‘affirm’‘entertain’‘entertain’和‘deny’，分别】
 
 最后的方法论考虑涉及态度（ATTITUDE）、参与（ENGAGEMENT）和程度（GRADUATION）系统之间的关系。第2节描述的许多资源根据说话者/写者的强度或其对话语的投入程度进行分级（Martin and White 2005: 135-136）。例如，在“它是可能的/可能的/肯定的……””中存在一个从低到高的程度分级，在“少数/一些/大多数研究表明……””中也存在一个类似的分级，两者都构筑了不同程度的“entertain”。提到程度（GRADUATION）是因为它在构建文本异质性命题背景方面起着重要作用（Hood 2010: 185-188）。将此项目归类为其中一个就忽略了这种多义性。因此，在(17)中，我将示例标注为同时具有‘ertain’和‘endorse’（Martin and White 2005: 99），而不是选择一个。然而，如(18)所示，这并不意味着所有实例都指示这些异质性特征。
-
-
-
-
 
 194 Daniel Lees Fryer
 
@@ -3187,27 +3005,34 @@ entertain 特征及其实现的选择概率和出现频率在各 RA 部分存在
 | RA 部分（特征选择概率，每1000词出现次数） | 实现 | 实现的选择概率，每1000词出现次数（RA 部分） |
 | :--- | :--- | :--- |
 | 引言 (38.85%, 23.06) | whether some | 10.84%, 2.97%, 6.93%, 1.60%, 4.95%, 1.37%, 4.95%, 1.14%, 3.96%, 0.91 |
+
+
+
 | 方法 (56.78%, 19.17) | if require | 10.84%, 2.31%, 6.65%, 1.32%, 3.20%, 0.90%, 2.38%, 0.80%, 2.24%, 0.76 |
+
 | 结果 (59.92%, 22.82) | p (as p value) confidence interval hazard relative | 30.55%, 6.97%, 12.19%, 2.87%, 3.98%, 0.91, 2.82%, 0.64%, 2.31%, 0.53 |
+
 | 讨论 (45.40%, 28.59) | may will might likely | 10.04%, 2.87%, 7.58%, 2.17%, 3.98%, 1.19%, 3.98%, 1.14%, 3.79%, 1.08 |
 
 * 结果部分五种常见的 entertain “非数学”表达为 (2.06%, 0.56)、may (1.67%, 0.38)、would (1.41%, 0.32)、could (1.16%, 0.26) 以及 apparently (1.16%, 0.26)。
 
 对话收缩通常是“disclaim”子类型（占所有对话收缩的 67.32%，未显示），整个语料库中 counter 和 deny 特征的量相似（分别为每 1000 词 4.61 次和 3.78 次），但根据 RA 部分而异。例如，引言部分的 counter 特征出现频率高于 deny 特征（分别为每 1000 词 9.59 次和 2.51 次），在 counter 特征的情况下，最常见的实现方式是 however（引言中所有 counter 实现的 23.80%）、although（19.04%）和 but（16.67%）。以下是 (20)-(22) 的示例。
 
-- (20) 然而，目前尚不清楚通过降脂治疗是否可以预防高胆固醇症患者的冠状动脉事件。['counter', 来自引言]
-- (21) 例如，尽管长期抗血小板治疗在缺血性中风后显示有显著收益，但尚不知道抗血小板药物作为此类中风急性期的即刻治疗是否有益。['counter', 来自引言]
-- (22) 试验的元分析支持了治疗降低冠心心疾病死亡风险的可能性，但引发了人们对治疗可能会增加非心血管因素死亡风险的担忧。[REFS] ['counter', 来自引言]
+- (20) 然而，目前尚不清楚通过降脂治疗是否可以预防高胆固醇症患者的冠状动脉事件。[`counter`, 来自引言]
+
+- (21) 例如，尽管长期抗血小板治疗在缺血性中风后显示有显著收益，但尚不知道抗血小板药物作为此类中风急性期的即刻治疗是否有益。[`counter`, 来自引言]
+
+- (22) 试验的元分析支持了治疗降低冠心心疾病死亡风险的可能性，但引发了人们对治疗可能会增加非心血管因素死亡风险的担忧。[REFS] [`counter`, 来自引言]
 
 在频率刻尺的另一端，没有 distance 和 concede 特征的实例（见图 3）。方法部分也没有 affirm 的实例，且整个语料库中通常没有 concur 的示例。
 
 除了在各 RA 部分之间观察到的差异外（见图 3 和表 1）外，在 RA 部分内部也能辨出不同的特征分布。例如，讨论部分似乎以大约相等的对话性收缩和对话性扩张特征开始，随着讨论的展开，变得更具扩张性（见图 4）。在讨论更深层次的细节中，还注意到 proclaim 特征的分布模式，其中 justify 和 concur 通常出现在部分的开头（见示例 (23) 和 (24)），而 pronounce 出现在结尾（如 (25)）。
 
-- (23) 洛沙坦进一步降低 25% 的中风风险是重要的，因为在过去十年里我们的研究和其他研究中，中风是死亡的主要原因，残疾比心肌梗死更常见。[REFS] ['justify', 来自讨论
-- (24) 死亡和疾病的减少与联合抗逆病毒治疗的增加密切相关，最显著的减少与蛋白酶抑制剂使用的增加相合。['concur', 来自讨论
-- (25) 事实上，在这项研究中，发现心室扩大和基线浆神经激素水平升高与比任何一种这些预后指标更高的死亡风险相关。['pronounce', 来自讨论
+- (23) 洛沙坦进一步降低 25% 的中风风险是重要的，因为在过去十年里我们的研究和其他研究中，中风是死亡的主要原因，残疾比心肌梗死更常见。[REFS] [`justify`, 来自讨论]
 
+- (24) 死亡和疾病的减少与联合抗逆病毒治疗的增加密切相关，最显著的减少与蛋白酶抑制剂使用的增加相合。[`concur`, 来自讨论]
 
+- (25) 事实上，在这项研究中，发现心室扩大和基线浆神经激素水平升高与比任何一种这些预后指标更高的死亡风险相关。[`pronounce`, 来自讨论]
 
 Daniel Lees Fryer
 
@@ -3223,11 +3048,11 @@ Daniel Lees Fryer
 
 第三，不仅在哪些特征被建构、何地以及频率上存在变异，这些特征在文中编码的方式也存在差异。正如“娱乐”特征所示（见表1），资源的选择在不同的RA章节中有所不同，包括情态限定词（如 may, might）、情态状语（如 apparently）、谓语（如 include, require）、连词（如 if, whether）以及不同功能（主语、补足语、状语部分或括号补充）的名词短语（如置信区间、风险比例）。在结果部分，代表“娱乐”最常用的资源是数学构建的p值（p-values），这占了该部分中所有“娱乐”编码的30%以上。P值表示在不存在真实效应的情况下，观察到特定结果的概率，而正是这一点在数学上“娱乐”了该效应可能是偶然性之一的可能性（见第26条，以及它对其他单语命题的潜在调节作用）。表1中列出的其他数学表达式都以不同的方式编码了偶然性或概率的概念，并被归类为“娱乐”。
 
-(26) 普伐他汀对女性的影响大于男性（患者性别与治疗之间的相互作用的 P = 0.05）。['娱乐，来自结果部分]
+(26) 普伐他汀对女性的影响大于男性（患者性别与治疗之间的相互作用的 P = 0.05）。[`娱乐，来自结果部分`]
 
 在对话式收缩中，“反驳”（counter）和“否定”（deny）在方法、结果和讨论部分的发生频率相似，通常作为成对出现，见示例(27)。然而，在引言中，“反驳”的频率远高于“否定”（分别为9.59/1000字和2.51/1000字；见图3）。这些“反驳型”资源通常用于启动Swales（1990: 141）所说的“建立立足点”，通过指出当前领域的空白来实现。Hood（2010: 184）在对研究论文的评价中也提到，此类资源标志着从与读者一致到不一致的转变。这种模式可以出现在(28)。
 
-(27) 在本研究中，然而治疗组之间没有差异 ['反驳’和‘否定，来自讨论
+(27) 在本研究中，然而治疗组之间没有差异 [`反驳’和‘否定，来自讨论`]
 
 (28) 总胆固醇和低密度脂蛋白（LDL）胆固醇的血固水平是心脏病的重要危险因素。然而，胆固醇与冠状动脉事件之间的关系在这些水平升高时似乎更强。
 
@@ -3235,19 +3060,16 @@ Daniel Lees Fryer
 
 在本研究中，在对话式收缩和“陈述”（proclaim）微妙性的进一步衰减水平上，“证明”（justify）和“同意”（concur）通常出现在讨论开头，作者重申他们做了什么以及为什么做（见示例23），并确认其主张的有效性（见24）。后期的收缩特征，至少在“陈述”层面上，标志着作者声音“宣告”（pronounce）的干预，可能是为了断言或强调研究发现的价值或合理性（如25）。讨论结束时，对话式扩展的概率远大于对话式收缩，这可能反映了建议未来研究方向的惯例，如示例29所示所示，
 
-(29) 这些问题应该通过对研究参与者的持续随访来解决 ['娱乐，来自讨论
+(29) 这些问题应该通过对研究参与者的持续随访来解决 [`娱乐，来自讨论`]
 
 最后，“让步”（concede）和“距离化”（distance）特征在研究中未被识别出来（见图3），这表明作者没有采用此类策略，或者他们使用了更多其他手段（如此 Mall Hammar, 私人通信）。本文此前使用的“让步”示例（见8），
-
-
-
-
 
 # 医学研究论文中的异质语言参与 201
 
 第 3 节)，并在此处重复为 (30)，实际上源于一封给编辑的信，直接回应了对作者在之前论文中方法选择的批评。此类让步性陈述可能被留用于话语中更具对抗性的元素（例如给编辑的信中更直接的“面对面”交流），但这需要进一步调查。同样，关于“距离”，使用 claim（声称/主张）作为一种拒绝对某一命题承担责任的手段通常被认为是威胁面子的，如例 (14) 所示，并在此处重复为 (31)。这个例子也来自一封给编辑的信，旨在回应作者工作的负面批评，其整体效果可能比人们在研究论文中预期的更具对抗性。
 
 - (30) 承认，我们没有包含对照组 [...] 但 [...]
+
 - (31) 我们声称该报告使用了基于班义基及其他不可靠登记的推断和预测。它确实是这样做的。
 
 ## 7. 结语
@@ -3261,60 +3083,86 @@ Daniel Lees Fryer
 ## 注释
 
 - 1 所有这些研究（Breivega, Dahl and Fløottam 2002; Fløottam 2003; Dahl 2004; Flottum, Dahl and Kim 2006）都是 KIAP（学术目的中的文化认同）项目的一部分。更多信息以及与项目相关的出版物列表，请参见 http://kiap.uib.no/index-e.htm（访问日期：2012年5月10日）。
+
 - 2 关于立场（stance）和参与（engagement）的替代模型，请参见 Biber and Finegan (1989), Hyland (2005), 以及 Hunston and Thompson (1999) 中的贡献等。
 
 ## Daniel Lees Fryer
 
 - 3 关于 ATTITUDE 系统的描述和分析，见 Fuoli（本卷）。
+
 - 4 本节用于说明 ENGAGEMENT（参与）资源的示例除非另有说明，均取自研究语库。关于语库内容、整理、标注和分析的细节，见第 3 节。
+
 - 5 虽然这个例子很可能是单语的，但根据重音，它可能表示“强调（pronounce）”，例如“治疗长达 5.2 年在总体上是有益的”（Martin and White 2005: 127）。
+
 - 6 注意，在这个特定的例子中，“counter”（反驳）和“deny”（否定）特征共同运作，其中被否定的命题“组间没有差异”被明确标记为与先前的或后续子序列产生的预期立场直接对立（Martin and White 2005: 120）。
+
 - 7 例 (8) 并非来自语库，尽管它取自源期刊之一（《新英格兰医学杂志》，1998, vol. 338, pp. 1546-1547；见第 3 节）。
+
 - 8 Martin and White (2005: 103-104) 注意到，claim 并不总是作为“距离”的信号，而是根据不同的语境条件而变化，这一点通常适用于其他对话资源（见第 4 节的讨论，以及 Martin and White 2005: 104）。事实上，在 (14) 中，claim 也可能表示“考虑”（= 建议）或“承认”（= 陈述），至少在简短的文本时刻如此，尽管词汇可能暗示了其他含义。
+
 - 9 例 (14) 并非来自语库，尽管它取自源期刊之一（《柳叶刀》，2002, vol. 360, p. 1177；见第 3 节）。
+
 - 10 RA 是根据 Thomson Reuters 知识库的数据（位于 webofknowledge.com；访问日期：2012年1月15日）选择的。在选取时，语库中被引用最高的 RA 被数据库中的其他出版物引用了超过9000次。语库 RA 列表可用。
+
 - 11 UAM CorpusTool: http://www.wassoft.com/CorpusTool/index.html（访问日期：2012年1月15日）
+
 - 12 医学主题词（MeSH）目录由美国国家医学图书馆管理（http://www.nlm.nih.gov/mesh/；最后访问日期：2012年1月15日）。它包含一个约 26,000 个标准化描述符列表，用于对医学研究论文和其他出版物的内容进行索引，包括本研究中五份源期刊发表的材料。
+
 - 13 语库中的所有 RA 都遵循标准的 IMRD 结构（Sollaci and Pereira 2004）。
 
 Martin and White (2005) 指出 claim 并不总是充当“距离”的信号，而是根据不同的语境条件而变化，这一点通常适用于其他对话资源（见第 4 节的讨论，以及 Martin and White 2005: 104）。事实上，在 (14) 中，claim 也可能表示“考虑”（= 建议）或“承认”（= 陈述），至少在简短的文本时刻如此，尽管词汇可能暗示了其他含义。
+
 - 14 例 (14) 并非来自语库，尽管它取自源期刊之一（《柳叶刀》，2002, vol. 360, p. 1177；见第 3 节）。
+
 - 15 RA 是根据 Thomson Reuters 知识库的数据（位于 webofknowledge.com；访问日期：2012年1月15日）选择的。在选取时，语库中被引用最高的 RA 被数据库中的其他出版物引用了超过9000次。语库 RA 列表可用。
+
 - 16 UAM CorpusTool: http://www.wassoft.com/CorpusTool/index.html（访问日期：2012年1月15日）
+
 - 17 医学主题词（MeSH）目录由美国国家医学图书馆管理（http://www.nlm.nih.gov/mesh/；最后访问日期：2012年1月15日）。它包含一个约 26,000 个标准化描述符列表，用于对医学研究论文和其他出版物的内容进行索引，包括本研究中五份源期刊发表的材料。
+
 - 18 语库中的所有 RA 都遵循标准的 IMRD 结构（Sollaci and Pereira 2004）。
 
 Martin and White (2005) 指出 claim 并不总是充当“距离”的信号，而是根据不同的语境条件而变化，这一点通常适用于其他对话资源（见第 4 节的讨论，以及 Martin and White 2005: 104）。（此处为原文中重复的内容，已按要求处理或翻译）
 
-[/content] (注：此处为针对“医学研究论文中的异质语言参与”部分的完整翻译)
-
-[content]
 # 医学研究论文中的异质语言参与 201
-
-...（前文译略）
 
 ## 参考文献
 
 - Adams Smith, D. (1987), “领域相关的语言特征”,ELR, 1:10.
+
 - Bakhtin, M. (1981), “对话想象”。译自 C. Emerson。Austin: University of Texas。
+
 - Biber, D. and Finegan, E. (1989), 等，在 Hunston and Thompson (1999)。
+
 - Breivega, K., Dahl, T. and Fløottam, K. (2002), 是 KIAP（学术目的中的文化认同）项目的一部分。
+
 - Chafe, W. B. (1986), “话语中情态的使用”，在 Martin and J. R. White (2005)。
+
 - Dahl, T. (2004), “功能语法”，在 M. Gotti and F. Salager-Meyer (编) 医学进展：口语与书面。
+
 - Fløottam, K. (2003), “学术话语中的婉语气”，在 Hunston and Thompson (1999)。
+
 - Fryer, D. L. (2012), “参与在医学研究论文中的作用”，语言学杂志, 35:-
+
 - Hyland, K. (1996), “科学论文中的婉语气”，语言学, 17:433-454。
+
 - Hyland, K. (2005), “学术话语中的立场与参与”，Discourse, 7:173-192。
+
+
+
 - Kaltenbacher, M. (2006), “旅游网站中的文化语言特征”，在 G. Thompson and S. Hunston (编) 系统与语库：两个系统。269-292。
+
 - MacDonald, D. M. (2002), “教学、病理与意识形态：医学话语的生产、传播与再生产”，Discourse and society, 13:447-467。
+
 - Maher, J. (1986), “英语作为医学英语的发展”，应用语言, 7:206-220。
+
 - Martin, J. R. and P. R. White (2005), 评价语言：英语中的评价。Basingstoke: Palgrave Macmillan.
+
 - Pahta, P. (2006), “这非常重要：医学写作中加强词的语库研究”，在 M. Gotti and F. Salager-Meyer (编) 医学进展：口语与书面。357-381.
+
 - Pérez-Llantada Auría, C. (2011), “异质语言（不）参与与对理想读者的建构：学术文本中的对话空间”，在 V. Bhatia, S. Hernández and P. Pérez-Paredes (编) 研究专门化语言。Amsterdam: John Benjamins.25-45.
+
 - Salager-Meyer, F. (1992), “医学英语摘要中动词时态和情态的文本类型与动作分析”，英语用途, 11:93-113.
-
-
-
 
 # 医学研究论文中的异质语言参与
 
@@ -3326,7 +3174,7 @@ Swales, J. M. (1990), 语体分析：学术与研究环境中的英语。剑桥�
 
 Swales, J. M. and C. B. Feak (2004), 研究生学术写作：核心任务与技能。第二版。安安斯堡，密歇根州：密歇根大学出版社。
 
-汤森路透 (2010), 期刊引用报告，2009 JCR科学版。可用网址：http://scientific.thomsonreuters.com/products/jcr/ (访问于2012年5月10日)。
+汤森路透 (2010), 期刊引用报告，2009 JCR科学版。可用网址：`http://scientific.thomsonreuters.com/products/jcr/` (访问于2012年5月10日)。
 
 Valal, T. (1999), ‘关于流行科学与医学专业研究中对婉语交流功能的评述’,专门用途英语 (English for specific purposes), 18: 177-200.
 
@@ -3382,8 +3230,6 @@ Weidner, N., W. R. Welch, J. P. (1991), ‘血管生成与转移：浸润性乳�
 
 Yusuf, S (2000), ‘雷米普利对心血管事件的影响’, 新英医学杂志 (New England journal of medicine), 342: 145-153.
 
-[/content]
-
 # 医学研究论文中的异质语言参与
 
 Salager-Meyer, F. (1994), ‘医学英语书面话语中的对婉语与文本交流功能’,专门用途英语 (English for specific purposes), 13: 149-170.
@@ -3394,7 +3240,7 @@ Swales, J. M. (1990), 语体分析：学术与研究环境中的英语。剑桥�
 
 Swales, J. M. and C. B. Feak (2004), 研究生学术写作：核心任务与技能。第二版。安安斯堡，密歇根州：密歇根大学出版社。
 
-汤森路透 (2010), 期刊引用报告，2009 JCR科学版。可用网址：http://scientific.thomsonreuters.com/products/jcr/ (访问于2012年5月10日)。
+汤森路透 (2010), 期刊引用报告，2009 JCR科学版。可用网址：`http://scientific.thomsonreuters.com/products/jcr/` (访问于2012年5月10日)。
 
 Vartalal, T. (1999), ‘关于流行科学与医学专业研究中对婉语交流功能的评述’,专门用途英语 (English for specific purposes), 18: 177-200.
 
@@ -3442,6 +3288,8 @@ Marler, J. R., Kothari, M. G. Stanten (1995), ‘组织蛋白激活治疗急性�
 
 Palella, F., A. Moorman, E. Fuhrer, G. Satten (1998), ‘辛伐他汀对心血管功能并发症的影响’, 新英医学杂志 (New England journal of medicine), 335: 1001-1009.
 
+
+
 Shepherd, J. A., C. R. Lorimer, P. W. Cobbe (1992), ‘强化血糖控制对胰岛并发症的影响’, 刀刀 (Lancet), 352:837-853.
 
 Turner, R. C., D. R. Matthews, I. M. Frighi (1993), ‘辛伐他汀预防冠状心病的效果’, 新英医学杂志 (New England journal of medicine), 329: 977-986.
@@ -3456,21 +3304,15 @@ Matteo Fuoli
 
 Lund University
 
-### 摘要
+## 摘要
 
 为了应对对企业问责和社会责任日益增长的需求，大型公司正投入更多努力与其其负责任的行为。通过企业社会报告，他们自愿对其运营对社会环境的影响进行说明，并记录实施可持续原则的努力。本文对 BP 和 IKEA 的 2009 年社会报告进行了对比分析。该分析结合了评价理论和语料库方法，以识别并比较评价性语言。分析的主要目标是探索 BP 和 IKEA 如何通过这些语言资源构建的企业身份并与观众建立关系。
 
-### 1. 引言
+## 1. 引言
 
 近年来，公众对企业活动对环境和社会整体产生的影响日益关注（Carroll and Shabana 2010）。由此产生的对企业问责和社会责任的需求增加，“引发了大量的文本反应”（Skulado 2005: 71），并从根本上改变了公司与公众交流的方式。新的企业“社会”报告已经出现，新的企业话语体裁也受到了关注（Catenacco 2011; Skuludad 2002）。
 
 Fairclough (1992: 8) 认为“[改变话语实践有助于知识（包括信念和常识）、社会关系和社会身份的改变”。基于哈利德对语言的多功能视角（Halliday 1978, 1994），作者开发了一种研究话语的方法
-
-
-
-
-
-# 210 Matteo Fuoli
 
 这种分析考虑了文本如何同时建构现实——构念功能、社会关系——关系功能，以及身份——身份功能（Fairclough 1992, 8）。以往对企业社会报告语言的研究倾向于关注其构念功能，即这些文本如何构建和呈现对世界的特定表征。尽管企业社会报告作为组织与其利益相关者之间对话媒介的作用已得到认可（Gray et al. 1995），但据我所知，其人际功能（身份和关系功能），即这些报告报告的文本如何通过话语方式建构自身身份并与观众协商关系，尚未成为系统性研究的主题。
 
@@ -3478,11 +3320,9 @@ Fairclough (1992: 8) 认为“[改变话语实践有助于知识（包括信念�
 
 本文结构安排如下：第2节回顾了关于企业社会报告的相关话语分析研究；第3节概述了评价理论；第4节描述了采用的分析方法；第5节和第6节分别报告了结果并提供了一些解释性结论。
 
-# 2. 相关工作
+## 2. 相关工作
 
 一些研究从社会建构主义视角（Berger and Luckmann 1967）出发，采用定性话语分析分析了企业社会报告。Livesey（2002: 321）考察了壳牌（Shell）第一份企业社会报告的显著特征和修辞特征。作者探讨了在重大环境争议后公众压力的背景下，公司试图通过传播重塑其形象。Livesey（2002: 338）得出结论，壳牌的新环境话语旨在通过接受可持续发展理念来缓解此类争议，而这种理念实际上未能对“惯常业务”构成任何真正的挑战。Laine（2005, 2010）得出了类似的结论，他采用分析方法来解构芬兰公司产出的社会话语中“可持续发展”一词的含义。他的分析结果显示，可持续性概念如何被建构为与经济增长相兼容，并被泛化为解决社会和环境问题的理想方案，而这不需要对当前的经济范式进行任何重大重构。然而，与此同时，
-
-# 构建负责任的企业身份
 
 Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情，但在企业报告中，可持续性往往被简化为抽象模糊的原则，而对实现这些目标所采取的措施和获得的结果强调较少。Milne 等人（2005）也表达了类似的观点。在对几家新西兰组织社会报告中运用“旅程”比喻的说明中，作者指出，通过将可持续发展概念化为一场旅程，报告公司避免了面对识别和描述企业可持续性目标及策略的复杂问题。
 
@@ -3490,23 +3330,11 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 
 综述的研究主要集中在企业社会报告的构念功能，未能从“话语即文本”层面——即语言形式和意义的微观层面——对这些功能进行系统、全面的分析（Fairclough 1992: 74）。某些研究已考虑对人际功能的特定研究。在对欧尚国际（The Body Shop International）和荷兰壳牌集团（Royal Dutch Shell Group）发布的报告进行比较分析时，Livesey 和 Kney（2002: 246）指出，报告语言充满了对个人情感的描述，如“关怀”、“想要”、“努力”和“自豪”，并且“采用了心灵的比喻来描述企业人格”。Buhr 和 Reiter（2006）讨论了采矿业公司诺兰达（Noranda）发布的企业社会报告中环境哲学的结合与融合，其目的是创造公司的绿色身份并使其在各种公众面前合法化（10）。Skulstad（2008）在其社会报告语料库的体裁分析（genre analysis）中，描述了用于创建绿色形象和对比不利的“外部建构”形象的修辞策略。沿着类似的路线，Malavasi（2011: 209）强调了企业社会报告的双重性质，它们既可以被视为提供信息的文档，也可以被视为建立信任、增强声誉并与利益相关者建立良好关系的公关文件。
 
-# 3. 评价理论
+## 3. 评价理论
 
 评价理论被定义为“一种探索、描述和解释语言如何用于评估、立场和关系的特定方法”（White 2001: 1）。评价理论起源于系统功能语言学框架的延伸，专门处理“人际意义”（Halliday 1994）。
 
 根据该理论，这些意义被组织成不同的“系统”，这些系统对应于它们在话语中所发挥的功能（见图1）。态度（Attitude）涉及表达情感倾向、伦理判断和评价的语言资源；*参与（Engagement）*包含了语言使用者协商其命题的可争性的报告；*级配（Graduation）*整合了用于调节评估程度的语言手段。每个子系统进一步细分为不同的子类。正如 Hood（2004: 74）总结的那样，精细原则适用于评价理论的不同子系统，也适用于系统功能语言学中的任何系统网络。网络从左到右的移动表示了从一般到更具体分析的过渡。
-
-
-
-
-
-# 构建负责任的企业认同
-
-# 213
-
-![](img/6910650ad69df72c967df4c631af744d_219_0.png)
-
-图 1. 评价系统概述（改编自 Martin and White, 2005）
 
 态度（Attitude）进一步分为三个子类：情感（Affect），涉及感受、情绪和心理状态的表达；判断（Judgement），包括对人类行为的正面或负面规范性评估；欣赏（Appreciation），涉及对自然或半符号化现象、实体和过程的正面或负面评价。这些类别之间的区别是语义层面的，因此可以通过一组开放的词汇-语法资源来实现。情感可以通过动词（例如：爱/恨）、副词（例如：快乐/悲伤）、形容词（例如：愤怒）或名词化（例如：喜悦/绝望、自信/不安全）来表达（White 2001）。正如 Martin (1995: 29) 所指出的，判断倾向于以形容词形式（例如：不公正、公正、有技能、无能、坚决）实现，尽管也可以通过名词化形式（最佳行为、卓越表现）以及介词短语（如所示的顺序）来传达。类似的考虑也适用于欣赏类别（例如：极其美丽/惊世之美、迷人的、迷人的、具有挑战性的/挑战、创新的、真实的）。评价的实现可以具有正面(+)或负面(-)的极性（Whitelaw et al. 2005），即它们阐明了 BP 和 IKEA 社会报告中不同类型的“态度”。
 
@@ -3517,8 +3345,6 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 判断（能力、韧性、伦理承诺）
 
 + 2. BP 是进步的、负责的、创新的且由绩效驱动的。
-
-## Matteo Fuoli
 
 欣赏（美学、价值、相关性）
 
@@ -3536,11 +3362,7 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 
 尽管两个命题都是多言性的，但示例 (5) 通过动词“demonstrate”（展示）发现了潜在的争议性论点，而示例 (6) 中的模态词“may”（可能）将命题设定为一个假设，从而使其处于对话冲突之中。
 
-![](img/6910650ad69df72c967df4c631af744d_220_0.png)
-
 图 2. 介入：对话收缩与扩张（改编自 Martin and White, 2005）
-
-# 构建负责任的企业认同
 
 介入进一步分为四个大类，如图 2 所示。对话收缩的资源归类为“否认（Disclaim）”和“宣告（Proclaim）”。前者包含了否定和对反预期的表达，而后者包含了确定性的认知标记以及对所报道观点的支持表达。对话扩张的资源分为“娱乐（Entertain）”类（包括怀疑的认知标记和可能的模态）以及“归属（Attribute）”类（即用于中立承认或与所引外部声音保持距离的方法）。下方报告的片段说明了这些类别。介入系统进一步细分为本文未考虑的子类。有关介入系统的更详细描述，请参阅 Fryer（本卷）和 Martin and White (2005)。
 
@@ -3566,15 +3388,13 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 
 + (12) 某些生物燃料具有非常积极的影响。
 
-## Matteo Fuoli
-
 焦点（Focus）是指程度级中的原型性，即被评价对象被说话者/写者评估为符合范式的程度（Martin and White 2005: 137）。焦点的示例是评价性短语，如 real man、true friend、solution of sorts。正如 Martin and White (2005: 139) 所解释的，“锐化”焦点（例如 real man）通常会引发正面的态度评估。相反，“软化”焦点（例如 solution of sorts）通常意味着负面评价。文中的一个焦点示例见 (13)：
 
 + (13) 我还致力于让 BP 成为一个真正的精英治公司。
 
 在这个例子中，通过情感实例“absolutely committed”（绝对承诺）与焦点实例“real meritocracy”（真正的精英治）的相互作用，引发了对 BP 的正面判断。通过宣布将 BP 变为一个真正的精英治、公正的公司，被引用的集团首席执行官似乎暗示对自己及公司伦理立场的正面判断。
 
-# 4. 材料与方法
+## 4. 材料与方法
 
 本文对 BP 的《2009 年可持续报告》和 IKEA 的《2009 年可持续报告》中的评价系统进行了对比分析。这些文本的主要特征如表 1 所示。
 
@@ -3586,15 +3406,11 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 用于对比分析的企业社会报告由两家经营无关行业的公司发布。BP 和 IKEA 在许多方面都是截然不同的公司。它们之间最相关的区别在于：
 
 - ：BP 运营在一个高度监管、环境敏感的行业（Deegan and Gordon 1996; Neu et al. 1998），其活动对环境的影响远大于 IKEA，且涉及更大的运营风险；
+
 - 它们承受的社会和政治压力：与 IKEA 相比，考虑到实质性的差异，BP 面临着更大的利益相关者压力
 
-
-
-
-
-# 构建具有责任感的企业身份
-
 - 其活动具有更高的环境影响，且经营规模也要大得多 (Patten 1992)；
+
 - 环境与合规记录：在近期历史中，BP公司曾负责两次大型环境灾难——2006年的普鲁德霍油油泄漏事故和2010年的墨西哥湾溢油事件，以及一起重大工业事故——2005年的德克萨斯市炼油厂爆炸。相比之下，宜家（IKEA）在2007年被指控采购非法木材。然而，公司的形象似乎并未受到这一丑闻的影响，且宜家似乎拥有良好的声誉，这从《福布斯》杂志发布的2009年“世界最受尊敬企业”排名中得到了证明。
 
 选择两家截然不同的公司，其目的是揭示公司运营的特定环境与在构建企业身份时所采用的话语策略之间存在的关系。然而，考虑到上述差异，我们可以合理地推断BP和宜家的话语策略将有所不同，但很难先验地预测具体会在哪些方面产生差异。本文分析方法的主要目标在某种意义上是探索性的：即描述并理解在社会报告的介介下，公司与公众之间特定语境的话语互动中“评价”（Appraisal）的作用。
@@ -3612,8 +3428,12 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 
 测试1得到的几率修正一致性系数 k = 0.51，根据 Landis 和 Koch (1977) 的标准，被解释为“中等”。测试2得到 k = 0.62 的值，表明达到了“显著”水平的一致性。后者得分由于经过更仔细且深入的标注员培训，可以被视为对该任务中能达到的编码者一致性水平更可信的评估。
 
+
+
 对于“介入”（Engagement）的分析，汇集了两组潜在标记，并调整并整合了 Bifer 和 Fine (1989) 提供的确定性和怀疑标记列表。这两份列表用于通过自动程序过滤文本，该程序会检测并打印标记的计数。随后在语料库中对标记进行了人工检查，以消除歧义，并排除那些并非以主观意义使用的标记 (Akkaya 等，2009；Wiebe 等，2005)。示例 (14) 显示了这种歧义性：即表达观点或信念。
+
 - (14) 正如联合国粮组织所示，森林砍伐的主要原因不是生物燃料。
+
 - (b) 在家里、工作和娱乐时如何节省能量的事实。
 
 在第一个示例中，show 以其主观意义表示“展示”，证明信息高度可靠并作为对后续主张的支持；在示例 (b) 中，同一个词以其客观意义表示“显示”、“使……可见”，而不是一种介入手段。
@@ -3627,22 +3447,28 @@ Laine（2005）指出，尽管报告公司似乎对可持续发展充满热情�
 ## 表3. 态度子类型
 
 | | 情感 (Affect) | 判定 (Judgment) | 效果 (Effect) |
-|---|---|---|---|---|
+|---|---|---|---|
 | BP | 2.63 | 2.32 | 54.80 | 1.55 | 32.51 |
 | 宜家 | 8.64 | 2.19 | 49.88 | 0.49 | 32.00 | 6.81 |
 
 $^a$ 实例总数的百分比
+
 $^b$ $\chi^2=28.0, df=5, p<0.01$
 
 表3显示，BP报告中的正面“判定”实例更多，而宜家报告中的正面“效果”实例更频繁。两个文本中评价类型的分布反映了不同公司对自身特质的侧重点不同。一方面，BP 持续使用评价性语言来强调其技术优势和专业知识，如 (15) 和 (16)：
+
 - (15) 应用于新语境的技能，如我们的业务和在利比亚的探索。
+
 - (16) 加油砂。
 
 宜家比对手更频繁地表现情感，如 (17) 和 (18)：
+
 - (17) 我们希望与对环境负责的供应商合作。
+
 - (18) 关注气候变化并希望减少所有运营方面的碳排放。
 
 情感语言的频繁使用可以宜家试图与观众建立共情。通过表达愿心和关注，宜家与读者产生共鸣并寻求与他们建立情感共同基础。一个突出的例子是 (19) 中动词 hate 后接感叹号：
+
 - (19) 在宜家，我们讨厌浪费！这就是我们利用每一个机会将其转化为其他产品的原因。
 
 如果我们插入出现频率最高的“作者情感”（即第一人称表达的情绪倾向）和“自我判定”（即公司对自身属性和行为的直接评价），那么 BP 对性能的强调与宜家的同情态度之间的区别是显而易见的。从表4可以得出，BP 的技术水平和创新的领导力是其特征。
@@ -3677,14 +3503,14 @@ $^b$ $\chi^2=28.0, df=5, p<0.01$
 | confidence (信心) | 0.08 | 1.01 | | PERSISTENT (坚持的) | 0.07 | 0.84 |
 
 $^a$ 作者实例
+
 $^b$ 每千字出现次数
+
 $^c$ 占实例总数的百分比
+
 *$ 粗体：突出技能和技术专业知识的评价项目
+
 $\dagger$ 小型大写字母：强调决心和韧性的评价项目
-
-
-
-
 
 ## 构建负责任的企业形象 221
 
@@ -3713,7 +3539,7 @@ $\dagger$ 小型大写字母：强调决心和韧性的评价项目
 ## 表 5 态度。比较标记^a
 
 | 比较级 | 最高级 |
-| :--- | :--- | :--- |
+| :--- | :--- |
 | BP | 3.86 | 4.17 |
 | IKEA | 14.36 | 2.67 |
 
@@ -3766,6 +3592,7 @@ $\dagger$ 小型大写字母：强调决心和韧性的评价项目
 | | 必要情态 | 0.45 | 2.11 |
 
 + $^{a}$ 每千词出现次数
+
 ^*$ $p < 0.001$
 
 对频率列表的进一步完善了画面，并证明了 BP 和宜家报告之间的其他差异。*show* 和 *see* 在宜家的动词列表中排名最高。虽然 *show* 的频率在宜家中略高，但 *see* 从未被 BP 作为证据标记使用。在英语中，正如 Chafe (1986:267) 所出的，直接感官证据意味着高可靠性，因此收缩了对话交互的空间。在宜家的文中，该动词被一致地引入关于进展的正面评价陈述，如 (30) 所示：
@@ -3795,10 +3622,6 @@ $\dagger$ 小型大写字母：强调决心和韧性的评价项目
 频繁使用动词 *see* 来报告供应商的行为信息，伴随着必要情态的频繁使用。特别是为了代他们被期望遵守的义务和责任（表 9）。例如，考虑 (31)：
 
 (31) 宜家食品供应商必须遵守我们行为准则 IWAY 中的要求，还必须遵守向 IWAY 供应商指定的特定行业相关要求。
-
-
-
-
 
 # 表 9. 娱乐的标记
 
@@ -3851,6 +3674,7 @@ $\dagger$ 小型大写字母：强调决心和韧性的评价项目
 通过考察位于节点 will 右侧第一个位置的动词共连（表 10），我们注意到，在 IKEA 报告中，will 后面更频繁地跟随积极连接的动词（help, benefit, contribute, enhance, support, improve），而在 BP 报告中，它引导的是更多中性的性的动词。IKEA 报告中的预测似乎大多与公司决策或行动的预期结果有关，如示例 (32) 和 (33) 所示：
 
 - (32) 我们正在开发许多工具，这些工具将帮助我们的客户更容易将车留在家里。
+
 - (33) 大约 1000 万儿童从 IKEA 社交倡议支持的计划中受益。
 
 另一方面，BP 经常对能源供应未来、能源市场未来趋势和政策问题做出客观的技术性预测。例如，考虑 (34)-(36)：
@@ -3863,6 +3687,8 @@ $\dagger$ 小型大写字母：强调决心和韧性的评价项目
 
 (36) 化石燃料将在继续满足能源挑战方面发挥主要作用，为 BP 的核心业务提供持续的角色。
 
+
+
 Fairclough (2003) 强调了（认知）情态选择、话语中表现不同程度的确定性或不确定性以及身份构建过程所起的重要作用。作者认为，“情态在身份的纹理中非常重要，无论是个人身份（‘性格’）还是社会身份，因为你所承诺的内容是你所身份的重要组成部分”（Fairclough 2003:166）。在讨论情态对话语身份构建的影响时，作者研究了预测的案例。他认为，关于未来的真实陈述是管理学大师、政治家和政府话语的一个显著特征。根据作者的观点，这些社会群体“部分通过行使[预测]的力量来认同自己”（Fairclough 2017:167）。令人惊讶的是，上述报告中的预测往往集中在集团首席执行官被作为专家和战略领袖直接引用的子章节（34–35）。从这个角度来看，BP 报告中频繁的技术预测可以看作是建立并维护公司在与能源行业未来相关事务上权威的尝试，这反过来可以转化为对决策过程的影响和控制。一个例子是关于加拿大油砂开采的争议，其对环境的严重影响引起了广泛批评。在面对这一问题时，BP 的首席执行官（GCE）反应如下：
 
 (37) 世界需要油砂中的石油吗？我们估计未来能源需求将大幅增加。
@@ -3870,10 +3696,6 @@ Fairclough (2003) 强调了（认知）情态选择、话语中表现不同程�
 首席执行官的预测被用于……正如上文所述（此处原文不完整，此处根据逻辑翻译）……
 
 （注：由于提供的文本在部分处存在断句或重复，以上翻译严格遵循原文结构）
-
-
-
-
 
 评价理论与语料语言学方法。本文呈现的分析表明，评价（Appraisal）是企业社会责任报告语言中的一个重要方面，这对于企业身份的构建以及公司与利益相关者之间关系的话语协商具有重要意义。结果似乎表明，在不同语境下运营的不同公司，在部署评价资源方面确实存在差异。BP 公司和宜家（IKEA）对评价资源的使用可以解释为对公众关注的回应，以及试图与其利益相关者建立良好关系的尝试。从方法论的角度来看，本研究寻求与 Äbel 和 Reppen (2008) 一起证实，话语分析和语料工具可以有效结合，以对语言现象进行更深层次的实证性理解，确保“关于体裁和话语的陈述有参考数据支持其依据”（Boni 2008: 35）。
 
@@ -3885,16 +3707,16 @@ Fairclough (2003) 强调了（认知）情态选择、话语中表现不同程�
 
 ## 注释
 
-- 1 两文本均可从公司网站上负责社会责任的板块免费下载：www.BP.com; www.IKEA.com。
-- 2 来源：2011年《金融时报》全球500强排名。http://media.ft.com/cms/33558890-98d4-11e0-bd66-00144feab49a.pdf [访问日期：2012年6月7日]
-- 3 http://www.reuters.com/article/idUS0861625720080108
+- 1 两文本均可从公司网站上负责社会责任的板块免费下载：`www.BP.com`; `www.IKEA.com`。
+- 2 来源：2011年《金融时报》全球500强排名。`http://media.ft.com/cms/33558890-98d4-11e0-bd66-00144feab49a.pdf` [访问日期：2012年6月7日]
+- 3 `http://www.reuters.com/article/idUS0861625720080108`
 - 4 值得注意的是，此处分析的报告是在墨西哥湾溢油事故发生之前发布的。因此，该事件与本文分析没有直接关系。
-- 5 http://www.csb.gov/investigations/detail.aspx?SID=20
-- 6 http://www.washington.com/wp-dyn/content/article/2007/03/31/AR2007033110127.html
-- 7 http://www.forbes.com/2009/05/06/reputable-companies-leadership-reputation-table.html
+- 5 `http://www.csb.gov/investigations/detail.aspx?SID=20`
+- 6 `http://www.washington.com/wp-dyn/content/article/2007/03/31/AR2007033110127.html`
+- 7 `http://www.forbes.com/2009/05/06/reputable-companies-leadership-reputation-table.html`
 - 8 在提到这两个文本时我使用“语料库”（corpus）一词。
-- 9 词性标记是通过 Treetagger 完成的，这是一种由 Helmut Schmid 开发的用于对文本进行词性和词元信息自动标注的工具。网址：http://www.ims-stuttgart.de/projekte/complex/TreeTagger/
-- 10 使用在线行选择器来选择用于编码员间一致性文本的段落。网址：http://textmechanic.com/Random-Line-Picker.html
+- 9 词性标记是通过 `Treetagger` 完成的，这是一种由 Helmut Schmid 开发的用于对文本进行词性和词元信息自动标注的工具。网址：`http://www.ims-stuttgart.de/projekte/complex/TreeTagger/`
+- 10 使用在线行选择器来选择用于编码员间一致性文本的段落。网址：`http://textmechanic.com/Random-Line-Picker.html`
 - 11 测试专门关注态度项的识别。标注员被要求仅在文中标记显性的态度实例，并留空其他标记（tokens）不标记。分配给文本项的两个分类值为“评价性”（evalative）和“非评价性”（non-evaluative）。
 
 本文讨论的部分数据和图表最初于：Fuoli, Matteo. 2012. 评估社会责任：BP 和宜家社会报告中评价的定量分析。Discourse & Communication 6(1). 55–81，由 SAGE Publications Ltd. 出版。保留所有权利。©。此感谢适用于本文贡献的所有打印和电子副本。
@@ -3926,13 +3748,9 @@ Fairclough (2003) 强调了（认知）情态选择、话语中表现不同程�
 - Hunston, S. (2004), ‘计算不可数词：文本和语料库中识别评价的问题’, in: Partington, A., J. Morley and Harman, L (eds.) 语料库与话语。New York: Peter Lang. 157-188.
 - Hyland, K. (1996), ‘写作缺乏信心？科学研究文章中的婉语气’, Applied linguistics, 17(4): 433-454.
 
-
-
-
-
 ## 234 Matteo Fuoli
 
-Lischinsky, A. (2010), ‘可持续性的挣扎：一种针对可持续发展管理概念的语料库方法’，发表于2010年跨学科话语分析批判性方法会议，2010年9月13-15日，波兰罗德兹。摘要可见于：http://cadaad.net/files/downloads/cadaad_book_of_abstracts.pdf（2012年11月21日访问）。
+Lischinsky, A. (2010), ‘可持续性的挣扎：一种针对可持续发展管理概念的语料库方法’，发表于2010年跨学科话语分析批判性方法会议，2010年9月13-15日，波兰罗德兹。摘要可见于：`http://cadaad.net/files/downloads/cadaad_book_of_abstracts.pdf`（2012年11月21日访问）。
 
 Livesy, S. (2002), ‘中间地带的话语’，《管理交流季度》，15(3): 313。
 
@@ -3946,7 +3764,7 @@ Martin, J. (2000), ‘超越评价：英语中的评价性表达’收录于Huns
 
 Martin, J. and P. White (2005), 《评价的语言：英语中的评价理论》。伦敦与纽约：麦克锡出版社。
 
-Milne, M., K. Kearnis and S. Walton (2005), ‘玩转幻灯片：新西兰可持续发展委员会与企业三底线报告’收录于亚太会计跨学科研究会议论文集，新加坡，7月4-6日。http://otagaro.ourarchive.nz/bitstream/handle/10523/1556/PLAYING_WITH_MAGIC_LANTERNS.pdf（2012年11月21日访问）。
+Milne, M., K. Kearnis and S. Walton (2005), ‘玩转幻灯片：新西兰可持续发展委员会与企业三底线报告’收录于亚太会计跨学科研究会议论文集，新加坡，7月4-6日。`http://otagaro.ourarchive.nz/bitstream/handle/10523/1556/PLAYING_WITH_MAGIC_LANTERNS.pdf`（2012年11月21日访问）。
 
 Neu, D., H. Warsame and K. Pedwell (1998), ‘管理公共形象：年度报告中的环境披露’，《会计、组织与社会》，23(3): 265–282。
 
@@ -3960,7 +3778,7 @@ Skulstad, A. (2005), ‘新体裁引言部分中元话语的使用’，《国�
 
 Skulstad, A. (2008), ‘塑造绿色形象’收录于Wadak, R. and V. Koller (编).《公共领域传播手册》。De Gruyter Mout。第 181–201 页。
 
-White, P. (2001), 《评价理论导论（文字版）》，http://www.grammatics.com/appraisal. [2011年5月18日访问]。
+White, P. (2001), 《评价理论导论（文字版）》，`http://www.grammatics.com/appraisal`. [2011年5月18日访问]。
 
 Whitelaw, C., N. Garg and S. Argamon (2005), ‘将评价组用于情感分析’收录于第14次ACM信息与知识管理国际会议论文集。ACM. 625-631。
 
@@ -3985,11 +3803,8 @@ Natassia Schutz
 更准确地说，EGAP关注的是各学科通用的通用学术语言，而ESAP关注的是特定学科的语言（Jordan 1989: 151）。
 
 ![img/6910650ad69df72c96af744_0.png]
+
 图1. 通用目的英语对比专门目的英语（Blue 1988）
-
-
-
-
 
 # 学术英语（EAP）的特定性有多大？
 
@@ -4016,19 +3831,21 @@ Vongpumivitch 等人（2009）对于学术英语（EAP）共性与特殊性的�
 | 医学 (Medicine) | 196 | 977,220 |
 | 总计 | 421 | 3,035,510 |
 
-如前所述，我关注出现在 LOCRA 中的词性动词词干。为了同时分析动词类型和词形（tokens），三个子语料库均使用 WMatrix（Rayson 2009）并结合成分似然性自动词性标记系统（CLAWS7）（Gardside and Smith 1997）进行了词干化和词性标注。由于目标包含每个动词形式的不同性标记（例如，基础形式为 VV，过去式为 VVD），因此应用了 Perl 程序处理 CLAWS 输出，以简化这些动词标记并将它们合并为单一 VV 标记（参见 Granger and Paquet 2009a）。
+
+
+如前所述，我关注出现在 `LOCRA` 中的词性动词词干。为了同时分析动词类型和词形（tokens），三个子语料库均使用 `WMatrix`（Rayson 2009）并结合成分似然性自动词性标记系统（`CLAWS7`）（Gardside and Smith 1997）进行了词干化和词性标注。由于目标包含每个动词形式的不同性标记（例如，基础形式为 `VV`，过去式为 `VVD`），因此应用了 `Perl` 程序处理 `CLAWS` 输出，以简化这些动词标记并将它们合并为单一 `VV` 标记（参见 Granger and Paquet 2009a）。
 
 ### 2.2 词汇提取方法
 
-为了识别 LOCRA 中使用的学术动词，我探索并结合了两种此前作为各种列表基础的词汇提取方法：(1) 基于统计分析的特征法（Scott 1997）（例如：学术词汇列表、Paquet 2010；跨学科科学词汇、Drouin 2010）以及 (2) 主要基于相对频率分析的总频率分析（例如：通用列表、West 1957；大学词汇列表、Xue and Nation 1984；学术词汇列表、Coxhead 2000）。第 2.2.1 节和 2.2.2 节描述了这两种方法以及产生的不同类型的结果。
+为了识别 `LOCRA` 中使用的学术动词，我探索并结合了两种此前作为各种列表基础的词汇提取方法：(1) 基于统计分析的特征法（Scott 1997）（例如：学术词汇列表、Paquet 2010；跨学科科学词汇、Drouin 2010）以及 (2) 主要基于相对频率分析的总频率分析（例如：通用列表、West 1957；大学词汇列表、Xue and Nation 1984；学术词汇列表、Coxhead 2000）。第 2.2.1 节和 2.2.2 节描述了这两种方法以及产生的不同类型的结果。
 
 #### 2.2.1 特征分析
 
-为了识别出现在 LOCRA 中的特征动词，我复制了 Granger 和 Paquet 在通用学术动词研究（2009a）中使用的方法。然而，虽然他们的研究只关注核心的 EAP 特征动词，但我使用了相同的方法来分析出现在 LOCRA 中所有的特征动词。
+为了识别出现在 `LOCRA` 中的特征动词，我复制了 Granger 和 Paquet 在通用学术动词研究（2009a）中使用的方法。然而，虽然他们的研究只关注核心的 `EAP` 特征动词，但我使用了相同的方法来分析出现在 `LOCRA` 中所有的特征动词。
 
-特征分析包括提取所有“在给定文本中与参考语料库相比出现频率异常”的单词（Scott 2001: 236）。换句话说，该方法的目标是通过识别在该特定语料库中频率显著高于参考语料库的单词，生成一个给定语料库的典型单词列表。在本文中，该方法用于识别可以被视为典型学术英语的动词。通过一个由虚构写作（fiction writing）构成的“强对比参考语料库”（Tribble 2001: 396），我将三个小说子语料库与婴儿英国国家语料库（Baby British National Corpus）中 10 亿词的小说子语料库对比，理由是典型的 EAP 动词在该参考语料库中的出现频率不会如此高（Granger and Paquet 2009a）。
+特征分析包括提取所有“在给定文本中与参考语料库相比出现频率异常”的单词（Scott 2001: 236）。换句话说，该方法的目标是通过识别在该特定语料库中频率显著高于参考语料库的单词，生成一个给定语料库的典型单词列表。在本文中，该方法用于识别可以被视为典型学术英语的动词。通过一个由虚构写作（fiction writing）构成的“强对比参考语料库”（Tribble 2001: 396），我将三个小说子语料库与婴儿英国国家语料库（`Baby British National Corpus`）中 10 亿词的小说子语料库对比，理由是典型的 `EAP` 动词在该参考语料库中的出现频率不会如此高（Granger and Paquet 2009a）。
 
-具体来说，三个子语料库中的每一个都被提交给 WordSmith Tools 5 列表（Scott 2008）。该程序为每个子语料库生成了一个特征列表。这三个列表经过人工编辑，以创建特征动词列表。生成的动词列表进行了清理，删除了被 WMatrix 错误标记为动词的词汇。
+具体来说，三个子语料库中的每一个都被提交给 `WordSmith Tools 5` 列表（Scott 2008）。该程序为每个子语料库生成了一个特征列表。这三个列表经过人工编辑，以创建特征动词列表。生成的动词列表进行了清理，删除了被 `WMatrix` 错误标记为动词的词汇。
 
 在观察特征分析产生的动词类型时（见表 3），发现该方法提取了大量的学术动词（可能是跨学科的），以及较少的特定学科动词。表 3. 学术动词列表
 
@@ -4044,7 +3861,7 @@ Vongpumivitch 等人（2009）对于学术英语（EAP）共性与特殊性的�
 | 8 | | | |
 | 9 | | | |
 | 10 | | | |
-| ... | ... | ... | ...
+| ... | ... | ... | ... |
 | 200 | COOPER | RELY | |
 | 201 | OUTSOURCE | REFLECT | |
 | 202 | IMPLEMENT | | |
@@ -4060,9 +3877,9 @@ Vongpumivitch 等人（2009）对于学术英语（EAP）共性与特殊性的�
 
 #### 2.2.2 频率分析
 
-相对频率的分析允许识别语料库中最频繁使用的动词。为了识别学术动词，我对三个子语料库使用了 WordSmith Tools 5 程序（Scott 2008）。该程序为每个子语料库生成了频率动词列表。生成的动词列表经过人工编辑，以与非学术动词区分开来。这种方法提取了大量的可能是跨学科的动词以及较少的特定学科动词。
+相对频率的分析允许识别语料库中最频繁使用的动词。为了识别学术动词，我对三个子语料库使用了 `WordSmith Tools 5` 程序（Scott 2008）。该程序为每个子语料库生成了频率动词列表。生成的动词列表经过人工编辑，以与非学术动词区分开来。这种方法提取了大量的可能是跨学科的动词以及较少的特定学科动词。
 
-表 4. LOCRA 中的高频动词
+表 4. `LOCRA` 中的高频动词
 
 | | BUS | LING | MED | FICTION |
 | :--- | :--- | :--- | :--- | :--- |
@@ -4073,23 +3890,20 @@ Vongpumivitch 等人（2009）对于学术英语（EAP）共性与特殊性的�
 | 百比 | 80% | 80% | 80% | 80% |
 | 词形总数 | 100,089 | 95,018 | 78,973 | 132,979 |
 
-在本研究中，我选择了总数的 80% 作为截止点来识别高频动词。这意味着占据 80% 词形的动词被认为是高频的。将从 LOCRA 获得的结果与参考语料库进行对比时发现，为了达到 80% 的覆盖率，LOCRA 需要的动词类型比例比小说高（LOCRA：在 10.3% 到 11.6% 之间）。换句话说，这意味着小说使用了比 LOCRA 中识别出的更频繁的高频动词类型，因为达到 80% 时需要的词类型比例较小。
+在本研究中，我选择了总数的 80% 作为截止点来识别高频动词。这意味着占据 80% 词形的动词被认为是高频的。将从 `LOCRA` 获得的结果与参考语料库进行对比时发现，为了达到 80% 的覆盖率，`LOCRA` 需要的动词类型比例比小说高（`LOCRA`：在 10.3% 到 11.6% 之间）。换句话说，这意味着小说使用了比 `LOCRA` 中识别出的更频繁的高频动词类型，因为达到 80% 时需要的词类型比例较小。
 
-对 LOCRA 的三个子语料库进行对比显示，语言学达到 80% 覆盖率时需要的动词比例小于其他两个学科，这表明语言使用了比商学和医学识别出的更频繁的高频动词。这种差异在
-
-
-
+对 `LOCRA` 的三个子语料库进行对比显示，语言学达到 80% 覆盖率时需要的动词比例小于其他两个学科，这表明语言使用了比商学和医学识别出的更频繁的高频动词。这种差异在
 
 244 Natassia Schutz
 
 频率表明，语言学可能会使用一些在另外两个子语料库中未使用的高频动词。
 
-LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关键性分析（keyness analysis）识别出的动词（例如 suggest, develop 或 compare）（见表5）。在这些动词旁边，还有许多未被关键性法识别的其他高频动词，如 say, make, see, take, find, give 和 seem（见表5中加粗的动词）。由于动词在小说参考语料库中出现非常频繁，显然它们被关键性法忽略了；由于关键性法的作用是提取在给定语料库中比参考语料库频率显著更高的单词，因此，在两个语料库中都是高频的词没有被纳入考虑。
+`LOCRA` 三个子语料库频率列表中出现的大量动词似乎是通过关键性分析（keyness analysis）识别出的动词（例如 suggest, develop 或 compare）（见表5）。在这些动词旁边，还有许多未被关键性法识别的其他高频动词，如 say, make, see, take, find, give 和 seem（见表5中加粗的动词）。由于动词在小说参考语料库中出现非常频繁，显然它们被关键性法忽略了；由于关键性法的作用是提取在给定语料库中比参考语料库频率显著更高的单词，因此，在两个语料库中都是高频的词没有被纳入考虑。
 
-表 5. LOCRA 和小说中的前20 个动词（RF = 相对频率/1000 词）
+表 5. `LOCRA` 和小说中的前20 个动词（`RF` = 相对频率/1000 词）
 
 | N | 动词 | RF | 动词 | RF | 动词 | RF | 小说动词 | RF |
-|---|---|---|---|---|---|---|---|-|
+|---|---|---|---|---|---|---|---|---|
 | 1 | USE | 2.28 | | 2.35 | | 2.96 | SAY | 6.72 |
 | 2 | SUGGEST | 1.48 | SEE | 1.82 | SHOW | 2.24 | | 3.62 |
 | 3 | FIND | 1.47 | SHOW | 1.52 | COMPARE | 1.40 | GO | 3.39 |
@@ -4106,13 +3920,13 @@ LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关�
 | 14 | INDICATE | 0.78 | CONSIDER | 0.67 | OBSERVE | 0.72 | FEEL | 1.26 |
 | 15 | INFLUENCE | 0.75 | INVOLVE | 0.64 | EXPRESS | 0.69 | FIND | 1.26 |
 
-脱离语境，这些动词与学术英语（EAP）并不十分相关。为了评估 find 和 make 等动词是否具有学术用途，从而对 EAP 学习者具有意义，利用 SketchEngine 的 WordSketch 选项对 find 和 make 的短语用法进行了一项初步研究（Kilgarriff et al. 2004）。该程序能够提取“自动基于语料库的单词语法和搭配行为的摘要”（同上）。换句话说，该程序使用统计学 logDice 指标，
+脱离语境，这些动词与学术英语（`EAP`）并不十分相关。为了评估 find 和 make 等动词是否具有学术用途，从而对 `EAP` 学习者具有意义，利用 `SketchEngine` 的 `WordSketch` 选项对 find 和 make 的短语用法进行了一项初步研究（Kilgarriff et al. 2004）。该程序能够提取“自动基于语料库的单词语法和搭配行为的摘要”（同上）。换句话说，该程序使用统计学 logDice 指标，
 
 ## 学术英语的特定性有多强？
 
-自动提取特定节点的搭配词，并根据语法功能进行排序。结果显示 find 和 make 具有 EAP 的短语模式，证明了它们因此应该被纳入 EAP 动词列表中。表 6 提供了小说中 find 和 make 的搭配汇总；find + correlation（示例 1 到 3）和 make + contribution（示例 4 到 6）在语境中的也表明，这些高频动词在 LOCRA 的三个学科中可能具有相同的模式和含义。
+自动提取特定节点的搭配词，并根据语法功能进行排序。结果显示 find 和 make 具有 `EAP` 的短语模式，证明了它们因此应该被纳入 `EAP` 动词列表中。表 6 提供了小说中 find 和 make 的搭配汇总；find + correlation（示例 1 到 3）和 make + contribution（示例 4 到 6）在语境中的也表明，这些高频动词在 `LOCRA` 的三个学科中可能具有相同的模式和含义。
 
-表 6. 小说和 LOCRA 中 find 和 make 的搭配
+表 6. 小说和 `LOCRA` 中 find 和 make 的搭配
 
 | 搭配词 | FIND | MAKE |
 |---|---|---|
@@ -4120,12 +3934,12 @@ LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关�
 | 宾语 | corpse, job, pot, place, something, money, seat, reason, work, woman | correlation, effect, difference, evidence, result | love, noise, money, tea, gesture, note, call, use, judgment, observation |
 | 主语 | somebody, people, man, research(er), study | someone, woman, man, study |
 
-- (1) LOCRA BUS ... 发现跨文化培训与表现之间存在正相关性。
-- (2) LOCRA LING 也发现了负相关性。
-- (3) LOCRA MED 我们发现。
-- (4) LOCRA BUS 这做出了重要的贡献。
-- (5) LOCRA LING 我们发现。
-- (6) LOCRA MED 这。
+- (1) `LOCRA BUS` ... 发现跨文化培训与表现之间存在正相关性。
+- (2) `LOCRA LING` 也发现了负相关性。
+- (3) `LOCRA MED` 我们发现。
+- (4) `LOCRA BUS` 这做出了重要的贡献。
+- (5) `LOCRA LING` 我们发现。
+- (6) `LOCRA MED` 这。
 
 ## 3. 结果
 
@@ -4138,18 +3952,16 @@ LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关�
 表 7. 合并关键列表和频率列表
 
 | BUS | LING | MED |
-|---|---|---|---|
+|---|---|---|
 | 关键动词 | 高频动词 | 关键动词 | 高频动词 | 关键动词 | 高频动词 |
 | 289 | 300 | 277 | 333 | 240 | 269 |
-
 | 重叠: 203 | 重叠: 209 | 重叠: 185 |
-
 | 最终 BUS | 最终 LING | 最终 MED |
 |---|---|---|
 | 学术动词列表 | 学术列表 | 学术列表 |
 | 386 | 401 | 324 |
 
-表 8. LOCRA 中的学术动词
+表 8. `LOCRA` 中的学术动词
 
 | | | LING | MED |
 |---|---|---|---|
@@ -4160,19 +3972,15 @@ LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关�
 | | | 84.4% | 83.6% | 83% |
 | 动词标记总数 | 100,089 | 95,018 | 78,973 |
 
-## 3.2 LOCRA 学术动词的分布
+## 3.2 `LOCRA` 学术动词的分布
 
-为了更好地理解 EGAP 和 ESAP 动词在 LOCRA 中代表什么，必须对本文识别的所有学术动词的分布进行两种不同的分析方法。首先，为了区分潜在的 EGAP 动词（即三个学科共有且可能在学科间具有相似用法的动词）和 ESAP 动词（即学科特定的动词），需要对学术动词列表进行比较，以识别哪些词出现在三个学科中，哪些出现在两个学科，哪些仅出现在一个学科中（3.2.1 节）。只有在进行了这种一般的分布分析之后，才能衡量 EGAP 和 ESAP 动词在每个学科中的权重（即占动词类型和标记总数的比例）（3.2.2 节）。
-
-
-
-
+为了更好地理解 `EGAP` 和 `ESAP` 动词在 `LOCRA` 中代表什么，必须对本文识别的所有学术动词的分布进行两种不同的分析方法。首先，为了区分潜在的 `EGAP` 动词（即三个学科共有且可能在学科间具有相似用法的动词）和 `ESAP` 动词（即学科特定的动词），需要对学术动词列表进行比较，以识别哪些词出现在三个学科中，哪些出现在两个学科，哪些仅出现在一个学科中（3.2.1 节）。只有在进行了这种一般的分布分析之后，才能衡量 `EGAP` 和 `ESAP` 动词在每个学科中的权重（即占动词类型和标记总数的比例）（3.2.2 节）。
 
 ### 3.2.1 跨学科分布
 
-在将三个学术动词列表合并后，LOCRA 中总共有 609 个学术动词。总体分布分析结果显示，这些学术动词中，29% 被三个学科共同使用，24.3% 被两个学科共有，而 46.6% 是学科特定的（见表 9）。
+在将三个学术动词列表合并后，`LOCRA` 中总共有 609 个学术动词。总体分布分析结果显示，这些学术动词中，29% 被三个学科共同使用，24.3% 被两个学科共有，而 46.6% 是学科特定的（见表 9）。
 
-表 9. LOCRA 学术动词的通用的分布
+表 9. `LOCRA` 学术动词的通用的分布
 
 | 学术动词 | 示例 | 动词数量 | 比例 |
 | --- | --- | --- | --- |
@@ -4187,86 +3995,96 @@ LOCRA 三个子语料库频率列表中出现的大量动词似乎是通过关�
 
 表 9 还显示，语言学和商务是共享学术动词最多的学科。除了三个学科共有的 177 个动词外，语言学和商务还共享最少的 107 个学术动词。相比之下，医学学科最少（与商务共有 23 个，与语言学共有 18 个），且拥有最多的学科特定动词。
 
-如果我们放大观察，在 177 个动词中，有 141 个被关键性分析识别出来（见表 10 中普通格式的动词），36 个得益于相对频率分析（见表 10 中加粗的动词）。快速查看这 36 个高频动词发现，它们大部分需要在语文中呈现，因为它们与 EGAP 的相关性并不显而易见（例如 carry, find, gain, make 或 take）。这一点将在 4 节进一步阐述。尽管如此，可能的 EGAP 动词列表说明了关键性分析与相对频率分析是如何完美互补的，因为相对频率分析捕捉到了许多具有典型 EGAP 用法但未被关键性分析捕捉到的高频动词（例如 to carry out a study, to find a correlation, to gain insights 或 to take into account）。
+如果我们放大观察，在 177 个动词中，有 141 个被关键性分析识别出来（见表 10 中普通格式的动词），36 个得益于相对频率分析（见表 10 中加粗的动词）。快速查看这 36 个高频动词发现，它们大部分需要在语文中呈现，因为它们与 `EGAP` 的相关性并不显而易见（例如 carry, find, gain, make 或 take）。这一点将在 4 节进一步阐述。尽管如此，可能的 `EGAP` 动词列表说明了关键性分析与相对频率分析是如何完美互补的，因为相对频率分析捕捉到了许多具有典型 `EGAP` 用法但未被关键性分析捕捉到的高频动词（例如 to carry out a study, to find a correlation, to gain insights 或 to take into account）。
 
 学术英语有多特殊性？
 
-表 10. 潜在的 EGAP 动词列表（关键性 + 高频动词）
+表 10. 潜在的 `EGAP` 动词列表（关键性 + 高频动词）
 
 ACCOUNT, ACHIEVE, ACQUIRE, ACT, ADD, ADDRESS, AFFECT,
+
 ALLOW, ANALYZE, APPEAR, APPLY, ASK, ASSESS, ASSIGN,
+
 ASSOCIATE, ASSUME, ATTRIBUTE, BASE, BECOME, BEGIN,
+
 BELIEVE, CALCULATE, CARRY, CATEGORIZE, CAUSE, CHANGE,
+
 CHARACTERIZE, CHOOSE, CLASSIFY, COLLECT, COMBINE,
+
 COMPARE, COMPLETE, COMPRISE, CONFIRM, CONDUCT,
+
 CONSIDER, CONSIST, CONSTITUTE, CONSTRUCT, CONTAIN,
+
 CONTINUE, CONTRIBUTE, CONTROL, CORRELATE,
+
 CORRESPOND, DEFINE, DEMONSTRATE, DENOTE,
+
 DEPEND, DEPICT, DERIVE, DESCRIBE, DESIGN, DIVIDE,
+
 DETERMINE, DEVELOP, DIFFER, DIFFERENTATE, DISTINGUISH,
+
 DOCUMENT, ELIMINATE, ENHANCE, ENTER, ESTABLISH,
+
 ESTIMATE, EVALUATE, EXCLUDE, EXHIBIT, EXPECT,
+
 EXPERIENCE, PLAIN, EXPRESS, EXTEND,
+
 FACILITATE, FAIL, FAVOR, FIND, FOCUS, FOLLOW, FORM, GAIN,
+
 GENERATE, GIVE, HYPOTHESIZE, IDENTIFY, IMPLEMENT,
+
 IMPROVE, INCLUDE, INCORPORATE, INCREASE, INDICATE,
+
 INFLUENCE, INITIATE, INTERACT, INTERPRET, INVESTIGATE,
+
 INVOLVE, KNOW, LACK, LEAD, LIMIT, LINK, LIVE, LOCATE,
-LOSE, MAINTAIN, MAKE, MEASURE, MEAN, MEET, MODEL,
-MODIFY, NEED, NOTE, OBTAIN, OBSERVE, OCCUR,
-PARTICIPATE, PERFORM, PLACE, PLAY, PREDICT, PRESENT,
-PROCESS, PRODUCE, PROMOTE, PRODUSE, PUBLISH,
-RAISE, RANGE, REACH, RECEIVE, RECONIZE, REDUCE, REFER,
-REFLECT, REGULATE, RELATE, REMAIN, REPORT, REPRESENT,
-REQUIRE, RESPOND, RESULT, RETURN, REVEAL, REVIEW,
-SCORE, SEE, SEEK, SELECT, SERVE, SET, SHOW, SIGNAL,
-SPEND, START, STUDY, SUMMARIZE, SUPPORT,
-TAKE, TARGET, TEST, THINK, TREAT, UNDER,
-UNDERSTAND, USE, VARY, YIELD
+
+
+
+LOSE, MAINTAIN, MAKE, MEASURE, MEAN, MEET, MODEL, MODIFY, NEED, NOTE, OBTAIN, OBSERVE, OCCUR, PARTICIPATE, PERFORM, PLACE, PLAY, PREDICT, PRESENT, PROCESS, PRODUCE, PROMOTE, PRODUSE, PUBLISH, RAISE, RANGE, REACH, RECEIVE, RECONIZE, REDUCE, REFER, REFLECT, REGULATE, RELATE, REMAIN, REPORT, REPRESENT, REQUIRE, RESPOND, RESULT, RETURN, REVEAL, REVIEW, SCORE, SEE, SEEK, SELECT, SERVE, SET, SHOW, SIGNAL, SPEND, START, STUDY, SUMMARIZE, SUPPORT, TAKE, TARGET, TEST, THINK, TREAT, UNDER, UNDERSTAND, USE, VARY, YIELD
 
 ### 3.2.2 各学科内部分布
 
-既然已经识别出潜在的 EGAP 和 ESAP 动词，就可以衡量它们在 LOCRA 各学科中所占的比例。结果显示，在每个子语料库中，潜在的 EGAP 动词占学术类型总数的约 50%，而 ESAP 动词仅占 20% 到 33% 之间。
+既然已经识别出潜在的 `EGAP` 和 `ESAP` 动词，就可以衡量它们在 `LOCRA` 各学科中所占的比例。结果显示，在每个子语料库中，潜在的 `EGAP` 动词占学术类型总数的约 50%，而 `ESAP` 动词仅占 20% 到 33% 之间。
 
-图 2 和 3 显示，商务和语言学表现出相似的趋势：这两个学科中使用的潜在 EGAP 动词占学术动词总数的 45%，而 ESAP 动词在商务中仅占 20%，在语言学中占 25%。图 4 显示医学再次脱颖，它是 EGAP 和 ESAP 动词比例最大的学科，分别为 54% 和 33%。
+图 2 和 3 显示，商务和语言学表现出相似的趋势：这两个学科中使用的潜在 `EGAP` 动词占学术动词总数的 45%，而 `ESAP` 动词在商务中仅占 20%，在语言学中占 25%。图 4 显示医学再次脱颖，它是 `EGAP` 和 `ESAP` 动词比例最大的学科，分别为 54% 和 33%。
 
-## BUS (n=386)
+#### BUS (n=386)
 
 ![](img/6910650ad69df72c967df4c631af744d_256_0.png)
 
 图 2. 商务学科学术动词的分布
 
-## LING (n=401)
+#### LING (n=401)
 
 ![](img/6910650ad69df72c967df4c631af744d_256_1.png)
 
 图 3. 语言学学科学术动词的分布
 
-## 学术英语有多特殊性？
+### 学术英语有多特殊性？
 
-## MED (n=324)
+#### MED (n=324)
 
 ![](img/6910650ad69df72c967df4c631af744d_257_0.png)
 
 图 4. 语言学学科学术动词的分布（注：原文此处误，应为医学）
 
-学术英语有多特殊性？
+`EGAP` 和 `ESAP` 动词在各学科中所占的比例显示了非常有趣的结果。每个学科中 `EGAP` 和 `ESAP` 动词所占的比例显示，从表 11 可以看出，三个学科共有的动词占了 54%，而 `ESAP` 动词仅占 20% 到 33%。另一方面，医学学科是最少的（与商务共有 23 个，与语言学共有 18 个），且拥有最多的学科特定动词。
 
-EGAP 和 ESAP 动词在各学科中所占的比例显示了非常有趣的结果。每个学科中 EGAP 和 ESAP 动词所占的比例显示，从表 11 可以看出，三个学科共有的动词占了 54%，而 ESAP 动词仅占 20% 到 33%。另一方面，医学学科是最少的（与商务共有 23 个，与语言学共有 18 个），且拥有最多的学科特定动词。
+如果我们放大观察，在 177 个动词中，有 141 个动词被关键性分析识别出来（见表 10 中普通格式的动词），36 个得益于相对频率分析（见表 10 中加粗的动词）。快速查看这 36 个高频动词发现，它们大部分需要在语文中呈现，因为它们与 `EGAP` 的相关性并不显而易见（例如 carry, find, gain, make 或 take）。这一点将在 4 节进一步阐述。尽管如此，潜在的 `EGAP` 动词列表说明了关键性分析与相对频率分析是如何完美互补的，因为相对频率分析捕捉到了许多具有典型 `EGAP` 用法但未被关键性分析捕捉到的高频动词（例如 to carry out a study, to find a correlation, to gain insights 或 to take into account）。
 
-如果我们放大观察，在 177 个动词中，有 141 个动词被关键性分析识别出来（见表 10 中普通格式的动词），36 个得益于相对频率分析（见表 10 中加粗的动词）。快速查看这 36 个高频动词发现，它们大部分需要在语文中呈现，因为它们与 EGAP 的相关性并不显而易见（例如 carry, find, gain, make 或 take）。这一点将在 4 节进一步阐述。尽管如此，潜在的 EGAP 动词列表说明了关键性分析与相对频率分析是如何完美互补的，因为相对频率分析捕捉到了许多具有典型 EGAP 用法但未被关键性分析捕捉到的高频动词（例如 to carry out a study, to find a correlation, to gain insights 或 to take into account）。
+图 2 和 3 显示，商务和语言学表现出相似的趋势：这两个学科中使用的潜在 `EGAP` 动词占学术动词总数的 45%，而 `ESAP` 动词在商务中仅占 20%，在语言学中占 25%。图 4 显示医学再次脱颖，它是 `EGAP` 和 `ESAP` 动词比例最大的学科，分别为 54% 和 33%。
 
-图 2 和 3 显示，商务和语言学表现出相似的趋势：这两个学科中使用的潜在 EGAP 动词占学术动词总数的 45%，而 ESAP 动词在商务中仅占 20%，在语言学中占 25%。图 4 显示医学再次脱颖，它是 EGAP 和 ESAP 动词比例最大的学科，分别为 54% 和 33%。
-
-表 11. 潜在的 EGAP 动词
+表 11. 潜在的 `EGAP` 动词
 
 | | BUS | LING | MED |
 | --- | --- | --- | --- |
 | 学术类型 | 177 | 177 | 177 |
 | 比例 | 54% | 54% | 54% |
+
 （注：此处原文表11数据在正文中描述不完整，翻译基于正文逻辑，原文表格内容缺失，此处按结构逻辑保留）
 
-表 12. ESAP 动词
+表 12. `ESAP` 动词
 
 | | BUS | LING | MED |
 | --- | --- | --- | --- |
@@ -4275,22 +4093,15 @@ EGAP 和 ESAP 动词在各学科中所占的比例显示了非常有趣的结果
 
 ## 4. 深入研究 LOCRA 中使用的潜在 EGAP 动词
 
-对本研究识别的潜在 EGAP 动词列表进行更仔细的检查发现，许多动词与学术学科的核心相关，例如报告信息（如 explain, find, observe, show）、进行分析（如 analyze, calculate, hypothesize, investigate, measure, test）、描述或处理数据（如 collect, compare, explore, interpret, select）以及描述结果（characterize, demonstrate, indicate, occur, support, vary）。
+对本研究识别的潜在 `EGAP` 动词列表进行更仔细的检查发现，许多动词与学术学科的核心相关，例如报告信息（如 explain, find, observe, show）、进行分析（如 analyze, calculate, hypothesize, investigate, measure, test）、描述或处理数据（如 collect, compare, explore, interpret, select）以及描述结果（characterize, demonstrate, indicate, occur, support, vary）。
 
-学术英语特定学科支持者可能会认为，尽管这些动词通用，但它们会显示跨跨学科偏好，因此产生语义差异（Hyland and Tse 2007）。如果我们观察这些 EGAP 动词在 LOCRA 语文中的用法，发现某些动词在学科间显示出语义细微差别。然而，为了协调研究结果与学术英语的现实，正如 Granger 和 Paquet (2009a: 101) 所指出的，向学习者提供更通用的定义是至关重要的，因为这是英语教师“帮助二语学习者处理他们遇到的动词的各种用法”唯一方法（同上）。这就是为什么例如 *measure* 动词被描述为指的是“确定某物的尺寸、数量、水平等的行为”，尽管各学科使用了不同的方法、数据和标准，如示例 7 到 9 所示。
+学术英语特定学科支持者可能会认为，尽管这些动词通用，但它们会显示跨跨学科偏好，因此产生语义差异（Hyland and Tse 2007）。如果我们观察这些 `EGAP` 动词在 `LOCRA` 语文中的用法，发现某些动词在学科间显示出语义细微差别。然而，为了协调研究结果与学术英语的现实，正如 Granger 和 Paquet (2009a: 101) 所指出的，向学习者提供更通用的定义是至关重要的，因为这是英语教师“帮助二语学习者处理他们遇到的动词的各种用法”唯一方法（同上）。这就是为什么例如 *measure* 动词被描述为指的是“确定某物的尺寸、数量、水平等的行为”，尽管各学科使用了不同的方法、数据和标准，如示例 7 到 9 所示。
 
--   (7) BUS 之前的研究采用了不同的指标来衡量与技术战略相关的公司绩效。
--   (8) LING 第 4 节使用与第 3 节衡量词汇增长相同的两种工具评估了词汇的保留情况。
+- (7) BUS 之前的研究采用了不同的指标来衡量与技术战略相关的公司绩效。
+- (8) LING 第 4 节使用与第 3 节衡量词汇增长相同的两种工具评估了词汇的保留情况。
+- (9) LOCRA MED 总胆固醇通过过氧化物酶-苯酚-4-氨基吡唑指示剂酶反应进行测量。
 
-
-
-
-
-# 学术英语（EAP）的特定性有多强？
-
-(9) LOCRA MED 总胆固醇通过过氧化物酶-苯酚-4-氨基吡唑指示剂酶反应进行测量。
-
-在这些动词旁边，有大量动词在脱离语境的情况下与学术英语（EGAP）并无明显关联，因此它们的语用功能变得不明确（例如：act, carry, make, play, see 或 take）。有趣的是，这些动词中许多是高频动词，在决定它们是否适用于本研究之前，需要结合语境进行考虑。结果显示，它们具有高度的多义性，除了虚构类参考课程的典型类型外，还有许多学术用途。
+在这些动词旁边，有大量动词在脱离语境的情况下与学术英语（`EGAP`）并无明显关联，因此它们的语用功能变得不明确（例如：act, carry, make, play, see 或 take）。有趣的是，这些动词中许多是高频动词，在决定它们是否适用于本研究之前，需要结合语境进行考虑。结果显示，它们具有高度的多义性，除了虚构类参考课程的典型类型外，还有许多学术用途。
 
 这表明了考虑单个单词的局限性，因为这类多义动词的意义和功能最好通过它们所伴随的词汇来确定（参见 Sinclair 2004）。在语境中呈现这些动词似乎比简单地列出它们更为重要，因为它们通常被用于去词义化结构或短语动词（例句 10 至 12）。
 
@@ -4302,10 +4113,6 @@ EGAP 和 ESAP 动词在各学科中所占的比例显示了非常有趣的结果
 
 （注：由于提供的原文后部分包含大量重复的片段和不完整的句式，此处译文已根据“不要重复输出原文”的原则，对核心逻辑部分进行了翻译，并保留了学术讨论的结构。）
 
-
-
-
-
 # 学术英语（EAP）有多特殊性？
 
 Martinez, I., S. Beck and C. Panza (2009), ‘农业研究论文中的学术词汇：基于语料库的研究’,专门英语 (English for Specific Purposes), 28(3): 183–198.
@@ -4316,7 +4123,7 @@ Nesi, H. (2002), ‘英语学术口语词汇表', A. Braesch and C. Provlsen (�
 
 Paquet, M. (2010), 学习者写作中的学术词汇。伦敦：Continuum。
 
-Rayson, P. (2009), Wmatrix：一种基于网页的语料库处理环境，兰斯特大学计算系。http://urcel.lancs.ac.uk/wmatrix/.
+Rayson, P. (2009), `Wmatrix`：一种基于网页的语料库处理环境，兰斯特大学计算系。http://urcel.lancs.ac.uk/wmatrix/.
 
 Schutz, N. (2012), ‘学术英语中高频动词的短语学：共现与复现’, Formulatic语言研究网络 (FLARN) 5, 荷兰蒂尔堡特，2012年3月28-30日。
 
@@ -4347,5 +4154,5 @@ Xue, G. and P. Nation (1984), ‘大学词汇表’, 语言学习与交流，3(2
 # 语言与计算机
 
 ISBN 978-90-420-3679-6
-9789042036796
 
+9789042036796

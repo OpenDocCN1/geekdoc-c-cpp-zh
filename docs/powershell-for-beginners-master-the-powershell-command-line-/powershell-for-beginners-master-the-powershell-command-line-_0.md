@@ -1,11 +1,11 @@
-# PowerShell：初学者指南！在24 小时内精通 PowerShell 命令行（Python 编程、Javascript、计算机编程、C++、SQL、计算机黑客、编程）
 
+# PowerShell：初学者指南
 
+## 在 24 小时内精通 PowerShell 命令行
+
+（Python 编程、JavaScript、计算机编程、C++、SQL、计算机黑客、编程）
 
 ![](img/00021.jpeg)
-
-
-
 
 # 引言
 
@@ -19,7 +19,7 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 ## 回溯 Windows PowerShell 历史
 
-自图形用户界面 (GUI) 时代以来，系统管理员已经走了很远的路了。Windows 管理员最初用于管理公司 Windows 系统的第一个工具是 GUI。GUI 实际上是 Windows PowerShell 的灵感。
+自图形用户界面（GUI）时代以来，系统管理员已经走了很远的路了。Windows 管理员最初用于管理公司 Windows 系统的第一个工具是 GUI。GUI 实际上是 Windows PowerShell 的灵感。
 
 使用 GUI 完成任务太耗时间了。需要一种更高效的工具来缩短工作流程并允许管理员更快地交付工作。例如，如果过去管理员使用 GUI 需要 5 小时才能在计算机系统中添加新用户，那么 Windows PowerShell 能够将完成任务的时间缩短一小时。因此，效率低下的 GUI 导致并启发了其更高效的对应品——Windows PowerShell 的诞生。
 
@@ -39,13 +39,9 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 以下是搭建你的 Windows PowerShell 实验场的基本要求。这是你尝试 Windows PowerShell 命令功能的空间。为了确保你从书中获得最多的指导，必须确保所有技术组件已就绪并安装：
 
-1.  至少带有 PowerShell 版本 3 的 Windows。最低要求为 Windows 8 或 Windows Server 2012。
+1. 至少带有 PowerShell 版本 3 的 Windows。最低要求为 Windows 8 或 Windows Server 2012。
 
-
-
-
-
-## 2. “x64” 操作系统
+## “x64”操作系统
 
 要检查这一点，请前往开始菜单。打开所有应用程序文件夹。寻找 `Windows PowerShell` 文件夹。如果你在里面找到了 `Windows PowerShell` 和 `Windows PowerShell ISE` 文件，则说明你拥有正确的操作系统。这意味着该版本的 `Windows PowerShell` 是所需的 64 位版本。
 
@@ -73,11 +69,12 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 有关 `PowerShell V3` 的任何附加信息，请访问 `MoreLunches.com`。该网站提供了可以下载的代码列表的相关信息。你还会在网站上找到书中测试题的答案。网站上还可以访问关于 `PowerShell V3` 的文章、视频和博客链接。
 
-## 第 2 章：向 PowerShell 问好
+# 第二章：向 PowerShell 问好
 
 在引言中提到过，`Windows PowerShell` 用户可以使用 2 种控制台。准确地说，实际上有 4 种控制台选项。预览时请前往“开始”，打开“所有应用”。图 2.1 显示了点击“应用”后的桌面视图。
 
 ![](img/00001.jpeg)
+
 图 2.1
 
 我们之前提到过 `Windows PowerShell` 可用 2 种控制台。这些是基于文本和基于图形的控制台。还提到过运行 `Windows PowerShell` 的 2 种操作系统系统。这些是 64 位操作系统系统和 32 位操作系统系统。
@@ -89,6 +86,7 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 ## 标准 PowerShell 控制台窗口（基于文本）
 
 ![](img/00002.jpeg)
+
 图 2.2
 
 在整本书中我们将使用这个 `PowerShell` 控制台。参见图 `2.2`。原因是因为它比基于图形的选项更简单、不复杂。
@@ -102,12 +100,13 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 - **布局**：宽度大小应具有相同的数字，以便窗口恰好适应屏幕。避免过度扩展控制台尺寸，以至于某些区域在屏幕上不可见。这确保了屏幕上输入的所有信息都是可读的。
 - **颜色**：如果你喜欢看不同的背景、字体和前景颜色，请尽管尝试。配色方案由你决定，但万一你调整到对看到的界面不再满意，总有返回默认蓝白配色的选项。
 
-## 集成脚本环境 (ISE) 控制台
+## 集成脚本环境（ISE）控制台
 
-使用基于图形的控制台 (`ISE`) 的优点是它支持双字节字符，由于它旨在更加视觉化，因此是一个更好用的 `PowerShell` 控制台。另一个优势是它能更好地帮助高级用户创建 `PowerShell` 命令和脚本。与基于文本的版本不同，你可以在控制台上复制和粘贴项目。见下方的 `ISE` 控制台屏幕视图。
+使用基于图形的控制台（`ISE`）的优点是它支持双字节字符，由于它旨在更加视觉化，因此是一个更好用的 `PowerShell` 控制台。另一个优势是它能更好地帮助高级用户创建 `PowerShell` 命令和脚本。与基于文本的版本不同，你可以在控制台上复制和粘贴项目。见下方的 `ISE` 控制台屏幕视图。
 
 ![](img/00003.jpeg)
-图 2.3 集成脚本环境 (ISE)
+
+图 2.3 集成脚本环境（ISE）
 
 `ISE` 也有局限性，其中：它不支持转录、启动比基于文本的控制台慢，并且它需要 `Windows Presentation Foundation (WPF)` 才能运行。这意味着硬件或电脑应该安装 GUI，否则 `ISE` 将无法运行。
 
@@ -122,14 +121,8 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 让我们尝试一下。你大可以开始熟悉控制台的标签选择功能了。让我们完成几个练习：
 
 1. 输入 `Get-S`，按几次 `Tab` 键，然后按 `Shift-Tab`。`PowerShell` 将循环切换文件。意图是让用户扫描选项以获取所需的正确标签。完成后，按 `Esc` 清除控制台。
-
-2. 输入 `Dir space c:\` 然后按 `Tab`。`PowerShell` 将循环切换文件夹，与练习 1 类似。完成后，再次按 `Esc` 清除控制台。
-
-
-
-
-
-3. 输入 `Set-Exec` 然后按 `Tab`，添加空格和破折号 (`-`)，再多次按 `Tab`。此时 PowerShell 将循环遍历参数。再次按 `Esc` 清空控制台。
+2. 输入 `Dir space c:\`，然后按 `Tab`。`PowerShell` 将循环切换文件夹，与练习 1 类似。完成后，再次按 `Esc` 清除控制台。
+3. 输入 `Set-Exec`，然后按 `Tab`，添加空格和破折号（`-`），再多次按 `Tab`。此时 PowerShell 将循环遍历参数。再次按 `Esc` 清空控制台。
 
 你刚刚学习了 `tab` 补全的重要性。按下 `tab` 键将生成 shell 中可用的各种选项。它为用户提供了 shell 内部的各种命令、函数或参数名称的信息。
 
@@ -157,16 +150,12 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 1. 按照你的规范自定义控制台颜色。
 2. 按照你的规范自定义字体。但请记住，我们推荐的字体是 `Lucida` 字体，大小应比默认字体大小 `12` 大。如果你的偏好且 `Lucida` 不令人满意，你可以选择不同的字体。
-3. 检查字符和符号的可读性。输入单引号 (` ‘` ) 和反引号 (` ` ` )。检查你是否能区分它们。
-4. 输入圆括号 (`()`)、方括号 (`[]`)、尖括号 (`<>`) 和大括号 (`{}`)。确保这些符号易于识别。如果不是，请更改字体或增加字体大小，以便它们易于阅读。
+3. 检查字符和符号的可读性。输入单引号（`‘`）和反引号（`` ` ``）。检查你是否能区分它们。
+4. 输入圆括号（`()`）、方括号（`[]`）、尖括号（`<>`）和大括号（`{}`）。确保这些符号易于识别。如果不是，请更改字体或增加字体大小，以便它们易于阅读。
 
 如果你已经完成了测试并对 PowerShell 控制台的外观满意，那么就可以进入下一章节了。
 
-
-
-
-
-一些关于命令的信息，所有命令后面都跟着一个参数。这是一个强制性公式。参数是在命令或 `cmdlet`（ 编译的小命令）之后输入的单词、短语或符号，用于识别 shell 被要求检索或搜索的项目。
+一些关于命令的信息，所有命令后面都跟着一个参数。这是一个强制性公式。参数是在命令或 `cmdlet`（编译的小命令）之后输入的单词、短语或符号，用于识别 shell 被要求检索或搜索的项目。
 
 对于 `Get-Help` 或 `Help` 词词，参数是名称参数（name parameter）。这意味着当向 `Help` 系统请求帮助时，只需输入你想让它提供信息的主题名称即可。
 
@@ -186,17 +175,17 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 注意列表中的所有项目都指向事件日志主题。其中十一个是实际的命令运行或 cmdlet，其余的是函数。现在选择最符合你要求的项目。顶部的项目 `Clear-Eventlog` 看起来是最佳选择。现在你有了准确的 cmdlet 来向 `Help` 询问该主题的信息：`Help Get-Eventlog`。在向 `Help` 询问其他 cmdlet 的信息时遵循相同的公式。
 
-### 标签补全 (Tab Completion)
+### 标签补全（Tab Completion）
 
 我们在前面的章节中讨论过这个。再次提醒在控制台上输入时养成按下 `tab` 键的习惯是好的。标签补全允许你将正在输入的单词完成为最匹配的项。它显示了 shell 中可用的许多命令、函数、脚本选项。它增加了你对 shell 内部内容的了解。如果 `tab` 生成的信息不准确，没有必要输入另一个单词，只需再次按 `tab`，它将循环显示选项。当 `tab` 显示准确的单词时停止。标签补全让工作变得如此简单和快速。
 
-### 通配符 (Wildcard)
+### 通配符（Wildcard）
 
 与标签补全类似，`*` 通配符符号可以完成你要求 `Help` 提供信息的整个单词。只需在字母后添加 `*` 通配符符号，`Help` 就能将选择缩小到搜索的精确 `Help` 主题。
 
 例如，在控制台上输入 `Help EventL*`。你会发现 `Help` 没有像你输入 `Help log` 或 `Help event` 那样遍历其系统中的所有可能的事件日志项。相反，它直接进入了 `EventLog` 的 `Help` 文件。`*` 通配符符号直击主题并直接带你进入主题。
 
-### 摘要帮助 (Summary Help)
+### 摘要帮助（Summary Help）
 
 如果你输入 `Help EventL*`，那么下面的控制屏幕应该是这样的。
 
@@ -206,23 +195,25 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 图 3.4 是摘要帮助。它描述了命令的名称。在这种情况下为 `Get-EventLog`。它还提供了关于命令语法的信息。语法是命令的使用。
 
-### 解释帮助文件 (Interpret a Help File)
+### 解释帮助文件（Interpret a Help File）
 
-查看图 3.4 提供的摘要帮助，注意语法下方有 2 组不同的参数集。这意味着根据所选择的参数集，运行此特定命令有 2 种独特的方法。参数是所有括在 `[ ]` 方括号中的项目。
+查看图 3.4 提供的摘要帮助，注意语法下方有 2 组不同的参数集。这意味着根据所选择的参数集，运行此特定命令有 2 种独特的方法。参数是所有括在 `[]` 方括号中的项目。
 
 两个参数集都从 `Get-EventLog` 开始。这就是我们识别出有 2 组参数的方法。第一个参数比第二个多。还要注意这 2 组参数集有一个共同的参数。它们都有 `[Computer Name]` 参数。相反，总会有仅存在于一个参数集的特殊参数。`[AsString]` 和 `[List]` 是较短参数集中的唯一参数。较长参数集中的几个参数在较短的参数集中是找不到。
 
 具有 2 组参数集语法的命令意味着可能使用这两组参数来运行命令，前提是你只使用共享参数。如果你使用了仅存在于其中一个参数集的特殊参数（例如在上面的示例中，使用 `[AsString]`），那么你只能局限于使用该参数集中找到的参数。为了与多个参数集一起工作并访问更大的参数池，最好避免使用不被多个参数集共享的唯一参数。
 
-### 参数的类型类型 (Different Types of Parameters)
+### 参数的类型类型（Different Types of Parameters）
 
-让我们定义并区分参数，以为了更好地理解它们的功能。
 
--   **强制性参数 (Mandatory Parameters)**：任何不在 `[ ]` 方括号内的参数都是强制性的。在图 3.4 中 `string` 是一个强制性参数。
--   **可选参数 (Optional Parameters)**：这些是 `[ ]` 括号中的参数。运行命令并不强制要求使用集合中的每个参数。事实上，大多数参数都是可选的，因为信息可以由系统提供。注意图 3.4 中的短参数集中，所有参数都是可选的。
--   **位置参数 (Positional Parameters)**：某些参数出现在所有的语法语言字符串中，因此不需要在每次运行命令时都输入它们。这些是位置参数。在图 3.4 中，位置参数是 `[InstanceId]`，因为它在另一组 `[ ]` 括号内含有一个 `[ ]` 方括号。这意味着你可以保留该参数，但有必要为位置 `<long[]>` 添加值。
 
-### 参数值 (Parameter Values)
+让我们定义并区分参数，以更好地理解它们的功能。
+
+- **强制性参数（Mandatory Parameters）**：任何不在`[]`方括号内的参数都是强制性的。在图 3.4 中，`string`是一个强制性参数。
+- **可选参数（Optional Parameters）**：这些是`[]`括号中的参数。运行命令并不强制要求使用集合中的每个参数。事实上，大多数参数都是可选的，因为信息可以由系统提供。注意图 3.4 中的短参数集中，所有参数都是可选的。
+- **位置参数（Positional Parameters）**：某些参数出现在所有的语法语言字符串中，因此不需要在每次运行命令时都输入它们。这些是位置参数。在图 3.4 中，位置参数是`[InstanceId]`，因为它在另一组`[]`括号内含有一个`[]`方括号。这意味着你可以保留该参数，但有必要为位置`<long[]>`添加值。
+
+### 参数值（Parameter Values）
 
 关于理解参数值的信息，参考下方图 3.5 命令所需的输入：
 
@@ -230,49 +221,47 @@ Windows PowerShell 不仅仅是一个脚本 Shell。它首先是一个命令行 
 
 图 3.5 参数值
 
-首先是开关 (switches)。开关是一个独立的、不需要值的参数。在图 3.5 中开关的示例是 `[AsString]`。在处理命令完整语法时，开关会被清晰地标记为开关，以便管理员知道不要为它们提供值。
+首先是开关（switches）。开关是一个独立的、不需要值的参数。在图 3.5 中开关的示例是`[AsString]`。在处理命令完整语法时，开关会被清晰地标记为开关，以便管理员知道不要为它们提供值。
 
 对于需要值的参数，其识别方式如下：
 
-1.  参数在 `[ ]` 方括号内，并与其他参数隔开。
-示例：`[LogName] <string>`
+1. 参数在`[]`方括号内，并与其他参数隔开。
+
+   示例：`[LogName] <string>`
 
 独立的参数不需要值，其识别方式如下：
 
-1.  参数后面跟着等号、冒号、方括号等。
-示例：`[AsString]`
+1. 参数后面跟着等号、冒号、方括号等。
 
-### 参数值的类型 (Types of Parameter Values)
+   示例：`[AsString]`
 
-1.  **DateTime**：可以视为日期的参数值。因此预计它是一个数字字符串。示例：`12-01-2012`。`DateTime` 通常由计算机的区域设置决定。
-2.  **String**：字母和数字的组合。如果字符串之间有空格，应该在引号中。
-3.  **Int, Int64, Int32**：`Int` 代表整数。不是小数，而是整数。
+### 参数值的类型（Types of Parameter Values）
 
+1. **DateTime**：可以视为日期的参数值。因此预计它是一个数字字符串。示例：`12-01-2012`。`DateTime`通常由计算机的区域设置决定。
+2. **String**：字母和数字的组合。如果字符串之间有空格，应该在引号中。
+3. **Int, Int64, Int32**：`Int`代表整数。不是小数，而是整数。
 
+如果你是那种喜欢摆弄系统并喜欢通过试错来学习的管理员，那么让`Help`为你提供命令示例将让你产生很大兴趣。以下是让`Help`显示命令示例的语法：
 
-
-
-如果你是那种喜欢摆弄系统并喜欢通过试错来学习的管理员，那么让 `Help` 为你提供命令示例将让你产生很大兴趣。以下是让 `Help` 显示命令示例的语法：
-
-```
+```powershell
 Help Get-EventLog –examples
 ```
 
-尽管去测试 `Help` 提供的 cmdlet 示例列表。只需确保你正在一台未连接到公司系统的计算机上操作，这样在测试示例列表时遇到错误，就不会对你的 Windows 生产线产生影响。
+尽管去测试`Help`提供的 cmdlet 示例列表。只需确保你正在一台未连接到公司系统的计算机上操作，这样在测试示例列表时遇到错误，就不会对你的 Windows 生产线产生影响。
 
 ## 获取常用参数的命令帮助
 
-回看图 3.5，其中展示了用于解释参数值的示例。如果我们仔细观察语法中的两组参数，会注意到它们都以 `[<CommonParameters>]` 结尾。`<CommonParameters>]` 是一组八个参数，它们在每个 cmdlet 中都能找到。
+回看图 3.5，其中展示了用于解释参数值的示例。如果我们仔细观察语法中的两组参数，会注意到它们都以`[<CommonParameters>]`结尾。`<CommonParameters>]`是一组八个参数，它们在每个 cmdlet 中都能找到。
 
-让我们命令 `Help` 为我们提供关于 `[<CommonParameters>]` 的更多信息。在控制台中输入以下命令：
+让我们命令`Help`为我们提供关于`[<CommonParameters>]`的更多信息。在控制台中输入以下命令：
 
-```
+```powershell
 Help common*
 ```
 
-结果应该是 `About_common_parameters`。由于 `*` 通配符符号，不应该有任何其他选项。此外，关于常用参数没有其他 `Help` 主题。就此而已。
+结果应该是`About_common_parameters`。由于`*`通配符符号，不应该有任何其他选项。此外，关于常用参数没有其他`Help`主题。就此而已。
 
-浏览 `About_common_parameters` 并查看 `[<CommonParameters>]` 中找到 8 个参数。它们是：
+浏览`About_common_parameters`并查看`[<CommonParameters>]`中找到 8 个参数。它们是：
 
 - `-Verbose`
 - `-Debug`
@@ -283,19 +272,19 @@ Help common*
 - `-OutVariable`
 - `-OutBuffer`
 
-`About_common_parameters` 只是帮助系统中可用的“关于”主题之一。如果你想查看所有其他“关于”主题，请在控制台中输入：
+`About_common_parameters`只是帮助系统中可用的“关于”主题之一。如果你想查看所有其他“关于”主题，请在控制台中输入：
 
-```
+```powershell
 Help about*
 ```
 
-尽管去尝试摆弄和筛选 PowerShell 隐藏在 `Help` 中的海量文档吧。对于任何管理员来说，掌握 PowerShell 存储的大量信息总是一个优势。
+尽管去尝试摆弄和筛选 PowerShell 隐藏在`Help`中的海量文档吧。对于任何管理员来说，掌握 PowerShell 存储的大量信息总是一个优势。
 
 ## 如何访问在线帮助
 
-从一开始我们就建议养成每月更新帮助系统的习惯。帮助系统正在不断更新，只要 PowerShell 在使用，它就会一直保持更新。更新 `Help` 的最佳方法是访问其在线版本。它是并将永远是最新的版本。每个参与 PowerShell 开发的人都会添加并贡献于在线帮助系统的更新。定期将所有这些新信息添加到你的 PowerShell 帮助系统中是好的。以下是访问 PowerShell 在线帮助的命令：
+从一开始我们就建议养成每月更新帮助系统的习惯。帮助系统正在不断更新，只要 PowerShell 在使用，它就会一直保持更新。更新`Help`的最佳方法是访问其在线版本。它是并将永远是最新的版本。每个参与 PowerShell 开发的人都会添加并贡献于在线帮助系统的更新。定期将所有这些新信息添加到你的 PowerShell 帮助系统中是好的。以下是访问 PowerShell 在线帮助的命令：
 
-```
+```powershell
 Help Get-EventLog -online
 ```
 
@@ -303,13 +292,13 @@ Help Get-EventLog -online
 
 ## 实验室测试
 
-1. 确保你已成功安装了 `Update-Help`。
+1. 确保你已成功安装了`Update-Help`。
 2. 找到可以输出到文件的 cmdlet。
 3. 找到可以输出到打印机的 cmdlet。
 4. 写入事件日志的命令是什么？
-5. 使用命令 `Help` 获取安全事件日志中最近的 50 条目。
+5. 使用命令`Help`获取安全事件日志中最近的 50 条目。
 
-提示：如果在测试中遇到卡壳，请访问 `MoreLunches.com` 等在线资源寻找答案。事实上，与更新 `Help` 一样，强烈建议养成定期检查可靠在线资源的习惯，以获取有关 Windows PowerShell 的最新消息。跟上 PowerShell 的新动态将意味着工作效率的提高。
+提示：如果在测试中遇到卡壳，请访问`MoreLunches.com`等在线资源寻找答案。事实上，与更新`Help`一样，强烈建议养成定期检查可靠在线资源的习惯，以获取有关 Windows PowerShell 的最新消息。跟上 PowerShell 的新动态将意味着工作效率的提高。
 
 # 第 4 章：使用命令 – 终于可以了！
 
@@ -319,11 +308,11 @@ Help Get-EventLog -online
 
 ## 它是一个 Shell
 
-与其他 Shell 一样，例如 `Cmd.exe`、`MS-DOS`、`Unix Bourne` 和 `Unix Bash`，使用 PowerShell 的方法非常简单。输入命令，添加所需的参数来告诉命令如何执行，按回车并查看输出。
+与其他 Shell 一样，例如`Cmd.exe`、`MS-DOS`、`Unix Bourne`和`Unix Bash`，使用 PowerShell 的方法非常简单。输入命令，添加所需的参数来告诉命令如何执行，按回车并查看输出。
 
-创建一个 PowerShell 脚本非常容易。只需编写脚本并在文件末尾添加 `.PS1`。搞定！你现在有一个 PowerShell 脚本了。可以创建非常复杂的 PowerShell 脚本，随你想要复杂有多复杂。PowerShell 也完全运行该脚本并实现脚本创建所需的结果。
+创建一个 PowerShell 脚本非常容易。只需编写脚本并在文件末尾添加`.PS1`。搞定！你现在有一个 PowerShell 脚本了。可以创建非常复杂的 PowerShell 脚本，随你想要复杂有多复杂。PowerShell 也完全运行该脚本并实现脚本创建所需的结果。
 
- 许多具有高级技能的 IT 专业人士已知向 PowerShell 中抛出想象中最复杂的脚本，而 PowerShell 能够运行这些命令。这就是 PowerShell 的可靠性以及同样的复杂性。无论你向它投掷什么，它都能给你反馈。
+许多具有高级技能的 IT 专业人士已知向 PowerShell 中抛出想象中最复杂的脚本，而 PowerShell 能够运行这些命令。这就是 PowerShell 的可靠性以及同样的复杂性。无论你向它投掷什么，它都能给你反馈。
 
 但如果你是一个只想解决公司集成计算机系统产生的日常任务的管理员，那么创建复杂脚本的能力还没有运行命令来解决系统问题和故障的能力重要。因此，精通 PowerShell 的命令运行比用复杂的脚本组合来挑战 PowerShell 重要得多。
 
@@ -337,17 +326,17 @@ Help Get-EventLog -online
 
 上面是构成命令的每个元素或项目的详细列表。在理解 PowerShell 及其功能时，理解命令的组成至关重要。那么，让我们开始吧。参考上面的图 4.1。
 
-1. `Command`: 也称为 cmdlet。所有 cmdlet 都具有“动词-名词”的格式。
-2. `Parameter 1 Name`: `LogName` 是参数 1 的参数名称。如果参数名称包含标点符号或空格，则必须添加引号。
-3. `Parameter 1 Value`: `Security` 是 Logname 的参数值。
-4. `Parameter 2 Name`: `ComputerName` 是参数 2 的名称。如果参数名称包含标点符号或空格，则必须添加引号。
-5. `Parameter 2 Value`: `Win8` 和 `Server1` 是 `ComputerName` 的值。
-6. `Parameter 3 Name`: `Verbose` 是参数 3 的名称。它是一个常用参数。不需要值。
+1. `Command`：也称为 cmdlet。所有 cmdlet 都具有“动词-名词”的格式。
+2. `Parameter 1 Name`：`LogName`是参数 1 的参数名称。如果参数名称包含标点符号或空格，则必须添加引号。
+3. `Parameter 1 Value`：`Security`是`Logname`的参数值。
+4. `Parameter 2 Name`：`ComputerName`是参数 2 的名称。如果参数名称包含标点符号或空格，则必须添加引号。
+5. `Parameter 2 Value`：`Win8`和`Server1`是`ComputerName`的值。
+6. `Parameter 3 Name`：`Verbose`是参数 3 的名称。它是一个常用参数。不需要值。
 
 ## 创建命令的规则
 
 1. 始终在命令名称和第一个参数名称之间添加空格。
-2. 始终在每个参数名称前添加连字符（-）。不要在连字符和参数名称之间添加空格。
+2. 始终在每个参数名称前添加连字符（`-`）。不要在连字符和参数名称之间添加空格。
 3. 始终用空格将参数名称与其值分开。
 4. 始终用空格将值与下一个参数名称分开。
 5. 输入命令永远区分大小写。
@@ -356,24 +345,20 @@ Help Get-EventLog -online
 
 ## 术语
 
-1. `Cmdlet`: 读作 command-let。它是 PowerShell 专有的命令工具，因此只能在 PowerShell 中运行。框架语言是 `.NET`
-2. `Function`: 与 cmdlet 几乎，但不是用 .NET 框架编写的。它是使用 PowerShell 自己的脚本语言编写的。
-3. `Workflow`: 它与 PowerShell 的工作流系统兼容。工作流也是一种函数。
-4. `Application`: 一个外部可执行的命令行工具。
-
-
-
-
+1. `Cmdlet`：读作 command-let。它是 PowerShell 专有的命令工具，因此只能在 PowerShell 中运行。框架语言是`.NET`。
+2. `Function`：与 cmdlet 几乎，但不是用`.NET`框架编写的。它是使用 PowerShell 自己的脚本语言编写的。
+3. `Workflow`：它与 PowerShell 的工作流系统兼容。工作流也是一种函数。
+4. `Application`：一个外部可执行的命令行工具。
 
 ## 5. 命令
 
-指 `cmdlet`、`function`、`workflow` 和应用程序的术语。
+指`cmdlet`、`function`、`workflow`和应用程序的术语。
 
 ### 推荐的 cmdlet 命名方式
 
-以动词（Verb）开头，后面接连字符（` - `），最后以名词（Noun）结束。例如：`Get-EventLog`。为 cmdlet 命名公式可以更容易猜测要使用的正确命令。PowerShell 中可用的动词只有 100 个左右，且少数会被经常使用。通过 `Help` 或 `Get-Command` 确认动词也是一项快速的任务。
+以动词（Verb）开头，后面接连字符（`-`），最后以名词（Noun）结束。例如：`Get-EventLog`。为 cmdlet 命名公式可以更容易猜测要使用的正确命令。PowerShell 中可用的动词只有 100 个左右，且少数会被经常使用。通过`Help`或`Get-Command`确认动词也是一项快速的任务。
 
-### 别名 (Alias)
+### 别名（Alias）
 
 大多数时候，完整的命令名称非常长，因为它们通常是由一系列单词组合而成的。输入包含 15 个单词组合的命令可能有些乏味。这就是别名派上用场的地方。别名是命令的 nickname，是一个冗长完整版本的缩写版本。以下是获取命令别名的方法：`get alias –Definition Get-Service`
 
@@ -383,55 +368,62 @@ Help Get-EventLog -online
 | :--- | :--- |
 | cmdlet | `gsv -> Get-Service` |
 
-命令 `Get-Service` 的别名是 `gsv`。记住，使用别名不会改变命令的任何内容。只有名称被缩写了，所有其他元素和参数都是相同的，唯一的不同在于别名。
+命令`Get-Service`的别名是`gsv`。记住，使用别名不会改变命令的任何内容。只有名称被缩写了，所有其他元素和参数都是相同的，唯一的不同在于别名。
 
-在处理和使用别名时，会出现这样的情况：无论你如何尝试破解别名，它所代表的命令名称都会让你困惑。在这些时刻，请请求 `Help` 协助以澄清别名代表哪个命令名称。使用上面的示例，继续输入：`help gsv`
+在处理和使用别名时，会出现这样的情况：无论你如何尝试破解别名，它所代表的命令名称都会让你困惑。在这些时刻，请请求`Help`协助以澄清别名代表哪个命令名称。使用上面的示例，继续输入：`help gsv`
 
 控制台应反映下图 4.2。
 
 ![](img/00012.jpeg)
+
 图 4.2
 
-图 4.2 非常清楚地显示了命令的完整名称、组成命令的参数集及其别名。当困于别名的含义时，进入 `Help` 询问信息总是最佳解决方案。
+图 4.2 非常清楚地显示了命令的完整名称、组成命令的参数集及其别名。当困于别名的含义时，进入`Help`询问信息总是最佳解决方案。
 
-某些任务或项目会让你希望能够创建自己的别名。好消息是！你可以为特定项目自定义别名。只需输入 `New-Alias` 以及你想创建的别名即可。但注意，你创建的新别名仅在创建当天会话中有效。如果在下次会话中需要它，必须重新创建。
+某些任务或项目会让你希望能够创建自己的别名。好消息是！你可以为特定项目自定义别名。只需输入`New-Alias`以及你想创建的别名即可。但注意，你创建的新别名仅在创建当天会话中有效。如果在下次会话中需要它，必须重新创建。
 
 ### 使用参数的快捷方式
 
 既然谈到了快捷方式，你会很高兴地知道可以创建参数的更短版本。以下是实现的各种方法：
 
-*   **截断 (Truncating)**：PowerShell 识别每个产品名称，即使只输入前 5 个字母。只需确保按下 `Tab` 键，以便 PowerShell 完成名称的输入，你就可以检查正确的参数名称是否设置。
-*   **参数别名 (Parameter Alias)**：这是一个关于如何查找参数名称别名的示例。粗体字部分可以替换为以后你想要检查别名的命令名称和参数名称。`PS C:\> (get-command get-eventlog | select –ExpandProperty parameters).computername.aliases`
-*   **位置参数 (Positional Parameters)**：当参数被包含在方括号 `[ ]` 中，它就是位置参数。这里有一个快速测试，识别图 4.3 下方的 2 个位置参数。
+- **截断（Truncating）**：PowerShell 识别每个产品名称，即使只输入前 5 个字母。只需确保按下`Tab`键，以便 PowerShell 完成名称的输入，你就可以检查正确的参数名称是否设置。
+- **参数别名（Parameter Alias）**：这是一个关于如何查找参数名称别名的示例。粗体字部分可以替换为以后你想要检查别名的命令名称和参数名称。
+
+  `PS C:\> (get-command get-eventlog | select –ExpandProperty parameters).computername.aliases`
+
+- **位置参数（Positional Parameters）**：当参数被包含在方括号`[]`中，它就是位置参数。这里有一个快速测试，识别图 4.3 下方的 2 个位置参数。
 
 ![](img/00013.jpeg)
+
 图 4.3
 
-如果你回答的是 `[–Path]` 和 `[-Filter]`，那么你是正确的。对于位置参数，并不是强制输入参数名称，这可以节省时间。有一个选项可以让它们保持原样。
+如果你回答的是`[–Path]`和`[-Filter]`，那么你是正确的。对于位置参数，并不是强制输入参数名称，这可以节省时间。有一个选项可以让它们保持原样。
 
 ### Show-Command
 
 语法格式的图形化表示，你可以在给定的参数集中每个参数上输入值。参见提供的图 4.4。
 
 ![](img/00014.jpeg)
+
 图 4.4 Show 命令框
 
-与其手动输入语法或参数的每个单词和符号，不如进入 `Show-Command` 。它允许在框中输入输入字段，并且可以要求运行命令，也可以在填充框后将其复制到控制台。
+与其手动输入语法或参数的每个单词和符号，不如进入`Show-Command`。它允许在框中输入输入字段，并且可以要求运行命令，也可以在填充框后将其复制到控制台。
 
-这让工作变得简单得多，因为它为你创建了参数集。你只需要在每个参数上输入值和名称。手动输入语法或参数集的参数时发生错误的概率很高。`Show-Command` 框减少了出错的可能性，因为它将数字地在参数集上添加正确的符号、名称和单词。
+这让工作变得简单得多，因为它为你创建了参数集。你只需要在每个参数上输入值和名称。手动输入语法或参数集的参数时发生错误的概率很高。`Show-Command`框减少了出错的可能性，因为它将数字地在参数集上添加正确的符号、名称和单词。
 
-如果你在获取参数集的正确语法上有困难，只需输入 `show-command` ，然后输入命令名称并按回车。控制台屏幕应该像图 4.5。在每个框中添加值。
+如果你在获取参数集的正确语法上有困难，只需输入`show-command`，然后输入命令名称并按回车。控制台屏幕应该像图 4.5。在每个框中添加值。
 
-如前所述，使用 `show-command` 有 2 个选项。第一个是运行命令。完成要求后，只需点击框下方的 `run` 选项卡，它将直接运行命令。
+如前所述，使用`show-command`有 2 个选项。第一个是运行命令。完成要求后，只需点击框下方的`run`选项卡，它将直接运行命令。
 
-第二种选项是复制并粘贴到控制台。点击 `copy` 并返回 shell 粘贴命令 – `ctrl + V`。第二个选项的棒之处在于，你可以看到语法的完整格式，以及每个参数的完整值和名称。这是熟悉命令完整且详细语法信息的极佳方法。`get-eventlog` 命令的完整语法参见图 4.5。
+第二种选项是复制并粘贴到控制台。点击`copy`并返回 shell 粘贴命令 – `ctrl + V`。第二个选项的棒之处在于，你可以看到语法的完整格式，以及每个参数的完整值和名称。这是熟悉命令完整且详细语法信息的极佳方法。`get-eventlog`命令的完整语法参见图 4.5。
 
 ![](img/00015.jpeg)
+
 图 4.5
 
-### 外部命令 (External Commands)
+### 外部命令（External Commands）
 
-每台新购买的计算机都会内置至少 400 个 cmdlet。每个新的 Windows 服务器操作系统内部都有成千上万的内置 cmdlet。PowerShell 还为管理员提供了创建自己的 cmdlet 并添加到现有 cmdlet 中的规定。如果管理员对 `NsLookup`、`Ipconfig`、`Net` 等程序先有经验，并且拥有这些程序的 cmdlet 集，那么完全可以将它们导出到 PowerShell 并使用。
+每台新购买的计算机都会内置至少 400 个 cmdlet。每个新的 Windows 服务器操作系统内部都有成千上万的内置 cmdlet。PowerShell 还为管理员提供了创建自己的 cmdlet 并添加到现有 cmdlet 中的规定。如果管理员对`NsLookup`、`Ipconfig`、`Net`等程序先有经验，并且拥有这些程序的 cmdlet 集，那么完全可以将它们导出到 PowerShell 并使用。
 
 注意事项：不要期望所有导出到 PowerShell 的外部命令都能完美运行。错误将会常见，因为它们不是 shell 原生的。在过去，特别是 PowerShell 版本 1 和 2，有必要添加准确的参数并手动修改外部命令以便无缝运行。这对于具有多个参数字符串的复杂外部命令尤为如此。
 
@@ -440,15 +432,16 @@ Help Get-EventLog -online
 ### 解析错误消息
 
 ![](img/00016.jpeg)
+
 图 4.6
 
 PowerShell 错误消息是无法理解发送它的命令时在控制台上显示的红色文本。错误消息的伟大之处在于它清楚地说明了 PowerShell 认为哪里是错误的，并且通常会提供解决问题的建议。就像上面的示例一样。
 
 当 PowerShell 发送错误消息且不清楚如何处理时，有三种方法可以回到正轨：
 
-1.  通过 `Help` 获取答案。
-2.  确保语法中的所有参数信息准确。
-3.  进入 `Show Command` 检查准确的语法信息。
+1. 通过`Help`获取答案。
+2. 确保语法中的所有参数信息准确。
+3. 进入`Show Command`检查准确的语法信息。
 
 ### cmdlet 输入规则
 
@@ -456,45 +449,43 @@ PowerShell 错误消息是无法理解发送它的命令时在控制台上显示
 
 以下是输入命令或 cmdlet 时必须记忆的强制规则：
 
-
-
-
-
 ## 命令格式化
 
-1. **动词–名词格式**：每个 `cmdlet` 或命令将始终、始终采用“动词+名词”的格式。
-2. **连字符**：每个 `cmdlet` 或命令名词之间应该用一个连字符连接。
-3. **符号间不留空格**：每个 `cmdlet` 或命令在连字符的前或后都绝不能有空格。
+1. **动词–名词格式**：每个`cmdlet`或命令将始终、始终采用“动词+名词”的格式。
+2. **连字符**：每个`cmdlet`或命令名词之间应该用一个连字符连接。
+3. **符号间不留空格**：每个`cmdlet`或命令在连字符的前或后都绝不能有空格。
 
-记住在输入命令或 `cmdlet` 时，格式为：`动词、连字符、名词`。
+记住在输入命令或`cmdlet`时，格式为：`动词、连字符、名词`。
 
 ## 参数输入规则
 
 输入参数时的规则也是如此。请注意至关重要的空格和连字符。以下是参数的强制输入规则：
 
 1. 所有无值的参数前面都必须带有一个连字符。
-2. `cmdlet` 与参数之间应该有空格。
+2. `cmdlet`与参数之间应该有空格。
 3. 一个参数与其后的另一个参数之间应该有空格。
 
 ## PowerShell 实验室
 
 这里有几道测试题，用于复习和练习第 4 章的内容。如果卡住了答案，可以查找在线资源进行快速查看。
 
-1. 收集所有 `cmdlet` 类型命令的列表。
+1. 收集所有`cmdlet`类型命令的列表。
 2. 提供 50 个别名列表。
-3. 通过 `Help` 查找更多关于 Windows 防火墙规则的信息。
+3. 通过`Help`查找更多关于 Windows 防火墙规则的信息。
 
 # 第 5 章：管道功能
 
 在 PowerShell 中运行命令的伟大之处在于它能够在一个整洁的语法中将多组命令组合在一起。在之前的章节中，我们讨论了关于单个命令的所有知识。现在是时候学习如何将 2 组或更多命令语法结合起来，让 shell 执行多项任务了。
 
-管道（Piping）是我们所说的 shell 将多个命令组合在一起的能力。这是因为 `|` 管道符号被放置在组合的每组命令语法之间。它被称为流水线。
+管道（Piping）是我们所说的 shell 将多个命令组合在一起的能力。这是因为`|`管道符号被放置在组合的每组命令语法之间。它被称为流水线。
+
+
 
 管道充当前一个命令通过的通道，以便下一个命令可以接收它并有内容可操作。第二个命令接着执行相同的操作。它通过管道传递，以便后面的第三个命令有素材可以处理。
 
 管道实际上是 Windows PowerShell 最优秀且独特的特征之一，其他命令运行工具不具备这种在一种语法中运行多个命令的能力。
 
-## 导出逗号分隔值 (CSV)
+## 导出逗号分隔值（CSV）
 
 假设任务是获取系统 CPU 使用情况的详细信息以及内存信息。该任务的多条命令字符串为：
 
@@ -514,7 +505,7 @@ PowerShell 错误消息是无法理解发送它的命令时在控制台上显示
 
 图 5.1 表格中的信息说明了 CPU 利用率和系统内存使用情况。
 
-现在，要求 PowerShell 将其导出到 CSV 文件，以便将其传输到 Microsoft excel 文件用于演示，请输入下面的命令：
+现在，要求 PowerShell 将其导出到 CSV 文件，以便将其传输到 Microsoft Excel 文件用于演示，请输入下面的命令：
 
 `Get-Process | Export-csv c:\procs.csv`
 
@@ -526,25 +517,29 @@ PowerShell 错误消息是无法理解发送它的命令时在控制台上显示
 
 图 5.2
 
-第一行将提供的信息区分为“系统诊断进程 (Systems Diagnostics Process)”。第二行识别了每个表格信息的性质。第三行提供了计算机中运行的进程信息的详细列表。上方是从运行的双重命令 `Get-Process | Export-CSV c:\procs.csv` 中提取的信息。
+第一行将提供的信息区分为“系统诊断进程（Systems Diagnostics Process）”。第二行识别了每个表格信息的性质。第三行提供了计算机中运行的进程信息的详细列表。上方是从运行的双重命令 `Get-Process | Export-CSV c:\procs.csv` 中提取的信息。
 
-现在，确保将该信息保存到 CSV 文件中。一旦完成，该文件就可以与任何需要将信息传输到便于演示的 Microsoft excel 文件的同事共享了。
+现在，确保将该信息保存到 CSV 文件中。一旦完成，该文件就可以与任何需要将信息传输到便于演示的 Microsoft Excel 文件的同事共享了。
 
 可以将 CSV 文件导入 PowerShell 吗？当然可以。只需在 shell 中输入 `Import-CSV c:\procs.csv`，结果看起来应该和图 5.2 极其相似。
 
-## 导出可扩展标记语言 (XML)
+## 导出可扩展标记语言（XML）
 
-另一种导出和导入文件的方法是通过 XML 或**可扩展标记语言**。一些管理员偏于使用 XML，因为它不像 CSV 那样是扁平文件，而且通常生成的信息数组比 CSV 更丰富。
+另一种导出和导入文件的方法是通过 XML，即**可扩展标记语言**。一些管理员偏于使用 XML，因为它不像 CSV 那样是扁平文件，而且通常生成的信息数组比 CSV 更丰富。
 
-要导出 XML 文件，运行的命令非常相似，只是第 2 个运行命令不同：`Get-Process | Export-cliXML C:\procs.csv`
+要导出 XML 文件，运行的命令非常相似，只是第 2 个运行命令不同：
 
-要导入该文件，运行的命令应为：`Get-Process | Import-cliXML C:\procs.csv`
+`Get-Process | Export-cliXML C:\procs.csv`
+
+要导入该文件，运行的命令应为：
+
+`Get-Process | Import-cliXML C:\procs.csv`
 
 为了熟悉，建议测试一下 XML 导出命令。确保也运行导入 XML 命令，并在记事本上检查结果，看是否可以预览进程信息。
 
 ## Compare Object 命令
 
-PowerShell 有一个非常实用的功能叫做 **compare object 命令**。它允许在 2 组文件之间进行比较。通过 PowerShell，例如可以比较最近处理的 CSV 和 XML 生成的进程信息，将它们并排放并比较两个文件之间的差异。
+PowerShell 有一个非常实用的功能叫做 `compare object` 命令。它允许在 2 组文件之间进行比较。通过 PowerShell，例如可以比较最近处理的 CSV 和 XML 生成的进程信息，将它们并排放并比较两个文件之间的差异。
 
 在 shell 上输入命令 `Help Compare-object`。见图 5.3 所示命令结果。
 
@@ -552,26 +547,27 @@ PowerShell 有一个非常实用的功能叫做 **compare object 命令**。它�
 
 图 5.3
 
-Compare-object 有两个别名。它们是 `compare` 和 `diff`。这意味着 compare-object 有两种额外的可能的命令运行方式，别名为 `diff` 和 `compare`。
+`Compare-object` 有两个别名。它们是 `compare` 和 `diff`。这意味着 `compare-object` 有两种额外的可能的命令运行方式，别名为 `diff` 和 `compare`。
 
-Compare-object 功能言而易懂。它是 PowerShell 获取来自两台计算机的相似信息并合并到一个文件中，以便确定两组信息之间的差异。
+`Compare-object` 功能言而易懂。它是 PowerShell 获取来自两台计算机的相似信息并合并到一个文件中，以便确定两组信息之间的差异。
 
-仔细观察语法显示了 compare-object 的三个重要参数：`-referenceobject`、`-differenceobject` 和 `-property`。
+仔细观察语法显示了 `compare-object` 的三个重要参数：`-referenceobject`、`-differenceobject` 和 `-property`。
 
 例如，任务是比较来自 2 台计算机的进程信息。第一台计算机将被称为参考计算机，`referenceobject` 将从此处提取。因为它被称为 `referenceobject`，这意味着它拥有的信息是准确性标准，`differenceobject` 将据此衡量。
 
 第二台计算机将是差异计算机，`differenceobject` 从此处产生。`differenceobject` 的信息是要检查准确性的。
 
-为了练习 compare-object 命令，需要 2 组计算机。一旦有了 2 台计算机，请确定哪台是参考计算机。记住，这是拥有准确信息或基准标准的计算机。然后在参考计算机上运行此命令：`Get-Process | Export-cliXML reference.xml`
+为了练习 `compare-object` 命令，需要 2 组计算机。一旦有了 2 台计算机，请确定哪台是参考计算机。记住，这是拥有准确信息或基准标准的计算机。然后在参考计算机上运行此命令：
 
-下一步是通过在第 2 台计算机上运行以下命令将文件传输到那里：`Diff –reference (Import-cliXML reference.xml) –difference (Get-Process) –property name`
+`Get-Process | Export-cliXML reference.xml`
+
+下一步是通过在第 2 台计算机上运行以下命令将文件传输到那里：
+
+`Diff –reference (Import-cliXML reference.xml) –difference (Get-Process) –property name`
 
 该命令有点复杂，因为它是系列命令的组合。解释一下，每当在命令语法中使用括号时，意味着括号内的命令将先执行，并将处理后的信息发送到之前的运行命令。
 
 在上面的示例中，由于 `Import-cliXML reference.xml` 位于括号内，PowerShell 将先导入参考 cliXML，然后发送给 `Diff –reference`。命令 `(Get-Process)` 也是如此。PowerShell 将先处理它，然后发送给 `-difference`。
-
-
-
 
 末尾的参数 `-property name` 告诉 PowerShell 只显示引用集和差异集之间不同的进程。`<=` 是仅存在于引用集的进程的指示。`=>` 是仅存在于差异集的进程的指示。请参见图 5.3 的图形示例。
 
@@ -588,8 +584,10 @@ Compare-object 功能言而易懂。它是 PowerShell 获取来自两台计算�
 PowerShell 有若干个 `cmdlets` 允许将命令输出到文件、打印机，甚至提供删除或置空的选项。这些被称为 `out cmdlets`。进入外壳并输入 `Help Out*`。结果应该是以下 `out cmdlets`：
 
 1. `Out-null`：命令语法中的对象（无论是单命令还是管道命令）将被置空或删除。
+
    示例：
-   ```
+
+   ```powershell
    PS C:\>get-newitem | out-null
    ```
 
@@ -598,22 +596,28 @@ PowerShell 有若干个 `cmdlets` 允许将命令输出到文件、打印机，�
 3. `Out-host`：与 `Out-Default` 类似。
 
 4. `Out-file`：处理由命令生成的项列表，使其输出为 `.txt` 文件。
+
    示例：
-   ```
+
+   ```powershell
    PS C:\ get-process | outfile –filepath C:\docs\process.txt
    PS C:\ get-process | out-file C:\docs\process.txt
    ```
 
 5. `Out-printer`：要求 PowerShell 通过管道打印 `.txt` 文件。
+
    示例：
-   ```
+
+   ```powershell
    PS C:\ get-content $pshome\about_signing.help.txt |
    Out-Printer
    ```
 
-6. `Out-string`：搜索并处理数据以以字符串形式输出。示例 1 将 `.txt` 文件作为单个字符串发送到外壳。示例 2 从计算机获取区域设置信息并转换为字符串。
+6. `Out-string`：搜索并处理数据以字符串形式输出。示例 1 将 `.txt` 文件作为单个字符串发送到外壳。示例 2 从计算机获取区域设置信息并转换为字符串。
+
    示例：
-   ```
+
+   ```powershell
    1. PS C:\ get-content C:\docs\test1.txt | out-string
    2. PS C:\> $cult = get-culture | select-object * out-string –inputobject $cult –width 100
    ```
@@ -626,7 +630,7 @@ PowerShell 有若干个 `cmdlets` 允许将命令输出到文件、打印机，�
 
 可以将命令转换为 `HTML` 格式吗？可以。命令语法将是：
 
-```
+```powershell
 Get-Service | ConvertTo-HTML
 ```
 
@@ -634,7 +638,7 @@ Get-Service | ConvertTo-HTML
 
 作为一个测试，确定哪种管道命令能够将 `Get-Service` 的 `HTML` 格式保存到 `.txt`。如果你输入以下内容，答案就是准确的：
 
-```
+```powershell
 Get-Service | ConvertTo-HTML | Out-file services.html
 ```
 
@@ -644,7 +648,7 @@ PowerShell 中可用的其他 `ConvertTo-` cmdlets 有：
 
 1. `ConvertTo-CSV`：该命令将外壳上的任何数据转换为 `CSV` 格式。
 
-2. `ConvertTo-Json`：将任何对象转换为 JavaScript 对象表示 (`Json`) 字符串格式。转换结果属性变为字段名，删除方法并将字段值转换为属性值。
+2. `ConvertTo-Json`：将任何对象转换为 JavaScript 对象表示（`Json`）字符串格式。转换结果属性变为字段名，删除方法并将字段值转换为属性值。
 
 3. `ConvertTo-XML`：将管道对象转换为基于 `XML` 的表示。这仅在管道中有多个命令时有效。
 
@@ -659,6 +663,7 @@ PowerShell 中可用的其他 `ConvertTo-` cmdlets 有：
 应避免在外壳中运行的危险 `cmdlets` 是：
 
 1. `Get-Process | Stop-Process`
+
 2. `Get-Service | Stop-Service`
 
 请勿测试运行这些命令。直接在外壳中运行它们，它将继续永久关闭你的计算机。永远不要让外壳运行这些命令。
@@ -667,23 +672,19 @@ PowerShell 中可用的其他 `ConvertTo-` cmdlets 有：
 
 这是因为 PowerShell 设计用于衡量每个命令的影响级别，以确保在请求停止命令时不对计算机数据和系统的完整性构成任何威胁。要检查计算机的影响级别设置，请在外壳运行此命令：
 
-```
+```powershell
 PS C:\ $confirmpreference
 ```
 
-首选答案应该是 `High`。这意味着当 PowerShell 运行命令时...
+首选答案应该是 `High`。这意味着当 PowerShell 运行命令时……
 
-...
+……
 
-希望它为你提供了在 PowerShell 上成功运行命令所需的性性信息。根据这 5 章的课程，你应该有能力在 PowerShell 帮助系统中进行检索，以获取关于 cmdlets、函数、模块和脚本的任何信息。
+希望它为你提供了在 PowerShell 上成功运行命令所需的性性信息。根据这 5 章的课程，你应该有能力在 PowerShell 帮助系统中进行检索，以获取关于 `cmdlets`、函数、模块和脚本的任何信息。
 
 # 结
 
 恭喜你！你完成了这本书。
-
-
-
-
 
 正如不要让 `PowerShell` 执行停止运行（Stop run）一样重要，养成更新帮助系统的习惯同样重要。创建者甚至每天贡献新更新的实际 `PowerShell` 用户都在定期、持续地更新帮助系统。
 

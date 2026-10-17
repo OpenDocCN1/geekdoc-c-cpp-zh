@@ -1,4 +1,3 @@
-# 打造史上最小可执行 ELF 文件(45 字节)
 
 # 打造史上最小可执行 ELF 文件（45 字节，可打印字符串）
 
@@ -30,23 +29,21 @@
 
 ## 前言
 
-本文从减少可执行文件大小的角度分析了 `ELF` 文件，期间通过经典的 `Hello World` 实例逐步演示如何通过各种常用工具来分析 `ELF` 文件，并逐步精简代码。
+本文从减少可执行文件大小的角度分析了`ELF`文件，期间通过经典的`Hello World`实例逐步演示如何通过各种常用工具来分析`ELF`文件，并逐步精简代码。
 
 为了能够尽量减少可执行文件的大小，我们必须了解可执行文件的格式，以及链接生成可执行文件时的后台细节（即最终到底有哪些内容被链接到了目标代码中）。通过选择合适的可执行文件格式并剔除对可执行文件的最终运行没有影响的内容，就可以实现目标代码的裁减。因此，通过探索减少可执行文件大小的方法，就相当于实践性地去探索了可执行文件的格式以及链接过程的细节。
 
-当然，算法的优化和编程语言的选择可能对目标文件的大小有很大的影响，在本文最后我们会跟参考资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html) 的作者那样去探求一个打印 `Hello World` 的可执行文件能够小到什么样的地步。
+当然，算法的优化和编程语言的选择可能对目标文件的大小有很大的影响，在本文最后我们会跟参考资料[[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)的作者那样去探求一个打印`Hello World`的可执行文件能够小到什么样的地步。
 
 ## 可执行文件格式的选取
 
-可执行文件格式的选择要满足的一个基本条件是：目标系统支持该可执行文件格式，资料 [[2]](http://blog.chinaunix.net/u/19881/showart_215242.html) 分析和比较了 `UNIX` 平台下的三种可执行文件格式，这三种格式实际上代表着可执行文件的一个发展过程：
+可执行文件格式的选择要满足的一个基本条件是：目标系统支持该可执行文件格式，资料[[2]](http://blog.chinaunix.net/u/19881/showart_215242.html)分析和比较了`UNIX`平台下的三种可执行文件格式，这三种格式实际上代表着可执行文件的一个发展过程：
 
-*   a.out 文件格式非常紧凑，只包含了程序运行所必须的信息（文本、数据、 `BSS`），而且每个 `section` 的顺序是固定的。
+* `a.out`文件格式非常紧凑，只包含了程序运行所必须的信息（文本、数据、`BSS`），而且每个`section`的顺序是固定的。
+* `coff`文件格式虽然引入了一个节区表以支持更多节区信息，从而提高了可扩展性，但是这种文件格式的重定位在链接时就已经完成，因此不支持动态链接（不过扩展的`coff`支持）。
+* `elf`文件格式不仅动态链接，而且有很好的扩展性。它可以描述可重定位文件、可执行文件和可共享文件（动态链接库）三类文件。
 
-*   coff 文件格式虽然引入了一个节区表以支持更多节区信息，从而提高了可扩展性，但是这种文件格式的重定位在链接时就已经完成，因此不支持动态链接（不过扩展的 `coff` 支持）。
-
-*   elf 文件格式不仅动态链接，而且有很好的扩展性。它可以描述可重定位文件、可执行文件和可共享文件（动态链接库）三类文件。
-
-下面来看看 `ELF` 文件的结构图：
+下面来看看`ELF`文件的结构图：
 
 ```cpp
 文件头部(ELF Header)
@@ -58,7 +55,7 @@
 节区头部(Section Header Table) 
 ```
 
-无论是文件头部、程序头部表、节区头部表还是各个节区，都是通过特定的结构体 `(struct)描述的，这些结构在`elf.h`文件中定义。文件头部用于描述整个文件的类型、大小、运行平台、程序入口、程序头部表和节区头部表等信息。例如，我们可以通过文件头部查看该`ELF` 文件的类型。
+无论是文件头部、程序头部表、节区头部表还是各个节区，都是通过特定的结构体`(struct)描述的，这些结构在`elf.h`文件中定义。文件头部用于描述整个文件的类型、大小、运行平台、程序入口、程序头部表和节区头部表等信息。例如，我们可以通过文件头部查看该`ELF`文件的类型。
 
 ```cpp
 $ cat hello.c   #典型的 hello, world 程序
@@ -82,7 +79,7 @@ $ readelf -h libhello.so.0.0 | grep Type
 
 那节区头部表（将简称节区表）和程序头部表有什么用呢？实际上前者只对可重定向文件有用，而后者只对可执行文件和可共享文件有用。
 
-节区表是用来描述各节区的，包括各节区的名字、大小、类型、虚拟内存中的位置、相对文件头的位置等，这样所有节区都通过节区表给描述了，这样连接器就可以根据文件头部表和节区表的描述信息对各种输入的可重定位文件进行合适的链接，包括节区的合并与重组、符号的重定位（确认符号在虚拟内存中的地址）等，把各个可重定向输入文件链接成一个可执行文件（或者是可共享文件）。如果可执行文件中使用了动态连接库，那么将包含一些用于动态符号链接的节区。我们可以通过 `readelf -S` （或 `objdump -h`）查看节区表信息。
+节区表是用来描述各节区的，包括各节区的名字、大小、类型、虚拟内存中的位置、相对文件头的位置等，这样所有节区都通过节区表给描述了，这样连接器就可以根据文件头部表和节区表的描述信息对各种输入的可重定位文件进行合适的链接，包括节区的合并与重组、符号的重定位（确认符号在虚拟内存中的地址）等，把各个可重定向输入文件链接成一个可执行文件（或者是可共享文件）。如果可执行文件中使用了动态连接库，那么将包含一些用于动态符号链接的节区。我们可以通过`readelf -S`（或`objdump -h`）查看节区表信息。
 
 ```cpp
 $ readelf -S hello  #可执行文件、可共享库、可重定位文件默认都生成有节区表
@@ -103,9 +100,9 @@ Section Headers:
 ... 
 ```
 
-三种类型文件的节区（各个常见节区的作用请参考资料 [[11]](http://www.x86.org/ftp/manuals/tools/elf.pdf))可能不一样，但是有几个节区，例如 `.text`，`.data`，`.bss` 是必须的，特别是 `.text`，因为这个节区包含了代码。如果一个程序使用了动态链接库（引用了动态连接库中的某个函数），那么需要 `.interp` 节区以便告知系统使用什么动态连接器程序来进行动态符号链接，进行某些符号地址的重定位。通常，`.rel.text` 节区只有可重定向文件有，用于链接时对代码区进行重定向，而 `.hash`，`.plt`，`.got` 等节区则只有可执行文件（或可共享库）有，这些节区对程序的运行特别重要。还有一些节区，可能仅仅是用于注释，比如 `.comment`，这些对程序的运行似乎没有影响，是可有可无的，不过有些节区虽然对程序的运行没有用处，但是却可以用来辅助对程序进行调试或者对程序运行效率有影响。
+三种类型文件的节区（各个常见节区的作用请参考资料[[11]](http://www.x86.org/ftp/manuals/tools/elf.pdf)）可能不一样，但是有几个节区，例如`.text`，`.data`，`.bss`是必须的，特别是`.text`，因为这个节区包含了代码。如果一个程序使用了动态链接库（引用了动态连接库中的某个函数），那么需要`.interp`节区以便告知系统使用什么动态连接器程序来进行动态符号链接，进行某些符号地址的重定位。通常，`.rel.text`节区只有可重定向文件有，用于链接时对代码区进行重定向，而`.hash`，`.plt`，`.got`等节区则只有可执行文件（或可共享库）有，这些节区对程序的运行特别重要。还有一些节区，可能仅仅是用于注释，比如`.comment`，这些对程序的运行似乎没有影响，是可有可无的，不过有些节区虽然对程序的运行没有用处，但是却可以用来辅助对程序进行调试或者对程序运行效率有影响。
 
-虽然三类文件都必须包含某些节区，但是节区表对可重定位文件来说才是必须的，而程序的执行却不需要节区表，只需要程序头部表以便知道如何加载和执行文件。不过如果需要对可执行文件或者动态连接库进行调试，那么节区表却是必要的，否则调试器将不知道如何工作。下面来介绍程序头部表，它可通过 `readelf -l`（或 `objdump -p`）查看。
+虽然三类文件都必须包含某些节区，但是节区表对可重定位文件来说才是必须的，而程序的执行却不需要节区表，只需要程序头部表以便知道如何加载和执行文件。不过如果需要对可执行文件或者动态连接库进行调试，那么节区表却是必要的，否则调试器将不知道如何工作。下面来介绍程序头部表，它可通过`readelf -l`（或`objdump -p`）查看。
 
 ```cpp
 $ readelf -l hello.o #对于可重定向文件，gcc 没有产生程序头部，因为它对可重定向文件没用
@@ -136,23 +133,23 @@ Program Headers:
 $ readelf -l libhello.so.0.0  #节区和上面类似，这里省略 
 ```
 
-从上面可看出程序头部表描述了一些段（`Segment`），这些段对应着一个或者多个节区，上面的 `readelf -l` 很好地显示了各个段与节区的映射。这些段描述了段的名字、类型、大小、第一个字节在文件中的位置、将占用的虚拟内存大小、在虚拟内存中的位置等。这样系统程序解释器将知道如何把可执行文件加载到内存中以及进行动态链接等动作。
+从上面可看出程序头部表描述了一些段（`Segment`），这些段对应着一个或者多个节区，上面的`readelf -l`很好地显示了各个段与节区的映射。这些段描述了段的名字、类型、大小、第一个字节在文件中的位置、将占用的虚拟内存大小、在虚拟内存中的位置等。这样系统程序解释器将知道如何把可执行文件加载到内存中以及进行动态链接等动作。
 
-该可执行文件包含 7 个段，`PHDR` 指程序头部，`INTERP` 正好对应 `.interp` 节区，两个 `LOAD` 段包含程序的代码和数据部分，分别包含有 `.text` 和 `.data`，`.bss` 节区，`DYNAMIC` 段包含 `.daynamic`，这个节区可能包含动态连接库的搜索路径、可重定位表的地址等信息，它们用于动态连接器。 `NOTE` 和 `GNU_STACK` 段貌似作用不大，只是保存了一些辅助信息。因此，对于一个不使用动态连接库的程序来说，可能只包含 `LOAD` 段，如果一个程序没有数据，那么只有一个 `LOAD` 段就可以了。
+该可执行文件包含 7 个段，`PHDR`指程序头部，`INTERP`正好对应`.interp`节区，两个`LOAD`段包含程序的代码和数据部分，分别包含有`.text`和`.data`，`.bss`节区，`DYNAMIC`段包含`.daynamic`，这个节区可能包含动态连接库的搜索路径、可重定位表的地址等信息，它们用于动态连接器。`NOTE`和`GNU_STACK`段貌似作用不大，只是保存了一些辅助信息。因此，对于一个不使用动态连接库的程序来说，可能只包含`LOAD`段，如果一个程序没有数据，那么只有一个`LOAD`段就可以了。
 
-总结一下，Linux 虽然支持很多种可执行文件格式，但是目前 `ELF` 较通用，所以选择 `ELF` 作为我们的讨论对象。通过上面对 `ELF` 文件分析发现一个可执行的文件可能包含一些对它的运行没用的信息，比如节区表、一些用于调试、注释的节区。如果能够删除这些信息就可以减少可执行文件的大小，而且不会影响可执行文件的正常运行。
+总结一下，Linux 虽然支持很多种可执行文件格式，但是目前`ELF`较通用，所以选择`ELF`作为我们的讨论对象。通过上面对`ELF`文件分析发现一个可执行的文件可能包含一些对它的运行没用的信息，比如节区表、一些用于调试、注释的节区。如果能够删除这些信息就可以减少可执行文件的大小，而且不会影响可执行文件的正常运行。
 
 ## 链接优化
 
-从上面的讨论中已经接触了动态连接库。 `ELF` 中引入动态连接库后极大地方便了公共函数的共享，节约了磁盘和内存空间，因为不再需要把那些公共函数的代码链接到可执行文件，这将减少了可执行文件的大小。
+从上面的讨论中已经接触了动态连接库。`ELF`中引入动态连接库后极大地方便了公共函数的共享，节约了磁盘和内存空间，因为不再需要把那些公共函数的代码链接到可执行文件，这将减少了可执行文件的大小。
 
-与此同时，静态链接可能会引入一些对代码的运行可能并非必须的内容。你可以从《GCC 编译的背后（第二部分：汇编和链接）》 了解到 `GCC` 链接的细节。从那篇 Blog 中似乎可以得出这样的结论：仅仅从是否影响一个 C 语言程序运行的角度上说，`GCC` 默认链接到可执行文件的几个可重定位文件 （`crt1.o`，`rti.o`，`crtbegin.o`，`crtend.o`，`crtn.o`）并不是必须的，不过值得注意的是，如果没有链接那些文件但在程序末尾使用了 `return` 语句，`main` 函数将无法返回，因此需要替换为 `_exit` 调用；另外，既然程序在进入 `main` 之前有一个入口，那么 `main` 入口就不是必须的。因此，如果不采用默认链接也可以减少可执行文件的大小。
+与此同时，静态链接可能会引入一些对代码的运行可能并非必须的内容。你可以从《GCC 编译的背后（第二部分：汇编和链接）》了解到`GCC`链接的细节。从那篇 Blog 中似乎可以得出这样的结论：仅仅从是否影响一个 C 语言程序运行的角度上说，`GCC`默认链接到可执行文件的几个可重定位文件（`crt1.o`，`rti.o`，`crtbegin.o`，`crtend.o`，`crtn.o`）并不是必须的，不过值得注意的是，如果没有链接那些文件但在程序末尾使用了`return`语句，`main`函数将无法返回，因此需要替换为`_exit`调用；另外，既然程序在进入`main`之前有一个入口，那么`main`入口就不是必须的。因此，如果不采用默认链接也可以减少可执行文件的大小。
 
 ## 可执行文件“减肥”实例（从 6442 到 708 字节）
 
-这里主要是根据上面两点来介绍如何减少一个可执行文件的大小。以 `Hello World` 为例。
+这里主要是根据上面两点来介绍如何减少一个可执行文件的大小。以`Hello World`为例。
 
-首先来看看默认编译产生的 `Hello World` 的可执行文件大小。
+首先来看看默认编译产生的`Hello World`的可执行文件大小。
 
 ### 系统默认编译
 
@@ -171,7 +168,7 @@ $ wc -c hello   #产生一个大小为 6442 字节的可执行文件
 
 ### 不采用默认编译
 
-可以考虑编辑时就把 `return 0` 替换成 `_exit(0)` 并包含定义该函数的 `unistd.h` 头文件。下面是从《GCC 编译的背后（第二部分：汇编和链接）》总结出的 `Makefile` 文件。
+可以考虑编辑时就把`return 0`替换成`_exit(0)`并包含定义该函数的`unistd.h`头文件。下面是从《GCC 编译的背后（第二部分：汇编和链接）》总结出的`Makefile`文件。
 
 ```cpp
 #file: Makefile
@@ -207,7 +204,7 @@ clean:
     @$(RM) $(MAIN).s $(OBJS) $(TARGET) 
 ```
 
-把上面的代码复制到一个 Makefile 文件中，并利用它来编译 hello.c。
+把上面的代码复制到一个`Makefile`文件中，并利用它来编译`hello.c`。
 
 ```cpp
 $ make   #编译
@@ -225,7 +222,9 @@ $ echo "(6442-2060)/6442" | bc -l
 
 ### 删除对程序运行没有影响的节区
 
-使用上述 `Makefile` 来编译程序，不链接那些对程序运行没有多大影响的文件，实际上也相当于删除了一些“没用”的节区，可以通过下列演示看出这个实质。
+使用上述`Makefile`来编译程序，不链接那些对程序运行没有多大影响的文件，实际上也相当于删除了一些“没用”的节区，可以通过下列演示看出这个实质。
+
+
 
 ```cpp
 $ make clean
@@ -250,7 +249,7 @@ $ readelf -l hello | grep "0[0-9]\ \ "
    06 
 ```
 
-通过比较发现使用自定义的 `Makefile` 文件，少了这么多节区： `.bss .ctors .data .dtors .eh_frame .fini .gnu.hash .got .init .jcr .note.ABI-tag .rel.dyn` 。 再看看还有哪些节区可以删除呢？通过之前的分析发现有些节区是必须的，那 `.hash?.gnu.version?` 呢，通过 `strip -R`（或 `objcop -R`）删除这些节区试试。
+通过比较发现，使用自定义的`Makefile`文件后，少了这些节区：`.bss .ctors .data .dtors .eh_frame .fini .gnu.hash .got .init .jcr .note.ABI-tag .rel.dyn`。再看看还有哪些节区可以删除呢？通过之前的分析发现有些节区是必须的，那`.hash`和`.gnu.version`呢？通过`strip -R`（或`objcopy -R`）尝试删除这些节区。
 
 ```cpp
 $ wc -c hello   #查看大小，以便比较
@@ -261,10 +260,10 @@ Hello World
 real    0m0.001s
 user    0m0.000s
 sys     0m0.000s
-$ strip -R .hash hello   #删除.hash 节区
+$ strip -R .hash hello   #删除.hash节区
 $ wc -c hello
 1448 hello
-$ echo "2060-1448" | bc   #减少了 612 字节
+$ echo "2060-1448" | bc   #减少了612字节
 612
 $ time ./hello           #发现执行时间长了一些（实际上也可能是进程调度的问题）
 Hello World
@@ -272,10 +271,10 @@ Hello World
 real    0m0.006s
 user    0m0.000s
 sys     0m0.000s
-$ strip -R .gnu.version hello   #删除.gnu.version 还是可以工作
+$ strip -R .gnu.version hello   #删除.gnu.version仍能工作
 $ wc -c hello
 1396 hello
-$ echo "1448-1396" | bc      #又减少了 52 字节
+$ echo "1448-1396" | bc      #又减少了52字节
 52
 $ time ./hello
 Hello World
@@ -283,39 +282,39 @@ Hello World
 real    0m0.130s
 user    0m0.004s
 sys     0m0.000s
-$ strip -R .gnu.version_r hello   #删除.gnu.version_r 就不工作了
+$ strip -R .gnu.version_r hello   #删除.gnu.version_r就不工作了
 $ time ./hello
 ./hello: error while loading shared libraries: ./hello: unsupported version 0 of Verneed record 
 ```
 
-通过删除各个节区可以查看哪些节区对程序来说是必须的，不过有些节区虽然并不影响程序的运行却可能会影响程序的执行效率，这个可以上面的运行时间看出个大概。 通过删除两个“没用”的节区，我们又减少了 `52+612`，即 664 字节。
+通过删除各个节区可以查看哪些节区对程序来说是必须的，不过有些节区虽然并不影响程序的运行却可能影响程序的执行效率，这可以从上面的运行时间看出个大概。通过删除两个“没用”的节区，我们又减少了`52+612`，即664字节。
 
 ### 删除可执行文件的节区表
 
-用普通的工具没有办法删除节区表，但是参考资料[[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)的作者已经写了这样一个工具。你可以从[这里](http://www.muppetlabs.com/~breadbox/software/elfkickers.html)下载到那个工具，它是该作者写的一序列工具 `ELFkickers` 中的一个。
+用普通的工具没有办法删除节区表，但是参考资料[[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)的作者已经写了这样一个工具。你可以从[这里](http://www.muppetlabs.com/~breadbox/software/elfkickers.html)下载到那个工具，它是该作者写的一系列工具`ELFkickers`中的一个。
 
-下载并编译（**注**：1.0 之前的版本才支持 32 位和正常编译，新版本在代码中明确限定了数据结构为 `Elf64`）：
+下载并编译（**注**：1.0之前的版本才支持32位和正常编译，新版本在代码中明确限定了数据结构为`Elf64`）：
 
 ```cpp
 $ git clone https://github.com/BR903/ELFkickers
 $ cd ELFkickers/sstrip/
-$ git checkout f0622afa    # 检出 1.0 版
+$ git checkout f0622afa    # 检出1.0版
 $ make 
 ```
 
-然后复制到 `/usr/bin` 下，下面用它来删除节区表。
+然后复制到`/usr/bin`下，下面用它来删除节区表。
 
 ```cpp
-$ sstrip hello      #删除 ELF 可执行文件的节区表
+$ sstrip hello      #删除ELF可执行文件的节区表
 $ ./hello           #还是可以正常运行，说明节区表对可执行文件的运行没有任何影响
 Hello World
-$ wc -c hello       #大小只剩下 708 个字节了
+$ wc -c hello       #大小只剩下708个字节了
 708 hello
-$ echo "1396-708" | bc  #又减少了 688 个字节。
+$ echo "1396-708" | bc  #又减少了688个字节。
 688 
 ```
 
-通过删除节区表又把可执行文件减少了 688 字节。现在回头看看相对于 `gcc` 默认产生的可执行文件，通过删除一些节区和节区表到底减少了多少字节？减幅达到了多少？
+通过删除节区表又把可执行文件减少了688字节。现在回头看看相对于`gcc`默认产生的可执行文件，通过删除一些节区和节区表到底减少了多少字节？减幅达到了多少？
 
 ```cpp
 $ echo "6442-708" | bc   #
@@ -324,21 +323,22 @@ $ echo "(6442-708)/6442" | bc -l
 .89009624340266997826 
 ```
 
-减少了 5734 多字节，减幅将近 `90%`，这说明：对于一个简短的 `hello.c` 程序而言，`gcc` 引入了将近 `90%` 的对程序运行没有影响的数据。虽然通过删除节区和节区表，使得最终的文件只有 708 字节，但是打印一个 `Hello World` 真的需要这么多字节么？事实上未必，因为：
+减少了5734多字节，减幅将近`90%`，这说明：对于一个简短的`hello.c`程序而言，`gcc`引入了将近`90%`的对程序运行没有影响的数据。虽然通过删除节区和节区表，使得最终的文件只有708字节，但是打印一个`Hello World`真的需要这么多字节么？事实上未必，因为：
 
-*   打印一段 `Hello World` 字符串，我们无须调用 `printf`，也就无须包含动态连接库，因此 `.interp`，`.dynamic` 等节区又可以去掉。为什么？我们可以直接使用系统调用 `(sys_write)来打印字符串。
-*   另外，我们无须把 `Hello World` 字符串存放到可执行文件中？而是让用户把它当作参数输入。
+*   打印一段`Hello World`字符串，我们无须调用`printf`，也就无须包含动态连接库，因此`.interp`、`.dynamic`等节区又可以去掉。为什么？我们可以直接使用系统调用`sys_write`来打印字符串。
+
+*   另外，我们无须把`Hello World`字符串存放到可执行文件中，而是让用户把它当作参数输入。
 
 下面，继续进行可执行文件的“减肥”。
 
-## 用汇编语言来重写"Hello World"（76 字节）
+## 用汇编语言来重写"Hello World"（76字节）
 
 ### 采用默认编译
 
-先来看看 `gcc` 默认产生的汇编代码情况。通过 `gcc` 的 `-S` 选项可得到汇编代码。
+先来看看`gcc`默认产生的汇编代码情况。通过`gcc`的`-S`选项可得到汇编代码。
 
 ```cpp
-$ cat hello.c  #这个是使用 _exit 和 printf 函数的版本
+$ cat hello.c  #这个是使用_exit和printf函数的版本
 #include <stdio.h>      /* printf */
 #include <unistd.h>     /* _exit */
 
@@ -378,7 +378,7 @@ $ wc -c hello
 
 ### 删除掉汇编代码中无关紧要内容
 
-现在对汇编代码 `hello.s` 进行简单的处理得到，
+现在对汇编代码`hello.s`进行简单的处理，得到：
 
 ```cpp
 .LC0:
@@ -406,23 +406,23 @@ main:
 $ gcc -o hello.o hello.s
 $ wc -c hello
 6443 hello
-$ echo "6523-6443" | bc   #仅仅减少了 80 个字节
+$ echo "6523-6443" | bc   #仅仅减少了80个字节
 80 
 ```
 
 ### 不默认编译并删除掉无关节区和节区表
 
-如果不采用默认编译呢并且删除掉对程序运行没有影响的节区和节区表呢？
+如果不仅不采用默认编译，还删除掉对程序运行没有影响的节区和节区表呢？
 
 ```cpp
-$ sed -i -e "s/main/_start/g" hello.s   #因为没有初始化，所以得直接进入代码，替换 main 为 _start
-$ as --32 -o  hello.o hello.s
+$ sed -i -e "s/main/_start/g" hello.s   #因为没有初始化，所以得直接进入代码，替换main为_start
+$ as --32 -o hello.o hello.s
 $ ld -melf_i386 -o hello hello.o --dynamic-linker /lib/ld-linux.so.2 -L /usr/lib -lc
 $ ./hello
 hello world!
 $ wc -c hello
 1812 hello
-$ echo "6443-1812" | bc -l   #和之前的实验类似，也减少了 4k 左右
+$ echo "6443-1812" | bc -l   #和之前的实验类似，也减少了4k左右
 4631
 $ readelf -l hello | grep "\ [0-9][0-9]\ "
    00
@@ -435,17 +435,17 @@ $ strip -R .gnu.version hello
 $ wc -c hello
 1200 hello
 $ sstrip hello
-$ wc -c hello  #这个结果比之前的 708（在删除所有垃圾信息以后）个字节少了 708-676，即 32 个字节
+$ wc -c hello  #这个结果比之前的708（在删除所有垃圾信息以后）个字节少了708-676，即32个字节
 676 hello
 $ ./hello
 Hello World 
 ```
 
-容易发现这 32 字节可能跟节区 `.rodata` 有关系，因为刚才在链接完以后查看节区信息时，并没有 `.rodata` 节区。
+容易发现这32字节可能跟节区`.rodata`有关系，因为刚才在链接完以后查看节区信息时，并没有`.rodata`节区。
 
 ### 用系统调用取代库函数
 
-前面提到，实际上还可以不用动态连接库中的 `printf` 函数，也不用直接调用 `_exit`，而是在汇编里头使用系统调用，这样就可以去掉和动态连接库关联的内容。如果想了解如何在汇编中使用系统调用，请参考资料 [[9]](http://www.ibm.com/developerworks/cn/linux/l-assembly/index.html)。使用系统调用重写以后得到如下代码，
+前面提到，实际上还可以不用动态连接库中的`printf`函数，也不用直接调用`_exit`，而是在汇编里头使用系统调用，这样就可以去掉和动态连接库关联的内容。如果想了解如何在汇编中使用系统调用，请参考资料[[9]](http://www.ibm.com/developerworks/cn/linux/l-assembly/index.html)。使用系统调用重写以后得到如下代码，
 
 ```cpp
 .LC0:
@@ -467,7 +467,7 @@ _start:
     int    $0x80 
 ```
 
-现在编译就不再需要动态链接器 `ld-linux.so` 了，也不再需要链接任何库。
+现在编译就不再需要动态链接器`ld-linux.so`了，也不再需要链接任何库。
 
 ```cpp
 $ as --32 -o hello.o hello.s
@@ -490,15 +490,15 @@ $ ./hello           #完全可以正常工作
 Hello World
 $ wc -c hello
 123 hello
-$ echo "676-123" | bc   #相对于之前，已经只需要 123 个字节了，又减少了 553 个字节
+$ echo "676-123" | bc   #相对于之前，已经只需要123个字节了，又减少了553个字节
 553 
 ```
 
-可以看到效果很明显，只剩下一个 `LOAD` 段，它对应 `.text` 节区。
+可以看到效果很明显，只剩下一个`LOAD`段，它对应`.text`节区。
 
 ### 把字符串作为参数输入
 
-不过是否还有办法呢？把 `Hello World` 作为参数输入，而不是硬编码在文件中。所以如果处理参数的代码少于 `Hello World` 字符串的长度，那么就可以达到减少目标文件大小的目的。
+不过是否还有办法呢？把`Hello World`作为参数输入，而不是硬编码在文件中。所以如果处理参数的代码少于`Hello World`字符串的长度，那么就可以达到减少目标文件大小的目的。
 
 先来看一个能够打印程序参数的汇编语言程序，它来自参考资料[[9]](http://www.ibm.com/developerworks/cn/linux/l-assembly/index.html)。
 
@@ -541,11 +541,13 @@ $ ./args "Hello World"  #能够打印输入的字符串，不错
 ./args
 Hello World
 $ sstrip args
-$ wc -c args           #处理以后只剩下 130 字节
+$ wc -c args           #处理以后只剩下130字节
 130 args 
 ```
 
-可以看到，这个程序可以接收用户输入的参数并打印出来，不过得到的可执行文件为 130 字节，比之前的 123 个字节还多了 7 个字节，看看还有改进么？分析上面的代码后，发现，原来的代码有些地方可能进行优化，优化后得到如下代码。
+可以看到，这个程序可以接收用户输入的参数并打印出来，不过得到的可执行文件为130字节，比之前的123个字节还多了7个字节，看看还有改进么？分析上面的代码后，发现原来的代码有些地方可能进行优化，优化后得到如下代码。
+
+
 
 ```cpp
 .global _start
@@ -586,7 +588,7 @@ $ wc -c hello
 
 现在只有 124 个字节，不过还是比 123 个字节多一个，还有什么优化的办法么？
 
-先来看看目前 `hello` 的功能，感觉不太符合要求，因为只需要打印 `Hello World`，所以不必处理所有的参数，仅仅需要接收并打印一个参数就可以。这样的话，把 `jmp vnext`（2 字节）这个循环去掉，然后在第一个 `pop %ecx` 语句之前加一个 `pop %ecx`（1 字节）语句就可以。
+先来看看目前`hello`的功能，感觉不太符合要求，因为只需要打印`Hello World`，所以不必处理所有的参数，仅仅需要接收并打印一个参数就可以。这样的话，把`jmp vnext`（2 字节）这个循环去掉，然后在第一个`pop %ecx`语句之前加一个`pop %ecx`（1 字节）语句就可以。
 
 ```cpp
 .global _start
@@ -617,7 +619,7 @@ exit:
     int $0x80 
 ```
 
-现在刚好 123 字节，和原来那个代码大小一样，不过仔细分析，还是有减少代码的余地：因为在这个代码中，用了一段额外的代码计算字符串的长度，实际上如果仅仅需要打印 `Hello World`，那么字符串的长度是固定的，即 12 。所以这段代码可去掉，与此同时测试字符串是否为空也就没有必要（不过可能影响代码健壮性！），当然，为了能够在打印字符串后就换行，在串的末尾需要加一个回车（`$10`）并且设置字符串的长度为 `12+1`，即 13，
+现在刚好 123 字节，和原来那个代码大小一样，不过仔细分析，还是有减少代码的余地：因为在这个代码中，用了一段额外的代码计算字符串的长度，实际上如果仅仅需要打印`Hello World`，那么字符串的长度是固定的，即 12 。所以这段代码可去掉，与此同时测试字符串是否为空也就没有必要（不过可能影响代码健壮性！），当然，为了能够在打印字符串后就换行，在串的末尾需要加一个回车（`$10`）并且设置字符串的长度为`12+1`，即 13，
 
 ```cpp
 .global _start
@@ -646,18 +648,18 @@ $ wc -c hello
 111 hello 
 ```
 
-### 寄存器赋值重用
+## 寄存器赋值重用
 
 现在只剩下 111 字节，比刚才少了 12 字节。貌似到了极限？还有措施么？
 
-还有，仔细分析发现：系统调用 `sys_exit` 和 `sys_write` 都用到了 `eax` 和 `ebx` 寄存器，它们之间刚好有那么一点巧合：
+还有，仔细分析发现：系统调用`sys_exit`和`sys_write`都用到了`eax`和`ebx`寄存器，它们之间刚好有那么一点巧合：
 
-*   sys_exit 调用时，`eax` 需要设置为 1，`ebx` 需要设置为 0 。
-*   sys_write 调用时，`ebx` 刚好是 1 。
+*   `sys_exit`调用时，`eax`需要设置为 1，`ebx`需要设置为 0 。
+*   `sys_write`调用时，`ebx`刚好是 1 。
 
-因此，如果在 `sys_exit` 调用之前，先把 `ebx` 复制到 `eax` 中，再对 `ebx` 减一，则可减少两个字节。
+因此，如果在`sys_exit`调用之前，先把`ebx`复制到`eax`中，再对`ebx`减一，则可减少两个字节。
 
-不过，因为标准输入、标准输出和标准错误都指向终端，如果往标准输入写入一些东西，它还是会输出到标准输出上，所以在上述代码中如果在 `sys_write` 之前 `ebx` 设置为 0，那么也可正常往屏幕上打印 `Hello World`，这样的话，`sys_exit` 调用前就没必要修改 `ebx`，而仅需把 `eax` 设置为 1，这样就可减少 3 个字节。
+不过，因为标准输入、标准输出和标准错误都指向终端，如果往标准输入写入一些东西，它还是会输出到标准输出上，所以在上述代码中如果在`sys_write`之前`ebx`设置为 0，那么也可正常往屏幕上打印`Hello World`，这样的话，`sys_exit`调用前就没必要修改`ebx`，而仅需把`eax`设置为 1，这样就可减少 3 个字节。
 
 ```cpp
 .global _start
@@ -695,11 +697,11 @@ $  echo "108-52-32" | bc
 24 
 ```
 
-### 通过文件名传递参数
+## 通过文件名传递参数
 
-对于标准的 `main` 函数的两个参数，文件名实际上作为第二个参数（数组）的第一个元素传入，如果仅仅是为了打印一个字符串，那么可以打印文件名本身。例如，要打印 `Hello World`，可以把文件名命名为 `Hello World` 即可。
+对于标准的`main`函数的两个参数，文件名实际上作为第二个参数（数组）的第一个元素传入，如果仅仅是为了打印一个字符串，那么可以打印文件名本身。例如，要打印`Hello World`，可以把文件名命名为`Hello World`即可。
 
-这样地话，代码中就可以删除掉一条 `popl` 指令，减少 1 个字节，变成 107 个字节。
+这样地话，代码中就可以删除掉一条`popl`指令，减少 1 个字节，变成 107 个字节。
 
 ```cpp
 .global _start
@@ -732,9 +734,9 @@ $ Hello\ World
 Hello World 
 ```
 
-### 删除非必要指令
+## 删除非必要指令
 
-在测试中发现，`edx`，`eax`，`ebx` 的高位即使不初始化，也常为 0，如果不考虑健壮性（仅这里实验用，实际使用中必须考虑健壮性），几条 `xorl` 指令可以移除掉。
+在测试中发现，`edx`，`eax`，`ebx`的高位即使不初始化，也常为 0，如果不考虑健壮性（仅这里实验用，实际使用中必须考虑健壮性），几条`xorl`指令可以移除掉。
 
 另外，如果只是为了演示打印字符串，完全可以不用打印换行符，这样下来，代码可以综合优化成如下几条指令：
 
@@ -764,7 +766,7 @@ $ wc -c hello
 
 ### 把代码段移入文件头
 
-纯粹的指令只有 `96-84=12` 个字节了，还有办法再减少目标文件的大小么？如果看了参考资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)，看样子你又要蠢蠢欲动了：这 12 个字节是否可以插入到文件头部或程序头部？如果可以那是否意味着还可减少可执行文件的大小呢？现在来比较一下这三部分的十六进制内容。
+纯粹的指令只有`96-84=12`个字节了，还有办法再减少目标文件的大小么？如果看了参考资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)，看样子你又要蠢蠢欲动了：这 12 个字节是否可以插入到文件头部或程序头部？如果可以那是否意味着还可减少可执行文件的大小呢？现在来比较一下这三部分的十六进制内容。
 
 ```cpp
 $ hexdump -C hello -n 52     #文件头(52bytes)
@@ -782,11 +784,11 @@ $ hexdump -C hello -s 84          #实际代码部分(12bytes)
 00000060 
 ```
 
-从上面结果发现 `ELF` 文件头部和程序头部还有好些空洞（0），是否可以把指令字节分散放入到那些空洞里或者是直接覆盖掉那些系统并不关心的内容？抑或是把代码压缩以后放入可执行文件中，并在其中实现一个解压缩算法？还可以是通过一些代码覆盖率测试工具（`gcov`，`prof`）对你的代码进行优化？
+从上面结果发现`ELF`文件头部和程序头部还有好些空洞（0），是否可以把指令字节分散放入到那些空洞里或者是直接覆盖掉那些系统并不关心的内容？抑或是把代码压缩以后放入可执行文件中，并在其中实现一个解压缩算法？还可以是通过一些代码覆盖率测试工具（`gcov`，`prof`）对你的代码进行优化？
 
-在继续介绍之前，先来看一个 `dd` 工具，可以用来直接“编辑” `ELF` 文件，例如，
+在继续介绍之前，先来看一个`dd`工具，可以用来直接“编辑”`ELF`文件，例如，
 
-直接往指定位置写入 `0xff` ：
+直接往指定位置写入`0xff`：
 
 ```cpp
 $ hexdump -C hello -n 16    # 写入前，elf 文件前 16 个字节
@@ -801,14 +803,14 @@ $ hexdump -C hello -n 16    # 写入后果然被覆盖
 00000010 
 ```
 
-*   `seek=15` 表示指定写入位置为第 15 个（从第 0 个开始）
-*   `conv=notrunc` 选项表示要保留写入位置之后的内容，默认情况下会截断。
-*   `bs=1` 表示一次读/写 1 个
-*   `count=1` 表示总共写 1 次
+*   `seek=15`表示指定写入位置为第 15 个（从第 0 个开始）
+*   `conv=notrunc`选项表示要保留写入位置之后的内容，默认情况下会截断。
+*   `bs=1`表示一次读/写 1 个
+*   `count=1`表示总共写 1 次
 
 覆盖多个连续的值：
 
-把第 12，13，14，15 连续 4 个字节全部赋值为 `0xff` 。
+把第 12，13，14，15 连续 4 个字节全部赋值为`0xff`。
 
 ```cpp
 $ echo -ne "\xff\xff\xff\xff" | dd of=hello bs=1 count=4 seek=12 conv=notrunc
@@ -817,7 +819,7 @@ $ hexdump -C hello -n 16
 00000010 
 ```
 
-下面，通过往文件头指定位置写入 `0xff` 确认哪些部分对于可执行文件的执行是否有影响？这里是逐步测试后发现依然能够执行的情况：
+下面，通过往文件头指定位置写入`0xff`确认哪些部分对于可执行文件的执行是否有影响？这里是逐步测试后发现依然能够执行的情况：
 
 ```cpp
 $ hexdump -C hello
@@ -830,18 +832,18 @@ $ hexdump -C hello
 00000060 
 ```
 
-可以发现，文件头部分，有 30 个字节即使被篡改后，该可执行文件依然可以正常执行。这意味着，这 30 字节是可以写入其他代码指令字节的。而我们的实际代码指令只剩下 12 个，完全可以直接移到前 12 个 `0xff` 的位置，即从第 4 个到第 15 个。
+可以发现，文件头部分，有 30 个字节即使被篡改后，该可执行文件依然可以正常执行。这意味着，这 30 字节是可以写入其他代码指令字节的。而我们的实际代码指令只剩下 12 个，完全可以直接移到前 12 个`0xff`的位置，即从第 4 个到第 15 个。
 
-而代码部分的起始位置，通过 `readelf -h` 命令可以看到：
+而代码部分的起始位置，通过`readelf -h`命令可以看到：
 
 ```cpp
 $ readelf -h hello | grep "Entry"
   Entry point address:               0x8048054 
 ```
 
-上面地址的最后两位 `0x54=84` 就是代码在文件中的偏移，也就是刚好从程序头之后开始的，也就是用文件头（52）+程序头（32）个字节开始的 12 字节覆盖到第 4 个字节开始的 12 字节内容即可。
+上面地址的最后两位`0x54=84`就是代码在文件中的偏移，也就是刚好从程序头之后开始的，也就是用文件头（52）+程序头（32）个字节开始的 12 字节覆盖到第 4 个字节开始的 12 字节内容即可。
 
-上面的 `dd` 命令从 `echo` 命令获得输入，下面需要通过可执行文件本身获得输入，先把代码部分移过去：
+上面的`dd`命令从`echo`命令获得输入，下面需要通过可执行文件本身获得输入，先把代码部分移过去：
 
 ```cpp
 $ dd if=hello of=hello bs=1 skip=84 count=12 seek=4 conv=notrunc
@@ -860,6 +862,8 @@ $ hexdump -C hello
 
 接着把代码部分截掉：
 
+
+
 ```cpp
 $ dd if=hello of=hello bs=1 count=1 skip=84 seek=84
 0+0 records in
@@ -875,9 +879,9 @@ $ hexdump -C hello
 00000054 
 ```
 
-这个时候还不能执行，因为代码在文件中的位置被移动了，相应地，文件头中的 `Entry point address`，即文件入口地址也需要被修改为 `0x8048004` 。
+这个时候还不能执行，因为代码在文件中的位置被移动了，相应地，文件头中的`Entry point address`，即文件入口地址也需要被修改为`0x8048004`。
 
-即需要把 `0x54` 所在的第 24 个字节修改为 `0x04` ：
+即需要把`0x54`所在的第 24 个字节修改为`0x04`：
 
 ```cpp
 $ echo -ne "\x04" | dd of=hello bs=1 count=1 seek=24 conv=notrunc
@@ -895,15 +899,15 @@ $ hexdump -C hello
 
 修改后就可以执行了。
 
-### 把程序头移入文件头
+## 把程序头移入文件头
 
-程序头部分经过测试发现基本上都不能修改并且需要是连续的，程序头有 32 个字节，而文件头中连续的 `0xff` 可以被篡改的只有从第 46 个开始的 6 个了，另外，程序头刚好是 `01 00` 开头，而第 44，45 个刚好为 `01 00`，这样地话，这两个字节文件头可以跟程序头共享，这样地话，程序头就可以往文件头里头移动 8 个字节了。
+程序头部分经过测试发现基本上都不能修改并且需要是连续的，程序头有 32 个字节，而文件头中连续的`0xff`可以被篡改的只有从第 46 个开始的 6 个了，另外，程序头刚好是`01 00`开头，而第 44，45 个刚好为`01 00`，这样地话，这两个字节文件头可以跟程序头共享，这样地话，程序头就可以往文件头里头移动 8 个字节了。
 
 ```cpp
 $ dd if=hello of=hello bs=1 skip=52 seek=44 count=32 conv=notrunc 
 ```
 
-再把最后 8 个没用的字节删除掉，保留 `84-8=76` 个字节：
+再把最后 8 个没用的字节删除掉，保留`84-8=76`个字节：
 
 ```cpp
 $ dd if=hello of=hello bs=1 skip=76 seek=76
@@ -916,7 +920,7 @@ $ hexdump -C hello
 0000004c 
 ```
 
-另外，还需要把文件头中程序头的位置信息改为 44，即第 28 个字节，原来是 `0x34`，即 52 的位置。
+另外，还需要把文件头中程序头的位置信息改为 44，即第 28 个字节，原来是`0x34`，即 52 的位置。
 
 ```cpp
 $ echo "obase=16;ibase=10;44" | bc    # 先把 44 转换是 16 进制的 0x2C
@@ -941,9 +945,9 @@ $ wc -c hello
 76 
 ```
 
-### 在非连续的空间插入代码
+## 在非连续的空间插入代码
 
-另外，还有 12 个字节可以放代码，见 `0xff` 的地方：
+另外，还有 12 个字节可以放代码，见`0xff`的地方：
 
 ```cpp
 $ hexdump -C hello
@@ -957,15 +961,15 @@ $ hexdump -C hello
 
 不过因为空间不是连续的，需要用到跳转指令作为跳板利用不同的空间。
 
-例如，如果要利用后面的 `0xff` 的空间，可以把第 14，15 位置的 `cd 80` 指令替换为一条跳转指令，比如跳转到第 20 个字节的位置，从跳转指令之后的 16 到 20 刚好 4 个字节。
+例如，如果要利用后面的`0xff`的空间，可以把第 14，15 位置的`cd 80`指令替换为一条跳转指令，比如跳转到第 20 个字节的位置，从跳转指令之后的 16 到 20 刚好 4 个字节。
 
-然后可以参考 [X86 指令编码表](http://sparksandflames.com/files/x86InstructionChart.html)（也可以写成汇编生成可执行文件后用 `hexdump` 查看），可以把 `jmp` 指令编码为： `0xeb 0x04` 。
+然后可以参考[X86 指令编码表](http://sparksandflames.com/files/x86InstructionChart.html)（也可以写成汇编生成可执行文件后用`hexdump`查看），可以把`jmp`指令编码为：`0xeb 0x04`。
 
 ```cpp
 $ echo -ne "\xeb\x04" | dd of=hello bs=1 count=2 seek=14 conv=notrunc 
 ```
 
-然后把原来位置的 `cd 80` 移动到第 20 个字节开始的位置：
+然后把原来位置的`cd 80`移动到第 20 个字节开始的位置：
 
 ```cpp
 $ echo -ne "\xcd\x80" | dd of=hello bs=1 count=2 seek=20 conv=notrunc 
@@ -973,15 +977,15 @@ $ echo -ne "\xcd\x80" | dd of=hello bs=1 count=2 seek=20 conv=notrunc
 
 依然可以执行，类似地可以利用更多非连续的空间。
 
-### 把程序头完全合入文件头
+## 把程序头完全合入文件头
 
-在阅读参考资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)后，发现有更多深层次的探讨，通过分析 Linux 系统对 `ELF` 文件头部和程序头部的解析，可以更进一步合并程序头和文件头。
+在阅读参考资料[[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)后，发现有更多深层次的探讨，通过分析 Linux 系统对`ELF`文件头部和程序头部的解析，可以更进一步合并程序头和文件头。
 
-该资料能够把最简的 `ELF` 文件（简单返回一个数值）压缩到 45 个字节，真地是非常极端的努力，思路可以充分借鉴。在充分理解原文的基础上，我们进行更细致地梳理。
+该资料能够把最简的`ELF`文件（简单返回一个数值）压缩到 45 个字节，真地是非常极端的努力，思路可以充分借鉴。在充分理解原文的基础上，我们进行更细致地梳理。
 
-首先对 `ELF` 文件头部和程序头部做更彻底的理解，并具体到每一个字节的含义以及在 Linux 系统下的实际解析情况。
+首先对`ELF`文件头部和程序头部做更彻底的理解，并具体到每一个字节的含义以及在 Linux 系统下的实际解析情况。
 
-先来看看 `readelf -a` 的结果：
+先来看看`readelf -a`的结果：
 
 ```cpp
 $ as --32 -o hello.o hello.s
@@ -1018,9 +1022,9 @@ Program Headers:
   LOAD           0x000000 0x08048000 0x08048000 0x00060 0x00060 R E 0x1000 
 ```
 
-然后结合 `/usr/include/linux/elf.h` 分别做详细注解。
+然后结合`/usr/include/linux/elf.h`分别做详细注解。
 
-首先是 52 字节的 `Elf` 文件头的结构体 `elf32_hdr`：
+首先是 52 字节的`Elf`文件头的结构体`elf32_hdr`：
 
 | 变量类型 | 变量名 | 字节 | 说明 | 类型 |
 | --- | --- | --- | --- | --- |
@@ -1039,7 +1043,7 @@ Program Headers:
 | Elf32_Half | e_shnum | 2 | 所有节区相关信息对文件执行无效 | ~~可篡改~~ |
 | Elf32_Half | e_shstrndx | 2 | 所有节区相关信息对文件执行无效 | ~~可篡改~~ |
 
-其次是 32 字节的程序头（Phdr）的结构体 `elf32_phdr`：
+其次是 32 字节的程序头（Phdr）的结构体`elf32_phdr`：
 
 | 变量类型 | 变量名 | 字节 | 说明 | 类型 |
 | --- | --- | --- | --- | --- |
@@ -1072,9 +1076,9 @@ $ hexdump -C hello -n 84
 > 
 > 00000054
 
-上述 `|` 线之前为文件头，之后为程序头，之前的 `000000xx` 为偏移地址。
+上述`|`线之前为文件头，之后为程序头，之前的`000000xx`为偏移地址。
 
-如果要把程序头彻底合并进文件头。从上述信息综合来看，文件头有 4 处必须保留，结合资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)，经过对比发现，如果把第 4 行开始的程序头往上平移 3 行，也就是：
+如果要把程序头彻底合并进文件头。从上述信息综合来看，文件头有 4 处必须保留，结合资料[[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)，经过对比发现，如果把第 4 行开始的程序头往上平移 3 行，也就是：
 
 > 00000000 ========= ~~01 01 01 00 00 00 00 00 00 00 00 00~~
 > 
@@ -1084,6 +1088,9 @@ $ hexdump -C hello -n 84
 > 
 > 00000030 ========= 01 00 00 00 00 00 00 00 **00 80 04 08**
 > 
+
+
+
 > 00000040 ~~00 80 04 08~~ **60 00 00 00 60 00 00 00 05 00 00 00**
 > 
 > 00000050 ~~00 10 00 00~~
@@ -1144,11 +1151,8 @@ $ hexdump -C hello -n 84
 
 ```cpp
 e_entry = p_vaddr + text offset = p_vaddr + 84 = p_vaddr + 0x54
-
 p_memsz = e_entry
-
 p_memsz >= p_filesz，可以简单取 p_filesz = p_memsz
-
 p_vaddr = page alignment 
 ```
 
@@ -1243,12 +1247,11 @@ $ hexdump -C hello -n 96
 ```cpp
 $ echo -ne "\x59\x59\xb2\x05\xb0\x04\xeb\x06" | \
     dd of=hello bs=1 count=8 seek=32 conv=notrunc
-
 $ echo -ne "\xcd\x80\xb0\x01\xcd\x80" | \
     dd of=hello bs=1 count=6 seek=46 conv=notrunc 
 ```
 
-代码合入以后，需要修改文件头中的代码的偏移地址，即 `e_entry`，也就是要把原来的偏移 84 (0x54) 修改为现在的偏移，即 0x20。
+代码合入以后，需要修改文件头中的代码的偏移地址，即 `e_entry`，也就是要把原来的偏移 84 (`0x54`) 修改为现在的偏移，即 `0x20`。
 
 ```cpp
 $ echo -ne "\x20" | dd of=hello bs=1 count=1 seek=24 conv=notrunc 
@@ -1314,7 +1317,7 @@ _start:
     int $0x80 
 ```
 
-保存为 ret.s，编译和执行效果如下：
+保存为 `ret.s`，编译和执行效果如下：
 
 ```cpp
 $ as --32 -o ret.o ret.s
@@ -1387,255 +1390,40 @@ echo -ne $ret > ret.elf
 
 又或者是直接参照资料 [[1]](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html) 的 `tiny.asm` 就行了，其代码如下：
 
-```cpp
-; ret.asm
+```asm
+; tiny.asm
+BITS 32
+org 0x00010000
 
-  BITS 32
-
-            org     0x00010000
-
-            db      0x7F, "ELF"             ; e_ident
-            dd      1                                       ; p_type
-            dd      0                                       ; p_offset
-            dd      $$                                      ; p_vaddr
-            dw      2                       ; e_type        ; p_paddr
-            dw      3                       ; e_machine
-            dd      _start                  ; e_version     ; p_filesz
-            dd      _start                  ; e_entry       ; p_memsz
-            dd      4                       ; e_phoff       ; p_flags
-  _start:
-            mov     bl, 42                  ; e_shoff       ; p_align
-            xor     eax, eax
-            inc     eax                     ; e_flags
-            int     0x80
-            db      0
-            dw      0x34                    ; e_ehsize
-            dw      0x20                    ; e_phentsize
-            db      1                       ; e_phnum
-                                            ; e_shentsize
-                                            ; e_shnum
-                                            ; e_shstrndx
-
-  filesize      equ     $ - $$ 
-```
-
-编译和运行效果如下：
-
-```cpp
-$ nasm -f bin -o ret ret.asm
-$ chmod +x ret
-$ ./ret ; echo $?
-42
-$ wc -c ret
-45 ret 
-```
-
-下面也给一下本文精简后的 `hello` 的 `nasm` 版本：
-
-```cpp
-; hello.asm
-
-  BITS 32
-
-            org     0x00010000
-
-            db      0x7F, "ELF"             ; e_ident
-            dd      1                                       ; p_type
-            dd      0                                       ; p_offset
-            dd      $$                                      ; p_vaddr
-            dw      2                       ; e_type        ; p_paddr
-            dw      3                       ; e_machine
-            dd      _start                  ; e_version     ; p_filesz
-            dd      _start                  ; e_entry       ; p_memsz
-            dd      4                       ; e_phoff       ; p_flags
-  _start:
-            pop     ecx     ; argc          ; e_shoff       ; p_align
-            pop     ecx     ; argv[0]
-            mov     dl, 5   ; str len       ; e_flags
-            mov     al, 4   ; sys_write(fd, addr, len) : ebx, ecx, edx
-            jmp     _next   ; jump to next part of the code
-            dw      0x34                      ; e_ehsize
-            dw      0x20                      ; e_phentsize
-            dw      1                         ; e_phnum
-  _next:        int     0x80    ; syscall         ; e_shentsize
-            mov     al, 1   ; eax=1,sys_exit  ; e_shnum
-            int     0x80    ; syscall         ; e_shstrndx
-
-  filesize      equ     $ - $$ 
-```
-
-编译和用法如下：
-
-```cpp
-$ nasm -f bin -o hello hello.asm
-$ chmod a+x hello
-$ export PATH=./:$PATH
-$ hello
-hello
-$ wc -c hello
-52 
-```
-
-经过一番努力，`AT&T` 的完整 binary 版本如下：
-
-```cpp
-# hello.s
-#
-# as --32 -o hello.o hello.s
-# ld -melf_i386 --oformat=binary -o hello hello.o
-#
-
-    .file "hello.s"
-    .global _start, _load
-    .equ   LOAD_ADDR, 0x00010000   # Page aligned load addr, here 64k
-    .equ   E_ENTRY, LOAD_ADDR + (_start - _load)
-    .equ   P_MEM_SZ, E_ENTRY
-    .equ   P_FILE_SZ, P_MEM_SZ
-
-_load:
-    .byte  0x7F
-    .ascii "ELF"                  # e_ident, Magic Number
-    .long  1                                      # p_type, loadable seg
-    .long  0                                      # p_offset
-    .long  LOAD_ADDR                              # p_vaddr
-    .word  2                      # e_type, exec  # p_paddr
-    .word  3                      # e_machine, Intel 386 target
-    .long  P_FILE_SZ              # e_version     # p_filesz
-    .long  E_ENTRY                # e_entry       # p_memsz
-    .long  4                      # e_phoff       # p_flags, read(exec)
-    .text
 _start:
-    popl   %ecx    # argc         # e_shoff       # p_align
-    popl   %ecx    # argv[0]
-    mov    $5, %dl # str len      # e_flags
-    mov    $4, %al # sys_write(fd, addr, len) : ebx, ecx, edx
-    jmp    next    # jump to next part of the code
-    .word  0x34                   # e_ehsize = 52
-    .word  0x20                   # e_phentsize = 32
-    .word  1                      # e_phnum = 1
-    .text
-_next:  int    $0x80   # syscall        # e_shentsize
-    mov    $1, %al # eax=1,sys_exit # e_shnum
-    int    $0x80   # syscall        # e_shstrndx 
+    mov eax, 4           ; sys_write
+    mov ebx, 1           ; stdout
+    mov ecx, msg         ; pointer to message
+    mov edx, msg_len     ; message length
+    int 0x80
+    mov eax, 1           ; sys_exit
+    xor ebx, ebx         ; return 0
+    int 0x80
+
+msg db 'Hello, World!', 10
+msg_len equ $ - msg
 ```
 
-编译和运行效果如下：
 
-```cpp
-$ as --32 -o hello.o hello.s
-$ ld -melf_i386 --oformat=binary -o hello hello.o
-$ export PATH=./:$PATH
-$ hello
-hello
-$ wc -c hello
-52 hello 
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-**注**：编译时务必要加 `--oformat=binary` 参数，以便直接基于源文件构建一个二进制的 `Elf` 文件，否则会被 `ld` 默认编译，自动填充其他内容。
 
-## 汇编语言极限精简之道（45 字节）
-
-经过上述努力，我们已经完全把程序头和代码都融入了 52 字节的 `Elf` 文件头，还可以再进一步吗？
-
-基于资料一，如果再要努力，只能设法把 `Elf` 末尾的 7 个 0 字节删除，但是由于代码已经把 `Elf` 末尾的 7 字节 0 字符都填满了，所以要想在这一块努力，只能继续压缩代码。
-
-继续研究下代码先：
-
-```cpp
-.global _start
-_start:
-    popl %ecx    # argc
-    popl %ecx    # argv[0]
-    movb $5, %dl    # 设置字符串长度
-    movb $4, %al    # eax = 4, 设置系统调用号, sys_write(fd, addr, len) : ebx, ecx, edx
-    int $0x80
-    movb $1, %al
-    int $0x80 
-```
-
-查看对应的编码：
-
-```cpp
-$ as --32 -o hello.o hello.s
-$ ld -melf_i386 -o hello hello.o --oformat=binary
-$ hexdump -C hello
-00000000  59 59 b2 05 b0 04 cd 80  b0 01 cd 80              |YY..........|
-0000000c 
-```
-
-每条指令对应的编码映射如下：
-
-| 指令 | 编码 | 说明 |
-| --- | --- | --- |
-| popl %ecx | 59 | argc |
-| popl %ecx | 59 | argv[0] |
-| movb $5, %dl | b2 05 | 设置字符串长度 |
-| movb $4, %al | b0 04 | eax = 4, 设置系统调用号, sys_write(fd, addr, len) : ebx, ecx, edx |
-| int $0x80 | cd 80 | 触发系统调用 |
-| movb $1, %al | b0 01 | eax = 1, sys_exit |
-| int $0x80 | cd 80 | 触发系统调用 |
-
-可以观察到：
-
-*   `popl` 的指令编码最简洁。
-*   `int $0x80` 重复了两次，而且每条都占用了 2 字节
-*   `movb` 每条都占用了 2 字节
-*   `eax` 有两次赋值，每次占用了 2 字节
-*   `popl %ecx` 取出的 argc 并未使用
-
-根据之前通过参数传递字符串的想法，咱们是否可以考虑通过参数来设置变量呢？
-
-理论上，传入多个参数，通过 `pop` 弹出来赋予 `eax`, `ecx` 即可，但是实际上，由于从参数栈里头 `pop` 出来的参数是参数的地址，并不是参数本身，所以该方法行不通。
-
-不过由于第一个参数取出的是数字，并且是参数个数，而且目前的那条 `popl %ecx` 取出的 `argc` 并没有使用，那么刚好可以用来设置 `eax`，替换后如下：
-
-```cpp
-.global _start
-_start:
-    popl %eax    # eax = 4, 设置系统调用号, sys_write(fd, addr, len) : ebx, ecx, edx
-    popl %ecx    # argv[0], 字符串
-    movb $5, %dl # 设置字符串长度
-    int $0x80
-    movb $1, %al # eax = 1, sys_exit
-    int $0x80 
-```
-
-这里需要传入 4 个参数，即让栈弹出的第一个值，也就是参数个数赋予 `eax`，也就是：`hello 5 4 1`。
-
-难道我们只能把该代码优化到 10 个字节？
-
-巧合地是，当偶然改成这样的情况下，该代码还能正常返回。
-
-```cpp
-.global _start
-_start:
-    popl %eax    # eax = 4, 设置系统调用号, sys_write(fd, addr, len) : ebx, ecx, edx
-    popl %ecx    # argv[0], 字符串
-    movb $5, %dl    # 设置字符串长度
-    int $0x80
-    loop _start     # 触发系统退出 
-```
-
-**注**：上面我们使用了 `loop` 指令而不是 `jmp` 指令，因为 `jmp _start` 产生的代码更长，而 `loop _start` 指令只有两个字节。
-
-这里相当于删除了 `movb $1, %al`，最后我们获得了 8 个字节。但是这里为什么能够工作呢？
-
-经过分析 `arch/x86/ia32/ia32entry.S`，我们发现当系统调用号无效时（超过系统调用入口个数），内核为了健壮考虑，必须要处理这类异常，并通过 `ia32_badsys` 让系统调用正常返回。
-
-这个可以这样验证：
-
-```cpp
-.global _start
-_start:
-    popl %eax    # argc, eax = 4, 设置系统调用号, sys_write(fd, addr, len) : ebx, ecx, edx
-    popl %ecx    # argv[0], 文件名
-    mov $5, %dl  # argv[1]，字符串长度
-    int $0x80
-    mov $0xffffffda, %eax  # 设置一个非法调用号用于退出
-    int $0x80 
-```
-
-那最后的结果是，我们产生了一个可以正常打印字符串，大小只有 45 字节的 `Elf` 文件，最终的结果如下：
 
 ```cpp
 # hello.s
@@ -1679,7 +1467,7 @@ _start:
     .byte  1                  # e_phnum = 1, remove trailing 7 bytes with 0 value
                               # e_shentsize
                               # e_shnum
-                              # e_shstrndx 
+                              # e_shstrndx
 ```
 
 效果如下：
@@ -1691,30 +1479,30 @@ $ export PATH=./:$PATH
 $ hello 0 0 0
 hello
 $ wc -c hello
-45 hello 
+45 hello
 ```
 
-到这里，我们获得了史上最小的可以打印字符串的 `Elf` 文件，是的，只有 45 个字节。
+到这里，我们获得了史上最小的可以打印字符串的`Elf`文件，是的，只有 45 个字节。
 
 ## 小结
 
 到这里，关于可执行文件的讨论暂且结束，最后来一段小小的总结，那就是我们设法去减少可执行文件大小的意义？
 
-实际上，通过这样一个讨论深入到了很多技术的细节，包括可执行文件的格式、目标代码链接的过程、 Linux 下汇编语言开发等。与此同时，可执行文件大小的减少本身对嵌入式系统非常有用，如果删除那些对程序运行没有影响的节区和节区表将减少目标系统的大小，适应嵌入式系统资源受限的需求。除此之外，动态连接库中的很多函数可能不会被使用到，因此也可以通过某种方式剔除 [[8]](http://www.gexin.com.cn/UploadFile/document2008119102415.pdf)，[[10]](http://sourceforge.net/projects/libraryopt) 。
+实际上，通过这样一个讨论深入到了很多技术的细节，包括可执行文件的格式、目标代码链接的过程、Linux 下汇编语言开发等。与此同时，可执行文件大小的减少本身对嵌入式系统非常有用，如果删除那些对程序运行没有影响的节区和节区表将减少目标系统的大小，适应嵌入式系统资源受限的需求。除此之外，动态连接库中的很多函数可能不会被使用到，因此也可以通过某种方式剔除 [[8]](http://www.gexin.com.cn/UploadFile/document2008119102415.pdf)，[[10]](http://sourceforge.net/projects/libraryopt)。
 
 或许，你还会发现更多有趣的意义，欢迎给我发送邮件，一起讨论。
 
 ## 参考资料
 
-*   [A Whirlwind Tutorial on Creating Really Teensy ELF Executables for Linux](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)
-*   [UNIX/LINUX 平台可执行文件格式分析](http://blog.chinaunix.net/u/19881/showart_215242.html)
-*   [C/C++ 程序编译步骤详解](http://www.xxlinux.com/linux/article/development/soft/20070424/8267.html)
-*   [The Linux GCC HOW TO](http://www.faqs.org/docs/Linux-HOWTO/GCC-HOWTO.html)
-*   [ELF: From The Programmer's Perspective](http://linux.jinr.ru/usoft/WWW/www_debian.org/Documentation/elf/elf.html)
-*   [Understanding ELF using readelf and objdump](http://www.linuxforums.org/misc/understanding_elf_using_readelf_and_objdump.html)
-*   [Dissecting shared libraries](http://www.ibm.com/developerworks/linux/library/l-shlibs.html)
-*   [嵌入式 Linux 小型化技术](http://www.gexin.com.cn/UploadFile/document2008119102415.pdf)
-*   [Linux 汇编语言开发指南](http://www.ibm.com/developerworks/cn/linux/l-assembly/index.html)
-*   [Library Optimizer](http://sourceforge.net/projects/libraryopt)
-*   ELF file format and ABI：[[1]](http://www.x86.org/ftp/manuals/tools/elf.pdf)，[[2]](http://www.muppetlabs.com/~breadbox/software/ELF.txt)，[[3]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)，[[4]](http://www.xfocus.net/articles/200105/174.html)
-*   [i386 指令编码表](http://sparksandflames.com/files/x86InstructionChart.html)
+- [A Whirlwind Tutorial on Creating Really Teensy ELF Executables for Linux](http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)
+- [UNIX/LINUX 平台可执行文件格式分析](http://blog.chinaunix.net/u/19881/showart_215242.html)
+- [C/C++ 程序编译步骤详解](http://www.xxlinux.com/linux/article/development/soft/20070424/8267.html)
+- [The Linux GCC HOW TO](http://www.faqs.org/docs/Linux-HOWTO/GCC-HOWTO.html)
+- [ELF: From The Programmer's Perspective](http://linux.jinr.ru/usoft/WWW/www_debian.org/Documentation/elf/elf.html)
+- [Understanding ELF using readelf and objdump](http://www.linuxforums.org/misc/understanding_elf_using_readelf_and_objdump.html)
+- [Dissecting shared libraries](http://www.ibm.com/developerworks/linux/library/l-shlibs.html)
+- [嵌入式 Linux 小型化技术](http://www.gexin.com.cn/UploadFile/document2008119102415.pdf)
+- [Linux 汇编语言开发指南](http://www.ibm.com/developerworks/cn/linux/l-assembly/index.html)
+- [Library Optimizer](http://sourceforge.net/projects/libraryopt)
+- ELF file format and ABI：[[1]](http://www.x86.org/ftp/manuals/tools/elf.pdf)，[[2]](http://www.muppetlabs.com/~breadbox/software/ELF.txt)，[[3]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)，[[4]](http://www.xfocus.net/articles/200105/174.html)
+- [i386 指令编码表](http://sparksandflames.com/files/x86InstructionChart.html)

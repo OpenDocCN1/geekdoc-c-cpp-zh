@@ -1,12 +1,5 @@
+
 # 通过童谣和童话学习 C 语言编程：经典故事的 C 程序实现
-
-
-
-
-
-
-
-
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_0_0.png)
 
@@ -14,20 +7,9 @@
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_2_0.png)
 
-
-
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_3_0.png)
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_4_0.png)
-
-
-
-
-
-```
-```
-
-
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_5_0.png)
 
@@ -42,6 +24,7 @@
 附近村子里的人偶尔走进森林，听魔法计算机的故事。多年来，存储在计算机上的 C 程序被编写出来并记录在书中。你现在将看到这些 C 程序。你的旅程刚刚开始！书的最后有关于在计算机上运行程序的指令。
 
 诚挚问候，
+
 S.E.
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_7_0.png)
@@ -49,7 +32,9 @@ S.E.
 ## 敏捷的杰克
 
 杰克敏捷，
+
 杰克很快，
+
 跳过蜡烛
 
 ```c
@@ -80,8 +65,11 @@ int main(void) {
 ## 划呀，划呀，划船
 
 划呀，划呀，划船
+
 顺着水流轻轻
+
 快乐地，快乐地，快乐地
+
 人生是一场梦
 
 ```c
@@ -96,15 +84,18 @@ int main(void) {
 }
 ```
 
-// Row Your Boat 是一个注释，通过行前的两个斜杠（/）表示。它是写给阅读代码的人看的，计算机会忽略它。注释可以解释代码的作用或工作原理。
+`// Row Your Boat` 是一个注释，通过行前的两个斜杠（`/`）表示。它是写给阅读代码的人看的，计算机会忽略它。注释可以解释代码的作用或工作原理。
 
-换行符（\n）结束了该行，使得下一个 `printf()` 从下一行开始打印。
+换行符（`\n`）结束了该行，使得下一个 `printf()` 从下一行开始打印。
 
 当程序执行时，四个 `printf()` 函数会在屏幕上打印以下文本：
 
 Row, row, row, your boat
+
 Gently down the stream
+
 Merrily merrily, merrily, merrily
+
 Life is but a dream
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_10_0.png)
@@ -114,8 +105,11 @@ Life is but a dream
 ## 星光，星光
 
 星光，星光。
+
 今晚看到的第一颗星星；
+
 我愿可以，我愿有能力。
+
 实现我今晚许下的愿望。
 
 ```c
@@ -134,16 +128,14 @@ int main(void) {
 
 `star_order` 被称为变量。变量存储在计算机内存中的值，程序员给它起一个名字。变量可以取任何名字——选择 `star_order` 是因为它是一个有意义的名字。在使用变量之前，必须用类型声明它们，例如存储整数的 `int`。变量的数据类型决定了它能持有的数据类型以及如何使用它。例如，整数可以与整数相加，但整数不能与字符串相加。在声明变量时可以分配初始值（初始化）。在本程序中，变量 `star_order` 被声明为 `int` 并初始化为 1。
 
-`%d` 是一个整数格式指定符。百分号后跟字符的格式指定符表示要显示的数据类型。在本程序中，当 `printf()` 打印时，%d 会被 `star_order` 的值替换。
-
-
-
-
+`%d` 是一个整数格式指定符。百分号后跟字符的格式指定符表示要显示的数据类型。在本程序中，当 `printf()` 打印时，`%d` 会被 `star_order` 的值替换。
 
 ## 雨下，雨下，走吧
 
 雨下，雨下，走吧
+
 改天再来
+
 小约翰尼想玩耍。
 
 ```c
@@ -162,17 +154,20 @@ int main(void) {
 }
 ```
 
-#define 允许用代码中的一个名称（name）来表示一个常量值，这个名称被称为宏（macro）。在这个程序中，RAIN 是一个定义为值 1 的宏，宏 NO_RAIN 被定义为值 0。在 main() 中，RAIN 被替换为 1。#define 被称为预处理器指令，因为在程序被处理之前，宏名称会在它出现在程序中的每个地方被替换为它的值。
+`#define` 允许用代码中的一个名称（name）来表示一个常量值，这个名称被称为宏（macro）。在这个程序中，`RAIN` 是一个定义为值 1 的宏，宏 `NO_RAIN` 被定义为值 0。在 `main()` 中，`RAIN` 被替换为 1。`#define` 被称为预处理器指令，因为在程序被处理之前，宏名称会在它出现在程序中的每个地方被替换为它的值。
 
-#define 行的末尾没有分号。通过使用有意义的名称定义常量值，代码变得易于阅读，并且你可以在一个地方更改常量的值。宏使用大写名称是常见做法，以便将其与变量区分开。
+`#define` 行的末尾没有分号。通过使用有意义的名称定义常量值，代码变得易于阅读，并且你可以在一个地方更改常量的值。宏使用大写名称是常见做法，以便将其与变量区分开。
 
-if 语句是一种条件语句，用于测试条件为真还是假。表达式（expression）是一段评估为单个值的代码。括号中的表达式是待测试真伪的条件。如果语句的条件为真，则执行其花括号 {} 内部的代码块（code block）。
+`if` 语句是一种条件语句，用于测试条件为真还是假。表达式（expression）是一段评估为单个值的代码。括号中的表达式是待测试真伪的条件。如果语句的条件为真，则执行其花括号 `{}` 内部的代码块（code block）。
 
-在 if 语句的条件（条件表达式）中，weather == RAIN，双等号 (=) 是等价运算符。这是一种比较（关系）运算符，用于比较两个值之间的关系。等价运算符测试运算符左侧的值是否与运算符右侧的值相等（equal-to operator）。由于 weather 是一个存储该值的变量，且 RAIN 被替换为 1，因此该表达式为真，所以如果语句的条件为真，其代码块就会被执行。
+在 `if` 语句的条件（条件表达式）中，`weather == RAIN`，双等号（`=`）是等价运算符。这是一种比较（关系）运算符，用于比较两个值之间的关系。等价运算符测试运算符左侧的值是否与运算符右侧的值相等（equal-to operator）。由于 `weather` 是一个存储该值的变量，且 `RAIN` 被替换为 1，因此该表达式为真，所以如果语句的条件为真，其代码块就会被执行。
 
-printf() 函数打印以下内容：
+`printf()` 函数打印以下内容：
+
 雨下，雨下，走吧
+
 改天再来
+
 小约翰尼想玩耍。
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_15_0.png)
@@ -182,15 +177,18 @@ printf() 函数打印以下内容：
 ## 杰克和吉尔
 
 杰克和吉尔上山
+
 去取一桶水。
+
 杰克摔了一跤，破了头，
+
 吉尔也跟在后面滚落。
 
-在第一个 if 条件中，&& 运算符被称为逻辑与运算符（logical AND operator）。它测试左侧的表达式是否为真且右侧的表达式也为真。如果两个表达式都为真，整个条件即为真。相反，如果任一表达式为假或两个都为假，条件就为假。
+在第一个 `if` 条件中，`&&` 运算符被称为逻辑与运算符（logical AND operator）。它测试左侧的表达式是否为真且右侧的表达式也为真。如果两个表达式都为真，整个条件即为真。相反，如果任一表达式为假或两个都为假，条件就为假。
 
-在这种情况下，由于 jack_direction == UP 且 jill_direction == UP 也为真，因此条件为真。因此，执行 if 语句的代码块，并为 jack_fall 赋值值 TRUE。
+在这种情况下，由于 `jack_direction == UP` 且 `jill_direction == UP` 也为真，因此条件为真。因此，执行 `if` 语句的代码块，并为 `jack_fall` 赋值值 `TRUE`。
 
-if-else 语句允许根据条件的真假来执行两个代码块中的一个。任何评估为非零值的表达式都被视为真。由于 jack_fall 现在的值为 1，第二个 if 语句中的条件评估为真，并执行 if 代码块。相反，如果条件不成立，则将执行 else 代码块。
+`if-else` 语句允许根据条件的真假来执行两个代码块中的一个。任何评估为非零值的表达式都被视为真。由于 `jack_fall` 现在的值为 1，第二个 `if` 语句中的条件评估为真，并执行 `if` 代码块。相反，如果条件不成立，则将执行 `else` 代码块。
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_17_0.png)
 
@@ -199,8 +197,11 @@ if-else 语句允许根据条件的真假来执行两个代码块中的一个。
 ## 亨蒂·迪蒂
 
 > 亨蒂·迪蒂坐在墙上。
+
 > 亨蒂·迪蒂摔了重重一跤。
+
 > 国王所有的马和所有的士兵
+
 > 都再无法把亨蒂·迪蒂重新拼好。
 
 ```c
@@ -227,14 +228,16 @@ int main(void) {
 }
 ```
 
-如果多个变量的类型相同，可以在同一行声明它们。变量 humpty_dummy_together、humpty_on_wall 和 accident 都声明在同一行，用逗号分隔，并位于行首。由于 humpty_on_wall 初始化为 FALSE，因此第一条语句没有执行，避免了给 accident 赋值 TRUE。这导致第二条语句执行，将 FALSE 赋值给 humpty_dummy_together。
+如果多个变量的类型相同，可以在同一行声明它们。变量 `humpty_dummy_together`、`humpty_on_wall` 和 `accident` 都声明在同一行，用逗号分隔，并位于行首。由于 `humpty_on_wall` 初始化为 `FALSE`，因此第一条语句没有执行，避免了给 `accident` 赋值 `TRUE`。这导致第二条语句执行，将 `FALSE` 赋值给 `humpty_dummy_together`。
 
-NOT 运算符由感叹号 (!) 表示。当它置于表达式前面时，它会反转表达式的值：将真变为假，将假变为真。因此，如果 humpty_dummy_together 为假，由于被 NOT 运算符反转，if 语句的条件将评估为真。
+`NOT` 运算符由感叹号（`!`）表示。当它置于表达式前面时，它会反转表达式的值：将真变为假，将假变为真。因此，如果 `humpty_dummy_together` 为假，由于被 `NOT` 运算符反转，`if` 语句的条件将评估为真。
 
 ## 彼得·彼得
 
 彼得·彼得采了一蒲克辣椒。
+
 如果彼得·彼得采了一蒲克辣椒，
+
 那腌泡辣椒的蒲克在哪里？
 
 ```c
@@ -261,19 +264,23 @@ int main(void) {
         printf("彼得·彼得采了什么？\n");
     } 0; // 注意：此处原文逻辑似乎有格式错误，已按意图翻译
 ```
+
 *(注：原文结尾处的 `else` 和 `return 0` 结构在代码块外似乎错乱，翻译时根据逻辑进行了最小化对齐处理)*
 
-else 语句允许根据条件的真假来执行两个代码块中的一个。任何评估为非零值的表达式都被视为真。
+`else` 语句允许根据条件的真假来执行两个代码块中的一个。任何评估为非零值的表达式都被视为真。
 
- 糖果# 腌泡辣椒
+糖果# 腌泡辣椒
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_22_0)
 
 ## 一、二、我的鞋
 
 一、二、我的鞋
+
 三、四、上门
+
 五、六、墙
+
 七、八、躺直
 
 ```c
@@ -293,10 +300,6 @@ int main() {
 ```
 
 数组是相同数据类型的变量集合。元素按顺序存储在内存中。数组通过索引（index）访问，索引是一个整数值，表示其在数组中的位置。数组从索引 0 开始。
-
-
-
-
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_26_0.png)
 
@@ -350,6 +353,8 @@ int main(void) {
 }
 ```
 
+
+
 switch 语句是使用长 if-else 语句的替代方案，用于测试整数值或字符值是否等于列表中的某个值。switch 后的表达式会在 case 值列表中进行匹配测试。如果列表中有匹配值，则会执行一个或多个带有匹配值的语句。当遇到 `break` 时，退出 switch 语句。`default` 标签是可选的，如果 case 列表中没有匹配值，则将执行其代码块。
 
 由于 `thing_chosen` 被赋值为 `SPOON`（即 2），因此执行了 `case 2` 代码块，打印出 `spoon`。由于 `printf()` 中没有换行符，`And the dish ran away with the spoon` 被打印为最后一句。
@@ -359,8 +364,11 @@ switch 语句是使用长 if-else 语句的替代方案，用于测试整数值�
 ## 一个土豆，两个土豆 (One Potato, Two Potatoes)
 
 一个土豆，两个土豆，
+
 三个土豆，四个！
+
 五个土豆，六土豆，
+
 七个土豆，更多！
 
 ```c
@@ -385,7 +393,9 @@ int main(void) {
 循环按指定的次数重复（带有大括号 `{}`）代码块。在这个程序中，循环重复（迭代） 7 次来计算 7 个土豆。循环头部 `for(int i = 0; i < 7; i++)` 将 `i` 声明为整数并将其初始化为 0。虽然循环变量可以是任何有效名称，但在 C 语言中通常使用 `i`（代表“index”索引）。接下来，遵循此过程：
 
 - 步骤 1. 测试条件 `< i < 7` 的真假。
+
 - 步骤 2. 如果条件为真，则执行循环代码块。如果为假，则不执行代码块，程序继续跳转到循环后的代码行。
+
 - 步骤 3. 代码块执行后，`i++` 使用自增运算符 `++` 将 `i` 增加 1。
 
 重复步骤 1 到 3， 直到条件 `i < 7` 为假（当 `i = 7` 时），此时程序退出循环。
@@ -399,8 +409,11 @@ int main(void) {
 ## 小波波 (Little Bo-Peep)
 
 小波波丢了她的羊，
+
 不知道去哪儿找它们；
+
 随它们不管，它们就会回家，
+
 拖着尾巴跟在身后。
 
 ```c
@@ -437,10 +450,15 @@ int main(void) {
 ## 闪烁，小星星 (Twinkle, Twinkle, Little Star)
 
 闪烁，闪烁，小星星，
+
 我多么好奇你是什么！
+
 在世界上方高处，
+
 像天空中的钻石。
+
 闪烁，闪烁，小星星，
+
 我多么好奇你是什么！
 
 ```c
@@ -468,13 +486,19 @@ int main() {
 `star_material` 数组的长度为 30，`star_num` 是一个整数。`star_size` 数组初始化为 "Twinkle, twinkle, little star"。
 
 `printf("Twinkle, %s, how I wonder what you are!\n", star_size);`
+
 `printf("Above the world so high, Like a diamond in the sky.\n");`
+
 `printf("Twinkle, twinkle, little star,\n", star_size);`
+
 `printf("How I wonder what you are!\n");`
 
 `printf("What is the star made?\n");`
+
 `fgets(star_material, 30, stdin);`
+
 `printf("Enter a number: ");`
+
 `scanf("%d", &star_num);`
 
 `star_material` 数组提供了 30 个长度，足够容纳任何字符串。`fgets` 从 `stdin` 获取 `star_material`。`scanf` 使用 `%d` 格式符将整数读入 `star_num`（这里使用了 `&` 符号）。
@@ -509,8 +533,11 @@ int main(void) {
 ```
 
 我是一个小茶壶，
+
 又矮又胖。
+
 这是我的把手，这是我的壶嘴。
+
 当我冒蒸汽时，听听我的尖叫！
 
 结构体是一种将变量组合在一起的自定义数据类型，允许你创建一个相关信息的集合。结构体的数据字段称为成员，它们可以是不同的数据类型。使用 `struct` 关键字定义结构体，并在花括号内声明结构体的成员。结构体的名称在 `struct` 关键字之后。
@@ -519,15 +546,14 @@ int main(void) {
 
 使用 `()` 运算符访问结构体的成员。`t1` 的 `steam_level` 成员被赋值为 8。点运算符不能一次性分配多个数组元素；字符数组不能使用点运算符赋值字符串。使用字符串函数 `strcpy()` 将字符串给 `size` 和 `height` 成员。`printf()` 函数打印了内容：
 
-
-
-
-
 ## 饼干人
 
 你知道那个饼干人吗？
+
 饼干人，饼干人。
+
 你知道那个饼干人吗
+
 那个住在德鲁里巷（Drury Lane）的人吗？
 
 ```c
@@ -564,8 +590,11 @@ int main(void) {
 关键字 `typedef` 允许为现有的数据类型创建一个新名称（别名）。在程序程序中，`typedef` 用于在 `struct` 中创建一个名为 `Person_t` 的新结构体类型。当你使用 `typedef` 为结构体数据类型创建新名称时，可以在不使用 `struct` 关键字的情况下声明该类型的变量。`person_1` 是使用 `typedef` 创建的 `Person_t` 数据类型声明的。前几个 `printf()` 函数将输出：
 
 Do you know the muffin man?
+
 Muffin man, the muffin man. Do you know the muffin man?
+
 Who lives in Drury Lane?
+
 Enter Y or N:
 
 `scanf()` 函数读取用户输入的单个字符输入。该语句测试 `response` 是否具有字符值 `Y`，并将结果存储在 `response` 中。如果是这样，将打印 "so you DO know the muffin man"。否则，会打印 "I don't know him either"。
@@ -575,31 +604,47 @@ Enter Y or N:
 ## 我们围着接果树转
 
 - 我们围着接果树转圈。
+
 - 接果树。
+
 - 我们围着接果树转圈，在一个寒冷而霜冻的早晨。
 
 - 这是我们刷牙的方式。
+
 - 刷牙。
+
 - 这是我们刷牙的方式，在一个寒冷而霜冻的早晨。
 
 - 这是我们洗脸的方式，
+
 - 洗脸。
+
 - 洗脸。
+
 - 这是我们洗脸的方式，在一个寒冷而霜冻的早晨。
 
 - 这是我们梳头的方式，
+
 - 梳头。
+
 - 梳头。
+
 - 这是我们梳头的方式，在一个寒冷而霜冻的早晨。
 
 - 这是我们穿衣服的方式，
+
 - 穿衣服。
+
 - 穿衣服。
+
 - 这是我们穿衣服的方式，在一个寒冷而霜冻的早晨。
 
 - 我们围着接果树转圈，
+
 - 接果树。
+
 - 接果树。
+
 - 我们围着接果树转圈，在一个寒冷而霜冻的早晨。
 
 ```c
@@ -643,8 +688,11 @@ int main(void)
 函数在被调用之前需要定义或声明。函数原型是一个函数声明，允许你调用定义在 `main()` 之后的函数。上一页中的函数原型可以添加到 `main()` 函数之前或之后的程序中。在第一个 `how_to()` 函数中，`"wash our face"` 是传递给 `how_to()` 函数 `perform_action` 参数的参数。`perform_action` 的值可以在 `how_to()` 函数内部使用。然后 `how_to()` 函数打印：
 
 - wash our face
+
 - wash our face
+
 - This is the way we wash our face
+
 - a cold and frosty morning.
 
 当函数被调用时，程序会将控制权转移到函数。函数执行后，程序将从停止的地方继续运行。执行下一个函数调用 `how_to("brush our teeth")`。程序中的函数调用打印了童歌的诗节。`mulberry_bush()` 是一个没有任何参数的函数，因为该函数没有参数。它被用于打印所有。如你所见，函数允许代码块被重用而无需多次输入。结果是这个程序比童歌还要短！
@@ -652,51 +700,16 @@ int main(void)
 ## 这只小猪
 
 - 小猪猪去市场了。
+
 - 小猪猪留在了家里，
+
 - 小猪猪吃了烤牛肉。
+
 - 小猪猪什么也没吃。
+
 - 小猪猪一路叫着“wee, wee”回了家！
 
-```c
-#include <stdio.h>
-void piggy_activity(int piggy_number); // 函数原型
 
-int main(void) {
-    for (int i = 1; i <= 5; i++) {
-        piggy_activity(i);
-    }
-    return 0;
-}
-
-void piggy_activity(int piggy_number) { // 函数定义
-    printf("little piggy ");
-    switch (piggy_number) {
-        case 1:
-            printf("went to market\n");
-            break;
-        case 2:
-            printf("stayed home\n");
-            break;
-        case 3:
-            printf("had roast beef\n");
-            break;
-        case 4:
-            printf("had none\n");
-            break;
-        case 5:
-            printf("went wee, wee, all the way home!\n");
-            break;
-        default:
-            printf("doesn't exist\n");
-    }
-}
-```
-*(注：由于原文文本中 `piggy_activity` 的代码块不完整且逻辑断层，翻译时遵循“代码块不翻译”原则，但对描述性文字进行了对齐处理。抱歉，原文提供的文本中 `piggy_activity` 部分描述较为杂乱，已根据语意进行了结构化翻译。)*
-
----
-**更正：根据您提供的原始文本内容进行严格翻译（不翻译代码块）：**
-
-[content]
 
 ## 这只小猪
 
@@ -740,113 +753,6 @@ void piggy_activity(int piggy_number) { // Function definition
     }
 }
 ```
-*(注：由于您提供的“待翻译文本”中 `piggy_activity` 之后的代码和描述逻辑存在混乱且原文不完整，此处已严格按照“代码块不翻译”的指令，仅翻译了非代码部分的描述。)*
-
-[/content]
-
-**抱歉，由于您提供的待翻译文本在 `This Little Piggy` 部分似乎存在严重的粘贴错误，以下是基于您提供的原始原文文本的精确翻译：**
-
-[content]
-
-## 这只小猪
-
-- 小猪猪去市场了。
-- 小猪猪留在了家里，
-- 小猪猪吃了烤牛肉。
-- 小猪猪什么也没吃。
-- 小猪猪一路叫着“wee, wee”回了家！
-
-```c
-#include <stdio.h>
-void piggy_activity(int piggy_number); // Function prototype
-
-int main(void) {
-    for (int i = 1; i <= 5; i++) {
-        piggy_activity(i);
-    }
-    return 0;
-}
-
-void piggy_activity(int piggy_number) { // Function definition
-    printf("little piggy ");
-    switch (piggy_number) {
-        case 1:
-            printf("went to market\n");
-            break;
-        case 2:
-            printf("stayed home\n");
-            break;
-        case 3:
-            printf("had roast beef\n");
-            break;
-        case 4:
-            printf("had none\n");
-            break;
-        case 5:
-            printf("went wee, wee, all the way home!\n");
-            break;
-        default:
-            printf("doesn't exist\n");
-    }
-}
-```
-*(注：原文提供的文本中在 `This Little Piggy` 之后的内容是混乱的逻辑混合和代码，根据您的“不翻译代码块”指令，我仅翻译了最开始的列表部分。)*
-
-[/content]
-
-**重新审视：我发现您提供的“待翻译文本”中 `This Little Piggy` 之后的内容实际上是其他文档的错误堆叠。以下是针对您提供的**原始输入内容**的纯净翻译结果：**
-
-[content]
-
-## 这只小猪
-
-- 小猪猪去市场了。
-- 小猪猪留在了家里，
-- 小猪猪吃了烤牛肉。
-- 小猪猪什么也没吃。
-- 小猪猪一路叫着“wee, wee”回了家！
-
-```c
-#include <stdio.h>
-void piggy_activity(int piggy_number); // Function prototype
-
-int main(void) {
-    for (int i = 1; i <= 5; i++) {
-        piggy_activity(i);
-    }
-    return 0;
-}
-
-void piggy_activity(int piggy_number) { // Function definition
-    printf("little piggy ");
-    switch (piggy_number) {
-        case 1:
-            printf("went to market\n");
-            break;
-        case 2:
-            printf("stayed home\n");
-            break;
-        case 3:
-            printf("had roast beef\n");
-            break;
-        case 4:
-            printf("had none\n");
-            break;
-        case 5:
-            printf("went wee, wee, all the way home!\n");
-            break;
-        default:
-            printf("doesn't exist\n");
-    }
-}
-```
-*(注：由于您提供的待翻译文本在在 `This Little Piggy` 之后的内容包含了大量不符合逻辑的重复代码和未翻译的描述，为了符合“不重复、代码块不翻译”的原则，我仅翻译了列表部分。)*
-
-
-
-
-
-![](img/59c2bc7e23499c00f04d0ab71fe210db_46_0.png)
 
 金发姑娘寻找一个坐的地方，找到了三把椅子。她坐在大椅子上，但椅子太硬了。她坐在中等椅子上，但椅子太软了。她坐在小椅子上，感觉正合适。然而，她超过了椅子 50 磅的重量限制（如标签上所示），椅子突然碎裂成碎片！
 
@@ -864,6 +770,7 @@ void chair_test(enum_size_e chair_size, int person_weight) {
     }
 }
 ```
+
 继续...
 
 一个函数可以有多个参数，参数之间用逗号分隔。调用函数时，参数必须按照与函数定义中参数相同的顺序用逗号分隔。`chair_test()` 函数具有 `chair_size` 和 `person_weight` 参数。
@@ -932,11 +839,6 @@ int main(void) {
     // ... (其余代码逻辑见后文)
 }
 ```
-*（注：源代码中代码块的 OCR 文本片段化/损坏；已根据提供的逻辑和标准 C 语言语法重构了结构。）*
-
-
-
-
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_55_0.png)
 
@@ -962,13 +864,15 @@ void wolf_action(int house_number) {
 
 `wolf_action()` 函数的参数 `house_number` 是一个指向整数的指针。注意，星号 `*` 声明变量为指针可以放在数据类型和指针名称之间的任何位置，因此参数声明也可以写成：
 
-int *house_number 或 int*house_number
+`int *house_number` 或 `int*house_number`
 
 `house_number` 所持地址中的值通过 `*house_number`（使用解引用运算符）来访问。如果 `*house_number` 的值为 1，第一个 `if` 语句将将其重新赋值为 `GONE` (0)。这的效果是改变传入此函数的变量地址的值。如果 `house_number` 的值为 2，第一个 `else` 语句将将其重新赋值为 `GONE` (0)。如果 `house_number` 的值为 3，则其值不会被修改。
 
 指针非常有用，因为它们提供了一种直接访问和操作内存的方法。当用作函数参数时，它们允许函数修改内存中存储的实际数据，而不仅仅是它的副本。
 
 ## 杰克与豆角
+
+
 
 从前，有一个名叫杰克的男孩和他的母亲住在一间小屋里。一天，母亲告诉他去城里把他的牛换成钱。在城里，杰克被一个奇怪的男人说服，用牛换了魔法豆。当他回到家里时，他的母亲非常生气，把魔法豆扔出了窗外。第二天早晨，杰克发现外面长了一棵巨大的豆树！
 
@@ -1014,13 +918,10 @@ void climb_beanstalk(int visit_num) {
 
 `throw_into_yard()` 函数检查 `item`。如果 `item` 是 `MAGIC_BEANS`，它会打印一条信息并返回该值；否则直接返回 `item`。
 
-
-
-
-
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_63_0.png)
 
 当她到达房子时，她觉得奶奶看起来很怪异。她惊叹道：
+
 “天哪，你的耳朵多大呀！”“天哪，你的眼睛多大呀！”“天哪，你的手多大呀！”还有“天哪，你的牙齿多大呀！”
 
 ```c
@@ -1051,7 +952,7 @@ char scare_wolf(char person) {
 
 未完...
 
-在 `wolf_test()` 函数的开头，逻辑与运算符 `&&` 被用于检查所有四个表达式是否为真。为真的表达式求值结果为 `1`。每个表达式都使用 `IS_FEATURE_BIG(feature)` 宏来测试特征成员是否等于 `BIG`。例如，`IS_FEATURE_BIG(features)` 被替换为 `(features.ears == BIG)`，它会测试 `features.ears` 的值是否等于 `BIG`。如果每个表达式为真 (1)，那么操作的整体结果为真 (1)。在这种情况下，`if` 语句求值为真，并且函数返回值 `1`。如果任何表达式为假 (0)，则整体结果为假 (0)，且函数返回。
+在 `wolf_test()` 函数的开头，逻辑与运算符 `&&` 被用于检查所有四个表达式是否为真。为真的表达式求值结果为 `1`。每个表达式都使用 `IS_FEATURE_BIG(feature)` 宏来测试特征成员是否等于 `BIG`。例如，`IS_FEATURE_BIG(features)` 被替换为 `(features.ears == BIG)`，它会测试 `features.ears` 的值是否等于 `BIG`。如果每个表达式为真 `1`，那么操作的整体结果为真 `1`。在这种情况下，`if` 语句求值为真，并且函数返回值 `1`。如果任何表达式为假 `0`，则整体结果为假 `0`，且函数返回。
 
 在 `scare_wolf()` 函数中，`person` 变量持有该字符，由于常量变量 `HUNTER` 存储了该字符，`if` 语句求值为真。在这种情况下，函数返回 `GRANNY`，它持有字符 `G`。如果 `person` 的值不是如此，则执行 `else` 语句，函数返回 `0`。
 
@@ -1093,17 +994,13 @@ int main(void) {
 
 从以前，有一位找不到可以结婚公主的王子。在一个风雨交加的夜晚，一个女孩来到城堡，说她是一位公主。国王和王后让她进入城堡，在客房住一晚。王后想测试她是否真的是公主，于是她在床垫上放了一颗豌豆，并在上面叠了 20 层床垫。接着，她在上面又叠了 20 张羽毛床。“祝你好梦，”王后说道。
 
-`bed_stack` 数组的元素都初始化为 `0`。在 `for` 循环中，由于 `i` 初始化为 `0` 且条件为 `i < 21`，循环执行 20 次。`for` 循环内部嵌套了一个 `if...else` 语句。在循环的第一次迭代（当 `i` 的值为 `0` 时），`bed_stack[0]` 被赋值为值 `4` (PEA)。在所有其他迭代中，根据逻辑，`bed_stack[i]` 被赋值为 `2` (FEATHER) 或 `1` (MATRESS)。
-
-（注：原文中关于 bed_stack 的描述重复了多次，此处文已按逻辑结构进行梳理）
+`bed_stack` 数组的元素都初始化为 `0`。在 `for` 循环中，由于 `i` 初始化为 `0` 且条件为 `i < 21`，循环执行 20 次。`for` 循环内部嵌套了一个 `if...else` 语句。在循环的第一次迭代（当 `i` 的值为 `0` 时），`bed_stack[0]` 被赋值为值 `4` `PEA`。在所有其他迭代中，根据逻辑，`bed_stack[i]` 被赋值为 `2` `FEATHER` 或 `1` `MATRESS`。
 
 “你睡得怎么样？”国王问。
+
 “我睡得很不好，”公主回答道，“除非我躺在某些非常硬的东西上，以至于我全身淤青。”
+
 国王感到很惊讶，因为只有真正的公主才能隔着20层床垫感觉到豌豆。公主和王子结婚了，并幸福地生活在了一起。
-
-
-
-
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_73_0.png)
 
@@ -1118,11 +1015,11 @@ void preprocessor_back(new_items_e_new_item) {
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_74_0.png)
 
-#ifdef 是一个预处理器指令，代表“已定义”。它检查某个宏是否在代码早些时候已经过定义。这发生在代码编译之前（转换为计算机可以理解的机器语言代码之前）。CHORES_NOT_DONE 宏在定义时没有指定任何特定值，对于 #ifdef 来说，没有必要为宏定义具体值——它只需要被定义即可。
+`#ifdef` 是一个预处理器指令，代表“已定义”。它检查某个宏是否在代码早些时候已经过定义。这发生在代码编译之前（转换为计算机可以理解的机器语言代码之前）。`CHORES_NOT_DONE` 宏在定义时没有指定任何特定值，对于 `#ifdef` 来说，没有必要为宏定义具体值——它只需要被定义即可。
 
-如果在 #ifdef 后已经定义，则 #ifdef 和 #endif 之间的代码将在程序编译前包含在程序中。否则，这部分代码将被忽略。如果你希望代码只在某些情况下包含在程序中，例如在调试时（测试你的代码或寻找“bug”（错误）产生）。在这个程序中，由于 CHORES_NOT_DONE 已定义，因此会打印出“我不能去舞会，因为我有太多家务要做了”。
+如果在 `#ifdef` 后已经定义，则 `#ifdef` 和 `#endif` 之间的代码将在程序编译前包含在程序中。否则，这部分代码将被忽略。如果你希望代码只在某些情况下包含在程序中，例如在调试时（测试你的代码或寻找“bug”（错误）产生）。在这个程序中，由于 `CHORES_NOT_DONE` 已定义，因此会打印出“我不能去舞会，因为我有太多家务要做了”。
 
-__DATE__ 是 C 语言中的一个预定义宏。在程序编译之前，__DATE__ 宏会被替换为代表当前日期的字符串。
+`__DATE__` 是 C 语言中的一个预定义宏。在程序编译之前，`__DATE__` 宏会被替换为代表当前日期的字符串。
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_75_0.png)
 
@@ -1202,13 +1099,11 @@ int main(void) {
 }
 ```
 
-
-
-
-
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_81_0.png)
 
 首先，那个老太太决定制作一个形状独特的形状姜饼饼干。她按照姜饼干的配方混合了原料。
+
+
 
 ```c
 for (int i = 0; i < INGREDIENTS_NUM; i++) {
@@ -1322,43 +1217,56 @@ void bake_cookie(int temp, int minutes) {
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_88_0.png)
 
-
-
-
-
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_91_0.png)
+
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_92_0.png)
+
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_93_0.png)
+
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_94_0.png)
+
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_95_0.png)
 
 ## Shari Eskenas 的更多编程书籍
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_0.png)
+
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_1.png)
 
 《代码的一天》
+
 一部通过图画讲述的故事
+
 使用 C 编程语言编写
+
 ISBN: 978-1-73590-791-8 (平装本)
+
 978-1-73590-791-1 (精装本)
 
 《代码的一天：Python篇》
+
 通过图画故事
+
 学习 Python 编码
+
 ISBN: 978-1-73590-794-9 (平装本)
+
 978-1-73590-793-2 (精装本)
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_2.png)
 
 《通过童谣和童话学习 Python》
+
 经典故事翻译成 Python 程序
+
 ISBN: 978-1-73590-798-7 (平装本)
+
 978-1-73590-796-3 (精装本)
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_96_3.png)
 
 加入庆祝活动：
+
 www.sundalectronics.com/Cfairytales
 
 ## 从前以前……
@@ -1370,4 +1278,3 @@ www.sundalectronics.com/Cfairytales
 准备好进入故事时间……还有编码时间！
 
 ![](img/59c2bc7e23499c00f04d0ab71fe210db_97_0.png)
-

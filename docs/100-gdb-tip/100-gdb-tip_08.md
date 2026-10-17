@@ -1,10 +1,11 @@
-# core dump 文件
 
-# 为调试进程产生 core dump 文件
+# Core dump 文件
 
-# 技巧
+## 为调试进程产生 Core dump 文件
 
-在用 gdb 调试程序时，我们有时想让被调试的进程产生 core dump 文件，记录现在进程的状态，以供以后分析。可以用“generate-core-file”命令来产生 core dump 文件：
+### 技巧
+
+在用`gdb`调试程序时，我们有时想让被调试的进程产生 core dump 文件，记录现在进程的状态，以供以后分析。可以用`generate-core-file`命令来产生 core dump 文件：
 
 ```cpp
 (gdb) help generate-core-file
@@ -24,7 +25,7 @@ Temporary breakpoint 1, main () at a.c:9
 Saved corefile core.12955 
 ```
 
-也可使用“gcore”命令：
+也可使用`gcore`命令：
 
 ```cpp
 (gdb) help gcore
@@ -34,13 +35,13 @@ Argument is optional filename.  Default filename is 'core.<process_id>'.
 Saved corefile core.13256 
 ```
 
-参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Core-File-Generation.html)
+参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Core-File-Generation.html)。
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 加载可执行程序和 core dump 文件
+# 加载可执行程序和 Core dump 文件
 
 ## 例子
 
@@ -57,7 +58,7 @@ int main(void) {
 
 ## 技巧
 
-例子程序访问了一个空指针，所以程序会 crash 并产生 core dump 文件。用 gdb 调试 core dump 文件，通常用这个命令形式：“gdb path/to/the/executable path/to/the/coredump”，然后 gdb 会显示程序 crash 的位置：
+例子程序访问了一个空指针，所以程序会 crash 并产生 core dump 文件。用`gdb`调试 core dump 文件，通常用这个命令形式：`gdb path/to/the/executable path/to/the/coredump`，然后`gdb`会显示程序 crash 的位置：
 
 ```cpp
 bash-3.2# gdb -q /data/nan/a /var/core/core.a.22268.1402638140
@@ -71,7 +72,7 @@ Program terminated with signal 11, Segmentation fault.
 6               *p = 0; 
 ```
 
-有时我们想在 gdb 启动后，动态加载可执行程序和 core dump 文件，这时可以用“file”和“core”（core-file 命令缩写）命令。“file”命令用来读取可执行文件的符号表信息，而“core”命令则是指定 core dump 文件的位置：
+有时我们想在`gdb`启动后，动态加载可执行程序和 core dump 文件，这时可以用`file`和`core`（`core-file`命令缩写）命令。`file`命令用来读取可执行文件的符号表信息，而`core`命令则是指定 core dump 文件的位置：
 
 ```cpp
 bash-3.2# gdb -q
@@ -87,9 +88,9 @@ Program terminated with signal 11, Segmentation fault.
 6               *p = 0; 
 ```
 
-可以看到 gdb 同样显示程序 crash 的位置。
+可以看到`gdb`同样显示程序 crash 的位置。
 
-这两个命令可参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Files.html#index-core-dump-file)
+这两个命令可参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Files.html#index-core-dump-file)。
 
 ## 贡献者
 

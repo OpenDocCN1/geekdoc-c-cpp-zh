@@ -1,10 +1,5 @@
+
 # PROC TEMPLATE 简明指南：SAS 用户指南
-
-
-
-
-
-
 
 随时查找答案，或今天就掌握。查看定价方案。
 
@@ -24,29 +19,25 @@ PROC TEMPLATE 教程：一本帮助 SAS 用户理解 PROC TEMPLATE 威力的指�
 
 第 1 章“引言”解释了如何使用 SAS TEMPLATE 定义表格的结构。第 2 章“在 SAS 报告中使用表格”解释了如何使用 SAS TEMPLATE 语言对 ODS 输出进行样式设置。书中详细解释了表格的主体。第 3 章解释了如何创建书中涵盖的“数据依赖型”和“数据不依赖型”表格。
 
-### 第 3 章：“创建和自定义表格”，
+### 第 3 章：“创建和自定义表格”
 
 本章涵盖了所有类型的表格，包括头、页脚、样式以及如何在 ODS 输出中对其进行样式设置。书中提供了表格示例，以及如何使用 PROC TEMPLATE 和 PROC GREPORT 来创建这些表格。
 
-### 第 4 章：“模板管理”，
+### 第 4 章：“模板管理”
 
 本章解释了如何使用 ODS 路径传递模板，以及你如何在工作环境中移动它们。到本书为止，用于创建设计和显示模板的 PROC TEMPLATE 每个部分都将在本章中演示。
 
-### 附录 A：“与 SAS 旧版本的兼容性”，
+### 附录 A：“与 SAS 旧版本的兼容性”
 
 附录 A 提供了不同 SAS 版本之间样式的兼容性表。
 
-### 附录 B：“SAS/GRAPH 中的颜色值”，
+### 附录 B：“SAS/GRAPH 中的颜色值”
 
 附录 B 提供了你可能在报告使用的 SAS/GRAPH 颜色值列表。
 
 ### 本书未涵盖的内容
 
 本书未涵盖其他内容。
-
-
-
-
 
 # 模板结构
 
@@ -66,7 +57,6 @@ PROC TEMPLATE 教程：一本帮助 SAS 用户理解 PROC TEMPLATE 威力的指�
 
 ```
 PROC TEMPLATE:
-
 DEFINE shopping_cart:
   DEFINE bag:
     DEFINE item;
@@ -79,7 +69,6 @@ DEFINE shopping_cart:
   DEFINE item;
   END;
   END;
-
 RUN;
 ```
 
@@ -87,9 +76,7 @@ RUN;
 
 ```
 PROC TEMPLATE:
-
 DEFINE SHOPPING_cart:
-
   DEFINE bag:
     DEFINE item milk;
       QTY = 2;
@@ -103,9 +90,7 @@ DEFINE SHOPPING_cart:
       QUANTITY = 10;
     END;
   END;
-
   END;
-
 RUN;
 ```
 
@@ -113,9 +98,7 @@ RUN;
 
 ```
 PROC TEMPLATE:
-
 DEFINE SHOPPING_cart:
-
   DEFINE bag:
     DEFINE item milk;
       QTY = 2;
@@ -129,7 +112,6 @@ DEFINE SHOPPING_cart:
       QUANTITY = 10;
     END;
   END;
-
   END;
 ```
 
@@ -145,8 +127,6 @@ DEFINE SHOPPING_cart:
 
 - 映射到独立数据集的独立模板
 - 不映射到数据集的独立模板
-
-
 
 ## 数据依赖型
 
@@ -222,19 +202,14 @@ class:
 2. Tagset 模板并不用于列出输出。
 3. 对于存储在 Styles 文件夹中的样式，不需要 STYLE= 选项中指定“styles”前缀。该文件夹会自动检查。
 
-
-
-
 ## 使用预定义样式
 
 可以认为 SAS 自带了数十种可供直接使用的预定义样式；你所做的是将其中一种样式应用于 ODS 输出，以使用 `STYLE=` 选项。下面是一个在 ODS HTML 输出中使用预定义样式的示例。
 
 ```
 ODS HTML style=class;
-
 PROC PRINT data=sasclass(class=R);
 RUN;
-
 ODS HTML CLOSE;
 ```
 
@@ -247,7 +222,6 @@ ODS HTML CLOSE;
 ```
 PROC PRINT data=sasclass(class=R);
 RUN;
-
 ODS PDF CLOSE;
 ```
 
@@ -269,23 +243,17 @@ RUN;
 
 ```
 ODS HTML style=style.html;
-
 PROC PRINT data=sasclass;
   CLASS class;
   STYLEHTML=style;
 RUN;
-
 ODS HTML CLOSE;
-
 ODS PDF style=style.html;
-
 PROC PRINT data=sasclass;
   CLASS class;
   STYLEPDF=style;
 RUN;
-
 ODS PDF CLOSE;
-
 PROC TEMPLATE;
   DEFINE style=;
     <HTML>
@@ -352,17 +320,13 @@ END PROC TEMPLATE;
 
 在第二步中，从预处理的数据中提取特征。我们使用了统计特征和基于时间序列的特征。在第三步中，使用机器学习模型利用提取的特征对驾驶行为进行分类。
 
-（注：由于原文中存在大量重复，此处根据指令要求仅翻译核心内容，不再重复输出重复块。）
-
-
-
 PMQC-MEASURED 产出占所有区域样本量的比例。
 
 | 标题 | 表头 | 表头 |
 | --- | --- | --- |
 | 观测 | 列 | 列 |
 | 观测 | 列 | 列 |
-| 标签 | 总计 | |
+| 标签 | 总计 |  |
 | 总计 | 总计 | 总计 |
 
 PMQC-MEASURED 产出占所有区域样本量的比例。
@@ -413,10 +377,10 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 | --- | --- | --- |
 | 表头 | 表头 | 表头 |
 | 列 | 列 | 列 |
-| 列 | 列 | |
-| 摘要 | 摘要 | |
-| 列 | 列 | |
-| 摘要 | 摘要 | |
+| 列 | 列 |  |
+| 摘要 | 摘要 |  |
+| 列 | 列 |  |
+| 摘要 | 摘要 |  |
 | 行 | | |
 
 下表显示了按区域样本量分组的 PMQC-MEASURED 值。
@@ -432,16 +396,20 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 下表显示了按区域样本量分组的 PMQC-MEASURED 值。
 
 |  region | sample_size | pmqc_measured |
+
+
+
 | :--- | --- | --- |
+
 | region A | 100 | 85 |
 | region B | 200 | 150 |
 | region C | 300 | 240 |
 | region D | 400 | 310 |
 | region E | 500 | 410 |
 
-下表显示了按区域样本量分组的 PMQC-MEASURED 值。
+下表显示了按区域样本量分组的 `PMQC-MEASURED` 值。
 
-|  region | sample_size | pmqc_measured |
+| region | sample_size | pmqc_measured |
 | :--- | --- | --- |
 | region A | 100 | 85 |
 | region B | 200 | 150 |
@@ -459,9 +427,9 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 | 类 | proc / proc |
 | 键 | / all |
 
-下表显示了按区域样本量分组的 PMQC-MEASURED 值。
+下表显示了按区域样本量分组的 `PMQC-MEASURED` 值。
 
-|  region | sample_size | pmqc_measured |
+| region | sample_size | pmqc_measured |
 | :--- | --- | --- |
 | region A | 100 | 85 |
 | region B | 200 | 150 |
@@ -469,9 +437,9 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 | region D | 400 | 310 |
 | region E | 500 | 410 |
 
-下表显示了按区域样本量分组的 PMQC-MEASURED 值。
+下表显示了按区域样本量分组的 `PMQC-MEASURED` 值。
 
-|  region | sample_size | pmqc_measured |
+| region | sample_size | pmqc_measured |
 | :--- | --- | --- |
 | region A | 100 | 85 |
 | region B | 200 | 150 |
@@ -479,9 +447,9 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 | region D | 400 | 310 |
 | region E | 500 | 410 |
 
-下表显示了按区域样本量分组的 PMQC-MEASURED 值。
+下表显示了按区域样本量分组的 `PMQC-MEASURED` 值。
 
-|  region | sample_size | pmqc_measured |
+| region | sample_size | pmqc_measured |
 | :--- | --- | --- |
 | region A | 100 | 85 |
 | region B | 200 | 150 |
@@ -493,18 +461,14 @@ PMQC-MEASURED 产出占所有区域样本量的比例。
 
 除了对表格、单元格和报告的其他部分进行样式化外，可以在字符串中进行格式化。可能与其让整个数据单元格显示一种颜色，不如对单元格内的字符和值进行独立格式化。这就是 ODS 内联格式化。幸运的是，默认格式“style”可以轻松地更改为 `Proc style`，因此我们已经知道如何应用它了。
 
-下表显示了按区域样本量分组的 PMQC-MEASURED 值。
+下表显示了按区域样本量分组的 `PMQC-MEASURED` 值。
 
 - 默认格式“style”可以轻松地更改为 `Proc style`
 - 我们已经知道如何应用它了。
 
-
-
-
-
 ### 整合汇总
 
-现在我们已经将所有内容整合在一起了，这里是 PROB TEMPLATE 的外观，使用了与我们 HTML 输出匹配的样式，并具有相应的样式。
+现在我们已经将所有内容整合在一起了，这里是 `PROB TEMPLATE` 的外观，使用了与我们 HTML 输出匹配的样式，并具有相应的样式。
 
 以下是模板输出：
 
@@ -585,7 +549,7 @@ th {
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_13_3.png)
 
-注：此处原文中存在大量重复的标题和段落，已根据要求进行翻译并处理，确保逻辑连贯。*
+注：此处原文中存在大量重复的标题和段落，已根据要求进行翻译并处理，确保逻辑连贯。
 
 我们已经非常接近目标了，但还有一些事情需要进行样式处理。请注意，对于我们的表头和表格行的样式，我们还将更改表头标记的背景颜色以匹配我们的样式。
 
@@ -617,16 +581,27 @@ td, th {
 #### 定义表格
 
 ### 定义表头和页脚
+
 # 定义列
+
 ### 使用计算列
+
 # 表格属性
+
 ### 样式覆盖与高亮
+
 ### CELLSTYLE 语句
+
 ### 在 DATA _ 使用表格模板
+
 ### 在表格模板中使用变量
+
 ### 使用通用列
+
 ### DATA 步技巧
+
 ### 修改 PROC 表格
+
 ### PROC FREQ 交叉表
 
 ### 整合汇总
@@ -650,7 +625,7 @@ RUN;
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_15_0.png)
 
-DATA语句在本章中没有变化，但可以使用宏来简化这种方法。我们将定义的宏之一是 `DEFINE_TABLE`，它自动化了上面的表格代码。我们将使用此宏将数据集绑定到表格。
+`DATA`语句在本章中没有变化，但可以使用宏来简化这种方法。我们将定义的宏之一是 `DEFINE_TABLE`，它自动化了上面的表格代码。我们将使用此宏将数据集绑定到表格。
 
 ```sas
 PROC TEMPLATE;
@@ -727,10 +702,6 @@ PROC TEMPLATE;
   DEFINE TABLE Name>
   header>Age>
 ```
-
-
-
-
 
 # 定义列
 
@@ -850,7 +821,7 @@ COMPUTE as expr;
 
 现在我们有了所有信息，为表格中添加一个包含每个个人 BMI 的新列。
 
-```
+```sas
 PROC TABLE data=sashelp.class (obs=7);
 COLUMN name age weight bmi;
 DEFINE bmi;
@@ -872,8 +843,13 @@ RUN;
 | Patricia | 15 | 61 | 88 | 24.77 |
 | Robert | 13 | 65 | 140 | 29.91 |
 | Susan | 22 | 54 | 95 | 32.04 |
+
+
+
 | David | 11 | 69 | 160 | 23.33 |
+
 | Barbara | 19 | 62 | 103 | 27.99 |
+
 | Linda | 10 | 60 | 115 | 32.06 |
 
 在列中创建新值的方法是使用 `TRANSLATE` 语句。与 `FORMAT` 不同，它获取列中的数据并转换为不同的表示。这类似于使用 SAS 格式，但在值的匹配和替换方面提供了完整的 SAS 表达式功能。此外，列的值基于任意列，就像 `COMPUTE` 语句的情况一样。`TRANSLATE` 语句的通用格式是：
@@ -897,26 +873,22 @@ END;
 
 # 表格属性
 
-表格属性用于影响表格本身，以及某些表头和列的行为；许多属性是列表（Listing）特定的，在此不再讨论。完整的属性列表可以在《SAS 9.3 ODS Delivery System: User's Guide, Second Edition》中找到。
+表格属性用于影响表格本身，以及某些表头和列的行为；许多属性是列表特定的，在此不再讨论。完整的属性列表可以在《SAS 9.3 ODS Delivery System: User's Guide, Second Edition》中找到。
 
-- **BYLINE-ON | OFF**: 指定在表格前打印行标题（byline）。
-- **CLASSLEVELSON | OFF**: 指定如果之前的列也启用了 `BLANK, DUPS=` 属性且其值在当前行发生变化，则是否在该列上启用 `BLANK, DUPS=` 属性。
-- **CONTENTS-ON | OFF**: 指定是否将表格放入目录中。
-- **CONTENTS_LABEL="string"**: 动态查找答案，查看或掌握新事物。参见定价选项。
-- **DATA_FORMAT_OVERRIDE=ON | OFF**: 指定数据列的格式是否优于模板中的格式。
-- **LABEL="string"**: 为表格指定标签。如果未提供标签，将使用数据集的标签。如果标签标签，则使用第一个表格表头的文本。
-- **NEWPAGE=ON | OFF**: 指定是否在表格前强制分页。
-- **ORDER_DATA=ON | OFF**: 指定数据集中列的顺序是否覆盖模板中指定的列的顺序。
-- **PARENT="table-path"**: 指定一个要继承的表格定义。继承将在本章稍后的部分讨论。
-- **PRINT_FOOTERS=ON | OFF**: 指定是否打印表格页脚。
-- **PRINT_HEADERS=ON | OFF**: 指定是否打印表格表头。
-- **STYLE="style-override"**: 指定应用到表头的样式。样式覆盖将在第二章的“样式覆盖和条件格式”中讨论。
-- **USE_FORMAT_DEFAULTS=ON | OFF**: 指定宽度和小数位数应取格式名称的默认值，而不是模板。
-- **USER_NAME=ON | OFF**: 如果列定义和数据集均未指定，则使用列名作为表头。
-
-
-
-
+- `BYLINE-ON | OFF`: 指定在表格前打印行标题（byline）。
+- `CLASSLEVELSON | OFF`: 指定如果之前的列也启用了 `BLANK, DUPS=` 属性且其值在当前行发生变化，则是否在该列上启用 `BLANK, DUPS=` 属性。
+- `CONTENTS-ON | OFF`: 指定是否将表格放入目录中。
+- `CONTENTS_LABEL="string"`: 动态查找答案，查看或掌握新事物。参见定价选项。
+- `DATA_FORMAT_OVERRIDE=ON | OFF`: 指定数据列的格式是否优于模板中的格式。
+- `LABEL="string"`: 为表格指定标签。如果未提供标签，将使用数据集的标签。如果标签标签，则使用第一个表格表头的文本。
+- `NEWPAGE=ON | OFF`: 指定是否在表格前强制分页。
+- `ORDER_DATA=ON | OFF`: 指定数据集中列的顺序是否覆盖模板中指定的列的顺序。
+- `PARENT="table-path"`: 指定一个要继承的表格定义。继承将在本章稍后的部分讨论。
+- `PRINT_FOOTERS=ON | OFF`: 指定是否打印表格页脚。
+- `PRINT_HEADERS=ON | OFF`: 指定是否打印表格表头。
+- `STYLE="style-override"`: 指定应用到表头的样式。样式覆盖将在第二章的“样式覆盖和条件格式”中讨论。
+- `USE_FORMAT_DEFAULTS=ON | OFF`: 指定宽度和小数位数应取格式名称的默认值，而不是模板。
+- `USER_NAME=ON | OFF`: 如果列定义和数据集均未指定，则使用列名作为表头。
 
 ## 样式覆盖与追踪
 
@@ -1001,35 +973,35 @@ tcol:nth-child(1-3) {
 
 | 名称 | 描述 |
 | --- | --- |
-| _col_ | 从 1 开始的列号 |
-| _dim_ | 当前列的维度 |
-| _row_ | 从 1 开始的行号 |
-| _stk_ | 样式元素名称 |
-| _val_ | 数据值 |
+| `_col_` | 从 1 开始的列号 |
+| `_dim_` | 当前列的维度 |
+| `_row_` | 从 1 开始的行号 |
+| `_stk_` | 样式元素名称 |
+| `_val_` | 数据值 |
 
 ## 在 MySQL 中使用表格模板
 
-使用表格模板（Table Templates）允许你创建与其他任何表格完全相同的表格。生成的表格结构基于 TEMPLATE 的定义。你可以使用 TEMPLATE 创建许多具有相同结构的表格。
+使用表格模板允许你创建与其他任何表格完全相同的表格。生成的表格结构基于 `TEMPLATE` 的定义。你可以使用 `TEMPLATE` 创建许多具有相同结构的表格。
 
-要从模板创建表格，使用 CREATE_TABLE 过程并指定输出表名。这是一个代码示例：
+要从模板创建表格，使用 `CREATE_TABLE` 过程并指定输出表名。这是一个代码示例：
 
 ```sql
 CALL CREATE_TABLE('output_table', 'template_name');
 ```
 
-现在你可以使用 INSERT_DATA 过程向表格中插入数据。以下是代码示例：
+现在你可以使用 `INSERT_DATA` 过程向表格中插入数据。以下是代码示例：
 
 ```sql
 CALL INSERT_DATA('output_table', 'value1', 'value2');
 ```
 
-你可以使用 SELECT 语句从表格中查询数据。
+你可以使用 `SELECT` 语句从表格中查询数据。
 
 ```sql
 SELECT * FROM output_table;
 ```
 
-使用模板的主要用处是，你不需要重复创建相同的结构。你可以使用一个模板创建许多结构相同的表格。要创建一个模板，使用 CREATE_TEMPLATE 过程。
+使用模板的主要用处是，你不需要重复创建相同的结构。你可以使用一个模板创建许多结构相同的表格。要创建一个模板，使用 `CREATE_TEMPLATE` 过程。
 
 ```sql
 CALL CREATE_TEMPLATE('template_name', 'CREATE TABLE output_table (
@@ -1103,13 +1075,13 @@ CREATE TABLE output_table (
 );
 ```
 
-现在你可以使用 INSERT_DATA 过程向表格中插入数据。
+现在你可以使用 `INSERT_DATA` 过程向表格中插入数据。
 
 ```sql
 CALL INSERT_DATA(@table_name, 'value1', 'value2', 'value3');
 ```
 
-你可以使用 SELECT 语句从表格中查询数据。
+你可以使用 `SELECT` 语句从表格中查询数据。
 
 ```sql
 SELECT * FROM @table_name;
@@ -1155,7 +1127,7 @@ CREATE TABLE output_table (
 
 ### 继承
 
-由于我们已经在 PROC TEMPLATE 中发现了继承，因此这并不完全新奇。当一个模板（表格、列或表头）继承自另一个模板时，大多数属性将与父模板相同，但子模板可以覆盖其他属性。这里有一个我们大部分视觉上都喜欢的模板，但我们想改变它的几个方面。
+由于我们已经在 `PROC TEMPLATE` 中发现了继承，因此这并不完全新奇。当一个模板继承自另一个模板时，大多数属性将与父模板相同，但子模板可以覆盖其他属性。这里有一个我们大部分视觉上都喜欢的模板，但我们想改变它的几个方面。
 
 ```
 PROC TEMPLATE;
@@ -1174,7 +1146,7 @@ END;
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_22_0.png)
 
-我们想要更改 age 的格式，并添加一个 gender 列。
+我们想要更改 `age` 的格式，并添加一个 `gender` 列。
 
 ```
 PROC TEMPLATE;
@@ -1189,7 +1161,7 @@ PROC TEMPLATE;
 END;
 ```
 
-在这种情况下，我们从父模板继承了所有属性，但我们也定义了 gender 列。合并所有属性和列创建了结果表格。
+在这种情况下，我们从父模板继承了所有属性，但我们也定义了 `gender` 列。合并所有属性和列创建了结果表格。
 
 ```
 PROC TEMPLATE;
@@ -1203,7 +1175,7 @@ PROC TEMPLATE;
 END;
 ```
 
-这是使用 SASHELP.CLASS 表格时的输出。
+这是使用 `SASHELP.CLASS` 表格时的输出。
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_22_1.png)
 
@@ -1237,10 +1209,6 @@ PROC TEMPLATE;
 END;
 ```
 
-
-
-
-
 # 变量声明
 
 变量是用于存储数据值的容器，这些值可以在程序中被更改和使用。在 C# 中声明变量，你使用类型后跟变量名。
@@ -1252,7 +1220,7 @@ string name = "John Doe";
 bool isStudent = true;
 ```
 
-上面的示例显示了四种类型的变量：int、double、string 和 bool。每种类型定义了变量可以包含的数据类型。
+上面的示例显示了四种类型的变量：`int`、`double`、`string` 和 `bool`。每种类型定义了变量可以包含的数据类型。
 
 变量也可以在不赋初始值的情况下声明。当值在程序稍后确定时，这非常有用。
 
@@ -1295,6 +1263,8 @@ const double PI = 3.14159;
 | bool | 存储真或假 | true |
 
 在声明变量后，你可以在代码中使用它：
+
+
 
 ```csharp
 int age = 25;
@@ -1371,19 +1341,19 @@ class Car:
 car1 = Car('Toyota', 'Corolla', 'white', 20000, 'sedan', 4, 20000)
 ```
 
-现在，我们将使用 DataFrame 来减少报告中的列数。让我们使用 COLUMNS 属性来实现此：
+现在，我们将使用 DataFrame 来减少报告中的列数。让我们使用 `COLUMNS` 属性来实现此：
 
 ```python
 df = df[['make', 'model', 'color', 'mileage', 'price']]
 ```
 
-这是我们现在的的情况：
+这是我们现在的情况：
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_24_0.png)
 
-查看输出，我们看到汽车并没有那么多，所以我们不需要汽车重量或每百里的成本。与其再添加一列来显示更多信息，不如使用 COLUMNS 属性将列重新添加到表格中。
+查看输出，我们看到汽车并没有那么多，所以我们不需要汽车重量或每百里的成本。与其再添加一列来显示更多信息，不如使用 `COLUMNS` 属性将列重新添加到表格中。
 
-我们将使用 COLUMNS 属性添加我们想要看到的列：
+我们将使用 `COLUMNS` 属性添加我们想要看到的列：
 
 ```python
 df = df.COLUMNS(['weight', 'cost_per_100'])
@@ -1393,7 +1363,7 @@ df = df.COLUMNS(['weight', 'cost_per_100'])
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_24_1.png)
 
-现在，我们将使用条件格式来高亮这些列。我们还看到可以使用 PRESTYLE 属性根据条件高亮单元格。
+现在，我们将使用条件格式来高亮这些列。我们还看到可以使用 `PRESTYLE` 属性根据条件高亮单元格。
 
 ```python
 df.style.apply_map(
@@ -1406,17 +1376,13 @@ df.style.apply_map(
 
 ![](img/f42c8ff43e199c1b82aa844e9d40e211_24_2.png)
 
-
-
-
-
 # PROC TEMPLATE：LIST
 
-LIST 语句定义了包含成员的 TEMPLATE 的结构或顺序。这允许对成员进行定义、模板化和更新。
+`LIST` 语句定义了包含成员的 `TEMPLATE` 的结构或顺序。这允许对成员进行定义、模板化和更新。
 
-LIST 语句定义了定义所有成员的 TEMPLATE 顺序。
+`LIST` 语句定义了定义所有成员的 `TEMPLATE` 顺序。
 
-以下是一个使用 LIST TEMPLATE 定义 Table TEMPLATE 的示例。
+以下是一个使用 `LIST TEMPLATE` 定义 Table `TEMPLATE` 的示例。
 
 ```
 PROC TEMPLATE mytable;
@@ -1427,49 +1393,9 @@ PROC TEMPLATE mytable;
 END;
 ```
 
-在此示例中，LIST 语句定义了行（row），包含了表的所有成员。
+在此示例中，`LIST` 语句定义了行（`row`），包含了表的所有成员。
 
-LIST 语句还可以定义一个指向表中元素的变量列表。
-
-```
-PROC TEMPLATE mytable;
-  LIST row;
-    id;
-    name;
-  END;
-  LIST col;
-    name;
-    type;
-  END;
-END;
-```
-
-在此示例中，LIST 语句定义了列（col），包含了表的所有成员。
-
-如何使用 LIST TEMPLATE 定义一个 Table TEMPLATE。
-
-| ID | Path | Type | Size |
-|---|---|---|---|
-| 1 | /data/sample/file1 | char | 10 |
-| 2 | /data/sample/file2 | char | 20 |
-| 3 | /data/sample/file3 | char | 30 |
-| 4 | /data/sample/file4 | char | 40 |
-| 5 | /data/sample/file5 | char | 50 |
-| 6 | /data/sample/file6 | char | 60 |
-| 7 | /data/sample/file7 | char | 70 |
-| 8 | /data/sample/file8 | char | 80 |
-| 9 | /data/sample/file9 | char | 90 |
-| 10 | /data/sample/file10 | char | 100 |
-
-这是在示例数据集上使用 LIST TEMPLATE 的输出结果。
-
-LIST 语句定义了所有内容成员以及每个部分的描述。
-
-如何使用 LIST TEMPLATE 定义一个 Table TEMPLATE。
-
-LIST 语句定义了模板中成员的顺序。
-
-如何在输出中使用 LIST 语句。
+`LIST` 语句还可以定义一个指向表中元素的变量列表。
 
 ```
 PROC TEMPLATE mytable;
@@ -1484,7 +1410,9 @@ PROC TEMPLATE mytable;
 END;
 ```
 
-这是在示例数据集上使用 LIST 语句的输出结果。
+在此示例中，`LIST` 语句定义了列（`col`），包含了表的所有成员。
+
+如何使用 `LIST TEMPLATE` 定义一个 Table `TEMPLATE`。
 
 | ID | Path | Type | Size |
 |---|---|---|---|
@@ -1499,7 +1427,45 @@ END;
 | 9 | /data/sample/file9 | char | 90 |
 | 10 | /data/sample/file10 | char | 100 |
 
-LIST 语句定义了模板中成员的顺序。
+这是在示例数据集上使用 `LIST TEMPLATE` 的输出结果。
+
+`LIST` 语句定义了所有内容成员以及每个部分的描述。
+
+如何使用 `LIST TEMPLATE` 定义一个 Table `TEMPLATE`。
+
+`LIST` 语句定义了模板中成员的顺序。
+
+如何在输出中使用 `LIST` 语句。
+
+```
+PROC TEMPLATE mytable;
+  LIST row;
+    id;
+    name;
+  END;
+  LIST col;
+    name;
+    type;
+  END;
+END;
+```
+
+这是在示例数据集上使用 `LIST` 语句的输出结果。
+
+| ID | Path | Type | Size |
+|---|---|---|---|
+| 1 | /data/sample/file1 | char | 10 |
+| 2 | /data/sample/file2 | char | 20 |
+| 3 | /data/sample/file3 | char | 30 |
+| 4 | /data/sample/file4 | char | 40 |
+| 5 | /data/sample/file5 | char | 50 |
+| 6 | /data/sample/file6 | char | 60 |
+| 7 | /data/sample/file7 | char | 70 |
+| 8 | /data/sample/file8 | char | 80 |
+| 9 | /data/sample/file9 | char | 90 |
+| 10 | /data/sample/file10 | char | 100 |
+
+`LIST` 语句定义了模板中成员的顺序。
 
 # 录录 A：与旧版本 SAS 的兼容性
 
@@ -1521,7 +1487,7 @@ LIST 语句定义了模板中成员的顺序。
 
 ## 运行 PROC TEMPLATE 示例
 
-虽然书中的示例适用于许多 SAS 版本，但如果你使用的是 SAS 9.3，可以简化大部分示例。我们提到过 SAS 9.3 增加了 PROC ODTABLE，它将编译模板和将其绑定到数据集步骤合并为了了一个步骤。以下代码段本质上是等：
+虽然书中的示例适用于许多 SAS 版本，但如果你使用的是 SAS 9.3，可以简化大部分示例。我们提到过 SAS 9.3 增加了 `PROC ODTABLE`，它将编译模板和将其绑定到数据集步骤合并为了一个步骤。以下代码段本质上是等：
 
 ```
 /* 使用 PROC TEMPLATE */
@@ -1541,9 +1507,9 @@ COLUMN name age height;
 RUN;
 ```
 
-上述两种方法的主要区别在于，在 PROC TEMPLATE 代码中，表模板将保留在磁盘上，而 PROC ODTABLE 创建的临时表定义在表格渲染后就会被丢弃。
+上述两种方法的主要区别在于，在 `PROC TEMPLATE` 代码中，表模板将保留在磁盘上，而 `PROC ODTABLE` 创建的临时表定义在表格渲染后就会被丢弃。
 
-NAME 选项。以下代码段提供了等效的行为：
+`NAME` 选项。以下代码段提供了等效的行为：
 
 ```
 /* 使用 PROC TEMPLATE */
@@ -1563,7 +1529,7 @@ RUN;
 
 # Styles
 
-PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以前版本那样的简单代码所取代。SAS 9.2 中对 PROC TEMPLATE 属性的更改允许与 CSS 属性名称保持一致，具备了同时创建多个样式元素的能力，并增加了 CSS 样式而非 PROC TEMPLATE 属性，尽管为了兼容 9.2 之前的版本，并非所有示例都已完成。
+`PROC TEMPLATE` 元素在 SAS 9.2 中发生了变化。许多更改被类似于以前版本那样的简单代码所取代。SAS 9.2 中对 `PROC TEMPLATE` 属性的更改允许与 CSS 属性名称保持一致，具备了同时创建多个样式元素的能力，并增加了 CSS 样式而非 `PROC TEMPLATE` 属性，尽管为了兼容 9.2 之前的版本，并非所有示例都已完成。
 
 # 使用样式表 (CSS)
 
@@ -1591,9 +1557,6 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | rightmargin | marginright |
 | topmargin | margintop |
 | valign | verticalalign |
-
-
-
 
 # 附录 A 索引
 
@@ -1662,63 +1625,82 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 
 以下属性主要用于 HTML 输出类型；特殊情况已另行说明。
 
-**CLASS=string**
+**`CLASS=string`**
+
 指定用于元素的 CSS 类名，以代替 ODS 预定义的类名。
 
-**CONTENTTYPE=string**
+**`CONTENTTYPE=string`**
+
 指定文档的内容类型。这通常用于 HTML 文件开头的 `<meta>` 标签中，用于告诉浏览器文档的类型。
 
-**DOCTYPEYPE=string**
+**`DOCTYPEYPE=string`**
+
 指定在 HTML 文档顶部打印的 `<!DOCTYPE>` 声明。
 
-**HREFTARGET=string**
+**`HREFTARGET=string`**
+
 指定 target= HTML 属性中使用的框架名称。
 
-**HTMLID=string**
+**`HTMLID=string`**
+
 即时查找答案，或掌握新知识。立即订阅。查看定价选项。
 
-**HTMLSTYLE=string**
+**`HTMLSTYLE=string`**
+
 指定要添加到 style= HTML 属性或 CSS 类中的额外 CSS 样式内容。
 
-**PAGEBREAKHTML=string**
+**`PAGEBREAKHTML=string`**
+
 指定用于分页的标记。这必须在 Body 样式元素中指定。
 
-**TAGATTR=string**
+**`TAGATTR=string`**
+
 指定在 HTML 元素标签内包含的额外标记。这可以向 HTML 标签添加 ODS 直接不支持的属性。该属性也用于 ExcelXP 标签，用以添加 Excel 特有的格式。
 
 # 分组指标属性
 
 ### CAPITAL
+
 指定须须末端的标记。接受的值有 SERIF、BRACKET 和 NONE。
 
 ### CONTOUR
+
 指定距离箱体的点距离统计量。接受的值有 MEDIAN、MEAN 和 MAX。
 
 ### CORRELATION
+
 指定绘图的属性。可以使用逗号分隔多个属性。
 
 ### DIRECTION
+
 指定方向。接受的值有水平和垂直。
 
 ### LINES
+
 指定线条的颜色。
 
 ### MARKERS
+
 指定标记的大小。下方列出了符号：
 
 ### HORIZONTAL
+
 指定刻度的颜色。
 
 ### NEUTRALCOLOR
+
 指定 y 刻度的颜色。
 
 ### STARTCOLOR
+
 指定第一个刻度的颜色。
 
 ### TICKELS
+
 指定所有标记的位置。接受的值有 INSIDE、OUTSIDE 或 ACROSS。
 
 ### TRANSPAREY
+
 指定区域的透明度。值为 0 将完全透明。
 
 # 附录 C：颜色名称由 SAS/GRAPH 定义
@@ -1726,15 +1708,25 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 ## 引言
 
 ### 基础颜色
+
 ### 黑色
+
 # 蓝色
+
 # 棕色
+
 # 绿色
+
 ### 橄榄色
+
 ### 橙色
+
 ### 粉色
+
 ## 紫色
+
 ## 白色
+
 ### 黄
 
 ## 引言
@@ -1748,7 +1740,7 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | 黑色 | BLACK | black | #000000 |
 | 蓝色 | BLUE | blue | #0000FF |
 | 棕色 | BROWN | brown | #A65000 |
-|  Charcoal | CHARCOAL | charcoal | #4E4E4 |
+| Charcoal | CHARCOAL | charcoal | #4E4E4 |
 | 奶油色 | CREAM | cream | #ESDD8 |
 | 青色 | CYAN | cyan | #00FFFF |
 | 金色 | GOLD | gold | #FFAA00 |
@@ -1762,13 +1754,23 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | 橙色 | ORANGE | orange | #FF800 |
 | 粉色 | PINK | pink | #FF0080 |
 | 紫色 | PURPLE | purple | #70307 |
+
+
+
 | 红色 | RED | red | #FF0000 |
+
 | 玫瑰红 | ROSE | rose | #FF6060 |
+
 | 三鲑色 | SALMON | salmon | #FF0055 |
+
 | 钢灰色 | STEEL | steel | #3883A8 |
+
 | 褐色 | TAN | tan | #B0E0A0 |
+
 | 紫罗色 | VIOLET | violet | #B090F0 |
+
 | 白色 | WHITE | white | #FFFFFF |
+
 | 黄色 | YELLOW | yellow | #FFF000 |
 
 ### 黑色
@@ -1777,9 +1779,6 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 |---|---|---|---|
 | 红黑色 | RBK | reddish black | #191919 |
 
-(注：由于提供的文本包含大量重复和 OCR 错误，此处已根据要求进行了清理和结构重构)
-
-[content]
 # 附录 A 索引
 
 以下索引列出了书中使用的术语、缩写、图形和表格。术语按字母顺序列出，方便查询。
@@ -1847,63 +1846,82 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 
 以下属性主要用于 HTML 输出类型；特殊情况已另行说明。
 
-**CLASS=string**
+**`CLASS`=string**
+
 指定用于元素的 CSS 类名，以代替 ODS 预定义的类名。
 
-**CONTENTTYPE=string**
+**`CONTENTTYPE`=string**
+
 指定文档的内容类型。这通常用于 HTML 文件开头的 `<meta>` 标签中，用于告诉浏览器文档的类型。
 
-**DOCTYPEYPE=string**
+**`DOCTYPEYPE`=string**
+
 指定在 HTML 文档顶部打印的 `<!DOCTYPE>` 声明。
 
-**HREFTARGET=string**
-指定 target= HTML 属性中使用的框架名称。
+**`HREFTARGET`=string**
 
-**HTMLID=string**
+指定 `target=` HTML 属性中使用的框架名称。
+
+**`HTMLID`=string**
+
 即时查找答案，或掌握新知识。立即订阅。查看定价选项。
 
-**HTMLSTYLE=string**
-指定要添加到 style= HTML 属性或 CSS 类中的额外 CSS 样式内容。
+**`HTMLSTYLE`=string**
 
-**PAGEBREAKHTML=string**
+指定要添加到 `style=` HTML 属性或 CSS 类中的额外 CSS 样式内容。
+
+**`PAGEBREAKHTML`=string**
+
 指定用于分页的标记。这必须在 Body 样式元素中指定。
 
-**TAGATTR=string**
+**`TAGATTR`=string**
+
 指定在 HTML 元素标签内包含的额外标记。这可以向 HTML 标签添加 ODS 直接不支持的属性。该属性也用于 ExcelXP 标签，用以添加 Excel 特有的格式。
 
 # 分组指标属性
 
 ### CAPITAL
+
 指定须须末端的标记。接受的值有 SERIF、BRACKET 和 NONE。
 
 ### CONTOUR
+
 指定距离箱体的点距离统计量。接受的值有 MEDIAN、MEAN 和 MAX。
 
 ### CORRELATION
+
 指定绘图属性。可以使用逗号分隔多个属性。
 
 ### DIRECTION
+
 指定方向。接受的值有水平和垂直。
 
 ### LINES
+
 指定线条的颜色。
 
 ### MARKERS
+
 指定标记的大小。下方列出了符号：
 
 ### HORIZONTAL
+
 指定刻度的颜色。
 
 ### NEUTRALCOLOR
+
 指定 y 刻度的颜色。
 
 ### STARTCOLOR
+
 指定第一个刻度的颜色。
 
 ### TICKELS
+
 指定所有标记的位置。接受的值有 INSIDE、OUTSIDE 或 ACROSS。
 
 ### TRANSPAREY
+
 指定区域的透明度。值为 0 将完全透明。
 
 # 附录 C：颜色名称由 SAS/GRAPH 定义
@@ -1911,15 +1929,25 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 ## 引言
 
 ### 基础颜色
+
 ### 黑色
+
 # 蓝色
+
 # 棕色
+
 # 绿色
+
 ### 橄榄色
+
 ### 橙色
+
 ### 粉色
+
 ## 紫色
+
 ## 白色
+
 ### 黄
 
 ## 引言
@@ -1962,199 +1990,191 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 |---|---|---|---|
 | 红黑色 | RBK | reddish black | #191919 |
 
-
-
-
 # 蓝色
 
 | 名称 |  | RGB | 示例 |
 | --- | --- | --- | --- |
-| VIGB | 鲜艳绿蓝 | #13478C | |
-| BIGB | 亮丽绿蓝 | #4D7EBF | |
-| STGB | 强绿蓝 | #2E4C73 | |
-| DEGB | 深绿蓝 | #142233 | |
-| LIGB | 浅绿蓝 | #6E86A6 | |
-| VLIGB | 浅绿蓝 | #90B0D9 | |
-| MOBG | 中绿蓝 | #4C5D73 | |
-| DAGB | 暗绿蓝 | #2A3A40 | |
-| VDAGB | 极深绿蓝 | #121519 | |
-| VIB | 鲜艳蓝 | #090766 | |
-| BIBB | 亮丽蓝 | #3230B2 | |
-| STB | 强蓝色 | #201F73 | |
-| DEB | 深蓝色 | #1B0F76 | |
-| PAB | 浅蓝色 | #8585A6 | |
-| VPAB | 极浅蓝色 | #AEEAD9 | |
-| GRB | 灰蓝 | #4C5C73 | |
-| DAGRB | 暗灰蓝 | #2B0766 | |
-| VIPB | 鲜艳紫蓝 | #6130B2 | |
-| BIPB | 亮丽紫蓝 | #3F1F73 | |
-| STPB | 强紫蓝 | #180F26 | |
-| DEPB | 深紫蓝 | #A37AE5 | |
-| VLIPB | 浅紫蓝 | #6D5299 | |
-| LIPB | 浅紫蓝 | | |
-
-随时寻找答案，或精通某技能。立即订阅。查看定价方案。
+| VIGB | 鲜艳绿蓝 | #13478C |  |
+| BIGB | 亮丽绿蓝 | #4D7EBF |  |
+| STGB | 强绿蓝 | #2E4C73 |  |
+| DEGB | 深绿蓝 | #142233 |  |
+| LIGB | 浅绿蓝 | #6E86A6 |  |
+| VLIGB | 浅绿蓝 | #90B0D9 |  |
+| MOBG | 中绿蓝 | #4C5D73 |  |
+| DAGB | 暗绿蓝 | #2A3A40 |  |
+| VDAGB | 极深绿蓝 | #121519 |  |
+| VIB | 鲜艳蓝 | #090766 |  |
+| BIBB | 亮丽蓝 | #3230B2 |  |
+| STB | 强蓝色 | #201F73 |  |
+| DEB | 深蓝色 | #1B0F76 |  |
+| PAB | 浅蓝色 | #8585A6 |  |
+| VPAB | 极浅蓝色 | #AEEAD9 |  |
+| GRB | 灰蓝 | #4C5C73 |  |
+| DAGRB | 暗灰蓝 | #2B0766 |  |
+| VIPB | 鲜艳紫蓝 | #6130B2 |  |
+| BIPB | 亮丽紫蓝 | #3F1F73 |  |
+| STPB | 强紫蓝 | #180F26 |  |
+| DEPB | 深紫蓝 | #A37AE5 |  |
+| VLIPB | 浅紫蓝 | #6D5299 |  |
+| LIPB | 浅紫蓝 |  |  |
 
 | 名称 | 描述 | RGB | 示例 |
 | --- | --- | --- | --- |
-| MOPU | 中紫蓝 | #3D3059 | |
-| DAPB | 暗紫蓝 | #151219 | |
-| LIB | 浅蓝色 | #5A5AA6 | |
-| VLIB | 极浅蓝色 | #7674D3 | |
-| MOB | 中蓝色 | #3E3D73 | |
-| DAB | 暗蓝色 | #1B1B26 | |
-| PAPB | 浅紫蓝 | #A7AAA6 | |
-| VPAB | 极浅紫蓝 | #C018E5 | |
-| GRPB | 灰紫蓝 | #4A4159 | |
-| BLB | 黑蓝 | #171719 | |
+| MOPU | 中紫蓝 | #3D3059 |  |
+| DAPB | 暗紫蓝 | #151219 |  |
+| LIB | 浅蓝色 | #5A5AA6 |  |
+| VLIB | 极浅蓝色 | #7674D3 |  |
+| MOB | 中蓝色 | #3E3D73 |  |
+| DAB | 暗蓝色 | #1B1B26 |  |
+| PAPB | 浅紫蓝 | #A7AAA6 |  |
+| VPAB | 极浅紫蓝 | #C018E5 |  |
+| GRPB | 灰紫蓝 | #4A4159 |  |
+| BLB | 黑蓝 | #171719 |  |
 
 # 棕色
 
 | 名称 | 描述 | RGB | 示例 |
 |---|---|---|----|
-| LIBR | 浅棕色 | #8C7962 | |
-| MOBR | 中棕色 | #594E41 | |
-| DABR | 深棕色 | #191714 | |
-| LIGBR | 浅灰棕 | #6C6B7A | |
-| GRBR | 灰棕色 | #59564D | |
-| DAGRBR | 暗灰棕 | #332322 | |
-| STYBR | 强黄色棕 | #806A2B | |
-| DEEP | 黄色棕 | #332E14 | |
-| LIYBR | 黄色棕 | #A69F7A | |
-| MOYBR | 中黄色棕 | #736E58 | |
-| DAYBR | 浅黄色棕 | #26251F | |
-| LIGRYBR | 浅灰黄棕 | #A61A1A | |
-| GRYBR | 灰黄棕 | #737060 | |
+| LIBR | 浅棕色 | #8C7962 |  |
+| MOBR | 中棕色 | #594E41 |  |
+| DABR | 深棕色 | #191714 |  |
+| LIGBR | 浅灰棕 | #6C6B7A |  |
+| GRBR | 灰棕色 | #59564D |  |
+| DAGRBR | 暗灰棕 | #332322 |  |
+| STYBR | 强黄色棕 | #806A2B |  |
+| DEEP | 黄色棕 | #332E14 |  |
+| LIYBR | 黄色棕 | #A69F7A |  |
+| MOYBR | 中黄色棕 | #736E58 |  |
+| DAYBR | 浅黄色棕 | #26251F |  |
+| LIGRYBR | 浅灰黄棕 | #A61A1A |  |
+| GRYBR | 灰黄棕 | #737060 |  |
 
 | 名称 | 描述 | RGB | 示例 |
 |---|---|---|----|
-| DAGRYBR | 暗灰黄棕 | #403E37 | |
-| LIOLBR | 浅橄榄棕 | #B84C4 | |
-| MOOLBR | 中橄榄棕 | #595936 | |
-| DAOLBR | 深橄榄棕 | #26261C | |
-
-随时寻找答案，或精通某技能。立即订阅。查看定价方案。
+| DAGRYBR | 暗灰黄棕 | #403E37 |  |
+| LIOLBR | 浅橄榄棕 | #B84C4 |  |
+| MOOLBR | 中橄榄棕 | #595936 |  |
+| DAOLBR | 深橄榄棕 | #26261C |  |
 
 | 名称 | 描述 | RGB | 示例 |
 |---|---|---|----|
-| DERBR | 深红棕 | #26150D | |
-| LIRBR | 浅红棕 | #8C7367 | |
-| MORBR | 中红棕 | #59453B | |
-| DARBR | 暗红棕 | #191614 |
+| DERBR | 深红棕 | #26150D |  |
+| LIRBR | 浅红棕 | #8C7367 |  |
+| MORBR | 中红棕 | #59453B |  |
+| DARBR | 暗红棕 | #191614 |  |
 
 # 灰色
 
 | 名称 | 描述 | RGB | 示例 |
-| --- | --- | --- |
-| LIBRGR | 浅棕灰 | #8C8883 |
-| BRGR | 棕灰色 | #595753 | |
-| PKGR | 粉色灰 | #BBB2B5 | |
-| RGR | 红色灰 | #8C8385 | |
-| DARGR | 暗红灰 | #595355 | |
-| YGR | 黄色灰 | #BBBFAC | |
-| LIGGR | 浅绿灰 | #BFBFBF | |
-| GGR | 绿色灰 | #8C8C8C |
+| --- | --- | --- |  |
+| LIBRGR | 浅棕灰 | #8C8883 |  |
+| BRGR | 棕灰色 | #595753 |  |
+| PKGR | 粉色灰 | #BBB2B5 |  |
+| RGR | 红色灰 | #8C8385 |  |
+| DARGR | 暗红灰 | #595355 |  |
+| YGR | 黄色灰 | #BBBFAC |  |
+| LIGGR | 浅绿灰 | #BFBFBF |  |
+| GGR | 绿色灰 | #8C8C8C |  |
 
 | 名称 | 描述 | RGB | 示例 |
 |---|---|---|----|
-| DAGGR | 暗绿灰 | #595959 | |
-| LIOLGR | 浅橄榄灰 | #878C7E | |
-| LIPGR | 浅紫灰 | #BDB2BF | |
-| PGR | 紫色灰 | #8BCB8 | |
-| DAPGR | 暗紫灰 | #585359 | |
-| LIGR | 浅灰色 | #BFBFBF | |
-| MEGR | 中灰色 | #8C8C8C | |
-| DAGR | 暗灰色 | #595959 | |
-| LTGRAY | 浅灰色 | #C0C0C0 | |
-| DGRAY | 暗灰色 | #404040 | |
-| LIBGR | 浅蓝灰 | #B3B2BF | |
-| BGR | 蓝灰色 | #83838C | |
-| OLGR | 橄榄灰 | #575953 | |
-| DABGR | 暗蓝灰 | #535359 | |
-
-随时寻找答案，或精通某技能。立即订阅。查看定价方案。
+| DAGGR | 暗绿灰 | #595959 |  |
+| LIOLGR | 浅橄榄灰 | #878C7E |  |
+| LIPGR | 浅紫灰 | #BDB2BF |  |
+| PGR | 紫色灰 | #8BCB8 |  |
+| DAPGR | 暗紫灰 | #585359 |  |
+| LIGR | 浅灰色 | #BFBFBF |  |
+| MEGR | 中灰色 | #8C8C8C |  |
+| DAGR | 暗灰色 | #595959 |  |
+| LTGRAY | 浅灰色 | #C0C0C0 |  |
+| DGRAY | 暗灰色 | #404040 |  |
+| LIBGR | 浅蓝灰 | #B3B2BF |  |
+| BGR | 蓝灰色 | #83838C |  |
+| OLGR | 橄榄灰 | #575953 |  |
+| DABGR | 暗蓝灰 | #535359 |  |
 
 # 绿色
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| VIBG | 鲜艳绿 | #13C8C8 | |
-| BIHG | 亮丽绿 | #4DBF17 | |
-| STLG | 强绿色 | #2E7576 | |
-| DEGB | 深绿色 | #143322 | |
-| LIBG | 浅绿色 | #62A6A4 | |
-| VLBG | 极浅绿色 | #A9F929 | |
-| MOBG | 中绿色 | #47C372 | |
-| DARG | 暗绿色 | #2D40D3 | |
-| VDAGG | 极深绿色 | #121519 | |
-| VILG | 鲜艳黄绿 | #44A616 | |
-| BILG | 亮丽黄绿 | #88E5C5 | |
-| STLG | 强黄绿 | #5B99D3 | |
-| DELG | 深黄绿 | #3C6629 | |
-| UILG | 浅黄绿 | #B1E599 | |
+| VIBG | 鲜艳绿 | #13C8C8 |  |
+| BIHG | 亮丽绿 | #4DBF17 |  |
+| STLG | 强绿色 | #2E7576 |  |
+| DEGB | 深绿色 | #143322 |  |
+| LIBG | 浅绿色 | #62A6A4 |  |
+| VLBG | 极浅绿色 | #A9F929 |  |
+| MOBG | 中绿色 | #47C372 |  |
+| DARG | 暗绿色 | #2D40D3 |  |
+| VDAGG | 极深绿色 | #121519 |  |
+| VILG | 鲜艳黄绿 | #44A616 |  |
+| BILG | 亮丽黄绿 | #88E5C5 |  |
+| STLG | 强黄绿 | #5B99D3 |  |
+| DELG | 深黄绿 | #3C6629 |  |
+| UILG | 浅黄绿 | #B1E599 |  |
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| MOLG | 中黄色 | #F999C6 | |
-| PALG | 浅黄色 | #D1E5C7 | |
-| GRLG | 灰绿色 | #8B9B85 | |
-| STOLG | 强橄榄绿 | #264C14 | |
-| DEOLG | 深橄榄绿 | #1E56DD | |
-| MOOLG | 中橄榄绿 | #45791B | |
-
-随时寻找答案，或精通新技能。立即订阅。查看定价方案。
+| MOLG | 中黄色 | #F999C6 |  |
+| PALG | 浅黄色 | #D1E5C7 |  |
+| GRLG | 灰绿色 | #8B9B85 |  |
+| STOLG | 强橄榄绿 | #264C14 |  |
+| DEOLG | 深橄榄绿 | #1E56DD |  |
+| MOOLG | 中橄榄绿 | #45791B |  |
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| DAGRLG | 暗灰绿 | #263522 | |
-| VIVYG | 鲜艳黄绿 | #16A629 | |
-| BIYG | 亮丽黄绿 | #52CC62 | |
-| STYG | 强黄绿 | #388C4C | |
-| DEYG | 深黄绿 | #18B520 | |
-| VDEYG | 极深黄绿 | #0A26E0 | |
-| VLYJG | 极浅黄绿 | #9E9FE6 | |
-| LIYJG | 浅黄绿 | #A6F8 | |
-| MOYG | 中黄绿 | #53B88 | |
-| DAYG | 暗黄绿 | #3B5953 | |
-| VDAYG | 极深黄绿 | #172118 |
-| VIGG | 鲜艳黄色 | #CC44 | |
-| BIGG | 亮丽黄色 | #44B4 | |
-| STG | 强黄色 | #762E | |
-| DEGB | 深绿色 | #2233 | |
-| LIBG | 浅绿色 | #A462 |
+| DAGRLG | 暗灰绿 | #263522 |  |
+| VIVYG | 鲜艳黄绿 | #16A629 |  |
+| BIYG | 亮丽黄绿 | #52CC62 |  |
+| STYG | 强黄绿 | #388C4C |  |
+| DEYG | 深黄绿 | #18B520 |  |
+| VDEYG | 极深黄绿 | #0A26E0 |  |
+| VLYJG | 极浅黄绿 | #9E9FE6 |  |
+| LIYJG | 浅黄绿 | #A6F8 |  |
+| MOYG | 中黄绿 | #53B88 |  |
+| DAYG | 暗黄绿 | #3B5953 |  |
+| VDAYG | 极深黄绿 | #172118 |  |
+| VIGG | 鲜艳黄色 | #CC44 |  |
+| BIGG | 亮丽黄色 | #44B4 |  |
+| STG | 强黄色 | #762E |  |
+| DEGB | 深绿色 | #2233 |  |
+| LIBG | 浅绿色 | #A462 |  |
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| VLBG | 极浅绿色 | #29A9 | |
-| MOBG | 中绿色 | #7247 | |
-| DARG | 暗绿色 | #D32D | |
-| VDAGG | 极深绿色 | #1915 | |
-| VILG | 鲜艳黄绿 | #1644 | |
-| BILG | 亮丽黄绿 | #C588 | |
-| STLG | 强黄绿 | #D35B | |
-| DELG | 深黄绿 | #293C | |
-| UILG | 浅黄绿 | #99B1 |
+| VLBG | 极浅绿色 | #29A9 |  |
+| MOBG | 中绿色 | #7247 |  |
+| DARG | 暗绿色 | #D32D |  |
+| VDAGG | 极深绿色 | #1915 |  |
+| VILG | 鲜艳黄绿 | #1644 |  |
+| BILG | 亮丽黄绿 | #C588 |  |
+| STLG | 强黄绿 | #D35B |  |
+| DELG | 深黄绿 | #293C |  |
+| UILG | 浅黄绿 | #99B1 |  |
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| MOLG | 中黄色 | #C6F9 | |
-| PALG | 浅黄色 | #C7D1 | |
-| GRLG | 灰绿色 | #858B | |
-| STOLG | 强橄榄绿 | #1426 | |
-| DEOLG | 深橄榄绿 | #DD1E | |
-| MOOLG | 中橄榄绿 | #1B45 |
+| MOLG | 中黄色 | #C6F9 |  |
+| PALG | 浅黄色 | #C7D1 |  |
+| GRLG | 灰绿色 | #858B |  |
+| STOLG | 强橄榄绿 | #1426 |  |
+| DEOLG | 深橄榄绿 | #DD1E |  |
+| MOOLG | 中橄榄绿 | #1B45 |  |
 
 | 名称 | 描述 | RGB |
 | --- | --- | --- |
-| DAGRLG | 暗灰绿 | #2226 | |
-| VIVYG | 鲜艳黄绿 | #2916 | |
-| BIYG | 亮丽黄绿 | #6252 | |
-| STYG | 强黄绿 | #4C38 | |
-| DEYG | 深黄绿 | #2018 | |
-| VDEYG | 极深黄绿 | #E00A | |
-| VLYJG | 极浅黄绿 | #E69E | |
-| LIYJG | 浅黄绿 | #F8A | |
-| MOYG | 中黄绿 | #B853 | |
+| DAGRLG | 暗灰绿 | #2226 |  |
+| VIVYG | 鲜艳黄绿 | #2916 |  |
+| BIYG | 亮丽黄绿 | #6252 |  |
+| STYG | 强黄绿 | #4C38 |  |
+| DEYG | 深黄绿 | #2018 |  |
+| VDEYG | 极深黄绿 | #E00A |  |
+| VLYJG | 极浅黄绿 | #E69E |  |
+| LIYJG | 浅黄绿 | #F8A |  |
+| MOYG | 中黄绿 | #B853 |  |
+
+
+
 | DAYG | 暗黄绿 | #533B | |
 | VDAYG | 极深黄绿 | #1817 | |
 | VIGG | 鲜艳黄色 | #44CC | |
@@ -2162,10 +2182,6 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | STG | 强黄色 | #2E76 | |
 | DEGB | 深绿色 | #2233 | |
 | LIBG | 浅绿色 | #A462 |
-
-
-
-
 
 ## 紫色
 
@@ -2227,6 +2243,7 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | VDAPR | 极深暗紫红 | #191216 | |
 
 推荐 / 播放列表 / 历史 / 主题 / 教程 / 设置 / 支持 / 下载应用 / 登录
+
 © 2018 Safari。服务条款 / 隐私政策。
 
 随时获取答案，或掌握新知识。立即订阅。查看价格选项。
@@ -2248,6 +2265,7 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | GRV | 灰紫罗色 | #4F4159 | |
 
 推荐 / 播放列表 / 历史 / 主题 / 教程 / 设置 / 支持 / 下载应用 / 登录
+
 © 2018 Safari。服务条款 / 隐私政策
 
 随时获取答案，或掌握新知识。
@@ -2255,7 +2273,7 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 ## 白色
 
 | 名称 | 描述 | RGB | 示例 |
-|---|---|---||
+|---|---|---|||
 | YWH | 黄白色 | #E8D5 | |
 | GWH | 灰白色 | #ECEDEC | |
 | PKWH | 粉白色 | #EDD0 | |
@@ -2263,6 +2281,7 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | BWH | 蓝白色 | #EDDED | |
 
 推荐 / 播放列表 / 历史 / 主题 / 教程 / 设置 / 支持 / 下载应用 / 登录
+
 © 2018 Safari。服务条款 / 隐私政策
 
 随时获取答案，或掌握新知识。
@@ -2301,4 +2320,3 @@ PROC TEMPLATE 元素在 SAS 9.2 中发生了变化。许多更改被类似于以
 | DAGY | 暗灰黄 | #7E9952 | |
 | GRY | 灰黄色 | #A9AF5B6 | |
 | PAGY | 淡绿黄 | #CBE5A1 |
-

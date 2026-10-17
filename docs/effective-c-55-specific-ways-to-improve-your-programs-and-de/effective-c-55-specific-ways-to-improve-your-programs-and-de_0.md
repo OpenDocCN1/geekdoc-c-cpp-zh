@@ -1,62 +1,79 @@
-# Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)
 
+# Effective C++：改进程序与设计的 55 种特效，第三版
 
+（Gal Zentner 图书系列）
 
 ![](img/0132702061.jpg)
 
 ![cover-image](img/0132702061.jpg)
 
-## 对《Effective C++（第三版）的赞誉
+## 对《Effective C++》（第三版）的赞誉
 
-“Scott Meyers 的书《Effective C++, Third Edition》是编程经验的结晶——这些经验是你本需要通过痛苦的学习才能学会的。这是一本极好的资源，我推荐给每一位专业编写 C++ 的人员。”
-— *Peter Dulimov，工程师，澳大利亚海军系统司令部 NAVSYSCOM 范围与评估小组*
+“Scott Meyers 的书《Effective C++, Third Edition》是编程经验的结晶——这些经验是你本需要通过痛苦的学习才能学会的。这是一本极好的资源，我推荐给每一位专业编写`C++`的人员。”
 
-“第三版仍然关于如何以高效、内聚的方式将 C++ 的所有部分整合在一起的最佳书籍。如果你自称自己是一名 C++ 程序员，那么你必须读读这本书。”
-— *Eric Nagler，顾问、讲师以及《Learning C++》的作者*
+— Peter Dulimov，工程师，澳大利亚海军系统司令部 NAVSYSCOM 范围与评估小组
 
-“这本书的第一版属于极少数（非常少数）书籍，我归功于它显著提升了我作为一名‘专业’软件开发人员的技能。和其他书籍一样，它既实用又易于阅读，而且充满了重要的建议。《Effective C++, Third Edition》延续了这一传统。C++ 是一门非常强大的编程语言。如果说 C 语言给了你足够的绳子让你自己，那么 C++ 就是一家五金店，有很多乐于帮助的人准备为你打结。掌握书中讨论的要点将无疑增加你有效使用 C++ 的能力，并减轻你的压力水平。”
-— *Jack W. Reeves，Bleading Edge Software Technologies 首席执行官*
+“第三版仍然关于如何以高效、内聚的方式将`C++`的所有部分整合在一起的最佳书籍。如果你自称自己是一名`C++`程序员，那么你必须读读这本书。”
+
+— Eric Nagler，顾问、讲师以及《Learning C++》的作者
+
+“这本书的第一版属于极少数（非常少数）书籍，我归功于它显著提升了我作为一名‘专业’软件开发人员的技能。和其他书籍一样，它既实用又易于阅读，而且充满了重要的建议。《Effective C++, Third Edition》延续了这一传统。`C++`是一门非常强大的编程语言。如果说`C`语言给了你足够的绳子让你自己，那么`C++`就是一家五金店，有很多乐于帮助的人准备为你打结。掌握书中讨论的要点将无疑增加你有效使用`C++`的能力，并减轻你的压力水平。”
+
+— Jack W. Reeves，Bleading Edge Software Technologies 首席执行官
 
 “每一位加入我团队的新开发者都有一项任务——读读这本书。”
-— *Michael Lanzetta，高级软件工程师*
 
-“我大约在九年前读了《Effective C++》的第一版，它立刻成为了我最喜欢的 C++ 书籍。在我看来，《Effective C++, Third Edition》对于任何想要在 C++ 中进行高效编程的人来说，今天仍然是必读之作。如果 C++ 程序员在编写第一行专业的 C++ 代码之前都读读这本书，我们的世界将会变得更好。”
-— *Danny Rabbani，软件开发工程师*
+— Michael Lanzetta，高级软件工程师
 
-“当我还是一个在战线中挣扎、试图提高业务水平的程序员时，遇到了 Scott Meyers 的《Effective C++》第一版。这简直是救命稻草！我发现 Meyers 的建议是实用、有用且有效的，百分之百地履行了书名的承诺。第三版将严谨开发项目中使用 C++ 的实际情况更新到了最新，并增加了关于语言最新问题和特性的章节。我很高兴地发现，从一本我认为已经很熟悉的书的最新版本中仍然学到了有趣的新知识。”
-— *Michael Topic，技术项目经理*
+“我大约在九年前读了《Effective C++》的第一版，它立刻成为了我最喜欢的`C++`书籍。在我看来，《Effective C++, Third Edition》对于任何想要在`C++`中进行高效编程的人来说，今天仍然是必读之作。如果`C++`程序员在编写第一行专业的`C++`代码之前都读读这本书，我们的世界将会变得更好。”
 
-“这来自 C++ 大师 Scott Meyers 之手，是任何想要安全、有效地使用 C++，或正从任何其他面向对象（OO）语言过渡到 C++ 的人来说的终极指南。这本书以清晰、简洁、有趣且富有见解的方式呈现了极具价值的信息。”
-— *Siddhartha Karan Singh，软件开发者*
+— Danny Rabbani，软件开发工程师
 
-“这应该是任何开发者在读完通用的介绍性文本后应该读的第二本 C++ 书籍。它超越了 C++ 的‘如何’和‘什么’，探讨了‘为什么’和‘何’。它帮助我从了解语法转向理解 C++ 编程的哲学。”
-— *Timothy Knox，软件开发者*
+“当我还是一个在战线中挣扎、试图提高业务水平的程序员时，遇到了 Scott Meyers 的《Effective C++》第一版。这简直是救命稻草！我发现 Meyers 的建议是实用、有用且有效的，百分之百地履行了书名的承诺。第三版将严谨开发项目中使用`C++`的实际情况更新到了最新，并增加了关于语言最新问题和特性的章节。我很高兴地发现，从一本我认为已经很熟悉的书的最新版本中仍然学到了有趣的新知识。”
 
-“这是对经典 C++ 教材的一次非常出更新。Meyers 在这一卷中涵盖了许多新领域，每一位严肃的 C++ 程序员都应该拥有一本新版副本。”
-— *Jeffrey Somers，游戏程序员*
+— Michael Topic，技术项目经理
 
-“《Effective C++, Third Edition》涵盖了你在编写代码时应该做的事情，并非常出色地解释了为什么这些事情如此重要。把它看作编写 C++ 的最佳实践吧。”
-— *Jeff Scherpelz，软件开发工程师*
+“这来自`C++`大师 Scott Meyers 之手，是任何想要安全、有效地使用`C++`，或正从任何其他面向对象（OO）语言过渡到`C++`的人来说的终极指南。这本书以清晰、简洁、有趣且富有见解的方式呈现了极具价值的信息。”
 
-“随着 C++ 拥抱变化，Scott Meyers 的《Effective C++, Third Edition》突飞猛进，与语言保持着完美的同步。市上有许多优秀的 C++ 入门书籍，但恰恰只有一本‘第二本’书脱颖而出，而你手里正拿着它。在 Scott 的指引下，准备好开启你自己的飞跃旅程吧！”
-— *Leor Zolman，C++ 培训师和专家，BD Software*
+— Siddhartha Karan Singh，软件开发者
 
-“这本书对于 C++ 老手和新手来说都是必不可得的。在你读完它之后，它不会在你的书架上落灰——你会经常查阅它。”
-— *Sam Lee，软件开发者*
+“这应该是任何开发者在读完通用的介绍性文本后应该读的第二本`C++`书籍。它超越了`C++`的‘如何’和‘什么’，探讨了‘为什么’和‘何’。它帮助我从了解语法转向理解`C++`编程的哲学。”
 
-“这本书通过 55 个易于阅读的项目（每个项目描述了一种技术或技巧），一步一步地将普通的 C++ 程序员转化为专家级 C++ 程序员。”
-— *Jeffrey D. Oldham，博士，Google 软件工程师*
+— Timothy Knox，软件开发者
 
-“Scott Meyers 的《Effective C++》系列书籍长期以来一直是新手和资深 C++ 程序员的必读物。这个新版本整合了近十年的 C++ 语言发展，是他内容最丰富的一本书。他不仅仅是描述了语言固有的问题，而是提供了明确且易于遵循的建议，教你如何避开陷阱并编写‘有效的 C++’。我希望每一位 C++ 程序员都读过它。”
-— *Philipp K. Janert，博士，软件开发经理*
+“这是对经典`C++`教材的一次非常出更新。Meyers 在这一卷中涵盖了许多新领域，每一位严肃的`C++`程序员都应该拥有一本新版副本。”
 
-“《Effective C++》的每一个旧版本都是使用 C++ 几个月或几年的开发者的必读之书，这段时间足以让他们掉进这门丰富语言中潜藏的陷阱。在第三版中，Scott Meyers 针对现代新语言和库特性，以及为了使用这些特性而演变的编程风格，大量地刷新了他的实用建议。Scott 引人入胜的写作风格使人们在成为有效 C++ 开发者的道路上轻松吸收他的指南。”
-— *David Smallberg，UCLA 计算机教师*
+— Jeffrey Somers，游戏程序员
 
-“《Effective C++》的每一个之前的版本对于使用 C++ 几个月或几年的开发者来说都是必读之书，这段时间足以让他们掉进这门丰富语言中潜藏的陷阱。在第三版中，Scott Meyers 针对现代新语言和库特性，以及为了使用这些特性而演变的编程风格，大量地刷新了他的实用建议。Scott 引人入胜的写作风格使人们在成为有效 C++ 开发者的道路上轻松吸收他的指南。”
+“《Effective C++, Third Edition》涵盖了你在编写代码时应该做的事情，并非常出色地解释了为什么这些事情如此重要。把它看作编写`C++`的最佳实践吧。”
 
-“《Effective C++》已经完全更新，是所有 C++ 实践者的第一第二本书。”
-— *Matthew Wilson，博士，《Imperfect C++》作者*
+— Jeff Scherpelz，软件开发工程师
+
+“随着`C++`拥抱变化，Scott Meyers 的《Effective C++, Third Edition》突飞猛进，与语言保持着完美的同步。市上有许多优秀的`C++`入门书籍，但恰恰只有一本‘第二本’书脱颖而出，而你手里正拿着它。在 Scott 的指引下，准备好开启你自己的飞跃旅程吧！”
+
+— Leor Zolman，`C++`培训师和专家，BD Software
+
+“这本书对于`C++`老手和新手来说都是必不可得的。在你读完它之后，它不会在你的书架上落灰——你会经常查阅它。”
+
+— Sam Lee，软件开发者
+
+“这本书通过 55 个易于阅读的项目（每个项目描述了一种技术或技巧），一步一步地将普通的`C++`程序员转化为专家级`C++`程序员。”
+
+— Jeffrey D. Oldham，博士，Google 软件工程师
+
+“Scott Meyers 的《Effective C++》系列书籍长期以来一直是新手和资深`C++`程序员的必读物。这个新版本整合了近十年的`C++`语言发展，是他内容最丰富的一本书。他不仅仅是描述了语言固有的问题，而是提供了明确且易于遵循的建议，教你如何避开陷阱并编写‘有效的`C++`’。我希望每一位`C++`程序员都读过它。”
+
+— Philipp K. Janert，博士，软件开发经理
+
+“《Effective C++》的每一个旧版本都是使用`C++`几个月或几年的开发者的必读之书，这段时间足以让他们掉进这门丰富语言中潜藏的陷阱。在第三版中，Scott Meyers 针对现代新语言和库特性，以及为了使用这些特性而演变的编程风格，大量地刷新了他的实用建议。Scott 引人入胜的写作风格使人们在成为有效`C++`开发者的道路上轻松吸收他的指南。”
+
+— David Smallberg，UCLA 计算机教师
+
+“《Effective C++》的每一个之前的版本对于使用`C++`几个月或几年的开发者来说都是必读之书，这段时间足以让他们掉进这门丰富语言中潜藏的陷阱。在第三版中，Scott Meyers 针对现代新语言和库特性，以及为了使用这些特性而演变的编程风格，大量地刷新了他的实用建议。Scott 引人入胜的写作风格使人们在成为有效`C++`开发者的道路上轻松吸收他的指南。”
+
+“《Effective C++》已经完全更新，是所有`C++`实践者的第一第二本书。”
+
+— Matthew Wilson，博士，《Imperfect C++》作者
 
 ## Addison-Wesley Professional Series
 
@@ -108,34 +125,44 @@ Robert B. Murray, *C++ Strategies and Tactics*
 
 David R. Musser/Gillmer J. Derge/Atul Saini, *STL Tutorial and Reference Guide, Second Edition: C++ Programming with the Standard Template Library*
 
+John K. Ousterhout, *Tcl and the Tk Toolkit*
 
+Craig Partridge, *Gigabit Networking*
 
+Radia Perlman, *Interconnections, Second Edition: Bridges, Routers, Switches, and Internetworking Protocols*
 
+Stephen A. Rago, *UNIX® System V Network Programming*
 
-* John K. Ousterhout, *Tcl and the Tk Toolkit*
-* Craig Partridge, *Gigabit Networking*
-* Radia Perlman, *Interconnections, Second Edition: Bridges, Routers, Switches, and Internetworking Protocols*
-* Stephen A. Rago, *UNIX^® System V Network Programming*
-* Eric S. Raymond, *The Art of UNIX Programming*
-* Marc J. Rochkind, *Advanced UNIX Programming*, *Second Edition*
-* Curt Schimmel, *UNIX^® Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers*
-* W. Richard Stevens, *TCP/IP Illustrated, Volume 1: The Protocols*
-* W. Richard Stevens, *TCP/IP Illustrated, Volume 3: TCP for Transactions, HTTP, NNTP, and the UNIX^® Domain Protocols*
-* W. Richard Stevens/Bill Fenner/Andrew M. Rudoff, *UNIX Network Programming Volume 1, Third Edition: The Sockets Networking API*
-* W. Richard Stevens/Stephen A. Rago, *Advanced Programming in the UNIX^® Environment*, *Second Edition*
-* W. Richard Stevens/Gary R.Wright, *TCP/IP Illustrated Volumes 1-3 Boxed Set*
-* John Viega/Gary McGraw, *Building Secure Software: How to Avoid Security Problems the Right Way*
-* Gary R.Wright/W. Richard Stevens, *TCP/IP Illustrated, Volume 2: The Implementation*
-* Ruixi Yuan/W. Timothy Strayer, *Virtual Private Networks: Technologies and Solutions*
+Eric S. Raymond, *The Art of UNIX Programming*
+
+Marc J. Rochkind, *Advanced UNIX Programming*, *Second Edition*
+
+Curt Schimmel, *UNIX® Systems for Modern Architectures: Symmetric Multiprocessing and Caching for Kernel Programmers*
+
+W. Richard Stevens, *TCP/IP Illustrated, Volume 1: The Protocols*
+
+W. Richard Stevens, *TCP/IP Illustrated, Volume 3: TCP for Transactions, HTTP, NNTP, and the UNIX® Domain Protocols*
+
+W. Richard Stevens/Bill Fenner/Andrew M. Rudoff, *UNIX Network Programming Volume 1, Third Edition: The Sockets Networking API*
+
+W. Richard Stevens/Stephen A. Rago, *Advanced Programming in the UNIX® Environment*, *Second Edition*
+
+W. Richard Stevens/Gary R. Wright, *TCP/IP Illustrated Volumes 1-3 Boxed Set*
+
+John Viega/Gary McGraw, *Building Secure Software: How to Avoid Security Problems the Right Way*
+
+Gary R. Wright/W. Richard Stevens, *TCP/IP Illustrated, Volume 2: The Implementation*
+
+Ruixi Yuan/W. Timothy Strayer, *Virtual Private Networks: Technologies and Solutions*
 
 **访问 [www.awprofessional.com/series/professionalcomputing](http://www.awprofessional.com/series/professionalcomputing) 获取更多关于这些书籍的信息。**
-
-
 
 ![images](img/pub.jpg)
 
 Upper Saddle River, NJ • 波士顿 • 印第纳波利斯
- 纽约 • 多伦多 • 蒙特利尔 伦敦 • 慕尼黑 • 巴黎 • 马德里
+
+纽约 • 多伦多 • 蒙特利尔 • 伦敦 • 慕尼黑 • 巴黎 • 马德里
+
 开普敦 • 悉尼 • 东京 • 新加坡 • 墨西哥城
 
 制造商和许多使用的许多自称为商标。当这些名称出现在书中且出版者知晓该商标声明时，这些名称将以首字母大写或全大写形式打印。
@@ -144,56 +171,50 @@ Upper Saddle River, NJ • 波士顿 • 印第纳波利斯
 
 对于批量购买或特别销售，出版者对本书提供优异的折扣，这可能包括电子版本和/或针对您的业务、培训目标、营销重点和品牌兴趣的定制封面和内容。欲了解更多，请联系：
 
-* 美国企业和政府销售部
-* (800) 382-3419
-* corpsales@pearsontechgroup.com
+- 美国企业和政府销售部
+- (800) 382-3419
+- corpsales@pearsontechgroup.com
 
 在美国以外的销售请联系：
 
-* 国际销售部
-* international@pearsoned.com
+- 国际销售部
+- international@pearsoned.com
 
-*美国国会图书馆控制号:* 2005924388
-
-
-
+*美国国会图书馆控制号：* 2005924388
 
 ## 前言
 
 我在 1991 年编写了 *Effective C++* 的初版。当 1997 年编写第二版时，我以重要的方式对材料进行了更新，但由于我不想让熟悉第一版的读者感到困惑，我尽力保留了现有的结构：原始 50 个条款标题中有 48 个基本上保持不变。如果这本书比一间房子，那么第二版等同于通过更换地毯、油漆和灯具来翻新一下装修。
 
-对于第三版，我把房子拆到了只剩框架（有时我希望自己能直接挖到地基）。自 1991 年以来，C++ 的世界发生了巨大的变化，而这本书的目标——用一个小巧、易读的方案提供最重要的 C++ 编程指南——不再通过我近 15 年前确立的那些条款来实现。在 1991 年，假设 C++ 程序员来自 C 背景是合理的。现在，转到 C++ 的程序员同样可能来自 Java 或 C#。在 1991 年，继承和面向对象编程对大多数程序员来说是新概念。现在它们已是成熟的概念，而异常、模板和泛型编程是人们需要更多指导的领域。在 1991 年，没有人听说过设计模式。现在，如果不提到它们，就很难讨论软件系统。在 1991 年，C++ 的正式标准刚刚开始制定。现在该标准已经有了八年的历史，而下一个版本的工作已经开始了。
+对于第三版，我把房子拆到了只剩框架（有时我希望自己能直接挖到地基）。自 1991 年以来，`C++`的世界发生了巨大的变化，而这本书的目标——用一个小巧、易读的方案提供最重要的`C++`编程指南——不再通过我近 15 年前确立的那些条款来实现。在 1991 年，假设`C++`程序员来自`C`背景是合理的。现在，转到`C++`的程序员同样可能来自`Java`或`C#`。在 1991 年，继承和面向对象编程对大多数程序员来说是新概念。现在它们已是成熟的概念，而异常、模板和泛型编程是人们需要更多指导的领域。在 1991 年，没有人听说过设计模式。现在，如果不提到它们，就很难讨论软件系统。在 1991 年，`C++`的正式标准刚刚开始制定。现在该标准已经有了八年的历史，而下一个版本的工作已经开始了。
 
-为了应对这些变化，我尽可能彻底推倒重来，并问自己：“对于 2005 年的 C++ 程序员来说，最重要的建议是什么？”结果就是这个新版中的条款。书中新增了关于资源管理和使用模板编程的章节。事实上，模板方面的问题贯穿于全文，因为它们影响了 C++ 的几乎每一个地方。书中还包含了关于在存在异常的情况下进行编程、应用设计模式以及使用新的 TR1 库设施的新材料。（TR1 在 `Item 54` 中有所描述）。它承认，在单线程系统中运行良好的技术和方法，在多线程系统中可能并不适用。书中超过一半的内容是新的。然而，第二版中的大多数基础信息仍然重要，因此我找到了一种以某种形式保留它们的方法。（你可以在 `附录 B` 中找到第二版和第三版条款之间的映射。）
+为了应对这些变化，我尽可能彻底推倒重来，并问自己：“对于 2005 年的`C++`程序员来说，最重要的建议是什么？”结果就是这个新版中的条款。书中新增了关于资源管理和使用模板编程的章节。事实上，模板方面的问题贯穿于全文，因为它们影响了`C++`的几乎每一个地方。书中还包含了关于在存在异常的情况下进行编程、应用设计模式以及使用新的 TR1 库设施的新材料。（TR1 在`Item 54`中有所描述）。它承认，在单线程系统中运行良好的技术和方法，在多线程系统中可能并不适用。书中超过一半的内容是新的。然而，第二版中的大多数基础信息仍然重要，因此我找到了一种以某种形式保留它们的方法。（你可以在`附录 B`中找到第二版和第三版条款之间的映射。）
 
 我努力让这本书尽可能完美，但我并没有幻觉它是完美的。如果你觉得书中的某些条款作为通用建议是不恰当的；对于书中讨论的任务有更好的实现；或者认为某一个或多个技术讨论不清楚、不完整或具有误导性，请告诉我。如果你发现任何类型的错误——技术上的、语法上的、拼写上的，*无论什么*——也请告诉我。我乐意在随后的印本的致谢中，加上第一个向我指出每个问题的人的名字。
 
 即使条款数量已扩展到 55 条，书中的指南也远非详尽。但制定良好的规则——那些在任何时候都有效的规则——比看起来要困难得多。如果你对额外的指南有建议，我非常乐意听取。
 
-我维护着一份自首次印发以来该书的更改列表，包括错误修复、说明和技术更新。该列表可以在 *Effective C++ Errata* 页面找到：`http://aristeia.com/BookErrata/ec++3e-errata.html` (`http://aristeia.com/BookErrata/ec++3e-errata.html`)。如果你想在我更新列表时收到通知，我鼓励你加入我的邮件列表。我用它发布可能对关注我专业工作的人感兴趣的公告。详情请参阅 `http://aristeia.com/MailingList/` (`http://aristeia.com/MailingList/`)。
+
+
+我维护着一份自首次印发以来该书的更改列表，包括错误修复、说明和技术更新。该列表可以在*Effective C++ Errata*页面找到：`http://aristeia.com/BookErrata/ec++3e-errata.html`。如果你想在我更新列表时收到通知，我鼓励你加入我的邮件列表。我用它发布可能对关注我专业工作的人感兴趣的公告。详情请参阅`http://aristeia.com/MailingList/`。
 
 SCOTT DOUGLAS MEYERS
+
 俄勒冈州，斯坦福德
+
 2005 年 4 月
 
 ## 致谢
 
 *Effective C++* 已经存在十五年了，我在写这本书大约五年前开始学习 C++。因此，“*Effective C++ 项目*”已经开发了二十年。在此期间，我受益于数百（几千？）人的见解、建议、纠正，以及偶尔的目瞪口呆。每个人都帮助改进了 *Effective C++*。我感激他们所有人。
 
-我已经放弃了追踪我在哪里学了什么，但从我记忆起，有一个通用的信息来源一直帮助我：Usenet C++ 新闻组，特别是 `comp.lang.c++.moderated` 和 `comp.std.c++`。书中的许多条款——也许是大多数——都受益于这些新闻组参与者对技术想法的审查，而这正是他们所擅长的。
+我已经放弃了追踪我在哪里学了什么，但从我记忆起，有一个通用的信息来源一直帮助我：Usenet C++ 新闻组，特别是`comp.lang.c++.moderated`和`comp.std.c++`。书中的许多条款——也许是大多数——都受益于这些新闻组参与者对技术想法的审查，而这正是他们所擅长的。
 
+关于第三版中的新内容，Steve Dewhurst 与我一起制定了第一批候选条目。在 Item 11 中，通过拷贝-交换（copy-swap）实现`operator=`的想法源于 Herb Sutter 关于该主题的著作，例如他的[Exceptional C++](https://www.amazon.com/gp/product/0201615622?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201615622)中的第 13 条（Addison-Wesley, 2000）。RAII（参见 Item 13）源于 Bjarne Stroustrup 的[The C++ Programming Language](https://www.amazon.com/gp/product/0201889544?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201889544)（Addison-Wesley, 2000）。Item 17 背后的想法源于 Boost`shared_ptr`网页的“最佳实践”部分，[`boost.org/libs/smart_ptr/shared_ptr.htm#BestPractices`](http://boost.org/libs/smart_ptr/shared_ptr.htm#BestPractices)，并由 Herb Sutter [More Exceptional C++](https://www.amazon.com/gp/product/020170434X?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=020170434X)（Addison-Wesley, 2002）中的第 21 条进行了完善。Item 29 深受 Herb Sutter 关于该主题的广泛著作的影响，例如[Exceptional C++](https://www.amazon.com/gp/product/0201615622?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201615622)中的第 8-19 条，[More Exceptional C++](https://www.amazon.com/gp/product/020170434X?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=020170434X)中的第 17–23 条，以及[Exceptional C++ Style](https://www.amazon.com/gp/product/0201760428?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201760428)（Addison-Wesley, 2005）中的第 11–13 条；David Abrahams 帮助我更好地理解了三个异常安全保证。
 
+Item 35 中的 NVI 惯用法源于 Herb Sutter 在 2001 年 9 月《C/C++ Users Journal》上的“Virtuality”专栏。在同一条目中，模板方法和策略设计模式来自 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 编写的[Design Patterns](https://www.amazon.com/gp/product/0201633612?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201633612)（Addison-Wesley, 1995）。在 Item 37 中使用 NVI 惯用法的想法来自 Hendrik Schober。David Smallberg 为在 Item 38 中编写自定义`set`实现提供了写作动机。Item 39 关于 EBO 通常在多重继承下不可用的观察，源于 David Vandevoorde 和 Nicolai M. Josuttis 的[C++ Templates](https://www.amazon.com/gp/product/0201734842?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201734842)（Addison-Wesley, 2003）。
 
-
-
-关于第三版中的新内容，Steve Dewhurst 与我一起制定了第一批候选条目。在 Item 11 中，通过拷贝-交换（copy-swap）实现 `operator=` 的想法源于 Herb Sutter 关于该主题的著作，例如他的 [Exceptional C++](https://www.amazon.com/gp/product/0201615622?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201615622) 中的第 13 条（Addison-Wesley, 2000）。RAII（参见 Item 13）源于 Bjarne Stroustrup 的 [The C++ Programming Language](https://www.amazon.com/gp/product/0201889544?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201889544)（Addison-Wesley, 2000）。Item 17 背后的想法源于 Boost `shared_ptr` 网页的“最佳实践”部分，[`boost.org/libs/smart_ptr/shared_ptr.htm#BestPractices`](http://boost.org/libs/smart_ptr/shared_ptr.htm#BestPractices)，并由 Herb Sutter [More Exceptional C++](https://www.amazon.com/gp/product/020170434X?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=020170434X)（Addison-Wesley, 2002）中的第 21 条进行了完善。Item 29 深受 Herb Sutter 关于该主题的广泛著作的影响，例如 [Exceptional C++](https://www.amazon.com/gp/product/0201615622?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201615622) 中的第 8-19 条，[More Exceptional C++](https://www.amazon.com/gp/product/020170434X?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=020170434X) 中的第 17–23 条，以及 [Exceptional C++ Style](https://www.amazon.com/gp/product/0201760428?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201760428)（Addison-Wesley, 2005）中的第 11–13 条；David Abrahams 帮助我更好地理解了三个异常安全保证。
-
-Item 35 中的 NVI 惯用法源于 Herb Sutter 在 2001 年 9 月《C/C++ Users Journal》上的“Virtuality”专栏。在同一条目中，模板方法和策略设计模式来自 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 编写的 [Design Patterns](https://www.amazon.com/gp/product/0201633612?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201633612)（Addison-Wesley, 1995）。在 Item 37 中使用 NVI 惯用法的想法来自 Hendrik Schober。David Smallberg 为在 Item 38 中编写自定义 `set` 实现提供了写作动机。Item 39 关于 EBO 通常在多重继承下不可用的观察，源于 David Vandevoorde 和 Nicolai M. Josuttis 的 [C++ Templates](https://www.amazon.com/gp/product/0201734842?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0201734842)（Addison-Wesley, 2003）。
-
-在 Item 42 中，我对 `typename` 的最初理解源于 Greg Comeau 的 C++ 和 FAQ ([`www.comeaucomputing.com/`](http://www.comeaucomputing.com/))。在 Item 46 中，关于 `typename` 的最初理解来自 Greg Comeau 的 C++ 和 FAQ。在 Item 52 中，关于 `operator new` 的想法源于 Herb Sutter。
-
-
-
+在 Item 42 中，我对`typename`的最初理解源于 Greg Comeau 的 C++ 和 FAQ ([`www.comeaucomputing.com/`](http://www.comeaucomputing.com/))。在 Item 46 中，关于`typename`的最初理解来自 Greg Comeau 的 C++ 和 FAQ。在 Item 52 中，关于`operator new`的想法源于 Herb Sutter。
 
 Leor Zolman 在准备全面评审之前，针对多个编译器检查了所有的代码示例，在我修改手稿后，他又重新检查了一遍。如果仍然存在任何错误，将由我负责，而不是 Leor。
 
@@ -201,7 +222,7 @@ Karl Wiegers 尤其是 Tim Johnson，对封底文案提供了快速且有帮助�
 
 自第一版出版以来，我采纳了 Jason Ross、Robert Yokota、Bernhard Merkle、Attila Fehér、Gerhard Kreuzer、Marcin Sochacki、J. Daniel Smith、Idan Lupinsky、G. Wade Johnson、Clovis Tondo、Joshua Lehrer、T. David Hudson、Phillip Hellewell、Thomas Schell、Eldar Ronen、Ken Kobayashi、Cameron Mac Minn、John Hershberger、Alex Dumov、Vincent Stojanov、Andrew Henrick、陈炯雄、Balbir Singh、Fraser Ross、Niels Dekker、Harsh Gaurav Vangani、Vasily Poshehonov、藤村俊义、Alex Howlett、纪志煌的建议。此外，Mike Rizzi、Balog Pal、David Solomon、Tony Oliver、Martin Rottinger、妙华、Brian Johnson、Joe Suzow、Effeer Chen、Nate Kohl、Zachary Cohen、Owen Chu、Molly Sharp、Florian Weimer 和 Richard Kinder 也提供了建议。
 
-John Wait 是本书前两个版本的编辑，他愚蠢地再次报名担任这一职责。他的助手 Denise Mickelsen 总是带着愉快的微笑，技巧纯练地处理了我频繁的骚扰。（至少我认为她一直在微笑。我从未真正见过她。）Julie Nahil 抽中了最差的那张签，因此成为了我的制作经理。她以非凡的冷静处理了生产计划中意外丢失的六周工期。John Fuller（她的老板）和 Marty Rabinowitz（他的老板）也帮助解决了许多生产问题。Vanessa Moore 的正式工作是帮助处理 FrameMaker 问题和 PDF 准备，但她还将条目添加到了 附录 B 并对其进行了内封面打印格式化处理。Solveig Haugland 帮助了索引的格式化。Sandra Schroeder 和 Chuti Prasertsith 负责封面设计，尽管似乎每当我说“但这张带有*那种*颜色条纹的*照片*怎么样？”时，都是 Chuti 那个必须重新制作封面的人。Chanda Leary-Coutu 被派去负责营销工作的重体力活。
+John Wait 是本书前两个版本的编辑，他愚蠢地再次报名担任这一职责。他的助手 Denise Mickelsen 总是带着愉快的微笑，技巧纯练地处理了我频繁的骚扰。（至少我认为她一直在微笑。我从未真正见过她。）Julie Nahil 抽中了最差的那张签，因此成为了我的制作经理。她以非凡的冷静处理了生产计划中意外丢失的六周工期。John Fuller（她的老板）和 Marty Rabinowitz（他的老板）也帮助解决了许多生产问题。Vanessa Moore 的正式工作是帮助处理 FrameMaker 问题和 PDF 准备，但她还将条目添加到了附录 B 并对其进行了内封面打印格式化处理。Solveig Haugland 帮助了索引的格式化。Sandra Schroeder 和 Chuti Prasertsith 负责封面设计，尽管似乎每当我说“但这张带有*那种*颜色条纹的*照片*怎么样？”时，都是 Chuti 那个必须重新制作封面的人。Chanda Leary-Coutu 被派去负责营销工作的重体力活。
 
 在我编写手稿的几个月里，电视剧《[吸血鬼猎人](http://www.amazon.com/gp/product/B000AQ68RI?ie=UTF8&tag=ecpp3e-ebook-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B000AQ68RI)》经常在每天一天结束时帮助我“减压”。我费了巨大的克制，才没有把“巴菲语”写进书中。
 
@@ -217,21 +238,19 @@ Kathy Reed 在 1971 年教我编程，我很欣慰的是，直到今天我们仍
 
 本书的目的是教你如何使用 C++，而不是学习如何设计并实现*有效的*程序。在在使用得当时，C++ 能够让编程变得易于编写、直观、高效且几乎没有错误。本书旨在向你展示如何有效地使用 C++。我假设你已经有了使用 C++ 的经验。我提供的建议分为两个大类：通用设计策略以及特定语言特性的细节。设计讨论集中在如何在这 C++ 中选择不同的方法。如何在继承和模板之间选择？如何在公继承和私有继承之间选择？如何在成员函数和非成员函数之间选择？如何在值传递和引用传递之间选择？在最初做出这些决定至关重要，因为糟糕的选择可能在开发后期才会显现，那时修正往往是困难、耗时且昂贵的。
 
-即使你确切知道做什么，处理好也是很复杂的。运算符的正确返回类型是什么？什么时候应该是虚函数？`new` 在找不到内存时应该如何表现？这些细节至关重要，本书将帮助你避免这些问题。
+即使你确切知道做什么，处理好也是很复杂的。运算符的正确返回类型是什么？什么时候应该是虚函数？`new`在找不到内存时应该如何表现？这些细节至关重要，本书将帮助你避免这些问题。
 
 这不是 C++ 的全面参考书。相反，它是 55 条具体的建议（我称之为*条目*），关于你如何改进你的程序和设计。每个条目在某种程度上都是独立的，但大多数也包含对其他条目的引用。因此，阅读本书的一种方法是从感兴趣的条目开始，然后顺着引用看看它们通向何。
 
 本书也不是 C++ 的介绍。例如，在第二章中，我渴望向你介绍有关构造函数、析构函数和赋值运算符的正确实现，但我假设你已经知道这些功能的功能以及如何声明，或者可以去其他地方查找。许多 C++ 书籍包含此类信息。
 
-*本书*的目的是突出 C++ 编程中被忽视的方面。其他书籍描述了语言的不同部分。本书告诉你如何结合这些部分以获得有效的程序。其他书籍告诉你如何让程序通过编译。本书告诉你如何避免编译器不会告诉你的问题。
+*本书*的目的是突出 C++ 编程中被忽视的各方面。其他书籍描述了语言的不同部分。本书告诉你如何结合这些部分以获得有效的程序。其他书籍告诉你如何让程序通过编译。本书告诉你如何避免编译器不会告诉你的问题。
 
 同时，本书限制在*标准* C++ 上。这里只使用了官方语言标准中的特性。移植性是本书的一个关注重点，所以如果你在寻找依赖平台的黑科技和权宜之计，这里不是寻找它们的地方。
 
+如果你能始终遵循所有的指南，你就不太可能掉入围绕 C++ 最常见的陷阱，但从本质上来说，指南是有例外的。这就是为什么每个`Item`（条款）都有一个解释。这些解释是书中最重要的部分。只有理解了每个`Item`背后的原理，你才能判断它是否适用于你正在开发的软件以及你所劳作的独特约束条件。
 
-
-如果你能始终遵循所有的指南，你就不太可能掉入围绕 C++ 最常见的陷阱，但从本质上来说，指南是有例外的。这就是为什么每个 `Item`（条款）都有一个解释。这些解释是书中最重要的部分。只有理解了每个 `Item` 背后的原理，你才能判断它是否适用于你正在开发的软件以及你所劳作的独特约束条件。
-
-这本书的最佳用方法是洞察 C++ 是如何行为的、为什么会那样行为，以及如何利用这些行为来为你所服务。盲目应用书中的 `Item` 显然是不恰当的，但同时，在没有充分理由的情况下，你不应该违反任何指南。
+这本书的最佳用方法是洞察 C++ 是如何行为的、为什么会那样行为，以及如何利用这些行为来为你所服务。盲目应用书中的`Item`显然是不恰当的，但同时，在没有充分理由的情况下，你不应该违反任何指南。
 
 ## 术语
 
@@ -241,46 +260,49 @@ Kathy Reed 在 1971 年教我编程，我很欣慰的是，直到今天我们仍
 
 ```cpp
 extern int x;                               // 对象的声明
-std::size_t numDigits(int number);         // 函数声明
-class Widget;                              // 类声明
-template<typename T>                       // 模板声明
-class GraphNode;                           // 参见 Item 42 关于
-                                           // "typename" 使用的信息
+std::size_t numDigits(int number);          // 函数声明
+class Widget;                               // 类声明
+template<typename T>                        // 模板声明
+class GraphNode;                            // 参见 Item 42 关于
+                                            // "typename" 使用的信息
 ```
 
-请注意，我将整数 `x` 称为“对象”，尽管它是内置类型。有些人专门将“对象”一词留给用户定义类型的变量，但我并不不是其中之一。还要注意，函数 `numDigits` 的返回类型是 `std::size_t`，即 `std` 命名空间中的 `size_t` 类型。该命名空间是 C++ 标准库中几乎所有内容所在的地方。然而，由于 C 的标准库（准确地说是 C89 的版本）也可以用于 C++，因此继承自 C 的符号（如 `size_t`）可能存在于全局作用域、`std` 内部，或两者兼有，这取决于 `#included` 了哪些头文件。在书中，我假设已经 `#included` 了 C++ 头文件，这就是为什么我引用的是 `std::size_t` 而不仅仅是 `size_t`。在正文中提到标准库的组件时，我通常会省略对 `std` 的引用，依靠你识别出 `size_t`、`vector` 和 `cout` 等内容位于 `std` 中。在示例代码中，我总是包含 `std`，因为真实的代码没有它将无法编译。
+请注意，我将整数`x`称为“对象”，尽管它是内置类型。有些人专门将“对象”一词留给用户定义类型的变量，但我并不不是其中之一。还要注意，函数`numDigits`的返回类型是`std::size_t`，即`std`命名空间中的`size_t`类型。该命名空间是 C++ 标准库中几乎所有内容所在的地方。然而，由于 C 的标准库（准确地说是 C89 的版本）也可以用于 C++，因此继承自 C 的符号（如`size_t`）可能存在于全局作用域、`std`内部，或两者兼有，这取决于`#included`了哪些头文件。在书中，我假设已经`#included`了 C++ 头文件，这就是为什么我引用的是`std::size_t`而不仅仅是`size_t`。在正文中提到标准库的组件时，我通常会省略对`std`的引用，依靠你识别出`size_t`、`vector`和`cout`等内容位于`std`中。在示例代码中，我总是包含`std`，因为真实的代码没有它将无法编译。
 
-顺便说，`size_t` 只是 C++ 在计数时使用的某些无符号类型的类型定义（例如，基于 `char*` 的字符串中的字符数、STL 容器中的元素个数等）。它也是 `vector`、`deque` 和 `string` 中 `operator[]` 函数所采用的类型，当我们在 Item 3 中定义自己的 `operator[]` 函数时，我们将遵循这一惯例。
+顺便说，`size_t`只是 C++ 在计数时使用的某些无符号类型的类型定义（例如，基于`char*`的字符串中的字符数、STL 容器中的元素个数等）。它也是`vector`、`deque`和`string`中`operator[]`函数所采用的类型，当我们在 Item 3 中定义自己的`operator[]`函数时，我们将遵循这一惯例。
 
-每个函数的声明都揭示了它的 `signature`（签名），即它的参数和返回类型。函数的签名等同于它的类型。在 `numDigits` 的情况下，签名是 `std::size_t (int)`，即“接收一个 `int` 并返回一个 `std::size_t` 的函数”。C++ 对“签名”的正式排除了函数的返回类型，但在书中，将返回类型视为签名的一部分更有用。
+每个函数的声明都揭示了它的`signature`（签名），即它的参数和返回类型。函数的签名等同于它的类型。在`numDigits`的情况下，签名是`std::size_t (int)`，即“接收一个`int`并返回一个`std::size_t`的函数”。C++ 对“签名”的正式排除了函数的返回类型，但在书中，将返回类型视为签名的一部分更有用。
 
 `definition`（定义）为编译器提供了声明中省略的细节。对于一个对象，定义是编译器为该对象分配内存的地方。对于函数或函数模板，定义提供了代码体。对于类或类模板，定义列出了类或模板的成员：
 
 ```cpp
 class GraphNode {
-    int x;                          // 对象的定义
-    std::size_t numDigits(int number) // 函数定义。
+    int x;                              // 对象的定义
+    std::size_t numDigits(int number)   // 函数定义。
     {
-        std::size_t digitsFar = 1;   // 此函数返回
-                                    // 其参数中的
-                                    // 数字位数。
+        std::size_t digitsFar = 1;      // 此函数返回
+                                        // 其参数中的
+                                        // 数字位数。
         while ((number /= 10) != 0) ++digitsFar;
         return digitsFar;
     }
 };
-class Widget {                      // 类定义
+class Widget {                          // 类定义
 public:
     Widget();
     ~Widget();
     ...
 };
-template<typename T>               // 模板定义
+template<typename T>                    // 模板定义
+class GraphNode {
 public:
     GraphNode();
     ~GraphNode();
     ...
 };
 ```
+
+
 
 `Initialization`（初始化）是赋予对象第一个值的过程。对于用户定义类型的对象，初始化是由构造函数完成的。`default constructor`（默认构造函数）是可以在没有任何参数的情况下调用的构造函数。这种构造函数要么没有参数，要么为每个参数有一个默认值：
 
@@ -300,7 +322,7 @@ public:
 };
 ```
 
-类 `B` 和 `C` 的构造函数在这里声明为 `explicit`。这防止了它们被用于执行隐式类型转换，尽管它们仍然可以用于显式类型转换：
+类`B`和`C`的构造函数在这里声明为`explicit`。这防止了它们被用于执行隐式类型转换，尽管它们仍然可以用于显式类型转换：
 
 ```cpp
 void doSomething(B bObject); // 一个接收类型 B 对象的函数
@@ -311,11 +333,11 @@ doSomething(28);            // 错误！doSomething 需要 B 而不是 int，且
 doSomething(B(28));         // 好的，使用 B 构造函数显式转换（即强制转换）int 为 B 以供调用。参见 Item 27 关于转换的信息。
 ```
 
-声明为 `explicit` 的构造函数通常比非 `explicit` 构造函数更好，因为它们防止了编译器执行意外的（通常是非预期的）类型转换。除非我有充分理由允许构造函数用于隐式类型转换，否则我会将其声明为 `explicit`。我鼓励你遵循相同的策略。
+声明为`explicit`的构造函数通常比非`explicit`构造函数更好，因为它们防止了编译器执行意外的（通常是非预期的）类型转换。除非我有充分理由允许构造函数用于隐式类型转换，否则我会将其声明为`explicit`。我鼓励你遵循相同的策略。
 
 请注意我在示例中是如何高亮转换的。在书中，我使用这种高亮来引起你对特别值得内容的注意。（我也高亮了章节编号，那仅仅是因为我觉得看起来好看。）
 
-`copy constructor`（拷贝构造函数）用于用相同类型的不同对象初始化对象，而 `copy assignment operator`（拷贝赋值运算符）用于将值从一个对象拷贝到相同类型的对象：
+`copy constructor`（拷贝构造函数）用于用相同类型的不同对象初始化对象，而`copy assignment operator`（拷贝赋值运算符）用于将值从一个对象拷贝到相同类型的对象：
 
 ```cpp
 class Widget {
@@ -330,17 +352,13 @@ Widget w2(w1);              // 调用拷贝构造函数
 w1 = w2;                    // 调用拷贝赋值运算符
 ```
 
-当你看到看起来像赋值的内容时，请仔细阅读，因为 `=` 语法也可以用于调用拷贝构造函数：
+当你看到看起来像赋值的内容时，请仔细阅读，因为`=`语法也可以用于调用拷贝构造函数：
 
 ```cpp
 Widget w3 = w2;             // 调用拷贝构造函数！
 ```
 
-
-
-
-
-幸运的是，拷贝构造很容易与拷贝赋值区分来。如果正在定义一个新对象（如上述语句中的 `w3`），则必须调用构造函数；它不可能是赋值。如果没有定义新对象（如上述的 `w1 = w2` 语句），则不涉及任何构造函数，因此它是一个赋值。
+幸运的是，拷贝构造很容易与拷贝赋值区分来。如果正在定义一个新对象（如上述语句中的`w3`），则必须调用构造函数；它不可能是赋值。如果没有定义新对象（如上述的`w1 = w2`语句），则不涉及任何构造函数，因此它是一个赋值。
 
 拷贝构造函数是一个特别重要的函数，因为它定义了对象如何通过值传递。例如，考虑以下情况：
 
@@ -356,9 +374,9 @@ Widget aWidget;
 if (hasAcceptableQuality(aWidget)) ...
 ```
 
-参数 `w`是通过值传递给 `hasAcceptableQuality` 的，因此在上述调用中，`aWidget` 被拷贝到 `w` 中。这种拷贝是由 `Widget` 的拷贝构造函数完成的。按值传递意味着“调用拷贝构造函数”。然而，按值传递用户自定义类型通常是个坏主意。通过 `const` 引用传递通常是更好的选择。更多细节，请参阅第 20 条）。
+参数`w`是通过值传递给`hasAcceptableQuality`的，因此在上述调用中，`aWidget`被拷贝到`w`中。这种拷贝是由`Widget`的拷贝构造函数完成的。按值传递意味着“调用拷贝构造函数”。然而，按值传递用户自定义类型通常是个坏主意。通过`const`引用传递通常是更好的选择。更多细节，请参阅第 20 条。
 
-`STL` 是标准模板库，是 C++ 标准库中专门用于容器（例如 `vector`、`list`、`set`、`map` 等）、迭代器（例如 `vector<int>::iterator`、`set<string>::iterator` 等）、算法（例如 `for_each`、`find`、`sort` 等）以及相关功能的部分。这些相关功能大部分与函数对象有关：即行为像函数的对象。此类对象来自重载了 `operator()`（函数调用运算符）的类。如果你不熟悉 `STL`，那么在阅读这本书时，你可能需要一份良好的参考资料，因为 `STL` 太实用了，我不可能利用它。一旦你用过它，你会有同样的感觉。
+`STL`是标准模板库，是 C++ 标准库中专门用于容器（例如`vector`、`list`、`set`、`map`等）、迭代器（例如`vector<int>::iterator`、`set<string>::iterator`等）、算法（例如`for_each`、`find`、`sort`等）以及相关功能的部分。这些相关功能大部分与函数对象有关：即行为像函数的对象。此类对象来自重载了`operator()`（函数调用运算符）的类。如果你不熟悉`STL`，那么在阅读这本书时，你可能需要一份良好的参考资料，因为`STL`太实用了，我不可能利用它。一旦你用过它，你会有同样的感觉。
 
 从 Java 或 C# 等语言转向 C++ 的程序员可能会对“未定义行为”这一概念感到惊讶。由于各种原因，C++ 中某些构造结构的行为在字面上根本没有定义：你无法可靠地预测运行时会发生什么。以下是两个具有未定义行为的代码示例：
 
@@ -371,13 +389,13 @@ char c = name[10];                  // 引用无效的数组索引
                                 // 产生未定义行为
 ```
 
-为了强调未定义行为的结果不可预测的且可能非常不愉快，丰富的 C++ 程序员经常说，具有未定义行为的程序可能会擦除你的硬盘。这是真的：一个具有未定义行为的程序确实擦除你的硬盘。但并不可能。更有可能的是程序会表现异常，有时运行正常，有时崩溃，有时又产生错误的结果。有效的 C++ 程序员会尽力避开未定义行为。在书中，我指出了许多需要留意它的地方。
+为了强调未定义行为的结果不可预测且可能非常不愉快，丰富的 C++ 程序员经常说，具有未定义行为的程序可能会擦除你的硬盘。这是真的：一个具有未定义行为的程序确实可能擦除你的硬盘。但并不可能发生。更有可能的是程序会表现异常，有时运行正常，有时崩溃，有时又产生错误的结果。有效的 C++ 程序员会尽力避开未定义行为。在书中，我指出了许多需要留意它的地方。
 
-另一个让从其他语言来到 C++ 的程序员困惑的术语是 `interface`（接口）。Java 和 .NET 语言将 `Interfaces` 作为一种语言元素，但 C++ 中没有这种东西，尽管第 31 条讨论了如何模拟它们。当我使用“接口”一词时，我通常指的是函数的签名、类的可访问元素（例如类的“公共接口”、“受保护接口”或“私有接口”），或者使其必须有效的表达式。
+另一个让从其他语言来到 C++ 的程序员困惑的术语是`interface`（接口）。Java 和 .NET 语言将`Interfaces`作为一种语言元素，但 C++ 中没有这种东西，尽管第 31 条讨论了如何模拟它们。当我使用“接口”一词时，我通常指的是函数的签名、类的可访问元素（例如类的“公共接口”、“受保护接口”或“私有接口”），或者使其必须有效的表达式。
 
 ### 命名规范
 
-我经常遵循以下规则为指针命名：指向类型 `T` 对象的指针称为 `pt`，即“pointer to T”。以下是一些例子：
+我经常遵循以下规则为指针命名：指向类型`T`对象的指针称为`pt`，即“pointer to T”。以下是一些例子：
 
 ```cpp
 Widget *pw; // pw = 指 Widget 的指针
@@ -385,16 +403,13 @@ Airplane *pa; // pa = 指 Airplane 的指针
 GameCharacter *pgc; // pgc = 指 GameCharacter 的指针
 ```
 
-我对引用使用类似的约定：`rw` 可能是对 `Widget` 的引用，`ra` 可能是对 `Airplane` 的引用。
+我对引用使用类似的约定：`rw`可能是对`Widget`的引用，`ra`可能是对`Airplane`的引用。
 
-在谈论成员函数时，我偶尔使用名称 `mf`。
+在谈论成员函数时，我偶尔使用名称`mf`。
 
 ### 线程考量
 
 作为一种语言，C++ 没有线程的概念——事实上，没有任何种类的并发的概念。C++ 的标准库也是如此。对于 C++ 而言，多线程程序并不存在。
-
-
-
 
 但它们确实如此。我在书中的重点是标准的、可移植的 C++，但我无法忽视线程安全是许多程序员面临的问题这一事实。我处理标准 C++ 与现实之间这种鸿沟的方法，是指出我所研究的 C++ 构造在线程环境中可能导致问题的地方。这并不意味着这本书是一本关于使用 C++ 进行多线程编程的书。恰恰并非如此。相反，它是一本关于 C++ 编程的书，虽然它很大程度上局限于单线程考虑，但它承认了多线程的存在，并试图指出具有线程意识的程序员在评估我提供的建议时，需要特别注意的地方。
 
@@ -402,15 +417,15 @@ GameCharacter *pgc; // pgc = 指 GameCharacter 的指针
 
 ## TR1 和 Boost
 
-你将在书中到处找到对 TR1 和 Boost 的引用。每一者都有一个 `Item`（项目）对它们进行了详细的描述（TR1 参见 Item 54，Boost 参见 Item 55），但遗憾的是，这些 `Items` 位于书的末尾。（放在那里是因为效果更好。真的。我在许多其他地方尝试过它们。）如果你愿意，可以现在就翻到那些 `Items` 阅读它们，但如果你更倾向于从开头而不是结尾开始这本书，那么下面的执行摘要可以让你应付过去：
+你将在书中到处找到对 TR1 和 Boost 的引用。每一者都有一个`Item`（项目）对它们进行了详细的描述（TR1 参见 Item 54，Boost 参见 Item 55），但遗憾的是，这些`Items`位于书的末尾。（放在那里是因为效果更好。真的。我在许多其他地方尝试过它们。）如果你愿意，可以现在就翻到那些`Items`阅读它们，但如果你更倾向于从开头而不是结尾开始这本书，那么下面的执行摘要可以让你应付过去：
 
-- TR1（“技术报告 1”）是为 C++ 标准库添加新功能的规范。这些功能以新类模板和函数模板的形式存在，用于哈希表、引用计数智能指针、正则表达式等。所有 TR1 组件都位于 `tr1` 命名空间，该命名空间嵌套在 `std` 命名空间内部。
+- TR1（“技术报告 1”）是为 C++ 标准库添加新功能的规范。这些功能以新类模板和函数模板的形式存在，用于哈希表、引用计数智能指针、正则表达式等。所有 TR1 组件都位于`tr1`命名空间，该命名空间嵌套在`std`命名空间内部。
 
 - Boost 是一个组织也是一个网站（[`boost.org`](http://boost.org)），提供可移植的、经过同行评审的开源 C++ 库。大多数 TR1 功能都基于在 Boost 中完成的工作，在编译器厂商将 TR1 包含在他们的 C++ 库发行版之前，Boost 网站可能是寻找 TR1 实现的开发者的首选。然而，Boost 提供的功能多于 TR1 提供的，因此无论如何，了解它都是值得的。
 
 # 1. 适应 C++
 
-无论你的编程背景如何， C++ 可能都需要一点时间来适应。它是一种强大的语言，拥有极其广泛的特征，但在你利用这种力量并有效使用这些特征之前，你必须习惯 C++ 的处理方式。整本书都在关于这是如何做到的，但某些事情比其他事情更基础，而这一章是关于所有事情中最基础的那些。
+无论你的编程背景如何，C++可能都需要一点时间来适应。它是一种强大的语言，拥有极其广泛的特征，但在你利用这种力量并有效使用这些特征之前，你必须习惯 C++ 的处理方式。整本书都在关于这是如何做到的，但某些事情比其他事情更基础，而这一章是关于所有事情中最基础的那些。
 
 ### Item 1：将 C++ 视为语言的联邦
 
@@ -420,15 +435,15 @@ GameCharacter *pgc; // pgc = 指 GameCharacter 的指针
 
 如今的 C++ 是一种*多范式编程语言*，支持过程、面向对象、函数、泛型和元编程特征的结合。这种力量和灵活性使 C++ 成为一个无与伦比的工具，但也可能导致一些困惑。所有的“正确用法”规则似乎都有例外。我们该如何理解这样的语言呢？
 
-最好的方法是将 C++ 不要看作一种单一语言，而是是一一组相关语言的联邦。在一个特定的子语言中，规则往往是简单、直观且于于的。然而，当你从一个子语言移动到另一个子语言时，规则可能会发生。要理解 C++，你必须识别它的主要子语言。幸运的是，只有四个：
+最好的方法是将 C++ 不要看作一种单一语言，而是是一组相关语言的联邦。在一个特定的子语言中，规则往往是简单、直观且易于掌握的。然而，当你从一个子语言移动到另一个子语言时，规则可能会发生变化。要理解 C++，你必须识别它的主要子语言。幸运的是，只有四个：
 
 - **C。** 在非常深层，C++ 仍然基于 C。块、语句、预处理器、内置数据类型、数组、指针等，都源自 C。在许多情况下，C++ 为问题提供的方法优于它们对应的 C 语言方法（例如，参见 Items 2（预处理器的替代方案）和 13（使用对象管理资源）），但当你发现自己在处理 C++ 的 C 部分时，有效编程的规则反映了 C 更有限的范围：没有模板、没有异常、没有重载等。
 
-- **面向对象的 C++。** C++ 的这部分是“带类的 C”的核心内容：类（包括构造函数和析构函数）、封装、继承、多态、虚函数（动态绑定）等。这是 C++ 中最直接适用于经典面向对象设计规则规则部分。
+- **面向对象的 C++。** C++ 的这部分是“带类的 C”的核心内容：类（包括构造函数和析构函数）、封装、继承、多态、虚函数（动态绑定）等。这是 C++ 中最直接适用于经典面向对象设计规则的部分。
 
 - **模板 C++。** 这是 C++ 的泛型编程部分，也是大多数程序员经验最少的部分。模板考量贯穿于 C++，良好的编程规则包含特殊的仅限模板的子句并不罕见（例如，参见 Item 46 关于促进函数调用中的类型转换）。事实上，模板如此强大，以至于产生了一种全新的编程范式，*模板元编程*（TMP）。Item 48 提供了 TMP 的概述，但除非你是一个硬核模板迷，否则你不需要担心它。
 
-- **STL。** STL 当然是一个模板库，但它是一个非常特殊的模板库。它关于容器、迭代器、算法和对象的约定完美契合，但模板也可以围绕其他思想构建。STL 有其特定的处理方式，当你使用 STL 时，需要确保遵循它的约定。
+- **STL。** STL 当然是一个模板库，但它是一个非常特殊的模板库。它关于容器、迭代器、算法和函数对象的约定完美契合，但模板也可以围绕其他思想构建。STL 有其特定的处理方式，当你使用 STL 时，需要确保遵循它的约定。
 
 记住这四个子语言，当你发现从一个子语言切换到另一个子语言时，有效编程需要改变策略时，不要感到意外。例如，对于内置（即 C 类的）类型，按值传递通常比按引用传递更高效，但当你从 C++ 的 C 部分移动到面向对象的 C++ 时，用户定义构造函数和析构函数的存在意味着按引用传递通常更好。这在模板 C++ 中工作时尤其如此，因为在那里你甚至不知道正在处理的对象类型。然而，当你跨入 STL 时，你知道迭代器和函数对象是基于 C 指针建模的，因此对于 STL 中的迭代器和函数对象，传统的 C 按值规则再次适用。（关于选择参数传递选项的所有细节，请参见 Item 20。）
 
@@ -438,18 +453,15 @@ GameCharacter *pgc; // pgc = 指 GameCharacter 的指针
 
 - 取决于你使用的 C++ 部分，有效 C++ 编程的规则各异。
 
-### Item 2：用 `const`、`enum` 和 `inline` 使用 `#define`
+### Item 2：用`const`、`enum`和`inline`使用`#define`
 
-这个项目可能被称为“使用编译器代替预处理器”，因为 `#define` 可能被视为不是语言本身的一部分。这是它的问题之一。当你执行这样的操作时，
+这个项目可能被称为“使用编译器代替预处理器”，因为`#define`可能被视为不是语言本身的一部分。这是它的问题之一。当你执行这样的操作时，
 
 ```cpp
 #define ASPECT_RATIO 1.653
 ```
 
-
-
-
-符号名 `ASPECT_RATIO` 可能永远不会被编译器看到；它可能在源代码到达编译器之前就被预处理器处理掉了。因此，`ASPECT_RATIO` 这个名称可能不会被存入符号表。如果在编译过程中遇到涉及该常量的错误，这可能会让你困惑，因为错误信息可能指的是 `1.653` 而不是 `ASPECT_RATIO`。如果 `ASPECT_RATIO` 定义在一个你没有编写的头文件中，你将不知道那个 `1.653` 是从哪里来的，并浪费时间去追踪它。这个问题也可能在符号调试器中出现，因为同样，你程序程序中使用的名称可能不在符号表中。
+符号名`ASPECT_RATIO`可能永远不会被编译器看到；它可能在源代码到达编译器之前就被预处理器处理掉了。因此，`ASPECT_RATIO`这个名称可能不会被存入符号表。如果在编译过程中遇到涉及该常量的错误，这可能会让你困惑，因为错误信息可能指的是`1.653`而不是`ASPECT_RATIO`。如果`ASPECT_RATIO`定义在一个你没有编写的头文件中，你将不知道那个`1.653`是从哪里来的，并浪费时间去追踪它。这个问题也可能在符号调试器中出现，因为同样，你程序中使用的名称可能不在符号表中。
 
 解决方案是将宏替换为常量：
 
@@ -458,15 +470,15 @@ const double AspectRatio = 1.653; // 大写名称通常用于
                                  // 宏，因此更改了名称
 ```
 
-作为语言常量，`AspectRatio`一定会被编译器看到，并且一定会被放入它们的符号表。此外，对于浮点常量（例如在本例中），使用常量可能比使用 `#define` 产生更小的代码。这是因为预处理器盲目地将宏名 `ASPECT_RATIO` 替换为 `1.653` 可能会导致目标代码中出现多个 `1.653` 副本，而使用常量 `AspectRatio` 则绝不会产生多个副本。
+作为语言常量，`AspectRatio`一定会被编译器看到，并且一定会被放入它们的符号表。此外，对于浮点常量（例如在本例中），使用常量可能比使用`#define`产生更小的代码。这是因为预处理器盲目地将宏名`ASPECT_RATIO`替换为`1.653`可能会导致目标代码中出现多个`1.653`副本，而使用常量`AspectRatio`则绝不会产生多个副本。
 
-在将 `#define` 替换为常量时，有两个特殊情况值得注意。第一个是定义常量指针。由于常量定义通常放在头文件中（许多不同的源文件会包含它们），因此将*指针*本身声明为 `const` 是很重要的，通常除了指针所指向的类型之外还要这样声明。例如，为了在头文件中定义一个基于 `char*` 的常量字符串，你必须写两次 `const`：
+在将`#define`替换为常量时，有两个特殊情况值得注意。第一个是定义常量指针。由于常量定义通常放在头文件中（许多不同的源文件会包含它们），因此将*指针*本身声明为`const`是很重要的，通常除了指针所指向的类型之外还要这样声明。例如，为了在头文件中定义一个基于`char*`的常量字符串，你必须写两次`const`：
 
 ```cpp
 const char * const authorName = "Scott Meyers";
 ```
 
-关于 `const` 的含义和用法的完整讨论，特别是结合指针时，请参见 Item 3。然而，这里仍值得提醒你，`string` 对象通常比其基于 `char*` 的祖先更好，因此 `authorName` 通常用这种方式定义更好：
+关于`const`的含义和用法的完整讨论，特别是结合指针时，请参见 Item 3。然而，这里仍值得提醒你，`string`对象通常比其基于`char*`的祖先更好，因此`authorName`通常用这种方式定义更好：
 
 ```cpp
 const std::string authorName("Scott Meyers");
@@ -483,16 +495,18 @@ private:
 };
 ```
 
-你上面看到的是 `NumTurns` 的*声明*，而不是定义。通常情况下，C++ 要求你对所使用的任何内容提供定义，但静态且为整数类型（例如整数、`char`、`bool`）的类特定常量是一个例外。只要你不获取它们的地址，你就可以声明并使用它们，而无需提供定义。如果你确实获取了类常量的地址，或者你的编译器即使在你不获取地址的情况下也错误地坚持要求定义，则需要像这样提供一个单独的定义：
+你上面看到的是`NumTurns`的*声明*，而不是定义。通常情况下，C++ 要求你对所使用的任何内容提供定义，但静态且为整数类型（例如整数、`char`、`bool`）的类特定常量是一个例外。只要你不获取它们的地址，你就可以声明并使用它们，而无需提供定义。如果你确实获取了类常量的地址，或者你的编译器即使在你不获取地址的情况下也错误地坚持要求定义，则需要像这样提供一个单独的定义：
 
 ```cpp
 const int GamePlayer::NumTurns; // NumTurns 的定义；请参见
                                  // 下文了解为什么没有赋值
 ```
 
-你将此放在实现文件中，而不是头文件中。因为类常量的初始值是在常量声明的地方提供的（例如，`NumTurns` 在声明时被初始化为 5），所以在定义点不允许有初始值。
+你将此放在实现文件中，而不是头文件中。因为类常量的初始值是在常量声明的地方提供的（例如，`NumTurns`在声明时被初始化为 5），所以在定义点不允许有初始值。
 
-顺便提一下，无法使用 `#define` 创建类特定常量，因为 `#define` 不尊重作用域。一旦宏被定义，它在整个编译过程中都有效（除非在中间某处被 `#undef` 了）。这意味着 `#define` 不仅不能用于类特定常量，而且不能用于提供任何形式的封装，即不存在所谓的“私有”`#define`。当然，`const` 数据成员是可以被封装的；`NumTurns` 就是如此。
+顺便提一下，无法使用`#define`创建类特定常量，因为`#define`不尊重作用域。一旦宏被定义，它在整个编译过程中都有效（除非在中间某处被`#undef`了）。这意味着`#define`不仅不能用于类特定常量，而且不能用于提供任何形式的封装，即不存在所谓的“私有”`#define`。当然，`const`数据成员是可以被封装的；`NumTurns`就是如此。
+
+
 
 旧版本的编译器可能不接受上面的语法，因为以前在声明点为静态类成员提供初始值是不合法的。此外，类内初始化仅允许用于整数类型，且仅仅用于常量。在无法使用上述语法的情况下，你将初始值放在定义点：
 
@@ -508,7 +522,7 @@ const double CostEstimate::FudgeFactor = 1.35; // 常量；放在实现文件
 
 在几乎所有情况下，这些就足够了。唯一的例外是你在编译期间需要类常量的值。
 
-### "枚举黑科技 (the enum hack)"
+### “枚举黑科技（the enum hack）”
 
 枚举黑科技是一种用于补偿那些坚持要求为静态整数常量提供定义的编译器的技术。例如，为了知道数组的大小，`GamePlayer` 可以这样定义：
 
@@ -521,9 +535,9 @@ private:
 };
 ```
 
-了解枚举黑科技有几个值得考虑的原因。首先，枚举黑科技在某些方面的行为更像 `#define` 而不是 `const`，有时这正是你需要的。例如，获取 `const` 的地址是合法的，但获取枚举的地址是不合法的。如果你不想让人们获取常量的指针或引用，枚举是一个很好的约束方法。（有关通过编码决策实施设计约束，请参阅 Item 18).此外，尽管良好的编译器不会为 `const` 对象分配存储（除非创建对象的指针或引用），但糟糕的编译器可能会，而 `#define` 一样枚举不会导致这种不必要的分配。
+了解枚举黑科技有几个值得考虑的原因。首先，枚举黑科技在某些方面的行为更像 `#define` 而不是 `const`，有时这正是你需要的。例如，获取 `const` 的地址是合法的，但获取枚举的地址是不合法的。如果你不想让人们获取常量的指针或引用，枚举是一个很好的约束方法。（有关通过编码决策实施设计约束，请参阅 Item 18）。此外，尽管良好的编译器不会为 `const` 对象分配存储（除非创建对象的指针或引用），但糟糕的编译器可能会，而像 `#define` 一样，枚举不会导致这种不必要的分配。
 
-了解枚举黑科技的第二个原因纯粹出于实用。大量的代码使用了它，所以当你看到它时需要识别它。事实上，枚举黑科技是模板元编程的一种基础技术（参见 Item 48).
+了解枚举黑科技的第二个原因纯粹出于实用。大量的代码使用了它，所以当你看到它时需要识别它。事实上，枚举黑科技是模板元编程的一种基础技术（参见 Item 48）。
 
 ### 宏
 
@@ -546,9 +560,6 @@ CALL_WITH_MAX(++a, b+10); // a 增加了一次
 
 在这里，`a` 在调用 `f` 之前增加的次数取决于它与什么进行比较！
 
-
-
-
 幸运的是，你不需要忍受这些胡话。通过为内联函数使用模板，你可以获得宏的所有高效性，同时获得普通函数的可预测行为和类型安全（参见 Item 30）：
 
 ```cpp
@@ -568,7 +579,7 @@ inline void callWithMax(const T& a, const T& b) // 知道 T 是什么，我们
 - 对于简单的常量，优先使用 `const` 对象或 `enums` 而不是 `#define`。
 - 对于类函数的宏，优先使用 `inline` 函数而不是 `#define`。
 
-### Item 3: 尽可能地使用 `const`
+## Item 3：尽可能地使用 `const`
 
 `const` 的奇妙之处在于，它允许你指定一种语义约束——某个特定对象不应被修改——而编译器会强制该约束。它允许你向编译器和其他程序员传达一个值应该保持不变的信息。只要这种情况下属实，你就应该确保明确说明这一点，因为这样你就征得了编译器的帮助，以确保该约束不被违反。
 
@@ -578,13 +589,13 @@ inline void callWithMax(const T& a, const T& b) // 知道 T 是什么，我们
 char greeting[] = "Hello";
 
 char *p = greeting;               // 非 const 指针
-                                // 非 const 数据
+                                  // 非 const 数据
 const char *p = greeting;         // 非 const 指针
-                                // const 数据
+                                  // const 数据
 char * const p = greeting;        // const 指针，
-                                // 非 const 数据
+                                  // 非 const 数据
 const char * const p = greeting;  // const 指针，
-                                // const 数据
+                                  // const 数据
 ```
 
 这种语法并没有看起来那样随心所欲。如果 `const` 单词出现在星号左侧，则所指向的内容是常量；如果 `const` 单词出现在星号右侧，则指针本身是常量；如果 `const` 出现在两侧，则两者都是常量。当所指向的内容是常量时，有些程序员在类型之前列出 `const`。另一些人将其列在类型之后、星号之前。这在意义上没有区别，因此以下函数接收相同的类型：
@@ -594,25 +605,23 @@ void f1(const Widget *pw); // f1 接收一个指向常量对象的指针
 void f2(Widget const *pw); // f2 也是如此
 ```
 
-由于两种形式都存在于代码中，你应该习惯这两种。STL 迭代器是基于指针的，因此 `iterator` 的行为非常像 `T*` 指针。声明一个 `iterator const` 就像声明 `pointer const`（即声明 `T* const`）：迭代器不允许允许指向不同的内容，但它所指向的内容可以被修改。如果你想要一个指向不可修改内容的迭代器（即 STL 中类似于 `const T*` 指针的对应物），你需要一个 `const_iterator`：
+由于两种形式都存在于代码中，你应该习惯这两种。STL 迭代器是基于指针的，因此 `iterator` 的行为非常像 `T*` 指针。声明一个 `iterator const` 就像声明 `pointer const`（即声明 `T* const`）：迭代器不允许指向不同的内容，但它所指向的内容可以被修改。如果你想要一个指向不可修改内容的迭代器（即 STL 中类似于 `const T*` 指针的对应物），你需要一个 `const_iterator`：
 
 ```cpp
 std::vector<int> vec;
 
 const std::vector<int>::iterator iter = vec.begin(); // iter 的行为像 T* const
-*iter = 10;                                        // OK，改变 iter 指向的内容
-++iter;                                            // 错误！iter 是 const
+*iter = 10;                                         // OK，改变 iter 指向的内容
+++iter;                                             // 错误！iter 是 const
 
 std::vector<int>::const_iterator cIter = vec.begin(); // cIter 的行为像 const T*
-*cIter = 10;                                       // 错误！*cIter 是 const
-++cIter;                                           // 好的，改变 cIter
-
-
+*cIter = 10;                                          // 错误！*cIter 是 const
+++cIter;                                              // 好的，改变 cIter
 ```
 
 `const` 最强大的用途源于它在函数声明中的应用。在函数声明中，`const` 可以引用函数的返回值、单个参数，并且对于成员函数，可以引用整个函数。
 
-让函数返回一个常量值通常是不恰当的，但有时这样做可以在不放弃安全或效率的情况下减少客户端错误的发生率。例如，考虑在 Item 24 中探讨的有理数的 `operator*` 函数声明。
+让函数返回一个常量值通常是不恰当的，但有时这样做可以在不放弃安全或效率的情况下减少客户端错误的发生率。例如，考虑在 Item 24 中探讨的有理数的 `operator*` 函数声明：
 
 ```cpp
 class Rational { ... };
@@ -637,7 +646,7 @@ if (a * b = c) // 噢，想做比较！
 
 对于 `const` 参数并没有什么特别新奇——它们的作用就像局部 `const` 对象一样，你应该尽可能在都使用它们。除非你需要能够修改参数或本地对象，否则请确保将其声明为 `const`。这只需要花费输入六个字符的精力，但它可以防止你遇到我们刚刚看到的这种“我想打 '==' 却不小心打了 '='”的错误。
 
-### const 成员函数
+### `const` 成员函数
 
 成员函数上 `const` 的目的是标识哪些成员函数可以被 `const` 对象调用。这些成员函数出于两个原因非常重要。首先，它们让类的接口更容易理解。了解哪些函数可以修改对象而哪些不可以是非常关重要的。其次，它们使得与 `const` 对象工作成为可能。这是编写高效代码的关键方面，因为正如 Item 20 所解释的，提高 C++ 程序性能的根本方法之一是通过常量引用传递对象。只有当存在 `const` 成员函数来操作生成的 `const` 限定对象时，这种技术才是可行的。
 
@@ -645,22 +654,15 @@ if (a * b = c) // 噢，想做比较！
 
 ```cpp
 class TextBlock {
-
 public:
-```
+  const char& operator[](std::size_t position) const // 用于 const 对象的 operator[]
+  { return text[position]; }
 
-
-
-
-```cpp
-const char& operator[](std::size_t position) const   // 用于 const 对象的 operator[]
-{ return text[position]; }                         // 
-
-char& operator[](std::size_t position)               // 用于非 const 对象的 operator[]
-{ return text[position]; }                         // 
+  char& operator[](std::size_t position)               // 用于非 const 对象的 operator[]
+  { return text[position]; }
 
 private:
-    std::string text;
+  std::string text;
 };
 ```
 
@@ -670,8 +672,9 @@ private:
 TextBlock tb("Hello");
 std::cout << tb[0];                  // 调用非 const 的
                                      // TextBlock::operator[]
+
 const TextBlock ctb("World");
-std::cout << ctb[0];                  // 调用 const TextBlock::operator[]
+std::cout << ctb[0];                 // 调用 const TextBlock::operator[]
 ```
 
 顺便说，`const` 对象在程序中通常是因为通过指针或 `const` 引用传递的。上面的 `ctb` 例子是人为的。下面更真实：
@@ -679,7 +682,7 @@ std::cout << ctb[0];                  // 调用 const TextBlock::operator[]
 ```cpp
 void print(const TextBlock& ctb)    // 在此函数中，ctb 是 const
 {
-  cout << ctb[0];              // 调用 const TextBlock::operator[]
+  cout << ctb[0];                   // 调用 const TextBlock::operator[]
   ...
 }
 ```
@@ -687,17 +690,13 @@ void print(const TextBlock& ctb)    // 在此函数中，ctb 是 const
 通过重载 `operator[]` 并赋予不同版本不同的返回类型，你可以对 `const` 和非 `const` `TextBlock` 进行区别处理：
 
 ```cpp
-cout << tb[0];                  // 正常 — 读取
-                                     // 非 const TextBlock
-tb[0] = 'x';                        // 正常 — 
-                                     // 非 const TextBlock
-cout << ctb[0];                 // 正常 — 读取
-                                     // const TextBlock
-ctb[0] = 'x';                       // 错误！— 
-                                     // const TextBlock
+cout << tb[0];       // 正常 — 读取非 const TextBlock
+tb[0] = 'x';         // 正常 — 非 const TextBlock
+cout << ctb[0];      // 正常 — 读取 const TextBlock
+ctb[0] = 'x';        // 错误！— const TextBlock
 ```
 
-注意这里的错误仅与调用的 `operator[]` 的**返回类型**有关；`operator[]` 的调用本身都是正常的。错误由于尝试对 `const&` 进行赋值，因为那是 `const` 版本 `operator[]` 的返回类型。另外注意，非 const `operator[]` 的返回类型是 `char` 的**引用** —— `char` 本身是不行的。如果 `operator[]` 返回简单的 `char`，那么 `tb[0] = 'x'` 这样的语句将无法编译，因为 C++ 按值返回对象（见第 20 章），这意味着修改的是 `text[0]` 的*拷贝*而不是 `text[0]` 本身，这并不是你想要的行为。
+注意这里的错误仅与调用的 `operator[]` 的**返回类型**有关；`operator[]` 的调用本身都是正常的。错误由于尝试对 `const&` 进行赋值，因为那是 `const` 版本 `operator[]` 的返回类型。另外注意，非 const `operator[]` 的返回类型是 `char` 的**引用**——`char` 本身是不行的。如果 `operator[]` 返回简单的 `char`，那么 `tb[0] = 'x'` 这样的语句将无法编译，因为 C++ 按值返回对象（见第 20 章），这意味着修改的是 `text[0]` 的*拷贝*而不是 `text[0]` 本身，这并不是你想要的行为。
 
 ### 位常量 vs 逻辑常量
 
@@ -712,7 +711,7 @@ class CTextBlock {
 public:
   ...
   char& operator[](std::size_t position) const // 不恰当（但符合位常量）声明
-  { return pText[position]; }                   // operator[]
+  { return pText[position]; }                  // operator[]
 private:
   char *pText;
 };
@@ -721,14 +720,16 @@ private:
 这个类将 `operator[]` 声明为 `const` 成员函数，尽管该函数返回对象内部数据的引用（该主题在第 28 章深入讨论）。忽略这一点，注意 `operator[]` 的实现并没有以任何方式修改 `pText`。结果是，编译器会乐意为 `operator[]` 生成代码；毕竟它是位常量的，而编译器只检查这一点。但看它允许发生什么：
 
 ```cpp
-const CTextBlock ctb("Hello");      // 声明常量对象
-char *pc = &ctb[0];                  // 调用 const operator[] 获取 ctb 数据的指针
-*pc = 'J';                          // ctb 现在变成了 "Jello"
+const CTextBlock ctb("Hello"); // 声明常量对象
+char *pc = &ctb[0];             // 调用 const operator[] 获取 ctb 数据的指针
+*pc = 'J';                     // ctb 现在变成了 "Jello"
 ```
 
 当你创建一个特定值的常量对象并仅对其调用 `const` 成员函数时，却仍然改变了它的值，这显然有问题！
 
 这引出了逻辑常量的概念。这一哲学的追随者认为，`const` 成员函数可能会修改其调用对象的某些位，但仅以客户端无法检测的方式进行。例如，你的 `CTextBlock` 类可能想在每次请求文本块时缓存其长度：
+
+
 
 ```cpp
 class CTextBlock {
@@ -767,10 +768,6 @@ public:
 };
 ```
 
-
-
-
-
 ```cpp
     ... // 进行边界检查
     ... // 记录访问数据
@@ -788,7 +785,7 @@ private:
 
 你真正想要做的是只实现一次 `operator[]` 功能并使用两次。也就是说，你希望让其中一个版本的 `operator[]` 调用另一个版本。这这就引出了我们要说的：去掉 `const` 属性（casting away constness）。
 
-从一般规则来说，类型转换是一个非常糟糕的主意，我甚至专门用了一整个章节（Item）来告诉你不要这样做（Item 27），但代码重复也绝不是好事事。在这种情况下，`operator[]` 的 `const` 版本所做的与非 `const` 版本完全相同，它只是具有带有 `const` 修饰符的返回类型。在这种情况下，去掉返回值上的 `const` 属性是安全的，因为任何调用非 `const operator[]` 的调用者本来就已经拥有一个非 `const` 对象。否则，他们根本无法调用非 `const` 函数。因此，让非 `const` 的 `operator[]` 调用 `const` 版本是避免代码重复的一种安全方法，尽管这需要进行类型转换。代码如下，但在你读完后续的解释后，它可能会更清晰：
+从一般规则来说，类型转换是一个非常糟糕的主意，我甚至专门用了一整个章节（Item）来告诉你不要这样做（`Item 27`），但代码重复也绝不是好事事。在这种情况下，`operator[]` 的 `const` 版本所做的与非 `const` 版本完全相同，它只是具有带有 `const` 修饰符的返回类型。在这种情况下，去掉返回值上的 `const` 属性是安全的，因为任何调用非 `const operator[]` 的调用者本来就已经拥有一个非 `const` 对象。否则，他们根本无法调用非 `const` 函数。因此，让非 `const` 的 `operator[]` 调用 `const` 版本是避免代码重复的一种安全方法，尽管这需要进行类型转换。代码如下，但在你读完后续的解释后，它可能会更清晰：
 
 ```cpp
 class TextBlock {
@@ -818,7 +815,7 @@ public:
 
 你可以看到，代码中有两次转换，而不是一个。我们希望非 `const` 的 `operator[]` 调用 `const` 版本，但如果我们在非 `const` 的 `operator[]` 内部直接调用 `operator[]`，就会递归地调用自己。这只在前百万次左右可能挺好玩的。为了避免无限递归，我们必须指定想要调用 `const operator[]`，但没有直接的方法可以做到这一点。相反，我们将 `*this` 从它的原始类型 `TextBlock&` 转换为 `const TextBlock&`。是的，我们使用类型转换来添加 `const`！所以我们有两个转换：一个是为了给 `*this` 添加 `const`（这样我们对 `operator[]` 的调用就会调用 `const` 版本），第二个是为了移除 `const operator[]` 返回值上的 `const`。
 
-添加 `const` 的转换仅仅是强制进行一种安全的转换（从非 `const` 对象到 `const` 对象），因此我们对它使用 `static_cast`。而移除 `const` 的转换只能通过 `const_cast` 完成，所以我们并没有真正的选择。（技术上，我们有。使用 C 风格的转换也可以，但正如我在 Item 27 中解释的那样，这种转换很少是正确的选择。）
+添加 `const` 的转换仅仅是强制进行一种安全的转换（从非 `const` 对象到 `const` 对象），因此我们对它使用 `static_cast`。而移除 `const` 的转换只能通过 `const_cast` 完成，所以我们并没有真正的选择。（技术上，我们有。使用 C 风格的转换也可以，但正如我在 `Item 27` 中解释的那样，这种转换很少是正确的选择。）
 
 除此之外，我们在这个示例中调用了一个运算符，所以语法有点奇怪。这个结果可能赢得不了任何审美比赛，但它确实达到了预期的效果：通过基于 `const` 版本实现非 `const` 版本的 `operator[]` 来避免代码重复。实现该目标是否值得付出这种代价由你决定，但这种通过其 `const` 孪生版本来实现非 `const` 成员函数的技巧绝对值得了解。
 
@@ -826,13 +823,13 @@ public:
 
 正如我在这个 Item 开头提到的，`const` 是一个很好的东西。在指针和迭代器上；在指针、迭代器和引用引用的对象上；在函数参数和返回类型上；在局部变量上；以及成员函数上，`const` 是一个强大的盟。尽可能使用它。
 
-**需要记住的**
+### 需要记住的
 
 - 对某些声明 `const` 有助于编译器检测错误。`const` 可以应用于任何作用域的对象、函数参数和返回类型以及成员函数。
 - 编译器强制位常量（bitwise constness），但我们应该使用逻辑常量（conceptual constness）。
 - 当 `const` 和非 `const` 成员函数的实现基本相同时，可以通过让非 `const` 版本调用 `const` 版本来避免代码重复。
 
-### Item 4：确保对象在使用之前已初始化
+## Item 4：确保对象在使用之前已初始化
 
 C++ 在初始化对象值方面似乎相当反复无常。例如，如果你说：
 
@@ -853,10 +850,6 @@ Point p;
 `p` 的数据成员有时会被初始化（为 0），但有时不会。如果你是从一种不存在未初始化对象的语言过来的，请注意，因为这是重要的。
 
 读取未初始值会产生未定义行为。在某些平台上，读取未初始化值本身就会导致程序停止。更常见的情况下，读取结果将是半随机位，这些位会污染你读取入的对象，最终导致难以理解的程序行为。
-
-
-
-
 
 对于其他几乎所有情况，初始化的责任在于构造函数。那里的规则很简单：确保所有构造函数都初始化了对象中的所有内容。
 
@@ -915,9 +908,6 @@ ABEntry::ABEntry()
   numTimesConsulted(0)
 {}
 ```
-
-
-
 
 那么，我们关注的问题涉及至少两个单独编译的源文件，每个文件至少包含一个非局部静态对象（即全局对象、命名空间作用范围内的对象，或在类中为 `static` 或在文件范围内的对象）。而实际的问题在于：如果一个翻译单元中非局部静态对象的初始化使用了另一个翻译单元中的非局部静态对象，那么它所使用的该对象可能尚未被初始化，因为*定义在不同翻译单元中的非局部静态对象之间的初始化相对顺序是未定义的*。
 
@@ -997,10 +987,9 @@ Directory& tempDir( params )
 
 
 
+你编写的几乎每一个类都会包含一个或多个构造函数、一个析构函数和一个拷贝赋值运算符。这并不奇怪。这些是你的基础函数，它们负责控制基本操作：创建一个新对象并确保其初始化、销毁对象并确保其被妥善清理，以及给对象赋予一个新值。在这些函数中出错会导致你的整个类中产生深远且令人不快的后果，因此，确保正确编写这些函数至关重要。在本章中，我将指导你如何组合成构成良好类骨架的函数。
 
-你编写几乎每一个类都会包含一个或多个构造函数、一个析构函数和一个拷贝赋值运算符。这并不奇怪。这些是你的基础函数，它们负责控制基本操作：创建一个新对象并确保其初始化、销毁对象并确保其被妥善清理，以及给对象赋予一个新值。在这些函数中出错会导致你的整个类中产生深远且令人不快的后果，因此，确保正确编写这些函数至关重要。在本章中，我将指导你如何组合成构成良好类骨架的函数。
-
-# 5: 了解 C++ 隐式编写和调用的函数
+## 5: 了解 C++ 隐式编写和调用的函数
 
 什么时候一个空类不再是空类？当 C++ 处理完它之后。如果你不自己声明它们，编译器会为你声明它们自己的版本的拷贝构造函数、拷贝赋值运算符和析构函数。此外，如果你完全没有声明任何构造函数，编译器还会为你声明一个默认构造函数。所有这些函数都是 `public` 且 `inline` 的（参见 Item 30）。因此，如果你写了：
 
@@ -1031,7 +1020,7 @@ e2 = e1;      // 拷贝赋值运算符
 
 既然编译器在为你编写函数，这些函数是做什么的呢？嗯，默认构造函数和析构函数主要为编译器提供放置“后台”代码的地方，例如调用基类和非静态数据成员的构造函数和析构函数。注意，生成的析构函数是非虚的（参见 Item 7），除非它继承自一个本身声明了虚析构函数的基类（在这种情况下，该函数的虚性来自于基类）。
 
-至于拷贝构造函数和拷贝赋值运算符，编译器生成的版本仅仅是将源对象的每个非静态数据成员拷贝到目标对象。例如，考虑一个 `NamedObject` 模板，它允许你将名称与类型为 `T`的对象关联：
+至于拷贝构造函数和拷贝赋值运算符，编译器生成的版本仅仅是将源对象的每个非静态数据成员拷贝到目标对象。例如，考虑一个 `NamedObject` 模板，它允许你将名称与类型为 `T` 的对象关联：
 
 ```cpp
 template<typename T>
@@ -1061,7 +1050,7 @@ NamedObject<int> no2(no1); // 拷贝构造函数
 template<class T>
 class NamedObject {
 public:
-  // 此构造函数不再接受 const name，因为 nameValue 现在是到到非 const 字符串的引用。构造函数消失了，因为我们必须有一个字符串可以引用。
+  // 此构造函数不再接受 const name，因为 nameValue 现在是到非 const 字符串的引用。构造函数消失了，因为我们必须有一个字符串可以引用。
   NamedObject(std::string& name, const T& value);
   ...
 private:
@@ -1086,10 +1075,7 @@ p = s; // 对 p 的数据成员会发生什么？
 
 ### 注意事项
 
-• 编译器可能会隐式生成类的默认构造函数、拷贝构造函数、拷贝赋值运算符和析构函数。
-
-
-
+- 编译器可能会隐式生成类的默认构造函数、拷贝构造函数、拷贝赋值运算符和析构函数。
 
 房地产中人负责卖房屋，而一个支持这些中人的软件系统自然会有一个代表待售房屋的类：
 
@@ -1163,7 +1149,7 @@ class HomeForSale: private Uncopyable {      // 类不再声明
 
 - 要禁止编译器自动提供的功能，将相应的成员函数声明为 `private` 并不给出实现。使用像 `Uncopyable` 这样的基类是这种方法。
 
-Item 7：在多态基类中声明虚析构函数
+## Item 7：在多态基类中声明虚析构函数
 
 有很多方法记录时间，因此创建一个 `TimeKeeper` 基类以及不同计时方法的派生类是合理的：
 
@@ -1201,11 +1187,9 @@ delete ptk;                     // 释放以避免资源泄漏
 
 Item 13 解释了依赖客户端删除是有风险的，而 Item 18 解释了如何修改工厂函数的接口以防止常见的客户端错误，但这些在这里是次要的，因为在这个 Item 中我们处理了上述代码一个更根本的缺陷：即使客户端所做的一切都是正确的，也不知道程序将如何运行。
 
+问题在于 `getTimeKeeper` 返回一个指向派生类对象的指针（例如 `AtomicClock`），而该对象是通过基类指针（即 `TimeKeeper*` 指针）被删除的，且该基类（`TimeKeeper`）有一个**非虚析构函数**。这是一个灾难性的根源，因为 C++ 规定，当通过具有非虚析构函数的基类指针删除派生类对象时，结果是未定义的。运行时通常发生的情况是对象的派生部分永远不会被销毁。如果 `getTimeKeeper` 调用恰好返回一个指向 `AtomicClock` 对象的指针，那么对象的 `AtomicClock` 部分（即在 `AtomicClock` 类中声明的成员变量）可能不会被销毁，`AtomicClock` 的析构也不会执行。然而，基类部分（即 `TimeKeeper` 部分）通常会被销毁，从而导致一个奇特的“部分销毁”的对象。这是导致资源泄漏、损坏数据结构以及在调试器上浪费大量时间的绝佳方法。
 
-
-问题在于 `getTimeKeeper` 返回一个指向派生类对象的指针（例如 `AtomicClock`），而该对象是通过基类指针（即 `TimeKeeper*` 指针）被删除的，且该基类（`TimeKeeper`）有一个**非虚析析构函数**。这是一个灾难性的根源，因为 C++ 规定，当通过具有非虚析析构函数的基类指针删除派生类对象时，结果是未定义的。运行时通常发生的情况是对象的派生部分永远不会被销毁。如果 `getTimeKeeper` 调用恰好返回一个指向 `AtomicClock` 对象的指针，那么对象的 `AtomicClock` 部分（即在 `AtomicClock` 类中声明的成员变量）可能不会被销毁，`AtomicClock` 的析构也不会执行。然而，基类部分（即 `TimeKeeper` 部分）通常会被销毁，从而导致一个奇特的“部分销毁”的对象。这是导致资源泄漏、损坏数据结构以及在调试器上浪费大量时间的绝佳方法。
-
-要消除这个问题很简单：给基类提供一个虚析析构函数。这样，删除派生类对象将完全按照你的预期运行。它将销毁整个对象，包括所有的派生类部分：
+要消除这个问题很简单：给基类提供一个虚析构函数。这样，删除派生类对象将完全按照你的预期运行。它将销毁整个对象，包括所有的派生类部分：
 
 ```cpp
 class TimeKeeper {
@@ -1222,7 +1206,7 @@ TimeKeeper *ptk = getTimeKeeper();
 delete ptk;                     // 现在行为正确
 ```
 
-像 `TimeKeeper` 这样的基类通常包含析构函数以外的虚函数，因为虚函数的目的是允许对派生类的实现进行自定义（参见第 34 条）。例如，`TimeKeeper` 可能有一个虚函数 `getCurrentTime`，它在不同的派生类中会有不同的实现。任何带有虚函数的类几乎都应该有一个虚析析构函数。
+像 `TimeKeeper` 这样的基类通常包含析构函数以外的虚函数，因为虚函数的目的是允许对派生类的实现进行自定义（参见第 34 条）。例如，`TimeKeeper` 可能有一个虚函数 `getCurrentTime`，它在不同的派生类中会有不同的实现。任何带有虚函数的类几乎都应该有一个虚析构函数。
 
 如果一个类*不包含*虚函数，这通常意味着它不打算被用作基类。当一个类不打算作为基类时，将析构函数设为虚通常是一个坏主意。考虑一个表示二维空间中点的类：
 
@@ -1238,13 +1222,15 @@ private:
 
 如果一个 `int` 占用 32 位，一个 `Point` 对象通常可以放入一个 64 位寄存器中。此外，这样的 `Point` 对象可以作为一个 64 位数值传递给用其他语言（如 C 或 FORTRAN）编写的函数。然而，如果将 `Point` 的析构函数设为虚函数，情况就会发生。
 
-虚函数的实现要求对象携带信息，这些信息可以在运行时用于确定在对象上调用哪些虚函数。这些信息通常以名为 `vptr`（虚函数表指针）的指针的形式存在。`vptr` 指向一个名为 `vtbl`（虚函数表）的函数指针数组；每个带有虚函数的类都有一个关联的 `vtbl`。当在对象上调用虚函数时，实际调用的函数是通过跟踪对象的 `vptr` 找到 `vtbl`，然后在 `vtbl` 中查找相应的函数指针来确定的。
 
-虚函数如何实现的细节并不重要。*重要*的是，如果 `Point` 类包含虚函数，该类型对象的大小将会增加。在 32 位架构上，它们将从 64 位（两个 `int`）变为 96 位（`int`s 加上 `vptr`）；在 64 位架构上，它们可能从 64 位增加到 128 位，因为此类架构上的指针大小为 64 位。因此，在 `Point` 中添加 `vptr` 将使其大小增加 50–100%！`Point` 对象再也无法放入 64 位寄存器中。此外，C++ 中的 `Point` 对象不再看起来像在 C 等其他语言中声明的相同结构，因为它们的跨语言对应项缺少 `vptr`。结果是，无法在用其他语言编写的函数之间传递 `Point`，除非你显式地补偿 `vptr`，而这本身是一个实现细节，因此是不可移植的。
 
-结论是，无故将所有析析构函数声明为虚函数与从不声明为虚函数一样错误。事实上，许多人这样总结这种情况：当仅当一个类包含至少一个虚函数时，才在该类中声明虚析析构函数。
+虚函数的实现要求对象携带信息，这些信息可以在运行时用于确定在对象上调用哪些虚函数。这些信息通常以名为`vptr`（虚函数表指针）的指针的形式存在。`vptr`指向一个名为`vtbl`（虚函数表）的函数指针数组；每个带有虚函数的类都有一个关联的`vtbl`。当在对象上调用虚函数时，实际调用的函数是通过跟踪对象的`vptr`找到`vtbl`，然后在`vtbl`中查找相应的函数指针来确定的。
 
-即使在完全没有虚函数的情况下，也可能被非虚析构函数问题所困扰。例如，标准的 `string` 类型不包含虚函数，但误入歧途的程序员有时仍将其作为基类：
+虚函数如何实现的细节并不重要。*重要*的是，如果`Point`类包含虚函数，该类型对象的大小将会增加。在 32 位架构上，它们将从 64 位（两个`int`）变为 96 位（`int`加上`vptr`）；在 64 位架构上，它们可能从 64 位增加到 128 位，因为此类架构上的指针大小为 64 位。因此，在`Point`中添加`vptr`将使其大小增加 50–100%！`Point`对象再也无法放入 64 位寄存器中。此外，C++ 中的`Point`对象不再看起来像在 C 等其他语言中声明的相同结构，因为它们的跨语言对应项缺少`vptr`。结果是，无法在用其他语言编写的函数之间传递`Point`，除非你显式地补偿`vptr`，而这本身是一个实现细节，因此是不可移植的。
+
+结论是，无故将所有析构函数声明为虚函数与从不声明为虚函数一样错误。事实上，许多人这样总结这种情况：当仅当一个类包含至少一个虚函数时，才在该类中声明虚析构函数。
+
+即使在完全没有虚函数的情况下，也可能被非虚析构函数问题所困扰。例如，标准的`string`类型不包含虚函数，但误入歧途的程序员有时仍将其作为基类：
 
 ```cpp
 class SpecialString: public std::string {   // 坏主意！std::string 有
@@ -1252,7 +1238,7 @@ class SpecialString: public std::string {   // 坏主意！std::string 有
 };
 ```
 
-乍一看，这可能看起来无害，但如果在应用程序的任何地方你设地将指向 `SpecialString` 的指针转换为指向 `string` 的指针，然后对该 `string` 指针使用 `delete`，你就立即进入了未行为领域：
+乍一看，这可能看起来无害，但如果在应用程序的任何地方你设地将指向`SpecialString`的指针转换为指向`string`的指针，然后对该`string`指针使用`delete`，你就立即进入了未定义行为领域：
 
 ```cpp
 SpecialString *pss = new SpecialString("Impending Doom");
@@ -1267,7 +1253,7 @@ delete ps; // 未定义！在实践中，
              // 不会被调用
 ```
 
-同样的分析适用于任何缺乏虚析构函数的类，包括所有的 STL 容器类型（例如 `vector`、`list`、`set`、`unordered_map`（参见第 54 条 ）。如果你产生继承标准容器或任何具有非虚析构类的冲动，请克制！（不幸的是，C++ 没有提供类似于 Java 的 `final` 类或 C# 的 `sealed` 类的派阻止机制。）
+同样的分析适用于任何缺乏虚析构函数的类，包括所有的 STL 容器类型（例如`vector`、`list`、`set`、`unordered_map`（参见第 54 条））。如果你产生继承标准容器或任何具有非虚析构类的冲动，请克制！（不幸的是，C++ 没有提供类似于 Java 的`final`类或 C# 的`sealed`类的阻止派生的机制。）
 
 有时给类提供纯虚析构函数是方便的。记得纯虚函数会导致*抽象*类——即无法实例化的类（即你无法创建该类型的对象）。然而，有时你有一个想要抽象的类，但你没有任何纯虚函数。怎么办？嗯，因为抽象类旨在被用作基类，因为基类应该具有虚析构函数，而因为纯虚函数产生抽象类，解决方案很简单：在你想要抽象的类中声明一个纯虚析构函数。这是一个例子：
 
@@ -1278,21 +1264,19 @@ public:
 };
 ```
 
-析构工作的方式是首先调用最派生类的析构函数，然后调用每个基类的析构函数。编译器会从派生类的析构函数中生成对 `~AWOV` 的调用，因此你必须确保为该函数提供函数体。如果不提供，链接器将报错。
+析构工作的方式是首先调用最派生类的析构函数，然后调用每个基类的析构函数。编译器会从派生类的析构函数中生成对`~AWOV`的调用，因此你必须确保为该函数提供函数体。如果不提供，链接器将报错。
 
 ```cpp
 AWOV::~AWOV() {}                           // 纯虚析构的定义
 ```
 
-
-
-
-并不是所有的基类都是设计为多态使用的。例如，标准的 `string` 类型以及 STL 容器类型根本没有被设计为基类，更不用说多态基类了。有些类被设计用作基类使用，但并非设计为多态使用。这类类——例如来自条目 6 的 `Uncopyable` 和标准库中的 `input_iterator_tag`（参见条目 47）——并没有设计为允许通过基类接口操作派生类对象。因此，它们不需要虚析析构函数。
+并不是所有的基类都是设计为多态使用的。例如，标准的`string`类型以及 STL 容器类型根本没有被设计为基类，更不用说多态基类了。有些类被设计用作基类使用，但并非设计为多态使用。这类类——例如来自条目 6 的`Uncopyable`和标准库中的`input_iterator_tag`（参见条目 47）——并没有设计为允许通过基类接口操作派生类对象。因此，它们不需要虚析构函数。
 
 ### 注意事项
 
-- 多态基类应该声明虚析析构函数。如果一个类有任何虚函数，它就应该有一个虚析析构函数。
-- 未被设计为基类或未设计为多态的类不应该声明虚析析构函数。
+- 多态基类应该声明虚析构函数。如果一个类有任何虚函数，它就应该有一个虚析构函数。
+
+- 未被设计为基类或未设计为多态的类不应该声明虚析构函数。
 
 ### 条目 8：防止异常离开析构函数
 
@@ -1312,7 +1296,7 @@ void doSomething()
 } // v 在这里自动销毁
 ```
 
-当 `vector v` 被销毁时，它负责销毁包含的所有 `Widget`。假设 `v` 中有十个 `Widget`，在销毁第一个时，抛出了异常。其他九个 `Widget` 仍然必须销毁（否则它们持有的任何资源将泄漏），因此 `v` 应该调用它们的析构函数。但假设在这些调用期间，第二个 `Widget` 析构函数又抛出了异常。现在有两个同时活跃的异常，这对于 C++ 来说实在太多了。取决于产生此类同时活跃的异常对的精确条件，程序执行要么终止，要么产生未定义行为。在示例中，它产生的是未定义行为。使用任何其他标准库容器（例如 `list`、`set`）、TR1 中的任何容器（参见条目 54）甚至数组，都会产生同样的未定义行为。并不是说必须使用容器或数组才会遇到。即使不使用容器和数组，析构函数抛出异常也可能导致程序过早终止或未定义行为。C++ *不喜欢*抛出异常的析构函数！
+当`vector v`被销毁时，它负责销毁包含的所有`Widget`。假设`v`中有十个`Widget`，在销毁第一个时，抛出了异常。其他九个`Widget`仍然必须销毁（否则它们持有的任何资源将泄漏），因此`v`应该调用它们的析构函数。但假设在这些调用期间，第二个`Widget`析构函数又抛出了异常。现在有两个同时活跃的异常，这对于 C++ 来说实在太多了。取决于产生此类同时活跃的异常对的精确条件，程序执行要么终止，要么产生未定义行为。在示例中，它产生的是未定义行为。使用任何其他标准库容器（例如`list`、`set`）、TR1 中的任何容器（参见条目 54）甚至数组，都会产生同样的未定义行为。并不是说必须使用容器或数组才会遇到。即使不使用容器和数组，析构函数抛出异常也可能导致程序过早终止或未定义行为。C++ *不喜欢*抛出异常的析构函数！
 
 这很容易理解，但如果你的析构函数需要执行一个可能因抛出异常而失败的操作，你该怎么办呢？例如，假设你正在处理一个数据库连接的类：
 
@@ -1326,7 +1310,7 @@ public:
 };
 ```
 
-为了确保客户端忘记对 `DBConnection` 对象调用 `close`，一个合理的想法是为 `DBConnection` 创建一个资源管理类，在它的析构函数调用 `close`。这类资源管理类在第 3 章中进行了详细讨论，但在这里，只需考虑此类类的析构函数是什么样的即可：
+为了确保客户端忘记对`DBConnection`对象调用`close`，一个合理的想法是为`DBConnection`创建一个资源管理类，在它的析构函数调用`close`。这类资源管理类在第 3 章中进行了详细讨论，但在这里，只需考虑此类类的析构函数是什么样的即可：
 
 ```cpp
 class DBConn {                   // 管理 DBConnection 的类
@@ -1351,11 +1335,11 @@ private:
 } // 在块结束时，DBConn 对象被销毁，从而自动关闭 DBConnection 对象
 ```
 
-只要 `close` 的调用成功，这种做法就是没问题的，但如果调用产生异常，`DBConn` 的析构函数将传播该异常，即允许它离开析构函数。这是一个问题，因为抛出异常的析构函数意味着麻烦。
+只要`close`的调用成功，这种做法就是没问题的，但如果调用产生异常，`DBConn`的析构函数将传播该异常，即允许它离开析构函数。这是一个问题，因为抛出异常的析构函数意味着麻烦。
 
-规避这种麻烦主要有两种方法。`DBConn` 的析构函数可以：
+规避这种麻烦主要有两种方法。`DBConn`的析构函数可以：
 
-- **如果 `close` 抛出异常，则**终止程序**，通常通过调用 `abort` 实现：
+- **如果`close`抛出异常，则**终止程序**，通常通过调用`abort`实现：
 
 ```cpp
 DBConn::~DBConn()
@@ -1368,9 +1352,9 @@ DBConn::~DBConn()
 }
 ```
 
-如果在销毁期间遇到错误后程序无法运行，这是一个合理的选项。它的优点是，如果允许异常从析构函数传播会导致未定义行为，这种方法可以防止这种情况发生。也就是说，调用 `abort` 可能会防止未定义行为。
+如果在销毁期间遇到错误后程序无法运行，这是一个合理的选项。它的优点是，如果允许异常从析构函数传播会导致未定义行为，这种方法可以防止这种情况发生。也就是说，调用`abort`可能会防止未定义行为。
 
-- **吞掉**来自 `close` 用的异常：
+- **吞掉**来自`close`用的异常：
 
 ```cpp
 DBConn::~DBConn()
@@ -1382,7 +1366,7 @@ DBConn::~DBConn()
 }
 ```
 
-通常情况下，吞掉异常是一个坏主意。有时，吞掉异常比未定义行为的风险要好。要使这成为可行方案，程序必须在忽略错误后能够继续运行。这两种方法都不特别吸引人。它们的共同问题是程序没有办法做出反应。更好的策略是设计 `DBConn` 的接口，让客户端有机会对出现的问题做出反应。例如，`DBConn` 可以可以自己提供一个 `close` 函数，从而给客户端处理可能出现的异常的机会。它还可以跟踪 `DBConnection` 是否在析构函数中被关闭。如果 `close` 的调用在 `DBConnection` 析构函数中失败，我们将又回到终止程序的模式：
+通常情况下，吞掉异常是一个坏主意。有时，吞掉异常比未定义行为的风险要好。要使这成为可行方案，程序必须在忽略错误后能够继续运行。这两种方法都不特别吸引人。它们的共同问题是程序没有办法做出反应。更好的策略是设计`DBConn`的接口，让客户端有机会对出现的问题做出反应。例如，`DBConn`可以可以自己提供一个`close`函数，从而给客户端处理可能出现的异常的机会。它还可以跟踪`DBConnection`是否在析构函数中被关闭。如果`close`的调用在`DBConnection`析构函数中失败，我们将又回到终止程序的模式：
 
 ```cpp
 class DBConn {
@@ -1411,14 +1395,12 @@ private:
 };
 ```
 
-
-
-
-将调用 `close` 的责任从 `DBConn` 的析构函数转移到 `DBConn` 的客户端（同时 `DBConn` 的析构函数包含一个“备份”调用），可能会让你觉得这是一种不负责任的推卸。你甚至可能认为这违反了项目 18 中易于正确使用的建议。事实上，两者皆非。如果一个操作可能通过抛出异常而失败，并且可能需要处理该异常，那么异常*必须来自某些非析构函数*。这是因为发射异常的析构函数是危险的，始终面临着程序提前终止或未定义行为的风险。在这个示例中，让客户端自己调用 `close` 并没有给他们增加负担；而是给了他们处理原本没有机会响应的错误的机会。如果他们认为这个机会没用（可能因为他们认为不会真的发生错误），他们可以忽略它，依靠 `DBConn` 的析构函数为他们调用 `close`。如果在该点发生了错误——如果 `close` *确实*抛出了异常——那么如果 `DBConn` 吞掉了异常或终止了程序，他们没有理由抱怨。毕竟，他们首先获得了处理该问题的机会，而他们选择了不使用。
+将调用`close`的责任从`DBConn`的析构函数转移到`DBConn`的客户端（同时`DBConn`的析构函数包含一个“备份”调用），可能会让你觉得这是一种不负责任的推卸。你甚至可能认为这违反了项目 18 中易于正确使用的建议。事实上，两者皆非。如果一个操作可能通过抛出异常而失败，并且可能需要处理该异常，那么异常*必须来自某些非析构函数*。这是因为发射异常的析构函数是危险的，始终面临着程序提前终止或未定义行为的风险。在这个示例中，让客户端自己调用`close`并没有给他们增加负担；而是给了他们处理原本没有机会响应的错误的机会。如果他们认为这个机会没用（可能因为他们认为不会真的发生错误），他们可以忽略它，依靠`DBConn`的析构函数为他们调用`close`。如果在该点发生了错误——如果`close`*确实*抛出了异常——那么如果`DBConn`吞掉了异常或终止了程序，他们没有理由抱怨。毕竟，他们首先获得了处理该问题的机会，而他们选择了不使用。
 
 ## 需要记住的
 
 - 析构函数永远不应该发射异常。如果在析构函数中调用的函数可能会抛出异常，析构函数应该捕获任何异常，然后将其吞掉或终止程序。
+
 - 如果类的客户端需要能够响应操作期间抛出的异常，该类应该提供一个常规（即非析构函数）函数来执行该操作。
 
 ### 项目 9：永远不要在构造或析构期间调用虚函数
@@ -1463,17 +1445,19 @@ public:
 BuyTransaction b;
 ```
 
-显然会调用 `BuyTransaction` 构造函数，但首先必须调用 `Transaction` 构造函数；基类部分在派生类部分之前构造。`Transaction` 构造函数的最后一行调用了虚函数 `logTransaction`，但惊喜就在这里。被调用的 `logTransaction` 版本是 `Transaction` 中的那，*而不是* `BuyTransaction` 中的——尽管正在创建的对象类型是 `BuyTransaction`。在基类构造期间，虚函数永远不会进入派生类。相反，对象的行为就像它是一个基类类型一样。非正式地说，在基类构造期间，虚函数是不“虚”的。
+显然会调用`BuyTransaction`构造函数，但首先必须调用`Transaction`构造函数；基类部分在派生类部分之前构造。`Transaction`构造函数的最后一行调用了虚函数`logTransaction`，但惊喜就在这里。被调用的`logTransaction`版本是`Transaction`中的那，*而不是*`BuyTransaction`中的——尽管正在创建的对象类型是`BuyTransaction`。在基类构造期间，虚函数永远不会进入派生类。相反，对象的行为就像它是一个基类类型一样。非正式地说，在基类构造期间，虚函数是不“虚”的。
 
 这种反直觉的行为有充分的理由。因为基类构造函数在派生类构造函数之前执行，派生类的数据成员还没有完成初始化。如果在基类构造期间调用的虚函数进入了派生类，那么派生类函数几乎会引用本地成员，但那些数据成员尚未初始化。那将是通往未定义行为和深夜调试环节的单程票。调用尚未初始化的对象部分本质上是危险的，因此 C++ 没有给你提供执行这种操作的方法。
 
-实际上，这比这更根本。在派生类对象的基类构造期间，对象的类型*就是*基类的类型。不仅虚函数会解析为基类，语言中使用运行时信息的部分（例如 `dynamic_cast`（参见项目 27）和 `typeid`）也将对象视为基类类型。在我们的示例中，当 `Transaction` 构造函数运行以初始化 `BuyTransaction` 对象的基类部分时，对象的类型是 `Transaction`。这就是 C++ 的每个部分处理它的方式，而且这种处理是有意义的：对象的 `BuyTransaction` 特有部分尚未初始化，因此最安全的方法是将它们视为视为。。在派生类构造函数开始执行之前，对象不会变成一个派生类对象。
+实际上，这比这更根本。在派生类对象的基类构造期间，对象的类型*就是*基类的类型。不仅虚函数会解析为基类，语言中使用运行时信息的部分（例如`dynamic_cast`（参见项目 27）和`typeid`）也将对象视为基类类型。在我们的示例中，当`Transaction`构造函数运行以初始化`BuyTransaction`对象的基类部分时，对象的类型是`Transaction`。这就是 C++ 的每个部分处理它的方式，而且这种处理是有意义的：对象的`BuyTransaction`特有部分尚未初始化，因此最安全的方法是将它们视为不存在。在派生类构造函数开始执行之前，对象不会变成一个派生类对象。
 
-同样的推理适用于析构期间。一旦派生类析构函数运行完毕，对象的派生类数据成员就会变成未定义值，因此 C++ 将它们视为不再存在。进入基类析构函数时，对象变成一个基类对象，C++ 的所有部分——虚函数、`dynamic_cast` 等——都这样处理它。
+同样的推理适用于析构期间。一旦派生类析构函数运行完毕，对象的派生类数据成员就会变成未定义值，因此 C++ 将它们视为不再存在。进入基类析构函数时，对象变成一个基类对象，C++ 的所有部分——虚函数、`dynamic_cast`等——都这样处理它。
 
-在上面的示例代码中，`Transaction` 构造函数直接调用了虚函数，这是对本项目指导的清晰而易见的违反。由于这种违反如此容易发现，某些编译器会对此发出警告。（其他则不会。请参见项目 53 关于警告的讨论。）即使没有这样的警告，问题几乎会在运行时之前显现，因为 `logTransaction` 函数在 `Transaction` 中是纯虚的。除非它已经定义（不太可能但可能——参见项目 34），否则程序无法链接：链接器将无法找到必要的 `Transaction::logTransaction` 实现。
+在上面的示例代码中，`Transaction`构造函数直接调用了虚函数，这是对本项目指导的清晰而易见的违反。由于这种违反如此容易发现，某些编译器会对此发出警告。（其他则不会。请参见项目 53 关于警告的讨论。）即使没有这样的警告，问题几乎会在运行时之前显现，因为`logTransaction`函数在`Transaction`中是纯虚的。除非它已经定义（不太可能但可能——参见项目 34），否则程序无法链接：链接器将无法找到必要的`Transaction::logTransaction`实现。
 
-构造或析构期间对虚函数的调用并不容易。如果 `Transaction` 有多个构造函数，每个构造函数都必须执行相同的工作，那么良好的软件工程是避免代码重复，将公共初始化代码（包括对 `logTransaction` 的调用）放入一个私有的非虚初始化函数中，例如 `init`：
+构造或析构期间对虚函数的调用并不容易。如果`Transaction`有多个构造函数，每个构造函数都必须执行相同的工作，那么良好的软件工程是避免代码重复，将公共初始化代码（包括对`logTransaction`的调用）放入一个私有的非虚初始化函数中，例如`init`：
+
+
 
 ```cpp
 class Transaction {
@@ -1491,12 +1475,11 @@ private:
 };
 ```
 
+这段代码在概念上与之前的版本相同，但它更具阴险性，因为它通常会在没有任何报错的情况下通过编译和链接。在这种情况下，由于 `logTransaction` 在 `Transaction` 中是纯虚函数，大多数运行时系统会在调用该纯虚函数时终止程序（通常会发出相应的提示信息）。然而，如果 `logTransaction` 是一个“正常”的虚函数（即不是纯虚函数）并且在 `Transaction` 中有实现，那么该版本会被调用，程序会愉快地运行下去，留给你去苦思恼为什么在创建派生类对象时调用了错误的 `logTransaction` 版本。
 
+避免此问题的唯一方法是确保你的任何构造函数或析构函数都没有在正在创建或销毁的对象上调用虚函数，并确保它们调用的所有函数都遵循相同的约束。
 
-
-这段代码在概念上与之前的版本相同，但它更具阴险性，因为它通常会在没有任何报错的情况下通过编译和链接。在这种情况下，由于 `logTransaction` 在 `Transaction` 中是纯虚函数，大多数运行时系统会在调用该纯虚函数时终止程序（通常会发出相应的提示信息）。然而，如果 `logTransaction` 是一个“正常”的虚函数（即不是纯虚函数）并且在 `Transaction` 中有实现，那么该版本会被调用，程序会愉快地运行下去，留给你去苦思恼为什么在创建派生类对象时调用了错误的 `logTransaction` 版本。避免此问题的唯一方法是确保你的任何构造函数或析构函数都没有在正在创建或销毁的对象上调用虚函数，并确保它们调用的所有函数都遵循相同的约束。
-
-但你*如何*确保在每次创建 `Transaction` 层次结构中的对象时，都调用了正确的 `logTransaction` 版本呢？显然，从 `Transaction` 构造函数中对对象调用虚函数是错误的做法。
+但你**如何**确保在每次创建 `Transaction` 层次结构中的对象时，都调用了正确的 `logTransaction` 版本呢？显然，从 `Transaction` 构造函数中对对象调用虚函数是错误的做法。
 
 解决这个问题有不同的方法。一种方法是将 `logTransaction` 变成 `Transaction` 中的非虚函数，然后要求派生类构造函数将必要的日志信息传递给 `Transaction` 构造函数。该函数随后就可以安全地调用非虚的 `logTransaction`。如下：
 
@@ -1527,25 +1510,33 @@ private:
 
 换句话说，既然你不能在构造期间使用虚函数从基类向下调用，你就可以通过让派生类将必要的构造信息传递给基类构造函数来补偿。
 
-在这个示例中，注意 `BuyTransaction` 中对（私有的）静态函数 `createLogString` 的使用。使用辅助函数创建一个值并传递给基类构造函数，通常比通过成员初始化列表进行复杂的转换来给基类提供它需要的内容更方便（也更具读性）。通过将该函数设为静态，就没有了意外引用到尚未初始化的 `BuyTransaction` 对象的数据成员的危险。这很重要，因为这些数据成员将处于未定义状态，这正是为什么在基类构造和析构期间调用虚函数根本不会进入派生类的原因。
+在这个示例中，注意 `BuyTransaction` 中对（私有的）静态函数 `createLogString` 的使用。使用辅助函数创建一个值并传递给基类构造函数，通常比通过成员初始化列表进行复杂的转换来给基类提供它需要的内容更方便（也更具读性）。
+
+通过将该函数设为静态，就没有了意外引用到尚未初始化的 `BuyTransaction` 对象的数据成员的危险。这很重要，因为这些数据成员将处于未定义状态，这正是为什么在基类构造和析构期间调用虚函数根本不会进入派生类的原因。
 
 ### 注意事项
+
 - 不要在构造或析构期间调用虚函数，因为此类调用永远不会去到比当前正在执行的构造函数或析构函数更具体的派生类。
 
-### 第 10 条：让赋值运算符返回指向 `*this` 的引用
+## 第 10 条：让赋值运算符返回指向 `*this` 的引用
 
 赋值的有趣之处之一是你可以将它们链起来：
+
 ```cpp
 int x, y, z;
 x = y = 5; // 赋值链
 ```
+
 同样有趣的是赋值是右结合的，所以上面的链按解析方式如下：
+
 ```cpp
 x = (y = (5));
 ```
-在这里，`5` 被赋值给 `y`，然后该赋值的结果（更新后的 `y`）被赋值给 `x`。（注：原文示例中此处为 z 是笔误，逻辑应为 y）。
+
+在这里，`5` 被赋值给 `y`，然后该赋值的结果（更新后的 `y`）被赋值给 `x`。（注：原文示例中此处为 `z` 是笔误，逻辑应为 `y`）。
 
 这种实现方式是赋值返回其左侧参数的引用，这是你在为类实现赋值运算符时应该遵循的约定：
+
 ```cpp
 class Widget {
 public:
@@ -1558,7 +1549,9 @@ public:
   ...
 };
 ```
+
 此约定适用于所有的赋值运算符，而不是上面所示的形式。因此：
+
 ```cpp
 class Widget {
 public:
@@ -1568,6 +1561,7 @@ public:
     ...
     return *this;
   }
+
   Widget& operator=(int rhs) // 即使运算符的参数类型不常规也适用
   {
     ...
@@ -1576,43 +1570,60 @@ public:
   ...
 };
 ```
+
 这仅仅是一个约定；不遵循它的代码也可以编译。然而，所有内置类型以及标准库中（已有的或即将包含的）类型（例如 `string`、`vector`、`complex`、`tr1::shared_ptr` 等）都遵循这一约定。除非你有充分的理由这样做，否则不要这么做。
 
 ### 注意事项
+
 - 让赋值运算符返回指向 `*this` 的引用。
 
-### 第 11 条：在 `operator=` 中处理自赋值
+## 第 11 条：在 `operator=` 中处理自赋值
 
 自赋值发生当对象被赋值给自身时：
+
 ```cpp
 class Widget { ... };
 Widget w;
 ...
 w = w; // 自赋值
 ```
-这看起来很愚蠢，但它是合法的，所以请放心客户会这样做。此外，赋值并不总是那么容易识别。例如，
+
+这看起来很愚蠢，但它是合法的，所以请放心客户会这样做。此外，赋值并不总是那么容易识别。例如：
+
 ```cpp
 a[i] = a[j]; // 潜在的自赋值
 ```
-如果 `i` 和 `j` 具有相同的值，这就是自赋值，并且
+
+如果 `i` 和 `j` 具有相同的值，这就是自赋值，并且：
+
 ```cpp
 *px = *py; // 潜在的自赋值
 ```
-如果 `px` 和 `py` 刚好指向同一个东西，这就是自赋值。这些不那么明显的自赋值被称为*别名*（aliasing）：即通过多种方式引用同一个对象。通常，操作相同类型引用或指针的代码需要考虑对象可能是同一个。事实上，如果两个对象来自同一个层次结构，它们甚至不需要声明为相同类型，因为基类引用或指针可以指向派生类对象：
+
+如果 `px` 和 `py` 刚好指向同一个东西，这就是自赋值。这些不那么明显的自赋值被称为**别名**（aliasing）：即通过多种方式引用同一个对象。
+
+通常，操作相同类型引用或指针的代码需要考虑对象可能是同一个。事实上，如果两个对象来自同一个层次结构，它们甚至不需要声明为相同类型，因为基类引用或指针可以指向派生类对象：
+
 ```cpp
 class Base { ... };
 class Derived: public Base { ... };
 void doSomething(const Base& rb, Derived* pd); // rb 和 pd 可能是同一个
 ```
-如果你遵循第 13 和第 14 条的建议，你将始终使用对象来管理资源，你将确保资源管理对象在复制时表现良好。在这种情况下，你的赋值运算符可能是自赋值安全的，而无需你去考虑。然而，如果你尝试自己管理资源（如果你在编写资源管理类时确实必须这样做），你可能会掉入在运行资源之前意外释放它的陷阱。例如，假设你创建了一个持有一个动态分配的位图原始指针的类：
+
+如果你遵循第 13 和第 14 条的建议，你将始终使用对象来管理资源，你将确保资源管理对象在复制时表现良好。在这种情况下，你的赋值运算符可能是自赋值安全的，而无需你去考虑。
+
+然而，如果你尝试自己管理资源（如果你在编写资源管理类时确实必须这样做），你可能会掉入在运行资源之前意外释放它的陷阱。例如，假设你创建了一个持有一个动态分配的位图原始指针的类：
+
 ```cpp
 class Bitmap { ... };
+
 class Widget {
   ...
 private:
   Bitmap *pb; // 指向堆对象的指针
 };
 ```
+
 这是一个 `operator=` 的实现，表面看起来合理，但在自赋值的情况下是不安全的。（它也不异常安全，但我们稍后讨论。）
 
 ```cpp
@@ -1620,23 +1631,17 @@ Widget&
 Widget::operator=(const Widget& rhs) // 不安全的 operator= 实现
 {
   delete pb; // 停止使用当前位图
+  pb = new Bitmap(*rhs.pb); // start using a copy of rhs's bitmap
+
+  return *this; // see Item 10
 }
 ```
 
+这里的自赋值问题在于，在 `operator=` 内部，`*this`（赋值的目标）和 `rhs` 可能是同一个对象。当它们是同一个对象时，`delete` 不仅销毁当前对象的位图，还会销毁 `rhs` 的位图。
 
+在函数结束时，`Widget`——这个本不应该被自赋值改变的对象——却发现自己持有的一个指向已删除对象的指针！
 
-
-
-```cpp
-pb = new Bitmap(*rhs.pb); // start using a copy of rhs's bitmap
-
-return *this; // see Item 10
-}
-```
-
-这里的自赋值问题在于，在 `operator=` 内部，`*this`（赋值的目标）和 `rhs` 可能是同一个对象。当它们是同一个对象时，`delete` 不仅销毁当前对象的位，还会销毁 `rhs` 的位。在函数结束时，`Widget` —— 这个本不应该被自赋值改变的对象 —— 却发现自己持有的一个指向已删除对象的指针！
-
-防止这种错误的传统方法是在 `operator=` 顶部通过*恒等测试*（identity test）检查是否自赋值：
+防止这种错误的传统方法是在 `operator=` 顶部通过**恒等测试**（identity test）检查是否自赋值：
 
 ```cpp
 Widget& Widget::operator=(const Widget& rhs)
@@ -1649,23 +1654,27 @@ Widget& Widget::operator=(const Widget& rhs)
 }
 ```
 
-这种方法有效，但我上面提到过，之前的版本的 `operator=` 不仅对自赋值是不安全的，对异常也是安全的，而这个版本仍然存在异常问题。特别是，如果 "`new Bitmap`”表达式抛出异常（可能是因为分配内存不足，也可能因为 `Bitmap` 的拷贝构造函数抛出了异常），`Widget` 最终将持有一个指向已删除的 `Bitmap` 的指针。这种指针是有毒的。你无法安全地删除它们，甚至无法安全地读取它们。对于这些指针，你能做的唯一安全的事就是花费大量的调试精力弄清楚它们从哪里来。
+这种方法有效，但我上面提到过，之前的版本的 `operator=` 不仅对自赋值是不安全的，对异常也是不安全的，而这个版本仍然存在异常问题。
 
-幸运的是，让 `operator=` 异常安全通常也能让它对自赋值安全。因此，通过忽略自赋值问题而转而关注实现异常安全性变得越来越常见。Item 29 深入探讨了异常安全性，但在本项中，只需观察到在许多情况下，仔细安排语句的顺序就可以产生异常安全（且自赋值安全）的代码。例如，在这里我们只需要小心在拷贝 `pb` 所指向的内容之后再删除 `pb` 即可：
+特别是，如果 `new Bitmap` 表达式抛出异常（可能是因为分配内存不足，也可能因为 `Bitmap` 的拷贝构造函数抛出了异常），`Widget` 最终将持有一个指向已删除的 `Bitmap` 的指针。这种指针是有毒的。你无法安全地删除它们，甚至无法安全地读取它们。对于这些指针，你能做的唯一安全的事就是花费大量的调试精力弄清楚它们从哪里来。
+
+幸运的是，让 `operator=` 异常安全通常也能让它对自赋值安全。因此，通过忽略自赋值问题而转而关注实现异常安全性变得越来越常见。
+
+Item 29 深入探讨了异常安全性，但在本项中，只需观察到在许多情况下，仔细安排语句的顺序就可以产生异常安全（且自赋值安全）的代码。例如，在这里我们只需要小心在拷贝 `pb` 所指向的内容之后再删除 `pb` 即可：
 
 ```cpp
 Widget& Widget::operator=(const Widget& rhs)
 {
   Bitmap *pOrig = pb;       // 记住原始 pb
-  pb = new Bitmap(*rhs.pb); // 将 pb 指向 rhs 位的拷贝
+  pb = new Bitmap(*rhs.pb); // 将 pb 指向 rhs 位图的拷贝
   delete pOrig;             // 删除原始的 pb
   return *this;
 }
 ```
 
-现在，如果 "`new Bitmap`”抛出异常，`pb`（以及它所属的 `Widget`）将保持不变。即使没有恒等测试，这段代码也能处理自赋值，因为我们创建了原始位的拷贝，指向我们创建的拷贝，然后删除原始位。这可能不是处理自赋值最高效的方法，但它确实有效。
+现在，如果 `new Bitmap` 抛出异常，`pb`（以及它所属的 `Widget`）将保持不变。即使没有恒等测试，这段代码也能处理自赋值，因为我们创建了原始位图的拷贝，指向我们创建的拷贝，然后删除原始位图。这可能不是处理自赋值最高效的方法，但它确实有效。
 
-如果你担心效率，可以将恒等测试重新放回函数顶部。但在在此那之前，请问问自己预估自赋值发生的频率有多高，因为这种测试不是免费的。它会使代码（源码和目标文件）稍微变大一点，并在控制流中引入一个分支，这两者都可能降低运行速度。例如，指令预取、缓存和流水线的有效性可能会降低。
+如果你担心效率，可以将恒等测试重新放回函数顶部。但在此之前，请问问自己预估自赋值发生的频率有多高，因为这种测试不是免费的。它会使代码（源码和目标文件）稍微变大一点，并在控制流中引入一个分支，这两者都可能降低运行速度。例如，指令预取、缓存和流水线的有效性可能会降低。
 
 在 `operator=` 中手动安排语句顺序以确保实现既异常安全又对自赋值安全的替代方案，是使用名为“拷贝并交换”（copy and swap）的技术。这种技术与异常安全性密切相关，因此在 Item 29 中进行了描述。然而，它是编写 `operator=` 的一种常用方法，值得看看这种实现通常是什么样的：
 
@@ -1679,7 +1688,7 @@ class Widget {
 Widget& Widget::operator=(const Widget& rhs)
 {
   Widget temp(rhs); // 创建 rhs 数据的拷贝
-  swap(temp);      // 交换 *this 的数据与拷贝的数据
+  swap(temp);       // 交换 *this 的数据与拷贝的数据
   return *this;
 }
 ```
@@ -1701,9 +1710,11 @@ Widget& Widget::operator=(Widget rhs) // rhs 是对象的拷贝 —— 按值传
 - 确保当对象被赋值给自己时，`operator=` 行为正常。技术包括比较源和目标对象的地址、仔细安排语句顺序以及拷贝并交换。
 - 确保任何操作一个或多个对象的函数在当两个或多个对象相同时，其行为是正确的。
 
-### Item 12: 拷贝对象的所有部分
+## Item 12：拷贝对象的所有部分
 
-在设计良好的、封装了对象内部部分的面向对象系统中，只有两个函数负责拷贝对象：恰如其名的拷贝构造函数和拷贝赋值运算符。我们将这些统称为*拷贝函数*（copying functions）。Item 5 观察到编译器会在需要时生成拷贝函数，并解释说生成的版本完全符合预期：它们拷贝了被拷贝对象的数据。
+在设计良好的、封装了对象内部部分的面向对象系统中，只有两个函数负责拷贝对象：恰如其名的拷贝构造函数和拷贝赋值运算符。我们将这些统称为**拷贝函数**（copying functions）。
+
+Item 5 观察到编译器会在需要时生成拷贝函数，并解释说生成的版本完全符合预期：它们拷贝了被拷贝对象的数据。
 
 当你声明自己的拷贝函数时，你是在向编译器表示你对默认实现某些某些不满意。编译器似乎对此感到冒犯，并以一种奇特的方式反击：它们并不会告诉你你的实现几乎是错误的。
 
@@ -1736,7 +1747,7 @@ Customer& Customer::operator=(const Customer& rhs)
 }
 ```
 
-这里看起来一切正常，实际上也一切正常 直到向 `Customer` 添加了另一个数据成员：
+这里看起来一切正常，实际上也一切正常，直到向 `Customer` 添加了另一个数据成员：
 
 ```cpp
 class Date { ... }; // 用于时间
@@ -1750,10 +1761,11 @@ private:
 };
 ```
 
+在此时，现有的拷贝函数正在执行`部分拷贝`：它们复制了客户的 `name`，但没有拷贝其 `lastTransaction`。然而，大多数编译器对此一言不发，即使在最高警告级别下也是如此（另请参见条目 53）。
 
+这是它们对你亲自编写拷贝函数的报复。你拒绝了它们会编写的拷贝函数，所以它们就不会告诉你你的代码是否完整。
 
-
-在此时，现有的拷贝函数正在执行`部分拷贝`：它们复制了客户的 `name`，但没有拷贝其 `lastTransaction`。然而，大多数编译器对此一言不发，即使在最高警告级别下也是如此（另请参见 条目 53）。这是它们对你亲自编写拷贝函数的报复。你拒绝了它们会编写的拷贝函数，所以它们就不会告诉你你的代码是否完整。结论是显而易见的：如果你向类中添加了数据成员，你就需要确保也更新了拷贝函数。（你还需要更新所有的构造函数（参见 条目 4 和 45）以及该类中任何非标准形式的 `operator=` （条目 10 给出了示例）。如果你忘记了，编译器不太可能提醒你。）
+结论是显而易见的：如果你向类中添加了数据成员，你就需要确保也更新了拷贝函数。（你还需要更新所有的构造函数（参见条目 4 和 45）以及该类中任何非标准形式的 `operator=`（条目 10 给出了示例）。如果你忘记了，编译器不太可能提醒你。）
 
 这种问题出现的最隐蔽的方式之一是通过继承。考虑如下：
 
@@ -1790,11 +1802,13 @@ PriorityCustomer::operator=(const PriorityCustomer& rhs)
 }
 ```
 
-`PriorityCustomer` 的拷贝函数看起来正在拷贝 `PriorityCustomer` 中的所有内容，但再看一遍。是的，它们拷贝了 `PriorityCustomer` 声明的数据成员，但每个 `PriorityCustomer` 也包含了它从 `Customer` 继承的数据成员的拷贝，而这些数据成员完全没有被拷贝！`PriorityCustomer` 的拷贝构造函数没有指定传递给其基类构造函数的参数（即：它在成员初始化列表中没有提到 `Customer`），因此 `PriorityCustomer` 对象的 `Customer` 部分将由不带参数的 `Customer` 构造函数初始化——即默认构造函数。（假设它有一个。如果没有，代码将无法编译。）该构造函数将对 `name` 和 `lastTransaction` 执行`default` 初始化。
+
+
+`PriorityCustomer` 的拷贝函数看起来正在拷贝 `PriorityCustomer` 中的所有内容，但再看一遍。是的，它们拷贝了 `PriorityCustomer` 声明的数据成员，但每个 `PriorityCustomer` 也包含了它从 `Customer` 继承的数据成员的拷贝，而这些数据成员完全没有被拷贝！`PriorityCustomer` 的拷贝构造函数没有指定传递给其基类构造函数的参数（即：它在成员初始化列表中没有提到 `Customer`），因此 `PriorityCustomer` 对象的 `Customer` 部分将由不带参数的 `Customer` 构造函数初始化——即默认构造函数。（假设它有一个。如果没有，代码将无法编译。）该构造函数将对 `name` 和 `lastTransaction` 执行`default`初始化。
 
 对于 `PriorityCustomer` 的拷贝赋值运算符，情况略有不同。它没有尝试以任何方式修改其基类数据成员，因此它们将保持不变。
 
-每当你亲手为派生类编写拷贝函数时，你必须小心也拷贝基类的部分。当然，这些部分通常是私有的（参见 条目 22），所以你无法直接访问它们。相反，派生类的拷贝函数必须调用它们对应的基类函数：
+每当你亲手为派生类编写拷贝函数时，你必须小心也拷贝基类的部分。当然，这些部分通常是私有的（参见条目 22），所以你无法直接访问它们。相反，派生类的拷贝函数必须调用它们对应的基类函数：
 
 ```cpp
 PriorityCustomer::PriorityCustomer(const PriorityCustomer& rhs)
@@ -1818,42 +1832,41 @@ PriorityCustomer::operator=(const PriorityCustomer& rhs)
 
 在实践中，这两个拷贝函数体通常非常相似，这可能会诱导你尝试通过让一个函数调用另一个来避免代码重复。你避免代码重复的愿望值得赞赏，但让一个拷贝函数调用另一个是实现这一点的错误方法。
 
-让拷贝赋值运算符调用拷贝构造函数是没有意义的，因为你试图构造一个已经存在的对象。由于是如此荒谬，以至于甚至没有语法可以实现。有些语法*看起来像*你正在这样做，但实际上你并没有；而有些语法*确实*能以一种反向的方式做到了这一点，但它们在某些条件下会损坏你的对象。所以，我不会向你展示任何这些语法。只需接受让拷贝赋值运算符调用拷贝构造函数是你不想做的事情。
+让拷贝赋值运算符调用拷贝构造函数是没有意义的，因为你试图构造一个已经存在的对象。由于是如此荒谬，以至于甚至没有语法可以实现。有些语法看起来像你正在这样做，但实际上你并没有；而有些语法确实能以一种反向的方式做到了这一点，但它们在某些条件下会损坏你的对象。所以，我不会向你展示任何这些语法。只需接受让拷贝赋值运算符调用拷贝构造函数是你不想做的事情。
 
-尝试反过来操作——让拷贝构造函数调用拷贝赋值运算符——同样是荒谬的。构造函数初始化新对象，而赋值运算符只适用于已经初始化的对象。对正在构造的对象执行赋值意味着对一个未初始化的对象进行操作。相反，如果你发现你的拷贝构造函数和赋值运算符体相似，请创建一个第三个函数来消除重复。这样的函数通常是私有的，并且通常命名为 `init`。
+尝试反过来操作——让拷贝构造函数调用拷贝赋值运算符——同样是荒谬的。构造函数初始化新对象，而赋值运算符只适用于已经初始化的对象。对正在构造的对象执行赋值意味着对一个未初始化的对象进行操作。相反，如果你发现你的拷贝构造函数和赋值运算符体相似，请创建一个第三个函数来消除重复。这样的函数通常是私有的，并且通常命名为`init`。
 
 ### 注意事项
 
 - 拷贝函数应确保拷贝所有的数据成员和所有的基类部分。
 - 不要尝试用其中一个来实现另一个。
 
-# 资源管理
+## 资源管理
 
-资源是你在你使用完毕后需要归给系统的东西。如果你不这样做，就会发生糟糕的事情。在 C++ 程序中，常见的资源是动态分配的内存（如果你分配了内存但从不释放，就会导致内存泄漏），但内存只是你管理的许多资源之一。其他常见资源包括文件描述符、互斥锁、图形界面 (GUI) 中的字体、数据库连接和网络套字。无论是什么种资源，在使用后将其释放都是非常重要的。
+资源是你在使用完毕后需要归还给系统的东西。如果你不这样做，就会发生糟糕的事情。在 C++ 程序中，常见的资源是动态分配的内存（如果你分配了内存但从不释放，就会导致内存泄漏），但内存只是你管理的许多资源之一。其他常见资源包括文件描述符、互斥锁、图形界面（GUI）中的字体、数据库连接和网络套接字。无论是什么资源，在使用后将其释放都是非常重要的。
 
 在任何情况下，手动确保这一点都是困难的，但考虑到异常、多路径函数以及在不理解影响的情况下修改软件，显然临时的资源管理方法是不够的。
 
 本章从基于 C++ 对构造函数、析构函数和拷贝操作支持的简单对象资源管理方法开始。经验表明，严谨遵循这种方法可以解决所有资源管理问题。本章随后进入专门针对内存的条目。后者的条目补充了前面的更通用的条目，因为管理内存的对象知道如何正确操作。
 
-### 条目 13：使用对象管理资源。
+### 条目 13：使用对象管理资源
 
-假设我们正在使用一个用于建模投资（例如股票、债券等）的库，其中各种投资类型继承自一个根类 `Investment`：
+假设我们正在使用一个用于建模投资（例如股票、债券等）的库，其中各种投资类型继承自一个根类`Investment`：
 
 ```cpp
 class Investment { ... }; // Investment 层次结构的根类
 ```
 
-（参见 条目 7; // 返回指向 Investment 层次结构中
-                                // 动态分配对象的指针；
-                                // 调用者必须删除它
-                                （为了简化省略了参数）
+（参见条目 7。）
+
+```cpp
+// 返回指向 Investment 层次结构中
+// 动态分配对象的指针；
+// 调用者必须删除它
+// （为了简化省略了参数）
 ```
 
-正如注释所示，`createInvestment` 的调用者负责在使用完该函数返回的对象后将其删除。那么，考虑为了履行这一义务而编写的函数 `f`：
-
-
-
-
+正如注释所示，`createInvestment` 的调用者负责在使用完该函数返回的对象后将其删除。那么，考虑为了履行这一义务而编写的函数`f`：
 
 ```cpp
 void f()
@@ -1864,13 +1877,13 @@ void f()
 }
 ```
 
-这看起来没问题，但有多种方法可能导致 `f` 无法删除它从 `createInvestment` 获取的投资对象。在函数的“...”部分，可能某处有一个早早的 `return` 语句。如果执行了这样的 `return`，控制将永远无法到达 `delete` 语句。如果 `createInvestment` 和 `delete` 的使用在一个循环中，且循环被 `continue` 或 `goto` 语句提前退出，也会出现类似的情况。最后，“...”部分内部某些语句可能会抛出异常。如果是这样的话，控制将再次无法到达 `delete`。无论 `delete` 是如何被跳过的，我们都会导致内存泄漏，不仅是包含投资对象的内存，还包括该对象持有的任何资源。
+这看起来没问题，但有多种方法可能导致`f`无法删除它从`createInvestment`获取的投资对象。在函数的“...”部分，可能某处有一个早早的`return`语句。如果执行了这样的`return`，控制将永远无法到达`delete`语句。如果`createInvestment`和`delete`的使用在一个循环中，且循环被`continue`或`goto`语句提前退出，也会出现类似的情况。最后，“...”部分内部某些语句可能会抛出异常。如果是这样的话，控制将再次无法到达`delete`。无论`delete`是如何被跳过的，我们都会导致内存泄漏，不仅是包含投资对象的内存，还包括该对象持有的任何资源。
 
-当然，严谨的编程可以防止这类错误，但请考虑一下代码随时间推移可能会发生什么变化。随着软件的维护，有人可能会添加一个 `return` 或 `continue` 语句，而没有完全理解其对函数其余资源管理策略的影响。更糟糕的是，`f` 的...”部分可能会调用一个以前从不抛出异常、但在“改进”之后突然开始抛出异常的函数。依赖 `f` 总是能到达其 `delete` 语句是不可行的。
+当然，严谨的编程可以防止这类错误，但请考虑一下代码随时间推移可能会发生什么变化。随着软件的维护，有人可能会添加一个`return`或`continue`语句，而没有完全理解其对函数其余资源管理策略的影响。更糟糕的是，`f` 的“...”部分可能会调用一个以前从不抛出异常、但在“改进”之后突然开始抛出异常的函数。依赖`f`总是能到达其`delete`语句是不可行的。
 
-为了确保 `createInvestment` 返回的资源始终被释放，我们需要将该资源放入一个对象中，该对象的析构函数会在控制离开 `f` 时自动释放该资源。事实上，这就是本节（Item）理念的一半：通过将资源放入对象中，我们可以依靠 C++ 自动调用析构函数来确保资源被释放（我们稍后会讨论该理念的另一半）。
+为了确保`createInvestment`返回的资源始终被释放，我们需要将该资源放入一个对象中，该对象的析构函数会在控制离开`f`时自动释放该资源。事实上，这就是本节（Item）理念的一半：通过将资源放入对象中，我们可以依靠 C++ 自动调用析构函数来确保资源被释放（我们稍后会讨论该理念的另一半）。
 
-许多资源是在堆上动态分配的，仅在单个代码块或函数内部使用，并应该在控制离开该块或函数时释放。标准库的 `auto_ptr` 正是为这种情况量身定制的。`auto_ptr` 是一个类似于指针的对象（智能指针），它的析构函数会自动对其所指向的内容调用 `delete`。以下是使用 `auto_ptr` 防止 `f` 发生潜在资源泄漏的方法：
+许多资源是在堆上动态分配的，仅在单个代码块或函数内部使用，并应该在控制离开该块或函数时释放。标准库的`auto_ptr`正是为这种情况量身定制的。`auto_ptr`是一个类似于指针的对象（智能指针），它的析构函数会自动对其所指向的内容调用`delete`。以下是使用`auto_ptr`防止`f`发生潜在资源泄漏的方法：
 
 ```cpp
 void f()
@@ -1878,134 +1891,163 @@ void f()
   std::auto_ptr<Investment> pInv(createInvestment()); // call factory
   ... // use pInv as
 } // before automatically
-// delete pInv via
-// auto_ptr's dtor
+  // delete pInv via
+  // auto_ptr's dtor
 ```
 
-这个简单的示例演示了使用对象进行管理两个两个关键方面：
+这个简单的示例演示了使用对象进行资源管理的两个关键方面：
 
-*   **资源被获取并立即移交给资源管理对象。** 在上面，`createInvestment` 返回的资源被用于初始化管理它的 `auto_ptr`。事实上，使用对象管理资源的理念通常被称为**资源获取即初始化（RAII）**，因为在同一条语句中获取资源并初始化资源管理对象是如此之常见。有时获取的资源会被赋值给资源管理对象而不是初始化它们，但无论何种方式，每种资源在获取的时刻刻都立即被移交给一个资源管理对象。
-*   **资源管理对象使用其析构函数来确保资源被释放。** 因为析构函数在对象销毁时（例如当对象超出作用域时）会被自动调用，因此无论控制如何离开代码块，资源都能被正确释放。当释放资源的行为可能导致抛出异常时，情况可能会变得复杂，那是 Item 8 要解决的问题，所以我们不必担心它。
+- **资源被获取并立即移交给资源管理对象。** 在上面，`createInvestment`返回的资源被用于初始化管理它的`auto_ptr`。事实上，使用对象管理资源的理念通常被称为**资源获取即初始化（RAII）**，因为在同一条语句中获取资源并初始化资源管理对象是如此之常见。有时获取的资源会被赋值给资源管理对象而不是初始化它们，但无论何种方式，每种资源在获取的时刻都立即被移交给一个资源管理对象。
+- **资源管理对象使用其析构函数来确保资源被释放。** 因为析构函数在对象销毁时（例如当对象超出作用域时）会被自动调用，因此无论控制如何离开代码块，资源都能被正确释放。当释放资源的行为可能导致抛出异常时，情况可能会变得复杂，那是条目 8 要解决的问题，所以我们不必担心它。
 
-由于 `auto_ptr` 在销毁时会自动删除它所指向的内容，因此确保永远不会有多个 `auto_ptr` 指向同一个对象是非常重要的。如果有，该对象将被删除多次，导致你的程序进入未定义行为的快车道。为了防止此类问题，`auto_ptr` 具有一个不寻特性：拷贝它们（通过拷贝构造函数或拷贝赋值运算符）会将它们置为空，且拷贝指针将假设资源的唯一所有权！
+由于`auto_ptr`在销毁时会自动删除它所指向的内容，因此确保永远不会有多个`auto_ptr`指向同一个对象是非常重要的。如果有，该对象将被删除多次，导致你的程序进入未定义行为的快车道。为了防止此类问题，`auto_ptr`具有一个不寻常特性：拷贝它们（通过拷贝构造函数或拷贝赋值运算符）会将它们置为空，且拷贝指针将假设资源的唯一所有权！
 
 ```cpp
-std::auto_ptr<Investment> pInv1(createInvestment()); // pInv1 points to the // object returned from createInvestment
-std::auto_ptr<Investment> pInv2(pInv1); // pInv2 now points to the // object; pInv1 is now null
-pInv1 = pInv2; // now pInv1 points to the // object, and pInv2 is null
+std::auto_ptr<Investment> pInv1(createInvestment()); // pInv1 points to the
+                                                     // object returned from createInvestment
+
+std::auto_ptr<Investment> pInv2(pInv1);               // pInv2 now points to the
+                                                     // object; pInv1 is now null
+
+pInv1 = pInv2;                                        // now pInv1 points to the
+                                                     // object, and pInv2 is null
 ```
 
-这种奇特的拷贝行为，加上 `auto_ptr` 管理的资源绝不能有多个 `auto_ptr` 指向它们的底层要求，意味着 `auto_ptr` 并不是管理所有动态分配资源的最佳方式。例如，STL 容器要求其内容表现出“正常”的拷贝行为，因此不允许包含 `auto_ptr` 的容器。
+这种奇特的拷贝行为，加上`auto_ptr`管理的资源绝不能有多个`auto_ptr`指向它们的底层要求，意味着`auto_ptr`并不是管理所有动态分配资源的最佳方式。例如，STL 容器要求其内容表现出“正常”的拷贝行为，因此不允许包含`auto_ptr`的容器。
 
-`auto_ptr` 的替代方案是引用计数智能指针（RCSP）。RCSP 是一种智能指针，它跟踪有多少个对象指向特定的资源，并在不再有对象指向它时自动删除该资源。因此，RCSP 提供了类似于垃圾回收的行为。然而，与垃圾回收不同，RCSP 无法打破引用循环（例如，两个互指向的否则未使用的对象）。
+`auto_ptr`的替代方案是引用计数智能指针（RCSP）。RCSP 是一种智能指针，它跟踪有多少个对象指向特定的资源，并在不再有对象指向它时自动删除该资源。因此，RCSP 提供了类似于垃圾回收的行为。然而，与垃圾回收不同，RCSP 无法打破引用循环（例如，两个互相指向的否则未使用的对象）。
 
-TR1 的 `tr1::shared_ptr`（见 Item 54）就是一个 RCSP，所以你可以这样写 `f`：
+TR1 的`tr1::shared_ptr`（见条目 54）就是一个 RCSP，所以你可以这样写`f`：
 
 ```cpp
 void f()
 {
   ...
+
   std::tr1::shared_ptr<Investment> pInv(createInvestment()); // call function
   ... // use pInv before
 } // before automatically
-// delete pInv via
-// shared_ptr's dtor
+  // delete pInv via
+  // shared_ptr's dtor
 ```
 
-这段代码看起来与 `auto_ptr` 相似，但 `shared_ptr` 的行为要自然得多：
+这段代码看起来与`auto_ptr`相似，但`shared_ptr`的行为要自然得多：
 
 ```cpp
 void f()
 {
   ...
-  std::tr1::shared_ptr<Investment> pInv1(createInvestment()); // pInv1 points to the // object returned from createInvestment
-  std::tr1::shared_ptr<Investment> pInv2(pInv1); // pInv2 now points to the // both pInv1 and pInv2 now point to the object
-  pInv1 = pInv2; // ditto — nothing has // changed //2 is null
+
+  std::tr1::shared_ptr<Investment> pInv1(createInvestment()); // pInv1 points to the
+                                                             // object returned from createInvestment
+
+  std::tr1::shared_ptr<Investment> pInv2(pInv1);              // pInv2 now points to the
+                                                             // both pInv1 and pInv2 now point to the object
+
+  pInv1 = pInv2;                                              // ditto — nothing has
+                                                             // changed
+
   ...
-} // pInv1 and pInv2 are // destroyed, and the // object they point to is automatically deleted
+} // pInv1 and pInv2 are
+  // destroyed, and the
+  // object they point to is automatically deleted
 ```
 
-由于拷贝 `tr1::shared_ptr` 符合“预期”，它们可以在 STL 容器和其他在 `auto_ptr` 的不寻常拷贝行为不适用的语境中使用。
+由于拷贝`tr1::shared_ptr`符合“预期”，它们可以在 STL 容器和其他在`auto_ptr`的不寻常拷贝行为不适用的语境中使用。
 
-但不要被误导。这个 Item 并不是关于 `auto_ptr`、`tr1::shared_ptr` 或任何其他智能指针。它是关于使用对象管理资源的重要性。`auto_ptr` 和 `tr1::shared_ptr` 只是实现此点的示例。（有关 `tr1::shared_ptr` 的更多信息，请参阅 Item 14、18 和 54。）
+但不要被误导。这个条目并不是关于`auto_ptr`、`tr1::shared_ptr`或任何其他智能指针。它是关于使用对象管理资源的重要性。`auto_ptr`和`tr1::shared_ptr`只是实现此点的示例。（有关`tr1::shared_ptr`的更多信息，请参阅条目 14、18 和 54。）
 
-
-
-
-
-`auto_ptr` 和 `tr1::shared_ptr` 在它们的析构函数中使用的 `delete` 而不是 `delete []`。（Item 16 描述了这种差异。）这意味着，使用 `auto_ptr` 或 `tr1::shared_ptr` 来处理动态分配的数组是一个坏主意，尽管遗憾的是，这种写法是可以编译的：
+`auto_ptr`和`tr1::shared_ptr`在它们的析构函数中使用的`delete`而不是`delete []`。（条目 16 描述了这种差异。）这意味着，使用`auto_ptr`或`tr1::shared_ptr`来处理动态分配的数组是一个坏主意，尽管遗憾的是，这种写法是可以编译的：
 
 ```cpp
 std::auto_ptr<std::string> aps(new std::string[10]); // Bad 主意！使用了错误的 delete 形式
+
 std::tr1::shared_ptr<int> spi(new int[1024]);        // 同样的问题
 ```
 
-你可能会惊讶地发现，在 C++ 中并没有针对动态分配数组的类似于 `auto_ptr` 或 `tr1::shared_ptr` 的类，即使在 TR1 中也没有。这是因为 `vector` 和 `string` 几乎总是可以替代动态分配的数组。如果你仍然认为为数组提供类似 `auto_ptr` 和 `tr1::shared_ptr` 的类会很好，请查看 Boost（参见 Item 55）。在那里，你会高兴地发现 `boost::scoped_array` 和 `boost::shared_array` 类，它们提供了你所寻找的行为。
+你可能会惊讶地发现，在 C++ 中并没有针对动态分配数组的类似于`auto_ptr`或`tr1::shared_ptr`的类，即使在 TR1 中也没有。这是因为`vector`和`string`几乎总是可以替代动态分配的数组。如果你仍然认为为数组提供类似`auto_ptr`和`tr1::shared_ptr`的类会很好，请查看 Boost（参见条目 55）。在那里，你会高兴地发现`boost::scoped_array`和`boost::shared_array`类，它们提供了你所寻找的行为。
 
-本节关于使用对象来管理资源的指导建议表明，如果你手动释放资源（例如，在资源管理类以外的地方使用 `delete`），那么你所做的事情是错误的。像 `auto_ptr` 和 `tr1::shared_ptr` 这样预先定义好的资源管理类通常让遵循本节建议变得容易，但有时你使用的资源，这些预制类无法按你的需求完成工作。在那种情况下，你将需要编写自己的资源管理类。这并不非常困难，但确实涉及一些你需要考虑的细微之处。这些考虑因素是 Item 14 和 15 的议题。
+本节关于使用对象来管理资源的指导建议表明，如果你手动释放资源（例如，在资源管理类以外的地方使用`delete`），那么你所做的事情是错误的。像`auto_ptr`和`tr1::shared_ptr`这样预先定义好的资源管理类通常让遵循本节建议变得容易，但有时你使用的资源，这些预制类无法按你的需求完成工作。在那种情况下，你将需要编写自己的资源管理类。这并不非常困难，但确实涉及一些你需要考虑的细微之处。这些考虑因素是条目 14 和 15 的议题。
 
-作为最后的说明，我必须指出，`createInvestment` 的原始指针返回类型是一个资源泄漏的“邀请函”，因为调用者非常容易忘记对返回的指针调用 `delete`。（即使他们使用 `auto_ptr` 或 `tr1::shared_ptr` 来执行 `delete`，他们仍然必须记得将 `createInvestment` 的返回值存储在智能指针对象中。）解决这个问题需要对 `createInvestment` 接口进行修改，这个主题我在 Item 18 中介绍。
+作为最后的说明，我必须指出，`createInvestment`的原始指针返回类型是一个资源泄漏的“邀请函”，因为调用者非常容易忘记对返回的指针调用`delete`。（即使他们使用`auto_ptr`或`tr1::shared_ptr`来执行`delete`，他们仍然必须记得将`createInvestment`的返回值存储在智能指针对象中。）解决这个问题需要对`createInvestment`接口进行修改，这个主题我在条目 18 中介绍。
 
 ### 注意事项
 
 - 为了防止资源泄漏，请使用 RAII 对象，在构造函数中获取资源并在析构函数中释放它们。
-- 两个常用的 RAII 类是 `tr1::shared_ptr` 和 `auto_ptr`。`tr1::shared_ptr` 通常是更好的选择，因为它在拷贝时的行为是直观的。拷贝 `auto_ptr` 会将其设置为空。
+- 两个常用的 RAII 类是`tr1::shared_ptr`和`auto_ptr`。`tr1::shared_ptr`通常是更好的选择，因为它在拷贝时的行为是直观的。拷贝`auto_ptr`会将其设置为空。
 
-### Item 14：仔细考虑资源管理类中的拷贝行为。
+### 条目 14：仔细考虑资源管理类中的拷贝行为
 
-Item 13 引入了将*资源获取即初始化*（RAII）的概念，作为资源管理类的骨干，并描述了 `auto_ptr` 和 `tr1::shared_ptr` 如何作为这一理念在堆资源上的体现。然而，并非所有资源都是堆的，对于此类资源，像 `auto_ptr` 和 `tr1::shared_ptr` 这样的智能指针作为资源处理器通常是不合适的。尽管如此，你可能会发现自己有时需要自己的资源管理类。
+条目 13 引入了将*资源获取即初始化*（RAII）的概念，作为资源管理类的骨干，并描述了`auto_ptr`和`tr1::shared_ptr`如何作为这一理念在堆资源上的体现。然而，并非所有资源都是堆的，对于此类资源，像`auto_ptr`和`tr1::shared_ptr`这样的智能指针作为资源处理器通常是不合适的。尽管如此，你可能会发现自己有时需要自己的资源管理类。
 
-例如，假设你正在使用 C API 来操作类型为 `Mutex` 的互斥对象，该对象提供了 `lock` 和 `unlock` 函数：
+例如，假设你正在使用 C API 来操作类型为`Mutex`的互斥对象，该对象提供了`lock`和`unlock`函数：
 
 ```cpp
 void lock(Mutex *pm);   // 锁 pm 指向的互斥锁
+
 void unlock(Mutex *pm); // 解锁
 ```
 
-为了确保你永远不会忘记解锁已锁的 `Mutex`，你想创建一个类来管理锁。这种类的基本结构由 RAII 原则决定：资源在构造期间获取，在析构期间释放：
+为了确保你永远不会忘记解锁已锁的`Mutex`，你想创建一个类来管理锁。这种类的基本结构由 RAII 原则决定：资源在构造期间获取，在析构期间释放：
 
 ```cpp
 class Lock {
+
 public:
+
   explicit Lock(Mutex *pm)
+
   : mutexPtr(pm)
+
   { lock(mutexPtr); }           // 获取资源
+
   ~Lock() { unlock(mutexPtr); } // 释放资源
+
 private:
+
   Mutex *mutexPtr;
+
 };
 ```
 
-客户端按照传统的 RAII 方式使用 `Lock`：
+客户端按照传统的 RAII 方式使用`Lock`：
 
 ```cpp
 Mutex m; // 定义你需要的互斥锁
+
 ...
+
 { // 定义临界区的块
+
   Lock ml(&m); // 锁互斥锁
+
   ... // 执行关键操作
+
 } // 在块结束时自动解锁互斥锁
 ```
 
-这是完全可以的，但如果 `Lock` 对象被拷贝了会发生什么？
+这是完全可以的，但如果`Lock`对象被拷贝了会发生什么？
 
 ```cpp
 Lock ml1(&m);  // 锁 m
+
 Lock ml2(ml1); // 将 ml1 拷贝到 ml2——这里应该发生什么？
 ```
 
-这是一个更通用的问题的特定示例，也是每个 RAII 作者都必须面对的问题：当 RAII 对象被拷贝时应该发生什么？在大多数情况下，你可能希望选择以下之一：
+
+
+这是一个更通用问题的特定示例，也是每个 RAII 作者都必须面对的问题：当 RAII 对象被拷贝时应该发生什么？在大多数情况下，你可能希望选择以下之一：
 
 - **禁止拷贝。** 在很多情况下，允许 RAII 对象被拷贝是没有意义的。对于像 `Lock` 这样的类这可能是事实，因为拥有同步原语的“拷贝”很少有意义。当拷贝对一个 RAII 类没有意义时，你应该禁止它。Item 6 解释了如何这样做：将拷贝操作声明为私有。对于 `Lock`，看起来可能像这样：
 
 ```cpp
-class Lock: private Uncopyable { // 禁止拷贝 —— 参见 Item 6 (#ch02.html_ch02lev1sec2)
+class Lock: private Uncopyable { // 禁止拷贝 —— 参见 Item 6
 public:
   ... // 与之前相同
 };
 ```
 
-- **对底层资源进行引用计数。** 有时，希望保持资源直到使用它的最后一个对象被销毁。在这种情况下，拷贝 RAII 对象应该增加引用该资源的对象的计数。这就是 `tr1::shared_ptr` 所所使用的“拷贝”一词的含义。
+- **对底层资源进行引用计数。** 有时，希望保持资源直到使用它的最后一个对象被销毁。在这种情况下，拷贝 RAII 对象应该增加引用该资源的对象的计数。这就是 `tr1::shared_ptr` 所使用的“拷贝”一词的含义。
 
 通常情况下，RAII 类可以通过包含一个 `tr1::shared_ptr` 数据成员来实现引用计数的拷贝行为。例如，如果 `Lock` 想要采用引用计数，它可以将 `mutexPtr` 的类型从 `Mutex*` 改为 `tr1::shared_ptr<Mutex>`。不幸的是，`tr1::shared_ptr` 的默认行为是在引用计数归零时删除它指向的内容，而这不是我们想要的。当我们完成对 `Mutex` 的操作时，我们需要解锁它而不是删除它。
 
@@ -2017,9 +2059,8 @@ public:
   explicit Lock(Mutex *pm)
   : mutexPtr(pm, unlock) // 用 Mutex 和解锁函数初始化 shared_ptr
   {
-    lock(mutexPtr.get()); // 关于 "get" 的信息参见 Item 15 (#ch03.html_ch03lev1sec3)
+    lock(mutexPtr.get()); // 关于 "get" 的信息参见 Item 15
   }
-
 private:
   std::tr1::shared_ptr<Mutex> mutexPtr; // 使用 shared_ptr 代替原始指针
 };
@@ -2027,17 +2068,13 @@ private:
 
 在这个示例中，注意 `Lock` 类不再声明析构函数。这是因为没有必要。Item 5 解释了类的析构函数（无论是编译器生成的还是用户定义的）会自动调用该类非静态数据成员的析构函数。在这个示例中，那就是 `mutexPtr`。但 `mutexPtr` 的析构函数会自动调用 `tr1::shared_ptr` 的删除器——在本例中是 `unlock`，当互斥锁的引用计数归零时。（查看类源码的人可能会感谢一个注释，说明你并没有忘记析构，只是依赖于默认的编译器生成行为。）
 
-
-
-
-
 - **复制底层资源。** 有时，你可以对一个资源拥有任意数量的副本，而你需要资源管理类的唯一理由就是确保在使用完每个副本后，每个副本都能被释放。在这种情况下，复制资源管理对象也应该复制它所封装的资源。也就是说，复制资源管理对象执行的是“深拷贝”。
 
 标准 `string` 类型的某些实现包含指向堆内存的指针，构成字符串的字符存储在这些堆内存中。此类 `string` 对象的对象包含一个指向该堆内存的指针。当一个 `string` 对象被复制时，指针和它所指向的内存都会被复制一份。此类 `string` 表现出深拷贝特性。
 
 - **转移底层资源的所有权。** 在少数情况下，你可能希望确保只有一个 RAII 对象引用原始资源，并且当该 RAII 对象被复制时，资源的所有权从被拷贝对象转移到拷贝对象。正如第 13 节所解释的，这就是 `auto_ptr` 中所使用的“拷贝”一词的含义。
 
-拷贝函数（拷贝构造函数和拷贝赋值运算符）可能会由编译器生成，因此除非编译器生成的版本能满足你的需求（第 5 节 解释了默认行为），否则你需要自己编写它们。在某些情况下，你还希望支持这些函数的泛化版本。此类版本在第 45 节中有所描述。
+拷贝函数（拷贝构造函数和拷贝赋值运算符）可能会由编译器生成，因此除非编译器生成的版本能满足你的需求（第 5 节解释了默认行为），否则你需要自己编写它们。在某些情况下，你还希望支持这些函数的泛化版本。此类版本在第 45 节中有所描述。
 
 ### 注意事项
 
@@ -2071,151 +2108,7 @@ int days = daysHeld(pInv);              // 错误！
 
 你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
 
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-假设一个你在处理 `Investment` 对象时想要使用的函数如下：
-
-```cpp
-int daysHeld(const Investment *pi);      // 返回持有
-                                        // 投资的天数
-```
-
-你想像这样调用它：
-
-```cpp
-int days = daysHeld(pInv);              // 错误！
-```
-
-但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
-
-你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
-
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
-
-```cpp
-std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
-```
-
-（由于提供的文本中存在大量重复段落，我将根据核心逻辑进行完整翻译并确保格式正确）
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
 
 例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
 
@@ -2240,30 +2133,151 @@ int days = daysHeld(pInv);              // 错误！
 
 你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
 
-`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回（指针的副本）。`tr1::shared_ptr` 和 `auto_ptr` 都提供了：
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
+
+例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
 
 ```cpp
 std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
 ```
 
-（注：原文文本中包含大量重复段落，译文已根据您的要求去除了重复内容，保留了所有核心逻辑点的翻译。）
+假设一个你在处理 `Investment` 对象时想要使用的函数如下所示：
+
+```cpp
+int daysHeld(const Investment *pi);      // 返回持有
+                                        // 投资的天数
+```
+
+你想像这样调用它：
+
+```cpp
+int days = daysHeld(pInv);              // 错误！
+```
+
+但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
+
+你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
+
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
+
+例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
+
+```cpp
+std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
+```
+
+假设一个你在处理 `Investment` 对象时想要使用的函数如下所示：
+
+```cpp
+int daysHeld(const Investment *pi);      // 返回持有
+                                        // 投资的天数
+```
+
+你想像这样调用它：
+
+```cpp
+int days = daysHeld(pInv);              // 错误！
+```
+
+但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
+
+你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
+
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
+
+例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
+
+```cpp
+std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
+```
+
+假设一个你在处理 `Investment` 对象时想要使用的函数如下所示：
+
+```cpp
+int daysHeld(const Investment *pi);      // 返回持有
+                                        // 投资的天数
+```
+
+你想像这样调用它：
+
+```cpp
+int days = daysHeld(pInv);              // 错误！
+```
+
+但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
+
+你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
+
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
+
+例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
+
+```cpp
+std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
+```
+
+假设一个你在处理 `Investment` 对象时想要使用的函数如下所示：
+
+```cpp
+int daysHeld(const Investment *pi);      // 返回持有
+                                        // 投资的天数
+```
+
+你想像这样调用它：
+
+```cpp
+int days = daysHeld(pInv);              // 错误！
+```
+
+但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
+
+你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
+
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
+
+例如，第 13 节引入了使用智能指针（如 `auto_ptr` 或 `tr1::shared_ptr`）来持有对 `createInvestment` 等工厂函数调用结果的想法：
+
+```cpp
+std::tr1::shared_ptr<Investment> pInv(createInvestment());  // 来自第 13 节
+```
+
+假设一个你在处理 `Investment` 对象时想要使用的函数如下所示：
+
+```cpp
+int daysHeld(const Investment *pi);      // 返回持有
+                                        // 投资的天数
+```
+
+你想像这样调用它：
+
+```cpp
+int days = daysHeld(pInv);              // 错误！
+```
+
+但代码无法编译：`daysHeld` 需要一个原始的 `Investment*` 指针，但你传递的是一个类型为 `tr1::shared_ptr<Investment>` 的对象。
+
+你需要方法将 RAII 类对象（在此例中为 `tr1::shared_ptr`）转换为它包含的原始资源（例如底层的 `Investment*`）。通常有两种通用方法：显式转换和隐式转换。
+
+`tr1::shared_ptr` 和 `auto_ptr` 都提供了 `get` 成员函数来执行显式转换，即返回原始指针的副本。
 
 
 
-
+## RAII 类与底层资源的转换
 
 是否提供从 RAII 类到其底层资源的显式转换（例如通过 `get` 成员函数），或者是否允许隐式转换，取决于该 RAII 类设计用于特定任务以及其预期使用的场景。最好的设计可能就是遵循 Item 18 的建议，即使接口既易于正确使用，又难以错误使用。通常情况下，像 `get` 这样的显式转换函数是更优的路径，因为能极力地减少意外类型转换的概率。然而，有时隐式类型转换带来的使用自然性会将天平推向另一方。
 
-你可能曾认为，在 RAII 类内部返回原始资源的函数违背了封装。这确实如此，但它并不是初看时的那种设计上的灾难。RAII 类的存在并不是为了封装某些东西，而是为了确保某个特定动作——资源释放——能够发生。如果需要，可以在这一主要功能之上对资源进行封装，但这不是必须的。此外，某些 RAII 类将实现的真正封装与对底层资源的非常松的封装结合在一起。例如，`tr1::shared_ptr` 封装了它所有的引用计数机制，但它仍然提供了对其包含的原始指针的便捷访问。和大多数设计良好的类一样，它隐藏了客户端不需要看到的内容，但提供了客户端诚实需要访问的内容。
+你可能曾认为，在 RAII 类内部返回原始资源的函数违背了封装。这确实如此，但它并不是初看时的那种设计上的灾难。RAII 类的存在并不是为了封装某些东西，而是为了确保某个特定动作——资源释放——能够发生。如果需要，可以在这一主要功能之上对资源进行封装，但这不是必须的。
 
-## 需要记住的
+此外，某些 RAII 类将实现的真正封装与对底层资源的非常松的封装结合在一起。例如，`tr1::shared_ptr` 封装了它所有的引用计数机制，但它仍然提供了对其包含的原始指针的便捷访问。和大多数设计良好的类一样，它隐藏了客户端不需要看到的内容，但提供了客户端诚实需要访问的内容。
+
+### 需要记住的
 
 - API 经常需要访问原始资源，因此每个 RAII 类都应该提供一种获取其所管理资源的方法。
 - 可以通过显式转换或隐式转换访问。通常，显式转换更安全，但隐式转换对客户端更方便。
 
-### Item 16: 在 `new` 和 `delete` 的对应使用中使用相同的形式。
+## Item 16：在 `new` 和 `delete` 的对应使用中使用相同的形式
 
-这张图有什么问题？
+这段代码有什么问题？
 
 ```cpp
 std::string *stringArray = new std::string[100];
@@ -2273,9 +2287,11 @@ std::string *stringArray = new std::string[100];
 delete stringArray;
 ```
 
-一切看起来都很正常。`new` 匹配了一个 `delete`。尽管如此，仍然有些非常不对。程序的行为是未定义的。至少，`stringArray` 指向的 100 个 `string` 对象中有 99 个可能无法被正确销，因为它们的析构函数可能永远不会被调用。
+一切看起来都很正常。`new` 匹配了一个 `delete`。尽管如此，仍然有些非常不对。程序的行为是未定义的。至少，`stringArray` 指向的 100 个 `string` 对象中有 99 个可能无法被正确销毁，因为它们的析构函数可能永远不会被调用。
 
-当你使用 `new` 表达式时（即通过使用 `new` 动态创建对象），会发生两件事。首先，分配了内存（通过一个名为 `operator new` 的函数——参见 Items 49 和 51）。其次，为该内存调用了一个或多个构造函数。当你使用 `delete` 表达式时（即使用 `delete`），会发生另外两件事：为该内存调用了一个或多个析构函数，然后释放内存（通过一个名为 `operator delete` 的函数——参见 Item 51）。`delete` 的大问题是：在被删除的内存中存在**多少个**对象？答案决定了必须调用多少个析构函数。
+当你使用 `new` 表达式时（即通过使用 `new` 动态创建对象），会发生两件事。首先，分配了内存（通过一个名为 `operator new` 的函数——参见 Items 49 和 51）。其次，为该内存调用了一个或多个构造函数。
+
+当你使用 `delete` 表达式时（即使用 `delete`），会发生另外两件事：为该内存调用了一个或多个析构函数，然后释放内存（通过一个名为 `operator delete` 的函数——参见 Item 51）。`delete` 的大问题是：在被删除的内存中存在**多少个**对象？答案决定了必须调用多少个析构函数。
 
 实际上，问题更简单：被删除的指针指向单个对象还是一个对象数组？这是一个关键问题，因为单个对象的内存布局通常与数组的内存布局不同。特别是数组的内存通常包含数组的大小，因此使得 `delete` 容易知道要调用多少个析构函数。单个对象的内存缺少这一信息。你可以将不同的布局想如下所示，其中 `n` 是数组的大小：
 
@@ -2292,9 +2308,9 @@ std::string *stringPtr2 = new std::string[100];
 
 ...
 
-delete stringPtr1;               // 删除一个对象
+delete stringPtr1;       // 删除一个对象
 
-delete [] stringPtr2;           // 删除一个对象数组
+delete [] stringPtr2;    // 删除一个对象数组
 ```
 
 如果你在 `stringPtr1` 上使用 `[]` 形式会发生什么？结果是未定义的，但可能不会很好看。假设上述布局，`delete` 将读取某些内存并将读取到的内容解释为数组大小，然后开始调用相应数量的析构函数，而忽略了它正在处理的内存不仅不在数组中，而且很可能没有持有它正忙于析构的类型的对象。
@@ -2318,14 +2334,14 @@ std::string *pal = new AddressLines;
 必须匹配**数组**形式的 `delete`：
 
 ```cpp
-delete pal;      // 未定义！
+delete pal;       // 未定义！
 
-delete [] pal;   // 正确
+delete [] pal;    // 正确
 ```
 
-为了避免此类混淆，避免对数组类型使用 `typedef`。这很容易，因为标准 C++ 库（参见 Item 54）包含了 `string` 和 `vector`，这些模板几乎消除了对动态分配数组的需求。在这里，例如，`AddressLines` 可以 `string` 的 `vector`，即 `vector<string>` 类型。
+为了避免此类混淆，避免对数组类型使用 `typedef`。这很容易，因为标准 C++ 库（参见 Item 54）包含了 `string` 和 `vector`，这些模板几乎消除了对动态分配数组的需求。在这里，例如，`AddressLines` 可以是 `string` 的 `vector`，即 `vector<string>` 类型。
 
-### Item 17: 在独立语句中将 `new` 对象存储在智能指针中。
+## Item 17：在独立语句中将 `new` 对象存储在智能指针中
 
 假设我们有一个函数来显示我们的处理优先级，另一个函数根据优先级对动态分配的 `Widget` 进行某些处理：
 
@@ -2343,12 +2359,9 @@ void processWidget(std::tr1::shared_ptr<Widget> pw, int priority);
 processWidget(new Widget, priority());
 ```
 
-
-
-
 等等，不要考虑那个调用。它无法通过编译。`tr1::shared_ptr` 接收原始指针的构造函数是 `explicit`（显式的），因此从表达式 `new Widget` 返回的原始指针无法隐式转换为 `processWidget` 的 `tr1::shared_ptr`。然而，以下代码是可以编译的：
 
-```
+```cpp
 processWidget(std::tr1::shared_ptr<Widget>(new Widget), priority());
 ```
 
@@ -2356,43 +2369,52 @@ processWidget(std::tr1::shared_ptr<Widget>(new Widget), priority());
 
 在编译器生成对 `processWidget` 的调用之前，它们必须求值作为参数传递的参数。第二个参数只是对函数 `priority` 的调用，但第一个参数（`std::tr1::shared_ptr<Widget>(new Widget)`）由两个部分组成：
 
-*   执行表达式 `new Widget`。
-*   对 `tr1::shared_ptr` 构造函数的调用。
+- 执行表达式 `new Widget`。
+- 对 `tr1::shared_ptr` 构造函数的调用。
 
 那么在调用 `processWidget` 之前，编译器必须生成代码来完成这三件事：
 
-*   调用 `priority`。
-*   执行 `new Widget`。
-*   调用 `tr1::shared_ptr` 构造函数。
+- 调用 `priority`。
+- 执行 `new Widget`。
+- 调用 `tr1::shared_ptr` 构造函数。
 
-C++ 编译器在决定这些事情的执行顺序上有很大的自由度。（这与 Java 和 C# 等语言的工作方式不同，这些函数的参数总是按照特定的顺序求值。）`new Widget` 表达式必须在调用 `tr1::shared_ptr` 构造函数之前执行，因为该表达式的结果被作为参数传递给 `tr1::shared_ptr` 构造函数，但对 `priority` 的调用可以第一、第二或第三执行。如果编译器选择第二次执行（这可能允许它们生成更高效的代码），我们最终会得到如下操作序列：
+C++ 编译器在决定这些事情的执行顺序上有很大的自由度。（这与 Java 和 C# 等语言的工作方式不同，这些函数的参数总是按照特定的顺序求值。）`new Widget` 表达式必须在调用 `tr1::shared_ptr` 构造函数之前执行，因为该表达式的结果被作为参数传递给 `tr1::shared_ptr` 构造函数，但对 `priority` 的调用可以第一、第二或第三执行。
 
-1.  执行 `new Widget`。
-2.  调用 `priority`。
-3.  调用 `tr1::shared_ptr` 构造函数。
+如果编译器选择第二次执行（这可能允许它们生成更高效的代码），我们最终会得到如下操作序列：
+
+1. 执行 `new Widget`。
+2. 调用 `priority`。
+3. 调用 `tr1::shared_ptr` 构造函数。
 
 但考虑一下如果调用 `priority` 抛出异常会发生。在这种情况下，从 `new Widget` 返回的指针将丢失，因为它还没有被存储在我们预期的用于防止资源泄漏的 `tr1::shared_ptr` 中。`processWidget` 调用中的泄漏可能会发生，是因为在资源创建（通过 `new Widget`）与该资源移交给资源管理对象之间，可能会介入一个异常。
 
 避免此类问题的方法很简单：使用一个独立的语句来创建 `Widget` 并将其存储在智能指针中，然后将智能指针传递给 `processWidget`：
 
 ```cpp
-std::tr1::shared_ptr<Widget> pw(new Widget);  // 将 new 的对象存储
-                               // 在智能指针中
-processWidget(pw, priority());               // 独立语句
+std::tr1::shared_ptr<Widget> pw(new Widget);  // 将 new 的对象存储在智能指针中
+
+processWidget(pw, priority());                 // 独立语句
 ```
 
 这之所以有效，是因为编译器在语句之间进行重排序的余地比在语句内部要小。在这些修改后的代码中，`new Widget` 表达式和对 `shared_ptr` 构造函数的调用位于调用 `priority` 的不同语句，因此编译器不允许将 `priority` 移动到它们之间。
 
 ### 注意事项
-*   在独立语句中将 `new` 对象存储在智能指针中。不这样做可能会抛出异常时导致微妙的泄漏。
+
+- 在独立语句中将 `new` 对象存储在智能指针中。不这样做可能会抛出异常时导致微妙的泄漏。
 
 # 4 设计与声明
 
-软件设计——让软件实现你想要的功能的方法——从相当通用的想法开始，但最终会变得足够详细，允许开发特定的接口。这些接口必须翻译成 C++ 声明。在本章中，我们将解决设计和声明良好的 C++ 接口的问题。我们从关于设计任何类型接口最重要的指南之一开始：它们应该是易于正确使用且难以错误使用的。这为解决涵盖广泛主题的一系列特定指南（包括正确性、可维护性、可扩展性和一致性）奠定了基础。接下来的内容并不是接口设计所需的所有内容，但它强调了一些最重要的考虑因素，警告了一些最常见的错误，并为类和模板设计人员经常遇到的问题提供了解决方案。
+软件设计——让软件实现你想要的功能的方法——从相当通用的想法开始，但最终会变得足够详细，允许开发特定的接口。这些接口必须翻译成 C++ 声明。
 
-### 第 18 条：使接口易于正确使用且难以错误使用
+在本章中，我们将解决设计和声明良好的 C++ 接口的问题。我们从关于设计任何类型接口最重要的指南之一开始：它们应该是易于正确使用且难以错误使用的。这为解决涵盖广泛主题的一系列特定指南（包括正确性、可维护性、可扩展性和一致性）奠定了基础。
 
-C++ 中充斥着接口。函数接口。类接口。模板接口。每个接口都是客户端与你的代码交互的手段。假设你面对的是理性人，这些客户端正努力。他们希望正确地使用你的接口。既然如此，如果他们错误地使用了某一个，你的接口至少有部分责任。理想情况下，如果对接口的尝试没有达到客户端预期，代码将无法编译；如果代码通过了编译，它将按照客户端想要运行。
+接下来的内容并不是接口设计所需的所有内容，但它强调了一些最重要的考虑因素，警告了一些最常见的错误，并为类和模板设计人员经常遇到的问题提供了解决方案。
+
+## 第 18 条：使接口易于正确使用且难以错误使用
+
+C++ 中充斥着接口。函数接口。类接口。模板接口。每个接口都是客户端与你的代码交互的手段。假设你面对的是理性人，这些客户端正努力。他们希望正确地使用你的接口。既然如此，如果他们错误地使用了某一个，你的接口至少有部分责任。
+
+理想情况下，如果对接口的尝试没有达到客户端预期，代码将无法编译；如果代码通过了编译，它将按照客户端想要运行。
 
 开发易于正确使用且难以错误使用的接口，需要你考虑客户端可能犯的错误类型。例如，假设你正在为一个表示时间日期的类设计构造函数：
 
@@ -2410,15 +2432,17 @@ public:
 
 ```cpp
 struct Day {
-  struct Month {
-    struct Year {
-      explicit Day(int d) : val(d) {}
-      explicit Month(int m) : val(m) {}
-      explicit Year(int y) : val(y){}
-      int val;
-    };
-    int val;
-  };
+  explicit Day(int d) : val(d) {}
+  int val;
+};
+
+struct Month {
+  explicit Month(int m) : val(m) {}
+  int val;
+};
+
+struct Year {
+  explicit Year(int y) : val(y) {}
   int val;
 };
 
@@ -2428,23 +2452,30 @@ public:
 };
 ```
 
-`Date d(30, 3, 1995);` // 错误！类型错误
-`Date d(Day(30), Month(3), Year(1995));` // 错误！类型错误
-`Date d(Month(3), Day(30), Year(1995));` // 好的，类型正确
+```cpp
+Date d(30, 3, 1995);                 // 错误！类型错误
+Date d(Day(30), Month(3), Year(1995)); // 错误！类型错误
+Date d(Month(3), Day(30), Year(1995)); // 好的，类型正确
+```
 
 将 `Day`、`Month` 和 `Year` 变为具有封装数据的完整类比上面简单使用结构体更好，但即使是结构体也足以证明明智地引入新类型在防止接口错误方面可以成效。
 
-
-
-
 ```cpp
-explicit Month(int m); // prevent creation of new
-// Month values
-... // month-specific data
+class Month {
+public:
+  static Month Jan();
+  static Month Feb();
+  static Month Mar();
+  ...
+private:
+  explicit Month(int m); // prevent creation of new Month values
+  ...
 };
 ```
 
-`Date d(Month::Mar(), Day(30), Year(1995));`
+```cpp
+Date d(Month::Mar(), Day(30), Year(1995));
+```
 
 如果你觉得用函数而不是对象来表示特定的月份这个主意很奇怪，那可能是因为你忘记了非局部静态对象的可靠初始化可能会出现问题。Item 4 可以让你重回这段记忆。
 
@@ -2454,9 +2485,15 @@ explicit Month(int m); // prevent creation of new
 if (a * b = c) ... // 噢，本想做比较！
 ```
 
-事实上，这只是另一项通用指南的体现，该指南使类型易于正确使用且难以错误使用：除非有充分理由不这样做，否则让你的类型行为与内置类型保持一致。客户端已经知道 `int` 等类型的行为如何，因此你应该努力在合理的情况下让你的类型以相同的方式。例如，如果 `a` 和 `b` 是 `int`，那么对 `a*b` 赋值是不合法的，因此除非有充分理由偏离这种行为，否则你的类型也应该是非法的。有疑问时，就按照 `int` 的做法来。
+事实上，这只是另一项通用指南的体现，该指南使类型易于正确使用且难以错误使用：除非有充分理由不这样做，否则让你的类型行为与内置类型保持一致。
 
-避免与内置类型产生无不兼容性的真正原因是为了提供行为一致的接口。没有什么特征像一致性那样让接口易于正确使用，也没有特征像不一致性那样让接口变得糟糕。STL 容器的接口很大程度上（尽管并不完美）是一致的，这有助于它们变得相当容易使用。例如，每个 STL 容器都有一个名为 `size` 的成员函数，用于告知容器中有多少对象。相比之下，Java 中你对数组使用 `length` 属性，对 `String` 使用 `length` 方法，对 `List` 使用 `size` 方法；而在 .NET 中，`Array` 有一个名为 `Length` 的属性，而 `ArrayList` 有一个名为 `Count` 的属性。一些开发者认为集成开发环境（IDE）使得这种不一致性变得无关紧要，但他们错了。不一致性给开发者的工作带来了心理摩擦，这是任何 IDE 均无法完全消除的。
+客户端已经知道 `int` 等类型的行为如何，因此你应该努力在合理的情况下让你的类型以相同的方式。例如，如果 `a` 和 `b` 是 `int`，那么对 `a*b` 赋值是不合法的，因此除非有充分理由偏离这种行为，否则你的类型也应该是非法的。有疑问时，就按照 `int` 的做法来。
+
+避免与内置类型产生不兼容性的真正原因是为了提供行为一致的接口。没有什么特征像一致性那样让接口易于正确使用，也没有什么特征像不一致性那样让接口变得糟糕。
+
+STL 容器的接口很大程度上（尽管并不完美）是一致的，这有助于它们变得相当容易使用。例如，每个 STL 容器都有一个名为 `size` 的成员函数，用于告知容器中有多少对象。
+
+相比之下，Java 中你对数组使用 `length` 属性，对 `String` 使用 `length` 方法，对 `List` 使用 `size` 方法；而在 .NET 中，`Array` 有一个名为 `Length` 的属性，而 `ArrayList` 有一个名为 `Count` 的属性。一些开发者认为集成开发环境（IDE）使得这种不一致性变得无关紧要，但他们错了。不一致性给开发者的工作带来了心理摩擦，这是任何 IDE 均无法完全消除的。
 
 任何需要客户端记住执行某事的接口都容易被误用，因为客户端可能会忘记执行。例如，Item 13 引入了一个工厂函数，返回 `Investment` 层次结构中动态分配对象的指针：
 
@@ -2472,19 +2509,21 @@ Item 13 展示了客户端如何将 `createInvestment` 的返回值存储在 `au
 std::tr1::shared_ptr<Investment> createInvestment();
 ```
 
-这本质上迫使客户端将返回值存储在 `tr1::shared_ptr` 中，几乎消除了在不再使用时忘记删除底层 `Investment` 对象的可能性。
 
-事实上，返回 `tr1::shared_ptr` 使接口设计者能够防止许多关于资源释放的客户端错误，因为正如 Item 14 所解释的，`tr1::shared_ptr` 允许在创建智能指针时将一个资源释放函数——“删除器”（deleter）——绑定到智能指针上。（`auto_ptr` 没有这种能力。）
 
-假设从 `createInvestment` 获取 `Investment*` 指针的客户端应该将该指针传递给名为 `getRidOfInvestment` 的函数，而不是对其使用 `delete`。这种接口将打开一种新类型的客户端错误之门，即客户端使用了错误的资源销毁机制（即使用 `delete` 而不是 `getRidOfInvestment`）。`createInvestment` 的实现者可以通过返回一个绑定了 `getRidOfInvestment` 作为删除器的 `tr1::shared_ptr` 来防止此类问题。
+这本质上迫使客户端将返回值存储在`tr1::shared_ptr`中，几乎消除了在不再使用时忘记删除底层`Investment`对象的可能性。
 
-`tr1::shared_ptr` 提供了一个接受两个参数的构造函数：被管理的指针和当引用计数归零时调用的删除器。这表明创建一个以 `getRidOfInvestment` 为删除器的空 `tr1::shared_ptr` 的方法如下：
+事实上，返回`tr1::shared_ptr`使接口设计者能够防止许多关于资源释放的客户端错误，因为正如Item 14所解释的，`tr1::shared_ptr`允许在创建智能指针时将一个资源释放函数——“删除器”（deleter）——绑定到智能指针上。（`auto_ptr`没有这种能力。）
+
+假设从`createInvestment`获取`Investment*`指针的客户端应该将该指针传递给名为`getRidOfInvestment`的函数，而不是对其使用`delete`。这种接口将打开一种新类型的客户端错误之门，即客户端使用了错误的资源销毁机制（即使用`delete`而不是`getRidOfInvestment`）。`createInvestment`的实现者可以通过返回一个绑定了`getRidOfInvestment`作为删除器的`tr1::shared_ptr`来防止此类问题。
+
+`tr1::shared_ptr`提供了一个接受两个参数的构造函数：被管理的指针和当引用计数归零时调用的删除器。这表明创建一个以`getRidOfInvestment`为删除器的空`tr1::shared_ptr`的方法如下：
 
 ```cpp
 std::tr1::shared_ptr<Investment> p(0, getRidOfInvestment);
 ```
 
-这意味着实现 `createInvestment` 以返回一个以 `getRidOfInvestment` 为删除器的 `tr1::shared_ptr` 的代码看起来如下：
+这意味着实现`createInvestment`以返回一个以`getRidOfInvestment`为删除器的`tr1::shared_ptr`的代码看起来如下：
 
 ```cpp
 std::tr1::shared_ptr<Investment> createInvestment()
@@ -2494,9 +2533,9 @@ std::tr1::shared_ptr<Investment> createInvestment()
 }
 ```
 
-当然，如果由 `retVal` 管理的原始指针可以在创建 `retVal` 之前确定，那么将原始指针传递给 `retVal` 的构造函数比先初始化 `retVal` 为空再对其赋值更好。关于原因的细节，请参阅 Item 26。
+当然，如果由`retVal`管理的原始指针可以在创建`retVal`之前确定，那么将原始指针传递给`retVal`的构造函数比先初始化`retVal`为空再对其赋值更好。关于原因的细节，请参阅Item 26。
 
-`tr1::shared_ptr` 一个特别棒的特性是它自动使用每个指针的删除器来消除另一种潜在的客户端错误，“跨 DLL 问题”。当对象在一个动态链接库（DLL）中使用 `new` 创建，但在另一个 DLL 中被 `delete` 时，就会出现这个问题。在许多平台上，这种跨 DLL 的 `new`/`delete` 配对会导致运行时错误。`tr1::shared_ptr` 避免这个问题，因为它的默认删除器使用创建 `tr1::shared_ptr` 的相同 DLL 中的 `delete`。这意味着，例如，如果 `Stock` 是派自 `Investment` 的类，且 `createInvestment` 的实现如下：
+`tr1::shared_ptr`一个特别棒的特性是它自动使用每个指针的删除器来消除另一种潜在的客户端错误，“跨DLL问题”。当对象在一个动态链接库（DLL）中使用`new`创建，但在另一个DLL中被`delete`时，就会出现这个问题。在许多平台上，这种跨DLL的`new`/`delete`配对会导致运行时错误。`tr1::shared_ptr`避免这个问题，因为它的默认删除器使用创建`tr1::shared_ptr`的相同DLL中的`delete`。这意味着，例如，如果`Stock`是派自`Investment`的类，且`createInvestment`的实现如下：
 
 ```cpp
 std::tr1::shared_ptr<Investment> createInvestment()
@@ -2505,54 +2544,47 @@ std::tr1::shared_ptr<Investment> createInvestment()
 }
 ```
 
-返回的 `tr1::shared_ptr` 就可以在 DLL 之间传递而无需担心跨 DLL 问题。指向 `Stock` 的 `tr1::shared_ptr` 会记录当 `Stock` 的引用计数归零时应该使用哪个 DLL 的 `delete`。
+返回的`tr1::shared_ptr`就可以在DLL之间传递而无需担心跨DLL问题。指向`Stock`的`tr1::shared_ptr`会记录当`Stock`的引用计数归零时应该使用哪个DLL的`delete`。
 
-
-
-
-
-这一项并不是关于 `tr1::shared_ptr` —— 关于让接口易于正确使用且难以错误使用 ——但 `tr1::shared_ptr` 确实是消除某些客户端错误的简单方法，因此有尽概述其使用成本的价值。`tr1::shared_ptr` 最常见的实现来自 Boost（参见第 55 条）。Boost 的 `shared_ptr` 大小是原始指针的两倍，使用动态分配的内存进行记录计数和特定于删除器的数据，在调用其删除器时使用虚函数调用，并且在它认为是多线程的应用中修改引用计数时产生线程同步开销。（你可以通过定义预处理器符号来禁用多线程支持。）简而言之，它比原始指针大，比原始指针慢，并且使用了辅助动态内存。在许多应用程序中，这些额外的运行时开销是感知不到的，但客户端错误的减少对所有人都是显而易见的。
+这一项并不是关于`tr1::shared_ptr`——关于让接口易于正确使用且难以错误使用——但`tr1::shared_ptr`确实是消除某些客户端错误的简单方法，因此有尽概述其使用成本的价值。`tr1::shared_ptr`最常见的实现来自Boost（参见第55条）。Boost的`shared_ptr`大小是原始指针的两倍，使用动态分配的内存进行记录计数和特定于删除器的数据，在调用其删除器时使用虚函数调用，并且在它认为是多线程的应用中修改引用计数时产生线程同步开销。（你可以通过定义预处理器符号来禁用多线程支持。）简而言之，它比原始指针大，比原始指针慢，并且使用了辅助动态内存。在许多应用程序中，这些额外的运行时开销是感知不到的，但客户端错误的减少对所有人都是显而易见的。
 
 ## 需要记住的
 
 - 良好的接口易于正确使用且难以错误使用。你应该在所有接口中都追求这些特性。
 - 促进正确使用的方法包括接口的一致性以及与内置类型的行为兼容性。
 - 防止错误的方法包括创建新类型、限制对类型的操作、约束对象值以及消除客户端的资源管理责任。
-- `tr1::shared_ptr` 支持自定义删除器。这防止了跨 DLL 问题，可以用于自动解锁互斥量（参见第 14 条）等。
+- `tr1::shared_ptr`支持自定义删除器。这防止了跨DLL问题，可以用于自动解锁互斥量（参见第14条）等。
 
 ### Item 19：将类设计视为类型设计
 
-在 C++ 中，与其他面向对象的编程语言一样，定义一个新类就是定义一个新类型。因此，你作为 C++ 开发者的大部分时间将花在扩展类型系统上。这意味着你不仅是一个类设计者，还是一个*类型*设计者。重载函数和运算符、控制内存的分配和释放、定义对象的初始化和终结 —— 一切都在你手中。因此，你应该以语言设计者设计语言内置类型时所投入的精力来对待类设计。
+在C++中，与其他面向对象的编程语言一样，定义一个新类就是定义一个新类型。因此，你作为C++开发者的大部分时间将花在扩展类型系统上。这意味着你不仅是一个类设计者，还是一个*类型*设计者。重载函数和运算符、控制内存的分配和释放、定义对象的初始化和终结——一切都在你手中。因此，你应该以语言设计者设计语言内置类型时所投入的精力来对待类设计。
 
-设计良好的类是具有挑战性的，因为设计良好的类型是有挑战性的。良好的类型具有自然的语法、直观的语义以及一个或多个高效的实现。在 C++ 中，一个规划不当的类定义可能导致无法实现这些任何目标。即使类成员函数的性能特性也可能受到其声明方式的影响。
+设计良好的类是具有挑战性的，因为设计良好的类型是有挑战性的。良好的类型具有自然的语法、直观的语义以及一个或多个高效的实现。在C++中，一个规划不当的类定义可能导致无法实现这些任何目标。即使类成员函数的性能特性也可能受到其声明方式的影响。
 
 那么，你如何设计有效的类呢？首先，你必须理解你面临的问题。几乎每个类都要求你面对以下问题，这些问题的答案往往会对你的设计产生约束：
 
-- **你的新类型对象应该如何创建和销毁？** 这种方式影响你的类构造函数和析构函数的设计，以及它的内存分配和释放函数（`operator new`、`operator new[]`、`operator delete` 和 `operator delete[]` —— 参见第 8 章），如果你写了它们。
-- **对象初始化与对象赋值有什么区别？** 这个问题的答案决定了你的构造函数和赋值运算符的行为及其差异。不要混淆初始化与赋值很重要，因为它们对应不同的函数调用（参见第 4 条）。
+- **你的新类型对象应该如何创建和销毁？** 这种方式影响你的类构造函数和析构函数的设计，以及它的内存分配和释放函数（`operator new`、`operator new[]`、`operator delete`和`operator delete[]`——参见第8章），如果你写了它们。
+- **对象初始化与对象赋值有什么区别？** 这个问题的答案决定了你的构造函数和赋值运算符的行为及其差异。不要混淆初始化与赋值很重要，因为它们对应不同的函数调用（参见第4条）。
 - **你的新类型对象按值传递意味着什么？** 记住，拷贝构造函数定义了类型按值传递的实现。
 - **你的新类型对合法值的限制是什么？** 通常，类数据成员的某些值组合是有效的。这些组合决定了你的类必须维护的不不变性。不变性决定了你需要在成员函数内部执行的错误检查，特别是你的构造函数、赋值运算符和“setter”函数。它还可能影响你的函数抛出的异常，以及在万一使用它们时，你函数的异常规范。
-- **你的新类型是否适合继承图？** 如果你继承自现有的类，你受到这些类设计的限制，特别是它们的函数是虚函数还是非虚函数（参见第 34 条 和 第 36 条）。如果你希望允许其他类继承你的类，这会影响你声明的函数是否为虚函数，特别是你的析构函数（参见第 7 条）。
-- **你的新类型允许哪些类型转换？** 你的类型存在于类型的海洋中，所以你的类型与其他类型之间应该存在转换吗？如果你希望允许类型为 `T1` 的对象*隐式*转换为类型为 `T2` 的对象，你可能想在类 `T1` 中写一个类型转换函数（例如 `operator T2`），或者在类 `T2` 中写一个可以用单个参数调用的非 `explicit` 构造函数。如果你只想允许*显式*转换，你可能想写执行转换的函数，但你需要避免将它们写成类型转换运算符或可以用单个参数调用的非 `explicit` 构造函数。（隐式和显式转换函数的示例，参见第 15 条）。
-- **对于新类型来说，哪些运算符和函数是有意义的？** 这个问题的答案决定了为你类声明哪些函数。某些函数将是成员函数，但一些不是（参见第 23 条、第 24 条 和 第 46 条）。
-- **哪些标准函数是不允许的？** 这些是你需要声明为 `private` 的函数（参见第 6 条）。
+- **你的新类型是否适合继承图？** 如果你继承自现有的类，你受到这些类设计的限制，特别是它们的函数是虚函数还是非虚函数（参见第34条和第36条）。如果你希望允许其他类继承你的类，这会影响你声明的函数是否为虚函数，特别是你的析构函数（参见第7条）。
+- **你的新类型允许哪些类型转换？** 你的类型存在于类型的海洋中，所以你的类型与其他类型之间应该存在转换吗？如果你希望允许类型为`T1`的对象*隐式*转换为类型为`T2`的对象，你可能想在类`T1`中写一个类型转换函数（例如`operator T2`），或者在类`T2`中写一个可以用单个参数调用的非`explicit`构造函数。如果你只想允许*显式*转换，你可能想写执行转换的函数，但你需要避免将它们写成类型转换运算符或可以用单个参数调用的非`explicit`构造函数。（隐式和显式转换函数的示例，参见第15条）。
+- **对于新类型来说，哪些运算符和函数是有意义的？** 这个问题的答案决定了为你类声明哪些函数。某些函数将是成员函数，但一些不是（参见第23条、第24条和第46条）。
+- **哪些标准函数是不允许的？** 这些是你需要声明为`private`的函数（参见第6条）。
 - **谁应该访问你新类型的成员？** 这个问题帮助你确定哪些成员是公有的、哪些是保护的、哪些是私有的。它还帮助你确定哪些类和函数应该是朋友，以及在一个类内部嵌套另一个类是否有意义。
-- **你新类型的“未声明接口”是什么？** 它在性能、异常安全（参见第 29 条）和资源使用（例如锁和动态内存）方面提供什么样的保证？你在这些领域提供的保证会对类实现实施约束。
+- **你新类型的“未声明接口”是什么？** 它在性能、异常安全（参见第29条）和资源使用（例如锁和动态内存）方面提供什么样的保证？你在这些领域提供的保证会对类实现实施约束。
 - **你的新类型有多通用？** 也许你并没有在定义一个新类型。也许你正在定义整个*类型族*。如果是这样，你不想定义一个新的类，你想定义一个新的类*模板*。
 - **你真的需要新类型吗？** 如果你定义一个新的派生类仅仅是为了给现有类添加功能，也许你通过简单定义一个或多个非成员函数或模板来实现目标。
 
-这些问题很难回答，因此设计有效的类是具有挑战性的。然而，如果做得好，C++ 中的用户自定义类将产生至少与内置类型一样好的类型，这使得所有的努力都是值得的。
+这些问题很难回答，因此设计有效的类是具有挑战性的。然而，如果做得好，C++中的用户自定义类将产生至少与内置类型一样好的类型，这使得所有的努力都是值得的。
 
-
-
-
-默认情况下，C++ 通过值传递在函数之间传递对象（这是它继承自 C 语言的特性）。除非另有指定，否则函数参数将用实际参数的 `copies`（拷贝）初始化，函数调用者将获得函数返回值的 `copy`（拷贝）。这些拷贝是由对象的拷贝构造函数产生的。这可能使值传递成为昂贵的操作。例如，考虑以下类层次结构：
+默认情况下，C++通过值传递在函数之间传递对象（这是它继承自C语言的特性）。除非另有指定，否则函数参数将用实际参数的`copies`（拷贝）初始化，函数调用者将获得函数返回值的`copy`（拷贝）。这些拷贝是由对象的拷贝构造函数产生的。这可能使值传递成为昂贵的操作。例如，考虑以下类层次结构：
 
 ```cpp
 class Person {
 public:
   Person();                          // 为了简单省略了参数
-  virtual ~Person();                // 关于为什么是虚拟的，请参见 Item 7
+  virtual ~Person();                // 关于为什么是虚拟的，请参见Item 7
   ...
 private:
   std::string name;
@@ -2570,20 +2602,21 @@ private:
 };
 ```
 
-现在考虑以下代码，其中我们调用了一个函数 `validateStudent`，它接收一个 `Student` 参数（按值传递）并返回其是否已通过验证：
+现在考虑以下代码，其中我们调用了一个函数`validateStudent`，它接收一个`Student`参数（按值传递）并返回其是否已通过验证：
 
 ```cpp
-bool validateStudent(Student s);      // 接收一个 Student
+bool validateStudent(Student s);      // 接收一个Student
                                     // 按值传递
+
 Student plato;                      // 拉图向苏格拉底学习过
 bool platoIsOK = validateStudent(plato); // 调用函数
 ```
 
 当调用此函数时会发生什么呢？
 
-显然，调用了 `Student` 拷贝构造函数来从 `plato` 初始化参数 `s`。同样地，当 `validateStudent` 返回时，`s` 被销毁。因此，该函数的参数传递代价是一次 `Student` 拷贝构造函数的调用和一次 `Student` 析构函数的调用。
+显然，调用了`Student`拷贝构造函数来从`plato`初始化参数`s`。同样地，当`validateStudent`返回时，`s`被销毁。因此，该函数的参数传递代价是一次`Student`拷贝构造函数的调用和一次`Student`析构函数的调用。
 
-但这并不是全部。一个 `Student` 对象内部有两个 `string` 对象，因此每次构造一个 `Student` 对象时，都必须构造两个 `string` 对象。`Student` 对象还继承自 `Person` 对象，因此每次构造一个 `Student` 对象时，都必须构造一个 `Person` 对象。`Person` 对象内部有两个额外的 `string` 对象，因此每个 `Person` 的构造还涉及两个额外的 `string` 构造。结果是，按值传递 `Student` 对象会导致一次 `Student` 拷贝构造函数调用、一次 `Person` 拷贝构造函数调用以及四次 `string` 拷贝构造函数调用。当 `Student` 对象的拷贝被销毁时，每个构造函数调用都会匹配一个析构函数调用，因此按值传递 `Student` 的总代价是六个构造函数和六个析构函数！
+但这并不是全部。一个`Student`对象内部有两个`string`对象，因此每次构造一个`Student`对象时，都必须构造两个`string`对象。`Student`对象还继承自`Person`对象，因此每次构造一个`Student`对象时，都必须构造一个`Person`对象。`Person`对象内部有两个额外的`string`对象，因此每个`Person`的构造还涉及两个额外的`string`构造。结果是，按值传递`Student`对象会导致一次`Student`拷贝构造函数调用、一次`Person`拷贝构造函数调用以及四次`string`拷贝构造函数调用。当`Student`对象的拷贝被销毁时，每个构造函数调用都会匹配一个析构函数调用，因此按值传递`Student`的总代价是六个构造函数和六个析构函数！
 
 现在，这是正确且符合预期的行为。毕竟，你*希望*所有的对象都能被可靠地初始化和销毁。尽管如此，如果有一种方法可以跳过所有的构造和销毁就太好了。确实：按常量引用传递（pass by reference-to-`const`）：
 
@@ -2591,7 +2624,7 @@ bool platoIsOK = validateStudent(plato); // 调用函数
 bool validateStudent(const Student& s);
 ```
 
-这高效得多：没有调用构造函数或析构函数，因为没有创建新对象。修改后的参数声明中的 `const` 是关重要的。原始版本的 `validateStudent` 按值接收 `Student` 参数，因此调用者知道他们不会受到函数对传入的 `Student` 进行任何修改的影响；`validateStudent` 只能修改它的 `copy`。现在 `Student` 是按引用传递的，因此必要将其声明为 `const`，否则调用者将不得不担心 `validateStudent` 对他们传入的 `Student` 进行修改。
+这高效得多：没有调用构造函数或析构函数，因为没有创建新对象。修改后的参数声明中的`const`是关重要的。原始版本的`validateStudent`按值接收`Student`参数，因此调用者知道他们不会受到函数对传入的`Student`进行任何修改的影响；`validateStudent`只能修改它的`copy`。现在`Student`是按引用传递的，因此必要将其声明为`const`，否则调用者将不得不担心`validateStudent`对他们传入的`Student`进行修改。
 
 按引用传递参数还避免了*切片问题*（slicing problem）。当一个派生类对象（按值）作为基类对象传递时，会调用基类的拷贝构造函数，而使对象行为像派生类对象的特有功能会被“切”掉。你只剩下一个简单的基类对象——这并不意外，因为是基类构造函数创建了它。这几乎不是你想要的。例如，假设你正在编写一组实现图形窗口系统的类：
 
@@ -2610,50 +2643,48 @@ public:
 };
 ```
 
+即使小对象具有廉价的拷贝构造函数，也可能存在性能问题。某些编译器对内置类型和用户定义类型区别对待之，即使它们具有相同的底层表示。例如，某些编译器拒绝将仅由一个`double`组成的对象放入寄存器，尽管它们通常会心所情愿地将裸露`double`放入寄存器中。当此类情况发生时，通过引用传递此类对象可能会效果更好，因为编译器确定会将指针（引用的实现）放入寄存器中。
 
+另一个导致小型用户定义类型不一定是值传递良好候选对象的原因是，由于它们是用户定义的，它们的可能会发生变化。一个现在很小的类型在未来的发布中可能会变得更大，因为它的内部实现可能会发生变化。甚至当你切换到不同的C++实现时，情况也可能发生。例如，在我写这些内容时，标准库中某些`string`类型实现的大小是其他实现的七倍。
 
-即使小对象具有廉价的拷贝构造函数，也可能存在性能问题。某些编译器对内置类型和用户定义类型区别对待之，即使它们具有相同的底层表示。例如，某些编译器拒绝将仅由一个 `double` 组成的对象放入寄存器，尽管它们通常会心所情愿地将裸露 `double` 放入寄存器中。当此类情况发生时，通过引用传递此类对象可能会效果更好，因为编译器确定会将指针（引用的实现）放入寄存器中。
-
-另一个导致小型用户定义类型不一定是值传递良好候选对象的原因是，由于它们是用户定义的，它们的可能会发生变化。一个现在很小的类型在未来的发布中可能会变得更大，因为它的内部实现可能会发生变化。甚至当你切换到不同的 C++ 实现时，情况也可能发生。例如，在我写这些内容时，标准库中某些 `string` 类型实现的大小是其他实现的七倍。
-
-总的来说，你能够合理假设值传递是廉价的类型只有内置类型以及 STL 迭代器和函数对象类型。对于其他所有类型，请遵循本节的建议，优先使用对 `const` 的引用传递而非值传递。
+总的来说，你能够合理假设值传递是廉价的类型只有内置类型以及STL迭代器和函数对象类型。对于其他所有类型，请遵循本节的建议，优先使用对`const`的引用传递而非值传递。
 
 ### 需要记忆的事
 
-- 优先使用对 `const` 的引用传递而非值传递。这通常更高效，并且避免了切片问题（slicing problem）。
-- 该规则不适用于内置类型以及 STL 迭代器和函数对象类型。对于这些类型，值传递通常是合适的。
+- 优先使用对`const`的引用传递而非值传递。这通常更高效，并且避免了切片问题（slicing problem）。
+- 该规则不适用于内置类型以及STL迭代器和函数对象类型。对于这些类型，值传递通常是合适的。
 
-### 第 21 条：当你必须返回对象时，不要尝试返回引用
+### 第21条：当你必须返回对象时，不要尝试返回引用
 
-一旦程序员掌握了对象值传递的效率影响（参见 [第 20 条]），许多人就会变成十字道战士，决心在值传递可能出现的任何地方根除这种“邪恶”。在追求引用纯洁性的道路上他们坚持不懈，但他们不可避免地犯了一个致命错误：他们开始传递并不存在的对象的引用。这并不是好事。
+一旦程序员掌握了对象值传递的效率影响（参见[第20条]），许多人就会变成十字道战士，决心在值传递可能出现的任何地方根除这种“邪恶”。在追求引用纯洁性的道路上他们坚持不懈，但他们不可避免地犯了一个致命错误：他们开始传递并不存在的对象的引用。这并不是好事。
 
 考虑一个表示有理数的类，其中包含一个两个有理数相乘函数：
 
 ```cpp
 class Rational {
 public:
-  Rational(int numerator = 0, int denominator = 1); // 参见 [第 24 条] 为什么这个构造函数没有声明为 explicit
+  Rational(int numerator = 0, int denominator = 1); // 参见[第24条]为什么这个构造函数没有声明为explicit
   ...
 private:
   int n, d; // 分子和分母
   friend
-  const Rational operator*(const Rational& lhs, const Rational& rhs); // 返回类型是 const，参见 [第 3 条] 为什么
+  const Rational operator*(const Rational& lhs, const Rational& rhs); // 返回类型是const，参见[第3条]为什么
 };
 ```
 
-这个版本的 `operator*` 通过值返回其结果对象，如果你不担心该对象构造和析构的代价，你就是在逃避你的专业职责。如果不需要，你不想为这样的对象付出代价。所以问题是：你必须付出代价吗？
+这个版本的`operator*`通过值返回其结果对象，如果你不担心该对象构造和析构的代价，你就是在逃避你的专业职责。如果不需要，你不想为这样的对象付出代价。所以问题是：你必须付出代价吗？
 
-嗯，如果你可以返回一个引用，就不需要。但请记住，引用只是一个名字，是某个现有对象的名称。每当你看到引用的声明时，都应该立即问自己它是什么的另一个名字，因为它必须是*某些东西*的另一个名字。在 `operator*` 的情况下，如果函数要返回引用，它必须返回某个已经存在的 `Rational` 对象的引用，且该对象包含了两个待相乘对象的乘积。
+嗯，如果你可以返回一个引用，就不需要。但请记住，引用只是一个名字，是某个现有对象的名称。每当你看到引用的声明时，都应该立即问自己它是什么的另一个名字，因为它必须是*某些东西*的另一个名字。在`operator*`的情况下，如果函数要返回引用，它必须返回某个已经存在的`Rational`对象的引用，且该对象包含了两个待相乘对象的乘积。
 
-显然没有理由期望在调用 `operator*` 之前这样的对象就已经存在了。也就是说，如果你有
+显然没有理由期望在调用`operator*`之前这样的对象就已经存在了。也就是说，如果你有
 
 ```cpp
 Rational a(1, 2); // a = 1/2
 Rational b(3, 5); // b = 3/5
-Rational c = a * b; // c 应当是 3/10
+Rational c = a * b; // c应当是3/10
 ```
 
-期望那里已经存在一个值为三分之二的有理数是不合逻辑的。不，如果 `operator*` 要返回这样一个数的引用，它必须创建该对象。函数创建新对象只有两种方式：在栈上或在堆上。在栈上创建是通过定义局部变量来完成的。使用该策略，你可能会尝试这样写 `operator*`：
+期望那里已经存在一个值为三分之二的有理数是不合逻辑的。不，如果`operator*`要返回这样一个数的引用，它必须创建该对象。函数创建新对象只有两种方式：在栈上或在堆上。在栈上创建是通过定义局部变量来完成的。使用该策略，你可能会尝试这样写`operator*`：
 
 ```cpp
 const Rational& operator*(const Rational& lhs, const Rational& rhs) {
@@ -2661,6 +2692,8 @@ const Rational& operator*(const Rational& lhs, const Rational& rhs) {
   return result;
 }
 ```
+
+
 
 你可以立即拒绝这种方法，因为你的目标是避免构造函数调用，而 `result` 必须像任何其他对象一样被构造。一个严重的问题是，这个函数返回了 `result` 的引用，但 `result` 是局部对象，而局部对象在函数退出时会被析毁。因此，这个版本的 `operator*` 返回的不是 `Rational` 的引用——它返回的是一个过去的 `Rational` 的引用；一个曾经是 `Rational` 但因为已经被析毁而不再是它的空空的、臭臭的尸体。任何调用者只要看一眼这个函数的返回值，就会立即进入未定义行为的领域。事实是，任何返回局部对象引用的函数都是损坏的（返回局部对象指针的函数也是如此）。
 
@@ -2673,7 +2706,7 @@ const Rational& operator*(const Rational& lhs, const Rational& rhs) {
 }
 ```
 
-嗯，你仍然必须为构造函数调用付费，因为 `new` 分配的内存是通过调用相应的构造函数初始化的，但现在你有了另一个问题：谁来对你使用 `new` 创建的对象调用 `delete` ？
+嗯，你仍然必须为构造函数调用付费，因为 `new` 分配的内存是通过调用相应的构造函数初始化的，但现在你有了另一个问题：谁来对你使用 `new` 创建的对象调用 `delete`？
 
 即使调用者是严谨且良好的，在如下合理情况下他们也没有办法可以防止内存泄漏：
 
@@ -2698,15 +2731,9 @@ const Rational& operator*(const Rational& lhs, const Rational& rhs) {
 
 ```cpp
 bool operator==(const Rational& lhs, const Rational& rhs); // 一个用于 Rational 的 operator==
-```
-
 Rational a, b, c, d;
-
 ...
-
-
-
-
+```
 
 ```cpp
 if ((a * b) == (c * d))  {
@@ -2724,11 +2751,11 @@ if ((a * b) == (c * d))  {
 if (operator==(operator*(a, b), operator*(c, d)))
 ```
 
-请注意，当调用 `operator==` 时，已经有两个活跃的 `operator*` 调用，每个调用都会返回指向 `operator*` 内部静态 `Rational` 对象的引用。因此，`operator==` 被要求比较 `operator*` 内部静态 `Rational` 对象的的值与 `operator*` 内部另一个静态 `Rational` 对象的的值。如果它们不相等，那将确实令人惊讶。事实如此。
+请注意，当调用 `operator==` 时，已经有两个活跃的 `operator*` 调用，每个调用都会返回指向 `operator*` 内部静态 `Rational` 对象的引用。因此，`operator==` 被要求比较 `operator*` 内部静态 `Rational` 对象的值与 `operator*` 内部另一个静态 `Rational` 对象的值。如果它们不相等，那将确实令人惊讶。事实如此。
 
 这足以说服你，从像 `operator*` 这样的函数中返回引用是浪费时间，但你们中的某些现在可能在想：“好吧，如果一个静态变量不够，也许一个静态数组就能起作用……”
 
-我实在没法为这种设计配上示例代码了，但我可以勾勒出为什么这种想法应该让你羞愧自颜。首先，你必须选择 `n`，即数组的大小。如果 `n` 太小，你可能没有地方存储函数的返回值，在这种情况下，你并没有比我们刚刚否定的单静态变量设计上获得任何益处。但如果 `n` 太大，你将降低程序的性能，因为数组中的每个对象在函数第一次被调用时都会被构造。这将让你付出 `n` 个构造函数和 `n` 个析构函数的代价，即使该函数只被调用了一次。如果说“优化”是提高软件性能的过程，那么这种事情应该被称为“退化”（pessimization）。最后，考虑你如何将需要的值放入数组对象中以及这样做的什么代价。在对象之间移动值最直接的方法是通过赋值，但赋值的代价是什么？对于许多类型，它等同于调用一次析构函数（销毁旧值）加上调用一次构造函数（拷贝新值）。但你的目标是避免构造和析构的代价！面对现实吧：这种方法根本行不通。（不，使用 `vector` 代替数组并不会情况好 多少。）
+我实在没法为这种设计配上示例代码了，但我可以勾勒出为什么这种想法应该让你羞愧自颜。首先，你必须选择 `n`，即数组的大小。如果 `n` 太小，你可能没有地方存储函数的返回值，在这种情况下，你并没有比我们刚刚否定的单静态变量设计上获得任何益处。但如果 `n` 太大，你将降低程序的性能，因为数组中的每个对象在函数第一次被调用时都会被构造。这将让你付出 `n` 个构造函数和 `n` 个析构函数的代价，即使该函数只被调用了一次。如果说“优化”是提高软件性能的过程，那么这种事情应该被称为“退化”（`pessimization`）。最后，考虑你如何将需要的值放入数组对象中以及这样做的什么代价。在对象之间移动值最直接的方法是通过赋值，但赋值的代价是什么？对于许多类型，它等同于调用一次析构函数（销毁旧值）加上调用一次构造函数（拷贝新值）。但你的目标是避免构造和析构的代价！面对现实吧：这种方法根本行不通。（不，使用 `vector` 代替数组并不会情况好多少。）
 
 编写一个必须返回新对象的函数的正确方法是让该函数返回一个新对象。对于 `Rational` 的 `operator*`，这意味着要么是以下代码，要么是本质等的代码：
 
@@ -2743,17 +2770,17 @@ inline const Rational operator*(const Rational& lhs, const Rational& rhs)
 
 这一切都归结为此：在决定返回引用和返回对象之间做出选择时，你的任务是做出提供正确行为的选择。让你的编译器供应商去苦思如何让这种选择尽可能廉价吧。
 
-### 注意事项
+## 注意事项
 
--   永远不要返回局部栈对象的指针或引用、堆分配对象的引用，或者指向局部静态对象的指针或引用，如果可能需要多个此类对象的话。（Item 4 提了一个设计示例，在该设计中，返回局部静态对象的引用是合理的，至少在单线程环境下。）
+- 永远不要返回局部栈对象的指针或引用、堆分配对象的引用，或者指向局部静态对象的指针或引用，如果可能需要多个此类对象的话。（`Item 4` 提了一个设计示例，在该设计中，返回局部静态对象的引用是合理的，至少在单线程环境下。）
 
-### Item 22：将数据成员声明为 `private`
+## Item 22：将数据成员声明为 `private`
 
-好了，计划是这样的。首先，我们将看看为什么数据成员不应该是公开的（public）。然后我们将看到，所有反对公开数据成员的理由同样适用于受保护（protected）成员。这将得出数据成员应该是私有的（private）的结论，到那时时，我们的工作就完成了。
+好了，计划是这样的。首先，我们将看看为什么数据成员不应该是公开的（`public`）。然后我们将看到，所有反对公开数据成员的理由同样适用于受保护（`protected`）成员。这将得出数据成员应该是私有的（`private`）的结论，到那时时，我们的工作就完成了。
 
 那么，公开数据成员。为什么不呢？
 
-让我们从语法一致性开始（另参阅 Item 18）。如果数据成员不是公开的，客户端访问对象的唯一途径是通过成员函数。如果公共接口中的所有内容都是函数，客户端就不需要在需要访问类成员时苦思冥想记忆是否要加括号了。他们直接这样做即可，因为一切都是函数。在整个生命周期中这可以节省很多苦恼。
+让我们从语法一致性开始（另参阅 `Item 18`）。如果数据成员不是公开的，客户端访问对象的唯一途径是通过成员函数。如果公共接口中的所有内容都是函数，客户端就不需要在需要访问类成员时苦思冥想记忆是否要加括号了。他们直接这样做即可，因为一切都是函数。在整个生命周期中这可以节省很多苦恼。
 
 但也许你并不觉得这种一致性的论点很有说服力。那么使用函数可以让你对数据成员的访问权限拥有更精确的控制，这一点如何？如果你将数据成员设为公开，每个人对它都有读写权限，但如果你使用函数来获取或设置它的值，你可以实现无访问、只读访问和读写访问。嘿，如果你需要，甚至可以实现只写：
 
@@ -2765,7 +2792,6 @@ public:
   void setReadOnly(int value) { readOnly = value; }
   int getReadWrite() const { return readWrite; }
   void setWriteOnly(int value) { writeOnly = value; }
-
 private:
   int noAccess;
   int readOnly;
@@ -2774,7 +2800,7 @@ private:
 };
 ```
 
-这种细粒度的访问控制是非常重要的，因为许多数据成员*应该*被隐藏。很少有数据成员都需要 getter 和 setter。
+这种细粒度的访问控制是非常重要的，因为许多数据成员*应该*被隐藏。很少有数据成员都需要 `getter` 和 `setter`。
 
 还是不信服？那么是时候祭出大杀器了：封装。如果你通过函数实现对数据成员的访问，后续可以使用计算来代替数据成员，而使用该类的人不会感知。
 
@@ -2792,20 +2818,17 @@ public:
 
 现在考虑成员函数 `averageSoFar` 的实现。一种实现方法是在类中有一个数据成员，作为到为止收集的所有速度数据的平均值。每当调用 `averageSoFar` 时，只需返回该成员的值。另一种方法是让 `averageSoFar` 在每次被调用时重新计算其值，可以通过检查集合中的每个数据值来实现。
 
-第一方法（保持运行平均值）会让每个 `SpeedDataCollection` 对象变得，因为你需要为存储运行平均值、累积总和和数据点的数据成员分配空间。然而，`averageSoFar` 的实现可以非常高效；它只是一个内联函数（参见 Item 30），返回运行平均值的值。相反，在每次请求时计算平均值会让 `averageSoFar` 运行得较慢，但每个 `SpeedDataCollection` 对象会更小。
-
-
-
+第一方法（保持运行平均值）会让每个 `SpeedDataCollection` 对象变得更大，因为你需要为存储运行平均值、累积总和和数据点的数据成员分配空间。然而，`averageSoFar` 的实现可以非常高效；它只是一个内联函数（参见 `Item 30`），返回运行平均值的值。相反，在每次请求时计算平均值会让 `averageSoFar` 运行得较慢，但每个 `SpeedDataCollection` 对象会更小。
 
 谁能说哪种最好呢？在内存紧张的机器上（例如嵌入式路边设备），以及在不需要频繁平均值的应用程序中，每次都计算平均值可能是更好的解决方案。在频繁需要平均值、速度是关键且内存不是问题的应用程序中，保持一个运行平均值通常会更优。重要的点是，通过成员函数访问平均值（即通过对其进行封装），你可以更换这些不同的实现（以及你可能想到的任何其他实现），而客户端至多只需要重新编译。（你可以通过遵循条目 31 中描述的技巧，甚至可以消除这种不便。）
 
-在函数式接口后隐藏数据成员可以提供各种实现上的灵活性。例如，它可以便于在数据成员被读取或写入时通知其他对象，验证类不变变量以及函数的先决条件和后置条件，在线程环境中执行同步等。从 Delphi 和 C# 等语言转向 C++ 的程序员会发现这种能力等同于这些语言中的“属性（properties）”，尽管需要额外输入一对括号。
+在函数式接口后隐藏数据成员可以提供各种实现上的灵活性。例如，它可以便于在数据成员被读取或写入时通知其他对象，验证类不变变量以及函数的先决条件和后置条件，在线程环境中执行同步等。从 `Delphi` 和 `C#` 等语言转向 C++ 的程序员会发现这种能力等同于这些语言中的“属性（`properties`）”，尽管需要额外输入一对括号。
 
 关于封装的观点可能比最初看起来更重要。如果你向客户端隐藏数据成员（即对其进行封装），你就可以确保类不变变量始终保持有效，因为只有成员函数可以影响它们。此外，你保留了以后更改实现决策的权利。如果你不隐藏此类决策，很快就会发现，即使你拥有一个类的源代码，你更改任何公共内容的能力也受到极大限制，因为会有大量的客户端代码被破坏。公共意味着未封装，在实践中，未封装意味着不可更改，特别是对于被广泛使用的类。然而，被广泛使用的类最需要封装，因为它们最能从用一个实现替换为更好的实现的能力中获益。
 
 反对 `protected` 数据成员的论点是类似的。事实上，它是完全相同的，尽管初看起来可能并不如此。关于语法一致性和细粒度访问控制的推理显然适用于 `protected` 数据以及 `public` 数据，但封装呢？`protected` 数据成员不是比公共数据更封装吗？从实践上说，令人惊讶的答案是它们并不是。
 
-条目 23 解释了某物的封装程度与该物发生变化时可能被破坏的代码量成反比。那么，数据成员的封装程度与该数据成员发生变化时可能被破坏的代码量成反比，例如，如果它从类中删除（可能是为了改为计算，如上文的 `averageSoFar`）。
+`Item 23` 解释了某物的封装程度与该物发生变化时可能被破坏的代码量成反比。那么，数据成员的封装程度与该数据成员发生变化时可能被破坏的代码量成反比，例如，如果它从类中删除（可能是为了改为计算，如上文的 `averageSoFar`）。
 
 假设我们有一个公共数据成员，并将其消除。会有多少代码被破坏？所有使用它的客户端代码，这通常是一个*无法估量的巨大*数量。因此，公共数据成员完全完全未封装。但假设我们有一个 `protected` 数据成员，并将其消除。现在会有多少代码被破坏？所有使用它的派生类，这同样通常是*无法估量的巨大*数量的代码。因此，`protected` 数据成员与公共数据成员一样未封装，因为在在这两种情况下，如果数据成员被更改，都会有无法估量的巨大客户端代码被破坏。这不符合直觉，但正如经验丰富的库实现者所告诉你的那样，事实确实。一旦你声明一个数据成员为 `public` 或 `protected` 并且客户端开始使用它，想要更改该数据成员的任何内容都是非常困难的。大量的代码需要重写、重新测试、重新编写文档或重新编译。从封装的角度来看，实际上只有两种访问级别：`private`（提供封装）和其他所有级别（不提供）。
 
@@ -2814,7 +2837,7 @@ public:
 - 将数据成员声明为 `private`。它为客户端提供了语法上统一的数据访问，提供了细粒度的访问控制，允许强制执行不变变量，并为类作者提供了实现灵活性。
 - `protected` 的封装程度并不高于 `public`。
 
-### 条目 23：优先使用非成员非友函数代替成员函数
+## 条目 23：优先使用非成员非友函数代替成员函数
 
 想象一个表示网络浏览器的类。此类类提供的许多函数中，包括清除下载元素缓存、清除访问 URL 历史以及从系统中删除所有 cookie 的函数：
 
@@ -2852,16 +2875,15 @@ void clearBrowser(WebBrowser& wb)
 }
 ```
 
+
+
 所以是成员函数 `clearEverything` 还是非成员函数 `clearBrowser` 更好呢？面向对象的原则规定数据和操作这些数据的函数应该封装在一起，这表明成员函数是更好的选择。遗憾的是，这个建议是错误的。它是基于对“面向对象”意味着什么的的误解。面向对象的原则规定数据应该尽可能地*封装*。与直觉相反，成员函数 `clearEverything` 实际上产生的封装性比非成员函数 `clearBrowser` *少*。此外，提供非成员函数允许 `WebBrowser` 相关功能具有更大的打包灵活性，反之则减少了编译依赖并增加了 `WebBrowser` 的可扩展性。因此，非成员方法在许多方面都优于成员函数。理解为什么很重要。
 
 我们从封装开始说。如果某物被封装了，它就从视图中隐藏了。封装程度越高，看到它的东西越少。看到它的东西越少，我们更改它的灵活性就越大，因为我们的更改直接影响那些能看到我们所更改的内容。那么，封装程度越高，我们更改它的能力就越大。这就是我们最初重视封装的原因：它赋予了我们以仅影响有限客户端的方式更改事的灵活性。
 
 考虑与对象关联的数据。能看到数据（即访问数据）的代码越少，数据的封装程度就越高，我们就能越自由地更改对象的特性，例如数据成员的数量、类型等。作为衡量多少代码能看到某数据数据的粗粒度衡量标准，我们可以计算访问该数据的函数数量：访问它的函数越多，数据的封装程度就越低。
 
-
-
-
-Item 22 解释了数据成员应该是私有的，因为如果它们不是私有的，无限数量的函数就可以访问它们。它们就完全没有封装性。对于*是*私有的数据成员，能够访问它们的函数数量是类的成员函数数量加上友元函数的数量，因为只有成员和友元有权访问私有成员。
+Item 23 解释了数据成员应该是私有的，因为如果它们不是私有的，无限数量的函数就可以访问它们。它们就完全没有封装性。对于*是*私有的数据成员，能够访问它们的函数数量是类的成员函数数量加上友元函数的数量，因为只有成员和友元有权访问私有成员。
 
 如果在成员函数（不仅可以访问类的私有数据，还可以访问私有函数、枚举、类型定义（typedefs）等）和非成员非友元函数（无法访问上述任何内容）之间进行选择，且它们提供相同的功能，那么产生更大封装性的选择是非成员非友元函数，因为它们没有增加可以访问类中私有部分的函数数量。这解释了为什么 `clearBrowser`（非成员非友元函数）比 `clearEverything`（成员函数）更好：它在 `WebBrowser` 类中实现了更好的封装性。
 
@@ -2898,11 +2920,13 @@ namespace WebBrowserStuff {
                               // 几乎所有客户端都
                               // 需要非成员函数
 }
+
 // header "webbrowserbookmarks.h"
 namespace WebBrowserStuff {
 
   ...                              // 书签相关的便利函数
 }
+
 // header "webbrowser.h"
 namespace WebBrowserStuff {
 
@@ -2926,28 +2950,32 @@ namespace WebBrowserStuff {
 class Rational {
 
 public:
+
   Rational(int numerator = 0,    // 构造函数刻意没有使用 explicit；
            int denominator = 1); // 允许隐式的 int 到 Rational 转换
 
   int numerator() const;        // 分子的访问器
+
   int denominator() const;      // 分母的访问器 — 见 Item 22
 
 private:
+
   ...
 
 };
 ```
 
-
-
-
 你知道你想支持加法、乘法等算术运算，但你不确定应该通过成员函数、非成员函数，或者可能是友元（friend）的非成员函数来实现它们。你的直觉告诉你是，当你犹豫不决时，应该使用面向对象的方法。你知道，例如，有理数的乘法与 `Rational` 类有关，因此在 `Rational` 类内部为有理数实现`operator*`似乎是自然而然的。与直觉相反，Item 23 认为，将函数放在与其相关的类内部的想法有时违背了面向对象的原则，但让我们先把它搁置一边，研究将`operator*` 改为 `Rational` 的成员函数的想法：
 
 ```cpp
 class Rational {
+
 public:
+
 ...
+
 const Rational operator*(const Rational& rhs) const;
+
 };
 ```
 
@@ -2957,8 +2985,11 @@ const Rational operator*(const Rational& rhs) const;
 
 ```cpp
 Rational oneEighth(1, 8);
+
 Rational oneHalf(1, 2);
+
 Rational result = oneHalf * oneEighth;    // OK
+
 result = result * oneEighth;              // OK
 ```
 
@@ -2968,6 +2999,7 @@ result = result * oneEighth;              // OK
 
 ```cpp
 result = oneHalf * 2;                  // OK
+
 result = 2 * oneHalf;                  // 错误！
 ```
 
@@ -2977,6 +3009,7 @@ result = 2 * oneHalf;                  // 错误！
 
 ```cpp
 result = oneHalf.operator*(2);         // OK
+
 result = 2.operator*(oneHalf);        // 错误！
 ```
 
@@ -2995,6 +3028,7 @@ result = operator*(2, oneHalf);        // 错误！
 ```cpp
 const Rational temp(2);                // 创建一个临时
                                // Rational 对象，来自 2
+
 result = oneHalf * temp;              // 等同于 oneHalf.operator*(temp)
 ```
 
@@ -3003,6 +3037,7 @@ result = oneHalf * temp;              // 等同于 oneHalf.operator*(temp)
 ```cpp
 result = oneHalf * 2;                  // 错误！（显式构造函数）
                                // 无法将 2 转换为 Rational
+
 result = 2 * oneHalf;                  // 错误，同样的问题
 ```
 
@@ -3012,6 +3047,7 @@ result = 2 * oneHalf;                  // 错误，同样的问题
 
 ```cpp
 result = oneHalf * 2;                  // OK（使用非显式构造函数）
+
 result = 2 * oneHalf;                  // 错误！（即使使用非显式构造函数）
 ```
 
@@ -3021,6 +3057,7 @@ result = 2 * oneHalf;                  // 错误！（即使使用非显式构�
 
 ```cpp
 class Rational {
+
 ... // 不包含 operator*};
 
 const Rational operator*(const Rational& lhs, // 现在是非成员
@@ -3031,8 +3068,11 @@ const Rational operator*(const Rational& lhs, // 现在是非成员
 }
 
 Rational oneFourth(1, 4);
+
 Rational result;
+
 result = oneFourth * 2;                // OK
+
 result = 2 * oneFourth;                // 万喜，它有效！
 ```
 
@@ -3052,15 +3092,10 @@ result = 2 * oneFourth;                // 万喜，它有效！
 
 交换两个对象的值是让它们获得对方的值。默认情况下，交换通过标准的 `swap` 算法完成。它的典型实现正如你所预期的：
 
-
-
-
-
 ```cpp
 namespace std {
 
   template<typename T>           // std::swap 的典型实现；
-
   void swap(T& a, T& b)           // 交换 a 和 b 的值
   {
     T temp(a);
@@ -3089,34 +3124,53 @@ private:
 class Widget {                             // 使用 pimpl 句式的类
 public:
   Widget(const Widget& rhs);
-  Widget& operator=(const Widget& rhs)   // 为了拷贝一个 Widget，拷贝它的
-  {                                      // WidgetImpl 对象。关于
-    ...                                  // 实现 operator= 的细节
-    *pImpl = *(rhs.pImpl);               // 通用方法，
-    ...                                  // 参见第 10、11 和 12 条。
-  }
-  ...
-private:
-  WidgetImpl *pImpl;                     // 指向拥有此对象的指针
-};
 ```
+
+
+
+`Widget& operator=(const Widget& rhs)` // 为了拷贝一个 `Widget`，拷贝它的
+
+`{` // `WidgetImpl` 对象。关于
+
+`...` // 实现 `operator=` 的细节
+
+`*pImpl = *(rhs.pImpl);` // 通用方法，
+
+`...` // 参见第 10、11 和 12 条。
+
+`}`
+
+`...`
+
+`private:`
+
+`WidgetImpl *pImpl;` // 指向拥有此对象的指针
+
+`};`
 
 为了交换两个 `Widget` 对象的值，我们真正需要做的是交换它们的 `pImpl` 指针，但默认的 `swap` 算法并不知道这一点。我们想做的是告诉 `std::swap` 正在交换 `Widget`，而执行交换的方法是交换它们内部的 `pImpl` 指针。这里是基本思想，尽管它在这种形式下无法编译：
 
 ```cpp
 namespace std {
+
   template<>                           // 这是一个特化版本
+
   void swap<Widget>(Widget& a,           // std::swap 的特化，用于
+
     Widget& b)                          // Widget；这将无法编译
+
   {
+
     swap(a.pImpl, b.pImpl);             // 为了交换 Widgets，只需交换
+
   }                                    // 它们的指针
-```
+
+}
 ```
 
 函数开头的 `template<>` 表示这是 `std::swap` 的全特化，而函数名后的 `<Widget>` 表示该特化适用于 `T` 为 `Widget` 的情况。换句话说，当通用的 `swap` 模板应用到 `Widget` 上时，应该使用这个实现。通常情况下，我们被不允许修改 `std` 命名空间的内容，但我们被允许为自己创建的类型（如 `Widget`）对模板（如 `swap`）进行全特化。
 
-正如前面所说，这个函数无法编译。那因为它试图访问 `a` 和 `b` 内部的 `pImpl` 指针，而它们是私有的。我们可以将我们的特化声明为友元（friend），但惯例不同：是让 `Widget` 声明一个名为 `swap` 的公共成员函数来执行实际交换，然后特化 `std::swap` 来调用该成员函数：
+正如前面所说，这个函数无法编译。那因为它试图访问 `a` 和 `b` 内部的 `pImpl` 指针，而它们是私有的。我们可以将我们的特化声明为友元（`friend`），但惯例不同：是让 `Widget` 声明一个名为 `swap` 的公共成员函数来执行实际交换，然后特化 `std::swap` 来调用该成员函数：
 
 ```cpp
 class Widget {                             // 与上面相同，除了添加了
@@ -3141,7 +3195,7 @@ namespace std {
   {
     a.swap(b);                          // 为了交换 Widgets，调用它们的
   }                                // swap 成员函数
-```
+}
 ```
 
 这不仅可以编译，而且与 STL 容器保持一致，所有这些容器都提供了 `swap` 成员函数以及调用这些成员函数的 `std::swap` 特化。
@@ -3150,6 +3204,7 @@ namespace std {
 
 ```cpp
 template<typename T> class WidgetImpl { ... };
+
 template<typename T> class Widget { ... };
 ```
 
@@ -3157,10 +3212,15 @@ template<typename T> class Widget { ... };
 
 ```cpp
 namespace std {
+
   template<typename T>
+
   void swap<Widget<T>>(Widget<T>& a,
+
     Widget<T>& b)
+
   { a.swap(b); }
+
 }
 ```
 
@@ -3168,13 +3228,18 @@ namespace std {
 
 ```cpp
 namespace std {
+
   template<typename T>                   // std::swap 的重载
+
   void swap(Widget<T>& a,               // 注意 "swap" 后没有 "<...>"
+
     Widget<T>& b)                      // 但请看下文为什么这不是
+
                                       // 有效代码
+}
 ```
 
-```通常情况下，重载函数模板是可以的，但 `std` 是一个特殊的命名空间，它的规则也同样特殊。在 `std` 中特化模板是可以的，但在 `std` 中添加新的模板（或类或其他）是不允许的。`std`的内容由 C++ 标准委员会决定，我们被禁止增加他们认为应该放在那里的内容。唉，这种禁止的形式可能会让你失望。越界的程序几乎肯定可以编译和运行，但它们的行为是未定义的。如果你希望你的软件具有可预测的行为，就不要向 `std` 中添加新东西。
+通常情况下，重载函数模板是可以的，但 `std` 是一个特殊的命名空间，它的规则也同样特殊。在 `std` 中特化模板是可以的，但在 `std` 中添加新的模板（或类或其他）是不允许的。`std` 的内容由 C++ 标准委员会决定，我们被禁止增加他们认为应该放在那里的内容。唉，这种禁止的形式可能会让你失望。越界的程序几乎肯定可以编译和运行，但它们的行为是未定义的。如果你希望你的软件具有可预测的行为，就不要向 `std` 中添加新东西。
 
 那么怎么办？我们仍然需要一种方法让其他人调用 `swap` 并获得我们更高效的特定模板版本。答案很简单。我们仍然声明一个调用成员 `swap` 的非成员 `swap`，我们没有将非成员声明为 `std::swap` 的特化或重载。例如，如果我们所有与 `Widget` 相关的功能都在 `WidgetStuff` 命名空间中，它看起来是这样：
 
@@ -3192,12 +3257,9 @@ namespace WidgetStuff {
 }
 ```
 
+现在，如果代码中的任何地方对两个 `Widget` 对象调用了 `swap`，C++ 的名称查找规则（特别是称为 `参数依赖性查找` 或 `Koenig 查找` 的规则）将在 `WidgetStuff` 中找到针对 `Widget` 的特定版本。这正是我们想要的。
 
-
-
-现在，如果代码中的任何地方对两个 `Widget` 对象调用了 `swap`，C++ 的名称查找规则（特别是称为`参数依赖性查找`或 `Koenig 查找`的规则）将在 `WidgetStuff` 中找到针对 `Widget` 的特定版本。这正是我们想要的。
-
-这种方法对于类和类模板同样有效，因此看起来我们应该一直使用它。遗憾的是，为类特化 `std::swap`  way 是有有原因的（我稍后会描述），所以，如果你希望在尽可能多的语文中调用你的类特定的 `swap` 版本（你确实是这样要求的），你需要在与你的类相同的命名空间中编写一个非成员版本，并为 `std::swap` 提供一个特化版本。
+这种方法对于类和类模板同样有效，因此看起来我们应该一直使用它。遗憾的是，为类特化 `std::swap` 是有原因的（我稍后会描述），所以，如果你希望在尽可能多的语言中调用你的类特定的 `swap` 版本（你确实是这样要求的），你需要在与你的类相同的命名空间中编写一个非成员版本，并为 `std::swap` 提供一个特化版本。
 
 顺便说一下，如果你没有使用命名空间，上述内容仍然适用（也就是说你仍然需要一个调用成员 `swap` 的非成员 `swap`），但你为什么要用所有的类、模板、函数、枚举、枚举常量和类型别名来塞满全局命名空间呢？你难道没有分寸感吗？
 
@@ -3248,10 +3310,12 @@ std::swap(obj1, obj2);             // 调用 swap 的错误方式
 
 首先，如果 `swap` 的默认实现对于你的类或模板是可以接受的，你不需要做任何事情。
 
-其次，如果 `swap` 的默认实现不够高效（这通常意味着你的类或模板使用了 pimpl 变体），执行以下操作：
+其次，如果 `swap` 的默认实现不够高效（这通常意味着你的类或模板使用了 `pimpl` 变体），执行以下操作：
 
 1. 提供一个公共的 `swap` 成员函数，高效地交换两个对象的值。由于某些原因，该函数永远不抛出异常。
+
 2. 在与类相同的命名空间中提供一个非成员 `swap`。让它调用成员 `swap`。
+
 3. 如果你正在编写类（而不是类模板），为你的类特化 `std::swap`。让它也调用你的 `swap` 成员函数。
 
 最后，如果你调用 `swap`，确保包含 `using` 声明使 `std::swap` 可见，然后在不加限定的情况下调用 `swap`。
@@ -3259,8 +3323,11 @@ std::swap(obj1, obj2);             // 调用 swap 的错误方式
 记住
 
 - 当 `std::swap` 对于你的类型效率低下时，提供 `swap` 成员函数。确保你的 `swap` 不抛出异常。
+
 - 如果你提供了成员 `swap`，还要提供一个调用成员的非成员 `swap`。对于类（不是模板），也要特化 `std::swap`。
+
 - 调用 `swap` 时，采用 `std::swap` 的 `using` 声明，然后在不加限定的情况下调用 `swap`。
+
 - 为用户定义类型完全特化 `std` 模板是可以的，但永远不要向 `std` 添加全新的内容。
 
 # 5 实现
@@ -3272,9 +3339,6 @@ std::swap(obj1, obj2);             // 调用 swap 的错误方式
 ### 第 26 项：尽可能推迟变量定义。
 
 每当你定义一个具有构造函数或析构函数的类型变量时，当控制到达该变量定义处，你就会产生构造成本；当变量离开作用域时，你就会产生析构成本。未使用的变量与成本相关，因此你希望尽可能避免它们。
-
-
-
 
 你可能在想自己从未定义过未使用的变量，但你可能需要重新考虑一下。考虑以下函数，只要密码足够长，它就会返回密码的加密版本。如果密码太短，该函数会抛出一个 `logic_error` 类型的异常，该异常定义在标准 C++ 库中（参见 Item 54）：
 
@@ -3318,14 +3382,16 @@ void encrypt(std::string& s);             // 原地加密 s
 
 那么 `encryptPassword` 可以这样实现，尽管这不是最好的实现方法：
 
+
+
 ```cpp
-// 这个函数推迟了 encrypted 的定义，直到
+// 这个函数推迟了 `encrypted` 的定义，直到
 // 需要时，但它仍然是无谓低效
 std::string encryptPassword(const std::string& password)
 {
   ...                             // 如上检查长度
-  std::string encrypted;          // 默认构造 encrypted
-  encrypted = password;           // 赋值给 encrypted
+  std::string encrypted;          // 默认构造 `encrypted`
+  encrypted = password;           // 赋值给 `encrypted`
   encrypt(encrypted);
   return encrypted;
 }
@@ -3334,7 +3400,7 @@ std::string encryptPassword(const std::string& password)
 更好的方法是使用 `password` 初始化 `encrypted`，从而跳过无意义且可能开销较大的默认构造：
 
 ```cpp
-// 最后，这是定义和初始化 encrypted 的最佳方式
+// 最后，这是定义和初始化 `encrypted` 的最佳方式
 std::string encryptPassword(const std::string& password)
 {
   ...                             // 检查长度
@@ -3350,13 +3416,14 @@ std::string encryptPassword(const std::string& password)
 “那循环呢？”你可能会问。如果一个变量只在循环内部使用，将其定义在循环外部并在每次循环时赋值更好，还是在循环内部定义该变量更好？也就是说，这两种通用结构哪种更好？
 
 ```cpp
-// 方法 A：定义在循环外 // 方法 B：定义在循环内
+// 方法 A：定义在循环外
 Widget w;
 for (int i = 0; i < n; ++i){
   w = some value dependent on i;
   ...
 }
 
+// 方法 B：定义在循环内
 for (int i = 0; i < n; ++i) {
   Widget w(some value dependent on i);
   ...
@@ -3374,7 +3441,7 @@ for (int i = 0; i < n; ++i) {
 
 尽可能晚地推迟变量定义。这可以增加程序的清晰度并提高程序的效率。
 
-### Item 27：最小化类型转换。
+## Item 27：最小化类型转换
 
 C++ 的规则设计旨在保证类型错误是不可能的。理论上，如果你的程序编译通过，说明它没有尝试执行任何危险或无意义的操作。这是一个宝贵的保证。你不应该轻易放弃它。
 
@@ -3406,12 +3473,10 @@ static_cast<T>(expression)
 每种转换都有独特的用途：
 
 - `const_cast` 通常用于剥去对象的常属性。它是 C++ 风格转换中唯一可以做到此的。
+
 - `dynamic_cast` 主要用于执行“向下转型”，即在继承层次中确定对象是否属于特定类型。它是唯一无法使用旧式语法执行的转换。它也是唯一可能产生显著运行时开销的转换。（稍后我会提供相关细节。）
+
 - `reinterpret_cast` 旨在产生实现相关的（即不可移植的）结果的低级转换，例如将指针转换为 `int`。在低级代码之外，这种转换应该是罕见的。我在本书中仅使用过一次，且仅是在讨论如何为原始内存编写调试分配器时（参见 Item 50）。
-
-
-
-
 
 - `static_cast` 可用于强制隐式转换（例如，将非 `const` 对象转换为 `const` 对象（如 Item 3 所示）、将 `int` 转换为 `double` 等）。它也可以用于执行许多此类转换的反操作（例如，将 `void*` 指针转换为类型指针，将指向基类的指针转换为指向派类的指针），尽管它不能将 `const` 对象转换为非 `const` 对象。（只有 `const_cast` 可以做到这一点。）
 
@@ -3450,9 +3515,9 @@ Derived d;
 Base *pb = &d; // 隐式转换 Derived* ⇒ Base*
 ```
 
-在这里，我们只是创建一个指向派生类对象的基类指针，但有时，这两个指针的值是不相同的。在这种情况下，会在*运行时*对 `Derived*` 指针应用一个偏移量，以获得正确的 `Base*` 指针值。
+在这里，我们只是创建一个指向派生类对象的基类指针，但有时，这两个指针的值是不相同的。在这种情况下，会在运行时对 `Derived*` 指针应用一个偏移量，以获得正确的 `Base*` 指针值。
 
-最后这个例子表明，单个对象（例如，`Derived` 类型的对象）可能有多个地址（例如，它被 `Base*` 指针指向时的地址，以及它被 `Derived*` 指针指向时的地址）。这在 C 中不会发生。在 Java 中不会发生。在 C# 中不会发生。但在 C++ 中*确实*会发生。事实上，当使用多继承时，这种情况几乎总是发生，但在单继承下也可能发生。除外，这意味着你通常应该避免对 C++ 中的布局做出假设，并且绝对不应该基于此类假设进行转换。例如，将对象地址转换为 `char*` 指针然后在它们上进行指针算术几乎总是会产生未定义行为。
+最后这个例子表明，单个对象（例如，`Derived` 类型的对象）可能有多个地址（例如，它被 `Base*` 指针指向时的地址，以及它被 `Derived*` 指针指向时的地址）。这在 C 中不会发生。在 Java 中不会发生。在 C# 中不会发生。但在 C++ 中确实会发生。事实上，当使用多继承时，这种情况几乎总是发生，但在单继承下也可能发生。除外，这意味着你通常应该避免对 C++ 中的布局做出假设，并且绝对不应该基于此类假设进行转换。例如，将对象地址转换为 `char*` 指针然后在它们上进行指针算术几乎总是会产生未定义行为。
 
 但请注意，我说偏移量“有时”需要的。对象的布局方式以及计算地址的方式随编译器而异。这意味着，仅仅因为你“了解布局方式”的转换在一个平台上有效，并不意味着它们在其他平台上也有效。这个世界上充满了通过这种方式吸取教训的程序员。
 
@@ -3474,7 +3539,7 @@ public:
 };
 ```
 
-我在代码中高亮了转换。（这是一个新式转换，但使用旧式转换也不会改变任何结果。）如你所料，代码将 `*this` 转换为 `Window`。因此，对 `onResize` 的结果调用将触发 `Window::onResize`。你可能没有预到的是，它并没有调用当前对象上的该函数！相反，转换创建了 `*this` 基类部分的一个新的临时*拷贝*，然后在拷贝上调用了 `onResize`！上面的代码并没有在当前对象上调用 `Window::onResize` 然后执行 `SpecialWindow` 特有的操作——它是在当前对象的基类部分的拷贝上调用 `Window::onResize`，然后在当前对象上执行 `SpecialWindow` 特有的操作。如果 `Window::onResize` 修改了当前对象（几乎不可能，因为 `onResize` 是一个非 `const` 成员函数），当前对象将不会被修改。相反，对象的拷贝会被修改。然而，如果 `SpecialWindow::onResize` 修改了当前对象，那么当前对象*将*会被修改，这导致代码会让当前对象处于一种无效状态，即尚未进行基类的修改，但已经进行了派生类的修改。
+我在代码中高亮了转换。（这是一个新式转换，但使用旧式转换也不会改变任何结果。）如你所料，代码将 `*this` 转换为 `Window`。因此，对 `onResize` 的结果调用将触发 `Window::onResize`。你可能没有预到的是，它并没有调用当前对象上的该函数！相反，转换创建了 `*this` 基类部分的一个新的临时拷贝，然后在拷贝上调用了 `onResize`！上面的代码并没有在当前对象上调用 `Window::onResize` 然后执行 `SpecialWindow` 特有的操作——它是在当前对象的基类部分的拷贝上调用 `Window::onResize`，然后在当前对象上执行 `SpecialWindow` 特有的操作。如果 `Window::onResize` 修改了当前对象（几乎不可能，因为 `onResize` 是一个非 `const` 成员函数），当前对象将不会被修改。相反，对象的拷贝会被修改。然而，如果 `SpecialWindow::onResize` 修改了当前对象，那么当前对象将会被修改，这导致代码会让当前对象处于一种无效状态，即尚未进行基类的修改，但已经进行了派生类的修改。
 
 解决方案是消除转换，将其替换为你真正想表达的内容。你并不是想要欺骗编译器将 `*this` 视为基类对象；你是想在当前对象上调用基类版本的 `onResize`。所以这样做：
 
@@ -3490,9 +3555,6 @@ public:
 ```
 
 这个例子还表明，如果你发现自己想要进行转换，说明你可能采用的方法不对。如果你的目标是使用 `dynamic_cast`，情况尤为如此。
-
-
-
 
 在深入探讨 `dynamic_cast` 的设计影响之前，值得注意的是，许多 `dynamic_cast` 的实现可能非常缓慢。例如，至少有一种常见的实现部分是基于类名的字符串比较的。如果你在一个深度为四层的单继承层次结构中对对象进行 `dynamic_cast`，那么在这种实现下，每次 `dynamic_cast` 可能需要花费多达四次 `strcmp` 调用来比较类名。更深层次结构或使用多继承的结构开销会更大。某些实现之所以这样工作是有原因的（与支持动态链接有关）。尽管如此，除了对所有的转换（casts）保持警惕外，你应该特别警惕性能敏感代码中的 `dynamic_cast`。
 
@@ -3533,7 +3595,7 @@ VPSW winPtrs;
 ...
 
 for (VPSW::iterator iter = winPtrs.begin();        // 更好的代码：使用了
-     iter != winPtrs.end();                          // 没有 dynamic_cast
+     iter != winPtrs.end();                        // 没有 dynamic_cast
      ++iter)
   (*iter)->blink();
 ```
@@ -3547,26 +3609,28 @@ class Window {
 public:
   virtual void blink() {}                          // 默认实现为空空操作；
   ...                                              // 原因请参见 条目 34
-};                                                  // 默认实现可能是
+};                                                 // 默认实现可能是
 
-  SpecialWindow: public Window {
+class SpecialWindow: public Window {
 public:
-  virtual void blink() { ... };               // 在这个类中，blink
-  ...                                          // 执行某些操作
+  virtual void blink() { ... };                    // 在这个类中，blink
+  ...                                              // 执行某些操作
 };
 
 typedef std::vector<std::tr1::shared_ptr<Window> > VPW;
-VPW winPtrs;                                     // 容器持有（指向）所有可能的
-Window 类型
+VPW winPtrs;                                       // 容器持有（指向）所有可能的
+                                                   // Window 类型
 for (VPW::iterator iter = winPtrs.begin();
      iter != winPtrs.end();
      ++iter)
-  (*iter)->blink();                            //
+  (*iter)->blink();                                //
 ```
 
 这两种方法——使用类型安全的容器或将虚函数向上移动层次结构——并不是无处适用的，但在许多情况下，它们提供了替代 `dynamic_cast` 的可行方案。当这些方法可行时，你应该接纳它们。
 
 你绝对想要避免的情况是涉及级联 `dynamic_cast` 的设计，即任何看起来像这样的代码：
+
+
 
 ```cpp
 class Window { ... };
@@ -3612,19 +3676,17 @@ public:
   ...
 };
 
-struct RectData {                               // 矩形的数据
-  Point ulhc;                                     // ulhc = “左上角”
-  Point lrhc;                                     // lrhc = “右下角”
+struct RectData {                           // 矩形的数据
+  Point ulhc;                               // ulhc = “左上角”
+  Point lrhc;                               // lrhc = “右下角”
 };
 
 class Rectangle {
   ...
 private:
-  std::tr1::shared_ptr<RectData> pData;           // 条目 13 关于 tr1::shared_ptr 的信息
+  std::tr1::shared_ptr<RectData> pData;     // 条目 13 关于 tr1::shared_ptr 的信息
 };
 ```
-
-
 
 这种设计可以编译通过，但它是错误的。事实上，它是自相矛盾的。一方面，`upperLeft` 和 `lowerRight` 被声明为 `const` 成员函数，因为它们的设计目的仅是为客户端提供获取 `Rectangle` 顶点的方法，而不是让客户端修改 `Rectangle`（参见 Item 3）。另一方面，这两个函数都返回了私有内部数据的引用——调用者可以使用这些引用来修改这些内部数据！例如：
 
@@ -3635,10 +3697,11 @@ const Rectangle rec(coord1, coord2); // rec 是一个从 (0, 0) 到 (100, 100) �
 rec.upperLeft().setX(50);           // 现在 rec 的范围变成了 (50, 0) 到 (100, 100)!
 ```
 
-在这里，请注意 `upperLeft` 的调用者如何能够使用返回的 `rec` 内部 `Point` 数据成员的引用来修改该成员。但 `rec`  supposed 是 `const` 的！
+在这里，请注意 `upperLeft` 的调用者如何能够使用返回的 `rec` 内部 `Point` 数据成员的引用来修改该成员。但 `rec` supposed 是 `const` 的！
 
 这直接引出了两个教训：
-1. 数据成员的封装程度取决于返回该成员引用的可访问性最高的函数。在这种情况下，尽管 `ulhc` 和 `lrhc` 被声明为 `private`，但它们实际上上是公开的，因为公共函数 `upperLeft` 和 `lowerRight` 返回了指向它们的引用。
+
+1. 数据成员的封装程度取决于返回该成员引用的可访问性最高的函数。在这种情况下，尽管 `ulhc` 和 `lrhc` 被声明为 `private`，但它们实际上是公开的，因为公共函数 `upperLeft` 和 `lowerRight` 返回了指向它们的引用。
 2. 如果 `const` 成员函数返回了与存储在对象外部的关联数据的引用，则函数的调用者就可以修改该数据（这仅仅是位常量性（bitwise constness）局限性带来的副作用——参见 Item 3）。
 
 我们所做的一切都涉及成员函数返回引用，但如果它们返回的是指针或迭代器，由于相同的原因，同样的问题也会存在。引用、指针和迭代器都是句柄（获取其他对象的方式），返回对象内部的句柄始终存在破坏对象封装的风险。正如我们看到的，它还可能导致 `const` 成员函数允许对象的状态被修改。
@@ -3681,9 +3744,11 @@ const Point *pUpperLeft = &(boundingBox(*pgo).upperLeft()); // 获取指向上�
 这并不意味着你不应该拥有一个返回句柄的成员函数。有时你必须这样做。例如，`operator[]` 允许从 `string` 和 `vector` 中提取单个元素，这些 `operator[]` 通过返回容器内数据的引用来工作（参见 Item 3）——这些数据在容器本身销毁时也会被销毁。尽管如此，这种函数是例外。
 
 ### 注意事项
+
 - 避免返回对象内部的引用、指针或迭代器。这有助于封装，帮助 `const` 成员函数保持 `const`，并减少悬挂句柄的产生。
 
-### Item 29：编写异常安全的代码。
+### Item 29：编写异常安全的代码
+
 异常安全就像怀孕……但先放放这个想法。在讨论繁殖之前，我们还没有经过恋爱。
 
 假设我们有一个表示背景图像的 GUI 菜单类。该类设计用于线程环境，因此它有一个用于并发控制的互斥锁：
@@ -3695,9 +3760,9 @@ public:
   void changeBackground(std::istream& imgSrc); // 改变背景
   ...
 private:
-  Mutex mutex; // 互斥锁
-  Image *bgImage; // 当前背景图像
-  int imageChanges; // 背景改变次数
+  Mutex mutex;        // 互斥锁
+  Image *bgImage;     // 当前背景图像
+  int imageChanges;   // 背景改变次数
 };
 ```
 
@@ -3706,22 +3771,20 @@ private:
 ```cpp
 void PrettyMenu::changeBackground(std::istream& imgSrc)
 {
-  lock(&mutex); // 获取互斥锁（如 Item 14）
-  delete bgImage; // 删除旧背景
-  ++imageChanges; // 更新背景改变计数
-  bgImage = new Image(imgSrc); // 安装新背景
-  unlock(&mutex); // 释放互斥锁
+  lock(&mutex);                  // 获取互斥锁（如 Item 14）
+  delete bgImage;                // 删除旧背景
+  ++imageChanges;                // 更新背景改变计数
+  bgImage = new Image(imgSrc);   // 安装新背景
+  unlock(&mutex);                // 释放互斥锁
 }
 ```
 
-
-
-从异常安全的角度来看，这个函数的糟糕程度不能更坏了。异常安全有两个要求，而这个函数无一个都不满足。
+从异常安全的角度来看，这个函数的糟糕程度不能更坏了。异常安全有两个要求，而这个函数一个都不满足。
 
 当抛出异常时，异常安全的函数：
 
--   **不泄露资源。** 上面的代码没有通过这项测试，因为如果“`new Image(imgSrc)`”表达式产生异常，对 `unlock` 的调用将永远不会执行，互斥锁会被永久锁定。
--   **不允许数据结构被损坏。** 如果“`new Image(imgSrc)`”抛出异常，`bgImage` 将指向一个已被销毁的对象。此外，`imageChanges` 已经被增加了，尽管实际上并没有安装新的图像。（另一方面，旧的图像确实被消除了，所以我认为你也许可以辩说图像已经被“更改”了。））
+- **不泄露资源。** 上面的代码没有通过这项测试，因为如果 `new Image(imgSrc)` 表达式产生异常，对 `unlock` 的调用将永远不会执行，互斥锁会被永久锁定。
+- **不允许数据结构被损坏。** 如果 `new Image(imgSrc)` 抛出异常，`bgImage` 将指向一个已被销毁的对象。此外，`imageChanges` 已经被增加了，尽管实际上并没有安装新的图像。（另一方面，旧的图像确实被消除了，所以我认为你也许可以辩说图像已经被“更改”了。）
 
 解决资源泄露问题是容易的，因为 Item 13 解释了如何使用对象来管理资源，而 Item 14 引入了 `Lock` 类，作为一种确保互斥锁被及时释放的方法：
 
@@ -3729,7 +3792,7 @@ void PrettyMenu::changeBackground(std::istream& imgSrc)
 void PrettyMenu::changeBackground(std::istream& imgSrc)
 {
   Lock ml(&mutex);               // 来自 Item 14: 获取互斥锁并
-                                // 确保其稍后释放
+                                 // 确保其稍后释放
   delete bgImage;
   ++imageChanges;
   bgImage = new Image(imgSrc);
@@ -3742,11 +3805,11 @@ void PrettyMenu::changeBackground(std::istream& imgSrc)
 
 异常安全的函数提供三种保证之一：
 
--   提供**基本保证（basic guarantee）**的函数承诺：如果抛出异常，程序中的所有内容都保持有效状态。没有对象或数据结构被损坏，所有对象都处于内部一致的状态（例如，满足所有类不变性）。然而，程序的确切状态可能是不可预测的。例如，我们可以这样写 `changeBackground`：如果抛出异常，`PrettyMenu` 对象可能继续拥有旧的背景图像，也可能有一个默认背景图像，但客户端无法预测是哪一个。（要弄清楚答案，他们可能需要调用某个成员函数来告诉他们当前的背景图像是什么。）
--   提供**强保证（strong guarantee）**的函数承诺：如果抛出异常，程序的状态保持不变。对此类函数的调用在原子性上是可靠的，也就是说如果它们成功了，就是完全成功；如果它们失败了，程序状态就像从未被调用过一样。
+- 提供**基本保证（basic guarantee）**的函数承诺：如果抛出异常，程序中的所有内容都保持有效状态。没有对象或数据结构被损坏，所有对象都处于内部一致的状态（例如，满足所有类不变性）。然而，程序的确切状态可能是不可预测的。例如，我们可以这样写 `changeBackground`：如果抛出异常，`PrettyMenu` 对象可能继续拥有旧的背景图像，也可能有一个默认背景图像，但客户端无法预测是哪一个。（要弄清楚答案，他们可能需要调用某个成员函数来告诉他们当前的背景图像是什么。）
+- 提供**强保证（strong guarantee）**的函数承诺：如果抛出异常，程序的状态保持不变。对此类函数的调用在原子性上是可靠的，也就是说如果它们成功了，就是完全成功；如果它们失败了，程序状态就像从未被调用过一样。
+- 提供**不抛异常保证（nothrow guarantee）**的函数承诺永远不抛出异常，因为它们总是做承诺要做的事。对内置类型（例如 `int`、指针等）的所有操作都是不抛异常的（即提供不抛异常保证）。这是异常安全代码的关键构建模块。
 
 处理提供强保证的函数比处理只提供基本保证的函数要容易，因为在调用提供强保证的函数后，只有两种可能的程序状态：函数成功执行后的预期状态，或者函数被调用时存在的状态。相比之下，如果对只提供基本保证的函数调用产生异常，程序可能处于任何有效状态。
--   提供**不抛异常保证（nothrow guarantee）**的函数承诺永远不抛出异常，因为它们总是做承诺要做的事。对内置类型（例如 `int`、指针等）的所有操作都是不抛异常的（即提供不抛异常保证）。这是异常安全代码的关键构建模块。
 
 假设具有空异常规范的函数是不抛异常的，这似乎是合理的，但并不一定。例如，考虑这个函数：
 
@@ -3779,14 +3842,13 @@ void PrettyMenu::changeBackground(std::istream& imgSrc)
 
 注意，不再需要手动删除旧图像，因为这由智能指针内部处理。此外，删除操作只在新图像成功创建时发生。更准确地说，只有当其参数（“`new Image(imgSrc)`”的结果）成功创建时，才会调用 `tr1::shared_ptr::reset` 函数。`delete` 只在调用 `reset` 时使用，所以如果从未进入函数，`delete` 就不会使用。其次，我们重新排列了 `changeBackground` 中的语句顺序，以便在更改更改之前增加 `imageChanges`。作为一个原则，在事情实际发生之前，不改变对象的状态来指示某事的发生是一个良好的策略。
 
-
-
-
 正如我所说，那两个更改*几乎*足以让 `changeBackground` 提供强异常安全保证了。症结何在呢？参数 `imgSrc`。如果 `Image` 构造函数抛出异常，输入流的读取标记可能已经被移动了，而这种移动将导致一个对程序其余部分可见的状态改变。在 `changeBackground` 解决这个问题之前，它仅能提供基本的异常安全保证。
 
 然而，让我们先抛开这个问题，并假装 `changeBackground` 确实提供了强保证。（我有信心你能想出某种方法来实现它，也许通过将其参数类型从 `istream` 更改为包含图像数据的文件名。）有一种通用的设计策略通常能带来强保证，熟悉这种策略是非常重要的。这种策略被称为“**拷贝并交换**”（copy and swap）。从原则上说，它非常简单：为你想要修改的对象创建一个副本，然后在该副本上进行所有需要的更改。如果任何修改操作抛出异常，原始对象将保持不变。在所有更改都成功完成后，通过一个不会抛出异常的操作将修改后的对象与原始对象进行交换（参见 Item 25）。
 
 这种实现通常通过将“真实”对象的所有每个对象数据放入一个单独的实现对象中，然后给真实对象一个指向该实现对象的指针。这通常被称为“pimpl 句式”，Item 31 对其进行了详细描述。对于 `PrettyMenu`，它通常看起来如下：
+
+
 
 ```cpp
 struct PMImpl {                     // PMImpl = "PrettyMenu
@@ -3819,8 +3881,6 @@ void PrettyMenu::changeBackground(std::istream& imgSrc)
 
 在这个示例中，我选择将 `PMImpl` 设为 `struct` 而不是 `class`，因为 `pImpl` 是私有的，`PrettyMenu` 数据的封装性得到了保障。将 `PMImpl` 设为 `class` 至少一样好，虽然稍微不方便一些。（这还能让那些面向对象的纯洁主义者望而远之。）如果需要，可以将 `PMImpl` 嵌套在 `PrettyMenu` 内部。
 
-
-
 没有理由维持这种现状。在编写新代码或修改现有代码时，请务必仔细考虑如何使其具有异常安全性。首先从使用对象来管理资源开始（再次，参阅 Item 13）。这可以防止资源泄漏。接着，确定你编写的每个函数，在三种异常安全保证中，你上能提供的最强的是哪一种；只有在调用遗留代码让你别无选择时，才接受不提供保证。记录下你的决策，既为了函数的调用者，也为了未来的维护者。函数的异常安全保证是其接口的可见部分，因此你应该像选择函数接口的所有其他方面一样，审慎地选择它。
 
 四十年前，充斥 `goto` 的代码被认为是非常好的做法。现在，我们致力于编写结构化的控制流。二十年前，全局可访问的数据被认为是非常好的做法。现在，我们致力于封装数据。十年前，在不考虑异常影响的情况下编写函数被认为是非常好的做法。现在，我们致力于编写异常安全的代码。
@@ -3833,7 +3893,7 @@ void PrettyMenu::changeBackground(std::istream& imgSrc)
 - 强保证通常可以通过 `copy-and-swap` 实现，但强保证对于所有函数都不是实用的。
 - 函数提供的保证通常不会比它所调用的函数中最弱的保证强。
 
-### Item 30：理解内联（inlining）的本质。
+## Item 30：理解内联（inlining）的本质
 
 内联函数 —— 多么棒的主意！它们看起来像函数，用起来像函数，而且比宏好得多（参阅 Item 2），而且你可以调用它们而无需忍受函数调用的开销。你还有什么要求的呢？
 
@@ -3869,7 +3929,7 @@ inline const T& std::max(const T& a, const T& b)   // 请求：std::max 是
 
 `max` 是模板这一事实引出了观察：内联函数和模板通常定义在头文件中。这导致一些程序员得出结论：函数模板必须是内联的。这个结论既无效又可能产生危害，因此值得稍微研究一下。
 
-内联函数通常必须在在头文件中，因为大多数构建环境在编译期间进行内联。为了用被调用函数的体来替换函数调用，编译器必须知道该函数是什么样子的。（某些构建环境可以在链接期间进行内联，少数几个——基于 .NET 通用语言运行时 (CLI) 的托管环境——可以在运行时进行内联。此类环境是例外，而非规则。）
+内联函数通常必须在头文件中，因为大多数构建环境在编译期间进行内联。为了用被调用函数的体来替换函数调用，编译器必须知道该函数是什么样子的。（某些构建环境可以在链接期间进行内联，少数几个——基于 .NET 通用语言运行时 (CLI) 的托管环境——可以在运行时进行内联。此类环境是例外，而非规则。）
 
 模板通常在头文件中，因为编译器需要知道模板是什么样子的以便实例化它。（再次，这并非通用。某些构建环境会执行链接。）
 
@@ -3890,10 +3950,6 @@ void (*pf)() = f;     // pf 指向 f
 
 f();                   // 此调用将被内联，因为它是一个“正常”调用
 ```
-
-
-
-
 
 ```cpp
 pf();                // 此调用可能不会被执行，因为它通过
@@ -3949,9 +4005,6 @@ Derived::Derived()                // 概念上的实现
 }
 ```
 
-
-
-
 问题在于 `C++` 在分离接口与实现方面做得得并不好。一个类的定义不仅指定了类的接口，还包含了相当数量的实现细节。例如：
 
 ```cpp
@@ -4003,7 +4056,7 @@ public:
 
 这个想法存在两个问题。首先，`string` 不是一个类，而是一个 `typedef`（对应 `basic_string<char>`）。因此，`string` 的前向声明是不正确的。正确的前向声明要复杂得多，因为涉及到额外的模板。然而这并不重要，因为你不应该尝试手动声明标准库的一部分。相反，只需使用正确的 `#include` 即可。标准头文件不太可能是编译瓶颈，特别是如果你的构建环境允许你利用预编译头文件。如果解析标准头文件真的是问题，你可能需要更改接口设计，以避免使用会导致不良 `#include` 的标准库部分。
 
-前向声明一切的第二个（更重要的）困难在于编译器在编译期间需要知道对象的大小。考虑：
+前向声明一切的第二个（更重要）困难在于编译器在编译期间需要知道对象的大小。考虑：
 
 ```cpp
 int main()
@@ -4014,7 +4067,7 @@ Person p( params );   // 定义一个 Person
 }
 ```
 
-当编译器看到 `x` 的定义时，它们知道必须分配足够的空间（通常在栈上）存放存放 `int`。没问题。每个编译器都知道 `int` 有多大。当编译器看到 `p` 的定义时，它们知道必须为 `Person` 分配足够的空间，但它们如何能知道一个 `Person` 对象有多大呢？它们获取该信息的唯一方法是查阅类定义，但如果类定义允许省略实现细节，编译器又如何知道要分配多少空间呢？
+当编译器看到 `x` 的定义时，它们知道必须分配足够的空间（通常在栈上）存放 `int`。没问题。每个编译器都知道 `int` 有多大。当编译器看到 `p` 的定义时，它们知道必须为 `Person` 分配足够的空间，但它们如何能知道一个 `Person` 对象有多大呢？它们获取该信息的唯一方法是查阅类定义，但如果类定义允许省略实现细节，编译器又如何知道要分配多少空间呢？
 
 这个问题在 `Smalltalk` 和 `Java` 等语言中并不会出现，因为在这些语言中定义对象时，编译器会为指向对象的*指针*分配足够的空间。也就是说，如果上面的代码写成这样，它们就能处理它：
 
@@ -4049,9 +4102,9 @@ private:
 };
 ```
 
-```
 
-在这里，主类（`Person`）的数据成员除了一个指针（这里是 `tr1::shared_ptr`——参见项目 13）之外没有，指向它的实现类（`PersonImpl`）。这种设计通常被称为使用 *pimpl  idiom*（“指向实现的指针”）。在这样的类中，指针的名字通常为 `pImpl`，如上。
+
+在这里，主类（`Person`）的数据成员除了一个指针（这里是 `tr1::shared_ptr`——参见项目 13）之外没有，指向它的实现类（`PersonImpl`）。这种设计通常被称为使用 *pimpl idiom*（“指向实现的指针”）。在这样的类中，指针的名字通常为 `pImpl`，如上。
 
 通过这种设计，`Person` 的客户端与日期、地址和人的细节解耦了。这些实现可以随意修改，但 `Person` 的客户端不需要重新编译。此外，由于他们看不到 `Person` 实现的细节，客户端不太可能编写某种依赖于这些细节的代码。这是接口与实现的真正分离。
 
@@ -4062,45 +4115,47 @@ private:
 
 ```cpp
 class Date;             // 类声明
+
 Date today();            // 完美——不需要定义
+
 void clearAppointments(Date d); // 需要 Date 的定义
 ```
 
 当然，按值传递通常是一个坏主意（参见项目 20），但如果你由于某种原因发现自己在使用它，仍然没有理由引入不必要的编译依赖。
 
-
-
-
-
 在不定义 `Date` 的情况下声明 `today` 和 `clearAppointments` 的能力可能会让你感到惊讶，但这并不像看起来那样那么奇怪。如果任何人*调用*了这些函数，那么 `Date` 的定义必须在调用之前已经被看到过了。你可能会想，何何费精力去声明没人调用的函数呢？很简单。并不是*没有人*调用它们，而是*并不是所有人都*都调用了它们。如果你有一个包含几十个函数声明的库，不太可能每个客户端都调用每一个函数。通过将提供类定义的责任从你包含函数声明的头文件转移到包含函数调用的客户端文件中，你消除了客户端对它们并不真正需要的类型定义的人为依赖。
 
-### 为声明和定义提供单独的头文件。
+## 为声明和定义提供单独的头文件。
 
 为了方便遵守上述指南，头文件需要成对出现：一个用于声明，另一个用于定义。当然，这些文件必须保持一致。如果在一个某处更改了声明，那么在两个地方都必须进行更改。因此，库客户端应该始终 `#include` 声明文件，而不是自己进行前向声明，而库作者应该提供这两个头文件。例如，想要声明 `today` 和 `clearAppointments` 的 `Date` 客户端不应该像上面那样手动前向声明 `Date`。相反，它应该 `#include` 相应的声明头文件：
 
 ```cpp
 #include "datefwd.h"               // （但未定义）类 Date 的头文件
+
 Date today();                   // 与之前相同
+
 void clearAppointments(Date d);
 ```
 
-仅包含声明的头文件 `datefwd.h` 的名称基于标准 C++ 库中的头文件 `<iosfwd>`（参见 第 54 条）。`<iosfwd>` 包含了 iostream 组件的声明，其对应的定义位于几个不同的头文件中，包括 `<sstream>`、`<streambuf>`、`<fstream>` 和 `<iostream>`。
+仅包含声明的头文件 `datefwd.h` 的名称基于标准 C++ 库中的头文件 `<iosfwd>`（参见 第 54 条）。`<iosfwd>` 包含了 `iostream` 组件的声明，其对应的定义位于几个不同的头文件中，包括 `<sstream>`、`<streambuf>`、`<fstream>` 和 `<iostream>`。
 
 `<iosfwd>` 另一个意义在于，它明确了本条目（Item）中的建议不仅适用于模板，也适用于非模板。尽管 第 30 条 解释了在许多构建环境中，模板定义通常位于头文件中，但某些构建环境允许模板定义位于非头文件中，因此为模板提供仅包含声明的头文件仍然有意义。`<iosfwd>` 就是其中一个头文件。
 
 C++ 还提供了 `export` 关键字，允许将模板声明与模板定义分离。遗憾的是，编译器对 `export` 的支持非常少，而对 `export` 的实际经验更是极其匮乏。因此，要说 `export` 在有效的 C++ 编程中将起什么作用还时过早。
 
-使用 pimpl 句柄的 `Person` 等类通常被称为*句柄类（Handle classes）*。如果你好奇这类类实际上是如何执行操作的，一种方法是将它们所有的函数调用转发给相应的实现类，并让这些类执行实际工作。例如，这里是 `Person` 的两个成员函数的可能实现方式：
+使用 `pimpl` 句柄的 `Person` 等类通常被称为*句柄类（Handle classes）*。如果你好奇这类类实际上是如何执行操作的，一种方法是将它们所有的函数调用转发给相应的实现类，并让这些类执行实际工作。例如，这里是 `Person` 的两个成员函数的可能实现方式：
 
 ```cpp
 #include "Person.h"        // 我们正在实现 Person 类，
                                // 所以我们必须 #include 它的类定义
+
 #include "PersonImpl.h"    // 我们也必须 #include PersonImpl 的类
                                // 定义，否则我们无法调用
                                // 它的成员函数；注意
                                // PersonImpl 有与 Person 完全相同的
                                // 成员函数——它们的
                                // 接口是相同的
+
 Person::Person(const std::string& name, const Date& birthday, const Address& addr)
     : pImpl(new PersonImpl(name, birthday, addr)) {}
 
@@ -4167,28 +4222,19 @@ std::cout << pp->name()              // 通过 Person // 使用对象
 
 ```cpp
 class RealPerson: public Person {
-
 public:
-```
-
-
-
-
-```cpp
-RealPerson(const std::string& name, const Date& birthday,
-           const Address& addr)
-  : theName(name), theBirthDate(birthday), theAddress(addr)
-  {}
-
-  virtual ~RealPerson() {}
-
-  std::string name() const;        // implementations of these
-  std::string birthDate() const;   // functions are not shown, but
-  std::string address() const;     // they are easy to imagine
+    RealPerson(const std::string& name, const Date& birthday,
+               const Address& addr)
+      : theName(name), theBirthDate(birthday), theAddress(addr)
+      {}
+    virtual ~RealPerson() {}
+    std::string name() const;        // implementations of these
+    std::string birthDate() const;   // functions are not shown, but
+    std::string address() const;     // they are easy to imagine
 private:
-  std::string theName;
-  Date theBirthDate;
-  Address theAddress;
+    std::string theName;
+    Date theBirthDate;
+    Address theAddress;
 };
 ```
 
@@ -4230,15 +4276,13 @@ std::tr1::shared_ptr<Person> Person::create(const std::string& name,
 
 这一章理顺了一切。此外，我解释了不同特性真正*意味着*什么——当你使用特定的构造结构时，你实际上在*表达*什么。例如，公有继承意味着“是一个”（is-a），如果你试图让它代表其他任何意思，就会遇到麻烦。同样，虚函数意味着“必须继承接口”，而非虚函数意味着“接口和实现都必须继承”。未能区分这些含义给 C++ 程序员带来了许多苦恼。
 
-### Item 32: 确保公有继承模型符合“是一个”。
+## Item 32: 确保公有继承模型符合“是一个”。
 
-在 William Dement 的书《*Some Must Watch While Must Sleep》（W. Freeman and Company, 1974）中，William Dement 讲述了他试图在学生脑海中固定他课程最重要的课程的故事。他告诉班级，据称，普通的英国学生记住的历史最多只是哈斯廷斯战役发生在 1066 年。如果一个孩子记得其他别的，Dement 强调说，他或她记得 1066 这个年份。对于*他的*课程的学生来说，Dement 继续说道，只有几个关键信息，有趣的是，包括睡眠药物会导致失眠。他恳求学生记住这几个关键事实，即使他们忘记了课程中讨论的所有内容，并在整个学期中反复回到这些基本原则。
+在 William Dement 的书《*Some Must Watch While Must Sleep*》（W. Freeman and Company, 1974）中，William Dement 讲述了他试图在学生脑海中固定他课程最重要的课程的故事。他告诉班级，据称，普通的英国学生记住的历史最多只是哈斯廷斯战役发生在 1066 年。如果一个孩子记得其他别的，Dement 强调说，他或她记得 1066 这个年份。对于*他的*课程的学生来说，Dement 继续说道，只有几个关键信息，有趣的是，包括睡眠药物会导致失眠。他恳求学生记住这几个关键事实，即使他们忘记了课程中讨论的所有内容，并在整个学期中反复回到这些基本原则。
 
 课程结束时，期末考试的最后一个问题是：“写下课程中一件你一生都会记得的事。”当 Dement 批改考卷时，他震惊了。几乎每个人都写了“1066”。
 
 因此，我带着极大的恐惧心情现在向你们宣布，C++ 面向对象编程中最重要的规则就是：公有继承意味着“是一个”（is-a）。请记住这条规则。
-
-
 
 如果你写类 `D`（“派生类”）公继承自类 `B`（“基类”），你是在告诉 C++ 编译器（以及代码的人类阅读者）类型为 `D` 的对象也是类型为 `B` 的对象，但反之不然。你表示 `B` 代表一个比 `D` 更通用的概念，而 `D` 代表一个比 `B` 更具体的概念。你断言，在任何可以使用类型为 `B` 对象的地方，都可以使用类型为 `D` 的对象，因为每个类型为 `D` 的对象都是类型为 `B` 的对象。另一方面，你需要一个类型为 `D` 的对象，类型为 `B` 的对象是不够的：每个 `D` 都是一个 `B`，但反之不然。
 
@@ -4246,7 +4290,6 @@ C++ 强制执行这种对公有继承的解释。考虑这个例子：
 
 ```cpp
 class Person {...};
-
 class Student: public Person {...};
 ```
 
@@ -4256,32 +4299,35 @@ class Student: public Person {...};
 
 ```cpp
 void eat(const Person& p);              // 任何人都可以吃
-
 void study(const Student& s);          // 只有学生学习
-
-Person p;                               // p 是一个人
-Student s;                              // s 是一个学生
-
-eat(p);                                // 没问题，p 是一个人
-eat(s);                                // 没问题，s 是一个学生，
-                                        // 而且学生也是人
-
-study(s);                              // 没问题
-study(p);                              // 错误！p 不是学生
 ```
 
-这仅适用于公有继承。只有当 `Student` 公有派自 `Person` 时，C++ 的行为才会像我描述的那样。私有继承意味着完全不同的意思（参见 [Item 39]），而保护继承则是某种我直到今天仍无法领会的含义。
+
+
+```cpp
+Person p;   // p 是一个人
+Student s;  // s 是一个学生
+
+eat(p);     // 没问题，p 是一个人
+eat(s);     // 没问题，s 是一个学生，
+            // 而且学生也是人
+
+study(s);   // 没问题
+study(p);   // 错误！p 不是学生
+```
+
+这仅适用于公有继承。只有当`Student`公有派自`Person`时，C++ 的行为才会像我描述的那样。私有继承意味着完全不同的意思（参见 [Item 39]），而保护继承则是某种我直到今天仍无法领会的含义。
 
 公有继承与“is-a”（是一个））关系的等效性听起来很简单，但有时你的直觉会误导你。例如，企鹅是鸟类是一个事实，而鸟类会飞也是一个事实。如果我们幼稚地尝试在 C++ 中表达这种关系，我们的努力将导致：
 
 ```cpp
 class Bird {
 public:
-  virtual void fly();                  // 鸟类会飞
+  virtual void fly();  // 鸟类会飞
   ...
 };
 
-class Penguin:public Bird {             // 企鹅是鸟类
+class Penguin : public Bird {  // 企鹅是鸟类
   ...
 };
 ```
@@ -4293,30 +4339,33 @@ class Penguin:public Bird {             // 企鹅是鸟类
 ```cpp
 class Bird {
   ...
-}; // 没有声明 fly 函数
+};  // 没有声明 fly 函数
 
-class FlyingBird: public Bird {
+class FlyingBird : public Bird {
 public:
   virtual void fly();
   ...
 };
 
-class Penguin: public Bird {
+class Penguin : public Bird {
   ...
-}; // 没有声明 fly 函数
+};  // 没有声明 fly 函数
 ```
 
 与原始设计相比，这个层级结构对我们真实所知的反映要忠实得多。
 
 然而，我们在这些问题上还没有结束，因为对于某些软件，可能不需要区分会飞和不会飞的鸟。如果你的应用程序与喙密切相关，而与飞行无关，那么原始的两个类的层级结构可能是相当满意的。这简单地反映了一个事实：并不是所有软件都有理想的设计。最好的设计取决于系统现在和未来预期要做什么。如果你的应用程序对飞行一无所知，并且预计永远不会涉及，那么不区分会飞和不会飞的鸟可能是一个完全合理的决定。事实上，这可能比一个区分它们的设计更好，因为这种区分在你试图建模的世界中是不存在的。
 
-对于如何处理我所称的“所有鸟都会飞，企鹅是鸟，企鹅不会飞，呃，等等”这类问题，还有另一种观点。即重新定义企鹅的 `fly` 函数，使其产生运行时错误：
+对于如何处理我所称的“所有鸟都会飞，企鹅是鸟，企鹅不会飞，呃，等等”这类问题，还有另一种观点。即重新定义企鹅的`fly`函数，使其产生运行时错误：
 
 ```cpp
-void error(const std::string& msg); // 在别处
-class Penguin: public Bird {
+void error(const std::string& msg);  // 在别处
+
+class Penguin : public Bird {
 public:
-  virtual void fly() { error("尝试让企鹅飞！");
+  virtual void fly() {
+    error("尝试让企鹅飞！");
+  }
   ...
 };
 ```
@@ -4325,30 +4374,31 @@ public:
 
 你如何区分这种区别呢？从检测到错误的时间来看。“企鹅不会飞”这一禁令可以通过编译器强制执行，但违反“企鹅真的尝试飞行是错误”这一规则的行为，只能在运行时检测到。
 
-要表达“企鹅不会飞——就此为止”这一约束，你要确保为 `Penguin` 没有定义这样的函数：
+要表达“企鹅不会飞——就此为止”这一约束，你要确保为`Penguin`没有定义这样的函数：
 
 ```cpp
 class Bird {
   ...
-}; // 没有声明 fly 函数
+};  // 没有声明 fly 函数
 
-class Penguin: public Bird {
+class Penguin : public Bird {
   ...
-}; // 没有声明 fly 函数
+};  // 没有声明 fly 函数
 ```
 
 如果你现在尝试让企鹅飞，编译器会指责你的违规行为：
 
 ```cpp
 Penguin p;
-p.fly(); // 错误！
+
+p.fly();  // 错误！
 ```
 
 这与你采用产生运行时错误的方法完全不同。[Item 18] 解释了良好的接口防止无效代码通过编译，因此你应该倾向于在编译时拒绝飞行尝试，而不是在运行时检测它们。
 
 也许你会承认自己在鸟类直觉上有所缺陷，但你可以依靠对基础几何学的掌握，对吧？我的意思是，矩形和正方形能有多复杂？
 
-那么回答这个简单的问题：`Square` 类应该公继承自 `Rectangle` 类吗？
+那么回答这个简单的问题：`Square` 类应该公继承自`Rectangle`类吗？
 
 ![images](img/06inf01.gif)
 
@@ -4361,100 +4411,107 @@ class Rectangle {
 public:
   virtual void setHeight(int newHeight);
   virtual void setWidth(int newWidth);
-  virtual int height() const;          // 返回值
+  virtual int height() const;  // 返回值
   virtual int width() const;
   ...
 };
 
-void makeBigger(Rectangle& r)          // 增加 r 面积的
+void makeBigger(Rectangle& r)  // 增加 r 面积的
 {
   int oldHeight = r.height();
-  r.setWidth(r.width() + 10);         // 将 r 的宽度增加 10
-  assert(r.height() == oldHeight);    // 断言 r 的高度没有变化
+
+  r.setWidth(r.width() + 10);  // 将 r 的宽度增加 10
+
+  assert(r.height() == oldHeight);  // 断言 r 的高度没有变化
 }
 ```
 
-显然，这个断言永远不会失败。`makeBigger` 只改变 `r` 的宽度。它的高度从未被修改。
+显然，这个断言永远不会失败。`makeBigger`只改变`r`的宽度。它的高度从未被修改。
 
 现在考虑这段代码，它使用公继承允许正方形被视为矩形：
 
 ```cpp
-class Square: public Rectangle {...};
+class Square : public Rectangle {
+  ...
+};
+
 Square s;
+
 ...
-assert(s.width() == s.height());     // 这对于所有正方形都成立
-makeBigger(s);                       // 通过继承，s 是 Rectangle，所以我们可以增加它的面积
-assert(s.width() == s.height());     // 这必须仍然成立
+
+assert(s.width() == s.height());  // 这对于所有正方形都成立
+
+makeBigger(s);  // 通过继承，s 是 Rectangle，所以我们可以增加它的面积
+
+assert(s.width() == s.height());  // 这必须仍然成立
 ```
 
-
-
-
+```cpp
 // 针对所有正方形
+```
 
 第二个断言也绝不会失败，这一点同样明确。根据定义，正方形的宽度与其高度相同。
 
 但现在我们遇到了问题。我们如何调和以下断言呢？
 
-* 在调用 `makeBigger` 之前，`s` 的高度与其宽度相同；
-* 在 `makeBigger` 内部，`s` 的宽度被改变了，但高度没有改变；
-* 从 `makeBigger` 返回后，`s` 的高度再次与其宽度相同。（注意 `s` 是通过引用传递给 `makeBigger` 的，因此 `makeBigger` 修改的是 `s` 本身，而不是 `s` 的拷贝。）
+- 在调用`makeBigger`之前，`s`的高度与其宽度相同；
+- 在`makeBigger`内部，`s`的宽度被改变了，但高度没有改变；
+- 从`makeBigger`返回后，`s`的高度再次与其宽度相同。（注意`s`是通过引用传递给`makeBigger`的，因此`makeBigger`修改的是`s`本身，而不是`s`的拷贝。）
 
 怎么会？
 
 来到公继承的奇妙世界。在这里你在其他领域（包括数学）中培养的直觉可能不像你预期的那样好用。在这种情况下，根本上的困难在于：适用于矩形的特性（其宽度可以独立于高度被修改）并不适用于正方形（其宽度和高度必须相同）。但公继承断言，适用于基类对象的所有内容——*一切！*——也适用于派生类对象。在矩形和正方形的情况下（以及在 [Item 38] 中涉及集合和列表的示例中），该断言并不成立，因此使用公继承来模拟它们之间的关系是完全错误的。编译器允许你这样做，但正如我们刚刚看到的，这不能保证代码的行为正常。正如每个程序员都必须学习的那样（尽管有些人频率不相同），代码通过编译并不意味着它能正常工作。
 
-不要担心你多年来培养的软件直觉在面对面向对象设计时会误导你。那些知识仍然很有价值，但既然你已经将继承加入到你的设计方案库中，你必须用新的见解来增强直觉，以引导你正确应用继承。久而久之，`Penguin` 继承自 `Bird` 或 `Square` 继承自 `Rectangle` 的概念将带给你类似于现在看到有人给你展示一个长达几页的函数时的那种感觉。这*可能*是处理问题的方法，但它不太可能。
+不要担心你多年来培养的软件直觉在面对面向对象设计时会误导你。那些知识仍然很有价值，但既然你已经将继承加入到你的设计方案库中，你必须用新的见解来增强直觉，以引导你正确应用继承。久而久之，`Penguin`继承自`Bird`或`Square`继承自`Rectangle`的概念将带给你类似于现在看到有人给你展示一个长达几页的函数时的那种感觉。这*可能*是处理问题的方法，但它不太可能。
 
 “是一个”（is-a）关系并不是类与类之间存在的唯一关系。另外两种常见的类间关系是“有一个”（has-a）和“基于……实现”（is-implemented-in-terms-of）。这些关系在 [Items 38] 和 [39] 中有所讨论。在 C++ 设计中，由于其中一种重要关系被错误地建模为“是一个”而导致设计出错的情况并不罕见，因此你应该确保自己理解了这些关系之间的区别，并知道如何在 C++ 中对每种关系进行最佳建模。
 
 ### 注意事项
 
-* 公继承意味着“是一个”。所有适用于基类的内容也必须适用于派生类，因为每个派生类对象*都是*一个基类对象。
+- 公继承意味着“是一个”。所有适用于基类的内容也必须适用于派生类，因为每个派生类对象*都是*一个基类对象。
 
-### Item 33：避免隐藏继承的名称
+## Item 33：避免隐藏继承的名称
 
 莎士比亚对名字很有讲究。“名字又算什么呢？”他问，“玫瑰换个名字，闻起来依然芬芳。”这位诗人还写道，“那个偷走我名声的人……真的让我变得贫穷了。”没错。这引出了我们 C++ 中的继承名称。
 
 这个问题实际上与继承无关，它与作用域有关。我们都知道，在如下代码中：
 
 ```cpp
-int x; // 全局变量
+int x;  // 全局变量
 
 void someFunc()
 {
-  double x; // 局部变量
-  std::cin >> x; // 为局部 x 读取新值
+  double x;  // 局部变量
+
+  std::cin >> x;  // 为局部 x 读取新值
 }
 ```
 
-读取到 `x` 的语句指的是局部变量 `x` 而不是全局变量 `x`，因为内层作用域中的名称会隐藏（“屏蔽”）外层作用域中的名称。我们可以这样视觉化作用域的情况：
+读取到`x`的语句指的是局部变量`x`而不是全局变量`x`，因为内层作用域中的名称会隐藏（“屏蔽”）外层作用域中的名称。我们可以这样视觉化作用域的情况：
 
 ![images](img/06inf02.gif)
 
-当编译器处于 `someFunc` 的作用域内并遇到名称 `x` 时，它们会在局部作用域中查找是否有同名成员。由于存在，它们永远不会检查任何其他作用域。在这种情况下，`someFunc` 的 `x` 类型是 `double`，而全局 `x` 类型是 `int`，但这并不重要。C++ 的名称隐藏规则正是这样做的：隐藏*名称*。这些名称对应于相同类型还是不同类型并不重要。在这种情况下，一个名为 `x` 的 `double` 隐藏了一个名为 `x` 的 `int`。
+当编译器处于`someFunc`的作用域内并遇到名称`x`时，它们会在局部作用域中查找是否有同名成员。由于存在，它们永远不会检查任何其他作用域。在这种情况下，`someFunc`的`x`类型是`double`，而全局`x`类型是`int`，但这并不重要。C++ 的名称隐藏规则正是这样做的：隐藏*名称*。这些名称对应于相同类型还是不同类型并不重要。在这种情况下，一个名为`x`的`double`隐藏了一个名为`x`的`int`。
 
 现在引入继承。我们知道，当我们处于派生类的成员函数内部并引用基类中的内容时，我们可以找到它。但如果我们使用一个基类中已经存在的名称，编译器将在派生类中找到该名称，而不会在基类中查找。这不是继承的问题，而是名称可见性规则的问题。派生类“隐藏”了基类中的名称，因为它在自己的作用域内有相同的名称。
 
-
-
-
-
 ```cpp
-d.mf3();                // fine, calls Derived::mf3
-d.mf3(x);               // error! Derived::mf3 hides Base::mf3
+d.mf3();      // fine, calls Derived::mf3
+
+d.mf3(x);     // error! Derived::mf3 hides Base::mf3
 ```
 
-如你所示，即使基类和派生类中的函数采用不同的参数类型，这种情况仍然适用；而且无论函数是虚函数还是非虚函数都适用。正如在本节开头提到的，函数 `someFunc` 中的 `double x` 隐藏了全局作用域中的 `int x` 一样，这里 `Derived` 中的函数 `mf3` 也隐藏了一个同名但类型不同的 `Base` 类函数。
+如你所示，即使基类和派生类中的函数采用不同的参数类型，这种情况仍然适用；而且无论函数是虚函数还是非虚函数都适用。正如在本节开头提到的，函数`someFunc`中的`double x`隐藏了全局作用域中的`int x`一样，这里`Derived`中的函数`mf3`也隐藏了一个同名但类型不同的`Base`类函数。
 
 这种行为背后的逻辑是：防止你在库或应用程序框架中创建新的派生类时，意外地继承了远端基类的重载。遗憾的是，你通常*想要*继承这些重载。事实上，如果你在使用公有继承且没有继承这些重载，那么你就违反了基类和派生类之间的“是一个”（is-a）关系，而 Item 32 解释了这种关系是公继承的基础。因此，你几乎总是想要重写 C++ 对继承名称的默认隐藏行为。
 
-你可以通过 `using` 声明来实现：
+你可以通过`using`声明来实现：
 
 ```cpp
 class Base {
 private:
   int x;
+
 public:
   virtual void mf1() = 0;
   virtual void mf1(int);
@@ -4464,10 +4521,11 @@ public:
   ...
 };
 
-class Derived: public Base {
+class Derived : public Base {
 public:
-  using Base::mf1;       // 让 Base 中所有命名为 mf1 和 mf3 的内容
-  using Base::mf3;       // 在 Derived 的作用域内可见（且公有）
+  using Base::mf1;  // 让 Base 中所有命名为 mf1 和 mf3 的内容
+  using Base::mf3;  // 在 Derived 的作用域内可见（且公有）
+
   virtual void mf1();
   void mf3();
   void mf4();
@@ -4482,39 +4540,38 @@ public:
 ```cpp
 Derived d;
 int x;
+
 ...
-d.mf1();               // still fine, still calls Derived::mf1
-d.mf1(x);               // now okay, calls Base::mf1
-d.mf2();               // still fine, still calls Base::mf2
-d.mf3();               // fine, calls Derived::mf3
-d.mf3(x);               // now okay, calls Base::mf3
+
+d.mf1();    // still fine, still calls Derived::mf1
+d.mf1(x);   // now okay, calls Base::mf1
+d.mf2();    // still fine, still calls Base::mf2
+d.mf3();    // fine, calls Derived::mf3
+d.mf3(x);   // now okay, calls Base::mf3
 ```
 
-这意味着，如果你从自一个带有重载函数的基类，并且只想重新定义或重写其中某些函数，你需要为每个本 otherwise 会被隐藏的名称包含一个 `using` 声明。如果不这样做，你想要继承的某些名称将被被隐藏。
+这意味着，如果你从自一个带有重载函数的基类，并且只想重新定义或重写其中某些函数，你需要为每个本 otherwise 会被隐藏的名称包含一个`using`声明。如果不这样做，你想要继承的某些名称将被被隐藏。
 
-可以想象，你有时可能并不想继承基类中的所有函数。在公有继承下，这种情况不应该发生，因为再次，这违反了公有继承中基类和派生类之间的“是一个”关系。（这就是为什么上面的 `using` 声明位于派生类的公有部分：基类中是公有的名称在公有派生类中也应当是公有的。）然而，在私有继承下（参见 Item 39），这是有意义的。例如，假设 `Derived` 私有继承自 `Base`，而 `Derived` 想要继承的 `mf1` 版本仅是不带参数的那个。一个 `using` 声明在这里无法解决问题，因为 `using` 声明会使*所有*具有给定名称的继承函数在派生类中可见。不，这种情况需要一种不同的技术，即简单的转发函数：
+可以想象，你有时可能并不想继承基类中的所有函数。在公有继承下，这种情况不应该发生，因为再次，这违反了公有继承中基类和派生类之间的“是一个”关系。（这就是为什么上面的`using`声明位于派生类的公有部分：基类中是公有的名称在公有派生类中也应当是公有的。）然而，在私有继承下（参见 Item 39），这是有意义的。例如，假设`Derived`私有继承自`Base`，而`Derived`想要继承的`mf1`版本仅是不带参数的那个。一个`using`声明在这里无法解决问题，因为`using`声明会使*所有*具有给定名称的继承函数在派生类中可见。不，这种情况需要一种不同的技术，即简单的转发函数：
 
 ```cpp
 class Base {
 public:
   virtual void mf1() = 0;
   virtual void mf1(int);
-  ...                                // 同前
+  ...  // 同前
 };
 
-class Derived: private Base {
+class Derived : private Base {
 public:
-  virtual void mf1() { // this is a case for a different technique
+  virtual void mf1() {
     Base::mf1();
   }
   ...
 };
 ```
-*等待，转发函数示例的输入文本在末尾出现了乱码/重复。我将根据提示中最后部分提供的文本重新格式化逻辑。*
 
----
-
-### Item 34: 区分接口与实现
+## Item 34：区分接口与实现
 
 看似直观的继承概念在仔细检查后被发现由两部分组成：接口的继承和实现的继承。
 
@@ -4529,17 +4586,22 @@ public:
   ...
 };
 
-class Rectangle: public Shape { ... };
-class Ellipse: public Shape { ... };
+class Rectangle : public Shape {
+  ...
+};
+
+class Ellipse : public Shape {
+  ...
+};
 ```
 
-`Shape` 是一个抽象类；其纯虚函数 `draw` 将其标记为抽象。因此，客户端不能创建 `Shape` 实例，只能创建派生自它的类的。尽管如此，`Shape` 对所有继承它的类都产生深远的影响，因为
+`Shape`是一个抽象类；其纯虚函数`draw`将其标记为抽象。因此，客户端不能创建`Shape`实例，只能创建派生自它的类的。尽管如此，`Shape`对所有继承它的类都产生深远的影响，因为：
 
 - 成员函数接口总是会被继承的。正如 Item 32 所解释的，公继承意味着“是一个”关系，所以任何适用于基类的特性也必须适用于其派生类。因此，如果一个函数适用于某个类，它也必须适用于其派生类。
 
-`Shape` 类中声明了三个函数。第一个 `draw` 在隐式显示器上绘制当前对象。第二个 `error` 在成员函数需要报告错误时被调用。第三个 `objectID` 返回当前对象的唯一整数标识符。每个函数的声明方式不同：`draw` 是纯虚函数；`error` 是虚函数；而 `objectID` 是非虚函数。这些不同的声明方式具有什么影响？
+`Shape`类中声明了三个函数。第一个`draw`在隐式显示器上绘制当前对象。第二个`error`在成员函数需要报告错误时被调用。第三个`objectID`返回当前对象的唯一整数标识符。每个函数的声明方式不同：`draw`是纯虚函数；`error`是虚函数；而`objectID`是非虚函数。这些不同的声明方式具有什么影响？
 
-首先考虑纯虚函数 `draw`：
+首先考虑纯虚函数`draw`：
 
 ```cpp
 class Shape {
@@ -4549,24 +4611,29 @@ public:
 };
 ```
 
-纯虚函数的两个最显著的特征是：任何继承它们的具体类都*必须*重新声明，并且它们在抽象类中通常没有定义。将这两个特征结合起来，你意识到
+纯虚函数的两个最显著的特征是：任何继承它们的具体类都*必须*重新声明，并且它们在抽象类中通常没有定义。将这两个特征结合起来，你意识到：
 
 - 声明纯虚函数的目的是让派生类只继承函数接口。
 
-
-
-
-顺带提一下，为纯虚函数提供定义是可能的。也就是说，你可以为 `Shape::draw` 提供一个实现，C++ 不会报错，但调用它的唯一方法是使用类名来限定调用：
+顺带提一下，为纯虚函数提供定义是可能的。也就是说，你可以为`Shape::draw`提供一个实现，C++ 不会报错，但调用它的唯一方法是使用类名来限定调用：
 
 ```cpp
-Shape *ps = new Shape;                // ！ Shape 是抽象类
-Shape *ps1 = new Rectangle;           // 正常
-ps1->draw();                          // 调用 Rectangle::draw
-Shape *ps2 = new Ellipse;             // 正常
-ps2->draw();                          // 调用 Ellipse::draw
-ps1->Shape::draw();                   // 调用 Shape::draw
-ps2->Shape::draw();                   // 调用 Shape::draw
+Shape* ps = new Shape;          // ！ Shape 是抽象类
+
+Shape* ps1 = new Rectangle;     // 正常
+
+ps1->draw();                    // 调用 Rectangle::draw
 ```
+
+
+
+`Shape *ps2 = new Ellipse;` // 正常
+
+`ps2->draw();` // 调用 `Ellipse::draw`
+
+`ps1->Shape::draw();` // 调用 `Shape::draw`
+
+`ps2->Shape::draw();` // 调用 `Shape::draw`
 
 除了能帮助你在鸡尾派对上给程序员们留下深刻印象外，这一特性的知识通常用处有限。然而，正如你在下面所看到的，它可以作为一种机制，为简单的（非纯）虚函数提供比通常更安全的默认实现。
 
@@ -4578,9 +4645,13 @@ ps2->Shape::draw();                   // 调用 Shape::draw
 
 ```cpp
 class Shape {
+
 public:
+
   virtual void error(const std::string& msg);
+
   ...
+
 };
 ```
 
@@ -4590,17 +4661,27 @@ public:
 
 ```cpp
 class Airport { ... };               // 代表机场
+
 class Airplane {
+
 public:
+
   virtual void fly(const Airport& destination);
+
   ...
+
 };
 
 void Airplane::fly(const Airport& destination)
+
 {
+
   // 飞往目的地的代码
+
 }
+
 class ModelA: public Airplane { ... };
+
 class ModelB: public Airplane { ... };
 ```
 
@@ -4610,7 +4691,9 @@ class ModelB: public Airplane { ... };
 
 ```cpp
 class ModelC: public Airplane {
+
   ...                               // 没有声明 fly 函数
+
 };
 ```
 
@@ -4618,7 +4701,9 @@ class ModelC: public Airplane {
 
 ```cpp
 Airport PDX(...);
+
 Airplane *pa = new ModelC;
+
 pa->fly(PDX); // 调用 Airplane::fly
 ```
 
@@ -4628,16 +4713,25 @@ pa->fly(PDX); // 调用 Airplane::fly
 
 ```cpp
 class Airplane {
+
 public:
+
   virtual void fly(const Airport& destination) = 0;
+
   ...
+
 protected:
+
   void defaultFly(const Airport& destination);
+
 };
 
 void Airplane::defaultFly(const Airport& destination)
+
 {
+
   // 飞往目的地的代码
+
 }
 ```
 
@@ -4645,19 +4739,31 @@ void Airplane::defaultFly(const Airport& destination)
 
 ```cpp
 class ModelA: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination) {
+
     defaultFly(destination);
+
   }
+
   ...
+
 };
 
 class ModelB: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination) {
+
     defaultFly(destination);
+
   }
+
   ...
+
 };
 ```
 
@@ -4665,14 +4771,21 @@ public:
 
 ```cpp
 class ModelC: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination);
+
   ...
+
 };
 
 void ModelC::fly(const Airport& destination)
+
 {
+
   // 将 ModelC 飞机飞往目的地的代码
+
 }
 ```
 
@@ -4682,69 +4795,91 @@ void ModelC::fly(const Airport& destination)
 
 有些人反对使用单独的函数来提供接口和默认实现，例如上面的 `fly` 和 `defaultFly`。首先，他们指出，这用大量密切相关的函数名称充斥了类的命名空间。然而，他们仍然同意接口和默认实现应该是分开的。
 
-
-
-
 ```cpp
 {
+
     // 一个纯虚函数
+
     // 飞往给定目的地的
+
     // 默认代码
+
 }
 ```
 
 ```cpp
 class ModelA: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination)
+
   { Airplane::fly(destination); }
+
   ...
+
 };
 
 class ModelB: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination)
+
   { Airplane::fly(destination); }
+
   ...
+
 };
 
 class ModelC: public Airplane {
+
 public:
+
   virtual void fly(const Airport& destination);
+
   ...
+
 };
 
 void ModelC::fly(const Airport& destination)
+
 {
+
   // 将 ModelC 飞机飞往给定目的地的实现代码
+
 }
 ```
 
-这种设计与之前的几乎完全相同，不同在于纯虚函数 `Airplane::fly` 的函数体取代了独立函数 `Airplane::defaultFly`。本质上，`fly` 被拆分成了它的两个基本组件。它的声明指定了它的接口（派生类*必须*使用），而它的定义指定了它的默认行为（派生类*可以*使用，但仅当它们显式请求时)。然而，在合并 `fly` 和 `defaultFly` 时，你失去了为这两个函数提供不同保护级别的能力：以前受保护的代码（通过放置在 `defaultFly` 中）现在变成了公有的（因为它们现在被放置在 `fly` 中）。
+这种设计与之前的几乎完全相同，不同在于纯虚函数 `Airplane::fly` 的函数体取代了独立函数 `Airplane::defaultFly`。本质上，`fly` 被拆分成了它的两个基本组件。它的声明指定了它的接口（派生类*必须*使用），而它的定义指定了它的默认行为（派生类*可以*使用，但仅当它们显式请求时）。然而，在合并 `fly` 和 `defaultFly` 时，你失去了为这两个函数提供不同保护级别的能力：以前受保护的代码（通过放置在 `defaultFly` 中）现在变成了公有的（因为它们现在被放置在 `fly` 中）。
 
 最后，我们来看 `Shape` 的非虚函数 `objectID`：
 
 ```cpp
 class Shape {
+
 public:
+
   int objectID() const;
+
   ...
+
 };
 ```
 
-当一个成员函数是非虚的时，它不应该在派生类中表现出不同的行为。事实上，非虚成员函数指定了*跨特化的不不变性*，因为它识别了无论派生类变得多么特化，都不应该改变的行为。因此：
+当一个成员函数是非虚的时，它不应该在派生类中表现出不同的行为。事实上，非虚成员函数指定了*跨特化的不变性*，因为它识别了无论派生类变得多么特化，都不应该改变的行为。因此：
 
 * 声明非虚函数的目的是让派生类继承一个函数*接口以及强制性的实现*。
 
-你可以将 `Shape::objectID` 的声明看作是：“每一个 `Shape` 对象都有一个可以产生对象标识符的函数，而且该对象标识符总是以相同的方式计算的。这种方式由 `Shape::objectID` 的定义决定，任何派生类都不应尝试改变它的实现方式。”由于非虚函数识别了跨特化的*不不变性*，它不应在派生类中重新定义，这一点在 Item 36 中进行了详细讨论。
+你可以将 `Shape::objectID` 的声明看作是：“每一个 `Shape` 对象都有一个可以产生对象标识符的函数，而且该对象标识符总是以相同的方式计算的。这种方式由 `Shape::objectID` 的定义决定，任何派生类都不应尝试改变它的实现方式。”由于非虚函数识别了跨特化的*不变性*，它不应在派生类中重新定义，这一点在 Item 36 中进行了详细讨论。
 
 纯虚函数、普通虚函数和非虚函数声明之间的差异允许你精确地指定你希望派生类继承的内容：分别是仅接口、接口和默认实现、以及接口和强制性实现。由于这些不同类型的声明在根本上具有不同的含义，你在声明成员函数时必须在它们之间仔细选择。如果你这样做，应该避免缺乏经验的类设计师常犯的两个常见错误。
 
-第一个错误是将所有函数声明为非虚。这为派生类中的特化没有留了任何空间；非虚析构函数特别有问题（参见 Item 7）。当然，设计一个不打算用作基类的类是完全合理的。在这种情况下，一组完全是非虚的成员函数是合适的。然而，这类类的声明往往是因为不知道虚函数和非虚函数之间的区别，或者是因为对虚函数性能开销无根据的担忧。事实是，几乎任何将用作基类的类都会有虚函数（再次，参见 Item 7）。
+第一个错误是将所有函数声明为非虚。这为派生类中的特化没有留下任何空间；非虚析构函数特别有问题（参见 Item 7）。当然，设计一个不打算用作基类的类是完全合理的。在这种情况下，一组完全是非虚的成员函数是合适的。然而，这类类的声明往往是因为不知道虚函数和非虚函数之间的区别，或者是因为对虚函数性能开销无根据的担忧。事实是，几乎任何将用作基类的类都会有虚函数（再次，参见 Item 7）。
 
 如果你担心虚函数的开销，允许我提出基于经验的 80-20 法则（另见 Item 30），该法则指出在典型的程序中，80% 的运行时间将花费在执行 20% 的代码上。这条规则很重要，因为它意味着平均 80% 的函数调用可以是虚的，而不会对程序的整体性能产生任何可检测的影响。在你由于担心是否能负担虚函数开销而愁得白头之前，先采取简单的预防措施，确保你专注于程序中决策可能真正产生差异的 20% 的代码。
 
-另一个常见问题是将*所有*成员函数声明为虚函数。有时这是正确的做法——参考 Item 31 中的接口类。然而，这可能是一个缺乏立场的类设计师的标志。某些函数*不应该*在派生类中被重新定义，每当出现这种情况时，你必须通过将这些函数设为非虚来明确这一点。如果他们会全盘接受，那么假装你的类可以满足所有人的需求对谁都没有处。
+另一个常见问题是将*所有*成员函数声明为虚函数。有时这是正确的做法——参考 Item 31 中的接口类。然而，这可能是一个缺乏立场的类设计师的标志。某些函数*不应该*在派生类中被重新定义，每当出现这种情况时，你必须通过将这些函数设为非虚来明确这一点。如果他们不会全盘接受，那么假装你的类可以满足所有人的需求对谁都没有好处。
 
 ### 需要记忆的事
 
@@ -4759,9 +4894,13 @@ public:
 
 ```cpp
 class GameCharacter {
+
 public:
+
   virtual int healthValue() const; // 派生类可以重新定义
+
   ...
+
 };
 ```
 
@@ -4769,30 +4908,41 @@ public:
 
 ### 通过非虚接口实现模板方法模式
 
-我们从一种有趣的观点开始，即虚函数应该是私有的。这一学派的随者建议，更好的设计是保留 `healthValue` 为公共函数，但将其变为非虚，并让它调用私有的虚函数来执行实际工作，假设为 `doHealth`：
+我们从一种有趣的观点开始，即虚函数应该是私有的。这一学派的追随者建议，更好的设计是保留 `healthValue` 为公共函数，但将其变为非虚，并让它调用私有的虚函数来执行实际工作，假设为 `doHealth`：
 
 ```cpp
 class GameCharacter {
+
 public:
+
   int healthValue() const // 派生类不重新定义
+
   {
+
     // “之前”的操作——参见 Item 36
+
     int retVal = doHealth(); // 执行实际工作
+
     // “之后”的操作——见下文
+
     return retVal;
+
   }
+
   ...
 
 private:
+
   virtual int doHealth() const // 派生类可以重新定义此函数
+
   {
+
     ... // 计算健康值的默认算法
+
   } // 角色的健康状况
+
 };
 ```
-
-
-
 
 在这段代码（以及本文项的其余部分）中，我展示了类定义中成员函数的体。正如 Item 30 所解释的，这会隐式地将它们声明为 `inline`。我之所以这样展示代码，是为了更容易观察发生了什么。我所描述的设计与内联决策无关，因此不要认为成员函数定义在类内部是有特殊意义的。其实并没有。
 
@@ -4806,20 +4956,93 @@ NVI 惯用式的一个优势从代码中的“do 'before' stuff”和“do 'afte
 
 ### 通过函数指针实现策略模式
 
-NVI 惯用式是公共虚函数的一种有趣的替代方案，但从设计的角度来看，它无非是装面点缀。毕竟，我们仍然在使用虚函数来计算每个角色的健康值。一个更具戏剧的设计主可以是：计算角色的健康值与角色的类型无关——这种计算完全不需要是角色的一部分。例如，我们可以要求每个角色的构造函数传递一个指向健康计算函数的指针，并调用该函数来执行实际计算：
+NVI 惯用式是公共虚函数的一种有趣的替代方案，但从设计的角度来看，它无非是表面点缀。毕竟，我们仍然在使用虚函数来计算每个角色的健康值。一个更具戏剧性的设计主可以是：计算角色的健康值与角色的类型无关——这种计算完全不需要是角色的一部分。例如，我们可以要求每个角色的构造函数传递一个指向健康计算函数的指针，并调用该函数来执行实际计算：
 
 ```cpp
 class GameCharacter; // 前向声明
 
 // 默认健康计算算法的函数
+
 int defaultHealthCalc(const GameCharacter& gc);
 
 class GameCharacter {
+
 public:
+
   typedef int (*HealthCalcFunc)(const GameCharacter&);
 
   explicit GameCharacter(HealthCalcFunc hcf = defaultHealthCalc)
+
   : healthFunc(hcf)
+
+  {}
+
+  int healthValue() const
+
+  { return healthFunc(*this); }
+
+  ...
+
+private:
+
+  HealthCalcFunc healthFunc;
+
+};
+```
+
+这种方法是另一种常用设计模式——策略模式的简单应用。与基于 `GameCharacter` 虚函数的方法相比，它提供了一些有趣的灵活性：相同类型的不同实例可以具有不同的健康计算函数。例如：
+
+```cpp
+class EvilGuy: public GameCharacter {
+
+public:
+
+  explicit EvilGuy(HealthCalcFunc hcf = defaultHealthCalc)
+
+  : GameCharacter(hcf)
+
+  {}
+
+  ...
+
+};
+
+int loseHealthQuickly(const GameCharacter&);
+
+int loseSlowly(const GameCharacter&);
+```
+
+
+
+```cpp
+EvilGuy ebg1(loseHealthQuickly);
+EvilGuy ebg2(loseSlowly);
+```
+
+另一方面，健康计算函数不再是`GameCharacter`的成员意味着它无法访问正在计算的对象。如果角色的健康值可以通过公共接口计算出来，那么这就不是问题；但如果准确计算需要非私有信息，这就是问题。
+
+作为一个通用规则，解决非成员函数访问类非私有部分需求的方法是削弱类的封装性。例如，类可以将非成员函数声明为友元（friend），或者为它希望隐藏的实现提供公共访问器函数。使用函数指针代替虚函数的优势（例如具有每个对象的健康计算函数以及在运行时更改此类函数的能力）是否能抵消降低`GameCharacter`封装性的需要，必须根据具体设计来决定。
+
+### 通过`tr1::function`实现策略模式
+
+一旦习惯了模板及其对隐式接口的使用（参见 Item 41），基于函数指针的方法看起来相当僵化。为什么健康计算器必须是一个函数，而不是一个像函数一样的东西（例如函数对象）？如果它必须是函数，为什么不能是成员函数呢？为什么它必须返回`int`而不是任何可转换为`int`的类型？
+
+如果我们把函数指针（如`healthFunc`）替换为`tr1::function`对象，这些限制就消失了。正如 Item 54 所解释的，此类对象可以持有任何与预期签名兼容的调用实体（即函数指针、函数对象或成员函数指针）。这里是我们刚刚看到的设计，这次使用了`tr1::function`：
+
+```cpp
+class GameCharacter; // 前向声明
+
+int defaultHealthCalc(const GameCharacter& gc); // 同上
+
+class GameCharacter {
+public:
+  // HealthCalcFunc is any callable entity that can be called with
+  // anything compatible with a GameCharacter and that returns anything
+  // compatible with an int; see below for details
+  typedef std::tr1::function<int (const GameCharacter&)> HealthCalcFunc;
+
+  explicit GameCharacter(HealthCalcFunc hcf = defaultHealthCalc)
+    : healthFunc(hcf)
   {}
 
   int healthValue() const
@@ -4832,117 +5055,60 @@ private:
 };
 ```
 
-这种方法是另一种常用设计模式——策略模式的简单应用。与基于 `GameCharacter` 虚函数的方法相比，它提供了一些有趣的灵活性：相同类型的不同实例可以具有不同的健康计算函数。例如：
-
-```cpp
-class EvilGuy: public GameCharacter {
-public:
-  explicit EvilGuy(HealthCalcFunc hcf = defaultHealthCalc)
-  : GameCharacter(hcf)
-  {}
-  ...
-};
-
-int loseHealthQuickly(const GameCharacter&);
-int loseSlowly(const GameCharacter&);
-
-EvilGuy ebg1(loseHealthQuickly);
-EvilGuy ebg2(loseSlowly);
-```
-
-另一方面，健康计算函数不再是 `GameCharacter` 的成员意味着它无法访问正在计算的对象。如果角色的健康值可以通过公共接口计算出来，那么这就不是问题；但如果准确计算需要非私有信息，这就是问题。
-
-作为一个通用规则，解决非成员函数访问类非私有部分需求的方法是削弱类的封装性。例如，类可以将非成员函数声明为友元（friend），或者为它希望隐藏的实现提供公共访问器函数。使用函数指针代替虚函数的优势（例如具有每个对象的健康计算函数以及在运行时更改此类函数的能力）是否能抵消降低 `GameCharacter` 封装性的需要，必须根据具体设计来决定。
-
-### 通过 `tr1::function` 实现策略模式
-
-一旦习惯了模板及其对隐式接口的使用（参见 Item 41，基于函数指针的方法看起来相当僵化。为什么健康计算器必须是一个函数，而不是一个像函数一样的东西（例如函数对象）？如果它必须是函数，为什么不能是成员函数呢？为什么它必须返回 `int` 而不是任何*可转换为* `int` 的类型？
-
-如果我们把函数指针（如 `healthFunc`）替换为 `tr1::function` 对象，这些限制就消失了。正如 Item 54 所解释的，此类对象可以持有任何与预期签名兼容的*调用实体*（即函数指针、函数对象或成员函数指针）。这里是我们刚刚看到的设计，这次使用了 `tr1::function`：
-
-```cpp
-class GameCharacter; // 前向声明
-int defaultHealthCalc(const GameCharacter& gc); // 同上
-
-class GameCharacter {
-public:
-```
-
-
-
-
-```cpp
-// HealthCalcFunc is any callable entity that can be called with
-   // anything compatible with a GameCharacter and that returns anything
-   // compatible with an int; see below for details
-   typedef std::tr1::function<int (const GameCharacter&)> HealthCalcFunc;
-
-   explicit GameCharacter(HealthCalcFunc hcf = defaultHealthCalc)
-   : healthFunc(hcf)
-   {}
-
-   int healthValue() const
-   { return healthFunc(*this);   }
-
-   ...
-
-private:
-
-  HealthCalcFunc healthFunc;
-};
-```
-
-如你所见，`HealthCalcFunc` 是 `tr1::function` 实例的类型定义。这意味着它的行为像一个通用的函数指针类型。仔细观察 `HealthCalcFunc` 是什么类型的别名：
+如你所见，`HealthCalcFunc`是`tr1::function`实例的类型定义。这意味着它的行为像一个通用的函数指针类型。仔细观察`HealthCalcFunc`是什么类型的别名：
 
 ```cpp
 std::tr1::function<int (const GameCharacter&)>
 ```
 
-在这里，我突出了这个 `tr1::function` 实例的“目标签名”（target signature）。该目标签名是“一个接受 `const GameCharacter` 引用并返回 `int` 的函数”。该 `tr1::function` 类型的对象（即类型为 `HealthCalcFunc`）可以持有任何与目标签名兼容的可调用实体。兼容意味着该实体的参数可以隐式转换为 `const GameCharacter&`，且其返回类型可以隐式转换为 `int`。
+在这里，我突出了这个`tr1::function`实例的“目标签名”（target signature）。该目标签名是“一个接受`const GameCharacter`引用并返回`int`的函数”。该`tr1::function`类型的对象（即类型为`HealthCalcFunc`）可以持有任何与目标签名兼容的可调用实体。兼容意味着该实体的参数可以隐式转换为`const GameCharacter&`，且其返回类型可以隐式转换为`int`。
 
-与我们看到的上设计（`GameCharacter` 持有一个指向函数的指针）相比，这种设计几乎完全相同。唯一的区别是 `GameCharacter` 现在持有一个 `tr1::function` 对象——一个通用的函数指针。这个变化非常微小，我甚至认为它是无关痛道的，但结果是客户端现在在指定健康计算函数时拥有了惊人的灵活性：
+与我们看到的上一个设计（`GameCharacter`持有一个指向函数的指针）相比，这种设计几乎完全相同。唯一的区别是`GameCharacter`现在持有一个`tr1::function`对象——一个通用的函数指针。这个变化非常微小，我甚至认为它是无关痛道的，但结果是客户端现在在指定健康计算函数时拥有了惊人的灵活性：
 
 ```cpp
 short calcHealth(const GameCharacter&);      // 健康计算
-                                              // 函数；注意
-                                              // 非 int 返回类型
+                                             // 函数；注意
+                                             // 非 int 返回类型
 
-struct HealthCalculator {                   // 用于健康计算的
-{ ... }                                     // 对象
-};
+struct HealthCalculator {                    // 用于健康计算的
+  ...
+};                                           // 对象
 
 class GameLevel {
 public:
   float health(const GameCharacter&) const;  // 健康计算
-  ...                                       // 成员函数；注意
-};                                          // 非 int 返回类型
+  ...                                        // 成员函数；注意
+};                                           // 非 int 返回类型
 
 class EvilBadGuy: public GameCharacter {     // 与之前一样
   ...
 };
 
-class EyeCandyCharacter:   public GameCharacter {  // 另一个字符
-  ...                                     // 类型；假设相同
-};                                      // 构造函数
-  EvilBadGuy ebg1(calcHealth);             // 使用健康
-                                              // 计算函数的
-                                              //字符
-  EyeCandyCharacter ecc1(HealthCalculator());  // 使用健康
-                                              // 计算对象的字符
+class EyeCandyCharacter: public GameCharacter {  // 另一个字符
+  ...                                          // 类型；假设相同
+};                                             // 构造函数
+
+EvilBadGuy ebg1(calcHealth);                  // 使用健康
+                                             // 计算函数的
+                                             // 字符
+
+EyeCandyCharacter ecc1(HealthCalculator());  // 使用健康
+                                             // 计算对象的字符
 
 GameLevel currentLevel;
+
 ...
 
 EvilBadGuy ebg2(                           // 使用健康
-  std::tr1::bind(&GameLevel::health,        // 健康计算
+  std::tr1::bind(&GameLevel::health,       // 健康计算
   currentLevel,                            // 成员函数；
-  _1)                                      // 详请请见下文
+  _1)                                      // 详情请见下文
 );
 ```
 
-个人而言，我觉得 `tr1::function` 让你能做的太神奇了，它让我全身兴奋。如果你没有感到兴奋，可能是因为你正盯着 `ebg2` 的定义，纳闷 `tr1::bind` 的调用到底是怎么回事。请让我解释一下。
+个人而言，我觉得`tr1::function`让你能做的太神奇了，它让我全身兴奋。如果你没有感到兴奋，可能是因为你正盯着`ebg2`的定义，纳闷`tr1::bind`的调用到底是怎么回事。请让我解释一下。
 
-我们想表达，为了计算 `ebg2` 的健康评分，应该使用 `GameLevel` 类中的 `health` 成员函数。现在，`GameLevel::health` 是一个声明接受一个参数（`GameCharacter` 的引用）的函数，但它实际上接受两个参数，因为它还接收了一个隐式的 `GameLevel` 参数——即 `this` 指向的那个。然而，用于 `GameCharacter` 的健康计算函数只接受一个参数：要计算健康值的 `GameCharacter`。如果我们要用 `GameLevel::health` 来为 `ebg2` 计算健康值，我们必须以某种方式对其进行“适配”，使其不再是接受两个参数（`GameCharacter` 和 `GameLevel`），而是只接受一个。
+我们想表达，为了计算`ebg2`的健康评分，应该使用`GameLevel`类中的`health`成员函数。现在，`GameLevel::health`是一个声明接受一个参数（`GameCharacter`的引用）的函数，但它实际上接受两个参数，因为它还接收了一个隐式的`GameLevel`参数——即`this`指向的那个。然而，用于`GameCharacter`的健康计算函数只接受一个参数：要计算健康值的`GameCharacter`。如果我们要用`GameLevel::health`来为`ebg2`计算健康值，我们必须以某种方式对其进行“适配”，使其不再是接受两个参数（`GameCharacter`和`GameLevel`），而是只接受一个。
 
 ### “经典”策略模式
 
@@ -4950,53 +5116,49 @@ EvilBadGuy ebg2(                           // 使用健康
 
 ![images](img/06inf.gif)
 
-如果你不熟悉 UML 符号，这仅仅表示 `GameCharacter` 是一个继承层次结构的根，其中 `EvilBadGuy` 和 `EyeCandyCharacter` 是派生类；每个 `GameCharacter` 类型的对象都包含一个指向 `HealthCalcFunc` 层次结构对象的指针。以下是对应的代码骨架：
+如果你不熟悉 UML 符号，这仅仅表示`GameCharacter`是一个继承层次结构的根，其中`EvilBadGuy`和`EyeCandyCharacter`是派生类；每个`GameCharacter`类型的对象都包含一个指向`HealthCalcFunc`层次结构对象的指针。以下是对应的代码骨架：
 
 ```cpp
 class GameCharacter; // 前向声明
 
 class HealthCalcFunc {
-
 public:
   ...
   virtual int calc(const GameCharacter& gc) const
   { ... }
-
   ...
 };
 
 HealthCalcFunc defaultHealthCalc;
 
 class GameCharacter {
-
 public:
   explicit GameCharacter(HealthCalcFunc *phcf = &defaultHealthCalc)
-  : pHealthCalc(phcf)
+    : pHealthCalc(phcf)
   {}
 
   int healthValue() const
-  { return pHealthCalc->calc(*this)}
+  { return pHealthCalc->calc(*this); }
 
-  ...private:
+  ...
+
+private:
   HealthCalcFunc *pHealthCalc;
 };
 ```
 
-这种方法的吸引力在于对于熟悉“标准”策略模式实现的人来说可以快速识别，此外它还提供了可能：通过向 `HealthCalcFunc` 层次结构添加派生类，可以对现有的健康计算算法进行微调。
+这种方法的吸引力在于对于熟悉“标准”策略模式实现的人来说可以快速识别，此外它还提供了可能：通过向`HealthCalcFunc`层次结构添加派生类，可以对现有的健康计算算法进行微调。
 
 ### 总结
 
 本节（Item）的核心建议是，当你为试图解决的问题寻找设计时，考虑虚函数的替代方案。以下是我们检查的替代方案的快速回顾：
 
-- 使用**非虚接口惯用法**（NVI  idiom），这是模板方法设计模式的一种形式，它通过公开的非虚成员函数来封装较难访问的虚函数。
+- 使用**非虚接口惯用法**（NVI idiom），这是模板方法设计模式的一种形式，它通过公开的非虚成员函数来封装较难访问的虚函数。
 - 用**函数指针数据成员**替换虚函数，这是策略模式的一种精简表现。
-- 用 **tr1::function 数据成员**替换虚函数，从而允许使用任何与你的需求签名兼容的可调用实体。
+- 用`tr1::function`数据成员替换虚函数，从而允许使用任何与你的需求签名兼容的可调用实体。
 - 用**另一个层次结构中的虚函数**替换一个层次结构中的虚函数。这是策略模式的传统实现。
 
-这并不是虚函数设计替代方案的详尽列表，但足以说服你*存在*替代方案。此外，它们的对比优缺点应该清楚地表明，你*应该*考虑它们。
-
-
-
+这并不是虚函数设计替代方案的详尽列表，但足以说服你存在替代方案。此外，它们的对比优缺点应该清楚地表明，你应该考虑它们。
 
 为了避免陷入面向对象设计道路的定式中，要不时给轮子猛推一下。还有许多其他道路，值得花时间去探索。
 
@@ -5004,11 +5166,11 @@ public:
 
 - 虚函数的替代方案包括 NVI 惯用（非虚接口）和各种形式的策略设计模式。NVI 惯用本身就是模板方法设计模式的一个示例。
 - 将功能从成员函数移动到类外函数的缺点是，非成员函数缺乏访问类非公有成员的权限。
-- `tr1::function` 对象的作用类似于通用的函数指针。此类对象支持所有与给定目标签名兼容的可调用实体。
+- `tr1::function`对象的作用类似于通用的函数指针。此类对象支持所有与给定目标签名兼容的可调用实体。
 
 ## 事项 36：永远不要重新定义继承自非虚函数
 
-假设我告诉你，类 `D` 公共派生自类 `B`，并且类 `B` 中定义了一个公共成员函数 `mf`。`mf` 的参数和返回值并不重要，所以我们就假设它们都是 `void`。换句话说，我是这样的：
+假设我告诉你，类`D`公共派生自类`B`，并且类`B`中定义了一个公共成员函数`mf`。`mf`的参数和返回值并不重要，所以我们就假设它们都是`void`。换句话说，我是这样的：
 
 ```cpp
 class B {
@@ -5020,11 +5182,13 @@ public:
 class D: public B { ... };
 ```
 
-即使对 `B`、`D` 或 `mf` 一无所知，给定一个类型为 `D` 的对象 `x`：
+即使对`B`、`D`或`mf`一无所知，给定一个类型为`D`的对象`x`：
 
 ```cpp
 D x;                    // x 是类型为 D 的对象
+
 B *pB = &x;             // 获取 x 的指针
+
 pB->mf();               // 通过指针调用 mf
 ```
 
@@ -5032,12 +5196,13 @@ pB->mf();               // 通过指针调用 mf
 
 ```cpp
 D *pD = &x;             // 获取 x 的指针
+
 pD->mf();               // 通过指针调用 mf
 ```
 
-这是因为在上述两种情况下，你都是在对象 `x` 上调用成员函数 `mf`。由于在两种情况下调用的都是同一个函数和同一个对象，它们的行为应该是相同的，对吧？
+这是因为在上述两种情况下，你都是在对象`x`上调用成员函数`mf`。由于在两种情况下调用的都是同一个函数和同一个对象，它们的行为应该是相同的，对吧？
 
-没错，本应该是相同的。但事实可能并非如此。特别是如果 `mf` 是非虚函数且 `D` 定义了它自己的 `mf` 版本，行为就不会相同：
+没错，本应该是相同的。但事实可能并非如此。特别是如果`mf`是非虚函数且`D`定义了它自己的`mf`版本，行为就不会相同：
 
 ```cpp
 class D: public B {
@@ -5047,46 +5212,47 @@ public:
 };
 
 pB->mf();               // 调用 B::mf
+
 pD->mf();               // 调用 D::mf
 ```
 
-这种双面面行为的原因是，像 `B::mf` 和 `D::mf` 这样的非虚函数是静态绑定的（参见 [事项 37]）。这意味着由于 `pB` 被声明为指向 `B` 的指针类型，通过 `pB` 调非虚函数始终是为类 `B` 定义的，即使 `pB` 指向一个派生自 `B` 的类的对象（如本例）。
+这种双面行为的原因是，像`B::mf`和`D::mf`这样的非虚函数是静态绑定的（参见 [事项 37]）。这意味着由于`pB`被声明为指向`B`的指针类型，通过`pB`调用非虚函数始终是为类`B`定义的，即使`pB`指向一个派生自`B`的类的对象（如本例）。
 
-另一方面，虚函数是动态绑定的（再次参见 [事项 37]），因此它们不受此问题的影响。如果 `mf` 是虚函数，通过 `pB` 或 `pD` 调用 `mf` 都将导致调用 `D::mf`，因为 `pB` 和 `pD` 实际上指向的是类型为 `D` 的对象。
+另一方面，虚函数是动态绑定的（再次参见 [事项 37]），因此它们不受此问题的影响。如果`mf`是虚函数，通过`pB`或`pD`调用`mf`都将导致调用`D::mf`，因为`pB`和`pD`实际上指向的是类型为`D`的对象。
 
-如果你正在编写类 `D` 并重新定义继承自类 `B` 的非虚函数 `mf`，`D` 对象可能会表现出不一致的行为。特别是，当调用 `mf` 时，任何给定的 `D` 对象可能表现得像 `B` 也可能像 `D`，而决定因素与对象本身无关，与指向该对象的指针的声明类型。
+如果你正在编写类`D`并重新定义继承自类`B`的非虚函数`mf`，`D`对象可能会表现出不一致的行为。特别是，当调用`mf`时，任何给定的`D`对象可能表现得像`B`也可能像`D`，而决定因素与对象本身无关，与指向该对象的指针的声明类型有关。
 
+在这个示例中，`ps`、`pc`和`pr`都被声明为指向`Shape`类型的指针，因此它们的静态类型都是该类型。请注意，它们实际上指向什么完全没有区别——无论如何，它们的静态类型都是`Shape*`。
 
-
-在这个示例中，`ps`、`pc` 和 `pr` 都被声明为指向 `Shape` 类型的指针，因此它们的静态类型都是该类型。请注意，它们*实际上*指向什么完全没有区别——无论如何，它们的静态类型都是 `Shape*`。
-
-对象的*动态类型*（dynamic type）由它当前引用的对象的类型决定。也就是说，它的动态类型指示了它将如何表现。在上面的示例中，`pc` 的动态类型是 `Circle*`，而 `pr` 的动态类型是 `Rectangle*`。至于 `ps`，它并没有真正的动态类型，因为（（目前）它还没有引用任何对象。
+对象的动态类型（dynamic type）由它当前引用的对象的类型决定。也就是说，它的动态类型指示了它将如何表现。在上面的示例中，`pc`的动态类型是`Circle*`，而`pr`的动态类型是`Rectangle*`。至于`ps`，它并没有真正的动态类型，因为（目前）它还没有引用任何对象。
 
 动态类型正如其名所示，可以随着程序的运行而改变，通常通过赋值来实现：
 
 ```cpp
 ps = pc;                // ps 的动态类型现在
-                         // 是 Circle*
+                        // 是 Circle*
+
 ps = pr;                // ps 的动态类型现在
-                         // 是 Rectangle*
+                        // 是 Rectangle*
 ```
 
-虚函数是*动态绑定*的（dynamically bound），这意味着所调用的特定函数是由调用它的对象的动态类型决定的：
+虚函数是动态绑定的（dynamically bound），这意味着所调用的特定函数是由调用它的对象的动态类型决定的：
 
 ```cpp
 pc->draw(Shape::Red);   // 调用 Circle::draw(Shape::Red)
+
 pr->draw(Shape::Red);   // 调用 Rectangle::draw(Shape::Red)
 ```
 
-这些都是老掉牙的知识，我知道；你一定理解虚函数。转折点出现在你考虑带有默认参数值的虚函数时，因为正如我上面说的，虚函数是动态绑定的，但默认参数是静态绑定的。这意味着你最终可能会调用一个定义在*派生类*中的虚函数，但使用的是来自*基类*的默认参数值：
+这些都是老掉牙的知识，我知道；你一定理解虚函数。转折点出现在你考虑带有默认参数值的虚函数时，因为正如我上面说的，虚函数是动态绑定的，但默认参数是静态绑定的。这意味着你最终可能会调用一个定义在派生类中的虚函数，但使用的是来自基类的默认参数值：
 
 ```cpp
 pr->draw();             // 调用 Rectangle::draw(Shape::Red)!
 ```
 
-在这种情况下，`pr` 的动态类型是 `Rectangle*`，所以调用了 `Rectangle` 虚函数，正如你预期的的一样。在 `Rectangle::draw` 中，默认参数值是 `Green`。然而，由于 `pr` 的静态类型是 `Shape*`，该函数调用的默认参数值是从 `Shape` 类取的，而不是 `Rectangle` 类！结果是产生了一个由 `Shape` 类和 `Rectangle` 类中 `draw` 声明组成的奇异且几乎可以出乎意料的组合。
+在这种情况下，`pr`的动态类型是`Rectangle*`，所以调用了`Rectangle`虚函数，正如你预期的一样。在`Rectangle::draw`中，默认参数值是`Green`。然而，由于`pr`的静态类型是`Shape*`，该函数调用的默认参数值是从`Shape`类取的，而不是`Rectangle`类！结果是产生了一个由`Shape`类和`Rectangle`类中`draw`声明组成的奇异且几乎可以出乎意料的组合。
 
-`ps`、`pc` 和 `pr` 是指针这一事实在这件事上无关。即使它们是引用，问题依然存在。唯一重要的点是 `draw` 是一个虚函数，并且它的一个默认参数值在派生类中被重新定义了。
+`ps`、`pc`和`pr`是指针这一事实在这件事上无关。即使它们是引用，问题依然存在。唯一重要的点是`draw`是一个虚函数，并且它的一个默认参数值在派生类中被重新定义了。
 
 为什么 C++ 坚持要以这种扭曲的方式运行？答案与运行时效率有关。如果默认参数值是动态绑定的，编译器必须想出办法在运行时确定虚函数参数的适当默认值，这比在编译期间确定它们的当前机制要慢且更复杂。这个决定是倾向于速度和实现的简单性，结果就是你现在享受高效的执行行为，但如果你不听从本文（Item）的建议，它将是令人困惑的。
 
@@ -5096,95 +5262,123 @@ pr->draw();             // 调用 Rectangle::draw(Shape::Red)!
 class Shape {
 public:
   enum ShapeColor { Red, Green, Blue };
+
   virtual void draw(ShapeColor color = Red) const = 0;
+
   ...
 };
 
 class Rectangle: public Shape {
 public:
   virtual void draw(ShapeColor color = Red) const;
+
   ...
 };
 ```
 
-哎呀，代码重复。更糟糕的是，带有依赖的代码重复：如果在 `Shape` 中更改了默认参数值，所有重复它的派生类也必须更改。否则，它们最终将重新定义一个继承的默认参数值。该怎么办？
+
+
+哎呀，代码重复。更糟糕的是，带有依赖的代码重复：如果在`Shape`中更改了默认参数值，所有重复它的派生类也必须更改。否则，它们最终将重新定义一个继承的默认参数值。该怎么办？
 
 当你难以虚函数按照你想要的方式运行时，考虑替代设计是明智的，而且 Item 35 充满了虚函数的替代方案。其中一种替代方案是*非虚接口范式*（NVI idiom）：在基类中有一个公共的非虚函数，该函数调用一个派生类可以重新定义的私有虚函数。在这里，我们让非虚函数指定默认参数，而让虚函数执行实际工作：
 
-```cpp
+```
 class Shape {
+
 public:
+
   enum ShapeColor { Red, Green, Blue };
+
   void draw(ShapeColor color = Red) const  // 现在是非虚的
+
   {
+
     doDraw(color);                      // 调用虚函数
+
   }
+
   ...
+
 private:
+
   virtual void doDraw(ShapeColor color) const = 0; // 实际工作在这里
+
 };
 
 class Rectangle: public Shape {
+
 public:
+
   ...
+
 private:
+
   virtual void doDraw(ShapeColor color) const; // 注意缺少默认参数
+
   ...
+
 };
 ```
 
-由于非虚函数永远不应该被派生类重写（参见 Item 36），这种设计明确了 `draw` 的 `color` 参数的默认值应该是 `Red`。
+由于非虚函数永远不应该被派生类重写（参见 Item 36），这种设计明确了`draw`的`color`参数的默认值应该是`Red`。
 
-### 注意事项
+## 注意事项
 
 - 永远不要重新定义继承的默认参数，因为默认参数值是静态绑定的，而虚函数——你唯一应该覆盖的函数——是动态绑定的。
 
-### Item 38: 通过组合对“拥有”或“基于...实现”建模
+# Item 38: 通过组合对“拥有”或“基于...实现”建模
 
 *组合*（Composition）是类型之间的关系，当一种类型的对象包含另一种类型的对象时就会产生这种关系。例如：
 
-```cpp
+```
 class Address { ... }; // 某人住的地方
+
 class PhoneNumber { ... };
+
 class Person {
+
 public:
+
   ...
+
 private:
+
   std::string name;       // 组合对象
+
   Address address;        // 亦如此
+
   PhoneNumber voiceNumber;  // 亦如此
+
   PhoneNumber faxNumber;   // 亦如此
+
 };
 ```
 
-在这个示例中，`Person` 对象由 `string`、`Address` 和 `PhoneNumber` 对象组成。在程序员中，“组合”这个术语有很多同义词。它也被称为*分层、包含、聚合*和*嵌入*。
+在这个示例中，`Person` 对象由`string`、`Address`和`PhoneNumber`对象组成。在程序员中，“组合”这个术语有很多同义词。它也被称为*分层、包含、聚合*和*嵌入*。
 
 Item 32 解释了公共继承意味着“是一个”（is-a）。组合也有它的含义。实际上，它有两个含义。组合意味着要么“拥有”（has-a），要么是“基于...实现”（is-implemented-in-terms-of）。这是因为你正在软件中处理两个不同的领域。你程序中的某些对象对应于你所正在建模的世界中的事物，例如：人、车辆、视频帧等。此类对象是*应用领域*（application domain）的一部分。其他对象是纯粹的实现产物，例如缓冲区、互斥锁、搜索树等。这类对象对应于你软件的*实现领域*（implementation domain）。当组合发生在应用领域的对象之间时，它表达了一种“拥有”的关系。当它发生在实现领域中时，它表达了一种“基于...实现”的关系。
 
-上面的 `Person` 类演示了“拥有”的关系。一个 `Person` 对象拥有名字、地址以及语音电话和传真号码。你不会说一个人*是*一个名字，或者一个人*是*一个地址。你会说一个人*拥有*一个名字并*拥有*一个地址。大多数人对这种区分没有困难，因此“是一个”和“拥有”角色之间的混淆相对少见。
+上面的`Person`类演示了“拥有”的关系。一个`Person`对象拥有名字、地址以及语音电话和传真号码。你不会说一个人*是*一个名字，或者一个人*是*一个地址。你会说一个人*拥有*一个名字并*拥有*一个地址。大多数人对这种区分没有困难，因此“是一个”和“拥有”角色之间的混淆相对少见。
 
-稍微棘手的是“是一个”和“基于...实现”之间的区别。例如，假设你需要一个用于表示较小对象集合的模板，即不包含重复项的集合。因为复用是一件美妙的事，你的第一直觉是使用标准库的 `set` 模板。既然已经写好了模板，为什么要自己写一个新的呢？
+稍微棘手的是“是一个”和“基于...实现”之间的区别。例如，假设你需要一个用于表示较小对象集合的模板，即不包含重复项的集合。因为复用是一件美妙的事，你的第一直觉是使用标准库的`set`模板。既然已经写好了模板，为什么要自己写一个新的呢？
 
+遗憾的是，`set`的实现通常每个元素会产生三个指针的开销。这是因为`set`通常被实现为平衡搜索树，这使其能够保证查找、插入和删除的对数时间复杂度。当速度比空间更重要时，这种设计是合理的，但事实对于你的应用程序，空间比速度更重要。因此，标准库的`set`对你来说提供了错误的权衡。看来你终究需要编写自己的模板了。
 
+尽管如此，重用*确实*是一件很妙的事情。作为一名数据结构专家，你知道在实现集合的众多选择中，其中一种是使用链表。你也知道标准 C++ 库有一个`list`模板，因此你决定（重）用它。
 
+特别是，你决定让你新创建的`Set`模板继承自`list`。也就是说，`Set<T>`将继承自`list<T>`。毕竟，在你的实现中，一个`Set`对象实际上*是*一个`list`对象。因此你这样声明你的`Set`模板：
 
-遗憾的是，`set` 的实现通常每个元素会产生三个指针的开销。这是因为 `set` 通常被实现为平衡搜索树，这使其能够保证查找、插入和删除的对数时间复杂度。当速度比空间更重要时，这种设计是合理的，但事实对于你的应用程序，空间比速度更重要。因此，标准库的 `set` 对你来说提供了错误的权衡。看来你终究需要编写自己的模板了。
-
-尽管如此，重用*确实*是一件很妙的事情。作为一名数据结构专家，你知道在实现集合的众多选择中，其中一种是使用链表。你也知道标准 C++ 库有一个 `list` 模板，因此你决定（重）用它。
-
-特别是，你决定让你新创建的 `Set` 模板继承自 `list`。也就是说，`Set<T>` 将继承自 `list<T>`。毕竟，在你的实现中，一个 `Set` 对象实际上*是*一个 `list` 对象。因此你这样声明你的 `Set` 模板：
-
-```cpp
+```
 template<typename T>                  // 使用 list 实现 Set 的错误方式
 
 class Set: public std::list<T> { ... };
 ```
 
-到此为止一切看起来良好，但实际上有些严重的问题。正如 Item 32 所解释的，如果 `D` 是 `B`（is-a），那么所有适用于 `B` 的属性也适用于 `D`。然而，`list` 对象可能包含重复项，因此如果将值 3051 两次插入 `list<int>`，该列表将包含两个 3051 的副本。相比之下，`Set` 不包含重复项，因此如果将值 3051 两次插入 `Set<int>`，该集合只包含一个该值的副本。因此，“`Set` 是 `list`”这一说法是不正确的，因为某些适用于 `list` 对象的属性并不适用于 `Set` 对象。
+到此为止一切看起来良好，但实际上有些严重的问题。正如 Item 32 所解释的，如果`D`是`B`（is-a），那么所有适用于`B`的属性也适用于`D`。然而，`list`对象可能包含重复项，因此如果将值 3051 两次插入`list<int>`，该列表将包含两个 3051 的副本。相比之下，`Set`不包含重复项，因此如果将值 3051 两次插入`Set<int>`，该集合只包含一个该值的副本。因此，“`Set`是`list`”这一说法是不正确的，因为某些适用于`list`对象的属性并不适用于`Set`对象。
 
-由于这两个类之间的关系不是“是（is-a）”的关系，公共继承是建模这种关系的错误方法。正确的方法是意识到 `Set` 对象可以*基于* `list` 对象来*实现（implemented in terms of）*：
+由于这两个类之间的关系不是“是（is-a）”的关系，公共继承是建模这种关系的错误方法。正确的方法是意识到`Set`对象可以*基于*`list`对象来*实现（implemented in terms of）*：
 
-```cpp
+```
 template<class T>                  // 使用 list 实现 Set 的正确方式
 
 class Set {
@@ -5192,108 +5386,146 @@ class Set {
 public:
 
   bool member(const T& item) const;
+
   void insert(const T& item);
+
   void remove(const T& item);
+
   std::size_t size() const;
 
 private:
+
   std::list<T> rep;               // Set 数据的数据表示
 
 };
 ```
 
-`Set` 的成员函数可以大量依赖 `list` 以及标准库其他部分提供的功能，因此实现是非常直接的，只要你熟悉 STL 编程的基础知识：
+`Set`的成员函数可以大量依赖`list`以及标准库其他部分提供的功能，因此实现是非常直接的，只要你熟悉 STL 编程的基础知识：
 
-```cpp
+```
 template<typename T>
+
 bool Set<T>::member(const T& item) const
+
 {
+
   return std::find(rep.begin(), rep.end(), item) != rep.end();
+
 }
 
 template<typename T>
+
 void Set<T>::insert(const T& item)
+
 {
+
   if (!member(item)) rep.push_back(item);
+
 }
 
 template<typename T>
+
 void Set<T>::remove(const T& item)
+
 {
+
   typename std::list<T>::iterator it =             // 关于 "typename" 的信息请参阅 Item 42
+
     std::find(rep.begin(), rep.end(), item);     
+
   if (it != rep.end()) rep.erase(it);
+
 }
 
 template<typename T>
+
 std::size_t Set<T>::size() const
+
 {
+
   return rep.size();
+
 }
 ```
 
 这些函数足够简单，可以作为内联的合理候选，尽管我知道在做出任何确定的内联决定之前，你会想回顾一下 Item 30 中的讨论。
 
-有人可能会认为，如果 `Set` 的接口遵循 STL 容器的约定，将更符合 Item 18 的告诫，即设计出易于正确使用且难以错误使用的接口；但在此处遵循这些约定将需要向 `Set` 中添加大量内容，这会模糊它与 `list` 之间的关系。由于这种关系是本节的重点，我们将牺牲 STL 兼容性来换取教学上的清晰度。此外，关于 `Set` 接口的细枝末节不应掩盖 `Set` 无可置疑的正确之处：
+有人可能会认为，如果`Set`的接口遵循 STL 容器的约定，将更符合 Item 18 的告诫，即设计出易于正确使用且难以错误使用的接口；但在此处遵循这些约定将需要向`Set`中添加大量内容，这会模糊它与`list`之间的关系。由于这种关系是本节的重点，我们将牺牲 STL 兼容性来换取教学上的清晰度。此外，关于`Set`接口的细枝末节不应掩盖`Set`无可置疑的正确之处：
 
-### 注意事项
+## 注意事项
 
 - 组合意味着“有一个”（has-a）。在实现领域，它意味着“基于……实现”（is-implemented-terms-of）。
 - 私有继承意味着“基于……实现”（is-implemented-terms-of）。在应用领域，它意味着什么。
 
-### Item 39: 谨慎使用私有继承
+# Item 39: 谨慎使用私有继承
 
 Item 32 证明了私有继承并不意味着“是（is-a）”。它意味着什么？
 
-“哇！”你说，“在我们讨论含义之前，让我们来看看行为。私有继承的行为是怎样的？”好吧，你刚刚看到的规定私有继承的第一条规则：与公共继承相比，如果类之间的继承关系是私有的，编译器通常*不会*将派生类对象（如 `Student`）转换为基类对象（如 `Person`）。这就是为什么对对象 `s` 调用 `eat` 会失败的原因。第二条规则是，继承自私有基类的成员变为派生类的私有成员，即使它们在基类中是受保护或公开的。
+“哇！”你说，“在我们讨论含义之前，让我们来看看行为。私有继承的行为是怎样的？”好吧，你刚刚看到的规定私有继承的第一条规则：与公共继承相比，如果类之间的继承关系是私有的，编译器通常*不会*将派生类对象（如`Student`）转换为基类对象（如`Person`）。这就是为什么对对象`s`调用`eat`会失败的原因。第二条规则是，继承自私有基类的成员变为派生类的私有成员，即使它们在基类中是受保护或公开的。
 
-行为就到此为止。这把我们带到了含义。私有继承意味着“基于……实现”（is-implemented-terms-of）。如果你让类 `D` 私有继承自类 `B`，是因为你感兴趣利用 `B` 提供的某些功能，而不是因为类型 `B` 和 `D` 的对象之间存在任何概念上的关系。因此，私有继承纯粹是一种实现技术。（这就是为什么你从私有基类继承的所有内容在你的类中都变成私有的：这都是实现细节。）使用 Item 34 中引入的术语，私有继承意味着*应该*继承实现；接口应该被忽略。如果 `D` 私有继承自 `B`，意味着 `D` 对象是基于 `B` 对象实现的，仅此而已。私有继承在软件*设计*期间没有任何意义，只在软件*实现*期间有意义。
+行为就到此为止。这把我们带到了含义。私有继承意味着“基于……实现”（is-implemented-terms-of）。如果你让类`D`私有继承自类`B`，是因为你感兴趣利用`B`提供的某些功能，而不是因为类型`B`和`D`的对象之间存在任何概念上的关系。因此，私有继承纯粹是一种实现技术。（这就是为什么你从私有基类继承的所有内容在你的类中都变成私有的：这都是实现细节。）使用 Item 34 中引入的术语，私有继承意味着*应该*继承实现；接口应该被忽略。如果`D`私有继承自`B`，意味着`D`对象是基于`B`对象实现的，仅此而已。私有继承在软件*设计*期间没有任何意义，只在软件*实现*期间有意义。
 
+假设我们正在开发一个涉及`Widget`的应用程序，并且决定需要更好地了解`Widget`是如何被使用的。例如，我们不仅想知道`Widget`成员函数被调用的频率等信息，还想知道调用比例如何随时间变化。具有不同执行阶段的程序在不同阶段可能会有不同的行为特征。例如，编译器在解析阶段使用的函数与在优化和代码生成阶段使用的函数在很大程度上是不同的。
 
-
-假设我们正在开发一个涉及 `Widget` 的应用程序，并且决定需要更好地了解 `Widget` 是如何被使用的。例如，我们不仅想知道 `Widget` 成员函数被调用的频率等信息，还想知道调用比例如何随时间变化。具有不同执行阶段的程序在不同阶段可能会有不同的行为特征。例如，编译器在解析阶段使用的函数与在优化和代码生成阶段使用的函数在很大程度上是不同的。
-
-我们决定修改 `Widget` 类，以跟踪每个成员函数被调用的次数。在运行时，我们会定期检查这些信息信息，可能还会结合每个 `Widget` 的值以及任何我们认为有用的其他数据。为了实现这一目标，我们需要设置某种定时器，以便知道何时该收集使用统计数据了。
+我们决定修改`Widget`类，以跟踪每个成员函数被调用的次数。在运行时，我们会定期检查这些信息信息，可能还会结合每个`Widget`的值以及任何我们认为有用的其他数据。为了实现这一目标，我们需要设置某种定时器，以便知道何时该收集使用统计数据了。
 
 由于倾向于重用现有代码而不是编写新代码，我们在工具箱中翻找，并幸运地发现了以下类：
 
-```cpp
+```
 class Timer {
+
 public:
+
   explicit Timer(int tickFrequency);
+
   virtual void onTick() const;           // 每次滴答时自动调用
+
   ...
+
 };
 ```
 
-这正是我们需要的。一个 `Timer` 对象可以配置为我们所需的任何频率进行滴答，并且每次滴答时，它都会调用一个虚函数。我们可以重新定义该虚函数，使其能够检查 `Widget` 世界的当前状态。完美！
+这正是我们需要的。一个`Timer`对象可以配置为我们所需的任何频率进行滴答，并且每次滴答时，它都会调用一个虚函数。我们可以重新定义该虚函数，使其能够检查`Widget`世界的当前状态。完美！
 
-为了让 `Widget` 重新定义 `Timer` 中的虚函数，`Widget` 必须继承自 `Timer`。但在这种情况下，公继承是不恰的。`Widget` 是 `Timer` 并不是。`Widget` 的客户端不应该能够在 `Widget` 上调用 `onTick`，因为这并不是 `Widget` 概念接口的一部分。允许此类函数调用会让客户端很容易错误地使用 `Widget` 接口，这显然违反了 Item 18 中使接口易于正确使用且难以错误使用的建议。在这里，公继承不是一个有效的选项方案。
+为了让`Widget`重新定义`Timer`中的虚函数，`Widget`必须继承自`Timer`。但在这种情况下，公继承是不恰的。`Widget`是`Timer`并不是。`Widget`的客户端不应该能够在`Widget`上调用`onTick`，因为这并不是`Widget`概念接口的一部分。允许此类函数调用会让客户端很容易错误地使用`Widget`接口，这显然违反了 Item 18 中使接口易于正确使用且难以错误使用的建议。在这里，公继承不是一个有效的选项方案。
 
 因此，我们采用私有继承：
 
-```cpp
+```
 class Widget: private Timer {
+
 private:
+
   virtual void onTick() const;           // 查看 Widget 使用数据等
+
   ...
+
 };
 ```
 
-由于私有继承，`Timer` 的公共 `onTick` 函数在 `Widget` 中变为私有，当我们在重新声明它时，也保持私有。同样，将 `onTick` 放在公共接口中会误导客户端认为他们可以调用它，这将违反 Item 18。
+由于私有继承，`Timer`的公共`onTick`函数在`Widget`中变为私有，当我们在重新声明它时，也保持私有。同样，将`onTick`放在公共接口中会误导客户端认为他们可以调用它，这将违反 Item 18。
 
-这是一个很好的设计，但值得注意的是，私有继承并非绝对必要。如果我们下定决心使用组合，也可以这样做。我们只需要在 `Widget` 内部声明一个私有嵌套类，该类公地继承自 `Timer`，在那里重新定义 `onTick`，并在 `Widget` 内部放置该类型的对象。以下是该方法的示意图：
+这是一个很好的设计，但值得注意的是，私有继承并非绝对必要。如果我们下定决心使用组合，也可以这样做。我们只需要在`Widget`内部声明一个私有嵌套类，该类公地继承自`Timer`，在那里重新定义`onTick`，并在`Widget`内部放置该类型的对象。以下是该方法的示意图：
 
-```cpp
+```
 class Widget {
+
 private:
+
   class WidgetTimer: public Timer {
+
   public:
+
       virtual void onTick() const;
+
       ...
+
   };
+
   WidgetTimer timer;
+
   ...
+
 };
 ```
 
@@ -5301,26 +5533,29 @@ private:
 
 这种设计比仅使用私有继承的设计要复杂，因为涉及了（公有的）继承和组合，还引入了一个新类（`WidgetTimer`）。诚实地说，我展示它主要是为了提醒你，解决设计问题有多种方法，训练自己考虑多种方法是值得的（另参见 Item 35）。尽管如此，我想到了两个你可能倾向于使用公继承加组合而非私有继承的原因。
 
-首先，你可能希望设计 `Widget` 以允许派生类，但你可能也想防止派生类重新定义 `onTick`。如果 `Widget` 继承自 `Timer`，这是可能的，即使继承是私有的。（回想 Item 35，即使派生类被允许调用虚函数，它们也可以重新定义虚函数。）但如果 `WidgetTimer` 在 `Widget` 中是私有的并继承自 `Timer`，`Widget` 的派生类无法访问 `WidgetTimer`，因此无法继承它或重新定义它的虚函数。如果你用过 Java 或 C#，并怀念那种防止派生类重新定义虚函数的能力（即 Java 的 `final` 方法和 C# 的 `sealed` 方法），现在你知道如何在 C++ 中模拟这种行为了。
+首先，你可能希望设计`Widget`以允许派生类，但你可能也想防止派生类重新定义`onTick`。如果`Widget`继承自`Timer`，这是可能的，即使继承是私有的。（回想 Item 35，即使派生类被允许调用虚函数，它们也可以重新定义虚函数。）但如果`WidgetTimer`在`Widget`中是私有的并继承自`Timer`，`Widget`的派生类无法访问`WidgetTimer`，因此无法继承它或重新定义它的虚函数。如果你用过 Java 或 C#，并怀念那种防止派生类重新定义虚函数的能力（即 Java 的`final`方法和 C# 的`sealed`方法），现在你知道如何在 C++ 中模拟这种行为了。
 
-其次，你可能想尽可能地减少 `Widget` 的编译依赖。如果 `Widget` 继承自 `Timer`，那么在编译 `Widget` 时必须可用 `Timer` 的定义，因此定义 `Widget` 的文件可能需要 `#include Timer.h`。另一方面，如果将 `WidgetTimer` 移出 `Widget` 且 `Widget` 只包含一个指向 `WidgetTimer` 的指针，那么 `Widget` 只需要对 `WidgetTimer` 类进行简单的声明即可；不需要 `#include` 任何与 `Timer` 有关的内容。
+其次，你可能想尽可能地减少`Widget`的编译依赖。如果`Widget`继承自`Timer`，那么在编译`Widget`时必须可用`Timer`的定义，因此定义`Widget`的文件可能需要`#include Timer.h`。另一方面，如果将`WidgetTimer`移出`Widget`且`Widget`只包含一个指向`WidgetTimer`的指针，那么`Widget`只需要对`WidgetTimer`类进行简单的声明即可；不需要`#include`任何与`Timer`有关的内容。
 
-但你可能注意到，我很谨慎地说明“独立”对象的大小不能为零。这个限制不适用于派生类对象的基类部分，因为它们不是独立的。如果你是*继承*自 `Empty` 而不是包含该类型的对象，
+但你可能注意到，我很谨慎地说明“独立”对象的大小不能为零。这个限制不适用于派生类对象的基类部分，因为它们不是独立的。如果你是*继承*自`Empty`而不是包含该类型的对象，
 
-```cpp
+```
 class HoldsAnInt: private Empty {
+
 private:
+
   int x;
+
 };
 ```
 
 
 
-你几乎可以确定发现 `sizeof(HoldsAnInt) == sizeof(int)`。这被称为*空基类优化*（EBO），我测试过的所有编译器都实现了它。如果你是一个关注空间的库开发者，那么 `EBO` 是值得了解的。同样值得注意的是，`EBO` 通常只在单继承下是可行的。由于 C++ 对象布局的通用规则，通常意味着 `EBO` 无法应用于具有多一个基类的派生类。
+你几乎可以确定发现`sizeof(HoldsAnInt) == sizeof(int)`。这被称为*空基类优化*（`EBO`），我测试过的所有编译器都实现了它。如果你是一个关注空间的库开发者，那么`EBO`是值得了解的。同样值得注意的是，`EBO`通常只在单继承下是可行的。由于 C++ 对象布局的通用规则，通常意味着`EBO`无法应用于具有多一个基类的派生类。
 
-在实践中，“空”类并非真的空。尽管它们永远没有非静态数据成员，但它们通常包含 `typedefs`、`enums`、静态数据成员或非虚函数。STL 包含许多技术上为空的类，但它们包含了有用的成员（通常是 `typedefs`），包括基类 `unary_function` 和 `binary_function`，用户定义的函数对象类通常继承自这些基类。得益于 `EBO` 的广泛实现，这种继承很少增加派生类的大小。
+在实践中，“空”类并非真的空。尽管它们永远没有非静态数据成员，但它们通常包含`typedefs`、`enums`、静态数据成员或非虚函数。STL 包含许多技术上为空的类，但它们包含了有用的成员（通常是`typedefs`），包括基类`unary_function`和`binary_function`，用户定义的函数对象类通常继承自这些基类。得益于`EBO`的广泛实现，这种继承很少增加派生类的大小。
 
-尽管如此，让我们回到基础。大多数类都不是空的，因此 `EBO` 很少成为私有继承的正当理由。此外，大多数继承对应的是“is-a”（是一个）关系，这是公共继承的任务，而不是私有继承。组合和私有继承都意味着“is-implemented-in-terms-of”（用……实现），但组合更容易理解，所以只要可能就应该使用它。
+尽管如此，让我们回到基础。大多数类都不是空的，因此`EBO`很少成为私有继承的正当理由。此外，大多数继承对应的是“is-a”（是一个）关系，这是公共继承的任务，而不是私有继承。组合和私有继承都意味着“is-implemented-in-terms-of”（用……实现），但组合更容易理解，所以只要可能就应该使用它。
 
 私有继承最可能成为正当设计策略的情况是：当你处理两个之间没有“is-a”关系的类时，其中一个类要么需要访问另一个类的受保护成员，要么需要重新定义其一个或多个虚函数。即使在这种情况下，我们也看到过公共继承和包含的混合使用通常可以产生你想要的行为，尽管设计复杂度更高。*审慎地*使用私有继承意味着：在考虑了所有替代方案后，它是你的软件中表达两个类之间关系的最佳方式。
 
@@ -5331,23 +5566,19 @@ private:
 
 ### 第 40 条：审慎地使用多继承
 
-当涉及到多继承（MI）时，C++ 社区主要分为两个基本阵营。一方认为，如果单继承（SI）是好的，那么多继承一定更好。另一方则认为，单继承是好的，但多继承并不值得那么麻烦。在本节中，我们的首要目标是理解对多继承问题的两种观点。
+当涉及到多继承（`MI`）时，C++ 社区主要分为两个基本阵营。一方认为，如果单继承（`SI`）是好的，那么多继承一定更好。另一方则认为，单继承是好的，但多继承并不值得那么麻烦。在本节中，我们的首要目标是理解对多继承问题的两种观点。
 
-首先要认识的一点是，当多继承进入设计领域时，可能会从多个基类继承相同的名称（例如函数、typedef 等）。这导致了新的歧义机会。例如：
+首先要认识的一点是，当多继承进入设计领域时，可能会从多个基类继承相同的名称（例如函数、`typedef` 等）。这导致了新的歧义机会。例如：
 
 ```cpp
 class BorrowableItem {           // 库允许你借的东西
-
 public:
-
   void checkOut();              // 从图书馆借出物品
-
   ...
 };
 
 class ElectronicGadget {
 private:
-
   bool checkOut() const;         // 执行自检，返回结果
   ...                            // 测试成功
 };
@@ -5361,7 +5592,7 @@ MP3Player mp;
 mp.checkOut();                  // 歧义！哪一个 checkOut？
 ```
 
-注意在这个示例中，对 `checkOut` 的调用是歧义的，尽管两个函数中只有一个是可用的（`checkOut` 在 `BorrowableItem` 中是公有的，但在 `ElectronicGadget` 中是私有的）。符合 C++ 解析重载函数调用的规则：在查看函数是否可用之前，C++ 首先识别与调用最匹配的函数。它只在找到最佳匹配的函数后才检查可用性。在这种情况下，两个 `checkOut` 都是同样好的匹配项，因此没有最佳匹配。因此，`ElectronicGadget::checkOut` 的可用性永远不会被检查。
+注意在这个示例中，对`checkOut`的调用是歧义的，尽管两个函数中只有一个是可用的（`checkOut`在`BorrowableItem`中是公有的，但在`ElectronicGadget`中是私有的）。符合 C++ 解析重载函数调用的规则：在查看函数是否可用之前，C++ 首先识别与调用最匹配的函数。它只在找到最佳匹配的函数后才检查可用性。在这种情况下，两个`checkOut`都是同样好的匹配项，因此没有最佳匹配。因此，`ElectronicGadget::checkOut`的可用性永远不会被检查。
 
 要解决这种歧义，你必须指定调用哪个基类的函数：
 
@@ -5369,7 +5600,7 @@ mp.checkOut();                  // 歧义！哪一个 checkOut？
 mp.BorrowableItem::checkOut();
 ```
 
-当然，你可以尝试显式调用 `ElectronicGadget::checkOut`，但这样歧义会被“你正尝试调用私有函数”的错误所取代。
+当然，你可以尝试显式调用`ElectronicGadget::checkOut`，但这样歧义会被“你正尝试调用私有函数”的错误所取代。
 
 多继承仅仅意味着继承自多个类，但在具有层次结构的体系中发现多继承并不罕见。这会导致有时被称为“死亡钻石”的问题。
 
@@ -5380,11 +5611,12 @@ class OutputFile: public File { ... };
 class IOFile: public InputFile, public OutputFile
 { ... };
 ```
+
 ![images](img/06inf9.gif)
 
-当你任何一个基类和派生类之间存在多路径的继承体系时（例如上面的 `File` 和 `IOFile` 之间，通过 `InputFile` 和 `OutputFile` 有路径），你必须面对是否希望基类中的数据被复制的问题。例如，假设 `File` 类有一个数据成员 `fileName`。如何复制？一方面，它从每个基类中继承了一个副本，这表明 `IOFile` 应该有两个 `fileName` 数据成员。另一方面，简单的逻辑说，一个 `IOFile` 对象只有一个文件名，因此它所继承的 `fileName` 字段不应该被复制。
+当你任何一个基类和派生类之间存在多路径的继承体系时（例如上面的`File`和`IOFile`之间，通过`InputFile`和`OutputFile`有路径），你必须面对是否希望基类中的数据被复制的问题。例如，假设`File`类有一个数据成员`fileName`。如何复制？一方面，它从每个基类中继承了一个副本，这表明`IOFile`应该有两个`fileName`数据成员。另一方面，简单的逻辑说，一个`IOFile`对象只有一个文件名，因此它所继承的`fileName`字段不应该被复制。
 
-C++ 对此辩论不持立场。它乐于支持这两种选择，尽管它的默认是执行复制。如果这不是你想要的，你必须将带有数据的类（即 `File`）变为*虚基类*。要做到这一点，你需要让所有直接继承自它的类都使用虚继承：
+C++ 对此辩论不持立场。它乐于支持这两种选择，尽管它的默认是执行复制。如果这不是你想要的，你必须将带有数据的类（即`File`）变为*虚基类*。要做到这一点，你需要让所有直接继承自它的类都使用虚继承：
 
 ```cpp
 class File { ... };
@@ -5393,17 +5625,16 @@ class OutputFile: virtual public File { ... };
 class IOFile: public InputFile, public OutputFile
 { ... };
 ```
+
 ![images](img/06inf10.gif)
 
-标准 C++ 库包含一个类似的多继承层次结构，这些类是类模板，并且名称是 `basic_ios`、`basic_istream`、`basic_ostream` 和 `basic_iostream`，而不是 `File`、`InputFile`、`OutputFile` 和 `IOFile`。
+标准 C++ 库包含一个类似的多继承层次结构，这些类是类模板，并且名称是`basic_ios`、`basic_istream`、`basic_ostream`和`basic_iostream`，而不是`File`、`InputFile`、`OutputFile`和`IOFile`。
 
 从正确行为的角度来看，公共继承应该是虚的。如果这是唯一的观点，规则就很简单：每当你使用公共继承时，使用*虚*公共继承。遗憾，正确性不是唯一的视角。避免继承字段的复制需要编译器在背后进行一些魔术，结果是使用虚继承的类创建的对象通常比不使用虚继承时要大。访问虚基类中的数据成员的速度也比访问非虚基类要慢。细节随编译器而异，但基本结论很明确：虚继承是有代价的。
 
-
-
 这在其他方面也付出了代价。控制虚基类初始化的规则比非虚基类的规则更复杂，也不那么直观。初始化虚基类的责任由层次结构中的`最底层派生类`承担。这条规则的影响包括：(1) 派自虚基类的类如果需要初始化，则必须意识到其虚基类的存在，无论这些基类相隔有多远；(2) 当向层次结构中添加新的派生类时，它必须假设对其虚基类（包括直接和间接的）承担初始化责任。
 
-关于虚基类（即虚虚继承），我的建议非常简单：首先，除非必要，否则不要使用虚基类。默认情况下，使用非虚继承。其次，如果你必须使用虚基类，尝试尽量避免在它们中存放数据。这样你就不需要担心此类类的初始化（事实证明还包括赋值）规则中的奇异之处了。值得注意的是，Java 和 .NET 中的接口（Interfaces）在许多方面与 C++ 的虚基类相当，但它们被允许包含任何数据。
+关于虚基类（即虚虚继承），我的建议非常简单：首先，除非必要，否则不要使用虚基类。默认情况下，使用非虚继承。其次，如果你必须使用虚基类，尝试尽量避免在它们中存放数据。这样你就不需要担心此类类的初始化（事实证明还包括赋值）规则中的奇异之处了。值得注意的是，Java 和 .NET 中的接口（`Interfaces`）在许多方面与 C++ 的虚基类相当，但它们被允许包含任何数据。
 
 现在让我们来看下面用于建模人的 C++ 接口类（参见 Item 31）：
 
@@ -5416,15 +5647,15 @@ public:
 };
 ```
 
-`IPerson` 的客户端必须基于 `IPerson` 指针和引用进行编程，因为抽象类不能实例化。为了创建可以作为 `IPerson` 对象操作的对象，`IPerson` 的客户端使用工厂函数（再次，参见 Item 31）来实例化派生自 `IPerson` 的具体派生类：
+`IPerson`的客户端必须基于`IPerson`指针和引用进行编程，因为抽象类不能实例化。为了创建可以作为`IPerson`对象操作的对象，`IPerson`的客户端使用工厂函数（再次，参见 Item 31）来实例化派生自`IPerson`的具体派生类：
 
 ```cpp
 // 根据唯一的数据库 ID 创建 Person 对象的工厂函数；
 // 参见 Item 18 了解为什么返回类型不是原始指针
 std::tr1::shared_ptr<IPerson> makePerson(DatabaseID personIdentifier);
-
 // 从用户处获取数据库 ID 的函数
 DatabaseID askUserForDatabaseID();
+
 DatabaseID id(askUserForDatabaseID());
 std::tr1::shared_ptr<IPerson> pp(makePerson(id)); // 创建一个对象
 // 支持 IPerson 接口
@@ -5432,9 +5663,9 @@ std::tr1::shared_ptr<IPerson> pp(makePerson(id)); // 创建一个对象
 // 通过 IPerson 的成员函数操作 *pp
 ```
 
-但是 `makePerson` 是如何创建它返回的指针所指向的对象的？显然，必须有一个派生自 `IPerson` 的具体类可以让 `makePerson` 实例化。
+但是`makePerson`是如何创建它返回的指针所指向的对象的？显然，必须有一个派生自`IPerson`的具体类可以让`makePerson`实例化。
 
-假设这个类被称为 `CPerson`。作为一个具体类，`CPerson` 必须为它继承自 `IPerson` 的纯虚函数提供实现。它可以从零开始编写这些函数，但利用已经完成了大部分或全部必要工作的现有组件会更好。例如，假设一个旧的特定数据库的类 `PersonInfo` 提供了 `CPerson` 所需要的本质：
+假设这个类被称为`CPerson`。作为一个具体类，`CPerson`必须为它继承自`IPerson`的纯虚函数提供实现。它可以从零开始编写这些函数，但利用已经完成了大部分或全部必要工作的现有组件会更好。例如，假设一个旧的特定数据库的类`PersonInfo`提供了`CPerson`所需要的本质：
 
 ```cpp
 class PersonInfo {
@@ -5446,13 +5677,13 @@ public:
 private:
   virtual const char * valueDelimOpen() const; // 见下文
   virtual const char * valueDelimClose() const;
-// ...
+  // ...
 };
 ```
 
-你可以看出这是一个旧类，因为它的成员函数返回的是 `const char*` 而不是 `string` 对象。尽管如此，如果合适，为什么不用呢？该类成员函数的名称暗示了结果可能很漂亮，因为你发现 `PersonInfo` 的设计初衷是为了便于以各种格式打印字段，每个字段的开始和结束由特殊字符串分隔。默认情况下，字段值的起始和结束分隔符是方括号，因此字段值“Ring-tailed Lemur”将以这种方式格式化：`[Ring-tailed Lemur]`
+你可以看出这是一个旧类，因为它的成员函数返回的是`const char*`而不是`string`对象。尽管如此，如果合适，为什么不用呢？该类成员函数的名称暗示了结果可能很漂亮，因为你发现`PersonInfo`的设计初衷是为了便于以各种格式打印字段，每个字段的开始和结束由特殊字符串分隔。默认情况下，字段值的起始和结束分隔符是方括号，因此字段值“Ring-tailed Lemur”将以这种方式格式化：`[Ring-tailed Lemur]`
 
-考虑到 `PersonInfo` 的客户端并不总是想要使用方括号，虚函数 `valueDelimOpen` 和 `valueDelimClose` 允许派生类指定它们自己的起始和结束字符串。`PersonInfo` 成员函数的实现调用了这些虚函数，以便在它们返回的值中添加适当的分隔符。以 `PersonInfo::theName` 为例，代码如下：
+考虑到`PersonInfo`的客户端并不总是想要使用方括号，虚函数`valueDelimOpen`和`valueDelimClose`允许派生类指定它们自己的起始和结束字符串。`PersonInfo`成员函数的实现调用了这些虚函数，以便在它们返回的值中添加适当的分隔符。以`PersonInfo::theName`为例，代码如下：
 
 ```cpp
 const char * PersonInfo::valueDelimOpen() const {
@@ -5474,12 +5705,9 @@ const char * PersonInfo::theName() const {
 }
 ```
 
-人们可能会对 `PersonInfo::theName` 的过时设计产生疑问（特别是使用固定大小的静态缓冲区，这极易引发越界和线程问题——另见 Item 21），但先将这些问题抛之一边，专注于这一点：`theName` 调用 `valueDelimOpen` 来生成它将返回的字符串的起始分隔符，然后生成名称本身，最后调用 `valueDelimClose`。
+人们可能会对`PersonInfo::theName`的过时设计产生疑问（特别是使用固定大小的静态缓冲区，这极易引发越界和线程问题——另见 Item 21），但先将这些问题抛之一边，专注于这一点：`theName`调用`valueDelimOpen`来生成它将返回的字符串的起始分隔符，然后生成名称本身，最后调用`valueDelimClose`。
 
-由于 `valueDelimOpen` 和 `valueDelimClose` 是虚函数，`theName` 返回的结果不仅依赖于 `PersonInfo`，还依赖于派生自 `PersonInfo` 的类。作为 `CPerson` 的实现者，这是一个好消息，因为在细阅 `IPerson` 文档时发现 `name` 和 `birthDate` 要求返回未修饰的值，即不允许包含分隔符。也就是说，如果一个人名叫 Homer，调用其 `name` 函数应该返回“Homer”，而不是“[Homer]”。
-
-
-
+由于`valueDelimOpen`和`valueDelimClose`是虚函数，`theName`返回的结果不仅依赖于`PersonInfo`，还依赖于派生自`PersonInfo`的类。作为`CPerson`的实现者，这是一个好消息，因为在细阅`IPerson`文档时发现`name`和`birthDate`要求返回未修饰的值，即不允许包含分隔符。也就是说，如果一个人名叫 Homer，调用其`name`函数应该返回“Homer”，而不是“[Homer]”。
 
 ```cpp
 public:                                // useful in implementing
@@ -5493,14 +5721,12 @@ public:                                // useful in implementing
 };
 
 class CPerson: public IPerson, private PersonInfo { // note use of MI
-
 public:
   explicit CPerson(DatabaseID pid): PersonInfo(pid) {}
   virtual std::string name() const // implementations
   { return PersonInfo::theName(); } // of the required IPerson member functions
   virtual std::string birthDate() const // functions
   { return PersonInfo::theBirthDate(); }
-
 private: // redefinitions of
   const char * valueDelimOpen() const { return ""; } // inherited virtual delimiter
   const char * valueDelimClose() const { return ""; }
@@ -5511,9 +5737,9 @@ private: // redefinitions of
 
 ![images](img/06inf11.gif)
 
-这个示例证明了多重继承（MI）既有用又易于理解。
+这个示例证明了多重继承（`MI`）既有用又易于理解。
 
-归根结底，多重继承只是面向对象工具箱中的另一种工具。与单继承（SI）相比，它的使用通常更复杂，理解起来也更复杂，因此如果你有一个与多重继承设计大同的单继承设计，那么单继承几乎总是更优的。如果你能想出的设计只涉及多重继承，你应该再仔细思考——几乎有某种方法可以让单继承可行。同时，多重继承有时是完成工作最清晰、最易于维护、最合理的方法。在这种情况下，不要害怕使用它。只需确保谨慎使用即可。
+归根结底，多重继承只是面向对象工具箱中的另一种工具。与单继承（`SI`）相比，它的使用通常更复杂，理解起来也更复杂，因此如果你有一个与多重继承设计大同的单继承设计，那么单继承几乎总是更优的。如果你能想出的设计只涉及多重继承，你应该再仔细思考——几乎有某种方法可以让单继承可行。同时，多重继承有时是完成工作最清晰、最易于维护、最合理的方法。在这种情况下，不要害怕使用它。只需确保谨慎使用即可。
 
 ### 注意事项
 
@@ -5523,12 +5749,9 @@ private: // redefinitions of
 
 # 7. 模板与泛型编程
 
-C++ 模板的初始动机非常直接：为了能够创建 `vector`、`list` 和 `map` 等类型安全的容器。然而，随着使用模板的人越来越多，他们发现用模板做到的事情越来越广泛。容器虽然很好，但泛型编程——即编写与所操作对象类型无关的代码的能力——更为出色。STL 算法如 `for_each`、`find` 和 `merge` 就是这种编程方式的示例。最终，人们发现 C++ 模板机制本身是图灵完备的：它可以用于计算任何可计算的值。这导致了模板元编程：创建在 C++ 编译器内部执行的程序以及... [此处省略重复语义内容，根据指令要求保留核心逻辑]。
+C++ 模板的初始动机非常直接：为了能够创建`vector`、`list`和`map`等类型安全的容器。然而，随着使用模板的人越来越多，他们发现用模板做到的事情越来越广泛。容器虽然很好，但泛型编程——即编写与所操作对象类型无关的代码的能力——更为出色。STL 算法如`for_each`、`find`和`merge`就是这种编程方式的示例。最终，人们发现 C++ 模板机制本身是图灵完备的：它可以用于计算任何可计算的值。这导致了模板元编程：创建在 C++ 编译器内部执行的程序以及... [此处省略重复语义内容，根据指令要求保留核心逻辑]。
 
-
-
-
-隐式接口非常不同。它不是基于函数签名的。相反，它由有效的*表达式*组成。再次查看 `doProcessing` 模板开头的条件判断：
+隐式接口非常不同。它不是基于函数签名的。相反，它由有效的*表达式*组成。再次查看`doProcessing`模板开头的条件判断：
 
 ```cpp
 template<typename T>
@@ -5540,169 +5763,174 @@ void doProcessing(T& w)
 }
 ```
 
+
+
 `T`（`w` 的类型）的隐式接口似乎具有以下约束条件：
 
-* 它必须提供一个名为 `size` 的成员函数，并返回一个整型值。
-* 它必须支持一个 `operator!=` 函数，用于比较两个 `T` 类型的对象。（这里，我们假设 `someNastyWidget` 的类型是 `T`。）
+- 它必须提供一个名为`size`的成员函数，并返回一个整型值。
+- 它必须支持一个`operator!=`函数，用于比较两个`T`类型的对象。（这里，我们假设`someNastyWidget`的类型是`T`。）
 
-得益于运算符重载的可能性，这两个约束条件都不需要满足。是的，`T` 必须支持一个 `size` 成员函数，尽管值得提到的是该函数可能继承自基类。但这个成员函数并不一定返回整数类型。它甚至不需要返回数值类型。就此而言，它甚至不需要返回一个定义了 `operator>` 的类型！它只需要返回某种类型 `X` 的对象，使得存在一个 `operator>` 可以用类型为 `X` 的对象和一个 `int` 进行调用（因为 10 的类型是 `int`）。`operator>` 并不需要接受类型为 `X` 的参数，因为它可以接受类型为 `Y` 的参数，只要存在从类型 `X` 的对象到类型 `Y` 对象的隐式转换，这就是可以的！
+得益于运算符重载的可能性，这两个约束条件都不需要满足。是的，`T`必须支持一个`size`成员函数，尽管值得提到的是该函数可能继承自基类。但这个成员函数并不一定返回整数类型。它甚至不需要返回数值类型。就此而言，它甚至不需要返回一个定义了`operator>`的类型！它只需要返回某种类型`X`的对象，使得存在一个`operator>`可以用类型为`X`的对象和一个`int`进行调用（因为 10 的类型是`int`）。`operator>`并不需要接受类型为`X`的参数，因为它可以接受类型为`Y`的参数，只要存在从类型`X`的对象到类型`Y`对象的隐式转换，这就是可以的！
 
-同样，并没有要求 `T` 支持 `operator!=`，因为 `operator!=` 接受一个类型为 `X` 的对象和一个类型为 `Y` 的对象也是可以的。只要 `T` 可以转换为 `X` 且 `someNastyWidget` 的类型可以转换为 `Y`，对 `operator!=` 的调用就是有效的。
+同样，并没有要求`T`支持`operator!=`，因为`operator!=`接受一个类型为`X`的对象和一个类型为`Y`的对象也是可以的。只要`T`可以转换为`X`且`someNastyWidget`的类型可以转换为`Y`，对`operator!=`的调用就是有效的。
 
-（顺便提一下，这种分析没有考虑到 `operator&&` 可能会被重载的可能性，从而使上述表达式的含义从逻辑与转变为某些可能完全不同的东西。）
+（顺便提一下，这种分析没有考虑到`operator&&`可能会被重载的可能性，从而使上述表达式的含义从逻辑与转变为某些可能完全不同的东西。）
 
 大多数人在第一次开始以这种方式思考隐式接口时会感到头疼，但实际上不需要吃司匹林。隐式接口仅仅由一组有效表达式组成。表达式本身可能看起来很复杂，但它们施加的约束通常是直观的。例如，给定条件判断：
 
-```
+```cpp
 if (w.size() > 10 && w != someNastyWidget) ...
 ```
 
-很难对函数 `size`、`operator>`、`operator&&` 或 `operator!=` 的约束说些什么，但很容易识别出整个表达式的约束。`if` 语句的条件部分必须是一个布尔表达式，因此无论涉及的具体类型是什么，无论 `w.size() > 10 && w != someNastyWidget` 产生什么，它必须与 `bool` 兼容。这是 `doProcessing` 模板对其类型参数 `T` 施加的隐式接口的一部分。`doProcessing` 接口的其他部分是：拷贝构造函数、`normalize` 和 `swap` 的调用对于类型为 `T` 的对象必须有效。
+很难对函数`size`、`operator>`、`operator&&`或`operator!=`的约束说些什么，但很容易识别出整个表达式的约束。`if`语句的条件部分必须是一个布尔表达式，因此无论涉及的具体类型是什么，无论`w.size() > 10 && w != someNastyWidget`产生什么，它必须与`bool`兼容。这是`doProcessing`模板对其类型参数`T`施加的隐式接口的一部分。`doProcessing`接口的其他部分是：拷贝构造函数、`normalize`和`swap`的调用对于类型为`T`的对象必须有效。
 
 施加在模板参数上的隐式接口与施加在类对象上的显式接口一样真实，并且两者在编译期间都会被检查。正如你不能以与其类提供的显式接口矛盾的方式使用对象（代码将无法编译），你不能尝试在模板中使用对象，除非该对象支持模板要求的隐式接口（同样，代码将无法编译）。
 
 ### 必须记住的
 
-* 类和模板都支持接口和多态。
-* 对于类，接口是显式的，并以函数签名为中心。多态在运行时通过虚函数发生。
-* 对于模板参数，接口是隐式的，基于有效表达式。多态在编译期间通过模板实例化和函数重载解析发生。
+- 类和模板都支持接口和多态。
+- 对于类，接口是显式的，并以函数签名为中心。多态在运行时通过虚函数发生。
+- 对于模板参数，接口是隐式的，基于有效表达式。多态在编译期间通过模板实例化和函数重载解析发生。
 
-### 第 42 条目：理解 `typename` 的两种含义
+## 第 42 条目：理解`typename`的两种含义
 
-问题：在以下模板声明中，`class` 和 `typename` 有什么区别？
+问题：在以下模板声明中，`class`和`typename`有什么区别？
 
 ```cpp
-template<class T> class Widget;             // 使用 "class"
-template<typename T> class Widget;         // 使用 "typename"
+template<class T> class Widget;      // 使用 "class"
+
+template<typename T> class Widget;   // 使用 "typename"
 ```
 
-答案：没有区别。在声明模板类型参数时，`class` 和 `typename` 的含义完全相同。有些程序员喜欢一直使用 `class`，因为更容易输入。另一些人（包括我）更喜欢使用 `typename`，因为它暗示了参数不必是一个类类型。少数开发者在允许任何类型时使用 `typename`，并在仅允许接受用户定义类型时预用 `class`。但从 C++ 的角度来看，在声明模板参数时，`class` 和 `typename` 的含义完全相同。
+答案：没有区别。在声明模板类型参数时，`class`和`typename`的含义完全相同。有些程序员喜欢一直使用`class`，因为更容易输入。另一些人（包括我）更喜欢使用`typename`，因为它暗示了参数不必是一个类类型。少数开发者在允许任何类型时使用`typename`，并在仅允许接受用户定义类型时预用`class`。但从 C++ 的角度来看，在声明模板参数时，`class`和`typename`的含义完全相同。
 
-然而，C++ 并不总是认为 `class` 和 `typename` 是等价。有时你必须使用 `typename`。为了理解何时使用，我们必须讨论在模板中可以提到的两种名称。
+然而，C++ 并不总是认为`class`和`typename`是等价。有时你必须使用`typename`。为了理解何时使用，我们必须讨论在模板中可以提到的两种名称。
 
-假设我们有一个函数模板，它接收一个 STL 兼容的容器，该容器持有可以赋值给 `int` 的对象。进一步假设该函数简单地打印它的第二个元素的值。这是一个以愚蠢实现的愚蠢函数，正如我下面写的那样，它甚至不应该通过编译，但请忽略这些——我的疯狂是有理由的：
+假设我们有一个函数模板，它接收一个 STL 兼容的容器，该容器持有可以赋值给`int`的对象。进一步假设该函数简单地打印它的第二个元素的值。这是一个以愚蠢实现的愚蠢函数，正如我下面写的那样，它甚至不应该通过编译，但请忽略这些——我的疯狂是有理由的：
 
 ```cpp
 template<typename C>
 void print2nd(const C& container) {
   if (container.size() >= 2) {
     C::const_iterator iter(container.begin());
+
     ++iter;
+
     int value = *iter;
+
     std::cout << value;
   }
 }
 ```
 
-我标记了该函数中的两个局部变量 `iter` 和 `value`。`iter` 的类型是 `C::const_iterator`，这是一个依赖模板参数 `C` 的类型。模板中依赖模板参数的名称被称为*依赖名称*（dependent names）。当依赖名称嵌套在类内部时，我称之为*嵌套依赖名称*（nested dependent name）。`C::const_iterator` 就是一个嵌套依赖名称。事实上，它是一个*嵌套依赖类型名称*，即引用类型的嵌套依赖名称。
+我标记了该函数中的两个局部变量`iter`和`value`。`iter`的类型是`C::const_iterator`，这是一个依赖模板参数`C`的类型。模板中依赖模板参数的名称被称为*依赖名称*（dependent names）。当依赖名称嵌套在类内部时，我称之为*嵌套依赖名称*（nested dependent name）。`C::const_iterator`就是一个嵌套依赖名称。事实上，它是一个*嵌套依赖类型名称*，即引用类型的嵌套依赖名称。
 
-`print2nd` 中的另一个局部变量 `value` 的类型是 `int`。`int` 是不依赖于任何模板参数的名称。此类名称被称为*非依赖名称*（我完全不知道为什么不叫它们独立名称。如果你和我一样觉得“非依赖”这个词令人厌恶，请同情，但“非依赖”是这类名称的术语。）
+`print2nd`中的另一个局部变量`value`的类型是`int`。`int`是不依赖于任何模板参数的名称。此类名称被称为*非依赖名称*（我完全不知道为什么不叫它们独立名称。如果你和我一样觉得“非依赖”这个词令人厌恶，请同情，但“非依赖”是这类名称的术语。）
 
-嵌套依赖名称会导致解析困难。例如，假设我们通过这样让 `print2nd` 更加愚蠢：
+嵌套依赖名称会导致解析困难。例如，假设我们通过这样让`print2nd`更加愚蠢：
 
 ```cpp
 template<typename C>
-void print2nd(const C& container)
-{
-  C::const_iterator * x;
+void print2nd(const C& container) {
+  C::const_iterator* x;
+
   ...
 }
 ```
 
-这看起来我们正在声明 `x` 为一个指向 `C::const_iterator` 指针的局部变量。但它看起来 true 仅仅是因为我们“知道” `C::const_iterator` 是一个类型。但如果 `C::const_iterator` 不是一个类型呢？如果 `C` 有一个名为 `const_iterator` 的静态数据成员，而 `x` 恰好是一个全局变量的名字呢？在这种情况下，上面的代码并没有声明一个局部变量，而是 `C::const_iterator` 与 `x` 的乘法！当然，这听起来很疯狂，但它是*可能*的，而且编写 C++ 解析器的人必须考虑所有可能的输入，即使是那些疯狂的输入。
+这看起来我们正在声明`x`为一个指向`C::const_iterator`指针的局部变量。但它看起来 true 仅仅是因为我们“知道”`C::const_iterator`是一个类型。但如果`C::const_iterator`不是一个类型呢？如果`C`有一个名为`const_iterator`的静态数据成员，而`x`恰好是一个全局变量的名字呢？在这种情况下，上面的代码并没有声明一个局部变量，而是`C::const_iterator`与`x`的乘法！当然，这听起来很疯狂，但它是*可能*的，而且编写 C++ 解析器的人必须考虑所有可能的输入，即使是那些疯狂的输入。
 
+在已知`C`之前，无法知道`C::const_iterator`是一个类型还是不是，而且当解析模板`print2nd`时，`C`是未知的。C++ 有一条规则来解决这种歧义：如果解析器在模板中遇到嵌套依赖名称（nested dependent name），除非你另有说明，否则它假设该名称*不是*一个类型。默认情况下，嵌套依赖名称*不是*类型。（这条规则有一个例外，我稍后会提到。）
 
-
-在已知 `C` 之前，无法知道 `C::const_iterator` 是一个类型还是不是，而且当解析模板 `print2nd` 时，`C` 是未知的。C++ 有有一条规则来解决这种歧义：如果解析器在模板中遇到嵌套依赖名称（nested dependent name），除非你另有说明，否则它假设该名称*不是*一个类型。默认情况下，嵌套依赖名称*不是*类型。（这条规则有一个例外，我稍后会提到。）
-
-考虑到这一点，再次查看 `print2nd` 的开头：
+考虑到这一点，再次查看`print2nd`的开头：
 
 ```cpp
 template<typename C>
-void print2nd(const C& container)
-{
+void print2nd(const C& container) {
   if (container.size() >= 2) {
     C::const_iterator iter(container.begin());   // 此名称被假设为
-    ...                                          // 不是一个类型
-  
+                                                // 不是一个类型
+  }
 }
 ```
 
-现在应该很清楚为什么这不合法的 C++ 了。`iter` 的声明只有在 `C::const_iterator` 是一个类型时才有意义，但我们没有告诉 C++ 它是一个类型，而 C++ 假设它不是。为了纠正这种情况，我们必须告诉 C++ `C::const_iterator` 是一个类型。我们通过在它前面紧跟 `typename` 来做到：
+现在应该很清楚为什么这不合法的 C++ 了。`iter`的声明只有在`C::const_iterator`是一个类型时才有意义，但我们没有告诉 C++ 它是一个类型，而 C++ 假设它不是。为了纠正这种情况，我们必须告诉 C++ `C::const_iterator`是一个类型。我们通过在它前面紧跟`typename`来做到：
 
 ```cpp
 template<typename C>                   // 这是合法的 C++
-void print2nd(const C& container)
-{
+void print2nd(const C& container) {
   if (container.size() >= 2) {
     typename C::const_iterator iter(container.begin());
+
     ...
   }
 }
 ```
 
-通用规则非常简单：每当你在模板中引用嵌套依赖类型名称时，必须在它前面紧 preceding `typename` 单词。（再次，我稍后会描述一个例外。）
+通用规则非常简单：每当你在模板中引用嵌套依赖类型名称时，必须在它前面紧`typename`单词。（再次，我稍后会描述一个例外。）
 
-`typename` 应该只用于标识嵌套依赖类型名称；其他名称不应该有它。例如，这里有一个同时接收容器和存入该容器的迭代器的函数模板：
+`typename`应该只用于标识嵌套依赖类型名称；其他名称不应该有它。例如，这里有一个同时接收容器和存入该容器的迭代器的函数模板：
 
 ```cpp
 template<typename C>                 // 允许使用 typename（和 "class" 一样）
 void f(const C& container,           // 不允许 typename
-    typename C::iterator iter);     // 需要 typename
+       typename C::iterator iter);   // 需要 typename
 ```
 
-`C` 不是嵌套依赖类型名称（它没有嵌套在任何依赖于模板参数的内容内部），因此在声明 `container` 时不能在它前面加 `typename`，但 `C::iterator` 是嵌套依赖类型名称，因此要求在它前面加 `typename`。
+`C`不是嵌套依赖类型名称（它没有嵌套在任何依赖于模板参数的内容内部），因此在声明`container`时不能在它前面加`typename`，但`C::iterator`是嵌套依赖类型名称，因此要求在它前面加`typename`。
 
-“`typename 必须位于嵌套依赖类型名称之前”规则的例外是：在基类列表或成员初始化列表中的基类标识符中，`typename` 不得位于嵌套依赖类型名称之前。例如：
+“`typename`必须位于嵌套依赖类型名称之前”规则的例外是：在基类列表或成员初始化列表中的基类标识符中，`typename`不得位于嵌套依赖类型名称之前。例如：
 
 ```cpp
 template<typename T>
 class Derived: public Base<T>::Nested { // 基类列表：不允许 typename
+
 public:
   explicit Derived(int x)
-  : Base<T>::Nested(x)                // 成员初始化列表中的基类标识符：不允许 typename
+    : Base<T>::Nested(x)              // 成员初始化列表中的基类标识符：不允许 typename
   {
-    typename Base<T>::Nested temp;   // 使用嵌套依赖类型名称，但不在基类列表或成员初始化列表的基类标识符中：需要 typename
+    typename Base<T>::Nested temp;    // 使用嵌套依赖类型名称，但不在基类列表或成员初始化列表的基类标识符中：需要 typename
+
     ...
   }
-  
 ```
 
-让我们来看最后一个 `typename` 示例，因为它代表了你在实际代码中会看到的某种。假设我们正在编写一个接收迭代器的函数模板，并且我们想为迭代器指向的对象创建一个本地副本 `temp`。我们可以这样做：
+让我们来看最后一个`typename`示例，因为它代表了你在实际代码中会看到的某种。假设我们正在编写一个接收迭代器的函数模板，并且我们想为迭代器指向的对象创建一个本地副本`temp`。我们可以这样做：
 
 ```cpp
 template<typename IterT>
-void workWithIterator(IterT iter)
-{
+void workWithIterator(IterT iter) {
   typename std::iterator_traits<IterT>::value_type temp(*iter);
+
   ...
 }
 ```
 
-不要让 `std::iterator_traits<IterT>::value_type` 吓到你。这只是对标准类的使用，是 C++ 表达“类型为 `IterT` 的对象指向的类型”。该语句声明了一个与 `IterT` 对象指向类型相同的本地变量（`temp`），并用 `iter` 指向的对象初始化 `temp`。如果 `IterT` 是 `vector<int>`，`temp` 的类型就是 `int`。如果 `IterT` 是 `list<string>`，`temp` 的类型就是 `string`。因为 `std::iterator_traits<IterT>::value_type` 是嵌套依赖名称（`value_type` 嵌套在 `iterator_traits<IterT>` 内部，且 `IterT` 是模板参数），我们必须在它前面加 `typename`。
+不要让`std::iterator_traits<IterT>::value_type`吓到你。这只是对标准类的使用，是 C++ 表达“类型为`IterT`的对象指向的类型”。该语句声明了一个与`IterT`对象指向类型相同的本地变量（`temp`），并用`iter`指向的对象初始化`temp`。如果`IterT`是`vector<int>`，`temp`的类型就是`int`。如果`IterT`是`list<string>`，`temp`的类型就是`string`。因为`std::iterator_traits<IterT>::value_type`是嵌套依赖名称（`value_type`嵌套在`iterator_traits<IterT>`内部，且`IterT`是模板参数），我们必须在它前面加`typename`。
 
-如果你觉得读取 `std::iterator_traits<IterT>::value_type` 令人不愉快，想象一下输入它是什么感觉。如果你像大多数程序员一样，一想到输入一次的想法都是可怕的，所以你会想要创建一个 `typedef`。对于像 `value_type` 这样的 traits 成员，通常约定 `typedef` 与 traits 成员相同，因此这种 `typedef` 通常这样定义：
+如果你觉得读取`std::iterator_traits<IterT>::value_type`令人不愉快，想象一下输入它是什么感觉。如果你像大多数程序员一样，一想到输入一次的想法都是可怕的，所以你会想要创建一个`typedef`。对于像`value_type`这样的 traits 成员，通常约定`typedef`与 traits 成员相同，因此这种`typedef`通常这样定义：
 
 ```cpp
 template<typename IterT>
-void workWithIterator(IterT iter)
-{
+void workWithIterator(IterT iter) {
   typedef typename std::iterator_traits<IterT>::value_type value_type;
+
   value_type temp(*iter);
+
   ...
 }
 ```
 
-许多程序员发现 “typedef typename” 的并列看起来很刺耳，但这是引用嵌套类型名称规则的逻辑结果。你会很快习惯的。毕竟，你是有动机的。你想输入多少次 `std::iterator_traits<IterT>::value_type` 呢？
+许多程序员发现“typedef typename”的并列看起来很刺耳，但这是引用嵌套类型名称规则的逻辑结果。你会很快习惯的。毕竟，你是有动机的。你想输入多少次`std::iterator_traits<IterT>::value_type`呢？
 
-作为结束，我应该提到围绕 `typename` 规则的执行因编译器而异。某些编译器接受缺失 `typename` 的代码；有些接受存在 `typename` 但不允许；少数（通常是旧编译器）拒绝要求的 `typename`。这意味着 `typename` 与嵌套类型名称的交互会导致一些移植性问题。
+作为结束，我应该提到围绕`typename`规则的执行因编译器而异。某些编译器接受缺失`typename`的代码；有些接受存在`typename`但不允许；少数（通常是旧编译器）拒绝要求的`typename`。这意味着`typename`与嵌套类型名称的交互会导致一些移植性问题。
 
 ### 注意事项
 
-- 在声明模板参数时，`class` 和 `typename` 是可以互换的。
-- 在基类列表或成员初始化列表中的基类标识符中，使用 `typename` 来标识嵌套类型名称。
+- 在声明模板参数时，`class`和`typename`是可以互换的。
+- 在基类列表或成员初始化列表中的基类标识符中，使用`typename`来标识嵌套类型名称。
 
-### 第 43 条：知道访问模板基类中的名称
+## 第 43 条：知道访问模板基类中的名称
 
 假设我们需要编写一个向多个公司发送消息的应用。消息可以以加密或明文形式发送。如果我们在编译期间有足够的信息确定哪些消息发送哪些公司，我们可以采用基于模板的解决方案：
 
@@ -5710,16 +5938,22 @@ void workWithIterator(IterT iter)
 class CompanyA {
 public:
   ...
+
   void sendCleartext(const std::string& msg);
+
   void sendEncrypted(const std::string& msg);
+
   ...
 };
 
 class CompanyB {
 public:
   ...
+
   void sendCleartext(const std::string& msg);
+
   void sendEncrypted(const std::string& msg);
+
   ...
 };
 
@@ -5731,13 +5965,16 @@ template<typename Company>
 class MsgSender {
 public:
   ...                   // 构造函数、析构函数等
-  void sendClear(const MsgInfo& info)
-  {
+
+  void sendClear(const MsgInfo& info) {
     std::string msg;
+
     create msg from info;
+
     Company c;
     c.sendCleartext(msg);
   }
+
   void sendSecret(const MsgInfo& info) // 类似于 sendClear，只是
   { ... }                             // 调用 c.sendEncrypted
 };
@@ -5750,11 +5987,13 @@ template<typename Company>
 class LoggingMsgSender: public MsgSender<Company> {
 public:
   ...                   // 构造函数、析构函数等
-  void sendClearMsg(const MsgInfo& info)
-  {
+
+  void sendClearMsg(const MsgInfo& info) {
     write "before sending" info to the log;
+
     sendClear(info);  // 调用基类函数；
-    // 这段代码无法编译！
+                       // 这段代码无法编译！
+
     write "after sending" info to the log;
   }
 
@@ -5762,17 +6001,19 @@ public:
 };
 ```
 
+注意派生类中的消息发送函数名称（`sendClearMsg`）与其基类不同（在基类中，它被称为`sendClear`）。这是一个良好的设计，因为它避开了隐藏继承名称的问题（参见 Item 33）以及重新定义继承的非虚函数时所固有的问题（参见 Item 36）。但上面的代码无法通过编译，至少在符合标准的编译器上是这样。此类编译器会报错`sendClear`不存在。我们可以看到`sendClear`存在于基类中，但编译器不会在那里查找它。我们需要理解这是为什么。
 
+问题在于，当编译器遇到类模板`LoggingMsgSender`的定义时，它们不知道它继承自哪个类。确实，它是`MsgSender<Company>`，但`Company`是一个模板参数，该参数在稍后（当`LoggingMsgSender`被实例化时）才会被确定。在不知道`Company`是什么的情况下，无法知道`MsgSender<Company>`类是什么样子的。特别是，无法知道它是否拥有`sendClear`函数。
 
-注意派生类中的消息发送函数名称（`sendClearMsg`）与其基类不同（在基类中，它被称为 `sendClear`）。这是一个良好的设计，因为它避开了隐藏继承名称的问题（参见 Item 33）以及重新定义继承的非虚函数时所固有的问题（参见 Item 36）。但上面的代码无法通过编译，至少在符合标准的编译器上是这样。此类编译器会报错 `sendClear` 不存在。我们可以看到 `sendClear` 存在于基类中，但编译器不会在那里查找它。我们需要理解这是为什么。
-
-问题在于，当编译器遇到类模板 `LoggingMsgSender` 的定义时，它们不知道它继承自哪个类。确实，它是 `MsgSender<Company>`，但 `Company` 是一个模板参数，该参数在稍后（当 `LoggingMsgSender` 被实例化时）才会被确定。在不知道 `Company` 是什么的情况下，无法知道 `MsgSender<Company>` 类是什么样子的。特别是，无法知道它是否拥有 `sendClear` 函数。
-
-为了使问题具体化，假设我们有一个坚持使用加密通信的类 `CompanyZ`：
+为了使问题具体化，假设我们有一个坚持使用加密通信的类`CompanyZ`：
 
 ```cpp
 class CompanyZ { // 此类没有提供
+```
 
+
+
+```cpp
 public:                               // sendCleartext 函数
 
   ...
@@ -5788,20 +6029,54 @@ public:                               // sendCleartext 函数
 
 ```cpp
 template<> // 完全特化
-class MsgSender<CompanyZ> { // MsgSender; 与通用模板相同
+
+class MsgSender<CompanyZ> { // MsgSender；与通用模板相同
 
 public:                                    // 唯一的区别是
 
   ...                                       // 省去了 sendCleartext
 
   void sendSecret(const MsgInfo& info)
+
   { ... }
+
 };
 ```
 
 注意此类定义开头的 `template <>` 语法。它表示这既不是一个模板，也不是一个独立的类，而是 `MsgSender` 模板的一个特化版本，用于模板参数为 `CompanyZ` 的情况。这被称为*完全模板特化*：模板 `MsgSender` 为类型 `CompanyZ` 进行了特化，并且该特化是*完全的*——一旦类型参数被定义为 `CompanyZ`，模板参数的其他任何方面都不能发生变化。
 
 既然 `MsgSender` 已经为 `CompanyZ` 进行了特化，再次考虑派生类 `LoggingMsgSender`：
+
+```cpp
+template<typename Company>
+
+class LoggingMsgSender: public MsgSender<Company> {
+
+public:
+
+  ...
+
+  void sendClearMsg(const MsgInfo& info)
+
+  {
+
+    write "before sending" info to the log;
+
+    sendClear(info); // 如果 Company == CompanyZ，
+                     // 则函数不存在！
+
+    write "after sending" info to the log;
+
+  }
+
+...
+
+};
+```
+
+正如注释所示，当基类为 `MsgSender<Company>` 时，这段代码是没有意义的，因为该类没有提供 `sendClear` 函数。这就是为什么 C++ 拒绝该调用的：它意识到基类模板可能会被特化，并且此类特化可能不会提供与通用模板相同的接口。因此，它通常拒绝在模板化类中查找。在某种意义上，当我们从面向对象的 C++ 跨到模板 C++（参见 Item 1）时，继承查找规则发生了变化。
+
+让代码通过编译的一种方法是使用 `this->`：
 
 ```cpp
 template<typename Company>
@@ -5814,26 +6089,16 @@ public:
   void sendClearMsg(const MsgInfo& info)
   {
     write "before sending" info to the log;
-    sendClear(info); // 如果 Company == CompanyZ，
-                                     // 则函数不存在！
-    write "after sending" info to the log;
-  }
-...
-};
-```
-
-正如注释所示，当基类为 `MsgSender<Company>` 时，这段代码是没有意义的，因为该类没有提供 `sendClear` 函数。这就是为什么 C++ 拒绝该调用的：它意识到基类模板可能会被特化，并且此类特化可能不会提供与通用模板相同的接口。因此，它通常拒绝在模板化类中查找。在某种意义上，当我们从面向对象的 C++ 跨到模板 C++（参见 Item 1
-  {
-    write "before sending" info to the log;
     this->sendClear(info); // 可以，假设
-                          // sendClear 将继承
+                           // sendClear 将继承
     write "after sending" info to the log;
   }
+
 ...
 };
 ```
 
-其次，你可以使用 `using` 声明，如果你读过 Item 33，这个解决方案应该感到熟悉。它解释了 `using` 声明如何将隐藏的基类名称引入到派生类的作用范围内。因此，我们可以这样写 `sendClearMsg`：
+其次，你可以使用 `using` 声明。如果你读过 Item 33，这个解决方案应该感到熟悉。它解释了 `using` 声明如何将隐藏的基类名称引入到派生类的作用范围内。因此，我们可以这样写 `sendClearMsg`：
 
 ```cpp
 template<typename Company>
@@ -5841,21 +6106,24 @@ class LoggingMsgSender: public MsgSender<Company> {
 
 public:
   using MsgSender<Company>::sendClear; // 告诉编译器假设
-  ... // 即 sendClear 在
-      // 基类中
+                                       // sendClear 在基类中
+
+  ...
+
   void sendClearMsg(const MsgInfo& info)
   {
     ...
     sendClear(info); // 可以，假设
-    ... // sendClear 将继承
+                     // sendClear 将继承
   }
+
 ...
 };
 ```
 
-（尽管 `using` 声明在此处和 Item 33 中都有效，但解决的问题是不同的。在这里，情况不是基类名称被派生类名称隐藏了，而是除非我们告诉编译器，否则不会搜索基类作用域。）
+尽管 `using` 声明在此处和 Item 33 中都有效，但解决的问题是不同的。在这里，情况不是基类名称被派生类名称隐藏了，而是除非我们告诉编译器，否则不会搜索基类作用域。
 
-让你的代码通过编译的最后一种方法显式指定被调用的函数在基类中：
+让你的代码通过编译的最后一种方法是显式指定被调用的函数在基类中：
 
 ```cpp
 template<typename Company>
@@ -5869,7 +6137,7 @@ public:
   {
     ...
     MsgSender<Company>::sendClear(info); // 可以，假设
-    ... // sendClear 将继承
+                                        // sendClear 将继承
   }
 };
 ```
@@ -5892,20 +6160,19 @@ zMsgSender.sendClearMsg(msgData); // 错误！无法编译
 
 ## 需要记住的事
 
-• 在派生类模板中，通过 `this->` 前缀、`using` 声明或显式基类限定来引用基类模板中的名称。
+- 在派生类模板中，通过 `this->` 前缀、`using` 声明或显式基类限定来引用基类模板中的名称。
 
-### Item 44: 将与参数无关的代码从模板中提取
+## Item 44：将与参数无关的代码从模板中提取
 
-
-
-
-模板是节省时间、避免代码复制的一种极佳方法。与其编写 20 个每个都包含 15 个成员函数的相似类，你只需要编写一个类模板，然后让编译器实例化你所需的 20 个特定类和 300 个函数。（类模板的成员函数只有在在使用时才会被隐式实例化，因此只有当每个函数都被实际使用时，你才会获得完整的 300 个成员函数。）函数模板同样具有吸引力。与其编写许多函数，你只需要编写一个函数模板并让编译器完成其余工作。技术难道不伟大吗？
+模板是节省时间、避免代码复制的一种极佳方法。与其编写 20 个每个都包含 15 个成员函数的相似类，你只需要编写一个类模板，然后让编译器实例化你所需的 20 个特定类和 300 个函数。（类模板的成员函数只有在使用时才会被隐式实例化，因此只有当每个函数都被实际使用时，你才会获得完整的 300 个成员函数。）函数模板同样具有吸引力。与其编写许多函数，你只需要编写一个函数模板并让编译器完成其余工作。技术难道不伟大吗？
 
 是的，嗯……偶尔如此。如果你不小心，使用模板会导致`代码膨胀`（code bloat）：即包含复制（或几乎复制）的代码、数据或两者兼备的二进制文件。结果可能是源代码看起来精简干练，但目标代码却臃肿肥大。臃肿肥大并不时尚，因此你需要知道如何避免这种二进制文件的夸张现象。
 
 你主要的工具是一个名字很气气的`共性与变异分析`（commonality and variability analysis），但这个想法本身并没有什么不可不起的。即使你一生从未写过模板，你也一直在进行这种分析。
 
-当你编写一个函数并发现该函数的某些实现与另一个函数的实现本质上相同时，你会直接复制代码吗？当然不会。你会从两个函数中提取出共同代码，将其放入第三个函数中，并让另外两个函数调用这个新函数。也就是说，你分析这两个函数以找到共同部分和异部分，将共同部分移动到新函数，并将变异部分保留在原始函数中。同样，如果你编写一个类并发现该类的某些部分与另一个类的部分相同时，你不会复制共同部分。相反，你将共同部分移动到一个新类，然后使用继承或组合（参见 Items 32、38 和 39）让原始类访问这些共同特征。原始类的不同部分——变异部分——保留在它们原始的位置。
+当你编写一个函数并发现该函数的某些实现与另一个函数的实现本质上相同时，你会直接复制代码吗？当然不会。你会从两个函数中提取出共同代码，将其放入第三个函数中，并让另外两个函数调用这个新函数。也就是说，你分析这两个函数以找到共同部分和异部分，将共同部分移动到新函数，并将变异部分保留在原始函数中。
+
+同样，如果你编写一个类并发现该类的某些部分与另一个类的部分相同时，你不会复制共同部分。相反，你将共同部分移动到一个新类，然后使用继承或组合（参见 Items 32、38 和 39）让原始类访问这些共同特征。原始类的不同部分——变异部分——保留在它们原始的位置。
 
 在编写模板时，你进行同样的分析，并以相同的方式避免复制，但有一个区别。在非模板代码中，复制是显式的：你可以`看到`两个函数或两个类之间存在重复。在模板代码中，复制是隐式的：模板源代码只有一份拷贝，因此你必须训练自己去感知模板在被多次实例化时可能发生的复制。
 
@@ -5913,8 +6180,8 @@ zMsgSender.sendClearMsg(msgData); // 错误！无法编译
 
 ```cpp
 template<typename T,             // 用于类型为 T 的 n x n 矩阵
-        std::size_t n>           // 模板；信息请见下文
-class SquareMatrix {             // 取决 size_t 参数
+         std::size_t n>           // 模板；信息请见下文
+class SquareMatrix {              // 取决 size_t 参数
 public:
   ...
   void invert();                  // 原地反转矩阵
@@ -5940,7 +6207,7 @@ sm2.invert();                    // 调用 SquareMatrix<double, 10>::invert
 如果你看到两个函数在字符上完全相同，除了一个版本使用 5 而另一个使用 10 之外，你会怎么办？你的直觉是创建一个接受值作为参数的函数版本，然后用 5 或 10 调用参数化函数，而不是复制代码。你的直觉是对的！这里是对 `SquareMatrix` 执行该操作的尝试：
 
 ```cpp
-template<typename T>             //尺寸无关的基类
+template<typename T>             // 尺寸无关的基类
 class SquareMatrixBase {
 protected:
   ...
@@ -5951,6 +6218,7 @@ template<typename T, std::size_t n>
 class SquareMatrix : private SquareMatrixBase<T> {
 private:
   using SquareMatrixBase<T>::invert; // 隐藏名称
+
 public:
   void invert() {
     SquareMatrixBase<T>::invert(n); // 调用基类
@@ -5958,12 +6226,9 @@ public:
 };
 ```
 
-
-
-
 ```cpp
 std::size_t size; // 矩阵的大小
-T *pData; // 指向矩阵值的指针
+T *pData;         // 指向矩阵值的指针
 };
 ```
 
@@ -6003,16 +6268,25 @@ private:
 
 另一方面，为多个矩阵大小仅保留一个 `invert` 版本可以减小可执行文件的大小，这可以减少程序的工作集大小并提高指令缓存的引用局部性。这些因素可能会让程序运行得更快，从而抵消掉 `invert` 特定大小版本中丢失的任何优化。哪种影响会占主导地位？唯一的方法是两种方法都尝试一下，并在你的特定平台和代表性数据集上观察其行为。
 
-另一个效率考量涉及对象的大小。如果你不小心，将大小无关版本的函数移动到基类可能会增加每个对象的总体大小。例如，在我刚刚展示的代码中，每个 `SquareMatrix` 对象在 `SquareMatrixBase` 中都有一个指向其数据的指针，尽管每个派生类都有获取数据的方法。这增加了每个 `SquareMatrix` 对象的大小，至少增加了一个指针的大小。可以修改设计使这些指针变得不再必要，但同样，这存在权衡。例如，让基类存储一个指向矩阵数据的 `protected` 指针会导致 Item 22 中描述的封装性丢失。它还可能导致资源管理的复杂性：如果基类存储了指向矩阵数据的指针，但该数据可能是动态分配的或物理存储在派生类内部，将如何确定该指针是否应该被删除？这些问题有答案，但你试图对它们做得越复杂，事情就会变得越复杂。在某一点，少量代码复制开始看起来像是一种慈悲。
+另一个效率考量涉及对象的大小。如果你不小心，将大小无关版本的函数移动到基类可能会增加每个对象的总体大小。例如，在我刚刚展示的代码中，每个 `SquareMatrix` 对象在 `SquareMatrixBase` 中都有一个指向其数据的指针，尽管每个派生类都有获取数据的方法。这增加了每个 `SquareMatrix` 对象的大小，至少增加了一个指针的大小。
 
-之前的项目仅讨论了由于非类型参数导致的膨胀，但类型参数也会导致膨胀。例如，在许多平台上，`int` 和 `long` 具有相同的二进制表示，因此例如 `vector<int>` 和 `vector<long>` 的成员函数可能是相同的。某些链接器会合并相同的函数实现，但另一些则不会，这意味着在 `int` 和 `long` 上都实例化的某些模板在某些环境中可能会导致代码膨胀。同样，在大多数平台上，所有指针类型都具有相同的二进制表示，因此持有指针类型的模板（例如 `list<int*>`、`list<const int*>`、`list<SquareMatrix<long>*>`）通常能够为每个成员函数使用单一的底层实现。通常，这意味着通过实现与强类型指针（即 `T*`）工作的成员函数，让它们调用与无类型指针（即 `void*`）工作的函数来实现的。标准 C++ 库的某些实现对 `vector`、`deque` 和 `list` 等模板就是这样做。如果你担心模板中出现代码膨胀，你可能希望编写实现相同功能的模板。
+可以修改设计使这些指针变得不再必要，但同样，这存在权衡。例如，让基类存储一个指向矩阵数据的 `protected` 指针会导致 Item 22 中描述的封装性丢失。它还可能导致资源管理的复杂性：如果基类存储了指向矩阵数据的指针，但该数据可能是动态分配的或物理存储在派生类内部，将如何确定该指针是否应该被删除？
 
-需要记住的事
+这些问题有答案，但你试图对它们做得越复杂，事情就会变得越复杂。在某一点，少量代码复制开始看起来像是一种慈悲。
+
+之前的项目仅讨论了由于非类型参数导致的膨胀，但类型参数也会导致膨胀。例如，在许多平台上，`int` 和 `long` 具有相同的二进制表示，因此例如 `vector<int>` 和 `vector<long>` 的成员函数可能是相同的。某些链接器会合并相同的函数实现，但另一些则不会，这意味着在 `int` 和 `long` 上都实例化的某些模板在某些环境中可能会导致代码膨胀。
+
+同样，在大多数平台上，所有指针类型都具有相同的二进制表示，因此持有指针类型的模板（例如 `list<int*>`、`list<const int*>`、`list<SquareMatrix<long>*>`）通常能够为每个成员函数使用单一的底层实现。通常，这意味着通过实现与强类型指针（即 `T*`）工作的成员函数，让它们调用与无类型指针（即 `void*`）工作的函数来实现的。
+
+标准 C++ 库的某些实现对 `vector`、`deque` 和 `list` 等模板就是这样做。如果你担心模板中出现代码膨胀，你可能希望编写实现相同功能的模板。
+
+## 需要记住的事
+
 - 模板会生成多个类和多个函数，因此任何依赖模板参数的模板代码都会导致膨胀。
 - 非类型模板参数导致的膨胀通常可以通过将模板参数替换为函数参数来消除。
 - 类型参数导致的膨胀可以通过共享相同二进制表示的实例化来减少。
 
-### Item 45：使用成员函数模板接受“所有类型”
+## Item 45：使用成员函数模板接受“所有类型”
 
 智能指针是像指针的对象，但增加了指针没有的功能。例如，Item 13 解释了标准的 `auto_ptr` 和 `shared_ptr` 如何在正确的时间自动删除堆资源。STL 容器的迭代器几乎是智能指针；你当然无法通过 `++` 将内置指针从链表的某个节点移动到下一个，但这种做法可行。
 
@@ -6022,12 +6296,15 @@ private:
 class Top { ... };
 class Middle: public Top { ... };
 class Bottom: public Middle { ... };
+
 Top *pt1 = new Middle;      // Middle* 转换为 Top*
-Top *pt2 = new Bottom;     // Bottom* 转换为 Top*
-const Top *pct2 = pt1;     // Top* 转换为 const Top*
+Top *pt2 = new Bottom;      // Bottom* 转换为 Top*
+const Top *pct2 = pt1;      // Top* 转换为 const Top*
 ```
 
 在自定义智能指针类中模拟此类转换是困难的。我们需要以下代码才能编译：
+
+
 
 ```cpp
 template<typename T>
@@ -6036,27 +6313,27 @@ public:                     // 智能指针通常
   explicit SmartPtr(T *realPtr); // 由内置指针初始化
   ...
 };
+
 SmartPtr<Top> pt1 =         // SmartPtr<Middle> ⇒
   SmartPtr<Middle>(new Middle); // SmartPtr<Top>
+
 SmartPtr<Top> pt2 =         // SmartPtr<Bottom> ⇒
   SmartPtr<Bottom>(new Bottom); // SmartPtr<Top>
+
 SmartPtr<const Top> pct2 = pt1; // SmartPtr<Top> ⇒ SmartPtr<const Top>
 ```
 
+同一模板的不同实例化之间没有内在联系，因此编译器将`SmartPtr<Middle>`和`SmartPtr<Top>`视为完全不同的类，它们之间的关系并不比例如的`vector<float>`和`Widget`那么紧密。为了实现我们所需的`SmartPtr`类之间的转换，我们必须显式地对它们进行编程。
 
-
-
-同一模板的不同实例化之间没有内在联系，因此编译器将 `SmartPtr<Middle>` 和 `SmartPtr<Top>` 视为完全不同的类，它们之间的关系并不比例如的 `vector<float>` 和 `Widget` 那么紧密。为了实现我们所需的 `SmartPtr` 类之间的转换，我们必须显式地对它们进行编程。
-
-在上面的智能指针示例代码中，每条语句都会创建一个新的智能指针对象，因此目前我们重点关注如何编写具有我们预期行为的智能指针构造函数。一个关键的观察是，没有办法写出我们所有需要的构造函数。在上面的层次结构中，我们可以从 `SmartPtr<Middle>` 或 `SmartPtr<Bottom>` 构建一个 `SmartPtr<Top>`，但如果未来扩展了层次结构，`SmartPtr<Top>` 对象将必须能够从其他智能指针类型构造。例如，如果我们之后添加了：
+在上面的智能指针示例代码中，每条语句都会创建一个新的智能指针对象，因此目前我们重点关注如何编写具有我们预期行为的智能指针构造函数。一个关键的观察是，没有办法写出我们所有需要的构造函数。在上面的层次结构中，我们可以从`SmartPtr<Middle>`或`SmartPtr<Bottom>`构建一个`SmartPtr<Top>`，但如果未来扩展了层次结构，`SmartPtr<Top>`对象将必须能够从其他智能指针类型构造。例如，如果我们之后添加了：
 
 ```cpp
 class BelowBottom: public Bottom { ... };
 ```
 
-我们需要支持从 `SmartPtr<BelowBottom>` 对象创建 `SmartPtr<Top>` 对象，而且我们显然不想通过修改 `SmartPtr` 模板来实现。
+我们需要支持从`SmartPtr<BelowBottom>`对象创建`SmartPtr<Top>`对象，而且我们显然不想通过修改`SmartPtr`模板来实现。
 
-从原则上说，我们需要的构造函数数量是无限的。由于模板可以实例化生成无限数量的函数，似乎我们不需要为 `SmartPtr` 写一个构造*函数*，而是需要一个构造*模板*。此类模板是*成员函数模板*（通常仅称为*成员模板*）的示例——即生成类成员函数的模板：
+从原则上说，我们需要的构造函数数量是无限的。由于模板可以实例化生成无限数量的函数，似乎我们不需要为`SmartPtr`写一个构造函数，而是需要一个构造模板。此类模板是成员函数模板（通常仅称为成员模板）的示例——即生成类成员函数的模板：
 
 ```cpp
 template<typename T>
@@ -6068,13 +6345,13 @@ public:
 };
 ```
 
-这意味着对于每个类型 `T` 和每个类型 `U`，都可以从 `SmartPtr<U>` 创建 `SmartPtr<T>`，因为 `SmartPtr<T>` 拥有一个接受 `SmartPtr<U>` 参数的构造函数。这样的构造函数——即从另一个对象创建一个对象，而该另一个对象的类型是同一模板的不同实例化（例如，从 `SmartPtr<U>` 创建 `SmartPtr<T>`）——有时被称为*通用拷贝构造函数*。
+这意味着对于每个类型`T`和每个类型`U`，都可以从`SmartPtr<U>`创建`SmartPtr<T>`，因为`SmartPtr<T>`拥有一个接受`SmartPtr<U>`参数的构造函数。这样的构造函数——即从另一个对象创建一个对象，而该另一个对象的类型是同一模板的不同实例化（例如，从`SmartPtr<U>`创建`SmartPtr<T>`）——有时被称为通用拷贝构造函数。
 
-上面的通用拷贝构造函数没有声明为 `explicit`。这是故意为之的。内置指针类型之间的类型转换（例如从派生类指针到基类指针）是隐式的，不需要强制转换，因此智能指针模拟这种行为是合理的。在模板化的构造函数上省略 `explicit` 正是为了这一点。
+上面的通用拷贝构造函数没有声明为`explicit`。这是故意为之的。内置指针类型之间的类型转换（例如从派生类指针到基类指针）是隐式的，不需要强制转换，因此智能指针模拟这种行为是合理的。在模板化的构造函数上省略`explicit`正是为了这一点。
 
-按照声明，`SmartPtr` 的通用拷贝构造函数提供的功能超出了我们需要。是的，我们希望能够从 `SmartPtr<Bottom>` 创建 `SmartPtr<Top>`，但我们不希望从 `SmartPtr<Top>` 创建 `SmartPtr<Bottom>`，因为这违背了公共继承的含义（参见 [Item 32]）。我们也不希望从 `SmartPtr<double>` 创建 `SmartPtr<int>`，因为不存在从 `double*` 到 `int*` 的对应隐式转换。我们必须以某种方式对该成员模板生成的成员函数群进行筛选。
+按照声明，`SmartPtr`的通用拷贝构造函数提供的功能超出了我们需要。是的，我们希望能够从`SmartPtr<Bottom>`创建`SmartPtr<Top>`，但我们不希望从`SmartPtr<Top>`创建`SmartPtr<Bottom>`，因为这违背了公共继承的含义（参见[Item 32]）。我们也不希望从`SmartPtr<double>`创建`SmartPtr<int>`，因为不存在从`double*`到`int*`的对应隐式转换。我们必须以某种方式对该成员模板生成的成员函数群进行筛选。
 
-假设 `SmartPtr` 遵循 `auto_ptr` 和 `tr1::shared_ptr` 的做法，提供一个 `get` 成员函数来返回智能指针对象持有的内置指针的拷贝（参见 [Item 15]），我们可以使用构造函数模板的实现将转换限制在我们需要的范围内：
+假设`SmartPtr`遵循`auto_ptr`和`tr1::shared_ptr`的做法，提供一个`get`成员函数来返回智能指针对象持有的内置指针的拷贝（参见[Item 15]），我们可以使用构造函数模板的实现将转换限制在我们需要的范围内：
 
 ```cpp
 template<typename T>
@@ -6083,41 +6360,48 @@ public:
   template<typename U>
   SmartPtr(const SmartPtr<U>& other)      // 初始化持有的指针
   : heldPtr(other.get()) { ... }           // 使用其他持有的指针
+
   T* get() const { return heldPtr; }
+
   ...
 private:                                  // SmartPtr 持有的内置指针
-  T *heldPtr;                              
+  T *heldPtr;
 };
 ```
 
-我们使用成员列表来初始化 `SmartPtr<T>` 的 `T*` 类型数据成员，赋值为 `SmartPtr<U>` 持有的 `U*` 类型指针。只有当从 `U*` 指针到 `T*` 指针存在隐式转换时，编译才能通过，而这正是我们想要的。结果是，`SmartPtr<T>` 现在有一个通用拷贝构造函数，当传递兼容类型的参数时，它可以通过编译。
+我们使用成员列表来初始化`SmartPtr<T>`的`T*`类型数据成员，赋值为`SmartPtr<U>`持有的`U*`类型指针。只有当从`U*`指针到`T*`指针存在隐式转换时，编译才能通过，而这正是我们想要的。结果是，`SmartPtr<T>`现在有一个通用拷贝构造函数，当传递兼容类型的参数时，它可以通过编译。
 
-成员函数模板的用处不仅限于构造函数。另一个常见作用是支持赋值。例如，`tr1::shared_ptr`（再次参见 [Item 13]）支持从所有兼容的内置指针、`tr1::shared_ptr`、`auto_ptr` 和 `tr1::weak_ptr` 构建（参见 [Item 5]），并支持从这些类型除 `tr1::weak_ptr` 以外的所有类型赋值。以下是 TR1 关于 `tr1::shared_ptr` 的规范片段，包括它在声明模板参数时倾向于使用 `class` 而非 `typename`。（正如 [Item 42] 所解释的，它们在这一语境下意思相同。）
+成员函数模板的用处不仅限于构造函数。另一个常见作用是支持赋值。例如，`tr1::shared_ptr`（再次参见[Item 13]）支持从所有兼容的内置指针、`tr1::shared_ptr`、`auto_ptr`和`tr1::weak_ptr`构建（参见[Item 5]），并支持从这些类型除`tr1::weak_ptr`以外的所有类型赋值。以下是 TR1 关于`tr1::shared_ptr`的规范片段，包括它在声明模板参数时倾向于使用`class`而非`typename`。（正如[Item 42]所解释的，它们在这一语境下意思相同。）
 
 ```cpp
 template<class T> class shared_ptr {
 public:
-  template<class Y>                           // 从...构造
+  template<class Y>                           // 从...
   explicit shared_ptr(Y * p);                // 任何兼容的
+
   template<class Y>                           // 内置指针
-  shared_ptr(shared_ptr<Y> const& r);      // shared_ptr,
+  shared_ptr(shared_ptr<Y> const& r);         // shared_ptr,
+
   template<class Y>                           // weak_ptr,
-  shared_ptr(weak_ptr<Y> const& r);      // 或
+  shared_ptr(weak_ptr<Y> const& r);            // 或
+
   template<class Y>                           // auto_ptr
-  explicit shared_ptr(auto_ptr<Y>& r);     // 赋值
+  explicit shared_ptr(auto_ptr<Y>& r);        // 赋值
+
   template<class Y>                           // shared_ptr 或
   shared_ptr& operator=(shared_ptr<Y> const& r);  // 任何兼容的
+
   template<class Y>                           // auto_ptr
   shared_ptr& operator=(auto_ptr<Y>& r);
   ...
 };
 ```
 
-除了拷贝构造函数外，所有的构造函数都声明为 `explicit`。这意味着一种 `shared_ptr` 类型到另一种类型的类型是允许的，但从内置指针或其他智能指针类型的隐式转换是不允许的。（显式转换——例如通过强制转换——是可以的。）同样有趣的是，传递 `auto_ptr` 的构造函数和赋值运算符没有声明为 `const`，这与 `tr1::shared_ptr` 和 `tr1::weak_ptr` 的传递方式不同。这是 `auto_ptr` 在拷贝时会被修改的这一事实的结果（参见 [Item 13]）。
+除了拷贝构造函数外，所有的构造函数都声明为`explicit`。这意味着一种`shared_ptr`类型到另一种类型的类型是允许的，但从内置指针或其他智能指针类型的隐式转换是不允许的。（显式转换——例如通过强制转换——是可以的。）同样有趣的是，传递`auto_ptr`的构造函数和赋值运算符没有声明为`const`，这与`tr1::shared_ptr`和`tr1::weak_ptr`的传递方式不同。这是`auto_ptr`在拷贝时会被修改的这一事实的结果（参见[Item 13]）。
 
-成员函数模板是极佳的工具，但它们并没有改变语言的基本规则。[Item 5] 解释了编译器可能生成的四个成员函数中的两个是拷贝构造函数和拷贝赋值运算符。`tr1::shared_ptr` 声明了一个通用拷贝构造函数，显然当类型 `T` 和 `Y` 相同时，可以实例化通用拷贝构造函数来创建“普通的”拷贝构造函数。那么，编译器会为 `tr1::shared_ptr` 生成拷贝构造函数，还是在从另一个同类型的 `tr1::shared_ptr` 对象构造时，实例化通用拷贝构造函数模板呢？
+成员函数模板是极佳的工具，但它们并没有改变语言的基本规则。[Item 5]解释了编译器可能生成的四个成员函数中的两个是拷贝构造函数和拷贝赋值运算符。`tr1::shared_ptr`声明了一个通用拷贝构造函数，显然当类型`T`和`Y`相同时，可以实例化通用拷贝构造函数来创建“普通的”拷贝构造函数。那么，编译器会为`tr1::shared_ptr`生成拷贝构造函数，还是在从另一个同类型的`tr1::shared_ptr`对象构造时，实例化通用拷贝构造函数模板呢？
 
-正如我所说，成员模板并不改变语言的规则，而规则规定，如果需要拷贝构造函数而你没有声明，编译器会自动为你生成一个。在类中声明通用拷贝构造函数（成员模板）并不能阻止编译器生成自己的拷贝构造函数（非模板），因此如果你想控制拷贝构造的所有方面，你必须既声明通用拷贝构造函数，也声明“普通的”拷贝构造函数。赋值也是如此。以下是 `shared_ptr` 定义中的一个示例片段，说明了这一点：
+正如我所说，成员模板并不改变语言的规则，而规则规定，如果需要拷贝构造函数而你没有声明，编译器会自动为你生成一个。在类中声明通用拷贝构造函数（成员模板）并不能阻止编译器生成自己的拷贝构造函数（非模板），因此如果你想控制拷贝构造的所有方面，你必须既声明通用拷贝构造函数，也声明“普通的”拷贝构造函数。赋值也是如此。以下是`shared_ptr`定义中的一个示例片段，说明了这一点：
 
 ```cpp
 template<class T> class shared_ptr {
@@ -6126,13 +6410,12 @@ public:
 };
 ```
 
-
-
-
 ```cpp
 template<class Y> // generalized
     shared_ptr(shared_ptr<Y> const& r); // copy constructor
+
     shared_ptr& operator=(shared_ptr const& r); // copy assignment
+
     template<class Y> // generalized
     shared_ptr& operator=(shared_ptr<Y> const& r); // copy assignment
     ...
@@ -6144,9 +6427,9 @@ template<class Y> // generalized
 - 使用成员函数模板来生成可以接受所有兼容类型的函数。
 - 如果你为泛型拷贝构造或泛型赋值声明了成员模板，你仍然需要声明普通的拷贝构造函数和拷贝赋值运算符。
 
-### 事项 46：当需要类型转换时，在模板内部定义非成员函数
+## 事项 46：当需要类型转换时，在模板内部定义非成员函数
 
-Item 24 解释了为什么只有非成员函数有资格对所有参数进行隐式类型转换，并它以 `Rational` 类的 `operator*` 函数作为示例。我建议你在继续之前熟悉那个示例，因为本条事项通过对 Item 24 示例进行一个看似无害的修改，扩展了讨论：它将 `Rational` 和 `operator*` 都模板化了：
+[Item 24]解释了为什么只有非成员函数有资格对所有参数进行隐式类型转换，并以`Rational`类的`operator*`函数作为示例。我建议你在继续之前熟悉那个示例，因为本条事项通过对[Item 24]示例进行一个看似无害的修改，扩展了讨论：它将`Rational`和`operator*`都模板化了：
 
 ```cpp
 template<typename T>
@@ -6154,8 +6437,10 @@ class Rational {
 public:
   Rational(const T& numerator = 0, // 参见 Item 20 了解为什么参数
              const T& denominator = 1); // 现在是按引用传递的
+
   const T numerator() const; // 参见 Item 28 了解为什么
   const T denominator() const; // 数值仍然按值传递，
+
   ... // 参见 Item 3 为什么它们是 const
 };
 
@@ -6165,7 +6450,7 @@ const Rational<T> operator*(const Rational<T>& lhs,
 { ... }
 ```
 
-就像 Item 24 中一样，我们希望支持混合模式运算，因此我们希望下面的代码能够编译。我们预计它可以编译，因为我们使用的是与 Item 24 中运行相同的代码。唯一的区别是 `Rational` 和 `operator*` 现在是模板了：
+就像[Item 24]中一样，我们希望支持混合模式运算，因此我们希望下面的代码能够编译。我们预计它可以编译，因为我们使用的是与[Item 24]中运行相同的代码。唯一的区别是`Rational`和`operator*`现在是模板了：
 
 ```cpp
 Rational<int> oneHalf(1, 2); // 此示例来自 Item 24，
@@ -6173,11 +6458,11 @@ Rational<int> oneHalf(1, 2); // 此示例来自 Item 24，
 Rational<int> result = oneHalf * 2; // 错误！无法编译
 ```
 
-这种编译失败的事实表明，模板化的 `Rational` 在某些地方与非模板版本有所不同，而事实也确实如此。在 Item 24 中，编译器知道我们正尝试调用哪个函数（接受两个 `Rational` 的 `operator*`），但在这里，编译器*并不知道*我们想要调用哪个函数。相反，它们正试图*推导出*从名为 `operator*` 的模板中实例化（即创建）哪个函数。它们知道应该实例化一个名为 `operator*` 且接受两个 `Rational<T>` 参数的函数，但为了进行实例化，它们必须弄清楚 `T` 是什么。问题是，它们做不到。
+这种编译失败的事实表明，模板化的`Rational`在某些地方与非模板版本有所不同，而事实也确实如此。在[Item 24]中，编译器知道我们正尝试调用哪个函数（接受两个`Rational`的`operator*`），但在这里，编译器并不知道我们想要调用哪个函数。相反，它们正试图推导出从名为`operator*`的模板中实例化（即创建）哪个函数。它们知道应该实例化一个名为`operator*`且接受两个`Rational<T>`参数的函数，但为了进行实例化，它们必须弄清楚`T`是什么。问题是，它们做不到。
 
-在尝试推导 `T` 时，它们查看传递给 `operator*` 用的参数类型。在这种情况下，这些类型是 `Rational<int>`（`oneHalf` 的类型）和 `int`（`2` 的类型）。每个参数都是单独考虑的。使用 `oneHalf` 的推导很容易。`operator*` 的第一个参数声明为类型 `Rational<T>`，而 `operator*` 的第一个参数（`oneHalf`）类型为 `Rational<int>`，所以 `T` 必须是 `int`。遗憾的是，另一个参数的推导并不简单。`operator*` 的第二个参数声明为类型 `Rational<T>`，但 `operator*` 的第二个参数（2）类型是 `int`。编译器在这种情况下如何弄清楚 `T` 是什么呢？你可能期望它们使用 `Rational<int>` 的非 `explicit` 构造函数将 `2` 转换为 `Rational<int>`，从而允许它们推出 `T` 是 `int`，但它们并没有这样做。它们没有这样做，是因为隐式转换函数在模板推导期间*从不会*被考虑。此类转换在函数调用期间使用，但在调用函数之前，你必须知道存在哪些函数。为了知道这一点，你必须推导出相关模板的参数类型（以便你能够实例化相应的函数）。但通过调用进行的隐式类型转换在模板推导期间是不被考虑的。Item 24 不涉及任何模板，因此模板参数推导不是问题。现在我们进入了 C++ 的模板部分（参见 Item 1），这是主要问题。
+在尝试推导`T`时，它们查看传递给`operator*`用的参数类型。在这种情况下，这些类型是`Rational<int>`（`oneHalf`的类型）和`int`（`2`的类型）。每个参数都是单独考虑的。使用`oneHalf`的推导很容易。`operator*`的第一个参数声明为类型`Rational<T>`，而`operator*`的第一个参数（`oneHalf`）类型为`Rational<int>`，所以`T`必须是`int`。遗憾的是，另一个参数的推导并不简单。`operator*`的第二个参数声明为类型`Rational<T>`，但`operator*`的第二个参数（2）类型是`int`。编译器在这种情况下如何弄清楚`T`是什么呢？你可能期望它们使用`Rational<int>`的非`explicit`构造函数将`2`转换为`Rational<int>`，从而允许它们推出`T`是`int`，但它们并没有这样做。它们没有这样做，是因为隐式转换函数在模板推导期间从不会被考虑。此类转换在函数调用期间使用，但在调用函数之前，你必须知道存在哪些函数。为了知道这一点，你必须推导出相关模板的参数类型（以便你能够实例化相应的函数）。但通过调用进行的隐式类型转换在模板推导期间是不被考虑的。[Item 24]不涉及任何模板，因此模板参数推导不是问题。现在我们进入了 C++ 的模板部分（参见[Item 1]），这是主要问题。
 
-我们可以利用模板类中的 `friend` 声明可以引用特定函数这一事实，减轻编译器在模板参数推导方面的挑战。这意味着类 `Rational<T>` 可以为 `Rational<T>` 声明 `operator*` 为一个友元函数。类模板不依赖于模板参数推导（该过程仅适用于函数模板）。这意味着 `Rational<T>` 类可以声明针对 `Rational<T>` 的 `operator*` 为友元函数：
+我们可以利用模板类中的`friend`声明可以引用特定函数这一事实，减轻编译器在模板参数推导方面的挑战。这意味着类`Rational<T>`可以为`Rational<T>`声明`operator*`为一个友元函数。类模板不依赖于模板参数推导（该过程仅适用于函数模板）。这意味着`Rational<T>`类可以声明针对`Rational<T>`的`operator*`为友元函数：
 
 ```cpp
 template<typename T>
@@ -6194,14 +6479,11 @@ const Rational<T> operator*(const Rational<T>& lhs, // 定义 operator*
 { ... }
 ```
 
-现在混合模式调用 `operator*` 将编译，因为当对象 `oneHalf` 被声明为类型 `Rational<int>` 时，类 `Rational<int>` 被实例化，作为该过程的一部分，接受 `Rational<int>` 参数的友元函数 `operator*` 被自动声明。作为一个声明函数（而不是函数模板），编译器在调用它时可以使用隐式转换函数（例如 `Rational` 的非 `explicit` 构造函数），这就是它们让混合模式调用成功的原因。
+现在混合模式调用`operator*`将编译，因为当对象`oneHalf`被声明为类型`Rational<int>`时，类`Rational<int>`被实例化，作为该过程的一部分，接受`Rational<int>`参数的友元函数`operator*`被自动声明。作为一个声明函数（而不是函数模板），编译器在调用它时可以使用隐式转换函数（例如`Rational`的非`explicit`构造函数），这就是它们让混合模式调用成功的原因。
 
-遗憾，“成功”在这个语境下是一个幽默的词，因为尽管代码可以编译，但无法链接。我们稍后会处理这个问题，但首先我想说明在 `Rational` 内部声明 `operator*` 的语法。
+遗憾，“成功”在这个语境下是一个幽默的词，因为尽管代码可以编译，但无法链接。我们稍后会处理这个问题，但首先我想说明在`Rational`内部声明`operator*`的语法。
 
-
-
-
-最简单的方法是将 `operator*` 的函数体合并到它的声明中：
+最简单的方法是将`operator*`的函数体合并到它的声明中：
 
 ```cpp
 template<typename T>
@@ -6216,9 +6498,11 @@ friend const Rational operator*(const Rational& lhs, const Rational& rhs)
 };
 ```
 
-事实上，这如预期地工作：对 `operator*` 的混合模式调用现在可以编译、链接并运行了。太好了！
+事实上，这如预期地工作：对`operator*`的混合模式调用现在可以编译、链接并运行了。太好了！
 
-关于这种技术的一个有趣的观察是，使用友元（friendship）与访问类的非公有部分并无关。为了让所有参数都可能进行类型转换，我们需要一个非成员函数（适用于 [Item 24]）；而为了让该函数能够正确自动实例化，我们需要在类内部声明该函数。在类内部声明非成员函数的唯一方法就是将其变为 `friend`。所以我们这样做。这不合常规吗？是的。有效吗？毫无疑问。
+关于这种技术的一个有趣的观察是，使用友元（friendship）与访问类的非公有部分并无关。为了让所有参数都可能进行类型转换，我们需要一个非成员函数（适用于[Item 24]）；而为了让该函数能够正确自动实例化，我们需要在类内部声明该函数。在类内部声明非成员函数的唯一方法就是将其变为`friend`。所以我们这样做。这不合常规吗？是的。有效吗？毫无疑问。
+
+
 
 正如 [Item 30] 所解释的，定义在类内部的函数被隐式声明为 `inline`，这包括像 `operator*` 这样的友元函数。你可以通过让 `operator*` 只调用一个定义在类外部的辅助函数，来尽量减少此类 `inline` 声明的影响。在本节的示例中，这样做并没有太大意义，因为 `operator*` 已经实现为一个单行函数了，但对于更复杂的函数体，这可能是理想的。值得一看“让友元调用辅助函数”的方法。
 
@@ -6293,9 +6577,6 @@ struct random_access_iterator_tag: public bidirectional_iterator_tag {};
 这些结构体之间的继承关系是有效的“是一个”关系（见 Item 32）：即所有前向迭代器都是输入迭代器，以此此类推。我们很快就会看到这种继承关系的用处。
 
 但回到 `advance`。考虑到不同的迭代器能力，实现 `advance` 的一种方法是使用最低公分数的策略，通过循环迭代增加或减少迭代器。然而，这种方法将需要线性时间。随机访问迭代器支持常量时间的迭代器算术，我们希望在存在这种能力时利用它。
-
-
-
 
 我们真正想做的是本质上像这样实现 `advance`：
 
@@ -6382,8 +6663,11 @@ struct iterator_traits<IterT*> // 用于内置类型
 ```
 
 到此时，你已经知道如何设计和实现一个 traits 了：
+
 - 识别你想提供的某些类型信息（例如，对于迭代器，即它们的类别）。
+
 - 选择一个名称来标识这些信息（例如 `iterator_category`）。
+
 - 提供一个模板和一组特化版本（例如 `iterator_traits`），其中包含你想要支持的信息。
 
 给定 `iterator_traits` —— 即 `std::iterator_traits`，因为它是 C++ 标准库的一部分——我们可以完善 `advance` 的伪代码：
@@ -6430,13 +6714,11 @@ void doAdvance(IterT& iter, DistT d,      // 输入迭代器
 
 由于 `forward_iterator_tag` 继承自 `input_iterator_tag`，因此针对 `input_iterator_tag` 的 `doAdvance` 版本也将处理向前迭代器。这就是各种 `iterator_tag` 结构体之间存在关系的动机。（事实上，这也是所有公共继承的动机之一：能够为基类类型编写代码并同样适用于派生类类型）。
 
-
-
-
-
 `advance` 的规范允许随机访问迭代器和双向迭代器使用正、负数距离，但如果你尝试让前向迭代器或输入迭代器移动负数距离，其行为是未定义的。我检查过的实现简单地假设 `d` 是非负的，因此当传入负数距离时，它会进入一个非常长的循环并“向下”计数到零。在上面的代码中，我展示了通过抛出异常来实现。这两种实现方式都是有效的。这就是未定义行为的魔咒：你无法预测会发生什么。
 
 鉴于 `doAdvance` 有多种重载，`advance` 需要做的只是调用这些重载，并传递一个相应迭代器类别类型的额外对象，这样编译器就会使用重载解析来调用正确的实现：
+
+
 
 ```cpp
 template<typename IterT, typename DistT>
@@ -6453,6 +6735,7 @@ void advance(IterT& iter, DistT d)
 我们现在可以总结一下如何使用 traits 类（特征类）：
 
 - 创建一组重载的“工作者”函数或函数模板（例如 `doAdvance`），这些函数在 traits 参数上有所不同。根据传递的 traits 信息实现每个函数。
+
 - 创建一个“主”函数或函数模板（例如 `advance`），它调用工作者函数，并传递由 traits 类提供的信息。
 
 Traits 在标准库中被广泛使用。当然，有 `iterator_traits`，它除了 `iterator_category` 之外，还提供了关于迭代器的其他四个信息（其中用用 `value_type` —— 其用法示例）。还有 `char_traits`，它包含了字符类型的信息，以及 `numeric_limits`，它提供有关数值类型的信息，例如它们的可表示最小值和最大值等（`numeric_limits` 这个名字有点让人意外，因为更常见的惯例是 traits 类以“traits”结尾，但它的名称确实是 `numeric_limits`，所以这就是我们使用的名称）。
@@ -6462,6 +6745,7 @@ TR1 引入了一系列新的 traits 类，它们提供了关于类型的信息�
 ### 需要记忆的事
 
 - Traits 类在编译期间提供了类型信息。它们是使用模板和模板特化实现的。
+
 - 结合重载，traits 类使得对类型进行编译时 `if...else` 测试成为可能。
 
 ### 事项 48：注意模板元编程
@@ -6525,9 +6809,6 @@ void advance(std::list<int>::iterator& iter, int d)
 }
 ```
 
-
-
-
 问题在于高亮的那行，即使用 `+=` 的那行。在这种情况下，我们试图对 `list<int>::iterator` 使用 `+=`，但 `list<int>::iterator` 是一个双向迭代器（参见 Item 47），因此它不支持 `+=`。只有随机访问迭代器才支持 `+=`。现在我们知道永远不会尝试执行 `+=` 那一行，因为对于 `list<int>::iterator`，`typeid` 测试始终会失败，但编译器有义务确保所有源代码都是有效的，即使它们没有被执行，而且当 `iter` 不是随机访问迭代器时，“`iter += d`”是非的。相比之下，基于特性的 TMP（模板元编程）解决方案则是不同的，其中不同类型的代码被拆分成独立的函数，每个函数只使用适用于其所编写类型的操作。
 
 TMP 已被证明是图灵完备的，这意味着它强大到可以计算任何。使用 TMP，你可以声明变量、执行循环、编写和调用函数等。但这些结构看起来与“正常”的 C++ 对应物非常不同。例如，Item 47 展示了 TMP 中的 `if...else` 条件是如何通过模板和模板特化实现的。但那是汇编级的 TMP。TMP 库（例如 Boost MPL —— 参见 Item 55）来声明一个名为 `value` 的 TMP 变量。`value` 存储了阶乘计算的当前值。如果 TMP 有真正的循环结构，`value` 将在每次循环时进行更新。由于 TMP 使用递归模板实例化代替循环，每次实例化都获得它自己的 `value` 副本，并且每个副本都有对应其在“循环”中位置的数值。
@@ -6556,13 +6837,12 @@ Item 21）、观察者模式、访问者模式等可以通过多种方式实现�
 
 TMP 并不适合每个人。它的语法并不直观，工具支持也很薄弱。（模板元程序的调试器？哈！）作为一个最近才被发现的“意外”语言，TMP 的编程规范在很大程度上仍实验性。尽管如此，将工作从运行时转移到编译时所带来的效率提升是令人深刻的，而且表达运行时难以或无法实现的行为也具有吸引力。
 
-
-
 TMP（模板元编程）的支持日益兴起。C++ 的下一个版本可能会对其提供显式支持，而 TR1 已经支持了（参见 条目 54）。关于该主题的书籍开始出现，网络上的 TMP 信息也越来越丰富。TMP 可能永远不会成为主流，但对于某些程序员——尤其是库开发者来说——它几乎可以确定是一项必备技能。
 
 ## 需要记住的
 
 - 模板元编程可以将工作从运行时转移到编译时，从而实现更早的错误检测和更高的运行时性能。
+
 - TMP 可用于策略选择的组合生成自定义代码，也可用于避免为特定类型生成不当的代码。
 
 # 8. 自定义 new 和 delete
@@ -6617,14 +6897,20 @@ int main()
 当 `operator new` 无法履行内存请求时，它会反复调用 new-handler 函数，直到它*能够*找到足够的内存。产生这些重复调用的代码见 条目 51，但这种高层描述足以得出结论：良好的 new-handler 函数必须执行以下操作之一：
 
 - **提供更多内存**。这可能允许 `operator new` 内部的内存分配尝试成功。实现这种策略的方法是在程序启动时分配大内存，然后在第一次调用 new-handler 时将其释放供使用。
+
 - **安装不同的 new-handler**。如果当前的 new-handler 无法提供更多内存，它可能知道另一个可以提供的 new-handler。如果是这样，当前的 new-handler 可以在其位置安装另一个（通过调用 `set_new_handler`）。下一次 `operator new` 调用 new-handler 函数时，它将获取最近安装的那个。（此主题的一个变体是让 new-handler 修改其*自己的*行为，以便在下次被调用时执行不同的操作。实现这一点的方法是让 new-handler 修改影响其行为的静态、命名空间或全局数据。）
+
 - **卸载 new-handler**，即将空指针传递给 `set_new_handler`。在没有安装 new-handler 的情况下，内存分配失败时 `operator new` 将抛出异常。
+
 - **抛出 `bad_alloc` 类型的异常**或其派生种的异常。此类异常不会被 `operator new` 捕获，因此它们将传播到内存请求起源。
+
 - **不返回**，通常通过调用 `abort` 或 `exit`。
 
 这些选择为你实现 new-handler 函数提供了相当大的灵活性。
 
 有时你希望根据所分配对象的类以不同的方式处理内存分配失败：
+
+
 
 ```cpp
 class X {
@@ -6643,9 +6929,7 @@ X* p1 = new X; // 如果分配失败，调用 X::outOfMemory
 Y* p2 = new Y; // 如果分配失败，调用 Y::outOfMemory
 ```
 
-
-
-C++ 不支持类特定的 new 句程序（new-handlers），但它并不需要。你可以自己实现这种行为。你只需要让每个类提供它们自己的 `set_new_handler` 和 `operator new` 版本即可。该类的 `set_new_handler` 允许客户端为该类指定 new-handler（与标准的 `set_new_handler` 允许客户端指定全局 new-handler 的原理一样）。该类的 `operator new` 确保在为类对象分配内存时，使用类特定的 new-handler 来代替全局 new-handler。
+C++ 不支持类特定的 `new` 句程序（new-handlers），但它并不需要。你可以自己实现这种行为。你只需要让每个类提供它们自己的 `set_new_handler` 和 `operator new` 版本即可。该类的 `set_new_handler` 允许客户端为该类指定 new-handler（与标准的 `set_new_handler` 允许客户端指定全局 new-handler 的原理一样）。该类的 `operator new` 确保在为类对象分配内存时，使用类特定的 new-handler 来代替全局 new-handler。
 
 假设你想处理 `Widget` 类的内存分配失败问题。你必须跟踪当 `operator new` 无法为 `Widget` 对象分配足够内存时要调用的函数，因此你需要声明一个类型为 `new_handler` 的静态成员，指向该类的 new-handler 函数。`Widget` 看起来可能像这样：
 
@@ -6767,9 +7051,6 @@ class Widget: public NewHandlerSupport<Widget> {
 
 这就是 `Widget` 提供类特定 `set_new_handler` 所需要做的全部工作。
 
-
-
-
 但也许你仍在担心 `Widget` 继承自 `NewHandlerSupport<Widget>`。如果是这样，当你注意到 `NewHandlerSupport` 模板从未使用过它的类型参数 `T` 时，你的担心可能会加剧。其实它并不需要。对于每个继承自 `NewHandlerSupport` 的类，我们需要的只是 `NewHandlerSupport` 的一个副本 —— 特是它的静态数据成员 `currentHandler`。模板参数 `T` 仅仅是为了区分不同的继承类。模板机制本身会为实例化 `NewHandlerSupport` 的每个 `T` 自动生成 `currentHandler` 的副本。
 
 对于继承自一个以 `Widget` 为类型参数的模板类的 `Widget`，如果这个概念让你感到有些困惑，请不要自责。这种想法最初对大家都是如此。然而，事实证明它是一种非常有用的技术，而且它有一个名字，尽管大家第一次看到它时看起来并不那么自然。它被称为*奇特的递归模板模式*（CRTP）。
@@ -6780,7 +7061,7 @@ class Widget: public NewHandlerSupport<Widget> {
 
 在 1993 年之前，C++ 要求 `operator new` 在无法分配内存时返回空指针。现在 `operator new` 指定为抛出 `bad_alloc` 异常，但在开始支持这一修订规范之前，大量的 C++ 代码是这样写的。C++ 标准委员会并不想放弃返回空的代码，因此他们提供了替代的 `operator new` 形式，提供传统的失败返回空行为。这些形式被称为“非抛异常”（nothrow）形式，部分是因为它们在 `<new>` 头文件中使用了 `nothrow` 对象：
 
-```
+```cpp
 class Widget { ... };
 
 Widget *pw1 = new Widget;               // 如果分配失败，则抛出 bad_alloc
@@ -6811,11 +7092,9 @@ if (pw2 == 0) ...                        // 此项测试可能成功
 
 - **为了收集使用统计数据。** 在编写自定义的 `new` 和 `delete` 之前，收集软件如何使用动态内存的信息是明智的。分配块大小的分布是怎样的？生命期的分布是怎样的？它们倾向于以 FIFO（先进先出）、LIFO（后进先出）顺序分配和释放，还是更接近随机顺序？使用模式会随时间变化吗，例如，你的软件在执行的不同阶段是否有不同的分配/释放模式？任何一个时刻使用的动态分配内存最大值是多少（即其“高水位”）？自定义的 `operator new` 和 `operator delete` 可以很容易地收集这类信息。
 
-
-
-
-
 在概念上，编写自定义的 `operator new` 其实非常简单。例如，这里有一个全局 `operator new` 的快速初步实现，用于检测内存上溢和下溢。虽然它存在很多小问题，但我们稍后会讨论这些。
+
+
 
 ```cpp
 static const int signature = 0xDEADBEEF;
@@ -6840,15 +7119,15 @@ void* operator new(std::size_t size) throw(std::bad_alloc)
 }
 ```
 
-该 `operator new` 的大部分缺点在于它没有遵循同名函数的 C++ 惯例。例如，Item 51 解释说，所有的 `operator new` 都应该包含一个调用新处理函数的循环，但这一个并没有。不过，Item 51 专门讨论了这些惯例，所以我在这里将忽略它们。现在我想关注一个更微妙的问题：*内存对齐*（alignment）。
+该 `operator new` 的大部分缺点在于它没有遵循同名函数的 C++ 惯例。例如，Item 51 解释说，所有的 `operator new` 都应该包含一个调用新处理函数的循环，但这一个并没有。不过，Item 51 专门讨论了这些惯例，所以我在这里将忽略它们。现在我想关注一个更微妙的问题：内存对齐（alignment）。
 
 ### 对齐
 
 许多计算机架构要求将特定类型的数据放置在内存特定类型的地址上。例如，某种架构可能要求指针出现在 4 的倍数地址上（即 4 字节对齐），或者 `double` 必须出现在 8 的倍数地址上（即 8 字节对齐）。违反此类限制可能会导致运行时硬件异常。其他架构则较为宽松，尽管如果满足了对齐偏好，它们可能会提供更好的性能。例如，在 Intel x86 架构上，`double` 可以对齐在任何字节边界上，但如果它们是 8 字节对齐，访问速度会快得多。
 
-对齐在这里非常相关，因为 C++ 要求所有的 `operator new` 返回的指针对于*任何*数据类型都是适当对齐的。`malloc` 也遵循相同的要求，因此让 `operator new` 返回它从 `malloc` 获取的指针是安全的。然而，在上面的 `operator new` 中，我们返回的不是从 `malloc` 获取的指针，而是从 `malloc` 获取的指针基础上偏移了一个 `int` 大小后的指针。这并不能保证是安全的！如果客户端调用 `operator new` 为一个 `double` 获取足够的内存（或者，如果我们正在编写 `operator new[]` 来获取一个 `double` 数组），而我们运行的机器上 `int` 大小为 4 字节，但 `double` 要求 8 字节对齐，那么我们可能会返回一个一个对齐不当的指针。这可能导致程序崩溃，也可能只是让它运行得更慢。无论如何，这可能不是我们的初衷。
+对齐在这里非常相关，因为 C++ 要求所有的 `operator new` 返回的指针对于任何数据类型都是适当对齐的。`malloc` 也遵循相同的要求，因此让 `operator new` 返回它从 `malloc` 获取的指针是安全的。然而，在上面的 `operator new` 中，我们返回的不是从 `malloc` 获取的指针，而是从 `malloc` 获取的指针基础上偏移了一个 `int` 大小后的指针。这并不能保证是安全的！如果客户端调用 `operator new` 为一个 `double` 获取足够的内存（或者，如果我们正在编写 `operator new[]` 来获取一个 `double` 数组），而我们运行的机器上 `int` 大小为 4 字节，但 `double` 要求 8 字节对齐，那么我们可能会返回一个一个对齐不当的指针。这可能导致程序崩溃，也可能只是让它运行得更慢。无论如何，这可能不是我们的初衷。
 
-像对齐这样的细节，是区分专业级内存管理器与那些因忙于处理其他任务而分心的程序员随手拼凑出来的管理器的关键。编写一个几乎能用的自定义内存管理器很容易。但编写一个运行得*良好*的内存管理器要困难得多。作为一个一般原则，我建议除非绝对必要，否则不要尝试。
+像对齐这样的细节，是区分专业级内存管理器与那些因忙于处理其他任务而分心的程序员随手拼凑出来的管理器的关键。编写一个几乎能用的自定义内存管理器很容易。但编写一个运行得良好的内存管理器要困难得多。作为一个一般原则，我建议除非绝对必要，否则不要尝试。
 
 在许多情况下，你不需要这样做。某些编译器提供了开关，可以在其内存管理函数中启用调试和日志功能。快速浏览一下你编译器的文档可能会消除你考虑编写 `new` 和 `delete` 的需求。在许多平台上，商业产品可以替代编译器自带的内存管理函数。为了利用它们增强的功能和（推测）提高的性能，你所做的只是重新链接。（噢，你还得买下它们。）
 
@@ -6857,23 +7136,24 @@ void* operator new(std::size_t size) throw(std::bad_alloc)
 本节的主题是了解何时在全局或按类替换默认版本的 `new` 和 `delete` 是有意义的。我们现在可以进行比之前更详细的总结了。
 
 - **为了检测使用错误**（如上所述）。
+
 - **为了收集动态分配内存使用的统计信息**（如上所述）。
+
 - **为了提高分配和释放的速度。** 通用分配器通常（尽管并非总是）比自定义版本慢，特别是当自定义版本是针对特定类型设计时。类特定的分配器是 Boost `Pool` 库等提供的固定大小分配器的一种应用示例。如果你的应用程序是单线程的，但编译器的默认内存管理例程是线程安全的，你可能可以通过编写线程安全的分配器来获得可衡量的速度提升。当然，在得出加速 `operator new` 和 `operator delete` 值得的这一结论之前，请务必对程序进行性能分析，以确认这些函数确实是瓶颈。
+
 - **为了减少默认内存管理的空间开销。** 通用内存管理器通常（尽管并非总是）不仅比自定义版本慢，而且占用更多内存。这是因为它们通常会为每个分配块产生一些开销。针对小对象调优的分配器（如 Boost `Pool` 中的）基本上消除了这种开销。
+
 - **为了补偿默认分配器次优的对齐。** 如我之前提到的，在 x86 架构上，`double` 8 字节对齐时访问最快。遗憾的是，某些编译器自带的 `operator new` 并不保证 `double` 动态分配的 8 字节对齐。在这种情况下，用一个保证 8 字节对齐的 `operator new` 替换默认版本可以大幅提高程序性能。
-- **为了将相关对象聚集在一起。** 如果你知道特定的数据结构通常被一起使用，并且希望在处理这些数据时尽量减少缺页频率，那么为这些数据结构创建一个单独的堆是有意义的，以便它们尽可能聚集在少数的页面上。放置版本的 `new` 和 `delete`（参见 [Item 52](#ch08.html_ch08lev1sec4））可以使这种聚集成为可能。
 
+- **为了将相关对象聚集在一起。** 如果你知道特定的数据结构通常被一起使用，并且希望在处理这些数据时尽量减少缺页频率，那么为这些数据结构创建一个单独的堆是有意义的，以便它们尽可能聚集在少数的页面上。放置版本的 `new` 和 `delete`（参见 [Item 52](#ch08.html_ch08lev1sec4)）可以使这种聚集成为可能。
 
-
-
-
-- **为了获得非常规的行为。** 有时，你希望 `operator` 的 `new` 和 `delete` 执行一些编译器提供的版本无法提供的功能。例如，你可能想在共享内存中分配和释放内存块，但只能通过 C API 才能管理该内存。编写自定义的 `new` 和 `delete` 版本（很可能是放置版本——再次，参见条目 52）将让你为 C API 披上 C++ 的外壳。另一个例子是，你可能会编写一个自定义的 `operator delete`，将释放的内存重写为零，以增加应用程序数据的安全性。
+- **为了获得非常规的行为。** 有时，你希望 `operator new` 和 `delete` 执行一些编译器提供的版本无法提供的功能。例如，你可能想在共享内存中分配和释放内存块，但只能通过 C API 才能管理该内存。编写自定义的 `new` 和 `delete` 版本（很可能是放置版本——再次，参见条目 52）将让你为 C API 披上 C++ 的外壳。另一个例子是，你可能会编写一个自定义的 `operator delete`，将释放的内存重写为零，以增加应用程序数据的安全性。
 
 ### 注意事项
 
 - 编写自定义的 `new` 和 `delete` 版本有许多合理的理由，包括提高性能、调试堆使用错误以及收集堆使用信息。
 
-### 条目 51：在编写 `new` 和 `delete` 时遵循惯例
+## 条目 51：在编写 `new` 和 `delete` 时遵循惯例
 
 条目 50 解释了你何时可能想要编写自己的 `operator new` 和 `operator delete` 版本，但它没有解释你在执行操作时必须遵循的惯例。这些规则并不难遵循，但某些规则是不符合直觉的，因此了解它们是非常重要的。
 
@@ -6908,7 +7188,9 @@ void * operator new(std::size_t size) throw(std::bad_alloc)
 
 将对 0 字节的请求视为实际上对 1 字节的请求这种技巧看起来很卑劣，但它简单、合法且有效，而且你预计自己会被要求 0 字节的频率是多少呢？
 
-你可能还会嫌弃伪代码中将新处理函数指针设为空，然后重置为原始值的地方。遗憾的是，没有办法直接获取新处理函数，所以你必须调用 `set_new_handler` 来确定它是什么。虽然很粗糙，但也很有效，至少在单线程环境下是如此。在多线程环境中，你可能需要一些锁来安全地操作新处理函数背后的（全局）数据。条目 49 提到 `operator new` 包含一个无限循环，上面的代码展示了该循环；`while (true)` 已经是无限极限了。退出循环的唯一方法是成功分配内存，或者新处理函数执行了条目 49 中的任一操作：提供更多内存、安装不同的新处理函数、卸载新处理函数、抛出 `bad_alloc` 异常或无法返回。如果这些都没有，`operator new` 内部的循环将永远不会终止。很多人没有意识到 `operator new` 成员函数会被派生类继承。这可能会导致一些复杂性。在上面的 `operator new` 伪代码中，注意该函数尝试分配 `size` 字节（除非 `size` 为 0）。这是合理的，因为那是传递给函数的参数。然而，如条目 50 所解释的，编写自定义管理器的最常见原因之一是为*特定*类的对象优化分配，而不是为某个类或其任何派生类。也就是说，给定一个类 `X` 的 `operator new`，其行为通常是针对 `sizeof(X)` 优化的既不多也不少。但由于继承，可能会调用基类的 `operator new` 来为派生类对象分配内存：
+你可能还会嫌弃伪代码中将新处理函数指针设为空，然后重置为原始值的地方。遗憾的是，没有办法直接获取新处理函数，所以你必须调用 `set_new_handler` 来确定它是什么。虽然很粗糙，但也很有效，至少在单线程环境下是如此。在多线程环境中，你可能需要一些锁来安全地操作新处理函数背后的（全局）数据。条目 49 提到 `operator new` 包含一个无限循环，上面的代码展示了该循环；`while (true)` 已经是无限极限了。退出循环的唯一方法是成功分配内存，或者新处理函数执行了条目 49 中的任一操作：提供更多内存、安装不同的新处理函数、卸载新处理函数、抛出 `bad_alloc` 异常或无法返回。如果这些都没有，`operator new` 内部的循环将永远不会终止。
+
+很多人没有意识到 `operator new` 成员函数会被派生类继承。这可能会导致一些复杂性。在上面的 `operator new` 伪代码中，注意该函数尝试分配 `size` 字节（除非 `size` 为 0）。这是合理的，因为那是传递给函数的参数。然而，如条目 50 所解释的，编写自定义管理器的最常见原因之一是为特定类的对象优化分配，而不是为某个类或其任何派生类。也就是说，给定一个类 `X` 的 `operator new`，其行为通常是针对 `sizeof(X)` 优化的既不多也不少。但由于继承，可能会调用基类的 `operator new` 来为派生类对象分配内存：
 
 ```cpp
 class Base {
@@ -6935,14 +7217,11 @@ void * Base::operator new(std::size_t size) throw(std::bad_alloc)
 }
 ```
 
-“等等！”我听到你叫道，“你忘记检查 size 为 0 的病态但可能的这种情况了！”实际上，我没有，而且请不要在叫喊时使用连字符。测试仍然在那里，它只是被整合到了 `size` 与 `sizeof(Base)` 的比较中。C++ 的工作方式有些神秘，其中一种方式就是规定所有自由对象的大小都不为零（参见条目 39）。根据定义，`sizeof(Base)` 永远不会为零，因此如果 `size` 为 0，请求将转发给 `::operator new`，而处理该请求将成为该函数的责任。
+“等等！”我听到你叫道，“你忘记检查 `size` 为 0 的病态但可能的这种情况了！”实际上，我没有，而且请不要在叫喊时使用连字符。测试仍然在那里，它只是被整合到了 `size` 与 `sizeof(Base)` 的比较中。C++ 的工作方式有些神秘，其中一种方式就是规定所有自由对象的大小都不为零（参见条目 39）。根据定义，`sizeof(Base)` 永远不会为零，因此如果 `size` 为 0，请求将转发给 `::operator new`，而处理该请求将成为该函数的责任。
 
+如果你想按类控制数组的内存分配，则你需要实现 `operator new` 的数组特定变体，即 `operator new[]`。（这个函数通常被称为“array new”，因为很难弄清楚 `operator new[]` 应该怎么读音。）如果你决定编写 `operator new[]`，请记住，你所做的只是分配一块原始内存——你无法对数组中尚不存在的对象进行任何操作。事实上，你甚至无法确定数组中会有多少个对象。首先，你不知道每个对象有多大。毕竟，基类的 `operator new[]` 可能会通过继承被调用，用来为一个派生类对象数组分配内存，而派生类对象通常比基类对象大。
 
-
-
-如果你想按类控制数组的内存分配，则你需要实现 `operator new` 的数组特定变体，即 `operator new[]`。（这个函数通常被称为“array new”，因为很难弄清楚 `operator new[]` 应该怎么读音。）如果你决定编写 `operator new[]`，请记住，你所做的只是分配一块原始内存 —— 你无法对数组中尚不存在的对象进行任何操作。事实上，你甚至无法确定数组中会有多少个对象。首先，你不知道每个对象有多大。毕竟，基类的 `operator new[]` 可能会通过继承被调用，用来为一个派生类对象数组分配内存，而派生类对象通常比基类对象大。
-
-因此，你不能在 `Base::operator new[]` 内部假设进入数组的每个对象的大小为 `sizeof(Base)`，这意味着你不能假设数组中的对象数量是 `(请求的字节数)/sizeof(Base)`。其次，传递给 `operator new[]` 的 `size_t` 参数所对应的内存可能大于实际填充对象的内存量，因为正如 条目 16 所解释的，动态分配的数组可能包含额外的空间来存储数组元素的数量。
+因此，你不能在 `Base::operator new[]` 内部假设进入数组的每个对象的大小为 `sizeof(Base)`，这意味着你不能假设数组中的对象数量是 `(请求的字节数)/sizeof(Base)`。其次，传递给 `operator new[]` 的 `size_t` 参数所对应的内存可能大于实际填充对象的内存量，因为正如条目 16 所解释的，动态分配的数组可能包含额外的空间来存储数组元素的数量。
 
 编写 `operator new` 时需要遵循的约定就这么多到此了。对于 `operator delete`，情况要简单得多。你几乎只需要记住，C++ 保证删除空指针总是安全的，因此你需要遵守这一保证。这里是非成员 `operator delete` 的伪代码：
 
@@ -6970,27 +7249,38 @@ void Base::operator delete(void *rawMemory, std::size_t size) throw()
   if (rawMemory == 0) return;               // 检查空指针
   if (size != sizeof(Base)) {               // 如果尺寸是“错误的”，
     ::operator delete(rawMemory);           // 使用标准的 operator
-    return;                               // 由 delete 处理请求
+    return;                                 // 由 delete 处理请求
   }
   // 释放由 rawMemory 指向的内存
   return;
 }
 ```
 
-有趣的是，如果被删除的对象派自于缺少虚析析构函数的基类，那么 C++ 传递给 `operator delete` 的 `size_t` 值可能是错误的。这足以成为确保你的基类具有虚析析构函数的理由了，但 条目 7 描述了第二个、可以认为更好的理由。目前，只需注意，如果你在基类中遗漏了虚析析构函数，`operator delete` 函数可能无法正常工作。
+有趣的是，如果被删除的对象派自于缺少虚析析构函数的基类，那么 C++ 传递给 `operator delete` 的 `size_t` 值可能是错误的。这足以成为确保你的基类具有虚析析构函数的理由了，但条目 7 描述了第二个、可以认为更好的理由。目前，只需注意，如果你在基类中遗漏了虚析析构函数，`operator delete` 函数可能无法正常工作。
 
 ### 需要记忆的物品
 
 - `operator new` 应该包含一个尝试分配内存的无限循环，在无法满足内存请求时应调用 new-handler，并应该处理对零字节的请求。类特有的版本应该处理比预期更大的块的请求。
+
 - 如果传递的是空指针，`operator delete` 应该什么都不做。类特有的版本应该处理比预期更大的块。
 
-### 条目 5：如果你写了放置 `new`，就写上放置 `delete`
+## 条目 5：如果你写了放置 `new`，就写上放置 `delete`
 
-放置 `new` 和放置 `delete` 并不是 C++ 动物园里最常见的猛兽，所以如果你不熟悉它们也不要担心。相反，请从 条目 16 和 17 回忆，当你写类似这样的 `new` 表达式时
+放置 `new` 和放置 `delete` 并不是 C++ 动物园里最常见的猛兽，所以如果你不熟悉它们也不要担心。相反，请从条目 16 和 17 回忆，当你写类似这样的 `new` 表达式时
+
+
+
 ```cpp
 Widget *pw = new Widget;
 ```
-会调用两个函数：一个调用 `operator new` 来分配内存，第二个调用 `Widget` 的默认构造函数。假设第一个调用成功了，但第二个调用导致抛出异常。在这种情况下，第 1 步中执行的内存操作必须被撤销。否则，我们将会导致内存泄漏。如果 `Widget` 构造函数抛出异常，客户端代码无法释放内存，因为 `pw` 永远不会被赋值。客户端无方法获取应该释放的内存指针。撤销第 1 步的责任必须由 C++ 运行时承担。运行时乐于调用与在第 1 步中调用的 `operator new` 版本对应的 `operator delete`，但只有当它知道哪一个 `operator delete` —— 可能有多个 —— 是正确要调用的时，它才能这样做。如果你处理的是具有正常签名的 `new` 和 `delete` 版本，这并不是问题，因为正常的 `void* operator new(std::size_t) throw(std::bad_alloc)` 对应于全局作用域下正常的 `void operator delete(void *rawMemory, std::size_t size) throw();`。当你只使用 `new` 和 `delete` 的正常形式时，运行时很容易找到撤销 `new` 所操作的 `delete`。然而，当你开始声明 `operator new` 的非正常形式 —— 即带有额外参数的形式时，“哪个 `delete` 对应哪个 `new`”的问题就会出现。例如，假设你编写了一个类特有的 `operator new`，它要求指定一个 `ostream` 来记录分配信息，并且你又写了一个正常的类特有 `operator delete`：
+
+会调用两个函数：一个调用`operator new`来分配内存，第二个调用`Widget`的默认构造函数。假设第一个调用成功了，但第二个调用导致抛出异常。在这种情况下，第 1 步中执行的内存操作必须被撤销。否则，我们将会导致内存泄漏。如果`Widget`构造函数抛出异常，客户端代码无法释放内存，因为`pw`永远不会被赋值。客户端无方法获取应该释放的内存指针。
+
+撤销第 1 步的责任必须由 C++ 运行时承担。运行时乐于调用与在第 1 步中调用的`operator new`版本对应的`operator delete`，但只有当它知道哪一个`operator delete`——可能有多个——是正确要调用的时，它才能这样做。
+
+如果你处理的是具有正常签名的`new`和`delete`版本，这并不是问题，因为正常的`void* operator new(std::size_t) throw(std::bad_alloc)`对应于全局作用域下正常的`void operator delete(void *rawMemory, std::size_t size) throw()`。当你只使用`new`和`delete`的正常形式时，运行时很容易找到撤销`new`所操作的`delete`。
+
+然而，当你开始声明`operator new`的非正常形式——即带有额外参数的形式时，“哪个`delete`对应哪个`new`”的问题就会出现。例如，假设你编写了一个类特有的`operator new`，它要求指定一个`ostream`来记录分配信息，并且你又写了一个正常的类特有`operator delete`：
 
 ```cpp
 class Widget {
@@ -7004,33 +7294,43 @@ public:
 
 这种设计是有问题的，但在看到原因之前，我们需要进行一次简短的术语跳转。
 
-当 `operator new` 函数带有额外的参数（除了强制性的 `size_t` 参数外）时，该函数被称为 `new` 的*放置*（placement）版本。上面的 `operator new` 就是一个放置版本。一个特别有用的放置 `new` 是带有指定在何处构造对象的指针的那个 `operator new` 看起来如下：
+当`operator new`函数带有额外的参数（除了强制性的`size_t`参数外）时，该函数被称为`new`的*放置*（placement）版本。上面的`operator new`就是一个放置版本。
+
+一个特别有用的放置`new`是带有指定在何处构造对象的指针的那个`operator new`，看起来如下：
 
 ```cpp
 void* operator new(std::size_t, void *pMemory) throw(); // “placement new”
 ```
 
+此版本的`new`是 C++ 标准库的一部分，只要你`#include <new>`就可以访问它。除其他外，这个`new`被用于`vector`内部，以便在`vector`的未使用容量中创建对象。它也是*原始的*放置式`new`（placement `new`）。事实上，这正是该函数的名称：*放置式 `new`*。
 
+这意味着“放置式`new`”这个术语被重载了。大多数时候，当人们谈论放置式`new`时，他们指的是这个特定的函数，即接受一个额外类型为`void*`参数的`operator new`。较少的情况下，他们指的是任何接受额外参数的`operator new`版本。
 
-此版本的 `new` 是 C++ 标准库的一部分，只要你 `#include <new>` 就可以访问它。除其他外，这个 `new` 被用于 `vector` 内部，以便在 `vector` 的未使用容量中创建对象。它也是*原始的*放置式 `new`（placement `new`）。事实上，这正是该函数的名称：*放置式 `new`*。这意味着“放置式 `new`”这个术语被重载了。大多数时候，当人们谈论放置式 `new` 时，他们指的是这个特定的函数，即接受一个额外类型为 `void*` 参数的 `operator new`。较少的情况下，他们指的是任何接受额外参数的 `operator new` 版本。上下文通常会消除任何歧义，但理解这一点很重要：通用术语“放置式 `new`”指的是任何带有额外参数的 `new` 版本，因为短语“放置式 `delete`”（我们稍后会遇到）正直接源于此。
+上下文通常会消除任何歧义，但理解这一点很重要：通用术语“放置式`new`”指的是任何带有额外参数的`new`版本，因为短语“放置式`delete`”（我们稍后会遇到）正直接源于此。
 
-但让我们回到 `Widget` 类的声明，就是我说过它的设计是有问题的那个。困难之处在于，这个类会导致微妙的内存泄漏。考虑这段客户端代码，它在动态创建 `Widget` 时会将分配信息记录到 `cerr`：
+但让我们回到`Widget`类的声明，就是我说过它的设计是有问题的那个。困难之处在于，这个类会导致微妙的内存泄漏。考虑这段客户端代码，它在动态创建`Widget`时会将分配信息记录到`cerr`：
 
-```
+```cpp
 Widget *pw = new (std::cerr) Widget; // call operator new, passing cerr as
 //                                the ostream; this leaks memory
 // if the Widget constructor throws
 ```
 
-再次，如果内存分配成功且 `Widget` 构造函数抛出异常，运行时系统将负责撤销 `operator new` 所执行的分配。然而，运行时系统并不能真正理解被调用的 `operator new` 版本是如何运作的，因此它无法自己撤销分配。相反，运行时系统会寻找一个与 `operator new` 接受*相同数量和类型额外参数*的 `operator delete` 版本，如果找到了，它就会调用那一个。在这种情况下，`operator new` 接受一个类型为 `ostream&` 的额外参数，因此相应的 `operator delete` 将具有如下签名：
+再次，如果内存分配成功且`Widget`构造函数抛出异常，运行时系统将负责撤销`operator new`所执行的分配。然而，运行时系统并不能真正理解被调用的`operator new`版本是如何运作的，因此它无法自己撤销分配。
 
-```
+相反，运行时系统会寻找一个与`operator new`接受*相同数量和类型额外参数*的`operator delete`版本，如果找到了，它就会调用那一个。在这种情况下，`operator new`接受一个类型为`ostream&`的额外参数，因此相应的`operator delete`将具有如下签名：
+
+```cpp
 void operator delete(void *, std::ostream&) throw();
 ```
 
-类比于 `new` 的放置式版本，接受额外参数的 `operator delete` 版本被称为*放置式 `delete`*（placement `delete`s）。在这种情况下，`Widget` 没有声明放置式的 `operator delete` 版本，因此运行时系统不知道如何撤销放置式 `new` 调用的操作。结果是，它什么也没做。在这个示例中，如果 `Widget` 构造函数抛出异常，*没有任何 `operator delete` 被调用*！
+类比于`new`的放置式版本，接受额外参数的`operator delete`版本被称为*放置式 `delete`*（placement `delete`s）。
 
-规则很简单：如果带有额外参数的 `operator new` 没有带有对应额外参数的 `operator delete` 匹配，那么当 `new` 执行的内存分配需要撤销时，就不会调用 `operator delete`。为了消除上述代码中的内存泄漏，`Widget` 需要声明一个与日志 `new` 对应的放置式 `delete`：
+在这种情况下，`Widget`没有声明放置式的`operator delete`版本，因此运行时系统不知道如何撤销放置式`new`调用的操作。结果是，它什么也没做。在这个示例中，如果`Widget`构造函数抛出异常，*没有任何 `operator delete` 被调用*！
+
+规则很简单：如果带有额外参数的`operator new`没有带有对应额外参数的`operator delete`匹配，那么当`new`执行的内存分配需要撤销时，就不会调用`operator delete`。
+
+为了消除上述代码中的内存泄漏，`Widget`需要声明一个与日志`new`对应的放置式`delete`：
 
 ```cpp
 class Widget {
@@ -7043,11 +7343,19 @@ public:
 };
 ```
 
-有了这个更改后，如果在语句 `Widget *pw = new (std::cerr) Widget;` 中像以前一样从 `Widget` 构造函数抛出异常，但不再发生泄漏，相应的放置式 `delete` 会被自动调用，并允许 `Widget` 确保没有内存泄漏。然而，考虑一下如果没有抛出异常（这通常是如此），并且我们在客户端代码执行 `delete pw;` 会发生什么。如注释所示，这调用的是普通的 `operator delete`，而不是放置式版本。*仅当*与放置式 `new` 调用偶联的构造函数调用中产生异常时，才会调用放置式 `delete`。对指针（如上面的 `pw`）应用 `delete` 永远不会产生对放置式 `delete` 的调用。*永远不会。*
+有了这个更改后，如果在语句`Widget *pw = new (std::cerr) Widget;`中像以前一样从`Widget`构造函数抛出异常，但不再发生泄漏，相应的放置式`delete`会被自动调用，并允许`Widget`确保没有内存泄漏。
 
-这意味着，为了防止与放置式 `new` 版本相关的内存泄漏，你必须同时提供普通的 `operator delete`（用于构造期间未抛出异常的情况）以及一个接受与 `operator new` 相同额外参数的放置式版本（用于抛出异常的情况）。这样做，你就永远不会再受于微妙的内存泄漏了。嗯，至少不会受于*这些*微妙的内存泄漏。
+然而，考虑一下如果没有抛出异常（这通常是如此），并且我们在客户端代码执行`delete pw;`会发生什么。如注释所示，这调用的是普通的`operator delete`，而不是放置式版本。
 
-顺便提一下，由于成员名称会隐藏外层作用域中同名的函数（参见 Item 33），你需要小心避免让类特定的 `new` 隐藏了你的客户端期望的其他 `new`（包括普通版本）。例如，如果你有一个基类只声明了放置式的 `operator new` 版本，客户端会发现他们无法使用普通形式的 `new`：
+*仅当*与放置式`new`调用偶联的构造函数调用中产生异常时，才会调用放置式`delete`。对指针（如上面的`pw`）应用`delete`永远不会产生对放置式`delete`的调用。*永远不会。*
+
+这意味着，为了防止与放置式`new`版本相关的内存泄漏，你必须同时提供普通的`operator delete`（用于构造期间未抛出异常的情况）以及一个接受与`operator new`相同额外参数的放置式版本（用于抛出异常的情况）。
+
+这样做，你就永远不会再受于微妙的内存泄漏了。嗯，至少不会受于*这些*微妙的内存泄漏。
+
+顺便提一下，由于成员名称会隐藏外层作用域中同名的函数（参见 Item 33），你需要小心避免让类特定的`new`隐藏了你的客户端期望的其他`new`（包括普通版本）。
+
+例如，如果你有一个基类只声明了放置式的`operator new`版本，客户端会发现他们无法使用普通形式的`new`：
 
 ```cpp
 class Base {
@@ -7061,7 +7369,7 @@ Base *pb = new Base; // error! the normal form of operator new is hidden
 Base *pb = new (std::cerr) Base; // fine, calls Base's placement new
 ```
 
-类似地，派生类中的 `operator new` 会同时隐藏全局和继承自的 `operator new` 版本：
+类似地，派生类中的`operator new`会同时隐藏全局和继承自的`operator new`版本：
 
 ```cpp
 class Derived: public Base { // inherits from Base above
@@ -7075,15 +7383,13 @@ Derived *pd = new (std::cerr) Derived; // invokes the normal operator delete
 Derived *pd = new Derived; // error! the normal form of operator new is hidden
 ```
 
-
-
 ```cpp
 static void delete(void *pMemory, const std::nothrow_t&) throw()
 { ::operator delete(pMemory); }
 };
 ```
 
-想要扩展标准形式的客户端只需使用继承和 `using` 声明（参见第 33 条）来获取：
+想要扩展标准形式的客户端只需使用继承和`using`声明（参见第 33 条）来获取：
 
 ```cpp
 class Widget: public WidgetForms // 继承形式
@@ -7100,17 +7406,11 @@ public:
 
 ### 注意
 
-- 当编写 `operator new` 的放置版本时，确保编写对应的 `operator delete` 版本。如果不这样做，你的程序可能会出现细微的间歇性内存泄漏。
-- 在声明 `new` 和 `delete` 的放置版本时，确保不要无意中隐藏了它们的普通版本。
-
-
-
-
-- 智能指针 `tr1::shared_ptr` 和 `tr1::weak_ptr`。`tr1::shared_ptr` 的行为类似于内置指针，但它们会记录有多少个 `tr1::shared_ptr` 指向一个对象。这被称为引用计数。当最后一个此类指针被销毁时（即对象的引用计数变为 0 时），该对象会被自动删除。这在防止无环数据结构中的内存泄漏方面非常有效，但如果两个或多个对象包含了 `tr1::shared_ptr` 导致形成循环，该循环可能会使每个对象的引用计数保持在 0 以上，即使指向该循环的所有外部指针都销毁（即这组对象整体变得不可访问）。这就是 `tr1::weak_ptr` 派上用场的地方。`tr1::weak_ptr` 设计用于在原本无环的基于 `tr1::shared_ptr` 的数据结构中作为引起循环的指针。`tr1::weak_ptr` 不参与引用计数。当指向对象的最后一个 `tr1::shared_ptr` 被销毁时，该对象会被删除，即使 `tr1::weak_ptr` 仍然指向那里。然而，此类 `tr1::weak_ptr` 会被标记为无效。
-
-`tr1::shared_ptr` 可能是 TR1 中最实用的组件。我在本书中多次使用了它，包括 项目 13，在其中我解释了它为什么如此重要。（书中没有使用 `tr1::weak_ptr` 的地方，抱歉。）
-
-- `tr1::function`，它使得表示任何调用实体（即任何函数或函数对象）成为可能，只要其签名与目标签名一致。如果我们想要能够注册一个接收 `int` 并返回 `string` 的回调函数，我们可以这样做：
+- 当编写`operator new`的放置版本时，确保编写对应的`operator delete`版本。如果不这样做，你的程序可能会出现细微的间歇性内存泄漏。
+- 在声明`new`和`delete`的放置版本时，确保不要无意中隐藏了它们的普通版本。
+- 智能指针`tr1::shared_ptr`和`tr1::weak_ptr`。`tr1::shared_ptr`的行为类似于内置指针，但它们会记录有多少个`tr1::shared_ptr`指向一个对象。这被称为引用计数。当最后一个此类指针被销毁时（即对象的引用计数变为 0 时），该对象会被自动删除。这在防止无环数据结构中的内存泄漏方面非常有效，但如果两个或多个对象包含了`tr1::shared_ptr`导致形成循环，该循环可能会使每个对象的引用计数保持在 0 以上，即使指向该循环的所有外部指针都销毁（即这组对象整体变得不可访问）。这就是`tr1::weak_ptr`派上用场的地方。`tr1::weak_ptr`设计用于在原本无环的基于`tr1::shared_ptr`的数据结构中作为引起循环的指针。`tr1::weak_ptr`不参与引用计数。当指向对象的最后一个`tr1::shared_ptr`被销毁时，该对象会被删除，即使`tr1::weak_ptr`仍然指向那里。然而，此类`tr1::weak_ptr`会被标记为无效。
+- `tr1::shared_ptr`可能是 TR1 中最实用的组件。我在本书中多次使用了它，包括项目 13，在其中我解释了它为什么如此重要。（书中没有使用`tr1::weak_ptr`的地方，抱歉。）
+- `tr1::function`，它使得表示任何调用实体（即任何函数或函数对象）成为可能，只要其签名与目标签名一致。如果我们想要能够注册一个接收`int`并返回`string`的回调函数，我们可以这样做：
 
 ```cpp
 void registerCallback(std::string func(int));     // 参数类型为函数
@@ -7118,16 +7418,16 @@ void registerCallback(std::string func(int));     // 参数类型为函数
 // 返回一个 string
 ```
 
-参数名 `func` 是可选的，因此 `registerCallback` 可以像下面这样声明：
+参数名`func`是可选的，因此`registerCallback`可以像下面这样声明：
 
 ```cpp
 void registerCallback(std::string (int));      // 与上述相同；省略了参数
 // 名称
 ```
 
-注意这里的 `std::string (int)` 是一个函数签名。
+注意这里的`std::string (int)`是一个函数签名。
 
-`tr1::function` 使得 `registerCallback` 变得灵活得多，它可以接受作为参数的任何接收 `int` 或任何可转换为 `int` 的调用实体，并返回 `string` 或任何可转换为 `string` 的实体。`tr1::function` 将其目标函数签名作为模板参数：
+`tr1::function`使得`registerCallback`变得灵活得多，它可以接受作为参数的任何接收`int`或任何可转换为`int`的调用实体，并返回`string`或任何可转换为`string`的实体。`tr1::function`将其目标函数签名作为模板参数：
 
 ```cpp
 void registerCallback(tr1::function<std::string (int)> func);
@@ -7137,40 +7437,30 @@ void registerCallback(tr1::function<std::string (int)> func);
 // 的调用实体
 ```
 
-这种灵活性具有惊人的实用性，我尽力在 项目 35 中演示这一点。
+这种灵活性具有惊人的实用性，我尽力在项目 35 中演示这一点。
 
-- tr1::bind，它实现了 STL 绑定器 `bind1st` 和 `bind2nd` 所能的所有功能，并在此基础上更多。与 TR1 之前的绑定器不同，`tr1::bind` 可以同时作用于 `const` 和非 `const` 成员函数。与 TR1 之前的绑定器不同，`tr1::bind` 支持按引用传递参数。与 TR1 之前的绑定器不同，`tr1::bind` 可以直接处理函数指针，无需在调用 `tr1::bind` 之前折腾 `ptr_fun`、`mem_fun` 或 `mem_fun_ref`。简单来说，`tr1::bind` 是一种远优于前身的第二代绑定设施。我在 项目 35 中展示了它的用法。
+- `tr1::bind`，它实现了 STL 绑定器`bind1st`和`bind2nd`所能的所有功能，并在此基础上更多。与 TR1 之前的绑定器不同，`tr1::bind`可以同时作用于`const`和非`const`成员函数。与 TR1 之前的绑定器不同，`tr1::bind`支持按引用传递参数。与 TR1 之前的绑定器不同，`tr1::bind`可以直接处理函数指针，无需在调用`tr1::bind`之前折腾`ptr_fun`、`mem_fun`或`mem_fun_ref`。简单来说，`tr1::bind`是一种远优于前身的第二代绑定设施。我在项目 35 中展示了它的用法。
 
 我将其 TR1 组件分为两组。第一组提供了相当独立的功能：
 
-- 用于实现 set、multiset、map 和 multimap 的哈希表。每个新容器都具有基于其 TR1 之前对应版本的模型的接口。TR1 哈希表最惊讶的是它们的名称：`tr1::unordered_set`、`tr1::unordered_multiset`、`tr1::unordered_map` 和 `tr1::unordered_multimap`。这些名称强调了，与 `set`、`multiset`、`map` 或 `multimap` 的内容不同，TR1 哈希容器中的元素并没有任何可预测的顺序。
-
+- 用于实现`set`、`multiset`、`map`和`multimap`的哈希表。每个新容器都具有基于其 TR1 之前对应版本的模型的接口。TR1 哈希表最惊讶的是它们的名称：`tr1::unordered_set`、`tr1::unordered_multiset`、`tr1::unordered_map`和`tr1::unordered_multimap`。这些名称强调了，与`set`、`multiset`、`map`或`multimap`的内容不同，TR1 哈希容器中的元素并没有任何可预测的顺序。
 - 正则表达式，包括对字符串进行基于正则表达式的搜索和替换操作、从一个匹配项迭代到下一个等能力。
-
-- 元组（Tuples），它是标准库中已有 `pair` 模板的巧妙泛化。然而，`pair` 对象只能持有两个对象，而 `tr1::tuple` 对象可以持有任意数量的对象。Python 和 Eiffel 的程序员们，庆祝吧！你们以前故乡的一小部分现在是 C++ 的一部分。
-
-- tr1::array，本质上是一个“STL 化”的数组，即支持 `begin` 和 `end` 等成员函数的数组。`tr1::array` 的大小在编译期间固定固定；该对象不使用动态内存。
-
-- tr1::mem_fn，一种适配成员函数指针的统一方法。正如 `tr1::bind` 吸收并扩展了 C++98 `bind1st` 和 `bind2nd` 的功能一样，`tr1::mem_fn` 也吸收并扩展了 C++98 `mem_fun` 和 `mem_fun_ref` 的功能。
-
-- tr1::reference_wrapper，一种让引用更像对象的设施。其他此外，这使得创建看起来像持有引用的容器成为可能。（实际上，容器只能持有对象。）
-
-- 随机数生成设施，远优于 C++ 继承自 C 标准库的 `rand` 函数。
-
+- 元组（Tuples），它是标准库中已有`pair`模板的巧妙泛化。然而，`pair`对象只能持有两个对象，而`tr1::tuple`对象可以持有任意数量的对象。Python 和 Eiffel 的程序员们，庆祝吧！你们以前故乡的一小部分现在是 C++ 的一部分。
+- `tr1::array`，本质上是一个“STL 化”的数组，即支持`begin`和`end`等成员函数的数组。`tr1::array`的大小在编译期间固定固定；该对象不使用动态内存。
+- `tr1::mem_fn`，一种适配成员函数指针的统一方法。正如`tr1::bind`吸收并扩展了 C++98 `bind1st`和`bind2nd`的功能一样，`tr1::mem_fn`也吸收并扩展了 C++98 `mem_fun`和`mem_fun_ref`的功能。
+- `tr1::reference_wrapper`，一种让引用更像对象的设施。其他此外，这使得创建看起来像持有引用的容器成为可能。（实际上，容器只能持有对象。）
+- 随机数生成设施，远优于 C++ 继承自 C 标准库的`rand`函数。
 - 数学特殊函数，包括拉格拉斯多项式、贝塞尔函数、完全椭积分等。
-
 - C99 兼容扩展，一组旨在将许多新的 C99 特引入 C++ 的函数和模板。
 
-第二组 TR1 组件由高级模板技术支持组成，包括模板元编程（参见 项目 48）：
+第二组 TR1 组件由高级模板技术支持组成，包括模板元编程（参见项目 48）：
 
-- 类型特征（Type traits），一组特征类（参见 项目 47），用于提供关于类型的编译信息。给定类型 `T`，TR1 的类型特征可以揭示其是否为内置类型、是否提供虚析构函数、是否为空类（参见 项目 39）、是否可以隐式转换为其他类型 `U` 等。TR1 类型特征还可以揭示类型的正确对齐方式，对于编写自定义内存分配函数的程序员来说这是一个关键信息（参见 项目 50）。
-
-- tr1::result_of，一种用于推导函数调用返回类型的模板。在编写模板时，通常需要能够引用函数（模板函数）调用返回的对象类型，但返回类型可能以复杂的方式取决于函数的参数类型。`tr1::result_of` 使得引用返回类型变得简单。`tr1::result_of` 在 TR1 自身中多处使用。
-
+- 类型特征（Type traits），一组特征类（参见项目 47），用于提供关于类型的编译信息。给定类型`T`，TR1 的类型特征可以揭示其是否为内置类型、是否提供虚析构函数、是否为空类（参见项目 39）、是否可以隐式转换为其他类型`U`等。TR1 类型特征还可以揭示类型的正确对齐方式，对于编写自定义内存分配函数的程序员来说这是一个关键信息（参见项目 50）。
+- `tr1::result_of`，一种用于推导函数调用返回类型的模板。在编写模板时，通常需要能够引用函数（模板函数）调用返回的对象类型，但返回类型可能以复杂的方式取决于函数的参数类型。`tr1::result_of`使得引用返回类型变得简单。`tr1::result_of`在 TR1 自身中多处使用。
 
 
 
-TR1 本身仅仅是一份文档。为了利用它所规范的功能，你需要访问实现这些功能的代码。最终，这些代码将随编译器一起发布，但由于我在 2005 年写下这些内容时，很有可能如果你在标准库实现中寻找 TR1 组件，至少会有部分组件是缺失的。幸运的是，还有其他地方可以寻找：TR1 中的 14 个组件中有 10 个是基于 Boost 免费提供的库的（请参见 Item 55），因此它是获取类 TR1 功能的极佳资源。我之所以说“类 TR1”，是因为虽然 TR1 的许多功能是基于 Boost 库的，但在某些地方，Boost 的功能目前尚未完全精确匹配 TR1 规范。可能在你读到这些内容时，Boost 不仅为那些从 Boost 库演变而来的组件 提供了符合 TR1 标准的实现，还为四个未基于 Boost 开发的 TR1 组件提供了实现。
+TR1 本身仅仅是一份文档。为了利用它所规范的功能，你需要访问实现这些功能的代码。最终，这些代码将随编译器一起发布，但由于我在 2005 年写下这些内容时，很有可能如果你在标准库实现中寻找 TR1 组件，至少会有部分组件是缺失的。幸运的是，还有其他地方可以寻找：TR1 中的 14 个组件中有 10 个是基于 Boost 免费提供的库的（请参见 Item 55），因此它是获取类 TR1 功能的极佳资源。我之所以说"类 TR1"，是因为虽然 TR1 的许多功能是基于 Boost 库的，但在某些地方，Boost 的功能目前尚未完全精确匹配 TR1 规范。可能在你读到这些内容时，Boost 不仅为那些从 Boost 库演变而来的组件提供了符合 TR1 标准的实现，还为四个未基于 Boost 开发的 TR1 组件提供了实现。
 
 如果你想在编译器发布自己的 TR1 实现之前，使用 Boost 的类 TR1 库作为临时方案，你可能想要利用一种命名空间技巧。所有的 Boost 组件都在 `boost` 命名空间中，但 TR1 组件本应在 `std::tr1` 中。你可以告诉编译器将对 `std::tr1` 的引用视为与对 `boost` 的相同。方法如下：
 
@@ -7180,7 +7470,7 @@ namespace std {
 namespace tr1 = ::boost; // namespace std::tr1 是一个别名
 
 } // for namespace boost
-``` 
+```
 
 从技术上讲，这让你进入了未定义行为的领域，因为正如 Item 25 所解释，你不允许向 `std` 命名空间添加任何内容。在实践中，你可能遇到任何问题。当你的编译器提供自己的 TR1 实现时，你只需要消除上述命名空间别名；引用 `std::tr1` 代码将继续有效。
 
@@ -7200,7 +7490,7 @@ Boost 既是一个 C++ 开发者社区，也是一组可以免费下载的 C++ �
 
 当然，有很多 C++ 组织和网站，但 Boost 有两个其他组织都无法比拟的优势。首先，它与 C++ 标准委员会有着独特紧密且富有影响力的关系。Boost 由委员会成员创立，Boost 成员与委员会成员之间持续存在着强烈的重叠。此外，Boost 一直来的目标之一是作为可以添加到标准 C++ 中的功能的测试场。这种关系的结果之一是，在 TR1 引入 C++ 的 14 个新库中（参见 Item 54），超过二之三是基于在 Boost 所完成的工作。
 
-Boost 的第二个特殊特性是其接纳库的流程。它基于公共同行评审。如果你想向 Boost 贡献一个库，首先要在 Boost 开发者邮件列表中发布，以衡量人们对该库的兴趣，并启动对你工作的初步审查流程。这开启了一个循环，该网站将其总结为：“讨论、完善、重新提交。重复直到满意。”
+Boost 的第二个特殊特性是其接纳库的流程。它基于公共同行评审。如果你想向 Boost 贡献一个库，首先要在 Boost 开发者邮件列表中发布，以衡量人们对该库的兴趣，并启动对你工作的初步审查流程。这开启了一个循环，该网站将其总结为："讨论、完善、重新提交。重复直到满意。"
 
 最终，你决定你的库已经准备好正式提交。评审经理确认你的库符合 Boost 的最低要求。例如，它必须在至少两个编译器下编译（以证明名义移植性），并且你必须证明该库可以在接受的许可下提供（例如，库必须允许免费的商业和非商业使用）。然后，你的提交将提交给 Boost 社区进行官方评审。
 
@@ -7217,19 +7507,13 @@ Boost 的第二个特殊特性是其接纳库的流程。它基于公共同行�
 
 Boost 包含几十个库，并不断添加新库。偶尔，某些库也会移除，通常是因为它们的功能被提供更功能或更好设计的新库所取代（例如更灵活或更高效的库）。
 
-这些库在规模和范围上差异很大。一个极端是概念上只需要几行代码的库（但在添加了错误处理和移植性支持后通常会长得多）。其中一个库是 `Conversion`，它提供了更安全或更方便的转换运算符。例如，它的 `numeric_cast` 函数在数值从一种类型转换为另一种类型会导致溢出或下溢或类似问题时会抛出异常，而 `lexical_cast` 使任何支持 `operator<<` 的类型转换为字符串成为可能——对于诊断、日志等非常有用。另一个极端是提供如此广泛功能的库，甚至有专门为它们编写的书。这些包括 `Boost Graph Library`（用于对任意图结构进行编程）和 `Boost MPL Library`（元编程库”）。
+这些库在规模和范围上差异很大。一个极端是概念上只需要几行代码的库（但在添加了错误处理和移植性支持后通常会长得多）。其中一个库是 `Conversion`，它提供了更安全或更方便的转换运算符。例如，它的 `numeric_cast` 函数在数值从一种类型转换为另一种类型会导致溢出或下溢或类似问题时会抛出异常，而 `lexical_cast` 使任何支持 `operator<<` 的类型转换为字符串成为可能——对于诊断、日志等非常有用。另一个极端是提供如此广泛功能的库，甚至有专门为它们编写的书。这些包括 `Boost Graph Library`（用于对任意图结构进行编程）和 `Boost MPL Library`（元编程库"）。
 
 Boost 琳琅满目的库涵盖了丰富的主题，并分为十多个大类别。这些类别包括：
 
 - **字符串和文本处理**，包括提供类型安全的 `printf` 风格格式化的库、正则表达式（TR1 中类似功能的的基础——参见 Item 54）以及分词和解析。
-
-
-
-
-
--   **容器**，包括具有 STL 风格接口的固定大小数组库（参见项目 54）、可变大小位集以及多维数组。
-
--   **函数对象和高阶编程**，包括几个作为 `TR1` 功能基础的库。其中一个有趣的库是 `Lambda` 库，它让动态创建函数对象变得如此简单，以至于你可能都没有意识到自己在做什么：
+- **容器**，包括具有 STL 风格接口的固定大小数组库（参见项目 54）、可变大小位集以及多维数组。
+- **函数对象和高阶编程**，包括几个作为 `TR1` 功能基础的库。其中一个有趣的库是 `Lambda` 库，它让动态创建函数对象变得如此简单，以至于你可能都没有意识到自己在做什么：
 
 ```cpp
 using namespace boost::lambda;               // make boost::lambda
@@ -7247,9 +7531,8 @@ std::for_each(v.begin(), v.end(),              // for each element x in
                                // for the current element
 ```
 
--   **泛型编程**，包括大量的特征类（traits classes）。有关特征类的信息请参阅项目 47。
-
--   **模板元编程**（TMP — 参见项目 48），包括一个用于编译时断言的库以及 Boost MPL Library。MPL 的巧妙之处之一在于支持编译时实体（如 `types`）的 STL 风格数据结构，例如：
+- **泛型编程**，包括大量的特征类（traits classes）。有关特征类的信息请参阅项目 47。
+- **模板元编程**（TMP — 参见项目 48），包括一个用于编译时断言的库以及 Boost MPL Library。MPL 的巧妙之处之一在于支持编译时实体（如 `types`）的 STL 风格数据结构，例如：
 
 ```cpp
 // create a list-like compile-time container of three types (float,
@@ -7263,25 +7546,16 @@ typedef boost::mpl::push_front<floats, int>::type types;
 
 这类类型容器（通常被称为 `typelists`，尽管它们也可以基于 `mpl::vector` 或 `mpl::list`）为各种强大且重要的 TMP 应用开启了大门。
 
--   **数学与数值**，包括用于有理数、八元数和四元数；最大公约数和最小公倍数计算；以及随机数的库（另一个影响了 TR1 相关功能的库）。
-
--   **正确性与测试**，包括用于形式化隐式模板接口的库（参见项目 41）以及辅助测试优先编程的库。
-
--   **数据结构**，包括类型安全的联合体（即存储变体“任意”类型）库以及导致相应 TR1 功能的元组（tuple）库。
-
--   **跨语言支持**，包括允许 C++ 和 Python 之间无缝互操作的库。
-
--   **内存**，包括用于高性能固定大小分配器的 Pool 库（参见项目 50）；以及各种智能指针（参见项目 13），包括（但不限于）`TR1` 中的智能指针。其中一个非 TR1 的智能指针是 `scoped_array`，它是一种用于动态分配数组的类似于 `auto_ptr` 的智能指针；项目 44。
-
--   **杂项**，包括用于 CRC 检查、日期时间处理以及遍历文件系统的库。
-
-
-
-
+- **数学与数值**，包括用于有理数、八元数和四元数；最大公约数和最小公倍数计算；以及随机数的库（另一个影响了 TR1 相关功能的库）。
+- **正确性与测试**，包括用于形式化隐式模板接口的库（参见项目 41）以及辅助测试优先编程的库。
+- **数据结构**，包括类型安全的联合体（即存储变体"任意"类型）库以及导致相应 TR1 功能的元组（tuple）库。
+- **跨语言支持**，包括允许 C++ 和 Python 之间无缝互操作的库。
+- **内存**，包括用于高性能固定大小分配器的 Pool 库（参见项目 50）；以及各种智能指针（参见项目 13），包括（但不限于）`TR1` 中的智能指针。其中一个非 TR1 的智能指针是 `scoped_array`，它是一种用于动态分配数组的类似于 `auto_ptr` 的智能指针；项目 44。
+- **杂项**，包括用于 CRC 检查、日期时间处理以及遍历文件系统的库。
 
 ## 条目 11：理解自定义分配器的合法用途。
 
-## 条目 12：对 STL 容器的线程要有要有预期。
+## 条目 12：对 STL 容器的线程要有预期。
 
 ## 第 2 章:`vector` 和 `string`
 
@@ -7293,7 +7567,7 @@ typedef boost::mpl::push_front<floats, int>::type types;
 
 条目 16：了解如何将 `vector` 和 `string` 数据传递给遗留 API。
 
-条目 17：使用“`swap` 技巧”来裁剪多余的容量。
+条目 17：使用"`swap` 技巧"来裁剪多余的容量。
 
 条目 18：避免使用 `vector<bool>`。
 
@@ -7375,7 +7649,7 @@ typedef boost::mpl::push_front<floats, int>::type types;
 
 这第三版《Effective C++》与第二版在许多方面不同，最显著的区别是它包含了大量新信息。然而，第二版的大部分内容仍保留在第三版中，尽管通常以修改的形式和位置出现。在随后的页面表格中，我展示了第二版条目中的信息可以在第三版中找到，反之亦然。
 
-表格显示的是信息的映射，而非文本。例如，第二版条目 39 中的思想（“避免沿继承层次向下向下类型转换”）现在位于当前版本的条目 27（“最小化类型转换”），尽管第三版该条目的文本和示例完全全新。一个更极端的例子涉及第二版的条目 18（“力求完整且类的类接口”）。该条目的结论之一是，不需要特殊访问类私有部分的潜在成员函数通常应该是非成员函数。在第三版中，通过不同的（更强的）推理得相同的结论，因此第二版的条目 18 映射到第三版的条目 23（“优先使用非成员非友函数代替成员函数”），尽管这两个条目唯一的共同点可能就是它们的结论。
+表格显示的是信息的映射，而非文本。例如，第二版条目 39 中的思想（"避免沿继承层次向下向下类型转换"）现在位于当前版本的条目 27（"最小化类型转换"），尽管第三版该条目的文本和示例完全全新。一个更极端的例子涉及第二版的条目 18（"力求完整且类的类接口"）。该条目的结论之一是，不需要特殊访问类私有部分的潜在成员函数通常应该是非成员函数。在第三版中，通过不同的（更强的）推理得相同的结论，因此第二版的条目 18 映射到第三版的条目 23（"优先使用非成员非友函数代替成员函数"），尽管这两个条目唯一的共同点可能就是它们的结论。
 
 ### 第二版到第三版
 
@@ -7394,15 +7668,19 @@ typedef boost::mpl::push_front<floats, int>::type types;
 ### A
 
 7, 81, 135, 145, 194
+
 另见 `operator=`
+
 = 初始化与赋值 6
 
 106 150
 
 第二版对比第三版 xv–vi, 277
+
 另见封底
 
 第三版对比第二版 xv–vi, 277
+
 另见封底
 
 80-20 条 139, 168
@@ -7479,10 +7757,6 @@ Bartolucci, Guido xix
 
 虚 193
 
-
-
-
-
 基础保证，128
 
 哈斯廷斯战役 150
@@ -7533,124 +7807,208 @@ Boost 10, 269–272
 - 数学与数值工具 271
 - 内存管理工具 272
 - MPL 库 270, 271
+
+
+
 - `noncopyable` 基类 39
+
 - 池化库 250, 251
+
 - `scoped_array` 65, 216, 272
+
 - `shared_array` 65
+
 - `shared_ptr` 实现、代价 83
+
 - 智能指针 65, 272
+
 - 网页 xvii
+
 - 字符串与文本工具 271
+
 - 模板元编程支持 271
+
 - TR1 和 9–10, 268, 269
-- typelist 支持 271
+
+- `typelist` 支持 271
+
 - 网站 10, 269, 272
+
 - `boost` 作为 `std::tr1` 的同义词 268
 
 Bosch, Derek xviii
 
 - 断点、和内联 139
-- *《吸血女王》Buffy the Slayer xx*
+
+- 《吸血女王》Buffy the Slayer xx
+
 - 错误、报告 xvi
+
 - 内置类型 26–27
+
 - 效率与传递 89
+
 - 与...不兼容 80
 
 ### C
 
 - C 标准库和 C++ 标准库 264
+
 - C# 43, 76, 97, 100, 116, 18, 190
-- *《C++ 语言》The xvii*
+
+- 《C++ 语言》The xvii
+
 - C++ 标准库 263–269
+
 - `<iosfwd>` 和 144
+
 - 数组替换 75
+
 - C 标准库 264
+
 - C89 标准库和 264
+
 - 头文件组织... 101
+
 - `list` 模板 186
+
 - `logic_error` 和 113
+
 - `set` 模板 185
+
 - `vector` 模板 75
-- *《C++ Templates》xviii*
+
+- 《C++ Templates》xviii
+
 - C++，作为语言联邦 11–13
+
 - C++0x 264
+
 - C++ 风格的转换 117
+
 - C，作为 C++ 的子语言 12
+
 - C99 标准库、TR1 和 267
 
 ### 缓存
 
 - `const` 和 22
+
 - `mutable` 和 22
+
 - Cai, Steve xix
+
 - 调用 `swap` 110
+
 - 对基类的调用、转换和 119
+
 - Cargill, Tom xviii
+
 - Carrara, Enrico xix
+
 - Carroll, Glenn xviii
+
 - 转换 116–123
+
   另见 `const_cast`, `static_cast`, `dynamic_cast`, 和 `reinterpret_cast`
+
 - 基类调用和 119
+
 - 消除 const 24–25
+
 - 封装和 123
+
 - `grep` 和 117
+
 - 语法形式 116–117
+
 - 类型系统和 116
+
 - 未定义行为和 119
 
 ### 链式赋值
 
 - 链式赋值 52
+
 - Chang, Brandon xix
+
 - Clamage, Steve xviii
 
 ### 类定义
 
 - 消除人为客户端依赖 143
+
 - 类声明 vs. 143
+
 - 对象大小和 141
+
 - 类设计，见类型设计
+
 - 类名，显式指定 162
+
 - `class`，对， `typename` 203
 
 ### 类
 
 - 另见类定义、接口
+
 - 抽象 43, 162
 
 ### 基
 
 - 另见基类
+
 - 数据的重复 193
+
 - 多态的 44
+
 - 模板化的 207–212
+
 - 虚函数 193
+
 - 派见继承
+
 - 初始化... 194
+
 - 接口 144–147
+
 - 含义
+
 - RAII，见规范 226–232
+
 - 聚类 250
+
 - 臃胀 24
+
 - 异常安全的 127–134
+
 - 拷贝运算符 60
+
 - 提取模板的 212–217
+
 - 错误的、效率和 90
+
 - 重用 195
+
 - Cohen, Jake xix
+
 - Comeau, Greg xviii
+
 - 他的 C/C xviii
+
 - 共同特征和 164
+
 - 共同性与变异 212
+
 - `vptr` 和 42
+
 - 兼容类型，接受 218–222
+
 - 编译依赖 140–148, 190
+
 - 指针、引用和对象 143
+
 - 编译器警告 262–263
-
-
-
-
 
 # 用 189 替换私有继承
 
@@ -7794,7 +8152,7 @@ Bosch, Derek xviii
 
 ## 针对英语的 39, 204
 
-##跨 DLL 问题 82
+## 跨 DLL 问题 82
 
 ## CRTP 246
 
@@ -7892,9 +8250,6 @@ Bosch, Derek xviii
 
 ## 变量，延迟 113–116
 
-
-
-
 # DLLs, `delete` 和 8
 
 # dtor 8
@@ -7902,6 +8257,7 @@ Bosch, Derek xviii
 # Dulimov, Peter xix
 
 # 重复
+
 - 避免 23–25, 29, 50, 60, 164, 183, 212–217
 
 # 基类数据和 193
@@ -7909,503 +8265,459 @@ Bosch, Derek xviii
 # `init` 函数和 60
 
 # 动态绑定
+
 - 181 的定义
+
 - 虚函数的 179
+
 - 动态类型，181 的定义
+
 - `dynamic_cast` 50, 117, 120–123
+
 - 另见转换 (casting)
 
 # 120 的效率
 
 ## E
+
 - 早期绑定 180
+
 - 易于正确使用而非错误使用 78–83
+
 - EBO，参见空基类优化
+
 - *Effective C++, 与 More Effective C++ 和 Effective STL 相比 273*
+
 - *Effective STL 273, 275–276*
+
 - 与 *Effective C++ 273* 相比
+
 - 275–276 的内容
 
 ## 效率
+
 - 赋值对比构造与析构 94
+
 - 默认参数绑定 182
+
 - `dynamic_cast` 120
+
 - 句柄类 (Handle classes) 147
+
 - 错误的代码和 90, 94
+
 - 有参数与无参数初始化 114
+
 - 接口类 147
+
 - 宏对比内联函数 16
+
 - 成员初始化对比赋值 28
+
 - 最小化编译依赖 147
+
 - `operator new`/`operator delete` 和 248
+
 - 引用传递和 87
+
 - 值传递和 86–87
+
 - 传递内置类型和 89
+
 - 运行时与编译时测试 230
+
 - 模板元编程和 233
+
 - 模板对比函数参数 216
+
 - 未使用的对象 113
+
 - 虚函数 168
 
 ## Eiffel
+
 - Eiffel 100
+
 - 嵌入，参见组合
+
 - 空基类优化 (EBO) 190–191
+
 - 封装 95, 99
+
 - 转换和 123
+
 - 设计模式和 173
+
 - 句柄和 124
+
 - 测量 99
+
 - 受保护成员和 97
+
 - RAII 类和 72
+
 - 枚举 技巧 15–16, 236
+
 - 本书勘误列表 xvi
+
 - 链接期间的错误 39, 44
+
 - 运行时 152
+
 - 参数求值顺序 76
 
 ## 示例类
+
 - `A` 4
+
 - `ABEntry` 27
+
 - `AccessLevels` 95
+
 - `Address` 184
+
 - `Airplane` 164, 165, 166
+
 - `Airport` 164
+
 - `AtomicClock` 40
+
 - `AOW` 43
+
 - `B` 4, 178, 262
+
 - `Base` 54, 118, 137, 157, 158, 159, 160, 206, 254, 260
+
 - `BelowBottom` 219
+
 - `bidirectional_iterator` 228
+
 - `Bird` 151, 152, 153
+
 - `Bitmap` 54
+
 - `BorrowableItem` 192
+
 - `Bottom` 218
+
 - `BuyTransaction` 49, 51
+
 - `C` 5
+
 - `Circle` 181
+
 - `CompanyA` 208
+
 - `CompanyB` 208
+
 - `CompanyZ` 209
+
 - `CostEstimate` 15
+
 - `CPerson` 198
+
 - `CTextBlock` 21, 22, 23
+
 - `Customer` 57, 58
+
 - `D` 178, 262
+
 - `DatabaseID` 197
+
 - `Date` 58, 79
+
 - `Day` 79
+
 - `DBConn` 45, 47
+
 - `DBConnection` 45
+
 - `deque` 229
+
 - `deque::iterator` 229
+
 - `Derived` 54, 118, 137, 157, 158, 159, 160, 206, 254, 260
+
 - `Directory` 31
+
 - `ElectronicGadget` 192
+
 - `Ellipse` 161
+
 - `Empty` 34, 190
+
 - `EvilGuy` 172, 174
+
 - `EyeCandy` 175
+
 - `Factorial` 235
+
 - `Factorial<` 235
+
 - `File` 193, 194
+
 - `FileSystem` 30
+
 - `FlyingBird` 152
+
 - `Font` 71
+
 - `forward_iterator_tag` 228
+
 - `GameCharacter` 169, 170, 172, 173, 176
+
 - `GameLevel` 174
+
 - `GamePlayer` 14, 15
+
 - `GraphNode` 4
+
 - `GUIObject` 126
+
 - `HealthCalc` 176
+
 - `HealthCalculator` 174
+
 - `HoldsAnInt` 190, 191
+
 - `HomeForSale` 37, 38, 39
+
 - `input_iterator_tag` 228
+
 - `input_iterator_tag<Iter>` 230
+
 - `InputFile` 193, 194
+
 - `Investment` 61, 70
+
 - `IOFile` 193, 194
+
 - `IPerson` 195, 197
+
 - `iterator_traits` 229
+
 - 另见 `std::iterator_traits`
+
 - `list` 229
+
 - `list::iterator` 229
+
 - `Lock` 66, 67, 68
+
 - `LoggingMsgSender` 208, 210, 211
+
 - `Middle` 218
+
 - `ModelA` 164, 165, 167
+
 - `ModelB` 164, 165, 167
+
 - `ModelC` 164, 166, 167
+
 - `Month` 79, 80
+
 - `MP3Player` 192
+
 - `MsgInfo` 208
+
 - `MsgSender` 208
+
 - `MsgSender<CompanyZ>` 209
+
 - `NamedObject` 35, 36
+
 - `NewHandlerHolder` 243
+
 - `NewHandlerSupport` 245
+
 - `output_iterator_tag` 228
+
 - `OutputFile` 193, 194
 
+- `Penguin` 151, 152, 153
 
+- `Person` 86, 135, 140, 141, 142, 145, 146, 150, 184, 187
 
+- `PersonInfo` 195, 197
 
-`Penguin` 151, 152, 153
+- `PhoneNumber` 27, 184
 
-`Person` 86, 135, 140, 141, 142, 145, 146, 150, 184, 187
+- `PMImpl` 131
 
-`PersonInfo` 195, 197
+- `Point` 26, 41, 123
 
-`PhoneNumber` 27, 184
+- `PrettyMenu` 127, 130, 131
 
-`PMImpl` 131
+- `PriorityCustomer` 58
 
-`Point` 26, 41, 123
+- `random_access_iterator_tag` 228
 
-`PrettyMenu` 127, 130, 131
+- `Rational` 90, 102, 103, 105, 222, 223, 224, 225, 226
 
-`PriorityCustomer` 58
+- `RealPerson` 147
 
-`random_access_iterator_tag` 228
+- `Rectangle` 124, 125, 154, 161, 181, 183
 
-`Rational` 90, 102, 103, 105, 222, 223, 224, 225, 226
+- `RectData` 124
 
-`RealPerson` 147
+- `SellTransaction` 49
 
-`Rectangle` 124, 125, 154, 161, 181, 183
+- `Set` 185
 
-`RectData` 124
+- `Shape` 161, 162, 163, 167, 180, 182, 183
 
-`SellTransaction` 49
+- `SmartPtr` 218, 219, 220
 
-`Set` 185
+- `SpecialString` 42
 
-`Shape` 161, 162, 163, 167, 180, 182, 183
+- `SpecialWindow` 119, 120, 121, 122
 
-`SmartPtr` 218, 219, 220
+- `SpeedDataCollection` 96
 
-`SpecialString` 42
+- `Square` 154
 
-`SpecialWindow` 119, 120, 121, 122
+- `SquareMatrix` 213, 214, 215, 216
 
-`SpeedDataCollection` 96
+- `SquareMatrixBase` 214, 215
 
-`Square` 154
+- `StandardNewDelete` 260
 
-`SquareMatrix` 213, 214, 215, 216
+- `Student` 86, 150, 187
 
-`SquareMatrixBase` 214, 215
+- `TextBlock` 20, 23, 24
 
-`StandardNewDelete` 260
+- `TimeKeeper` 40, 41
 
-`Student` 86, 150, 187
+- `Timer` 188
 
-`TextBlock` 20, 23, 24
+- `Top` 218
 
-`TimeKeeper` 40, 41
+- `Transaction` 48, 50, 51
 
-`Timer` 188
+- `Uncopyable` 39
 
-`Top` 218
+- `WaterClock` 40
 
-`Transaction` 48, 50, 51
+- `WebBrowser` 98, 100, 101
 
-`Uncopyable` 39
+- `Widget` 4, 5, 44, 52, 53, 54, 56, 107, 108, 109, 118, 189, 199, 201, 242, 245, 246, 257, 258, 261
 
-`WaterClock` 40
+- `Widget::Timer` 189
 
-`WebBrowser` 98, 100, 101
+- `WidgetImpl` 106, 108
 
-`Widget` 4, 5, 44, 52, 53, 54, 56, 107, 108, 109, 118, 189, 199, 201, 242, 245, 246, 257, 258, 261
+- `Window` 88, 119, 121, 122
 
-`Widget::Timer` 189
+- `WindowWithScrollBars` 88
 
-`WidgetImpl` 106, 108
+- `WristWatch` 40
 
-`Window` 88, 119, 121, 122
+- `X` 242
 
-`WindowWithScrollBars` 88
+- `Y` 242
 
-`WristWatch` 40
-
-`X` 242
-
-`Y` 242
-
-`Year` 79
+- `Year` 79
 
 ### 示例函数/模板
 
-`ABEntry::ABEntry` 27, 28
+- `ABEntry::ABEntry` 27, 28
 
-`AccessLevels::getReadOnly` 95
+- `AccessLevels::getReadOnly` 95
 
-`AccessLevels::getReadWrite` 95
+- `AccessLevels::getReadWrite` 95
 
-`AccessLevels::setReadOnly` 95
+- `AccessLevels::setReadOnly` 95
 
-`AccessLevels::setWriteOnly` 95
+- `AccessLevels::setWriteOnly` 95
 
-`advance` 228, 230, 232, 233, 234
+- `advance` 228, 230, 232, 233, 234
 
-`Airplane::defaultFly` 165
+- `Airplane::defaultFly` 165
 
-`Airplane::fly` 164, 165, 166, 167
+- `Airplane::fly` 164, 165, 166, 167
 
-`askUserForDatabaseID` 195
+- `askUserForDatabaseID` 195
 
-`AWOV::AWOV` 43
+- `AWOV::AWOV` 43
 
-`B::mf` 178
+- `B::mf` 178
 
-`Base::operator delete` 255
+- `Base::operator delete` 255
 
-`Base::operator new` 254
+- `Base::operator new` 254
 
-`Bird::fly` 151
+- `Bird::fly` 151
 
-`BorrowableItem::checkOut` 192
+- `BorrowableItem::checkOut` 192
 
-`boundingBox` 126
 
-`BuyTransaction::BuyTransaction` 51
 
-`BuyTransaction::createLog` 51
 
-`calcHealth` 174
+# 索引
 
-`callWithMax` 16
+## B
 
-`changeFontSize` 71
+- `boundingBox` 126
+- `BuyTransaction::BuyTransaction` 51
+- `BuyTransaction::createLog` 51
 
-`Circle::draw` 181
+## C
 
-`clear` 143, 144
+- `calcHealth` 174
+- `callWithMax` 16
+- `changeFontSize` 71
+- `Circle::draw` 181
+- `clear` 143, 144
+- `clear` 98
+- `CPerson::birthDate` 198
+- `CPerson::CPerson` 198
+- `CPerson::name` 198
+- `CPerson::valueDelimClose` 198
+- `CPerson::valueDelimOpen` 198
+- `createInvestment` 62, 70, 81, 82, 83
+- `CTextBlock::length` 22, 23
+- `CTextBlock::operator()` 21
+- `Customer::Customer` 58
+- `Customer::operator=` 58
 
-`clear` 98
+## D
 
-`CPerson::birthDate` 198
+- `D::mf` 178
+- `Date::Date` 79
+- `Day::Day` 79
+- `daysHeld` 69
+- `DBConn::~DBConn` 45, 46, 47
+- `DBConn::close` 47
+- `defaultHealthCalc` 172, 173
+- `Derived::Derived` 138, 206
+- `Derived::mf1` 160
+- `Derived::mf4` 157
+- `Directory::Directory` 31, 32
+- `doAdvance` 231
+- `doMultiply` 226
+- `doProcessing` 200, 202
+- `doSomething` 5, 44, 54, 110
+- `doSomeWork` 118
 
-`CPerson::CPerson` 198
+## E
 
-`CPerson::name` 198
+- `eat` 151, 187
+- `ElectronicGadget::checkOut` 192
+- `Empty::~Empty` 34
+- `Empty::Empty` 34
+- `Empty::operator=` 34
+- `encryptPassword` 114, 115
+- `error` 152
+- `EvilBadGuy::EvilBadGuy` 172
 
-`CPerson::valueDelimClose` 198
+## F
 
-`CPerson::valueDelimOpen` 198
-
-`createInvestment` 62, 70, 81, 82, 83
-
-`CTextBlock::length` 22, 23
-
-`CTextBlock::operator()` 21
-
-`Customer::Customer` 58
-
-`Customer::operator=` 58
-
-`D::mf` 178
-
-`Date::Date` 79
-
-`Day::Day` 79
-
-`daysHeld` 69
-
-`DBConn::~DBConn` 45, 46, 47
-
-`DBConn::close` 47
-
-`defaultHealthCalc` 172, 173
-
-`Derived::Derived` 138, 206
-
-`Derived::mf1` 160
-
-`Derived::mf4` 157
-
-`Directory::Directory` 31, 32
-
-`doAdvance` 231
-
-`doMultiply` 226
-
-`doProcessing` 200, 202
-
-`doSomething` 5, 44, 54, 110
-
-`doSomeWork` 118
-
-`eat` 151, 187
-
-`ElectronicGadget::checkOut` 192
-
-`Empty::~Empty` 34
-
-`Empty::Empty` 34
-
-`Empty::operator=` 34
-
-`encryptPassword` 114, 115
-
-`error` 152
-
-`EvilBadGuy::EvilBadGuy` 172
-
-`f` 62, 63, 64
-
-`FlyingBird::fly` 152
-
-`Font::~Font` 71
-
-`Font::Font` 71
-
-`Font::get` 71
-
-`Font::operator FontHandle` 71
-
-`GameCharacter::doHealthValue` 170
-
-`GameCharacter::GameCharacter` 172, 174, 176
-
-`GameCharacter::healthValue` 169, 170, 172, 174, 176
-
-`GameLevel::health` 174
-
-`getFont` 70
-
-`hasAcceptableQuality` 6
-
-
-
-
-
-- `HealthCalculator::operator() ` 174
-- `lock` 66
-- `Lock::~Lock` 66
-- `Lock::Lock` 66, 68
-- `logCall` 57
-- `LoggingMsgSender::sendClear` 208, 210
-- `LogginMsgSender::sendClear` 210, 211
-- `loseHealthQuickly` 172
-- `loseHealthSlowly` 172
-- `main` 141, 142, 236, 241
-- `makeBigger` 154
-- `makePerson` 195
-- `max` 135
-- `ModelA::fly` 165, 167
-- `ModelB::fly` 165, 167
-- `ModelC::fly` 166, 167
-- `Month::Dec` 80
-- `Month::Feb` 80
-- `Month::Jan` 80
-- `Month::Month` 79, 80
-- `MsgSender::sendClear` 208
-- `MsgSender::sendSecret` 208
-- `MsgSender<CompanyZ>::sendSecret` 209
-- `NewHandlerHolder::~NewHandlerHolder` 243
-- `NewHandlerHolder::NewHandlerHolder` 243
-- `NewHandlerSupport::operator new` 245
-- `NewHandlerSupport::set_new_handler` 245
-- `numDigits` 4
-- `operator delete` 255
-- `operator new` 249, 252
-- `operator*` 91, 92, 94, 105, 222, 224, 225, 226
-- `operator==` 93
-- `outOfMem` 240
-- `Penguin::fly` 152
-- `Person::age` 135
-- `Person::create` 146, 147
-- `Person::name` 145
-- `Person::Person` 145
-- `PersonInfo::theName` 196
-- `PersonInfo::valueDelClose` 196
-- `PersonInfo::valueDelOpen` 196
-- `PrettyMenu::changeBackground` 127, 128, 130, 131
-- `print` 20
-- `print2nd` 204, 205
-- `printNameDisplay` 88, 89
-- `priority` 75
-- `PriorityCustomer::operator=` 59
-- `PriorityCustomer::PriorityCustomer` 59
-- `processWidget` 75
-- `RealPerson::~RealPerson` 147
-- `RealPerson::RealPerson` 147
-- `Rectangle::doDraw` 183
-- `Rectangle::draw` 181, 183
-- `Rectangle::lowerRight` 124, 125
-- `Rectangle::upperLeft` 124, 125
-- `releaseFont` 70
-- `Set::insert` 186
-- `Set::member` 186
-- `Set::remove` 186
-- `Set::size` 186
-- `Shape::doDraw` 183
-- `Shape::draw` 161, 162, 180, 182, 183
-- `Shape::error` 161, 163
-- `Shape::objectID` 161, 167
-- `SmartPtr::get` 220
-- `SmartPtr::SmartPtr` 220
-- `someFunc` 132, 156
-- `SpecialWindow::blink` 122
-- `SpecialWindow::onResize` 119, 120
-- `SquareMatrix::invert` 214
-- `SquareMatrix::setDataPtr` 215
-- `SquareMatrix::SquareMatrix` 215, 216
-- `StandardNewDeleteForms::operator delete` 260, 261
-- `StandardNewDeleteForms::operator new` 260, 261
-- `std::swap` 109
-- `std::swap<Widget>` 107, 108
-- `study` 151, 187
-- `swap` 106, 109
-- `tempDir` 32
-- `TextBlock::operator[ ] 20, 23, 24
-- `tfs` 32
-- `Timer::onTick` 188
-- `Transaction::init` 50
-- `Transaction::Transaction` 49, 50, 51
-- `Uncopyable::operator=` 39
-- `Uncopyable::Uncopyable` 39
-- `unlock` 66
-- `validateStudent` 87
-- `Widget::onTick` 189
-- `Widget::operator new` 244
-- `Widget::operator+=` 53
-- `Widget::operator=` 53, 54, 55, 56, 107
-- `Widget::set_new_handler` 243
-- `Widget::swap` 108
-- `Window::blink` 122
-- `Window::onResize` 119
-- `workWithIterator` 206, 207
-- `Year::Year` 79
-- `exception specifications` 85
-- *Exceptional C++* xvii
-- *Exceptional C++ Style* xvii, xviii
-- `exceptions` 113
-- `delete` and 62
-- `destructors` and 44–48
-- `member `swap` and 112
-- `standard hierarchy` for 264
-- `swallowing` 46
-- `unused objects` and 114
-- `exception-safe code` 127–134
-- `copy-and-`swap`` and 132
-- `legacy code` and 133
-- `pimpl idiom` and 131
-- `side effects` and 132
-- `exception-safety guarantees` 128–129
-- `explicit calls to base class functions` 211
-- `explicit` constructors 5, 85, 104
-- `generalized copy construction` and 219
-- `explicit inline request` 135
-- `explicit specification, of class names` 162
-- `explicit type conversions vs. implicit` 70–72
-- `expression templates` 237
-- `expressions, implicit interfaces and` 201
-
-### F
+- `f` 62, 63, 64
+- `FlyingBird::fly` 152
+- `Font::~Font` 71
+- `Font::Font` 71
+- `Font::get` 71
+- `Font::operator FontHandle` 71
 - `factoring code, out of templates` 212–217
 - `factory function` 40, 62, 69, 81, 146, 195
 - Fallenstedt, Martin xix
@@ -8414,21 +8726,14 @@ Bosch, Derek xviii
 - `final` classes, in Java 43
 - `final` methods, in Java 190
 - `fixed-size static buffers, problems of` 196
-- `forms of `new` and `delete` 73–75
+- `forms of`new` and delete` 73–75
 - FORTRAN 42
 - `forward iterators` 227
-
-
-
-
-
-## F
-
 - `forward_iterator_tag` 228
 - 转发函数 144, 160
 - French, Donald xx
 - 友函数 38, 85, 105, 135, 173, 223–225
-- 与成员函数对比 98–102
+    - 与成员函数对比 98–102
 - 友谊关系
     - 现实中的 105
     - 无需特殊的访问权限 225
@@ -8449,7 +8754,7 @@ Bosch, Derek xviii
     - 隐式生成的 34–37, 221
     - 禁止 37–39
     - 内联，声明 135
-    - 成员 
+    - 成员
         - 模板化的 218–222
         - 与非成员对比 104–105
     - 非成员
@@ -8462,9 +8767,10 @@ Bosch, Derek xviii
     - 静态
         - 构造函数和析构函数以及 52
         - 虚，见虚函数
-    - 函数样式转换 116
+- 函数样式转换 116
 
 ## G
+
 - Gamma, Erich xvii
 - Geller, Alan xix
 - 通用赋值 220
@@ -8480,6 +8786,7 @@ Bosch, Derek xviii
 - Gutnik, Gene xix
 
 ## H
+
 - 句柄类 144–145
 - 句柄
     - 野悬的 126
@@ -8487,7 +8794,7 @@ Bosch, Derek xviii
     - `operator[]` 以及 126
     - 返回 123–126
     - 关系 184
-    - 哈希表，在 TR1 266
+- 哈希表，在 TR1 266
 - Hastings, Battle of 150
 - Haugland, Solveig xx
 - 头部疼，避免 95
@@ -8498,7 +8805,7 @@ Bosch, Derek xviii
     - C++ 标准库 101
     - 模板以及 136
     - 使用，在书中 3
-    - Hello world，模板元编程以及 235
+- Hello world，模板元编程以及 235
 - Helm, Richard xvii
 - Henney, Kevlin xix
 - Hicks, Cory xix
@@ -8507,6 +8814,7 @@ Bosch, Derek xviii
 - 高亮，在书中 5
 
 ## I
+
 - 标识测试 55
 - 用于类型的 `if``else` 230
 - `#ifdef` 17
@@ -8530,7 +8838,7 @@ Bosch, Derek xviii
     - 编译依赖和 140
     - 与内置类型的不兼容性 80
     - 错误代码和效率 90
-    - `operator` `new` 中的无限循环 253
+    - `operator``new` 中的无限循环 253
 - 继承
     - 意外的 165–166
     - 与模板结合 243–245
@@ -8542,7 +8850,7 @@ Bosch, Derek xviii
     - 实现的 161–169
     - 接口的 161–169
     - 接口与实现 161–169
-    - `operator` `new` 的 253
+    - `operator``new` 的 253
     - 静态的 151–155
     - 私有的 187
     - 保护的 151
@@ -8554,170 +8862,457 @@ Bosch, Derek xviii
     - 关系 184
     - 虚的 194
     - 虚继承 194
+- 内联
+    - vs. `#define` 16–17
+    - vs. 宏，效率以及 16
+    - 134–139
+    - 构造函数/析构函数和 137–138
+    - 动态链接和 139
+    - Handle 类和 148
+    - 继承和 137–138
+    - 接口类和 148
+    - 库设计和 138
+    - 重新编译和 139
+    - 重新链接和 139
+    - 针对 139 的建议策略
+    - 模板和 136
+    - 时间 135
+    - 虚拟函数和 136
+- 输入迭代器 227
+- `input_iterator_tag` 228
+- `input_iterator_tag<Iter*>` 230
+- 失眠 150
+- 指令，编译器的重排序 76
+- 整数类型 14
+- 接口类 145–147
+- 接口
+    - 与实现解耦 165
+    - 7 的定义
+    - 设计考虑 78–86
+    - 显式的，签名和 201
+    - 隐式的 199–203
+    - 表达式和 201
+
+## L
+
+- `lock` 66
+- `Lock::~Lock` 66
+- `Lock::Lock` 66, 68
+- `logCall` 57
+- `LoggingMsgSender::sendClear` 208, 210
+- `LogginMsgSender::sendClear` 210, 211
+- `loseHealthQuickly` 172
+- `loseHealthSlowly` 172
+
+## M
+
+- `main` 141, 142, 236, 241
+- `makeBigger` 154
+- `makePerson` 195
+- `max` 135
+- `ModelA::fly` 165, 167
+- `ModelB::fly` 165, 167
+- `ModelC::fly` 166, 167
+- `Month::Dec` 80
+- `Month::Feb` 80
+- `Month::Jan` 80
+- `Month::Month` 79, 80
+- `MsgSender::sendClear` 208
+- `MsgSender::sendSecret` 208
+- `MsgSender<CompanyZ>::sendSecret` 209
+
+## N
+
+- `NewHandlerHolder::~NewHandlerHolder` 243
+- `NewHandlerHolder::NewHandlerHolder` 243
+- `NewHandlerSupport::operator new` 245
+- `NewHandlerSupport::set_new_handler` 245
+- `numDigits` 4
+
+## O
+
+- `operator delete` 255
+- `operator new` 249, 252
+- `operator*` 91, 92, 94, 105, 222, 224, 225, 226
+- `operator==` 93
+- `outOfMem` 240
+
+## P
+
+- `Penguin::fly` 152
+- `Person::age` 135
+- `Person::create` 146, 147
+- `Person::name` 145
+- `Person::Person` 145
+- `PersonInfo::theName` 196
+- `PersonInfo::valueDelClose` 196
+- `PersonInfo::valueDelOpen` 196
+- `PrettyMenu::changeBackground` 127, 128, 130, 131
+- `print` 20
+- `print2nd` 204, 205
+- `printNameDisplay` 88, 89
+- `priority` 75
+- `PriorityCustomer::operator=` 59
+- `PriorityCustomer::PriorityCustomer` 59
+- `processWidget` 75
+
+## R
+
+- `RealPerson::~RealPerson` 147
+- `RealPerson::RealPerson` 147
+- `Rectangle::doDraw` 183
+- `Rectangle::draw` 181, 183
+- `Rectangle::lowerRight` 124, 125
+- `Rectangle::upperLeft` 124, 125
+- `releaseFont` 70
+
+## S
+
+- `Set::insert` 186
+- `Set::member` 186
+- `Set::remove` 186
+- `Set::size` 186
+- `Shape::doDraw` 183
+- `Shape::draw` 161, 162, 180, 182, 183
+- `Shape::error` 161, 163
+- `Shape::objectID` 161, 167
+- `SmartPtr::get` 220
+- `SmartPtr::SmartPtr` 220
+- `someFunc` 132, 156
+- `SpecialWindow::blink` 122
+- `SpecialWindow::onResize` 119, 120
+- `SquareMatrix::invert` 214
+- `SquareMatrix::setDataPtr` 215
+- `SquareMatrix::SquareMatrix` 215, 216
+- `StandardNewDeleteForms::operator delete` 260, 261
+- `StandardNewDeleteForms::operator new` 260, 261
+- `std::swap` 109
+- `std::swap<Widget>` 107, 108
+- `study` 151, 187
+- `swap` 106, 109
+
+## T
+
+- `tempDir` 32
+- `TextBlock::operator[ ]` 20, 23, 24
+- `tfs` 32
+- `Timer::onTick` 188
+- `Transaction::init` 50
+- `Transaction::Transaction` 49, 50, 51
+
+## U
+
+- `Uncopyable::operator=` 39
+- `Uncopyable::Uncopyable` 39
+- `unlock` 66
+
+## V
+
+- `validateStudent` 87
+
+## W
+
+- `Widget::onTick` 189
+- `Widget::operator new` 244
+- `Widget::operator+=` 53
+- `Widget::operator=` 53, 54, 55, 56, 107
+- `Widget::set_new_handler` 243
+- `Widget::swap` 108
+- `Window::blink` 122
+- `Window::onResize` 119
+- `workWithIterator` 206, 207
+
+## Y
+
+- `Year::Year` 79
+
+## 其他
+
+- `exception specifications` 85
+- *Exceptional C++* xvii
+- *Exceptional C++ Style* xvii, xviii
+- `exceptions` 113
+    - `delete` and 62
+    - `destructors` and 44–48
+    - `member``swap` and 112
+    - `standard hierarchy` for 264
+    - `swallowing` 46
+    - `unused objects` and 114
+- `exception-safe code` 127–134
+    - `copy-and-`swap`` and 132
+    - `legacy code` and 133
+    - `pimpl idiom` and 131
+    - `side effects` and 132
+- `exception-safety guarantees` 128–129
+- `explicit calls to base class functions` 211
+- `explicit` constructors 5, 85, 104
+    - `generalized copy construction` and 219
+- `explicit inline request` 135
+- `explicit specification, of class names` 162
+- `explicit type conversions vs. implicit` 70–72
+- `expression templates` 237
+- `expressions, implicit interfaces and` 201
+- `HealthCalculator::operator()` 174
+
+## G
+
+- `GameCharacter::doHealthValue` 170
+- `GameCharacter::GameCharacter` 172, 174, 176
+- `GameCharacter::healthValue` 169, 170, 172, 174, 176
+- `GameLevel::health` 174
+- `getFont` 70
+
+## H
+
+- `hasAcceptableQuality` 6
 
 
 
+# 161–169 的继承
 
-
-vs. `#define` 16–17
-vs. 宏，效率以及 16
-内联 134–139
-构造函数/析构函数和 137–138
-动态链接和 139
-Handle 类和 148
-继承和 137–138
-接口类和 148
-库设计和 138
-重新编译和 139
-重新链接和 139
-针对 139 的建议策略
-模板和 136
-时间 135
-虚拟函数和 136
-输入迭代器 227
-`input_iterator_tag` 228
-`input_iterator_tag<Iter*>` 230
-失眠 150
-指令，编译器的重排序 76
-整数类型 14
-接口类 145–147
-接口
-与实现解耦 165
-7 的定义
-设计考虑 78–86
-显式的，签名和 201
-隐式的 199–203
-表达式和 201
-161–169 的继承
 新类型和 79–80
+
 与实现分离 140
+
 模板参数和 199–203
+
 未声明的 85
+
 跨语言支持，在 Boost 中 272
+
 国际化，库支持的 264
+
 无效数组索引，未定义行为和 7
+
 不变性
+
 NVI 和 171
+
 过特化 168
+
 `<iosfwd>` 144
+
 is-a 关系 150–155
+
 用...实现 184–186, 187
+
 `istream_iterator`s 227
+
 迭代器类别 227–228
+
 `iterator_category` 229
+
 作为句柄的迭代器 125
+
 `iterator`s，vs. `const_iterator`s 18
 
-### J
+## J
+
 Jagdhar, Emily xix
+
 Janert, Philipp xix
+
 Java 7, 43, 76, 81, 100, 116, 118, 142, 145, 190, 194
+
 Johnson, Ralph xvii
+
 Johnson, Tim xviii, xix
+
 Josuttis, Nicolai. xviii
 
-### K
+## K
+
 Kaelbling, Mike xviii
+
 Kakulapati, Gunavard xix
+
 Kalenkovich, Eugene xix
+
 Kennedy, Glenn xix
+
 Kernighan, Brian xviii, xix
+
 Kimura, Junichi xviii
+
 Kirman, Jak xviii
+
 Kirmse, Andrew xix
+
 Knox, Timothy xviii, xix
+
 Koenig, lookup 110
+
 Kourounis, Dros xix
+
 Kreuzer, Gerhard xix
 
-### L
+## L
+
 Laeuchli, Jesse xix
+
 `Lambda` library, in Boost 271
+
 Langer, Angelika xix
+
 languages, other, compatibility with 42
+
 Lanzetta, Michael xix
+
 late binding 180
+
 layering, see composition
+
 layouts, objects vs. 73
+
 Lea, Doug xviii
+
 leaks, exception-safe code and 127
+
 Leary-Cout, Chanda xx
+
 Lee, Sam xix
+
 legacy code, exception-safety and 133
+
 Lejter, Moises xviii, xx
+
 lemur, ring-tailed 196
+
 Lewandowski, Scott xviii
+
 `lhs`, as parameter name 8
+
 Li, Greg xix
+
 link-time errors 39, 44
+
 link-time inlining 135
+
 `list` 186
+
 local static objects
+
 definition of 30
+
 initialization of 31
+
 locales 264
+
 locks, RAII and 66–68
+
 `logic_error` class 113
+
 logically const member functions 22–23
 
-### M
+## M
+
 mailing list for Scott Meyers xvi
+
 maintenance
+
 common base classes and 164
+
 `delete` and 62
+
 managing resources, see resource management
+
 Manis, Vincent xix
+
 Marin, Alex xix
+
 math and numerics utilities, in Boost 271
+
 mathematical functions, in TR1 267
+
 mathematics, inheritance and 155
+
 matrix operations, optimizing 237
+
 Matthews, Leon xix
+
 `max`, `std`, implementation of 135
+
 Meadowbrooke, Chrysta xix
+
 meaning
+
 of classes without 180
+
 of composition 184–186
+
 of non-virtual functions 168
+
 of pass-by-value 7
+
 of private inheritance 187
+
 of public inheritance 150
+
 of pure virtual functions 162
+
 of references 91
+
 of simple virtual functions 163
+
 of encapsulation 99
+
 measuring Meehan, Jim xix
+
 member data 218–222
+
 member function templates 21–22
+
 member initialization 14
+
 member const 22–23
+
 member lists 28–29
+
 vs. assignment 28–29
+
 `const` 19–25
+
 encapsulation and 99
+
 disallowing 34–37, 221
+
 duplication and 25
+
 error handling for 240–246
+
 memory allocation 254–255
+
 memory leaks, `new` expressions and 256
+
 memory functions, replacing 247–252
+
 multithreading and 239, 253
+
 utilities, in Boost 272
+
 metaprogramming, see template metaprogramming
+
 Meyers, Scott
+
 mailing list for xvi
+
 web site for xvi
+
 `mf`, as identifier 9
+
 Michaels, Laura xviii
+
 Mickelsen, Denise xx
+
 minimizing compilation dependencies 140–148, 190
+
 Mittal, Nishant xix
+
 mixed-mode arithmetic 103, 104, 222–226
+
 mixin-style inheritance 244
+
 modeling is-implemented-in-terms-of 184–186
-
-
-
 
 修改函数返回值 21
 
@@ -8747,7 +9342,7 @@ MPL 库，在 Boost 中 270, 271
 
 互斥锁，RAII 以及 66–68
 
-### N
+## N
 
 Nagler, Eric xix
 
@@ -8861,7 +9456,7 @@ new 风格转换 117
 
 NVI 170–171, 183
 
-### O
+## O
 
 面向对象的 C++，作为 C++ 的子语言 12
 
@@ -8968,9 +9563,6 @@ Oldham, Jeffrey D. xix
 见 `new`
 
 数组和 254–255
-
-
-
 
 `std::swap` 108
 
@@ -9096,7 +9688,7 @@ protected
 
 含义 162
 
-### R
+## R
 
 Rabbani, Danny xix
 
@@ -9222,7 +9814,7 @@ Roze, Mike xix
 
 多态 200
 
-### S
+## S
 
 Saks, Dan xviii
 
@@ -9308,10 +9900,6 @@ Smallberg, David xviii, xix
 
 Smalltalk 142
 
-
-
-
-
 # 智能指针 63, 64, 70, 81, 121, 146, 237
 
 参见 `std::auto_ptr` 和 `tr1::shared_ptr`
@@ -9396,6 +9984,8 @@ Stasko, John xviii
 
 转换为 `tr1::shared_ptr` 和 220
 
+
+
 `delete [ ]` 和 65
 
 通过 `const` 传递和 220
@@ -9404,7 +9994,7 @@ Stasko, John xviii
 
 `std::char_traits` 232
 
-`std::iterator_trait`s，指针和 230
+`std::iterator_traits`，指针和 230
 
 `std::list` 186
 
@@ -9537,10 +10127,6 @@ TR1 中的支持 267
 测试和正确性 271
 
 Boost 中的字符串和文本 271
-
-
-
-
 
 # 220–221 中的成员模板构造函数
 
@@ -9795,4 +10381,3 @@ XYZ 航空公司 163
 Zabluda, Oleg xviii
 
 Zolman, Leor xviii, xix
-

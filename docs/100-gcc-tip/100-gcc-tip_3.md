@@ -1,8 +1,9 @@
+
 # 汇编
 
-# 把选项传给汇编器
+## 把选项传给汇编器
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -19,7 +20,7 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 使用`-Wa,option`可以将选项`option`传递给汇编器。
 
@@ -59,19 +60,19 @@ Disassembly of section .text:
   42:   c3                      retq 
 ```
 
-这里的`-L`是汇编器 as 的选项，用于在目标文件中保留局部符号（local symbol）。可以看到，反汇编代码中给出了每个局部符号。
+这里的`-L`是汇编器`as`的选项，用于在目标文件中保留局部符号（local symbol）。可以看到，反汇编代码中给出了每个局部符号。
 
 如果此时你使用`oprofile`来统计性能事件，那么获得的结果将不是以函数为单位了，而是以这些符号所划分的代码块为单位。
 
-详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Assembler-Options.html#Assembler-Options)和[as 手册](https://sourceware.org/binutils/docs-2.24/as/L.html#L)
+详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Assembler-Options.html#Assembler-Options)和[as 手册](https://sourceware.org/binutils/docs-2.24/as/L.html#L)。
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`
 
-# 生成有详细信息的汇编文件
+## 生成有详细信息的汇编文件
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -88,7 +89,7 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 使用`-fverbose-asm`选项就可以生成带有详细信息的汇编文件：
 
@@ -166,10 +167,10 @@ main:
     .section    .note.GNU-stack,"",@progbits 
 ```
 
-可以看到，在汇编文件中给出了 gcc 所使用的具体选项，以及汇编指令操作数所对应的源程序（或中间代码）中的变量。
+可以看到，在汇编文件中给出了`gcc`所使用的具体选项，以及汇编指令操作数所对应的源程序（或中间代码）中的变量。
 
-详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html#index-fverbose-asm-2614)
+详情参见[gcc 手册](https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html#index-fverbose-asm-2614)。
 
-## 贡献者
+### 贡献者
 
-xmj
+`xmj`

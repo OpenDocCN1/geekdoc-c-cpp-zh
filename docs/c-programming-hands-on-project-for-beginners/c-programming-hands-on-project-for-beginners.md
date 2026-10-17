@@ -1,50 +1,43 @@
+
 # C# 编程：初学者实用项目指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 概述
-## Staff 类
+
+## `Staff` 类
+
 - 字段
 - 属性
 - 构造函数
 - 方法
 
-## Manager 继承 Staff 类
+## `Manager` 继承 `Staff` 类
+
 - 字段
 - 属性
 - 构造函数
 - 方法
 
-## Admin 继承 Staff 类
+## `Admin` 继承 `Staff` 类
+
 - 字段
 - 属性
 - 构造函数
 - 方法
 
-## FileReader 类
-## PaySlip 类
+## `FileReader` 类
+
+## `PaySlip` 类
+
 - 字段
-- Enum
+- `Enum`
 - 构造函数
 - 方法
 
-## Program 类
-- Main() 方法
+## `Program` 类
+
+- `Main()` 方法
 
 感谢阅读
-
 
 # 第 1 章：C# 简介
 
@@ -58,36 +51,37 @@
 
 ## 什么是 C#？
 
-C#（读作 C Sharp）是微软公司在 Anders Heisenberg 的领导下于 21 世纪初开发的一种面向对象的编程语言。它是 .Net 框架的一部分，旨在成为一种简单的通用编程语言，用于开发不同类型的应用程序，包括控制台、Windows、Web 和移动应用程序。
+C#（读作 C Sharp）是微软公司在 Anders Heisenberg 的领导下于 21 世纪初开发的一种面向对象的编程语言。它是 `.Net` 框架的一部分，旨在成为一种简单的通用编程语言，用于开发不同类型的应用程序，包括控制台、Windows、Web 和移动应用程序。
 
-与所有现代编程语言一样，C# 代码类似于英语，但计算机无法理解这种语言。因此，C# 代码必须通过所谓的“编译器”（参见脚注）转换为机器语言。我们在书书中将使用的编译器是微软提供的免费版 Visual Studio Community 2017。
+与所有现代编程语言一样，C# 代码类似于英语，但计算机无法理解这种语言。因此，C# 代码必须通过所谓的“编译器”（参见脚注）转换为机器语言。我们在书书中将使用的编译器是微软提供的免费版 `Visual Studio Community 2017`。
 
 ## 为什么要学习 C#？
 
-C# 的语法和特征与 Java、C++ 等其他编程语言相似。因此，如果你有任何编程经验，你会发现学习 C# 是一如举反的。即使你对编程完全一陌生，C# 的设计也非常易于学习（不像 C 或 C++），是一门非常棒的入门语言。
+C# 的语法和特征与 `Java`、`C++` 等其他编程语言相似。因此，如果你有任何编程经验，你会发现学习 C# 是一如举反的。即使你对编程完全一陌生，C# 的设计也非常易于学习（不像 C 或 C++），是一门非常棒的入门语言。
 
-此外，C# 是 .Net 框架的一部分。该框架包含了大量的预写代码库，程序员可以使用它们，而无需从头开始编写一切。这允许程序员在 C# 中快速开发应用程序，如果你时间紧迫，C# 是你进行工作的的理想语言。
+此外，C# 是 `.Net` 框架的一部分。该框架包含了大量的预写代码库，程序员可以使用它们，而无需从头开始编写一切。这允许程序员在 C# 中快速开发应用程序，如果你时间紧迫，C# 是你进行工作的的理想语言。
 
 最后，C# 是一种面向对象编程（OOP）语言。面向对象编程是一种编程方法，它将编程问题分解为相互作用的各个。我们将在书中介绍各种面向对象的编程概念。一旦你掌握了 C#，就会熟悉这些概念。这将使你未来更容易掌握其他面向对象的编程语言。
 
 准备好涉足 C# 编程的世界了吗？让我们开始吧。
 
 脚注：
-将 C# 程序转换为机器语言实际上比这要稍微复杂一点。Visual Studio Community 仅将 C# 程序转换为 IL，代表微软中间语言（Microsoft Intermediate Language）。然后，IL 代码由一个称为通用语言运行时（Common Language Runtime）的虚拟执行系统转换为机器语言。欲了解更多信息，可以访问 https://msdn.microsoft.com/。
+
+将 C# 程序转换为机器语言实际上比这要稍微复杂一点。`Visual Studio Community` 仅将 C# 程序转换为 `IL`，代表微软中间语言（Microsoft Intermediate Language）。然后，IL 代码由一个称为通用语言运行时（Common Language Runtime）的虚拟执行系统转换为机器语言。欲了解更多信息，可以访问 `https://msdn.microsoft.com/`。
 
 # 第 2 章：为 C# 准备
 
 ## 安装 Visual Studio Community
 
-在我们开始开发 C# 之前，需要下载 Visual Studio Community。事实上，VSC 不仅仅是一个编译器。它是一个集成开发环境（IDE），包含一个供我们编写代码的文本编辑器和一个帮助识别错误的调试器。要下载 VSC，请访问 https://www.microsoft.com/vs/community/。
+在我们开始开发 C# 之前，需要下载 `Visual Studio Community`。事实上，`VSC` 不仅仅是一个编译器。它是一个集成开发环境（IDE），包含一个供我们编写代码的文本编辑器和一个帮助识别错误的调试器。要下载 `VSC`，请访问 `https://www.microsoft.com/vs/community/`。
 
 ## 你的第一个程序
 
-为了编写第一个程序，让我们在桌面上创建一个文件夹并命名为“C# Projects”。我们将所有的 C# 项目都存在这个文件夹中。接下来，启动 VSC 并选择文件 > 新建 > 项目。我们要写的第一个程序是控制台应用程序。控制台应用程序指的是没有图形界面的程序。
+为了编写第一个程序，让我们在桌面上创建一个文件夹并命名为“C# Projects”。我们将所有的 C# 项目都存在这个文件夹中。接下来，启动 `VSC` 并选择文件 > 新建 > 项目。我们要写的第一个程序是控制台应用程序。控制台应用程序指的是没有图形界面的程序。
 
 在新建项目对话框中，在左侧选择 C#，然后在主框中选择“控制应用 (. Framework)”。将此程序命名为“HelloWorld”，并保存到之前创建的“C# Projects”文件夹中。最后，点击确定创建项目。
 
-你将看到 VSC为你生成的默认模板。将模板中的代码替换为下面的代码。注意，行号是为了参考，不是代码的一部分。在我们讨论该程序时，你可能想标记此页面以便参考。
+你将看到 `VSC` 为你生成的默认模板。将模板中的代码替换为下面的代码。注意，行号是为了参考，不是代码的一部分。在我们讨论该程序时，你可能想标记此页面以便参考。
 
 ```
 1 using System;
@@ -109,25 +103,21 @@ C# 的语法和特征与 Java、C++ 等其他编程语言相似。因此，如�
 17         }\}
 ```
 
-我强烈建议你亲自输入代码，以更好地感受 VSC 的工作方式。当你输入代码时，你会注意到光标附近偶尔会出现一个带有帮助消息的框。这被称为 IntelliSense（智能感知）。例如，当你在 "Console" 单词后输入点（.）时，会出现一个下拉列表，让你知道点号之后可以输入什么。这是 VSC 为程序员使编码更便利的功能之一。
+我强烈建议你亲自输入代码，以更好地感受 `VSC` 的工作方式。当你输入代码时，你会注意到光标附近偶尔会出现一个带有帮助消息的框。这被称为 `IntelliSense`（智能感知）。例如，当你在 "`Console`" 单词后输入点（`.`）时，会出现一个下拉列表，让你知道点号之后可以输入什么。这是 `VSC` 为程序员使编码更便利的功能之一。
 
 输入完成后，你可以通过点击顶部菜单上的“启动”按钮来运行此程序（见下图）。
 
-
-
-
-
 ![](img/18ed79923778cc093d6803b7cb878cbe_10_0.png)
 
-如果你的程序运行失败，VSC 将在“输出窗口（Output Window）”中告知你错误。双击错误会将光标移动到错误所在的位置。请对照上面的代码检查你的代码以纠正错误并重新运行程序。
+如果你的程序运行失败，`VSC` 将在“输出窗口（Output Window）”中告知你错误。双击错误会将光标移动到错误所在的位置。请对照上面的代码检查你的代码以纠正错误并重新运行程序。
 
 如果一切顺利且你的程序运行成功，将出现一个黑色窗口，上面有白色的“Hello World”字样。这个黑色窗口被称为控制台。按回车键进入窗口。
 
 好了！你已经成功编写了第一个程序。拍拍肩膀鼓励自己吧。
 
-如果你现在导航到你的“C# Projects”文件夹，你会发现一个名为“HelloWorld”的文件夹。在文件夹内部，你会找到另一个“HelloWorld”的文件夹和一个“HelloWorld.sln”文件。这个 .sln 文件是解决方案文件。每当你需要重新打开项目时，都要打开这个文件。如果打开解决方案文件时文本编辑器没有显示你的代码，只需双击右侧“解决方案资源管理器（Solution Explorer）”（参考上图）中的“Program.cs”文件即可打开。
+如果你现在导航到你的“C# Projects”文件夹，你会发现一个名为“HelloWorld”的文件夹。在文件夹内部，你会找到另一个“HelloWorld”的文件夹和一个“HelloWorld.sln”文件。这个 `.sln` 文件是解决方案文件。每当你需要重新打开项目时，都要打开这个文件。如果打开解决方案文件时文本编辑器没有显示你的代码，只需双击右侧“解决方案资源管理器（Solution Explorer）”（参考上图）中的“Program.cs”文件即可打开。
 
-你代码的可执行文件 (.exe) 可以在 HelloWorld > HelloWorld > bin > Debug文件夹中找到。
+你代码的可执行文件 (`.exe`) 可以在 `HelloWorld > HelloWorld > bin > Debug` 文件夹中找到。
 
 ## C# 程序的基本结构
 
@@ -143,17 +133,17 @@ C# 的语法和特征与 Java、C++ 等其他编程语言相似。因此，如�
 using System;
 ```
 
-告诉编译器我们的程序使用了 System 命名空间。
+告诉编译器我们的程序使用了 `System` 命名空间。
 
 ## 命名空间
 
 命名空间（namespace）简单来说相关代码元素的分组。这些元素包括类、接口、枚举和结构体等（我们将在后续章节中介绍这些元素）。
 
-C# 带有大量的预写代码，这些代码组织在不同的命名空间中。System 命名空间包含了允许我们与用户交互的方法代码。我们在程序中使用了其中两个方法——`WriteLine()` 和 `Read()` 方法。其他的命名空间在程序中不需要。但是，由于这些命名空间包含在默认模板中，我们将它们留在代码中。
+C# 带有大量的预写代码，这些代码组织在不同的命名空间中。`System` 命名空间包含了允许我们与用户交互的方法代码。我们在程序中使用了其中两个方法——`WriteLine()` 和 `Read()` 方法。其他的命名空间在程序中不需要。但是，由于这些命名空间包含在默认模板中，我们将它们留在代码中。
 
 除了 Microsoft 提供的预写命名空间外，我们也可以声明自己的命名空间。
 
-声明命名空间的一个优点是它可以防止命名冲突。只要两个或多个代码元素属于不同的命名空间，它们就可以同名。例如，下面的代码定义了两个命名空间，它们都包含一个名为 MyClass 的类。这在 C# 中是允许的，因为这两个类属于不同的命名空间（First 和 Second）。
+声明命名空间的一个优点是它可以防止命名冲突。只要两个或多个代码元素属于不同的命名空间，它们就可以同名。例如，下面的代码定义了两个命名空间，它们都包含一个名为 `MyClass` 的类。这在 C# 中是允许的，因为这两个类属于不同的命名空间（`First` 和 `Second`）。
 
 ```csharp
 namespace First
@@ -170,21 +160,21 @@ namespace Second
 }
 ```
 
-在我们的示例中，我们声明了一个命名空间——HelloWorld。
+在我们的示例中，我们声明了一个命名空间——`HelloWorld`。
 
-HelloWorld 命名空间从第 7 行开始，第 8 行有一个左大括号。它在第 20 行以右大括号结束。大括号在 C# 中广泛用于代码元素的开始和结束。C# 中所有的左括号都必须用相应的右括号关闭。
+`HelloWorld` 命名空间从第 7 行开始，第 8 行有一个左大括号。它在第 20 行以右大括号结束。大括号在 C# 中广泛用于代码元素的开始和结束。C# 中所有的左括号都必须用相应的右括号关闭。
 
-在 HelloWorld 命名空间内，我们有 Program 类，它从第 12 行开始，到第 19 行结束。在 Program 类中，我们有 Main() 方法，它从第 14 行开始，到第 18 行结束。
+在 `HelloWorld` 命名空间内，我们有 `Program` 类，它从第 12 行开始，到第 19 行结束。在 `Program` 类中，我们有 `Main()` 方法，它从第 14 行开始，到第 18 行结束。
 
-## Main() 方法
+## `Main()` 方法
 
-Main() 方法是所有 C# 控制台程序的入口点。每当启动控制台程序时，Main() 方法都是第一个被调用的方法。
+`Main()` 方法是所有 C# 控制台程序的入口点。每当启动控制台程序时，`Main()` 方法都是第一个被调用的方法。
 
-在本书中，当你被要求尝试某个代码段时，你应该创建一个新的“控制台应用程序（Console Application）”，并将给定的代码段输入到 Main() 方法（大括号之间）。你可以运行程序来测试代码。
+在本书中，当你被要求尝试某个代码段时，你应该创建一个新的“控制台应用程序（Console Application）”，并将给定的代码段输入到 `Main()` 方法（大括号之间）。你可以运行程序来测试代码。
 
-注意我们 Main() 方法括号内的 "string[] args" 单词吗？这意味着 Main() 方法可以接受一个字符串数组作为输入。暂时不要担心这个问题。我们将在后续章节中介绍这些主题。
+注意我们 `Main()` 方法括号内的 "`string[] args`" 单词吗？这意味着 `Main()` 方法可以接受一个字符串数组作为输入。暂时不要担心这个问题。我们将在后续章节中介绍这些主题。
 
-在我们的示例中，Main() 方法包含两行代码。第一行
+在我们的示例中，`Main()` 方法包含两行代码。第一行
 
 ```csharp
 Console.WriteLine("Hello World");
@@ -198,7 +188,7 @@ Console.WriteLine("Hello World");
 Console.Read();
 ```
 
-在关闭窗口之前等待用户按键。对于你在本本书书中编写的所有应用程序，你都必须将此行添加到 Main() 方法的末尾。
+在关闭窗口之前等待用户按键。对于你在本本书书中编写的所有应用程序，你都必须将此行添加到 `Main()` 方法的末尾。
 
 上述两个语句都以分号结尾。这在 C# 的大多数语句中都是常见的。在 `Console.Read()` 语句之后，我们用三个右大括号来关闭之前的左大括号。
 
@@ -206,9 +196,9 @@ Console.Read();
 
 ## 注释
 
-我们在这一章涵盖了一些内容。你现在应该对 C# 编程有了基本的理解，并且能够熟悉 VSC。在我们结束这一章之前，还有一件事要学习——注释。
+我们在这一章涵盖了一些内容。你现在应该对 C# 编程有了基本的理解，并且能够熟悉 `VSC`。在我们结束这一章之前，还有一件事要学习——注释。
 
-如果你回到“Hello World”示例并查看第 10 行，你会注意到这一行以两个斜杠（//）开头。
+如果你回到“Hello World”示例并查看第 10 行，你会注意到这一行以两个斜杠（`//`）开头。
 
 ```csharp
 //A Simple Program to display the words Hello World
@@ -216,7 +206,7 @@ Console.Read();
 
 这一行实际上并不是程序的一部分。它是我们写的注释，为了让代码对其他程序员更易读。编译器会忽略注释。
 
-要向我们的程序添加注释，我们在它前面输入两个斜杠（//）。
+要向我们的程序添加注释，我们在它前面输入两个斜杠（`//`）。
 
 或者，我们可以使用这样的多行注释：
 
@@ -228,7 +218,7 @@ This is a multi-line comment
 
 # 第 3 章：变量与运算符的世界
 
-现在你已经熟悉了 VSC 并编写了第一个程序，让我们进入正题吧。在这一章中，你将学习变量和运算符。
+现在你已经熟悉了 `VSC` 并编写了第一个程序，让我们进入正题吧。在这一章中，你将学习变量和运算符。
 
 ## 什么是变量？
 
@@ -244,55 +234,51 @@ int age = 25;
 
 C# 中常用的数据类型有：
 
-### int
+### `int`
 
-int 代表整数（integer，即没有小数部分的数字），保存从 -2,147,483,648 到 2,147,483,647 的数字。
+`int` 代表整数（integer，即没有小数部分的数字），保存从 -2,147,483,648 到 2,147,483,647 的数字。
 
-### byte
+### `byte`
 
-byte 也指整数，但范围较窄，范围从 0 到 255。
+`byte` 也指整数，但范围较窄，范围从 0 到 255。
 
-大多数时候，我们使用 int 而不是 byte 来处理整数。但是，如果你为内存空间有限的机器进行编程，并且确定值不会超出范围，就应该使用 byte。例如，如果你需要存储用户的年龄，可以使用 byte 类型，因为用户的年龄不太可能超过 255 岁。
+大多数时候，我们使用 `int` 而不是 `byte` 来处理整数。但是，如果你为内存空间有限的机器进行编程，并且确定值不会超出范围，就应该使用 `byte`。例如，如果你需要存储用户的年龄，可以使用 `byte` 类型，因为用户的年龄不太可能超过 255 岁。
 
-### float
+### `float`
 
-float 指浮点数，即带有小数的数字，例如 12.43、5.2 和 -9.12。
+`float` 指浮点数，即带有小数的数字，例如 12.43、5.2 和 -9.12。
 
-float 可以存储从 -3.4 x 10³⁸ 到 +3.4 x 10³⁸ 的数字。它占用 4 字节存储空间，精度约为 7 位数字。这意味着如果你使用 float 存储 1.23456789（10 位），该数字将被舍入为 1.234568（7 位）。
+`float` 可以存储从 -3.4 x 10³⁸ 到 +3.4 x 10³⁸ 的数字。它占用 4 字节存储空间，精度约为 7 位数字。这意味着如果你使用 `float` 存储 1.23456789（10 位），该数字将被舍入为 1.234568（7 位）。
 
-### double
+### `double`
 
-double 也是浮点数，但它可以存储范围更广的数字。它可以存储从 +/-5.0 x 10⁻³²⁴ 到 +/-1.7 x 10³⁰⁸ 的数字，精度为 15 到 16 位。
+`double` 也是浮点数，但它可以存储范围更广的数字。它可以存储从 +/-5.0 x 10⁻³²⁴ 到 +/-1.7 x 10³⁰⁸ 的数字，精度为 15 到 16 位。
 
-double 是 C# 中默认的浮点数据类型。也就是说，如果你写一个像 2.34 这样的数字，C# 默认将其视为 double。
+`double` 是 C# 中默认的浮点数据类型。也就是说，如果你写一个像 2.34 这样的数字，C# 默认将其视为 `double`。
 
-### decimal
+### `decimal`
 
-decimal 存储小数，但范围比 float 和 double 小。然而，它具有更高的精度，大约为 28-29 位数字。
+`decimal` 存储小数，但范围比 `float` 和 `double` 小。然而，它具有更高的精度，大约为 28-29 位数字。
 
-如果你的程序在存储非整数时需要高精度的，你应该使用 decimal 数据类型。一个例子是你正在编写财务应用程序，此时精度非常重要。
+如果你的程序在存储非整数时需要高精度的，你应该使用 `decimal` 数据类型。一个例子是你正在编写财务应用程序，此时精度非常重要。
 
-### char
+### `char`
 
-char 代表字符（character），用于存储单个 Unicode 字符，如 'A'、'%'、'@' 和 'p' 等。
+`char` 代表字符（character），用于存储单个 Unicode 字符，如 'A'、'%'、'@' 和 'p' 等。
 
+### `bool`
 
-
-
-
-### bool
-
-bool 代表 boolean（布尔），只能包含两个值：true（真）和 false（假）。它通常用于控制流语句。我们将在第 6 章介绍控制流语句。
+`bool` 代表 boolean（布尔），只能包含两个值：`true`（真）和 `false`（假）。它通常用于控制流语句。我们将在第 6 章介绍控制流语句。
 
 ## 变量命名
 
-C# 中的变量名只能包含字母、数字或下划线 (_)。但是，第一个字符不能是数字。因此，你可以将变量命名为 `userName`、`user_name` 或 `username2`，而不是 `2userName`。
+C# 中的变量名只能包含字母、数字或下划线 (`_`)。但是，第一个字符不能是数字。因此，你可以将变量命名为 `userName`、`user_name` 或 `username2`，而不是 `2userName`。
 
 此外，还有一些保留字是不能用作变量名的，因为它们在 C# 中已经有了预定义的含义。这些保留字包括 `Console`、`if`、`while` 等。我们将在随后的章节中学习每一个。
 
 最后，变量名是区分大小大小的。`username` 和 `UserName` 是不同的。
 
-在 C# 中命名变量有两种惯例。我们可以使用驼峰命名法（camel case）或使用下划线。驼峰命名法是用混合大小写编写复合词，除了第一个单词外，每个单词的首字母都大写（例如 `this&VariableName`）。这是我们在书中其余部分使用的约定。或者，另一种常见做法是使用下划线 (_) 来分隔单词。如果你喜欢，可以这样命名变量：`this_is_a_variable_name`。
+在 C# 中命名变量有两种惯例。我们可以使用驼峰命名法（camel case）或使用下划线。驼峰命名法是用混合大小写编写复合词，除了第一个单词外，每个单词的首字母都大写（例如 `this&VariableName`）。这是我们在书中其余部分使用的约定。或者，另一种常见做法是使用下划线 (`_`) 来分隔单词。如果你喜欢，可以这样命名变量：`this_is_a_variable_name`。
 
 ## 初始化变量
 
@@ -396,6 +382,8 @@ x = 5; y = 10;
 x = y;
 ```
 
+
+
 你的数学老师可能会对你生气，因为 `x` 不等于 `y`。
 
 然而，在编程中，这是好的。这条语句意味着我们将 `y` 的值赋值给 `x`（将其想成 `x <-`）。将一个变量的值赋值给另一个变量是可以的。在我们的示例中，`x` 的值保持不变。换句话说，现在 `x = 10` 且 `y` 变成了 10。
@@ -594,9 +582,6 @@ x = 5; y = 10;
 - 乘法：`x * y`
 - 除法：`x / y`
 - 取模：`x % y`
-
-
-
 
 例如，从 `double` 转换为 `int`。这被称为类型转换（type casting）。
 
@@ -759,6 +744,7 @@ firstString.Equals("This is Jamie");
 ```
 
 返回 `true`，而
+
 ```
 firstString.Equals(secondString);
 ```
@@ -826,7 +812,9 @@ List<int> userList = new List<int>();
 ```
 
 `userList` 是列表的。
+
 `List` 是一个关键字，表示你正在声明一个列表。
+
 数据类型包含角括号 `< >` 中。
 
 你可以选择在声明时初始化列表，如下
@@ -916,6 +904,8 @@ string message = "Hello";
 
 变量 `message` 并没有存储 "Hello"。
 
+
+
 相反，“Hello”在计算机内存的其他地方创建并存储。变量 `message` 存储该内存位置的地址。
 
 这就是我们目前对引用类型的所有了解。由于这是一本书，我们将详细介绍为什么我们需要引用类型。只需注意值类型和引用类型之间存在区别；前者存储值，而后者存储地址。
@@ -938,6 +928,7 @@ Console.WriteLine("How are you?");
 我们将得到
 
 Hello
+
 How are you?
 
 如果我们编写
@@ -955,25 +946,27 @@ Hello How are you?
 
 如果你觉得每次使用这两个方法时添加 `Console` 单词很麻烦，你可以添加指令
 
-
-
 ```c
 using static System.Console;
 ```
 
 添加到你程序的开头。如果你这样做，你就可以直接写成
-WriteLine("Hello World");
-而不是
-Console.WriteLine("Hello World");
 
-每当你使用 Console 类中的任何静态方法时，都可以这样做。这是 C# 6 的新功能（C# 的最新版本），并且只有在你使用最新的 IDE（即 Visual Studio 2017）时才可用。在接后的示例中，为了向后兼容，我们将坚持使用第一种方法。
+`WriteLine("Hello World");`
+
+而不是
+
+`Console.WriteLine("Hello World");`
+
+每当你使用 `Console` 类中的任何静态方法时，都可以这样做。这是 C# 6 的新功能（C# 的最新版本），并且只有在你使用最新的 IDE（即 Visual Studio 2017）时才可用。在接后的示例中，为了向后兼容，我们将坚持使用第一种方法。
 
 在第 2 章编写“Hello World”程序时，我们已经看到过如何使用 `write()` 方法的示例。现在让我们来看更多的示例。在下面的示例中，我们将重点关注 `WriteLine()` 方法。`write()` 方法的工作方式完全相同。
 
 ## 示例 1
 
 要显示一个简单的字符串，我们编写
-Console.WriteLine("Hello, how are you?");
+
+`Console.WriteLine("Hello, how are you?");`
 
 输出
 
@@ -982,15 +975,18 @@ Hello, how are you?
 ## 示例 2
 
 要显示变量的值，我们将变量名作为参数传递。例如，假设我们有
-int age = 30;
+
+`int age = 30;`
 
 我们通过编写
-Console.WriteLine(age);
-来显示 age 的值。
+
+`Console.WriteLine(age);`
+
+来显示 `age` 的值。
 
 输出
 
-注意，我们没有将变量名（userAge）括在双引号中。如果我们写
+注意，我们没有将变量名（`userAge`）括在双引号中。如果我们写
 
 ```c
 Console.WriteLine("userAge");
@@ -1004,7 +1000,7 @@ userAge
 
 ## 示例 3
 
-要组合两个或多个字符串并显示它们，我们使用上一章提到的连接符号 (+)。
+要组合两个或多个字符串并显示它们，我们使用上一章提到的连接符号 (`+`)。
 
 例如，如果我们写
 
@@ -1061,14 +1057,16 @@ Good morning! You scored 79 marks for your test.
 这三个参数是：
 
 - 1) "{0}! You scored {1} marks for your test."
+
 - 2) "Good morning"
-- 3) results
+
+- 3) `results`
 
 第一个将要显示的字符串。在字符串内部，大括号充当占位符，并将被随后的参数替换。
 
-{0} 是下一个参数的占位符，在这种情况下，该参数是字符串 "Good morning"。
+`{0}` 是下一个参数的占位符，在这种情况下，该参数是字符串 "Good morning"。
 
-{1} 是变量 `results` 的占位符。
+`{1}` 是变量 `results` 的占位符。
 
 因此，输出是
 
@@ -1100,7 +1098,7 @@ Console.WriteLine("The number is {0:F3}", 123.45678);
 
 The number is 123.457.
 
-F3 标识符将数字 123.45678 四舍五入为 123.457。注意，指定符之前不应该有任何空格。句话句话，必须是 {0:F3} 而不是 {0:F3}。
+F3 标识符将数字 123.45678 四舍五入为 123.457。注意，指定符之前不应该有任何空格。句话句话，必须是 `{0:F3}` 而不是 `{0:F3}`。
 
 C 指定符用于格式化货币；它在数字前添加 "$" 符号，并带有2位小数显示数字。此外，它用逗号分隔每隔千位。
 
@@ -1163,14 +1161,16 @@ Console.WriteLine("Hello\nWorld");
 输出
 
 Hello
+
 World
 
 将显示。
 
 其他常见用途包括：
 
-- \t (制表符)
-- \n (换行符)
+- `\t` (制表符)
+
+- `\n` (换行符)
 
 ## 接收用户输入
 
@@ -1202,9 +1202,9 @@ string userInput = Console.ReadLine();
 int newUserInput = Convert.ToInt32(userInput);
 ```
 
-将字符串转换为整数 20 并赋值给 int 变量。我们现在可以对这个 int 变量进行通常的数学运算。
+将字符串转换为整数 20 并赋值给 `int` 变量。我们现在可以对这个 `int` 变量进行通常的数学运算。
 
-除了将字符串转换为整数外，我们还可以使用 `ToDecimal()`、`ToSingle()` 和 `ToDouble()` 方法将字符串转换为 decimal、float 或 double。
+除了将字符串转换为整数外，我们还可以使用 `ToDecimal()`、`ToSingle()` 和 `ToDouble()` 方法将字符串转换为 `decimal`、`float` 或 `double`。
 
 ## 汇总
 
@@ -1226,7 +1226,9 @@ WriteLine("Hello World! My name is " + name + " and I am " + age + " years old. 
 运行程序并输入以下信息
 
 Please enter your name: Jamie
+
 Please enter your age: 39
+
 Please enter the current year: 2015
 
 程序应该带给你以下输出
@@ -1234,10 +1236,6 @@ Please enter the current year: 2015
 Hello World! My name is Jamie and I am 39 years old. I was born in 1976.
 
 这个程序应该非常容易理解。但是，关于程序有两点需要说明。
-
-
-
-
 
 首先，第 10 行展示了如何在同一个语句中使用两种方法的示例。当我们写下：
 
@@ -1256,8 +1254,6 @@ Convert.ToInt32(Console.ReadLine())
 ```
 
 变为
-
-
 
 ```
 Convert.ToInt32("39")
@@ -1296,6 +1292,7 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果左侧不等于右侧，则返回 `true`
 
 - `5 != 2` 是 `true`
+
 - `6 != 6` 是 `false`
 
 ## 大于 (>)
@@ -1303,6 +1300,7 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果左侧大于右侧，则返回 `true`
 
 - `5 > 2` 是 `true`
+
 - `3 > 6` 是 `false`
 
 ## 小于 (<)
@@ -1310,6 +1308,7 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果左侧小于右侧，则返回 `true`
 
 - `1 < 7` 是 `true`
+
 - `9 < 6` 是 `false`
 
 ## 大于或等于 (>=)
@@ -1317,7 +1316,9 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果左侧大于或等于右侧，则返回 `true`
 
 - `5 >= 2` 是 `true`
+
 - `5 >= 5` 是 `true`
+
 - `3 >= 6` 是 `false`
 
 ## 小于或等于 (<=)
@@ -1325,7 +1326,9 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果左侧小于或等于右侧，则返回 `true`
 
 - `11 <= 7` 是 `true`
+
 - `7 <= 7` 是 `true`
+
 - `9 <= 6` 是 `false`
 
 我们还有三个逻辑运算符（`&&`、`||`、`!`），当我们要组合多个条件时，它们非常有用。
@@ -1344,6 +1347,7 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果至少满足一个条件，则返回 `true`。
 
 - `5==5 || 2<1 || 3==7` 是 `true`，因为第一个条件 `(5==5)` 是 `true`
+
 - `5==6 || 2<1 || 3==7` 是 `false`，因为所有条件都是 `false`
 
 ## 控制流语句
@@ -1380,6 +1384,8 @@ Console.WriteLine("Hello World! My name is {0} and I am {1} years old. I was bor
 如果未满足第二个条件，程序将检查第三个条件。如果满足第三个条件，第 11 行到 12 行的代码将被执行。`if` 语句的其余部分（从第 13 行到 16 行）将被跳过。
 
 如果没有任何条件满足，将执行 `else` 块，并执行第 14 行到 16 行的代码。
+
+
 
 为了完全理解 `if` 语句的工作原理，请向你的程序中添加以下代码：
 
@@ -1445,7 +1451,6 @@ switch (variable used for switching)
 }
 ```
 
-
 ```cs
 switch (userGrade)
 {
@@ -1475,24 +1480,30 @@ switch (userGrade)
 如果你运行上面的代码，将为图中显示的每个输入获得以下输出：
 
 Enter your grade: A+
+
 Distinction
 
 Enter your grade: A
+
 Distinction
 
 Enter your grade: B
+
 B Grade
 
 Enter your grade: C
+
 C Grade
 
 Enter your grade: D
+
 Fail
 
 Enter your grade: Hello
+
 Fail
 
-## for 循环 (For Loop)
+## for 循环
 
 `for` 循环反复执行代码块，直到测试条件不再有效。
 
@@ -1521,11 +1532,11 @@ for (int i = 0; i < 5; i++)
 
 它包含三个部分，每部分之间用分号隔。
 
-第二部分测试 i 是否小于 5。如果是，将执行大括号内的语句。在这个例子中，由于只有一个语句，所以大括号是可选的。
+第二部分测试 `i` 是否小于 5。如果是，将执行大括号内的语句。在这个例子中，由于只有一个语句，所以大括号是可选的。
 
-在执行 `WriteLine(i)` 语句后，程序返回到第 1 行的最后一个部分。`i++` 将 i 的值加 1。因此，i 从 0 增加到 1。
+在执行 `WriteLine(i)` 语句后，程序返回到第 1 行的最后一个部分。`i++` 将 `i` 的值加 1。因此，`i` 从 0 增加到 1。
 
-增加后，程序测试 i 的新值是否仍然小于 5。如果是，它将再次执行 `WriteLine(i)` 语句。
+增加后，程序测试 `i` 的新值是否仍然小于 5。如果是，它将再次执行 `WriteLine(i)` 语句。
 
 这种测试和增加循环计数器的过程将重复，直到条件 `i < 5` 不再为真。此时，程序退出 `for` 循环，并继续执行 `for` 循环之后的其他命令。
 
@@ -1539,7 +1550,7 @@ for (int i = 0; i < 5; i++)
 4
 ```
 
-输出在 4 停止，是因为当 i 为 5 时，`WriteLine()` 语句不会执行，因为 5 并不小于 5。
+输出在 4 停止，是因为当 `i` 为 5 时，`WriteLine()` 语句不会执行，因为 5 并不小于 5。
 
 `for` 循环通常用于遍历数组或列表。例如，如果我们有
 
@@ -1564,7 +1575,7 @@ for (int i = 0; i < myNumbers.Length; i++)
 50
 ```
 
-## foreach 循环 (Foreach Loop)
+## foreach 循环
 
 除了 `for` 之外，在处理数组和列表时我们还可以使用 `foreach` 循环。如果你想在不修改数组或列表的情况下获取它们的信息，`foreach` 循环非常有用。
 
@@ -1581,9 +1592,7 @@ foreach (char i in message)
     Console.Write(i);
 ```
 
-
-
-当 i = 2 时，`continue` 关键字之后的代码将不会执行。除此之外，一切都按正常方式运行。
+当 `i = 2` 时，`continue` 关键字之后的代码将不会执行。除此之外，一切都按正常方式运行。
 
 # 异常处理
 
@@ -1631,6 +1640,7 @@ try {
 如果你运行代码并输入 12 和 4，你将得到消息：
 
 The result is 3.
+
 --- End of Error Handling Example ---
 
 在这个例子中，`try` 块中的代码执行成功。在执行完 `try` 块的代码后，执行 `finally` 块中的代码。
@@ -1638,6 +1648,7 @@ The result is 3.
 现在假设你输入 12 和 0。你会得到：
 
 Attempted to divide by zero.
+
 --- End of Error Handling Example ---
 
 在这种情况下，执行的是 `catch` 块中的代码。这是因为程序尝试执行 `try` 块中的语句，由于你不能将数字除以零，发生了错误。因此，执行了 `catch` 块中的语句。此外，`finally` 块中的代码也会执行。无论是否执行 `try` 或 `catch` 块，`finally` 块总是会被执行。
@@ -1664,19 +1675,28 @@ Console.WriteLine(e.Message);
 int choice = 0;
 int[] numbers = { 10, 11, 12, 13, 14, 15 };
 Console.Write("Please enter the index of the array: ");
-
 ```
 
 try {
+
     choice = Convert.ToInt32(Console.ReadLine());
+
     Console.WriteLine("numbers[{0}] = {1}", choice, numbers[choice]);
+
 } catch (IndexOutOfRangeException) {
+
     Console.WriteLine("Error: Index should be from 0 to 5.");
+
 } catch (FormatException) {
+
     Console.WriteLine("Error: You did not enter an integer.");
+
 } catch (Exception e) {
+
     Console.WriteLine(e.Message);
+
 }
+
 ```
 
 如果你输入
@@ -1698,10 +1718,7 @@ Input string was not in a correct format.
 
 `IndexOutOfRangeException` 异常发生在访问数组范围之外时，由第一个 `catch` 块处理。`FormatException` 异常发生在你没有输入整数时，由第二个 `catch` 块处理。`Exception` 异常捕获通用错误，由最后一个 `catch` 块处理。
 
-
-
-
-# 属性 (Properties)
+# 属性
 
 接下来，让我们来看属性。
 
@@ -1714,43 +1731,65 @@ Input string was not in a correct format.
 在 `Staff` 类中，`private int hworked;` 这一行之后添加以下代码：
 
 ```csharp
+
 public int Hworked
+
 {
+
     get
+
     {
+
         return hworked;
+
     }
+
     set
+
     {
+
         if (value > 0)
+
             hworked = value;
+
         else
+
             hworked = 0;
+
     }
+
 }
+
 ```
 
 我们将属性声明为：
 
 ```csharp
+
 public int Hworked
+
 {}
+
 ```
 
 访问修饰符为 `public`，因为我们希望其他类能够访问此属性。
 
-数据类型是 `int`，因为此属性用于访问私有 `int` 字段 `hworked`。`hworked` 被称为属性的备用字段 (backing field)。
+数据类型是 `int`，因为此属性用于访问私有 `int` 字段 `hworked`。`hworked` 被称为属性的备用字段。
 
-属性的名称为 `Hourworked`。我们通常对属性名使用大驼峰命名法 (PascalCasing)。
+属性的名称为 `Hourworked`。我们通常对属性名使用大驼峰命名法。
 
-属性包含两个特殊方法，称为访问器 (accessors)。第一个访问器是获取器 (getter)，第二个是设置器 (setter)。
+属性包含两个特殊方法，称为访问器。第一个访问器是获取器，第二个是设置器。
 
 基础的 getter 简单地返回私有字段的值。因此，我们写道：
 
 ```csharp
+
 {
+
   return hworked;
+
 }
+
 ```
 
 其中 `hworked` 是一个关键字，而另一个 `hworked` 是备用字段的名称。
@@ -1758,51 +1797,74 @@ public int Hworked
 setter 设置私有字段的值。我们写道：
 
 ```csharp
+
 {
+
   if (value > 0)
+
     hworked = value;
+
   else
+
     hworked = 0;
+
 }
+
 ```
 
 当用户使用属性设置私有字段的值时，`value` 在赋值语句内部被用作，是一个关键字。我们稍后会学习如何操作。
 
 在 setter 内部，我们使用 `if` 语句进行了一个简单的检查。我们检查 `value` 是否大于零。如果是，则将其分配给 `hworked`。否则，我们将 `hworked` 设置为零。这个 setter 演示了我们如何使用属性来控制可以分配给私有字段的数值。
 
-默认情况下，getter 和 setter 的访问级别与属性本身相同（在本例中为 `public`）。因此，我们不需要显式指定它们。然而，如果你不希望 setter 的访问级别与属性相同，可以将 setter 声明为 `private`，这样其他类就无法修改你的私有字段：
+默认情况下，getter 和 setter 的访问级别与属性本身相同。因此，我们不需要显式指定它们。然而，如果你不希望 setter 的访问级别与属性相同，可以将 setter 声明为 `private`，这样其他类就无法修改你的私有字段：
 
 ```csharp
+
 private set
+
 {
+
 ```
 
 那么，该属性在 `Staff` 类之外就是一个只读属性。它的值只能在 `Staff` 类内部被设置。
 
-## 自动实现属性 (Auto-implemented Properties)
+## 自动实现属性
 
 注意，在 getter 和 setter 不需要额外逻辑的情况下，C# 为我们提供了一种声明属性的简写方式。这被称为自动实现属性。
 
 要声明一个自动实现属性，我们写道：
 
 ```csharp
+
 public int Hourworked { get; set; }
 ```
 
 这等同于：
 
 ```csharp
+
 private int Hworked;
+
 public int Hourworked
+
 {
+
     get
+
     {
+
         return Hworked;
+
     }
+
     set
+
     {
+
         Hworked = value;
+
     }
+
 }
 ```
 
@@ -1811,10 +1873,11 @@ public int Hourworked
 如果你想让属性只读，可以这样将 setter 设置为 `private`：
 
 ```csharp
+
 public int Hourworked { get; private set; }
 ```
 
-## 方法 (Methods)
+## 方法
 
 接下来，让我们来看方法。
 
@@ -1823,18 +1886,25 @@ public int Hourworked { get; private set; }
 让我们为我们的 `Staff` 类添加一个简单的方法。
 
 ```csharp
+
 public void PrintMessage()
+
 {
+
     Console.WriteLine("Calculating Pay...");
+
 }
 ```
 
 该方法的声明为：
 
 ```csharp
+
 public void PrintMessage()
 {}
 ```
+
+
 
 方法声明首先说明了方法的访问级别。在这里，我们将方法声明为 `public`，以便该方法在程序的任何处都是可访问的（而不仅仅是在 `Staff` 类内部）。
 
@@ -1844,7 +1914,7 @@ public void PrintMessage()
 
 方法名后的括号 `()` 是我们包含方法参数的地方。参数是传递给方法以执行其任务的数据的命名数据。如果方法不需要数据（如示例所示），我们只需要在方法名后添加一对空括号即可。
 
-声明方法后，我们在随后的大括号内定义它的功能。这被称为实现方法 (implementing the method)。在我们的示例中，`PrintMessage()` 方法简单地打印行“Calculating Pay...”
+声明方法后，我们在随后的大括号内定义它的功能。这被称为实现方法 `implementing the method`。在我们的示例中，`PrintMessage()` 方法简单地打印行“Calculating Pay...”
 
 这就是 `PrintMessage()` 方法的全部内容。
 
@@ -1854,10 +1924,8 @@ public void PrintMessage()
 public int CalculatePay()
 {
     PrintMessage();
-
     int staffPay;
     staffPay = hworked * hourlyRate;
-
     if (hworked > 0)
         return staffPay;
     else
@@ -1895,7 +1963,7 @@ return 0;
 
 并退出方法。`pay` 的值将为 0。
 
-## 重载 (Overloading)
+## 重载 Overloading
 
 在 C#（以及大多数其他语言）中，只要签名不同，你就可以创建同名的方法。这被称为重载。方法的签名指的是方法的名称以及它拥有的参数。
 
@@ -1905,7 +1973,6 @@ return 0;
 public int CalculatePay(int bonus, int allowance)
 {
     PrintMessage();
-
     if (hworked > 0)
         return hworked * hourlyRate + bonus + allowance;
     else
@@ -1916,10 +1983,6 @@ public int CalculatePay(int bonus, int allowance)
 第一个方法的签名是 `CalculatePay()`，而第二个方法的签名是 `CalculatePay(int bonus, int allowance)`。
 
 第二个方法有两个参数——`bonus` 和 `allowance`。它通过将这两个参数的值加到 `hworked` 和 `hourlyRate` 的乘积上来计算员工的工资。
-
-
-
-
 
 ## ToString() 方法
 
@@ -2049,9 +2112,7 @@ Console.WriteLine("Pay = {0}", pay);
 staff1.CalculatePay(1000, 408);
 ```
 
-由于我们在括号内有数字 1000 和 400，我们正在使用第二个 `CalculatePay()` 方法。我们把值 1000 和 400 分别传递给参数 `bonus` 和 `allowance`。我们传递的值被称为参数（arguments）。程序随后使用这些值。
-
-（注：此处原文存在大量重复的句子，翻译已根据逻辑合并并保持了核心含义的连贯）
+由于我们在括号内有数字 1000 和 400，我们正在使用第二个 `CalculatePay()` 方法。我们把值 1000 和 400 分别传递给参数 `bonus` 和 `allowance`。我们传递的值被称为参数 `arguments`。程序随后使用这些值。
 
 ## Static 关键字
 
@@ -2081,9 +2142,9 @@ class MyClass
 }
 ```
 
-MyClass 包含一个非静态字段 `message`、一个非静态属性 `Name` 和一个非静态方法 `DisplayName()`（第 4-9 行）。
+`MyClass` 包含一个非静态字段 `message`、一个非静态属性 `Name` 和一个非静态方法 `DisplayName()`。
 
-它还包含一个静态字段 `greetings`、一个静态属性 `Age` 和一个静态方法 `DisplayAge()`（第 12-17 行）。
+它还包含一个静态字段 `greetings`、一个静态属性 `Age` 和一个静态方法 `DisplayAge()`。
 
 要从另一个类访问 `MyClass` 的静态成员，我们需要像以前一样实例化对象：
 
@@ -2121,11 +2182,7 @@ static class MyStaticClass
 }
 ```
 
-
-
-
-
-C# 中的一些预写类被声明明为静态类（static classes）。例如 `Console` 类。在使用 `Console` 类中的方法时，我们不需要创建 `Console` 对象。我们只需要编写 `Console.WriteLine("Hello World");` 即可。
+C# 中的一些预写类被声明明为静态类 `static classes`。例如 `Console` 类。在使用 `Console` 类中的方法时，我们不需要创建 `Console` 对象。我们只需要编写 `Console.WriteLine("Hello World");` 即可。
 
 ## 高级方法概念
 
@@ -2172,7 +2229,6 @@ PrintFirstElement(myList);
 public int[] ReturnUserInput()
 {
     int[] a = new int[3];
-
     for (int i = 0; i < a.length; i++) {
         Console.Write("Enter an integer: ");
         a[i] = Convert.ToInt32(Console.ReadLine());
@@ -2195,7 +2251,6 @@ public List<int> ReturnUserInputList()
 {
     List<int> a = new List<int>();
     int input;
-
     for (int i = 0; i < 3; i++) {
         Console.Write("Enter an integer: ");
         input = Convert.ToInt32(Console.ReadLine());
@@ -2205,6 +2260,8 @@ public List<int> ReturnUserInputList()
     return a;
 }
 ```
+
+
 
 要使用此方法，我们需要声明一个列表并将方法的结果赋值给它。
 
@@ -2233,14 +2290,14 @@ public void PrintNames(params string[] names)
 
 示例
 
-PrintNames("Peter");
-PrintNames("Yvonne", "Jamie");
-PrintNames("Abigail", "Betty", "Carol", "David");
+`PrintNames("Peter");`
+`PrintNames("Yvonne", "Jamie");`
+`PrintNames("Abigail", "Betty", "Carol", "David");`
 
 输出
 
-Yvonne Jamie
-Abigail Betty Carol
+`Yvonne Jamie`
+`Abigail Betty Carol`
 
 注意在 `params` 关键字后面不允许有额外的参数，且方法声明中只允许一个 `params` 关键字。因此，以下方法声明是正确的：
 
@@ -2274,16 +2331,12 @@ class MethodDemo
     {
         // 值类型的逻辑
     }
-
     public void MethodReference(int[] b)
     {
         // 引用类型的逻辑
     }
 }
 ```
-（注：关于 MethodDemo 类的 OCR 文本非常混乱，我根据提供的上下文重构了逻辑。）
-
-等等，让我严格处理提供的 OCR 文本：
 
 希望你现在很好地理解类是如何工作的。在这一章结束之前，我想回顾一下值类型和引用类型的概念。在第 4 章中，我们学习了 C# 中的两种大类数据类型：值类型和引用类型。在向方法传递值类型变量和引用类型变量之间存在差异。
 
@@ -2300,14 +2353,12 @@ class MethodDemo
     {
         a = 10;
     }
-
     public void MethodReference(int[] b)
     {
         b[0] = 10;
     }
 }
 ```
-（注：第 80-81 页的 OCR 文本存在重复错误。我根据描述总结了解释。）
 
 # 第 8 章：面向对象编程 2
 
@@ -2317,7 +2368,7 @@ class MethodDemo
 
 继承是面向对象编程的核心概念之一。简单来说，继承允许我们从现有类创建新类，以便有效地重用代码。
 
-## 编写父类
+### 编写父类
 
 假设我们为一家拥有两种会员类型（VIP 和普通）的健身房编写程序。为此，我们首先创建一个名为 `Member` 的类。
 
@@ -2330,7 +2381,7 @@ class Member {
 }
 ```
 
-Member 包含一个受保护字段和三个私有字段。受保护字段在声明它的类以及任何派自它的类中都是可的。我们很快就会讨论派生类。
+`Member` 包含一个受保护字段和三个私有字段。受保护字段在声明它的类以及任何派自它的类中都是可的。我们很快就会讨论派生类。
 
 接下来，我们写一个 `ToString()` 方法来显示四个字段的值。
 
@@ -2340,32 +2391,30 @@ public override string ToString() {
 }
 ```
 
-最后，为 Member 类添加两个构造函数：
+最后，为 `Member` 类添加两个构造函数：
 
 ```csharp
 public Member() {
     Console.WriteLine("无参数父类构造函数");
 }
-
 public Member(string pName, int memberID, int memberSince)
 {
     Console.WriteLine("带 3 个参数的父类构造函数");
-
     name = pName;
     memberID = memberID;
     memberSince = memberSince;
 }
 ```
 
-## 编写子类
+### 编写子类
 
-现在，让我们学习如何从 Member 类派生一个类。派生类被称为子类，而它们派自的类被称为父类或基类。
+现在，让我们学习如何从 `Member` 类派生一个类。派生类被称为子类，而它们派自的类被称为父类或基类。
 
 派生类继承类类所有的公共和受保护成员。换句话说，可以使用这些字段、属性和方法，就像它们是自己代码的一部分一样。
 
-我们的父类（Member）包含以下内容：
+我们的父类（`Member`）包含以下内容：
 
-### 字段
+#### 字段
 
 ```csharp
 protected int annualFee
@@ -2374,25 +2423,22 @@ private int memberID
 private int memberSince
 ```
 
-### 方法
+#### 方法
 
 ```csharp
 public override string ToString()
 ```
 
-### 构造函数
+#### 构造函数
 
 ```csharp
 public Member()
 public Member(string pName, int memberID, int memberSince)
 ```
 
-
-
-
 我们从 `Member` 类派生了两个类——`NormalMember` 和 `VIPMember`。
 
-首先，让我们声明子类 `NormalMember`。我们使用冒号 (:) 表示它派生自 `Member` 类，如下所示
+首先，让我们声明子类 `NormalMember`。我们使用冒号 `(:)` 表示它派生自 `Member` 类，如下所示
 
 ```csharp
 class NormalMember : Member
@@ -2413,8 +2459,8 @@ public NormalMember()
 
 当我们像上面那样声明构造函数时，C# 会父类中查找无参数构造函数（即没有参数的构造函数），并在执行子构造函数代码之前调用它。如果你使用此构造函数创建子对象，屏幕上将显示以下两行：
 
-Parent Constructor with no parameter
-Child constructor with no parameter
+`Parent Constructor with no parameter`
+`Child constructor with no parameter`
 
 第一行来自父类构造函数，第二行来自子类构造函数。
 
@@ -2427,7 +2473,7 @@ public NormalMember(string remarks) : base ("Jamie", 1, 2015)
 }
 ```
 
-当我们调用父类中的非无参数构造函数时，我们需要向其参数传递值。在上面的示例中，我们将值 "Jamie"、1 和 2015 传递给父类构造函数。这些值随后被分别赋值给基类中的 `name`、`memberID` 和 `membersSince` 字段。
+当我们调用父类中的非无参数构造函数时，我们需要向其参数传递值。在上面的示例中，我们将值 `"Jamie"`、1 和 2015 传递给父类构造函数。这些值随后被分别赋值给基类中的 `name`、`memberID` 和 `membersSince` 字段。
 
 在这个示例中，我们向基构造函数传递了固定值参数。然而，更好的方法是通过子构造函数传递参数。下面的示例显示了如何实现。将之前的构造函数替换为下面的构造函数：
 
@@ -2441,7 +2487,7 @@ public NormalMember(string name, string remarks, int memberID, int memberSince) 
 
 这个新构造函数有四个参数。第一个参数是一个名为 `remarks` 的字符串参数。该参数在子构造函数内部使用。
 
-第二个和第四个参数在子构造函数内部未使用。相反，它们根据名称作为参数传递给父类构造函数。例如，子构造函数中的第二个参数 (string name) 被作为父构造函数的第一个参数 (name)。
+第二个和第四个参数在子构造函数内部未使用。相反，它们根据名称作为参数传递给父类构造函数。例如，子构造函数中的第二个参数 (`string name`) 被作为父构造函数的第一个参数 (`name`)。
 
 当我们使用此构造函数创建对象时，我们编写如下代码：
 
@@ -2449,9 +2495,9 @@ public NormalMember(string name, string remarks, int memberID, int memberSince) 
 NormalMember myChildMember = new NormalMember("Special Rate", "James", 1, 2010);
 ```
 
-带有 3 个参数的基构造函数被首先调用并执行。值 "James"、1 和 2010 被分配给基构造函数。在底层，这些值被分别赋值给基类中的 `name`、`memberID` 和 `membersSince` 字段。
+带有 3 个参数的基构造函数被首先调用并执行。值 `"James"`、1 和 2010 被分配给基构造函数。在底层，这些值被分别赋值给基类中的 `name`、`memberID` 和 `membersSince` 字段。
 
-执行基构造函数后，将执行子构造函数。字符串 "Special Rate" 被赋值给 `remarks` 并显示在屏幕上。
+执行基构造函数后，将执行子构造函数。字符串 `"Special Rate"` 被赋值给 `remarks` 并显示在屏幕上。
 
 当你运行代码时，将得到以下输出
 
@@ -2470,21 +2516,21 @@ public void CalculateAnnualFee()
 }
 ```
 
-每当我们在上面的代码中编写 "annualFee" 时，我们都在访问父类中的受保护字段 `annualFee`。还记得子类可以访问其父类中的所有公共和受保护字段吗？因此，子类可以使用该字段，就像它是自己的一样。子类不需要创建父类的实例来访问其受保护字段。
+每当我们在上面的代码中编写 `"annualFee"` 时，我们都在访问父类中的受保护字段 `annualFee`。还记得子类可以访问其父类中的所有公共和受保护字段吗？因此，子类可以使用该字段，就像它是自己的一样。子类不需要创建父类的实例来访问其受保护字段。
 
 我们的子类 `NormalMember` 就到此为止。该类包含以下内容：
 
-### 字段
+#### 字段
 继承自父类：
-- protected int annualFee
+- `protected int annualFee`
 
-### 方法
+#### 方法
 在子类中声明：
-- public void CalculateAnnualFee()
+- `public void CalculateAnnualFee()`
 
-### 构造函数
-- public NormalMember()
-- public NormalMember(string remarks, string name, int memberID, int memberSince)
+#### 构造函数
+- `public NormalMember()`
+- `public NormalMember(string remarks, string name, int memberID, int memberSince)`
 
 接下来，让我们写另一个继承自 `Member` 的类。这次，派生类被称为 `VIPMember`。代码所示：
 
@@ -2496,7 +2542,6 @@ class VIPMember : Member
     {
         Console.WriteLine("Child Constructor with 3 parameters");
     }
-
     public void CalculateAnnualFee()
     {
         annualFee = 1200;
@@ -2508,19 +2553,19 @@ class VIPMember : Member
 
 `VIPMember` 类包含以下内容：
 
-### 字段
+#### 字段
 继承自父类：
-- protected int annualFee
+- `protected int annualFee`
 
-### 方法
+#### 方法
 继承自父类：
-- public override string ToString()
+- `public override string ToString()`
 
 在子类中声明：
-- public void CalculateAnnualFee()
+- `public void CalculateAnnualFee()`
 
-### 构造函数
-- public VIPMember(string name, int memberID, int memberSince)
+#### 构造函数
+- `public VIPMember(string name, int memberID, int memberSince)`
 
 ## Main() 方法
 
@@ -2573,7 +2618,6 @@ Total Annual Fee: 1200
 
 ```csharp
 Member[] clubMembers = new Member[5];
-
 clubMembers[0] = new NormalMember("Special Rate", "James", 1, 2010);
 clubMembers[1] = new VIPMember("Normal Rate", "Andy", 2, 2011);
 clubMembers[2] = new NormalMember("Normal Rate", "Bill", 3, 2011);
@@ -2592,8 +2636,9 @@ foreach (Member m in clubMembers)
 {
     m.CalculateAnnualFee();
     Console.WriteLine(m.ToString());
-}
 ```
+
+
 
 如果你在这个阶段尝试运行程序，你将得到一个错误，说 `Member` 不包含 `CalculateAnnualFee` 的定义。这是因为 `clubMembers` 被声明为 `Member` 类型的数组。因此，当我们编写 `m.CalculateAnnualFee()` 时，编译器尝试执行 `Member` 类中的 `CalculateAnnualFee()` 方法。出现错误的原因是我们的 `Member` 父类中没有这样的方法；它只在两个子类中。为了纠正这个错误，我们必须向我们的父类中添加以下方法。
 
@@ -2640,7 +2685,7 @@ public override void CalculateAnnualFee()
 }
 ```
 
-现在如果你再次运行程序，前三个成员（NormalMember）和后两个成员（VIPMember）的年度费用分别为 $460 和 $1200。
+现在如果你再次运行程序，前三个成员（`NormalMember`）和后两个成员（`VIPMember`）的年度费用分别为 $460 和 $1200。
 
 这就是多态的结果。在运行时（即程序运行期间），程序确定 `clubMembers` 的前三个成员是 `NormalMember` 类型，并执行该类中的 `CalculateAnnualFee()` 方法。它还确定后两个成员是 `VIPMember` 类型，并执行该类的方法。
 
@@ -2712,7 +2757,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Abstract
 {
     class Program
@@ -2723,13 +2767,11 @@ namespace Abstract
             a.PrintMessage();
         }
     }
-
     abstract class AbstractClass
     {
         protected string message = "Hello C!";
         public abstract void PrintMessage();
     }
-
     class AbstractClass : AbstractClass // 注意：此处原文代码类名冲突，保持原样翻译
     {
         public override void PrintMessage()
@@ -2754,7 +2796,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Interface
 {
     class Program
@@ -2766,7 +2807,6 @@ namespace Interface
             a.InterfaceMethod();
         }
     }
-
     interface IShape
     {
         int MyNumber
@@ -2774,10 +2814,8 @@ namespace Interface
             get;
             set;
         }
-
         void InterfaceMethod();
     }
-
     class ClassA : IShape
     {
         private int myNumber;
@@ -2805,10 +2843,7 @@ namespace Interface
 
 ## 复习访问修饰符
 
-现在我们已经涵盖了与继承相关的主题，让我们再次查看面向对象编程中访问修饰符的概念。之前，我们了解到访问修饰符就像守门员。它控制谁可以访问特定的字段、属性或方法。C# 带有 4 种访问修饰符：private,
-
-
-public、protected 和 internal。
+现在我们已经涵盖了与继承相关的主题，让我们再次查看面向对象编程中访问修饰符的概念。之前，我们了解到访问修饰符就像守门员。它控制谁可以访问特定的字段、属性或方法。C# 带有 4 种访问修饰符：`private`, `public`、`protected` 和 `internal`。
 
 任何声明为 `internal` 的成员只能在当前程序集（assembly）中访问。由于本书不会介绍程序集，因此我们不会演示 `internal` 的工作原理。
 
@@ -2825,7 +2860,7 @@ class ClassA
 }
 ```
 
-如果 ClassB 继承自 ClassA，
+如果 `ClassB` 继承自 `ClassA`，
 
 ```csharp
 class ClassB:ClassA
@@ -2834,36 +2869,30 @@ class ClassB:ClassA
     {
         // 这是可以的
         Console.WriteLine(publicNum);
-
         // 这是可以的
         Console.WriteLine(protectedNum);
-
         // 这是不允许的
         Console.WriteLine(privateNum);
     }
-
     public void WriteLine()
 ```
 
 前两个 `WriteLine()` 语句不会产生任何错误，因为派生类可以访问父类中的任何 `public` 和 `protected` 字段。
 
-然而，第三条语句会报错，因为 `privateNum` 是一个 `private` 字段，因此只能在 ClassA 内部访问。
+然而，第三条语句会报错，因为 `privateNum` 是一个 `private` 字段，因此只能在 `ClassA` 内部访问。
 
-如果一个类没有继承自 ClassA，我们需要实例化一个 ClassA 对象来访问 ClassA 的 `public` 字段。然而，即使有了 ClassA 对象，我们也无法访问 ClassA 的 `private` 和 `protected` 字段。在下面的示例中，ClassC 没有继承自 ClassA。因此，第一个 `WriteLine()` 语句不会产生任何错误，但第二个和第三条语句会。
+如果一个类没有继承自 `ClassA`，我们需要实例化一个 `ClassA` 对象来访问 `ClassA` 的 `public` 字段。然而，即使有了 `ClassA` 对象，我们也无法访问 `ClassA` 的 `private` 和 `protected` 字段。在下面的示例中，`ClassC` 没有继承自 `ClassA`。因此，第一个 `WriteLine()` 语句不会产生任何错误，但第二个和第三条语句会。
 
 ```csharp
 class ClassC
 {
     ClassA a = new ClassA();
-
     public void PrintMessages()
     {
         // 这是可以的
         Console.WriteLine(a.publicNum);
-
         // 这是不允许的
         Console.WriteLine(a.protectedNum);
-
         // 这是不允许的
         Console.WriteLine(a.privateNum);
     }
@@ -2968,22 +2997,32 @@ struct MyStruct
     private int x, y;
     private AnotherClass myCamera;
     private Days myDays;
-
     // 构造函数
     public MyStruct(int a, int b, int c)
     {
-        myClass = new AnotherClass();
-        myClass.number = a;
-        x = b;
-        y = c;
-        myDays = Days.Mon;
-    }
+```
 
-    // 方法
-    public void PrintStatement()
-    {
-        Console.WriteLine("x = {0}, y = {1}, myDays = {2}", x, y, myDays);
-    }
+
+
+
+```csharp
+myClass = new AnotherClass();
+
+myClass.number = a;
+
+x = b;
+
+y = c;
+
+myDays = Days.Mon;
+}
+
+// 方法
+
+public void PrintStatement()
+{
+    Console.WriteLine("x = {0}, y = {1}, myDays = {2}", x, y, myDays);
+}
 }
 
 class AnotherClass
@@ -3012,13 +3051,9 @@ example.PrintStatement();
 
 如果我们运行代码，我们将得到
 
-x = 3, y = 5, myDays = Mon
+`x = 3, y = 5, myDays = Mon`
 
 结构体和类之间有两个主要区别。首先，结构体数据类型不支持继承。因此，你不能从一个结构体派生另一个。然而，结构体可以实现接口。实现方法与类相同。更多信息请参阅第 8 章。
-
-
-
-
 
 # 第 10 章：LINQ
 
@@ -3030,13 +3065,13 @@ LINQ 代表语言集成查询（Language-Integrated Query），是 C# 中一个�
 
 首先，我们声明该数组。
 
-```
+```csharp
 int[] numbers = { 0, 1, 2, 3, 4, 5, 6 };
 ```
 
 接下来，我们按照如下方式编写 LINQ 查询：
 
-```
+```csharp
 var evenNumQuery =
 from num in numbers
 where (num % 2) == 0
@@ -3046,19 +3081,19 @@ select num;
 查询位于第二行到第四行。有 SQL 经验的读者可能会觉得这个查询非常熟悉。该查询由三部分组成。
 第一部分
 
-```
+```csharp
 from num in numbers
 ```
 
 表示我们正在对 `numbers` 数组执行查询。`num` 是我们用来表示数组中单个元素的名称。接下来的一行
 
-```
+```csharp
 where (num % 2) == 0
 ```
 
 测试单个元素，确定 `num` 除以 2 的余数是否为零。如果是，则 `num` 是一个偶数。第三行
 
-```
+```csharp
 select num;
 ```
 
@@ -3068,7 +3103,7 @@ select num;
 
 创建查询语句后，我们可以通过编写以下代码来执行查询：
 
-```
+```csharp
 foreach (int i in evenNumQuery)
     Console.WriteLine("{0} is an even number", i);
 ```
@@ -3088,11 +3123,11 @@ foreach (int i in evenNumQuery)
 
 我们可以在 `Main()` 方法中使用下面的代码创建一个 `Customer` 对象的列表。
 
-```
+```csharp
 List<Customer> customers = new List<Customer>();
 ```
 
-```
+```csharp
 customers.Add(new Customer("Alan", "80911291", "ABC Street", 25.60m));
 customers.Add(new Customer("Bill", "198721311", "DEF Street", -32.1m));
 customers.Add(new Customer("Carl", "298123711", "GHI Street", -12.2m));
@@ -3101,7 +3136,7 @@ customers.Add(new Customer("David", "78612312", "JKL Street", 12.6m));
 
 现在我们要搜索所有余额为负的账户，可以使用以下 LINQ 查询。
 
-```
+```csharp
 var overdue = from cust in customers
                where cust.Balance < 0
                orderby cust.Balance ascending
@@ -3114,7 +3149,7 @@ var overdue = from cust in customers
 
 要执行并打印结果，我们可以使用下面的 `foreach` 循环：
 
-```
+```csharp
 foreach (var cust in overdue)
     Console.WriteLine("Name = {0}, Balance = {1}", cust.Name,
     cust.Balance);
@@ -3135,7 +3170,9 @@ Name = Carl, Balance = -12.2
 
 C# 为我们提供了许多类来处理文件。在本章中我们将看到的类是 `File`、`StreamWriter` 和 `StreamReader` 类。这三个类都位于 `System.IO` 命名空间。要使用本章中的方法，你必须添加指令：
 
+```csharp
 using System.IO;
+```
 
 ## 读取文本文件
 
@@ -3143,22 +3180,21 @@ using System.IO;
 
 假设我们要从位于 C 盘的 "myFile.txt" 文件读取数据。下面的示例显示了如何操作。
 
-```c
-1 string path = "c:\myFile.txt";
-2 using (StreamReader sr = new StreamReader(path))
-3 {
-4     while (sr.EndOfStream != true)
-5     {
-6         Console.WriteLine(sr.ReadLine());
-7     }
-8 
-9     sr.Close();
-10 }
+```csharp
+string path = "c:\myFile.txt";
+using (StreamReader sr = new StreamReader(path))
+{
+    while (sr.EndOfStream != true)
+    {
+        Console.WriteLine(sr.ReadLine());
+    }
+    sr.Close();
+}
 ```
 
 在第 1 行，我们首先声明一个字符串变量 `path` 并文件路径赋值给该变量。
 
-```c
+```csharp
 string path = "c:\\File.txt";
 ```
 
@@ -3166,7 +3202,7 @@ string path = "c:\\File.txt";
 
 在第 2 行，我们创建一个 `StreamReader` 实例。`StreamReader` 构造函数接收一个参数——要读取的文件路径。
 
-```
+```csharp
 StreamReader sr = new StreamReader(path);
 ```
 
@@ -3176,7 +3212,7 @@ StreamReader sr = new StreamReader(path);
 
 这里的关键字确保了 `dispose()` 方法始终被调用。`dispose()` 方法是 `System` 命名空间中的一个预写方法，一旦文件和流不再需要，就会释放这些未托管资源。当我们使用 `using` 关键字时，我们确保即使发生异常，`dispose()` 方法也会被调用。在第 9 行我们手动关闭文件。在处理文件时，始终使用 `using` 关键字是一种良好的习惯。从第 4 行到第 7 行，我们使用 `while` 循环来读取文件。
 
-```
+```csharp
 while (sr.EndOfStream != true)
 {
     Console.WriteLine(sr.ReadLine());
@@ -3185,15 +3221,15 @@ while (sr.EndOfStream != true)
 
 `EndOfStream` 是 `StreamReader` 类的一个属性，当到达文件末尾时返回 `true`。只要没有到达文件末尾，`while` 循环就会继续运行。在 `while` 循环内部，我们有语句：
 
-```
+```csharp
 Console.WriteLine(sr.ReadLine());
 ```
 
-sr.ReadLine() 从文件中读取一行并作为字符串返回。然后使用 `Console.WriteLine()` 方法打印到屏幕上。
+`sr.ReadLine()` 从文件中读取一行并作为字符串返回。然后使用 `Console.WriteLine()` 方法打印到屏幕上。
 
 最后，在我们完成读取后，关闭文件以便其他程序可以使用。当你不再需要它时，你应该关闭文件。
 
-```
+```csharp
 sr.Close();
 ```
 
@@ -3205,21 +3241,21 @@ sr.Close();
 
 第一个选项是使用所示的 `try...catch` 语句：
 
-```c
-1 try
-2 {
-3     using (StreamReader sr = new StreamReader(path))
-4     {
-5      while (sr.EndOfStream)
-6      {
-7          Console.WriteLine(sr.ReadLine());
-8      }
-9      sr.Close();
-10  }
-11 catch (FileNotFoundException e)
-12 {
-13     Console.WriteLine(e.Message);
-14 }
+```csharp
+try
+{
+    using (StreamReader sr = new StreamReader(path))
+    {
+     while (sr.EndOfStream)
+     {
+         Console.WriteLine(sr.ReadLine());
+     }
+     sr.Close();
+ }
+catch (FileNotFoundException e)
+{
+    Console.WriteLine(e.Message);
+}
 ```
 
 从 1 行到 11 行，我们在 `try` 块中尝试打开、读取并关闭文件。
@@ -3229,9 +3265,6 @@ sr.Close();
 ### 选项 2：File.Exists()
 
 处理“找不到文件”场景的第二种方法是使用 `File` 类中的 `Exists()` 方法。正如名字所示`Exists()` 方法检查文件是否存在。`File` 类是 `System.IO` 命名空间中的预写类，它为单个文件的创建、复制、删除、移动和打开提供了静态方法。
-
-
-
 
 要使用 `Exists()` 方法，我们使用 `if` 语句在用 `StreamReader` 打开并读取文件之前检查文件是否存在。
 
@@ -3299,7 +3332,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
 namespace FileDemo
 {
     class Program
@@ -3308,7 +3340,6 @@ namespace FileDemo
         {
             //declaring the path to the file
             string path = "file.txt";
-
             //Writing to the file
             using(StreamWriter sw=new StreamWriter(path,true))
             {
@@ -3316,7 +3347,6 @@ namespace FileDemo
                 sw.WriteLine("DEF");
                 sw.Close();
             }
-
         // Reading from the file
         if (File.Exists(path))
         {
@@ -3339,6 +3369,8 @@ Console.Read();
 }
 }
 ```
+
+
 
 在这个示例中，我们在向文件写入时选择追加数据。当你第一次运行此程序时，你将得到：
 
@@ -3364,16 +3396,16 @@ EFG
 
 ## 概述
 
-首先，创建一个新的控制台应用程序并命名为 CSPProject。
+首先，创建一个新的控制台应用程序并命名为 `CSPProject`。
 
 该应用程序包含如下所示的六个类：
 
-- Staff
-- Manager : Staff
-- Admin : Staff
-- FileReader
-- PaySlip
-- Program
+- `Staff`
+- `Manager : Staff`
+- `Admin : Staff`
+- `FileReader`
+- `PaySlip`
+- `Program`
 
 `Staff` 类包含公司中每位员工的信息。它还包含一个名为 `CalculatePay()` 的虚方法，用于计算每个员工的薪水。
 
@@ -3391,13 +3423,13 @@ EFG
 
 ### 字段
 
-该类有一个名为 `hourlyRate` 的私有 float 字段和一个名为 `hworked` 的私有 int 字段。尝试你自己来声明这些字段。
+该类有一个名为 `hourlyRate` 的私有 `float` 字段和一个名为 `hworked` 的私有 `int` 字段。尝试你自己来声明这些字段。
 
 ### 属性
 
 接下来，为该类声明三个公共自动实现属性。这些属性是 `TotalPay`、`BasicPay` 和 `NameOfStaff`。
 
-`TotalPay` 是一个 float 属性，并有一个受保护的设置器（setter）。`BasicPay` 是一个 float 属性，具有一个私有的设置器。`NameOfStaff` 是一个 string 属性，具有一个私有的设置器。所有三个属性的访问器（getters）都是公共的。因此，你不需要为这些访问器声明访问修饰符，因为它们的访问级别与属性相同。
+`TotalPay` 是一个 `float` 属性，并有一个受保护的设置器（setter）。`BasicPay` 是一个 `float` 属性，具有一个私有的设置器。`NameOfStaff` 是一个 `string` 属性，具有一个私有的设置器。所有三个属性的访问器（getters）都是公共的。因此，你不需要为这些访问器声明访问修饰符，因为它们的访问级别与属性相同。
 
 除了这三个自动实现的方法外，`Staff` 类还有一个名为 `HoursWorked` 的公共属性。该属性的备用字段是 `hworked`。
 
@@ -3405,7 +3437,7 @@ EFG
 
 ### 构造函数
 
-`Staff` 类有一个公共构造函数，带有参数 `name` (string) 和 `rate` (float)。在构造函数内部，我们将参数赋值给 `NameOfStaff` 和字段 `hourlyRate`。
+`Staff` 类有一个公共构造函数，带有参数 `name` (`string`) 和 `rate` (`float`)。在构造函数内部，我们将参数赋值给 `NameOfStaff` 和字段 `hourlyRate`。
 
 ### 方法
 
@@ -3446,11 +3478,11 @@ EFG
 
 ### 属性
 
-`Manager` 还有一个名为 `Allowance` 的公共自动实现属性。`Allowance` 是 int 类型并具有私有的设置器。尝试编写此属性。
+`Manager` 还有一个名为 `Allowance` 的公共自动实现属性。`Allowance` 是 `int` 类型并具有私有的设置器。尝试编写此属性。
 
 ### 构造函数
 
-现在，为 `Manager` 声明构造函数。`Manager` 类有一个带有 string 参数的公共构造函数。构造函数的作用是调用基类构造函数，并将参数和字段 `managerRate` 传递给基类构造函数。除外，子构造函数什么都不做。因此，子构造函数的大括号内为空。尝试编写此构造函数。如果你在编写构造函数时遇到问题，可以参考下面的 `Manager` 类。
+现在，为 `Manager` 声明构造函数。`Manager` 类有一个带有 `string` 参数的公共构造函数。构造函数的作用是调用基类构造函数，并将参数和字段 `managerRate` 传递给基类构造函数。除外，子构造函数什么都不做。因此，子构造函数的大括号内为空。尝试编写此构造函数。如果你在编写构造函数时遇到问题，可以参考下面的 `Manager` 类。
 
 ### 方法
 
@@ -3461,7 +3493,6 @@ EFG
 首先，让我们声明该方法。`CalculatePay()` 是公共的且没有返回值。声明此方法时我们需要使用 `override` 关键字，因为它重写了 `Staff` 类中的 `calculatePay()` 方法。
 
 在 `Manager` 类的 `calculatePay()` 方法中，我们首先调用父类的 `CalculatePay()` 方法，并用它设置 `BasicPay` 和 `TotalPay` 的值。要调用父类中的虚方法，你需要使用 `base` 关键字。将以下行添加到你的 `calculatePay()` 方法中。
-
 
 ```cs
 base.CalculatePay();
@@ -3705,6 +3736,8 @@ sw.WriteLine("PAYSLIP FOR {0}", (MonthsOfYear)month, year);
 sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
 ```
 
+
+
 请尝试自己编写第 4 行。
 
 接下来，我们使用 `sw.WriteLine("");` 语句来打印空行。
@@ -3715,7 +3748,7 @@ sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
 
 * MeWith
 
-((Manager)f).Allowance
+`((Manager)f).Allowance`
 
 如果当前实例是 `Admin` 对象，我们访问并打印 `Admin` 类中的 `Overtime` 属性。请尝试编写第 7 行。
 
@@ -3735,9 +3768,9 @@ sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
 
 很好。
 
-接下来，让我们声明一个字符串变量 `path` 并为其赋值字符串 "summary.txt"。
+接下来，让我们声明一个字符串变量 `path` 并为其赋值字符串 `"summary.txt"`。
 
-现在我们准备好写入 "summary.txt" 了。声明一个 `StreamWriter` 实例写入此文件。一个典型的 "summary.txt" 文件如下所示（左侧的数字仅供参考）：
+现在我们准备好写入 `"summary.txt"` 了。声明一个 `StreamWriter` 实例写入此文件。一个典型的 `"summary.txt"` 文件如下所示（左侧的数字仅供参考）：
 
 - 1 名工作时间少于 10 小时的员工
 - Name of Staff: Carol, Hours Worked: 2
@@ -3747,7 +3780,7 @@ sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
 
 为了打印第 3 行和第 4 行，我们需要使用 `foreach` 循环遍历从 LINQ 语句获取的 `result` 变量中的每个元素。请尝试编写。
 
-显示结果后，使用 `close()` 方法关闭 "summary.txt" 文件。
+显示结果后，使用 `close()` 方法关闭 `"summary.txt"` 文件。
 
 这就是 `GenerateSummary()` 方法的全部。
 
@@ -3757,6 +3790,7 @@ sw.WriteLine("Name of Staff: {0}", f.NameOfStaff);
 
 ```
 private int month
+
 private int year
 ```
 
@@ -3776,7 +3810,9 @@ public PaySlip(int payMonth, int payYear)
 
 ```cs
 public void generatePaySlip(List<Staff> myStaff)
+
 public void generateSummary(List<Staff> myStaff)
+
 public override string ToString()
 ```
 
@@ -3804,8 +3840,6 @@ while (year == 0)
   }
 }
 ```
-
-
 
 如果你的代码无法运行，请将其与答案进行对比，并尝试找出哪里出了问题。通过分析自己的错误，你将学很多。解决问题正是乐趣所在，也是回报最丰厚的地方。享受其中并永不要放弃！答案可以在附录 A 中找到。
 
@@ -3835,7 +3869,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
 namespace CSProject
 {
     class Program
@@ -3845,7 +3878,6 @@ namespace CSProject
             List<Staff> myStaff = new List<Staff>();
             FileReader fr = new FileReader();
             int month = 0, year = 0;
-
             while (year == 0)
             {
                 Console.Write("\n请输入年份: ");
@@ -3858,7 +3890,6 @@ namespace CSProject
                     Console.WriteLine(e.Message + " 请重试.");
                 }
             }
-
             while (month == 0)
             {
                 Console.Write("\n请输入月份: ");
@@ -3903,11 +3934,9 @@ namespace CSProject
     {
         private float hourlyRate;
         private int hworked;
-
         public float TotalPay { get; protected set; }
         public float BasicPay { get; private set; }
         public string NameOfStaff { get; private set; }
-
         public int HoursWorked
         {
             get
@@ -3945,17 +3974,12 @@ namespace CSProject
     class Manager : Staff
     {
         private const float managerHourlyRate = 50;
-
         public int Allowance { get; private set; }
-
         public Manager(string name) : base(name, managerHourlyRate) { }
-
         public override void CalculatePay()
         {
             base.CalculatePay();
-
             Allowance = 1000;
-
             if (HoursWorked > 160)
                 TotalPay = BasicPay + Allowance;
         }
@@ -3967,9 +3991,7 @@ namespace CSProject
     class Admin : Staff
     {
         private const float adminRate = 30;
-
         public Admin(string name) : base(name, adminRate) { }
-
         public override void CalculatePay()
         {
             base.CalculatePay();
@@ -3980,7 +4002,3 @@ namespace CSProject
 }
 ```
 *(注：由于原文代码块在 Admin 类部分存在明显的语法错乱和未闭合括号，在翻译时遵循“代码块不需要翻译”原则，保留了其原始逻辑结构，仅对代码内的字符串常量进行了本地化处理。)*
-
-
-
-<!-- 无内容 -->

@@ -1,7 +1,5 @@
+
 # Windows Azure 平台云计算计算指南
-
-
-
 
 # 目录
 
@@ -12,194 +10,212 @@
 - 制作人员
 - 致谢
 - 引言
-    - 本书的读者群
-    - 本书涵盖的内容
-    - 本书的结构
-    - 符号说明
-    - 源代码与在线章节
-    - 错表
-    - P2p.wrox.com
+  - 本书的读者群
+  - 本书涵盖的内容
+  - 本书的结构
+  - 符号说明
+  - 源代码与在线章节
+  - 错表
+  - `P2p.wrox.com`
 
-# 第一部分：介绍 Windows Azure 平台](#9781118058756p01.xhtml)
+# 第一部分：介绍 Windows Azure 平台
 
-## 第 1 章：云计算的角色概述](#9781118058756c01.xhtml)
-    - 为什么要将应用程序和服务迁移到云端？
-    - 云计算的渊源
-    - 云计算与无一切服务
-    - 云计算本体论
-    - 云计算的关注点
-    - 总结
+## 第 1 章：云计算的角色概述
 
-## 第 2 章：理解 Windows Azure 平台架构](#9781118058756c02.xhtml)
-    - Windows Azure 开发者门户
-    - 在 Azure 开发平台上创建和运行项目
-    - 为 Visual Studio 2008 使用 Azure 模板
-    - 利用辅助云
-    - 向 Azure 云部署应用程序和服务
-    - 总结
+- 为什么要将应用程序和服务迁移到云端？
+- 云计算的渊源
+- 云计算与无一切服务
+- 云计算本体论
+- 云计算的关注点
+- 总结
 
-## 第 3 章：分析 Windows Azure 操作系统](#9781118058756c03.xhtml)
-    - Windows Azure OS 快速浏览
-    - Windows Azure 服务的生命周期
-    - 服务数据的安全与隔离
-    - 确保 Fabric 的可用性
-    - 为 Azure 虚拟化 Windows 服务器
-    - 总结
+## 第 2 章：理解 Windows Azure 平台架构
 
-## 第 4 章：扩展 Azure 表存储和 Blob 存储](#9781118058756c04.xhtml)
-    - 创建存储账户
-    - 使用 Azure Storage REST API
-    - 理解表存储
-    - 存储 Blob
-    - 总结
+- `Windows Azure` 开发者门户
+- 在 `Azure` 开发平台上创建和运行项目
+- 为 `Visual Studio 2008` 使用 `Azure` 模板
+- 利用辅助云
+- 向 `Azure` 云部署应用程序和服务
+- 总结
 
-# 第二部分：在企业中利用云服务](#9781118058756p02.xhtml)
+## 第 3 章：分析 Windows Azure 操作系统
 
-## 第 5 章：迁移到 Azure 服务时的风险最小化](#9781118058756c05.xhtml)
-    - 跨越云计算的障碍
-    - 为 角色实现套接层加密
-    - 加密 Azure Storage 中的个人信息
-    - 法规与行业标准审核
-    - 总结
+- `Windows Azure` OS 快速浏览
+- `Windows Azure` 服务的生命周期
+- 服务数据的安全与隔离
+- 确保 `Fabric` 的可用性
+- 为 `Azure` 虚拟化 `Windows` 服务器
+- 总结
 
-## 第 6 章：服务用户的验证与授权](#9781118058756c06.xhtml)
-    - 利用 ASP.NET 服务
-    - 将 ASP.NET 身份验证和角色管理适配 Windows 角色
-    - 分析 AspProviders 库
-    - 将 AspProvidersDemo 的数据移动到云端
-    - 与 Azure 服务集成成员服务
-    - 使用 Windows Live ID 验证用户
-    - 总结
+## 第 4 章：扩展 Azure 表存储和 Blob 存储
 
-## 第 7 章：优化 Azure 表的可扩展性和性能](#9781118058756c07.xhtml)
-    - 为实体分配主键值
-    - 处理关联实体
-    - 利用实体组事务
-    - 上传表数据
-    - 在网格中显示异构表的数据
-    - 总结
+- 创建存储账户
+- 使用 `Azure Storage REST API`
+- 理解表存储
+- 存储 `Blob`
+- 总结
 
-## 第 8 章：使用 Azure 队列进行消息传递](#9781118058756c08.xhtml)
-    - 创建和处理 Azure 队列和消息
-    - 增强 Thumbnails.sln 示例解决方案
-    - 总结
+# 第二部分：在企业中利用云服务
 
-# 第三部分：处理高级服务](#9781118058756p03.xhtml)
+## 第 5 章：迁移到 Azure 服务时的风险最小化
 
-## 第 9 章：使用 Azure 服务验证用户](#9781118058756c09.xhtml)
-    - 创建 .NET
-    - 安装 .NET SDK
-    - 使用 Azure 工具
-    - 创建 .NET 服务
-    - 总结
+- 跨越云计算的障碍
+- 为角色实现套接层加密
+- 加密 `Azure Storage` 中的个人信息
+- 法规与行业标准审核
+- 总结
 
-## 第 10 章：与 Bus 集成](#9781118058756c10.xhtml)
-    - 创建 .NET
-    - 通过 Bus 传递消息
-    - 分析 Bus 架构
-    - 使用 Bus 配置
-    - 总结
+## 第 6 章：服务用户的验证与授权
 
-## 第 11 章：探索 Bus 队列](#9781118058756c11.xhtml)
-    - 在队列中持久化
-    - 通过 Bus 交付消息
-    - 总结
+- 利用 `ASP.NET` 服务
+- 将 `ASP.NET` 身份验证和角色管理适配 `Windows` 角色
+- 分析 `AspProviders` 库
+- 将 `AspProvidersDemo` 的数据移动到云端
+- 与 `Azure` 服务集成成员服务
+- 使用 `Windows Live ID` 验证用户
+- 总结
 
-# 第四部分：与 Azure 服务工作](#9781118058756p04.xhtml)
+## 第 7 章：优化 Azure 表的可扩展性和性能
 
-## 第 12 章：管理帐户](#9781118058756c12.xhtml)
-    - 跟踪 SSDS
-    - 查看当前 SQL 文档
-    - 创建或升级 Windows 
-    - 设置服务器防火墙
-    - 创建一个用户数据库
-    - 使用 SSMS 2008 连接用户数据库
-    - 使用 sqlcmd 工具使用 SADB
-    - 比较 SADB 与 SQL Server 2008 R2
-    - 总结
+- 为实体分配主键值
+- 处理关联实体
+- 利用实体组事务
+- 上传表数据
+- 在网格中显示异构表的数据
+- 总结
 
-## 第 13 章：利用 SQL Azure 数据库的关系型功能](#9781118058756c13.xhtml)
-    - 创建和填充 SADB 数据库
-    - 通过分表以克服数据库大小限制
-    - 创建 SADB 登录和用户并分配角色
-    - 总结
+## 第 8 章：使用 Azure 队列进行消息传递
 
-- 索引
-- 广告
+- 创建和处理 `Azure` 队列和消息
+- 增强 `Thumbnails.sln` 示例解决方案
+- 总结
 
+# 第三部分：处理高级服务
 
+## 第 9 章：使用 Azure 服务验证用户
 
+- 创建 `.NET`
+- 安装 `.NET SDK`
+- 使用 `Azure` 工具
+- 创建 `.NET` 服务
+- 总结
 
+## 第 10 章：与 Bus 集成
 
+- 创建 `.NET`
+- 通过 `Bus` 传递消息
+- 分析 `Bus` 架构
+- 使用 `Bus` 配置
+- 总结
 
+## 第 11 章：探索 Bus 队列
+
+- 在队列中持久化
+- 通过 `Bus` 交付消息
+- 总结
+
+# 第四部分：与 Azure 服务工作
+
+## 第 12 章：管理帐户
+
+- 跟踪 `SSDS`
+- 查看当前 `SQL` 文档
+- 创建或升级 `Windows`
+- 设置服务器防火墙
+- 创建一个用户数据库
+- 使用 `SSMS 2008` 连接用户数据库
+- 使用 `sqlcmd` 工具使用 `SADB`
+- 比较 `SADB` 与 `SQL Server 2008 R2`
+- 总结
+
+## 第 13 章：利用 SQL Azure 数据库的关系型功能
+
+- 创建和填充 `SADB` 数据库
+- 通过分表以克服数据库大小限制
+- 创建 `SADB` 登录和用户并分配角色
+- 总结
+
+# 索引
+# 广告
+
+---
 
 版权所有 © 2009 Wiley Publishing, Inc., 印第安纳州
+
 ISBN: 978-0-470-50638-7
 
-未经出版者书面许可，本书的任何部分不得再复制、存储在检索系统中，或以任何形式或手段（电子、机械、复印、录音、扫描或其他方式）传输，除非符合 1976 年《美国版权法》第 107 节或第 108 节的规定，或通过向版权许可中心支付相应的每份费用以获得授权（地址：222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400，传真 (978) 646-8600）。向出版者申请许可请联系：Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, 传真 (201) 748-6008，或访问在线 [`www.wiley.com/go/permissions`](http://www.wiley.com/go/permissions)。
+未经出版者书面许可，本书的任何部分不得再复制、存储在检索系统中，或以任何形式或手段（电子、机械、复印、录音、扫描或其他方式）传输，除非符合 1976 年《美国版权法》第 107 节或第 108 节的规定，或通过向版权许可中心支付相应的每份费用以获得授权（地址：`222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400`，传真 `(978) 646-8600`）。向出版者申请许可请联系：`Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011`, 传真 `(201) 748-6008`，或访问在线 [`www.wiley.com/go/permissions`](http://www.wiley.com/go/permissions)。
 
 ## 责任限制/免责声明
+
 出版者和作者对本书内容的准确性或完整性不作任何陈述或保证，并特别声明放弃所有保证，包括但不限于针对特定用途的保证。销售或促销材料不得创建或扩大任何保证。本书包含的建议和策略可能不适用于所有情况。本书的销售基于以下理解：出版者并未提供法律、会计或其他专业服务。如果需要专业帮助，应寻求胜任专业人士的服务。出版者和作者对由此产生的损害均不承担责任。书中提到的某个组织或网站作为引用和/或进一步信息的潜在来源，并不意味着作者或出版者认可该组织或网站可能提供的信息或其可能提出的建议。此外，读者应注意，书中列出的互联网网站在本书编写与阅读之间可能已经发生更改或消失。
 
-欲了解我们其他产品和服务的通用信息，请联系美国境内客户服务部门 (877) 762-2974，美国境外拨 (317) 572-3993 或传真 (317) 572-4002。
+欲了解我们其他产品和服务的通用信息，请联系美国境内客户服务部门 `(877) 762-2974`，美国境外拨 `(317) 572-3993` 或传真 `(317) 572-4002`。
 
-Wiley 还以多种电子格式出版其书籍。印刷版中的某些内容可能在电子书中不可用。
+`Wiley` 还以多种电子格式出版其书籍。印刷版中的某些内容可能在电子书中不可用。
 
-美国国会图书馆控制号：2009933376
+美国国会图书馆控制号：`2009933376`
 
 ## 商标
-Wiley、Wiley 标志、Wrox、Wrox 标志、Wrox Programmer to Programmer 以及相关的商业外观是 John Wiley & Sons, Inc. 及其/或其附属在美国和其他国家的商标或注册商标，未经书面许可不得使用。Microsoft 和 Azure 是 Microsoft 公司在美国和/或其他国家的商标或注册商标。所有其他商标均为其各自所有者的财产。Wiley Publishing, Inc. 与书中提到的任何产品或供应商均无关联。
+
+`Wiley`、`Wiley` 标志、`Wrox`、`Wrox` 标志、`Wrox Programmer to Programmer` 以及相关的商业外观是 `John Wiley & Sons, Inc.` 及其/或其附属在美国和其他国家的商标或注册商标，未经书面许可不得使用。`Microsoft` 和 `Azure` 是 `Microsoft` 公司在美国和/或其他国家的商标或注册商标。所有其他商标均为其各自所有者的财产。`Wiley Publishing, Inc.` 与书中提到的任何产品或供应商均无关联。
 
 ## 献词
-本书献给我的妻子 Alexandra。
+
+本书献给我的妻子 `Alexandra`。
+
 期待我们的二十五周年结婚。
 
 ## 关于作者
+
 ![2.1](img/ffirsuf001.jpg)
 
-Roger Jennings 是一位作者和顾问，专攻 Microsoft .NET n 层数据库应用程序以及基于 SQL Server 的数据密集型 Windows Communication Foundation (WCF) Web 服务。他一直是大多数版本 Visual Basic 的 Beta 测试员，从 Visual Basic 2.0 专业扩展（代号为 Rawhide）开始，以及自 4.21 版本起的 SQL Server 以及所有版本的 Visual Studio。
+`Roger Jennings` 是一位作者和顾问，专攻 `Microsoft .NET` n 层数据库应用程序以及基于 `SQL Server` 的数据密集型 `Windows Communication Foundation (WCF)` Web 服务。他一直是大多数版本 `Visual Basic` 的 Beta 测试员，从 `Visual Basic 2.0` 专业扩展（代号为 `Rawhide`）开始，以及自 `4.21` 版本起的 `SQL Server` 以及所有版本的 `Visual Studio`。
 
-Roger 编写的 26 本与计算机相关的书籍已有超过 125 万册英文在印，并已翻译成 20 多种语言。他为 Wiley/Wrox 出版了《Professional ADO.NET 3.5 with LINQ and the Entity Framework》和《Expert One-on-One Visual Basic 2005 Database Programming》；为 SAMS Publishing 出版了三版的《Database Developer's Guide to Visual Basic》和两版的《Access Developer's Guide》；为 QUE Publishing 出版了 11 版《Special Edition Using Microsoft Access》（特版）和两版的《Special Edition Using Windows NT 4.0 Server》（特版）。他还为 QUE 写过关于 Windows 3.1 多媒体、Windows 95 和 Windows 2000 Server 的面向开发者的书籍；为 Osborne McGraw-Hill 写过 Active Directory 策略和 Visual Basic Web 服务；为 Microsoft Press 写过《Microsoft Office InfoPath 2003 SP-1》。Roger 担任 Redmond Media Group 的 Visual Studio Magazine 及其前身 Fawcette Technical Publications 的 Visual Basic Programmer's Journal 特约编辑超过 15 年。他的文章也发表在 Redmond Magazine，并为 Redmond Developer News 撰写“TechBriefs”和封面故事。
+`Roger` 编写的 26 本与计算机相关的书籍已有超过 125 万册英文在印，并已翻译成 20 多种语言。他为 `Wiley/Wrox` 出版了《Professional ADO.NET 3.5 with LINQ and the Entity Framework》和《Expert One-on-One Visual Basic 2005 Database Programming》；为 `SAMS Publishing` 出版了三版的《Database Developer's Guide to Visual Basic》和两版的《Access Developer's Guide》；为 `QUE Publishing` 出版了 11 版《Special Edition Using Microsoft Access》（特版）和两版的《Special Edition Using Windows NT 4.0 Server》（特版）。他还为 `QUE` 写过关于 `Windows 3.1` 多媒体、`Windows 95` 和 `Windows 2000 Server` 的面向开发者的书籍；为 `Osborne McGraw-Hill` 写过 `Active Directory` 策略和 `Visual Basic` Web 服务；为 `Microsoft Press` 写过《Microsoft Office InfoPath 2003 SP-1》。`Roger` 担任 `Redmond Media Group` 的 `Visual Studio Magazine` 及其前身 `Fawcette Technical Publications` 的 `Visual Basic Programmer's Journal` 特约编辑超过 15 年。他的文章也发表在 `Redmond Magazine`，并为 `Redmond Developer News` 撰写“`TechBriefs`”和封面故事。
 
-Roger 拥有 30 多年的计算机相关经验，始于由 Wang 700 计算器以及后的 Wang BASIC 微型驱动的实时医疗数据采集和化学过程控制系统。他是 OakLeaf Systems（一家位于加州北部的软件咨询公司）的主开发人员，也是 OakLeaf Systems 博客 ([`oakleafblog.com`](http://oakleafblog.com)) 的作者。联邦法规 (CFR) ASP.NET Web 服务获得了 Microsoft .NET 水平解决方案奖（[`bit.ly/Balng`](http://bit.ly/Balng), [www.microsoft.com/presspass/features/2002/aug02-07netwinners.mspx](http://www.microsoft.com/presspass/features/2002/aug02-07netwinners.mspx)）。
-
-## 致谢
-执行编辑：Bob Elliott
-项目编辑：Adaobi Obi Tulton
-技术编辑：Mike Amundsen, David Robinson
-制作编辑：Daniel Scribner
-校对编辑：Paula Lowell
-编辑总监：Robyn B. Siesky
-编辑经理：Mary Beth Wakefield
-制作经理：Tim Tate
-副总裁兼执行集团出版经理：Richard Swadley
-副总裁兼执行发行：Barry Pruett
-助理经理：Jim Minatel
-封面项目协调员：Lynsey Stanford
-校对：Nancy C. Hanger, Windhaven
-索引员：Robert Swanson
-封面图片：© Jupiter Images/Digital Vision
+`Roger` 拥有 30 多年的计算机相关经验，始于由 `Wang 700` 计算器以及后的 `Wang BASIC` 微型驱动的实时医疗数据采集和化学过程控制系统。他是 `OakLeaf Systems`（一家位于加州北部的软件咨询公司）的主开发人员，也是 `OakLeaf Systems` 博客 ([`oakleafblog.com`](http://oakleafblog.com)) 的作者。联邦法规 (CFR) `ASP.NET` Web 服务获得了 `Microsoft .NET` 水平解决方案奖（[`bit.ly/Balng`](http://bit.ly/Balng), [www.microsoft.com/presspass/features/2002/aug02-07netwinners.mspx](http://www.microsoft.com/presspass/features/2002/aug02-07netwinners.mspx)）。
 
 ## 致谢
-非常感谢技术编辑 Dave Robinson 和 Mike Amundsen 在各章节通过多次社区预览和 SQL Azure Database 中期调整期间提供的修正和建议。
 
-David Robinson 是 SQL Azure Database (SADB) 团队的高级计划经理。David 负责多项工作，包括驱动产品功能、代码示例，最重要的向客户展示 SADB 和云计算所提供的价值。David 喜欢进入社区，演示 SADB，收集反馈，并帮助确保 SADB 满足你提出的任何需求。David 还曾在 MSDN 杂志上写过关于基于 SADB 开发的文章。在加入 SADB 团队之前，David 是微软健康与生命科学团队的解决方案架构。在加入微软之前，David 曾在多家软件和咨询公司担任过各种高级职位。David 在 90 年代初在 Computer Associates 作为开发人员起家。工作之余，David 喜欢和妻子在一起，并照顾他们的四个小女儿。David 的博客地址为 [`bit.ly/qIT1S`](http://bit.ly/qIT1S), [`blogs.msdn.com/drobinson/default.aspx`](http://blogs.msdn.com/drobinson/default.aspx)。
+执行编辑：`Bob Elliott`
+项目编辑：`Adaobi Obi Tulton`
+技术编辑：`Mike Amundsen`, `David Robinson`
+制作编辑：`Daniel Scribner`
+校对编辑：`Paula Lowell`
+编辑总监：`Robyn B. Siesky`
+编辑经理：`Mary Beth Wakefield`
+制作经理：`Tim Tate`
+副总裁兼执行集团出版经理：`Richard Swadley`
+副总裁兼执行发行：`Barry Pruett`
+助理经理：`Jim Minatel`
+封面项目协调员：`Lynsey Stanford`
+校对：`Nancy C. Hanger`, `Windhaven`
+索引员：`Robert Swanson`
+封面图片：© `Jupiter Images/Digital Vision`
 
+## 致谢
 
+非常感谢技术编辑 `Dave Robinson` 和 `Mike Amundsen` 在各章节通过多次社区预览和 `SQL Azure Database` 中期调整期间提供的修正和建议。
 
+`David Robinson` 是 `SQL Azure Database (SADB)` 团队的高级计划经理。`David` 负责多项工作，包括驱动产品功能、代码示例，最重要的向客户展示 `SADB` 和云计算所提供的价值。`David` 喜欢进入社区，演示 `SADB`，收集反馈，并帮助确保 `SADB` 满足你提出的任何需求。`David` 还曾在 `MSDN` 杂志上写过关于基于 `SADB` 开发的文章。在加入 `SADB` 团队之前，`David` 是微软健康与生命科学团队的解决方案架构。在加入微软之前，`David` 曾在多家软件和咨询公司担任过各种高级职位。`David` 在 90 年代初在 `Computer Associates` 作为开发人员起家。工作之余，`David` 喜欢和妻子在一起，并照顾他们的四个小女儿。`David` 的博客地址为 [`bit.ly/qIT1S`](http://bit.ly/qIT1S), [`blogs.msdn.com/drobinson/default.aspx`](http://blogs.msdn.com/drobinson/default.aspx)。
 
+`Mike Amundsen` 是一位国际知名的作者和讲师，他穿梭于美国和欧洲，就 `.NET`、互联网、团队开发等广泛的话题进行演讲和教学。他已出版了十余部著作；他最受欢迎的作品包括《21 天用 `Visual Basic` 自学数据库程序设计》、《Using Visual InterDev》以及《ASP.NET for Developers》。在不旅行时，`Mike` 会待在位于肯塔基州的家中，与妻子和三个孩子一起度过。`Mike` 与 `Subbu Allamaraju` 正在编写《RESTful Web Services Cookbook》，该书将由 `O'Reilly Media` 于 2009 年底出版。`Mike` 的 `mca` 博客地址为 [www.amundsen.com/blog/](http://www.amundsen.com/blog/)。
 
-Mike Amundsen 是一位国际知名的作者和讲师，他穿梭于美国和欧洲，就 `.NET`、互联网、团队开发等广泛的话题进行演讲和教学。他已出版了十余部著作；他最受欢迎的作品包括《21 天用 Visual Basic 自学数据库程序设计》、《Using Visual InterDev》以及《ASP.NET for Developers》。在不旅行时，Mike 会待在位于肯塔基州的家中，与妻子和三个孩子一起度过。Mike 与 Subbu Allamaraju 正在编写《RESTful Web Services Cookbook》，该书将由 O'Reilly Media 于 2009 年底出版。Mike 的 `mca` 博客地址为 [www.amundsen.com/blog/](http://www.amundsen.com/blog/)。
-
-Wrox 执行编辑 Bob Elliott 说服我开始为 Wiley/Wrox 编写 `.NET` 开发者书籍。作为本书以及我在此之前的两本 Wiley/Wrox 书籍的项目编辑，Adaobi Obi Tulton 确保了各章节的编写进度不会落后计划太远，以便在 2009 年微软专业开发者大会上正式宣布 `Windows Azure Platform` 发布到网络之前交付本书。
+`Wrox` 执行编辑 `Bob Elliott` 说服我开始为 `Wiley/Wrox` 编写 `.NET` 开发者书籍。作为本书以及我在此之前的两本 `Wiley/Wrox` 书籍的项目编辑，`Adaobi Obi Tulton` 确保了各章节的编写进度不会落后计划太远，以便在 2009 年微软专业开发者大会上正式宣布 `Windows Azure Platform` 发布到网络之前交付本书。
 
 # 引言
 
-云计算在 2008 年年中成为一个热门话题，并到 2009 年年中已达到顶级流行词的地位。作为其受欢迎程度的证明，2009 年 8 月中旬在 [Bing.com](http://Bing.com) 上搜索“cloud computing”返回了 9200 万次结果。几乎没有哪一周全球范围内某处没有举办一场云计算会议。《富布斯》（Forbes）和《商业周报》（Business Week）等主流商业杂志经常刊登云计算专题文章和综合特别报告，例如《商业周报》 2009 年 6 月 5 日出版的《云计算对业务的大爆炸》，该文展示了 Serena Software、Optum Health、Genentech、可口可乐企业和 Info Tech 使用云服务的案例（[`bit.ly/uecfb`](http://bit.ly/uecfb), [www.businessweek.com/magazine/toc/09_24/B4135cloud_computing.htm](http://www.businessweek.com/magazine/toc/09_24/B4135cloud_computing.htm)）。在该周早些时候，微软首席执行官 Ray Ozzie 在硅谷丘奇尔俱乐部（Churchill Club）发表了关于“云计算的潜力”的演讲（[`bit.ly/g2wqn`](http://bit.ly/g2wqn), [www.churchillclub.org/eventDetail.jsp?EVT_ID=820](http://www.churchillclub.org/eventDetail.jsp?EVT_ID=820)）。TechCrunchIT 的 Leena Rao 在 2009 年 6 月 4 日的文章中引用了 Ozzie 的话（[`bit.ly/1h01j`](http://bit.ly/1h01j), [www.techcrunchit.com/2009/06/04/liveblogging-microsofts-ray-ozzie-on-the-potential-of-cloud-computing](http://www.techcrunchit.com/2009/06/04/liveblogging-microsofts-ray-ozzie-on-the-potential-of-cloud-computing/))：
+云计算在 2008 年年中成为一个热门话题，并到 2009 年年中已达到顶级流行词的地位。作为其受欢迎程度的证明，2009 年 8 月中旬在 [Bing.com](http://Bing.com) 上搜索“cloud computing”返回了 9200 万次结果。几乎没有哪一周全球范围内某处没有举办一场云计算会议。《富布斯》（Forbes）和《商业周报》（Business Week）等主流商业杂志经常刊登云计算专题文章和综合特别报告，例如《商业周报》 2009 年 6 月 5 日出版的《云计算对业务的大爆炸》，该文展示了 `Serena Software`、`Optum Health`、`Genentech`、可口可乐企业和 `Info Tech` 使用云服务的案例（[`bit.ly/uecfb`](http://bit.ly/uecfb), [www.businessweek.com/magazine/toc/09_24/B4135cloud_computing.htm](http://www.businessweek.com/magazine/toc/09_24/B4135cloud_computing.htm)）。在该周早些时候，微软首席执行官 `Ray Ozzie` 在硅谷丘奇尔俱乐部（`Churchill Club`）发表了关于“云计算的潜力”的演讲（[`bit.ly/g2wqn`](http://bit.ly/g2wqn), [www.churchillclub.org/eventDetail.jsp?EVT_ID=820](http://www.churchillclub.org/eventDetail.jsp?EVT_ID=820)）。`TechCrunchIT` 的 `Leena Rao` 在 2009 年 6 月 4 日的文章中引用了 `Ozzie` 的话（[`bit.ly/1h01j`](http://bit.ly/1h01j), [www.techcrunchit.com/2009/06/04/liveblogging-microsofts-ray-ozzie-on-the-potential-of-cloud-computing](http://www.techcrunchit.com/2009/06/04/liveblogging-microsofts-ray-ozzie-on-the-potential-of-cloud-computing/)）：
 
-从本质上说，`Windows Azure` 的本质……使人们能够以尽可能小的更改封装现有的 Windows Server 工作负载，从而移动到公有云或私有云环境中。它正在制定程序设计模式和基础设施——这就是理想的云计算结构面貌，这就是你如何构建一个具有弹性伸缩能力的程序等等……
+从本质上说，`Windows Azure` 的本质……使人们能够以尽可能小的更改封装现有的 `Windows Server` 工作负载，从而移动到公有云或私有云环境中。它正在制定程序设计模式和基础设施——这就是理想的云计算结构面貌，这就是你如何构建一个具有弹性伸缩能力的程序等等……
 
-当被主持人 Steven Levy 问到“有多少家公司可以构建大型云？”时，Ozzie 回答道：
+当被主持人 `Steven Levy` 问到“有多少家公司可以构建大型云？”时，`Ozzie` 回答道：
+
+```
+```
+
+
 
 没多少。我不知道 Amazon {。他们是领导者。他们做了令人惊叹的工作。但 [Windows] 服务器企业级部署的规模是非常巨大的。我们有许多使用 `Exchange` 和 `SharePoint` 的公司想要进入这一基础设施……这是一项巨大的投资。
 
@@ -219,10 +235,6 @@ Ozzie 针对 Levy 的问题“与其他科技公司相比，你们云计算的�
 
 SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架以及新命名的 Data Hub（原代号 Huron）发挥他们的 Trans-SQL 长。Data Hub 在本地、移动和 Azure 数据库之间同步架构和表行。开发机上的 SQL Server 管理工具只需更改登录对话框中的服务器 DNS 名称即可连接到 SQL Server 数据库。管理 SADB 通过 TCP 端口 1433 上的 SQL Server 传统传输数据流 (`TDS`) 协议运行 T-SQL，并使用 .NET `SqlClient` 类。或者，ADO.NET Data Services（原 Project Astoria）通过 HTTP[S] 提供对 SADB 数据的 RESTful 访问。
 
-
-
-
-
 .NET 开发人员、软件架构师和开发管理人员是本书的主要读者，但 IT 执行人员和经理可能也会发现关于 Windows Azure 服务审计治理和安全的详细信息非常有用。例如，第 5 章“迁移到 Azure 云服务时最小化风险”观察了对云治理和安全审计的需求，并随后描述了审计标准声明 (`SAS`) 70 I 型和 II 型证明，以及微软数据中心在 2009 年年中获得的 `ISO/IEC 27001:2005` 认证。
 
 微软是第一个为其数据中心同时获得 `SAS` 70 I 型和 II 型证明以及 `ISO/IEC 27001:2005` 认证的主要 PaaS 云服务提供商。
@@ -241,31 +253,27 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 第一部分致力于通用的云计算主题、Windows Azure 基础设施和 `Azure Storage Services`。
 
-*   **第 1 章**“云计算的角色概述”从云计算的定义及其估计市场规模开始，讨论了将应用程序和服务迁移到云端的原因，概述了云计算的历史及其祖先（如 `Oracle's Network Computer`），然后继续描述了各种 `aaS` 变体，例如“数据即服务 (DaaS)”、“软件即服务 (SaaS)”以及微软的“软件+服务”，以及云计算的本体论。本章以关于美国国家标准与技术研究院 (`NIST`) 的《云计算草案工作定义 v13》和《有效且安全地使用云计算范式的演示 v22》（发布于 `[`bit.ly/KQ2ZZ`](http://bit.ly/KQ2ZZ)`、`[`csrc.nist.gov/groups/SNS/cloud-computing/index.html`](http://csrc.nist.gov/groups/SNS/cloud-computing/index.html)`）的细节作为结束。
+* **第 1 章**“云计算的角色概述”从云计算的定义及其估计市场规模开始，讨论了将应用程序和服务迁移到云端的原因，概述了云计算的历史及其祖先（如 `Oracle's Network Computer`），然后继续描述了各种 `aaS` 变体，例如“数据即服务 (DaaS)”、“软件即服务 (SaaS)”以及微软的“软件+服务”，以及云计算的本体论。本章以关于美国国家标准与技术研究院 (`NIST`) 的《云计算草案工作定义 v13》和《有效且安全地使用云计算范式的演示 v22》（发布于 [`bit.ly/KQ2ZZ`](http://bit.ly/KQ2ZZ)`、[`csrc.nist.gov/groups/SNS/cloud-computing/index.html`](http://csrc.nist.gov/groups/SNS/cloud-computing/index.html)`）的细节作为结束。
 
-*   **第 2 章**“理解 Windows Azure 平台架构”从描述 Windows Azure 平台的组件开始，包括用于管理托管应用程序和服务的 `Azure Development Portal`，以及实现 `Developer Fabric` 和 `Developer Storage` 以在开发人员计算机上模拟云服务的 `Azure Development Platform`。随后介绍了 `Windows Azure SDK` 以及通过 `Windows Azure Tools for Visual Studio` 添加到 `VS 2008` 中的模板，本章继续介绍了关于 `.NET Services`、`Service Bus`、`Workflow services` 以及将解决方案部署到 Azure 云的细节。
+* **第 2 章**“理解 Windows Azure 平台架构”从描述 Windows Azure 平台的组件开始，包括用于管理托管应用程序和服务的 `Azure Development Portal`，以及实现 `Developer Fabric` 和 `Developer Storage` 以在开发人员计算机上模拟云服务的 `Azure Development Platform`。随后介绍了 `Windows Azure SDK` 以及通过 `Windows Azure Tools for Visual Studio` 添加到 `VS 2008` 中的模板，本章继续介绍了关于 `.NET Services`、`Service Bus`、`Workflow services` 以及将解决方案部署到 Azure 云的细节。
 
-*   **第 3 章**“分析 Windows Azure 操作系统”深入研究了 `Azure Fabric Controller`，它处理应用程序/服务的部署、负载均衡、操作系统/数据复制和资源管理。随后描述了物理节点与逻辑角色及其托管的服务之间的关系，以及如何为新的生产项目创建宿主机和虚拟机 (`VMs`)。接着讨论了升级域（upgrade domains）的作用（它支持对 Windows Azure 操作系统进行滚动服务软件更新和补丁），以及用于高可用服务的故障域（fault domains），以及底层架构在多租户环境中如何维护租户隐私。本章以以供 Azure 使用的 Windows Server 虚拟化细节作为结束。
+* **第 3 章**“分析 Windows Azure 操作系统”深入研究了 `Azure Fabric Controller`，它处理应用程序/服务的部署、负载均衡、操作系统/数据复制和资源管理。随后描述了物理节点与逻辑角色及其托管的服务之间的关系，以及如何为新的生产项目创建宿主机和虚拟机 (`VMs`)。接着讨论了升级域（upgrade domains）的作用（它支持对 Windows Azure 操作系统进行滚动服务软件更新和补丁），以及用于高可用服务的故障域（fault domains），以及底层架构在多租户环境中如何维护租户隐私。本章以以供 Azure 使用的 Windows Server 虚拟化细节作为结束。
 
-*   **第 4 章**“扩展 Azure 表和 Blob 存储”解释了如何创建 Azure 存储账户，描述了如何使用 `Fiddler2` 网络调试代理查看 `HTTP` 请求和响应消息，分析了示例 `C# StorageClient` 库如何简化存储编程，然后详细介绍了将 Azure 表和 blobs 用作 `WebRoles` 数据源的编程技术。源代码包含了部署到云端的表（`[oakleaf.cloudapp.net](http://oakleaf.cloudapp.net)`）和 blobs（`[oakleaf2.cloudapp.net](http://oakleaf2.cloudapp.net)`）的示例 `C#` 解决方案。
+* **第 4 章**“扩展 Azure 表和 Blob 存储”解释了如何创建 Azure 存储账户，描述了如何使用 `Fiddler2` 网络调试代理查看 `HTTP` 请求和响应消息，分析了示例 `C# StorageClient` 库如何简化存储编程，然后详细介绍了将 Azure 表和 blobs 用作 `WebRoles` 数据源的编程技术。源代码包含了部署到云端的表（[oakleaf.cloudapp.net](http://oakleaf.cloudapp.net)）和 blobs（[oakleaf2.cloudapp.net](http://oakleaf2.cloudapp.net)）的示例 `C#` 解决方案。
 
-## 第二部分：在企业中利用云服务
+### 第二部分：在企业中利用云服务
 
 第二部分向你展示如何通过传输和存储数据加密、基础云身份验证和授权技术解决企业规模的业务问题，提高 Azure 表的可扩展性并实现事务，以及通过 Azure 队列和 `WorkerRoles` 并行处理计算操作。
 
-*   **第 5 章**“迁移到 Azure 云服务时最小化风险”首先讨论了加州大学伯克利分校白皮书《云端之上：伯克利分角的云计算视角》中的“云计算增长的 10 大阻碍与机遇”、服务水平协议 (`SLAs`) 以及 `NIST` 对 IT 相关风险的定义，以及联邦机构部署云服务的计划。随后分析了相关法规，例如《格拉姆-莱奇-布莱利法案 (`GLB`)》、《萨班斯-奥克斯法案 (`SOX`)》、《健康保险流动性与责任法 (`HIPAA`)》和《反腐败法》，以及需要审计的支付行业数据安全标准 (`PCC-DSS`)。随后提供了实现 `WebRoles` 的安全套接层 (`SSL`) 传输加密、Azure Data Services 的 `TLS` 以及 Azure Storage Services 中个人信息加密的代码。本章以关于审计符合法规和行业标准的章节结束。
+* **第 5 章**“迁移到 Azure 云服务时最小化风险”首先讨论了加州大学伯克利分校白皮书《云端之上：伯克利分角的云计算视角》中的“云计算增长的 10 大阻碍与机遇”、服务水平协议 (`SLAs`) 以及 `NIST` 对 IT 相关风险的定义，以及联邦机构部署云服务的计划。随后分析了相关法规，例如《格拉姆-莱奇-布莱利法案 (`GLB`)》、《萨班斯-奥克斯法案 (`SOX`)》、《健康保险流动性与责任法 (`HIPAA`)》和《反腐败法》，以及需要审计的支付行业数据安全标准 (`PCC-DSS`)。随后提供了实现 `WebRoles` 的安全套接层 (`SSL`) 传输加密、Azure Data Services 的 `TLS` 以及 Azure Storage Services 中个人信息加密的代码。本章以关于审计符合法规和行业标准的章节结束。
 
-*   **第 6 章**“对服务用户进行身份验证和授权”向你展示如何使用 `AspProviders` 类库以及 `TableStorageMembershipProvider`、`TableStorageRoleProvider`、`TableStorageProfileProvider` 和 `TableStorageSessionProvider` 类将 `.NET` 身份验证和角色管理适配到 Azure `WebRoles`。本章以 `ASP.NET Membership` 服务与 Azure 服务的细节结束。
+* **第 6 章**“对服务用户进行身份验证和授权”向你展示如何使用 `AspProviders` 类库以及 `TableStorageMembershipProvider`、`TableStorageRoleProvider`、`TableStorageProfileProvider` 和 `TableStorageSessionProvider` 类将 `.NET` 身份验证和角色管理适配到 Azure `WebRoles`。本章以 `ASP.NET Membership` 服务与 Azure 服务的细节结束。
 
-*   **第 7 章**“优化 Azure 表的可扩展性和性能”描述了如何选择 `PartitionKey` 和 `RowKey` 值的最佳组合（这些值对应于关系表的复合主键），如何处理关联实体（子或父实体），以及利用 Azure 团队在 Windows Azure 2009 年 5 月 CTP 中引入的实体组事务 (Entity Group Transactions)。提供了使用 `ADO.NET Data Services` 上传同构（父或子实体）和异构（父和子实体）表的示例，并附带性能比较。本章以在链接的父/子 `ASP.NET DataGrid` 控件中显示异构实体的代码结束。
-
-
-
-
+* **第 7 章**“优化 Azure 表的可扩展性和性能”描述了如何选择 `PartitionKey` 和 `RowKey` 值的最佳组合（这些值对应于关系表的复合主键），如何处理关联实体（子或父实体），以及利用 Azure 团队在 Windows Azure 2009 年 5 月 CTP 中引入的实体组事务 (Entity Group Transactions)。提供了使用 `ADO.NET Data Services` 上传同构（父或子实体）和异构（父和子实体）表的示例，并附带性能比较。本章以在链接的父/子 `ASP.NET DataGrid` 控件中显示异构实体的代码结束。
 
 * 第 8 章“使用 Azure 队列进行通信”解释了将计算服务卸载到一个或多个 `WorkerRoles` 的优势，并描述了如何使用 `QueueStorage`、`MessageQueue`、`QueueProperties` 和 `Message` 类以及 `MessageReceivedEventHandler` 委托创建并处理 Azure 队列。该章还描述了如何增强 `Thumbnails.sln` 示例解决方案，并在轮询 blob 更新时尽量减少网络流量。位于 [oakleaf5.cloudapp.net/](http://oakleaf5.cloudapp.net/) 的最终照片库 Azure 队列测试框架示例项目包含一个通过队列从本地图形文件添加图像 blob 的 `GridView`。
 
-# 第三部分：应对高级 Azure 服务技术
+### 第三部分：应对高级 Azure 服务技术
 
 第三部分介绍了使用 Microsoft .NET Services SDK 编程 .NET 服务成员——访问控制服务 (ACS)、.NET 服务总线 (SB) 和工作流服务 (WF)。
 
@@ -275,7 +283,7 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 * 第 11 章“探索 .NET [工作流服务和] 服务总线队列与路由器”解释了如何使用 `QueueManagementClient` 类在服务总线队列 (SBQs) 中持久化消息，并使用服务总线路由器 (SBR) 传递消息。该章的在线版本（将在 .NET 4 发布后提供）将使用 `CheckScoreWorkflow.sln` 示例项目引入 WF 云端应用架构和 .NET 服务门户的工作流管理页面。
 
-# 第四部分：使用 SQL Azure 服务（仅限在线）
+### 第四部分：使用 SQL Azure 服务（仅限在线）
 
 微软 SQL Server 团队宣布其意图将其原始的无模式实体-属性-值 (EAV) 数据模型的 SQL Server 数据服务 (SSDS) 实现替换为完全相关的 SQL 数据服务 (SDS)，也称为“云端 SQL Server”，并在 2009 年 7 月通过受邀请的 CTP 引入了 SDS。SDS 团队在 2009 年 7 月初将 SDS 改名为 SQL Azure Database。第一版（2009 年 8 月）SADB CTP 太晚，未能包含在本的第一版中，因此第四部分的章节将从源代码和工作流相同的地点下载，即 Wrox 网站上的书籍页面（[www.wrox.com](http://www.wrox.com)）。
 
@@ -284,7 +292,7 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 * 第 12 章：“管理 SQL Azure 账户、数据库和数据中心”
 * 第 13 章：“利用 SQL Azure Database 的关系特性”
 
-# 约定
+### 约定
 
 为了帮助你从文本中获得最大收益并跟踪进展，Wrox 在全书中使用了多种约定。
 
@@ -298,10 +306,10 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 * 长 URL 通过 [`bit.ly`](http://bit.ly) 缩短为 [`bit.ly/sJbNe`](http://bit.ly/sJbNe) 等 URI 以减少输入量，并在后面附跟该项目的原始 URI 以防不匹配。
 * 代码中的可替换值使用斜体：`tableName.entityName`。
 * 代码以两种方式呈现：
-    使用无高亮的等宽字体适用于大多数代码示例。
-    使用灰色高亮强调在当前语境下特别重要的代码。
+    * 使用无高亮的等宽字体适用于大多数代码示例。
+    * 使用灰色高亮强调在当前语境下特别重要的代码。
 
-# 源代码和在线章节
+### 源代码和在线章节
 
 在学习本书中的示例时，你可以选择手动输入所有代码，也可以使用随书的源代码文件。本书中使用的所有代码均可在 [www.wrox.com](http://www.wrox.com) 下载。进入网站后，只需找到书名（通过使用搜索框或标题列表之一），然后点击书籍详情页上的“下载代码”链接即可获取该书的所有源代码。
 
@@ -309,7 +317,9 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 下载代码后，只需用你喜欢的归档工具对其进行解压即可。或者，你可以前往 Wrox 代码下载主页 [www.wrox.com/dynamic/books/download.aspx](http://www.wrox.com/dynamic/books/download.aspx) 查看此书及所有其他 Wrox 书籍的代码。
 
-# 勘误
+### 勘误
+
+
 
 我们尽力确保文本或代码中没有错误。然而，没有人是完美的，错误确实会发生。如果你在我们的书中发现任何错误（例如拼写错误或代码故障），我们将非常感谢你的反馈。提交勘误可以节省其他读者的小时困扰，同时也帮助我们提供更准确的信息。
 
@@ -328,22 +338,21 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 3. 填写加入所需的强制信息以及任何你想提供的可选信息，然后点击“Submit”。
 4. 你将收到一封电子邮件，其中说明了如何验证你的账户并完成加入流程。
 
-
-
-
-
 欲了解更多关于如何使用 Wrox P2P 信息，请务必阅读 P2P FAQ，以获取有关论坛软件如何工作以及许多针对 P2P 和 Wrox 书籍的常见问题的解答。要阅读 FAQ，请点击任何 P2P 上的 FAQ 链接。
 
 # 第一部分：介绍 Windows Azure 平台
 
 ## 第 1 章：概述的角色
+
 ## 第 2 章：理解 Windows Azure 平台架构
+
 ## 第 3 章：分析 Windows Azure 操作系统
+
 ## 第 4 章：扩展 Azure 表和 Blob 存储
 
 # 第 1 章：概述云计算的角色
 
-云计算一术语意味着通过公共互联网的 `TCP/IP` 连接访问第三方提供的远程计算服务。网络图中的云符号最初代表任何类型的多用户网络，但在 20 世纪 90 年代中期专门与公共互联网相关联。例如，以下是维基百科截至 2009 年 1 月中旬对云计算的第一个段落定义：
+云计算一术语意味着通过公共互联网的`TCP/IP`连接访问第三方提供的远程计算服务。网络图中的云符号最初代表任何类型的多用户网络，但在 20 世纪 90 年代中期专门与公共互联网相关联。例如，以下是维基百科截至 2009 年 1 月中旬对云计算的第一个段落定义：
 
 > 云计算是基于互联网（“云”）的计算机技术开发和使用（“计算”）。它是一种计算风格，通过互联网以“服务”的形式向用户提供资源，这些用户无需对支持他们的技术基础设施（“云端”）具有知识、专业知识或控制权。
 
@@ -351,11 +360,9 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 > 在互联网上以服务形式提供的可扩展 IT 相关能力。
 
-上述定义涵盖了几乎所有常见的基于互联网的活动，从个人发送电子邮件和查看网页，到零售商为在线购物处理信用卡和借记卡费用。谷歌首席执行官埃里克·施密特（Eric Schmidt）在 2006 年 8 月 9 日搜索引擎策略会议接受丹尼·苏利文采访时缩小了定义（转录自 `http://bit.ly/wday4`、`www.google.com/press/podium/ses2006.html`）：
+上述定义涵盖了几乎所有常见的基于互联网的活动，从个人发送电子邮件和查看网页，到零售商为在线购物处理信用卡和借记卡费用。谷歌首席执行官埃里克·施密特（Eric Schmidt）在 2006 年 8 月 9 日搜索引擎策略会议接受丹尼·苏利文采访时缩小了定义（转录自`http://bit.ly/wday4`、`www.google.com/press/podium/ses2006.html`）：
 
 > [现在]有趣的是，出现了一种新兴的新模型，你们大家在这里是因为你们是这个新模型的一部分。我不认为人们已经真正理解这个机会到底有多大。它始于这样一个前提：数据服务和架构应该在服务器上。我们称之为云计算——它们应该在某处的“云”中。而且，如果你有正确的浏览器或正确的访问方式，无论你拥有 PC、Mac、手机、黑莓手机还是什么——或者仍待开发的新设备——你都可以访问云。有很多公司从中受益。显然，想到了 Google、Yahoo!、eBay、Amazon。计算和数据等都在服务器中。[**强调处已添加**]
-
-。
 
 施密特先生被许多人认为是 2008 年及以后在其具化语境下“云计算”一术语的首位使用者，但该术语直到 2007 年 9 月左右才达到 Google Trends 服务的收录门槛（参见 图 1.1）。施密特先生在上述引言中假设，云计算服务器提供的数据服务是由拥有服务器的组织定义的，特别是 Google、Yahoo!、eBay 和 Amazon。
 
@@ -388,25 +395,20 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 第 2 章“理解 Windows Azure 平台架构”以及第一部分“介绍 Windows Azure 平台”的其余章节描述了 Windows Azure 的底层架构及其面向企业的功能库。
 
-为什么要将应用程序和服务迁移到云端？
+## 为什么要将应用程序和服务迁移到云端？
 
 云计算正在获得大量的媒体报道，引发了层层不断的会议，增加了 IT 管理的关注和大量的软件开发人员资源，因为它让小型、中型企业能够：
 
 *   通过减少部署固定 IT 资产（如服务器、交换机和路由器）的时间并消除这些资产相关的增量资本投资，更快地将新产品或服务推向市场。
 *   快速进行市场测试并在市场、产品或服务不符合预期时通过快速失败来限制损失。
 *   在初步市场测试结果出来后再进行长期规划。
-
-
-
-
-
--   将为了适应周期性使用峰值而产生的额外容量资本支出（例如宣布季节性折扣或新软件版本后出现的峰值）替换为基于用量的按月付费。
+*   将为了适应周期性使用峰值而产生的额外容量资本支出（例如宣布季节性折扣或新软件版本后出现的峰值）替换为基于用量的按月付费。
 
 如果初始市场测试成功，从云端提供软件应用程序或服务可以让业务部门快速部署新产品，并几乎立即扩展应用程序或服务以满足客户需求。对于高级管理层，采用云计算的关键在于其能够将 IT 资本投资转换为基于用量的运营支出。
 
-## 云计算的祖先
+# 云计算的祖先
 
-在客户端，许多计算机硬件和软件供应商接受了通过设计和营销网络化无盘工作站（也称为瘦客户端）来打破 PC 市场中 `Microsoft/Intel` 霸权的挑战。`Microsoft` 将其自己的瘦 Internet 客户端作为 `Web TV` 顶盒提供，并使用带有 `Zero-Administration Windows`（又简称 `ZAW`）的 `NetPC` 客户端连接到局内网。这些客户端设计通过消除本地固定硬盘降低了成本，并依赖网络服务器来加载应用程序和存储用户文件。然而，瘦客户端的价格还不够低，无法从无处不在的 `Windows PC` 手中获得大量的市场份额。
+在客户端，许多计算机硬件和软件供应商接受了通过设计和营销网络化无盘工作站（也称为瘦客户端）来打破 PC 市场中`Microsoft/Intel`霸权的挑战。`Microsoft`将其自己的瘦 Internet 客户端作为`Web TV`顶盒提供，并使用带有`Zero-Administration Windows`（又简称`ZAW`）的`NetPC`客户端连接到局内网。这些客户端设计通过消除本地固定硬盘降低了成本，并依赖网络服务器来加载应用程序和存储用户文件。然而，瘦客户端的价格还不够低，无法从无处不在的`Windows PC`手中获得大量的市场份额。
 
 新的笔记本电脑平台在云计算获得广泛关注之际恰出现在笔记本 PC 市场，似乎提供了足够的成本激励来实现规模化生产。笔记本电脑通常提供容量小于主流笔记本或固态硬盘（`SSDs`）的传统硬盘。
 
@@ -414,43 +416,40 @@ SQL Server DBA 和数据库架构师可以利用 SQL Azure、微软同步框架�
 
 ## 无盘工作站与瘦客户端
 
-`Oracle` 在 20 世纪 90 年代提出的网络计算机（`NC`）概念可能是云计算最直接的祖先。`Oracle` 在 1996 年为“网络计算机”一词注册了商标，用于业务用途的无盘网络客户端，并建立了“网络计算机参考规范”。该配置规范要求所有 `NC` 设备都支持 `HTML`、`HTTP`、`Java` 以及其他与互联网相关的标准。`NC` 相比 `PC` 的价格优势（如果有的话）不足以在企业中建立重大的市场，而且拨号连接的糟糕体验阻碍了消费者对 `NetPC` 的使用。
+`Oracle`在 20 世纪 90 年代提出的网络计算机（`NC`）概念可能是云计算最直接的祖先。`Oracle`在 1996 年为“网络计算机”一词注册了商标，用于业务用途的无盘网络客户端，并建立了“网络计算机参考规范”。该配置规范要求所有`NC`设备都支持`HTML`、`HTTP`、`Java`以及其他与互联网相关的标准。`NC`相比`PC`的价格优势（如果有的话）不足以在企业中建立重大的市场，而且拨号连接的糟糕体验阻碍了消费者对`NetPC`的使用。
 
-`Microsoft` 和 `Intel` 产生了一种名为 `NetPC` 的竞争标准，以与 `NC` 规范竞争。1997 年，`Dell Computer` 推出了一款密封式 `PC`，没有软盘驱动器、`CD 驱动器`或其他可选组件，运行 `Windows NT 4.0 Workstation`。`Compa` 和 `HP` 在 1997 年年中引入了运行 `ZAW` 的类似 `NetPC` 工作站。
+`Microsoft`和`Intel`产生了一种名为`NetPC`的竞争标准，以与`NC`规范竞争。1997 年，`Dell Computer`推出了一款密封式`PC`，没有软盘驱动器、`CD 驱动器`或其他可选组件，运行`Windows NT 4.0 Workstation`。`Compa`和`HP`在 1997 年年中引入了运行`ZAW`的类似`NetPC`工作站。
 
-`Sun Microsystems` 拥有注册商标的“网络即计算机”格号，促成了其用 `JavaStations` 替代 `PC` 的倡议，该设备使用了运行在 `SPARC` 处理器上的 `Java` 操作系统。`IBM` 通过 `Network Stations` 涉足了无盘工作站市场。`JavaStations` 和 `Network Stations` 与 `NC` 具有相同的技术问题。`Wyse Technology, Inc.` 原是大型主机和微型计算机终端制造商，在 20 世纪 90 年进入 PC 市场，随后扩展到 `NC` 领域。
+`Sun Microsystems`拥有注册商标的“网络即计算机”格号，促成了其用`JavaStations`替代`PC`的倡议，该设备使用了运行在`SPARC`处理器上的`Java`操作系统。`IBM`通过`Network Stations`涉足了无盘工作站市场。`JavaStations`和`Network Stations`与`NC`具有相同的技术问题。`Wyse Technology, Inc.`原是大型主机和微型计算机终端制造商，在 20 世纪 90 年进入 PC 市场，随后扩展到`NC`领域。
 
-这些瘦客户端具有足够的计算能力运行网络浏览器和从 Web 按需下载的几个简单应用程序，但依赖于网络磁盘存储。`Oracle` 首席执行官 `Larry Ellison` 在 2000 年左右放弃了 `NC` 项目，`Sun` 也放弃了 `JavaStation`。`NetPCs` 和 `ZAW` 的境地并不好；在这些美国瘦客户端“朝圣者”中，只有 `Wyse` 在 2009 年仍在生产大量用于业务的专用瘦客户端工作站。
+这些瘦客户端具有足够的计算能力运行网络浏览器和从 Web 按需下载的几个简单应用程序，但依赖于网络磁盘存储。`Oracle`首席执行官`Larry Ellison`在 2000 年左右放弃了`NC`项目，`Sun`也放弃了`JavaStation`。`NetPCs`和`ZAW`的境地并不好；在这些美国瘦客户端“朝圣者”中，只有`Wyse`在 2009 年仍在生产大量用于业务的专用瘦客户端工作站。
 
-随着 `VMware Inc.` 发布 `VMware View Open Client`，瘦客户端可能会回归，这是一种最近开源的桌面基础设施客户端，允许将 `Linux` 桌面或笔记本电脑连接到由 `VMware View` 管理的托管虚拟 `Windows` 桌面。`Gartner` 预测：
+随着`VMware Inc.`发布`VMware View Open Client`，瘦客户端可能会回归，这是一种最近开源的桌面基础设施客户端，允许将`Linux`桌面或笔记本电脑连接到由`VMware View`管理的托管虚拟`Windows`桌面。`Gartner`预测：
 
 *   到 2013 年，将购买约 5000 万份托管虚拟桌面的用户许可。
 *   瘦客户端终端将占托管虚拟桌面部署用户设备的约 40%。
 
 ## Web TV 及其克隆体或后代
 
-`Microsoft` 于 1997 年 8 月收购了 `WebTV Networks`，该公司运营一家在线消费者网络服务，并授权了一种传统电视机作为显示器的无盘工作站设计。当时，`WebTV Networks` 有约 15 万订阅用户；`Sony` 和 `Philips` 都在授权生产 `WebTV` 顶盒。`Microsoft` 在 2001 年购买了 `WebTV Networks` 的用户用于 `Microsoft Network`（`MSN`），终止了 `Sony Electronics` 和 `Philips Consumer Electronics` 的授权，并将 `WebTV` 品牌改为 `MSN TV`。`Thomson` 仍是 `RCA` 品牌下唯一的美国顶盒授权商。
+`Microsoft`于 1997 年 8 月收购了`WebTV Networks`，该公司运营一家在线消费者网络服务，并授权了一种传统电视机作为显示器的无盘工作站设计。当时，`WebTV Networks`有约 15 万订阅用户；`Sony`和`Philips`都在授权生产`WebTV`顶盒。`Microsoft`在 2001 年购买了`WebTV Networks`的用户用于`Microsoft Network`（`MSN`），终止了`Sony Electronics`和`Philips Consumer Electronics`的授权，并将`WebTV`品牌改为`MSN TV`。`Thomson`仍是`RCA`品牌下唯一的美国顶盒授权商。
 
-`America Online` 在 2000 年推出了 `AOL-TV`，这是 `WebTV` 的仿品。1999 年，`AOL` 与 `Liberate Technologies`（前身为 `NCI` 或 `Network Computers, Inc.`，`NetChannel` 等瘦客户端系统的创建者）合作，为其顶盒编写软件。据报道，`AOL` 在 1997 年 12 月曾以 6500 万美元报价 `NetChannel`，但谈判破裂了，`AOL` 停止了对 `NetChannel` 的资金支持。在 1998 年 5 月 3 日关闭对其 1 万名订阅者的服务后，`AOL` 最终支付了 2900 万美元购买 `NetChannel`。`Thomson` 是 `NetChannel` 顶盒的生产者，但 `Philips` 制造了 `AOL-TV` 的顶盒，售价为 249.95 美元。`AOL-TV` 的订阅费用为每月 14.95 美元，此外还有当时时每月 21.95 美元的 PC 服务费。
+`America Online`在 2000 年推出了`AOL-TV`，这是`WebTV`的仿品。1999 年，`AOL`与`Liberate Technologies`（前身为`NCI`或`Network Computers, Inc.`，`NetChannel`等瘦客户端系统的创建者）合作，为其顶盒编写软件。据报道，`AOL`在 1997 年 12 月曾以 6500 万美元报价`NetChannel`，但谈判破裂了，`AOL`停止了对`NetChannel`的资金支持。在 1998 年 5 月 3 日关闭对其 1 万名订阅者的服务后，`AOL`最终支付了 2900 万美元购买`NetChannel`。`Thomson`是`NetChannel`顶盒的生产者，但`Philips`制造了`AOL-TV`的顶盒，售价为 249.95 美元。`AOL-TV`的订阅费用为每月 14.95 美元，此外还有当时时每月 21.95 美元的 PC 服务费。
 
-2004 年，当 `MSN TV 2` 带有运行 `Windows CE` 操作系统的顶盒推出，并提供宽带接入以及拨号上网连接时，分析师估计 `MSN TV` 有约百万订阅用户。
+2004 年，当`MSN TV 2`带有运行`Windows CE`操作系统的顶盒推出，并提供宽带接入以及拨号上网连接时，分析师估计`MSN TV`有约百万订阅用户。
 
-截至 2009 年初，`RCA MSN TV 2` 互联网和媒体播放器的建议零售价（MSRP）为 199.95 美元，可通过 `Amazon.com` 和其他少数零售商在线购买，但当时处于 `Microsoft` 的缺货状态。（Circuit City 作为唯一的商店 MSN TV 2 零售商，于 2009 年 1 月自愿清算。）`Microsoft` 在 PressPass 上的 `MSN Services Fact Sheet` 页面自 2006 年 5 月以来没有变化，这可能表明 `Microsoft` 对继续投入资源开发 MSN 2 缺乏兴趣。
+截至 2009 年初，`RCA MSN TV 2`互联网和媒体播放器的建议零售价（MSRP）为 199.95 美元，可通过`Amazon.com`和其他少数零售商在线购买，但当时处于`Microsoft`的缺货状态。（Circuit City 作为唯一的商店 MSN TV 2 零售商，于 2009 年 1 月自愿清算。）`Microsoft`在 PressPass 上的`MSN Services Fact Sheet`页面自 2006 年 5 月以来没有变化，这可能表明`Microsoft`对继续投入资源开发 MSN 2 缺乏兴趣。
 
 ## 笔记本客户端
 
-笔记本电脑是为无线网络、接入互联网、长电池寿命和物理坚固性设计的小型 PC。笔记本电脑平台源于 `Nicholas Negroponte` 的“每个孩子一台电脑`OLPC`）计划，其使命是“通过为世界上最贫困的孩子提供一台耐用、低成本、低功耗、联网的电脑，创造协作、快乐、自主的学习机会。”原始 `OX-1` 型号于 2007 年底大规模生产，目标是在 2008 年向第三世界国家提供 100 美元的价格。`OX-1` 特是 `AMD CPU`、1200 x 900 像素、7.5 英寸（对角线）`LCD` 显示、256MB `DRAM`、用于 `Linux` 操作系统的 1GB `ROM`、1GB 闪存内存、数字存储（`SD`）卡槽以及 `802.11b/g` 和 `802.11s`（网状）无线通信。2009 年初，大量采购的价格在 50 个不发达国家约为 219 美元，在其他管辖区为 259 美元。
+笔记本电脑是为无线网络、接入互联网、长电池寿命和物理坚固性设计的小型 PC。笔记本电脑平台源于`Nicholas Negroponte`的“每个孩子一台电脑`OLPC`）计划，其使命是“通过为世界上最贫困的孩子提供一台耐用、低成本、低功耗、联网的电脑，创造协作、快乐、自主的学习机会。”原始`OX-1`型号于 2007 年底大规模生产，目标是在 2008 年向第三世界国家提供 100 美元的价格。`OX-1`特是`AMD CPU`、1200 x 900 像素、7.5 英寸（对角线）`LCD`显示、256MB `DRAM`、用于`Linux`操作系统的 1GB `ROM`、1GB 闪存内存、数字存储（`SD`）卡槽以及`802.11b/g`和`802.11s`（网状）无线通信。2009 年初，大量采购的价格在 50 个不发达国家约为 219 美元，在其他管辖区为 259 美元。
 
-`Intel` 的 `Classmate PC` 设计与 `OLPC OX-1` 一样是为新兴市场设计的，为近 300 美元的实际售价类别提供了信誉。`Acer Aspire One`、`Asus Eee PC`、`Dell Inspiron Mini` 和 `HP Mini` 型号根据显示尺寸、`SSD` 容量和其他规格，价格范围约为 300 美元到 400 美元不等。2009 年初，`AT&T` 为购买 `Dell Inspiron Mini 9` 并办理 `AT&T` 数据计划的用户提供了 349 美元的邮寄补贴，这使得笔记本电脑的价格降到了 99 美元。其他运营商可能会效仿 `AT&T`，提供类似于 `iPhone` 的硬件补贴来获取移动数据用户。
-
-
-
+`Intel`的`Classmate PC`设计与`OLPC OX-1`一样是为新兴市场设计的，为近 300 美元的实际售价类别提供了信誉。`Acer Aspire One`、`Asus Eee PC`、`Dell Inspiron Mini`和`HP Mini`型号根据显示尺寸、`SSD`容量和其他规格，价格范围约为 300 美元到 400 美元不等。2009 年初，`AT&T`为购买`Dell Inspiron Mini 9`并办理`AT&T`数据计划的用户提供了 349 美元的邮寄补贴，这使得笔记本电脑的价格降到了 99 美元。其他运营商可能会效仿`AT&T`，提供类似于`iPhone`的硬件补贴来获取移动数据用户。
 
 预计 2010 年，搭载 Intel Atom 处理器并运行 Google Chrome OS 操作系统的笔记本电脑将会出现。
 
 其他组装商在其型号名称中加入了“Cloud（云）”；例如，Everex 在 2008 年初推出了其售价 399 美元的 CloudBook 电脑。《纽约纽约时报》的记者 Brad Stone 和 Ashlee Vance 在 2009 年 1 月 25 日的《200 美元笔记本电脑打破了商业模式》一文中指出：
 
-更具实验性但成本更低的技术，如笔记本电脑、基于互联网的软件服务（称为云计算）以及虚拟化技术（虚拟化允许公司在每台物理服务器上运行更多软件），正在兴起……
+> 更具实验性但成本更低的技术，如笔记本电脑、基于互联网的软件服务（称为云计算）以及虚拟化技术（虚拟化允许公司在每台物理服务器上运行更多软件），正在兴起……
 
 PC 行业唯一的亮点是笔记本电脑。来自高盛（Gartner）研究公司的分析师表示，2008 年第三季度笔记本电脑的出货量已增至 440 万台，而去年第一季度仅为 50 万台。分析师认为，尽管全球处于深度衰退，今年（2009 年）销售额可能会翻倍。
 
@@ -460,10 +459,17 @@ PC 行业唯一的亮点是笔记本电脑。来自高盛（Gartner）研究公�
 
 ASP（应用服务商）市场推动了 20 世纪 90 年末的互联网泡沫，但 ASP 也是 2000 年初泡沫破裂后规模最大的市场细分之一。随着面向服务的架构（`SOA`）受到软件开发人员和企业 IT 部门的关注，ASP 逐渐被称为软件即服务（`SaaS`）提供商。通常公认的有五种 ASP 市场细分：
 
-*   **专业类 ASP**：通常提供单一应用程序，例如信用卡或其他支付处理、客户关系管理（`CRM`）、人力资源管理系统（`HRMS`）、文字处理、电子表格、数据库或时间表服务。Google Apps 为商务用户提供每用户每年固定费的基于网页的电子邮件、日历、文字处理、电子表格和演示文模块，而 `Salesforce.com` 租用 `CRM` 能力，`Intuit` 则按每月订阅者计费提供其 `QuickBase RDBMS`。
-*   **企业类 ASP**：提供广泛的专业 ASP 解决方案。例如，`Microsoft` 租用 `Microsoft SharePoint Services`、`Microsoft Dynamics CRM Services` 以及 `Office Business Applications`（`OBAs`），以及在线的 `Windows Live` 服务。
-*   **垂直市场类 ASP**：为特定客户类别提供多种软件解决方案，例如医疗或牙科诊所、保险经纪、教会信徒、住宅或商业建筑，或个人财务管理。
-*   **本地市场类 ASP**：在有限的地理区域内为小型服务企业（如餐厅、酒馆和酒吧）提供地理位置标记营销服务。
+
+
+# 云计算服务分类
+
+**专业类 ASP**：通常提供单一应用程序，例如信用卡或其他支付处理、客户关系管理（`CRM`）、人力资源管理系统（`HRMS`）、文字处理、电子表格、数据库或时间表服务。Google Apps 为商务用户提供每用户每年固定费的基于网页的电子邮件、日历、文字处理、电子表格和演示文模块，而 `Salesforce.com` 租用 `CRM` 能力，`Intuit` 则按每月订阅者计费提供其 `QuickBase RDBMS`。
+
+**企业类 ASP**：提供广泛的专业 ASP 解决方案。例如，`Microsoft` 租用 `Microsoft SharePoint Services`、`Microsoft Dynamics CRM Services` 以及 `Office Business Applications`（`OBAs`），以及在线的 `Windows Live` 服务。
+
+**垂直市场类 ASP**：为特定客户类别提供多种软件解决方案，例如医疗或牙科诊所、保险经纪、教会信徒、住宅或商业建筑，或个人财务管理。
+
+**本地市场类 ASP**：在有限的地理区域内为小型服务企业（如餐厅、酒馆和酒吧）提供地理位置标记营销服务。
 
 ASP 通常按每位订阅者收取固定月费，其中包含软件许可费。“过度使用”的附加费并不常见，但提供商通常会为辅助性的“按点菜式”服务收取高不成比例的费用。需要提供商培训客户用户的应用程序通常涉及安装费、年度承诺、最低付款额等。
 
@@ -471,10 +477,13 @@ ASP 通常按每位订阅者收取固定月费，其中包含软件许可费。�
 
 Web 托管服务自 1991 年左右以来可用，是所有云计算先驱中产量最丰富的；估计美国有约 50,000 服务托管了 100 个或更多网站。Web 托管服务提供操作系统、Web 服务器实现、电子邮件处理、内容存储、高速互联网连接及相关服务，根据消耗的资源，月费从免费到数千美元不等。Web 托管服务分为以下几类：
 
-*   **共享服务器托管**：在单台物理服务器和一个操作系统实例上运行多个网站。由于多个服务在共享资源（包括相同的操作系统实例）上运行，共享服务器托管对单个网站知识产权的保护相对较少。大多数免费和低价（每月 30.00 美元及更低）的服务使用共享服务器托管。基础月费中通常包含高达 1GB 的内容存储和每月 1TB 左右的互联网流量，并对额外的存储和流量收取附加费。安装费并不常见。
-*   **虚拟专用服务器（`VPS`）**：也称为专用虚拟服务器托管，在虚拟化实例中隔离操作系统和 Web 服务器，允许网站在逻辑上从一台或一组物理机器上的其他网站隔离开。`VPS` 托管提供额外的安全性，费用每月约 40 美元起，并具有增加的存储和流量限制。小型电子商务网站通常使用 `VPS` 托管。有些公司对 `VPS` 托管收取小额安装费。
-*   **专用服务器托管**：将一台物理 Web 服务器租给运营商，通过内容隔离来增加安全性，费用每月约 200 美元起，月费取决于所提供的资源。专用服务器托管的安装费很常见。
-*   **机房托管（托管服务中心/Colocation）**：将网站运营商的服务器和存储硬件安置在数据中心大楼内，通常位于受限制访问的围栏内。这是 Web 托管类别中唯一托管公司不拥有 Web 和应用程序服务器的类别。机房提供商提供互联网连接、电力、冷却、防火防、数据备份和其他安全服务。Col 托管通常用于大型内容导向型网站以及中型或较大的电子商务网站。安装费和月费根据面积、功耗和互联网流量计算。
+**共享服务器托管**：在单台物理服务器和一个操作系统实例上运行多个网站。由于多个服务在共享资源（包括相同的操作系统实例）上运行，共享服务器托管对单个网站知识产权的保护相对较少。大多数免费和低价（每月 30.00 美元及更低）的服务使用共享服务器托管。基础月费中通常包含高达 1GB 的内容存储和每月 1TB 左右的互联网流量，并对额外的存储和流量收取附加费。安装费并不常见。
+
+**虚拟专用服务器（`VPS`）**：也称为专用虚拟服务器托管，在虚拟化实例中隔离操作系统和 Web 服务器，允许网站在逻辑上从一台或一组物理机器上的其他网站隔离开。`VPS` 托管提供额外的安全性，费用每月约 40 美元起，并具有增加的存储和流量限制。小型电子商务网站通常使用 `VPS` 托管。有些公司对 `VPS` 托管收取小额安装费。
+
+**专用服务器托管**：将一台物理 Web 服务器租给运营商，通过内容隔离来增加安全性，费用每月约 200 美元起，月费取决于所提供的资源。专用服务器托管的安装费很常见。
+
+**机房托管（托管服务中心/Colocation）**：将网站运营商的服务器和存储硬件安置在数据中心大楼内，通常位于受限制访问的围栏内。这是 Web 托管类别中唯一托管公司不拥有 Web 和应用程序服务器的类别。机房提供商提供互联网连接、电力、冷却、防火防、数据备份和其他安全服务。Col 托管通常用于大型内容导向型网站以及中型或较大的电子商务网站。安装费和月费根据面积、功耗和互联网流量计算。
 
 泡沫破裂时，机房设施遭受了重创，若干此类组织宣布破产。`Exodus Communications` 是早期大型专用服务器托管和机房设施之一，曾创下 `NASDAQ` 连续 13 个季度增长率超过 40% 的记录，随后在 2001 年 9 月互联网泡沫期间申请了破产保护重组。
 
@@ -486,47 +495,49 @@ Web 托管服务自 1991 年左右以来可用，是所有云计算先驱中产�
 
 以下是有助于交付云计算的通认的重组组件：
 
-
-
-
-
 ## 云计算模型
 
-## 存储即服务 [storage] 
+### 存储即服务 [storage]
+
 `FaaS` 通常被称为数据存储即服务 (`DaaS`)，允许用户在高度可扩展的分层文件系统中存储各种数据类型的文件，并并通过互联网以各种多用途互联网邮件扩展 (MIME) 类型的形式检索这些文件。`FaaS` 是最早的云服务之一。诸如 SmugMug、DropBox、Ozmo 和 HolaServers 等互联网初创公司使用亚马逊云服务（Amazon Web Services）的简单存储服务 (`S3`) 来存储图像和其他文件，并向用户收取少量或不收取访问费用。Microsoft Live SkyDrive 是一家 `FaaS` 提供商，为用户提供高达 25GB 的免费文件存储。
 
 数据存储即服务或数据库即服务的术语意味着结构化存储，并至少具备某些关系型数据库管理系统 (`RDBMS`) 功能，例如查询能力、主键和外键索引以及通过模拟 `JOINs` 实现的实体关联。商业云服务，如亚马逊云服务 (`AWS`)、Google App Engine (`GAE`) 和 Windows Azure，提供了索引化的实体-属性-值 (`EAV`) 表和与 `SQL` 有某些关系的查询语言。微软表示 SQL Azure 数据库 (`SADB`) “在云端提供高度可扩展的面向网络的分布式数据库服务，用于存储和处理关系查询。”`SADB`、亚马逊 SimpleDB 和 `GAE` 的 `DataStore` 提供了高级功能，使其能够被称为数据库即服务 (`DBaaS`)。
 
 ### 软件即服务
+
 `SaaS` 通过互联网以订阅或基于使用的定价模型向终端用户交付捆绑好的或等同的商业软件应用程序，而不是针对特定版本的传统终身许可。示例包括 Microsoft Office Live、Microsoft Exchange Online、Microsoft SharePoint Online、Microsoft Dynamics CRM Online 和 [Salesforce.com](http://Salesforce.com)。微软是早期的 SaaS 支持者，曾提供基于 `SOAP` 的网络服务，但逐渐转向推广“软件加服务” (`S+S`)。应用即服务是 `SaaS` 的同义词。
 
 ### 软件加服务
+
 `S+S` 是微软的营销术语，指由微软或托管合作伙伴作为托管服务提供的传统许可本地部署软件。托管合作伙伴可以提供虚拟化的私有微软服务器应用程序（如 `Exchange` 或 `SQL Server`），或为微软托管的应用程序提供增值服务。`S+S` 的特征是客户能够在本地运行等同的服务。`S+S` 最有趣的的例子是亚马逊云服务的 `EC2` 运行着 Windows Server 2003 和带有 `SQL Server [Express]` 2005，并带有 Elastic Block Store 数据存储以及用于亚马逊机器镜像 (`AMIs`) 和 `EBS` 快照备份的 `S3` 存储。
 
 ### 基础设施即服务
+
 `IaaS` 通过网络（通常是互联网，但不必须）提供传统的数据中心资源，如高度可扩展的虚拟化计算能力、内存和存储，并且通常采用订阅或按需定价模型。`IaaS` 也称为公用计算。互联网交付的云示例包括亚马逊云服务、GoGrid 和 Flexiscale。通过内网交付的 `IaaS` 或 `PaaS` 称为私有云。
 
 ### 通信即服务
+
 `CaaS` 提供面向服务、可配置、可调度、可预测且可靠的通信能力，以及网络安全、用于流量隔离或专用带宽的虚拟覆盖网络动态配置、保证的消息延迟、通信加密和网络监控。`CaaS` 对于满足服务水平协议 (`SLAs`) 至关重要，但通常被认为是 `SaaS`、`S+S` 或 `IaaS` 的组件。
 
 ### 监控即服务
+
 `MaaS` 通知用户云计算或网络中断、错误或减慢。例如，Cloud Status 是一个简单的 iPhone 应用程序，监控亚马逊云服务、Google App Engine 和 Twitter 的状态，并报告服务是正常、有问题还是已宕。`MaaS` 可以包含用于网络漏洞评估或用于验证 SLA 合规性以及每月使用费用的准确性的审计组件。某些 `MaaS` 服务的供应商（如 RightScale）还提供实例部署自动化，以便在需求高峰期增加运行的 `AMI` 实例数量，并在需求下降时减少数量。
 
 ### 平台即服务
+
 `PaaS` 通常包含至少三个不同元素：
 
-*   **工具即服务 (TaaS)**：提供基于 Web 的开发工具和语言，例如 Microsoft Visual Studio（用于 Visual C#、Visual Basic、`IronPython` 和 `IronRuby`）或开源 `Eclipse`（主要用于 `Java`）。Windows Azure Tools for VS 2008 包含了创建 Web、Worker、Web 和 Worker 以及云顺序流服务的模板，这些服务可以在本地（开发者）或云（生产环境）Windows Azure 实例 (`fabric`) 下运行。Google App Engine 提供托管的 Python 变体以及 webapp 和 `Django` 框架。
-*   **虚拟化运行时应用平台**：允许在云中运行应用程序，通常位于 `IaaS` 之上并作为 `SaaS` 交付。亚马逊 `EC2` 拥有 32 位和 64 位 Linux 发行版、带有 `SQL Server 2005` 的 Windows Server 2003 R2 以及 Oracle 数据库的预构建 `AMIs`，以及 64 位 `OpenSolaris`。Windows Azure 运行在带有自定义版本微软 `Hyper-V` 管理程序的 Windows Server 2008 上。Google App Engine 提供 `Python`。
-*   **FaaS**：在亚马逊的 Elastic Block Store、`SimpleDB` 或 `S3`、Google 的 `BigTable` 或 Windows Azure Storage Services 表和 blob 中持久化运行时应用程序的状态。
+**工具即服务 (TaaS)**：提供基于 Web 的开发工具和语言，例如 Microsoft Visual Studio（用于 Visual C#、Visual Basic、`IronPython` 和 `IronRuby`）或开源 `Eclipse`（主要用于 `Java`）。Windows Azure Tools for VS 2008 包含了创建 Web、Worker、Web 和 Worker 以及云顺序流服务的模板，这些服务可以在本地（开发者）或云（生产环境）Windows Azure 实例 (`fabric`) 下运行。Google App Engine 提供托管的 Python 变体以及 webapp 和 `Django` 框架。
+
+**虚拟化运行时应用平台**：允许在云中运行应用程序，通常位于 `IaaS` 之上并作为 `SaaS` 交付。亚马逊 `EC2` 拥有 32 位和 64 位 Linux 发行版、带有 `SQL Server 2005` 的 Windows Server 2003 R2 以及 Oracle 数据库的预构建 `AMIs`，以及 64 位 `OpenSolaris`。Windows Azure 运行在带有自定义版本微软 `Hyper-V` 管理程序的 Windows Server 2008 上。Google App Engine 提供 `Python`。
+
+**FaaS**：在亚马逊的 Elastic Block Store、`SimpleDB` 或 `S3`、Google 的 `BigTable` 或 Windows Azure Storage Services 表和 blob 中持久化运行时应用程序的状态。
 
 ### 万物即服务
+
 根据维基百科，`EaaS`、`XaaS` 或 `aaS` 是云计算的一个子集，它将 `EaaS` 定义为“一种能够跨网络调用可重用、细粒度软件组件的概念”。该定义中缺失的是组件之间的编排交互以解决业务问题，这通常被称为集成即服务。
 
 HP 是万物即服务的主要倡导者之一。HP Labs 2008 年创新研究计划中的研究课题之一“主题 22：在全局服务生态系统中创建业务运营环境”开头提到以下两段：在这项应用研究项目中，HP Labs 正在研究在“万物即服务”模型下可能的客户服务生命周期和体验，并对实现这些所需的知识产权进行原型设计。HP Labs 在该研究领域的目标是解决业务任务迁移到互联网服务时必须克服的技术挑战。
-
-
-
-
 
 `cloud computing`（云计算）一术尚未获得一个让所有参与者——观察者、供应商和消费者——都能认可的定义、技术 set 或抽象层。诸如 `SOA`、`utility computing`（公用计算）或 `open services`等泛指性术语并不精确，无法准确识别云计算模型。这种情况促使信息科学家尝试创建一种云计算本体论。根据维基百科，“本体论涉及关于哪些实体存在或可以被认为存在的问题，以及这些实体如何根据相似性和差异进行分组、在层次结构中建立关联并划分。”
 
@@ -539,11 +550,13 @@ HP 是万物即服务的主要倡导者之一。HP Labs 2008 年创新研究计�
 以下是书中使用的 Youseff 五层本体模型的高级概览：
 
 *   Youseff 及其同事将顶层 `Cloud Application Layer`（云应用层）指定为通过 Web 门户访问 `SaaS` 应用（如 `Salesforce CRM` 和 `GAE`）入口。
+
 *   云应用开发者使用 `Cloud Software Environment Layer`（云软件环境层），该层为编程语言和一组应用程序接口（`APIs`）“促进环境与云应用之间的交互”，这导致了平台即服务（PaaS）的名称。`Cloud Software Environment Layer` 构建在 `Software Kernel`（软件内核）和 `Firmware/Hardware`（固件/硬件）层之上，并提供计算服务（`IaaS`）、数据存储（`DaaS`）和通信服务（`CaaS`）。虚拟机（`VMs`）通常交付 `IaaS`，尽管 `Windows Azure` 提供了运行 `Windows Server 2008` 的专用服务器选项。然而，有人认为 `CaaS` 能力属于较低的 `Firmware/Hardware`（`HaaS`）层，因为由于没有 `CaaS`，离线的 `HaaS` 是不可行的。
 
-作者将带有 `Apex` “按需”编程语言的 `Salesforce CRM` 以及支持 `Python` 的 `GAE` 分类在前两层。[Salesforce.com](http://Salesforce.com) 将 [Force.com](http://Force.com) 指定为一种 `PaaS` 产品，截至 2009 年初，它支持来自独立软件供应商（`ISVs`）的 800 多个应用程序和 80,000 多个自定义应用程序。`GAE` 要求至少熟悉 `Python` 编程才能提供有用服务，但承诺未来将支持其他语言。`Windows Azure Platform` 的名称及其对 `Visual Studio 2008` 的依赖使得微软的云产品完全处于 `PaaS` 类别。`Windows Azure` 支持任何符合 `Common Language Runtime`（`CLR`）的编程语言。Youseff 的研究论文在 2009 年初尚未引用 `Azure`。
+*   作者将带有 `Apex` “按需”编程语言的 `Salesforce CRM` 以及支持 `Python` 的 `GAE` 分类在前两层。[Salesforce.com](http://Salesforce.com) 将 [Force.com](http://Force.com) 指定为一种 `PaaS` 产品，截至 2009 年初，它支持来自独立软件供应商（`ISVs`）的 800 多个应用程序和 80,000 多个自定义应用程序。`GAE` 要求至少熟悉 `Python` 编程才能提供有用服务，但承诺未来将支持其他语言。`Windows Azure Platform` 的名称及其对 `Visual Studio 2008` 的依赖使得微软的云产品完全处于 `PaaS` 类别。`Windows Azure` 支持任何符合 `Common Language Runtime`（`CLR`）的编程语言。Youseff 的研究论文在 2009 年初尚未引用 `Azure`。
 
 *   `Software Kernel` 可以实现为 `OS kernel`、`hypervisor`（虚拟机监控程序）、虚拟机监控器和/或集群中间件，或这些系统的各种组合。尽管网格应用在早期云计算实现中发挥了重要作用，但网格已让 `hypervisor` 成为云计算的首选软件内核，因为后者从服务中抽象了硬件特殊性。加入 `CaaS` 使这一层等同于传统的 `VPS` Web 托管。
+
 *   `Firmware/Hardware` 层是构成云骨干的物理计算、交换和路由硬件。`HaaS` 供应商代表其租户操作、管理和升级硬件，租户提供自己的操作系统和应用程序软件，并按 `GB` 对数据进入和出站收费，类似于 Web 服务器托管。租赁消除了用户投资建设和管理数据中心的需求，并可能降低电力和保险成本。
 
 其他公认和自封的云计算“思想领袖”提供了许多云计算定义和本体论。例如，Blue Mountain Labs 的 David Linthicum 在其 2009 年 1 月 18 日的博客文章《定义云计算框架》中提出并简要描述了以下 10 个主要云计算组件（[`bit.ly/iYgXc`](http://bit.ly/iYgXc), [`cloudcomputing.sys-con.com/node/811519`](http://cloudcomputing.sys-con.com/node/811519)）：
@@ -559,7 +572,9 @@ HP 是万物即服务的主要倡导者之一。HP Labs 2008 年创新研究计�
 *   `Application-as-a-Service`（应用即服务）
 *   `Testing-as-a-Service`（测试即服务）
 
-根据云计算互操作性论坛（CCIF）的使命与目标页面（[`bit.ly/YAmDP`](http://bit.ly/YAmDP), [`groups.google.com/cloudforum/web/ccif-mission-goals`](http://groups.google.com/cloudforum/web/ccif-mission-goals)），该论坛的成立是为了实现一个能够无缝协作的计算生态系统。“重点将放在创建一个允许两个或多个云平台以统一方式交换信息的框架/本体论。”CCIF 的 Google 小组在 2009 年初约有 550 名成员。为云计算创建详细的分类不可避免地会陷入红皇后竞赛：“你必须尽力跑才能留在原地。”Youseff 的五层模型可能足够使用，直到云计算进入青少年期或 CCIF 产生替代方案。
+
+
+根据云计算互操作性论坛（CCIF）的使命与目标页面（[`bit.ly/YAmDP`](http://bit.ly/YAmDP)，[`groups.google.com/cloudforum/web/ccif-mission-goals`](http://groups.google.com/cloudforum/web/ccif-mission-goals)），该论坛的成立是为了实现一个能够无缝协作的计算生态系统。“重点将放在创建一个允许两个或多个云平台以统一方式交换信息的框架/本体论。”CCIF 的 Google 小组在 2009 年初约有 550 名成员。为云计算创建详细的分类不可避免地会陷入红皇后竞赛：“你必须尽力跑才能留在原地。”Youseff 的五层模型可能足够使用，直到云计算进入青少年期或 CCIF 产生替代方案。
 
 刘易斯·卡罗尔《爱丽丝镜镜奇游》中的红皇后说：“你必须尽力跑才能留在原地。如果你想去别的地方，你必须跑得快一倍。”
 
@@ -567,16 +582,13 @@ HP 是万物即服务的主要倡导者之一。HP Labs 2008 年创新研究计�
 
 ### 云计算担忧
 
-隐私和安全是 IT 经理在尝试通过 `PaaS`、`IaaS`、`SaaS` 或任何云计算服务组合降低预算并提高可扩展性面临的两个主要治理问题。InformationWeek 杂志在 2008 年底对 456 名“业务技术人士”进行的调查显示，只有 18% 的人使用云服务，34% 的人没有兴趣。超过一半的受访者对安全表示担忧；性能、控制、供应商锁定和支持是关于云计算的下四个最受关注的问题。SaaS 也面临同样的质疑，但 `Salesforce.com` 和 `AWS` 的成功证明治理问题是可以克服的。
+隐私和安全是 IT 经理在尝试通过`PaaS`、`IaaS`、`SaaS`或任何云计算服务组合降低预算并提高可扩展性时面临的两个主要治理问题。`InformationWeek`杂志在 2008 年底对 456 名“业务技术人士”进行的调查显示，只有 18% 的人使用云服务，34% 的人没有兴趣。超过一半的受访者对安全表示担忧；性能、控制、供应商锁定和支持是关于云计算的下四个最受关注的问题。`SaaS`也面临同样的质疑，但`Salesforce.com`和`AWS`的成功证明治理问题是可以克服的。
 
-以下是 Mike Fratto 在 2009 年 1 月 26 日的 InformationWeek 文章《云控制》中提出的保护云数据“五个快速修复方案”，该文章得出了调查结论：
+以下是 Mike Fratto 在 2009 年 1 月 26 日的 `InformationWeek` 文章《云控制》中提出的保护云数据“五个快速修复方案”，该文章得出了调查结论：
 
 1. 定义你的治理需求：是内部的、外部的法律法律？列出需求以及如何满足。
+
 2. 对你的数据进行分类：在确定哪些数据可以安全地放入云端之前，首先要根据敏感性和类型进行分类和标记。
-
-
-
-
 
 3. **明智选择**：识别能够满足你的处理和治理需求的云供应商。引导业务领导者放弃其他供应商，无论其定价有多有吸引力。
 
@@ -584,47 +596,53 @@ HP 是万物即服务的主要倡导者之一。HP Labs 2008 年创新研究计�
 
 5. **将规则书面化**：发布政策和程序，规定哪些云供应商可以接收什么类型的数据。
 
-云治理最重要的元素之一是确定数据在云端时的存储位置。正如 Fratto 在其文章中所观察到的，`SaaS` 和其他云提供商可能会将数据存储在另一个组织控制的服务器上。通过计算服务外包数据存储或备份可能会导致你的组织与其原始数据之间产生两个或多个层级的隔离。
+云治理最重要的元素之一是确定数据在云端时的存储位置。正如 Fratto 在其文章中所观察到的，`SaaS`和其他云提供商可能会将数据存储在另一个组织控制的服务器上。通过计算服务外包数据存储或备份可能会导致你的组织与其原始数据之间产生两个或多个层级的隔离。
 
-行业团体（例如支付卡行业 `PCI`）要求银行、在线商户和会员服务提供商（`MSPs`）遵守一系列安全标准来保护持卡人信息，这些标准包括万事达站点数据保护（`SDP`）和 Visa 持卡人信息安全计划（`CISP`）。1996 年美国《健康保险与责任法案》（`HIPAA`）为所有医疗相关数据的电子交换（`EDI`）、安全性和机密性建立了标准机制。如果不知道谁物理持有你的信用卡数据，将无法通过 `PCI` 审计，这可能导致商户无法接受信用卡或借记卡支付；这无疑会导致罚款或其他制裁。然而，这些安全和隐私问题也适用于外包传统的数据输入和处理，这种做法正变得越来越普遍，并且并非云计算所特有。
+行业团体（例如支付卡行业`PCI`）要求银行、在线商户和会员服务提供商（`MSPs`）遵守一系列安全标准来保护持卡人信息，这些标准包括万事达站点数据保护（`SDP`）和 Visa 持卡人信息安全计划（`CISP`）。1996 年美国《健康保险与责任法案》（`HIPAA`）为所有医疗相关数据的电子交换（`EDI`）、安全性和机密性建立了标准机制。如果不知道谁物理持有你的信用卡数据，将无法通过`PCI`审计，这可能导致商户无法接受信用卡或借记卡支付；这无疑会导致罚款或其他制裁。然而，这些安全和隐私问题也适用于外包传统的数据输入和处理，这种做法正变得越来越普遍，并且并非云计算所特有。
 
-美国国家标准与技术研究院（`NIST`）正在考虑识别最基本的标准和架构，以便联邦机构能够创建或购买互操作的云计算能力。NIST 的使命是“提供标准和技术，保护信息系统免受信息机密性、过程完整性以及信息和服务可用性方面的威胁，从而建立对信息技术（`IT`）系统的信任和信心。”NIST 的《云计算与标准展望》报告列出了潜在联邦云基础设施的以下特征：
+美国国家标准与技术研究院（`NIST`）正在考虑识别最基本的标准和架构，以便联邦机构能够创建或购买互操作的云计算能力。`NIST`的使命是“提供标准和技术，保护信息系统免受信息机密性、过程完整性以及信息和服务可用性方面的威胁，从而建立对信息技术（`IT`）系统的信任和信心。”`NIST`的《云计算与标准展望》报告列出了潜在联邦云基础设施的以下特征：
 
 * 机构将拥有云实例“节点”。
+
 * 节点将为运行云应用程序提供相同的软件框架。
+
 * 节点将参与联邦云基础设施建设。
+
 * 联邦基础设施将促进并采用云架构（非专有）。
+
 * “最低标准”指的是在确保节点互操作性和应用程序可移植性的同时，不抑制创新，从而限制云部署的规模。
 
-随后，NIST 发布了他们的《云计算工作性定义草案 v13`（`http://bit.ly/10TNdu`, `http://csrc.nist.gov/groups/cloud-computing/cloud-def-v14.doc`）以及《有效安全地使用云范式演示 v18`（`http://bit.ly/17PKbM`, `http://csrc.nist.gov/groups/cloud-computing/cloud-computing-v22.ppt`）。预计奥巴马白宫将成为第一个主要的云计算服务联邦政府用户。
+随后，`NIST`发布了他们的《云计算工作性定义草案 v13`（`http://bit.ly/10TNdu`，`http://csrc.nist.gov/groups/cloud-computing/cloud-def-v14.doc`）以及《有效安全地使用云范式演示 v18`（`http://bit.ly/17PKbM`，`http://csrc.nist.gov/groups/cloud-computing/cloud-computing-v22.ppt`）。预计奥巴马白宫将成为第一个主要的云计算服务联邦政府用户。
 
-在编写此书时，还没有非专有的云架构标准；节点互操作性是一个名为统一云接口（`UCI`）的 CCIF 分离项目的目标（`http://bit.ly/EHRrp`, `http://code.google.com/p/unifiedcloud`），该项目由 `Enomaly` 的创始人 Reuven Cohen（`http://bit.ly/16DldY`）并兼任首席技术官启动。根据 Cohen 的说法，`UCI` 的“概念是提供一个单一接口，可用于检索所有多云资源的统一表示，并根据需要控制这些资源”。Cohen 在项目的 `UCI_Requirements` Wiki 中写道：
+在编写此书时，还没有非专有的云架构标准；节点互操作性是一个名为统一云接口（`UCI`）的 CCIF 分离项目的目标（`http://bit.ly/EHRrp`，`http://code.google.com/p/unifiedcloud`），该项目由`Enomaly`的创始人 Reuven Cohen（`http://bit.ly/16DldY`）并兼任首席技术官启动。根据 Cohen 的说法，`UCI`的“概念是提供一个单一接口，可用于检索所有多云资源的统一表示，并根据需要控制这些资源”。Cohen 在项目的`UCI_Requirements` Wiki 中写道：
 
-统一云接口（`UCI`）的关键驱动力是“用一个抽象统治一切”——一个用于其他 API 的 API。`UCI` 将是一个单一的抽象，可以通过统一接口涵盖整个架构栈以及新兴的云中心技术。语义模型为 `UCI` 带来的能力是能够将像亚马逊云服务之类的云端 API 与现有协议和标准连接起来，无论底层 API 或技术的采用程度如何。其目标很简单：编写一次应用程序，即可出于任何原因在任何时间、任何地方进行部署。
+统一云接口（`UCI`）的关键驱动力是“用一个抽象统治一切”——一个用于其他 API 的 API。`UCI`将是一个单一的抽象，可以通过统一接口涵盖整个架构栈以及新兴的云中心技术。语义模型为`UCI`带来的能力是能够将像亚马逊云服务之类的云端 API 与现有协议和标准连接起来，无论底层 API 或技术的采用程度如何。其目标很简单：编写一次应用程序，即可出于任何原因在任何时间、任何地方进行部署。
 
-Cohen 认为“你无法定义的东西就无法标准化”，因此云计算分类法/本体论将在 `UCI` 中起着重要作用。最终目标似乎是防止云供应商锁定，使已部署的 `PaaS`、`IaaS` 或 SaaS` 项目能够快速从外部云迁移到私有云，或迁移到另一个供应商的云基础设施，且产生最小的不便或成本。
+Cohen 认为“你无法定义的东西就无法标准化”，因此云计算分类法/本体论将在`UCI`中起着重要作用。最终目标似乎是防止云供应商锁定，使已部署的`PaaS`、`IaaS`或`SaaS`项目能够快速从外部云迁移到私有云，或迁移到另一个供应商的云基础设施，且产生最小的不便或成本。
 
-NIST 承诺在 2009 年及以后创建这些额外的“特别出版”：
+`NIST`承诺在 2009 年及以后创建这些额外的“特别出版”：
 
 * 云架构安全
+
 * 云应用程序安全
+
 * 在云中实现并执行取证分析
+
 * 在云架构中实现安全监控集中
+
 * 通过服务水平协议从第三方云架构获取安全性
+
 * 安全合规框架与云计算（例如，`HIPAA`、`FISMA`、`SOX`）
 
-你可以通过计算机安全部门计算机安全资源中心出版页面上的特别出版物（800 系列）链接找到这些出版物的草案版本（`http://bit.ly/17d9qq`, `http://code.google.com/p/unifiedcloud`）。
+你可以通过计算机安全部门计算机安全资源中心出版页面上的特别出版物（800 系列）链接找到这些出版物的草案版本（`http://bit.ly/17d9qq`，`http://code.google.com/p/unifiedcloud`）。
 
-如果 NIST 能为互操作的非专有云架构制定一套非专有的安全特性，信息技术实验室将对云计算做出重大贡献。
+如果`NIST`能为互操作的非专有云架构制定一套非专有的安全特性，信息技术实验室将对云计算做出重大贡献。
 
 ### 总结
 
 云计算是一项新兴技术，有望在 2009 年和 2010 年达到“下一个首选”的地位。IDC 在 2008 年 10 月发现云计算正“加速采用，并有望在未来五年内获取 IT 支出的增长”。
 
-
-
-
-定义通用云计算是困难的，因为目前还没有一套被广泛认可云服务本体论或分类法。`SOA` 引入了`软件即服务`（SaaS）以及微软的 `Software+Services` 实现，但平台、基础设施、计算、存储、通信和硬件作为服务，在云计算提供“一切即服务”（Everything as a Service）的尝试中也占有一席。三位信息科学家提出了一个五层模型，包含了 `SaaS`、`PaaS`、`IaaS`、`DaaS`、`CaaS` 和 `HaaS`。
+定义通用云计算是困难的，因为目前还没有一套被广泛认可云服务本体论或分类法。`SOA`引入了`软件即服务`（`SaaS`）以及微软的`Software+Services`实现，但平台、基础设施、计算、存储、通信和硬件作为服务，在云计算提供“一切即服务”（Everything as a Service）的尝试中也占有一席。三位信息科学家提出了一个五层模型，包含了`SaaS`、`PaaS`、`IaaS`、`DaaS`、`CaaS`和`HaaS`。
 
 云符号意味着通过公共互联网进行无限制或受限访问。因此，云应用程序和数据的安全是高层管理主要的治理关注之一。今天的云主要依赖于基于令牌的用户身份验证和授权方案，但与企业目录集成的联邦访问控制已在大多数云供应商的计划之中。另一个问题是供应商锁定，因为目前不存在云互操作性标准，且此类标准可能永远无法达成一致。不信任现有互联网访问控制协议的组织可以在企业防火墙后创建自己的本地“私有云”，但这样做需要对 IT 基础设施进行资本投资，并抵消了云计算的主要理由。
 
@@ -632,83 +650,93 @@ NIST 承诺在 2009 年及以后创建这些额外的“特别出版”：
 
 ## 理解 Windows Azure 平台架构
 
-Windows Azure 平台是微软的`平台即服务`（`PaaS`）产品，运行在位于微软数据中心并相关的网络基础设施上，并连接到公共互联网。该平台由一个高度可扩展（弹性的）云操作系统、数据存储织以及通过物理或逻辑（虚拟化）`Windows Server 2008` 实例交付的相关服务组成。Windows Azure 软件开发包（`SDK`）提供了云端服务的开发版本，以及在 Windows Azure 中开发、部署和管理可扩展服务所需的工具和 `APIs`，包括用于标准化 Azure 应用程序的 `Visual Studio 2008` 或 `2010` 模板。图 2.1 展示了该平台的主要云组件和开发者组件。
+Windows Azure 平台是微软的`平台即服务`（`PaaS`）产品，运行在位于微软数据中心并相关的网络基础设施上，并连接到公共互联网。该平台由一个高度可扩展（弹性的）云操作系统、数据存储织以及通过物理或逻辑（虚拟化）`Windows Server 2008` 实例交付的相关服务组成。Windows Azure 软件开发包（`SDK`）提供了云端服务的开发版本，以及在 Windows Azure 中开发、部署和管理可扩展服务所需的工具和`APIs`，包括用于标准化 Azure 应用程序的`Visual Studio 2008`或`2010`模板。图 2.1 展示了该平台的主要云组件和开发者组件。
 
-图 2.1 Windows Azure 平台和 `SDK` 的组件。带有星号（*）标记的服务在本书 2009 年年中编写时尚不可用。
+图 2.1 Windows Azure 平台和`SDK`的组件。带有星号（*）标记的服务在本书 2009 年年中编写时尚不可用。
 
 ![2.1](img/c02f001.jpg)
 
 根据微软的介绍，Azure 的主要用途是：
 
- 为现有的封装应用程序添加 Web 服务能力
+为现有的封装应用程序添加 Web 服务能力
+
 * 以最少的本地资源向 Web 端构建、修改和分发应用程序
+
 * 在场外执行服务，例如大容量存储、批处理、密集型或高量计算等
+
 * 快速且廉价地创建、测试、调试和分发 Web 服务
+
 * 降低构建和扩展本地资源的成本和风险
+
 * 减少 IT 管理的投入和成本
 
 微软在 2008 年 10 月底发布 Azure 时的经济环境决定了成本降低——上述列表中反复提到——将是小型、中型企业级 IT 部门采用它的主要动力。
 
-微软设计 Azure 平台是为了让 `.NET` 开发者能够利用他们在使用 `Visual Studio 2008+` 中创建 `ASP.NET Web` 应用程序和 `Windows Communication Framework`（`WCF`）服务的经验。Web 应用程序项目运行在沙箱版本的 `Internet Information Services`（`IIS`） 7 中；不支持基于文件系统的网站项目，但预计在 PDC 2009 上宣布“持久驱动器”。Web 应用程序和基于 Web 的服务运行在部分信任的代码访问安全（Code Access Security）中，这大致对应于 `ASP.NET` 的中等信任，并限制了对某些操作系统资源的访问。Windows Azure `SDK`（2009 年 3 月 CTP）允许可选的全信任代码访问，以便调用非`.NET` 代码、使用需要全信任的 `.NET` 库以及使用命名管道进行进程间通信。微软承诺在云平台上支持执行 Ruby、`PHP` 和 `Python` 代码。初始开发平台发布限制在 `Visual Studio 2008+` 作为开发环境，并计划在未来支持 `Eclipse` 工具。Azure 平台支持 Web 标准和协议，包括 `SOAP`、`HTTP`、`XML`、`Atom` 和 `AtomPub`。
+微软设计 Azure 平台是为了让`.NET`开发者能够利用他们在使用`Visual Studio 2008+`中创建`ASP.NET Web`应用程序和`Windows Communication Framework`（`WCF`）服务的经验。Web 应用程序项目运行在沙箱版本的`Internet Information Services`（`IIS`）7 中；不支持基于文件系统的网站项目，但预计在 PDC 2009 上宣布“持久驱动器”。Web 应用程序和基于 Web 的服务运行在部分信任的代码访问安全（Code Access Security）中，这大致对应于`ASP.NET`的中等信任，并限制了对某些操作系统资源的访问。Windows Azure`SDK`（2009 年 3 月 CTP）允许可选的全信任代码访问，以便调用非`.NET`代码、使用需要全信任的`.NET`库以及使用命名管道进行进程间通信。微软承诺在云平台上支持执行 Ruby、`PHP`和`Python`代码。初始开发平台发布限制在`Visual Studio 2008+`作为开发环境，并计划在未来支持`Eclipse`工具。Azure 平台支持 Web 标准和协议，包括`SOAP`、`HTTP`、`XML`、`Atom`和`AtomPub`。
 
 ## Windows Azure 开发者门户
 
-开发者将 `ASP.NET` 应用程序迁移到云端的初始切入点是 `http://bit.ly/PbtOV (https://windows.azure.com/Cloud/Provisioning/Default.aspx)` (`http://bit.ly/PbtOV%20(https://windows.azure.com/Cloud/Provisioning/Default.aspx)`）上的 Windows Azure 开发门户，登录需要使用 Windows Live ID。Azure 社区技术预览（CTPs）需要单独的 `GUID` 令牌：
+开发者将`ASP.NET`应用程序迁移到云端的初始切入点是`http://bit.ly/PbtOV (https://windows.azure.com/Cloud/Provisioning/Default.aspx)`（`http://bit.ly/PbtOV%20(https://windows.azure.com/Cloud/Provisioning/Default.aspx)`）上的 Windows Azure 开发门户，登录需要使用 Windows Live ID。Azure 社区技术预览（CTPs）需要单独的`GUID`令牌：
 
 * Windows Azure，包括：
+
     * Azure 托管服务
+
     * 存储账户
+
 * `SQL Azure`
+
 * Live Services，包括：
+
     * Live Framework：社区技术预览
+
     * Live Services：现有 APIs
 
-`Live Services: Existing APIs` 不是 CTP，且不需要令牌；每个 Windows Azure 账户都会获得一个 `Compute Only Live Services: Existing APIs` 账户。截至 2009 年初，一个 Windows Azure 令牌允许你拥有一个托管服务账户、两个存储账户，以及一个托管部署和一个托管部署实例。你通过 Microsoft Connect 页面请求 Azure 令牌，通过点击开发门户的“Summary - My Projects”页面上的 `Billing` 链接访问该页面。
+`Live Services: Existing APIs`不是 CTP，且不需要令牌；每个 Windows Azure 账户都会获得一个`Compute Only Live Services: Existing APIs`账户。截至 2009 年初，一个 Windows Azure 令牌允许你拥有一个托管服务账户、两个存储账户，以及一个托管部署和一个托管部署实例。你通过 Microsoft Connect 页面请求 Azure 令牌，通过点击开发门户的“Summary - My Projects”页面上的`Billing`链接访问该页面。
 
-图 2.2 显示 2009 年 1 月 CTP 的账户页面，用于 `SQL Azure`、`.NET` 服务和 `Live Services`。该页面允许你兑换邮件提供的 Azure 和 `Live Framework` CTP 令牌，以及用于指定何时何时接收应用程序警报、通讯和门户更新的 `Live Alerts` 页面。
+图 2.2 显示 2009 年 1 月 CTP 的账户页面，用于`SQL Azure`、`.NET`服务和`Live Services`。该页面允许你兑换邮件提供的 Azure 和`Live Framework` CTP 令牌，以及用于指定何时何时接收应用程序警报、通讯和门户更新的`Live Alerts`页面。
 
 图 2.2 2009 年 7 月 CTP 的开发门户 Summary - Windows Azure。
 
 ![2.2](img/c02f002.jpg)
 
-2009 年 3 月 CTP 引入了地理位置，允许账户持有者指定存储托管和服务存储账户的数据中心。本书编写时有两个选择：`USA-Northwest`（华盛顿州昆西）和 `USA-Southeast`（圣安东奥）。你将一组托管服务和存储账户添加到亲和组（Affinity Group）中，以服务和服务存储运行在同一个数据中心，从而提高性能。
+2009 年 3 月 CTP 引入了地理位置，允许账户持有者指定存储托管和服务存储账户的数据中心。本书编写时有两个选择：`USA-Northwest`（华盛顿州昆西）和`USA-Southeast`（圣安东奥）。你将一组托管服务和存储账户添加到亲和组（Affinity Group）中，以服务和服务存储运行在同一个数据中心，从而提高性能。
 
-图 2.3 显示了兑换了多个 Windows Azure 令牌的令牌页面。你将从 Azure 成员处收到的 `GUID` 粘贴到 `Resource Token ID` 框中，并点击 `Claim Token` 将一个或多个实体添加到列表中。
+图 2.3 显示了兑换了多个 Windows Azure 令牌的令牌页面。你将从 Azure 成员处收到的`GUID`粘贴到`Resource Token ID`框中，并点击`Claim Token`将一个或多个实体添加到列表中。
 
 ![2.3](img/c02f003.jpg)
 
-如果你想开发支持 `Live Framework` 的网站或支持 Mesh 的 Web 应用程序，请通过电子邮件向 `meshctpe@microsoft.com` 请求 `Live Framework` CTP 令牌。在收到并兑换 `Live Framework` 令牌后，从 `Live Services SDK` 页面上的链接下载并安装 `Live Framework SDK` 和 `Live Framework Tools for Visual Studio` 的最新 CTP。你必须兑换 `Live Framework` 令牌才能下载 `Live SDK` 和工具。
-
-
-
+如果你想开发支持`Live Framework`的网站或支持 Mesh 的 Web 应用程序，请通过电子邮件向`meshctpe@microsoft.com`请求`Live Framework` CTP 令牌。在收到并兑换`Live Framework`令牌后，从`Live Services SDK`页面上的链接下载并安装`Live Framework SDK`和`Live Framework Tools for Visual Studio`的最新 CTP。你必须兑换`Live Framework`令牌才能下载`Live SDK`和工具。
 
 你不需要 Windows Azure 账户即可测试 Azure 托管服务（Hosted Services）和存储服务（Storage Services），因为正如后续章节所示，Azure 开发平台会在你的开发计算机上模拟 Azure 云服务。
 
 ### 在 Azure 开发平台中创建和运行项目
 
-Azure Cloud Fabric 和 Azure Storage Services 不支持基于云的开发或调试操作，因此 Azure SDK 以开发织网（DF）和开发存储（DS）应用程序的形式提供了本地副本，这些程序是由 Windows Azure SDK 安装的。该 SDK 还会安装一个 `Programs\Windows Azure SDK [Month 2009 CTP]` 菜单，以及一组示例应用程序和包装类库，用以简化应用程序编程。
+Azure Cloud Fabric 和 Azure Storage Services 不支持基于云的开发或调试操作，因此 Azure SDK 以开发织网（DF）和开发存储（DS）应用程序的形式提供了本地副本，这些程序是由 Windows Azure SDK 安装的。该 SDK 还会安装一个`Programs\Windows Azure SDK [Month 2009 CTP]`菜单，以及一组示例应用程序和包装类库，用以简化应用程序编程。
 
-要安装并运行 SDK，必须存在 `.NET Framework 3.5 SP1` 以及 `SQL Express 2005` 或 `2008`，并且必须在 `Windows Server 2008`、`Windows Vista SP2` 或 `Windows 7 RC` 或更高版本下，为 `IIS 7.0` 启用 `ASP.NET` 和 `WCF HTTP Activation`。Windows Azure SDK CTPset 说明包含设置这些选项的指令。SDK 并非强制性的，因为可以使用任何支持 HTTP 请求和响应的操作系统和编程语言。然而，你会发现使用 SDK 的 `.NET APIs` 和库进行应用程序和存储开发比直接处理 HTTP 要简单得多。
+要安装并运行 SDK，必须存在`.NET Framework 3.5 SP1`以及`SQL Express 2005`或`2008`，并且必须在`Windows Server 2008`、`Windows Vista SP2`或`Windows 7 RC`或更高版本下，为`IIS 7.0`启用`ASP.NET`和`WCF HTTP Activation`。Windows Azure SDK CTPset 说明包含设置这些选项的指令。SDK 并非强制性的，因为可以使用任何支持 HTTP 请求和响应的操作系统和编程语言。然而，你会发现使用 SDK 的`.NET APIs`和库进行应用程序和存储开发比直接处理 HTTP 要简单得多。
 
 ### 安装 Windows Azure SDK 和 Visual Studio 工具
 
 在安装 Windows Azure SDK 后，你必须下载并安装 Windows Azure Tools for Visual Studio，以便为 Web 云服务、Worker 云服务、Web 和 Worker 云服务以及工作流服务（Workflow Service）项目添加模板。后面的“在 Visual Studio 2008 中使用 Azure 模板”章节描述了这些模板之间的差异。
 
-你可以从 Microsoft Windows Azure 主页底部的链接 `[`bit.ly/A7Uza`](http://bit.ly/A7Uza)` (`[www.microsoft.com/azure/windowsazure.mspx](http://www.microsoft.com/azure/windowsazure.mspx)) 下载当前版本的 Windows Azure SDK 和 Windows Azure Tools for Visual Studio。
+你可以从 Microsoft Windows Azure 主页底部的链接`[bit.ly/A7Uza](http://bit.ly/A7Uza)`（`[www.microsoft.com/azure/windowsazure.mspx](http://www.microsoft.com/azure/windowsazure.mspx)`）下载当前版本的 Windows Azure SDK 和 Windows Azure Tools for Visual Studio。
 
 ### 安装并编译 Windows Azure SDK 示例应用程序
 
-安装 Windows Azure SDK 不会安装其示例应用程序，示例包含在 `\Program Files\Microsoft Windows Azure SDK\v1.0\samples.zip` 文件中。通过将 `samples.zip` 解压到你有写入权限的文件夹来安装示例文件。本书使用了提取到 `C:\Windows Azure SDK Samples` 文件夹的示例。
+安装 Windows Azure SDK 不会安装其示例应用程序，示例包含在`\Program Files\Microsoft Windows Azure SDK\v1.0\samples.zip`文件中。通过将`samples.zip`解压到你有写入权限的文件夹来安装示例文件。本书使用了提取到`C:\Windows Azure SDK Samples`文件夹的示例。
 
 下面的表格描述了示例应用程序。
 
 运行 CloudDrive 示例需要 Windows PowerShell。
 
+
+
 解压 `samples.zip` 的文件夹还包含以下三个命令文件，你可以从 `\Programs\Windows Azure SDK\Windows Azure SDK` 命令提示符中运行它们：
 
-* `buildall.cmd` 在不使用 Visual Studio 的情况下构建所有示例项目；`buildall.cmd` 运行 `BuildAll` 项目，该项目不是示例。
-* `creatables.cmd` 调用 `buildall.cmd` 并为使用表存储（Table Storage）的示例创建数据库和数据表。
-* `rundevstore.cmd` 调用 `creatables.cmd` 并启动开发存储，将其指向由 `creatables.cmd` 创建的数据库。运行开发存储将启动 Blob（二进制大对象）、队列（Queue）和表服务，见后文“开发存储”章节。
+- `buildall.cmd` 在不使用 Visual Studio 的情况下构建所有示例项目；`buildall.cmd` 运行 `BuildAll` 项目，该项目不是示例。
+- `creatables.cmd` 调用 `buildall.cmd` 并为使用表存储（Table Storage）的示例创建数据库和数据表。
+- `rundevstore.cmd` 调用 `creatables.cmd` 并启动开发存储，将其指向由 `creatables.cmd` 创建的数据库。运行开发存储将启动 Blob（二进制大对象）、队列（Queue）和表服务，见后文“开发存储”章节。
 
 最简单的选项是执行 `rundevstore.cmd`。
 
@@ -728,9 +756,9 @@ Azure Cloud Fabric 和 Azure Storage Services 不支持基于云的开发或调�
 
 DF 包含以下执行文件：`DFAgent.exe`、`DFLoadBalancer.exe`、`DFMonitor.exe` 和 `DFService.exe`，Azure SDK 安装程序默认将其安装在开发 PC 的 `\Program Files\Windows Azure SDK\v1.0\bin\devfabric` 文件夹中。通过以下操作启动 DF 后，任务管理器的进程页将显示这四个进程正在运行：
 
-* 选择 `Programs\Windows Azure SDK\Development Fabric` 来启动开发织网服务及其 UI (`DFUI.exe`)。
-* 如果任务栏通知区域存在 DF 图标，右键点击该图标并选择“启动开发织网服务”（参见图 2.4）。
-* 在 Visual Studio 中编译并运行启用 Azure 的应用程序。
+- 选择 `Programs\Windows Azure SDK\Development Fabric` 来启动开发织网服务及其 UI（`DFUI.exe`）。
+- 如果任务栏通知区域存在 DF 图标，右键点击该图标并选择“启动开发织网服务”（参见图 2.4）。
+- 在 Visual Studio 中编译并运行启用 Azure 的应用程序。
 
 图 2.4 鼠标悬停（上方）或右键点击（下方）任务栏上的 DF 图标后显示的消息。
 
@@ -740,21 +768,17 @@ DF 包含以下执行文件：`DFAgent.exe`、`DFLoadBalancer.exe`、`DFMonitor.
 
 Windows Azure 平台支持三种可扩展持久存储：
 
-* 非结构化数据（Blob）
-* 结构化数据（表）
-* 应用程序、服务或两者之间的消息（队列）
+- 非结构化数据（Blob）
+- 结构化数据（表）
+- 应用程序、服务或两者之间的消息（队列）
 
 执行 `rundevstore.exe` 或在 Visual Studio 中编译运行 Azure 用户代码将启动所有三个服务，即使你的项目只需要一种，并显示如图 2.6 所示的开发存储 UI。
 
-图 2.6 打开的开发存储 UI (DSUI) 应用程序显示了 `rundevstore.exe` 程序为三个 Azure 服务分配的默认端口以及用于存储开发架构的默认表名。
+图 2.6 打开的开发存储 UI（DSUI）应用程序显示了 `rundevstore.exe` 程序为三个 Azure 服务分配的默认端口以及用于存储开发架构的默认表名。
 
 ### Azure 服务定义文件和服务配置文件
 
 在开发框架中运行的 Azure 应用程序可以访问存储在本地开发存储或上传到 Azure 云存储中的数据。应用程序将在项目 `ServiceConfiguration.cscfg` 文件中作为端点指定的位置中查找端口号和存储的数据。
-
-
-
-
 
 Azure 项目的 `ServiceDefinition.csdef` 文件定义了一组标准的输入端点和配置设置，其值存储在 `ServiceConfiguration.cscfg` 文件中。Listing 2-1 显示了当您基于 Visual Studio 的 Windows Azure 工具标准模板创建 Azure 项目时，`ServiceDefinition.csdef` 文件的默认内容，并强调了重要值：
 
@@ -813,12 +837,9 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 
 强调的值用于开发存储，被注释的值用于带有 Windows Azure 帐户的云数据存储。使用 XML 注释简化了在开发环境和云环境之间的切换。
 
-
-
-
 ### Eric Brewer 的 CAP 定理
 
-([`bit.ly/18p9Ym`](http://bit.ly/18p9Ym), [www.cs.berkeley.edu/∼brewer/cs262b-2004/PODC-keynote.pdf](http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf)) 表示对于共享数据系统的三个属性——数据一致性、系统可用性和网络分区容能力——只能同时实现其中两个。例如，一个不容忍网络分区的数据库可以使用传统的 RDBMS 技术（如 ACID 事务）来实现一致性和可用性。大型分布式系统（如 Amazon 和 Google 使用的系统）需要网络分区，因此只能通过放弃可用性来实现一致性，反之亦然。Brewer 提议用 `BASE` 替代 `ACID`；`BASE` 是基本可用（basically available）、软状态（soft-state）和最终一致性（eventual consistency）的缩写。
+（[`bit.ly/18p9Ym`](http://bit.ly/18p9Ym)，[www.cs.berkeley.edu/∼brewer/cs262b-2004/PODC-keynote.pdf](http://www.cs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf)）表示对于共享数据系统的三个属性——数据一致性、系统可用性和网络分区容能力——只能同时实现其中两个。例如，一个不容忍网络分区的数据库可以使用传统的 RDBMS 技术（如 ACID 事务）来实现一致性和可用性。大型分布式系统（如 Amazon 和 Google 使用的系统）需要网络分区，因此只能通过放弃可用性来实现一致性，反之亦然。Brewer 提议用 `BASE` 替代 `ACID`；`BASE` 是基本可用（basically available）、软状态（soft-state）和最终一致性（eventual consistency）的缩写。
 
 图 2.8 在 SQL Server Management Studio 2005 中显示了导入到 Azure `CustomerTable` 的 Northwind 示例数据库 `Customers` 表的列（属性）。右窗格底部以复合主键形式显示的 `PartitionKey` 和 `RowKey` 属性形成了一个复合实体（对象）标识符，该标识符在表中必须唯一；RDBMS 会为新添加或更新的实体（行）更新 `Timestamp` 值。Azure 将 `PartitionKey`、`RowKey`（字符串）和 `Timestamp`（日期）值视为元数据，并要求这些属性存在于所有表中。未显示的元数据值包括 `NextRowKey` 和 `NextPartitionKey`，应用程序使用它们进行数据分页。剩余的 `nvarchar(1000)` 属性是属性包（property bag）的成员，具有可选的用户提供的值。属性包实体的数据类型可以是 `Binary`、`Bool`、`DateTime`、`Double`、`GUID`、`Int`、`Long` 或 UTF-16 编码的 `String`。
 
@@ -828,7 +849,7 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 
 ![2.8](img/c02f008.jpg)
 
-表支持 `GET`、`PUT`、`MERGE`、`POST` 和 `DELETE` 操作。用于 `GET` 方法从云存储返回表的基 URI 是 `http://AccountName.table.core.windows.net/Tables('TableName')`。查询表达式返回带有 URI 的过滤后的实体集，例如 `http://AccountName.table.core.windows.net/TableName$filter=QueryExpression`。ADO.NET Data Services 定义了查询表达式语法。用于 ADO.NET Data Services 的 .NET 客户端库（`System.Data.Services.Client.dll`）允许你使用 LINQ 标准查询操作符的子集生成包含查询表达式的 URI。白皮书《在表存储中使用 .NET 客户端库》（([`bit.ly/I37Ix`](http://bit.ly/I37Ix), [`msdn.microsoft.com/en-us/library/dd179445.aspx`](http://msdn.microsoft.com/en-us/library/dd179445.aspx))描述了客户端库类和使用 LINQ 进行查询。查询最多返回 1,000 个实体；通过结合 `NextContainerKey` 和 `NextRowKey` 值（称为延续令牌）进行分页，可以向应用程序返回超过 1,000 个实体。
+表支持 `GET`、`PUT`、`MERGE`、`POST` 和 `DELETE` 操作。用于 `GET` 方法从云存储返回表的基 URI 是 `http://AccountName.table.core.windows.net/Tables('TableName')`。查询表达式返回带有 URI 的过滤后的实体集，例如 `http://AccountName.table.core.windows.net/TableName$filter=QueryExpression`。ADO.NET Data Services 定义了查询表达式语法。用于 ADO.NET Data Services 的 .NET 客户端库（`System.Data.Services.Client.dll`）允许你使用 LINQ 标准查询操作符的子集生成包含查询表达式的 URI。白皮书《在表存储中使用 .NET 客户端库》（[`bit.ly/I37Ix`](http://bit.ly/I37Ix)，[`msdn.microsoft.com/en-us/library/dd179445.aspx`](http://msdn.microsoft.com/en-us/library/dd179445.aspx)）描述了客户端库类和使用 LINQ 进行查询。查询最多返回 1,000 个实体；通过结合 `NextContainerKey` 和 `NextRowKey` 值（称为延续令牌）进行分页，可以向应用程序返回超过 1,000 个实体。
 
 对于 Development Storage，将 `AccountName.table.core.windows.net` 替换为 `127.0.0.1:10002/devstoreaccount1`。
 
@@ -854,7 +875,9 @@ Blob 存储二进制数据，如图像、XML 文档、压缩（zip 或 gzip）�
 
 ### Azure Queue Services
 
-Azure 队列是大小为 8KB 的消息，任何访问存储账户的客户端或应用程序都可以按照先来顺序访问。Azure 队列具有与 blob 类似的 REST API。例如，以下 `GET` URI 返回存储账户 AccountName 的所有队列：`http://AccountName.queue.core.windows.net$comp=list`。使用 `http://AccountName.queue.core.windows.net/QueueName` 获取一个或多个消息。指定可选的 `numofmessages` 参数可以获取 2 到最多 32 个消息。
+Azure 队列是大小为 8KB 的消息，任何访问存储账户的客户端或应用程序都可以按照先来顺序访问。Azure 队列具有与 blob 类似的 REST API。例如，以下 `GET` URI 返回存储账户 `AccountName` 的所有队列：`http://AccountName.queue.core.windows.net$comp=list`。使用 `http://AccountName.queue.core.windows.net/QueueName` 获取一个或多个消息。指定可选的 `numofmessages` 参数可以获取 2 到最多 32 个消息。
+
+
 
 `Put Message` 操作通过调用类似于 `http://AccountName.queue.core.windows.net/QueueName/messages` 的方法向云队列添加消息，请求体由一个或多个以下 XML 片段组成：
 
@@ -865,10 +888,6 @@ Azure 队列是大小为 8KB 的消息，任何访问存储账户的客户端或
 ```
 
 其中 `message-content` 是可以 UTF-8 编码的字符串。二进制内容必须经过 Base64 编码。
-
-
-
-
 
 图 2.11 显示了 Photo Gallery Azure Queue Services Test Harness 程序的默认页面。`Queue Name` 是一个数字日期/时间等效值，后跟一个 GUID，以便按创建日期升序自动排序。`Type` 是消息内容的多部分互联网邮件扩展 (MIME) 类型。`ETag` 是用于支持乐观一致性的日期/时间代码。你可以在 [`oakleaf5.cloudapp.net/`](http://oakleaf5.cloudapp.net/) 测试运行 `AzureQueueTest` 应用，在随后的“Worker Cloud Services”部分了解更多关于它的结构，并在第 8 章分析它的代码。
 
@@ -921,17 +940,13 @@ Windows Azure 平台包含了三组辅助服务：`.NET Services`、`SQL Databas
 
 ![2.15](img/c02f015.jpg)
 
-####NET Services
+#### .NET Services
 
 Microsoft .NET Services 是一组由 Windows Azure 与存储服务一同托管的可扩展面向开发者的服务。.NET Services 为云端 Web 和 Worker 应用程序提供关键的基础组件。
 
 .NET 访问控制、总线和服务工作流服务利用 Web 标准 Atom、AtomPub、SOAP、WS-* 和 HTTP 协议，因此任何具有可靠 Internet 的应用程序都可以它们，并且与其他流行的编程语言（如 Java 和 Ruby）兼容。
 
-
-
-
-
-## 访问控制服务
+### 访问控制服务
 
 微软声称，访问控制服务 (ACS) “提供了一种控制 Web 应用程序服务的简易方法，同时与基于标准的身份提供者集成，包括企业目录和如 Windows Live ID 等网络身份系统”。Service Bus 服务依赖于基于声明的身份模型进行用户身份验证和基于角色的访问控制。ACS 的优势在于，你可以编写一组声明式规则，将传入的安全声明转换为基于声明的联合身份，从而最大限度地减少开发人员的工作量。ACS 依赖于著名的用户账户存储库，例如 `Live ID`、`Active Directory` 或支持 `Atom`、`AtomPub`、`SOAP` 或 `WS-*` 以及 `HTTP` 协议的其他存储库。
 
@@ -942,7 +957,7 @@ Windows Azure 门户提供了 ACS 的管理界面。位于 [`bit.ly/Co8NG`](http
 * MSDN 库中的“Microsoft .NET Access Control Service”帮助主题，位于 [`bit.ly/17IjY`](http://bit.ly/17IjY) ([`go.microsoft.com/fwlink/?LinkID=131222`](http://go.microsoft.com/fwlink/?LinkID=131222))。
 * 来自 [`bit.ly/bhAKT`](http://bit.ly/bhAKT) 下载白皮书链接的 `Introduction to Microsoft .NET Access Control.docx` 文件和“A Developer's Guide to the Microsoft .NET Access Control Service”（[`msdn.microsoft.com/en-us/azure/netservices.aspx`](http://msdn.microsoft.com/en-us/azure/netservices.aspx)）。
 
-第 6 章“服务用户的验证与授权”包含了描述如何保护 WebRole 应用程序章节，第 9 章“使用 .NET Access Control Services 对用户进行验证”专门介绍了 ACS。
+第 6 章“服务用户的验证与授权”包含了描述如何保护 `WebRole` 应用程序章节，第 9 章“使用 .NET Access Control Services 对用户进行验证”专门介绍了 ACS。
 
 ### Service Bus
 
@@ -974,27 +989,34 @@ SQL 服务是基于 SQL Server 2008 的高扩展、按需关系型数据库管�
 
 `SQL Azure Database` (`SADB`) 在微软于 2008 年初的 MIX08 大会上宣布 `SSDS` 为独立的数据库服务 (`DaaS`) 时最初被称为 `SQL Server Data Services` (`SSDS`)。`SSDS` 的初始架构实现了无模式的 `EAV` 表，类似于 Azure `Table Services`，并采用非关系的“权威-容器-实体” (`ACE`) 模型。`SSDS` 团队认为，潜在的 Azure 采用者想要 `EAV` 模型的简单性，而不是 `SQL Server` 表和其他数据库对象的关系型功能。
 
-
-
-
-
 SSDS 团队最终意识到了他们的错误，并于 2008 年初决定放弃无模式数据库和 EAV 模型。关于这一方向转变的首条消息出现在 2009 年 2 月 23 日 MSDN 开发者会议访问旧金山期间，当时联合 1105 Media 在凯悦假日酒店举办了 Visual Studio Live! 会议（参阅 [“SQL Azure 数据库的中途修正](http://bit.ly/85YOa)](http://bit.ly/85YOa), [`oakleafblog.blogspot.com/2009/02/mid-course-correction-for-sql-data.html)`](http://oakleafblog.blogspot.com/2009/02/mid-course-correction-for-sql-data.html)）。）。新命名为 SQL Azure 数据库 (SADB) 的团队在 2009 年 3 月通过 MIX ‘09 上的演示，以及在 5 月的 Tech*Ed 2009 上的演示展示了更多 SADB 细节（参阅 [“Microsoft SQL Azure 数据库新特性十张幻灯片 (DAT202) Tech*Ed 2009 会场](http://bit.ly/nPLUB)](http://bit.ly/nPLUB), [`oakleafblog.blogspot.com/2009/05/ten-slides-from-whats-new-in-microsoft.html)`](http://oakleafblog.blogspot.com/2009/05/ten-slides-from-whats-new-in-microsoft.html)）。）。
+
+
 
 根据微软 SADB 宣教员 David Robinson 在 2009 年 5 月 6 日于微软企业开发者和解决方案会议上的演讲，SADB 将提供以下 SQL Server 功能：
 
 * 表、索引和视图
+
 * 存储过程和触发器
+
 * 约束
+
 * 表变量
+
 * 会话临时表 (`#t`)
 
 以下功能将不包含 v1 版本的范围之内：
 
 * 分布式事务
+
 * 分布式查询
+
 * CLR 支持
+
 * Service Broker
+
 * 空间数据类型
+
 * 物理服务器访问或目录 DDL 和视图
 
 David Robinson 是本书的技术编辑。
@@ -1017,40 +1039,37 @@ OakLeaf Systems Azure Table Services 示例项目包含对象初始化代码，�
 
 ### Azure 存储服务
 
-从开发环境切换到 Azure 云存储只需修改 `ServiceConfiguration.cscfg`，将 `AccountName` 值更改为云存储项目名称，并将 `BlogStorageEndpoint`、`QueueStorageEndpoint`、`TableStorageEndpoing` 或三个值均更改为 [`blob.core.windows.net`](http://blob.core.windows.net),[`queue.core.windows.net`](http://queue.core.windows.net) 或 [`table.core.windows.net`](http://table.core.windows.net)，如前面的“Azure 服务定义和服务配置文件”部分所示。在云中存储所有数据的原始数据和至少两个副本可以确保数据的可靠性和连续性。
+从开发环境切换到 Azure 云存储只需修改`ServiceConfiguration.cscfg`，将`AccountName`值更改为云存储项目名称，并将`BlogStorageEndpoint`、`QueueStorageEndpoint`、`TableStorageEndpoing`或三个值均更改为[`blob.core.windows.net`](http://blob.core.windows.net)、[`queue.core.windows.net`](http://queue.core.windows.net)或[`table.core.windows.net`](http://table.core.windows.net)，如前面的“Azure 服务定义和服务配置文件”部分所示。在云中存储所有数据的原始数据和至少两个副本可以确保数据的可靠性和连续性。
 
 上一个段落假设你的应用程序可以向云上传适当的数据或在云中生成数据。
 
 ### 将项目发布到 Azure 云
 
-当你在在线创建一个新的托管项目时，Windows Azure 会为其分配一个 GUID。在 2009 年 5 月 CTP 之前，Windows Azure 会分配一个 16 字符的十六进制应用程序 ID，例如 `000000004C00F2`。你可以从门户页面复制 ID 值并粘贴到门户属性页的文本框中，如图 2.17 所示。
+当你在在线创建一个新的托管项目时，Windows Azure 会为其分配一个 GUID。在 2009 年 5 月 CTP 之前，Windows Azure 会分配一个 16 字符的十六进制应用程序 ID，例如`000000004C00F2`。你可以从门户页面复制 ID 值并粘贴到门户属性页的文本框中，如图 2.17 所示。
 
-
-
-
-将应用程序 ID 粘贴到门户属性页后，右键点击主项目节点并选择 `Publish`（发布），将打开项目 `...\bin\Debug\Publish` 文件夹的资源管理器窗口，其中显示了 `ProjectName.cspkg` 和 `ServiceConfiguration.cscfg` 文件，以及 Windows Azure 的阶段部署页面（参见图 2.18）。
+将应用程序 ID 粘贴到门户属性页后，右键点击主项目节点并选择`Publish`（发布），将打开项目`...\bin\Debug\Publish`文件夹的资源管理器窗口，其中显示了`ProjectName.cspkg`和`ServiceConfiguration.cscfg`文件，以及 Windows Azure 的阶段部署页面（参见图 2.18）。
 
 你可以对项目的阶段版本和生产版本使用相同的标签，但为了清晰建议使用不同的标签。
 
-Figure 2.18 从开发织构（Development Fabric）向云织构（Cloud Fabric）的阶段服务部署托管 Azure 项目，需要指定包和配置文件、为项目输入标签并点击 `Deploy`（部署）按钮。
+Figure 2.18 从开发织构（Development Fabric）向云织构（Cloud Fabric）的阶段服务部署托管 Azure 项目，需要指定包和配置文件、为项目输入标签并点击`Deploy`（部署）按钮。
 
 ![2.18](img/c02f018.jpg)
 
-几分钟或更久（取决于你的项目包的大小和互联网连接情况后），阶段 WebRole 将变为 `Allocated`（已分配）。点击 `Run`（运行）将项目置于启动（Started）模式。（参见图 2.19）。
+几分钟或更久（取决于你的项目包的大小和互联网连接情况后），阶段 WebRole 将变为`Allocated`（已分配）。点击`Run`（运行）将项目置于启动（Started）模式。（参见图 2.19）。
 
-点击 `Configure`（配置）允许你编辑 `ServiceConfiguration.cscfg` 文件或导入替换文件。例如，可以通过更改 `Instance count` 值来增加或减少部署的实例数量。微软建议运行两个项目实例，以确保即使在流量较小时也能具有最大的可用性。
+点击`Configure`（配置）允许你编辑`ServiceConfiguration.cscfg`文件或导入替换文件。例如，可以通过更改`Instance count`值来增加或减少部署的实例数量。微软建议运行两个项目实例，以确保即使在流量较小时也能具有最大的可用性。
 
-Figure 2.19 将项目部署到阶段服务后，点击 `Run` 将其置于启动（Started）角色，然后点击 `Web Site URL` 链接在 Windows OS 操作系统下进行测试。
+Figure 2.19 将项目部署到阶段服务后，点击`Run`将其置于启动（Started）角色，然后点击`Web Site URL`链接在 Windows OS 操作系统下进行测试。
 
 ![2.19](img/c02f019.jpg)
 
-点击 `Run` 在阶段模式下实例化项目，这将启动一个 `Initializing`（初始化中）的 WebRole，一两分钟后，将阶段项目置于启动（Started）WebRole。点击 `Staging Private Web Site URL` 链接在浏览器中测试该 WebRole（参见图 2.20）。
+点击`Run`在阶段模式下实例化项目，这将启动一个`Initializing`（初始化中）的 WebRole，一两分钟后，将阶段项目置于启动（Started）WebRole。点击`Staging Private Web Site URL`链接在浏览器中测试该 WebRole（参见图 2.20）。
 
 Figure 2.20 OakLeaf Azure Blob Services 测试项目在隐藏 URL [`b9c10b0d715d4812a9e13bbcde538947.cloudapp.net/`](http://b9c10b0d715d4812a9e13bbcde538947.cloudapp.net/) 处的阶段性部署。
 
 ![2.20](img/c02f020.jpg)
 
-通过点击两个包图标之间的按钮，并在询问“你确定要与生产部署交换吗？”时点击 `OK`，将阶段版本交换为生产版本。
+通过点击两个包图标之间的按钮，并在询问“你确定要与生产部署交换吗？”时点击`OK`，将阶段版本交换为生产版本。
 
 在将其放入生产环境后暂停阶段实例，以避免在微软发布 Windows Azure 时在阶段和生产实例上产生运行时间费用。
 
@@ -1058,11 +1077,11 @@ Figure 2.20 OakLeaf Azure Blob Services 测试项目在隐藏 URL [`b9c10b0d715d
 
 微软在 2008 年 10 月底的 2008 年专业开发者大会（PDC）上推出了 Windows Azure 云操作系统以及 Windows Azure 平台提供的其他服务。Windows Azure 运行在微软快速扩展的数据中心集合中，直接与 Amazon Web Services 和 Google App Engine 竞争。Azure 团队设计了系统和 API，以利用 .NET 开发者在 C#、VB 和 Visual Studio 2008 及后续版本的经验。
 
-本书编写时，Windows Azure 处于私人社区技术预览（CTP）阶段，因此想要访问微软云操作系统的用户需要 `GUID` 令牌或邀请码，可用于兑换 Azure 托管项目、Azure 存储项目、.NET 服务、SQL Azure 数据库或 Windows Live 服务。获取大多数 Azure 令牌的复杂过程于 Microsoft Connect，但通常需要 Windows Azure 论坛中微软代表的介入。Windows Live ID 提供 Azure CTP 用户的身份验证和授权。
+本书编写时，Windows Azure 处于私人社区技术预览（CTP）阶段，因此想要访问微软云操作系统的用户需要`GUID`令牌或邀请码，可用于兑换 Azure 托管项目、Azure 存储项目、.NET 服务、SQL Azure 数据库或 Windows Live 服务。获取大多数 Azure 令牌的复杂过程于 Microsoft Connect，但通常需要 Windows Azure 论坛中微软代表的介入。Windows Live ID 提供 Azure CTP 用户的身份验证和授权。
 
-如果你没有云计算所需的令牌和邀请，可以通过下载并安装 Windows Azure 和 .NET Services SDK 来测试注定由 Windows Azure 托管的项目、blobs、队列和表。这些 SDK 包含了文档和示例项目，你可以在运行 Windows Vista 或 Windows Server 2008 的 PC 上，在开发织构下配合开发本地存储来运行它们。利用目前仅在云端提供的 `SADB` 需要一个包含用户名和密码的邀请。
+如果你没有云计算所需的令牌和邀请，可以通过下载并安装 Windows Azure 和 .NET Services SDK 来测试注定由 Windows Azure 托管的项目、blobs、队列和表。这些 SDK 包含了文档和示例项目，你可以在运行 Windows Vista 或 Windows Server 2008 的 PC 上，在开发织构下配合开发本地存储来运行它们。利用目前仅在云端提供的`SADB`需要一个包含用户名和密码的邀请。
 
-Azure 存储服务将结构化或半结构化数据持久为实体-属性-值表，将不同内容类型的文件持久为 blobs，并将项目之间的消息持久为队列。管理存储服务的官方 API 基于与平台无关的 REST 并调用 `GET`、`POST`、`PUT`、`MERGE` 和 `DELETE` 方法。.NET 服务为需要这些能力的企业级项目提供访问控制、消息总线和工作流组件。实时环境（Live Operating Environment）提供了针对个人消费者的 Windows Live 和 Mesh 服务集成。
+Azure 存储服务将结构化或半结构化数据持久为实体-属性-值表，将不同内容类型的文件持久为 blobs，并将项目之间的消息持久为队列。管理存储服务的官方 API 基于与平台无关的 REST 并调用`GET`、`POST`、`PUT`、`MERGE`和`DELETE`方法。.NET 服务为需要这些能力的企业级项目提供访问控制、消息总线和工作流组件。实时环境（Live Operating Environment）提供了针对个人消费者的 Windows Live 和 Mesh 服务集成。
 
 2009 年年中，SQL Server Data Services 经历了从其原始帐户（Account）、容器（Container）、实体（Entity）架构到 SQL Azure Database v1（也称为“云端 SQL Server”）的剧烈迁移。新版本实现了大部分 SQL Server 2008 功能并支持 T-SQL。Azure 团队设计了基于互联网的服务门户，使配置变得简单快速。
 
@@ -1072,29 +1091,27 @@ Windows Azure 是一种运行在数据中心数千个 Windows Server 2008 物理
 
 ### Windows Azure OS 概
 
-数据中心的物理服务器运行高级版本的微软 Hyper-V 虚拟机程序，通过虚拟化物理实例交付一个集群织构，称为 Azure 织构控制器（FC），它处理应用程序部署、负载均衡、操作系统/数据复制和资源管理。`FC` 部署项目、根据需要自动添加实例、管理软件升级并处理故障以维护项目可用性。
+数据中心的物理服务器运行高级版本的微软 Hyper-V 虚拟机程序，通过虚拟化物理实例交付一个集群织构，称为 Azure 织构控制器（FC），它处理应用程序部署、负载均衡、操作系统/数据复制和资源管理。`FC`部署项目、根据需要自动添加实例、管理软件升级并处理故障以维护项目可用性。
 
-早期 Azure CTP 未实现响应变化的动态服务实例管理。你需要在 `ServiceConfiguration.cscfg` 文件中指定实例数量，然后在 Azure 服务门户中重新部署修改后的文件。
+早期 Azure CTP 未实现响应变化的动态服务实例管理。你需要在`ServiceConfiguration.cscfg`文件中指定实例数量，然后在 Azure 服务门户中重新部署修改后的文件。
 
+角色（Roles）是应用程序中可运行的组件；角色实例运行在架构节点上，并通过通道连接各个角色。`WebRole`实例通过 Internet 信息服务 (`IIS`) 7 接受 HTTP 或 HTTPS 请求，并使用`ASP.NET`、`ASP.NET MVC`或 Silverlight UI 响应。`WorkerRoles`响应从`Azure Queues`中接收到的`WebRoles`或`.NET Services`的请求消息提供批处理服务。每个`WebRole`或`WorkerRole`都被分配到其独立的虚拟机 VM 和服务器核心，以隔离租户数据，如图 3.1 所示。
 
+`WorkerRoles`无法接受来自外部网络的入站连接，因此它们必须使用`Azure Queues`与`WebRoles`或`.NET Services`通信。`WorkerRoles`可以向外部网络发送出站消息。
 
-角色（Roles）是应用程序中可运行的组件；角色实例运行在架构节点上，并通过通道连接各个角色。`WebRole` 实例通过 Internet 信息服务 (`IIS`) 7 接受 HTTP 或 HTTPS 请求，并使用 `ASP.NET`、`ASP.NET MVC` 或 Silverlight UI 响应。`WorkerRoles` 响应从 `Azure Queues` 中接收到的 `WebRoles` 或 `.NET Services` 的请求消息提供批处理服务。每个 `WebRole` 或 `WorkerRole` 都被分配到其独立的虚拟机 VM 和服务器核心，以隔离租户数据，如图 3.1 所示。
-
-`WorkerRoles` 无法接受来自外部网络的入站连接，因此它们必须使用 `Azure Queues` 与 `WebRoles` 或 `.NET Services` 通信。`WorkerRoles` 可以向外部网络发送出站消息。
-
-图 3.1 Azure 在两台物理服务器上部署了三个 `WebRole` 实例和三个 `WorkerRole` 实例，带有 FC 代理管理每组实例的负载均衡。
+图 3.1 Azure 在两台物理服务器上部署了三个`WebRole`实例和三个`WorkerRole`实例，带有 FC 代理管理每组实例的负载均衡。
 
 ![3.1](img/c03f001.jpg)
 
 根据 Erick Smith 在 2009 年微软专业开发者大会 (PDC) 上的演讲“深入内部：云计算托管环境内部”(Under the Hood: Inside the Cloud Computing Hosting Environment, ES19) ([`bit.ly/16xSNH`](http://bit.ly/16xSNH), [`channel9.msdn.com/pdc2008/ES19/`](http://channel9.msdn.com/pdc2008/ES19/))，FC 维护着其管理的 Microsoft 数据中心内物理和虚拟机、负载均衡器、路由器和交换机的清单图。图的边是各种类型的互连；例如，网络线、串行线和电源线。开发者通过声明式服务模型指定服务的拓扑结构——角色的数量和连接性、各种硬件组件的属性和位置，以及所需的故障/更新域数量和每个角色的最大实例数。Smith 说：“FC 从裸机开始管理服务周期。”Windows Azure 的管理功能类似于 Google App Engine (GAE) 用于其 Web 应用程序的功能，以及 RightScale 为 Amazon Web Services (AWS) 提供的功能；如前面的章节所述，GAE 和 AWS 是 Azure 的主要竞争对手。
 
-Azure CTP 将项目限制为最多 2,000 个运行实例小时，单个生产应用程序最多支持 8 个实例，并且在单个故障和更新域内最多有一个 WebRole 和（可选的）一个 `WorkerRole`。测试人员可以通过向 azquotas@microsoft.com 发送邮件来申请这些限制的豁免。
+Azure CTP 将项目限制为最多 2,000 个运行实例小时，单个生产应用程序最多支持 8 个实例，并且在单个故障和更新域内最多有一个 WebRole 和（可选的）一个`WorkerRole`。测试人员可以通过向 azquotas@microsoft.com 发送邮件来申请这些限制的豁免。
 
 早期的 CTP 将应用程序限制在自定义版本的 ASP.NET 中等信任代码访问安全 (CAS) 下运行托管的 .NET 3.5 代码。微软承诺未来将支持 Python、Ruby、PHP、原生代码和 Eclipse 工具。2009 年 5 月的 CTP 引入了在全信任下运行应用程序的选项。
 
 Azure 角色实例的故障域（fault domains）代表单点故障，例如机架；用于执行滚动软件升级的更新域（update domains）；或跨多个故障域运行的补丁（参见图 3.2）。最终，你将能够使用 Oslo 的特定领域语言工具指定你的服务模型，并将模型存储在 Oslo 仓库中。
 
-在 PDC 2008 发布的初始 CTP 未暴露服务模型；相反，Microsoft Visual Studio 的 Windows Azure Tools 插件贡献了 `WebRole`、`WorkerRole` 和 `Workflow` 的常用 Azure 角色模板，如第 2 节所述。
+在 PDC 2008 发布的初始 CTP 未暴露服务模型；相反，Microsoft Visual Studio 的 Windows Azure Tools 插件贡献了`WebRole`、`WorkerRole`和`Workflow`的常用 Azure 角色模板，如第 2 节所述。
 
 图 3.2 故障域由共享公共硬件的物理服务器组成，例如一机架服务器。Azure 为了可靠性，存储所有数据的一个主副本和至少两个副本拷贝。更新域由来自多个故障域的一组服务器组成。
 
@@ -1109,11 +1126,17 @@ Windows Azure 基础设施由运行在服务器上的虚拟机 (`VMs`) 组成。
 ### 逻辑节点、角色和服务的约束
 
 逻辑节点、角色和服务的约束包括：
+
 *   角色可以分配给节点。
+
 *   单个角色实例可以分配给节点。
+
 *   节点必须足够的资源。
+
 *   兼容的环境。
+
 *   节点必须位于适当的故障域。
+
 *   节点必须健康。
 
 ### 创建主机虚拟机和第一个虚拟机
@@ -1124,45 +1147,53 @@ Windows Azure 基础设施由运行在服务器上的虚拟机 (`VMs`) 组成。
 
 ### 向主机虚拟机添加虚拟机
 
-如果新项目的 `ServiceConfiguration.cscfg` 文件中的 `<Instances count="n">` 元素大于 1，或者 FC Agent 检测到现有实例将无法处理负载，则 FC Agent 通知 AFC 添加另一个虚拟机。主机虚拟机复制本地客体操作系统镜像以创建新的虚拟机，该虚拟机接收适当的角色。FC Agent 重复配置新虚拟机基础设施的过程。特定角色的新虚拟机通常被添加到不同故障域的物理服务器上。
+如果新项目的`ServiceConfiguration.cscfg`文件中的`<Instances count="n">`元素大于 1，或者 FC Agent 检测到现有实例将无法处理负载，则 FC Agent 通知 AFC 添加另一个虚拟机。主机虚拟机复制本地客体操作系统镜像以创建新的虚拟机，该虚拟机接收适当的角色。FC Agent 重复配置新虚拟机基础设施的过程。特定角色的新虚拟机通常被添加到不同故障域的物理服务器上。
 
 所有配置和取消配置的操作都在数据中心并行进行，以快速响应需求波动、硬件故障或两者。早期的 CTP 不支持动态虚拟机分配和逻辑角色实例的添加或删除。未来的版本将支持指定角色实例的最小最大数量。
 
 ### 维护角色实例健康
 
 FC 负责通过检查状态并添加或删除角色实例来保持服务运行。
+
 *   FC 为每个节点维护一个状态机。
+
 *   角色实例描述决定节点的目标状态。
+
 *   内部或外部事件会导致节点移动到不同的状态。
+
 *   FC 缓存每个节点的最后状态。
+
 *   负载均衡器探测节点以确定每个节点的操作并向 FC 报告故障。
+
 *   FC Agent 响应心跳事件协调缓存和实际状态。
+
 *   如果实际状态和目标状态不同，在心跳事件期间 FC Agent 尝试使节点更接近其目标状态。
 
 
 
+`FC`会检测节点何时达到其目标状态。
 
-- `FC` 会检测节点何时达到其目标状态。
-- 如果故障节点离线，`FC` 会尝试恢复它。
-- 如果 `FC` 无法恢复故障节点，它将在其他硬件上寻找或创建一个合适的替代品，并通知其他角色实例配置已发生更改。
+如果故障节点离线，`FC`会尝试恢复它。
 
-当节点发生故障时，服务状态不会被维护。如果保存故障逻辑角色实例的状态至关重要，您的应用程序应该定期将状态（例如缓存）持久化到 `Azure tables` 或 `blobs`。
+如果`FC`无法恢复故障节点，它将在其他硬件上寻找或创建一个合适的替代品，并通知其他角色实例配置已发生更改。
 
-# 升级服务软件和 Windows Azure
+当节点发生故障时，服务状态不会被维护。如果保存故障逻辑角色实例的状态至关重要，您的应用程序应该定期将状态（例如缓存）持久化到`Azure tables`或`blobs`。
 
-对 Windows Azure 系统的滚动服务软件升级和补丁是在一次一个 `Upgrade Domain`（升级域）的运行服务中通过事务进行的。`FC` 会并行向该 `Upgrade Domain` 中的所有节点部署资源，因此该 `Upgrade Domain` 中的所有更新的服务在升级期间会临时离线，同时新的逻辑角色实例将绑定到物理节点。升级域的数量决定了升级期间的服务损失百分比，这通常发生得非常快。要最大限度地减少升级对性能的影响，需要大量的 `Upgrade Domains`；这意味着每个服务都有许多角色实例。
+## 升级服务软件和 Windows Azure
 
-当您将升级后的项目从 `Staging` 移动到 `Production` 时，服务软件升级是自动的；某些服务器升级和补丁需要数据中心人员的干预。
+对 Windows Azure 系统的滚动服务软件升级和补丁是在一次一个`Upgrade Domain`（升级域）的运行服务中通过事务进行的。`FC`会并行向该`Upgrade Domain`中的所有节点部署资源，因此该`Upgrade Domain`中的所有更新的服务在升级期间会临时离线，同时新的逻辑角色实例将绑定到物理节点。升级域的数量决定了升级期间的服务损失百分比，这通常发生得非常快。要最大限度地减少升级对性能的影响，需要大量的`Upgrade Domains`；这意味着每个服务都有许多角色实例。
 
-# 安全保护和服务与数据
+当您将升级后的项目从`Staging`移动到`Production`时，服务软件升级是自动的；某些服务器升级和补丁需要数据中心人员的干预。
 
-在 20 世纪 90 年代，甚至在 21 世纪的前五年里，企业 IT 部门有权拒绝普通员工通过组织网络访问互联网。在许多情况下，这种限制甚至适用于高层管理。IT 管理人员简单地说，对网络安全和数据隐私的威胁对组织的生存构成了不可接受的风险。执行经理在目睹了敏感数据反复被黑客破解后，全盘接受了 IT 专家的判断。分支机构通过从电信运营商处租赁的昂贵 `T-1` 或更慢的线路连接到中央数据中心。移动用户则受到拨号连接到分支或家庭办公室速度限制的更大阻碍。IT 部门的重点是边界安全，通过使用严格的 `Network Access Control (NAC)` 参数来将“坏人”隔在公司网络之外。防止办公员工通过组织内网连接互联网导致了许多秘密的拨号连接和网络黑客攻击，这些行为在长时间内都避了 IT 部门的雷达。
+## 安全保护和服务与数据
+
+在 20 世纪 90 年代，甚至在 21 世纪的前五年里，企业 IT 部门有权拒绝普通员工通过组织网络访问互联网。在许多情况下，这种限制甚至适用于高层管理。IT 管理人员简单地说，对网络安全和数据隐私的威胁对组织的生存构成了不可接受的风险。执行经理在目睹了敏感数据反复被黑客破解后，全盘接受了 IT 专家的判断。分支机构通过从电信运营商处租赁的昂贵`T-1`或更慢的线路连接到中央数据中心。移动用户则受到拨号连接到分支或家庭办公室速度限制的更大阻碍。IT 部门的重点是边界安全，通过使用严格的`Network Access Control (NAC)`参数来将“坏人”隔在公司网络之外。防止办公员工通过组织内网连接互联网导致了许多秘密的拨号连接和网络黑客攻击，这些行为在长时间内都避了 IT 部门的雷达。
 
 根据 Forrester Research 的研究，“NAC 是硬件和软件技术的结合，根据其对策略的合规性动态控制客户端系统对网络的访问。”
 
-为了适应日益增长的销售团队、支持远程办公员工，并顺从本地员工对业务相关信息的高速互联网访问需求，这些需求逐渐克服了 IT 部门的反对意见。允许用户及其应用程序通过有限的开放 `TCP` 端口连接到互联网的防火墙为 IT 和公司管理层提供了安全幻觉。防火墙使 `SaaS` 客户关系管理 (`CRM`) 应用程序（如 [Salesforce.com](http://Salesforce.com)）以及第三方基于 `SOAP` 的 Web 服务得以蓬勃发展。今天，很少有少数大型组织的内部网络没有（无论是有意还是无意）连接到互联网。
+为了适应日益增长的销售团队、支持远程办公员工，并顺从本地员工对业务相关信息的高速互联网访问需求，这些需求逐渐克服了 IT 部门的反对意见。允许用户及其应用程序通过有限的开放`TCP`端口连接到互联网的防火墙为 IT 和公司管理层提供了安全幻觉。防火墙使`SaaS`客户关系管理 (`CRM`) 应用程序（如 [Salesforce.com](http://Salesforce.com)）以及第三方基于`SOAP`的 Web 服务得以蓬勃发展。今天，很少有少数大型组织的内部网络没有（无论是有意还是无意）连接到互联网。
 
-# 对云计算提供商安全声明的依赖
+## 对云计算提供商安全声明的依赖
 
 对潜在云计算采用者的调查表明，缺乏安全性是组织至少部分计算和数据存储操作迁移到云端的首要障碍。加利福尼亚大学伯克利分校可靠自适应分布式 (`RAD`) 系统实验室团队于 2009 年 2 月发布的白皮书《云端之上：伯克利对云计算的视角》（[`bit.ly/iSOer`](http://bit.ly/iSOer), [`d1smfj0g31qzek.cloudfront.net/abovetheclouds.pdf`](http://d1smfj0g31qzek.cloudfront.net/abovetheclouds.pdf)）列出了以下为“云计算增长十大障碍”的前三名：
 
@@ -1178,23 +1209,19 @@ FC 负责通过检查状态并添加或删除角色实例来保持服务运行�
 
 “我认为许多对云的安全反对本质上是情绪化的，是本能，”埃森哲（一家全球性管理咨询、技术服务和外包公司）云计算总监 Joseph Tobolski 说，“有些人为云安全列出了一份需求清单，而他们对自己的数据中心甚至没有这些要求。”
 
-接受第三方对云端数据进行安全、审计和维护的关键在于透明度。云计算提供商（如 `Microsoft`）必须详细说明其与安全相关的实践，并在其服务水平协议 (`SLAs`) 中包含保证的数据安全、审计、可用性和可靠性水平。
+接受第三方对云端数据进行安全、审计和维护的关键在于透明度。云计算提供商（如`Microsoft`）必须详细说明其与安全相关的实践，并在其服务水平协议 (`SLAs`) 中包含保证的数据安全、审计、可用性和可靠性水平。
 
-微软的 Charlie McNney 在其 2009 年 5 月 27 日发布的“安全保护微软云基础设施”的文章中宣布（[`bit.ly/VeAWD`](http://bit.ly/VeAWD), [`blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx`](http://blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx)，“微软的云基础设施其数据中心实现了审计标准 (SAS) 70 I 型和 II 型认证，以及 ISO/IEC 27001:2005 认证”。第 5 章“迁移到 Azure 云服务时风险最小化”描述了 `SAS 70` 和 `ISO/IEC 27001:2005` 要求以及这些认证和证书的重要性。
+微软的 Charlie McNney 在其 2009 年 5 月 27 日发布的“安全保护微软云基础设施”的文章中宣布（[`bit.ly/VeAWD`](http://bit.ly/VeAWD), [`blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx`](http://blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx)，“微软的云基础设施其数据中心实现了审计标准 (SAS) 70 I 型和 II 型认证，以及 ISO/IEC 27001:2005 认证”。第 5 章“迁移到 Azure 云服务时风险最小化”描述了`SAS 70`和`ISO/IEC 27001:2005`要求以及这些认证和证书的重要性。
 
-微软于 2009 年 7 月旬宣布了其 `Windows Azure`、`SQL Azure` 和 `.NET Services` 的 SLA（[`bit.ly/16lKsY`](http://bit.ly/16lKsY), [www.microsoft.com/azure/pricing.mspx](http://www.microsoft.com/azure/pricing.mspx))
+微软于 2009 年 7 月旬宣布了其`Windows Azure`、`SQL Azure`和`.NET Services`的 SLA（[`bit.ly/16lKsY`](http://bit.ly/16lKsY), [www.microsoft.com/azure/pricing.mspx](http://www.microsoft.com/azure/pricing.mspx)）
 
-# 隔离多个租户的私有数据
+## 隔离多个租户的私有数据
 
-防止来自相同服务的组织的未授权用户访问应用程序数据的安全，是独立软件供应商 (`ISVs`) 在云计算中采用虚拟化最重要的动力之一。`Windows Azure` 实现了一些多租户计算，也称为多租户功能。维基百科对这些功能的描述如下（[`bit.ly/bbgGH`](http://bit.ly/bbgGH), [`en.wikipedia.org/wiki/Multi-tenant`](http://en.wikipedia.org/wiki/Multi-tenant)）：
-
-
-
-
+防止来自相同服务的组织的未授权用户访问应用程序数据的安全，是独立软件供应商 (`ISVs`) 在云计算中采用虚拟化最重要的动力之一。`Windows Azure`实现了一些多租户计算，也称为多租户功能。维基百科对这些功能的描述如下（[`bit.ly/bbgGH`](http://bit.ly/bbgGH), [`en.wikipedia.org/wiki/Multi-tenant`](http://en.wikipedia.org/wiki/Multi-tenant)）：
 
 多租户（Multitenancy）是软件架构中的一种原则，指单个软件实例运行在软件即服务（SaaS）供应商的服务器上，并为多个客户组织（租户）提供服务。多租户与多实例架构形成对比，后者为不同的客户组织建立独立的软件实例（或硬件系统）。在多租户架构中，软件应用程序的设计目标是能够对对其数据和配置进行虚拟划分，以便每个客户组织都能在一个自定义的虚拟应用程序实例上工作。
 
-任职 `Azure` 的微软架构师 Gianpaulo Carrara 在其 2006 年 2 月 26 日的博客文章《Multi-Tenancy, metadata driven everything and you are my #1 customer》中引入了多个租户数据混合的问题（链接：[`bit.ly/gbmKG`](http://bit.ly/gbmKG), [`blogs.msdn.com/gianpaolo/archive/2006/02/26/539717.aspx`](http://blogs.msdn.com/gianpaolo/archive/2006/02/26/539717.aspx)）：
+任职`Azure`的微软架构师 Gianpaulo Carrara 在其 2006 年 2 月 26 日的博客文章《Multi-Tenancy, metadata driven everything and you are my #1 customer》中引入了多个租户数据混合的问题（链接：[`bit.ly/gbmKG`](http://bit.ly/gbmKG), [`blogs.msdn.com/gianpaolo/archive/2006/02/26/539717.aspx`](http://blogs.msdn.com/gianpaolo/archive/2006/02/26/539717.aspx)）：
 
 在纯多租户架构中，托管应用程序的单个实例能够为所有客户（租户）提供服务。与对每个请求行为都相同的更传统的“云端”Web 应用程序或 Web 服务不同，多租户架构允许在 UI（品牌化）、业务规则、业务流程和数据模型层进行针对特定租户的配置。这必须在不更改代码的情况下实现，因为所有租户共享相同的代码，因此将软件的定制化转变为软件的配置化。正如你所想象的，这驱动了对“元数据驱动一切”的明确需求。另一个主要挑战是在同一数据基础设施中共同存放多个租户的持久化数据（进行“混合”与“去混合”）。
 
@@ -1204,114 +1231,110 @@ FC 负责通过检查状态并添加或删除角色实例来保持服务运行�
 
 Carraro 在 2008 年 7 月的“Software + Services for Architects”网络研讨会（链接：[`bit.ly/1addvS`](http://bit.ly/1addvS), [`msdn.microsoft.com/en-us/architecture/aa699384.aspx`](http://msdn.microsoft.com/en-us/architecture/aa699384.aspx)）讨论了在“自力更生”与采用私有云和公共云计算的软件+服务方法之间平衡 SLA 的权衡。
 
-2008 年初，另一位微软架构师 Eugenio Pace 编写了一个多租户 `ASP.NET` 项目，使用 `SQL Server Data Services (SSDS)`（`SQL Azure Database (SADB)` 的前身）代替 `SQL Server 200x` 作为数据源。Pace 从 2008 年 3 月开始编写的五部分“Litware HR on SSDS”教程博客文章，描述了传统的（非云）多租户 Web 应用程序如何使用云 `S[S]DS` 数据存储实现通用的多租户数据访问。该教程以一个 11 分钟的“LitwareHR on SSDS 端到端演示”结 n（链接：[`bit.ly/7BHKI`](http://bit.ly/7BHKI), [`blogs.msdn.com/eugeniop/archive/2008/04/27/end-to-end-demo-of-litwarehr-on-ssds.aspx`](http://blogs.msdn.com/eugeniop/archive/2008/04/27/end-to-end-demo-of-litwarehr-on-ssds.aspx)），演示了如何自定义和使用单个租户站点，该站点具有专用的 `S[S]DS` 容器用于数据存储。
+2008 年初，另一位微软架构师 Eugenio Pace 编写了一个多租户`ASP.NET`项目，使用`SQL Server Data Services (SSDS)`（`SQL Azure Database (SADB)`的前身）代替`SQL Server 200x`作为数据源。Pace 从 2008 年 3 月开始编写的五部分“Litware HR on SSDS”教程博客文章，描述了传统的（非云）多租户 Web 应用程序如何使用云`S[S]DS`数据存储实现通用的多租户数据访问。该教程以一个 11 分钟的“LitwareHR on SSDS 端到端演示”结 n（链接：[`bit.ly/7BHKI`](http://bit.ly/7BHKI), [`blogs.msdn.com/eugeniop/archive/2008/04/27/end-to-end-demo-of-litwarehr-on-ssds.aspx`](http://blogs.msdn.com/eugeniop/archive/2008/04/27/end-to-end-demo-of-litwarehr-on-ssds.aspx)），演示了如何自定义和使用单个租户站点，该站点具有专用的`S[S]DS`容器用于数据存储。
 
-设计多租户 `Azure` 应用程序并不是一个直观的过程，因为 `Azure Hosted Service` 的 `ServiceConfiguration.cfgfg` 文件指定了存储服务和实例数量。在编写此书时，微软尚未提供关于在 `Windows Azure` 上运行多租户项目的官方架构指导。
+设计多租户`Azure`应用程序并不是一个直观的过程，因为`Azure Hosted Service`的`ServiceConfiguration.cfgfg`文件指定了存储服务和实例数量。在编写此书时，微软尚未提供关于在`Windows Azure`上运行多租户项目的官方架构指导。
 
-## 确保 Fabric 控制器（Fabric Controller）可用性
+### 确保 Fabric 控制器（Fabric Controller）可用性
 
-`Azure FC` 是一个高可用故障转移集群，运行在五到七台机器上，每台机器都运行一个简化版的 `Azure OS` 核心。
+`Azure FC`是一个高可用故障转移集群，运行在五到七台机器上，每台机器都运行一个简化版的`Azure OS`核心。
 
-`FC` 集群实现了：
+`FC`集群实现了：
 
 *   具有自动故障转移的复制状态
-*   从故障主或次级 `FC` 节点无缝切换到新的主 `FC` 节点
-*   当所有 `FC` 副本都失败时继续服务
+*   从故障主或次级`FC`节点无缝切换到新的主`FC`节点
+*   当所有`FC`副本都失败时继续服务
 *   通过“根 FC”实用程序进行滚动集群软件升级，该实用程序还负责管理集群
 
-图 3.4 是一个具有两个次级 `FC` 节点的 `FC` 集群图（比最小值少三个）。
+图 3.4 是一个具有两个次级`FC`节点的`FC`集群图（比最小值少三个）。
 
-图 3.4 一个具有主节点和两个次级节点的 `FC` 集群图。
+图 3.4 一个具有主节点和两个次级节点的`FC`集群图。
 
 ![3.4](img/c03f004)
 
 以下是 图 3.4 中组件的描述：
 
-*   `FC Core` 负责心跳、状态和资源分配
-*   `Object Model` 提供逻辑
-*   `Replication system` 用于 `FC`
-*   `Disks` 是 `FC` 成员的磁盘
+*   `FC Core`负责心跳、状态和资源分配
+*   `Object Model`提供逻辑
+*   `Replication system`用于`FC`
+*   `Disks`是`FC`成员的磁盘
 
 ### 为 Windows 服务器虚拟化
 
-服务器虚拟化的目标是最大化服务器利用率，在今天使用商品化服务器的情况下，利用率通常低于 50%。多租户通过在单台物理服务器上运行多个应用程序和服务，提高了每美元和每瓦特的性能。如果没有服务器虚拟化，随着硬件的普及，利用率将会降低。多租户允许 `Azure` 运行多个和和服务。
+服务器虚拟化的目标是最大化服务器利用率，在今天使用商品化服务器的情况下，利用率通常低于 50%。多租户通过在单台物理服务器上运行多个应用程序和服务，提高了每美元和每瓦特的性能。如果没有服务器虚拟化，随着硬件的普及，利用率将会降低。多租户允许`Azure`运行多个和和服务。
 
-图 3.5 描述了 `Windows Server 2008` 的 `Hyper-V hypervisor v1`；`Azure` 运行五到七个客户分区。
+图 3.5 描述了`Windows Server 2008`的`Hyper-V hypervisor v1`；`Azure`运行五到七个客户分区。
 
-图 3.5 微软 `Hyper-V hypervisor v1` 具有一个主机 `VM` 和两个 `VM`。
+图 3.5 微软`Hyper-V hypervisor v1`具有一个主机`VM`和两个`VM`。
 
 ![3.5](img/c03f005)
 
 以下是 图 3.5 组件的描述：
 
-*   `Guest OS` 是应用程序和服务的服务器操作系统（Windows Server 2008 Enterprise，带 IIS 7、.NET Fx 3.5 以及其他 Azure 扩展）。
-*   `Services` 是运行在 `guest OS` 上的自定义（Azure）应用程序和服务。
-*   `Virtualization Stack (VSP, 虚拟化服务提供者)` 是虚拟化栈暴露的提供者，为 `child partition` 提供 I/O 等资源或服务。
-*   `Virtualization Stack (VSC, 虚拟化客户端或消费者)` 是客户加载的用于消费资源或服务的软件模块。对于 I/O 设备，`虚拟化客户端`可以是操作系统内核加载的设备驱动程序。
-
-
-
-
-
-- `VMBus` 是一种共享内存 I/O 总线，实现了虚拟机（VMs）之间的高通信。
-- `NICs` 是物理网络接口卡。
-- `CPUs` 是物理中央处理器，通常具有一个或多个核心。
-- `Disk(s)` 是用于根分区和客户分区的物理固定磁盘。
+*   `Guest OS`是应用程序和服务的服务器操作系统（Windows Server 2008 Enterprise，带 IIS 7、.NET Fx 3.5 以及其他 Azure 扩展）。
+*   `Services`是运行在`guest OS`上的自定义（Azure）应用程序和服务。
+*   `Virtualization Stack (VSP, 虚拟化服务提供者)`是虚拟化栈暴露的提供者，为`child partition`提供 I/O 等资源或服务。
+*   `Virtualization Stack (VSC, 虚拟化客户端或消费者)`是客户加载的用于消费资源或服务的软件模块。对于 I/O 设备，`虚拟化客户端`可以是操作系统内核加载的设备驱动程序。
+*   `VMBus`是一种共享内存 I/O 总线，实现了虚拟机（VMs）之间的高通信。
+*   `NICs`是物理网络接口卡。
+*   `CPUs`是物理中央处理器，通常具有一个或多个核心。
+*   `Disk(s)`是用于根分区和客户分区的物理固定磁盘。
 
 Hyper-V 的主页位于 [`bit.ly/DnJtW`](http://bit.ly/DnJtW) 和 [www.microsoft.com/virtualization/default.mspx](http://www.microsoft.com/virtualization/default.mspx)。
 
-# 在非微软数据中心部署 Azure 虚拟机管理程序
+## 在非微软数据中心部署 Azure 虚拟机管理程序
 
-IT 和通用管理层对于将云端应用程序和服务锁定在单一供应商处有严重的顾虑，并认为认为在多个平台即服务（PaaS）或基础设施即服务（IaaS）云平台上部署应用程序、服务、数据或这三者是非常困难甚至是不可能的。例如，`GAE` 仅支持 `Python` 作为其编程语言。`AWS` 支持 `Windows Server 2003`，并且未来可能会兼容 `Windows Server 2008`，但在没有适当虚拟机管理程序的情况下，你无法模拟服务器实例的多租户化。`Azure` 虚拟机管理程序是微软内部专属产品，`FC` 也是如此，因此将项目从 `Azure` 迁移到 `AWS` 需要对底层代码和部署方法进行重大修改。从一个供应商的云迁移大量数据到另一个更是挑战性。
+IT 和通用管理层对于将云端应用程序和服务锁定在单一供应商处有严重的顾虑，并认为认为在多个平台即服务（PaaS）或基础设施即服务（IaaS）云平台上部署应用程序、服务、数据或这三者是非常困难甚至是不可能的。例如，`GAE`仅支持`Python`作为其编程语言。`AWS`支持`Windows Server 2003`，并且未来可能会兼容`Windows Server 2008`，但在没有适当虚拟机管理程序的情况下，你无法模拟服务器实例的多租户化。`Azure`虚拟机管理程序是微软内部专属产品，`FC`也是如此，因此将项目从`Azure`迁移到`AWS`需要对底层代码和部署方法进行重大修改。从一个供应商的云迁移大量数据到另一个更是挑战性。
 
 Reuven Cohen 创建了一个云计算互操作性论坛 Google Group（[`bit.ly/DBcJQ`](http://bit.ly/DBcJQ), [`groups.google.com/group/cloudforum`](http://groups.google.com/group/cloudforum)），旨在“定义一个通过应用程序集成和利益相关者合作来实现具有互操作性的企业级云计算平台的组织”。
 
 2009 年 1 月底，微软云基础设施服务（Azure）团队主管 Hoi Vo 写了一篇博客文章（[`bit.ly/pfQSu`](http://bit.ly/pfQSu), [`blogs.msdn.com/windowsazure/archive/2009/01/29/design-principles-behind-the-windows-azure-hypervisor.aspx`](http://blogs.msdn.com/windowsazure/archive/2009/01/29/design-principles-behind-the-windows-azure-hypervisor.aspx)），列出了 Windows Azure 虚拟机管理程序设计的三个原则：
 
-1. **高效（Efficient）**：尽可能将工作推给硬件。任何百分比的收益一旦乘以数万台机器，对我们来说都将意义重大。因此，我们可以利用新的处理器特性来为托管应用程序节省 `CPU` 周期。
+1. **高效（Efficient）**：尽可能将工作推给硬件。任何百分比的收益一旦乘以数万台机器，对我们来说都将意义重大。因此，我们可以利用新的处理器特性来为托管应用程序节省`CPU`周期。
 2. **极小足迹（Small footprint）**：移除所有不适用于我们特定云场景的功能。这保证了我们不必担心更新或修复不需要的代码，意味着减少了主机的变动或重启需求。所有关键代码路径也针对我们的 Windows Azure 场景进行了高度优化。
 3. **紧密集成（Tight integration）**：Windows Azure 虚拟机管理程序与 Windows Azure 内核进行了紧密优化。这是实现我们技术栈所需的扩展性和性能水平所需的。
 
-Vo 表示，由于 `Azure` 虚拟机管理程序针对数据中心的标准服务器硬件设计进行了优化，因此不适合部署在微软数据中心之外。然而，`Azure` 虚拟机管理程序的性能改进功能，如二级地址翻译（SLAT），将进入未来的 Hyper-V 版本。
+Vo 表示，由于`Azure`虚拟机管理程序针对数据中心的标准服务器硬件设计进行了优化，因此不适合部署在微软数据中心之外。然而，`Azure`虚拟机管理程序的性能改进功能，如二级地址翻译（SLAT），将进入未来的 Hyper-V 版本。
+
+
 
 ### 总结
 
-Windows Azure 操作系统基于 `Windows Server 2008 Enterprise Edition`，该系统运行在 `Fabric Controller` 之上，该控制器由自定义版本的微软 `Hyper-V` 虚拟机管理程序创建。`Azure Fabric` 为每个 `Hosted Service` 提供至少一个服务器 `CPU` 核心、1.7GB 内存、100Mbs 网络连接、 250GB 临时存储（重启期间不会持久化），以及一个在早期的社区技术预览版中提供的、具有 50GB 持久存储的 `Azure Storage Service` 账户。在发布版本中，`Hosted Services` 将能够通过付费请求并获取额外的资源和服务实例。
+Windows Azure 操作系统基于 `Windows Server 2008 Enterprise Edition`，该系统运行在 `Fabric Controller` 之上，该控制器由自定义版本的微软 `Hyper-V` 虚拟机管理程序创建。`Azure Fabric` 为每个 `Hosted Service` 提供至少一个服务器 `CPU` 核心、1.7GB 内存、100Mbs 网络连接、250GB 临时存储（重启期间不会持久化），以及一个在早期的社区技术预览版中提供的、具有 50GB 持久存储的 `Azure Storage Service` 账户。在发布版本中，`Hosted Services` 将能够通过付费请求并获取额外的资源和服务实例。
 
 `FC` 处理应用程序/服务的部署、负载均衡、操作系统/数据复制以及资源管理。它还部署项目，并在发布版本中自动添加实例以满足需求，管理项目软件升级，并处理服务器故障以维护项目可用性。`FC` 将每个角色分配到其自己的虚拟机；角色实例运行在 fabric 节点上，通道连接各个角色。`WebRole` 实例接受 HTTP 或 HTTPS 请求，并使用 `ASP.NET`、`ASP.NET MVC` 或 `Silverlight` UI 进行响应。`WorkerRoles` 根据接收来自 `WebRoles` 或 `Azure Queues` 中 `.NET Services` 的请求消息提供批处理服务。`FC` 运行在由五到七台服务器组成的高可用集群上以确保最大的可靠性。
 
-和服务和存储被部署在 `Failure Domains`（故障域）中，其成员具有共同的故障点。存储占用主节点，主节点会复制到不同 `Failure Domains` 中的至少两个其他节点上。对 Windows Azure 操作系统的滚动式服务软件升级和补丁是在一次对单个 `Upgrade Domain`（升级域）中的运行的服务进行。`FC` 并行向 `Upgrade Domain` 的所有节点部署资源，因此 `Upgrade Domain` 中的所有已更新的服务在升级期间会临时离线。
+服务和存储被部署在 `Failure Domains`（故障域）中，其成员具有共同的故障点。存储占用主节点，主节点会复制到不同 `Failure Domains` 中的至少两个其他节点上。对 Windows Azure 操作系统的滚动式服务软件升级和补丁是在一次对单个 `Upgrade Domain`（升级域）中的运行的服务进行。`FC` 并行向 `Upgrade Domain` 的所有节点部署资源，因此 `Upgrade Domain` 中的所有已更新的服务在升级期间会临时离线。
 
 管理层对于将本地计算和数据存储迁移到云端的顾虑中，安全性和可用性是首要考虑。应用程序和存储安全性取决于云数据中心组件，这些组件比大多数本地数据中心更能抵抗攻击和未经授权的访问。云供应商必须提供服务水平协议，以消除潜在客户对迁移计算和数据存储的担忧。
 
-云供应商锁定是考虑云计算的 IT 部门面临的另一个问题。平台即服务（如 `Windows Azure Platform`）比基础设施即服务（以 `Amazon Web Services` 的 `EC2` 为代表）具有更高的锁定率，因为微软没有提供用于本地的自定义 虚拟机管理程序。`Windows Azure SDK` 的开发 Fabric 不用于内部。
+云供应商锁定是考虑云计算的 IT 部门面临的另一个问题。平台即服务（如 `Windows Azure Platform`）比基础设施即服务（以 `Amazon Web Services` 的 `EC2` 为代表）具有更高的锁定率，因为微软没有提供用于本地的自定义虚拟机管理程序。`Windows Azure SDK` 的开发 Fabric 不用于内部。
 
-# 第四章
+## 第四章
 
-## Scaling Table and Blob Storage
+### Scaling Table and Blob Storage
 
 实现高扩展性需要云应用程序是无状态的，以便不依赖数据中心的负载均衡设备或软件将特定请求路由到特定的逻辑节点。然而，大多数应用程序和服务访问持久化在表中的数据，以及用于存储非结构化数据（如图像和文本文档）的二进制大型对象（blob）。
 
 `Azure Storage Services` 为以下三种类型的数据提供高度扩展的持久存储：
 
 * **Tables** 是使用实体-属性-值（EAV）数据模型的结构化表格数据；实体所有属性值的最大大小为 1MB。实体可以分组到存储分区中，分区维护在单一位置。
+
 * **Blobs** 由存储在字节数组中的非结构化文件数据组成；容器以分级分组存储大小达 50GB 的单个 blob，模拟目录结构。只有 blob 容器及其内容可以公开。
+
 * **Queues** 包含存储在表的无限消息，供全局服务（通常是 Worker 云服务）处理；消息的最大大小为 8KB。消息通常在读取它们的进程处理它们后被删除。队列是第八章“使用 Azure 队列”的主题。
-
-
-
 
 为了确保可用性和可靠性，所有存储的数据都由一个主节点和两个多个副本组成，存储在不同的故障域（Fault Domains）中。当微软开放 Azure 服务平台供通用使用时，数据可以复制到多个数据中心，以确保在数据中心被毁时能够访问。
 
-SQL Azure Database (`SADB$，以前称为 `SQL Data Services`、`SDS` 和 SQL Server Data Services，`SSDS`）是 Azure Tables 的替代方案，提供了关系型表的许多功能。微软对 `SADB` 存储和网络入/出流量收取费用。`SADB` 是第 12 章“管理 SQL Azure Database 账户、数据库和 DataHub”以及第 13 章“利用 SQL Azure Database 的关系特性”的主题。
+SQL Azure Database（`SADB`，以前称为 `SQL Data Services`、`SDS` 和 SQL Server Data Services，`SSDS`）是 Azure Tables 的替代方案，提供了关系型表的许多功能。微软对 `SADB` 存储和网络入/出流量收取费用。`SADB` 是第 12 章“管理 SQL Azure Database 账户、数据库和 DataHub”以及第 13 章“利用 SQL Azure Database 的关系特性”的主题。
 
 ### 创建存储账户
 
 早期的 Azure CTP 为测试人员的每个托管服务（Hosted Service）账户提供了两个存储账户。单个存储账户为表（tables）、二进制对象（blobs）和队列（queues）提供独立的 `URI`。当你作为请求注册 Azure 测试版账户的结果收到一个令牌 `GUID` 时，并按照第 2 章“Windows Azure 开发者门户”节所述创建托管服务账户，该 `token` 允许你创建两个具有不同前缀名的存储账户。
 
-## 使用托管服务令牌创建第一个存储账户
+#### 使用托管服务令牌创建第一个存储账户
 
-要使用令牌创建存储账户，点击 `Account` 选项卡及其 `Manage My Tokens` 链接打开 `Tokens` 页面，将 `token GUID`复制并粘贴到 `Resource Token ID` 框中，并点击 `Claim Token` 为 `GUID` 为受限实体（Gated Entity）的存储账户组添加 `Compute Only` 桶，如图 4.1 所示。
+要使用令牌创建存储账户，点击 `Account` 选项卡及其 `Manage My Tokens` 链接打开 `Tokens` 页面，将 `token GUID` 复制并粘贴到 `Resource Token ID` 框中，并点击 `Claim Token` 为 `GUID` 为受限实体（Gated Entity）的存储账户组添加 `Compute Only` 桶，如图 4.1 所示。
 
 图 4.1 Azure 开发者门户的 Tokens 页面，带有用于托管服务令牌的初始存储账户。
 
@@ -1323,7 +1346,7 @@ SQL Azure Database (`SADB$，以前称为 `SQL Data Services`、`SDS` 和 SQL Se
 
 ![4.2](img/c04f002.jpg)
 
-存储账户选择显示了你已兑取的托管服务令牌可用的存储账户数量（`project(s) remaining)`）。点击 `Storage Account` 图标打开 `Create a Project – Project Properties` 页面。输入唯一的 `Project Label` 并添加 `Project Description`，如图 4.3 所示。
+存储账户选择显示了你已兑取的托管服务令牌可用的存储账户数量（`project(s) remaining`）。点击 `Storage Account` 图标打开 `Create a Project – Project Properties` 页面。输入唯一的 `Project Label` 并添加 `Project Description`，如图 4.3 所示。
 
 图 4.3 在 Create a Project – Project Properties 页面为新的 blob 存储账户分配唯一的 Project Label。
 
@@ -1337,31 +1360,29 @@ SQL Azure Database (`SADB$，以前称为 `SQL Data Services`、`SDS` 和 SQL Se
 
 点击 `Create` 生成新的存储账户并打开 `Service Name` 页面，该页面显示三种数据类型中每种类型的 `http://dns_prefix.data_type.core.windows.net` 端点，并显示三个端点的 `Primary Access Key` 和 `Secondary Access Key` 值（参见图 4.5）。
 
-请保持 `Primary Access Key` 和 `Secondary Access Key` 机密，因为这两个密钥中的任何一个添加到 `ServiceConfiguration.cfgfg` 文件中都允许访问你的存储服务。
+请保持 `Primary Access Key` 和 `Secondary Access Key` 机密，因为这两个密钥中的任何一个添加到 `ServiceConfiguration.cscfg` 文件中都允许访问你的存储服务。
 
 图 4.5 Service Name 页面，用于创建存储账户的过程。
 
 ![4.5](img/c04f005.jpg)
 
-## 使用托管服务令牌创建额外的存储账户
+#### 使用托管服务令牌创建额外的存储账户
 
 要使用令牌创建第二个存储账户，点击开发者门户左侧面板的 `New Service` 链接打开 `Project | Create a new service` 页面（参见图 4.2），并按照图 4.3 所示的步骤通过图 4.4 所示的步骤创建托管服务的存储账户。
 
-# 使用或封装 Azure 服务的 API
+## 使用或封装 Azure 服务的 API
 
 你不需要托管服务即可利用 Azure 的扩展功能。事实上，你可以使用任何流行的语言如 `PHP`、`Python`、`IronPython`、`Ruby`、`IronRuby`、`Java`、`C#` 或 `Visual Basic` 访问存储账户及其数据，通过调用 HTTP 的 `GET`、`POST`、`PUT` 等标准方法与网络资源交互。正如你将在后续章节中看到的，直接使用官方 `REST` API 需要向 `HttpRequestWebRequest` 传递许多头部字符串，并解析 `HttpRequestWebRequest` 返回的字符串。
 
-使用“魔术字符串”而不是对象编程违背了 .NET 强类型面向对象的方法论。因此，Azure Tables 支持受限的功能集，可以使用 ADO.NET Data Services 客户端库（以前现在仍称为 `Astoria`）通过 LINQ to REST 方言访问表存储数据。SQL Azure Database (`SADB`) 也支持 `Astoria` 接口。`Astoria` 使用 Atom 订阅格式 ([www.ietf.org/rfc/4287.txt](http://www.ietf.org/rfc/4287.txt)) 获取表数据，并使用 Atom 发布协议 (`AtomPub`，[www.ietf.org/rfc/5023.txt](http://www.ietf.org/rfc/5023.txt)) 进行表插入、更新和删除，如第 2 章所述。
+使用“魔术字符串”而不是对象编程违背了 .NET 强类型面向对象的方法论。因此，Azure Tables 支持受限的功能集，可以使用 ADO.NET Data Services 客户端库（以前现在仍称为 `Astoria`）通过 LINQ to REST 方言访问表存储数据。SQL Azure Database（`SADB`）也支持 `Astoria` 接口。`Astoria` 使用 Atom 订阅格式（[www.ietf.org/rfc/4287.txt](http://www.ietf.org/rfc/4287.txt)）获取表数据，并使用 Atom 发布协议（`AtomPub`，[www.ietf.org/rfc/5023.txt](http://www.ietf.org/rfc/5023.txt)）进行表插入、更新和删除，如第 2 章所述。
 
-## 使用 Fiddler2 显示 HTTP 请求和响应头部及内容
+### 使用 Fiddler2 显示 HTTP 请求和响应头部及内容
 
 一种捕捉运行在开发织（Development Fabric）中的 Azure 项目与 Azure 数据存储之间 HTTP 头部和内容的日志工具对于调试数据操作代码至关重要。本书中的示例使用 IE 7 和 `Fiddler2` 代理来监控和调试数据访问。根据其开发者 Eric Lawrence（微软 Internet Explorer 团队成员）的说法：
 
 Fiddler 是一种 Web 调试代理，记录计算机与互联网之间所有的 HTTP(S) 流量。Fiddler 允许你检查 HTTP(S) 流量、设置断点并对传入或导出的数据进行“调试”。Fiddler 包含一个强大的事件驱动脚本系统，并可以使用任何 .NET 语言进行扩展。Fiddler 是免费软件，可以调试几乎任何应用程序的流量，包括 Internet Explorer、Mozilla Firefox、Opera 以及数千种其他程序。
 
-
-
-Fiddler 并不是微软的产品，但有两篇针对它的 Internet Explorer 开发技术文章可以参考：“Fiddler PowerToy – 第 1 部分：HTTP 调试”([`bit.ly/zZJjz`](http://bit.ly/zZJjz), [`msdn.microsoft.com/en-us/library/bb250446.aspx`](http://msdn.microsoft.com/en-us/library/bb250446.aspx)) 和 “Fiddler PowerToy – 第 2 部分：HTTP 性能”([`bit.ly/H9dAD`](http://bit.ly/H9dAD), [`msdn.microsoft.com/en-us/library/bb250442.aspx`](http://msdn.microsoft.com/en-us/library/bb250442.aspx))。你可以从 [`bit.ly/6qKe`](http://bit.ly/6qKe), [www.fiddler2.com/Fiddler2/version.asp](http://www.fiddler2.com/Fiddler2/version.asp) 免费下载 `Fiddler2`，它支持对 HTTPS 进行调试并需要 `.NET 2.0` 或更高版本。运行安装程序会在 IE 的“工具”菜单中添加 `Fiddler2` 选项；选择 `Fiddler2` 会在独立的窗口中打开该应用程序。
+Fiddler 并不是微软的产品，但有两篇针对它的 Internet Explorer 开发技术文章可以参考：“Fiddler PowerToy – 第 1 部分：HTTP 调试”（[`bit.ly/zZJjz`](http://bit.ly/zZJjz), [`msdn.microsoft.com/en-us/library/bb250446.aspx`](http://msdn.microsoft.com/en-us/library/bb250446.aspx)）和 “Fiddler PowerToy – 第 2 部分：HTTP 性能”（[`bit.ly/H9dAD`](http://bit.ly/H9dAD), [`msdn.microsoft.com/en-us/library/bb250442.aspx`](http://msdn.microsoft.com/en-us/library/bb250442.aspx)）。你可以从 [`bit.ly/6qKe`](http://bit.ly/6qKe), [www.fiddler2.com/Fiddler2/version.asp](http://www.fiddler2.com/Fiddler2/version.asp) 免费下载 `Fiddler2`，它支持对 HTTPS 进行调试并需要 `.NET 2.0` 或更高版本。运行安装程序会在 IE 的“工具”菜单中添加 `Fiddler2` 选项；选择 `Fiddler2` 会在独立的窗口中打开该应用程序。
 
 图 4.6 显示了 `Fiddler2` 捕获了一个 `MERGE` 请求的 HTTP 请求和响应头，该请求旨在向 Azure `CompanyName` 表中 `Customer` 实体的 `CompanyName` 属性值添加一个加号（`+`）。
 
@@ -1381,9 +1402,9 @@ Fiddler 并不是微软的产品，但有两篇针对它的 Internet Explorer �
 <Setting name="TableStorageEndpoint" value="http://table.core.windows.net" />
 ```
 
-Fiddler 不支持直接捕获发送到或来自环回（`localhost`）地址 `http://127.0.0.1`的数据包。要启用本地数据包日志，请在 IP 地址后添加一个点，如下：`http://127.0.0.1.:8000.Default.aspx`。
+Fiddler 不支持直接捕获发送到或来自环回（`localhost`）地址 `http://127.0.0.1` 的数据包。要启用本地数据包日志，请在 IP 地址后添加一个点，如下：`http://127.0.0.1.:8000.Default.aspx`。
 
-点击窗口左下角的按钮开启`Capturing`捕获）和`All Processes`所有进程），如图 4.6 所示的强调状态。点击 `RAW` 在检查器（Inspectors）页的上方窗口中查看 HTTP 请求头和请求体（如果适用）；下方窗口显示响应头和响应体（如果适用）。通过 HTTP `MERGE` 方法创建的实体上添加的 `+` 符号在图 4.6 右上窗口的底部被突出显示。
+点击窗口左下角的按钮开启 `Capturing`（捕获）和 `All Processes`（所有进程），如图 4.6 所示的强调状态。点击 `RAW` 在检查器（Inspectors）页的上方窗口中查看 HTTP 请求头和请求体（如果适用）；下方窗口显示响应头和响应体（如果适用）。通过 HTTP `MERGE` 方法创建的实体上添加的 `+` 符号在图 4.6 右上窗口的底部被突出显示。
 
 `Fiddler2` 的 `Request Builder`（请求生成器）窗口允许你创建自定义 HTTP 请求，并且如果你勾选 `Inspect Session`（检查会话）复选框，就可以查看响应头和响应体（如果适用）。从 `Web Sessions` 列表中将会话项拖到右上窗口，并在点击 `Execute` 时将克隆原始请求，如图 4.7 所示。
 
@@ -1393,18 +1414,17 @@ Fiddler 不支持直接捕获发送到或来自环回（`localhost`）地址 `ht
 
 第 2 章的“Azure Table Services”节描述了实体的复合主键，它由字符串 `PartitionKey` 和 `RowKey` 值组成。
 
-
-
-
 ![4.9](img/c04f009.jpg)
 
 图 4.10 `TableStorageHelpers`, `ParameterValidator`, `TableStorageConstants` 和 `DataServiceUtilities` 类图。
 
 ![4.10](img/c04f010.jpg)
 
-## 使用代码在表不存在时创建新表
+### 使用代码在表不存在时创建新表
 
 当需要访问表的 Web 或 Worker 云端服务会话启动时，`Global` 类的 `Application_BeginRequest` 事件处理程序会调用 `FirstRequestInitialization` 类的 `Initialize()` 方法，该方法转调用 `ApplicationStartUponFirstRequest()` 方法。此方法执行 `StorageAccountInfo.GetDefaultTableStorageFromConfiguration()` 和 `TableStorage.CreateTablesFromModel()` 方法，如果表不存在，则根据其类定义生成表。列表 4-1 是来自 `Global.asax.cs` 文件的代码，确保在应用程序启动时每个会话仅调用一次这些方法：
+
+
 
 开发存储不支持从项目代码中动态创建表。相反，你必须右键点击云服务并选择 `Create Test Storage Tables` 命令，通过反射创建 SQL Server Express 表。
 
@@ -1474,10 +1494,6 @@ namespace SampleWebCloudService_WebRole
 
 任何实现 `IQueryable<T>` 的类都是 `CreateTablesFromModel()` 方法的源。`TableStorage` 类会反射下方列表中的 `CustomerDataServiceContext` 类并为每个 `IQueryable<T>` 属性创建一个表。表的实体具有根据 `IQueryable<T>` 类型 `T` 生成的属性。列表 4-2 是 `Customers.cs` 文件中的代码，用于创建 `CustomerTable` 和 `DataService` 对象。
 
-
-
-
-
 ```csharp
 serviceContext.RetryPolicy =
     RetryPolicies.RetryN(3, TimeSpan.FromSeconds(1));
@@ -1527,7 +1543,7 @@ public void Insert(CustomerDataModel newItem)
 
 ## 使用 HTTP POST 方法在表不存在时创建新表
 
-在`Listing 4-3` 中，是 Fiddler2 在启动 WebRole 或 WorkerRole 时，由 `Listing 4-1` 和 `4-2` 生成的并捕获的 POST 请求的 HTTP 请求头和 AtomPub 格式正文。
+在 `Listing 4-3` 中，是 Fiddler2 在启动 WebRole 或 WorkerRole 时，由 `Listing 4-1` 和 `4-2` 生成的并捕获的 POST 请求的 HTTP 请求头和 AtomPub 格式正文。
 
 **Listing 4-3：** 创建不存在的新 CustomerTable 的 HTTP POST 请求
 
@@ -1631,8 +1647,6 @@ namespace SampleWebService_WebRole
 
 
 
-
-
 ```cs
 // Object initializer includes PartitionKey and RowKey values
 custDataModel = CreateCustomerListWithRowKey();
@@ -1660,13 +1674,13 @@ btnUpdateCusts.Enabled = true;
 
 `serviceContext.AddObject()` 方法将 `custDataModel` 列表的当前成员添加到 `serviceContext` 中。调用 `serviceContext.SaveChanges()` 方法会将缓存的实体保存到 `CustomerTable` 中。
 
-如果你需要关系型 JOIN 的等效操作，必须上传依赖记录，例如每个客户的最后几个订单，以及你上传的每个订单的所有订单详情。Azure 团队承诺在未来的版本中对主键以外的实体值提供二级索引。
+如果你需要关系型 `JOIN` 的等效操作，必须上传依赖记录，例如每个客户的最后几个订单，以及你上传的每个订单的所有订单详情。Azure 团队承诺在未来的版本中对主键以外的实体值提供二级索引。
 
 ## 使用 HTTP POST 方法和 AtomPub 主体添加新实体
 
-[Listing 4-6] 是向 `CustomerTable` 添加 91 个 Customer 实体中的第一个实体所需的 HTTP POST 请求头和 AtomPub 主体：
+[Listing 4-6] 是向 `CustomerTable` 添加 91 个 `Customer` 实体中的第一个实体所需的 HTTP POST 请求头和 AtomPub 主体：
 
-[Listing 4-6:] 添加新 CustomerTable 实体的 HTTP POST 请求头和主体
+[Listing 4-6:] 添加新 `CustomerTable` 实体的 HTTP POST 请求头和主体
 
 ```http
 POST /CustomerTable HTTP/1.1
@@ -1710,11 +1724,11 @@ Expect: 100-continue
 </entry>
 ```
 
-`<entry xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">` 元素验证 Azure Table Services 使用 ADO.NET Data Services 约定（如 AtomPub 格式）来处理实体插入操作。`Timestamp` 属性值为最小 DateTime 值。缺少 `<feed>` 父元素表示 `<entry>` 是单例。
+`<entry xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">` 元素验证 Azure Table Services 使用 ADO.NET Data Services 约定（如 AtomPub 格式）来处理实体插入操作。`Timestamp` 属性值为最小 `DateTime` 值。缺少 `<feed>` 父元素表示 `<entry>` 是单例。
 
 [Listing 4-7] 是向 `CustomerTable` 成功添加新实体的 HTTP POST 响应头和 AtomPub 主体。
 
-[Listing 4-7:] 添加新 CustomerTable 实体后的 HTTP POST 响应
+[Listing 4-7:] 添加新 `CustomerTable` 实体后的 HTTP POST 响应
 
 ```http
 Cache-Control: no-cache
@@ -1767,13 +1781,9 @@ Windows Azure SDK（2009 年 CTP）引入了实体组事务（EGT），允许对
 
 ### 查询特定实体或多个实体
 
-
-
-
-
 查询可能是生产环境 Azure Tables 上常见的操作。后续章节描述了如何使用 C# 代码和 HTTP GET 方法来返回分页的 LINQ to REST 查询结果集，并将其显示在 `SampleWebCloudService` 项目的 `GridView` 控件中。
 
-分页代码改编自 Steve Marx 的 2008 年 11 月 12 日的博客文章 Paging Over Data in Windows Azure Tables, [`blog.smarx.com/posts/paging-over-data-in-windows-azure-tables`](http://blog.smarx.com/posts/paging-over-data-in-windows-azure-tables))）。
+分页代码改编自 Steve Marx 的 2008 年 11 月 12 日的博客文章 [Paging Over Data in Windows Azure Tables](http://blog.smarx.com/posts/paging-over-data-in-windows-azure-tables)）。
 
 ## 使用代码查询实体分页
 
@@ -1781,7 +1791,7 @@ Windows Azure SDK（2009 年 CTP）引入了实体组事务（EGT），允许对
 
 LINQ to REST 是 LINQ to ADO.NET Data Services 的非正式缩写。
 
-值得注意的是，它并不支持 Order By、Group By、Skip 以及以及许多其他 LINQ 标准查询操作符。`Select` 必须返回完整的实体；如前所述，不支持投影（projections）。查询最多返回 1,000 个项目，因此 `Take(1000)` 是上限。`NextPartitionKey` 和 `NextRowKey` 属性值为应用 `Take()` 方法的分页操作提供了起始位置。ADO.NET Data Services v1 不支持聚合函数，如 `Count()` 或 `Sum()`。
+值得注意的是，它并不支持 `Order By`、`Group By`、`Skip` 以及以及许多其他 LINQ 标准查询操作符。`Select` 必须返回完整的实体；如前所述，不支持投影（projections）。查询最多返回 1,000 个项目，因此 `Take(1000)` 是上限。`NextPartitionKey` 和 `NextRowKey` 属性值为应用 `Take()` 方法的分页操作提供了起始位置。ADO.NET Data Services v1 不支持聚合函数，如 `Count()` 或 `Sum()`。
 
 | 类别 | 支持的方法、属性、查询操作符或比较操作符 |
 | :--- | :--- |
@@ -1792,6 +1802,8 @@ LINQ to REST 是 LINQ to ADO.NET Data Services 的非正式缩写。
 | 布尔操作符 | `And`, `AndAlso`, `Not`, `Or` |
 
 [Listing 4-8:] `Default.aspx.cs` 后置文件中的代码用于为 `GridView` 填充 12 个或更少的 `Customer` 实体分页。
+
+
 
 ```csharp
 namespace SampleWebCloudService
@@ -1855,13 +1867,12 @@ namespace SampleWebCloudService
     }
 }
 ```
-（注：提供的代码块在源码中存在一些格式残留/重复，我在保持原有逻辑的基础上对其清理）。
 
 ## 使用 HTTP GET 方法查询第二页实体
 
-点击示例 `Default.aspx` 页面的“下一页”按钮将触发另一个 `Page_PreRender` 事件，执行执行包含 `NextPartitionKey` 和 `NextRowKey` 值的 GET 请求，如 Listing 4-9 所示。
+点击示例`Default.aspx`页面的“下一页”按钮将触发另一个`Page_PreRender`事件，执行包含`NextPartitionKey`和`NextRowKey`值的 GET 请求，如 Listing 4-9 所示。
 
-[Listing 4-9:] 请求第二页 12 个 `Customer` 实体的 GET 请求
+[Listing 4-9:] 请求第二页 12 个`Customer`实体的 GET 请求
 
 ```http
 GET /CustomerTable()?top=12&NextPartitionKey=Customer&NextRowKey=CENT HTTP/1.1
@@ -1875,11 +1886,11 @@ MaxDataServiceVersion: 1.0;NetFx
 Host: oakleaf.table.core.windows.net
 ```
 
-点击“第一页”链接会将 `NextPartitionKey` 和 `NextRowKey` 值重置为 `null`。如果你想实现“上一页”按钮，必须在 `Global.asax.cs` 或 `ViewState` 中持久化一个后进先出的 `NextRowKey` 值栈，并添加适当代码弹出相应的令牌。
+点击“第一页”链接会将`NextPartitionKey`和`NextRowKey`值重置为`null`。如果你想实现“上一页”按钮，必须在`Global.asax.cs`或`ViewState`中持久化一个后进先出的`NextRowKey`值栈，并添加适当代码弹出相应的令牌。
 
 Listing 4-10 显示了第二页的 GET 响应，包含第三页的延续令牌值。
 
-[Listing 4-10:] 请求第二页 12 个 `CustomerTable` 实体的 GET 响应
+[Listing 4-10:] 请求第二页 12 个`CustomerTable`实体的 GET 响应
 
 ```http
 HTTP/1.1 200 OK
@@ -1887,9 +1898,6 @@ Cache-Control: no-cache
 Transfer-Encoding: chunked
 Content-Type: application/atom+xml;charset=utf-8
 ```
-
-
-
 
 Server: Table Service Version 1.0 Microsoft-HTTPAPI/2.0
 
@@ -1918,7 +1926,7 @@ Date: Thu, 26 Feb 2009 22:13:29 GMT
 
 ## 查询位于美国的前八个 Customer 实体
 
-[Listing 4-11] 包含一个 LINQ to REST 表达式示例，该表达式结合了 LINQ 的 `where` 和 `take()` 标准查询操作，用于检索 `Country` 属性值为 USA 的前八个 Customer 实体。`Page_Load` 事件处理程序分配了 `serviceContext` 实例。
+[Listing 4-11] 包含一个 LINQ to REST 表达式示例，该表达式结合了 LINQ 的`where`和`take()`标准查询操作，用于检索`Country`属性值为 USA 的前八个 Customer 实体。`Page_Load`事件处理程序分配了`serviceContext`实例。
 
 ### 示例列表 4-11：检索并显示美国前八个 Customer 实体的代码
 
@@ -1939,7 +1947,7 @@ customersView.DataSource = result;
 customersView.DataBind();
 ```
 
-执行上述代码将生成 [Listing 4-12] 和 [4-13] 中的 HTTP GET 请求和响应。下表描述了 `TableStorageDataServiceQuery` 对象支持的四个 `Execute…()` 方法：
+执行上述代码将生成 [Listing 4-12] 和 [4-13] 中的 HTTP GET 请求和响应。下表描述了`TableStorageDataServiceQuery`对象支持的四个`Execute…()`方法：
 
 ### 示例列表 4-12：针对美国前八个 Customer 实体的 HTTP GET 请求
 
@@ -1955,7 +1963,7 @@ MaxDataServiceVersion: 1.0;NetFx
 Host: oakleaf.table.core.windows.net
 ```
 
-URL 编码使用 `%20` 替换查询字符串中用于分隔 LINQ to REST 比较操作符及其参数所需的空格字符。
+URL 编码使用`%20`替换查询字符串中用于分隔 LINQ to REST 比较操作符及其参数所需的空格字符。
 
 ### 示例列表 4-13：针对 Listings 4-12 请求的 HTTP GET 响应
 
@@ -1972,18 +1980,22 @@ Date: Sun, 01 Mar 2009 18:09:49 GMT
 为了简洁起见，省略了响应正文。
 
 | Execute…() 方法 | 调用时的操作 |
+
 | :--- | :--- |
+
 | `Execute()` 或 `ExecuteWithRetries()` | 返回前 1,000 个实体。 |
+
 | `ExecuteAll()` 或 `ExecuteAllWithRetries()` | 使用续期标记（continuation tokens）每 1,000 个实体一组返回所有实体。 |
-| `ExecuteWithRetries()` 和 `ExecuteAllWithRetries()` | 查询使用 `TableDataServiceContext` 对象上设置的重试策略。 |
+
+| `ExecuteWithRetries()` 和 `ExecuteAllWithRetries()` | 查询使用`TableDataServiceContext`对象上设置的重试策略。 |
 
 ## 通过替换值更新实体
 
-Update Customers 按钮用于切换在所有实体的 `CompanyName` 值上添加或移除加号（`+`）后缀。如前所述，实体是 Azure Tables 的基本单元，因此 REST API 定义了一个新的 `MERGE` 方法，该方法要求请求体包含所有实体的值，而不仅仅是需要更新的属性。`PartitionKey` 和 `RowKey` 值是不可变的，无法更新。在不允许自定义方法的情况下，ADO.NET Data Services 库使用 POST 动词隧道和请求头来处理诸如 `MERGE` 等自定义方法的情况。你可以从 Pablo Castro 的“Merge vs. Replace Semantics”中了解更多关于 `MERGE` 和 `PUT` 方法之间的差异。
+Update Customers 按钮用于切换在所有实体的`CompanyName`值上添加或移除加号（`+`）后缀。如前所述，实体是 Azure Tables 的基本单元，因此 REST API 定义了一个新的`MERGE`方法，该方法要求请求体包含所有实体的值，而不仅仅是需要更新的属性。`PartitionKey`和`RowKey`值是不可变的，无法更新。在不允许自定义方法的情况下，ADO.NET Data Services 库使用 POST 动词隧道和请求头来处理诸如`MERGE`等自定义方法的情况。你可以从 Pablo Castro 的“Merge vs. Replace Semantics”中了解更多关于`MERGE`和`PUT`方法之间的差异。
 
 ### 使用代码更新实体
 
-为了方便使用，SampleWeb 项目有一个 Update 按钮，它执行 [Listing 4-14] 中的代码来切换 `CompanyName` 属性的加号后缀。
+为了方便使用，SampleWeb 项目有一个 Update 按钮，它执行 [Listing 4-14] 中的代码来切换`CompanyName`属性的加号后缀。
 
 ```csharp
 // Updates all entities individually the current page
@@ -2024,6 +2036,8 @@ protected void btnUpdate_Click(object sender, EventArgs e)
 
 ### 使用 MERGE 方法更新实体
 
+
+
 [Listing 4-15] 包含 MERGE 请求正体，[Listing 4-16] 包含为第一个实体添加符号的响应。
 
 ### 示例列表 4-15：针对第一个实体的 HTTP MERGE 请求正体
@@ -2056,9 +2070,6 @@ Expect: 100-continue
   </author>
 </entry>
 ```
-
-
-
 
 ```xml
 <id>http://oakleaf.table.core.windows.net/CustomerTable(PartitionKey='Customer', RowKey='ALFKI')</id>
@@ -2167,22 +2178,26 @@ Date: Thu, 26 Feb 2009 22:26:09 GMT
 
 SkyDrive 复选框默认勾选，使 SkyDrive 为该下拉列表的源。点击列表中的 `bmp` 项目会生成一个 URL，例如 `http://oakleaf2.blob.core.windows.net/oakleaf2/2009-02-26T19:53:07.7481188Z.bmp Target="_Blank"`，在新窗口中打开 BMP 文件。Blob URI 使用 `http://servicename.blob.core.windows.net/containername/[path/]blobname.ext` 格式。`containername` 是你从 Hosted Service Token 创建 Azure 账户时给的 Project Label。
 
-
-
-
-
 `RFC 2046` 的作者预见到需要许多额外的子类型，并将互联网分配编号机构（IANA）指定为媒体类型的注册机构。IANA 的 MIME 媒体类型页面 ([`bit.ly/nnCIb`](http://bit.ly/nnCIb), [www.iana.org/assignments/media-types/](http://www.iana.org/assignments/media-types/)) 列出了当前的内容类型以及指向当前子类型的链接。当本书编写时，IANA 已添加了不能用于 `Content-Type` 头的示例、作为已注册 MIME 媒体类型的模型，以及针对大多数类型的大量子类型。
 
 以 `x-` 开头的媒体类型和子类型被分类为实验性（私有）值，供一致同意的系统使用。强烈建议将实验性值作为顶级类型；大多数 `x-` 值都是应用子类型。大多数 Azure 特有的元数据使用 `x-ms-*` 或类似的实验性 HTTP 头部，例如 `x-ms-date: Thu, 26 Feb 2009 21:05:25 GMT`。
 
 | 类别 | 类型 | RFC 2046  |
+
 | :--- | :--- | :--- |
+
 | Discrete | Text | 文本信息；子类型 `plain` 表示数据不包含任何格式化命令。 |
+
 | Discrete | Image | 图像数据，需要显示设备来查看信息；`RFC 2046` 定义了初始的 jpeg 和 gif 子类型。 |
+
 | Discrete | Audio | 音频数据，需要音频输出设备来“显示”数据；`RFC 2046` 定义了一个初始的基础子类型。 |
+
 | Discrete | Video | 视频数据，需要显示动态图像的能力；`RFC 2046` 定义了初始的 mpeg 子类型。 |
+
 | Discrete | application | 不符合任何其他类别的离散数据。`RFC 2046` 定义了初始的 octet-stream 和 PostScript 子类型。 |
+
 | Composite | Multipart | 由多个独立数据类型的实体组成的数据。 |
+
 | Composite | Message | 经过封装的消息。 |
 
 # StorageClient 类库的 Blob Storage 和 REST Blob Storage 类
@@ -2208,6 +2223,8 @@ SkyDrive 复选框默认勾选，使 SkyDrive 为该下拉列表的源。点击�
 Listing 4-20 包含了从 Windows Live SkyDrive 下载 blob 或将客户端文件系统的文件上传到 Azure Blob Storage 的代码。blob、日志帐户和容器名称与其他相关的元数据一起存储在 `ServiceConfiguration.cscfg` 文件的 `ConfigurationSettings` 节中。在生产环境中运行项目时，用户对错误能做的很少，因此错误处理包括向 `statusMessage` 框写入消息，调用 `RoleManager.WriteToLog()` 方法将带有错误信息的 blob 添加到 `oakleaf2log` 容器中。
 
 Listing 4-20: 以 4,096 字节分块将文件下载到 `MemoryStream` 并以 1MB 块上传到 Azure Blob Services Container 的代码。
+
+
 
 ```csharp
 public partial class _Default : System.Web.UI.Page
@@ -2285,9 +2302,6 @@ public partial class _Default : System.Web.UI.Page
                     {
                         respStream = new GZipStream(respStream,
 ```
-
-
-
 
 ```csharp
 CompressionMode.Decompress);
@@ -2374,7 +2388,7 @@ catch (Exception ex)
 
 ## 将日志 Blob 持化到容器
 
-`RoleManager.WriteToLog()` 方法将消息写入虚拟操作系统的事件日志，Azure 或 .NET 服务无法访问该日志。日志项是调试运行在 Azure Fabric 中的服务的唯一方法，因此 Azure 团队提供了一种将事件日志项持久化到 blob 的方法。要将日志复制指定容器（本例中为 `oakleaf2`）中的 blob，请打开托管服务（`oakleaf2host`），点击生产服务的 `Configure` 按钮打开 `ServiceName – Production Deployment – Azure Blob Test – Service Tuning` 页面，输入容器名称并点击 `Copy Logs` 按钮（见图 4.16）。在正常情况下，复制过程将在一两分钟内完成。
+`RoleManager.WriteToLog()` 方法将消息写入虚拟操作系统的事件日志，Azure 或 .NET 服务无法访问该日志。日志项是调试运行在 Azure Fabric 中的服务的唯一方法，因此 Azure 团队提供了一种将事件日志项持久化到 blob 的方法。要将日志复制指定容器（本例中为`oakleaf2`）中的 blob，请打开托管服务（`oakleaf2host`），点击生产服务的`Configure`按钮打开`ServiceName – Production Deployment – Azure Blob Test – Service Tuning`页面，输入容器名称并点击`Copy Logs`按钮（见图 4.16）。在正常情况下，复制过程将在一两分钟内完成。
 
 **图 4.16**：从虚拟操作系统的事件日志复制到指定的容器名称。
 
@@ -2382,7 +2396,7 @@ catch (Exception ex)
 
 ## 使用工具查看内容和日志 Blob
 
-存在多种工具可以查看和复制 Azure 托管服务的 XML 日志数据。许多工具具有操作系统或其他限制，这使得它们的用性较小。Bill Lodin 的 Windows Azure Log Viewer 可以在 Windows Vista 下运行，并过滤 blob 以仅列出日志文件；该项目的更多信息和源代码可以在 [`bit.ly/WykNP`](http://bit.ly/WykNP), [`msdn.microsoft.com/en-us/azure/dd63760.aspx`](http://msdn.microsoft.com/en-us/azure/dd63760.aspx) 获取。图 4.17 显示了 SkyDrive 在 2009 年 1 月 5 日临时故障期间发生的错误日志。
+存在多种工具可以查看和复制 Azure 托管服务的 XML 日志数据。许多工具具有操作系统或其他限制，这使得它们的用性较小。Bill Lodin 的 Windows Azure Log Viewer 可以在 Windows Vista 下运行，并过滤 blob 以仅列出日志文件；该项目的更多信息和源代码可以在[`bit.ly/WykNP`](http://bit.ly/WykNP), [`msdn.microsoft.com/en-us/azure/dd63760.aspx`](http://msdn.microsoft.com/en-us/azure/dd63760.aspx) 获取。图 4.17 显示了 SkyDrive 在 2009 年 1 月 5 日临时故障期间发生的错误日志。
 
 Azure 为每个至少发生一次日志项的 15 分钟周期创建一个日志 blob。
 
@@ -2390,7 +2404,7 @@ Azure 为每个至少发生一次日志项的 15 分钟周期创建一个日志 
 
 ![4.17](img/c04f017.jpg)
 
-点击 `Save to XML` 按钮会将 blob 的内容写入您选择的 XML 文件。图 4.18 显示 IE 8 显示了从容器复制的错误日志文件列表的内容。
+点击`Save to XML`按钮会将 blob 的内容写入您选择的 XML 文件。图 4.18 显示 IE 8 显示了从容器复制的错误日志文件列表的内容。
 
 **图 4.18**：IE 8 显示从容器复制的错误日志部分 XML 内容。
 
@@ -2398,11 +2412,7 @@ Azure 为每个至少发生一次日志项的 15 分钟周期创建一个日志 
 
 ## 使用 HTTP GET 方法从 SkyDrive 下载 Blob 文件
 
-列表 4.20 中的指令 `Stream respStream = request.GetResponse().GetResponseStream();` 生成了列表 4-21 和 4-22 所示的 GET 请求和响应头。
-
-
-
-
+列表 4.20 中的指令`Stream respStream = request.GetResponse().GetResponseStream();`生成了列表 4-21 和 4-22 所示的 GET 请求和响应头。
 
 ```http
 application/octet-stream, /*
@@ -2434,6 +2444,8 @@ Content-Type: image/bmp
 ```
 
 ### 以 1MB 块将 Blob 上传到 Azure 服务
+
+
 
 大小大于 64MB 的 Blob 必须以 4MB 或更小的块上传到 Azure Blob Storage；您可以在单次操作中上传小于 64MB 的文件。使用块（blocks）来组装大 Blob 允许并行上传以提高性能，并在连接出现问题时能够恢复上传。
 
@@ -2467,12 +2479,15 @@ Date: Thu, 26 Feb 2009 21:04:06 GMT
 ```
 
 ### 下载选定的 Blob
+
 如前所述，在 `GridView` 列中点击图像类型 Blob 的文件名将在其单独的窗口中打开图像。应用程序类型的 Blob 通常会打开一个文件对话框。
 
 ### 在浏览器或对话框中打开选定的 Blob
+
 `Listing 4-25` 中 `Default.aspx` 源代码的重点显示行生成了 Blob 的 `FileURI`，如 `http://oakleaf2.blob.core.windows.net/oakleaf2store/2009-02-26T19:53:07.748188Z.bmp` Target="_blank"，以便在新窗口中打开 BMP 文件。
 
 #### [Listing 4-25] 在新窗口中打开选定文件或显示文件对话框的 ASP.NET 源代码
+
 ```xml
 <asp:GridView ID="fileView" AutoGenerateColumns="False" DataKey="BlobName" Runat="server" OnCommand="CommandHandler" BackColor="White" BorderColor="#EDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnRowDeleted="fileView_RowDeleted" OnRowDeleting="fileView_RowDeleting" AllowSorting="True" EnableSortingPaging="True">
     <RowStyle BackColor="#F7FDE" />
@@ -2484,15 +2499,19 @@ Date: Thu, 26 Feb 2009 21:04:06 GMT
 ```
 
 ### 在浏览器中显示选定的 Blob
+
 如前所述，`Listing 4-25` 中 `Default.aspx` 源代码的重点显示行生成了 Blob 的 `FileURI`，如 `http://oakleaf2.blob.core.windows.net/oakleaf2store/2009-02-26T19:53:07.748188Z.bmp` Target="_blank"，以便在新窗口中打开 BMP 文件。
 
 #### [Listing 4-26] 来自 Azure Storage 的 2.36MB 位图 Blob 的 GET 请求
+
 如前所述，`Listing 4-25` 中 `Default.aspx` 源代码的重点显示行生成了 Blob 的 `FileURI`，如 `http://oakleaf2.blob.core.windows.net/oakleaf2store/2009-02-26T19:53:07.748188Z.bmp` Target="_blank"，以便在新窗口中打开 BMP 文件。
 
 ### 在 GridView 中删除选定的 Blob
+
 `Listing 4-28` 包含了从当前列表中找到选定的 Blob 并调用 `Delete()` 方法将其删除的代码。
 
 #### [Listing 4-28] GridView 控件中删除 Blob 的代码（不可扩展）
+
 ```csharp
 // 处理 DeleteItem 命令
 protected void RowCommandHandler(object sender, GridViewCommandEventArgs e)
@@ -2541,9 +2560,6 @@ protected void RowCommandHandler(object sender, GridViewCommandEventArgs e)
 UpdateFileList();
 }
 ```
-
-
-
 
 列表中所使用的删除方法是不可扩展的，因为它依赖于 `blobList` 在选择到执行 `DeleteBlob()` 方法之间的间隔内保持不可变性。该间隔可能只有微秒或更短，但它在处理过程中引入了不可接受的不确定性。如果 `e.Command` 返回的是 GridView 的索引值而不是索引位置，则可以使用该值配合 `DoesBlobExist` 测试来删除 blob，而不会产生不确定性。
 
@@ -2594,12 +2610,14 @@ Steve Marx 的文章“新 Windows Azure Blob 特性的示例代码”([`bit.ly/
 Azure 团队于 2009 年 8 月 11 日宣布了针对 `x-ms-version` 的以下三个新功能：Azure Blobs 的 `2009-7-17`：
 
 *   **使用 PutBlockList 更新 Blob**：使用 `PutBlockList` 更新 blob 的内容，这允许你对现有 blob 添加块、删除块、替换块、重排现有块顺序或这些操作的任意组合。你只需要上传想要添加或更改的块。
+
 *   **根 Blob 容器 (Root Blob Container)**：所有存储账户现在都可以有一个根 blob 容器。这允许应用程序使用域名地址存储和引用 blob，例如示例所示：
+
     * [`myaccount.blob.core.windows.net/picture.jpg`](http://myaccount.blob.core.windows.net/picture.jpg)
+
 *   **共享访问签名 (Shared Access Signatures)**：你使用存储账户密钥对请求的规范化处理计算哈希值以创建一个签名。该签名可以作为 URL 用于提供 blob 的访问。例如，要创建一个容器，请执行以下 `PUT`：
+
     [`myaccount.blob.core.windows.net/picture.jpg`](http://myaccount.blob.core.windows.net/picture.jpg)?se=2009-07-17&sr=c&sp=r&sig=xUXiV0M0G6
-
-
 
 Azure Tables 使用无模式的 `Entity-Attribute-Value`（实体-属性-值）数据模型，而不是常用的关系模型，因为固定架构的关系表难以扩展到 TB 或 PB 级，且在达到这些规模后进行重构也非常困难。所有表都包含三个系统属性（属性）：`PartitionKey`、`RowKey` 和 `Timestamp`。分区定义了表一致性的单元；`PartitionKey` 和 `RowKey` 值定义了表的复合主键。自定义属性是一个属性包，其成员可以在表内发生变化。Google App Engine 的 Data Store 和 Amazon Web Service 的 SimpleDB 使用 EAV 数据模型，并使用模拟 SQL 子集的查询语言来返回结果集。Azure 使用 `LINQ` to REST` 查询，结合 `ADO.NET Data Services` 和 `StorageClient` 类来返回实体集合。本章节提供了使用 `LINQ` 或 REST API 在 Azure Tables 上进行 CRUD 操作的示例。
 
@@ -2608,19 +2626,24 @@ Azure Blobs 由长度最高 50GB 的字节节（命名字节数组）组成，�
 ## 第二部分：在企业中利用云服务
 
 ### 第 5 章：迁移到 Azure 云服务时的风险最小化
+
 ### 第 6 章：服务用户的身份验证与授权
+
 ### 第 7 章：优化 Azure Tables 的扩展性与性能
+
 ### 第 8 章：使用 Azure Queues 进行通信
 
 ## 第 5 章：迁移到 Azure 云服务时的风险最小化
 
 前面的章节提到，Windows Azure 平台利用开发者 `Visual Studio` 的 `C#` 或 `VB` 编程知识的能力是 Windows Azure 平台的主要卖点，它必须与根深蒂固的云计算对手进行竞争——例如 Amazon Web Services 的弹性计算云 (`EC2`) 和 Google App Engine。你可能会从 Azure 的营销材料中推断出，只需获取现有的 `ASP.NET` 网站，调整其 `Web.config` 设置和 SQL Server 连接字符串，然后将其上传到微软数据中心部署到 Windows Azure 即可。
 
+
+
 一如既往，现实与营销宣传大相径庭。正如你在本章中看到的，获得管理层的认可可能比开发一个全新的项目或升级现有项目花费更多的时间精力。其他障碍包括：
 
-*   从 `ASP.NET` 网站迁移到 Web 项目
-*   将数据迁移到 `Azure Tables`、`Blobs` 或 `SQL Data Services` 数据库
-*   将 Web 项目移动到 Azure 托管服务并连接到 `Azure` 或 `SQL Azure Database`
+*   从`ASP.NET`网站迁移到 Web 项目
+*   将数据迁移到`Azure Tables`、`Blobs`或`SQL Data Services`数据库
+*   将 Web 项目移动到 Azure 托管服务并连接到`Azure`或`SQL Azure Database`
 *   说服 IT 和企业管理层在 Windows Azure 中托管应用程序不会带来重大的业务中断或违反法规的风险
 
 至少在 Azure 的早期阶段，你会发现最后一项是到目前为止最难克服的问题。
@@ -2629,24 +2652,24 @@ Azure Blobs 由长度最高 50GB 的字节节（命名字节数组）组成，�
 
 你进行 Azure 开发的第一步是说服 IT 和高层管理人员云是现有或新项目的合适托管环境。最初的反对可能与寄托给第三方提供比你本地 IT 部门更好的应用程序可用性有关。在存储和传输过程中保持有价值业务信息的完全机密性，是所有关于云计算意向的管理调查中的首要关注。尽管仅使用微软或大部分使用微软的企业习惯了 Windows 锁定，但管理层无疑会对应用程序在多个提供商云之间的可迁移性感兴趣。
 
-《云之上：伯克利视角下的云计算》（Above the Clouds: A Berkeley View of Cloud Computing）是加州大学伯克利校可靠适应分布式系统实验室（也称为 `RADLab`；[`http://radlab.cs.berkeley.edu/`](http://radlab.cs.berkeley.edu/)）于 2009 年 2 月发布的白皮书，其受到广泛关注部分是因为中中立。“云之上”包含了以下表格，说明了 IT 高管和高层管理人员在考虑为组织采用云计算时最关心的的问题：
+《云之上：伯克利视角下的云计算》（Above the Clouds: A Berkeley View of Cloud Computing）是加州大学伯克利校可靠适应分布式系统实验室（也称为`RADLab`；[`http://radlab.cs.berkeley.edu/`](http://radlab.cs.berkeley.edu/)）于 2009 年 2 月发布的白皮书，其受到广泛关注部分是因为中中立。“云之上”包含了以下表格，说明了 IT 高管和高层管理人员在考虑为组织采用云计算时最关心的的问题：
 
 | 云计算增长的 10 大障碍与机遇 | | |
 | :--- | :--- | :--- |
 | 1 | 服务可用性 | 使用多个云提供商；利用弹性防止分布式拒绝攻击 |
-| 2 | 数据锁定 | 标准化 `APIs`；使用兼容软件以实现突发计算 |
+| 2 | 数据锁定 | 标准化`APIs`；使用兼容软件以实现突发计算 |
 | 3 | 数据机密性和可审计性 | 部署加密、`VLANs`、防火墙；地理位置数据存储 |
 | 4 | 数据传输瓶颈 | 使用隔夜快递传输磁盘；数据备份/存档；高带宽交换机 |
-| 5 | 性能不可预测性 | 改进的 `VM` 支持；闪存；群组调度 `VMs` |
+| 5 | 性能不可预测性 | 改进的`VM`支持；闪存；群组调度`VMs` |
 | 6 | 可扩展存储 | 发明一种可扩展的存储器 |
-| 7 | 大型分布式系统中的 Bug | 发明一种依赖分布式 `VMs` 的调试器 |
-| 8 | 快速扩展 | 发明一种依赖 `ML` 的自动伸缩器；使用快照进行保护 |
+| 7 | 大型分布式系统中的 Bug | 发明一种依赖分布式`VMs`的调试器 |
+| 8 | 快速扩展 | 发明一种依赖`ML`的自动伸缩器；使用快照进行保护 |
 | 9 | 声誉/命运共担 | 提供类似电子邮件那样的声誉保护服务 |
 | 10 | 软件许可 | 按需付费许可；批量使用销售 |
 
 接下来的章节将涉及上述列表中大多数云计算观察者认为最顽固的障碍。
 
-`ML` 是一种通用的函数式编程语言，也是元语言的缩写。
+`ML`是一种通用的函数式编程语言，也是元语言的缩写。
 
 Bernard Golden 为 CIO 网站撰写的文章《云计算：伯克利能教给你什么》（Cloud Computing: What UC Berkeley Can Teach You）发表于 [`http://bit.ly/PCLZA`](http://bit.ly/PCLZA)），是从 IT 管理的角度对该白皮书进行的评论。
 
@@ -2654,27 +2677,24 @@ Bernard Golden 为 CIO 网站撰写的文章《云计算：伯克利能教给你
 
 如今的云基础设施可用性可能优于企业本地 IT 服务。可用性通常用“几个 9”来衡量，例如，四个 9 代表服务可用时间为 99.99%。30 天有 43200 分钟，因此实现四个 9 可用性意味着每月最多允许 4.32 分钟（43200 分钟的 0.01%）的计划或非计划停机。
 
-电信系统和数据中心通常设计为实现五个 9 可用性，这对应于每月少于 30 秒的停机。云计算供应商最终必须签署服务水平协议（SLA），规定具体的应用程序可用性。客户想要五个 9，但看起来供应商可能只提供三个 9；例如，微软在 2009 年 7 月中宣布其 SLA 将涵盖两个或多个 Azure 服务实例 99.95% 的运行时间保证，并提供存储服务 99.9% 的可用性。同样，Amazon Web Services 为 `EC2` 保证 99.95% 的运行时间，为 `S3` 保证 99.9%。当本书编写时，Google 尚未为 Google App Engine 发布 SLA。
+电信系统和数据中心通常设计为实现五个 9 可用性，这对应于每月少于 30 秒的停机。云计算供应商最终必须签署服务水平协议（SLA），规定具体的应用程序可用性。客户想要五个 9，但看起来供应商可能只提供三个 9；例如，微软在 2009 年 7 月中宣布其 SLA 将涵盖两个或多个 Azure 服务实例 99.95% 的运行时间保证，并提供存储服务 99.9% 的可用性。同样，Amazon Web Services 为`EC2`保证 99.95% 的运行时间，为`S3`保证 99.9%。当本书编写时，Google 尚未为 Google App Engine 发布 SLA。
 
+无论适用的 SLA 如何，您的应用程序从灾难性故障中恢复（需要从备份副本中恢复应用程序、数据或两者）所需的时间可能远长于停机时间。Azure 提供了三次复制的数据故障转移集群，并在发生故障时运行`Hosted Application`实例。集群化应用和复制数据的真实世界恢复时间仍有待测量。
 
-
-
-无论适用的 SLA 如何，您的应用程序从灾难性故障中恢复（需要从备份副本中恢复应用程序、数据或两者）所需的时间可能远长于停机时间。Azure 提供了三次复制的数据故障转移集群，并在发生故障时运行 `Hosted Application` 实例。集群化应用和复制数据的真实世界恢复时间仍有待测量。
-
-《云之上》（Above the Clouds）的作者记录了 2008 年亚马逊简单存储服务 (`S3`)、Google App Engine 和 Gmail 的停机机事件，并在出版物的表 7 中列出了停机解释，并附有以下注释：“请注意，尽管这些停机引起了负面宣传，但很少有企业 IT 基础设施能达到这种水平。”
+《云之上》（Above the Clouds）的作者记录了 2008 年亚马逊简单存储服务（`S3`）、Google App Engine 和 Gmail 的停机机事件，并在出版物的表 7 中列出了停机解释，并附有以下注释：“请注意，尽管这些停机引起了负面宣传，但很少有企业 IT 基础设施能达到这种水平。”
 
 ### IT 相关风险的定义
 
-美国国家标准与技术研究院 (`NIST`)（前身为国家标准局）将 IT 相关的风险定义为：
+美国国家标准与技术研究院（`NIST`）（前身为国家标准局）将 IT 相关的风险定义为：
 
 考虑到以下因素的净任务影响：(1) 特定威胁源实施（意外触发或蓄意利用）特定信息系统漏洞的概率，以及 (2) 如果这种情况发生将会产生的影响。IT 相关风险的产生由于以下原因导致的法律责任或任务损失：
 
 1. 未经授权的（恶意或意外）信息泄露、修改或破坏。
-2. 无意错误和遗漏。
+2. 无意错误和 omissions。
 3. 自然灾害或人为灾害导致的 IT 中断。
 4. 在 IT 系统的实施和运行中未能尽到注意和勤勉。
 
-上述定义是美国国家标准与技术研究院特别出版物 (`NIST SP`) 800-53 修订第 2 版的一部分，该文件提供了通过采用安全控制来保护联邦政府内部信息系统的指南。这些指南适用于所有处理、存储或传输联邦信息的信息系统的方面，但由 `44 United States Code (U.S.C), Section 3542.` 定义的国家安全系统除外。`NIST 800-53 Rev. 2` 旨在联邦机构实现联邦信息处理标准 (`FIPS`) 200（联邦信息和信息系统最低安全要求）基准提供指导。
+上述定义是美国国家标准与技术研究院特别出版物（`NIST SP`）800-53 修订第 2 版的一部分，该文件提供了通过采用安全控制来保护联邦政府内部信息系统的指南。这些指南适用于所有处理、存储或传输联邦信息的信息系统的方面，但由`44 United States Code (U.S.C), Section 3542.`定义的国家安全系统除外。`NIST 800-53 Rev. 2`旨在为联邦机构实现联邦信息处理标准（`FIPS`）200（联邦信息和信息系统最低安全要求）基准提供指导。
 
 联邦政府在 IT 计划方面历史复杂，有许多采用新技术的显性失败尝试。然而，云计算的成功部署以及随之而来的旨在减少公共部门 IT 风险的治理系统，将改善可用性和安全性问题，并推动私营部门的采用。联邦对私营部门云计算的贡献可能集中在维护数据可用性和安全性的正式标准上。联邦和许多州政府对识别个人的数据有隐私法规。
 
@@ -2690,48 +2710,45 @@ Azure Web 服务通过对存储的数据进行至少三次复制，并为不同�
 
 ### NIST 的构想
 
-第一章“云计算关注”部分介绍了“云计算与标准的观点” (`http://bit.ly/x054z`, `http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-standards_ISPAB-Dec2008_P-Mell.pdf`)，这是 `NIST` 信息技术实验室 Peter Mell 和 Tim Grance 的演示文稿。该演示以基于标准的云计算的联邦定义开始，并提出了一个“想法：联邦政府确定最低标准和架构，以便机构能够创建或购买互操作的云能力。”随后简要列出了采用云计算的益处和方法，这些方法同样适用于私营部门。
+第一章“云计算关注”部分介绍了“云计算与标准的观点”（`http://bit.ly/x054z`，`http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-standards_ISPAB-Dec2008_P-Mell.pdf`），这是`NIST`信息技术实验室 Peter Mell 和 Tim Grance 的演示文稿。该演示以基于标准的云计算的联邦定义开始，并提出了一个“想法：联邦政府确定最低标准和架构，以便机构能够创建或购买互操作的云能力。”随后简要列出了采用云计算的益处和方法，这些方法同样适用于私营部门。
 
-该演示结束时列出了将在 2009 财年创建的 `NIST 特别出版物 (SPs)` 列表：
+该演示结束时列出了将在 2009 财年创建的`NIST 特别出版物 (SPs)`列表：
 
-* 云计算概览
-* 云计算安全问题
-* 云架构安全
-* 云应用安全
-* 在云中实现并执行法证调查
-* 在云架构中实现安全监控集中
-* 通过服务水平协议从第三方云架构获取安全性
-* 安全合规框架与云计算（例如，`HIPAA`、`FISMA` 和 `SOX`）
+*   云计算概览
+*   云计算安全问题
+*   云架构安全
+*   云应用安全
+*   在云中实现并执行法证调查
+*   在云架构中实现安全监控集中
+*   通过服务水平协议从第三方云架构获取安全性
+*   安全合规框架与云计算（例如，`HIPAA`、`FISMA`和`SOX`）
 
-随后，`NIST` 发布了他们的 `NIST 云计算工作定义草案 v13` (`http://bit.ly/10TNdu`, `http://csrc.nist.gov/groups/SNS/cloud-computing/cloud-def-v14.doc`) 和 `有效且安全地使用云计算范式的演示 v18` (`http://bit.ly/17PKbM`, `http://csrc.nist.gov/groups/SNS/cloud-computing/cloud-computing-v22.ppt`)。
+随后，`NIST`发布了他们的`NIST 云计算工作定义草案 v13`（`http://bit.ly/10TNdu`，`http://csrc.nist.gov/groups/SNS/cloud-computing/cloud-def-v14.doc`）和`有效且安全地使用云计算范式的演示 v18`（`http://bit.ly/17PKbM`，`http://csrc.nist.gov/groups/SNS/cloud-computing/cloud-computing-v22.ppt`）。
 
-当这本书在 2009 年初编写时，`NIST` 出版物页面上只有少数上述的 `SPs` 以草案或最终形式可用（`http://bit.ly/sJECD`, `http://csrc.nist.gov/publications/`）。请关注这些页面以获取待处理的标准；`NIST` 经常更新其出版物列表。
+当这本书在 2009 年初编写时，`NIST`出版物页面上只有少数上述的`SPs`以草案或最终形式可用（`http://bit.ly/sJECD`，`http://csrc.nist.gov/publications/`）。请关注这些页面以获取待处理的标准；`NIST`经常更新其出版物列表。
 
 ### 国防部潜在的云计算部署
 
-国家安全局由信息保障架构与系统工程小组首席架构师 Chris Kubic 提供的“国防部云计算安全挑战”简报描述了潜在的军事云应用 (`http://bit.ly/171BzF`, `http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-IA-challenges_ISPAB-Dec2008_C-Kubic.pdf`)，这些应用部分包含以下：
+国家安全局由信息保障架构与系统工程小组首席架构师 Chris Kubic 提供的“国防部云计算安全挑战”简报描述了潜在的军事云应用（`http://bit.ly/171BzF`，`http://csrc.nist.gov/groups/SMA/ispab/documents/minutes/2008-12/cloud-computing-IA-challenges_ISPAB-Dec2008_C-Kubic.pdf`），这些应用部分包含以下：
 
-* 网络网络防御：传感器数据存储、分析、态势感知
-* 共同作战态图的战场感知：部队、任务、车辆、武器、供应品的状态；未来——自主（无人）武器系统
-* 战术情报、监视、侦察 (`ISR`) 馈数据的存储/处理；根据用户的访问权限创建定制化视图
-* 仿真与视觉化：任务规划与训练
+*   网络网络防御：传感器数据存储、分析、态势感知
+*   共同作战态图的战场感知：部队、任务、车辆、武器、供应品的状态；未来——自主（无人）武器系统
+*   战术情报、监视、侦察（`ISR`）馈数据的存储/处理；根据用户的访问权限创建定制化视图
+*   仿真与视觉化：任务规划与训练
 
 军事和其他安全密集型机构对云计算的战术化使用将减少 IT 组织对云计算本质上不可靠且不安全的担忧。
 
 ### 获取和审计监管合规性
 
-
-
-
-目前美国有若干项与数据安全和隐私相关的法律法规生效。这些包括《格拉姆-莱奇-布莱利法案》（`GLB Act`）、《萨班斯-奥克斯法案》（`SOX`，又称为 2002 年公共公司会计改革和投资者保护法案）、《健康保险流动性与责任性法案》（`HIPAA`）以及《反海外腐败法》。英国的伦敦交易所联合准则和南非的《南非公司治理报告》（`King II`）监管着财务报告的透明度。欧洲共同体的第 `95/46/EC` 号指令关于保护个人数据，旨在保护数字信息及其通信中的个人隐私。
+目前美国有若干项与数据安全和隐私相关的法律法规生效。这些包括《格拉姆-莱奇-布莱利法案》（`GLB Act`）、《萨班斯-奥克斯法案》（`SOX`，又称为 2002 年公共公司会计改革和投资者保护法案）、《健康保险流动性与责任性法案》（`HIPAA`）以及《反海外腐败法》。英国的伦敦交易所联合准则和南非的《南非公司治理报告》（`King II`）监管着财务报告的透明度。欧洲共同体的第`95/46/EC`号指令关于保护个人数据，旨在保护数字信息及其通信中的个人隐私。
 
 以下是三项最重要的联邦监管合规指令以及一项涉及身份管理、风险评估或两者的关键私营部门标准。大多数机构都会实施一项计划，以确保敏感数据的安全性、机密性（当信息涉及员工或消费者的个人身份时为隐私性）和完整性。这些计划通常需要接受独立安全审计师的定期测试，以确保合规。
 
 ## 格拉姆-莱奇-布莱利法案
 
-`GLB Act` 将非公开信息定义为包括消费者的姓名、地址、电话号码、出生日期、社会安全号码，以及从消费者向金融机构提供此类信息的任何申请或表格中获得的任何其他信息。`GLB Act` 将至少以下类型的机构视为金融机构：非银行抵押贷款贷款人、贷款经纪人、某些财务或投资顾问、债务催收员、税表编制人员、银行和房地产结算服务提供商。
+`GLB Act`将非公开信息定义为包括消费者的姓名、地址、电话号码、出生日期、社会安全号码，以及从消费者向金融机构提供此类信息的任何申请或表格中获得的任何其他信息。`GLB Act`将至少以下类型的机构视为金融机构：非银行抵押贷款贷款人、贷款经纪人、某些财务或投资顾问、债务催收员、税表编制人员、银行和房地产结算服务提供商。
 
-根据维基百科，`GLB` 的“保护规则”（`Safeguards Rule`，“`Subtitle A：非公开个人信息的披露”，编码为 `15 U.S.C. Sections 6801–6809`）“要求金融机构制定一份书面信息安全计划，说明公司如何准备以及计划继续保护客户的非公开个人信息。（保护规则也适用于不再是该金融机构消费者的个人信息）”。
+根据维基百科，`GLB`的“保护规则”（`Safeguards Rule`，`Subtitle A：非公开个人信息的披露`，编码为`15 U.S.C. Sections 6801–6809`）“要求金融机构制定一份书面信息安全计划，说明公司如何准备以及计划继续保护客户的非公开个人信息。（保护规则也适用于不再是该金融机构消费者的个人信息）”。
 
 信息安全计划必须包含：
 
@@ -2740,18 +2757,18 @@ Azure Web 服务通过对存储的数据进行至少三次复制，并为不同�
 *   对每个处理非公开信息的部门构建详尽的`risk management`
 *   指定至少一名员工来管理保护措施
 
-显然，将此类信息从本地数据中心移动到第三方的云数据中心将涉及 `GLB` 报告和合规审计流程的变更。
+显然，将此类信息从本地数据中心移动到第三方的云数据中心将涉及`GLB`报告和合规审计流程的变更。
 
 ## 萨班斯-奥克斯法案
 
-`SOX` 仅适用于上市公司，是由国会为了应对一系列大型企业欺诈事件而通过的，主要是针对 2000 年至 2004 年间 `Enron`、`WorldCom` 和 `Tyco` 实施的行为。`SOX` 旨在提高公司报告的透明度。其规定旨在：
+`SOX`仅适用于上市公司，是由国会为了应对一系列大型企业欺诈事件而通过的，主要是针对 2000 年至 2004 年间`Enron`、`WorldCom`和`Tyco`实施的行为。`SOX`旨在提高公司报告的透明度。其规定旨在：
 
 *   减少或消除同时提供服务的独立财务审计师的利益冲突，以及接受投资银行家报酬的证券分析师的利益冲突
 *   加强董事会审计委员会对独立财务审计师的监督
 *   通过大幅增加预算加强`证券交易委员会`（`SEC`）的监督
 *   要求将员工股票期权作为运营费用进行记账
 
-根据维基百科（[`bit.ly/skaSn`](http://bit.ly/skaSn)，[`en.wikipedia.org/wiki/Sarbanes-Oxley_Act`](http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act)），`公共会计监督委员会`（`PCAOB`）于 2007 年 7 月 25 日批准了针对公共会计师的第 5 号审计标准。`SEC` 也于 2007 年 6 月 27 日发布了其解释性指南。后者通常与 `PCAOB` 的指南一致，但旨在为管理层提供指导。管理层和独立审计师都有责任在自上下的风险评估范围内进行评估，这要求管理层将其评估范围和收集的证据基于风险。这使得管理层在评估方法上有更大的裁量权。这两项标准要求管理层：
+根据维基百科（[`bit.ly/skaSn`](http://bit.ly/skaSn)，[`en.wikipedia.org/wiki/Sarbanes-Oxley_Act`](http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act)），`公共会计监督委员会`（`PCAOB`）于 2007 年 7 月 25 日批准了针对公共会计师的第 5 号审计标准。`SEC`也于 2007 年 6 月 27 日发布了其解释性指南。后者通常与`PCAOB`的指南一致，但旨在为管理层提供指导。管理层和独立审计师都有责任在自上而下的风险评估范围内进行评估，这要求管理层将其评估范围和收集的证据基于风险。这使得管理层在评估方法上有更大的裁量权。这两项标准要求管理层：
 
 *   在重大错报风险的背景下，评估与重大账户和相关声明相关的选内部控制的设计和运行有效性
 *   理解交易流程（包括 IT 方面），并足以识别可能产生错报的点
@@ -2763,34 +2780,24 @@ Azure Web 服务通过对存储的数据进行至少三次复制，并为不同�
 *   根据能力、客观性和风险等因素依赖管理层的工作
 *   对财务报告内部控制的充分性得出结论
 
-`SOX` 的一个核心原则是数据完整性。将财务交易和相关数据从公司现场移动到云数据中心并不一定会增加风险。然而，它确实会影响交易流程，并可能影响财务报告内部控制的充分性。
+`SOX`的一个核心原则是数据完整性。将财务交易和相关数据从公司现场移动到云数据中心并不一定会增加风险。然而，它确实会影响交易流程，并可能影响财务报告内部控制的充分性。
 
 ## 健康信息技术与 HIPAA
 
-奥马政府计划在五年内让所有美国居民转向电子健康记录（`EHRs`），这在奥马总统于 2009 年 2 月 17 日签署生效的《美国恢复与再投资法案》（`ARRA`）中为`健康信息技术`（`HIT`）拨付了 190 亿美元的专项资金。总体而言，联邦隐私/安全法（`HIPAA`）得到了扩大以保护患者健康信息，`HIPAA` 隐私和安全法将直接适用于覆盖实体的业务伙伴。`ARRA` 还禁止在没有患者书面授权的情况下出售患者的健康信息，但在涉及研究或公共卫生活动或“部长在法规中认为同样必要和适当的有限情况下除外”。
+奥马政府计划在五年内让所有美国居民转向电子健康记录（`EHRs`），这在奥马总统于 2009 年 2 月 17 日签署生效的《美国恢复与再投资法案》（`ARRA`）中为`健康信息技术`（`HIT`）拨付了 190 亿美元的专项资金。总体而言，联邦隐私/安全法（`HIPAA`）得到了扩大以保护患者健康信息，`HIPAA`隐私和安全法将直接适用于覆盖实体的业务伙伴。`ARRA`还禁止在没有患者书面授权的情况下出售患者的健康信息，但在涉及研究或公共卫生活动或“部长在法规中认为同样必要和适当的有限情况下除外”。
 
 部长出售患者健康信息的无限权利引发了隐私倡导者的严重反对。
 
-`HIPAA` 的隐私规则规定了受保护健康信息（`PHI`）的使用和披露。`PHI` 是由覆盖实体持有的关于健康状况、医疗服务提供或医疗支付的、可以关联到个人的信息。`PHI` 被解释为个人电子病历（`EMR`）或支付历史的任何部分，但 `HIPAA` 在下列表中列出了 18 种 `PHI` 标识符。覆盖实体包括与本章涵盖的交易传输任何电子健康信息的医疗计划、保健清理机构和医疗保健提供者。
+`HIPAA`的隐私规则规定了受保护健康信息（`PHI`）的使用和披露。`PHI`是由覆盖实体持有的关于健康状况、医疗服务提供或医疗支付的、可以关联到个人的信息。`PHI`被解释为个人电子病历（`EMR`）或支付历史的任何部分，但`HIPAA`在下列表中列出了 18 种`PHI`标识符。覆盖实体包括与本章涵盖的交易传输任何电子健康信息的医疗计划、保健清理机构和医疗保健提供者。
 
-这 18 种 `PHI` 标识符在本书书写时如下：
+这 18 种`PHI`标识符在本书书写时如下：
 
 1. 姓名。
-
-
-
-
-
 2. 所有比州更小的地理划分，包括街道地址、城市、县、选区、邮政编码及其相应的地理代码，但邮政编码的前三数字除外，如果根据美国人口普查局目前的公开数据：(1) 由所有具有相同前三位数的邮政编码组成的地理单元人数超过 20,000 人；且(2) 所有此类人数为 20,000 人或少的地理单元的邮政编码的前三位改为`000`。
-
 3. 与个人直接相关的日期（年份外），包括出生日期、入院日期、出院日期、死亡日期；以及所有超过 89 岁的年龄指示此类年龄的所有日期元素（包括年份），但此类年龄和元素可以合并为 90 岁及以上的单一类别。
-
 4. 电话号码。
-
 5. 传真号码。
-
 6. 电子邮件地址。
-
 7. 社会安全号码。
 8. 医疗记录号。
 9. 医疗计划受益人编号。
@@ -2798,8 +2805,8 @@ Azure Web 服务通过对存储的数据进行至少三次复制，并为不同�
 11. 证书/许可证号码。
 12. 车辆识别码和序列号，包括车牌号。
 13. 设备识别码和序列号。
-14. 网页通用资源定位符 (URL)。
-15. 互联网协议 (IP) 地址码。
+14. 网页通用资源定位符（URL）。
+15. 互联网协议（IP）地址码。
 16. 生物识别码，包括指纹和声纹。
 17. 全脸照片图像和任何可比的图像。
 18. 任何其他唯一标识码、特征或代码（注意：这并不指调查人员为编码数据而分配的唯一代码）。
@@ -2808,27 +2815,35 @@ Azure Web 服务通过对存储的数据进行至少三次复制，并为不同�
 
 从上述列表的长度可以看出，电子健康记录（EHR）或电子病历（EMR）主标头记录中的大量数据必须加密，以符合 HIPAA 关于使个人身份识别信息匿名化的要求。
 
-NIST 特别出版物 800-122，“保护个人身份信息 (PII) 机密性指南”(`[`bit.ly/sc2G3`](http://bit.ly/sc2G3)`, `[`csrc.nist.gov/publications/drafts/800-122/Draft-SP800-122.pdf`](http://csrc.nist.gov/publications/drafts/800-122/Draft-SP800-122.pdf)]`)，将 PII 定义为：
+
+
+# 保护个人身份信息（PII）的法规与标准
+
+## 个人身份信息（PII）的定义
+
+NIST 特别出版物 800-122，“保护个人身份信息 (PII) 机密性指南”（[`bit.ly/sc2G3`](http://bit.ly/sc2G3)、[`csrc.nist.gov/publications/drafts/800-122/Draft-SP800-122.pdf`](http://csrc.nist.gov/publications/drafts/800-122/Draft-SP800-122.pdf)），将 `PII` 定义为：
 
 可用于区分或追踪个人身份的信息，例如其姓名、社会安全号码、生物识别记录等，或者当其与特定个人关联或可链接到特定个人的其他个人或识别信息结合用时，例如出生日期和地点、母亲的姓等。
 
-欧盟指令 95/46/EC，“关于处理个人数据时保护个人以及此类数据自由流动的指令”(`[`bit.ly/188e0N`](http://bit.ly/188e0N)`, `[www.cdt.org/privacy/eudirective/EU_Directive_.html](http://www.cdt.org/privacy/eudirective/EU_Directive_.html)]`) 将 PII 定义为：
+欧盟指令 95/46/EC，“关于处理个人数据时保护个人以及此类数据自由流动的指令”（[`bit.ly/188e0N`](http://bit.ly/188e0N)、[`www.cdt.org/privacy/eudirective/EU_Directive_.html`](http://www.cdt.org/privacy/eudirective/EU_Directive_.html)）将 `PII` 定义为：
 
-第 2a 条：‘个人数据’是指任何与已识别或可识别的自然人（‘数据主体’）相关的信息；可识别的人是指可以直接或间接被识别的人，特别是通过参考识别码或与其物理、生理、心理、经济、文化或社会身份特定的一个或多个因素来识别的人。
+第 2a 条：“个人数据”是指任何与已识别或可识别的自然人（“数据主体”）相关的信息；可识别的人是指可以直接或间接被识别的人，特别是通过参考识别码或与其物理、生理、心理、经济、文化或社会身份特定的一个或多个因素来识别的人。
 
-2009 年《美国恢复与再投资法》(ARRA) 由奥巴马总统于 2009 年 2 月 17 日签署生效，该法包含了第 XIII 《经济与临床健康信息技术法》(HITECH Act)，该法案拨了 220 亿美元联邦资金用于推进健康信息技术的使用。HITECH 法的 D 子标题修改了 HIPAA 管理健康相关安全和隐私法规的适用性，如下：
+## 美国健康信息隐私法规
 
-*   HIPAA 受覆盖实体的业务伙伴现在独立受 HIPAA 约束。
-*   业务伙伴现在须与受覆盖实体承担相同的民事和刑事处罚。
-* 增加了对未安全数据泄露的通知要求。
+2009 年《美国恢复与再投资法》(ARRA) 由奥巴马总统于 2009 年 2 月 17 日签署生效，该法包含了第 XIII 《经济与临床健康信息技术法》(HITECH Act)，该法案拨了 220 亿美元联邦资金用于推进健康信息技术的使用。`HITECH` 法的 D 子标题修改了 `HIPAA` 管理健康相关安全和隐私法规的适用性，如下：
+
+- `HIPAA` 受覆盖实体的业务伙伴现在独立受 `HIPAA` 约束。
+- 业务伙伴现在须与受覆盖实体承担相同的民事和刑事处罚。
+- 增加了对未安全数据泄露的通知要求。
 
 数据泄露通知的要求与后文“加州议会法案 1386 号”中描述的加州居民个人信息的要求相似。“未安全”的个人健康信息通常指未加密或未以使未经授权的人无法读取的方式保护的信息。然而，卫生和人类服务部被指示就“未安全”和其他关键术语的含义发布指南。
 
-### 支付卡行业数据安全标准 (PCI-DSS)
+## 支付卡行业数据安全标准 (PCI-DSS)
 
-支付卡行业 (PCI) 有一套数据安全标准 (`PCI-DSS`)，由 PCI 安全标准委员会 (`PCI-SSC`) 管理，其五位创始成员是美国运通、Discover Financial Services、JCB International、MasterCard Worldwide 和 Visa Inc.。`PCI-DSS` v1.2 于 2008 年 10 月 1 日生效，v1.1 的日落日期为 2008 年 12 月 31 日。
+支付卡行业 (PCI) 有一套数据安全标准（`PCI-DSS`），由 PCI 安全标准委员会（`PCI-SSC`）管理，其五位创始成员是美国运通、`Discover Financial Services`、`JCB International`、`MasterCard Worldwide` 和 `Visa Inc.`。`PCI-DSS` v1.2 于 2008 年 10 月 1 日生效，v1.1 的日落日期为 2008 年 12 月 31 日。
 
-根据维基百科 (`[`bit.ly/W7pv2`](http://bit.ly/W7pv2)`, `[`en.wikipedia.org/wiki/PCI_DSS`](http://en.wikipedia.org/wiki/PCI_DSS)]`) 和 PCI 网站 (`[`bit.ly/139Lrk`](http://bit.ly/139Lrk)`, `[`www.pcisecuritystandards.org/security_standards/pci_dss.shtml`](https://www.pcisecuritystandards.org/security_standards/pci_dss.shtml)]`)，`PCI-DSS` v1.2 定义了处理、存储或传输支付卡数据的商的控制目标和合规要求，如下表所示：
+根据维基百科（[`bit.ly/W7pv2`](http://bit.ly/W7pv2)、[`en.wikipedia.org/wiki/PCI_DSS`](http://en.wikipedia.org/wiki/PCI_DSS)）和 PCI 网站（[`bit.ly/139Lrk`](http://bit.ly/139Lrk)、[`www.pcisecuritystandards.org/security_standards/pci_dss.shtml`](https://www.pcisecuritystandards.org/security_standards/pci_dss.shtml)），`PCI-DSS` v1.2 定义了处理、存储或传输支付卡数据的商的控制目标和合规要求，如下表所示：
 
 | 控制目标 | 要求 |
 | :--- | :--- |
@@ -2845,15 +2860,11 @@ NIST 特别出版物 800-122，“保护个人身份信息 (PII) 机密性指南
 | | 11. 定期测试安全系统和流程。 |
 | 维护信息安全政策 | 12. 维护涉及信息安全的政策。 |
 
-上述要求仅适用于持卡主账号（通常为 16 位）的商户。如果商户使用支付网关组织来消除处理支付卡交易的需求，则不适用这些要求。PCI 的有效支付应用程序列表页面 (`[`bit.ly/GtXl6`](http://bit.ly/GtXl6)`, `[`www.pcisecuritystandards.org/security_standards/vpa/vpa_approval_list.html?mn=&vn=0&ap=1&rg=0`](https://www.pcisecuritystandards.org/security_standards/vpa/vpa_approval_list.html?mn=&vn=0&ap=1&rg=0)]`) 在 2009 年 3 月 13 日列出了 24 个网关供应商和 26 个支付应用程序，其中 25 个应用程序被标记为“适用于新部署”。
+上述要求仅适用于持卡主账号（通常为 16 位）的商户。如果商户使用支付网关组织来消除处理支付卡交易的需求，则不适用这些要求。PCI 的有效支付应用程序列表页面（[`bit.ly/GtXl6`](http://bit.ly/GtXl6)、[`www.pcisecuritystandards.org/security_standards/vpa/vpa_approval_list.html?mn=&vn=0&ap=1&rg=0`](https://www.pcisecuritystandards.org/security_standards/vpa/vpa_approval_list.html?mn=&vn=0&ap=1&rg=0)）在 2009 年 3 月 13 日列出了 24 个网关供应商和 26 个支付应用程序，其中 25 个应用程序被标记为“适用于新部署”。
 
-PCI 自我评估问卷 (SAQ)
+### PCI 自我评估问卷 (SAQ)
 
-
-
-
-
-PCI 为那些不需要由合格安全评估师（QSA）进行现场数据安全评估的商户提供了自评估调查问卷（SAQ）。这是一种旨在帮助商户和服务提供商自评估其对 PCI DSS 合从性的验证工具。下表列出了五种 SAQ 验证类型、描述以及适用的 SAQ 版本。
+PCI 为那些不需要由合格安全评估师（QSA）进行现场数据安全评估的商户提供了自评估调查问卷（SAQ）。这是一种旨在帮助商户和服务提供商自评估其对 `PCI DSS` 合从性的验证工具。下表列出了五种 SAQ 验证类型、描述以及适用的 SAQ 版本。
 
 | SAQ 验证类型 | 描述 | SAQ |
 | :--- | :--- | :--- |
@@ -2865,30 +2876,30 @@ PCI 为那些不需要由合格安全评估师（QSA）进行现场数据安全�
 
 使用被主要支付卡公司认可的安全支付网关来处理信用卡交易的商店，其服务器上不处理、存储或传输任何信用卡信息；也没有访问支付卡 ID 的权限。此类商户可以使用 SAQ 验证类型 1 和 SAQ 版本 A，这只需要证明：
 
-* 商户未在商户场所存储、处理或传输任何持卡人数据，而是完全依赖第三方服务提供商来处理这些功能。
-* 处理持卡人数据存储、处理和或传输的第三方服务提供商已确认符合 PCI DSS。
-* 商户不以电子格式存储任何持卡人数据。
-* 如果商户存储了持卡人数据，此类数据仅为纸质报告或收据副本，且不通过电子方式接收。
+- 商户未在商户场所存储、处理或传输任何持卡人数据，而是完全依赖第三方服务提供商来处理这些功能。
+- 处理持卡人数据存储、处理和或传输的第三方服务提供商已确认符合 `PCI DSS`。
+- 商户不以电子格式存储任何持卡人数据。
+- 如果商户存储了持卡人数据，此类数据仅为纸质报告或收据副本，且不通过电子方式接收。
 
 ### PCI 优先方法框架
 
-拥有小型或没有 IT 组织的商户表示，他们需要一个获取 PCI-DSS 合规的路线图。为此，PCI 在 2009 年 3 月发布了“优先方法”框架，以帮助尚未完全符合 PCI DSS 的商户在合规之路上理解并降低风险。该框架侧重于下列出的安全里程碑，以防止面临持卡人数据安全的最高风险因素和升级的威胁：
+拥有小型或没有 IT 组织的商户表示，他们需要一个获取 `PCI-DSS` 合规的路线图。为此，PCI 在 2009 年 3 月发布了“优先方法”框架，以帮助尚未完全符合 `PCI DSS` 的商户在合规之路上理解并降低风险。该框架侧重于下列出的安全里程碑，以防止面临持卡人数据安全的最高风险因素和升级的威胁：
 
-* 如果不需要，就不要存储。
-* 保护边界。
-* 保护应用程序。
-* 监控并控制对系统的访问。
-* 保护存储的持卡人数据。
-* 完成剩余的合规工作，并确保所有控制到位。
+- 如果不需要，就不要存储。
+- 保护边界。
+- 保护应用程序。
+- 监控并控制对系统的访问。
+- 保护存储的持卡人数据。
+- 完成剩余的合规工作，并确保所有控制到位。
 
-PCI 针对 DSS 1.2 的优先方法页面（[`bit.ly/14AS9p`](http://bit.ly/14AS9p), [`www.pcisecuritystandards.org/education/prioritized.shtml`](https://www.pcisecuritystandards.org/education/prioritized.shtml)）提供了指南文档和 Excel 工作表的链接，以辅助该框架的使用。
+PCI 针对 DSS 1.2 的优先方法页面（[`bit.ly/14AS9p`](http://bit.ly/14AS9p)、[`www.pcisecuritystandards.org/education/prioritized.shtml`](https://www.pcisecuritystandards.org/education/prioritized.shtml)）提供了指南文档和 Excel 工作表的链接，以辅助该框架的使用。
 
 ## 加州参议院第 1386 号法案
 
 加州参议院第 1386 号法案，也称为《加州信息实践法》或《加州安全泄露通知法》，要求任何在加州经营业务并许可或拥有关于任何加州居民计算机化个人信息的实体，必须遵守特定的数据安全监管标准，包括：
 
-* 将个人数据定义为个人的名字首字母或姓氏，并结合该个人的社会安全号码、驾驶执照号码或加州身份卡号码、账户号码、信用卡或借记卡号，并结合任何允许访问个人财务账户的必要安全代码、访问代码或密码。
-* 通知任何未加密个人数据被未经授权实体获取的加州居民，并向该居民披露泄露的个人数据。
+- 将个人数据定义为个人的名字首字母或姓氏，并结合该个人的社会安全号码、驾驶执照号码或加州身份卡号码、账户号码、信用卡或借记卡号，并结合任何允许访问个人财务账户的必要安全代码、访问代码或密码。
+- 通知任何未加密个人数据被未经授权实体获取的加州居民，并向该居民披露泄露的个人数据。
 
 任何对所有实例个人数据都进行加密的受影响公司或机构不受 SB 1386 通知要求的限制。
 
@@ -2896,13 +2907,13 @@ SB 1386 未定义 `encrypt` 或 `encryption` 术语，因此所采用的加密�
 
 ### 马萨诸塞州和内华达州的数据隐私法
 
-2008 年，内华达州和马萨诸塞州通过了数据隐私法，要求对个人数据进行加密。内华达修订法规第 597.970 条 ([`bit.ly/xzeIJ`](http://bit.ly/xzeIJ), [www.leg.state.nv.us/NRs/NRS-597.html#NRS597Sec970](http://www.leg.state.nv.us/NRs/NRS-597.html#NRS597Sec970)) 要求所有企业对电子传输的个人身份识别客户数据进行加密。马萨诸塞州 201 CMR 17.00：联邦州居民个人信息保护标准 ([`bit.ly/jZTxA`](http://bit.ly/jZTxA), [www.mass.gov/?pageID=ocaterminal&L=4&L0=Home&L1=Consumer&L2=Privacy&L3=Identity+Theft&sid=Eoca&b=terminalcontent&f=reg201cmr17&csid=Eoca](http://www.mass.gov/?pageID=ocaterminal&L=4&L0=Home&L1=Consumer&L2=Privacy&L3=Identity+Theft&sid=Eoca&b=terminalcontent&f=reg201cmr17&csid=Eoca)) 要求对笔记本电脑和其他便携设备上的个人信息进行加密。这些法律也适用于州外公司。
+2008 年，内华达州和马萨诸塞州通过了数据隐私法，要求对个人数据进行加密。内华达修订法规第 597.970 条（[`bit.ly/xzeIJ`](http://bit.ly/xzeIJ)、[`www.leg.state.nv.us/NRs/NRS-597.html#NRS597Sec970`](http://www.leg.state.nv.us/NRs/NRS-597.html#NRS597Sec970)）要求所有企业对电子传输的个人身份识别客户数据进行加密。马萨诸塞州 201 CMR 17.00：联邦州居民个人信息保护标准（[`bit.ly/jZTxA`](http://bit.ly/jZTxA)、[`www.mass.gov/?pageID=ocaterminal&L=4&L0=Home&L1=Consumer&L2=Privacy&L3=Identity+Theft&sid=Eoca&b=terminalcontent&f=reg201cmr17&csid=Eoca`](http://www.mass.gov/?pageID=ocaterminal&L=4&L0=Home&L1=Consumer&L2=Privacy&L3=Identity+Theft&sid=Eoca&b=terminalcontent&f=reg201cmr17&csid=Eoca)）要求对笔记本电脑和其他便携设备上的个人信息进行加密。这些法律也适用于州外公司。
 
 这些法律将个人信息定义为个人姓名与驾驶执照、信用卡信息或社会安全号码的结合。《华街日报》2008 年 10 月 16 日的《新数据法》文章提供了更多细节。像加州的 SB 1386 一样，内华达州规定了加密强度。
 
-## 为 Web 角色实现实现套接层传输
+# 为 Web 角色实现传输层安全
 
-Azure 服务可以通过传输层安全 (TLS) 使用安全 HTTP 协议 (HTTPS) 对存储账户进行加密传输。要启用 HTTPS，请将 5-1 强调的行添加到 `ServiceDefinition.csdef` 文件中：
+Azure 服务可以通过传输层安全 (TLS) 使用安全 HTTP 协议 (HTTPS) 对存储账户进行加密传输。要启用 HTTPS，请将 5-1 强调的行添加到`ServiceDefinition.csdef`文件中：
 
 ```xml
 <!-- 在云端运行时，http 使用端口 80，https 使用端口 443 -->
@@ -2914,11 +2925,7 @@ Azure 服务可以通过传输层安全 (TLS) 使用安全 HTTP 协议 (HTTPS) �
 
 需要自签名证书是因为证书私钥在开发环境中是不安全的。
 
-
-
-
-
-[Listing 5-2] 包含了为生产 Web Role 建立 TLS 的请求头，该 Web Role 拥有一个由你创建的测试根证书机构创建的服务器证书。强调了指定 TLS/SSL 的 TCP 端口 `443`。
+[Listing 5-2] 包含了为生产 Web Role 建立 TLS 的请求头，该 Web Role 拥有一个由你创建的测试根证书机构创建的服务器证书。强调了指定 TLS/SSL 的 TCP 端口`443`。
 
 ### [Listing 5-2:] 为 WebRole 建立 TLS 连接的请求头
 
@@ -2967,17 +2974,19 @@ None.
 
 发行者（根证书机构）是 OakLeaf CA，测试服务器证书的通用名称（`CN`）是生产服务的 URI。你可能会发现，在服务开发期间，使用测试证书（商业服务器证书）比使用来自商业证书机构（`CA`）如 Go Daddy、Comodo 或 Thawte 的商业服务器证书更方便。安全服务的所有用户都必须将测试根证书机构添加到他们的受信任的根证书颁发列表中。
 
-商业 CA 需要你所请求证书的域名的所有权证明。在大多数情况下，所有权证明由域名内的电子邮件地址表示，例如上述示例中的 `alias@cloudapp.net`，CA 向该地址发送证书请求的响应。显然，此程序对 Azure 不起作用，因此你必须为你拥有的域名名获取商业证书，然后将 `servicename.cloudapp.net` 指定为 DNS CNAME 记录。
+商业 CA 需要你所请求证书的域名的所有权证明。在大多数情况下，所有权证明由域名内的电子邮件地址表示，例如上述示例中的`alias@cloudapp.net`，CA 向该地址发送证书请求的响应。显然，此程序对 Azure 不起作用，因此你必须为你拥有的域名名获取商业证书，然后将`servicename.cloudapp.net`指定为 DNS CNAME 记录。
 
-TLS v1.1 是 SSLv3 的后续版本，是 2006 年 4 月 IETF RFC 4346《传输层安全 (TLS) 协议版本 1.1》的主题。SSLv3 通常使用 128 位 RC4（也称为 ARC4 或 ARCFOUR）加密算法；TLS v1.1 协商 Web 服务器和浏览器支持的 `CipherSuite`。带有 TLS v1.1 或 SSLv3 加密以及 128 位密钥的 HTTPS 被认为足够安全，可以保护消费者银行和支付卡交易的互联网传输。符合 SB 1386 的免条件需要个人信息以加密数据的形式存储。“128 位”指定了加密密钥的长度。正如 RFC 4346 所述，在设计 SSLv3 和 TLS 1.0 时，美国限制了包含某些加密算法的加密软件的出口。为了符合这些规定，设计了一系列加密套件以降低的（40 位）密钥长度运行。由于计算机性能的进步，这些算法现在弱得令人不可接受，出口限制已经放宽以允许 128 位密钥。
+TLS v1.1 是 SSLv3 的后续版本，是 2006 年 4 月 IETF RFC 4346《传输层安全 (TLS) 协议版本 1.1》的主题。SSLv3 通常使用 128 位 RC4（也称为 ARC4 或 ARCFOUR）加密算法；TLS v1.1 协商 Web 服务器和浏览器支持的`CipherSuite`。带有 TLS v1.1 或 SSLv3 加密以及 128 位密钥的 HTTPS 被认为足够安全，可以保护消费者银行和支付卡交易的互联网传输。符合 SB 1386 的免条件需要个人信息以加密数据的形式存储。“128 位”指定了加密密钥的长度。正如 RFC 4346 所述，在设计 SSLv3 和 TLS 1.0 时，美国限制了包含某些加密算法的加密软件的出口。为了符合这些规定，设计了一系列加密套件以降低的（40 位）密钥长度运行。由于计算机性能的进步，这些算法现在弱得令人不可接受，出口限制已经放宽以允许 128 位密钥。
 
-[图 5.1] 显示了 AzureTableHarness 服务的 SSL 页面，其中包含 Development Fabric 的 `https://127.0.0.1/` 环回（`localhost`）的自签名证书，以及用于 `https://oakleaf3.cloudapp.net` 生产 URL 的测试证书。[图 5.1] 在项目的 SSL 页面中为 Development 和 Azure Fabrics 指定了自签名证书和测试证书。
+[图 5.1] 显示了 AzureTableHarness 服务的 SSL 页面，其中包含 Development Fabric 的`https://127.0.0.1/`环回（`localhost`）的自签名证书，以及用于`https://oakleaf3.cloudapp.net`生产 URL 的测试证书。[图 5.1] 在项目的 SSL 页面中为 Development 和 Azure Fabrics 指定了自签名证书和测试证书。
 
 ### 为 Azure Data Services 启用 TLS
 
-在开发带有个人身份识别数据的服务期间，需要使用 HTTPS 进行数据传输以确保安全模式，但在托管服务和数据服务位于同一数据中心的完整生产服务中，可能不需要。传输 Blobs、Tables 和 Queues 的启用 TLS 需要将项目 `ServiceConfiguration` 文件中的 `http` 更改为 `https`，如 [Listing 5-4] 中的高亮字符所示。
+在开发带有个人身份识别数据的服务期间，需要使用 HTTPS 进行数据传输以确保安全模式，但在托管服务和数据服务位于同一数据中心的完整生产服务中，可能不需要。传输 Blobs、Tables 和 Queues 的启用 TLS 需要将项目`ServiceConfiguration`文件中的`http`更改为`https`，如 [Listing 5-4] 中的高亮字符所示。
 
 [Listing 5-4:] 为 HTTP、队列和传输启用 SSL
+
+
 
 ```
 <Setting name="BlobEndpoint" value="https://blob.windows.net" />
@@ -3000,7 +3009,7 @@ Host: oakleaf3.cloudapp.net
 Pragma: no-cache
 ```
 
-你不需要为 Data Services 证书，因为由 Microsoft Authority 颁发的证书对于 `servicename.windows.net` 是有效的，这正如 [Listing 5-6] 中的 Subject 通配符（`*`）所示。
+你不需要为 Data Services 证书，因为由 Microsoft Authority 颁发的证书对于`servicename.windows.net`是有效的，这正如 [Listing 5-6] 中的 Subject 通配符（`*`）所示。
 
 [Listing 5-6:] 为 Tables 建立 SSL 连接
 
@@ -3034,15 +3043,11 @@ Microsoft Server Authority 是由 Microsoft Internet Authority 颁发的中间�
 
 ### 为 Development Fabric 创建自签名证书
 
-Internet Explorer 的 Internet Options 对话框 Content 页面有一个 Certificates 按钮，可以打开证书对话框。Mozilla Firefox 在其 Options、Advanced、Encryption 页面上提供了类似的 View Certificates 按钮。服务器身份验证证书必须由证书对话框受信任的根证书颁发列表中的机构颁发，以避免出现质疑真实性的信息。对于生产服务，你需要一个你拥有的域名的证书，例如由列表上的某一个机构颁发的 `mydomain.com`，以及一个指向 `servicename.cloudapp.net` 的 CNAME DNS 记录。对于 Development Fabric，你必须为 Cassini Development Web 服务器创建一个自签名证书。
+Internet Explorer 的 Internet Options 对话框 Content 页面有一个 Certificates 按钮，可以打开证书对话框。Mozilla Firefox 在其 Options、Advanced、Encryption 页面上提供了类似的 View Certificates 按钮。服务器身份验证证书必须由证书对话框受信任的根证书颁发列表中的机构颁发，以避免出现质疑真实性的信息。对于生产服务，你需要一个你拥有的域名的证书，例如由列表上的某一个机构颁发的`mydomain.com`，以及一个指向`servicename.cloudapp.net`的 CNAME DNS 记录。对于 Development Fabric，你必须为 Cassini Development Web 服务器创建一个自签名证书。
 
+Jim Nakashima 编写的《在 Windows Azure 上启用 SSL 连接》白皮书 ([`bit.ly/GbnSh`](http://bit.ly/GbnSh), [`msdn.microsoft.com/en-us/library/dd203056.aspx`](http://msdn.microsoft.com/en-us/library/dd203056.aspx)) 解释了如何为生产和开发服务器设置 SSL 连接。Scott Guthrie 的博客文章《提示/技巧：使用自签名证书在 IIS 7.0 上启用 SSL》([`bit.ly/2pJ3xG`](http://bit.ly/2pJ3xG), [`weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx`](http://weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx)) 展示了如何使用`IIS 7.0`为`localhost`创建自签名证书。这两篇文章都没有解释如何使用`MakeCert.exe`创建具有自定义域名的证书。
 
-
-
-
-Jim Nakashima 编写的《在 Windows Azure 上启用 SSL 连接》白皮书 ([`bit.ly/GbnSh`](http://bit.ly/GbnSh), [`msdn.microsoft.com/en-us/library/dd203056.aspx`](http://msdn.microsoft.com/en-us/library/dd203056.aspx)) 解释了如何为生产和开发服务器设置 SSL 连接。Scott Guthrie 的博客文章《提示/技巧：使用自签名证书在 IIS 7.0 上启用 SSL》([`bit.ly/2pJ3xG`](http://bit.ly/2pJ3xG), [`weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx`](http://weblogs.asp.net/scottgu/archive/2007/04/06/tip-trick-enabling-ssl-on-iis7-using-self-signed-certificates.aspx)) 展示了如何使用 `IIS 7.0` 为 `localhost` 创建自签名证书。这两篇文章都没有解释如何使用 `MakeCert.exe` 创建具有自定义域名的证书。
-
-如前所述，在开发开发织体（Development Fabric）中运行的安全服务的默认 URL 为 `https://127.0.0.1/`，但 IE8 的证书对话框不允许你指定除默认 `localhost` 或机器账户名称以外的 `CN`。如果你使用 `localhost` 证书，每次编译和运行项目时都必须忽略警告消息。要指定自定义 `CN`，你必须使用 `Visual Studio 2008 Command Prompt` 通过 `VS 2008` 的 `MakeCert.exe` 命令行工具，使用以下参数创建证书：
+如前所述，在开发开发织体（Development Fabric）中运行的安全服务的默认 URL 为`https://127.0.0.1/`，但 IE8 的证书对话框不允许你指定除默认`localhost`或机器账户名称以外的`CN`。如果你使用`localhost`证书，每次编译和运行项目时都必须忽略警告消息。要指定自定义`CN`，你必须使用`Visual Studio 2008 Command Prompt`通过`VS 2008`的`MakeCert.exe`命令行工具，使用以下参数创建证书：
 
 ```
 makecert.exe -n “CN=127.0.0.1” -pe -ss My -sr CurrentUser -sky exchange -m 96 -a sha1 -eku 1.3.6.1.5.5.7.3.1 -r
@@ -3062,7 +3067,7 @@ makecert.exe -n “CN=127.0.0.1” -pe -ss My -sr CurrentUser -sky exchange -m 9
 | -eku 1.3.6.1.5.5.7.3.1 | 增强密钥对象标识符（所有用途） |
 | -r | 创建自签名证书 |
 
-开发 Web 服务器要求自签名证书位于 `CurrentUser` 存储区。
+开发 Web 服务器要求自签名证书位于`CurrentUser`存储区。
 
 在运行上述命令后，打开证书对话框将会在你的个人证书列表中显示该自签名证书，所示 图 5.2 所示。
 
@@ -3078,7 +3083,7 @@ makecert.exe -n “CN=127.0.0.1” -pe -ss My -sr CurrentUser -sky exchange -m 9
 2. 选择“是，导出私钥”选项并点击“下一步”打开导出文件对话框。
 3. 选择“个人信息交换 – PKCS #12 (.PFX)”选项，勾选“尽可能包含证书路径中的所有证书”和“导出所有扩展属性”复选框，点击“下一步”打开密码对话框。
 4. 输入并确认密码以加密私钥，点击“下一步”打开导出文件对话框。
-5. 点击“浏览”并导航到你的 `Users\UserName\Documents` 文件夹，添加一个 `ServerCerts` 或类似的文件夹，将文件命名为 `127-0-0-1DevCert.pfx` 等，并点击“保存”导出证书并打开完成证书导出向导对话框。
+5. 点击“浏览”并导航到你的`Users\UserName\Documents`文件夹，添加一个`ServerCerts`或类似的文件夹，将文件命名为`127-0-0-1DevCert.pfx`等，并点击“保存”导出证书并打开完成证书导出向导对话框。
 6. 点击“完成”关闭向导。
 7. 点击证书对话框中的“受信任的根证书实体”选项卡和“导入”按钮启动证书导入向导，点击“下一步”打开导入文件对话框。
 8. 在列表中选择“个人信息文件 (*.pfx)”，浏览并打开第 5 步保存的文件，点击“下一步”打开密码对话框。
@@ -3086,32 +3091,28 @@ makecert.exe -n “CN=127.0.0.1” -pe -ss My -sr CurrentUser -sky exchange -m 9
 10. 选择“将所有证书放入下列存储”选项，并在证书存储列表中选择“受信任的根证书实体”，点击“下一步”打开完成证书导入向导对话框。
 11. 点击“完成”创建新的受信任的根证书实体（参见图 5.2）。
 
-
-
-
-
 - `DESCryptoServiceProvider` 定义了对数据加密标准 (DES) 算法的加密服务提供程序 (CSP) 版本的封装。
-- `RC2CryptoServiceProvider` 定义了对 `RC2` 算法 CSP 实现的封装。
-- `RijndaelManaged` 访问 `Rijndael` 算法的托管版本，`AES` 正基于该算法。`AES` 具有 128 位（16 字节）的固定块大小以及 128、192 或 256 位的密钥；`Rijndael` 可以指定为 32 位任意倍倍的块大小和密钥大小，最小为 128 位，最大为 256 位。
+- `RC2CryptoServiceProvider` 定义了对`RC2`算法 CSP 实现的封装。
+- `RijndaelManaged` 访问`Rijndael`算法的托管版本，`AES`正基于该算法。`AES`具有 128 位（16 字节）的固定块大小以及 128、192 或 256 位的密钥；`Rijndael`可以指定为 32 位任意倍倍的块大小和密钥大小，最小为 128 位，最大为 256 位。
 - `TripleDESCryptoServiceProvider` 定义了对 TripleDES 算法 CSP 版本的封装。
 
-`AES` 是一项联邦标准，因此它很可能被联邦和州机构接受为保护个人身份信息的适当手段。你可以从这些算法的维基百科条目中了解更多关于上述加密算法的信息。
+`AES`是一项联邦标准，因此它很可能被联邦和州机构接受为保护个人身份信息的适当手段。你可以从这些算法的维基百科条目中了解更多关于上述加密算法的信息。
 
 ## 使用 AES 加密和解密字符串
 
-`\WROX\Azure\Chapter05` 文件夹中的 `AzureTableTestHarnessSSL.sln` 项目基于第 4 章的 `SampleWebCloudService.sln` 项目。该项目在创建或更新实体时使用 `AesManaged` 加密 Northwind Customers 表中的 PII（个人身份信息），并在 `GridView` 控件显示和批量更新时对其进行解密。`AesManagedEncryption.cs` 文件包含 `EncryptDecrypt` 类，它为 UTF-8 编码的字符串提供了 `Encrypt` 和 `Decrypt` 方法，`StorageClient` 的 HTTP 请求头将其指定为 `Accept-Charset` 头，响应将其交付为 `Content-Type: application/atom+xml;charset=utf-8`。加密后的字节作为 Base64 编码字符串交付。
+`\WROX\Azure\Chapter05`文件夹中的`AzureTableTestHarnessSSL.sln`项目基于第 4 章的`SampleWebCloudService.sln`项目。该项目在创建或更新实体时使用`AesManaged`加密 Northwind Customers 表中的 PII（个人身份信息），并在`GridView`控件显示和批量更新时对其进行解密。`AesManagedEncryption.cs`文件包含`EncryptDecrypt`类，它为 UTF-8 编码的字符串提供了`Encrypt`和`Decrypt`方法，`StorageClient`的 HTTP 请求头将其指定为`Accept-Charset`头，响应将其交付为`Content-Type: application/atom+xml;charset=utf-8`。加密后的字节作为 Base64 编码字符串交付。
 
 ### 将明文加密为密文
 
 基于密码的密钥派生函数 (`PBKDF2`) 根据密码和盐字节数组的组合创建共享秘密（加密/解密）密钥。盐字节表示从密码派生的大密钥集中的索引。它不需要保密。在接下来的示例中，密码和盐是嵌入的字面量字符串。使用公钥对对密码进行加密可以增加安全性，Windows 数据保护 API (`DPAPI`) 可以为私钥提供安全存储。
 
-`PBKDF2` 是 RSA 实验室公钥加密标准 (`PKCS`) #5 v2.0 的一部分，由 IETF 发布为 `RFC 2898`（([www.ietf.org/rfc/rfc2898.txt](http://www.ietf.org/rfc/rfc2898.txt))）。关于 `DPAPI` 的更多信息，请参见 MSDN 上的“Windows 数据保护”白皮书 ([`msdn.microsoft.com/en-us/library/ms995355.aspx`](http://msdn.microsoft.com/en-us/library/ms995355.aspx))）。
+`PBKDF2`是 RSA 实验室公钥加密标准 (`PKCS`) #5 v2.0 的一部分，由 IETF 发布为`RFC 2898`（([www.ietf.org/rfc/rfc2898.txt](http://www.ietf.org/rfc/rfc2898.txt))）。关于`DPAPI`的更多信息，请参见 MSDN 上的“Windows 数据保护”白皮书 ([`msdn.microsoft.com/en-us/library/ms995355.aspx`](http://msdn.microsoft.com/en-us/library/ms995355.aspx))）。
 
-编写本书时，Azure Fabric 不支持 `DPAPI` 安全。
+编写本书时，Azure Fabric 不支持`DPAPI`安全。
 
 [Listing 5-8] 包含加密代码，返回 Base64 编码的密文。
 
-#### Listing 5-8：使用 `AesManaged` 加密类加密明文 UTF8 字符串的方法
+#### Listing 5-8：使用`AesManaged`加密类加密明文 UTF8 字符串的方法
 
 ```csharp
 public static string Encrypt(string input)
@@ -3157,9 +3158,15 @@ public static string Encrypt(string input)
 }
 ```
 
-调用 `CryptoStream.Clear()` 方法是调用 `IDisposable.Dispose`。
+调用`CryptoStream.Clear()`方法是调用`IDisposable.Dispose`。
 
-调用 `CryptoStream.Clear()` 方法是调用 `IDisposable.Dispose`。[Listing 5-9] 显示了请求头和 `AES` 属性的 `CompanyName`、`ContactName`、**128 位**、**192 位**或 **256 位**。#### Listing 5-9：向表 3 添加加密实体的 HTTP 请求头和负载
+[Listing 5-9] 显示了请求头和`AES`属性的`CompanyName`、`ContactName`、**128 位**、**192 位**或 **256 位**。
+
+#### Listing 5-9：向表 3 添加加密实体的 HTTP 请求头和负载
+
+
+
+`POST /CustomerTable HTTP/1.1` 请求用于创建新的表实体，其请求头如下：
 
 ```
 POST /CustomerTable HTTP/1.1
@@ -3173,7 +3180,11 @@ Content-Type: application/atom+xml
 Host: oakleaf3.table.core.windows.net
 Content-Length: 1181
 Expect: 100-continue
+```
 
+请求体为 Atom 发布协议格式的 XML 文档，包含实体数据：
+
+```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <entry xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
      xmlns:m="http://schemas.microsoft.com/ado/2007/08/metadata"
@@ -3202,7 +3213,7 @@ Expect: 100-continue
 </entry>
 ```
 
-[Listing 5-10] 包含 HTTP 响应并确认 `<entry>` 元素为负载。
+[列表 5-10] 包含 HTTP 响应并确认 `<entry>` 元素为负载。
 
 ```
 HTTP/1.1 201 Created
@@ -3217,9 +3228,7 @@ Date: Sun, 22 Mar 2009 23:02:00 GMT
 640
 ```
 
-
-
-
+响应体为创建成功的实体数据，包含服务分配的元数据：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -3334,15 +3343,13 @@ x-ms-continuation-RowKey:
 Date: Mon, 23 Mar 2009 18:03:12
 ```
 
-
-
-
-
 示例项目的 `Customers.cs` 文件包含了 `CustomerDataModel` 类，该类代表表的对象模型，它是你对其成员应用 `Encrypt` 和 `Decrypt` 方法进行 CRUD 操作的核心对象。`CustomerDataModel` 类继承自 `StorageClient` 类库中的 `TableStorageEntity` 抽象类。
 
 [列表 5-14] 显示了 `CustomerDataModel` 成员访问器（getters 和 setters）的代码，包括处理 PII（个人身份信息）的方法。重点标记的 `getArg` 和 `setArg` 方法调用以及方法分别处理解密和加密。将 `_Default.isCreateCusts` 标志位设置为 `true`，以防止在 `Get` 操作紧接 `Set` 操作之后时进行解密，这种情况通常发生在添加新实体或更新实体时。
 
 ### 列表 5-14：CustomerDataModel 成员的加密和解密代码
+
+
 
 ```csharp
 public class CustomerDataModel : TableStorageEntity
@@ -3491,37 +3498,33 @@ public class CustomerDataModel : TableStorageEntity
 }
 ```
 
-### 分析加密的性能
+## 分析加密的性能
 
 正如你预期的，加密对表 CRUD 操作产生了严重影响，尽管删除操作受影响较小。下表列出了在 Azure Fabric（生产环境）和 Developer Fabric 中，开启和不开启加密的情况下执行示例项目五个操作功能所需的时间（秒）。
 
-使用 AES 的 128 位数据块大小进行加密会导致数据负载平均增加两个字节。Base64 编码每三个字节一组会增加四个字节负载；公式为 `Base64Bytes = ((UTF8Bytes + 3 – (UTF8Bytes MOD 3)) / 3) × 4`。加密和解密数据的 CPU 周期对性能的损失影响远大于负载大小。你可以通过在计数实例时添加标志来防止解密和加密，从而提高 `Count` 操作的速度。
+使用 AES 的 128 位数据块大小进行加密会导致数据负载平均增加两个字节。Base64 编码每三个字节一组会增加四个字节负载；公式为`Base64Bytes = ((UTF8Bytes + 3 – (UTF8Bytes MOD 3)) / 3) × 4`。加密和解密数据的 CPU 周期对性能的损失影响远大于负载大小。你可以通过在计数实例时添加标志来防止解密和加密，从而提高`Count`操作的速度。
 
 ![c05nt001.jpg](img/c05nt001.jpg)
 
-盐值（Salt values）会导致 LINQ 约束中的编码字面量无法与加密列协作，因为盐会导致相同值进行两次加密产生不同的密文。对加密属性值执行 LINQ `orderby` 操作不会产生预期的项目顺序，因此无法进行范围搜索。微软表示计划在 Azure Tables v1 中引入二级索引，但在本书编写时尚未提供测试，二级索引的行为可能会受到加密的负面影响。
+盐值（Salt values）会导致 LINQ 约束中的编码字面量无法与加密列协作，因为盐会导致相同值进行两次加密产生不同的密文。对加密属性值执行 LINQ `orderby`操作不会产生预期的项目顺序，因此无法进行范围搜索。微软表示计划在 Azure Tables v1 中引入二级索引，但在本书编写时尚未提供测试，二级索引的行为可能会受到加密的负面影响。
 
-### 分析加密
+## 分析加密
 
-你可以添加存储原始明文值的哈希属性，然后进行等值搜索。为了防止字典攻击，你可以添加基于哈希的消息认证码（HMAC）。`System.Security.Cryptography.HMAC` 类拥有 `ComputeHash()` 和 `Create()` 成员。Azure 团队将二级索引定义为非主键属性。
+你可以添加存储原始明文值的哈希属性，然后进行等值搜索。为了防止字典攻击，你可以添加基于哈希的消息认证码（HMAC）。`System.Security.Cryptography.HMAC`类拥有`ComputeHash()`和`Create()`成员。Azure 团队将二级索引定义为非主键属性。
 
-### 客户端加密与 SQL Server 加密的对比
+## 客户端加密 vs. SQL Server 加密
 
-SQL Server 2005 引入了列级和行级加密（称为单元加密），以及密钥管理。我在《Visual Studio Magazine》2005 年 8 月期发表的“在 Yukon 中加密和解密”文章（[`bit.ly/OseDw`](http://bit.ly/OseDw), [`visualomagazine.com/features/article.php?editorialsid=1296`](http://visualomagazine.com/features/article.php?editorialsid=1296)）描述了 SQL Server 自包含加密的过程，并提供了一个可下载的项目 项目。加密列必须使用 `varbinary` 数据类型。
+SQL Server 2005 引入了列级和行级加密（称为单元加密），以及密钥管理。我在《Visual Studio Magazine》2005 年 8 月期发表的“在 Yukon 中加密和解密”文章（[`bit.ly/OseDw`](http://bit.ly/OseDw)、[`visualomagazine.com/features/article.php?editorialsid=1296`](http://visualomagazine.com/features/article.php?editorialsid=1296)）描述了 SQL Server 自包含加密的过程，并提供了一个可下载的项目。加密列必须使用`varbinary`数据类型。
 
-列级加密操作对性能的影响不如客户端操作那样剧烈，但它们会干扰索引性能。加密列上的 T-SQL `WHERE` 和 `ORDER BY` 子句需要 HMAC，并表现出与 Azure Tables 的问题。哈希值列无法进行范围搜索。Laurentiu Cristofor 在 2005 年 12 月的博客文章“SQL Server 2005：搜索加密数据”中（[`bit.ly/M16qG`](http://bit.ly/M16qG), [`blogs.msdn.com/lcris/archive/2005/12/22/506931.aspx`](http://blogs.msdn.com/lcris/archive/2005/12/22/506931.aspx)）描述了这些以及关于单元加密的其他问题。
+列级加密操作对性能的影响不如客户端操作那样剧烈，但它们会干扰索引性能。加密列上的 T-SQL `WHERE`和`ORDER BY`子句需要 HMAC，并表现出与 Azure Tables 的问题。哈希值列无法进行范围搜索。Laurentiu Cristofor 在 2005 年 12 月的博客文章“SQL Server 2005：搜索加密数据”中（[`bit.ly/M16qG`](http://bit.ly/M16qG)、[`blogs.msdn.com/lcris/archive/2005/12/22/506931.aspx`](http://blogs.msdn.com/lcris/archive/2005/12/22/506931.aspx)）描述了这些以及关于单元加密的其他问题。
 
-SQL Azure 团队在 2009 年 3 月 12 日针对“SDS 是否支持数据库加密、证书和密钥管理？”的问题回答如下：“数据库加密？最初不支持，但它在列表中，正如我们演示的那样——如果有足够的客户需求，这将是 v1 之后我们将添加的内容之一。”([`bit.ly/cTWjP`](http://bit.ly/cTWjP), [`blogs.msdn.com/ssds/archive/2009/03/12/9471765.aspx`](http://blogs.msdn.com/ssds/archive/2009/03/12/9471765.aspx))。
+SQL Azure 团队在 2009 年 3 月 12 日针对“SDS 是否支持数据库加密、证书和密钥管理？”的问题回答如下：“数据库加密？最初不支持，但它在列表中，正如我们演示的那样——如果有足够的客户需求，这将是 v1 之后我们将添加的内容之一。”（[`bit.ly/cTWjP`](http://bit.ly/cTWjP)、[`blogs.msdn.com/ssds/archive/2009/03/12/9471765.aspx`](http://blogs.msdn.com/ssds/archive/2009/03/12/9471765.aspx)）
 
+在编写此书时，微软正处于将 SDS 从一个使用实体-属性-值（EAV）数据模型的自定义版本`SQL Server 2005`升级为完全关系`SQL Server 2008`。`SQL Server 2008`增加了透明数据加密（`TDE`），它在`SQL Server`数据引擎和文件系统之间建立了一个加密层。相比单元级加密，`TDE`加密整个数据库（包括备份和日志文件）的主要优势在于它在文件和内存之间移动时进行页面级的加密解密，且不会增加数据大小。`TDE`解决了哪些数据是个人身份信息（PII）哪些不是的问题；所有内容都是加密的。
 
+`TDE`的主要架构标准之一是能够在`SQL Server 2008`开发期间，以数据库管理员（DBA）最少的精力满足 PCI-DSS、SB 1386 以及其他进程法律的要求。遗憾的是，SDS 将不支持`TDE`。
 
-
-
-在编写此书时，微软正处于将 SDS 从一个使用实体-属性-值（EAV）数据模型的自定义版本 `SQL Server 2005` 升级为完全关系 `SQL Server 2008`。`SQL Server 2008` 增加了透明数据加密（`TDE`），它在 `SQL Server` 数据引擎和文件系统之间建立了一个加密层。相比单元级加密，`TDE` 加密整个数据库（包括备份和日志文件）的主要优势在于它在文件和内存之间移动时进行页面级的加密解密，且不会增加数据大小。`TDE` 解决了哪些数据是个人身份信息（PII）哪些不是的问题；所有内容都是加密的。
-
-`TDE` 的主要架构标准之一是能够在 `SQL Server 2008` 开发期间，以数据库管理员（DBA）最少的精力满足 PCI-DSS、SB 1386 以及其他进程法律的要求。遗憾的是，SDS 将不支持 `TDE`。
-
-你可以通过“SQL Server 2008 企业版中的数据库加密”技术文章（[`bit.ly/3wcuXw`](http://bit.ly/3wcuXw), [`msdn.microsoft.com/en-us/library/cc278098.aspx`](http://msdn.microsoft.com/en-us/library/cc278098.aspx)）、Laurentiu Cristofor 在 2007 年 10 月发布的“SQL Server 2008: 透明数据加密功能——快速概述”博客文章（[`bit.ly/zf9Uk`](http://bit.ly/zf9Uk), [`blogs.msdn.com/lcris/archive/2007/10/03/sql-server-2008-transparent-data-encryption-feature-a-quick-overview.aspx`](http://blogs.msdn.com/lcris/archive/2007/10/03/sql-server-2008-transparent-data-encryption-feature-a-quick-overview.aspx)）以及 Joe Yong 在 2008 年 1 月发布的“SQL Server 2008 TDE：你可以使用的加密！”博客文章（[`bit.ly/ACOKb`](http://bit.ly/ACOKb), [`blog.scalabilityexperts.com/2008/01/08/93/`](http://blog.scalabilityexperts.com/2008/01/08/93/)）来了解更多关于 `TDE` 的信息。
+你可以通过“SQL Server 2008 企业版中的数据库加密”技术文章（[`bit.ly/3wcuXw`](http://bit.ly/3wcuXw)、[`msdn.microsoft.com/en-us/library/cc278098.aspx`](http://msdn.microsoft.com/en-us/library/cc278098.aspx)）、Laurentiu Cristofor 在 2007 年 10 月发布的“SQL Server 2008: 透明数据加密功能——快速概述”博客文章（[`bit.ly/zf9Uk`](http://bit.ly/zf9Uk)、[`blogs.msdn.com/lcris/archive/2007/10/03/sql-server-2008-transparent-data-encryption-feature-a-quick-overview.aspx`](http://blogs.msdn.com/lcris/archive/2007/10/03/sql-server-2008-transparent-data-encryption-feature-a-quick-overview.aspx)）以及 Joe Yong 在 2008 年 1 月发布的“SQL Server 2008 TDE：你可以使用的加密！”博客文章（[`bit.ly/ACOKb`](http://bit.ly/ACOKb)、[`blog.scalabilityexperts.com/2008/01/08/93/`](http://blog.scalabilityexperts.com/2008/01/08/93/)）来了解更多关于`TDE`的信息。
 
 ## 针对监管和行业标准的合规审计
 
@@ -3533,104 +3536,102 @@ SOX 第 404 节要求“在公司最近财年年底，对发行人财务报告�
 
 美国注册公共会计师协会（ICPA）的《审计标准第 70 号：服务机构》（`SAS 70`）——“信息技术对审计师在财务报表审计中考虑内部控制的影响”，要求独立财务审计师将信息技术作为整体内部控制的一部分。
 
-`SAS 70` I 类或 II 类规定了对服务机构（如云服务提供商）的检查，该检查代表该机构已对其提供的服务的控制目标和活动通过了深度审计。`SAS 70` 维基百科（[`en.wikipedia.org/wiki/SAS_70`](http://en.wikipedia.org/wiki/SAS_70））对两种 `SAS 70` 审计类型的定义如下：
+`SAS 70` I 类或 II 类规定了对服务机构（如云服务提供商）的检查，该检查代表该机构已对其提供的服务的控制目标和活动通过了深度审计。`SAS 70` 维基百科（[`en.wikipedia.org/wiki/SAS_70`](http://en.wikipedia.org/wiki/SAS_70)）对两种`SAS 70`审计类型的定义如下：
 
-*   I 类服务审计师报告包含了服务审计师对服务机构已运行的控制描述的呈现公平性的意见，以及控制设计对于实现指定控制目标的适用性的意见。
-*   II 类服务审计师报告包含了 I 类服务审计师报告中的包含信息，还包含了服务审计师对特定控制在审查期间内是否有效运行的意见。
+* I 类服务审计师报告包含了服务审计师对服务机构已运行的控制描述的呈现公平性的意见，以及控制设计对于实现指定控制目标的适用性的意见。
 
-SOX 关于内部控制充分性的陈述为期为一年，因此需要 II 类报告。如果你有足够的筹码，你应该要求 `SAS 70` 审计说明 GLB、SOX、HIPAA 和 PCI-DSS 的合规范围，并描述服务公司如何建立控制目标以满足其提供的服务水平协议（SLAs）。
+* II 类服务审计师报告包含了 I 类服务审计师报告中的包含信息，还包含了服务审计师对特定控制在审查期间内是否有效运行的意见。
 
-`SAS 70`（[httpwww.sas70.com/index2.htm](http://www.sas70.com/index2.htm)）是一个专注于 SAS 70 审计标准和第三方保证的网站。Frederick Green 的论文《遵守萨班斯-奥克斯利法案和 SAS 94：应用安全在内部控制中的关键作用》（[`bit.ly/AMVgr`](http://bit.ly/AMVgr), [www.nysscpa.org/committees/emergingtech/sarbanes_act.htm](http://www.nysscpa.org/committees/emergingtech/sarbanes_act.htm)）解释了 SAS 94 如何与 SOX 相关。
+SOX 关于内部控制充分性的陈述为期为一年，因此需要 II 类报告。如果你有足够的筹码，你应该要求`SAS 70`审计说明 GLB、SOX、HIPAA 和 PCI-DSS 的合规范围，并描述服务公司如何建立控制目标以满足其提供的服务水平协议（SLAs）。
+
+`SAS 70`（[http://www.sas70.com/index2.htm](http://www.sas70.com/index2.htm)）是一个专注于 SAS 70 审计标准和第三方保证的网站。Frederick Green 的论文《遵守萨班斯-奥克斯利法案和 SAS 94：应用安全在内部控制中的关键作用》（[`bit.ly/AMVgr`](http://bit.ly/AMVgr)、[www.nysscpa.org/committees/emergingtech/sarbanes_act.htm](http://www.nysscpa.org/committees/emergingtech/sarbanes_act.htm)）解释了 SAS 94 如何与 SOX 相关。
 
 ## ISO/IEC 27001:2005 标准
 
 `ISO/IEC 27001`（信息技术—安全技术—信息安全管理体系—要求）是信息安全管理体系（ISMS）的国际标准。根据 ISO 27001 网站（[www.27001.com](http://www.27001.com)）：
 
-*   一个符合 `ISO/IEC 27001` 的系统将提供一种系统方法来确保企业信息的可用性、机性和完整性。通过识别和应对组织信息资产的所有潜在风险来实施控制。
-*   该标准借鉴了来自 40 多个国家的各类大型组织信息安全从业人员的专业知识和经验，建立了信息安全的最佳实践。并日益被企业用于证明监管合性和有效的业务风险管理，同时帮助他们为所有新和新兴的法规做好准备和定位。
-*   通过 `ISO/IEC 27001`认证的 ISMS 将确保你符合所有相关法律，包括适用的 HIPAA、GLBA、SB 1386 以及其他州数据泄露法、PIPEDA、FISMA、欧盟安全港法规等。
-*   通过 `ISO/IEC 27001`认证的 ISMS 将确保你建立了成功的 SOX s404 报告所依赖的通用控制环境。
+* 一个符合`ISO/IEC 27001`的系统将提供一种系统方法来确保企业信息的可用性、机密性和完整性。通过识别和应对组织信息资产的所有潜在风险来实施控制。
 
-`ISO/IEC 27001:2005` 意在与 `ISO/IEC 27002:2005`（信息技术—安全技术—信息安全管理规范）结合使用，后者曾被确定为 `ISO/IEC 17799`。`ISO/IEC 27002:2005` 列出了安全控制目标并推荐了一系列特定的安全控制措施。
+* 该标准借鉴了来自 40 多个国家的各类大型组织信息安全从业人员的专业知识和经验，建立了信息安全的最佳实践。并日益被企业用于证明监管合规性和有效的业务风险管理，同时帮助他们为所有新和新兴的法规做好准备和定位。
+
+* 通过`ISO/IEC 27001`认证的 ISMS 将确保你符合所有相关法律，包括适用的 HIPAA、GLBA、SB 1386 以及其他州数据泄露法、PIPEDA、FISMA、欧盟安全港法规等。
+
+* 通过`ISO/IEC 27001`认证的 ISMS 将确保你建立了成功的 SOX 404 报告所依赖的通用控制环境。
+
+`ISO/IEC 27001:2005`意在与`ISO/IEC 27002:2005`（信息技术—安全技术—信息安全管理规范）结合使用，后者曾被确定为`ISO/IEC 17799`。`ISO/IEC 27002:2005`列出了安全控制目标并推荐了一系列特定的安全控制措施。
 
 
 
+微软全球基础服务业务与风险管理部门总经理 `Charlie McNerney` 于 2009 年 5 月 27 日在全球基础服务团队博客上发布了《保障微软云基础设施》（[`bit.ly/VeAWD`](http://bit.ly/VeAWD), [`blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx`](http://blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx)）。该文章宣布了 2009 年 5 月出版的《保障微软云基础设施》白皮书（[`bit.ly/18TKFy`](http://bit.ly/18TKFy), [www.globalfoundationservices.com/security/documents/SecuringtheMSCloudMay09.pdf](http://www.globalfoundationservices.com/security/documents/SecuringtheMSCloudMay09.pdf)）以及“独立的第三方验证……确保微软云基础设施获得了 `SAS 70 Type I` 和 `Type II` 证明以及 `ISO/IEC 27001:2005` 认证”。
 
-
-微软全球基础服务业务与风险管理部门总经理 Charlie McNerney 于 2009 年 5 月 27 日在全球基础服务团队博客上发布了《保障微软云基础设施》（[`bit.ly/VeAWD`](http://bit.ly/VeAWD), [`blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx`](http://blogs.technet.com/gfs/archive/2009/05/27/securing-microsoft-s-cloud-infrastructure.aspx)）。该文章宣布了 2009 年 5 月出版的《保障微软云基础设施》白皮书（[`bit.ly/18TKFy`](http://bit.ly/18TKFy), [www.globalfoundationservices.com/security/documents/SecuringtheMSCloudMay09.pdf](http://www.globalfoundationservices.com/security/documents/SecuringtheMSCloudMay09.pdf)）以及“独立的第三方验证……确保微软云基础设施获得了 SAS 70 Type I 和 Type II 证明以及 ISO/IEC 27001:2005 认证”。
-
-尽管 McNerney 写道：“我们自豪成为首批获得基础设施 ISO 27001 认证的大型在线服务提供商之一”，但在本书编写时，搜索其他云厂商声称其 PaaS 或 IaaS 服务获得 ISO/IEC 27001 认证的声明，并未返回任何匹配结果。
+尽管 `McNerney` 写道：“我们自豪成为首批获得基础设施 `ISO 27001` 认证的大型在线服务提供商之一”，但在本书编写时，搜索其他云厂商声称其 `PaaS` 或 `IaaS` 服务获得 `ISO/IEC 27001` 认证的声明，并未返回任何匹配结果。
 
 ## 服务水平协议与业务中断风险
 
-章节开头附近的“数据可用性最大化和安全风险最小化”主题简要地描述了典型的 SLA。对于提供计算、网络和存储服务的异地 IT 提供商来说，SLA 是必不可少的。在本书编写时，对于云计算用户而言，要获得业务中断风险的覆盖是非常困难的。随着云计算成为一种被认可的业务实践，且精算师能够预测各种时长的服务商停机概率，由于意外保险公司无疑将竞争提供业务中断的保障。
+章节开头附近的“数据可用性最大化和安全风险最小化”主题简要地描述了典型的 `SLA`。对于提供计算、网络和存储服务的异地 `IT` 提供商来说，`SLA` 是必不可少的。在本书编写时，对于云计算用户而言，要获得业务中断风险的覆盖是非常困难的。随着云计算成为一种被认可的业务实践，且精算师能够预测各种时长的服务商停机概率，由于意外保险公司无疑将竞争提供业务中断的保障。
 
 ### 总结
 
-从本地数据中心迁移到云计算和数据存储服务（例如由 `Windows Azure Platform` 提供的服务），需要大量的前期分析，这已经超出了传统的应用程序开发和数据库管理的领域。由于对数据安全和完整性的担忧，高级管理层和 IT 人员可能会成为将选择性计算和数据存储操作移出本地的主要障碍。由微软、亚马逊和谷歌等具有主要互联网影响力的组织运营的数据中心，其安全性可能与潜在的企业级客户数据中心相当，甚至更高。
+从本地数据中心迁移到云计算和数据存储服务（例如由 `Windows Azure Platform` 提供的服务），需要大量的前期分析，这已经超出了传统的应用程序开发和数据库管理的领域。由于对数据安全和完整性的担忧，高级管理层和 `IT` 人员可能会成为将选择性计算和数据存储操作移出本地的主要障碍。由微软、亚马逊和谷歌等具有主要互联网影响力的组织运营的数据中心，其安全性可能与潜在的企业级客户数据中心相当，甚至更高。
 
-政府机构和既有公司的共同目标是规避风险；因此，政府机构对云计算的兴趣以及最终的采用，将验证私营部门利用云服务的决策。NIST 的信息技术实验室处于开发面向联邦机构云计算标准的最前沿。由 NIST 开发的标准可能会成为未来行业规范的基准。
+政府机构和既有公司的共同目标是规避风险；因此，政府机构对云计算的兴趣以及最终的采用，将验证私营部门利用云服务的决策。`NIST` 的信息技术实验室处于开发面向联邦机构云计算标准的最前沿。由 `NIST` 开发的标准可能会成为未来行业规范的基准。
 
-《GLB 法案》和《HIPAA 法》包含了保护美国居民非公开信息和个人身份信息的联邦法规；加利州的 `SB 1386` 要求在发生未经授权访问加州居民的 PII（个人身份信息）时进行通知。`PCI-DSS` 规定了结合卡片 ID 号最小化信用卡和借记卡持卡人 PII 暴露风险的程序。SOX 法案要求实施内部控制以减少财务风险的错误陈述；违反任何政府法规或 `PCI-DSS` 标准无疑意味着财务危险，而管理层或独立审计师在发布年度 SOX 合规报告时可能对这些危险无所知。
+《`GLB` 法案》和《`HIPAA` 法》包含了保护美国居民非公开信息和个人身份信息的联邦法规；加利州的 `SB 1386` 要求在发生未经授权访问加州居民的 `PII`（个人身份信息）时进行通知。`PCI-DSS` 规定了结合卡片 `ID` 号最小化信用卡和借记卡持卡人 `PII` 暴露风险的程序。`SOX` 法案要求实施内部控制以减少财务风险的错误陈述；违反任何政府法规或 `PCI-DSS` 标准无疑意味着财务危险，而管理层或独立审计师在发布年度 `SOX` 合规报告时可能对这些危险无所知。
 
-数据在互联网上传输时泄露风险最大。带有 SSL 或 TLS 加密的安全 `HTTPS` 协议已证明在互联网上进行个人银业务和信用卡购买操作是安全的。对于 Azure 托管服务，通过使用 Visual Studio 的 `MakeCert.exe` 命令行工具和 IE 8 的证书对话框，可以很容易实现 `HTTPS`。在数据中心内部或之间的数据服务启用 `HTTPS` 只需更改项目 `ServiceConfiguration.cscfg` 文件中的几个字符。
+数据在互联网上传输时泄露风险最大。带有 `SSL` 或 `TLS` 加密的安全 `HTTPS` 协议已证明在互联网上进行个人银业务和信用卡购买操作是安全的。对于 `Azure` 托管服务，通过使用 `Visual Studio` 的 `MakeCert.exe` 命令行工具和 `IE 8` 的证书对话框，可以很容易实现 `HTTPS`。在数据中心内部或之间的数据服务启用 `HTTPS` 只需更改项目 `ServiceConfiguration.cscfg` 文件中的几个字符。
 
-章节的 `AzureTableTestHarness.sln` 示例应用程序演示了使用 .NET 3.5 的 `AesManaged` 加密提供程序类对 Azure 表中的 PII 进行客户端侧对称加密和解密的技术。对 Northwind Customers 表中的 `CompanyName`、`ContactName`、`ContactTitle`、`Address`、`PostalCode`、`Phone` 和 `Fax` 等属性进行 PII 加密并不涉及大量的额外代码，但它会对大多数 CRUD 操作造成大规模的性能损失。
+章节的 `AzureTableTestHarness.sln` 示例应用程序演示了使用 `.NET 3.5` 的 `AesManaged` 加密提供程序类对 `Azure` 表中的 `PII` 进行客户端侧对称加密和解密的技术。对 `Northwind Customers` 表中的 `CompanyName`、`ContactName`、`ContactTitle`、`Address`、`PostalCode`、`Phone` 和 `Fax` 等属性进行 `PII` 加密并不涉及大量的额外代码，但它会对大多数 `CRUD` 操作造成大规模的性能损失。
 
-如果 Azure 团队能够在 `SQL Azure Database v1` 中实现 SQL Server 2005 的服务器端单元级加密，你将能够以更少的开发和测试时间以及更好的性能实现针对 HIPAA、`PCI-DSS` 和 `SB 1386` 合规的 PII 加密解密。SQL Server 2008 透明数据加密的可用性将通过在线加密和解密整个数据库，使合规变得更加简单。
+如果 `Azure` 团队能够在 `SQL Azure Database v1` 中实现 `SQL Server 2005` 的服务器端单元级加密，你将能够以更少的开发和测试时间以及更好的性能实现针对 `HIPAA`、`PCI-DSS` 和 `SB 1386` 合规的 `PII` 加密解密。`SQL Server 2008` 透明数据加密的可用性将通过在线加密和解密整个数据库，使合规变得更加简单。
 
-微软似乎是第一个由独立审计师提供 SAS 70 证明和 ISO/IEC 27001:2005 认证的 PaaS 商。这些审计至少在某种程度上补偿了微软进入云计算服务市场的后期劣势。
+微软似乎是第一个由独立审计师提供 `SAS 70` 证明和 `ISO/IEC 27001:2005` 认证的 `PaaS` 商。这些审计至少在某种程度上补偿了微软进入云计算服务市场的后期劣势。
 
 ## 第 6 章：对服务用户进行身份验证和授权
 
-第 4 章“扩展 Azure 表和 Blob 存储”以及第 5 章“迁移到 Azure 云服务时风险最小化”中的示例项目页面供任何知道云服务名称的人使用；它们完全不需要用户验证或基于角色的授权。很少有现实服务允许公共访问。至少它们会要求生产用户作为一个或多个角色（如用户、读者、写入者、主管或管理员）的成员登录。运行在 Windows Azure 上的 WebRole 的安全访问常用方法是使用针对云基础设施定制的 ASP.NET Membership 服务实现。
+第 4 章“扩展 Azure 表和 Blob 存储”以及第 5 章“迁移到 Azure 云服务时风险最小化”中的示例项目页面供任何知道云服务名称的人使用；它们完全不需要用户验证或基于角色的授权。很少有现实服务允许公共访问。至少它们会要求生产用户作为一个或多个角色（如用户、读者、写入者、主管或管理员）的成员登录。运行在 `Windows Azure` 上的 `WebRole` 的安全访问常用方法是使用针对云基础设施定制的 `ASP.NET Membership` 服务实现。
 
-全规模实现 ASP.NET Membership 服务和角色管理的替代方案是基本的 Windows Live ID (WLID) 身份验证。2009 年 5 月对 Azure 服务开发门户的更新简化了 WLID 验证，通过为您创建每个托管服务项目自动添加 Live Services 项目。Windows Live ID Web 验证 SDK 1.2 和适用于 Visual Studio 2008 的 Windows Live 工具提供了示例代码和 ASP.NET 控件，用于 Azure 项目的 WLID 验证。
+全规模实现 `ASP.NET Membership` 服务和角色管理的替代方案是基本的 `Windows Live ID (WLID)` 身份验证。2009 年 5 月对 `Azure` 服务开发门户的更新简化了 `WLID` 验证，通过为您创建每个托管服务项目自动添加 `Live Services` 项目。`Windows Live ID` Web 验证 `SDK 1.2` 和适用于 `Visual Studio 2008` 的 `Windows Live` 工具提供了示例代码和 `ASP.NET` 控件，用于 `Azure` 项目的 `WLID` 验证。
 
 ### 利用 ASP.NET Membership 服务
 
-“Membership 简介”在线帮助主题描述了一套预构建的验证凭据设施，这些设施存储在 SQL Server [Express] 表中，用于访问网站。ASP.NET Membership 服务能够：
+“`Membership` 简介”在线帮助主题描述了一套预构建的验证凭据设施，这些设施存储在 `SQL Server [Express]` 表中，用于访问网站。`ASP.NET Membership` 服务能够：
 
 *   创建新用户和密码。
-*   存储成员信息（用户名、密码和支持数据）。默认情况下成员使用 SQL Server，但可以适应 Active Directory 或其他数据存储。
+*   存储成员信息（用户名、密码和支持数据）。默认情况下成员使用 `SQL Server`，但可以适应 `Active Directory` 或其他数据存储。
 *   更改和重置密码。
 *   向应用程序识别已身份验证的用户。
 
-
-
-
-
-你可以在 ASP.NET 安全论坛（[`forums.asp.net/25.aspx`](http://forums.asp.net/25.aspx)）查看并发布关于成员的问答。
+你可以在 `ASP.NET` 安全论坛（[`forums.asp.net/25.aspx`](http://forums.asp.net/25.aspx)）查看并发布关于成员的问答。
 
 ## ASP.NET 登录控件
 
-以下 ASP.NET 登录控件允许你创建一个完整的身份验证系统，且只需要少量代码：
+以下 `ASP.NET` 登录控件允许你创建一个完整的身份验证系统，且只需要少量代码：
 
 * `ChangePassword` 允许用户通过提供原始密码来更改密码，然后创建并确认新密码。
 * `CreateUserWizard` 控件从新用户处收集用户名、密码、确认密码、电子邮件别名、安全问题和安全问题答案信息。默认情况下，该向导会将新用户添加到系统。
-* `Login` 包含用于输入用户名和密码的文本框，以及一个复选框，该复选框允许用户使用 ASP.NET 成员身份存储其身份，以便在下次启动服务时进行自动身份验证。
+* `Login` 包含用于输入用户名和密码的文本框，以及一个复选框，该复选框允许用户使用 `ASP.NET` 成员身份存储其身份，以便在下次启动服务时进行自动身份验证。
 * `LoginStatus` 为未身份验证的用户显示登录链接，为已验证的用户显示注销链接。
-* `LoginName` 如果用户使用 ASP.NET 成员身份或带有 Windows 身份验证的 Windows 帐户登录，则显示用户的登录名。
+* `LoginName` 如果用户使用 `ASP.NET` 成员身份或带有 `Windows` 身份验证的 `Windows` 帐户登录，则显示用户的登录名。
 * `LoginView` 允许你通过自定义的 `AnonymousTemplate` 或 `LoggedInTemplate` 向匿名用户和登录用户显示不同的信息。
 * `PasswordRecovery` 允许用户通过向其创建账户时使用的电子邮件地址发送消息来找回密码。
 
 # 用户角色和个人资文件管理
 
-你可以将 ASP.NET 成员服务与 ASP.NET 角色管理服务集成，以对已验证的用户进行授权。在线帮助主题“使用角色对授权进行管理”（[`bit.ly/12DSA6`](http://bit.ly/12DSA6), [`msdn.microsoft.com/en-us/library/9ab2fxh0.aspx`](http://msdn.microsoft.com/en-us/library/9ab2fxh0.aspx)）描述了如何利用 ASP.NET 角色管理功能。默认的角色提供程序存储是 SQL Server。
+你可以将 `ASP.NET` 成员服务与 `ASP.NET` 角色管理服务集成，以对已验证的用户进行授权。在线帮助主题“使用角色对授权进行管理”（[`bit.ly/12DSA6`](http://bit.ly/12DSA6), [`msdn.microsoft.com/en-us/library/9ab2fxh0.aspx`](http://msdn.microsoft.com/en-us/library/9ab2fxh0.aspx)）描述了如何利用 `ASP.NET` 角色管理功能。默认的角色提供程序存储是 `SQL Server`。
 
-同样，你可以将 ASP.NET 成员服务与用户配置文件集成，以实现针对单个用户的应用程序特定自定义。在线帮助主题“ASP.NET 配置文件属性概览”（[`bit.ly/FkAby`](http://bit.ly/FkAby), [`msdn.microsoft.com/en-us/library/2y3fs9xs.aspx`](http://msdn.microsoft.com/en-us/library/2y3fs9xs.aspx)）描述了如何集成用户的配置文件。
+同样，你可以将 `ASP.NET` 成员服务与用户配置文件集成，以实现针对单个用户的应用程序特定自定义。在线帮助主题“`ASP.NET` 配置文件属性概览”（[`bit.ly/FkAby`](http://bit.ly/FkAby), [`msdn.microsoft.com/en-us/library/2y3fs9xs.aspx`](http://msdn.microsoft.com/en-us/library/2y3fs9xs.aspx)）描述了如何集成用户的配置文件。
 
-`..\..\AspProvider` 文件夹包含一个 ASP.NET 提供程序示例：Windows Azure ASP.NET 提供程序页面（`providers-extended-readme.mht`），解释了 Windows Azure 和 SQL Server 成员提供程序之间的差异。
+`..\..\AspProvider` 文件夹包含一个 `ASP.NET` 提供程序示例：`Windows Azure ASP.NET` 提供程序页面（`providers-extended-readme.mht`），解释了 `Windows Azure` 和 `SQL Server` 成员提供程序之间的差异。
 
 # 将 ASP.NET 身份验证和角色管理适配 Windows Azure Web Role
 
-在 Windows Azure 数据中心部署你的 Web Role 可以在 Azure 数据服务或 SADB 表中存储用户数据。在创建新的托管服务时，创建或指定 Azure Blob、表和队列存储服务是常见做法，因此 Azure 存储服务是首选默认。如果你利用地理服务，多个托管服务实例的表和 blob 可以轻松访问存储在相同或不同数据中心的存储服务中的相同角色和配置文件数据。
+在 `Windows Azure` 数据中心部署你的 `Web Role` 可以在 `Azure` 数据服务或 `SADB` 表中存储用户数据。在创建新的托管服务时，创建或指定 `Azure Blob`、表和队列存储服务是常见做法，因此 `Azure` 存储服务是首选默认。如果你利用地理服务，多个托管服务实例的表和 `blob` 可以轻松访问存储在相同或不同数据中心的存储服务中的相同角色和配置文件数据。
 
-负载均衡可能会导致来自单个用户的 HTTP 请求转发到一个或多个数据中心的不同机器。因此，会话状态提供程序必须将会话数据保留在单个的可复制会话 blob 中，以确保用户在整个会话期间会话状态的一致。
+负载均衡可能会导致来自单个用户的 `HTTP` 请求转发到一个或多个数据中心的不同机器。因此，会话状态提供程序必须将会话数据保留在单个的可复制会话 `blob` 中，以确保用户在整个会话期间会话状态的一致。
 
-Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln`（包含 `ASPProviders.dll` 和 `StorageClient.dll` 类库）以及 `AspProvidersDemo.sln`（添加了 `AspProvidersDemo` 和 `AspProvidersDemo_WebRole` 项目以演示如何向 Web Role 中添加成员服务）。
+`Windows Azure SDK` 包含两个与成员相关的示例项目：`AspProviders.sln`（包含 `ASPProviders.dll` 和 `StorageClient.dll` 类库）以及 `AspProvidersDemo.sln`（添加了 `AspProvidersDemo` 和 `AspProvidersDemo_WebRole` 项目以演示如何向 `Web Role` 中添加成员服务）。
 
-`\Program Files\Windows Azure SDK\v1.0\Samples.zip` 文件包含 11 个示例项目，演示了许多高级 Windows Azure 平台功能。后续章节假设你将文件提取到未受保护的位置 `C:\Azure Samples`。
+`\Program Files\Windows Azure SDK\v1.0\Samples.zip` 文件包含 11 个示例项目，演示了许多高级 `Windows Azure` 平台功能。后续章节假设你将文件提取到未受保护的位置 `C:\Azure Samples`。
 
 # 在本地运行 Windows Azure SDK 的 AspProvidersDemo 服务
 
@@ -3646,7 +3647,7 @@ Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln
 
 ![6.2](img/c06f002.jpg)
 
-点击 OK 将消此此消息，创建 `AspProvidersDemoDB` 数据库并打开 `Login` 页面（参见图 6.3）。
+点击 `OK` 将消此此消息，创建 `AspProvidersDemoDB` 数据库并打开 `Login` 页面（参见图 6.3）。
 
 图 6.3 如果你在此步骤或后续步骤遇到错误，请右键点击解决方案中的 `AspProvider` 并选择 `Create Tables` 以创建存储。
 
@@ -3666,7 +3667,7 @@ Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln
 
 ![6.5](img/c06f005.jpg)
 
-在 `ManageRoles.aspx` 页面上你可以新角色但不删除角色。对于本章的示例项目，添加 `DbAdmin`、`DbReader` 和 `DbWriter` 角色，它们将对应于 SQL Server 的内置 `db_owner`、`db_datareader` 和 `db_datawriter` 数据库角色（参见图 6.6）。
+在 `ManageRoles.aspx` 页面上你可以新角色但不删除角色。对于本章的示例项目，添加 `DbAdmin`、`DbReader` 和 `DbWriter` 角色，它们将对应于 `SQL Server` 的内置 `db_owner`、`db_datareader` 和 `db_datawriter` 数据库角色（参见图 6.6）。
 
 图 6.6 为三个默认角色添加三个数据相关角色。
 
@@ -3674,19 +3675,15 @@ Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln
 
 # 与 AspProvidersDB 数据库的操作
 
-删除不需要的角色（如 `Countrymen`、`Family` 和 `Friends`）的最简单方法是在 SQL Server Management Studio [Express] 中打开 `AspProvidersDB` 数据库。数据库包含三个用户表：`dbo.Membership`、`dbo.Roles` 和 `dbo.Sessions`，如图图 6.7 所示。每个表在 `PartitionKey` 和 `RowKey` 列上都有聚集复合索引。
+删除不需要的角色（如 `Countrymen`、`Family` 和 `Friends`）的最简单方法是在 `SQL Server Management Studio [Express]` 中打开 `AspProvidersDB` 数据库。数据库包含三个用户表：`dbo.Membership`、`dbo.Roles` 和 `dbo.Sessions`，如图图 6.7 所示。每个表在 `PartitionKey` 和 `RowKey` 列上都有聚集复合索引。
 
 尽管 `Membership` 和 `Roles` 表的 `UserName` 值与 `Membership` 或 `Sessions` 表的 `BlobName` 值之间存在明显的关系，但默认情况下数据库不会强制执行引用完整性约束。
 
-图 6.7 Membership、Roles 和 Sessions 表的数据库图。
+图 6.7 `Membership`、`Roles` 和 `Sessions` 表的数据库图。
 
 ![6.7](img/c06f007.jpg)
 
 要移除上一节中提到的 `Countrymen`、`Family` 和 `Friends` 角色以及你添加的初始用户，请执行以下操作：
-
-
-
-
 
 1. 右键点击对象资源管理器中的 `Roles` 节点并选择 `Open Table`（打开表）以显示包含六个角色的数据表。选择 `Countrymen`、`Family` 和 `Friends` 行并删除它们。
 
@@ -3696,13 +3693,15 @@ Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln
 
 ## 在 Web.config 文件中探索 Azure 特定成员元素和属性
 
-`AspProviderDemo_WebRole` 项目的 `Web.config` 文件在 `<system.web>` 节下包含几个组，其具有特定于 ASP.NET Web 云服务项目的默认属性值。
+`AspProviderDemo_WebRole` 项目的 `Web.config` 文件在 `<system.web>` 节下包含几个组，其具有特定于 `ASP.NET` Web 云服务项目的默认属性值。
 
 ### 成员程序节
 
 `Listing 6-1` 显示了 `<membership>` 节，并重点突出了云服务特定的属性值：
 
-`Listing 6-1:` web.config 文件中 `<membership>` 节的默认元素和属性值
+`Listing 6-1:` `web.config` 文件中 `<membership>` 节的默认元素和属性值
+
+
 
 ```xml
 <system.web>
@@ -3734,7 +3733,7 @@ Windows Azure SDK 包含两个与成员相关的示例项目：`AspProviders.sln
 
 `minRequiredPasswordLength` 的默认值 `1` 显然是不合适的，应该被设置为 `6` 到 `8` 之间的值。
 
-### 角色管理器、配置文件和其他话状态节
+### 角色管理器、配置文件和其他状态节
 
 角色管理器、配置文件和会话存储在理论上是可选的，但大多数项目至少需要 `<roleManager>` 和 `<sessionState>` 节（参见 `Listing 6-2`）。
 
@@ -3850,10 +3849,6 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 </ServiceConfiguration>
 ```
 
-
-
-
-
 ```xml
 <Setting name="allowInsecureRemoteEndpoints" value=""/>
 </Role>
@@ -3864,7 +3859,7 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 
 ## 分析 AspProviders 库的类
 
-`AspProviders` 示例类库包含了七个 Azure 特有的类文件，它们是为云 Web 应用程序添加 ASP.NET 成员功能的起点。这些类中的三个类——`TableStorageMembershipProvider`、`TableStorageRoleProvider` 和 `TableStorageSessionProvider` 包含了 `TableNameDataServiceContract` 类，这些类继承自 `TableStorageDataServiceContract` 类。因此，这些类会自动根据派生类定义的结构生成 Membership、Role 和 Session 表格。
+`AspProviders` 示例类库包含了七个 Azure 特有的类文件，它们是为云 Web 应用程序添加 ASP.NET 成员功能的起点。这些类中的三个类——`TableStorageMembershipProvider`、`TableStorageRoleProvider` 和 `TableStorageSessionProvider`——包含了 `TableNameDataServiceContract` 类，这些类继承自 `TableStorageDataServiceContract` 类。因此，这些类会自动根据派生类定义的结构生成 Membership、Role 和 Session 表格。
 
 `TableStorageMembershipProvider` 管理用户配置文件，因此不需要 `Profile` 表。
 
@@ -3878,23 +3873,24 @@ David Pallman 的 Azure Storage Explorer 应用程序（`AzureStorageExplorer.sl
 
 ![6.8](img/c06f008.jpg)
 
-`PartitionKey` 值未出现在 图 6.8 中，它是 `ApplicationName`、字面量 `a` 以及作为 `RowKey` 的空值的组合。这种方法为每个行创建一个唯一的分区，确保了成员数据的可扩展性，可以扩展到数百万行。
+`PartitionKey` 值未出现在图 6.8 中，它是 `ApplicationName`、字面量 `a` 以及作为 `RowKey` 的空值的组合。这种方法为每个行创建一个唯一的分区，确保了成员数据的可扩展性，可以扩展到数百万行。
 
 `TableStorageMembershipProvider.cs` 文件的类图如图 6.9](#9781118058756c06.xhtml_c06_fig_0009) 所示，包含了 `TableStorageProvider`、图 6.8 中的 `MembershipRow`、`DataContext` 以及 `EmailComparer` 类。`EmailComparer` 类用于每个成员的电子邮件测试。
 
-图 6.9 TableStorageMembershipProvider 的类图。
+图 6.9 `TableStorageMembershipProvider` 的类图。
 
 ![6.9](img/c06f009.jpg)
 
 ## TableStorageRole 类
 
-`Roles` 表存储了如图 6.10](#9781118058756c06.xhtml_c06_fig_0010) 所示的 `Role-name` 行和 `UserRole` 行。图 6.10 的上面板显示了 `DbAdmin` (1)、`DbReader` (2) 和 `DbWriter` (3) 的 `Role` 行。注意 `PartitionKey` 属性是 图 6.8 中 `ApplicationName` 和字面量 `a` 的组合，`RowKey` 属性是字面量 `62`，这为 Web 应用程序创建一个唯一的分区。
+`Roles` 表存储了如图 6.10](#9781118058756c06.xhtml_c06_fig_0010) 所示的 `Role-name` 行和 `UserRole` 行。图 6.10 的上面板显示了 `DbAdmin` (1)、`DbReader` (2) 和 `DbWriter` (3) 的 `Role` 行。注意 `PartitionKey` 属性是图 6.8 中 `ApplicationName` 和字面量 `a` 的组合，`RowKey` 属性是字面量 `62`，这为 Web 应用程序创建一个唯一的分区。
 
 图 6.10 的下面板显示了 `Role` 的三行属性。
 
 ![6.10](img/c06f010.jpg)
 
 列表 6-6 用户的属性：
+
 ```
 PartitionKey: ApplicationName
 RowKey: DbAdmin
@@ -3911,30 +3907,33 @@ Timestamp: 3/30/2005 9:47:05 PM
 
 图 6.13 配置 blob 中的明文属性名称（`Country`、`Gender`、`Age`）和编码值。
 
-
-
-
 在持久化二进制对象（blob）中存储未加密的个人身份信息（PII）会话状态，可能违反了第 5 章“获取和审计合规性”章节及相关章节中讨论的政府法规行业规则。
 
 图 6.15 会话 blob 的行属性-值管理对。
 
 ![6.15](img/c06f015.jpg)
 
-会话状态通过自定义序列化过程会将话字典的内容转换为二进制 blob，并存储在 `sessionprovidercontainer` 容器中。序列化和反序列化支持 .NET 原始类型，包括 `String`、`Boolean`、`DateTime`、`TimeSpan`、`Int16`、`Int32`、`Int64`、`Byte`、`Char`、`Single`、`Double`、`Decimal`、`SByte`、`UInt16`、`UInt32`、`UInt64`、`Guid` 和 `IntPtr`，并将这些类型直接写入 blob 中。`BinaryFormatter` 序列化对象类型，速度比处理原始类型要慢。图 6.16 显示了仅包含几个字符串值的序列化会话字典的不透明字节数组的 Base64Binary 编码表示。
 
-Michael Volodarsky 在 MSDN Magazine 上发表的文章《Fast, Scalable, and Secure Session State Management for Your Web Applications》（[`bit.ly/DIMCS`](http://bit.ly/DIMCS), [`msdn.microsoft.com/en-us/magazine/cc163730.aspx`](http://msdn.microsoft.com/en-us/magazine/cc163730.aspx)）提供了更多关于 ASP.NET 会话状态管理的详细信息，包括对 ASP.NET 2.0 会话分区的解释。
 
-图 6.16 会话状态 blob 的 Base64Binary 编码表示部分。
+# 会话状态序列化与云存储集成
+
+## 会话状态序列化概述
+
+会话状态通过自定义序列化过程将话字典的内容转换为二进制 `blob`，并存储在 `sessionprovidercontainer` 容器中。序列化和反序列化支持 `.NET` 原始类型，包括 `String`、`Boolean`、`DateTime`、`TimeSpan`、`Int16`、`Int32`、`Int64`、`Byte`、`Char`、`Single`、`Double`、`Decimal`、`SByte`、`UInt16`、`UInt32`、`UInt64`、`Guid` 和 `IntPtr`，并将这些类型直接写入 `blob` 中。`BinaryFormatter` 序列化对象类型，速度比处理原始类型要慢。图 6.16 显示了仅包含几个字符串值的序列化会话字典的不透明字节数组的 `Base64Binary` 编码表示。
+
+Michael Volodarsky 在 `MSDN Magazine` 上发表的文章《Fast, Scalable, and Secure Session State Management for Your Web Applications》（[`bit.ly/DIMCS`](http://bit.ly/DIMCS), [`msdn.microsoft.com/en-us/magazine/cc163730.aspx`](http://msdn.microsoft.com/en-us/magazine/cc163730.aspx)）提供了更多关于 `ASP.NET` 会话状态管理的详细信息，包括对 `ASP.NET 2.0` 会话分区的解释。
+
+**图 6.16** 会话状态 `blob` 的 `Base64Binary` 编码表示部分。
 
 ![6.16](img/c06f016.jpg)
 
 ## 将 AspProvidersDemo 的数据源移动到云端
 
-列表 6-7 显示了 `AspProvidersDemo` 服务 `ServiceConfiguration.cscfg` 文件中用于 Azure Tables 和 Blobs 的安全 HTTPS 传输的设置。
+列表 6-7 显示了 `AspProvidersDemo` 服务 `ServiceConfiguration.cscfg` 文件中用于 `Azure Tables` 和 `Blobs` 的安全 `HTTPS` 传输的设置。
 
-在尝试将成员服务集成到现有 Azure 服务的 `WebRole` 项目之前，验证与 Azure Data Services 的连接性是一项推荐的实践。
+在尝试将成员服务集成到现有 Azure 服务的 `WebRole` 项目之前，验证与 `Azure Data Services` 的连接性是一项推荐的实践。
 
-列表 6-7: 安全远程存储端点的服务配置设置
+**列表 6-7:** 安全远程存储端点的服务配置设置
 
 ```xml
 <?xml version="1.0"?>
@@ -3955,17 +3954,17 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 </ServiceConfiguration>
 ```
 
-在列表 6-7 中强调的云存储的 `allowInsecureRemoteEndpoints` 设置默认要求通过 SSL/TLS（安全 HTTPS）连接到存储服务（value="" 或 value="false"）。
+在列表 6-7 中强调的云存储的 `allowInsecureRemoteEndpoints` 设置默认要求通过 `SSL/TLS`（安全 `HTTPS`）连接到存储服务（`value=""` 或 `value="false"`）。
 
-有关在 Azure Tables 和 Blobs 中使用 TLS 的更多信息，请参阅第 5 章“为 Azure Data Services 启用 TLS”。
+有关在 `Azure Tables` 和 `Blobs` 中使用 `TLS` 的更多信息，请参阅第 5 章“为 Azure Data Services 启用 TLS”。
 
-如果你在与存储服务相同的数据中心的 Azure Fabric 上运行服务，且不想产生 TLS 开销，请设置 value="true"。
+如果你在与存储服务相同的数据中心的 `Azure Fabric` 上运行服务，且不想产生 `TLS` 开销，请设置 `value="true"`。
 
 请将你的 `AccountName` 和 `AccountSharedKey` 值替换为列表 6-7 中云存储存储所示的值。
 
 ## 将成员服务集成到 Azure 服务
 
-如果无法自定义你自己的 `AspProviderDemo.sln` 项目并导入其文件，那么将 ASP.NET 成员服务集成到现有的 `WebRole` 项目中将是一个大问题。然而，由于必须从 `AspProviderDemo_WebRole` 复制到 `ExistingProjectName_WebRole` 并集成到最终解决方案的文件很多，导入和修改这些文件相当复杂。
+如果无法自定义你自己的 `AspProviderDemo.sln` 项目并导入其文件，那么将 `ASP.NET` 成员服务集成到现有的 `WebRole` 项目中将是一个大问题。然而，由于必须从 `AspProviderDemo_WebRole` 复制到 `ExistingProjectName_WebRole` 并集成到最终解决方案的文件很多，导入和修改这些文件相当复杂。
 
 ### 复制和集成成员相关文件
 
@@ -3985,18 +3984,19 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 12. 按 `F5` 并等待表单出现。
 13. 之前输入的用户名和密码不适用于新的 `AzureTestarness` 应用程序，因此点击“新建用户”创建一个虚假账户。
 
-图 6.17 为 AspProviders、Common 和 StorageClient 库添加。
+**图 6.17** 为 `AspProviders`、`Common` 和 `StorageClient` 库添加。
 
 ![6.17](img/c06f017.jpg)
 
 ## 自定义 AzureTestarness 项目的 `Default.aspx` 页面
 
 通过在页面顶部 `div` 的结尾添加以下内容，模拟 `AspProviderDemo` 项目 `Default.aspx` 页面的登录/注销行为：
+
 (`<asp:LoginStatus ID="LoginStatus2" runat="server" /> <asp:LoginName ID="LoginName1" runat="server" />`)
 
 在 `AspProviderDemo` 项目的 `Default.aspx` 页面上模拟链接可以简化集成过程，因此在页面底部添加一个 `div`，列表 6-7 所示的 `LinkButton` 控件。
 
-列表 6-8: 用于模拟 `AspProviderDemo` 项目 `Default.aspx` 上的链接
+**列表 6-8:** 用于模拟 `AspProviderDemo` 项目 `Default.aspx` 上的链接
 
 ```html
 <div style="font-family: Calibri, Arial, Helvetica, sans-serif;" id="divManageAccts">
@@ -4009,9 +4009,6 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 </div>
 ```
 
-
-
-
 ```xml
 <asp:LinkButton ID="lbChangePassword" runat="server" PostBackUrl="~//ChangePassword.aspx">Change <b><asp:LoginName ID="LoginName5" runat="server" /> </b>Password</asp:LinkButton>
 <asp:LinkButton ID="lbRoles" runat="server" PostBackUrl="~//ManageRoles.aspx" Enabled="False">Manage User Roles</asp:LinkButton>
@@ -4022,11 +4019,11 @@ xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration"
 
 图 6.18 显示了经过上述修改的页面，为 `DbAdmins` 账户成员启用了控件。
 
-图 6.18 示例项目的 `Default.aspx` 页面，包含 `LoginStatus`、`LoginName` 和 `LinkButton` 控件，这是 `DbAdmins` 角色成员看到的样子。
+**图 6.18** 示例项目的 `Default.aspx` 页面，包含 `LoginStatus`、`LoginName` 和 `LinkButton` 控件，这是 `DbAdmins` 角色成员看到的样子。
 
 ![6.18](img/c06f018.jpg)
 
-Listing 6-9: 为 `DbAdmins` 和 `DbWriters` 角色的成员启用特殊控件
+**Listing 6-9:** 为 `DbAdmins` 和 `DbWriters` 角色的成员启用特殊控件
 
 ```csharp
 // 为 DbAdmins 和 DbWriters 启用添加、删除和重新创建 Customers
@@ -4065,11 +4062,11 @@ if (!isWriter)
 
 图 6.19 显示了 `DbAdmins` 角色成员注销后的 `Default.aspx` 页面。对于 `DbReader` 角色成员，相同的控件处于启用或禁用状态。
 
-图 6.19 `DbAdmins` 角色成员注销后的示例项目的 `Default.aspx` 页面。
+**图 6.19** `DbAdmins` 角色成员注销后的示例项目的 `Default.aspx` 页面。
 
 ![6.19](img/c06f019.jpg)
 
-后期 CTP 中的生产 Web 服务器在启动页方面的行为可能与开发者织构（Developer Fabric）不同。在前节的第 11 步中，`Login.aspx` 被指定启动页，开发者 Web 服务器发布 `http://127.0.0.1:81/Login.aspx` 作为启动 URL。然而，生产织构无论启动页为何，都可能发布 `http://ServiceName.CloudApp.net/Default.aspx`。删除 `Default.aspx` 页面并不能解决问题。要强制 `Login.aspx` 为启动页，请将 Listing 6-10 所示的元素添加到 `Web.config` 的 `<webServer>` 组中：
+后期 CTP 中的生产 Web 服务器在启动页方面的行为可能与开发者织构（`Developer Fabric`）不同。在前节的第 11 步中，`Login.aspx` 被指定启动页，开发者 Web 服务器发布 `http://127.0.0.1:81/Login.aspx` 作为启动 URL。然而，生产织构无论启动页为何，都可能发布 `http://ServiceName.CloudApp.net/Default.aspx`。删除 `Default.aspx` 页面并不能解决问题。要强制 `Login.aspx` 为启动页，请将 Listing 6-10 所示的元素添加到 `Web.config` 的 `<webServer>` 组中：
 
 ```xml
 <defaultDocument enabled="true">
@@ -4084,7 +4081,7 @@ if (!isWriter)
 
 图 6.20 显示了未登录用户没有 `GridView` 的页面。
 
-图 6.20 对于未身份验证用户的 `Default.aspx` 页面。
+**图 6.20** 对于未身份验证用户的 `Default.aspx` 页面。
 
 ![6.20](img/c06f020.jpg)
 
@@ -4092,21 +4089,19 @@ if (!isWriter)
 
 ### 使用 Windows Live ID 进行身份验证
 
-大多数 Windows 用户至少有一个用于登录微软和其他在线服务的 `WLID`。正如本章开头提到的，2009 年 5 月对 Azure 服务门户的更新将 Live ID 与托管服务解耦。这从托管服务页面中删除了 Live Services 部分和 Application ID 字段。该部分移动到了新的 `Live Services: Existing APIs` 项目，该项目指定了托管服务的域、指向其 URL，并提供了 `Application ID` 和 `Secret Key` 值。门户添加此新项目，并为其分配与相应托管服务相同的名称（参见图 6.21）。
+大多数 Windows 用户至少有一个用于登录微软和其他在线服务的 `WLID`。正如本章开头提到的，2009 年 5 月对 Azure 服务门户的更新将 `Live ID` 与托管服务解耦。这从托管服务页面中删除了 `Live Services` 部分和 `Application ID` 字段。该部分移动到了新的 `Live Services: Existing APIs` 项目，该项目指定了托管服务的域、指向其 URL，并提供了 `Application ID` 和 `Secret Key` 值。门户添加此新项目，并为其分配与相应托管服务相同的名称（参见图 6.21）。
 
 所有 Web 应用（不仅仅是 Azure 项目）都使用在 Azure 服务门户中创建的 `Live Services: Existing APIs` 项目向 `WLID` 服务注册。
 
-图 6.21 由 Azure 服务门户为托管服务添加的 `Live Services: Existing APIs` 项目。
+**图 6.21** 由 Azure 服务门户为托管服务添加的 `Live Services: Existing APIs` 项目。
 
 ![6.21](img/c06f021.jpg)
 
 ### 下载 WLID Web Authentication SDK 1.2
 
+
+
 微软将 Windows Live ID Web Authentication SDK 1.2 (`http://bit.ly/Z9KKG`, `www.microsoft.com/downloads/details.aspx?FamilyID=E565FC92-D5F6-4F5F-8713-4DD1C90DE19F&displaylang=en`) 称为“在各种类型的网站上实现 Live ID 登录的平台无关接口”。它提供 ASP.NET (C# 和 VB)、Java、Perl、Python 和 Ruby 的独立下载。
-
-
-
-
 
 ```xml
 <appSettings>
@@ -4136,13 +4131,13 @@ if (!isWriter)
 
 ![6.25](img/c06f025.jpg)
 
-你从 WebAuth.sln 项目的 `WindowsLiveLogin.cs` 类以及 Default.aspx 和 webauth_handler.aspx 页面导入代码到 LiveIDSampleCloudService.sln 项目中，该项目将在章节稍后创建。
+你从 `WebAuth.sln` 项目的 `WindowsLiveLogin.cs` 类以及 `Default.aspx` 和 `webauth_handler.aspx` 页面导入代码到 `LiveIDSampleCloudService.sln` 项目中，该项目将在章节稍后创建。
 
-`\WROX\Azure\Chapter06\LiveIDSampleCloudService` 文件夹包含一个可以在开发织（Development Fabric）上运行的示例项目可用版本。你必须使用 `webauth_handler.aspx` 页面的返回 URL（http://localhost:##/webauth-handler.aspx，## 是端口号，通常为 81）注册该项目，并在 `Web.config` 中用你的值替换 `wll_appid` 和 `wll_secret` 的值。
+`\WROX\Azure\Chapter06\LiveIDSampleCloudService` 文件夹包含一个可以在开发织（Development Fabric）上运行的示例项目可用版本。你必须使用 `webauth_handler.aspx` 页面的返回 URL（`http://localhost:##/webauth-handler.aspx`，`##` 是端口号，通常为 81）注册该项目，并在 `Web.config` 中用你的值替换 `wll_appid` 和 `wll_secret` 的值。
 
 ## 为 Visual Studio 安装 Windows Live Tools
 
-为 Microsoft Visual Studio 2008+ 安装 Windows Live Tools 是可选的，因为 Default.aspx 页面中的 WebAuth 代码会从 [`login.live.com/controls/`](http://login.live.com/controls/) 导入 WebAuth.htm 登录控件到 IFRAME 中。Windows Live Tools 为 VS 工具箱添加了一个 Windows Live 组，其中包含 `IDLoginStatus` 和 `IDLoginView` ASP.NET 控件，以及 MessengerChat、SilverlightStreamMedia 和 Contacts 控件，以及 Virtual Earth 组，这些内容都与 WLID 无关。安装还会 VS 的新建项目对话框中添加一个 Windows Live ID Web Role 模板（参见图 6.26）。
+为 Microsoft Visual Studio 2008+ 安装 Windows Live Tools 是可选的，因为 `Default.aspx` 页面中的 WebAuth 代码会从 [`login.live.com/controls/`](http://login.live.com/controls/) 导入 `WebAuth.htm` 登录控件到 IFRAME 中。Windows Live Tools 为 VS 工具箱添加了一个 Windows Live 组，其中包含 `IDLoginStatus` 和 `IDLoginView` ASP.NET 控件，以及 MessengerChat、SilverlightStreamMedia 和 Contacts 控件，以及 Virtual Earth 组，这些内容都与 WLID 无关。安装还会 VS 的新建项目对话框中添加一个 Windows Live ID Web Role 模板（参见图 6.26）。
 
 图 6.26 由 Windows Live Tools for VS 添加的 Windows Live ID Web Role 模板。
 
@@ -4152,7 +4147,7 @@ if (!isWriter)
 
 ### IDLoginStatus 控件
 
-`IDLoginStatus` 控件 ([`bit.ly/Q3Cew`](http://bit.ly/Q3Cew), [`msdn.microsoft.com/en-us/library/cc305086.aspx`](http://msdn.microsoft.com/en-us/library/cc305086.aspx)) 替代了 WebAuth 示例项目使用的导入 WebAuth.htm 控件。该控件为用户提供登录链接；点击该链接将他们带到 WLID 登录页面，他们在那里使用 WLID 登录。在 WLID 服务验证身份后，他们将被重定向到你在 Azure 服务开发者门户注册项目时指定的返回 URL 值的页面。下表列出了描述了 `IDLoginStatus` 控件的参数。
+`IDLoginStatus` 控件 ([`bit.ly/Q3Cew`](http://bit.ly/Q3Cew), [`msdn.microsoft.com/en-us/library/cc305086.aspx`](http://msdn.microsoft.com/en-us/library/cc305086.aspx)) 替代了 WebAuth 示例项目使用的导入 `WebAuth.htm` 控件。该控件为用户提供登录链接；点击该链接将他们带到 WLID 登录页面，他们在那里使用 WLID 登录。在 WLID 服务验证身份后，他们将被重定向到你在 Azure 服务开发者门户注册项目时指定的返回 URL 值的页面。下表列出了描述了 `IDLoginStatus` 控件的参数。
 
 | LoginStatus 参数 | 描述 |
 | :--- | :--- |
@@ -4169,7 +4164,7 @@ if (!isWriter)
 | Action | 包含三个值之一的字符串，指定用户执行的操作：登录时为 `Login`；注销时为 `Logout`；话过期时为 `Clear`。 |
 | ApplicationUserID | 用户的唯一标识字符串。 |
 | TimeStamp | 代表上次验证时间的整数（从 1970 年 1 月 1 日起）。 |
-| LoggedInLiveID | 如果用户登录，则值为 true；否则值为 false。 |
+| LoggedInLiveID | 如果用户登录，则值为 `true`；否则值为 `false`。 |
 
 `IDLoginStatus` 还会触发服务端和客户端事件。
 
@@ -4181,40 +4176,54 @@ if (!isWriter)
 
 为现有网站实现 WLID 认证包含五个基本步骤：
 
-1. 创建一个带有 Windows Live Web Role 和 Default.aspx 页面、空 `WindowsLiveLogin.cs` 类以及空 `webauth_handler.aspx` 页面的云服务。
-2. 从 WebAuth.sln 网站示例中复制代码到 Default.aspx、WindowsLiveLogin.cs 和 webauth_handler.aspx，将 Default.aspx 的 IFRAME 代码替换为 `LoginStatus` 控件，并使用默认 `wll_appid` 和 `wll_secret` 值在开发织上进行测试。
-3. 使用 Azure 服务开发者门户向 WLID 服务注册 `http://localhost:81/webauth_handler.aspx`，将 `Res.Redirect(LoginPage)` 指令更改为现有的 Azure 托管服务着陆页（例如 `http://oakleaf.cloudapp.net`），并测试授权处理页面。
-4. 将需要保护的页面及相关代码复制或移动到示例项目中，根据需要更改页面名称，并将 `Res.Redirect([`oakleaf.cloudapp.net`](http://oakleaf.cloudapp.net))` 指令指向复制的页面（如果原始页面是 Default.aspx，则需要重命名）。此时，你的 Web 应用程序的原始着陆页是安全的，因此你可以将应用程序部署为生产托管服务。
+1. 创建一个带有 Windows Live Web Role 和 `Default.aspx` 页面、空 `WindowsLiveLogin.cs` 类以及空 `webauth_handler.aspx` 页面的云服务。
 
-以下章节提供了详细的逐步分说明，用以保护现有的 Azure 托管服务（oakleaf_host）。
+2. 从 `WebAuth.sln` 网站示例中复制代码到 `Default.aspx`、`WindowsLiveLogin.cs` 和 `webauth_handler.aspx`，将 `Default.aspx` 的 IFRAME 代码替换为 `LoginStatus` 控件，并使用默认 `wll_appid` 和 `wll_secret` 值在开发织上进行测试。
+
+3. 使用 Azure 服务开发者门户向 WLID 服务注册 `http://localhost:81/webauth_handler.aspx`，将 `Res.Redirect(LoginPage)` 指令更改为现有的 Azure 托管服务着陆页（例如 `http://oakleaf.cloudapp.net`），并测试授权处理页面。
+
+4. 将需要保护的页面及相关代码复制或移动到示例项目中，根据需要更改页面名称，并将 `Res.Redirect([`oakleaf.cloudapp.net`](http://oakleaf.cloudapp.net))` 指令指向复制的页面（如果原始页面是 `Default.aspx`，则需要重命名）。此时，你的 Web 应用程序的原始着陆页是安全的，因此你可以将应用程序部署为生产托管服务。
+
+以下章节提供了详细的逐步分说明，用以保护现有的 Azure 托管服务（`oakleaf_host`）。
 
 ### 创建新的云服务和 Web Role
-
-
-
 
 按照以下步骤创建示例 Web 及其空页面和类文件：
 
 1. 如果你之前还没有执行过，请下载并运行 `webauth-cs-1.2.msi` 或更高版本的文件，然后在 VS 2008+ 中打开 WebAuth 网站，以提供要粘贴到示例项目中的网页和类文件的代码。
+
 2. 创建一个新的 C# 空白云服务（Blank Cloud Service）项目，并命名为 `LiveIDCloudService` 或类似的名称。
+
 3. 向项目添加一个新的 Windows Live Web 角色（Web Role），并命名为 `LiveIDWebRole`；接受 `Default.aspx` 作为其网页名称。
+
 4. 向项目添加 `WindowsLiveLogin.cs` 类，以在 C# 中实现 WLID Web 身份验证协议。
+
 5. 向项目添加 `webauth-handler.aspx` 页面，以处理三个 WLID 身份验证操作并显示受保护的网页。
+
 6. 按 `F5` 在开发 Fabric（Development Fabric）中编译并运行项目，显示空页面。记下其 URL，通常为 `http://127.0.0.1:81/Default.aspx`。
 
 ### 从 WebAuth 示例拷贝代码
 
-WebAuth 示例网站包含了在开发 Fabric 中启动运行具有 WLID 身份验证的示例 Web 应用程序所需的大部分代码。是从 WebAuth 网站复制和修改代码的操作步骤：
+`WebAuth` 示例网站包含了在开发 Fabric 中启动运行具有 WLID 身份验证的示例 Web 应用程序所需的大部分代码。是从 WebAuth 网站复制和修改代码的操作步骤：
 
 1. 从文件系统位置打开 WebAuth，打开 `webauth_handler.aspx.cs`，复制所有代码，并将其粘贴到示例应用的 `webauth_handler.aspx.cs` 后置代码文件中，替换默认的源代码存根。
+
 2. 打开 WebAuth 的 `webauth_handler.aspx`，复制其 `Page` 指令，并覆盖示例应用中 `webauth_handler.aspx` 文件中的相同指令。将 `Page` 指令中的 `CodeFile=` 替换为 `CodeBehind=`。移除默认的源代码存根。
+
 3. 打开 WebAuth 的 `\WebCode\WindowsLiveLogin.cs` 类文件，复制所有代码，并将其粘贴到示例应用的 `WindowsLiveLogin.cs` 文件中。
+
 4. 打开 WebAuth 的 `Default.aspx.cs` 文件，复制所有代码，并将其粘贴到示例应用的 `Default.aspx.cs` 文件中，替换默认的源代码存根。
+
 5. 打开 WebAuth 的 `Default.aspx` 文件，复制所有代码（包括其 `Page` 指令），并替换示例应用 `Default.aspx` 文件中的所有源。将 `Page` 指令中的 `CodeFile=` 替换为 `CodeBehind=`，并将 `Inherits="WindowsLiveWebRole.webauth_handler"` 替换为 `Inherits="HandlerPage"`。
+
 6. 打开 AJAX Extensions 组，在起始 `<table>` 标签上方添加 `ScriptManager` 控件。`IDLoginStatus` 需要页面上的 `ScriptManager` 控件。
+
 7. 将 `ScriptManager` 控件和表格包裹在一对 `<form runat="server"> ... </form>` 标签中。
+
 8. 右键点击 `Default.aspx` 图标并选择“设为起始页”（Set as Start Page）。
+
 9. 按 `F5` 生成并运行示例应用。
+
 10. 如果收到“Value cannot be null. Parameter name: value”运行时错误，打开示例应用的 `Web.config` 文件，并将 `<appSettings />` 元素替换为以下用于 WebAuth 网站的默认 `<appSettings>` 组：
 
 ```xml
@@ -4223,6 +4232,7 @@ WebAuth 示例网站包含了在开发 Fabric 中启动运行具有 WLID 身份�
       <add key="wll_secret" value="ApplicationKey123" />
 </appSettings>
 ```
+
 11. 再次按 `F5` 编译并运行示例，显示登录表格单元格（参考 图 6.23）。
 
 可选情况下，更改 `<title>` 和 `<h1>` 元素的文本以反映新应用程序名称，并在 `IDLoginStatus` 控件的定义中添加 `font-size="Small"` 属性。
@@ -4232,63 +4242,71 @@ WebAuth 示例网站包含了在开发 Fabric 中启动运行具有 WLID 身份�
 `webauth_handler.aspx` 页面处理三个不同的 `Action` 值的状态，因此其 URL 必须注册为示例应用的 `ReturnURL`。调试 `webauth_handler.aspx.cs` 的 `Page_Load` 事件处理程序需要在开发 Fabric 中运行示例应用。按照以下步骤临时注册 `http://localhost:81/webauth_handler.aspx`（或类似地址）、修改 `Web.config` 文件以指向新的 WLID 注册、添加指向未安全的 Azure 托管应用程序的重定向，并测试处理器的响应：
 
 1. 登录 Azure Services 开发者门户 (`http://bit.ly/12kdPb`, `http://lx.azure.microsoft.com/Cloud/Provisioning/Default.aspx`)，点击“新建项目”（New Project）链接，并点击“Live Services: Existing API”按钮以打开“创建项目：项目属性”页面。
+
 2. 在 `Project Label` 文本框中输入项目短名称（例如 `WLIDSampleApp`），在 `Project Description` 文本框中输入简要描述，留空 `Domain` 文本框，并在 `Return URL` 文本框中输入处理页面的开发 Fabric URL（参考 图 6.27）。
+
 3. 点击“创建”（Create）注册 Return URL（参考 图 6.27）。
+
 4. 修改 `Web.config` 文件以指向新的 WLID 注册、添加指向未安全的 Azure 托管应用程序的重定向，并测试处理器的响应。
+
 5. 再次按 `F5` 编译并运行示例，显示登录表格单元格（参考 图 6.23）。
-
-
-
-
 
 请在开发 Fabric 中查看并运行 `\WROX\Azure\Chapter06\LiveIDSampleCloudService` 项目，以验证 `TargetURL` 页面的安全技术，并参考 [`bit.ly/vIVlh`](http://bit.ly/vIVlh) 以及 [`oakleafblog.blogspot.com/2009/06/problems-deploying-webrole-with-windows.html`](http://oakleafblog.blogspot.com/2009/06/problems-deploying-webrole-with-windows.html) 获取更多部署详情。这篇 OakLeaf 博客文章包含一个在 Windows Azure Production Fabric 上运行的 `LiveIDSampleCloudService` 现场演示链接。
 
 ### 项目概述与注册详情
 
 #### 1.1 LiveIDSampleCloudService.sln 项目
+
 为了简单起见，`LiveIDSampleCloudService.sln` 项目未包含注册页面，也没有将用户名和其他详情与每个应用程序生成的唯一 ID 关联的代码（该 ID 会显示在图 6.25 的注销消息中）。现实世界的应用需要一个注册页面向 `RegisteredUsers` 表添加行，其中 `RowKey` 值为唯一 ID，`Status` 属性指示用户是否已登录。当用户登录应用程序时，代码将检查该用户的行是否存在。如果存在，则将该用户标记为已登录；如果不存在，则要求用户进行注册。
 
 ### 总结
 
 #### 2.1 ASP.NET Membership Services
+
 `.NET` 2.0 及更高版本中的 ASP.NET Membership Services 消除了开发人员编写和重写代码以存储和验证 Web 身份验证授权凭据的需求。成员程序默认使用 SQL Server 表来存储用户 ID、密码、角色成员、配置文件和会话状态。Windows Azure SDK 包含一个示例 `AspProviders.dll` 类库和一个 `AspProviderDemo.sln` Web 应用，它们演示了如何在不使用 `.NET Access Control Service (ACS)` 的情况下，为 Windows Azure Web 应用添加身份验证和授权功能。
 
 #### 2.2 AspProviderDemo.sln Web 应用
-`AspProviderDemo.sln` Web 应用提供了一个 `Default.aspx` 页面，其中包含六个与成员相关的表单链接：`Login.aspx`、`ChangePassword.aspx`、`CreateNewWizard.aspx`、`ManageRoles.aspx`、`MyProfile.aspx` 和 `MySession.aspx`。`AspProviderDemo` 的表单没有统一的主题，但添加级联样式表 (`CSS`) 样式以符合现有页面外观并不困难。
 
-#### 2.3 与现有应用程序集成
+
+
+`AspProviderDemo.sln` Web 应用提供了一个 `Default.aspx` 页面，其中包含六个与成员相关的表单链接：`Login.aspx`、`ChangePassword.aspx`、`CreateNewWizard.aspx`、`ManageRoles.aspx`、`MyProfile.aspx` 和 `MySession.aspx`。`AspProviderDemo` 的表单没有统一的主题，但添加级联样式表（`CSS`）样式以符合现有页面外观并不困难。
+
+### 2.3 与现有应用程序集成
+
 在对 `AspProviderDemo` 完成样式后，可以将 `AspProvider` 库、`AspProviderDemo` 表单以及 `Web.config` 导入到 Azure Web 应用中，例如第 5 章中的 `AzureTableTestHarnessSSL`。通过添加引用 `StorageClient` 和 `AspProvider`，并对 `Web.config` 以及 `ServiceConfiguration.cscfg/ServiceDefinition.csdef` 进行少量调整，可以允许 `DbReader`、`DbWriter` 和 `DbAdmin` 类的成员运行原始 `AzureTableTestHarnessSSL` 页面更高权限的功能。
 
-#### 2.4 WLID 身份验证
+### 2.4 WLID 身份验证
+
 许多组织将倾向于使用带有 WLID 身份验证的单点登录。实现 WLID 身份验证需要从 `WLID Web Authentication SDK 1.2` 或更高版本的 `WebAuth` 示例网站项目中复制代码，并可选地使用 Microsoft Visual Studio 2008 或更高版本的 Windows Live Tools 中的 `LoginStatus` 控件。本章以编写的逐步说明结束。
 
 # 第 7 章：优化可扩展性与性能
 
-### 7.1 理解 Azure 表
+## 7.1 理解 Azure 表
+
 许多组织将倾向于使用带有 WLID 身份验证的单点登录。实现 WLID 身份验证需要从 `WLID Web Authentication SDK 1.2` 或更高版本的 `WebAuth` 示例网站项目中复制代码，并可选地使用 Microsoft Visual Studio 2008 或更高版本的 Windows Live Tools 中的 `LoginStatus` 控件。本章以编写的逐步说明结束。
 
-### 7.2 可扩展性与性能
+## 7.2 可扩展性与性能
+
 许多组织将倾向于使用带有 WLID 身份验证的单点登录。实现 WLID 身份验证需要从 `WLID Web Authentication SDK 1.2` 或更高版本的 `WebAuth` 示例网站项目中复制代码，并可选地使用 Microsoft Visual Studio 2008 或更高版本的 Windows Live Tools 中的 `LoginStatus` 控件。本章以编写的逐步说明结束。
 
-### 7.3 分区与局部性
+## 7.3 分区与局部性
+
 许多组织将倾向于使用带有 WLID 身份验证的单点登录。实现 WLID 身份验证需要从 `WLID Web Authentication SDK 1.2` 或更高版本的 `WebAuth` 示例网站项目中复制代码，并可选地使用 Microsoft Visual Studio 2008 或更高版本的 Windows Live Tools 中的 `LoginStatus` 控件。本章以编写的逐步说明结束。
 
-### 7.4 主键与实体
+## 7.4 主键与实体
+
 Azure 表的复合主键由 `PartitionKey` 和 `RowKey` 组成，提供了一个唯一的实体 ID（也称为对象 ID），用于识别和排序实体。`PartitionKey` 值用于识别用于负载均衡的分区。
 
-### 7.5 选择分区键
-`PartitionKey` 值可以可以是字符串，其 `Length` 属性值范围在 `0KB` 到 `32KB` 之间，且不能包含以下字符：
+## 7.5 选择分区键
 
-*   `/`
-*   `\`
-*   `#`
-*   `?`
+`PartitionKey` 值可以是字符串，其 `Length` 属性值范围在 `0KB` 到 `32KB` 之间，且不能包含以下字符：
 
-如果你预计表最终包含的实体数量可能超过单个 Azure 节点合理承载的范围，你应该计划按单个父实体来分配 `PartitionKey` 值，例如通过 `UserID`、`CustomerID`、`CreditCardID`、`OrderID` 或 `ProductID`。为父子实体分配分相同的 `PartitionKey` 值可以确保它们维护在相同的局部区域中，从而提高处理速度。
+- `/`
+- `\`
+- `#`
+- `?`
 
-
-
-
+如果你预计表最终包含的实体数量可能超过单个 Azure 节点合理承载的范围，你应该计划按单个父实体来分配 `PartitionKey` 值，例如通过 `UserID`、`CustomerID`、`CreditCardID`、`OrderID` 或 `ProductID`。为父子实体分配相同的 `PartitionKey` 值可以确保它们维护在相同的局部区域中，从而提高处理速度。
 
 Azure 表格文档并未包含建议的或绝对的单个 Azure 节点可容的最大分区大小。例如，如果你正在编写一个类似于 Twitter 的社交网络服务（在本书编写时，该服务可能有约四百万用户），那么一个包含 2KB 图像和 1KB 文本的用户配置实体，总大小将达到 12GB。而像 Facebook 这样成功的网站，在同一时期拥有约 1.5 亿用户，将生成一个 750GB 的表格。
 
@@ -4296,11 +4314,15 @@ Azure 表格文档并未包含建议的或绝对的单个 Azure 节点可容的�
 
 自然键值源自实体键值。替代方案是使用 `GUID` 或自动生成的、通过程序分配的顺序代理键值，这类似于 SQL Server 的 `identity` 列属性。
 
-将具有 `CustomerID`（作为 `PartitionKey`）的实体实体并将 `Orders` 和 `LineItems` 作为同一张表中的子实体，可能会提供最佳的分区方案，特别是当后续 Azure 发布更细粒度的地理位置服务时。包含特定国家或地区记录的表可以分配给最近的数据中心，例如 `NorthwestUS`（华盛州昆西）或 `SouthwestUS`（德克萨斯州圣安东奥）。
+将具有 `CustomerID`（作为 `PartitionKey`）的实体以及 `Orders` 和 `LineItems` 作为同一张表中的子实体，可能会提供最佳的分区方案，特别是当后续 Azure 发布更细粒度的地理位置服务时。包含特定国家或地区记录的表可以分配给最近的数据中心，例如 `NorthwestUS`（华盛州昆西）或 `SouthwestUS`（德克萨斯州圣安东奥）。
 
 本章的示例项目是 `\WROX\Azure\Chapter07\UploadOrderEntitiesWinform.sln`。它的 `Orders` 和 `OrderDetails` 表基于 Northwind 数据库的 `Orders` 和 `Order Details` 表，预计可以在 `.\SQLEXPRESS` 实例中找到。Azure 表具有计算唯一 `PartitionKey` 值，按降序 `Order` 序列交付 `Order` 实体。`(int.MaxValue - OrderID).ToString().PadLeft(10, '0')` 表达式生成了 10 个字符固定宽度且左零填充的字符串，以便在 `OrderID` 值超过九位数时保持排序一致。`RowKey` 值设置为 `String.Empty`。图 7.1 显示了在向 `OrderTable` 和 `DetailTable` 表中添加 100 个 `Order` 实体和 282 个 `OrderDetail` 实体后示例项目的表单。
 
-降序序列允许应用 LINQ 标准查询运算符 (SQO) `Take(n)` 在查询中返回 n 个最近的订单，例如 `(from c in ordContext.OrderTable select c).Take(10)`。
+降序序列允许应用 LINQ 标准查询运算符（SQO）`Take(n)` 在查询中返回 n 个最近的订单，例如：
+
+```csharp
+(from c in ordContext.OrderTable select c).Take(10)
+```
 
 图 7.1 从客户端 SQL Server 实例上传数据到云端 `OrderTable` 和 `DetailTable` Azure 表后的 Windows-form 测试测试机架。
 
@@ -4314,11 +4336,11 @@ Azure 表格文档并未包含建议的或绝对的单个 Azure 节点可容的�
 
 ## 处理关联实体
 
-Azure 表格不支持实体关联（关系），尽管 ADO.NET Data Services 和 AtomPub 传输传输格式通过 `$expand` 查询选项支持 1:n、1:1 和 n:1 关联，该选项会内联返回关联实体的链接以及 AtomPub `<link rel= ... />` 元素。如果你的子实体有一个属性值等于父实体的 `PartitionKey` 值（或 `PartitionKey` 加上 `RowKey` 值），你可以在对实现 `IEnumerable` 或 `IQueryable` 的内存序列进行查询时，使用 LINQ join SQO 执行与 $expand 选项近似等效的操作。
+Azure 表格不支持实体关联（关系），尽管 ADO.NET Data Services 和 AtomPub 传输格式通过 `$expand` 查询选项支持 1:n、1:1 和 n:1 关联，该选项会内联返回关联实体的链接以及 AtomPub `<link rel= ... />` 元素。如果你的子实体有一个属性值等于父实体的 `PartitionKey` 值（或 `PartitionKey` 加上 `RowKey` 值），你可以在对实现 `IEnumerable` 或 `IQueryable` 的内存序列进行查询时，使用 LINQ join SQO 执行与 `$expand` 选项近似等效的操作。
 
-示例项目的初始版本将父实体和子实体存储在不同的表中，以简化在 `DataGridView` 控件中显示关联的 `DetailTable` 实体。来自 `OrderClasses.cs` 文件的 Listings 7-1 和 7-2 代码定义了 `OrderTable` 和 `DetailTable` 的结构：
+示例项目的初始版本将父实体和子实体存储在不同的表中，以简化在 `DataGridView` 控件中显示关联的 `DetailTable` 实体。来自 `OrderClasses.cs` 文件的 Listing 7-1 和 Listing 7-2 代码定义了 `OrderTable` 和 `DetailTable` 的结构。
 
-Listing 7-1: 为 `OrderTable` 父表定义 `OrderDataModel` 类的代码
+**Listing 7-1：为 `OrderTable` 父表定义 `OrderDataModel` 类的代码**
 
 ```csharp
 // 由 LINQ 内存对象生成器 (LIMOG) v2 生成 OrderType 类
@@ -4332,11 +4354,13 @@ public class OrderType: TableStorageEntity
         RowKey = Guid.NewGuid().ToString();
         PartitionKey = "OrderData";
     }
+
     // 参数化构造函数
     public OrderType(string partitionKey, string rowKey)
         : base(partitionKey, rowKey)
     {
     }
+
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public int? EmployeeID { get; set; }
@@ -4354,7 +4378,7 @@ public class OrderType: TableStorageEntity
 }
 ```
 
-Listing 7-2: 为 `DetailTable` 子表定义 `OrderDetailDataModel` 类的代码
+**Listing 7-2：为 `DetailTable` 子表定义 `OrderDetailDataModel` 类的代码**
 
 ```csharp
 // 由 LINQ 内存对象生成器 (LIMOG) v2 生成 Detail 类
@@ -4368,11 +4392,13 @@ public class DetailType: TableStorageEntity
         RowKey = Guid.NewGuid().ToString();
         PartitionKey = "OrderDetailData";
     }
+
     // 参数化构造函数
     public DetailType(string partitionKey, string rowKey)
         : base(partitionKey, rowKey)
     {
     }
+
     public int OrderID { get; set; }
     public int ProductID { get; set; }
     public double UnitPrice { get; set; }
@@ -4385,7 +4411,7 @@ public class DetailType: TableStorageEntity
 
 随后更新了示例项目以利用 Azure 表格的灵活属性并将父实体和子实体存储在同一张表中。Listing 7-3 是合并后的 `OrderDetailType` 的定义，它是 `OrderType` 和 `DetailType` 的并集。
 
-Listing 7-3: 为 `OrderDetailTable` 定义合并 `OrderDetailType` 类的代码
+**Listing 7-3：为 `OrderDetailTable` 定义合并 `OrderDetailType` 类的代码**
 
 ```csharp
 // OrderType 和 DetailType 的并集类
@@ -4399,12 +4425,15 @@ public class OrderDetailType: TableStorageEntity
         RowKey = Guid.NewGuid().ToString();
         PartitionKey = "OrderDetail";
     }
+
     // 参数化构造函数
     public OrderDetailType(string partitionKey, string rowKey)
         : base(partitionKey, rowKey)
     {
     }
+
     public int OrderID { get; set; } // 与 Detail 共享
+
     // OrderType 带有额外的可选值
     public string CustomerID { get; set; }
     public int? EmployeeID { get; set; }
@@ -4422,33 +4451,28 @@ public class OrderDetailType: TableStorageEntity
 }
 ```
 
-
-
-
-
 ```csharp
 // DetailType; all properties nullable
 
-    public int? ProductID { get; set; }
+public int? ProductID { get; set; }
 
-    public double? UnitPrice { get; set; }
+public double? UnitPrice { get; set; }
 
-    public int? Quantity { get; set; }
+public int? Quantity { get; set; }
 
-    public double? Discount { get; set; }
+public double? Discount { get; set; }
 
-    // Classes; private setter prevents storing the types
-    public OrderType orderType { get; private set; }
+// Classes; private setter prevents storing the types
+public OrderType orderType { get; private set; }
 
-    public DetailType detailType { get; private set; }
-}
+public DetailType detailType { get; private set; }
 ```
 
-#endregion
+`#endregion`
 
 `orderType` 和 `detailType` 的设置器是私有的，以防止它们被存储在表中。
 
-将类名（如 `OrderType`）替换为父表的 `RowKey` 值，并在类名后跟一个数字数字后缀作为子表的唯一 `RowKey` 值，这是一种通用的惯做法。例如，当勾选“Use Single OrderDetails Table”复选框时，添加到 `OrderDetailTable` 的 `OrderType` 实体将 `OrderType` 作为其 `RowKey` 值。添加到 `OrderDetailTable` 的 `DetailType` 实体将 `DetailType_##` 作为其 `RowKey` 值，其中 `##` 是两位数字的项目序列号。图 7.2 显示了在单个 `OrderDetailTable` 中添加 100 个 `OrderType` 实体和 282 个 `DetailType` 实体后的示例项目表单。
+将类名（如 `OrderType`）替换为父表的 `RowKey` 值，并在类名后跟一个数字后缀作为子表的唯一 `RowKey` 值，这是一种通用的惯做法。例如，当勾选“Use Single OrderDetails Table”复选框时，添加到 `OrderDetailTable` 的 `OrderType` 实体将 `OrderType` 作为其 `RowKey` 值。添加到 `OrderDetailTable` 的 `DetailType` 实体将 `DetailType_##` 作为其 `RowKey` 值，其中 `##` 是两位数字的项目序列号。图 7.2 显示了在单个 `OrderDetailTable` 中添加 100 个 `OrderType` 实体和 282 个 `DetailType` 实体后的示例项目表单。
 
 图 7.2 从客户端 SQL Server 实例上传数据到云端 Azure `OrderDetailTable` 后的 Windows 表单测试测试程序。
 
@@ -4456,20 +4480,24 @@ public class OrderDetailType: TableStorageEntity
 
 ## 利用实体组事务优势
 
-早期的 Azure 表版本仅支持对具有相同 `PartitionKey` 的单个实体类型的 ACID（原子性、一致性、隔离性和持久性）事务。较新的表版本（2009 年 5 月 CTP 的 `v 2009–04–14` 及更高版本）支持实体组事务（EGTs）。EGTs 支持对具有相同 `PartitionKey` 值的批父子实体进行创建、更新和删除操作的 ACID 事务。以下是 Table Service API“执行实体组事务”主题中 EGT 的要求（[`bit.ly/kfWtD`](http://bit.ly/kfWtD), [`msdn.microsoft.com/en-us/library/dd894038.aspx`](http://msdn.microsoft.com/en-us/library/dd894038.aspx)）：
 
-*   作为事务部分执行的所有实体必须具有相同的 `PartitionKey` 值。
-*   实体在事务中只能出现一次，且对其只能执行一次操作。
-*   事务最多包含 100 个实体，其总有效负载大小可能不超过 4 MB。
-*   表服务不支持更改集中的链接操作。
 
-ADO.NET Data Services 规范的“批请求”主题（[`bit.ly/14mlEO`](http://bit.ly/14mlEO), [`msdn.microsoft.com/en-us/library/cc668802.aspx`](http://msdn.microsoft.com/en-us/library/cc668802.aspx)）将批定义为“一个创建、更新和删除（CUD）操作的容器，称为更改集，以及一个查询操作（即批内的检索操作）”。更改集代表“一个或多个 CUD 操作”。
+早期的 Azure 表版本仅支持对具有相同 `PartitionKey` 的单个实体类型的 ACID（原子性、一致性、隔离性和持久性）事务。较新的表版本（2009 年 5 月 CTP 的 `v 2009–04–14` 及更高版本）支持实体组事务（EGTs）。EGTs 支持对具有相同 `PartitionKey` 值的批父子实体进行创建、更新和删除操作的 ACID 事务。
+
+以下是 Table Service API“执行实体组事务”主题中 EGT 的要求（[`bit.ly/kfWtD`](http://bit.ly/kfWtD)、[`msdn.microsoft.com/en-us/library/dd894038.aspx`](http://msdn.microsoft.com/en-us/library/dd894038.aspx)）：
+
+- 作为事务部分执行的所有实体必须具有相同的 `PartitionKey` 值。
+- 实体在事务中只能出现一次，且对其只能执行一次操作。
+- 事务最多包含 100 个实体，其总有效负载大小可能不超过 4 MB。
+- 表服务不支持更改集中的链接操作。
+
+ADO.NET Data Services 规范的“批请求”主题（[`bit.ly/14mlEO`](http://bit.ly/14mlEO)、[`msdn.microsoft.com/en-us/library/cc668802.aspx`](http://msdn.microsoft.com/en-us/library/cc668802.aspx)）将批定义为“一个创建、更新和删除（CUD）操作的容器，称为更改集，以及一个查询操作（即批内的检索操作）”。更改集代表“一个或多个 CUD 操作”。
 
 单个批支持多个 `Insert Entity`、`Update Entity`、`Merge Entity` 和 `Delete Entity` 操作，这些操作可以按任何顺序发生。批内只能发生一次查询操作。
 
-要使用 `StorageClient` 示例库将 CUD 操作封装在事务中，请在 `Context` 对象上调用 `AddObject()`、`UpdateObject()` 和 `DeleteObject()` 方法后，为您的 `SaveChanges()` 方法调用添加 `SaveChangesOptions.Batch` 参数。如果你使用的是库的早期版本，可能需要将 列表 7-4 中的高亮代码添加到 `StorageClient` 库的 `TableStorage.cs` 文件中，以便在处理请求时添加 `x-ms-version` 请求头：
+要使用 `StorageClient` 示例库将 CUD 操作封装在事务中，请在 `Context` 对象上调用 `AddObject()`、`UpdateObject()` 和 `DeleteObject()` 方法后，为您的 `SaveChanges()` 方法调用添加 `SaveChangesOptions.Batch` 参数。如果你使用的是库的早期版本，可能需要将列表 7-4 中的高亮代码添加到 `StorageClient` 库的 `TableStorage.cs` 文件中，以便在处理请求时添加 `x-ms-version` 请求头。
 
-列表 7-4: 添加最小表版本头以支持 EGT 的代码
+列表 7-4：添加最小表版本头以支持 EGT 的代码
 
 ```csharp
 private void DataContextSendingRequest(object sender, SendingRequestEventArgs e)
@@ -4479,13 +4507,13 @@ private void DataContextSendingRequest(object sender, SendingRequestEventArgs e)
 }
 ```
 
-Steve Marx 的博客文章“Sample Code for Batch Transactions in Windows Tables”（[`bit.ly/j2VXy`](http://bit.ly/j2VXy), [`blog.marx.com/posts/sample-code-for-batch-transactions-in-windows-tables`](http://blog.marx.com/posts/sample-code-for-batch-transactions-in-windows-tables)）提供了简单表的 EGT 示例。
+Steve Marx 的博客文章“Sample Code for Batch Transactions in Windows Tables”（[`bit.ly/j2VXy`](http://bit.ly/j2VXy)、[`blog.marx.com/posts/sample-code-for-batch-transactions-in-windows-tables`](http://blog.marx.com/posts/sample-code-for-batch-transactions-in-windows-tables)）提供了简单表的 EGT 示例。
 
 ## 上传表
 
-正如前面的章节所述，Azure Data Services 使用 `POST` 方法向表插入实体。列表 7-5 是由 Windows SDK `StorageClient` 库中的 `TableStorage.cs` 文件生成的 AtomPub 请求，将 Northwind 数据库的 `Orders` 表添加到 Azure `OrderTable` 中的 `OrderType` 实体：
+正如前面的章节所述，Azure Data Services 使用 `POST` 方法向表插入实体。列表 7-5 是由 Windows SDK `StorageClient` 库中的 `TableStorage.cs` 文件生成的 AtomPub 请求，将 Northwind 数据库的 `Orders` 表添加到 Azure `OrderTable` 中的 `OrderType` 实体。
 
-列表 7-5: 向 Northwind Orders 插入实体的 HTTP POST 请求
+列表 7-5：向 Northwind Orders 插入实体的 HTTP `POST` 请求
 
 ```xml
 POST /OrderTable HTTP/1.1
@@ -4510,23 +4538,23 @@ Expect: 100-continue
   <id/>
   <content type="application/xml">
     <m:properties>
-      <d:CustomerID>BSBEV</d>
-      <d:EmployeeID type="Edm.Int32">4</d>
-      <d:Freight type="Edm.Double">2.17</d>
-      <d:OrderDate type="Edm.DateTime">1998–03–11T00:00:00</d>
-      <d:OrderID type="Edm.Int32">10943</d>
-      <d:PartitionKey>214742704</d>
-      <d:RequiredDate type="Edm.DateTime">1998–04–08T00:00:00</d>
+      <d:CustomerID>BSBEV</d:CustomerID>
+      <d:EmployeeID type="Edm.Int32">4</d:EmployeeID>
+      <d:Freight type="Edm.Double">2.17</d:Freight>
+      <d:OrderDate type="Edm.DateTime">1998–03–11T00:00:00</d:OrderDate>
+      <d:OrderID type="Edm.Int32">10943</d:OrderID>
+      <d:PartitionKey>214742704</d:PartitionKey>
+      <d:RequiredDate type="Edm.DateTime">1998–04–08T00:00:00</d:RequiredDate>
       <d:RowKey m:null="false"/>
-      <d:ShipAddress>Fauntleroy Circus</d>
-      <d:ShipCity>London</d>
-      <d:ShipCountry>UK</d>
-      <d:ShipName>B's Beverages</d>
-      <d:ShipPostalCode>EC2 5NT</d>
+      <d:ShipAddress>Fauntleroy Circus</d:ShipAddress>
+      <d:ShipCity>London</d:ShipCity>
+      <d:ShipCountry>UK</d:ShipCountry>
+      <d:ShipName>B's Beverages</d:ShipName>
+      <d:ShipPostalCode>EC2 5NT</d:ShipPostalCode>
       <d:ShipRegion m:null="true"/>
-      <d:ShipVia type="Edm.Int32">2</d>
-      <d:ShippedDate type="Edm.DateTime">1998–03–19T00:00:00</d>
-      <d:Timestamp type="Edm.DateTime">0001–01–01T00:00:00</d>
+      <d:ShipVia type="Edm.Int32">2</d:ShipVia>
+      <d:ShippedDate type="Edm.DateTime">1998–03–19T00:00:00</d:ShippedDate>
+      <d:Timestamp type="Edm.DateTime">0001–01–01T00:00:00</d:Timestamp>
     </m:properties>
   </content>
 </entry>
@@ -4546,12 +4574,9 @@ Server: Table Service Version 1.0 Microsoft-HTTPAPI/2.0
 x-ms-request-id: 05b91086-1747-42d6-98ed-1ad6c85537bd
 ```
 
+日期：2009 年 4 月 8 日周三 22:48:37 GMT
 
-
-
-
-日期: 2009 年 4 月 8 日周三 22:48:37 GMT
-内容长度: 1774
+内容长度：1774
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -4591,11 +4616,19 @@ xmlns="http://www.w3.org/2005/Atom">
 </entry>
 ```
 
-从 POST 请求和响应消息可以清楚看出，网络传输中的绝大多数字节都是使用 AtomPub 传输 格式进行 RESTful 数据操作时固有的数据开销。HTTP `201` 响应消息的负载约为请求消息负载大小的 1.3 倍。对于一个 UTF-8 大小约为 159 字节的关系型表记录，两个负载的组合大小为 3157 字节，加上 973 字节的报头。假设返回结果被丢弃，则插入消息的开销为 `(4130 – 159) * 100/4130 = 96.2%`。换句话说，请求和响应消息的大小大约是未压缩数据的 26 倍。增加的开销会导致数据流量费用的显著增加，因此在确定将关系型数据迁移到 Azure Tables 的预算之前，测量预期的消息大小非常重要。
+从 `POST` 请求和响应消息可以清楚看出，网络传输中的绝大多数字节都是使用 AtomPub 传输格式进行 RESTful 数据操作时固有的数据开销。HTTP `201` 响应消息的负载约为请求消息负载大小的 1.3 倍。对于一个 UTF-8 大小约为 159 字节的关系型表记录，两个负载的组合大小为 3157 字节，加上 973 字节的报头。假设返回结果被丢弃，则插入消息的开销为 `(4130 – 159) * 100/4130 = 96.2%`。换句话说，请求和响应消息的大小大约是未压缩数据的 26 倍。
+
+增加的开销会导致数据流量费用的显著增加，因此在确定将关系型数据迁移到 Azure Tables 的预算之前，测量预期的消息大小非常重要。
 
 ### 比较向单个或异构表上传数据的代码
 
 `btnOrders_Click` 是根据 `chkSingleTable` 状态更新单个或组合的父子实体的事件处理程序。为了同时容纳 `Order` 和 `Detail` 实体，只需要进行微小的更改；这些更改在下面的列表中已强调。
+
+
+
+这是一个 C# 事件处理程序示例，它演示了如何向 Azure 表存储批量添加订单及订单详情，并比较了同构（单表）与异构（双表）存储方案在性能上的差异。
+
+首先，`btnOrders_Click` 事件处理程序用于处理“添加订单”按钮的点击事件：
 
 ```csharp
 private void btnOrders_Click(object sender, EventArgs e)
@@ -4706,8 +4739,7 @@ private void btnOrders_Click(object sender, EventArgs e)
   {
 ```
 
-
-
+当 `chkIncludeDetails.Checked` 为真时，会执行以下代码来为每个订单添加详细信息：
 
 ```cs
 // 为订单添加详细信息
@@ -4795,6 +4827,9 @@ btnDeleteAllOrders.Enabled = true;
 `Listing7-8` 是 `btnDeleteAll_Click` 事件处理程序代码，其中高亮了查找操作的行。
 
 ### 列表 7-8：选择性删除 `OrderTable`、`DetailTable` 或 `OrderDetailTable` 实体的代码
+
+
+
 
 ```cs
 private void btnDeleteAllOrders_Click(object sender, EventArgs e)
@@ -4888,10 +4923,6 @@ private void btnDeleteAllOrders_Click(object sender, EventArgs e)
 }
 ```
 
-
-
-
-
 ```csharp
 {
     bool usePartitionKey = true;
@@ -4975,16 +5006,44 @@ finally
 }
 ```
 
-### 查找时间的差异
-使用带索引的 `RowKey` 值替换扫描的 `OrderID` 值所导致的查找时间差异，对于订单详情表中可用的最大实体数量（2,15）而言并不显著。
+## 查找时间的差异
 
-### 在网格中显示来自异构表的数据数据
-`PartitionKey` 和 `RowKey` 的升序索引导致 `OrderDetailTable` 中的父实体和子实体以子实体后于其父实体的顺序出现，如图 7.3 所示。David Pall 的 Azure Storage Explorer 显示了一个 `DetailType` 实体。
+使用带索引的`RowKey`值替换扫描的`OrderID`值所导致的查找时间差异，对于订单详情表中可用的最大实体数量（2,15）而言并不显著。
 
-### 显示父实体
-与数据上传的情况一样，从异构表下载数据只需要对 LINQ to REST 查询进行微小更改，即可过滤掉不需要的实体 [列表 7-9]；以下是使用来自 `OrderDetailTable` 中最新的 `OrderType` 实体填充 Orders DataGridView 的代码。查询中的 `OrderType` 过滤器已被阴影标记。
+## 在网格中显示来自异构表的数据数据
 
-### 列表 7-9：用指定数量的最新父实体填充 DataGridView
+`PartitionKey`和`RowKey`的升序索引导致`OrderDetailTable`中的父实体和子实体以子实体后于其父实体的顺序出现，如图 7.3 所示。David Pall 的 Azure Storage Explorer 显示了一个`DetailType`实体。
+
+## 显示父实体
+
+与数据上传的情况一样，从异构表下载数据只需要对 LINQ to REST 查询进行微小更改，即可过滤掉不需要的实体 [列表 7-9]；以下是使用来自`OrderDetailTable`中最新的`OrderType`实体填充 Orders DataGridView 的代码。查询中的`OrderType`过滤器已被阴影标记。
+
+## 列表 7-9：用指定数量的最新父实体填充 DataGridView
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（+）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+## 7.8 从`OrderTable`显示100个`OrderType`实体
+
+从`OrderTable`显示100个`OrderType`实体比从异构表显示略快（3.22秒对比3.47秒），因为同构扫描只覆盖了30%的实体。
+
+### 显示子实体
+
+下方的`DataGridView`根据用户在上方`Order` `DataGridView`中选择的`DetailType`实体，执行列表7-10中的代码显示部分`DetailType`实体。在这种情况下，过滤器是`OrderType`实体过滤器的反转。
+
+#### 列表7-10：用所选父实体的子实体填充`DataGridView`
+
 ```csharp
 private void FillDataGridView(int numberOfOrders)
 {
@@ -5034,13 +5093,8 @@ private void FillDataGridView(int numberOfOrders)
 }
 ```
 
-### 从 OrderTable 显示 100 个 OrderType 实体
-从 `OrderTable` 显示 100 个 `OrderType` 实体比从异构表显示略快（3.22 秒对比 3.47 秒），因为同构扫描只覆盖了 30% 的实体。
+### 列表7-11：`OrderBindingSource_CurrentChanged`事件处理器
 
-### 显示子实体
-下方的 DataGridView 根据用户在上方 Order DataGridView 中选择的 `DetailType` 实体，执行[列表 7-10]中的代码显示部分 `DetailType` 实体。在这种情况下，过滤器是 `OrderType` 实体过滤器的反转。
-
-### 列表 7-10：用所选父实体的子实体填充 DataGridView
 ```csharp
 private void OrderBindingSource_CurrentChanged(object sender, EventArgs e)
 {
@@ -5051,10 +5105,6 @@ private void OrderBindingSource_CurrentChanged(object sender, EventArgs e)
     }
 }
 ```
-
-
-
-
 
 ```cs
 if (currentRow != null)
@@ -5101,65 +5151,63 @@ else
 
 ### 总结
 
-将数据从本地数据库迁移到云端 `Azure Tables` 的主要动力之一是在波动需求下最大化可扩展性，并为 `WebRole` 和 `WorkerRole` 提供巅峰性能。最大化可扩展性需要注意表分区的当前大小，其不应超过单个 Azure 节点的存储容量。你通过选择一组 `PartitionKey` 值来实施负载均衡的分区策略，使得表分区（局部性）的大小处于 Azure Fabric 集群的舒适范围内。灵活属性允许 `Azure Tables` 存储具有不同属性的多个实体类型。在分区中存储单个父项和多个后代（子）项是控制最终分区大小的有效方法。Azure Fabric 为应用程序快速访问单个表中的多个相关分区。
+将数据从本地数据库迁移到云端`Azure Tables`的主要动力之一是在波动需求下最大化可扩展性，并为`WebRole`和`WorkerRole`提供巅峰性能。最大化可扩展性需要注意表分区的当前大小，其不应超过单个Azure节点的存储容量。你通过选择一组`PartitionKey`值来实施负载均衡的分区策略，使得表分区（局部性）的大小处于Azure Fabric集群的舒适范围内。灵活属性允许`Azure Tables`存储具有不同属性的多个实体类型。在分区中存储单个父项和多个后代（子）项是控制最终分区大小的有效方法。Azure Fabric为应用程序快速访问单个表中的多个相关分区。
 
-单个分区内的唯一 `RowKey` 值为分区内的实体标识符和订单实体提供了等同于复合主键。许多应用程序需要或倾向于按降序排列实体，这需要从 `NumericType.MaxValue` 计算 `PartitionKey` 以及可能的 `RowKey` 值。这种技术按 OrderID 降序序列对实体进行排序，从而允许应用 LINQ 的 `Take(n)` 操作符返回最后 `n` 个实体。
+单个分区内的唯一`RowKey`值为分区内的实体标识符和订单实体提供了等同于复合主键。许多应用程序需要或倾向于按降序排列实体，这需要从`NumericType.MaxValue`计算`PartitionKey`以及可能的`RowKey`值。这种技术按`OrderID`降序序列对实体进行排序，从而允许应用LINQ的`Take(n)`操作符返回最后`n`个实体。
 
-用包含父实体和子实体的表代替独立的父表和子表，可以显著提高删除性能，并推导出提高子实体更新操作的性能。本的示例项目将删除 Northwind 数据库中 Orders 和 Order Details 的父子实体所需的时间减少了三分之一。示例项目还演示了如何编写查询以分离父子实体，以便在单独的数据绑定网格控件中显示。
+用包含父实体和子实体的表代替独立的父表和子表，可以显著提高删除性能，并推导出提高子实体更新操作的性能。本的示例项目将删除Northwind数据库中`Orders`和`Order Details`的父子实体所需的时间减少了三分之一。示例项目还演示了如何编写查询以分离父子实体，以便在单独的数据绑定网格控件中显示。
 
-### 第 8 章：使用 Azure Queues 进行消息传递
+## 第8章：使用`Azure Queues`进行消息传递
 
-`Azure Queues` 为云服务组件之间提供可靠的异步消息传递。将 `WorkerRole` 项目的计算操作分发以提高服务的可扩展性是 `Azure Queues` 最常用的用途，它还可以通过在计算密集型任务中引入额外节点来辅助 Azure Fabric 的负载均衡功能。将计算卸载到 `WorkerRole` 可以加速云端 `WebRole` 页面对用户请求的响应。本章将向你展示如何结合 `WebRole`、`WorkerRole` 和 `Queue` 来创建一个所谓的 Azure 托管复合应用程序。
+`Azure Queues`为云服务组件之间提供可靠的异步消息传递。将`WorkerRole`项目的计算操作分发以提高服务的可扩展性是`Azure Queues`最常用的用途，它还可以通过在计算密集型任务中引入额外节点来辅助Azure Fabric的负载均衡功能。将计算卸载到`WorkerRole`可以加速云端`WebRole`页面对用户请求的响应。本章将向你展示如何结合`WebRole`、`WorkerRole`和`Queue`来创建一个所谓的Azure托管复合应用程序。
 
-队列是三  Azure 数据模型中最简单的。单个 `http://servicename.core.windows.net` 服务账户支持无限数量的唯一命名队列。此外，队列可以包含无限数量的消息，每条消息可以包含高达 8MB 的字符串或二进制负载。你的应用程序可以以键/值对的形式为队列分配额外的 8MB 最大自定义元数据。单个消息不支持自定义元数据，但具有最长七天的寿命（生存时间或 `TTL`）。像 `Azure Tables` 和 `Blobs` 一样，`Queues` 提供了 RESTful 应用程序编程接口 (`API`)，允许多个平台和编程语言在开发和 Azure Fabric 上运行时对其进行操作。`Queues` 同时支持 `HTTP` 和 `HTTPS`（带有传输层安全的安全 HTTP，`TLS`）协议。
+队列是三 Azure 数据模型中最简单的。单个`http://servicename.core.windows.net`服务账户支持无限数量的唯一命名队列。此外，队列可以包含无限数量的消息，每条消息可以包含高达8MB的字符串或二进制负载。你的应用程序可以以键/值对的形式为队列分配额外的8MB最大自定义元数据。单个消息不支持自定义元数据，但具有最长七天的寿命（生存时间或`TTL`）。像`Azure Tables`和`Blobs`一样，`Queues`提供了RESTful应用程序编程接口（`API`），允许多个平台和编程语言在开发和Azure Fabric上运行时对其进行操作。`Queues`同时支持`HTTP`和`HTTPS`（带有传输层安全的安全HTTP，`TLS`）协议。
 
-图 8.1 展示了一个简单的工作流，使用单个队列将云端 Web 应用程序（`WebRole`）和本地 Windows 客户端计算服务卸载到一对 `WorkerRoles` 上。`WebRole` 和客户端应用将工作请求消息入队，然后由两个 `WorkerRoles` 中的任一个开始处理。当两个 `WorkerRoles` 完成其工作时，它们会向适当的容器中添加新 blob 或在表中添加新实体。`WebRole` 和客户端随后处理并显示新的 blob 或实体。
+图8.1展示了一个简单的工作流，使用单个队列将云端Web应用程序（`WebRole`）和本地Windows客户端计算服务卸载到一对`WorkerRoles`上。`WebRole`和客户端应用将工作请求消息入队，然后由两个`WorkerRoles`中的任一个开始处理。当两个`WorkerRoles`完成其工作时，它们会向适当的容器中添加新blob或在表中添加新实体。`WebRole`和客户端随后处理并显示新的blob或实体。
 
-图 8.1 用于从云端 `WebRole` 和本地 Windows 客户端分发类似计算请求的 `Azure Queue` 图解。
+图8.1 用于从云端`WebRole`和本地Windows客户端分发类似计算请求的`Azure Queue`图解。
 
 ![8.1](img/c08f001.jpg)
 
-### 创建和处理 Azure Queues 和消息
+### 创建和处理`Azure Queues`和消息
 
-`StorageClient` 库包含一个 `Queue.cs` 文件，其中定义了下表所示的队列相关的 .NET 类和事件处理器：
+`StorageClient`库包含一个`Queue.cs`文件，其中定义了下表所示的队列相关的.NET类和事件处理器：
 
 | 类或事件处理器 | 描述 |
 | :--- | :--- |
-| `QueueStorage` | `QueueStorage` 的工厂方法。 |
+| `QueueStorage` | `QueueStorage`的工厂方法。 |
 | `MessageQueue` | 此类的实例代表用户存储账户中的队列。 |
-| `QueueProperties` | `MessageQueue` 的默认属性。 |
+| `QueueProperties` | `MessageQueue`的默认属性。 |
 | `Message` | 此类的实例代表队列中的单条消息。 |
-| `MessageReceivedEventHandler` 委托 | 通过定期轮询传入消息来监听传入消息。 |
+| `MessageReceivedEventHandler`委托 | 通过定期轮询传入消息来监听传入消息。 |
 
-图 8.2 是上述队列相关类以及事件委托及其 `EventArgs` 的类图。
+图8.2是上述队列相关类以及事件委托及其`EventArgs`的类图。
 
 ![8.2](img/c08f002.jpg)
 
-StorageClient 库的队列相关类和事件委托。
+`StorageClient`库的队列相关类和事件委托。
 
 ### 列出存储账户的队列
 
-`RestQueue.cs` 文件中的 `QueueStorageRest` 和 `QueueRest` 类分别继承自 `Queue.cs` 中的 `QueueStorage` 和 `MessageQueue` 类。
+`RestQueue.cs`文件中的`QueueStorageRest`和`QueueRest`类分别继承自`Queue.cs`中的`QueueStorage`和`MessageQueue`类。
 
-存储账户级别只有一个队列相关的 `StorageClient` 方法：`ListQueues()`。要列出特定存储账户（示例为 `oakleaf3`）的队列，请使用 [`oakleaf3.core.windows.net?comp=list`](http://oakleaf3.core.windows.net?comp=list) 作为 URI 调用 HTTP GET 方法。列表 8-1 包含了 `MessageQueue.ListQueues()` 方法的 HTTP 请求和响应消息。
+存储账户级别只有一个队列相关的`StorageClient`方法：`ListQueues()`。要列出特定存储账户（示例为`oakleaf3`）的队列，请使用[`oakleaf3.core.windows.net?comp=list`](http://oakleaf3.core.windows.net?comp=list)作为URI调用HTTP GET方法。列表8-1包含了`MessageQueue.ListQueues()`方法的HTTP请求和响应消息。
 
-
-
-
-
-# [列表 8-1] 获取 oakleaf3 账户队列列表的 HTTP 请求和响应消息
+#### 列表8-1：获取`oakleaf3`账户队列列表的HTTP请求和响应消息
 
 ```http
 GET /comp=list&maxresults=50&timeout=30 HTTP/1.1
 x-ms-date: Thu, 16 Apr 2009 21:22:11 GMT
 Authorization: SharedKey oakleaf3: fs7sL9ZDPkbDQTM5If1fImxKxzRG9TicIfl01io1tbk=
 Host: oakleaf3.queue.core.windows.net
+
 HTTP/1.1 200 OK
 Content-Type: application/xml
 Server: Queue Service Version 1.0 Microsoft-HTTPAPI/2.0
 x-ms-request-id: a652d4ac-e750–419e-80e5-d30c9feda67a
 Date: Thu, 16 Apr 2009 21:21:05 GMT
 Content-Length: 310
+
 <?xml version="1.0" encoding="utf-8"?>
 <EnumerationResults AccountName="http://oakleaf3.queue.core.windows.net/">
   <MaxResults>50</MaxResults>
@@ -5168,17 +5216,17 @@ Content-Length: 310
       <QueueName>thumbnailmaker</QueueName>
       <Url>http://oakleaf3.queue.core.windows.net/thumbnailmaker</Url>
     </Queue>
-    <!--.. 其他 <Queue> 组，如果存在—>
+    <!--.. 其他 <Queue> 组，如果存在-->
   </Queues>
   <NextMarker />
 </EnumerationResults>
 ```
 
-`SharedKey` 值未被隐藏，因为 `Base64Binary`-编码的 HMACSHA256 哈希仅对 `x-ms-date` 日期和时间中的特定单个请求有效。
+`SharedKey`值未被隐藏，因为`Base64Binary`-编码的HMACSHA256哈希仅对`x-ms-date`日期和时间中的特定单个请求有效。
 
-[列表 8-2] 是 `StorageClient` 库中 `QueueStorage.ListQueues()` 方法的示例代码，该方法定义在 `Queue.cs` 中。`GET` 和 `POST` 操作的默认超时值为 30 秒，且不重试。要为队列操作指定不同的超时值和 `RetryPolicy`，请添加强调的命令。
+列表8-2是`StorageClient`库中`QueueStorage.ListQueues()`方法的示例代码，该方法定义在`Queue.cs`中。`GET`和`POST`操作的默认超时值为30秒，且不重试。要为队列操作指定不同的超时值和`RetryPolicy`，请添加强调的命令。
 
-# [列表 8-2] 在 `ServiceConfiguraton.cscfg` 文件指定的存储账户中列队列的代码
+#### 列表8-2：在`ServiceConfiguraton.cscfg`文件指定的存储账户中列队列的代码
 
 ```csharp
 QueueStorage queueStorage = QueueStorage.
@@ -5188,19 +5236,21 @@ queueStorage.RetryPolicy = RetryPolicies.RetryN(3, TimeSpan.FromSeconds(1));
 IEnumerable<MessageQueue> queueList = queueStorage.ListQueues();
 ```
 
+
+
 ## 在队列级别发布 HTTP/REST 请求
 
 以下是在队列级别上发布 HTTP/REST 请求的三种方法：
 
-*   `GetQueue()` 使用指定的存储账户创建队列。
-*   `DeleteQueue()` 删除一个已实例化的队列对象。
-*   `SetProperties()` 为指定的队列实例添加或覆盖可选的自定义元数据。
+- `GetQueue()` 使用指定的存储账户创建队列。
+- `DeleteQueue()` 删除一个已实例化的队列对象。
+- `SetProperties()` 为指定的队列实例添加或覆盖可选的自定义元数据。
 
 ## 使用指定的存储账户创建队列
 
-要使用指定的存储账户创建队列，请调用 `HTTP PUT` 方法，并将 `http://oakleaf3.queue.core.windows.net/myqueue` 作为 URI。[列表 8-3] 和 [8-4] 显示了典型的 REST 和基于 `StorageClient` 的请求。
+要使用指定的存储账户创建队列，请调用 `HTTP PUT` 方法，并将 `http://oakleaf3.queue.core.windows.net/myqueue` 作为 URI。[列表 8-3] 和 [列表 8-4] 显示了典型的 REST 和基于 `StorageClient` 的请求。
 
-# [列表 8-3] 创建名为“thumbnailmaker”的队列的 HTTP PUT 请求和响应消息
+### [列表 8-3] 创建名为“thumbnailmaker”的队列的 HTTP PUT 请求和响应消息
 
 ```http
 PUT /thumbnailmaker?timeout=30 HTTP/1.1
@@ -5215,9 +5265,9 @@ x-ms-request-id: a8a6c17d-2ab1–439b-b86–cc54b0493b
 Date: Thu, 16 Apr 2009 22:00:04 GMT
 ```
 
-[列表 8-4] 是将 `thumbnailmaker` 添加到 `ServiceConfiguration.cscfg` 中指定的账户 (oakleaf3) 的 `StorageClient` 代码。
+[列表 8-4] 是将 `thumbnailmaker` 添加到 `ServiceConfiguration.cscfg` 中指定的账户（oakleaf3）的 `StorageClient` 代码。
 
-# [列表 8-4] 创建名为“thumbnailmaker”的队列的代码
+### [列表 8-4] 创建名为“thumbnailmaker”的队列的代码
 
 ```csharp
 QueueStorage queueStorage = QueueStorage.
@@ -5225,18 +5275,18 @@ QueueStorage queueStorage = QueueStorage.
 MessageQueue queue = queueStorage.GetQueue("thumbnailmaker");
 ```
 
-`thumbnailmaker` 队列是 Windows Azure SDK (09 年 3 月) 中 `Thumbnails.sl` 项目的组件。根据 SDK，`MessageQueue.Name` 属性值必须是有效的域名系统 (DNS) 名称，并符合以下命名规则：
+`thumbnailmaker` 队列是 Windows Azure SDK（09 年 3 月）中 `Thumbnails.sl` 项目的组件。根据 SDK，`MessageQueue.Name` 属性值必须是有效的域名系统（DNS）名称，并符合以下命名规则：
 
-*   队列名称必须以字母或数字开头，且只能包含字母、数字和连字符 (`-`)。
-*   队列名称中的第一个和最后一个字母必须是字母数字。连字符 (`-`) 不得作为第一个或最后一个字母。
-*   队列名称中的所有字母必须是小写。
-*   队列名称长度必须为 3 到 63 个字符。
+- 队列名称必须以字母或数字开头，且只能包含字母、数字和连字符（`-`）。
+- 队列名称中的第一个和最后一个字母必须是字母数字。连字符（`-`）不得作为第一个或最后一个字母。
+- 队列名称中的所有字母必须是小写。
+- 队列名称长度必须为 3 到 63 个字符。
 
 ## 永久删除指定的队列及其内容
 
 [列表 8-5] 是从 `oakleaf3` 存储账户删除名为“thumbnailmaker”的队列的 HTTP 请求和响应。
 
-# [列表 8-5] 删除名为“thumbnailmaker”队列的 HTTP 请求和响应
+### [列表 8-5] 删除名为“thumbnailmaker”队列的 HTTP 请求和响应
 
 ```http
 DELETE /thumbnailmaker?timeout=30 HTTP/1.1
@@ -5267,7 +5317,7 @@ queue.DeleteQueue();
 
 自定义元数据以键值对的形式与队列关联，[列表 8-7] 的请求添加或覆盖三个元数据项及其字符串值。
 
-# [列表 8-7] 为“thumbnailmaker”队列添加三个元数据属性的 HTTP 请求和响应
+### [列表 8-7] 为“thumbnailmaker”队列添加三个元数据属性的 HTTP 请求和响应
 
 ```http
 PUT /thumbnailmaker?comp=metadata&timeout=30 HTTP/1.1
@@ -5288,7 +5338,7 @@ Date: Thu, 16 Apr 2009 23:34:28 GMT
 
 创建和添加键值对元数据遵循 [列表 8-8] 所示的模式。
 
-# [列表 8-8] 为“thumbnailmaker”队列添加三个元数据属性的代码
+### [列表 8-8] 为“thumbnailmaker”队列添加三个元数据属性的代码
 
 ```csharp
 QueueProperties queueProps = new QueueProperties();
@@ -5302,29 +5352,22 @@ queue.SetProperties(queueProps);
 
 ## 在消息级别处理 HTTP/REST
 
-下表列出了 Windows Azure SDK (09 年 3 月 CTP) 中 `MessageQueue` 对象最重要的五个消息级别方法。
+下表列出了 Windows Azure SDK（09 年 3 月 CTP）中 `MessageQueue` 对象最重要的五个消息级别方法。
 
 | MessageQueue.Method() | 描述 |
 | :--- | :--- |
-| `MessageQueue.PutMessage (Message, MessageTTL)` | 在队列尾部添加新消息。`MessageTTL` 指定消息的生存间隔。消息可以以文本或二进制（字节数组）格式存储，但消息内容仅以 Base64 编码格式返回。 |
+| `MessageQueue.PutMessage(Message, MessageTTL)` | 在队列尾部添加新消息。`MessageTTL` 指定消息的生存间隔。消息可以以文本或二进制（字节数组）格式存储，但消息内容仅以 Base64 编码格式返回。 |
 | `MessageQueue.ApproximateCount()` | 获取队列中近似的数量以及其他可选的队列元数据（如果存在）。 |
-
-
-
-
-
-| 方法 | 说明 |
-| :--- | :--- |
-| `MessageQueue.GetMessage[s] ([NumOfMessages, VisibilityTimeout])` | 从队列头部检索一个或多个 `NumOfMessages` 消息，并可选地使这些消息在指定的 `VisibilityTimeout`（秒）内变为不可见，默认值为 30 秒，最大为两小时。此方法返回 `PopReceipt`。从队列返回的消息顺序是不保证一致的，且消息可能会被多次返回。 |
-| `MessageQueue.PeekMessage[s] ([NumOfMessages])` | 从队列头部检索一个或多个 `NumOfMessages` 消息，但不会使消息对其他调用者不可见。此操作会为每个返回的消息返回一个 `PopReceipt`。 |
-| `MessageQueue.DeleteMessage (PopReceipt)` | 删除与之前的 `GetMessage` 调用返回的 `PopReceipt` 关联的消息。未被删除的消息将在 `VisibilityTimeout` 周期结束后后重新出现在队列中。 |
+| `MessageQueue.GetMessage[s]([NumOfMessages, VisibilityTimeout])` | 从队列头部检索一个或多个 `NumOfMessages` 消息，并可选地使这些消息在指定的 `VisibilityTimeout`（秒）内变为不可见，默认值为 30 秒，最大为两小时。此方法返回 `PopReceipt`。从队列返回的消息顺序是不保证一致的，且消息可能会被多次返回。 |
+| `MessageQueue.PeekMessage[s]([NumOfMessages])` | 从队列头部检索一个或多个 `NumOfMessages` 消息，但不会使消息对其他调用者不可见。此操作会为每个返回的消息返回一个 `PopReceipt`。 |
+| `MessageQueue.DeleteMessage(PopReceipt)` | 删除与之前的 `GetMessage` 调用返回的 `PopReceipt` 关联的消息。未被删除的消息将在 `VisibilityTimeout` 周期结束后重新出现在队列中。 |
 | `MessageQueue.Clear()` | 删除队列实例中的所有消息。调用者应重试此操作，直到其返回 `true` 为止，以确保队列中不再留任何消息。 |
 
 ### 向队列添加消息
 
-Listing 8-9` 包含了向 `thumbnailmaker` 队列添加一个具有 `TTL = 20` 秒的简短字符串消息（Test message 1）的请求和响应消息。
+`Listing 8-9` 包含了向 `thumbnailmaker` 队列添加一个具有 `TTL = 20` 秒的简短字符串消息（Test message 1）的请求和响应消息。
 
-Listing 8-9:` 向“thumbnailmaker”队列添加简单字符串消息的 HTTP 请求和响应消息
+`Listing 8-9`：向“thumbnailmaker”队列添加简单字符串消息的 HTTP 请求和响应消息
 
 ```
 POST /thumbnailmaker/messages?messagettl=20&timeout=30 HTTP/1.1
@@ -5345,11 +5388,11 @@ Date: Fri, 17 Apr 2009 19:06:11 GMT
 0
 ```
 
-Listing 8-10` 代码创建了一个新队列并为其添加了三个简短消息。
+`Listing 8-10` 代码创建了一个新队列并为其添加了三个简短消息。
 
-Listing 8-10:` 创建队列并向其添加三个简单字符串消息的代码
+`Listing 8-10`：创建队列并向其添加三个简单字符串消息的代码
 
-```cs
+```csharp
 QueueStorage queueStorage = QueueStorage.Create(StorageAccountInfo.
     GetDefaultQueueStorageAccountFromConfiguration());
 
@@ -5367,9 +5410,9 @@ putMsg = queue.PutMessage(testMsg, 20);
 
 ### 获取队列中的近似消息数量
 
-为了确定你的 `WorkerRole` 是否跟上了请求，定期测试队列长度是一种良好的做法，以验证其没有增长到异常长度。Listing 8-11` 显示了包含 18 条消息和三个示例属性的队列的请求和响应消息。
+为了确定你的 `WorkerRole` 是否跟上了请求，定期测试队列长度是一种良好的做法，以验证其没有增长到异常长度。`Listing 8-11` 显示了包含 18 条消息和三个示例属性的队列的请求和响应消息。
 
-Listing 8-11:` 获取队列中近似消息数量以及添加的任何其他自定义元数据的 HTTP 请求和响应
+`Listing 8-11`：获取队列中近似消息数量以及添加的任何其他自定义元数据的 HTTP 请求和响应
 
 ```
 GET /thumbnailmaker?comp=metadata&timeout=30 HTTP/1.1
@@ -5388,11 +5431,11 @@ Date: Fri, 17 Apr 2009 19:52:34 GMT
 0
 ```
 
-Listing 8-12` 显示了执行与 [Listing 8-11] 相同任务的 `StorageClient` 代码。
+`Listing 8-12` 显示了执行与 [Listing 8-11] 相同任务的 `StorageClient` 代码。
 
-Listing 8-12:` 以整数形式检索指定队列近似消息数量的代码
+`Listing 8-12`：以整数形式检索指定队列近似消息数量的代码
 
-```cs
+```csharp
 int ApproxNum = queue.ApproximateCount();
 ```
 
@@ -5400,9 +5443,9 @@ int ApproxNum = queue.ApproximateCount();
 
 ### 从队列获取消息
 
-Listing 8-13` 包含了从队列中检索单条消息的 HTTP 请求和响应。一次从队列中检索多条消息是不常见的。
+`Listing 8-13` 包含了从队列中检索单条消息的 HTTP 请求和响应。一次从队列中检索多条消息是不常见的。
 
-Listing 8-13:` 从所选队列检索单条消息的 HTTP 请求和响应消息
+`Listing 8-13`：从所选队列检索单条消息的 HTTP 请求和响应消息
 
 ```
 GET /thumbnailmaker/messages?numofmessages=1&timeout=30 HTTP/1.1
@@ -5431,17 +5474,19 @@ Date: Fri, 17 Apr 2009 19:06:17 GMT
 
 你应当将 `PopReceipt` 值视为不透明内容，因为 Azure 团队警告其格式可能会在不通知的情况下发生变化。
 
-Listing 8-14` 是从队列检索单条消息的代码。
+`Listing 8-14` 是从队列检索单条消息的代码。
 
-Listing 8-14:` 从指定队列检索单条消息的代码
+`Listing 8-14`：从指定队列检索单条消息的代码
 
-```cs
+```csharp
 Message getMsg = queue.GetMessage();
 ```
 
-`getMsg` 变量接收 `PopReceipt` 值。在 `while` 循环中检索并处理消息（如 Listing 8-15 所示）是一种常见的做法：
+`getMsg` 变量接收 `PopReceipt` 值。在 `while` 循环中检索并处理消息（如 `Listing 8-15` 所示）是一种常见的做法：
 
-Listing 8-15:` 消息到达时检索并处理单条消息的典型代码
+`Listing 8-15`：消息到达时检索并处理单条消息的典型代码
+
+
 
 ```cs
 while (true)
@@ -5477,16 +5522,12 @@ while (true)
 
 ### 预览队列中的消息
 
-Listing 8-16` 的请求和响应消息允许你的代码检查消息而不必将其变为不可见：
+`Listing 8-16` 的请求和响应消息允许你的代码检查消息而不必将其变为不可见：
 
-```
+```http
 GET /thumbnailmaker/messages?numofmessages=1&peekonly=True&timeout=30 HTTP/1.1
 x-ms-date: Fri, 17 Apr 2009 19:03:24 GMT
 ```
-
-
-
-
 
 ```http
 Authorization: SharedKey oakleaf3:fs7sL9ZDPkbDQTM5If1fImxKxzRG9TicIfl01io1tbk=
@@ -5500,6 +5541,7 @@ Date: Fri, 17 Apr 2009 19:02:29 GMT
 151
 ```
 
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <QueueMessagesList>
   <QueueMessage>
@@ -5527,14 +5569,23 @@ Message peekMsg = queue.PeekMessage();
 
 ```http
 DELETE /thumbnailmaker/messages/04178ce6–254b-4fb8-bc5b-7641eb70a089?popreceipt=AQAAAJCmmh6Pv8kB&timeout=30 HTTP/1.1
+
 x-ms-date: Fri, 17 Apr 2009 19:03:25 GMT
+
 Authorization: SharedKey oakleaf3:fkySK4GsmjFx72dX3SiqA1iYCnjsr3jEqzSB
+
 Host: oakleaf3.queue.core.windows.net
+
 Content-Length: 0
+
 HTTP/1.1 204 No
+
 Content-Length: 0
+
 Server: Queue Service Version 1.0 Microsoft-HTTPAPI/2.0
+
 x-ms-request-id: f54a6398–6132–4cc1–9104-ca2b5f8717
+
 Date: Fri, 17 Apr 2009 19:02:30 GMT
 ```
 
@@ -5554,14 +5605,23 @@ bool delMsg = queue.DeleteMessage(getMsg);
 
 ```http
 DELETE /thumbnailmaker/messages?timeout=30 HTTP/1.1
+
 x-ms-date: Fri, 17 Apr 2009 21:46:15 GMT
+
 Authorization: SharedKey oakleaf3:DTUJNwdPOI16nR/Pdmb9dWO+QdimgHtp9Nmr9Tg9k
+
 Host: oakleaf3.queue.core.windows.net
+
 Content-Length: 0
+
 HTTP/1.1 204 No
+
 Content-Length: 0
+
 Server: Queue Service Version 1.0 Microsoft-HTTPAPI/2.0
+
 x-ms-request-id: 307c7487-a4f4-4f4a-8c4e-6545cf3b1270
+
 Date: Fri, 17 Apr 2009 21:45:09 GMT
 ```
 
@@ -5582,13 +5642,11 @@ while (!queue.Clear())
 
 依赖 Azure Queues 的真实服务通常会在单个项目中组合 `WorkerRole` 和 `WebRole`。`Program Files\Windows Azure SDK\v1.0\samples.zip` 存档中的 `Thumbnails` 文件夹包含了示例服务 `Thumbnails.sln` 的源代码。`Thumbnails.sln` 结合了 `Web` 和 `WorkerRoles`，将图形文件从用户本地文件系统上传到 Azure Blobs。
 
-
-
-
-
+```xml
 </ConfigurationSettings>
 </Role>
 </ServiceConfiguration>
+```
 
 `ServiceDefinition.csdef` 文件中包含针对 `WebRole` 和 `WorkerRole` 的重复 `<Role>` 部分。
 
@@ -5598,7 +5656,7 @@ while (!queue.Clear())
 
 下表描述了 `Thumbnail_WebRole` 项目的方法和事件处理程序。
 
-| 方法或事件处理程序名称 |  |
+| 方法或事件处理程序名称 | 说明 |
 | --- | --- |
 | `CreateOnceContainerAndQueue()` | 测试开发存储（Development Storage）创建用于原始图像和缩略图的 photogallery blob 容器，以及一个用于处理添加新图像后产生的消息的 thumbnailmaker 队列 |
 | `GetPhotoGalleryContainer()` | 创建并返回 photogallery BlobContainer |
@@ -5628,20 +5686,33 @@ while (!queue.Clear())
 
 ### 列表 8-23：带有 10 张缩略图和部分 ViewState 内容的 Thumbnails_WebRole 项目 HTTP 请求消息
 
-```
+```http
 POST /Default.aspx HTTP/1.1
+
 Accept: */
+
 Accept-Language: en-us
+
 Referer: http://oakleaf6.cloudapp.net/Default.aspx
+
 x-microsoftajax: Delta=true
+
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
 Cache-Control: no-cache
+
 Accept-Encoding: gzip, deflate
+
 User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; GTB6; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.5.21022; .NET CLR 3.5.30428; .NET CLR 3.5.30729; .NET CLR 3.0.30618; MS-RTC LM 8; InfoPath.2; OfficeLiveConnector.1.3; OfficeLivePatch.1.3)
+
 Host: oakleaf6.cloudapp.net
+
 Content-Length: 2206
+
 Connection: Keep-Alive
+
 Pragma: no-cache
+
 sm1=up1%7Ctimer1&_EVENTTARGET=timer1&_EVENTARGUMENT=&_VIEWSTATE=%2FwEPDw
 UJOTA5OT0ODEyD2QWAgIDDxYCHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFgICBw9kF
 gJmD2QWAgIBDxQrAAIPFgQeC18hR..
@@ -5652,48 +5723,75 @@ W1ibmFpbHMvMTYzMzc1ODQ4NDU0MTI4Mzc1MF82ZDAzYTEwNy1ZmM3LTQ1TEtODIwMS4MDUyZGRiOWVj
 
 ### 列表 8-24：带有 10 张缩略图的 Thumbnails_WebRole HTTP 请求消息
 
-```
+```http
 HTTP/1.1 200 OK
+
 Cache-Control: private
+
 Content-Type: text/plain; charset=utf-8
+
 Server: Microsoft-IIS/7.0
+
 X-AspNet-Version: 2.0.50
+
 Date: Wed, 22 Apr 2009 22:24 GMT
+
 Content-Length: 5189
+
 updatePanel|up1
+
 <img id="thumbnails_0" src="http://oakleaf6.cloudapp.net/photogallery/1.jpg" width="128" />
+
 1
+
 <img id="thumbnails_1" src="http://oakleaf6.cloudapp.net/photogallery/2.jpg" width="128" />
+
 18
+
 <img id="thumbnails_2" src="http://oakleaf6.cloudapp.net/photogallery/3.jpg" width="128" />
+
 1
+
 <img id="thumbnails_3" src="http://oakleaf6.cloudapp.net/photogallery/4.jpg" width="128" />
+
 1
+
 <img id="thumbnails_4" src="http://oakleaf6.cloudapp.net/photogallery/5.jpg" width="128" />
+
 1
+
 <img id="thumbnails_5" src="http://oakleaf6.cloudapp.net/photogallery/6.jpg" width="128" />
+
 1
+
 <img id="thumbnails_6" src="http://oakleaf6.cloudapp.net/photogallery/7.jpg" width="128" />
+
 1
+
 <img id="thumbnails_7" src="http://oakleaf6.cloudapp.net/photogallery/8.jpg" width="128" />
+
 1
+
 <img id="thumbnails_8" src="http://oakleaf6.cloudapp.net/photogallery/9.jpg" width="128" />
+
 1
+
 <img id="thumbnails_9" src="http://oakleaf6.cloudapp.net/photogallery/10.jpg" width="128" />
+
 1
 ```
-<span id="timer1" style="visibility:hidden;display:none;"></span>
+
+
 
 `ViewState` 是：
+
 `/wEPDwUJOTA5OT0ODEyD2QWAgIDDxYCHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhFgICBw9kFgJmD2QWAgIBDxQrAAIPFgQeC18hRGF0YUJvdW5kZX4LXFJdGVtQ291bnQCCmRkFgJmD2QWFAIBD2QWAgIBD28H44W1hZS04553333KZEurQMsU2KWfZYOcAu+BU`
 
 `EVENTVALIDATION` 是：
+
 `/wEWAgKOvLC7AQKSuuDUC/lfv2Q%`
 
-`thumbnails` 的。`request` 消息为 2908 字节，`response` 为 6202 字节，总消息大小为 9110 字节。一个永久连接到服务的浏览器用户每秒将产生 9.11KB 的流量，或者 (9.11 * 60 * 60 * 24 * 30) = 23,613,120 KB/月 = 23,613 GB/月。本书编写时，微软尚未发布数据入站出站费用，但 Amazon Web Services 的 EC2 或 S3 的平均成本约为 ((2908 * $0.10) + (6202 * $0.15))/9110 = $0.134/GB，因此一个持续连接的用户每月将产生 23,613 * $0.139 = $3,165.48 的带宽费用。
-
-
-
+`thumbnails` 的 `request` 消息为 2908 字节，`response` 为 6202 字节，总消息大小为 9110 字节。一个永久连接到服务的浏览器用户每秒将产生 9.11KB 的流量，或者 (9.11 * 60 * 60 * 24 * 30) = 23,613,120 KB/月 = 23,613 GB/月。本书编写时，微软尚未发布数据入站出站费用，但 Amazon Web Services 的 EC2 或 S3 的平均成本约为 ((2908 * $0.10) + (6202 * $0.15))/9110 = $0.134/GB，因此一个持续连接的用户每月将产生 23,613 * $0.139 = $3,165.48 的带宽费用。
 
 在本书编写时，微软对数据入（上传的请求消息）收取每 GB 0.10 美，对数据出（下载的响应消息）收取每 GB 0.15 美。
 
@@ -5707,7 +5805,7 @@ updatePanel|up1
 
 修改 `ServiceConfiguration.cscfg` 文件指向 Azure Storage Services，将修改后的项目部署到 Azure Staging，启动 `Fiddler2` 或其他 HTTP 代理，并为新图像添加缩略图。HTTP 请求和响应消息将类似于 Listing 8-25 所示。
 
-Listing 8-25: 在关闭 GridView ViewState 的情况下添加缩略图的 HTTP 请求和部分响应消息
+**Listing 8-25: 在关闭 GridView ViewState 的情况下添加缩略图的 HTTP 请求和部分响应消息**
 
 ```
 POST /Default.aspx HTTP/1.1
@@ -5723,12 +5821,14 @@ Host: c1529552–0b46–4cdb-94ca-c57afb3454e4.cloudapp.net
 Content-Length: 384
 Connection: Keep-Alive
 Pragma: no-cache
+
 sm1=up1%7Cup1&_EVENTTARGET=up1&_EVENTARGUMENT=&_VIEWSTATE=%2FwEPDwUKMTg5
 Mzc1MTYwNA9kFgICAQ8WAhHZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWQYAQUKdGh1bWJ
 uYWlscw88KwAKAgc8KwALAAgCC2SFWZDKhqAaOPzva5eASsIza%2FKThg%3D%3D&_EVENTVALI
 DATION=%2FwEWAwKm5OL7CgKSuDUCwLiscFWTsrhGkwLuRvDmUJ036ugm2zSSFA%3D&uploade
 dBlobName=1633760951352592276_5d79389a-0f12–491d-981e-
 132d55fa48b7&_ASYNCPOST=true
+
 HTTP/1.1 200 OK
 Cache-Control: private
 Content-Type: text/plain; charset=utf-8
@@ -5737,32 +5837,41 @@ X-AspNet-Version: 2.0.50727
 X-Powered-By: ASP.NET
 Date: Thu, 23 Apr 2009 14:52:16 GMT
 Content-Length: 3442
+
 2950|updatePanel|up1|
 <img id="thumbnails_ctrl0_photoImage" src="http://oakleaf3.blob.core.windows.net/photogallery/thumbnails/163375744063206298_114f3d2f-4fbc-dd83–9831–95ae069374" style="border-width:0px"/>
 <img id="thumbnails9_9_photo src"http="httpleaf3.blob.core.windows.net/photogallery/thumbnails/163375848541283750_6d03a107-dfc7–4551–8052dd9ec23" style="border-width:0px"/>
-<img id="thumbnails_ctrl1_photoImage" src="http://oakleaf3.blob.core.windows.net/photogallery/thumbnails/1633760949623206208_d1326fb8-ad84–ec3–9511–e3548ff09" style="border-width:0px"/>|144|hiddenField|_VIEWSTATE|/wEPDwUKMTg5
+<img id="thumbnails_ctrl1_photoImage" src="http://oakleaf3.blob.core.windows.net/photogallery/thumbnails/1633760949623206208_d1326fb8-ad84–ec3–9511–e3548ff09" style="border-width:0px"/>
+|144|hiddenField|_VIEWSTATE|/wEPDwUKMTg5
 Mzc1MTYwNA9kFgICAQ8WAZW5jdHlwZQUTbXVsdGlwYXJ0L2Zvcm0tZGF0YWQYAQUKdGh1bWJ
-uYWlscw88KwAKAgc8KwR/hxlgz8QwLLdcw==|56|hiddenField|_EVENTVALIDATION|/wEWAwLOjela
-ApKxwVbbgMN4DLmf0sGaYOZhZg==0|asyncBackControlIDs||0|postBackIDs||4|updatePanelIDs||tup1|0|panelsIDs||1|2|asyncBackTimeout||90|12|formAction||Default.aspx|13|pageTitle||Photo Gallery
-请求头为 70 字节，负载为 384 字节，总计 1086 字节。响应头为 221 字节，负载为 3442 字节，总计 3663 字节。通过消除 ViewState 节省了 9110 – (1086 + 3663) = 4361 字节，占原始流量的 48%。尽管这种节省是有意义的，但每个用户 15 美元的潜在带宽成本仍然不可接受。```
+uYWlscw88KwAKAgc8KwR/hxlgz8QwLLdcw==
+|56|hiddenField|_EVENTVALIDATION|/wEWAwLOjela
+ApKxwVbbgMN4DLmf0sGaYOZhZg==
+0|asyncBackControlIDs||0|postBackIDs||4|updatePanelIDs||tup1|0|panelsIDs||1|2|asyncBackTimeout||90|12|formAction||Default.aspx|13|pageTitle||Photo Gallery
+```
+
+请求头为 70 字节，负载为 384 字节，总计 1086 字节。响应头为 221 字节，负载为 3442 字节，总计 3663 字节。通过消除 `ViewState` 节省了 9110 – (1086 + 3663) = 4361 字节，占原始流量的 48%。尽管这种节省是有意义的，但每个用户 15 美元的潜在带宽成本仍然不可接受。
 
 ## 迁移到客户端检测新增的缩略图
 
-Steve Marx 在 2009 年 4 月 22 日的“Scalability and Cost Issues with Windows Azure and WorkerRole Projects – Live Demo”博客文章（http://oakleaf.blogspot.com/2009/04/scalability-issues-with-azure.html）中建议改进。他建议使用 AJAX 远程过程调用（RPC，而非 HTTP）调用 Web 服务器，询问刚刚上传的 blob 是否已有缩略图。一旦有了缩略图，就触发 UpdatePanel 异步回回，然后停止轮询。这种方法让上传的用户能立即看到缩略图，但其他用户必须手动刷新浏览器才能看到新增的缩略图。
+Steve Marx 在 2009 年 4 月 22 日的“Scalability and Cost Issues with Windows Azure and WorkerRole Projects – Live Demo”博客文章（http://oakleaf.blogspot.com/2009/04/scalability-issues-with-azure.html）中建议改进。他建议使用 AJAX 远程过程调用（RPC，而非 HTTP）调用 Web 服务器，询问刚刚上传的 blob 是否已有缩略图。一旦有了缩略图，就触发 `UpdatePanel` 异步回回，然后停止轮询。这种方法让上传的用户能立即看到缩略图，但其他用户必须手动刷新浏览器才能看到新增的缩略图。
 
 以下 建议的步骤：
 
 1. 在 `FileUpload` 和 `Button` 控件下方添加 `HiddenField` 以存储新 blob 的名称：
+
 ```asp
 <asp:HiddenField ID="uploadedBlobName" runat="server" />
 ```
 
 2. 在 `submitButton_Click` 事件处理程序中添加设置 `uploadedBlobName` 值的代码：
+
 ```csharp
 uploadedBlobName.Value = props.Name
 ```
 
 3. 添加一个静态方法处理轮询：
+
 ```csharp
 [WebMethod]
 public static bool IsThumbnailReady(string name)
@@ -5774,11 +5883,13 @@ public static bool IsThumbnailReady(string name)
 ```
 
 4. 为 `ScriptManager` 添加 `EnablePageMethods="true"` 以启用静态方法：
+
 ```asp
 <asp:ScriptManager ID="sm1" runat="server" EnablePageMethods="true" />
 ```
 
 5. 在 `</body>` 元素后添加客户端脚本来执行轮询：
+
 ```javascript
 <script type="text/javascript">
     Sys.WebForms.PageRequestManager.getInstance()
@@ -5790,6 +5901,7 @@ public static bool IsThumbnailReady(string name)
         }
       }
     });
+
     function checkReady(blobname) {
       PageMethods.IsThumbnailReady(blobname, function(result) {
         if (result) {
@@ -5802,11 +5914,11 @@ public static bool IsThumbnailReady(string name)
 </script>
 ```
 
-添加上述代码会在提交新图像 blob 后每秒进行一次轻量级的“缩略图准备好了吗”探测。该操作包含 67 字节的提交数据和 10 字节响应，取决于 `CreateThumbnail()` 方法生成缩略图所需，可能需要执行两次或多次。完成后，会发生 UpdatePanel 刷新，这需要上一节计算的 4749 字节。
+添加上述代码会在提交新图像 blob 后每秒进行一次轻量级的“缩略图准备好了吗”探测。该操作包含 67 字节的提交数据和 10 字节响应，取决于 `CreateThumbnail()` 方法生成缩略图所需，可能需要执行两次或多次。完成后，会发生 `UpdatePanel` 刷新，这需要上一节计算的 4749 字节。
 
 在混合模式下，项目运行在连接到 Azure 云数据存储的 Development Fabric 中，`Fiddler2` 每秒显示一次 Listing 8-26 所示的 HTTP 请求和响应消息。
 
-Listing 8-26: WorkerRole 轮询生成的 HTTP 请求和响应消息
+**Listing 8-26: WorkerRole 轮询生成的 HTTP 请求和响应消息**
 
 ```
 GET /thumbnailmaker/messages?numofmessages=1&timeout=30 HTTP/1.1
@@ -5814,6 +5926,7 @@ x-ms-date: Thu, 23 Apr 2009 18:28:29 GMT
 Authorization: SharedKey
 oakleaf3:rH4IzA7B+XpZL2O0jqJ4QiYyIIztUTb+FFe5MQ=
 Host: oakleaf3.queue.core.windows.net
+
 HTTP/1.1 200 OK
 Transfer-Encoding: chunked
 Content-Type: application/xml
@@ -5821,20 +5934,15 @@ Server: Queue Service Version 1.0 Microsoft-HTTPAPI/2.0
 x-ms-request-id: addaaadd-61a9-4667-a5f9-11bf8c6fde68
 ```
 
-
-
-
 日期：2009 年 4 月 23 日 星期四 18:26:48 GMT
 
+```
 3E
-
-```xml
 <?xml version="1.0" encoding="utf-8"?><QueueMessagesList />
+0
 ```
 
-0
-
-为了防止 `WorkerRole` 每秒回回（postback）刷新 `thumbnails` ListView 的 `DataSource` 属性值，请添加一个 `if (!Page.IsPostBack)` 块来包裹 `Page_PreRender` 事件处理程序的代码。在浏览器中打开页面会设置 `DataSource` 属性值，但随后的 `Browse` 操作会导致 `ListView` 消失。为了防止这种消失，请执行以下操作：
+为了防止 `WorkerRole` 每秒回回（postback）刷新 `thumbnails` `ListView` 的 `DataSource` 属性值，请添加一个 `if (!Page.IsPostBack)` 块来包裹 `Page_PreRender` 事件处理程序的代码。在浏览器中打开页面会设置 `DataSource` 属性值，但随后的 `Browse` 操作会导致 `ListView` 消失。为了防止这种消失，请执行以下操作：
 
 1. 在 `_Default` 类中添加一个 `private static bool refreshData = true;` 变量。
 
@@ -5855,103 +5963,145 @@ protected void Page_PreRender(object sender, EventArgs e)
 }
 ```
 
-3. 在 `submitButton_Click` 事件处理程序的 `if (upload.HasFile)` 块关闭之后添加 `refreshData = true;` 语句：
 
-图 8.5 显示了 `Thumbnails2.sln` 项目对原始 `Thumbnails.sln` 项目所做的更改，以阴影元素表示。
 
-图 8.5 `Thumbnails2.sln` 解决方案中 `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目的流程图。
+3. 在`submitButton_Click`事件处理程序的`if (upload.HasFile)`块关闭之后添加`refreshData = true;`语句：
+
+图 8.5 显示了`Thumbnails2.sln`项目对原始`Thumbnails.sln`项目所做的更改，以阴影元素表示。
+
+图 8.5 `Thumbnails2.sln`解决方案中`Thumbnails_WebRole`和`Thumbnails_WorkerRole`项目的流程图。
 
 ![8.5](img/c08f005.jpg)
 
-`\WROX\Azure\Chapter08\Thumbnails2\Thumbnails2.sln` 项目已应用上述修改。若要在混合模式下测试该项目，请将 `ServiceConfiguration.cscfg` 文件的 `<Role>` 部分更改为对应你的 `AccountName` 和 `AccountSharedKey` 值。
+`\WROX\Azure\Chapter08\Thumbnails2\Thumbnails2.sln`项目已应用上述修改。若要在混合模式下测试该项目，请将`ServiceConfiguration.cscfg`文件的`<Role>`部分更改为对应你的`AccountName`和`AccountSharedKey`值。
 
 ## 启用缩略图删除
 
-原始的 `Thumbnails.sln` 和修改后的 `Thumbnails2.sln` 解决方案允许向容器添加缩略图，但不支持删除它们。`\WROX\Azure\Chapter08\PhotoGallery\PhotoGallery.sln` 项目添加了一个 `gvBlobs` `GridView`，用于列出缩略图 blob 并允许用户删除缩略图以及关联的原始图像 blob。图 8.6 显示了在生产环境（Production Fabric）中运行且加载了 11 个缩略图的 `PhotoGallery` 服务。
+原始的`Thumbnails.sln`和修改后的`Thumbnails2.sln`解决方案允许向容器添加缩略图，但不支持删除它们。`\WROX\Azure\Chapter08\PhotoGallery\PhotoGallery.sln`项目添加了一个`gvBlobs` `GridView`，用于列出缩略图 blob 并允许用户删除缩略图以及关联的原始图像 blob。图 8.6 显示了在生产环境（Production Fabric）中运行且加载了 11 个缩略图的`PhotoGallery`服务。
 
-图 8.6 添加到 `Thumbnails2` 页面的 `GridView`，用于显示缩略图 blob 列表并启用删除缩略图和源图像 blob。
+图 8.6 添加到`Thumbnails2`页面的`GridView`，用于显示缩略图 blob 列表并启用删除缩略图和源图像 blob。
 
 ![8.6](img/c08f006.jpg)
 
-将 `gvBlobs` `GridView` 添加到 `Thumbnails2.sln` 项目是一个相对直接的过程：
+将`gvBlobs` `GridView`添加到`Thumbnails2.sln`项目是一个相对直接的过程：
 
-1. 将 `GridView` 添加到 `ListView` 下方的更新面板中并指定列属性。blob 的 `Content-Language` 和 `Content-Encoding` 属性为空，因此这些列不会显示。
+1. 将`GridView`添加到`ListView`下方的更新面板中并指定列属性。blob 的`Content-Language`和`Content-Encoding`属性为空，因此这些列不会显示。
 
-2. 添加一个 `HeaderText` 属性为 `Blobs` 的 `Delete` 命令字段。
+2. 添加一个`HeaderText`属性为`Blobs`的`Delete`命令字段。
 
-3. 在 `Page_PreRender` 事件处理程序中的 `thumbnails.DataBind` 指令之后添加以下指令：
+3. 在`Page_PreRender`事件处理程序中的`thumbnails.DataBind`指令之后添加以下指令：
 
 ```csharp
 gvBlobs.DataSource = GetPhotoGalleryContainer().ListBlobs("thumbnails/",
+
     false);
+
 gvBlobs.DataBind();
 ```
 
-4. 添加一个 `gvBlobs_RowDeleting` 事件处理程序，代码参考代码 8-27：
+4. 添加一个`gvBlobs_RowDeleting`事件处理程序，代码参考代码 8-27：
 
 代码 8-27: WorkerRole 生成的 HTTP 请求和响应消息
+
 ```csharp
 protected void gvBlobs_RowDeleting(object sender,
+
   System.Web.UI.Controls.GridViewEventArgs e)
+
 {
+
     // 删除指定的缩略图 blob
+
     int index = e.RowIndex;
+
     if (index < gvBlobs.Keys.Count)
+
     {
+
         // 至少保留三个缩略图
+
         if (gvBlobs.Keys.Count > 3)
+
         {
+
             // 删除缩略图
+
             string blobName = (string)gvBlobs.Keys[index].Value;
+
             BlobContainer blobContainer = GetPhotoGalleryContainer();
+
             if (blobContainer.DoesBlobExist(blobName))
+
             {
+
                 blobContainer.DeleteBlob(blobName);
+
                 RoleManager.WriteToLog("Information",
+
                     string.Format("Deleted {0}", blobName));
+
             }
+
             else
+
                 RoleManager.WriteToLog("Information",
+
                     string.Format("Failed to delete {0}", blobName));
+
             // 删除原始图像 blob（不带缩略图/前缀）
+
             blobName = blobName.Substring(11);
+
             if (blobContainer.DoesBlobExist(blobName))
+
             {
+
                 blobContainer.DeleteBlob(blobName);
+
                 RoleManager.WriteToLog("Information",
+
                     string.Format("Deleted {0}", blobName));
+
             }
+
             else
+
                 RoleManager.WriteToLog("Information",
+
                     string.Format("Failed to delete {0}", blobName));
+
             // 设置 refreshData 标记
+
             refreshData = true;
+
         }
+
     }
+
     else
+
         statusMessage.Text = "Please leave at least 3 thumbnails";
+
 }
 ```
 
-PhotoGallery.sln 的现场演示位于 http://oakleaf5.cloudapp.net/。
+
+
+`PhotoGallery.sln` 的现场演示位于 `http://oakleaf5.cloudapp.net/`。
 
 ### 总结
 
-Azure Queue 提供了一个可靠的交付系统来支持异步工作调度。队列是 Azure 服务提供的用于持久化交互指令的唯一方法；表和 blob 仅持久化状态。
+`Azure Queue` 提供了一个可靠的交付系统来支持异步工作调度。队列是 `Azure` 服务提供的用于持久化交互指令的唯一方法；表和 `blob` 仅持久化状态。
 
-单个 StorageAccount 可以容纳无限数量的 MessageQueue，每个 MessageQueue 可以持久化无限数量的消息，消息可以存储高达 8KB 的内容。你可以将大于 8KB 的消息存储在 blob 中，并用 blob 的 Name 属性值替换内容。队列具有 REST API，这使得任何语言编写的应用程序都能通过互联网或内网上的 HTTP 或 HTTPS 请求和响应消息来访问队列。StorageClient 库让开发者将 Azure Queue 视为 .NET 对象。
+单个 `StorageAccount` 可以容纳无限数量的 `MessageQueue`，每个 `MessageQueue` 可以持久化无限数量的消息，消息可以存储高达 `8KB` 的内容。你可以将大于 `8KB` 的消息存储在 `blob` 中，并用 `blob` 的 `Name` 属性值替换内容。队列具有 `REST API`，这使得任何语言编写的应用程序都能通过互联网或内网上的 `HTTP` 或 `HTTPS` 请求和响应消息来访问队列。`StorageClient` 库让开发者将 `Azure Queue` 视为 `.NET` 对象。
 
+维基百科将 `SAML` 描述为“一种基于 `XML` 的标准，用于在安全域之间交换身份验证和授权数据，即在身份提供者（断言的生产者）和服务提供提供者（断言的消费者）之间。”`SAML` “是 `OASIS` 安全服务技术委员会的产物，并已成为企业身份管理领域中许多 `Web` 单点登录（`SSO`）解决方案的终极标准。”有关 `SAML` 技术委员会（`TC`）的更多信息请参阅 [`bit.ly/Xsv31`](http://bit.ly/Xsv31) 和 [`www.oasis-open.org/committees/tc_home.php?wg_abbrev=security`](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security)。`saml.xml.org` 网站（[`saml.xml.org/`](http://saml.xml.org/)）是开发者获取 `SAML` 资源的主要来源。
 
-
-
-
-维基百科将 `SAML` 描述为“一种基于 XML 的标准，用于在安全域之间交换身份验证和授权数据，即在身份提供者（断言的生产者）和服务提供提供者（断言的消费者）之间。”`SAML` “是 OASIS 安全服务技术委员会的产物，并已成为企业身份管理领域中许多 Web 单点登录（SSO）解决方案的终极标准。”有关 SAML 技术委员会（TC）的更多信息请参阅 [`bit.ly/Xsv31`](http://bit.ly/Xsv31) 和 [www.oasis-open.org/committees/tc_home.php?wg_abbrev=security](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=security)。`saml.xml.org` 网站（[`saml.xml.org/`](http://saml.xml.org/))）是开发者获取 `SAML` 资源的主要来源。
-
-`ACS` 是托管在 `Windows Azure` 中的一种 `STS` 基础设施，用于验证凭据并发布令牌。每个 `.NET Services` 解决方案都有一个私有的、隔离的 `STS` 可用。`ACS` 还提供了一个基于声明（claims-based）规则的角色授权框架。将 `ACS` 与 `Azure WebRole` 或其他 `.NET` 集成需要安装 `Windows Identity Foundation`（`WIF`，以前称为“Geneva”框架），该框架在本书编写时处于 Beta 2 版本。`WIF` 实现了 `System.IdentityModel` 命名空间以简化基于声明的应用程序。它基于 `Windows Communication Foundation`（`WCF`）基础设施来实现 `WS-Trust`，并带有一个名为 `WS-Federation Authentication Module`（`FAM`）的 `HttpModule`，简化了在基于浏览器的应用程序中实现 `WS-Federation`。
+`ACS` 是托管在 `Windows Azure` 中的一种 `STS` 基础设施，用于验证凭据并发布令牌。每个 `.NET Services` 解决方案都有一个私有的、隔离的 `STS` 可用。`ACS` 还提供了一个基于声明（`claims-based`）规则的角色授权框架。将 `ACS` 与 `Azure WebRole` 或其他 `.NET` 集成需要安装 `Windows Identity Foundation`（`WIF`，以前称为“Geneva”框架），该框架在本书编写时处于 `Beta 2` 版本。`WIF` 实现了 `System.IdentityModel` 命名空间以简化基于声明的应用程序。它基于 `Windows Communication Foundation`（`WCF`）基础设施来实现 `WS-Trust`，并带有一个名为 `WS-Federation Authentication Module`（`FAM`）的 `HttpModule`，简化了在基于浏览器的应用程序中实现 `WS-Federation`。
 
 正如本章后面提到的，在本书编写时 `System.IdentityModel` 命名空间与 `Windows Azure` 不兼容。
 
-`WS-Federation` 是一种 Web 服务（`WS-*`）规范，用于从各种来源（域）联合身份，以简化安全 Web 站点和基于 SOAP 的服务的共享。本章演示了如何由基于 `WCF` 的 SOAP 客户端和 Web 服务使用微软当前的 `WS-Federation` 实现功能。`WS-Federation` 还定义了在浏览器环境中表达 `WS-Trust` 协议和 `WS-Federation` 扩展的语法。这种语法为 Web 服务和基于浏览器的应用程序联合身份操作提供了一种通用方法。
+`WS-Federation` 是一种 `Web` 服务（`WS-*`）规范，用于从各种来源（域）联合身份，以简化安全 `Web` 站点和基于 `SOAP` 的服务的共享。本章演示了如何由基于 `WCF` 的 `SOAP` 客户端和 `Web` 服务使用微软当前的 `WS-Federation` 实现功能。`WS-Federation` 还定义了在浏览器环境中表达 `WS-Trust` 协议和 `WS-Federation` 扩展的语法。这种语法为 `Web` 服务和基于浏览器的应用程序联合身份操作提供了一种通用方法。
 
 尽管 `ACS` 目前拥有用户名/密码、`Windows CardSpace v1` 自发行信息卡以及 `X.509` 证书的凭据存储，但 `.NET Services` 团队并没有长期让 `ACS` 作为身份提供者的计划。`ACS` 未来将使用 `Windows Live Identity Services`（`WLID`）。
 
@@ -5959,114 +6109,120 @@ Azure Queue 提供了一个可靠的交付系统来支持异步工作调度。�
 
 ## 创建 .NET Services 解决方案
 
-在利用 `ACS` 和“Geneva”框架功能之前，你必须创建一个 `.NET Services` 解决方案。`.NET Services` 解决方案提供了所有的三个 `.NET Services`——`ACS`、`ServiceBus` 和 `Workflow Services`，除 `ACS` 以外的服务将在后面的章节中讨论。`.NET Services` 在 2009 年 3 月的社区技术预览（CTP）中通过针对大多数操作的 `HTTP/HTTPS` 请求和响应消息获得了 `RESTful API`。
+在利用 `ACS` 和“Geneva”框架功能之前，你必须创建一个 `.NET Services` 解决方案。`.NET Services` 解决方案提供了所有的三个 `.NET Services`——`ACS`、`ServiceBus` 和 `Workflow Services`，除 `ACS` 以外的服务将在后面的章节中讨论。`.NET Services` 在 2009 年 3 月的社区技术预览（`CTP`）中通过针对大多数操作的 `HTTP/HTTPS` 请求和响应消息获得了 `RESTful API`。
 
 要配置一组 `.NET Services`，请访问 [`portal.ex.azure.microsoft.com/`](http://portal.ex.azure.microsoft.com/) 并接受使用条款以打开 `My Subscriptions` 页面。点击 `Add Solution` 链接打开 `Create Solution` 页面，在文本框中输入解决方案唯一的名称（本示例类似于 `oakleaf-acs`），点击 `Validate Name` 链接测试唯一性（参见图 9.1），并点击 `OK` 将解决方案添加到 `My Subscriptions` 页面并开始配置过程（参见图 9.2）。
 
-`.NET Service Service 解决方案的名称将成为 `DNS` 名称的一部分，因此必须遵循 `DNS` 命名规则。解决方案名称必须以字母开头，随后是字母和数字的组合，但禁止以 `xn`、`Xn`、`xN` 或 `XN` 前缀开头。允许的特殊字符只有连字符（`-`）。解决方案名称必须唯一，因此你不能创建一个 `oakleaf-acs` 解决方案；请替换你自己的解决方案名称以防止冲突。
+`.NET Service Solution` 的名称将成为 `DNS` 名称的一部分，因此必须遵循 `DNS` 命名规则。解决方案名称必须以字母开头，随后是字母和数字的组合，但禁止以 `xn`、`Xn`、`xN` 或 `XN` 前缀开头。允许的特殊字符只有连字符（`-`）。解决方案名称必须唯一，因此你不能创建一个 `oakleaf-acs` 解决方案；请替换你自己的解决方案名称以防止冲突。
 
 `Access Control Service` 和 `Service Bus Registry` 之间 `Status` 列中的空白将在随着 `.NET Framework 4` 发布恢复 `Workflow Services` 时被一个 `Workflow Service` 链接填充。`Workflow Services` 曾在 2009 年 7 月的 `.NET Services` `CTP` 及之后的版本中被临时移除。
 
 点击 `Access Control Service` 链接打开 `Manage the Microsoft .NET Access Control` 页面（参见图 9.3）。
 
-图 9.1 为 .NET Services 解决方案分配名称。
+图 9.1 为 `.NET Services` 解决方案分配名称。
 
-图 9.2 Create Solution 页面显示你添加的每个服务。
+图 9.2 `Create Solution` 页面显示你添加的每个服务。
 
-图 9.3 一段时间后，Windows Azure 将配置 .NET 解决方案并打开其管理页面。
+图 9.3 一段时间后，`Windows Azure` 将配置 `.NET` 解决方案并打开其管理页面。
 
 ## 安装 .NET SDK 和其他工具
 
-下载并安装 .NET SDK 是启用使用 `ServiceBus` 或 `Workflow` 服务的 `ACS` 示例所需的。`Azure Management Tools` 和 `Azure Service Kit` 是可选的，但你会发现它们的内容有助于了解更多关于 .NET Services 和 Azure 应用程序的身份管理知识。
+下载并安装 `.NET SDK` 是启用使用 `ServiceBus` 或 `Workflow` 服务的 `ACS` 示例所需的。`Azure Management Tools` 和 `Azure Service Kit` 是可选的，但你会发现它们的内容有助于了解更多关于 `.NET Services` 和 `Azure` 应用程序的身份管理知识。
 
-在本书编写时，.NET Services SDK 的最新版本是 2009 年 7 月的。SDK 包含了 `Microsoft.ServiceBus` 程序集、`C#` 和 `VB` 示例代码以及初步的 `ACS` 文档。你可以从此处获取最新版本的 SDK，它会创建一个程序组：[`bit.ly/bL2xY`](http://bit.ly/bL2xY)、[`go.microsoft.com/fwlink?LinkID=12948`](http://go.microsoft.com/fwlink?LinkID=12948)。.NET Services 开发中心位于 [`bit.ly/bhAKT`](http://bit.ly/bhAKT)、[`msdn.microsoft.com/en-us/azure/netservices.aspx`](http://msdn.microsoft.com/en-us/azure/netservices.aspx)，而 .NET Services – 技术讨论论坛位于 [`bit.ly/2T98wb`](http://bit.ly/2T98wb)。
+在本书编写时，`.NET Services SDK` 的最新版本是 2009 年 7 月的。`SDK` 包含了 `Microsoft.ServiceBus` 程序集、`C#` 和 `VB` 示例代码以及初步的 `ACS` 文档。你可以从此处获取最新版本的 `SDK`，它会创建一个程序组：[`bit.ly/bL2xY`](http://bit.ly/bL2xY)、[`go.microsoft.com/fwlink?LinkID=12948`](http://go.microsoft.com/fwlink?LinkID=12948)。`.NET Services` 开发中心位于 [`bit.ly/bhAKT`](http://bit.ly/bhAKT)、[`msdn.microsoft.com/en-us/azure/netservices.aspx`](http://msdn.microsoft.com/en-us/azure/netservices.aspx)，而 `.NET Services` – 技术讨论论坛位于 [`bit.ly/2T98wb`](http://bit.ly/2T98wb)。
 
-.NET Services SDK 的 Java 和 Ruby 版本分别可获取自：[`bit.ly/Zjwx`](http://bit.ly/Zjwx) 和 [www.schakra.com/stuff-we-do/jdotnetservices.html](http://www.schakra.com/stuff-we-do/jdotnetservices.html)。
+`.NET Services SDK` 的 `Java` 和 `Ruby` 版本分别可获取自：[`bit.ly/Zjwx`](http://bit.ly/Zjwx) 和 [`www.schakra.com/stuff-we-do/jdotnetservices.html`](http://www.schakra.com/stuff-we-do/jdotnetservices.html)。
 
 ## Azure 管理工具（可选）
 
-Azure 管理工具提供了微软管理控制台（MMC）色插和 Windows PowerShell 命令行，允许用户配置和管理 .NET 访问控制服务以及 .NET 工作流服务。这些工具允许你在 MMC 图形界面中查看和更改 .NET 访问控制范围和规则，而不是在 .NET Services 门户页面中操作，并部署和查看工作流。
+`Azure 管理工具`提供了微软管理控制台（`MMC`）插件和 `Windows PowerShell` 命令行，允许用户配置和管理 `.NET 访问控制服务`以及 `.NET 工作流服务`。这些工具允许你在 `MMC` 图形界面中查看和更改 `.NET 访问控制`范围和规则，而不是在 `.NET Services` 门户页面中操作，并部署和查看工作流。
 
-
-
-
-Vittorio Bertocci 在 2008 年 1 月发表的博客文章通过 Azure 服务管理控制台查看 .NET 访问服务的视觉之旅, [`blogs.msdn.com/vbertocci/archive/2009/01/08/a-visual-tour-of-the-net-access-control-service-via-azure-services-management-console.aspx`](http://blogs.msdn.com/vbertocci/archive/2009/01/08/a-visual-tour-of-the-net-access-control-service-via-azure-services-management-console.aspx)) 向您展示了如何使用 Azure 门户中的“管理 Microsoft .NET 访问服务”页面，替代插件 GUI 中繁琐的配置范围和角的过程。
+`Vittorio Bertocci` 在 2008 年 1 月发表的博客文章通过 `Azure 服务管理控制台`查看 `.NET 访问服务`的视觉之旅，[`blogs.msdn.com/vbertocci/archive/2009/01/08/a-visual-tour-of-the-net-access-control-service-via-azure-services-management-console.aspx`](http://blogs.msdn.com/vbertocci/archive/2009/01/08/a-visual-tour-of-the-net-access-control-service-via-azure-services-management-console.aspx) 向您展示了如何使用 `Azure` 门户中的“管理 `Microsoft .NET 访问服务`”页面，替代插件 `GUI` 中繁琐的配置范围和角的过程。
 
 ### Azure 服务训练套件（可选）
 
-Azure 服务训练套件包含了实操实验室（HOLs）、PowerPoint 演示文稿和演示，旨在帮助您学习如何使用 Windows Azure 平台。IntroAccessControlService HOL 以及 IntroNetServices 和 IndentityAccessControlServices 演示文稿均适用于本章内容。您可以从 [`bit.ly/DAZKt`](http://bit.ly/DAZKt), [`go.microsoft.com/fwlink/?LinkID=130354`](http://go.microsoft.com/fwlink/?LinkID=130354) 下载最新的 Azure 服务训练套件。
+`Azure 服务训练套件`包含了实操实验室（`HOLs`）、`PowerPoint` 演示文稿和演示，旨在帮助您学习如何使用 `Windows Azure` 平台。`IntroAccessControlService HOL` 以及 `IntroNetServices` 和 `IndentityAccessControlServices` 演示文稿均适用于本章内容。您可以从 [`bit.ly/DAZKt`](http://bit.ly/DAZKt)，[`go.microsoft.com/fwlink/?LinkID=130354`](http://go.microsoft.com/fwlink/?LinkID=130354) 下载最新的 `Azure 服务训练套件`。
 
 ### Microsoft “Geneva” Beta 2（安装前请验证兼容性）
 
-Microsoft “Geneva”的 Beta 2 版本于 2009 年 6 月发布，并可在 [`bit.ly/4xUgjs`](http://bit.ly/4xUgjs), [www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=118c3588-9070-426a-b655–6cec0a92c10b](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=118c3588-9070-426a-b655–6cec0a92c10b) 下载。“Geneva”由以下三个组件组成：
+Microsoft “Geneva”的 `Beta 2` 版本于 2009 年 6 月发布，并可在 [`bit.ly/4xUgjs`](http://bit.ly/4xUgjs)，[`www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=118c3588-9070-426a-b655–6cec0a92c10b`](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=118c3588-9070-426a-b655–6cec0a92c10b) 下载。“Geneva”由以下三个组件组成：
 
-*   Windows Identity Foundation（“Geneva”框架）：用于构建使用声明（claims）做出用户访问决策的 .NET 应用程序
-*   Active Directory Federation Services（“Geneva”服务器）：安全令牌服务 (STS)，用于颁发和转换声明、启用联合以及管理用户访问
-*   Windows CardSpace（Windows CardSpace “Geneva”）：帮助用户导航访问决策，并供开发者为用户构建身份验证体验
+* `Windows Identity Foundation`（“Geneva”框架）：用于构建使用声明（`claims`）做出用户访问决策的 `.NET` 应用程序
+* `Active Directory Federation Services`（“Geneva”服务器）：安全令牌服务（`STS`），用于颁发和转换声明、启用联合以及管理用户访问
+* `Windows CardSpace`（`Windows CardSpace` “Geneva”）：帮助用户导航访问决策，并供开发者为用户构建身份验证体验
 
-您可以从 [`bit.ly/qseXe`](http://bit.ly/qseXe), [`connect.microsoft.com/site/sitehome.aspx?SiteID=642`](https://connect.microsoft.com/site/sitehome.aspx?SiteID=642) 下载上述组件以及“Geneva”白皮书和概述。ClaimsBased-Access-Platform（代号为“Geneva”）的基于声明的访问平台（CBA）论坛位于 [`bit.ly/ADmws`](http://bit.ly/ADmws), [`social.msdn.microsoft.com/Forums/en-US/Geneva/threads/`](http://social.msdn.microsoft.com/Forums/en-US/Geneva/threads/)，而更新频率较低的 MSDN “Geneva”团队博客位于 [`bit.ly/xcK6h`](http://bit.ly/xcK6h), [`blogs.msdn.com/card/default.aspx`](http://blogs.msdn.com/card/default.aspx)。Channel 9 在 [`bit.ly/14hig7`](http://bit.ly/14hig7), [`channel9.msdn.com/identity/`](http://channel9.msdn.com/identity/) 的“The Id Element”节目中提供了对微软产品组员及其他人关于身份、ACS 和“Geneva”的采访。
+您可以从 [`bit.ly/qseXe`](http://bit.ly/qseXe)，[`connect.microsoft.com/site/sitehome.aspx?SiteID=642`](https://connect.microsoft.com/site/sitehome.aspx?SiteID=642) 下载上述组件以及“Geneva”白皮书和概述。`ClaimsBased-Access-Platform`（代号为“Geneva”）的基于声明的访问平台（`CBA`）论坛位于 [`bit.ly/ADmws`](http://bit.ly/ADmws)，[`social.msdn.microsoft.com/Forums/en-US/Geneva/threads/`](http://social.msdn.microsoft.com/Forums/en-US/Geneva/threads/)，而更新频率较低的 `MSDN` “Geneva”团队博客位于 [`bit.ly/xcK6h`](http://bit.ly/xcK6h)，[`blogs.msdn.com/card/default.aspx`](http://blogs.msdn.com/card/default.aspx)。`Channel 9` 在 [`bit.ly/14hig7`](http://bit.ly/14hig7)，[`channel9.msdn.com/identity/`](http://channel9.msdn.com/identity/) 的“The `Id Element`”节目中提供了对微软产品组员及其他人关于身份、`ACS` 和“Geneva”的采访。
 
-Microsoft “Geneva” Beta 1 与 Windows Azure 平台（2009 年 3 月 CTP）不兼容，使用“Geneva”框架的 WebRole 应用程序无法在 Azure 生产环境中运行。有关此问题的更多信息，请参阅 Vittorio Bertocci 于 2009 年 4 月 1 日发表的博客文章声明与云：请包涵我们的失误, [`blogs.msdn.com/vbertocci/archive/2009/04/01/claims-and-cloud-pardon-our-dust.aspx`](http://blogs.msdn.com/vbertocci/archive/2009/04/01/claims-and-cloud-pardon-our-dust.aspx))。
+Microsoft “Geneva” `Beta 1` 与 `Windows Azure` 平台（2009 年 3 月 `CTP`）不兼容，使用“Geneva”框架的 `WebRole` 应用程序无法在 `Azure` 生产环境中运行。有关此问题的更多信息，请参阅 `Vittorio Bertocci` 于 2009 年 4 月 1 日发表的博客文章声明与云：请包涵我们的失误，[`blogs.msdn.com/vbertocci/archive/2009/04/01/claims-and-cloud-pardon-our-dust.aspx`](http://blogs.msdn.com/vbertocci/archive/2009/04/01/claims-and-cloud-pardon-our-dust.aspx)。
 
-一位微软技术支持代表在 Windows Azure 论坛报告称，Windows CardSpace “Geneva”与 Windows Vista 和 Windows 7 自带的 Windows CardSpace 程序兼容。卸载“Geneva”框架将恢复原始的 Windows CardSpace 程序。请参见“Windows Cardspace “Geneva” (Beta 2) 与 Windows Cardspace (Default) 控制面板程序不兼容”错误报告，[`bit.ly/e408T`](http://bit.ly/e408T), [`connect.microsoft.com/site/sitehome.aspx?SiteID=642`](https://connect.microsoft.com/site/sitehome.aspx?SiteID=642)。微软于 2009 年 7 月 13 日宣布了对“Geneva”的变更。
-
-
-
+一位微软技术支持代表在 `Windows Azure` 论坛报告称，`Windows CardSpace` “Geneva”与 `Windows Vista` 和 `Windows 7` 自带的 `Windows CardSpace` 程序兼容。卸载“Geneva”框架将恢复原始的 `Windows CardSpace` 程序。请参见“`Windows Cardspace` “Geneva” (`Beta 2`) 与 `Windows Cardspace` (Default) 控制面板程序不兼容”错误报告，[`bit.ly/e408T`](http://bit.ly/e408T)，[`connect.microsoft.com/site/sitehome.aspx?SiteID=642`](https://connect.microsoft.com/site/sitehome.aspx?SiteID=642)。微软于 2009 年 7 月 13 日宣布了对“Geneva”的变更。
 
 ![9.6](img/c09f006.jpg)
 
 点击 `Edit Profile Information`（编辑配置文件信息）链接以打开声明配置页的扩展版本。在 `First Name`（名）和 `Last Name`（姓）文本框中输入虚假信息，接受默认的 `Email Address`（电子邮件），并在 `Group`（组）文本框中输入 `Domain Users`。通过勾选四个相关的复选框将它们标记为您的默认配置文件（参见图 9.7）。
 
-图 9.7 用于配合 Azure Services Training Kit 的 `Federation.sln` HOL 使用的、带有默认条目的声明配置页。
+图 9.7 用于配合 `Azure Services Training Kit` 的 `Federation.sln` `HOL` 使用的、带有默认条目的声明配置页。
 
 ![9.7](img/c09f007.jpg)
 
-下表将声明配置页的友好名称与 SOAP WS-* 身份/声明 URIs 关联起来。该页面使用友好名称来避免泄露有关您个人或公司身份的信息。
+下表将声明配置页的友好名称与 `SOAP WS-*` 身份/声明 `URIs` 关联起来。该页面使用友好名称来避免泄露有关您个人或公司身份的信息。
 
 | 友好名称 | 声明类型 URI |
 | :--- | :--- |
-| 特定特定 ID | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier]` |
-| 名 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname]` |
-| 姓 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname]` |
-| 电子邮件地址 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress]` |
-| 出生日期 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth]` |
-| 城市 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/locality]` |
-| 州/省 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince]` |
-| 国家 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country]` |
-| 电话 | `[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/mobilephone]` |
-| 组 | `[http://schemas.xmlsoap.org/claims/Group]` |
-| 角色 | `[http://ipsts.federatedidentity.net/role]` |
-| 成员级别 | `[http://ipsts.federatedidentity.net/membershiplevel]` |
+| 特定特定 `ID` | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier` |
+| 名 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` |
+| 姓 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname` |
+| 电子邮件地址 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
+| 出生日期 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/dateofbirth` |
+| 城市 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/locality` |
+| 州/省 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince` |
+| 国家 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country` |
+| 电话 | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/mobilephone` |
+| 组 | `http://schemas.xmlsoap.org/claims/Group` |
+| 角色 | `http://ipsts.federatedidentity.net/role` |
+| 成员级别 | `http://ipsts.federatedidentity.net/membershiplevel` |
 
-点击 `Submit`（提交）返回 `Edit Profile Information/Manage Relying Party Policies`（编辑配置文件信息/管理依赖方策略）页面，点击 `Save`（保存）返回 `Manage Relying Party Policies`（管理依赖方策略），点击 `Manage Relying Party Policies`链接打开依赖方页面，该页面包含 HTTPS 和 HTTP 策略的 `Edit/View`（编辑/查看）按钮。点击不安全的 `http://relyingparty.federatedidentity.net` 实体方的 `EditView` 按钮打开 `Edit a Policy`（编辑策略）页面。勾选您想要发布的配置文件项复选框，点击 `Browse`（浏览），并导航到包含在 Azure Services Toolkit 中的 ACS 公钥文件（参见图 9.8，该图仅显示了前五项）。
+点击 `Submit`（提交）返回 `Edit Profile Information/Manage Relying Party Policies`（编辑配置文件信息/管理依赖方策略）页面，点击 `Save`（保存）返回 `Manage Relying Party Policies`（管理依赖方策略），点击 `Manage Relying Party Policies` 链接打开依赖方页面，该页面包含 `HTTPS` 和 `HTTP` 策略的 `Edit/View`（编辑/查看）按钮。点击不安全的 `http://relyingparty.federatedidentity.net` 实体方的 `EditView` 按钮打开 `Edit a Policy`（编辑策略）页面。勾选您想要发布的配置文件项复选框，点击 `Browse`（浏览），并导航到包含在 `Azure Services Toolkit` 中的 `ACS` 公钥文件（参见图 9.8，该图仅显示了前五项）。
 
-图 9.8 为示例 Federated Identity Http Sample Relying Party 创建策略。
+图 9.8 为示例 `Federated Identity Http Sample Relying Party` 创建策略。
 
 ![9.8](img/c09f008.jpg)
 
 证书位于 `\AzureServicesKit\Labs\IntroAccessControlService\Assets\accesscontrol.windows.net.cer`。
 
-点击 `Save`（保存）保存您的更改并返回 `Edit Profile Information/Manage Relying Party Policies` 页面。点击 `Download Your Username/Password`（下载您的用户名/密码）卡片按钮打开 `InformationCard.crd` 文件的文件下载对话框，并在询问是否要在本地计算机上保存带有 Windows CardSpace 的卡片时点击 `Yes`。这将 CardSpace 信息卡片凭据添加到 Windows CardSpace 面板中（参见图 9.9）。Vista 及更高版本的操作系统具有 Windows CardSpace 应用程序，用于为支持此身份协议的应用选择 CardSpace 凭据。
+点击 `Save`（保存）保存您的更改并返回 `Edit Profile Information/Manage Relying Party Policies` 页面。点击 `Download Your Username/Password`（下载您的用户名/密码）卡片按钮打开 `InformationCard.crd` 文件的文件下载对话框，并在询问是否要在本地计算机上保存带有 `Windows CardSpace` 的卡片时点击 `Yes`。这将 `CardSpace` 信息卡片凭据添加到 `Windows CardSpace` 面板中（参见图 9.9）。`Vista` 及更高版本的操作系统具有 `Windows CardSpace` 应用程序，用于为支持此身份协议的应用选择 `CardSpace` 凭据。
 
 ![9.9](img/c09f009.jpg)
 
-对证书支持的卡片重复上述步骤，这需要您点击链接以生成并下载 `FederatedIdentity.pfx`，并点击 `Open`（打开）启动证书导入向导。点击 `Next`（下一步），接受默认 Name（名称），点击 `Next`（下一步），输入 `1234` 作为密码，并点击 `Next`（下一步）将证书支持的卡片添加到 Windows CardSpace 面板。
+对证书支持的卡片重复上述步骤，这需要您点击链接以生成并下载 `FederatedIdentity.pfx`，并点击 `Open`（打开）启动证书导入向导。点击 `Next`（下一步），接受默认 `Name`（名称），点击 `Next`（下一步），输入 `1234` 作为密码，并点击 `Next`（下一步）将证书支持的卡片添加到 `Windows CardSpace` 面板。
 
 ### 探索 CardSpace 信息卡片的 HTTP 请求和响应
 
-`http://ipsts.federatedidentity.net/` URI 的 `Edit Profile Information/Manage Relying Party Policies` 页面上的 `Download Your Username/Password` 按钮发送了列表 9-1 所示的 HTTP 请求，发送到您的计算机，将 `\AzureServicesKit\Labs\IntroAccessControlService\Assets\accesscontrol.windows.net.cer` 添加到 Windows CardSpace 面板中，这显示了图 9.8 中带有三项数据的 Windows Identity 请求的二进制内容（参见[9781118058756c09.xhtml_c09_pgml_0001] ）。
+`http://ipsts.federatedidentity.net/` URI 的 `Edit Profile Information/Manage Relying Party Policies` 页面上的 `Download Your Username/Password` 按钮发送了列表 9-1 所示的 `HTTP` 请求，发送到您的计算机，将 `\AzureServicesKit\Labs\IntroAccessControlService\Assets\accesscontrol.windows.net.cer` 添加到 `Windows CardSpace` 面板中，这显示了图 9.8 中带有三项数据的 `Windows Identity` 请求的二进制内容（参见[9781118058756c09.xhtml_c09_pgml_0001]）。
+
+
+
+`POST /MgmtConsole.aspx HTTP/1.1`
+
+`Host: ipsts.federatedidentity.net`
+
+`Accept-Encoding: gzip, deflate`
+
+`Accept: image/gif, image/jpeg,application/x-ms,application/vnd.ms-xap,application/vnd.ms-powerpoint,application/x-shock,/*`
+
+`Referer: https://ipsts.federatedidentity.net/UserProfile.aspx`
+
+`User-Agent: Mozilla/4.0 (compatible; Windows NT 6.0; MSIE 8.0; Trident/4.0; .NET CLR 2.0.5073; Media Center PC 5.0; .NET CLR 3.5.2102; .NET CLR 3.5.3042; .NET CLR 3.5.3072; .NET CLR 3.0; OfficeLive.1`
+
+`Content-Type: application/x-www-form-urlencoded`
+
+`Content-Length: 399`
+
+`Connection: Keep-Alive`
+
+`Cookie: ASP.NET_SessionId=c3qfhfvznt1g;.ASPXAUTH=C5AA49D1D055CE807292EDA41E547598C9B4F472E54BAFA0B03C17657`
 
 ```
-POST /MgmtConsole.aspx HTTP/1.1
-Host: ipsts.federatedidentity.net
-Accept-Encoding: gzip, deflate
-Accept: image/gif, image/jpeg,application/x-ms,application/vnd.ms-xap,application/vnd.ms-powerpoint,application/x-shock,/*
-Referer: https://ipsts.federatedidentity.net/UserProfile.aspx
-User-Agent: Mozilla/4.0 (compatible; Windows NT 6.0; MSIE 8.0; Trident/4.0; .NET CLR 2.0.5073; Media Center PC 5.0; .NET CLR 3.5.2102; .NET CLR 3.5.3042; .NET CLR 3.5.3072; .NET CLR 3.0; OfficeLive.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 399
-Connection: Keep-Alive
-Cookie: ASP.NET_SessionId=c3qfhfvznt1g;.ASPXAUTH=C5AA49D1D055CE807292EDA41E547598C9B4F472E54BAFA0B03C17657
 __EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUKMTUzgwMDIxNWQYAQUeX19Db250cm9sc1JlcpcmVQb3N0QmFja0tleVfFgFEkxvZ2ln3HVzMSRjdGwwMQUSTG9na5TdGF0dXMxJGN0bDAzBQVjdGwwNwUMSW1hZVCdXR0b2yK3z1NJzQ9rHBuQIlR5JFLlxM%3D__PREVIOUSPAGE=4NPldbOFJanjq31q4SSNo1oBM5xQci6E8YDLyrH2srk1__EVENTVALIDATION=%2FwEWALkJvgBgK%2B3vvOCQKkwImNCwLSwtXkAsHGA9QzJH4lHeSdXMPXSnU%2F9GGE
 ```
 
@@ -6074,205 +6230,358 @@ __EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUKMTUzgwMDIxNWQYAQUeX19Db250
 
 截至 2009 年 3 月 CTP，ACS 相关的身份服务已具有 RESTful API。列表 9-2 是 Windows CardSpace 应用程序在您选择存储信息卡片或交换凭据以请求用户（请求者）访问使用 ACS 授权的应用程序（依赖方）时返回的 HTTP 响应消息。
 
-
-
-
-
 # 列表 9-2：包含列表 9.1 创建的 CardSpace 凭证的 HTTP 响应消息，图 9.8 中的项目已突出，加密内容已截断
 
 ```http
 HTTP/1.1 200 OK
+
 Cache-Control: private
+
 Content-Type: application/x-informationCardFile
+
 Server: Microsoft-IIS/7.0
+
 Content-Disposition: attachment; filename=InformationCard.crd
+
 X-AspNet-Version: 2.0.50727
+
 X-Powered-By: ASP.NET
+
 Date: Mon, 27 Apr 2009 21:47:57 GMT
+
 Content-Length: 26838
 ```
 
 ```xml
 <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+
   <ds:SignedInfo>
+
     <ds:CanonicalizationMethod
+
       Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+
     <ds:SignatureMethod
+
       Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+
     <ds:Reference URI="#_Object_InformationCard">
+
       <ds:Transforms>
+
         <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+
       </ds:Transforms>
+
       <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+
       <ds:DigestValue>bL+zolLfpZdzmfG0C2DbMiwhzxs=</ds:DigestValue>
+
     </ds:Reference>
+
   </ds:SignedInfo>
+
   <ds:SignatureValue>hSb4hICvKaHlYKfkcYhrcvWQyblOhayFijcOFtXjVgQ6Dfat
+
     PM40bx2h2X/KW4W7zyZs
+
     ..
+
     TJWfzTO59HSymfCw5jdzZ1IO3I58d3qwXU/lF3BWLD2IABQSWGW78o/Lc95GY300
+
     gIzWdQTwbOToRLdZoIo=
+
   </ds:SignatureValue>
+
   <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+
     <X509Data>
+
       <X509Certificate>
+
         MIIF+jCCBOKgAwIBAgIKfaH88AAFAADqAjANBgkqhkiG9w0BAQ
+
         izETMBEGCgm
+
         ..
+
         jkwdWg1zNXz+xdq8RjFg6kWtK2tzVqs+T1+R26ciJRqMvuowqUvwSpng
+
         OUHbwVoc7nbVQ==
+
       </X509Certificate>
+
     </X509Data>
+
   </KeyInfo>
+
   <ds:Object Id="_Object_InformationCard">
+
     <i:InformationCard xml:lang="en"
+
       xmlns:i="http://schemas.xmlsoap.org/ws/2005/05/identity">
+
       <i:InformationCardReference>
+
         <i:CardId>
+
           uuid:59d0b9e-05f2-dac31-c572fb56af4
+
         </i:CardId>
+
         <i:CardVersion>2</i:CardVersion>
+
       </i:InformationCardReference>
+
       <i:CardName>ipsts.federatedidentity.net</i:CardName>
+
       <i:CardImage MimeType="image/jpeg">
+
         /9j/4AAQSkJRgABQEAYgAAD/2wBDAAggcGBQgHwcJCQgKDBNDAs
+
         LDBkSEw8UofH0aHBwgJ
+
         ..
+
         FFRRQAUUAFFFFABRRRQAUUAFFFFABRRRQAUUAFFFFABRRRQ
+
         Q==
+
       </i:CardImage>
+
       <i:Issuer>http://ipsts.federatedidentity.net</i:Issuer>
+
       <i:TimeIssued>2009-04-27T21:47:57.837Z</i:TimeIssued>
+
       <i:TimeExpires>2009-05-04T21:47:57.837Z</i:TimeExpires>
+
       <i:TokenList>
+
         <i:TokenService>
+
           <EndpointReference xmlns="http://www.w3.org/2005/08/addressing">
+
             <Address>https://ipsts.federatedidentity.net/SecurityTokenService/InteropSts.svc/Sts</Address>
+
             <Metadata>
+
               <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex"
+
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
                 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+
                 xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+
                 <wsx:MetadataSection
+
                   Dialect="http://schemas.xmlsoap.org/ws/2004/09/mex"
+
                   xmlns="">
+
                   <wsx:MetadataReference>
+
                     <Address xmlns="http://www.w3.org/2005/08/addressing">
+
                       https://ipsts.federatedidentity.net/SecurityTokenService/InteropSts.svc
+
                     </Address>
+
                   </wsx:MetadataReference>
+
                 </wsx:MetadataSection>
+
             </Metadata>
+
             <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/identity">
+
               <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+
                 <X509Data>
+
                   <X509Certificate>
+
                     Kfa88AAFAADqAjANBgkqhkiG9w0BAFQizETMBEgm
+
                     ..
+
                     kWt2tzVqs+T1+R26ciJRqMvuowqvwSpngOUHbwVoc7VQ==
+
                   </X509Certificate>
+
                 </X509Data>
+
               </KeyInfo>
+
             </Identity>
+
           </EndpointReference>
+
           <i:UserCredential>
+
             <i:UsernamePasswordCredential>
+
               <i:Username>rogerj</i:Username>
+
             </i:UsernamePasswordCredential>
+
           </i:UserCredential>
+
         </i:TokenService>
+
       </i:TokenList>
+
       <i:SupportedTokenTypeList>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
+
           http://docs.oasis-open.org/wss/oasis-saml-token-profile-1.1#SAMLV.1
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
+
           http://docs.oasis-open.org/wss/oasis-saml-token-profile-1.1#SAMLV.0
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
+
           http://schemas.microsoft.org/ws/2006/05/identity/model/Kerberos
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
+
           http://schemas.microsoft.org/ws/2006/05/identity/model/sa
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
-          http://schemas.microsoft.org/2008/08/session
+
+          http://schemas.microsoft.com/2008/08/session
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
-          http://schemas.microsoft.org/ws/2006/05/identity/model/UserName
+
+          http://schemas.microsoft.com/ws/2006/05/identity/model/UserName
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
-          http://schemas.microsoft.org/ws/2006/05/identity/model/X509Certificate
+
+          http://schemas.microsoft.com/ws/2006/05/identity/model/X509Certificate
+
         </t:TokenType>
+
         <t:TokenType xmlns="http://schemas.xmlsoap.org/ws/2005/02/trust">
+
           urn:oasis:names:tc:SAML:1.0:assertion
+
         </t:TokenType>
+
       </i:SupportedTokenTypeList>
+
       <i:SupportedClaimTypeList>
+
         <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname">
+
           <i:DisplayTag>名</i:DisplayTag>
+
           <i:Description>人的名字，不是姓或中间名</i:Description>
+
         </i:SupportedClaimType>
+
         <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname">
+
           <i:DisplayTag>姓</i:DisplayTag>
+
           <i:Description>人的姓氏</i:Description>
+
         </i:SupportedClaimType>
+
         <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress">
+
           <i:DisplayTag>电子地址</i:DisplayTag>
+
           <i:Description>人的电子邮箱</i:Description>
+
         </i:SupportedClaimType>
+
         <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/datebirth">
+
           <i:DisplayTag>出生日期</i:DisplayTag>
+
           <i:Description>人的出生日期</i:Description>
+
         </i:SupportedClaimType>
+
         <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/locality">
+
           <i:DisplayTag>城市</i:DisplayTag>
-          <i:Description>当地区域的名称，如城市、县或其他地理区域</i:Description>
-        </i:SupportedClaimType>
-        <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
-          <i:DisplayTag>州/省</i:DisplayTag>
-          <i:Description>物理地址的州或省名称缩写</i:Description>
-        </i:SupportedClaimType>
-      </i:SupportedClaimTypeList>
-    </i:InformationCard>
-  </ds:Object>
-```
 
 
 
+<i:Description>当地区域的名称，如城市、县或其他地理区域</i:Description>
 
+</i:SupportedClaimType>
+
+<i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince">
+
+  <i:DisplayTag>州/省</i:DisplayTag>
+
+  <i:Description>物理地址的州或省名称缩写</i:Description>
+
+</i:SupportedClaimType>
+
+</i:SupportedClaimTypeList>
+
+</i:InformationCard>
+
+</ds:Object>
 
 ```xml
 <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country">
   <i:DisplayTag>国家</i:DisplayTag>
   <i:Description>物理地址所在的国家</i:Description>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/mobilephone">
   <i:DisplayTag>电话</i:DisplayTag>
   <i:Description>个人的手机号码</i:Description>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier">
   <i:DisplayTag>站点 ID</i:DisplayTag>
   <i:Description>一种私有个人标识符</i:Description>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://ipsts.federatedidentity.net/membershiplevel">
   <i:DisplayTag>会员级别</i:DisplayTag>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://ipsts.federatedidentity.net/role">
   <i:DisplayTag>角色</i:DisplayTag>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://ipsts.federatedidentity.net/group">
   <i:DisplayTag>组</i:DisplayTag>
 </i:SupportedClaimType>
+
 <i:SupportedClaimType Uri="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name">
   <i:DisplayTag>用户 ID</i:DisplayTag>
   <i:Description>名称</i:Description>
 </i:SupportedClaimType>
+
 </i:SupportedClaimTypeList>
+
 <i:RequireAppliesTo Optional="false"/>
+
 <i:PrivacyNotice Version="1">
   http://www.federatedidentity.net/Privacy.txt
 </i:PrivacyNotice>
+
 <ic07:IssuerInformation xmlns:ic07="http://schemas.xmlsoap.org/ws/2007/01/identity">
   <ic07:IssuerInformationEntry>
     <ic07:EntryName>联系我们</ic07:EntryName>
@@ -6286,15 +6595,19 @@ Content-Length: 26838
     <ic07:RequireStrongRecipient xmlns:ic07="http://schemas.xmlsoap.org/ws/2007/01/identity"/>
   </ic07:IssuerInformation>
 </i:InformationCard>
+
 </ds:Object>
+
 </ds:Signature>
 ```
+
+
 
 非敏感信息（如支持的声明类型）以明文形式出现。`Listing 9-2` 中的高亮行包含了所有的声明类型。数据（如声明值）经过了加密；为了简洁起见已截断。
 
 ### 标准化信息卡术语
 
-`IMI1.0` 命名空间（http://schemas.xmlsoap.org/ws/2005/05/identity/）与 `WS-Trust`、`WS-SecurityPolicy` 和 `WS-Addressing` 规范相关。`IMI 1.0` 命名空间 2019 年 2 月的委员会草案 02 定义了与下表所示信息卡相关的术语。
+`IMI1.0` 命名空间（`http://schemas.xmlsoap.org/ws/2005/05/identity/`）与 `WS-Trust`、`WS-SecurityPolicy` 和 `WS-Addressing` 规范相关。`IMI 1.0` 命名空间 2019 年 2 月的委员会草案 02 定义了与下表所示信息卡相关的术语。
 
 | 术语 | 定义 |
 | :--- | :--- |
@@ -6327,9 +6640,6 @@ Content-Length: 26838
 图 9.10 显示了在使用由第三方 `IP` 颁发的托管 `CardSpace 信息卡`时，`服务请求者`、`访问控制解决方案`和`依赖方`之间的七种主要交互。
 
 ![9.10](img/c09f010.jpg) 使用托管 `CardSpace 凭证` 的服务请求者、访问控制解决方案和依赖方之间的七种主要交互。
-
-
-
 
 # 为 oakleaf-acs 解决方案配置 FederatedIdentity.net
 
@@ -6413,71 +6723,6 @@ IP 联合要求你的 ACS 解决方案信任你并非由自己为解决方案创
 
 ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
 
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-ACS 基础能力：`ACS` 基础能力，`Scopes` 使得管理特定解决方案或项目的规则变得更加简单。
-
-
-
-
 图 9.17 向 [`oakleaf-acs.servicebus.windows.net/`](http://oakleaf-acs.servicebus.windows.net/) 范围添加组（Group）规则。
 
 ![9.17](img/c09f017.jpg)
@@ -6522,7 +6767,7 @@ IP 地址 `[ipsts.federatedidentity.net](http://ipsts.federatedidentity.net)` �
 
 ![9.22](img/c09f022.jpg)
 
-3.  几秒后，Windows CardSpace 弹出“您想发送吗（Do You Want to Send）”对话框（此处原文修正为：几秒后，Windows CardSpace 弹出“您想发送吗（Do You Want to Send）”对话框，让您选择卡片发送到 `[accesscontrol.windows.net](http://accesscontrol.windows.net)`，参见 图 9.23）。
+3.  几秒后，Windows CardSpace 弹出“您想发送吗（Do You Want to Send）”对话框，让您选择卡片发送到 `[accesscontrol.windows.net](http://accesscontrol.windows.net)`，参见 图 9.23。
 
 图 9.23 CardSpace 的对话框用于托管的。
 
@@ -6558,10 +6803,6 @@ ACS 是一种安全令牌服务，支持多种方法基于声明的用户身份�
 
 本章结束时详细说明了如何借助 Identity Lab 的帮助创建 Windows CardSpace 信息卡示例，并使用该卡片根据 Azure 服务培训包的实践实验实现简单的 ACS/Service Bus 联邦身份应用程序。
 
-
-
-
-
 # 使用 .NET Service Bus 互服务
 
 第 9 章在 .NET 访问控制服务 (`ACS`) 的背景下向你介绍了 .NET Service Bus (`SB`)。本章将侧重于介绍如何使用 `SB` 及其各种消息模式，在穿越防火墙和网络地址转换 (`NAT`) 设备的同时，通过互联网连接 Windows Azure 以及其他应用程序。
@@ -6576,7 +6817,7 @@ ACS 是一种安全令牌服务，支持多种方法基于声明的用户身份�
 
 `SB` 提供以下功能或服务：
 
-* 通过 .NET 访问控制服务 (`ACS`)、Windows CardSpace 以及可选的 Windows 身份基础结构 (`WIF`) 和活动目录联合身份服务 (`ADFS`) 实现联邦身份验证和访问控制*
+* 通过 .NET 访问控制服务 (`ACS`)、Windows CardSpace 以及可选的 Windows 身份基础结构 (`WIF`) 和活动目录联合身份服务 (`ADFS`) 实现联邦身份验证和访问控制
 * 一致的服务和服务端命名，以简化消息的中继或路由
 * 服务注册表，简化防火墙后 `NAT` 客户端和其他用户的发现工作
 * 通用的消息织网，提供多种通信选项，包括发布/订阅 (`pub/sub`) 或发送/监听功能
@@ -6599,11 +6840,6 @@ ACS 是一种安全令牌服务，支持多种方法基于声明的用户身份�
 
 ![10.2](img/c10f002.jpg)
 
-`oakleaf-sb` 解决方案拥有 DNS 根命名空间 `sb://oakleaf-sb.servicebus.windows.net`。对于你选择的解决方案名称，`SB` 终端快速参考提供了典型的 `SB` 终端 URI 示例（参见 图 10.2）。
-
-（注：原文此处逻辑似乎存在重复或乱码，翻译已根据语意进行平顺处理）
-
-*修正逻辑翻译：*
 `oakleaf-sb` 解决方案拥有 DNS 根命名空间 `sb://oakleaf-sb.servicebus.windows.net`。对于你选择的解决方案名称，`SB` 终端快速参考提供了典型的 `SB` 终端 URI 示例（参见 图 10.2）。
 
 如果你尚未执行，请按照第 9 章的“安装先决条件”部分安装 .NET 服务 SDK。
@@ -6646,19 +6882,26 @@ Microsoft .NET 服务 SDK (2009 CTP) 包含了 `\Program Files\Microsoft . Servi
 
 `EchoContract.cs` 文件对于服务和客户端项目是完全相同的。
 
-
-
-
-
 Listing 10-2 定义了 `EchoService` WCF 服务，它继承了 `IEchoContract` 并指定了所执行的操作，将文本字符串返回给客户端。
 
-### Listing 10-2:](#9781118058756c10.xhtml_c10_pgml_anc_0002) `Service\EchoService.cs` 类文件的内容
+### Listing 10-2: `Service\EchoService.cs` 类文件的内容
 
 ```csharp
+
+
+
+# 使用 .NET 服务总线中继绑定
+
+## 服务项目的配置
+
+`namespace Microsoft.ServiceBus.Samples` 中的 `EchoService` 类实现了 `IEchoContract` 接口，并使用 `ServiceBehavior` 特性进行标注。
+
+```
 namespace Microsoft.ServiceBus.Samples
 {
     using System;
     using System.ServiceModel;
+
     [ServiceBehavior(Name = "EchoService",
         Namespace = "http://samples.microsoft.com/ServiceModel/Relay/")]
     class EchoService : IEchoContract
@@ -6672,9 +6915,9 @@ namespace Microsoft.ServiceBus.Samples
 }
 ```
 
-Service 项目的 `App.config` 文件与 WCF 服务应用程序项目的文件的相同，但 `netTcpRelayBinding` 属性值外，该值指定了中继服务并在 Listing 10-3 中突出显示。
+`Service` 项目的 `App.config` 文件与 WCF 服务应用程序项目的文件相同，但 `netTcpRelayBinding` 属性值除外，该值指定了中继服务并在 Listing 10-3 中突出显示。
 
-### Listing 10-3:](#9781118058756c10.xhtml_c10_pgml_anc_0003) `Service\App.config` 文件的内容；指定 `RelayService` 的属性值已突出显示
+### Listing 10-3: `Service\App.config` 文件的内容；指定 `RelayService` 的属性值已突出显示
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -6695,7 +6938,7 @@ Service 项目的 `App.config` 文件与 WCF 服务应用程序项目的文件�
 
 客户端项目的 `App.config` 文件与服务器项目的文件相同，区别在于将 `<services>` 替换为 `<client>`，将 `Service` 替换为 `Endpoint`，并增加了 `name="RelayEndpoint"` 属性键值对，如 Listing 10-4 中突出所示。
 
-### Listing 10-4:](#9781118058756c10.xhtml_c10_pgml_anc_0004) `Client\App.config` 文件的内容，与 `Service\App.config` 文件的差异已突出显示
+### Listing 10-4: `Client\App.config` 文件的内容，与 `Service\App.config` 文件的差异已突出显示
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -6711,11 +6954,11 @@ Service 项目的 `App.config` 文件与 WCF 服务应用程序项目的文件�
 </configuration>
 ```
 
-### 在 Program.cs 中通过代码验证用户凭据
+## 在 `Program.cs` 中通过代码验证用户凭据
 
 `Program.cs` 文件包含以下代码，请求用户在命令行提示符中输入解决方案名称以及托管该解决方案的 .NET 服务的密码。当你使用 F5 运行解决方案时，Listing 10-5 中的 `Main()` 方法会请求用户提供解决方案名称和运行解决方案的账户密码，然后验证密码。如果解决方案存在且密码匹配，则服务将打开。
 
-### Listing 0-5:](#9781118058756c10.xhtml_c10_pgml_anc_0005) 获取 Service 项目解决方案名称并启动服务的代码
+### Listing 10-5: 获取 `Service` 项目解决方案名称并启动服务的代码
 
 ```csharp
 namespace Microsoft.ServiceBus.Samples
@@ -6726,6 +6969,7 @@ namespace Microsoft.ServiceBus.Samples
     using Microsoft.ServiceBus;
     using Microsoft.ServiceBus.Description;
     using System.Text;
+
     class Program
     {
         static void Main(string[] args)
@@ -6733,30 +6977,38 @@ namespace Microsoft.ServiceBus.Samples
             // 根据命令行参数确定系统连接模式
             // 参数 -http, -tcp 或 -auto (默认为 auto)
             ServiceBusEnvironment.SystemConnectivity.Mode = GetConnectivityMode(args);
+
             Console.Write("Your Solution Name: ");
             string solutionName = Console.ReadLine();
+
             Console.Write("Your Solution Password: ");
             string solutionPassword = ReadPassword();
+
             // 在解决方案命名空间创建良好的终端地址
             Uri address = ServiceBusEnvironment.CreateServiceUri("sb", solutionName, "EchoService");
+
             // 为终端创建凭据对象
-            TransportClientEndpointBehavior
-            userNamePasswordServiceCredential = new TransportClientEndpointBehavior();
+            TransportClientEndpointBehavior userNamePasswordServiceCredential = new TransportClientEndpointBehavior();
             userNamePasswordServiceCredential.CredentialType = TransportClientCredentialType.UserNamePassword;
             userNamePasswordServiceCredential.Credentials.UserName = solutionName;
             userNamePasswordServiceCredential.Credentials.Password = solutionPassword;
+
             // 读取配置创建服务主机
             ServiceHost host = new ServiceHost(typeof(EchoService), address);
+
             // 将凭据添加到配置中指定的所有终端
             foreach (ServiceEndpoint endpoint in host.Endpoints)
             {
                 endpoint.Behaviors.Add(userNamePasswordServiceCredential);
             }
+
             // 打开服务
             host.Open();
+
             Console.WriteLine("Service address: " + address);
             Console.WriteLine("Press [Enter] to exit");
             Console.ReadLine();
+
             // 关闭服务
             host.Close();
         }
@@ -6764,79 +7016,73 @@ namespace Microsoft.ServiceBus.Samples
 }
 ```
 
-
-
-
-
 `\WROX\Azure\Chapter10` 文件夹包含了一对典型的 SOAP 请求和响应头（`*.txt`）以及消息负载（`*.xml`），用于验证方案名称和帐户密码。启用 `wss-soap-message-security`（也称为 `ws-security`）、`ws-secureconversation` 和 `ws-trust` 标准所需的 SOAP 消息非常复杂，这导致了简单的 RESTful Web 服务被采用。然而，`ws-*` 标准对于为云计算环境建立企业级安全以及跨域信任联邦至关重要。
 
 图 10.4 IE8 显示用于方案名称和密码验证的示例 SOAP 响应包。
 
 ![10.4](img/c10f004.jpg)
 
-当你输入无效的 `solutionName` 并调用 `host.Open()` 方法时，你会收到“EndpointNotFoundException; No DNS entries exist for host oakleaf-sx.servicebus.windows.net”消息。错误的 `solutionPassword` 会抛出“Fault exception was unhandled; authN failed: ‘oakleaf-sb' of PasswordCredential (#a5566db9-4a5a-52f7-edea-64a000a3cb08)”或类似的异常。
+当你输入无效的 `solutionName` 并调用 `host.Open()` 方法时，你会收到"EndpointNotFoundException; No DNS entries exist for host oakleaf-sx.servicebus.windows.net"消息。错误的 `solutionPassword` 会抛出"Fault exception was unhandled; authN failed: ‘oakleaf-sb' of PasswordCredential (#a5566db9-4a5a-52f7-edea-64a000a3cb08)"或类似的异常。
 
 变量名 `solutionPassword` 具有某种误导性，因为所需的密码是你用于登录 .NET Services/SQL Services 门户以添加 SB 方案的 WLID 密码。同样，`userNamePassword` 是一个误名，因为该名称元素实际上是方案名称。
 
-### 使用 EchoSample 方案的服务
+## 使用 `EchoSample` 方案的服务
 
-当你通过右键点击解决方案资源管理器中的 Client 节点并选择 `Debug, Start New Instance` 来启动一个新的 `Client` 实例时，必须输入与启动 Service 实例相同的方案名称和帐户密码。错误的方案名称会抛出“SocketException was unhandled; No such host is known”异常；错误的密码会抛出与 Service 相同的“Fault exception …”消息。
+当你通过右键点击解决方案资源管理器中的 `Client` 节点并选择 `Debug, Start New Instance` 来启动一个新的 `Client` 实例时，必须输入与启动 `Service` 实例相同的方案名称和帐户密码。错误的方案名称会抛出"SocketException was unhandled; No such host is known"异常；错误的密码会抛出与 `Service` 相同的"Fault exception …"消息。
 
-`EchoSample.sln` 的 Client 项目包含一个 `Contract.cs` 文件，它与 Service 项目的文件相同。`Program.cs` 文件中的 `Main()` 方法仅存在细微差异，这些差异在 Listing 10-6 中突出显示。一个 `IEchoChannel` 对象替换了 Service 项目的 `ServiceHost` 对象。
+`EchoSample.sln` 的 `Client` 项目包含一个 `Contract.cs` 文件，它与 `Service` 项目的文件相同。`Program.cs` 文件中的 `Main()` 方法仅存在细微差异，这些差异在 Listing 10-6 中突出显示。一个 `IEchoChannel` 对象替换了 `Service` 项目的 `ServiceHost` 对象。
 
-Listing 10-6: 获取并验证 Client 项目的 `SolutionName` 和 `Password`、将字符串发送到服务并等待回显文本的代码
+### Listing 10-6: 获取并验证 `Client` 项目的 `SolutionName` 和 `Password`、将字符串发送到服务并等待回显文本的代码
 
 ```csharp
-namespace  Microsoft.ServiceBus.Samples
-
+namespace Microsoft.ServiceBus.Samples
 {
     using System;
     using System.ServiceModel;
     using Microsoft.ServiceBus;
     using System.Text;
+
     class Program
     {
         static void Main(string[] args)
         {
             // 根据参数确定系统连接模式：
             // -http, -tcp 或 -auto（默认为 auto）
-            ServiceBusEnvironment.SystemConnectivity.Mode =
-                GetConnectivityMode(args);
+            ServiceBusEnvironment.SystemConnectivity.Mode = GetConnectivityMode(args);
+
             Console.Write("Your Solution Name: ");
             string solutionName = Console.ReadLine();
+
             Console.Write("Your Solution Password: ");
             string solutionPassword = ReadPassword();
+
             // 根据方案名称创建服务 URI
-            Uri serviceUri =
-                ServiceBusEnvironment.CreateServiceUri("sb",
-                solutionName, "EchoService");
+            Uri serviceUri = ServiceBusEnvironment.CreateServiceUri("sb", solutionName, "EchoService");
+
             //为端点创建凭据对象
-            TransportClientEndpoint userNamePasswordBusCredential =
-                new TransportClientEndpoint();
-            userNamePasswordBusCredential.CredentialType =
-                TransportCredentialType.UserNamePassword;
-            userNamePasswordBusCredential.Credentials
-                .UserName = solutionName;
-            userNamePasswordBusCredential.Credentials
-                .Password = solutionPassword;
+            TransportClientEndpoint userNamePasswordBusCredential = new TransportClientEndpoint();
+            userNamePasswordBusCredential.CredentialType = TransportCredentialType.UserNamePassword;
+            userNamePasswordBusCredential.Credentials.UserName = solutionName;
+            userNamePasswordBusCredential.Credentials.Password = solutionPassword;
+
             // 配置通道工厂
-            ChannelFactory<IEchoChannel> channelFactory =
-                new ChannelFactory<IEchoChannel>("RelayEndpoint",
-                new EndpointAddress(serviceUri));
+            ChannelFactory<IEchoChannel> channelFactory = new ChannelFactory<IEchoChannel>("RelayEndpoint", new EndpointAddress(serviceUri));
+
             // 应用 Service Bus 凭据
-            channelFactory.Endpoint.Behaviors.
-                Add(userNamePasswordBusCredential);
+            channelFactory.Endpoint.Behaviors.Add(userNamePasswordBusCredential);
+
             // 创建并打开客户端通道
             IEchoChannel channel = channelFactory.CreateChannel();
             channel.Open();
+
             Console.WriteLine("Enter text to echo (or [Enter] to exit):");
             string input = Console.ReadLine();
+
             while (input != String.Empty)
             {
                 try
                 {
-                    Console.WriteLine("Server echoed: {0}",
-                    channel.Echo(input));
+                    Console.WriteLine("Server echoed: {0}", channel.Echo(input));
                 }
                 catch (Exception e)
                 {
@@ -6844,13 +7090,12 @@ namespace  Microsoft.ServiceBus.Samples
                 }
                 input = Console.ReadLine();
             }
+
             channel.Close();
         }
     }
 }
 ```
-
-
 
 
 
@@ -6860,52 +7105,78 @@ namespace  Microsoft.ServiceBus.Samples
 
 `\Program Files\Microsoft .NET Services SDK … \Samples\ServiceBus\ExploringFeatures\Bindings\WSHttp\Simple\CS35` 文件夹包含一个 `WSHttpRelayEchoSample.sln`，它演示了几个 SB 特性：
 
-*   用 `WSHttpRelayBinding` 替换 `NetTcpRelayBinding`，以避免连接服务时需要打开客户端 TCP 端口 `808` 或 `828`（安全）
-*   使用配置文件（此示例为 `App.config`）指定端点行为和其他端点属性
-*   将服务名称从 `EchoService` 重构为 `EchoHttpService`，以防止与同时运行的其他示例中的 `EchoService` 名称冲突
-*   在配置文件中指定凭据类型，并用 `CardSpace` 信息卡片替换 `UserNamePassword`
+* 用 `WSHttpRelayBinding` 替换 `NetTcpRelayBinding`，以避免连接服务时需要打开客户端 TCP 端口 `808` 或 `828`（安全）
+* 使用配置文件（此示例为 `App.config`）指定端点行为和其他端点属性
+* 将服务名称从 `EchoService` 重构为 `EchoHttpService`，以防止与同时运行的其他示例中的 `EchoService` 名称冲突
+* 在配置文件中指定凭据类型，并用 `CardSpace` 信息卡片替换 `UserNamePassword`
 
 服务项目和客户端项目的 `EchoContract.cs` 文件，以及服务项目的 `Service.cs` 文件与之前的 `EchoService` 示例相同，区别仅在于服务名称。服务项目的 `App.config` 文件（如列表 10-8 所示）包含了两个解决方案之间的主要区别，新增部分已高亮显示。
 
-#### 列表 10-8： `EchoHttpService` 的服务项目将凭据和绑定类型的指定从 `Project.cs` 文件的 `Main()` 方法移动到 `App.config` 文件
+### 列表 10-8：`EchoHttpService` 的服务项目将凭据和绑定类型的指定从 `Project.cs` 文件的 `Main()` 方法移动到 `App.config` 文件
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
+
 <configuration>
+
   <system.serviceModel>
+
     <behaviors>
+
       <endpointBehaviors>
+
         <behavior name="cardSpaceClientCredentials">
+
           <transportClientEndpointBehavior credentialType="CardSpace" />
+
         </behavior>
+
       </endpointBehaviors>
+
     </behaviors>
+
     <bindings>
+
       <!-- Application Binding -->
+
       <wsHttpRelayBinding>
+
         <binding name="default">
+
           <security mode="None"/>
+
           </binding>
+
         </wsHttpRelayBinding>
+
     </bindings>
+
     <services>
+
       <!-- Application Service -->
+
       <service name="Microsoft.ServiceBus.Samples.EchoHttpService">
+
         <endpoint name="RelayEndpoint"
+
                   contract="Microsoft.ServiceBus.Samples.IEchoContract"
+
                   binding="wsHttpRelayBinding"
+
                   bindingConfiguration="default"
+
                   behaviorConfiguration="cardSpaceClientCredentials"
+
                   address="" />
+
       </service>
+
     </services>
+
   </system.serviceModel>
+
 </configuration>
 ```
-
-
-
-
 
 图 10.11 确认所选的 `CardSpace` 卡片与当前解决方案关联。
 
@@ -6923,15 +7194,15 @@ namespace  Microsoft.ServiceBus.Samples
 
 ![10.13](img/c10f013.jpg)
 
-要消除此异常，关闭控制台窗口，并在选择了你版本的 `oakleaf-sb` 解决方案的情况下，点击`快速入门：访问控制`链接打开`管理 Microsoft .NET 访问控制服务`页面，点击`管理范围`按钮打开`范围`页面，该页面仅显示 `http://echoservice`(http://echoservice) 范围 URI。
+要消除此异常，关闭控制台窗口，并在选择了你版本的 `oakleaf-sb` 解决方案的情况下，点击`快速入门：访问控制`链接打开`管理 Microsoft .NET 访问控制服务`页面，点击`管理范围`按钮打开`范围`页面，该页面仅显示 `http://echoservice`（http://echoservice) 范围 URI。
 
-点击`添加范围`打开`添加范围`页面，在图 10.12 中请求的的服务地址 URI（`http://oakleaf-sb.servicebus.windows.net/EchoService/](http://oakleaf-sb.servicebus.windows.net/EchoService/)`）输入到范围 URI 文本框中，并点击`保存`。为了适应 `..\Chapter 10` 文件夹中的重构版本，请重复此过程，并将 `http://oakleaf-sb.servicebus.windows.net/EchoHttpService/](http://oakleaf-sb.servicebus.windows.net/EchoHttpService/)` 作为范围，如图 10.14 所示。
+点击`添加范围`打开`添加范围`页面，在图 10.12 中请求的的服务地址 URI（`http://oakleaf-sb.servicebus.windows.net/EchoService/`）输入到范围 URI 文本框中，并点击`保存`。为了适应 `..\Chapter 10` 文件夹中的重构版本，请重复此过程，并将 `http://oakleaf-sb.servicebus.windows.net/EchoHttpService/` 作为范围，如图 10.14 所示。
 
 图 10.14 为项目的原始和重构版本添加格式良好的 URI。
 
 ![10.14](img/c10f014.jpg)
 
-可选情况下，删除错误的 `http://echoservice/](http://echoservice/) 范围。
+可选情况下，删除错误的 `http://echoservice/` 范围。
 
 运行解决方案，在 Service 控制台提示符处输入解决方案名称，按 `Enter` 启动服务并显示服务地址。右键点击解决方案资源管理器中的 `Client` 节点，选择`调试`、`启动新实例`，输入要回显的文本，按 `Enter`，再次选择并发送 `CardSpace` 卡片。
 
@@ -6952,21 +7223,16 @@ namespace  Microsoft.ServiceBus.Samples
 
 ```xml
 // EchoHttpService Main 方法及 App.config 配置示例
-
 // 此处省略具体代码内容，以符合翻译要求
 ```
 
-
-
-
-
-*   服务总线路由器 (SBRs) 负责向所有（多播）或单个订阅者传递持久性消息。监听器（包括队列）可以订阅这些消息。
+* 服务总线路由器 (SBRs) 负责向所有（多播）或单个订阅者传递持久性消息。监听器（包括队列）可以订阅这些消息。
 
 .NET Services SDK（2009 年 3 月 CTP）引入了 `SBQs` 和 `SBRs`。
 
 .NET Services 团队 2008 年 6 月 12 日宣布，他们“将推迟工作流服务的后续发布，直到 .NET Framework 4 发布之后”，以便在 .NET Framework 4 的工作流引擎上构建工作流服务。该团队于 2008 年 7 月下线了 Windows Azure 的工作流服务运行时，并在 2009 年 7 月的 .NET Services .NET SDK CTP 中移除了工作流服务元素。在团队发布针对 .NET 4.0 的工作流服务第一个 CTP 后，将尽快将包含适用于 VS 2010 工作流服务项目的更新版电子章节发布到本书的 Wrox 网站。
 
-本章描述了 `SBQ` 和 `SBR` 组件的基本功能和实现，并基于 .NET Services SDK 的示例解决方案提供了简单的 C# 演示项目。所有示例都使用了你在第 9 和第 10 章中学的 .NET 访问服务 (ACS) 和服务总线 (SB) 技术。
+本章描述了 `SBQ` 和 `SBR` 组件的基本功能和实现，并基于 .NET Services SDK 的示例解决方案提供了简单的 C# 演示项目。所有示例都使用了你在第 9 和第 10 章学的 .NET 访问服务 (ACS) 和服务总线 (SB) 技术。
 
 你可以在 MSDN .NET Framework WF 开发者落地页了解更多关于 WF 的基础（[`bit.ly/SGfsG`](http://msdn.microsoft.com/en-us/netframework/aa663328.aspx)）。白皮书《Microsoft .NET 服务总线开发者指南》描述了 `SBQs` 和 `SBRs`，这些是由 .NET Services SDK（2009 年 3 月 CTP）引入的（[`bit.ly/3o9Bmz`](http://bit.ly/3o9Bmz)）。
 
@@ -6992,47 +7258,68 @@ namespace  Microsoft.ServiceBus.Samples
 
 [Listing 11-1] 显示了使用上述类的 C# 代码骨架。
 
-[Listing 11-1:] `QueueMangementClient` 类方法的 C# 代码骨架
+### Listing 11-1：`QueueMangementClient` 类方法的 C# 代码骨架
 
 ```csharp
 public static class QueueManagementClient
+
 {
+
     public static QueueClient CreateQueue(TransportClientEndpointBehavior credential, Uri queueUri, QueuePolicy queuePolicy);
+
     public static void DeleteQueue(TransportClientEndpointBehavior credential, Uri queueUri);
+
     public static QueueClient GetQueue(TransportClientEndpointBehavior credential, Uri queueUri);
+
     public static QueuePolicy GetQueuePolicy(TransportClientEndpointBehavior credential, Uri queueUri);
+
     public static DateTime RenewQueue(TransportClientEndpointBehavior credential, Uri queueUri, TimeSpan requestedExpiration);
+
 }
 ```
 
 以下是根据 .NET Services SDK 队列项目的 `Readme.htm` 创建新队列的步骤：
 
-1. 创建 `QueuePolicy` 实例并定义队列的名称和所需属性。<QueuePolicy>` 元素在 `http://schemas.microsoft.com/ws/2007/08` 中定义。
+1. 创建 `QueuePolicy` 实例并定义队列的名称和所需属性。`<QueuePolicy>` 元素在 `http://schemas.microsoft.com/ws/2007/08` 中定义。
 2. 从 `AccessControlService` 获取用于 `SB` 解决方案的安全令牌。
 3. 测试解决方案中是否存在同名的队列。
 4. 如果指定的队列不存在，将序列化的 `QueuePolicy` 嵌入到 ATOM 1.0 `<atom:entry>` 中，并使用 `content-type application/xml;type=entry` 将该项 `POST` 到指定的 URI。请求必须携带 `X-MS-Identity-Token` 头部，且相应的身份必须对覆盖队列 URI 的范围具有 `Manage` 权限。
 
 如果队列创建成功，`POST` 请求将返回 `201 (created)` 状态码并带有 `Location` 头部。location 头部包含你在应用程序中需要保留的队列管理 URI，以便访问队列的元数据和管理功能。如果无法创建队列，请求可能会产生表中描述的 HTTP 状态码之一。
 
-[Listing 11-2:] 获取 `SB` 安全令牌的 HTTP 请求和响应头
+### Listing 11-2：获取 `SB` 安全令牌的 HTTP 请求和响应头
+
 ```http
 GET /issuet.aspx?u=oakleaf-sb HTTP/1.1
-Host: accesscontrol.windows.net
-Connection: Keep-Alive
-HTTP/1.1 200 OK
-Cache-Control: private
-Content-Length: 40
-Content-Type: text/plain
-Server: Microsoft-IIS/7.0
-X-AspNet-Version: 2.0
-Set-Cookie: ASP.NET_SessionId=jjqly45uxe5r3;path=/HttpOnly
-X-Powered-By: ASP.NET
-Date: Tue, 26 May 2009 21:11:30 GMT
-LMT8pPDy0gmodPM4qfOf1XjT/```
 
+Host: accesscontrol.windows.net
+
+Connection: Keep-Alive
+
+HTTP/1.1 200 OK
+
+Cache-Control: private
+
+Content-Length: 40
+
+Content-Type: text/plain
+
+Server: Microsoft-IIS/7.0
+
+X-AspNet-Version: 2.0
+
+Set-Cookie: ASP.NET_SessionId=jjqly45uxe5r3;path=/HttpOnly
+
+X-Powered-By: ASP.NET
+
+Date: Tue, 26 May 2009 21:11:30 GMT
+
+LMT8pPDy0gmodPM4qfOf1XjT/
 ```
 
-[1113311-5` 返回的安全令牌获取活动队列的 `GET` 请求返回的 Atom 负载
+`1113311-5` 返回的安全令牌获取活动队列的 `GET` 请求返回的 Atom 负载
+
+
 
 ```http
 GET / HTTP/1.1
@@ -7054,7 +7341,7 @@ Date: Tue, 26 May 2009 21:11:31 GMT
 </feed>
 ```
 
-[Listing 11-4:] 使用 `Listing 11-5` 返回的安全令牌创建生命周期为一小时的新队列的 Atom 负载
+[Listing 11-4:] 使用 `Listing 11-5` 返回的安全令牌创建生命周期为一小时的新队列的 Atom 负载。
 
 ```http
 POST /MyHttpQueue/ HTTP/1.1
@@ -7069,10 +7356,6 @@ Expect: 100-continue
   <updated>2009-05-26T21:33:25Z</updated>
   <QueuePolicy xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/ws/2007/08/connect">
 ```
-
-
-
-
 
 ```xml
 <entry>
@@ -7113,9 +7396,9 @@ Date: Tue, 26 May 2009 21:33:25 GMT
 | 代码 | 名称 | HTTP 状态描述 |
 | :--- | :--- | :--- |
 | 400 | 错误请求 (Bad Request) | 策略格式错误或无效。 |
-| 403 | 禁止访问 (Forbidden) | 客户端未提供 X-MS-Identity-Token 头部、提供的令牌（token）已不再可使用，或提供的身份无权在此位置创建队列。 |
+| 403 | 禁止访问 (Forbidden) | 客户端未提供 `X-MS-Identity-Token` 头部、提供的令牌（token）已不再可使用，或提供的身份无权在此位置创建队列。 |
 | 409 | 冲突 (Conflict) | 给定位置已存在不兼容策略的队列，或者该位置被路由器或 Service Bus 监听器占用。 |
-| 415 |不支持的媒体类型 (Unsupported Media Type) | 请求未携带所需的 content-type 头部。 |
+| 415 | 不支持的媒体类型 (Unsupported Media Type) | 请求未携带所需的 `content-type` 头部。 |
 | 500 | 内部服务器错误 (Internal Server Error) | Service Bus 服务内部条件的处理失败。 |
 
 在本章中选择 `HttpQueueSample` 进行分析的原因之一是，Web 调试器（如 `Fiddler2`）能够捕获并显示客户端与服务之间的大部分或全部流量。
@@ -7132,9 +7415,9 @@ Service Bus 中的队列是自由格式的消息队列，可以接受、存储�
 
 `HttpQueueSample` 解决方案由以下三个项目组成：
 
-*   **Sender (发送者)**：向用户请求 SB 解决方案名称和帐户密码，如果 `https://SolutionName.servicebus.windows.net/MyHttpQueue/` 不存在则创建一个新队列，并允许用户输入文本消息入队。
-*   **Consumer (消费者)**：发现或创建 `MyHttpQueue` 队列并对其轮询消息进行破坏性读取，这会将消息出队列。
-*   **PeekLockConsumer (预览锁定消费者)**：发现或创建 `MyHttpQueue` 队列并对其轮询消息；它会随机决定出队列消息还是对未解锁的消息加锁。
+- `Sender`（发送者）：向用户请求 SB 解决方案名称和帐户密码，如果 `https://SolutionName.servicebus.windows.net/MyHttpQueue/` 不存在则创建一个新队列，并允许用户输入文本消息入队。
+- `Consumer`（消费者）：发现或创建 `MyHttpQueue` 队列并对其轮询消息进行破坏性读取，这会将消息出队列。
+- `PeekLockConsumer`（预览锁定消费者）：发现或创建 `MyHttpQueue` 队列并对其轮询消息；它会随机决定出队列消息还是对未解锁的消息加锁。
 
 截至 2009 年 7 月 CTP，最大允许尺寸限制为 60KB。后续版本的消息大小预计取决于系统配置以及客户服务计划中可用元数据的影响。
 
@@ -7148,9 +7431,6 @@ Service Bus 中的队列是自由格式的消息队列，可以接受、存储�
 ### 探索 HttpQueueSample 解决方案
 
 两个控制台项目都从 ACS 获取身份令牌，测试对象（队列或工作流）是否存在，创建消息对象并向队列或工作流发送消息。`Listing 1-5` 显示了 `Sender` 项目中 `Main` 方法的代码。
-
-
-
 
 ```csharp
 // Added: Inspect the default QueuePolicy property values if set
@@ -7208,25 +7488,31 @@ while (input != String.Empty)
 // SDK Utility methods
 ```
 
-队列是 `QueuePolicy` 的实例。下表列出了 `QueuePolicy` 类的成员及其默认值。默认值 `2,147,483,647` (`int32.MaxValue`) 代表无限值。
+队列是 `QueuePolicy` 的实例。下表列出了 `QueuePolicy` 类的成员及其默认值。默认值 `2,147,483,647`（`int32.MaxValue`）代表无限值。
 
 | 属性名称 | 说明 | 默认值 |
 | :--- | :--- | :--- |
-| Authorization | 获取或设置当前实例的授权策略。（继承自 `JunctionPolicy`）。 | 必需 |
-| Discoverability | 决定在什么情况下以及何时可以通过 Atom feed 发现节点。（继承自 `JunctionPolicy`） | Managers |
-| EnqueueTimeout | 获取或设置入队超时。 | 10 秒 |
-| ExpirationInstant | 获取或设置过期时间点。（继承自 `JunctionPolicy`）。 | 24 小时后 |
-| MaxConcurrent-Readers | 获取或设置最大并发读取数。 | `2,147,483,647` |
-| MaxDequeueRetries | 获取或设置出队重试次数。 | `2,147,483,647` |
-| MaxMessageAge | 获取或设置最大年龄。 | 10 分钟 |
-| MaxMessageSize | 获取或设置最大大小。（继承自 `JunctionPolicy`）。 | `61,440` |
-| MaxQueueCapacity | 获取或设置队列容量。 | `2,097,152` |
-| MaxQueueLength | 获取或设置队列长度。 | `2,147,483,647` |
-| Overflow | 获取或设置溢出策略，指示当缓冲区达到容量并超时时的消息处理方式。 | `Incoming-Message` |
-| PoisonMessageDrop | 获取或设置毒消息丢弃端点。 | `null` |
-| TransportProtection | 获取或设置传输保护类型。（继承自 `JunctionPolicy`）。 | AllPaths |
+| `Authorization` | 获取或设置当前实例的授权策略。（继承自 `JunctionPolicy`）。 | 必需 |
+| `Discoverability` | 决定在什么情况下以及何时可以通过 Atom feed 发现节点。（继承自 `JunctionPolicy`） | Managers |
+| `EnqueueTimeout` | 获取或设置入队超时。 | 10 秒 |
+| `ExpirationInstant` | 获取或设置过期时间点。（继承自 `JunctionPolicy`）。 | 24 小时后 |
+| `MaxConcurrent-Readers` | 获取或设置最大并发读取数。 | `2,147,483,647` |
+| `MaxDequeueRetries` | 获取或设置出队重试次数。 | `2,147,483,647` |
+| `MaxMessageAge` | 获取或设置最大年龄。 | 10 分钟 |
+| `MaxMessageSize` | 获取或设置最大大小。（继承自 `JunctionPolicy`）。 | `61,440` |
+| `MaxQueueCapacity` | 获取或设置队列容量。 | `2,097,152` |
+| `MaxQueueLength` | 获取或设置队列长度。 | `2,147,483,647` |
+| `Overflow` | 获取或设置溢出策略，指示当缓冲区达到容量并超时时的消息处理方式。 | `Incoming-Message` |
+| `PoisonMessageDrop` | 获取或设置毒消息丢弃端点。 | `null` |
+| `TransportProtection` | 获取或设置传输保护类型。（继承自 `JunctionPolicy`）。 | AllPaths |
 
-只有通过代码显式设置的 `QueuePolicy` 值才会出现在该实例的 Atom 发现 `<feed><entry>` 的 `<QueuePolicy>` 组中，如列表 1-6 所示。https://oakleaf-sb.servicebus.windows.net/feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Publicly Listed Services</title><subtitle type="text">This is the list of publicly-listed services currently available</subtitle><id>uuid:ff9bc499-19aa-4e4-a1da-d8c2af34ea;id=340</id><updated>2009-05-27T19:46:45Z</updated><generator>Microsoft® .NET Services - Service Bus</generator><entry><id>uuid:ff9bc499-19aa-4e4-a1da-d8c2af34ea;id=341</id><title type="text">myhttpqueue</title><updated>2009-05-27T19:46:45Z</updated><link rel="alternate" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/"/><link rel="self" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue)"/><link rel="queuehead" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue/head)"/><link rel="queuecontrol" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue/control)"/><QueuePolicy xmlns="http://schemas.microsoft.com/ws/2007/08/connect" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Discoverability>Public</Discoverability><ExpirationInstant>2009-05-27T20:08:25.2308651Z</ExpirationInstant></QueuePolicy></entry></feed>`
+
+
+只有通过代码显式设置的 `QueuePolicy` 值才会出现在该实例的 Atom 发现 `<feed><entry>` 的 `<QueuePolicy>` 组中，如列表 1-6 所示。
+
+```xml
+https://oakleaf-sb.servicebus.windows.net/feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Publicly Listed Services</title><subtitle type="text">This is the list of publicly-listed services currently available</subtitle><id>uuid:ff9bc499-19aa-4e4-a1da-d8c2af34ea;id=340</id><updated>2009-05-27T19:46:45Z</updated><generator>Microsoft® .NET Services - Service Bus</generator><entry><id>uuid:ff9bc499-19aa-4e4-a1da-d8c2af34ea;id=341</id><title type="text">myhttpqueue</title><updated>2009-05-27T19:46:45Z</updated><link rel="alternate" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/"/><link rel="self" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue)"/><link rel="queuehead" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue/head)"/><link rel="queuecontrol" href="https://oakleaf-sb.servicebus.windows.net/MyHttpQueue/(queue/control)"/><QueuePolicy xmlns="http://schemas.microsoft.com/ws/2007/08/connect" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Discoverability>Public</Discoverability><ExpirationInstant>2009-05-27T20:08:25.2308651Z</ExpirationInstant></QueuePolicy></entry></feed>
+```
 
 `<link rel="alternate">...` 链接指向队列的尾部，客户端在此提交消息，而 `<link rel="queuehead">...>` 指向从此处接收消息的头部。
 
@@ -7234,15 +7520,13 @@ while (input != String.Empty)
 
 路由器将消息从一个或多个发布者转发到一个或多个订阅者，创建一个发布/订阅消息模型，并支持向所有订阅者的可选多播。发布者使用 `HTTP` 发送消息。
 
+- `QueueSubscriber` 向用户请求 SB 解决方案名称和账户密码，如果 `https://SolutionName.servicebus.windows.net/MyHttpRouter/` 不存在，则会创建一个新队列，并等待发布者将消息放入队列。`QueueSubscriber` 的 `Main()` 方法代码几乎与 Listing 11-5 中的代码完全相同。
 
-
-
-*   `QueueSubscriber` 向用户请求 SB 解决方案名称和账户密码，如果 `https://SolutionName.servicebus.windows.net/MyHttpRouter/` 不存在，则会创建一个新队列，并等待发布者将消息放入队列。`QueueSubscriber` 的 `Main()` 方法代码几乎与 Listing 11-5 中的代码完全相同。
-*   `HttpPushSubscriber` 使用 `WS2007HttpRelayBinding` 在 SB 上创建一个唯一命、面向面向的 HTTPS Web 服务端点。该端点模拟可能已存在于 Azure Fabric 中的 SOAP 1.2 端点。推送订阅者端点并不要求使用 SB。
+- `HttpPushSubscriber` 使用 `WS2007HttpRelayBinding` 在 SB 上创建一个唯一命、面向面向的 HTTPS Web 服务端点。该端点模拟可能已存在于 Azure Fabric 中的 SOAP 1.2 端点。推送订阅者端点并不要求使用 SB。
 
 路由器和队列架构非常相似；因此，`HttpRouter` 的 `Publisher` 项目代码（在 Listing 11-7 中部分显示）与 `HttpQueueSample` 的 `Sender` 代码非常相似。`Router` API 提供了 `RouterClient`、`RouterManagementClient`、`RouterPolicy`、`RouterSubscription` 以及其他 `Router…` Helper 类；除了 `RouterSubscription` 外，所有类都有对应的 `Queue…` 类。
 
-### Listing 11-7: HttpRouter.Publisher 项目的 Main() 方法代码
+### Listing 11-7：HttpRouter.Publisher 项目的 Main() 方法代码
 
 ```csharp
 namespace  Microsoft.Samples.ServiceBus
@@ -7325,7 +7609,7 @@ namespace  Microsoft.Samples.ServiceBus
 }
 ```
 
-注意 `RouterPolicy` 实例显式设置了几个路由器特定的属性值（已重点标记），以及 `TransportProtection`，后者也是 QueuePolicy 的成员。`MessageDistributionPolicy.AllSubscribers` 枚举指定了多播分发。
+注意 `RouterPolicy` 实例显式设置了几个路由器特定的属性值（已重点标记），以及 `TransportProtection`，后者也是 `QueuePolicy` 的成员。`MessageDistributionPolicy.AllSubscribers` 枚举指定了多播分发。
 
 运行 `HttpRouter.sln` 解决方案与运行 `HttpQueueSample.sln` 类似。按下 `F5` 生成解决方案并运行 `Publisher` 项目。输入消息后启动 `QueueSubscriber` 项目不会显示该消息，因为 `QueueSubscriber` 会创建监听器的队列。图 11.4 显示了在打开 `QueueSubscriber` 窗口之前发送路由器消息 #1，以及之后发送路由器消息 #2 的结果。
 
@@ -7335,9 +7619,6 @@ namespace  Microsoft.Samples.ServiceBus
 
 正如你所预期的，`RouterPolicy` 的 HTTP POST 请求头和 Atom 格式负载（如 Listing 11-8 所示）与新的 `QueuePolicy`（参考 Listing 11-6）非常相似。
 
-
-
-
 图 11.5 显示 IE8 在运行 `Publisher` 和 `QueueSubscriber` 项目后显示的 `https://oakleaf-sb.servicebus.windows.net/` Atom 馈。
 
 图 11.5 IE8 在运行 `HttpRouter` 解决方案的 `Publisher` 和 `QueueSubscriber` 项目后展示的 Atom 1.0 馈。
@@ -7346,15 +7627,15 @@ namespace  Microsoft.Samples.ServiceBus
 
 ### 总结
 
-.NET Services 支持在 Azure Fabric 中以程序化方式持久化对象的三个功能：`.NET Workflow Service` 以及 `.NET Service Bus` 的队列和路由器。.NET Services 还提供了 `.NET Services Portal` 页面来管理工作流类型和这些类型的实例；截至 2009 年 3 月的 CTP 为止，队列和路由器还没有管理界面。
+`.NET Services` 支持在 Azure Fabric 中以程序化方式持久化对象的三个功能：`.NET Workflow Service` 以及 `.NET Service Bus` 的队列和路由器。`.NET Services` 还提供了 `.NET Services Portal` 页面来管理工作流类型和这些类型的实例；截至 2009 年 3 月的 CTP 为止，队列和路由器还没有管理界面。
 
-Windows Azure 平台的 `Workflow Service` (WFS) 页面对该服务的描述如下：“Workflow Service 是一个在云端运行工作流的大规模主机。它提供了一套针对发送、接收和处理 HTTP 以及 Service Bus 消息而优化的活动；一套用于部署、管理和跟踪工作流实例执行情况的托管工具；以及一组管理 API。工作流 (WFs) 可以熟悉的 Visual Studio 2008 工作流设计器来构建。”本章的电子版将演示如何创建和运行 WFS 解决方案，并分析代码和消息以使用工作流管理 API 创建工作流。
+Windows Azure 平台的 `Workflow Service`（WFS）页面对该服务的描述如下：“Workflow Service 是一个在云端运行工作流的大规模主机。它提供了一套针对发送、接收和处理 HTTP 以及 Service Bus 消息而优化的活动；一套用于部署、管理和跟踪工作流实例执行情况的托管工具；以及一组管理 API。工作流（WFs）可以熟悉的 Visual Studio 2008 工作流设计器来构建。”本章的电子版将演示如何创建和运行 WFS 解决方案，并分析代码和消息以使用工作流管理 API 创建工作流。
 
-当开发者开始测试 SB 时，显然需要另外两个功能来使 SB 适应 Windows Azure 环境：`Service Bus Queues` (SBQs) 用于持久化消息以进行异步交付，以及 `Service Bus Routers` (SBRs) 用于将消息路由到多个监听器甚至更多。路由器为来自选定发送者的消息实现了可组合的发布/订阅模型。订阅者可以添加队列以确保监听器临时离线时消息不会丢失。本章的后半部分通过 RESTful HTTP 消息演示了 SBQs 和 SBRs。.NET Services SDK 还安装了队列和路由示例解决方案，它们会将消息封装在 SOAP 1.1/1.2 封中。
+当开发者开始测试 SB 时，显然需要另外两个功能来使 SB 适应 Windows Azure 环境：`Service Bus Queues`（SBQs）用于持久化消息以进行异步交付，以及 `Service Bus Routers`（SBRs）用于将消息路由到多个监听器甚至更多。路由器为来自选定发送者的消息实现了可组合的发布/订阅模型。订阅者可以添加队列以确保监听器临时离线时消息不会丢失。本章的后半部分通过 RESTful HTTP 消息演示了 SBQs 和 SBRs。`.NET Services SDK` 还安装了队列和路由示例解决方案，它们会将消息封装在 SOAP 1.1/1.2 封中。
 
-## 第四部分
+# 第四部分
 
-### 使用 SQL Azure 服务（仅限在线）
+## 使用 SQL Azure 服务（仅限在线）
 
 ### 第 12 章：管理 SQL Azure 账户和数据库
 
@@ -7364,19 +7645,19 @@ Windows Azure 平台的 `Workflow Service` (WFS) 页面对该服务的描述如�
 
 SQL Azure 是 SQL Server 团队对一组高度可扩展云服务的命名，这些服务基于自定义版本的 SQL Server 2008 以及相关服务，并托管在微软数据中心。SQL Azure 旨在提供企业级数据中心的能力，而无需物理设施的资本成本、管理或维护的运营费用，以及服务器和数据库许可证费用。SQL Azure 通过将你的数据的共三个冗余副本复制到不同的物理服务器来实现高可用性。SQL Azure 通过将数据分区为 10GB 或更小的数据库，在保持事务一致性的同时实现了可扩展性。
 
-当本章在 2010 年 1 月更新时，这些服务中的第一项——`SQL Azure Database` (SADB) v1（一种可扩展且可用的关系型数据库）作为商业产品发布。最终，SQL Azure 将由以下服务组成：
+当本章在 2010 年 1 月更新时，这些服务中的第一项——`SQL Azure Database`（SADB）v1（一种可扩展且可用的关系型数据库）作为商业产品发布。最终，SQL Azure 将由以下服务组成：
 
-* `SQL Azure Database` 提供核心 SQL Server 数据库能力（在 PDC 2009 发布）。
-* `Azure Data Sync` 通过 `Microsoft Sync Framework` 实现云端本地 SQL Server 以及 SQL Azure 数据库的同步。第 13 章描述了 `Azure Data Sync`。
-* `Business Intelligence` (BI) 和 `Reporting Services` (RS) 目前没有 CTP 或发布计划。
+- `SQL Azure Database` 提供核心 SQL Server 数据库能力（在 PDC 2009 发布）。
 
-本章重点关注创建 SQL Azure 账户、连接到 SADB v1 服务器，以及使用 `SQL Server Management Studio` (SSMS) 2008 R2 2009 年 11 月 CTP [Express] 和 `sqlcmd` 工具创建用户数据库。本章是在 SADB 发布到 Web (RTW) 并作为收取服务费用商业产品后编写的。当你连接到商业版本时，你在创建账户时指定的信用卡每月将 1GB 以内的数据库大小收取 9.99 美元（Web 版），对于 10GB 的空间每月收取 99.99 美元（商业版），此外每 GB 数据进入收取 0.10 美元，每 GB 数据出站收取 0.15 美元。
+- `Azure Data Sync` 通过 `Microsoft Sync Framework` 实现云端本地 SQL Server 以及 SQL Azure 数据库的同步。第 13 章描述了 `Azure Data Sync`。
 
-微软提供了几种折扣服务计划，提供免费的 Windows Azure 计算和存储配额；具有不同数量数据库的 SADB 账户；以及数据进入、出站、Service Bus 连接和访问控制事务。这些计划在 Windows Azure 定价信息页面（`http://bit.ly/1TeCsu`, `http://www.microsoft.com/windowsazure/offers/`）中说明。微软合作伙伴网络的注册成员可获得额外折扣，MSDN Premium 订阅者可获得大多的免费配额。Azure 定价信息页面上的链接指向了关于这些额外福利的更多信息。
+- `Business Intelligence`（BI）和 `Reporting Services`（RS）目前没有 CTP 或发布计划。
 
-
+本章重点关注创建 SQL Azure 账户、连接到 SADB v1 服务器，以及使用 `SQL Server Management Studio`（SSMS）2008 R2 2009 年 11 月 CTP [Express] 和 `sqlcmd` 工具创建用户数据库。本章是在 SADB 发布到 Web（RTW）并作为收取服务费用商业产品后编写的。当你连接到商业版本时，你在创建账户时指定的信用卡每月将 1GB 以内的数据库大小收取 9.99 美元（Web 版），对于 10GB 的空间每月收取 99.99 美元（商业版），此外每 GB 数据进入收取 0.10 美元，每 GB 数据出站收取 0.15 美元。
 
 
+
+微软提供了几种折扣服务计划，提供免费的 Windows Azure 计算和存储配额；具有不同数量数据库的 `SADB` 账户；以及数据进入、出站、`Service Bus` 连接和访问控制事务。这些计划在 Windows Azure 定价信息页面（`http://bit.ly/1TeCsu`, `http://www.microsoft.com/windowsazure/offers/`）中说明。微软合作伙伴网络的注册成员可获得额外折扣，`MSDN Premium` 订阅者可获得大多的免费配额。Azure 定价信息页面上的链接指向了关于这些额外福利的更多信息。
 
 最初的 SSDS 架构师选择了由一组层次化的 `Authority`、`Container` 和 `Entity`（`ACE`）对象实现的 `实体-属性-值`（`EAV`）数据模型，而不是传统的关系型数据模型，因为 `EAV` 数据库可以扩展到极大的规模，Google 的 `BigTable` 和 Yahoo 的 `Hadoop` 便是典型。这种方法的问题在于，潜在客户在尝试区分 SSDS 表与 `Azure Data Services` 提供的类似 EAV 表时会遇到困难。此外，Azure 营销团队极力推崇利用开发者在 `.NET` 编程和 `Visual Studio` 方面的经验，减轻将传统的 `ASP.NET` 和基于 `.NET` 的服务从本地数据中心迁移到云端的负担。开发者及其管理层更感兴趣于利用他们的关系型数据库设计和 `Transact-SQL`（`T-SQL`）查询技能，而不是扩展性增加的潜力。架构师和开发者对 `EAV` 表的“最终一致性”属性也存在担忧，而非 `SQL Server` 集群的即时、事务性更新一致性。
 
@@ -7397,10 +7678,15 @@ SQL Azure 是 SQL Server 团队对一组高度可扩展云服务的命名，这�
 MSDN 的 `SQL Azure Database` 文档可在在线访问 [`bit.ly/12N3Mp`](http://bit.ly/12N3Mp), [`msdn.microsoft.com/en-us/library/ee336279.aspx`](http://msdn.microsoft.com/en-us/library/ee336279.aspx)，包含以下章节：
 
 *   “介绍 SQL Azure Database”
+
 *   “SQL Azure Database 概念”
+
 *   “开发者指南”
+
 *   “指南与局限性”
+
 *   “Transact-SQL 参考”
+
 *   “SQL Azure Database 版权和法律信息”
 
 “Transact-SQL 参考”章节特别有用，因为它包含了受支持、部分支持和不支持的 `T-SQL` 保留字列表。
@@ -7408,18 +7694,31 @@ MSDN 的 `SQL Azure Database` 文档可在在线访问 [`bit.ly/12N3Mp`](http://
 Windows Azure 团队于 2009 年 12 月 23 日发布了 `Windows Azure Platform Training Kit–December [2009] Update` 下载，地址为 [`bit.ly/3Nwdbn`](http://bit.ly/3Nwdbn), [`www.microsoft.com/downloads/details.aspx?FamilyID=413E88F8-5966-4A83-B309`](http://www.microsoft.com/downloads/details.aspx?FamilyID=413E88F8-5966-4A83-B309)。该工具包提供了以 `.pptx` 或 `.docx` 格式的以下 SQL Azure 特有元素：
 
 *   什么是 SQL Azure？
+
 *   SQL Azure 简介
+
 *   使用 SQL Azure 构建应用程序
+
 *   使用 SQL Azure 进行扩展扩展
+
 *   准备您的 SQL Azure 账户
+
 *   连接到 SQL Azure
+
 *   在 SQL Azure 中管理登录和安全
+
 *   在 SQL Azure 中创建对象
+
 *   将数据库架构迁移到 SQL Azure
+
 *   使用 `SSIS` 将数据移入和移出 SQL Azure
+
 *   构建简单的 SQL Azure
+
 *   使用分片扩展 SQL Azure
+
 *   上操实验室
+
 *   将应用程序迁移到 SQL Azure
 
 您可以在 [`bit.ly/ARC3N`](http://bit.ly/ARC3N), [`social.msdn.com/forums/en-US/ssdsstarted/`](http://social.msdn.com/forums/en-US/ssdsstarted/) 找到 SQL Azure 入门论坛。
@@ -7429,20 +7728,18 @@ Windows Azure 团队于 2009 年 12 月 23 日发布了 `Windows Azure Platform 
 Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azure AppFabric 的发布日，公告如下：
 
 *   Windows Azure 博客 ([`bit.ly/6HsovV`](http://bit.ly/6HsovV), [`blogs.msdn.com/windowsazure/archive/2010/01/04/sign-up-for-a-windows-azure-platform-offer-today-and-get-visibility-into-your-usage.aspx`](http://blogs.msdn.com/windowsazure/archive/2010/01/04/sign-up-for-a-windows-azure-platform-offer-today-and-get-visibility-into-your-usage.aspx))
+
 *   SQL Azure 博客 ([`bit.ly/61OS6H`](http://bit.ly/61OS6H), [`blogs.msdn.com/ssds/archive/2010/01/04/9943474.aspx`](http://blogs.msdn.com/ssds/archive/2010/01/04/9943474.aspx))
+
 *   Windows Azure Platform AppFabric 博客 ([`bit.ly/6a9xuS`](http://bit.ly/6a9xuS), [`blogs.msdn.com/netservices/archive/2010/01/04/announcing-windows-azure-platform-commercial-offer-availability-and-updated-appfabric-pricing.aspx`](http://blogs.msdn.com/netservices/archive/2010/01/04/announcing-windows-azure-platform-commercial-offer-availability-and-updated-appfabric-pricing.aspx))
 
 以下步骤将使用 Windows Live ID 创建新的商业 Windows Azure、`SADB` 和 Azure AppFabric（原 `.NET Services`）账户，或者如果您使用创建过免费 CTP 账户的 Live ID 账户，则会将该 CTP 账户及其项目升级为商业状态。
 
-
-
-
-
 接下来的步骤和截图基于 OakLeaf 博客于 2010 年 1 月 5 日发布的“如何创建和激活新的 Windows Azure 和 SQL Azure 账户或升级现有账户”文章（[`bit.ly/4riEfv`](http://bit.ly/4riEfv), [`oakleafblog.blogspot.com/2010/01/how-to-create-and-activate-introductory.html`](http://oakleafblog.blogspot.com/2010/01/how-to-create-and-activate-introductory.html)）。
 
-1. 使用你的 Windows Live ID 登录 Windows Azure 开发门户的 SQL Azure 项目查看页面（[`bit.ly/4riEfv`](http://bit.ly/4riEfv), [`sql.azure.com/ProjectViewer.aspx`](https://sql.azure.com/ProjectViewer.aspx))，并点击右上角的 `Billing`链接（参见图 12.1）以打开 Microsoft Online 服务门户 (MOCP) 落地页。
+1. 使用你的 Windows Live ID 登录 Windows Azure 开发门户的 SQL Azure 项目查看页面（[`bit.ly/4riEfv`](http://bit.ly/4riEfv), [`sql.azure.com/ProjectViewer.aspx`](https://sql.azure.com/ProjectViewer.aspx)），并点击右上角的 `Billing` 链接（参见图 12.1）以打开 Microsoft Online 服务门户 (MOCP) 落地页。
 
-图 12.1 SQL Azure 项目查看页的 `Billing`链接。
+图 12.1 SQL Azure 项目查看页的 `Billing` 链接。
 
 ![12.1](img/c12f001.jpg)
 
@@ -7452,23 +7749,23 @@ Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azu
 
 ![12.2](img/c12f002.jpg)
 
-2. 如果你尚未登录，点击 `Sign In`链接并使用你的 Windows Live ID 登录。如果你正在创建一个新账户，必须完成联系信息、公司信息和服务使用地址表。
+2. 如果你尚未登录，点击 `Sign In` 链接并使用你的 Windows Live ID 登录。如果你正在创建一个新账户，必须完成联系信息、公司信息和服务使用地址表。
 
-3. 点击 `Services`选项卡并点击 `Windows Azure Platform`链接（参见图 12.3）。
+3. 点击 `Services` 选项卡并点击 `Windows Azure Platform` 链接（参见图 12.3）。
 
-图 12.3 用于应用 `Windows Azure Platform`过滤器的 `Services`选项卡。
+图 12.3 用于应用 `Windows Azure Platform` 过滤器的 `Services` 选项卡。
 
-4. 点击任何 `Rate Plan`链接以打开定价信息页（参见图 12.4）。
+4. 点击任何 `Rate Plan` 链接以打开定价信息页（参见图 12.4）。
 
 图 12.4 Windows/SQL Azure 四个定价信息页之一。
 
 ![12.4](img/c12f004.jpg)
 
-5. 如果你不符合合作伙伴网络折扣或 MSDN Premium 特惠的条件，点击三个免费或付费账户之一的 `Buy`按钮，完成并跳转到第 8 步。
+5. 如果你不符合合作伙伴网络折扣或 `MSDN Premium` 特惠的条件，点击三个免费或付费账户之一的 `Buy` 按钮，完成并跳转到第 8 步。
 
 （Windows Azure Platform 入门优惠提供非常有限的计算小时和小型存储配额。两个付费计划需要同意六个月的有效期。）
 
-6. 如果你有 MSDN Premium 订阅，点击 `Special Offers for MSDN Windows Azure Platform Benefits`链接打开 MSDN 订阅者 Windows Azure Platform 权益页面（参见图 12.5）。
+6. 如果你有 `MSDN Premium` 订阅，点击 `Special Offers for MSDN Windows Azure Platform Benefits` 链接打开 MSDN 订阅者 Windows Azure Platform 权益页面（参见图 12.5）。
 
 图 12.5 此页解释了为 MSDN 订阅者提供的临时折扣。
 
@@ -7476,13 +7773,13 @@ Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azu
 
 7. 滚动到页面底部的网格，了解前八个月入门权益计划的详细信息，以及入门计划过期后三个级别的持续计划。
 
-8. 点击 `My Account`链接打开我的账户页面（参见图 12.6）。
+8. 点击 `My Account` 链接打开我的账户页面（参见图 12.6）。
 
-图 12.6 `My Account`页面确认了你的 MSDN 订阅并提供了 Windows Azure Platform 链接。
+图 12.6 `My Account` 页面确认了你的 MSDN 订阅并提供了 Windows Azure Platform 链接。
 
 ![12.6](img/c12f006.jpg)
 
-9. 点击 `Windows Azure Platform`链接打开 MOCP 订阅购物车页面，该页面已根据情况添加了 Windows Azure Platform MSDN 订阅详情——本例中为 MSDN Premium（参见图 12.7）。
+9. 点击 `Windows Azure Platform` 链接打开 MOCP 订阅购物车页面，该页面已根据情况添加了 Windows Azure Platform MSDN 订阅详情——本例中为 `MSDN Premium`（参见图 12.7）。
 
 图 12.7 购物车页的账单信息窗显示了适用于你订阅级别的 MSDN 权益。
 
@@ -7496,19 +7793,19 @@ Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azu
 
 ![12.8](img/c12f008.jpg)
 
-11. 点击 `Confirm Order`打开需求页面，在需求列表中选择 `Activate`（参见图 12.9）。
+11. 点击 `Confirm Order` 打开需求页面，在需求列表中选择 `Activate`（参见图 12.9）。
 
 图 12.9 激活 MOCP 需求。
 
 ![12.9](img/c12f009.jpg)
 
-12. 如果你创建一个新账户，必须指定系统管理员名称、电子邮件和密码。点击 `Go`激活订阅并显示激活页面（参见图 12.10）。
+12. 如果你创建一个新账户，必须指定系统管理员名称、电子邮件和密码。点击 `Go` 激活订阅并显示激活页面（参见图 12.10）。
 
 图 12.10 激活页面让你查看详情。
 
 ![12.10](img/c12f010.jpg)
 
-13. 点击 `Finish`完成激活过程。几分钟后，你将通过电子邮件收到确认消息（参见图 12.11）。
+13. 点击 `Finish` 完成激活过程。几分钟后，你将通过电子邮件收到确认消息（参见图 12.11）。
 
 图 12.11 这样的消息确认了你的新账户。
 
@@ -7520,7 +7817,7 @@ Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azu
 
 ![12.12](img/c12f012.jpg)
 
-15. 如果你使用不同的 Windows Live ID 开始新账户，接受使用条款打开 `Create Server`页面，输入系统管理员用户名和密码，再次输入密码，并在列表中选择微软数据中心以提供你的数据库（参见图 12.13）。
+15. 如果你使用不同的 Windows Live ID 开始新账户，接受使用条款打开 `Create Server` 页面，输入系统管理员用户名和密码，再次输入密码，并在列表中选择微软数据中心以提供你的数据库（参见图 12.13）。
 
 图 12.13 提供系统管理员凭据并为服务器选择数据中心。
 
@@ -7530,12 +7827,9 @@ Windows Azure 团队将 2010 年 1 月 4 日定为 Windows Azure、`SDS` 和 Azu
 
 为了防止暴力破解攻击通过常用用户名（如 `SA`、`Admin` 和 `Root`）成功，SQL Azure 禁止使用这些名称。
 
-18. 对于新账户，点击 `Create Server` 将新的 SQL Azure 服务器添加到账户中。这可能需要几分钟才能完成并显示我的项目页面。
+16. 对于新账户，点击 `Create Server` 将新的 SQL Azure 服务器添加到账户中。这可能需要几分钟才能完成并显示我的项目页面。
 
-
-
-
-19. 点击项目名称——在本例中为 OakLeaf Azure MSDN Subscription——以打开服务器管理页面，该页面列出了所有已升级为商业状态的 CTP 数据库（如果有），以及支持单个服务器的账户主数据库（参见 图 12.14）。
+17. 点击项目名称——在本例中为 OakLeaf Azure MSDN Subscription——以打开服务器管理页面，该页面列出了所有已升级为商业状态的 CTP 数据库（如果有），以及支持单个服务器的账户主数据库（参见图 12.14）。
 
 SQL Azure 不会向你的账户收取主数据库的费用。图 12.14 所示的 AdventureWorksLT 数据库仅包含几个表。
 
@@ -7547,7 +7841,9 @@ SQL Azure 不会向你的账户收取主数据库的费用。图 12.14 所示的
 
 SQL Azure 服务器提供可自定义的防火墙，根据调用者的 IP 地址控制对服务器的 TCP/IP 访问。防火墙还允许或禁用 Windows Azure 服务（如 Web 和 Worker 角色）对服务器的访问。
 
-要允许 Windows Azure 服务访问新的或升级的服务器，请点击 SQL Azure 垂直标签打开服务器管理页面，点击其“防火墙设置”标签并勾选“允许 Microsoft 服务访问此服务器”复选框，这将添加一个默认 IP 地址范围从 `0.0.0.0` 到 `0.0.0.0` 的 `MicrosoftServices` 规则。该规则允许任何微软托管的服务尝试连接到服务器（参见 图 12.15）。
+
+
+要允许 Windows Azure 服务访问新的或升级的服务器，请点击 SQL Azure 垂直标签打开服务器管理页面，点击其“防火墙设置”标签并勾选“允许 Microsoft 服务访问此服务器”复选框，这将添加一个默认 IP 地址范围从`0.0.0.0`到`0.0.0.0`的`MicrosoftServices`规则。该规则允许任何微软托管的服务尝试连接到服务器（参见 图 12.15）。
 
 图 12.15 勾选复选框可允许任何微软托管的服务尝试连接到 SQL Azure 服务器。
 
@@ -7555,7 +7851,7 @@ SQL Azure 服务器提供可自定义的防火墙，根据调用者的 IP 地址
 
 要允许客户端应用程序尝试通过互联网连接到服务器，请点击“添加规则”按钮打开“添加防火墙规则”表单，然后输入规则名称和要接受的 IP 地址范围（参见 图 12.16）。
 
-添加防火墙规则表单包含了供参考的调用计算机 IP 地址。然而，互联网防火墙仅对具有固定 IP 地址的客户端有效。大多数互联网服务提供商（ISP）使用动态主机配置协议（DHCP）从分配的区块向客户端计算机分配 IP 地址。除非你知道 ISP 分配的 IP 地址范围，否则必须通过指定从 `0.0.0.0` 到 `255.255.255.255` 的范围来允许所有入站地址。
+添加防火墙规则表单包含了供参考的调用计算机 IP 地址。然而，互联网防火墙仅对具有固定 IP 地址的客户端有效。大多数互联网服务提供商（ISP）使用动态主机配置协议（DHCP）从分配的区块向客户端计算机分配 IP 地址。除非你知道 ISP 分配的 IP 地址范围，否则必须通过指定从`0.0.0.0`到`255.255.255.255`的范围来允许所有入站地址。
 
 防火墙设置会缓存五分钟，因此更改可能不会立即生效。
 
@@ -7579,7 +7875,7 @@ SQL Azure 服务器提供可自定义的防火墙，根据调用者的 IP 地址
 
 ![12.18](img/c12f018.jpg)
 
-或者，你也可以在 SSMS 2008 R2 [Express] 中打开主数据库，并执行 `CREATE DATABASE DatabaseName` 或 `DROP DATABASE DatabaseName` T-SQL 命令来创建或删除用户数据库。
+或者，你也可以在 SSMS 2008 R2 [Express] 中打开主数据库，并执行`CREATE DATABASE DatabaseName`或`DROP DATABASE DatabaseName` T-SQL 命令来创建或删除用户数据库。
 
 后文“使用 SSMS 2008 R2 [Express] 连接到 SADB 主和用户数据库”章节描述了具体操作。
 
@@ -7588,17 +7884,13 @@ CREATE DATABASE DatabaseName
 DROP DATABASE DatabaseName
 ```
 
+### 4. SADB 不支持 T-SQL 的`USE`命令，因此它要求你指定要连接的数据库。因此，点击`Options >>`按钮展开对话框。在`Connect to Database`（连接到数据库）组合框中，接受`<default>`，或输入`master`以连接`master`数据库或现有用户数据库的名称，并勾选`Encrypt Connection`（加密连接）复选框（参见图 12.22）。
 
+SADB 连接默认使用传输安全协议 (TLS) 进行加密，但勾选`Encrypt Connection`复选框将使你组织的数据安全审计员满意。
 
+### 5. 点击`Connect`打开连接，并点击`New Query`打开查询编辑器面板。通过检查高亮的状态栏，验证你在上一步中指定的数据库是否处于激活状态。注意工具栏上的`Available Databases`（可用数据库）列表是禁用的。
 
-
-### 4. SADB 不支持 T-SQL 的 `USE` 命令，因此它要求你指定要连接的数据库。因此，点击 `Options >>` 按钮展开对话框。在 `Connect to Database`（连接到数据库）组合框中，接受 `<default>`，或输入 `master` 以连接 `master` 数据库或现有用户数据库的名称，并勾选 `Encrypt Connection`（加密连接）复选框（参见图 12.22）。
-
-SADB 连接默认使用传输安全协议 (TLS) 进行加密，但勾选 `Encrypt Connection` 复选框将使你组织的数据安全审计员满意。
-
-### 5. 点击 `Connect` 打开连接，并点击 `New Query` 打开查询编辑器面板。通过检查高亮的状态栏，验证你在上一步中指定的数据库是否处于激活状态。注意工具栏上的 `Available Databases`（可用数据库）列表是禁用的。
-
-图 12.21 在标准的 `Connect to Server` 对话框中指定 SADB 登录参数。
+图 12.21 在标准的`Connect to Server`对话框中指定 SADB 登录参数。
 
 ![12.21](img/c12f021.jpg)
 
@@ -7606,9 +7898,9 @@ SADB 连接默认使用传输安全协议 (TLS) 进行加密，但勾选 `Encryp
 
 ![12.22](img/c12f022.jpg)
 
-要对系统视图运行测试查询，请执行 `SELECT * FROM sys.all_objects` 命令（参见图 12.23）。
+要对系统视图运行测试查询，请执行`SELECT * FROM sys.all_objects`命令（参见图 12.23）。
 
-为了节省资源消耗，SADB 在在活动五分钟后自动关闭连接。要重新打开已关闭的连接，请点击 SQL 编辑器工具栏最左侧的 `Connect` 或 `Change Connection` 按钮。
+为了节省资源消耗，SADB 在在活动五分钟后自动关闭连接。要重新打开已关闭的连接，请点击 SQL 编辑器工具栏最左侧的`Connect`或`Change Connection`按钮。
 
 图 12.23 状态栏标识连接的固定数据库名称。
 
@@ -7616,7 +7908,7 @@ SADB 连接默认使用传输安全协议 (TLS) 进行加密，但勾选 `Encryp
 
 ### 配置服务器防火墙
 
-SQL Azure 将防火墙规则存储在 `master` 数据库的 `sys.firewall_rules` 系统视图中。你可以通过登录 SSMS 2008 R2 并将 `Connect to Database` 值设置为 `master`，同时执行 `SELECT * FROM sys.firewall_rules` 查询来获取当前生效规则集的详细（参见图 12.24）。
+SQL Azure 将防火墙规则存储在`master`数据库的`sys.firewall_rules`系统视图中。你可以通过登录 SSMS 2008 R2 并将`Connect to Database`值设置为`master`，同时执行`SELECT * FROM sys.firewall_rules`查询来获取当前生效规则集的详细（参见图 12.24）。
 
 图 12.24 在 master 数据库上执行 T-SQL 查询以检索生效的防火墙规则。
 
@@ -7624,12 +7916,13 @@ SQL Azure 将防火墙规则存储在 `master` 数据库的 `sys.firewall_rules`
 
 SQL Azure 提供了两个系统存储过程，用于按名称创建或更新和删除服务器规则：
 
-*   运行 `exec sp_set_firewall_rule N‘Allow Windows Azure’,‘0.0.0.0’,‘0.0.0.0’` 创建或更新命名规则。
-*   运行 `exec sp_delete_firewall_rule N‘Allow Windows Azure’` 删除指定的命名规则。
+*   运行`exec sp_set_firewall_rule N‘Allow Windows Azure’,‘0.0.0.0’,‘0.0.0.0’`创建或更新命名规则。
+
+*   运行`exec sp_delete_firewall_rule N‘Allow Windows Azure’`删除指定的命名规则。
 
 ### 确定服务器使用情况
 
-`sys.database_usage` 系统视图列出了你的数据库使用历史，包含时间（日期）、`sku`（Web 或 Business）和 `quantity`（正在使用的数据库数量）列。`sku` 或 `quantity` 的每次更改都会添加新行（参见图 12.25）。
+`sys.database_usage`系统视图列出了你的数据库使用历史，包含时间（日期）、`sku`（Web 或 Business）和`quantity`（正在使用的数据库数量）列。`sku`或`quantity`的每次更改都会添加新行（参见图 12.25）。
 
 图 12.25 从服务器的 master 数据库检索你的数据库使用历史。
 
@@ -7637,13 +7930,13 @@ SQL Azure 提供了两个系统存储过程，用于按名称创建或更新和�
 
 ### 使用 sqlcmd 工具配合 SADB
 
-`sqlcmd` 工具是 SSMS 的替代方案，允许你在命令行提示符下管理数据库连接。在 Windows 命令提示符处输入或粘贴带有有效服务器管理员凭据的以下指令，可以打开在本章之前创建的 SADB 服务器上运行的 Northwind 数据库连接：
+`sqlcmd`工具是 SSMS 的替代方案，允许你在命令行提示符下管理数据库连接。在 Windows 命令提示符处输入或粘贴带有有效服务器管理员凭据的以下指令，可以打开在本章之前创建的 SADB 服务器上运行的 Northwind 数据库连接：
 
 ```
 sqlcmd -S k8jv7gpmwb.database.windows.net -U rogerj@k8jv7gpmwb -P Pas$w0rd -d Northwind
 ```
 
-下表描述了常用的 `sqlcmd` 命令行参数：
+下表描述了常用的`sqlcmd`命令行参数：
 
 | 参数 | 说明 |
 | :--- | :--- |
@@ -7655,13 +7948,15 @@ sqlcmd -S k8jv7gpmwb.database.windows.net -U rogerj@k8jv7gpmwb -P Pas$w0rd -d No
 | -i | 查询输入 (T-SQL) 文件路径\名称 |
 | -o | 查询输出文件路径 |
 
-|图 12.26 执行 `sqlcmd -?` 的结果 |
+图 12.26 执行`sqlcmd -?`的结果
 
-|图 12.26 显示 `sqlcmd` 的 Windows 命令提示符 |
+图 12.26 显示`sqlcmd`的 Windows 命令提示符
 
 ![12.26](img/c12f026.jpg)
 
-连接 SADB 后，使用 `sqlcmd` 执行批处理 T-SQL 语句。在顺序编号 #> 提示符处输入有效的 T-SQL 命令并按回车。输入 `GO` 并按回车执行命令。输入 `quit` 或 `exit` 关闭会话。[图 12.27 使用 `sqlcmd` 在 Northwind 数据库中显示表列表 |
+连接 SADB 后，使用`sqlcmd`执行批处理 T-SQL 语句。在顺序编号 #> 提示符处输入有效的 T-SQL 命令并按回车。输入`GO`并按回车执行命令。输入`quit`或`exit`关闭会话。
+
+图 12.27 使用`sqlcmd`在 Northwind 数据库中显示表列表
 
 ![12.27](img/c12f027.jpg)
 
@@ -7669,9 +7964,9 @@ sqlcmd -S k8jv7gpmwb.database.windows.net -U rogerj@k8jv7gpmwb -P Pas$w0rd -d No
 
 SADB 数据库是虚拟对象，管理数据库、表、索引、调优、登录和角色，但不物理存储。SADB 处理数据复制；数据丢失后的还原是自动的。
 
-SADB 阻止直接操作物理资源的语句和选项，例如 `RESOURCE GOVERNOR`、文件组引用以及某些服务器选项。尝试设置 `SET ANSI_NULLS ON` 会产生错误消息（注：原文此处为 generate，根据语境应为不支持，即尝试设置 `SET ANSI_NULLS ON` 会产生错误消息）。
+SADB 阻止直接操作物理资源的语句和选项，例如`RESOURCE GOVERNOR`、文件组引用以及某些服务器选项。尝试设置`SET ANSI_NULLS ON`会产生错误消息（注：原文此处为 generate，根据语境应为不支持，即尝试设置`SET ANSI_NULLS ON`会产生错误消息）。
 
-已弃的数据类型（如 `text`、`ntext` 和 `image`）不受支持，但你可以用 `varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 替代它们。SADB 目前不允许使用 SQL Server 2008 的 `geography` 和 `geometry` 空间数据类型。如果你需要加密数据，必须在客户端进行加密；SADB 不支持 SQL Server 2005 引入的列级或行级加密，或 SQL Server 2008 的透明数据加密 (TDE)。
+已弃的数据类型（如`text`、`ntext`和`image`）不受支持，但你可以用`varchar(max)`、`nvarchar(max)`和`varbinary(max)`替代它们。SADB 目前不允许使用 SQL Server 2008 的`geography`和`geometry`空间数据类型。如果你需要加密数据，必须在客户端进行加密；SADB 不支持 SQL Server 2005 引入的列级或行级加密，或 SQL Server 2008 的透明数据加密 (TDE)。
 
 MSDN SQL Azure 文档中的“Transact-SQL 参考”章节（[`bit.ly/15Ja0Q`](http://bit.ly/15Ja0Q), [`msdn.microsoft.com/en-us/library/ee336281.aspx`](http://msdn.microsoft.com/en-us/library/ee336281.aspx)）包含了支持、部分支持和不支持的 T-SQL 语句表格。
 
@@ -7679,27 +7974,23 @@ MSDN SQL Azure 文档中的“Transact-SQL 参考”章节（[`bit.ly/15Ja0Q`](h
 
 SQL Azure Database 是 SQL Azure 的基本元素。SADB 在微软大多数新建的数据中心与 Windows Azure 平台一起运行，提供高扩展性和可用性的关系计算资源。SADB Web 版支持大小最大 1GB 的事务一致数据库；Business 版限制为 10GB 或更小。
 
-
-
-
-
 CTP 版本需要从 Microsoft Connect 站点请求邀请以获得令牌，该令牌可以在 SQL Azure 门户中免费兑换为具有多个数据库的单个服务器。商业版于 2010 年 1 月 4 日发布，需要提供信用卡以支付每月 9.99 美元（Web 版）或每月 99.99 美元（商业版）的费用，此外每 GB 的入数据费用为 0.10 美元，每 GB 的出数据费用为 0.15 美元。MSDN Premium 订阅用户和愿意承诺六个月订阅的用户提供特殊价格优惠。
 
-SADB 自动为每个服务器分配唯一的 DNS 地址。SQL Server Management Studio 2008 [Express] 和 `sqlcmd` 命令行工具通过 `TCP` 协议在 `1433` 端口上，使用 SQL Server 传统的表格型数据流（Tabular Data Stream）格式通过加密传输连接到 SADB。使用 `TDS` 允许开发者仅通过更改连接字符串，即可将开发连接从本地 SQL Server 2005 或 2008 [Express] 实例切换到云端的 SADB 数据库。`SSMS 2008 R2 [Express]` 支持对 SQL Azure 数据库进行全功能管理。
+SADB 自动为每个服务器分配唯一的 DNS 地址。SQL Server Management Studio 2008 [Express] 和`sqlcmd`命令行工具通过`TCP`协议在`1433`端口上，使用 SQL Server 传统的表格型数据流（Tabular Data Stream）格式通过加密传输连接到 SADB。使用`TDS`允许开发者仅通过更改连接字符串，即可将开发连接从本地 SQL Server 2005 或 2008 [Express] 实例切换到云端的 SADB 数据库。`SSMS 2008 R2 [Express]`支持对 SQL Azure 数据库进行全功能管理。
 
-微软管理 SADB 的物理基础设施，如服务器实例、磁盘驱动器和文件以及备份和恢复操作，因此许多 `T-SQL DDL` 命令不受支持。然而，开发者对数据库、表、索引、调优、查询优化、登录、用户和角色具有完全控制权。SADB 不支持已弃和新的 SQL Server 2008 空间数据类型，也不提供数据加密或压缩。
+微软管理 SADB 的物理基础设施，如服务器实例、磁盘驱动器和文件以及备份和恢复操作，因此许多`T-SQL DDL`命令不受支持。然而，开发者对数据库、表、索引、调优、查询优化、登录、用户和角色具有完全控制权。SADB 不支持已弃和新的 SQL Server 2008 空间数据类型，也不提供数据加密或压缩。
 
 # 第 13 章
 
 ## 利用 SQL Azure 数据库的关系型特性
 
-云端关系型数据库管理系统（RDBMS）相对并不常见，因为很难实现 IT 部门的企业级扩展和可用性能力，这些传统的无模式实体-属性-值（EAV）数据存储（如 Google App Engine 的 datastore 和 Amazon Web Services 的 SimpleDB）所期待。Google 提供了一种名为 `GQL` 的类 SQL 查询方言，Amazon 提供了一组 SimpleDB API 调用来模拟简单的类 SQL `SELECT` 语句。这两种查询“语言”都无法达到 ANSI SQL 的能力，即为特定结构提供定制复杂的结果集并具有精确、可预测的组成。这些表也缺乏关系型 `INNER` 或 `OUTER JOIN` 的概念，但 App Engine 的 datastore 可以通过 `db.Key` 模拟多一关联，通过 `list(db.Key)` 数据类型模拟一对多关联。
+云端关系型数据库管理系统（RDBMS）相对并不常见，因为很难实现 IT 部门的企业级扩展和可用性能力，这些传统的无模式实体-属性-值（EAV）数据存储（如 Google App Engine 的 datastore 和 Amazon Web Services 的 SimpleDB）所期待。Google 提供了一种名为`GQL`的类 SQL 查询方言，Amazon 提供了一组 SimpleDB API 调用来模拟简单的类 SQL`SELECT`语句。这两种查询“语言”都无法达到 ANSI SQL 的能力，即为特定结构提供定制复杂的结果集并具有精确、可预测的组成。这些表也缺乏关系型`INNER`或`OUTER JOIN`的概念，但 App Engine 的 datastore 可以通过`db.Key`模拟多一关联，通过`list(db.Key)`数据类型模拟一对多关联。
 
 2008 年 5 月 6 日发布在 OakLeaf Systems 博客上的“比较 Google App Engine、Amazon SimpleDB 和 Microsoft SQL Server Data Services”文章（[`bit.ly/LtvxN`](http://bit.ly/LtvxN), [`oakleafblog.blogspot.com/2008/04/comparing-google-app-engine-amazon.html`](http://oakleafblog.blogspot.com/2008/04/comparing-google-app-engine-amazon.html)）描述了当时这三种 EAV 数据存储在能力上的差异。SQL Server Data Services（在本书编写时更名为 SQL Data Services）将在微软于 2009 年底发布 SQL Azure 作为商业产品时退役。
 
-在查询关系型或 EAV 云端表之前，你必须指定关系型模式或定义实体及其属性，并向表或实体集合中填充数据。大多数早期的云数据库或数据存储将基于本地数据库的模式，并包含至少少量的历史数据。无疑，与使用 EAV 表作为数据存储相比，在云端运行数据密集型应用程序使用 RDBMS 会更快、更简单。本章涵盖了将模式和数据从本地 SQL Server [Express] 实例迁移到运行微软数据中心 Windows Azure Fabric 上的 SQL Azure 数据库 (SADB)，以及针对 SADB 执行 `DML` 和 `DQL` 查询。
+在查询关系型或 EAV 云端表之前，你必须指定关系型模式或定义实体及其属性，并向表或实体集合中填充数据。大多数早期的云数据库或数据存储将基于本地数据库的模式，并包含至少少量的历史数据。无疑，与使用 EAV 表作为数据存储相比，在云端运行数据密集型应用程序使用 RDBMS 会更快、更简单。本章涵盖了将模式和数据从本地 SQL Server [Express] 实例迁移到运行微软数据中心 Windows Azure Fabric 上的 SQL Azure 数据库 (SADB)，以及针对 SADB 执行`DML`和`DQL`查询。
 
-在本章于 2009 年秋季时，从本地数据库迁移模式和数据到云端 SADB 本质上是一个手动过程。Windows Azure 宣传师 Steve Marx 在 2008 年 8 月 26 日的推文中表示：“自动部署到 Windows Azure 的 API 将在发布前到来”（[`bit.ly/TMzGE`](http://bit.ly/TMzGE), [`twitter.com/smarx/status/3561513228`](https://twitter.com/smarx/status/3561513228)）。在本章于 2010 年 2 月底更新时，用于将 SQL Server 2005+ 数据库迁移至或从 SQL Azure 的 API 尚未到达，但 SQL Server 宣传师 George Huey 开发了一个 SQL Azure 迁移向应用程序，随后的“从本地 AdventureWorksLT2008 数据库迁移模式和数据到 SQL Azure”章节对其进行了描述。Microsoft Sync Framework 团队（[`bit.ly/arQOZJ`](http://bit.ly/arQOZJ), [`msdn.microsoft.com/en-us/sync/default.aspx`](http://msdn.microsoft.com/en-us/sync/default.aspx)）开发了 SQL Azure Data Sync，并在 2009 年 11 月发布了针对 SQL Azure 的 Sync Framework Power Pack CTP 版本（[`bit.ly/duYCXp`](http://bit.ly/duYCXp)）。Microsoft Sync Framework 博客（[`bit.ly/b8SurT`](http://bit.ly/b8SurT), [`msdn.microsoft.com/en-us/sync/`](http://msdn.microsoft.com/en-us/sync/))）提供了使用 SQL Azure Data Sync 填充本地版本版本数据库的示例。OakLeaf 博客于 2010 年 1 月发布的“使用 SQL Data Sync 同步本地和 SQL Azure 示例数据库”（[`bit.ly/4uhNeb`](http://bit.ly/4uhNeb), [`oakleafblog.blogspot.com/2010/01/synchronizing-on-premises-and-sql-azure.html`](http://oakleafblog.blogspot.com/2010/01/synchronizing-on-premises-and-sql-azure.html)）是一个详细的图教程。
+在本章于 2009 年秋季时，从本地数据库迁移模式和数据到云端 SADB 本质上是一个手动过程。Windows Azure 宣传师 Steve Marx 在 2008 年 8 月 26 日的推文中表示：“自动部署到 Windows Azure 的 API 将在发布前到来”（[`bit.ly/TMzGE`](http://bit.ly/TMzGE), [`twitter.com/smarx/status/3561513228`](https://twitter.com/smarx/status/3561513228)）。在本章于 2010 年 2 月底更新时，用于将 SQL Server 2005+ 数据库迁移至或从 SQL Azure 的 API 尚未到达，但 SQL Server 宣传师 George Huey 开发了一个 SQL Azure 迁移向应用程序，随后的“从本地 AdventureWorksLT2008 数据库迁移模式和数据到 SQL Azure”章节对其进行了描述。Microsoft Sync Framework 团队（[`bit.ly/arQOZJ`](http://bit.ly/arQOZJ), [`msdn.microsoft.com/en-us/sync/default.aspx`](http://msdn.microsoft.com/en-us/sync/default.aspx)）开发了 SQL Azure Data Sync，并在 2009 年 11 月发布了针对 SQL Azure 的 Sync Framework Power Pack CTP 版本（[`bit.ly/duYCXp`](http://bit.ly/duYCXp)）。Microsoft Sync Framework 博客（[`bit.ly/b8SurT`](http://bit.ly/b8SurT), [`msdn.microsoft.com/en-us/sync/`](http://msdn.microsoft.com/en-us/sync/)）提供了使用 SQL Azure Data Sync 填充本地版本版本数据库的示例。OakLeaf 博客于 2010 年 1 月发布的“使用 SQL Data Sync 同步本地和 SQL Azure 示例数据库”（[`bit.ly/4uhNeb`](http://bit.ly/4uhNeb), [`oakleafblog.blogspot.com/2010/01/synchronizing-on-premises-and-sql-azure.html`](http://oakleafblog.blogspot.com/2010/01/synchronizing-on-premises-and-sql-azure.html)）是一个详细的图教程。
 
 ## 创建并填充 SADB 数据库
 
@@ -7707,7 +7998,9 @@ SADB 自动为每个服务器分配唯一的 DNS 地址。SQL Server Management 
 
 通过广域网（WAN）向远程数据库添加行的速度受限于源文件或表到目标表之间的带宽。大多数大型组织在数据中心和互联网之间拥有多个 1.544Mbps 数字信号 1 (DS1 或 T1) 或更连接；个人通常使用上传速度低于 T1 但下载速度快多的 DSL 或电缆连接。为了避免大表极长的上传（或下载）时间，亚马逊服务（AWS）提供了 AWS Import/Export 服务的版本，该服务依赖在源数据中心和亚马逊数据中心之间运输高速磁盘驱动器。
 
-AWS Import/Export 服务详情页（[`bit.ly/hKCp6`](http://bit.ly/hKCp6), [`aws.amazon.com/importexport/`](http://aws.amazon.com/importexport/)）包含下表，显示了常用连接速度下传输 1TB 表的时间：
+
+
+AWS Import/Export 服务详情页（[`bit.ly/hKCp6`](http://bit.ly/hKCp6)，[`aws.amazon.com/importexport/`](http://aws.amazon.com/importexport/)）包含下表，显示了常用连接速度下传输 1TB 表的时间：
 
 | 可用互联网连接 | 80% 网络利用率下传输 1TB 的理论最小日数 | 何时考虑 AWS Import/Export? |
 | :--- | :--- | :--- |
@@ -7718,20 +8011,16 @@ AWS Import/Export 服务详情页（[`bit.ly/hKCp6`](http://bit.ly/hKCp6), [`aws
 | 1,000 Mbps | 少于 1 天 | 60TB 或更多 |
 
 ```
+AWS Import/Export 服务是传统“肉网络”（sneakernet）文件传输方法的复杂扩展。在本章于 2010 年 2 月底更新时，微软尚未提供类似的服务。
+```
 
-AWS Import/Export 服务是传统“肉网络”（sneakernet）文件传输方法的的复杂扩展。在本章于 2010 年 2 月底更新时，微软尚未提供类似的服务。
+在本书编写时，SQL Azure 数据库的最大大小为 10GB，但将大型源文件或表分片到多个数据库是一项常见做法。随后的“分表以克服数据库大小限制”章节描述了将大表划分为可管理单元的几种方法。SQL Azure 团队成员已在会议现场非正式地向与会者保证，未来版本的最大大小将增加到“几十 GB”。
 
-
-
-
-
-在本书编写时，SQL Azure 数据库的最大大小为 10GB，但将大型源文件或表分片到多个数据库是一项常见做法。随后的“分表以克服数据库大小限制”章节描述了将大表划分为可管理单元的几种方法。SQL Azure 团队成员已在会议现场非正式地向与者保证，未来版本的最大大小将增加到“几十 GB”。
-
-你可以预计，向 SADB 批量上传数据（使用通过 TCP 端口 1433 的 SQL Server 传统表数据流 (TDS) 协议）对于相同的数据量会比 REST 或 SOAP 协议更快，因为后者的开销字符要大得多。微软于 2009 年底启用使用批量拷贝过程 (BCP) 向 SQL Azure 上传数据。随后的“使用批量拷贝过程填充 SADB 表”章节简要描述了 SQL Azure 迁移向如何利用 BCP 在 SQL Azure 和本地 SQL Server 数据库之间传输数据。
+你可以预计，向 SADB 批量上传数据（使用通过 TCP 端口 1433 的 SQL Server 传统表数据流 (TDS) 协议）对于相同的数据量会比 REST 或 SOAP 协议更快，因为后者的开销字符要大得多。微软于 2009 年底启用使用批量拷贝过程 (BCP) 向 SQL Azure 上传数据。随后的“使用批量拷贝过程填充 SADB 表”章节简要描述了 SQL Azure 迁移如何利用 BCP 在 SQL Azure 和本地 SQL Server 数据库之间传输数据。
 
 ## 使用 `instnwind.sql` 脚本在 SADB 中生成 Northwind 示例数据库
 
-自动创建 SQL Server 数据库架构的最常用方法是执行一个包含系列 T-SQL DDL 命令的脚本，以添加表、列、主键和外键约束、默认值、索引、触发器、视图、存储过程和其他数据库对象。如果复杂表的行数少于约 1,000 行，则包含 `INSERT` 语句来填充脚本创建的空表，并测试它们与源数据的兼容性是切行的。
+自动创建 SQL Server 数据库架构的最常用方法是执行一个包含系列 T-SQL DDL 命令的脚本，以添加表、列、主键和外键约束、默认值、索引、触发器、视图、存储过程和其他数据库对象。如果复杂表的行数少于约 1,000 行，则包含 `INSERT` 语句来填充脚本创建的空表，并测试它们与源数据的兼容性是可行的。
 
 SQL Server 2000 Northwind 和 pubs 示例数据库下载包 ([`bit.ly/o7IAJ`](http://bit.ly/o7IAJ)) 中包含的 `instnwind.sql` 脚本为 Microsoft Access 的原始 Northwind 数据库生成表、关系、视图和存储过程，以及五个额外的表：`CustomerCustomerDemo`、`CustomerDemographics`、`EmployeeTerritories`、`Regions` 和 `Territories`。
 
@@ -7744,7 +8033,7 @@ SQL Server 2000 Northwind 和 pubs 示例数据库下载包 ([`bit.ly/o7IAJ`](ht
 * 如第 12 节所述，`varchar(max)`、`nvarchar(max)` 和 `varbinary(max)` 数据类型取代了 `text`、`ntext` 和 `image` 数据类型。
 * 没有此类索引的表必须添加聚集主键索引，因为 SADB 不支持堆表（heap）。所有原始 Northwind 表都有聚集主键索引。被删除的额外表具有显式的 `PRIMARY KEY NONCLUSTERED` 索引。
 
-SQL Azure “Transact-SQL Reference (SQL Azure Database)”主题 ([`bit.ly/15Ja0Q`](http://bit.ly/15Ja0Q), [`msdn.microsoft.com/en-us/library/ee336281.aspx`](http://msdn.microsoft.com/en-us/library/ee336281.aspx)) 包含了定义支持、部分支持和不支持的 T-SQL 语句的章节。
+SQL Azure “Transact-SQL Reference (SQL Azure Database)”主题 ([`bit.ly/15Ja0Q`](http://bit.ly/15Ja0Q)，[`msdn.microsoft.com/en-us/library/ee336281.aspx`](http://msdn.microsoft.com/en-us/library/ee336281.aspx)) 包含了定义支持、部分支持和不支持的 T-SQL 语句的章节。
 
 `InstnwindFromNorthwind.sql` 有 9,000 行，大小为 935KB；原始 `instnwind.sql` 脚本有 9,885 行，大小为 2.01MB。
 
@@ -7782,13 +8071,9 @@ IF EXISTS (SELECT * FROM sys.tables WHERE name = 'Order Details'
 8. 点击 `Connect`，确认虚假的 `NULL` 错误消息，并验证对象管理器中出现了 `dbo.Northwind`。
 9. 点击 `Execute` 运行脚本。
 
-
-
-
-
 2. 点击 `AdventureWorks2008R2AZ.zip` 链接并接受 MS-PL 许可协议，下载并保存 `.zip` 文件（10.5MB）到你的 `\UserName\Downloads` 文件夹。
 
-3. 将文件提取到默认的 `\UserName\Downloads\AdventureWorks2008R2AZ` 文件夹，以创建 `…\AdventureWorks2008R2AZ\DW` 和 `…\AdventureWorks2008R2AZ \LT` 子文件夹，这些文件夹包含了用于创建和填充数据库的 T-SQL `*.sql` 脚本和 `*.csv` 文件。
+3. 将文件提取到默认的 `\UserName\Downloads\AdventureWorks2008R2AZ` 文件夹，以创建 `…\AdventureWorks2008R2AZ\DW` 和 `…\AdventureWorks2008R2AZ\LT` 子文件夹，这些文件夹包含了用于创建和填充数据库的 T-SQL `*.sql` 脚本和 `*.csv` 文件。
 
 4. 查看 `…\AdventureWorks2008R2AZ\Readme.htm` 页面，该页面包含创建和执行生成两个数据库命令的指令。
 
@@ -7800,15 +8085,15 @@ buildawltaz.cmd tcp:servername.database.windows.net username password
 
 在命令提示符处，其中 `servername` 是在你创建 SQL Azure 账户时分配的服务器名称，`username` 是你的管理员名称，`password` 是 `username` 的密码。
 
-6. 按回车执行 `buildawltaz.cmd` 批处理文件。你的命令提示符窗口将显示生成步骤（参见 图 13.3）。
+6. 按回车执行 `buildawltaz.cmd` 批处理文件。你的命令提示符窗口将显示生成步骤（参见图 13.3）。
 
-Figure 13.3 执行 `buildawltaz.cmd` 批处理文件时命令窗口的外。（机密信息已隐藏）。
+Figure 13.3 执行 `buildawltaz.cmd` 批处理文件时命令窗口的外观。（机密信息已隐藏）。
 
 ![13.3](img/c13f003.jpg)
 
 使用上传速度为 384-kb/s 或更快的 DSL 或电缆连接，创建 2.8MB 的 AdventureWorksLTAZ2008R2 数据库仅需几分钟。生成大得多（87.7MB）的 AdventureWorksDWAZ2008R2 需要大约 25 分钟。
 
-生成数据库后，在 SSMS 中连接到 SQL Azure 实例并执行 `SELECT * FROM dbo.ErrorLog` 查询，以验证过程是否无错误完成（参见 图 13.4）。
+生成数据库后，在 SSMS 中连接到 SQL Azure 实例并执行 `SELECT * FROM dbo.ErrorLog` 查询，以验证过程是否无错误完成（参见图 13.4）。
 
 Figure 13.4 在生成数据库后，使用 SSMS 验证 `ErrorLog` 表为空。
 
@@ -7832,7 +8117,7 @@ SSIS 是 SQL Server 2008 开发版及更高版本的组件，不包含在 SQL Se
 
 创建 2.8MB 的 AdventureWorksLTAZ2008R2 数据库仅需要几分钟，使用上传速度为 384-kb/s 或更快的 DSL 或电缆连接。生成大得多（87.7MB）的 AdventureWorksDWAZ2008R2 需要大约 25 分钟。
 
-生成数据库后，在 SSMS 中连接到你的 SQL Azure 实例并执行 `SELECT * FROM dbo.ErrorLog` 查询，以验证过程是否无错误完成（参见 图 13.4）。
+生成数据库后，在 SSMS 中连接到你的 SQL Azure 实例并执行 `SELECT * FROM dbo.ErrorLog` 查询，以验证过程是否无错误完成（参见图 13.4）。
 
 使用 SSIS 填充本地 AdventureWorksLT2008 数据库
 
@@ -7852,7 +8137,7 @@ SSIS 是 SQL Server 2008 开发版及更高版本的组件，不包含在 SQL Se
 
 2. 点击 `AdventureWorks2008R2AZ.zip` 链接并接受 MS-PL 许可协议，下载并保存 `.zip` 文件（10.5MB）到你的 `\UserName\Downloads` 文件夹。
 
-3. 将文件提取到默认的 `\UserName\Downloads\AdventureWorks2008R2AZ` 文件夹，以创建 `…\AdventureWorks2008R2AZ\DW` 和 `…\AdventureWorks2008R2AZ \LT` 子文件夹，这些文件夹包含了用于创建和填充数据库的 T-SQL `*.sql` 脚本和 `*.csv` 文件。
+3. 将文件提取到默认的 `\UserName\Downloads\AdventureWorks2008R2AZ` 文件夹，以创建 `…\AdventureWorks2008R2AZ\DW` 和 `…\AdventureWorks2008R2AZ\LT` 子文件夹，这些文件夹包含了用于创建和填充数据库的 T-SQL `*.sql` 脚本和 `*.csv` 文件。
 
 4. 查看 `…\AdventureWorks2008R2AZ\Readme.htm` 页面，该页面包含创建和执行生成两个数据库命令的指令。
 
@@ -7862,19 +8147,21 @@ SSIS 是 SQL Server 2008 开发版及更高版本的组件，不包含在 SQL Se
 buildawltaz.cmd tcp:servername.database.windows.net username password
 ```
 
-在命令提示符处，其中 `servername` 是在你创建 SQL Azure 账户时分配的服务器名称，`username` 是你的管理员名称，`password` 是 `username` 的密码。
 
-6. 按回车执行 `buildawltaz.cmd` 批处理文件。你的命令提示符窗口将显示生成步骤（参见 图 13.3）。
 
-Figure 13.3 执行 `buildawltaz.cmd` 批处理文件时命令窗口的外。（机密信息已隐藏）。
+在命令提示符处，其中`servername`是在你创建 SQL Azure 账户时分配的服务器名称，`username`是你的管理员名称，`password`是`username`的密码。
+
+6. 按回车执行`buildawltaz.cmd`批处理文件。你的命令提示符窗口将显示生成步骤（参见图 13.3）。
+
+图 13.3 执行`buildawltaz.cmd`批处理文件时命令窗口的外。（机密信息已隐藏）。
 
 ![13.3](img/c13f003.jpg)
 
 使用上传速度为 384-kb/s 或更快的 DSL 或电缆连接，创建 2.8MB 的 AdventureWorksLTAZ2008R2 数据库仅需几分钟。生成大得多（87.7MB）的 AdventureWorksDWAZ2008R2 需要大约 25 分钟。
 
-生成数据库后，在 SSMS 中连接到你的 SQL Azure 实例并执行 `SELECT * FROM dbo.ErrorLog` 查询，以验证过程是否无错误完成（参见 图 13.4）。
+生成数据库后，在 SSMS 中连接到你的 SQL Azure 实例并执行`SELECT * FROM dbo.ErrorLog`查询，以验证过程是否无错误完成（参见图 13.4）。
 
-Figure 13.4 在生成数据库后，使用 SSMS 验证 `ErrorLog` 表为空。
+图 13.4 在生成数据库后，使用 SSMS 验证`ErrorLog`表为空。
 
 ![13.4](img/c13f004.jpg)
 
@@ -7890,7 +8177,7 @@ Microsoft Integration Services 是一个构建企业级数据集成和数据转�
 
 SSIS 是 SQL Azure 2009 年 8 月 CTP 中移动数据进入或出的两种方法之一，也是当时将数据从 SQL Azure 移动到本地数据库的实用方法。你无法从 SSMS [Express] 的对象资源管理器中启动脚本向导，因为 CTP 不支持 SQL Azure 连接到对象资源管理器。
 
-SSIS 是 SQL Server 2008 开发版及更高版本的组件，不包含在 SQL Server 2008 Express 中。你可以从 [`bit.ly/150Zu5`](http://bit.ly/150Zu5) 或 [`msdn.microsoft.com/en-us/sqlserver/bb671149.aspx`](http://msdn.microsoft.com/en-us/sqlserver/bb671149.aspx) 安装 SQL Server 2008 预览版（180 天有效期）或 SQL Server 2008 R2 CTP。
+SSIS 是 SQL Server 2008 开发版及更高版本的组件，不包含在 SQL Server 2008 Express 中。你可以从[`bit.ly/150Zu5`](http://bit.ly/150Zu5)或[`msdn.microsoft.com/en-us/sqlserver/bb671149.aspx`](http://msdn.microsoft.com/en-us/sqlserver/bb671149.aspx)安装 SQL Server 2008 预览版（180 天有效期）或 SQL Server 2008 R2 CTP。
 
 或者，在 SQL Server 2008 R2 于 2010 年 5 月发布生产版本后，你可以在 [Amazon.com](http://Amazon.com) 和其他软件零售处购买约 42.00 美元的 SQL Server 2008 R2 开发版。开发版包含所有 SQL Server 标准版组件和功能；它仅用于开发，不用于生产环境。
 
@@ -7902,11 +8189,7 @@ Hello Windows Azure 演示的配置向导测试你的计算机对于运行 SSIS 
 
 要运行配置向导，执行以下操作：
 
-1. 导航到 `\WindowsAzurePlatformKit\Demos\MovingDataUsingSSIS\scrips` 文件夹并双击 `StartHere.cmd` 图标打开配置向导。
-
-
-
-
+1. 导航到`\WindowsAzurePlatformKit\Demos\MovingDataUsingSSIS\scrips`文件夹并双击`StartHere.cmd`图标打开配置向导。
 
 2. 点击“下一步”打开“步骤摘要”窗口，并点击“下一步”来测试配置。图 13.7 显示了已安装所有先决条件的配置向导。
 
@@ -7914,7 +8197,7 @@ Hello Windows Azure 演示的配置向导测试你的计算机对于运行 SSIS 
 
 如果缺少任何先决条件，向导通常会提供安装的链接或说明。请参考 Windows Azure 论坛上的“如果安装了 2008 R2 版本，Windows Azure 训练包配置向导需要下载 BIDS 和 SSIS 2008”线程 ([`bit.ly/9YNtTP`](http://bit.ly/9YNtTP), [`social.msdn.microsoft.com/Forums/en-US/windowsazure/thread/20c1e3a8-1c36-445d-a056-20840f184abf/`](http://social.msdn.microsoft.com/Forums/en-US/windowsazure/thread/20c1e3a8-1c36-445d-a056-20840f184abf/)) 查看有关缺少 BIDS 和 SSIS 2008 先决条件的问题。
 
-请参考 OakLeaf Systems 博客上 2010 年 1 月 19 日发布的“Windows Azure 平台训练包（2009 年 12 月）StartHere.cmd 程序抛出异常”帖子 ([`bit.ly/86tMGw`](http://bit.ly/86tMGw), [`oakleafblog.blogspot.com/2010/01/windows-azure-platform-training-kit.html`](http://oakleafblog.blogspot.com/2010/01/windows-azure-platform-training-kit.html)) 查看有关在 `\WindowsAzurePlatformKit\Demos\MovingDataUsingSSIS\scrips` 文件夹之外运行 `StartHere.cmd` 时的问题。
+请参考 OakLeaf Systems 博客上 2010 年 1 月 19 日发布的“Windows Azure 平台训练包（2009 年 12 月）StartHere.cmd 程序抛出异常”帖子 ([`bit.ly/86tMGw`](http://bit.ly/86tMGw), [`oakleafblog.blogspot.com/2010/01/windows-azure-platform-training-kit.html`](http://oakleafblog.blogspot.com/2010/01/windows-azure-platform-training-kit.html)) 查看有关在`\WindowsAzurePlatformKit\Demos\MovingDataUsingSSIS\scrips`文件夹之外运行`StartHere.cmd`时的问题。
 
 图 13.7 完成配置向导的先决条件测试。
 
@@ -7922,7 +8205,7 @@ Hello Windows Azure 演示的配置向导测试你的计算机对于运行 SSIS 
 
 ## 使用 SSMS 创建 T-SQL 脚本以填充 SADB 数据库
 
-SSMS 具有自动生成创建数据库架构和填充表的 T-SQL 脚本的能力。你可以像之前处理 Northwind 数据库那样在 SSMS [Express] 中执行脚本，或者通过 SQL Server 集成服务 (SSIS) 包结合针对主数据库的其他 T-SQL 命令执行它（例如 `DROP DATABASE DatabaseName` 和 `CREATE DATABASE DatabaseName`），从而避免在数据库生成操作中涉及 SQL Azure 门户。
+SSMS 具有自动生成创建数据库架构和填充表的 T-SQL 脚本的能力。你可以像之前处理 Northwind 数据库那样在 SSMS [Express] 中执行脚本，或者通过 SQL Server 集成服务 (SSIS) 包结合针对主数据库的其他 T-SQL 命令执行它（例如`DROP DATABASE DatabaseName`和`CREATE DATABASE DatabaseName`），从而避免在数据库生成操作中涉及 SQL Azure 门户。
 
 要生成一个在 SADB 中为 AdventureWorksLT2008 数据库创建架构并上传表和其他对象数据的脚本，请执行以下操作：
 
@@ -7940,7 +8223,7 @@ SSMS 具有自动生成创建数据库架构和填充表的 T-SQL 脚本的能�
 | :--- | :--- | :--- |
 | 将 UDDT 转换为基类型 | True | SQL Azure 不支持用户定义数据类型。 |
 | 编写扩展属性 | False | SQL Azure 不支持扩展属性。 |
-| 编写 USE DATABASE | False | SQL Azure 不支持 `USE DATABASE` 命令。 |
+| 编写 USE DATABASE | False | SQL Azure 不支持`USE DATABASE`命令。 |
 | 编写数据 | True | 生成用于添加数据的 INSERT 语句是一个非常重要的功能。 |
 
 6. 点击“下一步”打开“输出选项”对话框，并选择“脚本到新查询窗口”选项。
@@ -7963,21 +8246,21 @@ SSMS 具有自动生成创建数据库架构和填充表的 T-SQL 脚本的能�
 
 ## 使用预置的 SQL 脚本填充 Azure 数据库
 
-幸运的是，工具包随带了一个与 SADB 兼容的脚本 `AdventureWorksLT2008.sql`，位于 `\Azure\Chapter13`。执行以下操作使用此修正脚本创建并填充新的 SQL Azure 数据库：
+幸运的是，工具包随带了一个与 SADB 兼容的脚本`AdventureWorksLT2008.sql`，位于`\Azure\Chapter13`。执行以下操作使用此修正脚本创建并填充新的 SQL Azure 数据库：
 
 1. 如果你已经在 SQL Azure 实例中创建了 AdventureWorksLT2008 数据库，请使用 SQL Azure 门户将其删除。
 
 2. 在 SQL Azure 门户中使用“在 SADB 中生成 Northwind 数据库”节所述的方法创建一个空的 AdventureWorksLT2008 数据库。
 
-3. 启动 SSMS [Express]，并在连接到 AdventureWorksLT2008 SQL Azure 数据库的新查询窗口中打开 `AdventureWorksLT2008.sql`。
+3. 启动 SSMS [Express]，并在连接到 AdventureWorksLT2008 SQL Azure 数据库的新查询窗口中打开`AdventureWorksLT2008.sql`。
 
 4. 点击执行。
 
-忽略脚本末尾故意引入的非致命错误，这是由于在索引视图时尝试执行不支持的 `SORT IN TEMP DB` 选项引起的。
+忽略脚本末尾故意引入的非致命错误，这是由于在索引视图时尝试执行不支持的`SORT IN TEMP DB`选项引起的。
 
 ## 设计将数据从 SQL Azure 导入本地 SQL Server 表的包
 
-SADB v1 不支持 `BACKUP` 或 `RESTORE` 操作，因此备份 SADB 数据需要将其导入具有相同或相似架构的本地或网络可用的 SQL Server 数据库，以便备份云端生成的数据。要开始包的设计过程，请执行以下操作：
+SADB v1 不支持`BACKUP`或`RESTORE`操作，因此备份 SADB 数据需要将其导入具有相同或相似架构的本地或网络可用的 SQL Server 数据库，以便备份云端生成的数据。要开始包的设计过程，请执行以下操作：
 
 1. 从开始 ⇒ 所有程序 ⇒ SQL Server 2008 ⇒ SQL Server Business Intelligence Development Studio 命令启动 SQL Server Business Intelligence Development Studio (BIDS)。
 
@@ -7987,60 +8270,52 @@ SADB v1 不支持 `BACKUP` 或 `RESTORE` 操作，因此备份 SADB 数据需要
 
 4. 在模板窗中选择集成服务项目。
 
-5. 在解决方案名称文本框中输入 `CloudSalesImport`（参见图 13.10）。
+5. 在解决方案名称文本框中输入`CloudSalesImport`（参见图 13.10）。
 
-6. 点击确定创建 `CloudSalesImport` 解决方案。双击解决方案资源管理器中的 `package.dtsx` 节点以打开设计器窗口。
+6. 点击确定创建`CloudSalesImport`解决方案。双击解决方案资源管理器中的`package.dtsx`节点以打开设计器窗口。
 
+如果你在完成第 6 步后收到图 13.11 所示的错误消息并对该错误消息进行搜索，可以在 SQL Server Integration Services 论坛中找到关于“无法在 bids 2008 中创建新的 ssis 项目”的线程 ([`bit.ly/1a6iLj`](http://bit.ly/1a6iLj), [`social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/420a44b3-86ec-4aca-8165-cf5ed5e2d8d4`](http://social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/420a44b3-86ec-4aca-8165-cf5ed5e2d8d4))。该线程中的回复引导你参考知识库文章 818419，“BUG：当你在 XML Schema 设计器中移动元素时，收到‘CustomMarshalers not found’错误消息”([`bit.ly/124hEI`](http://bit.ly/124hEI), [`support.microsoft.com/kb/818419`](http://support.microsoft.com/kb/818419))。此 KB 文章适用于 Visual Studio 2002 和 2003，在本章更新时，其最后修订时间为 2007 年 5 月 16 日。然而，文章确实指向了问题根源，即在安装 SQL Server 2008 之前安装 Visual Studio 2010 Beta 版本会导致`msadds.dll`和相关设计器库之间的版本冲突。
 
-
-
-
-如果你在完成第 6 步后收到图 13.11 所示的错误消息并对该错误消息进行搜索，可以在 SQL Server Integration Services 论坛中找到关于“无法在 bids 2008 中创建新的 ssis 项目”的线程 ([`bit.ly/1a6iLj,`](http://bit.ly/1a6iLj) [`social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/420a44b3-86ec-4aca-8165-cf5ed5e2d8d4`](http://social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/420a44b3-86ec-4aca-8165-cf5ed5e2d8d4))。该线程中的回复引导你参考知识库文章 818419，“BUG：当你在 XML Schema 设计器中移动元素时，收到‘CustomMarshalers not found’错误消息”([`bit.ly/124hEI,`](http://bit.ly/124hEI) [`support.microsoft.com/kb/818419`](http://support.microsoft.com/kb/818419))。此 KB 文章适用于 Visual Studio 2002 和 2003，在本章更新时，其最后修订时间为 2007 年 5 月 16 日。然而，文章确实指向了问题根源，即在安装 SQL Server 2008 之前安装 Visual Studio 2010 Beta 版本会导致 `msadds.dll` 和相关设计器库之间的版本冲突。
-
-搜索“msdds.dll”会在 Microsoft Connect 的“mscorsvw - msiexec.exe - 无休止的安装” bug 报告 481903 ([`bit.ly/fbeRK,`](http://bit.ly/fbeRK) [`connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=481903`](http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=481903)) 中找到结果，该报告准确描述了 `msdds*.dll` 库的位置和版本问题。对于 VS 2010 Beta 1 或 2 的此问题，唯一可靠的解决方法是移除 VS 2010 Beta 安装，移除 SQL Server 2008，安装 VS 2008 和 VS2008 SP1，然后重新安装 SQL Server 2008 和 SQL Server 2008 SP1。
+搜索“msdds.dll”会在 Microsoft Connect 的“mscorsvw - msiexec.exe - 无休止的安装” bug 报告 481903 ([`bit.ly/fbeRK`](http://bit.ly/fbeRK), [`connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=481903`](http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=481903)) 中找到结果，该报告准确描述了`msdds*.dll`库的位置和版本问题。对于 VS 2010 Beta 1 或 2 的此问题，唯一可靠的解决方法是移除 VS 2010 Beta 安装，移除 SQL Server 2008，安装 VS 2008 和 VS2008 SP1，然后重新安装 SQL Server 2008 和 SQL Server 2008 SP1。
 
 图 13.11 由 VS 2008 和 2010 设计器文件版本问题导致的错误消息。
 
 ![13.11](img/c13f011.jpg)
 
-以下是 `CloudSalesImport` 包设计过程中基本操作的摘要：
+以下是`CloudSalesImport`包设计过程中基本操作的摘要：
 
 1. 为本地（机机的）AdventureWorksLT2008 数据库创建一个 OLE DB 连接管理器。
 2. 为 SADB（云端）AdventureWorksLT2008 数据库创建一个 ADO.NET 连接管理器。
-3. 使用 `DELETE FROM SalesLT.SalesOrderDetail` T-SQL 语句删除本地 `SalesMart.SalesOrderDetail` 表中的所有记录，以符合引用完整性约束。
-4. 使用 `DELETE FROM SalesLT.SalesOrderHeader` T-SQL 语句删除本地 `SalesMart.SalesOrderHeader` 表中的所有记录。
-5. 将所有 SADB（云端）`SalesMart.SalesOrderHeader` 行导入本地 `SalesMart.SalesOrderHeader` 表，在此过程中将 `CreditCardApprovalCode` 字段的数据类型从 `nvarchar` 改为 `varchar`。
-6. 将所有 SADB（云端）`SalesMart.SalesOrderDetail` 行导入本地 `SalesMart.SalesOrderDetail` 表。
+3. 使用`DELETE FROM SalesLT.SalesOrderDetail` T-SQL 语句删除本地`SalesMart.SalesOrderDetail`表中的所有记录，以符合引用完整性约束。
+4. 使用`DELETE FROM SalesLT.SalesOrderHeader` T-SQL 语句删除本地`SalesMart.SalesOrderHeader`表中的所有记录。
+5. 将所有 SADB（云端）`SalesMart.SalesOrderHeader`行导入本地`SalesMart.SalesOrderHeader`表，在此过程中将`CreditCardApprovalCode`字段的数据类型从`nvarchar`改为`varchar`。
+6. 将所有 SADB（云端）`SalesMart.SalesOrderDetail`行导入本地`SalesMart.SalesOrderDetail`表。
 
 ## 为本地（源）和 SADB（云端）数据库创建连接管理器
 
 SSIS 包工作流需要管理器对象。要创建新的 OLE DB 和 ADO.NET 连接管理器，请执行以下操作：
 
-1. 打开空的 `CloudSalesImport` 包并选择“控制流（Control Flow）”选项卡，在“连接管理器”面板内部右键点击并选择 `New OLE DB Connection` 打开“配置 OLE DB 连接管理器”对话框。
-2. 点击 `New` 打开“连接管理器”对话框，在“服务器名称”组合框中输入 `localhost`，接受默认的 `Use Windows Security` ，从“选择或输入数据库”列表中选择 `AdventureWorksLT2008R2`，点击 `Test Connection` 验证连接性，并点击 `OK` 关闭消息（参见图 13.12）。点击 `All` 按钮显示所有连接管理器属性。
-3. 在“连接管理器”面板中，右键点击 `localhost.AdventureWorksLT2008R2` 并重命名为 `LocalDB.AdventureWorksLT2008R2`。
-4. 在“连接管理器”面板内部右键点击并选择 `New ADO.NET Connection` 打开“配置 ADO.NET 连接管理器”对话框。
-5. 点击 `New` 打开“连接管理器”对话框，在“服务器名称”组合框中输入 `SADB` 连接字符串，包括 `tcp:` 前缀。选择 `SQL Authentication`，在框中输入密码，从“选择或输入数据库”列表中选择 `AdventureWorksLT2008R2`，点击 `Test Connection` 验证连接性，并点击 `OK` 关闭消息（参见图 13.13）。
-6. 在“连接管理器”面板中，右键点击 `localhost.AdventureWorksLT2008R2` 并将其重命名为 `CloudDB.AdventureWorksLT2008R2`。
+1. 打开空的`CloudSalesImport`包并选择“控制流（Control Flow）”选项卡，在“连接管理器”面板内部右键点击并选择`New OLE DB Connection`打开“配置 OLE DB 连接管理器”对话框。
+2. 点击`New`打开“连接管理器”对话框，在“服务器名称”组合框中输入`localhost`，接受默认的`Use Windows Security`，从“选择或输入数据库”列表中选择`AdventureWorksLT2008R2`，点击`Test Connection`验证连接性，并点击`OK`关闭消息（参见图 13.12）。点击`All`按钮显示所有连接管理器属性。
+3. 在“连接管理器”面板中，右键点击`localhost.AdventureWorksLT2008R2`并重命名为`LocalDB.AdventureWorksLT2008R2`。
+4. 在“连接管理器”面板内部右键点击并选择`New ADO.NET Connection`打开“配置 ADO.NET 连接管理器”对话框。
+5. 点击`New`打开“连接管理器”对话框，在“服务器名称”组合框中输入`SADB`连接字符串，包括`tcp:`前缀。选择`SQL Authentication`，在框中输入密码，从“选择或输入数据库”列表中选择`AdventureWorksLT2008R2`，点击`Test Connection`验证连接性，并点击`OK`关闭消息（参见图 13.13）。
+6. 在“连接管理器”面板中，右键点击`localhost.AdventureWorksLT2008R2`并将其重命名为`CloudDB.AdventureWorksLT2008R2`。
 
 ## 为 SalesOrder 和 SalesHeader 添加 SQL 任务
 
-要清空 `SalesOrderDetail` 和 `SalesOrderHeader` 表
+要清空`SalesOrderDetail`和`SalesOrderHeader`表
 
-1. 从工具箱拖入 `Execute SQL Task` 并释放到“控制流”页面。
-2. 右键点击该任务并选择 `Edit` 打开“执行 SQL 任务编辑器”。
-3. 将 `Name` 改为 `ClearDetails`，选择 `OLE DB` 作为 `ConnectionType`，并在“连接”列表中选择 `LocalDB.AdventureWorksLT2008R2`。输入 `DELETE FROM SalesLT.SalesOrderDetail` 作为 `SQLStatement`，将 `Prepare` 设置为 `False`，并点击 `Parse` 验证语法（参见图 13.14）。
-4. 点击 `OK` 关闭对话框并更新任务。
-5. 从工具箱再次拖入 `Execute SQL Task`，并在上一个任务下方并连接到新任务。
-6. 右键点击新任务并选择 `Edit` 打开“执行 SQL 任务编辑器”。
-7. 将 `Name` 改为 `ClearHeaders`，选择 `OLE DB` 作为 `ConnectionType`，并在“连接”列表中选择 `LocalDB.AdventureWorksLT2008R2`。输入 `DELETE FROM SalesLT.SalesOrderHeader` 作为 `SQLStatement`，将 `Prepare` 设置为 `False`，并点击 `Parse` 验证语法（参见图 13.15）。
-8. 点击 `OK` 保存对第二个任务的更改，并按 `F5` 生成并运行包。几秒钟后，两个 `Execute SQL Task` 项目将变为绿色，你收到“包执行完成顺利……”消息，且输出面板将打开并显示图 13.16 所示的消息。
+1. 从工具箱拖入`Execute SQL Task`并释放到“控制流”页面。
+2. 右键点击该任务并选择`Edit`打开“执行 SQL 任务编辑器”。
+3. 将`Name`改为`ClearDetails`，选择`OLE DB`作为`ConnectionType`，并在“连接”列表中选择`LocalDB.AdventureWorksLT2008R2`。输入`DELETE FROM SalesLT.SalesOrderDetail`作为`SQLStatement`，将`Prepare`设置为`False`，并点击`Parse`验证语法（参见图 13.14）。
+4. 点击`OK`关闭对话框并更新任务。
+5. 从工具箱再次拖入`Execute SQL Task`，并在上一个任务下方并连接到新任务。
+6. 右键点击新任务并选择`Edit`打开“执行 SQL 任务编辑器”。
+7. 将`Name`改为`ClearHeaders`，选择`OLE DB`作为`ConnectionType`，并在“连接”列表中选择`LocalDB.AdventureWorksLT2008R2`。输入`DELETE FROM SalesLT.SalesOrderHeader`作为`SQLStatement`，将`Prepare`设置为`False`，并点击`Parse`验证语法（参见图 13.15）。
+8. 点击`OK`保存对第二个任务的更改，并按`F5`生成并运行包。几秒钟后，两个`Execute SQL Task`项目将变为绿色，你收到“包执行完成顺利……”消息，且输出面板将打开并显示图 13.16 所示的消息。
 9. 点击“包执行完成顺利……”消息返回设计模式。
-10. 启动 SSMS 并执行 `SELECT * FROM SalesLT.SalesOrderDetail` 和 `SELECT * FROM SalesLT.SalesOrderHeader` 查询，以验证这两个表是否为空。
-
-
-
-
+10. 启动 SSMS 并执行`SELECT * FROM SalesLT.SalesOrderDetail`和`SELECT * FROM SalesLT.SalesOrderHeader`查询，以验证这两个表是否为空。
 
 # 添加并测试数据流任务以从 SADB 向本地数据库表导入 SalesOrder 数据
 
@@ -8056,19 +8331,19 @@ SSIS 包工作流需要管理器对象。要创建新的 OLE DB 和 ADO.NET 连�
 
 5. 在`ADO.NET Connection Manager`列表中选择`CloudDB.AdventureWorksLTAZ2008R2` `ADO.NET Connection Manager`，接受默认的`Table（表）`或`View（视图）`作为`Data Access Mode（数据访问模式）`并在`Name of the Table or the View（表或视图名称）`列表中选择`SalesLT`.`SalesOrderHeader`（参见图 13.17）。
 
-Figure 13.17 在`ADO.NET Source Editor`中为 SADB（云）表配置`ADO NET Source`。
+图 13.17 在`ADO.NET Source Editor`中为 SADB（云）表配置`ADO NET Source`。
 
 ![13.17](img/c13f017.jpg)
 
 6. 点击`Preview（预览）`按钮，通过在网格中显示源表的前几行来验证到`SADB`的连接符合预期（参见图 13.18）。
 
-Figure 13.18 验证要导入数据的 SADB 表的前几行。
+图 13.18 验证要导入数据的 SADB 表的前几行。
 
 ![13.18](img/c13f018.jpg)
 
 7. 点击`ADO.NET Source Editor`左侧列中的`Columns（列）`链接打开`Columns`页面，在必要时您可以在其中编辑列名以符合本地表的名称（参见图 13.19）。
 
-Figure 13.19 在必要时，将外部（源）列映射到输出（目标）列名。
+图 13.19 在必要时，将外部（源）列映射到输出（目标）列名。
 
 ![13.19](img/c13f019.jpg)
 
@@ -8080,7 +8355,7 @@ Figure 13.19 在必要时，将外部（源）列映射到输出（目标）列�
 
 勾选`Keep Identity`框框的效果与为表指定`SET IDENTITY INSERT ON`相同，且该功能仅适用于 OLE DB 目标。只有当您指定`Table or View–Fast Load`作为`Data Access Mode`时，才会出现插入选项。这就是为什么指定 OLE DB 而不是`ADO.NET`（后者不支持此功能）作为本地数据库的驱动类型。
 
-Figure 13.20 在`OLE DB Destination Editor`中为 SQL Server（本地）表配置`OLE DB Destination`。
+图 13.20 在`OLE DB Destination Editor`中为 SQL Server（本地）表配置`OLE DB Destination`。
 
 ![13.20](img/c13f020.jpg)
 
@@ -8088,7 +8363,7 @@ Figure 13.20 在`OLE DB Destination Editor`中为 SQL Server（本地）表配�
 
 SADB 要求所有字符类型都编码为 Unicode（`nchar`或`nvarchar`）；本地数据库的`CreditCardApprovalCode`字段。
 
-Figure 13.21 创建`ADO NET Source`将`nvarchar`转换为`varchar`。
+图 13.21 创建`ADO NET Source`将`nvarchar`转换为`varchar`。
 
 ![13.21](img/c13f021.jpg)
 
@@ -8112,25 +8387,26 @@ Figure 13.21 创建`ADO NET Source`将`nvarchar`转换为`varchar`。
 
 21. 按`F5`编译并执行您的包。几秒后，`Output（输出）`面板将显示执行的操作和导入的行数（参见图 13.23）。
 
+`\WROX\Azure\Chapter13\CloudSalesImport`文件夹包含`CloudSalesImport.sln`解决方案文件和一个`CloudSalesImport`子目录，其中包含了前面项目的其他支持文件。要运行示例，你必须打开`CloudDB Connection Manager`并指定你的`SADB`实例名称，输入`User ID`和`Password`，然后保存更改以编译并运行包。你不需要修改`LocalDB Connection Manager`，因为它使用的是 Windows 验证而非 SQL Server 验证。
 
-
-
-
-`\WROX\Azure\Chapter13\CloudSalesImport` 文件夹包含 `CloudSalesImport.sln` 解决方案文件和一个 `CloudSalesImport` 子目录，其中包含了前面项目的其他支持文件。要运行示例，你必须打开 `CloudDB Connection Manager` 并指定你的 `SADB` 实例名称，输入 `User ID` 和 `Password`，然后保存更改以编译并运行包。你不需要修改 `LocalDB Connection Manager`，因为它使用的是 Windows 验证而非 SQL Server 验证。
-
-图 13.25 查看导入 `SalesOrderHeader` 和 `SalesOrderDetail` 记录的执行结果页。
+图 13.25 查看导入`SalesOrderHeader`和`SalesOrderDetail`记录的执行结果页。
 
 ![13.25](img/c13f025.jpg)
 
 # 从本地 AdventureWorksLT2008 数据库迁移架构和数据到 SQL Azure
 
-George Huey 的 SQL Azure 迁移向导 (`SQLAzureMW`) 为 SQL Server Management Studio (`SSMS`) 脚本向导提供了一种更高效的替代方案，用于生成符合该服务当前数据定义语言 (DDL) 限制的 SQL Azure 架构。（章节更新时版本为 3.1.8）。你可以从 CodePlex 下载当前的二进制文件、源代码或两者（[`bit.ly/POxqs`](http://bit.ly/POxqs), [`sqlazuremw.codeplex.com/`](http://sqlazuremw.codeplex.com/)）；由微软公共许可 (`Ms-PL`) 管理该软件的使用。你可以了解更多关于 `SQLAzureMW` 的信息，并观看 George Huey 在 Wade Wegner 的 2009 年 12 月 15 日发布的“SQL Azure 迁移向导重大更新”文章([`bit.ly/aFvlwz`](http://bit.ly/aFvlwz), [`blog.wadewegner.com/index.php/2009/12/15/significant-updates-to-the-sql-azure-migration-wizard/`](http://blog.wadewegner.com/index.php/2009/12/15/significant-updates-to-the-sql-azure-migration-wizard/))中的视频演示。OakLeaf System 博客在 2010 年 1 月 23 日发布的“使用 SQL Azure 迁移向导 v3.1.3/3.1.4 处理 AdventureWorksLT2008R2 示例数据库”文章([`bit.ly/5j0dLC`](http://bit.ly/5j0dLC), [`oakleafblog.blogspot.com/2010/01/using-sql-azure-migration-wizard-v313.html`](http://oakleafblog.blogspot.com/2010/01/using-sql-azure-migration-wizard-v313.html))提供了早期版本的详细说明。v3.1.4 和 v3.1.8 之间有非常小的变化。
+George Huey 的 SQL Azure 迁移向导 (`SQLAzureMW`) 为 SQL Server Management Studio (`SSMS`) 脚本向导提供了一种更高效的替代方案，用于生成符合该服务当前数据定义语言 (DDL) 限制的 SQL Azure 架构。（章节更新时版本为 3.1.8）。你可以从 CodePlex 下载当前的二进制文件、源代码或两者（[`bit.ly/POxqs`](http://bit.ly/POxqs), [`sqlazuremw.codeplex.com/`](http://sqlazuremw.codeplex.com/)）；由微软公共许可 (`Ms-PL`) 管理该软件的使用。你可以了解更多关于`SQLAzureMW`的信息，并观看 George Huey 在 Wade Wegner 的 2009 年 12 月 15 日发布的“SQL Azure 迁移向导重大更新”文章([`bit.ly/aFvlwz`](http://bit.ly/aFvlwz), [`blog.wadewegner.com/index.php/2009/12/15/significant-updates-to-the-sql-azure-migration-wizard/`](http://blog.wadewegner.com/index.php/2009/12/15/significant-updates-to-the-sql-azure-migration-wizard/))中的视频演示。OakLeaf System 博客在 2010 年 1 月 23 日发布的“使用 SQL Azure 迁移向导 v3.1.3/3.1.4 处理 AdventureWorksLT2008R2 示例数据库”文章([`bit.ly/5j0dLC`](http://bit.ly/5j0dLC), [`oakleafblog.blogspot.com/2010/01/using-sql-azure-migration-wizard-v313.html`](http://oakleafblog.blogspot.com/2010/01/using-sql-azure-migration-wizard-v313.html))提供了早期版本的详细说明。v3.1.4 和 v3.1.8 之间有非常小的变化。
 
-`SQLAzureMW` 生成一个 T-SQL 脚本，类似于 `SSMS` [Express] 脚本向导创建的脚本，并在 `NotSupportedByAzureFile.Config` 文件([`bit.ly/noVkS`](http://bit.ly/noVkS), [`rogerjenn.googlepages.com/NotSupportedByAzureFile.xml`](http://rogerjenn.googlepages.com/NotSupportedByAzureFile.xml)) 中应用一组正则表达式 (regex)，以移除或修改 `SADB` 不支持的语句。例如，文件中 `<TableStatement>` 组中的以下元素会将 NOT FOR REPLICATION 修饰符替换为 `WarningMessage`：
+`SQLAzureMW`生成一个 T-SQL 脚本，类似于`SSMS` [Express] 脚本向导创建的脚本，并在`NotSupportedByAzureFile.Config`文件([`bit.ly/noVkS`](http://bit.ly/noVkS), [`rogerjenn.googlepages.com/NotSupportedByAzureFile.xml`](http://rogerjenn.googlepages.com/NotSupportedByAzureFile.xml))中应用一组正则表达式 (regex)，以移除或修改`SADB`不支持的语句。例如，文件中`<TableStatement>`组中的以下元素会将 NOT FOR REPLICATION 修饰符替换为`WarningMessage`：
+
+```xml
+```
+
+
 
 ```xml
 <NotSupported Text="\sNOT\sFOR\sREPLICATION" ReplaceWith="" SeverityLevel="0"
-ReplaceString="true" DisplayWarning="true" WarningMessage="Removed ‘NOT FOR 
+ReplaceString="true" DisplayWarning="true" WarningMessage="Removed ‘NOT FOR
 REPLICATION’ 因为此版本的 SQL Server 不支持该。” />
 ```
 
@@ -8138,11 +8414,11 @@ REPLICATION’ 因为此版本的 SQL Server 不支持该。” />
 
 ## 使用批量拷贝过程填充 SADB 表
 
-`SADB` 2009 年 8 月的 CTP 不支持 SQL Server 的命令行批量拷贝进程 (`bcp.exe`) 程序进行高速批量 INSERT 操作。2009 年 10 月的功能完全 CTP 引入了对 `bcp.exe` 和 `INSERT… BULK` 命令的支持。“迁移数据库到 SQL Azure”上手实验室的练习 2，“使用 BCP 进行数据导入和导出”提供了详细说明：
+`SADB` 2009 年 8 月的 CTP 不支持 SQL Server 的命令行批量拷贝进程（`bcp.exe`）程序进行高速批量 INSERT 操作。2009 年 10 月的功能完全 CTP 引入了对 `bcp.exe` 和 `INSERT… BULK` 命令的支持。“迁移数据库到 SQL Azure”上手实验室的练习 2，“使用 BCP 进行数据导入和导出”提供了详细说明：
 
-* 任务 1 — 使用 BCP 将数据从 SQL Azure 导出
-* 任务 2 — 从现有数据库删除数据
-* 任务 3 — 使用 BCP 将数据导入 SQL Azure
+- 任务 1 — 使用 BCP 将数据从 SQL Azure 导出
+- 任务 2 — 从现有数据库删除数据
+- 任务 3 — 使用 BCP 将数据导入 SQL Azure
 
 以下是任务 3 的命令行指令，用于将数据从 `Customer.dat` 文件加载到 SQL Azure `HolTestDB.SalesLT.Customer` 表：
 
@@ -8152,14 +8428,13 @@ bcp HolTestDB.SalesLT.Customer in Customer.dat -S [YOUR_ASSIGNED_SERVER].databas
 
 
 
+外部工具使用`BULK`修饰符上传二进制数据流。根据 Books Online 的介绍，“此选项并非用于如`SQL Server Management Studio`、`SQLCMD`、`OSQL`或数据访问应用程序接口（如`SQL Server Native Client`）。[强调已添加].”然而，Stan Kitsis 在 2009 年 8 月 24 日和 29 日对 SQL Azure-Getting Started 论坛上的一个问题回复写道：
 
-外部工具使用 `BULK` 修饰符上传二进制数据流。根据 Books Online 的介绍，“此选项并非用于如 `SQL Server Management Studio`、`SQLCMD`、`OSQL` 或数据访问应用程序接口（如 `SQL Server Native Client`）。[强调已添加].”然而，Stan Kitsis 在 2009 年 8 月 24 日和 29 日对 SQL Azure-Getting Started 论坛上的一个问题回复写道：
+正如在其他几个线程中提到的，我们也正在实现对`bcp`和`INSERT BULK`语句的支持（不要与`BULK INSERT`混淆）。因此，你可能也想考虑它们作为选项……
 
-正如在其他几个线程中提到的，我们也正在实现对 `bcp` 和 `INSERT BULK` 语句的支持（不要与 `BULK INSERT` 混淆）。因此，你可能也想考虑它们作为选项……
+`BULK INSERT`与`INSERT…BULK`的不同在于，数据文件的解析是由服务器完成的，而不是客户端。我们不支持`BULK INSERT`的原因是它要求你对物理服务器拥有访问权限——`filepath`是相对于服务器的。
 
-`BULK INSERT` 与 `INSERT…BULK` 的不同在于，数据文件的解析是由服务器完成的，而不是客户端。我们不支持 `BULK INSERT` 的原因是它要求你对物理服务器拥有访问权限——`filepath` 是相对于服务器的。
-
-在本章节更新时，并没有看到在 SQL Azure 中使用 `INSERT…BULK` 命令的示例。
+在本章节更新时，并没有看到在 SQL Azure 中使用`INSERT…BULK`命令的示例。
 
 # 分分表以克服数据库大小限制
 
@@ -8171,9 +8446,9 @@ bcp HolTestDB.SalesLT.Customer in Customer.dat -S [YOUR_ASSIGNED_SERVER].databas
 
 根据地理位置、日期、产品类型或类似的列式数据对大型数据库表进行分片是一种常见做法。例如，你可能会按国家或地区对客户以及相关的联系、订单和发票表进行分片。大型组织可能需要按州、县、区等进行更细粒度的分片。这些分区技术被称为值范围。或者，也可以根据哈希值或表查找创建分区，以均衡多个服务器上分片的大小。Dare Obasanjo 在 2009 年 1 月 16 日发布的文章[构建可扩展数据库：各种数据库分片方案的优缺点]（[`bit.ly/bQC9Q`](http://bit.ly/bQC9Q), [`www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx`](http://www.25hoursaday.com/weblog/2009/01/16/BuildingScalableDatabasesProsAndConsOfVariousDatabaseShardingSchemes.aspx)）讨论了垂直、水平、基于范围、键或哈希以及基于字典的分区的优缺点。
 
-跨分片数据访问是昂贵的，因此缓慢变化（参考）的数据通常会复制到每个持有相关数据的服务器上。例如，如果客户的订单头和详细数据按位置分片，则每个持有分片的数据库都将包含一个包含该位置销售的所有产品的的产品表。这显然会导致大量的数据冗余，并要求实时同步产品表的更新，以便强制订单行项目与产品表之间的引用完整性。由于 SADB 为了高可用性的数据复制，冗余数据的影响增加了三倍。通过在行项目中添加所需的产品数据来反规范化数据是一种替代方案，这可能会产生更高效的查询和磁盘空间利用。Obasanjo 在他 2009 年 9 月 10 日后来的文章[构建可扩展数据库：反规范化、NoSQL 运动与 Digg]中讨论了这个问题（[`bit.ly/2l5loC`](http://bit.ly/2l5loC), [`www.25hoursaday.com/weblog/2009/09/10/BuildingScalableDatabasesDenormalizationTheNoSQLMovementAndDigg.aspx`](http://www.25hoursaday.com/weblog/2009/09/10/BuildingScalableDatabasesDenormalizationTheNoSQLMovementAndDigg.aspx)）。
+跨分片数据访问是昂贵的，因此缓慢变化（参考）的数据通常会复制到每个持有相关数据的服务器上。例如，如果客户的订单头和详细数据按位置分片，则每个持有分片的数据库都将包含一个包含该位置销售的所有产品的产品表。这显然会导致大量的数据冗余，并要求实时同步产品表的更新，以便强制订单行项目与产品表之间的引用完整性。由于 SADB 为了高可用性的数据复制，冗余数据的影响增加了三倍。通过在行项目中添加所需的产品数据来反规范化数据是一种替代方案，这可能会产生更高效的查询和磁盘空间利用。Obasanjo 在他 2009 年 9 月 10 日后来的文章[构建可扩展数据库：反规范化、NoSQL 运动与 Digg]中讨论了这个问题（[`bit.ly/2l5loC`](http://bit.ly/2l5loC), [`www.25hoursaday.com/weblog/2009/09/10/BuildingScalableDatabasesDenormalizationTheNoSQLMovementAndDigg.aspx`](http://www.25hoursaday.com/weblog/2009/09/10/BuildingScalableDatabasesDenormalizationTheNoSQLMovementAndDigg.aspx)）。
 
-扇出查询（Fan-out queries）在多个数据库上并行运行并在客户端通过 `UNION ALL` 操作合并结果集，这种查询在 SADB 的未来版本之前将不会支持。随着负载的增加，你可以通过增加更多服务器并在每个服务器上放置较少分区来扩展数据访问。根据以下摘要，由本书技术编辑 David Robinson 在 PDC 2009 上的[使用 Microsoft SQL Azure 数据库扩展 Web 应用程序]会议（[`bit.ly/akdTCG`](http://bit.ly/akdTCG), [`microsoftpdc.com/Sessions/SVC06`](http://microsoftpdc.com/Sessions/SVC06)）为分区和扇出了更多见解：
+扇出查询（Fan-out queries）在多个数据库上并行运行并在客户端通过`UNION ALL`操作合并结果集，这种查询在 SADB 的未来版本之前将不会支持。随着负载的增加，你可以通过增加更多服务器并在每个服务器上放置较少分区来扩展数据访问。根据以下摘要，由本书技术编辑 David Robinson 在 PDC 2009 上的[使用 Microsoft SQL Azure 数据库扩展 Web 应用程序]会议（[`bit.ly/akdTCG`](http://bit.ly/akdTCG), [`microsoftpdc.com/Sessions/SVC06`](http://microsoftpdc.com/Sessions/SVC06)）为分区和扇出了更多见解：
 
 Microsoft SQL Azure 和 Windows Azure 平台提供了所有必要的构建模块，用于开发和托管丰富的 Internet 应用，可以为互联网规模的用户群提供服务，同时存储几乎无限的数据。
 
@@ -8183,52 +8458,49 @@ Simon Munro 在 2009 年 9 月 10 日发布的文章分片的困扰, [`simonmunr
 
 Ayende Rahien 在 2009 年 9 月 6 日发布的文章 SQL Azure、分片与 NHibernate：寻求志愿者, [`ayende.com/Blog/archive/2009/09/06/sql-azure-sharding-and-nhibernate-a-call-for-volunteers.aspx`](http://ayende.com/Blog/archive/2009/09/06/sql-azure-sharding-and-nhibernate-a-call-for-volunteers.aspx))观察到：
 
-我非常惊讶地听到 SQL Azure 每个数据库有 10GB 的限制。这极大地减少了我猜测 SQL Azure 所承担的工作量。根据推测，我认为它仅仅是数据库的复制实例，而不是云端真正的 SQL。
-
-在云端工作的良好前提之一是你可以获得透明的扩展。10GB 的限制并不是透明的。微软的回答似乎是你需要实现分片。也就是说，你将逻辑数据库分布在多个物理数据库上。
-
-通常这在物理数据库实例上这样做，目的是加速应用程序，因为你可以并行化查询。在这种情况下，你需要这样做，因为每个数据库都相当小。
-
-
-
-
-拥有功能完整的 NHibernate Shards 意味着你可以在 SQL Azure 上获得透明扩展。有趣的地方在于，这并不涉及大量的思考或设计，这条路已经有人走过了，唯一的工作就是进行迁移。
-
-而且，为了提供激励，我愿意为所有完成 Hibernate Shards 迁移的主要贡献者捐赠 `NH Prof` 许可证。
+> 我非常惊讶地听到 SQL Azure 每个数据库有 10GB 的限制。这极大地减少了我猜测 SQL Azure 所承担的工作量。根据推测，我认为它仅仅是数据库的复制实例，而不是云端真正的 SQL。
+>
+> 在云端工作的良好前提之一是你可以获得透明的扩展。10GB 的限制并不是透明的。微软的回答似乎是你需要实现分片。也就是说，你将逻辑数据库分布在多个物理数据库上。
+>
+> 通常这在物理数据库实例上这样做，目的是加速应用程序，因为你可以并行化查询。在这种情况下，你需要这样做，因为每个数据库都相当小。
+>
+> 拥有功能完整的 NHibernate Shards 意味着你可以在 SQL Azure 上获得透明扩展。有趣的地方在于，这并不涉及大量的思考或设计，这条路已经有人走过了，唯一的工作就是进行迁移。
+>
+> 而且，为了提供激励，我愿意为所有完成 Hibernate Shards 迁移的主要贡献者捐赠`NH Prof`许可证。
 
 Ayende 在他的“云端上的 NHibernate：SQL Azure”文章（[`bit.ly/98UAXr`](http://bit.ly/98UAXr), [`ayende.com/Blog/archive/2009/09/05/nhibernate-on-the-cloud-sql-azure.aspx`](http://ayende.com/Blog/archive/2009/09/05/nhibernate-on-the-cloud-sql-azure.aspx)）中在下文之前提到：
 
 > 我刚刚在 SQL Azure 上运行了 NHibernate 测试套件。我很高兴地告诉大家，它运行良好良好（It Just Works*）。
-
+>
 > 感谢微软，能够在如此不同的条件下，创建一个与 SQL Server 极其相似的环境。
+>
+> * 唯一的警告是某些 Schema 导出脚本在 SQL Azure 上执行失败，看起来`drop table`在 SQL Azure 上的行为略有不同，它不会立即删除表，而在实际发生之前似乎会有延迟（特别是当你使用不同的连接来检查表是否存在时）。
 
-> * 唯一的警告是某些 Schema 导出脚本在 SQL Azure 上执行失败，看起来 `drop table` 在 SQL Azure 上的行为略有不同，它不会立即删除表，而在实际发生之前似乎会有延迟（特别是当你使用不同的连接来检查表是否存在时）。
+考虑到 SADB 前身 SQL Data Services (SDS) 和 SQL Server Data Services (SSDS) 的历史，Ayende 对 SADB 数据库最大大小的惊讶并没有根据的。SDS CTP 将一个`Container`（大致对应于 SADB 数据库）限制为“2 GB 的聚合非 blob 数据”（[`bit.ly/9drJCv`](http://bit.ly/9drJCv), [`msdn.microsoft.com/en-us/library/cc512388.aspx`](http://msdn.microsoft.com/en-us/library/cc512388.aspx)），用以为实体组提供事务一致性。另一方面，微软表示 Windows Azure EAV 表可以扩展到“数十亿行”。通过`PartitionKey`值对这些表进行分片，可以支持负载均衡，并允许在快照隔离下对单个分区进行事务更新。
 
-考虑到 SADB 前身 SQL Data Services (SDS) 和 SQL Server Data Services (SSDS) 的历史，Ayende 对 SADB 数据库最大大小的惊讶并没有根据的。SDS CTP 将一个 `Container`（大致对应于 SADB 数据库）限制为“2 GB 的聚合非 blob 数据”（[`bit.ly/9drJCv`](http://bit.ly/9drJCv), [`msdn.microsoft.com/en-us/library/cc512388.aspx`](http://msdn.microsoft.com/en-us/library/cc512388.aspx)），用以为实体组提供事务一致性。另一方面，微软表示 Windows Azure EAV 表可以扩展到“数十亿行”。通过 `PartitionKey` 值对这些表进行分片，可以支持负载均衡，并允许在快照隔离下对单个分区进行事务更新。
-
-`/WindowsAzurePlatformKit/Demos/SQLAzureScalingOutWithDbSharding/` 文件夹包含用于“通过数据库分片扩展 SQL Azure”演示项目的示例文件和代码。该项目允许你选择目标国家或订单日期作为分片标准。
+`/WindowsAzurePlatformKit/Demos/SQLAzureScalingOutWithDbSharding/`文件夹包含用于“通过数据库分片扩展 SQL Azure”演示项目的示例文件和代码。该项目允许你选择目标国家或订单日期作为分片标准。
 
 ## 创建 SADB 登录名和用户并分配角色
 
-`/WindowsAzurePlatformKit/Demos/SQLAzureManagingLoginsAndSecurity/` 文件夹包含一个“在 SQL Azure 中管理登录和安全”演示，它解释了如何通过在 SSMS [Express] 中针对 SADB 实例的主数据库执行 `CREATE LOGIN HoLTestUser WITH PASSWORD='REPLACE_HoLTestUser_PASSWORD'` T-SQL 语句，来创建一个新的 SADB `HolTestUser` 登录名。
+`/WindowsAzurePlatformKit/Demos/SQLAzureManagingLoginsAndSecurity/`文件夹包含一个“在 SQL Azure 中管理登录和安全”演示，它解释了如何通过在 SSMS [Express] 中针对 SADB 实例的主数据库执行`CREATE LOGIN HoLTestUser WITH PASSWORD='REPLACE_HoLTestUser_PASSWORD'` T-SQL 语句，来创建一个新的 SADB`HolTestUser`登录名。
 
 不不符合 SQL Server 2008 复杂度要求的密码会返回错误。以下是 SQL Server Books Online“密码策略”章节中的密码复杂度要求：
 
-* 密码不包含用户帐户名的全部或部分。帐户名的一部分定义为三个或更多连续的字母或数字字符，两端由空白字符（如空格、制表符和回车）或以下任何字符分隔：逗号（,）、句号（.）、连字符（-）、下划线（_）或井号（#）。
-* 密码至少有八个字符长。
-* 密码包含以下四个类别中的三类字符：
-    * 拉丁大写字母（A 到 Z）
-    * 拉丁小写字母（a 到 z）
-    * 十进制数字（0 到 9）
-    * 非字母数字字符，例如：感叹号（!）、美元符号（$）、数字符号（#）或百分比符号（%）。
+- 密码不包含用户帐户名的全部或部分。帐户名的一部分定义为三个或更多连续的字母或数字字符，两端由空白字符（如空格、制表符和回车）或以下任何字符分隔：逗号（`,`）、句号（`.`）、连字符（`-`）、下划线（`_`）或井号（`#`）。
+- 密码至少有八个字符长。
+- 密码包含以下四个类别中的三类字符：
+  - 拉丁大写字母（A 到 Z）
+  - 拉丁小写字母（a 到 z）
+  - 十进制数字（0 到 9）
+  - 非字母数字字符，例如：感叹号（`!`）、美元符号（`$`）、数字符号（`#`）或百分比符号（`%`）。
 
-该演示还展示了从 `HoLTestDB` 用户数据库执行 `CREATE USER HoLTestUser FOR LOGIN HoLTestUser`，然后执行 `EXEC sp_addrolemember ‘db_owner', ‘HoLTestUser’`，将 `HoLTestUser` 分配给 `db_owner` 固定数据库角色。根据 SQL Server 2008 Books Online（[`bit.ly/U5t9C`](http://bit.ly/U5t9C), [`msdn.microsoft.com/en-us/library/ms189121.aspx`](http://msdn.microsoft.com/en-us/library/ms189121.aspx)），SQL Server 2008 支持下表所示的固定数据库角色：
+该演示还展示了从`HoLTestDB`用户数据库执行`CREATE USER HoLTestUser FOR LOGIN HoLTestUser`，然后执行`EXEC sp_addrolemember ‘db_owner', ‘HoLTestUser’`，将`HoLTestUser`分配给`db_owner`固定数据库角色。根据 SQL Server 2008 Books Online（[`bit.ly/U5t9C`](http://bit.ly/U5t9C), [`msdn.microsoft.com/en-us/library/ms189121.aspx`](http://msdn.microsoft.com/en-us/library/ms189121.aspx)），SQL Server 2008 支持下表所示的固定数据库角色：
 
 | 固定数据库角色 | 安全权限 |
 | :--- | :--- |
 | `db_accessadmin` | 为 Windows 登录、Windows 组组 SQL Server 登录添加或删除访问。 |
 | `db_backupoperator` | 备份数据库。 |
-| `db_datareader` | 对数据库中的任何表或视图运行 `SELECT` 语句。 |
+| `db_datareader` | 对数据库中的任何表或视图运行`SELECT`语句。 |
 | `db_datawriter` | 在所有用户表中添加、删除或更改数据。 |
 | `db_ddladmin` | 在数据库中运行任何数据定义语言 (DDL) 命令。 |
 | `db_denydatareader` | 不能读取数据库内用户表中的任何数据。 |
@@ -8242,37 +8514,24 @@ Ayende 在他的“云端上的 NHibernate：SQL Azure”文章（[`bit.ly/98UAX
 
 本章早期描述了当你尝试运行由 SSMS [Express] 查询向导生成的 T-SQL 脚本时将面临的问题。SQL Server 2008 的 T-SQL 语法与 SADB 支持的数据类型之间的巨大差异要求对自动生成的脚本进行大量编辑以消除执行错误。George Huey 的开源 SQL Azure 迁移向具有极大减少或消除手动编辑创建和填充 SADB 表的自动生成脚本的潜力。
 
-SADB 的 2009 年 8 月 CTP 是本章原始版本的基础，它不支持 SQL Server 的批量复制工具或 SQL Server 2008 R-2 的新 `INSERT…BULK` 命令。2009 年 10 月的 CTP 同时支持 `bcp` 和 `INSERT…BULK`。查询向导生成的 `INSERT` 操作适用于填充几千行数据，但你可能更希望使用 `bcp` 从 SADB 表中导入和导出数据。在编写本章时，`bcp` 是备份 SADB 表用于灾难恢复的最实用方法。
-
-索引
-
-A
-
-*aaS. 参见 Everything as a Service
-
-“Above the Clouds: A Berkeley View of Cloud Computing”白皮书
-
-Access Control Services (.NET Access Control Services, ACS). 参见 Service Bus
-
-Azure 平台图中
-
-CardSpace 信息卡以及
-
-Access Control solutions/Relying Parties/Service Requesters 交互
-
-AccountName, 用于云存储
-
-AccountSharedKey
-
-ACE (Authority-Container-Entity) 模型。参见 EAV 表
-
-Acer Aspire One
-
-
-
-
+SADB 的 2009 年 8 月 CTP 是本章原始版本的基础，它不支持 SQL Server 的批量复制工具或 SQL Server 2008 R-2 的新`INSERT…BULK`命令。2009 年 10 月的 CTP 同时支持`bcp`和`INSERT…BULK`。查询向导生成的`INSERT`操作适用于填充几千行数据，但你可能更希望使用`bcp`从 SADB 表中导入和导出数据。在编写本章时，`bcp`是备份 SADB 表用于灾难恢复的最实用方法。
 
 # 索引
+
+## A
+
+- aaS。参见 Everything as a Service
+- “Above the Clouds: A Berkeley View of Cloud Computing”白皮书
+- Access Control Services (.NET Access Control Services, ACS)。参见 Service Bus
+- Azure 平台图中
+- CardSpace 信息卡以及
+- Access Control solutions/Relying Parties/Service Requesters 交互
+- `AccountName`，用于云存储
+- `AccountSharedKey`
+- ACE (Authority-Container-Entity) 模型。参见 EAV 表
+- Acer Aspire One
+
+## 索引条目
 
 - `ACID` (原子性、一致性、隔离性、持久性)。另参见实体组事务 (Entity Group Transactions)
 - `ACS`。参见访问控制服务 (Access Control Services)
@@ -8340,30 +8599,34 @@ Acer Aspire One
 - `分析服务` (`SQL 分析服务`)
 - `AOL-TV`
 - `App.config` 文件 (`WSHttpRelayEchoSample.sln`)
+
+
+
+## Listing 10–8
+
+## Listing 10–9
+
 ```
-Listing 10–8
-Listing 10–9
-```
-- `应用即服务` (Application as a Service)。另参见 `SaaS`
-- `应用程序 ID` (Application ID)
-- 应用程序提供商 (`ASPs`)。另参见 `SaaS`
+- `应用即服务`（Application as a Service）。另参见`SaaS`
+- `应用程序 ID`（Application ID）
+- 应用程序提供商（`ASPs`）。另参见`SaaS`
 - `ApplicationUserID`
-- `ApproximateCount()` (`MessageQueue.ApproximateCount`)
-- `ARRA` (`美国恢复与再投资法`)
+- `ApproximateCount()`（`MessageQueue.ApproximateCount`）
+- `ARRA`（`美国恢复与再投资法`）
 - `ASP.NET`
 - 登录控制
-- 安全论坛 (Security Forum)
+- 安全论坛（Security Forum）
 - 会话状态管理
 - `ASP.NET Membership Services`
-- `AspProviders.dll` 类库
+- `AspProviders.dll`类库
 - ... 的功能
-- 与 `WebRole` 项目集成
+- 与`WebRole`项目集成
 - “成员资格简介”在线帮助主题
 - “ASP.NET 个人资料属性概览”在线帮助主题
-- `ASP.NET Providers Sample`: `适用于 Windows Azure 的 ASP.NET 应用程序提供程序` 页面
+- `ASP.NET Providers Sample`：`适用于 Windows Azure 的 ASP.NET 应用程序提供程序`页面
 - `AspProviderDemo.sln`
 - `Default.aspx`
-- 与 `AzureTableTestHarness.sln` 集成
+- 与`AzureTableTestHarness.sln`集成
 - 与成员资格相关的表
 - `ChangePassword.aspx`
 - `CreateNewWizard.aspx`
@@ -8373,130 +8636,131 @@ Listing 10–9
 - `MySession.aspx`
 - 将数据源移动到云端
 - 本地运行
-- 远程存储端的服务配置设置 (Listing 6–7)
-- `ServiceConfiguration.cscfg` 文件
+- 远程存储端的服务配置设置（Listing 6–7）
+- `ServiceConfiguration.cscfg`文件
 ```
-Listing 6–5
+
+## Listing 6–5
+
 ```
-- `Azure Tables` 和 `Blobs` 安全 HTTPS 传输的设置
-- 用户的 `DbAdmin` 角色分配属性 (Listing 6–6)
-- `web.config` 文件
+- `Azure Tables`和`Blobs`安全 HTTPS 传输的设置
+- 用户的`DbAdmin`角色分配属性（Listing 6–6）
+- `web.config`文件
 - Azure 特有的元素
-- `成员资格` 部分 (Listing 6–1)
-- 可选服务 (Listing 6–3)
-- 成员资格设置 (Listing 6–4)
-- 成员资格管理器 (Listing 6–2)
+- `成员资格`部分（Listing 6–1）
+- 可选服务（Listing 6–3）
+- 成员资格设置（Listing 6–4）
+- 成员资格管理器（Listing 6–2）
 - 使用...
-- `AspProviders` 示例
+- `AspProviders`示例
 - `AspProviderDemo.sln`
-- `AspProviders.dll` 类库
-- `TableStorageProvider` 类
-- `TableStorageProfile` 类
-- `TableStorageRole` 类
-- `TableStorageSession` 类
-- `TableStorageEntity` 实例
-- `加密` 的性能影响
-- 与 `AspProviderDemo.sln` 集成
+- `AspProviders.dll`类库
+- `TableStorageProvider`类
+- `TableStorageProfile`类
+- `TableStorageRole`类
+- `TableStorageSession`类
+- `TableStorageEntity`实例
+- `加密`的性能影响
+- 与`AspProviderDemo.sln`集成
 - 带有自签名证书的 SSL 页面
 - 升级的/第 06 章
 - 复制/集成成员资格相关文件
-- `Default.aspx` 页面
+- `Default.aspx`页面
 - 解密密到明文
-- 在 `TableStorage` 实例中加密/解密
+- 在`TableStorage`实例中加密/解密
 - 加密明文到密
-- `Default.aspx` 页面 (Listing 6–9)
-- 指定 `Login.aspx` 为默认页 (Listing 6–7)
-- `Azure Tables` 和 `Blobs` 安全 HTTPS 传输的设置
-- 用户的 `DbAdmin` 角色分配属性 (Listing 6–10)
-- `Azure Tables` 和 `Blobs` 安全 HTTPS 传输的设置
-- 用户的 `DbAdmin` 角色分配属性
-[/content]
-
-*(注：我发现上述翻译过程中由于原文部分文本存在重复和逻辑混乱，以下是根据您的要求“不要重复输出原文”并“翻译给定文本”后，重新梳理并翻译的准确译文：)*
+- `Default.aspx`页面（Listing 6–9）
+- 指定`Login.aspx`为默认页（Listing 6–7）
+- `Azure Tables`和`Blobs`安全 HTTPS 传输的设置
+- 用户的`DbAdmin`角色分配属性（Listing 6–10）
+- `Azure Tables`和`Blobs`安全 HTTPS 传输的设置
+- 用户的`DbAdmin`角色分配属性
+```
 
 ---
 
 **重新整理后的最终译文：**
 
-[content]
-- `亲性组` (Affinity Group)
+- `亲性组`（Affinity Group）
 - `AJAX`
 - `启用 AJAX 的 ASP.NET 网页`
-- 扩展组 (extensions group)
-- `RPC` 方法和
-- `Thumbnails2.sln` 和
-- `更新面板` (Update Panel)
-- `ALFKI` 实体
-- `allowInsecureRemoteEndpoints` 设置
-- `Amazon 机器映像` (`AMIs`)
-- `Amazon Web Services` (`AWS`)
-- `Azure` 比较
+- 扩展组（extensions group）
+- `RPC`方法和
+- `Thumbnails2.sln`和
+- `更新面板`（Update Panel）
+- `ALFKI`实体
+- `allowInsecureRemoteEndpoints`设置
+- `Amazon 机器映像`（`AMIs`）
+- `Amazon Web Services`（`AWS`）
+- `Azure`比较
 - 云计算和
-- `云状态` (`Cloud Status`) 和
+- `云状态`（`Cloud Status`）和
 - `EC2`
-- 可用性 (availability)
-- 出/入流量费用 (egress/ingress costs)
-- `IaaS` 和
-- `Oracle` 和
-- `Rackspace Hosting` 和
+- 可用性（availability）
+- 出/入流量费用（egress/ingress costs）
+- `IaaS`和
+- `Oracle`和
+- `Rackspace Hosting`和
 - `S + S`
 - 开始
-- 运行时间 (uptime)
+- 运行时间（uptime）
 - 虚拟化运行时应用程序平台
-- `对 Windows Server 2003 R2/ SQL Server 2005` 支持
-- `弹性块存储` (Elastic Block Store)
-- `IaaS` 和
-- `PaaS` 和
-- `RightScale` 和
+- `对 Windows Server 2003 R2/ SQL Server 2005`支持
+- `弹性块存储`（Elastic Block Store）
+- `IaaS`和
+- `PaaS`和
+- `RightScale`和
 - `S3`
-- `AMIs/EBS` 快照备份和
+- `AMIs/EBS`快照备份和
 - 可用性
 - 出/入流量费用
-- `FaaS` 和
-- `IaaS` 和
-- 停机 (outages)
-- `Rackspace Hosting` 和
+- `FaaS`和
+- `IaaS`和
+- 停机（outages）
+- `Rackspace Hosting`和
 - 开始
 - 运行时间
 - `SimpleDB`
-- `DBaaS` 和
-- `EAV` 表和
-- `FaaS` 和
-- `UCI` 和
-- `Amazon.com`。另参见 `Amazon Web Services`
-- `CAP 定理` 和
-- `MSN TV 2` 和
-- `PaaS` 和
+- `DBaaS`和
+- `EAV`表和
+- `FaaS`和
+- `UCI`和
+- `Amazon.com`。另参见`Amazon Web Services`
+- `CAP 定理`和
+- `MSN TV 2`和
+- `PaaS`和
 - 安全性和
-- `美国恢复与再投资法` (`ARRA`)
-- `AMIs` (`Amazon 机器映像`)
-- `分析服务` (`SQL 分析服务`)
+- `美国恢复与再投资法`（`ARRA`）
+- `AMIs`（`Amazon 机器映像`）
+- `分析服务`（`SQL 分析服务`）
 - `AOL-TV`
-- `App.config` 文件 (`WSHttpRelayEchoSample.sln`)
+- `App.config`文件（`WSHttpRelayEchoSample.sln`）
+
+## Listing 10–8
+
+## Listing 10–9
+
 ```
-Listing 10–8
-Listing 10–9
-```
-- `应用即服务` (Application as a Service)。另参见 `SaaS`
-- `应用程序 ID` (Application ID)
-- 应用程序提供商 (`ASPs`)。另参见 `SaaS`
+- `应用即服务`（Application as a Service）。另参见`SaaS`
+- `应用程序 ID`（Application ID）
+- 应用程序提供商（`ASPs`）。另参见`SaaS`
 - `ApplicationUserID`
-- `ApproximateCount()` (`MessageQueue.ApproximateCount`)
-- `ARRA` (`美国恢复与再投资法`)
+- `ApproximateCount()`（`MessageQueue.ApproximateCount`）
+- `ARRA`（`美国恢复与再投资法`）
 - `ASP.NET`
 - 登录控制
-- 安全论坛 (Security Forum)
+- 安全论坛（Security Forum）
 - 会话状态管理
 - `ASP.NET Membership Services`
-- `AspProviders.dll` 类库
+- `AspProviders.dll`类库
 - ... 的功能
-- 与 `WebRole` 项目集成
+- 与`WebRole`项目集成
 - “成员资格简介”在线帮助主题
 - “ASP.NET 个人资料属性概览”在线帮助主题
-- `ASP.NET Providers Sample`: `适用于 Windows Azure 的 ASP.NET 应用程序提供程序` 页面
+- `ASP.NET Providers Sample`：`适用于 Windows Azure 的 ASP.NET 应用程序提供程序`页面
 - `AspProviderDemo.sln`
 - `Default.aspx`
-- 与 `AzureTableTestHarness.sln` 集成
+- 与`AzureTableTestHarness.sln`集成
 - 与成员资格相关的表
 - `ChangePassword.aspx`
 - `CreateNewWizard.aspx`
@@ -8506,11 +8770,14 @@ Listing 10–9
 - `MySession.aspx`
 - 将数据源移动到云端
 - 本地运行
-- 远程存储端的服务配置设置 (Listing 6–7)
-- `ServiceConfiguration.cscfg` 文件
+- 远程存储端的服务配置设置（Listing 6–7）
+- `ServiceConfiguration.cscfg`文件
 ```
-Listing 6–5
-```
+
+## Listing 6–5
+
+
+
 - `Azure Tables` 和 `Blobs` 安全 HTTPS 传输的设置
 - 用户的 `DbAdmin` 角色分配属性 (Listing 6–6)
 - `web.config` 文件
@@ -8540,62 +8807,42 @@ Listing 6–5
 - `Default.aspx` 页面 (Listing 6–9)
 - 指定 `Login.aspx` 为默认页 (Listing 6–7)
 
+删除（代码列表 4–28 到 `4–30`）
 
+以 4,096 字节分块下载文件到 `MemoryStream`，并以 1 MB 块上传到 Azure Blob 服务容器（代码列表 4–20）
 
+用于从 Azure Blob Storage 获取 2.36 MB 位图 blob 的 HTTP GET 请求（代码列表 4–26）
 
-删除（代码列表 4–28`)到 `4–30`)
+用于从 Windows Live SkyDrive 上传 2.36 MB 公共位图 blob 的 HTTP GET 请求（代码列表 4–21）
 
-以 4,096 字节分块下载文件到 `MemoryStream`，并以 1 MB 块上传到 Azure Blob 服务容器（代码列表 4–20`)
+来自 Azure Blob Storage 的 2.36 MB 位图 blob 的 HTTP GET 响应（代码列表 4–27）
 
-用于从 Azure Blob Storage 获取 2.36 MB 位图 blob 的 HTTP GET 请求（代码列表 4–26`)
+用于从 Windows Live SkyDrive 上传 2.36 MB 公共位图 blob 的 HTTP GET 响应（代码列表 4–22）
 
-用于从 Windows Live SkyDrive 上传 2.36 MB 公共位图 blob 的 HTTP GET 请求（代码列表 4–21`)
+用于向 Azure Blob Storage 上传 2.36 MB 位图 blob 的 1 MB 块的 HTTP PUT 请求（代码列表 4–23）
 
-来自 Azure Blob Storage 的 2.36 MB 位图 blob 的 HTTP GET 响应（代码列表 4–27`)
+上传到 Azure Blob Storage 的 2.36 MB 位图 blob 的 1 MB 块的 HTTP PUT 响应（代码列表 4–24）
 
-用于从 Windows Live SkyDrive 上传 2.36 MB 公共位图 blob 的 HTTP GET 响应（代码列表 4–22`)
+- 内容类型
+- 复制 Blob (Copy Blob)
+- 定义
+- 删除
+- 下载
+- 使用 HTTP GET 方法
+- 选定的 blob
+- 获取 Blob (Get Blob)
+- 对的后期更改
+- 日志 blob
+- 持久化到容器
+- 使用实用程序查看
+- REST API 和
+- 检索/存储
+- 话状态，`Base64Binary`-编码的表示
+- 存储/检索
+- 非结构化数据
+- 上传到存储服务
 
-用于向 Azure Blob Storage 上传 2.36 MB 位图 blob 的 1 MB 块的 HTTP PUT 请求（代码列表 4–23`)
-
-上传到 Azure Blob Storage 的 2.36 MB 位图 blob 的 1 MB 块的 HTTP PUT 响应（代码列表 4–24`)
-
-内容类型
-
-复制 Blob (Copy Blob)
-
-定义
-
-删除
-
-下载
-
-使用 HTTP GET 方法
-
-选定的 blob
-
-获取 Blob (Get Blob)
-
-对的后期更改
-
-日志 blob
-
-持久化到容器
-
-使用实用程序查看
-
-REST API 和
-
-检索/存储
-
-话状态，`Base64Binary`-编码的表示
-
-存储/检索
-
-非结构化数据
-
-上传到存储服务
-
-BlobStorage 类图
+### BlobStorage 类图
 
 `BlobStorage.cd`
 
@@ -8603,395 +8850,223 @@ BlobStorage 类图
 
 `BlobStorageEndpoint`
 
-BlobStorageRest 类图
+### BlobStorageRest 类图
+
+- 布尔值 (Boolean)
+- 布尔逻辑运算符
+- Brewer, Eric
+- Brewer 猜想
+- `btnDeleteAll_Click` 事件处理器
+- `btnLoadOrders_Click` 事件处理器
+- bubble, dot-com
+- 大型分布式系统中的 bug
+- 生成事件（Build Events）页面
+- `buildall.cmd`
+- 业务中断风险、SLAs 和
+- Butrico, Maria
+- 绕过障碍，到云计算
+- 字节 (Byte)
+- 字节数组。另见 blobs
+
+# C
+
+- C# WebAuth 网站
+- 已添加到 IIS 7.x 的默认网站
+- 登录状态
+- 注销状态
+- 用于 RESTful 存储/身份验证操作的 C# 包装器
+- CaaS（计算服务）
+  - 在五层云计算模型中
+  - Verizon 和
+- 加利福尼亚州议会第 1386 号法案 (SB 1386)
+- CAP 定理
+- 持信息安全计划 (CISP)
+- CardSpace (Windows CardSpace)
+- CardSpace 信息卡片 (Windows CardSpace 信息卡片)
+  - ACS 和
+  - 创建
+  - EchoService 和
+  - HTTP 请求和响应消息（代码列表 9–1 至 9–2）
+  - 信息卡片术语
+  - 服务请求者/访问控制解决方案/依赖方的交互
+  - `WSHttpRelayEchoSample.sln` 和
+- Carrara, Gianpaulo
+- Carroll, Lewis
+- CAS (代码访问安全)
+- 层叠样式表 (CSS) 样式
+- 区分大小写的用户名
+- CCIF (云计算互操作性论坛)
+- CCIF Google 小组
+- 证书颁发者、受信任根证书颁发者列表和
+- 证书对话框 (IE 8)
+- 更改密码 (ChangePassword)
+- `ChangePassword.aspx`
+- 更改集
+- 将 http 变为 https
+- 字符
+- Google Chrome
+- Circuit City
+- CISP (持卡信息安全计划)
+- 声明 (Claim)
+- 声明配置页面
+- 声明转换规则
+- Classmate PC 设计
+- `Clear()` (`MessageQueue.Clear()`)
+- 客户端包装器类库、Web 云服务和
+- `ClientServices` 库
+- 客户端加密，基于列的服务器加密 v.
+- 云应用层
+- 云计算
+  - “云端之上：伯克利的云计算视角”白皮书
+  - Amazon Web Services。另见 Amazon Web Services
+  - 祖源
+  - 的优势
+  - 组件
+  - 可组合系统和
+  - 关注点。另见障碍 (obstacles)
+  - “定义云计算框架”博客文章
+  - 定义
+  - 国防部和
+  - EaaS 和
+  - 五层本体论模型
+  - 政府机构和
+  - 增长
+  - 高度可组合系统和
+  - 微软在……方面的竞争优势
+  - 军事和
+  - 障碍。另见障碍 (obstacles)
+  - 本体论
+  - “云计算与标准的视角，”
+  - 流行
+  - “云计算的潜力，”
+  - 安全以及
+  - 对于“迈向云计算的统一本体论”论文
+- 云计算互操作性论坛 (CCIF)
+- 云计算互操作性论坛 Google 小组
+- 云 Fabric 文章
+- Cloud Fabric
+- 云治理
+- 云托管
+- 云数据可用性（另见障碍）
+- 数据加密标准。另见 DES
+- 数据出站（下载响应消息）成本
+- 数据中心（在线章节）
+- 数据入站（上传请求消息）成本
+- 数据保护应用程序接口 (DPAPI) 安全
+- 数据服务查询
+- 数据存储服务 (DaaS)
+- 数据传输瓶颈
+- 数据库。另见 RDBMSs; SADB; 表
+- DataGridView 控件。另见 GridView 控件
+- 用指定数量的最新父实体填充 DataGridView 控件
+- 支持
+- 代码访问安全 (CAS)
+- 代码列表。另见
+- Cohen, Reuven
+- 同地设施
+- 基于列的服务器加密
+- 财务会计组织委员会 (COSO) 框架
+- 通用运行时 (CLR)
+- 一致性 (ACID)
+- 消费者
+- 容器属性类图
+- ContextRef
+- 复制 Blob (Copy Blob)
+- COSO (财务会计组织委员会) 框架
+- 创建、检索、删除操作
+- 创建、更新、删除操作。另见 CRUD 操作
+- `CreateNewWizard.aspx`
+- `OnceContainerAndQueue()`
+- 创建表.cmd
+- `CreateThumbnail()`
+- 创建用户向导
+- Cristofor, Laurentiu
+- CRM (客户关系管理)
+  - Microsoft Dynamics CRM 服务
+  - Salesforce.com 和
+- CRUD（创建、检索、删除）操作
+- CryptoStream
+- `CryptoStream.Clear()`
+- 层叠样式表 (CSS) 样式
+- Azure 社区技术预览)
+  - GUID 令牌
+  - 邀请代码
+- CUD（创建、更新、删除）操作。另见 CRUD 操作
+- CustomerDataModel
+  - 类
+  - 成员（代码列表 5–14），加密/解密
+- 网络网络防御
+
+# D
+
+- Da Silva, Dilma
+- DaaS（数据存储服务）
+- 数据可用性（另见可用性）
+- 数据机密性（另见机密性）
+- 数据出站（下载响应消息）成本
+- 数据加密标准。另见 DES
+- 数据中心（在线章节）
+- 数据入站（上传请求消息）成本
+- 数据保护应用程序接口 (DPAPI) 安全
+- 数据服务查询
+- 数据存储服务 (DaaS)
+- 数据传输瓶颈
+- 数据库。另见 RDBMSs; SADB; 表
+- DataGridView 控件。另见 GridView 控件
+  - 用指定数量的最新父实体填充 DataGridView 控件（代码列表 7–9）
+  - 用选定父实体的子实体填充 DataGridView 控件（代码列表 7–10）
+- 数据服务实用程序
+- DataStore (GAE)。另见 Google App Engine
+- DateTime
+- dbo.Membership
+- dbo.Roles
+- dbo.Sessions
+- Decimal（数据类型）
+- 解密（另见加密）
+- 专用服务器托管
+- 专用虚拟服务器托管
+- Default.aspx 页面
+  - AspProviderDemo.sln
+  - AzureTableTestHarnessSSL.sln 项目
+- “定义云计算框架”博客文章
+- DELETE
+- DeleteMessage (MessageQueue.DeleteMessage)
+- DeleteQueue()
+- Dell Inspiron Mini
+- 拒绝服务攻击
+- 国防部、云计算和
+- DES（数据加密标准）
+- DESCryptoServiceProvider
+
+## DetailTable 示例项目
+
+参见 `OrderDetailTable` 示例项目。
+
+## DetailType
+
+参见 `OrderDetailTable` 示例项目。
+
+## Developer Portal (开发者门户)
 
-布尔值 (Boolean)
-
-布尔逻辑运算符
-
-Brewer, Eric
-
-Brewer 猜想
-
-`btnDeleteAll_Click` 事件处理器
-
-`btnLoadOrders_Click` 事件处理器
-
-bubble, dot-com
-
-大型分布式系统中的 bug
-
-生成事件（Build Events）页面
-
-`buildall.cmd`
-
-业务中断风险、SLAs 和
-
-Butrico, Maria
-
-绕过障碍，到云计算
-
-字节 (Byte)
-
-字节数组。另见 blobs
-
-C
-
-C# WebAuth 网站
-
-已添加到 IIS 7.x 的默认网站
-
-登录状态
-
-注销状态
-
-用于 RESTful 存储/身份验证操作的 C# 包装器
-
-CaaS（计算服务）
-
-在五层云计算模型中
-
-Verizon 和
-
-加利福尼亚州议会第 1386 号法案 (SB 1386)
-
-CAP 定理
-
-持信息安全计划 (CISP)
-
-CardSpace (Windows CardSpace)
-
-CardSpace 信息卡片 (Windows CardSpace 信息卡片)
-
-ACS 和
-
-创建
-
-EchoService 和
-
-HTTP 请求和响应消息（代码列表 9–1）至 9–2）
-
-信息卡片术语
-
-服务请求者/访问控制解决方案/依赖方的交互
-
-`WSHttpRelayEchoSample.sln` 和
-
-Carrara, Gianpaulo
-
-Carroll, Lewis
-
-CAS (代码访问安全)
-
-层叠样式表 (CSS) 样式
-
-区分大小写的用户名
-
-CCIF (云计算互操作性论坛)
-
-CCIF Google 小组
-
-证书颁发者、受信任根证书颁发者列表和
-
-证书对话框 (IE 8)
-
-更改密码 (ChangePassword)
-
-`ChangePassword.aspx`
-
-更改集
-
-将 http 变为 https
-
-字符
-
-Google Chrome
-
-Circuit City
-
-CISP (持卡信息安全计划)
-
-声明 (Claim)
-
-声明配置页面
-
-声明转换规则
-
-Classmate PC 设计
-
-`Clear()` (`MessageQueue.Clear()`)
-
-客户端包装器类库、Web 云服务和
-
-`ClientServices` 库
-
-客户端加密，基于列的服务器加密 v.
-
-云应用层
-
-云计算
-
-“云端之上：伯克利的云计算视角”白皮书
-
-Amazon Web Services。另见 Amazon Web Services
-
-祖源
-
-的优势
-
-组件
-
-可组合系统和
-
-关注点。另见障碍 (obstacles)
-
-“定义云计算框架”博客文章
-
-定义
-
-国防部和
-
-EaaS 和
-
-五层本体论模型
-
-政府机构和
-
-增长
-
-高度可组合系统和
-
-微软在……方面的竞争优势
-
-军事和
-
-障碍。另见障碍 (obstacles)
-
-本体论
-
-“云计算与标准的视角，”
-
-流行
-
-“云计算的潜力，”
-
-安全以及
-
-对于“迈向云计算的统一本体论”论文
-
-云计算互操作性论坛 (CCIF)
-
-云计算互操作性论坛 Google 小组
-
-云 Fabric 文章
-
-Cloud Fabric
-
-云治理
-
-云托管
-
-云数据可用性（另见障碍）
-
-数据加密标准。另见 DES
-
-数据出站（下载响应消息）成本
-
-数据中心（在线章节）
-
-数据入站（上传请求消息）成本
-
-数据保护应用程序接口 (DPAPI) 安全
-
-数据服务查询
-
-数据存储服务 (DaaS)
-
-数据传输瓶颈
-
-数据库。另见 RDBMSs; SADB; 表
-
-DataGridView 控件。另见 GridView 控件
-
-用指定数量的最新父实体填充 DataGridView 控件
-
-支持
-
-代码访问安全 (CAS)
-
-代码列表。另见
-
-Cohen, Reuven
-
-同地设施
-
-基于列的服务器加密
-
-财务会计组织委员会 (COSO) 框架
-
-通用运行时 (CLR)
-
-一致性 (ACID)
-
-消费者
-
-容器属性类图
-
-ContextRef
-
-复制 Blob (Copy Blob)
-
-COSO (财务会计组织委员会) 框架
-
-创建、检索、删除操作
-
-创建、更新、删除操作。另见 CRUD 操作
-
-`CreateNewWizard.aspx`
-
-`OnceContainerAndQueue()`
-
-创建表.cmd
-
-`CreateThumbnail()`
-
-创建用户向导
-
-Cristofor, Laurentiu
-
-CRM (客户关系管理)
-
-Microsoft Dynamics CRM 服务
-
-Salesforce.com 和
-
-CRUD（创建、检索、删除）操作
-
-CryptoStream
-
-`CryptoStream.Clear()`
-
-层叠样式表 (CSS) 样式
-
-Azure 社区技术预览)
-
-GUID 令牌
-
-邀请代码
-
-CUD（创建、更新、删除）操作。另见 CRUD 操作
-
-CustomerDataModel
-
-类
-
-成员（代码列表 5–14`)），加密/解密
-
-网络网络防御
-
-D
-
-Da Silva, Dilma
-
-DaaS（数据存储服务）
-
-数据可用性（另见可用性）
-
-数据机密性（另见机密性）
-
-数据出站（下载响应消息）成本
-
-数据加密标准。另见 DES
-
-数据中心（在线章节）
-
-数据入站（上传请求消息）成本
-
-数据保护应用程序接口 (DPAPI) 安全
-
-数据服务查询
-
-数据存储服务 (DaaS)
-
-数据传输瓶颈
-
-数据库。另见 RDBMSs; SADB; 表
-
-DataGridView 控件。另见 GridView 控件
-
-用指定数量的最新父实体填充 DataGridView 控件（代码列表 7–9`)
-
-用选定父实体的子实体填充 DataGridView 控件（代码列表 7–10`)
-
-数据服务实用程序
-
-DataStore (GAE)。另见 Google App Engine
-
-DateTime
-
-dbo.Membership
-
-dbo.Roles
-
-dbo.Sessions
-
-Decimal（数据类型）
-
-解密（另见加密）
-
-专用服务器托管
-
-专用虚拟服务器托管
-
-Default.aspx 页面
-
-AspProviderDemo.sln
-
-AzureTableTestHarnessSSL.sln 项目
-
-“定义云计算框架”博客文章
-
-DELETE
-
-DeleteMessage (MessageQueue.DeleteMessage)
-
-DeleteQueue()
-
-Dell Inspiron Mini
-
-拒绝服务攻击
-
-国防部、云计算和
-
-DES（数据加密标准）
-
-DESCryptoServiceProvider
-
-
-
-
-# DetailTable 示例项目。参见 `OrderDetailTable` 示例项目。
-
-# DetailType。参见 `OrderDetailTable` 示例项目。
-
-# Developer Portal (开发者门户)
 - 托管项目
 - 构建事件页面
 - SSL 页面
 - 摘要页面
 
-# 发布项目到
+## 发布项目到
+
 - 目的所在
 
-# Development Fabric (DF)
+## Development Fabric (DF)
+
 - 在 Azure 平台架构图中
 - SDK 和
 - 用于以下内容的自签名证书
 - 开发 Fabric 界面 (DFUI)
 - 开发存储 (DS)。另见存储服务 (Storage Services)
-- 在 Azure 平台架构图中
-- SDK 和
-- 开发存储界面 (DSUI)
+  - 在 Azure 平台架构图中
+  - SDK 和
+  - 开发存储界面 (DSUI)
 - `DF`。参见开发 Fabric (Development Fabric)
 - `DFAgent.exe`
 - `DFLoadBalancer.exe`
@@ -9002,8 +9077,8 @@ DESCryptoServiceProvider
 - 数字身份
 - 无磁盘工作站
 - 磁盘
-- FC
-- Hyper-V 虚拟机监控
+  - FC
+  - Hyper-V 虚拟机监控
 - DisplaySearch
 - 分布式排序示例 (DistributedSort Sample)
 - Django 框架。另见 Google App Engine
@@ -9018,32 +9093,33 @@ DESCryptoServiceProvider
 - Dynamics CRM 服务
 
 # E
+
 - `EaaS`。参见万即服务 (Everything as a Service)
 - `EAV`（实体-属性-值）表。另见 `SADB`；表
-- ACE 模型和
-- `GAE` 和
-- `SADB` 和
-- `SimpleDB` 和
+  - ACE 模型和
+  - `GAE` 和
+  - `SADB` 和
+  - `SimpleDB` 和
 - `EBS`（弹性块）。另见亚马逊云 (Amazon Web Services)
 - `EC2`（弹性计算云）。另见亚马逊云 (Amazon Web Services)
-- 可用性
-- 出口/入站成本
-- IaaS
-- Oracle 和
-- Rackspace Hosting 和
-- S + S
-- 起始
-- 运行时间 (uptime)
-- 虚拟化运行时应用平台和
-- Windows Server 2003 R2/ SQL Server 2005 支持，由
+  - 可用性
+  - 出口/入站成本
+  - IaaS
+  - Oracle 和
+  - Rackspace Hosting 和
+  - S + S
+  - 起始
+  - 运行时间 (uptime)
+  - 虚拟化运行时应用平台和
+  - Windows Server 2003 R2/ SQL Server 2005 支持，由
 - `EchoContract.cs`
 - EchoSample 解决方案 (`EchoService.sln`)。另见 `WSHttpRelayEchoSample.sln`。
-- 分析
-- 消费（Listing 10–6]）
-- 检查 `EchoContract.cs/EchoService.cs/Program.cs`（Listing 10–1` 至 `10–4)`)）
-- 使服务公开可见（Listing 10–7]）
-- 使用代码验证服务用户凭据（Listing 10–5]）
-- `WSHttpRelayEchoSample.sln` 版本.
+  - 分析
+  - 消费（Listing 10–6）
+  - 检查 `EchoContract.cs`/`EchoService.cs`/`Program.cs`（Listing 10–1 至 `10–4`）
+  - 使服务公开可见（Listing 10–7）
+  - 使用代码验证服务用户凭据（Listing 10–5）
+  - `WSHttpRelayEchoSample.sln` 版本.
 - `EchoService.cs`
 - `EchoService.sln`。参见 EchoSample 解决方案
 - Eclipse 工具
@@ -9059,48 +9135,48 @@ DESCryptoServiceProvider
 - Ellison, Larry
 - “在 Windows Azure 上启用 SSL 连接”白皮书
 - 加密
-- 客户端加密对比列级服务器加密
-- 用于加密和解密 `CustomerDataModel` 成员的代码（Listing 5–14]）
-- “SQL Server 2008 数据库加密”技术文章
-- 解密密到明文
-- 将明文加密为密文
-- `TableStorageEntity` 实例中的加密/解密
-- HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体（Listing 5–9]）
-- `HTTPS` 协议和
-- 使用 `AesManaged` 加密类解密加密字符串（Listing 5–11]）
-- 使用 `AesManaged` 加密类加密 UTF-8 字符串（Listing 5–8]）
-- 性能影响
-- 存储服务中的个人信息 (PII)
-- 向 OakLeaf3 表添加加密实体的响应头和负载（Listing 5–10]）
-- “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
-- “SQL Server 2008 TDE：你可以使用”博客文章
-- TDE
+  - 客户端加密对比列级服务器加密
+  - 用于加密和解密 `CustomerDataModel` 成员的代码（Listing 5–14）
+  - “SQL Server 2008 数据库加密”技术文章
+  - 解密密到明文
+  - 将明文加密为密文
+  - `TableStorageEntity` 实例中的加密/解密
+  - HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体（Listing 5–9）
+  - `HTTPS` 协议和
+  - 使用 `AesManaged` 加密类解密加密字符串（Listing 5–11）
+  - 使用 `AesManaged` 加密类加密 UTF-8 字符串（Listing 5–8）
+  - 性能影响
+  - 存储服务中的个人信息 (PII)
+  - 向 OakLeaf3 表添加加密实体的响应头和负载（Listing 5–10）
+  - “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
+  - “SQL Server 2008 TDE：你可以使用”博客文章
+  - TDE
 - 企业级 ASP
 - 企业消息总线 (ESB) 模型。另见消息总线 (Service Bus)
 - Azure 表。另见表
-- 使用代码添加
-- 使用 HTTP POST
-- 关联
-- 删除（Listings 4–17` 至 `4–19](#9781118058756c04.xhtml_c04_pgml_0019))）
-- 用于主键的值
-- 查询
-- 作为单位
-- 更新（4–14` 至 `4–16](#9781118058756c04.xhtml_c04_pgml_0016))）
+  - 使用代码添加
+  - 使用 HTTP POST
+  - 关联
+  - 删除（Listings 4–17 至 `4–19`）
+  - 用于主键的值
+  - 查询
+  - 作为单位
+  - 更新（4–14 至 `4–16`）
 - 实体组事务 (EGTs)。另见 ACID
 - 实体-属性-值 (EAV) 表。另见 `SADB`
-- 用于向...添加头部（7–4]）
+- 用于向...添加头部（7–4）
 - 万即服务 (EaaS)
 - 企业消息总线 (ESB) 模型。另见消息总线 (Service Bus)
 - 实体-属性-值 (EAV) 表。另见 `SADB`；表
 - 弹性块 (EBS)。另见亚马逊云 (Amazon Web Services)
 - 弹性计算云 (EC2)。另见亚马逊云 (Amazon Web Services)
-- 出口/入站成本
-- IaaS
-- Oracle 和
-- Rackspace Hosting 和
-- S + S
-- 起始
-- 运行时间
+  - 出口/入站成本
+  - IaaS
+  - Oracle 和
+  - Rackspace Hosting 和
+  - S + S
+  - 起始
+  - 运行时间
 - 万即服务 (EaaS)
 - 实体-属性-值 (EAV) 表。另见 `SADB`
 - 弹性块 (EBS)。另见亚马逊云 (Amazon Web Services)
@@ -9112,36 +9188,36 @@ DESCryptoServiceProvider
 - Ellison, Larry
 - “在 Windows Azure 上启用 SSL 连接”白皮书
 - 加密
-- 客户端加密对比列级服务器加密
-- 用于加密和解密 `CustomerDataModel` 成员
-- “SQL Server 2008 数据库加密”技术文章
-- 解密密文到明文
-- 将明文加密为密文
-- `TableStorageEntity` 实例中的加密/解密
-- HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
-- `HTTPS` 协议和
-- 使用 `AesManaged` 加密类解密加密字符串
-- 使用 `AesManaged` 加密类加密 UTF-8 字符串
-- 性能影响
-- 存储服务中的个人信息 (PII)
-- 向 OakLeaf3 表添加加密实体的响应头和负载
-- “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
-- “SQL Server 2008 TDE：你可以使用”博客文章
-- TDE
+  - 客户端加密对比列级服务器加密
+  - 用于加密和解密 `CustomerDataModel` 成员
+  - “SQL Server 2008 数据库加密”技术文章
+  - 解密密文到明文
+  - 将明文加密为密文
+  - `TableStorageEntity` 实例中的加密/解密
+  - HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
+  - `HTTPS` 协议和
+  - 使用 `AesManaged` 加密类解密加密字符串
+  - 使用 `AesManaged` 加密类加密 UTF-8 字符串
+  - 性能影响
+  - 存储服务中的个人信息 (PII)
+  - 向 OakLeaf3 表添加加密实体的响应头和负载
+  - “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
+  - “SQL Server 2008 TDE：你可以使用”博客文章
+  - TDE
 - 企业级 ASP
 - 企业消息总线 (ESB) 模型。另见消息总线 (Service Bus)
 - Azure 表。另见表
-- 使用代码添加
-- 使用 HTTP POST
-- 关联
-- 删除
-- 用于主键的值
-- 查询
-- 作为单位
-- 更新
+  - 使用代码添加
+  - 使用 HTTP POST
+  - 关联
+  - 删除
+  - 用于主键的值
+  - 查询
+  - 作为单位
+  - 更新
 - 实体组事务 (EGTs)。另见 ACID
 - 实体-属性-值 (EAV) 表。另见 `SADB`
-- 用于向...添加头部（4–14]））
+- 用于向...添加头部（4–14）
 - 万即服务 (EaaS)
 - 实体-属性-值 (EAV) 表。另见 `SADB`
 - 弹性块 (EBS)。另见亚马逊云 (Amazon Web Services)
@@ -9153,36 +9229,36 @@ DESCryptoServiceProvider
 - Ellison, Larry
 - “在 Windows Azure 上启用 SSL 连接”白皮书
 - 加密
-- 客户端加密对比列级服务器加密
-- 用于加密和解密 `CustomerDataModel` 成员
-- “SQL Server 2008 数据库加密”技术文章
-- 解密密文到明文
-- 将明文加密为密文
-- `TableStorageEntity` 实例中的加密/解密
-- HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
-- `HTTPS` 协议和
-- 使用 `AesManaged` 加密类解密加密字符串
-- 使用 `AesManaged` 加密类加密 UTF-8 字符串
-- 性能影响
-- 存储服务中的个人信息 (PII)
-- 向 OakLeaf3 表添加加密实体的响应头和负载
-- “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
-- “SQL Server 2008 TDE：你可以使用”博客文章
-- TDE
+  - 客户端加密对比列级服务器加密
+  - 用于加密和解密 `CustomerDataModel` 成员
+  - “SQL Server 2008 数据库加密”技术文章
+  - 解密密文到明文
+  - 将明文加密为密文
+  - `TableStorageEntity` 实例中的加密/解密
+  - HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
+  - `HTTPS` 协议和
+  - 使用 `AesManaged` 加密类解密加密字符串
+  - 使用 `AesManaged` 加密类加密 UTF-8 字符串
+  - 性能影响
+  - 存储服务中的个人信息 (PII)
+  - 向 OakLeaf3 表添加加密实体的响应头和负载
+  - “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
+  - “SQL Server 2008 TDE：你可以使用”博客文章
+  - TDE
 - 企业级 ASP
 - 企业消息总线 (ESB) 模型。另见消息总线 (Service Bus)
 - Azure 表。另见表
-- 使用代码添加
-- 使用 HTTP POST
-- 关联
-- 删除
-- 用于主键的值
-- 查询
-- 作为单位
-- 更新
+  - 使用代码添加
+  - 使用 HTTP POST
+  - 关联
+  - 删除
+  - 用于主键的值
+  - 查询
+  - 作为单位
+  - 更新
 - 实体组事务 (EGTs)。另见 ACID
 - 实体-属性-值 (EAV) 表。另见 `SADB`
-- 用于向...添加头部（4–14]）
+- 用于向...添加头部（4–14）
 - 万即服务 (EaaS)
 - 实体-属性-值 (EAV) 表。另见 `SADB`
 - 弹性块 (EBS)。另见亚马逊云 (Amazon Web Services)
@@ -9194,46 +9270,47 @@ DESCryptoServiceProvider
 - Ellison, Larry
 - “在 Windows Azure 上启用 SSL 连接”白皮书
 - 加密
-- 客户端加密对比列级服务器加密
-- 用于加密和解密 `CustomerDataModel` 成员
-- “SQL Server 2008 数据库加密”技术文章
-- 解密密文到明文
-- 将明文加密为密文
-- `TableStorageEntity` 实例中的加密/解密
-- HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
-- `HTTPS` 协议和
-- 使用 `AesManaged` 加密类解密加密字符串
-- 使用 `AesManaged` 加密类加密 UTF-8 字符串
-- 性能影响
-- 存储服务中的个人信息 (PII)
-- 向 OakLeaf3 表添加加密实体的响应头和负载
-- “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
-- “SQL Server 2008 TDE：你可以使用”博客文章
-- TDE
+  - 客户端加密对比列级服务器加密
+  - 用于加密和解密 `CustomerDataModel` 成员
+  - “SQL Server 2008 数据库加密”技术文章
+  - 解密密文到明文
+  - 将明文加密为密文
+  - `TableStorageEntity` 实例中的加密/解密
+  - HTTP 请求头和负载，用于向 OakLeaf3 表添加加密实体
+  - `HTTPS` 协议和
+  - 使用 `AesManaged` 加密类解密加密字符串
+  - 使用 `AesManaged` 加密类加密 UTF-8 字符串
+  - 性能影响
+  - 存储服务中的个人信息 (PII)
+  - 向 OakLeaf3 表添加加密实体的响应头和负载
+  - “SQL Server 2008：透明数据加密功能 - 快速概述”博客文章
+  - “SQL Server 2008 TDE：你可以使用”博客文章
+  - TDE
 - 企业级 ASP
 - 企业消息总线 (ESB) 模型。另见消息总线 (Service Bus)
 - Azure 表。另见表
-- 使用代码添加
-- 使用 HTTP POST
-- 关联
-- 删除
-- 用于主键的值
-- 查询
-- 作为单位
-- 更新
+  - 使用代码添加
+  - 使用 HTTP POST
+  - 关联
+  - 删除
+  - 用于主键的值
+  - 查询
+  - 作为单位
+  - 更新
 - 实体组事务 (EGTs)。另见 ACID
 - 实体-属性-值 (EAV) 表。另见 `SADB`
 
+# 健康保险可移植性与责任法案
 
-
-
-# 健康保险可移植性与责任法案。参见 `HIPAA`
+参见 `HIPAA`
 
 # HelloFabric 示例
 
 # HelloWorld 示例
 
-# 十进制 Application ID。参见 `Application ID`
+# 十进制 Application ID
+
+参见 `Application ID`
 
 # 高可扩展性
 
@@ -9263,125 +9340,95 @@ DESCryptoServiceProvider
 
 # 托管项目 (开发者门户)
 
-# 生成事件页面
-
-# SSL 页面
-
-# 摘要页面
+- 生成事件页面
+- SSL 页面
+- 摘要页面
 
 # 托管项目 (Azure 托管项目)
 
-# 托管服务令牌。另见 `Storage Accounts`
+# 托管服务令牌
+
+另见 `Storage Accounts`
 
 # 托管服务 (Azure 托管服务)
 
 # HP
 
-# EaaS 以及
-
-# Mini
-
-# 笔记本电脑和
-
-# 笔记本 PC 和
+- EaaS 以及
+- Mini
+- 笔记本电脑和
+- 笔记本 PC 和
 
 # HRMS（人力资源管理系统）
 
 # `HTTP`
 
-调试。参见 `Fiddler2`
+- 调试。参见 `Fiddler2`
+- `DELETE`
+- `MERGE`
+- `PUT`
+- 队列和
+- 请求/响应头和内容
 
-# `DELETE`
+# `HTTP GET`
 
-# `MERGE`
-
-# `PUT`
-
-# 队列和
-
-# 请求/响应头和内容
-
-# `HTTP GET`。另见 `blobs`
+另见 `blobs`
 
 带有...下载 blobs
 
-查询实体（从 列表 4–9 到 4–13））
+查询实体（从 列表 4–9 到 4–13）
 
-从 Azure Blob Storage 请求 2.36 MB 位图 blob（[列表 4–26 ]）
+从 Azure Blob Storage 请求 2.36 MB 位图 blob（列表 4–26）
 
-从 Windows Live SkyDrive 请求上传 2.36 MB 公共位图 blob（[列表 4–21 ]）
+从 Windows Live SkyDrive 请求上传 2.36 MB 公共位图 blob（列表 4–21）
 
-来自 Azure Blob Storage 的 2.36 MB 位图 blob 响应（[列表 4–27 ]）
+来自 Azure Blob Storage 的 2.36 MB 位图 blob 响应（列表 4–27）
 
-来自 Windows Live SkyDrive 的上传 2.36 MB 公共位图 blob 的响应（[列表 4–22 ]）
+来自 Windows Live SkyDrive 的上传 2.36 MB 公共位图 blob 的响应（列表 4–22）
 
 # `HTTP POST`
 
-添加到表格的实体（[列表 4–6 到 4–7 ]）
-
-创建 `RouterPolicy` 实例的请求和响应消息（[列表 11–8 ]）
-
-从 Northwind Orders 表插入实体的请求（[列表 7–5 ]）
-
-从 Northwind Orders 表上传实体后的响应（[列表 7–6 ]）
-
-带有...的表格创建
+- 添加到表格的实体（列表 4–6 到 4–7）
+- 创建 `RouterPolicy` 实例的请求和响应消息（列表 11–8）
+- 从 Northwind Orders 表插入实体的请求（列表 7–5）
+- 从 Northwind Orders 表上传实体后的响应（列表 7–6）
+- 带有...的表格创建
 
 # `HTTP PUT`
 
-创建名为“thumbnailmaker”队列的请求和响应消息（[列表 8–3 ]）
-
-向 Azure Blob Storage 上传 2.36 MB 位图 blob 的 1 MB 块的请求（[列表 4–23 ]）
-
-向 Azure Blob Storage 上传的 2.36 MB 位图 blob 的 1 MB 块的响应（[列表 4–24 ]）
+- 创建名为“thumbnailmaker”队列的请求和响应消息（列表 8–3）
+- 向 Azure Blob Storage 上传 2.36 MB 位图 blob 的 1 MB 块的请求（列表 4–23）
+- 向 Azure Blob Storage 上传的 2.36 MB 位图 blob 的 1 MB 块的响应（列表 4–24）
 
 # `HTTP` 请求和响应消息
 
-带有 10 张带有部分 ViewState 内容的缩略图（[列表 8–23, 列表 8–24 ]）
+- 带有 10 张带有部分 ViewState 内容的缩略图（列表 8–23, 列表 8–24）
+- 向“thumbnailmaker”队列添加简单的字符串消息（列表 8–9）
+- 向“thumbnailmaker”队列添加三个元数据属性
+- 在关闭 `GridView` 的 ViewState 的情况下添加缩略图（列表 8–25）
+- CardSpace 信息卡（从 列表 9–1 到 9–2）
+- 清除队列中的所有消息（列表 8–20）
+- 删除名为“thumbnailmaker”的队列（列表 8–5）
+- 删除具有指定 `PopReceipt` 值的单个消息（列表 8–18）
+- 由 `WorkerRole` 轮询（列表 8–26, 列表 8–27）
+- 检查而非处理单个消息（列表 8–16）
+- 用于 oakleaf 账户的列表（列表 8–1）
+- 从选定的队列检索单个消息（列表 8–13）
+- 检索队列中近似的消息数量（列表 8–11）
+- `HttpPushSubscriber`
+- `HTTPQueueSample`
+  - 探索代码（列表 11–5 到 11–6）
+- `HttpRouter.Publisher` 项目（列表 11–7）
+- `HttpRouter.sln` 解决方案
 
-向“thumbnailmaker”队列添加简单的字符串消息（[列表 8–9 ]）
+# `HTTP/REST`
 
-向“thumbnailmaker”队列添加三个元数据属性
+另见 `REST APIs`
 
-在关闭 `GridView` 的 ViewState 的情况下添加缩略图（[列表 8–25 ]）
-
-CardSpace 信息卡（从 列表 9–1 到 9–2 ]）
-
-清除队列中的所有消息（[列表 8–20 ]）
-
-删除名为“thumbnailmaker”的队列（[列表 8–5 ]）
-
-删除具有指定 `PopReceipt` 值的单个消息（[列表 8–18 ]）
-
-由 `WorkerRole` 轮询（[列表 8–26, 列表 8–27 ]）
-
-检查而非处理单个消息（[列表 8–16 ]）
-
-用于 oakleaf 账户的列表（[列表 8–1 ]）
-
-从选定的队列检索单个消息（[列表 8–13 ]）
-
-检索队列中近似的消息数量（[列表 8–11 ]）
-
-`HttpPushSubscriber`
-
-`HTTPQueueSample`
-
-探索代码（[列表 11–5 到 11–6 ]）
-
-`HttpRouter.Publisher` 项目（[列表 11–7 ]）
-
-`HttpRouter.sln` 解决方案
-
-`HTTP/REST`。另见 `REST APIs`
-
-将 `http` 改为 `https`
-
-`队列` 以及
-
-使用 `SSL` 加密
-
-使用 `TLS` 加密
+- 将 `http` 改为 `https`
+- `队列` 以及
+- 使用 `SSL` 加密
+- 使用 `TLS` 加密
 
 人力资源管理系统 (HRMS)
 
@@ -9389,254 +9436,141 @@ Huron 项目。参见 Data Hubs
 
 Hyper-V 虚拟机管理器
 
-组件
-
-设计、...的原理
-
-...图
-
-首页
-
-非微软数据中心和
-
-`I`
-
-`IaaS`（基础设施即服务）。另见 `Amazon Web Services`
-
-`Amazon Web Services` 作为 `EC2` 以及
-
-五层云计算模型
-
-`S3` 以及
-
-虚拟化运行时平台和
-
-`IANA`（互联网分配数字机构）
-
-`IBM`
-
-Azure v.
-
-`IBM T.J. Watson 研究中心
-
-网络站
-
-`IDC`
-
-`Identity Foundation`。参见 `Windows Identity Foundation`
-
-`Identity Lab`。另见 `FederatedIdentity.net`
-
-声明配置页面
-
-编辑个人信息/管理依赖方策略
-
-注册页面
-
-身份协议安全令牌服务 (`ipsts`)。另见 `Identity Lab`
-
-身份提供者 (IP)
-
-身份提供者安全令牌服务 (IP/STS)
-
-身份选择器 (IS)
-
-`IDisposable.Dispose`
-
-`IDLoginStatus` 控件
-
-`IDLoginView` 控件
-
-`IE 8` 的证书对话框
-
-`IEC`。参见 `ISO/IEC 27001-2005 标准`
-
-`IETF RFC 2046`
-
-`IETF RFC 2988`
-
-`IETF RFC 4346`
-
-`IIS 7`(互联网信息服务)
-
-`IIS 7.5 管理器`
-
-信息卡
-
-信息卡模型
-
-信息卡术语
-
-技术实验室 (ITL)。另见 `NIST`
-
-InformationWeek 杂志调查
-
-基础设施即服务。参见 `IaaS`
-
-`接入成本`。参见 `data ingress costs`
-
-输入声明
-
-实例计数
-
-`Int`
-
-`Int16`
-
-`Int32`
-
-`Int64`
-
-集成服务 (SQL 集成服务)
-
-`性`（信息卡术语）
-
-使用 `.NET Service Bus` 连接服务。另见 `Service Bus`
-
-`互联网分配数字机构 (IANA)`
-
-互联网信息服务。另见 `IIS`
-
-互操作性
-
-`CCIF`
-
-`CCIF Google Group`
-
-身份协议元系统互操作性
-
-身份协议的
-
-节点
-
-标准、云计算和
-
-`IntPtr`
-
-“成员资格简介”在线帮助主题
-
-邀请码
-
-`IP (身份提供者)`
-
-`iPhone`
-
-`ipsts`（身份协议安全令牌服务）。另见 `Identity Lab`
-
-`IP/STS (身份提供者安全令牌服务)`
-
-`IronPython`
-
-`IronRuby`
-
-`IS (身份选择器)`
-
-`ISO/IEC 27001-2005 标准`
-
-`隔离 (ACID)`
-
-证书颁发者、信任根证书列表和
-
-`ITL`。参见 `技术实验室`
-
-`IT 相关风险`
-
-`J`
-
-`JavaStations`
-
-`JungleDisk`
-
-`K`
-
-南非公司治理国王报告
-
-`Kubic, Chris`
-
-`Kundra, Vivek`
-
-`L`
-
-延迟
-
-`Lawrence, Eric`
-
-Liberate Technologies
-
-Azure 服务生命周期
-
-`Limog (内存中对象生成器)`
-
-`内存中对象生成器 (Limog)`
-
-`LINQ SQO`。参见 `LINQ 标准运算符`
-
-`LINQ 标准运算符 (LINQ SQO)`
-
-连接
-
-`Take(n)`
-
-`LINQ to REST (LINQ 到 ADO.NET 数据服务)`
-
-`Linthicum, David`
-
-`Linux`
-
-`ListContainersResult` 类图
-
-列出队列
-
-列表。参见参见特定的代码列表
-
-`ListQueues()` (`MessageQueue.ListQueues`)
-
-“Litware HR on SSDS”教程博客文章
-
-`活动运行环境 (LOE, 称为 MOE)`
-
-`Live 服务`
-
-在 Azure 平台图中
-
-`Live Framework: CTP`
-
-`Live 服务：现有 API 项目`
-
-`LiveIDSampleCloudService.sln` 项目
-
-负载均衡
-
-FC 以及
-
-`PartitionKey` 以及
-
-Service Bus 以及
-
-局部性，Azure 表格和
-
-本地市场 ASP
-
-锁定。参见...障碍
-
-`Lodin, Bill`
-
-`LOE (活动运行环境, 称为网格环境)`
-
-日志 blobs。另见 `blobs`
-
-持久化到容器
-
-使用工具查看
-
-
-
+- 组件
+- 设计、...的原理
+- ...图
+- 首页
+- 非微软数据中心和
+
+# `I`
+
+- `IaaS`（基础设施即服务）。另见 `Amazon Web Services`
+  - `Amazon Web Services` 作为 `EC2` 以及
+  - 五层云计算模型
+  - `S3` 以及
+  - 虚拟化运行时平台和
+- `IANA`（互联网分配数字机构）
+- `IBM`
+  - Azure v.
+  - `IBM T.J. Watson 研究中心
+  - 网络站
+- `IDC`
+- `Identity Foundation`。参见 `Windows Identity Foundation`
+- `Identity Lab`。另见 `FederatedIdentity.net`
+  - 声明配置页面
+  - 编辑个人信息/管理依赖方策略
+  - 注册页面
+- 身份协议安全令牌服务 (`ipsts`)。另见 `Identity Lab`
+- 身份提供者 (IP)
+- 身份提供者安全令牌服务 (IP/STS)
+- 身份选择器 (IS)
+- `IDisposable.Dispose`
+- `IDLoginStatus` 控件
+- `IDLoginView` 控件
+- `IE 8` 的证书对话框
+- `IEC`。参见 `ISO/IEC 27001-2005 标准`
+- `IETF RFC 2046`
+- `IETF RFC 2988`
+- `IETF RFC 4346`
+- `IIS 7`(互联网信息服务)
+- `IIS 7.5 管理器`
+- 信息卡
+- 信息卡模型
+- 信息卡术语
+- 技术实验室 (ITL)。另见 `NIST`
+- InformationWeek 杂志调查
+- 基础设施即服务。参见 `IaaS`
+- `接入成本`。参见 `data ingress costs`
+- 输入声明
+- 实例计数
+- `Int`
+- `Int16`
+- `Int32`
+- `Int64`
+- 集成服务 (SQL 集成服务)
+- `性`（信息卡术语）
+- 使用 `.NET Service Bus` 连接服务。另见 `Service Bus`
+- `互联网分配数字机构 (IANA)`
+- 互联网信息服务。另见 `IIS`
+- 互操作性
+  - `CCIF`
+  - `CCIF Google Group`
+  - 身份协议元系统互操作性
+  - 身份协议的
+  - 节点
+  - 标准、云计算和
+- `IntPtr`
+- “成员资格简介”在线帮助主题
+- 邀请码
+- `IP (身份提供者)`
+- `iPhone`
+- `ipsts`（身份协议安全令牌服务）。另见 `Identity Lab`
+- `IP/STS (身份提供者安全令牌服务)`
+- `IronPython`
+- `IronRuby`
+- `IS (身份选择器)`
+- `ISO/IEC 27001-2005 标准`
+- `隔离 (ACID)`
+  - 证书颁发者、信任根证书列表和
+- `ITL`。参见 `技术实验室`
+- `IT 相关风险`
+
+# `J`
+
+- `JavaStations`
+- `JungleDisk`
+
+# `K`
+
+- 南非公司治理国王报告
+- `Kubic, Chris`
+- `Kundra, Vivek`
+
+# `L`
+
+- 延迟
+- `Lawrence, Eric`
+- Liberate Technologies
+- Azure 服务生命周期
+- `Limog (内存中对象生成器)`
+- `内存中对象生成器 (Limog)`
+- `LINQ SQO`。参见 `LINQ 标准运算符`
+- `LINQ 标准运算符 (LINQ SQO)`
+  - 连接
+  - `Take(n)`
+- `LINQ to REST (LINQ 到 ADO.NET 数据服务)`
+- `Linthicum, David`
+- `Linux`
+- `ListContainersResult` 类图
+- 列出队列
+- 列表。参见参见特定的代码列表
+- `ListQueues()` (`MessageQueue.ListQueues`)
+- “Litware HR on SSDS”教程博客文章
+- `活动运行环境 (LOE, 称为 MOE)`
+- `Live 服务`
+  - 在 Azure 平台图中
+- `Live Framework: CTP`
+- `Live 服务：现有 API 项目`
+- `LiveIDSampleCloudService.sln` 项目
+- 负载均衡
+  - FC 以及
+  - `PartitionKey` 以及
+  - Service Bus 以及
+- 局部性，Azure 表格和
+- 本地市场 ASP
+- 锁定。参见...障碍
+- `Lodin, Bill`
+- `LOE (活动运行环境, 称为网格环境)`
+- 日志 blobs。另见 `blobs`
+  - 持久化到容器
+  - 使用工具查看
 
 # 日志查看器 (Azure)
 
 `LoggedInLiveID`
 
 ## 登录 (登录控制)
+
 登录控件，ASP.NET
 
 `Login.aspx`
@@ -9651,473 +9585,291 @@ Service Bus 以及
 
 ## Long (数据类型)
 
-## M
-MaaS (即服务的监控)
+# M
+
+- MaaS (即服务的监控)
+- 魔字符串
+- `MakeCert.exe`
+- 托管托管
+- Management Studio (SQL Server)
+- Azure 管理工具
+- `ManageRoles.aspx`
+- “使用角色管理权限”在线帮助主题
+- “管理 SQL Azure 数据库帐户、数据库和数据枢纽”（在线章节）
+- Marx, Steve
+- 马萨诸塞州数据隐私法
+- MasterCard 网站数据保护计划
+- 最大化可用性
+- McNerney, Charlie
+- 媒体播放器
+- Mell, Peter
+- 成员服务提供商 (MSPs)
+- MERGE
+- mesh
+- 网格操作环境 (MOE)。另参见实时操作环境
+- 网格服务
+- 消息类
+- HTTP/REST 消息级别
+- MessageQueue
+  - `MessageQueue.ApproximateCount()`
+  - `MessageQueue.Clear()`
+  - `MessageQueue.DeleteMessage()`
+  - `MessageQueue.GetMessage[s]()`
+  - `MessageQueue.ListQueues()`
+  - `MessageQueue.PeekMessage[s]`
+  - `MessageQueue.PutMessage`
+- `MessageReceivedEventHandler` 委托
+- 消息。另参见 HTTP 请求和响应消息；队列；Service Bus
+  - 在队列中
+    - 添加
+    - 清除
+    - 删除
+    - 查看
+    - 检索近似数量
+    - 检索单个消息
+  - Service Bus 和
+  - Service Bus 队列和
+  - Service Bus 路由器和
+- 元语言 (ML)
+- Microsoft Dynamics CRM 服务
+- Microsoft Exchange Online
+- Microsoft Identity Lab。另参见 Identity Lab
+- Microsoft Live SkyDrive。另参见 SkyDrive
+- Microsoft Office Live
+- Microsoft Secure Server Authority
+- Microsoft SharePoint Online
+- Microsoft Visual Studio。另参见 Visual Studio
+- 迁移到 Azure 平台，风险最小化。另参见风险最小化
+- 军事、云计算和
+- MIME (多用途互联网邮件扩展) 类型
+- MIX 08 会议
+- MIX 09 会议
+- ML (元语言)
+- MOE (网格操作环境)。另参见实时操作环境
+- 即服务的监控 (MaaS)
+- Mosso 部门。另参见 Rackspace Hosting
+- 迁移到 Azure 平台，风险最小化。另参见风险最小化
+- MSN TV 2
+- MSPs (成员服务提供者)
+- 多用途互联网邮件扩展类型。另参见 MIME 类型
+- 多租户性
+- `MyProfile.aspx`
+- `MySession.aspx`
+
+# N
+
+- NAC (网络访问控制)
+- Nakashima, Jim
+- 命名字节数组
+- 命名管道
+- NAT (网络地址转换) 设备
+- 国家标准局。另参见 NIST
+- 美国标准与技术研究院。另参见 NIST
+- NC (网络计算机) 概念
+- NCI (Network Computers, Inc.)
+- Negroponte, Nicholas
+- .NET 4。另参见工作流服务
+- .NET 访问控制服务。另参见访问控制服务
+- 用于 ADO.NET 服务的 .NET 库
+- .NET CLR。另参见 CLR
+- .NET 原始类型
+- .NET Service Bus。另参见 Service Bus
+- .NET 服务。另参见访问控制服务；Service Bus；工作流服务
+  - 在 Azure 平台图中的
+  - 工作流服务。另参见工作流服务
+- .NET 服务 SDK。另参见 EchoSample 解决方案；`WSHttpRelayEchoSample.sln`
+  - 安装
+  - Service Bus 和
+- .NET 服务解决方案
+  - ACS 和
+  - Service Bus 和
+- 笔记本电脑 (Netbooks)
+- NetChannel
+- NetPC
+- 网络访问控制 (NAC)
+- 网络地址转换 (NAT) 设备
+- 网络计算机 (NC) 概念
+- Network Computers, Inc. (NCI)
+- 网络接口卡 (NICs)
+- 网络站 (IBM)
+- “网络即计算机”的座格言
+- 内华达州数据隐私法
+- 新项目对话框 (Visual Studio)
+- “新存储功能：签名访问签名”博客文章
+- NICs (网络接口卡)
+- NIST (美国标准与技术研究院)
+  - AES 和
+  - 联邦云计算标准
+  - 联邦云基础设施
+  - ITL 和
+  - IT 相关风险
+  - 特殊出版物
+- 节点互操作性
+- 非专有安全功能
+- Northwind 客户表。另参见 `AzureTableTestHarnessSSL. sln` 项目
+- Northwind 订单详情表
+- Northwind 订单表。另参见 OrderTable 示例项目
+  - 向 Northwind 订单表插入实体的 HTTP POST 请求 (Listing 7–5)
+  - 从 Northwind 订单表上传实体后的 HTTP POST 响应 (Listing 7–6)
+- `NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 PartitionKey 值；RowKey 值
+
+# O
+
+- OakLeaf CA
+- OakLeaf 托管服务
+- OakLeaf Systems Azure Blob 服务测试套件
+  - 分阶段部署的
+- OakLeaf Systems Azure Table 服务示例项目
 
-魔字符串
-
-`MakeCert.exe`
-
-托管托管
-
-Management Studio (SQL Server)
-
-Azure 管理工具
-
-`ManageRoles.aspx`
-
-“使用角色管理权限”在线帮助主题
-
-“管理 SQL Azure 数据库帐户、数据库和数据枢纽”（在线章节）
-
-Marx, Steve
-
-马萨诸塞州数据隐私法
-
-MasterCard 网站数据保护计划
-
-最大化可用性
-
-McNerney, Charlie
-
-媒体播放器
-
-Mell, Peter
-
-成员服务提供商 (MSPs)
-
-MERGE
-
-mesh
-
-网格操作环境 (MOE)。另参见实时操作环境
-
-网格服务
-
-消息类
-
-HTTP/REST 消息级别
-
-MessageQueue
-
-`MessageQueue.ApproximateCount()`
-`MessageQueue.Clear()`
-`MessageQueue.DeleteMessage()`
-`MessageQueue.GetMessage[s]()`
-`MessageQueue.ListQueues()`
-`MessageQueue.PeekMessage[s]`
-`MessageQueue.PutMessage`
-
-`MessageReceivedEventHandler` 委托
-
-消息。另参见 HTTP 请求和响应消息；队列；Service Bus
-
-在队列中
-添加
-清除
-删除
-查看
-检索近似数量
-检索单个消息
-Service Bus 和
-Service Bus 队列和
-Service Bus 路由器和
-元语言 (ML)
-
-Microsoft Dynamics CRM 服务
-
-Microsoft Exchange Online
-
-Microsoft Identity Lab。另参见 Identity Lab
-
-Microsoft Live SkyDrive。另参见 SkyDrive
-
-Microsoft Office Live
-
-Microsoft Secure Server Authority
-
-Microsoft SharePoint Online
-
-Microsoft Visual Studio。另参见 Visual Studio
-
-迁移到 Azure 平台，风险最小化。另参见风险最小化
-
-军事、云计算和
-
-MIME (多用途互联网邮件扩展) 类型
-
-MIX 08 会议
-
-MIX 09 会议
-
-ML (元语言)
-
-MOE (网格操作环境)。另参见实时操作环境
-
-即服务的监控 (MaaS)
-
-Mosso 部门。另参见 Rackspace Hosting
-
-迁移到 Azure 平台，风险最小化。另参见风险最小化
-
-MSN TV 2
-
-MSPs (成员服务提供者)
-
-多用途互联网邮件扩展类型。另参见 MIME 类型
-
-多租户性
-
-`MyProfile.aspx`
-
-`MySession.aspx`
-
-## N
-NAC (网络访问控制)
-
-Nakashima, Jim
-
-命名字节数组
-
-命名管道
-
-NAT (网络地址转换) 设备
-
-国家标准局。另参见 NIST
-
-美国标准与技术研究院。另参见 NIST
-
-NC (网络计算机) 概念
-
-NCI (Network Computers, Inc.)
-
-Negroponte, Nicholas
-
-.NET 4。另参见工作流服务
-
-.NET 访问控制服务。另参见访问控制服务
-
-用于 ADO.NET 服务的 .NET 库
-
-.NET CLR。另参见 CLR
-
-.NET 原始类型
-
-.NET Service Bus。另参见 Service Bus
-
-.NET 服务。另参见访问控制服务；Service Bus；工作流服务
-
-在 Azure 平台图中的
-工作流服务。另参见工作流服务
-
-.NET 服务 SDK。另参见 EchoSample 解决方案；`WSHttpRelayEchoSample.sln`
-
-安装
-Service Bus 和
-.NET 服务解决方案
-ACS 和
-Service Bus 和
-笔记本电脑 (Netbooks)
-NetChannel
-NetPC
-网络访问控制 (NAC)
-网络地址转换 (NAT) 设备
-网络计算机 (NC) 概念
-Network Computers, Inc. (NCI)
-网络接口卡 (NICs)
-网络站 (IBM)
-“网络即计算机”的座格言
-内华达州数据隐私法
-新项目对话框 (Visual Studio)
-“新存储功能：签名访问签名”博客文章
-
-NICs (网络接口卡)
-NIST (美国标准与技术研究院)
-
-AES 和
-联邦云计算标准
-
-联邦云基础设施
-
-ITL 和
-IT 相关风险
-特殊出版物
-节点互操作性
-非专有安全功能
-
-Northwind 客户表。另参见 `AzureTableTestHarnessSSL. sln` 项目
-
-Northwind 订单详情表
-
-Northwind 订单表。另参见 OrderTable 示例项目
-
-向 Northwind 订单表插入实体的 HTTP POST 请求 (Listing 7–5)
-
-从 Northwind 订单表上传实体后的 HTTP POST 响应 (Listing 7–6)
-
-`NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 PartitionKey 值；RowKey 值
-
-## O
-OakLeaf CA
-
-OakLeaf 托管服务
-
-OakLeaf Systems Azure Blob 服务测试套件
-分阶段部署的
-OakLeaf Systems Azure Table 服务示例项目
 ```代码
-`Default.aspx` 页面
-Northwind 客户表的记录和
-对象初始化代码和
-生产版本
-结构
-OakLeaf3 表
 
-oakleaf3 账户队列列表的 HTTP 请求和响应消息 (Listing 8–1)
 
-向 OakLeaf3 表添加加密实体的 HTTP 请求头和负载 (Listing 5–9)
 
-来自 OakLeaf3 表前 12 个实体的请求头 (Listing 5–12) (注：此处原文为 0012，但链接显示为 0009，此处按原文逻辑翻译) -> (xhtml_c05_pgml_0012)
-
-向 OakLeaf3 表添加加密实体的响应头和负载 (Listing 5–10)
-
-`NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 PartitionKey 值；RowKey 值
-
-来自 OakLeaf3 表前 12 个实体的请求头 (Listing 5–12)
-
-`NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 PartitionKey 值；RowKey 值
-
-向 OakLeaf3 表添加加密实体的响应头和负载 (Listing 5–10)
-
-`NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 PartitionKey 值；RowKey 值
-
-来自 OakLeaf3 表前 12 个实体的响应头 (Listing 5–12)
-
-
-
-“云计算视角与标准，”
-
-`.pfx` 文件
-
-`PHI`（受保护的健康信息）
-
-Photo Gallery Azure Queue Services Test Harness。另参见 `Thumbnails2.sln`；`Thumbnails.sln`
-
-`PHP`
-
-`PII`（个人身份信息）
-
-在存储服务中的加密
-
-`PIPEDA`（个人信息保护和电子文件法）
-
-命名管道（named pipes）
-
-`PKCS`（公密钥加密标准）
-
-`PKI`（公密钥基础设施）
-
-平台即服务。参见 `PaaS`
-
-`PopReceipt` 值
-
-`portal`。参见 `Developer Portal`
-
-`POST`。参见 `HTTP POST`
-
-“云计算的潜力，”
-
-`PowerShell`
-
-`主访问密钥`
-
-`实体的主键值`
-
-`.NET 原始数据类型`
-
-`隐私`。另参见 `合规性`；`机密性`；`障碍`
-
-`私有云`
-
-`专业开发者大会 (PDC)`
-
-2008
-
-2009
-
-`profiles, ASP.NET 角色管理功能及`
-
-`Program.cs`
-
-检查
-
-验证服务用户的凭据并
-
-`Project Astoria`。参见 `ADO.NET Data Services`
-
-`Project Huron`。参见 `Data Hubs`
-
-`Project RedDog`
-
-`ProjectName.cspkg`。另参见 `ServiceConfiguration.cscfg` 文件
-
-`所有权证明 (Proof-of-Possession)`
-
-`受保护的健康信息 (PHI)`
-
-`公共公司会计监督委员会 (PCAOB)`
-
-`2002 年公司会计改革与投资者保护法案`。参见 `萨班斯-奥克斯利法案`
-
-`公密钥加密标准 (PKCS)`
-
-`发布者 (Publisher)`
-
-`PUT`
-
-`Put Blob 操作`
-
-`Put Message 操作`
-
-`PutMessage (MessageQueue.PutMessage)`
-
-`Python`
-
-Azure 以及
-
-`GAE` 以及
-
-`Windows Live ID Web Authentication SDK 1.2`
-
-Q
-
-`查询运算符`
-
-`查询实体`
-
-`队列服务 (Azure Queue Services)`
-
-在 Azure 平台图中
-
-Photo Gallery Azure Queue Services Test Harness
-
-`Queue.cs`
-
-`QueueManagementClient 类`
-
-`QueuePolicy 类`
-
-`QueueProperties`
-
-`QueueRest`
-
-`queues (Azure Queues)`。另参见 `Service Bus Queues`；`Thumbnails2.sln`；`Thumbnails.sln`
-
-代码列表
-
-向“thumbnailmaker”队列添加三个元数据属性 (Listing 8–8)
-
-清空队列中的所有消息 (Listing 8–21)
-
-创建一个队列并向其添加三个简单的字符串消息 (Listing 8–10)
-
-创建一个名为“thumbnailmaker”的队列 (Listing 8–4)
-
-删除名为“thumbnailmaker”的队列 (Listing 8–6)
-
-在指定队列中删除具有指定 `PopReceipt` 值的单个消息 (Listing 8–19)
-
-使用 `HTTP PUT` 请求和响应消息创建一个名为“thumbnailmaker”的队列 (Listing 8–3)
-
-在指定队列中检查单个消息 (Listing 8–17)
-
-列出 `ServiceConfiguration.cscfg` 文件中指定的存储账户中的队列 (Listing 8–2)
-
-从指定队列中检索单个消息 (Listing 8–14)
-
-当消息到达队列时检索并处理单个消息 (Listing 8–15)
-
-以整数形式检索指定队列中消息的大致数量 (Listing 8–12)
-
-创建
-
-使用指定的存储账户
-
-定义的
-
-`HTTP` 请求和响应消息的图
-
-向“thumbnailmaker”队列添加一个简单的字符串消息 (Listing 8–9)
-
-向“thumbnailmaker”队列添加三个元数据属性
-
-清空队列中的所有消息 (Listing 8–20)
-
-删除名为“thumbnailmaker”的队列 (Listing 8–5)
-
-删除具有指定 `PopReceipt` 值的单个消息 (Listing 8–18)
-
-检查单个消息而非处理它 (Listing 8–16)
-
-oakleaf3 账户的队列列表 (Listing 8–1)
-
-从选定队列中检索单个消息 (Listing 8–13)
-
-检索队列中消息的大致数量 (Listing 8–11)
-
-`HTTP/HTTPS` 协议和
-
-`HTTP/REST`
-
-在消息级别
-
-在队列级别
-
-列出
-
-队列中的消息
-
-添加
-
-清空
-
-删除
-
-查看
-
-检索大致数量
-
-检索单个消息
-
-使用消息传递
-
-处理
-
-...的目的是
-
-`队列相关类/事件处理器`
-
-`REST`
-
-`thumbnailmaker`。参见 `QueueStorage`
-
-`Queue Services`
-
-`Queue.cs`
-
-`QueueManagementClient 类`
-
-`QueuePolicy 类`
-
-`QueueProperties`
-
-`QueueRest`
-
-`queues (Azure Queues)`。另参见 `Service Bus Queues`；`Thumbnails2.sln`；`Thumbnails.sln`
-
-
-
-
+# `Default.aspx` 页面
+
+Northwind 客户表的记录和对象初始化代码和生产版本结构。
+
+## OakLeaf3 表
+
+- oakleaf3 账户队列列表的 HTTP 请求和响应消息 (Listing 8–1)
+- 向 OakLeaf3 表添加加密实体的 HTTP 请求头和负载 (Listing 5–9)
+- 来自 OakLeaf3 表前 12 个实体的请求头 (Listing 5–12) (注：此处原文为 0012，但链接显示为 0009，此处按原文逻辑翻译) -> (xhtml_c05_pgml_0012)
+- 向 OakLeaf3 表添加加密实体的响应头和负载 (Listing 5–10)
+- `NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 `PartitionKey` 值；`RowKey` 值
+- 来自 OakLeaf3 表前 12 个实体的请求头 (Listing 5–12)
+- `NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 `PartitionKey` 值；`RowKey` 值
+- 向 OakLeaf3 表添加加密实体的响应头和负载 (Listing 5–10)
+- `NumericType.MaxValue`-`NumericPropertyValue` 计算。另参见 `PartitionKey` 值；`RowKey` 值
+- 来自 OakLeaf3 表前 12 个实体的响应头 (Listing 5–12)
+
+## 其他主题
+
+- “云计算视角与标准，”
+- `.pfx` 文件
+- `PHI`（受保护的健康信息）
+- Photo Gallery Azure Queue Services Test Harness。另参见 `Thumbnails2.sln`；`Thumbnails.sln`
+- `PHP`
+- `PII`（个人身份信息）
+- 在存储服务中的加密
+- `PIPEDA`（个人信息保护和电子文件法）
+- 命名管道（named pipes）
+- `PKCS`（公密钥加密标准）
+- `PKI`（公密钥基础设施）
+- 平台即服务。参见 `PaaS`
+- `PopReceipt` 值
+- `portal`。参见 `Developer Portal`
+- `POST`。参见 `HTTP POST`
+- “云计算的潜力，”
+- `PowerShell`
+- `主访问密钥`
+- `实体的主键值`
+- `.NET 原始数据类型`
+- `隐私`。另参见 `合规性`；`机密性`；`障碍`
+- `私有云`
+- `专业开发者大会 (PDC)`
+  - 2008
+  - 2009
+- `profiles, ASP.NET 角色管理功能及`
+- `Program.cs`
+  - 检查
+  - 验证服务用户的凭据并
+- `Project Astoria`。参见 `ADO.NET Data Services`
+- `Project Huron`。参见 `Data Hubs`
+- `Project RedDog`
+- `ProjectName.cspkg`。另参见 `ServiceConfiguration.cscfg` 文件
+- `所有权证明 (Proof-of-Possession)`
+- `受保护的健康信息 (PHI)`
+- `公共公司会计监督委员会 (PCAOB)`
+- `2002 年公司会计改革与投资者保护法案`。参见 `萨班斯-奥克斯利法案`
+- `公密钥加密标准 (PKCS)`
+- `发布者 (Publisher)`
+- `PUT`
+- `Put Blob 操作`
+- `Put Message 操作`
+- `PutMessage (MessageQueue.PutMessage)`
+- `Python`
+  - Azure 以及
+  - `GAE` 以及
+  - `Windows Live ID Web Authentication SDK 1.2`
+
+## Q
+
+- `查询运算符`
+- `查询实体`
+- `队列服务 (Azure Queue Services)`
+  - 在 Azure 平台图中
+  - Photo Gallery Azure Queue Services Test Harness
+- `Queue.cs`
+- `QueueManagementClient 类`
+- `QueuePolicy 类`
+- `QueueProperties`
+- `QueueRest`
+- `queues (Azure Queues)`。另参见 `Service Bus Queues`；`Thumbnails2.sln`；`Thumbnails.sln`
+
+### 代码列表
+
+- 向“thumbnailmaker”队列添加三个元数据属性 (Listing 8–8)
+- 清空队列中的所有消息 (Listing 8–21)
+- 创建一个队列并向其添加三个简单的字符串消息 (Listing 8–10)
+- 创建一个名为“thumbnailmaker”的队列 (Listing 8–4)
+- 删除名为“thumbnailmaker”的队列 (Listing 8–6)
+- 在指定队列中删除具有指定 `PopReceipt` 值的单个消息 (Listing 8–19)
+- 使用 `HTTP PUT` 请求和响应消息创建一个名为“thumbnailmaker”的队列 (Listing 8–3)
+- 在指定队列中检查单个消息 (Listing 8–17)
+- 列出 `ServiceConfiguration.cscfg` 文件中指定的存储账户中的队列 (Listing 8–2)
+- 从指定队列中检索单个消息 (Listing 8–14)
+- 当消息到达队列时检索并处理单个消息 (Listing 8–15)
+- 以整数形式检索指定队列中消息的大致数量 (Listing 8–12)
+
+### 创建
+
+- 使用指定的存储账户
+- 定义的
+- `HTTP` 请求和响应消息的图
+- 向“thumbnailmaker”队列添加一个简单的字符串消息 (Listing 8–9)
+- 向“thumbnailmaker”队列添加三个元数据属性
+- 清空队列中的所有消息 (Listing 8–20)
+- 删除名为“thumbnailmaker”的队列 (Listing 8–5)
+- 删除具有指定 `PopReceipt` 值的单个消息 (Listing 8–18)
+- 检查单个消息而非处理它 (Listing 8–16)
+- oakleaf3 账户的队列列表 (Listing 8–1)
+- 从选定队列中检索单个消息 (Listing 8–13)
+- 检索队列中消息的大致数量 (Listing 8–11)
+
+### `HTTP/HTTPS` 协议和
+
+- `HTTP/REST`
+- 在消息级别
+- 在队列级别
+
+### 列出
+
+- 队列中的消息
+
+### 添加
+
+- 清空
+- 删除
+- 查看
+- 检索大致数量
+- 检索单个消息
+
+### 使用消息传递
+
+- 处理
+- ...的目的是
+
+### `队列相关类/事件处理器`
+
+- `REST`
+- `thumbnailmaker`。参见 `QueueStorage`
+- `Queue Services`
+- `Queue.cs`
+- `QueueManagementClient 类`
+- `QueuePolicy 类`
+- `QueueProperties`
+- `QueueRest`
+- `queues (Azure Queues)`。另参见 `Service Bus Queues`；`Thumbnails2.sln`；`Thumbnails.sln`
 
 # SAS 70 (审计标准声明) 证明
 
@@ -10128,8 +9880,8 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `SBS`。参见 `Service Bus`（服务总线）
 - `SByte`
 - `scalability`（扩展性）
-- `high`（高）
-- `PartitionKey` 值和 `/performance`、`Azure tables`（Azure 表）以及
+  - `high`（高）
+  - `PartitionKey` 值和 `/performance`、`Azure tables`（Azure 表）以及
 - “Scalability and Cost Issues with Windows Azure Web and WorkerRole Projects -Live Demo”（Windows Azure Web 和 WorkerRole 项目的可扩展性和成本问题 -现场演示）OakLeaf 博客文章
 - `scaling Azure Table and Blob storage`（扩展 Azure 表和 Blob 存储）。参见 `blobs`（blob）；`tables`（表）
 - `scaling out`（向水平扩展）
@@ -10137,31 +9889,31 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `scaling up`（向垂直扩展）
 - `Schmidt, Eric`
 - `scopes`（范围）
-- `autogenerated`（自动生成的）、`WSHttpRelayEchoSample.sln` 以及
-- `defined`（定义的）
-- `SDK`（Azure 软件开发包）。另另 `WLID` Web 认证 SDK 1.2`
-- `AspProvidersDemo.sln`
-- `Azure Platform diagram and`（Azure 平台图和）
-- `DF` 和
-- `download`（下载）
-- `DS` 和
-- `installing`（安装）
-- `sample applications`（示例应用程序）
+  - `autogenerated`（自动生成的）、`WSHttpRelayEchoSample.sln` 以及
+  - `defined`（定义的）
+- `SDK`（Azure 软件开发包）。另参见 `WLID` Web 认证 SDK 1.2`
+  - `AspProvidersDemo.sln`
+  - `Azure Platform diagram and`（Azure 平台图和）
+  - `DF` 和
+  - `download`（下载）
+  - `DS` 和
+  - `installing`（安装）
+  - `sample applications`（示例应用程序）
 - `SDP`（站点数据保护）程序
-- `SDS`（SQL 数据服务）。另另 `SADB`
+- `SDS`（SQL 数据服务）。另参见 `SADB`
 - `Search Engine Strategies Conference`（搜索引擎策略会议）
 - `SEC`（证券交易委员会）
 - `Secondary Access Key`（次访问密钥）
 - `Second-Level Address Translation (SLAT)`（二级地址转换）
 - `Secure Sockets Layer`（安全套接层）。参见 `SSL`
 - `Securities and Exchange Commission (SEC)`（证券交易委员会）
-- `security`（安全性）。另另 `ASP.NET Membership Services`；`obstacles`（障碍）；`risk minimization`（风险最小化）；`SSL`；`TLS`；`Windows Live ID authentication`
-- `Azure OS`
-- `cloud computing`（云计算）
-- `DPAPI`
-- `non-proprietary security features`（非专有安全特性）
+- `security`（安全性）。另参见 `ASP.NET Membership Services`；`obstacles`（障碍）；`risk minimization`（风险最小化）；`SSL`；`TLS`；`Windows Live ID authentication`
+  - `Azure OS`
+  - `cloud computing`（云计算）
+  - `DPAPI`
+  - `non-proprietary security features`（非专有安全特性）
 - `Security Assertion Markup Language (SAML)` 令牌
-- `Security Token Service (STS)`（安全令牌服务）。另另 `Access Control Services`（访问控制服务）
+- `Security Token Service (STS)`（安全令牌服务）。另参见 `Access Control Services`（访问控制服务）
 - `security-intensive agencies`（安全密集型机构）、云计算和
 - `SecurityMode` 枚举
 - `Self-Assessment Questionnaire (PCI SAQ)`（PCI 自评估问卷）
@@ -10170,31 +9922,31 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `Senate Bill 1386`。参见 `California Senate Bill 1386`
 - `Sender`（发送者）
 - `server virtualization`（服务器虚拟化）
-- `Service Bus`（服务总线）（`.NET Service Bus`, `SB`）。另另 `Access Control Services`；`EchoSample solution`；`Queue Services`；`Workflow Services`
-- `in Azure Platform diagram`（在 Azure 平台图中）
-- `BizTalk Services and`
-- `defined`
-- `EchoSample solution`
-- `ESB` 和
-- `features`（功能）
-- `load balancing and`（负载均衡和）
-- `messaging fabric`（消息织）
-- `.NET Services SDK and`
-- `.NET Services solution and`
-- `online information`（在线信息）
-- `purpose of`（...的目的）
-- `WCF and`
-- `WSHttpRelayEchoSample.sln`
+- `Service Bus`（服务总线）（`.NET Service Bus`, `SB`）。另参见 `Access Control Services`；`EchoSample solution`；`Queue Services`；`Workflow Services`
+  - `in Azure Platform diagram`（在 Azure 平台图中）
+  - `BizTalk Services and`
+  - `defined`
+  - `EchoSample solution`
+  - `ESB` 和
+  - `features`（功能）
+  - `load balancing and`（负载均衡和）
+  - `messaging fabric`（消息织）
+  - `.NET Services SDK and`
+  - `.NET Services solution and`
+  - `online information`（在线信息）
+  - `purpose of`（...的目的）
+  - `WCF and`
+  - `WSHttpRelayEchoSample.sln`
 - `Service Bus Queues (SBQs)`（服务总线队列）
-- 创建 (列表 11–1 到 11–4)
-- `HTTPQueueSample solution` 和
-- `QueueManagementClient` 类和
-- `SBRs` 和
+  - 创建 (列表 11–1 到 11–4)
+  - `HTTPQueueSample solution` 和
+  - `QueueManagementClient` 类和
+  - `SBRs` 和
 - `Service Bus Routers (SBRs)`（服务总线路由器）
-- `component relationships`（组件关系）
-- `HttpRouter.sln solution` 和
-- `RouterPolicy` 实例和
-- `SBQs` 和
+  - `component relationships`（组件关系）
+  - `HttpRouter.sln solution` 和
+  - `RouterPolicy` 实例和
+  - `SBQs` 和
 - `service deployments`（服务部署）
 - `Service Level Agreements`（服务等级协议）。参见 `SLAs`
 - `Service Model`（服务模型）
@@ -10202,24 +9954,24 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `Service Requesters/Access Control solutions/Relying Parties interactions`（服务请求者/访问控制解决方案/依赖方的交互）
 - `Service Training Kit, Azure`（Azure 服务训练工具包）
 - `ServiceConfiguration.cscfg` 文件
-- `AspProviderDemo.sln`
-- 列表 6–5
-- 远程存储端点的服务配置设置 (列表 6–7)
-- `Azure`、`Tables` 和 `Blobs` 的安全 HTTPS 传输的设置
-- 在 `ServiceConfiguration.cscfg` 文件中指定的存储帐户列出队列的代码 (列表 8–2)
-- `ConfigurationSettings` 节
-- ...中的默认内容
-- `editing`（编辑）
-- `Fiddler2` 和
-- `http` 更改 `https`
-- `< Instances count = “n” >` 元素
-- 列表 2–2
-- `multitenancy`（多户性）和
-- `Primary Access Key/Secondary Access Key`（主访问密钥/次访问密钥）值
-- `ProjectName.cspkg` 和
-- 用于 `SampleWebCloudService` Web 应用程序的
-- 中的 `<Setting>` 元素
-- `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目 (列表 8–22)
+  - `AspProviderDemo.sln`
+  - 列表 6–5
+  - 远程存储端点的服务配置设置 (列表 6–7)
+  - `Azure`、`Tables` 和 `Blobs` 的安全 HTTPS 传输的设置
+  - 在 `ServiceConfiguration.cscfg` 文件中指定的存储帐户列出队列的代码 (列表 8–2)
+  - `ConfigurationSettings` 节
+  - ...中的默认内容
+  - `editing`（编辑）
+  - `Fiddler2` 和
+  - `http` 更改 `https`
+  - `< Instances count = “n” >` 元素
+  - 列表 2–2
+  - `multitenancy`（多户性）和
+  - `Primary Access Key/Secondary Access Key`（主访问密钥/次访问密钥）值
+  - `ProjectName.cspkg` 和
+  - 用于 `SampleWebCloudService` Web 应用程序的
+  - 中的 `<Setting>` 元素
+  - `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目 (列表 8–22)
 - `ServiceDefinition.csdef`
 - `ServiceDefinition.csdef` 文件 (列表 2–1)
 - `ServiceHostingSDamples`
@@ -10235,17 +9987,17 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `Silverlight-Enabled Web Application`（启用 Silverlight 的 Web 应用程序）
 - `Silverlight UI`
 - `SilverlightStreamMedia`
-- `SimpleDB`。另另 `Amazon Web Services`
-- `DBaaS` 和
-- `EAV` 表和
-- `FaaS` 和
+- `SimpleDB`。另参见 `Amazon Web Services`
+  - `DBaaS` 和
+  - `EAV` 表和
+  - `FaaS` 和
 - `simulation/visualization`（模拟/可视化）
 - `Site Data Protection (SDP)`（站点数据保护）
 - `SkyDrive (Microsoft Live)`
 - `SLAs`（服务等级协议）用于 Azure
-- `CaaS` 和
-- `MaaS` 和
-- 最大化数据可用性和
+  - `CaaS` 和
+  - `MaaS` 和
+  - 最大化数据可用性和
 - `SLAT`（二级地址转换）
 - `Slicehost`
 - 手机
@@ -10261,30 +10013,39 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `SOAP-based web services`（基于 SOAP 的 Web 服务）
 - `Soderlund, H.`
 - “Software + Services for Architects”（面向架构师的软件+服务）
-- `Software as a Service`（软件服务）。另另 `SaaS`
-- `Software Development Kit`（软件开发包）。另另 `.NET Services`
+- `Software as a Service`（软件服务）。另参见 `SaaS`
+- `Software Development Kit`（软件开发包）。另参见 `.NET Services`
 - `Software Kernel`
 - `software licensing`（软件许可）
 - `Software plus Services`
 - `solid disks (SSDs)`
+
+
+
+# 项目术语表与索引
+
+## A–Z 术语参考
+
+### S 开头术语
+
 - `Solution Explorer`（解决方案管理器）
 - `solutions`。参见 `specific`
 - `source code`（源代码）
 - `South Africa on Corporate Governance`（南非的企业治理）
-- `SOX`。另另 `Sarbanes-Oxley Act`（萨班斯-奥克斯利法）
+- `SOX`。另见 `Sarbanes-Oxley Act`（萨班斯-奥克斯利法）
 - `SPARC` 处理器
 - `specialty ASPs`（ASP）
 - `SQL Analysis Services (SSAS)`
-- `SQL Azure`。另另 `SQL Services`
-- `SQL Database`。另另 `SADB`
+- `SQL Azure`。另见 `SQL Services`
+- `SQL Database`。另见 `SADB`
 - `SQL Data Services (SDS)`
 - `SQL Integration Services (SSIS)`
 - `SQL Reporting Services (SSRS)`
 - `SQL Server 2005`
-- 基于列的服务器加密
-- `Express/Standard` 版本
-- `SQL Server 2008`。另另 `SADB`；`SQL Services`
-- `SQL Server in the Cloud`。另另 `SQL Data Services`
+  - 基于列的服务器加密
+  - `Express/Standard` 版本
+- `SQL Server 2008`。另见 `SADB`；`SQL Services`
+- `SQL Server in the Cloud`。另见 `SQL Data Services`
 - `SQL Server Management Studio`
 - `SQL Services (SQL Azure)`
 - `SQL Data Services (SSDS)`
@@ -10293,58 +10054,61 @@ oakleaf3 账户的队列列表 (Listing 8–1)
 - `TDE`
 - `TSL`
 - `T (SS Services)`
-- `SSL`（安全套接层）。另另 `TLS`
-- “Enabling SSL Connections on Windows”（在 Windows 上启用 SSL 连接）白皮书
-- “Enabling SSL for HTTP Blob, Table, and Queue transport”（为 HTTP Blob、表和队列传输启用 SSL） (列表 5–4)
-用于表建立 SSL 连接的请求头 (列表 5–5)
-用于表建立 SSL 连接的响应头 (列表 5–6) 列表 5–7)
-- “Tip/Trick: Enabling SSL on IIS 7.0 Using Self-Signed Certificates”（技巧/技巧：使用自签名证书在 IIS 7.0 上启用 SSL）博客文章
-用于 Web Roles 的传输加密
+- `SSL`（安全套接层）。另见 `TLS`
+  - "Enabling SSL Connections on Windows"（在 Windows 上启用 SSL 连接）白皮书
+  - "Enabling SSL for HTTP Blob, Table, and Queue transport"（为 HTTP Blob、表和队列传输启用 SSL）(列表 5–4)
+  - 用于表建立 SSL 连接的请求头 (列表 5–5)
+  - 用于表建立 SSL 连接的响应头 (列表 5–6) 列表 5–7)
+  - "Tip/Trick: Enabling SSL on IIS 7.0 Using Self-Signed Certificates"（技巧/技巧：使用自签名证书在 IIS 7.0 上启用 SSL）博客文章
+  - 用于 Web Roles 的传输加密
 - `TSL` v.
 - `SSL` 页面
 - `SSRS`（SQL 报告服务）
-部署页面
-- `Standard Query Operators`（标准查询运算符）。另另 `LINQ Standard Operators`
-- `SQO`。另另 `Standard Query Operators`
-标准化信息卡术语
+  - 部署页面
+- `Standard Query Operators`（标准查询运算符）。另见 `LINQ Standard Operators`
+- `SQO`。另见 `Standard Query Operators`
+
+**标准化信息卡术语**
+
 - `Start()`
-Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
+- Statement of Auditing Standards（审计标准）。另见 `SAS 70 attestations`
 - `Stone, Brad`
 - `Storage Accounts (Azure Storage Accounts)`（Azure 存储帐户）
-创建
-托管服务令牌和
-- `Storage Services (Azure Storage Services)`（Azure 存储服务）。另另 `blobs`；`Development Storage`（开发存储）；`queues`（队列）；`tables`（表）
-在 Azure 平台图中
-...中的 PII（个人身份信息）加密
-...的目的
-- `REST APIs`。另另 `REST APIs`
-...的作用
+  - 创建
+  - 托管服务令牌和
+- `Storage Services (Azure Storage Services)`（Azure 存储服务）。另见 `blobs`；`Development Storage`（开发存储）；`queues`（队列）；`tables`（表）
+  - 在 Azure 平台图中
+  - ...中的 PII（个人身份信息）加密
+  - ...的目的
+  - `REST APIs`。另见 `REST APIs`
+  - ...的作用
 - `StorageAccountInfo.cs`
 - `StorageClient` 类库
-`StorageClient` 示例项目
-存储和检索 blob
+  - `StorageClient` 示例项目
+  - 存储和检索 blob
 - `Stratus`
 - `String`（数据类型）
-结构化数据。另另 `tables`（表）
-- `STS`（安全令牌服务）。另另 `Access Control Services`（访问控制服务）
+- 结构化数据。另见 `tables`（表）
+- `STS`（安全令牌服务）。另见 `Access Control Services`（访问控制服务）
 - `Subject`（主体）
 - `submitButton_Click()` 事件处理器
-摘要页
-- `Sun Microsystems`（太阳系统公司）。另另 `Oracle`
-- `Azure v.`
-“The Network is the Computer”（网络即计算机）格言
+- 摘要页
+- `Sun Microsystems`（太阳系统公司）。另见 `Oracle`
+  - `Azure v.`
+  - "The Network is the Computer"（网络即计算机）格言
+
+### T 开头术语
+
 - `T`
 - `TaaS`（工具即服务）
-- `Table Services (Azure Table Services)`（Azure 表服务）。另另 `OakLeaf Systems Azure Table Services Sample Project`
-在 Azure 平台图中
-表存储
+- `Table Services (Azure Table Services)`（Azure 表服务）。另见 `OakLeaf Systems Azure Table Services Sample Project`
+  - 在 Azure 平台图中
+  - 表存储
 
+## 列表 (4–1 到 4–4)
 
+### 实体与数据操作
 
-
-# 列表 (4–1 到 4–4)
-
-## 实体与数据操作
 - 已定义的实体
 - 使用代码添加
 - 使用 HTTP POST 添加
@@ -10360,8 +10124,10 @@ Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
 - REST API 和 SADB v.
 - 可扩展性/性能优化
 
-## 表存储组件
-### 核心类与常量
+### 表存储组件
+
+#### 核心类与常量
+
 - `TableStorage` 类
 - `TableStorageConstants`
 - `TableStorage.cs`
@@ -10369,7 +10135,7 @@ Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
 - `TableStorageDataServiceQuery`
 - `TableStorageEndpoint`
 - `TableStorageEntity` 类
-- 类图
+  - 类图
 - `TableStorageHelpers` 中的实例、加密/解密
 - `TableStorageMembershipProvider` 类
 - `TableStorageProfileProvider` 类
@@ -10377,36 +10143,40 @@ Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
 - `TableStorageSessionProvider` 类
 - `TableStorageTable` 类
 
-### 运算符与模板
+#### 运算符与模板
+
 - `Take(n)` 标准查询运算符 (LINQ)
 - `TDE`。参见透明数据加密
 - 模板（用于 Visual Studio 2008 的 Azure 模板）
-- 租户。参见来虚拟机；多租户
+- 租户。参见虚拟机；多租户
 - Thibodeau, Patrick
 - 客户端
 - `thumbnailmaker` 队列
 
 ## 队列服务与实现
+
 ### Thumbnailmaker 队列
-- 创建名为“thumbnailmaker”队列的 HTTP PUT 请求和响应消息 (Listing 8–3)
-- 向“thumbnailmaker”队列添加简单字符串消息的 HTTP 请求和响应消息 (Listing 8–9)
-- 向“thumbnailmaker”队列添加三个元属性
-- 删除名为“thumbnailmaker”的队列 (Listing 8–5)
+
+- 创建名为"thumbnailmaker"队列的 HTTP PUT 请求和响应消息 (Listing 8–3)
+- 向"thumbnailmaker"队列添加简单字符串消息的 HTTP 请求和响应消息 (Listing 8–9)
+- 向"thumbnailmaker"队列添加三个元属性
+- 删除名为"thumbnailmaker"的队列 (Listing 8–5)
 
 ### 项目详情
+
 - `Thumbnails2.sln`（修改后的项目）
 - AJAX 修改和流程图（针对 `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目）
 - 添加到 `gvBlobs` GridView
 - Marx 对缩略图删除的建议以及 `Thumbnails.sln`（原始项目）
 - 添加缩略图、带宽消耗以及增强
 - 流程图（针对 `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目）
-
- 照片库 Azure 队列服务测试框架
+- 照片库 Azure 队列服务测试框架
 - `thumbnailmaker` 队列真实测试的用途。参见 `thumbnailmaker` 队列
 - `Thumbnails_WebRole` 和 `Thumbnails_WorkerRole` 项目
-- 分析轮询 blob 更新对网络流量的影响
+  - 分析轮询 blob 更新对网络流量的影响
 
-## 代码列表
+### 代码列表
+
 - 默认 `ServiceConfigure.cscfg` 文档 (Listing 8–22)
 - 在关闭 GridView ViewState 的情况下添加缩略图图像的 HTTP 请求和部分响应消息 (Listing 8–25)
 - `WorkerRole` 轮询生成的 HTTP 请求和响应消息 (Listing 8–26, Listing 8–27)
@@ -10419,75 +10189,73 @@ Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
 - `TimeStamp`
 
 ## 安全与传输
-- 博客：“提示/技巧：使用自签名证书在 IIS 7.0 上启用 SSL”
+
+- 博客："提示/技巧：使用自签名证书在 IIS 7.0 上启用 SSL"
 - `TLS`（传输层安全协议）
-- 为安全 HTTP WebRole 传输启用 `TLS` (Listing 5–1)
-- 使用带有请求头的 HTTPS 为 WebRole 建立 `TLS` 连接 (Listing 5–2)
-- 为带有证书的 WebRole 建立 `TLS` 连接的响应头 (Listing 5–3)
-- `SSL` v.
+  - 为安全 HTTP WebRole 传输启用 `TLS` (Listing 5–1)
+  - 使用带有请求头的 HTTPS 为 WebRole 建立 `TLS` 连接 (Listing 5–2)
+  - 为带有证书的 WebRole 建立 `TLS` 连接的响应头 (Listing 5–3)
+  - `SSL` v.
 - 令牌页面
 - 工具即服务 (TaaS)
 
 ## 云计算与身份
-- “云计算增长的 10 大障碍”。另见障碍
-- “迈向云计算统一本体论”研究论文
+
+- "云计算增长的 10 大障碍"。另见障碍
+- "迈向云计算统一本体论"研究论文
 - 透明性
 - 透明数据加密 (TDE)
 - 传输层安全。参见 `TLS`
-- `TransportClientCredentialType` 举举
+- `TransportClientCredentialType` 枚举
 - `TripleDESCryptoServiceProvider`
 - 信任身份
 - 受信任根证书颁机构列表
 - `T-SQL`
-- “200 台笔记本破坏一种商业模式”的故事
+- "200 台笔记本破坏一种商业模式"的故事
 - `UCI`（统一云接口）项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
-- 统一云接口 (UCI) 项目
+- "内部原理：云计算托管环境内部，"
 
 ## Azure 基础设施与服务
+
 - `U`
 - `UCI`（统一云接口）项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
 - `UInt64`
-- “内部原理：云计算托管环境内部，”
-- 统一云接口 (UCI) 项目
-- `UInt16`
-- `UInt32`
-- `UInt64`
+- "内部原理：云计算托管环境内部，"
 - 统一云接口 (UCI) 项目
 - `UInt16`
 - `UInt32`
@@ -10517,18 +10285,21 @@ Statement of Auditing Standards（审计标准）。另另 `SAS 70 attestations`
 - `UInt32`
 - `UInt64`
 - 统一云接口 (UCI) 项目
-
-
-
+- `UInt16`
+- `UInt32`
+- `UInt64`
+- 统一云接口 (UCI) 项目
 
 # XPathQueryHelper 静态类
 
 ## Y
+
 - Yong, Joe
 - Youseff, Lamina
 
 ## Z
+
 - ZAW (零管理 Windows)
-零管理 Windows (ZAW)
+- 零管理 Windows (ZAW)
 
 ![广告](img/jennings_advert.jpg)

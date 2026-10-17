@@ -1,146 +1,135 @@
+
 # MATLAB 和 Python 数值与科学计算实用指南
 
-
-
-
-
-
-
-
-![](img/9923905aaa045c7096d90695cee3e3bc_0_0.png)
-
-![](img/9923905aaa045c7096d90695cee3e3bc_0_1.png)
-
-
-![](img/9923905aaa045c7096d90695cee3e3bc_2_0.png)
-
-
-
-![](img/9923905aaa045c7096d90695cee3e3bc_3_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
 访问 Taylor & Francis 网站：
+
 http://www.taylorandfrancis.com
 
 访问 CRC Press 网站：
+
 http://www.crcpress.com
 
 致我的父母、家人和朋友。
 
-![](img/9923905aaa045c7096d90695cee3e3bc_6_0.png)
+前言
 
+作者
 
-前言 xiii
-作者 xvii
+## 第二部分 数据插值与微分方程求解
 
+### 6 数值微分与积分
 
-II 数据插值与微分方程求解 103
+#### 6.1 数值微分
 
+##### 6.1.1 有限差分
 
-6 数值微分与积分 . . . . . . . . . . 125
-6.1 数值微分 . . . . . . . . . . . . . . 125
-6.1.1 有限差分 . . . . . . . . . . . 125
+### 7 求解非线性微分方程组
 
-7 求解非线性微分方程组 . . . . . . . . . . 165
-7.1 Runge-Kutta 方法 . . . . . . . . . . . . . 165
-7.2 显式 Runge-Kutta 方法 . . . . . . . 167
-7.2.1 欧拉法 . . . . . . . . . . . 168
-7.2.2 亥法 (Heun's Method) . . . . . . 171
-7.2.3 四阶 Runge-Kutta 方法 . . . . . . 174
-7.3 隐式 Runge-Kutta 方法 . . . . . . . 176
-7.3.1 后向欧拉法 . . . . . . . . . . . 180
-7.3.2 胶点 Runge-Kutta 方法 . . . . . . . 180
-7.3.2.1 Legendre-Gauss 方法 . . . . . . 180
-7.3.2.2 Lobatto 方法 . . . . . . 184
-7.4 MATLAB ODE 求解器 . . . . . . . . . . . 191
-7.4.1 MATLAB ODE 求解器 . . . . . . . . . . . 191
-7.4.2 求解单个初值问题 (IVP) . . . . . . . . . . . 191
-7.4.3 求解初值问题组 . . . . . . . . . . . 193
-7.4.4 刚性初值问题组 . . . . . . 195
+#### 7.1 Runge-Kutta 方法
 
-8 求解 ODE 的非标准有限差分法 . . . . . . 207
-8.1 标准差分法的局限性 . . . . . . . . . . . 207
-8.2 非标准差分法的构造规则 . . . . 213
-8.3 精确有限差分法 . . . . . . . . . . . 217
-8.3.1 线性齐次 ODE 的精确有限差分法 . . . . . . . . . . 218
-8.3.1.1 一阶线性齐次 ODE 的精确有限差分法 . . . . . . 218
-8.3.1.2 二阶线性齐次 ODE 的精确有限差分法 . . . . . 220
-8.3.1.3 二元 ODE 组的精确有限差分法 . . . . . . . . . . 223
-8.3.2 非线性方程的精确差分法 . . . . . . 230
-8.3.3 含有线性和幂项的微分方程的精确有限差分法 . . . . 234
-8.4 其他非标准差分法 . . . . . 236
+#### 7.2 显式 Runge-Kutta 方法
 
+##### 7.2.1 欧拉法
 
+##### 7.2.2 亥法 (Heun's Method)
 
+##### 7.2.3 四阶 Runge-Kutta 方法
 
+#### 7.3 隐式 Runge-Kutta 方法
 
-目录
+##### 7.3.1 后向欧拉法
 
-# III 求解线性、非线性与动态优化问题 241
+##### 7.3.2 胶点 Runge-Kutta 方法
 
-## 9 求解优化问题：线性规划与二次规划 243
-- 9.1 线性规划问题的形式 ........................................... 243
-- 9.2 使用 linprog 求解线性规划问题 ........................ 246
-- 9.3 使用 fmincon 求解线性规划问题 ...................... 249
-  MATLAB 函数
-- 9.4 使用 pulp Python 求解线性规划问题 ................... 250
-- 9.5 使用 pyomo 求解线性规划问题 ........................ 252
-- 9.6 使用 gekko 求解线性规划问题 ........................ 254
-- 9.7 求解二次优化问题 ................................... 255
+###### 7.3.2.1 Legendre-Gauss 方法
 
-## 10 求解优化问题：非线性规划 261
-- 10.1 求解无约束问题 ................................................ 261
-- 10.1.1 线搜索算法 ........................................................ 263
-- 10.1.2 极速下降法 ................................................... 264
-- 10.1.3 牛顿法 ............................................................... 266
-- 10.1.4 拟牛顿法Fletcher-Goldfarb-Shanno ................................. 269
-- 10.1.4.1 (BFGS) 方法 ............................................................ 269
-- 10.1.4.2 Davidon-Fletcher-Powell (DFP) 算法 ........................ 272
-- 10.1.5 使用 MATLAB 求解无约束问题 ................... 274
-- 10.1.6 使用 Python 求解无约束问题 ....................... 275
-- 10.1.7 使用 Gepko 求解无约束问题 ................... 276
-- 10.2 使用某种方法求解约束优化问题 .................... 278
-- 10.2.1 使用 MATLAB fmincon 求解约束优化问题 ................. 280
-- 10.2.2 在 Python 中求解约束最小化问题 ................... 284
-- 10.2.3 使用 Gepko 求解约束优化问题 ...................... 286
+###### 7.3.2.2 Lobatto 方法
 
-## 11 求解最优控制问题 289
-- 11.1 引言 ....................................................... 289
-- 11.2 一阶最优条件与最优控制的存在 ................................................ 290
-- 11.3 离散化系统的必要条件 .......................... 293
-- 11.4 最优控制的数值解 ........................................ 294
-- 11.5 使用间接法求解最优控制问题 ................... 295
-- 11.5.1 使用间接转录数值求解 ..................... 295
-- 11.6 使用直接法求解最优控制问题 . . . 306
-- 11.6.1 问题表述 . . . . . . . . . . . . . . . . . . . 307
-- 11.6.2 控制参数化技术 . . . . . 307
-- 11.6.2.1 示例 . . . . . . . . . . . . . . . . . . . 309
-- 11.6.3 Gekko Python 求解器 . . . . . . . 313
+#### 7.4 MATLAB ODE 求解器
 
-# 参考文献 321
+##### 7.4.1 MATLAB ODE 求解器
 
-# 索引 327
+##### 7.4.2 求解单个初值问题 (IVP)
 
-![](img/9923905aaa045c7096d90695cee3e3bc_12_0.png)
+##### 7.4.3 求解初值问题组
+
+##### 7.4.4 刚性初值问题组
+
+### 8 求解 ODE 的非标准有限差分法
+
+#### 8.1 标准差分法的局限性
+
+#### 8.2 非标准差分法的构造规则
+
+#### 8.3 精确有限差分法
+
+##### 8.3.1 线性齐次 ODE 的精确有限差分法
+
+###### 8.3.1.1 一阶线性齐次 ODE 的精确有限差分法
+
+###### 8.3.1.2 二阶线性齐次 ODE 的精确有限差分法
+
+###### 8.3.1.3 二元 ODE 组的精确有限差分法
+
+##### 8.3.2 非线性方程的精确差分法
+
+##### 8.3.3 含有线性和幂项的微分方程的精确有限差分法
+
+#### 8.4 其他非标准差分法
+
+## 第三部分 求解线性、非线性与动态优化问题
+
+### 9 求解优化问题：线性规划与二次规划
+
+- 9.1 线性规划问题的形式
+- 9.2 使用 `linprog` 求解线性规划问题
+- 9.3 使用 `fmincon` 求解线性规划问题
+  - MATLAB 函数
+- 9.4 使用 `pulp` Python 求解线性规划问题
+- 9.5 使用 `pyomo` 求解线性规划问题
+- 9.6 使用 `gekko` 求解线性规划问题
+- 9.7 求解二次优化问题
+
+### 10 求解优化问题：非线性规划
+
+- 10.1 求解无约束问题
+  - 10.1.1 线搜索算法
+  - 10.1.2 极速下降法
+  - 10.1.3 牛顿法
+  - 10.1.4 拟牛顿法 Fletcher-Goldfarb-Shanno
+    - 10.1.4.1 (BFGS) 方法
+    - 10.1.4.2 Davidon-Fletcher-Powell (DFP) 算法
+  - 10.1.5 使用 MATLAB 求解无约束问题
+  - 10.1.6 使用 Python 求解无约束问题
+  - 10.1.7 使用 Gepko 求解无约束问题
+- 10.2 使用某种方法求解约束优化问题
+  - 10.2.1 使用 MATLAB `fmincon` 求解约束优化问题
+  - 10.2.2 在 Python 中求解约束最小化问题
+  - 10.2.3 使用 Gepko 求解约束优化问题
+
+### 11 求解最优控制问题
+
+- 11.1 引言
+- 11.2 一阶最优条件与最优控制的存在
+- 11.3 离散化系统的必要条件
+- 11.4 最优控制的数值解
+- 11.5 使用间接法求解最优控制问题
+  - 11.5.1 使用间接转录数值求解
+- 11.6 使用直接法求解最优控制问题
+  - 11.6.1 问题表述
+  - 11.6.2 控制参数化技术
+    - 11.6.2.1 示例
+  - 11.6.3 Gekko Python 求解器
+
+# 参考文献
+
+# 索引
 
 # 前言
 
 过去的几十年见证了计算机软件巨大的发展，科学计算已成为解决来自科学工程各个领域问题的重要工具。如今，科学计算已成为科学工程领域研究和学习最重要的手段之一，对于任何和工程领域的任何研究人员、教师或学生来说都是不可或缺的。
 
 科学计算最重要的分支之一是数值分析，它处理寻找此类问题的近似解以及分析与这些近似方法相关的误差。MATLAB® 和 Python 编程语言提供了许多可以用于寻找并可视化科学问题解决方案的库。两种语言的易用性成为了大多数科学家在解决科学问题时最关心的语言特性。
-
-
-
 
 喀土穆，非洲数学科学学院的 Arieh Iserles 教授，位于开普敦西开普角大学的 Kailash Patidar 教授，以及在四年前去世的我伟大的导师 David Mackey 教授（剑桥大学和非洲数学科学学院）的精神。最后，我感谢我的家人在我撰写这本书期间给予的持续鼓励和耐心。
 
@@ -154,21 +143,11 @@ Fax: 508-647-7001
 E-mail: info@mathworks.com
 Web: www.mathworks.com
 
-![](img/9923905aaa045c7096d90695cee3e3bc_16_0.png)
-
 # 作者
 
 Eihab B. M. Bashier 于 2009 年在南非西开普角大学获得博士学位。他的长期工作在喀土穆大学数学科学与信息技术学院的应用数学系。目前，他是阿曼杜尔大学艺术与应用科学学院的应用数学副教授。他的研究兴趣主要在微分方程的数值方法（应用于生物学）以及侧重于密码学的信息与计算机安全。2011 年，Bashier 博士获得了非洲联盟和第三世界科学院（AU-TWAS）基础科学、技术与创新领域的青年科学家国家奖。Bashier 博士是一些国际期刊的审稿人，也是 IEEE 和 EMS 的成员。（邮箱：eihab-bashier@gmail.com, eihabbash@aims.ac.za）。
 
-![](img/9923905aaa045c7096d90695cee3e3bc_17_0.png)
-
-![](img/9923905aaa045c7096d90695cee3e3bc_18_0.png)
-
-# 第一部分
-
-## 线性与非线性方程组的求解
-
-![](img/9923905aaa045c7096d90695cee3e3bc_20_0.png)
+# 第一部分 线性与非线性方程组的求解
 
 ## 使用直接法求解线性组
 
@@ -190,16 +169,16 @@ $$A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dot
 
 这里，矩阵 $A \in \mathbb{R}^{m \times n}$ 的系数 $a_{ij}$ 假设为实数，$x \in \mathbb{R}^n$ 是未知数向量，$b \in \mathbb{R}^m$ 是已知向量。根据 $m$ 和 $n$ 的关系，定义了三种线性组：
 
-- 1. 超定组：方程个数多于未知数个数 (m > n)。
-- 2. 方程个数与未知数个数相等 (m = n)。
-- 3. 欠定组：未知数个数多于方程个数 (m < n)。
+- 超定组：方程个数多于未知数个数 (m > n)。
+- 方程个数与未知数个数相等 (m = n)。
+- 欠定组：未知数个数多于方程个数 (m < n)。
 
 设 $[A | b]$ 为线性组 $Ax = b$ 的增广矩阵。那么，给定线性组解的存在取决于以下情况：
 
-- 1. $rank(A) = rank(A)$：在这种情况下，至少有一个解，且有两种可能：
-    - (a) $rank(A) = rank(A) = n$：在这种情况下有唯一解。
-    - (b) $rank(A) = rank(A) < n$：在这种情况下有无限解。
-- 2. $rank(A) > rank(A)$：在这种情况下无解，我们可以寻找最小二法解。
+- $rank(A) = rank([A | b])$：在这种情况下，至少有一个解，且有两种可能：
+    - $rank(A) = rank([A | b]) = n$：在这种情况下有唯一解。
+    - $rank(A) = rank([A | b]) < n$：在这种情况下有无限解。
+- $rank(A) < rank([A | b])$：在这种情况下无解，我们可以寻找最小二乘解。
 
 如果线性组 $Ax = b$ 有解，则称为一致线性组；否则是不一致线性组。在 MATLAB 中，可以使用 `rank` 命令测试矩阵的秩。
 
@@ -220,7 +199,7 @@ r1 =     2
 r2 =     2
 ```
 
-在 python 中，函数 `matrix_rank`（位于 `numpy.linalg`）用于计算矩阵 $A$ 和增广组 $[A, b]$ 的秩。
+在 Python 中，函数 `matrix_rank`（位于 `numpy.linalg`）用于计算矩阵 $A$ 和增广组 $[A, b]$ 的秩。
 
 ```python
 import numpy as np
@@ -253,7 +232,7 @@ $$A = \begin{pmatrix} a_{11} & 0 & \dots & 0 \\ 0 & a_{22} & \dots & 0 \\ 0 & 0 
 
 这导致线性组：
 
-$$\begin{pmatrix} a_{11} & 0 & \dots & 0 \\ 0 & a_{22} & \dots & 0 \\ 0 & 0 & a_{33} & \dots \\ \vdots & \vdots & \dots & a_{nn} \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \\ \vdots \\ b_n \end{pmatrix} (1.2)$$
+$$\begin{pmatrix} a_{11} & 0 & \dots & 0 \\ 0 & a_{22} & \dots & 0 \\ 0 & 0 & a_{33} & \dots \\ \vdots & \vdots & \dots & a_{nn} \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ \vdots \\ x_n \end{pmatrix} = \begin{pmatrix} b_1 \\ b_2 \\ b_3 \\ \vdots \\ b_n \end{pmatrix} \tag{1.2}$$
 
 线性组 (1.2) 的解为：
 
@@ -275,15 +254,11 @@ function x = SolveDiagonalLinearSystem(A, b)
 
 我们可以应用此函数来求解对角组：
 
-![](img/9923905aaa045c7096d90695cee3e3bc_24_0.png)
-
-通过以下 MATLAB 命令：
-
 ```matlab
 >> A = diag([2, -1, 3])
 A =
-     0  0  0
-    0 -1  0
+     2  0  0
+     0 -1  0
      0  0  3
 >> b = [4; 1; 3]
 b =
@@ -297,16 +272,19 @@ x =
      1
 ```
 
-`SolveDiagonalLinearSystem` 函数的 python 代码如下：
+`SolveDiagonalLinearSystem` 函数的 Python 代码如下：
+
+
 
 ```python
 import numpy as np
+
 def SolveDiagonalLinearSystem(A, b):
-  n = len(b)
-  x = np.zeros((n, 1), 'float')
-  for i in range(n):
-    x[i] = b[i]/A[i, i]
-  return x
+    n = len(b)
+    x = np.zeros((n, 1), 'float')
+    for i in range(n):
+        x[i] = b[i] / A[i, i]
+    return x
 
 In [7]: A = np.diag([2, -1, 3])
 In [8]: b = np.array([4, -1, 3])
@@ -318,11 +296,7 @@ x =
  [ 1]]
 ```
 
-
-
-
-
-## 使用直接法求解线性方程组
+# 使用直接法求解线性方程组
 
 ```
 10 for k = j+1 : n
@@ -332,23 +306,23 @@ x =
 14 end
 ```
 
-SolveUpperSystem 的 Python 代码如下：
+`SolveUpperSystem` 的 Python 代码如下：
 
 ```python
 1 import numpy as np
 2 def SolveUpperSystem(A, b):
-3 n = len(b)
-4 x = np.zeros((n, 1), 'float')
-5 x[n-1] = b[n-1]/A[n-1, n-1]
-6 for i in range(n-2, -1, -1):
-7 x[i] = b[i]
-8 for j in range(i+1, n):
-9 x[i] -= A[i, j]*x[j]
-10 x[i] /= A[i, i]
-11 return x
+3     n = len(b)
+4     x = np.zeros((n, 1), 'float')
+5     x[n-1] = b[n-1] / A[n-1, n-1]
+6     for i in range(n-2, -1, -1):
+7         x[i] = b[i]
+8         for j in range(i+1, n):
+9             x[i] -= A[i, j] * x[j]
+10        x[i] /= A[i, i]
+11    return x
 ```
 
-# 3. A 是下三角系统；A 的形式为
+## 3. A 是下三角系统；A 的形式为
 
 在这种情况下，矩阵 A 为
 
@@ -358,7 +332,7 @@ SolveUpperSystem 的 Python 代码如下：
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_26_1.png)
 
-使用正向代入法找到方程组 1.4 的解。MATLAB 函数 SolveLowerSystem.m 使用正向代入法求解线性方程 1.4。
+使用正向代入法找到方程组 1.4 的解。MATLAB 函数 `SolveLowerSystem.m` 使用正向代入法求解线性方程 1.4。
 
 ```matlab
 1 function x = SolveLowerLinearSystem(A, b)
@@ -369,40 +343,40 @@ SolveUpperSystem 的 Python 代码如下：
 6 % b 是已知向量，n 是问题的维度。
 ```
 
-# 求解线性方程组的方法
+## 求解线性方程组的方法
 
 ```matlab
 5 n = length(b);
 6 x = zeros(n, 1);
-7 x(1) = b(1)/A(1, 1);
+7 x(1) = b(1) / A(1, 1);
 8 for j = 2: n
-9 x(j) = b(j);
-10 for k = 1: j-1
-11 x(j) = x(j) - A(j, k)*x(k);
-12 end
-13 x(j) = x(j)/A(j, j);
+9     x(j) = b(j);
+10    for k = 1: j-1
+11        x(j) = x(j) - A(j, k) * x(k);
+12    end
+13    x(j) = x(j) / A(j, j);
 14 end
 ```
 
-函数 SolveLowerSystem 的 Python 代码如下。
+函数 `SolveLowerSystem` 的 Python 代码如下。
 
 ```python
 1 def SolveLowerSystem(A, b):
-2 import numpy as np
-3 n = len(b)
-4 x = np.zeros((n, 1), 'float')
-5 x[0] = b[0]/A[0, 0]
-6 for i in range(1, n):
-7 x[i] = b[i]
-8 for j in range(i):
-9 x[i] -= A[i, j]*x[j]
-10 x[i] /= A[i, i]
-11 return
+2     import numpy as np
+3     n = len(b)
+4     x = np.zeros((n, 1), 'float')
+5     x[0] = b[0] / A[0, 0]
+6     for i in range(1, n):
+7         x[i] = b[i]
+8         for j in range(i):
+9             x[i] -= A[i, j] * x[j]
+10        x[i] /= A[i, i]
+11    return
 ```
 
 ### 1.2.2 高斯消元与高斯-乔登消元
 
-高斯消元和高斯-乔登消元法是相关的。如果给出一个矩阵 $A \in R^{n \times n}$，那么高斯和高斯-乔登都会通过对矩阵 $A$ 的连续步骤执行初元操作。高斯法在获得矩阵 $A$ 的行阶梯形后停止（如果 $A$ 非奇异，其行阶梯形为上三角矩阵），而高斯-乔登法持续持续直到达到最简行阶梯形（如果 $A$ 非奇异，其最简行阶梯形为单位矩阵）。为了说明行阶梯形和最简行阶梯形之间的区别，对矩阵计算了这两种形式：
+高斯消元和高斯-乔登消元法是相关的。如果给出一个矩阵 $A \in R^{n \times n}$，那么高斯和高斯-乔登都会通过对矩阵 $A$ 的连续步骤执行初等操作。高斯法在获得矩阵 $A$ 的行阶梯形后停止（如果 $A$ 非奇异，其行阶梯形为上三角矩阵），而高斯-乔登法持续直到达到最简行阶梯形（如果 $A$ 非奇异，其最简行阶梯形为单位矩阵）。为了说明行阶梯形和最简行阶梯形之间的区别，对矩阵计算了这两种形式：
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_27_0.png)
 
@@ -417,13 +391,14 @@ SolveUpperSystem 的 Python 代码如下：
 ![](img/9923905aaa045c7096d90695cee3e3bc_28_0.png)
 
 是矩阵 $A$ 的行阶梯形。
+
 高斯-乔登消元继续获取主元，以获得最简行阶梯形。
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_28_1.png)
 
 ### 1.2.3 使用 rref 函数求解方程
 
-高斯法和高斯-乔登法是求解线性方程组的两种常用方法。它们都从增广矩阵开始，分别获得行阶梯形或最简行阶梯形。高斯法使用回代技术获得方程解，而在高斯-乔登法中，解位于最后一列。下面的 MATLAB 代码从用户处读取矩阵 $A$ 和向量 $b$，然后通过对增广系统 $[A \ b]$ 应用 rref 来应用高斯-Seidel 消元
+高斯法和高斯-乔登法是求解线性方程组的两种常用方法。它们都从增广矩阵开始，分别获得行阶梯形或最简行阶梯形。高斯法使用回代技术获得方程解，而在高斯-乔登法中，解位于最后一列。下面的 MATLAB 代码从用户处读取矩阵 $A$ 和向量 $b$，然后通过对增广系统 $[A \ b]$ 应用 rref 来应用高斯-乔登消元
 
 ```matlab
 1 clear; clc;
@@ -450,10 +425,11 @@ SolveUpperSystem 的 Python 代码如下：
 
 执行上述脚本的结果：
 
+```text
 Enter the matrix A: [12 3 4 5 6 7 8 9]
 Enter the vector b: [1;3;5]
 Rank(A) = Rank([A b]) = 2 < 3.
-Infinite solutions。（等等，重新检查逻辑）
+Infinite solutions.（等等，重新检查逻辑）
 
 Enter the matrix A: [1 3 5 2 4 6 7 8 9]
 Enter the vector b: [1;1;1]
@@ -467,6 +443,7 @@ A unique solution, given by:
 0.6667
 1.0000
 1.3333
+```
 
 在 Python 中，内置的 `sympy.Matrix` 用于构造矩阵。`Matrix` 类有一个 `rref` 方法计算矩阵的最简行阶梯形。
 
@@ -499,17 +476,20 @@ else: # rank(A) = rank([A b]) < n
 ```
 
 通过执行代码，显示如下结果：
+
+```text
 Rank(A) = Rank([A b]) = 3 = Col(A).
 A unique solution, given by:
 Matrix([[2/3], [1], [4/3]])
+```
 
-### 1.3 矩阵分解
+## 1.3 矩阵分解
 
 矩阵分解意味着将矩阵 A 表示为两个或多个矩阵的乘积，每个称为一个因子。即：
 
 $A = L \cdot U$
 
-在这一节中，将 LU 分解、QR 分解和奇异值分解 (SVD)。然后将讨论这些方法的使用。由于会遇到用上下三角矩阵求解方程组的情况，本节将从编写求解此类系统的 MATLAB 代码开始
+在这一节中，将介绍 LU 分解、QR 分解和奇异值分解 (SVD)。然后将讨论这些方法的使用。由于会遇到用上下三角矩阵求解方程组的情况，本节将从编写求解此类系统的 MATLAB 代码开始。
 
 ### 1.3.1 LU 分解
 
@@ -535,11 +515,9 @@ U =
 0 0 3.3333
 ```
 
-
-
-
 ## 使用直接法求解线性方程组
 
+```text
 In [5]: LU = lg.lu_factor(A)
 In [6]: print('LU = \n', LU)
 LU =
@@ -547,6 +525,7 @@ LU =
 [-0.25 , 3.75 , -1.25 ],
 [-0.25 , -0.33333333, 3.33333333]]), array([0, 1, 2],
 type=int32)))
+```
 
 现在，方程 1.6 变为：
 
@@ -556,7 +535,7 @@ $$\begin{pmatrix} 1 & 0 & 0 & & u_{11} & u_{12} & u_{13} & & u_{1n} \\ l_{21} & 
 
 方程 1.6 的解分三个阶段找到：
 
-- 1. **第一步**：我们令 $y=Ux$，即：
+1.  **第一步**：我们令 $y=Ux$，即：
 
 ```
 $$\y = \begin{pmatrix} u_{11} & u_{12} & u_{13} & & u_{1n} \\ 0 & u_{22} & u_{23} & & u_{2n} \\ 0 & 0 & u_{33} & & u_{3n} \\ \vdots & \vdots & \vdots & & \vdots \\ 0 & 0 & 0 & & u_{nn} \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \\ \vdots \\ y_n \end{pmatrix}$$
@@ -568,9 +547,9 @@ $$\y = \begin{pmatrix} u_{11} & u_{12} & u_{13} & & u_{1n} \\ 0 & u_{22} & u_{23
 $$Ly=b$$
 ```
 
-- 2. **第二步**：我们使用 `SolveLowerSystem.m` 函数求解方程 $Ly=b$ 以找到 $y$。
+2.  **第二步**：我们使用 `SolveLowerSystem.m` 函数求解方程 $Ly=b$ 以找到 $y$。
 
-- 3. **最后**：我们使用 MATLAB 函数 `SolveUpperSystem` 实现的回代法求解线性方程组 $Ux=y$。
+3.  **最后**：我们使用 MATLAB 函数 `SolveUpperSystem` 实现的回代法求解线性方程组 $Ux=y$。
 
 **示例 1.1** 在此例中，将使用 LU 因子求解线性方程组：
 
@@ -643,10 +622,10 @@ In [12]: LU = A.LU_decomposition()
 
 ### 1.3.2 QR 分解
 
-从初线性代数来看，矩阵 A 表示为两个矩阵 $Q$ 和 $R$ 的乘积。矩阵 $Q$ 是正交矩阵，矩阵 $R$ 是上三角，满足以下条件：
+从初等线性代数来看，矩阵 A 表示为两个矩阵 $Q$ 和 $R$ 的乘积。矩阵 $Q$ 是正交矩阵，矩阵 $R$ 是上三角，满足以下条件：
 
-- 1. $Q^{-1} = Q^T$，
-- 2. 如果 $Q = [q_1, q_2, \dots, q_n]，则 $(q_i, q_j) = \begin{cases} 1 & i=j \\ 0 & i \neq j \end{cases}$
+1.  $Q^{-1} = Q^T$，
+2.  如果 $Q = [q_1, q_2, \dots, q_n]$，则 $(q_i, q_j) = \begin{cases} 1 & i=j \\ 0 & i \neq j \end{cases}$
 
 在 MATLAB 中，可以使用 `qr` 函数寻找矩阵 A 的 QR 因子。命令如下：
 
@@ -654,6 +633,8 @@ In [12]: LU = A.LU_decomposition()
 >> A = [4 -1 -1; -1 4 -1; -1 -1 4];
 >> [Q, R] = qr(A)
 ```
+
+
 
 ```matlab
 Q =
@@ -704,9 +685,12 @@ In [20]: QR = A.qr_decomposition()
 ```
 $Q^T Rx = Q^T b
 ```
+
 - 使用 `UpperLinearSystem.m` 函数实现的回代法求解上三角方程 $Rx = y$，其中 $y = Q^T b$。
 
-**示例 1.2** 在此处，将使用 QR 因子求解方程：
+### 示例 1.2
+
+在此处，将使用 QR 因子求解方程：
 
 ![](img/992305aaa045c7096d9065cee3bc_36_0.png)
 
@@ -736,6 +720,7 @@ In [27]: Q, R = lg.qr(A)
 In [28]: y = np.matmul(Q.T, b)
 In [29]: x = lg.solve(R, y)
 In [30]: print('x \n', x)
+```
 
 ```python
 [[ 1.0]
@@ -747,7 +732,7 @@ In [30]: print('x \n', x)
 
 ```python
 In [31]: import sympy as smp
-In [32]: A = smp.Matrix([[4.0, -1.0, -1.0], [-1.0, 4.0, -1.0], [-1.0, -1.0, 4.0]]])
+In [32]: A = smp.Matrix([[4.0, -1.0, -1.0], [-1.0, 4.0, -1.0], [-1.0, -1.0, 4.0]])
 In [33]: b = smp.Matrix([[2.0], [2.0], [2.0]])
 In [34]: x = A.QRsolve(b)
 In [35]: x
@@ -769,22 +754,18 @@ Matrix([
 
 如果 $\{u_1, u_n\}$ 是 $U$ 的列，$\{v_1, v_2, \dots, v_n\}$ 是 $V$ 的列，那么它们满足以下条件：
 
-- 1. $U^{-1} = U^*$ 且 $V^{-1} = V^*$。如果 $U$ 和 $V$ 为实数矩阵，则 $U^{-1} = U^T$ 且 $V^{-1} = V^T$。
+1. $U^{-1} = U^*$ 且 $V^{-1} = V^*$。如果 $U$ 和 $V$ 为实数矩阵，则 $U^{-1} = U^T$ 且 $V^{-1} = V^T$。
 2. $U$ 和 $V$ 的列是正交规范化的：
 
 ```
 $(u_i, u_j) = u_i^* \cdot u_j = \begin{cases} 1 & i=j \\ 0 & i \neq j \end{cases}$
 ```
 
-
-
-
-
 ## 使用直接法求解线性方程组
 
 在 MATLAB 中，命令 `svd` 用于寻找矩阵 A 的 SVD 分量。
 
-```
+```matlab
 >> A = [4 -1 -1; -1 4 -1; -1 -1 4];
 >> [U, S, V] = svd(A)
 U =
@@ -803,8 +784,10 @@ V =
 
 在 Python 中，函数 `svd` 用于寻找矩阵 A 的 SVD 分解。
 
+```python
 In [36]: U, S, V = lg.svd(A)
 In [37]: print('U = \n', U, '\nS = \n', S, '\nnV = \n', V)
+```
 
 ```
 U =
@@ -831,11 +814,13 @@ $US^Tx = b,$
 $x = V \cdot S^{-1}U^T,$
 ```
 
-**示例 1.3** 使用 svd 求解线性方程组：
+### 示例 1.3
+
+使用 svd 求解线性方程组：
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_38_0.png)
 
-```
+```matlab
 >> x = V*inv(S)*U'*b
 x = =
 1.0000
@@ -845,7 +830,7 @@ x = =
 
 在 Python 中，使用 svd 分量求解线性方程组的方法：
 
-```
+```python
 In [38]: x = lg.solve(V, lg.solve(np.diag(S), lg.solve(U,b)))
 In [39]: print('x = \n', x)
 x =
@@ -868,7 +853,7 @@ x =
 
 ### 2.1.1 收敛序列与柯西
 
-设 $a$ 为 $R$ 中的任意点，$\varepsilon \in R^+$ 为任意正实数，$a$ 的 $\varepsilon$ 邻（记作 $N(a,\varepsilon)$）是位于区间 $(a-\varepsilon, a+\varepsilon)$ 内的所有 $x \in R$ 的集合。即 $N(a,\varepsilon) = \{x \in R : |x-a| < \varepsilon\}$ [46]。实数序列 $\{a_n\}_{n=0}^\infty = a_0, a_1, \dots$ 若对于任意 $\varepsilon > 0，$N(a,\varepsilon)$ 都包含一个子序列 $\{a_n\}_{n=N}^\infty = a_N, a_{N+1}, \dots$，则称该序列收敛于 $a$为了用数学方式表示序列 $\{a_n\}_{n=0}^\infty$ 的收敛，我们写道：
+设 $a$ 为 $R$ 中的任意点，$\varepsilon \in R^+$ 为任意正实数，$a$ 的 $\varepsilon$ 邻（记作 $N(a,\varepsilon)$）是位于区间 $(a-\varepsilon, a+\varepsilon)$ 内的所有 $x \in R$ 的集合。即 $N(a,\varepsilon) = \{x \in R : |x-a| < \varepsilon\}$ [46]。实数序列 $\{a_n\}_{n=0}^\infty = a_0, a_1, \dots$ 若对于任意 $\varepsilon > 0$，$N(a,\varepsilon)$ 都包含一个子序列 $\{a_n\}_{n=N}^\infty = a_N, a_{N+1}, \dots$，则称该序列收敛于 $a$。为了用数学方式表示序列 $\{a_n\}_{n=0}^\infty$ 的收敛，我们写道：
 
 $|a_n - a| < \varepsilon, \forall n \ge N$
 
@@ -880,28 +865,30 @@ $|a_n - a| < \varepsilon, \forall n \ge N$，
 
 例如，在序列 $\{a_n - a_{n+1}\}$ 中，对应的序列
 
-|a_0 - a_1| \ge |a_1 - a_2| \ge \dots \ge |a_n - a_{n+1}| \ge \dots \to 0$ ($n \to \infty$)。
+$|a_0 - a_1| \ge |a_1 - a_2| \ge \dots \ge |a_n - a_{n+1}| \ge \dots \to 0$ ($n \to \infty$)。
 
 **定义 2.2** 序列 $\{a_n\}$ 为柯西序列，如果对于任意 $\varepsilon > 0$，存在 $N \in \mathbb{N}$，使得
 
 $|a_n - a_m| < \varepsilon,$ 对于所有 $n, m \ge N$。由于 $\mathbb{R}$ 是完备的，任何收敛序列都是柯西序列，反之亦然。
 
-### 2.1.2 向量范
+### 2.1.2 向量范数
 
-如果 $\boldsymbol{x}$ 是一个分量为 $x_1, x_2, \dots, x_n$ 的向量，则它的 $p$ 范定义为：
+如果 $\boldsymbol{x}$ 是一个分量为 $x_1, x_2, \dots, x_n$ 的向量，则它的 $p$ 范数定义为：
 
 $\|\boldsymbol{x}\|_p = \left(\sum_{j=1}^{n} |x_j|^p\right)^{\frac{1}{p}} = (|x_1|^p + |x_2|^p + \dots + |x_n|^p)^{\frac{1}{p}}$
 
-它满足 $|\boldsymbol{x}\|_1 \ge |\boldsymbol{x}\|_2 \ge \dots \ge |\boldsymbol{x}\|_{\infty}$。范 $\|\boldsymbol{x}\|_2$ 给出了经典的欧几距离：
+它满足 $\|\boldsymbol{x}\|_1 \ge \|\boldsymbol{x}\|_2 \ge \dots \ge \|\boldsymbol{x}\|_{\infty}$。范数 $\|\boldsymbol{x}\|_2$ 给出了经典的欧几里得距离：
 
 $\|\boldsymbol{x}\|_2 = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2}$
 
-Python 函数 `norm`（位于 numpy.linalg 中）接收向量 $\boldsymbol{x}$ 和整数 $p$ 或 `np.inf`，并返回 $\|\boldsymbol{x}\|_p$。
+Python 函数 `norm`（位于 `numpy.linalg` 中）接收向量 $\boldsymbol{x}$ 和整数 $p$ 或 `np.inf`，并返回 $\|\boldsymbol{x}\|_p$。
 
-- In [27]: x = np.array([-1, -1, 2, -2, 3, -3])
-- In [28]: from numpy.linalg import norm
-- In [29]: n1, n2, n3 = norm(x, 1), norm(x, 2), norm(x, np.inf)
-- In [30]: print(n1, n2, n3)
+```python
+In [27]: x = np.array([-1, -1, 2, -2, 3, -3])
+In [28]: from numpy.linalg import norm
+In [29]: n1, n2, n3 = norm(x, 1), norm(x, 2), norm(x, np.inf)
+In [30]: print(n1, n2, n3)
+```
 
 ### 2.1.3 向量收敛序列
 
@@ -915,7 +902,7 @@ $\|a_n - a\| < \varepsilon, \forall n \ge N$。
 
 $\|a_n - a_m\| < \varepsilon,$ 对于所有 $n, m \ge N$。
 
-### 2.2 迭代法
+## 2.2 迭代法
 
 求解方程的迭代法是从给定的估计值 $x^{(0)}$ 开始，生成序列 $x^{(1)}, x^{(2)}, \dots$，该序列收敛于线性方程组的解 $x^*$。序列的生成在某次迭代 $s$ 停止，满足：
 
@@ -941,11 +928,7 @@ $\lim_{n \to \infty} x_n = x^*$
 
 其中 $B = -S^{-1}T$ 且 $c = S^{-1}b$。
 
-
-
-
-
-# 迭代法
+### 迭代法
 
 上述线性方程组的解是一个固定点 $x^*$，其中
 
@@ -977,107 +960,171 @@ $U = \begin{pmatrix} 0 & a_{1,2} & a_{1,3} & \dots & a_{1,n-1} & a_{1,n} \\ 0 & 
 
 在 MATLAB 中，可以使用以下命令获取矩阵 $L$、$D$ 和 $U$：
 
-```
+```matlab
 >> D = diag(diag(A));
+```
+
+
+
+# 使用迭代法和最小二乘法求解线性方程组
+
+```matlab
 >> L = tril(A) - D;
 >> U = triu(A) - D;
 ```
 
 在 Python 中，`tril` 和 `triu` 在 `scipy.linalg` 包中实现，而 `diag` 在 `scipy` 和 `numpy` 中都有实现。可以通过以下命令获取它们：
 
-# 使用迭代法和最小二乘法求解线性组
+```python
+import scipy as sp, numpy as np
+A = np.array([[4, 1, -1], [-1, 5, 0], [0, -1, 4]])
+print('L = \n', sp.linalg.tril(A), '\nU = \n', sp.linalg.triu(A), '\nD = \n', np.diag(A))
+```
 
-In [1]: import scipy as sp, numpy as np
-In [2]: A = np.array([[4, 1, -1], [-1, 5, 0], [0, -1, 4]])
-In [3]: print('L = \n', sp.linalg.tril(A), '\nU = \n', sp.linalg.triu(A), '\nD = \n', np.diag(A))
-
-# Jacobi 方法
+## Jacobi 方法
 
 给定线性方程组：
 
-$$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1$$
-$$a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$$
-$$\vdots$$
-... \quad (2.1)$$
+$$
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1
+$$
+$$
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2
+$$
+$$
+\vdots
+$$
+$$
+\dots \quad (2.1)
+$$
 
 从上述方程得出：
 
-$$x_1 = \frac{1}{a_{11}}(b_1 - a_{12}x_2 - \dots - a_{1n}x_n)$$
-$$x_2 = \frac{1}{a_{22}}(b_2 - a_{21}x_1 - \dots - a_{2n}x_n)$$
-$$\vdots$$
-$$x_i = \frac{1}{a_{ii}}(b_i - \sum_{j=1, j \neq i}^n a_{ij}x_j) \quad (2.2)$$
-$$\vdots$$
-$$x_n = \frac{1}{a_{nn}}(b_n - a_{n1}x_1 - \dots - a_{n-1}x_{n-1})$$
+$$
+x_1 = \frac{1}{a_{11}}(b_1 - a_{12}x_2 - \dots - a_{1n}x_n)
+$$
+$$
+x_2 = \frac{1}{a_{22}}(b_2 - a_{21}x_1 - \dots - a_{2n}x_n)
+$$
+$$
+\vdots
+$$
+$$
+x_i = \frac{1}{a_{ii}}(b_i - \sum_{j=1, j \neq i}^n a_{ij}x_j) \quad (2.2)
+$$
+$$
+\vdots
+$$
+$$
+x_n = \frac{1}{a_{nn}}(b_n - a_{n1}x_1 - \dots - a_{n-1}x_{n-1})
+$$
 
 Jacobi 方法是一种迭代法，从解的初始猜测值 $[x_1^{(0)}, x_2^{(0)}, \dots, x_n^{(0)}]^T$ 开始。迭代 $k+1$ 次用于寻找近似的方法如下：
 
-$$x_1^{(k+1)} = \frac{1}{a_{11}}(b_1 - a_{12}x_2^{(k)} - \dots - a_{1n}x_n^{(k)})$$
-$$x_2^{(k+1)} = \frac{1}{a_{22}}(b_2 - a_{21}x_1^{(k)} - \dots - a_{2n}x_n^{(k)})$$
-$$\vdots$$
-$$x_i^{(k+1)} = \frac{1}{a_{ii}}(b_i - \sum_{j=1, j \neq i}^n a_{ij}x_j^{(k)}) \quad (2.3)$$
-$$\vdots$$
-$$x_n^{(k+1)} = \frac{1}{a_{nn}}(b_n - a_{n1}x_1^{(k)} - \dots - a_{n-1}x_{n-1}^{(k)})$$
+$$
+x_1^{(k+1)} = \frac{1}{a_{11}}(b_1 - a_{12}x_2^{(k)} - \dots - a_{1n}x_n^{(k)})
+$$
+$$
+x_2^{(k+1)} = \frac{1}{a_{22}}(b_2 - a_{21}x_1^{(k)} - \dots - a_{2n}x_n^{(k)})
+$$
+$$
+\vdots
+$$
+$$
+x_i^{(k+1)} = \frac{1}{a_{ii}}(b_i - \sum_{j=1, j \neq i}^n a_{ij}x_j^{(k)}) \quad (2.3)
+$$
+$$
+\vdots
+$$
+$$
+x_n^{(k+1)} = \frac{1}{a_{nn}}(b_n - a_{n1}x_1^{(k)} - \dots - a_{n-1}x_{n-1}^{(k)})
+$$
 
 一般来说，迭代 $x_i^{(k+1)}$ 可以写成形式：
 
 当 $||x_i^{(k+1)} - x_i^{(k)}|| < \varepsilon$（对于某个 $\varepsilon > 0$）时，Jacobi 方法停止。
 
-**Example 2.1** 为线性方程组写 Jacobi 方法的前几次迭代：
+### Example 2.1 为线性方程组写 Jacobi 方法的前几次迭代
 
-$$\begin{pmatrix} 2 & -1 & 1 \\ -2 & 5 & -1 \\ 1 & -2 & 4 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix}$$
+$$
+\begin{pmatrix} 2 & -1 & 1 \\ -2 & 5 & -1 \\ 1 & -2 & 4 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix}
+$$
 
 从零向量 $x^{(0)} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}$ 开始。
 
 **解：**
 
-第一次迭代 $k=0$：
+**第一次迭代 $k=0$：**
 
-$$x_1^{(1)} = \frac{1}{2}(-1+x_2^{(0)} - x_3^{(0)}) = \frac{1}{2}(-1+0-0) = -\frac{1}{2}$$
-$$x_2^{(1)} = \frac{1}{5}(1+2x_1^{(0)} + x_3^{(0)}) = \frac{1}{5}(1+2(0)+0) = \frac{1}{5}$$
-$$x_3^{(1)} = \frac{1}{4}(3-x_1^{(0)} + 2x_2^{(0)}) = \frac{1}{4}(3-0+0) = \frac{3}{4}$$
+$$
+x_1^{(1)} = \frac{1}{2}(-1+x_2^{(0)} - x_3^{(0)}) = \frac{1}{2}(-1+0-0) = -\frac{1}{2}
+$$
+$$
+x_2^{(1)} = \frac{1}{5}(1+2x_1^{(0)} + x_3^{(0)}) = \frac{1}{5}(1+2(0)+0) = \frac{1}{5}
+$$
+$$
+x_3^{(1)} = \frac{1}{4}(3-x_1^{(0)} + 2x_2^{(0)}) = \frac{1}{4}(3-0+0) = \frac{3}{4}
+$$
 
-第二次迭代 $k=1$：
+**第二次迭代 $k=1$：**
 
-$$x_1^{(2)} = \frac{1}{2}(-1+x_2^{(1)}-x_3^{(1)}) = \frac{1}{2}(-1+\frac{1}{5}-\frac{3}{4}) = -\frac{31}{40}$$
-$$x_2^{(2)} = \frac{1}{5}(1+2x_1^{(1)}+x_3^{(1)}) = \frac{1}{5}(1+2(-\frac{1}{2})+\frac{3}{4}) = \frac{3}{20}$$
-$$x_3^{(2)} = \frac{1}{4}(3-x_1^{(1)}+2x_2^{(1)}) = \frac{1}{4}(3-(-\frac{1}{2})+2(\frac{1}{5})) = \frac{39}{40}$$
+$$
+x_1^{(2)} = \frac{1}{2}(-1+x_2^{(1)}-x_3^{(1)}) = \frac{1}{2}(-1+\frac{1}{5}-\frac{3}{4}) = -\frac{31}{40}
+$$
+$$
+x_2^{(2)} = \frac{1}{5}(1+2x_1^{(1)}+x_3^{(1)}) = \frac{1}{5}(1+2(-\frac{1}{2})+\frac{3}{4}) = \frac{3}{20}
+$$
+$$
+x_3^{(2)} = \frac{1}{4}(3-x_1^{(1)}+2x_2^{(1)}) = \frac{1}{4}(3-(-\frac{1}{2})+2(\frac{1}{5})) = \frac{39}{40}
+$$
 
-第三次迭代 $k=2$：
+**第三次迭代 $k=2$：**
 
-$$x_1^{(3)} = \frac{1}{2}(-1+x_2^{(2)}-x_3^{(2)}) = \frac{1}{2}(-1+\frac{3}{20}-\frac{39}{40}) = -\frac{65}{80}$$
-$$x_2^{(3)} = \frac{1}{5}(1+2x_1^{(2)}+x_3^{(2)}) = \frac{1}{5}(1+2(-\frac{31}{40})+\frac{39}{40}) = -\frac{23}{200}$$
-$$x_3^{(3)} = \frac{1}{4}(3-x_1^{(2)}+2x_2^{(2)}) = \frac{1}{4}(3-(-\frac{31}{40})+2(\frac{3}{20})) = \frac{163}{160}$$
+$$
+x_1^{(3)} = \frac{1}{2}(-1+x_2^{(2)}-x_3^{(2)}) = \frac{1}{2}(-1+\frac{3}{20}-\frac{39}{40}) = -\frac{65}{80}
+$$
+$$
+x_2^{(3)} = \frac{1}{5}(1+2x_1^{(2)}+x_3^{(2)}) = \frac{1}{5}(1+2(-\frac{31}{40})+\frac{39}{40}) = -\frac{23}{200}
+$$
+$$
+x_3^{(3)} = \frac{1}{4}(3-x_1^{(2)}+2x_2^{(2)}) = \frac{1}{4}(3-(-\frac{31}{40})+2(\frac{3}{20})) = \frac{163}{160}
+$$
 
+## 迭代法
 
-
-
-
-# 迭代法
-
-## 2.2.3.1 高斯-Seidel  迭代法
+### 2.2.3.1 高斯-Seidel 迭代法
 
 高斯-Seidel 方法与 Jacobi 方法非常相似，但它的优势在于在迭代 $k+1$ 中利用最近更新的变量 $x_1^{(k+1)}, ..., x_{i-1}^{(k+1)}$ 来更新 $x_i^{(k+1)}$，而其他变量 $x_i^{(k+1)}, ..., x_n^{(k)}$ 则取自上一次迭代 $k$。高斯-Seidel 方法的形式如下：
 
-```
+```matlab
 $a_{11}x_1^{(k+1)} = b_1 - a_{12}x_2^{(k)} - ... - a_{n1}x_n^{(k)}$
+
 $a_{21}x_1^{(k+1)} + a_{22}x_2^{(k+1)} = b_2 - a_{23}x_3^{(k)} - ... - a_{n2}x_n^{(k)}$
+
 $:
+
 $a_{ai}x_i^{(k+1)} + ... + a_{in}x_n^{(k+1)} = b_i - a_{ai,i+1}x_{i+1}^{(k)} - ... - a_{in}x_n^{(k)} \quad (2.5)$
+
 $:
+
 $a_{n1}x_1^{(k+1)} + ... + a_{nn}x_n^{(k+1)} = b_n$
 ```
 
-根据方程 (2.5)
+根据方程 (2.5)：
 
-
-
-```
+```matlab
 $x_1^{(k+1)} = \frac{1}{a_{11}}(b_1 - a_{12}x_2^{(k)} - ... - a_{n1}x_n^{(k)})$
+
 $x_2^{(k+1)} = \frac{1}{a_{22}}(b_2 - a_{21}x_1^{(k+1)} - a_{23}x_3^{(k)} - ... - a_{n2}x_n^{(k)})$
+
 $:
+
 $x_i^{(k+1)} = \frac{1}{a_{ii}}(b_i - a_{ai1}x_1^{(k+1)} - ... - a_{ii,i-1}x_{i-1}^{(k)} - a_{ii,i+1}x_{i+1}^{(k)}) \quad (2.6)$
+
 $... - a_{in}x_n^{(k)}$
+
 $:
+
 $x_n^{(k+1)} = \frac{1}{a_{nn}}(b_n - a_{n1}x_1^{(k+1)} - ... - a_{nn,n-1}x_{n-1}^{(k+1)})$
 ```
 
@@ -1085,37 +1132,61 @@ $x_n^{(k+1)} = \frac{1}{a_{nn}}(b_n - a_{n1}x_1^{(k+1)} - ... - a_{nn,n-1}x_{n-1
 
 ```matlab
 function [x, Iters] = GaussSeidel(A, b, Eps, x0)
+
   Iters = 1 ;
+
   x = zeros(size(x0)) ; n = length(b) ;
+
   for i = 1 : n
+
     x(i) = b(i);
+
     for j = 1 : i-1
+
       x(i) = x(i)-A(i,j)*x(j);
+
     end
+
 end
 ```
 
-# 使用迭代法和最小二乘法求解线性方程组
-
 ```matlab
 10 xl(i) = xl(i) - A(i, j)+x0(j);
+
 11 end
+
 12 xl(i) = xl(i)/A(i, i);
+
 13 end
+
 14 while norm(xl-x0, inf) >= Eps
+
 15 x0 = xl;
+
 16 for i = 1 : n
+
 17 xl(i) = b(i);
+
 18 for j = 1 : i-1
+
 19 xl(i) = xl(i)-A(i, j)+xl(j);
+
 20 end
+
 21 for j = i+1 : n
+
 22 xl(i) = xl(i) - A(i, j)+x0(j);
+
 23 end
+
 24 xl(i) = xl(i)/A(i, i);
+
 25 end
+
 26 Iters = Iters + 1;
+
 27 end
+
 28 x = xl;
 ```
 
@@ -1125,57 +1196,85 @@ end
 >> Eps = 1e-8; x0 = [0;0;0];
 >> A = [2 -1 -1; -2 5 -1; 1 -2 4]; b = [-1;1;3];
 >> [x, Iters] = GaussSeidel(A, b, x0)
+
 x = [-1.0000; 0; 1.0000]
+
 Iters = 11
 ```
 
 ```matlab
 >> A = [-5 1 -2; 1 6 3; 2 -1 -4]; b = [13; 1; -1];
 >> [x, Iters] = GaussSeidel(A, b, x0)
+
 x = [-2.0000; 1.0000; -1.0000]
 ```
 
-函数 GaussSeidel 的 Python 代码如下：
+函数 `GaussSeidel` 的 Python 代码如下：
 
 ```python
 import numpy as np
+
 def GaussSeidel(A, b, Eps, x0):
+
     n = len(b)
+
     x = np.ones((n, 1), dtype=float)
+
     Iterations = 1
+
     while np.linalg.norm(x-x0, inf) >= Eps:
+
         x0 = x.copy()
+
         for i in range(n):
+
             x[i] = b[i]
+
             for j in range(i):
+
                 x[i] -= A[i][j]+x[j]
+
             for j in range(i+1, n):
+
                 x[i] -= A[i][j]+x0[j]
+
             x[i] /= A[i][i]
+
         Iterations += 1
+
     return x, Iterations
 ```
 
 执行该代码得到：
 （结果与上述相似）
 
-### 2.2.4 向量形式的高斯-Seidel 方法
+#### 2.2.4 向量形式的高斯-Seidel 方法
 
-高斯-Seidel 方法选择 $S = L+D$ 和 $T = U$。Jacobi 方法的形式为：$x^{(n+1)} = Bx^{(n)} + c,$，其中 $B = -(L+D)^{-1}U，$c = (L+D)^{-1}b$。
+高斯-Seidel 方法选择 $S = L+D$ 和 $T = U$。Jacobi 方法的形式为：$x^{(n+1)} = Bx^{(n)} + c,$，其中 $B = -(L+D)^{-1}U$，$c = (L+D)^{-1}b$。
 
 MATLAB 代码以矩阵格式实现高斯-Seidel 方法：
 
 ```matlab
 function [x, Iters] = GaussSeidelIter(A, b, Eps, x0)
+
 LD = tril(A); U = A - LD;
+
 B = -LD; c = LD; % 此处 OCR 可能有误
+
 Iters = 1;
+
 x1 = B*x0 + c;
+
 while norm(x1-x0, inf) >= Eps
+
     x0 = x1;
+
     x1 = B*x0 + c;
+
     Iters = Iters + 1;
+
 end
+
 x = x1;
 ```
 
@@ -1185,10 +1284,11 @@ x = x1;
 >> Eps = 1e-8; x0 = [0;0;0];
 >> A = [2 -1 -1; -2 5 -1; 1 -2 4];
 >> [x, Iters] = GaussSeidelIter(A, b, Eps, x0)
+
 x = [-1.0000; 0; 1.0000]
 ```
 
-### 2.2.5 松弛法
+#### 2.2.5 松弛法
 
 松弛法是一种基于高斯-Seidel 迭代求解线性方程组的迭代法，涉及参数 $0 \le \omega \le 2$，旨在加速迭代法向线性方程组解的收敛速度。
 
@@ -1202,18 +1302,27 @@ $x^{(k+1)} = (D+\omega L)^{-1}((\omega U + \omega D)x^{(k)} + \omega b)$
 当 $\omega < 1$ 时，该迭代法为欠松弛；当 $\omega = 1$ 时，该方法与高斯-Seidel 方法相同；当 $\omega > 1$ 时，为过松弛。在最后一种情况下 ($\omega$)，得到方法称为连续松弛法，缩写为 SOR。
 
 通过编写 $S_\omega = D-\omega L$，$T_\omega = \omega U+\omega D$，$B_\omega = S_\omega^{-1}T_\omega$ 和 $c_\omega = S_\omega^{-1}b$，SOR 迭代法为：
-MATLAB 函数 SOR 接收矩阵 $A$、向量 $b$、初始起始向量 $x0$、实值 $\omega$ 和容差 $\varepsilon$，并在给定的容差内返回方程 $Ax=b$ 的近似解以及迭代次数。
+MATLAB 函数 `SOR` 接收矩阵 $A$、向量 $b$、初始起始向量 $x0$、实值 $\omega$ 和容差 $\varepsilon$，并在给定的容差内返回方程 $Ax=b$ 的近似解以及迭代次数。
 
 ```matlab
 function [x, Iters] = SOR(A, b, w, x0, Eps)
+
 D = diag(diag(A));
+
 L = tril(A) - D; U = A - (L+D);
+
 B = -(D-w*L)\((1-w)*D+w*U); c = (D-w*L)*b;
+
 iters = 1;
+
 x = B*x0 + c;
+
 while norm(x-x0) > Eps
+
     x0 = B*x0 + c;
+
     iters = Iters + 1;
+
 end
 ```
 
@@ -1223,51 +1332,74 @@ end
 >> A = [2 -1 1; -2 5 -1; -1 2 4]; b = [-1;1;3];
 >> x0 = [1.; 1.; 1.]; w = 1.25; Eps = 1e-8;
 >> [x, Iters] = SOR(A, b, w, x0, Eps)
+
 x = 1.0000
 ```
 
-## 3.8 使用迭代法和最小二乘法求解线性方程组
+### 3.8 使用迭代法和最小二乘法求解线性方程组
 
-Python 代码 SORIter.py 应用 SOR 方法求解示例 2.1 和 2.2 中的线性方程组。
+Python 代码 `SORIter.py` 应用 SOR 方法求解示例 2.1 和 2.2 中的线性方程组。
 
 ```python
 import numpy as np
+
 from scipy.linalg import tril, solve
 
 def SOR(A, b, w, x0, Eps):
+
     D = np.diag(np.diag(A))
+
     L = tril(A-D)
+
     U = A - (L+D)
+
     c = solve((D+w*L), b-w*U@x0)
+
     Iters = 1
+
     x = np.matmul(B, x0) + c # 注意：此处 OCR 可能缺失 B 的定义
+
     while np.linalg.norm(x-x0, np.inf) >= Eps:
+
         x0 = x.copy()
+
         x = np.matmul(B, x0) + c
+
         Iters += 1
+
     return x, Iters
 
 print('求解第一个线性方程组：')
+
 A = np.array([[-5, 1, -1], [-2, 5, -1], [1, -2, -4]])
+
 b = np.array([[1], [1], [3]])
+
 w = 1.25
+
 x0 = np.zeros((3, 1), dtype=float)
+
 Eps = 1e-8
+
 x, Iterations = SOR(A, b, w, x0, Eps)
+
 print('x = \n', x, '\niterations = ', Iterations)
 
 print('求解第二个线性方程组：')
+
 A = np.array([[-5, 1, -2], [1, 6, 3], [2, -1, -4]])
+
 b = np.array([[13], [1], [-1]])
+
 x, Iterations = SOR(A, b, w, x0, Eps)
-print('x = \n', x, '\niterations = ', Iterations)
 ```
 
 
 
+print('x = \n', x, '\niterations = ', Iterations)
 
-
-# 最小二法解
+```
+# 最小二乘法解
 
 [-1.94732286e-10]
 [ 1.00000000e+00]
@@ -1281,89 +1413,101 @@ x =
 
 Gauss Seidel 方法在 16 次迭代内解决了例 2.2，而参数 $\omega=1.25$ 的 SOR 方法在 33 次迭代内解决了该例。从这个例子可以清楚地看出，如果参数 $\omega$ 选择不当，SOR 并不能保证比 Gauss-Seidel 方法收敛更快。松弛参数 $\omega$ 的选择对 SOR 的收敛速度起着关键作用。因此，当选择参数的最优值时，SOR 方法达到最佳收敛速率。
 
-在下面的示例中，在 [0.1,1.5] 范围内选择了 15 个值作为参数 $\omega$，并计算了相应的迭代次数。将 $\omega$ 的值与相应的迭代次数绘制成图。
+在下面的示例中，在 [0.1, 1.5] 范围内选择了 15 个值作为参数 $\omega$，并计算了相应的迭代次数。将 $\omega$ 的值与相应的迭代次数绘制成图。
 
 ```python
 W = np.array(0.1, 1.6, 0.1)
+
 Iterations = np.zeros_like(W)
+
 for j in range(len(W)):
+
     x, Iterters = SOR(A, b, W[j], x0, Eps)
+
     Iterations[j] = Iterters
+
 import matplotlib.pyplot as plt
+
 plt.figure(7)
+
 plt.plot(W, Iterations, marker='s', color='purple', lw=3)
+
 plt.xticks(np.arange(0.1, 1.6, 0.2), fontweight='bold')
+
 plt.yticks(np.arange(0, 225, 25), fontweight='bold')
+
 plt.grid(True, ls='--')
+
 plt.xlabel('w', fontweight='bold')
+
 plt.ylabel('Iterations', fontweight='bold')
 ```
 
 执行此代码得到图 2.1。参数 $\omega$ 的最优值位于 0.8 到 1.1 之间。因此，在该区间内进一步放大，参数 $\omega$ 的最优值位于 0.92 到 0.98 之间，如图 2.2 所示。
 
-### 2.3 最小二法解
+## 2.3 最小二乘法解
 
-如果 $A \in \mathbb{R}^{m \times n}$ 且 $b \in \mathbb{R}^m$，则线性方程组 $Ax=b$ 有解 $x \in \mathbb{R}^n$ 当且仅当 $b$ 在矩阵 $A$ 的列空间内 $(b \in \text{col}(A))$ [30]。当 $b$ 不在 $col(A)$ 中，求解 $Ax = b$ 的问题变成了一个近似问题，我们寻找某个 $\hat{x} \in \mathbb{R}^n$ (e3bc_58_0.png)。
+如果 $A \in \mathbb{R}^{m \times n}$ 且 $b \in \mathbb{R}^m$，则线性方程组 $Ax=b$ 有解 $x \in \mathbb{R}^n$ 当且仅当 $b$ 在矩阵 $A$ 的列空间内 $(b \in \text{col}(A))$ [30]。当 $b$ 不在 $col(A)$ 中，求解 $Ax = b$ 的问题变成了一个近似问题，我们寻找某个 $\hat{x} \in \mathbb{R}^n$ 使得：
 
-图 2.1：[0.1, 1.5] 中不同的 $\omega$ 值与对应迭代次数的对比。
-
-![](img/9923905aaa045c7096d90695cee3e3bc_58_1.png)
-
-图 2.2：$\omega$ 在 [0.8, 1.1] 内的数据（$w$, Iters）与对应迭代次数的对比图。
-
-```
-$|b - A\hat{x}\| = \min_{x \in \mathbb{R}^n} {|b - Ax\|}$
-```
+$$|b - A\hat{x}\| = \min_{x \in \mathbb{R}^n} {|b - Ax\|}$$
 
 换句话说：
 
-find \hat{x} : ||\mathbf{b} - A\hat{x}|| = \min_{\mathbf{x} \in \mathbb{R}^n} ||\mathbf{b} - A\mathbf{x}\|. \quad (2.9)
+find $\hat{x}$ : $||\mathbf{b} - A\hat{x}|| = \min_{\mathbf{x} \in \mathbb{R}^n} ||\mathbf{b} - A\mathbf{x}||. \quad (2.9)$
 
 方程 2.9 有三种有趣的情况 [47]：
 
 - 1. **极极化**（minimax）问题，即对无穷范数进行最小化：
-  find \hat{x} : ||\mathbf{b} - A\hat{x}||\infty = \min_{\mathbf{x} \in \mathbb{R}^n} ||\mathbf{b} - A\mathbf{x}||\infty = \min \max_{i=1,\dots,m} \{|b_i - (A\mathbf{x})_i|\}$,
+  find $\hat{x}$ : $||\mathbf{b} - A\hat{x}||_\infty = \min_{\mathbf{x} \in \mathbb{R}^n} ||\mathbf{b} - A\mathbf{x}||_\infty = \min \max_{i=1,\dots,m} \{|b_i - (A\mathbf{x})_i|\}$,
 
-- 2. **绝对偏差**（absolute deviation）问题，即对 $|\cdot||_1$ 进行最小化：
-  find \hat{x} : ||\mathbf{b} - A\hat{x}||_1 = \min_{\mathbf{x} \in \mathbb{R}^n} \sum_{j=1}^m |b_j - (A\mathbf{x})_j|$,
+- 2. **绝对偏差**（absolute deviation）问题，即对 $||\cdot||_1$ 进行最小化：
+  find $\hat{x}$ : $||\mathbf{b} - A\hat{x}||_1 = \min_{\mathbf{x} \in \mathbb{R}^n} \sum_{j=1}^m |b_j - (A\mathbf{x})_j|$,
 
 - 3. **最小二乘**（least squares）问题，即在 $\mathbb{R}^m$ 的经典欧几里距离下进行最小化：
-  find \hat{x} : ||\mathbf{b} - A\hat{x}||_2 = \min_{\mathbf{x} \in \mathbb{R}^n} \left( \sum_{j=1}^m |b_j - (A\mathbf{x})_j|^2 \right)。
+  find $\hat{x}$ : $||\mathbf{b} - A\hat{x}||_2 = \min_{\mathbf{x} \in \mathbb{R}^n} \left( \sum_{j=1}^m |b_j - (A\mathbf{x})_j|^2 \right)$。
 
 对于超定方程组：
 $A\mathbf{x} = \mathbf{b}$，
 其中 $A \in \mathbb{R}^{m \times n}, \mathbf{x} \in \mathbb{R}^n, \mathbf{b} \in \mathbb{R}^m$ 且 $m > n$，目标是寻找最小二乘问题的最小二乘解：
 
-find \hat{x} : ||\mathbf{b} - A\hat{x}||_2 = \min_{\mathbf{x} \in \mathbb{R}^n} \left( \sum_{j=1}^m |b_j - (A\mathbf{x})_j|^2 \right). \quad (2.10)$
+find $\hat{x}$ : $||\mathbf{b} - A\hat{x}||_2 = \min_{\mathbf{x} \in \mathbb{R}^n} \left( \sum_{j=1}^m |b_j - (A\mathbf{x})_j|^2 \right). \quad (2.10)$
 
 如果 $\hat{x} \in \mathbb{R}^n$ 是线性方程组 $A\mathbf{x} = \mathbf{b}$ 的最小二乘解，则它满足：
-$|\mathbf{b} - A\hat{x}|| \le ||\mathbf{b} - A\mathbf{x}||, \forall \mathbf{x} \in \mathbb{R}^n \quad (2.11)$
+$||\mathbf{b} - A\hat{x}|| \le ||\mathbf{b} - A\mathbf{x}||, \forall \mathbf{x} \in \mathbb{R}^n \quad (2.11)$
 
 根据线性代数引理，$\bar{\mathbf{b}} = A\hat{x}$ 是 $b$ 在 $Col(A)$ 的投影 $(\mathbf{b} - A\hat{x}) \perp Col(A))$。这意味着，如果 $a_j$ 是矩阵 $A$ 的第 $j$ 列，则 $a_j \cdot (\mathbf{b} - A\hat{x}) = 0, j = 1,\dots,n$。结果为：
 $A^T(\mathbf{b} - A\hat{x}) = 0 \quad (2.12)$
 
 方程 (2.12) 称为**正方程**（normal equations），最小二乘解 $\hat{x}$ 等价于求解正方程。
 
-## 2 使用迭代法和最小二法求解线性方程组
+## 2 使用迭代法和最小二乘法求解线性方程组
 
 **例 2.3** 求解不一致方程组 $Ax = b$ 的最小二乘解，其中：
-```
+
+```latex
 A = \begin{bmatrix} 1 & 2 & 4 \\ 3 & 1 & 5 \\ 1 & 1 & 1 \\ 2 & 2 & 1 \\ 3 & 1 & 3 \end{bmatrix} \text{ 且 } b = \begin{bmatrix} 5 \\ 3 \\ 3 \\ 1 \\ 4 \end{bmatrix}
 ```
 
 **解：** 正方程由 $A^T Ax = A^T b$ 给出：
-```
-$A^T A = \begin{bmatrix} 24 & 13 & 31 \\ 13 & 11 & 19 \\ 31 & 19 & 52 \end{bmatrix} \text{ 且 } A^T b = \begin{bmatrix} 31 \\ 22 \\ 51 \end{bmatrix}
+
+```latex
+$A^T A = \begin{bmatrix} 24 & 13 & 31 \\ 13 & 11 & 19 \\ 31 & 19 & 52 \end{bmatrix} \text{ 且 } A^T b = \begin{bmatrix} 31 \\ 22 \\ 51 \end{bmatrix}$
 ```
 
 最小二乘解 $\hat{x}$ 通过求解正方程得到：
 ```matlab
 >> A = [1 2 4; 3 1 5; 1 1 1; 2 2 1; 3 1 3]
+
 >> b = [5;3;3;1;4]
+
 >> xh = A\(A*b)
+
 xh =
+
 -0.1639
+
 0.8970
+
 0.7507
 ```
 
@@ -1371,14 +1515,19 @@ xh =
 
 ```python
 In [9]: import numpy as np
+
 In [10]: A = np.array([[1, 2, 4], [3, 1, 5], [1, 1, 1], [2, 2, 1], [3, 1, 3]])
+
 In [11]: b = np.array([[5], [3], [3], [1], [4]])
+
 In [12]: xh = np.linalg.solve(A.T@A, A.T@b)
+
 In [13]: print(xh)
+
 [[-0.16388616]]
+ [ 0.8969578 ]
+ [ 0.75073602 ]
 ```
-[ 0.8969578 ]
-[ 0.75073602 ]
 
 **注 2.1** 如果 $A^TA$ 是满秩矩阵，则不一致方程组 $Ax = b$ 有唯一的最小二乘解。即 $A^T A$ 非奇异 [30]。
 
@@ -1388,6 +1537,7 @@ In [13]: print(xh)
 
 ```matlab
 >> LSError = norm(b-A*xh, 2)
+
 LSError = 2.6570
 ```
 
@@ -1398,23 +1548,27 @@ LSError = 2.6570
 
 2.65704
 
-### 2.3.1 最小二法的若干应用
+### 2.3.1 最小二乘法的若干应用
 
-在本节中，将讨论最小二法的三个应用：数据拟合线性模型、用多项式逼近函数。**数据拟合线性模型**：给定一组数据点
-
-
+在本节中，将讨论最小二乘法的三个应用：数据拟合线性模型、用多项式逼近函数。**数据拟合线性模型**：给定一组数据点
 
 | $x_1$ | $x_2$ | ... | $x_n$ |
 | :--- | :--- | :--- | :--- |
 | $y_1$ | $y_2$ | ... | $y_n$ |
 
 参数 $\alpha$ 和 $\beta$ 称为**回归系数**。为了找到它们，在线性模型 $y=\alpha+\beta x$ 中，我们代入数据点，得到：
+
 ```latex
 \begin{aligned}
+
 y_1 &= \alpha+\beta x_1 \\
+
 y_2 &= \alpha+\beta x_2 \\
+
 \vdots &= \vdots \\
+
 y_n &= \alpha+\beta x_n
+
 \end{aligned} \quad (2.13)
 ```
 
@@ -1443,24 +1597,23 @@ $$\hat{\alpha} = \frac{\sum_{j=1}^n x_j^2 y_j - \sum_{j=1}^n x_j \sum_{j=1}^n y_
 
 $$\hat{\beta} = \frac{n \sum_{j=1}^n x_j y_j - \sum_{j=1}^n x_j \sum_{j=1}^n y_j}{n \sum_{j=1}^n x_j^2 - (\sum_{j=1}^n x_j)^2} \quad (2.16)$$
 
-
-
-
-
-## 二二乘法解
+## 2.3.2 线性回归示例
 
 我们编写了一个 MATLAB 函数 `LinearRegCoef`，它接收两个向量 `x` 和 `y`，并返回回归系数 $\hat{a}$ 和 $\hat{b}$：
 
 ```matlab
 function [ahat, bhat] = LinearRegCoef(x, y)
+
 n = length(x)
+
 ahat = sum(x.^2)*sum(x.*y)-sum(x)*sum(y)/n*sum(x.^2)
+
 bhat = (n*sum(x.*y)-sum(x)*sum(y))/(n*sum(x.^2)-sum(x)^2)
 ```
 
 现在，我们使用表 2.1 中九名中学生的身高（米）和体重（公斤）数据点来测试 `LinearRegCoef` 函数。
 
-表 2.1：九名中中男生的身高（厘米）与体重（公斤）
+表 2.1：九名中学生的身高（厘米）与体重（公斤）
 
 | 身高 | 1.65 | 1.67 | 1.68 | 1.72 | 1.77 | 1.82 | 1.86 | 1.89 | 1.90 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1468,16 +1621,27 @@ bhat = (n*sum(x.*y)-sum(x)*sum(y))/(n*sum(x.^2)-sum(x)^2)
 
 ```matlab
 H = [1.65, 1.67, 1.68, 1.72, 1.77, 1.82, 1.86, 1.89, 1.90] ;
+
 W = [57.0, 61.0, 64.0, 69.0, 75.0, 83.0, 90.0, 97.0, 100.0];
-ahat, bhat = LinearRegCoef(H, W);
-hat = ahat + bhat ;
+
+[ahat, bhat] = LinearRegCoef(H, W);
+
+yhat = ahat + bhat * H;
+
 plot(H, W, 'mo', 'b-', 'LineWidth', 2);
+
 marker('FaceColor', 'm');
+
 axis([1.6, 1.95, 50, 110]);
+
 xlabel('Height (in meters)', 'fontweight', 'bold');
+
 ylabel('Weight (in kilograms)', 'fontweight', 'bold');
+
 grid on
+
 set(gca, 'GridStyle', '--');
+
 set(gca, 'fontweight', 'bold');
 ```
 
@@ -1485,23 +1649,37 @@ set(gca, 'fontweight', 'bold');
 
 ```python
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 def LinearRegCoefs(x, y):
+
     n = len(x)
+
     ahat = (sum(x**2)*sum(x*y)-sum(x)*sum(y))/(n*sum(x**2)-sum(x)**2)
+
     bhat = (n*sum(x*y)-sum(x)*sum(y))/(n*sum(x**2)-sum(x)**2)
+
     return ahat, bhat
+
 H = np.array([1.65, 1.67, 1.68, 1.72, 1.77, 1.82, 1.86, 1.89, 1.90]);
+
 W = np.array([57.0, 61.0, 64.0, 69.0, 75.0, 83.0, 90.0, 97.0, 100.0]);
+
 ahat, bhat = LinearRegCoefs(H, W);
-hat = ahat + bhat * H;
+
+yhat = ahat + bhat * H;
 ```
+
+
 
 ## 使用迭代和最小二乘法求解线性方程
 
 执行上述 Python 代码，将得到与图 2.3 相似的图。
 
-- ii 对数据拟合多项式：给定一组数据点表：
+### 对数据拟合多项式
+
+给定一组数据点表：
 
 | x1 | x2 | ... | xn |
 | :--- | :--- | :--- | :--- |
@@ -1509,7 +1687,7 @@ hat = ahat + bhat * H;
 
 可以对数据拟合一个次数不超过 $n-1$ 的多项式模型。假设变量 $y$ 与变量 $x$ 之间的关系形式如下：
 
-$y = \alpha_0 + \alpha_1x + \alpha_2x^2 + \cdots + \alpha_kx^k, \quad 1 \le k \le n-1, \quad (2.17)$
+$$y = \alpha_0 + \alpha_1x + \alpha_2x^2 + \cdots + \alpha_kx^k, \quad 1 \le k \le n-1, \quad (2.17)$$
 
 其中需要计算回归系数 $\hat{\alpha}_0, \dots, \hat{\alpha}_k$，使得模型 2.17 成为最小二乘解。我们将数据点 $(x_j, y_j), j=1, \dots, n$ 代入 2.17，以求解 $k+1$ 个未知数 $\alpha_0, \dots, \alpha_k$：
 
@@ -1517,13 +1695,24 @@ $y = \alpha_0 + \alpha_1x + \alpha_2x^2 + \cdots + \alpha_kx^k, \quad 1 \le k \l
 
 图 2.3：线性模型与身高、体重散点数据的对比。
 
-## 最小二乘解
+### 最小二乘解
 
 方程 (2.18) 可以写成矩阵形式：
 
-$\begin{pmatrix} y_1 & x_1 & x_1^2 & \dots & x_1^k & \alpha_0 \\ y_2 & x_2 & x_2^2 & \dots & x_2^k & \alpha_1 \\ \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ y_n & x_n & x_n^2 & \dots & x_n^k & \alpha_k \end{pmatrix} = \begin{pmatrix} \alpha_0 \\ \alpha_1 \\ \vdots \\ \alpha_k \end{pmatrix}$ (2.18)
+$$
+\begin{pmatrix} 
+y_1 & x_1 & x_1^2 & \dots & x_1^k & \alpha_0 \\ 
+y_2 & x_2 & x_2^2 & \dots & x_2^k & \alpha_1 \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+y_n & x_n & x_n^2 & \dots & x_n^k & \alpha_k 
+\end{pmatrix} = \begin{pmatrix} \alpha_0 \\ \alpha_1 \\ \vdots \\ \alpha_k \end{pmatrix} \quad (2.18)
+$$
 
-回归系数 $\hat{\alpha}_0, \dots, \hat{\alpha}_k$ 可以通过求解法方程得到。**示例 2.4** 在示例中，编写 MATLAB 和 Python 代码，对表 2.2 中的正态分布随机数据拟合模型 $y = \alpha_0 + \alpha_1x + \dots + \alpha_kx^k$，其中 $k=2, 4, 7$：表 2.2：中心与频率的虚拟数据
+回归系数 $\hat{\alpha}_0, \dots, \hat{\alpha}_k$ 可以通过求解法方程得到。
+
+**示例 2.4** 在示例中，编写 MATLAB 和 Python 代码，对表 2.2 中的正态分布随机数据拟合模型 $y = \alpha_0 + \alpha_1x + \dots + \alpha_kx^k$，其中 $k=2, 4, 7$：
+
+表 2.2：中心与频率的虚拟数据
 
 | x | 5 | 15 | 25 | 35 | 45 | 55 | 65 | 85 | 95 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1533,12 +1722,14 @@ MATLAB 代码：
 
 ```matlab
 clear; clc; clf;
+
 x = [5 15 25 35 45 55 65 85 95];
 y = [2 6 10 16 25 21 10 5 2];
 xx = [100];
 deg = [2 4 7];
 Model = zeros(1, length(x));
 Mdl = zeros(1, length(x));
+
 for i = 1:3
     k = deg(i);
     A = zeros(length(x), k+1);
@@ -1552,6 +1743,7 @@ for i = 1:3
     Mdl(i) = pchip(x, Model(i), xx);
     FittingError(i) = norm(y-Model(i), 2);
 end
+
 plot(x, y, 'ro', xx, Mdl(1), ':', xx, Mdl(2), '--r',
      xx, Mdl(3), '-m', xx, Mdl(4), '-k',
      'MarkerFaceColor', 'y', 'MarkerSize', 8, 'LineWidth', 2);
@@ -1577,6 +1769,7 @@ axis((0, 10, 0, 30));
 import numpy as np
 from scipy.interpolate import pchip
 import matplotlib.pyplot as plt
+
 x = np.array([5., 15., 25., 45., 55., 65., 75., 85., 95.])
 y = np.array([2., 6., 10., 16., 21., 25., 30., 35., 42.])
 xx = np.arange([2, 40, 101.])
@@ -1589,44 +1782,61 @@ Model = np.zeros((4, len(xx)))
 图 2.4：对表 2.2 中的数据拟合 2 次、4、7 次和 9 次多项式。
 
 ```python
-Mdl = np.zeros((4, len(xx)), float);
+Mdl = np.zeros((4, len(xx)), float)
+
 for i in range(4):
     k = deg[i]
-    A = np.zeros((len(x), k+1), float;
+    A = np.zeros((len(x), k+1), float)
     for j in range(k+1):
         A[j, :] = x[:]**j
     q = np.linalg.lstsq(A.T@A, y[:]) # polyfit(x, y, k)
     for j in range(k+1):
         Model[i] = Model[i] + Q(j).*x.^(j-1)
-    Mdl[i] = pchip(x, Model[i], xx);
-    FittingError(i) = norm(y-Model[i], 2);
+    Mdl[i] = pchip(x, Model[i], xx)
+    FittingError(i) = norm(y-Model[i], 2)
+
 plot(x, y, 'ro', xx, Mdl[1], ':', xx, Mdl[2], '--r',
      xx, Mdl[3], '-m', xx, Mdl[4], '-k',
-     'MarkerFaceColor', 'y', 'MarkerSize', 8, 'LineWidth', 2);
+     'MarkerFaceColor', 'y', 'MarkerSize', 8, 'LineWidth', 2)
 ```
 
-
-
-
-
-# 最小二法解
+## 最小二乘法解
 
 从方程 (2.20)，
 
-```
-$$\left[\frac{\partial}{\partial\alpha_k}\right]_{\alpha_k=\hat{\alpha}_k}=\left[\frac{\partial}{\partial\alpha_k}\right]_{\alpha_k=\hat{\alpha}_k}\int_{a}^{b} \left(f(x) - \sum_{j=0}^{n}\alpha_j x^j\right)dx$$
+$$
+\left[\frac{\partial}{\partial\alpha_k}\right]_{\alpha_k=\hat{\alpha}_k}=\left[\frac{\partial}{\partial\alpha_k}\right]_{\alpha_k=\hat{\alpha}_k}\int_{a}^{b} \left(f(x) - \sum_{j=0}^{n}\alpha_j x^j\right)dx
+$$
+
 $$= \int_{a}^{b} 2\left(f(x) - \sum_{j=0}^{n}\hat{\alpha}_j x^j\right)^k dx$$
+
 $$= 2\int_{a}^{b} x^k f(x)dx - 2\sum_{j=0}^{n}\hat{\alpha}_j x^{j+k} dx$$
-$$= 2\int_{a}^{b} x^k f(x)dx - 2\sum_{j=0}^{n}\hat{\alpha}_j \frac{b^{j+k+1}-a^{j+k+1}}{j+k} = 0 (2.23)$$
-```
+
+$$= 2\int_{a}^{b} x^k f(x)dx - 2\sum_{j=0}^{n}\hat{\alpha}_j \frac{b^{j+k+1}-a^{j+k+1}}{j+k} = 0 \quad (2.23)$$
 
 从方程 (2.23)我们得到正法方程：
 
-```
-$$\begin{matrix} \frac{b^2-a^2}{2} & \frac{b^3-a^3}{3} & \frac{b^4-a^4}{4} & \dots \\ \vdots & \vdots & \vdots & \ddots \end{matrix}\begin{matrix} \hat{\alpha}_0 = \int_{a}^{b} f(x)dx \\ \hat{\alpha}_1 = \int_{a}^{b} xf(x)dx \\ \hat{\alpha}_2 = \int_{a}^{b} x^2f(x)dx \\ \vdots \end{matrix} (2.24)$$
 $$
-\begin{matrix} \frac{b^{n+1}-a^{n+1}}{n+1} & \frac{b^{n+2}-a^{n+2}}{n+2} & \frac{b^{n+3}-a^{n+3}}{n+3} & \dots & \frac{b^{2n+1}-a^{2n+1}}{2n+1} \end{matrix}\begin{matrix} \hat{\alpha}_n = \int_{a}^{b} x^n f(x)dx \end{matrix}$$
-```
+\begin{matrix} 
+\frac{b^2-a^2}{2} & \frac{b^3-a^3}{3} & \frac{b^4-a^4}{4} & \dots \\ 
+\vdots & \vdots & \vdots & \ddots 
+\end{matrix}
+\begin{matrix} 
+\hat{\alpha}_0 = \int_{a}^{b} f(x)dx \\ 
+\hat{\alpha}_1 = \int_{a}^{b} xf(x)dx \\ 
+\hat{\alpha}_2 = \int_{a}^{b} x^2f(x)dx \\ 
+\vdots 
+\end{matrix} \quad (2.24)
+$$
+
+$$
+\begin{matrix} 
+\frac{b^{n+1}-a^{n+1}}{n+1} & \frac{b^{n+2}-a^{n+2}}{n+2} & \frac{b^{n+3}-a^{n+3}}{n+3} & \dots & \frac{b^{2n+1}-a^{2n+1}}{2n+1} 
+\end{matrix}
+\begin{matrix} 
+\hat{\alpha}_n = \int_{a}^{b} x^n f(x)dx 
+\end{matrix}
+$$
 
 最优系数 $\hat{\alpha}_0, \dots, \hat{\alpha}_n$ 通过求解正法方程 (2.24) 得到。
 
@@ -1650,12 +1860,11 @@ function alpha = FunCoeff(f, a, b, n)
 end
 ```
 
-# 使用迭代法和最小二乘法求解线性组
-
 ```matlab
 for k = 1 : n+1
     y(k) = integral(@(x) x.^(k-1).*f(x), a, b) ;
 end
+
 alp = A\y;
 alp = zeros(1, length(alp));
 for j = 1 : length(alp)
@@ -1663,7 +1872,7 @@ for j = 1 : length(alp)
 end
 ```
 
-函数 FunAppCoef 的 Python 代码：
+函数 `FunAppCoef` 的 Python 代码：
 
 ```python
 import numpy as np
@@ -1690,7 +1899,7 @@ def FunAppCoef(f, a, b, n):
     return alp
 ```
 
-为了测试 FunAppCoef，我们在 [0,3] 区间上寻找指数函数 $f(x)=e^x$ 的近似，使用次数为 1 和 2 的项式。实现此操作的 MATLAB 代码如下：
+为了测试 `FunAppCoef`，我们在 [0,3] 区间上寻找指数函数 $f(x)=e^x$ 的近似，使用次数为 1 和 2 的项式。实现此操作的 MATLAB 代码如下：
 
 ```matlab
 a = 0; b = 1;
@@ -1739,9 +1948,9 @@ plt.grid(True, ls='--')
 
 图 2.5：指数函数 $f(x) = e^x$ 的 1 次、2 次和4 次项式近似。
 
-# 使用迭代法和最小二乘法求解线性组
+## 使用迭代法和最小二乘法求解线性组
 
-python 代码是：
+Python 代码是：
 
 执行代码的结果：
 
@@ -1780,120 +1989,54 @@ fprintf('------------------------------------');
 ```matlab
 for k = 1 : 8
     n = 2*k - 1;
-    alpha = FunApproxCoef(f, a, b, n);
-    P(k, :) = polyval(alpha, t);
-    fprintf('%d|\t%.4e\n', n, norm(f(t)-P(k, :)));
-    plot(t, f(t), '-m', P(1, :), '-r', P(2, :), ':b', ...
-    'LineWidth', 2);
-    xlabel('x', 'fontweight', 'bold');
-    ylabel('y', 'fontweight', 'bold');
-    legend('y = \cos(pi*x)', 'n = 1', 'n = 3');
-    grid on
-    gca.FontWeight = 'bold';
-    gca.FontSize = 14;
 ```
 
-我们注意到，随着项式次数从 $n=1$ 增加到 $n=9$，近似解在改进。事实上，当运行 MATLAB 代码时，我们看到了 $n=11$ 和 $n=15$ 处的警告。
 
-```
-||f(t)-P_n(t)||_2
-```
 
-| n | $\|f(t)-P_n(t)\|_2$ |
-|---|---|
-| 1 | 8.7431e-01 |
-| 3 | 2.9178e-02 |
-| 5 | 4.5233e-04 |
-| 7 | 4.0581e-06 |
-| 9 | 2.3696e-08 |
-| 11 | 3.0460e-08 |
+# 线性组求解中的病态与正则化技术
 
-> InApproxCoef (line 17)
-> InPlot (line 10)
-> Warning: Matrix is close to singular or badly scaled.
-> RCOND = 3.1900e-19
-
-> InApproxCoef (line 17)
-> InPlot (line 10)
-> Warning: Matrix is close to singular or badly scaled.
-> RCOND = 5.7423e-20.
-> 3.1356e-07
-
-该错误的原因将在下一章讨论。
-
-**注 2.3** 在 $[0,1]$ 区间上用次数为 $n$ 的项式 $P_n(x)$ 近似函数 $f(x)$，得到的系数矩阵称为希尔伯特矩阵。$n \times n$ 类型的希尔伯特矩阵 $H_n$ 给出：
-
-```
-$H_n = \begin{pmatrix} 1 & 1/2 & 1/3 & \dots & 1/n \\ 1/2 & 1/3 & 1/4 & \dots & 1/(n+1) \\ 1/3 & 1/4 & 1/5 & \dots & 1/(n+2) \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1/n & 1/(n+1) & 1/(n+2) & \dots & 1/n \end{pmatrix} \quad (2.25)$
-```
-
-MATLAB 有一个函数 `hilb`，它接收整数 $n$ 并返回对应的希尔伯特矩阵 $H_n$。
-
-```matlab
->> hilb(3)
-ans =
-1.0000 0.5000 0.3333
-0.5000 0.3333 0.2500
-0.3333 0.2500 0.2000
-
->> hilb(5)
-ans =
-1.0000 0.5000 0.3333 0.2500 0.2000
-0.5000 0.3333 0.2500 0.2000 0.1667
-0.3333 0.2500 0.2000 0.1667 0.1429
-0.2500 0.2000 0.1667 0.1429 0.1250
-0.2000 0.1667 0.1429 0.1250 0.1111
-```
-
-## 3 线性组求解中的病态与正则化技术
-
-### 摘要
+## 摘要
 
 如果对系数矩阵 $A$ 或向量 $b$ 引入微小扰动，可能会导致向量 $x$ 巨大变化。因此，直接法和迭代法都不能保证给出线性组的精确解。
 
 本章分为两部分。第一部分介绍线性组中的病态性概念以及如何使用 MATLAB® 和 Python 测量矩阵的条件数。第二部分介绍了一些正则化技术以稳定病态组的解。
 
-### 3.1 线性组求解中的病态性
+## 3.1 线性组求解中的病态性
 
 病态线性组是指对系数矩阵或右侧向量的微小扰动会导致系统解发生巨大变化的线性组 [28, 42]。为了说明这一点，将对两个考虑的示例展示两种小扰动。在第一个示例中，将在系数矩阵的一个分量上引入细微变化，在第二个示例中，将在右侧向量上进行扰动。
 
-**例 3.1** 在本例中，我们考虑线性组 $Fx = d$，其中
+### 例 3.1
 
-```
+在本例中，我们考虑线性组 $Fx = d$，其中
+
+$$
 A = \begin{pmatrix} 5.0 & 1.0 & 1.0 \\ 1.0 & 5.0 & 1.0 \\ 1.0 & 1.0 & 5.0 \end{pmatrix} \quad b = \begin{pmatrix} 5.0 \\ -3.0 \\ 5.0 \end{pmatrix}
-```
+$$
 
 在 MATLAB 中求解该线性组，我们使用以下命令：
 
 ```matlab
 >> A = [5., 1., 1.; 1., 5., 1.; 1., 1., 5.]
 A =
+     5     1     1
+     1     5     1
+     1     1     5
 ```
-
-
-
-
-
-# 58 病态性与正则化技术
-
-5 1 1
-1 5 1
-1 1 5
 
 ```matlab
 >> b = [5.; -3.; 5.]
 b =
-5
--3
-5
+     5
+    -3
+     5
 ```
 
 ```matlab
 >> x = A\b
 x =
-1.0000
--1.0000
-1.0000
+    1.0000
+   -1.0000
+    1.0000
 ```
 
 在 Python 中：
@@ -1906,91 +2049,80 @@ In [4]: x = np.linalg.solve(A,b)
 In [5]: print('x = \n', x)
 x =
 [[ 1.]
-[-1.]
- [1.]]
+ [-1.]
+ [ 1.]]
 ```
 
 现在，我们考虑的第一个扰动是针对分量 $A_{11}$ 的，我们设置 $B = A$ 且 $B_{11} = A_{11}+10^{-4} = A_{11}+0.0001$
 
 ```matlab
 >> B = A
- =
-5 1 1
-1 5 1
-1 1 5
+B =
+     5     1     1
+     1     5     1
+     1     1     5
 >> B(1,1) = B(1,1) + 0.0001
- =
-5.0001 1.0000 1.0000
-1.0000 5.0000 5.0000
-1.0000 1.0000 5.0000
+B =
+   5.0001    1.0000    1.0000
+   1.0000    5.0000    5.0000
+   1.0000    1.0000    5.0000
 ```
 
 ```matlab
 >> y = B\b
 y =
-1.0000
--1.0000
-1.0000
->> disp('x - y = ', '), disp(num2str(x-y))
-```
-
-# 线性方程组解中的病态性
-
-```matlab
+    1.0000
+   -1.0000
+    1.0000
+>> disp('x - y = '), disp(num2str(x-y))
 x - y =
-2.1428e-05
--3.5714e-06
--3.5714e-06
->> disp(['|x-y||_2 = ', num2str(norm(x-y, 2)))
-|| x-y||_2 = 2.2015e-05
+   2.1428e-05  -3.5714e-06  -3.5714e-06
+>> disp(['||x-y||_2 = ', num2str(norm(x-y, 2))])
+||x-y||_2 = 2.2015e-05
 ```
 
 在 Python 中：
 
 ```python
-[In7]: B = A.copy()
-[In8]: B[0, 0] += 1e-4
-[In9]: y = np.linalg.solve(B, b)
-[In10]: print('y = \n', y)
+In [7]: B = A.copy()
+In [8]: B[0, 0] += 1e-4
+In [9]: y = np.linalg.solve(B, b)
+In [10]: print('y = \n', y)
 y =
 [[ 0.99997857]
-[-0.99999643]
+ [-0.99999643]
  [ 1.00000357]]
-[In11]: print('|x-y||_2 = \n', x-y)
+In [11]: print('x - y = \n', x-y)
 x - y =
 [[ 2.14281123e-05]
-[-3.57135204e-06]
-[-3.57135204e-06]]
-[In12]: print('|x-y||_2 = \n', np.linalg.norm(x-y, 2))
+ [-3.57135204e-06]
+ [-3.57135204e-06]]
+In [12]: print('||x-y||_2 = \n', np.linalg.norm(x-y, 2))
 ||x-y||_2 = 2.20159253996403e-05
 ```
 
-第二个考虑的扰动是在右侧侧的，将 $b_3$ 替换为 $b_3+10^{-4}$，从而在右侧得到向量 $c$。原始系数矩阵 $A$ 保持不变，求解线性方程组 $Az = c$。
+第二个考虑的扰动是在右侧向量的，将 $b_3$ 替换为 $b_3+10^{-4}$，从而在右侧得到向量 $c$。原始系数矩阵 $A$ 保持不变，求解线性方程组 $Az = c$。
 
 ```matlab
 >> c = b;
 >> c(3) = c(3) + 1e-4
 c =
-5.0000
--3.0000
-5.0001
+   5.0000
+  -3.0000
+   5.0001
 >> z = A\c
 z =
-1.0000
--1.0000
-1.0000
+    1.0000
+   -1.0000
+    1.0000
 ```
-
-# 60 病态性与正则化技术
 
 ```matlab
 >> disp('x - z = '); disp(num2str(x-z))
 x - z =
-3.5714e-06
-3.5714e-06
-2.1429e-05
->> disp('|| x-z||_2 = ', num2str(norm(x-z, 2)))
-|| x-z||_2 = 2.2016e-05
+   3.5714e-06   3.5714e-06   2.1429e-05
+>> disp('|| x-z||_2 = '), disp(num2str(norm(x-z, 2)))
+||x-z||_2 = 2.2016e-05
 ```
 
 在 Python 中：
@@ -2000,8 +2132,6 @@ In [12]: c = b.copy()
 In [13]: c[-1] += 1e-4
 In [14]: z = np.linalg.solve(A, c)
 In [15]: print('\n', z)
-
-```python
 z =
 [[ 0.99999643]
  [-1.00000357]
@@ -2011,25 +2141,24 @@ x - z =
 [[ 3.57142857e-06]
  [ 3.57142857e-06]
  [-2.14285714e-05]]
-In [17]: print('x-z||_2 = \n', np.linalg.norm(x-z, 2))
+In [17]: print('||x-z||_2 = \n', np.linalg.norm(x-z, 2))
 ||x-z||_2 = 2.201576429611205e-05
 ```
 
-从示例 3.1 可以看出，系数矩阵或右侧向量的微小变化会导致解的小小变化。因此，给定的线性系统对扰动不敏感。对扰动不敏感的系统被称为良好的（well-posed）。示例 3.2 在此例中考虑了一个线性系统 $Fx = d$，$F = \begin{bmatrix} 1001 & -999 & 999 \\ 1 & 1 & -1 \\ 1000 & -1000 & 1000 \end{bmatrix}$ 且 $d = \begin{bmatrix} 1001 \\ 1 \\ 1000 \end{bmatrix}$。该示例的目的是展示系数矩阵 $F$ 的一个元素或向量 $d$ 的微小变化如何导致系统 $Fx = d$ 解的剧烈变化。使用 MATLAB 求解线性方程组 $Ax = b$：
+从示例 3.1 可以看出，系数矩阵或右侧向量的微小变化会导致解的微小变化。因此，给定的线性系统对扰动不敏感。对扰动不敏感的系统被称为良态的。示例 3.2 在此例中考虑了一个线性系统 $Fx = d$，$F = \begin{bmatrix} 1001 & -999 & 999 \\ 1 & 1 & -1 \\ 1000 & -1000 & 1000 \end{bmatrix}$ 且 $d = \begin{bmatrix} 1001 \\ 1 \\ 1000 \end{bmatrix}$。该示例的目的是展示系数矩阵 $F$ 的一个元素或向量 $d$ 的微小变化如何导致系统 $Fx = d$ 解的剧烈变化。使用 MATLAB 求解线性方程组 $Ax = b$：
 
 ```matlab
 >> F = [1001, -999, 999; 1, 1, -1; 1000, -1000, 1000];
 >> d = [1001; 1; 1000];
 >> x = F\d
-
-``` # 线性方程组解的病态性
+```
 
 警告：矩阵接近奇异或缩放不当。结果可能不准确。RCOND = 1.06798e-16。
 
-```python
+```matlab
 x =
-1.4147
-0.4147
+    1.4147
+    0.4147
 ```
 
 警告表明矩阵接近奇异，因此结果可能不准确。MATLAB 的线性方程组解离精确解 $[1,0,1]^T$ 非常远。在 Python 中，可以使用上述命令求解线性方程组：
@@ -2040,9 +2169,6 @@ In [2]: A = np.array([[1.001e+3, -9.990e+2, 9.990e+2], [1.000e+0, 1.000e+0, 0.00
 In [3]: b = np.array([[1001], [1], [1000]])
 In [4]: x = np.linalg.solve(A, b)
 In [5]: print('x=\n', x)
-```
-
-```python
 x =
 [[1.]
  [0.93969727]
@@ -2056,20 +2182,19 @@ x =
 >> format long g
 >> G(1,1) = G(1,1) + 1e-5
 G =
-1001.00001 -999 999
-0.99999999999999 1.000000000001 -0.99999999999999
-1000 -1000 1000
->> y = G@d
-
+   1001.00001       -999         999
+   0.99999999999999 1.000000000001 -0.99999999999999
+   1000           -1000         1000
+>> y = G\d
 ```
 
 警告：矩阵接近奇异或缩放不当。结果可能不准确。RCOND = 1.092847e-16。
 
-```python
+```matlab
 y =
-0.999997714598233
-22853063.4012923
-22853063.4012946
+   0.999997714598233
+   22853063.4012923
+   22853063.4012946
 >> disp(norm(y-x, 2))
 32319111.6174026
 ```
@@ -2086,18 +2211,172 @@ y =
  [2.34012849e+07]
  [2.34012849e+07]]
 In [10]: print('y-x = \n', y-x)
-x-y =
+y-x =
 [[-2.34606334e-06]
  [2.34012849e+07]
  [2.34012849e+07]]
 In [11]: print('||y-x||_2 = {}', '{0:1.6e}'.format(np.linalg.norm(y-x)))
+||y-x||_2 = 3.309379e+07
 ```
 
+第二个扰动是在右侧向量 $d$ 上，将 $d_3$ 替换为 $d_3+10^{-5}$，从而得到向量 $e$。原始系数矩阵 $F$ 保持不变，求解线性方程组 $Fz = e$。
 
+```matlab
+>> e = d;
+>> e(3) = e(3) + 1e-5
+e =
+   1001
+      1
+   1000.00001
+>> z = F\e
+```
 
+警告：矩阵接近奇异或缩放不当。结果可能不准确。RCOND = 1.06798e-16。
 
+```matlab
+z =
+   1.4147
+   0.4147
+>> disp(norm(z-x, 2))
+0
+```
 
-# 66 病态条件与正则化技术
+在 Python 中：
+
+```python
+In [12]: e = d.copy()
+In [13]: e[-1] += 1e-5
+In [14]: z = np.linalg.solve(F, e)
+In [15]: print('z = \n', z)
+z =
+[[1.4147]
+ [0.4147]
+ [1.4147]]
+In [16]: print('z-x = \n', z-x)
+z-x =
+[[0.]
+ [0.]
+ [0.]]
+In [17]: print('||z-x||_2 = \n', np.linalg.norm(z-x))
+||z-x||_2 = 0.0
+```
+
+从示例 3.2 可以看出，系数矩阵或右侧向量的微小变化会导致解的巨大变化。因此，给定的线性系统对扰动敏感。对扰动敏感的系统被称为病态的。
+
+### 3.1.1 条件数
+
+矩阵的条件数衡量了矩阵对数值运算的敏感度。条件数越大，矩阵越接近奇异，数值计算越不稳定。在 MATLAB 中，可以使用 `cond` 函数计算条件数；在 Python 中，可以使用 `np.linalg.cond`。
+
+```matlab
+>> cond(F)
+ans =
+   3.3094e+16
+```
+
+```python
+In [18]: np.linalg.cond(F)
+Out[18]: 3.309379e+16
+```
+
+条件数约为 $3.3 \times 10^{16}$，说明矩阵 $F$ 严重病态。
+
+## 3.2 正则化技术
+
+正则化技术用于稳定病态线性组的解。常用的方法包括 Tikhonov 正则化、截断奇异值分解 (TSVD) 等。
+
+### 3.2.1 Tikhonov 正则化
+
+Tikhonov 正则化通过添加正则化项 $\lambda \|x\|^2$ 来稳定解，其中 $\lambda > 0$ 是正则化参数。正则化方程为：
+
+$$
+(A^T A + \lambda I)x = A^T b
+$$
+
+在 MATLAB 中，可以使用 `lsqr` 或手动构建正规方程求解；在 Python 中，可以使用 `scipy.sparse.linalg.lsqr` 或 `sklearn.linear_model.Ridge`。
+
+### 3.2.2 截断奇异值分解 (TSVD)
+
+TSVD 通过丢弃奇异值分解中较小的奇异值来稳定解。设 $A = U \Sigma V^T$ 为 $A$ 的奇异值分解，则 TSVD 解为：
+
+$$
+x_k = \sum_{i=1}^k \frac{u_i^T b}{\sigma_i} v_i
+$$
+
+其中 $k$ 是保留的奇异值个数。
+
+在 MATLAB 中，可以使用 `svd` 计算奇异值分解，然后手动构建 TSVD 解；在 Python 中，可以使用 `np.linalg.svd`。
+
+## 3.3 数值实验
+
+### 3.3.1 多项式逼近中的病态性
+
+我们注意到，随着项式次数从 $n=1$ 增加到 $n=9$，近似解在改进。事实上，当运行 MATLAB 代码时，我们看到了 $n=11$ 和 $n=15$ 处的警告。
+
+```matlab
+alpha = FunApproxCoef(f, a, b, n);
+P(k, :) = polyval(alpha, t);
+fprintf('%d|\t%.4e\n', n, norm(f(t)-P(k, :)));
+plot(t, f(t), '-m', P(1, :), '-r', P(2, :), ':b', ...
+    'LineWidth', 2);
+xlabel('x', 'fontweight', 'bold');
+ylabel('y', 'fontweight', 'bold');
+legend('y = \cos(pi*x)', 'n = 1', 'n = 3');
+grid on
+gca.FontWeight = 'bold';
+gca.FontSize = 14;
+```
+
+||f(t)-P_n(t)||_2
+
+| n | $\|f(t)-P_n(t)\|_2$ |
+|---|---|
+| 1 | 8.7431e-01 |
+| 3 | 2.9178e-02 |
+| 5 | 4.5233e-04 |
+| 7 | 4.0581e-06 |
+| 9 | 2.3696e-08 |
+| 11 | 3.0460e-08 |
+
+> In `FunApproxCoef` (line 17)
+> In `Plot` (line 10)
+> Warning: Matrix is close to singular or badly scaled.
+> RCOND = 3.1900e-19
+>
+> In `FunApproxCoef` (line 17)
+> In `Plot` (line 10)
+> Warning: Matrix is close to singular or badly scaled.
+> RCOND = 5.7423e-20.
+> 3.1356e-07
+
+该错误的原因将在下一章讨论。
+
+**注 2.3** 在 $[0,1]$ 区间上用次数为 $n$ 的项式 $P_n(x)$ 近似函数 $f(x)$，得到的系数矩阵称为希尔伯特矩阵。$n \times n$ 类型的希尔伯特矩阵 $H_n$ 给出：
+
+$$
+H_n = \begin{pmatrix} 1 & 1/2 & 1/3 & \dots & 1/n \\ 1/2 & 1/3 & 1/4 & \dots & 1/(n+1) \\ 1/3 & 1/4 & 1/5 & \dots & 1/(n+2) \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1/n & 1/(n+1) & 1/(n+2) & \dots & 1/(2n-1) \end{pmatrix} \quad (2.25)
+$$
+
+MATLAB 有一个函数 `hilb`，它接收整数 $n$ 并返回对应的希尔伯特矩阵 $H_n$。
+
+```matlab
+>> hilb(3)
+ans =
+    1.0000    0.5000    0.3333
+    0.5000    0.3333    0.2500
+    0.3333    0.2500    0.2000
+
+>> hilb(5)
+ans =
+    1.0000    0.5000    0.3333    0.2500    0.2000
+    0.5000    0.3333    0.2500    0.2000    0.1667
+    0.3333    0.2500    0.2000    0.1667    0.1429
+    0.2500    0.2000    0.1667    0.1429    0.1250
+    0.2000    0.1667    0.1429    0.1250    0.1111
+```
+
+### 3.3.2 代码片段示例
+
+以下是部分 MATLAB 代码片段：
 
 ```matlab
 13 C = A\b(:); C = wrev(C)
@@ -2105,16 +2384,14 @@ In [11]: print('||y-x||_2 = {}', '{0:1.6e}'.format(np.linalg.norm(y-x)))
 15 Cl = abs(bt); Cl = wrev(Cl)
 16 t = linspace(al, bt, 401); f = f(t)
 17 Pe = polyval(C, t); Pp = polyval(C, t);
-```
 
-```matlab
 19 subplot(1, 2, 1); plot(t, F, '-b', 'LineWidth', 3);
 20 xlabel('x', 'fontweight', 'bold'); ylabel('y',
 21 'fontweight', 'bold');
 22 legend('y = sin(2x^2)'); grid on; ax = gca
 23 ax.FontWeight = 'bold'; ax.FontSize = 12;
 24 set(gca, 'XTick', linspace(al, bt, 9)); set(gca, 'YTick',
-25 linspace(5, 9);
+25 linspace(5, 9));
 ```
 
 ```matlab
@@ -2125,7 +2402,7 @@ In [11]: print('||y-x||_2 = {}', '{0:1.6e}'.format(np.linalg.norm(y-x)))
 30 legend('Without perturbation', 'With perturbation'); grid on
 31 ax = gca; ax.FontWeight = 'bold'; ax.FontSize = 12;
 32 set(gca, 'XTick', linspace(al, bt, 9)); set(gca, 'YTick',
-33 linspace(1, 5);
+33 linspace(1, 5));
 ```
 
 Python 代码如下：
@@ -2138,11 +2415,11 @@ Python 代码如下：
 5 A, b = np.zeros((13, 13), 'float'), np.zeros((13, 1), 'float')
 6 al, bt = 0., 2.
 7 for i in range(13):
-8 for j in range(i+1):
-9 k = i+j
-10 A[i, j] = (bt**k-al**k)/k
-11 A[j, i] = A[i, j]
-12 b[i] = integrate.quad(lambda x: x**i*f(x), al, bt)[0]
+8     for j in range(i+1):
+9         k = i+j
+10         A[i, j] = (bt**k-al**k)/k
+11         A[j, i] = A[i, j]
+12     b[i] = integrate.quad(lambda x: x**i*f(x), al, bt)[0]
 13 C = np.linalg.solve(A, b)
 14 C = list(C.T[0])
 15 C.reverse()
@@ -2161,7 +2438,8 @@ Python 代码如下：
 28 plt.xlabel('x', fontweight='bold')
 ```
 
-# 线性方程组解的病态性
+
+
 
 ```python
 31 plt.ylabel('y', fontweight='bold')
@@ -2192,9 +2470,12 @@ Python 代码如下：
 在本节中，我们将解释为什么某些线性方程比其他线性方程对微小变化更敏感。在此之前，我们讨论以下内容：
 
 - (I) **矩阵范数**：如果 $A$ 是一个维度为 $m \times n$ 的矩阵，元素为 $a_{i,j}, i = 1,\dots,m; j = 1,\dots,n$，则：
+
     - (a) $\|A\|_1 = \max \{ \sum_{i=1}^m |a_{i,1}|, \sum_{i=1}^m |a_{i,2}|, \dots, \sum_{i=1}^m |a_{i,n}| \}$
+
     - (b) $\|A\|_\infty = \max\{\sum_{j=1}^n|a_{1,j}|, \sum_{j=1}^n|a_{2,j}|, \dots, \sum_{j=1}^n|a_{m,j}|\}$
-    - (c) $\|A\|_2 = \max\{\sqrt{\sigma_1}, \dots, \sqrt{\sigma_m}\}$,其中 $\sigma_j$ 是 $A^T$ 的第 $j$ 个特征值。
+
+    - (c) $\|A\|_2 = \max\{\sqrt{\sigma_1}, \dots, \sqrt{\sigma_m}\}$，其中 $\sigma_j$ 是 $A^T$ 的第 $j$ 个特征值。
 
 ![](img/9923905aaa04c709d695cee3bc85_0.png)
 
@@ -2212,9 +2493,13 @@ print(n1, n2, n3)
 设 $A$ 和 $B$ 为 $m \times n$ 矩阵，$\alpha$ 为标量，$x$ 为 $\mathbb{R}$ 中的向量。范数函数 $\|\cdot\| : m \times n \to \mathbb{R}$ 满足以下性质：
 
 - (a) $\|\alpha A\| \ge 0$
+
 - (b) $\|\alpha A\| = |\alpha| \cdot \|A\|$
+
 - (c) $\|A+B\| \le \|A\| + \|B\|$
+
 - (d) $\|Ax\| \le \|A\|\|x\|$
+
 - (e) $\|AB\| \le \|A\|\|B\|$
 
 - (II) **机器精度**：数字计算机具有有限的存储能力来表示浮点数。根据电气电子工程师学会（IEEE）标准，双精度数字由 64 位表示。64 位分为三个部分：最高位（最左侧）用于表示符号；接下来的 11 位用于表示指数部分；最后的 52 位（称为*尾数*）用于表示二进制分数。在此设置下，用 64 位表示的最小浮点数约为 $-1.7977 \times 10^{308}$，最大的浮点数约为 $1.7977 \times 10^{308}$。MATLAB 和 Python 都采用 IEEE 双精度数作为浮点变量的默认类型。用 52 位表示的最小二进制分数为 $2^{-52} \approx 2.2204 \times 10^{-16}$。这个数被称为机器精度，记作 $\varepsilon$。在 MATLAB 中，可以通过以下命令查看机器精度：
@@ -2231,21 +2516,16 @@ print(np.info(float).eps)
 2.22046049250313e-16
 ```
 
-如果某个浮点数的小数部分需要超过 52 位才能表示，计算机只能表示该数的 52 位并忽略其余部分。真实的数值部分与计算机表示之间的差异被称为舍入误差。例如，众周知 $\sin\pi=0, n=0, \pm1, \dots$。当 $n \neq 0$ 时，Python 和 MATLAB 不给出精确的 0：
+如果某个浮点数的小数部分需要超过 52 位才能表示，计算机只能表示该数的 52 位并忽略其余部分。真实的数值部分与计算机表示之间的差异被称为舍入误差。例如，众所周知 $\sin\pi=0, n=0, \pm1, \dots$。当 $n \neq 0$ 时，Python 和 MATLAB 不给出精确的 0：
 
 ```python
 np.sin(0.0) # 输出: 0.0
 np.sin(np.pi) # 输出: 1.224464791473532
 ```
 
-
-
-
-
 ## 线性组解的病态性
 
-```
-0 2.0000 4.0030
+```matlab
 >> cond(A)
 ans =
 1.667e+05
@@ -2258,16 +2538,19 @@ ans =
 
 Python 命令 `np.linalg.cond` 可用于计算矩阵 $A$ 的条件数。
 
-- 在 [38] A = np.array([[100, 1, 0], [0, 1, 2], [0, 2, 4.003]])
-- 在 [39] print('0:1.6e').format(np.linalg.cond(A))
+```python
+# In [38]: A = np.array([[100, 1, 0], [0, 1, 2], [0, 2, 4.003]])
+# In [39]: print('{0:1.6e}'.format(np.linalg.cond(A)))
 1.6671e+05
-- 在 [40] print('0:1.6e').format(np.linalg.cond(np.zeros((3,3))))
-- 在 [41] print('0:1.6e').format(np.linalg.cond(np.eye(3)))
+
+# In [40]: print('{0:1.6e}'.format(np.linalg.cond(np.zeros((3,3)))))
+# In [41]: print('{0:1.6e}'.format(np.linalg.cond(np.eye(3))))
 1.00000e+00
+```
 
 条件数较大的矩阵是病态的（ill-conditioned），否则它是良态的（well-conditioned）[7, 6]。任何奇异矩阵的条件数均为 $\infty$。对于任何非奇异矩阵，条件数位于 $[1, \infty)$ 之间。
 
-条件数 $\kappa(A)$ 的等效衡量标准是倒条件数 $rcond(A)$，
+条件数 $\kappa(A)$ 的等效衡量标准是倒条件数 `rcond(A)`，
 
 $$rcond(A) = \frac{1}{||A||_1 \cdot ||A^{-1}||_1}$$
 
@@ -2321,13 +2604,13 @@ $||H_n||$
 
 ```python
 # In [41]: from numpy.linalg import cond
-# In [42]: from scipy.linalg as hilb
-# In [43]: for n in range(2, 16): print(n, '\t\t', f'{0:1.6e}'.format(hilb(n)))
+# In [42]: from scipy.linalg import hilb
+# In [43]: for n in range(2, 16): print(n, '\t\t', '{0:1.6e}'.format(cond(hilb(n))))
 ```
 
 ## 线性组解的病态性
 
-这表明随着希尔伯特矩阵维度的增加，它们变得越来越病态。注意到当 $rcond(H) \geq \epsilon$ 时，MATLAB 和 Python 的条件数值一致；当 $rcond(H) < \epsilon$ 时，可能会产生不同的结果。
+这表明随着希尔伯特矩阵维度的增加，它们变得越来越病态。注意到当 `rcond(H) >= eps` 时，MATLAB 和 Python 的条件数值一致；当 `rcond(H) < eps` 时，可能会产生不同的结果。
 
 另一个例子是范德蒙矩阵。随着数据点数量的增加，相应范德蒙矩阵的条件数也会增大，变得更加病态。以下 MATLAB 命令显示了不同数据点数量范德蒙矩阵的条件数：
 
@@ -2354,7 +2637,7 @@ $||H_n||$
 在 Python 中：
 
 ```python
-# In [44]: for n in range(2, len(H)): print(n, '\t\t', '{0:1.6e}'.format(vander(n)))
+# In [44]: for n in range(2, len(H)): print(n, '\t\t', '{0:1.6e}'.format(cond(vander(n))))
 ```
 
 如果某个矩阵 $A$ 的条件数为 $\ell$，那么在求解线性组 $Ax=b$ 时，从右侧起 $\ell$ 位精度可能是不准确的（注意双精度数字真实表示了 16 位小数）。为了测试这一点，我们考虑由随机向量 $v$ 生成的范德蒙矩阵：
@@ -2388,7 +2671,7 @@ Cv = 1.73081130491636e+10
 8.67331e+07
 ```
 
-设 $x$ 为 10 维全 向量，$b=Vx$。
+设 $x$ 为 10 维全 1 向量，$b=Vx$。
 
 ```matlab
 >> x = ones(10, 1);
@@ -2403,7 +2686,7 @@ $$Vy = b$$
 
 $$y = V \backslash b$$
 
-为了找到 $y$ 有多接近 $x$，我们测量它们之间的无穷范范数：
+为了找到 $y$ 有多接近 $x$，我们测量它们之间的无穷范数：
 
 ```matlab
 >> Error = norm(x-y, inf)
@@ -2438,7 +2721,7 @@ $$x_{LS} = \text{arg \min_{x \in \mathbb{R}^n} ||Fx - y||^2$$
 
 $$x^* = x_{LSMN} = \text{arg \min_{x \in \mathbb{R}^n} \{||x_{LS}||^2\} = F^{-1}y$$
 
-$x_{LSMN}$ 被最小二乘最小范解。
+$x_{LSMN}$ 被称为最小二乘最小范解。
 
 (3) 计算出的解 $x^*$ 是稳定的。这表征了 $F^{-1}$ 的存在。
 
@@ -2448,12 +2731,9 @@ $x_{LSMN}$ 被最小二乘最小范解。
 
 $$\mathbf{F}^{-1}\mathbf{y}^e = \sum_{i=1}^n \frac{(\mathbf{U}_i^T\mathbf{y})}{\sigma_i}}\mathbf{V}_i = \mathbf{x} + \sum_{i=1}^n \frac{(\mathbf{U}_i^T\mathbf{e})}{\sigma_i}}\mathbf{V}_i \quad (3.9)$$
 
-
-
-
-
 # 线性方程组解的病态性
 
+```
 4.8704e-01
 7.5596e-02
 8.9611e-03
@@ -2473,10 +2753,13 @@ $$\mathbf{F}^{-1}\mathbf{y}^e = \sum_{i=1}^n \frac{(\mathbf{U}_i^T\mathbf{y})}{\
 5.4371e-18
 1.7279e-18
 5.8796e-19
+```
 
 我们看到 $H=USV^T$ 的最后 6 个奇异值低于 $\varepsilon(2.204 \times 10^{-16})$，这些值在 64 位系统中无法与 0 区分。在计算 $H^{-1}=VS^{-1}U^T$ 时除以此类值会导致巨大的误差，因为 $S^{-1}$ 的对角元素是 $S$ 的对角元素的倒数。
 
 根据 $F$ 的奇异值的分布，病态问题（其系数矩阵是病态的）可分为两类。即**秩亏问题**（rank deficient problems）和**离散病态问题**。这两类问题可以通过以下性质进行区分 [36]：
+
+
 
 - 1. 在秩亏问题中，存在一簇较小的奇异值，而在离散病态问题中，存在一大量的较小奇异值簇。
 - 2. 在秩亏问题中，大奇异值和小奇异值之间存在一个明显的间隙，而在离散病态问题中，奇异值逐渐衰减，大小奇异值之间没有间隙。
@@ -2484,7 +2767,7 @@ $$\mathbf{F}^{-1}\mathbf{y}^e = \sum_{i=1}^n \frac{(\mathbf{U}_i^T\mathbf{y})}{\
 
 ## 3.2 线性方程组解的正则化
 
-正则化是使病态问题的解稳定的过程 [60, 59, 58]
+正则化是使病态问题的解稳定的过程 [60, 59, 58]。
 
 ```
 $Fx = y, F \in \mathbb{R}^{m \times n}, x \in \mathbb{R}^n \text{ 且 } y \in \mathbb{R}^m.$
@@ -2526,31 +2809,33 @@ $x^\alpha = \sum_{j=1}^\alpha \frac{u_j^T}{\sigma_j}v_j = \frac{u_1^T}{\sigma_1}
 
 在达到某个最优正则化水平 $\alpha^*$ 之前，TSVD 方法表现良好（当 $\alpha \le \alpha^*$），之后（当 $\alpha$ 超过 $\alpha^*$ 时），解会受到截断更多项的影响，当 $\alpha \ge \alpha^*$ 时，$x^\alpha$ 会偏离 $x$。
 
-## 线性方程组解的正则化
+### 线性方程组解的正则化
 
-MATLAB 函数 SolveWithVD 接收矩阵 $F$、向量 $b$ 和正则化参数 $\alpha$。它应用截断 SVD 返回解。
+MATLAB 函数 `SolveWithVD` 接收矩阵 $F$、向量 $b$ 和正则化参数 $\alpha$。它应用截断 SVD 返回解。
 
 ```matlab
 function x = SolveWithVD(F, b, Alpha)
-    U, S, V = svd(F);
+    [U, S, V] = svd(F);
     D = diag(S);
     [m, n] = size(F);
     x = zeros(m, 1);
-    for i = 1 : length(S)
+    for i = 1 : length(D)
         if D(i) > Alpha
-            x = x + U(:,i)*b/D(i);
+            x = x + U(:,i) * (V(:,i)' * b) / D(i);
         end
     end
+end
 ```
 
-函数 SolveWithVD 设计用于 $20 \times 20$ 的希尔伯特矩阵和右侧项向量 $b$。使用脚本 Hilb 计算并显示了非正则化的解 $z$ 和正则化的解 $w$，如图 3.2 所示。还显示了不同正则化参数 $\alpha_j = 10^{-j}$ 下的误差。
+函数 `SolveWithVD` 设计用于 $20 \times 20$ 的希尔伯特矩阵和右侧项向量 $b$。使用脚本 `Hilb` 计算并显示了非正则化的解 $z$ 和正则化的解 $w$，如图 3.2 所示。还显示了不同正则化参数 $\alpha_j = 10^{-j}$ 下的误差。
 
 ```matlab
 H = hilb(20);
 y = ones(20, 1);
 b = H * y;
+z = H \ b; % 非正则化解
 subplot(1, 2, 1);
-plot(1:20, y,'b',z,'r');
+plot(1:20, y, 'b', 1:20, z, 'r');
 legend('精确解', '非正则化解');
 xlabel('分量');
 ylabel('数值');
@@ -2562,12 +2847,12 @@ disp(norm(y-z))
 
 ![](img/992390aaa045c7096d0695ceebc97.png) 图 3.2：$Hx = b$ 的非正则化和正则化解。
 
-## 病态性与正则化技术
+### 病态性与正则化技术
 
 ```matlab
 w = SolveWithVD(H, b, eps);
 subplot(1, 2, 2);
-plot(1:20, 'y', '-b',1:20, w, 'r', 'LineWidth', 3);
+plot(1:20, y, '-b', 1:20, w, 'r', 'LineWidth', 3);
 legend('精确解', '正则化解');
 xlabel('分量');
 ylabel('数值');
@@ -2579,15 +2864,15 @@ Err = zeros(15, 2);
 disp('Alpha ||x-y||_2');
 disp('-----------------------');
 for n = 1 : 15
-    Alpha = 10^(n-1)*eps;
-    Err(x, n) = SolveWithVD(H, b, Alpha);
+    Alpha = 10^(n-1) * eps;
+    x(:, n) = SolveWithVD(H, b, Alpha);
     Err(n, 1) = Alpha;
-    Err(n, 2) = norm(y-x);
+    Err(n, 2) = norm(y - x(:, n));
 end
 disp(Err);
 ```
 
-脚本 Hilb 通过以下命令执行：
+脚本 `Hilb` 通过以下命令执行：
 
 ```
 >> Hilb
@@ -2625,12 +2910,12 @@ from numpy.linalg import norm, svd
 import matplotlib.pyplot as plt
 
 def SolveWithTSVD(A, b, Alpha):
-    U, S, V = svd(A)
+    U, S, Vh = svd(A, full_matrices=False)
     x = np.zeros_like(b)
     n = len(S)
     for j in range(n):
         if S[j] >= Alpha:
-            x += U[:, j] * b / S[j]
+            x += (U[:, j] @ b) * Vh[j, :] / S[j]
         else:
             continue
     return x
@@ -2639,7 +2924,7 @@ H = hilb(20)
 y = np.ones(20)
 b = H @ y
 z = np.linalg.solve(H, b)
-w = SolveWithTSVD(H, b, eps)
+w = SolveWithTSVD(H, b, np.finfo(float).eps)
 print('非正则化误差 = ', norm(y-z))
 print('正则化误差 = ', norm(y-w))
 
@@ -2647,7 +2932,7 @@ plt.figure()
 plt.subplot(1, 2, 1)
 plt.plot(range(20), y, '-b')
 plt.plot(range(20), z, '--r', lw=3)
-plt.legend('精确解', '非正则化解')
+plt.legend(['精确解', '非正则化解'])
 plt.xlabel('分量')
 plt.ylabel('数值')
 plt.grid(True)
@@ -2655,16 +2940,17 @@ plt.grid(True)
 plt.subplot(1, 2, 2)
 plt.plot(range(20), y, '-b')
 plt.plot(range(20), w, '-m', lw=3)
-plt.legend('精确解', '正则化解')
+plt.legend(['精确解', '正则化解'])
 plt.xlabel('分量')
 plt.ylabel('数值')
 plt.grid(True)
 
 Err = np.zeros((16, 2))
 for j in range(16):
-    Alpha = 10**j * eps
-    Err[j, 0] = SolveWithTSVD(H, b, Alpha)
-    Err[j, 1] = norm(y-w)
+    Alpha = 10**j * np.finfo(float).eps
+    w = SolveWithTSVD(H, b, Alpha)
+    Err[j, 0] = Alpha
+    Err[j, 1] = norm(y - w)
 ```
 
 ### 3.2.2 Tikhonov 正则化方法
@@ -2674,9 +2960,11 @@ Tikhonov 正则化是处理病态系统最著名的方法。带惩罚的 Tikhono
 我们写下：
 
 $\varphi\alpha(x) = \langle Fx-y, Fx-y\rangle+\alpha x^T=(Fx-y)^T(Fx-y)+\alpha x^T x$
+
 $= x^T(F^TF+\alpha I)x - 2x^T F^Ty + y^T y$
 
 如果泛函 $\varphi\alpha(x)$ 在 $x=x^\alpha$ 处取最小值，那么
+
 由于 $F^TF+\alpha I = V(\sigma^2+\alpha)V^T$，则：
 
 ```
@@ -2685,11 +2973,7 @@ $x^\alpha = \sum_{i=1}^n \frac{\sigma_i}{\sigma_i^2+\alpha}V_i$ (3.11)
 
 我们考虑项 $\frac{\sigma_i}{\sigma_i^2+\alpha}$。对于较大的特征值 $\sigma_i$，该项 $\frac{\sigma_i}{\sigma_i^2+\alpha} \approx \frac{1}{\sigma_i}$；对于极小的 $\sigma_i$，$\frac{\sigma_i}{\sigma_i^2+\alpha} \approx \frac{\sigma_i}{\alpha}$。合适的 $\alpha$ 选择可以减少由小特征值引起的高频干扰。
 
-
-
-
-
-# 线性方程组解的正则化
+### 线性方程组解的正则化
 
 用于求解线性方程组 $Hx = b$ 的 Python 代码，其中 $H$ 是 $20 \times 20$ 的希尔伯矩阵，$b$ 是 $20 \times 1$ 向量，其分量为 $H$ 每一行的行和。
 
@@ -2700,21 +2984,22 @@ from numpy.linalg import norm, svd
 import matplotlib.pyplot as plt
 
 def SolveWithTikhonov(A, b, Alpha):
-    U, S, Vt = svd(A)
+    U, S, Vh = svd(A, full_matrices=False)
     x = np.zeros_like(b)
     n = len(S)
     for j in range(n):
-        x += np.dot(U[:,j], b[j]/(S[j]**2+Alpha))*Vt[:,j]
+        x += (U[:, j] @ b) * Vh[j, :] * S[j] / (S[j]**2 + Alpha)
     return x
 
 H = hilb(20)
-y = np.ones((20,), 'float')
-b = H@y
+y = np.ones((20,), dtype=float)
+b = H @ y
 x = np.linalg.solve(H, b)
 Alpha = np.spacing(1.0)
 w = SolveWithTikhonov(H, b, Alpha)
-print('Error for Unregularized solution = ', '{0.1e}'.format(norm(y-x)))
-print('Error for Regularized solution = ', '{0.1e}'.format(norm(y-w)))
+print('Error for Unregularized solution = ', '{:.1e}'.format(norm(y-x)))
+print('Error for Regularized solution = ', '{:.1e}'.format(norm(y-w)))
+
 plt.figure(1)
 plt.subplot(1, 2, 1)
 t = np.arange(1, len(b)+1)
@@ -2725,6 +3010,8 @@ plt.xlabel('Solution component', fontweight='bold')
 plt.ylabel('Component value', fontweight='bold')
 plt.grid(True, ls=':')
 plt.legend()
+
+plt.figure(2)
 plt.subplot(2, 1, 1)
 t = np.arange(1, len(b)+1)
 plt.plot(t, y, '-b', marker='s', lw=3, label='Exact solution')
@@ -2733,44 +3020,63 @@ plt.xlabel('Solution component', fontweight='bold')
 plt.ylabel('Component value', fontweight='bold')
 plt.grid(True, ls=':')
 plt.legend()
-Err = np.zeros((16, 2), 'float')
+
+Err = np.zeros((16, 2), dtype=float)
 for j in range(16):
-    Alpha = 10**j*np.spacing(1,)
+    Alpha = 10**j * np.spacing(1.0)
     w = SolveWithTikhonov(H, b, Alpha)
-    Err[j, 0] = norm(y-w)
-    print('{0.1e}'.format(Err[j, 0]), '\t', '{0.1e}'.format(Err[j, 1]))
+    Err[j, 0] = Alpha
+    Err[j, 1] = norm(y - w)
+    print('{:.1e}'.format(Err[j, 0]), '\t', '{:.1e}'.format(Err[j, 1]))
 ```
 
-# 病态性与正则化技术
+### 病态性与正则化技术
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_102_0.png)
 
 图 3.3：$Hx=b$ 的非正则化解以及正则化参数 $\alpha=\varepsilon$ 的正则化解。
 
-在图 3.3 中，展示了非正则化解和 $\alpha=\varepsilon$ 的正则化解 $x^\alpha$。
-
 通过上述 Python 代码计算了正则化解 $x^{\alpha_j}$（其中 $\alpha_j = 10^{j-1}\varepsilon, j=1,\dots,16$）的范数误差，输出结果如下：
 
 非正则化解的误差范数 = 1.36970281e+02
+
 正则化解的误差范数 = 2.96675459e-04
+
 2.220446e-16 2.96675459e-04
+
 2.220446e-15 4.95587019e-04
+
 2.220446e-14 7.25227169e-04
+
 2.220446e-13 1.76193763e-03
+
 2.220446e-12 2.40230468e-03
+
 2.220446e-11 5.05832063e-03
+
 2.220446e-10 8.76991238e-03
+
 2.220446e-09 1.41598120e-02
+
 2.220446e-08 2.96964698e-02
+
 2.220446e-07 4.37394775e-02
+
 2.220446e-06 9.44807071e-02
+
 2.220446e-05 1.42053519e-01
+
 2.220446e-04 2.95683135e-01
+
 2.220446e-03 4.69592530e-01
+
 2.220446e-02 9.24796530e-01
+
 2.220446e-01 1.61864355e+00
 
 MATLAB 代码如下：
+
+
 
 ```matlab
 H = hilb(20); 
@@ -2816,11 +3122,11 @@ Tikhonov 正则化通过引入 $k$ 阶微分算子对解向量 $x$ 施加额外�
 
 $$\varphi_{\alpha}(x) = ||Fx-y||_2^2 + \alpha ||Lx||_2^2$$
 
-其中 $L=D_k$ 是 $k$ 阶微分算子。对于 $k=1，$L=D_1$ 是定义的 $(n-1) \times n$ 微分算子：
+其中 $L=D_k$ 是 $k$ 阶微分算子。对于 $k=1$，$L=D_1$ 是定义的 $(n-1) \times n$ 微分算子：
 
 $$D_1 = \begin{pmatrix} -1 & 1 & 0 & \dots & 0 \\ 0 & -1 & 1 & \dots & 0 \\ \vdots & & \ddots & \ddots & \vdots \\ 0 & 0 & \dots & -1 & 1 \end{pmatrix}$$
 
-对于 $k=2，$L=D_2$ 是定义的 $(n-2) \times n$ 微分算子：
+对于 $k=2$，$L=D_2$ 是定义的 $(n-2) \times n$ 微分算子：
 
 $$D_2 = \begin{bmatrix} 1 & -2 & 1 & 0 & \dots & 0 & 0 & 0 \\ 0 & 1 & -2 & 1 & \dots & 0 & 0 & 0 \\ \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\ 0 & 0 & 0 & 0 & \dots & 1 & -2 & 1 \end{bmatrix}$$
 
@@ -2836,7 +3142,7 @@ $$\varphi_{\alpha}(x) = ||Fx-y||_2^2 + \alpha||D_2x||_2^2 = ||Fx-y||_2^2 + \alph
 
 $$(F^T F + \alpha L^T L)x^{\alpha} = F^T y \quad (3.15)$$
 
-Hansen [22] 考虑了使用广奇异值分解 (GSVD) 来 $(F, L)$ 的解，其中 $F \in \mathbb{R}^{m \times n}$ 且 $L \in \mathbb{R}^{n \times n}$。
+Hansen [22] 考虑了使用广义奇异值分解 (GSVD) 来 $(F, L)$ 的解，其中 $F \in \mathbb{R}^{m \times n}$ 且 $L \in \mathbb{R}^{n \times n}$。
 
 ### 3.2.3 L 曲线
 
@@ -2844,7 +3150,7 @@ Hansen [22] 考虑了使用广奇异值分解 (GSVD) 来 $(F, L)$ 的解，其�
 
 ### 3.2.4 差异原理
 
-Linz 和 Wang [33] 考虑了 $Fx=b$ 问题，其中 $F$ 是一个 $m \times n$ 矩阵，$m \ge n，$x \in \mathbb{R}^n$ 且 $b \in \mathbb{R}^m$。他指出，如果线性方程组的解 $x$ 满足条件，则被称为*可接受的*：
+Linz 和 Wang [33] 考虑了 $Fx=b$ 问题，其中 $F$ 是一个 $m \times n$ 矩阵，$m \ge n$，$x \in \mathbb{R}^n$ 且 $b \in \mathbb{R}^m$。他指出，如果线性方程组的解 $x$ 满足条件，则被称为*可接受的*：
 
 $$||Fx-b|| \le \varepsilon$$
 
@@ -2862,15 +3168,12 @@ $$||Fx-b|| \le \varepsilon \quad (3.19)$$
 
 这等于求解正规组，而 Morozov 差异原理是选择 $\alpha$ 以使得 (3.20-3.21) 满足的问题。
 
-
-
-
-
 ![](img/9923905aaa045c7096d90695cee3e3bc_106_0.png)
 
 ## 4 求解非线性方程组
 
 ### 摘要
+
 本章讨论了使用 MATLAB® 和 Python 求解非线性方程。分为两个部分：第一部分介绍了求解单非线性方程的数值方法。第二部分讨论了求解非线性方程组的数值方法。
 
 ## 4.1 求解单非线性方程
@@ -2909,7 +3212,7 @@ function x = Bisection(f, a, b, Epsilon)
 end
 ```
 
-现在，我们可以从命令行提示符调用 Bisection 函数：
+现在，我们可以从命令行提示符调用 `Bisection` 函数：
 
 ```matlab
 >> format long
@@ -2925,9 +3228,10 @@ s =
 ```
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_108_0.png)
+
 图 4.1：函数 $e^{-x}+0.5$（虚线）和 $\cos(x)$（点划线）的图。两条曲线交点圆的 x 坐标是 $[4,6]$ 上 $e^{-x}-\cos(x)+0.5=0$ 的根。
 
-实现 Bisection 函数的 Python 代码为：
+实现 `Bisection` 函数的 Python 代码为：
 
 ```python
 def Bisection(f, a, b, Eps):
@@ -2953,7 +3257,7 @@ print('Approximate root is:', x, '\nIterations:', Iters)
 
 ### 4.1.2 牛顿-拉夫线条
 
-如果函数 $f(x)$ 在点 $x_0$ 附近连续，则可以写为形式：$f(x) = f(x_0) + f'(x_0)(x-x_0) + \mathcal{O}((x-x_0)^2)$。现在如果 $x_1$ 是 $f(x)$ 的根，则 $f(x_1) = 0$。根据上述方程：$x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}$，前提是 $f'(x_0) \neq 0$。牛顿-拉夫线条是一种通过初始猜测 $x_0$ 寻找 $f(x)$ 近似根的迭代方法。从 $x_0$ 开始，生成一个序列 $x_0, x_1, x_2, \dots，$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$。该序列收敛于 $f$ 的最近根。使用牛顿-拉夫线条寻找 $f(x) = x^2 - 3$ 的根，注意到 $f'(x) = 2x$，因此迭代方法的形式为 $x_{n+1} = x_n - \frac{x_n^2-3}{2x_n}$。MATLAB 函数 `NewtonRaphson` 实现了牛顿-拉夫线条：
+如果函数 $f(x)$ 在点 $x_0$ 附近连续，则可以写为形式：$f(x) = f(x_0) + f'(x_0)(x-x_0) + \mathcal{O}((x-x_0)^2)$。现在如果 $x_1$ 是 $f(x)$ 的根，则 $f(x_1) = 0$。根据上述方程：$x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}$，前提是 $f'(x_0) \neq 0$。牛顿-拉夫线条是一种通过初始猜测 $x_0$ 寻找 $f(x)$ 近似根的迭代方法。从 $x_0$ 开始，生成一个序列 $x_0, x_1, x_2, \dots$，$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$。该序列收敛于 $f$ 的最近根。使用牛顿-拉夫线条寻找 $f(x) = x^2 - 3$ 的根，注意到 $f'(x) = 2x$，因此迭代方法的形式为 $x_{n+1} = x_n - \frac{x_n^2-3}{2x_n}$。MATLAB 函数 `NewtonRaphson` 实现了牛顿-拉夫线条：
 
 ```matlab
 function [x, Iter] = NewtonRaphson(f, fp, x0, Epsilon)
@@ -2968,7 +3272,7 @@ function [x, Iter] = NewtonRaphson(f, fp, x0, Epsilon)
 end
 ```
 
-从命令行提示符调用 NewtonRaphson 函数：
+从命令行提示符调用 `NewtonRaphson` 函数：
 
 ```matlab
 >> format long
@@ -3002,7 +3306,9 @@ def NewtonRaphson(f, fp, x0, Eps):
 ```
 
 使用 $x_0=1.0$ 和 $x_0 = -1.0$ 运行上述代码：
+
 Approximate root is: 1.732050813734531, Iterations: 5
+
 Approximate root is: -1.732050813734531, Iterations: 5
 
 ### 4.1.3 截线法
@@ -3049,33 +3355,23 @@ $f(x_1) = g(x_1) - x_1 = 0 \Rightarrow x_1 = g(x_1)$
 
 $x_{n+1} = g(x_n)$
 
-
-
-
-
-## 求解单个非线性方程
+## 4.2 求解单个非线性方程
 
 为了展示迭代法的工作原理，我们将将其应用于寻找函数的根
 
-```
 $f(x) = x^2 - 3$
-```
 
 将函数 $x^2 - 3$ 写成 $g(x)$ 的形式。一种可能的选择是写成：
 
-```
-$f(x) = x^2 - 3 = x^2 + 1 - 4 = (x+1)^2 - 4$```
+$f(x) = x^2 - 3 = x^2 + 1 - 4 = (x+1)^2 - 4$
 
 如果 $x^*$ 是 $f(x)$ 的一个根，那么：
 
-```
 $f(x^*) = (x^*+1)^2 - 4 \implies (x^*+1)^2 = 4$
-```
 
 从初始点 $x_0$ 开始，寻找 $f(x)$ 根的迭代法为：
 
-```
-$x^{(n+1)} = \frac{(x^{(n)}+1)^2}{4}$```
+$x^{(n+1)} = \frac{(x^{(n)}+1)^2}{4}$
 
 以下 MATLAB 代码使用迭代法计算函数 $f(x) = x^2 - 3$ 的一个根：
 
@@ -3092,6 +3388,8 @@ end
 ```
 
 在命令行提示符中输入以下指令：
+
+
 
 ```matlab
 >> g = @(x) (x+1)^2/4;
@@ -3136,19 +3434,23 @@ Iterations: 59
 **注意：** 值得注意的是，函数 $g(x)$ 的选择不是唯一的。例如，对于函数 $f(x) = x^2-3$，可以使用以下迭代形式：
 
 1. $x^{(n+1)} = \frac{4-(x^{(n)}-1)^2}{2}$
+
 2. $x^{(n+1)} = \frac{(3-x^{(n)})(1+x^{(n)})}{2}$
+
 3. $x^{(n+1)} = \frac{(x^{(n)}+3)(x^{(n)}-1)}{2}$
 
 迭代 $x_{n+1} = \frac{3}{x_n}$ 是无法工作的。
 
 ### 4.1.5 使用 MATLAB 和 Python 的 solve 函数
 
-MATLAB solve 函数可以寻找非线性方程 $f(x)=0$ 的所有根。MATLAB 工具箱解析解析寻找 $f(x)=0$ 的根。
+MATLAB `solve` 函数可以寻找非线性方程 $f(x)=0$ 的所有根。MATLAB 工具箱解析寻找 $f(x)=0$ 的根。
 
 要求解非线性方程：
 
 1. $x^2-3^x = 0$
+
 2. $e^{-x} = \sin x$
+
 3. $x^3+\cos x = \ln x$
 
 我们可以使用 MATLAB 命令：
@@ -3190,8 +3492,11 @@ NotImplementedError: No algorithms implemented to solve x**3 + log(x)
 在本节中，考虑非线性方程组：
 
 $f_1(x_1,...,x_n) = 0$
+
 $f_2(x_1,...,x_n) = 0$
+
 $...$
+
 $f_n(x_1,...,x_n) = 0$
 
 其中 $f_1,f_2,...,f_n$ 是关于变量 $x_1,...,x_n$ 的非线性函数。
@@ -3227,6 +3532,7 @@ $\mathbf{x}^{(n+1)} = \mathbf{x}^{(n)} - J^{-1}(\mathbf{x}^{(n)})\mathbf{f}(\mat
 **例 4.1** 使用 MATLAB 求解非线性方程组：
 
 $x^2+y^2 = 30$
+
 $-x^2+y^2 = 24$
 
 我们写为：
@@ -3240,6 +3546,7 @@ $J(x,y) = \begin{pmatrix} 2x & 2y \\ -2x & 2y \end{pmatrix}$
 从初始猜测 $z^0 = (x^0, y^0)^T$ 开始，迭代法为：
 
 $z^{(n+1)} = z^{(n)} - J^{-1}(z^{(n)})f(z^{(n)})$
+
 $= \begin{pmatrix} x^{(n)} \\ y^{(n)} \end{pmatrix} - \begin{pmatrix} 2x^{(n)} & 2y^{(n)} \\ -2x^{(n)} & 2y^{(n)} \end{pmatrix}^{-1} \begin{pmatrix} x^{(n)^2 + y^{(n)^2} \\ -x^{(n)^2 + y^{(n)^2} \end{pmatrix}$
 
 以下 MATLAB 代码实现了上述问题的求解，从初始猜测 $[1,1]^T$ 开始。
@@ -3251,7 +3558,7 @@ function [z, Iterations] = Newton_sys(f, J, z0, Eps)
   z = z0 - IJ * f(z0);
   Iterations = 0;
   while norm(z-z0) >= Eps
-    z0 = z;
+    z0 = z
     z = z0 - IJ * f(z0);
     Iterations = Iterations + 1;
   end
@@ -3303,14 +3610,12 @@ y = 5.196152422706632
 **例 4.2** 使用牛顿法求解非线性方程组 [47]:
 
 | $3x_1 - \cos x_2 x_3 - 0.5$ | = 0 |
+
 | $x_1^2 - 81(x_2+0.1)^2 + \sin x_3 + 1.06$ | = 0 |
+
 | $\frac{10\pi-3}{e^{-x_1 x_2}+20x_3}$ | = 0 |
 
-
-
-
-
-# 求解非线性方程组
+### 求解非线性方程组
 
 我们写作：
 
@@ -3346,10 +3651,12 @@ Iterations = 4
 该系统的解给出：
 
 x1 = 0.500000000000000
+
 x2 = -0.000000000000000
+
 x3 = -0.523598775598299
 
-使用 Python，可以通过调用函数 Newton_sys 如下求解此示例：
+使用 Python，可以通过调用函数 `Newton_sys` 如下求解此示例：
 
 ```python
 In [38]: f = lambda z: array([3*z[0]-cos(z[1]*z[2])-3/2;
@@ -3365,8 +3672,11 @@ In [41]: z, Iterations = Newton_sys(f, J, z0, Eps)
 In [42]: print('Approximate solution: (Iterations = ', Iterations,')\nx = ', z[0], '\ny = ', z[1], '\nz = ', z[2])
 
 近似解：(Iterations = 8 )
+
 x = 0.4999999999999994
+
 y = -1.6530395442910908e-17
+
 z = -0.5235987755982988
 
 # 第二部分
@@ -3388,6 +3698,7 @@ z = -0.5235987755982988
 | $f(x)$ | $f(x_0)$ | $f(x_1)$ | $\dots$ | $f(x_n)$ |
 
 其中 $x_i = x_j$ 对于 $i \neq j$ 且 $x_0 < x_1 < \dots < x_n$。本章讨论了一些插值方法及其在 MATLAB 和 Python 中的实现。
+
 - 第1节讨论了拉格朗日插值及其在 MATLAB 中的实现。
 - 第2节讨论了牛顿插值以及在 MATLAB 和 Python 中寻找系数的技术。
 - 第3节讨论了均差法插值。
@@ -3403,27 +3714,29 @@ z = -0.5235987755982988
 
 $L_i(x_j) = \begin{cases} 1, & i=j \\ 0, & i \neq j \end{cases}$
 
+
+
 那么插值多项式 $P_n(x)$ 定义为：
 
-$P_n(x) = L_0(x)y_0 + L_1(x)y_1 + \dots + L_n(x)y_n = \sum_{i=0}^{n} L_i(x)y_i$ (5.1)
+$$P_n(x) = L_0(x)y_0 + L_1(x)y_1 + \dots + L_n(x)y_n = \sum_{i=0}^{n} L_i(x)y_i \tag{5.1}$$
 
-多项式 $P_n(x)$ 是 $n$ 次的，因为对于所有的 $i = 0, \dots, n$，$_i(x)$ 都是 $n$ 次多项式。此外，$P_n(x)$ 满足：
+多项式 $P_n(x)$ 是 $n$ 次的，因为对于所有的 $i = 0, \dots, n$，$L_i(x)$ 都是 $n$ 次多项式。此外，$P_n(x)$ 满足：
 
-$P_n(x) = \sum_{i=0}^{n} L_i(x)y_i = L_j(x)y_j = y_j, \quad j = 0, \dots$。这证明了 $P_n(x)$ 插值了数据。
+$$P_n(x) = \sum_{i=0}^{n} L_i(x)y_i = L_j(x)y_j = y_j, \quad j = 0, \dots$$。这证明了 $P_n(x)$ 插值了数据。
 
 为了构造 $n+1$ 个多项式 $L_i(x), i = 0, \dots, n$，注意 $\psi(x) = (x-x_0)(x-x_1)\dots(x-x_n)$ 的根为 $x_0, x_1, \dots, x_n$。如果 $\tilde{L}(x)$ 定义为
 
-$\tilde{L}(x)=\frac{\psi(x)}{x-x_i} = (x-x_0)(x-x_1)\dots(x_{i-1})(x_{i+1})\dots(x-x_n)$，那么 $x_i$ 不是 $\tilde{L}(x)$ 的根。
+$$\tilde{L}(x)=\frac{\psi(x)}{x-x_i} = (x-x_0)(x-x_1)\dots(x_{i-1})(x_{i+1})\dots(x-x_n)$$，那么 $x_i$ 不是 $\tilde{L}(x)$ 的根。
 
 现在，可以使用公式从 $\tilde{L}(x)$ 得到 $L_i(x)$：
 
-$L_i(x) = \frac{\tilde{L}(x)}{\tilde{L}(x_i)} = \frac{(x-x_0)(x-x_1)\dots(x-x_n)}{(x_i-x_0)(x_i-x_1)\dots(x_i-x_n)}$ (5.2)
+$$L_i(x) = \frac{\tilde{L}(x)}{\tilde{L}(x_i)} = \frac{(x-x_0)(x-x_1)\dots(x-x_n)}{(x_i-x_0)(x_i-x_1)\dots(x_i-x_n)} \tag{5.2}$$
 
 多项式 $L_i(x)$ 也可以写作：
 
-$L_i(x) = \prod_{j=0}^{n} \frac{x-x_j}{x_i-x_j}$，且拉格朗日多项式 $P_n(x)$ 可以写作：
+$$L_i(x) = \prod_{j=0}^{n} \frac{x-x_j}{x_i-x_j}$$，且拉格朗日多项式 $P_n(x)$ 可以写作：
 
-$P_n(x) = \sum_{i=0}^{n} \prod_{j=0}^{n} \frac{x-x_j}{x_i-x_j}y_i$
+$$P_n(x) = \sum_{i=0}^{n} \prod_{j=0}^{n} \frac{x-x_j}{x_i-x_j}y_i$$
 
 下面的 MATLAB 函数 `LagrangeInter.m` 使用长度为 $n$ 的向量 $\mathbf{x}$ 和 $\mathbf{y}$ 给出的数据点构造拉格朗日插值多项式 $P_n(x)$。它在 $x=t$ 处评估 $P_n(x)$ 并返回结果：
 
@@ -3484,7 +3797,7 @@ runfile('D:/PyFiles/Lagrangep.py', wdir='D:/PyFiles')
 
 ### 5.1.2 拉格朗日插值的唯一性
 
-在本中，将使用代数基本定理来证明插值多项式是唯一的。它指出任何复系数的 $n$ 次多项式最多有 $n$ 个零。因此，如果一个 $n$ 次多项式 $p(x)$ 有多于 $n$ 个根，那么它必须是零多项式。
+在本节中，将使用代数基本定理来证明插值多项式是唯一的。它指出任何复系数的 $n$ 次多项式最多有 $n$ 个零。因此，如果一个 $n$ 次多项式 $p(x)$ 有多于 $n$ 个根，那么它必须是零多项式。
 
 为了证明插值多项式的唯一性，假设 $p_n(x)$ 和 $q_n(x)$ 是 $n$ 次多项式，且插值给定的数据 $(x_i, y_i)$，$i=0, \dots, n$。令 $r(x)=p_n(x)-q_n(x)$，对于所有 $x \in [x_0,x_n]$。由于 $p_n(x)$ 和 $q_n(x)$ 都是 $n$ 次的，则 $r(x)$ 是 $n$ 次的且 $r(x_i)=0$ 对于 $i=0, \dots, n$，这说明 $r(x)$ 是零多项式，除非...
 
@@ -3494,11 +3807,7 @@ runfile('D:/PyFiles/Lagrangep.py', wdir='D:/PyFiles')
 
 定义插值误差：
 
-$E_n(x)=f(x)-p_n(x), x \in[a,b]$ (5.3)
-
-
-
-
+$$E_n(x)=f(x)-p_n(x), x \in[a,b] \tag{5.3}$$
 
 ## 牛顿插值法
 
@@ -3506,39 +3815,29 @@ $E_n(x)=f(x)-p_n(x), x \in[a,b]$ (5.3)
 
 根据 $E_n(x)$ 和 $\psi(x)$ 的定义，$E^{(n+1)}(x) = f^{(n+1)}(x)$ 且 $\psi^{(n+1)} = (n+1)!$。那么，
 
-```
-$G^{(n+1)}(x) = f^{(n+1)}(x) - \frac{(n+1)!}{\psi(t)} E_n(t)$
-```
+$$G^{(n+1)}(x) = f^{(n+1)}(x) - \frac{(n+1)!}{\psi(t)} E_n(t)$$
 
 在 $x=\xi$ 时，
 
-```
-$G^{(n+1)}(\xi) = f^{(n+1)}(\xi) - \frac{(n+1)!}{\psi(t)} E_n(t) = 0$，
-```
+$$G^{(n+1)}(\xi) = f^{(n+1)}(\xi) - \frac{(n+1)!}{\psi(t)} E_n(t) = 0$$，
 
 由此得：
 
-```
-$E_n(t) = \frac{\psi(t)}{n+1} f^{(n+1)}(\xi)$
-```
+$$E_n(t) = \frac{\psi(t)}{n+1} f^{(n+1)}(\xi)$$
 
 ## 5.2 牛顿插值
 
 对于一组数据点 $(x_j, f(x_j))$，$j=0,\dots,n$，问题是找到一个次数不超过 $n$ 的多项式 $P_n(x)$，使得对于所有的 $j=0,\dots,n$ 都有 $P_n(x_j)=f(x_j)$。
 
-由下式定义的拉格日插值：
+由下式定义的拉格朗日插值：
 
-```
-$P_n(x) = \sum_{j=0}^n L_j(x)f(x_j)，
-```
+$$P_n(x) = \sum_{j=0}^n L_j(x)f(x_j)$$
 
 其中
 
-```
-$L_i(x) = \prod_{j \neq i}^n \frac{x-x_j}{x_i-x_j}$,
-```
+$$L_i(x) = \prod_{j \neq i}^n \frac{x-x_j}{x_i-x_j}$$
 
-存在一个问题，即无法从 $L_i(x)$ 得到 $L_{i+1}(x)$（没有迭代方法可以计算多项式 $L_i(x),i=0,\dots,n$）。这使得算法的复杂度很高。因此，牛顿插值多项式可以看作拉格日多项式的替代方案。
+存在一个问题，即无法从 $L_i(x)$ 得到 $L_{i+1}(x)$（没有迭代方法可以计算多项式 $L_i(x),i=0,\dots,n$）。这使得算法的复杂度很高。因此，牛顿插值多项式可以看作拉格朗日多项式的替代方案。
 
 ### 5.2.1 方法描述
 
@@ -3548,17 +3847,17 @@ $P_0(x) = c_0 = f(x_0)$。
 
 然后通过迭代得到 $P_k$：
 
-$P_k(x) = P_{k-1}(x) + c_k \prod_{j=0}^{k-1} (x - x_j),$ (5.4)
+$$P_k(x) = P_{k-1}(x) + c_k \prod_{j=0}^{k-1} (x - x_j) \tag{5.4}$$
 
 其中 $c_k$ 是一个常数，通过将数据点 $(x_k, f(x_k))$ 代入 $P_k(x)$ 的方程来确定，使得它满足关系 $P_k(x) = f(x_j)$，$j = 0,\dots,n$。
 
 根据牛顿插值的迭代公式，牛顿多项式通过方程 (5.4) 插值数据 $(x_0, f(x_0)), \dots, (x_k, f(x_k))$，形式为：
 
-$P_k(x) = c_0 + c_1(x-x_0) + c_2(x-x_0)(x-x_1) + \dots + c_k(x-x_0)\dots(x-x_{k-1}),$ (5.5)
+$$P_k(x) = c_0 + c_1(x-x_0) + c_2(x-x_0)(x-x_1) + \dots + c_k(x-x_0)\dots(x-x_{k-1}) \tag{5.5}$$
 
 其中 $P_0(x) = c_0 = f(x_0)$。
 
-对于给定的点 $(x_j, f(x_j))$，MATLAB 函数 ComputeNewton-Coeff 返回牛顿多项式的系数。
+对于给定的点 $(x_j, f(x_j))$，MATLAB 函数 `ComputeNewtonCoefs` 返回牛顿多项式的系数。
 
 ```matlab
 function c = ComputeNewtonCoefs(x, f)
@@ -3575,7 +3874,7 @@ function c = ComputeNewtonCoefs(x, f)
     end
 ```
 
-另一个 MATLAB 函数 NewtonInterp.m 调用函数 ComputeNewton 来重建牛顿多项式。它接收一组数据点 $(x_j, f(x_j)),j=0,\dots,n$ 和一个值 $\xi$，并返回从牛顿插值多项式中得到的对应值 $y_i$。`NewtonInterp.m` 函数的代码为：
+另一个 MATLAB 函数 `NewtonInterp.m` 调用函数 `ComputeNewtonCoefs` 来重建牛顿多项式。它接收一组数据点 $(x_j, f(x_j)),j=0,\dots,n$ 和一个值 $\xi$，并返回从牛顿插值多项式中得到的对应值 $y_i$。`NewtonInterp.m` 函数的代码为：
 
 ```matlab
 function yi = NewtonInterp(x, xi)
@@ -3589,25 +3888,41 @@ function yi = NewtonInterp(x, xi)
         w(k) = prod(z(1:k));
     end
     yy = sum(c.*w
+```
 
-为了测试函数是否正确，从函数 $f(x) = \frac{\cos(4x)}{1+x}, 0 \leq 2$ 采样了10个点 $(x_j, f(x_j)), j=0,\dots,9$ 来生成牛顿多项式，然后用于估计函数在101个点处的值。MATLAB 脚本 NewtonInterp.m 用于绘图。其代码为：
+为了测试函数是否正确，从函数 $f(x) = \frac{\cos(4x)}{1+x}, 0 \leq 2$ 采样了10个点 $(x_j, f(x_j)), j=0,\dots,9$ 来生成牛顿多项式，然后用于估计函数在101个点处的值。MATLAB 脚本 `NewtonInterp.m` 用于绘图。其代码为：
 
 ```matlab
 clear; clc
+
 x = linspace(0, 2, 10);
+
 y = cos(4*x)/(1+x);
+
 xx = linspace(0, 2, 101);
+
 yy = zeros(size(xx));
+
 j = 1 : length(yy)
+
 yy(j) = NewtonInterp(x, y, xx);
+
 plot(x, y, 'bo', xx, '-m', 'LineWidth', 3);
+
 xlabel('x');
+
 ylabel('y');
+
 legend('Data points (x, y)', 'Newton Polynomial');
+
 axis([-0.1, 2, -0.8, 1]);
+
 set(gca, 'fontweight', 'bold');
+
 grid on;
+
 set(gca, 'XTick', 0:2);
+
 set(gca, 'YTick', -0.8:1);
 ```
 
@@ -3615,56 +3930,95 @@ set(gca, 'YTick', -0.8:1);
 
 ```python
 from numpy import zeros, prod, sin, linspace, arange
+
 import matplotlib.pyplot as plt
 
 def ComputeNewtonCoefs(x, f):
+
     n = len(x)
+
     c = zeros(len(x))
+
     c[0] = f[0]
+
     for j in range(1, n):
+
         z = zeros(j+1)
+
         z[0] = 1.0
+
         for k in range(j):
+
             z[k+1] = x[j]-x[k]
+
         pml = 0.0
+
         w = zeros(j)
+
         for k in range(j):
+
             w[k] = prod(z[:k+1])
+
             pml += (c[k]+w[k])
+
         c[j] = (f[j]-pml)/prod(z[:j+1])
+
     return c
 
 def NewtonInterp(x, y, xi):
+
     c = ComputeNewtonCoefs(x, y)
+
     n = len(x)
+
     z = zeros(n)
+
     w = zeros(n)
+
     z[0] = 1.0
+
     for k in range(n-1):
+
         z[k+1] = xi-x[k]
+
     for k in range(n):
+
         w[k] = prod(z[:k+1])
+
     yy = sum(c*w)
+
     return yy
 
 x = linspace(0, 2, 10)
+
 y = sin(4*x)/(1+x)
+
 xx = linspace(0, 2, 101)
+
 yy = zeros(len(xx))
+
 for j in range(len(yy)):
+
     yy[j] = NewtonInterp(x, y, xx[j])
 
 plt.plot(x, y, 'bo', label='Data points (x, y)', lw=4)
+
 plt.plot(xx, yy, '-.', label='Newton Polynomial', lw=3)
+
 plt.xlabel('x')
+
 plt.ylabel('y')
+
 plt.legend()
+
 plt.axis([-0.1, 2, -0.8, 1])
 ```
 
+
+
 ![img/9923905aaa045c7096d90695ceee3bc_130_0.png](FIGURE 5.1: 使用由10个数据点构建的牛顿插值多项式对函数 $\cos(4x)/(1+x)$ 在101点处的估计。)
 
-## 5.2.2 牛顿差
+## 5.2.2 牛顿差分
 
 因此，计算牛顿多项式被限于计算多项式系数 $c_0, \dots, c_n$。差分法是计算牛顿插值多项式系数 $c_j, j=0,\dots, n$ 的一种方法。在讨论牛顿差分表的构造之前，将使用以下符号：
 
@@ -3699,42 +4053,58 @@ $c_k = \frac{f[x_1, \dots, x_k]-f[x_0, \dots, x_{k-1}]}{x_k-x_0} = f[x_0, \dots,
 
 ![img/9923905aaa045c7096d90695ceee3bc_131_0.png](FIGURE 5.2: 使用由10个数据点构建的牛顿插值多项式对函数 $\sin(4x)/(1 + x)$ 在101点处的估计。)
 
-
-
-
-
-## 牛顿插值法
+## 5.2.3 牛顿插值法
 
 MATLAB 函数 `NewtonCoefs.m` 接收数据点 $(x_j, f(x_j))$ 并利用它们计算牛顿均差差分表，从而计算牛顿插值多项式的系数。它同时返回差分表和系数。
 
 ```matlab
 function [ndd, Coef] = NewtonCoefs(x, f)
+
 % The function NewtonCoefs receives data points (x-j, ...)
+
     f(x-j) and uses them
+
 % to compute the Newton's divided difference table and ...
-    
+
 % Coefficients of Newton's interpolating polynomial. It ...
+
     % returns both the
+
 % divided difference table and coefficients.
+
 Coef = zeros(1, length(x))
+
 dd = zeros(length(x), length(x)+1)
+
 ndd(1, :) = x';
+
 dd(2, :) = f';
+
 for j = 3 : length(x)
+
     for i = j-1 : length(x)
+
         k = j;
+
         ndd(i, j) = (ndd(i, j-1)-ndd(i-1, k))/(x(i)-x(k));
+
     end
+
 end
+
 for j = 1 : length(x)
+
     Coef(j) = ndd(j, j+1);
+
 ```
 
 为了测试函数 `NewtonCoefs.m` 的性能，考虑了五个数据点 $(x_j, f(x_j))$，$j=0,\dots,4$，其中 $f(x)=4e^{-x^2}\sin(2\pi x)$，$x \in [0,1]$。使用以下 MATLAB 指令测试代码：
 
 ```matlab
 >> x = linspace(0, 1, 5);
->> y = 4*exp(-x.^2).sin(2*pi*x);
+
+>> y = 4*exp(-x.^2).*sin(2*pi*x);
+
 >> [ndd, Coef] = NewtonCoefs(x, y)
 ```
 
@@ -3749,7 +4119,7 @@ Coef = 15.0306 -60.1224 95.9341 -63.0836
 
 使用这些系数得到的牛顿插值多项式如图 5.3 所示。
 
-## 数据插值
+## 5.2.4 数据插值
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_134_0.png)
 
@@ -3767,7 +4137,8 @@ MATLAB 函数 `interp1` 接收两个向量 $x$ 和 $y$ 以及第三个参数（�
 
 ```matlab
 >> x = linspace(0, 3, 8);
->> y = exp(-x).sin(x);
+
+>> y = exp(-x).*sin(x);
 ```
 
 定义用于计算插值多项式的点 $s$：
@@ -3791,8 +4162,10 @@ MATLAB 函数 `interp1` 接收两个向量 $x$ 和 $y$ 以及第三个参数（�
 在任何给定的点 $s_k,k=0,\dots,99$，通过确定 $i$ 使得 $x_i \le s \le x_{i+1}$ 并使用连接 $(x_i,y_i)$ 和 $(x_{i+1},y_{i+1})$ 的直线方程对多项式进行赋值。最后返回结果 $P$。在 MATLAB 中绘制数据和插值多项式：
 
 ```matlab
->> plot(x, y, 'ro', s, ':b', 'LineWidth', 3);
+>> plot(x, y, 'ro', s, P, ':b', 'LineWidth', 3);
+
 >> xlabel('x');
+
 >> ylabel('y');
 ```
 
@@ -3804,8 +4177,11 @@ MATLAB 函数 `interp1` 接收两个向量 $x$ 和 $y$ 以及第三个参数（�
 
 ```matlab
 >> P = spline(x, y, xx);
->> plot(x, y, 'ro', xx, ':b', 'LineWidth', 3);
+
+>> plot(x, y, 'ro', xx, P, ':b', 'LineWidth', 3);
+
 >> xlabel('x');
+
 >> ylabel('y');
 ```
 
@@ -3825,11 +4201,17 @@ MATLAB 函数 `interp1` 接收两个向量 $x$ 和 $y$ 以及第三个参数（�
 
 ```matlab
 Q =
+
 form: 'pp'
+
 breaks: [0 0.4286 0.8571 1.2857 1.7143 2.1429 2.5714 3]
+
 coeffs: [7x double]
+
 pieces: 7
+
 order: 4
+
 dim: 1
 ```
 
@@ -3845,6 +4227,7 @@ dim: 1
 
 ```matlab
 >> Error = norm(P-S, inf)
+
 Error = 0
 ```
 
@@ -3856,9 +4239,13 @@ Error = 0
 
 ```matlab
 >> P = pchip(x, y, xx);
->> plot(x, y, 'ro', xx, ':b', 'LineWidth', 2);
+
+>> plot(x, y, 'ro', xx, P, ':b', 'LineWidth', 2);
+
 >> xlabel('x');
+
 >> ylabel('y');
+
 >> legend('The data (x, y)', 'The pchip P(x)')
 ```
 
@@ -3874,20 +4261,23 @@ Error = 0
 
 ```matlab
 Q =
+
 form: 'pp'
+
+breaks: [0 0.4286 0.8571 1.2857 1.7143 2.1429 2.5714 3]
+
+coeffs: [7x4 double]
+
+pieces: 7
+
+order: 4
+
+dim: 1
 ```
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_137_0.png)
 
 图 5.6：使用 pchip 函数的原始数据 $(x,y)$ 和通过插值获得的数据 $(xx,P(xx))$。
-
-```matlab
-breaks: [0 0.4286 0.8571 1.2857 1.7143 2.1429 2.5714 3]
-coeffs: [7x4 double]
-pieces: 7
-order: 4
-dim: 1
-```
 
 这与使用 `spline` 命令得到的结果相似。区别在于系数的值，因此也在于定义插值多项式 7 个段的方程。
 
@@ -3895,7 +4285,9 @@ dim: 1
 
 ```matlab
 >> S = ppval(Q, xx);
+
 >> Error = norm(P - S, inf)
+
 Error = 0
 ```
 
@@ -3927,113 +4319,110 @@ MATLAB 命令：
 
 ## 5.4 Python 中的数据插值
 
-Python 的 `scipy.interpolate` 库包含了各种用于数据插值的函数 [18]。这些函数包括 `CubicHermiteSpline`、`CubicSpline`、`LinearNDInterpolator`、`NearestNDInterpolator`、`interp1`、`lagrange`、`pade`、`pchip`、`pchip.interpolate`。还有许多用于多维插值的函数。在本节中将讨论 Python 的插值函数。
+Python 的 `scipy.interpolate` 库包含了各种用于数据插值的函数 [18]。这些函数包括 `CubicHermiteSpline`、`CubicSpline`、`LinearNDInterpolator`、`NearestNDInterpolator`、`interp1d`、`lagrange`、`pade`、`pchip`、`pchip.interpolate`。还有许多用于多维插值的函数。在本节中将讨论 Python 的插值函数。
 
+### 5.4.1 函数 interp1d
 
-
-
-
-# Python 中的数据插值
-
-## 5.4.1 函数 interp1
-
-Python 的函数 `interp1` 的语法与 MATLAB 函数 `interp1` 相似。如果没有接收到任何插值类型，它将使用线性分段多项式对给定的数据进行三次插值。如果接收到类型（二次、三次等），则将使用该类型的连续分段多项式对给定的数据进行插值。
+Python 的函数 `interp1d` 的语法与 MATLAB 函数 `interp1` 相似。如果没有接收到任何插值类型，它将使用线性分段多项式对给定的数据进行插值。如果接收到类型（二次、三次等），则将使用该类型的连续分段多项式对给定的数据进行插值。
 
 例如，从函数
 
-选取的十个等距样本
-
-```
 $$\cos(4x)\frac{1}{1+x}$$
-```
 
-将根据 `interp1` 函数使用线性、二次和三次分段多项式对函数进行插值。Python 脚本 `interp1d` 使用 `interp1` 实现了插值：
+选取的十个等距样本将根据 `interp1d` 函数使用线性、二次和三次分段多项式对函数进行插值。Python 脚本 `interp1d` 使用 `interp1d` 实现了插值：
 
 ```python
 from numpy import cos, linspace, arange
-from scipy.interpolate import interp1
-import matplotlib.pyplot as plt
-x = linspace(0, 3, 10)
-y = cos(4*x)/(1+x)
-xx = interp1(x, y)
-Quadd = interp1(x, y, kind = 'quadratic')
-Cubic = interp1(x, y, kind = 'cubic')
-yyl = Lin1(xx)
-y2 = Quadd(xx)
-yyy3 = Cubic(xx)
 
-plt.subplot(212)
+from scipy.interpolate import interp1d
+
+import matplotlib.pyplot as plt
+
+x = linspace(0, 3, 10)
+
+y = cos(4*x)/(1+x)
+
+xx = linspace(0, 3, 100)
+
+Lin1 = interp1d(x, y)
+
+Quadd = interp1d(x, y, kind='quadratic')
+
+Cubic = interp1d(x, y, kind='cubic')
+
+yy1 = Lin1(xx)
+
+yy2 = Quadd(xx)
+
+yy3 = Cubic(xx)
+
+plt.subplot(211)
+
 plt.plot(x, y, 'bo', label='Data points (x, y)', lw=4)
-plt.plot(xx, yyl, ls='-', color='orange', label='Linear', lw=2)
+
+plt.plot(xx, yy1, ls='-', color='orange', label='Linear', lw=2)
+
 plt.plot(xx, yy2, ls='-', color='purple', label='Quadratic', lw=2)
+
 plt.xlabel('x', fontweight='bold')
+
 plt.ylabel('y', fontweight='bold')
+
 plt.legend()
+
 plt.grid(True, ls=':')
-plt.xticks(arange(0, 0.3, 0.3), fontweight='bold')
+
+plt.xticks(arange(0, 3.1, 0.3), fontweight='bold')
+
 plt.yticks(arange(-0.6, 1.2, 0.2), fontweight='bold')
 
 plt.subplot(212)
+
 plt.plot(x, y, 'bo', label='Data points (x, y)', lw=4)
+
 plt.plot(xx, yy3, ls='-', color='crimson', label='Cubic', lw=2)
+
 plt.xlabel('x', fontweight='bold')
+
 plt.ylabel('y', fontweight='bold')
+
 plt.legend()
+
 plt.grid(True, ls=':')
-plt.xticks(arange(0, 0.3, 0.3), fontweight='bold')
+
+plt.xticks(arange(0, 3.1, 0.3), fontweight='bold')
+
 plt.yticks(arange(-0.6, 1.2, 0.2), fontweight='bold')
 ```
 
-在图 5.7 的图表中的执行此代码。
+
 
 # 数据插值
 
-![](img/9923905aaa045c7096d90695cee3e3bc_140_0.png)
+## 5.4.2 函数 `pchip_interpolate` 和 `CubicSpline` [18]
 
-**5.7. 从 $f(x)=cos(4x)/(1+x), 0\le x\le 3$ 取的 10 个等距样本点使用线性、二次和三次多项式进行插值。**
+这两个函数 `pchip_interpolate` 和 `CubicSpline` 的功能与 MATLAB 的 `pchip` 和 `spline` 相同。我们接收三个参数 (`x`, `y`, `ps`)，前两个参数代表插值数据点，最后一个参数是函数进行近似的点集。
 
-## 5.4.2 函数 pchip_interpolate 和 CubicSpline [18]
-
-这两个函数 `pchip_interpolate` 和 `CubicSpline` 的功能与 MATLAB 的 `pchip` 和 `spline` 相同。我们接收三个参数 (x, y, ps)，前两个参数代表插值数据点，最后一个参数是函数进行近似的点集。
-
-Python 代码 `pchipinterpolate.py` 在 $[0.0,3.0]$ 内对 10 个数据点插值函数 $f(x)=sin(4x)/(1+x)$并使用插值多项式在 101 个数据点上近似函数。
+Python 代码 `pchipinterpolate.py` 在 `[0.0, 3.0]` 内对 10 个数据点插值函数 $f(x)=\sin(4x)/(1+x)$ 并使用插值多项式在 101 个数据点上近似函数。
 
 ```python
-1 from numpy import sin, linspace, arange
-2 from scipy.interpolate import pchip_interpolate, CubicSpline
-3 import matplotlib.pyplot as plt
-4 x = linspace(0, 3, 10)
-5 y = sin(4*x)/(1+x)
-6 xx = linspace(0, 3, 101) 
-7
-8 yyl1 = pchip_interpolate(x, y, xx)
-9 yy2 = CubicSpline(x, y)(xx)
+from numpy import sin, linspace, arange
+from scipy.interpolate import pchip_interpolate, CubicSpline
+import matplotlib.pyplot as plt
+
+x = linspace(0, 3, 10)
+y = sin(4*x)/(1+x)
+xx = linspace(0, 3, 101)
+
+yyl1 = pchip_interpolate(x, y, xx)
+yy2 = CubicSpline(x, y)(xx)
 ```
-
-# Python 中的数据插值
-
-![](img/9923905aaa045c7096d90695cee3e3bc_141_0.png)
-
-图 5.8: 使用函数 `pchip_interpolate` 和 `CubicSpline` 对从 $f(x)=sin(4x)/(1+x), 0\leq x\leq 3$ 取的10个等距样本点进行插值。
-
-```python
-plt.plot(x, y, 'bo', label='Data points (x, y)', lw = 4)
-plt.plot(xx, yy, ls='-', color='orange', label='pchip_interpolate', lw= 2)
-plt.plot(xx, yy, ls='-', color='purple', label='CubicSpline', lw= 2)
-plt.xlabel('x', fontweight='bold')
-plt.ylabel('y', fontweight='bold')
-plt.grid(True)
-plt.xticks(arange(0, 3.3, 0.3), fontweight='bold')
-plt.yticks(arange(-0.6, 1.2, 0.2), fontweight='bold')
-```
-
-在图 5.8 中执行此代码。
 
 ## 5.4.3 Lagrange 插值
 
-Python 函数 `lagrange` 通过拉格朗插值插值给定的数据。它接收两个坐标 $(x,y)$ 通过拉格朗插值创建一个 $n$ 阶多项式。
+Python 函数 `lagrange` 通过拉格朗日插值插值给定的数据。它接收两个坐标 (`x`, `y`) 通过拉格朗日插值创建一个 $n$ 阶多项式。
 
-Python 脚本 `LagrangeInter.py` 使用拉格朗插值根据 $f(x)=(cos(4x))/(1+x)$ 在 10 个数据点上构造。
+Python 脚本 `LagrangeInter.py` 使用拉格朗日插值根据 $f(x)=(\cos(4x))/(1+x)$ 在 10 个数据点上构造。
 
 ```python
 from numpy import cos, linspace, arange
@@ -4041,8 +4430,10 @@ from scipy.interpolate import lagrange
 import matplotlib.pyplot as plt
 
 # 数据插值
-x = linspace(0, 3, 101)
+x = linspace(0, 3, 10)
+y = cos(4*x)/(1+x)
 xx = linspace(0, 3, 101)
+
 poly = lagrange(x, y)
 yyl = poly(xx)
 
@@ -4053,82 +4444,80 @@ plt.xlabel('x', fontweight='bold')
 plt.ylabel('y', fontweight='bold')
 plt.legend()
 plt.grid(True, ls=':')
-plt.xticks(arange(0, 0.3, 0.3), fontweight='bold')
+plt.xticks(arange(0, 3.3, 0.3), fontweight='bold')
 plt.yticks(arange(-0.6, 1.2, 0.2), fontweight='bold')
 ```
 
-运行此代码得到：
-
 # 数值微分与积分
 
-### 摘要
+## 摘要
 
-本章讨论了近似导数和积分数值方法。分为两个部分：第一部分讨论基于有限差分公式的数值微分，第二部分讨论基于柯斯方法的数值积分。这些数值微分积分算法在 MATLAB 和 Python 中实现。
+本章讨论了近似导数和积分数值方法。分为两个部分：第一部分讨论基于有限差分公式的数值微分，第二部分讨论基于柯特兹方法的数值积分。这些数值微分积分算法在 MATLAB 和 Python 中实现。
 
-### 6.1 数值微分
+## 6.1 数值微分
 
 ### 6.1.1 使用有限差分近似导数
 
-设 $x_0 \in (a,b)$ 且 $f \in \mathcal{C}^{n+1}[a,b]$对于 $h>0$ 且 $k\le n$，在 $x_0$ 处的泰勒展开为：
+设 $x_0 \in (a,b)$ 且 $f \in \mathcal{C}^{n+1}[a,b]$。对于 $h>0$ 且 $k\le n$，在 $x_0$ 处的泰勒展开为：
 
-```
+$$
 f(x_0+h)=f(x_0)+hf'(x_0)+\frac{h^2}{2!}f''(x_0)+\dots+\frac{h^k}{k!}f^{(k)}(x_0)+\frac{h^{k+1}}{(k+1)!}f^{(k+1)}(\xi),\xi\in[x_0,x_0+h] \quad (6.1)
-```
+$$
 
 以及
 
-```
-f(x_0+h)=f(x_0)-hf'(x_0)+\frac{h^2}{2!}f''(x_0)+\dots+\frac{(-h)^k}{k!}f^{(k)}(x_0)+\frac{(-h)^{k+1}}{(k+1)!}f^{(k+1)}(\eta),\eta\in[x_0-h,x_0] \quad (6.2)
-```
+$$
+f(x_0-h)=f(x_0)-hf'(x_0)+\frac{h^2}{2!}f''(x_0)+\dots+\frac{(-h)^k}{k!}f^{(k)}(x_0)+\frac{(-h)^{k+1}}{(k+1)!}f^{(k+1)}(\eta),\eta\in[x_0-h,x_0] \quad (6.2)
+$$
 
-通过在方程 (6.1) 中设置 $k=1$ 并解出 $f'(x_0)$得到 $f(x)$ 在 $x=x_0$ 处的导数为：
+通过在方程 (6.1) 中设置 $k=1$ 并解出 $f'(x_0)$ 得到 $f(x)$ 在 $x=x_0$ 处的导数为：
 
-```
+$$
 f'(x_0) = \frac{f(x_0+h)-f(x_0)}{h} + \frac{h}{2}f''(\xi), \xi \in [x_0,x_0+h] \quad (6.3)
-```
+$$
 
-因此，通过取尽可能小的 $h \varepsilon \ge 0$，$f'(x)$ 可以近似为：
+因此，通过取尽可能小的 $h \ge \varepsilon$，$f'(x)$ 可以近似为：
 
-```
+$$
 f'(x_0) \approx \frac{f(x_0+h)-f(x_0)}{h} \quad (6.4)
-```
+$$
 
 其中 $\varepsilon$ 表示机器精度。如果 $h$ 取值小于 $\varepsilon$，舍入误差会影响 $x_0$ 处近似导数的精度。
 
-方程 (6.4) 中的 $f'(x)'$ 近似公式被称为**前向差分公式**。
+方程 (6.4) 中的 $f'(x)$ 近似公式被称为**前向差分公式**。
 
+### 示例 6.1
 
+在此示例中，将使用方程 (6.4) 来寻找 $f(x) = e^{-\sin(x^3)/4}$ 导数的近似值，其中 $h = 10^{-1},\dots,10^{-15}$。$f(x)$ 的精确导数为：
 
-
-
-# 数值微分
-
-**示例 6.1** 在此示例中，将使用方程 (6.4) 来寻找 $f(x) = e^{-\sin(x^3)/4}$ 导数的近似值，其中 $h = 10^{-1},\dots,10^{-15}$。$f(x)$ 的精确导数为：
-
-```python
-$f'(x) = \frac{3x^2 \cos(x^3)}{4}e^{-\sin(x^3)/4}$$
-```
+$$
+f'(x) = -\frac{3x^2 \cos(x^3)}{4}e^{-\sin(x^3)/4}
+$$
 
 还将显示每个 $h$ 值对应的误差。Python 代码如下：
 
 ```python
 # fpaproxim.py
 import numpy as np
+
 f = lambda x: np.exp(-np.sin(x**3)/4)
 fp = lambda x: -3*x**2*np.cos(x**3)/4*f(x)
+
 h = 0.1
 fpaproxim = []
-ps = np.spacing(1.0)
-while h >= Eps:
+eps = np.spacing(1.0)
+
+while h >= eps:
     fpl = (f(1+h)-f(1))/h
     fpaproxim.append([h, fp(1), np.abs(fp(1)-fpl)])
     h /= 10
-print('  h', '\t\t', 'Approx Der', '\t\t', ..., '      'Approx Error')
-print('  h')
+
+print('  h', '\t\t', 'Approx Der', '\t\t', 'Exact Der', '\t\t', 'Approx Error')
+
 for x in fpaproxim:
-    print('{:0.1e}'.format(format(x[0])), '\t\t', ...
-          '{:0.1e}'.format(format(x[1])), '\t\t', ...
-          '{:0.1e}'.format(format(x[2])))
+    print('{:0.1e}'.format(x[0]), '\t\t',
+          '{:0.1e}'.format(x[1]), '\t\t',
+          '{:0.1e}'.format(x[2]))
 ```
 
 执行此代码将得到结果：
@@ -4140,22 +4529,20 @@ runfile('D:/Files/fpaproxim.py', wdir='D:/Files')
 | h | 近似导数 | 近似误差 |
 |---|---|---|
 | 1.000e-01 | -2.58943704200143e-01 | 6.94058809434162e-02 |
-| 1.000e-02 | -3.23122628690608e-06 | 5.22700628462928e-05 |
+| 1.000e-02 | -3.23122628690608e-01 | 5.22700628462928e-03 |
 | 1.000e-03 | -3.27842659957308e-01 | 5.06971636996618e-04 |
 | 1.000e-04 | -3.28299908103011e-01 | 5.05241825403950e-05 |
 | 1.000e-05 | -3.28347589727164e-01 | 5.052507141092486e-06 |
 | 1.000e-06 | -3.28349816117940e-01 | 5.05252635068303e-07 |
 | 1.000e-07 | -3.28349815683963e-01 | 4.939506259571402e-08 |
-| 1.000e-08 | -3.28349625670658e-06 | 6.0963463153323918e-09 |
+| 1.000e-08 | -3.28349625670658e-01 | 6.0963463153323918e-09 |
 | 1.000e-09 | -3.28346807782170e-01 | 4.941478650414376e-08 |
 | 1.000e-10 | -3.28349697595144e-01 | 6.160751592210190e-09 |
 | 1.000e-11 | -3.283498459532889e-01 | 1.17183504572528e-06 |
-| 1.000e-12 | -3.28403970684121e-02 | 5.4339320690766068e-05 |
-| 1.000e-13 | -3.28602152890463e-05 | 2.7638293526175974e-04 |
-| 1.000e-14 | -3.330693073817546e-05 | 4.717276024116422e-03 |
-| 1.000e-15 | -4.440892098500626e-05 | 1.17539738468321e-01 |
-
- 数值微分
+| 1.000e-12 | -3.28403970684121e-01 | 5.4339320690766068e-05 |
+| 1.000e-13 | -3.28602152890463e-01 | 2.7638293526175974e-04 |
+| 1.000e-14 | -3.330693073817546e-01 | 4.717276024116422e-03 |
+| 1.000e-15 | -4.440892098500626e-01 | 1.17539738468321e-01 |
 
 MATLAB 代码如下：
 
@@ -4199,45 +4586,56 @@ runfile('D:/Files/fdfapprox.py', wdir='D:/Files')
 | 1.000e-14 | -2.319664771412953e-01 | 6.38494522135142e-03 |
 | 1.000e-15 | -2.220464094250313e-01 | 1.063050264383992e-02 |
 
-通过在方程 (6.1) 和 (6.5) 中设置 $k=2$，从方程 (6.5) 中求解 $f'(x)$ 得到：
+通过在方程 (6.1) 和 (6.2) 中设置 $k=2$，从方程 (6.1) 和 (6.2) 中求解 $f'(x)$ 得到：
 
-$f''(x) = \frac{f(x_0+h)-2f(x_0)+f(x_0-h)}{h^2} + \frac{h^2}{3}f'''(\tau), \tau \in [x_0-h, x_0+h]$
+$$
+f''(x) = \frac{f(x_0+h)-2f(x_0)+f(x_0-h)}{h^2} + \frac{h^2}{3}f'''(\tau), \tau \in [x_0-h, x_0+h]
+$$
 
-由此得到导数的第三公式：
-$f'(x) = \frac{f(x_0+h)-f(x_0-h)}{2h} \quad (6.10)$
+由此得到导数的中心差分公式：
 
-方程 (6.10) 中的公式被称为中心差分公式。如果 $|f'''(x)|\in\mathbb{R}^+$，则中心差分的近似误差限于 $Mh^2$，这意味着 $O(h^2)$。实现中心差分公式的 Python/MATLAB 代码通过替换示例 6.1 中的行获得：
+$$
+f'(x) = \frac{f(x_0+h)-f(x_0-h)}{2h} \quad (6.10)
+$$
+
+方程 (6.10) 中的公式被称为**中心差分公式**。如果 $|f'''(x)|\in\mathbb{R}^+$，则中心差分的近似误差限于 $Mh^2$，这意味着 $O(h^2)$。实现中心差分公式的 Python/MATLAB 代码通过替换示例 6.1 中的行获得：
 
 ```matlab
 fp1 = (f(1+h)-f(1-h))/(2*h)
 ```
 
- 数值微分和积分
+### 6.1.2 误差对比
 
 **图 6.2：** 在对数尺度上比较前向误差和中心差分误差。在图 6.2 中，在不同的 $h$ 值下，前向差分公式得到的近似误差与中心差分公式得到的误差进行了对比。从图 6.2 可以看出，中心差分公式对一阶导数的近似更好，因为它产生的误差更小。
 
-在图 6.3 中，$f(x) = e^{-\sin(x^3)}$ 的精确导数图绘制在区间 $[0,\pi/2]$，对比前向差分公式得到的近似导数图。如果将区间 $[0,\pi/2]$ 划 $N$ 个子区间 $[x_0,x_1],\dots,[x_{N-1},x_N]$，可以使用 numpy 库中的 Python 函数 **diff** 计算向量 $df = [f(x_1)-f(x_0), f(x_2)-f(x_1),\dots, f(x_N)-f(x_{N-1})]$。如果 $dx = \pi/(2N)$，$df/dx$ 返回点 $x_0,\dots,x_{N-1}$ 处的导数近似值。使用 numpy 函数 **diff** 来绘制 $f'(x)$：
+在图 6.3 中，$f(x) = e^{-\sin(x^3)}$ 的精确导数图绘制在区间 $[0,\pi/2]$，对比前向差分公式得到的近似导数图。如果将区间 $[0,\pi/2]$ 划分 $N$ 个子区间 $[x_0,x_1],\dots,[x_{N-1},x_N]$，可以使用 `numpy` 库中的 Python 函数 `diff` 计算向量 $df = [f(x_1)-f(x_0), f(x_2)-f(x_1),\dots, f(x_N)-f(x_{N-1})]$。如果 $dx = \pi/(2N)$，$df/dx$ 返回点 $x_0,\dots,x_{N-1}$ 处的导数近似值。使用 `numpy` 函数 `diff` 来绘制 $f'(x)$：
 
 ```python
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+
 matplotlib.rc('text', usetex=True)
-matplotlib.rcParams('text.latex.preamble', ['r'\usepackage{amsmath}'])
+matplotlib.rcParams['text.latex.preamble'] = [r'\usepackage{amsmath}']
+
 a, b = 0.0, 2.0
 N = 1000
 x = np.linspace(a, b, N+1)
 f = lambda x: np.exp(-np.sin(x**3)/4)
-d = np.diff(f)
+d = np.diff(f(x))
 ```
 
-图 6.3：$f(x) = e^{-\sin(x^3)}$ 的精确导数图绘制在区间 $[0, \pi/2]$，对比前向差分公式得到的近似导数图。**图 6.4** 显示了使用 diff 函数的 $f'(x), x \in [0, \frac{\pi}{2}]$ 的图。
 
-132 数值微分和积分
+
+# 数值微分与积分
+
+## 6.1 数值微分
+
+图 6.3：$f(x) = e^{-\sin(x^3)}$ 的精确导数图绘制在区间 $[0, \pi/2]$，对比前向差分公式得到的近似导数图。**图 6.4** 显示了使用 `diff` 函数的 $f'(x), x \in [0, \frac{\pi}{2}]$ 的图。
 
 为了找到 $x=x_0$ 处 $f''(x)$ 的近似值，将方程 (6.1) 加到 (6.5) 并求解所得的 $f'(x)$，得到：
 
-$f''(x) = \frac{f(x_0+h)-2f(x_0)+f(x_0-h)}{h^2} + \frac{h^2}{3}f'''(\tau), \tau \in [x_0-h, x_0+h]$
+$$f''(x) = \frac{f(x_0+h)-2f(x_0)+f(x_0-h)}{h^2} + \frac{h^2}{3}f'''(\tau), \tau \in [x_0-h, x_0+h]$$
 
 $f(x)=e^{-x^2}$ 的二阶导数为 $f''(x)=2(1-2x^2)e^{-x^2}$。以下 MATLAB 命令近似 $f(x), x \in [-3,3]$ 的二阶导数并绘图：
 
@@ -4253,15 +4651,9 @@ $f(x)=e^{-x^2}$ 的二阶导数为 $f''(x)=2(1-2x^2)e^{-x^2}$。以下 MATLAB �
 
 图 6.5：$f''(x)=2(1-2x^2)e^{-x^2}$ 在区间 $[-3,3]$ 内。
 
-
-
-
-
-## 数值积分
-
 $j = 1, \dots, 10$，对应的 $f''(x)$ 的近似值和误差如下：
 
-| | 近似导数 | 近似误差 |
+| 步长 | 近似导数 | 近似误差 |
 |---|---|---|
 | 1.000e-01 | -7.29463309943767e-01 | 6.12251348507966e-03 |
 | 1.000e-02 | -7.35697570926852e-01 | 6.131136019498496e-05 |
@@ -4278,31 +4670,27 @@ $j = 1, \dots, 10$，对应的 $f''(x)$ 的近似值和误差如下：
 
 上表显示，当步长 $h$ 小于 $10^{-5}$ 时，误差变得越来越大。这是因为近似公式要求 $h^2 \leq 10^{-16} < \varepsilon$。
 
-### 6.2 数值积分
+## 6.2 数值积分
 
 如果 $f$ 是定义在实数区间 $[a,b]$ 上的函数，那么 $f$ 从 $x=a$ 到 $x=b$ 的曲线面积由积分给出：
 
-> $I = \int_{a}^{b} f(x)dx$
+$$I = \int_{a}^{b} f(x)dx$$
 
 如果 $F(x)$ 是 $f(x)$ 在 $[a,b]$ 上的原函数，那么根据微积分基本定理：
 
-> $I = \int_{a}^{b} f(x)dx = F(b) - F(a)$
+$$I = \int_{a}^{b} f(x)dx = F(b) - F(a)$$
 
 然而，许多定义在有限区间上的函数其原导函数是未知的，尽管它们确实存在。此类示例包括
 
-> $I_1 = \int_{0}^{\infty} \frac{\sin(x)}{x}dx$
+$$I_1 = \int_{0}^{\infty} \frac{\sin(x)}{x}dx$$
 
-> $I_2 = \int_{0}^{3} e^{-x^2}dx$
-
-以及
+$$I_2 = \int_{0}^{3} e^{-x^2}dx$$
 
 数值积分方法通过首先通过点 $x_0, x_1, \dots, x_N$ 对区间 $[a,b]$ 进行划分（使得 $a \le x_0 < x_1 < \dots < x_N \le b$），来寻找函数 $f$ 在区间 $[a,b]$ 上的定积分，并通过如下形式的和来近似 $I$：
 
-```
-$I = \int_a^b f(x)dx \approx \sum_{j=0}^N w_j f(x_j) \quad (6.12)$
-```
+$$I = \int_a^b f(x)dx \approx \sum_{j=0}^N w_j f(x_j) \quad (6.12)$$
 
-不同的数值积分方法在于点 $x_i$ 的选取以及系数 $w_j$ 的计算方式。方程 (6.12)称为称为数值求积*（numerical quadrature）。因此，“数值求积”指的是用有限和来近似积分公式的形式。
+不同的数值积分方法在于点 $x_i$ 的选取以及系数 $w_j$ 的计算方式。方程 (6.12) 称为数值求积（numerical quadrature）。因此，“数值求积”指的是用有限和来近似积分公式的形式。
 
 在本章中，我们将讨论两类数值积分方法，即牛顿-科特（Newton-Cotes）方法和高斯（Gauss）方法。
 
@@ -4318,7 +4706,7 @@ $$w_j = \int_a^b L_j(x)dx$$
 
 我们将讨论 $n=1$ 和 $n=2$ 的数值积分公式。
 
-$n=1$：当 $n=1, h=(b-a)$ 时，给定点 $(a,f(a))$ 和 $(b,f(b))$。朗日插值多项式为：
+**$n=1$**：当 $n=1, h=(b-a)$ 时，给定点 $(a,f(a))$ 和 $(b,f(b))$。朗日插值多项式为：
 
 $$P_1(x) = \frac{x-b}{a-b}f(a) + \frac{x-a}{b-a}f(b)$$
 
@@ -4347,8 +4735,6 @@ $$\left| \int_a^b (f(x) - P_1(x))dx \right| \leq \left| \int_a^b f(x) - P_1(x)dx
 
 $$I = \int_0^1 \frac{1}{1+x^2}dx$$
 
-## 数值微分与积分
-
 这里，$a = 0.0, b = 1.0$ 且 $f(x) = 1/(1+x^2)$。可以使用以下 MATLAB 命令计算积分：
 
 ```matlab
@@ -4360,14 +4746,16 @@ $$I = \int_0^1 \frac{1}{1+x^2}dx$$
 
 在 Python 中：
 
-- 在 [1]: a, b, f = 0.0, 1.0, lambda x: 1/(1+x**2)
-- 在 [2]: I = (b-a)/2*(f(b)+f(a))
-- 在 [3]: print(I)
+```python
+a, b, f = 0.0, 1.0, lambda x: 1/(1+x**2)
+I = (b-a)/2*(f(b)+f(a))
+print(I)
 0.75
+```
 
 示例 6.2 中积分的精确值 ≈ 0.7853981633947483。近似误差为 $\pi/4 - 0.75 = 0.035398163394782$。
 
-$n=2$：当 $n=2, h=(b-a)/2$ 时，给定数据点 $(a,f(a)), ((a+b)/2, f((a+b)/2))$ 和 $(b,f(b))$。朗日插值多项式：
+**$n=2$**：当 $n=2, h=(b-a)/2$ 时，给定数据点 $(a,f(a)), ((a+b)/2, f((a+b)/2))$ 和 $(b,f(b))$。朗日插值多项式：
 
 $$P_2(x) = \frac{(x-c)(x-b)}{(a-c)(a-b)}f(a) + \frac{(x-a)(x-b)}{(c-a)(c-b)}f(c) + \frac{(x-a)(x-c)}{(b-a)(b-c)}f(b)$$
 
@@ -4381,8 +4769,6 @@ $$\int_a^b f(x)dx \approx \int_0^2 \left(\frac{(t-1)(t-2)}{2}f(a) + \frac{t(t-2)
 $$= \frac{h}{3}(f(a) + 4f\left(\frac{a+b}{2}\right) + f(b)) \quad (6.16)$$
 
 求积 (6.16) 称为辛普森法则。
-
-## 数值积分
 
 方程 (6.16) 中通过 $\int_a^b P_2(x)dx$ 近似 $\int_a^b f(x)dx$ 的领先误差项为：
 
@@ -4407,55 +4793,56 @@ I_s = 0.7833
 
 在 Python 中：
 
-- 在 [4]: import numpy as np
-- 在 [5]: a, b, f = 0.0, 1.0, lambda x: 1/(1+x**2)
-- 在 [6]: c, h = (a+b)/2, (b-a)/2
-- 在 [7]: I_s = h/3.0*(f(a)+4*f(c)+f(b))
-- 在 [8]: print(I_s)
+```python
+import numpy as np
+a, b, f = 0.0, 1.0, lambda x: 1/(1+x**2)
+c, h = (a+b)/2, (b-a)/2
+I_s = h/3.0*(f(a)+4*f(c)+f(b))
+print(I_s)
 0.7833333333333333
-- 在 [9]: print(f'{1:.4e}'.format(np.abs(pi/4-I_s)))
+print(f'{1:.4e}'.format(np.abs(np.pi/4-I_s)))
 2.0648e-03
+```
 
-用辛普森法则 (6.16) 近似 $\int_a^b f(x)dx$ 的误差随 $h=(b-a)/n$ 增大而增大。为了获得 $\int_a^b f(x)dx$ 的更好的近似，是牛顿-科特方法的复合版本，它将区间 $[a,b]$ 划分为 $N$ 个区间（$N \in \mathbb{Z}^+$），点 $x_0=a < x_1 < \dots < x_N=b$，其中 $x_{j+1}-x_j=(b-a)/N$。然后，在每个子区间 $[x_j, x_{j+1}]$ 上，$\int_a^b f(x)dx$ 被近似为
+用辛普森法则 (6.16) 近似 $\int_a^b f(x)dx$ 的误差随 $h=(b-a)/n$ 增大而增大。为了获得 $\int_a^b f(x)dx$ 的更好的近似，是牛顿-科特方法的复合版本，它将区间 $[a,b]$ 划分为 $N$ 个区间（$N \in \mathbb{Z}^+$），点 $x_0=a < x_1 < \dots < x_N=b$，其中 $x_{j+1}-x_j=(b-a)/N$。然后，在每个子区间 $[x_j, x_{j+1}]$ 上，$\int_a^b f(x)dx$ 被近似为求积。
 
 ![](img/9923905aaa045c7096d90695cee3eb.png)
 
 图 6.7：复合梯形法则。
 
-求积。将两个从牛顿-科特方法导出的复合法则。
+将两个从牛顿-科特方法导出的复合法则。
 
-- a) **复合梯形法则**：公式的推导从公式开始：
+**a) 复合梯形法则**：公式的推导从公式开始：
+
 $$\int_a^b f(x)dx = \int_{x_0}^{x_N} f(x)dx = \int_{x_0}^{x_1} f(x)dx + \int_{x_1}^{x_2} f(x)dx + \dots + \int_{x_{N-1}}^{x_N} f(x)dx,$$
+
 然后，在子区间 $[x_j, x_{j+1}]$ 上，积分 $\int_{x_j}^{x_{j+1}} f(x)dx$ 被近似为 $h/2(f(x_j) + f(x_{j+1}))$。这给出公式：
+
 $$\int_a^b f(x)dx \approx \sum_{j=0}^{N-1} \frac{h}{2}(f(x_j) + f(x_{j+1}))$$
-$$\+\frac{h}{2}(f(x_0) + 2f(x_1) + \dots + 2f(x_{N-1}) + f(x_N))$$
-$$\frac{h}{2}(f(x_0) + 2f(x_1) + \dots + 2f(x_{N-1}) + f(x_N)) \quad (6.18]$$
+$$= \frac{h}{2}(f(x_0) + 2f(x_1) + \dots + 2f(x_{N-1}) + f(x_N)) \quad (6.18)$$
 
 图 6.7 显示了梯形面积，其总和接近函数曲线下的面积。
 
+MATLAB 代码实现复合梯形法则：
 
-
-
-
-# 数值积分
-
-| | | |
-|---|---|---|
-| 10 | h = (b-a)/N |
-| 11 | x = linspace(a, b, N+1); |
-| 12 | I = h/2*f(x(0))+f(x(N)); |
-| 13 | I = I + h*sum(f(x(2:N))); |
-| 14 | Err = abs(pi/4-I); |
-| 15 | Approx = [Approx; [N I Err]]; |
-| 16 | printf('%%d%1.12f%t%1.12e\n', N, I, Err); |
-| 17 | N = N+2; |
-| 18 | end |
-| 19 | printf('\n'); | |
+```matlab
+N = 10;
+h = (b-a)/N;
+x = linspace(a, b, N+1);
+I = h/2*f(x(0))+f(x(N));
+I = I + h*sum(f(x(2:N)));
+Err = abs(pi/4-I);
+Approx = [Approx; [N I Err]];
+printf('%%d%1.12f%t%1.12e\n', N, I, Err);
+N = N+2;
+end
+printf('\n');
+```
 
 运行代码得到结果：
 
-| N | 似似积分 | 误差 |
-|---|---|--|
+| N | 近似积分 | 误差 |
+|---|---|---|
 | 10 | 0.784981497227 | 4.16661706586083e-04 |
 | 20 | 0.78529396739 | 1.0411665891615050e-04 |
 | 40 | 0.785372121731 | 2.60416654529651e-05 |
@@ -4477,11 +4864,16 @@ $$\frac{h}{2}(f(x_0) + 2f(x_1) + \dots + 2f(x_{N-1}) + f(x_N)) \quad (6.18]$$
 ```python
 # simpy.py
 import numpy as np
+
 a, b, f = 0.0, 1.0, lambda x: 1/(1+x**2)
+
 ApproxTable = []
+
 N = 10
+
 print('  \tApprox Int.\t Error')
 print('------------------------------------------------')
+
 while N <= 20000:
     x = np.linspace(a, b, N+1)
     h = (b-a)/N
@@ -4492,14 +4884,18 @@ while N <= 20000:
     N = N*2
 ```
 
-# 数值微分与与积分
+
+
+# 数值微分与积分
 
 执行代码得到结果：
 
+```
 runfile('D:/PyFiles/compsimp.py', wdir='D:/PyFiles')
+```
 
-| N | 似似积分 | 误差 |
-|---|---|--|
+| N | 复合积分 | 误差 |
+|---|---|---|
 | 10 | 0.78498497227 | 4.16661706586e-04 |
 | 20 | 0.78523996739 | 1.041666589161e-04 |
 | 40 | 0.78537212171 | 2.604616654530e-05 |
@@ -4525,38 +4921,62 @@ $= \frac{h}{3}(f(x_0) + 4\sum_{j=1,3,\dots}^{N-1} f(x_j) + 2\sum_{j=2,4,\dots}^{
 
 ```matlab
 % compsimp.m
+
 clear; clc;
+
 format short
+
 a = 0.0; b = 1.0; f = @(x) 1/(1+x.^2); IEact = pi/4;
+
 N = 10; Approx = [];
+
 fprintf('----------------------------------------------\n');
+
 fprintf('N\tApprox\t\tError\n');
+
 fprintf('----------------------------------------------\n');
+
 while N <= 1000
+
     [I, Err] = CompSimpson(f, a, b, IEact);
+
     Approx = [Approx; [N I Err]];
+
     N = N+2;
+
 end
 
 function [I, Err] = CompSimpson(f, a, b, IEact)
+
     h = (b-a)/N;
+
     x = linspace(a, b, N+1);
+
     I = h/3*(f(x(1))+f(x(end)));
+
     for j = 2:N
+
         if mod(j, 2) == 0
+
             I = I + 2*h*f(x(j));
+
         else
+
             I = I + 4*h*f(x(j));
+
         end
+
     end
+
     Err = abs(IEact-I);
+
 end
 ```
 
 运行代码得到：
 
-| N | 似似积分 | 误差 |
-|---|---|--|
+| N | 复合积分 | 误差 |
+|---|---|---|
 | 10 | 0.7853981635485 | 9.91264448023314e-09 |
 | 20 | 0.7853981632422 | 1.550021222485043e-10 |
 | 40 | 0.7853981636395 | 2.422824538754017e-12 |
@@ -4572,37 +4992,60 @@ end
 
 ```python
 # CompositeSimpson.py
+
 import numpy as np
+
 def CompSimpson(f, a, b, N, IEact):
+
     h = (b-a)/N
+
     x = np.linspace(a, b, N+1)
+
     I = h/3*(f(x[0])+f(x[-1]))
+
     for j in range(1, N):
+
         if j%2 == 1:
-            I += 4*h.*f(x[j])
+
+            I += 4*h*f(x[j])
+
         else:
-            I += 2*h.*f(x[j])
+
+            I += 2*h*f(x[j])
+
     Error = np.abs(IEact-I)
+
     return I, Error
 
 a, b, N = 0.0, 1.0, 10
+
 ApproxTable = []
+
 IEact = np.pi/4
+
 print('\n\tApprox Int.\t Error')
+
 print('--------------------------------')
+
 while N <= 10000:
+
     I, Err = CompSimpson(f, a, b, N, IEact)
+
     ApproxTable.append([N, I, Err])
+
     print('{0:6f}'.format(N), '\t', '{1:0.12f}'.format(I), '\t', '{2:0.12e}'.format(Err))
+
     N *= 2
 ```
 
 执行该代码得到：
 
+```
 runfile('D:/PyFiles/CompositeSimpson.py', wdir='D:/PyFiles')
+```
 
-| N | 似似积分 | 误差 |
-|---|---|--|
+| N | 复合积分 | 误差 |
+|---|---|---|
 | 10 | 0.7853981635485 | 9.91264448023314e-09 |
 | 20 | 0.7853981632422 | 1.550021222485043e-10 |
 | 40 | 0.7853981636395 | 2.422824538754015e-10 |
@@ -4617,22 +5060,33 @@ MATLAB 和 Python 均包含了基于梯形法则和 Simpson 法则计算积分 $
 
 ```matlab
 >> x = linspace(0, 1, 101);
+
 >> f = exp(-x.^2);
+
 >> format long
+
 >> I = trapz(x, f)
+
 I = 0.746180146297
 ```
 
-Python 的 `scipy.integrate` 库包含了 `trapz`。它与 MATLAB 的 `trap` 函数的区别在于先接收 $f$ 向量再接收 $x$：
+Python 的 `scipy.integrate` 库包含了 `trapz`。它与 MATLAB 的 `trapz` 函数的区别在于先接收 $f$ 向量再接收 $x$：
 
 ```python
 In [10]: from scipy.integrate import trapz
+
 In [11]: import numpy as np
+
 In [12]: x = np.linspace(0, np.pi, 500)
+
 In [13]: g = np.zeros_like(x)
-In [14]: g[0], g[1:] = 1.0, np.sin(x[1:]
+
+In [14]: g[0], g[1:] = 1.0, np.sin(x[1:])
+
 In [15]: I = trapz(g, x)
+
 In [16]: print(I)
+
 1.85193600583526
 ```
 
@@ -4640,8 +5094,11 @@ In [16]: print(I)
 
 ```matlab
 >> x = linspace(0, pi, 501);
->> h = @(x) sin(x).x;
+
+>> h = @(x) sin(x).*x;
+
 >> I = quad(h, 0, pi)
+
 I = 1.8519e+00
 ```
 
@@ -4649,9 +5106,13 @@ Python 的 `quad` 位于 `scipy.integrate` 库，接收与 MATLAB `quad` 函数�
 
 ```python
 In [17]: from scipy.integrate import quad
+
 In [18]: h = lambda x: np.exp(-x**2)
+
 In [19]: I = quad(h, 0.0, 1.0)
+
 In [20]: print('Integral = ', I[0], ', ', Error = ', I[1])
+
 Integral = 0.746824132814271 , Error = 8.291413759407255e-15
 ```
 
@@ -4663,20 +5124,19 @@ Integral = 0.746824132814271 , Error = 8.291413759407255e-15
 
 使用阶为 $n$ 的拉格朗日插值式在等间距点上插值被积函数 $f(x)$，从而推导出牛顿-柯斯公式。例如牛顿-柯斯。
 
-
-
-
-# 数积分
+# 数值积分
 
 因此，
 
-```
 $$w_1 f(x_1) + \dots + w_n f(x_n) = c_0 + \dots + c_{2n-1}x^{2n-1}$$
+
 $$w_1 f(x_1) + \dots + w_n f(x_n) = c_0 + \dots + c_{2n-1}x^{2n-1}$$
+
 $$w_1 f(x_1) + \dots + w_n f(x_n) = c_0 + \dots + c_{2n-1}x^{2n-1}$$
+
 $$w_1 f(x_1) + \dots + w_n f(x_n) = c_0 + \dots + c_{2n-1}x^{2n-1}$$
+
 $$w_1 f(x_1) + \dots + w_n f(x_n) = c_0 + \dots + c_{2n-1}x^{2n-1}$$
-```
 
 比较方程 (62) 和 (63) 的项，得到 $2n$ 个关于未知数 $x_j$ 和 $w_j$ ($j=1, \dots, n$) 的方程：
 
@@ -4689,44 +5149,42 @@ $$w_1 x_1^3 + w_2 x_2^3 + \dots + w_n x_n^3 = \frac{b^4-a^4}{4}$$
 
 - **单点高斯积分：** 当 $n=1$ 时，需要找到一个点 $x_1$ 和权重 $w_1$。由于 $2n-1=1$，假设 $f(x) = c_0 + c_1 x$。关于 $x_1$ 和 $w_1$ 的方程为：
 
-```
 $$w_1 = b-a$$
+
 $$w_1 x_1 = \frac{b^2-a^2}{2}$$
-```
 
 求解该方程组得到：
 
-```
 $$w_1 = b-a \text{ 且 } x_1 = \frac{b+a}{2}.$$
-```
 
 高斯积分为：
 
-```
-$$\int_a^b f(x)dx = (b-a)f\left(\frac{b+a}{2}\right) (65)$$
-```
+$$\int_a^b f(x)dx = (b-a)f\left(\frac{b+a}{2}\right) \tag{65}$$
 
 - **双点高斯积分：** 当 $n=2$ 时，需要找到两个点 $x_1, x_2$ 和权重 $w_1, w_2$。由于 $2n-1=3$，假设函数 $f(x)$ 为三次函数（即 $f(x) = c_0 + c_1x + c_2x^2 + c_3x^3$）。关于 $x_1, x_2$ 的方程组为：
 
-```
 $$w_1 + w_2 = b-a$$
+
 $$w_1 x_1 + w_2 x_2 = \frac{b^2-a^2}{2}$$
+
 $$w_1 x_1^2 + w_2 x_2^2 = \frac{b^3-a^3}{3}$$
+
 $$w_1 x_1^3 + w_2 x_2^3 = \frac{b^4-a^4}{4}$$
-```
 
 以下 Python 代码可寻找非线性系统的解：
 
-- [21]: import sympy as smp
-- [22]: import sympy.solvers import solve
-- [23]: w1, w2, x1, x2, a, b = smp.symbols('w1, w2, x1, x2, a, b', cls=sym.Symbol)
-- [24]: Syst = [w1+w2-(b-a), w1*x1+w2*x2-(b**2-a**2)/2, w1*x1**2+w2*x2**2-(b**3-a**3)/3, w1*x1**3+w2*x2**3-(b**4-a**4)/4]
-- [25]: vrs = [w1, w2, x1]
-- [26]: Sol = solve(Syst, vrs)
-- [27]: print(Sol[0])
-  (-(a - b)/2, -(a - b)/2,sqrt(3)*a/6 + a/2 - sqrt(3))
-- [28]: print(Sol[1])
-  (-(a - b)/2, -(a - b)/2,sqrt(3)*a/6 + a/2)
+```python
+In [21]: import sympy as smp
+In [22]: from sympy.solvers import solve
+In [23]: w1, w2, x1, x2, a, b = smp.symbols('w1, w2, x1, x2, a, b', cls=smp.Symbol)
+In [24]: Syst = [w1+w2-(b-a), w1*x1+w2*x2-(b**2-a**2)/2, w1*x1**2+w2*x2**2-(b**3-a**3)/3, w1*x1**3+w2*x2**3-(b**4-a**4)/4]
+In [25]: vrs = [w1, w2, x1]
+In [26]: Sol = solve(Syst, vrs)
+In [27]: print(Sol[0])
+  (-(a - b)/2, -(a - b)/2, sqrt(3)*a/6 + a/2 - sqrt(3))
+In [28]: print(Sol[1])
+  (-(a - b)/2, -(a - b)/2, sqrt(3)*a/6 + a/2)
+```
 
 Python 符号库提供了非线性方程组的解出了 $x_1$ 和 $x_2$ 的值。如果我们设定条件 $x_1 < x_2$，则非线性方程组解为：
 
@@ -4734,7 +5192,7 @@ $$w_1=w_2=\frac{b-a}{2}, x_{1,2}=\frac{b+a}{2}$$
 
 双点高斯积分为：
 
-$$\int_a^b f(x)dx=\frac{b-a}{2}\left(f\left(\frac{b+a}{2}-\frac{b-a}{2\sqrt{3}}\right)+f\left(\frac{b+a}{2}+\frac{b-a}{2\sqrt{3}}\right)\right) (66)$$
+$$\int_a^b f(x)dx=\frac{b-a}{2}\left(f\left(\frac{b+a}{2}-\frac{b-a}{2\sqrt{3}}\right)+f\left(\frac{b+a}{2}+\frac{b-a}{2\sqrt{3}}\right)\right) \tag{66}$$
 
 **示例 3** 在此例中，将使用单点和双点高斯积分来计算：
 
@@ -4758,31 +5216,38 @@ MATLAB 代码展示了不同 $N=10 \times 2^k, k=0,\dots,10$ 情况的单点和�
 
 ```matlab
 1 clear; clc;
-2 f = @(x) x./(1+2*x.^2);
-3 a = 0.0; b = 2.0;
-4 N = 10;
-5 Exact = log(9)/4;
-6 GL1Approx = []; GL2Approx = [];
-7
-8 while N < 20000
-9   x = linspace(a, b, N+1);
-10  h = (b-a)/N;
-11  I1 = h*sum(f((x(1:N)+x(2:N+1))/2));
-12  Err1 = abs(I1-Exact);
-13  GL1Approx = [GL1Approx; N I1 Err1];
-14  I2 =
-15      h/2*sum(f((x(1:N)+x(2:N+1))/2-(x(2:N+1)-x(1:N))*sqrt(3)/6)
-16      ... +f((x(1:N)+x(2:N+1))/2+(x(2:N+1)-x(1:N))*sqrt(3)/6));
-17  Err2 = abs(I2-Exact);
-18  GL2Approx = [GL2Approx; N I2 Err2];
-19  N = 2*N;
-20 end
-21 fprintf('Integration with 1-point Gauss quadrature\n');
-22 fprintf('%s\t\tApprox Int.\%s\t Error\n', GL1Approx(:,1), GL1Approx(:,2), GL1Approx(:,3));
-23 [m, L] = size(GL1Approx);
-24 for j = 1:m
-25     printf('  %d\t%.12f\t%.12e\n', GL1Approx(j,1), GL1Approx(j,2), GL1Approx(j,3));
-26 end
+```
+
+
+
+## MATLAB 代码：高斯积分收敛性分析
+
+```matlab
+f = @(x) x./(1+2*x.^2);
+a = 0.0; b = 2.0;
+N = 10;
+Exact = log(9)/4;
+GL1Approx = []; GL2Approx = [];
+
+while N < 20000
+    x = linspace(a, b, N+1);
+    h = (b-a)/N;
+    I1 = h*sum(f((x(1:N)+x(2:N+1))/2));
+    Err1 = abs(I1-Exact);
+    GL1Approx = [GL1Approx; N I1 Err1];
+    I2 = h/2*sum(f((x(1:N)+x(2:N+1))/2-(x(2:N+1)-x(1:N))*sqrt(3)/6) ...
+        + f((x(1:N)+x(2:N+1))/2+(x(2:N+1)-x(1:N))*sqrt(3)/6));
+    Err2 = abs(I2-Exact);
+    GL2Approx = [GL2Approx; N I2 Err2];
+    N = 2*N;
+end
+
+fprintf('Integration with 1-point Gauss quadrature\n');
+fprintf('%s\t\tApprox Int.\t%s\t Error\n', GL1Approx(:,1), GL1Approx(:,2), GL1Approx(:,3));
+[m, L] = size(GL1Approx);
+for j = 1:m
+    fprintf('  %d\t%.12f\t%.12e\n', GL1Approx(j,1), GL1Approx(j,2), GL1Approx(j,3));
+end
 ```
 
 执行单点高斯积分的输出如下：
@@ -4791,49 +5256,54 @@ MATLAB 代码展示了不同 $N=10 \times 2^k, k=0,\dots,10$ 情况的单点和�
 Integration with 1-point Gauss quadrature
 ```
 
-
-
-
 ## 150 数值微分与积分
 
 ```python
-print (' N\t Error Approx.\t\t Error\n') -----------------------------------------
-print (' N\t Conv. Rate\n') ---------------------------------------
-for i in range(len(GL2Approx)) :
+print(' N\t Error Approx.\t\t Error\n')  # -----------------------------------------
+print(' N\t Conv. Rate\n')  # ---------------------------------------
+
+for i in range(len(GL2Approx)):
     for j in range(m):
-        print ('{0:.6f}'.format(GL2Approx[j][0]), '\t', \
-               '{0:.12f}'.format(GL2Approx[j][1]), '\t', \
-               '{0:.12f}'.format(GL2Approx[j][2]))
-    print ('n{0:.12f}\n\n')
+        print('{0:.6f}'.format(GL2Approx[j][0]), '\t', \
+              '{0:.12f}'.format(GL2Approx[j][1]), '\t', \
+              '{0:.12f}'.format(GL2Approx[j][2]))
+    print('{0:.12f}\n\n'.format(n))
 ```
 
 由于示例中的子区间数量增加了一倍，1-点和 2-点高斯积分的收敛速率可以使用以下公式计算：
 
-$R_N = \log_2\left(\frac{ErrorN}{Error2N}\right)$
+$$R_N = \log_2\left(\frac{Error_N}{Error_{2N}}\right)$$
 
 ```python
 RConv1 = []
-print ('Rates of convergence for 1-point Gauss quadrature: \n')
-print (' N\t Conv. Rate\n')
-print ('--------------------------------------')
+
+print('Rates of convergence for 1-point Gauss quadrature: \n')
+print(' N\t Conv. Rate\n')
+print('--------------------------------------')
+
 for k in range(m-1):
     RConv1.append(np.log2(GL1Approx[k][2]/GL1Approx[k+1][2]))
-    print ('{0:.4f}'.format(GL1Approx[k][0]), '\t ...', RConv1[-1])
-print ('--------------------------------------\n')
+    print('{0:.4f}'.format(GL1Approx[k][0]), '\t ...', RConv1[-1])
+
+print('--------------------------------------\n')
 
 RConv2 = []
-print ('Rates of convergence for 2-points Gauss quadrature: \n')
-print ('--------------------------------------\n')
-print (' N\t Conv. Rate\n')
-print ('--------------------------------------\n')
+
+print('Rates of convergence for 2-points Gauss quadrature: \n')
+print('--------------------------------------\n')
+print(' N\t Conv. Rate\n')
+print('--------------------------------------\n')
+
 for k in range(m-1):
     RConv2.append(np.log2(GL2Approx[k][2]/GL2Approx[k+1][2]))
-    print ('{0:.4f}'.format(GL2Approx[k][0]), '\t ...', '{0:.3f}'.format(RConv2[-1]))
-print ('--------------------------------------\n')
+    print('{0:.4f}'.format(GL2Approx[k][0]), '\t ...', '{0:.3f}'.format(RConv2[-1]))
+
+print('--------------------------------------\n')
 ```
 
 执行代码：
-1-点高斯积分的收敛速率：
+
+### 1-点高斯积分的收敛速率
 
 | N | 收敛速率 |
 |---|---|
@@ -4843,7 +5313,7 @@ print ('--------------------------------------\n')
 | 80 | 2.0000 |
 | 160 | 2.0000 |
 
-2-点高斯积分的收敛速率：
+### 2-点高斯积分的收敛速率
 
 | N | 收敛速率 |
 |---|---|
@@ -4860,33 +5330,53 @@ print ('--------------------------------------\n')
 
 上述结果显示，1-点高斯积分表现为二阶方法，而 2-点高斯积分表现为四阶方法。
 
-当 $n \ge 3$ 时，可以获得高阶高斯积分方法。事实上，在 $n$-点高斯积分中，点 $x_1,x_2,\dots,x_n$ 是勒加德多项式 $P_n(x)$ 的根。因此，这类点被称为*勒加德-高斯点*。位于 *scipy.special* 中的 Python 函数接收参数 $n$ 并返回相应的第 $n$ 阶勒加德多项式的系数 [5, 44]。
+当 $n \ge 3$ 时，可以获得高阶高斯积分方法。事实上，在 $n$-点高斯积分中，点 $x_1,x_2,\dots,x_n$ 是勒让德多项式 $P_n(x)$ 的根。因此，这类点被称为**勒让德-高斯点**。位于 `scipy.special` 中的 Python 函数 `legendre()` 接收参数 $n$ 并返回相应的第 $n$ 阶勒让德多项式的系数 [5, 44]。
 
 ```python
 In [29]: from scipy.special import legendre
+
 In [30]: legendre(4)
-Out [30]: poly1([4.3750000e+00, 4.857225372e-16,-3.7500000e+01, 2.4286128e-16, 3.75000000e-01])
+Out[30]: poly1d([4.3750000e+00, 4.857225372e-16, -3.7500000e+01, 2.4286128e-16, 3.75000000e-01])
+
 In [31]: legendre(4)
-4 3 2
+Out[31]: 
+   4       3       2
 4.375 x + 4.857e-16 x - 3.75 x + 2.429e-16 x + 0.375
 ```
 
 ```python
 In [32]: np.roots(legendre(4))
-Out [32]: array([0.86113631, -0.86113631, 0.33998104, -0.33998104])
+Out[32]: array([0.86113631, -0.86113631, 0.33998104, -0.33998104])
 ```
+
 最后一行 `np.roots(legendre(4))` 给出了 4-点高斯积分的节点。
 
-## 数值微分与积分
+## 勒让德-高斯点分布
 
 ![img/9923905aaa045c7096d90695ceee3bc_170_0.png](img/9923905aaa045c7096d90695ceee3bc_170_0.png)
 
-**图 6.8：** $n=1,\dots,10$ 阶多项式的勒加德-高斯点位置。图 6.8 显示了 1 到 10 阶勒加德-高斯点的分布。
-拥有 $n$ 个勒加德-高斯点 $x_1,\dots,x_n$，可以通过求解线性方程组得到相应的权重 $w_1,\dots,w_n$：
+**图 6.8：** $n=1,\dots,10$ 阶多项式的勒让德-高斯点位置。图 6.8 显示了 1 到 10 阶勒让德-高斯点的分布。
 
-$$\begin{pmatrix} 1 & 1 & \dots & 1 \\ x_1 & x_2 & \dots & x_n \\ x_1^2 & x_2^2 & \dots & x_n^2 \\ \vdots & \vdots & \ddots & \vdots \\ x_1^{n-1} & x_2^{n-1} & \dots & x_n^{n-1} \end{pmatrix} \begin{pmatrix} w_1 \\ w_2 \\ \vdots \\ w_n \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \\ \vdots \\ n \end{pmatrix}$$
+拥有 $n$ 个勒让德-高斯点 $x_1,\dots,x_n$，可以通过求解线性方程组得到相应的权重 $w_1,\dots,w_n$：
 
-方程 (6.27) 左侧的矩阵是由点向量 $x_1,\dots,x_n$ 构建的 $n \times n$ 范德蒙德矩阵的转置。以下 Python 代码包含一个函数 `LGpw`，它接收参数 $n$ 并返回对应的勒加德-高斯点。
+$$
+\begin{pmatrix} 
+1 & 1 & \dots & 1 \\ 
+x_1 & x_2 & \dots & x_n \\ 
+x_1^2 & x_2^2 & \dots & x_n^2 \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+x_1^{n-1} & x_2^{n-1} & \dots & x_n^{n-1} 
+\end{pmatrix} 
+\begin{pmatrix} 
+w_1 \\ w_2 \\ \vdots \\ w_n 
+\end{pmatrix} 
+= 
+\begin{pmatrix} 
+2 \\ 0 \\ \vdots \\ n 
+\end{pmatrix}
+$$
+
+方程 (6.27) 左侧的矩阵是由点向量 $x_1,\dots,x_n$ 构建的 $n \times n$ 范德蒙德矩阵的转置。以下 Python 代码包含一个函数 `LGpw()`，它接收参数 $n$ 并返回对应的勒让德-高斯点。
 
 ```python
 # FindLGParams.py
@@ -4894,36 +5384,39 @@ from scipy.special import legendre
 import numpy as np
 
 def LGpw(n):
-    s = list(np.sort(legendre(n)))
-    X = fliplr(vander(s)).T
+    s = list(np.sort(np.roots(legendre(n))))
+    X = np.fliplr(np.vander(s)).T
     Y = np.array([(1-(-1)**j)/j for j in range(1, n+1)])
     w = np.linalg.solve(X, Y)
     return s, w
 ```
 
-## 数值积分
+## 数值积分示例
 
 ```python
 S, W = LGpw(3)
 print('n = 3:')
-print('Points are ', S, '\n Weights:', w)
+print('Points are ', S, '\n Weights:', W)
+
 print('n = 6:')
 S, W = LGpw(6)
-print('Points are ', S, '\n Weights:', w)
+print('Points are ', S, '\n Weights:', W)
 ```
 
 通过执行以下操作获得了结果：
 `runfile('D:/PyFiles/FindLGParams.py', wdir='D:/PyFiles')`
 
+```
 n = 3
-- Points are: [-0.774596669241835, 0.0, 0.774596669241834]
-- Weights: [-0.5555556, 0.8888889, 0.555556]
+Points are: [-0.774596669241835, 0.0, 0.774596669241834]
+Weights: [0.5555556, 0.8888889, 0.555556]
 
 n = 6:
 Points are: [-0.9324695124021514, -0.661209384662426, -0.2386191608361970, 0.2386191608319688, 0.661209384662426, 0.9324695124021519]
-Weights: [-0.17132439, 0.36706157, 0.46791933, 0.367061732419]
+Weights: [0.17132439, 0.36706157, 0.46791933, 0.46791933, 0.36706157, 0.17132439]
+```
 
-示例 4 Python 代码使用 `LGpw` 函数找到 5-点高斯-勒加德积分的节点和权重，然后将其应用于示例 6.3 的积分中：
+示例 4 Python 代码使用 `LGpw()` 函数找到 5-点高斯-勒让德积分的节点和权重，然后将其应用于示例 6.3 的积分中：
 
 ![img/9923905aaa045c7096d90695ceee3bc_170_0.png](img/9923905aaa045c7096d90695ceee3bc_170_0.png)
 
@@ -4934,115 +5427,116 @@ from scipy.special import legendre
 import numpy as np
 
 def LGpw(n):
-    s = list(np.sort(legendre(n)))
-    X = np.array(fliplr(vander(s)).T)
-    Y = np.array([(1-(-1)**j)**2 for j in range(1, n+1)])
+    s = list(np.sort(np.roots(legendre(n))))
+    X = np.array(np.fliplr(np.vander(s)).T)
+    Y = np.array([(1-(-1)**j)/j for j in range(1, n+1)])
     w = np.linalg.solve(X, Y)
     return s, w
 
 s, w = LGpw(5)
-
 a, b = 0.0, 2.0
 f = lambda x: x/(1.0+2.0*x**2)
 N = 5
 IEact = np.log(9.0)/4.0
 LG5Approx = []
+
 while N < 1000:
     x, h = np.linspace(a, b, N+1), (b-a)/N
     I = 0.0
     for j in range(N):
         xm = (x[j]+x[j+1])/2
         I += h/2.0*sum(w[k]*f(xm+h/2*s[k]) for k in range(len(s)))
-        Err = abs(I-IEact)
-        LG5Approx.append([N, Err])
-        N = 2*N
-        print('Integration with 5-point quadrature\n')
+    Err = abs(I-IEact)
+    LG5Approx.append([N, Err])
+    N = 2*N
+    print('Integration with 5-point quadrature\n')
 ```
 
-
-
-
-# 数值微分与积分
+## 勒让德-高斯-洛巴托点
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_174_0.png)
 
-图 6.9：$n=2,3,\dots,11$ 时区间 $[-1,1]$ 上勒加德-高斯-Lobbatto (LGL) 点的分布。
+**图 6.9：** $n=2,3,\dots,11$ 时区间 $[-1,1]$ 上勒让德-高斯-洛巴托 (LGL) 点的分布。
 
-基于 $n-1$ 的数值求积是开区间的。这意味着它们不包含边界点 $-1.0$ 和 $1.0$（因此积分边界为 $a$ 和 $b$）。还有另一类高斯积分，它强制选择边界点为 $-1.0$ 和 $1.0$。因此，除了 $x_1=-1.0$ 和 $x_n=1.0$ 之外，$n$ 点高斯积分可能会选择 $(1-x^2)P'_{n-1}(x)$ 的根，其中 $P'_{n-1}(x)$ 是阶数为 $n-1$ 的勒加德多项式的导数，$n \ge 2$。这类点被称为勒加德-高斯-Lobbatto (LGL) 点。
+基于 $n-1$ 的数值求积是开区间的。这意味着它们不包含边界点 $-1.0$ 和 $1.0$（因此积分边界为 $a$ 和 $b$）。还有另一类高斯积分，它强制选择边界点为 $-1.0$ 和 $1.0$。因此，除了 $x_1=-1.0$ 和 $x_n=1.0$ 之外，$n$ 点高斯积分可能会选择 $(1-x^2)P'_{n-1}(x)$ 的根，其中 $P'_{n-1}(x)$ 是阶数为 $n-1$ 的勒让德多项式的导数，$n \ge 2$。这类点被称为**勒让德-高斯-洛巴托 (LGL) 点**。
 
-图 6.9 显示了不同 $n$ 值下的勒加德-高斯-Lobbatto 点。
+图 6.9 显示了不同 $n$ 值下的勒让德-高斯-洛巴托点。
 
-$n$ 点 LGL 点对应的权重可以从方程 (6.27) 得到。对于 $n=2$ 和 $n=3$，得到的求积结果与梯形法则和西普普法则重合。对于 $n \ge 4$，得到的求积结果与通过牛顿-科德（Newton-Codes）方法得到的结果不同。
+$n$ 点 LGL 点对应的权重可以从方程 (6.27) 得到。对于 $n=2$ 和 $n=3$，得到的求积结果与梯形法则和辛普森法则重合。对于 $n \ge 4$，得到的求积结果与通过牛顿-科特斯（Newton-Cotes）方法得到的结果不同。
 
 由于强制将边界点包含在 $n$ 个 LGL 点中，方法的精度降低了 2。它们不是精确到 $2n-1$ 阶，而是精确到 $2n-3$ 阶。
 
-Python 代码 LGLParams 包含一个函数 `LGLpw` 函数，它接收一个正整数 $n \ge 2$ 以及对应的 $n$ 个 LGL 点 $-1=x_1 < x_2 < \dots < x_n=1$ 和权重 $w_1, \dots, w_n$。它近似定积分
+Python 代码 `LGLParams.py` 包含一个函数 `LGLpw()`，它接收一个正整数 $n \ge 2$ 并返回对应的 $n$ 个 LGL 点 $-1=x_1 < x_2 < \dots < x_n=1$ 和权重 $w_1, \dots, w_n$。它近似定积分
 
-```
-$I = \int_{0}^{2} \frac{x}{1+2x^2}$
-```
+$$I = \int_{0}^{2} \frac{x}{1+2x^2} dx$$
 
 使用 4 个 LGL 点进行近似。
-
-# 数值积分
 
 ```python
 import numpy as np
 from scipy.special import legendre
+
 def LGLpw(n):
-    s = list(np.sort(np.roots([-1, 0, 1]+np.polyder(legendre(n-1)))))
+    # (1-x^2) * P'_{n-1}(x) 的根
+    poly_der = np.polyder(legendre(n-1))
+    # 构造 (1-x^2) * P'_{n-1}(x) 的系数
+    # 这里简化处理，实际应使用多项式乘法
+    s = list(np.sort(np.roots(np.polymul([-1, 0, 1], poly_der))))
     X = (np.fliplr(np.vander(s))).T
-    Y = np.array([(1-(-j)**j)/j for j in range(1, n+1)])
+    Y = np.array([(1-(-1)**j)/j for j in range(1, n+1)])
     w = np.linalg.solve(X, Y)
     return s, w
+
 n = 4
 s, w = LGLpw(n)
-
 a, b = 0.0, 2.0
-f = lambda x: x/(1.0+2.0+x**2)
+f = lambda x: x/(1.0+2.0*x**2)
 N = 5
 IEact = np.log(9.0)/4.0
 LGL5Approx = []
+
 while N < 1000:
     x, h = np.linspace(a, b, N+1), (b-a)/N
     I = 0
     for j in range(N):
         xm = (x[j]+x[j+1])/2.0
-        I += h/2.0*sum([w[k]*(xm+h/2*s[k]) for k in range(len(s))])
+        I += h/2.0*sum(w[k]*f(xm+h/2*s[k]) for k in range(len(s)))
     Err = abs(I-IEact)
     LGL5Approx.append([N, I, Err])
     N = N*2
-```
 
-```python
-print('Integration with 5-point Gauss quadrature\n')
+print('Integration with 4-point Gauss-Lobatto quadrature\n')
 print('\n\tApprox Int.\t\t Error:\n')
-print('\nLGL5Approx:\n')
-
-m = len(range(len(LGL5Approx)))
+print('\nLGL4Approx:\n')
+m = len(LGL5Approx)
 for j in range(m):
     print('{:0.6f}'.format(LGL5Approx[j][0]) + '\t' + 
           '{:0.15f}'.format(LGL5Approx[j][1]) + '\t' + 
           '{:0.12e}'.format(LGL5Approx[j][2]/IEact))
 
 print('\n\n\n')
-
 RConv = []
 print('Rates of convergence ' + str(n)+'-points\n')
 print('Legendre-Gauss-Lobatto quadrature: \n')
 print('\n\tConv. Rate:\n\n')
-print('\n\n\n')
 
 for k in range(m-1):
-    RConv.append(np.log(LGL5Approx[k][2]/LGL5Approx[k+1][2]))
+    RConv.append(np.log2(LGL5Approx[k][2]/LGL5Approx[k+1][2]))
     print('{:0.4f}'.format(LGL5Approx[k][0]) + '\t \t ' + 
-          '{:0.3f}'.format(RConv[-5]))
+          '{:0.3f}'.format(RConv[-1]))
 
 print('\n\n\n')
-执行代码得到以下结果：
-runfile('D:/PyFiles/LGLParams.py', wdir='D:/PyFiles')
+```
 
-Integration with 5-point Gauss Numerical Differentiation and Integration
+执行代码得到以下结果：
+
+```
+runfile('D:/PyFiles/LGLParams.py', wdir='D:/PyFiles')
+```
+
+
+
+# Integration with 5-point Gauss Numerical Differentiation and Integration
 
 | N | Approx Int. | Error |
 |---|---|---|
@@ -5147,7 +5641,7 @@ $n$ 点 LGL 点对应的权重可以从方程 (6.27) 得到。对于 $n=2$ 和 $
 
 由于强制将边界点包含在 $n$ 个 LGL 点中，方法的精度降低了 2。它们不是精确到 $2n-1$ 阶，而是精确到 $2n-3$ 阶。
 
-Python 代码 LGLParams 包含一个函数 `LGLpw` 函数，它接收一个正整数 $n \ge 2$ 以及对应的 $n$ 个 LGL 点 $-1=x_1 < x_2 < \dots < x_n=1$ 和权重 $w_1, \dots, w_n$。它近似定积分
+Python 代码 `LGLParams` 包含一个函数 `LGLpw` 函数，它接收一个正整数 $n \ge 2$ 以及对应的 $n$ 个 LGL 点 $-1=x_1 < x_2 < \dots < x_n=1$ 和权重 $w_1, \dots, w_n$。它近似定积分
 
 ```
 $I = \int_{0}^{2} \frac{x}{1+2x^2}$
@@ -5210,7 +5704,11 @@ for k in range(m-1):
           '{:0.3f}'.format(RConv[-5]))
 
 print('\n\n\n')
+```
+
 执行代码得到以下结果：
+
+```text
 runfile('D:/PyFiles/LGLParams.py', wdir='D:/PyFiles')
 
 Integration with 5-point Gauss Numerical Differentiation and Integration
@@ -5237,6 +5735,7 @@ Rates of convergence for 4-points Legendre-Gauss-Lobatto:
 | 80 | 6.125 |
 | 160 | 2.322 |
 | 320 | -1.585 |
+```
 
 表格显示基于 4-LGL 的高斯积分表现为 6 阶。MATLAB 代码为：
 
@@ -5260,54 +5759,6 @@ while N < 1000
     N = 2*N;
 end
 ```
-
-# 数值积分
-
-```matlab
-fprintf('Integration with 4-point Gauss quadrature\n')
-fprintf('--------------------------------------------\n')
-fprintf('N\t Approx\t Error\t Relative Error\n')
-fprintf('--------------------------------------------\n')
-m = length(LGL4Approx);
-for j = 1:m
-    fprintf('%4d\t%.5f\t%.12e\n', LGL4Approx(j, 1), LGL4Approx(j, 2), LGL4Approx(j, 3)/Exact);
-end
-fprintf('--------------------------------------------\n')
-Rconv4 = [];
-fprintf('Rates of convergence for 4-point Gauss quadrature\n')
-fprintf('--------------------------------------------\n')
-fprintf('N\t Conv. Rate\n')
-fprintf('--------------------------------------------\n')
-for j = 1:m-1
-    Rconv4 = [Rconv4; log2(LGL4Approx(j, 3)/LGL4Approx(j+1, 3))];
-    fprintf('%4d\t%.12e\n', LGL4Approx(j, 1), Rconv4(end))
-end
-fprintf('--------------------------------------------\n')
-function [s, w] = LGPw(n)
-    s = sort(conv(conv([-1, 0, 1]), polyder(legendrev(n-1))));
-    X = fliplr(vander(s));
-    Y = zeros(n, 1);
-    for j = 1 :n
-        Y(j) = (1-(-1)^j)/j;
-    end
-    w = X\Y;
-end
-function Leg = legendrev(n)
-    if n == 0
-        Leg = [0, 1];
-    elseif n == 1
-        Leg = [1, 0];
-    else
-        L1 = conv([1, 0], legendrev(n-1));
-        L2 = legendrev(n-2);
-        if length(L1) < length(L2)
-            L2 = zeros(1, length(L2)-length(L1));
-        end
-        Leg = (2*n-1)*L1-(n-1)/n*L2;
-    end
-end
-```
-
 
 
 
@@ -5340,11 +5791,12 @@ end
 | 160 | 0.000 |
 | 320 | -1.807 |
 
-Python 函数 LGRpw(n) 接收一个整数 `n` 并返回对应的 `n`-LGR 点和权重：
+Python 函数 `LGRpw(n)` 接收一个整数 `n` 并返回对应的 `n`-LGR 点和权重：
 
 ```python
 import scipy.special import legendre
 import numpy as np
+
 def LGRpw(n):
     s = list(np.sort(np.roots(legendre(n-1)+legendre(n))))
     X = np.fliplr(np.vander(s)).T
@@ -5406,8 +5858,6 @@ $$\frac{dy}{dx} = f(x,y), y(a) = y_0, \quad (7.1)$$
 | $b^T =$ | $c_M$ | $a_{M1}$ | $a_{MM}$ |
 | | $b_1$ | $b_M$ |
 
-# 求解非线性微分方程
-
 参数 $c_j, j=1, \dots, M$ 使得 $0 \leq c_1 \leq c_2 \leq \dots \leq c_M \leq 1$。参数 $a_{ij}, i=1, \dots, M$ 满足
 
 $$\sum_{j=1}^M a_{ij} = c_i,$$
@@ -5436,7 +5886,7 @@ $$\sum_{j=1}^M b_j f(x_i^{(j)}, y_i^{(j)}) = 1$$
 
 $$y(x_i^{(M)}) \approx y(x_i) + h_i \sum_{j=1}^M b_j f(x_i^{(j)}, y_i^{(j)}), \quad (7.4)$$
 
-# 显式 Runge-Kutta 方法
+### 7.2 显式 Runge-Kutta 方法
 
 公式 (7.3) 和 (7.4) 定义了 M 级 Runge-Kutta 方法。对于所有 $l > j$，系数 $a_{ij}=0$，则所得的 Runge-Kutta 方法是显式的。如果对于所有 $l > j$ 有 $a_{ij}=0$，但对于某些 $j$ 有 $a_{jj}\neq 0$，则该方法是半显式的。否则，它是隐式的 [14]。
 
@@ -5445,7 +5895,7 @@ $$y(x_i^{(M)}) \approx y(x_i) + h_i \sum_{j=1}^M b_j f(x_i^{(j)}, y_i^{(j)}), \q
 M 级 Runge-Kutta 方法的阶数通过满足系数 $(a_{ij}),b_i$ 和 $c_i$（$i,j \in \{1,\dots,M\}$）。Butcher [14] 指出了隐式 M 级 Runge-Kutta 方法达到 P 阶所需的条件，如表 (7.1)所示所示。表 7.1：P 阶隐式 Runge-Kutta 方法的限制数量
 
 | 阶数 (P) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | 限制数量 | 1 | 2 | 4 | 8 | 17 | 37 | 85 | 200 |
 
 在表 (7.2) 中列出了直到四阶的 M 级 Runge-Kutta 方法的系数 $(A,b,c)$。如果满足从 1 到 $P$ 的所有条件，则阶数为 $P$。
@@ -5459,7 +5909,7 @@ M 级 Runge-Kutta 方法的阶数通过满足系数 $(a_{ij}),b_i$ 和 $c_i$（$
 | 3 | $\sum_{i=1}^M b_i c_i^2 = \frac{1}{3}$, $\sum_{i=1}^M \sum_{j=1}^M b_{ij} c_j = \frac{1}{3}$ |
 | 4 | $\sum_{i=1}^M b_i c_i^3 = \frac{1}{4}$, $\sum_{i=1}^M \sum_{j=1}^M b_{ij} c_j^2 = \frac{1}{2}$ |
 
-### 7.2.1 欧拉方法
+#### 7.2.1 欧拉方法
 
 简单的显式 Runge-Kutta 方法是欧拉法，它推自：
 
@@ -5477,17 +5927,11 @@ $y_{j+1} = y_j + h f(t_j, y_j) = y_j + h(t_j-2t_jy_j), j=0,1,\dots,N-1$
 
 $\dot{y}(t) = t - 2ty, y(0) = 1$
 
-
-
-
-
-# 显式龙格-库塔方法
-
 $y(t) = \frac{1}{2}(1+e^{-t^2})$
 
 以及用 $y_j$ 近似 $y(t_j)$ 的误差：
 
-$Error = \max\|y(t_j) - y_j|, j=0, 1, \dots, N\}$
+$Error = \max\|y(t_j) - y_j|, j=0, 1, \dots, N$
 
 Python 代码 `SolveIVPWithEuler` 使用欧拉法求解给定的初值问题：
 
@@ -5495,6 +5939,7 @@ Python 代码 `SolveIVPWithEuler` 使用欧拉法求解给定的初值问题：
 # SolveIVPWithEuler.py
 from numpy import linspace, zeros, exp, inf
 from numpy.linalg import norm
+
 def EulerIVP(f, a, b, N, y0):
     t = linspace(a, b, N+1)
     yact = 0.5*(1+exp(-t**2))
@@ -5579,100 +6024,143 @@ runfile('D:/PyFiles/SolveIWPWithEuler.py', wdir='D:/PyFiles')
 
 从收敛阶表中可以看出，欧拉法是一阶方法 $O(h)$。
 
-# 显式龙格-库塔方法
+### 7.2.2 显式龙格-库塔方法
 
 MATLAB 代码如下：
 
 ```matlab
 clear
-f = @tt,)) t-2*y;
-0 = 0;
- =.. = =000;
- = =t = = 0.01 =  = 2));
+f = @(t,y) t-2*y;
+t0 = 0;
+y0 = 1;
+h = 0.01;
+tspan = [0 2];
 Rows = 15;
-Eulerrs = zeros(Rows, 2);
+EulerErrors = zeros(Rows, 2);
 fprintf('%s\n', 'Euler');
-fprintf('%s\tError\n', 'Eulerrs');
+fprintf('%s\t%s\n', 'N', 'Error');
 for j = 1 : Rows
     N = 2*(3+j);
-    [t, y,, = = =,(,,,,,,,,,,,,,,,, = N,,  rs =j, 0, = N;
-    Euler =j, = = = = = =fffft%11\',,,
-);
-fprintf('%s\n', 'Rates of convergence');
-fprintf('%s\n', 'Rates of convergence');
-RatesOfConvergence = zeros(Rows-1, 2);
-fprintf('%s of Euler method:\n', 'Rates');
-fprintf('%s\t Conv. Rate\n', '');
+    [t, y, Error] = EulerIVP(f, tspan, N, y0);
+    EulerErrors(j, 0) = N;
+    EulerErrors(j, 1) = Error;
+    fprintf('%6d\t%.11e\n', EulerErrors(j, 0), EulerErrors(j, 1));
+end
 fprintf('%s\n', '');
+fprintf('%s\n', 'Rates of convergence of Euler method:');
+fprintf('%s\t%s\n', 'N', 'Conv. Rate');
+fprintf('%s\n', '');
+RatesOfConvergence = zeros(Rows-1, 2);
 for j = 1 : Rows-1
     RatesOfConvergence(j, 0) = EulerErrors(j, 0);
     RatesOfConvergence(j, 1) = log2(EulerErrors(j+1, 1)/EulerErrors(j, 1));
-    fprintf('%6f\t\t%.3f\n', RatesOfConvergence(j, 0), RatesOfConvergence(j, 2));
+    fprintf('%6d\t\t%.3f\n', RatesOfConvergence(j, 0), RatesOfConvergence(j, 1));
 end
 fprintf('%s\n', '');
-function [t, y, Error] = EulerIVP(f, a, b, N, y0)
-    t = linspace(a, b, N+1);
-    h = (b-a)/N;
+
+function [t, y, Error] = EulerIVP(f, tspan, N, y0)
+    t = linspace(tspan(1), tspan(2), N+1);
+    h = (tspan(2)-tspan(1))/N;
     y = zeros(N+1, 1);
-    yect = 0.5*(1+exp(-t.^2));
+    yexact = 0.5*(1+exp(-t.^2));
     y(1) = y0;
-    for j = 1 : N
+    for j = 1:N
         y(j+1) = y(j) + h*f(t(j), y(j));
     end
-    Error = norm(y-yect, inf);
+    Error = norm(y - yexact, inf);
 end
 ```
 
-### 7.2 海恩方法
+
+
+## 7.2 海恩方法
 
 海恩方法的形式为：
-$y_{i+1} = y_i + \frac{h}{2}(f(x_i, y_i) + f(x_{i+1}, y_i))$
+$$y_{i+1} = y_i + \frac{h}{2}(f(x_i, y_i) + f(x_{i+1}, y_i))$$
 
 使用海恩方法的 MATLAB 代码如下：
 
 ```matlab
 clear; clc;
+
 f = @(t, y) t-2*t+y;
+
 a = 0.0; b = 2.0; y0 = 1;
+
 yexact = @(t) 0.5*(1+exp(-t.^2));
+
 N = 15;
+
 Rows = 2;
+
 HeunErrors = zeros(Rows, 2);
+
 fprintf('%d\t Error:%e\n', 1);
+
 fprintf('%d\t Error:%e\n', 2);
+
 for j = 1 : Rows
+
     N = 2^(j+1);
+
     [t, y, Error] = HeunIVP(f, a, b, N, y0);
+
     HeunErrors(j, 1) = N;
+
     HeunErrors(j, 2) = Error;
+
     fprintf('%d\t%8e\n', j, Error);
+
 end
+
 fprintf('%d\t Error:%e\n', 1);
+
 RatesOfConvergence = zeros(Rows-1, 2);
+
 fprintf('%d\t Rates of Heun method:%e\n', 1);
+
 fprintf('%d\t Conv. Rate:%e\n', 1);
+
 fprintf('%d\t %e\n', 1);
+
 for j = 1 : Rows-1
+
     RatesOfConvergence(j, 1) = HeunErrors(j, 1);
+
     RatesOfConvergence(j, 2) = log2(HeunErrors(j+1, 2)/HeunErrors(j, 2));
+
     fprintf('%d\t%8.1e\n', j, RatesOfConvergence(j, 1));
+
 end
+
 function [t, y, Error] = HeunIVP(f, a, b, N, y0)
+
     t = linspace(a, b, N+1);
+
     h = (b-a)/N;
+
     y = zeros(N+1, 1);
+
     yexact = 0.5*(1+exp(-t.^2));
+
     y(1) = y0;
+
     for j = 1 : N
+
         k1 = f(t(j), y(j));
+
         k2 = f(t(j+1), y(j)+h*k1);
+
         y(j+1) = y(j) + h/2*(k1+k2);
+
     end
+
     Error = norm(y-yexact, inf);
+
 end
 ```
 
-# 显式龙格-库塔方法
+## 显式龙格-库塔方法
 
 执行此代码后得到以下结果。
 
@@ -5715,13 +6203,14 @@ end
 
 收敛阶表显示海恩方法二阶方法。
 
-# 求解非线性常微分方程
+## 求解非线性常微分方程
 
 Python 代码如下：
 
 ```python
 from numpy import linspace, zeros, exp, inf, log2
 from numpy.linalg import norm
+
 def HeunIVP(f, a, b, N, y0):
     t = linspace(a, b, N+1)
     yeact = 0.5*(1+exp(-t**2))
@@ -5768,14 +6257,17 @@ for j in range(Rows-1):
 | 1 | 0 | 0 | 1 | |
 | | 1/6 | 1/6 | 2/6 | 1/6 |
 
-# 显式龙格-库塔方法
+## 显式龙格-库塔方法
 
 例7.2 Lot-Volterra 模型在该例中，将使用四阶龙格-库塔方法求解捕食者-猎物模型：
 
-```
-$$\dot{x}(t) = 0.7x(t)-1.3x(t)y(t),x(0) = 0.9$$
-$$\dot{y}(t) = x(t)y(t)-y(t), y(0) = 0.1$$
-```
+$$
+\dot{x}(t) = 0.7x(t)-1.3x(t)y(t),x(0) = 0.9
+$$
+
+$$
+\dot{y}(t) = x(t)y(t)-y(t), y(0) = 0.1
+$$
 
 其中 $t \in [0, 50]$。求解该问题的 MATLAB 代码如下：
 
@@ -5798,11 +6290,7 @@ for j = 1:N
 end
 ```
 
-
-
-
-
-# 求解非线性常微分方程组
+## 求解非线性常微分方程组
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_194_0.png)
 
@@ -5833,7 +6321,7 @@ plt.legend()
 
 最简单的隐式 Runge-Kutta 方法是后向欧拉法。后向欧拉法的 Butcher 表如下，其形式为：
 
-$y^{n+1} = y^n + hf(x_n, y^{n+1})$
+$$y^{n+1} = y^n + hf(x_n, y^{n+1})$$
 
 后向欧拉法是一种一阶方法，其截断误差为 $O(h)$，其中 $h$ 是点 $x_j$ 和 $x_{j+1}$ 之间的最大步长。
 
@@ -5844,6 +6332,7 @@ $y^{n+1} = y^n + hf(x_n, y^{n+1})$
 ```python
 from numpy import linspace, zeros, exp, inf, log2
 from numpy.linalg import norm
+
 def backwardEulerIVP(f, a, b, N, y0):
     t = linspace(a, b, N+1)
     yect = 0.5*(1+exp(-t**2))
@@ -5945,11 +6434,18 @@ fprintf('\n');
 fprintf('%-s\t%s\n', '', 'Error');
 fprintf('\n');
 for j = 1:Rows
-    N = 2^(j+3);
-    [t, y, Error] = BackwardEulerIVP(f, a, b, N, y0);
-    BackwardEulerErrors(j, 1) = N;
-    BackwardEulerErrors(j, 2) = Error;
-    fprintf('%-8i\t%1.1e\n', j, Error);
+```
+
+
+
+## 后向欧拉法实现
+
+```matlab
+N = 2^(j+3);
+[t, y, Error] = BackwardEulerIVP(f, a, b, N, y0);
+BackwardEulerErrors(j, 1) = N;
+BackwardEulerErrors(j, 2) = Error;
+fprintf('%-8i\t%1.1e\n', j, Error);
 end
 fprintf('\n');
 plot(t, y, 'm', 'LineWidth', 2);
@@ -5958,7 +6454,9 @@ grid on;
 set(gca,'YTick', 0.5:0.05:1.0);
 set(gca, 'fontweight', 'bold');
 legend('y(x) = (1+e^{-x^2})/2');
+```
 
+```matlab
 function [t, y, Error] = BackwardEulerIVP(f, a, b, N, y0)
     t = linspace(a, b, N+1);
     yect = 0.5*(1+exp(-t.^2));
@@ -6000,6 +6498,7 @@ $P(t) = \frac{P_0}{P_0+(1-P_0)e^{-rt}}$
 ```python
 from numpy import linspace, zeros, exp, inf, log2
 from numpy.linalg import norm
+
 def GaussMidIV(f, a, b, N, P0):
     t = linspace(a, b, N+1)
     Pect = P0+(1-P0)*exp(-0.2*t)
@@ -6027,23 +6526,18 @@ for j in range(Rows):
     N *= 2
 ```
 
-
-
-
-
-# 非线性常微分方程组
-
 ```python
-32 RatesOfConvergence = zeros((Rows-1, 2), 'float')
-33 print('Rates of convergence of Gauss Midpoint method:')
-34 print('------------------------------------------------------')
-35 print('      N | Conv Rate')
-36 print('------------------------------------------------------')
-37 for j in range(Rows-1):
-38 RatesOfConvergence[j, 0] = GaussMidErrors[j, 0]
-39 RatesOfConvergence[j, 1] = log2(GaussMidErrors[j, 1])
-40 print('{0.6f}'.format(RatesOfConvergence[j, 0]), '\t\t', '{0.1f}'.format(RatesOfConvergence[j, 1]))
-41 print('------------------------------------------------------')
+RatesOfConvergence = zeros((Rows-1, 2), 'float')
+print('Rates of convergence of Gauss Midpoint method:')
+print('------------------------------------------------------')
+print('      N | Conv Rate')
+print('------------------------------------------------------')
+for j in range(Rows-1):
+    RatesOfConvergence[j, 0] = GaussMidErrors[j, 0]
+    RatesOfConvergence[j, 1] = log2(GaussMidErrors[j, 1])
+    print('{0.6f}'.format(RatesOfConvergence[j, 0]), '\t\t', '{0.1f}'.format(RatesOfConvergence[j, 1]))
+print('------------------------------------------------------')
+
 import matplotlib.pyplot as plt
 plt.figure(figsize=(10, 10))
 plt.plot(t, P, color='purple', lw=2, label='$P(t) =')
@@ -6057,7 +6551,7 @@ plt.legend()
 
 通过执行代码，显示了不同网格点值下的误差和收敛率。
 
-runfile('/D:/PyFiles/SolveLogisticWithMidpoint.py', dir='D:/PyFiles/PyFiles')
+`runfile('/D:/PyFiles/SolveLogisticWithMidpoint.py', dir='D:/PyFiles/PyFiles')`
 
 | N | 误差 |
 |---|---|
@@ -6077,7 +6571,7 @@ runfile('/D:/PyFiles/SolveLogisticWithMidpoint.py', dir='D:/PyFiles/PyFiles')
 | 819200 | 2.786659719809e-13 |
 | 1638400 | 6.639133672858e-14 |
 
-# 隐式 Runge-Kutta 方法
+## 隐式 Runge-Kutta 方法
 
 高斯中点法的收敛率：
 
@@ -6101,75 +6595,71 @@ runfile('/D:/PyFiles/SolveLogisticWithMidpoint.py', dir='D:/PyFiles/PyFiles')
 MATLAB 代码如下：
 
 ```matlab
-1 clear; clc;
-2 Rows = 15;
-3 r = 0.25;
-4 f = @(t, P) r*P+(1-r);
-5 a = 0.0; b = 20.0;
-6 P0 = 0.2;
-7 GaussMidErrors = zeros(Rows, 2);
-8 printf('--------------------\n');
-9 printf('N\t Error\n');
-10 printf('--------------------\n');
-11 N = 100;
-12 for j = 1 : Rows
-13 [t, P, Error] = GaussMidIV(f, a, b, P0);
-14 GaussMidErrors(j, 1) = Error;
-15 GaussMidErrors(j, 2) = Error;
-16 printf('%d\t%.2e\n', N, Error);
-17 N = 2 * N;
-18 end
-19 printf('--------------------\n');
-20 figure(1);
-21 plot(t, P, '-', 'LineWidth', 2);
-22 legend('P(t)', 'P_0/(P_0-P_0)');
-23 xlabel('Time');
-24 ylabel('Population P(t)');
-25 grid on;
-26 set(gca, 'FontWeight', 'bold');
-27 set(gca, 'FontSize', 12);
-28 set(gca, 'XTick', a:(b-a)/10:b);
-
-# Solving非线性方程组
-
-```matlab
-30 set(gca, 'YTick', 0:1:1);
-31 RatesOfConvergence = zeros(Rows-1, 2);
-32 fprintf('Rates of convergence of Gauss Midpoint method:\n');
-33 fprintf('----------------------\n');
-34 fprintf('   N | Conv. Rate\n');
-35 fprintf('----------------------\n');
-36 for j = 1 : Rows-1
-37 RatesOfConvergence(j, 1) = GaussMidErrors(j, 1);
-38 RatesOfConvergence(j, 2) = log2(GaussMidErrors(j, 1));
-39 fprintf('%d | %.4f | %.4f\n', j, RatesOfConvergence(j, 1), RatesOfConvergence(j, 2));
-40 end
-41 fprintf('----------------------\n');
+clear; clc;
+Rows = 15;
+r = 0.25;
+f = @(t, P) r*P+(1-r);
+a = 0.0; b = 20.0;
+P0 = 0.2;
+GaussMidErrors = zeros(Rows, 2);
+printf('--------------------\n');
+printf('N\t Error\n');
+printf('--------------------\n');
+N = 100;
+for j = 1 : Rows
+    [t, P, Error] = GaussMidIV(f, a, b, P0);
+    GaussMidErrors(j, 1) = Error;
+    GaussMidErrors(j, 2) = Error;
+    printf('%d\t%.2e\n', N, Error);
+    N = 2 * N;
+end
+printf('--------------------\n');
+figure(1);
+plot(t, P, '-', 'LineWidth', 2);
+legend('P(t)', 'P_0/(P_0-P_0)');
+xlabel('Time');
+ylabel('Population P(t)');
+grid on;
+set(gca, 'FontWeight', 'bold');
+set(gca, 'FontSize', 12);
+set(gca, 'XTick', a:(b-a)/10:b);
+set(gca, 'YTick', 0:1:1);
+RatesOfConvergence = zeros(Rows-1, 2);
+fprintf('Rates of convergence of Gauss Midpoint method:\n');
+fprintf('----------------------\n');
+fprintf('   N | Conv. Rate\n');
+fprintf('----------------------\n');
+for j = 1 : Rows-1
+    RatesOfConvergence(j, 1) = GaussMidErrors(j, 1);
+    RatesOfConvergence(j, 2) = log2(GaussMidErrors(j, 1));
+    fprintf('%d | %.4f | %.4f\n', j, RatesOfConvergence(j, 1), RatesOfConvergence(j, 2));
+end
+fprintf('----------------------\n');
 ```
 
 ```matlab
-43 function [t, P, Error] = GaussMidIV(f, a, b, P0)
-44 t = linspace(a, b, N+1);
-45 h = (b-a)/N;
-46 P = zeros(1, N+1);
-47 Pexact = P0/(1-P0)*exp(-0.25*t);
-48 P(1) = P0;
-49 for j = 1 : N
-50 P(j+1) = P(j) + h/2*f(t(j), P(j));
-51 end
-52 Error = norm(P-Pexact, inf);
-53 end
+function [t, P, Error] = GaussMidIV(f, a, b, P0)
+    t = linspace(a, b, N+1);
+    h = (b-a)/N;
+    P = zeros(1, N+1);
+    Pexact = P0/(1-P0)*exp(-0.25*t);
+    P(1) = P0;
+    for j = 1 : N
+        P(j+1) = P(j) + h/2*f(t(j), P(j));
+    end
+    Error = norm(P-Pexact, inf);
+end
 ```
 
 解图见图 7.3。
 
-## 3.3.2 Lobatto 方法
+### 3.3.2 Lobatto 方法
 
 有三种 Lobatto 方法：Lobatto IIIA、Lobatto IIIB 和 Lobatto IIIC。在本节中，将使用两种 Lobatto 方法求解初值问题 (7.1)，都是 Lobatto IIIA 方法。
 
 ![](img/992390aaa045c7096d906cee3e3bc_202.png) 使用 Gauss 方法求解逻辑增长模型。
 
-# 隐式 Runge-Kutta 方法
+## 隐式 Runge-Kutta 方法
 
 第一种方法是隐式梯形法，其 Butcher 表如下：
 
@@ -6213,16 +6703,17 @@ YPrime = zeros(n, Dim);
 z(1) = z0;
 i = 1;
 while (i <= N)
-k1 = f(t(i), z(i));
-k2 = feval(f, t(i+1), z(i)+h*k1);
-YPrime(i) = k1;
-yest = z(i) + h*k1;
-z(i+1) = yest + h/2.0*(k1+k2);
-while(norm(z(i+1)-yest)>Epsilon)
-yest = z(i+1);
-k2 = feval(f, t(i+1), yest);
-z(:, i+1) = z(:, i) + (h/2.0)*(k1+k2);
-i = i + 1;
+    k1 = f(t(i), z(i));
+    k2 = feval(f, t(i+1), z(i)+h*k1);
+    YPrime(i) = k1;
+    yest = z(i) + h*k1;
+    z(i+1) = yest + h/2.0*(k1+k2);
+    while(norm(z(i+1)-yest)>Epsilon)
+        yest = z(i+1);
+        k2 = feval(f, t(i+1), yest);
+        z(:, i+1) = z(:, i) + (h/2.0)*(k1+k2);
+        i = i + 1;
+    end
 end
 ```
 
@@ -6252,7 +6743,9 @@ for i in range(N):
         z[i+1] = yest + (h/2.0)*(k1+k2) # 注意：此处代码逻辑对应原文
 ```
 
-# 隐式 Runge-Kutta 方法
+## 隐式 Runge-Kutta 方法
+
+
 
 ```python
 y = z[i] + h*k1
@@ -6299,10 +6792,6 @@ $\frac{dV}{dt} = N_v \mu_I I(t) - k_1 T(t)V(t) - \mu_V V(t), V(0) = 10^{-3}$
 ```
 
 ![](img/992390aaa045c7096d906cee3e3bc_204.png) 图 7.4 基于梯形法则的竞争模型解。
-
-
-
-
 
 # 求解非线性常微分方程
 
@@ -6372,6 +6861,7 @@ grid on;
 ```
 
 执行上述代码将显示图 7.5 中的图。
+
 Python 代码如下：
 
 ```python
@@ -6413,6 +6903,7 @@ Python 代码如下：
 36 z[:, i+1] = z[:, i]+h*k2
 37 i = i + 1
 ```
+
 ```python
 38 import matplotlib.pyplot as plt
 39 plt.figure(1)
@@ -6450,15 +6941,18 @@ Python 代码如下：
 
 # MATLAB ODE 求解器
 
-### 7.4 求解器
+## 7.4 求解器
 
 MATLAB 提供了许多求解微分方程组的程序。在本节中，我们将讨论如何使用 MATLAB 函数 `ode45` 来求解常微分方程的初值问题（IVPs）。
 
 ### 7.4.1 MATLAB 求解器
 
 MATLAB 有两类通用的 ODE 求解器：用于刚性问题。**非刚性问题求解器**：MATLAB 有三个非刚性求解器：`ode23`、`ode45` 和 `ode113`。
+
 - `ode23` 是低阶，使用二阶和三阶 Runge-Kutta 方法积分一阶方程组。
+
 - `ode45` 是中阶，使用四阶和五阶 Runge-Kutta 方法积分一阶方程组。求解非刚性问题比 `ode23` 更准确。
+
 - `ode113` 求解器属于 1 到 3  Adams-Bashforth-Moulton 预测-修正对。在许多问题中它比 `ode45` 求解器效率更高。
 
 **刚性问题求解器**：MATLAB 拥有五个求解刚性问题的求解器。它们是 `ode15`、`ode23s`、`ode23t`、`ode23b` 和 `ode15i`。
@@ -6466,7 +6960,9 @@ MATLAB 有两类通用的 ODE 求解器：用于刚性问题。**非刚性问题
 ### 7.4.2 求解简单的 IVP
 
 我们考虑：
+
 $$\frac{dy}{dt} = f(t,y), \in [t_0, t_1], \quad (7.6)$$
+
 $$y(t_0) = y_0 \quad (7.7)$$
 
 为了求解 IVP (7.6)-(7.7)，我们需要写一个函数，返回方程 (7.6) 的右侧。可以如下操作：
@@ -6538,10 +7034,15 @@ set(gca, 'YTick', 0.25:1);
 在本节中，我们考虑一组初值问题。系统形式为：
 
 $$\begin{aligned}
+
 \frac{dy_1}{dt} &= f_1(t, y_1, \dots, y_n), y_1(t_0) = y_1^0, t \in [t_0, t_1] \\
+
 \frac{dy_2}{dt} &= f_2(t, y_1, \dots, y_n), y_2(t_0) = y_2^0, t \in [t_0, t_1] \\
+
 \dots &= \dots \\
+
 \frac{dy_n}{dt} &= f_n(t, y_1, \dots, y_n), y_n(t_0) = y_n^0, t \in [t_0, t_1]
+
 \end{aligned} \quad (7.8)$$
 
 求解上述 IVP 组的第一步将其写成向量形式。为此，我们令：
@@ -6600,10 +7101,6 @@ z0 = [0.85; 0.15; 0];
 [t, z] = ode45(@SIRSSlope, tspan, z0);
 ```
 
-
-
-
-
 # MATLAB ODE 求解器
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_213_0.png)
@@ -6623,6 +7120,8 @@ z0 = [0.85; 0.15; 0];
 
 ### 7.4.4 求解刚性 IVP 系统
 
+
+
 如果 IVP 系统是刚性的，MATLAB 函数 `ode45` 将无法为该问题找到解。该系统的一个例子是 Vanderpool 振荡器，它由二阶微分方程给出：
 
 > $y''(x) + \sigma(y^2(x)-1)y'(x) + y(x) = 0, y'(0) = 2$
@@ -6635,9 +7134,10 @@ $y_2'(x) = \sigma(1-y_1^2(x))y_2(x) - y_1(x), y_2(0) = 0 \quad (7.9)$
 ```
 
 MATLAB `ode45` 函数将无法求解 Vanderpool 系统 (7.9)。我们可以使用 MATLAB 函数 `ode23s` 来求解系统 (7.9)。
+
 我们将 $\sigma$ 声明为全局变量，然后按照如下方式求解该系统：
 
-## 196 求解非线性常微分方程组组
+## 求解非线性常微分方程组
 
 | 行号 | 代码 |
 | :--- | :--- |
@@ -6700,10 +7200,6 @@ MATLAB `ode45` 函数将无法求解 Vanderpool 系统 (7.9)。我们可以使�
 
 图 7.8：$\sigma = 1, 5, 10, 20, 40$ 和 $80$ 时 Vanderpool 系统的解。
 
-## IVP 的 Python 求解器
-
-Python 有许多方法求解 ODE 的 IVP。可用工具包括 `scipy.integrate.odeint` 函数和 `gekko` 包。
-
 ### 使用 odeint 求解 ODE
 
 `odeint` 函数接收 ODE 系统的右侧（RHS）、初始条件向量和时间跨。它返回 ODE 系统的解。在本例中，它将用于求解微分方程 $x'(t) = 4\sin(t)-x(t)^2, x(0) = 0.1, t \in [0, 20]$。Python 代码如下：
@@ -6753,10 +7249,12 @@ from gekko import GEKKO
 m = GEKKO(remote=False)
 ```
 
-例 7.9 该示例使用 gepko 求解 SIR：
+### 示例 7.9 该示例使用 gepko 求解 SIR：
 
 > $S'(t) = \alpha S(t) - \mu S(t), S(0) = S_0$
+
 > $I'(t) = \alpha S(t) - (\mu + \beta)I(t), I(0) = I_0$
+
 > $R'(t) = \beta I(t) - \mu R(t), R(0) = R_0$
 
 其中 $\alpha = 0.05, \mu = 0.05, \beta = 0.6$ 且 $T = 25$。
@@ -6785,10 +7283,7 @@ m.options.IMODE = 4 # 仿真模式
 m.solve()
 ```
 
-
-
-
-# 求解非线性常微分方程组
+## 求解非线性常微分方程组
 
 ```python
 202 t = m.time
@@ -6807,12 +7302,13 @@ m.solve()
 ```
 
 执行代码 `SolveSIRjekko.py`
+
+```
 run('/media/WindowsData/PyFiles/SolveSIRjekko.py',
 dir='/media/WindowsData/PyFiles')
 
 APMonitor, 版本 0.8.9
 APMonitor 优化套
-
 APM 模型大小
 每个时间步包含
 对象 : 0
@@ -6822,21 +7318,18 @@ APM 模型大小
 连接 : 0
 方程 : 3
 残差 : 3
-
 状态变量数量：1200
 总方程数量：1200
 松弛变量数量：0
-
 自由度： 3 (不支持)
 求解器 0
 使用默认求解器：APOPT
-
 使用使用 APOPT 求解器的动态仿真
-
 迭代目标收敛性
 0 2.90508E-13 1.15000E-01
+```
 
-# 用于 IVP 的 Python 求解器
+### 用于 IVP 的 Python 求解器
 
 | 迭代 | 目标 | 收敛性 |
 | :--- | :--- | :--- |
@@ -6860,8 +7353,11 @@ APM 模型大小
 成功求解
 
 > 求解器 : IPOPT (v3.12)
+
 求解时间：6.480000000010477E-02 秒
+
 目标：0.0000000000000000E+000
+
 成功求解：
 
 求解图如图 7.11 所示。
@@ -6870,9 +7366,9 @@ APM 模型大小
 
 图 7.11：使用 gekko 包在 [0,10] 上求解 SIR 模型的结果。
 
-# 求解非线性常微分方程组
+## 求解非线性常微分方程组
 
-**示例 7.10** 在此示例中，将使用 gekko 来求解刚性微分方程组：
+### 示例 7.10 在此示例中，将使用 gekko 来求解刚性微分方程组：
 
 ```
 $$\frac{dy_1(t)}{dt} = -1002*y_1(t) + 1000*y_2^2(t), \ y_1(0) = 1$$
@@ -6880,6 +7376,7 @@ $$\frac{dy_2(t)}{dt} = y_1(t) + y_2*(1+y_2(t)), y_2(0) = 1$$
 ```
 
 对于 $0 \leq t \leq 5$。
+
 代码如下：
 
 ```python
@@ -6925,13 +7422,13 @@ plt.legend()
 
 # 非标准差分法求解 ODE
 
-### 摘要
+## 摘要
 
 标准差分法最初是为了解决这类问题设计的。然而，由于刚性问题，它们在某些情况下会出现振荡，且对步长有严格限制。另一方面，隐式差分法具有更宽的稳定性区域，但会带来较大的计算开销。非标准差分法在这些方面提供了更好的平衡。
 
 本章将介绍非标准差分方法。在第一节中，我们将讨论标准差分方法的收敛性。在第三章中介绍差分方法的构造。最后，在第四章中介绍非标准差分方法。
 
-### 8.1 标准差分法的局限性
+## 8.1 标准差分法的局限性
 
 在许多情况下，差分函数的选择会导致数值不稳定。为了看到这种例子，考虑一阶初值问题：
 
@@ -6975,25 +7472,21 @@ y_{j+1} = y_j + h f(t_{j+1/2}, y_{j+1/2})
 
 在许多情况下，差分函数的选择会导致数值不稳定。为了看到这种例子，考虑一阶初值问题：
 
-```
-\frac{dy(t)}{dt} = Ay(t), y(0) = 0.
-```
+
+
+$$
+\frac{dy(t)}{dt} = Ay(t), \quad y(0) = 0.
+$$
 
 该 IVP 的精确解为：
 
-```
+$$
 y(t) = \frac{1}{A^2}(e^{At}-(At+1)).
-```
+$$
 
-区间 [0,1] 被划分为 1000 个子区间，由点 $0=t_0<t_1...<t_{1000}=1$，每个子区间的长度为 $h=0.001$。使用前向欧拉法、隐式梯法则和经典的四阶 Runge-Kutta 方法在不同的 $A$ 值下求解给定问题。理论上，欧拉法的误差为 $\mathcal{O}(h)=\mathcal{O}(10^{-3})$，隐式梯法的误差为 $\mathcal{O}(h^2)=\mathcal{O}(10^{-6})$，而四阶 Runge-Kutta 方法的误差为 $\mathcal{O}(h^4)=\mathcal{O}(10^{-12})$。
-
-
-
-
+区间 $[0,1]$ 被划分为 1000 个子区间，由点 $0=t_0<t_1...<t_{1000}=1$，每个子区间的长度为 $h=0.001$。使用前向欧拉法、隐式梯形法则和经典的四阶 Runge-Kutta 方法在不同的 $A$ 值下求解给定问题。理论上，欧拉法的误差为 $\mathcal{O}(h)=\mathcal{O}(10^{-3})$，隐式梯形法的误差为 $\mathcal{O}(h^2)=\mathcal{O}(10^{-6})$，而四阶 Runge-Kutta 方法的误差为 $\mathcal{O}(h^4)=\mathcal{O}(10^{-12})$。
 
 # 用于求解微分方程的非标准有限差法
-
-210
 
 ```python
 16 row = 0
@@ -7002,30 +7495,30 @@ y(t) = \frac{1}{A^2}(e^{At}-(At+1)).
 19 while row < MaxRows:
 20     # y is the exact solution of the problem
 21     y = 1/A[row]*(np.exp(A[row]*t) - (A[row]*t+1))
-22     plt.plot(t, y,label='A' +str(A[row]))
+22     plt.plot(t, y, label='A' + str(A[row]))
 23     plt.legend()
 24     Euler[i, j] = y0
 25     rk4[i, j] = y0
-26 itj = y0
+26     itj = y0
 27     for j in range(3):
-28     # Solving Euler's method
-29     Euler[i, j] = Euler[i, j] + h*f(t[j], Euler[i, j], A[row])
-30     # Solving implicit trapezoidal rule
-31     k1 = f(t[j], rk4[i, j], A[row])
-32     k2 = f(t[j]+h/2, rk4[i, j]+h/2*k1, A[row])
-33     k3 = f(t[j]+h/2, rk4[i, j]+h/2*k2, A[row])
-34     k4 = f(t[j]+h, rk4[i, j]+h/6*(k1+2*k2+2*k3+k4))
-35     # Solving with the fourth-order Runge-Kutta method
-36     k1 = f(t[j], rk4[i, j], A[row])
-37     k2 = f(t[j]+h/2, rk4[i, j]+h/2*k1, A[row])
-38     k3 = f(t[j]+h/2, rk4[i, j]+h/2*k2, A[row])
-39     k4 = f(t[j]+h, rk4[i, j]+h/6*(k1+2*k2+2*k3+k4))
-40     # computing the norm-infinity error for the three methods
-41     EulerError = np.linalg.norm(y-Euler[i], np.inf)
-42     iterError = np.linalg.norm(y-iter[i], np.inf)
-43     rk4Error = np.linalg.norm(y-rk4[i], np.inf)
-44     row += 1
-45 row = 1
+28         # Solving Euler's method
+29         Euler[i, j] = Euler[i, j] + h*f(t[j], Euler[i, j], A[row])
+30         # Solving implicit trapezoidal rule
+31         k1 = f(t[j], rk4[i, j], A[row])
+32         k2 = f(t[j]+h/2, rk4[i, j]+h/2*k1, A[row])
+33         k3 = f(t[j]+h/2, rk4[i, j]+h/2*k2, A[row])
+34         k4 = f(t[j]+h, rk4[i, j]+h/6*(k1+2*k2+2*k3+k4))
+35         # Solving with the fourth-order Runge-Kutta method
+36         k1 = f(t[j], rk4[i, j], A[row])
+37         k2 = f(t[j]+h/2, rk4[i, j]+h/2*k1, A[row])
+38         k3 = f(t[j]+h/2, rk4[i, j]+h/2*k2, A[row])
+39         k4 = f(t[j]+h, rk4[i, j]+h/6*(k1+2*k2+2*k3+k4))
+40         # computing the norm-infinity error for the three methods
+41         EulerError = np.linalg.norm(y-Euler[i], np.inf)
+42         iterError = np.linalg.norm(y-iter[i], np.inf)
+43         rk4Error = np.linalg.norm(y-rk4[i], np.inf)
+44         row += 1
+45     row = 1
 46     if row > MaxRows:
 47         break
 48     else:
@@ -7033,8 +7526,8 @@ y(t) = \frac{1}{A^2}(e^{At}-(At+1)).
 ```
 
 运行代码得到如下结果：
-runfile('/media/WindowsData1/PyFiles/numinstudetotrivestepfun.py',
-wdir='/media/WindowsData1/PyFiles')
+
+`runfile('/media/WindowsData1/PyFiles/numinstudetotrivestepfun.py', wdir='/media/WindowsData1/PyFiles')`
 
 | Euler 误差 | 隐式梯形误差 | RK4 误差 |
 |---|---|---|
@@ -7057,10 +7550,20 @@ wdir='/media/WindowsData1/PyFiles')
 ## 标准有限差分方法的缺陷
 
 我们所考虑的方法之所以产生误差，尽管步长 $h$ 保持不变，可能是因为它们使用了非线性项的局部近似：标准有限差分格式表示了如 $x^2$ 或 $e^x$ 等非线性项。Mickens 指出，非线性项的局部近似会导致数值不稳定性。Mickens 给出的一个例子是指数衰减模型的求解：
-$$\frac{dP}{dt} = -P(t), P(0) = 0.5.$$
-$$P^{n+1} = P^n - hP^n$$
+
+$$
+\frac{dP}{dt} = -P(t), \quad P(0) = 0.5.
+$$
+
+$$
+P^{n+1} = P^n - hP^n
+$$
+
 指数衰减模型的前向欧拉离散化如下：对于不同的步长 $h$ 取值，所得的解所示。对于指数衰减模型得到的解包括了具有渐近稳定性、周期性和不稳定动力学特征的解剖面，其中周期和不稳定解并不对应于指数衰减模型的任何解。仅第一张图（人口衰减到零）就与微分方程的真实解一致。另一个例子是使用 Heun 方法求解逻辑模型：
-$$\frac{dx}{dt} = x(t)(1-x(t)), x(0) = 0.5$$
+
+$$
+\frac{dx}{dt} = x(t)(1-x(t)), \quad x(0) = 0.5
+$$
 
 ## 用于求解微分方程的非标准有限差法
 
@@ -7068,17 +7571,13 @@ $$\frac{dx}{dt} = x(t)(1-x(t)), x(0) = 0.5$$
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_231.png) 图 8.2：指数衰减模型的前向欧拉方法的解。Python 代码如下：
 
+## (III) 非线性项应通过非局部近似进行近似：诸如 $y^2(t)$ 等项应用 $y^j y^{j+1}$ 或 $y^{j-1} y^{j+1}$ 代替 $(y^j)^2$，其中 $y^j \approx y(t_j)$。例如，对应于模型的离散模型
 
+$$
+\frac{dy}{dt} = y(t)(1-y(t)), \quad y(0) = 0.5
+$$
 
-
-
-## (III) 非线性项应通过非局部近似进行近似：诸如 $y^2(t)$ 等项应用 $y^j y^{j+1}$ 或 $y^{j-1} y^{j+1}$ 代替 $(y^j)$，其中 $y^j \approx y(t_j)$。例如，对应于 模型的离散模型
-
-```
-$$\frac{dy}{dt} = y(t)(1-y(t)), y(0) = 0.5$$
-```
-
-可以是 $\frac{y^{j+1}-y^j}{h} = y^j(1-y^{j+1}) \Rightarrow y^{j+1} = \frac{y^j(1+h)}{1+h}, y^0 = 0.5$
+可以是 $\frac{y^{j+1}-y^j}{h} = y^j(1-y^{j+1}) \Rightarrow y^{j+1} = \frac{y^j(1+h)}{1+h y^j}, \quad y^0 = 0.5$
 
 使用 Python 代码 `nonlocapplog.py` 通过非局部近似来求解 logistic 模型。代码如下：
 
@@ -7124,37 +7623,37 @@ for k in range(4):
 
 给定一个初值问题
 
-```
-$\frac{dy}{dt}=f(t,y(t), \lambda), \ y(a)=y^0, t \in[a,b]$
-```
+$$
+\frac{dy}{dt}=f(t,y(t), \lambda), \quad y(a)=y^0, \quad t \in[a,b]
+$$
 
 其中 $\lambda$ 是模型参数集。假设该初值问题的解 $y(t)$ 为：
 
-```
-$$y(t)=F(t,y(t),y^0, \lambda).$$
-```
+$$
+y(t)=F(t,y(t),y^0, \lambda).
+$$
 
 令 $N$ 为正整数，$h=\frac{b-a}{N}$ 且 $t_j=a+jh, j=0,\dots,N$。考虑有限差分格式：
 
-```
-$$y^{j+1}=g(h,t_j,y^j, \lambda).$$
-```
+$$
+y^{j+1}=g(h,t_j,y^j, \lambda).
+$$
 
 ## 求解 ODE 的非标准有限差分方法
 
 且 $y^j \approx y(t_j)$。假设离散有限差分格式的解为
 
-```
-$y^j = G(t_j, h, y^i, y^0, \lambda). \quad (8.4)$
-```
+$$
+y^j = G(t_j, h, y^i, y^0, \lambda). \quad (8.4)
+$$
 
 根据 Mickens [37]，如果方程 (8.3) 的解 (8.4) 与相关微分方程 (8.2) 的解相同，则它是该微分方程的精确有限差分格式。这意味着
 
-```
-$y^j = G(t_j, h, y^i, y^0, \lambda) = F(t_j, y(t_j), y^0, \lambda) = y(t_j).
-```
+$$
+y^j = G(t_j, h, y^i, y^0, \lambda) = F(t_j, y(t_j), y^0, \lambda) = y(t_j).
+$$
 
-Mickens [39] 了一种用于构建许多模型有限差分格式的机制。其思想是将问题的某些定性特征纳入离散模型中。定性特征可以从模型的线性部分获得。非线性部分则使用非局部近似技术处理。
+Mickens [39] 提出了一种用于构建许多模型有限差分格式的机制。其思想是将问题的某些定性特征纳入离散模型中。定性特征可以从模型的线性部分获得。非线性部分则使用非局部近似技术处理。
 
 ### 8.3.1 齐次线性 ODE 的精确有限差分格式
 
@@ -7164,9 +7663,9 @@ Mickens [39] 了一种用于构建许多模型有限差分格式的机制。其�
 
 给定初值问题：
 
-```
-$\frac{dy}{dt} = -\alpha y(t), y(0) = y^0$
-```
+$$
+\frac{dy}{dt} = -\alpha y(t), \quad y(0) = y^0
+$$
 
 该 IVP 的精确解为 $y(t) = y^0 e^{-\alpha t}$。基础函数为 $y_1(t) = e^{-\alpha t}$。为了确定该 IVP 的精确差分格式，考虑：
 
@@ -7176,17 +7675,19 @@ $\frac{dy}{dt} = -\alpha y(t), y(0) = y^0$
 
 从两边减去 $y^j$，并将右侧乘以 $\alpha$ 后除以 $\alpha$，得到离散格式：
 
-```
-$y^{j+1} - y^j = -\alpha \left( \frac{1-e^{-\alpha h}}{\alpha} \right) y^j
-```
+$$
+y^{j+1} - y^j = -\alpha \left( \frac{1-e^{-\alpha h}}{\alpha} \right) y^j
+$$
 
 由此，
 
-```
-$\frac{y^{j+1}-y^j}{1-e^{-\alpha h}} = -\alpha y^j
-```
+$$
+\frac{y^{j+1}-y^j}{\frac{1-e^{-\alpha h}}{\alpha}} = -\alpha y^j
+$$
 
-因此，不是使用标准分母 $h$，而是使用分母函数 $\frac{1-e^{-\alpha h}}{\alpha}$ 将得到精确有限差分格式。**示例 8.1 (一阶线性 ODE)** 在此例中，将为指数衰减模型开发精确差分格式。
+因此，不是使用标准分母 $h$，而是使用分母函数 $\frac{1-e^{-\alpha h}}{\alpha}$ 将得到精确有限差分格式。
+
+**示例 8.1 (一阶线性 ODE)** 在此例中，将为指数衰减模型开发精确差分格式。
 
 以下 Python 代码显示了不同步长 $h$ 的精确差分格式求解指数衰减模型，并展示了精确解与离散模型之间的误差。执行代码得到如下结果：
 
@@ -7209,61 +7710,58 @@ $\frac{y^{j+1}-y^j}{1-e^{-\alpha h}} = -\alpha y^j
 
 **示例 8.2 (二阶 ODE)** 在此例中，将为求解二阶 BVP 建立精确有限差分格式：
 
-```
-$$\frac{d^2u}{dt^2}(t)+\omega^2u(t)=0, u(0)=u_0, u(2)=u_1$$
-```
+$$
+\frac{d^2u}{dt^2}(t)+\omega^2u(t)=0, \quad u(0)=u_0, \quad u(2)=u_1
+$$
 
 给定 BVP 的特征方程为
 
-```
-$r^2+\omega^2=0$,
-```
+$$
+r^2+\omega^2=0,
+$$
 
 其解为：
 
-```
-$r_{1,2}=\pm\omega i$.
-```
+$$
+r_{1,2}=\pm\omega i.
+$$
 
 因此，BVP 的基础解函数为
 
-```
-$u_1(t)=\sin(\omega t)$ 和 $u_2(t)=\cos(\omega t)$.
-```
+$$
+u_1(t)=\sin(\omega t) \quad \text{和} \quad u_2(t)=\cos(\omega t).
+$$
 
 考虑行列式：
 
-| $u^{j-1}$ | $\cos(\omega t_{j-1})$ | $\sin(\omega t_{j-1})$ | |
-|---|---|---|---|
-| $u^j$ | $\cos(\omega t_j)$ | $\sin(\omega t_j)$ | = 0. |
-| $u^{j+1}$ | $\cos(\omega t_{j+1})$ | $\sin(\omega t_{j+1})$ | |
+| $u^{j-1}$ | $\cos(\omega t_{j-1})$ | $\sin(\omega t_{j-1})$ |
+|---|---|---|
+| $u^j$ | $\cos(\omega t_j)$ | $\sin(\omega t_j)$ |
+| $u^{j+1}$ | $\cos(\omega t_{j+1})$ | $\sin(\omega t_{j+1})$ |
 
 利用三角恒式 $\cos(b)-\cos(a)=\sin(a-b)\sin(b)$ 并记得 $t_{j+1}-t_j=t_j-t_{j-1}=h, t_{j+1}-t_{j-1}=2h$，行列式展开为：
 
-```
-$$\sin(\omega t)u^{j-1}-\sin(2\omega t)u^j+\sin(\omega t)u^{j+1}=0 \Rightarrow u^{j-1}-2\cos(\omega t)u^j+u^{j+1}=0$$
-```
+$$
+\sin(\omega h)u^{j-1}-\sin(2\omega h)u^j+\sin(\omega h)u^{j+1}=0 \Rightarrow u^{j-1}-2\cos(\omega h)u^j+u^{j+1}=0
+$$
 
-在两边加上 $2\cos(\omega t)$ 并减去 $2u^j$，同时利用三角恒式 $\cos(x)=1-2\sin^2(x)$，得到：
+在两边加上 $2\cos(\omega h)$ 并减去 $2u^j$，同时利用三角恒式 $\cos(x)=1-2\sin^2(x/2)$，得到：
 
-```
-$y^{j+1}-y^j = -\alpha y^j
-```
-[第 239 页]
+$$
+\frac{u^{j+1}-2u^j+u^{j-1}}{h^2} + \omega^2 u^j = 0
+$$
 
-最后，不是使用标准分母 $h$，而是使用分母函数 $\frac{1-e^{-\alpha h}}{\alpha}$ 将得到精确有限差分格式。当 $h\to 0$ 时，$\phi(\frac{1-e^{-\alpha h}}{\alpha})\to h$ 问题的解为：
+最后，不是使用标准分母 $h$，而是使用分母函数 $\frac{1-e^{-\alpha h}}{\alpha}$ 将得到精确有限差分格式。当 $h\to 0$ 时，$\phi(\frac{1-e^{-\alpha h}}{\alpha})\to h$。问题的解为：
 
-```
-$u_{exact}(t)=\frac{3}{2}\cos(\omega t)-\frac{1}{2}\cos(2\omega t)$
-```
+$$
+u_{exact}(t)=\frac{3}{2}\cos(\omega t)-\frac{1}{2}\cos(2\omega t)
+$$
 
 MATLAB 脚本 `SolveHarm0.m` 求解 $\omega=16$ 且 $N=10, 20, 80$ 的 BVP，时间空间 $[0,2]$ 被划分为 $N$ 个正整数。
 
-
-
-
-
 # 求解 ODE 的非标准有限差分法
+
+
 
 ```matlab
 Error = [Error; N, norm(ux-xu, inf)];
@@ -7309,7 +7807,7 @@ printf('----------------\n');
 | 40 | 1.694674404840e+00 |
 | 80 | 5.894499384984e-01 |
 
-# 精确有限差分格式
+## 精确有限差分格式
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_241_0.png)
 ![](img/9923905aaa045c7096d90695cee3e3bc_241_1.png)
@@ -7322,36 +7820,38 @@ printf('----------------\n');
 
 给定一个二阶 ODE 系统：
 
-```
-$$\frac{dx}{dt} = ax(t)+by(t)$$
-$$\frac{dy}{dt} = cx(t)+dy(t)$$
-```
+$$
+\frac{dx}{dt} = ax(t)+by(t)
+$$
+$$
+\frac{dy}{dt} = cx(t)+dy(t)
+$$
 
 其可以写为矩阵形式：
 
-```
-$$\frac{dz}{dt} = Az(t) = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x(t) \\ y(t) \end{bmatrix} \quad (8.5)$$
-```
+$$
+\frac{dz}{dt} = Az(t) = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x(t) \\ y(t) \end{bmatrix} \quad (8.5)
+$$
 
-# 求解 ODE 的非标准有限差分法
+## 求解 ODE 的非标准有限差分法
 
 其中
 
-```
+$$
 z(t) = \begin{bmatrix} x(t) \\ y(t) \end{bmatrix}
-```
+$$
 
 并且，$a,b,c$ 是实数。矩阵 $A$ 相似于其 Jordan 范型 $J \in \mathbb{R}^{2\times2}$，因此存在一个可逆矩阵 $P \in \mathbb{R}^{2\times2}$ 使得 $J = P^{-1}AP$。
 
 $J$ 的对角元素是 $A$ 的特征值，$P$ 的列是 $A$ 的特征向量或广义特征向量。$J$ 的 Jordan 范型有三种形式：
 
-```
+$$
 J = \begin{bmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{bmatrix} \text{ 或 } \begin{bmatrix} \lambda & 0 \\ 0 & \lambda \end{bmatrix} \text{ 或 } \begin{bmatrix} \lambda & 1 \\ 0 & \lambda \end{bmatrix}
-```
+$$
 
 其中 $\lambda_1 \neq \lambda_2 \neq 0$ 且 $\lambda \neq 0$。
 
-在 MATLAB 中，可以使用函数 `jordan` Find矩阵 $A$ 的 Jordan 范型，该函数返回矩阵 $P$ 和 $J$。
+在 MATLAB 中，可以使用函数 `jordan` 找到矩阵 $A$ 的 Jordan 范型，该函数返回矩阵 $P$ 和 $J$。
 
 ```matlab
 >> A = [2, 0; 0, 1; -3; -1 of -1, -1];
@@ -7375,35 +7875,15 @@ print('J =')
 print(J)
 ```
 
-# 精确有限差分格式
+## 精确有限差分格式
 
 现在，将 (8.5) 左乘以 $P^{-1}$ 得到：
 
 $$\frac{d}{dt}(P^{-1}z) = P^{-1}AP = J(P^{-1}z)$$
 
-通过 $w = =^{-1}z$$，则：
+通过 $w = P^{-1}z$，则：
 
-
-
-fracfracdwdw}{dt} = Jw
-
-
-
-通过55))))55555) 得到。
-
-
-
-..分分分分分分
-
-
-
-
-
-fracfracfrac}{}{}{} = =thetatheta \quad (8.7)$$
-
-如果 $\theta = \frac{1}{2}$，则：
-
-$$\frac{dw}{dt} = \frac{1}{2}w \quad (8.8)$$
+$$\frac{dw}{dt} = Jw$$
 
 对于 (8.8)，其有限差分格式为：
 
@@ -7511,11 +7991,7 @@ $$\frac{w_{n+1}-w_n}{h} = \phi(\lambda,h)w_n^{(1)} + \phi'(\lambda,h)w_n^{(2)} +
 
 其中 $w_n^{(i)}$ 是 $w_n$ 的第 $i$ 阶导数的近似值。
 
-
-
-
-
-# 用于求解 ODE 的非标准有限差分法
+## 用于求解 ODE 的非标准有限差分法
 
 ```matlab
 set(gca, 'YTick', linspace(0, 1, 11));
@@ -7564,7 +8040,7 @@ end
 | 9 | 3.4694470e-17 | 4.8572257e-17 |
 | 10 | 3.4694470e-17 | 4.8572257e-17 |
 
-# 精确有限差分格式
+## 精确有限差分格式
 
 脚本 `SolveLinSysExact.py` 的 Python 代码为：
 
@@ -7620,16 +8096,26 @@ for j in range(N):
     zek[:, j+1] = P@uex[:, j]
 
 Errors = np.abs(z-zek)
+```
 
+$$
 u_{k+1} = u_k \sqrt[n-1]{\frac{(n-1)u_k}{(n-1)(1+\alpha(n-1)h)}}
+$$
 
-# 精确有限差分格式
+## 精确有限差分格式
 
 将两边取 $n-1$ 次方并除以 $n-1$，得到如下形式：
 
 ```python
-u_{k+1}^{n-1}u_k^{n-1} = -\alpha(n-1)hv_k^{n-1}u_{k+1}^{n-1}
 ```
+
+
+
+# 精确差分格式推导
+
+$$
+u_{k+1}^{n-1}u_k^{n-1} = -\alpha(n-1)hv_k^{n-1}u_{k+1}^{n-1}
+$$
 
 或者
 
@@ -7639,86 +8125,92 @@ u_{k+1}^{n-1}u_k^{n-1} = -\alpha(n-1)hv_k^{n-1}u_{k+1}^{n-1}
 
 由此得到精确差分格式：
 
-```
-$$\frac{u_{k+1}-u_{k}}{h} = \frac{-\alpha(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2}+u_{k+1}^{n-3}+\dots+u_{k}^{n-2}}$$ $(8.10)$
-```
+$$
+\frac{u_{k+1}-u_{k}}{h} = \frac{-\alpha(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2}+u_{k+1}^{n-3}+\dots+u_{k}^{n-2}} \tag{8.10}
+$$
 
 对于 $n=2$，对于
 
-```
-$$\frac{du}{dt} = -\alpha u^2(t)$$
-```
+$$
+\frac{du}{dt} = -\alpha u^2(t)
+$$
+
 精确差分格式为：
 
-```
-$$\frac{u_{k+1}-u_{k}}{h} = -\alpha u_k u_{k+1}$$
-```
+$$
+\frac{u_{k+1}-u_{k}}{h} = -\alpha u_k u_{k+1}
+$$
 
 对于 $n=3$，对于
 
-```
-$$\frac{du}{dt} = -\alpha u^3(t)$$
-```
+$$
+\frac{du}{dt} = -\alpha u^3(t)
+$$
+
 精确差分格式为：
 
-```
-$$\frac{u_{k+1}-u_{k}}{h} = \frac{-2\alpha u_{k}^{2}u_{k+1}}{u_{k}+u_{k+1}}$$
-```
+$$
+\frac{u_{k+1}-u_{k}}{h} = \frac{-2\alpha u_{k}^{2}u_{k+1}}{u_{k}+u_{k+1}}
+$$
 
 对于 $n=4$，对于
 
-```
-$$\frac{du}{dt} = -\alpha u^4(t)$$
-```
+$$
+\frac{du}{dt} = -\alpha u^4(t)
+$$
+
 精确差分格式为：
 
-```
-$$\frac{u_{k+1}-u_{k}}{h} = \frac{-3\alpha u_{k}^{3}u_{k+1}}{u_{k}^{2}+u_{k}u_{k+1}+u_{k+1}^{2}}$$
-```
+$$
+\frac{u_{k+1}-u_{k}}{h} = \frac{-3\alpha u_{k}^{3}u_{k+1}}{u_{k}^{2}+u_{k}u_{k+1}+u_{k+1}^{2}}
+$$
+
+# Python 脚本 `ExactFDM.py`
 
 Python 脚本 `ExactFDM.py` 实现了方程 (8.8) 的精确差分格式，其中 $u_0=0.5$，并显示了离散点 $t_{j},j=0,\dots,10$ 处的误差：
 
 ```python
 # ExactFDM.py
+
 import numpy as np
 
 def ExactSol(t, n, u0):
-    U = (n-1)*u0**(n-1)/((n-1)*(1+(n-1)*t*u0**(n-1))
+    U = (n-1)*u0**(n-1) / ((n-1)*(1+(n-1)*t*u0**(n-1)))
     u = np.array([v**(1/(n-1)) for v in U])
     return u
-```
 
-```matlab
-def ExactFDM(t, n, h, u0)
+def ExactFDM(t, n, h, u0):
     u = np.zeros_like(t)
-    u(1) = u0
-    for k = 1:len(u)-1
-        u(k+1) = ((n-1)*u(k)**(n-1))/(n-1)*(1+(n-1)*h*u(k)**(n-1)));
+    u[0] = u0
+    for k in range(len(u)-1):
+        u[k+1] = ((n-1)*u[k]**(n-1)) / ((n-1)*(1+(n-1)*h*u[k]**(n-1)))
     return u
-end
 
 a, b, N = 0.0, 10.0, 5
-t = linspace(a, b, N+1)
-u0 = (b-a)/N, 0.5
+t = np.linspace(a, b, N+1)
+h = (b-a)/N
+u0 = 0.5
 ns = [2, 4, 8, 10]
-for n in ns
+
+for n in ns:
     uex = ExactSol(t, n, u0)
     ufdm = ExactFDM(t, n, h, u0)
     Errors = np.zeros((2, N+1))
-    Errors(1, :) = t
-    Errors(2, :) = abs(uex-ufdm)
+    Errors[0, :] = t
+    Errors[1, :] = abs(uex-ufdm)
     print('Errors corresponding to n = ' + str(n))
     print('----------------------')
     print('t \t Error')
     print('----------------------')
-    for j in range(len(Errors)):
-        print('{3f}'.format(Errors[j][0]) + ' \t ' + '{1e}'.format(Errors[j][1]))
+    for j in range(N+1):
+        print('{:.3f}'.format(Errors[0, j]) + ' \t ' + '{:.1e}'.format(Errors[1, j]))
     print('----------------------')
 ```
 
 执行代码得到如下结果：
 `run('D:/PyFiles/ExactDM.py', 'D:/PyFiles')`
-$n=2$ 的样本：
+
+## $n=2$ 的样本
 
 | t | Error |
 |---|---|
@@ -7729,7 +8221,7 @@ $n=2$ 的样本：
 | 8 | 0.000000e+00 |
 | 10 | 1.3877778e-17 |
 
-$n=5$ 的样本：
+## $n=5$ 的样本
 
 | t | Error |
 |---|---|
@@ -7740,7 +8232,7 @@ $n=5$ 的样本：
 | 8 | 0.000000e+00 |
 | 10 | 0.000000e+00 |
 
-$n=8$ 的样本：
+## $n=8$ 的样本
 
 | t | Error |
 |---|---|
@@ -7751,7 +8243,7 @@ $n=8$ 的样本：
 | 8 | 5.551115e-17 |
 | 10 | 1.1102230e-16 |
 
-$n=10$ 的样本：
+## $n=10$ 的样本
 
 | t | Error |
 |---|---|
@@ -7762,25 +8254,28 @@ $n=10$ 的样本：
 | 8 | 5.551115e-17 |
 | 10 | 5.551115e-17 |
 
+# MATLAB 脚本 `ExactFDm.m`
+
 MATLAB 脚本 `ExactFDm.m` 的代码为：
 
 ```matlab
-a = 0.0 ; b = 10.0 ;
-N = 5 ;
+a = 0.0; b = 10.0;
+N = 5;
 t = linspace(a, b, N+1);
 h = (b-a)/N;
 u0 = 0.5;
 ns = [2, 4, 8, 10];
+
 for n = ns
     exact = ExactSol(t, n, u0);
     ufdm = ExactFDM(t, n, h, u0);
     Errors = zeros(2, N+1);
     Errors(1, :) = t;
-    Errors(2, :) = abs(ue-ufdm);
+    Errors(2, :) = abs(exact-ufdm);
     Errors = Errors';
     fprintf('Errors corresponding to n = %i\n', n);
     fprintf('----------------------\n');
-    fprintf('%t \t %e\n', Error);
+    fprintf('%t \t %e\n', Errors);
     fprintf('--------------------------------\n');
     for j = 1 : N+1
         fprintf("%2i%%t.8e\n", Errors(j), Errors(j, 2));
@@ -7789,16 +8284,15 @@ for n = ns
 end
 
 function u = ExactSol(t, n, u0)
-    function U = (n-1)+u0*(n-1).((n-1)*(n-1)*t*u0-(n-1))
-    u = U.'.(1/(n-1));
+    U = (n-1)*u0^(n-1) ./ ((n-1)*(1+(n-1)*t*u0^(n-1)));
+    u = U.^(1/(n-1));
 end
 
-function u = ExactDM(t, n, u0)
+function u = ExactFDM(t, n, h, u0)
     u = zeros(size(t));
     u(1) = u0;
     for k = 1 : length(t)-1
-        u(k+1) = ...
-        (n-1)*u(k)^(n-1)/((n-1)*(n-1)+h*u(k)^(n-1)) - (1/(n-1));
+        u(k+1) = (n-1)*u(k)^(n-1) / ((n-1)*(1+(n-1)*h*u(k)^(n-1)));
     end
 end
 ```
@@ -7807,56 +8301,71 @@ end
 
 给定一个微分方程：
 
-$$\frac{du}{dt} = \alpha(t) - \beta u^n(t), u(t_0) = u_0, n \geq 2$$ (8.11)
+$$
+\frac{du}{dt} = \alpha(t) - \beta u^n(t), \quad u(t_0) = u_0, \quad n \geq 2 \tag{8.11}
+$$
 
 为了提取差分格式，分母函数 $\phi$ 从线性项 $\alpha(t)$ 导出：
 
-$$\phi(h, \alpha) = \frac{1-e^{-\alpha h}}{\alpha}$$
+$$
+\phi(h, \alpha) = \frac{1-e^{-\alpha h}}{\alpha}
+$$
 
 并且非线性项 $\beta u^n(t)$ 使用非局部近似：
 
-$$\frac{-eta(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2} + u_{k+1}^{n-3}u_k + \cdots + u_{k+1}u_k^{n-3} + u_k^{n-2}}$$ =
+$$
+\frac{-\beta(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2} + u_{k+1}^{n-3}u_k + \cdots + u_{k+1}u_k^{n-3} + u_k^{n-2}}
+$$
 
-那么微分方程 (8.11) 的精确差分格式将：
+那么微分方程 (8.11) 的精确差分格式为：
 
-$$\frac{u_{k+1}-u_{k}}{\frac{1-e^{-\alpha h}}{\alpha}} = \alpha u_k - \frac{-eta(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2}+u_{k+1}^{n-3}+\dots+u_{k}^{n-2}}$$ $(8.12)$
+$$
+\frac{u_{k+1}-u_{k}}{\frac{1-e^{-\alpha h}}{\alpha}} = \alpha u_k - \frac{-\beta(n-1)u_k^{n-1}u_{k+1}^{n-1}}{u_{k+1}^{n-2}+u_{k+1}^{n-3}+\dots+u_{k}^{n-2}} \tag{8.12}
+$$
 
 一个特殊情况是 $n=2$ 得到逻辑斯谛方程
 
-$$\frac{du}{dt} = \alpha(t) - \beta u^2(t),$$
+$$
+\frac{du}{dt} = \alpha(t) - \beta u^2(t),
+$$
 
-
-
-
-
-# 精确有限差分格式
+## 精确有限差分格式
 
 其精确有限差分方案为：
 
-$u_{k+1}-u_k / (1-e^{-\alpha h}) = \alpha u_k - \beta u_k u_{k+1}$
+$$
+\frac{u_{k+1}-u_k}{1-e^{-\alpha h}} = \alpha u_k - \beta u_k u_{k+1}
+$$
 
 由此得：
 
-$(1+\phi\alpha)u_k / (1+\phi\beta u_k)$
+$$
+u_{k+1} = \frac{(1+\phi\alpha)u_k}{1+\phi\beta u_k}
+$$
+
+# Python 脚本 `ExactFDLogistic.py`
 
 Python 脚本 `ExactFDLogistic.py` 求解逻辑模型，使用了精确有限差分格式：
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+
 a, b, N = 0.0, 50.0, 100
 t = np.linspace(a, b, N+1)
 h = (b-a)/N
 u0 = 0.1
-
 u = np.zeros_like(t)
 u[0] = u0
 alpha, beta = 0.25, 0.25
 phi = (1-np.exp(-alpha*h))/alpha
+
 for k in range(N):
     u[k+1] = (1+phi*alpha)*u[k]/(1+phi*beta*u[k])
+
 MaxError = np.linalg.norm(u-u, np.inf)
 print('Maximum error:', MaxError)
+
 plt.plot(t, u, color='brown', lw=3)
 plt.xlabel('Time', fontweight='bold')
 plt.ylabel('Population (u)', fontweight='bold')
@@ -7868,104 +8377,107 @@ plt.yticks(np.arange(0, 1.1, 0.1), fontweight='bold')
 
 通过执行代码，显示了最大误差，并在图 8.7 中解释了模型的解。
 
-runfile('D:/PyFiles/ExactFDLogistic.py', wdir='D:/PyFiles')
+`runfile('D:/PyFiles/ExactFDLogistic.py', wdir='D:/PyFiles')`
 Maximum error = 3.33069903875496e-16
+
+# MATLAB 脚本 `ExactFDLogistic.m`
 
 MATLAB 脚本 `ExactFDLogistic.m` 应用精确有限差分格式求解逻辑模型：
 
 ```matlab
-%ExactFDLogistic.m
+% ExactFDLogistic.m
 a = 0.0; b = 50.0; N = 100;
-t = linspace(a, b, N+1); h = (b-a)/N
-u0 = 0;
+t = linspace(a, b, N+1); h = (b-a)/N;
+u0 = 0.1;
 u = zeros(1, N+1);
 alpha = 0.25; beta = 0.25;
 phi = (exp(alpha*h)-1)/alpha;
 u(1) = u0;
 uex = zeros(1, N+1); uex(1) = u0;
-```
 
-# 求解 ODE 的非标准有限差分法
-
-![](img/9923905aaa045c7096d90695cee3e3bc_254_0.png)
-
-图 8.7：使用精确有限差分格式的逻辑模型解。
-
-```matlab
 for k = 1 : N
-    u(k+1) = [1+phi*alpha]*u(k)/(1+phi*beta*u(k+1));
-    uex(k+1) = ...
-    alpha=u0/((alpha-beta*u0)*exp(-alpha*t(k+1))+beta*u0;
+    u(k+1) = (1+phi*alpha)*u(k)/(1+phi*beta*u(k));
+    uex(k+1) = alpha*u0/((alpha-beta*u0)*exp(-alpha*t(k+1))+beta*u0);
+end
 
-MaxError = norm(u-uex, inf)
+MaxError = norm(u-uex, inf);
 disp(['Max Error = ', num2str(MaxError)]);
+
 plot(t, u, 'r', 'LineWidth', 3);
-xlabel('Time'); ylabel('Population u(t)');set(gca, 'fontweight', 'bold');
-grid on
-s = (b-a)/10
+xlabel('Time'); ylabel('Population u(t)'); set(gca, 'fontweight', 'bold');
+grid on;
+s = (b-a)/10;
 set(gca, 'XTick', a:s:b);
 set(gca, 'YTick', linspace(0, 1.1, 12));
 ```
+
+![图 8.7：使用精确有限差分格式的逻辑模型解。](img/9923905aaa045c7096d90695cee3e3bc_254_0.png)
+
+# 求解 ODE 的非标准有限差分法
 
 # 8.4 其他非标准有限差分格式
 
 在无法获得精确有限差分格式的情况下，构造非标准有限差分格式的目的是建立求解问题的最佳有限差分格式。
 
-# 其他非标准有限差分格式
-
 Mickens 在 [37] 中提出了选择分母函数和处理非线性项的规则。给定一个初值问题：
 
-```latex
-$\frac{du}{dt}=f(u), u(0)=u_0$$
-```
+$$
+\frac{du}{dt}=f(u), \quad u(0)=u_0
+$$
 
 寻找分母函数的方法是通过求解 $f(u)=0$ 来得 $u(t)$ 的微分方程平衡点。令 $u_1, u_2, \dots, u_n$ 为微分方程的平衡点。
 
-```latex
-$r_k=\left[\frac{df}{du}\right]_{u=u_k},k=1,\dots,n$$
-```
+$$
+r_k=\left[\frac{df}{du}\right]_{u=u_k}, \quad k=1,\dots,n
+$$
 
 且 $r=\max\{|r_k|, k=1, \dots, n\}$。那么分母函数由：
 
-```latex
-$\phi(r,h)=\frac{1-e^{-rh}}{r}$
-```
+$$
+\phi(r,h)=\frac{1-e^{-rh}}{r}
+$$
 
 右侧的线性和非线性项可以使用非近似进行近似。例如，微分方程中的 $u(t)$ 在 $t_k$ 处可以用 $2u_k-u_{k+1}$ 近似，微分方程中的项 $u^2(t)$ 在 $t_k$ 处可以用 $2u_k^2-u_ku_{k+1}$ 近似。
 
-**示例 8.4** 该示例取自 [37]，并为微分方程构造了一个非标准有限差分格式：
+## 示例 8.4
 
-```latex
-$\frac{du}{dt}=u^2(t)-u^3(t),u(0)=u_0$$
-```
+该示例取自 [37]，并为微分方程构造了一个非标准有限差分格式：
+
+$$
+\frac{du}{dt}=u^2(t)-u^3(t), \quad u(0)=u_0
+$$
 
 模型的平衡点为 $u_1=0$ 和 $u_3=1$。分母为 $\phi(h)=1-e^{-h}$。项 $u^2(t)$ 在 $t_k$ 处由 $2u_k^2-u_{k+1}$ 近似，非线性项 $-u^3(t)$ 由 $-u_k^2u_{k+1}$ 近似。非标准有限差分格式为：
 
-```latex
-$\frac{u_{k+1}-u_k}{\phi}=2u_k^2-u_{k+1}$
-```
+$$
+\frac{u_{k+1}-u_k}{\phi}=2u_k^2-u_{k+1}
+$$
 
 经过几次变形后得到：
 
-```latex
-$u_{k+1}=\frac{(1+2\phi)u_k}{1}$
-```
+$$
+u_{k+1}=\frac{(1+2\phi)u_k}{1}
+$$
+
+# Python 脚本 `MickModel.py`
 
 Python 脚本 `MickModel.py` 实现了 Mickens 的有限差分格式及其解：
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
+
 a, b, N = 0.0, 25.0, 100
 t = np.linspace(a, b, N+1)
 h = (b-a)/N
 u0 = 0.1
-
 u = np.zeros_like(t)
 u[0] = u0
 phi = 1-np.exp(-h)
+
 for k in range(N):
     u[k+1] = (1+2*phi+u[k])*u[k]/(1+phi*(u[k]**2))
+
 plt.plot(t, u, color='orange', lw=3)
 plt.xlabel('t', fontweight='bold')
 plt.ylabel('u(t)', fontweight='bold')
@@ -7974,7 +8486,9 @@ s = (b-a)/10
 plt.yticks(np.arange(0., 1.1, 0.1), fontweight='bold')
 ```
 
-执行代码得到图 8.8。MATLAB 代码为：
+执行代码得到图 8.8。
+
+# MATLAB 代码
 
 ```matlab
 a = 0.0; b = 25.0; N = 100;
@@ -7983,18 +8497,11 @@ u0 = 0.1;
 u = zeros(1, N+1);
 phi = 1-exp(-h);
 u(1) = u0;
-```
 
-![](img/9923905aaa045c7096d90695cee3e3bc_256_png)
-
-图 8.8：使用 Mickens 标准有限差分格式求解模型 $u'(t) = u^2(t) - u^3(t)$ 的解。
-
-# 其他非标准有限差分格式
-
-```matlab
 for k = 1 : N
     u(k+1) = (1+2*phi+u(k))*u(k)/(1+phi*(u(k)+u(k)^2));
 end
+
 plot(t, u, 'r', 'LineWidth', 3);
 xlabel('Time(t)');
 ylabel('Population u(t)');
@@ -8002,8 +8509,13 @@ set(gca, 'fontweight', 'bold');
 grid on;
 s = (b-a)/10;
 set(gca, 'XTick', a:s:b);
-set(gca, 'YTick', linspace(0, 1.1, 12));
 ```
+
+![图 8.8：使用 Mickens 标准有限差分格式求解模型 $u'(t) = u^2(t) - u^3(t)$ 的解。](img/9923905aaa045c7096d90695cee3e3bc_256_png)
+
+
+
+set(gca, 'YTick', linspace(0, 1.1, 12));
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_258_0.png)
 
@@ -8013,7 +8525,7 @@ set(gca, 'YTick', linspace(0, 1.1, 12));
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_260_0.png)
 
-# 求解优化问题：线性与规划
+# 求解优化问题：线性与二次规划
 
 ### 摘要
 
@@ -8023,43 +8535,53 @@ set(gca, 'YTick', linspace(0, 1.1, 12));
 
 # 9.1 线性规划问题的形式
 
-线性规划问题的般形式为：
+线性规划问题的一般形式为：
 
-```latex
-$$\min \alpha_1x_1 + \alpha_2x_2 + \cdots + \alpha_nx_n$$
-```
-
-# 求解优化问题：线性与二次规划
+$$
+\min \alpha_1x_1 + \alpha_2x_2 + \cdots + \alpha_nx_n
+$$
 
 受限于等式约束：
 
-```latex
-$$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1$$
-$$a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2$$
-$$a_{31}x_1 + a_{32}x_2 + \dots + a_{3n}x_n = b_3$$
-$$a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m$$
-```
+$$
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = b_1
+$$
+
+$$
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n = b_2
+$$
+
+$$
+a_{31}x_1 + a_{32}x_2 + \dots + a_{3n}x_n = b_3
+$$
+
+$$
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n = b_m
+$$
 
 不等式约束：
 
-```latex
-$$c_{11}x_1 + c_{12}x_2 + \dots + c_{1n}x_n \le d_1$$
-$$c_{21}x_1 + c_{22}x_2 + \dots + c_{2n}x_n \le d_2$$
-$$c_{31}x_1 + c_{32}x_2 + \dots + c_{3n}x_n \le d_3$$
-$$c_{l1}x_1 + c_{l2}x_2 + \dots + c_{ln}x_n \le d_l$$
-```
+$$
+c_{11}x_1 + c_{12}x_2 + \dots + c_{1n}x_n \le d_1
+$$
+
+$$
+c_{21}x_1 + c_{22}x_2 + \dots + c_{2n}x_n \le d_2
+$$
+
+$$
+c_{31}x_1 + c_{32}x_2 + \dots + c_{3n}x_n \le d_3
+$$
+
+$$
+c_{l1}x_1 + c_{l2}x_2 + \dots + c_{ln}x_n \le d_l
+$$
 
 以及边界约束：
 
-```latex
-$$x_1 \in (X_1^{min}, X_1^{max}), \dots, x_n \in (X_n^{min}, X_n^{max})$$
-```
-
-
-
-
-
-# 线性规划问题的形式
+$$
+x_1 \in (X_1^{min}, X_1^{max}), \dots, x_n \in (X_n^{min}, X_n^{max})
+$$
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_263_0.png)
 
@@ -8067,9 +8589,17 @@ $$x_1 \in (X_1^{min}, X_1^{max}), \dots, x_n \in (X_n^{min}, X_n^{max})$$
 
 其中，
 
-$\begin{bmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{ms} & \dots & a_{mn} \end{bmatrix} x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}$
+$$
+A = \begin{bmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{bmatrix}, \quad
+x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, \quad
+b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{bmatrix}
+$$
 
-$\begin{bmatrix} c_{11} & c_{12} & \dots & c_{1n} \\ c_{21} & c_{22} & \dots & c_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ c_{l1} & c_{ls} & \dots & c_{ln} \end{bmatrix} d = \begin{bmatrix} d_1 \\ d_2 \\ \vdots \\ d_l \end{bmatrix}, X = \begin{bmatrix} (X_1^{min}, X_1^{max}) \\ (X_2^{min}, X_2^{max}) \\ \vdots \\ (X_n^{min}, X_n^{max}) \end{bmatrix}$
+$$
+C = \begin{bmatrix} c_{11} & c_{12} & \dots & c_{1n} \\ c_{21} & c_{22} & \dots & c_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ c_{l1} & c_{l2} & \dots & c_{ln} \end{bmatrix}, \quad
+d = \begin{bmatrix} d_1 \\ d_2 \\ \vdots \\ d_l \end{bmatrix}, \quad
+X = \begin{bmatrix} (X_1^{min}, X_1^{max}) \\ (X_2^{min}, X_2^{max}) \\ \vdots \\ (X_n^{min}, X_n^{max}) \end{bmatrix}
+$$
 
 最大化目标函数 $f(x)$ 问题等价于最小化 $-f(x)$ 问题，因为 $f(x)$ 的最大化问题和 $-f(x)$ 的最小化问题具有相同的最优解 $x^{opt}$。图 9.1 绘制了函数 $f(x)=e^{-(x-0.5)}\sin(\frac{\pi x}{2})$ 和 $-f(x)$ 的图像。从这两个函数的图像中可以清楚，$f(x)$ 的最大值在使 $-f(x)$ 最小的相同点获得。
 
@@ -8104,17 +8634,23 @@ $lb \le x \le ub$
 
 可以使用 MATLAB 函数 `linprog` 来求解线性规划问题。其形式为：
 
-`xopt, fval] = linprog(objfun, C, d, A, b, lb, ub)`
+```
+[xopt, fval] = linprog(objfun, C, d, A, b, lb, ub)
+```
 
 其中 $x0$ 是初始起始点。如果问题不包含下界和上界，则该函数为：
 
-`xopt, fval] = linprog(objfun, C, d, A, b)`
+```
+[xopt, fval] = linprog(objfun, C, d, A, b)
+```
 
-如果问题不包含等式约束，则 A 和 b 被替换为空括号 []。其形式为：
+如果问题不包含等式约束，则 A 和 b 被替换为空括号 `[]`。其形式为：
 
-`xopt, fval] = linprog(objfun, C, d, [], [], lb, ub)`
+```
+[xopt, fval] = linprog(objfun, C, d, [], [], lb, ub)
+```
 
-为了演示如何使用函数 `linprog`，示例所示：
+为了演示如何使用函数 `linprog`，示例如下所示：
 
 **示例 9.1** 在此示例中，将使用 MATLAB 的 `linprog` 函数来求解线性规划问题：
 
@@ -8141,17 +8677,17 @@ $x_1 \ge 0, x_2 \ge 0, x_3 \ge 0$
 
 ```
 xopt = 
-10
-10
-25
+    10
+    10
+    25
 ```
 
 ```
 fval = 
--90
+   -90
 ```
 
-MATLAB linprog 函数默认使用*对偶单纯形*算法。可以通过 `optimoptions` 结构体更改算法。例如，切换到内点求解器并求解示例 9.1，可以使用 [17] 中的以下指令：
+MATLAB `linprog` 函数默认使用*对偶单纯形*算法。可以通过 `optimoptions` 结构体更改算法。例如，切换到内点求解器并求解示例 9.1，可以使用 [17] 中的以下指令：
 
 ```
 >> Options = optimoptions('linprog', 'Algorithm', 'interior-point');
@@ -8162,14 +8698,14 @@ MATLAB linprog 函数默认使用*对偶单纯形*算法。可以通过 `optimop
 
 ```
 xopt =
-10.0000
-10.0000
-25.0000
+   10.0000
+   10.0000
+   25.0000
 ```
 
 ```
 fval =
--90.0000
+  -90.0000
 ```
 
 ```
@@ -8177,7 +8713,7 @@ fval =
 >> [xopt, fval] = linprog(objfun, C, d, [], [], lb, Options)
 ```
 
-Python 在 `scipy.optimize` 库中也有 `linprog`。要使用该函数，应从 `scipy.optimize` 导入。Python 的 linprog 形式与 MATLAB 接近。求解 9.1 使用以下 Python 指令：
+Python 在 `scipy.optimize` 库中也有 `linprog`。要使用该函数，应从 `scipy.optimize` 导入。Python 的 `linprog` 形式与 MATLAB 接近。求解示例 9.1 使用以下 Python 指令：
 
 ```
 [1]: import numpy as np
@@ -8208,10 +8744,10 @@ success: True
 x: array([2.66541588e-06, 5.24873505e-06, 9.99999993999999,24.99999974999997])
 ```
 
-linprog 函数的默认求解器是内点法。但还有两种方法选项：单纯形法和修正法。它们的使用方法如下：
+`linprog` 函数的默认求解器是内点法。但还有两种方法选项：单纯形法和修正法。它们的使用方法如下：
 
 ```
-In [9]: OptSol = opt.linprog(objfun, A_ub=C, b_ub=d, bounds = bnds,method='simplex', options = {"disp":True})
+In [9]: OptSol = opt.linprog(objfun, A_ub=C, b_ub=d, bounds = bnds, method='simplex', options = {"disp":True})
 ```
 
 优化终止。当前函数值：-90.000000
@@ -8230,20 +8766,20 @@ x: array([10., 10., 25.])
 
 # 9.3 使用 fmincon 函数求解线性规划问题
 
-MATLAB 函数 `fmincon` 可用于求解线性规划问题。使用 fmincon 求解 9.1 需要初始化目标函数的函数句柄（或自定义目标函数）。此外，将初始猜测 $x0$、线性不等式约束和等式约束以及边界传递给 `fmincon` 函数。
+MATLAB 函数 `fmincon` 可用于求解线性规划问题。使用 `fmincon` 求解示例 9.1 需要初始化目标函数的函数句柄（或自定义目标函数）。此外，将初始猜测 $x0$、线性不等式约束和等式约束以及边界传递给 `fmincon` 函数。
 
 ```
 f = @(x) objfun'*x ;
-x0 = [0.;0;0];
-C = [3, 1, 0, 1, 0, 2; 0, 1, 2];
+x0 = [0; 0; 0];
+C = [3, 1, 0; 1, 0, 2; 0, 1, 2];
 d = [40; 60; 60];
 lb = [0; 0; 0];
-[xopt, fval] = fmincon(f, x0, C, d, [], [], [])
+[xopt, fval] = fmincon(f, x0, C, d, [], [], lb, [])
 ```
 
 # 9.4 使用 Python pulp 求解线性规划问题
 
-Python 拥有一个名为 pulp 的库来求解线性规划问题 [41]。安装 pulp 非常简单，可以通过输入：
+Python 拥有一个名为 `pulp` 的库来求解线性规划问题 [41]。安装 `pulp` 非常简单，可以通过输入：
 
 ```
 >>> pip install pulp
@@ -8255,67 +8791,65 @@ Python 拥有一个名为 pulp 的库来求解线性规划问题 [41]。安装 p
 In [13]: conda install -c conda-forge pulp
 ```
 
-使用 pulp 之前必须先导入 pulp 库：
+使用 `pulp` 之前必须先导入 `pulp` 库：
 
 ```
 In [14]: import pulp as plp
 ```
 
-
-
-
-
 ## 使用 pulp 求解线性规划问题
 
-然后，应使用某些变量（例如 LPP）来定义并求解问题。pulp 允许用户通过 `LpProblem` 函数命名问题并定义其类型（*最大化、最小化*）。要定义最大化问题，应将参数 `LpMaximize` 作为第二个参数传递给 `LpProblem`；要定义最小化问题则传递参数 `LpMinimize`：
+然后，应使用某些变量（例如 `LPP`）来定义并求解问题。`pulp` 允许用户通过 `LpProblem` 函数命名问题并定义其类型（*最大化、最小化*）。要定义最大化问题，应将参数 `LpMaximize` 作为第二个参数传递给 `LpProblem`；要定义最小化问题则传递参数 `LpMinimize`：
 
+```
 In [15]: LPP = pulp.LpProblem("Problem of maximizing profit", LpMaximize)
+```
 
-问题的变量通过 pulp 函数 `LpVariable` 定义。它接收一个字符串和变量的边界。例如，如果问题包含 0 ≤ x ≤ 5：
+问题的变量通过 `pulp` 函数 `LpVariable` 定义。它接收一个字符串和变量的边界。例如，如果问题包含 0 ≤ x ≤ 5：
 
 ```python
 x = pulp.LpVariable("x", 0., 5.)
 ```
 
-这些变量可以与问题实例 LPP 一起使用。
+这些变量可以与问题实例 `LPP` 一起使用。
 接下来，将等式约束和不等式约束添加到问题实例中。如果问题包含不等式约束 2x+y ≤ 10，则使用以下指令将该约束添加到问题中：
 
 ```python
 LPP += 2*x + y <= 10
 ```
 
-在 pulp 中，用户不需要更改不等式约束的形式。如果问题包含约束 x+y ≥ 2，可以直接将其添加到问题实例，而无需将其转换为其他形式：
+在 `pulp` 中，用户不需要更改不等式约束的形式。如果问题包含约束 x+y ≥ 2，可以直接将其添加到问题实例，而无需将其转换为其他形式：
 
 ```python
 LPP += x + y >= 2
 ```
 
-最后，在定义问题后，可以使用 LPP 实例的 `solve()` 方法来求解问题并显示结果。
+最后，在定义问题后，可以使用 `LPP` 实例的 `solve()` 方法来求解问题并显示结果。
 Python 脚本 `SolveExLinProg.py` 用于求解示例 9.1 问题并显示结果：
 
 ```python
 # SolveExLinProg.py
-2 import pulp as pulp
-3 LPP = pulp.LpProblem("Problem statement: \n", pulp.LpMaximize)
-4 X, y, z = pulp.LpVariable("x", lowBound=0), ...
-pulp.LpVariable("y", lowBound=0), pulp.LpVariable("z", ...
-lowBound=0),
-5 LPP += 3*x + y + 2*z
-6 LPP += x + y <= 40
-7 LPP += x + 2*z <= 60
-8 LPP += x >= 0.
-9 LPP += y >= 0.
-10 LPP += z >= 0.
-11 print (LPP)
-12 status = LPP.solve()
-13 print('Status of the optimization process: ' + ...
-pulp.LpStatus[status])
+import pulp as pulp
+
+LPP = pulp.LpProblem("Problem statement: \n", pulp.LpMaximize)
+X, y, z = pulp.LpVariable("x", lowBound=0), \
+          pulp.LpVariable("y", lowBound=0), \
+          pulp.LpVariable("z", lowBound=0)
+
+LPP += 3*x + y + 2*z
+LPP += 3*x + y <= 40
+LPP += x + 2*z <= 60
+LPP += y + 2*z <= 60
+LPP += x >= 0.
+LPP += y >= 0.
+LPP += z >= 0.
+
+print(LPP)
+status = LPP.solve()
+print('Status of the optimization process: ' + pulp.LpStatus[status])
+print('Optimal maximizer found at: \n', pulp.value(x), '\n', pulp.value(y), '\n', pulp.value(z))
+print('Optimal value of the objective function: ', pulp.value(LPP.objective))
 ```
-
-## 求解优化问题：线性规划与二次规划
-
-| 15 | print('Optimal maximizer found at: \n', pulp.value(x), '\n', ... \n pulp.value(y), '\n', pulp.value(z)) |
-| 16 | print('Optimal value of the objective function: \', ... \n pulp.value(LPP.objective)) |
 
 执行代码后得到以下结果：
 
@@ -8331,12 +8865,10 @@ _C3: y + 2 z <= 60
 _C4: x >= 0
 _C5: y >= 0
 _C6: z >= 0
-
 VARIABLES
 x Continuous
 y Continuous
 z Continuous
-
 Status of the optimization process: Optimal
 Optimal maximizer found at:
 10.0
@@ -8345,69 +8877,77 @@ Optimal maximizer found at:
 Optimal value of the objective function: 90.0
 ```
 
-## 9.5 使用 pyomo 求解线性规划问题
+# 9.5 使用 pyomo 求解线性规划问题
 
-Pyomo 是一个基于 Python 的用于建模和求解优化问题的软件 [23]。pyomo 提供了两种建模方式：具体模型（concrete models），即在构建模型之前指定数据；以及抽象模型（abstract models），即在指定数据之前构建模型，且模型数据在优化过程运行期间传递给模型。本节介绍了如何创建创建具体模型来求解线性规划问题。
+`Pyomo` 是一个基于 Python 的用于建模和求解优化问题的软件 [23]。`pyomo` 提供了两种建模方式：具体模型（concrete models），即在构建模型之前指定数据；以及抽象模型（abstract models），即在指定数据之前构建模型，且模型数据在优化过程运行期间传递给模型。本节介绍了如何创建具体模型来求解线性规划问题。
 
-在 anaconda 中，可以使用以下命令安装 pyomo：
+在 anaconda 中，可以使用以下命令安装 `pyomo`：
 
 ```bash
 conda install -c conda-forge pyomo
 ```
 
-在运行 pyomo 之前，确保已安装目标优化求解器至关重要。例如，如果没有安装 'glpk' 求解器，可以通过输入命令安装：
+
+
+在运行 Pyomo 之前，确保已安装目标优化求解器至关重要。例如，如果没有安装 `glpk` 求解器，可以通过输入命令安装：
 
 ```bash
 conda install -c conda-forge glpk
 ```
 
-求解线性规划问题的第一步是通过导入两者来准备 pyomo 环境和求解器。可以通过以下方式完成：
+求解线性规划问题的第一步是通过导入两者来准备 Pyomo 环境和求解器。可以通过以下方式完成：
 
 ```python
 import pyomo as pym
 from pyomo.opt import SolverFactory
 ```
 
-然后，使用以下代码构造用于 ConcreteModel 或 AbstractModel 的变量：
+然后，使用以下代码构造用于 `ConcreteModel` 或 `AbstractModel` 的变量：
 
 ```python
 Model = pym.ConcreteModel()
-or
+# or
 Model = pym.AbstractModel()
 ```
 
-例如，如果 x ≤ 5 和 0 y < ∞ 是优化问题的两个变量，可以使用以下方式声明：
+例如，如果 `x ≤ 5` 和 `0 ≤ y < ∞` 是优化问题的两个变量，可以使用以下方式声明：
 
 ```python
 Model.x = pym.Var(bounds=(1., 5))
 Model.y = pym.Var(within=NonNegativeReals)
 ```
 
-使用 `pym.Objective` 方法定义目标函数，该方法接收目标函数的数学表达式（例如 10x + y/100）：
+使用 `pym.Objective` 方法定义目标函数，该方法接收目标函数的数学表达式（例如 `10*x + y/100`）：
 
 ```python
-Model.objfun = pym.Objective(expr = 10*x + y/100)
+Model.objfun = pym.Objective(expr=10*x + y/100)
 ```
 
-如果问题包含约束 10x + y ≤ 100，可以将该约束添加到模型：
+如果问题包含约束 `10*x + y ≤ 100`，可以将该约束添加到模型：
 
 ```python
 Model.con1 = pym.Constraint(expr=10*x + y <= 100)
 ```
 
-完全定义模型后，使用优化求解器通过模型求解问题。要使用 pyomo 求解示例 9.1，Python 脚本 `SolveWithPyomo.py` 使用了以下代码：
+完全定义模型后，使用优化求解器通过模型求解问题。要使用 Pyomo 求解示例 9.1，Python 脚本 `SolveWithPyomo.py` 使用了以下代码：
 
 ```python
 import pyomo.environ
 from pyomo.opt import SolverFactory
+
 LPP_model = pym.ConcreteModel()
+
 LPP_model.x, LPP_model.y, LPP_model.z = pym.Var(bounds=(0., None)), pym.Var(bounds=(0., None)), pym.Var(bounds=(0., None))
+
 LPP_model.objfun = pym.Objective(expr=3*LPP_model.x + LPP_model.y + 2*LPP_model.z, sense=maximize)
+
 LPP_model.con1 = pym.Constraint(expr=3*LPP_model.x + LPP_model.y <= 40)
 LPP_model.con2 = pym.Constraint(expr=LPP_model.x + 2*LPP_model.z <= 60)
 LPP_model.con3 = pym.Constraint(expr=LPP_model.y + 2*LPP_model.z <= 60)
+
 opt = SolverFactory('glpk')
 OptResults = opt.solve(LPP_model)
+
 print('\nStatus of optimization process: ', OptResults.Status)
 print('Status of termination condition: ', OptResults.termination_condition)
 print('Optimal solution obtained at: \n', LPP_model.x.value, LPP_model.y.value, LPP_model.z.value)
@@ -8416,6 +8956,7 @@ print('Value of objective function at solution: ', LPP_model.objfun())
 
 通过执行代码，得到了以下结果：
 
+```text
 Status of optimization condition: optimal
 Optimal solution obtained at:
 x = 10.0
@@ -8423,32 +8964,41 @@ y = 10.0
 z = 25.0
 
 Value of objective function at solution: 90.0
+```
 
-## 9.6 使用 gekko 求解线性规划
+## 9.6 使用 Gekko 求解线性规划
 
-在 gekko 模式 3 下求解优化问题。求解示例 9.1 使用了 Python 脚本 `SolveExLPWithekko.py`：
+在 Gekko 模式 3 下求解优化问题。求解示例 9.1 使用了 Python 脚本 `SolveExLPWithekko.py`：
 
 ```python
 from gekko import GEKKO
+
 m = GEKKO()
+
 x = m.Var(1., None)
 y = m.Var(1., None)
 z = m.Var(1., None)
-m.Obj(-3*x-y-2*z)
+
+m.Obj(-3*x - y - 2*z)
+
 m.Equation(3*x + y <= 40)
 m.Equation(x + 2*z <= 60)
 m.Equation(y + 2*z <= 60)
+
 m.options.IMODE = 3
+
 m.solve()
+
 print('Solution found at \n')
 print('{:.7f}'.format(x.value))
 print('{:.7f}'.format(y.value))
 print('{:.7f}'.format(z.value))
-print('Value of objective function: ', '{:.7f}'.format(3*x.value+y.value+2*z.value))
+print('Value of objective function: ', '{:.7f}'.format(3*x.value + y.value + 2*z.value))
 ```
 
 执行代码得到：
 
+```text
 EXIT: Optimal Solution found.
 解已找到。
 
@@ -8465,10 +9015,11 @@ Solution found at
 25.0000000
 
 Value of objective function: 90.0000000
+```
 
 ## 9.7 求解二次规划问题
 
-二次规划问题是一种目标函数为二次型且约束为线性的优化问题。二次规划问题的般形式为：
+二次规划问题是一种目标函数为二次型且约束为线性的优化问题。二次规划问题的一般形式为：
 
 $$\min \frac{1}{2}x^T Hx + \alpha^T x, H \in \mathbb{R}^{n \times n}, \alpha, x \in \mathbb{R}^n \quad (9.9)$$
 
@@ -8476,15 +9027,15 @@ $$\min \frac{1}{2}x^T Hx + \alpha^T x, H \in \mathbb{R}^{n \times n}, \alpha, x 
 
 在本节中，将考虑如下示例所示二次规划问题的解：
 
-## 示例 9.2
+### 示例 9.2
 
 MATLAB 有一个 `quadprog` 函数用于求解二次问题。`fmincon` 函数也可以用于求解二次问题。
 
-## 使用 quadprog 的 MATLAB 函数
+#### 使用 quadprog 的 MATLAB 函数
 
-等等，MATLAB 的 `quadprog` 函数用于求解二次规划问题。
+MATLAB 的 `quadprog` 函数用于求解二次规划问题。
 
-MATLAB 的 `quadprog` 函数接收矩阵 $H$、向量 $\alpha$、不等式约束矩阵 $C$ 及其右侧值 $d$、等式约束矩阵 $A$ 及其右侧值 $b$，以及下界 $lb$ 和上界 $ub$。其形式为：
+MATLAB 的 `quadprog` 函数接收矩阵 `H`、向量 `alpha`、不等式约束矩阵 `C` 及其右侧值 `d`、等式约束矩阵 `A` 及其右侧值 `b`，以及下界 `lb` 和上界 `ub`。其形式为：
 
 > `[xopt, fval] = quadprog(H, alpha, C, d, b, lb, ub)`
 
@@ -8493,6 +9044,7 @@ MATLAB 的 `quadprog` 函数接收矩阵 $H$、向量 $\alpha$、不等式约束
 ```matlab
 % SolveQuadProg.m
 clear; clc;
+
 H = [2, 0, 4, 0; 0, 4, 0, 8; 4, 0, 8, 0; 0, 8, 0, 4];
 alpha = [-2, 0, -1, 2];
 C = [-1, 0, -0, -1, 2, -1, -1, -2, 0, -1, -1, 0, 1, 1, 1];
@@ -8501,16 +9053,17 @@ A = [];
 b = [];
 lb = [0; 0; 0; 0];
 ub = [20; 20; 0; 0];
+
 [xopt, fval] = quadprog(H, alpha, C, d, [], [], []);
 fprintf('Solution found at: %s\n', disp(xopt));
 fprintf('objective function at optimal point: %.7f\n', fval);
 ```
 
-## 使用 fmincon 的 MATLAB 函数
+#### 使用 fmincon 的 MATLAB 函数
 
-等等，MATLAB 的 `fmincon` 函数也可以用于求解二次问题。
+MATLAB 的 `fmincon` 函数也可以用于求解二次问题。
 
-MATLAB 的 `fmincon` 函数接收目标函数、初始点、目标函数的梯度、不等式约束 $A$ 及其右侧值 $b$、等式约束 $Aeq$ 及其右侧值 $beq$、下界 $lb$ 和上界 $ub$。其形式为：
+MATLAB 的 `fmincon` 函数接收目标函数、初始点、目标函数的梯度、不等式约束 `A` 及其右侧值 `b`、等式约束 `Aeq` 及其右侧值 `beq`、下界 `lb` 和上界 `ub`。其形式为：
 
 > `[xopt, fval] = fmincon(f, x0, A, b, Aeq, beq, lb, ub)`
 
@@ -8519,6 +9072,7 @@ MATLAB 脚本 `SolveFmincon.m` 用于求解示例 9.2。
 ```matlab
 % SolveFmincon.m
 clear; clc;
+
 f = @(x) x(1)^2 + 4*x(2)^2 + 8*x(3)^2 + 4*x(4)^2;
 x0 = [0; 0; 0; 0];
 A = [-1, 0, 0, 0; 0, -1, 0, 0; 0, 0, -1, 0; 0, 0, 0, -1; 1, -1, 0, 0; 0, 1, -1, -2];
@@ -8527,16 +9081,13 @@ Aeq = [];
 beq = [];
 lb = [0; 0; 0; 0];
 ub = [20; 20; 0; 0];
+
 [xopt, fval] = fmincon(f, x0, A, b, Aeq, beq, lb, ub);
 fprintf('Solution found at: %s\n', disp(xopt));
 fprintf('objective function at optimal point: %.7f\n', fval);
 ```
 
-
-
-
-
-# 求解二次规划问题
+### 求解二次规划问题
 
 <停止准则详情>
 
@@ -8548,7 +9099,7 @@ fprintf('objective function at optimal point: %.7f\n', fval);
 
 最优点处的目标函数值：1290.00000000
 
-# 使用 MATLAB 函数 fmincon 求解
+### 使用 MATLAB 函数 fmincon 求解
 
 使用 MATLAB 脚本 `SolveQPWithfmincon.m` 来求解例题 9.2。
 
@@ -8569,6 +9120,7 @@ fprintf('objective function at optimal point: %.7f\n', fval);
 
 执行代码输出：
 
+```text
 找到了满足约束条件的局部极小值。
 
 由于目标函数在可行方向上是非递减的，且在默认的最优容差范围内，同时约束条件在默认的约束容差范围内满足，优化完成。
@@ -8582,16 +9134,17 @@ fprintf('objective function at optimal point: %.7f\n', fval);
 5.0000
 
 最优点处的目标函数值：1290.00000000
+```
 
-# 258 求解优化问题：线性与二次规划
-
-# 使用 gekko Python 求解
+### 使用 Gekko Python 求解
 
 Python 脚本 `SolveQPWithGekko.py` 求解例题 9.2 的问题：
 
 ```python
 from gekko import GEKKO
+
 m = GEKKO()
+
 x1 = m.Var(1, 0, 20)
 x2 = m.Var(1, 0, 20)
 x3 = m.Var(1, 0, 20)
@@ -8599,28 +9152,33 @@ x4 = m.Var(1, 0, 20)
 
 m.obj(x1**2 + 4*x2**2 + 4*x3**2 + 4*x4**2 + 4*x1*x3 + 4*x2*x4 + ...
       2*x1*x4 + x3 + 2*x4)
+
 m.equation(2*x1 + x4 >= 10)
 m.equation(2*x1 + x3 + 2*x4 >= 20)
 m.equation(x1 + x2 + x3 + x4 <= 30)
 
 m.options.IMODE = 3
-xopt=m.solve('\n')
+
+xopt = m.solve('\n')
+
 print('Solution found: {0:10.7f}'.format(xopt[0]))
 print('{0:10.7f}'.format(xopt[1]))
 print('{0:10.7f}'.format(xopt[2]))
 print('{0:10.7f}'.format(xopt[3]))
+
 xopt = x1[0]**2 + 4*x2[0]**2 + 4*x3[0]**2 + x4[0]**2 + ...
       4*x1[0]*x3[0] + 4*x2[0]*x4[0] + 2*x1[0] + x2[0] + x3[0] + ...
       2*x4[0]
+
 print('Value of the objective function: {0:10.7f}'.format(xopt))
 ```
 
 执行结果：
 
+```text
 退出: 找到最优解。
 
 目标函数的最值为
-
 1289.99999909229
 
 | 求解器 | IPOPT (v3.12) |
@@ -8630,32 +9188,37 @@ print('Value of the objective function: {0:10.7f}'.format(xopt))
 | 成功求解 | |
 
 找到解位于
-
 4.9999999
 10.0000000
 10.00000000
 5.00000000
 
 目标函数值：1289.999991
+```
 
-# 使用 pyomo Python 求解
+### 使用 Pyomo Python 求解
 
-GNU 线性规划库 (glpk) 求解器无法用于求解 pyomo 中的二次规划问题。由于 pyomo 不包含任何求解器，因此用户安装与 pyomo 兼容的合适求解器至关重要。例如 IPOPT 求解器。在 conda 中安装 IPOPT 求解器的命令为：
+GNU 线性规划库 (`glpk`) 求解器无法用于求解 Pyomo 中的二次规划问题。由于 Pyomo 不包含任何求解器，因此用户安装与 Pyomo 兼容的合适求解器至关重要。例如 IPOPT 求解器。在 conda 中安装 IPOPT 求解器的命令为：
 
+```bash
 conda install -c conda-forge ipopt
+```
 
 Python 脚本 `SolveQPWithpyomo.py` 求解例题 9.2：
 
 ```python
 import pyomo.environ as py
 from pyomo.opt import SolverFactory
+
 m = py.ConcreteModel()
+
 m.x1 = py.Var(bounds=(0, 20))
 m.x2 = py.Var(bounds=(0, 20))
 m.x3 = py.Var(bounds=(0, 20))
 m.x4 = py.Var(bounds=(0, 20))
 
 m.obj = py.Objective(expr=m.x1**2 + 4*m.x2**2 + 4*m.x3**2 + m.x4**2 + 4*m.x1*m.x3 + 4*m.x2*m.x4 + 2*m.x1 + m.x2 + m.x3 + 2*m.x4, sense=minimize)
+
 m.con1 = py.Constraint(expr=2*m.x1 + m.x4 >= 10)
 m.con2 = py.Constraint(expr=2*m.x1 + m.x3 + 2*m.x4 >= 20)
 m.con3 = py.Constraint(expr=m.x1 + m.x2 + m.x3 + m.x4 <= 30)
@@ -8672,6 +9235,8 @@ print('x4 = {0:10f}'.format(py.value(m.x4)))
 print('Objective value = {0:10f}'.format(py.value(m.obj)))
 ```
 
+
+
 执行代码得到输出：
 
 求解器状态: terminated
@@ -8686,39 +9251,43 @@ x4 = 5.0000000
 
 目标函数值 = 1289.999991
 
-
-
-
-
 # 求解无约束问题
 
-(ii) **搜索方向问题：** 给定单位向量 $p^{(k)}$，使得在迭代 $k$ 时 $f(x^{(k)} + \alpha p^{(k)})$ 是递减函数，寻找一个满足 $0 < \alpha < \alpha_{max}$ 的步长 $\alpha$。即 $p^{(k)}$ 是**下降方向**。
+## (ii) 搜索方向问题
+
+给定单位向量 `p^{(k)}`，使得在迭代 `k` 时 `f(x^{(k)} + \alpha p^{(k)})` 是递减函数，寻找一个满足 `0 < \alpha < \alpha_{max}` 的步长 `\alpha`。即 `p^{(k)}` 是**下降方向**。
 
 数值优化方法之间的区别在于确定搜索方向的方法，以及梯度向量和 Hessian 矩阵的近似和（或或）更新的方法。
 
 ## 10.1.1 线搜索算法
 
-线搜索算法有两种类型：*精确线搜索*和*不精确线搜索*。精确线搜索算法寻找精确的步长 $\alpha = (\alpha_{Exact})$：
+线搜索算法有两种类型：*精确线搜索*和*不精确线搜索*。精确线搜索算法寻找精确的步长 `\alpha = (\alpha_{Exact})`：
 
 $$\alpha_{Exact} = \arg\min_{\alpha>0}f(x^{(k)} + \alpha p^{(k)})$$
 
-这在数值上是不精确的。不精确线搜索算法寻找的是精确步长 $\alpha_{Exact}$ 的近似值。这是通过迭代实现的，从初始猜测值 $\alpha^0$ 开始，构造一个步长序列 $\alpha^0, \alpha^1, ..., \alpha^k$，使得 $\alpha^k \approx \alpha_{Exact}$ [49]。
+这在数值上是不精确的。不精确线搜索算法寻找的是精确步长 `\alpha_{Exact}` 的近似值。这是通过迭代实现的，从初始猜测值 `\alpha^0` 开始，构造一个步长序列 `\alpha^0, \alpha^1, ..., \alpha^k`，使得 `\alpha^k \approx \alpha_{Exact}` [49]。
 
-最不精确的线搜索算法是*回溯线搜索算法*，它使用了两个参数 $a$ 和 $b$，并基于 Armijo 条件：
+最不精确的线搜索算法是*回溯线搜索算法*，它使用了两个参数 `a` 和 `b`，并基于 Armijo 条件：
 
-$f(x^{(k)} + \alpha p^{(k)}) > f(x^{(k)}) + \alpha a g(x^{(k)})^Tp^{(k)}$
+$$f(x^{(k)} + \alpha p^{(k)}) > f(x^{(k)}) + \alpha a g(x^{(k)})^Tp^{(k)}$$
 
-参数 $a$ 与 Armijo 的终止条件有关。参数 $0 < b < 1$ 用于在每次迭代中更新步长，其中 $\alpha^j = b\alpha^{j-1}$，从大步长 $\alpha^0$（通常为 1）开始。
+参数 `a` 与 Armijo 的终止条件有关。参数 `0 < b < 1` 用于在每次迭代中更新步长，其中 `\alpha^j = b\alpha^{j-1}`，从大步长 `\alpha^0`（通常为 1）开始。
 
-MATLAB 函数 **LineSearch** 接收函数 $f$、代表 $f$ 梯度的向量 $g$、起始向量 $x$ 和单位（方向）向量 $p$，返回最优步长 $\alpha$：
+MATLAB 函数 `LineSearch` 接收函数 `f`、代表 `f` 梯度的向量 `g`、起始向量 `x` 和单位（方向）向量 `p`，返回最优步长 `\alpha`：
 
 ```matlab
 function alpha = LineSearch(f, g, x, p)
+
 a = 0.3; b = 0.9;
+
 alpha = 1.0;
+
 while f(x+alpha*p) > f(x) + a*alpha*g(x)'*p
+
 alpha = b*alpha;
+
 end
+
 end
 ```
 
@@ -8726,25 +9295,31 @@ end
 
 ```python
 import numpy as np
+
 def LineSearch(f, g, x, p):
+
     a, b = 0.3, 0.9
+
     alpha = 1.0
+
     while f(x+alpha*p) > f(x) + a*alpha*np.dot(g(x), p):
+
         alpha = b*alpha
+
     return alpha
 ```
 
 ## 10.1.2 最速下降法
 
-从初微积分可以看出，梯度向量 $g(x) = \nabla f(x)$ 指向多变量函数 $f(x)$ 增长最大的方向。因此，$-g(x)$ 指向 $f(x)$ 减少最大的方向。任何下降方向 $p(x)$ 与 $-g(x)$ 成锐角。最速下降法选择搜索方向为 $p(x) = -\frac{g(x)}{\|g(x)\|}$，在最速下降法中，从点 $x^{(k)}$ 进展到点 $x^{(k+1)}$ 的迭代过程由公式给出：
+从初微积分可以看出，梯度向量 `g(x) = \nabla f(x)` 指向多变量函数 `f(x)` 增长最大的方向。因此，`-g(x)` 指向 `f(x)` 减少最大的方向。任何下降方向 `p(x)` 与 `-g(x)` 成锐角。最速下降法选择搜索方向为 `p(x) = -\frac{g(x)}{\|g(x)\|}`，在最速下降法中，从点 `x^{(k)}` 进展到点 `x^{(k+1)}` 的迭代过程由公式给出：
 
 $$x^{(k+1)} = x^{(k)} - \alpha^{(k)} \frac{g(x^{(k)})}{\|g(x^{(k)})\|}$$
 
-其中 $\alpha^{(k)}$ 通过线搜索算法找到 [20, 49]。例如，为了最小化
+其中 `\alpha^{(k)}` 通过线搜索算法找到 [20, 49]。例如，为了最小化
 
 $$f(x_1, x_2) = x_1^2 - x_1x_2 + 4x_2^2$$
 
-在任意点 $x = [x_1, x_2]^T$ 处的梯度为：
+在任意点 `x = [x_1, x_2]^T` 处的梯度为：
 
 $$g(x) = \begin{bmatrix} 2x_1 - x_2 \\ -x_1 + 8x_2 \end{bmatrix}$$
 
@@ -8752,32 +9327,57 @@ MATLAB 脚本 `SolveEwiWithSteepDesc.m` 根据最速下降法找到目标函数�
 
 ```matlab
 % SolveEwiWithSteepDesc.m
+
 clear; clf;
+
 f = @(x) x(1)^2-x(1)*x(2) + 4*x(2)^2 - 1;
+
 g = @(x)[2*x(1)-x(2); -x(1)+8*x(2)];
+
 x0 = [1]; Eps = 1e-8;
+
 [Iterations] = Gradf(f, g, x0, Eps);
+
 disp('optimum = '); disp(x);
+
 disp(['Iterations = ', num2str(Iterations)]);
 
 function [x, Iterations] = Gradf(f, g, x0, Eps)
+
     x = x0;
+
     Iteration = 0;
+
     while norm(g(x), 2) > Eps
+
         p = -g(x)/norm(g(x), 2);
+
         alpha = LineSearch(f, g, x, p);
+
         x = x + alpha * p;
+
         fprintf('%3i\t%14.9f\t%12.10e\n', Iterations, f(x), norm(g(x), 2));
+
         Iterations = Iterations + 1;
+
     end
+
 end
+
 function alpha = LineSearch(f, g, x, p)
+
     a = 1-2/(1+sqrt(5));
+
     b = 2/(1+sqrt(5));
+
     alpha = 1.0;
+
     while f(x+alpha*p) > f(x) + a*alpha*g(x)'*p
+
         alpha = b*alpha;
+
     end
+
 end
 ```
 
@@ -8798,25 +9398,43 @@ end
 
 ```python
 import numpy as np
+
 def LineSearch(f, g, x, p):
+
     a, b = 1-2/(1+np.sqrt(5)), 2/(1+np.sqrt(5))
+
     alpha = 1.0
+
     while f(x+alpha*p) > f(x) + a*alpha*np.dot(g(x), p):
+
         alpha = b*alpha
+
     return alpha
 
 def GradDec(f, g, x0, Eps):
+
     x = x0
+
     Iterations = 0
+
     print('-')
+
     print(f'Iteration {Iterations}\t{f(x):.6f}\t{np.linalg.norm(g(x)):.6e}')
+
     print('-')
+
     while np.linalg.norm(g(x)) >= Eps:
+
         p = -g(x)/np.linalg.norm(g(x))
+
         alpha = LineSearch(f, g, x, p)
+
         x = x + alpha * p
+
         Iterations += 1
+
         print(f'Iteration {Iterations}\t{f(x):.6f}\t{np.linalg.norm(g(x)):.6e}')
+
     return x, Iterations
 ```
 
@@ -8824,19 +9442,19 @@ def GradDec(f, g, x0, Eps):
 
 ## 1.3 牛顿法
 
-在迭代 $k$ 时，通过泰勒级数在 $x^{(k)}$ 附近近似函数 $f$：
+在迭代 `k` 时，通过泰勒级数在 `x^{(k)}` 附近近似函数 `f`：
 
 $$f(x) \approx f(x^{(k)}) + g(x^{(k)})^T(x-x^{(k)}) + \frac{1}{2}(x-x^{(k)})^T H(x^{(k)})(x-x^{(k)}) \quad (10.7)$$
 
-右侧的二次函数有一个唯一的最小化者，该者通过通过方程 (10.7) 对 $x$ 求导并使得到的线性方程相等得到：
+右侧的二次函数有一个唯一的最小化者，该者通过通过方程 (10.7) 对 `x` 求导并使得到的线性方程相等得到：
 
 $$g(x^{(k)}) + H(x^{(k)})(x-x^{(k)}) = 0$$
 
-令 $x = x^{(k+1)}$ 并求解 $x^{(k+1)}$ 得：
+令 `x = x^{(k+1)}` 并求解 `x^{(k+1)}` 得：
 
 $$x^{(k+1)} = x^{(k)} - H(x^{(k)})^{-1}g(x^{(k)})$$
 
-因此，在牛顿法中，迭代 $k$ 处的搜索方向给出：
+因此，在牛顿法中，迭代 `k` 处的搜索方向给出：
 
 $$p^{(k)} = -H(x^{(k)})^{-1}g(x^{(k)})$$
 
@@ -8852,34 +9470,47 @@ MATLAB 脚本 `MinExWithPureNewton.m` 实现了一个函数 `PureNewton` 以应�
 
 ```matlab
 % MinExWithPureNewton.m
+
 clear; clc; cls;
+
 f = @(x) 8*x(1) + 2*x(2) + 2/2 + 5*log(1-exp(-x(1))-x(2)); % 注意：此处可能有OCR错误
+
 g = @(x)[10*x(1) + 5*exp(-x(1)) - x(2); -x(2) + 1];
+
 H = @(x)[10-5*exp(-x(1)), -1; -1, 1];
+
 x0 = [10; 0]; Eps = 1e-8;
+
 [Iterations, x] = PureNewton(f, g, H, x0, Eps);
+
 disp('optimum = '); disp(x);
+
 disp(['Iterations = ', num2str(Iterations)]);
 
 function [x, Iterations] = PureNewton(f, g, H, x0, Eps)
+
     x = x0;
+
     Iterations = 0;
+
     fprintf('Iteration\tf(x)\t\t||g(x)||\n');
+
     while norm(g(x)) >= Eps
+
         p = -H(x)\g(x);
+
         alpha = 1; % 牛顿法步长为1
+
         x = x + alpha * p;
+
         Iterations = Iterations + 1;
+
         fprintf('%3i\t%14.9f\t%12.10e\n', Iterations, f(x), norm(g(x)));
+
     end
+
 end
 ```
-
-
-
-
-
-# 268 求解优化问题：非线性规划
 
 通过运行代码，最小化问题仅需 5 次迭代即可得求解：
 
@@ -8895,78 +9526,114 @@ end
 
 迭代次数 = 4
 
-Python 脚本 MinEx2WithPureNewton.py 的代码如下：
+Python 脚本 `MinEx2WithPureNewton.py` 的代码如下：
 
 ```python
 import numpy as np
 
 def LineSearch(f, g, x, p):
+
     a, b = -1-2/(1+np.sqrt(5)), 2/(1+np.sqrt(5))
+
     alpha = 1.0
+
     while f(x+alpha*p) > f(x) + alpha*np.dot(g(x), p):
+
         alpha *= b
+
     return alpha
 
 def PureNewton(f, g, x0, Eps):
+
     x = x0
+
     Iterations = 0
+
     print('Iteration\t f(x)\t ||g(x)|\t')
+
     while np.linalg.norm(g(x), 2) >= Eps:
+
         p = -np.linalg.solve(H(x), g(x))
+
         alpha = LineSearch(f, g, x, p)
+
         x = x + alpha * p
+
         print('{0:.0f}'.format(Iterations), '\t\t',
+
               '{0:12.6f}'.format(f(x)), '\t\t',
+
               '{0:10.8f}'.format(np.linalg.norm(g(x))))
+
         Iterations += 1
+
     print('--\t', Iterations)
+
     return x, Iterations
 
 f = lambda x: (1+x[0]**2 + x[1]**2) / 2 - 5*np.log(1+np.exp(-x[0]-x[1]))
+
 g = lambda x: np.array([x[0] + 5*np.exp(-x[0]-x[1]), x[1] + 5*np.exp(-x[0]-x[1]) + 1])
+
 # ... 代码其余部分
 ```
 
-# 求解无约束问题
-
 ## 10.1.4 拟牛顿法
 
-求解无约束 Hessian 最小化问题的牛顿法存在一个问题：在迭代 $k$ 处必须评估 Hessian 矩阵的逆以寻找搜索方向 $p^{(k)}$。当 Hessian 矩阵病态态时，搜索方向将是不准确的，迭代过程可能会失败。
+求解无约束 Hessian 最小化问题的牛顿法存在一个问题：在迭代 `k` 处必须评估 Hessian 矩阵的逆以寻找搜索方向 `p^{(k)}`。当 Hessian 矩阵病态态时，搜索方向将是不准确的，迭代过程可能会失败。
 
-拟牛顿法不是直接插入 Hessian 矩阵，而是在不同的迭代中寻找 Hessian 矩阵的近似值。因此，$H^{(k)}$ 被替换为正定矩阵 $B^{(k)}$，搜索方向 $k$ 为 $p^{(k)} = -B^{(k)}g^{(k)}$。这种迭代过程通常从 $B^{(0)} = I$ 开始，其中 $I \in \mathbb{R}^{n \times n}$ 是 $n \times n$ 单位矩阵。拟牛顿法通过在迭代 $k$ 时更新矩阵 $B^{(k)}$ 的方向来搜索方向，并由此计算研究方向。最著名的牛顿法是 Davidson-Fletcher-Powell (DFP) 和 Broyden-Fletcher-Goldfarb-Shanno (BFGS) 方法 [19, 3, 20]。
+拟牛顿法不是直接插入 Hessian 矩阵，而是在不同的迭代中寻找 Hessian 矩阵的近似值。因此，`H^{(k)}` 被替换为正定矩阵 `B^{(k)}`，搜索方向 `k` 为 `p^{(k)} = -B^{(k)}g^{(k)}`。这种迭代过程通常从 `B^{(0)} = I` 开始，其中 `I \in \mathbb{R}^{n \times n}` 是 `n \times n` 单位矩阵。拟牛顿法通过在迭代 `k` 时更新矩阵 `B^{(k)}` 的方向来搜索方向，并由此计算研究方向。最著名的牛顿法是 Davidson-Fletcher-Powell (DFP) 和 Broyden-Fletcher-Goldfarb-Shanno (BFGS) 方法 [19, 3, 20]。
 
 ### 10.1.4.1 Broyden-Fletcher-Goldfarb-Shanno (BFGS) 方法
 
-BFGS 从 Hessian 矩阵的初始近似 $H^{(0)} \approx I$ 开始。在迭代 $k$ 处，更新近似 Hessian 矩阵 $H^{(k)}$ 以获得 $H^{(k+1)}$，它将用于下一次迭代。步骤如下：在迭代 $k$ 处，对于 $x^{(k)}$，$g^{(k)}$，程序通过求解线性方程组 $H^{(k)}p^{(k)} = -g^{(k)}$ 寻找搜索方向，并通过线搜索获取步长 $\alpha^{(k)}$。然后计算两个向量：$s^{(k)} = \alpha^{(k)}p^{(k)}$ 和 $y^{(k)} = g^{(k+1)} - g^{(k)}$。
+BFGS 从 Hessian 矩阵的初始近似 `H^{(0)} \approx I` 开始。在迭代 `k` 处，更新近似 Hessian 矩阵 `H^{(k)}` 以获得 `H^{(k+1)}`，它将用于下一次迭代。步骤如下：在迭代 `k` 处，对于 `x^{(k)}`，`g^{(k)}`，程序通过求解线性方程组 `H^{(k)}p^{(k)} = -g^{(k)}` 寻找搜索方向，并通过线搜索获取步长 `\alpha^{(k)}`。然后计算两个向量：`s^{(k)} = \alpha^{(k)}p^{(k)}` 和 `y^{(k)} = g^{(k+1)} - g^{(k)}`。
 
-# 求解优化问题：非线性规划
-
-Python 代码 MinWithBFGS.py 用于基于 BFGS 算法寻找 $f$ 的最优解：
+Python 代码 `MinWithBFGS.py` 用于基于 BFGS 算法寻找 `f` 的最优解：
 
 ```python
 import numpy as np
 
 def LineSearch(f, g, x, p):
+
     a, b = -1/(2+np.sqrt(5)), 2/(np.sqrt(5))
+
     alpha = 1.0
+
     while f(x+alpha*p) > f(x) + alpha*np.dot(g(x), p):
+
         alpha *= b
+
     return alpha
 
 def BFGS(f, g, x0, Eps):
+
     x = x0
+
     Iterations = 0
+
     print('Iteration\t f(x)\t ||g(x)|\t')
+
     while np.linalg.norm(g(x), 2) >= Eps:
+
         p = -np.linalg.solve(H(x), g(x))
+
         alpha = LineSearch(f, g, x, p)
+
         x = x + alpha * p
-        print('{0:.0f}'.format(Iterations), '\t\t',
-              '{0:12.6f}'.format(f(x)), '\t\t',
-              '{0:10.8f}'.format(np.linalg.norm(g(x))))
-        Iterations += 1
-    print('--\t', Iterations)
-    return x, Iterations
+```
+
+
+
+```python
+print('{0:.0f}'.format(Iterations), '\t\t',
+      '{0:12.6f}'.format(f(x)), '\t\t',
+      '{0:10.8f}'.format(np.linalg.norm(g(x))))
+
+Iterations += 1
+
+print('--\t', Iterations)
+
+return x, Iterations
 ```
 
 执行代码后，在 13 次迭代后获得最优解：
@@ -8987,44 +9654,72 @@ Iterations = 13
 
 ```matlab
 clear; clc;
+
 f = @(x) x(1)^2 + x(2)^2/2 + 5*log(1+exp(-x(1)-x(2)));
+
 g = @(x) [2*x(1) - 5*exp(-x(1)-x(2))/(1+exp(-x(1)-x(2))); 2*x(2) - 5*exp(-x(1)-x(2))/(1+exp(-x(1)-x(2)))];
+
 x0 = [1.0; 1.0]; Eps = 1e-8;
+
 [Iterations, x] = BFGS(f, g, x0, Eps);
+
 disp('Optimum solution = %'); disp(x);
+
 disp('Iterations = %s', num2str(Iterations));
 
 function [Iterations, x] = BFGS(f, g, x, Eps)
+
     x = x;
+
     Iterations = 0;
+
     fprintf('Iteration %d: f(x)=%.12e, norm(g(x))=%.12e\n', Iterations, f(x));
+
     H = eye(length(x));
+
     while norm(g(x)) >= Eps
+
         p = -H*g(x);
+
         alpha = LineSearch(f, g, x, p);
+
         s = alpha*p;
+
         x = x + alpha*p;
+
         y = g(x);
+
         H = H + y*y'/(y'*s*s)-H*H'/(s'*H*s);
+
         Iterations = Iterations + 1;
+
         fprintf('Iteration %d: f(x)=%.12e, norm(g(x))=%.12e\n', Iterations, f(x));
+
     end
+
 end
 
 function alpha = LineSearch(f, g, x, p)
+
     a = -1/(2+sqrt(5));
+
     b = 2/(sqrt(5));
+
     alpha = 1.0;
+
     while f(x+alpha*p) > f(x) + alpha*dot(g(x), p)
+
         alpha = b*alpha;
+
     end
+
 end
 ```
 
 ## 10.1.4.2 David-Fletcher-Powell (DFP) 算法
 
 David-Fletcher-Powell (DFP) 方法具有与 BFGS 相似的形式来更新 Hessian 矩阵。在迭代 $k$ 处，向量 $s^{(k)}$ 和 $y^{(k)}$ 交换了在 BFGS 方法中的角色。在迭代 $k$ 处构建 Hessian 矩阵的公式为：
-$H^{(k+1)} = H^{(k)} - \frac{s^{(k)}s^{(k)T}}{y^{(k)^T s^{(k)}} + \frac{y^{(k)}y^{(k)T}}{y^{(k)^T H^{(k)} y^{(k)}}$
+$H^{(k+1)} = H^{(k)} - \frac{s^{(k)}s^{(k)T}}{y^{(k)^T s^{(k)}} + \frac{y^{(k)}y^{(k)T}}{y^{(k)^T H^{(k)} y^{(k)}}}$
 
 **示例 10.2** 在此示例中，将实现 DFP 方法最小化二次函数 $f(x_1, x_2, x_3) = (x_1-2)^2 + (1-x_3)^2+x_2^2$。
 
@@ -9034,30 +9729,50 @@ Python 代码为：
 import numpy as np
 
 def LineSearch(f, g, x, p):
+
     a = -1/(2+np.sqrt(5)), b = 2/(np.sqrt(5))
+
     alpha = 1.0
+
     while f(x+alpha*p) > f(x) + alpha*np.dot(g(x), p):
+
         alpha *= b
+
     return alpha
 
 def DFP(f, g, x0, Eps):
+
     x = x0
+
     Iterations = 0
+
     H = np.eye(len(x))
+
     while np.linalg.norm(g(x), 2) >= Eps:
+
         p = -H@g(x)
+
         alpha = LineSearch(f, g, x, p)
+
         s = alpha * p
+
         y = g(x+s) - g(x)
+
         x = x + s
+
         H = H + np.outer(s, s)/np.inner(y, s) - np.outer(y, y)/np.inner(y, y)
+
         print('{0:.0f}'.format(Iterations), '\t\t',
               '{0:12.6f}'.format(f(x)))
+
         Iterations += 1
+
     return x, Iterations
 
 f = lambda x: (x[0]-2)**2 + (1-x[2])**2+x[1]**2
+
 g = lambda x: np.array([2*(x[0]-2), 2*x[1], -2*(1-x[2])])
+```
 
 执行代码后，最小化问题在 8 次迭代内解决：
 
@@ -9074,31 +9789,35 @@ g = lambda x: np.array([2*(x[0]-2), 2*x[1], -2*(1-x[2])])
 
 x = [2.0, 0.0, 1.0]
 Iterations = 8
-```
-
-
-
-
 
 # 求解优化问题：非线性规划
 
 ```matlab
 printf('%5i\t%t14.9f\t%t12.10e\n', Iterations, ...
     f(x), norm(g, 2));
+
 end
+
 printf('----------------\n');
+
 function alpha = LineSearch(f, g, x, p)
+
     a = 1-2/(1+sqrt(5));
+
     b = 2/(1+sqrt(5));
+
     alpha = 1.0;
+
     while f(x+alpha*p) > f(x) + a*alpha*g(x)*p
+
         alpha = b*alpha;
+
 end
 ```
 
 ## 10.1.5 使用 MATLAB 求解无约束优化问题
 
-MATLAB 函数 fminunc 用于求解求解无约束最小化问题：
+MATLAB 函数 `fminunc` 用于求解求解无约束最小化问题：
 
 $\min f(x), x \in \mathbb{R}^n$
 
@@ -9112,8 +9831,11 @@ $\min_{x \in \mathbb{R}^2} 10x_1^2 + x_2^2 + 5\log e^{-x_1-x_2}$
 
 ```matlab
 >> f = @(x) 5*x(1)^2+2*x(2)^2/2+5*log(1+exp(-x(1)-x(2)));
+
 >> x0 = [1; 1];
+
 >> Options = optimset('Display', 'Iter', 'TolFun', '1e-7');
+
 >> x = fminunc(f, x0, [], Options)
 ```
 
@@ -9145,7 +9867,9 @@ $\min_{x \in \mathbb{R}^2} 10x_1^2 + x_2^2 + 5\log e^{-x_1-x_2}$
 
 ```text
 x =
+
 0.1125
+
 1.1247
 ```
 
@@ -9157,55 +9881,95 @@ Python 有许多函数可以求解无约束最小化问题。这些求解器包�
 
 ```python
 [1]: import numpy as np
+
 [2]: from scipy.optimize import fmin
+
 [3]: x0 = np.array([1., 1.])
+
 [4]: f = lambda x: (10*x[0])**2 + x[1]**2 / 5*np.log(1+np.exp(-x[0]-x[1]))
+
 [5]: Eps = 1e-8
+
 [6]: xopt = fmin(f, x0, tol=Eps)
+
 Optimization terminated successfully.
+
 Current function value: 1.969726
+
 Iterations: 65
+
 Function evaluations: 126
+
 [7]: print(xopt)
+
 0.1246719 1.12467185
 ```
 
 ```python
 [8]: from scipy.optimize import fmin_bfgs
+
 [9]: g = lambda x: np.array([20*x[0] - 5*np.exp(-x[0]-x[1])/(1+np.exp(-x[0]-x[1])),
 2*x[1] - 5*np.exp(-x[0]-x[1])/(1+np.exp(-x[0]-x[1]))])
+
 [10]: xopt = fmin_bfgs(f, x0, fprime=g, step=1)
+
 Optimization terminated successfully.
+
 Current function value: 1.969726
+
 Iterations: 7
+
 Function evaluations: 8
+
 [11]: print(xopt)
+
 0.1246719 1.12467185
 ```
 
 ```python
 [12]: from scipy.optimize import fmin_ncg
+
 [13]: Den = lambda x: 1/(2*np.exp(x[0]) + x[1])
+
 [14]: H = lambda x: Den(x) * np.array([5*np.exp(x[0])
 + x[1]), 2*np.exp(x[0] + x[1]), 5*np.exp(x[0])])
+
 [15]: xopt = fmin_ncg(x0, fprime=g, hess=H, disp=1)
+
 Optimization terminated successfully.
+
 Current function value: 1.969726
+
 Iterations: 4
+
 Function evaluations: 5
+
 Hessian evaluations: 4
+
 [16]: print(xopt)
+
 0.1246719 1.12467185
+
 [17]: Sol = minimize(f, x0)
+
 [18]: print(Sol)
+
 fun: 1.96972527648
+
 hess: array([[0.0709591, -0.046767], [-0.046767, 0.0580499]])
+
 jac: array([-2.9802324e-07, 5.9604448e-08])
+
 message: 'Optimization terminated successfully.'
+
 fev: 3
+
 nit: 7
+
 status: 0
+
 success: True
+
 x: array([0.1246715, 0.0])
 ```
 
@@ -9221,15 +9985,25 @@ $$\min_{x \in \mathbb{R}^2} f(x_1, x_2) = 3x_1^2 + 2x_1x_2 + x_2^2 - 4x_1 + 5x_2
 
 ```python
 1 from gekko import GEKO
+
 2 m = GEKO()
+
 3 x1 = m.Var(1)
+
 4 x2 = m.Var(1)
+
 5
+
 6 m.Obj(3*x1**2 + 2*x1*x2 + x2**2 - 4*x1 + 5*x2)
+
 7 m.options.IMODE = 3
+
 8 m.solve()
+
 9 print('Solution found at x = ')
+
 10 print('{0:12.10e}'.format(x1[0]))
+
 11 print('{0:12.10e}'.format(x2[0]))
 ```
 
@@ -9256,25 +10030,39 @@ Python 脚本 `MinEx2uncWithGko.py` 求解该问题：
 
 ```python
 1 from gekko import GEKO
+
 2 m = GEKO()
+
 3 x1 = m.Var(-1)
+
 4 x2 = m.Var(2)
+
 5
+
 6 m.Obj(100*(x2-x1**2)**2+(1-x1)**2)
+
 7 m.options.IMODE = 3
+
 8 m.solve()
+
 9 print('Solution found at x = ')
+
 10 print('{0:12.10e}'.format(x1[0]))
+
 11 print('{0:12.10e}'.format(x2[0]))
 ```
 
+
+
 执行代码得到以下结果：
 
+```
 EXIT: Optimal Solution Found.
+```
 
 找到了解。
 
-目标函数的最终值为 7.912533725331136E-01
+目标函数的最终值为 `7.912533725331136E-01`
 
 ## 10.2 求解约束优化问题
 
@@ -9302,11 +10090,7 @@ $L(x) = f(x) + E^T(x)\lambda$
 
 在最优解 $x^*$ 处，函数的梯度与约束面正交。这是梯度在约束面上的投影。这可以表示为 $Z^{*T} \nabla f(x^*) = 0$，等价于一阶必要条件 (10.11)。
 
-
-
-
-
-# 求解优化问题：非线性规划
+## 求解优化问题：非线性规划
 
 $\tilde{x}$ 处的激活集。在最优解 $\boldsymbol{x}^*$ 时，所有等式约束应满足：
 
@@ -9324,9 +10108,13 @@ $L(\boldsymbol{x}, \boldsymbol{\lambda}, \boldsymbol{\mu}) = f(\boldsymbol{x}) +
 
 ```
 $$\nabla_x L(\boldsymbol{x}^*, \boldsymbol{\lambda}^*, \boldsymbol{\mu}^*) = 0 = \nabla f(\boldsymbol{x}^*) + \nabla E^T(\boldsymbol{x}^*)\boldsymbol{\lambda}^* + \nabla I^T(\boldsymbol{x}^*)\boldsymbol{\mu}^* \quad (10.16)$$
+
 $\nabla_{\boldsymbol{\lambda}} L(\boldsymbol{x}^*, \boldsymbol{\lambda}^*, \boldsymbol{\mu}^*) = 0 = E(\boldsymbol{x}^*) \quad (10.17)$
+
 $\nabla_{\boldsymbol{\mu}} L(\boldsymbol{x}^*, \boldsymbol{\lambda}^*, \boldsymbol{\mu}^*) = I(\boldsymbol{x}^*) \le 0, \quad (10.18)$
+
 $\mu_j^* \ge 0, j = 1, \dots, q \quad (10.19)$
+
 $\mu_j^* I_j(\boldsymbol{x}^*) = 0, j = 1, \dots, q \quad (10.20)$
 ```
 
@@ -9344,15 +10132,17 @@ $$\nabla_{xx} L(\boldsymbol{x}^*, \boldsymbol{\lambda}^*, \boldsymbol{\mu}^*)\bo
 
 ## 10.2.1 使用 MATLAB fmincon 求解约束优化问题
 
-MATLAB 函数 fmincon 用于求解约束优化问题。它接收一个目标函数 $f(\boldsymbol{x})$、一个起始点 $\boldsymbol{x}^0$、非线性约束函数的函数句柄以及优化过程选项。如果存在线性等式和不等式约束，也可以作为变量边界传递给函数 fmincon。它主要返回问题的解，可选返回最优解处的目标函数值、退出标志、拉格朗日乘子、最优点处的梯度和 Hessian 矩阵 [17]。
+MATLAB 函数 `fmincon` 用于求解约束优化问题。它接收一个目标函数 $f(\boldsymbol{x})$、一个起始点 $\boldsymbol{x}^0$、非线性约束函数的函数句柄以及优化过程选项。如果存在线性等式和不等式约束，也可以作为变量边界传递给函数 `fmincon`。它主要返回问题的解，可选返回最优解处的目标函数值、退出标志、拉格朗日乘子、最优点处的梯度和 Hessian 矩阵 [17]。
 
 ## 求解约束优化问题
 
-实现 fmincon 求解器的形式为：
->> [xopt, fmin, exFlag, Lamd, Grad, Hess] = fmincon(@f, x0, Aiq,
-biq, ... Aeq, beq, upbnd, @nlcon, Options);
+实现 `fmincon` 求解器的形式为：
 
-**示例 10.6** 在此示例中，将使用函数 fmincon 求解以下约束最小化问题：
+```
+>> [xopt, fmin, exFlag, Lamd, Grad, Hess] = fmincon(@f, x0, Aiq, biq, ... Aeq, beq, upbnd, @nlcon, Options);
+```
+
+**示例 10.6** 在此示例中，将使用函数 `fmincon` 求解以下约束最小化问题：
 
 ```
 min x1*x4(x1+x2+x3) + x3
@@ -9377,42 +10167,44 @@ x1^2+x2^2+x3^2+x4^2 = 60
 -1 <= x1,x2,x3,x4 <= 5
 ```
 
-MATLAB 脚本 MinExWithfmincon.m 使用 fmincon 求解优化问题：
+MATLAB 脚本 `MinExWithfmincon.m` 使用 `fmincon` 求解优化问题：
 
-+ 1 MinExWithfmincon.m
-2 clear; cl;
-3 x0 = [1; 5; 1]; % 为解设置一个初始猜测
-4 Algorithms = ['sqp', 'active-set', 'interior-point', ...
+```matlab
+% MinExWithfmincon.m
+clear; clc;
+x0 = [1; 5; 1]; % 为解设置一个初始猜测
+Algorithms = ['sqp', 'active-set', 'interior-point', ...
    'sqp-legacy']
-5 options = optimoptions(@fmincon,'Algorithm', 'sqp', 'Disp', ...
+options = optimoptions(@fmincon,'Algorithm', 'sqp', 'Disp', ...
    'Iter', 'PlotFcns', 'optimfval');
-6 [x,fval] = fmincon(@objective, x0, [], [], [], [], [], [], @nlcon, options);
-7 fprintf('Optimal solution found at %n ...\n   '%12.6e\n%12.6e\n%12.6e\n%12.6e\n', x(1), x(2), x(3), x(4));
-8 fprintf('Value of objective function %10.7f\n', fval);
-9 function f = objective(x)
-10 f = x(1)*x(4)+(x(1)+x(2))
-11 end
-12 function [ic, ec] = nlcon(x)
-13 % 非线性不等式约束
-14 ic(1) = -x(1)*x(2)*x(4)+25;
-15 ic(2) = -x(1) + 1;
-16 ic(3) = x(1) - 5;
-17 ic(4) = -x(2) + 1;
-18 ic(5) = x(2) - 5;
-19 ic(6) = -x(3) + 1;
-20 ic(7) = x(3) - 5;
-21 ic(8) = -x(4) + 1;
-22 ic(9) = x(4) - 5;
-23 % 非线性等式约束
-24 ec = -sum(x) + 40;
-25 end
+[x,fval] = fmincon(@objective, x0, [], [], [], [], [], [], @nlcon, options);
+fprintf('Optimal solution found at %n ...\n   '%12.6e\n%12.6e\n%12.6e\n%12.6e\n', x(1), x(2), x(3), x(4));
+fprintf('Value of objective function %10.7f\n', fval);
+function f = objective(x)
+f = x(1)*x(4)+(x(1)+x(2))
+end
+function [ic, ec] = nlcon(x)
+% 非线性不等式约束
+ic(1) = -x(1)*x(2)*x(4)+25;
+ic(2) = -x(1) + 1;
+ic(3) = x(1) - 5;
+ic(4) = -x(2) + 1;
+ic(5) = x(2) - 5;
+ic(6) = -x(3) + 1;
+ic(7) = x(3) - 5;
+ic(8) = -x(4) + 1;
+ic(9) = x(4) - 5;
+% 非线性等式约束
+ec = -sum(x) + 40;
+end
+```
 
-# 求解优化问题：非线性规划
+## 求解优化问题：非线性规划
 
 运行 MATLAB 代码得到：
 
 | Iter | Funcount | fval | Feasibility | Step Length | First-order |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 0 | 1.60000e+00 | 1.200e+01 | 1.000e+00 | 0.000e+00 | 1.200e+01 |
 | 10 | 1.60825e+01 | 1.387e+00 | 1.000e+00 | 1.159e+00 | 2.077e+00 |
 | 15 | 1.69639e+01 | 8.077e-02 | 1.000e+00 | 1.875e-01 | 1.341e-07 |
@@ -9446,7 +10238,7 @@ $-6 \le x_1 + x_2 + x_3 \le 6$。
 
 $-1 \le x_2 \le 1$。
 
-MATLAB 脚本 MinExWithfmincon 求解上述最小化问题。其代码为：
+MATLAB 脚本 `MinExWithfmincon` 求解上述最小化问题。其代码为：
 
 ```matlab
 % MinExWithfmincon.m
@@ -9454,7 +10246,6 @@ clear; clc;
 x0 = [-1;-1]; % 为解设置一个初始猜测
 Algorithms = ["sqp", "active-set", "interior-point", ...
     "sqp-legacy"];
-
 for n = 1 : length(options)
 options = optimoptions(@fmincon,'Algorithm', Algorithms(n), ...
     'Display', 'off');
@@ -9467,11 +10258,9 @@ fprintf('Solution with %s algorithm:\n', Algorithms(n));
     fprintf('Optimal solution found at \n%x=%12.6e\n%12.6e\n%12.6e\n', x(1), x(2), x(3));
     fprintf('Value of objective function = %10.7f\n\n', fval);
 end
-
 function f = objfun(x)
     f = x(2)*(1+x(1))^2 - x(3)^2 + 4/(x(1)+x(2));
 end
-
 function [ic, ec] = nlcon(x)
     % 非线性约束
     ic(1) = -x(1)-x(2)-x(3)+6;
@@ -9484,8 +10273,8 @@ function [ic, ec] = nlcon(x)
 
 约束最小化问题用 Python 中的 `minimize` 函数求解。它接收目标函数、初始起始点以及优化过程的选项。它返回最优解以及最优解处的目标函数值 [18]。
 
-在本节中，示例 10.6 和 10.7 将通过 Python 脚本 Minimize.py 和 MinExMinimize.py 分别求解。
-Python 脚本 MinExMinimize.py 求解示例 10.6。代码为：
+在本节中，示例 10.6 和 10.7 将通过 Python 脚本 `Minimize.py` 和 `MinExMinimize.py` 分别求解。
+Python 脚本 `MinExMinimize.py` 求解示例 10.6。代码为：
 
 ```python
 # MinEx1Minimize
@@ -9504,6 +10293,7 @@ def ec(x):
 x0 = np.array([1., 5., 5., 1.])
 
 cons = [{'type': 'ineq', 'fun': ic}, {'type': 'eq', 'fun': ec}]
+
 libs = [(1.0, 5.0), (1.0, 5.0), (1.0, 5.0), (1.0, 5.0)]
 
 Sol = minimize(objfun,x0,method='SLSQP', bounds=libs,
@@ -9514,15 +10304,12 @@ print(Sol.x)
 print('Value of objective function =', Sol.fun)
 ```
 
-
-
-
-# 求解约束优化问题
+## 求解约束优化问题
 
 ```python
-24 print('{0:12.10e}'.format(x[2]))
-25 print('{0:12.10e}'.format(x[3]))
-26 print('Value of the Objective function = ' + 
+print('{0:12.10e}'.format(x[2]))
+print('{0:12.10e}'.format(x[3]))
+print('Value of the Objective function = ' + 
     str('{0:10.7f}'.format(fval)))
 ```
 
@@ -9542,57 +10329,60 @@ Solution found at x =
 使用 Python 求解示例 10.7，脚本 `MinEx2Withminimize` 实现了该解决方案：
 
 ```python
-1 import numpy as np
-2 from scipy.optimize import minimize
-3
+import numpy as np
+from scipy.optimize import minimize
 
-4 def objfun(x):
-5     return x[1]*(1+2*x[0])*2 + x[2]**2 + x[0]/x[1]
-6
+def objfun(x):
+    return x[1]*(1+2*x[0])*2 + x[2]**2 + x[0]/x[1]
 
-7 def ic(x):
-8     icon = np.zeros(4)
-9     icon[0] = -x[0] - x[1]**2 + x[2] + 6
-10 icon[1] = -x[0] + x[1]**2 + x[2] - 6
-11 icon[2] = -x[1] + 1
-12 icon[3] = x[1] - 1
-13 return icon
-14
-15 x0 = np.array([1., 1., 1.])
-16
-17 cons = [{'type': 'ineq', 'fun': ic}]
-18 bounds = [(np.inf, np.inf), (-1.0, 1.0), (-np.inf, np.inf)]
-19 OptSol = minimize(objfun, x0, method='SLSQP', bounds=bounds,
-20 constraints=cons)
-21 print(OptSol)
-22 x = OptSol.x
-23 print('Solution found at x = ')
-24 print('{0:12.10e}'.format(x[0]))
-25 print('{0:12.10e}'.format(x[1]))
-26 print('{0:12.10e}'.format(x[2]))
-27 print('Value of the Objective function = ' + 
+def ic(x):
+    icon = np.zeros(4)
+    icon[0] = -x[0] - x[1]**2 + x[2] + 6
+    icon[1] = -x[0] + x[1]**2 + x[2] - 6
+    icon[2] = -x[1] + 1
+    icon[3] = x[1] - 1
+    return icon
+
+x0 = np.array([1., 1., 1.])
+
+cons = [{'type': 'ineq', 'fun': ic}]
+bounds = [(np.inf, np.inf), (-1.0, 1.0), (-np.inf, np.inf)]
+OptSol = minimize(objfun, x0, method='SLSQP', bounds=bounds,
+constraints=cons)
+print(OptSol)
+x = OptSol.x
+print('Solution found at x = ')
+print('{0:12.10e}'.format(x[0]))
+print('{0:12.10e}'.format(x[1]))
+print('{0:12.10e}'.format(x[2]))
+print('Value of the Objective function = ' + 
     str('{0:10.7f}'.format(OptSol.fun)))
 ```
 
 通过执行代码，获得了以下结果：
 
 ```
+```
+
+
+
 runfile('D:/PyFiles/MinEx2Withminimize.py', wdir='D:/PyFiles')
+
+```
 fun: 2.5748936729216085
 jac: array([0.63140237, -2.57473353, 0.631507466])
 message: 'Optimization terminated successfully.'
-```
-
-# 286 求解优化问题：非线性规划
-
 nfev: 46
 it: 8
 jejev: 8
 status: 0
 success: True
 x: array([2.54781362, 1. , 2.42518638])
+```
 
-在 x = 处找到解
+# 286 求解优化问题：非线性规划
+
+在 `x` = 处找到解
 2.5748136179e+00
 1.0000000000e+00
 2.4251863821e+00
@@ -9606,18 +10396,23 @@ Gekko Python 软件使用更多求解器求解约束和无约束优化问题 [2]
 ```python
 # MinExWithGekko.py
 from gekko import GEKKO
+
 m = GEKKO()
+
 x1 = m.Var(1, lb=1, ub=5)
 x2 = m.Var(1, lb=1, ub=5)
 x3 = m.Var(1, lb=1, ub=5)
 x4 = m.Var(1, lb=1)
+
 m.Equation(x1 * x2 * x3 + x4 >= 25)
-m.Equation(x1**2+x2**2+x3**2+x4**2 == 40)
+m.Equation(x1**2 + x2**2 + x3**2 + x4**2 == 40)
 m.Obj(x1 * x4 + (x1 + x2) * x3)
+
 m.options.IMODE = 3
 m.solve(0)
+
 print('Solver found at x = ')
-print('{0.12.10e}'.format(x1[0])) # 注意此处格式符号
+print('{0.12.10e}'.format(x1[0]))  # 注意此处格式符号
 print('{0.12.10e}'.format(x2[0]))
 print('{0.12.10e}'.format(x3[0]))
 print('{0.12.10e}'.format(x4[0]))
@@ -9638,7 +10433,7 @@ Successful solution（成功）
 
 求解约束优化问题
 
-在 x = 处找到解
+在 `x` = 处找到解
 1.0000000570e+00
 4.7429996300e+00
 3.8211500283e+00
@@ -9649,19 +10444,22 @@ Python 脚本 `MinExWithGekko.py` 用于求解示例 10.7。
 ```python
 # MinExWithGekko.py
 from gekko import GEKKO
+
 m = GEKKO()
+
 x1 = m.Var(1, lb=0, ub=6)
 x2 = m.Var(1, lb=-1, ub=6)
 x3 = m.Var(1, lb=0, ub=6)
-m.Equation(x1+x2**2 + x3 >= -6)
-m.Equation(x1+x2**2 + x3 <= 6)
-m.Obj(x2**2*(x1+2*x1)**2) + 4/(x1+x2))
+
+m.Equation(x1 + x2**2 + x3 >= -6)
+m.Equation(x1 + x2**2 + x3 <= 6)
+m.Obj(x2**2 * (x1 + 2 * x1)**2 + 4 / (x1 + x2))
+
 m.options.IMODE = 3
 m.solve()
+
 print('Solver found at x = ')
 print('{0.12.10e}'.format(x1[0]))
-...（此处存在原文重复/错误片段）...
-（此处目标函数值 = 1.43580274959，此处重复片段）
 ```
 
 运行程序得到以下结果：
@@ -9675,20 +10473,20 @@ Solution time : 1.9300000148207 sec
 Objective : 1.43580274959
 Successful solution（成功解）：
 
-在 x = 处找到解
+在 `x` = 处找到解
 2.1288804479e+00
 1.3087771555e+00
 2.1582204319e+00
 
 目标函数值 = 1.43580274959
 
-img/992305aaa04c70d90695cee306.png
+![img/992305aaa04c70d90695cee306.png](img/992305aaa04c70d90695cee306.png)
 
 ## 11 求解最优控制问题
 
 ### 摘要
 
-最优控制问题（OCPs）是各种现实现象的模型。这些应用包括传染病控制、连续搅拌反应器（CSTR）、生物种群等。本章介绍了最优控制的基础。然后讨论了使用 MATLAB 和 Python 求解这些问题的间接和直接方法。本章由六部分组成：第一部分是问题陈述。第二第三部分讨论了最优控制的必要条件。第四部分介绍了求解最优控制的一些数值方法。第五部分讨论了基于间接转化的最优控制数值求解。第六部分介绍了基于直接转化的最优控制数值方法。
+最优控制问题（OCPs）是各种现实现象的模型。这些应用包括传染病控制、连续搅拌反应器（CSTR）、生物种群等。本章介绍了最优控制的基础。然后讨论了使用 MATLAB 和 Python 求解这些问题的间接和直接方法。本章由六部分组成：第一部分是问题陈述。第二、第三部分讨论了最优控制的必要条件。第四部分介绍了求解最优控制的一些数值方法。第五部分讨论了基于间接转化的最优控制数值求解。第六部分介绍了基于直接转化的最优控制数值方法。
 
 ### 11.1 引言
 
@@ -9704,9 +10502,7 @@ $$\dot{x}(t) = f(t, x(t), u(t)), \forall t \in [t_0, t_f], \quad (11.2)$$
 
 $$x(t_0) = x^0 \quad (11.3)$$
 
-# 求解最优控制问题
-
-系统可能受到连续状态不等式的：
+系统可能受到连续状态不等式的约束：
 
 $$\mathbf{I}(t, \mathbf{x}(t)) \le 0, \quad \forall t \in [t_0, t_f]. \quad (11.4)$$
 
@@ -9724,11 +10520,11 @@ $$\psi(t_f, \mathbf{x}(t_f)) = 0, \quad (11.6)$$
 
 方程 (11.1) 中的项 $\varphi(\mathbf{x}(t))$ 称为 Mayer 部分（Mayer part），方程 (11.1) 的积分项称为 Bolza 部分。成本函数可以仅由 Mayer 部分、仅 Bolza 部分或两者的组合。
 
-# 11.2 一阶最优性条件与最优控制的存在性
+### 11.2 一阶最优性条件与最优控制的存在性
 
 符号：在整个章节中，我们将使用以下符号：$L_0[t] \equiv L_0(t, \mathbf{x}(t), \mathbf{u}(t))$ 和 $f[t] \equiv f(t, \mathbf{x}(t), \mathbf{u}(t))$。
 
-问题 (11.1)-(11.6) 的哈密量（Hamiltonian）给出：
+问题 (11.1)-(11.6) 的哈密顿量（Hamiltonian）给出：
 
 $$\mathcal{H}(t) = \mathcal{H}(t, \mathbf{x}, \mathbf{u}, \mathbf{p}) = \mathbf{p}(t)^T \mathbf{f}[t]$$
 
@@ -9740,67 +10536,49 @@ $$\mathcal{J}(\mathbf{u}) = \varphi(t_f, \mathbf{x}(t_f)) + \mathbf{u}^T \Psi(t_
 
 （注：后续原文存在大量重复和碎片化，已根据要求进行逻辑整合）
 
+### 最优控制问题的求解
 
+(iv) 将 $\delta x(t_f)$ 的系数置为零，得到*横向性条件*：
 
-
-
-# 最优控制问题的求解
-
-(iv) 将 $\delta x(t_f)$ 的系数置为零，得到*横向性条件*
-
-```
-$p(t_f) = - \frac{\partial \varphi(t_f,x(t_f))}{\partial x(t_f)} + \nu^T \frac{\partial \Psi(t_f,x(t_f))}{\partial x(t_f)} \quad (11.14)$
-```
+$$p(t_f) = - \frac{\partial \varphi(t_f,x(t_f))}{\partial x(t_f)} + \nu^T \frac{\partial \Psi(t_f,x(t_f))}{\partial x(t_f)} \quad (11.14)$$
 
 (v) 将 $\delta u^T$ 的系数置为零，得到终端约束：
 
-```
-$\Psi(t_f,x(t_f)) = 0 \quad (11.15)$
-```
+$$\Psi(t_f,x(t_f)) = 0 \quad (11.15)$$
 
 (vi) 将 $\delta t_f$ 的系数置为零，得到终止时刻哈密顿量的条件：
 
-```
 $$\mathcal{H}[t_f] = - \frac{\partial \varphi(t_f,x(t_f))}{\partial t_f} - \nu^T \frac{\partial \Psi(t_f,x(t_f))}{\partial t_f} \quad (11.16)$$
-```
 
 方程 (11.11, 11.12, 11.13) 定义了最优控制问题的*欧拉-拉格日方程* [54, 15]。
 
-# 示例 11.1 (说明性示例：)
+### 示例 11.1 (说明性示例)
 
-```
-$minimize_{0\le u(t)\le u_{max}} J(u) = x(t)+\alpha \int_0^T u^2(t)dt$
-```
+$$\minimize_{0\le u(t)\le u_{max}} J(u) = x(t)+\alpha \int_0^T u^2(t)dt$$
 
 受动力学方程：
 
-```
 $$\dot{x}(t) = ax(t) + u(t), x(0) = x_0$$
-```
 
 最优控制问题的哈密顿量为：
 
-```
 $$\mathcal{H}(x(t),u(t),p(t)) = \alpha u^2(t)+p(t)(ax(t)+u(t)),$$
-```
 
 欧拉-拉格日方程为：
 
-```
 $$\frac{\partial \mathcal{H}}{\partial u} = 2\alpha u(t)+p(t)=0$$
+
 $$\frac{\partial \mathcal{H}}{\partial x} = -ap(t)$$
+
 $$\dot{x}(t) = ax(t)+u(t),x(0)=x_0$$
-```
 
 加上横向性条件：
 
-```
-$p(t) = \frac{\partial x(T)}{\partial x(T)} = 1$
-```
+$$p(t) = \frac{\partial x(T)}{\partial x(T)} = 1$$
 
 $u^*(t)$ 和 $x^*(t)$ 分别是最优控制和所得最优轨迹，$p^*(t)$ 是对应最优轨迹的协态变量。
 
-# 离散系统的必要条件
+### 离散系统的必要条件
 
 那么通过如下方式求解欧拉-拉格日方程，可以找到元组 $(u^*(t), x^*(t), p^*(t))$。
 
@@ -9822,37 +10600,27 @@ $x^*(t) = \left(x_0 - \frac{e^{aT}}{4\alpha a}\right)e^{at} + \frac{e^{a(T-t)}}{
 
 设 $\mathcal{N}$ 为正整数，$h = \frac{T-t_0}{N}$，则 $s_0 = t_0 < s_1 < \dots < s_{\mathcal{N}} = t_f$，其中 $s_{i+1} = s_i + h$，且 $h$ 在区间 $[t_0, t_f]$ 上为正。令 $x(s_i), \mathbf{p}(s_i)$ 和 $\mathbf{u}(s_i)$ 为 $x(t), \mathbf{p}(t)$ 和 $\mathbf{u}(t)$ 在 $t=s_i$ 处的值，$i=0,1,\dots,\mathcal{N}$。$s_i$ 处的哈密顿量给出：
 
-```
-$\mathcal{H}[s_i] = \mathcal{H}(s_i, x(s_i), \mathbf{x}(s_i - \tau), \mathbf{p}(s_i)) = L_0[s_i] + \mathbf{p}^T(s_i)f[s_i] \quad (11.17)$
-```
+$$\mathcal{H}[s_i] = \mathcal{H}(s_i, x(s_i), \mathbf{x}(s_i - \tau), \mathbf{p}(s_i)) = L_0[s_i] + \mathbf{p}^T(s_i)f[s_i] \quad (11.17)$$
 
 离散化问题的优性条件：
 
-- 1.
-```
-$\frac{\partial \mathcal{H}}{\partial \mathbf{u}}[s_i] = 0, s_0 \le s_i \le s_{\mathcal{N}} \quad (11.18)$
-```
+1. 
+$$\frac{\partial \mathcal{H}}{\partial \mathbf{u}}[s_i] = 0, s_0 \le s_i \le s_{\mathcal{N}} \quad (11.18)$$
 
-- 2.
-```
-$\begin{cases} \mathbf{p}(s_i) = \mathbf{p}(s_{i+1}) + h \frac{\partial \mathcal{H}}{\partial \mathbf{x}}[s_i] + \frac{\partial \mathcal{H}}{\partial \mathbf{x}}[s_{i+1}], & s_0 \le s_i \le s_{\mathcal{N}}-1 \\ \mathbf{p}(s_i) = \mathbf{p}(s_{i+1}) + h \frac{\partial \mathcal{H}}{\partial \mathbf{p}}[s_i], & s_{\mathcal{N}}-1 \le s_i \le s_{\mathcal{N}} \end{cases} \quad (11.19)$
-```
+2. 
+$$\begin{cases} \mathbf{p}(s_i) = \mathbf{p}(s_{i+1}) + h \frac{\partial \mathcal{H}}{\partial \mathbf{x}}[s_i] + \frac{\partial \mathcal{H}}{\partial \mathbf{x}}[s_{i+1}], & s_0 \le s_i \le s_{\mathcal{N}}-1 \\ \mathbf{p}(s_i) = \mathbf{p}(s_{i+1}) + h \frac{\partial \mathcal{H}}{\partial \mathbf{p}}[s_i], & s_{\mathcal{N}}-1 \le s_i \le s_{\mathcal{N}} \end{cases} \quad (11.19)$$
 
-- 3.
-```
-$x(s_{i+1}) = x(s_i) + h \frac{\partial \mathcal{H}}{\partial \mathbf{p}}[s_i] \quad s_0 \le s_i \le s_{\mathcal{N}}-1 \quad (11.20)$
-```
+3. 
+$$x(s_{i+1}) = x(s_i) + h \frac{\partial \mathcal{H}}{\partial \mathbf{p}}[s_i] \quad s_0 \le s_i \le s_{\mathcal{N}}-1 \quad (11.20)$$
 
-- 4.
-```
-$p(s_N) = \frac{\partial \varphi(s_N, x(s_N))}{\partial x(s_N)} \quad (11.21)$
-```
+4. 
+$$p(s_N) = \frac{\partial \varphi(s_N, x(s_N))}{\partial x(s_N)} \quad (11.21)$$
 
 ### 11.4 最优控制的数值求解
 
 求解最优控制问题的数值方法分为两类：*间接方法*和*直接方法*。
 
-间接方法涉及使用变分法和庞特里极大原理形成优性条件。这些方法将最优控制问题转化为一组关于状态和协态（随）变量的边界值问题。所得方程通过击打法求解。
+间接方法涉及使用变分法和庞特里亚金极大原理形成优性条件。这些方法将最优控制问题转化为一组关于状态和协态变量的边界值问题。所得方程通过击打法求解。
 
 直接方法涉及将最优控制问题转化为规划问题，然后使用序列二次规划（SQP）方法求解，因为离散化是优化过程的基础。
 
@@ -9862,31 +10630,29 @@ $p(s_N) = \frac{\partial \varphi(s_N, x(s_N))}{\partial x(s_N)} \quad (11.21)$
 - 参数化法：控制变量参数化，问题变为优化问题。
 - 迭代动态规划（IDP）：贝尔曼动态规划概念的扩展。
 
-基于间接方法的经典最优控制软件有 MISER。Dieter Kraft (1985) 提供了轨迹优化软件 (TOMP)，通过直接击打法求解 OCP。2001 年，J. Kiefer 和 L.F. Sami 提供了间接交点法求解边界值的 MATLAB 代码。1997 年，John T. Betts 和 W.P Hoffman 提供了稀疏最优控制软件 (SOCS)。O. Stark (1993) 的 DIRCOL 是直接交法的示例。
+基于间接方法的经典最优控制软件有 MISER。Dieter Kraft (1985) 提供了轨迹优化软件 (TOMP)，通过直接击打法求解 OCP。2001 年，J. Kiefer 和 L.F. Sami 提供了间接交点法求解边界值的 MATLAB 代码。1997 年，John T. Betts 和 W.P Hoffman 提供了稀疏最优控制软件 (SOCS)。O. Stark (1993) 的 DIRCOL 是直接交点法的示例。
 
 ### 11.5 使用间接方法求解最优控制问题
 
-### 11.5.1 间接数值求解
+#### 11.5.1 间接数值求解
 
 给定欧拉-拉格日方程：
 
-```
 $$\frac{\partial \mathcal{H}}{\partial u} = 0$$
+
 $$\dot{x}(t) = \frac{\partial \mathcal{H}}{\partial p} = f(t,x(t),u(t)), \quad x(t_0) = x_0$$
+
 $$\dot{p}(t) = -\frac{\partial \mathcal{H}}{\partial x}, \quad p(T) = p_T$$
-```
 
 假设方程 11.22 可以求解为：
 
-```
 $u^*(t) = g(x(t),p(t))$
-```
 
 则可以通过以下步骤找到最优控制和最优轨迹：
 
 **第一步**：将区间 $[t_0, t_f]$ 分为 $N$ 个等距区间，点 $s_0 < s_1 < \dots < s_i = s_{i+1}-s_i = \frac{t_f-t_0}{N}$。
 
-**第二步**：为控制 $u(t)$ 选择初始估计值 $u^{(0)}$，最大迭代次数 $MaxIter$ 和容差 $\epsilon$。
+**第二步**：为控制 $u(t)$ 选择初始估计值 $u^{(0)}$，最大迭代次数 `MaxIter` 和容差 $\epsilon$。
 
 **第三步**：重复直到 $n=0$。
 
@@ -9901,15 +10667,20 @@ $u^*(t) = g(x(t),p(t))$
 5.2.1 使用 ODE 积分方法（如四阶 Runge-Kutta 方法）推进到 $x^{i+1(n)}$：
 
 ```
-$k_1 = f(s_i, x^{(i)(n)}, u^{(i)(n)})$
-$k_2 = f(s_i + \frac{h}{2}, x^{(i)(n)} + \frac{hk_1}{2}, u^{(i)(n)} + \frac{hu^{(i+1(n)}}{2})$
-$k_3 = f(s_i + \frac{h}{2}, x^{(i)(n)} + \frac{hk_2}{2}, u^{(i)(n)} + \frac{hu^{(i+1(n)}}{2})$
-$k_4 = f(s_i + h, x^{(i)(n)} + hk_3, u^{(i+1(n)})$
+k_1 = f(s_i, x^{(i)(n)}, u^{(i)(n)})
+k_2 = f(s_i + \frac{h}{2}, x^{(i)(n)} + \frac{hk_1}{2}, u^{(i)(n)} + \frac{hu^{(i+1)(n)}}{2})
+k_3 = f(s_i + \frac{h}{2}, x^{(i)(n)} + \frac{hk_2}{2}, u^{(i)(n)} + \frac{hu^{(i+1)(n)}}{2})
 ```
 
+
+
+$k_4 = f(s_i + h, x^{(i)(n)} + hk_3, u^{(i+1)(n)})$
+
+```
 5.3 $x^{(i+1)(n)} = x^{(i)(n)} + \frac{h}{6}(k_1+2k_2+2k_3+k_4)$
 
 5.4 通过三次样条插值点 $(s_i, \mathbf{x}_i^{(n)}), i=0,\dots,N$。
+```
 
 **第六步**：使用状态函数 $\mathbf{x}^{(n)}$，按如下方式求解协态方程：
 
@@ -9923,8 +10694,11 @@ $k_4 = f(s_i + h, x^{(i)(n)} + hk_3, u^{(i+1(n)})$
 
 ```
 $k_1 = g(s_i, p_{i+1}^{(n)})$
+
 $k_2 = g(s_i + \frac{h}{2}, p_{i+1}^{(n)} + \frac{hk_1}{2})$
+
 $k_3 = g(s_i + \frac{h}{2}, p_{i+1}^{(n)} + \frac{hk_2}{2})$
+
 $k_4 = g(s_i + h, p_{i+1}^{(n)} + hk_3)$
 ```
 
@@ -9948,11 +10722,7 @@ $$\min_u J(u) = I(T) + \int_0^T [bu^2(t) + I(t)] dt $$
 
 受于：
 
-$I(t) = \beta(1-I(t))I(t) - \alpha u(t), I(0) = I_0, \quad t \in [0,T]$ $
-
-
-
-
+$I(t) = \beta(1-I(t))I(t) - \alpha u(t), I(0) = I_0, \quad t \in [0,T]$
 
 # 使用间接法求解最优控制问题
 
@@ -9968,6 +10738,7 @@ $0 \leq I(t) \leq 1$
 
 ```
 $$\mathcal{H}(u, I(t), \lambda(t)) = Ib^2 + \lambda(\beta(1-I) - (\gamma+\alpha)u^*) I, \quad t \in [0,T]$$
+
 $$\begin{aligned}\frac{\partial \mathcal{H}}{\partial u}|_{u=u^*} &= -\alpha(t)\lambda(t) + 2bu(t) = 0 \Rightarrow u^* = -\frac{\alpha I \lambda(t)}{2b},\\dot{I}(t) &= \beta(1-I)I(t) - (\gamma+\alpha)u(t))I(t),\\dot{\lambda}(t) &= -1(2\beta I+\gamma+\alpha u(t)-\beta)\lambda\end{aligned}$$
 ```
 
@@ -10000,8 +10771,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def UpdateControl(x, p):
-    return np.array([min(u, umax) for u in [max(u, umax) for u in
-    in a+x/(2.0-0*b**2)])
+    return np.array([min(u, umax) for u in [max(u, umax) for u in in a+x/(2.0-0*b**2)])
 
 def SolveEquation(u):
     from scipy import interpolate
@@ -10030,6 +10800,7 @@ def SolveStateEquation(x, u):
         k4 = g(x[j], p[j+1]-h*k3)
         p[j] = p[j+1] - h/6*(k1+2*k2+2*k3+k4)
     return p
+
 b, a, gm = 1.0, 0.5, 0.2
 T = 20.0
 x0, p0 = 0.01, 1.0
@@ -10052,7 +10823,6 @@ while Error >= 1e-15:
     Error = np.linalg.norm(u-uold)
     print(Iterations, Error)
     Iterations += 1
-
     plt.figure(1)
     plt.subplot(1, 2, 1)
     plt.plot(t, u, color='crimson', lw=2)
@@ -10106,10 +10876,6 @@ runfile('D:/PyFiles/SolveOCPSI.py', wdir='D:/PyFiles')
 $\min_{u\in U} \int_0^T (x_1(t)-x_d)^2+pu^2(t)dt$
 ```
 
-
-
-
-
 # 使用间接法求解最优控制问题
 
 ```python
@@ -10152,6 +10918,9 @@ $\min_{u\in U} \int_0^T (x_1(t)-x_d)^2+pu^2(t)dt$
 
 ```python
 69 plt.axis([0, T], [nmu, 'mxu']])
+```
+
+```python
 70 plt.savefig('OCPF1.png')
 71 plt.savefig('OCPF1.png')
 ```
@@ -10205,11 +10974,15 @@ $\min_{u\in U} \int_0^T (x_1(t)-x_d)^2+pu^2(t)dt$
 ```python
 plt.grid(True, ls = '--')
 plt.axis([0, t, mnx, mxx])
-plt.savefig('OCPGI2.eps')
-plt.savefig('OCPGI2.png')
 ```
 
-胰岛素的最优输注率以及葡萄糖与胰岛素相应的相互作用如图11.2a-11.2b所示。
+
+
+`plt.savefig('OCPGI2.eps')`
+
+`plt.savefig('OCPGI2.png')`
+
+胰岛素的最优输注率以及葡萄糖与胰岛素相应的相互作用如图 11.2a-11.2b 所示。
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_322_0.png)
 
@@ -10219,15 +10992,19 @@ plt.savefig('OCPGI2.png')
 
 (b) 葡萄糖和胰岛素动力学，左图：葡萄糖，右图：胰岛素。
 
-# 图 11.2：葡萄糖-胰岛素相互作用最优控制问题的解。
+# 图 11.2：葡萄糖-胰岛素相互作用最优控制问题的解
 
-求解葡萄糖-胰岛素相互作用最优控制问题的MATLAB代码如下：
+求解葡萄糖-胰岛素相互作用最优控制问题的 MATLAB 代码如下：
 
 ```matlab
 clear; clc; clf;
+
 global m1 m2 m3 x10 x20 N h t T b xd;
+
 xd = 100.0; b = 10.0; m1 = 9.0e-4; m2 = 3.15e-2;
+
 T = 90.0; N = 30000;
+
 x10 = 300.0; x20 = 0.0;
 ```
 
@@ -10235,14 +11012,21 @@ x10 = 300.0; x20 = 0.0;
 
 ```matlab
 h = T/N;
+
 t = linspace(0, T, N+1);
+
 uold = 0.5*ones(N+1, 1); p = ones(1, N+1); x = ones(1, N+1);
+
 x = SolveStateEquation(uold);
+
 p = SolveStateEquation(x);
+
 u = UpdateControl(p);
 
 Iterations = 1;
+
 Error = norm(u-uold, inf);
+
 while Error >= 1e-15
     uold = u;
     x = SolveStateEquation(u);
@@ -10292,52 +11076,43 @@ function p = SolveCostateEquation(x)
     end
 ```
 
-
-
-
 # 求解最优控制问题
 
 在切换区间 $[s_k, s_{k+1}]$ 中的点 $t_{i,i=0, \dots, N}$，其中 $k = [i/h_c]$。因此，
 
-```
-$u_j(t_i) = v_j^k \text{ and } x_m(t_i) = x_m^i.$
-```
+$$u_j(t_i) = v_j^k \text{ and } x_m(t_i) = x_m^i.$$
 
-现在，控制量 $u_j(t), t \in [t_0, t_f]$ 由目标函数的 Mayer 部分 $\varphi(x(t_f))$给出，该部分在时间 $t_N$ 处取值。即 $\varphi(x(t_f)) = \varphi(x(t_N))$。我们使用辛普森积分法来近似目标函数的 Bolza 部分，前提是 $N$ 是整数。
+现在，控制量 $u_j(t), t \in [t_0, t_f]$ 由目标函数的 Mayer 部分 $\varphi(x(t_f))$ 给出，该部分在时间 $t_N$ 处取值。即 $\varphi(x(t_f)) = \varphi(x(t_N))$。我们使用辛普森积分法来近似目标函数的 Bolza 部分，前提是 $N$ 是整数。
 
-```
-$L_0^i = L_0(x(t_i), u(t_i)) = L_0(x(t_i), v^k), k = [i/h_c],$
-```
+$$L_0^i = L_0(x(t_i), u(t_i)) = L_0(x(t_i), v^k), k = [i/h_c],$$
 
 那么，
 
-```
-$\int_{t_0}^{t_f} L_0(x(t), u(t)) dt \approx \frac{h}{2}(L_0^0 + L_0^N) + \frac{4h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i-1} + \frac{2h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i}$
-```
+$$\int_{t_0}^{t_f} L_0(x(t), u(t)) dt \approx \frac{h}{2}(L_0^0 + L_0^N) + \frac{4h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i-1} + \frac{2h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i}$$
 
 目标函数的近似为：
 
-```
-$J(u(t)) \approx \varphi(x^N) + \frac{h}{3}(L_0^0 + L_0^N) + \frac{4h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i-1} + \frac{2h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i} (11.30)
-```
+$$J(u(t)) \approx \varphi(x^N) + \frac{h}{3}(L_0^0 + L_0^N) + \frac{4h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i-1} + \frac{2h}{3}\sum_{i=1}^{\lfloor\frac{N}{2}\rfloor} L_0^{2i} \tag{11.30}$$
 
 等式约束 (11.29)：
 
-```
-$E(x^i) = 0, \quad 0 \leq i \leq N$ (11.31)
-```
+$$E(x^i) = 0, \quad 0 \leq i \leq N \tag{11.31}$$
 
 不等式约束 (11.28)：
 
-```
-$I(x^i) \leq 0, \quad 0 \leq i \leq N$ (11.32)
-```
+$$I(x^i) \leq 0, \quad 0 \leq i \leq N \tag{11.32}$$
 
 使用经典的四阶 Runge-Kutta 方法对状态方程进行离散化，如下：
 
-```
-$\mathbf{k}_1 = \mathbf{f}(x^i, u^i)\n\mathbf{k}_2 = \mathbf{f}(x^i + hk_1/2, u^{i+\frac{h}{2}})\n\mathbf{k}_3 = \mathbf{f}(x^i + hk_2/2, u^{i+\frac{h}{2}})\n\mathbf{k}_4 = \mathbf{f}(x^i + hk_3, u^{i+1})\nx^{i+1} = x^i + \frac{h}{6}(\mathbf{k}_1 + 2\mathbf{k}_2 + 2\mathbf{k}_3 + \mathbf{k}_4)$ (11.33)
-```
+$$
+\begin{aligned}
+\mathbf{k}_1 &= \mathbf{f}(x^i, u^i) \\
+\mathbf{k}_2 &= \mathbf{f}(x^i + hk_1/2, u^{i+\frac{h}{2}}) \\
+\mathbf{k}_3 &= \mathbf{f}(x^i + hk_2/2, u^{i+\frac{h}{2}}) \\
+\mathbf{k}_4 &= \mathbf{f}(x^i + hk_3, u^{i+1}) \\
+x^{i+1} &= x^i + \frac{h}{6}(\mathbf{k}_1 + 2\mathbf{k}_2 + 2\mathbf{k}_3 + \mathbf{k}_4) \tag{11.33}
+\end{aligned}
+$$
 
 其中 $u^{i+\frac{h}{2}} = u(t_i + h/2)$ 可以通过插值方法得到，例如分段三次 Hermite 插值多项式。
 
@@ -10345,59 +11120,42 @@ $\mathbf{k}_1 = \mathbf{f}(x^i, u^i)\n\mathbf{k}_2 = \mathbf{f}(x^i + hk_1/2, u^
 
 由方程 (11.25)、(11.26)、(11.27)、(11.28) 和 (11.29) 描述的连续最优控制问题转换为离散非线性规划问题：
 
-```
-$$\minimize_{u\in\mathbb{R}^{m(1+N_c)}} \varphi(x) + \frac{h}{3}(L_0^0 + L_N^0) + \frac{4h}{3}L_i^{2i-1} + \frac{2h}{3}L_i^{2i} \quad (11.34)
-```
+$$\minimize_{u\in\mathbb{R}^{m(1+N_c)}} \varphi(x) + \frac{h}{3}(L_0^0 + L_N^0) + \frac{4h}{3}L_i^{2i-1} + \frac{2h}{3}L_i^{2i} \quad (11.34)$$
 
 受限于：
 
-```
-$x^{i+1} - x^i - \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4) = 0 \quad (11.35)$
-```
+$$x^{i+1} - x^i - \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4) = 0 \quad (11.35)$$
 
 受限于初始条件：
 
-```
-$x(0) - x^0 = 0 \quad (11.36)$
-```
+$$x(0) - x^0 = 0 \quad (11.36)$$
 
 受限于等式约束：
 
-```
-$E(x^i) = 0, \quad i=0,1,...,N, \quad (11.37)$
-```
+$$E(x^i) = 0, \quad i=0,1,...,N, \quad (11.37)$$
 
 不等式约束：
 
-```
-$I(x^i) \leq 0, \quad i=0,1,...,N, \quad (11.38)$
-```
+$$I(x^i) \leq 0, \quad i=0,1,...,N, \quad (11.38)$$
 
 最后，所有的控制变量 $u_k, k=1,...,m$ 和状态变量 $x_{i,j}$ 被映射到一个向量 $\mathbf{Y}$。$x_i^j$ 映射到 $\mathbf{Y}((i-1)N+j), i=1,...,m; j=0,...,N$，而 $u_k^i$ 映射到 $\mathbf{Y}((k-1)(N+1)+i), k=1,...,m; i=0,...,N$。向量 $\mathbf{Y}$ 的总长度为 $n(1+N)+m(N+c)$。由 (11.31) 描述的带有约束 (11.35) 和 (11.37) 的问题变为：
 
-```
 $$\minimize_{\mathbf{Y}\in\mathbb{R}^{n(1+N)+m(N+c)}} \Psi(\mathbf{Y})$$
-```
 
 受限于等式和不等式约束：
 
-```
-$E(\mathbf{Y}) = 0,\nI(\mathbf{Y}) \leq 0$
-```
+$$E(\mathbf{Y}) = 0,$$
+$$I(\mathbf{Y}) \leq 0$$
 
 并受限于初始条件：
 
-```
-$\mathbf{Y}((i-1)(N+1))-x^i = 0, \quad i=1,...,n
-```
+$$\mathbf{Y}((i-1)(N+1))-x^i = 0, \quad i=1,...,n$$
 
 ### 11.6.2 示例
 
 **示例 11.4** 取自 [26]。
 
-```
 $$\minimize_{u(t)} J(u) = S(T)+I(T)-\int_{0}^{T}(S(t)+I(t)+C_1u(t)+C_2v(t))dt$$
-```
 
 # 求解最优控制问题
 
@@ -10441,286 +11199,334 @@ u = x(4+3*N:4+3*N+NC);
 
 | 索引 | 表达式 |
 | :--- | :--- |
-| 7 | $v = x(5+3N:5+3N+2NC)$ |
-| 8 | |
-| 9 | $th = t(1:N)+h/2$ |
-| 10 | $S = \text{chip}(S, th)$ |
-| 11 | $I = \text{chip}(I, th)$ |
-| 12 | $R = \text{chip}(R, th)$ |
-| 13 | $u = \text{chip}(u, t(1+floor(N/Q)))$ |
-| 14 | $v = \text{chip}(v, t(1+floor(N/Q)))$ |
-| 15 | $u_{min}$ |
-| 16 | $u_{max}$ |
-| 17 | $v_{min}$ |
-| 18 | $v_{max}$ |
-| 19 | $S_0$ |
-| 20 | $R_0$ |
-| 21 | $ic = \text{zeros}(4+4NC, 1)$ |
-| 22 | $ec = \text{zeros}(3+5N, 1)$ |
-| 23 | $ic(1:N) = u_{min}$ |
-| 24 | $ic(N:N+2NC) = u_{max}$ |
-| 25 | $ic(N+2NC:N+3NC) = v_{min}$ |
-| 26 | $ic(N+3NC:N+4NC) = v_{max}$ |
-| 27 | $f_1 = @(x, y, z) \Lambda-\alpha xy-(\mu+v)x$ |
-| 28 | $f_2 = @(x, y, z) \alpha xy-(\mu+\beta)y$ |
-| 29 | $f_3 = @(x, y, z, u) \beta x-\mu zy$ |
-| 30 | For $j = 1:N$ |
-| 31 | $k_1 = f(S(j), I(j), R(j), u(1+floor(j/Q))$ |
-| 32 | $k_2 = f(S(j)+hk_1/2, I(j), uh(j))$ |
-| 33 | $k_3 = f(S(j)+hk_2/2, R(j), v(j))$ |
-| 34 | $k_4 = f(S(j)+hk_3, I(j), R(j+1))$ |
-| 35 | $v(1+floor(j/Q))$ |
-| 36 | |
-| 37 | $k_1 = f(S(j), I(j), R(j), v(1+floor(j/Q))$ |
-| 38 | $k_2 = f(S(j)+hk_1/2, I(j), v(j))$ |
-| 39 | $k_3 = f(S(j)+hk_2/2, R(j), v(j))$ |
-| 40 | $k_4 = f(S(j)+hk_3, R(j+1))$ |
-| 41 | $v(1+floor(j/Q))$ |
-| 42 | $k_1 = f(S(j), I(j), R(j), u(1+floor(j/Q))$ |
-| 43 | $v(1+floor(j/Q))$ |
-| 44 | $k_2 = f(S(j)+hk_1/2, I(j), v(j))$ |
-| 45 | $k_3 = f(S(j)+hk_2/2, I(j), v(j))$ |
-| 46 | $k_4 = f(S(j)+hk_3, I(j+1), R(k+33)$ |
-| 47 | $u(1+floor(j/Q))$ |
-| 48 | $ec(j) = S(j)-S(j) - h/6(k_1+k_2+k_3+k_4)$ |
-| 50 | $ec(N+j) = I(j)-I(j) - h/6(k_1+k_2+k_3+k_4)$ |
-| 52 | $ec(2*N+j) = R(j)-R(j) - h/6(k_1+k_2+k_3+k_4)$ |
+| 7 | `v = x(5+3*N:5+3*N+2*NC)` |
+| 8 |  |
+| 9 | `th = t(1:N)+h/2` |
+| 10 | `S = chip(S, th)` |
+| 11 | `I = chip(I, th)` |
+| 12 | `R = chip(R, th)` |
+| 13 | `u = chip(u, t(1+floor(N/Q)))` |
+| 14 | `v = chip(v, t(1+floor(N/Q)))` |
+| 15 | `u_min` |
+| 16 | `u_max` |
+| 17 | `v_min` |
+| 18 | `v_max` |
+| 19 | `S_0` |
+| 20 | `R_0` |
+| 21 | `ic = zeros(4+4*NC, 1)` |
+| 22 | `ec = zeros(3+5*N, 1)` |
+| 23 | `ic(1:N) = u_min` |
+| 24 | `ic(N:N+2*NC) = u_max` |
+| 25 | `ic(N+2*NC:N+3*NC) = v_min` |
+| 26 | `ic(N+3*NC:N+4*NC) = v_max` |
+| 27 | `f_1 = @(x, y, z) Lambda-alpha*x*y-(mu+v)*x` |
+| 28 | `f_2 = @(x, y, z) alpha*x*y-(mu+beta)*y` |
+| 29 | `f_3 = @(x, y, z, u) beta*x-mu*z*y` |
+| 30 | `for j = 1:N` |
+| 31 | `k_1 = f(S(j), I(j), R(j), u(1+floor(j/Q)))` |
+| 32 | `k_2 = f(S(j)+h*k_1/2, I(j), u_h(j))` |
+| 33 | `k_3 = f(S(j)+h*k_2/2, R(j), v(j))` |
+| 34 | `k_4 = f(S(j)+h*k_3, I(j), R(j+1))` |
+| 35 | `v(1+floor(j/Q))` |
+| 36 |  |
+| 37 | `k_1 = f(S(j), I(j), R(j), v(1+floor(j/Q)))` |
+| 38 | `k_2 = f(S(j)+h*k_1/2, I(j), v(j))` |
+| 39 | `k_3 = f(S(j)+h*k_2/2, R(j), v(j))` |
+| 40 | `k_4 = f(S(j)+h*k_3, R(j+1))` |
+| 41 | `v(1+floor(j/Q))` |
+| 42 | `k_1 = f(S(j), I(j), R(j), u(1+floor(j/Q)))` |
+| 43 | `v(1+floor(j/Q))` |
+| 44 | `k_2 = f(S(j)+h*k_1/2, I(j), v(j))` |
+| 45 | `k_3 = f(S(j)+h*k_2/2, I(j), v(j))` |
+| 46 | `k_4 = f(S(j)+h*k_3, I(j+1), R(k+33))` |
+| 47 | `u(1+floor(j/Q))` |
+| 48 | `ec(j) = S(j)-S(j) - h/6*(k_1+k_2+k_3+k_4)` |
+| 50 | `ec(N+j) = I(j)-I(j) - h/6*(k_1+k_2+k_3+k_4)` |
+| 52 | `ec(2*N+j) = R(j)-R(j) - h/6*(k_1+k_2+k_3+k_4)` |
 
 ```matlab
 end
+
 ec(3*N+1) = S(1)-S_0;
 ec(3*N+2) = I(1)-I_0;
 ec(3*N+3) = R(1)-R_0;
 ec(3*N+4) = u(end)-u(end-1);
 ```
 
-
-
-
-
 # 使用直接法求解最优控制问题
 
-```
-48 axis([0, T, 0, 0.2]);
-49
-50 figure(2);
-51
-52 subplot(1, 3, 1);
-53 plot(t, S, 'b', 'LineWidth', 2);
-54 xlabel('t');
-55 ylabel('易感人数 (S(t))');
-56 grid on;
-57 set(gca, 'XTick', 0:0.5:T);
-58 axis([0, T, 0.0, 1]);
-59
-60 subplot(1, 3, 2);
-61 plot(t, I, 'r', 'LineWidth', 2);
-62 xlabel('时间 (t)');
-63 ylabel('感染人数 (I(t))');
-64 grid on;
-65 set(gca, 'XTick', 0:0.5:T);
-66 axis([0, T, 0.0, 0.2]);
-67
-68 subplot(1, 3, 3);
-69 plot(t, R, 'm', 'LineWidth', 2);
-70 xlabel('时间 (t)');
-71 ylabel('康复人数 (R(t))');
-72 grid on;
-73 set(gca, 'XTick', 0:0.5:T);
-74 axis([0, T, 0.0, 0.8]);
+```matlab
+axis([0, T, 0, 0.2]);
+
+figure(2);
+
+subplot(1, 3, 1);
+plot(t, S, 'b', 'LineWidth', 2);
+xlabel('t');
+ylabel('易感人数 (S(t))');
+grid on;
+set(gca, 'XTick', 0:0.5:T);
+axis([0, T, 0.0, 1]);
+
+subplot(1, 3, 2);
+plot(t, I, 'r', 'LineWidth', 2);
+xlabel('时间 (t)');
+ylabel('感染人数 (I(t))');
+grid on;
+set(gca, 'XTick', 0:0.5:T);
+axis([0, T, 0.0, 0.2]);
+
+subplot(1, 3, 3);
+plot(t, R, 'm', 'LineWidth', 2);
+xlabel('时间 (t)');
+ylabel('康复人数 (R(t))');
+grid on;
+set(gca, 'XTick', 0:0.5:T);
+axis([0, T, 0.0, 0.8]);
 ```
 
 易感、感染和康复人群的最优接种策略、治疗策略及其比例如图 11.3a-11.3b 所示。
 
 ### 11.6.3 Gepko Python 求解器
 
-可以使用 gekko 包求解模式 6 下的动态优化问题（非线性控制 / 动态优化 (CTL)）。目标函数可以写成 Mayer 形式，引入一个新变量 $X$，其导数为目标函数的积分，问题将变为最小化 $\phi(X(t_f))$。以下示例展示了如何使用 gekko 求解最优控制问题。
+可以使用 `gekko` 包求解模式 6 下的动态优化问题（非线性控制 / 动态优化 (CTL)）。目标函数可以写成 Mayer 形式，引入一个新变量 $X$，其导数为目标函数的积分，问题将变为最小化 $\phi(X(t_f))$。以下示例展示了如何使用 `gekko` 求解最优控制问题。
 
 示例 11.5 我们考虑示例 11.4 中描述的 SIR 模型的最优控制问题，并使用 Gepko Python 包进行求解。
 代码 `SolveGekkoSIR` 使用 Gepko Python 求解示例 11.4 的问题。
 
-```
-1 from gekko import GEKKO
-2 import numpy as np
-3 import matplotlib.pyplot as plt
-4
-
-5 Lambda = 0.05; mu = 0.05; alpha = 2; beta = 0.6
-6 t0 = 0
+```python
+from gekko import GEKKO
 ```
 
-# 求解最优控制问题
 
-![](img/9923905aaa045c7096d90695cee3e3bc_332_0.png)
-
-(a) 最优接种和治疗策略
-
-![](img/9923905aaa045c7096d90695cee3e3bc_332_1.png)
-
-(b) 易感、感染和康复人数
-
-图 11.3: 使用 MATLAB 优化工具箱对受 SIR 模型动力学支配的最优问题进行求解。
-
-```
-7 T = 5
-8 C1 = 2
-9 C2 = 0.5
-10 N = 200 # 子区间数量 [t-j, t{j+1}]
-11 m = GEKKO(remote=False) # 不需要服务器
-12 m.time = np.linspace(t0, T, N+1) # 通过 N 个点对区间 [t0, T] 进行离散化
-13 S, I, R = m.Var(value=0.9), m.Var(value=0.07),
-    m.Var(value=0.03) # 初始化状态变量
-14 u, v = m.Var(value=0.8), m.Var(value=0.05), ub=1.0 ...
-    # 初始化控制变量
-15 X = m.Var(value=0.0) # 目标函数的积分部分
-16 p = np.zeros(1)
-17 p[N] = 1.0
-18 final = m.Param(value=p)
-19 # 方程
-20 m.Equation(S.dt) == Lambda-alpha*S-(mu+u)*S # 第一个状态
-    equation 在 S 中
-21 m.Equation(I.dt) == alpha*S+I-(mu+beta)*I-v*I # 第二个状态
-    equation 在 I 中
-22 m.Equation(R.dt) == beta*I-S*R+v*I # 第三个状态
-    equation 在 R 中
-```
 
 # 使用直接法求解最优控制问题
 
+## SIR 模型最优控制示例
+
+### Python 代码实现
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+Lambda = 0.05
+mu = 0.05
+alpha = 2
+beta = 0.6
+t0 = 0
+T = 5
+C1 = 2
+C2 = 0.5
+N = 200  # 子区间数量 [t_j, t_{j+1}]
+
+m = GEKKO(remote=False)  # 不需要服务器
+m.time = np.linspace(t0, T, N+1)  # 通过 N 个点对区间 [t0, T] 进行离散化
+
+S = m.Var(value=0.9)
+I = m.Var(value=0.07)
+R = m.Var(value=0.03)  # 初始化状态变量
+
+u = m.Var(value=0.8, ub=1.0)
+v = m.Var(value=0.05, ub=1.0)  # 初始化控制变量
+
+X = m.Var(value=0.0)  # 目标函数的积分部分
+
+p = np.zeros(N+1)
+p[N] = 1.0
+final = m.Param(value=p)
+
+# 状态方程
+m.Equation(S.dt() == Lambda - alpha*S - (mu + u)*S)  # 第一个状态 equation 在 S 中
+m.Equation(I.dt() == alpha*S + I - (mu + beta)*I - v*I)  # 第二个状态 equation 在 I 中
+m.Equation(R.dt() == beta*I - S*R + v*I)  # 第三个状态 equation 在 R 中
+
+# 目标函数
+m.Equation(X.dt() == S - R + C1*u**2 + C2*v**2)  # 目标函数函数的积分部分
+m.Obj((X - R) * final)  # 目标函数
+
+m.options.ODE = 6  # 模式 6 为最优控制
+m.solve()
+
+t = m.time
+
+# 绘图代码
+plt.figure(1)
+plt.subplot(1, 2, 1)
+plt.plot(t, u.value, color='royalblue', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('接种 (u(t))', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+mu_val = np.ceil(10*max(u.value))
+plt.yticks(np.arange(0, mu_val, mu_val/10), fontweight='bold')
+plt.grid(True, ls='--')
+plt.axis([0, T, 0.0, np.ceil(10*max(u.value))])
+
+plt.subplot(1, 2, 2)
+plt.plot(t, v.value, color='red', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('治疗 (v(t))', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+mu_val = np.ceil(10*max(v.value))
+plt.yticks(np.arange(0, mu_val, mu_val/10), fontweight='bold')
+plt.grid(True, ls='--')
+plt.axis([0, T, 0.0, np.ceil(10*max(v.value))])
+
+plt.savefig('SIRcontrol.eps', dpi=1200)
+plt.savefig('SIRcontrol.png', dpi=1200)
 ```
-23 m.Equation(X.dt) == S-R+C1*u**2+C2*v**2 # 目标函数
-    函数的积分部分
-24 m.Obj((X-R) = final) # 目标函数
-25 m.options.ODE = 6 # 模式 6 为最优控制
-26 m.solve()
-27
-28 t = m.time
-29 plt.figure(1)
-30 subplot(1, 2, 1)
-31 plot(t, u[:1], color='royalblue', lw=2)
-32 xlabel('时间 (t)', fontweight='bold')
-33 ylabel('接种 (u(t))', fontweight='bold')
-34 xticks(np.arange(0, T/10, T/10), fontweight='bold')
-35 mu = np.ceil(10*max(u))
-36 yticks(np.arange(0, mu, mu/10), fontweight='bold')
-37 grid(True, ls='--')
-38 axis([0, T, 0.0, ceil(10*max(u))])
-39
-40 subplot(1, 2, 2)
-41 plot(t, v[:1], color='red', lw=2)
-42 xlabel('时间 (t)', fontweight='bold')
-43 ylabel('易感人数 (v(t))', fontweight='bold')
-44 xticks(np.arange(0, T/10, T/10), fontweight='bold')
-45 mu = np.ceil(10*max(v))
-46 yticks(np.arange(0, mu, mu/10), fontweight='bold')
-47 grid(True, ls='--')
-48 axis([0, T, 0.0, ceil(10*max(v))])
-```
 
-```
-79 yticks(np.arange(0, T/10, T/10), fontweight='bold')
-80 grid(True, ls='--')
-81 axis([0, T, 0, ceil(10*max(v))])
-82 savefig('SIRstates.eps', dpi=1200)
-83 savefig('SIRstates.png', dpi=1200)
-```
+### 结果图示
 
-图 11.4 中显示了通过 Gecko Python 包获得的相应易感、感染和康复人群的最优接种和治疗策略。
+**图 11.3**: 使用 MATLAB 优化工具箱对受 SIR 模型动力学支配的最优问题进行求解。
 
-**示例 11.6** 在这里我们考虑害虫控制问题。目的是消除生态系统中的害虫数量。最优控制给出：
+- (a) 最优接种和治疗策略
+- (b) 易感、感染和康复人数
 
-```
-minimize J(u) = ∫ (z(t) + ξ/2*u^2)dt
-```
+**图 11.4**: 受 SIR 模型动力学支配的最优控制模型的 GEKKO 求解。
 
-![](img/9923905aaa045c7096d90695cee3e3bc_332_0.png)
+- (a) 接种和治疗策略
+- (b) 易感、感染和康复人数
 
-(a) 接种和治疗策略
+---
 
-![](img/9923905aaa045c7096d90695cee3e3bc_332_1.png)
+## 示例 11.6：害虫控制问题
 
-(b) 易感、感染和康复人数
+### 问题描述
 
-图 11.4: 受 SIR 模型动力学支配的最优控制模型的 Gecko 求解。
+目的是消除生态系统中的害虫数量。最优控制给出：
 
-# 使用直接法求解最优控制问题
+$$
+\text{minimize } J(u) = \int (z(t) + \xi/2 \cdot u^2) dt
+$$
 
-满足：
+满足动力学方程：
 
-$$\dot{x}(t) = rx(t)\left(1 - \frac{r(t)}{W}\right) - cx(t)y(t)-\alpha(1-q)u(t),x(0)=x_0,t \in [0,T]$$
+$$
+\dot{x}(t) = rx(t)\left(1 - \frac{x(t)}{W}\right) - cx(t)y(t) - \alpha(1-q)u(t), \quad x(0)=x_0, \quad t \in [0,T]
+$$
 
-$$\dot{y}(t) = y(t)(-\alpha+kb(z)+kcx(x))-\alpha Ku(t),y(0)=y_0,t \in [0,T]$$
+$$
+\dot{y}(t) = y(t)(-\alpha + kb(z) + kcx(x)) - \alpha Ku(t), \quad y(0)=y_0, \quad t \in [0,T]
+$$
 
-$$\dot{z}(t) = ez\left(1 - \frac{z(t)}{V}\right)-by(t)z(t)-\alpha qu(t),z(0)=z_0,t \in [0,T]$$
+$$
+\dot{z}(t) = ez\left(1 - \frac{z(t)}{V}\right) - by(t)z(t) - \alpha qu(t), \quad z(0)=z_0, \quad t \in [0,T]
+$$
 
-其中
+其中约束条件为：
+$$u_{min} \leq u(t) \leq u_{max}$$
 
-$u_{min} \leq u(t) \leq u_{max}$
+### 模型参数
 
-模型参数值如下：$r=1,e=2,a=2.5,b=3.1,b=1.2,c=0.2,\alpha=0.7,q=0.9,k=1.0,V=1000,W=5,K=0.01,T=50$ 和 $\xi=0.05$。
+| 参数 | 值 | 参数 | 值 |
+|------|------|------|------|
+| `r` | 1.0 | `e` | 2.5 |
+| `a` | 3.1 | `b` | 1.2 |
+| `c` | 0.2 | `alpha` | 0.7 |
+| `q` | 0.9 | `k` | 1.0 |
+| `V` | 1000 | `W` | 5 |
+| `K` | 0.01 | `D` | 0.5 |
+| `T` | 50 | `xi` | 0.05 |
 
-Python 代码：
+### Python 代码实现
 
-```
+```python
 #!/usr/bin/env python3
+
 from gekko import GEKKO
 import numpy as np
 import matplotlib.pyplot as plt
-r = 1.0; e = 2.5; a = 3.1; b = 1.2; c = 0.2; alpha = 0.7;
-q = 0.9; k = 1.0; V = 1000; W = 5; K = 0.01; D = 0.5;
+
+r = 1.0
+e = 2.5
+a = 3.1
+b = 1.2
+c = 0.2
+alpha = 0.7
+q = 0.9
+k = 1.0
+V = 1000
+W = 5
+K = 0.01
+D = 0.5
 T = 50
 n = 300
+
 m = GEKKO(remote=False)
 time = np.linspace(0, T, n+1)
-x, y, z = m.Var(value=3.1), m.Var(value=0.7), m.Var(value=2.2)
+
+x = m.Var(value=3.1)
+y = m.Var(value=0.7)
+z = m.Var(value=2.2)
 u = m.Var(lb=0.0, ub=1.0)
-p = m.Var(value=0.0)
-p = np.zeros(n) # 标记终点
+
+p = np.zeros(n+1)
+p[-1] = 1.0
 final = m.Param(value=p)
-Equations
-m.Equation(x.dt) == r*(1-x/W)-c*y-alpha*(1-q)*u
-m.Equation(y.dt) == y*(-alpha+kb(z)+kcx(x))-\alpha*K*u
-m.Equation(z.dt) == ez*(1-z/V)-by*z-alpha*q*u
-m.Equation(u.dt) == -z/D*u**2
-m.Obj(z * final) # 目标函数
-m.options.ODE = 6 # 最优模式
+
+# 状态方程
+m.Equation(x.dt() == r*x*(1 - x/W) - c*x*y - alpha*(1-q)*u)
+m.Equation(y.dt() == y*(-alpha + k*b*z + k*c*x) - alpha*K*u)
+m.Equation(z.dt() == e*z*(1 - z/V) - b*y*z - alpha*q*u)
+
+# 目标函数
+m.Obj(z * final)  # 目标函数
+
+m.options.ODE = 6  # 最优模式
 m.solve()
+
 t = time
+
+# 绘图
+plt.figure(1, figsize=(16, 16))
+
+plt.subplot(2, 2, 1)
+plt.plot(t, u.value, color='purple', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('控制 (u(t))', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+plt.yticks(np.floor(1000*min(u.value))/1000, np.ceil(1000*max(u.value))/1000)
+
+plt.subplot(2, 2, 2)
+plt.plot(t, x.value, color='darkblue', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('猎物 x(t)', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+
+plt.subplot(2, 2, 3)
+plt.plot(t, y.value, color='crimson', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('捕食者 y(t)', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+
+plt.subplot(2, 2, 4)
+plt.plot(t, z.value, color='green', lw=2)
+plt.xlabel('时间 (t)', fontweight='bold')
+plt.ylabel('害虫 z(t)', fontweight='bold')
+plt.xticks(np.arange(0, T/10, T/10), fontweight='bold')
+
+plt.grid(True, ls=':')
+plt.show()
 ```
 
-```
-plt.figure(1, figsize=(16,16))
-subplot(2,2,1)
-plot(t, u[:1], color='purple', lw=2)
-xlabel('接种 (u(t))', fontweight='bold')
-xticks(np.arange(0, T/10, T/10), fontweight='bold')
-yticks(floor(1000*min(u))/1000, ceil(1000*max(u))/1000)
+### 关键函数与变量说明
 
-subplot(2,2,2)
-plot(t, x, color='darkblue', lw=2)
-xlabel('时间 (t)', fontweight='bold')
-ylabel('木材中的猎物 (%t)', fontweight='bold')
-xticks(np.arange(0, T/10, T/10), fontweight='bold')
+- `GEKKO()`: 创建优化模型实例
+- `m.Var()`: 定义变量（状态变量、控制变量）
+- `m.Param()`: 定义参数
+- `m.Equation()`: 定义微分方程约束
+- `m.Obj()`: 定义目标函数
+- `m.options.ODE = 6`: 设置求解模式为最优控制
+- `m.solve()`: 求解优化问题
+- `Var.dt()`: 变量的时间导数
+- `np.linspace()`: 生成等间距时间序列
+- `plt.subplot()`: 创建子图
+- `plt.savefig()`: 保存图片
 
-subplot(2,2,3)
-plot(t, y, color='crimson', lw=2)
-xlabel('时间 (t)', fontweight='bold')
-ylabel('蜘蛛 (y(t))', fontweight='bold')
-xticks(np.arange(0, T/10, T/10), fontweight='bold')
 
-subplot(2,2,4)
-plot(t, z, color='green', lw=2)
-xlabel('时间 (t)', fontweight='bold')
-ylabel('葡萄园中的猎物 (z(t))', fontweight='bold')
-xticks(np.arange(0, T/10, T/10), fontweight='bold')
-grid(True, ls=':')
-```
 
 图 11.5: 害虫控制最优控制模型的 Gecko 求解。
-
-
-
-
 
 ![](img/9923905aaa045c7096d90695cee3e3bc_338_0.png)
 
@@ -10789,10 +11595,6 @@ grid(True, ls=':')
 - [61] Dennis G. Zill. 带边界值问题的微分方程。CENGAGE LEARNING，2017。
 - [62] Dennis G. Zill. 建模应用微分方程入门课程，国际量制版。Cengage Learning, Inc,2017。
 
-
-
-
-
 ![](img/9923905aaa045c7096d90695cee3e3bc_344_0.png)
 
 # 索引
@@ -10802,9 +11604,8 @@ grid(True, ls=':')
 - 激活集, 280
 - 伴随方程, 291
 - 伴随变量, 291
-- anaconda, 250
+- `anaconda`, 250
 - 近似, 3
-- Armijo 条件, 263
 - 增广矩阵, 4
 - 收敛序列, 23
 - 代价函数, 290
@@ -10853,7 +11654,7 @@ grid(True, ls=':')
 - 有限差分, 93
 - 一阶必要条件, 279
 - 拟合, 49
-- fincon, 249
+- `fincon`, 249
 
 # 328 索引
 
@@ -10863,8 +11664,8 @@ grid(True, ls=':')
 - 高斯积分, 134
 - 高斯-乔尔当消元法, 9
 - 高斯-Seidel, 26
-- Gauss-Seidel 方法, 33
-- Gekko, 201
+- `Gauss-Seidel 方法`, 33
+- `Gekko`, 201
 - 广义奇异值分解, 86
 - 葡萄糖-胰岛素交互, 301
 - GNU 线性规划工具包, 259
@@ -10889,13 +11690,13 @@ grid(True, ls=':')
 - 插值, 48
 - 逆阶数, 78
 - 可逆矩阵, 26
-- IPOPT, 201
+- `IPOPT`, 201
 - 迭代动态规划, 294
 - 迭代法, 25
 - Jacobi, 26
-- Jacobi 方法, 28
+- `Jacobi 方法`, 28
 - 雅可比矩阵, 98
--  Jordan 标准型, 224
+- Jordan 标准型, 224
 - Karush-Kuhn-Tucker 系统, 279
 - L-曲线法, 78
 - 拉格朗日插值, 105
@@ -10950,7 +11751,7 @@ grid(True, ls=':')
 - 数值不稳定, 207
 - 数值积分, 125
 - 数值积分, 134
-- numpy, 4
+- `numpy`, 4
 - 回归系数, 43
 - 正则化, 57
 - 正则化参数, 79
@@ -10959,7 +11760,7 @@ grid(True, ls=':')
 - 舍入误差, 69
 - 阶梯形, 9
 - Runge-Kutta 方法, 165
-- scipy, 13
+- `scipy`, 13
 - 搜索方向, 262
 - 割法法, 89
 - 二阶必要条件, 279
@@ -10980,7 +11781,7 @@ grid(True, ls=':')
 - 奇异值, 77
 - SIR 方法, 313
 - 平滑, 85
-- SOCS, 294
+- `SOCS`, 294
 - 样条, 117
 - 状态方程, 291
 - 静态迭代法, 26
@@ -10993,11 +11794,11 @@ grid(True, ls=':')
 - 最可能的解, 87
 - 正半定, 262
 - 捕食者-被物者模型, 175
-- pulp, 243
-- pyomo, 243
+- `pulp`, 243
+- `pyomo`, 243
 - 成功松弛法, 37
 - 充分充分条件, 262
-- sympy, 11, 100
+- `sympy`, 11, 100
 - 初值问题组, 193
 - QR 分解, 126
 - 二次规划, 255
@@ -11005,7 +11806,7 @@ grid(True, ls=':')
 - 泰勒展开, 125
 - 终端约束, 292
 - Tikhonov 正则化, 78
-- TOMP, 294
+- `TOMP`, 294
 - 横截性条件, 290
 - 截断 SVD, 78
 - 截断误差, 126
@@ -11022,4 +11823,3 @@ grid(True, ls=':')
 - Vanderpool 系统, 195
 - 向量范数, 25
 - 良定系统, 60
-

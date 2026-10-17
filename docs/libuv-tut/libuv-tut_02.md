@@ -1,8 +1,10 @@
+
+
 # libuv 基础
 
-# Basics of libuv
+## Basics of libuv
 
-libuv 强制使用异步的，事件驱动的编程风格。它的核心工作是提供一个 event-loop，还有基于 I/O 和其它事件通知的回调函数。libuv 还提供了一些核心工具，例如定时器，非阻塞的网络支持，异步文件系统访问，子进程等。
+libuv 强制使用异步的、事件驱动的编程风格。它的核心工作是提供一个 event-loop，还有基于 I/O 和其他事件通知的回调函数。libuv 还提供了一些核心工具，例如定时器、非阻塞的网络支持、异步文件系统访问、子进程等。
 
 ## Event loops
 
@@ -12,28 +14,28 @@ libuv 强制使用异步的，事件驱动的编程风格。它的核心工作�
 while there are still events to process:
     e = get the next event
     if there is a callback associated with e:
-        call the callback 
+        call the callback
 ```
 
 举几个事件的例子：
 
-> *   准备好被写入的文件。
-> *   包含准备被读取的数据的 socket。
-> *   超时的定时器。
+- 准备好被写入的文件。
+- 包含准备被读取的数据的 socket。
+- 超时的定时器。
 
-event-loop 最终会被`uv_run()`启动－当使用 libuv 时，最后都会调用的函数。
+event-loop 最终会被`uv_run()`启动——当使用 libuv 时，最后都会调用的函数。
 
-系统编程中最经常处理的一般是输入和输出，而不是一大堆的数据处理。问题在于传统的输入／输出函数(例如`read`，`fprintf`)都是阻塞式的。实际上，向文件写入数据，从网络读取数据所花的时间，对比 cpu 的处理速度差得太多。任务没有完成，函数是不会返回的，所以你的程序在这段时间内什么也做不了。对于需要高性能的的程序来说，这是一个主要的障碍。
+系统编程中最经常处理的一般是输入和输出，而不是一大堆的数据处理。问题在于传统的输入／输出函数（例如`read`、`fprintf`）都是阻塞式的。实际上，向文件写入数据，从网络读取数据所花的时间，对比 CPU 的处理速度差得太多。任务没有完成，函数是不会返回的，所以你的程序在这段时间内什么也做不了。对于需要高性能的程序来说，这是一个主要的障碍。
 
-其中一个标准的解决方案是使用多线程。每一个阻塞的 I/O 操作都会被分配到各个线程中（或者是使用线程池）。当某个线程一旦阻塞，处理器就可以调度处理其他需要 cpu 资源的线程。
+其中一个标准的解决方案是使用多线程。每一个阻塞的 I/O 操作都会被分配到各个线程中（或者是使用线程池）。当某个线程一旦阻塞，处理器就可以调度处理其他需要 CPU 资源的线程。
 
-但是 libuv 使用了另外一个解决方案，那就是异步，非阻塞。大多数的现代操作系统提供了基于事件通知的子系统。例如，一个正常的 socket 上的`read`调用会发生阻塞，直到发送方把信息发送过来。但是，实际上程序可以请求操作系统监视 socket 事件的到来，并将这个事件通知放到事件队列中。这样，程序就可以很简单地检查事件是否到来（可能此时正在使用 cpu 做数值处理的运算），并及时地获取数据。说 libuv 是异步的，是因为程序可以在一头表达对某一事件的兴趣，并在另一头获取到数据（对于时间或是空间来说）。它是非阻塞是因为应用程序无需在请求数据后等待，可以自由地做其他的事。libuv 的事件循环方式很好地与该模型匹配, 因为操作系统事件可以视为另外一种 libuv 事件. 非阻塞方式可以保证在其他事件到来时被尽快处理（当然还要考虑硬件的能力）。
+但是 libuv 使用了另外一个解决方案，那就是异步、非阻塞。大多数的现代操作系统提供了基于事件通知的子系统。例如，一个正常的 socket 上的`read`调用会发生阻塞，直到发送方把信息发送过来。但是，实际上程序可以请求操作系统监视 socket 事件的到来，并将这个事件通知放到事件队列中。这样，程序就可以很简单地检查事件是否到来（可能此时正在使用 CPU 做数值处理的运算），并及时地获取数据。说 libuv 是异步的，是因为程序可以在一头表达对某一事件的兴趣，并在另一头获取到数据（对于时间或是空间来说）。它是非阻塞是因为应用程序无需在请求数据后等待，可以自由地做其他的事。libuv 的事件循环方式很好地与该模型匹配，因为操作系统事件可以视为另外一种 libuv 事件。非阻塞方式可以保证在其他事件到来时被尽快处理（当然还要考虑硬件的能力）。
 
-##### Note
+### Note
 
-> 我们不需要关心 I/O 在后台是如何工作的，但是由于我们的计算机硬件的工作方式，线程是处理器最基本的执行单元，libuv 和操作系统通常会运行后台/工作者线程, 或者采用非阻塞方式来轮流执行任务。
+> 我们不需要关心 I/O 在后台是如何工作的，但是由于我们的计算机硬件的工作方式，线程是处理器最基本的执行单元，libuv 和操作系统通常会运行后台/工作者线程，或者采用非阻塞方式来轮流执行任务。
 
-Bert Belder，一个 libuv 的核心开发者，通过一个短视频向我们解释了 libuv 的架构和它的后台工作方式。如果你之前没有接触过类似 libuv，libev，这个视频会非常有用。视频的网址是[`youtu.be/nGn60vDSxQ4`](https://youtu.be/nGn60vDSxQ4) 。
+Bert Belder，一个 libuv 的核心开发者，通过一个短视频向我们解释了 libuv 的架构和它的后台工作方式。如果你之前没有接触过类似 libuv、libev，这个视频会非常有用。视频的网址是[`youtu.be/nGn60vDSxQ4`](https://youtu.be/nGn60vDSxQ4)。
 
 包含了 libuv 的 event-loop 的更多详细信息的[文档](http://docs.libuv.org/en/v1.x/design.html#the-i-o-loop)。
 
@@ -41,7 +43,7 @@ Bert Belder，一个 libuv 的核心开发者，通过一个短视频向我们�
 
 让我们开始写第一个 libuv 程序吧！它什么都没做，只是开启了一个 loop，然后很快地退出了。
 
-#### helloworld/main.c
+### helloworld/main.c
 
 ```cpp
 #include <stdio.h>
@@ -58,10 +60,10 @@ int main() {
     uv_loop_close(loop);
     free(loop);
     return 0;
-} 
+}
 ```
 
-这个程序会很快就退出了，因为没有可以很处理的事件。我们可以使用各种 API 函数来告诉 event-loop 我们要监视的事件。
+这个程序会很快就退出了，因为没有可以处理的事件。我们可以使用各种 API 函数来告诉 event-loop 我们要监视的事件。
 
 从 libuv 的 1.0 版本开始，用户就可以在使用`uv_loop_init`初始化 loop 之前，给其分配相应的内存。这就允许你植入自定义的内存管理方法。记住要使用`uv_loop_close(uv_loop_t *)`关闭 loop，然后再回收内存空间。在例子中，程序退出的时候会关闭 loop，系统也会自动回收内存。对于长时间运行的程序来说，合理释放内存很重要。
 
@@ -69,7 +71,7 @@ int main() {
 
 可以使用`uv_default_loop`获取 libuv 提供的默认 loop。如果你只需要一个 loop 的话，可以使用这个。
 
-##### Note
+#### Note
 
 > nodejs 中使用了默认的 loop 作为自己的主 loop。如果你在编写 nodejs 的绑定，你应该注意一下。
 
@@ -83,9 +85,9 @@ I/O 函数的回调函数（例如文件和 socket 等）会被传递一个`nrea
 
 ## Handles and Requests
 
-libuv 的工作建立在用户表达对特定事件的兴趣。这通常通过创造对应 I/O 设备，定时器，进程等的 handle 来实现。handle 是不透明的数据结构，其中对应的类型`uv_TYPE_t`中的 type 指定了 handle 的使用目的。
+libuv 的工作建立在用户表达对特定事件的兴趣。这通常通过创造对应 I/O 设备、定时器、进程等的 handle 来实现。handle 是不透明的数据结构，其中对应的类型`uv_TYPE_t`中的 type 指定了 handle 的使用目的。
 
-#### libuv watchers
+### libuv watchers
 
 ```cpp
 /* Handle types. */
@@ -121,18 +123,18 @@ typedef struct uv_work_s uv_work_t;
 /* None of the above. */
 typedef struct uv_cpu_info_s uv_cpu_info_t;
 typedef struct uv_interface_address_s uv_interface_address_t;
-typedef struct uv_dirent_s uv_dirent_t; 
+typedef struct uv_dirent_s uv_dirent_t;
 ```
 
-handle 代表了持久性对象。在异步的操作中，相应的 handle 上有许多与之关联的 request。request 是短暂性对象（通常只维持在一个回调函数的时间），通常对映着 handle 上的一个 I/O 操作。request 用来在初始函数和回调函数之间，传递上下文。例如 uv_udp_t 代表了一个 udp 的 socket，然而，对于每一个向 socket 的写入的完成后，都会向回调函数传递一个`uv_udp_send_t`。
+handle 代表了持久性对象。在异步的操作中，相应的 handle 上有许多与之关联的 request。request 是短暂性对象（通常只维持在一个回调函数的时间），通常对应着 handle 上的一个 I/O 操作。request 用来在初始函数和回调函数之间传递上下文。例如`uv_udp_t`代表了一个 udp 的 socket，然而，对于每一个向 socket 的写入的完成后，都会向回调函数传递一个`uv_udp_send_t`。
 
 handle 可以通过下面的函数设置：
 
 ```cpp
-uv_TYPE_init(uv_loop_t *, uv_TYPE_t *) 
+uv_TYPE_init(uv_loop_t *, uv_TYPE_t *)
 ```
 
-回调函数是 libuv 所关注的事件发生后，所调用的函数。应用程序的特定逻辑会在回调函数中实现。例如，一个 IO 监视器的回调函数会接收到从文件读取到的数据，一个定时器的回调函数会在超时后被触发等等。
+回调函数是 libuv 所关注的事件发生后所调用的函数。应用程序的特定逻辑会在回调函数中实现。例如，一个 I/O 监视器的回调函数会接收到从文件读取到的数据，一个定时器的回调函数会在超时后被触发等等。
 
 ### Idling
 
@@ -164,9 +166,10 @@ int main() {
 
     uv_loop_close(uv_default_loop());
     return 0;
-} 
+}
 ```
 
 ### Storing context
 
-在基于回调函数的编程风格中，你可能会需要在调用处和回调函数之间，传递一些上下文等特定的应用信息。所有的 handle 和 request 都有一个`data`域，可以用来存储信息并传递。这是一个 c 语言库中很常见的模式。即使是`uv_loop_t`也有一个相似的`data`域。
+在基于回调函数的编程风格中，你可能会需要在调用处和回调函数之间传递一些上下文等特定的应用信息。所有的 handle 和 request 都有一个`data`域，可以用来存储信息并传递。这是一个 C 语言库中很常见的模式。即使是`uv_loop_t`也有一个相似的`data`域。
+

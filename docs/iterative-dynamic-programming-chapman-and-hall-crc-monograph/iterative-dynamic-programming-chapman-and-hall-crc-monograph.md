@@ -1,54 +1,9 @@
+
 ## 迭代动态规划
 
+本书献给
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-本书献给  
 Rutherford Aris 教授
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 关于作者
 
@@ -116,11 +71,6 @@ Luus教授在科学期刊上发表了100多篇论文，其中大量论文涉及�
 | $u_j$ | 控制向量 **u** 的第 $j$ 个元素 |
 | **u** | 控制向量（$m \times 1$） |
 | $v$ | 可变阶段长度；速度 |
-
-
-
-
-
 | 符号 | 定义 |
 |---|---|
 | $x_i$ | 第 $i^{th}$ 个状态变量 |
@@ -180,7 +130,7 @@ Luus教授在科学期刊上发表了100多篇论文，其中大量论文涉及�
 
 ### 基本概念
 
-### 1.1 引言
+#### 1.1 引言
 
 优化，或最优控制，按本书所使用的意义，是指确定某个性能准则的最大值或最小值。例如，如果我们处理的是经济效益，那么我们希望选择系统的运行条件，使经济效益最大化。然而，如果性能准则被选为成本，则系统应运行以使成本最小化。在每种情况下，我们都寻求使性能准则达到极值的运行条件。
 
@@ -192,61 +142,65 @@ Luus教授在科学期刊上发表了100多篇论文，其中大量论文涉及�
 
 优化或最优控制中最困难的问题之一是以一定的确定性建立全局最优解已被获得。当描述系统的方程高度非线性且存在大量局部最优时，困难就会出现。因此，即使我们相当确定已获得全局最优，也需要对结果进行交叉检查。如果这种交叉检查由完全不同的优化程序完成，则接受结果的信心就会增加。本书的主要目标是介绍一种称为 *iterative dynamic programming* 的计算程序，并展示它如何用于解决各种最优控制问题。
 
-### 1.2 基本定义和记号
+#### 1.2 基本定义和记号
 
 为了在整本书中呈现统一的图景，我们将给出某些定义和一致的记号。为了清晰起见，简要概述其中一些内容是有益的。
 
-#### 1.2.1 算子
+##### 1.2.1 算子
 
-算子 α 是某种数学过程的符号，它将一个函数变为另一个函数。例如，让我们考虑作用于连续函数 $f(x)=x^3+\sin x$ 的不同算子：
+算子 `α` 是某种数学过程的符号，它将一个函数变为另一个函数。例如，让我们考虑作用于连续函数 `f(x)=x^3+sin x` 的不同算子：
 
-| 作用于 $f(x)=x^3+\sin x$ 的算子 | 结果函数 |
+| 作用于 `f(x)=x^3+sin x` 的算子 | 结果函数 |
 |---|---|
-| $c=\mathrm{const}$ | $cx^3+c\sin x$ |
-| $D=d/dx$ | $3x^2+\cos x$ |
-| 平方根 | $(x^3+\sin x)^{1/2}$ |
+| `c=const` | `cx^3+c sin x` |
+| `D=d/dx` | `3x^2+cos x` |
+| 平方根 | `(x^3+sin x)^{1/2}` |
 
-算子 α 是 *linear* 的，如果
+算子 `α` 是 *linear* 的，如果
 
-$\alpha[f(x)+g(x)]=\alpha f(x)+\alpha g(x)$
+`α[f(x)+g(x)]=α f(x)+α g(x)`
 
 并且
 
-$\alpha[c f(x)] = c \alpha[f(x)]$
+`α[c f(x)] = c α[f(x)]`
 
-其中 $c$ 是常数。因此上面的常数 $c$ 和 $D$ 算子是线性的。相比之下，不是线性的算子称为 *nonlinear*，例如平方根算子。
+其中 `c` 是常数。因此上面的常数 `c` 和 `D` 算子是线性的。相比之下，不是线性的算子称为 *nonlinear*，例如平方根算子。
 
 如果存在如下关系
 
-$\alpha f(x) = c f(x)$
+`α f(x) = c f(x)`
 
-其中 $c$ 是常数，则 $c$ 被称为算子 $\alpha$ 的 *eigenvalue*。例如，
+其中 `c` 是常数，则 `c` 被称为算子 `α` 的 *eigenvalue*。例如，
 
-$\frac{d}{dx} e^{3x} = 3 e^{3x}, \qquad (1.1)$
+$$
+\frac{d}{dx} e^{3x} = 3 e^{3x}, \qquad (1.1)
+$$
 
-所以 3 是算子 $d/dx$ 的特征值，而 $e^{3x}$ 是相应的 *eigenfunction*。
+所以 3 是算子 `d/dx` 的特征值，而 `e^{3x}` 是相应的 *eigenfunction*。
 
 另一个特征值关系的例子是
 
-$\frac{d^2}{dt^2} \sin a t = -a^2 \sin a t, \qquad (1.2)$
+$$
+\frac{d^2}{dt^2} \sin a t = -a^2 \sin a t, \qquad (1.2)
+$$
 
-我们看到 $-a^2$ 是算子 $d^2/dt^2$ 的特征值，对应的特征函数为 $\sin a t$。注意同样的关系也适用于 $\cos a t$，因此特征函数不一定是唯一的。
+我们看到 `-a^2` 是算子 `d^2/dt^2` 的特征值，对应的特征函数为 `sin a t`。注意同样的关系也适用于 `cos a t`，因此特征函数不一定是唯一的。
 
 此外，对应于一个算子的特征值可能不是唯一的。例如，当我们以形式写出氢原子的能量平衡时
 
-$H \psi = E \psi, \qquad (1.3)$
+$$
+H \psi = E \psi, \qquad (1.3)
+$$
 
-其中哈密顿算子 $H$ 表示动能和势能之和，$E$ 表示总能量，我们发现存在许多使该方程成立的 $E$ 值。这些 $E$ 值是算子 $H$ 的特征值，通常被称为“能级”。
+其中哈密顿算子 `H` 表示动能和势能之和，`E` 表示总能量，我们发现存在许多使该方程成立的 `E` 值。这些 `E` 值是算子 `H` 的特征值，通常被称为“能级”。
 
 当处理矩阵时，我们会遇到特征值。在这种情况下，算子是一个矩阵，它作用于一个向量得到该向量的常数倍。然后该常数被称为矩阵的特征值，而向量被称为对应于该特定特征值的 *eigenvector*。
 
-#### 1.2.2 向量和矩阵
+##### 1.2.2 向量和矩阵
 
-由于我们将处理许多维度和许多变量的系统，将使用与向量-矩阵术语一致的方便简写记号。我们将使用小写粗体字母表示向量，大写粗体字母表示矩阵。因此 **x** 将表示一个向量，**A** 表示一个矩阵。所有向量都被视为
+由于我们将处理许多维度和许多变量的系统，将使用与向量-矩阵术语一致的方便简写记号。我们将使用小写粗体字母表示向量，大写粗体字母表示矩阵。因此 `x` 将表示一个向量，`A` 表示一个矩阵。所有向量都被视为
 
-
-
-column vectors. To obtain a row vector, we take the *transpose* of the vector denoted by the superscript $T$. Similarly, the transpose of a matrix results in having the rows and columns interchanged. The designation $(m \times n)$ for either a vector or a matrix will mean $m$ rows and $n$ columns:
+column vectors. To obtain a row vector, we take the *transpose* of the vector denoted by the superscript `T`. Similarly, the transpose of a matrix results in having the rows and columns interchanged. The designation `(m × n)` for either a vector or a matrix will mean `m` rows and `n` columns:
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_18_0.png)
 
@@ -258,19 +212,19 @@ $$
 (\mathbf{A}\mathbf{x})^T=\mathbf{x}^T\mathbf{A}^T. \tag{1.4}
 $$
 
-When a square matrix (one in which $m=n$) equals its transpose,
+When a square matrix (one in which `m=n`) equals its transpose,
 
 $$
 \mathbf{A}=\mathbf{A}^T \tag{1.5}
 $$
 
-the matrix **A** is called *symmetric*. Symmetric matrices have some desirable properties which help in calculations. If the columns of a square matrix **A** are *linearly independent*, the inverse of the matrix, denoted by $\mathbf{A}^{-1}$, exists, having the property
+the matrix `A` is called *symmetric*. Symmetric matrices have some desirable properties which help in calculations. If the columns of a square matrix `A` are *linearly independent*, the inverse of the matrix, denoted by `A^{-1}`, exists, having the property
 
 $$
 \mathbf{A}^{-1}\mathbf{A}=\mathbf{A}\mathbf{A}^{-1}=\mathbf{I}, \tag{1.6}
 $$
 
-where **I** is the *identity* matrix, which is a diagonal matrix with 1's along the diagonal. Therefore, the identity matrix has the property
+where `I` is the *identity* matrix, which is a diagonal matrix with 1's along the diagonal. Therefore, the identity matrix has the property
 
 $$
 \mathbf{A}\mathbf{I}=\mathbf{I}\mathbf{A}=\mathbf{A}. \tag{1.7}
@@ -282,100 +236,125 @@ $$
 \mathbf{x}^T\mathbf{A}\mathbf{x}=\sum_{j=1}^{n}\sum_{i=1}^{n}x_i a_{ij}x_j, \tag{1.8}
 $$
 
-where $a_{ij}$ are the elements of **A**.
+where `a_{ij}` are the elements of `A`.
 
-Frequently, a situation arises where all the elements of a vector are equal to the same numerical value, let us say 2. Then, instead of writing $r_i=2, i=1,2,\ldots,n$, or $\mathbf{r}=[2\ 2\ \cdots\ 2]^T$, we will use the shorthand $\mathbf{r}=2$. Sometimes, however, we wish to emphasize some entries in a table of results, by using boldface to make them stand out. No confusion with respect to this notation is expected.
+Frequently, a situation arises where all the elements of a vector are equal to the same numerical value, let us say 2. Then, instead of writing `r_i=2, i=1,2,...,n`, or `r=[2 2 ... 2]^T`, we will use the shorthand `r=2`. Sometimes, however, we wish to emphasize some entries in a table of results, by using boldface to make them stand out. No confusion with respect to this notation is expected.
 
-#### 1.2.3 Differentiation of a vector
+##### 1.2.3 Differentiation of a vector
 
 Given a vector
-
 $$
+
+
+
 \mathbf{f}(\mathbf{x}) = \begin{bmatrix} f_1 \\ f_2 \\ \vdots \\ f_n \end{bmatrix},
+
 $$
 
 we may differentiate this vector with respect to $\mathbf{x}$ by first taking the transpose and then simply using matrix algebra, i.e.,
 
 $$
+
 \frac{\partial \mathbf{f}^{T}}{\partial \mathbf{x}} = \begin{bmatrix} \frac{\partial}{\partial x_1} \\ \frac{\partial}{\partial x_2} \\ \vdots \\ \frac{\partial}{\partial x_n} \end{bmatrix}[f_1\quad f_2\quad \cdots\quad f_n] = \begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partial f_2}{\partial x_1} & \cdots & \frac{\partial f_n}{\partial x_1} \\ \frac{\partial f_1}{\partial x_2} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_n}{\partial x_2} \\ \vdots & \vdots & \cdots & \vdots \\ \frac{\partial f_1}{\partial x_n} & \frac{\partial f_2}{\partial x_n} & \cdots & \frac{\partial f_n}{\partial x_n} \end{bmatrix}.
+
 $$
 
 The second derivative of a continuous *scalar* function $f(\mathbf{x})$ with respect to $\mathbf{x}$ is
 
 $$
+
 \frac{\partial^2 f}{\partial \mathbf{x}^2} = \frac{\partial}{\partial \mathbf{x}}\left(\frac{\partial f}{\partial \mathbf{x}}\right)^T = \begin{bmatrix} \frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1\partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1\partial x_n} \\ \frac{\partial^2 f}{\partial x_2\partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2\partial x_n} \\ \vdots & \vdots & \cdots & \vdots \\ \frac{\partial^2 f}{\partial x_n\partial x_1} & \frac{\partial^2 f}{\partial x_n\partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2} \end{bmatrix}.
+
 $$
 
 It is noted that this $(n \times n)$ matrix is symmetric, since the order of differentiation does not matter for a continuous function.
 
-#### 1.2.4 Taylor series expansion
-
+### 1.2.4 Taylor series expansion
 It is convenient at times to expand a vector function $\mathbf{f}(\mathbf{x})$ in terms of a small perturbation $\delta\mathbf{x}$. Such an approximation can be represented by
 
 $$
+
 \mathbf{f}(\mathbf{x}+\delta\mathbf{x}) = \mathbf{f}(\mathbf{x}) + \left(\frac{\partial \mathbf{f}^{T}}{\partial \mathbf{x}}\right)^T\delta\mathbf{x} + \cdots \tag{1.9}
+
 $$
 
 and a scalar continuous function $f(\mathbf{x})$ can be conveniently expanded as
 
 $$
+
 f(\mathbf{x}+\delta\mathbf{x}) = f(\mathbf{x}) + \left(\frac{\partial f}{\partial \mathbf{x}}\right)^T\delta\mathbf{x} + \frac{1}{2}\delta\mathbf{x}^T\frac{\partial^2 f}{\partial \mathbf{x}^2}\delta\mathbf{x} + \cdots \tag{1.10}
+
 $$
 
-#### 1.2.7 Stationary and maxima (minima) points
-
+### 1.2.7 Stationary and maxima (minima) points
 If $\partial f(\mathbf{x})/\partial \mathbf{x}=0$ at some value $\mathbf{x}=\mathbf{x}_0$, then $\mathbf{x}_0$ is said to be a stationary point. However, this is not necessarily the maximum or a minimum of the function $f(\mathbf{x})$. If $\partial^2 f/\partial \mathbf{x}^2$ is negative definite, then $\mathbf{x}_0$ is a local maximum, and if $\partial^2 f/\partial \mathbf{x}^2$ is positive definite, then $\mathbf{x}_0$ is a local minimum. The point $\mathbf{x}_0$ is an absolute or global maximum if
 
 $$
+
 f(\mathbf{x}) \leq f(\mathbf{x}_0)
+
 $$
 
 and a global minimum if the inequality sign is reversed. For an unconstrained continuous function with continuous first derivative, the global maximum or minimum may be obtained by examining all the stationary points of the function and comparing the values of the function at those stationary points.
 
 ### 1.3 Steady-state system model
-
 For a steady-state model we assume the system under consideration can be represented in terms of the variables $x_1, x_2, \ldots, x_n$. The model is given by a set of equality constraints
 
 $$
+
 \phi_i(x_1, x_2, \ldots, x_n) = 0, \quad i = 1, 2, \ldots, m \tag{1.14}
+
 $$
 
 where $m \leq n$, and a set of inequality constraints
 
 $$
+
 g_j(x_1, x_2, \ldots, x_n) \leq 0, \quad j = 1, 2, \ldots, s. \tag{1.15}
+
 $$
 
 ### 1.4 Continuous-time system model
-
 In the major portion of this book, we shall assume that the physical system is described mathematically by a set of deterministic lumped-parameter ordinary differential equations, where the initial conditions are given. There are two types of variables under consideration. The state variables, denoted by $x_i$, represent the state of the system. The other type of variables, denoted by $u_j$, represent the control variables, or inputs into the system. The model showing the effect of the inputs on the state of the system is assumed to have the general form
 
 $$
+
 \frac{dx_1}{dt} = f_1(x_1, x_2, \ldots, x_n, u_1, u_2, \ldots, u_m, t) \tag{1.16}
+
 $$
 
 $$
+
 \frac{dx_2}{dt} = f_2(x_1, x_2, \ldots, x_n, u_1, u_2, \ldots, u_m, t) \tag{1.17}
+
 $$
 
 $$
+
 \cdots \quad \cdots \quad \cdots \quad \cdots
+
 $$
 
 $$
+
 \frac{dx_n}{dt} = f_n(x_1, x_2, \ldots, x_n, u_1, u_2, \ldots, u_m, t) \tag{1.18}
+
 $$
 
 or, in vector form, the system can be described more compactly by
 
 $$
+
 \frac{d\mathbf{x}}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u}, t)\tag{1.19}
+
 $$
 
 with the initial state specified
 
 $$
+
 \mathbf{x}(0) = \mathbf{c}.\tag{1.20}
+
 $$
 
 Here $\mathbf{x}$ is an $(n \times 1)$ state vector and $\mathbf{u}$ is an $(m \times 1)$ control vector.
@@ -383,136 +362,170 @@ Here $\mathbf{x}$ is an $(n \times 1)$ state vector and $\mathbf{u}$ is an $(m \
 We can remove the explicit time dependence on the right-hand side of Eq. (1.19) by introducing an additional state variable $x_{n+1}$ by the differential equation
 
 $$
+
 \frac{dx_{n+1}}{dt} = 1, \quad x_{n+1}(0) = 0\tag{1.21}
+
 $$
 
 and incorporating $x_{n+1}$ into the state vector $\mathbf{x}$. Then we have a simpler form
 
 $$
+
 \frac{d\mathbf{x}}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u})\tag{1.22}
+
 $$
 
 with
 
 $$
+
 \mathbf{x}^T(0) = [\mathbf{c}^T \quad 0].\tag{1.23}
+
 $$
 
 Therefore, the number of state variables describing a particular system is not unique, since auxiliary state variables may be introduced for convenience to describe the same system.
 
 ### 1.5 Discrete-time system model
-
 We assume that the discrete-time system model of a physical system can be written in the form
 
 $$
+
 \mathbf{x}(k + 1) = \mathbf{h}(\mathbf{x}(k), \mathbf{u}(k))\tag{1.24}
+
 $$
 
 with the given initial state
 
 $$
+
 \mathbf{x}(0) = \mathbf{c}.\tag{1.25}
+
 $$
 
 Such a difference equation can arise if the system consists of a number of stages or units, as in an extraction train in chemical engineering. We can also obtain a difference equation by integrating the differential equation repeatedly over a sampling period. For example, suppose we have a linear continuous-time system
 
 $$
+
 \frac{d\mathbf{x}}{dt} = \mathbf{A}\mathbf{x} + \mathbf{B}\mathbf{u}\tag{1.26}
+
 $$
 
 and suppose $\mathbf{u}$ is kept constant at its value $\mathbf{u}(0)$ over the entire time interval from 0 to $T$. Then integration of Eq. (1.26) gives
 
 $$
+
 \mathbf{x}(T) = \mathbf{\Phi}(T)\mathbf{c} + \int_{0}^{T} \mathbf{\Phi}(T - \lambda)\mathbf{B}\mathbf{u}(0) d\lambda\tag{1.27}
+
 $$
-
-
 
 其中状态转移矩阵$\Phi(T)$由下式给出
 
 $$
+
 \Phi(T) = \exp(A T) = \sum_{i=0}^{\infty} \frac{(A T)^i}{i!}. \tag{1.28}
+
 $$
 
 式(1.27)可以写成
 
 $$
+
 x(T) = \Phi(T) c + \Psi(T) u(0) \tag{1.29}
+
 $$
 
 其中我们引入了$(n \times m)$矩阵
 
 $$
+
 \Psi(T) = \int_0^T \exp[A(T - \lambda)]\, d\lambda \, B = T \sum_{i=0}^{\infty} \frac{(A T)^i}{(i + 1)!} B. \tag{1.30}
+
 $$
 
 现在让我们重复该过程，但从$t = T$到$t = 2T$进行积分，并保持$u(T)$为恒定值。由于我们再次对与之前等长的时间区间进行积分，得到
 
 $$
+
 x(2T) = \Phi(T) x(T) + \Psi(T) u(T). \tag{1.31}
+
 $$
 
 继续该过程，我们得到
 
 $$
+
 x[(k + 1)T] = \Phi(T) x(kT) + \Psi(T) u(kT), \quad k = 0, 1, 2, \ldots . \tag{1.32}
+
 $$
 
 通常省略采样时间$T$，以得到形式更简单的方程
 
 $$
+
 x(k + 1) = \Phi x(k) + \Psi u(k), \tag{1.33}
+
 $$
 
 这是线性差分方程的一个特例。如果$\Phi$的级数展开是渐近的，那么获得这些矩阵最方便的方法是取$N + 1$项的截断级数：
 
 $$
+
 \Theta = \sum_{i=0}^{N} \frac{(A T)^i}{(i + 1)!}. \tag{1.34}
+
 $$
 
 于是
 
 $$
+
 \Phi = I + \Theta A T \tag{1.35}
+
 $$
 
 且
 
 $$
+
 \Psi = \Theta B T. \tag{1.36}
+
 $$
 
 Luus和Smith [23]曾使用$N = 20$的这一过程将描述气体吸收器的微分方程转换为差分方程。如果级数不是渐近的，我们总可以使用恒等式
 
 $$
+
 \exp(A T) = [\exp(A T / \beta)]^\beta \tag{1.37}
+
 $$
 
 并选择足够大的常数$\beta$，使级数渐近。
 
 ### 1.6 性能指标
-
 在本书的大部分内容中，我们用$I$表示性能指标。但有时会使用增广形式的性能指标，此时可能使用另一个字母如$J$；或者当隐含利润函数时，有时使用字母$P$。
 
 当描述系统的模型是一组代数方程时，性能指标是如下形式的代数表达式
 
 $$
+
 I = f(x_1, x_2, ..., x_n). \tag{1.38}
+
 $$
 
 当系统由微分方程或差分方程描述时，性能指标可以有不同的形式。例如，我们可以有性能指标
+
+
 
 $$
 I = \int_0^{t_f} \phi(\mathbf{x}, \mathbf{u}) \, dt, \tag{1.39}
 $$
 
-其中$t_f$表示最终时间，或者我们可以有如下形式的性能指标
+其中 `$t_f$` 表示最终时间，或者我们可以有如下形式的性能指标
 
 $$
 I = \mathbf{k}^T \mathbf{x}(t_f) = \sum_{i=1}^{n} k_i x_i(t_f). \tag{1.40}
 $$
 
-这两种形式是等价的，我们现在来证明。假设我们通过方程定义一个新的状态变量$x_{n+1}$
+这两种形式是等价的，我们现在来证明。假设我们通过方程定义一个新的状态变量 `$x_{n+1}$`
 
 $$
 \frac{dx_{n+1}}{dt} = \phi(\mathbf{x}, \mathbf{u}), \quad x_{n+1}(0) = 0. \tag{1.41}
@@ -534,7 +547,7 @@ $$
 
 ### 1.7 结果的解释
 
-优化的重要部分之一是结果的解释。人们认识到最优解依赖于数学模型和性能指标。因此，必须谨慎对待优化结果。如果数学模型不能充分表示物理系统，那么结果对于预期的应用就不是最优的。同样，结果也依赖于性能指标的选择。最终时间$t_f$的选择对最优控制策略[14]有显著影响，但它常常是相当随意地选择的。只有对物理系统非常熟悉，才能确保优化成功应用。
+优化的重要部分之一是结果的解释。人们认识到最优解依赖于数学模型和性能指标。因此，必须谨慎对待优化结果。如果数学模型不能充分表示物理系统，那么结果对于预期的应用就不是最优的。同样，结果也依赖于性能指标的选择。最终时间 `$t_f$` 的选择对最优控制策略[14]有显著影响，但它常常是相当随意地选择的。只有对物理系统非常熟悉，才能确保优化成功应用。
 
 优化的另一个重要方面是确定得到的是局部最优还是全局最优。在高度非线性问题中，这可能是一项相当大的挑战。确保自己获得全局最优的最佳方法是使用不同的优化程序对优化进行交叉验证。如果局部最优数量非常多，仅采用不同的初始条件可能无法得到全局最优。这一点最近在[19]中指出，该文对沿管式反应器的双功能催化剂混合物进行优化，以使所需产品的产率最大化。尽管使用了随机选择的100种不同初始条件，并采用序列二次规划（SQP），但这一成熟的优化方法并未获得全局最优。然而，Luus和Bojkov [17]利用迭代动态规划很容易地获得了全局最优。
 
@@ -544,13 +557,13 @@ $$
 
 #### 1.8.1 线性气体吸收器
 
-一个广泛用于最优控制研究的线性系统是六板气体吸收器，Lapidus和Luus [11]曾用它进行最优控制研究。Bashein [2]将该模型用于时间最优控制研究，Bennett和Luus [3]用于时间次最优控制研究。最近，Luus和Smith [23]将其用于研究迭代动态规划的可行性，Bojkov和Luus [4]将其用于时间最优控制研究。这里，在六板气体吸收器模型的基础上，我们考虑一个更一般的情形：由入口进料流浓度控制的$n$板气体吸收器（见图1.1）。
+一个广泛用于最优控制研究的线性系统是六板气体吸收器，Lapidus和Luus [11]曾用它进行最优控制研究。Bashein [2]将该模型用于时间最优控制研究，Bennett和Luus [3]用于时间次最优控制研究。最近，Luus和Smith [23]将其用于研究迭代动态规划的可行性，Bojkov和Luus [4]将其用于时间最优控制研究。这里，在六板气体吸收器模型的基础上，我们考虑一个更一般的情形：由入口进料流浓度控制的 `$n$` 板气体吸收器（见图1.1）。
 
 ![图1.1](img/06ae75163df4fdf5e1eec243d497d393_26_0.png)
 
-图1.1：由$n$个平衡级组成的气体吸收器系统
+图1.1：由 `$n$` 个平衡级组成的气体吸收器系统
 
-对吸收塔第$m$块板进行物料衡算得到
+对吸收塔第 `$m$` 块板进行物料衡算得到
 
 $$
 H\frac{dy_m}{dt} + h\frac{dx_m}{dt} = L(x_{m-1} - x_m) + G(y_{m+1} - y_m), \quad m=1,2,\ldots,n, \tag{1.44}
@@ -558,13 +571,13 @@ $$
 
 其中
 
--   $x_m, y_m$ = 离开第$m$块板的液体和蒸汽组成（kg溶质/kg惰性物），
--   $h, H$ = 每块板上惰性液体和蒸汽的滞留量（假设恒定）（kg），
--   $L$ = 惰性液体吸收剂的流量（kg/min），
--   $G$ = 惰性气体流的流量（kg/min），
--   $t$ = 操作时间（min）。
+- `$x_m, y_m$` = 离开第 `$m$` 块板的液体和蒸汽组成（kg溶质/kg惰性物），
+- `$h, H$` = 每块板上惰性液体和蒸汽的滞留量（假设恒定）（kg），
+- `$L$` = 惰性液体吸收剂的流量（kg/min），
+- `$G$` = 惰性气体流的流量（kg/min），
+- `$t$` = 操作时间（min）。
 
-用惰性物表示流量可确保$L$和$G$在各级之间保持恒定，即使由于吸收过程实际流量会发生变化。如果假设每一级中液体和蒸汽组成之间存在线性关系
+用惰性物表示流量可确保 `$L$` 和 `$G$` 在各级之间保持恒定，即使由于吸收过程实际流量会发生变化。如果假设每一级中液体和蒸汽组成之间存在线性关系
 
 $$
 y_m = a x_m, \tag{1.45}
@@ -576,19 +589,19 @@ $$
 \frac{dx_m}{dt} = \frac{d}{e}x_{m-1} - \left(\frac{d+1}{e}\right)x_m + \frac{1}{e}x_{m+1}, \quad m = 1,2,\cdots,n \tag{1.46}
 $$
 
-其中$d = L/Ga$，$e = (Ha + h)/Ga$。使用以下方便的参数集：$a = 0.72$，$L = 40.8\ \text{kg/min}$，$G = 66.7\ \text{kg/min}$，$H = 1.0\ \text{kg}$和$h = 75\ \text{kg}$，得到向量-矩阵形式的系统方程
+其中 `$d = L/Ga$`，`$e = (Ha + h)/Ga$`。使用以下方便的参数集：`$a = 0.72$`，`$L = 40.8\ \text{kg/min}$`，`$G = 66.7\ \text{kg/min}$`，`$H = 1.0\ \text{kg}$` 和 `$h = 75\ \text{kg}$`，得到向量-矩阵形式的系统方程
 
 $$
 \frac{d\mathbf{x}}{dt} = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t) \tag{1.47}
 $$
 
-其中$\mathbf{A}$是三对角系数矩阵，由下式给出
+其中 `$\mathbf{A}$` 是三对角系数矩阵，由下式给出
 
 $$
 \mathbf{A} = \operatorname{tridiag}[0.538998 \quad -1.173113 \quad 0.634115] \tag{1.48}
 $$
 
-$(n \times 2)$控制系数矩阵$\mathbf{B}$由下式给出
+`$(n \times 2)$` 控制系数矩阵 `$\mathbf{B}$` 由下式给出
 
 $$
 \mathbf{B}^T = \begin{bmatrix} 0.538998 & 0 & \cdots & 0 & 0 \\ 0 & 0 & \cdots & 0 & 0.634115 \end{bmatrix}. \tag{1.49}
@@ -606,13 +619,11 @@ $$
 I = \int_0^{t_f} (\mathbf{x}^T\mathbf{x} + \mathbf{u}^T\mathbf{u}) \, dt. \tag{1.51}
 $$
 
-最近[16]使用了两个最终时间值，即$t_f = 10\ \text{min}$和$t_f = 50\ \text{min}$。此外，还使用了从$n = 10$到$n = 1000$的级数范围，以考察随着问题维数的增加，迭代动态规划计算量的增加情况。
+最近[16]使用了两个最终时间值，即 `$t_f = 10\ \text{min}$` 和 `$t_f = 50\ \text{min}$`。此外，还使用了从 `$n = 10$` 到 `$n = 1000$` 的级数范围，以考察随着问题维数的增加，迭代动态规划计算量的增加情况。
 
 #### 1.8.2 非线性连续搅拌釜式反应器
 
 让我们考虑这样一个系统：在连续搅拌釜式反应器（CSTR）中进行一级不可逆化学反应，该系统最初由Aris和Amundson [1]提出，并由Lapidus和Luus [11]用于控制研究。通过调节冷却流体的流量来实现对反应器的控制
-
-
 
 a coil inserted in the reactor. The heat and mass balances for the reaction A → B in such a CSTR are given by
 
@@ -626,18 +637,18 @@ V d c_A / dθ = q (c_A0 − c_A) − V R   (1.53)
 
 where
 
-+   c_A = concentration of species A leaving reactor
-+   c_A0 = concentration of species A in feed stream
-+   T_R = temperature of reactants leaving reactor
-+   T_0 = temperature of feed stream to reactor
-+   θ = time
-+   V = volume of reactor
-+   q = volumetric flow rate of feed and output streams
-+   R = reaction rate term
-+   −ΔH = heat of reaction
-+   c_P = heat capacity
-+   ρ = density
-+   U* = heat transfer term corresponding to cooling coil in reactor
++ `c_A` = concentration of species A leaving reactor
++ `c_A0` = concentration of species A in feed stream
++ `T_R` = temperature of reactants leaving reactor
++ `T_0` = temperature of feed stream to reactor
++ `θ` = time
++ `V` = volume of reactor
++ `q` = volumetric flow rate of feed and output streams
++ `R` = reaction rate term
++ `−ΔH` = heat of reaction
++ `c_P` = heat capacity
++ `ρ` = density
++ `U*` = heat transfer term corresponding to cooling coil in reactor
 
 As shown by Lapidus and Luus [11], these equations may be put into dimensionless form and, through a choice of a convenient set of parameters, transformed into the equations
 
@@ -649,29 +660,32 @@ dx_1/dt = −(2 + u)(x_1 + 0.25) + (x_2 + 0.5) exp[25 x_1 / (x_1 + 2)]   (1.54)
 dx_2/dt = 0.5 − x_2 − (x_2 + 0.5) exp[25 x_1 / (x_1 + 2)]   (1.55)
 ```
 
-where x_1 represents deviation from dimensionless steady-state temperature and x_2 represents deviation from dimensionless steady-state concentration. In the present work, the initial conditions x_1(0) = 0.09 and x_2(0) = 0.09 are used. We consider the case where the control u is unbounded. The optimal control problem is to determine u in the time interval 0 ≤ t < t_f that will minimize the performance index
+where `x_1` represents deviation from dimensionless steady-state temperature and `x_2` represents deviation from dimensionless steady-state concentration. In the present work, the initial conditions `x_1(0) = 0.09` and `x_2(0) = 0.09` are used. We consider the case where the control `u` is unbounded. The optimal control problem is to determine `u` in the time interval `0 ≤ t < t_f` that will minimize the performance index
 
 ```
 I = ∫_0^{t_f} (x_1^2 + x_2^2 + 0.1 u^2) dt   (1.56)
 ```
 
-where the dimensionless final time t_f is specified as 0.78. As was shown by Luus and Cormack [18], this system exhibits a local minimum I = 0.24425 and a global minimum I = 0.133094 when Pontryagin’s maximum principle is used, and the resulting boundary value problem is solved by control vector iteration. Therefore, this system is an interesting test problem for optimal control procedures.
+where the dimensionless final time `t_f` is specified as `0.78`. As was shown by Luus and Cormack [18], this system exhibits a local minimum `I = 0.24425` and a global minimum `I = 0.133094` when Pontryagin’s maximum principle is used, and the resulting boundary value problem is solved by control vector iteration. Therefore, this system is an interesting test problem for optimal control procedures.
 
 #### 1.8.3 Photochemical reaction in CSTR
 
 A more challenging problem of higher dimension consists of a photochemical reaction in an isothermal CSTR, as formulated by Jensen [10] and used for optimal control studies in [11] and [25]. It served as an ideal system for testing iterative dynamic programming for moderate dimensional nonlinear optimal control problems [13]. The mechanism for the reactions among the species $A,B,C,D,E,F,$ and $G$ is given by
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 A+B &\xrightarrow{k_1} 2D\\
 C+B &\xrightarrow{k_2} CB\\
 CB+B &\xrightarrow{k^*} 3E\\
 E+D &\xrightarrow{k_3} 2F\\
 A+F &\xrightarrow{k_4} 2G
-\end{aligned}$$
+\end{aligned}
+$$
 
 where the fifth reaction is photochemical and its rate is proportional to the square root of the light intensity. The intermediate compound $CB$ is postulated to be present in immeasurably small quantities, so it satisfies the stationary condition, namely $d(CB)/dt=0$. By using a convenient set of parameters, Lapidus and Luus [11] showed that the system is described by the eight differential equations
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \frac{dx_1}{dt} &= u_4-qx_1-17.6x_1x_2-23x_1x_6u_3 \tag{1.57}\\
 \frac{dx_2}{dt} &= u_1-qx_2-17.6x_1x_2-146x_2x_3 \tag{1.58}\\
 \frac{dx_3}{dt} &= u_2-qx_3-73x_2x_3 \tag{1.59}\\
@@ -680,38 +694,41 @@ $$\begin{aligned}
 \frac{dx_6}{dt} &= -qx_6+102.6x_4x_5-23x_1x_6u_3 \tag{1.62}\\
 \frac{dx_7}{dt} &= -qx_7+46x_1x_6u_3 \tag{1.63}\\
 \frac{dx_8}{dt} &= 5.8(qx_1-u_4)-3.7u_1-4.1u_2+q(23x_4+11x_5+28x_6+35x_7)-5u_3^2-0.099 \tag{1.64}
-\end{aligned}$$
+\end{aligned}
+$$
 
 where
 
-+   $x_1,x_2,\ldots,x_7$ = weight fractions of species $A$, $B$, $\ldots$, $G$
-+   $k_1,k_2,\ldots,k_4$ = reaction rate constants
-+   $u_1,u_2,u_4$ = inlet feed rate of pure components $A$, $B$ and $C$
-+   $u_3$ = square root of light intensity
++ `$x_1,x_2,\ldots,x_7$` = weight fractions of species $A$, $B$, $\ldots$, $G$
++ `$k_1,k_2,\ldots,k_4$` = reaction rate constants
++ `$u_1,u_2,u_4$` = inlet feed rate of pure components $A$, $B$ and $C$
++ `$u_3$` = square root of light intensity
 
-q = u₁ + u₂ + u₄ is the total flow rate of inlet streams.
+`q = u₁ + u₂ + u₄` is the total flow rate of inlet streams.
 
 The initial state is
 
-x(0) = [0.1883  0.2507  0.0467  0.0899  0.1804  0.1394  0.1046  0.0]ᵀ.  (1.65)
+`x(0) = [0.1883  0.2507  0.0467  0.0899  0.1804  0.1394  0.1046  0.0]ᵀ.  (1.65)`
 
 The constraints on the control variables are
 
-0 ≤ u₁ ≤ 20  (1.66)
+`0 ≤ u₁ ≤ 20  (1.66)`
 
-0 ≤ u₂ ≤ 6  (1.67)
+`0 ≤ u₂ ≤ 6  (1.67)`
 
-0 ≤ u₃ ≤ 4  (1.68)
+`0 ≤ u₃ ≤ 4  (1.68)`
 
-0 ≤ u₄ ≤ 20.  (1.69)
+`0 ≤ u₄ ≤ 20.  (1.69)`
 
-The optimal control problem is to choose u₁, u₂, u₃, and u₄ in the time interval 0 ≤ t < t_f, so that the performance index
+The optimal control problem is to choose `u₁, u₂, u₃,` and `u₄` in the time interval `0 ≤ t < t_f,` so that the performance index
 
-I = x₈(t_f),  (1.70)
+`I = x₈(t_f),  (1.70)`
 
-which gives the economic benefit, is maximized. The final time t_f is specified as 0.2 h. This problem served as a good test problem for iterative dynamic programming [13].
+which gives the economic benefit, is maximized. The final time `t_f` is specified as `0.2 h`. This problem served as a good test problem for iterative dynamic programming [13].
 
 #### 1.8.4 Production of secreted protein in a fed-batch reactor
+
+
 
 Determination of the optimal feed rate into a fed-batch reactor to yield the maximum amount of the desired product is a very difficult optimal control problem. The model for the production of secreted protein in a fed-batch reactor presented by Park and Ramirez [24] has been used by several researchers in developing robust methods for handling problems of this nature. The differential equations describing the reactor are
 
@@ -740,10 +757,15 @@ g₁ = \frac{4.75 g₃}{(g₃ + 0.12)} \tag{1.78}
 and
 
 +   x₁ = level of secreted SUC-s2 in culture, arbitrary units/L
+
 +   x₂ = level of total SUC-s2 in culture, arbitrary units/L
+
 +   x₃ = culture cell density, g/L
+
 +   x₄ = culture glucose level, g/L
+
 +   x₅ = culture volume, L
+
 +   u = feed flow rate, L/h.
 
 The initial condition, as given by Park and Ramirez [24], is
@@ -804,9 +826,6 @@ Let us consider the example involving the oxidation of sulphur dioxide to sulphu
 x_2 = (43260 x_1 + 105128) / (1.84 x_1 + 77.3) (1.88)
 ```
 
-
-
-
 x₃ = exp[42300/x₂ − 24.2 + 0.17 ln(x₂)] (1.89)
 
 and
@@ -854,12 +873,19 @@ $$x_7 = 3.448 \times 10^{-3} \sqrt[3]{x_{10}x_{11}}\tag{1.97}$$
 图 1.3：示例 1 的收敛曲线，其中方程排列使得有两个困难的等式，显示了初始条件的影响
 
 x₄ = (4 − 0.5(x₆ + x₇)) / (1 + 0.193 x₂ / x₁₀)  (1.98)
+
 x₅ = 0.193 x₂ x₄ / x₁₀  (1.99)
+
 x₁₂ = 40  (1.100)
+
 x₃ = 2 x₁₂ − 0.5 x₅  (1.101)
+
 x₈ = (1.799 x₄ x₁) / (3.846 x₂)  (1.102)
+
 x₉ = (2.155 × 10⁻⁴ x₁₀ √(x₃ x₁₁)) / x₂  (1.103)
+
 f₁ = 2(x₁ + x₁₀) + x₂ + x₄ + x₇ + x₈ + x₉ − x₁₂ = 0  (1.104)
+
 f₂ = Σᵢ₌₁¹⁰ xᵢ − x₁₁ = 0.  (1.105)
 
 这里我们有两个困难的等式约束。自由变量为 x₁ 和 x₂。对这两个变量取了两组初始值，分别为 (0.1, 0.1) 和 (0.5, 0.5)。唯一需要的小心是保持 x₁ 和 x₂ 为正，以便可以计算平方根。因此，如果计算出 x₁ 或 x₂ 小于 10⁻⁴，则任意指定为 10⁻⁴。此预防措施消除了数值
@@ -890,6 +916,8 @@ $$f_1=-28837x_1-139009x_2-78213x_3+18927x_4+8427x_5+\frac{13492-10690x_6}{x_7}=0
 
 $$f_2=x_1+x_2+x_3+x_4+x_5-1=0$$ (1.119)
 
+
+
 由于前 5 个变量表示摩尔分数，应该可以对第一种排列中的前 3 个变量和第二种排列中的前 2 个变量做出合理的选择。虽然 Shacham [28] 报告说这个问题对他评估的大多数程序来说太困难了，但推荐的程序没有遇到任何困难。为了计算的稳定性，如果 $x_i$, $i=1,\ldots,n$ 中的任何一个小于 $10^{-4}$，则对应的变量设为 $10^{-4}$，同样使用上限剪裁限制 0.95。从起始点 $x_1=0.22$, $x_2=0.075$, $x_3=0.001$ 开始的收敛曲线，对应于该问题的第一种具有三个困难等式约束的公式，以及从 $x_1=0.22$, $x_2=0.075$ 开始的第二种公式，显示在图 1.5 中。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_39_0.png)
@@ -898,29 +926,43 @@ $$f_2=x_1+x_2+x_3+x_4+x_5-1=0$$ (1.119)
 
 如图 1.6 所示，使用初始起始点 $x_i=0.1$ 对于 $i=1,\ldots,n$ 也能得到类似的收敛特性。有趣的是，一旦范数低于 1，收敛速度非常快。这表明可以用另一种方法到达解的附近，然后切换到牛顿法。一种这样的方法是使用 Luus 和 Jaakola [22] 建议的直接搜索优化，以建立一个用于牛顿法的良好起始点。该优化程序在第 2 章中概述，我们在其中研究稳态优化。
 
-##### Example 4
+### Example 4
 
-让我们考虑单丁基邻苯二甲酸酯与正丁醇在两个连续搅拌釜反应器中进行酯化反应，以生产二丁基邻苯二甲酸酯和水
+让我们考虑单丁基邻苯二甲酸酯与正丁醇在两个连续搅拌釜反应器中进行酯化反应，以生产二丁基邻苯二甲酸酯和水 12.52943 68.13003] 被得到 66 次。其他 34 个起始点由于某些变量为负而给出不可行的解。对 100 个初始条件的总计算时间为 0.11 s。通过取`x₂`的初始值的较小范围，即`0 ≤ x₂ ≤ 10`，如 Gupta [7] 所用，成功率下降到 100 个起始点中的 28 个，但计算时间减少到 0.06 s。通过使用范围`0 ≤ x₁ ≤ 1000, 0 ≤ x₂ ≤ 1000`，成功率是 100 次中的 57 次，也在总计算时间 0.06 s 内获得。
 
-12.52943 68.13003] 被得到 66 次。其他 34 个起始点由于某些变量为负而给出不可行的解。对 100 个初始条件的总计算时间为 0.11 s。通过取 x₂ 的初始值的较小范围，即 0 ≤ x₂ ≤ 10，如 Gupta [7] 所用，成功率下降到 100 个起始点中的 28 个，但计算时间减少到 0.06 s。通过使用范围 0 ≤ x₁ ≤ 1000, 0 ≤ x₂ ≤ 1000，成功率是 100 次中的 57 次，也在总计算时间 0.06 s 内获得。
+### Example 5
 
-## Example 5
+有时捕获非线性代数方程组的所有可能解是很重要的。例如，在寻找椭球面与双曲面相交处到原点的最大距离的问题中，如 Luus [12] 和 Wang 和 Luus [30] 所考虑的，当使用拉格朗日乘数时，最优解位于 8 个驻点之一。因此，定位所有驻点是很重要的，而使距离平方`P = x₁² + x₂² + x₃²`达到最大值的驻点提供了问题的解。代数方程组为
 
-有时捕获非线性代数方程组的所有可能解是很重要的。例如，在寻找椭球面与双曲面相交处到原点的最大距离的问题中，如 Luus [12] 和 Wang 和 Luus [30] 所考虑的，当使用拉格朗日乘数时，最优解位于 8 个驻点之一。因此，定位所有驻点是很重要的，而使距离平方 P = x₁² + x₂² + x₃² 达到最大值的驻点提供了问题的解。代数方程组为
+$$
+x_7 = x_3 / (2x_3 + 0.2x_2)
+$$ (1.129)
 
-$$x_7 = x_3 / (2x_3 + 0.2x_2)$$ (1.129)
-$$x_6 = 4(x_2 - 0.2) + 0.1x_1 + 0.2x_3$$ (1.130)
-$$x_5 = (x_6x_7 - x_2) / (x_2 + 2x_6x_7)$$ (1.131)
-$$x_4 = (4x_5 - 2)x_7$$ (1.132)
-$$f_1 = 2x_1 + x_4[8(x_1 - 0.5) + 0.1x_2] + 4x_1x_5$$ (1.133)
-$$f_2 = 2(x_1^2 - x_3^2 - 1) + x_2^2$$ (1.134)
-$$f_3 = 4(x_1 - 0.5)^2 + 2(x_2 - 0.2)^2 + x_3^2 + 0.1x_1x_2 + 0.2x_2x_3 - 16,$$ (1.135)
+$$
+x_6 = 4(x_2 - 0.2) + 0.1x_1 + 0.2x_3
+$$ (1.130)
 
-其中 x₄ 和 x₅ 是拉格朗日乘数，我们引入 x₆ 和 x₇ 以简化问题的公式。通过在范围 −2 ≤ xᵢ ≤ 2, i = 1,2,3 内选择 200 个随机起始点 x₁, x₂ 和 x₃，我们能够定位所有 8 个驻点，其频率如表 1.1 所示。注意到其中一个驻点仅得到两次，另一个仅得到三次，而与最大距离相关的驻点得到 21 次。从 200 个起始点求解代数方程，最少需要 6 次迭代，最多需要 15 次迭代，在 Pentium/120 上对 200 个起始点的总计算时间为 0.11 s。因此，计算时间相当可以忽略不计。
+$$
+x_5 = (x_6x_7 - x_2) / (x_2 + 2x_6x_7)
+$$ (1.131)
 
+$$
+x_4 = (4x_5 - 2)x_7
+$$ (1.132)
 
+$$
+f_1 = 2x_1 + x_4[8(x_1 - 0.5) + 0.1x_2] + 4x_1x_5
+$$ (1.133)
 
+$$
+f_2 = 2(x_1^2 - x_3^2 - 1) + x_2^2
+$$ (1.134)
 
+$$
+f_3 = 4(x_1 - 0.5)^2 + 2(x_2 - 0.2)^2 + x_3^2 + 0.1x_1x_2 + 0.2x_2x_3 - 16,
+$$ (1.135)
+
+其中`x₄` 和 `x₅` 是拉格朗日乘数，我们引入`x₆` 和 `x₇` 以简化问题的公式。通过在范围`−2 ≤ xᵢ ≤ 2, i = 1,2,3`内选择 200 个随机起始点`x₁`, `x₂` 和 `x₃`，我们能够定位所有 8 个驻点，其频率如表 1.1 所示。注意到其中一个驻点仅得到两次，另一个仅得到三次，而与最大距离相关的驻点得到 21 次。从 200 个起始点求解代数方程，最少需要 6 次迭代，最多需要 15 次迭代，在 Pentium/120 上对 200 个起始点的总计算时间为 0.11 s。因此，计算时间相当可以忽略不计。
 
 **表1.1：示例5的解，显示存在8个解**
 
@@ -1041,7 +1083,7 @@ $$
 
 ### 1.9.3 多组分精馏中的应用
 
-在稳态多组分精馏的模拟中，会遇到大量非线性代数方程，称为MESH方程，其中包括物料平衡（M）、平衡方程（E）、摩尔分数加和（S）和热量平衡方程（H）。对于由n级组成的精馏塔，其中蒸馏含有m个组分的进料，需要同时求解的方程总数为2mn + 3n。因此，一个由11种组分组成的进料被送入30级精馏塔，就提出了一个求解750个代数方程的问题，其中许多是非线性的。
+在稳态多组分精馏的模拟中，会遇到大量非线性代数方程，称为MESH方程，其中包括物料平衡（M）、平衡方程（E）、摩尔分数加和（S）和热量平衡方程（H）。对于由`n`级组成的精馏塔，其中蒸馏含有`m`个组分的进料，需要同时求解的方程总数为`2mn + 3n`。因此，一个由11种组分组成的进料被送入30级精馏塔，就提出了一个求解750个代数方程的问题，其中许多是非线性的。
 
 通过使用 Seppala 和 Luus [27] 提供的11种组分的热力学数据，并采用进料至第11级、回流比为0.4的30级精馏塔，通过对方程进行分组，在Pentium II/350数字计算机上于0.11秒内解出了750个代数方程，在56次迭代中质量不平衡小于 \(10^{-6}\)，如图1.8所示。质量不平衡定义为
 
@@ -1057,36 +1099,47 @@ $$
 
 对常微分方程组进行数值积分的方法有很多。对于一些常用方法，读者可参考Carnahan *等人* [5] 的优秀著作。为了在精度与速度之间取得平衡，人们发现四阶Runge-Kutta方法非常适合许多问题。可以直接控制积分时间步长，因此对于良态问题可以使用最合适的步长。
 
-然而，有些情况下固定步长并不合适，因此一种非常有用的方法是基于Runge-Kutta方法的IMSL例程，称为DVERK，由Hull *等人* [9] 编写。这里用户指定局部误差容差，例程选择所需的步长。我们发现这种方法非常有用，并在作者许可下，将DVERK的清单列入附录E。此例程也可通过访问他们的网站 http://www.cs.toronto.edu/NA/index.html，转到“数学软件”主题并点击DVERK来获得。
+然而，有些情况下固定步长并不合适，因此一种非常有用的方法是基于Runge-Kutta方法的IMSL例程，称为`DVERK`，由Hull *等人* [9] 编写。这里用户指定局部误差容差，例程选择所需的步长。我们发现这种方法非常有用，并在作者许可下，将`DVERK`的清单列入附录E。此例程也可通过访问他们的网站`http://www.cs.toronto.edu/NA/index.html`，转到“数学软件”主题并点击`DVERK`来获得。
 
 ### 1.11 参考文献
 
 - [1] ARIS, R. AND AMUNDSON, N.R.: “An analysis of chemical reactor stability and control”, Chem. Eng. Sci. 7 (1958), 121-147.
+
 - [2] BASHEIN, G.: “A simplex algorithm for on-line computation of time optimal control problems”, IEEE Trans. Auto. Control AC-16 (1971), 479-482.
 
+- [20] LUUS, R. 和 HENNESSY, D.：“采用Luus-Jaakola优化程序的补料分批反应器优化”，*工业与工程化学研究* **38** (1999), 1948-1955.
+
+- [21] LUUS, R. 和 JAAKOLA, T.H.I.：“等式约束下非线性函数的优化：初等微积分和随机数的巧妙运用”，*工业与工程化学过程设计与开发* **12** (1973a), 380-383.
+
+- [22] LUUS, R. 和 JAAKOLA, T.H.I.：“采用直接搜索和系统缩减搜索区域尺寸的优化”，*美国化学工程师学会杂志* **19** (1973b), 760-766.
+
+- [23] LUUS, R. 和 SMITH, S.G.：“动态规划在差分方程描述的高维系统中的应用”，*化学工程技术* **14** (1991), 122-126.
+
+- [24] PARK, S. 和 RAMIREZ, W.F.：“补料分批反应器中分泌蛋白的最优生产”，*美国化学工程师学会杂志* **34** (1988), 1550-1558.
+
+- [25] RAO, S.N. 和 LUUS, R.：“最优控制中控制向量迭代方法的评估与改进”，*加拿大化学工程杂志* **50** (1972), 777-784.
+
+- [26] SEADER, J.D., KUNO, M., LIN, W.J., JOHNSON, S.A., UNSWORTH, K. 和 WISKIN, J.W.：“用于计算一般非线性方程组全部解的映射延拓方法”，*计算机与化学工程* **14** (1990), 71-75.
+
+- [27] SEPPALA, R.E. 和 LUUS, R.：“多元精馏模拟方法的评估与改进”，*富兰克林研究所杂志* **293** (1972), 325-344.
 
 
 
-[20] LUUS, R. 和 HENNESSY, D.：“采用Luus-Jaakola优化程序的补料分批反应器优化”，*工业与工程化学研究* **38** (1999), 1948-1955.
-[21] LUUS, R. 和 JAAKOLA, T.H.I.：“等式约束下非线性函数的优化：初等微积分和随机数的巧妙运用”，*工业与工程化学过程设计与开发* **12** (1973a), 380-383.
-[22] LUUS, R. 和 JAAKOLA, T.H.I.：“采用直接搜索和系统缩减搜索区域尺寸的优化”，*美国化学工程师学会杂志* **19** (1973b), 760-766.
-[23] LUUS, R. 和 SMITH, S.G.：“动态规划在差分方程描述的高维系统中的应用”，*化学工程技术* **14** (1991), 122-126.
-[24] PARK, S. 和 RAMIREZ, W.F.：“补料分批反应器中分泌蛋白的最优生产”，*美国化学工程师学会杂志* **34** (1988), 1550-1558.
-[25] RAO, S.N. 和 LUUS, R.：“最优控制中控制向量迭代方法的评估与改进”，*加拿大化学工程杂志* **50** (1972), 777-784.
-[26] SEADER, J.D., KUNO, M., LIN, W.J., JOHNSON, S.A., UNSWORTH, K. 和 WISKIN, J.W.：“用于计算一般非线性方程组全部解的映射延拓方法”，*计算机与化学工程* **14** (1990), 71-75.
-[27] SEPPALA, R.E. 和 LUUS, R.：“多元精馏模拟方法的评估与改进”，*富兰克林研究所杂志* **293** (1972), 325-344.
 [28] SHACHAM, M.：“化学工程中非线性代数方程组求解软件的比较”，*计算机与化学工程* **9** (1985), 103-112.
+
 [29] SHACHAM, M., BRAUNER, N. 和 POZIN, M.：“非线性代数方程组交互式求解软件的比较”，*计算机与化学工程* **22** (1998), 323-331.
+
 [30] WANG, B.C. 和 LUUS, R.：“获得全局最优解的优化方法的可靠性”，*美国化学工程师学会杂志* **19** (1978), 619-626.
+
 [31] ZAIN, O.S., KUMAR, S. 和 SHASHI：“改进的非线性ORTHOMIN在化工过程模拟中的应用”，*匈牙利工业化学杂志* **26** (1998), 13-18.
 
-## 第2章
+# 第2章
 
-### 稳态优化
+## 稳态优化
 
 ### 2.1 引言
 
-我们考虑如下一般问题：通过适当选择 $x_1,x_2,\ldots,x_n$，最小化或最大化实值性能指标
+我们考虑如下一般问题：通过适当选择 `$x_1,x_2,\ldots,x_n$`，最小化或最大化实值性能指标
 
 $$I=f(x_1,x_2,\ldots,x_n) \tag{2.1}$$
 
@@ -1094,7 +1147,7 @@ $$I=f(x_1,x_2,\ldots,x_n) \tag{2.1}$$
 
 $$\phi_i(x_1,x_2,\ldots,x_n)=0,\qquad i=1,2,\ldots,m \tag{2.2}$$
 
-（其中 $m\leq n$）以及不等式约束组
+（其中 `$m\leq n$`）以及不等式约束组
 
 $$g_j(x_1,x_2,\ldots,x_n)\leq 0,\qquad j=1,2,\ldots,s, \tag{2.3}$$
 
@@ -1104,9 +1157,9 @@ $$g_j(x_1,x_2,\ldots,x_n)\leq 0,\qquad j=1,2,\ldots,s, \tag{2.3}$$
 
 求解多维稳态优化问题最有用且最强大的方法之一是*线性规划*。其使用有三个要求。第一，性能指标必须是变量的线性函数。第二，由约束方程表达的模型必须是线性的；第三，变量必须为半正定。具体来说，线性规划问题可表述如下。
 
-# 问题：
+#### 问题：
 
-确定变量 $x_1, x_2, \cdots, x_n$ 的值，使得性能指标
+确定变量 `$x_1, x_2, \cdots, x_n$` 的值，使得性能指标
 
 ```
 $I = p_1 x_1 + p_2 x_2 + \cdots + p_n x_n \quad (2.4)$
@@ -1124,23 +1177,23 @@ $\mathbf{Ax} = \mathbf{b} \quad (2.5)$
 $x_i \ge 0, \quad i = 1, 2, \cdots, n \quad (2.6)$
 ```
 
-下最大化，其中 $\mathbf{b}$ 是一个 $(m \times 1)$ 向量，且 $b_j \ge 0, j = 1, 2, \cdots, m$。此外，$(m \times n)$ 矩阵 $\mathbf{A}$ 具有特殊形式
+下最大化，其中 `$\mathbf{b}$` 是一个 `$(m \times 1)$` 向量，且 `$b_j \ge 0, j = 1, 2, \cdots, m$`。此外，`$(m \times n)$` 矩阵 `$\mathbf{A}$` 具有特殊形式
 
 ```
 $\mathbf{A} = \begin{bmatrix} 1 & 0 & 0 & \cdots & 0 & 0 & a_{1,m+1} & \cdots & a_{1j} & \cdots & a_{1n} \\ 0 & 1 & 0 & \cdots & 0 & 0 & a_{2,m+1} & \cdots & a_{2j} & \cdots & a_{2n} \\ . & . & . & . & . & . & . & . & . & . & . \\ . & . & . & . & . & . & . & . & . & . & . \\ . & . & . & . & . & . & . & . & . & . & . \\ 0 & 0 & 0 & \cdots & 1 & 0 & a_{m-1,m+1} & \cdots & a_{m-1,j} & \cdots & a_{m-1,n} \\ 0 & 0 & 0 & \cdots & 0 & 1 & a_{m,m+1} & \cdots & a_{mj} & \cdots & a_{mn} \end{bmatrix} \quad (2.7)$
 ```
 
-其中 $\mathbf{A}$ 的前 $m$ 列由初等 $(m \times 1)$ 单位向量组成，构成一个 $(m \times m)$ 单位矩阵。
+其中 `$\mathbf{A}$` 的前 `$m$` 列由初等 `$(m \times 1)$` 单位向量组成，构成一个 `$(m \times m)$` 单位矩阵。
 
-# 解法：
+#### 解法：
 
-将 $\mathbf{A}$ 视为划分为 $n$ 个列向量，于是式(2.5)可写成
+将 `$\mathbf{A}$` 视为划分为 `$n$` 个列向量，于是式(2.5)可写成
 
 ```
 $\mathbf{b} = x_1 \mathbf{a}_1 + x_2 \mathbf{a}_2 + \cdots + x_m \mathbf{a}_m + x_{m+1} \mathbf{a}_{m+1} + \cdots + x_n \mathbf{a}_n. \quad (2.8)$
 ```
 
-由于 $\mathbf{b}$ 是 $m$ 个元素的向量，向量 $\mathbf{a}_1, \mathbf{a}_2, \cdots, \mathbf{a}_n$ 中最多只有 $m$ 个线性无关。我们选择前 $m$ 个向量，因为它们构成了 $m$ 维空间中的自然基。则式(2.8)的一个可行解为
+由于 `$\mathbf{b}$` 是 `$m$` 个元素的向量，向量 `$\mathbf{a}_1, \mathbf{a}_2, \cdots, \mathbf{a}_n$` 中最多只有 `$m$` 个线性无关。我们选择前 `$m$` 个向量，因为它们构成了 `$m$` 维空间中的自然基。则式(2.8)的一个可行解为
 
 ```
 $\mathbf{x}^T = [b_1 \; b_2 \; \cdots \; b_m \; 0 \; 0 \; \cdots \; 0], \quad (2.9)$
@@ -1152,15 +1205,15 @@ $\mathbf{x}^T = [b_1 \; b_2 \; \cdots \; b_m \; 0 \; 0 \; \cdots \; 0], \quad (2
 $I = p_1 b_1 + p_2 b_2 + \cdots + p_m b_m + p_{m+1} 0 + \cdots + p_n 0. \quad (2.10)$
 ```
 
-下一步通过改变 $m$ 维向量空间的基来改进性能指标。为此，我们将某个 $j > m$ 的 $\mathbf{a}_j$ 引入基，并从基中移除一个向量。由于基 $\{\mathbf{a}_1, \mathbf{a}_2, \cdots, \mathbf{a}_m\}$ 由单位向量组成，我们可以立即用其元素展开 $\mathbf{a}_j$：
+下一步通过改变 `$m$` 维向量空间的基来改进性能指标。为此，我们将某个 `$j > m$` 的 `$\mathbf{a}_j$` 引入基，并从基中移除一个向量。由于基 `$\{\mathbf{a}_1, \mathbf{a}_2, \cdots, \mathbf{a}_m\}$` 由单位向量组成，我们可以立即用其元素展开 `$\mathbf{a}_j$`：
 
 $$\mathbf{a}_j = a_{1j}\mathbf{a}_1 + a_{2j}\mathbf{a}_2 + \cdots + a_{mj}\mathbf{a}_m.\tag{2.11}$$ 
 
-现在，根据式(2.9)中的 $x_i$ 赋值，我们可以将式(2.8)写成
+现在，根据式(2.9)中的 `$x_i$` 赋值，我们可以将式(2.8)写成
 
 $$\mathbf{b} = \sum_{i=1}^{m} b_i\mathbf{a}_i + \alpha\mathbf{a}_j - \alpha\mathbf{a}_j,\tag{2.12}$$ 
 
-其中我们通过正常数 $\alpha$ 来灵活地包含 $\mathbf{a}_j$。利用式(2.11)，式(2.12)可整理为
+其中我们通过正常数 `$\alpha$` 来灵活地包含 `$\mathbf{a}_j$`。利用式(2.11)，式(2.12)可整理为
 
 $$\mathbf{b} = \sum_{i=1}^{m} (b_i - \alpha a_{ij})\mathbf{a}_i + \alpha\mathbf{a}_j.\tag{2.13}$$ 
 
@@ -1180,14 +1233,11 @@ $$I_{new} = I_{old} + \alpha(p_j - z_j)\tag{2.16}$$
 
 $$z_j = \sum_{i=1}^{m} a_{ij}p_i.\tag{2.17}$$ 
 
-为确保性能指标 $I$ 的值增大，$(p_j - z_j)$ 应为正值。因此，要选择哪个向量 $\mathbf{a}_j, j = m+1,\cdots,n$ 进入基，我们选择使 $(p_j - z_j)$ 最大的 $\mathbf{a}_j$。我们希望 $\alpha$ 尽可能大，但必须满足约束(2.6)。于是，由式(2.13)及新值 $x_i = (b_i - \alpha a_{ij})$，可选择的 $\alpha$ 最大值为
+为确保性能指标 `$I$` 的值增大，`$(p_j - z_j)$` 应为正值。因此，要选择哪个向量 `$\mathbf{a}_j, j = m+1,\cdots,n$` 进入基，我们选择使 `$(p_j - z_j)$` 最大的 `$\mathbf{a}_j$`。我们希望 `$\alpha$` 尽可能大，但必须满足约束(2.6)。于是，由式(2.13)及新值 `$x_i = (b_i - \alpha a_{ij})$`，可选择的 `$\alpha$` 最大值为
 
 $$\alpha = \min_k\left[\frac{b_k}{a_{kj}}\right] > 0,\quad k = 1,2,\cdots,m.\tag{2.18}$$ 
 
-如果对所有可能的替换 $j$，均有 $(p_j - z_j) \le 0$，那么若存在解，我们就已得到该解。量 $(z_j - p_j)$ 称为变量 $j$ 的*影子价格*，以及
-
-
-
+如果对所有可能的替换 `$j$`，均有 `$(p_j - z_j) \le 0$`，那么若存在解，我们就已得到该解。量 `$(z_j - p_j)$` 称为变量 `$j$` 的*影子价格*，以及
 
 **表2.1：5种食物的膳食问题**
 
@@ -1214,7 +1264,7 @@ $$x_1 + 7x_2 + 21x_3 + 8.6x_4 + 2x_5 \ge 25 \quad (\text{protein}) \tag{2.22}$$
 
 $$0.7x_2 + 2.7x_3 + 1.3x_4 + x_5 \ge 3.5 \quad (\text{iron}) \tag{2.23}$$
 
-其中 $x_i \ge 0$。每种食物也有上限。因此，根据表2.1的最后一列，还有额外的不等式约束：
+其中 `$x_i \ge 0$`。每种食物也有上限。因此，根据表2.1的最后一列，还有额外的不等式约束：
 
 $$x_1 \le 2 \tag{2.24}$$
 
@@ -1226,13 +1276,13 @@ $$x_4 \le 1 \tag{2.27}$$
 
 $$x_5 \le 1. \tag{2.28}$$
 
-为了将该问题转化为标准形式，我们先处理不等式（2.22）和（2.23），通过从左侧减去非负剩余变量 $x_6$ 和 $x_7$，将它们转换为等式，得到：
+为了将该问题转化为标准形式，我们先处理不等式（2.22）和（2.23），通过从左侧减去非负剩余变量 `$x_6$` 和 `$x_7$`，将它们转换为等式，得到：
 
 $$x_1 + 7x_2 + 21x_3 + 8.6x_4 + 2x_5 - x_6 = 25 \tag{2.29}$$
 
 $$0.7x_2 + 2.7x_3 + 1.3x_4 + x_5 - x_7 = 3.5. \tag{2.30}$$
 
-为了将不等式（2.24）–（2.28）和（2.20）–（2.21）转换为等式，我们加入非负松弛变量 $x_8$ 到 $x_{14}$，得到：
+为了将不等式（2.24）–（2.28）和（2.20）–（2.21）转换为等式，我们加入非负松弛变量 `$x_8$` 到 `$x_{14}$`，得到：
 
 $$x_1 + x_8 = 2 \tag{2.31}$$
 
@@ -1248,7 +1298,7 @@ $$1.25x_1 + 0.9x_2 + 0.99x_3 + 1.1x_4 + 0.79x_5 + x_{13} = 4 \tag{2.36}$$
 
 $$150x_1 + 185x_2 + 245x_3 + 270x_4 + 90x_5 + x_{14} = 800. \tag{2.37}$$
 
-现在所有约束都已转换为等式。然而，要开始线性规划的迭代，我们需要在A的分块部分中有一个单位矩阵。因此，我们在方程（2.29）–（2.30）中引入非负人工变量 $x_{15}$ 和 $x_{16}$，得到：
+现在所有约束都已转换为等式。然而，要开始线性规划的迭代，我们需要在A的分块部分中有一个单位矩阵。因此，我们在方程（2.29）–（2.30）中引入非负人工变量 `$x_{15}$` 和 `$x_{16}$`，得到：
 
 $$x_1 + 7x_2 + 21x_3 + 8.6x_4 + 2x_5 - x_6 + x_{15} = 25 \tag{2.38}$$
 
@@ -1258,35 +1308,45 @@ $$0.7x_2 + 2.7x_3 + 1.3x_4 + x_5 - x_7 + x_{16} = 3.5. \tag{2.39}$$
 
 $$Ax = b \tag{2.40}$$
 
-其中 $(9 \times 16)$ 矩阵 $A$ 为：
+其中 `$(9 \times 16)$` 矩阵 `$A$` 为：
 
 $$A = \left[ \begin{array}{c|c} C & I_9 \end{array} \right] \tag{2.41}$$
 
 其中
 
 $$C = \begin{bmatrix}
+
 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+
 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+
 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+
 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+
 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+
 1.25 & 0.9 & 0.99 & 1.1 & 0.79 & 0 & 0\\
+
 150 & 185 & 245 & 270 & 90 & 0 & 0\\
+
 1 & 7 & 21 & 8.6 & 2 & -1 & 0\\
+
 0 & 0.7 & 2.7 & 1.3 & 1 & 0 & -1
+
 \end{bmatrix}$$
 
-这里 $I_9$ 是 $(9 \times 9)$ 单位矩阵，且
+这里 `$I_9$` 是 `$(9 \times 9)$` 单位矩阵，且
 
 $$b^T = [2 \ 3 \ 2 \ 1 \ 1 \ 4 \ 800 \ 25 \ 3.5]. \tag{2.42}$$
 
-如前所述，在问题建模中，单位矩阵通常出现在A的最后m列，但这在计算机编程中没有区别，因为可以方便地分配正确的下标。现在必须改变性能指标，以考虑引入的额外变量。显然，剩余变量和松弛变量没有关联成本。然而，人工变量 $x_{15}$ 和 $x_{16}$ 被引入只是为了给 $A$ 提供必要的条目使其包含单位矩阵。由于人工变量不能出现在最终解中，为了在计算上实现这一目标，我们在性能指标中为这些人工变量赋予任意大的负成本因子（如-1000）。因此，要最大化的性能指标为：
+如前所述，在问题建模中，单位矩阵通常出现在A的最后m列，但这在计算机编程中没有区别，因为可以方便地分配正确的下标。现在必须改变性能指标，以考虑引入的额外变量。显然，剩余变量和松弛变量没有关联成本。然而，人工变量 `$x_{15}$` 和 `$x_{16}$` 被引入只是为了给 `$A$` 提供必要的条目使其包含单位矩阵。由于人工变量不能出现在最终解中，为了在计算上实现这一目标，我们在性能指标中为这些人工变量赋予任意大的负成本因子（如-1000）。因此，要最大化的性能指标为：
 
 $$I = 100x_1 + 50x_2 + 25x_3 + 20x_4 + 35x_5 + 0x_6 + 0x_7 + 0x_8 + 0x_9 + 0x_{10} + 0x_{11} + 0x_{12} + 0x_{13} + 0x_{14} - 1000x_{15} - 1000x_{16}. \tag{2.43}$$
 
 虽然现在有16个变量，但在个人计算机上的计算时间非常短，几乎瞬间就能得到结果。必须认识到编程工作量非常小。算法本身很容易编程，只需64行FORTRAN代码，如附录B所示。编写处理输入数据的输入和输出子程序所需的工作量比编写线性规划单纯形算法更大。重要的是输入尽可能简单，输出要有意义地呈现，食物能被正确标识和编号。
 
-```text
+```
 DIET PROBLEM WITH 5 FOODS
 
                  5     2     2     5
@@ -1303,6 +1363,8 @@ GRAPEFRUIT            35. 0.79  90. 2.0 1.0 1.0
 输入数据文件如图2.1所示。第一行是总标题。第二行输入给出食物数量、一般不等式约束所需的松弛变量数量、所需的剩余变量数量，以及简单上界约束所需的松弛变量数量。第三行按正确顺序提供不等式约束。其余数字参考表2.1即可明白。需要注意的是，输入文件中的食物没有编号，因此如果考虑增加食物或更换食物，可以很容易地更改输入数据。
 
 计算机程序的输出如图2.2所示。注意输出中食物被编号，以便正确识别影子价格。在这个例子中，计算速度太快，打印出的0.02秒CPU时间没有实际意义。
+
+
 
 ```text
 DIET PROBLEM WITH 5 FOODS
@@ -1366,10 +1428,6 @@ CPU TIME =     0.00000 SECONDS
 
 然而，对于存在非线性的问题，线性规划不能直接使用。可以使用线性化来处理非线性，如Sauer等人[36]在求解烷基化装置优化问题时所做的那样。然而，首选方法是使用无需对原始问题做任何更改的优化程序。一种可能性是使用Luus和Jaakola [29]的直接搜索优化，这将在下一节中介绍。
 
-
-
-
-
 **5种食物的饮食问题**
 
 | Food | Utility | Cost | Cal | Protein | Iron | Max |
@@ -1379,7 +1437,7 @@ CPU TIME =     0.00000 SECONDS
 | 3. Hamburger | 25.00 | 0.99 | 245.00 | 21.00 | 2.70 | 2.00 |
 | 4. Hot dog | 20.00 | 1.10 | 270.00 | 8.60 | 1.30 | 1.00 |
 | 5. Grapefruit | 38.00 | 0.79 | 90.00 | 2.00 | 1.00 | 1.00 |
-| * * * Constraints * * * |  | 4.00 | 800.00 | 25.00 | 3.50 |  |
+| `* * * Constraints * * *` |  | 4.00 | 800.00 | 25.00 | 3.50 |  |
 
 食物问题的解：
 
@@ -1404,19 +1462,19 @@ CPU TIME =      0.05000 SECONDS
 
 现在让我们考虑一种完全不同类型的优化程序来求解由式 (2.1)–(2.3) 给出的稳态优化问题。目前，假设式 (2.2) 中的等式约束不存在，或者它们性质简单，可以通过适当重新排列方程来消除。我们将在后面处理困难的等式约束。此时可以使用 Luus 和 Jaakola [29] 提出的直接搜索优化程序。从概念上讲，该优化程序非常简单，只涉及三个步骤：
 
-1. 给定某个初始点 x\*，通过方程在该点周围的 n 维空间中选择若干个随机点
+1. 给定某个初始点 `x*`，通过方程在该点周围的 `n` 维空间中选择若干个随机点
 
-   x = x\* + Dr (2.44)
+   $$x = x^* + D r$$  (2.44)
 
-   其中 D 是对角矩阵，其随机选择的对角元素位于区间 [−1,+1] 内，r 是区域大小向量。
+   其中 `D` 是对角矩阵，其随机选择的对角元素位于区间 [−1,+1] 内，`r` 是区域大小向量。
 
-2. 检查每个这样随机选择的点相对于不等式约束 (2.3) 的可行性。对每个可行点计算式 (2.1) 中的性能指标 I，并保留最佳 x 值。
+2. 检查每个这样随机选择的点相对于不等式约束 (2.3) 的可行性。对每个可行点计算式 (2.1) 中的性能指标 `I`，并保留最佳 `x` 值。
 
-3. 一个迭代由步骤 1 和 2 定义。在每次迭代结束时，x\* 被步骤 2 中获得的最佳可行 x 值所取代，并且区域大小向量 r 通过以下方式按 γ 缩小
+3. 一个迭代由步骤 1 和 2 定义。在每次迭代结束时，`x*` 被步骤 2 中获得的最佳可行 `x` 值所取代，并且区域大小向量 `r` 通过以下方式按 `γ` 缩小
 
    $$\mathbf{r}^{j+1} = \gamma \mathbf{r}^j$$  (2.45)
 
-   其中 γ 是区域收缩因子，例如 0.95，j 是迭代索引。该过程继续进行若干次迭代并检查结果。
+   其中 `γ` 是区域收缩因子，例如 0.95，`j` 是迭代索引。该过程继续进行若干次迭代并检查结果。
 
 为了提高该优化程序的效率并使其适用于高维优化问题，Luus 等人 [27] 在求解 84 维癌症化疗优化问题时发现，使用多遍程序（在每次迭代中使用相对较少的随机选择点）提高了计算效率。在多遍方法中，三步程序在给定次数的迭代后重复，通常使用比前一遍更小的初始区域大小。最近，Luus [22] 表明，在一遍开始时将区域大小选择为变量在前一遍中变化的范围是一种提高效率的有效策略。
 
@@ -1428,7 +1486,7 @@ CPU TIME =      0.05000 SECONDS
 
 #### 2.3.1 区域大小的确定
 
-LJ 优化程序的一个方面直到最近才被考虑，即如何在迭代开始时有效地选择区域大小向量 **r**，特别是在使用多遍程序时。该问题最近由 Luus [22] 提出，他建议初始区域大小应由变量在前一遍中的变化程度决定，并使用这种方法，在参数估计问题中实现了快速收敛 [23,25]。在使用多遍运行中每遍开始时可靠的区域大小值时，计算效率大大提高。例如，让我们考虑 Luus 和 Tassone [32] 引入的不可分离优化问题，我们有一个由三个差分方程描述的系统：
+LJ 优化程序的一个方面直到最近才被考虑，即如何在迭代开始时有效地选择区域大小向量 `r`，特别是在使用多遍程序时。该问题最近由 Luus [22] 提出，他建议初始区域大小应由变量在前一遍中的变化程度决定，并使用这种方法，在参数估计问题中实现了快速收敛 [23,25]。在使用多遍运行中每遍开始时可靠的区域大小值时，计算效率大大提高。例如，让我们考虑 Luus 和 Tassone [32] 引入的不可分离优化问题，我们有一个由三个差分方程描述的系统：
 
 $$x_1(k+1)=\frac{x_1(k)}{1+0.01u_1(k)(3+u_2(k))}$$  (2.46)
 
@@ -1454,17 +1512,13 @@ $$I=x_1^2(P)+x_2^2(P)+x_3^2(P)+\left[\left(\sum_{k=1}^{P}x_1^2(k-1)+x_2^2(k-1)+2
 
 其中 $P$ 是阶段数。
 
-当 $P$ 取为 100 时，我们有一个 300 变量的优化问题，因为在每个阶段都有三个控制变量需要确定。如果没有可靠地确定控制变量的区域大小的方法，问题会非常困难，但使用 [22] 中建议的方法，LJ 优化程序通过使用每次迭代 100 个随机点和 60 遍，每遍包含 201 次迭代，很容易解决了该问题，得出 I = 258.3393。该问题之所以困难，是因为最优控制策略缺乏平滑性。控制 u₁ 和 u₂ 在第 69 阶段发生了突然变化，如图 2.5 所示。
+当 $P$ 取为 100 时，我们有一个 300 变量的优化问题，因为在每个阶段都有三个控制变量需要确定。如果没有可靠地确定控制变量的区域大小的方法，问题会非常困难，但使用 [22] 中建议的方法，LJ 优化程序通过使用每次迭代 100 个随机点和 60 遍，每遍包含 201 次迭代，很容易解决了该问题，得出 `I = 258.3393`。该问题之所以困难，是因为最优控制策略缺乏平滑性。控制 `u₁` 和 `u₂` 在第 69 阶段发生了突然变化，如图 2.5 所示。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_61_0.png)
 
-图 2.5：最优控制策略，得到 I = 258.339218，使用 IDP 获得
+图 2.5：最优控制策略，得到 `I = 258.339218`，使用 IDP 获得
 
-尽管计算需求看起来巨大，但在 Pentium/120 个人计算机上的实际计算时间不到 20 分钟 [22]，这相当于在 Pentium II/350 上不到 6 分钟。该性能指标值非常接近使用迭代动态规划 [21] 获得的值 I = 258.33922。尽管该问题不可分离，但为了解决该问题，IDP 比 LJ 更有效，因为在 IDP 中，问题被作为 100 个阶段的 3 变量问题求解，而不是 300 变量优化问题。我们将在第 13 章讨论 IDP 和不可分离问题。
-
-
-
-
+尽管计算需求看起来巨大，但在 Pentium/120 个人计算机上的实际计算时间不到 20 分钟 [22]，这相当于在 Pentium II/350 上不到 6 分钟。该性能指标值非常接近使用迭代动态规划 [21] 获得的值 `I = 258.33922`。尽管该问题不可分离，但为了解决该问题，IDP 比 LJ 更有效，因为在 IDP 中，问题被作为 100 个阶段的 3 变量问题求解，而不是 300 变量优化问题。我们将在第 13 章讨论 IDP 和不可分离问题。
 
 这里，IDP 和 LJ 优化程序得到的控制策略几乎完全相同，其中在第 69 阶段控制变量 $u_1$ 和 $u_2$ 发生了突然变化。因此，LJ 优化程序非常适合用于检验其他方法得到的结果，特别是在最优控制策略与预期不同时，就像本例这种情况一样。存在一些问题，例如模型降阶，LJ 优化方法就很适用 [24]。为了说明该过程，我们考虑几个例子。
 
@@ -1492,21 +1546,23 @@ $G(s) = \frac{20.2583(1 + x_1 s + x_2 s^2)}{(1 + x_3 s)(1 + x_4 s + x_5 s^2)}$ (
 
 其中我们选择分子中的常数以保持稳态增益。
 
+
+
 如 [18] 中建议的，我们通过取 $\omega_1 = 0.01$ 且 $\omega_{i+1} = 1.1\omega_i$ 选择 100 个频率值，以覆盖 0.01 到 125 的频率范围，并通过最小化以
 
-$I = \sum_{i=1}^{100}[Re(F(j\omega_i)) - Re(G(j\omega_i))]^2 + [Im(F(j\omega_i)) - Im(G(j\omega_i))]^2.$ (2.56)
+$$
+I = \sum_{i=1}^{100}[Re(F(j\omega_i)) - Re(G(j\omega_i))]^2 + [Im(F(j\omega_i)) - Im(G(j\omega_i))]^2. \tag{2.56}
+$$
 
 表示的偏差平方和来选择参数 $x_i, i = 1, 2, \cdots, 5$。
 
-五个参数的初始值从原始系统的占优零点和极点选取，为 $x_1 = 1.4090$，$x_2 = 0.680928$，$x_3 = 1.0$，$x_4 = 1.0$，
-
-和 $x_5 = 0.5$。对于区域大小，我们选择第一次通过开始时为参数初始值的 0.1 倍；对于第二次通过，我们选择该初始值的 0.95 倍。对于所有后续通过，初始区域大小从每个特定变量的变化范围计算得出。区域大小在每次迭代后以 $\gamma = 0.95$ 减小。
+五个参数的初始值从原始系统的占优零点和极点选取，为 $x_1 = 1.4090$，$x_2 = 0.680928$，$x_3 = 1.0$，$x_4 = 1.0$，和 $x_5 = 0.5$。对于区域大小，我们选择第一次通过开始时为参数初始值的 0.1 倍；对于第二次通过，我们选择该初始值的 0.95 倍。对于所有后续通过，初始区域大小从每个特定变量的变化范围计算得出。区域大小在每次迭代后以 $\gamma = 0.95$ 减小。
 
 每次迭代使用的随机点数 $R$ 与每次通过 50 次迭代所需的通过次数之间存在权衡，以收敛到奈奎斯特图上偏差平方和的最小值 $I_{min} = 0.32782509$。这在表 2.3 中显示。计算时间针对运行所用的总通过次数给出。
 
-Table 2.2: LJ 优化程序的收敛情况显示每次迭代随机选取点的数量 R 对性能指标随通过次数变化的影响
+**Table 2.2: LJ 优化程序的收敛情况显示每次迭代随机选取点的数量 R 对性能指标随通过次数变化的影响**
 
-| Pass Number | R = 50 | R = 100 | R = 150 | R = 200 | R = 300 |
+| Pass Number | $R = 50$ | $R = 100$ | $R = 150$ | $R = 200$ | $R = 300$ |
 |---|---|---|---|---|---|
 | 1 | 246.91464 | 245.72210 | 246.97915 | 246.93550 | 247.03129 |
 | 2 | 247.02599 | 245.83314 | 246.99476 | 247.01367 | 247.05779 |
@@ -1520,9 +1576,11 @@ the same behavior, then it is natural to use the lower order transfer function. 
 
 Let us consider the eighth-order system of Krishnamurthy and Seshadri [9]
 
-$F(s) = \frac{194480 + 482964s + 511812s^2 + 278376s^3 + 82402s^4 + 13285s^5 + 1086s^6 + 35s^7}{9600 + 28880s + 37492s^2 + 27470s^3 + 11870s^4 + 3017s^5 + 437s^6 + 33s^7 + s^8}$ (2.54)
+$$
+F(s) = \frac{194480 + 482964s + 511812s^2 + 278376s^3 + 82402s^4 + 13285s^5 + 1086s^6 + 35s^7}{9600 + 28880s + 37492s^2 + 27470s^3 + 11870s^4 + 3017s^5 + 437s^6 + 33s^7 + s^8} \tag{2.54}
+$$
 
-Table 2.3: 每次迭代随机选取点的数量对收敛到 $I_{min} = 0.3278251$ 的影响
+**Table 2.3: 每次迭代随机选取点的数量对收敛到 $I_{min} = 0.3278251$ 的影响**
 
 | Random Points per Iteration $R$ | Number of Passes for Convergence | Number of Function Evaluations | CPU Time s | Passes |
 |---:|---:|---:|---:|---:|
@@ -1542,53 +1600,65 @@ Table 2.3: 每次迭代随机选取点的数量对收敛到 $I_{min} = 0.3278251
 
 得到的第三阶简化模型为
 
-$$G(s)=\frac{20.2583(1+0.84076s+0.55067s^2)}{(1+0.61769s)(1+0.73908s+0.53529s^2)}.$$(2.57)
+$$
+G(s)=\frac{20.2583(1+0.84076s+0.55067s^2)}{(1+0.61769s)(1+0.73908s+0.53529s^2)}. \tag{2.57}
+$$
 
 现在让我们考虑具有以下结构的四阶简化模型
 
-$$G(s)=\frac{20.2583(1+x_1s)(1+x_2s+x_3s^2)}{(1+x_4s+x_5s^2)(1+x_6s+x_7s^2)}.$$ (2.58)
+$$
+G(s)=\frac{20.2583(1+x_1s)(1+x_2s+x_3s^2)}{(1+x_4s+x_5s^2)(1+x_6s+x_7s^2)}. \tag{2.58}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_65_0.png)
 
-Figure 2.6: Convergence profile for the third order reduced model using N = 50 iterations per pass
+**Figure 2.6: Convergence profile for the third order reduced model using $N = 50$ iterations per pass**
 
-其中我们再次希望保持稳态增益。现在有 7 个参数需要确定。初始值再次从原始传递函数的占优零点和极点选取：x1 = 0.37923, x2 = 1.40900, x3 = 0.68093, x4 = 1.33333, x5 = 0.33333, x6 = 1.0, 和 x7 = 0.5。从第三阶模型降阶获得的经验来看，我们取每次迭代较少的随机点数（ R = 25），但大量通过。收敛速率非常依赖于容差 ε 用作防止特定区域坍塌的初始区域大小的最小值。如图 2.7 和 2.8 所示，无论每次通过使用 60 次迭代还是 40 次迭代，趋势相似。
+其中我们再次希望保持稳态增益。现在有 7 个参数需要确定。初始值再次从原始传递函数的占优零点和极点选取：$x_1 = 0.37923$, $x_2 = 1.40900$, $x_3 = 0.68093$, $x_4 = 1.33333$, $x_5 = 0.33333$, $x_6 = 1.0$, 和 $x_7 = 0.5$。从第三阶模型降阶获得的经验来看，我们取每次迭代较少的随机点数（$R = 25$），但大量通过。收敛速率非常依赖于容差 $\varepsilon$ 用作防止特定区域坍塌的初始区域大小的最小值。如图 2.7 和 2.8 所示，无论每次通过使用 60 次迭代还是 40 次迭代，趋势相似。
 
-这导致我们使用容差参数 ε = 10⁻⁵ 用于最初的 2000 次通过的方案；然后将其减小到 ε = 10⁻⁶ 用于接下来的 1000 次通过，并再次减小用于最后的 1000 次通过，如图 2.9 所示。如图所示，使用这种自适应容差参数选择，在 4000 次通过内即可实现收敛。Pentium/120 上 R = 25 且每次通过 N = 50 次迭代的计算时间为 2077s，并获得了非常精确的结果。使用 R = 200，结合自适应容差参数指定方法，收敛到 I_min = 0.00073136556 需 2929 次通过。计算上，然而，
-
-
+这导致我们使用容差参数 $\varepsilon = 10^{-5}$ 用于最初的 2000 次通过的方案；然后将其减小到 $\varepsilon = 10^{-6}$ 用于接下来的 1000 次通过，并再次减小用于最后的 1000 次通过，如图 2.9 所示。如图所示，使用这种自适应容差参数选择，在 4000 次通过内即可实现收敛。Pentium/120 上 $R = 25$ 且每次通过 $N = 50$ 次迭代的计算时间为 2077s，并获得了非常精确的结果。使用 $R = 200$，结合自适应容差参数指定方法，收敛到 $I_{min} = 0.00073136556$ 需 2929 次通过。计算上，然而，
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_67_0.png)
 
-图 2.8：使用每遍 N = 40 次迭代的收敛曲线，并使用 ε 作为参数
+**图 2.8：使用每遍 $N = 40$ 次迭代的收敛曲线，并使用 $\varepsilon$ 作为参数**
 
-其中 α_i 是传递函数 F(s) 的第 i 个极点，且
+其中 $\alpha_i$ 是传递函数 $F(s)$ 的第 $i$ 个极点，且
 
-f_i = lim_{s→α_i} (s − α_i) F(s)。  (2.61)
+$$
+f_i = \lim_{s \to \alpha_i} (s - \alpha_i) F(s). \tag{2.61}
+$$
 
-简化模型的输出 g(t) 为
+简化模型的输出 $g(t)$ 为
 
-g(t) = Σ_{i=1}^q g_i e^{β_i t}  (2.62)
+$$
+g(t) = \sum_{i=1}^{q} g_i e^{\beta_i t} \tag{2.62}
+$$
 
-其中 β_i 是传递函数 G(s) 的第 i 个极点，且
+其中 $\beta_i$ 是传递函数 $G(s)$ 的第 $i$ 个极点，且
 
-g_i = lim_{s→β_i} (s − β_i) G(s)。  (2.63)
+$$
+g_i = \lim_{s \to \beta_i} (s - \beta_i) G(s). \tag{2.63}
+$$
 
 需最小化的性能指标为
 
-I = ∫_0^T (f(t) − g(t))^2 dt,  (2.64)
+$$
+I = \int_0^T (f(t) - g(t))^2 dt, \tag{2.64}
+$$
 
-其中 T 足够大。
+其中 $T$ 足够大。
 
-取 T = 10 时，得到简化模型
+取 $T = 10$ 时，得到简化模型
 
-G(s) = 20.2583(1 + 0.22972s)(1 + 1.42268s + 0.71952s²) / [(1 + 1.15241s + 0.18572s²)(1 + 1.02491s + 0.51747s²)]。  (2.65)
+$$
+G(s) = \frac{20.2583(1 + 0.22972s)(1 + 1.42268s + 0.71952s^2)}{(1 + 1.15241s + 0.18572s^2)(1 + 1.02491s + 0.51747s^2)}. \tag{2.65}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_68_0.png)
 
-图 2.9：收敛曲线 R = 25 时 I = 0.00073136556，显示每遍迭代次数的影响。前 2000 遍 ε = 10⁻⁵，接下来 1000 遍 ε = 10⁻⁶，最后 1000 遍 ε = 10⁻⁷。
+**图 2.9：收敛曲线 $R = 25$ 时 $I = 0.00073136556$，显示每遍迭代次数的影响。前 2000 遍 $\varepsilon = 10^{-5}$，接下来 1000 遍 $\varepsilon = 10^{-6}$，最后 1000 遍 $\varepsilon = 10^{-7}$。**
 
-该简化模型的零点为 −4.3531，以及 −0.9886 ± 0.6422j，而极点为 −5.1620、−1.0431，以及 −0.9990 ± 0.9756j。
+该简化模型的零点为 $-4.3531$，以及 $-0.9886 \pm 0.6422j$，而极点为 $-5.1620$、$-1.0431$，以及 $-0.9990 \pm 0.9756j$。
 
 这两个简化模型的阶跃响应与原系统的阶跃响应几乎无法区分。
 
@@ -1600,34 +1670,35 @@ G(s) = 20.2583(1 + 0.22972s)(1 + 1.42268s + 0.71952s²) / [(1 + 1.15241s + 0.185
 
 首先考虑甲苯加氢，其中催化反应
 
-A ↔ B → C
+$A \rightleftharpoons B \rightarrow C$
 
 进行。浓度变化由三个微分方程描述
 
-```
-dx₁/dt = −r₁ + r₋₁  (2.66)
-```
+$$
+\frac{dx_1}{dt} = -r_1 + r_{-1} \tag{2.66}
+$$
 
-```
+$$
 \frac{dx_2}{dt} = -r_{-1} + r_1 - r_2 \tag{2.67}
-```
+$$
 
-```
+$$
 \frac{dx_3}{dt} = r_2 \tag{2.68}
-```
+$$
 
-其中 $r_1 = k_1\theta_A$, $r_{-1} = k_2\theta_B$, 和 $r_2 = k_3\theta_B$, 且表面覆盖率由下式给出
+其中 $r_1 = k_1\theta_A$，$r_{-1} = k_2\theta_B$，和 $r_2 = k_3\theta_B$，且表面覆盖率由下式给出
 
-```
+$$
 \theta_A = \frac{k_4 x_1}{k_4 x_1 + x_2 + k_5 x_3}, \quad \theta_B = \frac{x_2}{k_4 x_1 + x_2 + k_5 x_3}. \tag{2.69}
-```
+$$
 
 甲苯 (A) 的浓度由 $x_1$ 给出，1-甲基环己烯 (B) 由 $x_2$ 给出，甲基环己烷 (C) 由 $x_3$ 给出。从纯甲苯开始，Belohlav 等人 [1] 报告的浓度实验测量值给出为表 2.4 中的 13 个数据点。
 
-##### 表 2.4：Belohlav 等人 [1] 示例 1 的实验数据
+**表 2.4：Belohlav 等人 [1] 示例 1 的实验数据**
 
 | 时间, min | 测得浓度 | | |
 | | $\hat{x}_1$ | $\hat{x}_2$ | $\hat{x}_3$ |
+|---|---|---|---|
 | 15 | 0.695 | 0.312 | 0.001 |
 | 30 | 0.492 | 0.430 | 0.080 |
 | 45 | 0.276 | 0.575 | 0.151 |
@@ -1644,24 +1715,25 @@ dx₁/dt = −r₁ + r₋₁  (2.66)
 
 问题是按模型浓度值与在收集数据的 13 个点上测得的浓度值偏差平方和最小的意义，获得 $\mathbf{k}$ 的最佳估计。因此需最小化的性能指标为
 
-```
+$$
 I = \sum_{i=1}^{13} [\mathbf{x}(t_i) - \hat{\mathbf{x}}(t_i)]^T [\mathbf{x}(t_i) - \hat{\mathbf{x}}(t_i)]. \tag{2.70}
-```
+$$
 
-取参数向量 $\mathbf{k} = \begin{bmatrix}0.25 & 0.25 & 0.25 & 0.25 & 0.25\end{bmatrix}^T$ 作为初始值，给出 $I = 6.90489$，且每个变量第一遍的初始区域大小为 0.125，收敛到最小性能指标 $I = 0.01590003$ 很容易得到，给出 $k = [0.02511 0.00326 0.00873 1.27258 1.24230]^T$。这些参数值与 Belohlav 等人 [1] 给出的值相差相当大，即 $k = [0.023 0.005 0.011 1.9 1.8]^T$，给出 $I = 0.01789155$，但响应差异在视觉上难以检测。计算细节由 Luus [25] 给出。
+取参数向量 $\mathbf{k} = [0.25 \ 0.25 \ 0.25 \ 0.25 \ 0.25]^T$ 作为初始值，给出 $I = 6.90489$，且每个变量第一遍的初始区域大小为 0.125，收敛到最小性能指标 $I = 0.01590003$ 很容易得到，给出 $k = [0.02511 \ 0.00326 \ 0.00873 \ 1.27258 \ 1.24230]^T$。这些参数值与 Belohlav 等人 [1] 给出的值相差相当大，即 $k = [0.023 \ 0.005 \ 0.011 \ 1.9 \ 1.8]^T$，给出 $I = 0.01789155$，但响应差异在视觉上难以检测。计算细节由 Luus [25] 给出。
 
 ##### 示例 2
 
 现在考虑一个更具挑战性的问题，我们有四种化学物质。Belohlav 等人 [1] 得到的甲酯加氢实验数据
 
-A $\xrightarrow{r_1}$ B $\xrightarrow{r_2}$ C $\xrightarrow{r_3}$ D,
+$A \xrightarrow{r_1} B \xrightarrow{r_2} C \xrightarrow{r_3} D$,
 
 其中 $x_1$ 表示亚油酸 (A) 的浓度，$x_2$ 表示亚油酸 (B) 的浓度，$x_3$ 表示油酸 (C) 的浓度，$x_4$ 表示硬脂酸 (D) 的浓度，给出在表 2.5 中。酯类浓度的变化率由
 
-##### 表 2.5：Belohlav 等人 [1] 示例 2 的实验数据
+**表 2.5：Belohlav 等人 [1] 示例 2 的实验数据**
 
 | 时间, min | 测得浓度 | | | |
 | | $\hat{x}_1$ | $\hat{x}_2$ | $\hat{x}_3$ | $\hat{x}_4$ |
+|---|---|---|---|---|
 | 0 | 0.1012 | 0.2210 | 0.6570 | 0.0208 |
 | 10 | 0.0150 | 0.1064 | 0.6941 | 0.1977 |
 | 14 | 0.0044 | 0.0488 | 0.6386 | 0.3058 |
@@ -1673,49 +1745,55 @@ A $\xrightarrow{r_1}$ B $\xrightarrow{r_2}$ C $\xrightarrow{r_3}$ D,
 
 给出
 
-\[ \frac{dx_1}{dt} = -r_1 \tag{2.71} \]
-\[ \frac{dx_2}{dt} = r_1 - r_2 \tag{2.72} \]
-\[ \frac{dx_3}{dt} = r_2 - r_3 \tag{2.73} \]
-\[ \frac{dx_4}{dt} = r_3 \tag{2.74} \]
+$$
+\frac{dx_1}{dt} = -r_1 \tag{2.71}
+$$
+
+$$
+\frac{dx_2}{dt} = r_1 - r_2 \tag{2.72}
+$$
+
+$$
+\frac{dx_3}{dt} = r_2 - r_3 \tag{2.73}
+$$
+
+$$
+\frac{dx_4}{dt} = r_3 \tag{2.74}
+$$
 
 其中
 
-\[
+$$
 r_1=k_1\theta_A,\quad r_2=k_2\theta_B,\quad r_3=k_3\theta_C.
-\]
+$$
 
 Belohlav 等人 [1] 给出了表面覆盖率的以下表达式：
 
-\[
-\theta_A=\frac{x_1}{x_1+k_4x_2+k_5x_3+k_6x_4},
-\tag{2.75}
-\]
+$$
+\theta_A=\frac{x_1}{x_1+k_4x_2+k_5x_3+k_6x_4}, \tag{2.75}
+$$
 
-\[
-\theta_B=\frac{k_4x_2}{x_1+k_4x_2+k_5x_3+k_6x_4},
-\tag{2.76}
-\]
+$$
+\theta_B=\frac{k_4x_2}{x_1+k_4x_2+k_5x_3+k_6x_4}, \tag{2.76}
+$$
 
-\[
-\theta_C=\frac{k_5x_3}{x_1+k_4x_2+k_5x_3+k_6x_4}.
-\tag{2.77}
-\]
+$$
+\theta_C=\frac{k_5x_3}{x_1+k_4x_2+k_5x_3+k_6x_4}. \tag{2.77}
+$$
 
 参数估计问题是根据表 2.5 中四种化学物质浓度的测量值确定六个参数 $k_i$, $i=1,2,\ldots,6$ 的值。尽管 Belohlav 等人 [1] 使用了不同的优化准则，我们选择偏差平方和
 
-\[
-I=\sum_{k=1}^{7}\sum_{i=1}^{4}[x_i(t_k)-\hat{x}_i(t_k)]^2.
-\tag{2.78}
-\]
+$$
+I=\sum_{k=1}^{7}\sum_{i=1}^{4}[x_i(t_k)-\hat{x}_i(t_k)]^2. \tag{2.78}
+$$
 
 第一个数据点用作积分的初始条件；因此参数估计只需考虑 7 个数据点。
 
 对于参数估计我们使用 $\gamma=0.95$ 并允许每遍 101 次迭代，并使用参数的截然不同的初始值。对于参数搜索的区域大小，第一遍开始时我们选择 $r_{in}=0.5k^{(0)}$，第二遍选择 $r_{in}=0.25k^{(1)}$，对于后续遍，我们根据最近一遍中变量变化的程度选择初始区域大小，即
 
-\[
-r_{in,i}^{q+1}=|k_i^{q-1}-k_i^q|,\quad i=1,2,\ldots,6,
-\tag{2.79}
-\]
+$$
+r_{in,i}^{q+1}=|k_i^{q-1}-k_i^q|,\quad i=1,2,\ldots,6, \tag{2.79}
+$$
 
 其中 $q$ 表示遍数，如 Luus [22] 所建议。
 
@@ -1723,10 +1801,11 @@ r_{in,i}^{q+1}=|k_i^{q-1}-k_i^q|,\quad i=1,2,\ldots,6,
 
 当我们应用 LJ 优化程序时，发现收敛到截然不同的参数值集合，如表 2.6 所示。很明显，参数 $k_1,k_4,k_5$ 和 $k_6$ 之间的关系得以保留，如果按比例增大这些参数，性能指标会改善到最小值 $I=4.5777\times10^{-4}$。该性能指标值几乎比 Belohlav 等人 [1] 报告的参数值得到的 $4.3433\times10^{-3}$ 低 10 倍。因此很明显，$x_1$ 不应出现在表面覆盖率项的分母中。基于给定的实验数据，因此表面覆盖率项可以简化为
 
-\[
-\theta_A=\frac{x_1}{k_4x_2+k_5x_3+x_4}
-\tag{2.80}
-\]
+$$
+\theta_A=\frac{x_1}{k_4x_2+k_5x_3+x_4}. \tag{2.80}
+$$
+
+
 
 ```
 $$\theta_B = \frac{k_4 x_2}{k_4 x_2 + k_5 x_3 + x_4}\tag{2.81}$$
@@ -1736,29 +1815,25 @@ $$\theta_B = \frac{k_4 x_2}{k_4 x_2 + k_5 x_3 + x_4}\tag{2.81}$$
 $$\theta_C = \frac{k_5 x_3}{k_4 x_2 + k_5 x_3 + x_4},\tag{2.82}$$
 ```
 
-其中我们任意将 $k_6$ 设为 1。因此，对于此问题只有 5 个参数需要确定。
+其中我们任意将 `$k_6$` 设为 1。因此，对于此问题只有 5 个参数需要确定。
 
-使用此 5 参数模型，从截然不同的起点收敛到唯一的参数集合。图 2.10 显示了从初始值 $k_i^{(0)} = 0.05, i = 1,2,\cdots,5$ 开始收敛到 $I = 4.5777 \times 10^{-4}$ 的收敛曲线。该性能指标的最小值在使用 $R = 100$ 个随机选取点每迭代时仅用 6 遍得到，而在使用 $R = 200$ 时用 11 遍得到。观察到使用更多随机选取点不一定会增加收敛速度。在图 2.11 中，然而，从起点 $k_i^{(0)} = 1.0, i = 1,2,\cdots,5$ 开始，$R = 200$ 的收敛速度比 $R = 100$ 快，其中前者需要 15 遍才能收敛到 $I = 4.5777 \times 10^{-4}$。在每种情况下，参数的所得值均为：$k_1 = 0.42786$，$k_2 = 0.026877$，$k_3 = 0.094579$，$k_4 = 10.0760$，和 $k_5 = 0.57546$。
+使用此 5 参数模型，从截然不同的起点收敛到唯一的参数集合。图 2.10 显示了从初始值 `$k_i^{(0)} = 0.05, i = 1,2,\cdots,5$` 开始收敛到 `$I = 4.5777 \times 10^{-4}$` 的收敛曲线。该性能指标的最小值在使用 `$R = 100$` 个随机选取点每迭代时仅用 6 遍得到，而在使用 `$R = 200$` 时用 11 遍得到。观察到使用更多随机选取点不一定会增加收敛速度。在图 2.11 中，然而，从起点 `$k_i^{(0)} = 1.0, i = 1,2,\cdots,5$` 开始，`$R = 200$` 的收敛速度比 `$R = 100$` 快，其中前者需要 15 遍才能收敛到 `$I = 4.5777 \times 10^{-4}$`。在每种情况下，参数的所得值均为：`$k_1 = 0.42786$`，`$k_2 = 0.026877$`，`$k_3 = 0.094579$`，`$k_4 = 10.0760$`，和 `$k_5 = 0.57546$`。
 
 模型与实验数据的密切吻合在图 2.12 中显示，其中实线由使用最优确定的五个参数积分方程得到，符号表示表 2.5 中的数据。
 
-由于令人困惑的是 $x_1$ 为何不应出现在表面覆盖率项的分母中，可以假设 A 的存在不会阻碍其他物质的催化活性，并且本身不受催化剂影响。因此模型的结构可以通过完全消除 $\theta_A$ 来简化，并写成 $r_1 = k_1 x_1$。在此改变下，仅得到略高的性能指标，即 $I = 4.7506 \times 10^{-4}$，其中 $k_1 = 0.21093$，$k_2 = 0.027179$，$k_3 = 0.089990$，$k_4 = 9.9521$，和 $k_5 = 0.61614$。使用这些参数值和这种不同的模型结构，模型预测与数据之间的关系在图 2.13 中显示。如图所示，该模型预测与数据之间也有非常密切的对应关系。
+由于令人困惑的是 `$x_1$` 为何不应出现在表面覆盖率项的分母中，可以假设 A 的存在不会阻碍其他物质的催化活性，并且本身不受催化剂影响。因此模型的结构可以通过完全消除 `$\theta_A$` 来简化，并写成 `$r_1 = k_1 x_1$`。在此改变下，仅得到略高的性能指标，即 `$I = 4.7506 \times 10^{-4}$`，其中 `$k_1 = 0.21093$`，`$k_2 = 0.027179$`，`$k_3 = 0.089990$`，`$k_4 = 9.9521$`，和 `$k_5 = 0.61614$`。使用这些参数值和这种不同的模型结构，模型预测与数据之间的关系在图 2.13 中显示。如图所示，该模型预测与数据之间也有非常密切的对应关系。
 
 #### 2.3.5 处理等式约束
 
-在许多问题中，如果存在等式约束，它们通常很简单，可以通过适当的代换消除。例如在烷基化装置的优化中，有 7 个等式约束。然而，这 7 个等式约束被重新排列以将优化问题的维数从 10 减少到 3。这就变成了一个非常简单的优化问题，其解可在几分之一秒内得到。问题在于当我们有困难的等式约束时该怎么办。假设除了式 (2.3) 中的不等式约束外，我们还有 $m$ 个等式约束
+在许多问题中，如果存在等式约束，它们通常很简单，可以通过适当的代换消除。例如在烷基化装置的优化中，有 7 个等式约束。然而，这 7 个等式约束被重新排列以将优化问题的维数从 10 减少到 3。这就变成了一个非常简单的优化问题，其解可在几分之一秒内得到。问题在于当我们有困难的等式约束时该怎么办。假设除了式 (2.3) 中的不等式约束外，我们还有 `$m$` 个等式约束
 
 ```
 $$h_i(x_1, x_2, ..., x_n) = 0, \quad i = 1,2,...,m\tag{2.83}$$
 ```
 
-
-
-
-
 ![](img/06ae75163df4fdf5e1eec243d497d393_73_0.png)
 
-图 2.10：从初始值 $k_i = 0.05, i = 1,2,\cdots,5$ 到 $I = 4.5777 \times 10^{-4}$ 的收敛曲线，示例 2
+图 2.10：从初始值 `$k_i = 0.05, i = 1,2,\cdots,5$` 到 `$I = 4.5777 \times 10^{-4}$` 的收敛曲线，示例 2
 
 其中这些等式约束在“困难”的意义上是不能用来求解某个特定变量的。
 
@@ -1766,57 +1841,71 @@ $$h_i(x_1, x_2, ..., x_n) = 0, \quad i = 1,2,...,m\tag{2.83}$$
 
 $$J = I + \theta \sum_{i=1}^{m} (h_i - s_i)^2 \tag{2.84}$$
 
-其中为每个等式约束引入一个位移项 $s_i$。为了解决这个优化问题，LJ 优化程序以多遍方式使用，其中，在由若干次迭代组成的每遍开始时，区域尺寸被恢复为前一遍开始时尺寸的一部分。位移项 $s_i$ 在每遍之后简单地更新，通过根据式 (2.83) 中左侧在零处的偏差调整遍 $(q + 1)$ 开始时的值，即
+其中为每个等式约束引入一个位移项 `$s_i$`。为了解决这个优化问题，LJ 优化程序以多遍方式使用，其中，在由若干次迭代组成的每遍开始时，区域尺寸被恢复为前一遍开始时尺寸的一部分。位移项 `$s_i$` 在每遍之后简单地更新，通过根据式 (2.83) 中左侧在零处的偏差调整遍 `$(q + 1)$` 开始时的值，即
 
+```
 $$
 s_i^{q+1} = s_i^{q} - h_i, \quad i = 1,2,\ldots,m \tag{2.85}
 $$
+```
 
-其中 $q$ 为遍数。优化后，乘积 $-2\theta s_i$ 给出与第 $i$ 个等式约束相关的拉格朗日乘子，提供有用的灵敏度信息。我们将在第 10 章中使用这种方法来处理使用迭代动态规划 (IDP) 求解最终状态指定的最优控制问题时等式约束 [31]。让我们用一个简单的例子来说明该程序。
+其中 `$q$` 为遍数。优化后，乘积 `$-2\theta s_i$` 给出与第 `$i$` 个等式约束相关的拉格朗日乘子，提供有用的灵敏度信息。我们将在第 10 章中使用这种方法来处理使用迭代动态规划 (IDP) 求解最终状态指定的最优控制问题时等式约束 [31]。让我们用一个简单的例子来说明该程序。
 
 ##### 示例：几何问题
 
 让我们考虑 Luus [13] 使用的几何问题，以展示如何在 LJ 优化程序中处理等式约束，然后再次 [20] 展示位移项在优化中的使用。该问题是求椭球面与双曲面相交处到原点的最大距离。为了数学上的方便，我们考虑距离的平方。因此要求最大化
 
+```
 $$
 I = x_1^2 + x_2^2 + x_3^2 \tag{2.86}
 $$
+```
 
 受两个等式约束
 
+```
 $$
 h_1 = 4(x_1 - 0.5)^2 + 2(x_2 - 0.2)^2 + x_3^2 + 0.1 x_1 x_2 + 0.2 x_2 x_3 - 16 = 0 \tag{2.87}
 $$
+```
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_74_0.png)
 
-图 2.11：从初始值 $k_i = 1.0, i = 1,2,\cdots,5$ 到 $I = 4.5777 \times 10^{-4}$ 的收敛曲线，示例 2
+图 2.11：从初始值 `$k_i = 1.0, i = 1,2,\cdots,5$` 到 `$I = 4.5777 \times 10^{-4}$` 的收敛曲线，示例 2
 
 和
 
+```
 $$
 h_2 = 2x_1^2 + x_2^2 - 2x_3^2 - 2 = 0.
 $$
+```
 
 我们构造增广性能指标
 
+```
 $$
 J = I - \theta[(h_1-s_1)^2 + (h_2-s_2)^2],
 $$
+```
 
-其中 $\theta$ 为正的惩罚函数因子，位移项初始置零，然后在每遍 $q$ 之后通过
+其中 `$\theta$` 为正的惩罚函数因子，位移项初始置零，然后在每遍 `$q$` 之后通过
 
+```
 $$
 s_i^{q+1}=s_i^q-h_i, \qquad i=1,2.
 $$
+```
 
-更新。为观察迭代格式的收敛性，我们查看性能指标 $I$ 和约束违背范数
+更新。为观察迭代格式的收敛性，我们查看性能指标 `$I$` 和约束违背范数
 
+```
 $$
 S=|h_1|+|h_2|.
 $$
+```
 
-为用 LJ 优化程序求解此问题，我们将每个 $x_i$ 的初始值取为零，每个变量的区域尺寸取为 10。我们使用区域收缩因子 $\gamma=0.95$，并允许每遍 5 次迭代。对于前五遍，区域尺寸恢复为前一遍开始时值的 0.80 倍 ($\eta=0.80$)，对于其余遍，区域尺寸由变量变化的程度决定，最小值为 $10^{-6}$。我们选择每迭代 $R=25$ 个随机点。计算机程序的清单见附录 C。
+为用 LJ 优化程序求解此问题，我们将每个 `$x_i$` 的初始值取为零，每个变量的区域尺寸取为 10。我们使用区域收缩因子 `$\gamma=0.95$`，并允许每遍 5 次迭代。对于前五遍，区域尺寸恢复为前一遍开始时值的 0.80 倍 (`$\eta=0.80$`)，对于其余遍，区域尺寸由变量变化的程度决定，最小值为 `$10^{-6}$`。我们选择每迭代 `$R=25$` 个随机点。计算机程序的清单见附录 C。
 
 **表 2.6：使用 6 个参数进行参数估计的结果，示例 2，显示最优参数值的非唯一性**
 
@@ -1838,7 +1927,7 @@ $$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_75_0.png)
 
-图 2.12：模型预测（实线）与实验数据（符号）的比较，$I = 4.5777 \times 10^{-4}$
+图 2.12：模型预测（实线）与实验数据（符号）的比较，`$I = 4.5777 \times 10^{-4}$`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_77_0.png)
 
@@ -1865,11 +1954,6 @@ $$
 - [17] LUUS, R.: “A discussion on optimization of an alkylation process”, Int. J. Num. Methods in Eng. 10 (1976), 1187-1190.
 - [18] LUUS, R.: “Optimization in model reduction”, Int. J. Contr. 32 (1980), 741-747.
 - [19] LUUS, R.: “Optimization of heat exchanger networks”, Ind. Eng. Chem. Res. 32 (1993), 2633-2635.
-
-
-
-
-
 - [20] LUUS, R.: “直接搜索优化中处理困难的等式约束”, *Hung. J. Ind. Chem.* **24** (1996), 285-290.
 - [21] LUUS, R.: “迭代动态规划在不可分问题最优控制中的应用”, *Hung. J. Ind. Chem.* **25** (1996), 293-297.
 - [22] LUUS, R.: “LJ 优化程序区域大小的确定”, *Hung. J. Ind. Chem.* **26** (1998), 281-286.
@@ -1882,6 +1966,9 @@ $$
 - [29] LUUS, R. AND JAAKOLA, T.H.I.: “通过直接搜索和系统缩小搜索区域进行优化”, *AIChE J.* **19** (1973), 760-766.
 - [30] LUUS, R. AND MUTHARASAN, R.: “通过极点移动稳定线性系统行为”, *Int. J. Control* **20** (1974), 395-405.
 - [31] LUUS, R. AND STOREY, C.: “最终状态受约束系统的最优控制”, *Proc. IASTED Intl. Conf. Modelling, Simulation and Optimization*, Singapore, August 11-13, 1997, pp. 245-249.
+
+
+
 - [32] LUUS, R. AND TASSONE, V.: “通过迭代动态规划对不可分问题的最优控制”, *Proc. 42nd Canadian Chemical Engineering Conference*, Toronto, Canada, October 18-21, 1992, pp. 81-82.
 - [33] LUUS, R., WONG, C.W., AND KOSTELNIK, D.: “模型降阶中简化模型结构的重要性”, *Proc. IASTED Intl. Conf. Intelligent Systems and Control*, Santa Barbara, CA, October 28-30, 1999, pp. 322-326.
 - [34] LUUS, R. AND WYRWICZ, R.: “直接搜索优化中惩罚函数的使用”, *Hung. J. Ind. Chem.* **24** (1996), 273-278.
@@ -1923,7 +2010,6 @@ I = \sum_{k=1}^{P} c_k(t_k), \tag{3.1}
 
 我们希望确定作业的执行顺序以使性能指标最小化。对于所有可能的排序，我们需要检查 \(P!\) 个日程安排，当 \(P\) 较大时这变得难以处理。对于此类问题，动态规划非常适用。我们以 \(P = 5\) 个作业的情形为例说明。这与前面讨论的最优路径问题非常相似。我们将问题设想为涉及 5 个阶段。在阶段 1 我们有 5 个作业，在阶段 5 我们只有单个作业需要考虑。我们从最后阶段（阶段 5）开始，涉及一个
 
-
 对于其他9个集合，表格补全，显示了三个作业的最小成本。
 
 ##### 表3.2：3个作业的顺序与最小成本
@@ -1959,11 +2045,11 @@ I = \sum_{k=1}^{P} c_k(t_k), \tag{3.1}
 
 #### 3.2.3 石头问题
 
-让我们举例说明如何使用动态规划求解一个以速度$v_0$向上抛出的石头能升多高的问题。我们假设空气阻力不可忽略，因此石头的运动方程可以写为
+让我们举例说明如何使用动态规划求解一个以速度`v0`向上抛出的石头能升多高的问题。我们假设空气阻力不可忽略，因此石头的运动方程可以写为
 
 $$\frac{dv}{dt}=-g-kv^2 \tag{3.2}$$
 
-初始条件为$t=0$时$v=v_0$。显然，高度是初速度的函数。我们将轨迹分成两部分：第一部分是石头在短时间$\Delta t$内走过的短距离，第二部分是轨迹的其余部分
+初始条件为`t=0`时`v=v0`。显然，高度是初速度的函数。我们将轨迹分成两部分：第一部分是石头在短时间`Δt`内走过的短距离，第二部分是轨迹的其余部分
 
 $$h(v_0)=v_0\Delta t+h\left(v_0+\frac{dv}{dt}\Delta t\right)+O(\Delta t^2). \tag{3.3}$$
 
@@ -1971,11 +2057,11 @@ $$h(v_0)=v_0\Delta t+h\left(v_0+\frac{dv}{dt}\Delta t\right)+O(\Delta t^2). \tag
 
 $$h(v_0)=v_0\Delta t+h(v_0)-[(g+kv_0^2)\Delta t]\frac{dh(v_0)}{dv_0}+O(\Delta t^2). \tag{3.4}$$
 
-将式(3.4)重新整理并除以$\Delta t$，得到
+将式(3.4)重新整理并除以`Δt`，得到
 
 $$\frac{dh(v_0)}{dv_0}=\frac{v_0}{g+kv_0^2}+O(\Delta t). \tag{3.5}$$
 
-现在令 Δt → 0，得到一阶常微分方程
+现在令 `Δt → 0`，得到一阶常微分方程
 
 $$\frac{dh(v_0)}{dv_0}=\frac{v_0}{g+k v_0^2},\qquad (3.6)$$
 
@@ -1983,7 +2069,7 @@ $$\frac{dh(v_0)}{dv_0}=\frac{v_0}{g+k v_0^2},\qquad (3.6)$$
 
 $$h(v_0)=\frac{1}{2k}\ln\left(1+\frac{k v_0^2}{g}\right).\qquad (3.7)$$
 
-当$k$小到可以忽略时，我们看到$h(v_0)\to v_0^2/2g$，这一结果可以通过令初始时刻的动能与最大高度处的势能相等而得到。
+当`k`小到可以忽略时，我们看到`h(v0)→ v0^2/2g`，这一结果可以通过令初始时刻的动能与最大高度处的势能相等而得到。
 
 #### 3.2.4 简单最优控制问题
 
@@ -1991,13 +2077,13 @@ $$h(v_0)=\frac{1}{2k}\ln\left(1+\frac{k v_0^2}{g}\right).\qquad (3.7)$$
 
 $$x(k+1)=a x(k)+b u(k),\qquad k=0,1,2,\cdots,P-1,\qquad (3.8)$$
 
-其中初始状态$x(0)$给定，最终状态$x(P)=0$。我们假设对控制$u(k)$没有约束。最优控制问题是要选择$u(k),k=0,1,2,\cdots,P-1$，使得性能指标
+其中初始状态`x(0)`给定，最终状态`x(P)=0`。我们假设对控制`u(k)`没有约束。最优控制问题是要选择`u(k),k=0,1,2,\cdots,P-1`，使得性能指标
 
 $$I[x(0),P]=\sum_{k=1}^{P}[x^2(k)+u^2(k-1)]\qquad (3.9)$$
 
-最小化。这里我们显式地给出了性能指标对初始状态和步数$P$的依赖关系。自然地，性能指标也是控制策略的函数，而该控制策略必须被选择以实现最小化。为了用动态规划求解此问题，我们首先考虑一个单阶段问题，然后逐步增加阶段数，直到所提出的问题被求解。
+最小化。这里我们显式地给出了性能指标对初始状态和步数`P`的依赖关系。自然地，性能指标也是控制策略的函数，而该控制策略必须被选择以实现最小化。为了用动态规划求解此问题，我们首先考虑一个单阶段问题，然后逐步增加阶段数，直到所提出的问题被求解。
 
-$P = 1$
+`P = 1`
 
 当我们有一个单阶段问题时，性能指标为
 
@@ -2011,15 +2097,15 @@ $$u(0)=\frac{x(1)-a x(0)}{b}=-\frac{a}{b}x(0).\qquad (3.11)$$
 
 $$I[x(0),1]=\frac{a^2}{b^2}x^2(0).\qquad (3.12)$$
 
-接下来我们考虑$P=2$阶段的情况。
+接下来我们考虑`P=2`阶段的情况。
 
-##### $P = 2$
+##### `P = 2`
 
-对于两个阶段，我们从$x(0)$出发，前进到$x(1)$，然后到$x(2)=0$。要最小化的性能指标为
+对于两个阶段，我们从`x(0)`出发，前进到`x(1)`，然后到`x(2)=0`。要最小化的性能指标为
 
 $$I[x(0),2]=x^2(1)+u^2(0)+x^2(2)+u^2(1)=x^2(1)+u^2(0)+u^2(1). \tag{3.13}$$
 
-一旦到达$x(1)$，我们就已经知道如何到达$x(2)=0$，因为这是上面已求解的单阶段问题。因此我们有
+一旦到达`x(1)`，我们就已经知道如何到达`x(2)=0`，因为这是上面已求解的单阶段问题。因此我们有
 
 $$u(1)=-\frac{a}{b}x(1). \tag{3.14}$$
 
@@ -2027,38 +2113,37 @@ $$u(1)=-\frac{a}{b}x(1). \tag{3.14}$$
 
 $$I[x(0),2]=\left(1+\frac{a^2}{b^2}\right)x^2(1)+u^2(0). \tag{3.15}$$
 
-利用$k=0$时的式(3.8)，我们可以将性能指标重写为仅关于$u(0)$的显式函数，即
+利用`k=0`时的式(3.8)，我们可以将性能指标重写为仅关于`u(0)`的显式函数，即
 
 $$I[x(0),2]=\left(1+\frac{a^2}{b^2}\right)[ax(0)+bu(0)]^2+u^2(0). \tag{3.16}$$
 
-对式(3.16)关于$u(0)$求导，得
+对式(3.16)关于`u(0)`求导，得
 
 $$\frac{dI[x(0),2]}{du(0)}=2b\left(1+\frac{a^2}{b^2}\right)[ax(0)+bu(0)]+2u(0). \tag{3.17}$$
 
-由于性能指标的二阶导数为正，使性能指标最小化的$u(0)$的选取由驻点条件给出，即
+由于性能指标的二阶导数为正，使性能指标最小化的`u(0)`的选取由驻点条件给出，即
 
 $$u(0)=-\left(\frac{ab+(a^3/b)}{1+a^2+b^2}\right)x(0). \tag{3.18}$$
 
-我们现在可以准备考虑$P=3$阶段的情况了。
+我们现在可以准备考虑`P=3`阶段的情况了。
 
-##### $P = 3$
+##### `P = 3`
 
-增加一个阶段后，计算的模式变得清晰。当$P=3$时，性能指标为
+增加一个阶段后，计算的模式变得清晰。当`P=3`时，性能指标为
 
 $$I[x(0),3]=x^2(1)+u^2(0)+x^2(2)+u^2(1)+u^2(2), \tag{3.19}$$
 
-因为$x(3)=0$。这里我们知道，如前所确定的，$u(2)$和$u(1)$的最优选择为
+因为`x(3)=0`。这里我们知道，如前所确定的，`u(2)`和`u(1)`的最优选择为
 
 $$u(2)=-\frac{a}{b}x(2). \tag{3.20}$$
-
-
-
 
 and
 
 $$u(1)=-\left(\frac{ab+(a^3/b)}{1+a^2+b^2}\right)x(1). \tag{3.21}$$
 
-性能指标现在可以表示为 $u(0)$ 的显式函数，并且该过程可以重复。
+性能指标现在可以表示为 `u(0)` 的显式函数，并且该过程可以重复。
+
+
 
 尽管从分析上看该过程最终会变得繁琐，但数值上这种优化可以非常容易地完成。通过使用动态规划，$P$ 个联立方程的求解被替换为处理单个方程的程序，但要做 $P$ 次。因此并行计算被串行计算所取代。
 
@@ -2066,29 +2151,41 @@ $$u(1)=-\left(\frac{ab+(a^3/b)}{1+a^2+b^2}\right)x(1). \tag{3.21}$$
 
 作为进一步的例子，我们考虑一个线性最优控制问题，其中系统由下式描述
 
-$$\mathbf{x}(k+1)=\boldsymbol{\Phi}\mathbf{x}(k)+\boldsymbol{\Psi}\mathbf{u}(k),\qquad k=0,1,\ldots,P-1, \tag{3.22}$$
+$$
+\mathbf{x}(k+1)=\boldsymbol{\Phi}\mathbf{x}(k)+\boldsymbol{\Psi}\mathbf{u}(k),\qquad k=0,1,\ldots,P-1, \tag{3.22}
+$$
 
 其中 $\boldsymbol{\Phi}$ 和 $\boldsymbol{\Psi}$ 是常数矩阵，且初始条件 $\mathbf{x}(0)$ 已知。性能指标假定具有二次形式
 
-$$I[\mathbf{x}(0),P]=\sum_{k=1}^{P}\left[\mathbf{x}^{T}(k)\mathbf{Q}\mathbf{x}(k)+\mathbf{u}^{T}(k-1)\mathbf{R}\mathbf{u}(k-1)\right]. \tag{3.23}$$
+$$
+I[\mathbf{x}(0),P]=\sum_{k=1}^{P}\left[\mathbf{x}^{T}(k)\mathbf{Q}\mathbf{x}(k)+\mathbf{u}^{T}(k-1)\mathbf{R}\mathbf{u}(k-1)\right]. \tag{3.23}
+$$
 
 其中 $\mathbf{R}$ 是正定对称矩阵，$\mathbf{Q}$ 是正半定对称矩阵。令我们定义
 
-$$I^0[\mathbf{x}(0),P]=\min I[\mathbf{x}(0),P] \tag{3.24}$$
+$$
+I^0[\mathbf{x}(0),P]=\min I[\mathbf{x}(0),P] \tag{3.24}
+$$
 
 使得 $I^0[\mathbf{x}(0),P]$ 是在 $P$ 个控制阶段上性能指标的最优值。因此
 
-$$I^0[\mathbf{x}(0),P]=\min_{\mathbf{u}(0)}\min_{\mathbf{u}(1)}\cdots\min_{\mathbf{u}(P-1)}\sum_{k=1}^{P}\left[\mathbf{x}^{T}(k)\mathbf{Q}\mathbf{x}(k)+\mathbf{u}^{T}(k-1)\mathbf{R}\mathbf{u}(k-1)\right]. \tag{3.25}$$
+$$
+I^0[\mathbf{x}(0),P]=\min_{\mathbf{u}(0)}\min_{\mathbf{u}(1)}\cdots\min_{\mathbf{u}(P-1)}\sum_{k=1}^{P}\left[\mathbf{x}^{T}(k)\mathbf{Q}\mathbf{x}(k)+\mathbf{u}^{T}(k-1)\mathbf{R}\mathbf{u}(k-1)\right]. \tag{3.25}
+$$
 
 我们可以使用动态规划中的最优性原理重写该表达式为
 
-$$I^0[\mathbf{x}(0),P]=\min_{\mathbf{u}(0)}\left[\mathbf{x}^{T}(1)\mathbf{Q}\mathbf{x}(1)+\mathbf{u}^{T}(0)\mathbf{R}\mathbf{u}(0)+I^0[\mathbf{x}(1),P-1]\right], \tag{3.26}$$
+$$
+I^0[\mathbf{x}(0),P]=\min_{\mathbf{u}(0)}\left[\mathbf{x}^{T}(1)\mathbf{Q}\mathbf{x}(1)+\mathbf{u}^{T}(0)\mathbf{R}\mathbf{u}(0)+I^0[\mathbf{x}(1),P-1]\right], \tag{3.26}
+$$
 
 这提供了动态规划的递推关系。
 
 假设最优性能指标可以写成
 
-$$I^0[\mathbf{x}(0),P]=\mathbf{x}^{T}(0)\mathbf{J}_P\mathbf{x}(0). \tag{3.27}$$
+$$
+I^0[\mathbf{x}(0),P]=\mathbf{x}^{T}(0)\mathbf{J}_P\mathbf{x}(0). \tag{3.27}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_91_0.png)
 
@@ -2096,15 +2193,21 @@ $$I^0[\mathbf{x}(0),P]=\mathbf{x}^{T}(0)\mathbf{J}_P\mathbf{x}(0). \tag{3.27}$$
 
 状态方程可以写成
 
-$$x(k+1)=\frac{x(k)}{1+\alpha u(k+1)},\qquad k=0,1,2.\tag{3.35}$$
+$$
+x(k+1)=\frac{x(k)}{1+\alpha u(k+1)},\qquad k=0,1,2.\tag{3.35}
+$$
 
 我们希望选择流速 $w(1), w(2),$ 和 $w(3)$，或归一化形式 $u(1), u(2),$ 和 $u(3)$，以便从萃余液流中去除最大量的溶质。然而，使用萃取溶剂是有成本的。因此，要最大化的性能指标选为
 
-$$I[x(0),3]=[x(0)-x(3)]-\theta[u(1)+u(2)+u(3)],\tag{3.36}$$
+$$
+I[x(0),3]=[x(0)-x(3)]-\theta[u(1)+u(2)+u(3)],\tag{3.36}
+$$
 
 其中 $\theta$ 是与使用萃取溶剂相关联的成本因子。这种优化问题非常适合动态规划。当有 $P$ 个阶段时，性能指标变为
 
-$$I[x(0),P]=[x(0)-x(P)]-\theta\sum_{i=1}^{P}u(i).\tag{3.37}$$
+$$
+I[x(0),P]=[x(0)-x(P)]-\theta\sum_{i=1}^{P}u(i).\tag{3.37}
+$$
 
 正如我们在前面简单的最优控制问题中所做的那样，我们通过首先考虑 $P=1$ 然后增加 $P$ 直到达到 $P=3$ 来求解此优化问题。
 
@@ -2112,27 +2215,39 @@ $P = 1$
 
 当我们只有一个阶段时，性能指标为
 
-$$I[x(0),1]=[x(0)-x(1)]-\theta u(1)\tag{3.38}$$
+$$
+I[x(0),1]=[x(0)-x(1)]-\theta u(1)\tag{3.38}
+$$
 
 其中
 
-$$x(1)=\frac{x(0)}{1+\alpha u(1)}.\tag{3.39}$$
+$$
+x(1)=\frac{x(0)}{1+\alpha u(1)}.\tag{3.39}
+$$
 
 从而 $u(1)$ 的最优值为
 
-$$u^0(1)=\left[\frac{x(0)}{\alpha^2\theta}\right]^{\frac{1}{3}}-\frac{1}{\alpha}\tag{3.49}$$
+$$
+u^0(1)=\left[\frac{x(0)}{\alpha^2\theta}\right]^{\frac{1}{3}}-\frac{1}{\alpha}\tag{3.49}
+$$
 
 并且
 
-$$x(1)=\left[\frac{x^2(0)\theta}{\alpha}\right]^{\frac{1}{3}}.\tag{3.50}$$
+$$
+x(1)=\left[\frac{x^2(0)\theta}{\alpha}\right]^{\frac{1}{3}}.\tag{3.50}
+$$
 
 $P=2$ 时的最优性能指标为
 
-$$I^0[x(0),2]=x(0)-3\left[\frac{\theta^2 x(0)}{\alpha^2}\right]^{\frac{1}{3}}+\frac{2\theta}{\alpha}.\tag{3.51}$$
+$$
+I^0[x(0),2]=x(0)-3\left[\frac{\theta^2 x(0)}{\alpha^2}\right]^{\frac{1}{3}}+\frac{2\theta}{\alpha}.\tag{3.51}
+$$
 
 此时值得注意的是
 
-$$u^0(2)=\left[\frac{x(1)}{\alpha\theta}\right]^{\frac{1}{2}}-\frac{1}{\alpha}=\left[\left[\frac{x^2(0)\theta}{\alpha}\right]^{\frac{1}{3}}\frac{1}{\alpha\theta}\right]^{\frac{1}{2}}-\frac{1}{\alpha}=u^0(1).\tag{3.52}$$
+$$
+u^0(2)=\left[\frac{x(1)}{\alpha\theta}\right]^{\frac{1}{2}}-\frac{1}{\alpha}=\left[\left[\frac{x^2(0)\theta}{\alpha}\right]^{\frac{1}{3}}\frac{1}{\alpha\theta}\right]^{\frac{1}{2}}-\frac{1}{\alpha}=u^0(1).\tag{3.52}
+$$
 
 因此，最优策略是在每个阶段以相等数量分配萃取溶剂。
 
@@ -2140,35 +2255,51 @@ $$u^0(2)=\left[\frac{x(1)}{\alpha\theta}\right]^{\frac{1}{2}}-\frac{1}{\alpha}=\
 
 $P=3$ 时的最优性能指标为
 
-$$I^0[x(0),3]=\max_{u(1)}\left[u(1)\left(\frac{\alpha x(0)}{1+\alpha u(1)}-\theta\right)+I^0[x(1),2]\right],\tag{3.53}$$
+$$
+I^0[x(0),3]=\max_{u(1)}\left[u(1)\left(\frac{\alpha x(0)}{1+\alpha u(1)}-\theta\right)+I^0[x(1),2]\right],\tag{3.53}
+$$
 
 其中上一步已计算的最后一项为
 
-$$I^0[x(1),2]=x(1)-3\left[\frac{\theta^2 x(1)}{\alpha^2}\right]^{\frac{1}{3}}+\frac{2\theta}{\alpha}.\tag{3.54}$$
+$$
+I^0[x(1),2]=x(1)-3\left[\frac{\theta^2 x(1)}{\alpha^2}\right]^{\frac{1}{3}}+\frac{2\theta}{\alpha}.\tag{3.54}
+$$
 
 将式 (3.54) 代入式 (3.53) 并对 $u(1)$ 求导，我们得到驻定条件
 
-$$\theta(1+\alpha u(1))^2=\frac{\theta^2 x(0)}{\alpha}\left[\frac{\theta^2 x(0)}{\alpha^2(1+\alpha u(1))}\right]^{-\frac{2}{3}},\tag{3.55}$$
+$$
+\theta(1+\alpha u(1))^2=\frac{\theta^2 x(0)}{\alpha}\left[\frac{\theta^2 x(0)}{\alpha^2(1+\alpha u(1))}\right]^{-\frac{2}{3}},\tag{3.55}
+$$
 
 从而
 
-$$1+\alpha u(1)=\left[\frac{x(0)\alpha}{\theta}\right]^{\frac{1}{4}}.\tag{3.56}$$
+$$
+1+\alpha u(1)=\left[\frac{x(0)\alpha}{\theta}\right]^{\frac{1}{4}}.\tag{3.56}
+$$
 
 因此，控制到第一阶段的最优值为
 
-$$u^0(1)=\left[\frac{x(0)}{\alpha^3\theta}\right]^{\frac{1}{4}}-\frac{1}{\alpha},\tag{3.57}$$
+$$
+u^0(1)=\left[\frac{x(0)}{\alpha^3\theta}\right]^{\frac{1}{4}}-\frac{1}{\alpha},\tag{3.57}
+$$
 
 并且离开该阶段的萃余液流中的溶质浓度为
 
-$$x(1)=\left[\frac{x^{3}(0)\theta}{\alpha}\right]^{\frac{1}{4}}.$$ (3.58)
+$$
+x(1)=\left[\frac{x^{3}(0)\theta}{\alpha}\right]^{\frac{1}{4}}. \tag{3.58}
+$$
 
 $P = 3$ 时的最优性能指标为
 
-$$I^{0}[x(0),3]=x(0)-4\left[\frac{\theta^{3}x(0)}{\alpha^{3}}\right]^{\frac{1}{4}}+\frac{3\theta}{\alpha}.$$ (3.59)
+$$
+I^{0}[x(0),3]=x(0)-4\left[\frac{\theta^{3}x(0)}{\alpha^{3}}\right]^{\frac{1}{4}}+\frac{3\theta}{\alpha}. \tag{3.59}
+$$
 
 很容易证明最优控制策略为
 
-$$u^{0}(1)=u^{0}(2)=u^{0}(3),$$ (3.60)
+$$
+u^{0}(1)=u^{0}(2)=u^{0}(3), \tag{3.60}
+$$
 
 表明萃取溶剂应在每个阶段以相等数量分配。
 
@@ -2186,45 +2317,49 @@ $$u^{0}(1)=u^{0}(2)=u^{0}(3),$$ (3.60)
 
 [4] LAPIDUS, L. AND LUUS, R.: *Optimal control of engineering processes*, Blaisdell, Waltham, Mass., 1967.
 
-## 第 4 章
-
-## 迭代动态规划
+## 第 4 章 迭代动态规划
 
 ### 4.1 引言
 
 我们考虑由向量微分方程描述的连续动态系统
 
-$$\frac{d\mathbf{x}}{dt}=\mathbf{f}(\mathbf{x},\mathbf{u},t)\tag{4.1}$$
+$$
+\frac{d\mathbf{x}}{dt}=\mathbf{f}(\mathbf{x},\mathbf{u},t)\tag{4.1}
+$$
 
 初始状态 $\mathbf{x}(0)$ 已知，其中 $\mathbf{x}$ 是 $(n\times1)$ 状态向量，$\mathbf{u}$ 是 $(m\times1)$ 控制向量，受限于
 
-$$\alpha_j \le u_j(t) \le \beta_j,\quad j=1,2,\cdots,m.\tag{4.2}$$
+$$
+\alpha_j \le u_j(t) \le \beta_j,\quad j=1,2,\cdots,m.\tag{4.2}
+$$
 
 对于性能指标，我们选择一种特殊形式的标量函数以允许讨论优化过程：
 
-$$I[\mathbf{x}(0),t_f]=\Psi(\mathbf{x}(t_f))+\int_{0}^{t_f}\phi(\mathbf{x},\mathbf{u},t)dt,\tag{4.3}$$
+$$
+I[\mathbf{x}(0),t_f]=\Psi(\mathbf{x}(t_f))+\int_{0}^{t_f}\phi(\mathbf{x},\mathbf{u},t)dt,\tag{4.3}
+$$
 
 其中最终时间 $t_f$ 是指定的。最优控制问题是选择时间区间 $0\le t < t_f$ 中的控制策略 $\mathbf{u}(t)$，使得该性能指标最小化。我们也可能有状态约束，但为简单起见，我们将这些留到第 11 章再考虑。
 
 迭代动态规划的初始思想由 Luus [5] 提出并测试，然后经过改进 [4] 使计算过程更加高效。关于使用动态规划的基本思想基于第 3 章中考虑的最优路径问题，并被改编为求解最优控制问题。
 
-
-
-
-
 ### 4.2 时间阶段的构造
 
 为了将问题按动态规划的要求划分为一系列阶段，我们可以通过要求分段常值控制策略而非连续控制策略来近似最优控制问题，共分为 $P$ 个阶段，每个阶段长度为 $L$，使得
 
-$$L=\frac{t_f}{P}. \tag{4.4}$$
+$$
+L=\frac{t_f}{P}. \tag{4.4}
+$$
 
 于是性能指标被近似为
 
-$$I[\mathbf{x}(0),P]=\Psi(\mathbf{x}(t_f))+\sum_{k=1}^{P}\int_{t_{k-1}}^{t_k}\phi(\mathbf{x}(t),\mathbf{u}(k-1),t)\,dt, \tag{4.5}$$
+$$
+I[\mathbf{x}(0),P]=\Psi(\mathbf{x}(t_f))+\sum_{k=1}^{P}\int_{t_{k-1}}^{t_k}\phi(\mathbf{x}(t),\mathbf{u}(k-1),t)\,dt, \tag{4.5}
+$$
 
 其中 $t_{k-1}$ 是阶段 $k$ 开始时的时间，$\mathbf{u}(k-1)$ 是时间区间 $t_{k-1}\leq t\leq t_k$ 中的常值控制，我们可以考虑在这些 $P$ 个阶段上设置的网格点处的系统。我们也可以使用分段线性近似，且阶段不一定需要等长。这些思想将在后续章节中展开。目前我们希望尽可能保持简单。
 
-### 4.3 x 的网格构造
+### 4.3 `x` 的网格构造
 
 状态向量 $\mathbf{x}$ 的每个分量 $x_i$ 在每个时间阶段允许在区域 $s_i$ 上取 $N$ 个值，第一个阶段除外，第一个阶段取为指定的初始条件。因此在第 2、3、…、$P$ 阶段共有 $N^n$ 个网格点。网格的中心点取为上一次迭代得到的 $\mathbf{x}$ 的最佳值。
 
@@ -2234,25 +2369,27 @@ $$I[\mathbf{x}(0),P]=\Psi(\mathbf{x}(t_f))+\sum_{k=1}^{P}\int_{t_{k-1}}^{t_k}\ph
 
 ### 4.5 第一次迭代
 
-从给定的初始条件 $\mathbf{x}(0)$ 和式 (4.2) 指定的约束出发，我们可以选择 x-网格的中心点、控制的允许范围，以及区域 $s_i$ 和 $r_j$。示例将展示如何做出这种选择。
+从给定的初始条件 $\mathbf{x}(0)$ 和式 (4.2) 指定的约束出发，我们可以选择 `x`-网格的中心点、控制的允许范围，以及区域 $s_i$ 和 $r_j$。示例将展示如何做出这种选择。
 
-#### 4.5.1 阶段 *P*
+#### 4.5.1 阶段 `P`
 
-让我们从阶段 *P* 开始计算，对应时间区间 \(t_f-L\le t<t_f\)。对每个 x-网格点评估性能指标的 \(M^m\) 个值：
+让我们从阶段 `P` 开始计算，对应时间区间 $t_f-L\le t<t_f$。对每个 `x`-网格点评估性能指标的 $M^m$ 个值：
 
-\[ I[\mathbf{x}(t_f-L),1]=\Psi(\mathbf{x}(t_f))+\int_{t_f-L}^{t_f}\phi(\mathbf{x}(t),\mathbf{u}(P-1),t)\,dt, \tag{4.6} \]
+$$
+I[\mathbf{x}(t_f-L),1]=\Psi(\mathbf{x}(t_f))+\int_{t_f-L}^{t_f}\phi(\mathbf{x}(t),\mathbf{u}(P-1),t)\,dt, \tag{4.6}
+$$
 
-其中 \(\mathbf{u}(P-1)\) 依次使用 \(M^m\) 个允许的控制值。比较这 \(M^m\) 个性能指标值并选择使值最小的 \(\mathbf{u}(P-1)\) 特定值。这是该特定 x-网格点应使用的最佳控制。当我们继续进行 $N^n$ 个网格点时，我们就知道了最后阶段每个网格点应使用的最优控制策略。
+其中 $\mathbf{u}(P-1)$ 依次使用 $M^m$ 个允许的控制值。比较这 $M^m$ 个性能指标值并选择使值最小的 $\mathbf{u}(P-1)$ 特定值。这是该特定 `x`-网格点应使用的最佳控制。当我们继续进行 $N^n$ 个网格点时，我们就知道了最后阶段每个网格点应使用的最优控制策略。
 
-#### 4.5.2 阶段 *P* − 1
+#### 4.5.2 阶段 `P` − 1
 
-现在我们向后退一步到阶段 *P* − 1，对应时间区间 \(t_f-2L\le t<t_f-L\)。对每个网格点，我们再次考虑 $M^m$ 个允许的控制值。然而，当我们从 $t_f-2L$ 积分到 $t_f-L$ 时，状态 $\mathbf{x}(t_f-L)$ 很可能不会恰好是阶段 *P* 的一个网格点。状态不能恰好命中网格点的问题在 **图 4.1** 中有所说明，为简单起见，我们取 $n=2$，$N=5$，$m=1$，且 $M=4$。因此网格由一个 $(5\times5)$ 矩阵组成。在阶段 *P* − 1 的网格点 $(2,3)$ 处，我们展示了 4 条到阶段 *P* 的轨迹，对应使用四个允许的控制值，即 $u=a,b,c$ 和 $d$。这些轨迹均未命中阶段 *P* 的网格点。
+现在我们向后退一步到阶段 `P` − 1，对应时间区间 $t_f-2L\le t<t_f-L$。对每个网格点，我们再次考虑 $M^m$ 个允许的控制值。然而，当我们从 $t_f-2L$ 积分到 $t_f-L$ 时，状态 $\mathbf{x}(t_f-L)$ 很可能不会恰好是阶段 `P` 的一个网格点。状态不能恰好命中网格点的问题在 **图 4.1** 中有所说明，为简单起见，我们取 $n=2$，$N=5$，$m=1$，且 $M=4$。因此网格由一个 $(5\times5)$ 矩阵组成。在阶段 `P` − 1 的网格点 $(2,3)$ 处，我们展示了 4 条到阶段 `P` 的轨迹，对应使用四个允许的控制值，即 $u=a,b,c$ 和 $d$。这些轨迹均未命中阶段 `P` 的网格点。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_98_0.png)
 
 图 4.1：分配 4 个控制值时难以到达网格点的说明
 
-为了继续积分到最终时间 $t_f$，我们取最接近状态 $\mathbf{x}(t_f-L)$ 的网格点所对应的最优控制策略。如 DeTremblay 和 Luus [3] 所示，如果使用足够多的网格点和允许的控制值，这种方法能给出良好的近似。如 **图 4.1** 所示，为了继续第一条轨迹的积分，我们使用对应网格点 $(2,3)$ 在阶段 *P* 的最优控制；为了继续对应 $u=b$ 的第二条轨迹，我们使用 $(3,3)$ 处的最佳控制策略；对于 $u=c$ 我们使用 $(5,5)$；而为了继续对应 $u=d$ 的轨迹，我们使用在阶段 *P* 为网格点 $(4,2)$ 建立的最优控制策略。到时间 $t_f$ 时，我们有四个性能指标值可供比较，并选择使值最小的控制策略。因此，阶段 *P* − 1 的网格点 $(2,3)$ 的控制策略得以确定。对其余 24 个网格点继续此过程即可完成阶段 *P* − 1 的计算。
+为了继续积分到最终时间 $t_f$，我们取最接近状态 $\mathbf{x}(t_f-L)$ 的网格点所对应的最优控制策略。如 DeTremblay 和 Luus [3] 所示，如果使用足够多的网格点和允许的控制值，这种方法能给出良好的近似。如 **图 4.1** 所示，为了继续第一条轨迹的积分，我们使用对应网格点 $(2,3)$ 在阶段 `P` 的最优控制；为了继续对应 $u=b$ 的第二条轨迹，我们使用 $(3,3)$ 处的最佳控制策略；对于 $u=c$ 我们使用 $(5,5)$；而为了继续对应 $u=d$ 的轨迹，我们使用在阶段 `P` 为网格点 $(4,2)$ 建立的最优控制策略。到时间 $t_f$ 时，我们有四个性能指标值可供比较，并选择使值最小的控制策略。因此，阶段 `P` − 1 的网格点 $(2,3)$ 的控制策略得以确定。对其余 24 个网格点继续此过程即可完成阶段 `P` − 1 的计算。
 
 #### 4.5.3 向后方向的继续
 
@@ -2260,73 +2397,82 @@ $$I[\mathbf{x}(0),P]=\Psi(\mathbf{x}(t_f))+\sum_{k=1}^{P}\int_{t_{k-1}}^{t_k}\ph
 
 ### 4.6 采用系统性区域缩小进行迭代
 
-第一次迭代的最优轨迹为每个阶段的 x-网格提供中心点，第一次迭代的最优控制策略为每个阶段的控制允许值提供中心值。相应的区域 $s_i$ 和 $r_j$ 被缩小一个小量以提供更精细的分辨率，并继续进行多次迭代。当该程序进行足够多次迭代时，预计会以足够的精度收敛到最优控制策略。为了说明和测试该程序，我们取一个简单的例子。
+第一次迭代的最优轨迹为每个阶段的 `x`-网格提供中心点，第一次迭代的最优控制策略为每个阶段的控制允许值提供中心值。相应的区域 $s_i$ 和 $r_j$ 被缩小一个小量以提供更精细的分辨率，并继续进行多次迭代。当该程序进行足够多次迭代时，预计会以足够的精度收敛到最优控制策略。为了说明和测试该程序，我们取一个简单的例子。
 
 ### 4.7 示例
 
 让我们考虑第 1 章中概述的连续搅拌釜式反应器 (CSTR)。系统由下式描述
 
-$$\frac{dx_1}{dt} = -(2 + u)(x_1 + 0.25) + (x_2 + 0.5)\exp\left[\frac{25x_1}{x_1 + 2}\right]\quad (4.7)$$
+$$
+\frac{dx_1}{dt} = -(2 + u)(x_1 + 0.25) + (x_2 + 0.5)\exp\left[\frac{25x_1}{x_1 + 2}\right] \tag{4.7}
+$$
 
-$$\frac{dx_2}{dt} = 0.5 - x_2 - (x_2 + 0.5)\exp\left[\frac{25x_1}{x_1 + 2}\right]\quad (4.8)$$
+$$
+\frac{dx_2}{dt} = 0.5 - x_2 - (x_2 + 0.5)\exp\left[\frac{25x_1}{x_1 + 2}\right] \tag{4.8}
+$$
 
 其中 $x_1$ 表示无量纲稳态温度的偏差，$x_2$ 表示无量纲稳态浓度的偏差。在本工作中，使用初始条件 $x_1(0)=0.09$ 和 $x_2(0)=0.09$。我们考虑控制 $u$ 无界的情况。最优控制问题是确定时间区间 $0 \le t < t_f$ 中的 $u$ 以使性能指标最小化
 
-$$I = \int_0^{t_f} (x_1^2 + x_2^2 + 0.1u^2)dt\quad (4.9)$$
+$$
+I = \int_0^{t_f} (x_1^2 + x_2^2 + 0.1u^2)dt \tag{4.9}
+$$
 
 其中无量纲最终时间 $t_f$ 指定为 0.78。为了方便评估性能指标且不引入不必要的近似，我们引入一个新的状态变量 $x_3$，由
 
-$$\frac{dx_3}{dt} = x_1^2 + x_2^2 + 0.1u^2\quad (4.10)$$
+$$
+\frac{dx_3}{dt} = x_1^2 + x_2^2 + 0.1u^2 \tag{4.10}
+$$
 
-给出，初始条件为 $x_3(0)=0$，并将其与另外两个方程一起积分以得到性能指标。然而，x-网格仅涉及 $x_1$ 和 $x_2$。假设我们将给定的时间区间划分为 13 个阶段，每个阶段长度为 0.06 ($P=13$)。为了测试基本程序，Luus [5] 取 x-网格的中心为 (0,0) 且控制为 3.0。每个 $x_i$ 的初始区域大小取为 0.09，控制取为 3.0。每次迭代后使用 0.90 的缩小因子。收敛曲线见图 4.2，其中网格点数和允许控制值的指定以 $(N \times N, M)$ 给出。很明显，即使使用相对较多的网格点，要获得足够的收敛也需要超过 20 次迭代。
+
+
+给出，初始条件为 $x_3(0)=0$，并将其与另外两个方程一起积分以得到性能指标。然而，`x`-网格仅涉及 $x_1$ 和 $x_2$。假设我们将给定的时间区间划分为 13 个阶段，每个阶段长度为 0.06 (`P=13`)。为了测试基本程序，Luus [5] 取 `x`-网格的中心为 (0,0) 且控制为 3.0。每个 $x_i$ 的初始区域大小取为 0.09，控制取为 3.0。每次迭代后使用 0.90 的缩小因子。收敛曲线见图 4.2，其中网格点数和允许控制值的指定以 $(N \times N, M)$ 给出。很明显，即使使用相对较多的网格点，要获得足够的收敛也需要超过 20 次迭代。
 
 ### 4.8 使用可达状态作为网格点
 
-虽然易于编程，但上述方法在计算上并不具吸引力，因为即使对于二维 CSTR 问题也需要非常多的计算。使用粗网格并通过区域收缩来提供准确答案的方法在三个测试问题 [5] 中效果良好。但即便如此，维度的诅咒也开始显现。如果我们设想一个 x-网格仅有 5 个值
-
+虽然易于编程，但上述方法在计算上并不具吸引力，因为即使对于二维 CSTR 问题也需要非常多的计算。使用粗网格并通过区域收缩来提供准确答案的方法在三个测试问题 [5] 中效果良好。但即便如此，维度的诅咒也开始显现。如果我们设想一个 `x`-网格仅有 5 个值
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_100_0.png)
 
-图 4.2：性能指标的收敛曲线，展示了网格点数和控制允许取值个数（以 \((N \times N, M)\) 表示）对 CSTR 的影响
+图 4.2：性能指标的收敛曲线，展示了网格点数和控制允许取值个数（以 $(N \times N, M)$ 表示）对 CSTR 的影响
 
-对于每个状态变量，我们看到当 \(n = 3\) 时，每一阶段需要考虑 125 个网格点，这仍然是可以管理的；但当 \(n = 5\) 时，网格点数将增加到 3,125，即使对高速计算机来说这也是一个非常大的数目。我们还注意到，这些网格点中有很多是无法从指定的初始状态到达的；因此，到目前为止概述的计算过程并不是很高效。
+对于每个状态变量，我们看到当 $n = 3$ 时，每一阶段需要考虑 125 个网格点，这仍然是可以管理的；但当 $n = 5$ 时，网格点数将增加到 3,125，即使对高速计算机来说这也是一个非常大的数目。我们还注意到，这些网格点中有很多是无法从指定的初始状态到达的；因此，到目前为止概述的计算过程并不是很高效。
 
-通过只使用那些从给定状态施加控制后实际可以到达的点，可以克服网格点数量过大的问题。因此，不独立选取 \(x\)-网格点，文献[4]建议通过施加不同的控制值来*生成*网格点。这样所有网格点都可以从指定的初始状态到达。此外，状态向量的维数也不再重要，并且所需的网格点数量很少。现在可以将计算方案总结如下。
+通过只使用那些从给定状态施加控制后实际可以到达的点，可以克服网格点数量过大的问题。因此，不独立选取 `x`-网格点，文献[4]建议通过施加不同的控制值来*生成*网格点。这样所有网格点都可以从指定的初始状态到达。此外，状态向量的维数也不再重要，并且所需的网格点数量很少。现在可以将计算方案总结如下。
 
 ### 4.9 IDP 算法
 
-为了说明 IDP 的基本逻辑，下面给出一个算法来求解式 (4.1)–(4.3) 中描述的最优控制问题，其中要求使用分段常数控制在 \(P\) 个阶段上最小化式 (4.3) 中的性能指标，每个阶段长度相同：
+为了说明 IDP 的基本逻辑，下面给出一个算法来求解式 (4.1)–(4.3) 中描述的最优控制问题，其中要求使用分段常数控制在 `P` 个阶段上最小化式 (4.3) 中的性能指标，每个阶段长度相同：
 
-- 1. 将时间区间 \([0, t_f]\) 划分为 \(P\) 个时间阶段，每个阶段长度为 \(L\)。
-- 2. 选择 \(\mathbf{u}\) 的测试值个数 \(R\)、初始控制策略和初始区域大小 \(r_{in}\)；同时选择每次迭代后使用的区域收缩因子 \(\gamma\) 和网格点数 \(N\)。
-- 3. 选择每次遍历中使用的总迭代次数，并将迭代次数索引设为 \(j = 1\)。
-- 4. 设置区域大小向量 \(\mathbf{r}^j = \mathbf{r}_{in}\)。
-- 5. 利用最佳控制策略（第一次迭代时为初始控制策略），从 \(t = 0\) 到 \(t_f\) 对式 (4.1) 进行 \(N\) 次积分，每次使用不同的控制值来生成 \(N\) 条 \(\mathbf{x}\)-轨迹，并存储每个时间阶段开始时的 \(\mathbf{x}\) 值，从而 \(\mathbf{x}(k - 1)\) 对应于阶段 \(k\) 开始时的 \(\mathbf{x}\) 值。
-- 6. 从阶段 \(P\)（对应时间 \(t_f - L\)）开始，对于第 5 步中存储的 \(N\) 个 \(\mathbf{x}(P - 1)\) 值（网格点）中的每一个，用 \(R\) 个允许的控制向量值分别对式 (4.1) 从 \(t_f - L\) 到 \(t_f\) 积分，这些控制值由下式计算：
+- 1. 将时间区间 $[0, t_f]$ 划分为 `P` 个时间阶段，每个阶段长度为 `L`。
+- 2. 选择 `u` 的测试值个数 `R`、初始控制策略和初始区域大小 `r_in`；同时选择每次迭代后使用的区域收缩因子 `γ` 和网格点数 `N`。
+- 3. 选择每次遍历中使用的总迭代次数，并将迭代次数索引设为 `j = 1`。
+- 4. 设置区域大小向量 `r^j = r_in`。
+- 5. 利用最佳控制策略（第一次迭代时为初始控制策略），从 `t = 0` 到 `t_f` 对式 (4.1) 进行 `N` 次积分，每次使用不同的控制值来生成 `N` 条 `x`-轨迹，并存储每个时间阶段开始时的 `x` 值，从而 `x(k - 1)` 对应于阶段 `k` 开始时的 `x` 值。
+- 6. 从阶段 `P`（对应时间 `t_f - L`）开始，对于第 5 步中存储的 `N` 个 `x(P - 1)` 值（网格点）中的每一个，用 `R` 个允许的控制向量值分别对式 (4.1) 从 `t_f - L` 到 `t_f` 积分，这些控制值由下式计算：
 
-\[
+$$
 \mathbf{u}(P - 1) = \mathbf{u}^{*j}(P - 1) + \mathbf{D}\mathbf{r}^j \tag{4.11}
-\]
+$$
 
-其中 \(\mathbf{u}^{*j}(P - 1)\) 是前一次迭代中获得的最佳值，\(\mathbf{D}\) 是一个由介于 \(-1\) 和 \(1\) 之间的不同随机数组成的对角矩阵。在 \(R\) 个性能指标值中，选择使性能指标最小的控制值，并将这些值存储为 \(\mathbf{u}(P - 1)\)。现在我们得到了这 \(N\) 个网格点各自的最佳控制。
-- 7. 回到阶段 \(P - 1\)（对应时间 \(t_f - 2L\)），对每个 \(N\) 个网格点执行以下计算。如上一张，为 \(\mathbf{u}(P - 2)\) 选择 \(R\) 个值，并以初始状态 \(\mathbf{x}(P - 2)\) 对式 (4.1) 积分一个阶段长度。然后使用第 6 步中存储的 \(\mathbf{u}(P - 1)\) 值继续在最后一个时间阶段积分，该值对应于与已达到的状态向量值最接近的网格点。比较 \(R\) 个性能指标值，并存储使性能指标最小的 \(\mathbf{u}(P - 2)\)。
-- 8. 继续该过程，直到达到阶段 1（对应初始时间 \(t = 0\) 和给定的初始状态）。该阶段只有一个网格点，因为初始状态是指定的。如前所述，对式 (4.1) 积分，比较 \(R\) 个性能指标值，并存储使性能指标最小的控制 \(\mathbf{u}(0)\)。同时存储相应的 \(\mathbf{x}\)-轨迹。这完成了一次迭代。
+其中 $\mathbf{u}^{*j}(P - 1)$ 是前一次迭代中获得的最佳值，$\mathbf{D}$ 是一个由介于 $-1$ 和 $1$ 之间的不同随机数组成的对角矩阵。在 `R` 个性能指标值中，选择使性能指标最小的控制值，并将这些值存储为 $\mathbf{u}(P - 1)$。现在我们得到了这 `N` 个网格点各自的最佳控制。
+- 7. 回到阶段 `P - 1`（对应时间 `t_f - 2L`），对每个 `N` 个网格点执行以下计算。如上一张，为 $\mathbf{u}(P - 2)$ 选择 `R` 个值，并以初始状态 $\mathbf{x}(P - 2)$ 对式 (4.1) 积分一个阶段长度。然后使用第 6 步中存储的 $\mathbf{u}(P - 1)$ 值继续在最后一个时间阶段积分，该值对应于与已达到的状态向量值最接近的网格点。比较 `R` 个性能指标值，并存储使性能指标最小的 $\mathbf{u}(P - 2)$。
+- 8. 继续该过程，直到达到阶段 1（对应初始时间 `t = 0` 和给定的初始状态）。该阶段只有一个网格点，因为初始状态是指定的。如前所述，对式 (4.1) 积分，比较 `R` 个性能指标值，并存储使性能指标最小的控制 $\mathbf{u}(0)$。同时存储相应的 `x`-轨迹。这完成了一次迭代。
 - 9. 缩小允许控制的区域
 
-\[
+$$
 \mathbf{r}^{j+1} = \gamma \mathbf{r}^j \tag{4.12}
-\]
+$$
 
-其中 \(j\) 是迭代次数索引。使用第 8 步得到的最佳控制策略作为允许控制值的中点，用上标 * 表示。
-- 10. 将迭代索引 \(j\) 增加 1，转到第 5 步，按指定的迭代次数继续该过程并解释结果。在某些问题中，使用多遍方法可能是有益的，即在若干次迭代后重置区域大小并重复该过程。
+其中 `j` 是迭代次数索引。使用第 8 步得到的最佳控制策略作为允许控制值的中点，用上标 * 表示。
+- 10. 将迭代索引 `j` 增加 1，转到第 5 步，按指定的迭代次数继续该过程并解释结果。在某些问题中，使用多遍方法可能是有益的，即在若干次迭代后重置区域大小并重复该过程。
 
-在该算法中，控制候选值是随机选择的。在早期发展中，控制候选值是从均匀间隔的网格中选取的。对于低维问题，差别很小，但对于较高维的控制向量，使用随机值效果更好。允许控制值的选择在第 5 章中讨论。通过考虑上述 CSTR 示例，可以认识到生成网格点（而不是像前面那样选择网格点）所带来的改进。通过使用单个网格点，用 15 个随机选择的控制值很容易获得收敛。当 \(P = 13\) 时，在 3 遍中收敛得到 \(I = 0.13558\)，在 Pentium/120 数字计算机上计算时间为 9.3 秒。收敛曲线如图 4.3 所示。
+在该算法中，控制候选值是随机选择的。在早期发展中，控制候选值是从均匀间隔的网格中选取的。对于低维问题，差别很小，但对于较高维的控制向量，使用随机值效果更好。允许控制值的选择在第 5 章中讨论。通过考虑上述 CSTR 示例，可以认识到生成网格点（而不是像前面那样选择网格点）所带来的改进。通过使用单个网格点，用 15 个随机选择的控制值很容易获得收敛。当 `P = 13` 时，在 3 遍中收敛得到 `I = 0.13558`，在 Pentium/120 数字计算机上计算时间为 9.3 秒。收敛曲线如图 4.3 所示。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_102_0.png)
 
-图 4.3：CSTR 在每一阶段仅使用一个可达网格点且 \(R = 15\) 个随机选择的控制候选值时的收敛曲线
+图 4.3：CSTR 在每一阶段仅使用一个可达网格点且 `R = 15` 个随机选择的控制候选值时的收敛曲线
 
-用于该问题、概述 IDP 算法的计算机程序完整列于附录 D 中。当使用 \(P = 20\) 时，在 3 遍内收敛到 \(I = 0.13416\)，在 Pentium/120 数字计算机上需要 14.1 秒的 CPU 时间。
+用于该问题、概述 IDP 算法的计算机程序完整列于附录 D 中。当使用 `P = 20` 时，在 3 遍内收敛到 `I = 0.13416`，在 Pentium/120 数字计算机上需要 14.1 秒的 CPU 时间。
 
 ### 4.11 参考文献
 
@@ -2346,26 +2492,24 @@ $$\frac{dx_3}{dt} = x_1^2 + x_2^2 + 0.1u^2\quad (4.10)$$
 - [14] MEKARAPIRUK, W. AND LUUS, R.: “Optimal control of inequality state constrained systems”, *Ind. Eng. Chem. Res.* **36** (1997), 1686-1694.
 - [15] MEKARAPIRUK, W. AND LUUS, R.: “Optimal control of final state constrained systems”, *Can. J. Chem. Eng.* **75** (1997), 806-811.
 
-
-
-
-
 ## 第5章
+
 ## 控制的允许值
 
 ### 5.1 引言
 
-控制候选值的选取有多种方式。最简单的方式，也是IDP早期工作中使用的方式，是在给定区域内均匀地取控制的允许值。这意味着在区域中心取一个点，在区域的每个端点取一个点，然后在区间内部均匀地取其余点。该方案易于编程，也易于可视化。因此，对于每个控制变量，我们至少有3个值，即相对于前一次迭代得到的最佳值距离为 −r、0 和 r，其中 r 为区域大小。如果有两个控制变量，则候选值的最小数量为9。对于 m 个控制变量，我们在每个网格点必须检查 3^m 个候选值。这在 m 小于5时是可以的，但如果 m 很大，这个数字会变得过大。即使 m =5，在每个网格点检查243个控制候选值也可能太多。
+控制候选值的选取有多种方式。最简单的方式，也是IDP早期工作中使用的方式，是在给定区域内均匀地取控制的允许值。这意味着在区域中心取一个点，在区域的每个端点取一个点，然后在区间内部均匀地取其余点。该方案易于编程，也易于可视化。因此，对于每个控制变量，我们至少有3个值，即相对于前一次迭代得到的最佳值距离为 −r、0 和 r，其中 r 为区域大小。如果有两个控制变量，则候选值的最小数量为9。对于 m 个控制变量，我们在每个网格点必须检查 `3^m` 个候选值。这在 m 小于5时是可以的，但如果 m 很大，这个数字会变得过大。即使 m =5，在每个网格点检查243个控制候选值也可能太多。
 
-为了减少控制候选值的最小数量，Tassone 和 Luus [7] 提出了一种替代方法，即仅检查区域的顶点加上中心点。这将控制候选值的最小数量从 3^m 减少到 2^m +1，因此当 m =4 时，只需检查17个控制候选值。用区域面的中心代替顶点也能得到同样的减少。然而，正如 Bojkov 和 Luus [1] 所示，对于高维系统，更好的方法是随机在允许区域内选择控制候选值。这意味着理论上 m 没有上限。概念上 m 可以大于100，迭代动态规划仍然可以使用。事实上，IDP 已成功应用于具有130个微分方程和130个控制变量的系统 [4]，后来又应用于具有250个微分方程和250个控制变量的系统 [5]。
+为了减少控制候选值的最小数量，Tassone 和 Luus [7] 提出了一种替代方法，即仅检查区域的顶点加上中心点。这将控制候选值的最小数量从 `3^m` 减少到 `2^m +1`，因此当 m =4 时，只需检查17个控制候选值。用区域面的中心代替顶点也能得到同样的减少。然而，正如 Bojkov 和 Luus [1] 所示，对于高维系统，更好的方法是随机在允许区域内选择控制候选值。这意味着理论上 m 没有上限。概念上 m 可以大于100，迭代动态规划仍然可以使用。事实上，IDP 已成功应用于具有130个微分方程和130个控制变量的系统 [4]，后来又应用于具有250个微分方程和250个控制变量的系统 [5]。
 
 为了深入了解如何选择控制候选值，并观察在均匀分布上选择候选值与随机选择之间的关系，我们考虑一个涉及3个控制变量的例子。
 
 ### 5.2 均匀分布与随机选择的比较
 
-让我们考虑第1章中概述的CSTR，其中物种A的入口流率以无量纲单位指定为 $q_1 = 6$，并且有三个控制变量。描述系统的方程为：
+让我们考虑第1章中概述的CSTR，其中物种A的入口流率以无量纲单位指定为 `q1 = 6`，并且有三个控制变量。描述系统的方程为：
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \frac{dx_1}{dt} &= q_1-qx_1-17.6x_1x_2-23x_1x_6u_3 \tag{5.1}\\
 \frac{dx_2}{dt} &= u_1-qx_2-17.6x_1x_2-146x_2x_3 \tag{5.2}\\
 \frac{dx_3}{dt} &= u_2-qx_3-73x_2x_3 \tag{5.3}\\
@@ -2374,29 +2518,34 @@ $$\begin{aligned}
 \frac{dx_6}{dt} &= -qx_6+102.6x_4x_5-23x_1x_6u_3 \tag{5.6}\\
 \frac{dx_7}{dt} &= -qx_7+46x_1x_6u_3 \tag{5.7}\\
 \frac{dx_8}{dt} &= 5.8(qx_1-q_1)-3.7u_1-4.1u_2+q(23x_4+11x_5+28x_6+35x_7)-5u_3^2-0.099 \tag{5.8}
-\end{aligned}$$
+\end{aligned}
+$$
 
-其中 $q=q_1+u_1+u_2$ 且 $q_1=6$。稍后我们允许 $q_1$ 成为另一个控制变量，但在这里我们希望将控制变量的数量限制为3，如 Rao 和 Luus [6] 所做。最后一个微分方程给出性能指标。问题是最大化
+其中 `q=q1+u1+u2` 且 `q1=6`。稍后我们允许 `q1` 成为另一个控制变量，但在这里我们希望将控制变量的数量限制为3，如 Rao 和 Luus [6] 所做。最后一个微分方程给出性能指标。问题是最大化
 
-$$I=x_8(t_f) \tag{5.9}$$
+$$
+I=x_8(t_f) \tag{5.9}
+$$
 
-其中最终时间 $t_f$ 指定为0.2。初始状态指定为 $\mathbf{x}(0)=[0.1883\ 0.2507\ 0.0467\ 0.0899\ 0.1804\ 0.1394\ 0.1046\ 0]^T$。控制变量受约束为
+其中最终时间 `t_f` 指定为0.2。初始状态指定为 $\mathbf{x}(0)=[0.1883\ 0.2507\ 0.0467\ 0.0899\ 0.1804\ 0.1394\ 0.1046\ 0]^T$。控制变量受约束为
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 0\le u_1\le20 \tag{5.10}\\
 0\le u_2\le6 \tag{5.11}\\
 0\le u_3\le4 \tag{5.12}
-\end{aligned}$$
+\end{aligned}
+$$
 
-Rao 和 Luus [6] 使用此示例来评估基于 Pontryagin 最大原理的控制向量迭代的众多算法。他们发现算法得到的性能指标最大值在 $I=20.05$ 和 $I=20.09$ 之间。此示例也被 Luus [2] 用于展示迭代动态规划如何克服维度灾难，并被 Luus [3] 用于考察最优控制中最终时间选择的影响。因此，此示例应能很好地说明迭代动态规划中选择控制候选值的不同方式。
+Rao 和 Luus [6] 使用此示例来评估基于 Pontryagin 最大原理的控制向量迭代的众多算法。他们发现算法得到的性能指标最大值在 `I=20.05` 和 `I=20.09` 之间。此示例也被 Luus [2] 用于展示迭代动态规划如何克服维度灾难，并被 Luus [3] 用于考察最优控制中最终时间选择的影响。因此，此示例应能很好地说明迭代动态规划中选择控制候选值的不同方式。
 
-这里我们使用 P = 10 个等长阶段（每个长度为0.02），并使用四阶 Runge-Kutta 方法以积分时间步长0.005 积分微分方程以提供良好的精度。对于所有运行，我们在第2到第10阶段使用了 N = 3 个状态网格点。在第1阶段，我们仅将给定的初始状态作为网格点。
+这里我们使用 `P = 10` 个等长阶段（每个长度为0.02），并使用四阶 Runge-Kutta 方法以积分时间步长0.005 积分微分方程以提供良好的精度。对于所有运行，我们在第2到第10阶段使用了 `N = 3` 个状态网格点。在第1阶段，我们仅将给定的初始状态作为网格点。
 
 #### 5.2.1 均匀分布
 
-通过在10个时间阶段上使用分段常值控制，很容易收敛到 I = 20.09。最优控制策略见表5.1。
+通过在10个时间阶段上使用分段常值控制，很容易收敛到 `I = 20.09`。最优控制策略见表5.1。
 
-表5.1：给出 I = 20.08950 的分段常值最优控制策略
+表5.1：给出 `I = 20.08950` 的分段常值最优控制策略
 
 | 阶段 | 时间 | u₁ | u₂ | u₃ |
 |---|---|---|---|---|
@@ -2411,42 +2560,39 @@ Rao 和 Luus [6] 使用此示例来评估基于 Pontryagin 最大原理的控制
 | 9 | 0.16 | 20.00000 | 6.00000 | 0.54567 |
 | 10 | 0.18 | 20.00000 | 6.00000 | 0.18901 |
 
-显示与最优 I = 20.08950 偏差的收敛曲线如图5.1所示，区域收缩因子为 γ = 0.85，并在图5.2中显示 γ = 0.90。
+显示与最优 `I = 20.08950` 偏差的收敛曲线如图5.1所示，区域收缩因子为 `γ = 0.85`，并在图5.2中显示 `γ = 0.90`。
 
-可以看出，收敛速度对区域减小因子 γ 并不是很敏感。仅需20次迭代即可使性能指标值在最优值0.001范围内。增加控制的允许值数量会提高收敛速度，但会以增加计算工作量为代价。使用每个控制3个值（M = 3）进行50次迭代所需计算机时间为5.5 s，使用每个控制5个值所需时间为15.3 s，而使用 M = 7 在 PentiumII/300 计算机上进行50次迭代所需时间为37.0 s。
+
+
+可以看出，收敛速度对区域减小因子 `γ` 并不是很敏感。仅需20次迭代即可使性能指标值在最优值0.001范围内。增加控制的允许值数量会提高收敛速度，但会以增加计算工作量为代价。使用每个控制3个值 `M = 3` 进行50次迭代所需计算机时间为5.5 s，使用每个控制5个值所需时间为15.3 s，而使用 `M = 7` 在 PentiumII/300 计算机上进行50次迭代所需时间为37.0 s。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_108_0.png)
 
-图5.1：显示每个控制均匀选取值的数量对收敛曲线的影响，区域收缩因子 γ = 0.85
+图5.1：显示每个控制均匀选取值的数量对收敛曲线的影响，区域收缩因子 `γ = 0.85`
 
 #### 5.2.2 随机选择
 
-为了直接比较，随机选择的控制候选数量与上述三种情况相对应，即 R = 27、R = 125 和 R = 343，对应相同的两个区域收缩因子值。收敛曲线见图5.3和图5.4。可以观察到，使用 R = 27 的收敛速度不如使用 M = 3 时快，且偏差小于0.001无法达到。然而，使用 R = 125 和 R = 343 时获得了与均匀分布控制值选择相当的收敛速度。有趣的是，使用 R = 125 时获得了比 R = 343 更快的收敛速度。三种 R 值的计算时间为2.9、12.4和33.6 s。
+为了直接比较，随机选择的控制候选数量与上述三种情况相对应，即 `R = 27`、`R = 125` 和 `R = 343`，对应相同的两个区域收缩因子值。收敛曲线见图5.3和图5.4。可以观察到，使用 `R = 27` 的收敛速度不如使用 `M = 3` 时快，且偏差小于0.001无法达到。然而，使用 `R = 125` 和 `R = 343` 时获得了与均匀分布控制值选择相当的收敛速度。有趣的是，使用 `R = 125` 时获得了比 `R = 343` 更快的收敛速度。三种 `R` 值的计算时间为2.9、12.4和33.6 s。
 
-我们现在考虑相同的示例，但允许 q₁ 成为另一个控制变量，q₁ = u₄，如 Luus [2] 所做，使用每个控制变量三个均匀选取的值。这意味着在每个网格点必须检查81个控制候选值。通过使用 P = 11 个阶段并将此额外控制变量的上限设为20，Luus [2] 得到 I = 21.75722 的值，控制策略见表5.2。有趣的是，u₄ 在上下限之间切换。
+我们现在考虑相同的示例，但允许 `q₁` 成为另一个控制变量，`q₁ = u₄`，如 Luus [2] 所做，使用每个控制变量三个均匀选取的值。这意味着在每个网格点必须检查81个控制候选值。通过使用 `P = 11` 个阶段并将此额外控制变量的上限设为20，Luus [2] 得到 `I = 21.75722` 的值，控制策略见表5.2。有趣的是，`u₄` 在上下限之间切换。
 
-使用 N = 3 个网格点时，在区域内随机选择控制候选数量的影响见表5.3，其中允许最大迭代次数为150，区域减小因子 γ 在0.90到0.99之间变化。全局最优值以粗体显示。如图所示，增加控制候选数量有一些优势，但即使 R = 25，也能准确确定最优值。
+使用 `N = 3` 个网格点时，在区域内随机选择控制候选数量的影响见表5.3，其中允许最大迭代次数为150，区域减小因子 `γ` 在0.90到0.99之间变化。全局最优值以粗体显示。如图所示，增加控制候选数量有一些优势，但即使 `R = 25`，也能准确确定最优值。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_109_0.png)
 
-图5.2：显示每个控制均匀选取值的数量对收敛曲线的影响，区域收缩因子 γ = 0.90
+图5.2：显示每个控制均匀选取值的数量对收敛曲线的影响，区域收缩因子 `γ = 0.90`
 
 让我们现在比较两种选择控制候选值的方法。
 
-通过在 −r、0 和 r 处对每个控制变量取3个均匀分布的值，从最佳值出发意味着在每个时间步的每个网格点取81个控制候选值。如表5.4所示，区域收缩因子 γ 可以取较小值，且较少的迭代次数即可收敛。在进行运行时，允许的最大迭代次数为150。
+通过在 −r、0 和 r 处对每个控制变量取3个均匀分布的值，从最佳值出发意味着在每个时间步的每个网格点取81个控制候选值。如表5.4所示，区域收缩因子 `γ` 可以取较小值，且较少的迭代次数即可收敛。在进行运行时，允许的最大迭代次数为150。
 
 为了减少均匀搜索的候选数量，我们可以按照 Tassone 和 Luus [7] 的建议将区域的顶点作为控制候选值。然后我们可以用17个控制值代替81个值。虽然随机选择的候选值似乎提供最优值的一种低效方式，但我们将在第6章看到，该方案被纳入多遍方法中，其中参数的敏感性降低，全局最优值更容易获得。
 
 如果控制变量的数量较小（小于5），则可以使用任一方法来选择控制候选值。然而，如果控制变量的数量大于5，则随机选择候选值是明显更好的方法。Bojkov 和 Luus [1] 用几个示例说明了这一思想，他们还考虑了一个具有20个控制变量的问题。对于后者，唯一可行的办法是使用随机选择的控制候选值。我们将在第7章后面讨论高维系统的最优控制。
 
+**表 5.2:** 具有四个控制变量的分段常数最优控制策略，最大 `$I = 21.75722$`
 
-
-
-
-
-**表 5.2:** 具有四个控制变量的分段常数最优控制策略，最大 $I = 21.75722$
-
-| Stage | Time | $u_1$ | $u_2$ | $u_3$ | $u_4$ |
+| Stage | Time | `$u_1$` | `$u_2$` | `$u_3$` | `$u_4$` |
 |---:|---:|---:|---:|---:|---:|
 | 1 | 0.0000 | 0.00000 | 0.00000 | 1.64594 | 20.00000 |
 | 2 | 0.0182 | 14.17009 | 0.00000 | 1.49448 | 20.00000 |
@@ -2462,11 +2608,11 @@ Rao 和 Luus [6] 使用此示例来评估基于 Pontryagin 最大原理的控制
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_110_0.png)
 
-**图 5.3:** 收敛曲线，显示随机选取的控制候选数量对 $\gamma = 0.85$ 时的影响
+**图 5.3:** 收敛曲线，显示随机选取的控制候选数量对 `$\gamma = 0.85$` 时的影响
 
-**表 5.3:** 在每个网格点上随机选取的控制候选数量对 $N = 3$ 网格点的影响
+**表 5.3:** 在每个网格点上随机选取的控制候选数量对 `$N = 3$` 网格点的影响
 
-| Reduction factor $\gamma$ | $R = 25$: Performance index, $I$ | $R = 25$: Number of iterations | $R = 50$: Performance index, $I$ | $R = 50$: Number of iterations |
+| Reduction factor `$\gamma$` | `$R = 25$`: Performance index, `$I$` | `$R = 25$`: Number of iterations | `$R = 50$`: Performance index, `$I$` | `$R = 50$`: Number of iterations |
 |---:|---:|---:|---:|---:|
 | 0.90 | 21.6564 | 150 | 21.6149 | 150 |
 | 0.91 | 21.6555 | 150 | 21.5067 | 150 |
@@ -2481,33 +2627,33 @@ Rao 和 Luus [6] 使用此示例来评估基于 Pontryagin 最大原理的控制
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_111_0.png)
 
-**图 5.4:** 收敛曲线，显示随机选取的控制候选数量对 $\gamma = 0.90$ 时的影响
+**图 5.4:** 收敛曲线，显示随机选取的控制候选数量对 `$\gamma = 0.90$` 时的影响
 
 ## 第 6 章：IDP 中参数的评估
 
 ### 6.1 引言
 
-在迭代动态规划中，有许多可以变化的参数。早在第 5 章中我们就看到了选择控制候选的不同方法，以及在每个网格点上选取此类值的数量的影响，还有区域收缩因子 $\gamma$ 的影响。如果 $\gamma$ 太小，我们会得到区域过早坍缩，而如果 $\gamma$ 太大，则收敛速率可能相当缓慢，或者根本无法获得收敛。幸运的是，通常存在一个较宽的范围，在此范围内可以为 $\gamma$ 选择可接受的值以收敛到最优解。控制允许值数量 $R$ 与区域收缩因子 $\gamma$ 之间存在平衡。如果 $R$ 选择得足够大，则 $\gamma$ 可以选择得相当小，例如 0.7，而不必担心区域过早坍缩。然而，如果使用较小的 $R$ 值，则 $\gamma$ 必须增加到接近 0.9 的值。通常我们希望选择尽可能小的 $R$ 以减少计算工作量。
+在迭代动态规划中，有许多可以变化的参数。早在第 5 章中我们就看到了选择控制候选的不同方法，以及在每个网格点上选取此类值的数量的影响，还有区域收缩因子 `$\gamma$` 的影响。如果 `$\gamma$` 太小，我们会得到区域过早坍缩，而如果 `$\gamma$` 太大，则收敛速率可能相当缓慢，或者根本无法获得收敛。幸运的是，通常存在一个较宽的范围，在此范围内可以为 `$\gamma$` 选择可接受的值以收敛到最优解。控制允许值数量 `R` 与区域收缩因子 `$\gamma$` 之间存在平衡。如果 `R` 选择得足够大，则 `$\gamma$` 可以选择得相当小，例如 0.7，而不必担心区域过早坍缩。然而，如果使用较小的 `R` 值，则 `$\gamma$` 必须增加到接近 0.9 的值。通常我们希望选择尽可能小的 `R` 以减少计算工作量。
 
-然而，对网格点数量的选择则没有那么明确。在一个涉及沿管式反应器确定最优催化剂配方的非常困难的非线性最优控制问题中 [7]，通过在每个时间阶段使用单个网格点即可轻松获得全局最优解 [6]。另一方面，一个简单的半间歇反应器优化问题则需要至少 23 个网格点才能收敛到全局最优解 [3]。Bojkov 和 Luus [2] 研究了 IDP 中的参数效应，并得出结论，对于许多典型的化工系统，区域收缩因子 $\gamma$ 应在 0.75 到 0.95 范围内，并且使用超过 3 个网格点并不会增加获得全局最优的可能性，也不会改善收敛速率。尽管令人惊讶，除了少数反应器问题，如 Hartig 等人 [3] 考虑的半间歇反应器和本章后面考虑的两级 CSTR 之外，仅需要少量网格点的要求似乎对许多最优控制问题普遍成立。因此，对于许多问题，我们可以在每个时间阶段使用单个网格点，仍然能够快速、准确地收敛到全局最优解。
+然而，对网格点数量的选择则没有那么明确。在一个涉及沿管式反应器确定最优催化剂配方的非常困难的非线性最优控制问题中 [7]，通过在每个时间阶段使用单个网格点即可轻松获得全局最优解 [6]。另一方面，一个简单的半间歇反应器优化问题则需要至少 23 个网格点才能收敛到全局最优解 [3]。Bojkov 和 Luus [2] 研究了 IDP 中的参数效应，并得出结论，对于许多典型的化工系统，区域收缩因子 `$\gamma$` 应在 0.75 到 0.95 范围内，并且使用超过 3 个网格点并不会增加获得全局最优的可能性，也不会改善收敛速率。尽管令人惊讶，除了少数反应器问题，如 Hartig 等人 [3] 考虑的半间歇反应器和本章后面考虑的两级 CSTR 之外，仅需要少量网格点的要求似乎对许多最优控制问题普遍成立。因此，对于许多问题，我们可以在每个时间阶段使用单个网格点，仍然能够快速、准确地收敛到全局最优解。
 
-这里的目标是说明 IDP 中使用的参数的影响，例如在每次迭代后用于减小区域大小的区域缩减因子 $\gamma$，用于在每次遍历后恢复区域大小的区域恢复因子 $\eta$，初始区域大小、控制允许值的数量以及每个时间步使用的网格点数量。使用多个示例是展示 IDP 中使用的参数之间关系的最佳方式。
+这里的目标是说明 IDP 中使用的参数的影响，例如在每次迭代后用于减小区域大小的区域缩减因子 `$\gamma$`，用于在每次遍历后恢复区域大小的区域恢复因子 `$\eta$`，初始区域大小、控制允许值的数量以及每个时间步使用的网格点数量。使用多个示例是展示 IDP 中使用的参数之间关系的最佳方式。
 
 ### 6.2 网格点数量
 
-在迭代动态规划的早期工作中，所使用的网格点数量被选择为相当大，通常大于 20。使用大量网格点的动机是由于当时使用的 CRAY 超级计算机具有向量化能力，使计算能够并行进行。当计算从 CRAY 切换到个人计算机时，有必要检查网格点数量的影响，因为网格点数量加倍会使计算时间超过两倍。Bojkov 和 Luus [2] 的研究清楚地表明，大量网格点并不总是必要的。此外，如果可以在不牺牲收敛速率的情况下减少网格点数量，那么我们应该尽可能使用最小数量，即 $N = 1$。
+在迭代动态规划的早期工作中，所使用的网格点数量被选择为相当大，通常大于 20。使用大量网格点的动机是由于当时使用的 CRAY 超级计算机具有向量化能力，使计算能够并行进行。当计算从 CRAY 切换到个人计算机时，有必要检查网格点数量的影响，因为网格点数量加倍会使计算时间超过两倍。Bojkov 和 Luus [2] 的研究清楚地表明，大量网格点并不总是必要的。此外，如果可以在不牺牲收敛速率的情况下减少网格点数量，那么我们应该尽可能使用最小数量，即 `N = 1`。
 
 初始区域大小的选择，即在其中选择控制候选的范围，也非常重要，尤其是在存在众多局部最优解时。为了说明网格点、初始区域大小的选择以及其他参数的关系，我们选择了两个来自化学工程的示例。在第一个示例中我们使用单个网格点，因为收敛到全局最优解非常容易，因此没有必要检查使用较大数量网格点的情况。在第二个示例中说明了使用不同数量网格点的效果。在第 6.3 节中我们将检查多遍方法并提出另一个需要多个网格点才能获得准确收敛的示例。
 
 #### 6.2.1 双功能催化剂混合优化问题
 
-在将甲基环戊烷转化为苯的管式反应器中双功能催化剂混合物的优化中，由氢化和异构化两种单功能催化剂组分组成的混合物由质量分数 $u$ 刻画，给出为
+在将甲基环戊烷转化为苯的管式反应器中双功能催化剂混合物的优化中，由氢化和异构化两种单功能催化剂组分组成的混合物由质量分数 `u` 刻画，给出为
 
 $$u = \frac{\text{mass of hydrogenation component}}{\text{total mass of the catalyst}}. \quad (6.1)$$
 
-**表 6.1:** 双功能催化剂问题中速率常数 $k_i$ 的系数
+**表 6.1:** 双功能催化剂问题中速率常数 `$k_i$` 的系数
 
-| $i$ | $c_{i0}$ | $c_{i1}$ | $c_{i2}$ | $c_{i3}$ |
+| `$i$` | `$c_{i0}$` | `$c_{i1}$` | `$c_{i2}$` | `$c_{i3}$` |
 |---|---:|---:|---:|---:|
 | 1 | 0.2918487D-02 | -0.8045787D-02 | 0.6749947D-02 | -0.1416647D-02 |
 | 2 | 0.9509977D+01 | -0.3500994D+02 | 0.4283329D+02 | -0.1733333D+02 |
@@ -2520,15 +2666,11 @@ $$u = \frac{\text{mass of hydrogenation component}}{\text{total mass of the cata
 | 9 | -0.3950534D+00 | 0.1679353D+01 | -0.1777829D+01 | 0.4974987D+00 |
 | 10 | -0.2504665D-04 | 0.1005854D-01 | -0.1986696D-01 | 0.9833470D-02 |
 
-正如 Luus 等人 [7] 所做的那样，为了解决这个最优控制问题，我们将给定的时间区间划分为 10 个等长部分，每段长度为 200 g h/mol，并确定每个部分 $u(0), u(1), \cdots, u(9)$ 的分段常数控制值，以最大化式 (6.13) 给出的性能指标。对于积分，我们使用了 Hull 等人 [4] 的积分子程序 DVERK，局部误差容限为 $10^{-6}$。存在众多局部最优解。通过 Rosen 和 Luus [12] 建议的序列二次规划，从 100 个随机选择的初始点中获得了 25 个局部最优解，其性能指标值分别为：10.053、9.905、9.881、9.866、9.815、9.786、9.722、9.641、9.628、9.608、9.582、9.534、9.501、9.463、9.439、9.343、9.293、9.246、9.148、9.037、8.673、8.645、8.490、8.402 和 8.113。然而，这些都不是全局最优解。
+正如 Luus 等人 [7] 所做的那样，为了解决这个最优控制问题，我们将给定的时间区间划分为 10 个等长部分，每段长度为 200 g h/mol，并确定每个部分 `u(0), u(1), \cdots, u(9)` 的分段常数控制值，以最大化式 (6.13) 给出的性能指标。对于积分，我们使用了 Hull 等人 [4] 的积分子程序 DVERK，局部误差容限为 `10^{-6}`。存在众多局部最优解。通过 Rosen 和 Luus [12] 建议的序列二次规划，从 100 个随机选择的初始点中获得了 25 个局部最优解，其性能指标值分别为：10.053、9.905、9.881、9.866、9.815、9.786、9.722、9.641、9.628、9.608、9.582、9.534、9.501、9.463、9.439、9.343、9.293、9.246、9.148、9.037、8.673、8.645、8.490、8.402 和 8.113。然而，这些都不是全局最优解。
 
-全局最优控制策略和接下来的四个最佳策略在表 6.2 中给出。正如 Luus 等人 [7] 所指出的那样，该问题存在众多局部最优解，其中许多未在上面列出。目标是获得全局最优解。从初始控制策略 $u^{(0)}(k)=0.75,\ k=0,1,\cdots,9$ 和初始区域大小 $r^{(0)}(k)=0.3,\ k=0,1,\cdots,9$，区域收缩因子 $\gamma=0.70$，网格点数量 $N=21$ 和 $M=5$ 个均匀选择的控制值出发，Luus 等人 [7] 在 16 次迭代中使用 IDP 获得了全局最优解。$M$ 个控制候选是从最佳值周围的均匀分布中选择的，即 $u^*,\ u^* \pm \left[\frac{2j}{M-1}\right]r,\quad j=1,2,\cdots,(M-1)/2$，其中 $u^*$ 是前一次迭代中催化剂混合物的最佳值。
+全局最优控制策略和接下来的四个最佳策略在表 6.2 中给出。正如 Luus 等人 [7] 所指出的那样，该问题存在众多局部最优解，其中许多未在上面列出。目标是获得全局最优解。从初始控制策略 `u^{(0)}(k)=0.75,\ k=0,1,\cdots,9` 和初始区域大小 `r^{(0)}(k)=0.3,\ k=0,1,\cdots,9`，区域收缩因子 `$\gamma=0.70$`，网格点数量 `N=21` 和 `M=5` 个均匀选择的控制值出发，Luus 等人 [7] 在 16 次迭代中使用 IDP 获得了全局最优解。`M` 个控制候选是从最佳值周围的均匀分布中选择的，即 `u^*,\ u^* \pm \left[\frac{2j}{M-1}\right]r,\quad j=1,2,\cdots,(M-1)/2`，其中 `u^*` 是前一次迭代中催化剂混合物的最佳值。
 
-Luus 和 Bojkov [6] 表明，如果初始区域选择得足够大，则可以使用单个网格点 $N=1$ 获得全局最优解。在表 6.3 和 6.4 中我们展示了区域收缩因子 $\gamma$、初始区域大小 $r^{(0)}$ 以及均匀选择的控制候选数量 $M$ 的影响。达到六位数字的全局最优解所需的迭代次数显示在括号中。
-
-
-
-
+Luus 和 Bojkov [6] 表明，如果初始区域选择得足够大，则可以使用单个网格点 `N=1` 获得全局最优解。在表 6.3 和 6.4 中我们展示了区域收缩因子 `$\gamma$`、初始区域大小 `r^{(0)}` 以及均匀选择的控制候选数量 `M` 的影响。达到六位数字的全局最优解所需的迭代次数显示在括号中。
 
 Table 6.2: 最佳 5 个局部最优的控制策略
 
@@ -2546,11 +2688,11 @@ Table 6.2: 最佳 5 个局部最优的控制策略
 | u(8) | 0.9000 | 0.9000 | 0.9000 | 0.9000 | 0.9000 |
 | u(9) | 0.9000 | 0.9000 | 0.9000 | 0.9000 | 0.9000 |
 
-Table 6.3: 当 N = 1 且 M = 3 时性能指标 I 的取值，显示了区域收缩因子 γ 和初始区域大小 r^(0) 的影响；获取全局最优所需的迭代次数显示在括号中
+Table 6.3: 当 `N = 1` 且 `M = 3` 时性能指标 `I` 的取值，显示了区域收缩因子 `$\gamma$` 和初始区域大小 `r^{(0)}` 的影响；获取全局最优所需的迭代次数显示在括号中
 
-| Reduction factor | Initial region size r^(0) | | | |
+| Reduction factor | Initial region size `r^{(0)}` | | | |
 |---|---|---|---|---|
-| γ | 0.27 | 0.30 | 0.40 | 0.50 |
+| `$\gamma$` | 0.27 | 0.30 | 0.40 | 0.50 |
 | 0.70 | 10.0527 | 10.0942 (18) | 10.0942 (19) | 10.0942 (20) |
 | 0.72 | 10.0527 | 10.0942 (20) | 10.0942 (21) | 10.0527 |
 | 0.74 | 10.0942 (22) | 10.0942 (22) | 10.0942 (23) | 10.0942 (24) |
@@ -2558,33 +2700,52 @@ Table 6.3: 当 N = 1 且 M = 3 时性能指标 I 的取值，显示了区域收�
 | 0.78 | 10.0942 (26) | 10.0942 (26) | 10.0942 (28) | 10.0942 (29) |
 | 0.80 | 10.0942 (29) | 10.0942 (29) | 10.0942 (31) | 10.0942 (32) |
 | 0.82 | 10.0942 (32) | 10.0942 (32) | 10.0942 (34) | 10.0942 (36) |
+
+
+
 | 0.84 | 10.0942 (36) | 10.0942 (38) | 10.0942 (39) | 10.0942 (40) |
+
 | 0.86 | 10.0941 | 10.0941 | 10.0941 | 10.0941 |
+
 | 0.88 | 10.0940 | 10.0940 | 10.0939 | 10.0937 |
+
 | 0.90 | 10.0933 | 10.0930 | 10.0925 | 10.0913 |
 
-## Table 6.4: 当 N = 1 且 M = 9 时性能指标 $I$ 的取值，显示了区域收缩因子 $\gamma$ 和初始区域大小 $r^{(0)}$ 的影响；获取全局最优所需的迭代次数显示在括号中
+## Table 6.4: 当 `N = 1` 且 `M = 9` 时性能指标 `$I$` 的取值，显示了区域收缩因子 `$\gamma$` 和初始区域大小 `$r^{(0)}$` 的影响；获取全局最优所需的迭代次数显示在括号中
 
-| Reduction factor | Initial region size $r^{(0)}$ | | | |
+| Reduction factor | Initial region size `$r^{(0)}$` | | | |
+
 |---|---|---|---|---|
-| $\gamma$ | 0.27 | 0.30 | 0.40 | 0.50 |
+
+| `$\gamma$` | 0.27 | 0.30 | 0.40 | 0.50 |
+
 | 0.70 | 10.0395 | **10.0942** (15) | 10.0527 | **10.0942** (17) |
+
 | 0.72 | 10.0395 | **10.0942** (16) | **10.0942** (17) | 10.0527 |
+
 | 0.74 | 10.0395 | **10.0942** (17) | **10.0942** (18) | **10.0942** (19) |
+
 | 0.76 | **10.0942** (19) | **10.0942** (19) | **10.0942** (20) | **10.0942** (21) |
+
 | 0.78 | **10.0942** (21) | **10.0942** (21) | **10.0942** (22) | **10.0942** (23) |
+
 | 0.80 | **10.0942** (22) | **10.0942** (23) | **10.0942** (24) | **10.0942** (25) |
+
 | 0.82 | **10.0942** (25) | **10.0942** (26) | **10.0942** (27) | **10.0942** (28) |
+
 | 0.84 | **10.0942** (28) | **10.0942** (29) | **10.0942** (30) | **10.0942** (32) |
+
 | 0.86 | **10.0942** (33) | **10.0942** (34) | **10.0942** (36) | **10.0942** (37) |
+
 | 0.88 | **10.0942** (39) | **10.0942** (39) | 10.0941 | 10.0941 |
+
 | 0.90 | 10.0941 | 10.0941 | 10.0940 | 10.0940 |
 
-允许最多 40 次迭代。如图所示，与使用 $M = 3$ 相比，使用 $M = 9$ 时达到全局最优所需的迭代次数减少了。在每种情况下，只要初始区域大小大于 0.27，就几乎在每种情况下都获得了全局最优。在 44 次运行中，使用 $M = 3$ 时获得了 3 次局部最优。使用 $M = 9$ 时，在 44 次运行中获得了 5 次局部最优。因此，使用更多允许的控制值并不一定会提高避免局部最优的机会。
+允许最多 40 次迭代。如图所示，与使用 `$M = 3$` 相比，使用 `$M = 9$` 时达到全局最优所需的迭代次数减少了。在每种情况下，只要初始区域大小大于 0.27，就几乎在每种情况下都获得了全局最优。在 44 次运行中，使用 `$M = 3$` 时获得了 3 次局部最优。使用 `$M = 9$` 时，在 44 次运行中获得了 5 次局部最优。因此，使用更多允许的控制值并不一定会提高避免局部最优的机会。
 
-正如预期的那样，使用 $M = 9$ 时，我们可以拥有更大的区域收缩因子 $\gamma$ 值，并且仍能在 40 次迭代内收敛到 6 位精度的全局最优。然而，必须记住，使用 $M = 9$ 而不是 $M = 3$ 需要每迭代三倍的计算量。关于该系统的进一步结果由 Luus 和 Bojkov [6] 给出，他们还表明，与以均匀方式选择控制候选相比，随机选择给出了基本相同的结果。在 PentiumII/350 上，使用 $M = 3$ 进行 20 次迭代的计算时间为 6 s。
+正如预期的那样，使用 `$M = 9$` 时，我们可以拥有更大的区域收缩因子 `$\gamma$` 值，并且仍能在 40 次迭代内收敛到 6 位精度的全局最优。然而，必须记住，使用 `$M = 9$` 而不是 `$M = 3$` 需要每迭代三倍的计算量。关于该系统的进一步结果由 Luus 和 Bojkov [6] 给出，他们还表明，与以均匀方式选择控制候选相比，随机选择给出了基本相同的结果。在 PentiumII/350 上，使用 `$M = 3$` 进行 20 次迭代的计算时间为 6 s。
 
-#### 6.2.2 光化学 CSTR
+### 6.2.2 光化学 CSTR
 
 让我们考虑 Lapidus 和 Luus [5] 使用的光化学连续搅拌釜式反应器 CSTR，我们在第 5 章中考虑过它来检验网格点数量的影响。这里，我们考虑具有 4 个控制变量的反应器：
 
@@ -2601,91 +2762,132 @@ $$
 \end{aligned}
 $$
 
-其中总入口流量由 $q=u_1+u_2+u_4$ 给出。最后一个微分方程引入以给出性能指标。问题是最大化
+其中总入口流量由 `$q=u_1+u_2+u_4$` 给出。最后一个微分方程引入以给出性能指标。问题是最大化
 
 $$
 I=x_8(t_f) \tag{6.23}
 $$
 
-其中最终时间 $t_f$ 指定为 0.2。初始状态指定为 $\mathbf{x}(0)=[0.1883\ \ 0.2507\ \ 0.0467\ \ 0.0899\ \ 0.1804\ \ 0.1394\ \ 0.1046\ \ 0]^T$。控制变量受约束
+其中最终时间 `$t_f$` 指定为 0.2。初始状态指定为 `$\mathbf{x}(0)=[0.1883\ \ 0.2507\ \ 0.0467\ \ 0.0899\ \ 0.1804\ \ 0.1394\ \ 0.1046\ \ 0]^T$`。控制变量受约束
 
-+   $$\begin{aligned}
++   $$
 +   0\leq u_1\leq 20 &&\tag{6.24}\\
 +   0\leq u_2\leq 6 &&\tag{6.25}\\
 +   0\leq u_3\leq 4 &&\tag{6.26}\\
 +   0\leq u_4\leq 20 &&\tag{6.27}
-+   \end{aligned}$$
++   $$
 
-在第 5 章中我们看到，使用 $P=11$ 个等长的时间阶段，在此期间使用分段常值控制，性能指标的最大值被发现为 21.75722。这里我们希望说明网格点数量如何影响我们获得该最优的能力。如第 5 章中所做，我们选择控制的初始值为允许区域的中间，即 $u_1^{(0)}=10$，$u_2^{(0)}=3$，$u_3^{(0)}=2$，和 $u_4^{(0)}=10$，并令初始区域大小为 $r_1^{(0)}=10$，$r_2^{(0)}=3$，$r_3^{(0)}=2$，和 $r_4^{(0)}=10$。通过在每次迭代后由收缩因子 $\gamma$ 收缩的允许区域内随机选择 $R=81$ 个允许值，针对不同的 $\gamma$ 值和网格点数 $N$ 求解了该问题。每种情况允许 100 次迭代。结果在表 6.5 中给出。很明显，区域收缩因子 $0.90\leq\gamma\leq0.96$
+在第 5 章中我们看到，使用 `$P=11$` 个等长的时间阶段，在此期间使用分段常值控制，性能指标的最大值被发现为 21.75722。这里我们希望说明网格点数量如何影响我们获得该最优的能力。如第 5 章中所做，我们选择控制的初始值为允许区域的中间，即 `$u_1^{(0)}=10$`，`$u_2^{(0)}=3$`，`$u_3^{(0)}=2$`，和 `$u_4^{(0)}=10$`，并令初始区域大小为 `$r_1^{(0)}=10$`，`$r_2^{(0)}=3$`，`$r_3^{(0)}=2$`，和 `$r_4^{(0)}=10$`。通过在每次迭代后由收缩因子 `$\gamma$` 收缩的允许区域内随机选择 `$R=81$` 个允许值，针对不同的 `$\gamma$` 值和网格点数 `$N$` 求解了该问题。每种情况允许 100 次迭代。结果在表 6.5 中给出。很明显，区域收缩因子 `$0.90\leq\gamma\leq0.96$`
 
-##### Table 6.5: 当 R = 81 时网格点数量对收敛的影响；括号中的数字给出收敛所需的迭代次数
+##### Table 6.5: 当 `R = 81` 时网格点数量对收敛的影响；括号中的数字给出收敛所需的迭代次数
 
 |  | Number of grid points at each time stage | | | |
+
 |---|---|---|---|---|
-| γ | N = 1 | N = 5 | N = 11 | N = 27 |
+
+| `$\gamma$` | `N = 1` | `N = 5` | `N = 11` | `N = 27` |
+
 | 0.80 | 21.4649 | 21.5476 | 21.6894 | 21.6575 |
+
 | 0.81 | 21.6019 | 21.6621 | 21.5686 | 21.6263 |
+
 | 0.82 | 21.6145 | 21.6624 | 21.6782 | 21.5847 |
+
 | 0.83 | 21.6222 | 21.6729 | 21.7415 | 21.7272 |
+
 | 0.84 | 21.6350 | 21.7276 | 21.6931 | 21.7547 |
+
 | 0.85 | 21.6286 | 21.7370 | 21.6141 | 21.7360 |
+
 | 0.86 | 21.6293 | 21.7085 | 21.4995 | 21.7353 |
+
 | 0.87 | 21.6427 | 21.7522 | 21.7331 | 21.7329 |
+
 | 0.88 | 21.6556 | 21.7572 (32) | 21.7572 (34) | 21.7572 (30) |
+
 | 0.89 | 21.6603 | 21.7572 (37) | 21.7072 | 21.7572 (32) |
+
 | 0.90 | 21.7506 | 21.7572 (39) | 21.7572 (39) | 21.7572 (32) |
+
 | 0.91 | 21.7572 (61) | 21.7572 (44) | 21.7572 (38) | 21.7572 (39) |
+
 | 0.92 | 21.7572 (53) | 21.7572 (43) | 21.7572 (41) | 21.7572 (34) |
+
 | 0.93 | 21.7572 (58) | 21.7572 (49) | 21.7572 (43) | 21.7572 (46) |
+
 | 0.94 | 21.7572 (67) | 21.7572 (55) | 21.7572 (51) | 21.7572 (51) |
+
 | 0.95 | 21.7572 (75) | 21.7572 (72) | 21.7572 (44) | 21.7572 (52) |
+
 | 0.96 | 21.7572 (96) | 21.7572 (100) | 21.7572 (75) | 21.7572 (68) |
+
 | 0.97 | 21.7571 | 21.7572 (70) | 21.5007 | 21.7572 (95) |
+
 | 0.98 | 21.7554 | 21.7554 | 21.7565 | 21.7569 |
+
 | 0.99 | 21.7559 | 21.7554 | 21.7552 | 21.5105 |
 
-无论网格点数量如何，都能获得全局最优。在获得最优的情况下，达到最优所需的迭代次数在括号中给出。当 N 增加时，收敛所需的迭代次数减少仅略有降低。然而，对于较大的 N，范围会增加。例如，对于 N = 27，收敛到全局最优的范围是 0.88 ≤ γ ≤ 0.97。很明显，对于这个最优控制问题，网格点数大于 N = 1 是没有必要的。
+无论网格点数量如何，都能获得全局最优。在获得最优的情况下，达到最优所需的迭代次数在括号中给出。当 `N` 增加时，收敛所需的迭代次数减少仅略有降低。然而，对于较大的 `N`，范围会增加。例如，对于 `N = 27`，收敛到全局最优的范围是 `0.88 ≤ γ ≤ 0.97`。很明显，对于这个最优控制问题，网格点数大于 `N = 1` 是没有必要的。
 
 ### 6.3 多遍方法
 
 防止搜索区域坍塌的一种方法是使用多遍方式的迭代动态规划，使得区域恢复到前一遍开始时大小的一个分数。出现的问题是，还原因子应该是多少，结果对该
 
-
-
-Choice? 通过取单个网格点，即 \(N = 1\)，并且仅取 \(R = 15\) 个随机点，同时允许每次通过 20 次迭代，我们对不同区域收缩因子 \(\gamma\) 的不同区域恢复因子 \(\eta\) 值求解了上述最优控制问题。
+Choice? 通过取单个网格点，即 `$N = 1$`，并且仅取 `$R = 15$` 个随机点，同时允许每次通过 20 次迭代，我们对不同区域收缩因子 `$\gamma$` 的不同区域恢复因子 `$\eta$` 值求解了上述最优控制问题。
 
 如表 6.6 所示，如果恢复因子在 0.70 到 0.85 之间，成功率几乎为 100%。在 80 个案例中，只有两个案例得到的数值与全局最优值 21.7572 不同，其中允许最多 20 次通过。当恢复因子为 0.90 时，区域尺寸没有足够快地缩小以在 20 次通过内收敛到六位有效数字。多遍方法的使用是保持控制候选数量较少同时仍提供准确收敛的一种良好手段。这在我们考虑更高维系统时尤其重要。
 
-**Table 6.6:** 恢复因子 \(\eta\) 对收敛的影响，\(R = 15\)，括号内显示收敛所需的通过次数
+**Table 6.6:** 恢复因子 `$\eta$` 对收敛的影响，`$R = 15$`，括号内显示收敛所需的通过次数
 
-| \(\gamma\) | \(\eta=0.70\) | \(\eta=0.75\) | \(\eta=0.80\) | \(\eta=0.85\) | \(\eta=0.90\) |
+| `$\gamma$` | `$\eta=0.70$` | `$\eta=0.75$` | `$\eta=0.80$` | `$\eta=0.85$` | `$\eta=0.90$` |
+
 |---:|---:|---:|---:|---:|---:|
+
 | 0.80 | **21.7572** (9) | **21.7572** (11) | **21.7572** (10) | **21.7572** (9) | **21.7572** (16) |
+
 | 0.81 | **21.7572** (8) | **21.7572** (11) | **21.7572** (7) | **21.7572** (13) | **21.7572** (12) |
+
 | 0.82 | **21.7572** (9) | **21.7572** (10) | **21.7572** (8) | **21.7572** (7) | **21.7572** (10) |
+
 | 0.83 | **21.7572** (7) | **21.7572** (8) | **21.7572** (5) | **21.7572** (5) | **21.7572** (8) |
+
 | 0.84 | **21.7572** (6) | **21.7572** (7) | **21.7572** (9) | **21.7572** (6) | **21.7572** (8) |
+
 | 0.85 | **21.7572** (10) | **21.7572** (9) | **21.7572** (11) | **21.7572** (10) | **21.7572** (16) |
+
 | 0.86 | **21.7572** (8) | **21.7572** (11) | **21.7572** (11) | **21.7572** (13) | **21.7572** (8) |
+
 | 0.87 | **21.7572** (8) | **21.7572** (5) | **21.7572** (9) | **21.7572** (13) | **21.7572** (10) |
+
 | 0.88 | **21.7572** (9) | **21.7572** (11) | **21.7572** (11) | **21.7572** (12) | 21.7571 |
+
 | 0.89 | **21.7572** (6) | **21.7572** (8) | **21.7572** (12) | **21.7572** (15) | **21.7572** (16) |
+
 | 0.90 | **21.7572** (11) | **21.7572** (12) | **21.7572** (14) | **21.7572** (19) | 21.7570 |
+
 | 0.91 | **21.7572** (9) | **21.7572** (12) | **21.7572** (14) | **21.7572** (18) | 21.7571 |
+
 | 0.92 | **21.7572** (11) | **21.7572** (12) | **21.7572** (14) | **21.7572** (19) | 21.7570 |
+
 | 0.93 | **21.7572** (11) | **21.7572** (12) | **21.7572** (13) | **21.7572** (19) | 21.7569 |
+
 | 0.94 | **21.7572** (8) | **21.7572** (12) | **21.7572** (12) | 21.7571 | 21.7568 |
+
 | 0.95 | **21.7572** (11) | **21.7572** (13) | **21.7572** (15) | **21.7572** (18) | 21.7570 |
+
 | 0.96 | **21.7572** (10) | **21.7572** (11) | **21.7572** (16) | **21.7572** (20) | 21.7567 |
+
 | 0.97 | **21.7572** (13) | **21.7572** (12) | **21.7572** (17) | **21.7572** (17) | 21.7571 |
+
 | 0.98 | **21.7572** (12) | **21.7572** (13) | **21.7572** (16) | **21.7572** (20) | 21.7565 |
+
 | 0.99 | **21.7572** (10) | **21.7572** (14) | **21.7572** (19) | 21.7571 | 21.7566 |
 
 每次 20 次迭代的通过后使用恢复因子。
 
 #### 6.3.1 非线性两级 CSTR 系统
 
-让我们考虑一个非常困难的最优控制问题，该问题源于尝试为时滞系统获得良好的初始控制策略 [8]。该系统由两个串联的 CSTR 组成，其中从第一个罐到第二个罐的运输时滞为 \(\tau = 0.1\)。该系统最初由 Oh 和 Luus [11] 研究，并在第 8 章中有更详细的描述。这里我们根据 Mutharasan 和 Luus [9] 对时滞项使用截断的泰勒级数展开，以给出无时滞近似
+让我们考虑一个非常困难的最优控制问题，该问题源于尝试为时滞系统获得良好的初始控制策略 [8]。该系统由两个串联的 CSTR 组成，其中从第一个罐到第二个罐的运输时滞为 `$\tau = 0.1$`。该系统最初由 Oh 和 Luus [11] 研究，并在第 8 章中有更详细的描述。这里我们根据 Mutharasan 和 Luus [9] 对时滞项使用截断的泰勒级数展开，以给出无时滞近似
 
 $$
 \frac{dx_1}{dt} = f_1 \tag{6.28}
@@ -2717,121 +2919,99 @@ $$
 f_2 = -2[x_2 + 0.25] - u_1[x_2 + 0.25] + R_1 \tag{6.34}
 $$
 
-$$
-R_1 = [x_1 + 0.5] \exp\left(\frac{25x_2}{x_2 + 2}\right) \tag{6.35}
-$$
 
-$$
-R_2 = [x_3 + 0.25] \exp\left(\frac{25x_4}{x_4 + 2}\right) \tag{6.36}
-$$
+
+`R_1 = [x_1 + 0.5] \exp\left(\frac{25x_2}{x_2 + 2}\right) \tag{6.35}`
+
+`R_2 = [x_3 + 0.25] \exp\left(\frac{25x_4}{x_4 + 2}\right) \tag{6.36}`
 
 状态变量 \(x_1\) 和 \(x_3\) 分别是罐 1 和罐 2 中的归一化浓度变量，而 \(x_2\) 和 \(x_4\) 分别是罐 1 和罐 2 中的归一化温度变量。变量 \(x_5\) 被引入以提供要最小化的性能指标：
 
-$$
-I = x_5(t_f) \tag{6.37}
-$$
+`I = x_5(t_f) \tag{6.37}`
 
-其中无量纲最终时间 \(t_f = 2\)。初始状态为
+其中无量纲最终时间 `t_f = 2`。初始状态为
 
-$$
-\mathbf{x}(0) = \begin{bmatrix} 0.15 & -0.03 & 0.10 & 0 & 0 \end{bmatrix}^{T} \tag{6.38}
-$$
+`\mathbf{x}(0) = \begin{bmatrix} 0.15 & -0.03 & 0.10 & 0 & 0 \end{bmatrix}^{T} \tag{6.38}`
 
 让我们考虑在时间区间 \(0 \leq t < 2\) 内确定分段常数控制以最小化式 (6.37) 中的性能指标的问题。
 
-为了解决这个最优控制问题，我们选择了 \(P = 30\) 个等长的时间阶段，积分时间步长为 \(1/45\)，\(\gamma = 0.95\)，\(\eta = 0.85\)，每次通过 30 次迭代，并允许 50 次通过。每个控制的初始值取为 0，每个控制的初始区域大小取为 0.5。发现即使使用 45 个随机选择的点，也需要超过 7 个网格点。当 \(R=5\)
+为了解决这个最优控制问题，我们选择了 `P = 30` 个等长的时间阶段，积分时间步长为 `1/45`，`\gamma = 0.95`，`\eta = 0.85`，每次通过 30 次迭代，并允许 50 次通过。每个控制的初始值取为 0，每个控制的初始区域大小取为 0.5。发现即使使用 45 个随机选择的点，也需要超过 7 个网格点。当 `R=5`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_124_0.png)
 
 **Figure 6.1:** 使用 30 个阶段的分段常数控制的两级 CSTR 系统的最优控制策略
 
-问题是找到在时间区间 \(0 \leq t < 1\) 内使性能指标最小化的控制向量 \(\mathbf{u}(t)\)
+问题是找到在时间区间 \(0 \leq t < 1\) 内使性能指标最小化的控制向量 `\mathbf{u}(t)`
 
-$$
-I = 10 \mathbf{x}^T(1) \mathbf{x}(1) + \int_0^1 (\mathbf{x}^T \mathbf{x} + \mathbf{u}^T \mathbf{u}) \, dt \tag{6.41}
-$$
+`I = 10 \mathbf{x}^T(1) \mathbf{x}(1) + \int_0^1 (\mathbf{x}^T \mathbf{x} + \mathbf{u}^T \mathbf{u}) \, dt \tag{6.41}`
 
 为将问题化为标准形式，我们通过微分方程引入一个附加变量
 
-$$
-\frac{dx_{n+1}}{dt} = \mathbf{x}^T \mathbf{x} + \mathbf{u}^T \mathbf{u} \tag{6.42}
-$$
+`\frac{dx_{n+1}}{dt} = \mathbf{x}^T \mathbf{x} + \mathbf{u}^T \mathbf{u} \tag{6.42}`
 
-初始条件 \(x_{n+1}(0) = 0\)，因此要最小化的性能指标为标准形式
+初始条件 `x_{n+1}(0) = 0`，因此要最小化的性能指标为标准形式
 
-$$
-I = 10 \mathbf{x}^T(1) \mathbf{x}(1) + x_{n+1}(1) \tag{6.43}
-$$
+`I = 10 \mathbf{x}^T(1) \mathbf{x}(1) + x_{n+1}(1) \tag{6.43}`
 
-其中已使用最终时间 \(t_f = 1\)。我们有兴趣建立该系统在状态变量数和控制变量数 \(n\) 选择为 20 时的最优控制。这里的目标是展示区域恢复因子 \(\eta\)、区域收缩因子 \(\gamma\) 以及每个网格点选择的随机点数 \(R\) 对 IDP 收敛的影响，同时使用单个网格点 (\(N = 1\))。状态方程是线性的，性能指标是二次的，因此问题相对简单。
+其中已使用最终时间 `t_f = 1`。我们有兴趣建立该系统在状态变量数和控制变量数 `n` 选择为 20 时的最优控制。这里的目标是展示区域恢复因子 `\eta`、区域收缩因子 `\gamma` 以及每个网格点选择的随机点数 `R` 对 IDP 收敛的影响，同时使用单个网格点 (`N = 1`)。状态方程是线性的，性能指标是二次的，因此问题相对简单。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_125_0.png)
 
 **Figure 6.2:** 应用图 6.1 中的控制策略后两级 CSTR 系统的状态轨迹
 
-### 6.4.1 区域恢复因子 \(\eta\) 的影响
+### 6.4.1 区域恢复因子 `\eta` 的影响
 
-为了使计算需求保持在合理范围内，同时仍具有近似连续控制策略的控制策略，我们选择 \(P = 40\) 个等长的时间阶段并寻求分段常数控制策略。区域恢复因子 \(\eta\) 的合理选择为 0.90。选择区域收缩因子为 \(\gamma = 0.95\) 会使区域逐渐减小，经过 30 次迭代后区域为开始时的 0.215 \(((0.95)^{30} = 0.215)\)。我们每次通过选择 30 次迭代。第一次通过开始时每个控制变量的初始区域大小选择为 20，每个控制变量的初始值选择为 0。对于积分，我们使用四阶 Runge-Kutta 方法，积分步长为 0.0125，这对该问题可提供三位小数的精度。
+为了使计算需求保持在合理范围内，同时仍具有近似连续控制策略的控制策略，我们选择 `P = 40` 个等长的时间阶段并寻求分段常数控制策略。区域恢复因子 `\eta` 的合理选择为 0.90。选择区域收缩因子为 `\gamma = 0.95` 会使区域逐渐减小，经过 30 次迭代后区域为开始时的 0.215 `((0.95)^{30} = 0.215)`。我们每次通过选择 30 次迭代。第一次通过开始时每个控制变量的初始区域大小选择为 20，每个控制变量的初始值选择为 0。对于积分，我们使用四阶 Runge-Kutta 方法，积分步长为 0.0125，这对该问题可提供三位小数的精度。
 
-如图所示 6.3 所示，使用 \(\eta = 0.70\) 和 \(\gamma = 0.95\) 很容易收敛到 \(I = 6226.047\)。使用 \(R = 3\) 时，在 27 次通过后获得了收敛，每次通过包含 30 次迭代。使用 \(R = 5\) 将收敛所需的通过次数减少到 24，但在一台 PentiumII/350 数字计算机上 30 次通过的计算时间从 104 s 增加到 158 s。
+如图所示 6.3 所示，使用 `\eta = 0.70` 和 `\gamma = 0.95` 很容易收敛到 `I = 6226.047`。使用 `R = 3` 时，在 27 次通过后获得了收敛，每次通过包含 30 次迭代。使用 `R = 5` 将收敛所需的通过次数减少到 24，但在一台 PentiumII/350 数字计算机上 30 次通过的计算时间从 104 s 增加到 158 s。
 
-当 \(\eta\) 降低到 0.65 时，如图 6.4 所示，使用 \(R = 3\) 时会出现搜索区域过早坍塌的情况。然而，使用 \(R = 5\) 时没有收敛困难，并且使用 \(R = 11\) 仅略微改善收敛速度，但 30 次通过的计算时间增加一倍至 343 s。
-
-
-
-
+当 `\eta` 降低到 0.65 时，如图 6.4 所示，使用 `R = 3` 时会出现搜索区域过早坍塌的情况。然而，使用 `R = 5` 时没有收敛困难，并且使用 `R = 11` 仅略微改善收敛速度，但 30 次通过的计算时间增加一倍至 343 s。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_126_0.png)
 
-*图 6.3：IDP 的收敛曲线，显示与最优值 \(I = 6226.047\) 的偏差，其中 \(\eta = 0.70\) 且 \(\gamma = 0.95\)，以随机选取点数 \(R\) 为参数*
+*图 6.3：IDP 的收敛曲线，显示与最优值 `I = 6226.047` 的偏差，其中 `\eta = 0.70` 且 `\gamma = 0.95`，以随机选取点数 `R` 为参数*
 
-当 \(\eta\) 增加到 \(0.75\) 时，与 \(\eta = 0.70\) 相比收敛速度略慢，如图 6.5 所示。
+当 `\eta` 增加到 `0.75` 时，与 `\eta = 0.70` 相比收敛速度略慢，如图 6.5 所示。
 
-## 6.4.2 区域收缩因子 \(\gamma\) 的影响
+## 6.4.2 区域收缩因子 `\gamma` 的影响
 
-与区域恢复因子 \(\eta\) 的情况类似，区域收缩因子 \(\gamma\) 也存在一个范围，在该范围内使用少量随机选取的控制值即可获得合理的收敛速率。如图 6.6 所示，当使用 \(\eta = 0.70\) 时，存在范围 \(0.93 < \gamma < 0.98\)，在此范围内使用 \(R = 3\) 即可实现收敛。
+与区域恢复因子 `\eta` 的情况类似，区域收缩因子 `\gamma` 也存在一个范围，在该范围内使用少量随机选取的控制值即可获得合理的收敛速率。如图 6.6 所示，当使用 `\eta = 0.70` 时，存在范围 `0.93 < \gamma < 0.98`，在此范围内使用 `R = 3` 即可实现收敛。
 
 #### 6.4.3 时间阶段数的影响
 
 该示例获得的最优控制策略如图 6.7 所示，给出了典型控制变量的情况，而某些典型状态变量的状态轨迹则给出在图 6.8 中。可以看出控制策略非常平滑。通过使用更多的时间阶段，平滑度会增加，从而更好地逼近连续控制策略。
 
-将时间阶段数加倍至 \(P = 80\) 后，我们获得了最小性能指标 \(I = 6225.568\)。该结果是在使用 \(R = 3\)、\(\eta = 0.70\) 和 \(\gamma = 0.95\) 的情况下，在 24 次遍历中获得的，每次遍历包含 30 次迭代，如前所述。
+将时间阶段数加倍至 `P = 80` 后，我们获得了最小性能指标 `I = 6225.568`。该结果是在使用 `R = 3`、`\eta = 0.70` 和 `\gamma = 0.95` 的情况下，在 24 次遍历中获得的，每次遍历包含 30 次迭代，如前所述。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_127_0.png)
 
-*图 6.4：IDP 的收敛曲线，显示与最优值 \(I = 6226.047\) 的偏差，其中 \(\eta = 0.65\) 且 \(\gamma = 0.95\)，以随机选取点数 \(R\) 为参数*
+*图 6.4：IDP 的收敛曲线，显示与最优值 `I = 6226.047` 的偏差，其中 `\eta = 0.65` 且 `\gamma = 0.95`，以随机选取点数 `R` 为参数*
 
 80 个阶段、30 次遍历的计算时间为 200.5 s。时间阶段数加倍并未减慢收敛速度，但计算时间加倍了。
 
-使用较少阶段数，即 \(P = 30\) 个阶段，得到 \(I = 6226.543\)。使用相同参数，30 次遍历的计算时间为 80.6 s。
+使用较少阶段数，即 `P = 30` 个阶段，得到 `I = 6226.543`。使用相同参数，30 次遍历的计算时间为 80.6 s。
 
-由于状态方程是线性的且性能指标是二次的，该问题非常适合使用庞特里亚金最大原理求解，其中最优控制策略通过最小化哈密顿量获得。这导致 \(n \times n\) Riccati 方程 [6]
+由于状态方程是线性的且性能指标是二次的，该问题非常适合使用庞特里亚金最大原理求解，其中最优控制策略通过最小化哈密顿量获得。这导致 `n \times n` Riccati 方程 [6]
 
-\[
-\frac{d\mathbf{J}}{dt}+\mathbf{J}\mathbf{A}+\mathbf{A}^{T}\mathbf{J}-0.5\mathbf{J}\mathbf{J}+2\mathbf{I}=0 \tag{6.44}
-\]
+`\frac{d\mathbf{J}}{dt}+\mathbf{J}\mathbf{A}+\mathbf{A}^{T}\mathbf{J}-0.5\mathbf{J}\mathbf{J}+2\mathbf{I}=0 \tag{6.44}`
 
 其终值条件为
 
-\[
-\mathbf{J}(t_f)=20\mathbf{I}. \tag{6.45}
-\]
+`\mathbf{J}(t_f)=20\mathbf{I}. \tag{6.45}`
 
-Riccati 方程反向求解，得到对称矩阵 \(\mathbf{J}\)，该矩阵在每次积分时间步的末尾存储。然后通过向前积分状态方程并使用存储的 \(\mathbf{J}\) 值获得最优控制策略
+Riccati 方程反向求解，得到对称矩阵 `\mathbf{J}`，该矩阵在每次积分时间步的末尾存储。然后通过向前积分状态方程并使用存储的 `\mathbf{J}` 值获得最优控制策略
 
-\[
-\mathbf{u}=-0.5\mathbf{J}\mathbf{x}(t). \tag{6.46}
-\]
+`\mathbf{u}=-0.5\mathbf{J}\mathbf{x}(t). \tag{6.46}`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_128_0.png)
 
-*图 6.5：IDP 的收敛曲线，显示与最优值 \(I = 6226.047\) 的偏差，其中 \(\eta = 0.75\) 且 \(\gamma = 0.95\)，以随机选取点数 \(R\) 为参数*
+*图 6.5：IDP 的收敛曲线，显示与最优值 `I = 6226.047` 的偏差，其中 `\eta = 0.75` 且 `\gamma = 0.95`，以随机选取点数 `R` 为参数*
 
-为确保积分的足够精度和稳定性，我们使用了积分子程序 DVERK [4]，局部误差容限为 \(10^{-4}\)。解的精度取决于存储反馈矩阵的时间阶段数，但通常至少需要 100 个时间阶段才能获得良好的近似。这里我们将通过采用不同数量的阶段来说明阶段数的影响。这也使我们能够看到该标准方法与 IDP 获得的结果之间的关系。即使使用 200 个阶段，计算也非常快，如表 6.8 所示。
+为确保积分的足够精度和稳定性，我们使用了积分子程序 `DVERK` [4]，局部误差容限为 `10^{-4}`。解的精度取决于存储反馈矩阵的时间阶段数，但通常至少需要 100 个时间阶段才能获得良好的近似。这里我们将通过采用不同数量的阶段来说明阶段数的影响。这也使我们能够看到该标准方法与 IDP 获得的结果之间的关系。即使使用 200 个阶段，计算也非常快，如表 6.8 所示。
 
 **表 6.8：通过求解 Riccati 方程获得的性能指标值**
 
-| 阶段数 \(P\) | 性能指标 \(I\) | PentiumII/350 上的计算时间，s |
+| 阶段数 `P` | 性能指标 `I` | PentiumII/350 上的计算时间，s |
 |---:|---:|---:|
 | 30 | 6228.42 | 1.60 |
 | 40 | 6227.13 | 1.92 |
@@ -2839,17 +3019,17 @@ Riccati 方程反向求解，得到对称矩阵 \(\mathbf{J}\)，该矩阵在每
 | 150 | 6225.53 | 5.76 |
 | 200 | 6225.48 | 7.69 |
 
-显而易见，这里 \(n = 20\) 的 Riccati 方程求解比 IDP 快得多，但对于相同数量的阶段，使用 IDP 会得到略好的结果。在下一章中我们将看到，当 IDP 中使用分段线性控制且维度增加时，IDP 的计算时间变得与求解 Riccati 方程所需的计算时间相当。
+显而易见，这里 `n = 20` 的 Riccati 方程求解比 IDP 快得多，但对于相同数量的阶段，使用 IDP 会得到略好的结果。在下一章中我们将看到，当 IDP 中使用分段线性控制且维度增加时，IDP 的计算时间变得与求解 Riccati 方程所需的计算时间相当。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_129_0.png)
 
-*图 6.6：IDP 的收敛曲线，显示与最优值 \(I = 6226.047\) 的偏差，其中 \(\eta = 0.70\) 且使用 3 个随机选取点，以区域收缩因子 \(\gamma\) 为参数*
+*图 6.6：IDP 的收敛曲线，显示与最优值 `I = 6226.047` 的偏差，其中 `\eta = 0.70` 且使用 3 个随机选取点，以区域收缩因子 `\gamma` 为参数*
 
-当这些性能指标值对 \(1/P^2\) 作图时，如图 6.9 所示，线性图的线性外推值给出 6225.4，这与 Nagurka 等人 [10] 报道的值相同。很明显，分段常数控制并不是控制策略非常平滑时的最佳选择。与使用大量阶段的分段常数控制相比，使用分段线性连续控制可以获得更高的精度。在第 7 章中将说明在非常高维系统中，使用分段线性连续控制的好处。
+当这些性能指标值对 `1/P^2` 作图时，如图 6.9 所示，线性图的线性外推值给出 6225.4，这与 Nagurka 等人 [10] 报道的值相同。很明显，分段常数控制并不是控制策略非常平滑时的最佳选择。与使用大量阶段的分段常数控制相比，使用分段线性连续控制可以获得更高的精度。在第 7 章中将说明在非常高维系统中，使用分段线性连续控制的好处。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_130_0.png)
 
-*图 6.7：最优控制策略，显示 \(P = 40\) 个阶段时典型控制变量的分段常数控制*
+*图 6.7：最优控制策略，显示 `P = 40` 个阶段时典型控制变量的分段常数控制*
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_130_1.png)
 
@@ -2861,55 +3041,45 @@ Riccati 方程反向求解，得到对称矩阵 \(\mathbf{J}\)，该矩阵在每
 - [11] Oh, S.H. and Luus, R.: “Optimal feedback control of time-delay systems”, *AIChE J.* **22** (1975), 144-147.
 - [12] Rosen, O. and Luus, R.: “Evaluation of gradients for piecewise constant optimal control”, *Comput. Chem. Eng.* **15** (1991), 273-281.
 
-其中 \(\phi\) 是给定终值时间 \(t_f\) 时 \(\mathbf{x}\) 的正定函数。最优控制问题是寻找时间区间 \(0 \leq t \leq t_f\) 内的控制策略 \(\mathbf{u}(t)\)，使得性能指标最小化。
+其中 `\phi` 是给定终值时间 `t_f` 时 `\mathbf{x}` 的正定函数。最优控制问题是寻找时间区间 `0 \leq t \leq t_f` 内的控制策略 `\mathbf{u}(t)`，使得性能指标最小化。
 
-设将给定时间区间 \((0,t_f)\) 分为 \(P\) 个子区间 \((0,t_1)\)，\((t_1,t_2)\)，\(\ldots,(t_k,t_{k+1}),\ldots,(t_{P-1},t_P)\)，每个长度为 \(L\)，使得
+设将给定时间区间 `(0,t_f)` 分为 `P` 个子区间 `(0,t_1)`，`(t_1,t_2)`，`...,(t_k,t_{k+1}),...,(t_{P-1},t_P)`，每个长度为 `L`，使得
 
-\[
-L=\frac{t_f}{P}.
-\]
+`L=\frac{t_f}{P}.`
 
-我们寻求分段线性连续控制策略以最小化性能指标。因此，我们在时间区间 \((t_k,t_{k+1})\) 内通过表达式计算控制策略
+我们寻求分段线性连续控制策略以最小化性能指标。因此，我们在时间区间 `(t_k,t_{k+1})` 内通过表达式计算控制策略
 
-\[
-\mathbf{u}(t)=\mathbf{u}(k)+\frac{\mathbf{u}(k+1)-\mathbf{u}(k)}{L}(t-t_k)
-\]
+`\mathbf{u}(t)=\mathbf{u}(k)+\frac{\mathbf{u}(k+1)-\mathbf{u}(k)}{L}(t-t_k)`
 
-其中 \(\mathbf{u}(k)\) 是时间 \(t_k\) 时 \(\mathbf{u}\) 的值，\(\mathbf{u}(k+1)\) 是时间 \(t_{k+1}\) 时 \(\mathbf{u}\) 的值。最优控制问题现在是寻找 \(\mathbf{u}(k)\)，\(k=0,1,2,\ldots,P\)，在由式 (7.2) 指定的范围内，使得式 (7.3) 中的性能指标最小化。在最后一个阶段我们必须同时确定 \(\mathbf{u}(P)\) 和 \(\mathbf{u}(P-1)\)。这意味着对于最后一个阶段，我们必须确定 \(m\) 个控制变量的 \(2m\) 个值。对于所有其他阶段，由于连续性限制，只需确定 \(m\) 个值。
+其中 `\mathbf{u}(k)` 是时间 `t_k` 时 `\mathbf{u}` 的值，`\mathbf{u}(k+1)` 是时间 `t_{k+1}` 时 `\mathbf{u}` 的值。最优控制问题现在是寻找 `\mathbf{u}(k)`，`k=0,1,2,...,P`，在由式 (7.2) 指定的范围内，使得式 (7.3) 中的性能指标最小化。在最后一个阶段我们必须同时确定 `\mathbf{u}(P)` 和 `\mathbf{u}(P-1)`。这意味着对于最后一个阶段，我们必须确定 `m` 个控制变量的 `2m` 个值。对于所有其他阶段，由于连续性限制，只需确定 `m` 个值。
 
 ### 7.3 分段线性控制 IDP 的算法
 
-这里我们使用单网格点，即 \(N=1\) 的 IDP，以多遍方式进行，其中区域大小在每次迭代后按 \(\gamma\) 收缩。在构成一次遍历的指定迭代次数后，区域大小恢复为开始该遍历时区域大小的 \(\eta\) 倍，以供后续遍历使用。为了说明 IDP 中这一底层逻辑，给出了一个算法，用于求解如式 (7.1)–式 (7.4) 所概述的最优控制问题，其中要求使用式 (7.5) 指定的分段线性控制，在 \(P\) 个长度相同阶段上最小化式 (7.3) 中的性能指标：
+这里我们使用单网格点，即 `N=1` 的 IDP，以多遍方式进行，其中区域大小在每次迭代后按 `\gamma` 收缩。在构成一次遍历的指定迭代次数后，区域大小恢复为开始该遍历时区域大小的 `\eta` 倍，以供后续遍历使用。为了说明 IDP 中这一底层逻辑，给出了一个算法，用于求解如式 (7.1)–式 (7.4) 所概述的最优控制问题，其中要求使用式 (7.5) 指定的分段线性控制，在 `P` 个长度相同阶段上最小化式 (7.3) 中的性能指标：
 
-- 1. 将时间区间 \([0,t_f]\) 分为 \(P\) 个时间阶段，每个长度为 \(L\)。
-- 2. 选择 \(\mathbf{u}\) 的测试值数，记为 \(R\)，初始控制策略和初始区域大小 \(\mathbf{r}_{in}\)；同时选择每次迭代后使用的区域收缩因子 \(\gamma\) 和每次遍历后使用的区域恢复因子 \(\eta\)。
+- 1. 将时间区间 `[0,t_f]` 分为 `P` 个时间阶段，每个长度为 `L`。
+- 2. 选择 `\mathbf{u}` 的测试值数，记为 `R`，初始控制策略和初始区域大小 `\mathbf{r}_{in}`；同时选择每次迭代后使用的区域收缩因子 `\gamma` 和每次遍历后使用的区域恢复因子 `\eta`。
 - 3. 选择每次遍历中使用的迭代次数和运行中使用的遍历次数。
-- 4. 设置遍历数索引 \(q=1\)，迭代数索引设为 \(j=1\)。
-- 5. 设置区域大小向量 \(\mathbf{r}^{j}=\eta^{q}\mathbf{r}_{in}\)。
-- 6. 使用最佳控制策略（第一次遍历第一次迭代的初始控制策略），从 \(t=0\) 积分到 \(t_f\) 方程 (7.1) 以生成 \(\mathbf{x}\) 轨迹并
+- 4. 设置遍历数索引 `q=1`，迭代数索引设为 `j=1`。
+- 5. 设置区域大小向量 `\mathbf{r}^{j}=\eta^{q}\mathbf{r}_{in}`。
+- 6. 使用最佳控制策略（第一次遍历第一次迭代的初始控制策略），从 `t=0` 积分到 `t_f` 方程 (7.1) 以生成 `\mathbf{x}` 轨迹并在每个时间阶段开始时存储 x 的值，使 x(k − 1) 对应于第 k 阶段开始时的 x 值。
+- 7. 从第 P 阶段（对应于时间 `t_f − L`）开始，将式(7.1)从 `t_f − L` 积分到 `t_f`，以第 6 步存储的 `x(P − 1)` 值作为初始状态，分别使用由式(7.5)计算得到的 `R` 个允许控制向量值，其中
+
+`u(P − 1) = u*^j(P − 1) + D1 r^j    (7.6)`
+
+`u(P) = u*^j(P) + D2 r^j    (7.7)`
+
+其中 `u*^j(P − 1)` 和 `u*^j(P)` 是上一次迭代得到的最优值，`D1` 和 `D2` 是元素为 −1 到 1 之间不同随机数的对角矩阵。将任何控制变量适当地截断至 `α_j` 或 `β_j`，以满足式(7.2)。在 `R` 个性能指标值中，选择使性能指标最小的控制值，并将这些值存储为 `u*(P − 1)` 和 `u*(P)`。这样我们就得到了最后一个阶段的最优控制。
+- 8. 回退到第 P−1 阶段（对应于时间 `t_f − 2L`）。按上一步的方式为 `u(P − 2)` 选取 `R` 个值，并以 `x(P − 2)` 作为初始状态，使用式(7.5)计算控制量，将式(7.1)积分一个阶段长度。然后使用第 7 步存储的 `u*(P − 1)` 和 `u*(P)` 值，继续对最后一个时间阶段进行积分。比较 `R` 个性能指标值，并将使性能指标最小的最优控制存储为 `u*(P − 2)`。
+- 9. 继续此过程，直到到达第 1 阶段（对应于初始时间 `t = 0` 和给定的初始状态）。与前面一样，对式(7.1)进行积分，比较 `R` 个性能指标值，并将使性能指标最小的控制 `u(0)` 存储为 `u*(0)`，同时存储相应的 x 轨迹。
+- 10. 缩小允许控制值的区域大小
+
+`r^{j+1} = γ r^j    (7.8)`
+
+其中 `j` 是迭代次数索引。以第 9 步得到的最优控制策略作为用上标 * 表示的允许控制值的中点。
+- 11. 将迭代索引 `j` 加 1，然后转到第 6 步；按指定的迭代次数继续此过程，以完成一遍扫描。
 
 
-在每个时间阶段开始时存储 x 的值，使 x(k − 1) 对应于第 k 阶段开始时的 x 值。
-
-7. 从第 P 阶段（对应于时间 t_f − L）开始，将式(7.1)从 t_f − L 积分到 t_f，以第 6 步存储的 x(P − 1) 值作为初始状态，分别使用由式(7.5)计算得到的 R 个允许控制向量值，其中
-
-u(P − 1) = u*^j(P − 1) + D1 r^j    (7.6)
-
-u(P) = u*^j(P) + D2 r^j    (7.7)
-
-其中 u*^j(P − 1) 和 u*^j(P) 是上一次迭代得到的最优值，D1 和 D2 是元素为 −1 到 1 之间不同随机数的对角矩阵。将任何控制变量适当地截断至 α_j 或 β_j，以满足式(7.2)。在 R 个性能指标值中，选择使性能指标最小的控制值，并将这些值存储为 u*(P − 1) 和 u*(P)。这样我们就得到了最后一个阶段的最优控制。
-
-8. 回退到第 P−1 阶段（对应于时间 t_f − 2L）。按上一步的方式为 u(P − 2) 选取 R 个值，并以 x(P − 2) 作为初始状态，使用式(7.5)计算控制量，将式(7.1)积分一个阶段长度。然后使用第 7 步存储的 u*(P − 1) 和 u*(P) 值，继续对最后一个时间阶段进行积分。比较 R 个性能指标值，并将使性能指标最小的最优控制存储为 u*(P − 2)。
-
-9. 继续此过程，直到到达第 1 阶段（对应于初始时间 t = 0 和给定的初始状态）。与前面一样，对式(7.1)进行积分，比较 R 个性能指标值，并将使性能指标最小的控制 u(0) 存储为 u*(0)，同时存储相应的 x 轨迹。
-
-10. 缩小允许控制值的区域大小
-
-r^{j+1} = γ r^j    (7.8)
-
-其中 j 是迭代次数索引。以第 9 步得到的最优控制策略作为用上标 * 表示的允许控制值的中点。
-
-11. 将迭代索引 j 加 1，然后转到第 6 步；按指定的迭代次数继续此过程，以完成一遍扫描。
 
 12. 将遍索引 q 加 1，然后转到第 5 步；按指定的遍数继续此过程，并对结果进行解释。
 
@@ -2950,7 +3120,9 @@ Luus 和 Cormack [6] 利用基于 Pontryagin 极大值原理的控制向量迭�
 得到的最优控制策略如图 7.2 所示，状态轨迹如图 7.3 所示。有趣的是，在最终时刻 t_f = 0.78 时，状态变量 x₂ 比初始时刻更远离期望状态（原点）。
 
 $$
+
 \frac{dx_3}{dt} = 5x_1^2 + 2.5x_2^2 + 0.5u^2 \tag{7.15}
+
 $$
 
 初始状态为
@@ -2983,31 +3155,42 @@ Thomopoulos 和 Papadakis [10] 使用指数平滑技术克服了不连续性问�
 
 d**x**/dt = A**x**(t) + **u**(t) (7.18)
 
-
 ![](img/06ae75163df4fdf5e1eec243d497d393_141_0.png)
 
 图7.6：具有如下初始状态的非可微系统的状态轨迹
 
 \[
+
 x(0) = [1 \ 2 \ \cdots \ n]^T \tag{7.19}
+
 \]
 
 其中系数矩阵为
 
 \[
+
 A = \begin{bmatrix}
+
 0 & 1 & 0 & \cdots & 0 \\
+
 0 & 0 & 1 & \cdots & 0 \\
+
 \vdots & \vdots & \vdots & \ddots & \vdots \\
+
 0 & 0 & 0 & \cdots & 1 \\
+
 1 & -2 & 3 & \cdots & (-1)^{n+1} n
+
 \end{bmatrix}
+
 \]
 
 问题是在时间区间 \(0 \le t < 1\) 内求控制向量 \(u(t)\)，使其最小化性能指标
 
 \[
+
 I = 10 x^T(1)x(1) + \int_0^1 (x^T x + u^T u)\,dt. \tag{7.20}
+
 \]
 
 ##### 情形1：n = 20
@@ -3027,14 +3210,23 @@ I = 10 x^T(1)x(1) + \int_0^1 (x^T x + u^T u)\,dt. \tag{7.20}
 **表7.1：用于分段线性控制的时间段数 \(P\) 对最优性能指标的影响**
 
 | 时间段数 \(P\) | 性能指标 \(I\) |
+
 |---:|---:|
+
 | 7 | 6225.59 |
+
 | 8 | 6225.53 |
+
 | 9 | 6225.49 |
+
 | 10 | 6225.46 |
+
 | 11 | 6225.45 |
+
 | 15 | 6225.42 |
+
 | 30 | 6225.41 |
+
 | 40 | 6225.41 |
 
 从表7.1可以看到，使用9个时间段所得的值 \(I = 6225.48\) 几乎与使用200个时间段求解黎卡提方程得到的值相同。使用10个时间段进行分段线性控制所得的结果优于通过求解黎卡提方程获得的最优值。显然，超过15个时间段后收益甚微。
@@ -3083,9 +3275,6 @@ I = 10 x^T(1)x(1) + \int_0^1 (x^T x + u^T u)\,dt. \tag{7.20}
 
 图7.15：情形3（\(n = 250\)）中具有11个时间段的典型控制变量的最优分段线性控制策略
 
-
-
-
 图7.16：当n = 250时案例3的典型状态轨迹
 
 图7.17：IDP在第20轮中的收敛曲线
@@ -3124,23 +3313,25 @@ $$I=\int_0^{t_f}(\mathbf{x}^{T}\mathbf{x}+\mathbf{u}^{T}\mathbf{u})\,dt.\tag{7.2
 
 图7.18：100块塔板气体吸收塔在P = 20个阶段时的最优分段线性控制策略
 
+
+
 ![](img/06ae75163df4fdf5e1eec243d497d393_151_1.png)
 
 图7.19：100块塔板气体吸收塔的典型状态轨迹
 
-## 第8章：时滞系统
+# 第8章：时滞系统
 
-### 8.1 引言
+## 8.1 引言
 
 工程系统中通常包含延迟元件，例如循环流、传输滞后以及与输出变量测量相关的时间延迟。这些时间延迟对所考虑系统的控制可能产生显著影响，因此将其纳入数学模型非常重要。这就产生了具有延迟变元的微分方程。
 
 由于非线性时滞系统的最优控制求解困难，Oh和Luus [8]提出了一种次优控制方法，即利用延迟状态的泰勒级数展开来保留原时滞系统足够的动态特性，然后使用直接搜索法，在使相关性能指标最小化的意义上获得最佳反馈增益矩阵。对于小时滞，该方法取得了非常好的结果。
 
-使用IDP不存在概念上的困难，因为无需对任何方程进行反向积分。Dadebo和Luus [3]首次尝试将IDP用于时滞系统，他们使用分段常数控制策略，并在若干问题上取得了良好结果。在本章中，除了仅使用分段常数控制外，我们还希望使用分段线性连续控制，从而可以用更少的时间阶段获得更好的结果。这里我们将使用单个网格点（N = 1）。如果使用单个网格点，就不会出现如何确定为延迟项所必需的初始状态曲线的问题。唯一困难在于为高度非线性系统确定足够好的初始条件以确保收敛。Luus等人 [7]的近期工作表明，克服这一困难的一个好方法是利用延迟项的泰勒级数展开，将给定系统转换为无时滞系统，并可以容易地为此系统建立最优控制策略。然后，无时滞系统的最优控制策略为时滞系统提供初始控制策略。我们将用最后一个例子说明这种方法。
+使用IDP不存在概念上的困难，因为无需对任何方程进行反向积分。Dadebo和Luus [3]首次尝试将IDP用于时滞系统，他们使用分段常数控制策略，并在若干问题上取得了良好结果。在本章中，除了仅使用分段常数控制外，我们还希望使用分段线性连续控制，从而可以用更少的时间阶段获得更好的结果。这里我们将使用单个网格点（`N = 1`）。如果使用单个网格点，就不会出现如何确定为延迟项所必需的初始状态曲线的问题。唯一困难在于为高度非线性系统确定足够好的初始条件以确保收敛。Luus等人 [7]的近期工作表明，克服这一困难的一个好方法是利用延迟项的泰勒级数展开，将给定系统转换为无时滞系统，并可以容易地为此系统建立最优控制策略。然后，无时滞系统的最优控制策略为时滞系统提供初始控制策略。我们将用最后一个例子说明这种方法。
 
-### 8.2 问题描述
+## 8.2 问题描述
 
-让我们考虑由具有常数时滞\(\tau\)的向量微分方程描述的系统：
+让我们考虑由具有常数时滞`τ`的向量微分方程描述的系统：
 
 $$\frac{d\mathbf{x}}{dt}=\mathbf{f}[\mathbf{x}(t),\mathbf{x}(t-\tau),\mathbf{u}(t)]\tag{8.1}$$
 
@@ -3152,7 +3343,7 @@ $$\mathbf{x}(t)=\mathbf{g}(t),\quad -\tau \le t < 0\tag{8.2}$$
 
 $$\mathbf{x}(0)=\mathbf{k}.\tag{8.3}$$
 
-这里**x**是\((n\times1)\)状态向量，**u**是\((m\times1)\)控制向量，\(\tau\)是常数延迟因子，**g**是给定的时间函数，给出状态的初始曲线。让我们假设控制向量中的每个元素满足以下边界条件：
+这里**x**是`(n×1)`状态向量，**u**是`(m×1)`控制向量，`τ`是常数延迟因子，**g**是给定的时间函数，给出状态的初始曲线。让我们假设控制向量中的每个元素满足以下边界条件：
 
 $$\alpha_j \le u_j \le \beta_j,\quad j=1,2,\cdots,m.\tag{8.4}$$
 
@@ -3160,17 +3351,17 @@ $$\alpha_j \le u_j \le \beta_j,\quad j=1,2,\cdots,m.\tag{8.4}$$
 
 $$I=\Phi(\mathbf{x}(t_f))\tag{8.5}$$
 
-其中\(\Phi\)是最终状态的某个函数，且最终时间\(t_f\)是给定的。最优控制问题是在时间区间\(0\le t < t_f\)内找到控制\(\mathbf{u}(t)\)，使得性能指标最小化。
+其中`Φ`是最终状态的某个函数，且最终时间`t_f`是给定的。最优控制问题是在时间区间`0≤ t < t_f`内找到控制`u(t)`，使得性能指标最小化。
 
-让我们将给定时间区间划分为\(P\)个子区间\((0,t_1),(t_1,t_2),\cdots,(t_{P-1},t_P)\)，每个子区间长度为\(L\)，因此：
+让我们将给定时间区间划分为`P`个子区间`(0,t_1),(t_1,t_2),⋯,(t_{P-1},t_P)`，每个子区间长度为`L`，因此：
 
 $$L=\frac{t_f}{P}.\tag{8.6}$$
 
 我们不仅寻求分段常数控制策略，还将使用IDP来找出使性能指标最小化的分段线性控制策略。概念上不存在困难，可以使用前面的算法。对于带时滞的微分方程积分，我们使用Hairer *等人* [4]给出的积分程序。为了了解IDP在处理时滞问题中的表现，我们考虑几个示例。
 
-### 8.3 示例
+## 8.3 示例
 
-#### 8.3.1 示例1
+### 8.3.1 示例1
 
 让我们考虑由Chan和Perkins [2]、Oh和Luus [8]、Dadebo和Luus [3]以及Luus [6]用于最优控制研究的线性时滞系统。该系统由以下微分方程描述：
 
@@ -3188,15 +3379,15 @@ $$x_1(t)=x_2(t)=1.0,\quad -\tau \le t \le 0,\quad x_3(0)=0.\tag{8.10}$$
 
 $$I=x_3(t_f)\tag{8.11}$$
 
-其中最终时间设为\(t_f = 5\)。
+其中最终时间设为`t_f = 5`。
 
-为了用IDP求解此问题，我们选择单个网格点\(N = 1\)，并随机选取\(R = 3\)个值。初始控制策略选为零，初始区域大小选为0.2。使用2轮迭代，每轮包含10次迭代，区域缩减因子\(\gamma = 0.80\)，区域恢复因子\(\eta = 0.70\)。方程积分使用Hairer等人 [4]的积分程序。针对不同的延迟因子\(\tau\)值进行了运行，对于分段常数控制和分段线性控制，阶段数\(P\)分别选取为5、10和20。
+为了用IDP求解此问题，我们选择单个网格点`N = 1`，并随机选取`R = 3`个值。初始控制策略选为零，初始区域大小选为0.2。使用2轮迭代，每轮包含10次迭代，区域缩减因子`γ = 0.80`，区域恢复因子`η = 0.70`。方程积分使用Hairer等人 [4]的积分程序。针对不同的延迟因子`τ`值进行了运行，对于分段常数控制和分段线性控制，阶段数`P`分别选取为5、10和20。
 
 表8.1给出了使用分段常数控制所得的结果。
 
 **表8.1：** 使用不同延迟因子和阶段数的分段常数控制策略的性能指标
 
-| 时滞\(\tau\) | \(P = 5\) | \(P = 10\) | \(P = 20\) | 控制向量迭代 |
+| 时滞`τ` | `P = 5` | `P = 10` | `P = 20` | 控制向量迭代 |
 |---:|---:|---:|---:|---:|
 | 0.10 | 2.5764 | 2.5709 | 2.5667 | 2.562 |
 | 0.25 | 2.5374 | 2.5335 | 2.5283 | 2.526 |
@@ -3204,13 +3395,9 @@ $$I=x_3(t_f)\tag{8.11}$$
 | 0.75 | 2.7918 | 2.7818 | 2.7704 | 2.769 |
 | 1.00 | 2.9683 | 2.9471 | 2.9343 | 2.932 |
 
-可以看出，即使使用\(P = 20\)，结果也与Oh和Luus [8]基于庞特里亚金最大值原理的控制向量迭代程序所得结果相当接近。使用\(P = 20\)已经给出与控制向量迭代报告结果非常接近的结果。
+可以看出，即使使用`P = 20`，结果也与Oh和Luus [8]基于庞特里亚金最大值原理的控制向量迭代程序所得结果相当接近。使用`P = 20`已经给出与控制向量迭代报告结果非常接近的结果。
 
-分段线性控制的结果见表8.2。显然，使用\(P = 5\)对最优控制的逼近不够充分。然而，仅用10个阶段就获得了极好的结果。必须认识到，基于庞特里亚金最大值原理的控制向量迭代程序收敛速度很慢。
-
-
-
-
+分段线性控制的结果见表8.2。显然，使用`P = 5`对最优控制的逼近不够充分。然而，仅用10个阶段就获得了极好的结果。必须认识到，基于庞特里亚金最大值原理的控制向量迭代程序收敛速度很慢。
 
 表 8.2：使用不同时滞因子 τ 和阶段数的分段线性控制策略性能指标
 
@@ -3226,7 +3413,7 @@ $$I=x_3(t_f)\tag{8.11}$$
 
 使用 P = 10、时滞因子 τ = 1.0 的分段线性控制策略，给出 I = 2.9302，如图 8.2 所示。Luus [6] 给出了更平滑的控制策略，P = 20，得到 I = 2.9292。在 PentiumII/350 上，P = 10 进行两次遍历的计算时间为 0.7 s，P = 20 为 1.5 s。因此，此处的计算工作量可以忽略不计。
 
-#### 8.3.2 示例 2
+### 8.3.2 示例 2
 
 让我们考虑 Palanisamy 等人 [9] 考虑的线性时滞系统，用于通过单项 Walsh 级数对线性时变时滞系统的最优控制，该系统也被 Dadebo 和 Luus [3] 用于测试 IDP。该系统由时滞微分方程描述
 
@@ -3260,7 +3447,7 @@ I = x₂(t_f),   t_f = 2.    (8.15)
 
 最优控制策略如图 8.3 所示。可以看出控制策略非常平滑，完全没有必要采用更大的阶段数来提高精度。
 
-#### 8.3.3 示例 3 – 非线性两级 CSTR 系统
+### 8.3.3 示例 3 – 非线性两级 CSTR 系统
 
 第三个示例由串联的两个非线性 CSTR 系统组成，每个反应器中进行一级不可逆化学反应。该系统基于 Aris 和 Amundson [1] 最初建立的连续搅拌釜式反应器模型，并被 Lapidus 和 Luus [5] 用于稳定性研究。该系统由微分-差分方程描述
 
@@ -3299,8 +3486,11 @@ $$-1\leq u_j\leq 1,\quad j=1,2.$$  (8.24)
 初始状态曲线由下式给出
 
 x₁(t) = 0.15,    −τ ≤ t ≤ 0    (8.25)
+
 x₂(t) = −0.03,    −τ ≤ t ≤ 0    (8.26)
+
 x₃(0) = 0.10    (8.27)
+
 x₄(0) = 0.    (8.28)
 
 最优控制问题是找到时间区间 0 ≤ t < 2 中的控制 u₁(t) 和 u₂(t)，使得式 (8.21) 给出的性能指标对时滞因子 τ 的不同值最小化。与 Dadebo 和 Luus [3] 使用的分段常数控制不同，这里我们寻求分段线性控制。为了在 N = 1 时实现收敛，如分段线性连续控制所要求的那样，我们需要控制策略的良好初始估计。我们可以通过用无时滞系统近似时滞时间系统来获得该估计，同时仍保留动态特性。我们用泰勒级数展开时滞项，仅保留线性项：
@@ -3314,11 +3504,17 @@ x₂(t − τ) = x₂(t) − τ dx₂/dt + ⋯ ≈ x₂(t) − τ f₂(t).    (8
 将式 (8.29)-(8.30) 代入式 (8.18)-(8.19)，我们得到近似的无时滞系统
 
 $$\begin{aligned}
+
 \frac{dx_1}{dt} &= f_1 \tag{8.31}\\
+
 \frac{dx_2}{dt} &= f_2 \tag{8.32}\\
+
 \frac{dx_3}{dt} &= x_1-x_3-\tau f_1-R_2+0.25 \tag{8.33}\\
+
 \frac{dx_4}{dt} &= x_2-2x_4-u_2[x_4+0.25]-\tau f_2+R_2-0.25 \tag{8.34}\\
+
 \frac{dx_5}{dt} &= x_1^2+x_2^2+x_3^2+x_4^2+0.1(u_1^2+u_2^2). \tag{8.35}
+
 \end{aligned}$$
 
 我们在第 6 章中考虑了 τ=0.1 的该无时滞系统，并发现为了获得最优控制，需要多于一个网格点。使用 11 个网格点，可以毫不费力地获得最优 30 阶段分段常数控制策略。从该 30 阶段分段常数控制策略中，我们可以得到 10 阶段分段线性控制策略的近似值，可用作时滞时间系统的起始策略。
@@ -3328,10 +3524,6 @@ $$\begin{aligned}
 如图所示 8.4 所示，当时滞因子从 0.1 增加到 0.8 时，控制策略并没有改变太多。
 
 Luus 等人 [7] 表明，使用 7 个阶段而不是 10 个阶段的分段连续控制可以获得几乎相同的性能指标值。对于较大的 τ 值，性能指标值比 Oh 和 Luus [8] 使用控制向量迭代程序报道的值略好。例如，对于 τ=0.8，通过 IDP 我们得到 I=0.02550，而 Oh 和 Luus [8] 报道的值为 I=0.02561。要在 PentiumII/350 个人计算机上进行 30 次遍历，每次包含 50 次迭代，R=25，约需 4 分钟的计算时间。
-
-
-
-
 
 **表 8.3:** 控制 $R$ 允许取值个数对收敛的影响，$\tau = 0.1$
 
@@ -3360,16 +3552,26 @@ Luus 等人 [7] 表明，使用 7 个阶段而不是 10 个阶段的分段连续
 
 **图 8.4:** 两级 CSTR 系统的分段线性连续控制策略，显示了时滞 $\tau$ 的影响
 
-### 8.4 参考文献
+## 8.4 参考文献
 
 - [1] ARIS, R. AND AMUNDSON, N.R.: “An analysis of chemical reactor stability and control”, Chem. Eng. Sci. 7 (1958), 121-147.
+
 - [2] CHAN, H.C. AND PERKINS, W.R.: “Optimization of time delay systems using parameter imbedding”, Automatica 9 (1973), 257-261.
+
 - [3] DADEBO, S. AND LUUS, R.: “Optimal control of time-delay systems by dynamic programming”, Optimal Contr. Applic. Methods 13 (1992), 29-41.
+
+
+
 - [4] HAIRER, E., NORSETT, S.P., AND WANNER, G.: Solving ordinary differential equations 1, Springer Series in Computational Mathematics, Vol. 8; Springer, Berlin (1987).
+
 - [5] LAPIDUS, L. AND LUUS, R.: Optimal Control of Engineering Processes, Blaisdell, Waltham, Mass. (1967).
+
 - [6] LUUS, R.: “Iterative dynamic programming: From curiosity to a practical optimization procedure”, Control and Intelligent Systems 26 (1998), 1-8.
+
 - [7] LUUS, R., ZHANG, X., HARTIG, F., AND KEIL, F.J.: “Use of piecewise linear continuous control for time-delay systems”, Ind. Eng. Chem. Res. 34 (1995), 4136-4139.
+
 - [8] OH, S.H. AND LUUS, R.: “Optimal feedback control of time-delay systems”, AIChE J. 22 (1976), 140-147.
+
 - [9] PALANISAMY, K.R., BALACHANDRAN, K., AND RAMASAMY, R.S.: “Optimal control of linear time-varying delay systems via single-term Walsh series”, Proc. IEE 135 pt. D (1988), 332.
 
 ## 第 9 章：可变阶段长度
@@ -3442,7 +3644,7 @@ $$
 
 **图 9.3:** 使用 $P = 17$ 个时间阶段得到的最优控制策略
 
-图 9.6 和 9.7 显示，通过增加阶段数，性能指标可以得到改善，但改善非常轻微。控制策略在超过上界之后的<|message|> 部分并不很重要。该控制策略部分的这种极低灵敏度使得准确确定最优控制变得困难。策略中最重要的部分是切换时间，必须尽可能准确地获得从 0 到 0.5 的切换时间 $t = 0.5796$。
+图 9.6 和 9.7 显示，通过增加阶段数，性能指标可以得到改善，但改善非常轻微。控制策略在超过上界之后的部分并不很重要。该控制策略部分的这种极低灵敏度使得准确确定最优控制变得困难。策略中最重要的部分是切换时间，必须尽可能准确地获得从 0 到 0.5 的切换时间 $t = 0.5796$。
 
 因此，我们可以看到使用长度不等的阶段来建立最优控制策略的好处。在本章中，我们将概述将阶段长度优化纳入 IDP 的算法，并考虑最终时间指定的问题，正如我们刚刚考虑的示例一样。
 
@@ -3454,55 +3656,69 @@ $$
 
 **图 9.5:** 使用 $P = 7$ 个长度不等的阶段得到的最优控制策略
 
-
-
-
-
 ![](img/06ae75163df4fdf5e1eec243d497d393_168_0.png)
 
-图 9.6：采用 P = 10 个长度可变时间阶段得到的优化控制策略
+图 9.6：采用 $P = 10$ 个长度可变时间阶段得到的优化控制策略
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_168_1.png)
 
-图 9.7：采用 P = 15 个长度可变时间阶段得到的优化控制策略
+图 9.7：采用 $P = 15$ 个长度可变时间阶段得到的优化控制策略
 
 ### 9.2 终点时间自由时的可变阶段长度
 
 Bojkov 和 Luus [2] 对 IDP 算法进行了改进，使阶段可以具有可变长度。我们将阶段长度视为另一个控制变量，其表述相当直接。考虑状态方程为
 
-$$\frac{d\mathbf{x}}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{9.8}$$
+$$
+\frac{d\mathbf{x}}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{9.8}
+$$
 
 的优化控制问题，其中初始状态 $\mathbf{x}(0)$ 已知。$(m \times 1)$ 控制向量受限于
 
-$$\alpha_j \le u_j(t) \le \beta_j, \quad j = 1,2,\cdots,m. \tag{9.9}$$
+$$
+\alpha_j \le u_j(t) \le \beta_j, \quad j = 1,2,\cdots,m. \tag{9.9}
+$$
 
 要最大化的性能指标是终点时间 $t_f$ 处状态的标量函数
 
-$$I = \Phi(\mathbf{x}(t_f)) \tag{9.10}$$
+$$
+I = \Phi(\mathbf{x}(t_f)) \tag{9.10}
+$$
 
 其中终点时间 $t_f$ 未指定。设我们将时间区间划分为 $P$ 个长度可变的时间阶段
 
-$$v(k) = t_k - t_{k-1}, \quad k = 1,2,\cdots,P \tag{9.11}$$
+$$
+v(k) = t_k - t_{k-1}, \quad k = 1,2,\cdots,P \tag{9.11}
+$$
 
 其中
 
-$$v(k) \ge 0, \quad k = 1,2,\cdots,P. \tag{9.12}$$
+$$
+v(k) \ge 0, \quad k = 1,2,\cdots,P. \tag{9.12}
+$$
 
 控制在每个时间区间内保持恒定。现在引入归一化时间变量 $\tau$，通过在时间区间 $t_{k-1} \le t < t_k$ 内定义 $d\tau$ 的关系
 
-$$dt = v(k)P d\tau \tag{9.13}$$
+$$
+dt = v(k)P d\tau \tag{9.13}
+$$
 
 使得
 
-$$t_k - t_{k-1} = v(k)P(\tau_k - \tau_{k-1}). \tag{9.14}$$
+$$
+t_k - t_{k-1} = v(k)P(\tau_k - \tau_{k-1}). \tag{9.14}
+$$
 
 因此
 
-$$\tau_k - \tau_{k-1} = \frac{1}{P} \tag{9.15}$$
+$$
+\tau_k - \tau_{k-1} = \frac{1}{P} \tag{9.15}
+$$
 
 并且在归一化时间中各阶段长度相等，终点时间为 $\tau = 1$，因此可以直接使用前面介绍的 IDP 算法。唯一需要改变的是微分方程现在变为
 
-$$\frac{d\mathbf{x}}{d\tau} = v(k)P\mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{9.16}$$
+$$
+\frac{d\mathbf{x}}{d\tau} = v(k)P\mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{9.16}
+$$
 
 在第 $k$ 个时间区间内。
 
@@ -3510,22 +3726,36 @@ $$\frac{d\mathbf{x}}{d\tau} = v(k)P\mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{9.16}
 
 对于这个终点时间自由的问题，我们可以将阶段长度视为附加控制变量并将控制向量扩充为 $((m + 1) \times 1)$ 向量，但为清晰起见我们将其分开处理。显然，与之前一样，为了获得最高效率，IDP 应该以多遍的方式使用，其中在一次遍程之后区域恢复为前一次遍程开始时值的 $\eta$ 分数。该算法可分为八个步骤：
 
-- 1. 选择时间阶段数 P、网格点数 N、每个网格点上控制（包括阶段长度）的允许取值数 R、区域收缩因子 $\gamma$、区域恢复因子 $\eta$、控制和阶段长度的初始值、初始区域大小、每次遍程中使用的迭代次数以及遍程次数。
-- 2. 通过在指定区域内均匀分布 N 个控制和阶段长度的值，积分 Eq. (9.16) 从 $\tau = 0$ 到 $\tau = 1$ 以生成 N 条轨迹。每个时间阶段开始时 x 的 N 个值构成了每个阶段的 N 个网格点。
-- 3. 从阶段 P 开始，对应归一化时间 $\tau = (P - 1)/P$，对每个网格点生成 R 组控制和阶段长度的值：
-  - u(P) = u* j(P) + D r j(P)   (9.17)
-  - v(P) = v* j(P) + $\omega$ s j(P)   (9.18)
-  其中 D 是 m $\times$ m 对角矩阵，对角线上为介于 $-1$ 和 1 之间的不同随机数，$\omega$ 是另一个介于 $-1$ 和 1 之间的随机数；u* j(P) 是该特定网格点在前一次迭代中获得的控制最佳值，v* j(P) 是该特定网格点在前一次迭代中获得的阶段长度最佳值。用 R 个允许的控制和阶段长度值中的每一个积分 Eq. (9.16) 一次，从 $(P - 1)/P$ 到 $\tau = 1$ 以得到 x(t_f)，从而可以评估性能指标。比较 R 个性能指标值并选择使值最大化的控制和阶段长度。对应的控制和阶段长度存储起来以便在步骤 4 中使用。
-- 4. 回退到阶段 P - 1，对应时间 $\tau = (P - 2)/P$。对每个网格点生成 R 组允许的控制和阶段长度。一次用 R 组中的每一组积分 Eq. (9.16) 从 $(P - 2)/P$ 到 $(P - 1)/P$。为了继续积分，选择步骤 3 中与最接近 $\tau = (P - 1)/P$ 时的 x 的网格点对应的控制和阶段长度。现在比较 R 个性能指标值并存储产生最大值时的控制策略和阶段长度。
-- 5. 回退到阶段 P - 2，并继续上一步中的程序。继续直到阶段 1 对应 $\tau = 0$ 且给定初始状态作为网格点为止。比较 R 个性能指标值以给出该阶段的最佳控制和阶段长度。我们现在在允许选择的意义上获得了使性能指标最大化的每个阶段的最佳控制策略和阶段长度。
+- 1. 选择时间阶段数 `P`、网格点数 `N`、每个网格点上控制（包括阶段长度）的允许取值数 `R`、区域收缩因子 $\gamma$、区域恢复因子 $\eta$、控制和阶段长度的初始值、初始区域大小、每次遍程中使用的迭代次数以及遍程次数。
+
+- 2. 通过在指定区域内均匀分布 `N` 个控制和阶段长度的值，积分 Eq. (9.16) 从 $\tau = 0$ 到 $\tau = 1$ 以生成 `N` 条轨迹。每个时间阶段开始时 `x` 的 `N` 个值构成了每个阶段的 `N` 个网格点。
+
+- 3. 从阶段 `P` 开始，对应归一化时间 $\tau = (P - 1)/P$，对每个网格点生成 `R` 组控制和阶段长度的值：
+
+  - `u(P) = u* j(P) + D r j(P)`   (9.17)
+
+  - `v(P) = v* j(P) + $\omega$ s j(P)`   (9.18)
+
+  其中 `D` 是 `m` $\times$ `m` 对角矩阵，对角线上为介于 $-1$ 和 1 之间的不同随机数，$\omega$ 是另一个介于 $-1$ 和 1 之间的随机数；`u* j(P)` 是该特定网格点在前一次迭代中获得的控制最佳值，`v* j(P)` 是该特定网格点在前一次迭代中获得的阶段长度最佳值。用 `R` 个允许的控制和阶段长度值中的每一个积分 Eq. (9.16) 一次，从 $(P - 1)/P$ 到 $\tau = 1$ 以得到 `x(t_f)`，从而可以评估性能指标。比较 `R` 个性能指标值并选择使值最大化的控制和阶段长度。对应的控制和阶段长度存储起来以便在步骤 4 中使用。
+
+- 4. 回退到阶段 `P - 1`，对应时间 $\tau = (P - 2)/P$。对每个网格点生成 `R` 组允许的控制和阶段长度。一次用 `R` 组中的每一组积分 Eq. (9.16) 从 $(P - 2)/P$ 到 $(P - 1)/P$。为了继续积分，选择步骤 3 中与最接近 $\tau = (P - 1)/P$ 时的 `x` 的网格点对应的控制和阶段长度。现在比较 `R` 个性能指标值并存储产生最大值时的控制策略和阶段长度。
+
+- 5. 回退到阶段 `P - 2`，并继续上一步中的程序。继续直到阶段 1 对应 $\tau = 0$ 且给定初始状态作为网格点为止。比较 `R` 个性能指标值以给出该阶段的最佳控制和阶段长度。我们现在在允许选择的意义上获得了使性能指标最大化的每个阶段的最佳控制策略和阶段长度。
+
 - 6. 为下一次迭代做准备，减小允许区域的大小
 
-$$\mathbf{r}^{j+1}(k)=\gamma\mathbf{r}^{j}(k),\quad k=1,2,\ldots,P \tag{9.19}$$
+$$
+\mathbf{r}^{j+1}(k)=\gamma\mathbf{r}^{j}(k),\quad k=1,2,\ldots,P \tag{9.19}
+$$
 
-$$\mathbf{s}^{j+1}(k)=\gamma\mathbf{s}^{j}(k),\quad k=1,2,\ldots,P \tag{9.20}$$
+$$
+\mathbf{s}^{j+1}(k)=\gamma\mathbf{s}^{j}(k),\quad k=1,2,\ldots,P \tag{9.20}
+$$
 
 其中 $\gamma$ 是区域减小因子，$j$ 是迭代索引。使用步骤 5 中的最佳控制策略和阶段长度作为下一次迭代的中点。
+
 - 7. 将迭代索引 $j$ 增加 1 并转到步骤 2 以生成另一组网格点。继续进行指定次数的迭代。
+
 - 8. 将遍程数索引增加 1，将迭代索引 $j$ 设为 1 并转到步骤 2。继续进行指定次数的遍程，并检查结果。
 
 每次遍程的合理迭代次数为 20 或 30，区域收缩因子 $\gamma=0.95$，因为区域此时已被充分覆盖。对于许多问题，最优解在一次遍程中无法在合理精度内找到。因此在再次进行迭代之前应将区域恢复到合理值。恢复区域大小的一种简便方法是将其值取为前一次遍程开始时值的 $\eta$ 分数。为了帮助决定使用什么 $\eta$ 值，我们可以参考 [Table 9.1](#)，其中显示了如果进行 20 或 30 次遍程，选择 $\eta$ 时初始区域如何减小。如果使用 30 次遍程且 $\eta$ 选择为 0.95，则 30 次遍程后的初始区域大小变为第一次遍程开始时值的 0.2146 倍；如果 $\eta$ 选择为 0.85，则 30 次遍程后的初始区域大小变为第一次遍程开始时值的 0.0076 倍。因此需要在区域大小过早坍缩和收敛速度之间寻求平衡。
@@ -3557,29 +3787,43 @@ $$\mathbf{s}^{j+1}(k)=\gamma\mathbf{s}^{j}(k),\quad k=1,2,\ldots,P \tag{9.20}$$
 
 Wen 和 Yen [17] 以及 Luus [7] 观察到基于庞特里亚金最大原理的方法在油页岩热解的最优控制策略确定中存在困难。该问题由 Rosen 和 Luus [16] 使用对 SQP 的一些修改、由 Luus [9] 使用 IDP 以及由 Bojkov 和 Luus [2] 使用具有灵活阶段长度的 IDP 研究过。存在一系列五个化学反应：
 
-$$A_1 \longrightarrow A_2$$
+$$
+A_1 \longrightarrow A_2
+$$
 
-$$A_2 \longrightarrow A_3$$
+$$
+A_2 \longrightarrow A_3
+$$
 
-$$A_1 + A_2 \longrightarrow A_2 + A_2$$
+$$
+A_1 + A_2 \longrightarrow A_2 + A_2
+$$
 
-$$A_1 + A_2 \longrightarrow A_3 + A_2$$
+$$
+A_1 + A_2 \longrightarrow A_3 + A_2
+$$
 
-$$A_1 + A_2 \longrightarrow A_4 + A_2$$
+$$
+A_1 + A_2 \longrightarrow A_4 + A_2
+$$
 
 系统由微分方程描述
 
-$$\frac{dx_1}{dt}=-k_1x_1-(k_3+k_4+k_5)x_1x_2 \tag{9.21}$$
+$$
+\frac{dx_1}{dt}=-k_1x_1-(k_3+k_4+k_5)x_1x_2 \tag{9.21}
+$$
 
-$$\frac{dx_2}{dt}=k_1x_1-k_2x_2+k_3x_1x_2 \tag{9.22}$$
+$$
+\frac{dx_2}{dt}=k_1x_1-k_2x_2+k_3x_1x_2 \tag{9.22}
+$$
 
-$$\frac{dx_3}{dt}=k_2x_2+k_4x_1x_2 \tag{9.23}$$
+$$
+\frac{dx_3}{dt}=k_2x_2+k_4x_1x_2 \tag{9.23}
+$$
 
-$$\frac{dx_4}{dt}=k_5x_1x_2 \tag{9.24}$$
-
-
-
-
+$$
+\frac{dx_4}{dt}=k_5x_1x_2 \tag{9.24}
+$$
 
 表 9.2：热解问题的动力学参数
 
@@ -3593,13 +3837,17 @@ $$\frac{dx_4}{dt}=k_5x_1x_2 \tag{9.24}$$
 
 初始条件为
 
-$$x(0)=[\,1\ 0\ 0\ 0\,]^T.$$  \tag{9.25}
+$$
+x(0)=[\,1\ 0\ 0\ 0\,]^T. \tag{9.25}
+$$
 
 速率常数由下式给出
 
+
+
 $$k_i=\exp\left(a_i-\frac{b_i}{T}\right),\qquad i=1,2,\ldots,5, \tag{9.26}$$
 
-其中动力学参数 $a_i$ 和 $b_i$ 给出于 **表 9.2**。最优控制问题是求出停留时间 $t_f$ 和时间区间 $0<t<t_f$ 内的温度 $T$，使得由 $x_2$ 给出的热解沥青的浓度最大化。待最大化的性能指标因此为
+其中动力学参数 `$a_i$` 和 `$b_i$` 给出于 **表 9.2**。最优控制问题是求出停留时间 `$t_f$` 和时间区间 `$0<t<t_f$` 内的温度 `$T$`，使得由 `$x_2$` 给出的热解沥青的浓度最大化。待最大化的性能指标因此为
 
 $$I=x_2(t_f). \tag{9.27}$$
 
@@ -3607,25 +3855,25 @@ $$I=x_2(t_f). \tag{9.27}$$
 
 $$698.15\leq T\leq 748.15. \tag{9.28}$$
 
-通过基于庞特里亚金最大原理的控制向量迭代，Luus [7] 通过将 $t_f$ 固定在 17 个不同的值上求解了该最优控制问题，并对结果进行解释，得出性能指标的最大值为 0.35375，出现在 $t_f=9.5$ min。Rosen 和 Luus [16] 将该值改进为 $I=0.35379$，时间 $t_f=9.123$ min。通过使用 $P=80$ 个等长时间步长的 IDP，Luus [9] 得到 $I=0.35382$，$t_f=9.3$ min。通过在 IDP 中使用灵活的阶段长度，Bojkov 和 Luus [2] 得到 $I=0.35381$，$P=5$ 个时间阶段，以及 $I=0.35382$，$P=10$ 个灵活阶段。让我们考察后一种方法。
+通过基于庞特里亚金最大原理的控制向量迭代，Luus [7] 通过将 `$t_f$` 固定在 17 个不同的值上求解了该最优控制问题，并对结果进行解释，得出性能指标的最大值为 0.35375，出现在 `$t_f=9.5$` min。Rosen 和 Luus [16] 将该值改进为 `$I=0.35379$`，时间 `$t_f=9.123$` min。通过使用 `$P=80$` 个等长时间步长的 IDP，Luus [9] 得到 `$I=0.35382$`，`$t_f=9.3$` min。通过在 IDP 中使用灵活的阶段长度，Bojkov 和 Luus [2] 得到 `$I=0.35381$`，`$P=5$` 个时间阶段，以及 `$I=0.35382$`，`$P=10$` 个灵活阶段。让我们考察后一种方法。
 
-##### 预备运行
+### 预备运行
 
-对于预备运行，我们选择 $P=10$ 个阶段，每个阶段初始长度为 1 min，$R=25$ 个随机点，$N=1$ 个网格点，$\gamma=0.95$，每次通过 20 次迭代，20 次通过，区域恢复因子 $\eta=0.85$，每个阶段的初始温度为 723.15，温度的初始区域大小为 50，阶段长度的初始区域大小为 0.01。
+对于预备运行，我们选择 `$P=10$` 个阶段，每个阶段初始长度为 1 min，`$R=25$` 个随机点，`$N=1$` 个网格点，`$\gamma=0.95$`，每次通过 20 次迭代，20 次通过，区域恢复因子 `$\eta=0.85$`，每个阶段的初始温度为 723.15，温度的初始区域大小为 50，阶段长度的初始区域大小为 0.01。
 
-该运行在 PentiumII/350 上耗时 42.3 s，并得到如图 9.8 所示的温度曲线。有 4 个不同的阶段。原始的 10 个阶段中，前四个坍缩到下限，总长度为 3.595 min；下一个长度为 1.369 min 的阶段得到上限；第六个长度为 0.901 min 的阶段给出温度 699.50；最后四个阶段坍缩为下边界上的一个单一阶段。性能指标的值为 \(I = 0.35377\) 且 \(t_f = 9.368\) min。有趣的是，这个四阶段控制策略给出的值略优于 Luus [7] 通过控制向量迭代程序得到的 0.35375 的最大产率。
+该运行在 PentiumII/350 上耗时 42.3 s，并得到如图 9.8 所示的温度曲线。有 4 个不同的阶段。原始的 10 个阶段中，前四个坍缩到下限，总长度为 3.595 min；下一个长度为 1.369 min 的阶段得到上限；第六个长度为 0.901 min 的阶段给出温度 699.50；最后四个阶段坍缩为下边界上的一个单一阶段。性能指标的值为 `$I = 0.35377$` 且 `$t_f = 9.368$` min。有趣的是，这个四阶段控制策略给出的值略优于 Luus [7] 通过控制向量迭代程序得到的 0.35375 的最大产率。
 
-##### 下一次运行
+### 下一次运行
 
-对于下一次运行，我们选择与之前相同的 IDP 参数。对于初始条件，我们将第三阶段分为七个阶段，每个长度为 1.369/7 min，并保持其他三个阶段与预备运行中得到的结果相同。对于这七个阶段，我们取初始温度为 723.15。对于其他三个阶段，我们使用预备运行中得到的值。经过 20 次通过后，我们得到如图 9.9 所示的 9 阶段控制策略，\(I = 0.353820\) 且 \(t_f = 9.283\) min。该性能指标值略优于 Rosen 和 Luus [16] 得到的 0.353794，且仅略小于 Bojkov 和 Luus [2] 使用 $P = 20$ 个灵活阶段得到的 0.353821。尽管 Bojkov 和 Luus 使用了超过 1 个网格点，我们在这里发现单个网格点工作得非常好。
+对于下一次运行，我们选择与之前相同的 IDP 参数。对于初始条件，我们将第三阶段分为七个阶段，每个长度为 1.369/7 min，并保持其他三个阶段与预备运行中得到的结果相同。对于这七个阶段，我们取初始温度为 723.15。对于其他三个阶段，我们使用预备运行中得到的值。经过 20 次通过后，我们得到如图 9.9 所示的 9 阶段控制策略，`$I = 0.353820$` 且 `$t_f = 9.283$` min。该性能指标值略优于 Rosen 和 Luus [16] 得到的 0.353794，且仅略小于 Bojkov 和 Luus [2] 使用 `$P = 20$` 个灵活阶段得到的 0.353821。尽管 Bojkov 和 Luus 使用了超过 1 个网格点，我们在这里发现单个网格点工作得非常好。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_174_0.png)
 
-图 9.8：预备运行得到的热解问题的四阶段最优控制策略，得到 \(I = 0.3537724\)
+图 9.8：预备运行得到的热解问题的四阶段最优控制策略，得到 `$I = 0.3537724$`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_175_0.png)
 
-图 9.9：热解问题的 9 阶段最优控制策略，得到 $I = 0.3538200$
+图 9.9：热解问题的 9 阶段最优控制策略，得到 `$I = 0.3538200$`
 
 #### 9.3.2 修改的 Denbigh 反应方案
 
@@ -3639,7 +3887,7 @@ X &\longrightarrow Q\\
 Y &\longrightarrow Z
 \end{aligned}$$
 
-其中 $X$ 为中间体，$Y$ 为期望产物，$P$、$Q$ 和 $Z$ 为废产物。期望通过选择反应器随时间变化的温度来最大化 $Y$ 的产率。尽管有七种化学物质，我们只关心 $A$、$X$ 和 $Y$ 的浓度，因此选择其浓度表示为摩尔分数的相应状态变量。描述该系统的方程为
+其中 `$X$` 为中间体，`$Y$` 为期望产物，`$P$`、`$Q$` 和 `$Z$` 为废产物。期望通过选择反应器随时间变化的温度来最大化 `$Y$` 的产率。尽管有七种化学物质，我们只关心 `$A$`、`$X$` 和 `$Y$` 的浓度，因此选择其浓度表示为摩尔分数的相应状态变量。描述该系统的方程为
 
 $$\frac{dx_1}{dt} = -k_1x_1-k_2x_1 \tag{9.29}$$
 
@@ -3649,17 +3897,17 @@ $$\frac{dx_2}{dt} = k_1x_1-(k_3+k_4)x_2 \tag{9.30}$$
 
 图 9.11：修改的 Denbigh 反应方案的 14 阶段最优控制策略，给出沥青产率 0.54927
 
-Luus 和 Dong [12] 考虑了最终时间 $t_f$ 指定为 500 s 的情况。这里，我们考虑 $t_f$ 未指定的情况，但我们不希望它过大。因此我们引入最终时间的惩罚，并选择性能指标的形式为
+Luus 和 Dong [12] 考虑了最终时间 `$t_f$` 指定为 500 s 的情况。这里，我们考虑 `$t_f$` 未指定的情况，但我们不希望它过大。因此我们引入最终时间的惩罚，并选择性能指标的形式为
 
 $$I=x_3(t_f)-\theta t_f \tag{9.35}$$
 
-其中惩罚函数因子 $\theta$ 的选择会影响最优时的最终时间。有趣的是，看看我们是否能找到使最终时间约为 $t_f=500$ s 的 $\theta$ 值。
+其中惩罚函数因子 `$\theta$` 的选择会影响最优时的最终时间。有趣的是，看看我们是否能找到使最终时间约为 `$t_f=500$` s 的 `$\theta$` 值。
 
 ##### 预备运行
 
-我们取 $P=10$ 个时间阶段，每个长度 40 s，$N=1$ 个网格点，$R=25$ 个随机选择的控制和阶段长度值，$\gamma=0.95$，$\eta=0.85$，惩罚函数因子 $\theta=10^{-6}$，每次通过 20 次迭代，允许 20 次通过。初始温度选择为每个阶段 344，温度的初始区域大小为 142，阶段长度的初始区域大小为 1.0。
+我们取 `$P=10$` 个时间阶段，每个长度 40 s，`$N=1$` 个网格点，`$R=25$` 个随机选择的控制和阶段长度值，`$\gamma=0.95$`，`$\eta=0.85$`，惩罚函数因子 `$\theta=10^{-6}$`，每次通过 20 次迭代，允许 20 次通过。初始温度选择为每个阶段 344，温度的初始区域大小为 142，阶段长度的初始区域大小为 1.0。
 
-收敛到 $x_3(t_f)=0.54530$，得到如图 9.10 所示的 5 阶段控制策略。最终时间 $t_f=508.35$ s。
+收敛到 `$x_3(t_f)=0.54530$`，得到如图 9.10 所示的 5 阶段控制策略。最终时间 `$t_f=508.35$` s。
 
 ##### 下一次运行
 
@@ -3667,41 +3915,40 @@ $$I=x_3(t_f)-\theta t_f \tag{9.35}$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_178_0.png)
 
-图 9.12：区域恢复因子 η 对收敛速率的影响，显示产率与最优值 0.54928 的偏差随通过次数的变化
+图 9.12：区域恢复因子 `$\eta$` 对收敛速率的影响，显示产率与最优值 0.54928 的偏差随通过次数的变化
 
-4 个阶段，得出 14 阶段的初始控制策略。初始区域大小从预备运行中使用的值缩小了 10 倍，即温度为 14.2，阶段长度为 0.1，通过次数加倍至 40，每次通过的迭代次数增加到 30，区域恢复因子 η 增加到 0.95。
+4 个阶段，得出 14 阶段的初始控制策略。初始区域大小从预备运行中使用的值缩小了 10 倍，即温度为 14.2，阶段长度为 0.1，通过次数加倍至 40，每次通过的迭代次数增加到 30，区域恢复因子 `$\eta$` 增加到 0.95。
 
-收敛到 x3(tf) = 0.54927 在 PentiumII/350 上 40 次通过的计算时间为 3843 s，给出图 9.11 中的 14 阶段控制策略。该产率值非常接近 Luus 和 Dong [12] 使用 37 个时间阶段和最终时间 tf = 500 s 得到的值 0.54937。通过使用 50 个阶段，Bojkov 和 Luus [2] 得到产率 0.54948，最终时间为 508.4 s。这里区域恢复因子必须选择足够大以避免搜索区域过早坍缩，如图 9.12 所示。从该图可以很明显地看出，初始区域大小选择过小，阻止了我们使用较小的恢复因子 η。也应该有可能减少随机选择的控制和阶段长度的候选数量。
+收敛到 `$x_3(t_f) = 0.54927$` 在 PentiumII/350 上 40 次通过的计算时间为 3843 s，给出图 9.11 中的 14 阶段控制策略。该产率值非常接近 Luus 和 Dong [12] 使用 37 个时间阶段和最终时间 `$t_f = 500$` s 得到的值 0.54937。通过使用 50 个阶段，Bojkov 和 Luus [2] 得到产率 0.54948，最终时间为 508.4 s。这里区域恢复因子必须选择足够大以避免搜索区域过早坍缩，如图 9.12 所示。从该图可以很明显地看出，初始区域大小选择过小，阻止了我们使用较小的恢复因子 `$\eta$`。也应该有可能减少随机选择的控制和阶段长度的候选数量。
 
-为了看看是否可以通过更好的初始区域大小选择来减少 R，并通过使用更大数量的阶段获得更好的精度，我们遵循 Luus [9] 建议的策略。让我们取总共 P = 30 个阶段。最初第一阶段取长度 89 s，第 27 阶段取长度 332 s，控制值分别为 273 和 415。其余 28 个阶段最初选择长度为 0.5 s，控制值为 344。每个阶段长度的初始区域大小取为 5，控制的初始区域大小取为 25。初始
+为了看看是否可以通过更好的初始区域大小选择来减少 `$R$`，并通过使用更大数量的阶段获得更好的精度，我们遵循 Luus [9] 建议的策略。让我们取总共 `$P = 30$` 个阶段。最初第一阶段取长度 89 s，第 27 阶段取长度 332 s，控制值分别为 273 和 415。其余 28 个阶段最初选择长度为 0.5 s，控制值为 344。每个阶段长度的初始区域大小取为 5，控制的初始区域大小取为 25。初始
 
+区域收缩因子取为 `$\gamma = 0.95$`，区域恢复因子选为 `$\eta = 0.85$`。使用单个网格点 `$N = 1$`，共进行 40 次遍历，每次包含 30 次迭代。为使最终时间更接近 500 s，我们将惩罚因子 `$\theta$` 提高到 `$1.3 \times 10^{-6}$`。
 
-区域收缩因子取为 \(\gamma = 0.95\)，区域恢复因子选为 \(\eta = 0.85\)。使用单个网格点 \(N = 1\)，共进行 40 次遍历，每次包含 30 次迭代。为使最终时间更接近 500 s，我们将惩罚因子 \(\theta\) 提高到 \(1.3 \times 10^{-6}\)。
-
-收敛到最优 \(x_3(t_f) = 0.54946\) 且 \(t_f = 499.55\) 在 \(R = 7\) 和 \(R = 9\) 时均可得到，但在 \(R = 5\) 时出现过早坍缩，经过 40 次遍历后仅得到 \(x_3(t_f) = 0.54945\)。\(R = 7\) 的计算时间为 PentiumII/350 上的 2802 s。收敛曲线如图 9.13 所示。所得最优控制策略见图 9.14，状态轨迹见图 9.15。
+收敛到最优 `$x_3(t_f) = 0.54946$` 且 `$t_f = 499.55$` 在 `$R = 7$` 和 `$R = 9$` 时均可得到，但在 `$R = 5$` 时出现过早坍缩，经过 40 次遍历后仅得到 `$x_3(t_f) = 0.54945$`。`$R = 7$` 的计算时间为 PentiumII/350 上的 2802 s。收敛曲线如图 9.13 所示。所得最优控制策略见图 9.14，状态轨迹见图 9.15。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_179_0.png)
 
-图 9.13：\(R\) 对 30 段控制策略收敛速率的影响，显示与 \(x_3(t_f) = 0.54946\) 的偏差
+图 9.13：`$R$` 对 30 段控制策略收敛速率的影响，显示与 `$x_3(t_f) = 0.54946$` 的偏差
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_180_0.png)
 
-图 9.14：产生 $x_3(t_f)=0.549461$ 的最优 30 段控制策略
+图 9.14：产生 `$x_3(t_f)=0.549461$` 的最优 30 段控制策略
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_181_0.png)
 
 图 9.15：修正的 Denbigh 反应方案的状态轨迹，沥青得率为 0.54946
 
-通过减小惩罚函数因子 \(\theta\)，最终时间可以增加，因此可以通过试错找到 \(\theta\) 的值，使最终时间达到 Luus 和 Dong [12] 为该问题指定的 500 s。为找到 \(\theta\) 的合适值，我们进行了几次进一步的运行，结果见表 9.4。使用可变段长以指定最终时间的更好方法在下一节给出。
+通过减小惩罚函数因子 `$\theta$`，最终时间可以增加，因此可以通过试错找到 `$\theta$` 的值，使最终时间达到 Luus 和 Dong [12] 为该问题指定的 500 s。为找到 `$\theta$` 的合适值，我们进行了几次进一步的运行，结果见表 9.4。使用可变段长以指定最终时间的更好方法在下一节给出。
 
-表 9.4：惩罚函数因子 $\theta$ 对所得最终时间 $t_f$ 的影响
+表 9.4：惩罚函数因子 `$\theta$` 对所得最终时间 `$t_f$` 的影响
 
-| 惩罚函数因子 $\theta$ | 所得最终时间 $t_f$ | 沥青得率 $x_3(t_f)$ |
+| 惩罚函数因子 `$\theta$` | 所得最终时间 `$t_f$` | 沥青得率 `$x_3(t_f)$` |
 |---|---|---|
-| $1.00 \times 10^{-6}$ | 508.42 | 0.54946 |
-| $1.28 \times 10^{-6}$ | 499.93 | 0.54946 |
-| $1.29 \times 10^{-6}$ | 499.74 | 0.54946 |
-| $1.30 \times 10^{-6}$ | 498.78 | 0.54946 |
+| `$1.00 \times 10^{-6}$` | 508.42 | 0.54946 |
+| `$1.28 \times 10^{-6}$` | 499.93 | 0.54946 |
+| `$1.29 \times 10^{-6}$` | 499.74 | 0.54946 |
+| `$1.30 \times 10^{-6}$` | 498.78 | 0.54946 |
 
 ### 9.4 指定最终时间的系统
 
@@ -3721,25 +3968,25 @@ $$t_{fc}-t_f=0. \tag{9.38}$$
 
 $$J = I - \theta(t_{fc} - t_f - s)^2 \tag{9.39}$$
 
-其中 $s$ 为平移项。平移项在每次遍历后按
+其中 `$s$` 为平移项。平移项在每次遍历后按
 
 $$s^{q+1}=s^q-(t_{fc}-t_f) \tag{9.40}$$
 
-更新，其中 $q$ 为遍历次数。除非有灵敏度信息，否则 $s$ 的初始值取为零。该平移项 $s$ 的作用是减小计算值与指定值之间的最终时间差，从而使 $\theta$ 保持在合理的小值。平移参数的使用也使最优值能够准确获得。
+更新，其中 `$q$` 为遍历次数。除非有灵敏度信息，否则 `$s$` 的初始值取为零。该平移项 `$s$` 的作用是减小计算值与指定值之间的最终时间差，从而使 `$\theta$` 保持在合理的小值。平移参数的使用也使最优值能够准确获得。
 
-为说明此过程，我们首先考虑第 9.3 节中讨论的修正 Denbigh 反应方案。我们将使用 $P=30$ 个阶段，其中第一阶段初始长度选为 89 s，第 27 阶段取长度 332 s，对应的控制值分别为 273 和 415。其余 28 个阶段初始长度选为 0.5 s，控制值为 344。我们取单个网格点 ($N=1$)，$R=7$ 个随机选择的控制和段长允许值，$\gamma=0.95$，$\eta=0.85$，控制的初始区域大小为 25，段长的初始区域大小为 5.0。我们允许 40 次遍历，每次遍历 30 次迭代。
+为说明此过程，我们首先考虑第 9.3 节中讨论的修正 Denbigh 反应方案。我们将使用 `$P=30$` 个阶段，其中第一阶段初始长度选为 89 s，第 27 阶段取长度 332 s，对应的控制值分别为 273 和 415。其余 28 个阶段初始长度选为 0.5 s，控制值为 344。我们取单个网格点 (`$N=1$`)，`$R=7$` 个随机选择的控制和段长允许值，`$\gamma=0.95$`，`$\eta=0.85$`，控制的初始区域大小为 25，段长的初始区域大小为 5.0。我们允许 40 次遍历，每次遍历 30 次迭代。
 
-当惩罚函数因子 \(\theta\leq10^{-5}\) 时，每次运行均收敛到 \(I=0.54946\)。当 \(\theta=2\times10^{-5}\) 时，收敛到 0.54945，而当 \(\theta=5\times10^{-5}\) 时，\(I=0.54938\)。当惩罚函数因子小于 \(10^{-8}\) 时，最终时间约束不再满足到 5 位有效数字。以 \(\theta=10^{-9}\) 为例，性能指标的最优值为 0.54946，但最终时间为 500.02。因此，存在一个较宽的 \(\theta\) 范围，在此范围内最优值能准确获得且最终时间约束得到满足。如图 9.16 所示，平移参数 s 与惩罚函数因子 θ 在双对数图上存在关系，表明 θs 为常数，且在 θ ≤ 1.0 × 10⁻⁵ 时呈线性关系。
+当惩罚函数因子 `$\theta\leq10^{-5}$` 时，每次运行均收敛到 `$I=0.54946$`。当 `$\theta=2\times10^{-5}$` 时，收敛到 0.54945，而当 `$\theta=5\times10^{-5}$` 时，`$I=0.54938$`。当惩罚函数因子小于 `$10^{-8}$` 时，最终时间约束不再满足到 5 位有效数字。以 `$\theta=10^{-9}$` 为例，性能指标的最优值为 0.54946，但最终时间为 500.02。因此，存在一个较宽的 `$\theta$` 范围，在此范围内最优值能准确获得且最终时间约束得到满足。如图 9.16 所示，平移参数 `$s$` 与惩罚函数因子 `$\theta$` 在双对数图上存在关系，表明 `$\theta s$` 为常数，且在 `$\theta \leq 1.0 \times 10^{-5}$` 时呈线性关系。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_182_0.png)
 
-图 9.16：平移参数 s 随惩罚函数因子 θ 的变化，双对数图上显示在 θ ≤ 1.0 × 10⁻⁵ 时呈线性关系
+图 9.16：平移参数 `$s$` 随惩罚函数因子 `$\theta$` 的变化，双对数图上显示在 `$\theta \leq 1.0 \times 10^{-5}$` 时呈线性关系
 
-事实上，乘积 −2θs 给出了性能指标对最终时间的灵敏度。这里 s 为负，表明性能指标随最终时间增加而增加，关系为
+事实上，乘积 `$-2\theta s$` 给出了性能指标对最终时间的灵敏度。这里 `$s$` 为负，表明性能指标随最终时间增加而增加，关系为
 
 $$\delta I = -2\theta s\,\delta t_f. \tag{9.41}$$
 
-这里乘积 −2θs 为 1.28×10⁻⁶，因此将最终时间增加 1 s 并不会改变性能指标的第五位有效数字。必须认识到这种灵敏度信息仅为局部信息，如线性规划中 Lagrange 乘子或影子价格所提供的灵敏度信息。
+这里乘积 `$-2\theta s$` 为 `$1.28\times10^{-6}$`，因此将最终时间增加 1 s 并不会改变性能指标的第五位有效数字。必须认识到这种灵敏度信息仅为局部信息，如线性规划中 Lagrange 乘子或影子价格所提供的灵敏度信息。
 
 #### 9.4.1 补料分批反应器
 
@@ -3767,7 +4014,7 @@ $$g_1=\frac{4.75g_3}{0.12+g_3} \tag{9.49}$$
 
 $$\mathbf{x}(0)=[\,0\quad 0\quad 1\quad 5\quad 1\,]^T. \tag{9.50}$$
 
-这里 $x_1$ 表示培养基中分泌的 SUC-s2 浓度，$x_2$ 表示培养基中总的 SUC-s2 浓度，两者均以任意单位表示；$x_3$ 为培养细胞密度 (g/L)，$x_4$ 为培养葡萄糖水平 (g/L)，$x_5$ 为培养体积 (L)。反应器的进料速率 $u$ 有界
+这里 `$x_1$` 表示培养基中分泌的 SUC-s2 浓度，`$x_2$` 表示培养基中总的 SUC-s2 浓度，两者均以任意单位表示；`$x_3$` 为培养细胞密度 (g/L)，`$x_4$` 为培养葡萄糖水平 (g/L)，`$x_5$` 为培养体积 (L)。反应器的进料速率 `$u$` 有界
 
 $$0\leq u\leq 2. \tag{9.51}$$
 
@@ -3775,91 +4022,110 @@ $$0\leq u\leq 2. \tag{9.51}$$
 
 $$I=x_1(t_f)x_5(t_f) \tag{9.52}$$
 
-其中最终时间 $t_f$ 指定为 15 h。我们还分析了改变 $t_f$ 的影响。对于用 DVERK [5] 积分微分方程，使用了 $10^{-6}$ 的局部误差容差。然而，为确保积分期间的稳定性，每个时间步被细分为大约为阶段数 $P$ 一半的若干子段。第一次运行取 $P=15$，为确保稳定性，积分的子段数选为 7。对于第一次运行，决定使用 $R=5$，$\gamma=0.95$，$\eta=0.85$，控制和段长的初始值分别为 1 和 0.5，50 次遍历，每次包含 40 次迭代，惩罚函数因子 $\theta=100$，平移参数 $s$ 的初始值为 0。计算机程序列于附录 D。在 PentiumII/350 上耗时 372 s 的计算中，收敛到 $I=32.6691$ 且 $s=-0.04878$，得到如图 9.17 所示的控制策略。
+其中最终时间 `$t_f$` 指定为 15 h。我们还分析了改变 `$t_f$` 的影响。对于用 DVERK [5] 积分微分方程，使用了 `$10^{-6}$` 的局部误差容差。然而，为确保积分期间的稳定性，每个时间步被细分为大约为阶段数 `$P$` 一半的若干子段。第一次运行取 `$P=15$`，为确保稳定性，积分的子段数选为 7。对于第一次运行，决定使用 `$R=5$`，`$\gamma=0.95$`，`$\eta=0.85$`，控制和段长的初始值分别为 1 和 0.5，50 次遍历，每次包含 40 次迭代，惩罚函数因子 `$\theta=100$`，平移参数 `$s$` 的初始值为 0。计算机程序列于附录 D。在 PentiumII/350 上耗时 372 s 的计算中，收敛到 `$I=32.6691$` 且 `$s=-0.04878$`，得到如图 9.17 所示的控制策略。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_184_0.png)
 
-图 9.17：第一次运行得到的控制策略，P = 15，给出 I = 32.6691
+图 9.17：第一次运行得到的控制策略，`$P = 15$`，给出 `$I = 32.6691$`
 
-为看是否能改进结果，进行第二次运行，P = 15，将遍历次数增加到 100，并使用图 9.17 中的控制策略作为初始控制策略。区域恢复因子增加到 η = 0.88，并将上一次运行得到的 s = −0.04879 的值用作平移参数的起始值。性能指标改进为 I = 32.6754，最优控制策略如图 9.18 所示。唯一明显的变化是第一个峰值之前的步长更规则。该性能指标值略优于 Luus 和 Hennessy [13] 用 31 个等长阶段得到的 32.6134 的值。
+为看是否能改进结果，进行第二次运行，`$P = 15$`，将遍历次数增加到 100，并使用图 9.17 中的控制策略作为初始控制策略。区域恢复因子增加到 `$\eta = 0.88$`，并将上一次运行得到的 `$s = -0.04879$` 的值用作平移参数的起始值。性能指标改进为 `$I = 32.6754$`，最优控制策略如图 9.18 所示。唯一明显的变化是第一个峰值之前的步长更规则。该性能指标值略优于 Luus 和 Hennessy [13] 用 31 个等长阶段得到的 32.6134 的值。
 
-表 9.5：使用 P = 30 和 θ = 100 时性能指标的预测值与计算值的比较
+表 9.5：使用 `$P = 30$` 和 `$\theta = 100$` 时性能指标的预测值与计算值的比较
 
-| 批次时间 t_f | 平移参数 s | 灵敏度因子 −2θs | 预测 I_p | 计算 I |
-|---|---|---|
+| 批次时间 `$t_f$` | 平移参数 `$s$` | 灵敏度因子 `$-2\theta s$` | 预测 `$I_p$` | 计算 `$I$` |
+|---|---|---|---|---|
 | 15.0 | -0.04880 | 9.760 | - | 32.693 |
 | 15.1 | -0.05025 | 10.050 | 33.459 | 33.683 |
 | 15.2 | -0.05173 | 10.346 | 34.688 | 34.703 |
+
+
+
 | 15.3 | -0.05323 | 10.646 | 35.738 | 35.753 |
+
 | 15.4 | -0.05477 | 10.954 | 36.818 | 36.833 |
+
 | 15.5 | -0.05635 | 11.270 | 37.928 | 37.944 |
-
-
-
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_185_0.png)
 
-图 9.18：在 $P = 15$ 时补料分批反应器的最优控制策略，得到 $I = 32.6754$
+图 9.18：在 `$P = 15$` 时补料分批反应器的最优控制策略，得到 `$I = 32.6754$`
 
-对 $P = 20$ 也采用了相同的方法，其中使用 $R = 7$ 和 $N = 1$ 的初步运行得到了图 9.19 中的控制策略，$I = 32.6697$。经过多次运行，在 $R = 25$ 和 $N = 1$ 的情况下，始终将前一次运行得到的最佳控制策略（加上轻微扰动）作为初始控制策略，性能指标提高到 $I = 32.6939$。所得最优控制策略相当平滑，如图 9.20 所示，最优平移参数为 $s = -0.04880$。
+对 `$P = 20$` 也采用了相同的方法，其中使用 `$R = 7$` 和 `$N = 1$` 的初步运行得到了图 9.19 中的控制策略，`$I = 32.6697$`。经过多次运行，在 `$R = 25$` 和 `$N = 1$` 的情况下，始终将前一次运行得到的最佳控制策略（加上轻微扰动）作为初始控制策略，性能指标提高到 `$I = 32.6939$`。所得最优控制策略相当平滑，如图 9.20 所示，最优平移参数为 `$s = -0.04880$`。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_186_0.png)
 
-图 9.19：$P = 20$ 首次运行得到的控制策略，$I = 32.6697$
+图 9.19：`$P = 20$` 首次运行得到的控制策略，`$I = 32.6697$`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_187_0.png)
 
-图 9.20：在 $P = 20$ 时补料分批反应器的最优控制策略，得到 $I = 32.6939$
+图 9.20：在 `$P = 20$` 时补料分批反应器的最优控制策略，得到 `$I = 32.6939$`
 
-##### $t_f$ 的影响
+### $t_f$ 的影响
 
-引入平移参数 $s$ 的一个优势在于可以获得敏感性信息。通过乘积 $-2\theta s$，我们无需进行计算即可预测最终时间的影响。将式 (9.39) 重写为
+引入平移参数 `$s$` 的一个优势在于可以获得敏感性信息。通过乘积 `-2θ s`，我们无需进行计算即可预测最终时间的影响。将式 (9.39) 重写为
 
 $$J = I + 2\theta s(t_{fc} - t_f) - \theta(t_{fc} - t_f)^2 - \theta s^2 \tag{9.53}$$
 
-即可看出 $-2\theta s$ 在最优值处为等式约束提供了拉格朗日乘子。
+即可看出 `-2θ s` 在最优值处为等式约束提供了拉格朗日乘子。
 
-该信息只是局部的，但能提供很好的估计。表 9.5 展示了这一点，其中给出了将最终时间从 15 h 以 0.1 的增量增加到 15.5 h 所得到的结果。预测值是通过将灵敏度乘以 0.1 再加上前一个由计算得到的性能指标值而获得的。值得注意的是，随着分批时间 $t_f$ 的增加，$s$ 的绝对值也在增大，这表明性能指标随分批时间变化的曲线是向上弯曲的。
+该信息只是局部的，但能提供很好的估计。表 9.5 展示了这一点，其中给出了将最终时间从 15 h 以 0.1 的增量增加到 15.5 h 所得到的结果。预测值是通过将灵敏度乘以 0.1 再加上前一个由计算得到的性能指标值而获得的。值得注意的是，随着分批时间 `$t_f$` 的增加，`$s$` 的绝对值也在增大，这表明性能指标随分批时间变化的曲线是向上弯曲的。
 
-在图 9.21 中，计算值与估计值之间没有明显差异。还可以注意到，正如从 $s$ 值所预测的那样，曲线向上凸。$t_f = 15.5$ h 时的最优控制策略如图 9.22 所示。可以注意到，第一个峰的平顶比 $t_f = 15.0$ 时更长，并且零阶段出现的时间略晚一些。
+在图 9.21 中，计算值与估计值之间没有明显差异。还可以注意到，正如从 `$s$` 值所预测的那样，曲线向上凸。`$t_f = 15.5$` h 时的最优控制策略如图 9.22 所示。可以注意到，第一个峰的平顶比 `$t_f = 15.0$` 时更长，并且零阶段出现的时间略晚一些。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_187_1.png)
 
-图 9.21：利用平移项 $s$ 预测最终时间 $t_f$ 对性能指标的影响
+图 9.21：利用平移项 `$s$` 预测最终时间 `$t_f$` 对性能指标的影响
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_188_0.png)
 
-图 9.22：在 $t_f = 15.5$ h 时补料分批反应器的最优控制策略，得到 $I = 32.9438$
+图 9.22：在 `$t_f = 15.5$` h 时补料分批反应器的最优控制策略，得到 `$I = 32.9438$`
 
-控制策略的真正差异体现在 $t_f = 19$ h 和 $t_f = 20$ h 的情况下，如图 9.23 和图 9.24 所示。当分批时间增大到 $t_f = 20$ h 以上时，很短的零阶段消失了。
+控制策略的真正差异体现在 `$t_f = 19$` h 和 `$t_f = 20$` h 的情况下，如图 9.23 和图 9.24 所示。当分批时间增大到 `$t_f = 20$` h 以上时，很短的零阶段消失了。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_188_1.png)
 
-图 9.23：在 $t_f = 19$ h 时补料分批反应器的最优控制策略，得到 $I = 97.1118$
+图 9.23：在 `$t_f = 19$` h 时补料分批反应器的最优控制策略，得到 `$I = 97.1118$`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_189_0.png)
 
-图 9.24：在 $t_f = 20$ h 时补料分批反应器的最优控制策略，得到 $I = 120.9208$
+图 9.24：在 `$t_f = 20$` h 时补料分批反应器的最优控制策略，得到 `$I = 120.9208$`
 
 ### 9.5 参考文献
 
 - [1] ARIS, R.: “On Denbigh’s optimum temperature sequence”, Chem. Eng. Sci. 12 (1960), 56-64.
+
 - [2] BOJKOV, B. AND LUUS, R.: “Optimal control of nonlinear systems with unspecified final times”, Chem. Eng. Sci. 51 (1996), 905-919.
+
 - [3] DENBIGH, K.G.: “Optimum temperature sequence in reactors”, Chem. Eng. Sci. 8 (1958), 125-132.
+
 - [4] GUPTA, Y.P.: “Semiexhaustive search for solving nonlinear optimal control problems”, Ind. Eng. Chem. Res. 34 (1995), 3878-3884.
+
 - [5] HULL, T.E., ENRIGHT, W.D., AND JACKSON, K.R.: User Guide to DVERK – a Subroutine for Solving Nonstiff ODE’s. Report 100 (1976), Department of Computer Science, University of Toronto, Canada.
+
 - [6] KO, D.Y.C. AND STEVENS, W.F.: “Study of singular solutions in dynamic optimization”, AIChE J. 17 (1971), 160-166.
+
 - [7] LUUS, R.: “On the optimization of oil shale pyrolysis”, Chem. Eng. Sci. 33 (1978), 1403-1404.
+
 - [8] LUUS, R.: “Effect of the choice of final time in optimal control of nonlinear systems”, Can. J. Chem. Eng. 69 (1991), 144-151.
+
 - [9] LUUS, R.: “Optimal control of batch reactors by iterative dynamic programming”, J. Process Control 4 (1994), 217-226.
+
 - [10] LUUS, R.: “Use of iterative dynamic programming with variable stage lengths and fixed final time”, Hung. J. Ind. Chem. 24 (1996), 279-284.
+
 - [11] LUUS, R.: “Determination of the region sizes for LJ optimization procedure”, Hung. J. Ind. Chem. 26 (1998), 281-286.
+
 - [12] LUUS, R. AND DONG, V.: “Use of iterative dynamic programming in optimization of reaction systems”, Proc. of the 4th IFAC Symposium on Dynamics and Control of Chemical Reactors, Distillation Columns and Batch Processes. (1995), Helsingør, Denmark, June 7-9, pp. 45-49.
+
 - [13] LUUS, R. AND HENNESSY, D.: “Optimization of fed-batch reactors by the Luus-Jaakola optimization procedure”, Ind. Eng. Chem. Res. 38 (1999), 1948-1955.
+
 - [14] PARK, S. AND RAMIREZ, W.F.: “Optimal production of secreted protein in fed-batch reactors”, AIChE J. 34 (1988), 1550-1558.
+
 - [15] REDDY, K.V. AND HUSAIN, A.: “Computation of optimal control policy with singular subarc”, Can. J. Chem. Eng. 59 (1981), 557-559.
+
 - [16] ROSEN, O. AND LUUS, R.: “Global optimization approach to nonlinear optimal control”, J. Optim. Theory and Applic. 73 (1992), 547-562.
+
 - [17] WEN, C.S. AND YEN, T.F.: “Optimization of oil shale pyrolysis”, Chem. Eng. Sci. 32 (1977), 346-349.
+
 - [18] YANG, R. L. AND WU, C. P.: “Global optimal control by accelerated simulated annealing”, Paper presented at the First Asian Control Conference, Tokyo, Japan, 1994.
 
 ## 第10章：奇异控制问题
@@ -3874,57 +4140,55 @@ $$\frac{d\mathbf{x}}{dt} = \mathbf{f}(\mathbf{x}) + \mathbf{B}(\mathbf{x})\mathb
 
 $$\frac{\partial H}{\partial \mathbf{u}} = \mathbf{B}^T(\mathbf{x})\mathbf{z}\tag{10.2}$$
 
-为零，其中 $\mathbf{z}$ 是伴随向量，那么我们就遇到了一个*奇异*最优控制问题。奇异最优控制问题非常难以求解，因为当哈密顿梯度为零时，它不能提供任何关于控制的信息。在使用 IDP 时，我们不关心伴随向量 $\mathbf{z}$ 或哈密顿函数 $H$ 这类辅助变量。然而，从计算角度来看，这类问题仍然困难，因为性能指标相对于控制变化的敏感性非常低，必须小心谨慎才能准确获得最优控制策略。Luus [12] 指出了奇异控制问题的这种低敏感性，并且性能指标中必须保留大量数字位数，才能得到精确的最优控制策略。开发 IDP 的初衷是为了处理这类问题 [9-11]，但现在看来，IDP 适用于各种各样的问题。
+为零，其中 `$\mathbf{z}$` 是伴随向量，那么我们就遇到了一个*奇异*最优控制问题。奇异最优控制问题非常难以求解，因为当哈密顿梯度为零时，它不能提供任何关于控制的信息。在使用 IDP 时，我们不关心伴随向量 `$\mathbf{z}$` 或哈密顿函数 `$H$` 这类辅助变量。然而，从计算角度来看，这类问题仍然困难，因为性能指标相对于控制变化的敏感性非常低，必须小心谨慎才能准确获得最优控制策略。Luus [12] 指出了奇异控制问题的这种低敏感性，并且性能指标中必须保留大量数字位数，才能得到精确的最优控制策略。开发 IDP 的初衷是为了处理这类问题 [9-11]，但现在看来，IDP 适用于各种各样的问题。
 
 我们在第 9 章中已经遇到了一个奇异最优控制问题，即 Park 和 Ramirez [16] 的补料分批反应器问题中最优进料速率策略的确定。尽管需要小心，但我们看到使用 IDP 可以相当容易地获得解，只需使用附录 D 中给出的变阶段长度计算机程序即可。由于敏感性低，通常需要大量轮次才能获得足够精确的解。
 
-Jacobson 等人 [7] 报道了一个值 $I = 0.1717$，Chen 和 Huang [1] 设法将结果提高到 $I = 0.1683$，但这离最优值 $I = 0.1666667$ 仍然相当远。
+Jacobson 等人 [7] 报道了一个值 `$I = 0.1717$`，Chen 和 Huang [1] 设法将结果提高到 `$I = 0.1683$`，但这离最优值 `$I = 0.1666667$` 仍然相当远。
 
 为了将问题转化为允许我们使用具有可变阶段长度的 IDP 的形式，我们引入增广性能指标
 
 $$J = x_2(t_f) + \theta(t_{fc} - t_f - s)^2 \tag{10.8}$$
 
-其中 $t_{fc}$ 是各可变阶段长度之和，$\theta$ 是正的罚函数因子，$s$ 是一个平移项，初始选为零，然后在每一轮之后根据计算出的最终时间与指定最终时间 $t_f$ 的偏差进行更新：
+其中 `$t_{fc}$` 是各可变阶段长度之和，`$\theta$` 是正的罚函数因子，`$s$` 是一个平移项，初始选为零，然后在每一轮之后根据计算出的最终时间与指定最终时间 `$t_f$` 的偏差进行更新：
 
 $$s^{q+1} = s^{q} - (t_{fc} - t_f) \tag{10.9}$$
 
-其中 $q$ 是轮次编号。目标是最小化增广性能指标 $J$。然而，为了跟踪所取得的进展，我们报告原始性能指标 $I$ 的值，并检查计算出的最终时间是否与指定的最终时间足够接近。
+其中 `$q$` 是轮次编号。目标是最小化增广性能指标 `$J$`。然而，为了跟踪所取得的进展，我们报告原始性能指标 `$I$` 的值，并检查计算出的最终时间是否与指定的最终时间足够接近。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_193_0.png)
 
-图 10.1：示例 1 在 $P = 20$ 个时间阶段时的收敛曲线，显示与 $I = 0.1666666$ 的偏差
-
-
+图 10.1：示例 1 在 `$P = 20$` 个时间阶段时的收敛曲线，显示与 `$I = 0.1666666$` 的偏差
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_194_0.png)
 
-图10.2：例1在P = 15个时间段时的收敛曲线，显示与I = 0.1666666的偏差。
+图10.2：例1在`$P = 15$`个时间段时的收敛曲线，显示与`$I = 0.1666666$`的偏差。
 
-作为预备问题，我们选择用IDP求解，取P = 20个阶段，初始每个阶段长度为0.1，θ = 100，60遍，每遍包含30次迭代，γ = 0.95，η = 0.88。我们选取初始控制策略u = 0，控制的初始区域大小为1.0，阶段长度的初始区域大小为0.2。前5遍保持阶段长度不变，此后阶段长度被视为附加控制变量，如第9章所述。随机选取的点数取为R = 25，网格点数N作为一个参数，第一次运行时取为1，第二次运行时取为5。如图10.1所示，当N = 1和N = 5时均快速收敛到I = 0.1666667，得到的控制策略与解析结果一致，即在时间区间0 ≤ t < 1内u = −1，随后u = 0。选择P = 20使问题变得非常简单，因为切换恰好发生在采样周期结束时。假设我们选择P = 15，那么使用灵活的阶段长度仍应能够实现从−1到0的精确切换，但预计收敛速度会较慢。
+作为预备问题，我们选择用IDP求解，取`$P = 20$`个阶段，初始每个阶段长度为0.1，`$\theta = 100$`，60遍，每遍包含30次迭代，`$\gamma = 0.95$`，`$\eta = 0.88$`。我们选取初始控制策略`$u = 0$`，控制的初始区域大小为1.0，阶段长度的初始区域大小为0.2。前5遍保持阶段长度不变，此后阶段长度被视为附加控制变量，如第9章所述。随机选取的点数取为`$R = 25$`，网格点数`$N$`作为一个参数，第一次运行时取为1，第二次运行时取为5。如图10.1所示，当`$N = 1$`和`$N = 5$`时均快速收敛到`$I = 0.1666667$`，得到的控制策略与解析结果一致，即在时间区间0 ≤ t < 1内`$u = -1$`，随后`$u = 0$`。选择`$P = 20$`使问题变得非常简单，因为切换恰好发生在采样周期结束时。假设我们选择`$P = 15$`，那么使用灵活的阶段长度仍应能够实现从`-1`到`0`的精确切换，但预计收敛速度会较慢。
 
-使用P = 15个阶段进行了一系列运行，IDP参数与前面P = 20时相同。如图10.2所示，N = 5个网格点的选择已不再足够。经过100遍后，收敛到I = 0.1666988。当N = 9时，收敛到I = 0.1666672；当N = 25时，收敛到I = 0.1666667，并在t = 1.000处几乎精确地从−1.0切换到0.0。N = 25时得到的最优控制策略如图10.3所示。
+使用`$P = 15$`个阶段进行了一系列运行，IDP参数与前面`$P = 20$`时相同。如图10.2所示，`$N = 5$`个网格点的选择已不再足够。经过100遍后，收敛到`$I = 0.1666988$`。当`$N = 9$`时，收敛到`$I = 0.1666672$`；当`$N = 25$`时，收敛到`$I = 0.1666667$`，并在`$t = 1.000$`处几乎精确地从`-1.0`切换到`0.0`。`$N = 25$`时得到的最优控制策略如图10.3所示。
 
 因此，对于这个看似简单的奇异控制问题，要确保精确的切换时间，仅仅几个网格点是不够的。如果需要多次切换，那么使用长度可变的时间阶段就更为重要。
 
-该结果也由Dadebo和McAuley [2]获得。Luus [13] 使用具有灵活阶段长度的IDP，进一步将性能指标改进为I = 0.2683941（4阶段控制策略）和I = 0.2683938（5阶段控制策略）。在此，我们希望提供一些计算细节，以说明如何使用IDP求解该最优控制问题。由于我们如前所述使用长度可变的阶段，因此引入增广性能指标
+该结果也由Dadebo和McAuley [2]获得。Luus [13] 使用具有灵活阶段长度的IDP，进一步将性能指标改进为`$I = 0.2683941$`（4阶段控制策略）和`$I = 0.2683938$`（5阶段控制策略）。在此，我们希望提供一些计算细节，以说明如何使用IDP求解该最优控制问题。由于我们如前所述使用长度可变的阶段，因此引入增广性能指标
 
 $$J = x_3(t_f) + \theta(t_{fc} - t_f - s)^2 \tag{10.15}$$
 
-其中$t_{fc}$是可变阶段长度之和，$\theta$是正惩罚函数因子，$s$是平移项，初始选为零，每次扫描后根据计算得到的最终时间与指定最终时间$t_f$的偏差进行更新。
+其中`$t_{fc}$`是可变阶段长度之和，`$\theta$`是正惩罚函数因子，`$s$`是平移项，初始选为零，每次扫描后根据计算得到的最终时间与指定最终时间`$t_f$`的偏差进行更新。
 
 $$s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.16}$$
 
-其中$q$是遍数。目标是使增广性能指标$J$最小化。与前面一样，为了跟踪最优控制问题的求解进展，我们报告原始性能指标$I$的值，并检查计算得到的最终时间是否足够接近指定的最终时间$t_f = 5.$
+其中`$q$`是遍数。目标是使增广性能指标`$J$`最小化。与前面一样，为了跟踪最优控制问题的求解进展，我们报告原始性能指标`$I$`的值，并检查计算得到的最终时间是否足够接近指定的最终时间`$t_f = 5.$`
 
-求解该问题所选择的参数与前一示例基本相同，只是这里我们选择$P = 10$个阶段，而不是20个。对于$R = 25$，$\gamma = 0.95$，$\eta = 0.88$，每遍30次迭代，并允许100遍的情况下，收敛速率在很大程度上取决于网格点数$N$的选择。通常，较大的$N$会得到更低的性能指标值，如表10.1所示。在每种情况下，经过100遍后，计算得到的最终时间均为5.0000。
+求解该问题所选择的参数与前一示例基本相同，只是这里我们选择`$P = 10$`个阶段，而不是20个。对于`$R = 25$`，`$\gamma = 0.95$`，`$\eta = 0.88$`，每遍30次迭代，并允许100遍的情况下，收敛速率在很大程度上取决于网格点数`$N$`的选择。通常，较大的`$N$`会得到更低的性能指标值，如表10.1所示。在每种情况下，经过100遍后，计算得到的最终时间均为5.0000。
 
-三种$N$值的收敛曲线如图10.4所示。显然，无论取多少网格点，在初始控制策略为零的单次运行中都不太可能获得最优控制策略。
+三种`$N$`值的收敛曲线如图10.4所示。显然，无论取多少网格点，在初始控制策略为零的单次运行中都不太可能获得最优控制策略。
 
-此外，不宜选取过多的网格点，因为当$N$增大时，计算时间会显著增加，如图10.5所示。因此，最好的方法是使用相对较少的网格点进行多次运行，并将前一次运行中利用所获信息选出的最优控制策略作为下一次的初始控制策略。为了说明这种方法，我们考察图10.6和图10.7中的控制策略，注意前两个阶段的控制分别位于下界和上界。第三阶段的控制在变得更负，同时性能指标从$N = 25$时的$I = 0.268423$略微改善到$N = 101$个网格点时的$I = 0.268405$。
+此外，不宜选取过多的网格点，因为当`$N$`增大时，计算时间会显著增加，如图10.5所示。因此，最好的方法是使用相对较少的网格点进行多次运行，并将前一次运行中利用所获信息选出的最优控制策略作为下一次的初始控制策略。为了说明这种方法，我们考察图10.6和图10.7中的控制策略，注意前两个阶段的控制分别位于下界和上界。第三阶段的控制在变得更负，同时性能指标从`$N = 25$`时的`$I = 0.268423$`略微改善到`$N = 101$`个网格点时的`$I = 0.268405$`。
 
 #### 表10.1：网格点数对100遍后性能指标值的影响
 
-| 网格点数 $N$ | 100遍后的性能指标 $I$ |
+| 网格点数 `$N$` | 100遍后的性能指标 `$I$` |
 |---:|---:|
 | 1 | 0.2717966 |
 | 3 | 0.2717966 |
@@ -3942,159 +4206,196 @@ $$s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.16}$$
 | 51 | 0.2684088 |
 | 101 | 0.2684049 |
 
-于是，我们进行了一次运行，将$N = 25$经过100遍后得到的控制策略进行调整，使第三阶段的控制更负且略短一些，然后将其作为$P = 5$个阶段的初始控制策略。由此得到的最优控制策略仅包含4个阶段，如图10.8所示，性能指标改善为$I = 0.2683941$。现在，再增加一个阶段并重新运行程序，我们得到如图10.9所示的5阶段最优控制策略，其$I = 0.2683938$。增加额外阶段对性能指标的改善微乎其微。
+于是，我们进行了一次运行，将`$N = 25$`经过100遍后得到的控制策略进行调整，使第三阶段的控制更负且略短一些，然后将其作为`$P = 5$`个阶段的初始控制策略。由此得到的最优控制策略仅包含4个阶段，如图10.8所示，性能指标改善为`$I = 0.2683941$`。现在，再增加一个阶段并重新运行程序，我们得到如图10.9所示的5阶段最优控制策略，其`$I = 0.2683938$`。增加额外阶段对性能指标的改善微乎其微。
 
 这个例子表明，计算机运行后对结果的解读对于高效确定最优控制策略起着重要作用。在这个特定案例中，所述方法以较少的计算量获得了最优控制策略。
 
+
+
 ![](img/06ae75163df4fdf5e1eec243d497d393_198_0.png)
 
-图10.4：例2的收敛曲线，显示与$I = 0.2683941$的偏差。
+图10.4：例2的收敛曲线，显示与`I = 0.2683941`的偏差。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_198_1.png)
 
-图10.5：例2在Pentium3/500上网格点数对计算时间的影响，其中$R = 25$，共100遍，每遍包含30次迭代。
+图10.5：例2在Pentium3/500上网格点数对计算时间的影响，其中`R = 25`，共100遍，每遍包含30次迭代。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_199_0.png)
 
-图10.6：例2的控制策略，来自使用\(N = 25\)个网格点的第一次运行，得到\(I = 0.268423\)。
+图10.6：例2的控制策略，来自使用`N = 25`个网格点的第一次运行，得到`I = 0.268423`。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_199_1.png)
 
-图10.7：例2的控制策略，来自使用\(N = 101\)个网格点的运行，得到\(I = 0.268405\)。
+图10.7：例2的控制策略，来自使用`N = 101`个网格点的运行，得到`I = 0.268405`。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_200_0.png)
 
-图10.8：例2的最优4阶段控制策略，性能指标I = 0.2683941。
+图10.8：例2的最优4阶段控制策略，性能指标`I = 0.2683941`。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_200_1.png)
 
-图10.9：例2的最优5阶段控制策略，性能指标I = 0.2683938。
+图10.9：例2的最优5阶段控制策略，性能指标`I = 0.2683938`。
 
 #### 10.2.3 例3
 
-在本例中，将二次项$x_2^2$加到例2性能指标的积分中，因此方程组为
+在本例中，将二次项`x_2^2`加到例2性能指标的积分中，因此方程组为
 
-\[\frac{dx_1}{dt} = x_2\] (10.17)
+```
+\frac{dx_1}{dt} = x_2
+```
 
-\[\frac{dx_2}{dt} = u\] (10.18)
+(10.17)
 
-\[\frac{dx_3}{dt} = x_1^2 + x_2^2\] (10.19)
+```
+\frac{dx_2}{dt} = u
+```
 
-其中$\mathbf{x}(0) = \begin{bmatrix}0 & 1 & 0\end{bmatrix}^T$，最终时间$t_f = 5$。控制约束为
+(10.18)
 
-\[ -1 \le u \le 1. \] (10.20)
+```
+\frac{dx_3}{dt} = x_1^2 + x_2^2
+```
+
+(10.19)
+
+其中`\mathbf{x}(0) = \begin{bmatrix}0 & 1 & 0\end{bmatrix}^T`，最终时间`t_f = 5`。控制约束为
+
+```
+-1 \le u \le 1.
+```
+
+(10.20)
 
 需要找到使性能指标最小的控制策略
 
-\[ I = x_3(t_f). \] (10.21)
+```
+I = x_3(t_f).
+```
 
-对于该问题，Jacobson *等人* [7] 报告的最小性能指标为 $I = 0.8285$，Dadebo和McAuley [2] 通过使用80个等长时间阶段将其改进为 $I = 0.754016$；Luus [13] 进一步改进为 $I = 0.7539848$，采用10阶段控制策略，其中各阶段长度可变。由于我们如前所述使用长度可变的阶段，因此引入增广性能指标
+(10.21)
 
-\[ J = x_3(t_f) + \theta(t_{fc} - t_f - s)^2 \] (10.22)
+对于该问题，Jacobson *等人* [7] 报告的最小性能指标为`I = 0.8285`，Dadebo和McAuley [2] 通过使用80个等长时间阶段将其改进为`I = 0.754016`；Luus [13] 进一步改进为`I = 0.7539848`，采用10阶段控制策略，其中各阶段长度可变。由于我们如前所述使用长度可变的阶段，因此引入增广性能指标
 
-其中$t_{fc}$是可变阶段长度之和，$\theta$是正惩罚函数因子，$s$是平移项。如前所述，平移项初始选为零，每次扫描后根据计算得到的最终时间与指定最终时间$t_f$的偏差进行更新。
+```
+J = x_3(t_f) + \theta(t_{fc} - t_f - s)^2
+```
 
-\[ s^{q+1} = s^q - (t_{fc} - t_f) \] (10.23)
+(10.22)
 
-其中$q$是遍数。
+其中`t_{fc}`是可变阶段长度之和，`\theta`是正惩罚函数因子，`s`是平移项。如前所述，平移项初始选为零，每次扫描后根据计算得到的最终时间与指定最终时间`t_f`的偏差进行更新。
 
-式(10.19)中的附加项$x_2^2$使得该问题比例2更容易求解。使用单个网格点$N = 1$时，收敛迅速且有条理，得到图10.10中的控制策略，产生$I = 0.7539845$。前6个阶段在开始时合并为一个阶段，实际上给出了一个15阶段的最优控制策略。现在使用更多阶段并重新运行该问题，性能指标可略微改善，如Luus [13]所做的那样，使用19个阶段得到$I = 0.7539839$的19阶段最优控制策略。然而，这种改善非常微小，几乎可以忽略不计。
+```
+s^{q+1} = s^q - (t_{fc} - t_f)
+```
 
+(10.23)
 
+其中`q`是遍数。
 
-
+式(10.19)中的附加项`x_2^2`使得该问题比例2更容易求解。使用单个网格点`N = 1`时，收敛迅速且有条理，得到图10.10中的控制策略，产生`I = 0.7539845`。前6个阶段在开始时合并为一个阶段，实际上给出了一个15阶段的最优控制策略。现在使用更多阶段并重新运行该问题，性能指标可略微改善，如Luus [13]所做的那样，使用19个阶段得到`I = 0.7539839`的19阶段最优控制策略。然而，这种改善非常微小，几乎可以忽略不计。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_202_0.png)
 
-图 10.10：Example 3 的由 15 个阶段组成的优化控制策略，给出 I = 0.7539845
+图 10.10：Example 3 的由 15 个阶段组成的优化控制策略，给出`I = 0.7539845`
 
 #### 10.2.4 例 4
 
 Flaherty 和 O’Malley [5] 考虑的一个三阶系统由以下方程组成
 
-$$\frac{dx_1}{dt}=x_2 \tag{10.24}$$ $$\frac{dx_2}{dt}=x_3 \tag{10.25}$$ $$\frac{dx_3}{dt}=u \tag{10.26}$$ $$\frac{dx_4}{dt}=x_1^2 \tag{10.27}$$
+```
+\frac{dx_1}{dt}=x_2 \tag{10.24}
+\frac{dx_2}{dt}=x_3 \tag{10.25}
+\frac{dx_3}{dt}=u \tag{10.26}
+\frac{dx_4}{dt}=x_1^2 \tag{10.27}
+```
 
-其中 x(0) = [ 1 0 0 0 ]^T，且终点时间 t_f = 5。对控制的约束为
+其中`x(0) = [ 1 0 0 0 ]^T`，且终点时间`t_f = 5`。对控制的约束为
 
-$$-1 \le u \le 1. \tag{10.28}$$
+```
+-1 \le u \le 1. \tag{10.28}
+```
 
 要求找到使性能指标最小化的控制策略
 
-$$I = x_4(t_f). \tag{10.29}$$
+```
+I = x_4(t_f). \tag{10.29}
+```
 
-Flaherty 和 O’Malley [5] 指出，优化控制策略包含无限次切换，得到 I = 1.2521 的值，并提供了一种近似方法，该方法给出有限次切换且 I = 1.2665。通过使用变阶段长度的 IDP，Luus [13] 获得了改进值 I = 1.25211，仅用 4 次
-
-切换，得到 5 阶段控制策略。为了使用柔性长度的阶段，我们考虑增广性能指标
+Flaherty 和 O’Malley [5] 指出，优化控制策略包含无限次切换，得到`I = 1.2521`的值，并提供了一种近似方法，该方法给出有限次切换且`I = 1.2665`。通过使用变阶段长度的 IDP，Luus [13] 获得了改进值`I = 1.25211`，仅用 4 次切换，得到 5 阶段控制策略。为了使用柔性长度的阶段，我们考虑增广性能指标
 
 ```
 J = x₄(t_f) + θ(t_{fc} - t_f - s)²  (10.30)
 ```
 
-其中 t_{fc} 是可变阶段长度之和，θ 是正的惩罚函数因子，s 是偏移项。偏移项初始选为零，然后在每次迭代后根据计算得到的终点时间与指定终点时间 t_f 的偏差进行更新
+其中`t_{fc}`是可变阶段长度之和，`θ`是正的惩罚函数因子，`s`是偏移项。偏移项初始选为零，然后在每次迭代后根据计算得到的终点时间与指定终点时间`t_f`的偏差进行更新
 
 ```
 s^{q+1} = s^{q} - (t_{fc} - t_f)  (10.31)
 ```
 
-其中 q 为迭代次数。
+其中`q`为迭代次数。
 
-为用 IDP 求解此问题，我们使用了与其他示例相同的参数，只是我们对 DVERK 子程序的积分采用了更严格的容差，使用局部误差容差 10⁻⁸ 而非 10⁻⁶，并且我们将惩罚函数因子 θ 作为参数使用。
+为用 IDP 求解此问题，我们使用了与其他示例相同的参数，只是我们对`DVERK`子程序的积分采用了更严格的容差，使用局部误差容差 10⁻⁸ 而非 10⁻⁶，并且我们将惩罚函数因子`θ`作为参数使用。
 
-如图 10.11 所示，惩罚函数因子的影响相当明显。在这里，允许时间阶段长度变化非常重要，因此使用非常小的值 θ = 0.001 给出了图 10.12 中所示的优化控制策略。通过将此结果与 Luus [13] 先前得到的控制策略进行比较，可以看出其低敏感性，后者仅比当前结果高 0.00004%，但控制策略的最后两个阶段却大不相同。低敏感性问题在第 14 章中进行了更详细的讨论。
+如图 10.11 所示，惩罚函数因子的影响相当明显。在这里，允许时间阶段长度变化非常重要，因此使用非常小的值`θ = 0.001`给出了图 10.12 中所示的优化控制策略。通过将此结果与 Luus [13] 先前得到的控制策略进行比较，可以看出其低敏感性，后者仅比当前结果高 0.00004%，但控制策略的最后两个阶段却大不相同。低敏感性问题在第 14 章中进行了更详细的讨论。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_203_0.png)
 
-图 10.11：Example 4 中惩罚函数因子 θ 对收敛的影响，显示使用 R = 25、γ = 0.95、η = 0.88、N = 1 且每次迭代 30 次迭代时与 I = 1.25211 的偏差
+图 10.11：Example 4 中惩罚函数因子`θ`对收敛的影响，显示使用`R = 25`、`γ = 0.95`、`η = 0.88`、`N = 1`且每次迭代 30 次迭代时与`I = 1.25211`的偏差
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_204_0.png)
 
-图 10.12：Example 4 的优化控制策略，给出 I = 1.2521128
+图 10.12：Example 4 的优化控制策略，给出`I = 1.2521128`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_204_1.png)
 
-图 10.13：Luus [13] 得到的 Example 4 的控制策略，给出 I = 1.2521134
+图 10.13：Luus [13] 得到的 Example 4 的控制策略，给出`I = 1.2521134`
 
 ### 10.3 Yeo 的奇异控制问题
 
 最早使用迭代动态规划 ([9], [10]) 尝试的例子之一是 Yeo [18] 用来说明用拟线性化求解非线性奇异控制问题的奇异控制问题。该系统由下式描述
 
-$$\frac{dx_1}{dt} = x_2 \tag{10.32}$$
+```
+\frac{dx_1}{dt} = x_2 \tag{10.32}
+\frac{dx_2}{dt} = -x_3 u + 16 x_5 - 8 \tag{10.33}
+\frac{dx_3}{dt} = u \tag{10.34}
+\frac{dx_4}{dt} = x_1^2 + x_2^2 + 0.0005(x_2 + 16 x_5 - 8 - 0.1 x_3 u^2)^2 \tag{10.35}
+\frac{dx_5}{dt} = 1 \tag{10.36}
+```
 
-$$\frac{dx_2}{dt} = -x_3 u + 16 x_5 - 8 \tag{10.33}$$
+其中`\mathbf{x}(0) = \begin{bmatrix}0 & -1 & -\sqrt{5} & 0 & 0\end{bmatrix}^T`，且终点时间`t_f = 1`。对控制的约束为
 
-$$\frac{dx_3}{dt} = u \tag{10.34}$$
-
-$$\frac{dx_4}{dt} = x_1^2 + x_2^2 + 0.0005(x_2 + 16 x_5 - 8 - 0.1 x_3 u^2)^2 \tag{10.35}$$
-
-$$\frac{dx_5}{dt} = 1 \tag{10.36}$$
-
-其中 $\mathbf{x}(0) = \begin{bmatrix}0 & -1 & -\sqrt{5} & 0 & 0\end{bmatrix}^T$，且终点时间 $t_f = 1$。对控制的约束为
-
-$$-4 \le u \le 10. \tag{10.37}$$
+```
+-4 \le u \le 10. \tag{10.37}
+```
 
 要求找到使性能指标最小化的控制策略
 
-$$I = x_4(t_f). \tag{10.38}$$
+```
+I = x_4(t_f). \tag{10.38}
+```
 
 性能指标的最优值在很大程度上取决于时间阶段的数量，如果阶段长度相等，如 Luus [9] 所示，给出表 10.2。虽然随着时间阶段数量的增加，性能指标有所改善，但这种改善并不均匀，因为优化控制策略涉及两次切换，且切换时间很重要。我们现在通过使用可变长度的阶段，如对其他示例所做的那样，来考虑此优化控制问题，并考虑增广性能指标
 
-$$J = x_4(t_f) + \theta(t_{fc} - t_f - s)^2 \tag{10.39}$$
+```
+J = x_4(t_f) + \theta(t_{fc} - t_f - s)^2 \tag{10.39}
+```
 
-其中 $t_{fc}$ 是可变阶段长度之和，惩罚函数因子 $\theta$ 选为 1，$s$ 是偏移参数，初始选为零，然后在每次迭代后根据计算得到的终点时间与指定终点时间 $t_f$ 的偏差进行更新
+其中`t_{fc}`是可变阶段长度之和，惩罚函数因子`\theta`选为 1，`s`是偏移参数，初始选为零，然后在每次迭代后根据计算得到的终点时间与指定终点时间`t_f`的偏差进行更新
 
-$$s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.40}$$
+```
+s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.40}
+```
 
-其中 $q$ 为迭代次数。
+其中`q`为迭代次数。
 
-为最小化增广性能指标，我们选择 $P = 25$ 个阶段，每个阶段初始长度为 0.04，$R = 25$，$\gamma = 0.95$，$\eta = 0.88$，每次迭代 30 次迭代，并允许
+为最小化增广性能指标，我们选择`P = 25`个阶段，每个阶段初始长度为 0.04，`R = 25`，`\gamma = 0.95`，`\eta = 0.88`，每次迭代 30 次迭代，并允许进行 100 次迭代。控制的初始值选为每个时间阶段 3.0。控制的初始区域大小为 7.0，阶段长度为 0.01。前 5 次迭代中阶段长度保持其原始长度。
 
-进行 100 次迭代。控制的初始值选为每个时间阶段 3.0。控制的初始区域大小为 7.0，阶段长度为 0.01。前 5 次迭代中阶段长度保持其原始长度。
+在 PentiumII/350 上经过 855 s 的计算时间后，经过 100 次迭代，得到性能指标`I = 0.11928`，其中`t_f = 1.000000`，偏移参数`s = 0.02233`。得到的优化控制策略如图 10.14 所示。优化控制策略中只有 13 个阶段。对未处于边界上的阶段进行拆分并再次运行，得到图 10.15 中的控制策略。改进后的控制策略使性能指标从`I = 0.11928`略微改善到`I = 0.11926`。这比 Luus [9] 使用 56 个等长阶段得到的`I = 0.11927`仅有轻微改善。
 
-在 PentiumII/350 上经过 855 s 的计算时间后，经过 100 次迭代，得到性能指标 I = 0.11928，其中 t_f = 1.000000，偏移参数 s = 0.02233。得到的优化控制策略如图 10.14 所示。优化控制策略中只有 13 个阶段。对未处于边界上的阶段进行拆分并再次运行，得到图 10.15 中的控制策略。改进后的控制策略使性能指标从 I = 0.11928 略微改善到 I = 0.11926。这比 Luus [9] 使用 56 个等长阶段得到的 I = 0.11927 仅有轻微改善。
+**表 10.2：等长的时间阶段数`P`对性能指标最小值的影响**
 
-表 10.2：等长的时间阶段数 P 对性能指标最小值的影响
-
-| 时间阶段数 P | 最优性能指标 I |
+| 时间阶段数`P` | 最优性能指标`I` |
 |---|---|
 | 10 | 0.12011 |
 | 11 | 0.11957 |
@@ -4122,7 +4423,7 @@ $$s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.40}$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_207_0.png)
 
-图 10.14：Yeo 问题由 13 个阶段组成的优化控制策略，给出 I = 0.11928，使用初始 25 个阶段得到
+图 10.14：Yeo 问题由 13 个阶段组成的优化控制策略，给出`I = 0.11928`，使用初始 25 个阶段得到
 
 ### 10.4 非线性两级 CSTR 问题
 
@@ -4130,17 +4431,8 @@ $$s^{q+1} = s^q - (t_{fc} - t_f) \tag{10.40}$$
 
 ```
 dx₁/dt = -3x₁ + g₁(x)  (10.41)
-```
-
-```
 dx₂/dt = -11.1558x₂ + g₁(x) - 8.1558(x₂ + 0.1592)u₁  (10.42)
-```
-
-```
 dx₃/dt = 1.5(0.5x₁ - x₃) + g₂(x)  (10.43)
-```
-
-```
 dx₄/dt = 0.75x₂ - 4.9385x₄ + g₂(x) - 3.4385(x₄ + 0.122)u₂  (10.44)
 ```
 
@@ -4152,7 +4444,7 @@ g₁(x) = 1.5 × 10⁷(0.5251 - x₁)exp(-10/(x₂ + 0.6932)) - 1.5 × 10¹⁰(0
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_208_0.png)
 
-图 10.15：Yeo 问题优化控制策略，给出 I = 0.11926，使用初始 24 个可变长度阶段得到
+图 10.15：Yeo 问题优化控制策略，给出`I = 0.11926`，使用初始 24 个可变长度阶段得到
 
 第二罐中的反应项为
 
@@ -4172,26 +4464,25 @@ x(0) = [ 0.1962  −0.0372  0.0946  0 ]ᵀ (10.47)
 −1 ≤ uⱼ ≤ 1,   j = 1,2. (10.48)
 ```
 
-状态变量 x₁ 和 x₃ 分别是罐 1 和罐 2 中的归一化浓度变量，x₂ 和 x₄ 分别是罐 1 和罐 2 中的归一化温度变量。要求找到使性能指标最小化的控制策略
+状态变量`x₁`和`x₃`分别是罐 1 和罐 2 中的归一化浓度变量，`x₂`和`x₄`分别是罐 1 和罐 2 中的归一化温度变量。要求找到使性能指标最小化的控制策略
 
 ```
 I = x₁²(t_f) + x₂²(t_f) + x₃²(t_f) + x₄²(t_f) = xᵀ(t_f)x(t_f) (10.49)
 ```
 
-其中无量纲终点时间 t_f 未指定，但我们希望它足够小。
+其中无量纲终点时间`t_f`未指定，但我们希望它足够小。
 
-因此，为了惩罚终点时间，我们引入增广性能指标，其中将乘以惩罚函数因子 θ 的终点时间附加到原始性能指标上
+因此，为了惩罚终点时间，我们引入增广性能指标，其中将乘以惩罚函数因子`θ`的终点时间附加到原始性能指标上
 
 ```
 J = I + θ t_f (10.50)
 ```
 
+并使用IDP对不同`θ`值最小化该增强性能指标。
 
+**表10.3：惩罚函数因子`θ`对性能指标值和最终时间的影响**
 
-
-#### 表10.3：惩罚函数因子θ对性能指标值和最终时间的影响
-
-| 惩罚函数因子θ | 性能指标 I = x^T(t_f) x(t_f) | 最终时间 t_f |
+| 惩罚函数因子`θ` | 性能指标`I = x^T(t_f) x(t_f)` | 最终时间`t_f` |
 |---|---|---|
 | 1 × 10⁻⁷ | 1.8470 × 10⁻¹³ | 0.32498 |
 | 1 × 10⁻⁶ | 1.6699 × 10⁻¹¹ | 0.32479 |
@@ -4202,13 +4493,11 @@ J = I + θ t_f (10.50)
 | 3 × 10⁻⁵ | 1.4735 × 10⁻⁸ | 0.32316 |
 | 1 × 10⁻⁴ | 1.4325 × 10⁻⁷ | 0.32078 |
 
-并使用IDP对不同θ值最小化该增强性能指标。
+使用IDP时，灵活的阶段长度没有带来任何困难，但为了保持稳定性，`DVERK` [6]中的局部误差容限必须取得非常小，即10⁻¹⁰。如表10.3所示，正如预期的那样，当`θ`增大时，最优点的最终时间会减小。性能指标`I`的值与最终时间`t_f`之间存在权衡。
 
-使用IDP时，灵活的阶段长度没有带来任何困难，但为了保持稳定性，DVERK [6]中的局部误差容限必须取得非常小，即10⁻¹⁰。如表10.3所示，正如预期的那样，当θ增大时，最优点的最终时间会减小。性能指标I的值与最终时间t_f之间存在权衡。
+对于`θ = 1.2 × 10⁻⁵`的情况，控制策略如图10.16所示，所得状态轨迹如图10.17所示。最优控制策略与Luus [8]和Luus等人 [14]获得的结果非常相似。可以清楚地看到，所有状态变量都在适当的容限内到达原点，这与给定初始条件时的4位小数精度一致。
 
-对于θ = 1.2 × 10⁻⁵的情况，控制策略如图10.16所示，所得状态轨迹如图10.17所示。最优控制策略与Luus [8]和Luus等人 [14]获得的结果非常相似。可以清楚地看到，所有状态变量都在适当的容限内到达原点，这与给定初始条件时的4位小数精度一致。
-
-图10.16：两阶段CSTR问题的最优控制策略，I = 2.335 × 10⁻⁹，t_f = 0.32353
+图10.16：两阶段CSTR问题的最优控制策略，`I = 2.335 × 10⁻⁹`，`t_f = 0.32353`
 
 图10.17：使用图10.16所示最优控制策略所得的状态变量轨迹
 
@@ -4217,6 +4506,7 @@ J = I + θ t_f (10.50)
 ![](img/06ae75163df4fdf5e1eec243d497d393_210_1.png)
 
 - [17] ROSEN, O. 和 LUUS, R.：“分段常数最优控制中梯度的评估”，*Comput. Chem. Eng.* **15** (1991), 273-281.
+
 - [18] YEO, B.P.：“用于计算最优奇异控制的修正拟线性化算法”，*Int. J. Control* **32** (1980), 723-730.
 
 ## 第11章：状态约束
@@ -4225,7 +4515,7 @@ J = I + θ t_f (10.50)
 
 在最优控制问题中，经常对状态变量施加约束。例如，如果某个状态变量是反应器温度，那么显然温度应有一个上限。如果某个状态变量是反应混合物的体积，则该体积不应超过反应器的物理体积。这类约束以不等式形式存在，应纳入系统模型中。
 
-另一种遇到状态约束的情况是将系统从一种运行状态转移到另一种运行状态。例如，在启动反应器时，系统的启动条件通常与系统运行的期望条件不同。在这些情况下，对系统状态变量的约束以最终时刻$t_f$的等式约束形式出现，我们希望某些状态变量在时刻$t_f$具有指定的期望值。处理这两类状态约束的方法略有不同；因此，我们分别加以考虑。
+另一种遇到状态约束的情况是将系统从一种运行状态转移到另一种运行状态。例如，在启动反应器时，系统的启动条件通常与系统运行的期望条件不同。在这些情况下，对系统状态变量的约束以最终时刻`t_f`的等式约束形式出现，我们希望某些状态变量在时刻`t_f`具有指定的期望值。处理这两类状态约束的方法略有不同；因此，我们分别加以考虑。
 
 ### 11.2 最终状态约束
 
@@ -4233,23 +4523,35 @@ J = I + θ t_f (10.50)
 
 让我们考虑由微分方程描述的系统
 
-$$\frac{dx}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{11.1}$$
+```
+\frac{dx}{dt} = \mathbf{f}(\mathbf{x}, \mathbf{u}) \tag{11.1}
+```
 
-其中初始状态$\mathbf{x}(0)$是给定的。状态向量$\mathbf{x}$是一个$(n \times 1)$向量，$\mathbf{u}$是一个$(m \times 1)$控制向量，受以下约束：
+其中初始状态`\mathbf{x}(0)`是给定的。状态向量`\mathbf{x}`是一个`(n \times 1)`向量，`\mathbf{u}`是一个`(m \times 1)`控制向量，受以下约束：
 
-$$\alpha_j \le u_j \le \beta_j, \quad j = 1,2,\cdots,m. \tag{11.2}$$
+```
+\alpha_j \le u_j \le \beta_j, \quad j = 1,2,\cdots,m. \tag{11.2}
+```
 
-在最终时刻$t_f$，有$k$个状态变量必须处于期望值，即
+在最终时刻`t_f`，有`k`个状态变量必须处于期望值，即
 
-$$h_i=x_i(t_f)-x_i^d=0,\qquad i=1,2,\ldots,k\leq n.$$
+```
+h_i=x_i(t_f)-x_i^d=0,\qquad i=1,2,\ldots,k\leq n.
+```
+
+
 
 最优控制问题是在时间区间$0\leq t<t_f$内找到使性能指标最小化的控制策略$\mathbf{u}(t)$
 
-$$I=\Phi(\mathbf{x}(t_f))$$
+$$
+I=\Phi(\mathbf{x}(t_f))
+$$
 
 其中最终时间$t_f$是给定的。与之前考虑的问题不同之处在于，这里有$k$个必须在最终时刻满足的等式约束。数值上，这些等式约束明确表示为
 
-$$\left|x_i(t_f)-x_i^d\right|\leq\epsilon_i,\qquad i=1,2,\ldots,k,$$
+$$
+\left|x_i(t_f)-x_i^d\right|\leq\epsilon_i,\qquad i=1,2,\ldots,k,
+$$
 
 其中$\epsilon_i$是第$i$个约束的容限，选择得足够小。我们还想知道容限$\epsilon_i$的选取如何影响最优点处性能指标$I$的值。
 
@@ -4257,19 +4559,27 @@ $$\left|x_i(t_f)-x_i^d\right|\leq\epsilon_i,\qquad i=1,2,\ldots,k,$$
 
 让我们通过向性能指标中添加一个包含移位项的二次惩罚函数来构造增广性能指标，以考虑这$k$个等式约束
 
-$$J=I+\theta\sum_{i=1}^{k}(h_i-s_i)^2$$
+$$
+J=I+\theta\sum_{i=1}^{k}(h_i-s_i)^2
+$$
 
 其中$\theta$是一个正的惩罚函数因子，移位项$s_i$的选择使得在迭代过程中，式(11.3)在计算上得到满足，式(11.4)中的性能指标得到最小化。这种在二次惩罚函数中使用移位项的方法最初由Luus [13]在稳态优化中探索。注意到
 
-$$(h_i-s_i)^2=h_i^2-2s_i h_i+s_i^2$$
+$$
+(h_i-s_i)^2=h_i^2-2s_i h_i+s_i^2
+$$
 
 因此，在接近最优点、式(11.3)几乎满足时，$h_i^2$项相对于其他两项可以忽略不计，式(11.6)中增广性能指标的最小化就等价于最小化
 
-$$J=I-2\theta\sum_{i=1}^{k}s_i h_i$$
+$$
+J=I-2\theta\sum_{i=1}^{k}s_i h_i
+$$
 
 因为包含移位项平方的项只是一个常数。因此，乘积$-2\theta s_i$给出了拉格朗日乘子，即性能指标对式(11.3)中第$i$个等式约束变化的灵敏度。移位项的这一特性由Luus [13]在处理稳态优化中困难等式约束时使用惩罚函数时指出，并已在第2章中概述。Luus [14]以及Luus和Storey [19]用IDP说明了移位项的使用，并已在本第10章中概述。当没有关于灵敏度的先验信息时，我们最初选择移位项$s_i$等于零，然后在每一轮IDP之后，根据下式更新它
 
-$$s_i^{q+1} = s_i^{q} - h_i \tag{11.9}$$
+$$
+s_i^{q+1} = s_i^{q} - h_i \tag{11.9}
+$$
 
 其中$s_i^{q}$是第$q$轮时$s_i$的值。如果使用的轮数非常少，我们也可以选择在每次迭代后而不是每轮后更新移位项。为了说明使用带移位项的二次惩罚函数的计算方面，我们考虑几个示例。
 
@@ -4277,28 +4587,35 @@ $$s_i^{q+1} = s_i^{q} - h_i \tag{11.9}$$
 
 让我们考虑一个带有最终状态约束的非常简单的例子，它可以很容易地用庞特里亚金极大值原理求解。该问题曾由Goh和Teo [4]考虑过，并由Luus [10]以及Dadebo和McAuley [3]用IDP进行了优化。系统由以下方程描述：
 
-$$\frac{dx_1}{dt} = u \tag{11.10}$$
+$$
+\frac{dx_1}{dt} = u \tag{11.10}
+$$
 
-$$\frac{dx_2}{dt} = x_1^2 + u^2 \tag{11.11}$$
+$$
+\frac{dx_2}{dt} = x_1^2 + u^2 \tag{11.11}
+$$
 
 初始状态为$\mathbf{x}(0) = \begin{bmatrix}1 & 0\end{bmatrix}^T$，最终时间$t_f = 1$。对标量控制变量$u$没有约束，但在最终时刻必须满足等式约束
 
-$$h_1 = x_1(t_f) - 1 = 0. \tag{11.12}$$
+$$
+h_1 = x_1(t_f) - 1 = 0. \tag{11.12}
+$$
 
 需要找到使性能指标最小化的无约束控制策略
 
-$$I = x_2(t_f). \tag{11.13}$$
+$$
+I = x_2(t_f). \tag{11.13}
+$$
 
 因此，选择要最小化的增广性能指标为
 
-$$J = I + \theta (h_1 - s_1)^2. \tag{11.14}$$
+$$
+J = I + \theta (h_1 - s_1)^2. \tag{11.14}
+$$
 
 为了确定等式约束的满足程度，我们检查最终时刻与期望状态的偏差绝对值$|x_1(t_f) - 1|$。
 
 为了用IDP求解此问题，我们选择了$P = 10$个阶段，$N = 1$个网格点，$R = 5$个随机选择的点，30轮，区域恢复因子$\eta = 0.70$，每轮5次迭代，区域缩减因子$\gamma = 0.70$。控制的初始值为零，初始区域大小为1.0，以及移位项的初始值
-
-
-
 
 **表11.1：罚函数因子 $\theta$ 对例1收敛性的影响**
 
@@ -4308,7 +4625,7 @@ $$J = I + \theta (h_1 - s_1)^2. \tag{11.14}$$
 | 0.8 | $2.585\times10^{-7}$ | 0.924235 | 0.577780 | −0.92445 |
 | 1.0 | $2.485\times10^{-8}$ | 0.924235 | 0.462224 | −0.92445 |
 | 3.0 | $5.404\times10^{-8}$ | 0.924235 | 0.154075 | −0.92445 |
-| 10 | $1.226\times10^{-7}$ | 0.924235 | 0.046223 | −0.92446 |
+| 10 | $1.226\times10^{-7}$ | 0.924235 | 0.046223 | −0.92445 |
 | 30 | $3.077\times10^{-8}$ | 0.924235 | 0.015407 | −0.92442 |
 | 50 | $1.454\times10^{-6}$ | 0.924239 | 0.009243 | −0.92430 |
 | 80 | $1.317\times10^{-6}$ | 0.925144 | 0.005847 | −0.93552 |
@@ -4320,19 +4637,25 @@ $$J = I + \theta (h_1 - s_1)^2. \tag{11.14}$$
 
 控制策略和状态轨迹如图11.2所示。
 
-##### *灵敏度因子与伴随变量的关系*
+##### 灵敏度因子与伴随变量的关系
 
 现在，我们采用Lapidus和Luus [8]概述的方法，利用庞特里亚金极大值原理来解析求解该最优控制问题。该系统的哈密顿函数为
 
-$$H=z_1u+x_1^2+u^2$$ \hfill (11.15)
+$$
+H=z_1u+x_1^2+u^2 \tag{11.15}
+$$
 
 其中伴随变量 $z_1$ 定义为
 
-$$\frac{dz_1}{dt}=-\frac{\partial H}{\partial x_1}=-2x_1.$$ \hfill (11.16)
+$$
+\frac{dz_1}{dt}=-\frac{\partial H}{\partial x_1}=-2x_1. \tag{11.16}
+$$
 
 在性能指标 $I$ 取最小值时，通过驻点条件得到哈密顿函数的最小值：
 
-$$\frac{\partial H}{\partial u}=z_1+2u=0,$$ \hfill (11.17)
+$$
+\frac{\partial H}{\partial u}=z_1+2u=0, \tag{11.17}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_217_0.png)
 
@@ -4340,79 +4663,115 @@ $$\frac{\partial H}{\partial u}=z_1+2u=0,$$ \hfill (11.17)
 
 因此，最优控制由下式给出
 
-$$u=-0.5z_1.$$  \tag{11.18}
+$$
+u=-0.5z_1. \tag{11.18}
+$$
 
 将式(11.18)代入式(11.10)，对 $t$ 求导，并利用式(11.16)，得到二阶微分方程
 
-$$\frac{d^2x_1}{dt^2}-x_1=0.$$  \tag{11.19}
+$$
+\frac{d^2x_1}{dt^2}-x_1=0. \tag{11.19}
+$$
 
 式(11.19)在给定边界条件 $(x_1(0)=x_1(1)=1)$ 下很容易求解，得到
 
-$$x_1=\frac{e^t+e^{(1-t)}}{1+e}.$$  \tag{11.20}
+$$
+x_1=\frac{e^t+e^{(1-t)}}{1+e}. \tag{11.20}
+$$
 
 对式(11.20)关于 $t$ 求导，由式(11.10)可得最优控制，即
 
-$$u=\frac{e^t-e^{(1-t)}}{1+e}.$$  \tag{11.21}
+$$
+u=\frac{e^t-e^{(1-t)}}{1+e}. \tag{11.21}
+$$
 
 然后通过对下式积分得到最小性能指标
 
-$$I=\int_0^1(x_1^2+u^2)\,dt$$  \tag{11.22}
+$$
+I=\int_0^1(x_1^2+u^2)\,dt \tag{11.22}
+$$
 
 得到
 
-$$I=\frac{2(e-1)}{e+1}=0.9242344.$$  \tag{11.23}
+$$
+I=\frac{2(e-1)}{e+1}=0.9242344. \tag{11.23}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_218_0.png)
 
-图11.2：例1采用10段分段线性控制的最优控制策略及相应状态轨迹，此时 I = 0.924235
+图11.2：例1采用10段分段线性控制的最优控制策略及相应状态轨迹，此时 $I = 0.924235$
 
-值得注意的是，表11.1中的性能指标 I = 0.924235 与该解析结果非常接近。
+值得注意的是，表11.1中的性能指标 $I = 0.924235$ 与该解析结果非常接近。
 
-Luus [10]也曾使用该例子，采用 P = 20 分段常数控制策略和没有平移项的二次罚函数；Dadebo和McAuley [3]使用 P = 40 也对该例进行了研究。尽管后者得到的 I=0.92431 优于Goh和Teo [4]报告的0.92518，但仍逊于本文采用 P=10 段分段线性控制得到的 I=0.9242345。如图11.2所示，控制策略的平滑性使其与解析解高度一致。
+Luus [10]也曾使用该例子，采用 $P = 20$ 分段常数控制策略和没有平移项的二次罚函数；Dadebo和McAuley [3]使用 $P = 40$ 也对该例进行了研究。尽管后者得到的 $I=0.92431$ 优于Goh和Teo [4]报告的0.92518，但仍逊于本文采用 $P=10$ 段分段线性控制得到的 $I=0.9242345$。如图11.2所示，控制策略的平滑性使其与解析解高度一致。
 
 由式(11.18)可得
 
-z₁ = 2(e^(1−t) − e^t) / (1 + e) , (11.24)
+$$
+z_1 = 2(e^{1-t} - e^t)/(1 + e), \tag{11.24}
+$$
 
-因此在最终时刻 t = 1 时，
+因此在最终时刻 $t = 1$ 时，
 
-z₁ = 2(1 − e) / (1 + e) (11.25)
+$$
+z_1 = 2(1 - e)/(1 + e) \tag{11.25}
+$$
 
-该值恰为性能指标 I 的负值。因此，如同计算所得并在表11.1第五列中列出的那样，用平移项 s₁ 表示时，最终时刻的伴随变量等于 −2θ s₁。
+该值恰为性能指标 $I$ 的负值。因此，如同计算所得并在表11.1第五列中列出的那样，用平移项 $s_1$ 表示时，最终时刻的伴随变量等于 $-2\theta s_1$。
 
 ##### 例2
 
 让我们考虑Chen和Mills [1]使用的第一个示例，Luus和Storey [19]也曾使用过该示例。系统动力学由两个状态变量描述，但我们引入第三个变量，以便将性能指标转化为可用于IDP的标准形式：
 
-\[\frac{dx_1}{dt} = x_2 + u_1\]\[\frac{dx_2}{dt} = -x_1 + u_2\]\[\frac{dx_3}{dt} = u_1^2 + u_2^2\]
+$$
+\frac{dx_1}{dt} = x_2 + u_1
+$$
 
-其中 **x**(0) = [ -1 1 0 ]^T，最终时刻 t_f = π/2。控制变量无约束，但需在最终时刻满足两个等式约束
+$$
+\frac{dx_2}{dt} = -x_1 + u_2
+$$
 
+$$
+\frac{dx_3}{dt} = u_1^2 + u_2^2
+$$
+
+其中 $\mathbf{x}(0) = [-1, 1, 0]^T$，最终时刻 $t_f = \pi/2$。控制变量无约束，但需在最终时刻满足两个等式约束
+
+$$
 h_1 = x_1(t_f) - 1
+$$
 
 以及
 
-h_2 = x_2(t_f) + 1。
+$$
+h_2 = x_2(t_f) + 1.
+$$
 
 需要找到使性能指标
 
+$$
 I = x_3(t_f)
+$$
 
 最小的无约束控制策略。
 
 因此，选择待最小化的增广性能指标为
 
-J = I + θ[(h_1 - s_1)^2 + (h_2 - s_2)^2]。
+$$
+J = I + \theta[(h_1 - s_1)^2 + (h_2 - s_2)^2].
+$$
 
 为了确定等式约束的满足程度，我们考虑偏差平方和
 
-Q = h_1^2 + h_2^2。
+$$
+Q = h_1^2 + h_2^2.
+$$
 
-对于使用IDP的优化，我们选择 P=15 段，每段长度相等，并为每个控制变量寻找分段线性控制策略。我们选择初始控制策略 **u** = **0**，初始区域大小 **r**_in = 2，缩减因子 γ = 0.85，区域恢复因子 η = 0.90，R = 5，并允许进行100轮，每轮包含30次迭代。在PentiumII/350计算机上，100轮的计算时间为41秒。
+对于使用IDP的优化，我们选择 $P=15$ 段，每段长度相等，并为每个控制变量寻找分段线性控制策略。我们选择初始控制策略 $u = 0$，初始区域大小 $r_{in} = 2$，缩减因子 $\gamma = 0.85$，区域恢复因子 $\eta = 0.90$，$R = 5$，并允许进行100轮，每轮包含30次迭代。在PentiumII/350计算机上，100轮的计算时间为41秒。
 
-如表11.2所示，在 1 ≤ θ ≤ 500 的较宽范围内，均收敛到 I = 2.5464796；平移参数 s_1 非常小，且因子 −2θs_2 恒为 2.54648，等于性能指标的最优值。与例1一样，这不是数值巧合，而是可以证明的，因为该示例也可以解析求解（稍后我们将看到），得到性能指标的最优值 I = 8/π = 2.546479。因此，用15段分段线性控制所获得的值非常出色。最优控制策略如图11.3所示，状态轨迹如图11.4所示。
+如表11.2所示，在 $1 \leq \theta \leq 500$ 的较宽范围内，均收敛到 $I = 2.5464796$；平移参数 $s_1$ 非常小，且因子 $-2\theta s_2$ 恒为 2.54648，等于性能指标的最优值。与例1一样，这不是数值巧合，而是可以证明的，因为该示例也可以解析求解（稍后我们将看到），得到性能指标的最优值 $I = 8/\pi = 2.546479$。因此，用15段分段线性控制所获得的值非常出色。最优控制策略如图11.3所示，状态轨迹如图11.4所示。
 
-表11.2：罚函数因子 $\theta$ 对例2收敛性的影响
+**表11.2：罚函数因子 $\theta$ 对例2收敛性的影响**
 
 | 罚函数因子 $\theta$ | 平方和 $Q$ | 性能指标 $I$ | 平移项 $s_1$ | $s_2$ |
 |---:|---:|---:|---:|---:|
@@ -4427,34 +4786,45 @@ Q = h_1^2 + h_2^2。
 
 现在，我们使用庞特里亚金极大值原理解析求解该最优控制问题。该系统的哈密顿函数为
 
-$$H=z_1(x_2+u_1)+z_2(-x_1+u_2)+u_1^2+u_2^2$$  \tag{11.34}
+$$
+H=z_1(x_2+u_1)+z_2(-x_1+u_2)+u_1^2+u_2^2 \tag{11.34}
+$$
 
 其中伴随变量 $z_1$ 和 $z_2$ 定义为
 
-$$\frac{dz_1}{dt}=-\frac{\partial H}{\partial x_1}=z_2$$  \tag{11.35}
+$$
+\frac{dz_1}{dt}=-\frac{\partial H}{\partial x_1}=z_2 \tag{11.35}
+$$
 
 以及
 
-$$\frac{dz_2}{dt}=-\frac{\partial H}{\partial x_2}=-z_1.$$  \tag{11.36}
+$$
+\frac{dz_2}{dt}=-\frac{\partial H}{\partial x_2}=-z_1. \tag{11.36}
+$$
 
 在性能指标 $I$ 取最小值时，通过驻点条件得到哈密顿函数的最小值：
 
-$$\frac{\partial H}{\partial u_1}=z_1+2u_1=0$$  \tag{11.37}
+$$
+\frac{\partial H}{\partial u_1}=z_1+2u_1=0 \tag{11.37}
+$$
 
 以及
 
-$$\frac{\partial H}{\partial u_2}=z_2+2u_2=0,$$  \tag{11.38}
+$$
+\frac{\partial H}{\partial u_2}=z_2+2u_2=0, \tag{11.38}
+$$
 
 由此得到最优控制策略
 
-$$u_1=-0.5z_1$$  \tag{11.39}
+$$
+u_1=-0.5z_1 \tag{11.39}
+$$
 
 以及
 
-$$u_2=-0.5z_2.$$  \tag{11.40}
-
-
-
+$$
+u_2=-0.5z_2. \tag{11.40}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_221_0.png)
 
@@ -4462,71 +4832,89 @@ $$u_2=-0.5z_2.$$  \tag{11.40}
 
 因此，状态方程变为
 
-$$\frac{dx_1}{dt}=x_2-0.5z_1. \tag{11.41}$$
+$$
+\frac{dx_1}{dt}=x_2-0.5z_1. \tag{11.41}
+$$
 
 和
 
-$$\frac{dx_2}{dt}=-x_1-0.5z_2. \tag{11.42}$$
+$$
+\frac{dx_2}{dt}=-x_1-0.5z_2. \tag{11.42}
+$$
 
 为了从这些方程中消除伴随变量，我们对时间 $t$ 求微分得到两个方程：
 
-$$\frac{d^2x_1}{dt^2}=x_1+2\frac{dx_2}{dt}. \tag{11.43}$$
+$$
+\frac{d^2x_1}{dt^2}=x_1+2\frac{dx_2}{dt}. \tag{11.43}
+$$
 
 和
 
-$$\frac{d^2x_2}{dt^2}=x_2-2\frac{dx_1}{dt}. \tag{11.44}$$
+$$
+\frac{d^2x_2}{dt^2}=x_2-2\frac{dx_1}{dt}. \tag{11.44}
+$$
 
 为了解耦这些方程，我们对式 (11.43) 关于 $t$ 再求两次微分得到
 
-$$\frac{d^4x_1}{dt^4}=-2\frac{d^2x_1}{dt^2}-x_1. \tag{11.45}$$
+$$
+\frac{d^4x_1}{dt^4}=-2\frac{d^2x_1}{dt^2}-x_1. \tag{11.45}
+$$
 
 该式可 readily 求解得到
 
-$$x_1=(A_1+A_2t)\sin t+(B_1+B_2t)\cos t. \tag{11.46}$$
+$$
+x_1=(A_1+A_2t)\sin t+(B_1+B_2t)\cos t. \tag{11.46}
+$$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_222_0.png)
 
 图 11.4：由图 11.3 中的控制策略得到的 Example 2 的状态轨迹
 
-其中 A1、A2、B1 和 B2 为待由边界条件即给定的初始状态和期望状态确定的常数。
+其中 $A_1$、$A_2$、$B_1$ 和 $B_2$ 为待由边界条件即给定的初始状态和期望状态确定的常数。
 
 由此立即可知，按相同的积分常数表示，我们可以写出
 
-```
-x2 = (A1 + A2 t) cos t - (B1 + B2 t) sin t. (11.47)
-```
+$$
+x_2 = (A_1 + A_2 t)\cos t - (B_1 + B_2 t)\sin t. \tag{11.47}
+$$
 
-于是四个常数可 readily 确定：A1 = 1，A2 = 0，B1 = -1，且 B2 = 4/π。
+于是四个常数可 readily 确定：$A_1 = 1$，$A_2 = 0$，$B_1 = -1$，且 $B_2 = 4/\pi$。
 
 因此最优轨迹由下式给出
 
-```
-x1 = sin t - (1 - 4t/π) cos t (11.48)
-x2 = cos t - (1 - 4t/π) sin t. (11.49)
-```
+$$
+x_1 = \sin t - (1 - 4t/\pi)\cos t \tag{11.48}
+$$
+
+$$
+x_2 = \cos t - (1 - 4t/\pi)\sin t. \tag{11.49}
+$$
 
 最优控制策略因此为
 
-```
-u1 = 4 cos t / π (11.50)
-u2 = - 4 sin t / π. (11.51)
-```
+$$
+u_1 = 4\cos t / \pi \tag{11.50}
+$$
+
+$$
+u_2 = -4\sin t / \pi. \tag{11.51}
+$$
 
 因此性能指标的最小值为
 
-```
-I = ∫₀^{π/2} (u1² + u2²) dt = 8/π = 2.5464791. (11.52)
-```
+$$
+I = \int_0^{\pi/2} (u_1^2 + u_2^2)\, dt = 8/\pi = 2.5464791. \tag{11.52}
+$$
 
 在最优条件下伴随变量为
 
-```
-$$z_1 = -\frac{8\cos t}{\pi}\tag{11.53}$$
-```
+$$
+z_1 = -\frac{8\cos t}{\pi} \tag{11.53}
+$$
 
-```
-$$z_2 = \frac{8\sin t}{\pi},\tag{11.54}$$
-```
+$$
+z_2 = \frac{8\sin t}{\pi}, \tag{11.54}
+$$
 
 因此在最终时间 $t_f = \pi/2$ 时，$z_1 = 0$，且 $z_2 = 8/\pi = I$。数值上我们能够从位移项得到这些结果。
 
@@ -4550,13 +4938,15 @@ $$z_2 = \frac{8\sin t}{\pi},\tag{11.54}$$
 
 其中我们使用了等式而非不等式，因为从图 11.5 可以明显看出最大产量出现在最大体积处。
 
+
+
 在使用具有灵活阶段长度的 IDP 时，我们需要考虑两个等式约束。这没有问题，因为我们只需在要最大化的增广性能指标中处理两个位移项
 
 其中 $t_{fc}$ 是通过累加时间阶段得到的计算最终时间，并在每次通过后按如下方式更新它们：
 
-##### 表 11.3：Example 3 中惩罚函数因子 θ 对收敛的影响
+##### 表 11.3：Example 3 中惩罚函数因子 `θ` 对收敛的影响
 
-| 惩罚函数因子 θ | 性能指标 I | 计算最终时间 t_fc | 计算最终体积 x5(t_fc) | 增广 J 中的位移项 s1 | s2 |
+| 惩罚函数因子 `θ` | 性能指标 `I` | 计算最终时间 `t_fc` | 计算最终体积 `x5(t_fc)` | 增广 `J` 中的位移项 `s1` | `s2` |
 |---|---|---|---|---|---|
 | 0.4 | 78.611 | 20.0000 | 14.3500 | -9.7545 | -4.7113 |
 | 0.5 | 78.662 | 20.0000 | 14.3500 | -7.7980 | -3.7742 |
@@ -4570,9 +4960,9 @@ $$z_2 = \frac{8\sin t}{\pi},\tag{11.54}$$
 s_2^{q+1} = s^q - (x_5(t_{fc}) - 14.35).  (11.69)
 ```
 
-我们对两个等式约束使用了相同的惩罚函数因子 θ，以保持尽可能简单。
+我们对两个等式约束使用了相同的惩罚函数因子 `θ`，以保持尽可能简单。
 
-我们选择 P = 30 个阶段，每个阶段初始长度为 2/3 h，N = 1，R = 5，γ = 0.95，η = 0.85，并允许 50 次通过，每次通过包含 30 次迭代。如表 11.3 所见，惩罚函数因子 θ 可在 0.5 到 30 之间选择，以从初始控制策略 u = 0、初始区域大小 r = 2、阶段长度初始区域大小为 0.1 开始，在 50 次通过后获得可靠的收敛。通过使用在 θ = 0.5 的第一次运行中得到的控制策略和位移项作为初始条件，进行了一次运行以细化控制策略，给出了图 11.6 中的最优控制策略，I = 78.6625。与 Luus 和 Rosen [18] 使用 20 个等长阶段得到的 I = 78.60 相比，仅有轻微的改善。
+我们选择 `P = 30` 个阶段，每个阶段初始长度为 2/3 `h`，`N = 1`，`R = 5`，`γ = 0.95`，`η = 0.85`，并允许 50 次通过，每次通过包含 30 次迭代。如表 11.3 所见，惩罚函数因子 `θ` 可在 0.5 到 30 之间选择，以从初始控制策略 `u = 0`、初始区域大小 `r = 2`、阶段长度初始区域大小为 0.1 开始，在 50 次通过后获得可靠的收敛。通过使用在 `θ = 0.5` 的第一次运行中得到的控制策略和位移项作为初始条件，进行了一次运行以细化控制策略，给出了图 11.6 中的最优控制策略，`I = 78.6625`。与 Luus 和 Rosen [18] 使用 20 个等长阶段得到的 `I = 78.60` 相比，仅有轻微的改善。
 
 ##### Example 4
 
@@ -4614,9 +5004,9 @@ $$I = x_5(t_f). \tag{11.77}$$
 
 $$J = I + \theta\big[(x_1(t_f) + 1 - s_1)^2 + (x_2(t_f) - 0.5 - s_2)^2 + (x_3(t_f) + 2 - s_3)^2 + (x_4(t_f) - 1 - s_4)^2\big]. \tag{11.78}$$
 
-**表 11.4：Example 4 中惩罚函数因子 θ 对收敛的影响**
+**表 11.4：Example 4 中惩罚函数因子 `θ` 对收敛的影响**
 
-| 惩罚函数因子 θ | 平方和 Q | 性能指标 I | s₁ | s₂ | s₃ | s₄ |
+| 惩罚函数因子 `θ` | 平方和 `Q` | 性能指标 `I` | `s₁` | `s₂` | `s₃` | `s₄` |
 |---:|---:|---:|---:|---:|---:|---:|
 | 0.2 | 2.132 × 10⁻⁷ | 118.62 | −32.2118 | 30.9303 | −50.7931 | 0.1217 |
 | 0.3 | 3.560 × 10⁻¹⁰ | 118.63 | −21.4789 | 20.6224 | −33.8669 | 0.0810 |
@@ -4625,33 +5015,29 @@ $$J = I + \theta\big[(x_1(t_f) + 1 - s_1)^2 + (x_2(t_f) - 0.5 - s_2)^2 + (x_3(t_
 | 5.0 | 1.187 × 10⁻⁹ | 118.63 | −1.2887 | 1.2371 | −2.0320 | 0.0049 |
 | 10.0 | 7.264 × 10⁻¹⁰ | 118.70 | −0.6446 | 0.6222 | −1.0182 | 0.0029 |
 
-同样，为简单起见，我们对所有等式约束使用相同的惩罚函数因子 θ。
+同样，为简单起见，我们对所有等式约束使用相同的惩罚函数因子 `θ`。
 
-最优控制问题然后是找到时间区间 0 ≤ *t* < 2 中的控制策略 **u** 使增广性能指标 *J* 最小化。为求解此最优控制问题，Luus 和 Storey [19] 最初使用了 50 个等长阶段和分段常值控制，然后表明使用 40 个分段线性连续控制阶段可得到更低的性能指标值，即 *I* = 114.81，而非 *I* = 121.20。这里我们使用 *P* = 30 个分段线性控制阶段，*N* = 1 并提供详细的计算结果。
+最优控制问题然后是找到时间区间 `0 ≤ t < 2` 中的控制策略 `u` 使增广性能指标 `J` 最小化。为求解此最优控制问题，Luus 和 Storey [19] 最初使用了 50 个等长阶段和分段常值控制，然后表明使用 40 个分段线性连续控制阶段可得到更低的性能指标值，即 `I = 114.81`，而非 `I = 121.20`。这里我们使用 `P = 30` 个分段线性控制阶段，`N = 1` 并提供详细的计算结果。
 
-为最小化增广性能指标，我们选择 θ = 1，初始控制策略 **u**⁽⁰⁾ = 0，每次通过 30 次迭代，缩减因子 γ = 0.90，200 次通过，区域恢复因子 η = 0.95。位移项初始设为零，并在每次通过后根据式 (11.9) 更新。为衡量收敛速率，我们考察偏离期望状态的平方和
+为最小化增广性能指标，我们选择 `θ = 1`，初始控制策略 `u⁽⁰⁾ = 0`，每次通过 30 次迭代，缩减因子 `γ = 0.90`，200 次通过，区域恢复因子 `η = 0.95`。位移项初始设为零，并在每次通过后根据式 (11.9) 更新。为衡量收敛速率，我们考察偏离期望状态的平方和
 
 $$Q=(x_1(t_f)+1)^2+(x_2(t_f)-0.5)^2+(x_3(t_f)+2)^2+(x_4(t_f)-1)^2. \qquad (11.79)$$
 
-如图所示 11.7 所示，选择 *R* = 3 或 *R* = 21 个随机控制值几乎没有区别。以 *R* = 3 我们得到 *Q* = 3.73 × 10⁻¹¹，而以 *R* = 21，我们在 200 次通过后得到 *Q* = 9.29 × 10⁻¹²，两者均给出最小值 *I* = 118.63。
+如图所示 11.7 所示，选择 `R = 3` 或 `R = 21` 个随机控制值几乎没有区别。以 `R = 3` 我们得到 `Q = 3.73 × 10⁻¹¹`，而以 `R = 21`，我们在 200 次通过后得到 `Q = 9.29 × 10⁻¹²`，两者均给出最小值 `I = 118.63`。
 
-惩罚函数因子 θ 的影响如表 11.4 所示，该表使用 *R* = 5 并采用了先前使用的参数。在 0.3 ≤ θ ≤ 5 的范围内，我们可获得性能指标最小值的可靠值，且最终状态约束满足 *Q* < 1.2 × 10⁻⁹。
+惩罚函数因子 `θ` 的影响如表 11.4 所示，该表使用 `R = 5` 并采用了先前使用的参数。在 `0.3 ≤ θ ≤ 5` 的范围内，我们可获得性能指标最小值的可靠值，且最终状态约束满足 `Q < 1.2 × 10⁻⁹`。
 
-最优控制策略如图所示 11.8。控制曲线 *u₁* 和 *u₃* 在整个时间区间内都很平滑。然而值得注意的是，控制变量 *u₂* 在 *t* = 1.5 之后呈现高度振荡的性质。Luus 和 Storey [19] 使用 40 个阶段也观察到了相同类型的行为。
-
-
-
-
+最优控制策略如图所示 11.8。控制曲线 `u₁` 和 `u₃` 在整个时间区间内都很平滑。然而值得注意的是，控制变量 `u₂` 在 `t = 1.5` 之后呈现高度振荡的性质。Luus 和 Storey [19] 使用 40 个阶段也观察到了相同类型的行为。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_228_0.png)
 
-图 11.7：期望状态偏差平方和随遍数的变化，采用 P = 30 个等长时间阶段的分段线性控制
+图 11.7：期望状态偏差平方和随遍数的变化，采用 `P = 30` 个等长时间阶段的分段线性控制
 
-相应的状态轨迹如图 11.9 所示，可以看到状态变量 x₁ 在接近终端时刻时发生了非常快速的变化。
+相应的状态轨迹如图 11.9 所示，可以看到状态变量 `x₁` 在接近终端时刻时发生了非常快速的变化。
 
 ##### 示例 5：两级 CSTR 系统
 
-现在让我们考虑在第 10.4 节中使用的两级 CSTR 系统，但在性能指标上做了非常微小的改变。我们没有将终端时刻状态变量的平方和作为性能指标，而是引入了另一个变量 x₅ 来反映与期望状态和控制作用的偏差平方和，并在终端时刻 t_f = 0.325 处施加终端状态约束。该系统由下式描述：
+现在让我们考虑在第 10.4 节中使用的两级 CSTR 系统，但在性能指标上做了非常微小的改变。我们没有将终端时刻状态变量的平方和作为性能指标，而是引入了另一个变量 `x₅` 来反映与期望状态和控制作用的偏差平方和，并在终端时刻 `t_f = 0.325` 处施加终端状态约束。该系统由下式描述：
 
 ```
 dx₁/dt = -3x₁ + g₁(x)  (11.80)
@@ -4667,7 +5053,7 @@ dx₅/dt = x₁² + x₂² + x₃² + x₄² + 0.1(u₁² + u₂²)  (11.84)
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_229_0.png)
 
-图 11.8：示例 4 采用 P = 30 个分段线性区间的最优控制策略，得到 I = 118.63 和 Q = 9.3 × 10⁻¹²
+图 11.8：示例 4 采用 `P = 30` 个分段线性区间的最优控制策略，得到 `I = 118.63` 和 `Q = 9.3 × 10⁻¹²`
 
 其中第一个罐中的反应项由下式给出：
 
@@ -4693,13 +5079,13 @@ x(0) = [ 0.1962  −0.0372  0.0946  0 ]ᵀ   (11.87)
 −1 ≤ uⱼ ≤ 1,   j = 1,2.   (11.88)
 ```
 
-状态变量 x₁ 和 x₃ 分别是 1 号和 2 号罐中的归一化浓度变量，x₂ 和 x₄ 分别是 1 号和 2 号罐中的归一化温度变量
+状态变量 `x₁` 和 `x₃` 分别是 1 号和 2 号罐中的归一化浓度变量，`x₂` 和 `x₄` 分别是 1 号和 2 号罐中的归一化温度变量
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_230_0.png)
 
-图 11.9：使用图 11.8 所示最优控制策略得到的示例 4 的状态轨迹
+图 11.9：使用图 11.8 所示最优控制策略得到的示例 4 的状态轨迹。
 
-。要求找到使性能指标最小化的控制策略
+要求找到使性能指标最小化的控制策略
 
 $$I = x_5(t_f) \tag{11.89}$$
 
@@ -4717,9 +5103,9 @@ $$J = I + \theta \sum_{i=1}^{4} (x_i(t_f) - s_i)^2 \tag{11.91}$$
 
 $$||\mathbf{x}(t_f)|| = \left(\sum_{i=1}^{4} x_i^2(t_f)\right)^{1/2}. \tag{11.92}$$
 
-##### 表 11.5：惩罚函数因子 θ 对示例 5 收敛性的影响
+##### 表 11.5：惩罚函数因子 `θ` 对示例 5 收敛性的影响
 
-| 惩罚函数因子 θ | 最终状态范数 \|\|x(t_f)\|\| | 性能指标 I | J 中的两个移位项 s₁ | s₃ |
+| 惩罚函数因子 `θ` | 最终状态范数 \|\|`x(t_f)`\|\| | 性能指标 `I` | `J` 中的两个移位项 `s₁` | `s₃` |
 |---|---|---|---|---|
 | 20 | 3.072 × 10⁻⁴ | 0.044334 | 1.242 × 10⁻¹ | −1.105 × 10⁻¹ |
 | 50 | 1.224 × 10⁻⁴ | 0.045608 | 6.652 × 10⁻² | −5.401 × 10⁻² |
@@ -4738,15 +5124,15 @@ $$||\mathbf{x}(t_f)|| = \left(\sum_{i=1}^{4} x_i^2(t_f)\right)^{1/2}. \tag{11.92
 | 1 × 10⁶ | 2.345 × 10⁻⁸ | 0.047830 | 1.205 × 10⁻⁶ | −9.998 × 10⁻⁷ |
 | 5 × 10⁶ | 3.244 × 10⁻⁹ | 0.048259 | −1.969 × 10⁻⁸ | −8.700 × 10⁻⁸ |
 
-我们使用 DVERK [6] 代替 Runge-Kutta 方法，局部误差容限为 10⁻⁶。图 11.10 和图 11.11 表明，R = 7 不能导致收敛，而 R = 10 是一个很好的随机选点数目。
+我们使用 `DVERK` [6] 代替 Runge-Kutta 方法，局部误差容限为 10⁻⁶。图 11.10 和图 11.11 表明，`R = 7` 不能导致收敛，而 `R = 10` 是一个很好的随机选点数目。
 
-从表 11.5 中我们可以看到，惩罚函数因子存在一个范围 2000 ≤ θ ≤ 10000，在此范围内可收敛到性能指标的最小值 I = 0.046872，从而使所有终端状态都在原点 10⁻⁸ 以内。当 θ = 5000 时，移位项为 s₁ = 1.159 × 10⁻³、s₂ = −2.440 × 10⁻⁵、s₃ = −8.403 × 10⁻⁴ 和 s₄ = −3.450 × 10⁻⁴。表 11.5 中给出了移位项 s₁ 和 s₃，以表明在 θ 的可接受范围内，乘积 −2θsᵢ 是常数，但在未获得最优值的范围之外，这不一定成立。当 θ 过小时，终端状态约束得不到充分满足；而若 θ 过大，则性能指标会大于最小值。图 11.12 以图形方式展示了这一点。
+从表 11.5 中我们可以看到，惩罚函数因子存在一个范围 `2000 ≤ θ ≤ 10000`，在此范围内可收敛到性能指标的最小值 `I = 0.046872`，从而使所有终端状态都在原点 10⁻⁸ 以内。当 `θ = 5000` 时，移位项为 `s₁ = 1.159 × 10⁻³`、`s₂ = −2.440 × 10⁻⁵`、`s₃ = −8.403 × 10⁻⁴` 和 `s₄ = −3.450 × 10⁻⁴`。表 11.5 中给出了移位项 `s₁` 和 `s₃`，以表明在 `θ` 的可接受范围内，乘积 `−2θsᵢ` 是常数，但在未获得最优值的范围之外，这不一定成立。当 `θ` 过小时，终端状态约束得不到充分满足；而若 `θ` 过大，则性能指标会大于最小值。图 11.12 以图形方式展示了这一点。
 
 以上五个示例证明了带移位项的二次惩罚函数在提供最优控制策略方面的可行性，也展示了移位项如何提供关于终端状态约束的敏感性信息。现在我们转向另一类在处理终端状态等式约束时已被证明在 IDP 中很有用的惩罚函数。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_232_0.png)
 
-图 11.10：示例 5 的收敛曲线，展示了惩罚函数因子 θ = 2000 时 ||x(t_f)|| 随遍数的变化
+图 11.10：示例 5 的收敛曲线，展示了惩罚函数因子 `θ = 2000` 时 `||x(t_f)||` 随遍数的变化
 
 #### 11.2.3 绝对值惩罚函数
 
@@ -4758,7 +5144,7 @@ Dadebo 和 McAuley [3] 报告了在 IDP 中使用绝对值惩罚函数取得了�
 J = I + Σ_{i=1}^{k} θ_i |x_i(t_f) - x_i^d| . (11.93)
 ```
 
-这里有 k 个正的加权因子 θ_i，它们必须由用户提供，或者必须在计算过程中确定。在计算过程中获得这些加权因子良好值的一种有效方法是采用 Mekarapiruk 和 Luus [22] 的建议：在每一遍 IDP 之后调整加权因子，如果未满足容差则增大其值，如果终端状态约束在给定容差内得到满足则减小其值。因此，在给每个 θ_i 设定一些合理的初始值后，每一遍之后按以下方式更改这些惩罚函数因子：
+这里有 `k` 个正的加权因子 `θ_i`，它们必须由用户提供，或者必须在计算过程中确定。在计算过程中获得这些加权因子良好值的一种有效方法是采用 Mekarapiruk 和 Luus [22] 的建议：在每一遍 IDP 之后调整加权因子，如果未满足容差则增大其值，如果终端状态约束在给定容差内得到满足则减小其值。因此，在给每个 `θ_i` 设定一些合理的初始值后，每一遍之后按以下方式更改这些惩罚函数因子：
 
 ```
 θ_i^{q+1} = (1 + δ)θ_i^{q}  if  |x_i(t_f) - x_i^d| > ε_i (11.94)
@@ -4768,31 +5154,33 @@ J = I + Σ_{i=1}^{k} θ_i |x_i(t_f) - x_i^d| . (11.93)
 θ_i^{q+1} = (1 - δ)θ_i^{q}  if  |x_i(t_f) - x_i^d| ≤ ε_i (11.95)
 ```
 
+
+
 ![](img/06ae75163df4fdf5e1eec243d497d393_233_0.png)
 
-图 11.11：示例 5 的收敛曲线，展示了惩罚函数因子 θ = 5000 时 ||x(t_f)|| 随遍数的变化
+图 11.11：示例 5 的收敛曲线，展示了惩罚函数因子 `θ = 5000` 时 `||x(t_f)||` 随遍数的变化
 
-其中 δ 是一个小的正因子，例如 0.05，q 是遍数，ε_i 是约束 i 的容差。为了减小控制策略中的波动幅度，δ 在每一遍之后减小一小量，例如 1%。我们用一个具有六个终端状态约束的示例来说明这种方法。
+其中 `δ` 是一个小的正因子，例如 `0.05`，`q` 是遍数，`ε_i` 是约束 `i` 的容差。为了减小控制策略中的波动幅度，`δ` 在每一遍之后减小一小量，例如 `1%`。我们用一个具有六个终端状态约束的示例来说明这种方法。
 
-##### 示例 6：起重机问题
+### 示例 6：起重机问题
 
 让我们考虑这样一个问题：用起重机将集装箱从船上转运到货车上，要求集装箱不要摆动得过于剧烈，并在规定时间内停在货车上。提升机构和小车电机提供两个控制变量来实现这一目标。该问题最早由 Sakawa 和 Shindo [25] 提出，随后被 Goh 和 Teo [4]、Luus [10]、Teo 等人 [26]、Dadebo 和 McAuley [3] 以及 Mekarapiruk 和 Luus [22] 用于最优控制研究。系统有六个状态变量；因此，再加上性能指标的被积函数，我们共有七个微分方程：
 
 ```
 dx₁/dt = 9x₄  (11.96)
+```
 
+```
 dx₂/dt = 9x₅  (11.97)
+```
 
+```
 dx₃/dt = 9x₆  (11.98)
 ```
 
-
-
-
-
 ![](img/06ae75163df4fdf5e1eec243d497d393_234_0.png)
 
-图 11.12：罚函数因子对示例5性能指标 I 收敛值的影响
+图 11.12：罚函数因子对示例5性能指标 `I` 收敛值的影响
 
 ```
 \frac{dx_4}{dt} = 9(u_1 + 17.2656 x_3) \tag{11.99}
@@ -4810,7 +5198,7 @@ dx₃/dt = 9x₆  (11.98)
 \frac{dx_7}{dt} = 4.5(x_3^2 + x_6^2) \tag{11.102}
 ```
 
-其中 x1 是水平距离，x2 是集装箱移动的垂直距离，x3 是集装箱的摆角，x4 是水平速度，x5 是垂直速度，x6 是集装箱的角速度。变量 x7 给出集装箱在转运过程中的行为，引入它是为了提供需要最小化的性能指标。
+其中 `x1` 是水平距离，`x2` 是集装箱移动的垂直距离，`x3` 是集装箱的摆角，`x4` 是水平速度，`x5` 是垂直速度，`x6` 是集装箱的角速度。变量 `x7` 给出集装箱在转运过程中的行为，引入它是为了提供需要最小化的性能指标。
 
 集装箱的初始状态为
 
@@ -4818,7 +5206,7 @@ dx₃/dt = 9x₆  (11.98)
 \mathbf{x}(0) = [\ 0\ \ 22\ \ 0\ \ 0\ \ -1\ \ 0\ \ 0 ]^T \tag{11.103}
 ```
 
-在无量纲时间 t_f = 1 时的期望状态为
+在无量纲时间 `t_f = 1` 时的期望状态为
 
 ```
 \mathbf{x}^d = [\ 10\ \ 14\ \ 0\ \ 2.5\ \ 0\ \ 0\ \ free ]^T. \tag{11.104}
@@ -4831,28 +5219,36 @@ dx₃/dt = 9x₆  (11.98)
 ```
 
 以及
+
 $$-0.809 \le u_2 \le 0.713.$$ \tag{11.106}
 
-此外，对 $x_4$ 和 $x_5$ 还有状态约束：
+此外，对 `x_4` 和 `x_5` 还有状态约束：
+
 $$-2.5 \le x_4 \le 2.5$$ \tag{11.107}
+
 $$-1 \le x_5 \le 1.$$ \tag{11.108}
 
-最优控制问题是在时间区间 $0 \le t < 1$ 内求 $u_1$ 和 $u_2$，使得当 $t_f = 1$ 时性能指标
+最优控制问题是在时间区间 `0 \le t < 1` 内求 `u_1` 和 `u_2`，使得当 `t_f = 1` 时性能指标
+
 $$I = x_7(t_f)$$ \tag{11.109}
+
 最小化。
 
 这里，如 Luus[10] 所建议，我们选择要最小化的增广性能指标为
+
 $$J = I + \sum_{i=1}^{6} \theta_i |x_i(t_f) - x_i^d| + \rho \sum_{j=1}^{P} (p_{4j} + p_{5j})$$ \tag{11.110}
 
 其中
+
 $$p_{4j} = \begin{cases} -2.5 - x_4(t_j) & \text{if } x_4(t_j) < -2.5 \\ 0 & \text{if } -2.5 \le x_4(t_j) \le 2.5 \\ x_4(t_j) - 2.5 & \text{if } x_4(t_j) > 2.5 \end{cases}$$ \tag{11.111}
 
 以及
+
 $$p_{5j} = \begin{cases} -1 - x_5(t_j) & \text{if } x_5(t_j) < -1 \\ 0 & \text{if } -1 \le x_5(t_j) \le 1 \\ x_5(t_j) - 1 & \text{if } x_5(t_j) > 1. \end{cases}$$ \tag{11.112}
 
-在增广性能指标中，我们令 $\rho = 1$，该值足够大，可确保满足状态不等式约束，并集中确定六个罚函数因子 $\theta_1, \theta_2, \cdots, \theta_6$。
+在增广性能指标中，我们令 `ρ = 1`，该值足够大，可确保满足状态不等式约束，并集中确定六个罚函数因子 `θ_1, θ_2, ⋯, θ_6`。
 
-对于第一次运行的起始点，我们选择 $\theta_i = 10^{-2}, \epsilon_i = 10^{-3}, i = 1,2,\cdots,6$，$\delta = 0.05$，并选择 $P = 10$ 个时间阶段，每个阶段长度为 $0.1$。对于积分，我们选择步长为 $0.01$ 的龙格-库塔法。我们取控制变量初值 $u_1^{(0)} = 0.5$、$u_2^{(0)} = 0$，控制变量的初始区域大小为 $r_1^{(0)} = 1.3$、$r_2^{(0)} = 0.3$。对于 IDP，我们选择 $N = 3$ 个网格点，$R = 25$，$\gamma = 0.70$，$\eta = 0.95$，并允许 $150$ 轮，每轮包含 $30$ 次迭代。每轮结束后，$\delta$ 减少 $1\%$，并更新罚函数因子。在 PentiumII/350 上，$150$ 轮的计算时间为 $617$ 秒。以最终状态与其期望值的绝对偏差之和来度量的收敛曲线如图 11.13 所示。性能指标值为 $I = 0.005370$。最终状态为
+对于第一次运行的起始点，我们选择 `θ_i = 10^{-2}, ε_i = 10^{-3}, i = 1,2,⋯,6`，`δ = 0.05`，并选择 `P = 10` 个时间阶段，每个阶段长度为 `0.1`。对于积分，我们选择步长为 `0.01` 的龙格-库塔法。我们取控制变量初值 `u_1^{(0)} = 0.5`、`u_2^{(0)} = 0`，控制变量的初始区域大小为 `r_1^{(0)} = 1.3`、`r_2^{(0)} = 0.3`。对于 IDP，我们选择 `N = 3` 个网格点，`R = 25`，`γ = 0.70`，`η = 0.95`，并允许 `150` 轮，每轮包含 `30` 次迭代。每轮结束后，`δ` 减少 `1%`，并更新罚函数因子。在 PentiumII/350 上，`150` 轮的计算时间为 `617` 秒。以最终状态与其期望值的绝对偏差之和来度量的收敛曲线如图 11.13 所示。性能指标值为 `I = 0.005370`。最终状态为
 
 $$\mathbf{x}(t_f) = \begin{bmatrix} 10.001479 & 14.000000 & -0.000931 & 2.500000 \\ 0.000000 & -0.001116 & 0.005370 \end{bmatrix}^T$$ \tag{11.113}
 
@@ -4860,42 +5256,45 @@ $$\mathbf{x}(t_f) = \begin{bmatrix} 10.001479 & 14.000000 & -0.000931 & 2.500000
 
 图 11.13：示例6第一次运行的收敛曲线，显示了最终状态与期望值的绝对偏差之和
 
-得到与期望值的绝对偏差之和为 2.272 × 10⁻³。所得的权重因子为
+得到与期望值的绝对偏差之和为 `2.272 × 10⁻³`。所得的权重因子为
 
 θ = [ 5.860 × 10⁻⁴   1.940 × 10⁻⁴   6.321 × 10⁻²   6.685 × 10⁻³
+
       4.823 × 10⁻⁴   7.431 × 10⁻² ]ᵀ. (11.114)
 
-第二次运行时，我们将控制变量的初始区域大小减小到 r₁⁽⁰⁾ = r₂⁽⁰⁾ = 0.1，并将 εᵢ 减小到 10⁻⁶。将第一次运行得到的控制策略用作初始控制策略，权重因子的初值取第一次运行得到的值。IDP 的参数保持不变。正如预期，得到了更低的偏差之和，即 1.4 × 10⁻⁵，且 I = 0.005527。
+第二次运行时，我们将控制变量的初始区域大小减小到 `r₁⁽⁰⁾ = r₂⁽⁰⁾ = 0.1`，并将 `εᵢ` 减小到 `10⁻⁶`。将第一次运行得到的控制策略用作初始控制策略，权重因子的初值取第一次运行得到的值。IDP 的参数保持不变。正如预期，得到了更低的偏差之和，即 `1.4 × 10⁻⁵`，且 `I = 0.005527`。
 
-最后一次运行时，我们选择初始区域大小为 r₁⁽⁰⁾ = r₂⁽⁰⁾ = 0.001，这在 38 轮内得到小于 10⁻⁶ 的偏差之和，如图 11.14 所示。所得控制策略如图 11.15 所示，状态轨迹如图 11.16 所示。最终状态为
+最后一次运行时，我们选择初始区域大小为 `r₁⁽⁰⁾ = r₂⁽⁰⁾ = 0.001`，这在 `38` 轮内得到小于 `10⁻⁶` 的偏差之和，如图 11.14 所示。所得控制策略如图 11.15 所示，状态轨迹如图 11.16 所示。最终状态为
 
 x(t_f) = [ 10.000000   14.000000   − 0.000001   2.500000
+
            0.000000   0.000000   0.005526 ]ᵀ (11.115)
 
-给出与期望值的绝对偏差之和为 2.272 × 10⁻³。所得的权重因子为
+给出与期望值的绝对偏差之和为 `2.272 × 10⁻³`。所得的权重因子为
 
 θ = [ 7.012 × 10⁻⁴   5.030 × 10⁻⁵   5.521 × 10⁻²   6.662 × 10⁻³
+
       3.278 × 10⁻⁴   7.255 × 10⁻² ]ᵀ. (11.116)
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_237_0.png)
 
-图 11.14：偏差之和收敛到 7.37 × 10⁻⁷，得到示例6的 I = 0.005526
+图 11.14：偏差之和收敛到 `7.37 × 10⁻⁷`，得到示例6的 `I = 0.005526`
 
 这些权重因子的值与 Mekarapiruk 和 Luus [22] 得到的值略有不同，这表明权重因子并不唯一，并且不像二次罚函数中的移位项那样与灵敏度直接相关。
 
-如 Mekarapiruk 和 Luus [22] 所示，将时间阶段数增加到 20 后，性能指标可略微降低到 I = 0.005264。
+如 Mekarapiruk 和 Luus [22] 所示，将时间阶段数增加到 `20` 后，性能指标可略微降低到 `I = 0.005264`。
 
-#### 11.2.4 关于罚函数选择的说明
+### 11.2.4 关于罚函数选择的说明
 
 Luus 等人 [17] 在求解前面作为示例5考虑的两级 CSTR 问题时，没有发现绝对罚函数相对于带移位项的二次罚函数具有明显的计算优势。因此，在二者之间做出选择之前，还需要在这方面进行更多研究。使用带移位项的二次罚函数的优点在于，当采用庞特里亚金最大值原理时，所得到的灵敏度因子与伴随变量相关。这一信息很有用，并且还能指示是否已收敛到最优。显然，以这种方式通过罚函数方便地处理的终端状态等式约束的数量必然存在上限。幸运的是，许多实际问题只涉及少量终端状态约束；因此，这里使用的方法为处理此类约束提供了可靠的手段。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_238_0.png)
 
-图 11.15：示例6在 P = 10 个阶段时的最优控制策略
+图 11.15：示例6在 `P = 10` 个阶段时的最优控制策略
 
-### 11.3 状态不等式约束
+## 11.3 状态不等式约束
 
-#### 11.3.1 问题描述
+### 11.3.1 问题描述
 
 考虑由如下微分方程描述的系统
 
@@ -4903,51 +5302,47 @@ Luus 等人 [17] 在求解前面作为示例5考虑的两级 CSTR 问题时，�
 dx/dt = f(x, u) (11.117)
 ```
 
-其中初始状态 x(0) 已给定。状态向量 x 是 (n × 1) 向量，u 是受如下约束的 (m × 1) 控制向量
+其中初始状态 `x(0)` 已给定。状态向量 `x` 是 `(n × 1)` 向量，`u` 是受如下约束的 `(m × 1)` 控制向量
 
 ```
 α_j ≤ u_j ≤ β_j,   j = 1, 2, ⋯, m. (11.118)
 ```
 
-在给定时间区间内，有 k 个如下形式的状态约束
+在给定时间区间内，有 `k` 个如下形式的状态约束
 
 ```
 ψ_i(x) ≤ 0,   i = 1, 2, ⋯, k. (11.119)
 ```
 
-最优控制问题是在时间区间 $0 \le t < t_f$ 内求控制策略 $u(t)$，使性能指标
+最优控制问题是在时间区间 `0 \le t < t_f` 内求控制策略 `u(t)`，使性能指标
 
 ```
 I = Φ(x(t_f)) (11.120)
 ```
 
-最小化，其中终端时间 t_f 已给定。
+最小化，其中终端时间 `t_f` 已给定。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_239_0.png)
 
 图 11.16：使用图 11.15 中的控制策略后，示例6的最优状态轨迹
 
-#### 11.3.2 状态约束变量
+### 11.3.2 状态约束变量
 
 为了处理状态不等式约束，我们采用 Luus [10] 的方法，该方法在前一节的示例6中也曾使用，但略有不同。与差分方程不同，我们按照 Mekarapiruk 和 Luus [21] 的建议，使用微分方程来构造罚函数。因此，我们通过以下微分方程引入 *k 个状态约束变量*：
 
 $$\frac{dx_{n+i}}{dt}=\begin{cases}0 & \text{if } \psi_i(\mathbf{x})\leq 0\\ \psi_i(\mathbf{x}) & \text{if } \psi_i(\mathbf{x})>0\end{cases} \tag{11.121}$$
 
-其中 $i=1,2,\ldots,k$，初始条件为
+其中 `i=1,2,\ldots,k`，初始条件为
 
 $$x_{n+i}(0)=0,\qquad i=1,2,\ldots,k. \tag{11.122}$$
 
-因此，在终端时间 $t_f$ 处，$x_{n+i}(t_f)$ 给出了第 $i$ 个不等式约束随时间的总违反量。采用该值的好处在于，有时违反可能在一个时间阶段内部短暂出现；如果使用差分方程方法，只在时间阶段末端检查违反情况，这种违反可能会被忽略。我们选择要最小化的增广性能指标为
+因此，在终端时间 `t_f` 处，`x_{n+i}(t_f)` 给出了第 `i` 个不等式约束随时间的总违反量。采用该值的好处在于，有时违反可能在一个时间阶段内部短暂出现；如果使用差分方程方法，只在时间阶段末端检查违反情况，这种违反可能会被忽略。我们选择要最小化的增广性能指标为
 
 $$J=I+\sum_{i=1}^{k}\theta_i x_{n+i}(t_f) \tag{11.123}$$
 
-其中 $\theta_i>0$ 是不等式状态约束的罚函数因子。下面我们看一些说明性示例。
+其中 `θ_i>0` 是不等式状态约束的罚函数因子。下面我们看一些说明性示例。
 
-
-
-
-
-##### 示例 7：化学反应器控制
+### 示例 7：化学反应器控制
 
 让我们考虑 Ko 和 Stevens [7]、Reddy 和 Husain [24]、Luus [10,12] 以及 Mekarapiruk 和 Luus [21] 所研究的涉及一级化学反应的化学反应器的最优控制问题。系统由两个微分方程描述
 
@@ -4965,13 +5360,13 @@ $$J=I+\sum_{i=1}^{k}\theta_i x_{n+i}(t_f) \tag{11.123}$$
 \mathbf{x}^T(0) = [\ 0\ 380\ ]. \tag{11.126}
 ```
 
-状态变量 $x_1$ 为期望组分的浓度，$x_2$ 表示绝对温度。控制量 $u$ 为归一化冷却剂流量，受限于
+状态变量 `x_1` 为期望组分的浓度，`x_2` 表示绝对温度。控制量 `u` 为归一化冷却剂流量，受限于
 
 ```
 0 \le u \le 0.5. \tag{11.127}
 ```
 
-反应速率常数随温度 $x_2$ 的变化如下：
+反应速率常数随温度 `x_2` 的变化如下：
 
 ```
 k_1 = 1.7536 \times 10^5 \exp\left(\frac{-1.1374 \times 10^4}{1.9872 x_2}\right) \tag{11.128}
@@ -4989,7 +5384,7 @@ k_2 = 2.4885 \times 10^{10} \exp\left(\frac{-2.2748 \times 10^4}{1.9872 x_2}\rig
 x_2(t) \le 460. \tag{11.130}
 ```
 
-问题是求在时间区间 $0 \le t < t_f$ 内的 $u$，使得性能指标
+问题是求在时间区间 `0 \le t < t_f` 内的 `u`，使得性能指标
 
 ```
 I = x_1(t_f), \quad t_f = 5\ \text{min} \tag{11.131}
@@ -4997,23 +5392,23 @@ I = x_1(t_f), \quad t_f = 5\ \text{min} \tag{11.131}
 
 最大化。
 
-为了处理式 (11.130) 中的不等式状态约束，我们引入状态约束变量 $x_3$，由
+为了处理式 `(11.130)` 中的不等式状态约束，我们引入状态约束变量 `x_3`，由
 
 ```
 \frac{dx_3}{dt} = \begin{cases} 0 & \text{if } x_2 - 460 \le 0 \\ x_2 - 460 & \text{if } x_2 - 460 > 0 \end{cases} \tag{11.132}
 ```
 
-给出，初始条件为 $x_3(0) = 0$。因此，只要状态约束被违反，$x_3$ 的值就会增加。如果在 $t_f$ 时 $x_3(t_f)$ 为零，则说明约束方程没有被违反。
+给出，初始条件为 `x_3(0) = 0`。因此，只要状态约束被违反，`x_3` 的值就会增加。如果在 `t_f` 时 `x_3(t_f)` 为零，则说明约束方程没有被违反。
 
-由于性能指标 $I$ 需要最大化，我们选择要最小化的增广性能指标为
+由于性能指标 `I` 需要最大化，我们选择要最小化的增广性能指标为
 
 ```
 J = -I + \theta x_3(t_f) \tag{11.133}
 ```
 
-其中 θ 为正的惩罚函数因子。
+其中 `θ` 为正的惩罚函数因子。
 
-我们取 θ = 1，P = 48 个阶段，γ = 0.9，η = 0.70，R = 10，初始控制策略为 u^(0) = 0.25，初始区域大小为 0.5，并进行了 10 次遍历，每次遍历包含 30 次迭代，用于不同的网格点数 N。重复使用 θ = 0.1 进行运行，得到了本质上相同类型的结果。惩罚函数在 10 次遍历后避免了任何约束违反。表 11.6 的结果表明，I 的最大值 0.67723 很难获得。需要超过 13 个网格点才能将产率的最优值精确到 5 位小数。最优控制策略见图 11.17，温度曲线见图 11.18。可以观察到温度的上限约束没有被违反。
+我们取 `θ = 1`，`P = 48` 个阶段，`γ = 0.9`，`η = 0.70`，`R = 10`，初始控制策略为 `u^(0) = 0.25`，初始区域大小为 `0.5`，并进行了 `10` 次遍历，每次遍历包含 `30` 次迭代，用于不同的网格点数 `N`。重复使用 `θ = 0.1` 进行运行，得到了本质上相同类型的结果。惩罚函数在 `10` 次遍历后避免了任何约束违反。表 11.6 的结果表明，`I` 的最大值 `0.67723` 很难获得。需要超过 `13` 个网格点才能将产率的最优值精确到 `5` 位小数。最优控制策略见图 11.17，温度曲线见图 11.18。可以观察到温度的上限约束没有被违反。
 
 表 11.6：示例 7 中 10 次遍历后性能指标随网格点数 N 的变化
 
@@ -5031,7 +5426,7 @@ J = -I + \theta x_3(t_f) \tag{11.133}
 | 19 | 0.67723 | 0.67723 |
 | 21 | 0.67723 | 0.67723 |
 
-##### 示例 8：补料发酵罐
+### 示例 8：补料发酵罐
 
 补料发酵罐涉及青霉素的生物合成，如 Lim 等 [9] 所研究并由 Cuthrell 和 Biegler [2] 修订，其由四个微分方程描述
 
@@ -5087,7 +5482,7 @@ x(0) = [1.5  0  0  7]ᵀ.    (11.140)
 x₄(t_f) − 10 = 0    (11.144)
 ```
 
-其中 t_f 为批次时间。需要最大化的性能指标为 t_f 时产生的青霉素总量，由
+其中 `t_f` 为批次时间。需要最大化的性能指标为 `t_f` 时产生的青霉素总量，由
 
 ```
 I = x₂(t_f) x₄(t_f).    (11.145)
@@ -5095,15 +5490,17 @@ I = x₂(t_f) x₄(t_f).    (11.145)
 
 给出。
 
-最优控制问题是求批次时间 t_f 和时间区间 0 ≤ t < t_f 内的控制策略 u(t)，使得式 (11.145) 给出的性能指标最大化且所有约束均得到满足。Cuthrell 和 Biegler [2] 在批次时间为 $t_f = 132.14$ h 时获得了 87.69 的最大性能指标。通过将时间区间划分为 20 个等长的时间阶段并使用迭代动态规划，Luus [11] 将产率提高到 87.948，$t_f = 132.00$ h。Gupta [5] 得到了相同的控制策略。进一步改进不等式约束的处理方法后，Mekarapiruk 和 Luus [21] 得到了 87.959 的值。最近，Luus 和 Hennessy [16] 表明之前的调查人员遗漏了全局最优解，对于 $t_f = 132.00$ h 和 20 个等长阶段，全局最优为 $I = 87.9964$。为了便于与这些论文进行直接比较，我们考虑批次时间指定为 $t_f = 132$ h 的问题。
 
-正如 Mekarapiruk 和 Luus [21] 以及 Luus 和 Hennessy [16] 为处理状态不等式约束所做的那样，我们通过微分方程引入状态约束变量 $x_5$ 和 $x_6$
+
+最优控制问题是求批次时间 `t_f` 和时间区间 `0 ≤ t < t_f` 内的控制策略 `u(t)`，使得式 (11.145) 给出的性能指标最大化且所有约束均得到满足。Cuthrell 和 Biegler [2] 在批次时间为 `$t_f = 132.14$` h 时获得了 87.69 的最大性能指标。通过将时间区间划分为 20 个等长的时间阶段并使用迭代动态规划，Luus [11] 将产率提高到 87.948，`$t_f = 132.00$` h。Gupta [5] 得到了相同的控制策略。进一步改进不等式约束的处理方法后，Mekarapiruk 和 Luus [21] 得到了 87.959 的值。最近，Luus 和 Hennessy [16] 表明之前的调查人员遗漏了全局最优解，对于 `$t_f = 132.00$` h 和 20 个等长阶段，全局最优为 `$I = 87.9964$`。为了便于与这些论文进行直接比较，我们考虑批次时间指定为 `$t_f = 132$` h 的问题。
+
+正如 Mekarapiruk 和 Luus [21] 以及 Luus 和 Hennessy [16] 为处理状态不等式约束所做的那样，我们通过微分方程引入状态约束变量 `$x_5$` 和 `$x_6$`
 
 $$\frac{dx_5}{dt}=\begin{cases}x_1-40 & \text{if } x_1>40\\0 & \text{if } 0<x_1\le 40\\1000 & \text{if } x_1<0\end{cases} \tag{11.146}$$
 
 $$\frac{dx_6}{dt}=\begin{cases}x_3-25 & \text{if } x_3>25\\0 & \text{if } 0\le x_3\le 25\\1000 & \text{if } x_3<0.\end{cases} \tag{11.147}$$
 
-$x_5$ 和 $x_6$ 的初始条件取为零。如果约束被违反，则这些辅助变量将变为正。我们现在形成要最小化的增广性能指标：
+`$x_5$` 和 `$x_6$` 的初始条件取为零。如果约束被违反，则这些辅助变量将变为正。我们现在形成要最小化的增广性能指标：
 
 $$J = -I + \theta_1 (x_4(t_f) - 10 - s)^2 + \theta_2 x_5(t_f) + \theta_3 x_6(t_f). \tag{11.148}$$
 
@@ -5111,17 +5508,17 @@ $$J = -I + \theta_1 (x_4(t_f) - 10 - s)^2 + \theta_2 x_5(t_f) + \theta_3 x_6(t_f
 
 $$\theta = \theta_1 = \theta_2 = \theta_3. \tag{11.149}$$
 
-由于计算非常耗时且打算使用少量遍历，而不是在每次遍历后，我们在每次迭代后根据以下公式更新平移项 $s$
+由于计算非常耗时且打算使用少量遍历，而不是在每次遍历后，我们在每次迭代后根据以下公式更新平移项 `$s$`
 
 $$s^{j+1} = s^j - (x_4(t_f) - 10), \tag{11.150}$$
 
-其中 $j$ 表示优化过程中的迭代次数。
+其中 `$j$` 表示优化过程中的迭代次数。
 
-为用 IDP 求解此问题，我们选择 $P = 15$ 个等长的时间阶段，初始控制策略 $u^{(0)} = 11.9$，初始区域大小 $r_{in} = 10$，区域收缩因子 $\gamma = 0.90$，区域恢复因子 $\eta = 0.80$，$R = 11$，并允许 5 次遍历，每次遍历包含 30 次迭代，$\theta = 5$ 和 $\theta = 50$，用于不同的网格点数 $N$。如表 11.7 所示，使用惩罚函数因子 $\theta = 5$ 时，由于局部最优的存在，全局最优 $I = 87.970$ 很难获得。体积约束得到很好满足。我们只输入了体积不超过 10 且 $x_5(t_f)$ 和 $x_6(t_f)$ 为零的值，因为即使是微小的约束违反也会对性能指标产生很大影响。平移参数的值为 $s = -2.89$。对于体积约束，略微超过 10 会大幅提高性能指标，正如平移项 $s$ 的相对较大值所示，我们预计如果体积约束放宽 $10^{-4}$，$I$ 将增加 $2.89 \times 10^{-3}$。
+为用 IDP 求解此问题，我们选择 `$P = 15$` 个等长的时间阶段，初始控制策略 `$u^{(0)} = 11.9$`，初始区域大小 `$r_{in} = 10$`，区域收缩因子 `$\gamma = 0.90$`，区域恢复因子 `$\eta = 0.80$`，`$R = 11$`，并允许 5 次遍历，每次遍历包含 30 次迭代，`$\theta = 5$` 和 `$\theta = 50$`，用于不同的网格点数 `$N$`。如表 11.7 所示，使用惩罚函数因子 `$\theta = 5$` 时，由于局部最优的存在，全局最优 `$I = 87.970$` 很难获得。体积约束得到很好满足。我们只输入了体积不超过 10 且 `$x_5(t_f)$` 和 `$x_6(t_f)$` 为零的值，因为即使是微小的约束违反也会对性能指标产生很大影响。平移参数的值为 `$s = -2.89$`。对于体积约束，略微超过 10 会大幅提高性能指标，正如平移项 `$s$` 的相对较大值所示，我们预计如果体积约束放宽 `$10^{-4}$`，`$I$` 将增加 `$2.89 \times 10^{-3}$`。
 
-使用 $\theta = 50$ 重复了该组运行。如表 11.8 所示，惩罚函数因子 $\theta$ 对获得全局最优的影响不大。这里在最优时得到的平移参数为 $s = -0.289$。全局最优 $I = 87.970$ 再次仅获得一次。
+使用 `$\theta = 50$` 重复了该组运行。如表 11.8 所示，惩罚函数因子 `$\theta$` 对获得全局最优的影响不大。这里在最优时得到的平移参数为 `$s = -0.289$`。全局最优 `$I = 87.970$` 再次仅获得一次。
 
-为了提高获得全局最优的机会，我们可以考察 Luus 和 Galli [15] 的发现，即较大的初始区域大小促进收敛到全局最优。因此，使用相同的参数重复了该组运行，只是初始区域大小从 10 增加到 20，并允许 10 次遍历。使用惩罚因子 $\theta = 5$ 得到了表 11.9 的结果。全局最优 $I = 87.970$ 在 $N = 3, 5$ 和 7 时获得。使用 $N = 13$ 导致了第二好的局部最优 $I = 87.9572$，而另外两个 $N$ 值给出了另外两个局部最优：$I = 87.924$ 和 $I = 87.920$。这四个局部最优对应的控制策略见表 11.10。使用全局最优控制策略得到的三个受约束状态变量的轨迹见图 11.19。可以清楚地看出约束没有被违反。
+为了提高获得全局最优的机会，我们可以考察 Luus 和 Galli [15] 的发现，即较大的初始区域大小促进收敛到全局最优。因此，使用相同的参数重复了该组运行，只是初始区域大小从 10 增加到 20，并允许 10 次遍历。使用惩罚因子 `$\theta = 5$` 得到了表 11.9 的结果。全局最优 `$I = 87.970$` 在 `$N = 3, 5$` 和 7 时获得。使用 `$N = 13$` 导致了第二好的局部最优 `$I = 87.9572$`，而另外两个 `$N$` 值给出了另外两个局部最优：`$I = 87.924$` 和 `$I = 87.920$`。这四个局部最优对应的控制策略见表 11.10。使用全局最优控制策略得到的三个受约束状态变量的轨迹见图 11.19。可以清楚地看出约束没有被违反。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_242_0.png)
 
@@ -5130,9 +5527,6 @@ $$s^{j+1} = s^j - (x_4(t_f) - 10), \tag{11.150}$$
 ![](img/06ae75163df4fdf5e1eec243d497d393_243_0.png)
 
 图 11.18：示例 7 中使用图 11.17 控制策略得到的最优温度曲线
-
-
-
 
 表11.7：经过5次迭代后，性能指标随网格点数N的变化（例8，θ=5）
 
@@ -5188,11 +5582,11 @@ $$s^{j+1} = s^j - (x_4(t_f) - 10), \tag{11.150}$$
 | 14 | 9.574 | 9.401 | 9.402 | 9.575 |
 | 15 | 9.6345 | 9.458 | 9.461 | 9.636 |
 
-为了说明灵敏度因子−2θs在预测改变体积上约束影响方面的有效性，我们将根据
+为了说明灵敏度因子 −2θs 在预测改变体积上约束影响方面的有效性，我们将根据
 
 I = 87.97 − 2θs(V_max − 10)  (11.151)
 
-得到的预测效果与在9.5 ≤ V_max ≤ 10.5范围内计算的值进行比较。从图11.20可以看出，两者吻合得很好。
+得到的预测效果与在 9.5 ≤ V_max ≤ 10.5 范围内计算的值进行比较。从图 11.20 可以看出，两者吻合得很好。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_247_0.png)
 
@@ -5252,11 +5646,13 @@ I = 87.97 − 2θs(V_max − 10)  (11.151)
 
 [24] REDDY, K.V. AND HUSAIN, A.: “Computation of optimal control policy with singular subarc”, *Can. J. Chem. Eng.* **59** (1981), 557-559.
 
+
+
 [25] SAKAWA, Y. AND SHINDO, Y.: “Optimal control of container cranes”, *Automatica* **18** (1982), 257-266.
 
 [26] TEO, K.L., GOH, C.J., AND WONG, K.H.: *A Unified Computational Approach to Optimal Control Problems*, Longman Scientific & Technical, Wiley, New York (1991).
 
-## 第12章
+# 第12章
 
 ## 时间最优控制
 
@@ -5280,18 +5676,20 @@ d**x**/dt = **f**(x, u)  (12.1)
 
 h_i = x_i(t_f) − x_i^d = 0,   i = 1, 2, ⋯, n.  (12.3)
 
-
-
 时间最优控制问题是在时间区间 $0 \le t < t_f$ 内寻找控制策略 $\mathbf{u}(t)$，使性能指标
 
 $$
+
 I = t_f. \tag{12.4}
+
 $$
 
 最小化。数值上，要求在寻找最终时间 $t_f$ 的最小值时，满足约束
 
 $$
+
 |x_i(t_f) - x_i^d| \le \varepsilon_i, \quad i = 1, 2, \cdots, n, \tag{12.5}
+
 $$
 
 其中 $\varepsilon_i$ 是某个容差，例如测量误差。
@@ -5301,13 +5699,17 @@ $$
 为了求解该最优控制问题，我们遵循 Luus [10] 的建议，选择如下增广性能指标进行最小化：
 
 $$
+
 J = t_f + \theta \sum_{i=1}^{n} (x_i(t_f) - x_i^d - s_i)^2, \tag{12.6}
+
 $$
 
 并根据下式在 IDP 每轮后更新移动项 $s_i$：
 
 $$
+
 s_i^{q+1} = s_i^q - (x_i(t_f) - x_i^d), \tag{12.7}
+
 $$
 
 其中 $q$ 是 IDP 中的轮数。
@@ -5315,19 +5717,25 @@ $$
 为了衡量最终状态与期望状态的接近程度，我们使用与期望状态绝对偏差之和的范数，即
 
 $$
+
 S = \sum_{i=1}^{n} |x_i(t_f) - x_i^d|. \tag{12.8}
+
 $$
 
 为了通过 IDP 求解时间最优控制问题，我们将连续控制策略转化为分段常数控制问题，即将时间区间 $[0, t_f]$ 划分为 $P$ 个阶段，每个阶段的长度可变：
 
 $$
+
 v(k) = t_k - t_{k-1}, \quad k = 1, 2, \cdots, P. \tag{12.9}
+
 $$
 
 在计算上，我们施加条件
 
 $$
+
 v(k) > 0, \quad k = 1, 2, \cdots, P, \tag{12.10}
+
 $$
 
 以避免处理负的阶段长度。
@@ -5335,28 +5743,36 @@ $$
 正如我们在第 9 章中所做的，基于 Bojkov 和 Luus [3] 的思想，我们通过以下关系变换时间变量：
 
 $$
+
 dt = v(k) P d\tau, \tag{12.11}
+
 $$
 
 使得在归一化时间内所有时间阶段具有相同的长度：
 
 $$
+
 \tau_k = \frac{k}{P}, \quad k = 1, 2, \cdots, P. \tag{12.12}
+
 $$
 
 在时间区间 $\tau_{k-1} \le \tau < \tau_k$ 内的微分方程变为
 
 $$
+
 \frac{d\mathbf{x}}{d\tau} = v(k) P f(\mathbf{x}, \mathbf{u}). \tag{12.13}
+
 $$
 
 通过这种变换，在 $t = t_f$ 时，变换后的时间变量 $\tau = 1$，到达期望状态的时间为
 
 $$
+
 t_f = \sum_{k=1}^{P} v(k). \tag{12.14}
+
 $$
 
-对式 (12.6) 中的增广性能指标进行最小化，应能得到 $t_f$ 的最小值，并确保最终时刻的状态变量接近期望值。为了测试该方法的计算可行性，我们考虑几个示例。在所有示例中，我们均使用附录 E 中列出的 DVERK [7] 子程序来对微分方程进行积分。
+对式 (12.6) 中的增广性能指标进行最小化，应能得到 $t_f$ 的最小值，并确保最终时刻的状态变量接近期望值。为了测试该方法的计算可行性，我们考虑几个示例。在所有示例中，我们均使用附录 E 中列出的 `DVERK` [7] 子程序来对微分方程进行积分。
 
 ### 12.4 示例
 
@@ -5365,37 +5781,51 @@ $$
 让我们考虑 Moon 和 VanLandingham [13] 使用过的桥式起重机系统，该系统由四个微分方程描述：
 
 $$
+
 \frac{dx_1}{dt} = x_2 \tag{12.15}
+
 $$
 
 $$
+
 \frac{dx_2}{dt} = u \tag{12.16}
+
 $$
 
 $$
+
 \frac{dx_3}{dt} = x_4 \tag{12.17}
+
 $$
 
 $$
+
 \frac{dx_4}{dt} = -0.98 x_3 + 0.1 u \tag{12.18}
+
 $$
 
 其中 $\mathbf{x}^T(0) = \mathbf{0}$，期望的最终状态为 $\mathbf{x}^d = [15 \ 0 \ 0 \ 0]^T$。控制约束为
 
 $$
+
 -1 \le u \le 1. \tag{12.19}
+
 $$
 
 需要找到使性能指标
 
 $$
+
 I = t_f. \tag{12.20}
+
 $$
 
 最小的控制策略。因此我们选择增广性能指标
 
 $$
+
 J = t_f + \theta\left[(x_1(t_f) - 15 - s_1)^2 + (x_2(t_f) - s_2)^2 + (x_3(t_f) - s_3)^2 + (x_4(t_f) - s_4)^2\right], \tag{12.21}
+
 $$
 
 其中 $\theta$ 是正的罚函数因子，移动项 $s_i$ 根据式 (12.7) 在 IDP 每轮后更新。
@@ -5409,10 +5839,15 @@ $$
 **表 12.1：** 示例 1 的移动项和灵敏度
 
 | 变量 | 移动项 $s_i$：$\theta=1$ / $\theta=10$ / $\theta=100$ | 灵敏度 $-2\theta s_i$ | $t_f = 8.5801$ 时的伴随变量 [13] |
+
 |---|---:|---:|---:|
+
 | 1 | $0.090861$ / $0.009086$ / $0.0009086$ | $-0.182$ | $-0.182$ |
+
 | 2 | $-0.389797$ / $-0.038980$ / $-0.0038981$ | $0.780$ | $0.782$ |
+
 | 3 | $0.547945$ / $0.054793$ / $0.0054782$ | $-1.096$ | $-1.086$ |
+
 | 4 | $-1.102032$ / $-0.110203$ / $-0.0110194$ | $2.204$ | $2.216$ |
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_254_0.png)
@@ -5424,15 +5859,21 @@ $$
 让我们考虑 Weinreb 和 Bryson [17]、Lee [8]、Bojkov 和 Luus [1] 以及 Luus [10] 研究过的两连杆机械臂的最小时间控制问题，其方程如下：
 
 $$
+
 \frac{dx_1}{dt} = \frac{(\sin x_3)\left[\frac{9}{4}(\cos x_3)x_1^2 + 2x_2^2\right] + \frac{4}{3}(u_1 - u_2) - \frac{3}{2}(\cos x_3)u_2}{\frac{31}{36} + \frac{9}{4}\sin^2 x_3} \tag{12.22}
+
 $$
 
 $$
+
 \frac{dx_2}{dt} = -\frac{(\sin x_3)\left[\frac{7}{2}x_1^2 + \frac{9}{4}(\cos x_3)x_2\right] - \frac{7}{3}u_2 + \frac{3}{2}(\cos x_3)(u_1 - u_2)}{\frac{31}{36} + \frac{9}{4}\sin^2 x_3} \tag{12.23}
+
 $$
 
 $$
+
 \frac{dx_3}{dt} = x_2 - x_1 \tag{12.24}
+
 $$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_255_0.png)
@@ -5440,34 +5881,42 @@ $$
 图 12.2：示例 1 在两种罚函数因子取值下最终状态变量与期望值之间的绝对偏差之和
 
 $$
+
 \frac{dx_4}{dt} = x_1 \tag{12.25}
+
 $$
 
 其中 $x_1$ 和 $x_2$ 分别是肩关节和肘关节连杆的惯性速度，$x_3$ 和 $x_4$ 是角度。初始状态为 $\mathbf{x}(0) = [0 \ 0 \ 0.5 \ 0]^T$，期望的最终状态为 $\mathbf{x}^d = [0 \ 0 \ 0.5 \ 0.522]^T$。控制约束为
 
 $$
+
 -1 \le u_j \le 1, \quad j = 1, 2. \tag{12.26}
+
 $$
 
 需要找到使性能指标
 
 $$
+
 I = t_f. \tag{12.27}
+
 $$
 
 最小的控制策略。因此我们选择增广性能指标
 
 $$
+
 J = t_f + \theta\left[(x_1(t_f) - s_1)^2 + (x_2(t_f) - s_2)^2 + (x_3(t_f) - 0.5 - s_3)^2 + (x_4(t_f) - 0.522 - s_4)^2\right], \tag{12.28}
+
 $$
 
 其中 $\theta$ 是正的罚函数因子，移动项 $s_i$ 在 IDP 每轮后更新。为了跟踪收敛情况，我们在每轮后记录最终状态与期望状态的绝对偏差的范数：
 
 $$
+
 S = |x_1(t_f)| + |x_2(t_f)| + |x_3(t_f) - 0.5| + |x_4(t_f) - 0.522|. \tag{12.29}
+
 $$
-
-
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_256_0.png)
 
@@ -5551,13 +6000,15 @@ $$s_2^{q+1} = s_2^{q} - (x_2(t_f) - 2),$$ (12.42)
 
 其中 q 为遍历次数。
 
-为通过 IDP 求解此时间最优控制问题，如前两个例子一样，我们选择 P = 5 个时间阶段。我们使用与之前相同的 IDP 参数，即 γ = 0.80，η = 0.95，R = 50，N = 5，并使用 100 次遍历，每次包含 30 次迭代。我们选择 θ = 10^6，初始阶段长度 = 30，初始控制 = 0，控制和阶段长度的初始区域大小分别为 8 和 30。如图 12.6 所示，收敛相当规则，在 100 次遍历结束时最终状态变量绝对偏差之和为 10^-7。控制策略是在前 4 个阶段使用 u = 8，然后在长度为 32.309 的最后一个阶段使用 u = 0，最终时间 t_f = 221.46167。平移项为 s1 = -0.0171 和 s2 = 0.0000338。
+
+
+为通过 IDP 求解此时间最优控制问题，如前两个例子一样，我们选择 `P = 5` 个时间阶段。我们使用与之前相同的 IDP 参数，即 `γ = 0.80`，`η = 0.95`，`R = 50`，`N = 5`，并使用 100 次遍历，每次包含 30 次迭代。我们选择 `θ = 10^6`，初始阶段长度 = 30，初始控制 = 0，控制和阶段长度的初始区域大小分别为 8 和 30。如图 12.6 所示，收敛相当规则，在 100 次遍历结束时最终状态变量绝对偏差之和为 10^-7。控制策略是在前 4 个阶段使用 `u = 8`，然后在长度为 32.309 的最后一个阶段使用 `u = 0`，最终时间 `t_f = 221.46167`。平移项为 `s1 = -0.0171` 和 `s2 = 0.0000338`。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_259_0.png)
 
-图 12.6：例 3 中 N = 5 时最终状态变量绝对偏差之和
+图 12.6：例 3 中 `N = 5` 时最终状态变量绝对偏差之和
 
-然后通过仅包含两个阶段的运行对结果进行细化，以给出在 t = 189.15319 处的切换时间和最后一个阶段长度为 32.30708。最优最终时间 t_f 略微降低至 221.46027，最终状态绝对偏差之和 S = 2.35 × 10^−10。时间最优控制策略如图 12.7 所示。
+然后通过仅包含两个阶段的运行对结果进行细化，以给出在 `t = 189.15319` 处的切换时间和最后一个阶段长度为 32.30708。最优最终时间 `t_f` 略微降低至 221.46027，最终状态绝对偏差之和 `S = 2.35 × 10^−10`。时间最优控制策略如图 12.7 所示。
 
 #### 12.4.4 例 4：两级 CSTR 系统
 
@@ -5586,11 +6037,13 @@ dx₄/dt = 0.75x₂ − 4.9385x₄ + g₂(x) − 3.4385(x₄ + 0.122)u₂  (12.4
 其中第一罐中的反应项由下式给出
 
 $$g_1(\mathbf{x}) = 1.5 \times 10^7(0.5251-x_1)\exp\left(\frac{-10}{x_2+0.6932}\right)$$
+
 $$\qquad\qquad -1.5 \times 10^{10}(0.4748+x_1)\exp\left(\frac{-15}{x_2+0.6932}\right)-1.4280.$$  (12.47)
 
 第二罐中的反应项为
 
 $$g_2(\mathbf{x}) = 1.5 \times 10^7(0.4236-x_2)\exp\left(\frac{-10}{x_4+0.6560}\right)$$
+
 $$\qquad\qquad -1.5 \times 10^{10}(0.5764+x_3)\exp\left(\frac{-15}{x_4+0.6560}\right)-0.5086.$$  (12.48)
 
 初始条件由下式给出
@@ -5643,9 +6096,6 @@ $$s_i^{q+1}=s_i^q-x_i(t_f),\qquad i=1,2,\cdots,4.$$
 \frac{dx_2}{dt} = x_3 \tag{12.56}
 ```
 
-
-
-
 ![](img/06ae75163df4fdf5e1eec243d497d393_263_0.png)
 
 图 12.10：例 5 的时间最优控制收敛情况
@@ -5658,7 +6108,7 @@ dx3/dt = x4  (12.57)
 dx4/dt = u  (12.58)
 ```
 
-初始状态为 x(0) = [ 0.1 0.2 0.3 0 ]^T，且末态 x^d = 0。
+初始状态为 `x(0) = [ 0.1 0.2 0.3 0 ]^T`，且末态 `x^d = 0`。
 
 控制的约束为
 
@@ -5678,9 +6128,9 @@ J = t_f + θ Σ_{i=1}^4 (x_i(t_f) - s_i)^2  (12.60)
 s_i^{q+1} = s_i^q - x_i(t_f),      i = 1, 2, ⋯, 4.  (12.61)
 ```
 
-与例 4 一样，我们取惩罚函数因子 θ = 100。
+与例 4 一样，我们取惩罚函数因子 `θ = 100`。
 
-取 P = 20 个时间阶段，每个初始长度为 0.20，初始控制策略 u1 = -1，并使用 N = 1，R = 25，γ = 0.80，η = 0.95，控制的初始区域大小为 2.0，阶段长度为 0.05，收敛相当规律，如
+取 `P = 20` 个时间阶段，每个初始长度为 0.20，初始控制策略 `u1 = -1`，并使用 `N = 1`，`R = 25`，`γ = 0.80`，`η = 0.95`，控制的初始区域大小为 2.0，阶段长度为 0.05，收敛相当规律，如
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_264_0.png)
 
@@ -5705,6 +6155,7 @@ Rosen 等人 [16] 表明，原点到达的容差对时间最优控制中的最�
 于是我们将末态约束写为
 
 $|x_i(t_f)| \le \epsilon_i, \qquad i = 1, 2, \cdots, n,$
+
 (12.62)
 
 其中我们可以为每个状态变量设置不同的容差。这里，为简化起见，我们取所有容差相同，即 $\epsilon_1 = \epsilon_2 = \cdots = \epsilon_n = \epsilon$。
@@ -5712,17 +6163,21 @@ $|x_i(t_f)| \le \epsilon_i, \qquad i = 1, 2, \cdots, n,$
 通过尝试增广性能指标的不同结构，Bojkov 和 Luus [2] 发现以下结构在求解 20 块板气体吸收器时间最优控制问题时很有用：
 
 $J = \sigma \sum_{i=1}^{n} x_i^2(t_f) + \mu \sum_{i=1}^{n} (|x_i(t_f)| - \epsilon)^2 + \theta t_f,$
+
 (12.63)
 
 其中
 
 $\sigma = \begin{cases} 0 & \text{if all } |x_i(t_f)| \le \epsilon \\ 1 & \text{if any } |x_i(t_f)| > \epsilon \end{cases}$
+
 (12.64)
 
 $\mu = \begin{cases} 0 & \text{if all } |x_i(t_f)| \le \epsilon \\ 1 & \text{if any } |x_i(t_f)| > \epsilon \end{cases}$
+
 (12.65)
 
 $\theta = \begin{cases} \epsilon^2/(nQ) & \text{if all } |x_i(t_f)| \le \epsilon \\ 0 & \text{if any } |x_i(t_f)| > \epsilon, \end{cases}$
+
 (12.66)
 
 [13] Moon, S.M. and VanLandingham, H.F.: “On the variational approach in a time optimal control problem”, *Proc. IASTED International Conference CONTROL’97*, Cancun, Mexico, May 28-31, 1997, pp. 290-293.
@@ -5797,31 +6252,30 @@ $$I=x_1^2(P)+x_2^2(P)+x_3^2(P)+\left[\left(\sum_{k=1}^{P}x_1^2(k-1)+x_2^2(k-1)+2
 
 其中 $P$ 为阶段数；Luus 和 Tassone [3] 使用了 $P = 20$，而 Luus [2] 使用了 $P = 100$。这里我们希望研究使用 IDP 求解该问题时对于三种不同 $P$ 值的收敛特性。在每种情况下，我们取第一次迭代的初始区域大小为 $\mathbf{r}_{in} = [4\ 4\ 0.5]^T$，初始控制策略 $\mathbf{u}^{(0)} = [2\ \ 2\ \ 0.25]^T$。对于所有运行，我们取区域收缩因子 $\gamma = 0.85$，区域恢复因子 $\eta = 0.5$，并允许进行 7 次迭代，每次迭代包含 30 次迭代。
 
-##### Case 1: $P = 20$
+#### Case 1: $P = 20$
 
 使用 $P = 20$ 时，表 13.1 中的结果表明，全局最优值 $I = 209.26937$ 已使用单个网格点 readily 获得。收敛相当规则，如图 13.1 所示。局部最优值 $I = 209.27547$ 也获得了三次。当网格点数增加时，局部最优值 $I = 209.27320$ 获得的频率要高得多。在全局最优解中，控制变量在第 15 阶段发生了突然变化，如图 13.2 所示。
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_270_0.png)
 
-Figure 13.1: Convergence profile for P = 20, showing the deviations from $I = 209.2693696$ with $N = 1$ and $R = 7$
+Figure 13.1: Convergence profile for $P = 20$, showing the deviations from $I = 209.2693696$ with $N = 1$ and $R = 7$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_271_0.png)
 
-Figure 13.2: Optimal control policy for P = 20, showing the sudden change in control variables at stage 15
+Figure 13.2: Optimal control policy for $P = 20$, showing the sudden change in control variables at stage 15
 
-##### Case 2: P = 50
+#### Case 2: $P = 50$
 
-当 P = 50 时，全局最优值 I = 240.91700 不能使用 N = 1 网格点获得。然而，使用 N = 5 时，超过一半的运行结果为全局最优，如表 13.2 所示。收敛曲线如图 13.3 所示为 N = 3 和 R = 7 时相当规则，尽管不是单调的。最优控制策略如图 13.4 所示，在第 36 阶段显示控制变量的突然变化。
+当 $P = 50$ 时，全局最优值 $I = 240.91700$ 不能使用 $N = 1$ 网格点获得。然而，使用 $N = 5$ 时，超过一半的运行结果为全局最优，如表 13.2 所示。收敛曲线如图 13.3 所示，当 $N = 3$ 和 $R = 7$ 时相当规则，尽管不是单调的。最优控制策略如图 13.4 所示，在第 36 阶段显示控制变量的突然变化。
 
-##### Case 3: P = 100
+#### Case 3: $P = 100$
 
-当 P = 100 时，全局最优值 I = 258.33922 使用 N = 1 网格点获得了两次，如表 13.3 所示。有趣的是，使用 N = 3 时，在八次运行中均未获得全局最优。使用 N = 5 时，在一半的运行中获得了全局最优。收敛被发现是规则且系统的，如图 13.5 所示，N = 1 且 R = 5。图 13.6 中的最优控制策略显示控制变量在第 69 阶段发生了突然变化。正是这种突然变化的位置决定了性能指标的值。当突然变化发生在第 68 阶段时，局部最优给出 I = 258.33933，而当突然变化发生在第 70 阶段时，局部最优为 I = 258.33928。事实上，表 13.3 中的局部最优可以根据突然变化发生的位置进行排列，如表 13.4 所示。这是一种确保已获得该问题的全局最优的方法。
+当 $P = 100$ 时，全局最优值 $I = 258.33922$ 使用 $N = 1$ 网格点获得了两次，如表 13.3 所示。有趣的是，使用 $N = 3$ 时，在八次运行中均未获得全局最优。使用 $N = 5$ 时，在一半的运行中获得了全局最优。收敛被发现是规则且系统的，如图 13.5 所示，$N = 1$ 且 $R = 5$。图 13.6 中的最优控制策略显示控制变量在第 69 阶段发生了突然变化。正是这种突然变化的位置决定了性能指标的值。当突然变化发生在第 68 阶段时，局部最优给出 $I = 258.33933$，而当突然变化发生在第 70 阶段时，局部最优为 $I = 258.33928$。事实上，表 13.3 中的局部最优可以根据突然变化发生的位置进行排列，如表 13.4 所示。这是一种确保已获得该问题的全局最优的方法。
 
-##### Table 13.1: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 20$
+#### Table 13.1: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 20$
 
-| Random points |  | Performance index, $I$ |  |  |
-|---|---:|---:|---:|---:|
 | $R$ | $N=1$ | $N=3$ | $N=5$ |
+|---:|---:|---:|---:|
 | 3 | **209.26937** | 209.33307 | 209.27320 |
 | 5 | 209.27547 | 209.27320 | **209.26937** |
 | 7 | **209.26937** | 209.27320 | 209.27320 |
@@ -5831,11 +6285,10 @@ Figure 13.2: Optimal control policy for P = 20, showing the sudden change in con
 | 15 | 209.27547 | 209.27320 | 209.27320 |
 | 21 | 209.27547 | 209.27320 | 209.27320 |
 
-##### Table 13.2: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 50$
+#### Table 13.2: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 50$
 
-| Random points |  | Performance index, $I$ |  |  |
-|---|---:|---:|---:|---:|
 | $R$ | $N=1$ | $N=3$ | $N=5$ |
+|---:|---:|---:|---:|
 | 3 | 240.91808 | 240.91901 | 240.91896 |
 | 5 | 240.91901 | 240.91767 | 240.91767 |
 | 7 | 240.91734 | **240.91700** | **240.91700** |
@@ -5845,11 +6298,10 @@ Figure 13.2: Optimal control policy for P = 20, showing the sudden change in con
 | 15 | 240.92238 | 240.91767 | **240.91700** |
 | 21 | 240.91734 | **240.91700** | **240.91700** |
 
-Table 13.3: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 100$
+#### Table 13.3: Performance index after 7 passes, showing the effects of the number of grid points $N$ and the number of allowable values for control $R$ for $P = 100$
 
-| Random points | Performance index, $I$ |  |  |
-|---:|---:|---:|---:|
 | $R$ | $N = 1$ | $N = 3$ | $N = 5$ |
+|---:|---:|---:|---:|
 | 3 | 258.33979 | 258.34023 | 258.33979 |
 | 5 | **258.33922** | 258.33948 | 258.33979 |
 | 7 | 258.34203 | 258.34017 | **258.33922** |
@@ -5859,7 +6311,7 @@ Table 13.3: Performance index after 7 passes, showing the effects of the number 
 | 15 | 258.34515 | 258.33928 | 258.33933 |
 | 21 | 258.33933 | 258.33928 | **258.33922** |
 
-Table 13.4: Classification of all the local optima in Table 13.3 with $P = 100$ according to the location of the sudden change in the control policy
+#### Table 13.4: Classification of all the local optima in Table 13.3 with $P = 100$ according to the location of the sudden change in the control policy
 
 | Performance index, $I$ | Location of the sudden change, Stage number |
 |---:|---:|
@@ -5877,51 +6329,52 @@ Table 13.4: Classification of all the local optima in Table 13.3 with $P = 100$ 
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_274_0.png)
 
-Figure 13.3: Convergence profile for P = 50, showing deviations from I = 240.917000 with N = 3 and R = 7
+Figure 13.3: Convergence profile for $P = 50$, showing deviations from $I = 240.917000$ with $N = 3$ and $R = 7$
 
-Table 13.5: Optimal solution to the Li-Haimes problem obtained after 4 passes, each consisting of 40 iterations, with the use of R = 5
+#### Table 13.5: Optimal solution to the Li-Haimes problem obtained after 4 passes, each consisting of 40 iterations, with the use of $R = 5$
 
 | Stage number | control | state |
-| k | u(k − 1) | x(k) |
+| --- | --- | --- |
+| $k$ | $u(k-1)$ | $x(k)$ |
 | 1 | -0.427163 | 0.314498 |
 | 2 | -0.098968 | 0.283373 |
 | 3 | -0.082382 | 0.200991 |
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_275_0.png)
 
-Figure 13.4: Optimal control policy for P = 50, showing the sudden changes in control variables at stage 36
+Figure 13.4: Optimal control policy for $P = 50$, showing the sudden changes in control variables at stage 36
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_275_1.png)
 
-Figure 13.5: Convergence profile for P = 100, showing deviations from I = 258.339218 with N = 1 and R = 5
+Figure 13.5: Convergence profile for $P = 100$, showing deviations from $I = 258.339218$ with $N = 1$ and $R = 5$
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_276_0.png)
 
-Figure 13.6: Optimal control policy for P = 100, showing sudden changes in control variables at stage 69
+Figure 13.6: Optimal control policy for $P = 100$, showing sudden changes in control variables at stage 69
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_276_1.png)
 
-Figure 13.7: Deviation from the optimum value of the performance index I = 1596.4796778 during the first pass for the Li-Haimes problem
+Figure 13.7: Deviation from the optimum value of the performance index $I = 1596.4796778$ during the first pass for the Li-Haimes problem
 
 #### 13.3.2 Example 2 – Li-Haimes problem
 
 让我们考虑 Li 和 Haimes [1] 的不可分离优化问题，其中系统由三个标量方程描述
 
-x(1) = x(0)^{u(0)}  (13.12)
+$x(1) = x(0)^{u(0)}$  (13.12)
 
-x(2) = [1 + u(1)]x(1)  (13.13)
+$x(2) = [1 + u(1)]x(1)$  (13.13)
 
-x(3) = x(2) + u(2)  (13.14)
+$x(3) = x(2) + u(2)$  (13.14)
 
-初始条件为 x(0) = 15。每个阶段的控制受约束
+初始条件为 $x(0) = 15$。每个阶段的控制受约束
 
--1 ≤ u(k) ≤ 1,      k = 0, 1, 2.  (13.15)
+$-1 \le u(k) \le 1, \quad k = 0, 1, 2.$  (13.15)
 
 要最小化的性能指标为不可分离形式
 
-I = [x²(0)+x²(1)+(2x²(2)+x²(3))exp(x²(1))][50+u²(0)+(u²(1)+u²(2))exp(u²(0))]^{½}.  (13.16)
+$I = [x(0)^2 + x(1)^2 + (2x(2)^2 + x(3)^2)\exp(x(1)^2)][50 + u(0)^2 + (u(1)^2 + u(2)^2)\exp(u(0)^2)]^{1/2}$  (13.16)
 
-为用 IDP 求解此问题，我们选择控制的初始值为零，初始区域大小 r = 2，N = 1，R = 5，并使用 5 次迭代，每次迭代包含 40 次迭代，γ = 0.85 且 η = 0.25。收敛很快，如图 13.7 所示，其中给出了第一次迭代的收敛曲线。经过 4 次迭代后，收敛到表 13.5 中给出的值，I = 1596.4796778。5 次迭代的计算时间为 PentiumII/350 个人计算机上的 0.5 s。
+为用 IDP 求解此问题，我们选择控制的初始值为零，初始区域大小 $r = 2$，$N = 1$，$R = 5$，并使用 5 次迭代，每次迭代包含 40 次迭代，$\gamma = 0.85$ 且 $\eta = 0.25$。收敛很快，如图 13.7 所示，其中给出了第一次迭代的收敛曲线。经过 4 次迭代后，收敛到表 13.5 中给出的值，$I = 1596.4796778$。5 次迭代的计算时间为 PentiumII/350 个人计算机上的 0.5 s。
 
 ### 13.4 References
 
@@ -5931,22 +6384,19 @@ I = [x²(0)+x²(1)+(2x²(2)+x²(3))exp(x²(1))][50+u²(0)+(u²(1)+u²(2))exp(u²
 
 [3] LUUS R. AND TASSONE V.: “Optimal control of nonseparable problems by iterative dynamic programming”, Proc. 42nd Canadian Chem. Eng. Conf., October 18-21, 1992, Toronto, Canada, pp. 81-82.
 
-## Chapter 14
-
-## Sensitivity considerations
+## Chapter 14: Sensitivity considerations
 
 ### 14.1 Introduction
 
-灵敏度是另一个变量相对于一个变量变化的度量。例如，E/R 比值，其中 E 为活化能，R 为气体常数，极小的变化对典型化学反应的速率有很大影响。事实上，Luus [4] 表明，使用气体常数值为 2.00 cal/gm mole K 而不是 1.9872，特定反应在考虑下的预期速率增加了 30%。这种高灵敏度必须在反应器设计中予以考虑。
+灵敏度是另一个变量相对于一个变量变化的度量。例如，$E/R$ 比值，其中 $E$ 为活化能，$R$ 为气体常数，极小的变化对典型化学反应的速率有很大影响。事实上，Luus [4] 表明，使用气体常数值为 2.00 cal/gm mole K 而不是 1.9872，特定反应在考虑下的预期速率增加了 30%。这种高灵敏度必须在反应器设计中予以考虑。
 
 然而，在某些情况下，极低的灵敏度会造成计算困难。例如，在参数估计中，Kalogerakis 和 Luus [2] 引入了信息指数，该指数与参数变化对用于估计参数的测量输出变化的影响有关，因此提供了灵敏度信息。如果在某个时间间隔内信息指数非常小，则该时间间隔内的数据无论使用何种参数估计程序都无法获得参数的可靠值。对于参数估计，已表明使用信息指数高的时间间隔内的数据不仅能获得可靠的参数估计，而且还能避免计算困难。
 
-在最优控制中，控制策略对性能指标的低灵敏度问题由 Luus [6] 提出。虽然从实际观点来看，低灵敏度是好的，因为即使控制策略与最优有所不同，损失也不大。然而，从确定最优控制策略的观点来看，低灵敏度会造成困难，因为迭代过程可能过早终止，或者当性能指标在合理接近最优值（如 0.01%）时，某些粗糙的近似可能被错误地接受为最优。非最优控制策略通常表现出在最优控制策略中相当平滑的高振荡部分。例如，使用加速模拟获得的控制策略
-
-
-annealing by Yang and Wu [10] for maximizing the yield of the fed-batch reactor of Park and Ramirez [8] that we considered in Chapter 9 exhibited a highly fluctuating initial portion of the control policy, as is shown in Figure 14.1. The corresponding performance index of 32.68319 is within 0.01% of the optimum value of 32.68602. The optimal control policy is quite smooth, as is seen in Figure 14.2. It was shown by Luus [6] that even the control policy giving I = 32.68601 is quite oscillatory. Often, very high oscillations have minimal effect on the performance index [4]. However, the performance index is quite sensitive to the time of switching; it was shown by Luus and Hennessy [7] that a better value of the performance index, namely I = 32.68687, is obtained by using P = 45 stages rather than 80, because the switching times are very slightly different. As we saw in Chapter 9 by using flexible stage lengths, we can improve the value further to I = 32.6939 with only 20 time stages, because the switching times can be obtained very accurately by having stages of flexible length.
+在最优控制中，控制策略对性能指标的低灵敏度问题由 Luus [6] 提出。虽然从实际观点来看，低灵敏度是好的，因为即使控制策略与最优有所不同，损失也不大。然而，从确定最优控制策略的观点来看，低灵敏度会造成困难，因为迭代过程可能过早终止，或者当性能指标在合理接近最优值（如 0.01%）时，某些粗糙的近似可能被错误地接受为最优。非最优控制策略通常表现出在最优控制策略中相当平滑的高振荡部分。例如，使用加速模拟获得的控制策略 annealing by Yang and Wu [10] for maximizing the yield of the fed-batch reactor of Park and Ramirez [8] that we considered in Chapter 9 exhibited a highly fluctuating initial portion of the control policy, as is shown in Figure 14.1. The corresponding performance index of 32.68319 is within 0.01% of the optimum value of 32.68602. The optimal control policy is quite smooth, as is seen in Figure 14.2. It was shown by Luus [6] that even the control policy giving $I = 32.68601$ is quite oscillatory. Often, very high oscillations have minimal effect on the performance index [4]. However, the performance index is quite sensitive to the time of switching; it was shown by Luus and Hennessy [7] that a better value of the performance index, namely $I = 32.68687$, is obtained by using $P = 45$ stages rather than 80, because the switching times are very slightly different. As we saw in Chapter 9 by using flexible stage lengths, we can improve the value further to $I = 32.6939$ with only 20 time stages, because the switching times can be obtained very accurately by having stages of flexible length.
 
 Although there is very low sensitivity with respect to changes in control policy, the performance index is very sensitive to the choice of the final time, as was pointed out in [5], and illustrated in Chapter 9.
+
+
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_279_0.png)
 
@@ -6012,7 +6462,7 @@ The performance index to be maximized is the profitability of the process descri
 I = x_1(t_f) x_4(t_f) - 5 x_8(t_f) \tag{14.13}
 ```
 
-where the final time t_f is specified as 10 h.
+where the final time `t_f` is specified as 10 h.
 
 The initial state is
 
@@ -6020,29 +6470,29 @@ The initial state is
 \mathbf{x}(0) = [\ 1\ \ 0.1\ \ 40\ \ 0\ \ 0\ \ 1\ \ 0\ \ 0\ ]^T. \tag{14.14}
 ```
 
-The two control variables are the glucose feed rate u_1 and the inducer feed rate u_2. The state variables are the reactor volume x_1, the cell density x_2, the nutrient concentration x_3, the foreign protein concentration x_4, the inducer concentration x_5, the inducer shock factor x_6, the inducer recovery factor x_7, and the amount of inducer used x_8.
+The two control variables are the glucose feed rate `u_1` and the inducer feed rate `u_2`. The state variables are the reactor volume `x_1`, the cell density `x_2`, the nutrient concentration `x_3`, the foreign protein concentration `x_4`, the inducer concentration `x_5`, the inducer shock factor `x_6`, the inducer recovery factor `x_7`, and the amount of inducer used `x_8`.
 
 #### 14.2.1 Solution by IDP
 
-To solve this optimal control problem by iterative dynamic programming, we took initially P = 15 time stages of equal length, the initial control u_1^{(0)} = u_2^{(0)} = 0.0, initial region size r_1^{(0)} = r_2^{(0)} = 0.5, reduction factor γ = 0.95, N = 1 grid point, and used a multi-pass method with region restoration factor η = 0.90. We used 10 iterations in each pass, and allowed 100 passes. For integration, DVERK [1] with error tolerance of 10^{-7} was used. By taking 15 stages of constant length, convergence to I = 5.56773 with the use of R = 15 was systematic as is shown in Figure 14.3. Even with R = 7 we got good convergence rate, but R = 5 gave inadequate convergence rate with
+To solve this optimal control problem by iterative dynamic programming, we took initially `P = 15` time stages of equal length, the initial control `u_1^{(0)} = u_2^{(0)} = 0.0`, initial region size `r_1^{(0)} = r_2^{(0)} = 0.5`, reduction factor `γ = 0.95`, `N = 1` grid point, and used a multi-pass method with region restoration factor `η = 0.90`. We used 10 iterations in each pass, and allowed 100 passes. For integration, `DVERK` [1] with error tolerance of `10^{-7}` was used. By taking 15 stages of constant length, convergence to `I = 5.56773` with the use of `R = 15` was systematic as is shown in Figure 14.3. Even with `R = 7` we got good convergence rate, but `R = 5` gave inadequate convergence rate with
 
-the parameters that were used. The computation time on a Pentium II/350 personal computer with $R = 15$ for 100 passes was 139 s. Thus, the computational effort is quite small.
+the parameters that were used. The computation time on a Pentium II/350 personal computer with `R = 15` for 100 passes was 139 s. Thus, the computational effort is quite small.
 
-The resulting optimal control policy is given in Figure 14.4. By increasing the number of time stages, the performance index was increased, but very slightly, as is shown in Figures 14.5–14.7. The refined control policy with the use of $P = 100$ gives the profitability function $I = 5.56789$ which is only 0.003% better than $I = 5.56773$ obtained with the use of 15 stages. Therefore, this problem exhibits very low sensitivity, and an accurate optimal control policy is difficult to establish. Whether or not that small peak around $t = 8$h is included makes very little difference in the value of the performance index.
+The resulting optimal control policy is given in Figure 14.4. By increasing the number of time stages, the performance index was increased, but very slightly, as is shown in Figures 14.5–14.7. The refined control policy with the use of `P = 100` gives the profitability function `I = 5.56789` which is only 0.003% better than `I = 5.56773` obtained with the use of 15 stages. Therefore, this problem exhibits very low sensitivity, and an accurate optimal control policy is difficult to establish. Whether or not that small peak around `t = 8`h is included makes very little difference in the value of the performance index.
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_282_0.png)
 
-Figure 14.3: Convergence of IDP, showing the effect of the number of allowable values for control $R$ with $N = 1$ and $P = 15$ stages of equal length; the deviations are from $I = 5.56772556$
+Figure 14.3: Convergence of IDP, showing the effect of the number of allowable values for control `R` with `N = 1` and `P = 15` stages of equal length; the deviations are from `I = 5.56772556`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_283_0.png)
 
-Figure 14.4: Optimal control policy with $P=15$ stages of equal length, giving $I=5.56773$
+Figure 14.4: Optimal control policy with `P=15` stages of equal length, giving `I=5.56773`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_283_1.png)
 
-Figure 14.5: Optimal control policy with $P=25$ stages of equal length, giving $I=5.56778$
+Figure 14.5: Optimal control policy with `P=25` stages of equal length, giving `I=5.56778`
 
-## Chapter 15
+# Chapter 15
 
 ## Toward practical optimal control
 
@@ -6051,10 +6501,6 @@ Figure 14.5: Optimal control policy with $P=25$ stages of equal length, giving $
 In establishing the optimal control of chemical reactors, the control variable used most frequently is the temperature of the reacting mixture. Although the optimal control policy, consisting of the temperature profile, is useful for understanding the reactor behavior, it does not lend itself to practical use, since the temperature can not be changed directly. As such, temperature is not a practical control variable. The temperature of the reactor can be changed by withdrawing heat, or adding heat by means of flowing coolant or heating fluid around the reactor. Then the flow rates of these streams become the real practical control variables which can be manipulated to maximize the appropriate performance criterion.
 
 Using flow rates to change the reactor temperature makes the optimal control determination much more difficult. When faced with the problem of determining the optimal flow rates of heating and cooling fluids, so that the yield of a desired product in a batch reactor is maximized, we encounter two additional differential equations to handle the heat balances for the reactor and the surrounding jacket. Furthermore, the problem is more difficult, since the constraints on the reactor temperature now become state constraints, which are more difficult to handle than simple constraints on the control. Such practical aspects of optimal control were considered by Luus and Okongwu [5], who showed that the speed of our present-day computers makes the on-line optimal control of chemical reactors now possible. Even if there is uncertainty in the heat transfer coefficient, the optimal control problem can be solved sufficiently fast to enable on-line application. To illustrate these ideas, we consider the oil shale pyrolysis problem that we considered in Chapter 9. This time, however, instead of simply determining the optimal temperature profile, we consider the problem of determining the optimal flow rates of coolant and heating fluid.
-
-
-
-
 
 ### 15.2 油页岩热解的最优控制
 
@@ -6072,9 +6518,9 @@ $$\frac{dx_4}{dt}=k_5x_1x_2$$ \tag{15.4}
 
 $$k_i=\exp\left(a_i-\frac{b_i}{T}\right),\quad i=1,2,\cdots,5,$$ \tag{15.5}
 
-给出，且动力学参数 $a_i$ 和 $b_i$ 给于表 9.2。停留时间或批处理时间 $t_f$ 未指定，但应约为 9.3 min。问题是在 $x_1(0)=1$ 且其余浓度等于零的条件下最大化沥青 $x_2(t_f)$ 的产率。通过使用图 9.9 中的控制策略，我们表明可以得到 $x_2(t_f)=0.35382$，这比最佳等温策略 $T=712.5$ K 所得的 0.34763 产率高出 1.8%。现在让我们使用冷却剂和加热流体的流量作为控制变量来研究这个问题。
+给出，且动力学参数 `a_i` 和 `b_i` 给于表 9.2。停留时间或批处理时间 `t_f` 未指定，但应约为 9.3 min。问题是在 `x_1(0)=1` 且其余浓度等于零的条件下最大化沥青 `x_2(t_f)` 的产率。通过使用图 9.9 中的控制策略，我们表明可以得到 `x_2(t_f)=0.35382`，这比最佳等温策略 `T=712.5` K 所得的 0.34763 产率高出 1.8%。现在让我们使用冷却剂和加热流体的流量作为控制变量来研究这个问题。
 
-通过使用 1.2 m³ 的反应器体积和现实参数，Luus 和 Okongwu [5] 得到了反应器温度 $T=x_5$ 和夹套温度 $x_6$ 的热平衡表达式：
+通过使用 1.2 m³ 的反应器体积和现实参数，Luus 和 Okongwu [5] 得到了反应器温度 `T=x_5` 和夹套温度 `x_6` 的热平衡表达式：
 
 $$\frac{dx_5}{dt}=\frac{602.4k_1x_1-0.833(UA/\rho)(x_5-x_6)}{C_p}$$ \tag{15.6}
 
@@ -6086,13 +6532,15 @@ $$\rho=2139x_1+760x_2+560x_3+1800x_4,$$ \tag{15.8}
 
 给出，且比热容由
 
+
+
 $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15.9}
 
 给出。传热系数 $U$ 与传热面积 $A$ 的乘积，即 $UA$，作为参数保持不变并允许在 400 到 1500 kJ/min K 的范围内。
 
-#### 表 15.1：使用 P = 10 个阶段、每个长度为 0.93 min 进行 15 次迭代后的性能指标 I
+#### 表 15.1：使用 `P = 10` 个阶段、每个长度为 0.93 min 进行 15 次迭代后的性能指标 `I`
 
-| 网格点数 N | 性能指标 R = 15 | 性能指标 R = 25 |
+| 网格点数 `N` | 性能指标 `R = 15` | 性能指标 `R = 25` |
 |---|---|---|
 | 1 | 0.34962 | 0.34924 |
 | 5 | 0.35164 | 0.35037 |
@@ -6102,9 +6550,9 @@ $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15
 | 21 | 0.35208 | 0.35173 |
 | 41 | 0.35210 | 0.35211 |
 
-#### 表 15.2：使用 P = 10 个柔性阶段长度进行 20 次迭代后的性能指标 I 和最终时间 t_f
+#### 表 15.2：使用 `P = 10` 个柔性阶段长度进行 20 次迭代后的性能指标 `I` 和最终时间 `t_f`
 
-| 网格点数 N | 性能指标 I | 最终时间 t_f |
+| 网格点数 `N` | 性能指标 `I` | 最终时间 `t_f` |
 |---|---|---|
 | 1 | 0.35086 | 8.504 |
 | 3 | 0.35165 | 9.626 |
@@ -6116,11 +6564,11 @@ $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15
 | 17 | 0.35218 | 9.173 |
 | 21 | 0.35213 | 9.216 |
 
-每次迭代包含 20 次迭代，我们发现结果取决于所使用的网格点数。在表 15.1 中很明显，从所选的初始策略出发，要使 I 收敛到大于 0.3517，需要多于五个网格点。将随机选择的候选数量从 R = 15 增加到 R = 25 的影响不大，但使用较大数量的点使得可以两次获得产生 I = 0.35211 的控制策略。在每种情况下，最终时间时 x7 和 x8 均为零，表明反应器温度未违反界限。相应的控制策略如图 15.1 所示。在时间间隔的前半部分使用加热，然后启动快速冷却，随后是相对较少的冷却段以使反应器温度保持在其下限。
+每次迭代包含 20 次迭代，我们发现结果取决于所使用的网格点数。在表 15.1 中很明显，从所选的初始策略出发，要使 `I` 收敛到大于 0.3517，需要多于五个网格点。将随机选择的候选数量从 `R = 15` 增加到 `R = 25` 的影响不大，但使用较大数量的点使得可以两次获得产生 `I = 0.35211` 的控制策略。在每种情况下，最终时间时 `x7` 和 `x8` 均为零，表明反应器温度未违反界限。相应的控制策略如图 15.1 所示。在时间间隔的前半部分使用加热，然后启动快速冷却，随后是相对较少的冷却段以使反应器温度保持在其下限。
 
 由于从加热切换到冷却的切换时间很重要，因此进行了
 
-表 15.3：使用 P = 5 个柔性长度阶段作为热传递项函数的性能指标 $I$ 和最终时间 $t_f$
+#### 表 15.3：使用 `P = 5` 个柔性长度阶段作为热传递项函数的性能指标 $I$ 和最终时间 $t_f$
 
 | 热传递项 $UA$ | 性能指标 $I$ | 最终时间 $t_f$ |
 |---|---|---|
@@ -6159,10 +6607,7 @@ $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_292_0.png)
 
-图 15.2：使用 P = 5 个可变长度阶段获得的最优控制策略，给出 I = 0.35222
-
-
-
+图 15.2：使用 `P = 5` 个可变长度阶段获得的最优控制策略，给出 `I = 0.35222`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_293_0.png)
 
@@ -6172,21 +6617,19 @@ $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_294_0.png)
 
-图15.4：采用P = 5个可变长度阶段、UA = 400 kJ/min·K时获得的最优控制策略，得到I = 0.35169
+图15.4：采用`P = 5`个可变长度阶段、`UA = 400` kJ/min·K时获得的最优控制策略，得到`I = 0.35169`
 
 ![](img/06ae75163df4fdf5e1eec243d497d393_294_1.png)
 
-图15.5：UA = 1500 kJ/min·K时反应器与夹套的温度分布，得到I = 0.35228
+图15.5：`UA = 1500` kJ/min·K时反应器与夹套的温度分布，得到`I = 0.35228`
 
-## 附录A
+## 附录A 非线性代数方程求解器
 
-## 非线性代数方程求解器
-
-这里我们给出了完整的FORTRAN程序，用于求解输入到FUN子程序中的一组非线性代数方程。该程序包含用于高斯消元法的RLEQ子程序。
+这里我们给出了完整的FORTRAN程序，用于求解输入到`FUN`子程序中的一组非线性代数方程。该程序包含用于高斯消元法的`RLEQ`子程序。
 
 ### A.1 程序清单
 
-```
+```text
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION A(20,20), ZZ(20), R(20), X(20), F(20), DX(20), DFDX(20,20)
       DIMENSION Z(20), G(20), Y(20), REG(20), XP(20), XS(20), FACT(20)
@@ -6228,99 +6671,96 @@ $$C_p=1.16x_1+0.827(1-x_1)+[3.4x_1+0.92(1-x_1)](x_5-298)\times10^{-3}.$$ \tag{15
    61 CONTINUE
       DO 31 J=1,N
       R(J) = -F(J)
+      WRITE(3,55) IT, (F(I),I=1,N),TEST
+      WRITE(6,55) IT, (F(I),I=1,N),TEST
+   55 FORMAT(1X,'AT ITN ',I5,2X,'F =',4D13.5)
+      CALL RLEQ(DFDX,R,ZZ,N)
+   29 FORMAT(10X,'X =',3D15.7)
+      DO 32 J=1,N
+   32 X(J) = X(J) + ZZ(J)
+      WRITE(3,29) (X(I),I=1,N)
+      WRITE(6,29) (X(I),I=1,N)
+   41 CONTINUE
+   42 CONTINUE
+      CALL FUN(F,X,N)
+      WRITE(3,161) IT, TEST
+  161 FORMAT(1X,' ITN =',I3,' NORM=',D13.5)
+      WRITE(3,59) (X(I),I=1,NV)
+   59 FORMAT(1X,' X ARE =',4F12.6)
+      CALL GETTIM(IH,IM,IS,I100)
+      TIMEF = I100+100*IS+6000*IM+360000*IH
+      CPU = (TIMEF-TIMEI)*1.0D-2
+      WRITE(3,21) CPU
+      WRITE(6,21) CPU
+   21 FORMAT(1X,'CPU TIME =',F10.5,' SECONDS')
+      STOP
+      END
+      SUBROUTINE FUN(F,X,N)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION F(20),X(20)
+      X(3) = DEXP(4.23D4/X(2) - 24.2D0 + 0.17D0*DLOG(X(2)))
+      F(1) = (0.91D0 - 0.5D0*X(1))/(9.1D0 - 0.5D0*X(1)) -
+      1 (X(1)/(1.0D0 - X(1)))**2/X(3)
+      F(2) = X(2)*(1.84D0*X(1) + 77.3D0) - 4.326D4*X(1) - 1.05128D5
+      RETURN
+      END
+      SUBROUTINE RLEQ(A,D,X,N)
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+      DIMENSION A(20,20),D(20),X(20)
+      NQ = N - 1
+      DO 5 K=1,NQ
+      DEN = 1.0D0/A(K,K)
+      D(K) = DEN*D(K)
+      KK = K + 1
+      DO 6 J = KK,N
+      A(K,J) = DEN*A(K,J)
+      DO 7 I=KK,N
+      D(I) = D(I) - D(K)*A(I,K)
+      DO 7 J=KK,N
+    7 A(I,J) = A(I,J) - A(K,J)*A(I,K)
+    5 CONTINUE
+      X(N) = D(N)/A(N,N)
+      DO 8 I=1,NQ
+      K = N - I
+      X(K) = D(K)
+      DO 9 J=1,I
+      L = K+J
+    9 X(K) = X(K) - A(K,L)*X(L)
+    8 CONTINUE
+      RETURN
+      END
 ```
 
-```
-WRITE(3,55) IT, (F(I),I=1,N),TEST
-WRITE(6,55) IT, (F(I),I=1,N),TEST
-55 FORMAT(1X,'AT ITN ',I5,2X,'F =',4D13.5)
-CALL RLEQ(DFDX,R,ZZ,N)
-29 FORMAT(10X,'X =',3D15.7)
-DO 32 J=1,N
-32 X(J) = X(J) + ZZ(J)
-WRITE(3,29) (X(I),I=1,N)
-WRITE(6,29) (X(I),I=1,N)
-41 CONTINUE
-42 CONTINUE
-CALL FUN(F,X,N)
-WRITE(3,161) IT, TEST
-161 FORMAT(1X,' ITN =',I3,' NORM=',D13.5)
-WRITE(3,59) (X(I),I=1,NV)
-59 FORMAT(1X,' X ARE =',4F12.6)
-CALL GETTIM(IH,IM,IS,I100)
-TIMEF = I100+100*IS+6000*IM+360000*IH
-CPU = (TIMEF-TIMEI)*1.0D-2
-WRITE(3,21) CPU
-WRITE(6,21) CPU
-21 FORMAT(1X,'CPU TIME =',F10.5,' SECONDS')
-STOP
-END
-SUBROUTINE FUN(F,X,N)
-IMPLICIT DOUBLE PRECISION(A-H,O-Z)
-DIMENSION F(20),X(20)
-X(3) = DEXP(4.23D4/X(2) - 24.2D0 + 0.17D0*DLOG(X(2)))
-F(1) = (0.91D0 - 0.5D0*X(1))/(9.1D0 - 0.5D0*X(1)) -
-1 (X(1)/(1.0D0 - X(1)))**2/X(3)
-F(2) = X(2)*(1.84D0*X(1) + 77.3D0) - 4.326D4*X(1) - 1.05128D5
-RETURN
-END
-SUBROUTINE RLEQ(A,D,X,N)
-IMPLICIT DOUBLE PRECISION(A-H,O-Z)
-DIMENSION A(20,20),D(20),X(20)
-NQ = N - 1
-DO 5 K=1,NQ
-DEN = 1.0D0/A(K,K)
-D(K) = DEN*D(K)
-KK = K + 1
-DO 6 J = KK,N
-A(K,J) = DEN*A(K,J)
-DO 7 I=KK,N
-D(I) = D(I) - D(K)*A(I,K)
-DO 7 J=KK,N
-7 A(I,J) = A(I,J) - A(K,J)*A(I,K)
-5 CONTINUE
-X(N) = D(N)/A(N,N)
-DO 8 I=1,NQ
-K = N - I
-X(K) = D(K)
-DO 9 J=1,I
-L = K+J
-9 X(K) = X(K) - A(K,L)*X(L)
-8 CONTINUE
-RETURN
-END
-```
-
-## 附录B
-
-## 线性规划程序清单
+## 附录B 线性规划程序清单
 
 这里我们给出了完整的FORTRAN程序，用于通过线性规划求解5种食物的膳食问题。该程序以单精度编写，分为主程序和3个子程序。本书中唯一使用单精度编写的计算机程序就是本程序。
 
 ### B.1 膳食问题主程序
 
-```
-DIMENSION A(10,20),B(10),C(20),CC(20),Z(21),ZZ(21)
-DIMENSION TITLE(20),FOOD(7,5)
-COMMON CC,ZZ,Z,FOOD
-CALL GETTIM(IH,IM,IS,I100)
-STTIME = I100 + 100*IS + 6000*IM + 360000*IH
-CALL INPUT(A,N,M,B,C,M1,TITLE)
-CALL SIMP(A,N,M,B,C,M1)
-CALL OUTPUT(A,N,M,B,C,M1,TITLE)
-CALL GETTIM(IH,IM,IS,I100)
-ENDTIME = I100 + 100*IS + 6000*IM + 360000*IH
-TIME = (ENDTIME-STTIME)*0.01
-WRITE(6,197) TIME
-WRITE(3,197) TIME
-197 FORMAT(5X,'CPU TIME =',F12.5,' SECONDS')
-STOP
-END
+```text
+      DIMENSION A(10,20),B(10),C(20),CC(20),Z(21),ZZ(21)
+      DIMENSION TITLE(20),FOOD(7,5)
+      COMMON CC,ZZ,Z,FOOD
+      CALL GETTIM(IH,IM,IS,I100)
+      STTIME = I100 + 100*IS + 6000*IM + 360000*IH
+      CALL INPUT(A,N,M,B,C,M1,TITLE)
+      CALL SIMP(A,N,M,B,C,M1)
+      CALL OUTPUT(A,N,M,B,C,M1,TITLE)
+      CALL GETTIM(IH,IM,IS,I100)
+      ENDTIME = I100 + 100*IS + 6000*IM + 360000*IH
+      TIME = (ENDTIME-STTIME)*0.01
+      WRITE(6,197) TIME
+      WRITE(3,197) TIME
+  197 FORMAT(5X,'CPU TIME =',F12.5,' SECONDS')
+      STOP
+      END
 ```
 
 ### B.2 输入子程序
 
-```
+
+
+```fortran
 SUBROUTINE INPUT(A,N,M,B,C,M1,TITLE)
 DIMENSION A(10,20),B(10),C(20),CC(20),Z(21),ZZ(21)
 DIMENSION TITLE(20),FOOD(7,5),CON(20)
@@ -6387,9 +6827,9 @@ RETURN
 END
 ```
 
-### B.3 最大化子程序
+## B.3 最大化子程序
 
-```
+```fortran
 SUBROUTINE SIMP(A,N,M,B,C,M1)
 DIMENSION A(10,20),B(10),C(20),CC(20),Z(21),ZZ(21)
 COMMON CC,ZZ,Z
@@ -6457,7 +6897,7 @@ RETURN
 END
 ```
 
-### B.4 输出子程序
+## B.4 输出子程序
 
 ```fortran
       SUBROUTINE OUTPUT(A,N,M,B,C,M1,TITLE)
@@ -6487,17 +6927,13 @@ END
       END
 ```
 
+# 附录 C
 
+## LJ 优化程序
 
+### C.1 五食物饮食问题
 
-
-## 附录 C
-
-# LJ 优化程序
-
-## C.1 五食物饮食问题
-
-```
+```fortran
 IMPLICIT DOUBLE PRECISION(A-H,O-Z)
 DIMENSION X(10),REG(10),XP(10),XS(10),YS(10),BETA(5),REGIN(5)
 OPEN (UNIT=3,FILE='fd51j03.OUT')
@@ -6531,9 +6967,7 @@ LW = LIM
 WRITE(3,205) IPASS,(REG(I),I=1,N)
 WRITE(6,205) IPASS,(REG(I),I=1,N)
 205 FORMAT(1X,'PASS =',I5,' REG =',5F12.7)
-```
 
-```
       DO 100 IT = 1,NIT
       DO 94 J=1,NR
       DO 52 I=1,N
@@ -6592,9 +7026,9 @@ WRITE(6,205) IPASS,(REG(I),I=1,N)
       END
 ```
 
-## C.2 模型降阶问题
+### C.2 模型降阶问题
 
-```
+```fortran
 IMPLICIT DOUBLE PRECISION (A-H,O-Z)
 PARAMETER (GAMMA=0.95D0, ETA = 0.95D0, LIM=50, N=7, NR=25, NPOINTS=100)
 PARAMETER (FACT=1.0D0, WIN=0.01D0, NPASSES=4000, NIT=50)
@@ -6649,6 +7083,8 @@ IF(NPT.EQ.1) RAN = 0.0D0
 X(I) = XP(I) + 2.0D0*RAN*REG(I)
 IF(X(I).LT.0.0) GO TO 30
 ```
+
+
 
 ```
 52  CONTINUE
@@ -6854,74 +7290,132 @@ AINT = DBLE(NINT)
 DT = 0.78D0/(ANT*AINT)
 ```
 
-
-
-
-
-```
 ```fortran
+
       DO 49 I=1,NT
+
          UIN(1,I) = 3.00D
+
 49       CONTINUE
+
          REGIN(1) = 2.00D/ETA
+
 851      FORMAT(1X,I5,4F12.7)
+
          WRITE(6,771) RED,ETA,NRAND,ISEED
+
          WRITE(3,771) RED,ETA,NRAND,ISEED
+
 771      FORMAT(1X,' RED =',2F7.3,2X,/' R =',I7,' SEED =',I7)
+
          DO 1000 IPASS=1,NPASSES
+
          DO 25 I=1,N
+
 25          X(I) = XIN(I)
+
            T = 0.0D0
+
            DO 123 IJ=1,NU
+
 123          REGIN(IJ) = REGIN(IJ)*ETA
+
              DO 50 I=1,NT
+
                DO 110 LU = 1,NU
+
 110              U(LU) = UIN(LU,I)
+
                DO 119 JK=1,N
+
 119              XG(JK,I,1) = X(JK)
+
                  DO 11 INT=1,NINT
+
                    CALL RUNGK(T,X,N,DT,DX,CSTR)
+
                    T = T + DT
+
 11                 CONTINUE
+
                  WRITE(6,56) I,T,(X(J),J=1,N),(U(L),L=1,NU)
+
                  WRITE(3,56) I,T,(X(J),J=1,N),(U(L),L=1,NU)
+
 50             CONTINUE
+
                WRITE(6,102) NT,NGX,NRAND
+
                WRITE(3,102) NT,NGX,NRAND
+
 102            FORMAT(1X,' STAGES =',I5,' NGX =',I5,' NRAND=',I5)
+
                DO 801 I=1,NT
+
                  DO 801 J=1,NU
+
                    UR(J,I) = REGIN(J)
+
 801              CONTINUE
+
                  IF(NGX.EQ.1) GO TO 500
+
                  NGXX = NGX/2+1
+
                  ANP = NGX-1
+
                  DO 41 I=1,NGX
+
                    A2 = 2*(I-1)
+
 41                 FACT1(I)=A2/ANP
+
                    FACT1(NGXX)=FACT1(1)
+
 500              CONTINUE
+
                  DO 99 ITER = 1,NIT
+
                    WRITE(6,100) IPASS,ITER,PERFS,X(N)
+
                    WRITE(3,100) IPASS,ITER,PERFS,X(N)
+
 100                FORMAT(1X,'PASS =',I5,' ITN  =',I5,' PERF =',2F13.8)
+
                    IF(NGX.EQ.1) GO TO 501
+
                    DO 52 I=2,NGX
+
                      DO 117 II=1,N
+
 117                    X(II)=XIN(II)
+
                      T=0.D0
+
                      DO 51 K=1,NT
+
                        DO 57 JK = 1,NU
+
                          U(JK) = UIN(JK,K)-UR(JK,K) +FACT1(I)*UR(JK,K)
+
 57                     CONTINUE
+
                        DO 159 KJ = 1,N
+
 159                      XG(KJ,K,I) = X(KJ)
+
                        DO 59 INT=1,NINT
+
                          CALL RUNGK(T,X,N,DT,DX,CSTR)
+
                          T = T + DT
+
 59                     CONTINUE
+
 ```
-```
+
+
+
 ```fortran
 51      CONTINUE
 52      CONTINUE
@@ -6983,9 +7477,6 @@ DT = 0.78D0/(ANT*AINT)
         DO 62 II=1,NGX
         T1 = 0.0D0
         DO 162 JJ=1,N
-```
-```
-```fortran
 162   T1 = T1 + (X(JJ)-XG(JJ,KK,II))**2
       IF(T1.GT.TESTD) GO TO 31
       TESTD = T1
@@ -7046,8 +7537,6 @@ DT = 0.78D0/(ANT*AINT)
 92    CONTINUE
 503   CONTINUE
       T = DBLE(KK-1)
-```
-```
 T=T*DT*AINT
 DO 127 J=1,NU
 U(J) = US(J,KK,IB)
@@ -7109,7 +7598,7 @@ UR(LU,I)= UR(LU,I)*RED
 CONTINUE
 CONTINUE
 ```
-```
+
 ```fortran
       CONTINUE
       CALL GETTIM(TH,TM,TS,TL00)
@@ -7170,7 +7659,7 @@ CONTINUE
 
 ### D.2 分段线性控制的 IDP 程序
 
-```
+```fortran
 IMPLICIT DOUBLE PRECISION(A-H,O-Z)
 EXTERNAL CSTR
 DIMENSION X(252),DX(252),XG(252,21),US(251,21),UIS(251)
@@ -7474,7 +7963,10 @@ Y(I) = Y(I) +(AK0(I)+2.0d0*(AK1(I)+AK2(I)) +AK3(I))/6.0d0
 CONTINUE
 RETURN
 END
+```
+
 ### D.3 IDP program for variable stage lengths
+```
 IMPLICIT DOUBLE PRECISION(A-H,O-Z)
 EXTERNAL CSTR, DVERK
 PARAMETER (NX=6, NU=2, NP=15, TOL=1.D-6, NPASSES=50, NIT=40)
@@ -7707,8 +8199,6 @@ DO 10 I=1,NP
 
 
 
-
-
 ```fortran
       DO 514 JU=1,NU
 514   UR(JU,I) = UR(JU,I)*GAMMA
@@ -7751,8 +8241,10 @@ DO 10 I=1,NP
 ```
 
 ## 附录 E
-## DVERK 的列表
-### E.1 DVERK
+
+### DVERK 的列表
+
+#### E.1 DVERK
 
 这里在作者的许可下，我们包含了由 Hull、Enright 和 Jackson 用 FORTRAN 编写的子程序 DVERK，用于积分非刚性常微分方程。
 
@@ -7969,4 +8461,3 @@ WRITE(6,505) IND, TOL, X, N, C(13), XEND, NW, C(16), C(20),
 STOP
 END
 ```
-

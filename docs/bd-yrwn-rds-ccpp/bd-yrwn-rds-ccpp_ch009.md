@@ -1,3 +1,4 @@
+
 # 08. 数据结构：散列表
 
 本章将填补上一章服务器中的占位代码。我们将首先实现一个散列表。散列表通常是存储未知数量的键值数据且不需要排序的数据结构的明显选择。
@@ -288,10 +289,8 @@ static uint32_t do_del(
 
 练习：
 
-1.  当哈希表的负载因子过高时，我们的哈希表会触发扩容，那么当负载因子过低时，我们也应该缩小哈希表吗？缩小操作可以自动执行吗？
+1. 当哈希表的负载因子过高时，我们的哈希表会触发扩容，那么当负载因子过低时，我们也应该缩小哈希表吗？缩小操作可以自动执行吗？
 
-> +   [08_server.cpp](https://build-your-own.org/redis/08/08_server.cpp.htm)
-> +   
-> +   [hashtable.cpp](https://build-your-own.org/redis/08/hashtable.cpp.htm)
-> +   
-> +   [hashtable.h](https://build-your-own.org/redis/08/hashtable.h.htm)
+> + [08_server.cpp](https://build-your-own.org/redis/08/08_server.cpp.htm)
+> + [hashtable.cpp](https://build-your-own.org/redis/08/hashtable.cpp.htm)
+> + [hashtable.h](https://build-your-own.org/redis/08/hashtable.h.htm)

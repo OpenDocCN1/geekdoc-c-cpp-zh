@@ -1,3 +1,4 @@
+
 # 11. AVL 树和有序集合
 
 基于上一章中的 AVL 树，可以轻松地添加有序集合数据结构。结构定义：
@@ -276,30 +277,20 @@ for cmd, expect in zip(cmds, outputs):
 
 练习：
 
-1.  `avl_offset`函数使我们能够通过排名查询排序集，现在反过来，给定 AVL 树中的一个节点，找到其排名，最坏情况为`O(log(n))`。（这是`zrank`命令。）
+1. `avl_offset`函数使我们能够通过排名查询排序集，现在反过来，给定 AVL 树中的一个节点，找到其排名，最坏情况为`O(log(n))`。（这是`zrank`命令。）
 
-1.  另一个有序集合应用：计算一个范围内的元素数量。（也具有`O(log(n))`的最坏情况。）
+2. 另一个有序集合应用：计算一个范围内的元素数量。（也具有`O(log(n))`的最坏情况。）
 
-1.  `11_server.cpp`文件已经包含了一些有序集合命令，尝试添加更多。
+3. `11_server.cpp`文件已经包含了一些有序集合命令，尝试添加更多。
 
-> +   [11_client.cpp](https://build-your-own.org/redis/11/11_client.cpp.htm)
-> +   
-> +   [11_server.cpp](https://build-your-own.org/redis/11/11_server.cpp.htm)
-> +   
-> +   [avl.cpp](https://build-your-own.org/redis/11/avl.cpp.htm)
-> +   
-> +   [avl.h](https://build-your-own.org/redis/11/avl.h.htm)
-> +   
-> +   [common.h](https://build-your-own.org/redis/11/common.h.htm)
-> +   
-> +   [hashtable.cpp](https://build-your-own.org/redis/11/hashtable.cpp.htm)
-> +   
-> +   [hashtable.h](https://build-your-own.org/redis/11/hashtable.h.htm)
-> +   
-> +   [test_cmds.py](https://build-your-own.org/redis/11/test_cmds.py.htm)
-> +   
-> +   [test_offset.cpp](https://build-your-own.org/redis/11/test_offset.cpp.htm)
-> +   
-> +   [zset.cpp](https://build-your-own.org/redis/11/zset.cpp.htm)
-> +   
-> +   [zset.h](https://build-your-own.org/redis/11/zset.h.htm)
+> + [11_client.cpp](https://build-your-own.org/redis/11/11_client.cpp.htm)
+> + [11_server.cpp](https://build-your-own.org/redis/11/11_server.cpp.htm)
+> + [avl.cpp](https://build-your-own.org/redis/11/avl.cpp.htm)
+> + [avl.h](https://build-your-own.org/redis/11/avl.h.htm)
+> + [common.h](https://build-your-own.org/redis/11/common.h.htm)
+> + [hashtable.cpp](https://build-your-own.org/redis/11/hashtable.cpp.htm)
+> + [hashtable.h](https://build-your-own.org/redis/11/hashtable.h.htm)
+> + [test_cmds.py](https://build-your-own.org/redis/11/test_cmds.py.htm)
+> + [test_offset.cpp](https://build-your-own.org/redis/11/test_offset.cpp.htm)
+> + [zset.cpp](https://build-your-own.org/redis/11/zset.cpp.htm)
+> + [zset.h](https://build-your-own.org/redis/11/zset.h.htm)

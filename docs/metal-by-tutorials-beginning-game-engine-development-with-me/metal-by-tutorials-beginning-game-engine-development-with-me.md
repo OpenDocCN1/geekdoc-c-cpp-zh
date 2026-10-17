@@ -1,23 +1,7 @@
+
 # Metal 教程：Metal 游戏引擎开发入门指南，第 1 版
 
-
-
-
-
-
-
-
-
 ![](img/8d763acb335ab213ea9213a628f7d844_0_0.png)
-
-
-
-
-
-
-
-
-
 
 # 献辞
 
@@ -28,7 +12,6 @@
 “致我的妻子 Adina 和我的儿子 Victor Nicholas，没有他们的耐心、支持和理解，我无法走到这里。感谢 Warren Moore，他首次发掘了我对 Metal 的兴趣，并在需要时提供建议，并激励我加入 Metal。感谢 Chris Wood，他教我大多数时候，渲染一个光线只需要一个光线、一个相机和几个距离场。感谢 Simon Gladman，他在计算内核（compute kernels）方面的卓越工作启发了我去撰写更多关于粒子和流体动力学的内容。感谢 Jeff Biggus，他让芝加哥的 GPU 编程社区保持活力。我们的日常对话激励我保持饥渴。感谢其他每一个相信我的人。非常感谢大家！”
 
 — Marius Horga
-
 
 # 关于作者
 
@@ -55,16 +38,6 @@ Tammy Coron 是一位独立编辑。Tammy 是拥有多年经验的视觉设计�
 # 关于插画师
 
 Vicki Wendlich 是本书的插画师。她也是这书封面的设计师。在不画画时，她喜欢徒步、喝美酒并尝试制作完美的奶酪。
-
-
-
-
-
-
-
-
-
-
 
 子网格............................................................................................................... 56
 
@@ -214,6 +187,8 @@ GPU 帧捕获...................................................................
 
 制作角色动画............................................................................... 265
 
+
+
 简单碰撞............................................................................... 266
 
 接下来去哪里？............................................................................................... 272
@@ -255,10 +230,6 @@ GPU 帧捕获...................................................................
 位移 (Displacement) ............................................................................ 314
 
 根据坡率着色........................................................................... 320
-
-
-
-
 
 挑战............................................................................................... 322
 
@@ -323,93 +294,137 @@ CPU-GPU 同步 ................................................ 435
 ## 第16 章：粒子系统 ................................................. 445
 
 - 粒子 ................................................................................................. 446
+
 发射器 ................................................................................................................. 447
+
 计算 ................................................................................................. 449
+
 线程与线程组............................................................................... 450
+
 烟花..................................................................................... 456
+
 粒子系统............................................................................................... 461
+
 火 ......................................................................................... 468
+
 接下来该去哪里？............................................................................... 470
 
 ## 第17 章：粒子行为 .......................................................... 471
 
 - 行为动画............................................................................... 472
+
 群集行为..................................................................................... 473
+
 项目..................................................................................................... 474
+
 速度....................................................................................................... 476
+
 行为规则........................................................................................... 478
+
 接下来该去哪里？............................................................................... 489
 
 ## 第18 章：光线渲染 ................................................... 490
 
 - 入门............................................................................................. 490
+
 射线射射..................................................................................... 492
+
 光线追踪............................................................................................... 494
+
 路径追踪........................................................................................ 495
+
 光线步进............................................................................................... 496
+
 有符号距离函数.................................................................. 499
+
 光线步进算法........................................................................... 500
+
 创建随机噪声...................................................................... 505
+
 云雾漫步............................................................................... 513
+
 接下来该去哪里？............................................................................... 515
 
 ## 第19 章：高级阴影 ...................................................... 516
 
 - 硬阴影............................................................................................... 517
+
 软阴影............................................................................................... 525
+
 环境光遮蔽............................................................................... 534
+
 - 百分比深度过滤 ................................................................................ 542
+
 接下来该去哪里？............................................................................... 545
 
 ## 第20 章：高级照明 ................................................................ 546
 
 - 渲染方程 ................................................................................ 547
+
 反射................................................................................................................ 548
+
+
+
 折射..................................................................................................... 554
-光线追踪水 ............................................................................ 557
+
+光线追踪水............................................................................ 557
+
 栅格化水............................................................................... 559
+
 挑战................................................................................................................ 576
+
 接下来该去哪里？............................................................................... 577
 
-## 第21 章：Metal Performance Shaders ............................................ 578
+## 第 21 章：Metal Performance Shaders
 
 - 概述 ................................................................................................ 578
+
 图像处理................................................................................................ 579
-矩阵/向量数学 .............................................................................. 587
-光线追踪 ................................................................................................. 589
+
+矩阵/向量数学.............................................................................. 587
+
+光线追踪................................................................................................. 589
+
 接下来该去哪里？............................................................................... 609
 
-## 第22 章：集成 SpriteKit & SceneKit ................. 610
+## 第 22 章：集成 SpriteKit & SceneKit
 
 - SceneKit 入门项目..................................................................................... 611
+
 SceneKit 着色器................................................................................................ 613
+
 卡通着色............................................................................................... 618
-fwidth 函数............................................................................................... 618
+
+`fwidth` 函数............................................................................................... 618
+
 赛璐渲染............................................................................................... 620
+
 Metal 中的 SpriteKit 渲染........................................................................... 622
-SKRenderer................................................................................................ 626
+
+`SKRenderer`................................................................................................ 626
+
 Core Image.................................................................................................. 629
+
 挑战................................................................................................................ 637
+
 接下来该去哪里？............................................................................... 637
 
-## 你可能喜欢的更多书籍 ................................................................ 638
+## 你可能喜欢的更多书籍
 
 - 刚接触 iOS 或 Swift？......................................................................... 638
+
 丰富的 iOS 开发者？.............................................................................. 640
+
 想制作游戏？............................................................................... 652
 
-
-
-
-
-# 想学习 Android 或 Kotlin 吗？............................................................... 656
+# 想学习 Android 或 Kotlin 吗？
 
 ![](img/8d763acb335ab213ea9213a628f7d844_15_0.png)
 
 为了跟随本书中的教程进行操作，你需要以下设备：
 
 - 一台运行 macOS Mojave 10.14 或更高版本且支持 Metal 的 Mac。所有 2012 年之后制造的 Mac 都应该支持 Metal，尽管并非所有 Mac 都能运行 Metal 2 的最新功能。
-- Xcode 10.0 或更高版本。
+- `Xcode 10.0` 或更高版本。
 - [可选] 一台运行 iOS 12 或更高版本且支持 Metal 的 iPhone 或 iPad。任何运行 A7 芯片或更高版本的 iOS 设备都能运行 Metal。最新的功能，如瓦片化着色（tiling shading）和图像块（imageblocks），仅会在 A7（或更高版本）芯片组上运行。项目将在你的 Mac 上编译和运行，因此使用 iOS 设备是可选的。如果你想制作 iOS 游戏，你在阅读此书时构建的游戏引擎也将包含一个 iOS 目标。
 
 本书中的许多示例都使用游程（playground）来演示主题。在编写本书时，Metal 无法在你为 macOS 创建这些游程的 iOS 模拟器上运行。除少数例外外，Metal API 在 macOS 和 iOS 上的工作相同，因此以后为你的项目添加 iOS 目标并不困难。
@@ -418,36 +433,36 @@ Core Image......................................................................
 
 通过购买《Metal by Tutorials》，你拥有以下许可权利：
 
-- 你允许在任意数量的 App中使用和/或修改《Metal by Tutorials》中的源代码，且无需注明出处。
-- 你允许在任意数量的 App中使用和/或修改《Metal by Tutorials》中包含的所有艺术、图像和设计，但必须在 App 某处包含此声明：“Artwork/Images/designs: from Metal by Tutorials, available at www.raywenderlich.com。”
+- 你允许在任意数量的 App 中使用和/或修改《Metal by Tutorials》中的源代码，且无需注明出处。
+- 你允许在任意数量的 App 中使用和/或修改《Metal by Tutorials》中包含的所有艺术、图像和设计，但必须在 App 某处包含此声明：“Artwork/Images/designs: from Metal by Tutorials, available at www.raywenderlich.com。”
 - 《Metal by Tutorials》中包含的源代码仅供个人使用。未经事先授权，你被禁止分发或出售《Metal by Tutorials》中的源代码。
 - 本书仅供个人使用。未经事先授权，你被禁止出售此书或将其分发给朋友、同事或学生；他们需要购买自己的副本。
 
-此书中提供的所有材料均按“现状”提供，不提供任何形式的明示或隐含保证，包括但不限于对销销性、特定用途的适用性和非侵权性的保证。在任何情况下，作者或版权持有有人对因合同、侵权或其他由于软件或软件的使用或对软件的其他交易而引起或与之相关的任何索赔、损害或其他责任均不承担责任。
+此书中提供的所有材料均按“现状”提供，不提供任何形式的明示或隐含保证，包括但不限于对销销性、特定用途的适用性和非侵权性的保证。在任何情况下，作者或版权持有人对因合同、侵权或其他由于软件或软件的使用或对软件的其他交易而引起或与之相关的任何索赔、损害或其他责任均不承担责任。
 
 本指南中出现的所有商标和注册商标均为各自所有者的财产。
 
 # 书籍源码与论坛
 
-本书带有每个章节的入门项目和完成项目的源码。这些资源将随你从 store.raywenderlich.com 下载的数字版一同提供。
+本书带有每个章节的入门项目和完成项目的源码。这些资源将随你从 `store.raywenderlich.com` 下载的数字版一同提供。
 
-我们还在 forums.raywenderlich.com 为本书设立了官方论坛。这是你提问有关书籍的问题或提交你可能发现的任何错误的好地方。
+我们还在 `forums.raywenderlich.com` 为本书设立了官方论坛。这是你提问有关书籍的问题或提交你可能发现的任何错误的好地方。
 
 ![](img/8d763acb335ab213ea9213a628f7d8444_18_0.png)
 
 栉箱动物——Ctenophora——在浅水和深水中已经游泳了近 50 亿年。
 
-虽然与其他胶质物种看起来同样像外星，但栉箱动物尤为寻常，它们拥有完全透明的身体，身体轴线沿排列着多组纤毛（或“梳子”）。虽然看起来是某种生物发光物种，但这些胶质动物只是*看起来*在发光，因为它们运动的纤毛散射了光，导致了彩虹般的视觉效果。
+虽然与其他胶质物种看起来同样像外星，但栉箱动物尤为寻常，它们拥有完全透明的身体，身体轴线沿排列着多组纤毛（或“梳子”）。虽然看起来是某种生物发光物种，但这些胶质动物只是看起来在发光，因为它们运动的纤毛散射了光，导致了彩虹般的视觉效果。
 
 也许最不可信的是——而且与 Metal 自身的低级、低开销特征非常相似——这些水母的身体只使用生存和产生惊人渲染效果所需的资源：它们没有胃、肠道或肺，并且已知拥有地球上任何多细胞动物中最基础的神经系统之一。
 
-你可以从这段国家地理的片段中了解更多关于栉箱动物的信息并看到它们的动作：https://www.youtube.com/watch?v=sTFSkdKVNs4
+你可以从这段国家地理的片段中了解更多关于栉箱动物的信息并看到它们的动作：<https://www.youtube.com/watch?v=sTFSkdKVNs4>
 
 # 简介
 
 欢迎学习《Metal by Tutorials》！
 
-Metal 是用于图形处理单元（GPU）的统一应用程序接口（API）。之所以之所以统一，因为它适用于所有的 3D 图形和数据并行计算范式。Metal 是一个低级 API，因为它为程序员提供了近直接访问 GPU 的权限。最后，Metal 是一个低开销 API，因为它通过多线程和资源的预编译降低了中央处理器（CPU）的成本。
+Metal 是用于图形处理单元（GPU）的统一应用程序接口（API）。之所以统一，因为它适用于所有的 3D 图形和数据并行计算范式。Metal 是一个低级 API，因为它为程序员提供了近直接访问 GPU 的权限。最后，Metal 是一个低开销 API，因为它通过多线程和资源的预编译降低了中央处理器（CPU）的成本。
 
 但在技术定义之外，Metal 是使用 GPU 并行处理能力来可视化数据或解决数值挑战的最合适方式。它还专门为机器学习、图像/视频处理或如本书所描述的图形渲染而定制。
 
@@ -457,18 +472,17 @@ Metal 是用于图形处理单元（GPU）的统一应用程序接口（API）�
 
 # Metal 是如何诞生的？
 
-从历史上看，你曾有 OpenGL 和 DirectX 两种选择。在 2013 年，Apple 宣布了 Metal，它是为了让开发者直接访问 GPU 而设计的。Metal 著色器语言（MSL）在 2017 年更新到 2.0 版本。例如在 2018 年，Unity 在全球开发者大会（WWDC）上宣布了 iOS 上的金字塔（tessellation）。事实上，你不能总是依赖第三方引擎。Apple 在 2017 年的 WWDC 上引入了两个子框架：MetalKit 和 Metal Performance Shaders。Metal 2 为虚拟现实（VR）、增强现实（AR）以及机器学习（ML）带来了许多新功能，并在搭载 A11 仿生芯片的设备上运行，包含了图像块（image blocks）和线程组共享（threadgroup sharing）。Apple 内部设计的 GPU 首次通过 Metal 实现了异步渲染队列。Metal 可以在 A7 或更新版本的设备上运行。
+从历史上看，你曾有 OpenGL 和 DirectX 两种选择。在 2013 年，Apple 宣布了 Metal，它是为了让开发者直接访问 GPU 而设计的。Metal 着色器语言（MSL）在 2017 年更新到 2.0 版本。例如在 2018 年，Unity 在全球开发者大会（WWDC）上宣布了 iOS 上的金字塔（tessellation）。事实上，你不能总是依赖第三方引擎。Apple 在 2017 年的 WWDC 上引入了两个子框架：MetalKit 和 Metal Performance Shaders。Metal 2 为虚拟现实（VR）、增强现实（AR）以及机器学习（ML）带来了许多新功能，并在搭载 A11 仿生芯片的设备上运行，包含了图像块（image blocks）和线程组共享（threadgroup sharing）。Apple 内部设计的 GPU 首次通过 Metal 实现了异步渲染队列。Metal 可以在 A7 或更新版本的设备上运行。
 
 # 为什么要使用 Metal？
 
 Metal 是一个顶级的图形 API。这意味着 Metal 可以赋能游戏引擎：
 
-
 Metal 教程
 
 # 引言
 
-这些循环有时会执行计算密集型任务，例如大型矩阵乘法，即使在少数几个核心上以多线程方式，CPU 也会花费大量时间进行串行处理。相比之下，GPU 拥有数百个甚至数千个核心，这些核心比 CPU 核心更小且内存更更少，但可以执行快速的并行数学计算。
+这些循环有时会执行计算密集型任务，例如大型矩阵乘法，即使在少数几个核心上以多线程方式，CPU 也会花费大量时间进行串行处理。相比之下，GPU 拥有数百个甚至数千个核心，这些核心比 CPU 核心更小且内存更少，但可以执行快速的并行数学计算。
 
 在以下情况下选择 Metal：
 
@@ -482,7 +496,7 @@ Metal 教程
 
 本书适合对学习 3D 图形学或希望更深入地理解游戏引擎工作原理感兴趣的中级 Swift 开发者。如果你不熟悉 Swift，仍然可以跟上，因为书中包含了所有的代码指令。你将获得通用的图形知识，但如果你先掌握 Swift 基础，会少一些困惑。我们推荐我们商店出售的《Swift Apprentice》书籍：
 
-https://store.raywenderlich.com/products/swift-apprentice
+<https://store.raywenderlich.com/products/swift-apprentice>
 
 具备 C++ 知识也会有用。你在编写 GPU 着色器函数时使用的 Metal 着色器语言（Metal Shader Language）是基于 C++ 的。但再次，你所需的所有代码都包含书中。
 
@@ -507,25 +521,22 @@ https://store.raywenderlich.com/products/swift-apprentice
 - 第 7 章：映射和材质：游戏使用低多边形模型，但这并不意味着它们不能拥有精细的细节。
 - 第 8 章：动画：让模型动起来。
 
-
-
-
-将 playground 命名为 **Chapter 1** 并点击 **Create**。接下来，删除 playground 中的所有内容。
+将 playground 命名为 `Chapter 1` 并点击 `Create`。接下来，删除 playground 中的所有内容。
 
 ## Setup
 
 现在你已经有了一个 playground，你将创建一个用于渲染的视图。导入你将要使用的两个主要框架：
 
-```
+```swift
 import PlaygroundSupport
 import MetalKit
 ```
 
-PlaygroundSupport 允许你在辅助器编辑器中查看实时视图，而 MetalKit 是一个让使用 Metal 变得更简单的框架。MetalKit 是一个自定义的视图（MTKView），它提供了许多方便方法，用于加载纹理、处理 Metal 缓冲区以及与另一个框架进行交互：**Model I/O**，你将在稍后学习到它。
+`PlaygroundSupport` 允许你在辅助器编辑器中查看实时视图，而 `MetalKit` 是一个让使用 Metal 变得更简单的框架。`MetalKit` 是一个自定义的视图（`MTKView`），它提供了许多方便方法，用于加载纹理、处理 Metal 缓冲区以及与另一个框架进行交互：`Model I/O`，你将在稍后学习到它。
 
 通过创建一个设备来检查是否有合适的 GPU：
 
-```
+```swift
 guard let device = MTLCreateSystemDefaultDevice() else {
     fatalError("GPU is not supported")
 }
@@ -535,46 +546,52 @@ guard let device = MTLCreateSystemDefaultDevice() else {
 
 设置视图：
 
-```
+```swift
 let frame = CGRect(x: 0, y: 0, width: 600, height: 600)
 let view = MTKView(frame: frame, device: device)
 view.clearColor = MTLClearColor(red: 1, green: 1, blue: 0.8, alpha: 1)
 ```
 
-这为 Metal 渲染器配置了 MTKView。MTKView 是 macOS 上 UIView 和 iOS 上 UIView 的子类。
+这为 Metal 渲染器配置了 `MTKView`。`MTKView` 是 macOS 上 `UIView` 和 iOS 上 `UIView` 的子类。
 
-MTLClearColor 代表一个 RGBA 值——在这种情况下是奶油色。颜色值存储在 clearColor 中并用于设置视图的颜色。
+`MTLClearColor` 代表一个 RGBA 值——在这种情况下是奶油色。颜色值存储在 `clearColor` 中并用于设置视图的颜色。
 
 ## The Model
 
-Model I/O 是一个与 Metal 和 SceneKit 集成的框架。它的主要目的是加载在 Blender 或 Maya 等应用中创建的 3D 模型，并设置数据缓冲区以便渲染。
+`Model I/O` 是一个与 Metal 和 SceneKit 集成的框架。它的主要目的是加载在 Blender 或 Maya 等应用中创建的 3D 模型，并设置数据缓冲区以便渲染。
 
-![](img/8d763acb335ab213ea9213a628f7d844_30_0.png)
+![](img/8d763acb335ab213ea9213a628f7d8444_30_0.png)
+
+
 
 你将不是加载 3D 模型，而是加载一个 Model I/O 基础 3D 形状，也称为元几何（primitive）。元几何通常被认为是立方体、球体、圆柱体或圆环。
 
 将以下代码添加到 playground 的末尾：
 
-```
+```swift
 // 1
 let allocator = MTKMeshBufferAllocator(device: device)
+
 // 2
-let mdlMesh = MDLMesh(sphereWithExtent: [0.75, 0.75, 0.75],
-segments: [100, 100],
-inwardNormals: false,
-geometryType: .triangles,
-allocator: allocator)
+let mdlMesh = MDLMesh(
+  sphereWithExtent: [0.75, 0.75, 0.75],
+  segments: [100, 100],
+  inwardNormals: false,
+  geometryType: .triangles,
+  allocator: allocator
+)
+
 // 3
 let mesh = try MTKMesh(mesh: mdlMesh, device: device)
 ```
 
 解析这段代码：
 
-- 1. 分配器管理网格数据的内存。
-- 2. Model I/O 创建一个指定尺寸的球体，并返回一个带有所有顶点缓冲区信息的 MDLMesh。
-- 3. 为了让 Metal 使用该网格，你将其从 Model I/O 网格转换为 MetalKit 网格。
+1. 分配器管理网格数据的内存。
+2. Model I/O 创建一个指定尺寸的球体，并返回一个带有所有顶点缓冲区信息的 `MDLMesh`。
+3. 为了让 Metal 使用该网格，你将其从 Model I/O 网格转换为 MetalKit 网格。
 
-## Queues, buffers and encoders
+## Queues、buffers 和 encoders
 
 每一帧由发送到 GPU 的命令组成。你将这些命令封装在一个渲染命令编码器（render command encoder）中。命令缓冲区（command buffers）组织这些命令编码器，而命令队列（command queue）组织命令缓冲区。
 
@@ -582,12 +599,11 @@ let mesh = try MTKMesh(mesh: mdlMesh, device: device)
 
 添加以下代码创建命令队列：
 
-```
+```swift
 guard let commandQueue = device.makeCommandQueue() else {
   fatalError("Could not create a command queue")
 }
 ```
-
 
 ## Chapter 1: Hello, Metal!
 
@@ -601,29 +617,32 @@ guard let commandQueue = device.makeCommandQueue() else {
 
 着色器函数是运行在 GPU 上的小型程序；你使用 Metal shading 编写它们，它是 C++ 的子集。
 
-通常，你会专门创建一个 .metal 扩展名的独立文件来编写着色器函数，但现在，请创建一个包含着色器函数代码的多行字符串并将其添加到你的 playground 中：
+通常，你会专门创建一个 `.metal` 扩展名的独立文件来编写着色器函数，但现在，请创建一个包含着色器函数代码的多行字符串并将其添加到你的 playground 中：
 
-```
+```swift
 let shader = """
 #include <metal_stdlib>
 using namespace metal;
+
 struct VertexIn {
     float4 position [[ attribute(0) ]];
 };
+
 vertex float4 vertex_main(const VertexIn vertex_in [[ stage_in ]]) {
     return vertex_in.position;
 }
+
 fragment float4 fragment_main() {
     return float4(1, 0, 0, 1);
 }
 """
 ```
 
-这里有两个着色器函数：名为 vertex_main 的顶点函数和一个名为 fragment_main 的片元函数。顶点函数是你通常处理顶点位置的地方，而片元函数是你指定像素颜色的地方。
+这里有两个着色器函数：名为 `vertex_main` 的顶点函数和一个名为 `fragment_main` 的片元函数。顶点函数是你通常处理顶点位置的地方，而片元函数是你指定像素颜色的地方。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_32_1.png)
 
-Chapter 1: Hello, Metal!
+## Chapter 1: Hello, Metal!
 
 设备和命令队列应该在应用启动时设置，并且你应该在整个过程中使用同一个设备和命令队列。
 
@@ -635,7 +654,7 @@ Chapter 1: Hello, Metal!
 
 从描述符创建流水线状态：
 
-```
+```swift
 let pipelineState = try device.makeRenderPipelineState(descriptor)
 ```
 
@@ -643,42 +662,47 @@ let pipelineState = try device.makeRenderPipelineState(descriptor)
 
 ## Rendering
 
-从现在开始，代码应该每帧执行。MTKView 有一个每帧运行的委托方法，但由于你只是一个简单的视图，不需要刷新屏幕。
+从现在开始，代码应该每帧执行。`MTKView` 有一个每帧运行的委托方法，但由于你只是一个简单的视图，不需要刷新屏幕。
 
-MTKView 提供了一个渲染描述符和一个可绘制层（drawable），你将使用它们帮助渲染球体。将以下代码添加到 playground 的末尾：
+`MTKView` 提供了一个渲染描述符和一个可绘制层（drawable），你将使用它们帮助渲染球体。将以下代码添加到 playground 的末尾：
 
-```
+```swift
 // 1
 guard let commandBuffer = commandQueue.makeCommandBuffer()
+
 // 2
 let descriptor = view.currentRenderPassDescriptor
+
 // 3
 let renderEncoder = commandBuffer.makeRenderEncoder(descriptor: descriptor)
-else { fatalError() }
+else {
+  fatalError()
+}
 ```
 
 在这里你创建了：
 
-- 1. 一个命令缓冲区。它存储了 GPU 执行的所有命令。
-- 2. 你获取了视图渲染描述符的引用。该描述符包含了渲染目标的数据，称为“附件”（attachments）。每个附件都需要如存储的纹理以及在整个渲染过程中是否保留该纹理。渲染描述符用于创建渲染命令编码器。
-- 3. 一个渲染编码器。它包含了发送到 GPU 以绘制顶点所需的所有信息。
+1. 一个命令缓冲区。它存储了 GPU 执行的所有命令。
+2. 你获取了视图渲染描述符的引用。该描述符包含了渲染目标的数据，称为“附件”（attachments）。每个附件都需要如存储的纹理以及在整个渲染过程中是否保留该纹理。渲染描述符用于创建渲染命令编码器。
+3. 一个渲染编码器。它包含了发送到 GPU 以绘制顶点所需的所有信息。
 
-如果系统无法创建 Metal 对象（例如命令缓冲区或渲染编码器），这是一个致命错误。视图的 currentRenderPassDescriptor 在某一帧可能不可，通常你直接从渲染委托方法返回即可。由于你只在这个 playground 中请求它，所以这里是致命错误。
+如果系统无法创建 Metal 对象（例如命令缓冲区或渲染编码器），这是一个致命错误。视图的 `currentRenderPassDescriptor` 在某一帧可能不可，通常你直接从渲染委托方法返回即可。由于你只在这个 playground 中请求它，所以这里是致命错误。
 
 为渲染编码器提供你设置的流水线状态：
 
-```
+```swift
 renderEncoder.setRenderPipelineState(pipelineState)
 ```
 
 你之前加载的球体网格包含一个包含顶点列表的缓冲区。将其交给渲染编码器：
 
+```swift
+renderEncoder.setVertexBuffer(
+  mesh.vertexBuffers[0].buffer,
+  offset: 0,
+  index: 0
+)
 ```
-renderEncoder.setVertexBuffer(mesh.vertexBuffers[0].buffer, offset: 0, index: 0)
-```
-
-
-
 
 偏移量（offset）是缓冲区中顶点信息开始的位置。索引（index）是 GPU 顶点着色器函数定位该缓冲区的方式。
 
@@ -686,9 +710,9 @@ renderEncoder.setVertexBuffer(mesh.vertexBuffers[0].buffer, offset: 0, index: 0)
 
 添加这段代码：
 
-```
+```swift
 guard let submesh = mesh.submeshes.first else {
-fatalError()
+  fatalError()
 }
 ```
 
@@ -696,25 +720,29 @@ fatalError()
 
 添加这段代码：
 
-```
-renderEncoder.drawIndexedPrimitives(type: .triangle,
-indexCount: submesh.indexCount,
-indexType: submesh.indexType,
-indexBuffer: submesh.indexBuffer,
-indexBufferOffset: 0)
+```swift
+renderEncoder.drawIndexedPrimitives(
+  type: .triangle,
+  indexCount: submesh.indexCount,
+  indexType: submesh.indexType,
+  indexBuffer: submesh.indexBuffer,
+  indexBufferOffset: 0
+)
 ```
 
 在这里，你正在指示 GPU 渲染一个由三角形组成的顶点缓冲区，顶点根据子网格索引信息按正确的顺序排列。这段代码并没有执行实际渲染——渲染在 GPU 接收到命令缓冲区（command buffer）的所有指令之前是不会发生的。
 
 要完成向渲染编码器（render encoder）发送命令并完成帧渲染，请添加这段代码：
 
-```
+```swift
 // 1
 renderEncoder.endEncoding()
+
 // 2
 guard let drawable = view.currentDrawable else {
-fatalError()
+  fatalError()
 }
+
 // 3
 commandBuffer.present(drawable)
 commandBuffer.commit()
@@ -722,13 +750,13 @@ commandBuffer.commit()
 
 解析代码：
 
-- 1. 你告诉渲染编码器没有更多绘制调用了。
-- 2. 你从 MTKView 获取可绘制内容（drawable）。MTKView 由 Core Animation 的 CAMetalLayer 支持，该层拥有一个 Metal 可以读取和写的可绘制纹理。
-- 3. 请求命令缓冲区显示 MTKView 的可绘制内容并提交给 GPU。
+1. 你告诉渲染编码器没有更多绘制调用了。
+2. 你从 `MTKView` 获取可绘制内容（drawable）。`MTKView` 由 Core Animation 的 `CAMetalLayer` 支持，该层拥有一个 Metal 可以读取和写的可绘制纹理。
+3. 请求命令缓冲区显示 `MTKView` 的可绘制内容并提交给 GPU。
 
 最后，在 playground 的末尾添加这段代码：
 
-```
+```swift
 PlaygroundPage.current.view = view
 ```
 
@@ -748,40 +776,34 @@ PlaygroundPage.current.view = view
 
 在你创建初始球体网格的地方，尝试将球体设置为不同的尺寸。如果你将尺寸从以下更改，会发生什么：
 
-- [0.75, 0.75, 0.75]
+- `[0.75, 0.75, 0.75]`
 
 改为：
 
-- [0.2, 0.75, 0.75, 0.2]
+- `[0.2, 0.75, 0.75, 0.2]`
 
-更改球体的颜色。在着色器函数字符串中，你会看到
+更改球体的颜色。在着色器函数字符串中，你会看到：
 
-```
+```swift
 return float4(1, 0, 0, 1);
 ```
 
 这返回红色=1，绿色=0，蓝色=0，透明度=1，结果就是红色。尝试更改数字（从 0 到 1）以获得不同的颜色。保持 Ray Wanderlich 风格绿色：
 
-```
+```swift
 float4(0, 0.4, 0.2, 1)
 ```
 
 在接下来的章节中，你将看到由子网格索引信息按正确顺序排列顶点的三角形顶点缓冲区。
 
-*(注：由于原文中包含大量重复的段落和碎片信息，翻译已根据逻辑结构进行了整合处理)*
+## 第 2 章：3D 模型
 
+- `blend`：这是 Blender 的原生文件格式。
+- `dae`：这是 COLLADA 标准格式。该格式支持动画。在编写本文时，SceneKit 可以导入，但 Metal I/O 尚不能。
+- `fbx`：由 Autodesk 拥有的专有格式。这是一种常用格式，支持动画，但因为其是专有的且没有统一的标准而正在失去青睐。
+- `usd`：由 Pixar 的开源格式。Metal I/O 可以导入，但很难找到可以导出它的 3D 应用。来自 2017 年 WWDC 视频 [From Art to Engine with Metal I/O](https://developer.apple.com/videos/play/wwdc2017/610/) 的示例代码包含了一个将动画 `.usd` 场景导入到 Metal 的完整且复杂的示例。
 
-
-
-
-第 2 章：3D 模型
-
-- blend: 这是 Blender 的原生文件格式。
-- dae: 这是 COLLADA 标准格式。该格式支持动画。在编写本文时，SceneKit 可以导入，但 Metal I/O 尚不能。
-- fbx: 由 Autodesk 拥有的专有格式。这是一种常用格式，支持动画，但因为其是专有的且没有统一的标准而正在失去青睐。
-- usd: 由 Pixar 的开源格式。Metal I/O 可以导入，但很难找到可以导出它的 3D 应用。来自 2017 年 WWDC 视频 [From Art to Engine with Metal I/O](https://developer.apple.com/videos/play/wwdc2017/610/) 的示例代码包含了一个将动画 .usd 场景导入到 Metal 的完整且复杂的示例。
-
-.obj 文件仅包含单个模型，而 .ltf 和 .usd 文件是整个场景的容器，包含了模型、动画、摄像和灯光。
+`.obj` 文件仅包含单个模型，而 `.ltf` 和 `.usd` 文件是整个场景的容器，包含了模型、动画、摄像和灯光。
 
 ## 导出到 Blender
 
@@ -790,22 +812,26 @@ float4(0, 0.4, 0.2, 1)
 在“Render and Export 3D Cone”游场的靠顶部，即你创建网格的地方，更改：
 
 ```swift
-let mdlMesh = MDLMesh(sphereWithExtent: [0.75, 0.75, 0.75],
-                      segments:[100, 100],
-                      inwardNormals:false,
-                      geometryType:.triangles,
-                      allocator: allocator)
+let mdlMesh = MDLMesh(
+  sphereWithExtent: [0.75, 0.75, 0.75],
+  segments: [100, 100],
+  inwardNormals: false,
+  geometryType: .triangles,
+  allocator: allocator
+)
 ```
 
 为：
 
 ```swift
-let mdlMesh = MDLMesh(coneWithExtent:[1,1,1],
-                      segments:[10, 10],
-                      inwardNormals:false,
-                      cap:true,
-                      geometryType:.triangles,
-                      allocator: allocator)
+let mdlMesh = MDLMesh(
+  coneWithExtent: [1, 1, 1],
+  segments: [10, 10],
+  inwardNormals: false,
+  cap: true,
+  geometryType: .triangles,
+  allocator: allocator
+)
 ```
 
 运行游场，你将看到一个锥体。
@@ -822,41 +848,46 @@ let mdlMesh = MDLMesh(coneWithExtent:[1,1,1],
 
 ```swift
 // begin export code
+
 // 1
 let asset = MDLAsset()
 asset.add(mdlMesh)
+
 // 2
 let fileExtension = "obj"
 guard MDLAsset.canExportFileExtension(fileExtension) else {
   fatalError("Can't export a.\(fileExtension) format")
 }
+
 // 3
 do {
-  let url = playgroundSharedDataDirectory.appendingPathComponent("primitive.\(fileExtension)")
+  let url = playgroundSharedDataDirectory
+    .appendingPathComponent("primitive.\(fileExtension)")
   try asset.export(to: url)
 } catch {
   fatalError("Error: \(error.localizedDescription)")
 }
+
 // end export code
 ```
 
 看看这里发生了什么：
 
-1. Model I/O 中场景的顶层是一个 MDLAsset。你可以将网格、摄像和灯光作为子对象添加到 asset 中，并构建完整的场景层级结构。
-2. 检查 Model I/O 是否可以导出 .obj 文件类型。
+1. Model I/O 中场景的顶层是一个 `MDLAsset`。你可以将网格、摄像和灯光作为子对象添加到 `asset` 中，并构建完整的场景层级结构。
+2. 检查 Model I/O 是否可以导出 `.obj` 文件类型。
 3. 将锥体导出到存储在 Shared Playground Data 中的目录中。
 
 运行游场以导出锥体对象。
 
-## .obj 文件格式
+## `.obj` 文件格式
 
-在 Finder 中，导航到 Documents > Shared Playground Data。游场导出了两个文件：primitive.obj 和 primitive.mtl。
+在 Finder 中，导航到 Documents > Shared Playground Data。游场导出了两个文件：`primitive.obj` 和 `primitive.mtl`。
 
-使用纯文本编辑器打开 primitive.obj。
+使用纯文本编辑器打开 `primitive.obj`。
 
-以下是一个 .obj 文件示例。它描述了一个具有四个角顶点的平面元模型（primitive）；.obj 文件的布局类似，但它会有更多数据。
+以下是一个 `.obj` 文件示例。它描述了一个具有四个角顶点的平面元模型（primitive）；`.obj` 文件的布局类似，但它会有更多数据。
 
-```
+```obj
 # Apple ModelIO OBJ File: plane
 mtllib plane.mtl
 gmesh
@@ -877,23 +908,26 @@ s off
 
 以下是详细解析：
 
-- mtlib: 这是随附的 .mtl 文件的名称。它持有模型的材质和纹理文件名。
-- g: 开始一个顶点组。
-- v: 顶点（Vertex）。对于锥体，你有 102 个这样的顶点。
-- vn: 表面线（Surface normal）。这是一个垂直的向量——即直接向外。稍后我们将学习更多关于法线的知识。
-- vt: uv 坐标。纹理使用 uv 坐标而不是 xy 坐标。
-- usel: 为后续面提供表面信息（如颜色）的材质名称。该材质在随附的 .mtl 文件中。
-- f: 定义面（faces）。在这个平面示例中，有两个面。每个面有三个元素，由顶点/纹理/法线索引组成。例如，列出的最后一个面：4/4/1 将是第四个纹理元素 / 第四个纹理元素 / 第一个法线元素：0 0.5 0.5 / 1 / 1 -1 0 0。
-- s: 平滑度（Smoothing），当前关闭，意味着没有形成光滑表面的组。
+- `mtlib`：这是随附的 `.mtl` 文件的名称。它持有模型的材质和纹理文件名。
+- `g`：开始一个顶点组。
+- `v`：顶点（Vertex）。对于锥体，你有 102 个这样的顶点。
+- `vn`：表面线（Surface normal）。这是一个垂直的向量——即直接向外。稍后我们将学习更多关于法线的知识。
+- `vt`：UV 坐标。纹理使用 UV 坐标而不是 XY 坐标。
+- `usel`：为后续面提供表面信息（如颜色）的材质名称。该材质在随附的 `.mtl` 文件中。
+- `f`：定义面（faces）。在这个平面示例中，有两个面。每个面有三个元素，由顶点/纹理/法线索引组成。例如，列出的最后一个面：`4/4/1` 将是第四个纹理元素 / 第四个纹理元素 / 第一个法线元素：`0 0.5 0.5 / 1 / 1 -1 0 0`。
+- `s`：平滑度（Smoothing），当前关闭，意味着没有形成光滑表面的组。
 
-## .mtl 文件格式
+## `.mtl` 文件格式
 
-你导出的第二部分包含了模型的材质。材质描述了 3D 渲染器如何渲染顶点。顶点应该是光滑发光的吗？粉色的吗？反射性的吗？mtl 文件包含了这些属性的值。
+你导出的第二部分包含了模型的材质。材质描述了 3D 渲染器如何渲染顶点。顶点应该是光滑发光的吗？粉色的吗？反射性的吗？MTL 文件包含了这些属性的值。
 
-使用纯文本编辑器打开 primitive.mtl：
+使用纯文本编辑器打开 `primitive.mtl`。
+
+
+
+# Apple ModelI/O MTL File: primitive.mtl
 
 ```
-# Apple ModelI/O MTL File: primitive.mtl
 newmtl material_1
 Kd 1 1 1
 Ka 0 0 0
@@ -910,27 +944,24 @@ clearCoat 0
 clearGloss 0
 ```
 
-- newmtl: 这是随附的 .mtl 文件的名称。它持有模型的材质和纹理文件名。 
-- Kd: 漫反射色。
-- Ka: 环境色。
-- Ks: 高光强度。
-- a: 透明度。
-- subsurface: 次表面散射。
-- metallic: 金属属性属性。
-- specularTint: 高光色调。
-- roughness: 粗糙度值。
-- anisotropicRotation: 各向异性旋转。
-- sheen: 光泽强度。
-- sheenTint: 光泽色调。
-- clearCoat: 漆层属性。
-- clearGloss: 漆层光泽。
+- `newmtl`：这是随附的 `.mtl` 文件的名称。它持有模型的材质和纹理文件名。
+- `Kd`：漫反射色。
+- `Ka`：环境色。
+- `Ks`：高光强度。
+- `a`：透明度。
+- `subsurface`：次表面散射。
+- `metallic`：金属属性。
+- `specularTint`：高光色调。
+- `roughness`：粗糙度值。
+- `anisotropicRotation`：各向异性旋转。
+- `sheen`：光泽强度。
+- `sheenTint`：光泽色调。
+- `clearCoat`：漆层属性。
+- `clearGloss`：漆层光泽。
 
+# Metal 教程
 
-
-
-Metal 教程
-
-在 Import Train（导入火车）中，删除你创建 MDLMesh 锥体的那行代码：
+在 Import Train（导入火车）中，删除你创建 `MDLMesh` 锥体的那行代码：
 
 ```swift
 let mdlMesh = MDLMesh(coneExtent: [1, 1, 1],
@@ -970,6 +1001,7 @@ let vertexDescriptor = MTLVertexDescriptor()
 ```
 
 ## Metal 教程
+
 ## 第 2 章：3D 模型
 
 ```swift
@@ -986,9 +1018,9 @@ vertexDescriptor.attributes[0].bufferIndex = 0
 
 > 注意：你可以使用相同的值或重新配置的值重用该描述符，来实例化不同的对象。
 
-- .obj 文件包含法线和纹理坐标数据，以及顶点位置数据。目前，你不需要表面法线或纹理坐标，只需要位置。你告诉描述符 xyz 位置数据应该加载为 `float3`，这是一个由三个 Float 值组成的 simd 类型。`MTLVertexDescriptor` 有一个包含 31 个属性的数组，你可以在其中配置格式，在未来的章节中将加载法线和纹理坐标属性。
+- `.obj` 文件包含法线和纹理坐标数据，以及顶点位置数据。目前，你不需要表面法线或纹理坐标，只需要位置。你告诉描述符 xyz 位置数据应该加载为 `float3`，这是一个由三个 `Float` 值组成的 simd 类型。`MTLVertexDescriptor` 有一个包含 31 个属性的数组，你可以在其中配置格式，在未来的章节中将加载法线和纹理坐标属性。
 
-- offset（偏移量）指定了该特定数据在缓冲区起始位置。
+- `offset`（偏移量）指定了该特定数据在缓冲区起始位置。
 
 - 当你通过渲染器编码器（renderer encoder）将顶点数据发送到 GPU 时，你通过 `MTLBuffer` 发送它并通过索引识别该缓冲区。有 31 个可用缓冲区，Metal 在缓冲区参数表中跟踪它们。在这里使用 Buffer 0，这样顶点着色器函数就能将缓冲区 0 中的输入顶点数据与你的顶点布局匹配。
 
@@ -1010,7 +1042,7 @@ MTKModelDescriptorFromMetal(vertexDescriptor)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_51_0.png)
 
-float3 + float3 + float2。然而，你只加载了位置数据，所以为了到达下一个位置，你的跨度是 `float3`。通过使用这种缓冲区布局和索引格式，你可以设置引用具有不同层级的 MTLBuffers 的复杂顶点描述符。你可以选择交错位置、法线和纹理坐标，也可以先布局一个包含所有位置数据的缓冲区，然后是其他数据。
+`float3 + float3 + float2`。然而，你只加载了位置数据，所以为了到达下一个位置，你的跨度是 `float3`。通过使用这种缓冲区布局和索引格式，你可以设置引用具有不同层级的 `MTLBuffers` 的复杂顶点描述符。你可以选择交错位置、法线和纹理坐标，也可以先布局一个包含所有位置数据的缓冲区，然后是其他数据。
 
 - 3. 给属性分配一个字符串名称“position”。这告诉 Model I/O 这是位置数据。法线和纹理坐标数据也是可用的，但通过这个顶点描述符，你告诉 Model I/O 你对那些数据不感兴趣。
 
@@ -1037,7 +1069,7 @@ let mdlMesh = asset.object(at: 0) as! MDLMesh
 
 ## 坐标系 (coordinate system)
 
-所有模型都有原点。原点是网格的位置。火车的原点是 [0, 0, 0]。在 Blender 中，这会将火车放置在场景的中心。你可以在这个截图中看到蓝色的原点：
+所有模型都有原点。原点是网格的位置。火车的原点是 `[0, 0, 0]`。在 Blender 中，这会将火车放置在场景的中心。你可以在这个截图中看到蓝色的原点：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_53_0.png)
 
@@ -1045,26 +1077,23 @@ let mdlMesh = asset.object(at: 0) as! MDLMesh
 
 ![](img/8d763acb335ab213ea9213a628f7d844_54_0.png)
 
-归一化意味着屏幕上的 -1 到 1。你已经加载了模型顶点信息，代码的其余部分将完成。你的 Playground 将从新的 `mdlMesh` 变量加载网格。现在你加载了模型顶点信息，此时 [0,0,0] 位于屏幕上。原点在 [0,0,0] 处。
+归一化意味着屏幕上的 -1 到 1。你已经加载了模型顶点信息，代码的其余部分将完成。你的 Playground 将从新的 `mdlMesh` 变量加载网格。现在你加载了模型顶点信息，此时 `[0,0,0]` 位于屏幕上。原点在 `[0,0,0]` 处。
 
-在 [0,0,0] 处。
+在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。在 [0,0,0] 处。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。在 `[0,0,0]` 处。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
-所有模型都有原点。原点在 [0,0,0] 处。
-
-
-
+所有模型都有原点。原点在 `[0,0,0]` 处。
 
 运行游场，你的火车就会完全渲染出来，除了材质颜色之外，这你将在第 7 章“映射与材质”中处理。
 
@@ -1074,7 +1103,7 @@ let mdlMesh = asset.object(at: 0) as! MDLMesh
 
 ## 挑战
 
-如果你想接受一个有趣的挑战，请完成这个制作蘑菇的 Blender 教程：https://www.raywenderlich.com/49955/blender-tutorial-for-beginners-how-to-make-a-mushroom，将你在 Blender 中制作的内容导出为 .obj 文件。
+如果你想接受一个有趣的挑战，请完成这个制作蘑菇的 Blender 教程：https://www.raywenderlich.com/49955/blender-tutorial-for-beginners-how-to-make-a-mushroom，将你在 Blender 中制作的内容导出为 `.obj` 文件。
 
 如果你想跳过建模，你可以在本章节的 Resources（资源）目录中找到 `mushroom.obj` 文件。
 
@@ -1094,7 +1123,7 @@ let mdlMesh = asset.object(at: 0) as! MDLMesh
 
 ## GPU 和 CPU
 
-所有的计算机都有一有一个中央处理器（CPU），用于驱动操作和管理计算机上的资源。它们还有一个图形处理器（GPU）。
+所有的计算机都有一个中央处理器（CPU），用于驱动操作和管理计算机上的资源。它们还有一个图形处理器（GPU）。
 
 GPU 是一种专门的硬件组件，可以非常快速地处理图像、视频和海量数据。这被称为吞吐量（throughput）。吞吐量通过在特定时间内处理的数据量来衡量。
 
@@ -1138,26 +1167,26 @@ CPU 继续向 GPU 发送命令以保持其忙碌，但在某个时刻，要么 C
 
 将你的项目命名为 Pipeline 并勾选 Use Storyboards。不要勾选其余选项。
 
-打开 Main.storyboard 并选择 View Controller Scene 下的 View。
+打开 `Main.storyboard` 并选择 View Controller Scene 下的 View。
 
 | View Controller Scene |
 | --- |
 | View Controller |
 | First Responder |
 
-在 Identity 检查器中，将视图从 NSView 更改为 MTKView。
+在 Identity 检查器中，将视图从 `NSView` 更改为 `MTKView`。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_62_0.png)
 
 这会将主视图设置为 MetalKit View。
 
-打开 ViewController.swift。在文件顶部，导入 MetalKit 框架：
+打开 `ViewController.swift`。在文件顶部，导入 MetalKit 框架：
 
 ```
 import MetalKit
 ```
 
-然后，将此代码添加到 viewDidLoad()：
+然后，将此代码添加到 `viewDidLoad()`：
 
 ```
 guard let metalView = view as? MTKView else {
@@ -1165,13 +1194,13 @@ fatalError("metal view not set up in storyboard")
 }
 ```
 
-你现在有一个选择。你可以为 MTKView 的子类并在 storyboard中使用此视图。在这种情况下，子类的 draw(_:) 每帧都会被调用，你将把绘图代码放在该方法中。然而，在书中，我们将设置一个符合 MTKDelegate 的 Renderer。在 ViewController.swift 中，添加一个属性来持有渲染器：
+你现在有一个选择。你可以为 `MTKView` 的子类并在 storyboard 中使用此视图。在这种情况下，子类的 `draw(_:)` 每帧都会被调用，你将把绘图代码放在该方法中。然而，在书中，我们将设置一个符合 `MTKDelegate` 的 Renderer。在 `ViewController.swift` 中，添加一个属性来持有渲染器：
 
 ```swift
 var renderer: Renderer?
 ```
 
-在 viewDidLoad() 结束处初始化渲染器：
+在 `viewDidLoad()` 结束处初始化渲染器：
 
 ```swift
 renderer = Renderer(metalView)
@@ -1201,7 +1230,7 @@ Renderer.commandQueue = device.makeCommandQueue()
 
 ## Renderer 类
 
-创建一个名为 Renderer.swift 的新 Swift 文件，内容如下：
+创建一个名为 `Renderer.swift` 的新 Swift 文件，内容如下：
 
 ```
 import MetalKit
@@ -1219,9 +1248,6 @@ class Renderer: NSObject {
 }
 ```
 
-
-
-
 ## Metal 教程
 
 这会将 `metavar.clearColor` 设置为奶油色。它还将将 `Renderer` 设置为 `metavar` 的代理，用于调用 `MTKViewDelegate` 的绘制方法。
@@ -1236,7 +1262,9 @@ class Renderer: NSObject {
 
 创建一个名为 `Primitive.swift` 的新 Swift 文件，并将默认代码替换为以下内容：
 
-```
+
+
+```swift
 import MetalKit
 class Primitive {
     func makeCube(device: MTLDevice, size: Float) -> MDLMesh {
@@ -1249,9 +1277,9 @@ class Primitive {
 
 此方法返回一个立方体，与上一章中绘制球体和锥体的代码类似。
 
-在 `Renderer.swift` 中，在 `init(UIView:)` 中，调用 `super.init()` 之前，设置网格：
+在`Renderer.swift`中，在`init(UIView:)`中，调用`super.init()`之前，设置网格：
 
-```
+```swift
 let mdlMesh = Primitive.makeCube(device: device, size: 1)
 do {
     mesh = try MTKMesh(mesh: mdlMesh, device: device)
@@ -1260,21 +1288,21 @@ do {
 }
 ```
 
-然后，设置包含发送到 GPU 的顶点数据的 `MTLBuffer`。
+然后，设置包含发送到 GPU 的顶点数据的`MTLBuffer`。
 
-```
+```swift
 vertexBuffer = mesh.vertexBuffers[0].buffer
 ```
 
 # 第 3 章：渲染流水线
 
-这会将数据放入 `MTLBuffer`。现在，你需要设置流水线状态，以便 GPU 知道如何渲染这些数据。
+这会将数据放入`MTLBuffer`。现在，你需要设置流水线状态，以便 GPU 知道如何渲染这些数据。
 
-首先，设置 `MTLLibrary` 并确保存在顶点着色器和片段着色器函数。
+首先，设置`MTLLibrary`并确保存在顶点着色器和片段着色器函数。
 
-在 `super.init()` 之前继续添加代码：
+在`super.init()`之前继续添加代码：
 
-```
+```swift
 let library = device.makeDefaultLibrary()
 let vertexFunction = library?.makeFunction(name: "vertex_main")
 let fragmentFunction = library?.makeFunction(name: "fragment_main")
@@ -1284,7 +1312,7 @@ let fragmentFunction = library?.makeFunction(name: "fragment_main")
 
 现在，创建流水线状态：
 
-```
+```swift
 let pipelineDescriptor = MTLRenderPipelineDescriptor()
 pipelineDescriptor.vertexFunction = vertexFunction
 pipelineDescriptor.fragmentFunction = fragmentFunction
@@ -1299,7 +1327,7 @@ do {
 
 这为 GPU 设置了一个潜在状态。GPU 在开始管理顶点之前需要知道其完整状态。通过设置 GPU 将调用的两个着色器函数，你还设置了 GPU 将写入的纹理像素格式。
 
-你还设置了流水线的顶点描述符。这是 GPU 知道如何解释你在网格数据 `MTLBuffer` 中提供的顶点数据的方式。
+你还设置了流水线的顶点描述符。这是 GPU 知道如何解释你在网格数据`MTLBuffer`中提供的顶点数据的方式。
 
 如果你需要调用不同的顶点或片段函数，或者不同的数据布局，那么你需要更多的流水线状态。创建流水线状态相对耗时，这就是为什么你要提前完成它，在帧期间切换流水线状态是快速且高效的。
 
@@ -1307,9 +1335,9 @@ do {
 
 ## 渲染帧
 
-在 `Renderer.swift` 中，使用与第 1 章相同的命令，将 `draw(in:)` 中的 `print` 语句替换为以下代码：
+在`Renderer.swift`中，使用与第 1 章相同的命令，将`draw(in:)`中的`print`语句替换为以下代码：
 
-```
+```swift
 guard let descriptor = view.currentRenderPassDescriptor,
 let commandBuffer = Renderer.commandQueue.makeCommandBuffer(),
 let encoder = 
@@ -1333,15 +1361,15 @@ commandBuffer.commit()
 
 在 CPU 端，为了准备 GPU，你需要向它提供数据和流水线状态。然后，你需要发布绘制调用。
 
-在 `draw(in:)` 中，将注释：
+在`draw(in:)`中，将注释：
 
-```
+```swift
 // 绘制代码写在此这里
 ```
 
 替换为：
 
-```
+```swift
 renderEncoder.setRenderPipelineState(pipelineState)
 renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
 for submesh in mesh.submeshes {
@@ -1353,7 +1381,7 @@ for submesh in mesh.submeshes {
 }
 ```
 
-当在 `draw(in:)` 结束提交缓冲区时，这向 GPU 表示数据和流水线均已就绪，GPU 可以接管。
+当在`draw(in:)`结束提交缓冲区时，这向 GPU 表示数据和流水线均已就绪，GPU 可以接管。
 
 ## 渲染流水线
 
@@ -1373,7 +1401,7 @@ for submesh in mesh.submeshes {
 
 要开始渲染 3D 内容，首先需要一个场景。场景由带有顶点的模型组成。简单的模型之一是立方体，它有六个面（12 个三角形）。
 
-正如你在上一章看到的，你需要一个顶点描述符来定义读取顶点及其属性（如位置、纹理坐标、法线和颜色）的方式。你可以选择不使用顶点描述符并直接在 `MTLBuffer` 中发送顶点数组；然而，如果你决定不使用它，你将需要提前缓冲区是如何组织的。
+正如你在上一章看到的，你需要一个顶点描述符来定义读取顶点及其属性（如位置、纹理坐标、法线和颜色）的方式。你可以选择不使用顶点描述符并直接在`MTLBuffer`中发送顶点数组；然而，如果你决定不使用它，你将需要提前缓冲区是如何组织的。
 
 ## 顶点处理
 
@@ -1382,17 +1410,22 @@ for submesh in mesh.submeshes {
 在第 1 章“你好！”中，你简要学习了着色器函数以及 Metal 着色语言（MSL）。现在是时候查看硬件层面内部发生了什么了。看看这个 AMD GPU 的现代架构：
 
 | 图形命令处理器 |
+
 | 着色引擎 | 着色引擎 | 着色引擎 | 着色引擎 |
+
 | --- | --- | --- | --- |
-| CU | CU | CU | CU |
-| CU | CU | CU | CU |
-| CU | CU | CU | CU |
-| CU | CU | CU | CU |
-| CU | CU | CU | CU |
+
 | CU | CU | CU | CU |
 
+| CU | CU | CU | CU |
 
+| CU | CU | CU | CU |
 
+| CU | CU | CU | CU |
+
+| CU | CU | CU | CU |
+
+| CU | CU | CU | CU |
 
 ## Metal 教程
 
@@ -1401,8 +1434,11 @@ for submesh in mesh.submeshes {
 从顶层向下看，GPU 包含：
 
 - 1 个图形命令处理器 (Graphics Command Processor)：它负责协调工作流程。
+
 - 4 个着色器引擎 (SE)：SE 是 GPU 上的组织单元，可以服务整个流水线。每个 SE 都是一个几何处理器、一个光化器和一个计算单元（Compute Units）。
+
 - 9 个计算单元 (CU)：CU 不过是一组着色器核心。
+
 - 64 个着色器核心：着色器核心是 GPU 的基础构建单元，所有的着色工作都在这里完成。
 
 总而言之，情况是 36 个 CU 拥有 2304 个着色器核心。与你的四核 CPU 核心数相比吧。我知道这不公平！
@@ -1415,9 +1451,9 @@ for submesh in mesh.submeshes {
 
 拥有这么多核心可以做什么？由于这些核心专门用于顶点着色和片元着色，一个显而易见的方法是让所有核心并行工作，这样处理顶点或片元速度就会更快。不过，也有一些规则。在 CU 内部，你一次只能处理顶点或片元。幸运的是有 36 个这样的单元！另一个规则是，每个 SE 只能处理一个着色器函数。四个 SE 让你能够以有趣且实用的方式组合工作。例如，你可以同时在一个 SE 上运行一个片段着色器，在另一个 SE 上运行第二个片段着色器。或者你可以将顶点着色器与片段着色器分离，让它们在不同的 SE 上并行运行。
 
-使用 Metal 文件模板创建一个新文件并命名为 `Shaders.metal`。然后，在文件末尾添加此代码：
+使用 Metal 文件模板创建一个新文件并命名为`Shaders.metal`。然后，在文件末尾添加此代码：
 
-```
+```cpp
 // 1
 struct VertexIn {
     float4 position [[ attribute(0)]];
@@ -1431,10 +1467,11 @@ vertex float vertex_main(const VertexIn [[ stage_in]]) {
 
 解析这段代码：
 
-- 1. 创建一个结构体 `VertexIn` 来描述顶点属性，这些属性匹配你之前设置的顶点描述符。在这种情况下，只有位置。
-- 2. 实现一个顶点着色器 `vertex_main`，它接收 `VertexIn` 结构体并返回 float 类型的顶点位置。
+- 1. 创建一个结构体`VertexIn`来描述顶点属性，这些属性匹配你之前设置的顶点描述符。在这种情况下，只有位置。
 
-记住顶点在顶点缓冲区中是有索引的。顶点着色器通过 `[[ stage_in ]]` 属性获取当前索引，并解包缓存的当前索引点的 `VertexIn` 结构体。
+- 2. 实现一个顶点着色器`vertex_main`，它接收`VertexIn`结构体并返回 float 类型的顶点位置。
+
+记住顶点在顶点缓冲区中是有索引的。顶点着色器通过`[[ stage_in ]]`属性获取当前索引，并解包缓存的当前索引点的`VertexIn`结构体。
 
 计算单元可以处理（一次一个）批顶点，数量最多达到其着色器核心数。这批顶点可以完全放入 CU 缓存中，因此可以根据需要重用。这批顶点将保持 CU 忙碌状态直到处理完成，但其他 CU 应该变得可用以处理下一批。
 
@@ -1446,29 +1483,32 @@ vertex float vertex_main(const VertexIn [[ stage_in]]) {
 
 ![](img/8d763acb335ab213ea9213a628f7d844_72_0.png)
 
-```
+```swift
 let vertexDescriptor = MTLVertexDescriptor()
 vertexDescriptor.attributes[0].format = .float3
 vertexDescriptor.attributes[0].offset = 0
 vertexDescriptor.attributes[0].bufferIndex = 0
 ```
 
-```
+```cpp
 struct VertexIn {
   float4 position [[attribute(0)]];
 }
 ```
 
-```
+```cpp
 float4 vertex_main(const VertexIn vertexin [[stage_index]]) {
 ```
 
 | 0.500 0.500 0.500 1.000 |
+
 | 0.500 -0.500 -0.500 1.000 |
+
 | 0.500 0.500 -0.500 1.000 |
+
 | 0.500 -0.500 0.500 1.000 |
 
-总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
+总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过`[[ stage_in ]]`修饰符确认位置是通过顶点缓冲区中的`[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
 
 一个名为 Distributor（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
 
@@ -1482,15 +1522,15 @@ float4 vertex_main(const VertexIn vertexin [[stage_index]]) {
 
 上一个阶段将分组为数据块的顶点处理到此阶段。需要记住的是，属于同一几何形状（图元）的顶点始终在同一个块中。这意味着点的一个顶点、直线的两个顶点或三角形的三个顶点将始终在同一个块中，因此永远不会进行第二次获取。
 
-img/8d763acb335ab213ea9213a628f7d844_72_0.png
+`img/8d763acb335ab213ea9213a628f7d844_72_0.png`
 
 一旦顶点处理完成，缓存就会为下一批顶点清空。此时，顶点已经排序并分组，准备好发送到图元装配阶段。
 
-73acb335ab213ea9213a628f7d844_73_0.png
+`73acb335ab213ea9213a628f7d844_73_0.png`
 
 一旦/处理完成，缓存就会就会0批批000000000000000000000000000000000000000000000000000000000000000000000000000000000000 0.000 0.500 0.500 1.000 | 0.500 -0.500 -0.500 1.000 | 0.500 0.500 -0.500 1.000 | 0.500 -0.500 0.500 1.000
 
-总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
+总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过`[[ stage_in ]]`修饰符确认位置是通过顶点缓冲区中的`[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
 
 一个名为 Distributor（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
 
@@ -1502,37 +1542,42 @@ img/8d763acb335ab213ea9213a628f7d844_72_0.png
 
 # 第 3 章：渲染流水线
 
-img/8d763acb335ab213ea9213a628f7d844_72_0.png
+`img/8d763acb335ab213ea9213a628f7d844_72_0.png`
 
 一旦顶点处理完成，缓存就会为下一批顶点清空。此时，顶点已经排序并分组，准备好发送到图元装配阶段。
 
-```
+```swift
 let vertexDescriptor = MTLVertexDescriptor()
 vertexDescriptor.attributes[0].format = .float3
 vertexDescriptor.attributes[0].offset = 0
 vertexDescriptor.attributes[0].bufferIndex = 0
 ```
 
-```
+```cpp
 struct VertexIn {
   float4 position [[attribute(0)]];
 }
 ```
 
-```
+```cpp
 float4 vertex_main(const VertexIn vertexin [[stage_index]]) {
 ```
 
 | 0.500 0.500 0.500 1.000 |
+
 | 0.500 -0.500 -0.500 1.000 |
+
 | 0.500 0.500 -0.500 1.000 |
+
 | 0.500 -0.500 0.500 1.000 |
 
-总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
+总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过`[[ stage_in ]]`修饰符确认位置是通过顶点缓冲区中的`[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
 
 一个名为 Distributor（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
 
 ## 3 - 图元装配
+
+
 
 上一个阶段将分组为数据块的顶点处理到此阶段。需要记住的是，属于同一几何形状（图元）的顶点始终在同一个块中。这意味着点的一个顶点、直线的两个顶点或三角形的三个顶点将始终在同一个块中，因此永远不会进行第二次获取。
 
@@ -1540,67 +1585,29 @@ float4 vertex_main(const VertexIn vertexin [[stage_index]]) {
 
 # 第 3 章：渲染流水线
 
-img/8d763acb335ab213ea9213a628f7d844_72_0.png
+`img/8d763acb335ab213ea9213a628f7d844_72_0.png`
 
 一旦顶点处理完成，缓存就会为下一批顶点清空。此时，顶点已经排序并分组，准备好发送到图元装配阶段。
 
-一旦/处理完成，缓存就会就会000000000000000000000000000000000000000000000000000000000000000000000000000000000000 0.000 0.500 0.500 1.000 | 0.500 -0.500 -0.500 1.000 | 0.500 0.500 -0.500 1.000 | 0.500 -0.500 0.500 1.000
+一旦 `/` 处理完成，缓存就会就会 `000000000000000000000000000000000000000000000000000000000000000000000000000000000000` `0.000 0.500 0.500 1.000 | 0.500 -0.500 -0.500 1.000 | 0.500 0.500 -0.500 1.000 | 0.500 -0.500 0.500 1.000`
 
-总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
+总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` `position` 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 `float4` 返回。
 
-一个名为 Distributor（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
+一个名为 `Distributor`（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
 
 ## 3 - 图元装配
-
-上一个阶段将分组为数据块的顶点处理到此阶段。需要记住的是，属于同一几何形状（图元）的顶点始终在同一个块中。这意味着点的一个顶点、直线的两个顶点或三角形的三个顶点将始终在同一个块中，因此永远不会进行第二次获取。
-
-## Metal 教程
-
-# 第 3 章：渲染流水线
-
-img/8d763acb335ab213ea9213a628f7d844_72_0.png
-
-一旦顶点处理完成，缓存就会为下一批顶点清空。此时，顶点已经排序并分组，准备好发送到图元装配阶段。
-
-一旦/处理完成，缓存就会就会000000000000000000000000000000000000000000000000000000000000000000000000000000000000 0.000 0.500 0.500 1.000 | 0.500 -0.500 -0.500 1.000 | 0.500 0.500 -0.500 1.000 | 0.500 -0.500 0.500 1.000
-
-总结一下，CPU 使用了你从模型网格创建的顶点缓冲区。你使用顶点描述符配置了顶点缓冲区，它告诉 GPU 顶点数据是如何结构的。在 GPU 上，你创建了一个结构体来封装顶点属性。顶点着色器将其作为函数参数接收，并通过 `[[ stage_in ]]` 修饰符确认位置是通过顶点缓冲区中的 `[[ attribute(0) ]]` position 从 CPU 传的。顶点着色器处理所有顶点并将它们的位置作为 float4 返回。
-
-一个名为 Distributor（分发器）的特殊硬件单元将分组的顶点块发送到图元装配阶段。
-
-## 3 - 图元装配
-
-上一个阶段将分组为数据块的顶点处理到此阶段。需要记住的是，属于同一几何形状（图元）的顶点始终在同一个块中。这意味着点的一个顶点、直线的两个顶点或三角形的三个顶点将始终在同一个块中，因此永远不会进行第二次获取。
-
-## Metal 教程
-
-# 第 3 章：渲染流水线
-
-img/8d763acb335ab213ea9213a628f7d844_72_0.png
-
-一旦顶点处理完成，缓存就会为下一批顶点清空。此时，顶点已经排序并分组，准备好发送到图元装配阶段。
-
-(注：由于输入文本中存在大量重复的段落，译文根据“不要重复输出原文”的原则，仅对核心文本内容进行了翻译翻译整合。。。，，，，，，的的的翻译。)
-
-
-
-
-
-## Metal 教程
-
-# 第 3 章：渲染流水线
 
 扫描算法用于确定线段上的所有点或三角形内部的所有点是否可见，如果是，则整个三角形将完全填充颜色。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_76_0.png)
 
-对于移动设备，光化利用了 PowerVR GPU 的分块架构（tiled architecture），通过在 32x32 的瓦片网格中并行光化图元。在这种情况下，32 是分配给每个瓦片的屏幕像素数量，但这个尺寸完美契合了 USC（统一着色器）中的核心数量。
+对于移动设备，光化利用了 PowerVR GPU 的分块架构（tiled architecture），通过在 `32x32` 的瓦片网格中并行光化图元。在这种情况下，`32` 是分配给每个瓦片的屏幕像素数量，但这个尺寸完美契合了 USC（统一着色器）中的核心数量。
 
 如果一个对象在另一个对象后面呢？光化器能判断渲染哪个对象吗？这个隐藏表面移除问题可以使用存储的深度信息（早期 Z 测试）来解决，以确定每个点是否在场景中其他点之前。
 
 光化完成后，另外三个专用硬件单元将登场：
 
-- 一个名为 Hierarchical-Z 的缓冲区，负责移除被光化器标记为剔除（culling）的片元（fragments）。
+- 一个名为 `Hierarchical-Z` 的缓冲区，负责移除被光化器标记为剔除（culling）的片元（fragments）。
 - 然后 Z 测试和模板测试（Stencil Test）通过将片元与深度和模板缓冲区比较，移除不可见的片元。
 - 最后，插值器（Interpolator）获取剩余的可见片元，并从组合的三角形属性生成片元属性。
 
@@ -1623,15 +1630,13 @@ img/8d763acb335ab213ea9213a628f7d844_72_0.png
 
 ## Metal 教程
 
-# 第 3 章：渲染流水线
-
 片元处理阶段是另一个可编程阶段。你创建一个片元着色器（fragment shader），它将接收纹理坐标、深度和颜色信息。片元的输出是该片元的单一颜色。这些片元中的每一个将为帧缓冲区（framebuffer）中的最终像素做出贡献。每个属性都会对每个片元进行插值处理。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_78_0.png)
 
-例如，为了渲染这个三角形，顶点函数将处理具有红、绿、蓝颜色的三个顶点。如图所示，构成此三角形的每个片元都是从线上的这三个端点插值而来的。插值方程是参数化的，形式如下，其中参数 **p** 是一种颜色的百分比（或 0 到 1 的范围）：
+例如，为了渲染这个三角形，顶点函数将处理具有红、绿、蓝颜色的三个顶点。如图所示，构成此三角形的每个片元都是从线上的这三个端点插值而来的。插值方程是参数化的，形式如下，其中参数 `p` 是一种颜色的百分比（或 0 到 1 的范围）：
 
-```
+```text
 newColor = p * oldColor + (1 - p) * oldColor
 ```
 
@@ -1641,13 +1646,13 @@ newColor = p * oldColor + (1 - p) * oldColor
 
 在 `Shaders.Metal` 中，在文件末尾添加片元函数：
 
-```
+```metal
 fragment float4 fragment_main() {
     return float4(1, 0, 0, 1);
 }
 ```
 
-这是最简单的片元函数。你以 float4 的形式返回插值后的颜色。组成立方体的所有片元将是红色的。GPU 获取片元并进行一系列测试：
+这是最简单的片元函数。你以 `float4` 的形式返回插值后的颜色。组成立方体的所有片元将是红色的。GPU 获取片元并进行一系列测试：
 
 - Alpha 测试（alpha-testing）根据深度测试确定哪些不透明对象被绘制，哪些不绘制。
 - 对于透明对象，Alpha 混合（alpha-blending）将新对象的颜色与已保存在颜色缓冲区中的颜色合并。
@@ -1672,58 +1677,56 @@ fragment float4 fragment_main() {
 
 构建并运行应用，你的应用将渲染这个红立方体：
 
-img/8d763acb335ab213ea9213a628f7d844_80.png
+`img/8d763acb335ab213ea9213a628f7d844_80.png`
 
-注意立方体不是正方形。记得 Metal 使用归一化设备坐标（NDC），在 X 轴上为 -1 到 1。调整窗口大小，相对于窗口的大小。在下一章中，你将能够精确地放置对象。
+注意立方体不是正方形。记得 Metal 使用归一化设备坐标（NDC），在 X 轴上为 `-1` 到 `1`。调整窗口大小，相对于窗口的大小。在下一章中，你将能够精确地放置对象。
 
 ## 将数据发送到 GPU
 
 Metal 关于精美的图形和流畅的动画。作为下一步，你将让立方体在屏幕上移动。为了实现这一点，你需要一个每帧更新的计时器，立方体的位置将取决于这个计时器。顶点函数是更新顶点的地方，你会将计时器数据发送到 GPU。
 
-在 Renderer 顶部添加计时器属性：
+在 `Renderer` 顶部添加计时器属性：
 
-```
+```swift
 var timer: Float = 0
 ```
 
-在 `draw(in:)` 中，在
+在 `draw(in:)` 中，在以下代码之前添加：
 
-```
+```swift
 renderEncoder.setPipelineState(pipelineState)
-``` 之前添加：
-
 ```
+
+```swift
 // 1
 timer += 0.05
 var currentTime = sin(timer)
+
 // 2
 renderEncoder.setVertexBytes(&currentTime,
-length: MemoryLayout<Float>.stride,
-index: 1)
+                             length: MemoryLayout<Float>.stride,
+                             index: 1)
 ```
 
-- 1. 每帧增加计时器。你想让曲线在屏幕上移动，所以你会使用一个 -1 到 1 之间的值。使用 `sin()` 是实现此点的很好的方法。
-- 2 如果你向 GPU 发送少量数据（小于 4kb），`setVertexBytes(:length:index:)` 是设置 MTLBuffer 的替代方案。在这里，你在索引 1 设置设置 currentTime。
+- 1. 每帧增加计时器。你想让曲线在屏幕上移动，所以你会使用一个 `-1` 到 `1` 之间的值。使用 `sin()` 是实现此点的很好的方法。
+- 2. 如果你向 GPU 发送少量数据（小于 4kb），`setVertexBytes(:length:index:)` 是设置 `MTLBuffer` 的替代方案。在这里，你在索引 1 设置 `currentTime`。
 
 在 `Shaders.metal` 中，替换顶点函数为：
 
-```
+```metal
 vertex float4 vertex_main(const VertexIn vertexIn [[ stage_in ]],
-             constant float &timer [[ buffer(1) ]]) {
-float4 position = vertexIn.position;
-position.y += timer;
-return position;
+                          constant float &timer [[ buffer(1) ]]) {
+    float4 position = vertexIn.position;
+    position.y += timer;
+    return position;
 }
 ```
 
-在这里，你的顶点函数以 buffer 1 中的 float 形式接收计时器。你将计时器值加到 y 位置并从函数返回新位置。
+在这里，你的顶点函数以 buffer 1 中的 `float` 形式接收计时器。你将计时器值加到 y 位置并从函数返回新位置。
 
 构建并运行应用，你现在有一个动画的立方体了！
 
-img/8d763acb335ab213ea9213a628f7d844_81.png
-
-
-
+`img/8d763acb335ab213ea9213a628f7d844_81.png`
 
 Metal 教程
 
@@ -1733,7 +1736,7 @@ Metal 教程
 
 ## 挑战
 
-使用 resources Models 文件夹中的 `train.obj` 模型将立方体替换为这辆火车。导入模型时，请确保勾选 **Create Groups**（创建分组）。顶点描述符代码请参考上一章。
+使用 resources Models 文件夹中的 `train.obj` 模型将立方体替换为这辆火车。导入模型时，请确保勾选 `Create Groups`（创建分组）。顶点描述符代码请参考上一章。
 
 完成此操作后，让火车左右移动，而不是上下移动。
 
@@ -1741,13 +1744,12 @@ Metal 教程
 
 本章的挑战项目包含了 macOS 和 iOS 目标。查看此项目以了解它是如何构建的。
 
-`Pipeline-macOS` 仅包含 macOS 目标的文件；`Pipeline-iOS` 仅包含 iOS 目标的文件。你可以在文件检查器（File inspector）中为文件选择目标。
-
-`Pipeline` 包含目标目标的文件。Metal 和着色器代码将放在此文件夹中。要选择运行哪个目标，请选择 Xcode 窗口左角的方案（scheme）。
+`Pipeline-macOS` 仅包含 macOS 目标的文件；`Pipeline-iOS` 仅包含 iOS 目标的文件。`Pipeline` 包含目标目标的文件。你可以在文件检查器（File inspector）中为文件选择目标。
 
 如果你遇到任何困难，完整代码位于本章项目的挑战目录中。
 
 # 第 4 章：坐标空间
+
 作者：Caroline Begbie
 
 你在设备屏幕上看到的一切，从你输入的字符到你欣赏的数字艺术，其表面下全是数学。
@@ -1758,11 +1760,11 @@ Metal 教程
 
 ## 变换
 
-在图中，使用矢量图像编辑器 Affinity Designer 通过一系列仿射变换对猫进行了平移、缩放和旋转。
+在图中，使用矢量图像编辑器 `Affinity Designer` 通过一系列仿射变换对猫进行了平移、缩放和旋转。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_83_0.png)
 
-Affinity Designer 不是单独计算每个位置，而是创建一个包含变换组合的变换矩阵。然后它将变换应用于每个元素。
+`Affinity Designer` 不是单独计算每个位置，而是创建一个包含变换组合的变换矩阵。然后它将变换应用于每个元素。
 
 > **注意：** 仿射（affine）意味着在你完成变换后，所有平行线仍然保持平行。
 
@@ -1770,17 +1772,17 @@ Affinity Designer 不是单独计算每个位置，而是创建一个包含变�
 
 ## 平移
 
-打开本章 starter 文件夹中的启动项目 playground。运行该 playground，你将得到一个空白的奶油色屏幕。启动 playground 已设置好绘图，但没有什么可画的。
+打开本章 starter 文件夹中的启动项目 `playground`。运行该 `playground`，你将得到一个空白的奶油色屏幕。启动 `playground` 已设置好绘图，但没有什么可画的。
 
-在这个 playground 中，你将不会导入之前做过的模型——你将顶点作为简单的数组发送给 GPU，而不是需要设置顶点描述符。你将从设置顶点函数和片段函数来绘制这些单个顶点开始。
+在这个 `playground` 中，你将不会导入之前做过的模型——你将顶点作为简单的数组发送给 GPU，而不是需要设置顶点描述符。你将从设置顶点函数和片段函数来绘制这些单个顶点开始。
 
 ## 顶点函数
 
-在 playground 的 Resources 文件夹中，打开 `Shaders.metal`。
+在 `playground` 的 Resources 文件夹中，打开 `Shaders.metal`。
 
 在现有的顶点函数之前，添加包含你要从顶点函数返回值的结构体：
 
-```
+```metal
 struct VertexOut {
     float4 position [[ position ]];
     float point_size [[ point_size ]];
@@ -1791,22 +1793,23 @@ struct VertexOut {
 
 将顶点函数替换为：
 
-```
+```metal
 // 1
 vertex VertexOut vertex_main(constant float3 *vertices [[ buffer(0) ]],
-// 2
-uint id [[ vertex_id ]]]
-// 3
-VertexOut vertex_out;
-vertex_out.position = float4(vertices[id], 1);
-// 4
-vertex_out.point_size = 20.0;
-return vertex_out;
+                             // 2
+                             uint id [[ vertex_id ]]) {
+    // 3
+    VertexOut vertex_out;
+    vertex_out.position = float4(vertices[id], 1);
+    // 4
+    vertex_out.point_size = 20.0;
+    return vertex_out;
+}
 ```
 
 遍历这段代码：
 
-- 1. 起初你只画一个点，很快你就会将向 GPU 发送三角形的三个顶点。这将包含顶点 xyz 位置的 `float3s` 数组。在 Swift 端，你将顶点设置在缓冲 索引 0 中。
+- 1. 起初你只画一个点，很快你就会将向 GPU 发送三角形的三个顶点。这将包含顶点 xyz 位置的 `float3s` 数组。在 Swift 端，你将顶点设置在缓冲索引 0 中。
 - 2. 属性 `[[ vertex_id ]]` 告诉顶点函数当前顶点的 id。它是数组中的索引。
 - 3. 从数组中提取顶点位置并将其转换为 `float4`。
 - 4. 设置点的大小。你可以根据喜好将其调大或调小。
@@ -1815,10 +1818,9 @@ return vertex_out;
 
 现在将片段函数替换为这段代码：
 
-```
-fragment float4 fragment_main(constant float4 &color [[ buffer(0) ]]
-{
-  return color;
+```metal
+fragment float4 fragment_main(constant float4 &color [[ buffer(0) ]]) {
+    return color;
 }
 ```
 
@@ -1826,58 +1828,59 @@ fragment float4 fragment_main(constant float4 &color [[ buffer(0) ]]
 
 ## 设置数据
 
-回到主 playground 页面，你将绘制两个顶点。你将在数组中保留一个顶点点并创建两个缓冲区：一个包含原始点，另一个包含平移后的点。
+回到主 `playground` 页面，你将绘制两个顶点。你将在数组中保留一个顶点点并创建两个缓冲区：一个包含原始点，另一个包含平移后的点。
 
-在 playground 页面中，在：
+在 `playground` 页面中，在：
 
-```
+```text
 // drawing code here
 ```
 
-
-
 在这张图中，蓝色箭头是向量。
 
-![]((img/8d763acb335ab213ea9213a628f7d844_88_0.png)
+![](img/8d763acb335ab213ea9213a628f7d844_88_0.png)
 
-左侧的蓝色箭头是一个值为 [-1, 2] 的向量。巧合的是，右侧被猫部分遮挡的蓝色箭头同样也是一个值为 [-1, 2] 的向量。
+左侧的蓝色箭头是一个值为 `[-1, 2]` 的向量。巧合的是，右侧被猫部分遮挡的蓝色箭头同样也是一个值为 `[-1, 2]` 的向量。
 
 位置（点）是空间中的位置，而向量是空间中的位移；换句话说，一个向量包含了移动的幅度和方向。
 
-如果你用蓝色向量位移猫，它最终将位于点 (2, 4)。那是猫的原始位置 (3, 2) 加上向量 [-1, 2] 得到的结果。
+如果你用蓝色向量位移猫，它最终将位于点 `(2, 4)`。那是猫的原始位置 `(3, 2)` 加上向量 `[-1, 2]` 得到的结果。
 
-这个 2D 向量是一个 1x2 矩阵。它有一列和两行。
+这个 2D 向量是一个 `1x2` 矩阵。它有一列和两行。
 
-> 注意：Metal 矩阵是按列主序（column-major order）构建的。
+> **注意：** Metal 矩阵是按列主序（column-major order）构建的。
 
-矩阵是一个二维数组。即使是单一个数字 1 也是一个 1×1 矩阵。事实上，数字 1 是唯一的，当你将一个数乘以 1 时，答案始终是该数。方阵——即数组宽度等于高度的数组——具有相同属性的矩阵。它被称为单位矩阵。任何向量或矩阵乘以单位矩阵都会返回相同的值。
+矩阵是一个二维数组。即使是单一个数字 `1` 也是一个 `1×1` 矩阵。事实上，数字 `1` 是唯一的，当你将一个数乘以 `1` 时，答案始终是该数。方阵——即数组宽度等于高度的数组——具有相同属性的矩阵。它被称为单位矩阵。任何向量或矩阵乘以单位矩阵都会返回相同的值。
 
-## Metal 教程
+
+
+# Metal 教程
 
 一个 4×4 单位矩阵看起来如下（除对角线上的 1 之外，全为 0）：
 
 | 1 | 0 | 0 | 0 |
+|---|---|---|---|
 | 0 | 1 | 0 | 0 |
 | 0 | 0 | 1 | 0 |
 | 0 | 0 | 0 | 1 |
 
-3D 变换矩阵有四行四列。它在左上角的 3×3 矩阵中存储缩放和旋转信息，平移信息存储在最后一列。当你将向量和矩阵相时，左侧矩阵或向量的列数必须等于右侧的行数。例如，你不能将一个 float3 乘以一个 float4+4。很快你会发现，必须为 3D 点添加一个额外的 w 维度。
+3D 变换矩阵有四行四列。它在左上角的 3×3 矩阵中存储缩放和旋转信息，平移信息存储在最后一列。当你将向量和矩阵相乘时，左侧矩阵或向量的列数必须等于右侧的行数。例如，你不能将一个`float3`乘以一个`float4+4`。很快你会发现，必须为 3D 点添加一个额外的`w`维度。
 
-在本章节的 Resources 文件夹中包含一个名为 MatrixCalculator 的矩阵计算器应用。这个计算器将帮助你直观地理解矩阵工作的数学原理。直接运行该应用，或者打开源码通过 Xcode 运行。
+在本章节的`Resources`文件夹中包含一个名为`MatrixCalculator`的矩阵计算器应用。这个计算器将帮助你直观地理解矩阵工作的数学原理。直接运行该应用，或者打开源码通过`Xcode`运行。
 
-在右侧，将 Matrix 改为 Vector。左侧的矩阵将保存变换信息，目前是一个单位矩阵。右侧的向量代表你在 3D 空间中的点。左侧矩阵乘以右侧向量（或矩阵）产生结果（Result）。
+在右侧，将`Matrix`改为`Vector`。左侧的矩阵将保存变换信息，目前是一个单位矩阵。右侧的向量代表你在 3D 空间中的点。左侧矩阵乘以右侧向量（或矩阵）产生结果（`Result`）。
 
 变换矩阵的第 3 列包含一个将点位的向量。
 
-使用矩阵计算上文的猫位移示例。将右侧的向量改为猫的位置 [3, 2, 0, 1]。在变换矩阵中，将第 3 列更改为 [-1, 2, 0, 1]。这是一个带有额外 z 和 w 值的二维向量。
+使用矩阵计算上文的猫位移示例。将右侧的向量改为猫的位置`[3, 2, 0, 1]`。在变换矩阵中，将第 3 列更改为`[-1, 2, 0, 1]`。这是一个带有额外`z`和`w`值的二维向量。
 
-应用将向量乘以矩阵，结果为 [2, 4, 0, 1]，这与上方的结果相同。
+应用将向量乘以矩阵，结果为`[2, 4, 0, 1]`，这与上方的结果相同。
 
 ![]((img/8d763acb335ab213ea9213a628f7d844_90_0.png)
 
 在你阅读接下来的示例时，请尝试使用矩阵计算器，观察原始点是如何随各种矩阵而变化的。
 
-现在你将以同样的方式在 Playground 中翻译你的顶点。要设置变换矩阵，在声明顶点 数组后添加此行代码：
+现在你将以同样的方式在`Playground`中翻译你的顶点。要设置变换矩阵，在声明顶点数组后添加此行代码：
 
 ```
 var matrix = matrix_identity_float4x
@@ -1908,13 +1911,13 @@ vertices = vertices.map {
 }
 ```
 
-记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将 float3 转换为 float4，为顶点添加 w 组件，这样你就可以将顶点乘以 4×4 矩阵了。
+记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将`float3`转换为`float4`，为顶点添加`w`组件，这样你就可以将顶点乘以 4×4 矩阵。
 
-这可能会变得很冗长，但在 Metal Shading Language 中它更简洁，正如你稍后看到的。运行 Playground，你将得到与之前使用矩阵相同的结果。
+这可能会变得很冗长，但在`Metal Shading Language`中它更简洁，正如你稍后看到的。运行`Playground`，你将得到与之前使用矩阵相同的结果。
 
 ## GPU 上的矩阵
 
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。这是串行处理，与并行处理相比效率要低得多。每个顶点被处理的还有另一个地方——GPU。你可以将变换矩阵传递给 GPU，并通过顶点着色器（vertex shader）将每个顶点乘以矩阵。GPU 针对矩阵计算进行了优化。
+你可能已经注意到这段顶点处理代码是在 CPU 上执行的。这是串行处理，与并行处理相比效率要低得多。每个顶点被处理的还有另一个地方——GPU。你可以将变换矩阵传递给 GPU，并通过顶点着色器（`vertex shader`）将每个顶点乘以矩阵。GPU 针对矩阵计算进行了优化。
 
 替换以下代码：
 
@@ -1932,9 +1935,9 @@ return [vertex.x, vertex.y, vertex.z]
 renderEncoder.setBytes(&matrix, length: MemoryLayout<float4x4>.size, index: 1)
 ```
 
-在这里，通过顶点着色器向 GPU 传递矩阵。在 Shaders.metal 中，修改顶点着色器：
+在这里，通过顶点着色器向 GPU 传递矩阵。在`Shaders.metal`中，修改顶点着色器：
 
-```
+```cpp
 float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
   float4 vertex = float4(vertices[id], 1)
   vertex = matrix * vertex;
@@ -1945,190 +1948,6 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 这里你将变换矩阵传递给 GPU。
 
 ## 坐标空间
-
-你可能注意到这段顶点处理代码是在 CPU 上执行的。这是串行处理，与并行处理相比效率要低得多。每个顶点被处理的还有另一个地方——GPU。你可以将变换矩阵传递给 GPU，并通过顶点着色器将每个顶点乘以矩阵。GPU 针对矩阵计算进行了优化。
-
-替换以下代码：
-
-```
-vertices = vertices.map {
-var vertex = float4($0.x, $0.y, $0.z, 1)
-vertex = matrix * vertex
-return [vertex.x, vertex.y, vertex.z]
-}
-```
-
-替换为：
-
-```
-renderEncoder.setBytes(&matrix, length: MemoryLayout<float4x4>.size, index: 1)
-```
-
-在这里，你将变换矩阵传递给 GPU。在 Shaders.metal 中，修改顶点着色器：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-## 变换
-
-现在你将以同样的方式在 Playground 中翻译你的顶点。要设置变换矩阵，在声明顶点 数组后添加此行代码：
-
-```
-var matrix = matrix_identity_float4x
-```
-
-在这里，你设置了一个 4×4 单位矩阵。
-
-将矩阵的最后一列设置为你的位移向量。将：
-
-```
-vertices[0].x += 0.3
-vertices[0].y -= 0.4
-```
-
-替换为：
-
-```
-matrix.columns.3 = [0.3, -0.4, 0, 1]
-```
-
-紧接该代码，处理每个顶点并将其乘以变换矩阵。
-
-```
-vertices = vertices.map {
-  vertex = float4($0.x, $0.y, $0.z, 1)
-  vertex = matrix * vertex
-  return [vertex.x, vertex.y, vertex.z]
-}
-```
-
-记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将 float3 转换为 float4，为顶点添加 w 组件，这样你就可以将顶点乘以 4×4 矩阵。
-
-这可能会变得很冗长，但在 Metal Shading Language 中它更简洁，正如你稍后看到的。运行 Playground，你将得到与之前使用矩阵相同的结果。
-
-## 缩放
-
-在你阅读接下来的示例时，请尝试使用矩阵计算器，观察你的原始点是如何随各种矩阵而变化的。
-
-现在你将以同样的方式在 Playground 中翻译你的顶点。要设置变换矩阵，在声明顶点 数组后添加此行代码：
-
-```
-var matrix = matrix_identity_float4x
-```
-
-在这里，你设置了一个 4×4 单位矩阵。
-
-将矩阵的最后一列设置为你的位移向量。将：
-
-```
-vertices[0].x += 0.3
-vertices[0].y -= 0.4
-```
-
-替换为：
-
-```
-matrix.columns.3 = [0.3, -0.4, 0, 1]
-```
-
-紧接该代码，处理每个顶点并将其乘以变换矩阵。
-
-```
-vertices = vertices.map {
-  vertex = float4($0.x, $0.y, $0.z, 1)
-  vertex = matrix * vertex
-  return [vertex.x, vertex.y, vertex.z]
-}
-```
-
-记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将 float3 转换为 float4，为顶点添加 w 组件，这样你就可以将顶点乘以 4×4 矩阵。
-
-这可能会变得很冗长，但在 Metal Shading Language 中它更简洁，正如你稍后看到的。运行 Playground，你将得到与之前使用矩阵相同的结果。
-
-#  {移
-
-在这张图中，蓝色箭头是向量。
-
-![]((img/8d763acb335ab213ea9213a628f7d844_88_0.png)
-
-左侧的蓝色箭头是一个值为 [-1, 2] 的向量。巧合的是，右侧被猫部分遮挡的蓝色箭头同样也是一个值为 [-1, 2] 的向量。
-
-位置（点）是空间中的位置，而向量是空间中的位移；换句话说，一个向量包含了移动的幅度和方向。
-
-如果你用蓝色向量位移猫，它最终将位于点 (2, 4)。那是猫的原始位置 (3, 2) 加上向量 [-1, 2] 得到的结果。
-
-这个 2D 向量是一个 1x2 矩阵。它有一列和两行。
-
-> 注意：Metal 矩阵是按列主序（column-major order）构建的。
-
-矩阵是一个二维数组。即使是单一个数字 1 也是一个 1×1 矩阵。事实上，数字 1 是唯一的，当你将一个数乘以 1 时，答案始终是该数。方阵——即数组宽度等于高度的数组——具有相同属性的矩阵。它被称为单位矩阵。任何向量或矩阵乘以单位矩阵都会返回相同的值。
-
-## Metal 教程
-
-一个 4×4 单位矩阵看起来如下（除对角线上的 1 之外，全为 0）：
-
-| 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 0 |
-| 0 | 0 | 0 | 1 |
-
-3D 变换矩阵有四行四列。它在左上角的 3×3 矩阵中存储缩放和旋转信息，平移信息存储在最后一列。当你将向量和矩阵相时，左侧矩阵或向量的列数必须等于右侧的行数。例如，你不能将一个 float3 乘以一个 float4+4。很快你会发现，必须为 3D 点添加一个额外的 w 维度。
-
-在本章节的 Resources 文件夹中包含一个名为 MatrixCalculator 的矩阵计算器应用。这个计算器将帮助你直观地理解矩阵工作的数学原理。直接运行该应用，或者打开源码通过 Xcode 运行。
-
-在右侧，将 Matrix 改为 Vector。左侧的矩阵将保存变换信息，目前是一个单位矩阵。右侧的向量代表你在 3D 空间中的点。左侧矩阵乘以右侧向量（或矩阵）产生结果（Result）。
-
-变换矩阵的第 3 列包含一个将点位的向量。
-
-使用矩阵计算上文的猫位移示例。将右侧的向量改为猫的位置 [3, 2, 0, 1]。在变换矩阵中，将第 3 列更改为 [-1, 2, 0, 1]。这是一个带有额外 z 和 w 值的二维向量。
-
-应用将向量乘以矩阵，结果为 [2, 4, 0, 1]，这与上方的结果相同。
-
-![]((img/8d763acb335ab213ea9213a628f7d844_90_0.png)
-
-在你阅读接下来的示例时，请尝试使用矩阵计算器，观察你的原始点是如何随各种矩阵而变化的。
-
-现在你将以同样的方式在 Playground 中翻译你的顶点。要设置变换矩阵，在声明顶点 数组后添加此行代码：
-
-```
-var matrix = matrix_identity_float4x
-```
-
-在这里，你设置了一个 4×4 单位矩阵。
-
-将矩阵的最后一列设置为你的位移向量。将：
-
-```
-vertices[0].x += 0.3
-vertices[0].y -= 0.4
-```
-
-替换为：
-
-```
-matrix.columns.3 = [0.3, -0.4, 0, 1]
-```
-
-紧接该代码，处理每个顶点并将其乘以变换矩阵。
-
-```
-vertices = vertices.map {
-  vertex = float4($0.x, $0.y, $0.z, 1)
-  vertex = matrix * vertex
-  return [vertex.x, vertex.y, vertex.z]
-}
-```
-
-记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将 float3 转换为 float4，为顶点添加 w 组件，这样你就可以将顶点乘以 4×4 矩阵。
-
-这可能会变得很冗长，但在 Metal Shading Language 中它更简洁，正如你稍后看到的。运行 Playground，你将得到与之前使用矩阵相同的结果。
-
-## GPU 上的矩阵
 
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。这是串行处理，与并行处理相比效率要低得多。每个顶点被处理的还有另一个地方——GPU。你可以将变换矩阵传递给 GPU，并通过顶点着色器将每个顶点乘以矩阵。GPU 针对矩阵计算进行了优化。
 
@@ -2148,7 +1967,7 @@ return [vertex.x, vertex.y, vertex.z]
 renderEncoder.setBytes(&matrix, length: MemoryLayout<float4x4>.size, index: 1)
 ```
 
-在这里，你将变换矩阵传递给 GPU。在 Shaders.metal 中，修改顶点着色器：
+在这里，你将变换矩阵传递给 GPU。在`Shaders.metal`中，修改顶点着色器：
 
 ```cpp
 float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
@@ -2158,10 +1977,112 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
+## 变换
+
+现在你将以同样的方式在`Playground`中翻译你的顶点。要设置变换矩阵，在声明顶点数组后添加此行代码：
+
+```
+var matrix = matrix_identity_float4x
+```
+
+在这里，你设置了一个 4×4 单位矩阵。
+
+将矩阵的最后一列设置为你的位移向量。将：
+
+```
+vertices[0].x += 0.3
+vertices[0].y -= 0.4
+```
+
+替换为：
+
+```
+matrix.columns.3 = [0.3, -0.4, 0, 1]
+```
+
+紧接该代码，处理每个顶点并将其乘以变换矩阵。
+
+```
+vertices = vertices.map {
+  vertex = float4($0.x, $0.y, $0.z, 1)
+  vertex = matrix * vertex
+  return [vertex.x, vertex.y, vertex.z]
+}
+```
+
+记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将`float3`转换为`float4`，为顶点添加`w`组件，这样你就可以将顶点乘以 4×4 矩阵。
+
+这可能会变得很冗长，但在`Metal Shading Language`中它更简洁，正如你稍后看到的。运行`Playground`，你将得到与之前使用矩阵相同的结果。
+
+## 缩放
+
+在你阅读接下来的示例时，请尝试使用矩阵计算器，观察你的原始点是如何随各种矩阵而变化的。
+
+现在你将以同样的方式在`Playground`中翻译你的顶点。要设置变换矩阵，在声明顶点数组后添加此行代码：
+
+```
+var matrix = matrix_identity_float4x
+```
+
+在这里，你设置了一个 4×4 单位矩阵。
+
+将矩阵的最后一列设置为你的位移向量。将：
+
+```
+vertices[0].x += 0.3
+vertices[0].y -= 0.4
+```
+
+替换为：
+
+```
+matrix.columns.3 = [0.3, -0.4, 0, 1]
+```
+
+紧接该代码，处理每个顶点并将其乘以变换矩阵。
+
+```
+vertices = vertices.map {
+  vertex = float4($0.x, $0.y, $0.z, 1)
+  vertex = matrix * vertex
+  return [vertex.x, vertex.y, vertex.z]
+}
+```
+
+记住，你只能相乘相似的矩阵，即左侧矩阵或向量的列数等于右侧的行数。在这里，你将`float3`转换为`float4`，为顶点添加`w`组件，这样你就可以将顶点乘以 4×4 矩阵。
+
+这可能会变得很冗长，但在`Metal Shading Language`中它更简洁，正如你稍后看到的。运行`Playground`，你将得到与之前使用矩阵相同的结果。
+
+## 位移
+
+在这张图中，蓝色箭头是向量。
+
+![]((img/8d763acb335ab213ea9213a628f7d844_88_0.png)
+
+左侧的蓝色箭头是一个值为`[-1, 2]`的向量。巧合的是，右侧被猫部分遮挡的蓝色箭头同样也是一个值为`[-1, 2]`的向量。
+
+位置（点）是空间中的位置，而向量是空间中的位移；换句话说，一个向量包含了移动的幅度和方向。
+
+如果你用蓝色向量位移猫，它最终将位于点`(2, 4)`。那是猫的原始位置`(3, 2)`加上向量`[-1, 2]`得到的结果。
+
+这个 2D 向量是一个 1x2 矩阵。它有一列和两行。
+
+> 注意：Metal 矩阵是按列主序（`column-major order`）构建的。
+
+矩阵是一个二维数组。即使是单一个数字 1 也是一个 1×1 矩阵。事实上，数字 1 是唯一的，当你将一个数乘以 1 时，答案始终是该数。方阵——即数组宽度等于高度的数组——具有相同属性的矩阵。它被称为单位矩阵。任何向量或矩阵乘以单位矩阵都会返回相同的值。
+
+
+
+```cpp
+float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
+  float4 vertex = float4(vertices[id], 1)
+  vertex = matrix * vertex;
+  return vertex;
+}
+```
+
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
 
-[/content]
 替换为：
 
 ```cpp
@@ -2172,9 +2093,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2185,9 +2105,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2198,9 +2117,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2211,9 +2129,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2224,9 +2141,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2237,9 +2153,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2250,9 +2165,8 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
+
 替换为：
 
 ```cpp
@@ -2263,145 +2177,12 @@ float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]
 }
 ```
 
-[content]
 你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-[/content]
-替换为：
-
-```cpp
-float4 vertex_main(constant float3 *vertices [[buffer(0)]], uint id [[vertex_id]]) {
-  float4 vertex = float4(vertices[id], 1)
-  vertex = matrix * vertex;
-  return vertex;
-}
-```
-
-[content]
-你可能已经注意到这段顶点处理代码是在 CPU 上执行的。
-
-
-
 
 ## 矩阵合并
 
 你可能希望旋转围绕世界原点以外的某点进行。
+
 现在你将让三角形围绕它最右侧的点进行旋转。
 
 要做到这一点，你需要计算世界原点与最右侧点之间的距离。你将所有顶点平移这段距离，进行旋转，然后再平移回来。
@@ -2450,9 +2231,12 @@ matrix = rotate * translate.inverse
 三角形围绕世界原点旋转了 90°。
 
 > **注意：** 矩阵乘法的顺序非常重要。尝试将之前的代码修改为：
-matrix = translate.inverse * rotate
 
-你会得到一个完全不同的（且在此例中是错误的）结果。通常，乘法顺序是 TRS 或 translate * rotate * scale * point。矩阵操作是反向的——你首先缩放点，然后旋转结果，最后平移该结果。
+```
+matrix = translate.inverse * rotate
+```
+
+你会得到一个完全不同的（且在此例中是错误的）结果。通常，乘法顺序是 TRS 或 `translate * rotate * scale * point`。矩阵操作是反向的——你首先缩放点，然后旋转结果，最后平移该结果。
 
 将你刚刚输入的代码修改为：
 
@@ -2563,9 +2347,6 @@ matrix = translate * rotate * translate.inverse
 
 ![](img/8d763acb335ab213ea9213a628f7d844_101_1.png)
 
-
-
-
 ## Metal 教程
 
 通过将火车引入到其他坐标空间，可以将火车的顶点位置与窗口大小解耦。顶点函数负责将模型顶点通过这些不同的坐标空间进行转换，而你将在那里执行不同空间之间转换的矩阵乘法。
@@ -2652,6 +2433,8 @@ Metal 教程
 
 将顶点函数更改为：
 
+
+
 ```
 vertex float4 vertex_main(const VertexIn vertexIn [[ stage_in ]],
              constant Uniforms&uniforms [[ buffer(i) ]]
@@ -2661,27 +2444,23 @@ vertex float4 vertex_main(const VertexIn vertexIn [[ stage_in ]],
 }
 ```
 
-在这里，你接收 Uniforms 结构体作为参数，并将所有顶点乘以模型矩阵。构建并运行应用。
+在这里，你接收 `Uniforms` 结构体作为参数，并将所有顶点乘以模型矩阵。构建并运行应用。
 
 你应该看到以下内容：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_104_0.png)
 
-所有顶点在 y 方向上平移了 0.3 个单位，然后进行旋转。注意火车是如何倾斜的。将你的窗口设为正方形，即可看到火车正确旋转。
+所有顶点在 `y` 方向上平移了 0.3 个单位，然后进行旋转。注意火车是如何倾斜的。将你的窗口设为正方形，即可看到火车正确旋转。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_104_1.png)
 
 很快就会修复这个倾斜问题。
 
-raywenderlich.com
-
-105
-
 ## View matrix（视图矩阵）
 
 为了在世界空间和相机空间之间转换，你需要定义一个视图矩阵。根据你希望如何在应用程序中移动相机，可以适当构建视图矩阵。你在这里创建的视图矩阵是一个简单的矩阵，最适合 FPS（第一人称射击）风格。
 
-在 Common.h 中，为 Uniforms 添加 `viewMatrix`：
+在 `Common.h` 中，为 `Uniforms` 添加 `viewMatrix`：
 
 ```
 typedef struct {
@@ -2690,7 +2469,7 @@ typedef struct {
 } Uniforms;
 ```
 
-在 Renderer.swift 中，在 `init(metalView)` 结束添加此代码：
+在 `Renderer.swift` 中，在 `init(metalView)` 结束添加此代码：
 
 ```swift
 uniforms.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
@@ -2698,7 +2477,7 @@ uniforms.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
 
 记住，场景中的所有对象都应该向相机相反的方向移动。`inverse` 执行相反的变换。例如，当相机向右移动时，世界中的一切都将向左移动 0.8 个单位。你设置相机在世界空间中的位置，然后在最后添加 `.inverse`，这样所有对象都会对相机做出反应。
 
-在 Shaders.metal 中，将：
+在 `Shaders.metal` 中，将：
 
 ```swift
 float4 position = uniforms.modelMatrix * vertexIn.position;
@@ -2708,12 +2487,9 @@ float4 position = uniforms.modelMatrix * vertexIn.position;
 
 ```swift
 float4 position = uniforms.viewMatrix * vertexIn.position;
-``` （注：原文 OCR 处存在重复错误，此处根据逻辑修正为使用 viewMatrix）。
+```
 
-
-
-
-## Metal 教程
+（注：原文 OCR 处存在重复错误，此处根据逻辑修正为使用 `viewMatrix`）。
 
 # 第 4 章：坐标空间
 
@@ -2729,9 +2505,9 @@ let rotation = float4x4(rotation: [0, 0, radians(fromDegrees: 45)]);
 let rotation = float4x4(rotation: [0, radians(fromDegrees: 45), 0])
 ```
 
-这会将模型绕 z 轴的旋转改为绕 y 轴的旋转。
+这会将模型绕 `z` 轴的旋转改为绕 `y` 轴的旋转。
 
-> 注意：尝试更改 `init(metalView:)` 中的投影值。将平的 z 值设置为距离 97：火车的前部是可见。在 z=98 时，火车不再可见。（投影的远端值为 100 个单位，相机后退了 3 个单位）。如果你将投影的 `far` 参数更改为 1000，火车将再次可见。
+> 注意：尝试更改 `init(metalView:)` 中的投影值。将平的 `z` 值设置为距离 97：火车的前部是可见。在 `z=98` 时，火车不再可见。（投影的远端值为 100 个单位，相机后退了 3 个单位）。如果你将投影的 `far` 参数更改为 1000，火车将再次可见。
 
 在 `init(metalView:)` 中，将投影矩阵的 `projectionFOV` 更改为 70°：火车看起来更小了，因为视野更宽，水平方向上会有更多的物体放入渲染场景中。
 
@@ -2741,15 +2517,15 @@ let rotation = float4x4(rotation: [0, radians(fromDegrees: 45), 0])
 
 ## 透视除法
 
-现在你已经将顶点从对象空间通过世界空间、相机空间转换到裁剪空间，现在由 GPU 接管并将其转换为 NDC 坐标（即 x 和 y 方向为 -1 到 1，z 方向为 0 到 1）。最终目标是将所有顶点从裁剪空间缩放到 NDC 空间，通过使用第四个分量 `w`，这变得非常简单。
+现在你已经将顶点从对象空间通过世界空间、相机空间转换到裁剪空间，现在由 GPU 接管并将其转换为 NDC 坐标（即 `x` 和 `y` 方向为 -1 到 1，`z` 方向为 0 到 1）。最终目标是将所有顶点从裁剪空间缩放到 NDC 空间，通过使用第四个分量 `w`，这变得非常简单。
 
-要缩放如 (1, 2, 3) 这样的点，你可以有一个第四个分量：(1, 2, 3, 3)。除以最后一个 `w` 分量得到 (1/3, 2/3, 3/3, 1)。现在的 xyz 值现在被缩小了。这些坐标被称为齐次坐标（homogeneous）。（齐次意味着同类。）
+要缩放如 (1, 2, 3) 这样的点，你可以有一个第四个分量：(1, 2, 3, 3)。除以最后一个 `w` 分量得到 (1/3, 2/3, 3/3, 1)。现在的 `xyz` 值现在被缩小了。这些坐标被称为齐次坐标（homogeneous）。（齐次意味着同类。）
 
-投影矩阵将顶点从截锥体投影到 -w 到 w 范围的立方体中。当顶点沿流水线离开顶点函数后，GPU 将执行透视除法，并将 x、y 和 z 值除以它们的 `w` 值。`w` 值越高，坐标越靠后。结果是所有可见顶点现在都在 NDC 范围之内。
+投影矩阵将顶点从截锥体投影到 `-w` 到 `w` 范围的立方体中。当顶点沿流水线离开顶点函数后，GPU 将执行透视除法，并将 `x`、`y` 和 `z` 值除以它们的 `w` 值。`w` 值越高，坐标越靠后。结果是所有可见顶点现在都在 NDC 范围之内。
 
 > 注意：为了避免除以零，投影近平面应该始终是一个略大于零的值。
 
-在下面的图中，狗和猫的高度相同——例如 y 值为 2。通过投影，由于狗的位置较远，它在最终渲染中看起来应该更小。
+在下面的图中，狗和猫的高度相同——例如 `y` 值为 2。通过投影，由于狗的位置较远，它在最终渲染中看起来应该更小。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_110_0.png)
 
@@ -2816,37 +2592,25 @@ func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
 
 在第 7 章“贴图与材质”中，你将简要查看基于物理的渲染（PBR），这是你的渲染器最终将使用的光照技术。
 
-
-
-
-
-## Metal 教程
-
-# 第 5 章：光照基础
-
-ViewControllerExtension.swift 包含两个文件：分别针对 macOS 目标平台和 iOS。它为视图添加了相应的手势。RendererExtension.swift 包含了缩放和旋转的处理器函数。这些函数会更新摄像机的位置和旋转，从而更新场景的视图矩阵。在 macOS 上，你可以通过滚动来缩放，点击并拖拽来旋转场景。在 iOS 上，你可以通过双指缩放来平和平旋转。
+`ViewControllerExtension.swift` 包含两个文件：分别针对 macOS 目标平台和 iOS。它为视图添加了相应的手势。`RendererExtension.swift` 包含了缩放和旋转的处理器函数。这些函数会更新摄像机的位置和旋转，从而更新场景的视图矩阵。在 macOS 上，你可以通过滚动来缩放，点击并拖拽来旋转场景。在 iOS 上，你可以通过双指缩放来平和平旋转。
 
 项目还包含一个额外的模型：树树。你将在本章中将其添加到场景中。
 
-Debuglights.swift 包含了一些用于调试光照位置的代码。它将点光源绘制为圆点，并用一条线表示太阳的方向。
+`Debuglights.swift` 包含了一些用于调试光照位置的代码。它将点光源绘制为圆点，并用一条线表示太阳的方向。
 
 熟悉这些代码，构建项目，并使用鼠标或触控板旋转和缩放火车。
 
-> 注意：尝试更改投影截距。当你运行程序并旋转火车时，你会发现远处的两个轮子比前面的轮子小得多。在 Renderer 的 `mtView(_:drawableSizeChange)` 中，将投影视野（field of view）从 70° 改为 40° 并重新运行程序。你会发现由于视野变窄，尺寸差异变得很大。记得将视野改回 70°。
+> 注意：尝试更改投影截距。当你运行程序并旋转火车时，你会发现远处的两个轮子比前面的轮子小得多。在 `Renderer` 的 `mtView(_:drawableSizeChange)` 中，将投影视野（field of view）从 70° 改为 40° 并重新运行程序。你会发现由于视野变窄，尺寸差异变得很大。记得将视野改回 70°。
 
 ## 表示颜色
 
-光学的物理是一个宏大且迷人的的话题，有许多书籍和互联网上的很大一部分都在致力于它。然而，在本书中，你将学习获取渲染光照、颜色和简单阴影所需的必要基础。你可以在本章 Resources 目录下的 **references.markdown** 中找到更多阅读资料。
+光学的物理是一个宏大且迷人的话题，有许多书籍和互联网上的很大一部分都在致力于它。然而，在本书中，你将学习获取渲染光照、颜色和简单阴影所需的必要基础。你可以在本章 Resources 目录下的 `references.markdown` 中找到更多阅读资料。
 
 在现实世界中，不同波长光的反射赋予了物体颜色。吸收所有光的表面是黑色的。在计算机世界中，像素显示颜色。像素越多，效果越好，生成的图像越清晰。每个像素由子像素组成。这些子像素是预定义的单一颜色：红色、绿色或蓝色。通过开启和关闭这些子像素（取决于位深/深度），屏幕可以显示人眼可见的大部分颜色。
 
 在 Swift 中，你可以使用该像素的 RGB 值来表示颜色。例如，`float3(1, 0, 0)` 是红色像素，`float3(0, 0, 0)` 是黑色，`float3(1, 1, 1)` 是白色。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_116_0.png)
-
-## Metal 教程
-
-# 第 5 章：光照基础
 
 从着影的角度来看，你可以通过将两个值相乘将红色表面与灰色光结合：
 
@@ -2874,15 +2638,15 @@ let result = float3(1.0, 0.0, 0.0) * float3(0.5, 0.5, 0.5)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_18_0.png)
 
-从圆圈引出的线与切线垂直。这些被称为表面法线（surface normals），或者通常简称为法线（normals）。.obj 文件通常包含表面法线值，你可以用它们来查找任何给定点的表面斜率。
+从圆圈引出的线与切线垂直。这些被称为表面法线（surface normals），或者通常简称为法线（normals）。`.obj` 文件通常包含表面法线值，你可以用它们来查找任何给定点的表面斜率。
 
-注意：如果 .obj 文件不包含表面法线，Model 可以在导入时使用 `MDLMeshaddNormals(withAttributeNamed:)` 生成它们。
+注意：如果 `.obj` 文件不包含表面法线，`Model` 可以在导入时使用 `MDLMeshaddNormals(withAttributeNamed:)` 生成它们。
 
 # 向顶点描述符中添加法线
 
 为了能够在片元函数中评估表面的斜率，你需要通过顶点函数将顶点法线传递给片元函数。你将法线添加到顶点描述符中，以便顶点函数处理它们。
 
-在 Model.swift 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
+在 `Model.swift` 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
 
 法线将是第二个属性。在 `defaultVertexDescriptor` 中，找到注释 `// add the normal attribute`。在注释后添加以下内容：
 
@@ -2895,6 +2659,7 @@ vertexDescriptor.attributes[1] = MDLVertex(name: "normal", format: .float3, offs
 ```
 vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 12)
 ```
+
 改为：
 
 ```
@@ -2905,7 +2670,7 @@ vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 24)
 
 为了在片元函数中评估表面的斜率，你需要通过顶点函数将顶点法线传递给片元函数。你将法线添加到顶点描述符中，以便顶点函数可以处理它们。
 
-在 Model.swift 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
+在 `Model.swift` 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
 
 法线将是第二个属性。在 `defaultVertexDescriptor` 中，找到注释 `// add the normal attribute`。在注释后添加以下内容：
 
@@ -2918,6 +2683,7 @@ vertexDescriptor.attributes[1] = MDLVertex(name: "normal", format: .float3, offs
 ```
 vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 12)
 ```
+
 改为：
 
 ```
@@ -2928,7 +2694,7 @@ vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 24)
 
 为了在片元函数中评估表面的斜率，你需要通过顶点函数将顶点法线传递给片元函数。你将法线添加到顶点描述符中，以便顶点函数可以处理它们。
 
-在 Model.swift 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
+在 `Model.swift` 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
 
 法线将是第二个属性。在 `defaultVertexDescriptor` 中，找到注释 `// add the normal attribute`。在注释后添加以下内容：
 
@@ -2941,6 +2707,7 @@ vertexDescriptor.attributes[1] = MDLVertex(name: "normal", format: .float3, offs
 ```
 vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 12)
 ```
+
 改为：
 
 ```
@@ -2951,7 +2718,7 @@ vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 24)
 
 为了在片元函数中评估表面的斜率，你需要通过顶点函数将顶点法线传递给片元函数。你将法线添加到顶点描述符中，以便顶点函数可以处理它们。
 
-在 Model.swift 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
+在 `Model.swift` 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
 
 法线将是第二个属性。在 `defaultVertexDescriptor` 中，找到注释 `// add the normal attribute`。在注释后添加以下内容：
 
@@ -2964,6 +2731,7 @@ vertexDescriptor.attributes[1] = MDLVertex(name: "normal", format: .float3, offs
 ```
 vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 12)
 ```
+
 改为：
 
 ```
@@ -2972,29 +2740,25 @@ vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 24)
 
 *(注：由于原文文本中存在大量重复和逻辑断层，翻译文已根据提供的上下文逻辑进行了结构性对齐，确保技术术语的准确性。)*
 
----
 
-**由于你提供的待翻译文本中存在大量重复内容（如标题和段落多次出现），我已按照文档工程师的逻辑，去除了重复部分并提供了结构清晰的翻译：**
-
-[content]
 
 ## Metal 教程
 
 # 第 5 章：光照基础
 
-ViewControllerExtension.swift 包含两个文件：分别 macOS macOS 目标和 iOS。它为视图添加了相应的手势。RendererExtension.swift 包含了缩放和旋转的处理器函数。这些函数会更新摄像机的位置和旋转，从而更新场景的视图矩阵。在 macOS 上，你可以通过滚动来缩放，点击并拖拽来旋转场景。在 iOS 上，你可以通过双指缩放来平移和旋转。
+`ViewControllerExtension.swift` 包含两个文件：分别针对 macOS 和 iOS 目标。它为视图添加了相应的手势。`RendererExtension.swift` 包含了缩放和旋转的处理器函数。这些函数会更新摄像机的位置和旋转，从而更新场景的视图矩阵。在 macOS 上，你可以通过滚动来缩放，点击并拖拽来旋转场景。在 iOS 上，你可以通过双指缩放来平移和旋转。
 
 项目还包含一个额外的模型：树。你将在本章中将其添加到场景中。
 
-Debuglights.swift 包含了一些用于调试光照位置的代码。它将点光源绘制为圆点，并用一条线表示太阳的方向。
+`Debuglights.swift` 包含了一些用于调试光照位置的代码。它将点光源绘制为圆点，并用一条线表示太阳的方向。
 
 熟悉这些代码，构建项目，并使用鼠标或触控板旋转和缩放火车。
 
-> 注意：尝试更改投影截距。当你运行程序并旋转火车时，你会发现远处的两个轮子比前面的轮子小得多。在 Renderer 的 `mtView(_:drawableSizeChange)` 中，将投影视野（field of view）从 70° 改为 40° 并重新运行程序。你会发现由于视野变窄，尺寸差异变得很大。记得将视野改回 70°。
+> 注意：尝试更改投影截距。当你运行程序并旋转火车时，你会发现远处的两个轮子比前面的轮子小得多。在 `Renderer` 的 `mtView(_:drawableSizeChange)` 中，将投影视野（field of view）从 70° 改为 40° 并重新运行程序。你会发现由于视野变窄，尺寸差异变得很大。记得将视野改回 70°。
 
 ## 表示颜色
 
-光学的物理是一个宏大且迷人的的话题，有许多书籍和互联网上的很大一部分都在致力于它。然而，在本书中，你将学习获取渲染光照、颜色和简单阴影所需的必要基础。你可以在本章 Resources 目录下的 **references.markdown** 中找到更多阅读资料。
+光学的物理是一个宏大且迷人的话题，有许多书籍和互联网上的很大一部分都在致力于它。然而，在本书中，你将学习获取渲染光照、颜色和简单阴影所需的必要基础。你可以在本章 `Resources` 目录下的 `references.markdown` 中找到更多阅读资料。
 
 在现实世界中，不同波长光的反射赋予了物体颜色。吸收所有光的表面是黑色的。在计算机世界中，像素显示颜色。像素越多，效果越好，生成的图像越清晰。每个像素由子像素组成。这些子像素是预定义的单一颜色：红色、绿色或蓝色。通过开启和关闭这些子像素（取决于位深），屏幕可以显示人眼可见的大部分颜色。
 
@@ -3002,13 +2766,13 @@ Debuglights.swift 包含了一些用于调试光照位置的代码。它将点�
 
 ![](img/8d763acb335ab213ea9213a628f7d844_116_0.png)
 
-# 从着影的角度来看，你可以通过将两个值相乘将红色表面与灰色光结合：
+从着影的角度来看，你可以通过将两个值相乘将红色表面与灰色光结合：
 
 ```
 let result = float3(1.0, 0.0, 0.0) * float3(0.5, 0.5, 0.5)
 ```
 
-结果是 (0.5, 0, 0)，这是一种更深的红色。
+结果是 `(0.5, 0, 0)`，这是一种更深的红色。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_117_0.png)
 
@@ -3022,21 +2786,21 @@ let result = float3(1.0, 0.0, 0.0) * float3(0.5, 0.5, 0.5)
 
 在接下来的图中，点 A 直对着太阳，将接收最多的光照；点 B 稍微背对太阳，但仍会接收一些光；点 C 完全背对太阳，不应该接收任何光。
 
-注意：在现实世界中，光会在表面与表面之间反射；如果房间里有任何光，物体就会产生一些反射，微和地照亮所有其他物体的背面。这就是全局光照明。Phong 光照模型单独处理每个物体，被称为局部光照明。
+注意：在现实世界中，光会在表面与表面之间反射；如果房间里有任何光，物体就会产生一些反射，微微地照亮所有其他物体的背面。这就是全局光照明。Phong 光照模型单独处理每个物体，被称为局部光照明。
 
 虚线是表面的切线。切线是能最好描述曲线某点处斜率的直线。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_18_0.png)
 
-从圆圈引出的线与切线垂直。这些被称为表面法线（surface normals），或者通常简称为法线（normals）。.obj 文件通常包含表面法线值，你可以用它们来查找任何给定点的表面斜率。
+从圆圈引出的线与切线垂直。这些被称为表面法线（surface normals），或者通常简称为法线（normals）。`.obj` 文件通常包含表面法线值，你可以用它们来查找任何给定点的表面斜率。
 
-注意：如果 .obj 文件不包含表面法线，Model 可以在导入时使用 `MDLMeshaddNormals(withAttributeNamed:)` 生成它们。
+注意：如果 `.obj` 文件不包含表面法线，`Model` 可以在导入时使用 `MDLMeshaddNormals(withAttributeNamed:)` 生成它们。
 
 # 向顶点描述符中添加法线
 
 为了能够在片元函数中评估表面的斜率，你需要通过顶点函数将顶点法线传递给片元函数。你将法线添加到顶点描述符中，以便顶点函数可以处理它们。
 
-在 Model.swift 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
+在 `Model.swift` 中，初始化 `defaultVertexDescriptor` 时，创建一个包含一个属性的顶点描述符：位置。
 
 法线将是第二个属性。在 `defaultVertexDescriptor` 中，找到注释 `// add the normal attribute`。在注释后添加以下内容：
 
@@ -3049,6 +2813,7 @@ vertexDescriptor.attributes[1] = MDLVertex(name: "normal", format: .float3, offs
 ```
 vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 12)
 ```
+
 改为：
 
 ```
@@ -3057,22 +2822,23 @@ vertexDescriptor.layouts[0] = MTLVertexLayout(stride: 24)
 
 ## 更新 Shader 函数
 
-*(注：由于原文文本中存在大量重复，此处已根据逻辑进行了去重处理)*
-
-
-
-
 遍历这段代码：
 
-- 1. 你创建了一个描述符（descriptor），用于初始化深度模板模板状态（depth stencil state），就像你创建流水线状态一样。
+- 1. 你创建了一个描述符（descriptor），用于初始化深度模板状态（depth stencil state），就像你创建流水线状态一样。
+
 - 2. 你指定了如何比较当前片段（fragment）与已处理的片段。在这种情况下，如果当前片段的深度小于帧缓冲区中上一个片段的深度，则当前片段将替换那个之前的片段。
+
 - 3. 你声明了是否写入深度值。如果你有多个渲染通过阶段（参见第 14 章“多通过路渲染”），你将需要读取已经绘制的片段，在这种情况下它为 `false`。但是，如果你正在绘制对象并需要它们具有深度，这始终为 `true`。
 
-在 `init(metalView):` 的末尾调用该方法：
+在 `init(metalView:)` 的末尾调用该方法：
 
 ```
 buildDepthStencilState()
-draw(in:), 将此添加到方法中 guard 之后：
+```
+
+在 `draw(in:)` 中，将此添加到方法中 `guard` 之后：
+
+```
 renderEncoder.setStencilState(depthStencilState)
 ```
 
@@ -3098,10 +2864,6 @@ renderEncoder.setStencilState(depthStencilState)
 
 你将更改片段函数用这种半球照明照亮火车。如果法线向上，它们将是蓝色的；如果向下，将是绿色的；对于中间值，它们将混合。
 
-## Metal 教程
-
-## 第 5 章：照明基础
-
 在 `Shaders.metal` 中，将 `fragment_main()` 替换为：
 
 ```
@@ -3115,20 +2877,15 @@ return mix(earth, sky, intensity);
 
 `mix` 函数根据第三值在前两个值之间进行插值，该第三值需要位于 0 和 1 之间。你的法线值在 -1 和 1 之间，所以你对其进行了转换。
 
-编译并运行，看到你的火车以壮丽的 3D 效果呈现。当你旋转火车时，它将呈现出红、绿、蓝、黑等色调。 (注：此处原文"rotation are zero is 1" 似乎有误，此处已根据语境翻译)
+编译并运行，看到你的火车以壮丽的 3D 效果呈现。当你旋转火车时，它将呈现出红、绿、蓝、黑等色调。
 
 现在你已经在片段函数中拥有了法线，你可以开始根据它们面对的方向来操纵颜色了。
 
-（注：由于提供的原文文本中存在大量重复和错乱，上述译文已根据逻辑对对重复内容进行了整合和翻译。）
+- **漫反射（Diffuse）**：理论上，照射到表面的光会相对于该点的表面法线以某个角度反射。然而，表面在微观上是粗糙的，因此如图所示，光会向所有方向反射。这产生了漫反射颜色，其光强度与入射光与表面法线之间的角度成正比。在计算机图形学中，这种模型被称为朗伯体反射（Lambertian reflectance），以于 1777 年去世的约翰·海因里希·朗伯特（Johann Heinrich Lambert）命名。在现实世界中，这种漫反射通常适用于暗淡、粗糙的表面，具有最朗伯特性的表面是人造：Spectralon (https://en.wikipedia.org/wiki/Spectralon)，它被用于光学元件。
 
+- **高反射（Specular）**：表面越光滑，它就越亮，光线反射的方向就越少。镜子会完全反射表面法线而不发生偏转。亮物体会产生可见的高光，渲染高反射光可以让你对物体的表面类型产生提示——它是一个旧残骸还是一个刚下架的新品。
 
-
-
--   **漫反射（Diffuse）**：理论上，照射到表面的光会相对于该点的表面法线以某个角度反射。然而，表面在微观上是粗糙的，因此如图所示，光会向所有方向反射。这产生了漫反射颜色，其光强度与入射光与表面法线之间的角度成正比。在计算机图形学中，这种模型被称为朗伯体反射（Lambertian reflectance），以于 1777 年去世的约翰·海因里希·朗伯特（Johann Heinrich Lambert）命名。在现实世界中，这种漫反射通常适用于暗淡、粗糙的表面，具有最朗伯特性的表面是人造：Spectralon (https://en.wikipedia.org/wiki/Spectralon)，它被用于光学元件。
-
--   **高反射（Specular）**：表面越光滑，它就越亮，光线反射的方向就越少。镜子会完全反射表面法线而不发生偏转。亮物体会产生可见的高光，渲染高反射光可以让你对物体的表面类型产生提示——它是一个旧残骸还是一个刚下架的新品。
-
--   **环境光（Ambient）**：在现实世界中，光线到处处反射，因为阴影中的物体很少是完全黑色的。这就是环境反射。
+- **环境光（Ambient）**：在现实世界中，光线到处反射，因为阴影中的物体很少是完全黑色的。这就是环境反射。
 
 表面颜色由环境光、漫反射和高反射的发射颜色贡献组成。对于漫反射和高反射，为了确定表面在某一点应该接收多少光，你只需要找到入射光方向与表面法线之间的角度即可。
 
@@ -3148,11 +2905,9 @@ $A \cdot B = ||A|| ||B|| \cos(\Theta)$
 
 其中 $||A||$ 意味着向量 A 的长度（模）。
 
-更幸运的是，simd 和 Metal Shading Language都有一个 `dot()` 函数来获取点积，所以你不需要记住公式。
+更幸运的是，`simd` 和 Metal Shading Language 都有一个 `dot()` 函数来获取点积，所以你不需要记住公式。
 
 除了寻找两个向量之间的角度外，你还可以使用点积来检查两个向量是否指向相同方向。
-
-# Metal 教程 (Metal by Tutorials)
 
 将两个向量缩放为单位向量——即长度为 1 的向量。你可以使用 `normalize()` 函数来实现。如果单位向量与方向平行，点积结果将为 1。如果它们方向相反平行，结果将为 -1。如果它们成直角（正交），结果将为 0。
 
@@ -3164,9 +2919,9 @@ $A \cdot B = ||A|| ||B|| \cos(\Theta)$
 
 ![](img/8d763acb335ab213ea9213a628f7d844_129_1.png)
 
-太阳从天空倾泻而下，方向向量为 [2, -2, 0]。向量 A 是法线向量 [-2, 2, 0]。这两个向量指向相反的方向，所以当你将向量转换为单位向量（归一化）时，它们的点积将为 -1。
+太阳从天空倾泻而下，方向向量为 `[2, -2, 0]`。向量 A 是法线向量 `[-2, 2, 0]`。这两个向量指向相反的方向，所以当你将向量转换为单位向量（归一化）时，它们的点积将为 -1。
 
-向量 B 是法线向量 [0.3, 2, 0]。阳光是方向光，因此使用相同的方向向量。阳光和 B 在归一化后的点积为 -0.59。
+向量 B 是法线向量 `[0.3, 2, 0]`。阳光是方向光，因此使用相同的方向向量。阳光和 B 在归一化后的点积为 -0.59。
 
 # 这个 Playground 代码演示了计算过程。
 
@@ -3263,21 +3018,21 @@ lazy var ambientLight: Light = {
 
 这道光是亮绿色的，但经过了调低，其强度仅为 10%。
 
-## Metal 教程：第 5 章：光照基础
 
-将这道亮绿光添加到灯列表中。在 `init(metalView:)` 中，在 `lights.append(sunlight)` 之后添加：
+
+将这道亮绿光添加到灯列表中。在`init(metalView:)`中，在`lights.append(sunlight)`之后添加：
 
 ```swift
 lights.append(ambientLight)
 ```
 
-在 `Shaders.metal` 的 `fragment_main()` 中，在函数顶部添加一个变量来存储所有环境光的环境色：
+在`Shaders.metal`的`fragment_main()`中，在函数顶部添加一个变量来存储所有环境光的环境色：
 
 ```metal
 float3 ambientColor = 0;
 ```
 
-在 `if (light.type == Sunlight)` 条件结束后的 `for` 循环内部添加以下内容：
+在`if (light.type == Sunlight)`条件结束后的`for`循环内部添加以下内容：
 
 ```metal
 else if (light.type == .ambient) {
@@ -3297,7 +3052,7 @@ float3 color = diffuseColor;
 float3 color = diffuseColor + ambientColor;
 ```
 
-编译并运行。如果你仔细观察，现在的黑色阴影现在被染了绿色，仿佛有绿光在场景中反射。如果你想让环境光更明显，可以修改 `light.intensity`。这张图像的环境光强度为 0.2：
+编译并运行。如果你仔细观察，现在的黑色阴影被染了绿色，仿佛有绿光在场景中反射。如果你想让环境光更明显，可以修改`light.intensity`。这张图像的环境光强度为 0.2：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_134_0.png)
 
@@ -3309,19 +3064,19 @@ float3 color = diffuseColor + ambientColor;
 
 光线进入 (L) 并关于法线 (N) 反射 (R)。如果观察者 (V) 位于反射光 (R) 周围的特定锥体内，那么观察者就会看到高光。该锥是一个指数光泽度（shininess）参数。表面越光滑，高光越小且越强烈。
 
-在你的情况下，观察者是你的相机，因此你需要将相机坐标（再次以视图位置的形式）传递给片段函数。之前，你在 `fragmentUniforms` 中设置了 `cameraPosition`，并将用它来传递相机位置。
+在你的情况下，观察者是你的相机，因此你需要将相机坐标（再次以视图位置的形式）传递给片段函数。之前，你在`fragmentUniforms`中设置了`cameraPosition`，并将用它来传递相机位置。
 
 > 注意：如果你使用相机空间而非世界空间处理光和顶点位置，相机位置将为 (0, 0, 0, 0)。
 
-在 `Renderer.swift` 的 `draw(in:)` 中，在 `uniforms.viewMatrix = camera.viewMatrix` 之前添加：
+在`Renderer.swift`的`draw(in:)`中，在`uniforms.viewMatrix = camera.viewMatrix`之前添加：
 
 ```swift
 fragmentUniforms.cameraPosition = camera.position
 ```
 
-`camera.position` 已经在世界空间，且你已经将 `fragmentUniforms` 传递给片段函数，因此你不需要在这里采取进一步的操作。
+`camera.position`已经在世界空间，且你已经将`fragmentUniforms`传递给片段函数，因此你不需要在这里采取进一步的操作。
 
-在 `Shaders.metal` 的 `fragment_main()` 中，在函数顶部添加一个变量来存储所有光的高光值：
+在`Shaders.metal`的`fragment_main()`中，在函数顶部添加一个变量来存储所有光的高光值：
 
 ```metal
 float3 specularColor = 0;
@@ -3331,20 +3086,7 @@ float3 materialSpecularColor = float3(1, 1, 1);
 
 你还添加了光泽因子和高光色的表面材质属性。这是临时的，因为你将在后面的章节中从模型的材质属性中获取这些值。
 
-在 `for` 循环内部以及 `if (light.type == Sunlight)` 条件内部、计算 `diffuseColor` 之后添加：
-
-```metal
-if (diffuseIntensity > 0) {
-    // 1 (R)
-    float3 reflection = reflect(lightDirection, normalDirection);
-    // 2 (V)
-    float3 cameraPosition = normalize(in.worldPosition - fragmentUniforms.cameraPosition);
-    // 3
-    float specularIntensity = pow(saturate(reflect(reflection, cameraPosition)), materialShininess);
-    specularColor += light.specularColor * materialSpecularColor * specularIntensity;
-}
-```
-（等等，上面的代码块中 OCR 有一些伪迹，让我来纠正它）：
+在`for`循环内部以及`if (light.type == Sunlight)`条件内部、计算`diffuseColor`之后添加：
 
 ```metal
 if (diffuseIntensity > 0) {
@@ -3360,16 +3102,13 @@ if (diffuseIntensity > 0) {
 
 （注：由于提供的 OCR 文本在第 136-139 页存在大量混乱和重复，我已根据提供的片段进行了逻辑重构，并修复了明显的错误。）
 
-
-
-
 ## Metal 教程
 
 调试灯光功能显示了点光的位置，但它还没有产生任何光。你将在片段着色器中完成这一操作。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_140_0.png)
 
-在 Shaders.metal 的 `fragment` 函数中，为光类型的条件测试添加第三部分：
+在`Shaders.metal`的`fragment`函数中，为光类型的条件测试添加第三部分：
 
 ```cpp
 else if (light.type == Pointlight) {
@@ -3393,14 +3132,13 @@ else if (light.type == Pointlight) {
 - 你获取了光源与片段位置之间的距离。
 - 对于方向性太阳光，你使用位置作为方向。在这里，你计算了从片段位置到光源位置的方向。
 - 使用衰减公式和距离来计算衰减，从而决定片段的亮度。
-
-4. 在像之前处理太阳光那样计算漫漫颜色后，将此颜色乘以衰减系数。
+- 在像之前处理太阳光那样计算漫反射颜色后，将此颜色乘以衰减系数。
 
 编译并运行，没有任何变化。
 
 这是因为基础颜色（base color）是 (0, 0, 1)，而光线颜色是 (1, 0, 0)。当光线颜色与基础颜色相乘时，结果为 (0, 0, 0)，因此光线对片段颜色没有贡献。
 
-在 Shaders.metal 的 `fragment` 函数顶部，将基础颜色更改为：
+在`Shaders.metal`的`fragment`函数顶部，将基础颜色更改为：
 
 ```cpp
 float3 baseColor = float3(1, 1, 1);
@@ -3418,13 +3156,13 @@ float3 baseColor = float3(1, 1, 1);
 
 你在本章中创建的最后一种光是聚光灯。它在有限的方向发射光线。想象一个手电筒，光线从一个小点发出，但在击中地面时，它变成了一个较大的椭圆。
 
-# 第 5 章：照明基础
+## 第 5 章：照明基础
 
 你定义了一个锥角和一个锥体方向来包含光线。你还定义了一个锥体功率来控制椭圆边缘的衰减。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_142_0.png)
 
-在 Common.h 中，为 `Light` 结构体添加锥体属性：
+在`Common.h`中，为`Light`结构体添加锥体属性：
 
 ```cpp
 float coneAngle;
@@ -3432,7 +3170,7 @@ vector_float3 coneDirection;
 float coneAttenuation;
 ```
 
-在 Renderer.swift 中，为 Renderer 添加一个新光：
+在`Renderer.swift`中，为`Renderer`添加一个新光：
 
 ```swift
 lazy var spotlight: Light = {
@@ -3448,23 +3186,23 @@ lazy var spotlight: Light = {
 }
 ```
 
-这种光与点光类似，但增加了锥角、方向和衰减。在 `init(metalView)` 的末尾、但在设置 `fragmentUniforms` 中的光数量之前，将该光添加到光数组中：
+这种光与点光类似，但增加了锥角、方向和衰减。在`init(metalView)`的末尾、但在设置`fragmentUniforms`中的光数量之前，将该光添加到光数组中：
 
 ```swift
 lights.append(spotlight)
 ```
 
-在 `draw(in)` 的末尾，将调试灯更改为聚光灯：
+在`draw(in)`的末尾，将调试灯更改为聚光灯：
 
 ```swift
 debugLights(renderEncoder: renderEncoder, lightType: Spotlight)
 ```
 
-此外，在 DebugLights.swift 中，移除 `debugLights(renderEncoder: lightType)` 中的注释。
+此外，在`DebugLights.swift`中，移除`debugLights(renderEncoder: lightType)`中的注释。
 
 这将渲染聚光灯的位置和方向以供调试。
 
-在 Shaders.metal 的 `fragment` 函数中，为光类型的条件测试添加另一部分：
+在`Shaders.metal`的`fragment`函数中，为光类型的条件测试添加另一部分：
 
 ```cpp
 else if (light.type == Spotlight) {
@@ -3487,21 +3225,18 @@ else if (light.type == Spotlight) {
 }
 ```
 
-这种光与点光类似，但增加了锥角、方向和衰减。在 `init(metalView)` 的末尾、但在设置 `fragmentUniforms` 中的光数量之前，将该光添加到光数组中。
-
 通过这段代码：
 
 - 你获取了光源与片段位置之间的距离。
 - 对于方向性太阳光，你使用位置作为方向。在这里，你计算了从片段位置到光源位置的方向。
 - 使用衰减公式和距离来计算衰减，从而决定片段的亮度。
-
-4. 在像之前处理太阳光那样计算漫漫颜色后，将此颜色乘以衰减系数。
+- 在像之前处理太阳光那样计算漫反射颜色后，将此颜色乘以衰减系数。
 
 编译并运行，没有任何变化。
 
 这是因为基础颜色（base color）是 (0, 0, 1)，而光线颜色是 (1, 0, 0)。当光线颜色与基础颜色相乘时，结果为 (0, 0, 0)，因此光线对片段颜色没有贡献。
 
-在 Shaders.metal 的 `fragment` 函数顶部，将基础颜色更改为：
+在`Shaders.metal`的`fragment`函数顶部，将基础颜色更改为：
 
 ```cpp
 float3 baseColor = float3(1, 1, 1);
@@ -3517,13 +3252,13 @@ float3 baseColor = float3(1, 1, 1);
 
 你在本章中创建的最后一种光是聚光灯。它在有限的方向发射光线。想象一个手电筒，光线从一个小点发出，但在击中地面时，它变成了一个较大的椭圆。
 
-# 第 5 章：照明基础
+## 第 5 章：照明基础
 
 你定义了一个锥角和一个锥体方向来包含光线。你还定义了一个锥体功率来控制椭圆边缘的衰减。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_142_0.png)
 
-在 Common.h 中，为 `Light` 结构体添加锥体属性：
+在`Common.h`中，为`Light`结构体添加锥体属性：
 
 ```cpp
 float coneAngle;
@@ -3531,7 +3266,7 @@ vector_float3 coneDirection;
 float coneAttenuation;
 ```
 
-在 Renderer.swift 中，为 Renderer 添加一个新光：
+在`Renderer.swift`中，为`Renderer`添加一个新光：
 
 ```swift
 lazy var spotlight: Light = {
@@ -3547,23 +3282,23 @@ lazy var spotlight: Light = {
 }
 ```
 
-这种光与点光类似，但增加了锥角、方向和衰减。在 `init(metalView)` 的末尾、但在设置 `fragmentUniforms` 中的光数量之前，将该光添加到光数组中：
+这种光与点光类似，但增加了锥角、方向和衰减。在`init(metalView)`的末尾、但在设置`fragmentUniforms`中的光数量之前，将该光添加到光数组中：
 
 ```swift
 lights.append(spotlight)
 ```
 
-在 `draw(in)` 的末尾，将调试灯更改为聚光灯：
+在`draw(in)`的末尾，将调试灯更改为聚光灯：
 
 ```swift
 debugLights(renderEncoder: renderEncoder, lightType: Spotlight)
 ```
 
-此外，在 DebugLights.swift 中，移除 `debugLights(renderEncoder: lightType)` 中的注释。
+此外，在`DebugLights.swift`中，移除`debugLights(renderEncoder: lightType)`中的注释。
 
 这将渲染聚光灯的位置和方向以供调试。
 
-在 Shaders.metal 的 `fragment` 函数中，为光类型的条件测试添加另一部分：
+在`Shaders.metal`的`fragment`函数中，为光类型的条件测试添加另一部分：
 
 ```cpp
 else if (light.type == Spotlight) {
@@ -3587,6 +3322,7 @@ else if (light.type == Spotlight) {
 ```
 
 
+
 ...接缝在哪里，以及如何切割你的网格。Blender 会通过在这些接缝处切割网格来自动展开模型，但如果有必要，你也可以在 UV Unwrap 窗口中移动每个顶点以适应你的纹理。
 
 现在你已经有了一个平坦的地图，可以使用从 Blender 导出的 UV 映射作为指南在其上方进行绘制。这是在 Photoshop 中制作的房屋纹理。它是通过切割一张真实房屋的照片创建的。
@@ -3597,13 +3333,13 @@ else if (light.type == Spotlight) {
 
 然后，你将该图像导入 Blender 并将其分配给模型，即可得到你在上面看到的带有纹理的房屋。
 
-当你将带有 UV 贴图的模型导出为 .obj 文件时，Blender 会将 UV 坐标文件中。每个顶点都有一个二维坐标，将其放置在 2D 纹理平面上。左上角是 (0, 1)，右下角是 (1, 0)。
+当你将带有 UV 贴图的模型导出为 `.obj` 文件时，Blender 会将 UV 坐标文件中。每个顶点都有一个二维坐标，将其放置在 2D 纹理平面上。左上角是 `(0, 1)`，右下角是 `(1, 0)`。
 
 ## Metal 教程
 
 # 第 6 章：纹理
 
-下面的图显示了房屋的一些顶点，并带有来自 .obj 文件的对应坐标。你可以使用 TextEdit 查看 .obj 文件的内容。
+下面的图显示了房屋的一些顶点，并带有来自 `.obj` 文件的对应坐标。你可以使用 TextEdit 查看 `.obj` 文件的内容。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_149_0.png)
 
@@ -3618,9 +3354,13 @@ raywenderlich.com
 当然，Photoshop 并不是模型纹理化的唯一解决方案。你可以使用任何图像编辑器在平坦纹理上进行绘制。在过去的几年里，其他几个允许直接在模型上绘制的 App 已成为主流：
 
 - Blender（免费）
+
 - Allegorithmic 的 Substance Designer 和 Substance Painter ($$$)：在 Designer 中，你可以通过程序化创建复杂的材质。使用 Painter，你可以在模型上绘制这些材质。你将在下一章中遇到的黄色房屋是在 Substance Painter 中进行纹理制作的。
+
 - 3Dcoat 制作的 3DCat ($$$)
+
 - Autodesk 的 Mudbox ($$$)
+
 - Foundry 的 Mari ($$$)
 
 除了纹理化之外，使用 Blender、3Dcoat 或 Mudbox，你可以以类似于 ZBrush 的方式雕刻模型，并从高多边雕刻创建低多边模型。
@@ -3633,21 +3373,25 @@ raywenderlich.com
 
 ![](img/8d763acb335ab213ea9213a628f7d844_150_0.png)
 
-查看 Shaders.metal 中的 `fragment_main()`。目前，你正在使用 `baseColor` 作为常量 `float3(1, 1, 1)`（白色）来定义模型的颜色。在本章中，你把该常量替换为来自纹理的像素颜色。最初，你将使用位于 Models > LowPolyHouse 组中的 `lowpoly-house-color.png`。
+查看 `Shaders.metal` 中的 `fragment_main()`。目前，你正在使用 `baseColor` 作为常量 `float3(1, 1, 1)`（白色）来定义模型的颜色。在本章中，你把该常量替换为来自纹理的像素颜色。最初，你将使用位于 Models > LowPolyHouse 组中的 `lowpoly-house-color.png`。
 
 要在片段函数中读取图像，采取以下步骤：
 
 1. 为模型的顶点描述符添加纹理 UV 坐标。
+
 2. 在着色器的 VertexStruct 中添加匹配的 UV 坐标属性。
+
 3. 使用协议扩展方法加载图像。
+
 4. 在绘制模型之前将加载的纹理传递给片段函数。
+
 5. 修改片段函数从纹理读取相应的像素。
 
 ## 1. 向顶点描述符添加 UV 坐标
 
 正如你之前学过的，当你在 Blender（或你选择的建模应用）中展开模型时，你会随模型设置 UV 坐标。要在你的应用中加载它，Model I/O 需要在顶点描述符中设置纹理坐标属性。
 
-首先，在 Common.h 中设置纹理坐标属性的索引号。找到 `Attributes` 枚举并更改更改：
+首先，在 `Common.h` 中设置纹理坐标属性的索引号。找到 `Attributes` 枚举并更改更改：
 
 ```swift
 typedef enum {
@@ -3658,7 +3402,8 @@ typedef enum {
 ```
 
 为了节省输入，UV 引用了 `TextureCoordinates`。
-在 Model.Swift 中，为默认的 `defaultVertexDescriptor` 添加一个新属性：
+
+在 `Model.Swift` 中，为默认的 `defaultVertexDescriptor` 添加一个新属性：
 
 ```swift
 vertexDescriptor.attributes[Int(UV.rawValue)] = MDLVertexAttribute(
@@ -3676,7 +3421,7 @@ vertexDescriptor.layout = 32
 
 ## 2. 更新着色器
 
-在 Shaders.metal 中，更新 `VertexStruct`：
+在 `Shaders.metal` 中，更新 `VertexStruct`：
 
 ```swift
 struct VertexIn {
@@ -3737,17 +3482,19 @@ extension Texturable {
         return texture
     }
 }
-```![](img/8d763acb335ab213ea9213a628f7d844_152_0.png)
+```
+
+![](img/8d763acb335ab213ea9213a628f7d844_152_0.png)
 
 代码解析：
 
 - 1. 加载纹理可能会变得复杂。当 Metal刚发布时，你必须使用 `MTLDescriptor` 指定图像的所有信息——包括像素格式、维度和用途。MetalKit 引入了 `MTKTextureLoader`，它允许通过选项进行可选更改。
+
 - 2.在这里，你更改了一个加载选项，确保纹理以左下角为起点加载。如果不指定此选项，纹理将翻转。尝试一下：`lowpoly-house-color.png` 几乎是垂直对称的，但如果纹理翻转，模型的屋顶将是纯色并显示版权文本
+
 - 3. 为图像名称提供默认扩展名。
+
 - 4. 最后，使用提供的图像名称和加载器创建新的 `MTLTexture` 并返回新创建的纹理。然后，为了调试，打印所加载的纹理的文件名。
-
-
-
 
 现在，让 `Submesh` 遵循 `Texturable`。在 **Submesh.swift** 中，在文件底部添加以下内容：
 
@@ -3871,6 +3618,7 @@ return float4(baseColor, 1);
 ## sRGB 颜色空间
 
 你会注意到渲染的纹理看起来比原始图像暗得多。
+
 这是 `lowpoly-house-color.png` 是 sRGB 纹理。sRGB 是一种标准颜色格式，在阴极射线显示器的工作方式和人眼看到的颜色之间取得了平衡。正如以下从 0 到 1 的灰度值示例所示，sRGB 颜色不是线性的。人类更容易识别亮值而非深色值。
 
 遗憾的是，在非线性空间对颜色进行数学计算并不容易。如果你将颜色乘以 0.5，sRGB 中的差异会随比例尺变化。为了近似转换颜色，可以使用伽马 2.2 的倒数：
@@ -3898,18 +3646,17 @@ let textureOptions: [MTKTextureLoader.Option: Any] =
 
 ![](img/8d763ac...png)
 
-
-
-
 如果你反转上一节的纹理加载选项并注释掉 `.SRGB: false`，你将看到纹理现在是 BGRABUnorm_sRGB（在继续之前请确保恢复选项 `.SRGB: false`）。
 
 如果你不确定你的 App 中发生了什么，捕捉 GPU 帧可能会为你提供提示，因为你可以检查每个渲染编码器命令（render encoder command）和每个缓冲区（buffer）。在本书中使用它来检查 GPU 上的状况是一个好主意。第 15 章“性能优化”将让你更深入地了解 GPU 帧捕获工具。
 
 ## 采样器 (Samplers)
 
-刚才在采样纹理时，你使用了默认采样器。通过更改采样器参数，你可以决定 App 如何读取纹理像素（texels）。你将在场景中添加一个平面，以观察如何控制地面纹理的外观。
 
-在 `Renderer.swift` 的 `init(metalView):` 中，找到你将房屋添加到 `models` 数组的地方。之后，添加：
+
+刚才在采样纹理时，你使用了默认采样器。通过更改采样器参数，你可以决定 `App` 如何读取纹理像素（texels）。你将在场景中添加一个平面，以观察如何控制地面纹理的外观。
+
+在`Renderer.swift`的`init(metalView):`中，找到你将房屋添加到`models`数组的地方。之后，添加：
 
 ```swift
 let ground = Model(name: "plane")
@@ -3921,9 +3668,9 @@ models.append(ground)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_160_0.png)
 
-你可以看到地面纹理的每一个像素，这在特定的场景中看起来并不好看。通过更改采样器参数的一个一个，你可以告诉 Metal 在当纹理尺寸小于分配的片段（fragments）时如何处理。
+你可以看到地面纹理的每一个像素，这在特定的场景中看起来并不好看。通过更改采样器参数的一个一个，你可以告诉 `Metal` 在当纹理尺寸小于分配的片段（fragments）时如何处理。
 
-在 `Shaders.metal` 的 `fragment_main()` 中，将：
+在`Shaders.metal`的`fragment_main()`中，将：
 
 改为：
 
@@ -3941,7 +3688,7 @@ constexpr sampler textureSampler(filter::linear);
 
 但在这种特殊情况下，你想要让纹理平铺（tile）。使用采样这非常简单！
 
-将采样器定义和 `baseColor` 赋值改为：
+将采样器定义和`baseColor`赋值改为：
 
 ```cpp
 constexpr sampler textureSampler(filter::linear, address::repeat);
@@ -3951,48 +3698,51 @@ in.uv * 16).rgb;
 
 # 第 6 章：纹理 (Textures)
 
-这将 UV 坐标乘以 16，并访问 0 到 1 范围之外的纹理。`address::repeat` 更改了采样器的地址模式，在这里它将在平面上重复纹理 16 次。
+这将 `UV` 坐标乘以 16，并访问 0 到 1 范围之外的纹理。`address::repeat` 更改了采样器的地址模式，在这里它将在平面上重复纹理 16 次。
 
-下面的图片说明了在平铺值为 3 时显示的其他地址采样选项。你可以使用 `s_address...` 或 `t_address` 分别仅更改宽度和高度坐标。
+下面的图片说明了在平铺值为 3 时显示的其他地址采样选项。你可以使用`s_address...`或`t_address`分别仅更改宽度和高度坐标。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_162_0.png)
 
 repeat
+
 mirrored_repeat
+
 clamp_to_edge
+
 clamp_to_zero
 
-编译并运行你的 App。
+编译并运行你的 `App`。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_162_1.png)
 
-地面看起来很棒！房子……不太。着色器同样平铺了房屋纹理。为了克服这个问题，你将在模型上创建一个平铺属性，并通过 `fragmentUniforms` 将其发送到片段函数。
+地面看起来很棒！房子……不太。着色器同样平铺了房屋纹理。为了克服这个问题，你将在模型上创建一个平铺属性，并通过`fragmentUniforms`将其发送到片段函数。
 
-在 `Model.swift` 中，为 `Model` 创建新属性：
+在`Model.swift`中，为`Model`创建新属性：
 
 ```swift
 var tiling: UInt32 = 1
 ```
 
-在 `Common.h` 中向结构体 `FragmentUniforms` 添加此内容：
+在`Common.h`中向结构体`FragmentUniforms`添加此内容：
 
 ```c
 uint tiling;
 ```
 
-在 `Renderer.swift` 中你在 `init(metalView):` 中设置地面的地方，添加平铺：
+在`Renderer.swift`中你在`init(metalView):`中设置地面的地方，添加平铺：
 
 ```swift
 ground.tiling = 16
 ```
 
-在 `draw(in):` 中，紧接在处理模型的循环内部，添加此内容：
+在`draw(in):`中，紧接在处理模型的循环内部，添加此内容：
 
 ```swift
 fragmentUniforms.tiling = model.tiling
 ```
 
-你将 `fragmentUniforms` 分配给 `MTLBuffer` 操作目前发生在循环之前，因此将：
+你将`fragmentUniforms`分配给`MTLBuffer`操作目前发生在循环之前，因此将：
 
 ```swift
 renderEncoder.setFragmentBytes(&fragmentUniforms,
@@ -4000,9 +3750,9 @@ renderEncoder.setFragmentBytes(&fragmentUniforms,
   index: Int(BufferIndexFragmentUniforms.rawValue))
 ```
 
-移动到循环内部，在你分配 `tiling` 变量之后。
+移动到循环内部，在你分配`tiling`变量之后。
 
-在 `Shaders.metal` 中，你已经向 `fragment_main()` 接收了 `fragmentUniforms`，因此将常量平铺替换为值：
+在`Shaders.metal`中，你已经向`fragment_main()`接收了`fragmentUniforms`，因此将常量平铺替换为值：
 
 ```cpp
 float3 baseColor = baseColorTexture.sample(textureSampler,
@@ -4015,13 +3765,13 @@ in.uv * fragmentUniforms.tiling).rgb;
 
 # Metal API 采样器状态 (sampler states)
 
-在着色器中创建采样器并不是唯一选择。相反，你将在 Metal 中创建一个采样器并持有它。在 `Model.swift` 中，为 `Model` 添加：
+在着色器中创建采样器并不是唯一选择。相反，你将在`Metal`中创建一个采样器并持有它。在`Model.swift`中，为`Model`添加：
 
 ```swift
 let samplerState: MTamplerState?
 ```
 
-初始化它后，编译错误将消失。在 `Model.swift` 中添加此方法：
+初始化它后，编译错误将消失。在`Model.swift`中添加此方法：
 
 ```swift
 private func buildSampler() -> MTamplerState {
@@ -4032,19 +3782,19 @@ private func buildSampler() -> MTamplerState {
 }
 ```
 
-在 `init(metalView):` 中，调用它：
+在`init(metalView):`中，调用它：
 
 ```swift
 samplerState = buildSampler()
 ```
 
-在 `draw(in):` 中，在处理模型的循环内部添加此内容：
+在`draw(in):`中，在处理模型的循环内部添加此内容：
 
 ```swift
 renderEncoder.setFragmentSampler(samplerState, index: 0)
 ```
 
-在 `Shaders.metal` 中，你已经向 `fragment_main()` 接收了 `fragmentUniforms`，因此将常量平铺替换为值：
+在`Shaders.metal`中，你已经向`fragment_main()`接收了`fragmentUniforms`，因此将常量平铺替换为值：
 
 ```cpp
 float3 baseColor = baseColorTexture.sample(textureSampler,
@@ -4077,13 +3827,13 @@ in.uv * fragmentUniforms.tiling).rgb;
 
 ![](img/8d763acb335ab213ea9213a628f7d844_166_0.png)
 
-在下面的图中，上方的棋格纹理没有多级映射；但在下面的图中，每个片段都从适当的 MIP 层进行采样。随着棋格远去，噪声少了很多，图像更清晰。在海平线处，你可以看到较小的灰色多级映射。
+在下面的图中，上方的棋格纹理没有多级映射；但在下面的图中，每个片段都从适当的 `MIP` 层进行采样。随着棋格远去，噪声少了很多，图像更清晰。在海平线处，你可以看到较小的灰色多级映射。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_166_1.png)
 
 你可以在首次加载纹理时轻松且自动地生成这些多级映射。
 
-在 **Texturable.swift** 中，更改纹理加载选项：
+在**Texturable.swift**中，更改纹理加载选项：
 
 ```swift
 let textureLoaderOptions: [MTKTextureLoader.Option: Any] =
@@ -4092,36 +3842,33 @@ let textureLoaderOptions: [MTKTextureLoader.Option: Any] =
   .generateMipmaps: NSNumber(booleanLiteral: true)]
 ```
 
-
-
-
 ## Metal 教程
 
 # 第 6 章：纹理
 
-还有件事需要更改：采样器状态（sampler state）。在 `Model.swift` 的 `buildSamplerState()` 中，在创建采样状态之前添加以下内容：
+还有件事需要更改：采样器状态（sampler state）。在`Model.swift`的`buildSamplerState()`中，在创建采样状态之前添加以下内容：
 
 ```
 descriptor.mipFilter = .linear
 ```
 
-`mipFilter` 的默认值为 `.notmipmapped`；然而，如果你提供了 `.linear` 或 `.nearest`，GPU 将采样正确的 mipmap。
+`mipFilter`的默认值为`.notmipmapped`；然而，如果你提供了`.linear`或`.nearest`，`GPU`将采样正确的 mipmap。
 
 编译并运行。当你缩放和旋转时，建筑和地面的噪声应该消失。
 
-使用 GPU 帧捕获（Frame Capture）工具，你可以检查 mipmaps。双击纹理，在左下角可以选择 MIP level。这是房屋纹理上的 MIP level 5：
+使用 `GPU` 帧捕获（Frame Capture）工具，你可以检查 mipmaps。双击纹理，在左下角可以选择 `MIP` level。这是房屋纹理上的 `MIP` level 5：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_167_0.png)
 
-你渲染的地面看起来有些模糊。这是由于各向异异性（anisotropy）导致的。各向异性表面根据你观察它们的角度而变化，当 GPU 以倾角采样纹理时，会导致锯齿现象。
+你渲染的地面看起来有些模糊。这是由于各向异异性（anisotropy）导致的。各向异性表面根据你观察它们的角度而变化，当 `GPU` 以倾角采样纹理时，会导致锯齿现象。
 
-在 `Model.swift` 的 `buildAnisotropy()` 中，在创建采样状态之前添加以下内容：
+在`Model.swift`的`buildAnisotropy()`中，在创建采样状态之前添加以下内容：
 
 ```
 descriptor.maxAnisotropy = 8
 ```
 
-Metal 现在将从纹素（texel）中获取 8 次采样来构建片段。你可以指定最多 16 次采样以提高质量。尽可能少地使用以获取所需的质量，因为采样会减慢渲染速度。
+`Metal` 现在将从纹素（texel）中获取 8 次采样来构建片段。你可以指定最多 16 次采样以提高质量。尽可能少地使用以获取所需的质量，因为采样会减慢渲染速度。
 
 编译并运行，你的渲染结果应该是没有伪影的。
 
@@ -4131,19 +3878,19 @@ Metal 现在将从纹素（texel）中获取 8 次采样来构建片段。你可
 
 ## 资源目录
 
-如其名，资源目录可以包含你所有的资源，无论是数据、图像、纹理还是颜色。你可能已经将该目录用于 App 图标和图像。纹理与图像的区别在于 GPU 会使用它们，因此它们在目录中具有不同的属性。要创建纹理，你向资源目录添加一个新的纹理集（texture set）。
+如其名，资源目录可以包含你所有的资源，无论是数据、图像、纹理还是颜色。你可能已经将该目录用于 `App` 图标和图像。纹理与图像的区别在于 `GPU` 会使用它们，因此它们在目录中具有不同的属性。要创建纹理，你向资源目录添加一个新的纹理集（texture set）。
 
-你将使用目录中的纹理来替换低多边房屋和地面的纹理。使用 Asset Catalog 模板创建一个新文件并命名为 `Textures`。记得同时勾选 iOS 和 macOS 目标。打开 `Textures.xcassets`，选择 `Editor ▸ Add Assets ▸ New Texture Set`（或点击面板底部的 `+` 并选择 `New Texture Set`）。双击纹理名称并重命名为 `grass`。
+你将使用目录中的纹理来替换低多边房屋和地面的纹理。使用 `Asset Catalog` 模板创建一个新文件并命名为`Textures`。记得同时勾选 `iOS` 和 `macOS` 目标。打开`Textures.xcassets`，选择`Editor ▸ Add Assets ▸ New Texture Set`（或点击面板底部的`+`并选择`New Texture Set`）。双击纹理名称并重命名为`grass`。
 
-打开 `Models Textures` 组，将 `green-grass.png` 拖入目录中的 Universal 插槽。在属性属性器（Attributes inspector）的情况下，点击 `grass` 查看所有纹理选项。
+打开`Models Textures`组，将`green-grass.png`拖入目录中的 `Universal` 插槽。在属性属性器（Attributes inspector）的情况下，点击`grass`查看所有纹理选项。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_169_0.png)
 
-在这里，你可以看到默认情况下 mipmaps 是自动创建的。如果你将 `Mipmap Levels` 更改为 `Fixed`，你可以选择创建多少层。如果你不喜欢自动生成的 mipmaps，可以通过将它们拖到正确的插槽来替换为自定义的 mipmaps。资源目录让你能够完全控制纹理，而无需编写复杂的代码；尽管你仍然可以编写想要的代码。
+在这里，你可以看到默认情况下 mipmaps 是自动创建的。如果你将`Mipmap Levels`更改为`Fixed`，你可以选择创建多少层。如果你不喜欢自动生成的 mipmaps，可以通过将它们拖到正确的插槽来替换为自定义的 mipmaps。资源目录让你能够完全控制纹理，而无需编写复杂的代码；尽管你仍然可以编写想要的代码。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_169_1.png)
 
-要使用该资源，在 `Texturable.swift` 中将：
+要使用该资源，在`Texturable.swift`中将：
 
 ```
 print("Failed to load \(imageName)")
@@ -4158,11 +3905,11 @@ try textureLoader.newTexture(name: imageName, scaleFactor: 1.0, bundle: Bundle.m
 nil)
 ```
 
-这现在会在 bundle 中搜索命名图像。当从资源目录加载时，你在属性检查器中使用的选项将取代大部分纹理加载选项，这些选项现在为 `nil`。然而，`.textureUsage` 和 `.textureStorageMode` 选项仍然有效。
+这现在会在 bundle 中搜索命名图像。当从资源目录加载时，你在属性检查器中使用的选项将取代大部分纹理加载选项，这些选项现在为`nil`。然而，`.textureUsage`和`.textureStorageMode`选项仍然有效。
 
 > 注意：你可以反转纹理的渲染顺序，使资源目录成为默认值。
 
-最后要做的的是确保模型指向新纹理。打开位于 `Models ▸ Ground` 的 `plane.mtl`。
+最后要做的的是确保模型指向新纹理。打开位于`Models ▸ Ground`的`plane.mtl`。
 
 替换：
 
@@ -4181,20 +3928,17 @@ map_Kd ground.png
 
 对低多边房屋重复此操作以将其改为谷仓：
 
-- 1. 在资源目录中创建一个新的纹理集并重命名为 `barn`。
-- 2. 将 `Models ▸ LowPoly ▸ lowpoly` 组中的 `lowpoly-barn-color.png` 拖入纹理集。
-- 3. 将 `Models ▸ LowHouse ▸ lowpoly-house.mtl` 中的漫反射纹理名称更改为 `barn`。
+1. 在资源目录中创建一个新的纹理集并重命名为`barn`。
+2. 将`Models ▸ LowPoly ▸ lowpoly`组中的`lowpoly-barn-color.png`拖入纹理集。
+3. 将`Models ▸ LowHouse ▸ lowpoly-house.mtl`中的漫反射纹理名称更改为`barn`。
 
-注意：小心将图像拖到纹理的 Universal 插槽中。
-
-
-
+注意：小心将图像拖到纹理的 `Universal` 插槽中。
 
 # 接下来该去哪里？
 
-在本章中，你学习了如何将模型封装在纹理中、如何在着色器中采样该纹理，以及如何使用多级映射（mipmaps）增强渲染效果。你还学习了如何使用非常有价值的 GPU Frame Capture 工具。该工具非常适合观察 GPU 正在发生什么，并分析着色器是否执行了正确的步骤。
+在本章中，你学习了如何将模型封装在纹理中、如何在着色器中采样该纹理，以及如何使用多级映射（mipmaps）增强渲染效果。你还学习了如何使用非常有价值的 `GPU Frame Capture` 工具。该工具非常适合观察 `GPU` 正在发生什么，并分析着色器是否执行了正确的步骤。
 
-颜色和压缩等主题非常庞大。在本章的 Resources 文件夹 `references.markdown` 中，你会找到一些推荐进一步阅读的文章。
+颜色和压缩等主题非常庞大。在本章的 `Resources` 文件夹`references.markdown`中，你会找到一些推荐进一步阅读的文章。
 
 但你对纹理的学习还没有结束。事实上，那个木仓石墙纹理看起来有些平淡。在下一章中，你将学习如何使用法线纹理（normal texture）让那些石头凸出来并看起来具有立体感。你还将了解到纹理的其他用途，并检查材质属性以及它们如何响应基于物理的光照。
 
@@ -4202,7 +3946,7 @@ map_Kd ground.png
 
 由 Caroline Begbie 编写
 
-在上一章中，你使用 Model I/O 导入并渲染了一个带有平涂纹理的简单房屋。但如果你观察周围的物体，你会注意到它们的基础颜色会根据光线照射的方式而变化。有些物体表面平滑，有些物体表面粗糙。甚至，有些物体可能是闪光的金属！
+在上一章中，你使用 `Model I/O` 导入并渲染了一个带有平涂纹理的简单房屋。但如果你观察周围的物体，你会注意到它们的基础颜色会根据光线照射的方式而变化。有些物体表面平滑，有些物体表面粗糙。甚至，有些物体可能是闪光的金属！
 
 在本章中，你将学习如何使用材质组来描述表面，以及如何为微小细节设计纹理。这也是关于如何渲染静态模型的最后一章节。
 
@@ -4220,7 +3964,7 @@ map_Kd ground.png
 
 所有模型都有垂直于每个面的法线（normals）。立方体有六个面，每个面的面法线指向不同的方向。此外，每个面都是平的。如果你想创造出凹凸的幻觉，你需要在片段着色器中改变法线。
 
-在下面的图中，左侧是具有片段着色器法线的平坦表面。在右侧，你看到的是被扰动的法线。法线贴中的纹素元素通过 RGB 通道提供这些法线的方向向量。
+在下面的图中，左侧是具有片段着色器法线的平坦表面。在右侧，你看到的是被扰动的法线。法线贴中的纹素元素通过 `RGB` 通道提供这些法线的方向向量。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_176_1.png)
 
@@ -4228,33 +3972,35 @@ map_Kd ground.png
 
 # 第 7 章：贴图与材质
 
-看看这张单块砖，它被拆分为组成 RGB 图像的红、绿、蓝通道。
+看看这张单块砖，它被拆分为组成 `RGB` 图像的红、绿、蓝通道。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_177_0.png)
 
-每个通道的值都在 0 到 1 之间，我们通常以灰度值将它们可视化，因为这样更容易读取颜色值。例如，在红色通道中，值 0 表示完全没有红色，而值 1 表示全红。当你将 0 转换为 RGB 颜色 (0, 0, 0) 时，结果是黑色。在光谱的另一端，(1, 1, 1) 是白色，中间是 (0.5, 0.5, 0.5)，即中灰色。在灰度图中，所有三个 RGB 值相同，因此你只需要通过单个浮点数来引用灰度值。
+每个通道的值都在 0 到 1 之间，我们通常以灰度值将它们可视化，因为这样更容易读取颜色值。例如，在红色通道中，值 0 表示完全没有红色，而值 1 表示全红。当你将 0 转换为 `RGB` 颜色 (0, 0, 0) 时，结果是黑色。在光谱的另一端，(1, 1, 1) 是白色，中间是 (0.5, 0.5, 0.5)，即中灰色。在灰度图中，所有三个 `RGB` 值相同，因此你只需要通过单个浮点数来引用灰度值。
 
 仔细观察红砖的边缘。观察灰度图中的左边缘和右边缘。当片段法线值应该指向左侧 (-X, 0, 0) 时，红色通道颜色最深；当应该指向右侧 (+X, 0, 0) 时，颜色最浅。
 
-现在看绿色通道。左边缘和右边缘的值相等，但对于砖的顶部和底部边缘不同。灰度图中的绿色通道在向下 (0, -Y, 0) 时最深，在向上 (0, +Y) 时最浅。
+
+
+现在看绿色通道。左边缘和右边缘的值相等，但对于砖的顶部和底部边缘不同。灰度图中的绿色通道在向下 `(0, -Y, 0)` 时最深，在向上 `(0, +Y)` 时最浅。
 
 最后，蓝色通道在灰度图中大部分是白色的，因为砖块——除了纹理中的少数不规则处——是向外的。砖的边缘是法线应该指向外的唯一地方。
 
 > 注意：法线贴可以是左手系的，也可以是右手系的。你的渲染器期望正 y 轴向上，但某些应用生成的法线贴 y 轴为正值。要修复此，你可以将法线贴导入 Photoshop 并反转绿色通道。
 
-法线贴的基础色——即所有法线都是“法线”方向（与面垂直）——是 (0.5, 0.5, 1)。
+法线贴的基础色——即所有法线都是“法线”方向（与面垂直）——是 `(0.5, 0.5, 1)`。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_178_0.png)
 
 这是一个吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
 
-法线贴的这种颜色 (0.5, 0.5, 1) 是因为所有法线都是“正常”的（与面垂直）。
+法线贴的这种颜色 `(0.5, 0.5, 1)` 是因为所有法线都是“正常”的（与面垂直）。
 
-法线贴的这种颜色是 (0.5, 0.5, 1) 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
+法线贴的这种颜色是 `(0.5, 0.5, 1)` 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
 
-法线贴的这种颜色是 (0.5, 0.5, 1) 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
+法线贴的这种颜色是 `(0.5, 0.5, 1)` 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
 
-法线贴的这种颜色是 (0.5, 0.5, 1) 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
+法线贴的这种颜色是 `(0.5, 0.5, 1)` 这种吸引人的颜色，但并非模型随机选择的。RGB 颜色的值在 0 到 1 之间，而模型的法线值在 -1 到 1 之间。
 
 *(注：此处原文存在文本重复，翻译已按要求去重，仅保留核心逻辑翻译。)*
 
@@ -4292,7 +4038,6 @@ map_Kd ground.png
 
 切线可以与法线的任何方向成直角；然而，为了在模型的不同部分甚至完全不同的模型之间共享法线贴，有两种标准：
 
-
 1. 切线（tangent）和副切线（bitangent）分别代表模型空间中定义的 u 和 v 方向。
 
 2. 红色通道代表沿 u 方向的曲率，绿色通道代表沿 v 方向的曲率。
@@ -4306,15 +4051,18 @@ map_Kd ground.png
 打开本章的启动项目。注意，与上一章的最终代码相比有几处变化：
 
 - `pipelineState` 从 `Model` 移动到 `Submesh`。材质可能有不同的渲染需求，因此每个材质都需要自己的管道流水线状态。
+
 - 光照设置在 Utility 组的 `RendererExtension.swift` 中。
+
 - 模型现在是一个带纹理的小屋，纹理位于 `Textures.assets` 中。
+
 - `Submesh.swift` 和 `Shaders.metal` 中有额外的代码，以通过你在上一章中扩散颜色纹理的方式读取法线贴图。
 
 打开 `Submesh.swift`。你会在 `Textures` 中找到新属性 `normal`，并在 `Submesh.Textures` 的 `init(material:)` 中使用 Model I/O 材质属性 `.tangentSpaceNormal` 加载相应的纹理文件。
 
 打开位于 `Models` 文件夹下的 `cottage1`。`map_tangentSpaceNormal` 属性是 Model I/O 接收法线贴图的内容。`cottage-normal` 是 `Textures.assets` 中的一个纹理。
 
-你将处理多个存储内容而非颜色的纹理。在照片编辑器中查看这些纹理，你可能会认为它们是颜色，但技巧在于是将 RGB (0, 0, 0) 视为数值数据而不是颜色。
+你将处理多个存储内容而非颜色的纹理。在照片编辑器中查看这些纹理，你可能会认为它们是颜色，但技巧在于是将 RGB `(0, 0, 0)` 视为数值数据而不是颜色。
 
 在 `Renderer.swift` 的 `draw(in:)` 中，你发送 `modelSubmesh.textures.normal` 的方式与上一章处理基础颜色纹理的方式。同样，在 `Shaders.metal` 中，片段函数接收索引为 1 的法线贴图；但由于对值进行了归一化，片元函数并没有对纹理值进行任何操作。
 
@@ -4357,8 +4105,11 @@ return float4(normalValue, 1);
 先不要立刻庆祝！你面前还有几个任务。你仍然需要：
 
 1. 使用 Model I/O 加载切线和副切线值。
+
 2. 渲染器命令将包含这些值的新创建 `MTLBuffers` 发送到 GPU。
+
 3. 在顶点着色器中，将值更改为世界空间——就像你处理法线一样——并将新值传递给片段着色器。
+
 4. 根据这些值计算新的法线。
 
 # 1. 加载切线和副切线
@@ -4370,9 +4121,6 @@ return float4(normalValue, 1);
 ![](img/8d763acb335ab213ea9213a628f7d844_184_0.png)
 
 平滑处理会重新计算顶点法线，以便它们在表面上平滑插值。Blender 在 `.obj` 文件中存储平滑组。
-
-
-
 
 # 3. 将切线和副切线转换到世界空间
 
@@ -4433,7 +4181,6 @@ float3 normalDirection = float3x3(in.worldTangent,
 in.worldBitangent,
 in.worldNormal) * normalValue;
 normalDirection = normalize(normalDirection);
-
 ```
 
 编译并运行，查看法线贴应用到小屋屋上的效果。
@@ -4449,12 +4196,17 @@ normalDirection = normalize(normalDirection);
 法线贴图并不是改变模型表面的唯一方法。还有其他纹理图：
 
 - 粗糙度（Roughness）：描述表面的平糙程度。你很快就会添加一个粗糙度图。
+
 - 金属度（Metallic）：白色代表金属，黑色代表电介质。金属是良导体，而电介质材料是非导体。
+
 - 环境光蔽（Ambient Occlusion）：描述被遮挡的区域；换句话说，就是被光线隐藏的区域。
+
 - 反射（Reflection）：识别表面哪些部分是反射的。
+
 - 透明度（Opacity）：描述表面透明部分的位置。
 
 Metal 教程
+
 第 7 章：映射与材质
 
 事实上，任何你能想到的描述表面的值（厚度、曲率等）都可以存储在纹理中。你只需要使用 UV 坐标和恢复出的值在纹理中查找相关的片段。这就是编写自己的渲染器的好处之一。你可以选择使用哪些映射以及如何应用它们。
@@ -4472,7 +4224,9 @@ Metal 教程
 每个组都有与属性相关联的值。你将从文件中提取这些属性并在片段着色器中使用它们。
 
 - Ns：高光指数（光泽度）
+
 - Kd：漫反射颜色
+
 - Ks：高光颜色
 
 > 注意：你可以在 http://paulbourke.net/dataformats/mtl 找到完整的定义列表。
@@ -4482,8 +4236,6 @@ Metal 教程
 ![](img/8d763acb335ab213ea9213a628f7d844_189_0.png)
 
 # 第 7 章：映射与材质
-
-
 
 漫反射颜色并不是你将读取的唯一材质属性。在 Common.h 中添加一个新的结构体来存储材质值：
 
@@ -4508,15 +4260,11 @@ typedef struct {
 
 查看 Models 文件夹中的 `cottage1`。这个文件描述了小屋模型的视觉方面面。在上一章中，你使用 `LowPolyHouse.mt` 中的 `map_kd` 加载了漫反射纹理，并在第 2 章“3 种模型”中在 Blender 中实验了材质组。
 
-
-
 打开 `cottage2.mtl`，你会发现除了玻璃组外，没有任何组具有 `map_kd` 属性。你将在本章稍后部分强调这一点。在 `Renderer.swift` 的 `init(metalView:)` 中，将模型从 "cottage1" 更改为 "cottage2"。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_189_0.png)
 
 # 第 7 章：映射与材质
-
-
 
 漫反射颜色并不是你将读取的唯一材质属性。在 Common.h 中添加一个新的结构体来存储材质值：
 
@@ -4577,7 +4325,9 @@ out.worldBitangent = uniforms.normalMatrix * vertexIn.bitangent;
 
 在计算法线之前，考虑你正在读取的法线颜色值。颜色的范围在 0 到 1 之间，而法线值的范围是从 -1 到 1。
 
-在 `fragment_main` 中，从纹理读取法线之后、归一化之前，添加：
+
+
+在`fragment_main`中，从纹理读取法线之后、归一化之前，添加：
 
 ```
 normalValue = normalValue * 2 - 1;
@@ -4619,6 +4369,7 @@ normalDirection = normalize(normalDirection);
 - 透明度（Opacity）：描述表面透明部分的位置。
 
 Metal 教程
+
 第 7 章：映射与材质
 
 事实上，任何你能想到的描述表面的值（厚度、曲率等）都可以存储在纹理中。你只需要使用 UV 坐标和恢复出的值在纹理中查找相关的片段。这就是编写自己的渲染器的好处之一。你可以选择使用哪些映射以及如何应用它们。
@@ -4631,7 +4382,7 @@ Metal 教程
 
 并不是所有模型都有纹理。例如，你之前在书中渲染的火车具有不同的材质组，它们指定了一个小屋，而不是使用纹理。
 
-查看 Models 文件夹中的 `cottage1`。这个文件描述了小屋模型的视觉方面面。在上一章中，你使用 `LowPolyHouse.mt` 中的 `map_kd` 加载了漫反射纹理，并在第 2 章“3 种模型”中在 Blender 中实验了材质组。
+查看 Models 文件夹中的`cottage1`。这个文件描述了小屋模型的视觉方面面。在上一章中，你使用`LowPolyHouse.mt`中的`map_kd`加载了漫反射纹理，并在第 2 章“3 种模型”中在 Blender 中实验了材质组。
 
 每个组都有都有与属性相关联的值。你将从文件中提取这些属性并在片段着色器中使用它们。
 
@@ -4639,15 +4390,15 @@ Metal 教程
 - Kd：漫反射颜色
 - Ks：高光颜色
 
-> 注意：你可以在 http://paulbourke.net/dataformats/mtl 找到完整的定义列表。
+> 注意：你可以在`http://paulbourke.net/dataformats/mtl`找到完整的定义列表。
 
-当前的 .mtl 文件使用 `map_kd` 加载颜色，但为了实验，你将切换渲染的小屋，使其颜色从材质组而非纹理获取。打开 `cottage2.mtl`，你会发现除了玻璃组外，没有任何组具有 `map_kd` 属性。你将在本章稍后部分强调这一点。在 `Renderer.swift` 的 `init(metalView:)` 中，将模型从 "cottage1" 更改为 "cottage2"。
+当前的`.mtl`文件使用`map_kd`加载颜色，但为了实验，你将切换渲染的小屋，使其颜色从材质组而非纹理获取。打开`cottage2.mtl`，你会发现除了玻璃组外，没有任何组具有`map_kd`属性。你将在本章稍后部分强调这一点。在`Renderer.swift`的`init(metalView:)`中，将模型从`"cottage1"`更改为`"cottage2"`。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_189_0.png)
 
 # 第 7 章：映射与材质
 
-漫反射颜色并不是你将读取的唯一材质属性。在 Common.h 中添加一个新的结构体来存储材质值：
+漫反射颜色并不是你将读取的唯一材质属性。在`Common.h`中添加一个新的结构体来存储材质值：
 
 ```
 typedef struct {
@@ -4660,18 +4411,14 @@ typedef struct {
 } Material;
 ```
 
-可用更多材质属性，但这些是最常见的。目前，你将读取 `baseColor`、`specularColor` 和 `shininess`。
-
-（注：由于提供的原文中包含大量重复段落，此处已按“不要重复输出原文”的原则进行了去重处理翻译。）
-
-
-
+可用更多材质属性，但这些是最常见的。目前，你将读取`baseColor`、`specularColor`和`shininess`。
 
 在着色文件中，你通过索引数字来引用布尔值集合。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_193_0.png)
 
-打开 Submesh.swift 并找到创建流水线状态（pipeline state）的扩展（extension）。
+打开`Submesh.swift`并找到创建流水线状态（pipeline state）的扩展（extension）。
+
 你首先会创建一个函数常量值集合，用于指示当前子网格材质是否存在纹理。在创建流水线状态的扩展中创建一个新方法：
 
 ```
@@ -4685,9 +4432,9 @@ return functionConstants
 }
 ```
 
-`MTLFunctionConstantValues` 是一个包含两个布尔值的集合，取决于这两个纹理是否存在。你在这里定义了布尔值，但这些值可以是由 `MTLDataType` 指定的任何类型。在 GPU 端，你很快将使用相同的索引值创建布尔常量；在这些这些常数的函数中，你可以条件条件执行任务。
+`MTLFunctionConstantValues`是一个包含两个布尔值的集合，取决于这两个纹理是否存在。你在这里定义了布尔值，但这些值可以是由`MTLDataType`指定的任何类型。在 GPU 端，你很快将使用相同的索引值创建布尔常量；在这些常数的函数中，你可以条件执行任务。
 
-你将在设置创建的片段函数（fragment function）时使用它。在 `makePipelineState(textures:)` 的顶部添加以下内容：
+你将在设置创建的片段函数（fragment function）时使用它。在`makePipelineState(textures:)`的顶部添加以下内容：
 
 ```
 let functionConstants = makeFunctionConstants(textures: textures)
@@ -4695,7 +4442,7 @@ let functionConstants = makeFunctionConstants(textures: textures)
 
 Metal by Tutorials
 
-将 `fragmentFunction` 的赋值更改为：
+将`fragmentFunction`的赋值更改为：
 
 ```
 let fragmentFunction: MTLFunction;
@@ -4707,18 +4454,18 @@ do {
 }
 ```
 
-在这里，你告诉编译器使用函数常量集合创建一个函数库。编译器会创建多个着色器函数，并优化函数中的任何条件分支。此 `makeFunction` 方法会抛出异常，所以你应该检查该函数是否存在于项目中。
+在这里，你告诉编译器使用函数常量集合创建一个函数库。编译器会创建多个着色器函数，并优化函数中的任何条件分支。此`makeFunction`方法会抛出异常，所以你应该检查该函数是否存在于项目中。
 
-现在轮到 GPU 端！打开 Shaders.metal。在 `import` 语句之后，你添加常量：
+现在轮到 GPU 端！打开`Shaders.metal`。在`import`语句之后，你添加常量：
 
 ```
 constant bool hasColorTexture [[ function_constant(0) ]];
 constant bool hasNormalTexture [[ function_constant(1) ]];
 ```
 
-这些与你刚刚在 `MTLFunctionConstantValues` 中创建的常量匹配。
+这些与你刚刚在`MTLFunctionConstantValues`中创建的常量匹配。
 
-在 `fragment_main` 中，将：
+在`fragment_main`中，将：
 
 ```
 float3 baseColor = material.baseColor;
@@ -4736,7 +4483,7 @@ if (hasColorTexture) {
 }
 ```
 
-同样，将 `normalValue` 的赋值更改为：
+同样，将`normalValue`的赋值更改为：
 
 ```
 float3 normalValue;
@@ -4750,13 +4497,13 @@ if (hasNormalTexture) {
 normalValue = normalize(normalValue);
 ```
 
-第7章：映射与材质
+第 7 章：映射与材质
 
 根据常量值，你可以读取纹理值或基础值。通常情况下，你应该尝试避免在 GPU 函数中使用条件分支，但编译器在创建专门化函数时会移除这些条件分支。
 
 有一点：如果纹理不存在，你不想在函数中声明它。
 
-将 `baseColorTexture` 和 `normalTexture` 的函数参数改为：
+将`baseColorTexture`和`normalTexture`的函数参数改为：
 
 ```
 texture2d<float> baseColorTexture [[ texture(baseColorTexture),
@@ -4769,7 +4516,7 @@ texture2d<float> normalTexture [[ texture(normalTexture),
 
 构建并运行，你会发现你的绿色小小屋仍然像以前使用基础材质颜色进行渲染。
 
-在 `Renderer.swift` 中再次渲染 `cottage1`，注意纹理现在可以渲染了。你可以用它进行错误检查。渲染 `cottage2`，并在函数段顶部放置此代码：
+在`Renderer.swift`中再次渲染`cottage1`，注意纹理现在可以渲染了。你可以用它进行错误检查。渲染`cottage2`，并在函数段顶部放置此代码：
 
 ```
 if (hasColorTexture) {
@@ -4778,38 +4525,38 @@ if (hasColorTexture) {
 return float4(0, 1, 0, 1);
 ```
 
-这表明 `cottage2` 在玻璃组中错误地有一个纹理贴。
+这表明`cottage2`在玻璃组中错误地有一个纹理贴。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_195_0.png)
 
 在继续之前移除该错误检查代码。
 
-## 基于物理的渲染 (Physically based rendering)
+## 基于物理的渲染（Physically based rendering）
 
-为了实现壮丽的场景，你需要良好的纹理，但光照的作用更为重要。近年来，基于物理的渲染（PBR）概念比简单的冯光（Phong）着光模型流行得多。正如其名称所示，PBR 尝试实现光与表面之间真实的交互。现在增强现实已成为我们生活的一部分，渲染你的模型以匹配其物理环境变得更加重要。
+为了实现壮丽的场景，你需要良好的纹理，但光照的作用更为重要。近年来，基于物理的渲染（PBR）概念比简单的冯光（Phong）着光模型流行得多。正如其名称所示，PBR尝试实现光与表面之间真实的交互。现在增强现实已成为我们生活的一部分，渲染你的模型以匹配其物理环境变得更加重要。
 
-PBR 的一般原则是：
+PBR的一般原则是：
 
 - 表面反射的光不应超过其接收的光。
 - 表面可以用已知的、测量的物理属性来描述。
 
 双向反射分布函数（BRDF）定义了表面如何对光做出响应。针对漫反射和高光有各种高度数学化的 BRDF 模型，但最常见的是兰伯特（Lambertian）漫反射；对于高光，则是 Cook-Torrance 模型（在 SIGGRAPH '81 上提出）。它考虑了：
 
-- *微表面面斜率分布*：你在第 5 章“光照基础”中学习了微表面。
-- *菲涅尔效应 (Fresnel)*：如果你直向下看清澈的湖泊，你可以看到底部；但如果你从水面侧面看，只能看到镜面般的反射。这就是菲涅尔效应，表面的反射取决于你的观察角度。
-- *几何衰减*：微表面的自遮挡。
+- 微表面面斜率分布：你在第 5 章“光照基础”中学习了微表面。
+- 菲涅尔效应（Fresnel）：如果你直向下看清澈的湖泊，你可以看到底部；但如果你从水面侧面看，只能看到镜面般的反射。这就是菲涅尔效应，表面的反射取决于你的观察角度。
+- 几何衰减：微表面的自遮挡。
 
 这些组件每一个都有许多聪明人士编写的不同近似或模型。这是一个庞大且复杂的主题！在资源文件夹中，有很多地方可以学习基于物理的渲染。你将在第 20 章“高级光照”中学习更多关于 BRDF 和菲涅尔的知识。
 
 艺术家通常会提供 BRDF 值的纹理。常见的有：
 
-- **反射率 (Albedo)**：你已经在基础颜色图的形式中见过反射率。反射率最初是一个天文学术语，描述太阳辐射的漫反射测量，但在计算机图形中它指的是没有应用任何着色的表面颜色。
+- 反射率（Albedo）：你已经在基础颜色图的形式中见过反射率。反射率最初是一个天文学术语，描述太阳辐射的漫反射测量，但在计算机图形中它指的是没有应用任何着色的表面颜色。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_196_0.png)
 
-- **金属度 (Metallic)**：表面要么是电的导体——在这种情况下它是金属；要么不是电导体——在这种情况下它是电介质。大多数金属纹理仅由 0（黑色）和 1（白色）值组成：电介质为0，金属为1。
-- **粗糙度 (Roughness)**：一种指示表面光泽度的灰度纹理。白色代表粗糙，黑色光滑。如果你有一个刮损的光滑表面，纹理可能主要由黑色或深灰色并带有划痕。
-- **环境光反射 (Ambient Occlusion)**：一种定义光到达表面的量的灰度纹理。例如，凹结处到达的光较少。
+- 金属度（Metallic）：表面要么是电的导体——在这种情况下它是金属；要么不是电导体——在这种情况下它是电介质。大多数金属纹理仅由 0（黑色）和 1（白色）值组成：电介质为0，金属为1。
+- 粗糙度（Roughness）：一种指示表面光泽度的灰度纹理。白色代表粗糙，黑色光滑。如果你有一个刮损的光滑表面，纹理可能主要由黑色或深灰色并带有划痕。
+- 环境光反射（Ambient Occlusion）：一种定义光到达表面的量的灰度纹理。例如，凹结处到达的光较少。
 
 启动项目中包含一个使用 Cook-Torrance 模型进行高光照明的片段函数。它将上述纹理以及颜色和法线纹理作为输入。
 
@@ -4817,31 +4564,29 @@ PBR 的一般原则是：
 
 ## PBR 工作流
 
-首先，更改片段函数以使用 PBR 计算。在 `Submesh.swift` 中，将 `makePipelineState()` 改为 "fragment_mainPBR"。
+首先，更改片段函数以使用 PBR 计算。在`Submesh.swift`中，将`makePipelineState()`改为`"fragment_mainPBR"`。
 
-打开 `PBR.metal`。在文件检查器中，将该文件添加到 macOS 和 iOS 目标。
+打开`PBR.metal`。在文件检查器中，将该文件添加到 macOS 和 iOS 目标。
 
+检查`fragment_mainPBR`。它的开头与你之前的`fragment_main`相似，但在函数头中带有几个纹理参数。该函数从纹理中提取值并进行与之前相同的计算。为了简单起见，它只处理`lights`数组中的第一个光源。
 
-
-检查 `fragment_mainPBR`。它的开头与你之前的 `fragment_main` 相似，但在函数头中带有几个纹理参数。该函数从纹理中提取值并进行与之前相同的计算。为了简单起见，它只处理 `lights` 数组中的第一个光源。
-
-`fragment_mainPBR` 调用了 `render (Lighting)`，它通过 Cook-Torrance 着色模型来计算高光区域。`fragment_mainPBR` 的结尾将漫反射颜色（与你之前的着色器计算相同）添加到高光值中以生成最终颜色。
+`fragment_mainPBR`调用了`render(Lighting)`，它通过 Cook-Torrance 着色模型来计算高光区域。`fragment_mainPBR`的结尾将漫反射颜色（与你之前的着色器计算相同）添加到高光值中以生成最终颜色。
 
 将所有的 PBR 纹理都添加到你的项目中非常繁琐，所以你只会添加粗糙度（roughness），不过你可以选择作为挑战来添加其他的，如果你愿意的话。
 
-打开 Submesh.swift 并在 `Textures` 中为粗糙度创建一个新属性：
+打开`Submesh.swift`并在`Textures`中为粗糙度创建一个新属性：
 
 ```
 let roughness: MTLTexture?
 ```
 
-在 `Submesh.Textures` 扩展中，在 `init(material)` 的末尾添加此内容：
+在`Submesh.Textures`扩展中，在`init(material)`的末尾添加此内容：
 
-```
+```swift
 roughness = property(with: .roughness)
 ```
 
-除了读取可能的粗糙度纹理外，你还需要读取材质值。在 `Material's init(material)` 的末尾添加：
+除了读取可能的粗糙度纹理外，你还需要读取材质值。在`Material's init(material)`的末尾添加：
 
 ```swift
 if let roughness = material?.property(with: .roughness),
@@ -4850,7 +4595,7 @@ roughness.type == .float3 {
 }
 ```
 
-现在你需要修改 `makeFunctionConstants()`，以便设置所有的纹理函数常量。在函数的末尾、`return functionConstants` 语句之前，添加此代码：
+现在你需要修改`makeFunctionConstants()`，以便设置所有的纹理函数常量。在函数的末尾、`return functionConstants`语句之前，添加此代码：
 
 ```swift
 property = textures.roughness != nil
@@ -4860,29 +4605,31 @@ functionConstants.setConstantValue(&property, type: .bool, index: 3)
 functionConstants.setConstantValue(&property, type: .bool, index: 4)
 ```
 
-在这里，你告诉函数常量是否存在粗糙度纹理，并且将金属度（metallic）和环境光蔽（ambient occlusion）的两个常量设置为假，因为你没有读取其中任何一个纹理。在 GPU 侧，函数常量已经在 `PBR.metal` 中为你设置好了。
+在这里，你告诉函数常量是否存在粗糙度纹理，并且将金属度（metallic）和环境光蔽（ambient occlusion）的两个常量设置为假，因为你没有读取其中任何一个纹理。在 GPU 侧，函数常量已经在`PBR.metal`中为你设置好了。
 
-# Metal 战教程 (Metal by Tutorials)
+# Metal 战教程（Metal by Tutorials）
 
-在 `Renderer.swift` 的 `draw(in:)` 中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
+在`Renderer.swift`的`draw(in:)`中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
 
 ```
 renderEncoder.setFragmentTexture(modelSubmesh.textures.roughness, index: 2)
 ```
 
-仍然在 `Renderer.swift` 中，这次在 `init(metalView)` 中：将渲染的模型改为 "cube"。同时，移除模型的旋转。
+仍然在`Renderer.swift`中，这次在`init(metalView)`中：将渲染的模型改为`"cube"`。同时，移除模型的旋转。
 
-找到你设置 `camera` 属性的地方，将相机位置更改为：
+找到你设置`camera`属性的地方，将相机位置更改为：
 
 ```swift
 camera.position = [0, 0, -3]
 ```
 
-编译并运行，查看应用了反照率（albedo）纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的 `cube.mtl`，移除 `map_tangentSpaceNormal cube–normal` 前面的 `#`。`#` 是注释，所以纹理不会加载。
+编译并运行，查看应用了反照率（albedo）纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的`cube.mtl`，移除`map_tangentSpaceNormal cube–normal`前面的`#`。`#`是注释，所以纹理不会加载。
 
 编译并运行，查看应用法线纹理后的差异。
 
-再次打开 `cube.mtl`，移除 `map_roughness cube–roughness` 前面的 `#`。之前 `.mtl` 文件中的粗糙度值为 1.0，即完全粗糙。打开 `Textures.xcases` 并选择 `cube-roughness`。选择图像并按空格键进行预览。深灰色部分将是光滑且发光的（这里为了效果进行了夸张），砖块之间的白色灰泥将完全完全粗糙（不发光）。
+
+
+再次打开`cube.mtl`，移除`map_roughness cube–roughness`前面的`#`。之前`.mtl`文件中的粗糙度值为 1.0，即完全粗糙。打开`Textures.xcases`并选择`cube-roughness`。选择图像并按空格键进行预览。深灰色部分将是光滑且发光的（这里为了效果进行了夸张），砖块之间的白色灰泥将完全完全粗糙（不发光）。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_199_0.png)
 
@@ -4902,7 +4649,7 @@ Metal 战教程 (Metal by Tutorials)
 
 ## 通道打包 (Channel packing)
 
-打开 `PBR.metal`。
+打开`PBR.metal`。
 
 以后，你将再次使用 PBR 片段函数进行渲染。即使你不理解数学原理，也要理解函数的布局和所使用的概念。
 
@@ -4930,25 +4677,25 @@ Metal 战教程 (Metal by Tutorials)
 
 第 7 章：映射与材质 (Maps & Materials)
 
-在 `Renderer.swift` 的 `draw(in:)` 中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
+在`Renderer.swift`的`draw(in:)`中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
 
 ```
 renderEncoder.setFragmentTexture(modelSubmesh.textures.roughness, index: 2)
 ```
 
-仍然在 `Renderer.swift` 中，这次在 `init(metalView)` 中：将渲染的模型改为 "cube"。同时，移除模型的旋转。
+仍然在`Renderer.swift`中，这次在`init(metalView)`中：将渲染的模型改为 "cube"。同时，移除模型的旋转。
 
-找到你设置 `camera` 属性的地方，将相机位置更改为：
+找到你设置`camera`属性的地方，将相机位置更改为：
 
 ```swift
 camera.position = [0, 0, -3]
 ```
 
-编译并运行，查看应用了反照率纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的 `cube.mtl`，移除 `map_tangentSpaceNormal cube–normal` 前面的 `#`。`#` 是注释，所以纹理不会加载。
+编译并运行，查看应用了反照率纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的`cube.mtl`，移除`map_tangentSpaceNormal cube–normal`前面的`#`。`#`是注释，所以纹理不会加载。
 
 编译并运行，查看应用法线纹理后的差异。
 
-再次打开 `cube.mtl`，移除 `map_roughness cube–roughness` 前面的 `#`。之前 `.mtl` 文件中的粗糙度值为 1.0，即完全粗糙。打开 `Textures.xcases` 并选择 `cube-roughness`。选择图像并按空格键进行预览。深灰色部分将是光滑且发光的（这里为了效果进行了夸张），砖块之间的白色灰泥将完全完全粗糙（不发光）。
+再次打开`cube.mtl`，移除`map_roughness cube–roughness`前面的`#`。之前`.mtl`文件中的粗糙度值为 1.0，即完全粗糙。打开`Textures.xcases`并选择`cube-roughness`。选择图像并按空格键进行预览。深灰色部分将是光滑且发光的（这里为了效果进行了夸张），砖块之间的白色灰泥将完全完全粗糙（不发光）。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_199_0.png)
 
@@ -4968,7 +4715,7 @@ Metal 战教程 (Metal by Tutorials)
 
 ## 通道打包 (Channel packing)
 
-打开 `PBR.metal`。
+打开`PBR.metal`。
 
 以后，你将再次使用 PBR 片段函数进行渲染。即使你不理解数学原理，也要理解函数的布局和所使用的概念。
 
@@ -4994,33 +4741,29 @@ Metal 战教程 (Metal by Tutorials)
 
 # Metal 战教程 (Metal by Tutorials)
 
-在 `Renderer.swift` 的 `draw(in:)` 中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
+在`Renderer.swift`的`draw(in:)`中，找到将颜色和法线纹理发送到片段函数的地方，在其之后添加：
 
 ```
 renderEncoder.setFragmentTexture(modelSubmesh.textures.roughness, index: 2)
 ```
 
-仍然在 `Renderer.swift` 中，这次在 `init(metalView)` 中：将渲染的模型改为 "cube"。同时，移除模型的旋转。
+仍然在`Renderer.swift`中，这次在`init(metalView)`中：将渲染的模型改为 "cube"。同时，移除模型的旋转。
 
-找到你设置 `camera` 属性的地方，将相机位置更改为：
+找到你设置`camera`属性的地方，将相机位置更改为：
 
 ```swift
 camera.position = [0, 0, -3]
 ```
 
-编译并运行，查看应用了反照率纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的 `cube.mtl`，移除 `map_tangentSpaceNormal cube–normal` 前面的 `#`。`#` 是注释，所以纹理不会加载。
+编译并运行，查看应用了反照率纹理的立方体的差异。此纹理没有内置光照信息。为表面贴纹理将使光照变得适当。打开 Models 组中的`cube.mtl`，移除`map_tangentSpaceNormal cube–normal`前面的`#`。`#`是注释，所以纹理不会加载。
 
+- 在本章中，你将渲染一种不同的模型，因此`Model`被重命名为`Prop`。`Props`是无生命的物体，你将继续使用`obj`格式导入它们。
 
+- `Character`模型不是`Prop`，它的渲染方式也不同，因此`Node`的每个子类现在都负责自己的渲染。`Renderer`会调用一个`render(renderEncoder:uniforms:)`方法；你可以在`Prop.swift`中找到它。
 
+- 有一个名为`Character.swift`的新文件。这是你创建动画角色的地方。在该文件中还有一个`Submesh`的子类，它持有额外的属性以访问`Character`网格。你将在本章后面了解到这些属性是什么。
 
-
-- 在本章中，你将渲染一种不同的模型，因此 `Model` 被重命名为 `Prop`。`Props` 是无生命的物体，你将继续使用 `obj` 格式导入它们。
-
-- `Character` 模型不是 `Prop`，它的渲染方式也不同，因此 `Node` 的每个子类现在都负责自己的渲染。`Renderer` 会调用一个 `render(renderEncoder:uniforms:)` 方法；你可以在 `Prop.swift` 中找到它。
-
-- 有一个名为 `Character.swift` 的新文件。这是你创建动画角色的地方。在该文件中还有一个 `Submesh` 的子类，它持有额外的属性以访问 `Character` 网格。你将在本章后面了解到这些属性是什么。
-
-- 因为 `Submesh` 会根据它是 `Prop` 还是 `Character` 以不同的方式查看网，因此 `Submesh` 中有一个新的初始化方法，接收一个预制的流水线状态和一个材质。glTF 资源导入器将为你创建这些对象。
+- 因为`Submesh`会根据它是`Prop`还是`Character`以不同的方式查看网，因此`Submesh`中有一个新的初始化方法，接收一个预制的流水线状态和一个材质。glTF 资源导入器将为你创建这些对象。
 
 运行启动项目，你会看到一个海球。注意看它静呆在那里有多不自然。为了让场景活跃起来，你将开始为海球制作动画，让它在场景中滚动。
 
@@ -5030,7 +4773,7 @@ camera.position = [0, 0, -3]
 
 在之前的第 3 章“渲染流水线”中，你使用正弦波了立方体和火车。在本章中，你将首先使用数学正弦波为海球制作动画，然后使用手动动画。
 
-打开 `Renderer.swift` 并在 `Renderer` 中创建一个新属性：
+打开`Renderer.swift`并在`Renderer`中创建一个新属性：
 
 ```
 var currentTime: Float = 0
@@ -5038,7 +4781,7 @@ var currentTime: Float = 0
 
 ## Metal 教程
 
-在 `Renderer` 的扩展中，添加一个新方法来每帧更新对象：
+在`Renderer`的扩展中，添加一个新方法来每帧更新对象：
 
 ```
 func update(deltaTime: Float) {
@@ -5048,14 +4791,14 @@ func update(deltaTime: Float) {
 }
 ```
 
-现在，在 `draw(in)` 的顶部、`guard` 语句之后调用此方法：
+现在，在`draw(in)`的顶部、`guard`语句之后调用此方法：
 
 ```
 let deltaTime = 1 / Float(preferredFramesPerSecond)
 update(deltaTime: deltaTime)
 ```
 
-`property view.preferredFramesPerSecond` 默认值为每秒 60 帧（每帧 16.6 毫秒）。你的应用需要确保每一帧的每个渲染器都在此时间内；否则，你应该选择较低的帧率。你将使用 `deltaTime` 来更新每帧的动画。
+`property view.preferredFramesPerSecond`默认值为每秒 60 帧（每帧 16.6 毫秒）。你的应用需要确保每一帧的每个渲染器都在此时间内；否则，你应该选择较低的帧率。你将使用`deltaTime`来更新每帧的动画。
 
 编译并运行，球现在会左右移动了。
 
@@ -5065,19 +4808,19 @@ update(deltaTime: deltaTime)
 
 与其使用动画软件手动创建动画，不如使用基于物理的动画这意味着这意味着模型可以模拟真实世界。在接下来的练习中，你只需要模拟重力和碰撞，一个完整的物理引擎可以模拟各种效果，例如流体动力学、布料和软体（布布娃娃）动力学。
 
-在 `Renderer` 中创建一个新属性来跟踪球的速度：
+在`Renderer`中创建一个新属性来跟踪球的速度：
 
 ```
 var ballVelocity: Float = 0
 ```
 
-从 `update(deltaTime:)` 中删除这段代码：
+从`update(deltaTime:)`中删除这段代码：
 
 ```
 ball.position.x = sin(currentTime)
 ```
 
-在 `update(deltaTime:)` 中，为模拟所需的单个物理设置一些常量：
+在`update(deltaTime:)`中，为模拟所需的单个物理设置一些常量：
 
 ```
 let gravity: Float = 9.8 // 米 / 秒 2
@@ -5093,13 +4836,13 @@ let bounciness: Float = 0.9
 let timeStep: Float = 1 / 600
 ```
 
-`gravity` 代表物体向地球坠落的加速度。如果你在宇宙的其他地方模拟重力（例如火星），这个值将会有不同。
+`gravity`代表物体向地球坠落的加速度。如果你在宇宙的其他地方模拟重力（例如火星），这个值将会有不同。
 
-牛顿第二定律是 $F = ma$，即力 = 质量 × 加速度。重新排列方程得到：加速度 = 力（重力）/ 质量。
+牛顿第二定律是$F = ma$，即力 = 质量 × 加速度。重新排列方程得到：加速度 = 力（重力）/ 质量。
 
 其他常量描述了周围环境和海球的属性。如果这是一个保龄球，它会有更大的质量和更小的弹性。
 
-将此内容添加到 `update(deltaTime):` 的末尾：
+将此内容添加到`update(deltaTime):`的末尾：
 
 ```
 ballVelocity += (acceleration * timeStep) / airFriction
@@ -5112,7 +4855,7 @@ if ball.position.y <= 0.35 { // 与地面碰撞
 
 在这里，你根据球当前的速度计算球的位置；你可以在第 16 章“粒子系统”中阅读更多相关内容。球的中心点在它的中心，直径约为 0.7 单位，因此当球的中心位于地面上方 0.35 单位处时，当你反转速度并向上移动。
 
-在 `init(metaView())` 中，将球的初始位置更改为在空中：
+在`init(metaView())`中，将球的初始位置更改为在空中：
 
 ```
 ball.position = [0, 3, 0]
@@ -5124,22 +4867,19 @@ ball.position = [0, 3, 0]
 
 这是由于物理引擎导致的逻辑错误。*对不起，此处我需要重新检查翻译逻辑。*
 
-
-
-
 编译并运行，观察球在周围挤压和扭动。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_209_0.png)
 
-> **注意：** 要学习动画的其他 11 个原理，请查看本章 Resources 文件夹中的 references.markdown。
+> **注意：** 要学习动画的其他 11 个原理，请查看本章 Resources 文件夹中的`references.markdown`。
 
 ## 关键帧
 
 如果你想让被到处抛出的球动起来，你需要输入它随时间变化的位置信息。对于这种输入，你需要设置一个位置数组，并为指定的时间提取正确的位置。
 
-在 Utility 组的 `RendererExtension.swift` 中，已经设置了一个名为 `ballPositionArray` 的数组。该数组由 60 个从 -1 到 1 的值组成。通过计算当前帧，你可以从数组中获取 x 位置。
+在 Utility 组的`RendererExtension.swift`中，已经设置了一个名为`ballPositionArray`的数组。该数组由 60 个从 -1 到 1 的值组成。通过计算当前帧，你可以从数组中获取 x 位置。
 
-在 `Renderer.swift` 中，将 `update(deltaTime: Float)` 修改为：
+在`Renderer.swift`中，将`update(deltaTime: Float)`修改为：
 
 ```swift
 func update(deltaTime: Float) {
@@ -5195,7 +4935,7 @@ value = (10 - 5) \times time + 5$
 
 你不再为球的每一帧创建一个值来动画，而是只保留关键位置。这些将是姿态的极端位置。在球的示例中，极端位置是 -1 和 1。你还将持有与该关键值时间对应的关键时间。例如，如果你的动画持续 2 秒，你的极端位置将在 0 秒处于左侧起始位置，1 秒时球在右侧，2 秒时将球回到左侧。这些时间之间的所有帧都将经过插值。
 
-创建一个名为 `Animation.swift` 的新 Swift 文件。记住将该文件添加到 macOS 和 iOS 目标中。在这里，你将存储动画数据，并创建方法来返回给定时间的插值。这种动画数据被称为动画片段 (animation clip)。
+创建一个名为`Animation.swift`的新 Swift 文件。记住将该文件添加到 macOS 和 iOS 目标中。在这里，你将存储动画数据，并创建方法来返回给定时间的插值。这种动画数据被称为动画片段 (animation clip)。
 
 创建一个新的结构体来存储动画关键值和时间：
 
@@ -5215,9 +4955,11 @@ class Animation {
 }
 ```
 
-通过 `repeatAnimation`，你可以无限重复动画片段，或只播放一次。
+通过`repeatAnimation`，你可以无限重复动画片段，或只播放一次。
 
-在 `Animation` 中创建一个方法来返回插值的关键帧：
+在`Animation`中创建一个方法来返回插值的关键帧：
+
+
 
 ```swift
 func getTranslation(time: Float) -> float3? {
@@ -5227,7 +4969,7 @@ func getTranslation(time: Float) -> float3? {
 }
 ```
 
-确保数组中有平移键，否则返回一个 nil float 值。
+确保数组中有平移键，否则返回一个 `nil` `float` 值。
 
 继续添加此方法：
 
@@ -5285,15 +5027,15 @@ return simd_mix(previousKey.value, nextKey.value, float3(interpol))
 
 ![](img/8d763acb335ab213ea9213a628f7d844_212_0.png)
 
-使用 `simd_mix` 函数在两个关键帧之间进行插值（插值必须是 0 到 1 之间的值）。
+使用`simd_mix`函数在两个关键帧之间进行插值（插值必须是 0 到 1 之间的值）。
 
-Utility 组中的 `RendererExtension.swift`，取消 `generateTranslations()` 的注释。该方法创建一个带有关键帧数组。片段的长度为 2 秒。你可以通过查看关键帧的时间看到。
+Utility 组中的`RendererExtension.swift`，取消`generateTranslations()`的注释。该方法创建一个带有关键帧数组。片段的长度为 2 秒。你可以通过查看关键帧的时间看到。
 
 在 x 轴上，球将从位置 -1 开始，0.35 秒移动到位置 1。它将保持位置直到到达 1 秒，1.35 秒返回 -1。然后它将保持位置直到片段结束。
 
 通过更改数组中的值，你可以加快抛掷并在末端保持球更长时间。
 
-在 `Renderer.swift` 中，将 `update(deltaTime:)` 修改为：
+在`Renderer.swift`中，将`update(deltaTime:)`修改为：
 
 ```swift
 func update(deltaTime: Float) {
@@ -5306,7 +5048,7 @@ func update(deltaTime: Float) {
 }
 ```
 
-在这里，你通过生成的关键帧平移加载动画。通常，你想在 `update` 之外加载动画片段，但为了简单，在 `update(deltaTime:)` 中处理这些是可以的。你还从动画片段中提取当前时间的球的位置。
+在这里，你通过生成的关键帧平移加载动画。通常，你想在`update`之外加载动画片段，但为了简单，在`update(deltaTime:)`中处理这些是可以的。你还从动画片段中提取当前时间的球的位置。
 
 编译并运行，观察隐形的手如何到处抛你的球。
 
@@ -5316,9 +5058,9 @@ func update(deltaTime: Float) {
 
 ## 欧角旋转
 
-现在球在空气中移动了，你可能也想旋转它。为了表示物体的旋转，你目前持有一个带有 x、y 和 z 轴旋转角的 `float3`。这些是以数学家莱昂德·欧拉（Leonard Euler）命名的欧拉角。欧拉是欧拉旋转定理背后的创立，该定理指出任何旋转都可以使用三个旋转角来描述。对于单个旋转这是可以的，在这三个值之间进行插值并没有以你认为的方式工作。
+现在球在空气中移动了，你可能也想旋转它。为了表示物体的旋转，你目前持有一个带有 x、y 和 z 轴旋转角的`float3`。这些是以数学家莱昂德·欧拉（Leonard Euler）命名的欧拉角。欧拉是欧拉旋转定理背后的创立，该定理指出任何旋转都可以使用三个旋转角来描述。对于单个旋转这是可以的，在这三个值之间进行插值并没有以你认为的方式工作。
 
-为了创建一个旋转角，你一直在调用这个隐藏在 `MathLib.swift` 数库中的函数：
+为了创建一个旋转角，你一直在调用这个隐藏在`MathLib.swift`数库中的函数：
 
 ```swift
 init(rotation angle: float3) {
@@ -5338,9 +5080,6 @@ init(rotation angle: float3) {
 当你进行旋转插值时，如果两个轴对齐，你就会遇到名字非常完美的万向节锁（gimbal lock）。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_214_0.png)
-
-
-
 
 Metal 教程
 
@@ -5364,27 +5103,27 @@ i² = j² = k² = ijk = -1
 
 > 注意：如果你对研究四元数的内部原理感兴趣，`references.markdown` 包含了更多阅读。
 
-你不需要编写任何复杂的插值代码，因为 `simd` 有四元数类和方法可以使用 `simd_lerp()` 为你处理一切。四元数沿着此处描述的最短路径执行球面插值：
+你不需要编写任何复杂的插值代码，因为`simd`有四元数类和方法可以使用`simd_lerp()`为你处理一切。四元数沿着此处描述的最短路径执行球面插值：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_215_0.png)
 
 在 simd 内部，四元数是四个元素的向量，但 Apple 建议将其视为抽象的数学对象，而不是深入内部存储。这让你可以不必学习四元数的最后一个元素是实部，前三个元素是虚部。
 
-你将从使用欧拉角切换到使用四元数进行旋转。利用 `simd` 四元数与旋转矩阵之间的转换，这种切换是轻而易举的。
+你将从使用欧拉角切换到使用四元数进行旋转。利用`simd`四元数与旋转矩阵之间的转换，这种切换是轻而易举的。
 
-在 Node.swift 中，添加此属性：
+在`Node.swift`中，添加此属性：
 
 ```
 var quaternion = simd_quatf()
 ```
 
-在定义 `rotateMatrix` 的地方，将 `rotateMatrix` 的定义更改为：
+在定义`rotateMatrix`的地方，将`rotateMatrix`的定义更改为：
 
 ```
 let rotateMatrix = float4x4(quaternion)
 ```
 
-你的节点将支持四元数而非欧拉角。你应该修改旋转部分以更新四元数。将 `rotation` 的定义更改为：
+你的节点将支持四元数而非欧拉角。你应该修改旋转部分以更新四元数。将`rotation`的定义更改为：
 
 ```
 var rotation: float3 = [0, 0, 0] {
@@ -5395,7 +5134,7 @@ var rotation: float3 = [0, 0, 0] {
 
 这在你设置模型旋转时会设置四元数的值。
 
-要使用四元数进行动画处理，你需要复制处理平移的操作。在 Animation.swift 中，添加此结构体来存储关键帧：
+要使用四元数进行动画处理，你需要复制处理平移的操作。在`Animation.swift`中，添加此结构体来存储关键帧：
 
 ```swift
 struct KeyQuaternion {
@@ -5404,13 +5143,13 @@ struct KeyQuaternion {
 }
 ```
 
-在 Animation 中添加一个新属性：
+在`Animation`中添加一个新属性：
 
 ```
 var rotations: [KeyQuaternion] = []
 ```
 
-复制 `getTranslation(time:)`，但将所有的平移替换为旋转和四元数：
+复制`getTranslation(time:)`，但将所有的平移替换为旋转和四元数：
 
 ```swift
 func getRotation(time: Float) -> simd_quatf? {
@@ -5436,13 +5175,13 @@ func getRotation(time: Float) -> simd_quatf? {
 }
 ```
 
-注意你将插值函数改为使用 `simd_slerp` 代替 `simd_mix`。这完成了必要的球面插值。
+注意你将插值函数改为使用`simd_slerp`代替`simd_mix`。这完成了必要的球面插值。
 
-在 RendererExtension.swift 中，取消注释 `generateBallRotations()` 方法。它包含一个旋转关键帧数组。旋转从 0 开始，然后在几个关键帧内沿 z 轴旋转 90°，在 0.35 秒时旋转到 0。
+在`RendererExtension.swift`中，取消注释`generateBallRotations()`方法。它包含一个旋转关键帧数组。旋转从 0 开始，然后在几个关键帧内沿 z 轴旋转 90°，在 0.35 秒时旋转到 0。
 
 之所以旋转几次 90° 是因为你从 0° 旋转到 360°，它们之间的最短距离是 0°，所以球完全不会旋转。
 
-对于球的最终旋转，将 `update(deltaTime:)` 更改为：
+对于球的最终旋转，将`update(deltaTime:)`更改为：
 
 ```swift
 func update(deltaTime: Float) {
@@ -5486,13 +5225,10 @@ ball.quaternion = animation.getRotation(time: currentTime) ?? simd_quatf()
 
 ![](img/8d763acb335ab213ea9213a628f7d844_221_2.png)
 
-
-
-
-
 # 教程实战 (Metal by Tutorials)
 
 这是一个在肘关节处混合权重与非混合权重的对比示例，选定了前臂：
+
 ![](img/8d763acb335ab213ea9213a628f7d844_222_0.png)
 
 蓝色区域表示权重；红色区域表示完全权重。在右图中你可以看到前臂不自然地进入上臂，而在左图中，顶点环绕肘关节运动更加均匀。
@@ -5504,6 +5240,7 @@ ball.quaternion = animation.getRotation(time: currentTime) ?? simd_quatf()
 选择窗口底部当前显示为“权重绘制”（Weight Paint）的下拉菜单，回到物体模式。按下 `Option A` 开始动画。你的骨骼现在应该开始播放动画了。这段波形动画是循环的。
 
 你现在将使用 Blender 稍微复杂的界面创建一个拆分窗口，以便查看动画帧。在面板的右上角，你会看到对角线。点击并拖动这些线到左侧创建一个第二个窗口。
+
 ![](img/8d763acb335ab213ea9213a628f7d844_222_1.png)
 
 # 教程实战 (Metal by Tutorials)
@@ -5534,26 +5271,28 @@ ball.quaternion = animation.getRotation(time: currentTime) ?? simd_quatf()
 
 现在你已经快速了解了如何在 Blender 中创建绑定模型并制作动画，你将转向学习如何在渲染引擎中渲染它。
 
-> 注意：你仅接触了创建动画模型的表面。如果你有创建自己的模型，可以在 `references.markdown` 中找到一些额外的资源。
+> 注意：你仅接触了创建动画模型的表面。如果你有创建自己的模型，可以在`references.markdown`中找到一些额外的资源。
 
 ## 导入资产
 
 需要解决的一个大问题是如何从 3D 应用导入动画。在第 2 章“3D 模型”中，你学习了各种文件类型。由 Khronos Group 开发的一种流行导出格式是 glTF（传输格式）。Khronos 开放了源格式，以便任何人都能自己的引擎中使用。http://www.sketchfab.com 是一个主要的 3D 模型供应商和展示平台；他们所有的下载模型都提供 glTF 格式。
 
+
+
 glTF 是你将用于从 Blender 导入动画的格式。
 
-> 注意：使用 glTF 和 Blender 导出动画模型，你需要从 https://github.com/Kupoman/blendergtf 安装 blendergtf。遵循给出的安装说明。
+> 注意：使用 glTF 和 Blender 导出动画模型，你需要从 `https://github.com/Kupoman/blendergtf` 安装 `blendergtf`。遵循给出的安装说明。
 
 ## glTF 文件格式
 
-在你的入门项目中，Models > Characters 组包含一个纯文本 JSON 格式的 glTF 文件，名为 `skeletonWave.gltf`。
+在你的入门项目中，`Models > Characters` 组包含一个纯文本 JSON 格式的 glTF 文件，名为 `skeletonWave.gltf`。
 
-顶点、关节动画数据位于随附二进制文件 `skeletonWave.bin` 的缓冲区中，.gltf 文件中的条目指向每个缓冲区中顶点和属性数据的位置。
+顶点、关节动画数据位于随附二进制文件 `skeletonWave.bin` 的缓冲区中，`.gltf` 文件中的条目指向每个缓冲区中顶点和属性数据的位置。
 
-你的入门项目中还包含一个基础的 glTF 导入器，它取代了加载角色的 Model I/O .obj 导入器。glTF 导入器导入简单的动画，但不支持 glTF 支持的所有功能。一旦导入 glTF 模型，你将能够访问：
+你的入门项目中还包含一个基础的 glTF 导入器，它取代了加载角色的 Model I/O `.obj` 导入器。glTF 导入器导入简单的动画，但不支持 glTF 支持的所有功能。一旦导入 glTF 模型，你将能够访问：
 
 - 包含属性顶点的缓冲区
-- 包含变换的网格节点 (MeshNodes)
+- 包含变换的网格节点 (`MeshNodes`)
 - 包含关键帧的动画
 - 层级结构中的节点
 
@@ -5561,17 +5300,13 @@ glTF 是你将用于从 Blender 导入动画的格式。
 
 ## 渲染资产
 
-
-
-
-
 ## Metal 教程
 
 构建并运行，球体和地面应该渲染，但由于你删除了动画部分，它们将没有动画。
 
 通过证明内容仍然正常渲染，你可以在 `init(metal.View)` 中从场景中移除球体：
 
-在 Character 中：创建一个新的扩展：
+在 `Character` 中：创建一个新的扩展：
 
 ```swift
 extension Character: Renderable {
@@ -5613,13 +5348,13 @@ renderEncoder.drawPrimitives(type: triangle,
 }
 ```
 
-将此代码与 Prop 的 `renderer(renderEncoder: uniforms)` 进行比较。除了目前你没有向顶点函数发送任何顶点，它们几乎是一样的。
+将此代码与 `Prop` 的 `renderer(renderEncoder: uniforms)` 进行比较。除了目前你没有向顶点函数发送任何顶点，它们几乎是一样的。
 
 glTF 导入器已经将顶点数据设置到 `MTLBuffers` 中，好发送到 GPU。然而，3D 应用可以以许多不同的方式布局模型数据。
 
 # 第 8 章：角色动画
 
-glTF 导入器查看 .gltf JSON 文件中的结构信息，并创建一个描述属性和缓冲区布局的顶点描述符。
+glTF 导入器查看 `.gltf` JSON 文件中的结构信息，并创建一个描述属性和缓冲区布局的顶点描述符。
 
 以下是具有三个顶点的三角形布局的两种示例：
 
@@ -5690,6 +5425,7 @@ func calculateJoints(node: CharacterNode, time: Float) {
 ```
 
 代码解析：
+
 1. 获取节点的动画。
 2. 设置节点的平和平旋转。
 3. 对其子节点执行相同的操作（递归地）。
@@ -5753,7 +5489,6 @@ glTF 导入器为每个关节导入了一个逆绑定矩阵。该矩阵将顶点
 
 # 关节矩阵调还有一点需要考虑：权重。在对模型建模时，在权重绘制期间，为每个顶点分配一个或多个关节。glTF 导入器将为每个顶点创建包含四个关节和四个权重的 `MTLBuffers`。
 
-
 顶点函数将从这些关节矩阵中的每一个进行采样，并使用权重将变换矩阵应用于每个顶点。
 
 接下来的图像显示了一个顶点，它被分配了 50% 给关节 2，50% 给关节 3。另外两个关节索引未未使用。
@@ -5763,13 +5498,14 @@ glTF 导入器为每个关节导入了一个逆绑定矩阵。该矩阵将顶点
 | P P P | 2 3 0 0 | 0.5 0.5 0 |
 
 骨骼 2 关节矩阵
+
 骨骼 3 关节矩阵
 
 在顶点函数中，将顶点乘以投影、视图和模型矩阵之后，顶点函数会将顶点乘以每个关节变换的权重。使用图中的示例，顶点乘以 50% 的骨骼 2 关节矩阵和 50% 的骨骼 3 关节矩阵。
 
 在 `render(renderEncoder:uniforms:)` 中，在第一个循环开始处、`guard` 语句之后，添加：
 
-```
+```swift
 if let skin = node.skin {
   for (i, jointNode) in skin.jointNodes.enumerated() {
     skin.jointMatrixPalette[i] = jointNode.globalTransform * 
@@ -5785,22 +5521,22 @@ if let skin = node.skin {
 }
 ```
 
-为了为每个节点创建关节矩阵调板，此方法使用了 CharacterNode 上的两个计算属性。你可以在 GLFTyypes.swift 中找到它们：
+为了为每个节点创建关节矩阵调板，此方法使用了 `CharacterNode` 上的两个计算属性。你可以在 `GLFTyypes.swift` 中找到它们：
 
-- localTransform: 返回包含平移、旋转和缩放的变换矩阵。
-- globalTransform: 返回节点与所有父节点结合后的变换。
+- `localTransform`: 返回包含平移、旋转和缩放的变换矩阵。
+- `globalTransform`: 返回节点与所有父节点结合后的变换。
 
 对于皮肤的关节节点数组中的每个关节，你通过结合反向绑定姿（inverse bind pose）和节点的当前全局变换来创建关节矩阵调板变换。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_235_0.png)
 
-然后你创建一个包含准备用于顶点函数的关节矩阵调板的 MTLBuffer。
+然后你创建一个包含准备用于顶点函数的关节矩阵调板的 `MTLBuffer`。
 
 glTF 导入器创建了一个描述所有顶点属性的顶点描述符，但你需要在顶点函数中匹配这些属性。
 
 在 **Metal Shaders** 组的 **Common.h** 中，向 `Attributes` 结构体添加以下内容：
 
-```
+```swift
 Color = 5,
 Joints = 6,
 Weights = 7
@@ -5808,22 +5544,22 @@ Weights = 7
 
 你的 Character 在 **CharacterShaders.metal** 中使用的顶点函数。关节动画完全关于顶点，因此 Character 使用了与 Prop 相同的片器函数。
 
-打开 **CharacterShaders.metal**，并在 VertexIn 中添加这些：
+打开 **CharacterShaders.metal**，并在 `VertexIn` 中添加这些：
 
-```
+```swift
 float4 color [[attribute(Color)]]; ushort4 joints [[attribute(Joints)]];
 float4 weights [[attribute(Weights)]];
 ```
 
-早些时候，你创建了一个在缓冲区索引 21 包含关节矩阵的新 MTLBuffer，因此将其作为参数添加到 `character_vertex_main` 中：
+早些时候，你创建了一个在缓冲区索引 21 包含关节矩阵的新 `MTLBuffer`，因此将其作为参数添加到 `character_vertex_main` 中：
 
-```
+```swift
 constant float4x *jointMatrices [[ buffer(21) ]]
 ```
 
 在 `character_vertex_main` 内部，在注释 `// skinning code here` 处，添加以下：
 
-```
+```swift
 float4 weights = vertexIn.weights; ushort4 joints = vertexIn.joints;
 float4x * skinMatrix =
 weights.x * jointMatrices[joints.x] +
@@ -5836,7 +5572,7 @@ weights.w * jointMatrices[joints.w];
 
 将位置和世界法线的赋值替换为：
 
-```
+```swift
 out.position = modelMatrix * skinMatrix * vertexIn.position;
 out.worldNormal = uniforms.normalMatrix * 
 (skinMatrix * float4(vertexIn.normal, 1)).xyz;
@@ -5862,13 +5598,11 @@ out.worldNormal = uniforms.normalMatrix *
 
 掌握了基础之后，你将进入创建场景的阶段。
 
-- 第 9 章：场景图：主要添加的是位于 Utility 组的输入控制器。Storyboard 的 MTKView 被子类为 GameView，用于捕获按键。GameView 将用户交互传递给 InputController（稍后会介绍），由它处理按键。
-- 第 10 章：片元处理：掌握了基础之后，你将进入创建场景。
-- 第 11 章：细分与地形：使用某些技术来。
-- 第 12 章：环境：使用某些技术来。
-- 第 13 章：实例化与程序化生成：使用某些技术来游戏。
-- 第 14 章：多通道渲染与延迟渲染：使用某些技术直到最终渲染。
-- 第 15 章：性能优化：使用 Xcode 工具查找。
+
+
+# 第 9 章：场景图
+
+本章主要添加的是位于 Utility 组的输入控制器。`Storyboard` 的 `MTKView` 被子类为 `GameView`，用于捕获按键。`GameView` 将用户交互传递给 `InputController`（稍后会介绍），由它处理按键。
 
 ## 场景
 
@@ -5878,22 +5612,19 @@ out.worldNormal = uniforms.normalMatrix *
 
 ## 初始项目
 
-当然，你可以在 Renderer 中添加这些对象，但当你添加逻辑或让它们相互交互时会发生什么？一种方案是在 `update(deltaTime)` 中添加这种交互：然而，随着交互需求的增加，这样做往往变得不切实际。更好的方法是创建一个 Scene 类，并将逻辑从渲染代码中分离。
+当然，你可以在 `Renderer` 中添加这些对象，但当你添加逻辑或让它们相互交互时会发生什么？一种方案是在 `update(deltaTime)` 中添加这种交互：然而，随着交互需求的增加，这样做往往变得不切实际。更好的方法是创建一个 `Scene` 类，并将逻辑从渲染代码中分离。
 
-为了实现这一点，你首先将使用 Scene 类重建初始项目的初始渲染。一旦完成，你就可以移动骨骼并驾驶汽车，而无需担心 Metal 和 GPU 在幕后正在做什么。
+为了实现这一点，你首先将使用 `Scene` 类重建初始项目的初始渲染。一旦完成，你就可以移动骨骼并驾驶汽车，而无需担心 `Metal` 和 `GPU` 在幕后正在做什么。
 
 本章的初始项目。大部分情况下，该项目与上一章相似；但存在一些变化：
 
 - 主要添加的是位于 Utility 组的输入控制器。
-- Storyboard 的 MTKView 被子类为 GameView，用于捕获按键。
-- GameView 将用户交互传递给 InputController（稍后会介绍），由它处理按键。在本章中，未包含 iOS 目标，但有一个使用 Core Motion 进行 iOS 转向的示例项目。
+- `Storyboard` 的 `MTKView` 被子类为 `GameView`，用于捕获按键。
+- `GameView` 将用户交互传递给 `InputController`（稍后会介绍），由它处理按键。在本章中，未包含 `iOS` 目标，但有一个使用 `Core Motion` 进行 `iOS` 转向的示例项目。
 
-另一个重大变化在 Character 中。在上一章中，你只能播放一种动画。通过一些更改，你现在可以播放、暂停和停止命名的动画，骨骼有四种：sit、walk、idle 和 wave。Blender 在这些名称前带有骨架的名称；例如，walk 被命名为 "Armature-walk"。
+另一个重大变化在 `Character` 中。在上一章中，你只能播放一种动画。通过一些更改，你现在可以播放、暂停和停止命名的动画，骨骼有四种：`sit`、`walk`、`idle` 和 `wave`。`Blender` 在这些名称前带有骨架的名称；例如，`walk` 被命名为 `"Armature-walk"`。
 
-构建并运行初始项目。如果一切顺利，你将看到地面和汽车道具，以及处于暂停状态的单帧 "Armature-idle" 动画的骨骼角色。
-
-
-
+构建并运行初始项目。如果一切顺利，你将看到地面和汽车道具，以及处于暂停状态的单帧 `"Armature-idle"` 动画的骨骼角色。
 
 ## Scene 类
 
@@ -5901,19 +5632,19 @@ out.worldNormal = uniforms.normalMatrix *
 
 ![](img/8d763acb335ab213ea9213a628f7d844_242_0.png)
 
-GameView 将处理所有输入并将它们传递给 InputController。Scene 将有机会拦截并处理触控、鼠标和键盘事件。Scene 还将持有所有 Props（属性）、Characters（角色）和 Cameras（相机）的引用。Renderer 将持有当前 Scene 的引用。对于每一帧，Renderer 都会要求 Scene 更新其模型的变换（transforms），然后 Renderer 将处理每个模型，由该模型进行自身渲染。
+`GameView` 将处理所有输入并将它们传递给 `InputController`。`Scene` 将有机会拦截并处理触控、鼠标和键盘事件。`Scene` 还将持有所有 `Props`（属性）、`Characters`（角色）和 `Cameras`（相机）的引用。`Renderer` 将持有当前 `Scene` 的引用。对于每一帧，`Renderer` 都会要求 `Scene` 更新其模型的变换（`transforms`），然后 `Renderer` 将处理每个模型，由该模型进行自身渲染。
 
-在你的启动项目中，创建一个名为 `Scene.swift` 的新 Swift 文件。这是一个基类，你可以根据你特定的游戏场景对其进行子类化。
+在你的启动项目中，创建一个名为 `Scene.swift` 的新 `Swift` 文件。这是一个基类，你可以根据你特定的游戏场景对其进行子类化。
 
-在基类中，你需要包含所有 Scene 子类都需要的元素：
+在基类中，你需要包含所有 `Scene` 子类都需要的元素：
 
-- 一个默认相机（Camera）。你将创建一个相机数组，玩家可以从中选择。
-- 对 InputController 的引用。
-- 场景中可渲染对象（Renderables）的列表。
--你的 Scene 子类可以重写的存根方法（Stub methods）。这些方法将用于更改每帧的设置和更新。
-- 最后，因为 Scene 控制相机，它还需要持有 Uniforms（统一变量）。
+- 一个默认相机（`Camera`）。你将创建一个相机数组，玩家可以从中选择。
+- 对 `InputController` 的引用。
+- 场景中可渲染对象（`Renderables`）的列表。
+- 你的 `Scene` 子类可以重写的存根方法（`Stub methods`）。这些方法将用于更改每帧的设置和更新。
+- 最后，因为 `Scene` 控制相机，它还需要持有 `Uniforms`（统一变量）。
 
-一旦你构创建了 **Scene.swift**，请将此代码添加到其中：
+一旦你构创建了 `Scene.swift`，请将此代码添加到其中：
 
 ```swift
 class Scene {
@@ -5930,9 +5661,9 @@ class Scene {
 }
 ```
 
-这使用你从 ViewController 传递的 metal view 的尺寸初始化场景。当你创建一个新的场景子类时，你将重写 `setupScene()` 来为每个场景添加对象。
+这使用你从 `ViewController` 传递的 `metal view` 的尺寸初始化场景。当你创建一个新的场景子类时，你将重写 `setupScene()` 来为每个场景添加对象。
 
-在 Scene 中，创建一个相机数组并将其中一个设置为默认相机：
+在 `Scene` 中，创建一个相机数组并将其中一个设置为默认相机：
 
 ```swift
 var cameras = [Camera()]
@@ -5958,18 +5689,18 @@ var camera: Camera {
 
 右侧，当汽车移动时，骨架也之移动。然而，就像蜜的例子一样，汽车内部的骨架仍然独立移动（并且当那些杀手蜂攻击时应该能够躲避！）。
 
-要将 Node 转换为分级树结构，你需要添加父属性和子属性。
+要将 `Node` 转换为分级树结构，你需要添加父属性和子属性。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_245_0.png)
 
-打开 **Node.swift** 并向 Node 添加这些属性：
+打开 `Node.swift` 并向 `Node` 添加这些属性：
 
 ```swift
 var parent: Node?
 var children: [Node] = []
 ```
 
-现在每个 Node 都可以都有一个父 Node 和多个子 Node。
+现在每个 `Node` 都可以都有一个父 `Node` 和多个子 `Node`。
 
 接下来，添加以下方法来处理从树结构中添加和移除节点：
 
@@ -6003,7 +5734,7 @@ final func remove(childNode: Node) {
 
 现在可以创建场景的分级关系，通过扁平化数组渲染任务变得更简单且灵活。
 
-在 Scene.swift 中，添加这些属性：
+在 `Scene.swift` 中，添加这些属性：
 
 ```swift
 let rootNode = Node()
@@ -6015,7 +5746,7 @@ var uniforms = Uniforms()
 
 在这里，你更新所有节点的变换。你还需要从场景中添加和移除对象的方法。
 
-将以下代码添加到 Scene：
+将以下代码添加到 `Scene`：
 
 ```swift
 final func add(node: Node, parent: Node? = nil, render: Bool = true) {
@@ -6032,7 +5763,7 @@ final func add(node: Node, parent: Node? = nil, render: Bool = true) {
 }
 ```
 
-此方法将节点添加到场景。当向场景添加对象时，你可以选择选择对象的父节点以及对象是否可渲染。调用 `add(node:)`（不带可选参数）将把对象添加到场景，就像你之前在 Renderer 中做的那样。
+此方法将节点添加到场景。当向场景添加对象时，你可以选择选择对象的父节点以及对象是否可渲染。调用 `add(node:)`（不带可选参数）将把对象添加到场景，就像你之前在 `Renderer` 中做的那样。
 
 现在，创建 `remove` 方法：
 
@@ -6054,17 +5785,17 @@ final func remove(node: Node) {
 }
 ```
 
-这调用 Node 的移除方法将其从节点层次结构中移除。它还从更新数组中移除。
+这调用 `Node` 的移除方法将其从节点层次结构中移除。它还从更新数组中移除。
 
-场景现在可以添加和更新场景对象。下一步是修改 Renderer 以使用 Scene。
+场景现在可以添加和更新场景对象。下一步是修改 `Renderer` 以使用 `Scene`。
 
-在 Renderer.swift 中，为 Renderer 添加一个 scene 属性：
+在 `Renderer.swift` 中，为 `Renderer` 添加一个 `scene` 属性：
 
 ```swift
 var scene: Scene?
 ```
 
-在 Scene.swift 中，添加以下方法来更新节点：
+在 `Scene.swift` 中，添加以下方法来更新节点：
 
 ```swift
 func update(deltaTime: Float) {
@@ -6086,13 +5817,9 @@ func updateScene(deltaTime: Float) {
 }
 ```
 
-
-
-
-
 ## Metal 教程
 
-在 `draw(in:)` 中，在初始 guard 语句中添加以下内容，以确保 `Scene` 实例存在：
+在 `draw(in:)` 中，在初始 `guard` 语句中添加以下内容，以确保 `Scene` 实例存在：
 
 ```
 let scene = scene,
@@ -6132,11 +5859,11 @@ for renderable in scene.renderables {
 }
 ```
 
-你现在正在渲染 Scene 中的每个 Renderable，而不是 Renderer 持有的 models。
+你现在正在渲染 `Scene` 中的每个 `Renderable`，而不是 `Renderer` 持有的 `models`。
 
-由于你已经将摄像机的控制权交给了 Scene，因此在场景大小发生缩放时，你需要更新投影矩阵。
+由于你已经将摄像机的控制权交给了 `Scene`，因此在场景大小发生缩放时，你需要更新投影矩阵。
 
-在 Scene.swift 的 Scene 类末尾，添加以下内容：
+在 `Scene.swift` 的 `Scene` 类末尾，添加以下内容：
 
 ```
 func sceneSizeWillChange(to size: CGSize) {
@@ -6155,7 +5882,7 @@ sceneSizeWillChange(to: sceneSize)
 
 # 第 9 章：场景图
 
-在 Renderer.swift 中，将 `mtkView(_:drawableSizeWillChange:)` 替换为以下内容：
+在 `Renderer.swift` 中，将 `mtkView(_:drawableSizeWillChange:)` 替换为以下内容：
 
 ```
 func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
@@ -6163,11 +5890,11 @@ func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
 }
 ```
 
-非常好！你将更新模型和摄像机的责任转移给了 Scene，并创建了一个基础的游戏引擎。
+非常好！你将更新模型和摄像机的责任转移给了 `Scene`，并创建了一个基础的游戏引擎。
 
-要创建一个游戏场景，你们都需要继承 Scene 并添加节点和场景逻辑。对于不同的游戏关卡，你可以创建不同的 Scene 子类。
+要创建一个游戏场景，你们都需要继承 `Scene` 并添加节点和场景逻辑。对于不同的游戏关卡，你可以创建不同的 `Scene` 子类。
 
-> 注意：如果你愿意，可以通过移除 camera、models 和 uniforms 属性及其赋值语句来清理 Renderer。你也可以删除 Renderer 中不再编译的行。
+> 注意：如果你愿意，可以通过移除 `camera`、`models` 和 `uniforms` 属性及其赋值语句来清理 `Renderer`。你也可以删除 `Renderer` 中不再编译的行。
 
 创建一个名为 `GameScene.swift` 的新文件，然后向其中添加以下代码：
 
@@ -6199,9 +5926,9 @@ override func setupScene() {
 }
 ```
 
-这段代码将模型按照它们最初在 Renderer 中的位置添加到场景中。
+这段代码将模型按照它们最初在 `Renderer` 中的位置添加到场景中。
 
-在 ViewController.swift 中，在 `didDidLoad()` 的末尾创建这个新场景：
+在 `ViewController.swift` 中，在 `didDidLoad()` 的末尾创建这个新场景：
 
 ```
 let scene = GameScene(sceneSize: metalView.bounds.size)
@@ -6214,9 +5941,9 @@ renderer?.scene = scene
 
 ## 节点分组
 
-为了了解如何更新场景逻辑，你将让骨架（skeleton）移到右侧。但有一个小意外！你只会移动汽车。
+为了了解如何更新场景逻辑，你将让骨架（`skeleton`）移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在 `GameScene` 中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6224,7 +5951,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了 `Scene` 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 哦不！这个场景一定是被闹鬼了，汽车自己开车离开了，把它的骨架司机留在了。
 
@@ -6232,15 +5959,15 @@ override func updateScene(deltaTime: Float) {
 
 要解决这个问题（并摆脱这个闹鬼），你可以让汽车成为骨架的父节点，这样每当汽车移动时，骨架会自动跟随。
 
-在 GameScene 的 `setupScene()` 中，更改：
+
+
+在`GameScene`的`setupScene()`中，更改：
 
 ```
 skeleton.rotation.y = .pi
 add(node: skeleton)
 skeleton.runAnimation(name: "Armature_idle")
 ```
-
-# 第 9 章：场景图
 
 改为：
 
@@ -6253,7 +5980,7 @@ skeleton.runAnimation(name: "Armature_idle")
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6261,7 +5988,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 哦不！这个场景一定是被闹鬼了，汽车自己开车离开了，把它的骨架司机留在了。
 
@@ -6269,15 +5996,13 @@ override func updateScene(deltaTime: Float) {
 
 要解决这个问题（并摆脱这个闹鬼），你可以让汽车成为骨架的父节点，这样每当汽车移动时，骨架会自动跟随。
 
-在 GameScene 的 `setupScene()` 中，更改：
+在`GameScene`的`setupScene()`中，更改：
 
 ```
 skeleton.rotation.y = .pi
 add(node: skeleton)
 skeleton.runAnimation(name: "Armature_idle")
 ```
-
-# 第 9 章：场景图
 
 改为：
 
@@ -6290,7 +6015,7 @@ skeleton.runAnimation(name: "Armature_idle")
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6298,7 +6023,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：原文中存在重复内容，已按要求不重复翻译）
 
@@ -6306,7 +6031,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6314,7 +6039,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：原文中存在重复内容，已按要求不重复翻译）
 
@@ -6322,7 +6047,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6330,7 +6055,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：原文中存在重复内容，已按要求不重复翻译）
 
@@ -6338,7 +6063,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6346,7 +6071,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：原文中存在重复内容，已按要求不重复翻译）
 
@@ -6354,7 +6079,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6362,7 +6087,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：原文中存在重复内容，已按要求不重复翻译）
 
@@ -6370,7 +6095,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6378,23 +6103,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
-
-（注：原文中存在重复内容，已按要求不重复翻译）
-
-这把骨架作为汽车的子添加到汽车中，并更改了动画，使骨架在应该走路时看起来不像在走。
-
-为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
-
-首先在 GameScene 中添加以下内容：
-
-```swift
-override func updateScene(deltaTime: Float) {
-  car.position.x += 0.02
-}
-```
-
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：由于原文存在大量重复，此处仅翻译翻译核心逻辑部分）
 
@@ -6402,7 +6111,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6410,7 +6119,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：由于原文存在大量重复，此处仅翻译翻译核心逻辑部分）
 
@@ -6418,7 +6127,7 @@ override func updateScene(deltaTime: Float) {
 
 为了了解如何更新场景逻辑，你将让骨架移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6426,7 +6135,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 （注：由于原文存在大量重复，此处仅翻译翻译核心逻辑部分）
 
@@ -6442,7 +6151,7 @@ override func updateScene(deltaTime: Float) {
 
 ## Metal 教程
 
-在 `draw(in:)` 中，在初始 guard 语句中添加以下内容，以确保 `Scene` 实例存在：
+在`draw(in:)`中，在初始 guard 语句中添加以下内容，以确保`Scene`实例存在：
 
 ```
 let scene = scene,
@@ -6460,7 +6169,7 @@ update(deltaTime: deltaTime)
 scene.update(deltaTime: deltaTime)
 ```
 
-然后，移除 `update(deltaTime:)` 方法。
+然后，移除`update(deltaTime:)`方法。
 
 最后，将以下内容：
 
@@ -6482,11 +6191,11 @@ for renderable in scene.renderables {
 }
 ```
 
-你现在正在渲染 Scene 中的每个 Renderable，而不是 Renderer 持有的 models。
+你现在正在渲染`Scene`中的每个`Renderable`，而不是`Renderer`持有的`models`。
 
-由于你已经将摄像机的控制权交给了 Scene，因此在场景大小发生缩放时，你需要更新投影矩阵。
+由于你已经将摄像机的控制权交给了`Scene`，因此在场景大小发生缩放时，你需要更新投影矩阵。
 
-在 Scene.swift 的 Scene 类末尾，添加以下内容：
+在`Scene.swift`的`Scene`类末尾，添加以下内容：
 
 ```
 func sceneSizeWillChange(to size: CGSize) {
@@ -6497,7 +6206,7 @@ func sceneSizeWillChange(to size: CGSize) {
 }
 ```
 
-为了正确初始化场景，在 `init(sceneSize)` 的末尾调用此方法：
+为了正确初始化场景，在`init(sceneSize)`的末尾调用此方法：
 
 ```
 sceneSizeWillChange(to: sceneSize)
@@ -6505,7 +6214,7 @@ sceneSizeWillChange(to: sceneSize)
 
 # 第 9 章：场景图
 
-在 Renderer.swift 中，将 `mtkView(_:drawableSizeWillChange:)` 替换为以下内容：
+在`Renderer.swift`中，将`mtkView(_:drawableSizeWillChange:)`替换为以下内容：
 
 ```swift
 func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
@@ -6513,13 +6222,13 @@ func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
 }
 ```
 
-非常好！你将更新模型和摄像机的责任转移给了 Scene，并创建了一个基础的游戏引擎。
+非常好！你将更新模型和摄像机的责任转移给了`Scene`，并创建了一个基础的游戏引擎。
 
-要创建一个游戏场景，你们都需要继承 Scene 并添加节点和场景逻辑。对于不同的游戏关卡，你可以创建不同的 Scene 子类。
+要创建一个游戏场景，你们都需要继承`Scene`并添加节点和场景逻辑。对于不同的游戏关卡，你可以创建不同的`Scene`子类。
 
-> 注意：如果你愿意，可以通过移除 camera、models 和 uniforms 属性及其赋值语句来清理 Renderer。
+> 注意：如果你愿意，可以通过移除`camera`、`models`和`uniforms`属性及其赋值语句来清理`Renderer`。
 
-创建一个名为 `GameScene.swift` 的新文件，然后向其中添加以下代码：
+创建一个名为`GameScene.swift`的新文件，然后向其中添加以下代码：
 
 ```
 class GameScene: Scene {
@@ -6531,7 +6240,7 @@ class GameScene: Scene {
 
 这实例化了你将添加到游戏场景中的三个模型。
 
-重写 `setupScene()`，并将这些模型按它们的正确位置添加到场景中：
+重写`setupScene()`，并将这些模型按它们的正确位置添加到场景中：
 
 ```swift
 override func setupScene() {
@@ -6549,9 +6258,9 @@ override func setupScene() {
 }
 ```
 
-这段代码将模型按照它们最初在 Renderer 中的位置添加到场景中。
+这段代码将模型按照它们最初在`Renderer`中的位置添加到场景中。
 
-在 ViewController.swift 中，在 `didDidLoad()` 的末尾创建这个新场景：
+在`ViewController.swift`中，在`didDidLoad()`的末尾创建这个新场景：
 
 ```
 let scene = GameScene(sceneSize: metalView.bounds.size)
@@ -6566,7 +6275,7 @@ renderer?.scene = scene
 
 为了了解如何更新场景逻辑，你将让骨架（skeleton）移到右侧。但有一个小意外！你只会移动汽车。
 
-首先在 GameScene 中添加以下内容：
+首先在`GameScene`中添加以下内容：
 
 ```swift
 override func updateScene(deltaTime: Float) {
@@ -6574,7 +6283,7 @@ override func updateScene(deltaTime: Float) {
 }
 ```
 
-这重写了 Scene 每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
+这重写了`Scene`每帧都会调用的方法，允许其子类进一步更新模型。编译并运行项目。
 
 哦不！这个场景一定是被闹鬼了，汽车自己开车离开了，把它的骨架司机留在了。
 
@@ -6582,7 +6291,7 @@ override func updateScene(deltaTime: Float) {
 
 要解决这个问题（并摆脱这个闹鬼），你可以让汽车成为骨架的父节点，这样每当汽车移动时，骨架会自动跟随。
 
-在 GameScene 的 `setupScene()` 中，更改：
+在`GameScene`的`setupScene()`中，更改：
 
 ```
 skeleton.rotation.y = .pi
@@ -6605,29 +6314,27 @@ skeleton.runAnimation(name: "Armature_idle")
 
 （注：由于输入文本中存在大量重复，此处已根据指令仅翻译唯一的逻辑内容。）
 
-
-
-
-
 ## Metal 教程
 
 # 第 9 章：场景图 (Scene Graph)
 
-以下是当 rotation.y 为 0° 和 45° 时的向前向量示例：
+以下是当`rotation.y`为 0° 和 45° 时的向前向量示例：
 
-rotation.y = 0°
+`rotation.y = 0°`
 
-rotation.y = 45°
+`rotation.y = 45°`
 
 ![](img/8d763acb335ab213ea9213a628f7d844_255_0.png)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_255_1.png)
 
-forward = [sin(0), 0, cos(0)]
-= [ 0, 0, 1 ]
+`forward = [sin(0), 0, cos(0)]`
 
-forward = [sin(45), 0, cos(45)]
-= [ 0.707, 0 , 0.707 ]
+`= [ 0, 0, 1 ]`
+
+`forward = [sin(45), 0, cos(45)]`
+
+`= [ 0.707, 0 , 0.707 ]`
 
 拥有一个变换后的右方向向量也是很有用的，因此添加以下内容：
 
@@ -6639,16 +6346,16 @@ var rightVector: float3 {
 
 该向量指向节点右侧 90° 位置。
 
-打开 InputController.switch 并添加平移和旋转速度的默认属性：
+打开`InputController.switch`并添加平移和旋转速度的默认属性：
 
 ```
 var translationSpeed: Float = 2.0
 var rotationSpeed: Float = 1.0
 ```
 
-这些值是以秒为单位的，因此你将使用 deltaTime 来计算当前帧的正确值。
+这些值是以秒为单位的，因此你将使用`deltaTime`来计算当前帧的正确值。
 
-在 `updatePlayer(deltaTime)` 的最后，添加以下代码以根据当前按下的键创建一个所需的方向向量：
+在`updatePlayer(deltaTime)`的最后，添加以下代码以根据当前按下的键创建一个所需的方向向量：
 
 ```
 let translationSpeed = deltaTime * self.translationSpeed
@@ -6672,9 +6379,11 @@ for key in directionKeys {
       break
 ```
 
-这段代码处理每个按下的键并创建一个最终的目标方向向量。例如，如果游戏中同时按下了 W 和 A，玩家想要向左斜前方移动。最终的方向向量将变为 [-1, 0, 1]。
+这段代码处理每个按下的键并创建一个最终的目标方向向量。例如，如果游戏中同时按下了`W`和`A`，玩家想要向左斜前方移动。最终的方向向量将变为`[-1, 0, 1]`。
 
 在之前的代码之后添加以下内容：
+
+
 
 ```
 if direction != [0, 0, 0] {
@@ -6688,7 +6397,7 @@ if direction != [0, 0, 0] {
 
 在这里，你正在根据玩家的向前向量和向右向量计算玩家的最终位置。
 
-在 **GameScene.swift** 中，在 setupScene() 的末尾添加：
+在 `GameScene.swift` 中，在 `setupScene()` 的末尾添加：
 
 ```
 inputController.player = camera
@@ -6704,15 +6413,15 @@ inputController.player = camera
 
 这很酷，但如果你想开小车而不是骨架呢？通过将 C 键设置为特殊键，你将能够随时进入小车。但首先，你需要移除之前创建的驾驶代码。
 
-从 updateScene(deltaTime) 中移除以下代码行：
+从 `updateScene(deltaTime)` 中移除以下代码行：
 
 ```
 car.position.x += 0.02
 ```
 
-InputController 是可扩展的，这意味着你可以向枚举中添加键并捕获输入，这正是你要做做的。
+`InputController` 是可扩展的，这意味着你可以向枚举中添加键并捕获输入，这正是你要做做的。
 
-打开 InputController.swift，找到文件底部的 KeyboardControl，并在枚举末尾添加：
+打开 `InputController.swift`，找到文件底部的 `KeyboardControl`，并在枚举末尾添加：
 
 ```
 case c = 8
@@ -6720,15 +6429,15 @@ case c = 8
 
 8 是 C 键的 ASCII 值。
 
-在 GameScene.swift 中，设置一个属性来跟踪 C 键并切换你是否正在开车。
+在 `GameScene.swift` 中，设置一个属性来跟踪 C 键并切换你是否正在开车。
 
 ```
 var inCar = false
 ```
 
-现在你需要设置 GameScene 为 InputController 的键盘代理。
+现在你需要设置 `GameScene` 为 `InputController` 的键盘代理。
 
-在 GameScene 的末尾添加：
+在 `GameScene` 的末尾添加：
 
 ```
 extension GameScene: KeyboardDelegate {
@@ -6738,9 +6447,9 @@ extension GameScene: KeyboardDelegate {
 }
 ```
 
-从此方法返回将阻止 InputController 更新方向键（这是你想要避免的），所以你会返回 true。
+从此方法返回将阻止 `InputController` 更新方向键（这是你想要避免的），所以你会返回 `true`。
 
-在 setupScene 的开头添加：
+在 `setupScene` 的开头添加：
 
 ```
 inputController.keyboardDelegate = self
@@ -6748,7 +6457,7 @@ inputController.keyboardDelegate = self
 
 你现在可以拦截按键，并可选地防止默认移动的发生。
 
-在 keyPressed(state:) 中，在 return 之前添加：
+在 `keyPressed(state:)` 中，在 `return` 之前添加：
 
 ```
 switch key {
@@ -6767,10 +6476,6 @@ switch key {
 ```
 
 ![](img/8d763acb335ab213ea9213a628f7d844_257_0.png)
-
-
-
-
 
 # 第 9 章：场景图
 
@@ -6802,7 +6507,7 @@ case .key1:
 
 有了俯视相机，你可以制作诸如 2D 俯视赛车游戏的游戏。
 
-> 注意：注意你如何使用 A 和 D 键让汽车横向移动；这并不符合实际。如果你想禁用这些键，可以在按下 A 和 D 键时从 `keyPressed(key:state:)` 返回 false。
+> 注意：注意你如何使用 A 和 D 键让汽车横向移动；这并不符合实际。如果你想禁用这些键，可以在按下 A 和 D 键时从 `keyPressed(key:state:)` 返回 `false`。
 
 ## 第人称相机
 
@@ -6879,7 +6584,7 @@ currentCameraIndex = 2
 
 ![](img/8d763acb335ab213ea9213a628f7d844_264_0.png)
 
-注意：现在按下 C 和 1 键会发生奇怪的事情，因为你更改了相机。作为一个挑战，看看你是否能让 C 键从第一人称相机（currentCameraIndex = 0）切换到第三人称相机（currentCameraIndex = 2），并正确更新所有节点的位置。
+注意：现在按下 C 和 1 键会发生奇怪的事情，因为你更改了相机。作为一个挑战，看看你是否能让 C 键从第一人称相机（`currentCameraIndex = 0`）切换到第三人称相机（`currentCameraIndex = 2`），并正确更新所有节点的位置。
 
 ## 玩家动画
 
@@ -6887,7 +6592,7 @@ currentCameraIndex = 2
 
 > 注意：在理想世界中，行走动画应该平滑过渡到空闲动画，但这出了本章的范围。
 
-在 **GameScene.swift** 的 `setupScene()` 中，将：
+在 `GameScene.swift` 的 `setupScene()` 中，将：
 
 ```swift
 skeleton.runAnimation(name: "Armature_idle")
@@ -6925,17 +6630,16 @@ case .W, .S, .a, .d:
 创建一个完整的物理引擎需要一整本书来描述；相反，我们将创建一个物理控制器以便理解如何集成它。上一章提到用于检查碰撞的对齐边界框。它缺少的是碰撞检测的方法。根据游戏的复杂度，你可以使用几种类型的碰撞：
 
 - 球与球：最简单的测试，检查对象之间的距离。
+
 - AABB：对齐边界框。AABB 是包含对象的最小立方体体积。这很快，但对于旋转的形状，它并不够精确。
+
 - OBB：定向边界框。这种边界体会随角色旋转。检查起来要困难得多。
 
 > 注意：边界框是对齐边界框，而我们将使用球体。在俯视视图（按下 1 键）中，你可以将球半径可视化为宽度或高度的最大值。
 
-> 注意：glTF 导入不会创建对齐边界框，但你可以用以下代码为骨架设置一个：`skeleton.boundingBox = MDLAxisBoundingBox(maxBounds:[0.4, 1.7, 0.4], minBounds:[-0.4, 0, -0.4])`。如果你还没有，你需要在场景中导入 Model。
+> 注意：glTF 导入不会创建对齐边界框，但你可以用以下代码为骨架设置一个：`skeleton.boundingBox = MDLAxisBoundingBox(maxBounds:[0.4, 1.7, 0.4], minBounds:[-0.4, 0, -0.4])`。如果你还没有，你需要在场景中导入 `Model`。
 
 如果场景中有许多对象，并且对每个对象与其他对象进行碰撞测试，计算可能会严重超出你的处理能力。在这种情况下，你通常会使用空间划分算法（如八叉树）将游戏对象分割成区域。你会预先设置好，这样只需要检查同一区域内的对象。
-
-
-
 
 添加一个方法来检查碰撞：
 
@@ -6954,6 +6658,7 @@ let nodePosition = node.worldTransform.columns.3
 ```
 
 在这里，你使用了用于包围球的半径和计算出的位置。
+
 请记住，动态节点可能是另一个节点，确保你计算的是真实的世界位置。
 
 在上一段代码之后，检查动态节点与所有静态物体的碰撞：
@@ -7005,6 +6710,7 @@ for body in bodies {
 ![](img/8d763acb335ab213ea9213a628f7d844_269_0.png)
 
 通过油桶，你可以检查碰撞并在游戏中创建强化道具。
+
 在这种情况下，你将从场景中移除油桶，以表示油桶已被收集。
 
 在 `Scene.swift` 中，在 `Scene` 中添加一个新方法，你的游戏场景将重写它：
@@ -7016,7 +6722,7 @@ func updateCollidedPlayer() -> Bool {
 }
 ```
 
-你可以在子类游戏场景中重写此方法，如果玩家移动应该继续进行，则返回 true。
+你可以在子类游戏场景中重写此方法，如果玩家移动应该继续进行，则返回 `true`。
 
 在 `updatePlayer(deltaTime:)` 中，将：
 
@@ -7030,7 +6736,8 @@ if physicsController.checkCollisions()
 if physicsController.checkCollisions() && !updateCollidedPlayer() {
 ```
 
-如果子类游戏场景从 `updateCollidedPlayer()` 返回 false，你将恢复被保留的位置，玩家将不会更新。
+如果子类游戏场景从 `updateCollidedPlayer()` 返回 `false`，你将恢复被保留的位置，玩家将不会更新。
+
 在 `PhysicsController.swift` 中，为 `PhysicsController` 添加这些新属性：
 
 ```swift
@@ -7040,7 +6747,7 @@ var collidedBodies: [Node] = []
 
 # 第 9 章：场景图
 
-这为你提供了进行快速碰撞测试的选择，而不是处理碰撞的物体。如果你击中一个物体并立即退出碰撞测试，请将 `holdAllCollided` 设置为 false；否则，将其设置为 true，`checkCollisions()` 将存储所有碰撞的物体。
+这为你提供了进行快速碰撞测试的选择，而不是处理碰撞的物体。如果你击中一个物体并立即退出碰撞测试，请将 `holdAllCollided` 设置为 `false`；否则，将其设置为 `true`，`checkCollisions()` 将存储所有碰撞的物体。
 
 在 `checkCollisions()` 中，在距离测试条件中，将：
 
@@ -7078,13 +6785,15 @@ collidedBodies = []
 
 现在你能够检查 `CarScene` 中的每个物体，查看汽车是否撞到了油桶或树木。
 
-**CarScene.swift**，在 `setupScene()` 结束处添加此内容：
+`CarScene.swift`，在 `setupScene()` 结束处添加此内容：
 
 ```swift
 physicsController.holdAllCollided = true
 ```
 
 重写 `updateCollisionPlayer()`，以便你可以检查是否收集了油桶。
+
+
 
 ```swift
 override func updateCollisionPlayer() -> Bool {
@@ -7100,7 +6809,7 @@ override func updateCollisionPlayer() -> Bool {
 }
 ```
 
-raywendlich.com
+`raywendlich.com`
 
 271
 
@@ -7108,7 +6817,7 @@ raywendlich.com
 
 # 第 9 章：场景图
 
-这为你提供了进行快速碰撞测试的选择，而不是处理碰撞的物体。如果你击中一个物体并立即退出碰撞测试，请将 `holdAllCollided` 设置为 false；否则，将其设置为 true，`checkCollisions()` 将存储所有碰撞的物体。
+这为你提供了进行快速碰撞测试的选择，而不是处理碰撞的物体。如果你击中一个物体并立即退出碰撞测试，请将 `holdAllCollided` 设置为 `false`；否则，将其设置为 `true`，`checkCollisions()` 将存储所有碰撞的物体。
 
 在 `checkCollisions()` 中，在距离测试条件中，将：
 
@@ -7146,7 +6855,7 @@ collidedBodies = []
 
 现在你能够检查 `CarScene` 中的每个物体，查看汽车是否撞到了油桶或树木。
 
-**CarScene.swift**，在 `setupScene()` 结束处添加此内容：
+在 `CarScene.swift` 中，在 `setupScene()` 结束处添加此内容：
 
 ```swift
 physicsController.holdAllCollided = true
@@ -7168,7 +6877,7 @@ override func updateCollisionPlayer() -> Bool {
 }
 ```
 
-raywendlich.com
+`raywendlich.com`
 
 271
 
@@ -7264,11 +6973,9 @@ raywendlich.com
 
 在本章中，你将发现。
 
+在本章中，你将发现。
 
-
-
-
-# Metal 教程第10章：片段后处理
+# Metal 教程第 10 章：片段后处理
 
 在这里，你将 `transparencyEnabled` 的当前值发送到片段着色器。
 
@@ -7286,7 +6993,7 @@ public override func keyDown(with event: NSEvent) {
     }
 
     guard let renderer = renderer,
-          let keyCode = KeyCode(rawValue: event.keyCode) else {return }
+          let keyCode = KeyCode(rawValue: event.keyCode) else {return}
 
     // 2
     switch keyCode {
@@ -7336,11 +7043,11 @@ return color;
 
 ![](img/8d763acb335ab213ea9213a628f7d844_276_1.png)
 
-# 第10章：片段后处理
+# 第 10 章：片段后处理
 
 然而，所有的叶子颜色都是相同的。这是因为这个场景缺少定向光。要修复这个问题，你需要编写一个顶点函数并重新配置树的流水线状态。
 
-在 **Shaders.metal** 中，在 `fragment_tree()` 上添加此代码：
+在 `Shaders.metal` 中，在 `fragment_tree()` 上添加此代码：
 
 ```swift
 vertex VertexOut vertex_light(const VertexIn vertex_in [[stage_in]],
@@ -7354,7 +7061,7 @@ vertex VertexOut vertex_light(const VertexIn vertex_in [[stage_in]],
 
 这与 `vertex_main()` 的代码相同，但从现在起你将把任何新代码添加到此中。
 
-在 **Renderer.swift** 中，你还需要在渲染流水线描述符配置中引用 `vertex_light`。在这一行正上方，即 `buildPipelineState()` 中：
+在 `Renderer.swift` 中，你还需要在渲染流水线描述符配置中引用 `vertex_light`。在这一行正上方，即 `buildPipelineState()` 中：
 
 ```swift
 treePipelineState =
@@ -7370,7 +7077,7 @@ descriptor.vertexFunction = vertexFunction
 
 这使得流水线使用你的新顶点函数。
 
-回到 **Shaders.metal**，在 `vertex_light` 中，在 `return vertex_out;` 之前添加此代码：
+回到 `Shaders.metal`，在 `vertex_light` 中，在 `return vertex_out;` 之前添加此代码：
 
 ```swift
 // 1
@@ -7392,8 +7099,8 @@ vertex_out.color = saturate(light_color * intensity);
 
 ![](img/8d763acb335ab213ea9213a628f777.png)
 
-- 3. 通过顶点法线和光方向的点积计算光强，就像你在第5章“光照基础”中所做的那样。
-- 4. 计算顶点颜色并将结果限制在 0到1 之间。
+- 3. 通过顶点法线和光方向的点积计算光强，就像你在第 5 章“光照基础”中所做的那样。
+- 4. 计算顶点颜色并将结果限制在 0 到 1 之间。
 
 为了包含光值，你需要将其与现有纹理相乘，因此在 `fragment_tree()` 内部 `return` 之上添加此代码：
 
@@ -7401,7 +7108,7 @@ vertex_out.color = saturate(light_color * intensity);
 color *= light_color;
 ```
 
-> 注意：你可以将颜色值与各种值（包括小于1的值）相乘，看看哪一个符合你的视觉。在这里似乎给颜色带来了可以接受的亮度。
+> 注意：你可以将颜色值与各种值（包括小于 1 的值）相乘，看看哪一个符合你的视觉。在这里似乎给颜色带来了可以接受的亮度。
 
 再次运行 Playground。
 
@@ -7411,7 +7118,7 @@ color *= light_color;
 
 ## 深度测试（Depth testing）
 
-深度测试将当前片段的深度值与帧缓冲区中的值进行比较。如果片段更远，则该片段深度测试失败并被丢弃。你将在第14章“多通道与延迟渲染”中学习更多关于深度测试的知识。
+深度测试将当前片段的深度值与帧缓冲区中的值进行比较。如果片段更远，则该片段深度测试失败并被丢弃。你将在第 14 章“多通道与延迟渲染”中学习更多关于深度测试的知识。
 
 ## 模板测试（Stencil testing）
 
@@ -7445,20 +7152,20 @@ renderEncoder.setScissorRect(MTScissorRect(x: 500, y: 500, width: 600, height: 4
 
 在本章的剩余部分你需要看到整个场景，因此注释掉那行裁剪测试代码。
 
-## Alpha混合（Alpha blending）
+## Alpha 混合（Alpha blending）
 
-Alpha混合与Alpha测试的区别在于后者只适用于完全透明。在这种情况下，你所做的就是丢弃片段。对于透明或半透明物体，丢弃片段不再是解决方案，因为你希望片段颜色在一定程度上对现有的帧缓冲区颜色做出贡献。你不想只是替换它。
+Alpha 混合与 Alpha 测试的区别在于后者只适用于完全透明。在这种情况下，你所做的就是丢弃片段。对于透明或半透明物体，丢弃片段不再是解决方案，因为你希望片段颜色在一定程度上对现有的帧缓冲区颜色做出贡献。你不想只是替换它。
 
-Alpha混合的公式为：
+Alpha 混合的公式为：
 
 $$C_b = \alpha_1 * C_s + \alpha_2 * C_d$$
 
 公式解析：
 
-- $C_s$: 源颜色。你刚刚添加到场景的当前颜色。
-- $C_d$: 目的颜色。帧缓冲区中已存在的颜色。
-- $C_b$: 最终混合颜色。
-- $\alpha_1$ 和 $\alpha_2$: 分别是源颜色和目的颜色的Alpha因子。
+- `$C_s$`：源颜色。你刚刚添加到场景的当前颜色。
+- `$C_d$`：目的颜色。帧缓冲区中已存在的颜色。
+- `$C_b$`：最终混合颜色。
+- `$\alpha_1$` 和 `$\alpha_2$`：分别是源颜色和目的颜色的 Alpha 因子。
 
 最终混合颜色是两种颜色与其透明度因子乘积相加的结果。源颜色是你放在前面的片段颜色，目的颜色是帧缓冲区中已存在的颜色。
 
@@ -7466,9 +7173,9 @@ $$C_b = \alpha_1 * C_s + \alpha_2 * C_d$$
 
 $$C_b = \alpha * C_s + (1 - \alpha) * C_d$$
 
-好了，是是在树前面安装玻璃窗了。
+好了，是时候在树前面安装玻璃窗了。
 
-在 *Renderer.swift* 中，在类顶部创建新的纹理和流水线状态属性：
+在 `Renderer.swift` 中，在类顶部创建新的纹理和流水线状态属性：
 
 ```swift
 var windowTexture: MTLTexture?
@@ -7492,18 +7199,15 @@ lazy var window: MTKMesh = {
 var windowTransform = Transform()
 ```
 
-
-
-
-
 ## Metal 教程
+
 # 第 10 章：片元后处理
 
 这段代码与地形形的代码相同，不过为了快速回顾一下：使用平面网格（plane mesh）和 `windowColor` 纹理定义一个新的窗口模型，然后为该模型创建一个新的变换矩阵。
 
 在 `init(metalView):` 的末尾添加这段代码：
 
-```
+```swift
 windowTransform.scale = [2, 2, 2]
 windowTransform.position = [0, 3, 4]
 windowTransform.rotation = [-Float.pi / 2, 0, 0]
@@ -7515,7 +7219,7 @@ windowTransform.rotation = [-Float.pi / 2, 0, 0]
 
 在 `buildPipelineState()` 内部，`do` 块的末尾添加以下几行：
 
-```
+```swift
 let windowFragmentFunction =
   library.makeFunction(name: "fragment_window")
 descriptor.fragmentFunction = windowFragmentFunction
@@ -7526,7 +7230,9 @@ windowPipelineState =
 
 在这里，你使用适当的函数配置管道状态，然后使用此描述符构建管道状态。你将在模型中编写 `fragment_window()` 着色器。
 
-在 `(in)` 的末尾，在 `renderEncoder.endEncoding()` 之前添加这段代码：
+在 `draw(in)` 的末尾，在 `renderEncoder.endEncoding()` 之前添加这段代码：
+
+
 
 ```
 // 渲染窗口
@@ -7542,7 +7248,8 @@ draw(renderEncoder: renderEncoder, model: window)
 ```
 
 这段代码绘制窗口，你现在应该很熟悉了。
-在 `Shaders.metal` 中，添加新的片元函数：
+
+在`Shaders.metal`中，添加新的片元函数：
 
 ```
 fragment float4 fragment_window(VertexOut out [[stage_in]],
@@ -7567,14 +7274,14 @@ texture2d<float> texture [[texture(0)]])
 
 你将通过混合（blending）来修复它。处理混合有两种方式：可编程方式和固定函数方式。在本章中，你将学习固定函数混合。
 
-在 `Renderer.swift` 中，在 `buildPipelineState()` 的末尾，在以下代码之前：
+在`Renderer.swift`中，在`buildPipelineState()`的末尾，在以下代码之前：
 
 ```
 windowPipelineState =
   try device.makeRenderPipelineState(descriptor: descriptor)
 ```
 
-# 添加这段代码：
+添加这段代码：
 
 ```
 // 1
@@ -7592,46 +7299,42 @@ attachment.destinationRGBBlendFactor = .oneMinusSourceAlpha
 通过这段代码：
 
 - 1. 从渲染管道描述符中获取第一个颜色附件（color attachment）。附件是一个渲染目标，指定了与渲染管道相关的颜色配置和颜色操作。渲染目标持有渲染输出的绘制纹理。
-
 - 2. 在附件上启用混合。
-
 - 3. 指定用于颜色的混合操作类型。混合操作决定了如何将源片元（source fragment）与颜色附件中的目标值结合，以确定要写入的像素值。
+- 4. 指定源颜色使用的混合因子（blend factor）。混合因子决定颜色对最终混合颜色的贡献程度。如果没有指定，该值默认始终为 1（`one`）。
+- 5. 指定目标颜色使用的混合因子。如果没有指定，该值默认为 0（`zero`）。
 
-- 4. 指定源颜色使用的混合因子（blend factor）。混合因子决定颜色对最终混合颜色的贡献程度。如果没有指定，该值默认始终为 1 (`one`)。
-
-- 5. 指定目标颜色使用的混合因子。如果没有指定，该值默认为 0 (`zero`)。
-
-> 注意：除了 `sourceAlpha` 和 `oneMinusSourceAlpha` 之外，还有许多可用的混合因子。完整选项列表请参考 Apple 官方 Blend Factors 页面：https://developer.apple.com/documentation/metal/mtlblendfactor。
+> 注意：除了`sourceAlpha`和`oneMinusSourceAlpha`之外，还有许多可用的混合因子。完整选项列表请参考 Apple 官方 Blend Factors 页面：https://developer.apple.com/documentation/metal/mtlblendfactor。
 
 你几乎准备好看到混合的效果了。然而，之前一样，你将为混合设置一个切换键。
 
-在 `Renderer.swift` 中，在 `Renderer` 顶部添加此属性：
+在`Renderer.swift`中，在`Renderer`顶部添加此属性：
 
 ```
 var blendingEnabled = false
 ```
 
-在 `draw(in:)` 中，在渲染窗口绘制调用之前添加此行：
+在`draw(in:)`中，在渲染窗口绘制调用之前添加此行：
 
 ```
 renderEncoder.setFragmentBytes(&blendingEnabled,
                length: MemoryLayout<Bool>.size, index: 0)
 ```
 
-在 `MetalView.swift` 中，为 `keyDown(with:)` 中的 `KeyCode` 枚举为 B 键添加一个新的 case：
+在`MetalView.swift`中，为`keyDown(with:)`中的`KeyCode`枚举为 B 键添加一个新的 case：
 
 ```
 case b = 0xB
 ```
 
-然后，在 `switch` 语句中检查此情况，并切换 `blendingEnabled` 的状态：
+然后，在`switch`语句中检查此情况，并切换`blendingEnabled`的状态：
 
 ```
 case b:
     renderer.blendingEnabled = !renderer.blendingEnabled
 ```
 
-在 `Shaders.metal` 中，修改 `fragment_window` 的定义为：
+在`Shaders.metal`中，修改`fragment_window`的定义为：
 
 ```
 fragment float4 fragment_window(VertexOut out [[stage_in]],
@@ -7655,13 +7358,13 @@ constant bool blendingEnabled [[buffer(0)]])
 
 通过添加第二个窗口来增加趣味如何？
 
-你将复用窗口的网格和纹理，所以在 `Renderer.swift` 中，在 `init(metalView)` 之前添加这段代码：
+你将复用窗口的网格和纹理，所以在`Renderer.swift`中，在`init(metalView)`之前添加这段代码：
 
 ```
 var window2Transform = Transform()
 ```
 
-在 `init(metalView)` 末尾，通过添加以下代码设置第二个窗口的尺寸、位置和旋转：
+在`init(metalView)`末尾，通过添加以下代码设置第二个窗口的尺寸、位置和旋转：
 
 ```
 window2Transform.scale = [3, 2, 2]
@@ -7669,7 +7372,7 @@ window2Transform.position = [0, 2, 5]
 window2Transform.rotation = [-Float.pi / 2, 0, 0]
 ```
 
-在 `draw(in:)` 中；在保持管道状态的同时，在 `renderEncoder.encoding()` 之前添加这段代码，将第二个窗口的信息发送到 GPU：
+在`draw(in:)`中；在保持管道状态的同时，在`renderEncoder.encoding()`之前添加这段代码，将第二个窗口的信息发送到 GPU：
 
 ```
 modelViewProjectionMatrix = camera.projectionMatrix *
@@ -7689,7 +7392,7 @@ draw(renderEncoder: renderEncoder, model: window)
 
 在这种情况下，树管道状态没有启用混合，重要的是按顺序渲染两个窗口。你有两个选择：
 
-- 交换 `draw(in:)` 中的两个窗口绘制块
+- 交换`draw(in:)`中的两个窗口绘制块
 - 将第二个窗口移动到第一个窗口前面
 
 方案一是简单的剪切粘贴。方案二也不难，如下更改第二个窗口的变换：
@@ -7706,16 +7409,13 @@ window2Transform.rotation = [-Float.pi / 2, 0, 0]
 
 你可能注意到第二个窗口的重叠部分比窗口的其他部分暗一点。这有一个逻辑解释。
 
-
-
-
 Metal 教程
 
 第 10 章：片元后处理
 
-由于你为每个窗口都使用了 0.5 的 alpha 值，当启用混合（blending）时，每个窗口都会将渲染结果线性插值，使其向 `windowColor` 纹理中的绿色靠近一半。这等同于透过多块绿色玻璃观察；在它们前面堆放足够数量的层，你看到的只有纯绿色！
+由于你为每个窗口都使用了 0.5 的 alpha 值，当启用混合（blending）时，每个窗口都会将渲染结果线性插值，使其向`windowColor`纹理中的绿色靠近一半。这等同于透过多块绿色玻璃观察；在它们前面堆放足够数量的层，你看到的只有纯绿色！
 
-混合的另一种方法是可编程的，开发者在片元着色器（fragment shader）中完成所有工作。你可以在片元着色器中使用流水线附件的 [[color(0)]] 属性来获取帧缓冲区中的当前颜色，并与当前片元颜色相结合。
+混合的另一种方法是可编程的，开发者在片元着色器（fragment shader）中完成所有工作。你可以在片元着色器中使用流水线附件的`[[color(0)]]`属性来获取帧缓冲区中的当前颜色，并与当前片元颜色相结合。
 
 > 注意：有关可编程混合的详细信息，请参阅 Metal Shading Language 规范文档第 4.8 节：https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
@@ -7727,7 +7427,7 @@ Metal 教程
 
 接下来，你将在流水线上配置配置固定函数的 MSAA，并在树和窗口上启用抗锯齿。
 
-在 `Renderer.swift` 中，为 `Renderer` 类添加这些属性：
+在`Renderer.swift`中，为`Renderer`类添加这些属性：
 
 ```
 var antialiasingEnabled = false
@@ -7737,7 +7437,7 @@ var windowPipelineStateAA: MTLRenderPipelineState!
 
 你为树创建两个不同的流水线状态（窗口也一样），以便你可以在锯齿和抗锯齿状态之间切换。
 
-在 `buildPipelineState()` 中，紧接这一行：
+在`buildPipelineState()`中，紧接这一行：
 
 ```
 treePipelineState = 
@@ -7753,11 +7453,11 @@ try device.makeRenderPipelineState(descriptor: descriptor)
 descriptor.sampleCount = 1
 ```
 
-第二个流水线状态与 `treePipelineState` 相同，只是更改了采样数。你还将采样数设回 1，以防窗口流水线状态受到影响。
+第二个流水线状态与`treePipelineState`相同，只是更改了采样数。你还将采样数设回 1，以防窗口流水线状态受到影响。
 
 现在对对窗口执行相同的操作。
 
-在 `buildPipelineState()` 中，紧接这一行：
+在`buildPipelineState()`中，紧接这一行：
 
 ```
 windowPipelineState = 
@@ -7773,7 +7473,7 @@ try device.makeRenderPipelineState(descriptor: descriptor)
 descriptor.sampleCount = 1
 ```
 
-在 `draw(in:)` 中，更改设置树的流水线状态的这段：
+在`draw(in:)`中，更改设置树的流水线状态的这段：
 
 ```
 renderEncoder.setRenderPipelineState(treePipelineState)
@@ -7804,13 +7504,13 @@ windowPipelineStateAA : windowPipelineState
 renderEncoder.setPipelineState(aaPipelineState!)
 ```
 
-在 `MetalView.swift` 中添加抗锯齿切换键，在 `keyDown(with:)` 的 `KeyCode` 枚举中添加一个新的 case；这次针对 A 键：
+在`MetalView.swift`中添加抗锯齿切换键，在`keyDown(with:)`的`KeyCode`枚举中添加一个新的 case；这次针对 A 键：
 
 ```
 case a = 0
 ```
 
-在 `switch` 语句中添加该检查，相应切换 `antialasingEnabled` 的状态。
+在`switch`语句中添加该检查，相应切换`antialasingEnabled`的状态。
 
 ```
 case a:
@@ -7829,22 +7529,20 @@ case a:
 
 之前一样，你将为雾化添加一个切换。
 
-在 `Renderer.swift` 中，在类顶部添加此属性：
+在`Renderer.swift`中，在类顶部添加此属性：
 
 ```
 var fogEnabled = false
 ```
 
-
-
-
 # 接下来该去哪里？
 
-在本章中，你只查看了固定函数混合和抗锯齿。通过使用 [[ color ]] 属性（该属性标识颜色附件）作为片元函数的参数，可以实现片段或每样本的**可编程混合**。如需更多阅读，你可以复阅 Metal Shading Language 规范文档中的 4.8 节 Programmable Blending：https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
+在本章中，你只查看了固定函数混合和抗锯齿。通过使用`[[ color ]]`属性（该属性标识颜色附件）作为片元函数的参数，可以实现片段或每样本的**可编程混合**。如需更多阅读，你可以复阅 Metal Shading Language 规范文档中的 4.8 节 Programmable Blending：https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
 同样，**可编程抗锯齿**可以通过可编程采样位置来实现，这允许你为不同的渲染通道设置自定义的采样位置，而固定函数抗锯齿对所有渲染通道都采用相同的采样位置。如需更多阅读，你可以查看 Programmable Sample Positions 页面：https://developer.apple.com/documentation/metal/graphics_rendering/render_targets/using_programmable_sample_positions。
 
 # 第 11 章：细分与地形
+
 作者：Caroline Begbie
 
 到目前为止，你一直都在片元函数中使用法线图技巧来显示低多边形模型的细节。要在不使用法线图的情况下实现类似的细节水平，需要通过添加更多顶点来改变模型几何结构。添加更多顶点的问题在于，当你将它们发送到 GPU 时，会阻塞流水线。GPU 中的硬件细分器可以动态创建顶点，从而实现更高水平的细节，并更高效地使用（更少的资源）。
@@ -7858,6 +7556,8 @@ var fogEnabled = false
 ## 细分 (Tessellation)
 
 你不是向 GPU 发送顶点，而是发送补丁（patches）。这些补丁由控制点组成——三角形补丁至少需要三个，四边形补丁至少需要四个。细分器可以将每个四边形补丁转换为数量数量三角形：在最近的 iMac 上多可达 4,096 个三角形，在支持细分的 iPhone 上多达 256 个三角形。
+
+
 
 > 注意：2012 年以后的所有 Mac 都支持细分，且 iOS 10 GPU Family 3 及更高版本也支持；这包括 iPhone 6s 及更新的设备。
 
@@ -7908,10 +7608,6 @@ var fogEnabled = false
 
 有各种算法可以插值这些控制点，但在这里。
 
-
-
-
-
 现在你已经进入了处理补丁（patches）阶段，你需要为每个控制点获取新的属性数据。
 
 ## 内核（计算）函数
@@ -7922,7 +7618,7 @@ var fogEnabled = false
 
 顶点着色器和片段着色器在所有顶点或像素上执行相同的任务，因此无法对每个线程进行粒度控制。你需要设置一个指向细分内核着色器函数（tessellation kernel shader function）的计算流水线状态。
 
-为 Renderer 添加此新方法：
+为 `Renderer` 添加此新方法：
 
 ```
 static func buildComputePipelineState() -> MTLComputePipelineState {
@@ -7937,7 +7633,7 @@ static func buildComputePipelineState() -> MTLComputePipelineState {
 
 这创建了一个计算流水线状态，并期望一个类型为内核（kernel）的函数，而不是顶点或片段类型。通过内核函数，例如你可以在渲染之前处理 Metal 缓冲区中的数据。
 
-接下来，为 Renderer 添加一个新属性：
+接下来，为 `Renderer` 添加一个新属性：
 
 ```
 var tessellationPipelineState: MTLComputePipelineState
@@ -7953,7 +7649,7 @@ tessellationPipelineState = Renderer.buildComputePipelineState()
 
 ## 计算通过（Compute pass）
 
-你已经设置了计算流水线状态和一个包含补丁数据的 MTLBuffer。你还创建了一个空缓冲区，细分内核将从中填充边缘因子（edge factors）。接下来，你需要创建一个计算命令编码器（compute command encoder）。该编码器类似于渲染命令编码器，你向编码器添加命令，然后将其发送给 GPU。
+你已经设置了计算流水线状态和一个包含补丁数据的 `MTLBuffer`。你还创建了一个空缓冲区，细分内核将从中填充边缘因子（edge factors）。接下来，你需要创建一个计算命令编码器（compute command encoder）。该编码器类似于渲染命令编码器，你向编码器添加命令，然后将其发送给 GPU。
 
 在 `draw(in)` 中找到注释 `// tessellation pass`，并计算命令编码器添加命令。
 
@@ -8090,10 +7786,6 @@ return out;
 
 构建并运行。
 
-
-
-
-
 观察补丁是如何在 0 到 1 之间的顶点进行细分的？（归一化设备坐标 (NDC) 范围在 -1 到 1 之间，这就是为什么所有坐标都在右上角。）
 
 ![](img/8d763acb335ab213ea9213a628f7d844_306_0.png)
@@ -8124,6 +7816,7 @@ out.position = mvp * position;
 ```
 
 这段代码在顶部和底部值之间对垂直值进行插值，并将其乘以模型-视图-投影矩阵，以将顶点定位在场景中。
+
 目前，你将 y 保持为 0.0 以保持补丁为二维。
 
 构建并运行以查看你的细分后的补丁：
@@ -8136,7 +7829,7 @@ out.position = mvp * position;
 
 现在你已经知道如何细分一个补丁了，你可以平铺补丁并选择依赖于动态因子（如距离）的边缘因子。
 
-在 Renderer 的顶部，将 `patches` 改为：
+在 `Renderer` 的顶部，将 `patches` 改为：
 
 ```
 let patches = (horizontal: 2, vertical: 2);
@@ -8185,7 +7878,7 @@ typedef struct {
 
 你将使用 `height` 来在 y 轴上缩放顶点。
 
-在 `Renderer.swift` 中，为 Renderer 添加一个新常量：
+在 `Renderer.swift` 中，为 `Renderer` 添加一个新常量：
 
 ```
 static let maxTessellation = 16
@@ -8209,7 +7902,9 @@ let controlPoints = createControlPoints(patches: patches, size: terrain.size, he
 
 在 `draw(in)` 中，在带有计算编码器的细分通道中，分发线程后，执行此：
 
-```
+
+
+```swift
 var cameraPosition = viewMatrix.columns.3
 computeEncoder.setBytes(&cameraPosition, length: MemoryLayout<float4>.stride, index: 3)
 var matrix = viewMatrix.columns.3
@@ -8218,23 +7913,18 @@ computeEncoder.setBuffer(controlPoints, length: MemoryLayout<ControlPoint>.strid
 computeEncoder.setBytes(&terrain, length: MemoryLayout<Terrain>.stride, index: 6)
 ```
 
-(注：此处原文文本后似乎存在部分乱码或重复，翻译时已根据上下文进行了逻辑处理)
+在 `for` 循环之后，添加以下代码，将两个内部细分因子设置为补片总细分数的平均值：
 
-
-
-
-在 `for` 循环之后，添加以下代码将两个内部细分因子设置为补片（patch）总细分数的平均值：
-
-```
-factors[pid].insideTessellationFactor[0] = totalTessellation * 0.25;
-factors[pid].insideTessellationFactor[1] = totalTessellation * 0.25;
+```swift
+factors[pid].insideTessellationFactor[0] = totalTessellation * 0.25
+factors[pid].insideTessellationFactor[1] = totalTessellation * 0.25
 ```
 
 最后，你需要修改一些默认的渲染管线状态细分参数。
 
 在 `Renderer.swift` 的 `buildRenderPipelineState()` 中，创建流水线状态之前添加以下内容：
 
-```
+```swift
 // 1
 descriptor.tessellationFactorStepFunction = .perPatch
 // 2
@@ -8243,20 +7933,23 @@ descriptor.maxTessellationFactor = Renderer.maxTessellation
 descriptor.tessellationPartitionMode = .fractionalEven
 ```
 
-- 1. 步函数之前设置为默认 `.constant`，这会为所有补片设置相同的边缘因子。通过将其设置为 `.perPatch`，顶点函数将使用细分因子数组中每个补片的边缘因子和内部因子信息。
-- 2. 你为细分器设置了每个补片的最大段数。
-- 3. 分区模式描述了这些段是如何划分的。默认是 `.pow2`，它向上舍入到最近的 2 的幂。使用 `.fractionalEven`，细分器向上舍入到最近的偶整数，因此允许更多的细分变化。
+1. 步函数之前设置为默认 `.constant`，这会为所有补片设置相同的边缘因子。通过将其设置为 `.perPatch`，顶点函数将使用细分因子数组中每个补片的边缘因子和内部因子信息。
 
-编译并运行，缩你的补片。当你重新调整补片时，细分器会重新计算它到相机的距离并相应进行细分。细分是一项很酷的超能力！
+2. 你为细分器设置了每个补片的最大段数。
+
+3. 分区模式描述了这些段是如何划分的。默认是 `.pow2`，它向上舍入到最近的 2 的幂。使用 `.fractionalEven`，细分器向上舍入到最近的偶整数，因此允许更多的细分变化。
+
+编译并运行，缩放你的补片。当你重新调整补片时，细分器会重新计算它到相机的距离并相应进行细分。细分是一项很酷的超能力！
 
 ![](img/8d763acb335ab213ea9213a628f7d844_312_0.png)
 
 检查补片的连接处；补片每一边的三角形应该是连接的。
+
 现在你已经掌握了细分，将为你的地形添加细节。
 
-## 位移 (Displacement)
+## 位移（Displacement）
 
-在前面的章节中，你将纹理用于各种。现在你将使用高度图（height map）来改变每个顶点的高度。
+在前面的章节中，你将纹理用于各种目的。现在你将使用高度图（height map）来改变每个顶点的高度。
 
 高度图是灰度图像，你可以使用纹素值作为 Y 顶点位置，白色表示高，黑色表示低。
 
@@ -8264,13 +7957,13 @@ descriptor.tessellationPartitionMode = .fractionalEven
 
 在 `Renderer.swift` 中，创建一个属性来持有高度图：
 
-```
+```swift
 let heightMap: MTLTexture
 ```
 
 在 `init(metalView)` 中，调用 `super.init()` 之前初始化 `heightMap`：
 
-```
+```swift
 do {
     heightMap = try Renderer.loadTexture(imageName: "mountain")
 } catch {
@@ -8284,138 +7977,20 @@ do {
 
 在绘制调用之前添加以下内容：
 
-```
+```swift
 renderEncoder.setVertexTexture(heightMap, index: 0)
-renderEncoder.setVertexBytes(&terrain,
-    length: MemoryLayout<Terrain>.stride, index: 6)
-```
-
-你已经熟悉将纹理发送到片段着色器；这以相同的方式使顶点顶点着色器可用。你还发送了纹理设置详情。
-
-在 `Shaders.metal` 中，在 `vertex_main` 函数中添加以下内容以读取纹理和地形信息：
-
-```
-texture2d<float> heightMap [[ texture(0) ]],
-constant Terrain &terrain [[ buffer(6) ]]
-```
-
-你目前使用补片的 x 和 z 位置坐标，并将 y 坐标留为零。现在你将把 y 坐标映射到纹理中指示的高度。
-
-正如你在片段函数中使用 u 和 v 片段值来读取适当的纹素一样，你在顶点函数中使用 x 和 z 位置坐标来从高度图中读取纹素。
-
-在设置位置之后，在乘以模型-视图-投影矩阵之前，添加此内容：
-
-```
-// 1
-float2 xy = (position.xz + terrain.size / 2.0) / terrain.size;
-// 2
-constexpr sampler sample;
-float4 color = heightMap.sample(sample, xy);
-out.color = float4(color.r);
-
-// 3
-float height = (color.r * 2 - 1) * terrain.height;
-position.y = height;
-```
-
-通过代码分析：
-
-- 你将补片控制点值转换为 0 到 1 之间，以便能够采样补片映射。你包含了地形尺寸，因为虽然你的补片控制点目前在 -1 到 1 之间，但很快你将创建一个更大的地形。
-- 创建一个默认采样器并像之前在片段函数中执行那样读取纹理。纹理是灰度纹理，所以你只使用 `.r` 值。
-- color 在于 0 到 1 之间，对于高度，将值移动到 -1 到 1 之间，并乘以你的地形高度比例设置。这目前设置为 1。
-
-接下来，从顶点函数的末尾移除以下代码，因为你正在使用高度图的颜色。
-
-```
-out.color = float4(0);
-if (patchID == 0) {
-out.color = float4(1, 0, 0, 1);
-}
-```
-
-Renderer 目前旋转 90°，因此在 `Renderer.swift` 中将旋转属性初始化改为：
-
-```
-var rotation = float3(radians(fromDegrees: -20), 0, 0)
-```
-
-编译并运行，查看高度图位移顶点。注意白色顶点是高的，黑色顶点是低的：
-
-![](img/8d763acb335ab213ea9213a628f7d844_315_0.png) （注：此处图片对应原文描述的位移效果）
-
-这还没有很多细节，但很快就会改变。
-
-在 `Renderer.swift` 中，将 `maxTessellation` 常数改为：
-
-```
-static let maxTessellation: Int = {
-#if os(macOS)
-return 64
-#else
-return 16
-#endif
-```
-
-这些是最大值。由于 iOS 上的最大细分很低，你可能想增加 iOS 上的补片数量。
-
-将 patches 和 terrain 改为：
-
-```
-let patches = (horizontal: 6, vertical: 6)
-var terrain = Terrain(size: [8, 8], height: 1,
-maxTessellation: UInt32(Renderer.maxTessellation))
-```
-
-你现在正在十六个单位上创建六个补片。
-
-编译并运行，缩你的补片。当你重新调整补片时，细分器器重新计算它到相距离距离距离进行进行细分。。分酷的超能力！
-
-![](img/8d763acb335ab213ea9213a628f7d844_312_0.png)
-
-检查补片的连接处；补片每一边的三角形应该是连接的。
-现在你已经掌握了细分，将能够为你的地形添加细节。
-
-## 位移 (Displacement)
-
-在前面的章节中，你将纹理用于各种目的。现在你将使用高度图来改变每个顶点的高度。
-
-高度图是灰度图像，你可以使用纹素值作为 Y 顶点位置，白色表示高，黑色表示低。
-
-`Assets.xcassets` 中有几个高度图可以供实验。
-
-在 `Renderer.swift` 中，创建一个属性来持有高度图：
-
-```
-let heightMap: MTLTexture
-```
-
-在 `init(metalView)` 中，调用 `super.init()` 之前初始化 `heightMap`：
-
-```
-do {
-    heightMap = try Renderer.loadTexture(imageName: "mountain")
-} catch {
-    fatalError(error.localizedDescription)
-}
-```
-
-在这里，你从资源目录加载高度图纹理。
-
-在 `draw(in:)` 中，你需要将纹理发送到 GPU。
-
-在绘制调用之前添加以下内容：
-
-```
-renderEncoder.setVertexTexture(heightMap, index: 0)
-renderEncoder.setVertexBytes(&terrain,
-    length: MemoryLayout<Terrain>.stride, index: 6)
+renderEncoder.setVertexBytes(
+    &terrain,
+    length: MemoryLayout<Terrain>.stride,
+    index: 6
+)
 ```
 
 你已经熟悉将纹理发送到片段着色器；这以相同的方式使顶点着色器可用。你还发送了纹理设置详情。
 
-在 `Shaders.metal` 中，在 `vertex_main` 函数中添加以下内容以读取纹理和地形信息：
+在 `Shaders.metal` 中，在 `vertex_main` 函数中添加以下内容，以读取纹理和地形信息：
 
-```
+```metal
 texture2d<float> heightMap [[ texture(0) ]],
 constant Terrain &terrain [[ buffer(6) ]]
 ```
@@ -8424,11 +7999,12 @@ constant Terrain &terrain [[ buffer(6) ]]
 
 正如你在片段函数中使用 u 和 v 片段值来读取适当的纹素一样，你在顶点函数中使用 x 和 z 位置坐标来从高度图中读取纹素。
 
-在设置位置之后，在乘以模型-视图-投影矩阵之前，添加此内容：
+在设置位置之后，在乘以模型-视图-投影矩阵之前，添加以下内容：
 
-```
+```metal
 // 1
 float2 xy = (position.xz + terrain.size / 2.0) / terrain.size;
+
 // 2
 constexpr sampler sample;
 float4 color = heightMap.sample(sample, xy);
@@ -8443,20 +8019,20 @@ position.y = height;
 
 - 你将补片控制点值转换为 0 到 1 之间，以便能够采样补片映射。你包含了地形尺寸，因为虽然你的补片控制点目前在 -1 到 1 之间，但很快你将创建一个更大的地形。
 - 创建一个默认采样器并像之前在片段函数中执行那样读取纹理。纹理是灰度纹理，所以你只使用 `.r` 值。
-- color 在于 0 到 1 之间，对于高度，将值移动到 -1 到 1 之间，并乘以你的地形高度比例设置。这目前设置为 1。
+- `color` 在 0 到 1 之间。对于高度，将值移动到 -1 到 1 之间，并乘以你的地形高度比例设置。这目前设置为 1。
 
-接下来，从顶点函数的末尾移除以下代码，因为你正在使用高度图的颜色。
+接下来，从顶点函数的末尾移除以下代码，因为你正在使用高度图的颜色：
 
-```
+```metal
 out.color = float4(0);
 if (patchID == 0) {
-out.color = float4(1, 0, 0, 1);
+    out.color = float4(1, 0, 0, 1);
 }
 ```
 
-Renderer 目前旋转 90°，因此在 `Renderer.swift` 中将旋转属性初始化改为：
+`Renderer` 目前旋转 90°，因此在 `Renderer.swift` 中将旋转属性初始化改为：
 
-```
+```swift
 var rotation = float3(radians(fromDegrees: -20), 0, 0)
 ```
 
@@ -8468,40 +8044,44 @@ var rotation = float3(radians(fromDegrees: -20), 0, 0)
 
 在 `Renderer.swift` 中，将 `maxTessellation` 常数改为：
 
-```
+```swift
 static let maxTessellation: Int = {
 #if os(macOS)
-return 64
+    return 64
 #else
-return 16
+    return 16
 #endif
 }()
 ```
 
 这些是最大值。由于 iOS 上的最大细分很低，你可能想增加 iOS 上的补片数量。
 
-将 patches 和 terrain 改为：
+将 `patches` 和 `terrain` 改为：
 
-```
+```swift
 let patches = (horizontal: 6, vertical: 6)
-var terrain = Terrain(size: [8, 8], height: 1,
-maxTessellation: UInt32(Renderer.maxTessellation))
+var terrain = Terrain(
+    size: [8, 8],
+    height: 1,
+    maxTessellation: UInt32(Renderer.maxTessellation)
+)
 ```
 
 你现在正在十六个单位上创建六个补片。
 
-编译并运行，缩你的补片。当你重新调整补片时，细分器器重新计算它到相机的距离并相应进行细分。细分是一项很酷的超能力！
+编译并运行，缩放你的补片。当你重新调整补片时，细分器会重新计算它到相机的距离并相应进行细分。细分是一项很酷的超能力！
 
 ![](img/8d763acb335ab213ea9213a628f7d844_312_0.png)
 
 检查补片的连接处；补片每一边的三角形应该是连接的。
+
 现在你已经掌握了细分，将能够为你的地形添加细节。
 
-## 第11 章：细分与地形 (Tessellation & Terrains)
+## 第 11 章：细分与地形（Tessellation & Terrains）
 
-为了将纹理发送到片段着色器，在 `draw(in:)` 中，在绘制调用之前添加以下内容：
+为了将纹理发送到片段着色器，在 `draw(in:)` 中、绘制调用之前添加以下内容：
 
-```
+```swift
 renderEncoder.setFragmentTexture(cliffTexture, index: 1)
 renderEncoder.setFragmentTexture(snowTexture, index: 2)
 renderEncoder.setFragmentTexture(grassTexture, index: 3)
@@ -8509,23 +8089,24 @@ renderEncoder.setFragmentTexture(grassTexture, index: 3)
 
 在 `Shaders.metal` 中，为 `VertexOut` 添加两个属性：
 
-```
+```metal
 float height;
 float2 uv;
 ```
 
-在 `vertex_main` 的末尾，返回之前，设置这些属性的值：
+在 `vertex_main` 的末尾、返回之前，设置这些属性的值：
 
-```
+```metal
 out.uv = uv;
 out.height = height;
 ```
 
-将片段函数替换为代码：
+将片段函数替换为以下代码：
 
-```
+```metal
 constexpr sampler sample(filter::linear, address::repeat);
 float4 color;
+
 if (in.height < -0.5) {
     color = grassTexture.sample(sample, in.uv * tiling);
 } else if (in.height < 0.3) {
@@ -8533,34 +8114,33 @@ if (in.height < -0.5) {
 } else {
     color = snowTexture.sample(sample, in.uv * tiling);
 }
+
 return color;
 ```
 
-你创建一个纹理采样器并读取纹理中对应的高度。高度在 -1 到 1 之间，正如在 `vertex_main` 中设置的那样。你然后将纹理平铺 16 —— 一个根据这里看起来效果最好的任意值。
+你创建一个纹理采样器并读取纹理中对应的高度。高度在 -1 到 1 之间，正如在 `vertex_main` 中设置的那样。你然后将纹理平铺 16——一个根据这里看起来效果最好的任意值。
 
 编译并运行。点击线框渲染器，查看你的纹理山脉。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_316_0.png)
 
+## Metal 教程
 
-
-Metal 教程
-
-第 11 章：分形与地形
+### 第 11 章：分形与地形
 
 你在低海拔地区有草地，在高海拔有雪峰。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_318_0.png)
 
-当你缩放和旋转时，注意山脉似乎在波动。这是因为分形细节层次（tessellation level of detail）过度敏感。调的方法是改变渲染通道的分形分区模式。
+当你缩放和旋转时，注意山脉似乎在波动。这是因为分形细节层次（tessellation level of detail）过度敏感。解决方法是改变渲染通道的分形分区模式。
 
-在 **Renderer.swift** 的 `buildRenderPipelineState()` 函数中，将 `descriptor.tessellationPartitionMode` 的赋值更改为：
+在 `Renderer.swift` 的 `buildRenderPipelineState()` 函数中，将 `descriptor.tessellationPartitionMode` 的赋值更改为：
 
-```
+```swift
 descriptor.tessellationPartitionMode = .pow2
 ```
 
-编译并运行。当分形器将边缘因子向上舍入为2的幂时，现在补片（patches）之间的分形差异变大了，但分形的变化不再会频繁发生，波动现象也消失了。
+编译并运行。当分形器将边缘因子向上舍入为 2 的幂时，现在补片（patches）之间的分形差异变大了，但分形的变化不再会频繁发生，波动现象也消失了。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_318_1.png)
 
@@ -8568,21 +8148,21 @@ descriptor.tessellationPartitionMode = .pow2
 
 你之前的渲染中雪线是不现实的。通过检查山脉的坡度，你可以在平坦区域显示纹理，在坡度陡峭的地方显示悬崖纹理。
 
-计算坡度的一种简单方法是在高度图上运行 Sobel 过滤器。Sobel 过滤器是一种查看图像相邻像素之间梯度的算法。它在计算机视觉和图像处理的边缘检测中非常，但在这种情况下，你可以使用梯度来确定相邻像素之间的坡度。
+计算坡度的一种简单方法是在高度图上运行 Sobel 过滤器。Sobel 过滤器是一种查看图像相邻像素之间梯度的算法。它在计算机视觉和图像处理的边缘检测中非常有用，但在这种情况下，你可以使用梯度来确定相邻像素之间的坡度。
 
 ## Metal Performance Shaders
 
-Metal Performance Shaders 框架包含了许多有用且高度优化的色器，用于图像处理、矩阵乘法、机器学习和光线追踪。你将在第 21 章“Metal Performance Shaders”中阅读更多内容。
+Metal Performance Shaders 框架包含了许多有用且高度优化的着色器，用于图像处理、矩阵乘法、机器学习和光线追踪。你将在第 21 章“Metal Performance Shaders”中阅读更多内容。
 
-你在这里使用的色器是 `MPSImageSobel`，它接受源图像纹理并将过滤后的图像输出到新的灰度纹理。像素越白，坡度越陡。
+你在这里使用的着色器是 `MPSImageSobel`，它接受源图像纹理并将过滤后的图像输出到新的灰度纹理。像素越白，坡度越陡。
 
 > 注意：在本章的挑战中，你将使用 Sobel 过滤后的图像，并根据坡度将纹理应用到你的山上。
 
-在 Renderer.swift 顶部，导入 Metal Performance Shaders 框架：
+在 `Renderer.swift` 顶部，导入 Metal Performance Shaders 框架：
 
-```
-import MetalPerformanceShaders
-```
+
+
+导入 `MetalPerformanceShaders`。
 
 创建一个新方法来处理高度图：
 
@@ -8604,7 +8184,7 @@ descriptor.usage = [.shaderWrite, .shaderRead],
 mipmapped: false)
 ```
 
-这为你想要绑定和读取的纹理创建一个描述符。你将在 MPS 色器中写入纹理，并在片段色器中读取它。
+这为你想要绑定和读取的纹理创建一个描述符。你将在 MPS 着色器中写入纹理，并在片段着色器中读取它。
 
 继续向该方法添加：
 
@@ -8617,9 +8197,9 @@ let commandBuffer = Renderer.commandQueue.makeCommandBuffer()
 }
 ```
 
-这为 MPS 色器创建了纹理和命令缓冲区。
+这为 MPS 着色器创建了纹理和命令缓冲区。
 
-现在，添加这段运行 MPS 色器并返回纹理的代码：
+现在，添加这段运行 MPS 着色器并返回纹理的代码：
 
 ```
 let shader = MPSImageSobel(device: Renderer.device)
@@ -8632,9 +8212,9 @@ return destination
 
 这就是在纹理上运行 Metal Performance Shader 的全部操作！
 
-> 注意：资源包中的高度图的像素格式为 8 位归一化 - R，或 R8Norm。在 iOS 上，使用默认的 RGBA8Unorm 格式配合 MPSImageSobel 会崩溃。在任何情况下，对于仅使用一个通道的灰度纹理图，这种格式更高效。
+> 注意：资源包中的高度图的像素格式为 8 位归一化 - R，或 `R8Norm`。在 iOS 上，使用默认的 `RGBA8Unorm` 格式配合 `MPSImageSobel` 会崩溃。在任何情况下，对于仅使用一个通道的灰度纹理图，这种格式更高效。
 
-为了在纹理中存储地形坡度，为 Renderer 添加新属性：
+为了在纹理中存储地形坡度，为 `Renderer` 添加新属性：
 
 ```
 let terrainSlope: MTLTexture
@@ -8650,7 +8230,7 @@ terrainSlope = Renderer.heightToSlope(source: heightMap)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_321_0.png)
 
-在挑战中，一旦你将此纹理发送到顶点色器，你就可以使用捕捉 GPU 帧图标来看到它。白色部分是陡峭的坡。
+在挑战中，一旦你将此纹理发送到顶点着色器，你就可以使用捕捉 GPU 帧图标来看到它。白色部分是陡峭的坡。
 
 ## 挑战
 
@@ -8676,7 +8256,7 @@ terrainSlope = Renderer.heightToSlope(source: heightMap)
 
 # 第 12 章：环境
 
-在本章中，你将为渲染环境添加最后的点笔。你将添加一个环绕场景的 360° 图像。该纹理将照亮内部的模型，使其看起来很自然。
+在本章中，你将为渲染环境添加最后的点睛之笔。你将添加一个环绕场景的 360° 图像。该纹理将照亮内部的模型，使其看起来很自然。
 
 查看以下两个渲染的对比：
 
@@ -8688,7 +8268,7 @@ terrainSlope = Renderer.heightToSlope(source: heightMap)
 
 打开本章的启动项目。大部分情况下，该项目与你在第 9 章“场景图”中创建的引擎相似。然而，有一些变化：
 
-- 你可以为 Prop 初始化器添加一个片段色函数名称字符串，让你测试不同的道具样式。
+- 你可以为 `Prop` 初始化器添加一个片段着色函数名称字符串，让你测试不同的道具样式。
 - 你可以为模型添加金属属性和环境遮蔽图，如第 7 章“纹理与材质”所述。
 
 编译并运行项目，你将看到使用第 7 章“纹理与材质”相同的物理算法渲染的汽车。正如汽车后部的高光点所示，阳光从右侧照射。
@@ -8704,16 +8284,13 @@ terrainSlope = Renderer.heightToSlope(source: heightMap)
 
 目前，天空是单一颜色，看起来很不现实。通过添加一个环绕场景的 360° 图像，你可以轻松将动作设置在沙漠中，或以雪山为背景。
 
-
-
-
 为了实现这一点，你将创建一个环绕整个场景的天空盒立方体。
 
 这个天空盒立方体的普通模型相同，但不是从外部观察它，而是相机位于立方体的中心并向外看。你将用**立方体纹理**对立方体进行贴纹，这为你提供了一种创建完整环境的廉价方法。
 
 你可能认为立方体的角会发生畸变，但正如你将看到的，立方体的每个片段将以实际上无限的距离渲染，不会发生任何畸变。立方体贴图（Cube maps）比球形映射更容易创建，并且经过了硬件优化。
 
-为 Skybox 类创建一个新的 Swift 文件 **Skybox.swift**。记得将该文件添加到 iOS 和 macOS 目标中。该类持有立方体的几何结构，以及必要的流水线 状态和天空盒纹理。
+为 `Skybox` 类创建一个新的 Swift 文件 **Skybox.swift**。记得将该文件添加到 iOS 和 macOS 目标中。该类持有立方体的几何结构，以及必要的流水线状态和天空盒纹理。
 
 将默认代码替换为：
 
@@ -8729,15 +8306,16 @@ class Skybox {
 }
 ```
 
-你创建了 Skybox 类以及一些属性：
+你创建了 `Skybox` 类以及一些属性：
 
-- mesh: 一个使用 Model I/O 原始类型创建的立方体。
-- texture: 初始化器中给出的名称的立方体纹理。
-- pipeline: Skybox 需要一个简单的顶点和片元函数，因此它需要它自己的流水线。
-- depthStencilState: 天空盒的每个像素都将位于归一化裁剪空间的最边缘。渲染器当前的深度/模板状态仅在片段小于当前深度值时才添加该片段。天空盒的深度/模板状态应测试为小于或等于当前深度值。你很快就会看到。
+- `mesh`: 一个使用 Model I/O 原始类型创建的立方体。
+- `texture`: 初始化器中给出的名称的立方体纹理。
+- `pipeline`: `Skybox` 需要一个简单的顶点和片元函数，因此它需要它自己的流水线。
+- `depthStencilState`: 天空盒的每个像素都将位于归一化裁剪空间的最边缘。渲染器当前的深度/模板状态仅在片段小于当前深度值时才添加该片段。天空盒的深度/模板状态应测试为小于或等于当前深度值。你很快就会看到。
 
 你的类目前无法编译，因为你需要初始化这些属性。
-在 `init(textureNameName:)` 中添加以下代码：
+
+在 `init(textureName:)` 中添加以下代码：
 
 ```swift
 let allocator = MTKMeshBufferAllocator(device: Renderer.device)
@@ -8763,7 +8341,7 @@ do {
 
 在这里，你创建了一个立方体网格。注意你将法线设置为向内。这是因为整个场景看起来将像这个立方体。
 
-添加一个新方法来创建流水线
+添加一个新方法来创建流水线：
 
 ```swift
 private static func
@@ -8783,9 +8361,9 @@ private static func
 }
 ```
 
-这里没有新内容。你使用立方体的 Model I/O 顶点描述符创建一个流水线状态，稍稍后会编写它。
+这里没有新内容。你使用立方体的 Model I/O 顶点描述符创建一个流水线状态，稍后会编写它。
 
-添加一个新方法来创建深度/模板方法
+添加一个新方法来创建深度/模板方法：
 
 ```swift
 private static func buildDepthStencilState() -> MTLDepthStencilState {
@@ -8812,7 +8390,7 @@ pipelineState =
 
 你的项目现在应该可以编译了。
 
-在在 Skybox.swift 中，创建一个新方法来执行天空盒渲染：
+在 `Skybox.swift` 中，创建一个新方法来执行天空盒渲染：
 
 ```swift
 func render(encoder: MTLRenderCommandBuffer, uniforms: Uniforms) {
@@ -8841,40 +8419,11 @@ renderEncoder.setBytes(viewProjectionMatrix,
 length: MemoryLayout<float4x>.stride)
 ```
 
-*(注：原文中存在大量重复的 viewMatrix.columns.3 = [0, 0, 0, 1] 代码块，根据翻译要求已忽略重复输出，仅保留核心逻辑)*
-
-var viewMatrix = uniforms.viewMatrix
-viewMatrix.columns.3 = [0, 0, 0, 1]
-var viewProjectionMatrix = uniforms.projectionMatrix * viewMatrix
-renderEncoder.setBytes(viewProjectionMatrix,
-length: MemoryLayout<float4x>.stride)
-
-```swift
-var viewMatrix = uniforms.viewMatrix
-viewMatrix.columns.3 = [0, 0, 0, 1]
-var viewProjectionMatrix = uniforms.projectionMatrix * viewMatrix
-renderEncoder.setBytes(viewProjectionMatrix,
-length: MemoryLayout<float4x>.stride)
-```
-
-在此代码之后，设置你的统一变量体：
-
-```swift
-var viewMatrix = uniforms.viewMatrix
-viewMatrix.columns.3 = [0, 0, 0, 1]
-var viewProjectionMatrix = uniforms.projectionMatrix * viewMatrix
-renderEncoder.setBytes(viewProjectionMatrix,
-length: MemoryLayout<float4x>.stride)
-```
-
-
-
-
 编译并运行以查看新的黄色天空。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_331_0.png)
 
-如你从图中看到的，天空并不是全黄色的。当你旋转场景时，黄色天空会闪烁，并显示出金属视图清晰颜色（clear color）的蓝色。这是因为当前的深度模板状态（depth stencil state）来自 Renderer，它正在将新片段与小于当前深度缓冲的片段进行比较。天空立方盒坐标恰好位于边缘，因此有时它们会*等于*裁剪空间的边缘。
+如你从图中看到的，天空并不是全黄色的。当你旋转场景时，黄色天空会闪烁，并显示出金属视图清晰颜色（clear color）的蓝色。这是因为当前的深度模板状态（depth stencil state）来自 `Renderer`，它正在将新片段与小于当前深度缓冲的片段进行比较。天空立方盒坐标恰好位于边缘，因此有时它们会*等于*裁剪空间的边缘。
 
 在 `Skybox.swift` 中，在 `render(renderEncoder:uniforms:)` 函数中取消注释 `renderEncoder.setDepthStencilState(depthStencilState)`，然后重新编译并运行应用。
 
@@ -8888,10 +8437,10 @@ length: MemoryLayout<float4x>.stride)
 
 在进一步探索此 API 之前，打开并运行 `skybox.playground`。此场景只包含一个平面和一个天空立方盒。使用鼠标或触控板重新调整场景，并尝试调整滑块查看如何根据以下因素改变天空：
 
-- turbidity（浑浊度）：天空中的雾气。0.0 是晴空。1.0 会扩散太阳的颜色。
-- sun elevation（太阳高度）：太阳在天空中的高度。0.5 位于地平线上。1.0 在头顶上方。
-- upper atmosphere scattering（高层大气散射）：大气散射影响天空颜色，从中午的红橙色调变化。
-- ground albedo（地面反照率）：天空的清晰度。0 是清晰的，10 可以产生强烈的颜色。如果你有高反照率，最好保持浑浊度和高层大气散射较低。
+- `turbidity`（浑浊度）：天空中的雾气。0.0 是晴空。1.0 会扩散太阳的颜色。
+- `sun elevation`（太阳高度）：太阳在天空中的高度。0.5 位于地平线上。1.0 在头顶上方。
+- `upper atmosphere scattering`（高层大气散射）：大气散射影响天空颜色，从中午的红橙色调变化。
+- `ground albedo`（地面反照率）：天空的清晰度。0 是清晰的，10 可以产生强烈的颜色。如果你有高反照率，最好保持浑浊度和高层大气散射较低。
 
 当你移动滑块时，结果会打印在调试控制台中，以便你记录这些值以备后用。尝试创建一个日出效果：
 
@@ -8900,6 +8449,8 @@ length: MemoryLayout<float4x>.stride)
 此播放场使用 Model I/O 创建了一个 `MDLSkyCubeTexture`。从这里，播放场创建一个 `MTLTexture` 并将其作为立方纹理应用到天空立方体。你将在启动项目中执行此操作。
 
 ## 立方纹理 (Cube textures)
+
+
 
 立方纹理与你已经使用的 2D 纹理类似。2D 纹理映射到四边形并有两个纹理坐标，而立方纹理由六个 2D 纹理组成：对应立方体的每个面一个。你使用 3D 向量对纹理进行采样。
 
@@ -8913,9 +8464,9 @@ length: MemoryLayout<float4x>.stride)
 
 ## 添加过程化天空
 
-你将使用这些纹理快捷方法，但现在，你将在启动项目的场景中添加一个过程化天空。在 **Skybox.swift** 中，为 `Skybox` 添加这些属性：
+你将使用这些纹理快捷方法，但现在，你将在启动项目的场景中添加一个过程化天空。在 `Skybox.swift` 中，为 `Skybox` 添加这些属性：
 
-```
+```swift
 struct SkySettings {
     var turbidity: Float = 0.2
     var sunElevation: Float = 0.6
@@ -8928,7 +8479,7 @@ var skySettings = SkySettings()
 
 如果你愿意，可以使用播放场中相应滑块的值。创建一个使用这些设置通过 Model I/O 创建天空纹理的方法：
 
-```
+```swift
 func loadGeneratedSkyTexture(dimensions: CGSize) -> MTLTexture? {
     var texture: MTLTexture?
     let skyTexture = MDLSkyCubeTexture(name: "sky",
@@ -8950,141 +8501,11 @@ func loadGeneratedSkyTexture(dimensions: CGSize) -> MTLTexture? {
 
 剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
 
-```
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
 ```swift
 if let texture = loadGeneratedSkyTexture(dimensions: size) {
     self.texture = texture
 }
 ```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-剩下的工作就是创建过程化生成的纹理！在 `(textureName)` 结束调用此方法：
-
-```swift
-if let texture = loadGeneratedSkyTexture(dimensions: size) {
-    self.texture = texture
-}
-```
-
-*(注：由于输入文本中存在大量重复内容，此处根据指令“不要重复输出原文”的原则，仅翻译了核心逻辑部分)* 
 
 因此，有时它们会*等于*裁剪空间的边缘。
 
@@ -9101,8 +8522,11 @@ if let texture = loadGeneratedSkyTexture(dimensions: size) {
 在进一步探索此 API 之前，打开并运行 `skybox.playground`。此场景只包含一个平面和一个天空立方盒。使用鼠标或触控板重新调整场景，并尝试调整滑块查看如何根据以下因素改变天空：
 
 - turbidity（浑浊度）：天空中的雾气。0.0 是晴空。1.0 会扩散太阳的颜色。
+
 - sun elevation（太阳高度）：太阳在天空中的高度。0.5 位于地平线上。1.0 在头顶上方。
+
 - upper atmosphere scattering（高层大气散射）：大气散射影响天空颜色，从中午的红橙色调变化。
+
 - ground albedo（地面反照率）：天空的清晰度。0 是清晰的，10 可以产生强烈的颜色。如果你有高反照率，最好保持浑浊度和高层大气散射较低。
 
 当你移动滑块时，结果会打印在调试控制台中，以便你记录这些值以备后用。尝试创建一个日出效果：
@@ -9125,9 +8549,9 @@ if let texture = loadGeneratedSkyTexture(dimensions: size) {
 
 ## 添加过程化天空
 
-你将使用这些纹理快捷方法，但现在，你将在启动项目的场景中添加一个过程化天空。在 **Skybox.swift** 中，为 `Skybox` 添加这些属性：
+你将使用这些纹理快捷方法，但现在，你将在启动项目的场景中添加一个过程化天空。在 `Skybox.swift` 中，为 `Skybox` 添加这些属性：
 
-```
+```swift
 struct SkySettings {
     var turbidity: Float = 0.2
     var sunElevation: Float = 0.6
@@ -9140,7 +8564,7 @@ var skySettings = SkySettings()
 
 如果你愿意，可以使用播放场中相应滑块的值。创建一个使用这些设置通过 Model I/O 创建天空纹理的方法：
 
-```
+```swift
 func loadGeneratedSkyTexture(dimensions: CGSize) -> MTLTexture? {
     var texture: MTLTexture?
     let skyTexture = MDLSkyCubeTexture(name: "sky",
@@ -9167,10 +8591,6 @@ if let texture = loadGeneratedSkyTexture(dimensions: size) {
     self.texture = texture
 }
 ```
-
-
-
-
 
 ## 反思
 
@@ -9224,6 +8644,8 @@ scene.skybox?.update(renderEncoder: renderEncoder)
 
 在 `Shaders.metal` 中，将 `skyboxTest` 中的代码替换为：
 
+
+
 ```metal
 float3 viewDirection = in.worldPosition.xyz - 
   fragmentUniforms.cameraPosition;
@@ -9234,7 +8656,7 @@ float3 textureCoordinates = reflect(viewDirection, in.worldNormal);
 
 ## Metal 教程
 
-## 第12 章：环境
+## 第 12 章：环境
 
 现在，采样天空盒纹理。添加此代码：
 
@@ -9260,7 +8682,7 @@ return color;
 
 使用天空图像你可以提取光照信息。例如，天空纹理中面向太阳的汽车部分比背向太阳的部分更亮。背向的部分不应该是完全黑暗的，而应该有天空纹理填充的环境光。
 
-Epic Games 为《堡垒之》开发了一种技术，这是他们参考了迪士尼的研究，并且这已成为游戏中 IBL 的标准技术。如果你想尽可能符合物理事实，在本章的 `references.markdown` 中有关于他们如何实现此点的文章链接。
+Epic Games 为《堡垒之》开发了一种技术，这是他们参考了迪士尼的研究，并且这已成为游戏中 IBL 的标准技术。如果你想尽可能符合物理事实，在本章的`references.markdown`中有关于他们如何实现此点的文章链接。
 
 你将对他们的技术进行近似，并利用 Model I/O 处理漫反射。
 
@@ -9271,9 +8693,6 @@ Epic Games 为《堡垒之》开发了一种技术，这是他们参考了迪士
 ![](img/8d763acb335ab213ea9213a628f7d844_341_0.png)
 
 这在某种程度上是不可能的任务，但你可以使用卷积来计算称为辐照图（irradiance map）的立方体映射。
-
-
-
 
 金属教程 (Metal by Tutorials)
 
@@ -9292,7 +8711,9 @@ $$f(l, v) = D(h)F(v, h)G(l, v) / (n \cdot l)(n \cdot v)$$
 其中你提供了光方向 **(l)**、观察方向 **(v)** 以及 **I** 和 **v** 之间的半向量 **(h)**。正如第 7 章“纹图与材质”所述，这些函数为：
 
 - **D**: 几何斜率分布
+
 - **F**: 菲涅尔 (Fresnel)
+
 - **G**: 几何衰减
 
 与漫反射光一样，为了获得入射高光光的准确性，你需要进行多次采样，这在实时渲染中是不切行的。Epic Games 在其论文《Unreal Engine 4 中的实时着光》中的方法是拆分天空立方体模型的计算。预过滤器根据不同的粗糙值通过几何分布对天空立方体纹理进行预过滤。对于每个粗糙级别，纹理会变得越小、越模糊，你可以将这些预过滤的环境图作为不同的 mipmap 层级存储在天空立方体纹理中。
@@ -9309,19 +8730,19 @@ $$f(l, v) = D(h)F(v, h)G(l, v) / (n \cdot l)(n \cdot v)$$
 
 ![](img/8d763acb335ab213ea9213a628f7d844_346_1.png)
 
-你越希望场景越写实，需要的掌握的数学水平就越高。在 **references.markdown** 中，有一些建议阅读的链接，它们解释了 Cook-Torrance 微平面高光渲染模型。启动项目包含了 Epic Games 提供的用于创建 BRDF 查找纹理的函数。你可以在 **Utilities** 组中找到这些函数。
+你越希望场景越写实，需要的掌握的数学水平就越高。在`references.markdown`中，有一些建议阅读的链接，它们解释了 Cook-Torrance 微平面高光渲染模型。启动项目包含了 Epic Games 提供的用于创建 BRDF 查找纹理的函数。你可以在 **Utilities** 组中找到这些函数。
 
 # 金属教程 (Metal by Tutorials)
 
 # 第 12 章：环境
 
-在 Skybox.swift 中，为新纹理添加一个属性：
+在`Skybox.swift`中，为新纹理添加一个属性：
 
 ```
 var brdfLut: MTLTexture?
 ```
 
-在 init(textureName:) 的结束处，调用启动项目中使用用于构建纹理的方法：
+在`init(textureName:)`的结束处，调用启动项目中使用用于构建纹理的方法：
 
 ```
 brdfLut = Renderer.brdfBRDF()
@@ -9329,7 +8750,7 @@ brdfLut = Renderer.brdfBRDF()
 
 该方法将使用计算着色器（compute shader）创建新纹理。你将在第 16 章“粒子系统”中学习创建和使用计算着色器。
 
-在 update(renderEncoder:) 中，将纹理发送到 GPU：
+在`update(renderEncoder:)`中，将纹理发送到 GPU：
 
 ```
 renderEncoder.setFragmentTexture(brdfLut, index: Int(BufferIndexBRDFLut.rawValue))
@@ -9341,13 +8762,13 @@ renderEncoder.setFragmentTexture(brdfLut, index: Int(BufferIndexBRDFLut.rawValue
 
 注意纹理格式为 RG16F。作为浮点数，此像素的精度比 RGBA8Unorm 更高。
 
-所有必要信息现在都在 GPU 上，因此你需要将新的 BRDF 查找纹理接收到片段着色器和着色器数学中。在 IBL.metal 中，将此作为参数添加到 fragment_IBL
+所有必要信息现在都在 GPU 上，因此你需要将新的 BRDF 查找纹理接收到片段着色器和着色器数学中。在`IBL.metal`中，将此作为参数添加到`fragment_IBL`
 
 ```cpp
 texture2d<float> brdfL [[ texture(BufferIndexBRDFlut) ]]
 ```
 
-在 fragment_IBL 的末尾，返回之前，添加：
+在`fragment_IBL`的末尾，返回之前，添加：
 
 ```cpp
 // 1
@@ -9366,11 +8787,14 @@ float3 specular = prefilteredColor * envBRDF.x + envBRDF.y;
 逐行分析代码：
 
 - 1. 计算观察方向和纹理坐标。
+
 - 2. 使用采样器获取预过滤的天空颜色。
-- 3. 使用 nDotV 采样 BRDF 查找表获取缩放和偏置。
+
+- 3. 使用`nDotV`采样 BRDF 查找表获取缩放和偏置。
+
 - 4. 将它们结合得到最终的高光颜色。
 
-你越希望场景越写实，需要的掌握的数学水平就越高。在 **references.markdown** 中，有一些建议阅读的链接，它们解释了 Cook-Torrance 微平面高光渲染模型。启动项目包含了 Epic Games 提供的用于创建 BRDF 查找纹理的函数。你可以在 **Utilities** 组中找到这些函数。
+你越希望场景越写实，需要的掌握的数学水平就越高。在`references.markdown`中，有一些建议阅读的链接，它们解释了 Cook-Torrance 微平面高光渲染模型。启动项目包含了 Epic Games 提供的用于创建 BRDF 查找纹理的函数。你可以在 **Utilities** 组中找到这些函数。
 
 ## 环境遮蔽 (Ambient occlusion)
 
@@ -9382,14 +8806,11 @@ float3 specular = prefilteredColor * envBRDF.x + envBRDF.y;
 
 左侧颜色值为 1.0 的白色区域通过 UV 映射到车漆上。这些是完全暴露的区域。当你将最终渲染颜色乘以 1.0 时，它不会受到影响。然而，你可以识别 AO 映射右下角的轮子，那里辐条是凹进去的。这些区域的颜色值可能是0.8，会加深最终的渲染颜色。
 
-环境遮蔽映射已经在启动项目中设置就绪，供你使用。在 fragment_IBL 中，在最后的返回之前，添加：
+环境遮蔽映射已经在启动项目中设置就绪，供你使用。在`fragment_IBL`中，在最后的返回之前，添加：
 
 ```cpp
 color *= ambientOcclusion;
 ```
-
-
-
 
 Metal 教程
 
@@ -9407,9 +8828,12 @@ Metal 教程
 
 资源目录中提供了六个从 HDRIHaven.com 下载的 HDRI 转换而来的立方体面 png 图像。
 
-- 1. 使用包含的 IrradianceGenerator 项目创建一个环境辐照图（irradiance map），并将生成的地图导入项目。
-- 2. 使用包含的 Specular 项目创建高光 mipmap 级别。
+- 1. 使用包含的`IrradianceGenerator`项目创建一个环境辐照图（irradiance map），并将生成的地图导入项目。
+
+- 2. 使用包含的`Specular`项目创建高光 mipmap 级别。
+
 - 3. 在资源目录中创建一个新的立方体纹理。
+
 - 4. 为这个新的立方体纹理分配相应的生成的 mipmap 。
 
 不需要更改代码，全部都是图像！你将在本章的挑战目录中找到完成的项目。
@@ -9420,24 +8844,25 @@ raywriterlich.com
 
 # 接下来去向哪里？
 
-你已经涉足了真实渲染的大海，你将在第 20 章“高级光照”中读到更多关于光照和反射的高级概念。如果你想探索更多真实渲染，本章的 references.markdown 包含了有趣的文章和视频链接。
+你已经涉足了真实渲染的大海，你将在第 20 章“高级光照”中读到更多关于光照和反射的高级概念。如果你想探索更多真实渲染，本章的`references.markdown`包含了有趣的文章和视频链接。
 
-本章没有涉及球谐波（spherical harmonics），这是使用辐照纹理图进行漫反射的替代方法。在数学上，你可以用 27 个浮点数来近似该辐照图。希望 references.markdown 中的链接能让你对这项神奇的技术产生兴趣。
+本章没有涉及球谐波（spherical harmonics），这是使用辐照纹理图进行漫反射的替代方法。在数学上，你可以用 27 个浮点数来近似该辐照图。希望`references.markdown`中的链接能让你对这项神奇的技术产生兴趣。
 
 在尝试实现极致真实的渲染之前，你应该问自己一个问题：你的游戏是否会从真实性中受益？脱颖而出的一种方法是创建自己的渲染风格。像《堡垒》这样的游戏并非完全真实，有自己的风格。尝试 shader 看看你能创建出什么。
 
 # 第 13 章：实例化与程序化生成
+
 作者 Caroline Begbie
 
 现在你已经有了一个带有天空的环境并填充地形、角色和道具，你需要添加一些随机物体。树木和草会让场景看起来更自然，但它们会占用大量宝贵的资源，而不会为游戏增加任何玩家操作。
 
 在本章中，你将了解到如何使用**实例化（instancing）**来高效地渲染许多树木和草。然后你将渲染实例化的岩石，并使用**变形（morphing）**处理不同的形状。最后，你将创建一个程序化房屋系统，该系统将生成一行房屋，其尺寸和样式每次运行应用时都会变化。
 
-除了这些，你还将提高处理 GPU 资源的通用性和熟练程度，这将让你能够放心地访问 MTLBuffers 中的任何数据。
+除了这些，你还将提高处理 GPU 资源的通用性和熟练程度，这将让你能够放心地访问`MTLBuffers`中的任何数据。
 
 ## 初始化项目
 
-打开本章的启动项目。这与上一章的项目几乎相同，但它包含一个新的 GameScene，该场景在随机位置渲染二十五棵树。每棵树由 9,119 个顶点组成，颜色纹理为 8 MB，分辨率为 2048×2048 像素。
+打开本章的启动项目。这与上一章的项目几乎相同，但它包含一个新的`GameScene`，该场景在随机位置渲染二十五棵树。每棵树由 9,119 个顶点组成，颜色纹理为 8 MB，分辨率为 2048×2048 像素。
 
 > 注意：你通常不会为一棵树花费 9,119 个顶点，除非你需要精细的细节。低多形（Low-poly）树要高效得多。然而，这个示例将向你展示实例化有多重要。
 
@@ -9445,19 +8870,26 @@ raywriterlich.com
 
 # 第 13 章：实例化与程序化生成
 
-编译并运行应用。如果你的设备无法处理二十五棵树，你可能需要减少 GameScene 中的 instanceCount。
+编译并运行应用。如果你的设备无法处理二十五棵树，你可能需要减少`GameScene`中的`instanceCount`。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_355_0.png)
 
 在 Xcode 中，检查调试器（Debug navigator）。这是 2015 年 iMac 上的结果：
 
 | Procedural-macOS PID 53025 | |
+
 | :--- | :--- |
+
 | CPU | 5% |
+
 | 内存 | 1.65 GB |
+
 | 能量影响 | 高 |
+
 | Disk | Zero KB/s |
+
 | 网络 | Zero KB/s |
+
 | FPS | 9 FPS |
 
 你在本章部分的目标是减少巨大的内存占用，可能甚至解决糟糕的帧率。
@@ -9470,9 +8902,9 @@ raywriterlich.com
 
 这些纹理和几何结构对于每棵树都是相同的，通过实例化，GPU 可以用一个纹理和一个几何结构处理多个模型。在这个场景中，这意味着少向 GPU 传输了 24 个纹理和几何资源。
 
-模型的每个实例将具有独特的数据。每棵树的独特数据是它的位置、旋转和缩放，这些是在 GameScene 中设置的。你将不再直接渲染 Props，而是使用实例数据多次渲染一个 Prop。
+模型的每个实例将具有独特的数据。每棵树的独特数据是它的位置、旋转和缩放，这些是在`GameScene`中设置的。你将不再直接渲染`Props`，而是使用实例数据多次渲染一个`Prop`。
 
-下面的图显示了 Prop 及其现有属性：几何结构（顶点缓冲区）、纹理以及位置和旋转。你将添加一个包含位置和旋转的新 Transforms 数组。
+下面的图显示了`Prop`及其现有属性：几何结构（顶点缓冲区）、纹理以及位置和旋转。你将添加一个包含位置和旋转的新`Transforms`数组。
 
 ```swift
 struct Instances {
@@ -9481,9 +8913,9 @@ struct Instances {
 }
 ```
 
-要使用实例化，我们需要将变换数据转换为 Instances 数组。img/8d763acb335ab213ea9213a628f7d844_356_0.png
+要使用实例化，我们需要将变换数据转换为`Instances`数组。img/8d763acb335ab213ea9213a628f7d844_356_0.png
 
-在 GameScene.swift 中，创建一个构建缓冲区的方法：
+在`GameScene.swift`中，创建一个构建缓冲区的方法：
 
 ```swift
 static func buildBuffer(transforms: [Transform]) -> MTLBuffer? {
@@ -9505,23 +8937,25 @@ guard let instanceBuffer = self.buildBuffer(transforms: transforms) else {
 
 ## 访问 MTLBuffer 数据
 
-MTLBuffer 包含字节，Swift 是一种强类型语言，这意味着只有当你告诉 Swift 类型时，它才能访问缓冲区中的数据。你通过将数据绑定到类型来实现。在这种情况下，类型是 Instances。
+`MTLBuffer`包含字节，Swift 是一种强类型语言，这意味着只有当你告诉 Swift 类型时，它才能访问缓冲区中的数据。你通过将数据绑定到类型来实现。在这种情况下，类型是`Instances`。
 
-当你将内存绑定到 MTLBuffer 时，你会一个类型为 UnsafeMutablePointer<Instances> 的指针，它指向缓冲区中的第一个实例。
+当你将内存绑定到`MTLBuffer`时，你会一个类型为`UnsafeMutablePointer<Instances>`的指针，它指向缓冲区中的第一个实例。
 
 | Instances[0] | Instances[1] | Instances[2] |
+
 |---|---|---|
+
 | float4x4 | float4x4 | float4x4 |
+
 | float3x3 | float3x3 | float3x3 |
+
 | modelMatrix | modelMatrix | modelMatrix |
 
-“不安全（Unsafe）”一词意味着除非类型正确，否则读取缓冲区是不安全的。你可以用任何想要的类型绑定数据，Swift 无法判断格式是否正确。例如，你可以将 `instanceBuffer.contents()` 绑定到 `Int.self`，在这种情况下是错误的，但 Swift 仍然允许你访问这些数据，因为它们是由 Int 组成的。务必将缓冲区绑定到正确的类型！
+“不安全（Unsafe）”一词意味着除非类型正确，否则读取缓冲区是不安全的。你可以用任何想要的类型绑定数据，Swift 无法判断格式是否正确。例如，你可以将`instanceBuffer.contents()`绑定到`Int.self`，在这种情况下是错误的，但 Swift 仍然允许你访问这些数据，因为它们是由`Int`组成的。务必将缓冲区绑定到正确的类型！
+
+在`Prop.swift`中，创建一个新方法来更新单个变换：
 
 
-
-
-
-在 Prop.swift 中，创建一个新方法来更新单个变换：
 
 ```swift
 func updateBuffer(instance: Int, transform: Transform) {
@@ -9529,7 +8963,7 @@ func updateBuffer(instance: Int, transform: Transform) {
 }
 ```
 
-在该方法的末尾，将 `bindBuffer` 绑定到指针，并格式化数据以便 Swift 知道数据类型为 `Instances`，且具体的 `Instances` 数量为：
+在该方法的末尾，将`bindBuffer`绑定到指针，并格式化数据以便 Swift 知道数据类型为`Instances`，且具体的`Instances`数量为：
 
 ```swift
 var pointer =
@@ -9537,7 +8971,7 @@ var pointer =
     capacity: transforms.count)
 ```
 
-使用指针的 `pointee` 属性，你可以直接访问缓冲区中的数据。继续 `updateBuffer(instance:transform)`：
+使用指针的`pointee`属性，你可以直接访问缓冲区中的数据。继续`updateBuffer(instance:transform)`：
 
 ```swift
 pointer = pointer.pointee.advanced(instance:instance)
@@ -9545,16 +8979,16 @@ pointer.pointee.modelMatrix = transforms[instance].modelMatrix
 pointer.pointee.normalMatrix = transforms[instance].normalMatrix
 ```
 
-首先，你移动到正确的实例。然后你将矩阵信息直接放入 `instanceBuffer` 中。
+首先，你移动到正确的实例。然后你将矩阵信息直接放入`instanceBuffer`中。
 
-你还需要将 `instanceBuffer` 发送到 GPU。在 `render(renderEncoder:units:fragmentUniforms:)` 方法的顶部、设置 uniform 之后添加以下内容：
+你还需要将`instanceBuffer`发送到 GPU。在`render(renderEncoder:units:fragmentUniforms:)`方法的顶部、设置 uniform 之后添加以下内容：
 
 ```swift
 renderEncoder.setVertexBuffer(instanceBuffer, offset: 0,
 index: Int(BufferIndexInstances.rawValue))
 ```
 
-这里是硬件魔法所在，你告诉 GPU 需要渲染多少个实例。在 `render(renderEncoder:units:fragmentUniforms)` 的末尾，更改绘制调用以包含实例数量：
+这里是硬件魔法所在，你告诉 GPU 需要渲染多少个实例。在`render(renderEncoder:units:fragmentUniforms)`的末尾，更改绘制调用以包含实例数量：
 
 ```swift
 renderEncoder.drawIndexedPrimitives(type: .triangle,
@@ -9565,23 +8999,24 @@ renderEncoder.drawIndexedPrimitives(type: .triangle,
     instanceCount: instanceCount)
 ```
 
-`instanceCount` 告之 GPU 必须为每个 `instanceCount` 调用一次顶点着色器实例。
+`instanceCount`告之 GPU 必须为每个`instanceCount`调用一次顶点着色器实例。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_359_0.png)
 
 # GPU 实例
 
 你可以访问 GPU 侧的实例数组，这将修改顶点着色器。
-在 `Shaders.metal` 中，为 `vertex_main` 添加这些参数：
+
+在`Shaders.metal`中，为`vertex_main`添加这些参数：
 
 ```metal
 constant Instances *instances [[ buffer(BufferInstances) ]];
 uint instanceID [[ instance_id ]]
 ```
 
-第一个参数是矩阵数组，第二个——带有 `[[ instance_id ]]` Metal 着色语言属性——持有指向实例数组的索引。
+第一个参数是矩阵数组，第二个——带有`[[ instance_id ]]` Metal 着色语言属性——持有指向实例数组的索引。
 
-> 注意：例如，如果你正在渲染一个植物网格，你也可以使用 `[[ instance_id ]]` 来计算网格中的位置，而不是在缓冲区中填充数据。
+> 注意：例如，如果你正在渲染一个植物网格，你也可以使用`[[ instance_id ]]`来计算网格中的位置，而不是在缓冲区中填充数据。
 
 更改赋值以包含特定实例的矩阵：
 
@@ -9601,10 +9036,12 @@ out.worldBitangent = uniforms.normalMatrix * instance.normalBitangent
 ```
 
 你在位置和法线计算中包含了每个实例的矩阵。
-通过将 Prop 的 `modelMatrix` 和实例的 `modelMatrix` 分离，你可以将 Prop 视为一组。通过更改 Prop 的变换，它将影响所有实例，因此你可以移动移动一片草地或每片森林。每个实例随后通过其自己的 `modelMatrix` 进行标识。
+
+通过将 Prop 的`modelMatrix`和实例的`modelMatrix`分离，你可以将 Prop 视为一组。通过更改 Prop 的变换，它将影响所有实例，因此你可以移动移动一片草地或每片森林。每个实例随后通过其自己的`modelMatrix`进行标识。
 
 你已经完全建立了一个实例系统，现在可以在场景中使用它。
-在 `GameScene.swift` 中，将循环改为：
+
+在`GameScene.swift`中，将循环改为：
 
 ```swift
 let tree = Prop(name: "tree", instanceCount: instanceCount)
@@ -9632,27 +9069,35 @@ for i in 0..<instanceCount {
 检查调试导航器（Debug navigator）。注意内存占用大幅下降。这是因为你对所有树只使用了一个纹理和一组顶点。你应该再次以每秒 60 帧的速度进行渲染了。
 
 | Procedural-macOS PID 53126 | |
+
 | :--- | :--- |
+
 | CPU | 5% |
+
 | Memory | 30.4 MB |
+
 | Energy Impact | |
+
 | Disk | Zero/s |
+
 | Network | Zero/s |
+
 | FPS | 60 |
-
-
-
 
 ## 顶点描述符与 stage_in
 
-到目前，为了渲染 OBJ 模型，你一直在使用 `stage_in` 属性在顶点着色器函数中描述顶点缓冲区。
+到目前，为了渲染 OBJ 模型，你一直在使用`stage_in`属性在顶点着色器函数中描述顶点缓冲区。
 
-以下显示了 Model I/O 读取到顶点 `MTLBuffer` 的内容：
+以下显示了 Model I/O 读取到顶点`MTLBuffer`的内容：
 
 | | 顶点 1 | | 顶点 2 | | | |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 0 | 1 | -1 | 0 | 0 | 0.5 | 0.4 | 0.2 | 0.1 | 0.2 | -1 | 0 | 0.2 |
+
 | float3 | float3 | float2 | float3 | float3 | float2 |
+
 | Position | Normal | 纹理坐标 | Position | Normal | 纹理坐标 |
 
 ```cpp
@@ -9663,13 +9108,13 @@ struct VertexDescriptor {
 };
 ```
 
-每个顶点有两个 `float3` 和一个 `float2`。`MTLVertexDescriptor` 描述了这种布局并分配了位置、法线和纹理坐标字段。顶点描述符的步长（stride）描述了一个顶点开始到下一个顶点开始之间的字节数。
+每个顶点有两个`float3`和一个`float2`。`MTLVertexDescriptor`描述了这种布局并分配了位置、法线和纹理坐标字段。顶点描述符的步长（stride）描述了一个顶点开始到下一个顶点开始之间的字节数。
 
-当你使用带有 `stage_in` 属性的参数时，顶点着色器使用顶点描述符的布局来读取缓冲区。这些长度不需要与缓冲区中的数据相同，因为着色器会自动转换。注意，虽然缓冲区中的位置是 `float3`，但顶点着色器可以将其映射到 `Position` 属性并将其作为 `float4` 读取。
+当你使用带有`stage_in`属性的参数时，顶点着色器使用顶点描述符的布局来读取缓冲区。这些长度不需要与缓冲区中的数据相同，因为着色器会自动转换。注意，虽然缓冲区中的位置是`float3`，但顶点着色器可以将其映射到`Position`属性并将其作为`float4`读取。
 
-你将为三个形状不同的岩石使用三种不同的顶点缓冲区之一，而 `stage_in` 转换只能用于一个缓冲区。由于由于，你将在顶点着色器中读取缓冲区字节。你必须在着色器中匹配缓冲区数据的实际格式，而不是目前着色器使用的 `VertexIn` 结构体格式。
+你将为三个形状不同的岩石使用三种不同的顶点缓冲区之一，而`stage_in`转换只能用于一个缓冲区。由于由于，你将在顶点着色器中读取缓冲区字节。你必须在着色器中匹配缓冲区数据的实际格式，而不是目前着色器使用的`VertexIn`结构体格式。
 
-在 `Nature.metal` 中，将 `VertexIn` 修改为：
+在`Nature.metal`中，将`VertexIn`修改为：
 
 ```cpp
 struct VertexIn {
@@ -9679,16 +9124,16 @@ struct VertexIn {
 };
 ```
 
-如果你熟悉在着色器中读取 `MTLBuffers`，你可能知道这个特定的结构体会给你带来麻烦。不幸的是，这个结构体的格式是一个常见的错误，因此你将故意犯这个错误以观察发生什么；然后你会纠正它。
+如果你熟悉在着色器中读取`MTLBuffers`，你可能知道这个特定的结构体会给你带来麻烦。不幸的是，这个结构体的格式是一个常见的错误，因此你将故意犯这个错误以观察发生什么；然后你会纠正它。
 
-将 `vertex_nature` 的第一个参数改为：
+将`vertex_nature`的第一个参数改为：
 
 ```cpp
 constant VertexIn *in [[ buffer(0) ]];
 uint vertexID [[ vertex_id ]];];
 ```
 
-你将 `stage_in` 参数更改为指向 `VertexIn` 数组的指针。`vertex_id` 属性提供了当前顶点，以便你能够从数组中检索位置。
+你将`stage_in`参数更改为指向`VertexIn`数组的指针。`vertex_id`属性提供了当前顶点，以便你能够从数组中检索位置。
 
 在顶点函数顶部添加此内容：
 
@@ -9698,7 +9143,7 @@ VertexIn vertexIn = in[vertexID];
 
 这为你提供了当前顶点。
 
-你会得到一个编译错误，因为 `position` 现在是 `float3`。将 `position` 的赋值更改为：
+你会得到一个编译错误，因为`position`现在是`float3`。将`position`的赋值更改为：
 
 ```cpp
 float4 position = float4(vertexIn.position, 1);
@@ -9712,31 +9157,39 @@ float4 position = float4(vertexIn.position, 1);
 
 # 第 13 章：实例化与程序化生成
 
-这通常意味着顶点着色器中的结构体格式与 `MTLBuffer` 的内容不匹配，你现在将修复它。
+这通常意味着顶点着色器中的结构体格式与`MTLBuffer`的内容不匹配，你现在将修复它。
 
 ## 打包浮点 (Packed floats)
 
 在 Apple 的 Metal 着色语言规范中（访问：https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf），你可以看到向量数据类型的大小和对齐方式。
 
 | 类型 | 大小（字节） | 对齐（字节） |
+
 | --- | --- | --- |
+
 | float3 | 16 | 16 |
+
 | float4 | 16 | 16 |
+
 | packed_float3 | 12 | 4 |
+
 | packed_float4 | 16 | 4 |
 
-`float3` 的对齐为 16 字节；结构体的每个字段必须从对齐偏移量处开始，编译器会在需要的地方插入填充。这将改变 `VertexIn` 步长的大小，导致顶点着色器无法正确读取数据。你的 `VertexIn` 结构体目前包含 `float` 类型，你需要将这些更改为 `packed_float` 类型。
+`float3`的对齐为 16 字节；结构体的每个字段必须从对齐偏移量处开始，编译器会在需要的地方插入填充。这将改变`VertexIn`步长的大小，导致顶点着色器无法正确读取数据。你的`VertexIn`结构体目前包含`float`类型，你需要将这些更改为`packed_float`类型。
 
-`packed_float3` 对齐仅为 4 字节，大小为 12 字节，步长将与缓冲区中的实际数据一致。
+`packed_float3`对齐仅为 4 字节，大小为 12 字节，步长将与缓冲区中的实际数据一致。
 
 | 0 | 1 | Pad | 0 | 0.5 | Pad | 0.2 | 0.1 |
+
 | --- | --- | --- | --- | --- | --- | --- | --- |
+
 | | float3 | | float3 | | float2 | | |
+
 | | | | | | | | | | | packed_float3 | packed_float3 | packed_float2 |
 
 这是一个问题；然而，还有另一个问题：顶点描述符的步长为 40 字节，正如你可能在调试控制台中看到的输出那样。缓冲区中的实际步长为 32 字节：12 + 28。
 
-在 `Nature.swift` 中，你定义 `mdlVertexDescriptor` 属性的地方之后：
+在`Nature.swift`中，你定义`mdlVertexDescriptor`属性的地方之后：
 
 ```swift
 var offset = 0
@@ -9748,12 +9201,9 @@ var offset = 0
 let packedFloat3Size = MemoryLayout<packed_float3>.stride
 ```
 
-
-
-
 # 随机石头形状
 
-在 `Nature.swift` 中，将 `updateBuffer(instance:transform:)` 修改为接收变形目标（morph target）和纹理的随机数：
+在`Nature.swift`中，将`updateBuffer(instance:transform:)`修改为接收变形目标（morph target）和纹理的随机数：
 
 ```swift
 func updateBuffer(instance: Int, transform: Transform,
@@ -9774,14 +9224,14 @@ pointer.pointer.textureID = UInt32(textureID)
 pointer.pointer.morphTargetID = UInt32(morphTargetID)
 ```
 
-现在，修正 `init` 在两个地方调用 `updateBuffer`。在 `init(name:instanceCount:textureNames:morphTargetNames:)` 的末尾添加这两个额外参数：
+现在，修正`init`在两个地方调用`updateBuffer`。在`init(name:instanceCount:textureNames:morphTargetNames:)`的末尾添加这两个额外参数：
 
 ```swift
 updateBuffer(instance: 0, transform: Transform(),
     textureID: 0, morphTargetID: 0)
 ```
 
-在 `RocksScene.swift` 的 `setupScene()` 中，添加这两个额外参数：
+在`RocksScene.swift`的`setupScene()`中，添加这两个额外参数：
 
 ```swift
 let textureID = Int.random(in: 0..<textureNames.count)
@@ -9792,7 +9242,7 @@ rocks.updateBuffer(instance: 1, transform: transform,
 
 除了这两个参数外，你还创建了一个随机索引来访问纹理和变形目标数组中的数据。
 
-在 GPU 端，在 `Nature.metal` 中，你目前使用 `vertexID` 来访问当前渲染的顶点。为了访问缓冲区中的下一个变形目标，你必须为 `vertexID` 加上每个变形目标的顶点数量。
+在 GPU 端，在`Nature.metal`中，你目前使用`vertexID`来访问当前渲染的顶点。为了访问缓冲区中的下一个变形目标，你必须为`vertexID`加上每个变形目标的顶点数量。
 
 # 第 13 章：实例化与程序化生成
 
@@ -9801,22 +9251,24 @@ rocks.updateBuffer(instance: 1, transform: transform,
 ## 顶点 (VERTICES)
 
 | 0 | ... | 1648 | 1649 | ... | 3298 | 3299 | ... | 4946 |
+
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
 | | 目标 1 | | 目标 2 | | 目标 3 |
 
-在 **Nature.swift** 的 `render(renderEncoder:uniforms:fragmentUniforms)` 中，找到 // set vertex buffer。你需要 GPU 顶点计数，以便顶点着色器能够计算变形目标的偏移。添加这段代码：
+在`Nature.swift`的`render(renderEncoder:uniforms:fragmentUniforms)`中，找到 // set vertex buffer。你需要 GPU 顶点计数，以便顶点着色器能够计算变形目标的偏移。添加这段代码：
 
 ```swift
 renderEncoder.setBytes(&vertexCount, length: MemoryLayout<Int>.stride, index: 1)
 ```
 
-打开 **Nature.metal** 以接收此缓冲区长度变量。为 **vertex_nature** 添加此参数：
+打开`Nature.metal`以接收此缓冲区长度变量。为`vertex_nature`添加此参数：
 
 ```metal
 constant int &vertexCount [[ buffer(1) ]]
 ```
 
-同样在 **vertex_nature** 中，将：
+同样在`vertex_nature`中，将：
 
 ```metal
 VertexIn vertexIn = in[vertexID];
@@ -9833,17 +9285,19 @@ VertexIn vertexIn = in[vertexID + offset];
 
 这使用变形目标 ID 和顶点计数计算出每个变形的偏移量。
 
+
+
 ![](img/8d763acb335ab213ea9213a628f7d844_372_0.png)
 
 编译并运行，你现在获得了随机位置和形状的石头：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_373_0.png)
 
-## 纹理数组 (Texture arrays)
+## 纹理数组（Texture arrays）
 
 访问随机纹理比随机变形目标稍微简单，因为你可以将纹理加载到 `textureType` 为 `type2DArray` 的 `MTLTexture` 中。所有纹理存储在一个 `MTLTexture` 中，数组的每个元素被称为切片（slice）。
 
-创建一个方法将纹理加载到临时 `MTLTexture` 数组。这是一个非常有用的方法，因此将其添加到 `Texturable` 协议中，以便与任何符合 `Texturable` 的类一起。在 **Texturable.swift** 中，添加：
+创建一个方法将纹理加载到临时 `MTLTexture` 数组。这是一个非常有用的方法，因此将其添加到 `Texturable` 协议中，以便与任何符合 `Texturable` 的类一起。在 `Texturable.swift` 中，添加：
 
 ```swift
 static func loadTextureArray(textureNames: [String]) -> MTLTexture? {
@@ -9868,8 +9322,6 @@ guard textures.count > 0 else { return nil}
 
 在这里，你加载了一个纹理数组。
 
-# Metal 教程 (Metal by Tutorials)
-
 紧接着，我们创建一个新的纹理数组：
 
 ```swift
@@ -9886,10 +9338,7 @@ let arrayTexture = Renderer.device.makeTexture(descriptor: descriptor)!
 
 （注：由于原文中存在大量重复和错误代码，此处已根据逻辑进行了清理和整合。）
 
-
-
-
-Metal 教程 | 第 13 章：实例化与程序化生成
+# 第 13 章：实例化与程序化生成
 
 每栋房屋将具有随机数量的楼层，且每层将使用一个随机模型。然而，尽管系统在不同的房屋中可能会多次使用楼层模型或屋顶模型，但为了提高效率，模型几何体只会存在一个实例。
 
@@ -9909,29 +9358,27 @@ Metal 教程 | 第 13 章：实例化与程序化生成
 - 房屋之间的最小和最大间距。
 - 最大房屋数量。
 
-这些是每种楼类型的模型，由 Kenney 在 https://kenney.nl 创建：
+这些是每种楼类型的模型，由 Kenney 在 <https://kenney.nl> 创建：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_377_1.png)
 
-第 13 章：实例化与程序化生成
-
 ## Houses 场景
 
-将 HousesScene.swift、Houses.swift 和 Houses.metal 添加到目标中。选择这些文件，在文件检查器（File inspector）中，勾选 macOS 和 iOS 目标的 Target Membership（目标成员）。
+将 `HousesScene.swift`、`Houses.swift` 和 `Houses.metal` 添加到目标中。选择这些文件，在文件检查器（File inspector）中，勾选 macOS 和 iOS 目标的 Target Membership（目标成员）。
 
-> 注意：这些文件并不在原始目标中，因为 Houses 引用了 `prop.instanceBuffer`，而该内容是在在本章开头才添加的。
+> 注意：这些文件并不在原始目标中，因为 Houses 引用了 `prop.instanceBuffer`，而该内容是在本章开头才添加的。
 
-打开 ViewController.swift，将场景的初始化从 `RocksScene` 改为 `HousesScene`：
+打开 `ViewController.swift`，将场景的初始化从 `RocksScene` 改为 `HousesScene`：
 
-```
+```swift
 let scene = HousesScene(sceneSize: metalView.bounds.size)
 ```
 
-查看 Houses.swift。Houses 是 `Node` 的子类，包含一个 `Props` 数组。`render(renderEncoder:uniforms:fragmentUniforms:)` 渲染这个数组，目前只有一个 `Prop`。
+查看 `Houses.swift`。Houses 是 `Node` 的子类，包含一个 `Props` 数组。`render(renderEncoder:uniforms:fragmentUniforms:)` 渲染这个数组，目前只有一个 `Prop`。
 
-在 Houses.metal 中，顶点着色器和片段着色器非常简单。`vertex_house` 正如你在本章早期部分设置的那样，从 `Prop` 的实例数组中提取当前实例。`fragment_house` 使用 `Prop` 子网格的材质颜色，并仅使用单路阳光进行照明。
+在 `Houses.metal` 中，顶点着色器和片段着色器非常简单。`vertex_house` 正如你在本章早期部分设置的那样，从 `Prop` 的实例数组中提取当前实例。`fragment_house` 使用 `Prop` 子网格的材质颜色，并仅使用单路阳光进行照明。
 
-HousesScene.swift 仅加载 Houses 系统。编译并运行应用以查看这座孤立的房屋：
+`HousesScene.swift` 仅加载 Houses 系统。编译并运行应用以查看这座孤立的房屋：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_378_0.png)
 
@@ -9939,9 +9386,9 @@ HousesScene.swift 仅加载 Houses 系统。编译并运行应用以查看这座
 
 ## 确定规则
 
-在 Houses.swift 中，使用一个 `Rule` 枚举配合常量来制定规则：
+在 `Houses.swift` 中，使用一个 `Rule` 枚举配合常量来制定规则：
 
-```
+```swift
 enum Rule {
     // 房屋之间的间距
     static let minGap: Float = 0.3
@@ -9964,7 +9411,7 @@ OBJ 文件的数量反映了 `Models ▸ Houses` 组中包含的模型。这些�
 
 为屋顶模型创建一个 `Set` 属性：
 
-```
+```swift
 var floorsRoof: Set<Int> = []
 ```
 
@@ -9974,7 +9421,7 @@ var floorsRoof: Set<Int> = []
 
 创建一个新方法来读取所有的房屋 OBJ 文件并将它们放入 Swift 数组中。
 
-```
+```swift
 func loadObjJs() -> [Prop] {
     var props: [Prop] = []
     func loadHouse(name: String) {
@@ -10000,7 +9447,7 @@ func loadObjJs() -> [Prop] {
 
 在这里，你使用常量将每种 OBJ 类型加载到数组中。如果你想在数组中插入 `Props` 的索引和名称，你会看到：
 
-```
+```text
 0 : houseGround1
 1 : houseGround2
 2 : houseGround3
@@ -10012,8 +9459,6 @@ func loadObjJs() -> [Prop] {
 ```
 
 对于屋顶，你将索引插入 `floorsRoof`，这样你就可以判断特定的 OBJ 是否为屋顶。
-
-
 
 ```swift
 var depth: Float = 0
@@ -10121,7 +9566,7 @@ float3x3(NormalFrom4x4: modelMatrix * floor.transform.modelMatrix)
 - 延迟渲染（Deferred rendering）
 - G 缓冲区（G-buffer）
 
-### 阴影图
+## 阴影图
 
 注意，阴影图本质上是包含阴影信息的纹理。当一个物体遮挡光线时，就会产生阴影。通常，我们从太阳的位置渲染场景，但为了制作阴影图，你需要深度纹理。
 
@@ -10132,11 +9577,7 @@ float3x3(NormalFrom4x4: modelMatrix * floor.transform.modelMatrix)
 - **第一阶段通道**：使用太阳的位置渲染。
 - **第二阶段通道**：像常一样使用相机渲染，但会将片段与深度图进行比较。如果片段颜色比深度图亮，则意味着阴影。
 
-延迟渲染是复杂的课题，因此为本章提供了一个启动项目。在 Xcode 中打开它并查看。代码与第 5 章“光照基础”末尾的代码相似。为了简单起见，你将处理漫反射颜色；高光和环境光照未包含在本项目中。
-
-# 第 14 章：多通道渲染与延迟渲染
-
-Metal 教程
+延迟渲染是复杂的课题，因此为本章提供了一个启动项目。在 `Xcode` 中打开它并查看。代码与第 5 章“光照基础”末尾的代码相似。为了简单起见，你将处理漫反射颜色；高光和环境光照未包含在本项目中。
 
 你将从深度开始。
 
@@ -10153,11 +9594,13 @@ var shadowTexture: MTLTexture!
 let shadowRenderPassDescriptor = MTLRenderPassDescriptor()
 ```
 
-稍后在创建阴影的渲染命令编码器时，你会看到这个渲染通道描述符。每个渲染通道描述符可以附加八个颜色纹理，加上一个深度纹理和一个模板纹理。shadowRenderPassDescriptor 指向 shadowTexture 作为深度附件。
+稍后在创建阴影的渲染命令编码器时，你会看到这个渲染通道描述符。每个渲染通道描述符可以附加八个颜色纹理，加上一个深度纹理和一个模板纹理。`shadowRenderPassDescriptor` 指向 `shadowTexture` 作为深度附件。
 
 在整个章节中你需要多个纹理，因此创建一个构建它们的辅助方法。
 
 在 `Renderer` 中添加此新方法：
+
+
 
 ```swift
 func buildTexture(pixelFormat: MTLPixelFormat, size: CGSize, label: String) -> MTLTexture {
@@ -10176,10 +9619,6 @@ func buildTexture(pixelFormat: MTLPixelFormat, size: CGSize, label: String) -> M
 }
 ```
 
-
-
-
-
 ## Metal 教程
 
 # 第 14 章：多通道渲染与延迟渲染
@@ -10188,14 +9627,14 @@ func buildTexture(pixelFormat: MTLPixelFormat, size: CGSize, label: String) -> M
 
 接下来，在 `MTLRenderPassDescriptor` 上创建一个新的扩展，并创建一个新方法来设置渲染通道描述符的附件，并配置其以存储提供的纹理：
 
-```
+```swift
 private extension MTLRenderPassDescriptor {
-func setDepthAttachment(texture: MTLTexture) {
-  depthAttachment.texture = texture
-  depthAttachment.loadAction = .clear
-  depthAttachment.storeAction = .store
-  depthAttachment.clearDepth = 1
-}
+    func setDepthAttachment(texture: MTLTexture) {
+        depthAttachment.texture = texture
+        depthAttachment.loadAction = .clear
+        depthAttachment.storeAction = .store
+        depthAttachment.clearDepth = 1
+    }
 }
 ```
 
@@ -10203,22 +9642,22 @@ func setDepthAttachment(texture: MTLTexture) {
 
 通过调用刚刚创建的两个辅助方法来构建纹理：
 
-```
+```swift
 func buildShadowTexture(size: CGSize) {
-shadowTexture = buildTexture(pixelFormat: .depth32Float, size: size, label: "Shadow")
-shadowRenderPassDescriptor.setUpDepthAttachment(texture: shadowTexture)
+    shadowTexture = buildTexture(pixelFormat: .depth32Float, size: size, label: "Shadow")
+    shadowRenderPassDescriptor.setUpDepthAttachment(texture: shadowTexture)
 }
 ```
 
 接下来，在 `init(metalView:)` 的结束处调用它：
 
-```
+```swift
 buildShadowTexture(size: metalView.drawableSize)
 ```
 
 同样，在 `mView(_drawableSizeChange:)` 的结束处调用它，这样当用户调整窗口大小时，你可以用正确的大小重建纹理：
 
-```
+```swift
 buildShadowTexture(size: size)
 ```
 
@@ -10238,7 +9677,7 @@ buildShadowTexture(size: size)
 
 在 `Common.h` 中，向 `Uniforms` 结构体添加以下内容：
 
-```
+```cpp
 matrix_float4x4 shadowMatrix;
 ```
 
@@ -10246,13 +9685,13 @@ matrix_float4x4 shadowMatrix;
 
 在 `Renderer` 中添加：
 
-```
+```swift
 var shadowPipelineState: MTLRenderPipelineState!
 ```
 
 在 `Renderer` 的末尾创建一个新方法：
 
-```
+```swift
 func renderShadowPass(renderEncoder: MTLRenderCommandEncoder) {
     renderEncoder.pushDebugGroup("Shadow pass")
     renderEncoder.label = "Shadow encoder"
@@ -10267,9 +9706,9 @@ func renderShadowPass(renderEncoder: MTLRenderCommandEncoder) {
 }
 ```
 
-(在 Shadow.metal 中)
+（在 `Shadow.metal` 中）
 
-```
+```metal
 #import "../Utility/Common.h"
 struct VertexIn {
     float4 position [[attribute(0)]];
@@ -10282,9 +9721,9 @@ vertex float4 vertex_depth(const VertexIn [[stage_in]],
 }
 ```
 
-(在 Renderer.swift 中)
+（在 `Renderer.swift` 中）
 
-```
+```swift
 func draw(in:) {
     guard let shadowEncoder = commandBuffer.makeRenderEncoder(descriptor: shadowPassDescriptor) else {
         return
@@ -10310,34 +9749,27 @@ func draw(in:) {
 
 你需要在 `draw(in:)` 中每帧调用此行，在处理模型的循环之前：
 
-```
+```swift
 uniforms.projectionMatrix = camera.projectionMatrix
 ```
 
-构建并运行项目，你应该应该看到渲染出的初始场景。
+构建并运行项目，你应该看到渲染出的初始场景。
+
 好的，那很不错！但阴影在哪里？
 
 点击调试栏上的捕获 GPU 帧按钮（如下红圈所示）：
 
 在调试导航器中，点击“Shadow pass”组：
 
-太极了，应用程序窗口显示了阴影图。耶！:D
+太棒了，应用程序窗口显示了阴影图。耶！:D
 
+这是从光照位置渲染的场景。你使用了阴影管道状态，你将其配置为不包含片元着色器，因此在这里完全没有处理颜色信息——它纯是深度。颜色越亮越远，颜色越深越近。
 
-
-
-
-Metal 教程
-
-第 14 章：多通道渲染与延迟渲染
-
-这是从光照位置渲染的场景。你使用了阴影管道状态，你将其配置为不包含片元色器，因此在这里完全没有处理颜色信息——它纯是深度。颜色越亮越远，颜色越深越近。
-
-## 主通道 (The main pass)
+## 主通道（The main pass）
 
 现在你已经将阴影映射保存到纹理中，你只需要将其发送到下一个通道——主通道——这样你就可以在片元函数的光照计算中使用该纹理了。
 
-在 `draw(in:)` [等等，原文写的是 `draw(in:)`] 中，主通道的循环之前，添加这一行：
+在 `draw(in:)` 中，主通道的循环之前，添加这一行：
 
 ```swift
 renderEncoder.setFragmentTexture(shadowTexture, index: 0)
@@ -10345,7 +9777,7 @@ renderEncoder.setFragmentTexture(shadowTexture, index: 0)
 
 你正在将阴影纹理传递给主通道的片元函数。
 
-在 Main.metal 中，为 VertexOut 结构体添加一个新成员：
+在 `Main.metal` 中，为 `VertexOut` 结构体添加一个新成员：
 
 ```metal
 float4 shadowPosition;
@@ -10353,14 +9785,14 @@ float4 shadowPosition;
 
 你为每个顶点持有两个变换后的位置。一个是从相机视角在场景内变换的，另一个是从太阳视角变换的。你将能够在片元函数中比较它们。
 
-在 vertex_main 中，return 之前添加这一行：
+在 `vertex_main` 中，`return` 之前添加这一行：
 
 ```metal
 out.shadowPosition = uniforms.shadowMatrix * uniforms.modelMatrix *
 vertexIn.position;
 ```
 
-其余的工作在 fragment_main 中完成。在 material 之后再添加一个函数参数：
+其余的工作在 `fragment_main` 中完成。在 `material` 之后再添加一个函数参数：
 
 ```metal
 depth2d<float> shadowTexture [[ texture(0) ]]
@@ -10387,13 +9819,13 @@ float current_sample = in.shadowPosition.z / in.shadowPosition.w;
 ```metal
 // 3
 if (current_sample > shadow_sample ) {
-  diffuseColor *= 0.5;
+    diffuseColor *= 0.5;
 }
 ```
 
 通过这段代码，你：
 
-- 1. 从阴影位置确定一个坐标对，将其作为阴影纹理上的屏幕像素定位器。然后，你将坐标从 [-1, 1] 归一化到 [0, 1]。最后，反转 Y 坐标，因为它是完全倒过来的。
+- 1. 从阴影位置确定一个坐标对，将其作为阴影纹理上的屏幕像素定位器。然后，你将坐标从 `[-1, 1]` 归一化到 `[0, 1]`。最后，反转 Y 坐标，因为它是完全倒过来的。
 - 2. 创建一个用于阴影纹理的采样器，并在刚刚创建的坐标处采样纹理。获取当前处理像素的深度值。
 - 3. 将当前深度值与阴影深度值进行比较，对于深度大于纹理中存储的阴影值的像素，设置为更深的灰色。
 
@@ -10403,22 +9835,22 @@ if (current_sample > shadow_sample ) {
 
 > 注意：如果你对阴影的质量不是完全满意，可以使用一些常用技术（https://msdn.microsoft.com/en-us/library/windows/desktop/ee41624(v=vs.85).aspx）来改进阴影映射。
 
-## 延迟渲染 (Deferred rendering)
+## 延迟渲染（Deferred rendering）
 
 在本章之前，你一直在使用正向渲染（forward rendering），但假设场景中有上百个模型（或实例）和百盏灯光。假设这是一个大都市市中心，建筑和路灯的数量很容易等于此场景中对象的数量。
 
-在正向渲染中，你渲染所有模型并在每个片元的片元色器中处理所有灯光，**尽管最终的渲染可能会排除某个特定的片元。这很容易变成一个二次方的运行时复杂度问题，严重降低你应用程序的性能。
+在正向渲染中，你渲染所有模型并在每个片元的片元着色器中处理所有灯光，**尽管最终的渲染可能会排除某个特定的片元。这很容易变成一个二次方的运行时复杂度问题，严重降低你应用程序的性能。
 
 另一方面，延迟渲染做了两件事：
 
-- 它从模型中收集材质、法线和位置等信息，并将它们存储在一个特殊的缓冲区中——传统上称为 G-buffer，其中 G 代表 Geometry（几何），以便后续在片元色器中进行处理；此时，GPU 只看到可见的片元，不会发生不必要的计算。
-- 它在片元色器中处理所有灯光，但仅对最终可见的片元进行处理。
+- 它从模型中收集材质、法线和位置等信息，并将它们存储在一个特殊的缓冲区中——传统上称为 G-buffer，其中 G 代表 Geometry（几何），以便后续在片元着色器中进行处理；此时，GPU 只看到可见的片元，不会发生不必要的计算。
+- 它在片元着色器中处理所有灯光，但仅对最终可见的片元进行处理。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_397_0.png)
 
 这种方法将运行时复杂度降低到了线性复杂度，因为灯光的处理循环只执行一次，而不是每个模型都执行一次。
 
-## Metal 教程 (Metal by Tutorials)
+## Metal 教程（Metal by Tutorials）
 
 以下是步骤分解：
 
@@ -10426,9 +9858,9 @@ if (current_sample > shadow_sample ) {
 - 第二个通道渲染缓冲区附件并构建包含这些值的 G-buffer 纹理：材质颜色（或漫反射）、世界空间法线和位置以及阴影信息。
 - 第三个也是最后一次通道使用全屏矩形（full-screen quad）将所有这些信息合并为一个最终的复合纹理。
 
-## G-buffer 通道 (The G-buffer pass)
+## G-buffer 通道（The G-buffer pass）
 
-好了，是时候构建 G-buffer 通道了！首先，创建新纹理。在 Renderer 顶部：
+好了，是时候构建 G-buffer 通道了！首先，创建新纹理。在 `Renderer` 顶部：
 
 ```swift
 var albedoTexture: MTLTexture
@@ -10454,18 +9886,17 @@ func setUpColorAttachment(position: Int, texture: MTLTexture) {
     attachment.storeAction = .store
     attachment.clearColor = MTLClearColor(0.7, 0.9, 1, 1)
 }
-}
 ```
 
 ![](img/8d763acb335ab213ea9213a628f7d844_398_0.png)
 
-## Metal 教程 (Metal by Tutorials)
+## Metal 教程（Metal by Tutorials）
 
 第 14 章：多通道与延迟渲染
 
 这与你之前创建的深度附件类似。这次，你处理的是颜色附件，因此你可以清除颜色。场景描绘了一个阳光充足、阴影清晰的日子，所以你将颜色设置为蓝色。
 
-在 Renderer 中创建另一个函数，使用你创建的所有便利函数来配置 G-buffer 渲染通道：
+在 `Renderer` 中创建另一个函数，使用你创建的所有便利函数来配置 G-buffer 渲染通道：
 
 ```swift
 func gBufferRenderDescriptor(size: CGSize) {
@@ -10487,7 +9918,9 @@ func gBufferRenderDescriptor(size: CGSize) {
 func bufferTextures(size: CGSize)
 ```
 
-当用户调整窗口大时，所有的渲染通道描述符附件纹理现在都会调整大小。仍然，在 Renderer 中，创建一个方法来构建 G-buffer 管道状态：
+
+
+当用户调整窗口大小时，所有的渲染通道描述符附件纹理现在都会调整大小。仍然，在`Renderer`中，创建一个方法来构建 G-buffer 管道状态：
 
 ```swift
 func createGBufferPipelineState() {
@@ -10512,23 +9945,19 @@ func createGBufferPipelineState() {
 }
 ```
 
-
-
-
-
 ## Metal 教程
 
-之前，你只配置了 `colorAttachment[].pixelFormat` 和 `depthAttachmentPixelFormat`。现在你已经在渲染通过（renderer pass）中存储了两个额外的附件，你将在管线状态状态中指定它们的像素格式。`bgra8` 是 8 位无符号分量量的格式，这对于存储 0 到 255 之间的颜色已经足够了。然而，你需要使用 `rgba16Float` 以比颜色值更高的精度存储位置和法线值。
+之前，你只配置了`colorAttachment[].pixelFormat`和`depthAttachmentPixelFormat`。现在你已经在渲染通过（renderer pass）中存储了两个额外的附件，你将在管线状态中指定它们的像素格式。`bgra8`是8位无符号分量的格式，这对于存储0到255之间的颜色已经足够了。然而，你需要使用`rgba16Float`以比颜色值更高的精度存储位置和法线值。
 
-你可以复用主渲染通过中的 `vertex_main`，因为这些操作只是对位置和法线的变换。但是，你需要一个新的片段函数，将位置和法线数据存储到纹理中且不处理光照。
+你可以复用主渲染通过中的`vertex_main`，因为这些操作只是对位置和法线的变换。但是，你需要一个新的片段函数，将位置和法线数据存储到纹理中且不处理光照。
 
-在 `init(metalView())` 结束时调用此函数：
+在`init(metalView())`结束时调用此函数：
 
 ```
 buildGufferPipelineState()
 ```
 
-在 `renderer` 结束时调用 `renderGufferPass(renderEncoder:)` 来执行 g-buffer 渲染：
+在`renderer`结束时调用`renderGufferPass(renderEncoder:)`来执行 g-buffer 渲染：
 
 ```
 func renderGufferPass(renderEncoder: MTLRenderCommandEncoder) {
@@ -10553,9 +9982,9 @@ func renderGufferPass(renderEncoder: MTLRenderCommandEncoder) {
 }
 ```
 
-这与旧的主渲染通过类似，旧的通过很快会被移除。你将设置 G-buffer 的管线状态，传递主通过使用的所有片段着色器信息，灯除外。光照将在组合通过（composition pass）中进行。
+这与旧的主渲染通过类似，旧的通过很快会被移除。你将设置 G-buffer 的管线状态，传递主通过使用的所有片段着色器信息，灯光除外。光照将在组合通过（composition pass）中进行。
 
-要执行 g-buffer 渲染，向 `draw(in:)` 中添加以下代码 // g-buffer pass:
+要执行 g-buffer 渲染，向`draw(in:)`中添加以下代码 // g-buffer pass:
 
 ```
 guard let gufferEncoder = commandBuffer.makeRenderEncoder(
@@ -10565,11 +9994,11 @@ guard let gufferEncoder = commandBuffer.makeRenderEncoder(
 renderGufferPass(renderEncoder: gufferEncoder)
 ```
 
-# Metal 教程 | 第14 章：多通道与延迟渲染
+# Metal 教程 | 第14章：多通道与延迟渲染
 
 现在，来创建 G-buffer 片段着色器！
 
-在 Shaders 组中，使用 Metal File 模板创建一个新文件 Gbuffer.metal。像往常一样，确保同时勾选 macOS 和 iOS 目标。然后，向新创建的文件添加以下代码：
+在 Shaders 组中，使用 Metal File 模板创建一个新文件`Gbuffer.metal`。像往常一样，确保同时勾选 macOS 和 iOS 目标。然后，向新创建的文件添加以下代码：
 
 ```
 #import "../Utility/Common.h"
@@ -10588,9 +10017,9 @@ struct GBuffer {
 }
 ```
 
-`VertexOut` 与 `Main.metal` 中的相同。
+`VertexOut`与`Main.metal`中的相同。
 
-片段函数返回 `GBufferOut`。你不是返回一个包含片段颜色的 `float4`，而是为每个渲染通过描述符附件返回一个颜色。这就是 `[[ color(i) ]]` 属性所指示的。
+片段函数返回`GBufferOut`。你不是返回一个包含片段颜色的`float4`，而是为每个渲染通过描述符附件返回一个颜色。这就是`[[ color(i) ]]`属性所指示的。
 
 添加片段函数：
 
@@ -10625,11 +10054,13 @@ fragment GBufferOut GbufferFragment(VertexOut in [[stage_in]],
 
 遍历这段代码：
 
-1. 你使用提供的信息为每个片段填充 `GBuffer` 结构体。你目前只对 albedo 使用 RGB 值，因此你可以使用 alpha 通道来保存阴影信息。
-2. 这与 `fragment_main` 中的代码相同。
+1. 你使用提供的信息为每个片段填充`GBuffer`结构体。你目前只对 albedo 使用 RGB 值，因此你可以使用 alpha 通道来保存阴影信息。
+
+2. 这与`fragment_main`中的代码相同。
+
 3. 这为深度值大于在纹理中存储的阴影值的像素，将 albedo 的 alpha 通道设置为 1。
 
-构建并运行项目。你应该能看到在主通过之后渲染的场景。这是因为你渲染到了多个目标，而不是帧缓冲区（framebuffer）。尽管如此，查看 GPU 调试器并点击 GBuffer encoder；这让你让你看到你渲染渲染的纹理：
+构建并运行项目。你应该能看到在主通过之后渲染的场景。这是因为你渲染到了多个目标，而不是帧缓冲区（framebuffer）。尽管如此，查看 GPU 调试器并点击 GBuffer encoder；这让你看到你渲染的纹理：
 
 ![](img/8d76acb335ab213ea9213a628f7d844_402.png)
 
@@ -10639,7 +10070,7 @@ fragment GBufferOut GbufferFragment(VertexOut in [[stage_in]],
 
 Blit 意味着从内存的一个部分拷贝到另一部分。你使用 blit 编码器处理纹理和缓冲区。
 
-向 `draw(in:)` 中添加此代码 // blit:
+向`draw(in:)`中添加此代码 // blit:
 
 ```
 guard let blitEncoder = commandBuffer.makeBlitEncoder() else {
@@ -10655,7 +10086,7 @@ blitEncoder.copy(from: albedoTexture, sourceSlice: 0, sourceOrigin: origin, sour
 
 在这里，你创建一个 blit 编码器并将 albedo 纹理拷贝到 drawable。
 
-在 `init(metalView)` 中，添加此行以允许视图渲染 blitted 纹理：
+在`init(metalView)`中，添加此行以允许视图渲染 blitted 纹理：
 
 ```
 metalView.framebufferOnly = false
@@ -10665,7 +10096,7 @@ metalView.framebufferOnly = false
 
 ![](img/8d76acb335ab213ea9213a628f7d844_403.png)
 
-# Metal 教程 | 第14 章：多通道与延迟渲染
+# Metal 教程 | 第14章：多通道与延迟渲染
 
 你可以看到 blit 多快——它每帧都在运行。然而，延迟渲染的终极目标是在场景中有多个灯光，现在是时候处理灯光了！
 
@@ -10677,7 +10108,7 @@ metalView.framebufferOnly = false
 
 通过渲染全屏矩形，你需要渲染屏幕上的每个片段。这允许你处理来自三个纹理的片段并为每个片段计算光照。这种组合的结果将进入你的 drawable。
 
-在 Renderer 处，声明一个新的管线状态、两个矩形缓冲区，并创建两个数组来存储你的矩形及其纹理：
+在`Renderer`处，声明一个新的管线状态、两个矩形缓冲区，并创建两个数组来存储你的矩形及其纹理：
 
 ```
 var compositionPipelineState: MTLRenderPipelineState!
@@ -10704,7 +10135,7 @@ let quadTexCoords: [Float] = [
 ]
 ```
 
-在 `init(itemView)` 结束时，创建上面声明的两个矩形缓冲区：
+在`init(itemView)`结束时，创建上面声明的两个矩形缓冲区：
 
 ```
 quadVerticesBuffer = Renderer.device.makeBuffer(bytes: quadVertices, length: MemoryLayout<Float>.size * quadVertices.count, options: [])
@@ -10712,20 +10143,16 @@ quadVerticesBuffer.label = "Quad vertices"
 quadTexCoordsBuffer = Renderer.device.makeBuffer(bytes: quadTexCoords,
 ```
 
-
-
-
-
 ## Metal 教程
 
-# 第 14 章：多通道渲染与延迟渲染
+# 第14章：多通道渲染与延迟渲染
 
 ```
 length: MemoryLayout<Float>.size * quadTexCoords.count, options: []
 quadTexCoordsBuffer.label = "QuadTexCoords"
 ```
 
-在 `Renderer` 的末尾，为合成通道（composition pass）创建一个新函数，将光照信息与 G-buffer 信息结合：
+在`Renderer`的末尾，为合成通道（composition pass）创建一个新函数，将光照信息与 G-buffer 信息结合：
 
 ```swift
 func renderCompositionPass(renderEncoder: MTLCommandEncoder) {
@@ -10755,10 +10182,12 @@ func renderCompositionPass(renderEncoder: MTLCommandEncoder) {
 遍历这段代码：
 
 - 1. 将四边形发送到顶点着色器。
+
 - 2. 将 G-buffer 纹理层发送到片元着色器。
+
 - 3. 绘制四边形。注意，你不再需要遍历场景缓冲区了！:)
 
-在 `draw(in)` 中插入主通道和 blit 编码器的整个代码块。然后在 `// composition pass` 下添加此代码：
+在`draw(in)`中插入主通道和 blit 编码器的整个代码块。然后在`// composition pass`下添加此代码：
 
 ```swift
 guard let compositionEncoder = commandBuffer.makeRenderEncoder(
@@ -10768,7 +10197,7 @@ guard let compositionEncoder = commandBuffer.makeRenderEncoder(
 renderCompositionPass(renderEncoder: compositionEncoder)
 ```
 
-在 `Renderer` 的末尾创建合成管道状态：
+在`Renderer`的末尾创建合成管道状态：
 
 ```swift
 func buildCompositionPipelineState() {
@@ -10778,7 +10207,7 @@ func buildCompositionPipelineState() {
     descriptor.label = "Composition state"
 ```
 
-![](img/8d763acb335ab213ea9213a628f7d844_405_0.png)
+
 
 ## Metal 教程
 
@@ -10795,7 +10224,7 @@ do {
 }
 ```
 
-这与你为另外两个流水线状态创建的相似。主要的注意的是你将要创建的两个着色器。
+这与你为另外两个流水线状态创建的相似。主要注意的是你将要创建的两个着色器。
 
 但是，首先在 `init(metalView)` 的末尾调用此函数：
 
@@ -10839,11 +10268,9 @@ vertex VertexOut compositionVert(
 
 # 第 14 章：多通道渲染与延迟渲染
 
-![](img/8d763acb335ab213ea9213a628f7d844_406_0.png)
-
 > **注意：** 在实际项目中，这是一个公共函数，但为了方便起见我们进行了复制。
 
-**Composition.metal** 创建一个新的片元函数：
+在 `Composition.metal` 中创建一个新的片元函数：
 
 ```cpp
 fragment float4 compositionFrag(VertexOut in [[stage_in]],
@@ -10870,20 +10297,16 @@ return float4(diffuseColor, 1.0);
 }
 ```
 
-
-
-
-
 # 第 15 章：性能优化
 
 作者: Marius Horga
 
 调试（Debugging）和性能分析（Profiling）是优化项目性能的必备技能，Apple 为开发者提供了几个极的优化工具来实现这一目标。在本章中，你将学习：
 
-- 1. **调试**：使用 GPU 调试器定位难以发现的 bug。
-- 2. **性能分析**：使用 Instruments 和其他工具监控应用的性能。
-- 3. **CPU-GPU 同步**：最小化资源使用并对资源的访问进行同步。
-- 4. **多线程**：通过在多个线程上运行应用来增强性能。
+- **调试**：使用 GPU 调试器定位难以发现的 bug。
+- **性能分析**：使用 Instruments 和其他工具监控应用的性能。
+- **CPU-GPU 同步**：最小化资源使用并对资源的访问进行同步。
+- **多线程**：通过在多个线程上运行应用来增强性能。
 
 那么，你还在等什么呢？是时候开始找虫了！
 
@@ -10893,35 +10316,19 @@ return float4(diffuseColor, 1.0);
 
 本节的目标是渲染一个类似下面的场景：
 
-![](imgimg/8d763acb335ab213ea9213a628f7d844_411_0.png)
-
 ## Metal 教程
 
 # 第 15 章：性能优化
 
 在启动文件夹中，打开 Debugging 项目。构建并运行，你会发现场景中缺少了岩石和草。
 
-![](img/8d763acb335ab213ea9213a628f7d844_412_0.png)
-
 你很快将研究导致这种情况的潜在原因。
 
 点击调试栏中的相机按钮，启动“捕捉 GPU 帧”（Capture GPU Frame）。
 
-![](img/8d763acb335ab213ea9213a628f7d844_412_1.png)
-
 ## 调试导航器 (Debug navigator)
 
 当 Xcode 完成 GPU 帧的捕捉后，它会显示调试器窗口。在左侧，你会在调试导航器中看到 GPU 追踪。调试器总是停在最后一个编码器命令缓冲区上，因此选择 `RenderCommandEncoder`。
-
-![](img/8d763acb335ab213ea9213a628f7d844_412_2.png)
-
-raywender.com
-
-413
-
-## Metal 教程
-
-# 第 15 章：性能优化
 
 在这里你将看到每个命令缓冲区中的命令编码器。
 
@@ -10935,17 +10342,9 @@ raywender.com
 
 顶部区域是中间面板，它通常打开“依赖项查看器”（Dependency Viewer）——这是当前命令缓冲区的良好摘要。
 
-![](img/8d763acb335ab213ea9213a628f7d844_413_0.png)
-
 在右侧，辅助编辑器（assistant editor）列出了附件（attachments）以及“调试和检查像素”（Debug and Inspect Pixels）按钮。
 
-![](img/8d763acb335ab213ea9213a628f7d844_413_1.png)
-
 附件是颜色和深度附件持有的资源。
-
-raywendlich.com
-
-414
 
 ## 调试区域 (Debug area)
 
@@ -10957,15 +10356,11 @@ raywendlich.com
 
 绑定资源（Bound Resources）应该会自动显示在中间面板中，辅助编辑器面板中的附件，但你也可以从跳转栏中选择这些。
 
-![](img/8d763acb335ab213ea9213a628f7d844_414_0.png)
-
 你可以在调试导航器中看到 Grass 被列出了多次，Rocks 也列出了。这意味着所有这些模型都渲染了，但由于某些原因，它们没有出现在屏幕上。逻辑上的下一步是查看顶点是如何渲染的。
 
 ## 几何查看器 (The geometry viewer)
 
 在仍选定 Rocks 组的 `drawIndexedPrimitives` 的情况下，点击 Debug Shader 并选择 Vertex（顶点）面板。这就是几何查看器工具。
-
-![](img/8d763acb335ab213ea9213a628f7d844_415_0.png)
 
 > 注意：着色器调试器会奇迹地“知道”你正在调试的是渲染编码器还是计算编码器，并据此调整其内容。对于顶点着色器，它会打开几何查看器。你可以在 Apple 文档页面上通过 https://developer.apple.com/documentation/metal/vertex_data/inspecting_vertices_with_the_geometry_viewer 学习更多信息。
 
@@ -10989,23 +10384,15 @@ VertexIn vertexIn = in[vertexId + offset];
 
 在调试栏上，点击 Debug Shader 旁边的 Reload Shaders，注意现在所有顶点都显示在着色器调试器中了。
 
-![](img/8d763acb335ab213ea9213a628f7d844_416_0.png)
-
 你可以使用中间面板来显示几何查看器（如果 Rocks 组已展开则它），然后选择岩石的绘制调用。在中间面板中双击 Geometry，你将看到一个用于探索几何形状更有用的屏幕。
 
-![](img/8d763acb335ab213ea9213a628f7d844_416_1.png)
-
 你可以拖动调整大小，并使用 Option 键来缩放包含所有相关原始图形顶点值的滚动面板。你可以点击任何顶点在查看器中显示它。
-
-raywendlicher.com  417
 
 # 第 15 章：性能优化
 
 几何查看器对于分析三角形非常有用。它们是否肉眼可见地渲染错误？它们是否缺失？它们是否在可视锥体之外？等等。
 
 在主应用窗口中，注意你现在场景中同时显示了草地和岩石。
-
-![](img/8d763acb335ab213ea9213a628f7d844_417_0.png)
 
 太棒了！然而，岩石缺少纹理。再次在顶点着色器中查看顶点结构体，有一个 `uv` 成员没有通过顶点着色器。因此，在 return 之前添加此行：
 
@@ -11015,15 +10402,11 @@ out.uv = vertexIn.uv;
 
 再次点击 Reload Shaders，你会看到岩石现在有了纹理。
 
-![](img/8d763acb335ab213ea9213a628f7d844_417_1.png)
-
 岩石现在看起来更好了，但场景中的照明有些异常。逻辑上的下一步是移动到片段着色器并调查光是如何计算的。
 
 ## 像素检查器 (The pixel inspector)
 
 在仍选 Rocks组的情况下，再次点击 **Debug Shader**。这次，你将使用 Pixels 工具查看场景。你可以再次通过放大镜确认纹理确实已应用，因为你可以看到灰色色调以外的颜色。
-
-![](img/8d763acb335ab213ea9213a628f7d844_418_0.png)
 
 ## 着色器调试器 (The shader debugger)
 
@@ -11037,8 +10420,6 @@ out.uv = vertexIn.uv;
 ## Metal 教程
 
 # 第 15 章：性能优化
-
-![](img/8d763acb335ab213ea9213a628f7d844_419_0.png)
 
 在 Debug 行，切换到 **Yes, include source code**。在 Release 行，验证其设置为 No。生产环境应用不允许包含调试信息，因此在你将其发布到 App Store 时不想带有此类信息。
 
@@ -11063,18 +10444,8 @@ out.uv = vertexIn.uv;
 90 return baseColor;
 91 }
 ```
-```
-
-![](img/8d763acb335ab213ea9213a628f7d844_419_1.png)
 
 你立即注意到这个计算结果是错误的，因为全是白的，而强度应该是灰度范围的。
-
-raywender.com
-
-420
-
-
-
 
 你从第 5 章“光照基础”中也知道，要计算漫反射光，你需要对两个向量取点积：光线方向和表面法线。如果这还没有让你发出“啊哈！”的声音，请再仔细看这一行：
 
@@ -11102,11 +10473,7 @@ float diffuseIntensity = saturate(dot(lightDirection, normal));
 
 点击调试栏上的 **Reload Shaders**重载着色器）并查看结果：
 
-![](img/8d763acb335ab213ea9213a628f7d844_420_0.png)
-
 漫反射强度现在被正确计算，并为场景中的光照做出贡献。查看主应用窗口可以看到：
-
-![](img/8d763acb335ab213ea9213a628f7d844_421_0.png)
 
 当你仔细观察时，会发现光现在非常强烈，看起来几乎像荧光。下一个逻辑步骤是检查 `diffuseIntensity` 是如何引入颜色计算的：
 
@@ -11119,6 +10486,8 @@ float4 color = mix(baseColor * 1.5, baseColor * 0.5, diffuseIntensity);
 ```
 float4 color = mix(baseColor * 0.5, baseColor * 1.5, diffuseIntensity);
 ```
+
+
 
 再次点击 **Reload Shaders**。
 
@@ -11167,30 +10536,49 @@ float4 color = mix(baseColor * 0.5, baseColor * 1.5, diffuseIntensity);
 
 ```
 // kernel void compute(uint pid [[ thread_position_in_grid ]]) pid = 2
+
   pid = (unsigned int) 2
+
   Values
+
   [image]
+
   * Min Value 0.0
+
     Max Value 3.0
+
   {
+
   uint id = pid + 1                       id = 3
+
   id = (unsigned int) 3
+
   Values
+
   [image]
+
   * Min Value 1.0
+
     Max Value 4.0
+
   id == 2;                               id = 6
+
   id = (unsigned int) 6
+
   Values
+
   [image]
+
   * Min Value 2.0
+
     Max Value 5.0
+
   }
 ```
 
 如你所示，你可以实时跟踪每个线程，并看到它的值如何在整个内核函数中变化。示例中，点击第三个线程会自动在接下来两个预览窗格中选中它，并更新每个受影响行的对应值。
 
-在任何行执行之前，该线程的 pid 值为 2，在第一行 id 更新为 3，最后在下一行进行乘法时，id 更新为 6。
+在任何行执行之前，该线程的 `pid` 值为 2，在第一行 `id` 更新为 3，最后在下一行进行乘法时，`id` 更新为 6。
 
 调试对于发现异常或缺失内容非常棒。然而，任何让你的应用运行更多且更快速内容的方法都是性能分析（Profiling）！你接下来将处理这个。
 
@@ -11204,17 +10592,13 @@ GPU 历史由 Xcode 提供，并显示 GPU 的使用情况。（注：此处原�
 
 有几种方法可以监控和调整应用的性能。GPU 历史工具显示了 GPU 的负载。
 
-
-
-
-
 ## Metal 教程
 
 分析每个 GPU 活动的百分比。高数值可能意味着存在性能优化的机会。
 
 观察各种 GPU 活动及其百分比，你会发现 ALU 占总着色器时间的 31.99%，用于处理各种类型以及涉及它们的计算。
 
-这是使用着色器性能分析（shader profiling）的第一次优化机会。注意，处理浮点数（float）花费的时间似乎比处理其他类型更长。正如你所知的，半精度（half）的大小只有浮点数的一半，因此你可以对这一项进行优化。
+这是使用着色器性能分析（shader profiling）的第一次优化机会。注意，处理浮点数（`float`）花费的时间似乎比处理其他类型更长。正如你所知的，半精度（`half`）的大小只有浮点数的一半，因此你可以对这一项进行优化。
 
 将片段着色器中所有的 `float` 更改为 `half`，片段着色器上方的阳光定义中也是如此的。
 
@@ -11226,7 +10610,7 @@ GPU 历史由 Xcode 提供，并显示 GPU 的使用情况。（注：此处原�
 
 做得好！
 
-你可以做的其他 ALU 优化包括将 `int` 替换为 `short`，简化复杂的指令（如三角函数 sin、cos 等）以及其他的算术计算。
+你可以做的其他 ALU 优化包括将 `int` 替换为 `short`，简化复杂的指令（如三角函数 `sin`、`cos` 等）以及其他的算术计算。
 
 接下来，你可以研究同步（Synchronization）问题。这里最关注的是等待内存时间（Wait Memory），它占了所有着色器时间的四分之一（24.80%）。
 
@@ -11334,10 +10718,6 @@ GPU 计数器信息面板是另一个你可以用于优化命令编码器（comm
 
 这条消息意味着可绘制内容（drawable）持有的时间比预期（16.66ms）要长。迹象可能是命令缓冲区过快获取了 drawable。
 
-
-
-
-
 在控制列表中，你可以点击任何条目，它将带你进入上方柱形图上对应的帧，图中会显示类似的消息：
 
 Thread blocked waiting for next drawable（线程等待下一个可绘制帧）。
@@ -11374,6 +10754,7 @@ Thread blocked waiting for next drawable（线程等待下一个可绘制帧）�
 
 ```
 setupTrees(instanceCount: 100)
+
 setupRocks(instanceCount: 50)
 ```
 
@@ -11389,7 +10770,9 @@ var uniforms = Uniforms()
 
 ```
 static let buffersInFlight = 3
+
 var uniforms = [Uniforms](repeating: Uniforms(), count: buffersInFlight)
+
 var currentUniformIndex = 0
 ```
 
@@ -11399,6 +10782,7 @@ var currentUniformIndex = 0
 
 ```
 uniforms.projectionMatrix = camera.projectionMatrix
+
 uniforms.viewMatrix = camera.viewMatrix
 ```
 
@@ -11406,7 +10790,9 @@ uniforms.viewMatrix = camera.viewMatrix
 
 ```
 uniforms[currentUniformIndex].projectionMatrix = camera.projectionMatrix
+
 uniforms[currentUniformIndex].viewMatrix = camera.viewMatrix
+
 currentUniformIndex = (currentUniformIndex + 1) % Scene.buffersInFlight
 ```
 
@@ -11426,11 +10812,13 @@ terrain.update(viewMatrix: uniforms[currentUniformIndex].viewMatrix)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_435_0.png)
 
-回到 Renderer.swift，在 `draw(in:)` 中、在 renderables 循环之前添加此行：
+回到 `Renderer.swift`，在 `draw(in:)` 中、在 renderables 循环之前添加此行：
 
 ```
 let uniforms = scene.uniforms[scene.currentUniformIndex]
 ```
+
+
 
 在 Xcode 报错的两个地方，将 `scene.uniforms` 替换为 `uniforms`。
 
@@ -11458,27 +10846,27 @@ let uniforms = scene.uniforms[scene.currentUniformIndex]
 - 在 `draw(in:)` 中等待信号量可用。
 - 当一个线程完成时，它递减信号量值。
 
-是将这些理论付诸实践了。在 Renderer 顶部添加此属性：
+是将这些理论付诸实践了。在 `Renderer` 顶部添加此属性：
 
-```
+```swift
 var semaphore: DispatchSemaphore
 ```
 
 在 `init()` 中添加：
 
-```
+```swift
 semaphore = DispatchSemaphore(value: Scene.buffersInFlight)
 ```
 
 在 `draw(in:)` 中添加：
 
-```
+```swift
 _ = semaphore.wait(timeout: .distant)
 ```
 
 在 `draw(in)` 结束处、提交缓冲区之前添加此代码：
 
-```
+```swift
 commandBuffer.addCompletedHandler { _ in
     self.semaphore.signal()
 }
@@ -11506,34 +10894,40 @@ commandBuffer.addCompletedHandler { _ in
 
 你不需要输入构建并行渲染命令编码器的代码，但它看起来像这样：
 
-```
+```swift
 let commandBuffer = Renderer.commandQueue.makeCommandBuffer()
+
 let descriptor = MTLRenderPassDescriptor()
+
 let parallelEncoder = commandBuffer.makeParallelRenderCommandEncoder(
-descriptor: descriptor)
-let encoder1 = parallelEncoder.makeRenderCommandEncoder())
-// ... encoder1.draw())
+    descriptor: descriptor)
+
+let encoder1 = parallelEncoder.makeRenderCommandEncoder()
+
+// ... encoder1.draw()
+
 encoder1.endEncoding()
-let encoder2 = parallelEncoder.makeRenderCommandEncoder())
-// ... encoder2.draw())
+
+let encoder2 = parallelEncoder.makeRenderCommandEncoder()
+
+// ... encoder2.draw()
+
 encoder2.endEncoding()
+
 parallelEncoder.endEncoding()
+
 commandBuffer.commit()
 ```
 
-在 Renderer 顶部，添加这个新属性：
+在 `Renderer` 顶部，添加这个新属性：
 
-```
+```swift
 let dispatchQueue = DispatchQueue(label: "Queue", attributes: .concurrent)
 ```
 
-
-
-
-
 # Metal 教程 | 第 15 章：性能优化
 
-在 `draw(in:)` 中：定位 // 计算调试，并通过替换此行，为计算命令编码器创建第二个命令缓冲区：
+在 `draw(in:)` 中：定位 `// 计算调试`，并通过替换此行，为计算命令编码器创建第二个命令缓冲区：
 
 ```swift
 guard let computeEncoder = commandBuffer.makeComputeEncoder()
@@ -11545,7 +10939,7 @@ else {
 ```swift
 guard let computeBuffer =
     Renderer.commandQueue.makeCommandBuffer(),
-let computeEncoder =
+    let computeEncoder =
     computeBuffer.makeComputeEncoder() else {
 ```
 
@@ -11553,7 +10947,9 @@ let computeEncoder =
 
 ```swift
 commandBuffer.addCompletedHandler { _ in
-self.semaphore.signal() }
+    self.semaphore.signal()
+}
+
 commandBuffer.commit()
 ```
 
@@ -11563,14 +10959,20 @@ commandBuffer.commit()
 // 1
 commandBuffer.enqueue()
 computeBuffer.enqueue()
+
 // 2
 dispatchQueue.async(execute: commandBuffer.commit)
+
 weak var sem = semaphore
+
 dispatchQueue.async {
     computeBuffer.addCompletedHandler { _ in
-sem?.signal() }
+        sem?.signal()
+    }
+
     computeBuffer.commit()
 }
+
 // 3
 _dispatch_barrier_sync(dispatchQueue) {}
 ```
@@ -11585,8 +10987,9 @@ _dispatch_barrier_sync(dispatchQueue) {}
 
 ![](img/8d763acb335ab213ea9213a628f7d844_440_0.png)
 
-## Metal 教程
-# 第 15 章：性能优化
+# Metal 教程
+
+## 第 15 章：性能优化
 
 ![](img/8d763acb335ab213ea9213a628f7d844_441_0.png)
 
@@ -11618,9 +11021,10 @@ _dispatch_barrier_sync(dispatchQueue) {}
 - **第 22 章：与 SpriteKit 和 SceneKit 集成**：有时你可能将 Metal 与其他 API 使用。你将创建一个 Metal 卡通着色器用于简单的 SceneKit 项目，以及一个使用 SpriteKit 的游戏。在结束本章时，你将使用 Core Image 和 Metal Shader 对整个渲染后的场景进行后处理。
 
 ## 第 16 章：粒子系统
+
 作者：Marius Horga
 
-在代码中创建艺术和展示科学的许多方法之一是利用粒子。**粒子**（particle）是一个微小的图形对象，携带关于它自身的基本信息，如颜色、位置、寿命、速度和运动方向。
+在代码中创建艺术和展示科学的许多方法之一是利用粒子。粒子（particle）是一个微小的图形对象，携带关于它自身的基本信息，如颜色、位置、寿命、速度和运动方向。
 
 没有什么比一张展示了你在本章结束时能够实现内容的图像更能更好地解释视觉效果了。
 
@@ -11632,7 +11036,7 @@ _dispatch_barrier_sync(dispatchQueue) {}
 - 自然现象建模：火、烟雾、水、雪。
 - 科学模拟：星系碰撞、细胞分裂、流体湍流。
 
-注：William Reeves 被誉为粒子系统的“父亲”。在 Lucasfilm 工作期间，Reeves 在1982年为《星际迷战2：可汗之怒》创作了创世纪效应（Genesis Effect）。后来，他加入了 Pixar 动画工作室，在那里使用粒子创建惊人的动画。
+注：William Reeves 被誉为粒子系统的“父亲”。在 Lucasfilm 工作期间，Reeves 在 1982 年为《星际迷战 2：可汗之怒》创作了创世纪效应（Genesis Effect）。后来，他加入了 Pixar 动画工作室，在那里使用粒子创建惊人的动画。
 
 你需要粒子系统来创建烟花。但首先，你需要定义一个具有位置、方向、速度、颜色和寿命的粒子。
 
@@ -11643,24 +11047,26 @@ _dispatch_barrier_sync(dispatchQueue) {}
 第三条定律定义了粒子相互作用的运动。第四条定律（如果你愿意的话）是生命的法则。粒子出生；与环境交互；然后它们死亡。
 
 ## 粒子生命
-颜色从暗（出生）变为白（死亡）
+
+颜色从暗（出生）变为白（死亡）。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_445_0.png)
 
 你需要一个粒子系统来创建烟花。然而，你需要定义一个至少包含位置、方向、速度、颜色和寿命的粒子。
 
-## 发射器 (Emitter)
+## 发射器（Emitter）
 
-**发射器**（emitter）本质上是一个粒子生成器——换句话说，粒子源。通过让从不同位置发射粒子，可以让你的粒子系统变得更加有趣。
+发射器（emitter）本质上是一个粒子生成器——换句话说，粒子源。通过让从不同位置发射粒子，可以让你的粒子系统变得更加有趣。
 
 烟花是每隔几秒发生的连续爆炸。发射器非常合用，你将创建一个。
 
-打开本章启动文件夹中的 **Fireworks.playground**。该播放文件有一个 Renderer 作为代理。目前，Renderer 所做的是将背景颜色设置为 (0.5, 0.5, 0.5, 1.0)，这是灰色的 RGB 翻译。
+打开本章启动文件夹中的 `Fireworks.playground`。该播放文件有一个 `Renderer` 作为代理。目前，`Renderer` 所做的是将背景颜色设置为 (0.5, 0.5, 0.5, 1.0)，这是灰色的 RGB 翻译。
 
-在 **Sources** 文件夹中，创建一个名为 **Emitter.swift** 的新文件，并添加以下代码：
+在 `Sources` 文件夹中，创建一个名为 `Emitter.swift` 的新文件，并添加以下代码：
 
 ```swift
 import MetalKit
+
 struct Particle {
     var position: float2
     var direction: Float
@@ -11680,21 +11086,18 @@ public struct Emitter {
 }
 ```
 
-在 Emitter 中，设置一个接收粒子数量和粒子寿命的初始化器。`size` 是绘制粒子的区域的大小。
+在 `Emitter` 中，设置一个接收粒子数量和粒子寿命的初始化器。`size` 是绘制粒子的区域的大小。
 
 ```swift
 public init(particleCount: Int, size: CGSize,
     life: Float, device: MTLDevice) {
+
     let bufferSize = MemoryLayout<Particle>.stride * particleCount
     particleBuffer = device.makeBuffer(length: bufferSize)!
 }
 ```
 
 在这里，你根据合适的大小创建缓冲区。
-
-
-
-
 
 ## Metal 教程
 
@@ -11705,14 +11108,29 @@ public init(particleCount: Int, size: CGSize,
 将以下代码添加到 `init(particleCount:size:life:device)`：
 
 ```swift
-var pointer = particleBuffer.contents.bindMemory(to: Particle.self, capacity: particleCount)
+var pointer = particleBuffer.contents.bindMemory(
+    to: Particle.self,
+    capacity: particleCount
+)
+
 let width = Float(size.width)
 let height = Float(size.height)
-let position = Float(Float.random(in: 0...width), Float.random(in: 0...height))
-let color = Float(Float.random(in: 0...life) / life, Float.random(in: 0...life) / life, Float.random(in: 0...life))
+
+let position = Float(
+    Float.random(in: 0...width),
+    Float.random(in: 0...height)
+)
+
+let color = Float(
+    Float.random(in: 0...life) / life,
+    Float.random(in: 0...life) / life,
+    Float.random(in: 0...life) / life
+)
+
 for i in 0..<particleCount {
     let direction = 2 * Float.pi * Float.random(in: 0...width) / width
     let speed = 3 + Float.random(in: 0...width) / width
+
     pointer.position = position
     pointer.direction = direction
     pointer.speed = speed
@@ -11726,7 +11144,7 @@ for i in 0..<particleCount {
 
 你创建了许多粒子，它们具有不同的方向和速度。然而，它们都具有相同的初始位置、颜色和生命周期。
 
-回到 Renderer 中，创建以下属性：
+回到 `Renderer` 中，创建以下属性：
 
 ```swift
 let particleCount = 10000
@@ -11736,18 +11154,27 @@ let life: Float = 256
 let timer: Float = 0
 ```
 
-接下来，你将设置一个发射器（emitter）数组，每个包含 10,000 个粒子。将此方法添加到 Renderer：
+接下来，你将设置一个发射器（emitter）数组，每个包含 10,000 个粒子。将此方法添加到 `Renderer`：
 
 ```swift
 func update(size: CGSize) {
     timer += 1
+
     if timer >= 50 {
         timer = 0
+
         if emitters.count > maxEmitters {
             emitters.removeFirst()
         }
-        let emitter = Emitter(particleCount: particleCount, size: size, life: life, device: device)
-    emitters.append(emitter)
+
+        let emitter = Emitter(
+            particleCount: particleCount,
+            size: size,
+            life: life,
+            device: device
+        )
+
+        emitters.append(emitter)
     }
 }
 ```
@@ -11760,7 +11187,9 @@ func update(size: CGSize) {
 update(size: view.drawableSize)
 ```
 
-运行 playground 以验证是否是否通过编译。但注意，你会看到与开始时相同的纯灰色。
+
+
+运行`playground`以验证是否通过编译。但注意，你会看到与开始时相同的纯灰色。
 
 着色器函数是更新粒子生命和位置的地方。为了让其正常工作，你需要比渲染编码（render encoding）中更细粒度的 GPU 线程控制。
 
@@ -11768,7 +11197,7 @@ update(size: view.drawableSize)
 
 ## 计算
 
-什么是计算？简单来说，计算编程（compute programming）除了渲染外使用 GPU 的唯一其他方法。计算也被广泛称为通用 GPU（GPGPU）编程。
+什么是计算？简单来说，计算编程（compute programming）是除渲染外使用 GPU 的唯一其他方法。计算也被广泛称为通用 GPU（GPGPU）编程。
 
 GPU 在大约十年前从固定流水线架构转变为可编程流水线，使得多核心 GPU 架构能够加速并行计算需求，例如图像/视频处理、科学模拟以及最近的机器学习。
 
@@ -11776,13 +11205,13 @@ GPU 在大约十年前从固定流水线架构转变为可编程流水线，使�
 
 好了，时候写一些计算代码了！
 
-在 Renderer 中，在类顶部添加此属性：
+在`Renderer`中，在类顶部添加此属性：
 
 ```swift
 let pipelineState: MTLComputePipelineState!
 ```
 
-然后，更新 `initializeMetal()` 为其返回值：
+然后，更新`initializeMetal()`为其返回值：
 
 ```swift
 private static func initializeMetal() -> (
@@ -11793,8 +11222,8 @@ private static func initializeMetal() -> (
         let commandQueue = device.makeCommandQueue(),
         let path = Bundle.main.path(forResource: "Shaders",
         ofType: "metal") else { return nil }
-    let pipelineState: MTLPipelineState?
 
+    let pipelineState: MTLPipelineState?
     do {
         let input = try String(contentsFile: path,
             encoding: String.utf8)
@@ -11810,7 +11239,7 @@ private static func initializeMetal() -> (
 }
 ```
 
-最后，在 `init` 中赋值：
+最后，在`init`中赋值：
 
 ```swift
 pipelineState = initialized?.pipelineState
@@ -11822,7 +11251,7 @@ pipelineState = initialized?.pipelineState
 
 你很快将学习更多关于内核函数的知识。
 
-# 线程与线程组（Threads and threadgroups）
+## 线程与线程组（Threads and threadgroups）
 
 接下来，你将创建一个计算通道（compute pass）。为此，你需要指定内核函数运行的次数。为了确定这一点，你需要知道要处理的数组、纹理或体的大小。这种尺寸被称为网格（grid），它由组织成线程组（threadgroups）的线程组成。
 
@@ -11830,9 +11259,9 @@ pipelineState = initialized?.pipelineState
 
 在这个示例中，你有一个 512 x 384 像素的图像。网格被分为 384 个线程组——那是 16 x 24 个线程组。每个线程组有 512 个线程——那是 32 x 16 个线程。
 
-## 网格：512 x 384 像素
+### 网格：512 x 384 像素
 
-## 16 x 24 线程组
+### 16 x 24 线程组
 
 ![](img/8d763acb335ab213ea9213a628f7d844_450_0.png)
 
@@ -11846,7 +11275,7 @@ pipelineState = initialized?.pipelineState
 
 你可以如何划分分组。在下面的图中，一个 16x12 的网格首先被分为 2×3 线程组，然后分为 4×4 线程组。
 
-## 网格：16 x 12
+### 网格：16 x 12
 
 ![](img/8d763acb335ab213ea9213a628f7d844_451_0.png)
 
@@ -11855,14 +11284,6 @@ pipelineState = initialized?.pipelineState
 线程组：4 x 4
 
 在每个网格中，你可以定位每个像素。两个网格中的红色像素位于 (11, 1)。你还可以唯一标识线程组内的每个线程。左侧的蓝色线程组位于 (1, 0)，右侧位于 (2, 0)。两个网格中的红色像素是位于其线程组内 (3, 1) 位置的线程。
-
-
-
-
-
-Metal 教程
-
-第 16 章：粒子系统
 
 在这个示例中，线程和线程组在网格中均匀分布，但如果你的数据大小与网格大小不匹配，你可能需要在内核函数（kernel function）中执行边界检查。
 
@@ -11888,11 +11309,6 @@ Metal 教程
 |---|---|---|
 | 4 by 3 | 4 by 3 | 3 by 3 |
 
-raywenderlich.com
-
-## Metal 教程
-第 16 章：粒子系统
-
 这是一个非常棒的功能，如果网格大小不是线程组大小的倍数，Metal 将提供非均匀线程组：
 
 线程组：非均匀
@@ -11901,15 +11317,14 @@ raywenderlich.com
 
 你根据两个计算流水线状态属性计算每个线程组的线程数：
 
-- maxThreadsPerThreadgroup：其名称自律其名
+- `maxThreadsPerThreadgroup`：其名称自律其名
+- `threadExecutionWidth`：代表在 GPU 上并行执行的线程数。
 
-- threadExecutionWidth：代表在 GPU 上并行执行的线程数。
+> 注意：`maxTotalThreadsPerThreadgroup` 取决于设备、内核寄存器使用和线程组内存使用。一旦创建计算流水线状态，`maxTotalThreadsPerThreadgroup` 将不会改变，但同一设备上的两个计算流水线状态可能有不同的 `maxTotalThreadsPerThreadgroup` 值。为了高效执行内核函数，你应该将线程组中的线程数设置为 `threadExecutionWidth` 的倍数。
 
-> 注意：maxTotalThreadsPerThreadgroup 取决于设备、内核寄存器使用和线程组内存使用。一旦创建计算流水线状态，maxTotalThreadsPerThreadgroup 将不会改变，但同一设备上的两个计算流水线状态可能有不同的 maxTotalThreadsPerThreadgroup 值。为了高效执行内核函数，你应该将线程组中的线程数设置为 threadExecutionWidth 的倍数。
+回到代码！在`Renderer.swift`中，在`draw(in:)`中替换这些行：
 
-回到代码！在 Renderer.swift 中，在 draw(in:) 中替换这些行：
-
-```
+```swift
 let renderEncoder = makeRenderCommandEncoder(commandBuffer,
 drawable.texture)
 renderEncoder.endEncoding()
@@ -11917,23 +11332,22 @@ renderEncoder.endEncoding()
 
 替换为以下代码：
 
-```
+```swift
 // 1
 guard computeEncoder = commandBuffer.makeCommandEncoder()
     else { return }
 computeEncoder.setPipelineState(pipelineState)
 computeEncoder.setTexture(drawable.texture, index: 0)
+
 // 2
 var width = pipelineState.threadExecutionWidth
-```
-
-```
 var height = pipelineState.maxThreadsPerThreadgroup / width
 let threadsPergroup = MTLSizeMake(width, height, 1)
 width = Int(drawable.size.width)
 height = Int(drawable.size.height)
 var threadsPerGrid = MTLSizeMake(width, height, 1)
-//
+
+// 3
 computeEncoder.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerThreadgroup)
 computeEncoder.endEncoding()
 ```
@@ -11944,15 +11358,16 @@ computeEncoder.endEncoding()
 - 2. 你声明了每个组的线程数和每个网格的线程数。
 - 3. 你分发这些线程以在 GPU 上并行执行工作。
 
-你会收到一个关于 var 的编译器警告，但你很快就会再次复用 threadsPerGrid。
+你会收到一个关于`var`的编译器警告，但你很快就会再次复用`threadsPerGrid`。
 
-> 注意：内核函数每个线程执行一次，就像顶点函数每个顶点执行一次一样。内核函数与其他两个着色器的主要区别在于内核函数的返回类型始终为 void，因此它永远不会返回任何内容。
+> 注意：内核函数每个线程执行一次，就像顶点函数每个顶点执行一次一样。内核函数与其他两个着色器的主要区别在于内核函数的返回类型始终为 `void`，因此它永远不会返回任何内容。
 
-在 Resources 文件夹中，创建一个名为 Shaders.metal 的新文件，并添加内核函数：
+在 Resources 文件夹中，创建一个名为`Shaders.metal`的新文件，并添加内核函数：
 
-```
+```cpp
 #include <metal_stdlib>
 using namespace metal;
+
 kernel void compute(texture2d<half, access::read_write>
     uint2 id [[thread_position_in_grid]]) {
     output[texture(0)].write(half4(0.0, 0.0, 0.0, 1.0), id);
@@ -11961,13 +11376,7 @@ kernel void compute(texture2d<half, access::read_write>
 
 你创建了一个函数，将你从 CPU 发送的可绘制纹理和线程索引作为参数。然后，为每个线程/像素向可绘制纹理写入相同的颜色（黑色）。
 
-内核函数的索引参数使用 [[thread_position_in_grid]] 属性限定符，它可以唯一地定位计算网格中的线程，并使其能够独立于计算网格工作。
-
-raywenderlich.com
-
-
-
-
+内核函数的索引参数使用`[[thread_position_in_grid]]`属性限定符，它可以唯一地定位计算网格中的线程，并使其能够独立于计算网格工作。
 
 ## 粒子动力学
 
@@ -11983,13 +11392,13 @@ raywenderlich.com
 
 要计算位置，你使用以下公式：
 
-> $X_2 = X_1 + V_1t + \frac{1}{2}at^2$$
+> $X_2 = X_1 + V_1t + \frac{1}{2}at^2$
 
-其中 x2 是新位置，x1 是旧位置，v1 是旧速度，t 是时间，a 是加速度。
+其中`x2`是新位置，`x1`是旧位置，`v1`是旧速度，`t`是时间，`a`是加速度。
 
 这是从旧速度计算新速度的公式：
 
-> $V_2 = V_1 + at$$
+> $V_2 = V_1 + at$
 
 然而，由于在这种情况下加速度为 0，速度将始终具有相同的值。
 
@@ -11999,7 +11408,7 @@ raywenderlich.com
 velocity = speed * direction
 ```
 
-将所有这些信息代入第一个公式，即可内核内核使用的最终方程。同样，对于第二个公式，由于加速度为 0，最后一项抵消了：
+将所有这些信息代入第一个公式，即可得到内核使用的最终方程。同样，对于第二个公式，由于加速度为 0，最后一项抵消了：
 
 ```
 newPosition = oldPosition * velocity
@@ -12008,20 +11417,20 @@ newPosition = oldPosition * velocity
 最后，你正在创建爆炸的烟花，因此你的烟花粒子将在一个不断远离发射器原点的圆中移动，所以你需要圆的方程：
 
 ## $x = a + r \cos t$
-## y = b + r \sin t$
+## $y = b + r \sin t$
 
 利用粒子方向与轴构成的角，你可以使用三角函数正弦和余弦将圆的参数方程重写速度方程：
 
 ```
-Velocity = speed * cos(direction)
+xVelocity = speed * cos(direction)
 yVelocity = speed * sin(direction)
 ```
 
 太棒了！为什么现在不把这些写进代码里呢？
 
-在 `Shaders.metal` 中，为你之前创建的 `Emitter.swift` 中的粒子结构体添加一个粒子结构：
+在`Shaders.metal`中，为你之前创建的`Emitter.swift`中的粒子结构体添加一个粒子结构：
 
-```
+```cpp
 struct Particle {
     float2 position;
     float direction;
@@ -12061,13 +11470,15 @@ output [[texture(0)]],
 }
 ```
 
+
+
 ![](img/8d763acb335ab213ea9213a628f7d844_458_0.png)
 
 解析这段代码：
 
 - 1. 从 CPU 获取粒子缓冲区，并使用 1D 索引匹配你之前分派的每个网格线程数。
 - 2. 根据运动定律并使用上述说明的圆方程计算当前粒子的速度并更新位置。
-- 3. 每次更新后更新生命 变量并计算新颜色。随着生命 变量持有的值越来越小，颜色将变淡。
+- 3. 每次更新后更新生命变量并计算新颜色。随着生命变量持有的值越来越小，颜色将变淡。
 - 4. 在当前粒子位置写入更新后的颜色，以及其左、右、上、下相邻的粒子，以创建*更粗粒子*的视觉效果。
 
 再次运行 playground，最后享受酷炫的烟花吧！
@@ -12078,7 +11489,7 @@ output [[texture(0)]],
 
 你可以在下一个粒子尝试中练习这种技术：下雪模拟。
 
-# 粒子系统
+## 粒子系统
 
 打开 Particles 示例项目。你会收到编译警告信息，但当你开始添加代码时它就会消失。
 
@@ -12094,54 +11505,81 @@ output [[texture(0)]],
 
 ![](img/8d763acb335ab213ea9213a628f7d844_461_0.png)
 
-## Metal 教程
+### Metal 教程
 
 ```
 let commandBuffer = device.makeCommandBuffer()!
+
 guard let computeEncoder = commandBuffer.makeComputeEncoder()
+
 else { return }
+
 computeEncoder.setPipelineState(particlesPipelineState)
+
 let width = particlesPipelineState.threadExecutionGrid.width
+
 let threadsPergroup = MTLSize(width, 1, 1)
 
 let threadsGrid = MTLSize(emitter.particleCount, 1, 1)
 
 for emitter in emitters {
+
     computeEncoder.setBuffer(emitter.particleBuffer, offset: 0, index: 0)
+
 }
 
 computeEncoder.dispatchThreads(threadsGrid, threadsPerThreadgroup: threadsPergroup)
+
 computeEncoder.endEncoding()
+
 commandBuffer.commit()
 ```
 
 ```
 let commandBuffer = device.makeCommandBuffer()!
+
 let descriptor = MTLRenderPassDescriptor()
+
 guard let renderEncoder = commandBuffer.makeRenderEncoder(descriptor: descriptor)
+
 else { return }
+
 renderEncoder.setRenderPipelineState(renderPipelineState)
+
 var size = float2(Float(view.drawableSize.width),
+
                  Float(view.drawableSize.height))
+
 renderEncoder.setVertexBytes(&size,
+
                              length: MemoryLayout<float2>.stride,
+
                              index: 0)
+
 for emitter in emitters {
+
     renderEncoder.setVertexBytes(emitter.particleBuffer, offset: 0, index: 1)
+
     renderEncoder.setVertexBytes(&emitter.position,
+
                                length: MemoryLayout<float2>.stride,
+
                                index: 2)
+
     renderEncoder.setFragmentTexture(emitter.particleTexture, index: 0)
+
     renderEncoder.drawPrimitives(type: .point, vertexStart: 0,
+
                                 vertexCount: 1,
+
                                 instanceCount: emitter.currentCount)
+
 }
+
 renderEncoder.endEncoding()
+
 commandBuffer.commit()
 ```
-
-
-
 
 现在你已经设置好了 Swift 端，可以编译并运行以确保项目工作正常。你应该会看到一个空白屏幕，其颜色为 `init?(metalView)` 中设置的灰色。
 
@@ -12152,22 +11590,36 @@ commandBuffer.commit()
 ```
 // 1
 kernel void compute(device Particle *particles [[buffer(0)]],
+
   uint int id [[thread_position_n_grid]]) {
+
   // 2
   float xVelocity = particles[id].speed * cos(particles[id].direction);
+
   float yVelocity = particles[id].speed * sin(particles[id].direction);
+
   particles[id].position.x += xVelocity;
+
   particles[id].position.y += yVelocity;
+
   //
   particles[id].age += 1.0;
+
   float age = particles[id].age / particles[id].life;
+
   particles[id].scale = mix(particles[id].startScale, endScale, age);
+
   // 4
   if (particles[id].age > particles[id].life) {
+
     particles[id].position = particles[id].startPosition;
+
     particles[id].age = 0;
+
     particles[id].scale = particles[id].startScale;
+
   }
+
 }
 ```
 
@@ -12182,13 +11634,17 @@ kernel void compute(device Particle *particles [[buffer(0)]],
 
 ```
 struct VertexOut {
+
   float4 position [[ position ]];
+
   float point_size [[ point_size ]];
+
   float4 color;
+
 };
 ```
 
-## Metal 教程
+### Metal 教程
 
 ## 第 16 章：粒子系统
 
@@ -12201,19 +11657,31 @@ struct VertexOut {
 ```
 // 1
 VertexOut vertex_particle(
+
     const float2 &size [[buffer(0)]],
+
     device Particle *particles [[buffer(1)]],
+
     const float2 &emitterPosition [[buffer(2)]],
+
     uint instance [[instance_id]]) {
+
     VertexOut out;
+
     // 2
     float2 position = particles[instance].position + emitterPosition;
+
     out.position.xy = position.xy / size * 2.0 - 1.0;
+
     out.position.z = 0;
+
     // 3
     out.point_size = particles[instance].size * particles[instance].scale;
+
     out.color = particles[instance].color;
+
     return out;
+
 }
 ```
 
@@ -12228,27 +11696,40 @@ VertexOut vertex_particle(
 ```
 // 1
 fragment float4 fragment_particle(
+
     VertexOut in in [[ stage_in ]],
+
     texture2d<float>particleTexture [[ texture(0)]],
+
     float2 point [[ point_coord ]]) {
+
     sampler default_sampler;
+
     float4 color = particleTexture.sample(default_sampler, point);
+
     if (color.a < 0.5) {
+
         discard_fragment();
+
 }
+
 ```
 
 ![](img/8d763acb335ab213ea9213a628f7d844_464_0.png)
 
 ```
 }
+
 color = float4(color.xyz, 0.5);
+
 color *= in.color;
+
 return color;
+
 }
 ```
 
-解析这段代码：[[ stage_in ]] 和雪花纹理
+解析这段代码：`[[ stage_in ]]` 和雪花纹理
 
 - 1. 从 CPU 获取处理后的片元数据（fragment）。`[[ point_coord ]]` 属性由光栅化器生成，是一个二维坐标，指示当前片元在点图元内部中的位置（范围在 [0, 1] 之间）。
 - 2. 创建采样器并使用它在当前片元位置对纹理采样。
@@ -12263,24 +11744,33 @@ return color;
 
 ```
 func snow(size: CGSize) -> Emitter {
+
 let emitter = Emitter(size: size)
+
 // 1
 emitter.particleCount = 80
+
 // 2
 emitter.birthDelay = 2
+
 // 3
 emitter.particleTexture = UIImage(named: "snowflake")
+
 // 4
 emitter.position = CGPoint(x: size.width / 2, y: size.height)
+
 emitter.direction = -.Float(.pi / 2)
+
 emitter.speedRange = 2...5
+
 emitter.scaleRange = 0.5..1.0
+
 emitter.color = .white
+
 return emitter
+
 }
 ```
-
-
 
 编译并运行以查看此新粒子系统的效果。
 
@@ -12297,6 +11787,8 @@ return emitter
 ```
 descriptor.colorAttachments[0].pixelFormat = .bgr8AUnorm
 ```
+
+
 
 添加以下几行：
 
@@ -12435,8 +11927,6 @@ output.write(color, location - uint2( 1, -1));
 
 ![](img/8d763acb335ab213ea9213a628f7d844_474_1.png)
 
-
-
 这是一个很好的开始，但如何让它们移动起来呢？为了这一点，你需要了解速度（Velocity）。
 
 ## 速度
@@ -12492,7 +11982,6 @@ boids[id] = boid;
 if (position.x < 0 || position.x > output.get_width()) {
     velocity.x *= -1;
 }
-
 if (position.y < 0 || position.y > output.get_height()) {
     velocity.y *= -1;
 }
@@ -12530,15 +12019,15 @@ if (position.y < 0 || position.y > output.get_height()) {
 
 | 常量 | 值 |
 | :--- | :--- |
-| float float average = 100; |
-| constant float attenuation = 0.1; |
-| constant float cohesionWeight = 2.0; |
+| `float float average = 100;` | |
+| `constant float attenuation = 0.1;` | |
+| `constant float cohesionWeight = 2.0;` | |
 
 通过这些常量，你定义了：
 
-- average: 一个代表群中保持凝聚的较小群体的值。
-- attenuation: 一个衰减因子，允许你放宽凝聚规则。
-- cohesionWeight: 对最终累积行为的贡献。
+- `average`: 一个代表群中保持凝聚的较小群体的值。
+- `attenuation`: 一个衰减因子，允许你放宽凝聚规则。
+- `cohesionWeight`: 对最终累积行为的贡献。
 
 为凝聚力创建一个新函数：
 
@@ -12552,7 +12041,6 @@ for (uint i = 0; i < particleCount; i++) {
 Boid boid = boids[i];
 if (i == index) {
 ```
-
 ```
 position += boid.position;
 }
@@ -12567,7 +12055,7 @@ return position;
 
 - 1. 将给定索引处的当前 boid 从群的其他成员中分离出来。定义并初始化位置。
 - 2. 遍历群中的所有 boid，并将每个 boid 的位置累加到 `position` 变量中。
-- 3. 获取整个群的平均位置值，并根据当前 boid 位置和保持局部性的固定值 average 计算另一个平均位置。
+- 3. 获取整个群的平均位置值，并根据当前 boid 位置和保持局部性的固定值 `average` 计算另一个平均位置。
 
 在 `secondPass` 中，紧接定义速度之后添加此代码：
 
@@ -12597,8 +12085,8 @@ constant float separationWeight = 1.0;
 
 它们的用途是：
 
-- limit: 触发斥力的阈值值。
-- separationWeight: 分离规则对最终行为的贡献。
+- `limit`: 触发斥力的阈值值。
+- `separationWeight`: 分离规则对最终行为的贡献。
 
 然后添加新函数：
 
@@ -12623,7 +12111,7 @@ return position;
 逐行代码：
 
 - 1. 将给定索引处的当前 boid 从群的其余成员中分离出来。定义并初始化位置。
-- 2. 遍历群中的所有 boid；如果不是分离的 boid，则检查与分离 boid 之间的距离。如果距离小于 limit，则更新位置以保持 boid 处于安全距离。
+- 2. 遍历群中的所有 boid；如果不是分离的 boid，则检查与分离 boid 之间的距离。如果距离小于 `limit`，则更新位置以保持 boid 处于安全距离。
 
 在 `secondPass` 中，在速度累加行之前添加此代码：
 
@@ -12658,16 +12146,12 @@ constant float neighbors = 8;
 constant float alignmentWeight = 3.0;
 ```
 
-
-
-
-
 ## Metal 教程
 
 通过这些内容，你定义了：
 
-- neighbors（邻居数量）：一个代表局部群组大小的值，它决定了“期望速度”。
-- alignmentWeight（对齐权重）：对齐规则对最终累计行为的贡献。
+- `neighbors`（邻居数量）：一个代表局部群组大小的值，它决定了“期望速度”。
+- `alignmentWeight`（对齐权重）：对齐规则对最终累计行为的贡献。
 
 然后，添加新的对齐函数：
 
@@ -12690,13 +12174,13 @@ return velocity;
 }
 ```
 
+
+
 逐行分析代码：
 
 - 将给定索引处的当前 boid 从群组其他成员中分离出来。定义并初始化速度。
-
 - 遍历群群中的所有 boid，并将每个 boid 的速度累加到速度变量中。
-
-- 获取整个群体的平均速度值，并根据当前 boid 的速度和局部群组大小（neighbors）计算另一个平均速度，这保持了局域性。
+- 获取整个群体的平均速度值，并根据当前 boid 的速度和局部群组大小（`neighbors`）计算另一个平均速度，这保持了局域性。
 
 在 `secondPass` 中，在速度累加行之前，添加以下代码：
 
@@ -12858,6 +12342,7 @@ velocity += cohesionVector * cohesionWeight + separationVector * separationWeigh
 本章结束了粒子系列。在下一章中，你将在基于光线的渲染系列中继续扩展你的计算技能。
 
 # 第 18 章：光线渲染 (Rendering with Rays)
+
 作者 Marius Horga
 
 在之前的章节中，你处理的是传统的流水线模型——栅化模型，它使用栅化器为像素染色。在本章中，你将学习另一种稍微不同的渲染技术——光线模型，你将用它来渲染云层。
@@ -12903,13 +12388,6 @@ velocity += cohesionVector * cohesionWeight + separationVector * separationWeigh
 在理想条件下，光线在空气中沿直线传播，直到击中表面。一旦光线击中某些物体，可能会对光线发生以下事件的任何组合：
 
 - 光被表面吸收。
-
-
-
-
-Metal 教程
-第 18 章：使用光线渲染
-
 - 光被表面反射。
 - 光穿过表面发生折射。
 - 光从表面下方的另一个点散射。
@@ -13057,8 +12535,6 @@ C /= 样本数
 
 另一方面，隐式表面是通过函数描述的，而不是通过渲染前存储的几何结构。
 
-
-
 因此，在这种情况下，追踪的圆是完美的圆，因为圆上的每个点都由圆的方程精确定义：
 
 ```
@@ -13091,7 +12567,7 @@ SDF 是很有用的，因为它们允许减少光线追踪时使用的样本数�
 
 运行本章包含的启动播放场（playground），你会看到一个浅蓝色的背景。
 
-点击 SDF 页面，在 Resources 文件夹中打开 Shaders.metal。在 kernel 区域中心，在 `// SDF:` 下方添加以下代码：
+点击 SDF 页面，在 Resources 文件夹中打开 `Shaders.metal`。在 kernel 区域中心，在 `// SDF:` 下方添加以下代码：
 
 ```
 // 1
@@ -13105,7 +12581,9 @@ if (distance < 0.0) {
 }
 ```
 
-解析代码：
+
+
+## 解析代码
 
 - 1. 定义圆的半径和中心。
 - 2. 创建一个 SDF，可以找到屏幕上任意点到该圆的距离。
@@ -13121,17 +12599,19 @@ if (distance < 0.0) {
 
 ## 光线步进算法
 
-进入 Raymarching 播放场页面。在 Resources 文件夹中，打开 Shaders.metal。
+进入 Raymarching 播放场页面。在 Resources 文件夹中，打开 `Shaders.metal`。
 
-首先为球体对象创建一个结构体（struct）：
+首先为球体对象创建一个结构体（`struct`）：
 
-```
+```cpp
 struct Sphere {
   float3 center;
   float3 radius;
-Sphere(float3 c, float r) {
-  center = c;
-  radius = r;
+
+  Sphere(float3 c, float r) {
+    center = c;
+    radius = r;
+  };
 };
 ```
 
@@ -13139,10 +12619,11 @@ Sphere(float3 c, float r) {
 
 接下来，为你将在场景中沿步进的光线创建一个结构体。它包含光线的起点、方向和构造函数：
 
-```
+```cpp
 struct Ray {
   float3 origin;
   float3 direction;
+
   Ray(float3 o, float3 d) {
     origin = o;
     direction = d;
@@ -13152,7 +12633,7 @@ struct Ray {
 
 现在，你需要写一个 SDF 来计算从给定点到球体的距离。与旧函数的区别在于，你的点现在沿着光线步进，所以你将使用光线位置：
 
-```
+```cpp
 float distanceToSphere(Ray r, Sphere s) {
   return length(r.origin - s.center) - s.radius;
 }
@@ -13163,43 +12644,44 @@ float distanceToSphere(Ray r, Sphere s) {
 - 对于每个步进，直到达到最大步数：
 - 沿着光线移动并检查交点。
 - 如果存在交点（命中）：
-  - 使用物体的颜色为像素上色
+  - 使用物体的颜色为像素上色。
 - 如果没有交点（未命中）：
-  - 使用背景颜色为像素上色
+  - 使用背景颜色为像素上色。
 - 将步长添加到已移动的距离中。
 
 你现在可以将其转化为代码。你首先需要一条可以沿之步进的光线和一个球体。
 
 在 kernel 函数内部，在 `// rayarching:` 下方添加以下代码：
 
-```
+```cpp
 // 1
 Sphere s = Sphere(float3(0.0), 1.0);
 Ray ray = Ray(float3(0.0, 0.0, -3.0), normalize(float3(uv)));
+
 // 2
 for (int i = 0; i < 100; i++) {
   float distance = distanceToSphere(ray, s);
+
   if (distance < 0.001) {
     color = float4(1.0, 0.85, 0.0, 1.0);
     break;
   }
+
   ray.origin += ray.direction * distance;
 }
 ```
 
 解析代码：
 
-- 1. 创建一个半径为 1.0 的球体 `s` 和一条起点在 (0.0, 0.0, -3.0) 方向为归一化 uv 的射线 `ray`。
+- 1. 创建一个半径为 1.0 的球体 `s` 和一条起点在 (0.0, 0.0, -3.0)、方向为归一化 `uv` 的射线 `ray`。
 - 2. 循环 100 次：
   - 调用 `distanceToSphere` 计算射线到球体的距离。
   - 如果距离小于 0.001（说明命中），则将颜色设为黄色并跳出循环。
   - 将步长加到已移动的光线起点上。
 
-
-
 内核函数已经为你提供了一个方便的计时器变量，渲染器在 CPU 上更新它：
 
-```
+```cpp
 constant float &time = [buffer(0)]
 ```
 
@@ -13209,16 +12691,17 @@ constant float &time = [buffer(0)]
 
 在内核函数内部，替换这一行：
 
-```
+```cpp
 Ray ray = Ray(float3(1000.0), normalize(float3(uv, 1.0)));
 ```
 
 替换为这些行：
 
-```
+```cpp
 float3 cameraPosition = float3(1000.0 + sin(time) + 1.0,
-                             1000.0 + cos(time) + 1.0,
-                             time);
+                               1000.0 + cos(time) + 1.0,
+                               time);
+
 Ray ray = Ray(cameraPosition, normalize(float3(uv, 1.0)));
 ```
 
@@ -13228,14 +12711,15 @@ Ray ray = Ray(cameraPosition, normalize(float3(uv, 1.0)));
 
 此外，替换这一行：
 
-```
-output.write(float4(color * abs((ray.origin - 1000.0)/10.0), 1.0), gid);
+```cpp
+output.write(float4(color * abs((ray.origin - 1000.0) / 10.0), 1.0), gid);
 ```
 
 替换为这些行：
 
-```
+```cpp
 float3 positionToCamera = ray.origin - cameraPosition;
+
 output.write(float4(color * abs(positionToCamera / 10.0), 1.0), gid);
 ```
 
@@ -13259,35 +12743,40 @@ output.write(float4(color * abs(positionToCamera / 10.0), 1.0), gid);
 
 进入随机噪声页面。在 `Shaders.metal` 内部添加此函数：
 
-```
+```cpp
 float randomNoise(float2 p) {
-    return fract(67.0 * sin(p.x) + 93.0 * p.y));
+  return fract(67.0 * sin(p.x) + 93.0 * p.y);
 }
 ```
 
 此函数使用的值都是质数，因为它们对于其他本会被除尽的不同数字返回相同的小数部分。在内核函数内部，将最后一行替换为此代码：
 
-```
+```cpp
 float noise = randomNoise(uv);
+
 output.write(float4(noise), 1.0), gid);
 ```
 
-运行播放场，你会看到类似这样的噪声图案：img/8d763acb335ab213ea9213a628f7d844_506.png
+运行播放场，你会看到类似这样的噪声图案：
+
+`img/8d763acb335ab213ea9213a628f7d844_506.png`
 
 你可以通过实现平铺（tiling）来模拟效果。平铺将视图划分为许多瓦格，每个瓦格都有自己的颜色。在这一行上方：
 
-```
+```cpp
 float noise = randomNoise(uv);
 ```
 
 添加这些行：
 
-```
+```cpp
 float tiles = 8.0;
 uv = floor(uv * tiles);
 ```
 
-再次运行播放场，你会看到瓦格：img/8d763acb335ab213ea9213a628f7d844_506_1.png
+再次运行播放场，你会看到瓦格：
+
+`img/8d763acb335ab213ea9213a628f7d844_506_1.png`
 
 然而，这种图案过于异质了。你需要的是颜色与相邻颜色不同的平滑噪声图案。
 
@@ -13300,11 +12789,11 @@ uv = floor(uv * tiles);
 | 1/8 | 1/2 | 1/8 |
 | 0 | 1/8 | 0 |
 
-邻域平均产生产生模糊的结果。你可以用代码轻松表示这个网格。
+邻域平均产生模糊的结果。你可以用代码轻松表示这个网格。
 
 在 `Shaders.metal` 中，创建一个新函数：
 
-```
+```cpp
 float smoothNoise(float2 p) {
   // 1
   float2 north = float2(p.x, p.y + 1.0);
@@ -13312,6 +12801,7 @@ float smoothNoise(float2 p) {
   float2 south = float2(p.x, p.y - 1.0);
   float2 west = float2(p.x - 1.0, p.y);
   float2 center = float2(p.x, p.y);
+
   // 2
   float sum = 0.0;
   sum += randomNoise(north) / 8.0;
@@ -13319,6 +12809,7 @@ float smoothNoise(float2 p) {
   sum += randomNoise(south) / 8.0;
   sum += randomNoise(west) / 8.0;
   sum += randomNoise(center) / 2.0;
+
   return sum;
 }
 ```
@@ -13326,37 +12817,43 @@ float smoothNoise(float2 p) {
 通过代码：
 
 - 1. 存储中心像素以及相对于中心像素的四个基准点的坐标。
-- 2. 计算每个存储坐标的值噪声，并除以其卷积权重。将这些值值累加到噪声总和中。
+- 2. 计算每个存储坐标的值噪声，并除以其卷积权重。将这些值累加到噪声总和中。
 
 替换这一行：
 
-```
+```cpp
 float noise = randomNoise(uv);
 ```
 
 替换为这一行：
 
-```
+```cpp
 float noise = smoothNoise(uv);
 ```
 
-运行播放场，你会看到一个更平滑的噪声图案：img/8d763acb335ab213ea9213a628f7d844_508_0.png
+运行播放场，你会看到一个更平滑的噪声图案：
+
+`img/8d763acb335ab213ea9213a628f7d844_508_0.png`
 
 瓦格之间仍然是不同的，但请注意颜色现在更均匀了。下一步是平滑瓦格之间的边缘，让它们看起来没有边界。这是通过双线性插值实现的。换句话说，我们混合线条端点的颜色以获取线条中间的颜色。
 
-在接下来的图中，你拥有位于瓦格顶角的 Q 值：Q11 是黑色；Q21 是灰色；Q12 和 Q22 是右侧的颜色。同样，对于 Q12 和 Q22，可以计算 R1 的值。最后，P 的值将通过插值这些 R1 和 R2 获得：img/8d763acb335ab213ea9213a628f7d844_509.png
+在接下来的图中，你拥有位于瓦格顶角的 Q 值：Q11 是黑色；Q21 是灰色；Q12 和 Q22 是右侧的颜色。同样，对于 Q12 和 Q22，可以计算 R1 的值。最后，P 的值将通过插值这些 R1 和 R2 获得：
+
+`img/8d763acb335ab213ea9213a628f7d844_509.png`
 
 添加此函数：
 
 ```cpp
 float interpolatedNoise(float2 p) {
-  float q11 = smoothNoise(float2(floor(p.x), floor(p.y));
+  float q11 = smoothNoise(float2(floor(p.x), floor(p.y)));
   float q12 = smoothNoise(float2(floor(p.x), floor(p.y) + 1));
-  float q21 = smoothNoise(float2(floor(p.x) + 1, floor(p.y));
+  float q21 = smoothNoise(float2(floor(p.x) + 1, floor(p.y)));
   float q22 = smoothNoise(float2(floor(p.x) + 1, floor(p.y) + 1));
+
   float2 ss = fract(p);
   float r1 = mix(q11, q21, ss.x);
   float r2 = mix(q12, q22, ss.x);
+
   return mix(r1, r2, ss.y);
 }
 ```
@@ -13367,18 +12864,19 @@ float interpolatedNoise(float2 p) {
 float fbm(float uv, float steps) {
   float sum = 0;
   float amplitude = 0.8;
-  for(int i = 0; i < steps; i++) {
+
+  for (int i = 0; i < steps; i++) {
     // 2
     sum += interpolatedNoise(uv) * amplitude;
+
     // 3
     uv += uv * 1.2;
     amplitude *= 0.4;
   }
+
   return sum;
 }
 ```
-
-
 
 遍历代码：
 
@@ -13388,17 +12886,17 @@ float fbm(float uv, float steps) {
 
 在内核函数中，替换这一行：
 
-```
+```cpp
 float noise = interpolatedNoise(uv);
 ```
 
 替换为这一行：
 
-```
+```cpp
 float noise = fbm(uv, tiles);
 ```
 
-在这里，你使用 `tiles` 的值来代替 `steps` 仅仅是因为是因为它们的值恰好相同，但如果你想让它不同于 4，可以创建一个名为 `steps` 的新变量。通过在不同的振幅上添加四个倍频（octaves）的噪声，你生成了一个简单的类气体图案。
+在这里，你使用 `tiles` 的值来代替 `steps` 仅仅是因为它们的值恰好相同，但如果你想让它不同于 4，可以创建一个名为 `steps` 的新变量。通过在不同的振幅上添加四个倍频（octaves）的噪声，你生成了一个简单的类气体图案。
 
 再次运行播放器，输出图像将像这样：
 
@@ -13412,13 +12910,14 @@ float noise = fbm(uv, tiles);
 
 进入 Clouds 播放页面，在 Resources 文件夹内打开 `Shaders.metal`。你已经有了所有的噪声代码和一个 `Ray` 结构体，只需添加以下代码：
 
-```
+```cpp
 struct Plane {
   float yCoord;
+
   Plane(float y) {
     yCoord = y;
   }
-}
+};
 
 float distanceToPlane(Ray ray, Plane plane) {
   return ray.origin.y - plane.yCoord;
@@ -13429,21 +12928,23 @@ float distanceToScene(Ray r, Plane p) {
 }
 ```
 
-这段代码与你在光线渲染部分使用的类似。不过，你没有创建球体（Sphere），而是为地面创建了一个平面（Plane），为平面创建了一个 SDF，并为场景创建了另一个。目前你只返回场景中到平面的距离。
+这段代码与你在光线渲染部分使用的类似。不过，你没有创建球体（`Sphere`），而是为地面创建了一个平面（`Plane`），为平面创建了一个 SDF，并为场景创建了另一个。目前你只返回场景中到平面的距离。
 
 从现在起，所有操作都发生在内核函数内部。替换这些行：
 
-```
+```cpp
 uv *= tiles;
+
 float3 clouds = float3(fbm(uv));
 ```
 
 替换为这些行：
 
-```
+```cpp
 float2 noise = uv;
 noise.x += time * 0.1;
 noise *= tiles;
+
 float3 clouds = float3(fbm(noise));
 ```
 
@@ -13453,25 +12954,31 @@ float3 clouds = float3(fbm(noise));
 
 在你刚刚写的代码下方添加这段代码：
 
-```
+```cpp
 // 1
 float3 land = float3(0.3, 0.2, 0.2);
 float3 sky = float3(0.4, 0.6, 0.8);
 clouds += sky * 3.0;
+
 // 2
 uv.y = -uv.y;
 Ray ray = Ray(float3(0.0, 4.0, -12.0), normalize(float3(uv, 1.0)));
 Plane plane = Plane(0.0);
+
 // 3
 for (int i = 0; i < 100; i++) {
-    float distance = distanceToScene(ray, plane);
-    if (distance < 0.001) {
-        clouds = land;
-        break;
-    }
-    ray.origin += ray.direction * distance;
+  float distance = distanceToScene(ray, plane);
+
+  if (distance < 0.001) {
+    clouds = land;
+    break;
+  }
+
+  ray.origin += ray.direction * distance;
 }
 ```
+
+
 
 遍历代码：
 
@@ -13491,7 +12998,7 @@ for (int i = 0; i < 100; i++) {
 
 有了这些知识，你可以渲染任何想要的东西——从经典形状（如球体和立方体）到复杂的自然现象和场景。天空才是极限。不，字面上如此！当你的光线击中天空时，你需要停止追踪它并发射另一条。
 
-在 **references.markdown** 中，有一份关于使用光线渲染和创建精彩内容的文章列表。
+在`references.markdown`中，有一份关于使用光线渲染和创建精彩内容的文章列表。
 
 ## 第 19 章：高级阴影
 
@@ -13688,15 +13195,23 @@ for (int i = 0; i < 100; i++) {
 
 是时候召唤上一节的光线渲染技能，并用它们来创建阴影了。
 
+## 硬
 
+在本节中，你将使用光线渲染创建阴影，而不是像你在第 14 节“多通道与延迟渲染”中那样使用阴影图。阴影图是一种非实时工具，要求你在上一个渲染阶段中烘焙阴影。
 
+通过光线渲染，你正在利用符号距离场（SDF）。SDF 是一种实时工具，为你提供到边界的精确距离。这使得计算阴影变得轻而易举。
+
+是时候召唤上一节的光线渲染技能，并用它们来创建阴影了。
 
 在内核的末尾，将颜色赋值替换为：
 
 ```
 float d2scene = distanceToScene(uv);
+
 bool inside = d2scene < 0.0;
+
 float4 color = inside ? float4(0.8,0.5,0.5,1.0) :
+
 float4(0.9,0.9,0.8,1.0);
 ```
 
@@ -13714,15 +13229,17 @@ float4(0.9,0.9,0.8,1.0);
 - 2. 知道光的方向。
 - 3. 向该方向移动，直到到达光或击中物体。
 
-首先，你将在位置 `lightPos` 处创建一个光源，为了好玩会让它动起来。你将使用从宿主机（API）代码传递的计时器统一变量。
+首先，你将在位置`lightPos`处创建一个光源，为了好玩会让它动起来。你将使用从宿主机（API）代码传递的计时器统一变量。
 
-然后，你将获取从任意给定点到 `lightPos` 的距离，并根据与光的距离为像素着色——但前提是它不在物体内部。越靠近光颜色越亮，离光越远颜色越暗；你将使用 `max()` 函数来避免光亮度出现负值。
+然后，你将获取从任意给定点到`lightPos`的距离，并根据与光的距离为像素着色——但前提是它不在物体内部。越靠近光颜色越亮，离光越远颜色越暗；你将使用`max()`函数来避免光亮度出现负值。
 
 在内核的最后一行上方，添加以下内容：
 
 ```
 float lightPos = 2.8 * float2(sin(time), cos(time));
+
 float dist2 = length(lightPos - uv);
+
 color *= max(0.3, 2.0 - dist2/light);
 ```
 
@@ -13736,17 +13253,29 @@ color *= max(0.3, 2.0 - dist2/light);
 
 ```
 float getShadow(float2 point, float2 lightPos) {
+
   // 1
+
   float2 lightDir = lightPos;
+
   // 2
+
   for (float lerp = 0; lerp < 1; lerp += 1 / 300.0) {
+
     // 3
+
     float2 currentPoint = point + lightDir * lerp;
+
     // 4
+
     float d2scene = distanceToScene(currentPoint);
+
     if (d2scene <= 0.0) { return 0.0; }
+
   }
+
   return 1.0;
+
 }
 ```
 
@@ -13754,7 +13283,7 @@ float getShadow(float2 point, float2 lightPos) {
 
 - 1. 获取一个从点到光的向量。
 - 2. 使用循环将向量划分为许多较小的步长。如果步数不够，你可能会跳过物体，在阴影中留下空洞。
-- 3. 计算你当前射线有多远，并沿着射线按此 `lerp` 距离移动到空间中采样的点。
+- 3. 计算你当前射线有多远，并沿着射线按此`lerp`距离移动到空间中采样的点。
 - 4. 查看你距离该点的表面有多远，然后测试你是否在物体内部。如果是，返回 0，因为你处于阴影中；否则，返回 1，因为射线没有击中物体。
 
 是时候看到阴影了。
@@ -13763,7 +13292,9 @@ float getShadow(float2 point, float2 lightPos) {
 
 ```
 float shadow = getShadow(uv, lightPos);
+
 color *= 2;
+
 color *= shadow * .5 + .5;
 ```
 
@@ -13779,19 +13310,29 @@ color *= shadow * .5 + .5;
 
 ![](img/8d763acb335ab213ea9213a628f7d844_522_1.png)
 
-将 `getShadow()` 函数的内容替换为此：
+将`getShadow()`函数的内容替换为此：
 
 ```
 float2 lightDir = normalize(lightPos - point);
+
 float shadowDistance = 0.75;
+
 float distAlongRay = 0.0;
+
 For (float i = 0; i < 80; i++) {
+
     float currentPoint = point + lightDir * distAlongRay;
+
     float d2scene = distanceToScene(currentPoint);
+
     if (d2scene <= 0.01) { return 0.0; }
+
     distAlongRay += d2scene;
+
     if (distAlongRay > shadowDistance) { break; }
+
 }
+
 return 1.0;
 ```
 
@@ -13807,25 +13348,35 @@ return 1.0;
 
 阴影并非只有黑色或白色，物体并不都在阴影中。通常，阴影区域和光照区域之间存在平滑的过渡。
 
-在启动 playground 中，在 Resources 文件夹中打开 Shaders.metal。首先，添加结构体来帮助处理射线、球体、平面和光：
+在启动 playground 中，在 Resources 文件夹中打开`Shaders.metal`。首先，添加结构体来帮助处理射线、球体、平面和光：
 
 ```
 struct Ray {
+
     float3 origin;
+
     float3 direction;
+
 }
 
 struct Sphere {
+
     float3 center;
+
     float radius;
+
 }
 
 struct Plane {
+
     float yCoord;
+
 }
 
 struct Light {
+
     float3 position;
+
 }
 ```
 
@@ -13833,13 +13384,27 @@ struct Light {
 
 ```
 float distToSphere(Ray ray, Sphere s) {
+
     return length(ray.origin - s.center) - s.radius;
+
 }
 
 float distToPlane(Ray ray, Plane plane) {
-    return ray.origin.y - plane.yCoord;
-}
 
+    return ray.origin.y - plane.yCoord;
+
+}
+```
+
+
+
+# Metal 教程
+
+## 第 19 章：高级投影
+
+`float differenceOp(float d0, float d1)` 和 `float unionOp(float d0, float d1)` 是场景构建的基础操作：
+
+```
 float differenceOp(float d0, float d1) {
     return max(d0, d1);
 }
@@ -13849,12 +13414,7 @@ float unionOp(float d0, float d1) {
 }
 ```
 
-
-
-
-Metal 教程
-
-第 19 章：高级投影
+以下代码展示了光线步进（ray marching）的核心循环：
 
 ```cpp
 col = float3(1.0);
@@ -13881,24 +13441,22 @@ output.write(float4(col * n, 1.0), gid);
 
 raywenderlich.com
 
-## 19 章：高级投影
-
 现在你已经有了法线，可以为场景中的每个像素计算光照。
 
 创建一个名为 `lighting()` 的新函数：
 
 ```cpp
 float lighting(Ray ray, float3 normal, Light light) {
-// 1
-float3 lightRay = normalize(light.position - ray.origin);
-// 2
-float diffuse = max(0.0, dot(normal, lightRay));
-// 3
-float3 reflectedRay = reflect(ray.direction, normal);
-float specular = max(0.0, dot(reflectedRay, lightRay));
-// 4
-specular = pow(specular, 200.0);
-return diffuse + specular;
+    // 1
+    float3 lightRay = normalize(light.position - ray.origin);
+    // 2
+    float diffuse = max(0.0, dot(normal, lightRay));
+    // 3
+    float3 reflectedRay = reflect(ray.direction, normal);
+    float specular = max(0.0, dot(reflectedRay, lightRay));
+    // 4
+    specular = pow(specular, 200.0);
+    return diffuse + specular;
 }
 ```
 
@@ -13906,7 +13464,7 @@ return diffuse + specular;
 
 - 1. 通过归一化光源位置与当前光线起点之间的距离，找到通向光线的方向。
 - 2. 对于漫反射光，你需要法线与 `lightRay` 之间的角度，即两者的点积。同时，通过将 0 设为可能的最小值，确保永远不会使用负值。
-- 3. 对于高光光照，你需要表面的反射，它们取决于你观察的角度。你首先向场景中投射一条光线，让它从表面反射，并测量反射光线与 `LightRay` 之间的角度。
+- 3. 对于高光光照，你需要表面的反射，它们取决于你观察的角度。你首先向场景中投射一条光线，让它从表面反射，并测量反射光线与 `lightRay` 之间的角度。
 - 4. 最后，对该值取高次方使其变得更加尖锐，并返回组合后的光。
 
 将内核（kernel）中的最后一行 `output.write(...)` 替换为此：
@@ -13925,7 +13483,7 @@ output.write(float4(col * 1.0, gid));
 
 接下来是阴影！
 
-`shadow` 函数与硬阴影（hard shadows）函数非常相似，只有几处修改。你归一化光线的方向，然后在沿着光线移动时不断更新距离。你还将步数减少到仅 100 。
+`shadow` 函数与硬阴影（hard shadows）函数非常相似，只有几处修改。你归一化光线的方向，然后在沿着光线移动时不断更新距离。你还将步数减少到仅 100。
 
 在内核之前添加此函数：
 
@@ -13938,15 +13496,13 @@ float shadow(Ray ray, Light light) {
     for (int i = 0; i < 100; i++) {
         Ray lightRay = Ray(ray.origin + lightDir * distAlongRay, lightDir);
         float dist = distance(lightRay);
-        if (dist < 0.001) return 0.0; }
+        if (dist < 0.001) return 0.0;
         distAlongRay += dist;
     }
     if (distAlongRay > lightDist) { break; }
     return 1.0;
 }
 ```
-
-## 19 章：高级投影
 
 将内核中的最后一行替换为此：
 
@@ -13973,10 +13529,10 @@ float shadow(Ray ray, float k, Light l) {
     float3 lightDir = l.position - ray.origin;
     float lightDist = length(lightDir);
     lightDir = normalize(lightDir);
-// 2
+    // 2
     float light = 1.0;
     float eps = 0.1;
-// 3
+    // 3
     float distAlongRay = eps * 2.0;
     for (int i = 0; i < 100; i++) {
         Ray lightRay = Ray(ray.origin + lightDir * distAlongRay, lightDir);
@@ -13995,8 +13551,8 @@ float shadow(Ray ray, float k, Light l) {
 
 遍历代码，这里与之前的阴影函数的区别如下：
 
-- 1. 添加一个衰减因子（k）。
-- 2. 添加一个衰减因子（k）作为参数，你将用它获取光照值。
+- 1. 添加一个衰减因子（`k`）。
+- 2. 添加一个衰减因子（`k`）作为参数，你将用它获取光照值。
 - 3. 从一个较小的 `eps` 值开始。
 - 4. 使用 `min(light, 1.0 - (eps - dist) / eps)` 计算光照。
 - 5. 沿着光线移动并增加 `eps`。
@@ -14047,19 +13603,11 @@ output.write(float4(col, 1.0), gid);
 
 ## 环境遮蔽 (Ambient occlusion)
 
-环境遮蔽 (AO) 是一种全局着色技术，与你在第5章“光照基础”中学到的 Phong 局部着色技术不同。AO 用于计算场景中每个点对环境光的暴露程度，而环境光由周围的几何结构决定。
+环境遮蔽 (AO) 是一种全局着色技术，与你在第 5 章“光照基础”中学到的 Phong 局部着色技术不同。AO 用于计算场景中每个点对环境光的暴露程度，而环境光由周围的几何结构决定。
 
 然而，AO 是全局照明的一种弱变体。它看起来像雨天的场景，感觉像是一种无方向的漫反射着色效果。对于空心物体，AO 让内部看起来更暗，因为光被进一步遮挡。当你靠近物体边缘时，它看起来越来越亮。
 
 在计算环境光时，只考虑大型物体，例如天空、墙壁或任何在光照时足以产生阴影的物体。AO 通常是一种片段后处理技术。然而，你之所以在本章中研究它是因为 AO 是一种阴影。
-
-
-
-
-
-## Metal 教程
-
-## 第 19 章：高级阴影
 
 在接下来的图中，你可以看到曲形墙的底部以及盒子的底部颜色更深。
 
@@ -14067,7 +13615,7 @@ output.write(float4(col, 1.0), gid);
 
 在启动游乐场（starter playground）中，选择 Ambient Occlusion（环境光挡）页面。在 Resources 文件夹中，打开 `Shaders.metal`。
 
-添加一个新的 Box 对象结构类型：
+添加一个新的 `Box` 对象结构类型：
 
 ```
 struct Box {
@@ -14076,7 +13624,7 @@ struct Box {
 };
 ```
 
-接下来，为 Box 添加一个新的距离函数：
+接下来，为 `Box` 添加一个新的距离函数：
 
 ```
 float distToBox(Ray r, Box b) {
@@ -14085,19 +13633,19 @@ float distToBox(Ray r, Box b) {
 };
 ```
 
-首先，通过盒子的中心点偏移当前的射线起点。然后，使用 `abs()` 获取射线位置的对称坐标。将得到的距离 **d** 按盒边缘的长度进行偏移。
+首先，通过盒子的中心点偏移当前的射线起点。然后，使用 `abs()` 获取射线位置的对称坐标。将得到的距离 `d` 按盒边缘的长度进行偏移。
 
-其次，使用 `max()` 获取到最远边缘的距离，然后取 0 与你刚刚计算的距离之间的较值。如果射线在盒子内部，该值将为负数，因此你需要添加 0 和 **d** 之间的较大值。
+其次，使用 `max()` 获取到最远边缘的距离，然后取 0 与你刚刚计算的距离之间的较值。如果射线在盒子内部，该值将为负数，因此你需要添加 0 和 `d` 之间的较大值。
 
-# 将 `distToScene` 中的返回行替换为此：
+将 `distToScene` 中的返回行替换为此：
 
 ```
 // 1
 Sphere s1 = Sphere(float3(0.0, 0.5, 0.0), 8.0);
-sphere s2 = Sphere(float3(0.0, 0.5, 0.0), 6.0);
-sphere s3 = Sphere(float3(10.0, -5.0, -10.0), 15.0);
+Sphere s2 = Sphere(float3(0.0, 0.5, 0.0), 6.0);
+Sphere s3 = Sphere(float3(10.0, -5.0, -10.0), 15.0);
 float d2s = distToSphere(r, s1);
-float d2s = distToSphere(r, s2);
+float d2s2 = distToSphere(r, s2);
 float d3s = distToSphere(r, s3);
 // 2
 float dist = differenceOp(d2s, d2s2);
@@ -14157,13 +13705,13 @@ col = col + fl;
 
 这是一个良好的开始。然而，这还没有环境光挡应该有的样子。
 
-环境（Ambient）意味着光线并非来自明确的光源，而是来自场景中的其他物体，所有物体共同贡献了场景的光的光。挡（Occlusion）意味着环境光中有多少被遮挡。
+环境（Ambient）意味着光线并非来自明确的光源，而是来自场景中的其他物体，所有物体共同贡献了场景的光。挡（Occlusion）意味着环境光中有多少被遮挡。
 
 环境光挡的核心思想是利用射线击中表面的点，并观察它的周围。如果周围有物体，它们将遮挡附近的大部分光线，形成一个黑暗区域。如果周围什么都没有，那么该区域光线良好。然而，对于中间情况，你需要更精确地知道遮挡了多少光。
 
 锥体追踪（Cone tracing）是一种使用锥体代替射线的技术。如果锥体与物体相交，不要只得到简单的真/假结果。你可以找出在该点锥体覆盖了多少比例。不过，追踪锥体可能是一个挑战。你可以使用沿直线对齐的球体，一头小一头大。这将是一个很好用的锥体。由于你每一步都将球体尺寸翻倍，从表面向外移动非常快，因此只需要几次迭代。这也为你提供了一个很宽的锥体。
 
-在 `ao(t)` 内部，将以下代码替换为：
+在 `ao()` 内部，将以下代码替换为：
 
 ```
 // 1
@@ -14173,150 +13721,23 @@ pos += n * eps;
 // 3
 float occlusion = 0.0;
 for (float i = 1.0; i < 10.0; i++) {
-// 4
+    // 4
     float d = distToScene(pos + n * eps);
-// 5
+    // 5
     float coneWidth = eps / i;
-// 6
+    // 6
     float occlusionAmount = min(coneWidth, d);
-// 7
+    // 7
     occlusion += occlusionAmount;
-// 8
+    // 8
     eps *= 2.0;
 }
 // 9
 return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
 ```
-*(注：由于提供的原文中代码块似乎被打乱了，此处根据上下文逻辑还原了标准的 AO 逻辑结构，但按要求代码块不翻译，仅对原文中的乱文本进行对应翻译)*
 
-*修正：根据原文提供的乱序文本进行翻译：*
 
-```
-// 1
-float eps = 0.01;
-// 2
-pos += n * eps;
-// 3
-float occlusion = 0.0;
-for (float i = 1.0; i < 10.0; i++) {
-// 4
-    float d = distToScene(pos + n * eps);
-// 5
-    float coneWidth = eps / i;
-// 6
-    float occlusionAmount = min(coneWidth, d);
-// 7
-    occlusion += occlusionAmount;
-// 8
-    eps *= 2.0;
-}
-// 9
-return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
-```
-*(抱歉，原文提供的代码块部分存在严重的格式混乱和缺失，此处我将严格按照“不翻译代码块”的原则，对原文中出现的片段进行对应)*
 
-**重新对应原文的乱序代码块翻译：**
-
-```
-// 1
-float eps = 0.01;
-// 2
-pos += n * eps;
-// 3
-float occlusion = 0.0;
-for (float i = 1.0; i < 10.0; i++) {
-// 4
-    float d = distToScene(pos + n * eps);
-// 5
-    float coneWidth = eps / i;
-// 6
-    float occlusionAmount = min(coneWidth, d);
-// 7
-    occlusion += occlusionAmount;
-// 8
-    eps *= 2.0;
-}
-// 9
-return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
-```
-*(由于原文提供的文本中代码部分是完全破碎且包含重复的变量如 `d2s`, `d2s2` 等未定义变量，作为高级工程师，我将保持其代码原样不进行翻译，仅翻译周围描述)*
-
-**原文代码块部分：**
-
-```
-// 1
-Sphere s1 = Sphere(float3(0.0, 0.5, 0.0), 8.0);
-sphere s2 = Sphere(float3(0.0, 0.5, 0.0), 6.0);
-sphere s3 = Sphere(float3(10.0, -5.0, -10.0), 15.0);
-float d2s = distToSphere(r, s1);
-float d2s = distToSphere(r, s2);
-float d3s = distToSphere(r, s3);
-// 2
-float dist = differenceOp(d2s, d2s2);
-dist = differenceOp(dist, d3s);
-// 3
-Box b = Box(float3(1., 1., -4.), 1.);
-float dt = distToBox(r, b);
-dist = unionOp(dist, dt);
-dist = unionOp(d2p, dist);
-return dist;
-```
-
-在 `ao(t)` 内部，替换以下内容：
-
-```
-// 1
-float eps = 0.01;
-// 2
-pos += n * eps;
-// 3
-float occlusion = 0.0;
-for (float i = 1.0; i < 10.0; i++) {
-// 4
-    float d = distToScene(pos + n * eps);
-// 5
-    float coneWidth = eps / i;
-// 6
-    float occlusionAmount = min(coneWidth, d);
-// 7
-    occlusion += occlusionAmount;
-// 8
-    eps *= 2.0;
-}
-// 9
-return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
-```
-*(注：原文中提供的 `ao(t)` 部分的代码块是破碎的且包含重复的，以下为基于原文片段的翻译对应)*：
-
-**原文中的 AO 函数代码片段：**
-
-```
-// 1
-float eps = 0.01;
-// 2
-pos += n * eps;
-// 3
-float occlusion = 0.0;
-for (float i = 1.0; i < 10.0; i++) {
-// 4
-    float d = distToScene(pos + n * eps);
-// 5
-    float coneWidth = eps / i;
-// 6
-    float occlusionAmount = min(coneWidth, d);
-// 7
-    occlusion += occlusionAmount;
-// 8
-    eps *= 2.0;
-}
-// 9
-return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
-```
-*(由于原文提供的文本质量问题，代码块内容逻辑错乱，我将严格遵守“不翻译代码块”规则，仅翻译其描述文字)*
-
-**以下是基于原文逻辑的完整翻译：**
-
-[content]
 ## Metal 教程
 
 ## 第 19 章：高级阴影
@@ -14325,9 +13746,9 @@ return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
 
 ![](img/8d763acb335ab213ea9213a628f7d844_534_0.png)
 
-在启动游乐场中，选择 Ambient Occlusion 页面。在 Resources 文件夹中，打开 `Shaders.metal`。
+在启动游乐场中，选择 Ambient Occlusion 页面。在 Resources 文件夹中，打开`Shaders.metal`。
 
-添加一个新的 Box 对象类型：
+添加一个新的`Box`对象类型：
 
 ```
 struct Box {
@@ -14336,7 +13757,7 @@ struct Box {
 };
 ```
 
-接下来，为 Box 添加一个新的距离函数：
+接下来，为`Box`添加一个新的距离函数：
 
 ```
 float distToBox(Ray r, Box b) {
@@ -14345,11 +13766,11 @@ float distToBox(Ray r, Box b) {
 };
 ```
 
-首先，通过盒子的中心点偏移当前的射线起点。然后，使用 `abs()` 获取射线位置的对称坐标。将得到的距离 **d** 按盒边缘的长度进行偏移。
+首先，通过盒子的中心点偏移当前的射线起点。然后，使用`abs()`获取射线位置的对称坐标。将得到的距离`d`按盒边缘的长度进行偏移。
 
-其次，使用 `max()` 获取到最远边缘的距离，然后取 0 与你刚刚计算的距离之间的较值。如果射线在盒子内部，该值将为负数，因此你需要添加 0 和 **d** 之间的较大值。
+其次，使用`max()`获取到最远边缘的距离，然后取 0 与你刚刚计算的距离之间的较值。如果射线在盒子内部，该值将为负数，因此你需要添加 0 和`d`之间的较大值。
 
-# 将 `distToScene` 中的返回行替换为此：
+# 将`distToScene`中的返回行替换为此：
 
 ```
 // 1
@@ -14359,9 +13780,11 @@ sphere s3 = Sphere(float3(10.0, -5.0, -10.0), 15.0);
 float d2s = distToSphere(r, s1);
 float d2s = distToSphere(r, s2);
 float d3s = distToSphere(r, s3);
+
 // 2
 float dist = differenceOp(d2s, d2s2);
 dist = differenceOp(dist, d3s);
+
 // 3
 Box b = Box(float3(1., 1., -4.), 1.);
 float dt = distToBox(r, b);
@@ -14423,41 +13846,38 @@ col = col + fl;
 
 锥体追踪（Cone tracing）是一种使用锥体代替射线的技术。如果锥体与物体相交，不要只得到简单的真/假结果。你可以找出在该点锥体覆盖了多少比例。追踪锥体可能是一个挑战。你可以使用沿直线对齐的球体，一头小一头大。这将是一个很好用的锥体。由于你每一步都将球体尺寸翻倍，从表面向外移动非常快，因此只需要几次迭代。这也为你提供了一个很宽的锥体。
 
-在 `ao(t)` 内部，替换以下内容（注：原文此处代码乱序，以下为描述翻译）：
+在`ao(t)`内部，替换以下内容：
 
 ```
 // 1
 float eps = 0.01;
+
 // 2
 pos += n * eps;
+
 // 3
 float occlusion = 0.0;
 for (float i = 1.0; i < 10.0; i++) {
+
 // 4
     float d = distToScene(pos + n * eps);
+
 // 5
     float coneWidth = eps / i;
+
 // 6
     float occlusionAmount = min(coneWidth, d);
+
 // 7
     occlusion += occlusionAmount;
+
 // 8
     eps *= 2.0;
 }
+
 // 9
 return n.y * 0.5 + 0.5 * (1.0 - min(occlusion, 1.0));
 ```
-*(注：由于原文提供的文本中代码部分是完全破碎且包含重复的，我将严格遵守“不翻译代码块”规则，仅翻译其周围描述)*
-
-*(由于原文提供的文本质量问题，代码块内容逻辑错乱，我将严格遵守“不翻译代码块”规则，仅翻译其描述文字)*
-
-**以下是基于原文逻辑的完整翻译：**
-*(此处由于原文代码块严重损坏，仅提供对描述文字的翻译)*
-
-*(注：由于原文提供的文本中代码块是完全破碎，，，，，翻译翻译翻译翻译，，，，翻译翻译的的翻译)*
-
-
-
 
 本章的光线追踪（raymarching）部分到此结束。在本章的剩余部分，你将研究一种适用于栅格化内容的阴影技术。
 
@@ -14499,7 +13919,7 @@ PCF 方法假设你会对这些值取平均值，由于你有 4 个节点和总�
 
 打开 PCF 启动项目。编译并运行，你将看到熟悉的带阴影的火车和树。
 
-在 Shaders 组的 Main.metal 中，替换 `fragment_main:` 内部内部的以下代码：
+在 Shaders 组的`Main.metal`中，替换`fragment_main:`内部内部的以下代码：
 
 ```cpp
 float shadow_sample = shadowTexture.sample(s, xy);
@@ -14519,12 +13939,14 @@ return float4(diffuseColor, 1);
 const int neighborWidth = 3;
 const float neighbors = (neighborWidth * 2.0 + 1.0) *
     (neighborWidth * 2.0 + 1.0);
+
 // 2
 float mapSize = 4096;
 float texelSize = 1.0 / mapSize;
 float total = 0.0;
 for (int x = -neighborWidth; x <= neighborWidth; x++) {
     for (int y = -neighborWidth; y <= neighborWidth; y++) {
+
         // 3
         float shadow_sample = shadowTexture.sample(
             s, xy + float2(x, y) * texelSize);
@@ -14534,6 +13956,7 @@ for (int x = -neighborWidth; x <= neighborWidth; x++) {
         }
     }
 }
+
 // 4
 total /= neighbors;
 float lightFactor = 1.0 - (total * in.shadowPosition.w);
@@ -14579,6 +14002,9 @@ return float4(diffuseColor * lightFactor, 1);
 $L_o(x, ω, t) = L_e(x, ω, t) + \int_{\Omega} f_r(x, ω, t) L_i(x, ω, t) (ω \cdot n) d\omega$
 ```
 
+
+
+
 虽然渲染方程看起来有点令人生畏，但可以这样理解：离开物体的所有光，都是进入物体的光在部分光穿过物体后剩余的光。
 
 ## 反射
@@ -14593,76 +14019,75 @@ $L_o(x, ω, t) = L_e(x, ω, t) + \int_{\Omega} f_r(x, ω, t) L_i(x, ω, t) (ω \
 
 ## 开始
 
-打开名为 **AdvancedLighting** 的启动播放场，选择 **1. reflection** 播放场页面。运行播放场，你将看到：
+打开名为`AdvancedLighting`的启动播放场，选择`1. reflection`播放场页面。运行播放场，你将看到：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_547_1.png)
 
-
-
-游场（playground）中的代码可能看起来看起来很熟悉，因为你在之前的两个章节中已经见过了。接下来，你将为平面添加一个棋格图案，并让它反射到球体上。
+游场（playground）中的代码可能看起来很熟悉，因为你在之前的两个章节中已经见过了。接下来，你将为平面添加一个棋格图案，并让它反射到球体上。
 
 ## 绘制棋格图案
 
 为了在平面上绘制图案，你首先需要一种方法，通过比较物体相对于相机的距离来识别场景中的物体。
 
-在此游场的 `Resources` 文件夹中，打开 `Shaders.metal`，创建两个常量来识别场景中的两个物体：
+在此游场的`Resources`文件夹中，打开`Shaders.metal`，创建两个常量来识别场景中的两个物体：
 
-```
+```cpp
 constant float PlaneObj = 0.0;
+
 constant float SphereObj = 1.0;
 ```
 
-然后，在 `distToScene` 中，在这一行之后：
+然后，在`distToScene`中，在这一行之后：
 
-```
+```cpp
 float dts = distToSphere(r, s);
 ```
 
 添加以下内容：
 
-```
+```cpp
 float object = (dtp > dts) ? SphereObj : PlaneObj;
 ```
 
 在这里，你检查到平面的距离是否大于到球体的距离，并将物体存储在结果中。
 
-在函数返回包含这些信息。将 `return dist;` 替换为：
+在函数返回包含这些信息。将`return dist;`替换为：
 
-```
+```cpp
 return float2(dist, object);
 ```
 
 运行游场以验证图像没有变化。
 
-内核函数 `compute` 是你对场景进行光线追踪（rayarching）的地方。在循环中，你遍历大量的样本并更新光线计数，直到获得足够的精度。在这个代码块中，你将在平面上绘制图案。
+内核函数`compute`是你对场景进行光线追踪（rayarching）的地方。在循环中，你遍历大量的样本并更新光线计数，直到获得足够的精度。在这个代码块中，你将在平面上绘制图案。
 
-在 `for` 循环内部，找到：
+在`for`循环内部，找到：
 
-```
+```cpp
 float2 dist = distToScene(cam.ray);
 ```
 
-`distToScene` 在 `dist.y` 中返回最近的物体。
+`distToScene`在`dist.y`中返回最近的物体。
 
 紧接着该行，添加以下内容：
 
-```
+```cpp
 float closestObject = dist.y;
 ```
 
-在 `hit = true;` 之后添加这段代码：
+在`hit = true;`之后添加这段代码：
 
-```
+```cpp
 // 1
 if (closestObject == PlaneObj) {
-// 2
-float2 pos = cam.ray.origin.xz;
-pos *= 0.1;
-// 3
-pos = floor(fmod(pos, 2.0));
-float check = mod(pos.x + pos.y, 2.0);
-// 4
-col = check *= 0.5 + 0.5;
+  // 2
+  float2 pos = cam.ray.origin.xz;
+  pos *= 0.1;
+  // 3
+  pos = floor(fmod(pos, 2.0));
+  float check = mod(pos.x + pos.y, 2.0);
+  // 4
+  col = check *= 0.5 + 0.5;
 }
 ```
 
@@ -14673,25 +14098,25 @@ col = check *= 0.5 + 0.5;
 - 3. 创建正方形。你首先通过应用取模运算符在 X 和 Z 轴上交替使用 0 和 1。此时，你得到了一系列包含 0、1 或两者兼有的数对。接下来，将每对中的两个值相加，并再次应用取模运算符。如果和为 2，则将其拨回 0；否则它将为 1。
 - 4. 应用颜色。最初是纯白色。乘以 0.5 以降低色调，然后加上 0.5，这样你就可以得到白色和灰色正方形。
 
-如果你现在运行游场，你会发现一个缺少 `mod` 函数的红色警告。然而，在添加缺失的函数之前，花点时间理解为什么你需要实现一个简单的取模运算。
+如果你现在运行游场，你会发现一个缺少`mod`函数的红色警告。然而，在添加缺失的函数之前，花点时间理解为什么你需要实现一个简单的取模运算。
 
-Metal 着色器语言（MSL）实现的 `fmod` 函数执行截断除法，其余数的符号与分子的符号相同：
+Metal 着色器语言（MSL）实现的`fmod`函数执行截断除法，其余数的符号与分子的符号相同：
 
-```
+```cpp
 fmod = numerator - trunc(numerator / denominator)
 ```
 
 第二种方法是 MSL 中缺失的向下取整除法（floored division），其余数的符号与分母的符号相同：
 
-```
+```cpp
 mod = numerator - floor(numerator / denominator)
 ```
 
-这两种方法可能有完全不同的。计算 `pos` 时，值需要在 0 和 1 之间交替，因此对截断除法的结果取整就足够了。但当你加上两个坐标来确定下一行的 `check` 值时，你需要对它们的和进行取整。
+这两种方法可能有完全不同的。计算`pos`时，值需要在 0 和 1 之间交替，因此对截断除法的结果取整就足够了。但当你加上两个坐标来确定下一行的`check`值时，你需要对它们的和进行取整。
 
 在内核函数上方添加新的向下取整除法函数：
 
-```
+```cpp
 float mod(float x, float y) {
   return x - y * floor(x / y);
 }
@@ -14703,9 +14128,9 @@ float mod(float x, float y) {
 
 现在你需要做的就是将棋格反射到球体上。
 
-在 `compute` 上方添加一个新的反射函数：
+在`compute`上方添加一个新的反射函数：
 
-```
+```cpp
 Camera reflectRay(Camera cam, float3 n, float eps) {
   cam.ray.origin += n * eps;
   cam.ray.dir = reflect(cam.ray.dir, n);
@@ -14713,50 +14138,50 @@ Camera reflectRay(Camera cam, float3 n, float eps) {
 }
 ```
 
-MSL 标准库提供了 `reflect()` 函数，它接受传入的光线方向和交叉面的法线作为参数，并返回输出（反射）的光线方向。这个便利函数返回 `Camera` 对象，而不仅仅是光线方向。
+MSL 标准库提供了`reflect()`函数，它接受传入的光线方向和交叉面的法线作为参数，并返回输出（反射）的光线方向。这个便利函数返回`Camera`对象，而不仅仅是光线方向。
 
-在 `compute` 中，在 `(closestObject == PlaneObj)` 块之后但在 `if (dist.x < eps)` 块内部，获取相机光线交叉物体处的法线并在并在进行反射。
+在`compute`中，在`(closestObject == PlaneObj)`块之后但在`if (dist.x < eps)`块内部，获取相机光线交叉物体处的法线并在进行反射。
 
 添加这段代码：
 
-```
+```cpp
 float3 normal = getNormal(cam.ray);
 cam = reflectRay(cam, normal, eps);
 ```
 
-你沿着法线方向远离表面，而不是你可能预期的沿光线方向（因为光线可能几乎与表面平行）。你只移动了很小的距离 `eps`，这个距离足够告诉你你没有命中。
+你沿着法线方向远离表面，而不是你可能预期的沿光线方向（因为光线可能几乎与表面平行）。你只移动了很小的距离`eps`，这个距离足够告诉你你没有命中。
 
-`eps` 越大，命中表面所需的步骤越少，追踪速度越快；但准确性也会越低。你可以尝试 `eps` 的各种值，直到找到满足你需求的精度和速度之间的平衡。
+`eps`越大，命中表面所需的步骤越少，追踪速度越快；但准确性也会越低。你可以尝试`eps`的各种值，直到找到满足你需求的精度和速度之间的平衡。
 
 运行游场，你会看到这个：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_551_0.png)
 
-你成功地将棋格反射到球体上，但天空没有反射。这是因为在初始代码中你使用了布尔值 `hit`，它会在光线命中任何物体时停止出循环。
+你成功地将棋格反射到球体上，但天空没有反射。这是因为在初始代码中你使用了布尔值`hit`，它会在光线命中任何物体时停止出循环。
 
 现在不再如此了，因为现在你需要光线保持反射。
 
 替换这段代码：
 
-```
+```cpp
 if (hit) {
-col = mix(float3(.8, .8, .4), float3(.4, .4, 1.), cam.dir.y);
+  col = mix(float3(.8, .8, .4), float3(.4, .4, 1.), cam.dir.y);
 } else {
-float3 normal = getNormal(cam.ray);
+  float3 normal = getNormal(cam.ray);
 ```
 
-```
+```cpp
 float a = ao(cam.ray.origin, n);
 col = col * a;
 ```
 
 替换为这一行：
 
-```
+```cpp
 col *= mix(float3(0.8, 0.8, 0.4), float3(0.4, 0.4, 1.0), cam.dir.y);
 ```
 
-你现在正在将天空颜色全局添加到场景中，而不仅仅是光线命中物体时。你可以选择性删除 `ao()` 函数和 `compute` 中的那两行，因为你不再使用它们了。
+你现在正在将天空颜色全局添加到场景中，而不仅仅是光线命中物体时。你可以选择性删除`ao()`函数和`compute`中的那两行，因为你不再使用它们了。
 
 运行游场，你会看到天空现在反射在球体和地板上。
 
@@ -14764,22 +14189,22 @@ col *= mix(float3(0.8, 0.8, 0.4), float3(0.4, 0.4, 1.0), cam.dir.y);
 
 你可以稍微旋转相机，让反射更有趣。在内核函数中添加此参数：
 
-```
-constant float time [[buffer(0)]
+```cpp
+constant float time [[buffer(0)]]
 ```
 
 替换这一行：
 
-```
+```cpp
 float3 camPos = float3(15.0, 7.0, 0.0);
 ```
 
 替换为这一行：
 
-```
+```cpp
 float3 camPos = float3(sin(time) * 15.0,
-sin(time) * 5.0,
-cos(time) * 7.0);
+                       sin(time) * 5.0,
+                       cos(time) * 7.0);
 ```
 
 运行游场，你将看到相同的图像但现在有了动画。
@@ -14794,9 +14219,9 @@ $\frac{\sin \theta_2}{\sin \theta_1} = \frac{\text{IOR of media 1}}{\text{IOR of
 
 > 注意：有各种介质的折射率，但我们感兴趣的是空气（1）和水（1.33）。https://en.wikipedia.org/wiki/List_of_refractive_indices
 
-你需要一种知道光线是否在球体内部的方法，因为你只在这种情况下进行折射。在内核 `compute` 函数中、`for` 循环之前添加这段代码：
+你需要一种知道光线是否在球体内部的方法，因为你只在这种情况下进行折射。在内核`compute`函数中、`for`循环之前添加这段代码：
 
-```
+```cpp
 bool inside = false;
 ```
 
@@ -14804,34 +14229,29 @@ bool inside = false;
 
 找到：
 
-```
+```cpp
 float2 dist = distToScene(cam.ray);
 ```
 
-此外，根据是否在球体内部调整 `x` 值。添加这一行：
+此外，根据是否在球体内部调整`x`值。添加这一行：
 
-```
+```cpp
 dist.x *= inside ? -1.0 : 1.0;
 ```
 
 接下来，你需要调整法线。删除这一行：
 
-```
+```cpp
 float3 normal = getNormal(cam.ray);
 ```
 
 现在找到这一行：
 
-```
+```cpp
 if (dist.x < eps) {
 ```
 
 ![](img/8d763acb335ab213ea9213a628f7d844_554_0.png)
-
-
-
-
-## Metal 教程
 
 在那行代码之后，重新添加法线的定义：
 
@@ -14841,49 +14261,46 @@ float3 normal = getNormal(cam.ray) * (inside ? -1.0 : 1.0);
 
 你现在有了一个法线，它在球外部时指向外，在球内部时指向内。
 
-将此行移动到内部 `if` 块中，因为现在起你只想让平面具有反射性：
+将此行移动到内部`if`块中，因为现在起你只想让平面具有反射性：
 
-```
+```cpp
 cam = reflectRay(cam, normal, eps);
 ```
 
-在内部块之后，添加一个 `else` 块让球体变为折射：
+在内部块之后，添加一个`else`块让球体变为折射：
 
 ```cpp
 // 1
 else if (closestobject == SphereObj) {
-inside = !inside;
-// 2
-float ior = inside ? 1.0 / 1.33 : 1.33;
-cam = refractRay(cam, normal, eps, ior);
+  inside = !inside;
+  // 2
+  float ior = inside ? 1.0 / 1.33 : 1.33;
+  cam = refractRay(cam, normal, eps, ior);
 }
 ```
 
 代码逻辑解析：
 
-- 1. 检查你是否在球内部。在第一次相交时，射线进入球体，因此将 `inside` 设为 `true` 并进行折射。在第二次相交时，射线离开球体，将 `inside` 设为 `false`，不再发生折射。
-
-- 2. 根据射线方向设置折射率 (IOR)。水的折射率为 1.33。射线首先进入水，然后进入空气，此时 IOR 变为 1 / 1.33。
+- 1. 检查你是否在球内部。在第一次相交时，射线进入球体，因此将`inside`设为`true`并进行折射。在第二次相交时，射线离开球体，将`inside`设为`false`，不再发生折射。
+- 2. 根据射线方向设置折射率（IOR）。水的折射率为 1.33。射线首先进入水，然后进入空气，此时 IOR 变为 1 / 1.33。
 
 将此函数添加到你的内核计算函数中：
 
 ```cpp
 Camera refractRay(Camera cam, float3 n, float eps, float ior) {
-cam.ray.origin -= n * eps * 2.0;
-cam.ray.dir = refract(cam.ray.dir, n, ior);
-return cam;
+  cam.ray.origin -= n * eps * 2.0;
+  cam.ray.dir = refract(cam.ray.dir, n, ior);
+  return cam;
 }
 ```
 
-MSL 标准库中也提供了 `refract()` 函数，所以你只是在它周围构建了一个方便函数。这次减去了距离，因为射线在球内部。
+MSL 标准库中也提供了`refract()`函数，所以你只是在它周围构建了一个方便函数。这次减去了距离，因为射线在球内部。
 
-你还双倍了 `eps` 值，这足以让移动足够深入内部以避免再次发生碰撞。
-
-## Metal 教程
+你还双倍了`eps`值，这足以让移动足够深入内部以避免再次发生碰撞。
 
 # 第 20 章：高级光照
 
-如果仍使用旧值，射线可能会停止并将其视为与对象的另碰撞，因为 `eps` 的定义正是为了这个目的：**精度**。将其翻倍会让射线刚好越过之前的碰撞点。
+如果仍使用旧值，射线可能会停止并将其视为与对象的另碰撞，因为`eps`的定义正是为了这个目的：精度。将其翻倍会让射线刚好越过之前的碰撞点。
 
 运行 playground（播放场），你会看到球体现在具有折射性。
 
@@ -14893,7 +14310,7 @@ MSL 标准库中也提供了 `refract()` 函数，所以你只是在它周围构
 
 在球体上创建一个廉价的伪水效果相对简单。
 
-打开第 3 个 water playground 页面并运行。你将看到与前一节相同的动画。在该播放页面的 Resources 文件夹中，打开 `Shaders.metal`。在 `distToScene` 函数中，找到：
+打开第 3 个 water playground 页面并运行。你将看到与前一节相同的动画。在该播放页面的`Resources`文件夹中，打开`Shaders.metal`。在`distToScene`函数中，找到：
 
 ```cpp
 float object = (dtp > dts) ? SphereObj : PlaneObj;
@@ -14908,7 +14325,6 @@ if (object == SphereObj) {
   pos += float3(sin(pos.y * 5.0),
                 sin(pos.z * 5.0),
                 sin(pos.x * 5.0)) * 0.05;
-
   // 2
   Ray ray = Ray(pos, r.dir);
   dts = distToSphere(ray, s);
@@ -14917,8 +14333,7 @@ if (object == SphereObj) {
 
 代码逻辑解析：
 
-- 1. 获取射线的当前位置，通过修改所有三个坐标给球体表面产生波纹。使用 `0.05` 来衰减这种变化。`0.001` 的值不足以产生影响，而 `0.01` 的影响太大。
-
+- 1. 获取射线的当前位置，通过修改所有三个坐标给球体表面产生波纹。使用`0.05`来衰减这种变化。`0.001`的值不足以产生影响，而`0.01`的影响太大。
 - 2. 使用修改后的位置作为新射线起点构建新射线，同时保留旧方向。使用这条新射线计算到球体的距离。
 
 在内核计算函数中，替换这一行：
@@ -14933,7 +14348,7 @@ cam.ray.origin += cam.ray.dir * dist.x;
 cam.ray.origin += cam.ray.dir * dist.x * 0.5;
 ```
 
-你添加了 `0.5` 的衰减因子，使动画变慢但更精确。
+你添加了`0.5`的衰减因子，使动画变慢但更精确。
 
 运行 playground，你会看到一个像水的球。
 
@@ -14943,7 +14358,7 @@ cam.ray.origin += cam.ray.dir * dist.x * 0.5;
 
 # 光栅化水
 
-从现在开始到章节结束，你将学习适配由 Michael Horsch 在 2005 年开发的创建真实水的示例算法（更多信息请参见 `references.markdown`）。这种真实的水算法完全基于光照和其光学特性，而不是基于物理的水体模拟。
+从现在开始到章节结束，你将学习适配由 Michael Horsch 在 2005 年开发的创建真实水的示例算法（更多信息请参见`references.markdown`）。这种真实的水算法完全基于光照和其光学特性，而不是基于物理的水体模拟。
 
 以下是你的执行计划：
 
@@ -14955,25 +14370,24 @@ cam.ray.origin += cam.ray.dir * dist.x * 0.5;
 - 6. 应用菲涅尔效应，使每个纹理的主导地位取决于视角。
 - 7. 使用深度纹理增加水的深度可见性。
 
-准备好了吗？这将是一个疯狂的旅程，但坚持到最后，你不会错过它的。打开名为 `Water` 的启动项目。编译并运行，你会看到：
+准备好了吗？这将是一个疯狂的旅程，但坚持到最后，你不会错过它的。打开名为`Water`的启动项目。编译并运行，你会看到：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_558_0.png)
 
-
-
-
-
 ```cpp
 VertexOut vertex_out;
+
 float4x4 mvp = uniforms.projectionMatrix * uniforms.viewMatrix
     * uniforms.modelMatrix;
+
 vertex_out.position = mvp * vertex_in.position;
 vertex_out.uv = vertex_in.uv;
+
 return vertex_out;
 ```
 
 ```cpp
-fragment float4 fragment_water(VertexOut vertex_in [[ stage_in]])
+fragment float4 fragment_water(VertexOut vertex_in [[stage_in]])
 return float4(0.0, 0.3, 0.5, 1.0);
 ```
 
@@ -14991,28 +14405,29 @@ return float4(0.0, 0.3, 0.5, 1.0);
 
 ![](img/8d763acb335ab213ea9213a628f7d844_561_1.png)
 
-## Metal 教程
-
-# 第 20 章：高级光照
-
 要实现此点，你首先需要创建一个渲染通道。
 
-在 Renderer.swift 中，为 Renderer 添加此属性：
+在`Renderer.swift`中，为`Renderer`添加此属性：
 
 ```swift
-let reflection(metalView: RenderPass)
+let reflectionRenderPass: RenderPass
 ```
 
-在 init(metalView:) 中，在调用 super.init() 之前添加以下内容：
+在`init(metalView:)`中，在调用`super.init()`之前添加以下内容：
 
 ```swift
-reflectionRenderPass = RenderPass(name: "reflection",
-size: metalView.drawableSize)
+reflectionRenderPass = RenderPass(
+    name: "reflection",
+    size: metalView.drawableSize
+)
 ```
 
-RenderPass 将创建一个包含纹理和深度纹理的渲染通道描述符。
 
-你需要在 mtkView(_:drawableSizeWillChange:) 中在视图调整大小时通过 reflectionRenderPass 更新这些纹理的大小，添加：
+
+
+`RenderPass` 将创建一个包含纹理和深度纹理的渲染通道描述符。
+
+你需要在`mtkView(_:drawableSizeWillChange:)`中在视图调整大小时通过`reflectionRenderPass`更新这些纹理的大小，添加：
 
 ```swift
 reflectionRenderPass.updateTextures(size: size)
@@ -15020,19 +14435,21 @@ reflectionRenderPass.updateTextures(size: size)
 
 现在你已经设置好了渲染通道，创建一个编码器，并将整个场景渲染到反射通道纹理中。
 
-在 draw(in:) 中，添加以下代码 // 水渲染：
+在`draw(in:)`中，添加以下代码 // 水渲染：
 
 ```swift
 // 1
 let reflectEncoder =
-commandBuffer.makeCommandEncoder(
-descriptor: reflectionRenderPass.descriptor)!
+  commandBuffer.makeCommandEncoder(
+    descriptor: reflectionRenderPass.descriptor)!
 reflectEncoder.setDepthStencilState(depthStencilState)
+
 // 2
 reflectCamera.transform = camera.transform
 reflectCamera.transform.position.y = -camera.transform.position.y
 reflectCamera.transform.rotation.x = -camera.transform.rotation.x
 uniforms.viewMatrix = reflectionCamera.viewMatrix
+
 // 3
 renderEncoder(renderEncoder: reflectEncoder)
 renderTerrain(renderEncoder: reflectEncoder)
@@ -15050,17 +14467,17 @@ reflectEncoder.endEncoding())
 
 # 第 20 章：高级光照
 
-> **注意：** 此时你可以进行构建并运行，查看 GPU 帧，并确认你是否有两个 RenderCommandEncoder。第一个 RenderCommandEncoder 是从反射相机位置捕获的纹理。它是半大小的，因为你不需要反射纹理完全准确。在可能的地方节省内存。
+> **注意：** 此时你可以进行构建并运行，查看 GPU 帧，并确认你是否有两个`RenderCommandEncoder`。第一个`RenderCommandEncoder`是从反射相机位置捕获的纹理。它是半大小的，因为你不需要反射纹理完全准确。在可能的地方节省内存。
 
 如果你再次构建并运行项目，它看起来会和之前一样——这很好，但反射在哪里呢？
 
-在 **RendererDraws.swift** 中，将反射渲染通道的纹理发送到水着色器。在 renderWater(renderEncoder:) 循环之前添加此行：
+在`RendererDraws.swift`中，将反射渲染通道的纹理发送到水着色器。在`renderWater(renderEncoder:)`循环之前添加此行：
 
 ```swift
 renderEncoder.setFragmentTexture(reflectionRenderPass.texture, index: 0)
 ```
 
-在 **Water.metal** 中，为片段函数添加一个新参数：
+在`Water.metal`中，为片段函数添加一个新参数：
 
 ```cpp
 texture2d<float> reflectionTexture [[ texture(0) ]]
@@ -15071,12 +14488,14 @@ texture2d<float> reflectionTexture [[ texture(0) ]]
 ```cpp
 // 1
 const sampler s(filter::linear, address::repeat);
+
 // 2
 float width = float(reflectionTexture.get_width() * 2.0);
 float height = float(reflectionTexture.get_height()) * 2.0;
 float x = vertex_in.position.x / width;
 float y = vertex_in.position.y / height;
 float2 reflectionCoords = float2(x, 1 - y);
+
 // 3
 float4 color = reflectionTexture.sample(s, reflectionCoords);
 color = mix(color, float4(0.0, 0.3, 0.5, 1.0), 0.3);
@@ -15113,42 +14532,40 @@ return color;
 
 将裁剪放在视图中心可以确保只渲染一半的场景几何体。
 
-在 **Common.h** 中，为 Uniforms 添加新成员：
+在`Common.h`中，为`Uniforms`添加新成员：
 
 ```cpp
 float4 clipPlane;
 ```
 
-在 **Skybox.metal** 中，为 VertexOut 添加新成员：
+在`Skybox.metal`中，为`VertexOut`添加新成员：
 
 ```cpp
 float clip_distance [[ clip_distance ]];
 ```
 
-注意 MSL 属性 `[[ clip_distance ]]`，它是内置属性之一。
+注意 MSL 属性`[[ clip_distance ]]`，它是内置属性之一。
 
-> 注意：你可以在《Metal 着色语言》第 4.9.1 节中了解更多信息。
+> **注意：** 你可以在《Metal 着色语言》第 4.9.1 节中了解更多信息。
 
-你可能注意到在 **Shaders.metal** 中，FragmentIn 是 VertexOut 的副本，所以你复制该结构体以便片段着色器可以使用。
+你可能注意到在`Shaders.metal`中，`FragmentIn`是`VertexOut`的副本，所以你复制该结构体以便片段着色器可以使用。
 
 ```cpp
 float clip_distance;
 ```
 
-# 第 20 章：高级光照
-
-在 vertex_skybox 中，在 return 前添加此行：
+在`vertex_skybox`中，在`return`前添加此行：
 
 ```cpp
 vertex_out.clip_distance[0] = dot(uniforms.modelMatrix *
-vertex_in.position, uniforms.clipPlane);
+  vertex_in.position, uniforms.clipPlane);
 ```
 
-vertex_out.clip_distance[0] 的任何负结果都会导致顶点被裁剪。
+`vertex_out.clip_distance[0]`的任何负结果都会导致顶点被裁剪。
 
-在 Shaders.metal 中重复最后三个步骤：相应修改 VertexOut 结构体、FragmentIn 结构体和 vertex_main。
+在`Shaders.metal`中重复最后三个步骤：相应修改`VertexOut`结构体、`FragmentIn`结构体和`vertex_main`。
 
-回到 Renderer.swift，在 draw(in:) 中的 // 水渲染下方添加此行：
+回到`Renderer.swift`，在`draw(in:)`中的 // 水渲染下方添加此行：
 
 ```swift
 var clipPlane = float4(0, 1, 0, 0.1)
@@ -15169,9 +14586,6 @@ clipPlane = float4(0, -1, 0, 100)
 
 哎呀！发生什么了？看来裁剪平面的第四个组件值 6 仍然影响了你想要渲染的部分场景。将裁剪距离从 6 增加到 100。
 
-
-
-
 编译并运行，你的水面反射将变得平滑而平静。当你上下移动相机时，反射现在保持了一致。
 
 静止的水无论多么平静都是不真实的。是时候给水面增加一些波纹了。
@@ -15184,45 +14598,47 @@ clipPlane = float4(0, -1, 0, 100)
 
 你将此图平铺在水面上并移动它，从而扰动水法线，使水面看起来产生了波纹。
 
-在 `Renderer.swift` 中，为 `Renderer` 添加此新属性：
+在`Renderer.swift`中，为`Renderer`添加此新属性：
 
-在水变量的声明内部，在 `return` 之前添加此行以加载法线纹理：
+在水变量的声明内部，在`return`之前添加此行以加载法线纹理：
 
-```
+```swift
 waterTexture = try Renderer.loadTexture(imageName: "normal-water.png")
 ```
 
-在 `RendererDraws.swift` 中，在 `renderWater(renderEncoder:)` 的循环之前添加以下代码：
+在`RendererDraws.swift`中，在`renderWater(renderEncoder:)`的循环之前添加以下代码：
 
-```
+```swift
 renderEncoder.setFragmentTexture(waterTexture, index: 2)
 renderEncoder.setFragmentBytes(&timer,
-length: MemoryLayout<Float>.size,
-index: 3)
+  length: MemoryLayout<Float>.size,
+  index: 3)
 ```
 
-在这里，你将法线图和一个变量发送到片段着色器。`Renderer` 的 `draw(in:)` 维护了这个计时器。
+在这里，你将法线图和一个变量发送到片段着色器。`Renderer`的`draw(in:)`维护了这个计时器。
 
-在 `Metal.metal` 中，为 `fragment_water` 添加纹理和 `timer` 的两个参数：
+在`Metal.metal`中，为`fragment_water`添加纹理和`timer`的两个参数：
 
-```
+```cpp
 texture2d<float> normalTexture [[ texture(2) ]],
 constant float& timer [[ buffer(3) ]]
 ```
 
 在定义颜色之前添加以下代码：
 
-```
+```cpp
 // 1
 float2 uv = vertex_in.uv * 2.0;
+
 // 2
 float2 waveStrength = 0.1;
 float2 rippleX = float2(uv.x + timer, uv);
 float2 rippleY = float2(-uv.x, uv) + timer;
 float2 ripple = ((normalTexture.sample(s, rippleX).rg * 2.0 - 1.0) +
-    (normalTexture.sample(s, rippleY).rg * 2.0  1.0))
-    * waveStrength);
+  (normalTexture.sample(s, rippleY).rg * 2.0  1.0))
+  * waveStrength);
 reflectionCoords = ripple;
+
 // 3
 reflectionCoords = clamp(reflectionCoords, 0.001, 0.999);
 ```
@@ -15230,7 +14646,7 @@ reflectionCoords = clamp(reflectionCoords, 0.001, 0.999);
 解析代码：
 
 - 1. 获取纹理坐标并将其乘以一个平铺值。对于 2，你会得到巨大且充足的波纹，而对于 16 这样的值，你会得到非常小的波纹。根据需求选择合适的值。
-- 2. 通过 `timer` 扭曲纹理坐标来计算波纹。仅从采样的纹理中提取 R 和 G 值，因为它们是决定波纹所在水平面的 U 和 V 坐标，所以 B 值在这里并不重要。`waveStrength` 是一个衰减值，可以产生更弱或更强的波浪。
+- 2. 通过`timer`扭曲纹理坐标来计算波纹。仅从采样的纹理中提取 R 和 G 值，因为它们是决定波纹所在水平面的 U 和 V 坐标，所以 B 值在这里并不重要。`waveStrength`是一个衰减值，可以产生更弱或更强的波浪。
 - 3. 限制反射坐标以消除屏幕边缘的异常情况。
 
 编译并运行，你将看到水面上华丽的波纹。
@@ -15243,34 +14659,35 @@ reflectionCoords = clamp(reflectionCoords, 0.001, 0.999);
 
 ![](img/8d763acb335ab213ea9213a628f7d844_569_0.png)
 
-在 `Renderer.swift` 中，为 `Renderer` 添加此新属性：
+在`Renderer.swift`中，为`Renderer`添加此新属性：
 
-```
+```swift
 let refractionRenderPass: RenderPass
 ```
 
-在 `init(metaView)` 中，将 `refractionRenderPass` 初始化一个新的渲染通道，就像你之前处理折射渲染通道一样：
+在`init(metaView)`中，将`refractionRenderPass`初始化一个新的渲染通道，就像你之前处理折射渲染通道一样：
 
-```
+```swift
 refractionRenderPass = RenderPass(name: "refraction", size: metalView.drawableSize)
 ```
 
-在视图调整大小时，更新这些纹理的大小。在 `mtkView(_:drawableSizeChange)` 中，添加：
+在视图调整大小时，更新这些纹理的大小。在`mtkView(_:drawableSizeChange)`中，添加：
 
-```
+```swift
 refractionRenderPass.updateTextures(size: size)
 ```
 
-在 `draw(in:)` 中，在 `// Main render:` 之前添加以下代码：
+在`draw(in:)`中，在 // Main render: 之前添加以下代码：
 
-```
+```swift
 // 1
 clipPlane = float4(0, -1, 0, 0.1)
 uniforms.clipPlane = clipPlane
 uniforms.viewMatrix = camera.viewMatrix
+
 // 2
 let refractEncoder = 
-commandBuffer.makeRenderEncoder(descriptor: refractionRenderPass.descriptor!)
+  commandBuffer.makeRenderEncoder(descriptor: refractionRenderPass.descriptor!)
 refractEncoder.setDepthStencilDescriptor(depthStencilDescriptor)
 renderHouse(renderEncoder: refractEncoder)
 renderTerrain(renderEncoder: refractEncoder)
@@ -15286,7 +14703,7 @@ refractEncoder.endEncoding()
 
 你还可以对水面进行一项视觉增强使其更真实：添加岩石和污垢。幸运的是，项目已经有一个可以模拟这种效果的纹理。
 
-在 `Shaders.metal` 的 `fragment_terrain` 中，取消 `//uncomment this for pebbles.` 下方的部分。
+在`Shaders.metal`的`fragment_terrain`中，取消 //uncomment this for pebbles. 下方的部分。
 
 编译并运行项目，你现在会看到水下有更深色的纹理。
 
@@ -15303,8 +14720,6 @@ refractEncoder.endEncoding()
 
 光在不同介质中的传播是不同的，但对于水，波长较长的颜色（接近红光）会随深度增加而消失。蓝色调（接近紫外线）在较深的地方变得可见。在非常浅的地方，大部分光应该是可见的。
 
-
-
 # 挑战 (Challenge)
 
 你在这一章的挑战是使用波纹部分的法线贴图，这次是为了添加表面光照。
@@ -15313,10 +14728,10 @@ refractEncoder.endEncoding()
 
 ![](img/8d763acb335ab213ea9213a628f7d844_575_0.png)
 
-你需要完成的所有工作将在 `fragment_water.metal` 中进行。以下是步骤：
+你需要完成的所有工作将在`fragment_water.metal`中进行。以下是步骤：
 
 - 1. 像之前处理波纹时那样获取法线向量。但在这种情况下，你还需要获取 B 通道，由于它将是“向上”向量，你需要交换 G 和 B 通道，以便最终得到 RBG 形式的法线向量。
-- 2. 在像之前那样使用 `reflect` 函数计算反射光之前，对法线和光线方向进行归一化。
+- 2. 在像之前那样使用`reflect`函数计算反射光之前，对法线和光线方向进行归一化。
 - 3. 使用反射光和之前用于菲涅尔效应的视图向量计算高光光。应用更高的幂，直到你对高光光的强度满意。
 - 4. 将高光光加到最终颜色中。
 
@@ -15324,11 +14739,12 @@ refractEncoder.endEncoding()
 
 # 接下来去向哪里？
 
-你在这一章中确实取得了非凡的成就！如果你想探索更多关于水渲染的内容，本章的 `references.markdown` 文件包含了有趣文章和视频的链接。
+你在这一章中确实取得了非凡的成就！如果你想探索更多关于水渲染的内容，本章的`references.markdown`文件包含了有趣文章和视频的链接。
 
 使用光线步进（raymarching）的章节到此结束。但别担心——渲染远未结束。在下一章“Metal Performance Shaders”中，你将学习新添加的用于加速光线追踪的 Metal 功能，并涉足图像处理。
 
 # 第 21 章：Metal Performance Shaders (Metal 性能加速器)
+
 作者 Marius Horga
 
 在第 11 章“细分化与地形”中，你简要体验了使用 Metal Performance Shaders (MPS) 框架。MPS 由低级、精细调整、高性能的内核组成，只需极少配置即可运行。在本章中，你将更深入地探索 MPS 的世界。
@@ -15337,24 +14753,23 @@ refractEncoder.endEncoding()
 
 MPS 内核利用数据并行原语，这些原语的编写方式可以利用每个 GPU 家族的特性。开发者不需要关心代码需要在哪个 GPU 上运行，因为 MPS 内核针对你可能使用的每个 GPU 都编写了相同内核的多个版本。将 MPS 内核想象成方便的黑盒，它们与你的命令缓冲区高效且无缝地工作。只需给它所需的效果、源和目标资源（缓冲区或纹理），然后动态编码 GPU 命令即可！
 
-Sobel 滤波器是检测图像边缘的极佳方法。在本章的项目文件夹中，打开并运行 `sobel.playground`，你将看到这种效果（左：原始图像，右：应用了 Sobel 滤波器）：
+Sobel 滤波器是检测图像边缘的极佳方法。在本章的项目文件夹中，打开并运行`sobel.playground`，你将看到这种效果（左：原始图像，右：应用了 Sobel 滤波器）：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_577_0.png)
 
 假设你已经创建了设备对象、命令队列、命令缓冲区和输入图像的纹理对象，只需要两行代码即可将 Sobel 滤波器应用到输入图像：
 
-```
-let shader = MPSImageSobel(device: device)
-shader.encode(commandBuffer:commandBuffer,
-             sourceTexture:inputImage,
-              destinationTexture:drawable.texture)
-```
+
+
+`let shader = MPSImageSobel(device: device)`
+
+`shader.encode(commandBuffer:commandBuffer, sourceTexture:inputImage, destinationTexture:drawable.texture)`
 
 MPS 内核不是线程安全的，因此不建议在多个并发写入同一个命令缓冲线程上运行内核。
 
-此外，你应该始终将内核分配给单个设备，因为内核的 `init(device:)` 方法可能会分配当前设备持有的资源，而这些资源可能其他设备可用。
+此外，你应该始终将内核分配给单个设备，因为内核的`init(device:)`方法可能会分配当前设备持有的资源，而这些资源可能其他设备可用。
 
-> 注意：MPS 内核提供了 `copy(with:device:)` 方法，允许它们被复制到另一个设备。
+> **注意：** MPS 内核提供了`copy(with:device:)`方法，允许它们被复制到另一个设备。
 
 MPS 框架除了图像滤波器之外还有许多用途。其中一个领域是神经网络，这本书并未涵盖该领域。相反，你将继续关注：
 
@@ -15402,37 +14817,35 @@ RGB 图像只不过是一个包含 0 到 255 之间数字的矩阵（当使用 8
 
 （注：后续内容已根据提供的逻辑结构进行了处理，去除了重复和错误。）
 
-
-
 该项目目前渲染视图的可绘制纹理（drawable texture）。我不再将此纹理发送到屏幕，而是拦截并使用可绘制纹理作为阈值滤波器的输入。
 
-首先，在 `Renderer.swift` 顶部导入 MPS 框架：
+首先，在`Renderer.swift`顶部导入 MPS 框架：
 
 ```
 import MetalPerformanceShaders
 ```
 
-在 `Renderer` 顶部定义两个纹理：
+在`Renderer`顶部定义两个纹理：
 
 ```
 var outputTexture: MTLTexture!
 var finalTexture: MTLTexture!
 ```
 
-`outputTexture` 将存储模糊后的纹理，而 `finalTexture` 将存储此纹理与初始渲染器的结合。
+`outputTexture`将存储模糊后的纹理，而`finalTexture`将存储此纹理与初始渲染器的结合。
 
-将此内容添加到 `mtView(_drawableSizeWillChange:)` 的末尾。记得你在 `init(metalView)` 结束时调用此方法，并在每次视图调整大小时调用它：
+将此内容添加到`mtView(_drawableSizeWillChange:)`的末尾。记得你在`init(metalView)`结束时调用此方法，并在每次视图调整大小时调用它：
 
 ```
 outputTexture = createTexture(pixelFormat: .colorPixelFormat, size: .size)
 finalTexture = createTexture(pixelFormat: .colorPixelFormat, size: .size)
 ```
 
-你使用一个辅助方法创建 `MTLTextures`。这将能够读取并渲染到这些纹理中。
+你使用一个辅助方法创建`MTLTextures`。这将能够读取并渲染到这些纹理中。
 
 ## 图像阈值置零零
 
-使用以下代码，`MPSImageThresholdToZero` 是一个过滤器，它对于每个像素，如果值大于指定的亮度阈值则返回原始值，否则返回 0：
+使用以下代码，`MPSImageThresholdToZero`是一个过滤器，它对于每个像素，如果值大于指定的亮度阈值则返回原始值，否则返回 0：
 
 ```
 destinationColor = sourceColor > thresholdValue ? sourceColor : 0
@@ -15440,7 +14853,7 @@ destinationColor = sourceColor > thresholdValue ? sourceColor : 0
 
 这将使得较暗的区域变为黑色，而较亮的区域则保留其原始颜色值。
 
-在 `draw(_)` 中，寻找 `// MPS brightness filter`，然后添加一行，使用一个 MPS 内核来渲染一个亮度阈值设为 0.2 的纹理：
+在`draw(_)`中，寻找`// MPS brightness filter`，然后添加一行，使用一个 MPS 内核来渲染一个亮度阈值设为 0.2 的纹理：
 
 ```
 let brightness = MPSImageThresholdToZero(device: Renderer.device, thresholdValue: 0.2, linearGrayColorTransform: nil)
@@ -15448,19 +14861,19 @@ brightness.label = "MPS brightness"
 brightness.encode(commandBuffer: commandBuffer, sourceTexture: drawable.texture, destinationTexture: outputTexture)
 ```
 
-在这里，你设置了带有阈值值的 MPS 过滤器，所有颜色值小于 0.2 的像素都将变为黑色。输入纹理是可绘制纹理，它包含了当前渲染的场景。滤波器的结果将进入 `outputTexture`。
+在这里，你设置了带有阈值值的 MPS 过滤器，所有颜色值小于 0.2 的像素都将变为黑色。输入纹理是可绘制纹理，它包含了当前渲染的场景。滤波器的结果将进入`outputTexture`。
 
-在内部，MPS 内核从 `drawable.texture` 采样，因此你必须将可绘制纹理设置为可读/写拷贝。将此内容添加到 `init(metalView)` 的顶部：
+在内部，MPS 内核从`drawable.texture`采样，因此你必须将可绘制纹理设置为可读/写拷贝。将此内容添加到`init(metalView)`的顶部：
 
 ```
 metalView.framebufferOnly = false
 ```
 
-Metal 会尽可能地优化可绘制纹理，因此将 `framebufferOnly` 设置为 `false` 会稍微影响性能。
+Metal 会尽可能地优化可绘制纹理，因此将`framebufferOnly`设置为`false`会稍微影响性能。
 
-为了看到此滤波器的结果，你需要将 `outputTexture` 拷贝回可绘制纹理。你应该熟悉第 14 章“多通道渲染和延迟渲染”中的 blit 编码器。
+为了看到此滤波器的结果，你需要将`outputTexture`拷贝回可绘制纹理。你应该熟悉第 14 章“多通道渲染和延迟渲染”中的 blit 编码器。
 
-在 `draw(in:)` 中找到 `// blit encoder`，并在之后添加此内容：
+在`draw(in:)`中找到`// blit encoder`，并在之后添加此内容：
 
 ```
 finalTexture = outputTexture
@@ -15491,9 +14904,9 @@ blitEncoder.endEncoding()
 
 ## 高斯模糊
 
-`MPSImageGaussianBlur` 是一种过滤器，它在 X 和 Y 方向上使用给定的 `sigma` 值（模糊程度）对图像进行高斯模糊卷积。
+`MPSImageGaussianBlur`是一种过滤器，它在 X 和 Y 方向上使用给定的`sigma`值（模糊程度）对图像进行高斯模糊卷积。
 
-在 `Renderer.swift` 的 `draw(in:)` 中，找到 `MPS blur filter`，并添加此代码：
+在`Renderer.swift`的`draw(in:)`中，找到`MPS blur filter`，并添加此代码：
 
 ```
 let blur = MPSImageGaussianBlur(device: Renderer.device, sigma: 9.0)
@@ -15503,7 +14916,7 @@ blur.encode(commandBuffer: commandBuffer, inPlaceTexture: &outputTexture, fallba
 
 原地编码（In-place encoding）是一种特殊的编码类型，其中输入纹理被处理到一个临时纹理，最后写回输入纹理，而不需要你手动指定一个输出纹理。
 
-`fallbackCopyAllocator` 参数允许你提供一个闭包，当普通的原地编码失败时，你可以在其中指定输入图像发生什么。
+`fallbackCopyAllocator`参数允许你提供一个闭包，当普通的原地编码失败时，你可以在其中指定输入图像发生什么。
 
 编译并运行项目，你将看到此模糊的结果。
 
@@ -15515,8 +14928,8 @@ blur.encode(commandBuffer: commandBuffer, inPlaceTexture: &outputTexture, fallba
 
 # Metal 教程第 21 章：Metal Performance Shaders
 
-`MPSImageArithmetic` 正如其名，它对图像像素进行算术运算。
-它的子类包括 `MPSImageAdd`、`MPSImageSubtract`、`MPSImageMultiply` 和 `MPSImageDivide`。
+`MPSImageArithmetic`正如其名，它对图像像素进行算术运算。
+它的子类包括`MPSImageAdd`、`MPSImageSubtract`、`MPSImageMultiply`和`MPSImageDivide`。
 
 将渲染的场景添加到模糊像素中将点亮较亮区域。这将使得较亮区域发光，而较暗的区域保持其原始颜色。
 
@@ -15534,8 +14947,6 @@ add.encode(commandBuffer: commandBuffer, sourceTexture: outputTexture, destinati
 
 ![](img/8d763acb335ab213ea9213a628f7d844_583_0.png)
 
-
-
 ## Metal 教程
 
 # 第 21 章：Metal Performance Shaders (性能加速器)
@@ -15546,7 +14957,6 @@ add.encode(commandBuffer: commandBuffer, sourceTexture: outputTexture, destinati
 // 1
 let contents = C.data.contents()
 let pointer = contents.bindMemory(to: Float.self, capacity: count)
-
 // 2
 (0..<count).map {
   pointer.advanced($0).pointee
@@ -15560,13 +14970,13 @@ let pointer = contents.bindMemory(to: Float.self, capacity: count)
 
 运行 Playground；点击最后一行的“Show Result（显示结果）”；右键点击结果图表，选择“Value History（数值历史）”。你会发现数组包含 16 个值，所有值都是 24.0。这意味着矩阵大小为 4×4，将 A 的一行与 B 的一列相乘得到 24.0，即 2×3 相加四次。
 
-这只是一个小矩阵，但你可以更改 Playground 顶部 `size` 变量中的矩阵大小，矩阵乘法依然会得极快。
+这只是一个小矩阵，但你可以更改 Playground 顶部`size`变量中的矩阵大小，矩阵乘法依然会得极快。
 
 # 光线追踪 (Ray tracing)
 
 在第 18 章“使用光线渲染”中，你简要查看了光线追踪和路径追踪。在本章的这一部分中，你将实现一个由 MPS 加速的光线追踪器，实际上，它是一种使用蒙特卡洛积分（Monte integration）的路径追踪器变体。
 
-> 注意：你将使用 Apple 示例应用 https://developer.apple.com/documentation/metalperformanceshaders/metal_for_accelerating_ray_tracing 的适配版本创建一个场景，该版本已翻译为 Swift，并修改为支持 .obj 文件的场景对象，同时为了方便理解进行了简化。
+> **注意：** 你将使用 Apple 示例应用 https://developer.apple.com/documentation/metalperformanceshaders/metal_for_accelerating_ray_tracing 的适配版本创建一个场景，该版本已翻译为 Swift，并修改为支持 .obj 文件的场景对象，同时为了方便理解进行了简化。
 
 raywenderlich.com
 
@@ -15599,38 +15009,38 @@ raywenderlich.com
 
 主光线渲染等同于光栅化场景，但光线追踪中最昂的部分是寻找场景中所有光线与三角形之间的交点。
 
-MPS 框架提供了一个高性能的 `MPSRayInteractor` 类，专门用于在 GPU 上加速光线-三角形相交测试。
+MPS 框架提供了一个高性能的`MPSRayInteractor`类，专门用于在 GPU 上加速光线-三角形相交测试。
 
-`MPSRayInteractor` 对象使用两个输入：一个光线缓冲区和一个加速结构。它将为每条发射的光线找到的所有交点输出到另一个缓冲区中。
+`MPSRayInteractor`对象使用两个输入：一个光线缓冲区和一个加速结构。它将为每条发射的光线找到的所有交点输出到另一个缓冲区中。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_590_0.png)
 
-`MPSTrialAccelerationStructure` 是用于从描述场景三角形的顶点构建加速结构的类。你将该结构传递给交叉器。
+`MPSTrialAccelerationStructure`是用于从描述场景三角形的顶点构建加速结构的类。你将该结构传递给交叉器。
 
 # 1.0 启动项目
 
-是时候写代码了！打开名为 `Raytracing` 的启动项目，编译并运行它。虽然你除了单调的纯色外看不到任何内容，但启动项目包含了大部分所需的设置。
+是时候写代码了！打开名为`Raytracing`的启动项目，编译并运行它。虽然你除了单调的纯色外看不到任何内容，但启动项目包含了大部分所需的设置。
 
-在 `RendererExtension.swift` 中，`loadAsset(name:position:scale:)` 是将对象属性、法线和颜色加载到独立数组的方法。调用此方法并传入 OBJ 文件即可向场景添加对象。
+在`RendererExtension.swift`中，`loadAsset(name:position:scale:)`是将对象属性、法线和颜色加载到独立数组的方法。调用此方法并传入 OBJ 文件即可向场景添加对象。
 
-在 `Renderer` 中：
+在`Renderer`中：
 
-- `createScene()` 加载默认场景。
-- `createBuffers()` 从 OBJ 文件数组创建缓冲区，设置统一体缓冲区（uniform buffer），并创建一个包含随机数的随机缓冲区。
-- `update()` 每帧被调用一次。它更新统一体，然后生成 0 到 1 之间的 256 个随机数。你将使用这些随机数进行抗锯齿、在光源上选择随机点以及反射次级光线。
-- `draw(in:)` 包含你将为光线追踪填充的部分，并在方法结束处渲染一个简单的四形。这目前在片段着色器中被涂为青松色。
+- `createScene()`加载默认场景。
+- `createBuffers()`从 OBJ 文件数组创建缓冲区，设置统一体缓冲区（uniform buffer），并创建一个包含随机数的随机缓冲区。
+- `update()`每帧被调用一次。它更新统一体，然后生成 0 到 1 之间的 256 个随机数。你将使用这些随机数进行抗锯齿、在光源上选择随机点以及反射次级光线。
+- `draw(in:)`包含你将为光线追踪填充的部分，并在方法结束处渲染一个简单的四形。这目前在片段着色器中被涂为青松色。
 
 # 1.1 创建渲染目标 (render target)
 
 在执行各种渲染通道（passes）时，你将写入渲染目标纹理。你会累积值，这将是你渲染到屏幕上的纹理。
 
-在 `Renderer` 顶部，创建渲染目标属性：
+在`Renderer`顶部，创建渲染目标属性：
 
 ```swift
 var renderTarget: MTLTexture!
 ```
 
-在 `mtkView(_drawableSizeChange:)` 中创建纹理。将此代码添加到方法末尾：
+在`mtkView(_drawableSizeChange:)`中创建纹理。将此代码添加到方法末尾：
 
 ```swift
 let renderTargetDescriptor = MTLTextureDescriptor()
@@ -15640,15 +15050,15 @@ renderTargetDescriptor.width = Int(drawableSize.width)
 renderTargetDescriptor.height = Int(drawableSize.height)
 renderTargetDescriptor.usage = [.shaderRead, .renderTarget]
 renderTargetDescriptor.storageMode = .private
-renderTarget = device.makeTexture(descriptor: renderTargetDescriptor)
 ```
 
 
 
+`renderTarget = device.makeTexture(descriptor: renderTargetDescriptor)`
 
 ## Metal 教程
 
-打开 `Raytracing.metal`。它包含了你之后需要的一些辅助函数。在文件顶部，`// add structs here` 之后，添加以下内容：
+打开`Raytracing.metal`。它包含了你之后需要的一些辅助函数。在文件顶部，`// add structs here`之后，添加以下内容：
 
 ```cpp
 struct Ray {
@@ -15660,11 +15070,11 @@ struct Ray {
 };
 ```
 
-相交器的 `rayDataType` 指定了结构体类型为 `originMinDistanceDirectionMaxDistance`，因此你需要根据该类型定义结构体。同时定义额外的自定义字段 `color`，它将有助于场景对象的颜色。
+相交器的`rayDataType`指定了结构体类型为`originMinDistanceDirectionMaxDistance`，因此你需要根据该类型定义结构体。同时定义额外的自定义字段`color`，它将有助于场景对象的颜色。
 
 每条主射线都从相机位置（原点）开始，穿过图像平面，每个像素产生一条射线。
 
-在 `Ray` 下方添加此内核函数：
+在`Ray`下方添加此内核函数：
 
 ```cpp
 kernel void primaryRays(constant Uniforms & uniforms [buffer(0)],
@@ -15703,25 +15113,25 @@ raybenderlich.com
 
 - 1. 检查并确保你没有在使用像素网格之外线程。
 - 2. 为 UV 平上的每个像素分配一个线程。稍微随机化像素以防止锯齿。
-- 3. 为每个线程创建一个射线，并填充 `Ray` 结构体。将射线的原点设置为相机位置，计算射线方向，设置射线可以延伸的最小/最大距离，最后给射线赋予白色。
+- 3. 为每个线程创建一个射线，并填充`Ray`结构体。将射线的原点设置为相机位置，计算射线方向，设置射线可以延伸的最小/最大距离，最后给射线赋予白色。
 - 4. 将渲染目标纹理重置为黑色图像。稍后你会添加颜色。
 
 到这里，你可以刷新一下了！
 
 ![](img/8d763acb335ab213ea9213a628f7d844_595_0.png)
 
-# 1.4 累加
+## 1.4 累加
 
 你正在写入渲染目标纹理，并将将其与其他纹理结合；稍后你会创建其他用于阴影和次级射线的纹理，然后渲染到背景四形上。你现在设置此渲染，以便查看你的进度。
 
-首先，设置流水线状态和最终渲染目标纹理。在 `Renderer.swift` 中，在 `Renderer` 顶部添加此代码：
+首先，设置流水线状态和最终渲染目标纹理。在`Renderer.swift`中，在`Renderer`顶部添加此代码：
 
 ```swift
 var accumulatePipeline: MTLComputePipelineState!
 var accumulationTarget: MTLTexture!
 ```
 
-在 `buildPipelines(view:)` 中，在 `do` 语句内部创建流水线状态：
+在`buildPipelines(view:)`中，在`do`语句内部创建流水线状态：
 
 ```swift
 computeDescriptor.computeFunction = library.makeFunction(name: "accumulateKernel")
@@ -15729,18 +15139,18 @@ computeDescriptor.computeFunction = library.makeFunction(name: "accumulateKernel
 
 ```swift
 accumulatePipeline = try device.makeComputePipelineState(
-descriptor: computeDescriptor,
-options: [],
-reflection: nil)
+    descriptor: computeDescriptor,
+    options: [],
+    reflection: nil)
 ```
 
-在 `mtkView(:drawableWillChange:)` 中，在方法末尾添加此代码创建纹理：
+在`mtkView(:drawableWillChange:)`中，在方法末尾添加此代码创建纹理：
 
 ```swift
 accumulationTarget = device.makeTexture((in:), locate = // MARK: accumulation, 并在下方添加此代码：
 ```
 
-在 `draw(in:)` 中
+在`draw(in:)`中
 
 ```swift
 computeEncoder = commandBuffer.makeComputeEncoder()
@@ -15753,96 +15163,9 @@ computeEncoder?.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: thread
 computeEncoder?.endEncoding()
 ```
 
-在这里，调用累加内核，它从 `renderTarget` 写入 `accumulationTarget`。
+在这里，调用累加内核，它从`renderTarget`写入`accumulationTarget`。
 
-在 `draw(in:)` 稍靠下，在绘制调用之前添加此行：
-
-```swift
-renderEncoder.setFragmentTexture(accumulationTarget, index: 0)
-```
-
-这会将纹理发送到片段着色器进行最终绘制。
-
-在 `Shaders.metal` 中，添加此内核函数：
-
-```cpp
-kernel void accumulateKernel(constant Uniforms & uniforms,
-texture2d<float> renderTarget,
-texture2d<float, access::write> t, uint2 tid [[position_in_grid]])
-{
-    if (tid.x < uniforms.width && tid.y < uniforms.height) {
-        // 1
-        float3 color = renderTarget.read(tid).xyz;
-        if (uniforms.frameIndex > 0) {
-            // 2
-            float3 preColor = t.read(tid).xyz;
-            if (uniforms.frameIndex < 100) {
-                color += preColor;
-            }
-            t.write(float4(color, 1.0), tid);
-        }
-        t.write(float4(color, 1.0), tid);
-    }
-}
-```
-
-Metal 教程
-
-第 21 章：Metal Performance Shaders
-
-遍历代码：
-
-- 1. 检查并确保你没有在使用像素网格之外线程。
-- 2. 为 UV 平上的每个像素分配一个线程。稍微随机化像素以防止锯齿。
-- 3. 为每个线程创建一个射线并填充 `Ray` 结构体。将射线的原点设置为相机位置，计算射线方向，设置射线可以延伸的最小/最大距离，最后给射线赋予白色。
-- 4. 将渲染目标纹理重置为黑色图像。稍后你会添加颜色。
-
-# 1.4 累加
-
-你正在写入渲染目标纹理，并将将其与其他纹理结合；稍后你会创建其他用于阴影和次级射线的纹理，然后渲染到背景四形上。你现在设置此渲染，以便查看你的进度。
-
-首先，设置流水线状态和最终渲染目标纹理。在 `Renderer.swift` 中，在 `Renderer` 顶部添加此代码：
-
-```swift
-var accumulatePipeline: MTLComputePipelineState!
-var accumulationTarget: MTLTexture!
-```
-
-在 `buildPipelines(view:)` 中，在 `do` 语句内部创建流水线状态：
-
-```swift
-computeDescriptor.computeFunction = library.makeFunction(name: "accumulateKernel")
-```
-
-```swift
-accumulatePipeline = try device.makeComputePipelineState(
-descriptor: computeDescriptor,
-options: [],
-reflection: nil)
-```
-
-在 `mtkView(:drawableWillChange:)` 中，在方法末尾添加此代码创建纹理：
-
-```swift
-accumulationTarget = device.makeTexture((in:), locate = // MARK: accumulation, 并在下方添加此代码：
-```
-
-在 `draw(in:)` 中
-
-```swift
-computeEncoder = commandBuffer.makeComputeEncoder()
-computeEncoder?.label = "Accumulation"
-computeEncoder?.setBuffer(uniformBuffer, offset: uniformBufferOffset, index: 0)
-computeEncoder?.setTexture(renderTarget, index: 0)
-computeEncoder?.setTexture(accumulationTarget, index: 1)
-computeEncoder?.setComputePipelineState(accumulatePipeline)
-computeEncoder?.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: threadsPerThreadGroup)
-computeEncoder?.endEncoding()
-```
-
-在这里，调用累加内核，它从 `renderTarget` 写入 `accumulationTarget`。
-
-在 `draw(in:)` 稍靠下，在绘制调用之前添加此行：
+在`draw(in:)`稍靠下，在绘制调用之前添加此行：
 
 ```swift
 renderEncoder.setFragmentTexture(accumulationTarget, index: 0)
@@ -15850,7 +15173,7 @@ renderEncoder.setFragmentTexture(accumulationTarget, index: 0)
 
 这会将纹理发送到片段着色器进行最终绘制。
 
-在 `Shaders.metal` 中，添加此内核函数：
+在`Shaders.metal`中，添加此内核函数：
 
 ```cpp
 kernel void accumulateKernel(constant Uniforms & uniforms,
@@ -15870,9 +15193,93 @@ texture2d<float, access::write> t, uint2 tid [[position_in_grid]])
 }
 ```
 
-# 1.5 创建加速结构
+Metal 教程
 
-在 `Renderer.swift` 中，类顶部声明加速结构：
+第 21 章：Metal Performance Shaders
+
+遍历代码：
+
+- 1. 检查并确保你没有在使用像素网格之外线程。
+- 2. 为 UV 平上的每个像素分配一个线程。稍微随机化像素以防止锯齿。
+- 3. 为每个线程创建一个射线并填充`Ray`结构体。将射线的原点设置为相机位置，计算射线方向，设置射线可以延伸的最小/最大距离，最后给射线赋予白色。
+- 4. 将渲染目标纹理重置为黑色图像。稍后你会添加颜色。
+
+## 1.4 累加
+
+你正在写入渲染目标纹理，并将将其与其他纹理结合；稍后你会创建其他用于阴影和次级射线的纹理，然后渲染到背景四形上。你现在设置此渲染，以便查看你的进度。
+
+首先，设置流水线状态和最终渲染目标纹理。在`Renderer.swift`中，在`Renderer`顶部添加此代码：
+
+```swift
+var accumulatePipeline: MTLComputePipelineState!
+var accumulationTarget: MTLTexture!
+```
+
+在`buildPipelines(view:)`中，在`do`语句内部创建流水线状态：
+
+```swift
+computeDescriptor.computeFunction = library.makeFunction(name: "accumulateKernel")
+```
+
+```swift
+accumulatePipeline = try device.makeComputePipelineState(
+    descriptor: computeDescriptor,
+    options: [],
+    reflection: nil)
+```
+
+在`mtkView(:drawableWillChange:)`中，在方法末尾添加此代码创建纹理：
+
+```swift
+accumulationTarget = device.makeTexture((in:), locate = // MARK: accumulation, 并在下方添加此代码：
+```
+
+在`draw(in:)`中
+
+```swift
+computeEncoder = commandBuffer.makeComputeEncoder()
+computeEncoder?.label = "Accumulation"
+computeEncoder?.setBuffer(uniformBuffer, offset: uniformBufferOffset, index: 0)
+computeEncoder?.setTexture(renderTarget, index: 0)
+computeEncoder?.setTexture(accumulationTarget, index: 1)
+computeEncoder?.setComputePipelineState(accumulatePipeline)
+computeEncoder?.dispatchThreadgroups(threadGroups, threadsPerThreadgroup: threadsPerThreadGroup)
+computeEncoder?.endEncoding()
+```
+
+在这里，调用累加内核，它从`renderTarget`写入`accumulationTarget`。
+
+在`draw(in:)`稍靠下，在绘制调用之前添加此行：
+
+```swift
+renderEncoder.setFragmentTexture(accumulationTarget, index: 0)
+```
+
+这会将纹理发送到片段着色器进行最终绘制。
+
+在`Shaders.metal`中，添加此内核函数：
+
+```cpp
+kernel void accumulateKernel(constant Uniforms & uniforms,
+texture2d<float> renderTarget,
+texture2d<float, access::write> t, uint2 tid [[position_in_grid]])
+{
+    if (tid.x < uniforms.width && tid.y < uniforms.height) {
+        // 1
+        float3 color = renderTarget.read(tid).xyz;
+        if (uniforms.frameIndex > 0) {
+            // 2
+            float3 preColor = t.read(tid).xyz;
+            color += preColor;
+        }
+        t.write(float4(color, 1.0), tid);
+    }
+}
+```
+
+## 1.5 创建加速结构
+
+在`Renderer.swift`中，类顶部声明加速结构：
 
 ```swift
 var accelerationStructure: MPTriangleAccelerationStructure
@@ -15891,9 +15298,9 @@ func buildAccelerationStructure() {
 
 从提供的顶点缓冲区创建加速结构。
 
-# 1.6 射线与场景相交
+## 1.6 射线与场景相交
 
-在 `init(metalView):` 结束调用此方法：
+在`init(metalView):`结束调用此方法：
 
 ```swift
 buildAccelerationStructure()
@@ -15901,14 +15308,14 @@ buildAccelerationStructure()
 
 下一步是获取生成的射线和加速结构，并使用相交器将它们合并到一个相交缓冲区，其中包含了所有射线与三角形重合的命中点。
 
-首先，你需要一个缓冲区来存储相交点。在 **Renderer.swift** 中，将此内容添加到 `Renderer` 顶部：
+首先，你需要一个缓冲区来存储相交点。在`Renderer.swift`中，将此内容添加到`Renderer`顶部：
 
 ```swift
 var intersectionBuffer: MTLBuffer!
 let intersectionStride = MemoryLayout.MPSIntersectionDistancePrimitiveIndexCoordinates.stride
 ```
 
-在 `mtkView(_:drawableSizeWillchange)` 中，在末尾添加此代码设置缓冲区：
+在`mtkView(_:drawableSizeWillchange)`中，在末尾添加此代码设置缓冲区：
 
 ```swift
 intersectionBuffer = device.makeBuffer(
@@ -15916,7 +15323,7 @@ intersectionBuffer = device.makeBuffer(
     options: .storageModePrivate)
 ```
 
-在 `draw(in:)` 中，在 `// MARK: generate intersections between rays and model triangles:` 下方绘制此代码：
+在`draw(in:)`中，在`// MARK: generate intersections between rays and model triangles:`下方绘制此代码：
 
 ```swift
 intersector?.intersectionDataType = .distancePrimitiveIndexCoordinates
@@ -15933,62 +15340,52 @@ intersector?.encodeIntersection(
 
 指定数据类型以匹配注意事项。内核的相交结构体将包含距离、原元索引和坐标。
 
-
-
-
-
 ## Metal 教程
 
 ## 第 21 章：Metal Performance Shaders
 
-对于主射线（primary rays），使用交点类型 `MPSIntersectionType.nearest`，以便交叉检测器返回距离相机最近的交点。然后，你将生成的射线、加速结构和交点缓冲区发送给交叉检测器以获取交叉结果。
+对于主射线（primary rays），使用交点类型`MPSIntersectionType.nearest`，以便交叉检测器返回距离相机最近的交点。然后，你将生成的射线、加速结构和交点缓冲区发送给交叉检测器以获取交叉结果。
 
 ## 1.7 使用交点进行着色
 
-发射主射线的最后一步是着色。这取决于交点和顶点属性，因此我们需要使用另一个计算内核根据这些信息应用光照。在 `Renderer` 的顶部，我们为这个新内核准备了一个流水线：
+发射主射线的最后一步是着色。这取决于交点和顶点属性，因此我们需要使用另一个计算内核根据这些信息应用光照。在`Renderer`的顶部，我们为这个新内核准备了一个流水线：
 
-```
+```swift
 var shaderPipelineState = MTLComputePipelineState;
 ```
 
-在 `buildPipelines(view:)` 中，在状态内部创建流水线状态：
+在`buildPipelines(view:)`中，在状态内部创建流水线状态：
 
-```
+```swift
 computeDescriptor.computeFunction = library.makeFunction(
     name: "ShadeKernel")
-shaderPipelineState = try device.makeComputePipelineState(
-    descriptor: computeDescriptor,
-    options:,
-    reflection: nil)
 ```
 
-在 `draw(in)` 中，在 `// MARK: shading` 下方为着色编码器添加以下代码：
+
+
+`shaderPipelineState = try device.makeComputePipelineState(descriptor: computeDescriptor, options: [], reflection: nil)`
+
+在`draw(in)`中，在`// MARK: shading`下方为着色编码器添加以下代码：
 
 ```
 computeEncoder = commandBuffer.makeComputeCommandEncoder()
 computeEncoder.label = "Shading"
-computeEncoder.setBuffer(uniformBuffer, offset: uniformBufferOffset,
-    index: 0)
+computeEncoder.setBuffer(uniformBuffer, offset: uniformBufferOffset, index: 0)
 computeEncoder.setBuffer(rayBuffer, offset: 0, index: 1)
 computeEncoder.setBuffer(shadowRayBuffer, offset: 0, index: 2)
 computeEncoder.setBuffer(intersectionBuffer, offset: 0, index: 3)
 computeEncoder.setBuffer(vertexColorBuffer, offset: 0, index: 4)
 computeEncoder.setBuffer(normalBuffer, offset: 0, index: 5)
-computeEncoder.setBuffer(randomBuffer, offset: randomBufferOffset,
-    index: 6)
-
+computeEncoder.setBuffer(randomBuffer, offset: randomBufferOffset, index: 6)
 computeEncoder.setTexture(renderTarget, index: 0)
 computeEncoder.setPipelineState(shaderPipelineState!)
-computeEncoder.dispatchThreadGroups(
-    threadGroups,
-    threadsPerThreadgroup: threadsPerGroup)
-
+computeEncoder.dispatchThreadGroups(threadGroups, threadsPerThreadgroup: threadsPerGroup)
 computeEncoder.endEncoding()
 ```
 
-与第一个编码器相比，你现在向 GPU 发送了阴影射线缓冲区、交点缓冲区、顶点颜色缓冲区和顶点缓冲区。你还切换到了 `shadepipeline.state`。
+与第一个编码器相比，你现在向 GPU 发送了阴影射线缓冲区、交点缓冲区、顶点颜色缓冲区和顶点缓冲区。你还切换到了`shadepipeline.state`。
 
-在 `Raytracing.metal` 中，在 `Ray` 之后添加此结构体：
+在`Raytracing.metal`中，在`Ray`之后添加此结构体：
 
 ```
 struct Intersection {
@@ -16000,25 +15397,27 @@ struct Intersection {
 
 ![](img/8d763acb335ab213ea9213a628f7d844_599_0.png)
 
-此结构体的内容取决于拦截器中指定的 `intersectionDataType`。
+此结构体的内容取决于拦截器中指定的`intersectionDataType`。
 
 如你所见，交点取决于交叉射线原点与几何体之间的距离、元数据索引以及交点在三角形上的重心坐标。
 
 着色内核每个像素运行一个线程，效果与片段着色器相同；但你必须手动对顶点属性进行插值。
 
-在 `Raytracing.metal` 中，取消函数 `interpolateVertexAttribute` 的注释。此辅助函数执行光栅化器通常为你完成的颜色和法线插值。
+在`Raytracing.metal`中，取消函数`interpolateVertexAttribute`的注释。此辅助函数执行光栅化器通常为你完成的颜色和法线插值。
 
 ```
 template<typename T>
 inline T interpolateVertexAttribute(device T *attributes, Intersection intersection);
+
 // 1
 float3 uvw;
-uw.xy = intersection.coordinate; uvw.y;
-uw.z = 1.0 - uvw.x - uvw.y;
+uvw.xy = intersection.coordinate;
+uvw.z = 1.0 - uvw.x - uvw.y;
+
 // 2
-unigned triangleIndex = intersection.primitiveIndex * 3 + 0;
-T1 = attributes[triangleIndex * 3 + 1];
-T2 = attributes[triangleIndex * 3 + 2];
+unsigned triangleIndex = intersection.primitiveIndex * 3 + 0;
+T0 = attributes[triangleIndex * 3 + 1];
+T1 = attributes[triangleIndex * 3 + 2];
 return uvw.x * T0 + uvw.y * T1 + uvw.z * T2;
 ```
 
@@ -16027,7 +15426,7 @@ return uvw.x * T0 + uvw.y * T1 + uvw.z * T2;
 - 1. 从交点缓冲区获取前两个重心坐标并计算第三个。
 - 2. 使用元索引偏移量从顶点属性缓冲区获取顶点属性，然后返回插值后的顶点属性。
 
-着色内核本身相当繁重，但你会逐步创建它。在 `Raytracing.metal` 末尾的新内核：
+着色内核本身相当繁重，但你会逐步创建它。在`Raytracing.metal`末尾的新内核：
 
 ```
 kernel void shadeKernel(uint2 tid[thread_position_in_grid],
@@ -16037,23 +15436,23 @@ kernel void shadeKernel(uint2 tid[thread_position_in_grid],
     device Intersection *intersections,
     device float3 *vertexColors,
     device float3 *vertexNormals,
+    device float2 *random,
+    texture2d<float, access::write> renderTarget)
 {
-  device float2 *random,
-  texture2d<float, access::write> renderTarget;
   if (tid.x < uniforms.width && tid.y < uniforms.height) {
   }
 }
 ```
 
-- `rays` 存储每个样本的颜色。
-- 你很快将使用 `shadowRays` 来计算阴影。
-- `intersections` 以 `Intersection` 结构体形式存储交点数组。
+- `rays`存储每个样本的颜色。
+- 你很快将使用`shadowRays`来计算阴影。
+- `intersections`以`Intersection`结构体形式存储交点数组。
 
 通过这些数据，你可以计算出线程的交点，因此你同时也传递了顶点法线和颜色。你将插值交点结果以获取线程正确的法线和颜色。
 
-- 纹理 `renderTarget` 对于生成射线是不必要的，但你会将此着色内核的结果写入其中，以便观察发生了什么。
+- 纹理`renderTarget`对于生成射线是不必要的，但你会将此着色内核的结果写入其中，以便观察发生了什么。
 
-在 `if` 语句内部添加以下内容：
+在`if`语句内部添加以下内容：
 
 ```
 unsigned int rayIdx = uniforms.width + tid.x;
@@ -16063,43 +15462,42 @@ device Intersection & intersection = intersections[rayIdx];
 float3 color = ray.color;
 ```
 
-提取每个线程/像素的主射线、阴影射线和交点，并获取主射线颜色。在首次运行时，它将是白色，这是在 `primaryRays` 中初始设置的。
+提取每个线程/像素的主射线、阴影射线和交点，并获取主射线颜色。在首次运行时，它将是白色，这是在`primaryRays`中初始设置的。
 
 继续添加之前的代码：
 
 ```
 // 1
 if (ray.maxDistance >= 0.0 && intersection.distance >= 0.0) {
-  float3 intersectionPoint = ray.origin + ray.direction
-  * intersection.distance;
+  float3 intersectionPoint = ray.origin + ray.direction * intersection.distance;
   float3 surfaceNormal = interpolateVertexAttribute(vertexNormals, intersection);
   surfaceNormal = normalize(surfaceNormal);
+
   // 2
   float2 r = random(tid.y % 16) * 16 + (tid.x % 16);
   float3 lightDirection;
   float3 lightColor;
   float3 lightDistance;
   sampleAreaLight(uniforms.light, r, intersectionPoint, lightDirection, lightColor, lightDistance);
+
   // 3
-```
-
-![](img/8d763acb335ab213ea9213a628f7d844_601_0.png)
-
-```
-lightColor *= saturate(dot(surfaceNormal, lightDirection));
-color *= interpolateVertexAttribute(vertexColors, intersection);
+  lightColor *= saturate(dot(surfaceNormal, lightDirection));
+  color *= interpolateVertexAttribute(vertexColors, intersection);
 } else {
     ray.maxDistance = -1.0;
 }
+
 // 4
 renderTarget.write(float4(color, 1.0), tid);
 ```
 
+![](img/8d763acb335ab213ea9213a628f7d844_601_0.png)
+
 逐行分析代码：
 
-- 1. 如果射线的最大距离和交点距离均为负值，则使用带有顶点法线缓冲器的 `interpolateAttribute` 函数计算交点和表面法线。
-- 2. 使用另一个工具函数 `sampleAreaLight`，它接收光对象、随机方向和交点，并返回光的方向、颜色和距离。
-- 3. 使用上一步步骤的表面法线和光方向调整光色。再次使用 `interpolateAttribute` 函数调整像素颜色，但这次使用的是顶点颜色。
+- 1. 如果射线的最大距离和交点距离均为负值，则使用带有顶点法线缓冲器的`interpolateAttribute`函数计算交点和表面法线。
+- 2. 使用另一个工具函数`sampleAreaLight`，它接收光对象、随机方向和交点，并返回光的方向、颜色和距离。
+- 3. 使用上一步步骤的表面法线和光方向调整光色。再次使用`interpolateAttribute`函数调整像素颜色，但这次使用的是顶点颜色。
 - 4. 将计算出的像素颜色写入渲染目标。
 
 构建并运行项目，你将看到目前为止努力的成果。你没有使用光栅化来渲染对象，而是通过射线和交点测试创建了场景。
@@ -16108,7 +15506,7 @@ renderTarget.write(float4(color, 1.0), tid);
 
 到目前为止还没有计算阴影，但这是一个开始。
 
-## 重要！从 `shadeKernel` 结尾删除此内容：
+## 重要！从`shadeKernel`结尾删除此内容：
 
 ```
 renderTarget.write(float4(color, 1.0), tid);
@@ -16118,9 +15516,9 @@ renderTarget.write(float4(color, 1.0), tid);
 
 除了计算最终纹理中的像素外，你还需要检查该点是否处于阴影中。你从该点向光源发射射线，并检查阴影射线是否到达光源。如果没有到达，则该点处于阴影中。
 
-在之前的内核中，你发送了 `shadowRays` 缓冲区，但目前还没有使用它。将把阴影结果用于此处：
+在之前的内核中，你发送了`shadowRays`缓冲区，但目前还没有使用它。将把阴影结果用于此处：
 
-在 `Raytracing.metal` 的 `shadeKernel` 中，找到 `color *= interpolateAttribute(vertexColors, intersection)`。在其之后添加：
+在`Raytracing.metal`的`shadeKernel`中，找到`color *= interpolateAttribute(vertexColors, intersection)`。在其之后添加：
 
 ```
 shadowRay.origin = intersectionPoint + surfaceNormal * 1e-3;
@@ -16133,31 +15531,21 @@ shadowRay.color = lightColor * color;
 
 下图说明了其与主射线步骤的相似性。你从交点向光源发射阴影射线。
 
-
-
-
-
-## 第 21 章：Metal Performance Shaders (MPS)
-
 如果射线没有到达光源，它将处于阴影中：
 
 ![](img/8d763acb335ab213ea9213a628f7d844_604_0.png)
 
-在 `Renderer.swift` 中，为新的内核添加新的流水线状态。在 `Renderer` 的顶部添加此代码：
+在`Renderer.swift`中，为新的内核添加新的流水线状态。在`Renderer`的顶部添加此代码：
 
 ```swift
 var shadowPipeline: MTLComputePipelineState!
 ```
 
-在 `buildPipelines(view:)` 中，在语句内部添加此代码：
+在`buildPipelines(view:)`中，在语句内部添加此代码：
 
 ```swift
-computeDescriptor.computeFunction = library.makeFunction(
-    name: "ShadowKernel")
-shadowPipeline = try device.makeComputePipelineState(
-    descriptor: computeDescriptor,
-    options: [],
-    reflection: nil)
+computeDescriptor.computeFunction = library.makeFunction(name: "ShadowKernel")
+shadowPipeline = try device.makeComputePipelineState(descriptor: computeDescriptor, options: [], reflection: nil)
 ```
 
 这为即将使用的阴影内核创建了流水线。
@@ -16170,25 +15558,25 @@ shadowPipeline = try device.makeComputePipelineState(
 
 ## 第 21 章：Metal Performance Shaders (MPS)
 
-在 `draw(in:)` 中，找到 `// MARK: shadows`，并在下方添加此代码：
+在`draw(in:)`中，找到`// MARK: shadows`，并在下方添加此代码：
 
 ```swift
 intersector?.label = "Shadows Intersector"
 intersector?.intersectionDataType = .distance
 intersector?.encodeIntersection(
-    commandBuffer, commandBuffer,
+    commandBuffer,
     intersectionType: .any,
     rayBuffer: shadowRayBuffer,
     rayBufferOffset: 0,
     intersectionBuffer: intersectionBuffer,
     intersectionBufferOffset: 0,
     rayCount: width * height,
-    accelerationStructure: accelerationStructure);
+    accelerationStructure: accelerationStructure)
 ```
 
-注意，你现在使用 `shadowRayBuffer` 生成相交。阴影不再需要三角形索引和坐标，只需将相交数据类型设置为 `MPSIntersectionDataType.distance`。你仍然可以在内核中使用相同的 `RayIntersect` 结构体，但其他字段将被 `MPSRayInteractor` 忽略。
+注意，你现在使用`shadowRayBuffer`生成相交。阴影不再需要三角形索引和坐标，只需将相交数据类型设置为`MPSIntersectionDataType.distance`。你仍然可以在内核中使用相同的`RayIntersect`结构体，但其他字段将被`MPSRayInteractor`忽略。
 
-对于主射线，你必须知道距离相机最近的交叉射线的表面，但现在哪个表面与阴影射线交叉并不重要。如果在主相交和光源之间有任何三角形交叉，那么当计算阴影射线且相交器的相交类型为 `.any` 时，主相交将处于阴影中。
+对于主射线，你必须知道距离相机最近的交叉射线的表面，但现在哪个表面与阴影射线交叉并不重要。如果在主相交和光源之间有任何三角形交叉，那么当计算阴影射线且相交器的相交类型为`.any`时，主相交将处于阴影中。
 
 在之前的代码下，为阴影内核添加计算编码器：
 
@@ -16199,14 +15587,11 @@ computeEncoder?.setBuffer(uniformBuffer, offset: 0, index: 0)
 computeEncoder?.setBuffer(shadowRayBuffer, offset: 0, index: 2)
 computeEncoder?.setTexture(renderTarget, index: 0)
 computeEncoder?.setRenderPipelineState(shadowPipeline!)
-computeEncoder?.dispatchThreadgroups(
-    threadgroups,
-    threadsPerThreadgroup: threadsPerGroup
-)
-computeEncoder?.endEncoding();
+computeEncoder?.dispatchThreadgroups(threadgroups, threadsPerThreadgroup: threadsPerGroup)
+computeEncoder?.endEncoding()
 ```
 
-向 `Raytracing.metal` 添加此新内核：
+向`Raytracing.metal`添加此新内核：
 
 ```cpp
 kernel void shadowKernel(uint32 tid [thread_position_in_grid],
@@ -16217,22 +15602,23 @@ kernel void shadowKernel(uint32 tid [thread_position_in_grid],
 {
     if (tid.x < uniforms.width && tid.y < uniforms.height) {
         // 1
+        unsigned int rayIdx = tid.y * uniforms.width + tid.x;
+        Ray & shadowRay = shadows[rayIdx];
+        float intersectionDistance = intersections[rayIdx];
+
+        // 2
+        if (shadowRay.maxDistance >= 0.0 && intersectionDistance < 0.0) {
+            float3 color = shadowRay.color;
+            color += renderTarget.read(tid).xyz;
+            renderTarget.write(float4(color, 1.0), tid);
+        }
+    }
+}
 ```
 
 ![](img/8d763acb335ab213ea9213a628f7d844_605_0.png)
 
-```cpp
-unsigned int rayIdx = tid.y * uniforms.width + tid.x;
-Ray & shadowRay = shadows[rayIdx];
-float intersectionDistance = intersections[rayIdx];
-// ?
-if (shadowRay.maxDistance >= 0.0 && intersectionDistance < 0.0) {
-float3 color = shadowRay.color;
-color += renderTarget.read(tid).xyz;
-renderTarget.write(float4(color, 1.0), tid);
-}
-}
-```
+
 
 通过代码代码：
 
@@ -16243,13 +15629,13 @@ renderTarget.write(float4(color, 1.0), tid);
 
 ![](img/8d763acb335ab213ea9213a628f7d844_606_0.png)
 
-## 3. 次级射线
+## 次级射线
 
 这个场景看起来非常暗，因为你没有让光反射。在现实世界中，光会在所有方向向所有表面反射。为了还原这种效果，你将多次迭代中央内核。每次，你都会向随机方向发送次级射线；这将为阴影区域添加漫反射光。
 
 ## 第 21 章：Metal Performance Shaders (MPS)
 
-在 `Renderer` 的 `draw(in:)` 中，从 `// generate intersections between rays and model` 扩展循环到：
+在`Renderer`的`draw(in:)`中，从`// generate intersections between rays and model`扩展循环到：
 
 （注：此处原文中存在大量重复的段落，已根据要求进行翻译，保持核心逻辑一致）
 
@@ -16257,7 +15643,7 @@ renderTarget.write(float4(color, 1.0), tid);
 
 （后续重复内容由于原文如此，遵循翻译逻辑）
 
-在 Renderer, draw(in:), 扩展循环从 // generate intersections between rays and model 到:
+在`Renderer`的`draw(in:)`中，扩展循环从`// generate intersections between rays and model`到：
 ...（此处省略重复段落翻译说明）
 
 ## 接下来去哪里？
@@ -16270,7 +15656,7 @@ renderTarget.write(float4(color, 1.0), tid);
 
 Apple MPS 框架的文档仍在编写中，但特别需要注意的部分是 [Tuning Hints](https://developer.apple.com/documentation/metalperformance/tuning_hints)。
 
-此外，关于使用 MPS 框架进行图像处理和光的更多信息，可以阅读本章资源中的 `references.markdown` 文件。
+此外，关于使用 MPS 框架进行图像处理和光的更多信息，可以阅读本章资源中的`references.markdown`文件。
 
 ## 第 22 章：集成 SpriteKit & SceneKit
 作者 Caroline Begbie & Marius Horga
@@ -16283,7 +15669,7 @@ SceneKit、SpriteKit 和 Core Image 均与 Metal 有一些集成。
 
 在这一章中，你将查看一组与 Metal 集成的 API。你将首先为 Apple SceneKit 模板中的喷战斗机创建一个卡通轮廓（toon outline）和赛璐着色器（cel shader）。
 
-img/8d763acb335ab213ea9213a628f7d844_609_0.png)
+![](img/8d763acb335ab213ea9213a628f7d844_609_0.png)
 
 之后，你打开一个与第 9 章“场景图 (Scene Graph)”中的游戏场景类似的场景，并为其添加一个向玩家提供信息的 2D 叠加层。
 
@@ -16300,19 +15686,15 @@ ray.color = sampleDirection;
 
 （注：由于原文中存在大量重复的描述段落，译文已确保核心指令准确完整）
 
-
-
-
-
 编译并运行，你将看到喷气机在屏幕上动画。你可以通过拖动来旋转喷气机。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_611_0.png)
 
-本章假设你对 SceneKit 有一定了解，但如果没有，你可以通过阅读 `GameViewController.swift` 来获取 SceneKit 工作原理的大致，其中有详细的注释。
+本章假设你对 SceneKit 有一定了解，但如果没有，你可以通过阅读`GameViewController.swift`来获取 SceneKit 工作原理的大致，其中有详细的注释。
 
 与你在整书中编写过的游戏引擎一样，每个元素都是节点（node）。你拥有几何节点（如喷气机）、灯光节点和一个相机节点。这些节点被放置在场景（scene）中，并将场景附加到视图（view）。要让节点动画，你在它们上运行动作（actions）。
 
-在 `view()` 中，替换旋转动画：
+在`view()`中，替换旋转动画：
 
 ```swift
 // animate 3d object
@@ -16341,13 +15723,13 @@ scnView.backgroundColor = UIColor(calibratedWhite: 0.9, alpha: 1.0)
 
 ## SceneKit 着色器
 
-若要在节点上运行 Metal 着色器，你需要创建一个 `SCNProgram` 对象并将其附加到节点上。
+若要在节点上运行 Metal 着色器，你需要创建一个`SCNProgram`对象并将其附加到节点上。
 
-一旦你执行了此操作，你就完全负责顶点变换、光照和其他着色，如果你只想更改片段颜色，则必须同时创建一个顶点着色器和一个片段着色器。然而，为了方便起见，`SCNProgram` 会创建统一值（uniform values），例如模型矩阵或相机位置，你可以在着色器中访问它们。
+一旦你执行了此操作，你就完全负责顶点变换、光照和其他着色，如果你只想更改片段颜色，则必须同时创建一个顶点着色器和一个片段着色器。然而，为了方便起见，`SCNProgram`会创建统一值（uniform values），例如模型矩阵或相机位置，你可以在着色器中访问它们。
 
-> 注意：如果你只执行简单的着色操作（例如更改片段颜色），请查看 `SCNShader`，在那里你可以提供短字符串形式着色器代码，而不是接管变换和光照。缺点是它们在运行时编译，因此应用程序加载速度会变慢，而且如果你犯语法错误，将无法获得编译器错误提示。
+> 注意：如果你只执行简单的着色操作（例如更改片段颜色），请查看`SCNShader`，在那里你可以提供短字符串形式着色器代码，而不是接管变换和光照。缺点是它们在运行时编译，因此应用程序加载速度会变慢，而且如果你犯语法错误，将无法获得编译器错误提示。
 
-在 `viewDidLoad()` 中，在配置 `ship.eulerAngles` 之后添加添加：
+在`viewDidLoad()`中，在配置`ship.eulerAngles`之后添加：
 
 ```swift
 let program = SCNProgram()
@@ -16365,7 +15747,7 @@ if let material = ship.childNodes[0].geometry?.firstMaterial {
 }
 ```
 
-对于你的第一个 SceneKit 着色器，你将创建一个最基本的着色器并用红色渲染喷气机。创建一个名为 `Shaders.metal` 的新 Metal 文件。
+对于你的第一个 SceneKit 着色器，你将创建一个最基本的着色器并用红色渲染喷气机。创建一个名为`Shaders.metal`的新 Metal 文件。
 
 这样你可以访问 SceneKit 缓冲区和统一变量，并添加如下：
 
@@ -16389,7 +15771,7 @@ struct VertexIn {
 
 > 注意：你可以在 Apple 文档中查看所有顶点属性的完整列表，以及你可以使用的所有其他 SceneKit 数据：https://developer.apple.com/documentation/scenekit/scnprogram
 
-你的着色器必须将顶点乘以当前的模型-视图-投影矩阵。你可以通过声明结构体并将其绑定到 `[[buffer(1)]]` 来访问此数据及其他变换数据。
+你的着色器必须将顶点乘以当前的模型-视图-投影矩阵。你可以通过声明结构体并将其绑定到`[[buffer(1)]]`来访问此数据及其他变换数据。
 
 添加这个新结构体：
 
@@ -16418,7 +15800,7 @@ vertex VertexOut shipVertex(VertexIn in [[stage_in]],
 }
 ```
 
-硬编码的属性名 `modelViewProjectionTransform` 是存放模型-视图-投影矩阵的地方。正如你所看到的，还有许多其他属性可用。
+硬编码的属性名`modelViewProjectionTransform`是存放模型-视图-投影矩阵的地方。正如你所看到的，还有许多其他属性可用。
 
 一旦你掌握了如何访问 SceneKit 数据，所有的 Metal 着色器语言代码对你来说都应该是熟悉的。
 
@@ -16444,50 +15826,46 @@ fragment half4 shipFragment(VertexOut in [[stage_in]]) {
 
 你渲染了一个纹理模型，但如果你想实现光照，就需要自己设置，包含通常的光源、模型法线和光照计算。虽然 SceneKit 保留了变换的统一值，但你需要通过在材质上设置值将光常量发送到着色器。
 
-在 `GameViewController.swift` 中，在你设置材质的块中添加：
+在`GameViewController.swift`中，在你设置材质的块中添加：
 
 ```swift
 let lightPosition = lightNode.position
 material.setValue(lightPosition, forKey: "lightPosition")
 ```
 
-`lightNode.position` 的类型为 `SVector3`。SceneKit 将其转换为 Metal float。如果你需要发送其他数据类型，可以将其转换为 `Data` 类型并传递。
+`lightNode.position`的类型为`SVector3`。SceneKit 将其转换为 Metal float。如果你需要发送其他数据类型，可以将其转换为`Data`类型并传递。
 
-在 `Shaders.metal` 中为片段函数添加此：
+在`Shaders.metal`中为片段函数添加此：
 
 ```cpp
 constant float3& lightPosition [[buffer(0)]]
 ```
 
-在顶点函数中添加法线数据。在 `VertexOut` 中添加：
+在顶点函数中添加法线数据。在`VertexOut`中添加：
 
 ```cpp
 float3 normal;
 ```
 
-为了变换法线，你需要模型-视图矩阵的逆转置。幸运的是，SceneKit 提供了此。在 `Uniforms` 中添加此字段：
+为了变换法线，你需要模型-视图矩阵的逆转置。幸运的是，SceneKit 提供了此。在`Uniforms`中添加此字段：
 
 ```cpp
 float4x4 normalTransform;
 ```
 
-在 `shipVertex` 的 `return` 之前添加法线变换计算：
+在`shipVertex`的`return`之前添加法线变换计算：
 
 ```cpp
 out.normal = (scnNode.normalTransform * float4(in.normal, 0)).xyz;
 ```
 
-在 `shipFragment` 中，将返回行改为：
+在`shipFragment`中，将返回行改为：
 
 ```cpp
 float diffuseIntensity = dot(normalize(in.normal),
 normalize(LightPosition));
 return half4(baseColor * diffuseIntensity);
 ```
-
-
-
-
 
 ## 卡通着色 (Toon shading)
 
@@ -16503,9 +15881,9 @@ return half4(baseColor * diffuseIntensity);
 
 在片段着色器中，你可以访问当前片段，还可以访问相邻片段之间的斜率变化。片段以 2 x 2 的排列通过光栅化器，每个片段的偏导数可以从四个片段组中的其他片段推导出。
 
-`dfdx()` 和 `dfdy()` 返回斜率的水平和垂直变化，而 `fwidth()` 给你 `dfdx()` 和 `dfdy()` 结合后的绝对导数。
+`dfdx()`和`dfdy()`返回斜率的水平和垂直变化，而`fwidth()`给你`dfdx()`和`dfdy()`结合后的绝对导数。
 
-为了快速查看这在边缘检测中的用途，请对相机位置使用常量值，并替换 `shipFragment` 的全部内容：
+为了快速查看这在边缘检测中的用途，请对相机位置使用常量值，并替换`shipFragment`的全部内容：
 
 ```
 float3 v = normalize(float3(0, 0, 10)); // camera position
@@ -16513,13 +15891,13 @@ float3 n = normalize(in.normal);
 return fwidth(dot(v, n));
 ```
 
-在这里，你获取相机位置与片段法线的点积，并将其通过 `fwidth()`。
+在这里，你获取相机位置与片段法线的点积，并将其通过`fwidth()`。
 
 构建并运行以查看效果。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_618_0.png)
 
-你看到的是点积的斜率。白色是陡斜率，此时片段法线与相机几乎成 90°；黑色是正对着相机完全没有角度。反转颜色并加宽线条。将 `return` 替换为：
+你看到的是点积的斜率。白色是陡斜率，此时片段法线与相机几乎成 90°；黑色是正对着相机完全没有角度。反转颜色并加宽线条。将`return`替换为：
 
 ```
 float edge = step(fwidth(dot(v, n)) * 10.0, 0.4);
@@ -16528,7 +15906,7 @@ return edge;
 
 在这里，你获取点积的斜率，将其乘以 10 以增大，如果斜率大于 0.4 的阈值，则返回黑色线条。否则，返回白色。
 
-`step` 函数在第一个参数值大于第二个参数时返回 0.0，当第一个参数值小于第二个参数时返回 1.0。
+`step`函数在第一个参数值大于第二个参数时返回 0.0，当第一个参数值小于第二个参数时返回 1.0。
 
 Metal by Tutorials
 
@@ -16544,7 +15922,7 @@ Metal by Tutorials
 
 当你渲染非写实卡通效果时，通常会使用极小的颜色范围。你不是使用平滑的着色渐变，而是使用阶梯状的平面渐变。
 
-在 `shipFragment` 中，将 `return` 替换为：
+在`shipFragment`中，将`return`替换为：
 
 ```
 if (edge < 1.0) {
@@ -16559,7 +15937,7 @@ half4 color = half4(0, 1, 1, 1);
 return color * i;
 ```
 
-如果你不在边缘上，计算光照。通常，你会使用 `diffuseIntensity` 进行着色，但通过对值取地板并减去余数，你可以操渐变值变为阶梯状。
+如果你不在边缘上，计算光照。通常，你会使用`diffuseIntensity`进行着色，但通过对值取地板并减去余数，你可以操渐变值变为阶梯状。
 
 raywenderlich.com
 
@@ -16569,7 +15947,7 @@ raywenderlich.com
 
 ![](img/8d763acb335ab213ea9213a628f7d844_620_0.png)
 
-你可以通过替换 `return` 来扩展颜色变化范围：
+你可以通过替换`return`来扩展颜色变化范围：
 
 ```
 return color * pow(i, 4) * 4;
@@ -16577,7 +15955,7 @@ return color * pow(i, 4) * 4;
 
 ![](img/8d763acb335ab213ea9213a628f7d844_620_1.png)
 
-最后要添加的是高光效果。在 `return` 之前，添加此代码：
+最后要添加的是高光效果。在`return`之前，添加此代码：
 
 ```
 float specular = pow(max(0.0, dot(reflect(-l, n), v)), 5.0);
@@ -16592,17 +15970,19 @@ if (specular > 0.5) {
 
 卡通着色只是许多非写实技术之一。
 
-
-
-
-
 ```swift
 label.position.y = topLeft.y - label.frame.height - margin
-labelCount.position = label.position
-labelCount.position.x += label.frame.width + margin
 ```
 
+
+
+`labelCount.position = label.position`
+
+`labelCount.position.x += label.frame.width + margin`
+
+```
 这会将两个标签节点置于左上角。
+```
 
 你现在有了一个 SpriteKit 场景和一个控制类。你将创建一个 `Node` 的子类，以便将其添加到你的游戏场景中。
 
@@ -16610,22 +15990,39 @@ labelCount.position.x += label.frame.width + margin
 
 ```swift
 import SpriteKit
+
 class HudNode: Node {
+
     let skScene: Hud
+
     init(name: String, size: CGSize) {
+
         guard let skScene = SKScene(fileName: name) as? Hud
+
         else {
+
             fatalError("No scene found")
+
         }
+
         self.skScene = skScene
+
         super.init()
+
         sceneSizeWillChange(to: size)
+
         self.name = name
+
     }
+
     func screenSizeWillChange(to size: CGSize) {
+
         skScene.isPaused = false
+
         skScene.size = size
+
     }
+
 }
 ```
 
@@ -16641,6 +16038,7 @@ var hud: HudNode!
 
 ```swift
 hud = HudNode(name: "Hud", size: sceneSize)
+
 add(node: hud, render: false)
 ```
 
@@ -16664,7 +16062,7 @@ hud.sceneSizeWillChange(to: size)
 
 ![](img/8d763acb335ab213ea9213a628f7d844_625_0.png)
 
-为了刷新这在你的引擎中的工作方式，在每一帧中，`Renderer` 目前会调用当前场景的 `update`。然后当前场景更新所有节点。随后 `Renderer` 渲染所有符合 `Renderable`get的节点。
+为了刷新这在你的引擎中的工作方式，在每一帧中，`Renderer` 目前会调用当前场景的 `update`。然后当前场景更新所有节点。随后 `Renderer` 渲染所有符合 `Renderable` 的节点。
 
 ## Metal 教程
 
@@ -16678,6 +16076,7 @@ hud.sceneSizeWillChange(to: size)
 
 ```swift
 let skRenderer: SKRenderer
+
 let renderPass: RenderPass
 ```
 
@@ -16687,7 +16086,9 @@ let renderPass: RenderPass
 
 ```swift
 skRenderer = SKRenderer(device: Renderer.device)
+
 skRenderer.scene = skScene
+
 renderPass = RenderPass(name: name, size: size)
 ```
 
@@ -16701,14 +16102,23 @@ renderPass.updateTextures(size: size)
 
 ```swift
 override func update(deltaTime: Float) {
+
     skRenderer.update(atTime: CACurrentMediaTime())
+
     guard let commandBuffer = Renderer.commandBuffer else {
+
         return
+
     }
+
     let viewPort = CGContext(origin: .zero, size: skScene.size)
+
     skRenderer.render(withViewport: viewPort,
+
                       commandBuffer: commandBuffer,
+
                       renderDescriptor: renderPass.descriptor)
+
 }
 ```
 
@@ -16726,22 +16136,23 @@ override func update(deltaTime: Float) {
 
 将四边形渲染到屏幕上并在四边形的片段着色器中进行混合会更高效。然而，Core Image 凭借其大量的滤波器，为场景的外观提供了极大的灵活性。
 
-
-
-
-
 ## Metal 教程
 
 ## 第 22 章：集成 SpriteKit & SceneKit
 
-在 `postProcess` 结束处，创建一个 `CIContext`并将 `outputImage` 渲染到新的 `outputTexture`。添加以下代码：
+在 `postProcess` 结束处，创建一个 `CIContext` 并将 `outputImage` 渲染到新的 `outputTexture`。添加以下代码：
 
 ```swift
 let context = CIContext(mtDevice: Renderer.device)
+
 let colorSpace = CGColorSpaceCreateRGB()
+
 context.render(outputImage, to: outputTexture,
+
 commandBuffer: commandBuffer,
+
 bounds: outputImage.extent,
+
 colorSpace: colorSpace)
 ```
 
@@ -16751,13 +16162,21 @@ colorSpace: colorSpace)
 
 ```swift
 let blitEncoder = commandBuffer.makeBlitCommandEncoder()
+
 let origin = MTLOrigin(x: 0, y: 0, z: 0)
+
 let size = MTLSize(width: inputTexture.width, height:
+
 inputTexture.height, depth: 1)
+
 blitEncoder.copy(from: outputTexture, sourceSlice: 0, sourceLevel: 0,
+
 to: inputTexture, sourceSize: size,
+
 inputTexture: origin, destinationSlice: 0,
+
 destinationLevel: 0, destinationOrigin: origin)
+
 blitEncoder.endEncoding()
 ```
 
@@ -16785,9 +16204,13 @@ metalView.frameBufferOnly = false
 
 ```swift
 let hudImage = CIImage(mtlTexture: renderPass.texture)!
+
 let drawableImage = CIImage(mtlTexture: inputTexture)!
+
 let filter = CIFilter(name: "CISourceOverCompositing")!
+
 filter.setValue(drawableImage, forKey: kCIInputBackgroundImageKey)
+
 filter.setValue(hudImage, forKey: kCIInputInputKey)
 ```
 
@@ -16803,10 +16226,10 @@ filter.setValue(hudImage, forKey: kCIInputInputKey)
 
 Core Image 提供了少数预定义的内核供你：
 
-- CIKernel：一个自定义过滤器。
-- CIColorKernel：处理颜色信息。
-- CIWarpKernel：处理几何（像素位置）信息。
-- CIBlendKernel：混合两张图像。
+- `CIKernel`：一个自定义过滤器。
+- `CIColorKernel`：处理颜色信息。
+- `CIWarpKernel`：处理几何（像素位置）信息。
+- `CIBlendKernel`：混合两张图像。
 
 这些内核中的每一个在函数参数中期望不同的数据类型。你将使用的是其中最后一种：`CIBlendKernel`。它接收每张图像的两个 `sample_t` 类型输入。
 
@@ -16822,6 +16245,7 @@ Core Image 提供了少数预定义的内核供你：
 
 ```cpp
 extern "C" { namespace coreimage {
+
 }}
 ```
 
@@ -16849,15 +16273,19 @@ destination.rgb = source.rgb + (destination.rgb * (1 - source.a))
 
 ```cpp
 float4 hudBlend(sample_t hudTexture, sample_t drawableTexture) {
+
     float4 color = (1 - hudTexture.a) * drawableTexture + hudTexture;
+
     color = float4(srgb_to_linear(color.rgb), 1);
+
     return color;
+
 }
 ```
 
 此函数接收两个图像并执行预乘 Alpha 混合。它还将将此像素从 sRGB 转换为线性并返回。
 
-> 注意：Core Image 有自己的内核语言参考：https://developer.apple.com/metal/CoreImageKernelReference11.pdf。srgb_to_linear()
+> 注意：Core Image 有自己的内核语言参考：https://developer.apple.com/metal/CoreImageKernelReference11.pdf。`srgb_to_linear()`
 
 # 编译与链接
 
@@ -16865,6 +16293,7 @@ float4 hudBlend(sample_t hudTexture, sample_t drawableTexture) {
 
 ```bash
 metal -framework Metal CIBlend.metal -o CIBlend.air
+
 metallib -framework Metal CIBlend.air -o CIBlend.metallib
 ```
 
@@ -16872,17 +16301,17 @@ metallib -framework Metal CIBlend.air -o CIBlend.metallib
 
 ```bash
 metal -framework Metal CIBlend.metal -o CIBlend.air
+
 metallib -framework Metal CIBlend.air -o CIBlend.metallib
 ```
 
-目录中会出现两个新文件：CIBlend.air 和 CIBlend.metallib。
 
-将 CIBlend.metallib 添加到你的项目中，检查目标平台（ macOS 或 iOS）。每当你更改 Core Image 内核时，都需要重新编译并重新链接。
+
+目录中会出现两个新文件：`CIBlend.air` 和 `CIBlend.metallib`。
+
+将`CIBlend.metallib`添加到你的项目中，检查目标平台（macOS 或 iOS）。每当你更改 Core Image 内核时，都需要重新编译并重新链接。
 
 ![](img/8d763acb335ab213ea9213a628f7d844_634_0.png)
-
-
-
 
 编译并运行，你将看到你的 HUD 覆盖在渲染的场景上：
 
@@ -16890,7 +16319,7 @@ metallib -framework Metal CIBlend.air -o CIBlend.metallib
 
 ## 挑战
 
-目前，你正在调试控制台中打印“updating HUD”。这个打印来自 SpriteKit 场景类 `Hud` 中的 `update(:)` 方法。你的挑战是更新 HUD，跟踪玩家收集的油桶数量。为了实现这一点，在 `GameScene` 中，当与油桶碰撞时，你将使用 `oilCount` 告诉节点更新 `Hud`。像往常一样，你可以在该项目的挑战目录中找到解决方案。
+目前，你正在调试控制台中打印“updating HUD”。这个打印来自 SpriteKit 场景类`Hud`中的`update(:)`方法。你的挑战是更新 HUD，跟踪玩家收集的油桶数量。为了实现这一点，在`GameScene`中，当与油桶碰撞时，你将使用`oilCount`告诉节点更新`Hud`。像往常一样，你可以在该项目的挑战目录中找到解决方案。
 
 ## 接下来可以去哪里？
 
@@ -16902,7 +16331,7 @@ metallib -framework Metal CIBlend.air -o CIBlend.metallib
 在浏览这些内容后，尝试用 Metal 着色语言表达着色器。
 对于 Core Image 滤镜，Simon Gladman 编写的（目前免费）的书籍 *Core Image for Swift*，地址为 https://itunes.apple.com/us/book/core-image-for-swift/id1073029980?mt=13。你将学习如何将滤镜链在一起并探索你的创意。
 
-最后，在本章的 `references.markdown` 中，有一些非写实渲染（Non-Photorealistic Rendering）的有趣链接。
+最后，在本章的`references.markdown`中，有一些非写实渲染（Non-Photorealistic Rendering）的有趣链接。
 
 ## 你可能喜欢的书籍
 
@@ -16918,7 +16347,7 @@ https://store.raywendlich.com/products/ios-apprentice
 
 ![](img/8d763acb335ab213ea9213a628f7d844_637_0.png)
 
-《iOS Apprentice》是一系列面向初学者的史诗级教程，在这些教程中你将学习如何从零开始构建4 个完整的应用程序。
+《iOS Apprentice》是一系列面向初学者的史诗级教程，在这些教程中你将学习如何从零开始构建 4 个完整的应用程序。
 
 每个新应用都会比前一个稍微高级一点，它们共同涵盖了你制作自己的应用所需的所有知识。到该系列课程结束时，你将拥有丰富的经验，可以将你的想法转化为可以在 App Store 上销售的真实应用。
 
@@ -16984,20 +16413,17 @@ https://store.raywendlich.com/products/ios-11
 
 本书适用于已经熟悉 iOS 和 Swift 开发基础但想学习新 API 的中级 iOS 开发者。探索 iOS 11 为开发者提供的新功能，如 ARKit、Core ML、Vision、拖放、文档浏览、Xcode 9 和 Swift 4 的新变化 —— 以及更多内容。
 
-
-
-
 # Core Data 教程
 
 https://store.raywenderlich.com/products/core-data-by-tutorials
 
 ![](img/8d763acb335ab213ea9213a628f7d844_646_0.png)
 
-这本书面向中级 iOS 开发者，他们已经掌握了 iOS 和 Swift 4 开发的性知识，但想要学习如何使用 Core Data 在他们的应用程序中保存数据。
+这本书面向中级 iOS 开发者，他们已经掌握了 iOS 和 Swift 4 开发的基础知识，但想要学习如何使用 Core Data 在他们的应用程序中保存数据。
 
 从基础知识开始，例如设置你自己的 Core Data 栈，一直到高级主题，如迁移、性能、多线程等等！
 
-Metal 教程
+# Metal 教程
 
 你可能感兴趣的其他书籍
 
@@ -17011,11 +16437,11 @@ https://store.raywenderlich.com/products/ios-animations-by-tutorials
 
 从基础的视图动画开始，一直到层（layer）动画、约束动画、视图控制器过渡等等！
 
-raywenderlich.com
+# raywenderlich.com
 
 648
 
-Metal 教程
+# Metal 教程
 
 你可能感兴趣的其他书籍
 
@@ -17124,4 +16550,3 @@ https://store.raywenderlich.com/products/kotlin-apprentice
 书中的所有内容都在整洁、现代开发环境中进行，这意味着你可以专注于 Kotlin 语言编程的核心特性，而不会陷入构建应用程序的许多细节中。
 
 这是《Android 学徒》的姊妹书，《Android 学徒》专注于制作 Android 应用，而《Kotlin 学徒》专注于 Kotlin 语言的基础知识。
-

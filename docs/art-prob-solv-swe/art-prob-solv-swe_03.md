@@ -1,7 +1,8 @@
+
+
 # 第一章：解决 MySQL 问题的传统方法
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter1.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter1.html)
-
 
 ## 1.1 解决 MySQL 问题的当前状态
 
@@ -15,7 +16,7 @@
 
 ### 1.2.1 解决 MySQL 5.7 的可扩展性问题
 
-下图展示了在特定配置下，MySQL 5.7.39 的 TPC-C 吞吐量与并发之间的关系。这包括将事务隔离级别设置为 Read Committed，并调整 *innodb_spin_wait_delay* 参数以减轻吞吐量下降。
+下图展示了在特定配置下，MySQL 5.7.39 的 TPC-C 吞吐量与并发之间的关系。这包括将事务隔离级别设置为 Read Committed，并调整 `innodb_spin_wait_delay` 参数以减轻吞吐量下降。
 
 ![image-20240829080057376](img/62b3cf4553332c790161ecec1d61693b.png)
 
@@ -79,7 +80,7 @@ Group Replication 的部署设置如下：在机器 A 上部署了两个 MySQL �
 
 图 1-7\. 默认多主 Paxos 算法的性能测试结果。
 
-从图中可以看出，在 Group Replication 的默认模式下，数据中心间的吞吐量与理论预期存在显著偏差。例如，在网络延迟为 10ms 的场景中，集群的吞吐量降至原始水平的五分之一。为了解决这一差异，从 MySQL 8.0.27 版本开始，引入了 *group_replication_paxos_single_leader* 选项。启用此选项将使用单主 Paxos 算法而不是默认的多主 Paxos 算法。
+从图中可以看出，在 Group Replication 的默认模式下，数据中心间的吞吐量与理论预期存在显著偏差。例如，在网络延迟为 10ms 的场景中，集群的吞吐量降至原始水平的五分之一。为了解决这一差异，从 MySQL 8.0.27 版本开始，引入了 `group_replication_paxos_single_leader` 选项。启用此选项将使用单主 Paxos 算法而不是默认的多主 Paxos 算法。
 
 在配置 Group Replication 使用单主 Paxos 算法后，使用 SysBench 测试工具在相同条件下进行了测试。测试结果如下。
 
@@ -122,3 +123,4 @@ Group Replication 的部署设置如下：在机器 A 上部署了两个 MySQL �
 下一章将通过各种案例研究展示解决晦涩 MySQL 问题的巨大挑战。这需要广泛的知识基础和深入的逻辑推理，以确定这些问题的根本原因。
 
 下一章
+

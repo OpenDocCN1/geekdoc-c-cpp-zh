@@ -1,3 +1,4 @@
+
 # 外部模板声明
 
 模板特化可以被显式声明，这可以作为消除多重实例化的一种方式。例如：
@@ -12,7 +13,7 @@ void foo(MyVector<int>& v)
 } 
 ```
 
-下列代码就是上例中的”其他地方”：
+下列代码就是上例中的“其他地方”：
 
 ```cpp
 #include "MyVector.h"
@@ -24,9 +25,6 @@ template class MyVector<int>;
 
 参见：
 
-*   Standard 14.7.2 Explicit instantiation
-*   [N1448==03-0031] Mat Marcus and Gabriel Dos Reis: [Controlling Implicit Template Instantiation](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1448.pdf)
-
-    .
-
-（翻译：lianggang jiang）
+* `Standard 14.7.2` 显式实例化（Explicit instantiation）
+* `N1448==03-0031`，作者：Mat Marcus 和 Gabriel Dos Reis：[Controlling Implicit Template Instantiation](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2003/n1448.pdf)
+* （翻译：lianggang jiang）

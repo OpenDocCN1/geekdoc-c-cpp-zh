@@ -1,16 +1,7 @@
+
 # 编程天才：10 天内从新手到精通的指南；C 语言编程魔法：10 天内从零到大师
 
-
-
-
-
-
-
-
-
-
-
-# 简介
+## 简介
 
 欢迎来到C语言编程的迷人世界！我们非常高兴你能与我们共同开启这段不可思议的旅程，在短短10天内，从零开始成为一名 C 语言编程魔法师。
 
@@ -32,21 +23,9 @@ https://www.facebook.com/knowledgeclique
 
 Teo Kok Keong
 
+## C语言编程入门
 
-
-
-
-
-
-
-
-
-
-
-
-# C语言编程入门
-
-阅读任务：什么是C语言编程？
+### 阅读任务：什么是C语言编程？
 
 C语言通常被称为“所有编程语言之母”，是计算机编程领域中一种永恒且强大的工具。它是为无数软件系统、操作系统和应用程序奠基础的语言。在接下来的10天里，你将走过一条道路，从一个完全的新手变成一名精通 C 语言的程序员。
 
@@ -65,145 +44,53 @@ https://www.facebook.com/knowledgeclique
 诚诚地，
 
 Teo Kok Keong
-
-
-
-
-
-
-
-
-
-
-
-
-
-# C语言编程入门
-
-阅读任务：什么是C语言编程？
-
-C语言通常被称为“所有编程语言之母”，是计算机编程领域中一种永恒且强大的工具。它是为无数软件系统、操作系统和应用程序奠基础的语言。在接下来的10天里，你将走过一条道路，从一个完全的新手变成一名精通 C 语言的程序员。
-
-[/content]
-
-*(注：由于提供的文本在后半部分出现了大量重复，根据“不要重复输出原文”的要求，我仅翻译了前面的部分。如果文本确实存在重复，我仅翻译了第一遍的内容。)*
-
-**纠正：** 考虑到你提供的文本从“# C Programming Wizardry...”开始出现了大量的完全相同的重复，根据你的指令“**一定不要重复输出原文**”，我将仅翻译了第一次出现的完整内容。
-
----
-
-[content]
-
-
-
-
-
-
-# 简介
-
-欢迎来到C语言编程的迷人世界！我们非常高兴你能与我们共同开启这段不可思议的旅程，在短短10天内，从零开始成为一名 C 语言编程魔法师。
-
-C语言通常被称为“所有编程语言之母”，是计算机编程领域中一种永恒且强大的工具。它是为无数软件系统、操作系统和应用程序奠基础的语言。在接下来的10天里，你将走过一条道路，从一个完全的新手变成一名精通 C 语言的程序员。
-
-无论你是渴望投身软件开发行业、提升自己的编程技能，还是仅仅想探索 C 语言复杂的世界，这门课程都经过精心设计，旨在为你提供所需的知识和实践技能。
-
-这门课程的每一天都经过精心结构，提供循序渐进的指导、动手练习和良好的学习环境。我将伴你走过这段迷人的10天旅程。准备好施展 C 语言编程的魔法，释放你内心的编程魔法师吧！
-
-请关注 Knowledge Clique FB 页面以获取所有练习代码和来自作者的支持。FB 页面链接：
-
-https://www.facebook.com/knowledgeclique
-
-书中列出的所有代码都将在 Github 上免费提供。链接将在 Knowledge Clique FB 页面中提供。
-
-学习愉快！
-
-诚诚地，
-
-Teo Kok Keong
-
-
-
-
-
-
-
 
 - 练习 3：反转数组
 
+### 你应该查看有关已安装 GCC 版本的信息。这验证了编译器已准备好可以使用。
 
-
-
-
-# C语言编程入门
-
-阅读任务：什么是C语言编程？
-
-
-
-你应该查看有关已安装 GCC 版本的信息。这验证了编译器已准备好可以使用。
-
-## 4. 创建工作空间：
+#### 4. 创建工作空间：
 
 通过在你的计算机上创建一个专用的工作空间文件夹来组织你的 C 项目。这将有助于保持项目整洁，并让你更易于管理文件。
 
-## 5. 开始编写代码：
+#### 5. 开始编写代码：
 
 设置好开发环境后，你就可以开始编写 C 代码了。在你的工作空间中创建一个新的 C 源文件（通常带有 `c` 扩展名），并开启你的编程之旅。
 
 设置开发环境是成为精通 C 编程的第一步。一旦设置完成，你就可以进入代码的世界，学习该语言的语法，并构建日益复杂和强大的程序。
 
-## 动手练习 1：设置 Code::block
+### 动手练习 1：设置 Code::block
 
 在本练习中，我们将在 Windows 系统上安装 Code::Blocks 并用 C 语言编写一个“Hello, World!”程序：
 
-### 步骤 1：下载 Code::Blocks
+#### 步骤 1：下载 Code::Blocks
 
 - 1. 打开你的网络浏览器并访问 Code::Blocks 官方网站：[http://www.codeblocks.org/downloads](http://www.codeblocks.org/downloads)。
-
-注意：网络变化非常快，链接可能已经过期，你也可以通过 Google 搜索最新的链接。
-
-- 2. 在“Downloads”（下载）部分，点击“Download the binary release”（下载二进制发行版）。
-
-- 3. 选择“codeblocks-xx.xxmingw-setup.exe”版本（其中 xx.xx 是版本号）。此版本包含了带有 Windows MinGW 编译器的 Code::Blocks IDE。
-
+- 2. 在“Downloads”部分，点击“Download the binary release”。
+- 3. 选择 `codeblocks-xx.xxmingw-setup.exe` 版本。此版本包含了带有 Windows MinGW 编译器的 Code::Blocks IDE。
 - 4. 点击下载链接开始下载。将安装程序保存到你的计算机上。
 
-### 步骤 2：安装 Code::Blocks
+#### 步骤 2：安装 Code::Blocks
 
-- 1. 找到下载的“codeblocks-xx.xxmingw-setup.exe”文件并双击它运行安装程序。
-
-- 2. 你将看到一个“Code::Blocks 安装向导”窗口。点击“Next”（下一步）开始安装过程。
-
-- 3. 选择“I Agree”（我同意）以接受许可协议，并点击“Next”。
-
+- 1. 找到下载的 `codeblocks-xx.xxmingw-setup.exe` 文件并双击它运行安装程序。
+- 2. 你将看到一个“Code::Blocks 安装向导”窗口。点击“Next”开始安装过程。
+- 3. 选择“I Agree”以接受许可协议，并点击“Next”。
 - 4. 为 Code::Blocks 选择安装目录。默认位置通常可以，你可以点击“Next”。
-
 - 5. 选择要安装的组件。确保选中了“Code::Blocks”和“MinGW”。你可以让其他选项保持默认设置并点击“Next”。
-
 - 6. 选择快捷方式的开始菜单文件夹并点击“Next”。
+- 7. 如果需要，选择额外任务。点击“Next”。
+- 8. 检查你的选择，准备就绪后点击“Install”开始安装过程。
+- 9. 等待安装完成。
+- 10. 安装完成后，你将看到“正在完成 Code::Blocks 安装向导”的屏幕。勾选“Run Code::Blocks”并点击“Finish”。
 
-- 7. 如果需要，选择额外任务（例如，创建桌面和快速启动图标）。点击“Next”。
+#### 步骤 3：编写“Hello, World!”程序
 
-- 8. 检查你的选择，准备就绪后点击“Install”（安装）开始安装过程。
-
-- 9. 等待安装完成。这可能需要几分钟。
-
-- 10. 安装完成后，你将看到“正在完成 Code::Blocks 安装向导”的屏幕。勾选“Run Code::Blocks”（运行 Code::Blocks）并点击“Finish”（完成）。
-
-### 步骤 3：编写“Hello, World!”程序
-
-- 1. Code::Blocks 现在应该已经打开。要创建一个新项目，点击顶部菜单中的“File”（文件）并选择“New”（新建）>“Project...”（项目）。
-
-- 2. 在“New Project”（新建项目）对话框中，选择“Console application”（控制台应用程序）并点击“Go”。
-
+- 1. Code::Blocks 现在应该已经打开。要创建一个新项目，点击顶部菜单中的“File”并选择“New”>“Project...”。
+- 2. 在“New Project”对话框中，选择“Console application”并点击“Go”。
 - 3. 选择“C”作为编程语言并点击“Next”。
-
 - 4. 为你的项目命名，例如“HelloWorld”，并选择一个保存它的目录。点击“Next”。
-
-- 5. 确保选中了“Create Debug' configuration”（创建调试配置）并点击“Finish”。
-
-- 6. 在 Code::Blocks IDE 中，你将看到一个新的项目工作空间。在左侧，你有一个“Sources”（源）文件夹。在里面，你会看到一个名为“main.c”的文件。双击打开它。
-
+- 5. 确保选中了“Create Debug' configuration”并点击“Finish”。
+- 6. 在 Code::Blocks IDE 中，你将看到一个新的项目工作空间。在左侧，你有一个“Sources”文件夹。在里面，你会看到一个名为 `main.c` 的文件。双击打开它。
 - 7. 将现有代码替换为以下“Hello, World!”程序：
 
 ```c
@@ -215,15 +102,12 @@ int main() {
 }
 ```
 
-- 8. 点击“File”（文件）>“Save”（保存）或按 Ctrl + S 保存文件。
+- 8. 点击“File”>“Save”或按 Ctrl + S 保存文件。
 
-### 步骤 4：编译并运行
+#### 步骤 4：编译并运行
 
-- 1. 点击工具栏上的“Build and run”（编译并运行）图标（通常是一个小齿轮和一个绿色箭头的图标），或者按 F9。
-
+- 1. 点击工具栏上的“Build and run”图标，或者按 F9。
 - 2. 你应该会在控制台窗口中看到“Hello, World!”。
-
-
 
 ```c
 #include <stdio.h>
@@ -240,7 +124,7 @@ int main() {
 - `printf()` 是定义在 `stdio.h` 中的一个库函数。
 - `\n` 是换行符的转义序列。
 
-# 使用 scanf() 输入
+## 使用 scanf() 输入
 
 `scanf()` 函数用于从用户处读取输入。它是 `stdio.h` 库的一部分。以下是使用 `scanf()` 的示例：
 
@@ -257,7 +141,7 @@ int main() {
 - `%d` 是整数的格式说明符。
 - `&age` 是变量 `age` 的地址，允许 `scanf()` 将输入值存储在该处。
 
-# 格式化输入与输出
+## 格式化输入与输出
 
 C语言为不同的数据类型提供了各种格式说明符：
 
@@ -267,15 +151,15 @@ C语言为不同的数据类型提供了各种格式说明符：
 - `%s` 用于字符串
 - `%lf` 用于双精度浮点数
 
-# 文件输入与输出
+## 文件输入与输出
 
 C语言还支持文件/O 操作，允许你从文件读取并写入文件。你可以使用 `fopen()`、`fprintf()`、`fscanf()` 和 `fclose()` 等函数处理文件。
 
-输入和输出是编程中的基础概念，掌握它们对于创建有用且交互的程序至关重要。在本章中，我们介绍了如何使用 `printf()` 和 `scanf()` 在C语言中基础输入输出。在下一章中，我们将深入研究控制结构和决策，这些对于创建更复杂的程序至关重要。
+输入和输出是编程中的基础概念，掌握它们对于创建有用且交互的程序至关重要。在本章中，我们介绍了如何使用 `printf()` 和 `scanf()` 在C语言中基础输入输出。
 
 动手练习 1：声明并初始化不同数据类型的变量
 
-# 变量声明与初始化
+## 变量声明与初始化
 
 整数变量：声明并初始化两个整数变量 `num1` 和 `num2`，赋予你选择的值。
 
@@ -303,64 +187,47 @@ if (isProgrammingFun) {
 
 用户输入：使用 `scanf` 要求用户为其中一个变量（例如 `num1`）输入新值，然后打印更新后的值。
 
-挑战：声明一个常量变量 `PI` 并初始化为 $\pi$ 的值（约 3.14159）。使用该常量计算半径为你指定的圆的周长并打印结果。
+挑战：声明一个常量变量 `PI` 并初始化为 π 的值（约 3.14159）。使用该常量计算半径为你指定的圆的周长并打印结果。
 
-记得包含适当头文件（#include <stdio.h>），并在在使用之前用正确的数据类型声明变量。此练习将帮助你获得C语言中不同数据类型的实践经验，并对它们进行基本操作。
-
-以下是C语言编程中声明和初始化不同数据类型变量练习的解答，以及每个步骤的描述：
+记得包含适当头文件（`#include <stdio.h>`），并在在使用之前用正确的数据类型声明变量。
 
 ```c
 #include <stdio.h>
 
 int main() {
-    // 整数变量
-    int num1 = 10; // 声明并初始化 num1 值为 10
-    int num2 = 20; // 声明并初始化 num2 值为 20
-
-    // 浮点数变量
-    float float1 = 3.14; // 声明并初始化 float1 值为 3.14
-    float float2 = 2.718; // 声明并初始化 float2 值为 2.718
-
-    // 字符变量
-    char char1 = 'A'; // 声明并初始化 char1 为字符 'A'
-    char char2 = 'B'; // 声明并初始化 char2 为字符 'B'
-
-    // 字符串变量
-    char name[] = "John Doe"; // 声明并初始化一个字符串变量为你的名字
-
-    // 布尔变量
-    int isProgrammingFun = 1; // 声明并初始化布尔变量 (1表示真)
-
-    // 显示值
-    printf("num1: %d\n", num1); // 打印 num1 的值
-    printf("num2: %d\n", num2); // 打印 num2 的值
-    printf("float1: %f\n", float1); // 打印 float1 的值
-    printf("float2: %f\n", float2); // 打印 float2 的值
-    printf("char1: %c\n", char1); // 打印 char1 的值
-    printf("char2: %c\n", char2); // 打印 char2 的值
-
+    int num1 = 10;
+    int num2 = 20;
+    float float1 = 3.14;
+    float float2 = 2.718;
+    char char1 = 'A';
+    char char2 = 'B';
+    char name[] = "John Doe";
+    int isProgrammingFun = 1;
+    printf("num1: %d\n", num1);
+    printf("num2: %d\n", num2);
+    printf("float1: %f\n", float1);
+    printf("float2: %f\n", float2);
+    printf("char1: %c\n", char1);
+    printf("char2: %c\n", char2);
     return 0;
 }
 ```
-
-
-
 
 `while` 循环：当你希望只要某个条件为真就重复执行一段代码块时使用。在进入循环之前会检查条件。
 
 `do-while` 循环：与 `while` 循环类似，但在执行代码块后会检查条件，因此循环内的代码至少会执行一次。
 
-流程控制结构允许你通过控制语句执行的顺序，创建出能够响应各种输入场景、处理错误并高效执行任务的程序。这些结构是 C 语言编程的基础，对于编写复杂且响应灵敏的软件至关重要。
+流程控制结构允许你通过控制语句执行的顺序，创建出能够响应各种输入场景、处理错误并高效执行任务的程序。
 
 ## 阅读作业：决策（if-else, switch）
 
-决策是编程中一个至关重要的方面，它允许你根据某些条件控制代码的流。在 C 语言编程中，你可以使用两种主要结构来实现决策：`if-else` 语句和 `switch-case` 语句。让我们详细探索这两种结构：
+决策是编程中一个至关重要的方面，它允许你根据某些条件控制代码的流。在 C 语言编程中，你可以使用两种主要结构来实现决策：`if-else` 语句和 `switch-case` 语句。
 
 ### 1. if-else 语句：
 
-`if-else` 语句用于根据指定条件的真与假来执行不同的代码块。它允许你在程序中创建分支逻辑。
+`if-else` 语句用于根据指定条件的真与假来执行不同的代码块。
 
-以下是 `if-else` 语句的基本语法：
+基本语法：
 
 ```
 if (condition) {
@@ -377,11 +244,8 @@ if (condition) {
 
 int main() {
     int num;
-
     printf("Enter a number: ");
-
     scanf("%d", &num);
-
     if (num > 0) {
         printf("The number is positive.\n");
     } else if (num < 0) {
@@ -389,37 +253,27 @@ int main() {
     } else {
         printf("The number is zero.\n");
     }
-
     return 0;
 }
 ```
 
-在这个示例中，程序检查输入的数字是正数、负数还是零，并据此执行不同的代码块。
-
 ### 2. switch-case 语句：
 
-`switch-case` 语句用于多路分支。它允许你根据表达式的值从多个代码块中选择一个执行。
+`switch-case` 语句用于多路分支。
 
-以下是 `switch-case` 语句的基本语法：
+基本语法：
 
 ```
 switch (expression) {
-
 case constant1:
-    // 当表达式等于 constant1 时执行代码
     break;
-
 case constant2:
-    // 当表达式等于 constant2 时执行代码
     break;
-
-// 更多 cases...
 default:
-    // 当没有任何 case 匹配时执行代码
 }
 ```
 
-示例：
+
 
 ```c
 #include <stdio.h>
@@ -633,17 +487,11 @@ int main() {
 }
 ```
 
-
-
-
-
-# 第 4 天：函数
-
 # 第 4 天：函数
 
 ## 阅读作业：函数与模块化编程
 
-## C语言中的函数与模块化编程
+### C语言中的函数与模块化编程
 
 C 语言是一种通用且强大的语言，允许你通过使用函数和模块化编程来编写高效且组织良好的代码。函数是执行特定任务的代码块，而模块化编程是一种将程序拆分为更小、易于管理的部分的技术。在本指南中，我们将探索 C 语言函数和模块化编程的基础。
 
@@ -719,6 +567,7 @@ int main() {
 总结来说，函数和模块化编程是 C 编程中的核心概念。它们帮助你创建组织良好、高效且易于维护的代码。*(注：由于原文后部分存在严重的文本重复和乱码，以下内容根据标准编程逻辑进行了修复并翻译)*
 
 ### 练习 1：简单计算器
+
 编写一个使用函数执行加、减、乘、除运算的简单 C 程序。
 
 ```c
@@ -752,6 +601,7 @@ int main() {
 ```
 
 ### 练习 2：质数判断
+
 编写一个函数来检查一个输入的整数是否为质数。
 
 ```c
@@ -776,6 +626,7 @@ int main() {
 ```
 
 ### 练习 3：阶乘计算
+
 编写一个使用函数计算非负整数阶乘的程序。
 
 ```c
@@ -800,6 +651,7 @@ int main() {
 ```
 
 ### 练习 4：斐波那契数列
+
 编写一个使用函数来生成前 n 个斐波那契数的程序。
 
 ```c
@@ -829,10 +681,6 @@ int main() {
     return 0;
 }
 ```
-
-
-
-
 
 ## 2. `char`
 
@@ -904,9 +752,11 @@ int main() {
 
 # 上操：练习 1 声明与初始化
 
-编写一个 C 程序来声明并初始化不同数据类型（int, float, char, double）的变量，并打印它们的值。
 
-将上述程序输入 Code::Block，像第 1 天那样进行编译和运行。
+
+编写一个 C 程序来声明并初始化不同数据类型（`int`, `float`, `char`, `double`）的变量，并打印它们的值。
+
+将上述程序输入 `Code::Block`，像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -934,7 +784,7 @@ int main() {
 
 编写一个 C 程序在不使用临时变量的情况下两个变量的值。
 
-将上述程序输入 Code::Block，像第 1 天那样进行编译和运行。
+将上述程序输入 `Code::Block`，像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -960,11 +810,11 @@ int main() {
 
 # 第 6 天：高级控制流
 
-## 阅读作业：决策 (if-else, switch)
+## 阅读作业：决策 (`if-else`, `switch`)
 
 决策是编程中的基本概念，允许程序根据某些条件或标准执行不同的指令集。在 C 中，决策通常通过 `if-else` 语句和 `switch` 语句来实现。本主题详细探讨这些结构，并提供了在 C 编程中的用法示例。
 
-### if-else 语句：
+### `if-else` 语句：
 
 C 中的 `if-else` 语句用于决策。它允许你指定一个条件，并根据该条件的真假执行不同的代码块。
 
@@ -1018,7 +868,7 @@ int main() {
 }
 ```
 
-### switch 语句：
+### `switch` 语句：
 
 C 中的 `switch` 语句是另一种决策方式。它允许根据表达式在多个代码块之间进行选择。
 
@@ -1032,7 +882,7 @@ switch (expression) {
 }
 ```
 
-#### 示例：使用 switch 实现计算器
+#### 示例：使用 `switch` 实现计算器
 
 ```c
 #include <stdio.h>
@@ -1087,7 +937,7 @@ for (initialization; condition; increment/decrement) {
 }
 ```
 
-**示例：使用 for 循环打印 1 到 5 的数字：**
+**示例：使用 `for` 循环打印 1 到 5 的数字：**
 
 ```c
 #include <stdio.h>
@@ -1112,7 +962,7 @@ while (condition) {
 }
 ```
 
-**示例：使用 while 循环求加 1 到 10 的数字：**
+**示例：使用 `while` 循环求加 1 到 10 的数字：**
 
 ```c
 #include <stdio.h>
@@ -1139,9 +989,6 @@ do {
     // 重复执行的代码
 } while (condition);
 ```
-
-
-
 
 示例：使用 `do-while` 循环读取输入直到输入有效数字：
 
@@ -1203,7 +1050,7 @@ int main() {
     - 如果数字正确，打印“Congratulations! You guessed the number in X guesses,”（恭喜！你用了 X 次猜测猜中了数字），其中 X 是实际的次数。
 - 如果用户超过了最大猜测次数，打印“You've run out of guesses. The number was Y”（你的机会用完了。正确数字是 Y）。
 
-将上述程序输入 Code::Block，并按照第 1 天所示的方法进行编译和运行。
+将上述程序输入 `Code::Block`，并按照第 1 天所示的方法进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1267,9 +1114,6 @@ int main() {
     - 如果范围内没有 `x` 能整整除该数字，则它就是质数。
 - 如果一个数字是质数，将其累加到总和中。
 
-
-
-
 此程序声明、初始化并打印了一个一维整数数组的元素。它是学习 C 语言一维数组的入门示例。你可以根据特定的应用程序需求修改数组的大小和值。
 
 # 阅读作业：指针引论
@@ -1299,7 +1143,7 @@ int main() {
 
 编写一个程序声明一个整数数组并对其进行初始化。然后，打印数组的所有元素。
 
-将下方所示程序输入 Code::Block，像第 1 天那样样进行编译和运行。
+将下方所示程序输入 `Code::Block`，像第 1 天那样样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1334,11 +1178,13 @@ Press any key to continue.
 
 图 11 练习执行的控制台输出示例
 
+
+
 # 动手练习 2：数组的和
 
 编写一个计算整数数组所有元素之的程序。
 
-将下方程序输入 Code::Block，像第 1 天那样进行编译和运行。
+将下方程序输入 `Code::Block`，像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1368,7 +1214,7 @@ int main() {
 
 编写一个原地反转整数数组元素的程序。
 
-将下方程序输入 Code::Block，像第 1 天那样进行编译和运行。
+将下方程序输入 `Code::Block`，像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1513,10 +1359,6 @@ int main() {
 }
 ```
 
-
-
-
-
 ```
 }
 
@@ -1540,13 +1382,11 @@ return 0;
 
 # 第 8 天：文件处理
 
-# 第 8 天：文件处理
-
 ## 阅读作业：文件 I/O 基础
 
 文件 I/O（输入/输出）是编程的一个基础方面，允许你从文件中读取数据并将数据写入文件。在这份基础指南中，我将提供 C 语言中用于读取和写入文件的示例。你也可以将这些概念应用于其他编程语言。
 
-## 1. 从文件中读取
+### 1. 从文件中读取
 
 以下是在 C 中从文件中读取的方法：
 
@@ -1587,7 +1427,7 @@ int main() {
 - 使用 `fgets` 从文件中读取行并打印它们。
 - 最后使用 `fclose` 关闭文件。
 
-## 2. 写入文件
+### 2. 写入文件
 
 以下是在 C 中向文件中写入的方法：
 
@@ -1632,9 +1472,9 @@ int main() {
 
 编写一个 C 程序，读取名为 "input.txt" 的文本文件的内容并将其打印到控制台。
 
-创建一个仅包含 "Hello" 的文本文件 "input.txt"。该 "input.txt" 文件需要与 main.c 位于同一目录下。
+创建一个仅包含 "Hello" 的文本文件 "input.txt"。该 "input.txt" 文件需要与 `main.c` 位于同一目录下。
 
-在 Code::Block 中输入下方所示程序，并像第 1 天那样进行编译和运行。
+在 `Code::Block` 中输入下方所示程序，并像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1665,8 +1505,11 @@ int main() {
 ```
 
 C:\myproject\day1\exe
+
 Hello
+
 Process returned 0 (execution time: 0.040s)
+
 Press any key to continue.
 
 图 18 练习 1 的控制台输出示例
@@ -1675,7 +1518,7 @@ Press any key to continue.
 
 编写一个 C 程序获取用户输入并将其写入名为 "output.txt" 的文本文件。
 
-在 Code::Block 中输入下方所示程序，并像第 1 天那样进行编译和运行。
+在 `Code::Block` 中输入下方所示程序，并像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1706,8 +1549,11 @@ int main() {
 ```
 
 C:\myproject\day1\exe
+
 Enter text:
+
 Hello
+
 Process returned 0 (execution time: 0.040s)
 
 图 19 练习 2 的控制台输出示例
@@ -1716,9 +1562,9 @@ Process returned 0 (execution time: 0.040s)
 
 编写一个 C 程序，读取名为 "input.txt" 的文本文件内容并将其写入到名为 "output.txt" 的文本文件中。
 
-创建一个仅包含 "Hello" 的文本文件 "input.txt"。该 "input.txt" 文件需要与 main.c 位于同一目录下。
+创建一个仅包含 "Hello" 的文本文件 "input.txt"。该 "input.txt" 文件需要与 `main.c` 位于同一目录下。
 
-在 Code::Block 中输入下方所示程序，并像第 1 天那样进行编译和运行。
+在 `Code::Block` 中输入下方所示程序，并像第 1 天那样进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1759,12 +1605,10 @@ int main() {
 ```
 
 C:\myproject\day1\exe
+
 Hello
+
 Process returned 0 (execution time: 0.040s)
-
-
-
-
 
 ```cpp
 int x;
@@ -1775,7 +1619,7 @@ int y;
 
 现在你可以直接声明 `Point` 变量而无需使用 `struct`：
 
-Point p5;
+`Point p5;`
 
 在 C 和 C++ 中定义结构体是一项基础概念，它允许你创建自定义数据类型来表示程序中的复杂数据结构。它们被广泛用于高效地组织和管理数据。
 
@@ -1783,7 +1627,7 @@ Point p5;
 
 C 中的 `UNION`（联合体）是一种复合数据类型，允许你定义一个结构，其中不同数据类型的多个变量共享相同的内存位置。与结构体不同（结构体所有成员的内存是单独分配的），联合体在任何时刻只有一个成员可以持有值。当你需要在同一内存空间中表示不同类型的数据时，联合体特别有用，可以节省内存并为程序提供灵活性。以下是在 C 语言中定义和使用联合体的方法：
 
-## 定义联合体：
+### 定义联合体：
 
 定义联合体的语法与结构体相似：
 
@@ -1852,7 +1696,10 @@ union Value data = {42}; // 将 intValue 成员初始化为 42
 
 ### 用场景：
 
+
+
 - 1. 内存高效存储：当你想要在同一内存位置存储不同类型的数据，且每次只需要这些类型中的一种时，可以使用联合体，这使得你的程序内存利用高效。
+
 - 2. 实现变体数据：联合体经常用于创建变体类型，单个变量可以持有不同数据类型的值。
 
 ### 注意事项：
@@ -1865,7 +1712,7 @@ union Value data = {42}; // 将 intValue 成员初始化为 42
 
 在本次练习中，你将定义一个结构来表示具有 x 和 y 坐标的二维空间中的点。然后，你将初始化几个点结构体并打印它们的值。
 
-将下所示程序输入 Code::Block，按照第 1 天所示的方法进行编译和运行。
+将下所示程序输入 `Code::Block`，按照第 1 天所示的方法进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1904,7 +1751,7 @@ Press any key to continue.
 
 在本次练习中，你将创建一个结构体数组来表示学生列表，每个学生都有姓名和年龄。初始化数组并打印每个学生的详细信息。
 
-将下所示程序输入 Code::Block，按照第 1 天所示的方法进行编译和运行。
+将下所示程序输入 `Code::Block`，按照第 1 天所示的方法进行编译和运行。
 
 ```c
 #include <stdio.h>
@@ -1991,10 +1838,6 @@ Press any key to continue.
 
 这些练习应该为你理解和在你所选择的语言中使用结构体提供一个良好的起点。结构体在许多任务中组织和处理复杂数据至关重要。
 
-
-
-
-
 # DEBUG
 
 ```
@@ -2010,40 +1853,51 @@ Press any key to continue.
 ```
 
 #endif
+
 ```
 
 5. `#pragma`: `#pragma` 指令用于提供特定编译器的指令或提示。这些指令随不同编译器而异，通常用于微调编译器行为。例如：
 
 ```
+
 4996 // 禁用特定的编译器警告
+
 ```
 
 6. `#error`: `#error` 指令用于在预处理期间生成错误消息。这对于强制执行编码标准或确保在编译前满足某些条件非常有帮助。例如：
 
 ```
+
 #ifdef LINUX
+
 ```
 
 ```
+
 // Linux 特有的代码
+
 ```
 
 ```
+
 #else
 
 #error 此代码需要 Linux 环境
 
 #endif
+
 ```
 
 7. #undef: `undef` 指令用于取消定义之前定义的宏。这对于选择性地禁用宏非常有用。例如：
 
 ```
+
 DEBUG // 启用调试
 
 // ...
 
 #undef DEBUG // 禁用调试
+
 ```
 
 预处理器指令在 C 和 C++ 编程中起着至关重要的作用，它们允许开发者编写更灵活、更可移植的代码。然而，应该谨慎使用它们，以避免产生难以理解和维护的代码。
@@ -2052,51 +1906,51 @@ DEBUG // 启用调试
 
 C 语言中的位操作涉及使用位运算符对数据内部的每个位执行各种操作。以下是 C 中一些常见的位操作：
 
-- 1. 位按与 ('&')：
+- 1. 位按与 (`&`)：
 
 如果两个操作数对应的位均为 1，则将该位置 1。
 
-```
+```c
 unsigned int a = 5; // 二进制: 0101
 ```
 
-```
+```c
 unsigned int b = 3; // 二进制: 0011
 ```
 
-```
+```c
 unsigned int result = a & b; // 二进制: 0001 (十进制为 1)
 ```
 
-- 2. 位按或 ('|')：
+- 2. 位按或 (`|`)：
 
 如果操作数中任意一个对应的位为 1，则将该位置 1。
 
-```
+```c
 unsigned int a = 5; // 二进制: 0101
 ```
 
-```
+```c
 unsigned int b = 3; // 二进制: 0011
 ```
 
-```
+```c
 unsigned int result = a | b; // 二进制: 0111 (十进制为 7)
 ```
 
-- 3. 位按异或 (^)：
+- 3. 位按异或 (`^`)：
 
 如果其中一个操作数对应的位为 1 但另一个不是，则将该位置 1。
 
-```
+```c
 unsigned int a = 5; // 二进制: 0101
 ```
 
-```
+```c
 unsigned int b = 3; // 二进制: 0011
 ```
 
-```
+```c
 unsigned int result = a ^ b; // 二进制: 0110 (十进制为 6)
 ```
 
@@ -2104,11 +1958,11 @@ unsigned int result = a ^ b; // 二进制: 0110 (十进制为 6)
 
 此操作反转数字的各个位（1 变为 0，反之亦然）。
 
-```
+```c
 unsigned int a = 5; // 二进制: 0101
 ```
 
-```
+```c
 unsigned int result = ~a; // 二进制: 1010 (十进制为 4294967290)
 ```
 
@@ -2116,11 +1970,11 @@ unsigned int result = ~a; // 二进制: 1010 (十进制为 4294967290)
 
 此操作将数字的各个位向左移动指定的位数。
 
-```
+```c
 unsigned int a = 5; // 二进制: 0000 0101
 ```
 
-```
+```c
 unsigned int result = a << 2; // 二进制: 0001 0100 (十进制为 20)
 ```
 
@@ -2128,11 +1982,11 @@ unsigned int result = a << 2; // 二进制: 0001 0100 (十进制为 20)
 
 此操作将数字的各个位向右移动指定的位数。
 
-```
+```c
 unsigned int a = 16; // 二进制: 0001 0000
 ```
 
-```
+```c
 unsigned int result = a >> 2; // 二进制: 0000 0100 (十进制为 4)
 ```
 
@@ -2156,58 +2010,69 @@ unsigned int result = a >> 2; // 二进制: 0000 0100 (十进制为 4)
 
 该练习提供了一个 C 程序，演示了这些操作并打印结果的二进制表示和十进制表示。通过完成此练习，你将获得在底层编程和嵌入式系统开发常用的基础位操作技术的实践经验。
 
-将下方所示的程序输入 Code::Block，并按照第 1 天所的方法进行编译和运行。
+将下方所示的程序输入 `Code::Block`，并按照第 1 天所的方法进行编译和运行。
 
-```
+```c
 // 打印无符号整数二进制表示的函数
 
 void printBinary(unsigned int num) {
+
     if (num > 1) // 递归调用，右移
         printBinary(num >> 1); // 打印有效位
+
     printf("%d", num & 1); // 打印最低位
+
 }
 
 int main() {
+
     unsigned int num1 = 18; // 二进制: 10010
     unsigned int num2 = 9; // 二进制: 01001
 
     // 1. 在 num1 和 num2 之间执行位按与操作
     unsigned int resultAnd = num1 & num2;
+
     printf("Bitwise AND: ");
     printBinary(resultAnd);
     printf(" Decimal: %u\n", resultAnd);
 
     // 2. 在 num1 和 num2 之间执行位按或操作
     unsigned int resultOr = num1 | num2;
+
     printf("Bitwise OR: ");
     printBinary(resultOr);
     printf(" Decimal: %u\n", resultOr);
 
     // 3. 在 num1 和 num2 之间执行位按异或操作
     unsigned int resultXor = num1 ^ num2;
+
     printf("Bitwise XOR: ");
     printBinary(resultXor);
     printf(" Decimal: %u\n", resultXor);
 
     // 4. 对 num1 执行位按取反操作
     unsigned int resultNot = ~num1;
+
     printf("Bitwise NOT on num1: ");
     printBinary(resultNot);
     printf(" Decimal: %u\n", resultNot);
 
     // 5. 将 num1 左移 2 位
     unsigned int resultLeftShift = num1 << 2;
+
     printf("Left Shift by 2: ");
     printBinary(resultLeftShift);
     printf(" Decimal: %u\n", resultLeftShift);
 
     // 6. 将 num2 右移 1 位
     unsigned int resultRightShift = num2 >> 1;
+
     printf("Right Shift by 1: ");
     printBinary(resultRightShift);
     printf(" Decimal: %u\n", resultRightShift);
 
     return 0;
+
 }
 ```
 
@@ -2218,4 +2083,3 @@ int main() {
 该程序对 `num1` 和 `num2` 执行各种位操作，包括位按与、或、异或、取反、左移和右移。它还打印了结果的二进制和十进制表示。
 
 编译并运行程序以观察这些位操作产生的影响。此练习将帮助你更熟悉地在 C 语言中使用位级操作。
-

@@ -1,11 +1,11 @@
-# C 示例：50 个以上示例
 
+# C 示例：50 个以上示例
 
 ## 作者的话
 
-非常感谢你的购买，感谢你对学习这门奇妙编程语言的兴趣。“C 示例”包含了 30 多个功能完整、易于使用且独特的示例。不需要预先的编程知识，不过有先前的知识也会很有帮助。唯一的要求是耐心、奉献和学习的热情。然而，为了不让你放弃学习 C，我将解释如何创建、编译和运行一个 `.c` 源文件。
+非常感谢你的购买，感谢你对学习这门奇妙编程语言的兴趣。“C 示例”包含了 30 多个功能完整、易于使用且独特的示例。不需要预先的编程知识，不过有先前的知识也会很有帮助。唯一的要求是耐心、奉献和学习的热情。然而，为了不让你放弃学习 C，我将解释如何创建、编译和运行一个`.c`源文件。
 
-为了创建一个可编辑的 `.c` 源文件，你首先需要选择文本编辑器，我将使用 `emacs`。所以要创建一个 `.c` 源文件，请在命令行中输入以下命令：
+为了创建一个可编辑的`.c`源文件，你首先需要选择文本编辑器，我将使用`emacs`。所以要创建一个`.c`源文件，请在命令行中输入以下命令：
 
 ```bash
 emacs SourceFile.c
@@ -27,7 +27,7 @@ gcc -o SourceFile.c SourceFile
 
 ## 感谢
 
-### HelloWorld.c
+### `HelloWorld.c`
 
 ```c
 #include <stdio.h> //一个头文件，包含了输入和输出
@@ -40,12 +40,14 @@ printf("Hello World!\n");//'\n' 是换行符，将其放在新行
 return 0;
 }
 ```
+
 输出：
-```
+
+```text
 Hello World!
 ```
 
-### DataTypes.c
+### `DataTypes.c`
 
 ```c
 #include <stdio.h>
@@ -70,15 +72,17 @@ int main(){
   return 0;
 }
 ```
+
 输出：
-```
+
+```text
 Storage for char: 1 byte
 Storage for int: 4 byte
 Storage for float: 4 byte
 Storage for double: 8 byte
 ```
 
-### Variables.c
+### `Variables.c`
 
 ```c
 #include <stdio.h>
@@ -98,13 +102,15 @@ int main(){
   return 0;
 }
 ```
+
 输出：
-```
+
+```text
 letter: t
 z: 5
 ```
 
-### Operators.c
+### `Operators.c`
 
 ```c
 #include <stdio.h>
@@ -146,8 +152,10 @@ int main(){
   return 0;
 }
 ```
+
 输出：
-```
+
+```text
 2 + 2 : 4
 2 - 2 : 0
 2 * 2 : 4
@@ -173,19 +181,13 @@ x %= y : 1
 x: 1
 ```
 
-### IfStatement.c
+### `IfStatement.c`
 
 ```c
 #include <stdio.h>
 ```
 
-
-
-
-
-# IfStatement.c
-
-`IfStatement`: 演示了 if 语句和决策判断。`If` 语句控制程序的执行流（它们根据某些真/假语句决定哪些代码执行，哪些代码不执行）。
+`IfStatement`：演示了`if`语句和决策判断。`If`语句控制程序的执行流（它们根据某些真/假语句决定哪些代码执行，哪些代码不执行）。
 
 ```c
 int main(){
@@ -212,14 +214,15 @@ int main(){
 ```
 
 **Output:**
-```
+
+```text
 x was changed...
 x: 2
 ```
 
-# CoinFlip.c
+### `CoinFlip.c`
 
-`CoinFlip`: 通过随机数生成模拟掷硬币。随机数生成使用了时间，所以我们需要导入 `time.h` 和 `stdlib.h` 来使其工作。随机数让你的程序更有趣。
+`CoinFlip`：通过随机数生成模拟掷硬币。随机数生成使用了时间，所以我们需要导入`time.h`和`stdlib.h`来使其工作。随机数让你的程序更有趣。
 
 ```c
 #include<stdio.h>
@@ -238,21 +241,26 @@ int main(){
 ```
 
 **Output1:**
-```
+
+```text
 Heads
 ```
+
 **Output2:**
-```
+
+```text
 Heads
 ```
+
 **Output3:**
-```
+
+```text
 tails
 ```
 
-# LogicalOperators.c
+### `LogicalOperators.c`
 
-`Logical Operators`: 逻辑运算符包括与运算符 `&&`，或运算符 `||` 以及非运算符 `!`。非运算符允许你反转一个语句，它会产生相反的结果。逻辑运算符允许你将真/假语句链在一起。
+`Logical Operators`：逻辑运算符包括与运算符`&&`、或运算符`||`以及非运算符`!`。非运算符允许你反转一个语句，它会产生相反的结果。逻辑运算符允许你将真/假语句链在一起。
 
 ```c
 #include <stdio.h>
@@ -275,13 +283,14 @@ int main(){
 ```
 
 **Output:**
-```
+
+```text
 && returns: 1
 ```
 
-# TernaryOperator.c
+### `TernaryOperator.c`
 
-`TernaryOperator`: 三元运算符基本上是 if 语句块的简写表示。它们也被称为条件运算符。
+`TernaryOperator`：三元运算符基本上是`if`语句块的简写表示。它们也被称为条件运算符。
 
 ```c
 int main(){
@@ -300,13 +309,14 @@ int main(){
 ```
 
 **Output:**
-```
+
+```text
 outcome: 0
 ```
 
-# Switch.c
+### `Switch.c`
 
-`Switch`: 在 C 中使用 switch 语句。switch 语句本质上是 if 块，但是基于某些条件进行 switch。我们还将看到如何生成随机数让我们的程序更精彩。
+`Switch`：在 C 中使用`switch`语句。`switch`语句本质上是`if`块，但是基于某些条件进行 switch。我们还将看到如何生成随机数让我们的程序更精彩。
 
 ```c
 #include<stdio.h>
@@ -342,14 +352,16 @@ int main(){
   }
 }
 ```
+
 **Output:**
-```
+
+```text
 You rolled Two
 ```
 
-# Loops.c
+### `Loops.c`
 
-`Loops`: 概述了循环的类型。有 for、while 和 do while 循环，尽管 do 循环没有被介绍，因为它们与 while 循环非常相似，唯一的区别是循环体保证至少执行一次。
+`Loops`：概述了循环的类型。有`for`、`while`和`do while`循环，尽管`do`循环没有被介绍，因为它们与`while`循环非常相似，唯一的区别是循环体保证至少执行一次。
 
 ```c
 #include <stdio.h>
@@ -384,7 +396,8 @@ int main(){
 ```
 
 **Output:**
-```
+
+```text
 i : 0
 i : 1
 i : 2
@@ -409,20 +422,20 @@ x : 8
 x : 9
 ```
 
-
-
-
-
 ```c
 void add(int i){ //必须在 main 函数之外声明
   a += i;//a = a+i;
 }
 ```
-输出:
-函数调用前 a: 100
-函数调用后 a: 323
 
-### 递归 (Recursion.c)
+输出：
+
+函数调用前`a`: 100
+
+函数调用后`a`: 323
+
+### 递归（`Recursion.c`）
+
 ```c
 #include<stdio.h>
 
@@ -455,11 +468,16 @@ int factorial(int n){
     return n * factorial(n-1);
 }
 ```
-输出:
+
+输出：
+
+```text
 5!: 120
 6!: 720
+```
 
-### 递归斐波那契数列 (FibRecursion.c)
+### 递归斐波那契数列（`FibRecursion.c`）
+
 ```c
 #include<stdio.h>
 
@@ -489,20 +507,39 @@ int fibonacci(int n){
     return fibonacci(n-1) + fibonacci(n-2);
 }
 ```
-输出:
-填充数组
-fibArray[0]: 0
-fibArray[1]: 1
-fibArray[2]: 1
-fibArray[3]: 2
-fibArray[4]: 3
-fibArray[5]: 5
-fibArray[6]: 8
-fibArray[7]: 13
-fibArray[8]: 21
-fibArray[9]: 34
 
-### 数组 (Array.c)
+输出：
+
+```text
+填充数组
+
+fibArray[0]: 0
+
+fibArray[1]: 1
+
+fibArray[2]: 1
+
+fibArray[3]: 2
+
+fibArray[4]: 3
+
+fibArray[5]: 5
+
+fibArray[6]: 8
+
+fibArray[7]: 13
+
+fibArray[8]: 21
+
+fibArray[9]: 34
+```
+
+### 数组（`Array.c`）
+
+
+
+# 数组 (Array.c)
+
 ```c
 #include <stdio.h>
 
@@ -517,13 +554,13 @@ int main(){
   int list[] = {1, 2, 3, 4, 5, 6, 7, 8,9 ,10};
   printf("int[] 的字节大小: %lu\n", sizeof(list));
   //初始化数组的第二种方法
-  int forList[5]//在空间中保留内存
+  int forList[5];//在空间中保留内存
   for(int index = 0; index < 5; index++){
     forList[index] = index*2;
     printf("Array[%d] : %d\t", index, index*2);
   }
   printf("\n");
-  list[0] = forList[4]//合法
+  list[0] = forList[4];//合法
   printf("list[0]: %d\n", list[0]);
   list[0]=10001; //合法初始化数组
   printf("list[0]: %d\n", list[0]);
@@ -545,7 +582,10 @@ int main(){
   return 0;
 }
 ```
-输出:
+
+**输出:**
+
+```
 int[] 的字节大小: 40
 Array[0] : 0 Array[1] : 2 Array[2] : 4 Array[3] : 6 Array[4] : 8
 list[0]: 8
@@ -554,8 +594,10 @@ box[0][0]: 1 box[0][1]: 2 box[0][2]: 3 box[0][3]: 4
 box[1][0]: 11 box[1][1]: 12 box[1][2]: 13 box[1][3]: 14
 box[2][0]: 21 box[2][1]: 22 box[2][2]: 23 box[2][3]: 24
 box[3][0]: 31 box[3][1]: 32 box[3][2]: 33 box[3][3]: 34
+```
 
-### 平均值 (Average.c)
+## 平均值 (Average.c)
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -577,10 +619,15 @@ int main(){
   return 0;
 }
 ```
-输出:
-平均值: [具体计算结果]
 
-### 字符串 (String.c)
+**输出:**
+
+```
+平均值: [具体计算结果]
+```
+
+## 字符串 (String.c)
+
 ```c
 #include <stdio.h>
 #include <string.h> // 注意包含语句
@@ -613,15 +660,20 @@ int main(){
   return 0;
 }
 ```
-输出:
+
+**输出:**
+
+```
 str1: Hello
 str2: World!
 str1 长度: 5
 str2 长度: 6
 字符串匹配
 拼接后的 str1: Hello World!
+```
 
-### 结构体 (Struct.c)
+## 结构体 (Struct.c)
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -632,7 +684,7 @@ str2 长度: 6
 struct Person {
   char name[20];
   int age;
-}; // 注意结尾的冒号
+}; // 注意结尾的分号
 
 int main(){
   // 声明结构体变量
@@ -651,11 +703,16 @@ int main(){
   return 0;
 }
 ```
-输出:
+
+**输出:**
+
+```
 姓名: Alice, 年龄: 25
 姓名: Bob, 年龄: 30
+```
 
-### 位域 (BitField.c)
+## 位域 (BitField.c)
+
 ```c
 #include <stdio.h>
 
@@ -677,22 +734,20 @@ int main(){
   return 0;
 }
 ```
-输出:
+
+**输出:**
+
+```
 a: 1, b: 3, c: 7
-
-
-
-
-
-```c
-//Boolean.b = 2//除非你分配了 2 位宽，否则是不合法的
-//因为在二进制中表示 2 需要两个位
-//Boolean.b = 7 //由于上述原因也是不法的，除非你将位宽更改为 3
-  return 0;
-}
 ```
 
-# Pointer.c
+```c
+//Boolean.b = 2 //除非你分配了 2 位宽，否则是不合法的
+//因为在二进制中表示 2 需要两个位
+//Boolean.b = 7 //由于上述原因也是不合法的，除非你将位宽更改为 3
+```
+
+## 指针 (Pointer.c)
 
 ```c
 #include <stdio.h>
@@ -731,6 +786,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of number: 0x7fff5f315be8
 Address of two: 0x7fff5f315be4
@@ -738,7 +794,7 @@ Address of where int is stored: 0x7fff5f315be8
 What is stored in number address: 1
 ```
 
-# PointerToNull.c
+## 空指针 (PointerToNull.c)
 
 ```c
 #include <stdio.h>
@@ -761,7 +817,7 @@ int main(){
   printf("p==cp: %d\n",p==cp);//1 为真，0 为假
 
   // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
+  if(p){ // 可以使用 p!=NULL
     printf("p is not null\n");
   }else {
     printf("p is null\n");
@@ -775,13 +831,14 @@ int main(){
 ```
 
 **输出:**
+
 ```
 p: 0x0
 p==cp: 1
 p is null
 ```
 
-# PointerToVoid.c
+## void 指针 (PointerToVoid.c)
 
 ```c
 #include <stdio.h>
@@ -812,6 +869,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of p: 0x7fff5c39ba8
 sizeof(p): 8
@@ -820,7 +878,7 @@ Address of vp: 0x7fff5c39ba8
 sizeof(vp): 8
 ```
 
-# PointerToConstant.c
+## 常量指针 (PointerToConstant.c)
 
 ```c
 #include <stdio.h>
@@ -838,7 +896,9 @@ int main(){
   return 0;
 }
 ```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
+
+
+
 
 # Pointer.c
 
@@ -879,6 +939,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of number: 0x7fff5f315be8
 Address of two: 0x7fff5f315be4
@@ -923,6 +984,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 p: 0x0
 p==cp: 1
@@ -960,6 +1022,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of p: 0x7fff5c39ba8
 sizeof(p): 8
@@ -986,7 +1049,31 @@ int main(){
   return 0;
 }
 ```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
+
+*(注：由于原文中 `PointerToConstant.c` 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。)*
+
+
+
+# PointerToConstant.c
+
+```c
+#include <stdio.h>
+
+/*
+[作者] | [邮箱] | [日期]
+指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
+*/
+int main(){
+  int x = 100;
+  const int *ci = &x;
+  printf("Address: %p\n", ci);
+  printf("Value: %d\n", *ci);
+  // *ci = 200; // 错误：不能修改常量的值
+  return 0;
+}
+```
+
+*(注：由于原文中 `PointerToConstant.c` 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
 
 # Pointer.c
 
@@ -1027,6 +1114,160 @@ int main(){
 ```
 
 **输出:**
+
+```c
+Address of number: 0x7fff5f315be8
+Address of two: 0x7fff5f315be4
+Address of where int is stored: 0x7fff5f315be8
+What is stored in number address: 1
+```
+
+# PointerToNull.c
+
+```c
+#include <stdio.h>
+
+/*
+[作者] | [邮箱] | [日期]
+
+空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
+指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
+两个空指针总是相等的。
+指向空的指针不指向任何内容。
+空指针中存储的地址是一个无效的内存地址。
+它们对于执行检查非常有用。
+*/
+int main(){
+  int *p;
+  p = NULL;
+  int *cp = NULL;
+  printf("p: %p\n",p);//%p 是指针的占位符
+  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
+
+  // 可以在 if 语句中使用空指针
+  if(p){可以使用 p!=NULL
+    printf("p is not null\n");
+  }else {
+    printf("p is null\n");
+  }
+
+  // NULL 是空，空指针在数据结构中很有用
+  // 用于标记
+  // 数据结构的末尾，例如链表
+  return 0;
+}
+```
+
+**输出:**
+
+```c
+p: 0x0
+p==cp: 1
+p is null
+```
+
+# PointerToVoid.c
+
+```c
+#include <stdio.h>
+
+/*
+[作者] | [邮箱] | [日期]
+
+空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
+*/
+int main(){
+  //空指针可以持有任何数据类型
+  int a = 100;
+  int *p = &a;
+  printf("Address of p: %p\n",p);
+  printf("sizeof(p): %lu\n", sizeof(p));
+  printf("Dereferencing of p: %d\n",*p);
+  void *vp;
+  vp = p;//这个指针可以持有任何数据类型，
+         // 对函数参数很有用
+  /*
+    - 空指针将与 char 有相同的表示形式和内存对齐
+    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
+  */
+  printf("Address of vp: %p\n",vp);
+  printf("sizeof(vp): %lu\n", sizeof(vp));
+  return 0;
+}
+```
+
+**输出:**
+
+```c
+Address of p: 0x7fff5c39ba8
+sizeof(p): 8
+Dereferencing of p: 100
+Address of vp: 0x7fff5c39ba8
+sizeof(vp): 8
+```
+
+# PointerToConstant.c
+
+```c
+#include <stdio.h>
+
+/*
+[作者] | [邮箱] | [日期]
+指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
+*/
+int main(){
+  int x = 100;
+  const int *ci = &x;
+  printf("Address: %p\n", ci);
+  printf("Value: %d\n", *ci);
+  // *ci = 200; // 错误：不能修改常量的值
+  return 0;
+}
+```
+
+
+
+
+# Pointer.c
+
+```c
+#include <stdio.h>
+
+/*
+[作者] | [邮箱] | [日期]
+
+指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
+*/
+int main(){
+  int number = 1;
+  int two;
+
+  //要访问内存地址使用 & 符号
+  // 位于变量名旁边
+  printf("Address of number: %p\n", &number);
+  printf("Address of two: %p\n", &two);//指针的占位符是 %p
+
+  //这两个地址在内存中将相隔 4 字节，或 32 位
+  // 在内存中，由于它们是连续声明的，
+  // 它们以“线性”方式存储
+  //声明指针使用相同的数据类型
+  // 在此例中使用 int，然后在名称旁边加一个 *
+  int *pointerToInt = &number; //声明一个指针变量
+                                // 该指针指向 number 的地址
+
+  // 仅引用指针将返回一个地址
+  printf("Address of where int is stored: %p\n", pointerToInt);
+
+  //要访问指针指向的内容，在指针上使用 *
+  // 这被称为引用一个指针
+  printf("What is stored in number address: %d\n", *pointerToInt);
+
+  return 0;
+}
+```
+
+**输出:**
+
 ```
 Address of number: 0x7fff5f315be8
 Address of two: 0x7fff5f315be4
@@ -1071,6 +1312,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 p: 0x0
 p==cp: 1
@@ -1108,6 +1350,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of p: 0x7fff5c39ba8
 sizeof(p): 8
@@ -1134,6 +1377,7 @@ int main(){
   return 0;
 }
 ```
+
 *(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
 
 # Pointer.c
@@ -1174,896 +1418,8 @@ int main(){
 }
 ```
 
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of number: 0x7fff5f315be8
-Address of two: 0x7fff5f315be4
-Address of where int is stored: 0x7fff5f315be8
-What is stored in number address: 1
-```
-
-# PointerToNull.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: C 语言中的 Null 表示无，它在字面上没有值，并用于表示未知的数据。
-指向空指针在 C 中是合法的。当指针被赋值为空时，该指针不指向任何内容。
-两个空指针总是相等的。
-指向空的指针不指向任何内容。
-空指针中存储的地址是一个无效的内存地址。
-它们对于执行检查非常有用。
-*/
-int main(){
-  int *p;
-  p = NULL;
-  int *cp = NULL;
-  printf("p: %p\n",p);//%p 是指针的占位符
-  printf("p==cp: %d\n",p==cp);//1 为真，0 为假
-
-  // 可以在 if 语句中使用空指针
-  if(p){可以使用 p!=NULL
-    printf("p is not null\n");
-  }else {
-    printf("p is null\n");
-  }
-
-  // NULL 是空，空指针在数据结构中很有用
-  // 用于标记
-  // 数据结构的末尾，例如链表
-  return 0;
-}
-```
-
-**输出:**
-```
-p: 0x0
-p==cp: 1
-p is null
-```
-
-# PointerToVoid.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-空指针: 指向 void 的指针在 c 中是合法的。空指针可以用来持有指向任何数据类型的指针。空指针展示了多态的特性。
-*/
-int main(){
-  //空指针可以持有任何数据类型
-  int a = 100;
-  int *p = &a;
-  printf("Address of p: %p\n",p);
-  printf("sizeof(p): %lu\n", sizeof(p));
-  printf("Dereferencing of p: %d\n",*p);
-  void *vp;
-  vp = p;//这个指针可以持有任何数据类型，
-         // 对函数参数很有用
-  /*
-    - 空指针将与 char 有相同的表示形式和内存对齐
-    - 空指针永远不会等于另一个指针，但赋值为 NULL 的空指针会相等
-  */
-  printf("Address of vp: %p\n",vp);
-  printf("sizeof(vp): %lu\n", sizeof(vp));
-  return 0;
-}
-```
-
-**输出:**
-```
-Address of p: 0x7fff5c39ba8
-sizeof(p): 8
-Dereferencing of p: 100
-Address of vp: 0x7fff5c39ba8
-sizeof(vp): 8
-```
-
-# PointerToConstant.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-指向常量的指针在 c 中是合法的。一旦常量指针被初始化，它就不能被更改。常量是你可以添加到变量上的修饰符。一旦变量被定义，就不能更改。
-*/
-int main(){
-  int x = 100;
-  const int *ci = &x;
-  printf("Address: %p\n", ci);
-  printf("Value: %d\n", *ci);
-  // *ci = 200; // 错误：不能修改常量的值
-  return 0;
-}
-```
-*(注：由于原文中 PointerToConstant.c 代码块似乎不完整，我根据注释逻辑补全了常见的示例结构，若仅需翻译已有文本，请忽略此。以下为对你提供的剩余文本的逐性翻译：)*
-
-# Pointer.c
-
-```c
-#include <stdio.h>
-
-/*
-[作者] | [邮箱] | [日期]
-
-指针: 指针是一个特殊的变量，用于存储数据类型的内存地址。指针指向变量数据存储的内存地址。当你在 C 中声明变量时，会分配内存空间来存储该变量。因此，指针可以获取存储在内存地址的数据。当你访问内存地址处的值时，这被称为解引用指针。你可以拥有一个指向指针的指针。
-*/
-int main(){
-  int number = 1;
-  int two;
-
-  //要访问内存地址使用 & 符号
-  // 位于变量名旁边
-  printf("Address of number: %p\n", &number);
-  printf("Address of two: %p\n", &two);//指针的占位符是 %p
-
-  //这两个地址在内存中将相隔 4 字节，或 32 位
-  // 在内存中，由于它们是连续声明的，
-  // 它们以“线性”方式存储
-  //声明指针使用相同的数据类型
-  // 在此例中使用 int，然后在名称旁边加一个 *
-  int *pointerToInt = &number; //声明一个指针变量
-                                // 该指针指向 number 的地址
-
-  // 仅引用指针将返回一个地址
-  printf("Address of where int is stored: %p\n", pointerToInt);
-
-  //要访问指针指向的内容，在指针上使用 *
-  // 这被称为引用一个指针
-  printf("What is stored in number address: %d\n", *pointerToInt);
-
-  return 0;
-}
-```
 *(抱歉，由于系统在处理中出现了重复错误，以下是为您整理的最终翻译内容：)*
 
-[content]
 ```c
 //Boolean.b = 2//除非你分配了 2 位宽，否则是不合法的
 //因为在二进制中表示 2 需要两个位
@@ -2111,6 +1467,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of number: 0x7fff5f315be8
 Address of two: 0x7fff5f315be4
@@ -2155,6 +1512,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 p: 0x0
 p==cp: 1
@@ -2192,6 +1550,7 @@ int main(){
 ```
 
 **输出:**
+
 ```
 Address of p: 0x7fff5c39ba8
 sizeof(p): 8
@@ -2219,19 +1578,21 @@ int main(){
 }
 ```
 
-
-
-
 ```c
 printf("Name: %s\nAge: %d\n", person->name, person->age);
 }
 ```
 
-Output:
+**输出:**
+
 Size of Struct: 24
+
 address[0] : 0x7fff55633bb0
+
 address[1] : 0x7fff55633bc8
+
 Name: DoEasy Prod.
+
 Age: 1
 
 ### PointerToFunction.c
@@ -2270,10 +1631,15 @@ int add(int x, int y){
 }
 ```
 
-Output:
+**输出:**
+
 r: 13
 
 ### Binary.c
+
+
+
+## 二进制转换
 
 ```c
 #include <stdio.h>
@@ -2281,10 +1647,10 @@ r: 13
 /*
 [Author] | [Email] | [Date]
 
-二进制：将代表 8 位二进制数的 char[] 转换为十进制 10 数字，涵盖了目前为止讨论的所有主题。尝试一下我们涵盖的一些主题是一个良好的习惯。
+二进制：将代表 8 位二进制数的 `char[]` 转换为十进制 10 数字，涵盖了目前为止讨论的所有主题。尝试一下我们涵盖的一些主题是一个良好的习惯。
 */
-// 全局作用域，可以在 .c 源文件的任何地方使用
-char binary[8]= {‘0','0','0','0','1','1','0','1'}; // 数组
+// 全局作用域，可以在 `.c` 源文件的任何地方使用
+char binary[8]= {'0','0','0','0','1','1','0','1'}; // 数组
 int binaryToDecimal(char binary[]); // 函数
 int main(){
   printf("decimal: %d \n", binaryToDecimal(binary));
@@ -2292,12 +1658,12 @@ int main(){
 }
 
 int binaryToDecimal(char binary[]){
-  char *p = binary; // 指向 binary[] 中第一个地址的指针
+  char *p = binary; // 指向 `binary[]` 中第一个地址的指针
   int sum = 0;
   int base = 1;
   for(int i = 7; i>0; i--){ // 循环和运算符
-    // 尝试 i < sizeof(binaryNumber)/sizeof(char)
-    if(*(p+i) == ‘1’){//指向数组的指针，以及 if 语句
+    // 尝试 `i < sizeof(binaryNumber)/sizeof(char)`
+    if(*(p+i) == '1'){//指向数组的指针，以及 `if` 语句
     sum += base;// 赋值运算符   
     }
     base *= 2;// 赋值运算符
@@ -2306,10 +1672,13 @@ int binaryToDecimal(char binary[]){
 }
 ```
 
-Output:
-decimal: 13
+**输出：**
 
-### TypeCasting.c
+```
+decimal: 13
+```
+
+## TypeCasting.c
 
 ```c
 #include <stdio.h>
@@ -2321,14 +1690,14 @@ int main(){
   /*
   - 使用强制转换向函数传递不同的数据类型
   - 可以将任何数据类型转换为另一种类型
-  - 注意数据丢失，例如将 float 转换为 int
+  - 注意数据丢失，例如将 `float` 转换为 `int`
   */
   double x = 89.99;
   printf("x before cast: %f\n", x);
   printf("sizeof(x): %lu\n", sizeof(x));
   printf("x after cast: %d\n", (int)x);
   printf("sizeof((int)x): %lu\n", sizeof((int)x));
-  // 与其每次都将 x 转换为 int，
+  // 与其每次都将 `x` 转换为 `int`，
   // 我们可以将其赋值给一个变量，
   // 只要确保变量与转换后的类型相同即可
   int castVariable = (int)x;
@@ -2336,26 +1705,29 @@ int main(){
 }
 ```
 
-Output:
+**输出：**
+
+```
 x before cast: 89.990000
 sizeof(x): 8
 x after cast: 89
 sizeof((int)x): 4
+```
 
-### IO.c
+## IO.c
 
 ```c
 #include <stdio.h>
 /*
 [Author] | [Email] | [Date]
-IO：我们一直都在通过 printf() 函数处理输出，现在让我们尝试使用 scanf() 函数进行一些输入。
+IO：我们一直都在通过 `printf()` 函数处理输出，现在让我们尝试使用 `scanf()` 函数进行一些输入。
 标准输入来自键盘，所以现在我们可以开始创建一些有趣且令人程序了。
 */
 int main(){
   // 我们已经看到输入了，但如果你想
   // 从键盘获取用户输入怎么办？
   /*
-   getchar() 和 putchar()
+   `getchar()` 和 `putchar()`
   */
   char c;
   printf("Enter a value>>> ");
@@ -2364,7 +1736,7 @@ int main(){
   putchar(c);
   printf("\n");
   /*
-   scanf() 和 printf()
+   `scanf()` 和 `printf()`
   */
   char input[100];
   int i;
@@ -2378,13 +1750,16 @@ int main(){
 }
 ```
 
-Output:
+**输出：**
+
+```
 Enter a value>>> s
 Ch Entered: s
 Enter a value>>> string 4
 Input Entered: string 4
+```
 
-### GuessThePassPhrase.c
+## GuessThePassPhrase.c
 
 ```c
 #include<stdio.h>
@@ -2392,15 +1767,15 @@ Input Entered: string 4
 #include<string.h>
 /*
 [Author] | [Email] | [Date]
-一个用于测试 while 循环、用户输入和逻辑的游戏，当用户猜中我们的密码时，游戏结束。
+一个用于测试 `while` 循环、用户输入和逻辑的游戏，当用户猜中我们的密码时，游戏结束。
 */
   /*
-  如果 guess == password 则返回 1。
+  如果 `guess == password` 则返回 1。
   否则返回 0。
   */
 int equals(char* guess, char* password);
 int main(){
-  char PASSWORD[] = “Password”;//这可以是密码
+  char PASSWORD[] = "Password";//这可以是密码
   char* pp = PASSWORD;//这持有内存地址
   char guess[15];//不能超过 14
   do{
@@ -2420,11 +1795,14 @@ int equals(char* guess, char* password){
 }
 ```
 
-Output:
+**输出：**
+
+```
 Enter the password: some
 You was: Password
+```
 
-### TempConverter.c
+## TempConverter.c
 
 ```c
 #include<stdio.h>
@@ -2445,27 +1823,30 @@ int main(){
 }
 ```
 
-Output:
+**输出：**
+
+```
 Enter degrees in F:
 0
 tempF: 0.00
 tempC: -17.78
 tempK: 255.37
+```
 
-### FileIO.c
+## FileIO.c
 
 ```c
 #include <stdio.h>
 #include <string.h>
 /*
 [Author] | [Email] | [Date]
-FileIO：在 C 中你可以从文件读取输入，也可以从程序写入文件。fgets 读取文件的一行，fputs 将一行写入文件，当你这样做时文件内容会被擦除并替换，所以如果你想避免这一点，请确保使用追加选项。
+FileIO：在 C 中你可以从文件读取输入，也可以从程序写入文件。`fgets` 读取文件的一行，`fputs` 将一行写入文件，当你这样做时文件内容会被擦除并替换，所以如果你想避免这一点，请确保使用追加选项。
 */
 int main(){
   /*
-   fgetc(fp) -->读取一个字符
-   fscanf(fp, source)—>读取模式
-   fgets -->读取行
+   `fgetc(fp)` -->读取一个字符
+   `fscanf(fp, source)`—>读取模式
+   `fgets` -->读取行
   */
   FILE *fp //首先声明一个文件指针
   char contents[50];//不能超过 50
@@ -2490,7 +1871,9 @@ int main(){
 }
 ```
 
-Output:
+**输出：**
+
+```
 Word 1: This
 Word 2: scans
 Word 3: words
@@ -2498,8 +1881,9 @@ Line 1:
 Line 2: this is another line
 Line 3: file input and output
 Line 4: can be very useful
+```
 
-### ErrorHandling.c
+## ErrorHandling.c
 
 ```c
 #include <stdio.h>
@@ -2509,9 +1893,6 @@ Line 4: can be very useful
 错误处理：如何处理错误，寻找什么，
 */
 ```
-
-
-
 
 以及 `stderr`，它是 `stdlib` 的一部分。我们将使用一个除以零的简单示例。当你除以零时，会返回一个非实数。因此，我们需要设置一些预防措施来避免这种情况，错误处理非常取决于你的程序。
 
@@ -2533,11 +1914,13 @@ int main(){
 ```
 
 **输出：**
+
 ```
 Quotient: 4
 ```
 
-### MyHeader.h
+## MyHeader.h
+
 ```c
 /*
    在 C 语言中，你可以创建自己的头文件，然后可以将将其
@@ -2552,7 +1935,8 @@ typedef struct Person{
 //也可以在这些方法内部放置错误处理
 ```
 
-### Header.c
+## Header.c
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -2560,7 +1944,7 @@ typedef struct Person{
 
 /*
 [作者] | [邮箱] | [日期]
-Header: 使用了我们自定义的 MyHeader.h 文件。
+Header: 使用了我们自定义的 `MyHeader.h` 文件。
 */
 int main(){
   Person me;
@@ -2572,12 +1956,14 @@ int main(){
 ```
 
 **输出：**
+
 ```
 Name: DoEasy
 Age: 100
 ```
 
-### ChemicalElement.h
+## ChemicalElement.h
+
 ```c
 /*
 [作者] | [邮箱] | [日期]
@@ -2594,7 +1980,8 @@ typedef struct ChemicalElement{
 }ChemicalElement;
 ```
 
-### PeriodicTable.c
+## PeriodicTable.c
+
 ```c
 #include "ChemicalElement.h"
 #include<stdio.h>
@@ -2631,6 +2018,7 @@ int main(){
 ```
 
 **输出：**
+
 ```
 Printing Water:
 Hydrogen: 1.00
@@ -2639,7 +2027,8 @@ Oxygen: 16.00
 Total Mass: 18.00
 ```
 
-### CommandLine.c
+## CommandLine.c
+
 ```c
 #include <stdio.h>
 
@@ -2663,7 +2052,9 @@ int main(int argc, char *argv[]){
   return 0;
 }
 ```
+
 **执行：**
+
 ```
 ./CommandLine These Are the Args
 Command Line Arg[1]:These
@@ -2672,7 +2063,25 @@ Command Line Arg[3]:the
 Command Line Arg[4]:Args
 ```
 
-### MemoryManagement.c
+## MemoryManagement.c
+
+
+
+# C 语言动态内存管理示例
+
+以下示例展示了如何在 C 语言中动态创建内存空间。这意味着在运行时创建内存空间，当你不知道需要多少内存时非常有用。
+
+## 动态内存分配函数
+
+- `void *calloc(int num, int size)`：分配一个包含 `num` 个元素的数组，每个元素为 `size` 字节。
+- `void free(void *address)`：释放给定地址的内存块。
+- `void *malloc(int num)`：分配一个包含 `num` 个字节的数组，这些字节是未初始化的。
+- `void *realloc(void *address, int size)`：重新分配内存，将其扩展到 `size` 字节。
+
+这样我们可以定义一个指针，而不需要预先定义需要多少内存。
+
+## 基本示例
+
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -2683,11 +2092,6 @@ Command Line Arg[4]:Args
 如何动态创建内存空间。这意味着在运行时创建
 内存空间。当你不知道需要多少
 内存时非常有用。
-void *calloc(int num, int size)-->分配一个包含 num 个元素的数组，每个元素为 size
-void free(void *address)-->释放给定地址的内存块
-void malloc(int num)-->分配一个包含 num 个字节的数组，这些字节是未初始化的
-void *realloc(void *address, int size)-->重新分配内存，将其扩展到 size
-这样我们可以定义一个指针，而不需要定义多少内存
 */
 int main(){
   char name[10];
@@ -2704,7 +2108,9 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
+
 ```
 sizeof(): 8
 address: 0xfff5c8b0
@@ -2712,7 +2118,8 @@ name: doeasy
 about_name: This string can be big as…
 ```
 
-### DynamicString.c
+## DynamicString.c
+
 ```c
 /*
 [作者] | [邮箱] | [日期]
@@ -2743,13 +2150,16 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
+
 ```
 Enter a sentence: this sentence can any length
 You entered: this sentence can any length
 ```
 
-### DynamicIntArray.c
+## DynamicIntArray.c
+
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -2779,7 +2189,9 @@ int main(){
   return 0;
 }
 ```
+
 **输出：**
+
 ```
 Enters numbers, press enter to add a number:
 Enter -1 to exit.
@@ -2794,7 +2206,8 @@ number[2]: 222
 That was 3 numbers.
 ```
 
-### ArrayAnalysis.c
+## ArrayAnalysis.c
+
 ```c
 #include<stdio.h>
 #include<stdlib.h>
@@ -2838,9 +2251,6 @@ int* initArray(int size, int range){
   return num;
 }
 ```
-
-
-
 
 ```c
 /*
@@ -2891,13 +2301,18 @@ int smallest(int* numbers, int size){
 }
 ```
 
-### 输出:
+### 输出：
+
 分析数组：
+
 平均值 60.30
+
 最大 90
+
 最小 0
 
-### TicTacToe.h
+## TicTacToe.h
+
 ```c
 /*
 [作者] | [邮箱] | [日期]
@@ -2929,7 +2344,8 @@ void printBoard(){
 */
 ```
 
-### TicTacToeGame.c
+## TicTacToeGame.c
+
 ```c
 #include <stdio.h>
 #include "TicTacToe.h"
@@ -2947,7 +2363,8 @@ int main(){
 }
 ```
 
-### 输出:
+### 输出：
+
 ```
 [ ][ ][ ]
 [ ][ ][ ]
@@ -2957,7 +2374,8 @@ int main(){
 [ ][ ][ ]
 ```
 
-### pieces.h
+## pieces.h
+
 ```c
 /*
   [作者] | [邮箱] | [日期]
@@ -3013,7 +2431,8 @@ void printBoard(){
 }
 ```
 
-### moves.h
+## moves.h
+
 ```c
 /*
   [作者] | [邮箱] | [日期]
@@ -3049,7 +2468,8 @@ void movePawn(char *piece, int r, int c, int tor, int toc){
 }
 ```
 
-### Game.c
+## Game.c
+
 ```c
 #include <stdio.h>
 #include "pieces.h"
@@ -3070,8 +2490,9 @@ int main(){
 }
 ```
 
-### 结
-总之，这些示例我们仅仅触及了皮一角。然而，现在你有了一个可以据此构建的基础基础。所以，去尝试吧，开始构建、破坏并从自己的代码中享受乐趣。请访问我的网站获取更多信息：
+## 结语
+
+总之，这些示例我们仅仅触及了皮毛。然而，现在你有了一个可以据此构建的基础。所以，去尝试吧，开始构建、破坏并从自己的代码中享受乐趣。请访问我的网站获取更多信息：
 
 [tfoss0001.github.io](http://tfoss0001.github.io)
 
@@ -3082,4 +2503,3 @@ DoEasy Productions
 该频道上有播放列表可以引导你学习这些示例，并为你编写自己的程序提供灵感。非常感谢。
 
 -Torin Foss
-

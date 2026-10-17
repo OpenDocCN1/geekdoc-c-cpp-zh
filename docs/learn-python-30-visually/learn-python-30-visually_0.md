@@ -1,51 +1,79 @@
+
 # 可视化学习 Python 3.0
-
-
-
-
 
 一本书的诞生需要许多人的共同努力。因此，谨向所有帮助我完成这个项目的 Kickstarter 资助者们表示以表示最诚挚的“感谢”，并希望我们未来能创造更多伟大的作品。
 
 ![](img/00001.jpeg)
 
 Anthony Storms Akins
-Alan Prak
-Alessandro
-Andy Lee
-Bill Stull
-Brandon Thompson
-Charles Rogers
-Clément Labadie
-Demian Vonder Kuhlen
-Edgar Rodriguez
-Gordon
-Greg_Vee
-Gregory Pfrommer
-Gregory R. Kinnicutt
-J.T. O’Gara
-Janakan
-Jeff
-Joe
-Joshua Bauder
-Marco Randall
-Marshall Walker
-Neer Patel
-Nigel J Allen
-Padrao
-Perry Yap
-R.C. Lewis
-Randy Morris
-Rowan Knight
-Sebastian Lange
-Shahid Ali Shah
-Shrawan
-Stan Spears
 
+Alan Prak
+
+Alessandro
+
+Andy Lee
+
+Bill Stull
+
+Brandon Thompson
+
+Charles Rogers
+
+Clément Labadie
+
+Demian Vonder Kuhlen
+
+Edgar Rodriguez
+
+Gordon
+
+`Greg_Vee`
+
+Gregory Pfrommer
+
+Gregory R. Kinnicutt
+
+J.T. O’Gara
+
+Janakan
+
+Jeff
+
+Joe
+
+Joshua Bauder
+
+Marco Randall
+
+Marshall Walker
+
+Neer Patel
+
+Nigel J Allen
+
+Padrao
+
+Perry Yap
+
+R.C. Lewis
+
+Randy Morris
+
+Rowan Knight
+
+Sebastian Lange
+
+Shahid Ali Shah
+
+Shrawan
+
+Stan Spears
 
 Ivelin Demirov
 
-* Anton Berezin
-* Beth McMillan
+Anton Berezin
+
+Beth McMillan
 
 Jordan Milev
 
@@ -58,18 +86,21 @@ Beth McMillan
 保留所有权利。未经出版者或作者的书面许可，不得以任何形式、任何手段复制本书的任何部分。
 
 书中的信息按“原样”提供，不提供任何保证。虽然在编写本书时已采取一切预防措施，但对于由于书中指令或书中描述的计算机软件硬件产品直接或间接造成的任何损失或损害，作者和出版社均不对任何个人或实体承担任何责任。
+
 ISBN-10: 1507727070
 
-pythonvisually.com
+`pythonvisually.com`
 
 ## 关于本书
 
 ### 问题所在
+
 人们在第一次尝试时觉得编程很难，这不能怪。学习编程就像学习一门新语言。
 
 有许多需要遵循的规则和语法指南。它还需要记忆每种语言的大量词汇表，除非一个人每天至少从事编程工作 8 小时，否则此人不太可能很快熟悉编程；至少直到现在，多年来一直是这样。
 
 ### 方法论
+
 我们的方法涉及通过简单的插图来教授编程概念。
 
 这种视觉化方法之所以有效，是因为它是最基本的学习方式之一。每个人作为婴儿和幼儿，在理解字母和意义产生理解之前，就已经通过视觉和听觉来学习周围的世界。
@@ -81,18 +112,23 @@ pythonvisually.com
 从那里，用户可以应用多种变体并进一步构建。然而，最初的构建块将成为某种“罗塞石”，允许用户在未来的任何情况下进行编程和构建。
 
 ### 为什么选择 Python？
+
 当你开始大学的计算机科学之旅时，你可能会从学习 Python 开始。
 
 那么为什么选择 Python 而不是其他编程语言呢？很简单：
 
-* 无论你的操作系统是什么，Python 都易于设置。
-* Python 代码使用纯英语，易于理解。
-* Python 允许你运行错误的代码。
+- 无论你的操作系统是什么，Python 都易于设置。
+- Python 代码使用纯英语，易于理解。
+- Python 允许你运行错误的代码。
+
   **为什么这是好事？**
+
   当你学习时，难免会犯错。Python 会在你运行代码后告诉你错误是什么，帮助你找到问题。
-* Python 是一个非常强大的工具，但也容易且快速地学习，这就是为什么大多数人偏于它的原因。
+
+- Python 是一个非常强大的工具，但也容易且快速地学习，这就是为什么大多数人偏于它的原因。
 
 ### 安装
+
 已经有预编译的包，方便在多个操作系统上安装，例如 Windows、Linux、UNIX 和 Mac OS 等。
 
 如果你访问 `https://www.python.org/downloads/`，可以为你的操作系统选择正确的安装方法。大多数 Linux 系统都预装了 `Python`。
@@ -108,13 +144,10 @@ pythonvisually.com
 ![](img/00002.jpeg)
 
 ### Hello World!
-在你编写 `Python` 代码的大多数时候，你会在 `IDLE` 或任何其他 IDE（如 `Eclipse`）或富文本编辑器（如 `Sublime text` 或 `Notepad++`）中编写脚本。然而，你可以使用 `Python` 解释器来交互式地编写代码，因为它作用类似于一个 `UNIX shell`，
+
+在你编写 `Python` 代码的大多数时候，你会在 `IDLE` 或任何其他 IDE（如 `Eclipse`）或富文本编辑器（如 `Sublime text` 或 `Notepad++`）中编写脚本。然而，你可以使用 `Python` 解释器来交互式地编写代码，因为它作用类似于一个 `UNIX shell`。
 
 虽然可以使用仅用解释器来创建程序，但强烈建议不要这样做，因为很难将代码保存为脚本以便后续复用。
-
-
-
-
 
 ```python
 >>> f
@@ -124,8 +157,8 @@ Hello World!
 
 Python 变量名必须遵循以下规则：
 
-1. 必须以字母或下划线开头
-2. 它们只能包含字母、数字或下划线
+1. 必须以字母或下划线开头。
+2. 它们只能包含字母、数字或下划线。
 
 几个非法变量名的示例：
 
@@ -139,7 +172,7 @@ Python 还有一些不能作为变量名的特殊词：
 
 ![](img/00009.jpeg)
 
-以及 `assert`, `break`, `class`, `continue`, `def`, `del`, `elif`, `else`, `except`, `exec`, `finally`, `for`, `from`, `global`, `if`, `import`, `in`, `is`, `lambda`, `not`, `or`, `pass`, `raise`, `return`, `try`, `while`, `yield`
+以及 `assert`、`break`、`class`、`continue`、`def`、`del`、`elif`、`else`、`except`、`exec`、`finally`、`for`、`from`、`global`、`if`、`import`、`in`、`is`、`lambda`、`not`、`or`、`pass`、`raise`、`return`、`try`、`while`、`yield`。
 
 ## 练习
 
@@ -160,7 +193,7 @@ Python 还有一些不能作为变量名的特殊词：
 
 答案：
 
-```
+```python
 foo = bar = zen = “blah”
 ```
 
@@ -172,8 +205,8 @@ foo = bar = zen = “blah”
 
 | 变量类型 | 示例 | 用注释 |
 | --- | --- | --- |
-| `bool` | `life_is_good = True`, `hamsters_are_evil = False` | 真/假值 |
-| `int, long` | `size_of_shoes = 42`, `earth_population = 7000000000` | 各种整数 |
+| `bool` | `life_is_good = True`、`hamsters_are_evil = False` | 真/假值 |
+| `int, long` | `size_of_shoes = 42`、`earth_population = 7000000000` | 各种整数 |
 | `float` | `pi = 3.14159265359` | 非整数 - 小数点后有一个或多个符号 |
 | `str` | `chinese_hi = "你好"` | 任何文本 |
 | `None` | `my_new_book = None` | 没有任何意义值的空变量 |
@@ -211,8 +244,8 @@ Line Four
 
 答案：
 
-1. 赋值运算符
-2. `str(3.14)`
+1. 赋值运算符。
+2. `str(3.14)`。
 
 ### 基础数学
 
@@ -220,7 +253,7 @@ Python 拥有许多内置算术运算符。下表提供了短形式与其等效�
 
 假设初始以下情况成立：`a = 3`。
 
-| 操作名称 | 短形式 | 长形式 | a 的值 | 注释 |
+| 操作名称 | 短形式 | 长形式 | `a` 的值 | 注释 |
 | --- | --- | --- | --- | --- |
 | 加法 | `a += 1` | `a = a + 1` | 4 | |
 | 减法 | `a -= 1` | `a = a - 1` | 2 | |
@@ -241,9 +274,9 @@ Python 中数学运算的执行顺序与传统数学中使用的顺序相似。
 
 在数学中，有三个通用的运算符优先级：
 
-1. 幂和根
-2. 乘法、除法和取模
-3. 加法和减法
+1. 幂和根。
+2. 乘法、除法和取模。
+3. 加法和减法。
 
 幂和根在 Python 中由标准库的函数表示，并在书中进一步介绍。
 
@@ -253,11 +286,11 @@ Python 中数学运算的执行顺序与传统数学中使用的顺序相似。
 
 高阶操作在低阶操作之前执行。相同顺序的操作从左到右一个一个执行。
 
-例如，语句 `2 + 3 * 4` 乘法先于加法。为了影响运算符的执行顺序，应该使用括号 `()`。例如，`(3 + 6) * 2` 等于 `18` 且 `8 / (1)` 等于 `4`。
+例如，语句 `2 + 3 * 4` 中，乘法先于加法。为了影响运算符的执行顺序，应该使用括号 `()`。例如，`(3 + 6) * 2` 等于 `18` 且 `8 / (1)` 等于 `4`。
 
 ## 代码示例
 
-下面的代码片段显示了 解释器如何处理简单的数学运算。
+下面的代码片段显示了 `解释器` 如何处理简单的数学运算。
 
 ```python
 >>> 13 * 2
@@ -292,10 +325,6 @@ Python 中数学运算的执行顺序与传统数学中使用的顺序相似。
 1. 以下计算 `2 + 2 + 2 + 2 + 2 + 2 * 0` 的结果是多少？
 2. 这一个呢？`(2 + 2 + 2 + 2 + 2 + 2) * 0`？
 
-
-
-
-
 ```python
 >>> foo = "one"
 >>> bar = "two"
@@ -314,30 +343,36 @@ foo foo foo
 
 ### 测验
 
-## 问题
+#### 问题
+
 1. 在 Python 中，可以将多个字符串合并为一个字符串。这种操作的名称是什么？
 2. 有一个字符串 `value = "foobar"`。你通过以下方式访问子字符串：`other_value = value[1:3]`。这种操作的名称是什么？`other_value` 的长度是多少？
 3. 字符串第一个字符的索引是多少？
 
-## 答案
-1. 拼接 (Concatenation)
-2. 切片 (Slicing)。长度为 2。切片操作定义的最后一个字符不包含在。
-3. 0
+#### 答案
+
+1. 拼接（Concatenation）。
+2. 切片（Slicing）。长度为 2。切片操作定义的最后一个字符不包含在内。
+3. 0。
 
 ## 练习
 
-## 问题
+### 问题
+
 有两个字符串：`one = "John is strong"` 和 `two = "Tea is not warm"`。编写 Python 代码，根据 `one` 和 `two` 产生字符串结果 `result = "John is not strong"`：
 
-## 答案
+### 答案
+
 ```python
 result = one[0:8] + two[7:11] + one[8:14]
 ```
 
-## 问题
+### 问题
+
 找出这些字符串中不包含字母“B”的一个：“Foo”、“Bar”、“Zoo”、“Loo”。
 
-## 答案
+### 答案
+
 ```python
 >>> "B" in "Foo"
 False
@@ -349,10 +384,12 @@ False
 False
 ```
 
-## 问题
-使用 Python 解释器找到字符串“John is strong”的长度
+### 问题
 
-## 答案
+使用 Python 解释器找到字符串“John is strong”的长度。
+
+### 答案
+
 ```python
 >>> len("John is strong")
 14
@@ -397,6 +434,8 @@ False
 ```python
 def hi():
     print("Hello Mr. Jones! How are you today?")
+
+
 hi()
 hi()
 hi()
@@ -409,17 +448,23 @@ hi()
 在函数之后，代码块必须缩进以将其定义为嵌套块。你应该遵循两个 Python 惯例：使用四个空格缩进你的代码块，并且在函数名中仅使用小写字母和下划线。
 
 这段代码将无法工作：
+
 `<未缩进示例>`
+
 ```python
 def hi():
 print("Hello Mr. Jones! How are you today?")
 ```
 
 这段代码将无法工作：
+
 `<缩进不一致示例>`
+
 ```python
 def hi():
     print("Hello Mr. Jones! How are you today?")
+
+
 print("foobar")
 ```
 
@@ -442,11 +487,7 @@ hi("James")
 hi("Maggie")
 ```
 
-[/content] (抱歉，由于你提供的文本在结尾处似乎中断了，我翻译了直到“以下是需要翻译的文本”之后的内容。根据你指令“输出应包含在[content]...
-
-
-
-# 5. 无效：参数名称中的符号 $
+# 5. 无效：参数名称中的符号 `$`
 
 ## 练习
 
@@ -469,6 +510,8 @@ def hi():
 ## If/Else 和条件语句
 
 在本书到目前为止，我们涵盖的简单语句和操作有许多用处。然而，任何编程的主要目的都是为了实现某种逻辑。
+
+
 
 `if/else` 块是 Python 中的核心语法元素。它们允许你根据条件控制程序的执行流。
 
@@ -533,7 +576,7 @@ True
 
 在 Python 中，任何值都可以被解释为 `True` 或 `False`。在数据类型中，值 `0`、`""` - 空字符串、`None` 以及 `False` 本身都是 `False`。任何其他值都是 `True`。
 
-可以通过将值转换为布尔类型来检查该值是 `True` 还是 `False`：
+可以通过将值转换为布尔类型来检查该值是 `True` 还是 `False`。
 
 还有几个内置的比较运算符，如 `>`，在调用时会返回 `True` 或 `False`。下表提供了这些运算符的概述。
 
@@ -577,9 +620,6 @@ def drive(car_speed):
     else:
         print(“You are driving below the speed limit. Well done”)
 ```
-
-
-
 
 在这里，我们用 Python 实现了一辆汽车：
 
@@ -668,34 +708,41 @@ class Vehicle:
 ```python
 class Car(Vehicle):
     pass
+
 class Bus(Vehicle):
     def slow_down(self, speed_difference):
         super().slow_down(speed_difference)
         self.speed = max(self.speed, 0)
 ```
 
-类名后括号之间的单词 `Vehicle` 使得 `Car` 和 `Bus` 类继承自 `Vehicle`。在 `Bus` 类中，`slow_down` 方法覆盖了父类的行为。`super()`语句调用父类来查找新速度，然后确保该速度低于 0 km/h。
+类名后括号之间的单词 `Vehicle` 使得 `Car` 和 `Bus` 类继承自 `Vehicle`。在 `Bus` 类中，`slow_down` 方法覆盖了父类的行为。`super()` 语句调用父类来查找新速度，然后确保该速度低于 0 km/h。
 
 ### 测验
 
 **问题：**
+
 1. 软件工程师如何称呼用户可以使用的行为集合？
 2. 类与类之间关系的名称是什么？
 3. Python 中用于创建对象的方法的通用术语是什么？例如：`__init__(name, max_speed)`。
 4. 方法中缺少了什么？
 
 **答案：**
+
 1. 接口 (Interface)
 2. 继承 (Inheritance)
 3. 类构造函数 (class constructor)
 4. 缺少 `self` 参数
 
 **问题：** 编写 Python 代码让 X6 加速 100 km/h
+
 **答案：**
+
 `bmw_x6.accelerate(100)`
 
 **问题：** 引入一个也是 `Vehicle` 的 `Bike` 类。自行车的主要特点是它的速度永远不会超过 30 km/h。
+
 **答案：** 你需要确保在 `Bike` 的构造函数并将最大速度限制在 30 km/h。
+
 ```python
 class Bike(Vehicle):
     def __init__(self, name, max_speed):
@@ -703,13 +750,15 @@ class Bike(Vehicle):
 ```
 
 **问题：** 添加一个名为 `show_status` 的方法，它可以打印出“速度是...”。
+
 **答案：**
+
 ```python
 def show_status(self):
     print("The speed is " + str(self.speed) + " km/h")
 ```
 
-### 集合 (Collections)
+## 集合 (Collections)
 
 在许多情况下，你可能需要处理一组相关的数据。Python 提供了多种集合类型：列表（lists）、元组（tuples）、字典（dictionaries）和集合（sets）。本章将重点讨论前三种。
 
@@ -778,9 +827,6 @@ TypeError: 'tuple' object does not support item assignment
 ```
 
 从上面的代码可以看出，元组的行为与字符串相似——然而，字符串只是字符的数组，而元组可以包含任何类型的变量。你可以像处理字符串一样对元组进行切片、索引、拼接和乘法。在语法上，元组项必须由括号括起来并用逗号隔开。即使包含单个元素的元组也必须有一个逗号：`(1,)` 是元组，而 `(1)` 不是。
-
-
-
 
 `['apple', 'pear', 'mango']`
 
@@ -852,51 +898,64 @@ TypeError: ‘str’ object does not support item assignment
 
 以下也是一个有效的字典：
 
+
+
 ```python
-1. class SomeClass:
-2. pass
-3. obj1 = SomeClass()
-4. obj2 = SomeClass()
-5. a_dict = {
-6. obj1: 11,
-7. obj2: 23
-8. }
+class SomeClass:
+    pass
+
+obj1 = SomeClass()
+obj2 = SomeClass()
+a_dict = {
+    obj1: 11,
+    obj2: 23
+}
 ```
 
 你可以通过以下方式获取 John 的年龄：
 
 ```python
-1. johns_age = ages["John"]
+johns_age = ages["John"]
 ```
 
 同样地，你可以通过键设置元素的值：
 
 ```python
-1. ages["John"] = 999
+ages["John"] = 999
 ```
 
 上述语句要么更改现有键的值，要么在不存在该键时创建一个新的键值对。
 
-你也可以从字典中删除一个键值对。
+你也可以从字典中删除一个键值对：
 
 ```python
-1. ages.pop("John")
+ages.pop("John")
 ```
 
 ### 测验
 
 **问题：**
+
 1. 哪种集合像带有名字标签的储物室？哪种像匿名储物室？
+
 2. 列表和元组之间的主要区别是什么？
+
 3. 浮点数可以作为字典的键吗？
+
 4. 字典中可以有多少个名为“John”的键？
-5. (123) 是一个元组吗？
+
+5. `(123)` 是一个元组吗？
 
 **答案：**
+
 1. 字典/列表和元组
+
 2. 列表可以修改，元组不可以
+
 3. 可以，为什么不呢？
+
 4. 恰好一个 - 所有键都是唯一的
+
 5. 不是 - 忘记了一个逗号
 
 ## 练习
@@ -904,6 +963,7 @@ TypeError: ‘str’ object does not support item assignment
 **问题：** 使用 Python 获取 Natasha 的年龄。
 
 **答案：**
+
 `ages['Natasha']`
 
 ## 练习
@@ -911,11 +971,12 @@ TypeError: ‘str’ object does not support item assignment
 **问题：** 去掉 Matt。
 
 **答案：**
+
 ```python
-1. ages.pop('Matt')
+ages.pop('Matt')
 ```
 
-### 循环
+## 循环
 
 集合可以用来存储数据，但你也可以遍历它们并对每个元素单独进行操作。
 
@@ -923,7 +984,7 @@ TypeError: ‘str’ object does not support item assignment
 
 `while` 循环在特定条件为真时会持续重复。
 
-`while` 循环内部的语句必须缩进，就像其他其他代码块一样。
+`while` 循环内部的语句必须缩进，就像其他代码块一样。
 
 循环必须使用 `while` 关键字、布尔语句和一个冒号来定义。
 
@@ -931,74 +992,82 @@ TypeError: ‘str’ object does not support item assignment
 
 ![](img/00023.jpeg)
 
-这段代码将打印数字 1 到 10
+这段代码将打印数字 1 到 10：
+
 ```python
-1. aps = 0
-2. while aps < 10:      #测试
-3. aps += 1            #计数器
-4. print(aps)          #语句 1
-5. print ("and")       #语句 2
-6. print ("Done")      #循环退出
+aps = 0
+while aps < 10:      # 测试
+    aps += 1         # 计数器
+    print(aps)       # 语句 1
+    print("and")     # 语句 2
+print("Done")        # 循环退出
 ```
 
-### While
+### `while`
 
 Python 提供了 `break` 和 `continue` 语句来更好地控制你的循环。
 
 ![](img/00024.jpeg)
+
 ```python
-1. while test1>:
-2. <statement1>
-3. if test2>: break    #循环退出，跳过
-4. if test3>: continue  #跳转到顶部
-5. else:
-6. <statement2>        #如果没有发生 break，则执行
+while test1:
+    <statement1>
+    if test2:
+        break       # 循环退出，跳过
+    if test3:
+        continue    # 跳转到顶部
+else:
+    <statement2>    # 如果没有发生 break，则执行
 ```
 
-### 循环
+### `for` 循环
 
 ![](img/00025.jpeg)
 
 你可以使用 `for` 循环来遍历集合。假设你有以下列表：
 
 ```python
-1. a = ["one", "two", "three"]
+a = ["one", "two", "three"]
 ```
 
 为了单独打印每个元素，你可以使用 `for` 循环：
 
 ```python
-1. for item in a:
-2. print(item)
+for item in a:
+    print(item)
 ```
 
-for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合名和一个冒号。for 循环内部的语句必须缩进。
+`for` 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合名和一个冒号。`for` 循环内部的语句必须缩进。
 
 你可以使用 `for` 循环来遍历集合。假设你想将一个整数列表写入文件：
 
 ```python
-1. the_file = open("integers.txt", "w")
+the_file = open("integers.txt", "w")
 ```
 
 每个整数单独占一行：
 
 ```python
-1. for integer in integers:
-2. the_file.write(str(integer) + '\n')
+for integer in integers:
+    the_file.write(str(integer) + '\n')
 ```
 
 这段代码将输出：
 
 1
+
 2
+
 3
+
 4
+
 5
 
 当你完成文件操作后，必须关闭它：
 
 ```python
-1. the_file.close()
+the_file.close()
 ```
 
 你也可以从文件中读取数据。
@@ -1006,13 +1075,13 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 首先，不使用 `w` 标志打开文件：
 
 ```python
-1. the_file = open("integers.txt")
+the_file = open("integers.txt")
 ```
 
 获取文件中所有的行：
 
 ```python
-1. lines = the_file.readlines()
+lines = the_file.readlines()
 ```
 
 `readlines()` 函数将文件中的所有行作为字符串列表返回。
@@ -1020,8 +1089,8 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 让我们打印这些行：
 
 ```python
-1. for line in lines:
-2. print(line)
+for line in lines:
+    print(line)
 ```
 
 ## 文件操作
@@ -1031,7 +1100,7 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 假设你想将一个整数列表写入文件，使每个整数单独一行。首先，打开文件：
 
 ```python
-1. the_file = open("integers.txt", "w")
+the_file = open("integers.txt", "w")
 ```
 
 `open` 函数的第一个参数是文件路径，第二个参数告诉 Python 你要向文件中写入。这意味着在开始之前文件不需要存在。
@@ -1041,17 +1110,17 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 首先让我们定义一个整数数组并将其写入文件：
 
 ```python
-1. integers = [1, 2, 3, 4, 5]
-2. for integer in integers:
-3. the_file.write(str(integer) + '\n')
+integers = [1, 2, 3, 4, 5]
+for integer in integers:
+    the_file.write(str(integer) + '\n')
 ```
 
-`write` 方法接受字符串作为参数并写入文件。注意 `\n` 符号 - 这是换行符。它在文件中开始新的一行。
+`write` 方法接受字符串作为参数并写入文件。注意 `\n` 符号——这是换行符。它在文件中开始新的一行。
 
 当你完成文件后，必须关闭它：
 
 ```python
-1. the_file.close()
+the_file.close()
 ```
 
 你也可以从文件中读取数据。
@@ -1059,13 +1128,13 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 首先，不使用 `w` 标志打开文件：
 
 ```python
-1. the_file = open("integers.txt")
+the_file = open("integers.txt")
 ```
 
 获取文件中所有的行：
 
 ```python
-1. lines = the_file.readlines()
+lines = the_file.readlines()
 ```
 
 `readlines()` 函数将文件中的所有行作为字符串列表返回。
@@ -1073,24 +1142,28 @@ for 循环必须使用 `for` 关键字、一个变量、`in` 关键字、集合�
 让我们打印这些行：
 
 ```python
-1. for line in lines:
-2. print(line)
+for line in lines:
+    print(line)
 ```
 
-
-
-
-
 ## 问题
+
 1. 换行符是什么样子的？
+
 2. 在完成文件操作后，你应该对文件做什么？
-3. 使用什么种方法将数据写入文件？
+
+3. 使用什么方法将数据写入文件？
+
 4. 你应该使用什么方法从文件中获取所有行？
 
 ## 答案
+
 1. `\n`
+
 2. 关闭它
+
 3. `write`
+
 4. `readlines`
 
 ## 异常
@@ -1121,14 +1194,14 @@ ZeroDivisionError: division by zero
 try:
     1 / 0
 except ZeroDivisionError as e:
-    print(str(e) + “. But it is totally fine.")
+    print(str(e) + ". But it is totally fine.")
 ```
 
-在上面的代码中，你可以看到你想要尝试执行的语句放在 `try` 块中。所有的错误处理代码都放在 `except` 下方。`except` 关键字必须带有一个异常类。它后面也可以跟一个 `as` 关键字和一个变量，该变量用于存储对错误的的人类可读描述。
+在上面的代码中，你可以看到你想要尝试执行的语句放在 `try` 块中。所有的错误处理代码都放在 `except` 下方。`except` 关键字必须带有一个异常类。它后面也可以跟一个 `as` 关键字和一个变量，该变量用于存储对错误的人类可读描述。
 
 ### 自定义异常
 
-你可以定义自己的异常类，以进一步通知代码中发生了非常情况：
+你可以定义自己的异常类，以进一步通知代码中发生了异常情况：
 
 ```python
 class YourException(Exception):
@@ -1153,21 +1226,27 @@ except YourException as e:
 ```
 
 ### 测验
-问题：
-1. 哪个块应该被用于处理异常？
-2. 发生异常时打印出的长文本块称为什么什么？
 
-答案：
+**问题：**
+
+1. 哪个块应该被用于处理异常？
+
+2. 发生异常时打印出的长文本块称为什么？
+
+**答案：**
+
 1. `try/except` 块
+
 2. `traceback`
 
 ![](img/00026.jpeg)
 
 ## 导入语句、Python 模块和包
 
-正如你可能注意到的，Python 中所有的源代码都存储在各种名为 `modules`（模块）的文件中。每个模块都有 `.py` 扩展名。不同的模块在逻辑上组合成被称为 `packages`（包）的集合。包是一个包含 `__init__.py` 文件的文件的普通文件夹。
+正如你可能注意到的，Python 中所有的源代码都存储在各种名为 `modules`（模块）的文件中。每个模块都有 `.py` 扩展名。不同的模块在逻辑上组合成被称为 `packages`（包）的集合。包是一个包含 `__init__.py` 文件的普通文件夹。
 
 例如，以下是一个包：
+
 ```text
 foobar/
   __init__.py
@@ -1177,6 +1256,7 @@ foobar/
 ```
 
 而这个不是：
+
 ```text
 foobar/
   one.py
@@ -1215,25 +1295,35 @@ foobar/
 注意，留在 Python 包内部的实体可以是几乎任何 Python 结构。一个 `class`、一个 `function`、一个 `variable`、一个 `module` 甚至一个 `package`（可以嵌套包的）。
 
 ### 测验
-问题：
+
+**问题：**
+
 1. Python 源文件的同义词是什么？
+
 2. 带有 Python 模块的文件夹术语是什么？
+
 3. 与默认 Python 安装一起而来的包集合称为什么？
+
 4. 如何从 `os` 包中导入模块路径？
 
-答案：
+**答案：**
+
 1. `module`
+
 2. `package`
+
 3. `standard library`
+
 4. `from os import path`
 
-## 使用 os 模块进行文件操作
+## 使用 `os` 模块进行文件操作
 
 虽然可以使用内置的 Python 函数和方法来处理文件，但它们并没有涵盖你在操作计算机文件系统时可能遇到的所有场景。本章节提供了你在处理数据时在底层可能面临的所有常见任务的概述。
 
 注意：下面的某些示例使用了 `/`。在 Windows 上，请将斜杠替换为 `\`。
 
 首先，假设你有如下结构：
+
 ```text
 /parent/
   one.txt
@@ -1260,10 +1350,11 @@ foobar/
 ```
 
 正如你可能注意到的，提供文件名时必须给出相对路径或绝对路径。如果是绝对路径，它应该从文件系统的根开始。绝对路径在 UNIX 和 Windows 上分别类似于：
+
 - `/Blah/Blah/one.txt`
 - `C:\Blah\Blah\one.txt`
 
-相对路径相对于你的当前目录计算。假设你在 `/foo/bar/one` 目录，你想移动到 `/foo/two`。在这种情况下相对路径应该是 `../../two`。两个点表示父目录。由于由于由于，由于 Unix 和 Windows 使用不同的分隔符，上面的 `remove/rename` 代码片段有一个严重的缺陷。它不是跨平台的。为了将其转换为通用的，你应该使用 `os.path` 中的 `join` 函数：
+相对路径相对于你的当前目录计算。假设你在 `/foo/bar/one` 目录，你想移动到 `/foo/two`。在这种情况下相对路径应该是 `../../two`。两个点表示父目录。由于 Unix 和 Windows 使用不同的分隔符，上面的 `remove`/`rename` 代码片段有一个严重的缺陷。它不是跨平台的。为了将其转换为通用的，你应该使用 `os.path` 中的 `join` 函数：
 
 ```python
 >>> from os.path import join
@@ -1271,7 +1362,7 @@ foobar/
 >>> rename(join("foo", "two.txt"), join("foo", "bar.txt"))
 ```
 
-你将路径的所有部分作为字符串传递给 `join` 函数，然后使用操作系统特定的路径分隔符来生成字符串。你可以列出特定目录下的所有文件文件夹：
+你将路径的所有部分作为字符串传递给 `join` 函数，然后使用操作系统特定的路径分隔符来生成字符串。你可以列出特定目录下的所有文件和文件夹：
 
 ```python
 >>> from os import listdir
@@ -1291,26 +1382,30 @@ OSError: [Errno 39] Directory not empty: 'foo'
 
 哎！我们引发了一个异常。只要目录内还有任何东西，它就无法被删除。
 
-
-
-
-
 1. Windows 和 Linux 文件系统之间的什么主要差异使得编写跨平台 Python 程序变得更加困难？
+
 2. `os.path.curdir` 的值是什么？
+
 3. 哪个字符串代表当前目录的父目录？
 
-#### 答案：
+### 答案
+
 1. 不同的路径分隔符：Unix 上使用 `/`，Windows 上使用 `\`
+
 2. `.`
+
 3. `..`
 
 ## 练习
 
-### 题目：
+### 题目
+
 修复上一个示例中的 `rmdir` 代码使其能够工作。
 
-#### 答案：
+### 答案
+
 要做到这一点，你只需要先删除内部所有的文件：
+
 ```python
 >>> remove("foo/bar.txt") # 你重命名了它
 >>> remove("foo/three.txt")
@@ -1319,23 +1414,32 @@ OSError: [Errno 39] Directory not empty: 'foo'
 
 ## 练习
 
-### 题目：使以下函数跨跨平台：
+### 题目：使以下函数跨平台
+
 1. `def show_foobar_here(path):`
+
 2. `print(path + "/foobar")`
 
-#### 答案：
+### 答案
+
 1. `from os.path import join`
+
 2. `def show_foobar_here(path):`
+
 3. `print(join(path, "foobar"))`
 
 ## 练习
 
-### 题目：
+### 题目
+
 使用 `os.path` 模块中的 `isdir` 函数，找到当前目录下的文件夹。
+
 遍历文件和文件夹，然后抛出一个自定义的 `DirFound` 异常，并将目录的绝对路径作为人类可读的描述。
 
-#### 答案：
+### 答案
+
 以下是一个充分解决方案：
+
 ```python
 from os.path import isdir, curdir, abspath
 from os import listdir
@@ -1354,13 +1458,17 @@ def detect_dirs():
 虽然你可以使用 `in` 运算符来检查子字符串是否存在于字符串中，但它无法告诉你子字符串的位置，也不会让你进行非精确匹配。
 
 看这个字符串：
+
 ```python
 >>> lorem_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore dolore magna aliqua."
 ```
 
 你想找出这段文本是否包含类似“dolor BLA BLA BLA amet”的内容——即单词“dolor”和“amet”按顺序出现，中间有任意数量的文本。
 
+
+
 要实现这一点，你可以使用 `re.search` 方法：
+
 ```python
 >>> import re
 >>> found = re.search("dolor .*amet", lorem_text)
@@ -1369,11 +1477,13 @@ def detect_dirs():
 ```
 
 `search` 函数将正则表达式模式作为第一个参数，将要搜索的文本作为第二个参数。
+
 正则表达式模式是你在文中要查找内容的灵活描述。其格式将在本章稍后介绍。
 
 看 `search` 函数的返回值：它被称为 `MatchObject`，告诉子字符串在原始文本中被找到的位置。
 
 如果找不到模式，函数将返回 `None`：
+
 ```python
 >>> match = re.search("found", lorem_text)
 >>> type(match)
@@ -1381,13 +1491,16 @@ def detect_dirs():
 ```
 
 你可以从匹配对象获取子字符串的起始和结束索引：
+
 ```python
 >>> found.start()
 12
 >>> found.end()
 26
 ```
+
 并访问由模式匹配的子字符串：
+
 ```python
 >>> found.group()
 'dolor sit amet'
@@ -1396,12 +1509,14 @@ def detect_dirs():
 ```
 
 注意：如果发现多个模式出现项，只返回第一个。如果你需要遍历所有出现项，请使用 `re.finditer` 函数：
+
 ```python
 >>> list(re.finditer("dolor .*amet", lorem_text))
 [<_sre.SRE_Match object; span=(12, 26), match='dolor sit amet'>
 ```
 
 如果你想检查一个字符串是否匹配特定模式，应该使用 `re.match` 函数，它尝试将模式应用于整个字符串：
+
 ```python
 >>> bool(re.match("[0-9][a-z]*", "0dgfgfg"))
 True
@@ -1419,9 +1534,10 @@ False
 | `+` | 一或多个 |
 | `?` | 零或一个 |
 | `{m}` | 确切的符号数量 |
-| `{m, n}` | 最少 m 个最多 n |
+| `{m, n}` | 最少 m 个最多 n 个 |
 
 以下是记忆其中一些符号的方法：
+
 ```python
 >>> import re
 >>> print(re.search("^Beginning", "Beginning of line"))
@@ -1431,17 +1547,18 @@ False
 txt = "The quick brown fox jumps over the lazy dog"
 ```
 
-正则表达式
+## 正则表达式
+
 此表显示了最常用的符号。
 
 | 符号 | 描述 |
-| :--- | :--- | 
+| :--- | :--- |
 | `.` | 任意字符 |
 | `\"` | 双引号 |
 | `\'` | 单引号 |
 | `\\` | 反斜杠 |
 | `\t` | 制表符 |
-| `\n` | 换行符
+| `\n` | 换行符 |
 | `[0-9]` | 数字 |
 | `[a-z]` | 小写字母 |
 | `[A-Z]` | 大写字母 |
@@ -1463,15 +1580,14 @@ txt = "The quick brown fox jumps over the lazy dog"
 由于原文后半部分存在乱码和重复的符号描述，作为高级文档工程师，我已根据正则表达式的标准逻辑进行了对齐。
 
 例如：
+
 `[0-9][a-z]*` 匹配数字开头后跟任意数量小写字母的字符串。
+
 `^` 匹配行首。
+
 `$` 匹配行尾。
 
 （注：原文提供的文本在后半部分出现了大量的符号重复和乱码，译文已基于技术语境进行了逻辑修复。）
-
-
-
-
 
 ```python
 math.sqrt(25)
@@ -1480,13 +1596,13 @@ math.sqrt(25)
 
 ### 测验
 
-问题：为了回答以下问题，你需要深入研究标准库
+问题：为了回答以下问题，你需要深入研究标准库。
 
 1. 你会使用哪个函数来计算反正切？
 2. 应该使用哪个函数进行幂运算？
 3. 你如何计算一个数的阶乘？
 
-#### 答案：
+#### 答案
 
 1. `math.atan`
 2. `math.exp`
@@ -1494,7 +1610,7 @@ math.sqrt(25)
 
 ## JSON
 
-在软件工程中，有一个过程被称为序列化（serialization）。它的主要目的是将任意对象的状态转换为可以在网络上传输和/或以某种方式存储的内容，以便以后能够重建原始对象。这种重构的过程被称为反序列化（deserialization）。
+在软件工程中，有一个过程被称为序列化（serialization）。它的主要目的是将任意对象的状态转换为可以在网络上传输和/或以某种方式存储的内容，以便以后能够重建原始对象，以便以后能够重建原始对象。这种重构的过程被称为反序列化（deserialization）。
 
 序列化的现实生活类比是对一个现有的人工制品（例如汽车）进行调查并对其制作一份详细的蓝图（引擎、轮子、变速箱等）。在网络上传输序列化数据类似于通过普通邮寄发送蓝图。而反序列化则是某人根据获取的蓝图构建原始对象副本的过程。
 
@@ -1512,35 +1628,43 @@ JSON 是 JavaScript 语言中操作数据的原生方式。
 
 默认情况下，Python 可以序列化以下数据类型：`int`、`bool`、`None`、`str`、`float`、`long`、`dict` 和 `list`。有方法可以扩展此功能，但它们超出本章的范围。
 
-Python 负责序列化的模块被称为 `json`。它包含两个主要函数：`dumps` 和 `loads`。`dumps` 期望 Python 数据结构作为输入并返回 JSON 字符串作为输出。`loads` 则是相反的 - 它期望 JSON 字符串作为输入并返回 Python 数据结构作为输出。
+Python 负责序列化的模块被称为 `json`。它包含两个主要函数：`dumps` 和 `loads`。`dumps` 期望 Python 数据结构作为输入并返回 JSON 字符串作为输出。`loads` 则是相反的——它期望 JSON 字符串作为输入并返回 Python 数据结构作为输出。
 
 ## 代码示例
 
 ### 导入 JSON 模块
+
 1. `json`
 
 ### 将字符串列表序列化为 JSON 数组
+
 1. `list_of_strings = ["one", "two", "three", "four"]`
 2. `json_array = json.dumps(list_of_strings)`
 
 ### 将 JSON 对象反序列化为 Python 数据结构
-1. `json_data = """
-{
-  "integer": 1,
-  "inner_object": {
-    "nothing": null,
-    "boolean": false,
-    "string": "foo"
-  },
-  "list_of_strings": [
-    "one",
-    "two"
-  ]
-}
-"""`
+
+1. `json_data = """`
+
+   ```json
+   {
+     "integer": 1,
+     "inner_object": {
+       "nothing": null,
+       "boolean": false,
+       "string": "foo"
+     },
+     "list_of_strings": [
+       "one",
+       "two"
+     ]
+   }
+   ```
+
+   `"""`
 2. `python_dict = json.loads(json_data)`
 
 ### 序列化整数
+
 ```python
 print(json.dumps(1))
 1
@@ -1549,6 +1673,7 @@ print(type(json.dumps(1)))
 ```
 
 ### 序列化字符串
+
 ```python
 print(json.dumps("FOO"))
 "FOO"
@@ -1556,7 +1681,8 @@ print(len(json.dumps("FOO")))
 5
 ```
 
-### 尝试反序列化内容。不是 JSON - 当输入无法处理时抛出 ValueError
+### 尝试反序列化内容。不是 JSON——当输入无法处理时抛出 ValueError
+
 ```python
 json.loads("FOO")
 Traceback
@@ -1564,7 +1690,8 @@ Traceback
 ValueError: JSON object could be decoded
 ```
 
-### 尝试序列化内容。在 JSON 中没有表示 - 默认仅支持有限的内置类型
+### 尝试序列化内容。在 JSON 中没有表示——默认仅支持有限的内置类型
+
 ```python
 class Teacher(object):
     pass
@@ -1576,15 +1703,15 @@ Traceback
 TypeError: <Teacher...> is not serializable
 ```
 
-## 测验问题：
+## 测验问题
 
-1. Python 中哪个哪个函数负责 JSON 序列化？
+1. Python 中哪个函数负责 JSON 序列化？
 2. “序列化”的反义词是什么？哪个函数负责它？
 3. 这条命令的输出是什么：`print(json.dumps("FOO"))`？
 4. 这条命令的输出是什么：`print(json.dumps(None))`？
 5. 这条命令的输出是什么：`print(type(json.dumps("1.5")))`？
 
-#### 答案：
+#### 答案
 
 1. `json.dumps`
 2. 反序列化 / `json.loads`
@@ -1594,7 +1721,8 @@ TypeError: <Teacher...> is not serializable
 
 ## 练习
 
-问题：有以下代码：实现 `join_two_arrays` 函数
+问题：有以下代码：实现 `join_two_arrays` 函数。
+
 ```python
 array_of_strings_one = ["one", "two"]
 array_of_strings_two = ["three", "four"]
@@ -1604,7 +1732,8 @@ print(type(join_two_arrays(array_of_strings_one, array_of_strings_two)))
 <class 'str'>
 ```
 
-#### 答案：
+#### 答案
+
 ```python
 def join_two_arrays(array_of_strings_one, array_of_strings_two):
     list_one = json.loads(array_of_strings_one)
@@ -1615,7 +1744,8 @@ def join_two_arrays(array_of_strings_one, array_of_strings_two):
 
 ## 练习
 
-问题：有以下代码：实现 `jsonize_if_already_json` 函数
+问题：有以下代码：实现 `jsonize_if_already_json` 函数。
+
 ```python
 print(jsonize_if_already_json("ONE"))
 "ONE"
@@ -1629,7 +1759,8 @@ print(jsonize_if_already_json(1))
 1
 ```
 
-#### 答案：
+#### 答案
+
 ```python
 def jsonize_if_already_json(value):
     try:
@@ -1639,21 +1770,21 @@ def jsonize_if_already_json(value):
     return json.dumps(value)
 ```
 
-## SQL: sqlite3
+## SQL：sqlite3
 
-软件开发的主要原则之一是重用。该原则可以重述为 `DRY` - 不要重复自己。实现它的最佳方法是避免造轮子，而是应用之前的解决方案。
+软件开发的主要原则之一是重用。该原则可以重述为 `DRY`——不要重复自己。实现它的最佳方法是避免造轮子，而是应用之前的解决方案。
 
 在信息处理和数据存储几十年里，出现了一种常见的约束。在这种语境下，“约束”意味着你应用于存储数据的一组规则。
 
-为了理解什么是约束，请思考电子邮件地址。该地址应该包含一个 “@”字符。这种预期就是一个约束。
+为了理解什么是约束，请思考电子邮件地址。该地址应该包含一个“@”字符。这种预期就是一个约束。
 
-一个具有多个约束的现实生活系统是汽车装配线。所有零件都预期符合某些标准 - 如果不符合，就无法完全自动化，必须引入人工。一个通用法则是，为了实现合理的自动化，必须牺牲部分输入的灵活性。
+一个具有多个约束的现实生活系统是汽车装配线。所有零件都预期符合某些标准——如果不符合，就无法完全自动化，必须引入人工。一个通用法则是，为了实现合理的自动化，必须牺牲部分输入的灵活性。
 
 为了创建一个通约束系统，现有系统被合并为现在被称为关系的数据库。
 
-数据以表的形式存储在关系数据库中，每列代表了每行可以存储的数据类型类型规则（字符串、整数、布尔值等）。
+数据以表的形式存储在关系数据库中，每列代表了每行可以存储的数据类型规则（字符串、整数、布尔值等）。
 
-主键约束定义了哪个字段应该作为主索引，即行中的哪条信息可以作为它的地址。“索引”一词在邮政行业中的含义完全相同。在邮政中，它是特定收件人的地址，在关系数据库中，它是表中的某一行。
+主键约束定义了哪个字段应该作为主索引，即行中的哪条信息可以作为它的地址。“索引”一词在邮政行业中的含义完全相同。在邮政中，它是特定收件人的地址；在关系数据库中，它是表中的某一行。
 
 ## SQL
 
@@ -1661,14 +1792,11 @@ def jsonize_if_already_json(value):
 
 如果一个学生离开学校去上另一所学校，他们的名字必须从所有课程的登记表中删除。同样，如果你想从关系数据库中删除一个项目，你必须删除数据库中对它的所有引用。
 
-
-
-
-在关系型数据库上下文中每当学生转学时从相应的课程中删除他们的过程被称为引用完整性管理。`Foreign key`（外键）约束告诉你哪些列包含了对数据库其他地方的引用。
+在关系型数据库上下文中，每当学生转学时从相应的课程中删除他们的过程被称为引用完整性管理。`Foreign key`（外键）约束告诉你哪些列包含了对数据库其他地方的引用。
 
 还有几十种其他约束。尽管本章不会涵盖它们，但已经简要介绍的那些足以让你对关系型数据库的行为有一个合理的理解。
 
-在我们继续之前，你需要了解的最后件事是结构化查询语言（`SQL`）。`SQL` 是一种专门用于声明数据库约束和操作数据（即列出、查看、创建、更新或删除数据）的编程语言。
+在我们继续之前，你需要了解的最后一件事是结构化查询语言（`SQL`）。`SQL` 是一种专门用于声明数据库约束和操作数据（即列出、查看、创建、更新或删除数据）的编程语言。
 
 ## Python sqlite3
 
@@ -1676,7 +1804,7 @@ Python 有一个名为 `sqlite3` 的内置数据库模块。
 
 它是关系型数据库和 `SQL` 的全栈 Python 实现。
 
-在这里我们将简要介绍主要的 SQL 语句和数据库结构。
+在这里我们将简要介绍主要的 `SQL` 语句和数据库结构。
 
 首先，打开你的 Python 解释器并导入 `sqlite3`：
 
@@ -1689,46 +1817,55 @@ Python 有一个名为 `sqlite3` 的内置数据库模块。
 获取游标：
 
 3. `cursor = conn.cursor()`
-
 4. `cursor.execute("PRAGMA foreign_keys = ON")`
 
-`Cursor` 只是用于执行 SQL 语句的 Python 对象。在 `sqlite3` 中，出于性能考虑，外键约束默认是禁用的。`PRAGMA` 语句启用它们。
+`Cursor` 只是用于执行 `SQL` 语句的 Python 对象。在 `sqlite3` 中，出于性能考虑，外键约束默认是禁用的。`PRAGMA` 语句启用它们。
 
 现在让我们创建一个简单的 `users` 表。
 
-1. `cursor.execute("""
-CREATE TABLE users(
-  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-  email TEXT NOT NULL,
-  name TEXT NOT NULL
-)""")`
+1. `cursor.execute("""`
+
+   ```sql
+   CREATE TABLE users(
+     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     email TEXT NOT NULL,
+     name TEXT NOT NULL
+   )
+   ```
+
+   `""")`
 
 在上面的代码中，你可能会看到以下内容：
 
-* 每个用户必须有一个电子邮件和文本值的名称
-* 每个用户都有一个整数标识符作为 `primary key`（主键）。`AUTOINCREMENT` 意味着每当创建新用户时，`id` 将根据之前存储的用户的标识符自动生成
+- 每个用户必须有一个电子邮件和文本值的名称。
+- 每个用户都有一个整数标识符作为 `primary key`（主键）。`AUTOINCREMENT` 意味着每当创建新用户时，`id` 将根据之前存储的用户的标识符自动生成。
 
 此外，让我们创建一个名为 `cars` 的表，使得表中提到的每辆车都必须是 `users` 表人类列表中某一个所有者。
 
-1. `cursor.execute("""
-CREATE TABLE cars(
-  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-  brand TEXT NOT NULL,
-  model TEXT NOT NULL,
-  owner INTEGER NOT NULL,
-  FOREIGN KEY(owner) REFERENCES users(id) ON DELETE CASCADE
-)""")`
+1. `cursor.execute("""`
+
+   ```sql
+   CREATE TABLE cars(
+     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     brand TEXT NOT NULL,
+     model TEXT NOT NULL,
+     owner INTEGER NOT NULL,
+     FOREIGN KEY(owner) REFERENCES users(id) ON DELETE CASCADE
+   )
+   ```
+
+   `""")`
 
 在上面的代码中，有一个外键定义，表示了 `cars` 和 `users` 之间的所有权关系。`ON DELETE CASCADE` 语句告诉数据库，每当删除用户时，属于该用户的所有汽车也必须被删除。
 
 让我们创建一个用户和两辆属于该用户的汽车：
 
 1. `cursor.execute('INSERT INTO users VALUES(NULL, '`
-2. '"john.smith@pythonvisually.com", "John Smith")')`
+2. `"john.smith@pythonvisually.com", "John Smith")')`
 3. `cursor.execute('INSERT INTO cars VALUES(NULL, "Fiat", "Polo", 1)')`
 4. `cursor.execute('INSERT INTO cars VALUES(NULL, "BMW", "X6", 1)')`
 
-sqlite3
+### sqlite3
 
 注意，在创建 `cars` 时我们为 `owner` 传递了值 `1`。我们知道用户 `John Smith` 是数据库中创建的第一个。因此，他的 `ID` 逻辑上应该是 `1`。
 
@@ -1746,14 +1883,17 @@ sqlite3
 
 首先，让我们更改 John 的电子邮件：
 
-上面的代码使用了 `UPDATE` 命令和 `WHERE` 语句。结合使用，它们允许你更新所有符合搜索标准的值。
+
+
+上面的代码使用了`UPDATE`命令和`WHERE`语句。结合使用，它们允许你更新所有符合搜索标准的值。
 
 现在，让我们检查电子邮件是否真的更新了：
 
 `rows = list(cursor.execute('SELECT email FROM users WHERE name="John Smith'))`
+
 `[("john.smith@pythonvisually.com",)]`
 
-在选择检查哪个用户时，我们使用了 `SELECT` 命令。在选择过程中，我们声明只对用户的电子邮件感兴趣。在行选择的情况下，`cursor` 的 `execute` 方法返回了一个关于数据库行的迭代器，我们将其转换为列表并打印出来。
+在选择检查哪个用户时，我们使用了`SELECT`命令。在选择过程中，我们声明只对用户的电子邮件感兴趣。在行选择的情况下，`cursor`的`execute`方法返回了一个关于数据库行的迭代器，我们将其转换为列表并打印出来。
 
 让我们删掉其中一种汽车，例如 BMW：
 
@@ -1761,14 +1901,11 @@ sqlite3
 2. `rows = list(cursor.execute('SELECT * FROM cars'))`
 3. `len(rows) == 1`
 
-之后我们使用了 `DELETE` 命令。最后，也是最重要的一点，检查 `ON DELETE CASCADE` 如何工作。`cursor.execute('DELETE FROM users WHERE name="John Smith"')`
+之后我们使用了`DELETE`命令。最后，也是最重要的一点，检查`ON DELETE CASCADE`如何工作。`cursor.execute('DELETE FROM users WHERE name="John Smith"')`
 
 现在检查我们还有哪些汽车：
 
 `rows = list(cursor.execute('SELECT * FROM cars'))`
-
-
-
 
 ```bash
 pip install flask
@@ -1776,7 +1913,7 @@ pip install flask
 
 ## Hello World
 
-创建一个名为 `hello.py` 的文件并写入以下代码：
+创建一个名为`hello.py`的文件并写入以下代码：
 
 ```python
 pip install flask
@@ -1807,15 +1944,15 @@ python hello.py
 
 恭喜你，你刚刚使用 Flask 创建了你的第一个网站。
 
-让我们逐行查看 `hello.py`。
+让我们逐行查看`hello.py`。
 
-1. 首先，从 `flask` 模块中导入了 `Flask` 类。
-2. 然后，创建了一个名为 `app` 的 `Flask` 类实例。
-3. `@app.route("/")` 告诉 `Flask` 哪个 URL 将触发下方的方法。
-4. 定义了 `hello()` 方法，它返回字符串“Hello World!”。
-5. `app.run()` 启动了 HTTP 服务器。
+1. 首先，从`flask`模块中导入了`Flask`类。
+2. 然后，创建了一个名为`app`的`Flask`类实例。
+3. `@app.route("/")`告诉`Flask`哪个 URL 将触发下方的方法。
+4. 定义了`hello()`方法，它返回字符串“Hello World!”。
+5. `app.run()`启动了 HTTP 服务器。
 
-创建一个名为 `test.py` 的新文件：
+创建一个名为`test.py`的新文件：
 
 ```python
 from flask import Flask
@@ -1834,9 +1971,9 @@ if __name__ == "__main__":
     app.run(debug = True)
 ```
 
-你可以看到从 `flask` 中导入了 `request` 模块。这个对象代表由客户端发送并服务器接收的 HTTP 请求，它包含了请求页面的路径、请求类型以及关于客户端和传输数据的其他信息。
+你可以看到从`flask`中导入了`request`模块。这个对象代表由客户端发送并服务器接收的 HTTP 请求，它包含了请求页面的路径、请求类型以及关于客户端和传输数据的其他信息。
 
-在这种情况下，你使用了 `request` 对象来返回页面的路径。
+在这种情况下，你使用了`request`对象来返回页面的路径。
 
 Flask 提供了一种简单的方法来响应不同的 HTTP 方法：
 
@@ -1876,7 +2013,7 @@ if __name__ == "__main__":
 
 到目前为止，所有的页面都会返回简单的文本。
 
-Flask 会自动将此字符串转换为 HTTP 响应，并赋予它 “text/html” 的 mimetype 以及状态码 200。
+Flask 会自动将此字符串转换为 HTTP 响应，并赋予它“text/html”的 mimetype 以及状态码 200。
 
 现在让我们修改这种行为。
 
@@ -1894,31 +2031,33 @@ def error_page():
 ...
 ```
 
-### 测验
+## 测验
 
-### 问题：
+### 问题
+
 1. 什么是 Flask？你应该用它做什么？
 2. 为什么 Flask 被称为微框架（microframework）？
 3. Flask 集成 HTTP 服务器的默认端口是多少？
 4. 你能列出最常用的 HTTP 方法吗？
 5. 考虑以下代码段：
+
 ```python
 @app.route("/error")
 def error_page():
     return "Error Page"
 ```
 
-#### 答案：
+### 答案
 
-1. `Flask` 是一个用于创建 Web 应用的 Python 微框架。
+1. `Flask`是一个用于创建 Web 应用的 Python 微框架。
 2. 它保持了核心的简单性。新功能必须通过扩展添加。
 3. 5000
-4. `GET`, `POST`, `HEAD`, `PUT` 和 `DELETE`
+4. `GET`、`POST`、`HEAD`、`PUT`和`DELETE`
 5. 200。不要被错误名称误骗。你没有做任何操作来改变状态码。
 
 ## 练习题
 
-### 问题：
+### 问题
 
 想象你想为你的网站创建一个小型讨论页面，让用户可以发布和阅读消息。消息按降序排列，因此最新的消息将显示在最前面。
 
@@ -1938,8 +2077,9 @@ def show_posts(page_nb=1):
 ```
 
 **注意：**
-* 为变量 `page_nb` 设置默认值，使得路由 `/posts` 和 `/posts/1` 是效的。
-* 强制 `page_nb` 的类型为 `int`，这样路由 `/posts/something` 将返回 404 错误。
+
+- 为变量`page_nb`设置默认值，使得路由`/posts`和`/posts/1`是有效的。
+- 强制`page_nb`的类型为`int`，这样路由`/posts/something`将返回 404 错误。
 
 ## 文件与目录
 
@@ -1955,19 +2095,17 @@ for root, dirs, files in os.walk("."):
         print(os.path.join(root, name))
 ```
 
-
-
-
-
-## 4. 统计已删除文件的数量并在最后显示该数字。
+## 统计已删除文件的数量并在最后显示该数字
 
 ### 测验
 
-#### 问题：你为什么以及何时想要自动化某项任务？
+#### 问题
 
-如果 `doc1.pdf` 是一个第一页为空的 PDF 文档，以下代码会打印什么？
+你为什么以及何时想要自动化某项任务？
 
-```
+如果`doc1.pdf`是一个第一页为空的 PDF 文档，以下代码会打印什么？
+
+```python
 import slate
 f = open("doc1.pdf")
 doc = slate.PDF(f)
@@ -1975,7 +2113,6 @@ f.close()
 print(doc[0])
 ```
 
-#### 答案：
+#### 答案
 
-1.  每当你需要反复重复执行某项操作时，你可能都想要一种自动化这项任务的方法，以节省时间并让生活更轻松。
-
+1. 每当你需要反复重复执行某项操作时，你可能都想要一种自动化这项任务的方法，以节省时间并让生活更轻松。

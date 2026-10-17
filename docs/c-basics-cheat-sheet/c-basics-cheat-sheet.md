@@ -1,17 +1,16 @@
-# # 基础速查表
 
-
-
-
-
+# 基础速查表
 
 ## C 简介
+
 C 语言由微软为 .NET 框架开发。C 是一种基于 C 和 C++ 完全重写的语言。它是一种通用的、面向对象的、平台无关的语言，适用于 .NET 框架工作。
 
 ## Visual Studio (VS)
+
 Visual Studio 2019 是微软提供的免费下载软件。要创建项目，转到“文件 > 新项目”。在左侧选择 C# 控制台应用模板。在右侧选择“控制台”窗口以配置项目的名称和位置。点击“确定”，VS 将为你创建你的项目。
 
 ## Hello World（世界）
+
 使用 C#，你将用如下简单的一行代码启动程序：
 
 ```csharp
@@ -42,37 +41,40 @@ public class Constructor
 ReSharper 是 Visual Studio 的插件，添加了许多代码导航和编辑功能。它能发现编码错误、运行时错误和重构机会，并向你高亮它们，提供修复建议。
 
 ## 公用语言运行时 (CLR)
+
 作为 .NET 框架的核心组件，CLR 运行在操作系统之上并管理你的执行。当你使用 .NET 工具、编译器、调试器和 ASP 时，它们都由 CLR 使用。对于 .NET 语言，编译器将其他代码转换为中间语言，并生成一个名为程序集（exe 或 DLL）的输出文件，原生机器代码可以将该程序集转换为中间语言（通用中间语言或 IL）。当程序运行时，CLR 将这些 IL 翻译成原生机器代码。CLR 确保安全性、内存安全，并通过对每个方法的即时编译 (JIT) 来管理应用程序的执行。当 CLR 编译时，它会进行管理，执行如释放对象、内存检查和处理异常等任务。
 
 ## 变量声明与赋值
-在 C# 中，你必须在使用变量之前对其进行声明。要声明变量，指定变量类型后跟其名称。你还可以使用想要让包含的数据来初始化它，并在后跟变量名。使用赋值运算符 (=) 将值赋予变量。然后变量即被定义并初始化。
+
+在 C# 中，你必须在使用变量之前对其进行声明。要声明变量，指定变量类型后跟其名称。你还可以使用想要让包含的数据来初始化它，并在后跟变量名。使用赋值运算符 (`=`) 将值赋予变量。然后变量即被定义并初始化。
 
 ## 数据类型
+
 C# 拥有内置的类型系统。这意味着你创建的每个变量都是特定类型。
 
 | 原生类型 | 字节 | 范围 | 系统类型 |
 | :--- | :--- | :--- | :--- |
-| bool | 1 | 真或否 | Boolean |
-| char | 2 | 0 到 65535 | Char |
-| byte | 1 | 0 到 255 | Byte |
-| short | 2 | -32,768 到 32,767 | Int16 |
-| int | 4 | -2,147,483,648 到 2,147,483,647 | Int32 |
-| long | 8 | -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 | Int64 |
-| float | 4 | ±1.5e-45 到 ±3.4e+38 | Float |
-| double | 8 | ±5.0e-324 到 ±1.7e+308 | Double |
-| decimal | 16 | ±1.0e-28 到 ±7.9e+28 | Decimal |
+| `bool` | 1 | 真或否 | `Boolean` |
+| `char` | 2 | 0 到 65535 | `Char` |
+| `byte` | 1 | 0 到 255 | `Byte` |
+| `short` | 2 | -32,768 到 32,767 | `Int16` |
+| `int` | 4 | -2,147,483,648 到 2,147,483,647 | `Int32` |
+| `long` | 8 | -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 | `Int64` |
+| `float` | 4 | ±1.5e-45 到 ±3.4e+38 | `Float` |
+| `double` | 8 | ±5.0e-324 到 ±1.7e+308 | `Double` |
+| `decimal` | 16 | ±1.0e-28 到 ±7.9e+28 | `Decimal` |
 
-值字面量是数据类型的定义属性。例如，如果你需要一个整数，必须使用 int 类型。如果你需要一个小数，必须使用 double 类型。
+值字面量是数据类型的定义属性。例如，如果你需要一个整数，必须使用 `int` 类型。如果你需要一个小数，必须使用 `double` 类型。
 
-- 有符号型 (short, int, long)
-- 无符号型 (byte, ushort, uint, ulong)
-- 实数型 (float, double)
+- 有符号型 (`short`, `int`, `long`)
+- 无符号型 (`byte`, `ushort`, `uint`, `ulong`)
+- 实数型 (`float`, `double`)
 - 小数型
 - 字符串
 
-字符串 是一种表示字符序列的内置类型。字符串字面量包含在双引号中。前缀为 # 的字符称为插值字符串，它可以在大括号内包含变量。这允许你将变量直接嵌入字符串字面量中。
+字符串 是一种表示字符序列的内置类型。字符串字面量包含在双引号中。前缀为 `#` 的字符称为插值字符串，它可以在大括号内包含变量。这允许你将变量直接嵌入字符串字面量中。
 
-Console.WriteLine() 方法用于向控制台打印文本。例如：
+`Console.WriteLine()` 方法用于向控制台打印文本。例如：
 
 ```csharp
 string name = "John";
@@ -80,13 +82,15 @@ Console.WriteLine("Hello {name}!");
 ```
 
 另一个示例：
+
 ```csharp
 string city = "New York";
 Console.WriteLine("I live in {city}!");
 ```
 
 ## 字符
-char 类型 (System.Char) 表示一个 Unicode 字符，并占用两个字节。char 字面量包含在单引号中。
+
+`char` 类型 (`System.Char`) 表示一个 Unicode 字符，并占用两个字节。`char` 字面量包含在单引号中。
 
 ```csharp
 char myChar = 'A';
@@ -94,32 +98,27 @@ Console.WriteLine(myChar);
 foreach (char c in myChar.ToString()) { Console.Write(c); }
 ```
 
-
 ## 转义序列
-转义序列适用于字符串和字符，以及由 @ 符号创建的逐字面字符串。
 
-@（逐字字面量）允许你通过四位十六进制代码指定任何字符。
+转义序列适用于字符串和字符，以及由 `@` 符号创建的逐字面字符串。
+
+`@`（逐字字面量）允许你通过四位十六进制代码指定任何字符。
 
 | 字符 | 值 | 重载 |
 | --- | --- | --- |
-| ' | 0x0027 | |
-| \" | 0x0022 | |
-| \\ | 0x005c | |
-| \a | 0x0007 | |
-| \b | 0x0008 | |
-| \t | 0x0009 | |
-| \f | 0x000c | |
-| \n | 0x000a | |
-| \r | 0x000d | |
-| \t | 0x0009 | |
-| \? | 0x003f | |
+| `'` | 0x0027 | |
+| `\"` | 0x0022 | |
+| `\\` | 0x005c | |
+| `\a` | 0x0007 | |
+| `\b` | 0x0008 | |
+| `\t` | 0x0009 | |
+| `\f` | 0x000c | |
+| `\n` | 0x000a | |
+| `\r` | 0x000d | |
+| `\t` | 0x0009 | |
+| `\?` | 0x003f | |
 
-逐字字面量以前缀 @ @，不支持转义字符。
-
-
-
-
-
+逐字字面量以前缀 `@`，不支持转义字符。
 
 # 格式化
 
@@ -127,11 +126,11 @@ foreach (char c in myChar.ToString()) { Console.Write(c); }
 
 数字分为两类：整数和浮点数。
 
-你可以使用 `struct` 关键字定义自定义类型。struct 是一个值类型。字段可以有初始化器，并在没有构造函数的情况下进行继承。第一个成员必须有一个初始化器。
+你可以使用 `struct` 关键字定义自定义类型。`struct` 是一个值类型。字段可以有初始化器，并在没有构造函数的情况下进行继承。第一个成员必须有一个初始化器。
 
 # DateTime
 
-DateTime 是一个结构体，因此是一个值类型。
+`DateTime` 是一个结构体，因此是一个值类型。
 
 ```csharp
 var now = new DateTime(2000);
@@ -139,13 +138,13 @@ var now = new DateTime(2000);
 
 | 格式 | 模式 | 数值 | 描述 |
 | --- | --- | --- | --- |
-| C c | (0;C21) | $2781.29 | 货币 |
-| D s | (0;D57) | 1.798E+003 | 必须是整数或浮点数 |
-| F | (F2;F29) | 2781.29 | 浮点数 |
-| G | (0;G28) | 2781.29 | 插入零 |
-| N | (0;N4) | - | 四舍五入到最近百分比 |
-| R | (0,R85) | 2.89315 | 保留所有小数点 |
-| X | (X,94) | - | 转换为十六进制 |
+| `C` `c` | `(0;C21)` | $2781.29 | 货币 |
+| `D` `s` | `(0;D57)` | 1.798E+003 | 必须是整数或浮点数 |
+| `F` | `(F2;F29)` | 2781.29 | 浮点数 |
+| `G` | `(0;G28)` | 2781.29 | 插入零 |
+| `N` | `(0;N4)` | - | 四舍五入到最近百分比 |
+| `R` | `(0,R85)` | 2.89315 | 保留所有小数点 |
+| `X` | `(X,94)` | - | 转换为十六进制 |
 
 ```csharp
 struct Customer {
@@ -165,7 +164,7 @@ Console.WriteLine(c1.GetFullName()); // John Doe
 
 # TimeSpan
 
-- 创建一个 TimeSpan 表示一个时间间隔。
+- 创建一个 `TimeSpan` 表示一个时间间隔。
 
 ```csharp
 var now = new DateTime(2020, 1, 1, 12, 0, 0);
@@ -179,7 +178,7 @@ Console.WriteLine("Past: " + past);
 Console.WriteLine("Past date/time: " + past.ToString("yyyy-mm-dd hh:mm:ss"));
 ```
 
-- 从 DateTime 中加上或减去 TimeSpan 会返回一个 DateTime。
+- 从 `DateTime` 中加上或减去 `TimeSpan` 会返回一个 `DateTime`。
 
 # 枚举类型 (Enumerated Type)
 
@@ -200,7 +199,7 @@ Console.WriteLine(d); // Thursday
 
 # 转换 (Conversions)
 
-C# 可以在兼容类型的实例之间进行转换。转换总是创建一个新值，而不是修改原始值。转换可以是隐式的或显式的；显式转换需要强制类型转换。一个实用的用例是你将值从 User 类转换为另一个类时。
+C# 可以在兼容类型的实例之间进行转换。转换总是创建一个新值，而不是修改原始值。转换可以是隐式的或显式的；显式转换需要强制类型转换。一个实用的用例是你将值从 `User` 类转换为另一个类时。
 
 ```csharp
 int x = 10;
@@ -236,7 +235,6 @@ Int32 d = obj; // 装箱
 Console.WriteLine(obj.GetType() + " " + obj);
 ```
 
-
 # Lists
 
 列表在下面详细介绍，但这里是使用它们的方法：
@@ -249,7 +247,7 @@ foreach (var num in numbers) Console.WriteLine(num + " ");
 
 # Regex 类
 
-Regex 类位于 `System.Text.RegularExpressions`。将此添加到你的项目引用或命名空间。
+`Regex` 类位于 `System.Text.RegularExpressions`。将此添加到你的项目引用或命名空间。
 
 | 描述 | 示例 |
 | --- | --- |
@@ -286,27 +284,27 @@ class Program {
 
 # 比较运算符 (Comparison Operators)
 
-比较运算符比较两个值并返回 true 或 false：
+比较运算符比较两个值并返回 `true` 或 `false`：
 
 | 语法 | 示例 |
 | --- | --- |
-| == | `if (x == 10) // 等于` |
-| != | `if (x != 10) // 不等于` |
-| > | `if (x > 10) // 大于` |
-| < | `if (x < 10) // 小于` |
-| >= | `if (x >= 10) // 大于等于` |
-| <= | `if (x <= 10) // 小于等于` |
+| `==` | `if (x == 10) // 等于` |
+| `!=` | `if (x != 10) // 不等于` |
+| `>` | `if (x > 10) // 大于` |
+| `<` | `if (x < 10) // 小于` |
+| `>=` | `if (x >= 10) // 大于等于` |
+| `<=` | `if (x <= 10) // 小于等于` |
 
 # 条件语句
 
-编写一个返回 true 或 false 的方法很好，然后调用它：
+编写一个返回 `true` 或 `false` 的方法很好，然后调用它：
 
 | 语法 | 示例 |
 | --- | --- |
-| if (condition) | `if (condition) { ... }` |
-| else | `else { ... }` |
-| else if (condition) | `else if (condition) { ... }` |
-| switch | |
+| `if (condition)` | `if (condition) { ... }` |
+| `else` | `else { ... }` |
+| `else if (condition)` | `else if (condition) { ... }` |
+| `switch` | |
 
 ```csharp
 if (x == 10) {
@@ -316,7 +314,7 @@ if (x == 10) {
 }
 ```
 
-编写一个返回 true 或 false 的方法很好。例如，如果你想检查列表是否包含项，你可以写一个在包含项时返回 true 的方法。然而，这可能不是你所预期的。考虑边缘情况（Edge Cases）是非常重要的，它们是不常见的，是快乐路径（Happy Path）的相反面。
+编写一个返回 `true` 或 `false` 的方法很好。例如，如果你想检查列表是否包含项，你可以写一个在包含项时返回 `true` 的方法。然而，这可能不是你所预期的。考虑边缘情况（Edge Cases）是非常重要的，它们是不常见的，是快乐路径（Happy Path）的相反面。
 
 # NuGet 包管理器
 
@@ -324,15 +322,15 @@ NuGet 用于 .NET。NuGet 客户端管理器提供了对包仓库的访问以便
 
 # 你自己的库 (Your Own Library)
 
-使用 Visual Studio 2017 创建类库，创建一个新项目 -> Class Library C# - Net Standard (.NET Standard) 并给它一个名称和位置。要使用它，转到 Build -> Build Solution 创建 DLL。DLL 名称将是你通过提供名称和位置让项目引用它时所需的。选择 Solution Explorer -> 右键点击 References -> Add Reference -> Browse 找到 DLL。现在你可以在程序顶部添加 using 语句。现在你应该可以访问你的库代码了：
+使用 Visual Studio 2017 创建类库，创建一个新项目 -> Class Library C# - Net Standard (.NET Standard) 并给它一个名称和位置。要使用它，转到 Build -> Build Solution 创建 DLL。DLL 名称将是你通过提供名称和位置让项目引用它时所需的。选择 Solution Explorer -> 右键点击 References -> Add Reference -> Browse 找到 DLL。现在你可以在程序顶部添加 `using` 语句。现在你应该可以访问你的库代码了：
 
 # 循环 (Loop)
 
 | 语法 | 示例 |
 | --- | --- |
-| while (condition) | `while (condition) { ... }` |
-| for (condition) | `for (condition) { ... }` |
-| foreach (item in collection) | `foreach (item in collection) { ... }` |
+| `while (condition)` | `while (condition) { ... }` |
+| `for (condition)` | `for (condition) { ... }` |
+| `foreach (item in collection)` | `foreach (item in collection) { ... }` |
 
 ```csharp
 int i = 0;
@@ -352,8 +350,8 @@ foreach (var item in numbers) {
 
 | 语法 | 示例 |
 | --- | --- |
-| do { ... } | `do { ... } while (condition);` |
-| while (condition) | `while (condition) { ... }` |
+| `do { ... }` | `do { ... } while (condition);` |
+| `while (condition)` | `while (condition) { ... }` |
 
 ```csharp
 int i = 0;
@@ -363,21 +361,19 @@ do {
 } while (i < 4);
 ```
 
-
-
-
-
-
 ## 抽象类
 
+
+
 ### 面向对象编程 (OOP)
+
 面向对象编程（OOP）是一种使用对象来封装代码的编程范式。类型的对象被称为类；类只是对象的模板。当我们说一个类被实例化时，意味着创建了一个对象。每个对象都包含数据和代码。在 C# 中，对象是类的实例。
 
 抽象类不能被实例化。相反，只有子类可以被实例化。抽象类定义抽象方法，这些方法与虚成员相似，但它们不提供默认实现。实现必须由子类提供，除非该子类也是抽象类。
 
 ## 密封类
 
-密封类不能作为任何其他类的基类。你使用 `sealed` 关键字来保护类不被继承。静态类是隐式密封的。
+密封类不能作为任何其他类的基类。你使用`sealed`关键字来保护类不被继承。静态类是隐式密封的。
 
 ## DRY
 
@@ -387,7 +383,7 @@ DRY 代表“不要重复”（Don't Repeat Yourself）。在 OOP 中，封装�
 
 对于类，如果你没有定义任何构造函数，编译器会自动生成一个无参数的构造函数。无参数构造函数不是自动生成的，因此你可能需要编写它。
 
-当对象被销毁时，它的内存会被释放。内存由垃圾回收器释放。终结器通过 `new` 关键字调用。
+当对象被销毁时，它的内存会被释放。内存由垃圾回收器释放。终结器通过`new`关键字调用。
 
 ## 类声明
 
@@ -399,7 +395,7 @@ class Customer
 }
 ```
 
-类是一个包含数据并执行代码的数据结构。类的每个成员可以包含协调，或者可能变量的数量是局部的。在函数内部声明的局部变量是被隐藏的。在互联网上，服务是一个为客户端提供功能的程序。注意：当你有一个类（例如我们的 Customer），并且你有一个任何任意类型的对象列表时，你应该始终包含一个列表来映射每个项目。
+类是一个包含数据并执行代码的数据结构。类的每个成员可以包含协调，或者可能变量的数量是局部的。在函数内部声明的局部变量是被隐藏的。在互联网上，服务是一个为客户端提供功能的程序。注意：当你有一个类（例如我们的`Customer`），并且你有一个任何任意类型的对象列表时，你应该始终包含一个列表来映射每个项目。
 
 ```csharp
 public class Customer
@@ -454,10 +450,12 @@ class NotFound
 方法名 (参数 ) { 体 }
 ```
 
-C# 允许可选参数包含或省略 `new` 关键字。指定参数...
+C# 允许可选参数包含或省略`new`关键字。指定参数...
 
 程序的输出第一个 Id 为 0，因为默认是 0：
+
 Customer ID: 0
+
 Name: 
 
 ## 属性
@@ -502,22 +500,18 @@ class Words
 string[] words = null;
 Console.WriteLine(words[0]); // NullReferenceException
 ```
-编写索引器时，定义一个调用 `this` 的属性，使用参数名称。
 
-
-
-
-
+编写索引器时，定义一个调用`this`的属性，使用参数名称。
 
 ## 组合 vs 继承
 
 ### 组合（又称包含）
 
-设计类时需要小心。在使用继承时，使用继承可能会导致由于紧耦合而难以重构的层级结构。鱼和鲸都继承自 `Animal`，但它们非常不同。一种是鱼，另一种是哺乳动物。如果我们使用继承，就必须创建一个 `Fish` 类和一个 `Whale` 类。
+设计类时需要小心。在使用继承时，使用继承可能会导致由于紧耦合而难以重构的层级结构。鱼和鲸都继承自`Animal`，但它们非常不同。一种是鱼，另一种是哺乳动物。如果我们使用继承，就必须创建一个`Fish`类和一个`Whale`类。
 
 组合是两个类之间的一种“拥有”（a-has）关系，它允许一个类包含另一个类。继承是另一种类型的关系。两者的方法都允许代码重用。然而，在组合中，对象调用被包含对象的方法而不是自己实现它们，这向被包含的对象发送了消息。
 
-我们还可以创建一个 `WalkAndSwim` 类。使用“是”（a-is）在这里是不妥的，因为在会走路的鱼的语境下这并说得通，但我们确定所有的动物现在和将来都会走路。如果你有，也就是说你可能需要一个名为 `WalkAnimal` 的 `Animal` 子类，并重新开发你的代码。
+我们还可以创建一个`WalkAndSwim`类。使用“是”（a-is）在这里是不妥的，因为在会走路的鱼的语境下这并说得通，但我们确定所有的动物现在和将来都会走路。如果你有，也就是说你可能需要一个名为`WalkAnimal`的`Animal`子类，并重新开发你的代码。
 
 通常，实例使用类中的字段来持有另一个类的实例，而组合取决于你的需求。需要记住两点：
 
@@ -568,11 +562,11 @@ class Program {
 
 接口类似于类，但它是成员的规范而非实现。它是一个“合约”。接口成员是抽象的。一个类可以实现多个接口，但只能继承一个类。类和结构体可以继承自自己实现了接口的对象。
 
-在 System.Type.Value 中，接口将由实现接口的类和结构体实现。按照约定，接口名称以字母 "I" 开头。
+在`System.Type.Value`中，接口将由实现接口的类和结构体实现。按照约定，接口名称以字母 "I" 开头。
 
 ## 方法重写与多态
 
-方法重写允许继承方法的实现改变于基类中的方法。`virtual` 关键字用于基类的方法以及派生类中以重写它。什么是多态？多态允许我们使用具有不同类的示例作为基类。
+方法重写允许继承方法的实现改变于基类中的方法。`virtual`关键字用于基类的方法以及派生类中以重写它。什么是多态？多态允许我们使用具有不同类的示例作为基类。
 
 ```csharp
 class BaseClass {
@@ -596,7 +590,7 @@ class Display {
 }
 ```
 
-当我们调用上面的 `writeAllMessages()` 时，我们拥有多态行为。在这里我们有一个不同对象的列表，但每个颜色都有对应的实现。红色重写了绿色的基类。注意的是基类 `BaseClass` 的列表。
+当我们调用上面的`writeAllMessages()`时，我们拥有多态行为。在这里我们有一个不同对象的列表，但每个颜色都有对应的实现。红色重写了绿色的基类。注意的是基类`BaseClass`的列表。
 
 ```csharp
 interface IInterface {
@@ -627,8 +621,11 @@ class Program {
     }
 }
 ```
+
 输出：
+
 John Doe
+
 Jane. Student
 
 ```csharp
@@ -640,18 +637,22 @@ public static void main(string[] args) {
     display.writeAllMessages(baseclasses);
 }
 ```
+
 输出：
+
 Green 3
+
 Green 3
 
 等待，之前的输出是：
-John Doe Age: 35
-Jane Smith Age: 24
 
+John Doe Age: 35
+
+Jane Smith Age: 24
 
 ### 接口与可扩展性
 
-我们创建了一个构造函数和依赖，这意味着 `FileProcessor` 依赖于 `ConsoleLogger`。它并不关心。
+我们创建了一个构造函数和依赖，这意味着`FileProcessor`依赖于`ConsoleLogger`。它并不关心。
 
 ```csharp
 class FileProcessor {
@@ -670,7 +671,7 @@ class FileProcessor {
 
 ### 接口与单元测试
 
-为了单元测试 `JournalPost`，我们需要一个 `IEntryChecker` 接口。
+为了单元测试`JournalPost`，我们需要一个`IEntryChecker`接口。
 
 ```csharp
 public interface IEntryChecker {
@@ -678,7 +679,7 @@ public interface IEntryChecker {
 }
 ```
 
-现在我们可以使用 Moq 来测试 `JournalPost`。
+现在我们可以使用 Moq 来测试`JournalPost`。
 
 ```csharp
 [TestClass]
@@ -706,11 +707,6 @@ public class JournalPostTests {
 }
 ```
 
-
-
-
-
-
 ```csharp
 // 仅用于演示，将字段与属性混合
 public int x;
@@ -722,7 +718,7 @@ public Status Status { get; set; }
 
 C# 有两种机制可以编写跨类型的可重用代码：继承和泛型。继承通过基类表示可重用性，而泛型通过一个包含“占位符”的模板表示可重用性。
 
-我们的代码在类中有三个方法。它们是 Add()、Add() 和 AppendString()。
+我们的代码在类中有三个方法。它们是`Add()`、`Add()`和`AppendString()`。
 
 ```csharp
 using System.Collections.Generic;
@@ -743,19 +739,22 @@ var customer = new Customer { Name = "Alice", Status = Status.Active };
 public static void Main(string[] args) {
 ```
 
+
+
+以下是对给定文本的 Markdown 排版优化结果：
+
 ```csharp
-  List<Customer> customers = new List<Customer>();
-  customers.Add(new Customer { Name = "Alice", Status = Status.Active });
-  customers.Add(new Customer { Name = "Bob", Status = Status.Inactive });
-  foreach (var customer in customers) {
-    Console.WriteLine(customer.Name + " : " + customer.Status);
-  }
+List<Customer> customers = new List<Customer>();
+customers.Add(new Customer { Name = "Alice", Status = Status.Active });
+customers.Add(new Customer { Name = "Bob", Status = Status.Inactive });
+foreach (var customer in customers) {
+  Console.WriteLine(customer.Name + " : " + customer.Status);
 }
 ```
 
 # 委托 (Delegates)
 
-委托是一种“持有”其他方法的类型。委托是对匹配特定签的函数或方法列表的引用。当你执行委托时，它将执行用户定义的引用类型。你可以创建自己的委托类型，或者使用泛型：Func<T> 和 Action<T>。在这里我们将创建一个委托。
+委托是一种“持有”其他方法的类型。委托是对匹配特定签的函数或方法列表的引用。当你执行委托时，它将执行用户定义的引用类型。你可以创建自己的委托类型，或者使用泛型：`Func<T>` 和 `Action<T>`。在这里我们将创建一个委托。
 
 ```csharp
 public delegate void MyDelegate(string message);
@@ -776,7 +775,7 @@ del.Invoke("Hello!");
 
 列表在本清单的基础部分已经创建过，但当时的示例仅是整数列表。现在我们有了一个基于自定义类结构的对象列表。
 
-# 类 Customer
+## 类 `Customer`
 
 ```csharp
 public class Customer {
@@ -786,7 +785,7 @@ public class Customer {
 }
 ```
 
-# 类 Repository
+## 类 `Repository`
 
 ```csharp
 public class Repository {
@@ -812,9 +811,9 @@ public static void Main(string[] args) {
 }
 ```
 
-这是另一个对象列表示例，没有使用 Repository。
+这是另一个对象列表示例，没有使用 `Repository`。
 
-# 类 Program
+## 类 `Program`
 
 ```csharp
 public class Program {
@@ -830,9 +829,9 @@ public class Program {
 }
 ```
 
-这是一个委托的真实示例。在这里我们创建一个多路委托委托。我们使用的在 main 方法中。我们有一个需要“处理”多个方法的对象，并且我们能够从列表中添加或删除方法。
+这是一个委托的真实示例。在这里我们创建一个多路委托。我们使用在 `main` 方法中。我们有一个需要“处理”多个方法的对象，并且我们能够从列表中添加或删除方法。
 
-# 类 Processor
+## 类 `Processor`
 
 ```csharp
 public class Processor {
@@ -861,14 +860,13 @@ static void Method2(string message) {
 }
 ```
 
-# Func 和 Action
+# `Func` 和 `Action`
 
-在 .NET 中，我们有 Action 和 Func 委托。它们是非泛型的。构建它们允许我们使用 Action 并引入一个新的处理器，它可以调用 MyDelegateProcessor() 并在那里移除我们的自定义委托。在 main() 程序中我们想要修改该行和代码的第一行。
+在 .NET 中，我们有 `Action` 和 `Func` 委托。它们是非泛型的。构建它们允许我们使用 `Action` 并引入一个新的处理器，它可以调用`MyDelegateProcessor()` 并在那里移除我们的自定义委托。在 `main()` 程序中我们想要修改该行和代码的第一行。
 
+`beginning.com`
 
-beginning.com
-
-## Function 和 Action... 续...
+## `Func` 和 `Action`... 续...
 
 ```csharp
 public class Myclass
@@ -893,12 +891,7 @@ public class Myclass
 var person = new { Name = "Alice", Age = 30 };
 ```
 
-
-
-
-
-
-beginningnow.com
+`beginningnow.com`
 
 ```csharp
 public IEnumerable<Product> GetProducts() {
@@ -971,6 +964,7 @@ static void Main(string args) {
   var s3 = int.Parse("53");
   Console.WriteLine(s3 + " + " + s3);
 }
+```
 
 ## LINQ
 
@@ -1009,7 +1003,7 @@ class ProductRepository {
 }
 ```
 
-LINQ 方法可以做到。。选择列表，如果只需要一个，使用 `Single()` 或 `FirstOrDefault()`。如果未找到，`Single()` 将抛出 `InvalidOperationException`。`FirstOrDefault()` 返回第一个项，这样更好。
+LINQ 方法可以做到。选择列表，如果只需要一个，使用 `Single()` 或 `FirstOrDefault()`。如果未找到，`Single()` 将抛出 `InvalidOperationException`。`FirstOrDefault()` 返回第一个项，这样更好。
 
 ```csharp
 var products = new ProductRepository().GetProducts();
@@ -1057,20 +1051,21 @@ namespace Asynchronous {
         {
             InitializeComponent();
         }
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             await DownloadTaskAsync("http://beginnow.com/");
             await Task.Delay(2000); // 在方法结束处等待
-}
+        }
+
         public async Task DownloadTaskAsync(string url)
-{{
-             使用 Task Task. 将 将卸载到后台线程
+        {
+            // 使用 Task 将卸载到后台线程
             await Task.Run(async () =>
             {
                 using (HttpClient client = new HttpClient())
                 {
                     string result = await client.GetStringAsync(url);
-                    MessageBox.Show(result);
                 }
             });
         }
@@ -1078,9 +1073,13 @@ namespace Asynchronous {
 }
 ```
 
-我们现在修改模型。消息框立即执行。我们在这里执行其他代码。另一个消息框在阻塞操作后执行。
 
-异常处理块可以在程序崩溃时避免意外异常。我们使用 `try catch` 块。异常处理的四个关键字是：`try`、`catch`、`finally` 和 `throw`。第一个代码示例有一个意外异常。在第二个示例中，我们处理了异常。
+
+`MessageBox.Show(result);`
+
+我们修改模型后，消息框立即执行。我们在这里执行其他代码。另一个消息框在阻塞操作后执行。
+
+异常处理块可以在程序崩溃时避免意外异常。我们使用`try catch`块。异常处理的四个关键字是：`try`、`catch`、`finally`和`throw`。第一个代码示例有一个意外异常。在第二个示例中，我们处理了异常。
 
 ```csharp
 public int Divide(int numerator, int denominator)
@@ -1160,7 +1159,7 @@ public class Calculator
 }
 ```
 
-多个 `catch` 块示例下：
+多个`catch`块示例下：
 
 ```csharp
 try
@@ -1177,4 +1176,3 @@ catch (Exception ex)
     MessageBox.Show("Unexpected error!");
 }
 ```
-

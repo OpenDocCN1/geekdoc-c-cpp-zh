@@ -1,18 +1,19 @@
+
 # 三十一、一个简易画板的实现(QWidget)
 
-说实话，本来我是没有打算放一个很大的例子的，一则比较复杂，二来或许需要很多次才能说得完。不过，现在已经说完了绘图部分，所以计划还是上一个这样的例子。这里我会只做出一个简单的画板程序，大体上就是能够画直线和矩形吧。这样，我计划分成两种实现，一是使用普通的 QWidget 作为画板，第二则是使用 Graphcis View Framework 来实现。因为前面有朋友说不大明白 Graphics View 的相关内容，所以计划如此。
+说实话，本来我是没有打算放一个很大的例子的，一则比较复杂，二来或许需要很多次才能说得完。不过，现在已经说完了绘图部分，所以计划还是上一个这样的例子。这里我会只做出一个简单的画板程序，大体上就是能够画直线和矩形吧。这样，我计划分成两种实现，一是使用普通的`QWidget`作为画板，第二则是使用`Graphcis View Framework`来实现。因为前面有朋友说不大明白`Graphics View`的相关内容，所以计划如此。
 
-好了，现在先来看看我们的主体框架。我们的框架还是使用 Qt Creator 创建一个 Gui Application 工程。
+好了，现在先来看看我们的主体框架。我们的框架还是使用`Qt Creator`创建一个`Gui Application`工程。
 
-简单的 main()函数就不再赘述了，这里首先来看 MainWindow。顺便说一下，我一般不会使用 ui 文件，所以这些内容都是手写的。首先先来看看最终的运行结果：
+简单的`main()`函数就不再赘述了，这里首先来看`MainWindow`。顺便说一下，我一般不会使用`ui`文件，所以这些内容都是手写的。首先先来看看最终的运行结果：
 
 ![](img/54.png)
 
 或许很简单，但是至少我们能够把前面所说的各种知识串连起来，这也就达到目的了。
 
-现在先来看看 MainWindow 的代码：
+现在先来看看`MainWindow`的代码：
 
-mainwindow.h
+`mainwindow.h`
 
 ```cpp
  #ifndef MAINWINDOW_H 
@@ -44,7 +45,7 @@ private slots:
  #endif // MAINWINDOW_H
 ```
 
-mainwindow.cpp
+`mainwindow.cpp`
 
 ```cpp
  #include "mainwindow.h" 
@@ -97,9 +98,9 @@ void MainWindow::drawRectActionTriggered()
 }
 ```
 
-应该说，从以往的学习中可以看出，这里的代码没有什么奇怪的了。我们在 MainWindow 类里面声明了一个信号，changeCurrentShape(Shape::Code)，用于按钮按下后通知画图板。注意，QActio 的 triggered()信号是没有参数的，因此，我们需要在 QAction 的槽函数中重新 emit 我们自己定义的信号。构造函数里面创建了两个 QAction，一个是 drawLineAction，一个是 drawRectAction，分别用于绘制直线和矩形。MainWindow 的中心组件是 PainWidget，也就是我们的画图板。下面来看看 PaintWidget 类：
+应该说，从以往的学习中可以看出，这里的代码没有什么奇怪的了。我们在`MainWindow`类里面声明了一个信号，`changeCurrentShape(Shape::Code)`，用于按钮按下后通知画图板。注意，`QAction`的`triggered()`信号是没有参数的，因此，我们需要在`QAction`的槽函数中重新`emit`我们自己定义的信号。构造函数里面创建了两个`QAction`，一个是`drawLineAction`，一个是`drawRectAction`，分别用于绘制直线和矩形。`MainWindow`的中心组件是`PaintWidget`，也就是我们的画图板。下面来看看`PaintWidget`类：
 
-paintwidget.h
+`paintwidget.h`
 
 ```cpp
  #ifndef PAINTWIDGET_H 
@@ -147,7 +148,7 @@ private:
  #endif // PAINTWIDGET_H
 ```
 
-paintwidget.cpp
+`paintwidget.cpp`
 
 ```cpp
  #include "paintwidget.h" 
@@ -208,15 +209,15 @@ void PaintWidget::mouseReleaseEvent(QMouseEvent *event)
 }
 ```
 
-PaintWidget 类定义了一个 slot，用于接收改变后的新的 ShapeCode。最主要的是，PaintWidget 重定义了三个关于鼠标的事件：mousePressEvent，mouseMoveEvent 和 mouseReleaseEvent。
+`PaintWidget`类定义了一个`slot`，用于接收改变后的新的`ShapeCode`。最主要的是，`PaintWidget`重定义了三个关于鼠标的事件：`mousePressEvent`，`mouseMoveEvent`和`mouseReleaseEvent`。
 
-我们来想象一下如何绘制一个图形：图形的绘制与鼠标操作息息相关。以画直线为例，首先我们需要按下鼠标，确定直线的第一个点，所以在 mousePressEvent 里面，我们让 shape 保存下 start 点。然后在鼠标按下的状态下移动鼠标，此时，直线就会发生变化，实际上是直线的终止点在随着鼠标移动，所以在 mouseMoveEvent 中我们让 shape 保存下 end 点，然后调用 update()函数，这个函数会自动调用 paintEvent()函数，显示出我们绘制的内容。最后，当鼠标松开时，图形绘制完毕，我们将一个标志位置为 true，此时说明这个图形绘制完毕。
+我们来想象一下如何绘制一个图形：图形的绘制与鼠标操作息息相关。以画直线为例，首先我们需要按下鼠标，确定直线的第一个点，所以在`mousePressEvent`里面，我们让`shape`保存下`start`点。然后在鼠标按下的状态下移动鼠标，此时，直线就会发生变化，实际上是直线的终止点在随着鼠标移动，所以在`mouseMoveEvent`中我们让`shape`保存下`end`点，然后调用`update()`函数，这个函数会自动调用`paintEvent()`函数，显示出我们绘制的内容。最后，当鼠标松开时，图形绘制完毕，我们将一个标志位置为`true`，此时说明这个图形绘制完毕。
 
-为了保存我们曾经画下的图形，我们使用了一个 List。每次按下鼠标时，都会把图形存入这个 List。可以看到，我们在 paintEvent()函数中使用了 foreach 遍历了这个 List，绘制出历史图形。foreach 是 Qt 提供的一个宏，用于遍历集合中的元素。
+为了保存我们曾经画下的图形，我们使用了一个`List`。每次按下鼠标时，都会把图形存入这个`List`。可以看到，我们在`paintEvent()`函数中使用了`foreach`遍历了这个`List`，绘制出历史图形。`foreach`是`Qt`提供的一个宏，用于遍历集合中的元素。
 
-最后我们来看看 Shape 类。
+最后我们来看看`Shape`类。
 
-shape.h
+`shape.h`
 
 ```cpp
  #ifndef SHAPE_H 
@@ -266,7 +267,7 @@ protected:
  #endif // SHAPE_H
 ```
 
-shape.cpp
+`shape.cpp`
 
 ```cpp
  #include "shape.h" 
@@ -276,9 +277,9 @@ Shape::Shape()
 }
 ```
 
-Shape 类最重要的就是保存了 start 和 end 两个点。为什么只要这两个点呢？因为我们要绘制的是直线和矩形。对于直线来说，有了两个点就可以确定这条直线，对于矩形来说，有了两个点作为左上角的点和右下角的点也可以确定这个矩形，因此我们只要保存两个点，就足够保存这两种图形的位置和大小的信息。paint()函数是 Shape 类的一个纯虚函数，子类都必须实现这个函数。我们现在有两个子类：Line 和 Rect，分别定义如下：
+`Shape`类最重要的就是保存了`start`和`end`两个点。为什么只要这两个点呢？因为我们要绘制的是直线和矩形。对于直线来说，有了两个点就可以确定这条直线，对于矩形来说，有了两个点作为左上角的点和右下角的点也可以确定这个矩形，因此我们只要保存两个点，就足够保存这两种图形的位置和大小的信息。`paint()`函数是`Shape`类的一个纯虚函数，子类都必须实现这个函数。我们现在有两个子类：`Line`和`Rect`，分别定义如下：
 
-line.h
+`line.h`
 
 ```cpp
  #ifndef LINE_H 
@@ -298,7 +299,7 @@ public:
  #endif // LINE_H
 ```
 
-line.cpp
+`line.cpp`
 
 ```cpp
  #include "line.h" 
@@ -313,7 +314,7 @@ void Line::paint(QPainter &painter)
 }
 ```
 
-rect.h
+`rect.h`
 
 ```cpp
  #ifndef RECT_H 
@@ -333,7 +334,7 @@ public:
  #endif // RECT_H
 ```
 
-rect.cpp
+`rect.cpp`
 
 ```cpp
  #include "rect.h" 
@@ -349,6 +350,6 @@ void Rect::paint(QPainter &painter)
 }
 ```
 
-使用 paint()函数，根据两个点的数据，Line 和 Rect 都可以绘制出它们自身来。此时就可以看出，我们之所以要建立一个 Shape 作为父类，因为这两个类有几乎完全相似的数据对象，并且从语义上来说，Line、Rect 与 Shape 也完全是一个 is-a 的关系。如果你想要添加颜色等的信息，完全可以在 Shape 类进行记录。这也就是类层次结构的好处。
+使用`paint()`函数，根据两个点的数据，`Line`和`Rect`都可以绘制出它们自身来。此时就可以看出，我们之所以要建立一个`Shape`作为父类，因为这两个类有几乎完全相似的数据对象，并且从语义上来说，`Line`、`Rect`与`Shape`也完全是一个`is-a`的关系。如果你想要添加颜色等的信息，完全可以在`Shape`类进行记录。这也就是类层次结构的好处。
 
 代码很多也会比较乱，附件里面是整个工程的文件，有兴趣的朋友不妨看看哦！ 本文出自 “豆子空间” 博客，请务必保留此出处 [`devbean.blog.51cto.com/448512/193918`](http://devbean.blog.51cto.com/448512/193918)

@@ -1,23 +1,24 @@
+
 # [24] 继承 — 私有继承和保护继承
 
 ## FAQs in section [24]:
 
-*   [24.1] 如何表示“私有继承”？
-*   [24.2] 私有继承和组合(composition)有什么类似？
-*   [24.3] 我应该选谁：组合还是私有继承？
-*   [24.4] 从私有继承类到父类需要指针类型转换吗？
-*   [24.5] 保护继承和私有继承的关系是什么？
-*   [24.6] 私有继承和保护继承的访问规则是什么？
+* [24.1] 如何表示“私有继承”？
+* [24.2] 私有继承和组合(composition)有什么类似？
+* [24.3] 我应该选谁：组合还是私有继承？
+* [24.4] 从私有继承类到父类需要指针类型转换吗？
+* [24.5] 保护继承和私有继承的关系是什么？
+* [24.6] 私有继承和保护继承的访问规则是什么？
 
 ## 24.1 如何表示“私有继承”？
 
 用 `: private` 代替 `: public`，例如
 
 ```cpp
- class Foo : private Bar {
- public:
-   // ...
- }; 
+class Foo : private Bar {
+public:
+  // ...
+};
 ```
 
 ## 24.2 私有继承和组合(composition)有什么类似？
@@ -27,47 +28,47 @@
 例如，“汽车有一个(has-a)引擎”关系可以用单一组合表示为：
 
 ```cpp
- class Engine {
- public:
-   Engine(int numCylinders);
-   void start();                 // Starts this Engine
- };
+class Engine {
+public:
+  Engine(int numCylinders);
+  void start();                 // Starts this Engine
+};
 
- class Car {
- public:
-   Car() : e_(8) { }             // Initializes this Car with 8 cylinders
-   void start() { e_.start(); }  // Start this Car by starting its Engine
- private:
-   Engine e_;                    // Car has-a Engine
- }; 
+class Car {
+public:
+  Car() : e_(8) { }             // Initializes this Car with 8 cylinders
+  void start() { e_.start(); }  // Start this Car by starting its Engine
+private:
+  Engine e_;                    // Car has-a Engine
+};
 ```
 
 同样的“有一个”关系也能用私有继承表示：
 
 ```cpp
- class Car : private Engine {    // Car has-a Engine
- public:
-   Car() : Engine(8) { }         // Initializes this Car with 8 cylinders
-   using Engine::start;          // Start this Car by starting its Engine
- }; 
+class Car : private Engine {    // Car has-a Engine
+public:
+  Car() : Engine(8) { }         // Initializes this Car with 8 cylinders
+  using Engine::start;          // Start this Car by starting its Engine
+};
 ```
 
 两种形式有很多类似的地方：
 
-*   两种情况中，都只有一个 Engine 被确切地包含于 Car 中
-*   两种情况中，在外部都不能将 `Car*` 转换为 `Engine*`
-*   两种情况中，`Car`类都有一个`start()`方法，并且都在包含的`Engine`对象中调用`start()`方法。
+* 两种情况中，都只有一个 `Engine` 被确切地包含于 `Car` 中
+* 两种情况中，在外部都不能将 `Car*` 转换为 `Engine*`
+* 两种情况中，`Car`类都有一个`start()`方法，并且都在包含的`Engine`对象中调用`start()`方法。
 
 也有一些区别：
 
-*   如果你想让每个 `Car`都包含若干 `Engine`，那么只能用单一组合的形式
-*   私有继承形式可能引入不必要的多重继承
-*   私有继承形式允许 `Car` 的成员将 `Car*` 转换成`Engine*`
-*   私有继承形式允许访问基类的保护（`protected`）成员
-*   私有继承形式允许 `Car` 重写 `Engine` 的虚函数
-*   私有继承形式赋予`Car`一个更简洁（20 个字符比 28 个字符）的仅通过 `Engine`调用的`start()`方法
+* 如果你想让每个 `Car`都包含若干 `Engine`，那么只能用单一组合的形式
+* 私有继承形式可能引入不必要的多重继承
+* 私有继承形式允许 `Car` 的成员将 `Car*` 转换成`Engine*`
+* 私有继承形式允许访问基类的保护（`protected`）成员
+* 私有继承形式允许 `Car` 重写 `Engine` 的虚函数
+* 私有继承形式赋予`Car`一个更简洁（20 个字符比 28 个字符）的仅通过 `Engine`调用的`start()`方法
 
-注意，私有继承通常用来获得对基类的 protected: 成员的访问，但这只是短期的解决方案（权宜之计）
+注意，私有继承通常用来获得对基类的 `protected:` 成员的访问，但这只是短期的解决方案（权宜之计）
 
 ## 24.3 我应该选谁：组合还是私有继承？
 
@@ -78,29 +79,29 @@
 当你要创建一个 `Fred` 类，它使用了 `Wilma` 类的代码，并且`Wilma` 类的这些代码需要调用你新建的 `Fred` 类的成员函数。在这种情况下，`Fred` 调用 `Wilma` 的非虚函数，而`Wilma` 调用（通常是纯虚函数）被`Fred`重写的这些函数。这种情况，用组合是很难完成的。
 
 ```cpp
- class Wilma {
- protected:
-   void fredCallsWilma()
-     {
-       std::cout << "Wilma::fredCallsWilma()\n";
-       wilmaCallsFred();
-     }
-   virtual void wilmaCallsFred() = 0;   // 纯虚函数
- };
+class Wilma {
+protected:
+  void fredCallsWilma()
+    {
+      std::cout << "Wilma::fredCallsWilma()\n";
+      wilmaCallsFred();
+    }
+  virtual void wilmaCallsFred() = 0;   // 纯虚函数
+};
 
- class Fred : private Wilma {
- public:
-   void barney()
-     {
-       std::cout << "Fred::barney()\n";
-       Wilma::fredCallsWilma();
-     }
- protected:
-   virtual void wilmaCallsFred()
-     {
-       std::cout << "Fred::wilmaCallsFred()\n";
-     }
- }; 
+class Fred : private Wilma {
+public:
+  void barney()
+    {
+      std::cout << "Fred::barney()\n";
+      Wilma::fredCallsWilma();
+    }
+protected:
+  virtual void wilmaCallsFred()
+    {
+      std::cout << "Fred::wilmaCallsFred()\n";
+    }
+};
 ```
 
 ## 24.4 从私有继承类到父类需要指针类型转换吗？
@@ -120,10 +121,10 @@
 保护继承使用 `: protected` 语法：
 
 ```cpp
- class Car : protected Engine {
- public:
-   // ...
- }; 
+class Car : protected Engine {
+public:
+  // ...
+};
 ```
 
 ## 24.6 私有继承和保护继承的访问规则是什么？
@@ -131,20 +132,20 @@
 以这些类为例：
 
 ```cpp
- class B                    { /*...*/ };
- class D_priv : private   B { /*...*/ };
- class D_prot : protected B { /*...*/ };
- class D_publ : public    B { /*...*/ };
- class UserClass            { B b; /*...*/ }; 
+class B                    { /*...*/ };
+class D_priv : private   B { /*...*/ };
+class D_prot : protected B { /*...*/ };
+class D_publ : public    B { /*...*/ };
+class UserClass            { B b; /*...*/ };
 ```
 
-子类都不能访问 `B` 的私有部分。在 `D_priv`中，B 的公有和保护部分都是私有的。在 `D_prot`中，`B` 的公有和保护部分都是保护的。在 `D_publ` 中，`B` 的公有部分是公有的，`B` 的保护部分是保护的（`D_publ` 是一种 `B`）。`UserClass` 类仅仅可以访问 `B` 的公有部分。
+子类都不能访问 `B` 的私有部分。在 `D_priv`中，`B` 的公有和保护部分都是私有的。在 `D_prot`中，`B` 的公有和保护部分都是保护的。在 `D_publ` 中，`B` 的公有部分是公有的，`B` 的保护部分是保护的（`D_publ` 是一种 `B`）。`UserClass` 类仅仅可以访问 `B` 的公有部分。
 
 要使 `B` 的公有成员在 `D_priv` 或 `D_prot`中也是公有的，则使用 `B::` 前缀声明成员的名称。例如，要使 `B::f(int,float)`成员在 `D_prot`中公有，应该这样写：
 
 ```cpp
- class D_prot : protected B {
- public:
-   using B::f;  // 注意: 不是 using B::f(int,float)
- }; 
+class D_prot : protected B {
+public:
+  using B::f;  // 注意: 不是 using B::f(int,float)
+};
 ```

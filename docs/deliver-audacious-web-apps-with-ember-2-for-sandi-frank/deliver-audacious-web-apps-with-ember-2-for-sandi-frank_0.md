@@ -1,51 +1,38 @@
+
 # 使用 Ember 2 构建出的 Web 应用
-
-
 
 ![](img/cover.jpg)
 
 ![Pragmatic Bookshelf](img/cover.jpg "Pragmatic Bookshelf")
 
-
-
-
-
-
 ## 为了获得最佳阅读体验……
 
 我们强烈建议您在阅读设备或应用程序上启用“出版商默认”设置来阅读本书。如果没有此设置，某些格式和字符可能无法正常显示。请参考您的阅读器说明了解如何启用出版商默认设置。
-
-
 
 # 《Deliver Audacious Web Apps with Ember 2》早期好评
 
 使用 Ember 2 构建大胆的 Web 应用为强大且优雅的 Ember 框架提供了清晰的介绍。想要学习 Ember 或提升 Ember 技能的开发者应该读这本书。
 
-| → Nell Shamrell-Harrington |
-| | Chef 开发工程师 |
+> → Nell Shamrell-Harrington  
+> Chef 开发工程师
 
 Ember 带回了 Rails 的乐趣，这次是针对性能良好的单页应用。
 
-| → Federico Tomassetti |
-| | 软件工程师 |
+> → Federico Tomassetti  
+> 软件工程师
 
 如果你考虑在下一个 JavaScript 项目中使用 Ember，请买这本书。每读完一章，我都感觉自己提升了水平。
 
-| → Stephen Orr |
-| | Impact Applications 高级软件工程师
+> → Stephen Orr  
+> Impact Applications 高级软件工程师
 
 # 致谢
 
-
 感谢 Ember 核心团队和 Ember 社区：感谢你们制作了一个既好学又有趣的产品。因为你们的无私投入，网络变得更好。感谢！
 
-感谢我的技术评审员 Alessandro Bahgat, Jacob Chae, Javier Collado, Jeremy Frens, Kenneth Geisshirt, Alexander Henry, Eric Hung, Jan Nonnen, Stephen Orr, Shreerang Patwardhan, Martijn Reuvers, Brian Schau, Nell Shamrell-Harrington, Tibor Simic, Charley Stran, Federico Tomassetti, Paul Waring, Nick Watts 以及 Stephen Wolff：感谢你们为这个项目投入的时间和专业知识。你们的建议让这本书比我独自编写的要好得多。
+感谢我的技术评审员 Alessandro Bahgat、Jacob Chae、Javier Collado、Jeremy Frens、Kenneth Geisshirt、Alexander Henry、Eric Hung、Jan Nonnen、Stephen Orr、Shreerang Patwardhan、Martijn Reuvers、Brian Schau、Nell Shamrell-Harrington、Tibor Simic、Charley Stran、Federico Tomassetti、Paul Waring、Nick Watts 以及 Stephen Wolff：感谢你们为这个项目投入的时间和专业知识。你们的建议让这本书比我独自编写的要好得多。
 
-
-
-
-
-致 Pragmatic Bookshelf 团队，包括 Andy Hunt, Dave Thomas, Susannah Davidson Pfalzer, Janet Furlow 以及其他对制作做过贡献的同事：你们帮助我将这本书打造成了我们希望大家都能为在上面签下名字感到自豪的作品。
+致 Pragmatic Bookshelf 团队，包括 Andy Hunt、Dave Thomas、Susannah Davidson Pfalzer、Janet Furlow 以及其他对制作做过贡献的同事：你们帮助我将这本书打造成了我们希望大家都能为在上面签下名字感到自豪的作品。
 
 致我的编辑 Katharine Dvorak：这本书不仅有我的份，也有你的。你的指导和见解对我帮助极大，如果没有它们，这本书的长度会增加一倍，而有用信息却减少一半。我迫不及待要开始下一本书了！
 
@@ -55,7 +42,9 @@ Ember 带回了 Rails 的乐趣，这次是针对性能良好的单页应用。
 
 最重要的，致我的妻子和儿子：你们的耐心、支持和爱对我意味着一切，没有你们，我既无法开始也无法完成这本书。感谢你们的一切！
 
-Matt White `matt@mattwhite.co` 2015 年 10 月 版权 ©2015, The Pragmatic Bookshelf。
+Matt White `matt@mattwhite.co`  
+2015 年 10 月  
+版权 ©2015, The Pragmatic Bookshelf。
 
 # 引言：为什么选择 Ember？
 
@@ -95,30 +84,35 @@ Ember 是一个开源 JavaScript 框架，维护在 `http://emberjs.com` 和 Git
 
 Ember CLI 是用于构建 Ember 应用的命令行界面，它是团队获取框架库的首选方式。通常情况下，Ember 非常关注 Ember 开发者所说的“开发者工程学”（developer ergonomics）。他们希望让你作为开发者的生活更轻松。Ember CLI 正是基于这种精神创建。正如你在整书中看到的，Ember CLI 能够轻松处理许多模板化任务，例如构建和部署、执行测试、添加文件以创建新功能等。同样重要的是，它允许对类使用新的基于模块的语法。这大大提高了你代码的清晰度。我们在本书中将使用 Ember CLI，所以让我们从安装它开始吧。
 
-
-
-
 值得注意的是，尽管我们将使用 `Node` 来运行 Ember CLI 开发工具，但 Ember 本身并不是一个服务端框架，尽管 `Node` 支持服务端的 JavaScript 开发。Ember 用于创建浏览器驻留应用。
 
 首先，让我们安装 `Node` 和 `npm`，以及 `Git`。`Node` 自带了 `npm`，但 `npm` 更新非常频繁，因此有必要确认你拥有的是最新版本。请访问相关网站为你的特定平台安装这些工具的最新版本。你的 `Node` 安装至少应为 `0.12` 版本以支持 Ember CLI 工具链。如果你已经安装了 `Node`，你可能需要先卸载现有版本。
 
 后两个安装是 `Bower` 所要求的。`npm` 是一个包管理器，用于构建在 `Node` 中运行的代码，或与在 `Node` 中运行的工具配合。`Git` 是分布式版本控制系统。请根据各自网站的安装说明安装这三者。
 
-| 安装 |
-| --- |
-| ![images/aside-icons/tip.png](img/tip.png) | 在安装这些工具的每一个时，你可能希望以管理员用户的身份运行。在 Linux/BSD/OS X 系统上，你可能需要使用 `sudo` 前缀来执行，而在 Windows 上，你需要以具有管理员权限的用户身份登录。与许多安装过程一样，可能会出现问题，因此如果发生问题，请前往 [`pragprog.com`](http://pragprog.com) 上的书籍论坛，我们将共同解决。 |
+> **安装**
+>
+> ![images/aside-icons/tip.png](img/tip.png)
+>
+> 在安装这些工具的每一个时，你可能希望以管理员用户的身份运行。在 Linux/BSD/OS X 系统上，你可能需要使用 `sudo` 前缀来执行，而在 Windows 上，你需要以具有管理员权限的用户身份登录。与许多安装过程一样，可能会出现问题，因此如果发生问题，请前往 [`pragprog.com`](http://pragprog.com) 上的书籍论坛，我们将共同解决。
 
 安装好这些工具后，你可以从命令行获取 `Bower`：
 
-| | ```bash$ npm install -g bower ``` |
+```bash
+$ npm install -g bower
+```
 
 你应该能看到几行命令输出，表示 `Bower` 及其依赖项已拉取到你的机器上。`-g` 命令选项要求 `Node` 安装 `Bower` 并使其全局可用，而不是将其限制在特定项目中。一旦 `Bower` 完成安装（你会看到命令输出停止并返回命令提示符），你就可以安装 `PhantomJS`：
 
-| | ```bash$ npm install -g phantomjs ``` |
+```bash
+$ npm install -g phantomjs
+```
 
 同样，你应该能看到一些命令输出，告诉你 `PhantomJS` 已成功安装。有了这些工具，你就可以准备好获取 Ember CLI 了：
 
-| | ```bash$ npm install -g ember-cli ``` |
+```bash
+$ npm install -g ember-cli
+```
 
 安装 `Ember CLI` 会导致 Ember 框架库以及 CLI 本身被安装。现在你有了 `Ember` 和 `Ember CLI`，我们可以开始编写代码了。
 
@@ -132,39 +126,46 @@ Ember CLI 采用以应用为中心的方法。你做的第一件事是创建应�
 
 打开命令提示符，导航到存放代码的位置，并运行以下命令：
 
-| | ```bash$ ember new ember-note ``` |
+```bash
+$ ember new ember-note
+```
 
 这将为你的应用创建一个新目录。如果出现任何问题，请查看后面的提示。
 
-| 使用 Ember CLI 创建新项目 |
-| --- |
-| ![images/aside-icons/important.png](img/important.png) | 截至本文时，Ember CLI 在创建新仓库时可能会发生可能的竞态条件。如果你看到类似 `ENOENT, open ’ember/package.json'` 的错误，你可能遇到了此错误。通常，`ember new` 命令在第二次尝试时会成功。在某些非 Windows 系统上，你可能看到关于未安装 `watchman` 的控制台警告。Ember CLI 使用 `watchman` 监控你的文件系统变化，并在你开发 Ember 应用时将其实时部署到本地服务器。有 `watchman` 是好事（即使仅仅是为了避免此错误），但它不是必须的。如果没有 `watchman`，Ember CLI 使用一个名为 `NodeWatcher` 的工具实现相同。如果你想安装 `watchman`，请访问 [`facebook.github.io/watchman/docs/install.html`](https://facebook.github.io/watchman/docs/install.html) 获取特定平台的安装说明。 |
+> **使用 Ember CLI 创建新项目**
+>
+> ![images/aside-icons/important.png](img/important.png)
+>
+> 截至本文时，Ember CLI 在创建新仓库时可能会发生可能的竞态条件。如果你看到类似 `ENOENT, open ’ember/package.json'` 的错误，你可能遇到了此错误。通常，`ember new` 命令在第二次尝试时会成功。在某些非 Windows 系统上，你可能看到关于未安装 `watchman` 的控制台警告。Ember CLI 使用 `watchman` 监控你的文件系统变化，并在你开发 Ember 应用时将其实时部署到本地服务器。有 `watchman` 是好事（即使仅仅是为了避免此错误），但它不是必须的。如果没有 `watchman`，Ember CLI 使用一个名为 `NodeWatcher` 的工具实现相同。如果你想安装 `watchman`，请访问 [`facebook.github.io/watchman/docs/install.html`](https://facebook.github.io/watchman/docs/install.html) 获取特定平台的安装说明。
 
 在我们编写 UI 代码之前，让我们也安装 Bootstrap 样式表，这样我们就可以享受一个看起来不像 20 世纪 90 年初的 UI。在新创建的 `ember-note` 目录的命令提示符中，运行以下命令：
 
-| | ```bash$ cd ember-note ``` |
-| | ```bash$ npm install ``` |
-| | ```bash$ bower install ``` |
-| | ```bash$ bower install bootstrap --save ``` |
+```bash
+$ cd ember-note
+$ npm install
+$ bower install
+$ bower install bootstrap --save
+```
 
 然后将这些行添加到 `ember-note/ember-cli-build.js` 中，位于最后一行代码之前：
 
-| | ```javascriptapp.import('bower_components/bootstrap/dist/css/bootstrap.css'); ``` |
-| | ```javascriptapp.import('bower_components/bootstrap/dist/js/bootstrap.js'); ``` |
-| | ```javascriptapp.import('bower_components/bootstrap/dist/css/bootstrap.min.css'); ``` |
+```javascript
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
+```
 
 ### 运行你的应用
 
-让我们运行应用看看效果。在你的 new-note 目录的命令提示符中，运行以下命令：
+让我们运行应用看看效果。在你的 `new-note` 目录的命令提示符中，运行以下命令：
 
-| | ```bash$ ember serve ``` |
+```bash
+$ ember serve
+```
 
 你应该看到一些命令输出，告诉你构建成功且你的应用正在运行在端口 200... |
 
-
-
-
-在 Ember 应用中，你所有的功能都组织在路由（routes）之下。路由本质上是一个 URL 分段，如 *嵌套路由* 所示。因此，我们的下一步是使用 Ember CLI 来创建一个路由。打开一个新的命令行终端，在你的 `ember-note` 项目根目录下，运行以下命令：
+在 Ember 应用中，你所有的功能都组织在路由（routes）之下。路由本质上是一个 URL 分段，如“嵌套路由”所示。因此，我们的下一步是使用 Ember CLI 来创建一个路由。打开一个新的命令行终端，在你的 `ember-note` 项目根目录下，运行以下命令：
 
 ```bash
 $ ember generate route register --pod
@@ -172,9 +173,9 @@ $ ember generate route register --pod
 
 在 `generate` 命令中添加 `--pod` 标志时，会创建一个名为 `register` 的目录，其中包含了添加你的路由所需的文件：`route.js` 和 `template.hbs`。它们目前是空的，你将根据需要填充它们的内容以创建路由的功能。通常情况下，当你想要按功能组织项目时（即创建一个包含 `route.js` 和 `template.hbs` 文件的 `register` 目录），而不是按对象类型组织时，你会使用 pod。
 
-早些时候，当你使用 `ember new` 命令创建应用时，创建了以下四个文件：`index.html`、`app.js`、`router.js` 和 `application.hbs`。随后，`ember generate` 命令会编辑你应用目录下的 `router.js` 文件。我们将在使用 Router 类来组织你的应用 中深入探讨这一点，但 `router.js` 类用于实现应用内部路由的层次结构。
+早些时候，当你使用 `ember new` 命令创建应用时，创建了以下四个文件：`index.html`、`app.js`、`router.js` 和 `application.hbs`。随后，`ember generate` 命令会编辑你应用目录下的 `router.js` 文件。我们将在“使用 Router 类来组织你的应用”中深入探讨这一点，但 `router.js` 类用于实现应用内部路由的层次结构。
 
-如果你运行 `ember generate` 命令但漏掉了 `--pod` 标志，Ember CLI 仍然会创建相同的对象，但它不在 `register` 目录中创建一个名为 `route.js` 的文件，而是在 `route` 目录下创建一个名为 `register.js` 文件。对于我们而言，最好在一个位置看到路由所需的每个文件，因此我们将在本书书中始终使用 `--pod` 标志。
+如果你运行 `ember generate` 命令但漏掉了 `--pod` 标志，Ember CLI 仍然会创建相同的对象，但它不在 `register` 目录中创建一个名为 `route.js` 的文件，而是在 `route` 目录下创建一个名为 `register.js` 文件。对于我们而言，最好在一个位置看到路由所需的每个文件，因此我们将在本书中始终使用 `--pod` 标志。
 
 让我们来看一下到为止创建的每一个文件。
 
@@ -209,11 +210,13 @@ $ ember generate route register --pod
 
 `vendor.js` 和 `ember-note.js` 的情况也是如此的。Ember CLI 构建过程会为你在应用中使用的所有第三方代码创建一个文件，名为 `vendor.js`，并为你的应用代码创建一个文件，名为 `ember-note.js`。它们包含在 `index.html` 中。
 
-你可能还会注意到 `{{content-for}}` 表达式。这些允许你使用 Ember CLI 插件在页面中包含额外内容。
 
-### app.js
 
-`app.js` 文件用于创建 Ember 环境。看看下面的代码：
+你可能还会注意到`{{content-for}}`表达式。这些允许你使用 Ember CLI 插件在页面中包含额外内容。
+
+## app.js
+
+`app.js`文件用于创建 Ember 环境。看看下面的代码：
 
 ```javascript
 import Ember from 'ember';
@@ -236,11 +239,11 @@ export default App;
 
 如果你是一个还没有看过 ECMAScript 2015 的资深开发者，前几行可能会让你大掉下巴。ECMAScript 是 ECMA 国际组织指定的 JavaScript 语言的正式名称，而 ECMAScript 2015（也称为 ES6）是该标准的最新发布。当你开始以模块化的方式编写代码时。
 
-`app.js` 中代码的目的是设置应用范围内的构造。其中一个 `Resolver` 用于在整个应用中查找类。`modulePrefix` 变量被设置为 `ember-note`，如你在设置应用时定义的那样。`podPrefix` 没有设置，因为我们的项目配置中尚未定义，而该配置是从 `config/environment` 读取的。
+`app.js`中代码的目的是设置应用范围内的构造。其中一个`Resolver`用于在整个应用中查找类。`modulePrefix`变量被设置为`ember-note`，如你在设置应用时定义的那样。`podPrefix`没有设置，因为我们的项目配置中尚未定义，而该配置是从`config/environment`读取的。
 
-### router.js
+## router.js
 
-`router.js` 文件是你可以真正开始看到 Ember 如何工作的地方。Ember 最基础的功能之一是路由（route）的概念。简单来说，路由是应用中的一个位置。如果你将应用视为页面或页面区域的集合，每个区域嵌套在另一个内部，那么每个页面都对应一个路由。而位于 `router.js` 中定义的 `Router` 类就是你定义应用结构的地方。让我们来看看：
+`router.js`文件是你可以真正开始看到 Ember 如何工作的地方。Ember 最基础的功能之一是路由（route）的概念。简单来说，路由是应用中的一个位置。如果你将应用视为页面或页面区域的集合，每个区域嵌套在另一个内部，那么每个页面都对应一个路由。而位于`router.js`中定义的`Router`类就是你定义应用结构的地方。让我们来看看：
 
 ```javascript
 import Ember from 'ember';
@@ -257,14 +260,11 @@ Router.map(function() {
 export default Router;
 ```
 
+但`Router.map`才是真正发生作用的地方。正如你看到的，我们已经创建了一个名为`register`的路由。这个路由是在运行`ember generate route register --pod`命令时添加到`Router`中的。还生成了许多其他文件，稍后我们将编辑这些文件来创建注册功能。`register`路由似乎是一个顶级路由，但实际上它位于应用程序默认路由下的第一层子路由。让我们通过关联的模板来看这个默认路由。
 
+### application.hbs
 
-
-但 `Router.map` 才是真正发生作用的地方。正如你看到的，我们已经创建了一个名为 `register` 的路由。这个路由是在运行 `ember generate route register --pod` 命令时添加到 `Router` 中的。还生成了许多其他文件，稍后我们将编辑这些文件来创建注册功能。`register` 路由似乎是一个顶级路由，但实际上它位于应用程序默认路由下的第一层子路由。让我们通过关联的模板来看这个默认路由。
-
-#### application.hbs
-
-每个应用程序都有一个根路由，即 `Application` 路由。此外，每个路由精确对应一个模板。模板是你的用户界面的一部分。对于 `application` 路由，该模板定义在 `application.hbs` 中。现在让我们修改此模板，使其如下所示：
+每个应用程序都有一个根路由，即`Application`路由。此外，每个路由精确对应一个模板。模板是你的用户界面的一部分。对于`application`路由，该模板定义在`application.hbs`中。现在让我们修改此模板，使其如下所示：
 
 | [ch1/ember-note/app/templates/application.hbs](http://media.pragprog.com/titles/mwjsember/code/ch1/ember-note/app/templates/application.hbs) |
 | :--- |
@@ -284,17 +284,17 @@ export default Router;
 | `</div>` |
 | `</div>` |
 
-每个 Ember 模板都是 HTML 和 Handlebars 表达式语言的混合体，表达式语言即是用 "{{ }}" 字符隔开的代码部分。Handlebars 是 Ember 使用的表达式语言，用于描述 Ember 模板中与 Ember 应用程序代码相关的某些片段。在整书中你会看到很多 Ember 使用 Handlebars 表达式的示例，它们始终使用“{{ }}" 字符。Ember 附带了一个编译器，可以将 Handlebars 模板表达式转换为 DOM 对象，正如我们在编译模板 中看到的那样。
+每个 Ember 模板都是 HTML 和 Handlebars 表达式语言的混合体，表达式语言即是用`"{{ }}"`字符隔开的代码部分。Handlebars 是 Ember 使用的表达式语言，用于描述 Ember 模板中与 Ember 应用程序代码相关的某些片段。在整书中你会看到很多 Ember 使用 Handlebars 表达式的示例，它们始终使用`"{{ }}"`字符。Ember 附带了一个编译器，可以将 Handlebars 模板表达式转换为 DOM 对象，正如我们在编译模板中看到的那样。
 
-正如我们之前看到的，每个应用都由一个路由层次组成。`application.hbs` 文件中的 `{{#link-to}}` 表达式用于生成超链接，点击后会将 `register` 路由加载到 `{{outlet}}` 中。
+正如我们之前看到的，每个应用都由一个路由层次组成。`application.hbs`文件中的`{{#link-to}}`表达式用于生成超链接，点击后会将`register`路由加载到`{{outlet}}`中。
 
-你可能在想 `Application` 路由是在哪里定义的。在特定情况下，由于我们没有任何特定的操作处理或数据加载需要执行，我们不需要定义路由类；我们可以简单地依靠 Ember 使用默认行为动态创建路由实现。
+你可能在想`Application`路由是在哪里定义的。在特定情况下，由于我们没有任何特定的操作处理或数据加载需要执行，我们不需要定义路由类；我们可以简单地依靠 Ember 使用默认行为动态创建路由实现。
 
-到目前我们看到的所有代码都搭建了应用程序的最少配置。现在，让我们看看如何通过构建 `register` 路由为我们的应用添加功能。
+到目前我们看到的所有代码都搭建了应用程序的最少配置。现在，让我们看看如何通过构建`register`路由为我们的应用添加功能。
 
-### 构建 Register 路由
+## 构建 Register 路由
 
-正如之前讨论的，`register` 路由将允许用户通过选择用户名来注册 EmberNote 应用程序。当我们使用 CLI 创建此路由时，创建了以下文件（注意，这是 `route.js`，与 `router.js` 不同）：
+正如之前讨论的，`register`路由将允许用户通过选择用户名来注册 EmberNote 应用程序。当我们使用 CLI 创建此路由时，创建了以下文件（注意，这是`route.js`，与`router.js`不同）：
 
 | [ch1/ember-note/app/register/route.js](http://media.pragprog.com/titles/mwjsember/code/ch1/ember-note/app/register/route.js) |
 | :--- |
@@ -302,7 +302,7 @@ export default Router;
 | `export default Ember.Route.extend({` |
 | `});` |
 
-这就是定义一个空路由类的方法。路由存在有两个主要原因：加载由路由显示的数据以及响应操作。在我们的案例中，我们没有任何要显示的数据，并且我们需要定义一个 `addNew` 操作来向应用添加新用户。我们稍后会回到该操作。首先，让我们看看用户界面将什么样。这是我们路由的模板文件，已添加必要的 UI 代码：
+这就是定义一个空路由类的方法。路由存在有两个主要原因：加载由路由显示的数据以及响应操作。在我们的案例中，我们没有任何要显示的数据，并且我们需要定义一个`addNew`操作来向应用添加新用户。我们稍后会回到该操作。首先，让我们看看用户界面将什么样。这是我们路由的模板文件，已添加必要的 UI 代码：
 
 | [ch1/ember-note/app/register/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch1/ember-note/app/register/template.hbs) |
 | :--- |
@@ -314,13 +314,37 @@ export default Router;
 | `{{message}}` |
 | `</div>` |
 
-`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。`{{input}}` 字段允许我们输入名称。...（此处由于原文重复，已按要求处理）
 
-修改 register 路由，使其看起来如下：
 
-我们在这里还依赖于一些新的 ES2015 语法。代码 `() =>` 被称为箭头函数，它能让我们在 `then` 函数体内部继续使用 `this`，并且 `this` 将继续指向路由对象。`createRecord` 的调用使用 Ember Data 框架创建一个模型对象的新实例，随后的 `save` 调用将把该记录保存到持久化存储中。Ember Data 提供了通过 RESTful 服务访问数据的能力。在测试所有这些之前，我们需要为 Ember Data 设置一个模拟服务，以及一个使用这些数据的模型对象。现在就开始吧。
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
 
-修改 register 路由，使其看起来如下：
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+`{{input}}` 字段允许我们输入名称。`<button {{action 'addNew'}}` 触发 `addNew` 操作。`{{message}}` 字段显示状态。
+
+（由于原文内容重复，此处已进行分组排版。）
+
+
+
+修改`register`路由，使其看起来如下：
+
+我们在这里还依赖于一些新的 ES2015 语法。代码`() =>`被称为箭头函数，它能让我们在`then`函数体内部继续使用`this`，并且`this`将继续指向路由对象。`createRecord`的调用使用 Ember Data 框架创建一个模型对象的新实例，随后的`save`调用将把该记录保存到持久化存储中。Ember Data 提供了通过 RESTful 服务访问数据的能力。在测试所有这些之前，我们需要为 Ember Data 设置一个模拟服务，以及一个使用这些数据的模型对象。现在就开始吧。
+
+修改`register`路由，使其看起来如下：
 
 ```javascript
 import Ember from 'ember';
@@ -343,19 +367,17 @@ export default Ember.Route.extend({
 });
 ```
 
-我们在这里做的第一件事是给路由添加一个 `actions` 哈希。hash 是一个键值对列表。在这种情况下，键是函数名，值是函数定义。我们有一个函数，`addNew`。这个函数将在我们点击用户界面中的按钮时被调用，因为它是像模板中那样定义的。
-
-
+我们在这里做的第一件事是给路由添加一个`actions`哈希。hash 是一个键值对列表。在这种情况下，键是函数名，值是函数定义。我们有一个函数，`addNew`。这个函数将在我们点击用户界面中的按钮时被调用，因为它是像模板中那样定义的。
 
 Ember 和 Ember CLI 提供了两种在开发期间为应用提供数据的方法：固定件（fixtures）和模拟服务（mock services）。虽然固定件的设置更简单，但模拟服务能够让你更完整地测试代码，因为它要求你实现访问 RESTful 服务所需的所有内容。因此，我们在本书中使用模拟服务。如果你更关注的是对核心 Ember 类的测试，而不担心数据访问层的测试，你可能考虑使用固定件，固定件本质上是带有硬编码数据和简单访问方法的类。
 
-事实上，我们比模拟服务又更进了一步：我们的服务将在重启后持久化数据，这样当我们在我们构建应用时，我们还能看到数据的累积。Ember CLI 创建的默认模拟服务并不具备这一点，尽管在正常情况下开发应用时这种行为可能更好，但我更希望我们的数据在服务重启后依然存在，这样我们在学习示例时就能保持测试数据。现在，让我们看看模拟服务是如何工作的。
+事实上，我们比模拟服务又更进了一步：我们的服务将在重启后持久化数据，这样当我们在构建应用时，还能看到数据的累积。Ember CLI 创建的默认模拟服务并不具备这一点，尽管在正常情况下开发应用时这种行为可能更好，但我更希望我们的数据在服务重启后依然存在，这样我们在学习示例时就能保持测试数据。现在，让我们看看模拟服务是如何工作的。
 
 ## 创建用户模型
 
 我们首先为用户对象创建一个模型类。目前，我们的用户包含一个数据属性：名称。让我们使用 Ember CLI 生成一个存根类（stub class）。
 
-```
+```bash
 $ ember generate model user
 ```
 
@@ -371,17 +393,17 @@ export default DS.Model.extend({
 });
 ```
 
-该类依赖 Ember Data 库来创建一个 `Model` 实例，其中只有一个属性名为 `name`。该属性的类型为字符串，意味着它将持有文本。如此。这就是我们建模用户对象所需的一切。现在，为了与计划创建的服务交互，我们需要一个 `RESTAdapter` 和一个 `RESTSerializer`。
+该类依赖 Ember Data 库来创建一个`Model`实例，其中只有一个属性名为`name`。该属性的类型为字符串，意味着它将持有文本。如此。这就是我们建模用户对象所需的一切。现在，为了与计划创建的服务交互，我们需要一个`RESTAdapter`和一个`RESTSerializer`。
 
- 设置适配器和序列化器
+## 设置适配器和序列化器
 
-要创建 `RESTAdapter`，运行以下命令：
+要创建`RESTAdapter`，运行以下命令：
 
 ```bash
 $ ember generate adapter application
 ```
 
-这创建了一个整个应用程序使用的 `RESTAdapter`，这就是为什么将其命名为 `application`。现在，编辑生成的文件使其看起来如下所示：
+这创建了一个整个应用程序使用的`RESTAdapter`，这就是为什么将其命名为`application`。现在，编辑生成的文件使其看起来如下所示：
 
 [ch1/ember-note/app/adapters/application.js](http://media.pragprog.com/titles/mwjsember/code/ch1/ember-note/app/adapters/application.js)
 
@@ -393,7 +415,7 @@ export default DS.RESTAdapter.extend({
 });
 ```
 
-同样，要创建 `RESTSerializer`，运行此命令：
+同样，要创建`RESTSerializer`，运行此命令：
 
 ```bash
 $ ember generate serializer application
@@ -409,19 +431,19 @@ import DS from 'ember-data';
 export default DS.RESTSerializer.extend({});
 ```
 
-`RESTAdapter` 只有一个目的：定义服务器上的路径，我们可以在该路径找到我们的 RESTful 服务。`RESTSerializer` 是一个空实现，因为我们正在使用默认功能。由于我们将创建一个为每个模型对象暴露预期 API 的服务，这就是我们需要做的全部。我们将在 适配非传统 API 和 使用序列化器访问遗留 API 中更多地介绍这些内容。
+`RESTAdapter`只有一个目的：定义服务器上的路径，我们可以在该路径找到我们的 RESTful 服务。`RESTSerializer`是一个空实现，因为我们正在使用默认功能。由于我们将创建一个为每个模型对象暴露预期 API 的服务，这就是我们需要做的全部。我们将在适配非传统 API 和使用序列化器访问遗留 API 中更多地介绍这些内容。
 
 通常情况下，这就是你 Ember 开发的终点。创建一个提供数据的服务通常不在你使用 Ember 开发的范围内，因为 Ember 是一个前端框架，而不是用于开发 REST 服务的。正如我之前所说的，我们正在创建一个应用可以用于测试的模拟服务，然后通过使数据持久化来更进了一步。
 
 ## 使数据持久化
 
-为了让我们的数据持久化，我们需要能够做到两件目前还无法做的事情。首先，我们需要一个存放数据的地方。为此，我们将使用 `NEDB` 项目，它是一个用于 Node 的嵌入式数据存储。这是一个用于开发数据存储（如我们的）的极棒的工具。对于生产数据存储，你可能需要更健壮的东西。在 `ember-note` 目录下运行以下命令（`--save-dev` 标志使该项成为仅开发依赖，而不是生产依赖）：
+为了让我们的数据持久化，我们需要能够做到两件目前还无法做的事情。首先，我们需要一个存放数据的地方。为此，我们将使用`NEDB`项目，它是一个用于 Node 的嵌入式数据存储。这是一个用于开发数据存储（如我们的）的极棒的工具。对于生产数据存储，你可能需要更健壮的东西。在`ember-note`目录下运行以下命令（`--save-dev`标志使该项成为仅开发依赖，而不是生产依赖）：
 
 ```bash
 $ npm install nedb --save-dev
 ```
 
-这使得 `NEDB` 项目可用。当 Ember Data 存储在在注册路由中保存我们的新用户记录时，它会通过 HTTP 向我们的模拟服务 `POST` 数据。因此，我们还需要能够解析传入的 HTTP 请求体。获取以下库来实现此操作：
+这使得`NEDB`项目可用。当 Ember Data 存储在注册路由中保存我们的新用户记录时，它会通过 HTTP 向我们的模拟服务`POST`数据。因此，我们还需要能够解析传入的 HTTP 请求体。获取以下库来实现此操作：
 
 ```bash
 $ npm install body-parser --save-dev
@@ -502,11 +524,7 @@ $ ember serve
 
 ![images/new-user.png](img/new-user.png)
 
-如果你想验证，可以查看 `ember-note` 目录下的 `users` 文件。你应该看到类似这样的内容：
-
-
-
-
+如果你想验证，可以查看`ember-note`目录下的`users`文件。你应该看到类似这样的内容：
 
 | ​  | {"name":"newuser1@pragprog.com","id":1,"_id":"8EszAw3RuDxYCIBh"} |
 
@@ -514,15 +532,15 @@ $ ember serve
 
 ### Ember 插件：Ember CLI Mirage
 
-你可以看到，为了让 Ember CLI 与后端协同工作，我们确实费了一些功夫。Ember CLI 的 `HTTP Mocks` 是一种使用模拟服务器提供数据的极佳方法，但我想提到另一个名为 `Ember CLI Mirage` 的替代方案。
+你可以看到，为了让 Ember CLI 与后端协同工作，我们确实费了一些功夫。Ember CLI 的`HTTP Mocks`是一种使用模拟服务器提供数据的极佳方法，但我想提到另一个名为`Ember CLI Mirage`的替代方案。
 
-Ember CLI Mirage 是一个 Ember 插件，它实现了与 Ember CLI 的 `HTTP Mocks` 许多相同的目标，但它是完全在客户端完成的（也就是说，不需要你启动一个 Node 服务器来提供模拟数据）。Ember 插件是一个封装的代码包，由社区成员分享并发布到仓库（通常是 `npm`）中，供更广泛的社区使用。
+Ember CLI Mirage 是一个 Ember 插件，它实现了与 Ember CLI 的`HTTP Mocks`许多相同的目标，但它是完全在客户端完成的（也就是说，不需要你启动一个 Node 服务器来提供模拟数据）。Ember 插件是一个封装的代码包，由社区成员分享并发布到仓库（通常是`npm`）中，供更广泛的社区使用。
 
 Ember CLI Mirage 允许你创建在浏览器或持续集成环境中运行的模拟数据服务。这使得你的测试类可以在不需要现有的后端服务器（即使是模拟服务器）的情况下测试你的模型层。
 
 在整本书中，我会提到一些值得关注的 Ember 插件。这些插件通常代表了我们在书中讨论过的任务的替代实现方式，或者是比我们之前简单实现的方式更成熟的实现方式。我不断言这些插件是否达到了生产级水平。至少，它们对于帮助你进一步探索 Ember 生态系统非常有帮助，可以作为额外学习的工具，因为它们都是开源的。我们将在第 9 章专门的章节中讨论插件，构建和使用 Ember 插件。
 
-关于如何使用 Ember CLI Mirage 的完整文档，请参阅 [`www.ember-cli-mirage.com`](http://www.ember-cli-mirage.com)。
+关于如何使用 Ember CLI Mirage 的完整文档，请参阅[`www.ember-cli-mirage.com`](http://www.ember-cli-mirage.com)。
 
 ## 下一步
 
@@ -531,6 +549,7 @@ Ember CLI Mirage 允许你创建在浏览器或持续集成环境中运行的模
 ### 脚注
 
 | [[3]](#f_0012.html_FNPTR-3) | [`nodejs.org`](http://nodejs.org) |
+|---|---|
 | [[4]](#f_0012.html_FNPTR-4) | [`npmjs.com`](https://npmjs.com) |
 | [[5]](#f_0012.html_FNPTR-5) | [`git-scm.com/downloads`](http://git-scm.com/downloads) |
 | [[6]](#f_0013.html_FNPTR-6) | [`evernote.com`](https://evernote.com) |
@@ -541,17 +560,17 @@ Copyright © 2015, The Pragmatic Bookshelf.
 
 现在我们已经了 Ember 和 Ember CLI，并使用它们创建了一个允许用户注册的程序，我们准备好研究 Ember 的主要功能了。我们将查看第一个功能是 Ember 路由（routes）。正如我在第 1 章提到的，路由的概念是 Ember 核心原则之一。路由是应用程序单个功能单元的起点。路由的层级结构构成了应用程序的组织结构。
 
-路由在 Ember 中非常非常重要。幸运的是，它们也是一个很好的起点。在本章中，我们将查看如何使用 Ember CLI 使用路由来构建你的应用程序。你将学习如何使用 `Router` 类来设置路由层级结构，以及如何使用 `Route` 类来定义路由。我们还将查看如何使用 Ember 的导航辅助工具在路由之间跳转。你将学习 Ember 如何使用你的应用程序 URL 不仅指示你在应用中的位置，还指示加载到 UI 中的记录。为了帮助你区分 `Router` 和 `Route`，请记住每个应用只有一个 `Router`，而在该 `Router` 内部，你通过定义其路由来定义应用程序的结构。`Route` 类的实现就是你定义单个路由行为。
+路由在 Ember 中非常非常重要。幸运的是，它们也是一个很好的起点。在本章中，我们将查看如何使用 Ember CLI 使用路由来构建你的应用程序。你将学习如何使用`Router`类来设置路由层级结构，以及如何使用`Route`类来定义路由。我们还将查看如何使用 Ember 的导航辅助工具在路由之间跳转。你将学习 Ember 如何使用你的应用程序 URL 不仅指示你在应用中的位置，还指示加载到 UI 中的记录。为了帮助你区分`Router`和`Route`，请记住每个应用只有一个`Router`，而在该`Router`内部，你通过定义其路由来定义应用程序的结构。`Route`类的实现就是你定义单个路由行为。
 
 为了学习更多关于路由的知识，我们将通过构建应用程序的导航结构，开始拼凑出 EmberNote 的更多功能集。在本章结束时，你将完成 EmberNote 大部分的路由结构，并且你将知道如何编写在路由之间跳转的代码。
 
 ## 使用 Router 类组织你的应用程序
 
-在上一章中，我们为 EmberNote 创建了注册路由（register route）。正如你可以想象的，Ember 应用程序由许多路由组成，每个路由在应用程序中都是唯一的。这些路由合在一起构成了应用程序中不同位置的层级结构，暴露了该层级中每个位置特有的功能。Ember 在一个类（即 `Router` 类）中记录了这种层级结构，如图所示。
+在上一章中，我们为 EmberNote 创建了注册路由（register route）。正如你可以想象的，Ember 应用程序由许多路由组成，每个路由在应用程序中都是唯一的。这些路由合在一起构成了应用程序中不同位置的层级结构，暴露了该层级中每个位置特有的功能。Ember 在一个类（即`Router`类）中记录了这种层级结构，如图所示。
 
 ![images/router-and-routes.png](img/router-and-routes.png)
 
-由于我们使用 Ember CLI 来管理应用程序，因此我们不会经常直接编辑 EmberNote 的 `Router`。大多数时候，我们会允许 Ember CLI 为我们完成编辑。
+由于我们使用 Ember CLI 来管理应用程序，因此我们不会经常直接编辑 EmberNote 的`Router`。大多数时候，我们会允许 Ember CLI 为我们完成编辑。
 
 让我们来看这样一个例子。当我们上一次处理 EmberNote 时，我们的 Router 看起来是这样的：
 
@@ -570,7 +589,7 @@ var Router = Ember.Router.extend({
 export default Router;
 ```
 
-现在让我们添加两个路由，允许用户登录并查看笔记本。在 embernote 目录中运行以下命令：
+现在让我们添加两个路由，允许用户登录并查看笔记本。在`embernote`目录中运行以下命令：
 
 ```bash
 $ ember generate route login --pod
@@ -584,20 +603,18 @@ this.route('login');
 this.route('notebooks');
 ```
 
-很棒的一点是，Ember CLI 会在你创建新路由时将它们添加，而不会抹掉对路由的现有修改。Router 现在包含了我们生成的两个新路由。现在我们已经能够通过构建它们的类来定义 login 和 notebooks 路由。
 
 
+很棒的一点是，Ember CLI 会在你创建新路由时将它们添加，而不会抹掉对路由的现有修改。`Router`现在包含了我们生成的两个新路由。现在我们已经能够通过构建它们的类来定义 `login` 和 `notebooks` 路由。
 
+这也引发了关于 Ember 默认结构的一个点。每个单独的路由对应对应一个模板。对于应用路由（`application route`），它是 `application.hbs` 模板。对于我们生成的每个路由，假设你使用了 `--pod` 标记，它就是路由文件夹中定义的 `template.hbs` 模板；否则，模板将以路由命名，并存放在 `templates` 文件夹中。
 
-
-这也引发了关于 Ember 默认结构的一个点。每个单独的路由对应对应一个模板。对于应用路由（application route），它是 `application.hbs` 模板。对于我们生成的每个路由，假设你使用了 `--pod` 标记，它就是路由文件夹中定义的 `template.hbs` 模板；否则，模板将以路由命名，并存放在 `templates` 文件夹中。
-
-现在让我们创建登录路由（login route）。此路由需要允许用户登录 EmberNote 应用程序。它应该可以通过主页上的链接进行访问（就像之前的 `register` 路由一样），并允许以前注册的用户使用其用户名登录。一旦他们登录，他们应该被重定向到他们的笔记本列表（我们目前为止生成的另一个路由）。此外，一旦他们登录后，`register` 和 `login` 链接就不应再出现。
+现在让我们创建登录路由（`login route`）。此路由需要允许用户登录 EmberNote 应用程序。它应该可以通过主页上的链接进行访问（就像之前的 `register` 路由一样），并允许以前注册的用户使用其用户名登录。一旦他们登录，他们应该被重定向到他们的笔记本列表（我们目前为止生成的另一个路由）。此外，一旦他们登录后，`register` 和 `login` 链接就不应再出现。
 
 为了实现这一点，我们将对以下文件进行修改：
 
 * `app/template/application.hbs`：添加导航以允许用户加载登录路由，并在用户登录后隐藏到 `register` 和 `login` 的导航。
-* `app/login/route.js`：定义登录动作（action）。
+* `app/login/route.js`：定义登录动作（`action`）。
 * `app/login/template.hbs`：定义登录路由的用户界面。
 
 要到达登录路由，我们首先需要通过 `application.hbs` 文件使其可用。编辑该文件使其如下所示：
@@ -626,9 +643,7 @@ this.route('notebooks');
 </div>
 ```
 
-
-
-你对该文件所做的第一个添加是一个 `{{#if}}` 表达式。该表达式包含的文本仅在表达式求值为真时才会显示。在这种情况下，如果应用控制器（application controller）的 `user` 属性有一个值，则会显示用户名。我们将在查看下一个登录路由时，了解此用户属性是如何设置的。
+你对该文件所做的第一个添加是一个 `{{#if}}` 表达式。该表达式包含的文本仅在表达式求值为真时才会显示。在这种情况下，如果应用控制器（`application controller`）的 `user` 属性有一个值，则会显示用户名。我们将在查看下一个登录路由时，了解此用户属性是如何设置的。
 
 下一部分位于 `{{#unless}}` 表达式内部，当 `user` 属性缺失时显示。它包含了指向 `register` 路由以及我们新登录路由的 `{{#link-to}}` 导航项。
 
@@ -666,24 +681,21 @@ export default Ember.Route.extend({
 });
 ```
 
+在本节中，我们不仅涵盖了路由（`routes`），为了构建一个良好的示例，你现在需要关注的关键元素是 `{{#link-to}}` 表达式、`transitionTo` 函数以及 `actions` 哈希（`hash`）。正如在 `application.hbs` 模板中所使用的`{{#link-to}}` 表达式允许用户在点击生成的链接时，将登录路由的 `template.hbs` 加载到 `application.hbs` 中的 `{{outlet}}`。要实现这一功能，我们需要在 `router.js` 中定义登录路由。`{{link-}}` 表达式是让父路由将子路由加载到其 outlet 的方法之一。
 
+实现导航另一种方法是使用如 `transitionTo` 之类的函数在路由之间移动。正如在登录路由中所，它接收当前加载的路由（由调用函数的实例确定），并用函数调用中指定的路由替换它。正如我们在示例中提到的，我们可以使用此函数不仅指示要加载哪个路由，还可以指示应该加载哪条记录。稍后在我们查看设置路由模型（`model`）时，我们将看到更多关于目标路由如何知道加载哪条记录的内容。
 
+最后，`actions` 哈希用于定义动作名称与相关函数之间的键值对。这个概念并非特定于路由，稍后我们会看到更多示例，但值得注意的是，处理动作的一种选择就是以这种方式将动作添加到路由中。
 
-在本节中，我们不仅涵盖了路由（routes），为了构建一个良好的示例，你现在需要关注的关键元素是 `{{#link-to}}` 表达式、`transitionTo` 函数以及 actions 哈希（hash）。正如在 `application.hbs` 模板中所使用的`{{#link-to}}` 表达式允许用户在点击生成的链接时，将登录路由的 `template.hbs` 加载到 `application.hbs` 中的 `{{outlet}}`。要实现这一功能，我们需要在 `router.js` 中定义登录路由。`{{link-}}` 表达式是让父路由将子路由加载到其 outlet 的方法之一。
-
-实现导航另一种方法是使用如 `transitionTo` 之类的函数在路由之间移动。正如在登录路由中所，它接收当前加载的路由（由调用函数的实例确定），并用函数调用中指定的路由替换它。正如我们在示例中提到的，我们可以使用此函数不仅指示要加载哪个路由，还可以指示应该加载哪条记录。稍后在我们查看设置路由模型（model）时，我们将看到更多关于目标路由如何知道加载哪条记录的内容。
-
-最后，actions 哈希用于定义动作名称与相关函数之间的键值对。这个概念并非特定于路由，稍后我们会看到更多示例，但值得注意的是，处理动作的一种选择就是以这种方式将动作添加到路由中。
-
-现在我们更深入地理解什么是路由以及如何使用它，让我们来看看如何通过路由的模型钩子（model hook）来加载和显示数据。
+现在我们更深入地理解什么是路由以及如何使用它，让我们来看看如何通过路由的模型钩子（`model hook`）来加载和显示数据。
 
 ## 设置你的模型 (Set Your Model)
 
-当我们处理路由时，model hook 用于加载并提供必要的数据。正如我们所看到的，并不是每个路由都会实现它的 model hook，但大多数路由都会。model hook 是一个函数，定义在 `Route` 类的实例中，用于加载由该路由显示的数据。
+当我们处理路由时，`model hook` 用于加载并提供必要的数据。正如我们所看到的，并不是每个路由都会实现它的 `model hook`，但大多数路由都会。`model hook` 是一个函数，定义在 `Route` 类的实例中，用于加载由该路由显示的数据。
 
-在 EmberNote 应用中，我们还没有构建使用 model hook 的路由。现在我们来构建一个。当用户通过登录 action 登录时，我们使用 `transitionTo` 函数跳转到 notebooks 路由。让我们现在定义该路由，在此过程中我们将看到如何使用 model hook。
+在 EmberNote 应用中，我们还没有构建使用 `model hook` 的路由。现在我们来构建一个。当用户通过登录 `action` 登录时，我们使用 `transitionTo` 函数跳转到 `notebooks` 路由。让我们现在定义该路由，在此过程中我们将看到如何使用 `model hook`。
 
-notebooks 路由有一个简单的目的：显示用户在 EmberNote 中创建的笔记本（notebooks）列表。笔记本是笔记的集合，因此在 notebooks 路由中点击笔记本将显示该笔记本的笔记列表。以下是 notebooks 路由：
+`notebooks` 路由有一个简单的目的：显示用户在 EmberNote 中创建的笔记本（`notebooks`）列表。笔记本是笔记的集合，因此在 `notebooks` 路由中点击笔记本将显示该笔记本的笔记列表。以下是 `notebooks` 路由：
 
 ```javascript
 // ch2/ember-note/app/notebooks/route.js
@@ -698,31 +710,33 @@ export default Ember.Route.extend({
 });
 ```
 
-与登录路由类似，notebooks 使用 ES6 模块格式并以必要的 import 语句开头。此外，我们使用 `--pod` 命令行标志定义它，因此文件名为 `route.js` 并位于 `app/notebooks` 路径，且定义使用了 `export default Ember.Route.extend` 形式。
+与登录路由类似，`notebooks` 使用 ES6 模块格式并以必要的 `import` 语句开头。此外，我们使用 `--pod` 命令行标志定义它，因此文件名为 `route.js` 并位于 `app/notebooks` 路径，且定义使用了 `export default Ember.Route.extend` 形式。
 
-model hook 是我们 `Route` 主体中的第一个块。它被定义为一个函数，当路由加载时由 Ember 执行。你还会注意到，一个名为 `params` 的对象被传递给这个函数。我们稍后会回到这里。
+`model hook` 是我们 `Route` 主体中的第一个块。它被定义为一个函数，当路由加载时由 Ember 执行。你还会注意到，一个名为 `params` 的对象被传递给这个函数。我们稍后会回到这里。
 
-model hook 的正体包含了一些 Ember Data 代码，用于加载登录用户的笔记本。我们将在第 5 章 [建模你的数据 (Modeling Your Data)] 中进一步介绍 Ember Data，因此现在让我们关注代码中特定于路由的部分。这行代码导致 Ember Data 查询由 `params.user_id` 用户拥有的笔记本对象。那么这个 `user_id` 是哪里来的呢？
+`model hook` 的正体包含了一些 Ember Data 代码，用于加载登录用户的笔记本。我们将在第 5 章 [建模你的数据 (Modeling Your Data)] 中进一步介绍 Ember Data，因此现在让我们关注代码中特定于路由的部分。这行代码导致 Ember Data 查询由 `params.user_id` 用户拥有的笔记本对象。那么这个 `user_id` 是哪里来的呢？
 
-为了向路由提供 `params` 对象，特别是 `user_id`，我们需要在路由定义中使用路径段（path segment）。让我们查看 `router.js` 文件中 notebooks 路由的定义：
+为了向路由提供 `params` 对象，特别是 `user_id`，我们需要在路由定义中使用路径段（`path segment`）。让我们查看 `router.js` 文件中 `notebooks` 路由的定义：
 
 ```javascript
 // ch2/ember-note/app/router.js
 this.route('notebooks', { path:'notebooks/:user_id'}, function() {});
 ```
 
-这就是你如何使用 `Router` 类定义带有路径段的路由。在 Ember 中，路径段被用于提供一个值，该值可以用于在路由中加载记录。对于此路由，我们正在使用登录用户的 id 来标识我们想要加载的笔记本。在 `Router` 类中以这种方式定义路由，然后在 `Route` 中使用 `params` 对象，允许你提供加载笔记本所需的数据。当然，发起导航到此路由的对象首先需要将该数据添加到路径中。在我们的案例中，我们需要修改路由中 `application.js`（注：此处原文应为 route.js）中的 `transitionTo` 函数来提供这些数据：
+这就是你如何使用 `Router` 类定义带有路径段的路由。在 Ember 中，路径段被用于提供一个值，该值可以用于在路由中加载记录。对于此路由，我们正在使用登录用户的 `id` 来标识我们想要加载的笔记本。在 `Router` 类中以这种方式定义路由，然后在 `Route` 中使用 `params` 对象，允许你提供加载笔记本所需的数据。当然，发起导航到此路由的对象首先需要将该数据添加到路径中。在我们的案例中，我们需要修改路由中 `application.js`（注：此处原文应为 `route.js`）中的 `transitionTo` 函数来提供这些数据：
 
 ```javascript
 // ch2/ember-note/app/route.js
 this.transitionTo('notebooks', user);
 ```
 
-**安全注意**：在路由之间使用路径段是 Ember 的有用功能，但很容易以不安全的方式使用。在 URL 中放置明文是一个潜在风险，因为恶意用户可以很容易更改它。这被称为直接对象漏洞（direct object vulnerability）。
+**安全注意**：在路由之间使用路径段是 Ember 的有用功能，但很容易以不安全的方式使用。在 URL 中放置明文是一个潜在风险，因为恶意用户可以很容易更改它。这被称为直接对象漏洞（`direct object vulnerability`）。
 
-接下来，我们需要定义 mock（模拟数据）。为此，运行以下命令来创建 mock 服务并为路由提供 REST API：
+接下来，我们需要定义 `mock`（模拟数据）。为此，运行以下命令来创建 `mock` 服务并为路由提供 REST API：
 
-`ember generate mock`
+```bash
+ember generate mock
+```
 
 然后我们用以下代码填充生成的文件（我将不会详细解释发生什么；它与我们用于用户的代码本质相同）：
 
@@ -772,9 +786,6 @@ module.exports = function(app) {
     res.send({
 ```
 
-
-
-
 ```javascript
 {
   'notebooks': {
@@ -790,13 +801,13 @@ app.use('/api/notebooks', notebooksRouter);
 };
 ```
 
-我们还需要定义模型类。运行此命令来为 notebook 类型定义一个模型类：
+我们还需要定义模型类。运行此命令来为 `notebook` 类型定义一个模型类：
 
 ```bash
 $ ember generate model notebook
 ```
 
-关于模型的后续后续会有更多内容。现在，请将以下代码添加到你的 `notebook.js` 文件（ch2/ember-note/app/models/notebook.js）中：
+关于模型的后续后续会有更多内容。现在，请将以下代码添加到你的 `notebook.js` 文件（`ch2/ember-note/app/models/notebook.js`）中：
 
 ```javascript
 import DS from 'ember-data';
@@ -808,13 +819,15 @@ export default DS.Model.extend({
 });
 ```
 
-我们还将为 note 对象定义 mock 服务（模拟服务）和模型，notebook 正依赖于它。运行以下命令：
+我们还将为 `note` 对象定义 `mock` 服务（模拟服务）和模型，`notebook` 正依赖于它。运行以下命令：
 
 ```bash
 $ ember generate http-mock notes
 ```
 
-并使用此代码更新生成的服务（ch2/ember-note/server/mocks/notes.js）：
+并使用此代码更新生成的服务（`ch2/ember-note/server/mocks/notes.js`）：
+
+
 
 ```javascript
 module.exports = function(app) {
@@ -889,7 +902,7 @@ module.exports = function(app) {
 $ ember generate note
 ```
 
-并按如下定义模型（ch2/ember-note/app/models/note.js）：
+并按如下定义模型（`ch2/ember-note/app/models/note.js`）：
 
 ```javascript
 import DS from 'ember-data';
@@ -901,7 +914,7 @@ export default DS.Model.extend({
 });
 ```
 
-如果你现在对模型有任何疑问，不要担心。我们将在第 5 章“数据建模”中讨论这些内容。随着 notebooks Web 服务的启动，我们准备好为 notebooks 路由创建模板了。正如你所学的，模板用于渲染路由的用户界面。在这种情况下，我们想要创建一个允许用户执行两件事的界面：(1) 创建一个新的 notebook，以及 (2) 显示现有 notebook 的列表。这里是你需要创建模板（ch2/ember-note/app/notebooks/template.hbs）：
+如果你现在对模型有任何疑问，不要担心。我们将在第 5 章“数据建模”中讨论这些内容。随着 notebooks Web 服务的启动，我们准备好为 notebooks 路由创建模板了。正如你所学的，模板用于渲染路由的用户界面。在这种情况下，我们想要创建一个允许用户执行两件事的界面：(1) 创建一个新的 notebook，以及 (2) 显示现有 notebook 的列表。这里是你需要创建模板（`ch2/ember-note/app/notebooks/template.hbs`）：
 
 ```handlebars
 <div>
@@ -929,11 +942,11 @@ export default DS.Model.extend({
 </div>
 ```
 
-我现在暂时不会在模板代码上花费过多时间——我们将在下一章中进行更详细的讨论。我希望你注意的是，我们直接在模板中引用了模型。正如我在在本章开头提到的，在没有直接创建控制器类的情况下，我们可以依赖基础 `Ember.Controller` 类的默认功能。该类有一个 `model` 变量，默认情况下，它会调用路由的 `model` 钩子来填充该变量。
+我现在暂时不会在模板代码上花费过多时间——我们将在下一章中进行更详细的讨论。我希望你注意的是，我们直接在模板中引用了模型。正如我在本章开头提到的，在没有直接创建控制器类的情况下，我们可以依赖基础 `Ember.Controller` 类的默认功能。该类有一个 `model` 变量，默认情况下，它会调用路由的 `model` 钩子来填充该变量。
 
 对于 notebooks 路由，Ember Data 查询返回零或多个行。在 `template.hbs` 文件中，引用的 `model` 是默认控制器包含的变量。为了获取变量中的数据，我们正在使用 `{{#each}}` 表达式，它遍历模型实例列表。控制器中的 `model` 变量可以包含单个模型实例或模型实例的数组。
 
-我们的模板在无序列表中显示 notebooks 的标题。我们稍后会深入探讨模板和表达式细节。现在，你的列表可能是空的。让我们看看如何使用 action 添加列表并刷新模板以显示它们。将此代码添加到 notebooks 路由的 actions 哈希函数中（ch2/ember-note/app/notebooks/route.js）：
+我们的模板在无序列表中显示 notebooks 的标题。我们稍后会深入探讨模板和表达式细节。现在，你的列表可能是空的。让我们看看如何使用 action 添加列表并刷新模板以显示它们。将此代码添加到 notebooks 路由的 actions 哈希函数中（`ch2/ember-note/app/notebooks/route.js`）：
 
 ```javascript
 addNotebook: function() {
@@ -950,9 +963,6 @@ addNotebook: function() {
   });
 }
 ```
-
-
-
 
 在本节中，我们重点关注 `Route` 实现中与数据显示相关的部分。我们也涉及了其他一些概念，例如模板和模型，我们将在书的后部分进行更详细的介绍。如果你现在还没有完全理解这些，请不要担心，还有很多内容需要讨论。我希望你理解的是如何使用路径段（path segments）、模型钩子（model hook）以及相关的 `transitionTo` 等导航函数来处理数据。本章的其余部分将主要关注路由之间的导航，以及在应用程序中创建路由层级。我们将从这里开始，添加第一个作为我们已创建路由之子的路由：笔记路由（note route）。
 
@@ -1038,15 +1048,11 @@ export default Ember.Route.extend({
 </div>
 ```
 
-
-
-
 `render` 函数适用于以下场景：当你可能想要更改位于当前路由层级之外某处的出口（outlet）中显示的模板时。能够具体地命名模板和位置允许你实现高层级的导航控制，即使在当前路由并不总是需要关注的区域也是如此。
 
 ## 下一步
 
 正如章节开头提到的，路由模式（route pattern）是 Ember 的一个核心特性。它为你提供了一种方法，可以清晰地理解应用程序是如何组装的，并帮助你理解如何从一个应用功能移动到另一个功能。我们已经看到了使用 Ember 路由可以获得的一些功能。还有很多其他功能，但我们首先有许多其他内容需要涵盖。我们的下一站是路由的一个紧密兄弟。正如你所学到的，每个路由恰好对应一个模板（template），Ember 使用它来渲染给定路由的用户界面。在下一章中，我们将查看模板功能以及 Handlebars 和 HTMLBars 表达式语言。
-
 
 # 第 3 章：布局用户界面
 
@@ -1062,33 +1068,28 @@ export default Ember.Route.extend({
 
 在 Ember 中，当使用 Ember CLI 时，该页面被称为 `index.html`。我们在第 1 章看过它，但让我们再次看一眼 EmberNote 的 `index.html`：
 
-| `[ch3/ember-note/app/index.html`](http://media.pragprog.com/titles/mwjsember/code/ch3/ember-note/app/index.html)` |
-| :--- | :--- |
-| | `<!DOCTYPE html>` |
-| | `<html>` |
-| | `<head>` |
-| | `<meta charset="utf-8">` |
-| | `<meta http-equiv="X-UA-Compatible" content="IE=edge">` |
-| | `<title>EmberNote</title>` |
-| | `<meta name="description" content="">` |
-| | `<meta name="viewport" content="width=device-width, initial-scale=1">` |
-| | |
-| | `{{content-for 'head'}}` |
-| | |
-| | `<link rel="stylesheet" href="assets/vendor.css">` |
-| | `<link rel="stylesheet" href="assets/ember-note.css">` |
-| | |
-| | `{{content-for 'head-footer'}}` |
-| | `</head>` |
-| | `<body>` |
-| | `{{content-for 'body'}}` |
-| | |
-| | `<script src="assets/vendor.js"></script>` |
-| | `<script src="assets/ember-note.js"></script>` |
-| | |
-| | `{{content-for 'body-footer'}}` |
-| | `</body>` |
-| | `</html>` |
+| `[ch3/ember-note/app/index.html](http://media.pragprog.com/titles/mwjsember/code/ch3/ember-note/app/index.html)` |
+| :--- |
+| `<!DOCTYPE html>` |
+| `<html>` |
+| `<head>` |
+| `<meta charset="utf-8">` |
+| `<meta http-equiv="X-UA-Compatible" content="IE=edge">` |
+| `<title>EmberNote</title>` |
+| `<meta name="description" content="">` |
+| `<meta name="viewport" content="width=device-width, initial-scale=1">` |
+| `{{content-for 'head'}}` |
+| `<link rel="stylesheet" href="assets/vendor.css">` |
+| `<link rel="stylesheet" href="assets/ember-note.css">` |
+| `{{content-for 'head-footer'}}` |
+| `</head>` |
+| `<body>` |
+| `{{content-for 'body'}}` |
+| `<script src="assets/vendor.js"></script>` |
+| `<script src="assets/ember-note.js"></script>` |
+| `{{content-for 'body-footer'}}` |
+| `</body>` |
+| `</html>` |
 
 该文件是由 Ember CLI 构建的，除了我们对标题的修改外，它与我们创建新应用时 Ember CLI 生成的完全一样。你可能会注意到此文件中没有对任何模板的引用。`{{content-for}}` 钩子是为了 Ember CLI 插件准备的，但我们没有使用它们。那么，我们的应用是如何开始渲染的呢？
 
@@ -1096,111 +1097,127 @@ export default Ember.Route.extend({
 
 位于根部的第一个模板是应用模板，显示在这里：
 
-| `[ch3/ember-note/app/index.html`](http://media.pragprog.com/titles/mwjsember/code/ch3/ember-note/app/index.html)` |
+
+
+# `ch3/ember-note/app/index.html`
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EmberNote</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for 'head'}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ember-note.css">
+
+    {{content-for 'head-footer'}}
+  </head>
+  <body>
+    {{content-for 'body'}}
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ember-note.js"></script>
+
+    {{content-for 'body-footer'}}
+  </body>
+</html>
+```
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      {{outlet}}
+    </div>
+    <div class="col-md-10">
+      {{#if user}}
+        Hello, {{user.name}}
+      {{/if}}
+      {{#unless user}}
+        {{link-to 'register'}}register{{link-to}}
+        {{link-to 'login'}}login{{link-to}}
+      {{/unless}}
+    </div>
+  </div>
+</div>
+```
+
+## Handlebars
+
+| 信息 | 说明 |
 | :--- | :--- |
-| | `<!DOCTYPE html>` |
-| | `<html>` |
-| | `<head>` |
-| | `<meta charset="utf-8">` |
-| | `<meta http-equiv="X-UA-Compatible" content="IE=edge">` |
-| | `<title>EmberNote</title>` |
-| | `<meta name="description" content="">` |
-| | `<meta name="viewport" content="width=device-width, initial-scale=1">` |
-| | |
-| | `{{content-for 'head'}}` |
-| | |
-| | `<link rel="stylesheet" href="assets/vendor.css">` |
-| | `<link rel="stylesheet" href="assets/ember-note.css">` |
-| | |
-| | `{{content-for 'head-footer'}}` |
-| | `</head>` |
-| | `<body>` |
-| | `{{content-for 'body'}}` |
-| | |
-| | `<script src="assets/vendor.js"></script>` |
-| | `<script src="assets/ember-note.js"></script>` |
-| | |
-| | `{{content-for 'body-footer'}}` |
-| | `</body>` |
-| | `</html>` |
-
-| | `<div class="container">` |
-| | `<div class="row">` |
-| | `<div class="col-md-2">` |
-| | `{{outlet}}` |
-| | `<div class="col-md-10">` |
-| | `{{#if user}}` |
-| | `Hello, {{user.name}}` |
-| | `{{/if}}` |
-| | `{{#unless user}}` |
-| | `{{link-to 'register'}}register{{link-to}}` |
-| | `{{link-to 'login'}}login{{link-to}}` |
-| | `{{/unless}}` |
-| | `</div>` |
-| | `</div>` |
-| | `</div>` |
-
-| Handlebars |
-| :--- |
-| ![images/aside-icons/info.png](img/info.png) | Handlebars 是 Ember 的一部分，你可能会经常使用它，尽管它集成得让你可能没有意识到。Ember 使用 Handlebars 的变体，通过名为 `ember-cli-handlebars` 的插件提供给你的应用。Handlebars 实际上有两个东西：首先，它是一个基于 JavaScript 的模板框架；其次，它是一种表达式语言，如模板框架中所编码的。通过使用本章讨论的任何组件，你都会学习关于 Handlebars 的大部分知识，但如果你是那种好奇的人，可以通过访问 [`handlebarsjs.com`](http://handlebarsjs.com) 和 [`github.com/tildeio/htmlbars`](https://github.com/tildeio/htmlbars) 来了解更多。 |
-
-
-
-
+| ![images/aside-icons/info.png](img/info.png) | Handlebars 是 Ember 的一部分，你可能会经常使用它，尽管它集成得让你可能没有意识到。Ember 使用 Handlebars 的变体，通过名为`ember-cli-handlebars`的插件提供给你的应用。Handlebars 实际上有两个东西：首先，它是一个基于 JavaScript 的模板框架；其次，它是一种表达式语言，如模板框架中所编码的。通过使用本章讨论的任何组件，你都会学习关于 Handlebars 的大部分知识，但如果你是那种好奇的人，可以通过访问[`handlebarsjs.com`](http://handlebarsjs.com)和[`github.com/tildeio/htmlbars`](https://github.com/tildeio/htmlbars)来了解更多。 |
 
 每个用户界面都由不同的控件组组成，例如菜单、表格或表单，这些组可以自然地划分为模板（或我们接下来将看到的组件）。在开发 Ember 程序时，一个良好的设计步骤是查看你计划中的用户界面，并在相关的控件组周围画出边界。一旦你定义了可以用一个数据模型表示的控件组，你就拥有了一个模板！让我们来看看具体是如何创建模板的。
 
 ## 创建模板
 
-当你在使用 `Ember CLI` 创建一个路由（route）时，系统会为你创建一个模板，供你在该路由内使用。如果你使用了 `--pod` 标记，新路由的模板将位于该路由的目录下，并命名为 `template.hbs`。否则，它位于 `templates` 目录，并命名为 `myroute.hbs`，其中“myroute”是你定义的路由名称。决定何时使用 `--pod` 标记主要出于对项目组织结构的考量，你应该根据符合自己逻辑的方式做决定。我更倾向于将相关的模板和路由放在同一个目录下，因此我选择使用 `--pod` 标记。
+当你在使用`Ember CLI`创建一个路由（route）时，系统会为你创建一个模板，供你在该路由内使用。如果你使用了`--pod`标记，新路由的模板将位于该路由的目录下，并命名为`template.hbs`。否则，它位于`templates`目录，并命名为`myroute.hbs`，其中“myroute”是你定义的路由名称。决定何时使用`--pod`标记主要出于对项目组织结构的考量，你应该根据符合自己逻辑的方式做决定。我更倾向于将相关的模板和路由放在同一个目录下，因此我选择使用`--pod`标记。
 
-当 `Ember CLI` 以这种方式创建新模板时，它在模板中添加的唯一内容是用于子路由的 `{{outlet}}` 表达式。剩下的部分由你来添加！让我们来看另一个更有趣的模板：笔记本（notebooks）模板：
+当`Ember CLI`以这种方式创建新模板时，它在模板中添加的唯一内容是用于子路由的`{{outlet}}`表达式。剩下的部分由你来添加！让我们来看另一个更有趣的模板：笔记本（notebooks）模板：
 
-| [ch3/ember-note/app/notebooks/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch3/ember-note/app/notebooks/template.hbs) |
-| ​  | |<div></div> |
-| ​  | |<div class="col-md-3"></div> |
-| ​  | |<div>Notebooks</div></div> |
-| ​  | |<div> |
-| ​  | |title: {{input value=title}} |
-| ​  | |<button {{action 'addNotebook'}}>Add</button> |
-| ​  | |</div></div> |
-| ​  | |<div></div> |
-| ​  | |<<ul>> |
-| ​  | |{{#each model as |notebook|}} |
-| ​  | |{{#link-to 'notebooks.notes' notebook.id}} |
-| ​  | |<li>{{notebook.title}}</li> |
-| ​  | |{{/link-to}} |
-| ​  | |{{else}} |
-| ​  | |<div>No notebooks found</div> |
-| ​  | |{{/each}} |
-| ​  | |</ul></div> |
-| ​  | |</div></div> |
-| ​  | |</div> |
-| ​  | |<div class="col-md-9"></div> |
-| ​  | |{{outlet}} |
-| ​  | |</div></div> |
-| ​  | |</div> |
+`ch3/ember-note/app/notebooks/template.hbs`
+
+```html
+<div>
+  <div class="col-md-3">
+    <div>Notebooks</div>
+  </div>
+  <div>
+    <div>
+      title: {{input value=title}}
+      <button {{action 'addNotebook'}}>Add</button>
+    </div>
+  </div>
+  <div>
+    <div>
+      <ul>
+        {{#each model as |notebook|}}
+          {{#link-to 'notebooks.notes' notebook.id}}
+            <li>{{notebook.title}}</li>
+          {{/link-to}}
+        {{else}}
+          <div>No notebooks found</div>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
+```
 
 在模板中，你会看到 HTML 和 Handlebars 表达式（即任何双大括号内的内容）的混合体。这段特定的代码包含了一些用于结构的 HTML 标签，但最有趣的是 Handlebars 表达式。现在让我们来看一个非常重要的表达式。
 
 ## 将模板关联在一起
 
-该模板中的一个 Handlebars 表达式是 `{{#each}}`。它代表了一个基础的循环结构。回想一下，每个模板都仅绑定到一个路由和一个控制器（controller）。路由的作用之一是为其关联的模板提供数据。这里路由为笔记本模板提供了一个从零到多个笔记本对象的列表。`{{#each}}` 表达式会对每个笔记本对象进行求值。如果路由提供了一个空列表，表达式的 `{{else}}` 部分将被执行，页面将向用户显示“No notebooks found”。
+该模板中的一个 Handlebars 表达式是`{{#each}}`。它代表了一个基础的循环结构。回想一下，每个模板都仅绑定到一个路由和一个控制器（controller）。路由的作用之一是为其关联的模板提供数据。这里路由为笔记本模板提供了一个从零到多个笔记本对象的列表。`{{#each}}`表达式会对每个笔记本对象进行求值。如果路由提供了一个空列表，表达式的`{{else}}`部分将被执行，页面将向用户显示“No notebooks found”。
 
 随后，列表中的每个笔记本对象都会执行以下代码块：
 
-| ​  | |<div> |
-| ​  | |{{#link-to 'notebooks.notes' notebook.id}} |
-| ​  | |{{notebook.title}}{{/link-to}} |
-| ​  | |</div> |
+```html
+<div>
+  {{#link-to 'notebooks.notes' notebook.id}}
+    {{notebook.title}}{{/link-to}}
+</div>
+```
 
-这是一个 `{{link-to}}` 表达式。在运行时，这个 `{{#link-to}}` 代码段会被求值为大致如下 HTML：
+这是一个`{{link-to}}`表达式。在运行时，这个`{{#link-to}}`代码段会被求值为大致如下 HTML：
 
-| ​  | |<a id="ember100" class="ember-view" href="notebooks/10/notes/1">Notebook</a> |
+```html
+<a id="ember100" class="ember-view" href="notebooks/10/notes/1">Notebook</a>
+```
 
-让我们拆解这个链接。`{{#link-to}}` 表达式会生成一个路由，包括每个必要的路径段。在这种情况下，我们已经处于 notebooks 路由，并且已经为一个 id 值为“10”的用户加载了它。我们正尝试从那里导航到 notes 子路由，并带上 id 为“1”的笔记本。
+让我们拆解这个链接。`{{#link-to}}`表达式会生成一个路由，包括每个必要的路径段。在这种情况下，我们已经处于 notebooks 路由，并且已经为一个 id 值为“10”的用户加载了它。我们正尝试从那里导航到 notes 子路由，并带上 id 为“1”的笔记本。
 
-虽然这段 HTML 有趣，但最重要的是 Ember 如何使用这个链接。当你点击链接时，Ember 会将当前 URL 更新为 `http://localhost:4200/notebooks/1/notes/1`（数字可能会略有不同，但其他段落应该是相同的）。Ember 将笔记本的模板渲染到应用程序模板中的 `{{outlet}}` 中，并将 notes 模板渲染到笔记本模板中的 `{{outlet}}` 中。然后你可以为 notes 路由添加子路由，依此类推。
+虽然这段 HTML 有趣，但最重要的是 Ember 如何使用这个链接。当你点击链接时，Ember 会将当前 URL 更新为`http://localhost:4200/notebooks/1/notes/1`（数字可能会略有不同，但其他段落应该是相同的）。Ember 将笔记本的模板渲染到应用程序模板中的`{{outlet}}`中，并将 notes 模板渲染到笔记本模板中的`{{outlet}}`中。然后你可以为 notes 路由添加子路由，依此类推。
 
 下面的图插说明了 URL 段与嵌套模板之间的关系。
 
@@ -1216,49 +1233,51 @@ URL 与应用中具体位置（包括已加载的数据）之间的关系是 Emb
 
 到为止，我们一直使用原生控件来演示 Ember 的模板系统。但 Handlebars 表达式语言和 Ember 的辅助类能够渲染丰富得的内容。在本节中，我们将介绍 Ember 中最常用的控件。我们将从如何显示静态数据开始，然后讨论条件判断和循环。最后我们将访问输入控件，并以链接结束。
 
-
-
-
-
 ## 使用循环和条件语句控制模板
 
-Ember 有多种不同的方法来控制模板中显示的内容。其中一种构造是 `{{if}}` 表达式。`{{if}}` 表达式根据提供的属性为真，还是为假、null、未定义（undefined）或空数组 `[]`，来渲染模板的一个区域（或不渲染）。哦，JavaScript 的特性。）
+Ember 有多种不同的方法来控制模板中显示的内容。其中一种构造是`{{if}}`表达式。`{{if}}`表达式根据提供的属性为真，还是为假、null、未定义（undefined）或空数组`[]`，来渲染模板的一个区域（或不渲染）。哦，JavaScript 的特性。）
 
-要使用 `{{if}}` 表达式，你需要像这样将你想要条件包含的代码块围起来：
+要使用`{{if}}`表达式，你需要像这样将你想要条件包含的代码块围起来：
 
-| ​  | {{#if condition}} |
-| ​  | <div>HELLO</div> |
-| ​  | {{else}} |
-| ​  | <div>never mind</div> |
-| ​  | {{/if}} |
+```handlebars
+{{#if condition}}
+  <div>HELLO</div>
+{{else}}
+  <div>never mind</div>
+{{/if}}
+```
 
-Ember 将这种表达式称为**块级表达式（block expression）**，因为一段模板代码被该表达式所包围。块级表达式需要一个开始标签和一个结束标签（例如 `{{#if}}` 和 `{{/if}}`）。在这种情况下，如果 `condition` 为真，将渲染“HELLO”；否则将渲染“never mind”。
+Ember 将这种表达式称为**块级表达式（block expression）**，因为一段模板代码被该表达式所包围。块级表达式需要一个开始标签和一个结束标签（例如`{{#if}}`和`{{/if}}`）。在这种情况下，如果`condition`为真，将渲染“HELLO”；否则将渲染“never mind”。
 
-Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}` 块中。如果你有两个、三个或四十七个需要链在一起的条件，你可以这样做：
+Ember 还允许你将条件链在一起，而不是将它们嵌套在`{{else}}`块中。如果你有两个、三个或四十七个需要链在一起的条件，你可以这样做：
 
-| ​  | {{#if condition}} |
-| ​  | <div>HELLO</div> |
-| ​  | {{else if condition2}} |
-| ​  | <div>never mind</div> |
-| ​  | {{else if condition3}} |
-| ​  | <div>WAT</div> |
-| ​  | {{else}} |
-| ​  | <div>go away</div> |
-| ​  | {{/if}} |
+```handlebars
+{{#if condition}}
+  <div>HELLO</div>
+{{else if condition2}}
+  <div>never mind</div>
+{{else if condition3}}
+  <div>WAT</div>
+{{else}}
+  <div>go away</div>
+{{/if}}
+```
 
-你也可以通过使用内联 if（inline if）来简化标准的 `{{if}}` 语法：
+你也可以通过使用内联 if（inline if）来简化标准的`{{if}}`语法：
 
 `{{if condition 'on' 'off'}}`
 
-内联条件的第二个第三三个参数可以包含属性或字符串，但仅此而已。`{{if}}` 表达式有一个兄弟表达式叫做 `{{unless}}`。当你只有一个执行结果需要渲染表达式的主体，且你不希望通过对条件进行“否定”（not）操作来让事情变得复杂时，请使用此表达式：
+内联条件的第二第三三个参数可以包含属性或字符串，但仅此而已。`{{if}}`表达式有一个兄弟表达式叫做`{{unless}}`。当你只有一个执行结果需要渲染表达式的主体，且你不希望通过对条件进行“否定”（not）操作来让事情变得复杂时，请使用此表达式：
 
-| ​  | {{unless hasChrome}} |
-| ​  | 运行此应用需要 Chrome 浏览器。 |
-| ​  | {{/unless}} |
+```handlebars
+{{#unless hasChrome}}
+  运行此应用需要 Chrome 浏览器。
+{{/unless}}
+```
 
-除非用户拥有 Chrome 浏览器，否则将显示仅限使用 Chrome 的警告。`hasChrome` 变量是由底层模型或路由属性提供的值，并不是 Ember 的标准部分。是的，你也可以使用 `{{if}}`，但这种表达式和属性的组合读起来更清晰一些。你会发现我们在 `application.hbs` 模板中使用了这些表达式。
+除非用户拥有 Chrome 浏览器，否则将显示仅限使用 Chrome 的警告。`hasChrome`变量是由底层模型或路由属性提供的值，并不是 Ember 的标准部分。是的，你也可以使用`{{if}}`，但这种表达式和属性的组合读起来更清晰一些。你会发现我们在`application.hbs`模板中使用了这些表达式。
 
-在本章早些时候，你已经看到过使用 `{{each}}` 遍历项目列表的代码，所以我不再重复它。我提醒你，`{{each}}` 要求你的控制器引用一个记录列表作为它的模型。
+在本章早些时候，你已经看到过使用`{{each}}`遍历项目列表的代码，所以我不再重复它。我提醒你，`{{each}}`要求你的控制器引用一个记录列表作为它的模型。
 
 ## 绑定输入字段
 
@@ -1268,28 +1287,32 @@ Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}`
 
 `ch3/ember-note/app/notebooks/template.hbs`
 
-| ​  | title: {{input value=title}} |
-| ​  | <button {{action 'addNotebook'}}>Add</button> |
+```handlebars
+title: {{input value=title}}
+<button {{action 'addNotebook'}}>Add</button>
+```
 
-像这样的极简 `{{input}}` 表达式会渲染以下 HTML：
+像这样的极简`{{input}}`表达式会渲染以下 HTML：
 
-`<input type="text" value="Notebook Title" />`
+```html
+<input type="text" value="Notebook Title" />
+```
 
 我们没有显式地为输入字段定义类型，但 Ember 默认将其设置为 "text"。另一个选项是显式设置，如下：
 
 `{{input type="text" value=title}}`
 
-这渲染等效的 HTML。如果你仔细观察，会发现 `type` 属性被设置为带引号的字符串，而 `value` 被设置为不带引号的字符串。这种区别非常重要。带引号的字符串将按照字面量在 HTML 中渲染；不带引号的字符串将渲染给定控制器属性的值。
+这渲染等效的 HTML。如果你仔细观察，会发现`type`属性被设置为带引号的字符串，而`value`被设置为不带引号的字符串。这种区别非常重要。带引号的字符串将按照字面量在 HTML 中渲染；不带引号的字符串将渲染给定控制器属性的值。
 
 输入输入字段还可以设置以下 HTML 属性：
 
 `accept`, `autocomplete`, `autofocus`, `autosave`, `disabled`, `form`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `inputmode`, `max`, `maxlength`, `min`, `multiple`, `name`, `pattern`, `placeholder`, `readonly`, `required`, `selectionDirection`, `size`, `spellcheck`, `step`, `tabindex`, `value`, `width`。
 
-除了 HTML 属性外，`{{input}}` 表达式支持事件处理器，或者在 Ember 中被称为**动作（actions）**。你可以这样从你的 `{{input}}` 表达式链接到动作：
+除了 HTML 属性外，`{{input}}`表达式支持事件处理器，或者在 Ember 中被称为**动作（actions）**。你可以这样从你的`{{input}}`表达式链接到动作：
 
 `{{input type="text" value=name action="execute"}}`
 
-在在上一个示例中，`value` 属性绑定到底层控制器的变量上。`value` 可能是绑定的也可能是未绑定的。如果设置为控制器属性，则不需要引号；否则它们将被设置为提供的任何值。可以绑定以下事件：
+在上一个示例中，`value`属性绑定到底层控制器的变量上。`value`可能是绑定的也可能是未绑定的。如果设置为控制器属性，则不需要引号；否则它们将被设置为提供的任何值。可以绑定以下事件：
 
 *   `enter`
 *   `escape-press`
@@ -1317,7 +1340,7 @@ Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}`
 *   `cut`
 *   `paste`
 
-等等，让我们重新关注 `{{input}}` 表达式。`{{input}}` 表达式还可以通过将 `type` 设置为 `checkbox` 来渲染复选框。与文本类型类似，它有很多可配置属性。总之，以下 HTML 属性可用于 `{{input}}` 表达式：
+等等，让我们重新关注`{{input}}`表达式。`{{input}}`表达式还可以通过将`type`设置为`checkbox`来渲染复选框。与文本类型类似，它有很多可配置属性。总之，以下 HTML 属性可用于`{{input}}`表达式：
 
 *   `autofocus`
 *   `checked`
@@ -1325,28 +1348,32 @@ Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}`
 *   `name`
 *   `tabindex`
 
-有时你想在一个字段中捕捉更多的文本。在这种情况下可以使用 `{{textarea}}` 表达式。`{{textarea}}` 的工作方式与 `{{input}}` 类似，值绑定到属性。
 
-`{{textarea value=property rows=5 cols=40}}`
 
-你看到我们设置了一些 HTML 属性：`rows` 和 `cols`。与一样，如果设置为控制器属性，它们将取值；否则它们将被设置为提供的任何值。总之，以下 HTML 属性可用于 `{{textarea}}` 表达式：
+有时你想在一个字段中捕捉更多的文本。在这种情况下可以使用`{{textarea}}`表达式。`{{textarea}}`的工作方式与`{{input}}`类似，值绑定到属性。
 
-*   `autofocus`
-*   `cols`
-*   `disabled`
-*   `form`
-*   `maxlength`
-*   `name`
-*   `placeholder`
-*   `readonly`
-*   `required`
-*   `rows`
-*   `selectionDirection`
-*   `selectionEnd`
-*   `selectionStart`
-*   `spellcheck`
-*   `value`
-*   `wrap`
+```handlebars
+{{textarea value=property rows=5 cols=40}}
+```
+
+你看到我们设置了一些 HTML 属性：`rows` 和 `cols`。与`{{input}}`一样，如果设置为控制器属性，它们将取值；否则它们将被设置为提供的任何值。总之，以下 HTML 属性可用于`{{textarea}}`表达式：
+
+- `autofocus`
+- `cols`
+- `disabled`
+- `form`
+- `maxlength`
+- `name`
+- `placeholder`
+- `readonly`
+- `required`
+- `rows`
+- `selectionDirection`
+- `selectionEnd`
+- `selectionStart`
+- `spellcheck`
+- `value`
+- `wrap`
 
 这些是将属性链接到用户界面的三种最基本的方法。你可能认为这有局限性，如果这是 Ember 中创建复用控件的唯一方法，确实如此。然而还有另一种方法，我们将在下一章节看到。
 
@@ -1354,19 +1381,15 @@ Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}`
 
 你的用户界面需要做两件事：显示数据和响应用户输入。我们已经看了第一个；现在开始第二个。
 
-你的路由（Route）与你的模板有一一对应的关系，它有一组供模板使用的函数，称为动作（actions）。正如你预期的那样，Ember 有一种表达式可以将 HTML 元素动作与路由链接：`{{action}}` 表达式。
+你的路由（Route）与你的模板有一一对应的关系，它有一组供模板使用的函数，称为动作（actions）。正如你预期的那样，Ember 有一种表达式可以将 HTML 元素动作与路由链接：`{{action}}`表达式。
 
-
-
-
-
-首先，我们添加了一个输入字段，这样 `{{action}}` 就就有内容可以处理了。在路由中，操作处理器（action handler）会获取该值并向服务器检查以判断用户是否有效。`{{action}}` 表达式绑定到我们添加的下一个控件上：一个显示“登录（Login）”文本的 HTML 按钮。通过这种用方式，`{{action}}` 表达式将路由中的登录操作绑定到按钮的 `onclick` 事件上。`onclick` 事件是按钮的默认事件，这就是为什么 `{{action}}` 表达式被绑定到该事件的原因。当按钮被点击时，登录操作就会触发。
+首先，我们添加了一个输入字段，这样`{{action}}`就有内容可以处理了。在路由中，操作处理器（action handler）会获取该值并向服务器检查以判断用户是否有效。`{{action}}`表达式绑定到我们添加的下一个控件上：一个显示“登录（Login）”文本的 HTML 按钮。通过这种方式，`{{action}}`表达式将路由中的登录操作绑定到按钮的`onclick`事件上。`onclick`事件是按钮的默认事件，这就是为什么`{{action}}`表达式被绑定到该事件的原因。当按钮被点击时，登录操作就会触发。
 
 我们在上一章节中已经学习了许多关于操作的内容，所以这对你来说可能是一次复习。现在让我们来看看如何编译模板。
 
 ## 编译模板
 
-当你在 `template.hbs` 文件中创建模板时，你添加的 HTML 和表达式语言不会直接构建成字符串。从 Ember 1.10 版本开始，使用了一种名为 HTMLBars 的新模板编译器来渲染你的模板。通过这个编译器，在应用程序生成的 `ember-note.js` 文件中会创建一个虚拟 DOM（virtual DOM）。只要你使用 Ember CLI 来构建应用程序，这些细节就会对你抽象化。
+当你在`template.hbs`文件中创建模板时，你添加的 HTML 和表达式语言不会直接构建成字符串。从 Ember 1.10 版本开始，使用了一种名为 HTMLBars 的新模板编译器来渲染你的模板。通过这个编译器，在应用程序生成的`ember-note.js`文件中会创建一个虚拟 DOM（virtual DOM）。只要你使用 Ember CLI 来构建应用程序，这些细节就会对你抽象化。
 
 这种形式的编译对于两个原因很重要。首先，虚拟 DOM 的生成和更新比基于字符串的模板更快，因为虚拟 DOM 可以在单个节点层面（例如页面上的某个控件）进行处理，而当控件值变化时不需要重新生成整个模板。
 
@@ -1378,18 +1401,19 @@ Ember 还允许你将条件链在一起，而不是将它们嵌套在 `{{else}}`
 
 Ember CLI Datepicker 是一个插件，可以使用最少的逻辑为你的 Web 应用添加一个 Bootstrap 风格的日期选择器控件。你可以通过添加单个表达式将此控件添加到页面中，例如：
 
-| | `{{bootstrap-datepicker placeholder="Choose a date"}}` |
+```handlebars
+{{bootstrap-datepicker placeholder="Choose a date"}}
+```
 
 这会在你的应用中插入一个文本字段，点击时会弹出一个日期选择器。选择日期会将你的选择添加到文本字段中，允许你的用户快速输入日期。
 
-Ember CLI Datepicker 只是你可以用来快速向应用中添加控件的几个类似插件中的一个。网站 [`emberobserver.com`](http://emberobserver.com) 是寻找除此单例示例之外其他类似插件的绝佳起点。我们将在整书中继续看到特定的插件，并在第 9 章 构建和使用 Ember 插件 中讨论如何创建你自己的插件。
+Ember CLI Datepicker 只是你可以用来快速向应用中添加控件的几个类似插件中的一个。网站[`emberobserver.com`](http://emberobserver.com)是寻找除此单例示例之外其他类似插件的绝佳起点。我们将在整书中继续看到特定的插件，并在第 9 章“构建和使用 Ember 插件”中讨论如何创建你自己的插件。
 
-Ember CLI Datepicker 的完整文档可以在 [`github.com/soulim/ember-cli-bootstrap-datepicker`](https://github.com/soulim/ember-cli-bootstrap-datepicker) 获取，并附有如何使用该插件的演示链接。
+Ember CLI Datepicker 的完整文档可以在[`github.com/soulim/ember-cli-bootstrap-datepicker`](https://github.com/soulim/ember-cli-bootstrap-datepicker)获取，并附有如何使用该插件的演示链接。
 
 ## 下一步
 
 你现在应该很好地掌握了使用 Ember 和 Handlebars 表达式语言构建用户界面的流程。我们看到了模板之间是如何相互相关的，并且讨论了模板与路由之间紧密的关系，以及如何利用这种关系来渲染控件。在下一章中，我们将看看如何利用这些概念创建我们自己的可复用控件，在 Ember 的术语中被称为组件（components）。
-
 
 # 第 4 章：使用组件构建复用
 
@@ -1405,9 +1429,9 @@ Ember CLI Datepicker 的完整文档可以在 [`github.com/soulim/ember-cli-boot
 
 ## 创建组件
 
-由于组件使用模板来定义 UI 但被添加到容器模板中，组件与模板之间的关系可能有点复杂。将 `{{input}}` 想象成例子会有帮助。它是一个可以在通用模板中独立控件。你定义的组件以相同的方式工作。
+由于组件使用模板来定义 UI 但被添加到容器模板中，组件与模板之间的关系可能有点复杂。将`{{input}}`想象成例子会有帮助。它是一个可以在通用模板中独立控件。你定义的组件以相同的方式工作。
 
-在创建组件之前，我们需要一个存放它的地方。我们将创建一个新路由并在路由中引用我们的新组件。由于我们一次只编辑一个笔记，该路由最合理的位置是作为 `notebooks` 路由的子。
+在创建组件之前，我们需要一个存放它的地方。我们将创建一个新路由并在路由中引用我们的新组件。由于我们一次只编辑一个笔记，该路由最合理的位置是作为`notebooks`路由的子。
 
 从命令行运行以下 Ember CLI 命令：
 
@@ -1417,7 +1441,7 @@ ember generate route notebooks/note --pod
 
 这为新路由创建了一个空存根。我们稍后会填充这个新类。首先，我们需要修改路由实现和 notes 模板，以便能够导航到我们的新路由。
 
-当你创建新路由时，Ember CLI 修改了 Router 类将该路由位于适当的位置。由于我们要查询 Ember Data 获取笔记记录，我们需要为路由添加参数，将此笔记的 ID 传递给子路由。打开 `router.js` 并将其更新为：
+当你创建新路由时，Ember CLI 修改了 Router 类将该路由位于适当的位置。由于我们要查询 Ember Data 获取笔记记录，我们需要为路由添加参数，将此笔记的 ID 传递给子路由。打开`router.js`并将其更新为：
 
 ```javascript
 import Ember from 'ember';
@@ -1440,12 +1464,9 @@ Router.map(function() {
 export default Router;
 ```
 
+你可能记得，我们在调用`this.route`时使用了`path`属性为路由提供数据。路由可以以它需要的方式使用`path`属性中的数据。我们需要传递当前笔记的 ID。让我们稍微修改笔记模板，将此 ID 传递给路由：
 
-
-
-你可能记得，我们在调用 `this.route` 时使用了 `path` 属性为路由提供数据。路由可以以它需要的方式使用 `path` 属性中的数据。我们需要传递当前笔记的 ID。让我们稍微修改笔记模板，将此 ID 传递给路由：
-
-| [ch4/ember-note/app/notebooks/notes/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/template.hbs) |
+[ch4/ember-note/app/notebooks/notes/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/template.hbs)
 
 ```handlebars
 <div class="col-md-12">
@@ -1477,13 +1498,13 @@ export default Router;
 </div>
 ```
 
-这使得笔记页面从静态的标题列表变成了可点击的链接列表。在 `{{link-to}}` 表达式中添加 `note.id` 值，会使该值在导航到新路由时被添加到 URL 中。这允许我们把相关的笔记记录加载到子路由中。
+这使得笔记页面从静态的标题列表变成了可点击的链接列表。在`{{link-to}}`表达式中添加`note.id`值，会使该值在导航到新路由时被添加到 URL 中。这允许我们把相关的笔记记录加载到子路由中。
 
-在我们新的路由中，我们想要使用 Ember Data 加载相关记录，并提供一个允许我们在不保存的情况下关闭路由的 action。我们很快就会看到如何利用这些新增的内容。`model` 钩子查询笔记记录，而 `close` action 通过跳转到笔记路由来离开当前路由。
+在我们新的路由中，我们想要使用 Ember Data 加载相关记录，并提供一个允许我们在不保存的情况下关闭路由的 action。我们很快就会看到如何利用这些新增的内容。`model`钩子查询笔记记录，而`close` action 通过跳转到笔记路由来离开当前路由。
 
 以下是我们的实现：
 
-| [ch4/ember-note/app/notebooks/notes/note/route.js](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/note/route.js) |
+[ch4/ember-note/app/notebooks/notes/note/route.js](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/note/route.js)
 
 ```javascript
 import Ember from 'ember';
@@ -1503,17 +1524,17 @@ export default Ember.Route.extend({
 
 我们现在准备好开始编写组件了。
 
-一个 Ember 组件由两个文件定义。第一个是 Handlebars 模板，用于定义组件的用户界面。第二个是扩展自 `Ember.Component` 的 JavaScript 类。它用于定义模板需要执行的任何动作处理代码。
+一个 Ember 组件由两个文件定义。第一个是 Handlebars 模板，用于定义组件的用户界面。第二个是扩展自`Ember.Component`的 JavaScript 类。它用于定义模板需要执行的任何动作处理代码。
 
-我们将其称为 `edit-note` 组件。与 Ember 的其他地方一样，命名约定在这里非常重要。组件名称中的连字符是 Ember 识别其为组件的方式。要使用 Ember CLI 创建必要的文件，请在命令行提示符运行以下命令：
+我们将其称为`edit-note`组件。与 Ember 的其他地方一样，命名约定在这里非常重要。组件名称中的连字符是 Ember 识别其为组件的方式。要使用 Ember CLI 创建必要的文件，请在命令行提示符运行以下命令：
 
 ```bash
-$ ember generate component edit-note --pod
+ember generate component edit-note --pod
 ```
 
-我们再次使用了命令的 `--pod` 形式，因为它为我们提供了一个整洁的项目结构。该命令创建了一个目录和两个文件。目录以组件命名，并位于以下位置：`ember-note/app/components/edit-note`。这为我们提供了一个查找组件定义的单一位置。
+我们再次使用了命令的`--pod`形式，因为它为我们提供了一个整洁的项目结构。该命令创建了一个目录和两个文件。目录以组件命名，并位于以下位置：`ember-note/app/components/edit-note`。这为我们提供了一个查找组件定义的单一位置。
 
-在 `edit-note` 目录中还创建了两个文件：`template.hbs` 和 `component.js`。第一个用于存放我们的 Handlebars 模板，第二个用于我们的组件逻辑。
+在`edit-note`目录中还创建了两个文件：`template.hbs`和`component.js`。第一个用于存放我们的 Handlebars 模板，第二个用于我们的组件逻辑。
 
 我们现在有了几个准备存根文件来包含我们的组件。由于我们想将记录传递给组件，让我们来看看如何提供数据。
 
@@ -1521,23 +1542,23 @@ $ ember generate component edit-note --pod
 
 组件和模板之间的一个重要区别是，组件没有它自己的模型。它依赖于调用它的模板提供模型。只要传递给它的记录存在，组件就能工作。
 
-当我们创建路由时，Ember 不仅创建了一个 `route.js` 文件，还创建了一个 `template.hbs`。使用 `--pod` 形式会得到整洁的结构。因此，在新创建的模板中：
+当我们创建路由时，Ember 不仅创建了一个`route.js`文件，还创建了一个`template.hbs`。使用`--pod`形式会得到整洁的结构。因此，在新创建的模板中：
 
-| [ch4/ember-note/app/notebooks/notes/note/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/note/template.hbs) |
+[ch4/ember-note/app/notebooks/notes/note/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/notebooks/notes/note/template.hbs)
 
 ```handlebars
 {{edit-note note=model close="close"}}
 ```
 
-`note=model` 赋值设置了 `note` 属性。在这种情况下，我们希望组件能够保存记录。如果不是这样，我们可以只传递想要的值，而不是整个记录。
+`note=model`赋值设置了`note`属性。在这种情况下，我们希望组件能够保存记录。如果不是这样，我们可以只传递想要的值，而不是整个记录。
 
 ## 定义用户界面
 
 构建组件用户界面的过程对你来说应该是熟悉的。在大多数情况下，你构建组件时使用的表达式与构建模板时使用的表达式组相同。界面使用 Handlebars 和 HTML 组成，并且可以访问调用模板中通过组件初始化定义的任何属性。
 
-例如，让我们来看下 `edit-note` 的界面：
+例如，让我们来看下`edit-note`的界面：
 
-| [ch4/ember-note/app/components/edit-note/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/components/edit-note/template.hbs) |
+[ch4/ember-note/app/components/edit-note/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch4/ember-note/app/components/edit-note/template.hbs)
 
 ```handlebars
 <div>
@@ -1556,19 +1577,19 @@ $ ember generate component edit-note --pod
 </div>
 ```
 
-这个模板与关联路由的模板相比没什么不同。我们正在访问 `note` 属性，该属性是在我们将此组件添加到笔记模板时设置的。我们使用相同的 Handlebars 表达式来显示数据：`{{input}}` 和 `{{textarea}}` 表达式。它们依赖传递给组件的笔记记录中的信息。
-
-
+这个模板与关联路由的模板相比没什么不同。我们正在访问`note`属性，该属性是在我们将此组件添加到笔记模板时设置的。我们使用相同的 Handlebars 表达式来显示数据：`{{input}}`和`{{textarea}}`表达式。它们依赖传递给组件的笔记记录中的信息。
 
 Ember 组件是一个非常棒的构意，团队在实现它们方面值得巨大的赞誉。截至本文，W3C 正在制定一项关于自定义元素（custom elements）的规范，这与 Ember 希望使用组件的方式非常相似。Ember 并没有等待 W3C 确定规范（这可能花费很长时间），而是直接推进了它们的实现。
 
 在 W3C 规范中，自定义元素是由开发者定义的、浏览器能够理解并渲染的 DOM 元素。它允许开发者为 DOM 元素定义用户界面和操作行为，就像组件实现一样。该规范一旦获得批准，最终将成为 HTML 语言的一部分，从而减少对自定义框架支持的需求。
 
-Ember 团队密切关注标准的制定过程，因此只要你保持更新 Ember 版本，就可以放心认为你的组件在规范发布后将符合规范。正在进行中的规范在 GitHub 上编写，你可以随时通过访问 [`w3c.github.io/webcomponents/spec/custom/`](https://w3c.github.io/webcomponents/spec/custom/) 来阅读它。如果你感兴趣，可以看一看！
+Ember 团队密切关注标准的制定过程，因此只要你保持更新 Ember 版本，就可以放心认为你的组件在规范发布后将符合规范。正在进行中的规范在 GitHub 上编写，你可以随时通过访问[`w3c.github.io/webcomponents/spec/custom/`](https://w3c.github.io/webcomponents/spec/custom/)来阅读它。如果你感兴趣，可以看一看！
 
-这里还演示了另外三个功能：操作处理、组件嵌套和 `{{yield}}` 标签。我们将在 处理操作 中查看操作处理。接下来我们处理另外两个。
+这里还演示了另外三个功能：操作处理、组件嵌套和`{{yield}}`标签。我们将在“处理操作”中查看操作处理。接下来我们处理另外两个。
 
 ## 组件嵌套
+
+
 
 使用 Ember 组件的强大之处很大源于可以将在应用程序中反复出现的 HTML 标签组合，并创建一个捕获该组合的可重用表达式。为了让该功能更加强大，Ember 组件是可以嵌套的。也就是说，你可以在一个组件内部调用另一个组件，它可以按照你预期的方式工作。
 
@@ -1654,9 +1675,6 @@ export default Ember.Component.extend({
 
 打开该文件，添加以下代码：
 
-
-
-
 ```javascript
 // ch4/ember-note/app/components/edit-note/component.js
 import Ember from 'ember';
@@ -1692,7 +1710,7 @@ action 函数实现可以访问任何传递给组件或在类级别注入到组�
 
 然而，如果你想让调用的路由/模板来定义实际行为，你可以使用发送 action（sent action）来实现。
 
-### 发送 action (Sending Actions)
+### 发送 action（Sending Actions）
 
 Ember 组件还提供了将组件模板链接到调用路由中的 action，或者路由层次结构更高处的 action 的能力。发送 action 就是这种能力。我们将在 `edit-note` 中定义一个。
 
@@ -1739,9 +1757,9 @@ export default Ember.Route.extend({
 });
 ```
 
-你看到了这里定义了 `close` action。在这种情况下，它定义了一个简单的过渡，关闭了 edit-note。
+你看到了这里定义了 `close` action。在这种情况下，它定义了一个简单的过渡，关闭了 `edit-note`。
 
-### 监听事件 (Listening for Events)
+### 监听事件（Listening for Events）
 
 使用 action 来响应事件是逻辑逻辑链接到组件的简单方法。以事件驱动的方式执行代码也是可能的。
 
@@ -1761,10 +1779,6 @@ export default Ember.Component.extend({
 
 这为你提供了另一种在组件中响应用户输入的方法。通过依赖视图，你可以访问各种事件，这些事件数量太多，无法在此处列出。
 
-
-
-
-
 Google 的 Material Design 规范（位于 [`www.google.com/design/spec/material-design/introduction.html`](http://www.google.com/design/spec/material-design/introduction.html)）是此类标准化设计之一，但你如何在 Ember 中使用这类原则呢？
 
 Ember CLI Materialize 插件是一个尝试回答该问题的项目。它既是针对 Materialize CSS 框架的 Ember CLI 封装，也是相关组件的库。通过在项目中包含 Ember CLI Materialize，你可以利用样式表和组件来启动你的应用程序设计，并根据需要进行扩展。
@@ -1777,9 +1791,8 @@ Ember CLI Materialize 的完整文档可以在 [`github.com/sgasser/ember-cli-ma
 
 ### 脚注（Footnotes）
 
-| [[7]](#f_0032.html_FNPTR-7) | [`github.com/gcollazo/ember-cli-showdown`](https://github.com/gcollazo/ember-cli-showdown)，感谢支持。 |
-
-| [[8]](#f_0033.html_FNPTR-8) | 查看 [`emberjs.com/api/classes/Ember.View.html#toc_event-names`](http://emberjs.com/api/classes/Ember.View.html#toc_event-names) 获取完整的事件列表。 |
+- [[7]]([#f_0032.html_FNPTR-7])：[`github.com/gcollazo/ember-cli-showdown`](https://github.com/gcollazo/ember-cli-showdown)，感谢支持。
+- [[8]]([#f_0033.html_FNPTR-8])：查看 [`emberjs.com/api/classes/Ember.View.html#toc_event-names`](http://emberjs.com/api/classes/Ember.View.html#toc_event-names) 获取完整的事件列表。
 
 Copyright © 2015, The Pragmatic Bookshelf.
 
@@ -1797,18 +1810,23 @@ Ember Data 将许多功能封装在一个小型库中。它为你的 Web 客户�
 
 ### 定义模型的字段（Defining a Model’s Fields）
 
-与我们创建的每个类一样，我们首先通过运行 Ember CLI 命令来获取类的存根版本以定义模型。在 *添加数据服务* 中，我们运行了以下命令来生成 User 模型类。
+与我们创建的每个类一样，我们首先通过运行 Ember CLI 命令来获取类的存根版本以定义模型。在“添加数据服务”中，我们运行了以下命令来生成 User 模型类。
 
-| | `$ ember generate model user` |
+```bash
+$ ember generate model user
+```
 
 该类的存根版本没有字段。我们将添加它们，使我们的类看起来像这样：
 
-| [`ch5/ember-note/app/models/user.js`](http://media.pragprog.com/titles/mwjsember/code/ch5/ember-note/app/models/user.js) |
-| | `import DS from 'ember-data';` |
-| | |
-| | `export default DS.Model.extend({` |
-| | `name: DS.attr('string')` |
-| | `});` |
+`ch5/ember-note/app/models/user.js`
+
+```javascript
+import DS from 'ember-data';
+
+export default DS.Model.extend({
+  name: DS.attr('string')
+});
+```
 
 使用 Ember Data，你的模型定义非常简单。你的模型有一组字段，你可以在类中以键值对的形式定义它们。键（key）是在你在模板内部引用数据的方式（即 `user.name`）。
 
@@ -1816,17 +1834,20 @@ Ember Data 将许多功能封装在一个小型库中。它为你的 Web 客户�
 
 或者，你可以给它一个类型，称为转换（Transform），Ember Data 将获取你的 API 提供的原始数据并尝试使其符合你提供的类型。这就是我们的 `user.js` 示例所做的。Ember Data 提供了四个可用的默认选项：`string`、`number`、`Boolean` 和 `date`。如果需要，你可以定义自己的 Transform 实现，但我们目前用基础知识即可。
 
-你还可以为你的字段定义一个默认值。例如，如果你对 `DS.attr` 的调用如下所示：
+
+
+你还可以为你的字段定义一个默认值。例如，如果你对`DS.attr`的调用如下所示：
 
 | | `name: DS.attr("string", {defaultValue: "Matt"})` |
 
-如果给定的记录没有 `name` 的值，则将使用值 `Matt`。
+如果给定的记录没有`name`的值，则将使用值`Matt`。
 
 ### 定义模型关系（Defining Model Relationships）
 
-你的模型类可能拥有包含记录（甚至是记录列表）的字段，而不是基本数据类型。Ember Data 通过使用两种构造：`DS.hasMany` 和 `DS.belongsTo` 使这成为可能。为了看到示例，让我们看看 `notebook.js` 文件：
+你的模型类可能拥有包含记录（甚至是记录列表）的字段，而不是基本数据类型。Ember Data 通过使用两种构造：`DS.hasMany`和`DS.belongsTo`使这成为可能。为了看到示例，让我们看看`notebook.js`文件：
 
 | [`ch5/ember-note/app/models/notebook.js`](http://media.pragprog.com/titles/mwjsember/code/ch5/ember-note/app/models/notebook.js) |
+
 | | `import DS from 'ember-data';` |
 | | |
 | | `export default DS.Model.extend({` |
@@ -1835,13 +1856,13 @@ Ember Data 将许多功能封装在一个小型库中。它为你的 Web 客户�
 | | `notes: DS.hasMany('note')` |
 | | `});` |
 
-`hasMany` 和 `belongsTo` 函数都定义了调用类与另一个模型之间的关系。此函数的参数是另一个模型的名称。在笔记本示例中，我们在 `belongsTo` 中引用用户模型，在 `hasMany` 中引用笔记模型。从语义上来说这是合理的：笔记本属于一个用户并拥有许多笔记。
+`hasMany`和`belongsTo`函数都定义了调用类与另一个模型之间的关系。此函数的参数是另一个模型的名称。在笔记本示例中，我们在`belongsTo`中引用用户模型，在`hasMany`中引用笔记模型。从语义上来说这是合理的：笔记本属于一个用户并拥有许多笔记。
 
 ![images/notebook-relationships.png](img/notebook-relationships.png)
 
-双向遍历模型关系通常是理想的。例如，从笔记的角度，你可以包含一个指向笔记本的 `belongsTo` 关系。而从用户的角度，你可以包含一个指向笔记本的 `hasMany` 关系。
+双向遍历模型关系通常是理想的。例如，从笔记的角度，你可以包含一个指向笔记本的`belongsTo`关系。而从用户的角度，你可以包含一个指向笔记本的`hasMany`关系。
 
-当然，模型关系的基数并不总是一对多或多对一。如果你想要一对一关系，只需在两边都使用 `belongsTo` 即可。对于多对多，双方都应该是 `hasMany`。
+当然，模型关系的基数并不总是一对多或多对一。如果你想要一对一关系，只需在两边都使用`belongsTo`即可。对于多对多，双方都应该是`hasMany`。
 
 现在你对如何定义模型类有了更好的理解，你将需要学习如何填充它们。让我们看看如何从服务器加载数据。
 
@@ -1849,21 +1870,17 @@ Ember Data 将许多功能封装在一个小型库中。它为你的 Web 客户�
 
 当使用 Ember 构建应用程序时，你的数据很可能来自 RESTful 服务。RESTful 服务使用 HTTP 作为数据查询和交付机制。根据 HTTP 请求，它可以被用于向调用逻辑返回数据，或以某种方式修改数据存储。
 
-Ember 项目非常渴望将 Web 社区的最佳想法引入 Ember 框架，Ember Data 对 RESTful 服务的使用也不例外。通过简单地声明你的模型类，你就可以使用 `DS.Store` 对象从你的服务器获取数据，假设 RESTful 服务暴露了预期的 API。
+Ember 项目非常渴望将 Web 社区的最佳想法引入 Ember 框架，Ember Data 对 RESTful 服务的使用也不例外。通过简单地声明你的模型类，你就可以使用`DS.Store`对象从你的服务器获取数据，假设 RESTful 服务暴露了预期的 API。
 
-虽然我们不会深入探讨 RESTful 服务的实现，但在本章的其余部分，我们将记录 Ember 发出的请求的 URL。在 *使用序列化器访问旧 API* 中，我们将涵盖如何使用 Ember Data 不符合预期的 API。
-
-
-
-
+虽然我们不会深入探讨 RESTful 服务的实现，但在本章的其余部分，我们将记录 Ember 发出的请求的 URL。在*使用序列化器访问旧 API*中，我们将涵盖如何使用 Ember Data 不符合预期的 API。
 
 正如编程世界中的许多概念一样，对于什么构成了 RESTful API 存在一些争议。（这通常表现为：“你的 API 不符合 RESTful 标准！”“不，是你的 API 不符合 RESTful！”）抛开这些不谈，让我们聊聊如何在 Ember Data 中使用 RESTful API。
 
-通常来说，RESTful 服务是一种使用统一资源标识符来访问数据和执行函数的手段。RESTful 服务通常（但并非总是）使用 HTTP 作为传输协议。每个唯一的 URI 和动词组合都定义了一个操作，以及应用该操作时使用的相关记录（或一组记录）。例如，如果你想获取 ID 为 `24` 的笔记记录，可以对 `/note/24` 发起 `GET` 请求，并期望在记录记录存在时获取到其当前状态。
+通常来说，RESTful 服务是一种使用统一资源标识符来访问数据和执行函数的手段。RESTful 服务通常（但并非总是）使用 HTTP 作为传输协议。每个唯一的 URI 和动词组合都定义了一个操作，以及应用该操作时使用的相关记录（或一组记录）。例如，如果你想获取 ID 为`24`的笔记记录，可以对`/note/24`发起`GET`请求，并期望在记录记录存在时获取到其当前状态。
 
 RESTful API 的实现超出了本书的范围，但我们一直在创建的模拟服务除外（请不要在生产环境中使用这些）。你可能使用任何技术来实现它，例如 Ruby on Rails、Node.js、Java 或 .NET。选择权交给你。
 
-一旦你定义了模型类，你就会希望能够从该类的 API 端点加载数据。在在此之前，你的应用需要声明 `DS.RESTAdapter` 类的实例。让我们看看为 EmberNote 项目定义的那个：
+一旦你定义了模型类，你就会希望能够从该类的 API 端点加载数据。在在此之前，你的应用需要声明`DS.RESTAdapter`类的实例。让我们看看为 EmberNote 项目定义的那个：
 
 `ch5/ember-note/app/adapters/application.js`
 
@@ -1875,7 +1892,7 @@ export default DS.RESTAdapter.extend({
 });
 ```
 
-这个适配器极其简洁。这个 `RESTAdapter` 实现的唯一功能就是标识 API 的根 URL。通常，适配器可以负责比这多的内容，但我们现在将从一个简单的开始，并在适配非传统 API 中更详细地介绍适配器。
+这个适配器极其简洁。这个`RESTAdapter`实现的唯一功能就是标识 API 的根 URL。通常，适配器可以负责比这多的内容，但我们现在将从一个简单的开始，并在适配非传统 API 中更详细地介绍适配器。
 
 有了这个适配器，我们就可以开始查询 API 中的记录了。
 
@@ -1895,7 +1912,7 @@ export default DS.Model.extend({
 });
 ```
 
-给定该模型，我们使用了笔记本路由的 model hook 来从 API 加载数据：
+给定该模型，我们使用了笔记本路由的`model hook`来从 API 加载数据：
 
 `ch5/ember-note/app/notebooks/route.js`
 
@@ -1924,12 +1941,9 @@ export default Ember.Route.extend({
 });
 ```
 
-正如你从设置你的模型 中记得的那样，model hook 用于获取将要使用的数据。
+正如你从设置你的模型中记得的那样，`model hook`用于获取将要使用的数据。
 
-
-
-
-在处理浏览器端缓存时，你需要意识到其他用户可能已经修改了缓存数据。存储器（store）不会在每次更改发生时都保持更新，因此如果记录可以被他人修改，那么在需要使用它们时从服务器重新加载记录是一个好主意。为了实现这一点，Ember Data 为 `findRecord` 和 `findAll` 提供了 `reload` 标记。例如，如果我们想在加载路由（route）时确保获取了共享笔记记录的最新更改，我们应该调用以下代码：
+在处理浏览器端缓存时，你需要意识到其他用户可能已经修改了缓存数据。存储器（store）不会在每次更改发生时都保持更新，因此如果记录可以被他人修改，那么在需要使用它们时从服务器重新加载记录是一个好主意。为了实现这一点，Ember Data 为`findRecord`和`findAll`提供了`reload`标记。例如，如果我们想在加载路由（route）时确保获取了共享笔记记录的最新更改，我们应该调用以下代码：
 
 ```javascript
 model: function(params) {
@@ -1937,15 +1951,15 @@ model: function(params) {
 }
 ```
 
-使用 `reload:true` 将始终确保你从服务器获取记录并包含最新的更改。
+使用`reload:true`将始终确保你从服务器获取记录并包含最新的更改。
 
-实现此目的还有第二种方法，假设你已经有了该记录的句柄（handle）。如果记录已加载到缓存中，`findRecord` 会调用该记录实例的 `reload` 方法。如果你已经拥有该记录，可以执行以下操作来从服务器刷新该对象：
+实现此目的还有第二种方法，假设你已经有了该记录的句柄（handle）。如果记录已加载到缓存中，`findRecord`会调用该记录实例的`reload`方法。如果你已经拥有该记录，可以执行以下操作来从服务器刷新该对象：
 
 ```javascript
 record.reload();
 ```
 
-`DS.Store` 还包含一个方法，可以从服务器拉取给定类型的所有记录，无论缓存状态如何。执行此操作，请调用带有 `reload:true` 的 `findAll` 方法：
+`DS.Store`还包含一个方法，可以从服务器拉取给定类型的所有记录，无论缓存状态如何。执行此操作，请调用带有`reload:true`的`findAll`方法：
 
 ```javascript
 model: function(params) {
@@ -1953,7 +1967,7 @@ model: function(params) {
 }
 ```
 
-你可能认为，确保拥有最新数据的唯一方法是使用 `reload` 参数。这种说法部分正确，因为 `findRecord` 和 `findAll` 方法将返回已经缓存在存储器中的记录（如果存在的话）。然而，`DS.Store` 提供了一种从存储器中剔除给定类型所有记录的方法：
+你可能认为，确保拥有最新数据的唯一方法是使用`reload`参数。这种说法部分正确，因为`findRecord`和`findAll`方法将返回已经缓存在存储器中的记录（如果存在的话）。然而，`DS.Store`提供了一种从存储器中剔除给定类型所有记录的方法：
 
 ```javascript
 model: function(param) {
@@ -1964,17 +1978,17 @@ model: function(param) {
 }
 ```
 
-调用 `unloadAll` 将为后续的查询方法提供一个干净的起点。当你想要对存储器执行命名参数查询（named-parameter queries），同时确保其返回的结果是服务器的最新数据时，这非常有用。
+调用`unloadAll`将为后续的查询方法提供一个干净的起点。当你想要对存储器执行命名参数查询（named-parameter queries），同时确保其返回的结果是服务器的最新数据时，这非常有用。
 
-`DS.Store` 拥有许多方法用于处理服务器 API 以及将 API 调用结果存储在浏览器驻留仓库中。正如你所预期的，它还提供了许多方法在记录加载后处理这些记录。在下一节中，我们将查看如何使用 Ember Data 来使用从 API 获取的记录。
+`DS.Store`拥有许多方法用于处理服务器 API 以及将 API 调用结果存储在浏览器驻留仓库中。正如你所预期的，它还提供了许多方法在记录加载后处理这些记录。在下一节中，我们将查看如何使用 Ember Data 来使用从 API 获取的记录。
 
 ## 操作记录（Work with Records）
 
-虽然 `DS.Store` 类中的许多方法处理加载和缓存记录列表，但你的应用程序也经常直接处理记录。有时你会使用存储器，有时你会调用记录本身上的的方法。让我们从一个从存储器调用的方法开始，学习如何使用 Ember 应用程序添加数据。
+虽然`DS.Store`类中的许多方法处理加载和缓存记录列表，但你的应用程序也经常直接处理记录。有时你会使用存储器，有时你会调用记录本身上的方法。让我们从一个从存储器调用的方法开始，学习如何使用 Ember 应用程序添加数据。
 
 ### 创建记录
 
-为了让用户觉得你的应用程序有用，他们需要能够向持久化存储中添加数据。我们已经在 EmberNote 应用中看到了这一点，用户可以在那里添加他们自己的笔记本和笔记。现在我们来看部分代码。在 `notebooks` 路由中，我们添加了一个让用户添加笔记本的功能：
+为了让用户觉得你的应用程序有用，他们需要能够向持久化存储中添加数据。我们已经在 EmberNote 应用中看到了这一点，用户可以在那里添加他们自己的笔记本和笔记。现在我们来看部分代码。在`notebooks`路由中，我们添加了一个让用户添加笔记本的功能：
 
 `ch5/ember-note/app/notebooks/route.js`
 
@@ -1994,11 +2008,11 @@ addNotebook: function() {
 }
 ```
 
-通过以下代码在存储器中创建新笔记本：`var notebook = this.store.createRecord('notebook', {...});`。`createRecord` 方法接受两个参数。第一个参数是你想要创建的记录的模型（model type）。在这种情况下，它是 `notebook` 类型。第二个参数是属性列表，由一组键值对组成。键应该与所引模型实现中定义的属性名称匹配。值随后被设置为每个属性的值。在这种情况下，我们从控制器的字段中提取值，并使用它们来填充新记录。
+通过以下代码在存储器中创建新笔记本：`var notebook = this.store.createRecord('notebook', {...});`。`createRecord`方法接受两个参数。第一个参数是你想要创建的记录的模型（model type）。在这种情况下，它是`notebook`类型。第二个参数是属性列表，由一组键值对组成。键应该与所引模型实现中定义的属性名称匹配。值随后被设置为每个属性的值。在这种情况下，我们从控制器的字段中提取值，并使用它们来填充新记录。
 
 #### 保存新记录
 
-![images/aside-icons/important.png](img/important.png) 重要的是要意识到 `createRecord` 并不会导致写入持久化存储。此新记录在调用下一块代码之前仅只存在于存储器中。要将此记录写入持久化存储，你必须在目标记录上调用 `save` 方法。`save` 方法返回一个 `Promise`，它可以解析为成功或失败。当 `Promise` 解析时，结果 `Promise` 上的 `then` 方法会被调用，当失败时则调用第二个回调。当 `save` 方法被调用时，存储器会准备一个请求。例如，如果我们想创建一个标题为“new note”、描述为“description”且属于 12 的笔记，请求将如下所示：
+![images/aside-icons/important.png](img/important.png) 重要的是要意识到`createRecord`并不会导致写入持久化存储。此新记录在调用下一块代码之前仅只存在于存储器中。要将此记录写入持久化存储，你必须在目标记录上调用`save`方法。`save`方法返回一个`Promise`，它可以解析为成功或失败。当`Promise`解析时，结果`Promise`上的`then`方法会被调用，当失败时则调用第二个回调。当`save`方法被调用时，存储器会准备一个请求。例如，如果我们想创建一个标题为“new note”、描述为“description”且属于 12 的笔记，请求将如下所示：
 
 ```text
 POST /api/notes
@@ -2007,15 +2021,15 @@ POST /api/notes
 
 #### 监控请求/响应
 
-![images/aside-icons/tip.png](img/tip.png) 当你练习这些示例时，关注请求/响应流量会有帮助。Chrome、Firefox、Safari 和 Internet Explorer 都有内置的开发者工具，允许你观察流量。这对于进一步研究 Ember Data 非常有用。注意此请求没有请求参数。我们只是向针对模型类型的通用 URL `/api/notes` 发送 POST。该 URL 的 `POST` 方法专门用于与创建新记录相关的请求，它不用于更新请求，更新请求使用 `PUT` 方法。
+![images/aside-icons/tip.png](img/tip.png) 当你练习这些示例时，关注请求/响应流量会有帮助。Chrome、Firefox、Safari 和 Internet Explorer 都有内置的开发者工具，允许你观察流量。这对于进一步研究 Ember Data 非常有用。注意此请求没有请求参数。我们只是向针对模型类型的通用 URL`/api/notes`发送 POST。该 URL 的`POST`方法专门用于与创建新记录相关的请求，它不用于更新请求，更新请求使用`PUT`方法。
 
 现在我们已经看到了如何添加新记录，让我们来看看如何修改现有记录。
 
 #### 更新记录
 
-创建记录和更新记录的方法没有太大区别：你对拥有想要保存的数据记录调用 `save` 方法。主要的区别在于 Ember Data 如何将操作转换为 HTTP 请求。
+创建记录和更新记录的方法没有太大区别：你对拥有想要保存的数据记录调用`save`方法。主要的区别在于 Ember Data 如何将操作转换为 HTTP 请求。
 
-当对已存在于持久化存储中的记录调用 `save` 时，这将产生指向 API 的 HTTP `PUT` 请求。例如，在 `edit-note` 路由中，我们使用以下操作来保存：
+当对已存在于持久化存储中的记录调用`save`时，这将产生指向 API 的 HTTP`PUT`请求。例如，在`edit-note`路由中，我们使用以下操作来保存：
 
 `ch4/ember-note/app/components/edit-note/component.js`
 
@@ -2041,15 +2055,14 @@ PUT "/api/notes/12"
 {note: {title: "edited note", body: "edited description", notebook: "12"}}
 ```
 
-
-
-这与为新记录生成的 HTTP `POST` 请求有相似之处。每个请求都包含一个要保存的记录的 JSON 表示。每个记录都使用相同的端点 `/api/notes`。然而，当 `save` 方法感知到已存在记录时，它会使用 `PUT` 动词；为了标识记录，它会在 URL 中添加一个路径段，该段包含记录中 `id` 字段的值。通过该请求，API 预期根据请求提供的内容保存记录的更改。
+这与为新记录生成的 HTTP`POST`请求有相似之处。每个请求都包含一个要保存的记录的 JSON 表示。每个记录都使用相同的端点`/api/notes`。然而，当`save`方法感知到已存在记录时，它会使用`PUT`动词；为了标识记录，它会在 URL 中添加一个路径段，该段包含记录中`id`字段的值。通过该请求，API 预期根据请求提供的内容保存记录的更改。
 
 ### 删除记录
 
-当然，你的用户有时会犯错，或者想要丢弃某些数据。为此，你可能希望让他们删除记录。Ember Data 提供了两种不同的方法来实现这一点。第一种与我们目前为止看到的方法相似。让我们稍微扩展一下 EmberNote，允许用户在 `notebooks/notes` 路由中删除笔记。让我们从向笔记列表添加一个删除按钮开始。请确保模板看起来如下所示：
+当然，你的用户有时会犯错，或者想要丢弃某些数据。为此，你可能希望让他们删除记录。Ember Data 提供了两种不同的方法来实现这一点。第一种与我们目前为止看到的方法相似。让我们稍微扩展一下 EmberNote，允许用户在`notebooks/notes`路由中删除笔记。让我们从向笔记列表添加一个删除按钮开始。请确保模板看起来如下所示：
 
 | [ch5/ember-note/app/notebooks/notes/template.hbs](http://media.pragprog.com/titles/mwjsember/code/ch5/ember-note/app/notebooks/notes/template.hbs) |
+
 | ​  | `<div class="col-md-12">`​ |
 | ​  | Notes |
 | ​  | `</div>`​ |
@@ -2066,26 +2079,40 @@ PUT "/api/notes/12"
 | ​  | {{note.title}} |
 | ​  | {{/link-to}} |
 | ​  | `<button {{action 'deleteNote' note}}>delete</button>`​ |
-| ​  | `</li>`​ |
-| ​  | {{else}} |
-| ​  | `<div>No notes found</div>`​ |
-| ​  | {{/each}} |
-| ​  | `</ul>`​ |
-| ​  | `</div>`​ |
-| ​  | `</div>`​ |
-| ​  | `<div class="col-md-8">`​ |
-| ​  | {{outlet}} |
-| ​  | `</div>`​ |
-| ​  | `</div>`​ |
+
+
+
+| `</li>` |
+
+| `{{else}}` |
+
+| `<div>No notes found</div>` |
+
+| `{{/each}}` |
+
+| `</ul>` |
+
+| `</div>` |
+
+| `</div>` |
+
+| `<div class="col-md-8">` |
+
+| `{{outlet}}` |
+
+| `</div>` |
+
+| `</div>` |
 
 现在让我们修改路由以定义从新按钮引用的操作。添加以下操作：
 
 | [ch5/ember-note/app/notebooks/notes/route.js](http://media.pragprog.com/titles/mwjsember/code/ch5/ember-note/app/notebooks/notes/route.js) |
-| ​  | `deleteNote: function(note) {` |
-| ​  | `console.log('deleting note with title ' + note.get('title'));` |
-| ​  | `note.deleteRecord();` |
-| ​  | `note.save();` |
-| ​  | `}` |
+
+| `deleteNote: function(note) {` |
+| `console.log('deleting note with title ' + note.get('title'));` |
+| `note.deleteRecord();` |
+| `note.save();` |
+| `}` |
 
 对 `deleteRecord` 的调用并没有从后端完全删除它。如你所见，你还需要对记录调用 `save` 才能将其完全删除。
 
@@ -2173,10 +2200,7 @@ Ember Data 在处理 RESTful API 时非常有用。正如我们所看到的，�
 
 # 第 6 章 读取非标准 API
 
-Ember 的核心原则之一是认为约定优于配置。因此，Ember Data 与在 ​*处理记录*​ 中讨论的约的 RESTful API 使用起来非常容易。
-
-
-
+Ember 的核心原则之一是认为约定优于配置。因此，Ember Data 与在 *处理记录* 中讨论的约的 RESTful API 使用起来非常容易。
 
 为了帮助实现，Ember Data 提供了一系列类用于将非标准 API 适配以遵循 Ember 其他部分期望的约定。这可以简单到仅将属性名称从一种命名规范转换为另一种，也可以复杂到使用 Ember Data 在传输过程中修改 JSON。
 
@@ -2279,10 +2303,6 @@ export default Ember.Route.extend({
       }).then((users) => {
 ```
 
-
-
-
-
 ```javascript
 if (users.get('length') === 1) {
   var user = users.objectAt(0);
@@ -2319,7 +2339,9 @@ export default DS.RESTAdapter.extend({
 
 ### 添加自定义 API 主机
 
-到达这一步花费了一些工作，但使用初始化器（initializers）、注入（injection）和 session 对象为 `RESTAdapter` 提供标头数据，很好地演示了 Ember 的扩展性。我们将在下一章中看到更多内容。
+
+
+到达这一步花费了一些工作，但使用初始化器（initializers）、注入（injection）和 `session` 对象为`RESTAdapter`提供标头数据，很好地演示了 Ember 的扩展性。我们将在下一章中看到更多内容。
 
 除了我们涵盖的属性外，`RESTAdapter` 还允许你自定义用于 API 调用的主机，如下所示：
 
@@ -2376,11 +2398,11 @@ export default DS.RESTSerializer.extend({
 });
 ```
 
-`serialize` 方法用于在记录发送服务器之前修改。如果你在 RESTSerializer 实现中实现了此方法，你就可以控制 HTTP 请求体以匹配你的 API。新记录和更改的记录都会通过此方法。`snapshot` 参数代表调用 `serialize` 方法时的模型记录。`options` 参数包含一个带有 `includeId` 属性的哈。该属性由调用适配器设置。当你创建一个新记录时，将其设置为 true，否则设置为 false。
+`serialize` 方法用于在记录发送服务器之前修改。如果你在 `RESTSerializer` 实现中实现了此方法，你就可以控制 HTTP 请求体以匹配你的 API。新记录和更改的记录都会通过此方法。`snapshot` 参数代表调用 `serialize` 方法时的模型记录。`options` 参数包含一个带有 `includeId` 属性的哈。该属性由调用适配器设置。当你创建一个新记录时，将其设置为 `true`，否则设置为 `false`。
 
 我们的 `serialize` 方法创建一个 JSON 哈希对象，但通过将驼峰命名键替换为类命名法键来更改它。值保持不变。目前，我们的 API 决定 `id` 字段的值，因此我们不需要担心它。
 
-在本章稍早，我们更改了存储用户的方式，将其存储在 session 中。因此，我们需要对 notebooks 路由进行微调以使用 session 对象。将 `addNotebook` action 更新为如下：
+在本章稍早，我们更改了存储用户的方式，将其存储在 `session` 中。因此，我们需要对 notebooks 路由进行微调以使用 `session` 对象。将 `addNotebook` action 更新为如下：
 
 [ch6/ember-note/app/notebooks/route.js](http://media.pragprog.com/titles/mwjsember/code/ch6/ember-note/app/notebooks/route.js)
 
@@ -2402,10 +2424,6 @@ export default Ember.Route.extend({
 });
 ```
 
-
-
-
-
 ```javascript
 notebook.save().then(() => {
   console.log('save successful');
@@ -2418,7 +2436,7 @@ notebook.save().then(() => {
 });
 ```
 
-此更改允许我们在保存新笔记本时，使用存储在 session 中的用户记录。
+此更改允许我们在保存新笔记本时，使用存储在 `session` 中的用户记录。
 
 如果说 `serialize` 方法是从 Ember Data 预期的格式获取数据并将其转换为 API 可以的格式，那么 `normalize` 方法则执行相反的操作。我们已经在 `RESTSerializer` 中利用了这一点。让我们来看看是如何操作的。
 
@@ -2447,17 +2465,17 @@ normalize: function(type, hash, prop) {
 }
 ```
 
-这些参数代表了数据类型（即模型类）、要使用的 hash 键名（例如我们之前示例中的 "notebooks"）以及从服务器返回的负载。记住要带上参数调用 `this._super`，以确保父类的 `normalize` 方法被调用，并且你定义的 `normalizeHash` 操作能够运行。
+这些参数代表了数据类型（即模型类）、要使用的 hash 键名（例如我们之前示例中的 `"notebooks"`）以及从服务器返回的负载。记住要带上参数调用 `this._super`，以确保父类的 `normalize` 方法被调用，并且你定义的 `normalizeHash` 操作能够运行。
 
 ### 允许 Adapter 查询非传统 API
 
 此时，你对序列化器（serializer）所做的更改将允许你以新 API 的格式进行保存，但你还无法查询数据。在查询之前，你需要为你的笔记本模型创建一个新的 `RESTAdapter`。开始之前，运行以下命令：
 
-```
+```bash
 $ ember generate adapter notebook
 ```
 
-这会在 `ember-note/app/adapters/notebook.js` 处创建一个存根类。
+这会在`ember-note/app/adapters/notebook.js`处创建一个存根类。
 
 我们需要创建一个新 adapter 的原因是为了模型类中的属性名与 API 中的属性名之间大小写的差异。如果不创建这个 adapter，查询参数 `{user : 1}` 将找不到任何记录，因为 API 中的属性名为 `User`。为了解决这个问题，请按照如下方式实现 adapter 类：
 
@@ -2525,7 +2543,7 @@ pathType: function(type) {
 }
 ```
 
-注意，“notes" 节点嵌套在 "notebooks" 对象内部。这并不是 Ember 预期的负载格式。Ember Data 预期同等信息具有以下负载结构：
+注意，`"notes"` 节点嵌套在 `"notebooks"` 对象内部。这并不是 Ember 预期的负载格式。Ember Data 预期同等信息具有以下负载结构：
 
 ```json
 {
@@ -2550,9 +2568,6 @@ pathType: function(type) {
 }
 ```
 
-
-
-
 为了完成此转换，你需要在你的 `RESTSerializer` 实现中实现 `extractArray` 方法。该方法允许你对负载（payload）进行任何重新格式化或清理。以下是该方法的示例实现：
 
 ```javascript
@@ -2562,7 +2577,7 @@ extractArray: function(store, type, payload) {
 }
 ```
 
-`payload` 方法参数是来自服务器的原始响应。你的实现可能会获取此 `payload`，对其进行任何必要的调整以符合 Ember Data 预期的格式，然后将其传递给方法的父类实例。一些常见的操作可能包括更改负载的结构或删除不需要的信息（例如你的模型中未定义的属性）。这让你你能够使用即使是最不规范的 API 响应，同时充分利用 Ember Data 的功能。
+`payload` 方法参数是来自服务器的原始响应。你的实现可能会获取此 `payload`，对其进行任何必要的调整以符合 Ember Data 预期的格式，然后将其传递给方法的父类实例。一些常见的操作可能包括更改负载的结构或删除不需要的信息（例如你的模型中未定义的属性）。这让你能够使用即使是最不规范的 API 响应，同时充分利用 Ember Data 的功能。
 
 当负载是对包含多行查询的响应（例如 `findMany`）时，会使用此方法。有一个并行的方法名为 `extractSingle`，它起相同的作用，但它作用于仅包含一条记录的响应（例如 `find` 或 `save`）。该方法的签名包含一个额外的参数，如下所示：
 
@@ -2577,7 +2592,7 @@ extractSingle: function(store, type, payload, recordId) {
 
 ## 将适配器（Adapters）和序列化器（Serializers）绑定到模型类
 
-在应用中实现适配器/序列化器模式有两种方法。目前为止我们实际上都用过了。对于你想在所有 REST 请求中共享的更改（例如添加用户令牌），你需要修改 Ember CLI 为你创建的应用适配器或序列化器，它们位于 `ember-note/app/adapters/application.js` 和 `ember-note/app/serializers/application.js`。如果你想创建一个特定模型的适配器或序列化器，可以运行以下命令之一：
+在应用中实现适配器/序列化器模式有两种方法。目前为止我们实际上都用过了。对于你想在所有 REST 请求中共享的更改（例如添加用户令牌），你需要修改 Ember CLI 为你创建的应用适配器或序列化器，它们位于`ember-note/app/adapters/application.js`和`ember-note/app/serializers/application.js`。如果你想创建一个特定模型的适配器或序列化器，可以运行以下命令之一：
 
 ```bash
 $ ember generate serializer mymodel
@@ -2598,7 +2613,7 @@ $ ember destroy adapter notebook
 $ ember destroy serializer notebook
 ```
 
-然后按照 `ember-note/app/adapters/application.js` 文件中的 `namespace` 属性如下：
+然后按照`ember-note/app/adapters/application.js`文件中的 `namespace` 属性如下：
 
 ```javascript
 namespace: "api"
@@ -2608,6 +2623,8 @@ namespace: "api"
 
 ## 下一步工作
 
+
+
 `RESTAdapter` 和 `RESTSerializer` 类提供的功能比我们在这里涵盖的要多。这些类提供了使用 Ember Data 处理几乎任何 API 的强大手段，因此，如果你遇到了我们没有涵盖的情况，我鼓励你进一步探索。我们现在已经了解了 Ember 和 Ember Data 的许多核心功能，但我们还有更多内容要学习。Ember 为扩展此核心提供了多种选项，并可以使用框架本身将类连接起来，以帮助增加你创建的类的实用性。在下一章中，我们将通过在整个应用中提供常用的实用工具程序来扩展 Ember。
 
 Copyright © 2015, The Pragmatic Bookshelf.
@@ -2616,7 +2633,7 @@ Copyright © 2015, The Pragmatic Bookshelf.
 
 我们花费了大量时间学习 Ember 的核心功能。我们已经看到了如何使用这些核心功能构建 Web 应用，以及如何通过 Ember 的主见性（opinionated）结构来快速构建。
 
-这种结构不仅为你提供了构建应用核心的方法，还提供了在系统不同部分之间共享代码的几种方法。它提供了通过准备任何必要的对象来引导你的应用的能力。并提供了将数据值从一个上下文翻译到另一个上下文的能力（例如货币转换）。
+这种结构不仅为你提供了构建应用核心的方法，还提供了在系统不同部分之间共享代码的几种方法。它提供了通过准备任何必要的对象来引导你的应用的能力，并提供了将数据值从一个上下文翻译到另一个上下文的能力（例如货币转换）。
 
 在本章中，我们将查看如何使用 Ember 和 Ember CLI 在 Ember 的主见性结构之上叠加应用特定的抽象，以便你将合理的设计应用于 EmberNote 的逻辑中。让我们从最基础的抽象级别开始：工具类（utility class）。
 
@@ -2626,7 +2643,7 @@ Copyright © 2015, The Pragmatic Bookshelf.
 
 创建工具函数的目标是为可能存在不同类中的逻辑提供一个单一的地方。我说“无关”，是因为如果类之间是相关的，正如我们所看到的，使用混入（mixin）会更好。
 
-数据验证是可能存在于工具函数中的逻辑的一个良好例子。有很多理由你可能需要验证数据。你可能需要验证字符串是否为有效的电子邮件、电话号码或邮政编码。你可能需要验证字符串的长度，或者它是否为有效日期。无论如何，你可能在无关的上下文中中使用这种验证，因此验证是一个很好的开始用例。
+数据验证是可能存在于工具函数中的逻辑的一个良好例子。有很多理由你可能需要验证数据。你可能需要验证字符串是否为有效的电子邮件、电话号码或邮政编码。你可能需要验证字符串的长度，或者它是否为有效日期。无论如何，你可能在无关的上下文中使用这种验证，因此验证是一个很好的开始用例。
 
 为了我们的目的，假设我们要验证 EmberNote 的标题长度是否在 0 到 140 之间。我们将创建一个工具函数来执行此操作，并在日志路由中使用该函数。首先，从项目根目录运行以下命令：
 
@@ -2651,10 +2668,6 @@ export default function isValidLength(value, min, max) {
 ```
 
 该函数的具体实现细节没有其形式重要。你会注意到命令使用了短横线分隔的 `is-valid-length`，而函数名为 `isValidLength`。Ember CLI 在创建函数时执行了该转换，并记录名为 `is-valid-length.js` 的文件中。现在我们有了函数，该如何引用它呢？请看对日志路由的以下更新：
-
-
-
-
 
 ```javascript
 import Ember from 'ember';
@@ -2722,7 +2735,9 @@ $ ember generate mixin validation-functions
 
 将新创建的 mixin 类更新为：
 
-[ch7/ember-note/app/mixins/validation-functions.js](http://media.pragprog.com/titles/mwjsember/code/ch7/ember-note/app/mixins/validation-functions.js)
+`ch7/ember-note/app/mixins/validation-functions.js`
+
+<http://media.pragprog.com/titles/mwjsember/code/ch7/ember-note/app/mixins/validation-functions.js>
 
 ```javascript
 import Ember from 'ember';
@@ -2781,10 +2796,6 @@ export default Ember.Route.extend(ValidationFunctions,{
     addNew : function() { 
 ```
 
-
-
-
-
 ```javascript
 var name = this.controller.get('name');
 
@@ -2810,7 +2821,7 @@ if (this.isValidEmail(name)) {
 
 虽然我们将 `isValidLength` 和 `isValidEmail` 定义为函数，但这些属性也可以仅仅持有一个值。如果是这样，包含它的类（在此例中为笔记路由）就可以访问它们，就像访问函数一样。
 
-## Ember 插件：验证 (Validation)
+## Ember 插件：验证（Validation）
 
 我们的示例验证类对于说明 mixin 的背后的思想非常有帮助，但它远未成熟。要查看关于如何使用 mixin 进行验证的更完整示例，请查看由 Dockyard 出版的 `ember-validations`。Dockyard 是 Ember 和 Ember CLI 背后的主要力量之一。
 
@@ -2840,7 +2851,7 @@ export default Ember.Object.extend(EmberValidations.Mixin, {
 
 每个验证都可以提供一条自定义消息，并且该 mixin 提供了一个名为 `isValid` 的属性，让你知道该对象是否包含有效数据。该属性会在每当属性被设置时进行更新。可以通过引用对象上的一个名为 `errors` 的属性来访问这些消息。然后，可以将这些消息显示给用户，给他们更新属性值的机会。
 
-要查看完整文档，请访问 `https://github.com/dockyard/ember-validations`。
+要查看完整文档，请访问 <https://github.com/dockyard/ember-validations>。
 
 Mixins 是共享代码的一种极佳方法，但 Ember 提供的远更多。有时，你想要共享对状态或服务的访问权限。Ember 有一种方法可以做到，称为依赖注入（dependency injection），你接下来将学习它。
 
@@ -2855,6 +2866,8 @@ Mixins 是共享代码的一种极佳方法，但 Ember 提供的远更多。有
 在依赖注入模式中，服务（即依赖项）是在客户端外部实例化的，稍后注入到客户端。因此，Ember 需要一个既可以实例化依赖项又能将其注入到客户端的地方。让我们来看看初始化器（initializers）。
 
 ### 使用初始化器
+
+
 
 为了让依赖注入工作，Ember 必须在应用加载到浏览器的初始期间完成一些工作。这些工作发生在应用生命周期的非常早阶段是非常重要的，因为通常使用依赖注入的服务类型经常用于应用的许多地方。为了实现这一点，你可以使用 `Ember.Application.initializer` 函数。
 
@@ -2886,10 +2899,6 @@ export default {
 ### 注入类
 
 当你从基于服务的方法设计应用时，你创建了旨在在整个应用中重用的对象。我们已经看到了分配此类对象的方法，但我最喜欢的方法是使用依赖注入。
-
-
-
-
 
 在 Ember 中使用依赖注入，通常需要执行两个步骤。首先，将服务注册到容器中；然后将其注入到你任何想要访问它的类工厂中。
 
@@ -2951,7 +2960,7 @@ export default Ember.Route.extend({
 
 随着日志类在初始化器中注册并注入，在你应用中所有的 `Ember.Route` 实例中都可以使用名为 `logger` 的属性。下图说明了这些部分是如何结合在一起的：
 
-![images/dependency-injection.png)
+![images/dependency-injection.png](images/dependency-injection.png)
 
 Ember Data 框架很好地利用了依赖注入。当你路由实现中引用 `store` 属性时，是因为该属性是通过 Ember Data 设置的注入初始化器设置的。
 
@@ -3002,8 +3011,6 @@ export default DS.Transform.extend({
   }
 });
 ```
-
-
 
 在此示例中，我们假设已经创建了一个用户特定的翻译对象并将其注入到 transform（转换）中。这将允许我们计算使用用户货币汇率的翻译。transform 本身仅负责在模型请求原生币种信息时介入。一个需要使用 transform 的示例模型类看起来如下：
 
@@ -3097,9 +3104,6 @@ $ ember test
 
 查看测试的第二种方法。在同一个命令行提示符，按下 `Ctrl-C`，这将暂停 `ember test` 的输出。它应该会报告几个失败的测试，我们稍后会讨论。首先，从命令行运行 `ember serve`。然后，将浏览器指向 `localhost:4200/tests`。
 
-
-
-
 在你的浏览器中，你将看到显示的测试结果。滚动结果，你应该能看到失败的测试。在我们修复其中一些失败的测试之前（是的，这些测试确实需要一些调整），让我们先简单聊一下 Ember CLI 用于完成测试执行的工具。
 
 当你从命令行运行 `ember test` 命令时，Ember CLI 会启动一个 `PhantomJS` 实例。PhantomJS 是一个无头 Web 浏览器（没有用户界面的浏览器），完全用 JavaScript 编写。通过使用 PhantomJS，你可以将测试作为持续集成（continuous integration）过程的一部分来执行。持续集成是在专用的构建机器上通过自动化过程定期编译软件的实践。使用持续集成，你可以检查新更改是否引入了错误。如果你采用了持续集成，那么你的测试应该在构建过程中运行。使用 PhantomJS 允许你的测试在不需要在持续集成机器上安装传统浏览器的情况下进行。
@@ -3108,11 +3112,13 @@ $ ember test
 
 这两种查看测试结果的方法都是很有用的，并且在你的开发计划中都占有一席。在本章的剩余部分中，我们将依赖于 `localhost:4200` 可见的测试视图，因为它提供了稍微更好的用户体验。
 
+
+
 既然有了查看测试结果的方法，让我们从编写我们要编写的最基础的测试开始：单元测试（unit tests）。
 
 ## 编写单元测试
 
-使用模块化方法处理 JavaScript 的用处是，我们可以以模块化的方式考虑我们的测试。Ember CLI 为我们创建每个应用模块创建一个测试模块。让我们现在来看其中一个。当你创建 note 模型类时，Ember CLI 在 `ember-note/tests/unit` 目录下创建了一个名为 `note-test.js` 的测试文件。生成的文件如下：
+使用模块化方法处理 JavaScript 的用处是，我们可以以模块化的方式考虑我们的测试。Ember CLI 为我们创建每个应用模块创建一个测试模块。让我们现在来看其中一个。当你创建 note 模型类时，Ember CLI 在`ember-note/tests/unit`目录下创建了一个名为`note-test.js`的测试文件。生成的文件如下：
 
 ```javascript
 // ch8/ember-note/tests/unit/models/notebook-test.js
@@ -3133,15 +3139,15 @@ test('it exists', function(assert) {
 });
 ```
 
-`import` 块从 `ember-qunit` 引入了 `moduleForModel` 和 `test` 函数。这些函数在测试类中分别用于加载我们想要测试的类，然后对它执行测试。
+`import`块从`ember-qunit`引入了`moduleForModel`和`test`函数。这些函数在测试类中分别用于加载我们想要测试的类，然后对它执行测试。
 
-| QUnit, ember-test-helpers, 和 ember-qunit |
-| :--- |
-| 如果要使用 `ember test` 命令或通过浏览器进行测试，主要主要依赖三个测试框架：`QUnit` ([http://qunitjs.com])、`ember-test-helpers` ([https://github.com/switchfly/ember-test-helpers]) 以及 `ember-qunit` ([https://github.com/rwjblue/ember-qunit])。这些框架中的每一个都为你为测试用例编写的某些代码起着作用。`QUnit` 是最初为 jQuery 编写的通用 JavaScript 测试框架；`ember-test-helpers` 是一组 Ember 特有的测试吊架，它需要特定的测试框架（如 `QUnit`）才能运行；而 `ember-qunit` 将两者结合在一起。 |
+### QUnit、ember-test-helpers 和 ember-qunit
+
+如果要使用`ember test`命令或通过浏览器进行测试，主要主要依赖三个测试框架：`QUnit`（http://qunitjs.com）、`ember-test-helpers`（https://github.com/switchfly/ember-test-helpers）以及`ember-qunit`（https://github.com/rwjblue/ember-qunit）。这些框架中的每一个都为你为测试用例编写的某些代码起着作用。`QUnit`是最初为 jQuery 编写的通用 JavaScript 测试框架；`ember-test-helpers`是一组 Ember 特有的测试吊架，它需要特定的测试框架（如`QUnit`）才能运行；而`ember-qunit`将两者结合在一起。
 
 ### 测试用例依赖
 
-这个生成的单元测试将确认最基础的行为：可以创建 note 模型类的实例。现在，这个测试是一个失败的测试。如果你查看测试结果，你应该会看到一条类似“No model was found for notebook（未找到 notebook 模型）”的消息。为什么它报告说找不到 notebook 模型呢？因为 note 模型类包含一个指向 notebook 的 `belongsTo` 引用。让我们修复它。将你的测试用例的 `needs` 数组更改如下所示：
+这个生成的单元测试将确认最基础的行为：可以创建 note 模型类的实例。现在，这个测试是一个失败的测试。如果你查看测试结果，你应该会看到一条类似“No model was found for notebook（未找到 notebook 模型）”的消息。为什么它报告说找不到 notebook 模型呢？因为 note 模型类包含一个指向 notebook 的`belongsTo`引用。让我们修复它。将你的测试用例的`needs`数组更改如下所示：
 
 ```javascript
 // ch8/ember-note/tests/unit/models/notebook-test.js
@@ -3181,7 +3187,7 @@ export default DS.Model.extend({
 });
 ```
 
-`noteCount` 函数获取 `notes` 属性（它指向关联数组），并返回该数组的长度。这就是它的本意。现在，让我们写一个确认此此点的测试。将你的 `notebook-test.js` 文件更新为：
+`noteCount`函数获取`notes`属性（它指向关联数组），并返回该数组的长度。这就是它的本意。现在，让我们写一个确认此此点的测试。将你的`notebook-test.js`文件更新为：
 
 ```javascript
 // ch8/ember-note/tests/unit/models/notebook-test.js
@@ -3206,10 +3212,6 @@ test('it exists', function(assert) {
 });
 ```
 
-
-
-
-
 ```javascript
 test('it counts notes', function(assert) {
   var notebook = this.subject({ title: 'my notebook' });
@@ -3227,29 +3229,29 @@ test('it counts notes', function(assert) {
 });
 ```
 
-首先，我们需要修改导入项以包含 `Ember` 类。（稍后我们就会看到原因。）完成后，我们在文件末尾添加了一个新测试，描述为“it counts notes（它能计算笔记数量）”。这些描述将被测试运行器使用，用于告诉你它正在运行哪项测试。
+首先，我们需要修改导入项以包含`Ember`类。（稍后我们就会看到原因。）完成后，我们在文件末尾添加了一个新测试，描述为“it counts notes（它能计算笔记数量）”。这些描述将被测试运行器使用，用于告诉你它正在运行哪项测试。
 
-接下来，我们将进行一些设置工作。调用 `this.subject()` 会创建一个 `notebook` 类的实例，我们将用它进行测试。然后，我们将初始化一个名为 `note` 的变量，并向其中填充笔记实例。我们还会创建一个 1 到 10 之间的随机数，以测试是否向笔记本添加了正确数量的笔记实例。
+接下来，我们将进行一些设置工作。调用`this.subject()`会创建一个`notebook`类的实例，我们将用它进行测试。然后，我们将初始化一个名为`note`的变量，并向其中填充笔记实例。我们还会创建一个 1 到 10 之间的随机数，以测试是否向笔记本添加了正确数量的笔记实例。
 
-这里我们将使用之前导入的 `Ember` 实例。由于我们即将执行的工作是异步的且带有副作用的，测试运行器要求我们自己在自己的运行循环（run loop）中执行这些工作。在运行循环内部，我们将使用之前的随机数生成预期的笔记实例数量，然后将它们添加到笔记本中。
+这里我们将使用之前导入的`Ember`实例。由于我们即将执行的工作是异步的且带有副作用的，测试运行器要求我们自己在自己的运行循环（run loop）中执行这些工作。在运行循环内部，我们将使用之前的随机数生成预期的笔记实例数量，然后将它们添加到笔记本中。
 
-到此时，你可能不确定何时该使用 `Ember.run`，何时不该使用。请放心，测试运行器非常清楚某个测试无法运行的原因，并提供错误消息指示你的代码需要 `Ember.run`。除此之外，关于 `Ember.run` 的细节主要在你开发 `Ember` 本身而不是使用 `Ember` 时才相关。
+到此时，你可能不确定何时该使用`Ember.run`，何时不该使用。请放心，测试运行器非常清楚某个测试无法运行的原因，并提供错误消息指示你的代码需要`Ember.run`。除此之外，关于`Ember.run`的细节主要在你开发`Ember`本身而不是使用`Ember`时才相关。
 
-完成设置工作后，我们将通过断言 `noteCount` 方法返回的记录数量（即之前声明的随机数）来运行实际测试。我们的测试应该会通过，这样我们就可以少一个需要担心的方法，可以睡得安稳一点了。
+完成设置工作后，我们将通过断言`noteCount`方法返回的记录数量（即之前声明的随机数）来运行实际测试。我们的测试应该会通过，这样我们就可以少一个需要担心的方法，可以睡得安稳一点了。
 
 ### 随机数生成
 
-| | |
-| --- --- |
-| ![images/aside-icons/warning.png](img/warning.png) | 如果涉及安全性，随机数生成是一个危险领域。我们之前使用的 `Math.random` 函数在我们用法下是没问题的，但你不应该将其用于任何对安全性有要求的场景，例如为双重身份验证或验证码生成随机值，因为 `Math.random` 的输出不是真正的随机。在这种情况下，最好使用 `RandomSource.getRandomValues()` 函数，该函数在 Mozilla Developer Network 上有文档：[`developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues`](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)。 |
+> ![images/aside-icons/warning.png](img/warning.png)
+>
+> 如果涉及安全性，随机数生成是一个危险领域。我们之前使用的`Math.random`函数在我们用法下是没问题的，但你不应该将其用于任何对安全性有要求的场景，例如为双重身份验证或验证码生成随机值，因为`Math.random`的输出不是真正的随机。在这种情况下，最好使用`RandomSource.getRandomValues()`函数，该函数在 Mozilla Developer Network 上有文档：[`developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues`](https://developer.mozilla.org/en-US/docs/Web/API/RandomSource/getRandomValues)。
 
 现在，让我们来看看如何对组件进行单元测试。
 
 #### 组件的单元测试
 
-正如我之前提到的，我们希望将单元测试集中在尚未被框架测试的代码上。另一个判断一个类是否适合进行单元测试的标准是，它是否依赖于难以模拟的外部依赖（例如 `Ember Data` 存储）。我们的 `edit-note` 组件目前有两个动作：`saveNote` 和 `closeNote`。让我们快速回顾一下该类：
+正如我之前提到的，我们希望将单元测试集中在尚未被框架测试的代码上。另一个判断一个类是否适合进行单元测试的标准是，它是否依赖于难以模拟的外部依赖（例如`Ember Data`存储）。我们的`edit-note`组件目前有两个动作：`saveNote`和`closeNote`。让我们快速回顾一下该类：
 
-`ch8/ember-note/app/components/edit-note/component.js` (http://media.pragprog.com/titles/mwjsember/code/ch8/ember-note/app/components/edit-note/component.js)
+`ch8/ember-note/app/components/edit-note/component.js`（http://media.pragprog.com/titles/mwjsember/code/ch8/ember-note/app/components/edit-note/component.js）
 
 ```javascript
 import Ember from 'ember';
@@ -3266,11 +3268,11 @@ export default Ember.Component.extend({
 });
 ```
 
-在后台，`saveNote` 正在调用存储来保存数据，因此此方法将需要依赖验收测试。尽管如此，我们仍然可以在某种程度上对其进行单元测试。单元测试更好的候选对象是 `closeNote` 动作，它只是将动作引用到传递给组件的类。这个类可以很容易被模拟。
+在后台，`saveNote`正在调用存储来保存数据，因此此方法将需要依赖验收测试。尽管如此，我们仍然可以在某种程度上对其进行单元测试。单元测试更好的候选对象是`closeNote`动作，它只是将动作引用到传递给组件的类。这个类可以很容易被模拟。
 
-让我们对 `edit-note` 模板进行细微调整。为每个按钮添加一个 `id` 参数，如下所示：
+让我们对`edit-note`模板进行细微调整。为每个按钮添加一个`id`参数，如下所示：
 
-`ch8/ember-note/app/components/edit-note/template.hbs` (http://media.pragprog.com/titles/mwjsember/code/ch8/ember-note/app/components/edit-note/template.hbs)
+`ch8/ember-note/app/components/edit-note/template.hbs`（http://media.pragprog.com/titles/mwjsember/code/ch8/ember-note/app/components/edit-note/template.hbs）
 
 ```html
 <div>
@@ -3333,26 +3335,23 @@ test('it closes', function(assert) {
 });
 ```
 
-我们再次添加了 `Ember` 类，因为我们将在其中一个测试中使用用到运行循环。在 `moduleForComponent` 中，我们添加了对 `markdown-html` 插件的依赖，以便测试框架知道在渲染 `edit-note` 组件时使用该类。
+我们再次添加了`Ember`类，因为我们将在其中一个测试中使用到运行循环。在`moduleForComponent`中，我们添加了对`markdown-html`插件的依赖，以便测试框架知道在渲染`edit-note`组件时使用该类。
 
 “it renders”测试是 Ember CLI 的组件测试样板代码。我们没有对其进行修改。
 
+我们的第一个测试是“它保存”（it saves）测试。正如我们在模型测试中所看到的，该测试的第一项任务是创建被测试对象的实例。然后我们将其渲染到“屏幕”上。完成这些准备工作后，我们创建一个 mock 对象（模拟对象）来充当模型。这个 mock 对象只需要包含一个方法：`save`方法。在这种情况下，由于我们想要验证组件是否正确地调用了该方法，因此我们将断言放在此方法中。如果该方法被调用，将打印引用的消息并通过测试。
 
-
-
-我们的第一个测试是“它保存”（it saves）测试。正如我们在模型测试中所看到的，该测试的第一项任务是创建被测试对象的实例。然后我们将其渲染到“屏幕”上。完成这些准备工作后，我们创建一个 mock 对象（模拟对象）来充当模型。这个 mock 对象只需要包含一个方法：`save` 方法。在这种情况下，由于我们想要验证组件是否正确地调用了该方法，因此我们将断言放在此方法中。如果该方法被调用，将打印引用的消息并通过测试。
-
-创建好 mock 对象后，我们使用 `Ember.run` 方法来包裹 `component.set` 动作，因为由模型变化引起的重新渲染将异步发生，并带有副作用（即更新 DOM）。然后，我们对命名的按钮对象强制执行点击动作。这将触发组件的 `saveNote` 动作，该动作应该运行 mock 对象上的 `save` 函数。由于它确实运行了，所以我们的测试通过了。
+创建好 mock 对象后，我们使用`Ember.run`方法来包裹`component.set`动作，因为由模型变化引起的重新渲染将异步发生，并带有副作用（即更新 DOM）。然后，我们对命名的按钮对象强制执行点击动作。这将触发组件的`saveNote`动作，该动作应该运行 mock 对象上的`save`函数。由于它确实运行了，所以我们的测试通过了。
 
 “它关闭”（it closes）测试非常相似。我们获取一个组件实例，渲染它，并创建一个包含我们想要运行的方法 mock 对象。主要的区别在于我们连接测试对象的方式。
 
-由于我们的赋值没有副作用，我们能够在不使用 `Ember.run` 循环的情况下运行它们。我们将模板的 `close` 参数值设置为计划从 mock 对象中运行的，并将 `targetObject` 设置为我们的 mock 对象。在运行的应用中，包含此组件的路由充当目标角色。由于 `closeNote` 动作使用 `sendAction` 来工作，我们测试中的点击会调用 mock 对象中的 `closeAction`，我们的测试通过了。
+由于我们的赋值没有副作用，我们能够在不使用`Ember.run`循环的情况下运行它们。我们将模板的`close`参数值设置为计划从 mock 对象中运行的，并将`targetObject`设置为我们的 mock 对象。在运行的应用中，包含此组件的路由充当目标角色。由于`closeNote`动作使用`sendAction`来工作，我们测试中的点击会调用 mock 对象中的`closeAction`，我们的测试通过了。
 
 当然，你的组件可能包含不同的需要测试的自定义代码。这两个示例对于某些特定组件的特性很有用，例如确认组件是否正确处理了传入的模型，以及确认它是否正确处理了引用的动作。
 
 正如我之前提到的，单元测试最适合测试那些与应用级代码交互较少或需要复杂 mock 的。我们尚未涵盖的最主要对象类型是路由（routes）。我们不会在路由的单元测试上花费太多时间，是因为它们与应用级代码有大量的交互。因此，它们是验收测试的更好选择，而不是单元测试。
 
-你可能会编写许多针对模型或组件之外的对象类型的单元测试。虽然细节会随实现而异，但思路是相同的。从 `Ember CLI` 创建的测试蓝图开始，根据需要进行添加，以便在开发过程中确认你向类中添加的行为。
+你可能会编写许多针对模型或组件之外的对象类型的单元测试。虽然细节会随实现而异，但思路是相同的。从`Ember CLI`创建的测试蓝图开始，根据需要进行添加，以便在开发过程中确认你向类中添加的行为。
 
 单元测试对于低层级的工作非常棒，但在某些时刻，你会希望能够测试更完整的行为周期。为此，我们有了验收测试（acceptance testing），接下来我们将查看它。
 
@@ -3360,9 +3359,11 @@ test('it closes', function(assert) {
 
 验收测试用于测试整个应用程序中的一系列事件以确保获得正确的结果。这是遍历一组屏幕并对其进行测试的一种好方法。由于由于，我们在启动和运行方面需要花费更多工作，但它是确认功能甚至在添加代码时检测回归（regressions）的强大方法。
 
+
+
 在我们的情况下，我们将处理一个相对小的例子。我们将编写一个验收测试来确认我们的注册路由正在正确地注册有效用户。我们将创建一个测试，启动应用、导航到注册路由、填写表单并点击按钮，然后确认显示了正确的消息。
 
-由于验收测试针对你的应用高度定制，因此它们不会随着开发过程由 `Ember CLI` 生成。要启动验收测试，请从根根运行以下命令：
+由于验收测试针对你的应用高度定制，因此它们不会随着开发过程由`Ember CLI`生成。要启动验收测试，请从根目录运行以下命令：
 
 ```bash
 $ ember generate acceptance-test register
@@ -3400,7 +3401,7 @@ test('visiting /register', function(assert) {
 });
 ```
 
-我们将再次依赖一些属性，因此更新模板更新为如下所示（为输入、按钮和消息添加 id）：
+我们将再次依赖一些属性，因此更新模板为如下所示（为输入、按钮和消息添加 id）：
 
 ```handlebars
 <div class="col-12">
@@ -3412,83 +3413,77 @@ test('visiting /register', function(assert) {
 </div>
 ```
 
+如果你好奇，可以尝试一下`Inspector`。一个很好的开始方法是在留在登录页面时加载`Inspector`。在登录之前，切换到`Inspector`中的`Data`标签页。一旦登录，你应该能看到用户和笔记本模型类型开始反映出你已经加载了数据。
 
+另一个实用的功能是`Deprecations`（弃用）标签页。该标签页可以帮助你识别`Ember`框架过时的用法。如果你有正在迁移到`Ember 2`的现有代码，这对于迁移工作将非常有帮助。
 
-
-如果你好奇，可以尝试一下 `Inspector`。一个很好的开始方法是在留在登录页面时加载 `Inspector`。在登录之前，切换到 `Inspector` 中的 `Data` 标签页。一旦登录，你应该能看到用户和笔记本模型类型开始反映出你已经加载了数据。
-
-另一个实用的功能是 `Deprecations`（弃用）标签页。该标签页可以帮助你识别 `Ember` 框架过时的用法。如果你有正在迁移到 `Ember 2` 的现有代码，这对于迁移工作将非常有帮助。
-
-最后，`Inspector` 的 `Container`（容器）标签页（如图所示）显示了你创建的每一个对象，以及 Ember 为你创建的一些对象。这在观察对象中的数据（例如注入的服务，如我们的 `session` 对象）时会非常有用。
+最后，`Inspector`的`Container`（容器）标签页（如图所示）显示了你创建的每一个对象，以及`Ember`为你创建的一些对象。这在观察对象中的数据（例如注入的服务，如我们的`session`对象）时会非常有用。
 
 ![images/inspector.png](img/inspector.png)
 
-对于像 `Ember` 这样深层基于浏览器的对象模型，你需要丰富的调试工具。与许多事情一样，`Ember` 以一种有用且直观的方式解决了这个问题。在结束本章之前，让我们来看看你如何使用 `Ember CLI` 创建可部署的 `Ember` 制物。
+对于像`Ember`这样深层基于浏览器的对象模型，你需要丰富的调试工具。与许多事情一样，`Ember`以一种有用且直观的方式解决了这个问题。在结束本章之前，让我们来看看你如何使用`Ember CLI`创建可部署的`Ember`制物。
 
 ## 部署你的应用
 
-走到这一步路漫长，但你终于准备好部署你的应用了。你可能把它部署到开发服务器，也可能是生产服务器。无论哪种，你都会把它发布在某个处让世界看到。
+走到这一步路漫长，但你终于准备好部署你的应用了。你可能把它部署到开发服务器，也可能是生产服务器。无论哪种，你都会把它发布在某个地方让世界看到。
 
-`Ember CLI` 自带了一个命令，用于为应用程序创建一个可部署的产物集。从命令行提示符运行以下：
+`Ember CLI`自带了一个命令，用于为应用程序创建一个可部署的产物集。从命令行提示符运行以下命令：
 
-```
+```bash
 $ ember build
 ```
 
-这默认运行你构建的开发版本。生成的产物将位于 `ember-note/dist` 目录。这些产物包括一个以应用命名的 JavaScript 文件和样式表（`ember-note.js` 和 `ember-note.css`），以及一个包含这些文件依赖项的文件（`vendor.js` 和 `vendor.css`）。此外还包含许多其他文件以支持测试用程序，以及 `crossdomain.xml` 和 `robots.txt`，当然还有你的根 `index.html`。
+这默认运行你构建的开发版本。生成的产物将位于`ember-note/dist`目录。这些产物包括一个以应用命名的 JavaScript 文件和样式表（`ember-note.js`和`ember-note.css`），以及一个包含这些文件依赖项的文件（`vendor.js`和`vendor.css`）。此外还包含许多其他文件以支持测试用程序，以及`crossdomain.xml`和`robots.txt`，当然还有你的根`index.html`。
 
-但如果你想部署到生产环境，你有不同的需求。如果你查看 `ember-note.js`、`ember-note.css`、`vendor.js` 和 `vendor.css` 文件，它们相对容易阅读和调试。但它们也是臃肿的，而且名称始终相同，这意味着它们加载缓慢且会被浏览器缓存。
+但如果你想部署到生产环境，你有不同的需求。如果你查看`ember-note.js`、`ember-note.css`、`vendor.js`和`vendor.css`文件，它们相对容易阅读和调试。但它们也是臃肿的，而且名称始终相同，这意味着它们加载缓慢且会被浏览器缓存。
 
-要部署生产级构建，你需要运行带有设置了 `--environment production` 标志的 `ember build` 命令。这会生成这些文件的版本，它们在适当的地方进行了压缩，并进行了唯一命名以防止被缓存。测试文件被排除在外。这些产物可以放在你选择的高性能 Web 服务器上，你的应用就准备好面向世界了。这是另一个被 `Ember` 经常解决的难题。
+要部署生产级构建，你需要运行带有设置了`--environment production`标志的`ember build`命令。这会生成这些文件的版本，它们在适当的地方进行了压缩，并进行了唯一命名以防止被缓存。测试文件被排除在外。这些产物可以放在你选择的高性能 Web 服务器上，你的应用就准备好面向世界了。这是另一个被`Ember`经常解决的难题。
 
 ## 下一步工作
 
-我们已经看到了 `Ember CLI` 如何帮助你构建、测试、调试和部署应用。但我们还没有结束。在通过 `Ember` 交付你的杀手应用的过程中，你可能使用了一些插件（addons），并创建了一些你认为其他人会需要的代码。在最后一章中，我们将详细查看如何查找并安装插件到你的应用中。我们还将看到如何发布插件，是发布到供自己的应用共享的私有仓库，还是发布到与世界共享的公共仓库。
+我们已经看到了`Ember CLI`如何帮助你构建、测试、调试和部署应用。但我们还没有结束。在通过`Ember`交付你的杀手应用的过程中，你可能使用了一些插件（addons），并创建了一些你认为其他人会需要的代码。在最后一章中，我们将详细查看如何查找并安装插件到你的应用中。我们还将看到如何发布插件，是发布到供自己的应用共享的私有仓库，还是发布到与世界共享的公共仓库。
 
 ### 脚注
 
 | [[9]](#f_0057.html_FNPTR-9) | [`chrome.google.com/webstore/search`](https://chrome.google.com/webstore/search) |
+|---|---|
 | [[10]](#f_0057.html_FNPTR-10) | [`addons.mozilla.org`](https://addons.mozilla.org) |
 
 Copyright © 2015, The Pragmatic Bookshelf.
 
 # 第 9 章：构建和使用 Ember 插件
 
-在整本书中，我们看到了许多 `Ember` 插件的示例。插件是用于 `Ember` 应用程序的模块化代码段。插件可以让你的工作变得更容易，而围绕创建和共享 `Ember` 插件的社区精神是使用 `Ember` 最具吸引力的原因之一。
+在整本书中，我们看到了许多`Ember`插件的示例。插件是用于`Ember`应用程序的模块化代码段。插件可以让你的工作变得更容易，而围绕创建和共享`Ember`插件的社区精神是使用`Ember`最具吸引力的原因之一。
 
-在本章中，我们将深入研究插件的生命周期。首先，你将学习如何安装插件，我们之前在嵌套组件 中已经提到过，但稍后我们会进行更详细的介绍。接下来，我们将讨论如何开发自己的插件，然后让其他 `Ember` 开发者可以使用它，这样你就可以分享你制作的酷东西了。没有什么比回馈社区更令人满足感的了（除非是制作了被广泛使用的东西而获得的炫耀权利）。
+在本章中，我们将深入研究插件的生命周期。首先，你将学习如何安装插件，我们之前在嵌套组件中已经提到过，但稍后我们会进行更详细的介绍。接下来，我们将讨论如何开发自己的插件，然后让其他`Ember`开发者可以使用它，这样你就可以分享你制作的酷东西了。没有什么比回馈社区更令人满足感的了（除非是制作了被广泛使用的东西而获得的炫耀权利）。
 
 首先，让我们回顾如何将插件安装到我们的应用中。
 
 ## 安装 Ember 插件
 
-从技术上讲，Ember 插件并不是 `Ember` 的功能，而是 `Ember CLI` 的。这种区别很重要，因为如果你决定在不使用 `Ember CLI` 的情况下使用 `Ember`，本章将不再适用。如果你想要插件，你需要 `Ember CLI`。
+从技术上讲，`Ember`插件并不是`Ember`的功能，而是`Ember CLI`的。这种区别很重要，因为如果你决定在不使用`Ember CLI`的情况下使用`Ember`，本章将不再适用。如果你想要插件，你需要`Ember CLI`。
 
-当你查看如何获取 `Ember` 插件时，这一点就显而易见了。我们已经在嵌套组件 中做过一次，当时我们引入了 `ember-showdown` 插件来格式化文本。为了获取该插件，我们在 `ember-note` 目录下运行了以下命令：
+当你查看如何获取`Ember`插件时，这一点就显而易见了。我们已经在嵌套组件中做过一次，当时我们引入了`ember-showdown`插件来格式化文本。为了获取该插件，我们在`ember-note`目录下运行了以下命令：
 
-```
+```bash
 $ ember install ember-showdown
 ```
 
-当你运行此命令时，`Ember CLI` 会在 npm 数据库中搜索所需的插件并将其安装到项目的 `node_modules` 目录中。你可以像使用其他代码一样使用该插件。插件的文档（通常包含在 `README.md` 文件中）应该描述如何使用该插件。
+当你运行此命令时，`Ember CLI`会在 npm 数据库中搜索所需的插件并将其安装到项目的`node_modules`目录中。你可以像使用其他代码一样使用该插件。插件的文档（通常包含在`README.md`文件中）应该描述如何使用该插件。
 
-发现可用插件有多种方法。我的偏好（我在写这本书时经常使用）是通过 Ember Observer。1 Ember Observer 提供了一个存储在 npm 中的插件目录，但通过对这些插件进行评分来评估它们的健康状况和成熟度。这些指标告诉你插件是否开源、代码、测试和文档的质量、插件持续集成实践的质量、插件是否活跃维护以及插件在 GitHub 上的人气。一旦找到了你想使用的插件，`README.md` 文件通常会告诉你如何使用。
+发现可用插件有多种方法。我的偏好（我在写这本书时经常使用）是通过 Ember Observer。1 Ember Observer 提供了一个存储在 npm 中的插件目录，但通过对这些插件进行评分来评估它们的健康状况和成熟度。这些指标告诉你插件是否开源、代码、测试和文档的质量、插件持续集成实践的质量、插件是否活跃维护以及插件在 GitHub 上的人气。一旦找到了你想使用的插件，`README.md`文件通常会告诉你如何使用。
 
 ## 开发你自己的插件
 
-如果你使用 `Ember` 和 `Ember CLI` 足够久，你会发现你需要在应用之间共享代码，无论是让多个应用指向私有 Git 仓库中的插件，还是通过 npm 公开发发布你的插件。我们已经看到了如何在应用内获取和使用第三方插件。现在，让我们讨论如何创建一个可以在应用间共享甚至供他人使用的插件。
+如果你使用`Ember`和`Ember CLI`足够久，你会发现你需要在应用之间共享代码，无论是让多个应用指向私有 Git 仓库中的插件，还是通过 npm 公开发布你的插件。我们已经看到了如何在应用内获取和使用第三方插件。现在，让我们讨论如何创建一个可以在应用间共享甚至供他人使用的插件。
 
-Ember 插件的一个自然用途是创建一个复用的 Web 组件库。存在许多此类库包含复用的 Web 控件，如按钮或菜单栏；我们在书中讨论过几个。让我们现在就开始创建一个小型库，包含单个控件：一个 Bootstrap 风格的下拉列表，我们将用它来替换 EmberNote 应用中的笔记本列表，改为笔记本记录的下拉列表。当用户从列表中选择一项时，该下拉列表将切换到选定的笔记本。
+`Ember`插件的一个自然用途是创建一个复用的 Web 组件库。存在许多此类库包含复用的 Web 控件，如按钮或菜单栏；我们在书中讨论过几个。让我们现在就开始创建一个小型库，包含单个控件：一个 Bootstrap 风格的下拉列表，我们将用它来替换 EmberNote 应用中的笔记本列表，改为笔记本记录的下拉列表。当用户从列表中选择一项时，该下拉列表将切换到选定的笔记本。
 
-我们将首先使用 Ember CLI 创建插件的基本结构。
+我们将首先使用`Ember CLI`创建插件的基本结构。
 
 ### 创建插件
 
-
-
-
-
-当你创建一个插件（addon）时，你并不是在创建一个属于现有应用程序的类。你实际上是在创建一个全新的代码库。因此，自第 1 章以来的第一次，我们将离开 `ember-note` 目录树，并为此插件创建一个新的目录结构。首先，导航到 `ember-note` 目录的父目录。然后，以管理员权限的用户身份运行以下命令，这将创建一个新目录：
+当你创建一个插件（addon）时，你并不是在创建一个属于现有应用程序的类。你实际上是在创建一个全新的代码库。因此，自第 1 章以来的第一次，我们将离开`ember-note`目录树，并为此插件创建一个新的目录结构。首先，导航到`ember-note`目录的父目录。然后，以管理员权限的用户身份运行以下命令，这将创建一个新目录：
 
 ```bash
 $ ember addon ember-bs-dropdown
@@ -3503,21 +3498,21 @@ $ cd ember-bs-dropdown
 $ bower install bootstrap --save
 ```
 
-由于我们之前已经安装过 Bootstrap，`bower install` 命令会检查本地缓存中的 Bootstrap。它很可能会缓存中找到 Bootstrap，但我们仍然需要运行此命令，因为它还会将 Bootstrap 作为依赖项添加到插件中。`bower install` 命令通过编辑插件的 `bower.json` 文件来包含 Bootstrap 以实现此操作。现在你的项目已经有了 Bootstrap，我们准备好生成我们的组件了。运行以下命令：
+由于我们之前已经安装过 Bootstrap，`bower install`命令会检查本地缓存中的 Bootstrap。它很可能会缓存中找到 Bootstrap，但我们仍然需要运行此命令，因为它还会将 Bootstrap 作为依赖项添加到插件中。`bower install`命令通过编辑插件的`bower.json`文件来包含 Bootstrap 以实现此操作。现在你的项目已经有了 Bootstrap，我们准备好生成我们的组件了。运行以下命令：
 
 ```bash
 $ ember generate component bs-dropdown --pod
 ```
 
-这些应该对你来说都很熟悉。到目前为止，创建插件和应用程序最大的区别仅仅在于初始命令：应用程序使用 `ember new`；插件使用 `ember addon`。
+这些应该对你来说都很熟悉。到目前为止，创建插件和应用程序最大的区别仅仅在于初始命令：应用程序使用`ember new`；插件使用`ember addon`。
 
 如果你查看插件的目录结构，它也是你熟悉的，但有一个例外：在顶层有一个插件目录，它与应用程序目录处于同一级。
 
-这在起初可能让人感到困惑，但这样做充分充分。当你在 Ember 应用程序中包含插件时，插件代码会被放置在应用程序的 `node_modules` 目录中。然而，像其他东西一样，你可能想要扩展插件模块。应用程序目录中的文件成为你应用程序命名空间的一部分，并可以被你的应用程序扩展，如图所示。
+这在起初可能让人感到困惑，但这样做充分充分。当你在 Ember 应用程序中包含插件时，插件代码会被放置在应用程序的`node_modules`目录中。然而，像其他东西一样，你可能想要扩展插件模块。应用程序目录中的文件成为你应用程序命名空间的一部分，并可以被你的应用程序扩展，如图所示。
 
 ![images/addon-app.png](img/addon-app.png)
 
-之前当我们运行 `ember generate component bs-dropdown --pod` 命令时，它生成了三个文件。其中两个是使用标准组件生成的 `component.js` 和 `template.hbs` 文件。让我们来看这些文件。
+之前当我们运行`ember generate component bs-dropdown --pod`命令时，它生成了三个文件。其中两个是使用标准组件生成的`component.js`和`template.hbs`文件。让我们来看这些文件。
 
 首先，生成的组件看起来像：
 
@@ -3551,9 +3546,9 @@ export default Ember.Component.extend({
 {{yield}}
 ```
 
-这些代码大部分是创建下拉菜单的 Bootstrap 样板代码。`{{dropdownName}}` 表达式用于将值传递给组件，该值将作为下拉菜单的默认显示值。`{{each}}` 表达式遍历传入的可显示项目模型。每个项目都会变成下拉菜单中的单行。
+这些代码大部分是创建下拉菜单的 Bootstrap 样板代码。`{{dropdownName}}`表达式用于将值传递给组件，该值将作为下拉菜单的默认显示值。`{{each}}`表达式遍历传入的可显示项目模型。每个项目都会变成下拉菜单中的单行。
 
-下拉菜单中的每一行都由 `{{link-to}}` 表达式组成。在构建这些表达式时，我们依赖三部分数据。首先，我们传入目标路由名称，这样我们就知道该去哪里。然后，我们使用记录的 `id` 作为 `link-to` 的参数，并将记录的 `title` 作为显示值。
+下拉菜单中的每一行都由`{{link-to}}`表达式组成。在构建这些表达式时，我们依赖三部分数据。首先，我们传入目标路由名称，这样我们就知道该去哪里。然后，我们使用记录的`id`作为`link-to`的参数，并将记录的`title`作为显示值。
 
 让我们快速看一下在应用程序中创建的组件：
 
@@ -3569,17 +3564,17 @@ export default Ember.Component.extend({
 
 这些就是我们需要的。之前的类简单地实例化了一个组件。我们的模板稍微详细一点：
 
-这些代码大部分是创建下拉菜单的 Bootstrap 样板代码。`{{dropdownName}}` 表达式用于将值传递给组件，该值将作为下拉菜单的默认显示值。`{{each}}` 表达式遍历传入的可显示项目模型。每个项目都会变成下拉菜单中的单行。
+这些代码大部分是创建下拉菜单的 Bootstrap 样板代码。`{{dropdownName}}`表达式用于将值传递给组件，该值将作为下拉菜单的默认显示值。`{{each}}`表达式遍历传入的可显示项目模型。每个项目都会变成下拉菜单中的单行。
 
-下拉菜单中的每一行都由 `{{link-to}}` 表达式组成。在构建这些表达式时，我们依赖三部分数据。首先，我们传入目标路由名称，这样我们就知道该去哪里。然后，我们使用记录的 `id` 作为 `link-to` 的参数，并将记录的 `title` 作为显示值。
+下拉菜单中的每一行都由`{{link-to}}`表达式组成。在构建这些表达式时，我们依赖三部分数据。首先，我们传入目标路由名称，这样我们就知道该去哪里。然后，我们使用记录的`id`作为`link-to`的参数，并将记录的`title`作为显示值。
 
-这就是开发插件所需的所有内容。我们需要做一些工作来使其可用。首先，我们需要告诉 Ember CLI 在构建插件时使用 HTMLBars。从项目中运行以下命令：
+这就是开发插件所需的所有内容。我们需要做一些工作来使其可用。首先，我们需要告诉`Ember CLI`在构建插件时使用 HTMLBars。从项目中运行以下命令：
 
 ```bash
 $ npm install htmlbars --save
 ```
 
-我们还需要确保插件带有 Bootstrap 文件构建。然而，我们不会使用 `ember-build.js` 文件来实现。每个应用程序只有一个 `ember-build.js`，所以即使我们将 Bootstrap 资源添加到插件的 `ember-build.js` 中，应用程序在包含它时也会忽略插件的 `ember-build.js` 并使用它自己的。相反，我们在插件的入口 `index.js` 中添加这些资源：
+我们还需要确保插件带有 Bootstrap 文件构建。然而，我们不会使用`ember-build.js`文件来实现。每个应用程序只有一个`ember-build.js`，所以即使我们将 Bootstrap 资源添加到插件的`ember-build.js`中，应用程序在包含它时也会忽略插件的`ember-build.js`并使用它自己的。相反，我们在插件的入口`index.js`中添加这些资源：
 
 ```javascript
 /* jshint node: true */
@@ -3597,31 +3592,29 @@ module.exports = {
 };
 ```
 
+该插件现在已准备好在 EmberNote 应用中使用。首先，我们需要让 EmberNote 看到该插件。当你在为`ember-bs-dropdown`插件和 EmberNote 应用都使用本地环境时，你可以使用一组`npm`命令使插件包在本地可用。我们将在发布你的插件中介绍如何将插件发布到`npm`或私有存储库。
+
+要让你的本地 npm 缓存感知到该插件，请在`ember-bs-dropdown`目录下运行以下命令：
 
 
-
-
-该插件现在已准备好在 EmberNote 应用中使用。首先，我们需要让 EmberNote 看到该插件。当你在为 `ember-bs-dropdown` 插件和 EmberNote 应用都使用本地环境时，你可以使用一组 `npm` 命令使插件包在本地可用。我们将在发布你的插件中介绍如何将插件发布到 `npm` 或私有存储库。
-
-要让你的本地 npm 缓存感知到该插件，请在 `ember-bs-dropdown` 目录下运行以下命令：
 
 ```bash
 $ npm link
 ```
 
-此命令会创建一个从本地 npm 缓存到你的插件项目的符号链接。该链接允许你本地机器上的其他项目使用你的插件，但需要额外执行一个步骤。你的本地应用也需要创建一个指向 Ember 插件的链接。因此，从 `ember-note-` 目录运行以下命令：
+此命令会创建一个从本地 npm 缓存到你的插件项目的符号链接。该链接允许你本地机器上的其他项目使用你的插件，但需要额外执行一个步骤。你的本地应用也需要创建一个指向 Ember 插件的链接。因此，从`ember-note-`目录运行以下命令：
 
 ```bash
 $ npm link ember-bs-dropdown
 ```
 
-EmberNote 应用现在能够定位到我们创建的插件了。然而，尽管我们已经为应用提供了查看插件的路径，但它仍然感知不到它。如果你有一个正在运行的 `ember serve` 实例，请现在停止它。然后，将以下行添加到位于根目录的 EmberNote `package.json` 文件的 `devDependencies` 部分的最底端（确保在上一行的末尾添加逗号）：
+EmberNote 应用现在能够定位到我们创建的插件了。然而，尽管我们已经为应用提供了查看插件的路径，但它仍然感知不到它。如果你有一个正在运行的`ember serve`实例，请现在停止它。然后，将以下行添加到位于根目录的 EmberNote `package.json` 文件的`devDependencies`部分的最底端（确保在上一行的末尾添加逗号）：
 
 ```json
 "ember-bs-dropdown": "*"
 ```
 
-现在，当我们下次运行 `ember serve` 时，应用将看到该下拉组件。先不要急着尝试；我们还需要对 EmberNote 应用进行最后一次更改。打开笔记本模板并将其修改为如下所示：
+现在，当我们下次运行`ember serve`时，应用将看到该下拉组件。先不要急着尝试；我们还需要对 EmberNote 应用进行最后一次更改。打开笔记本模板并将其修改为如下所示：
 
 ```handlebars
 <!-- ch9/ember-note/app/notebooks/template.hbs -->
@@ -3642,9 +3635,9 @@ EmberNote 应用现在能够定位到我们创建的插件了。然而，尽管�
 </div>
 ```
 
-我们已经为新的插件组件替换了大量的代码。我们使用 `{{bs-dropdown}}` 表达式来引用我们的自定义组件。表达式中的 `model=model` 部分将笔记本模型传递到组件中。因为该模型类包含了正确的属性，即 `id` 和 `title` 属性，所以它应该运行良好良好。我们将 `notebooks.notes` 路由名作为下拉列表的目标路由，并将“Notebooks”作为默认的下拉值。
+我们已经为新的插件组件替换了大量的代码。我们使用`{{bs-dropdown}}`表达式来引用我们的自定义组件。表达式中的`model=model`部分将笔记本模型传递到组件中。因为该模型类包含了正确的属性，即`id`和`title`属性，所以它应该运行良好良好。我们将`notebooks.notes`路由名作为下拉列表的目标路由，并将“Notebooks”作为默认的下拉值。
 
-在这一切生效之前，我们需要对应用进行最后一次更改。我们需要从 `ember-cli-build.js` 中移除 Bootstrap 资源。如果留着它们那里，`ember serve` 命令会报错说我们定义了两次。由于我们现在依赖一个基于 Bootstrap 的插件来处理组件，我们将让它来定义我们使用的版本。将 `ember-cli-build.js` 文件修改如下如下：
+在这一切生效之前，我们需要对应用进行最后一次更改。我们需要从`ember-cli-build.js`中移除 Bootstrap 资源。如果留着它们那里，`ember serve`命令会报错说我们定义了两次。由于我们现在依赖一个基于 Bootstrap 的插件来处理组件，我们将让它来定义我们使用的版本。将`ember-cli-build.js`文件修改如下如下：
 
 ```javascript
 /* ch9/ember-note/ember-cli-build.js */
@@ -3666,24 +3659,21 @@ module.exports = function(defaults) {
 };
 ```
 
-
-
-
-Ember 在许多方面都是一个成熟的框架，并提供了许多开箱即用的优秀特性。然而，许多功能对很多开发者可能有用，但并不属于核心框架。这就是为什么 Ember 生态系统中最具吸引力的特性之一是 Ember 插件（addon）。
+Ember 在许多方面都是一个成熟的框架，并提供了许多开箱即用的优秀特性。然而，许多功能对很多开发者可能有用，但并不属于核心框架。这就是为什么 Ember 生态系统中最具吸引力的特性之一是 Ember 插件（`addon`）。
 
 此外，Ember 的内容远比我们在这里涵盖的要。Ember 团队在维护项目文档方面做得非常出色。如果你遇到我们没有讨论过的用例，很有可能 Ember 本身已经考虑了它，或者有相应的插件可以实现。因此，请查看 Ember 网站上的文档或 Ember Observer！
 
-### Ember 项目
+## Ember 项目
 
 Ember 项目始终向前发展，在任何时候都有许多正在开发中的优秀功能，这些功能无疑对你非常有帮助。我会尽力保持这本书的更新性，但也鼓励你查看以下资源以跟上项目动态：
 
-* Ember 官网：[`emberjs.com`](http://emberjs.com)
-* GitHub 上的 Ember：[`github.com/emberjs`](https://github.com/emberjs)
-* Ember CLI：[`www.ember-cli.com`](http://www.ember-cli.com)
-* Ember Weekly：[`emberweekly.com`](http://emberweekly.com)
-* Ember Observer：[`emberobserver.com`](http://emberobserver.com)
+- Ember 官网：[`emberjs.com`](http://emberjs.com)
+- GitHub 上的 Ember：[`github.com/emberjs`](https://github.com/emberjs)
+- Ember CLI：[`www.ember-cli.com`](http://www.ember-cli.com)
+- Ember Weekly：[`emberweekly.com`](http://emberweekly.com)
+- Ember Observer：[`emberobserver.com`](http://emberobserver.com)
 
-最后，我想感谢你花时间阅读这本书。我希望你发现它对你有帮助。如果你有任何意见或疑虑，请通过论坛 [`forums.pragprog.com/forums/368`](https://forums.pragprog.com/forums/368) 或勘误说明页面 [`pragprog.com/titles/mwjsember/errata`](https://pragprog.com/titles/mwjsember/errata) 与我们分享。编程愉快！
+最后，我想感谢你花时间阅读这本书。我希望你发现它对你有帮助。如果你有任何意见或疑虑，请通过论坛[`forums.pragprog.com/forums/368`](https://forums.pragprog.com/forums/368)或勘误说明页面[`pragprog.com/titles/mwjsember/errata`](https://pragprog.com/titles/mwjsember/errata)与我们分享。编程愉快！
 
 #### 脚脚
 
@@ -3697,5 +3687,5 @@ Copyright © 2015, The Pragmatic Bookshelf.
 
 ![](http://pragmaticprogrammer.com/titles/bhh52e)![](http://pragmaticprogrammer.com/titles/tbajs)![](http://pragmaticprogrammer.com/titles/mcmath)![](http://pragmaticprogrammer.com/titles/jkthp)
 
-* * *
+---
 

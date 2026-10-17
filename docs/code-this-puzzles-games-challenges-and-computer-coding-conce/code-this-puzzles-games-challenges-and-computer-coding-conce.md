@@ -1,32 +1,11 @@
+
 # Code this！：为问题解决者准备的谜题、游戏、挑战与计算机编程概念！
-
-
-
-
-
-
-
-
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_5_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_8_0.png)
 
-
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_8_1.png)
-
 
 > 我是一个毛球黑客
 
@@ -34,7 +13,7 @@
 
 # 引言
 
-# 编码与计算机科学
+## 编码与计算机科学
 
 这本书的标题是《动手编程！》，但实际上我们要学习两件事。其一是思考如何解决通用问题的艺术，这被称为计算机科学。另一件是解释如何执行某个特定任务的艺术，这被称为编程或编码。我们把它们统称为“艺术”，因为它们需要与你绘画、唱歌或讲故事时同样的创造力。
 
@@ -42,9 +21,9 @@
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_9_0.png)
 
-# 实际应用
+## 实际应用
 
-## 我们用计算机科学做什么？
+### 我们用计算机科学做什么？
 
 几乎可以做任何事！世界越来越依赖计算机——通过互联网发送和接收信息、使用手机、看电视以及玩游戏。甚至你现在拿着的这本书也是在计算机上写出来的。
 
@@ -68,7 +47,7 @@
 
 # 逻辑思维
 
-# 什么是逻辑？
+## 什么是逻辑？
 
 优秀的编码者在处理问题时总是考虑逻辑。逻辑就是以合理的方式思考某件事。早上穿衣服时，你不会先穿鞋再穿袜子吧？那不符合逻辑。如果目标是把袜子穿在鞋子里，先穿袜子才更符合逻辑——更合理。
 
@@ -76,7 +55,7 @@
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_11_1.png)
 
-# 计算机逻辑
+## 计算机逻辑
 
 > 如果我的计算机要“运行”我的程序，它需要袜子和鞋！
 
@@ -86,7 +65,7 @@
 
 动手编程！
 
-# 为什么计算机需要代码？
+## 为什么计算机需要代码？
 
 计算机就像其他工具。螺丝刀不会自己把螺丝拧进板里。需要人拿起螺丝刀，将正确的端对准螺丝，将螺丝刀尖与螺丝上的槽对齐，向下按，按正确的方向旋转螺丝，直到螺丝到位。
 
@@ -98,7 +77,7 @@
 
 ## 认识青蛙
 
-认识 Frontus 机器人蛙（不是真正的青蛙也不是真正的机器人）。这个机器人是一个非常简单的计算机。它只能向前跳——而且一次只能跳一下。而且和所有计算机一样，它不会做任何没有被程序过的事情！
+认识 `Frontus` 机器人蛙（不是真正的青蛙也不是真正的机器人）。这个机器人是一个非常简单的计算机。它只能向前跳——而且一次只能跳一下。而且和所有计算机一样，它不会做任何没有被程序过的事情！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_0.png)
 
@@ -120,10 +99,6 @@
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_5.png)
 
-
-
-
-
 ## 认识区块命令
 
 初学计算机编程的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
@@ -132,24 +107,458 @@
 JUMP FORWARD
 ```
 
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人（Frogbot）将从顶部开始执行命令，直到底部。
+要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人（`Frogbot`）将从顶部开始执行命令，直到底部。
 
-- START（开始）
-- JUMP FORWARD（向前跳）
-- TURN LEFT（左转）
-- JUMP FORWARD（向前跳）
-- TURN RIGHT（右转）
-- JUMP FORWARD（向前跳）
-- JUMP FORWARD（向前跳）
-- TURN RIGHT（右转）
-- JUMP FORWARD（向前跳）
-- TURN LEFT（左转）
-- JUMP FORWARD（向前跳）
-- STOP（停止）
+- `START`（开始）
+- `JUMP FORWARD`（向前跳）
+- `TURN LEFT`（左转）
+- `JUMP FORWARD`（向前跳）
+- `TURN RIGHT`（右转）
+- `JUMP FORWARD`（向前跳）
+- `JUMP FORWARD`（向前跳）
+- `TURN RIGHT`（右转）
+- `JUMP FORWARD`（向前跳）
+- `TURN LEFT`（左转）
+- `JUMP FORWARD`（向前跳）
+- `STOP`（停止）
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
+（持续）
+
+如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
+
+### 第二 步
+
+如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
+
+```
+JUMP FORWARD
+```
+
+所以，整个代码将是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+### 第一 步
+
+如果你使用命令区块：
+
+```
+JUMP FORWARD
+```
+
+青蛙机器人将向前移动一个格。
+
+跳跃看起来很有趣！
+
+## 欢迎来到我的领地。
+
+也许你可以教我一些新招式！
+
+## 试试看
+
+（持续）
+
+让我们添加一个新的命令区块：
+
+```
+TURN LEFT
+```
+
+当青蛙机器人到达这个命令区块时，它将向左转，像这样：
+
+你如何使用命令区块来帮助青蛙机器人过小溪？
+
+就是这样：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
+
+如果你写了：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+看起来像：
+
+```
+START
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
+
+## 再试一次
+
+编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
+
+### START
+
+### 提示：共有 6 步
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以 这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+
+
+## 认识区块命令
+
+初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
+
+```
+JUMP FORWARD
+```
+
+要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
+
+- `START`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
+
+## 试试看
+
+（持续）
+
+如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
+
+### 第二步
+
+如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
+
+```
+JUMP FORWARD
+```
+
+所以，整个代码将是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+### 第一步
+
+如果你使用命令区块：
+
+```
+JUMP FORWARD
+```
+
+青蛙机器人将向前移动一个格。
+
+跳跃看起来很有趣！
+
+## 欢迎来到我的领地。
+
+也许你可以教我一些新招式！
+
+## 试试看
+
+（持续）
+
+让我们添加一个新的命令区块：
+
+```
+TURN LEFT
+```
+
+当青蛙机器人到达这个命令区块时，它将向左转，像这样：
+
+你如何使用命令区块来帮助青蛙机器人过小溪？
+
+就是这样：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
+
+如果你写了：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+看起来像：
+
+```
+START
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
+
+## 再试一次
+
+编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
+
+### START
+
+### 提示：共有 6 步
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+
+
+# 欢迎来到我的领地。
+
+也许你可以教我一些新招式！
+
+## 试试看
+
+（持续）
+
+让我们添加一个新的命令区块：
+
+```
+TURN LEFT
+```
+
+当青蛙机器人到达这个命令区块时，它将向左转，像这样：
+
+你如何使用命令区块来帮助青蛙机器人过小溪？
+
+就是这样：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
+
+如果你写了：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+看起来像：
+
+```
+START
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
+
+## 再试一次
+
+编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
+
+## START
+
+## 提示：共有 6 步
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以 这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+# 认识区块命令
+
+初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
+
+```
+JUMP FORWARD
+```
+
+要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
+
+- `START`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
+
+## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -183,11 +592,116 @@ JUMP FORWARD
 
 跳跃看起来很有趣！
 
+
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以 这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+## 认识区块命令
+
+初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
+
+```
+JUMP FORWARD
+```
+
+要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
+
+- `START`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
+
+## 试试看
+
+（持续）
+
+如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
+
+## 第二步
+
+如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
+
+```
+JUMP FORWARD
+```
+
+所以，整个代码将是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+## 第一步
+
+如果你使用命令区块：
+
+```
+JUMP FORWARD
+```
+
+青蛙机器人将向前移动一个格。
+
+跳跃看起来很有趣！
+
 ## 欢迎来到我的领地。
 
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -210,7 +724,254 @@ TURN LEFT
 
 如果你写了：
 
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
 看起来像：
+
+```
+START
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
+
+## 再试一次
+
+编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
+
+## START
+
+## 提示：共有 6 步
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以 这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+
+
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
+
+## 试试看
+
+（持续）
+
+如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
+
+## 第二步
+
+如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
+
+```
+JUMP FORWARD
+```
+
+所以，整个代码将是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+## 第一步
+
+如果你使用命令区块：
+
+```
+JUMP FORWARD
+```
+
+青蛙机器人将向前移动一个格。
+
+跳跃看起来很有趣！
+
+## 欢迎来到我的领地。
+
+也许你可以教我一些新招式！
+
+## 试试看
+
+（持续）
+
+让我们添加一个新的命令区块：
+
+```
+TURN LEFT
+```
+
+当青蛙机器人到达这个命令区块时，它将向左转，像这样：
+
+你如何使用命令区块来帮助青蛙机器人过小溪？
+
+就是这样：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
+
+如果你写了：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+看起来像：
+
+```
+START
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
+
+## 再试一次
+
+编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
+
+## START
+
+## 提示：共有 6 步
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+## 代码框
+
+| 跳到此项 |
+| :--- |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+所以，这里是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+所以这里的答案是：
+
+```
+START
+JUMP FORWARD
+JUMP FORWARD
+TURN LEFT
+JUMP FORWARD
+TURN RIGHT
+JUMP FORWARD
+JUMP FORWARD
+STOP
+```
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+## 认识区块命令
+
+初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
+
+```
+JUMP FORWARD
+```
+
+要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
+
+- `START`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
+
+
 
 ```
 START
@@ -261,13 +1022,17 @@ STOP
 
 所以，这里是：
 
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -277,6 +1042,7 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
@@ -308,6 +1074,7 @@ JUMP FORWARD
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -346,6 +1113,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -368,8 +1136,6 @@ TURN LEFT
 
 如果你写了：
 
-看起来像：
-
 ```
 START
 JUMP FORWARD
@@ -377,6 +1143,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -418,12 +1186,18 @@ STOP
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
+
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -433,6 +1207,7 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
@@ -464,6 +1239,7 @@ JUMP FORWARD
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -502,6 +1278,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -524,8 +1301,6 @@ TURN LEFT
 
 如果你写了：
 
-看起来像：
-
 ```
 START
 JUMP FORWARD
@@ -533,6 +1308,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -574,12 +1351,18 @@ STOP
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
+
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -589,6 +1372,7 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
@@ -620,6 +1404,7 @@ JUMP FORWARD
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -658,6 +1443,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -680,8 +1466,6 @@ TURN LEFT
 
 如果你写了：
 
-看起来像：
-
 ```
 START
 JUMP FORWARD
@@ -689,6 +1473,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -730,12 +1516,18 @@ STOP
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
+
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -745,6 +1537,7 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
@@ -776,6 +1569,7 @@ JUMP FORWARD
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -814,6 +1608,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -836,8 +1631,6 @@ TURN LEFT
 
 如果你写了：
 
-看起来像：
-
 ```
 START
 JUMP FORWARD
@@ -845,6 +1638,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -886,12 +1681,18 @@ STOP
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
+
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -901,6 +1702,7 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
@@ -932,6 +1734,7 @@ JUMP FORWARD
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
@@ -970,6 +1773,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -992,8 +1796,6 @@ TURN LEFT
 
 如果你写了：
 
-看起来像：
-
 ```
 START
 JUMP FORWARD
@@ -1001,6 +1803,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -1042,12 +1846,18 @@ STOP
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
+
 所以 这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -1057,10 +1867,9 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
 
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
 
 ## 认识区块命令
 
@@ -1072,27 +1881,28 @@ JUMP FORWARD
 
 要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
 
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
+- `START`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `JUMP FORWARD`
+- `TURN RIGHT`
+- `JUMP FORWARD`
+- `TURN LEFT`
+- `JUMP FORWARD`
+- `STOP`
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
 
 ## 试试看
+
 （持续）
 
 如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
 
-## 第二 步
+## 第二步
 
 如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
 
@@ -1109,7 +1919,7 @@ JUMP FORWARD
 STOP
 ```
 
-## 第一 步
+## 第一步
 
 如果你使用命令区块：
 
@@ -1126,6 +1936,7 @@ JUMP FORWARD
 也许你可以教我一些新招式！
 
 ## 试试看
+
 （持续）
 
 让我们添加一个新的命令区块：
@@ -1141,14 +1952,10 @@ TURN LEFT
 就是这样：
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
 
 如果你写了：
-
-看起来像：
 
 ```
 START
@@ -1157,6 +1964,8 @@ JUMP FORWARD
 JUMP FORWARD
 STOP
 ```
+
+看起来像：
 
 ```
 START
@@ -1178,32 +1987,35 @@ STOP
 ## 提示：共有 6 步
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
 
 ## 代码框
 
 | 跳到此项 |
 | :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
+| `START` |
+| `JUMP FORWARD` |
+| `TURN LEFT` |
+| `TURN RIGHT` |
+| `STOP` |
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
 
 所以，这里是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
 JUMP FORWARD
 STOP
-所以 这里的答案是：
+```
+
+所以这里的答案是：
+
+```
 START
 JUMP FORWARD
 JUMP FORWARD
@@ -1213,3271 +2025,12 @@ TURN RIGHT
 JUMP FORWARD
 JUMP FORWARD
 STOP
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
 
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-![](img/ff0a36fd32e78d54bbbb789af8cd599c4_18_5.png)
-
-所以，这里是：
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-所以 这里的答案是：
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-...（省略重复图片）
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| ... | ...
-
-/img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
-
-所以，这里是：
-```
-J
-JJ
-J
-JJ
-J
-JJ
- FOR
-
-
-```
-这里的答案是：
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-TURN RIGHT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-（注：由于原文中存在大量重复和占位符，翻译已根据逻辑进行了精简对齐，保留了所有格式要求）
-
-[/content]
-
-*(抱歉，由于您提供的文本中包含大量的重复段落和不完整的占位符，我按照逻辑进行了清理和翻译。以下是基于您文本逻辑的完整质量翻译：)*
-
-[content]
-
-## 认识区块命令
-
-初学计算机的学生学习使用我们所谓的“区块命令”来编写代码。命令是计算机遵循的指令。在本书中，一个区块命令看起来像这样：
-
-```
-JUMP FORWARD
-```
-
-要编写代码，你只需要在列表中将代码块像列表一样堆叠在一起即可。青蛙机器人将从顶部开始执行命令，直到底部。
-
-- START
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- JUMP FORWARD
-- TURN RIGHT
-- JUMP FORWARD
-- TURN LEFT
-- JUMP FORWARD
-- STOP
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)
-
-## 试试看
-（持续）
-
-如果青蛙机器人需要到达花朵，你会如何使用命令区块呢？
-
-## 第二 步
-
-如果你想让青蛙机器人再跳一个格到达花朵，你需要添加第二个命令区块。
-
-```
-JUMP FORWARD
-```
-
-所以，整个代码将是：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-## 第一 步
-
-如果你使用命令区块：
-
-```
-JUMP FORWARD
-```
-
-青蛙机器人将向前移动一个格。
-
-跳跃看起来很有趣！
-
-## 欢迎来到我的领地。
-
-也许你可以教我一些新招式！
-
-## 试试看
-（持续）
-
-让我们添加一个新的命令区块：
-
-```
-TURN LEFT
-```
-
-当青蛙机器人到达这个命令区块时，它将向左转，像这样：
-
-你如何使用命令区块来帮助青蛙机器人过小溪？
-
-就是这样：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
-
-如果你写了：
-
-看起来像：
-
-```
-START
-JUMP FORWARD
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-```
-START
-JUMP FORWARD
-TURN LEFT
-JUMP FORWARD
-JUMP FORWARD
-STOP
-```
-
-完全正确！要穿过整个小溪，青蛙机器人必须跳三次。所以，你必须告诉它向前跳三次。
-
-## 再试一次
-
-编写代码让青蛙机器人穿过小溪并到达花朵。记住，青蛙机器人不能同时执行两个命令。它可以跳跃，也可以转弯，但不能同时做这两件事。
-
-## START
-
-## 提示：共有 6 步
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
-
-## 代码框
-
-| 跳到此项 |
-| :--- |
-| START |
-| JUMP FORWARD |
-| TURN LEFT |
-| TURN RIGHT |
-| STOP |
-
-
-
-
-
-## 轮到你了
-
-## 编程概念：
-算法
+## 编程概念：算法
 
 ## 尝试一下
 
@@ -4496,24 +2049,20 @@ STOP
 - 铅笔和纸
 - 一个朋友
 
-# 要做什么
+## 要做什么
 
 1. **站在垃圾桶旁边**。朝一个方向走五步。用胶带在地面上标记这个位置。
 2. 将**枕头放置**在胶带和垃圾桶之间的大约中间。
 3. 使用工具箱中的命令，**编写一个算法**（指令列表），让你的朋友走到胶带处，绕过枕头到达垃圾桶旁，然后把球投进去。
-4. **给你的朋友**那个纸球。让他们他们站在胶带处并闭上眼睛。一次一次大声读出你的算法，让你的朋友执行每一个动作。你的朋友只能按照你说的做，不能做其他的！
+4. **给你的朋友**那个纸球。让他们站在胶带处并闭上眼睛。一次一次大声读出你的算法，让你的朋友执行每一个动作。你的朋友只能按照你说的做，不能做其他的！
 
 ## 代码工具箱
 
-向前走一步
-
-向左转
-
-向右转
-
-打开手
-
-举起手臂
+- 向前走一步
+- 向左转
+- 向右转
+- 打开手
+- 举起手臂
 
 24 种代码项
 
@@ -4521,7 +2070,7 @@ STOP
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_28_0.png)
 
-# 2,3
+## 2,3
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_28_1.png)
 
@@ -4533,9 +2082,9 @@ STOP
 
 ## 发生了什么？
 
-我们很想知道，有时我们无法理解邻居为什么做某些事情。当你扔出一个球却撞歪了，而你并没有重复一遍所需的步骤，而是理解了彼此，这种感觉是很很沮丧的。
+我们很想知道，有时我们无法理解邻居为什么做某些事情。当你扔出一个球却撞歪了，而你并没有重复一遍所需的步骤，而是理解了彼此，这种感觉是很沮丧的。
 
-# 问题解决！
+## 问题解决！
 
 你的算法有效吗？为什么有效或不有效？如果路中间有两个枕头而不是一个，你会如何修改它？
 
@@ -4565,18 +2114,13 @@ STOP
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_30_0.png)
 
-优化继续
-
-## 编程概念：
-优化
+## 编程概念：优化
 
 ## 尝试一下
 
 ### 你是旅行险家
 
-轮到你当旅行险家了。你在晚餐前有些事情要办。
-
-而且假设你有一辆红色小推车，所以你不需要担心携带东西。
+轮到你当旅行险家了。你在晚餐前有些事情要办。而且假设你有一辆红色小推车，所以你不需要担心携带东西。
 
 现在，你需要去的地方遍布了整个社区，像这样。每个点之间的数字显示了它们之间行走所需的时间：对你来说，最好的路线是什么？
 
@@ -4590,15 +2134,14 @@ STOP
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_31_0.png)
 
-# 1. 送书籍
-# 2. 去超市
-# 3. 去邮局寄包裹
-
-# 1. 出门
-# 2. 站点 1
-# 3. 站点 2
-# 4. 站点 3
-# 5. 回家
+1. 送书籍
+2. 去超市
+3. 去邮局寄包裹
+4. 出门
+5. 站点 1
+6. 站点 2
+7. 站点 3
+8. 回家
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_32_0.png)
 
@@ -4606,11 +2149,11 @@ STOP
 
 虽然有很多路线，但并非所有路线的时间都一样。对你来说，最短的路线是什么？
 
-# 问题解决！
+## 问题解决！
 
 ## Cody 的编程挑战
 
-## # # 编程概念：优化
+## 编程概念：优化
 
 ## 尝试一下
 
@@ -4618,46 +2161,47 @@ STOP
 
 **好，准备好 Cody 了吗？**
 
-
-
-
-
-# 秘密密码
+## 秘密密码
 
 破解密码的重要部分是知道密钥。这段代码的密钥在下方。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_36_0.png)
 
 你能猜出下面这段密文说了什么吗？
+
 拿一张纸和一把铅笔，尝试一下吧！
 
+```
 25 15 21 19 15 12 22 5 4 20 8 5 3 9 16 8 5 18
 3 15 4 25 12 15 22 5 19 5 24 16 12 15 18 9 14 7
 3 15 21 14 20 20 8 5 6 18 15 7 2 15 20 19
+```
 
 > 思考一下：如果接收你信息的人不知道密钥，会发生什么？
 
 密码继续
 
-# H'L OHMJ ADBZTRD H DZS RGQHLO
+```
+H'L OHMJ ADBZTRD H DZS RGQHLO
+```
 
-# > 轮到你了
+> 轮到你了
 
-## 编程概念：
-密码学 (PTOLOGY)
+## 编程概念：密码学
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_0.png)
 
 ## 尝试一下
 
-## 替换密码
+### 替换密码
 
 较复杂的密码之一被称为替换密码。在这种密码中，一个字母会被另一个字母替换。发送信息的人和接收信息的人都需要密钥才能发现信息。
 
 在当前密钥中，用于编写密码的字母表移动了一个字母。
 
-普通字母表：A B C D E F G H I J K L M N O P Q R S T U V W X Y
-密码字母表：Z A C D E F G H I J K L M N O P Q R S T U V W X Y
+普通字母表：`A B C D E F G H I J K L M N O P Q R S T U V W X Y`
+
+密码字母表：`Z A C D E F G H I J K L M N O P Q R S T U V W X Y`
 
 拿一张纸。你能使用第二行的密码字母表写出下面这些信息吗？
 
@@ -4665,42 +2209,50 @@ STOP
 - 蝙蝠有拇指！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_1.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_2.png)
 
-# 现在你能解密这些有趣的动物知识吗？
+## 现在你能解密这些有趣的动物知识吗？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_0.png)
 
+```
 ZM NBSNOTR GZR
 SQDD GDZQSR.
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_1.png)
 
-FNKCEHRG BZM
+
+
+# FNKCEHRG BZM
+
 KDZQM SN CN
+
 SQHBJR.
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_2.png)
 
 MN SVN SHFDQR'
+
 RSQOHDR ZQD ZKHJD.
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_3.png)
 
 LZKD ODMGFTHMR
+
 JDDO DFFR VZQL.
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_4.png)
 
 AQHFGS BNKNOR
+
 VZQM ZVZX
+
 OQDZSQNR.
 
-# > 轮到你了
+# 轮到你了
 
-## 编程概念：
-密码学 (CRYPTOLOGY)
+## 编程概念：密码学 (CRYPTOLOGY)
 
 ## 尝试一下
 
@@ -4715,11 +2267,11 @@ OQDZSQNR.
 - 纸装订针
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_39_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_39_1.png)
 
-> 编程连接
-许多重要信息在计算机之间进行传输和存储。计算机科学家使用密码学来学习如何保护信息。学习密码也有助于你编写真实的程序。
+> **编程连接**
+>
+> 许多重要信息在计算机之间进行传输和存储。计算机科学家使用密码学来学习如何保护信息。学习密码也有助于你编写真实的程序。
 
 现在尝试这个密码轮吧！你想要先做一个代码，然后将其翻译回来。
 
@@ -4727,19 +2279,18 @@ OQDZSQNR.
 
 # 如何操作
 
-- 1 切割一个纸盘，使其比另一个纸盘小。
-- 2 将每个纸盘折对四分之一，让它看起来像一块饼图。
+1. 切割一个纸盘，使其比另一个纸盘小。
+2. 将每个纸盘折对四分之一，让它看起来像一块饼图。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_40_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_40_1.png)
 
-- 3 使用打孔器或剪刀在折叠后的纸盘中心打一个孔。
-- 4 将两个纸盘叠在一起，用纸装订针固定。
-- 5 在较大的纸盘边缘上写上字母表，确保间距均匀。
-- 6 将较小的纸盘叠在较大的纸盘上。
-- 7 通过旋转小纸盘来对齐不同的字母，从而产生不同的位移密钥。
-- 8 注意不要把孔打得太大。
+3. 使用打孔器或剪刀在折叠后的纸盘中心打一个孔。
+4. 将两个纸盘叠在一起，用纸装订针固定。
+5. 在较大的纸盘边缘上写上字母表，确保间距均匀。
+6. 将较小的纸盘叠在较大的纸盘上。
+7. 通过旋转小纸盘来对齐不同的字母，从而产生不同的位移密钥。
+8. 注意不要把孔打得太大。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_41_0.png)
 
@@ -4749,10 +2300,6 @@ OQDZSQNR.
 
 # 如何操作
 
-
-
-
-
 ## 拆解
 
 ## 编程概念：循环
@@ -4761,7 +2308,7 @@ OQDZSQNR.
 
 ## 解码概念
 
-计算机在重复执行同一件事时不会感到无聊，但人类会！程序员在编写指令时采用的一种快捷方法叫做“循环”（loop）。循环是指任何连续执行多次的动作。拍拍三次手。你刚刚完成了一个循环！
+计算机在重复执行同一件事时不会感到无聊，但人类会！程序员在编写指令时采用的一种快捷方法叫做“循环”（`loop`）。循环是指任何连续执行多次的动作。拍拍三次手。你刚刚完成了一个循环！
 
 它非常易用！
 
@@ -4772,7 +2319,6 @@ OQDZSQNR.
 | 重复 REPEAT | 次 TIMES |
 |---|---|
 | 执行 DO | A |
-
 | 重复 REPEAT | 次 TIMES |
 |---|---|
 | 执行 DO | A |
@@ -4781,7 +2327,7 @@ OQDZSQNR.
 
 ## 编程连接
 
-有时，程序员会将循环写入程序中以节省时间和空间。几乎每个计算机程序中至少有一个循环。有时还有循环中的循环——这些被称为嵌套循环。循环为程序员节省了大量时间，但如果使用不，它们可能会让程序运行得更慢。
+有时，程序员会将循环写入程序中以节省时间和空间。几乎每个计算机程序中至少有一个循环。有时还有循环中的循环——这些被称为嵌套循环。循环为程序员节省了大量时间，但如果使用不当，它们可能会让程序运行得更慢。
 
 | 重复 REPEAT | 3 | 次 TIMES |
 |---|---|---|
@@ -4789,7 +2335,7 @@ OQDZSQNR.
 
 ## 尝试一下
 
-帮助小鼠（mousebot）到达蘑菇。
+帮助小鼠（`mousebot`）到达蘑菇。
 
 现在重新写一遍算法。这次你可以使用循环块。
 
@@ -4816,7 +2362,6 @@ OQDZSQNR.
 小鼠遇到了循环。我在循环内部添加了一个新命令来计算重复的次数。每当小鼠完成一个循环，我就在算法中增加一个新命令。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_3.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_4.png)
 
 ## 编程连接
@@ -4824,21 +2369,13 @@ OQDZSQNR.
 计算机程序和应用可能运行数百甚至数千行代码，但有时创建一个循环的代码可能超过 10 行。尝试使用循环代替重复，以节省大量代码。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_5.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_6.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_7.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_8.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_9.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_10.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_11.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_12.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_13.png)
 
 ## 迪的编程挑战
@@ -4851,8 +2388,10 @@ OQDZSQNR.
 
 在探索了第一个隧道后，Cody 带回了一个酷炫的密码。在进一步研究地图后，探险家们认为第二个隧道里可能有一些有趣的晶体。看看洞穴地图。你能使用工具箱中的命令块编写一个算法，让 Cody 到洞穴深处的房间吗？编写你的代码，然后使用硬币或其他物体在第 49 页上尝试一下。成功了吗？
 
-> 记住：A 表示向前移动 1 格。
+> 记住：`A` 表示向前移动 1 格。
+>
 > 你不想打扰蜘蛛！
+>
 > 循环命令块看起来很有用！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_51_0.png)
@@ -4868,14 +2407,9 @@ REPEAT TIMES DO
 ```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_1.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_2.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_3.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_4.png)
-
-# 
 
 ## 挑战
 
@@ -4893,11 +2427,13 @@ REPEAT TIMES TAKE PHOTO
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_54_0.png)
 
 > 不要忘记：Cody 在拍摄完 10 物品后需要返回洞穴。
+>
 > 提示：Cody 每次只能执行一个动作。它可以移动或拍照。
 
 # 第 2 章 深海惊喜
 
 本章的编程概念：
+
 - 约束 (CONSTRAINTS)
 - 调试 (DEBUGGING)
 - 二进制代码 (BINARY CODE)
@@ -4925,7 +2461,7 @@ REPEAT TIMES TAKE PHOTO
 
 ## 解码概念
 
-程序员编写计算机程序时必须考虑的因素之一是**约束**。约束是任何可能导致方案失效或运行不佳的。尝试系鞋带。需要多久？增加不能使用拇指的约束，然后再次系鞋带。这如何改变结果？
+程序员编写计算机程序时必须考虑的因素之一是**约束**。约束是任何可能导致方案失效或运行不佳的因素。尝试系鞋带。需要多久？增加不能使用拇指的约束，然后再次系鞋带。这如何改变结果？
 
 你可以通过解决这个逻辑问题来练习约束：三只青蛙和三只蟾蜍坐在池塘的七块石头上。左边的青蛙想坐在右边的三块石头上。右边的蟾蜍想坐在左边的三块石头上。每只动物一次跳一下，它们只能向前跳，而且不能与其他蟾蜍或青蛙共享一块石头。每块石头一次只能一只动物。你能让青蛙和蟾蜍交换位置吗？
 
@@ -4950,7 +2486,8 @@ REPEAT TIMES TAKE PHOTO
 
 > 我更像是一个大叫者而不是跳跃者。
 
-编程连接
+**编程连接**
+
 你知道青蛙和蟾蜍有不同的特征吗？在编程中，这些被称为“约束”。它们是帮助我们以特定方式解决问题的限制或规则。
 
 ## 不仅仅是数学家
@@ -4960,39 +2497,39 @@ REPEAT TIMES TAKE PHOTO
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_61_0.png)
 
 ## 1
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_0.png)
 
 ## 2
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_1.png)
 
 ## 3
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_2.png)
 
 ## 4
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_3.png)
 
 ## 需要做什么
 
-- 1 在纸上像这样画画七个圆圈。给圆圈编号 1 到 7。这七个圆圈将是池塘中的石头。
-- 2 在 1、2 和 3 号圆圈上放置三个相同的物体。它们代表池塘中的青蛙。
-- 3 将另外三个物体放在 5、6 和 7 号圆圈上。它们代表蟾蜍。
-- 4 跳跃！使用圆圈和物体让青蛙和蟾蜍从一块石头跳到另一，直到青蛙在 5、6 和 7 号位置，蟾蜍在 1、2 和 3 号位置。
-- 5 如果你的方案不起作用，没关系！再次尝试吧！
-
-
-
-
+1. 在纸上像这样画画七个圆圈。给圆圈编号 1 到 7。这七个圆圈将是池塘中的石头。
+2. 在 1、2 和 3 号圆圈上放置三个相同的物体。它们代表池塘中的青蛙。
+3. 将另外三个物体放在 5、6 和 7 号圆圈上。它们代表蟾蜍。
+4. 跳跃！使用圆圈和物体让青蛙和蟾蜍从一块石头跳到另一块，直到青蛙在 5、6 和 7 号位置，蟾蜍在 1、2 和 3 号位置。
+5. 如果你的方案不起作用，没关系！再次尝试吧！
 
 ## CODY 的编程挑战
 
-## 编程概念：
-限制条件
+## 编程概念：限制条件
 
 ## 尝试一下
 
 ## 特别任务
 
 每一个旅程都始于一步。
+
 在这种情况下，它始于一个问题！探险家们必须将所有的物资从岸上运到他们的基地——一艘锚泊在海洋中的船。为了做到，他们计划乘坐一条小船多次往返。最后，他们剩下三件要运：
 
 - 探险家的野餐篮
@@ -5005,30 +2542,30 @@ REPEAT TIMES TAKE PHOTO
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_63_1.png)
 
 探险家们急于开始探险。他们如何编写 Cody 把这三样东西都送到基地的船上呢？
+
 编写一个算法将所有东西都送到船上。
 
 ## 不过，关于物资运输，你需要了解以下几点：
 
-- 1. 船上的空间只能容三件东西——其中一件必须是 Cody，因为探险家可以远程控制它来操控船。
+1. 船上的空间只能容三件东西——其中一件必须是 Cody，因为探险家可以远程控制它来操控船。
 2. 如果把狗和野餐篮留在一起，它会偷掉几个三明治。
 3. 猫非常挑剔，不吃食物，但它和狗不能单独在一起，因为它们相处得不好（完全不相处！）。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_64_0.png)
 
 > 希望午餐有一些坚果吃！
-
+>
 > 那只猫在哪儿？
 
-## 编程概念：
-调试
+## 编程概念：调试
 
 ## 解码概念
 
-有时候，程序员写的代码……嗯，不起作用。这没关系！这种情况经常发生——一段代码的运行方式并不符合预期。**Bug** 是代码中的错误。**调试（Debugging****就是发现代码中的错误……然后修复这些错误。
+有时候，程序员写的代码……嗯，不起作用。这没关系！这种情况经常发生——一段代码的运行方式并不符合预期。**Bug** 是代码中的错误。**调试（`Debugging`）** 就是发现代码中的错误……然后修复这些错误。
 
 程序员在调试时并不是盲目猜测——他们有计划，或者说**策略**。调试时常用的一种简单策略是问自己这三个问题：
 
-- 1. 运行代码时会发生什么？
+1. 运行代码时会发生什么？
 2. 应该发生什么？（而不是实际发生了什么。）
 3. 这意味着什么？
 
@@ -5044,43 +2581,8 @@ REPEAT TIMES TAKE PHOTO
 
 ## 尝试一下
 
-- 一张纸
-- 一支铅笔
-- 一尺子
-
-让我们回到 frogbot。它改进了！
-frogbot 发生了一小点变化，它可以握住铅笔了。
-
-你发现变化了吗？这里有一个提示：把自己放在 frogbot 的位置，从它的视角来看问题。
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_66_0.png)
-
-这段代码是为了让 frogbot 画出上面的形状而写的，但其中有一个错误。
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_66_1.png)
-
-修正后的代码：
-
-| PUT THE POINT OF PENCIL ON PAPER |
-| GO DOWN 2 INCHES (5 CM) |
-| TURN RIGHT |
-
-要找到错误或 bug，从代码的第一行开始。逐行阅读，直到发现错误为止。
-
-| PUT THE POINT OF PENCIL ON PAPER |
-| GO DOWN 2 INCHES |
-| TURN RIGHT |
-
-调试继续
-
-## 轮你了
-
-## 编程概念：
-调试
-
-## 尝试一下
-
 ## 杯子堆叠
+
 ### 调试
 
 你是否曾经做过作业答案错误，然后回过头去找哪里错了？如果是的话，你已经练习过调试了！继续找出这个游戏代码中的错误吧。
@@ -5103,11 +2605,11 @@ frogbot 发生了一小点变化，它可以握住铅笔了。
 
 ## 你需要做什么
 
-- 1 将一个杯子倒过来，在纸上画出。这将形成一个圆。
-- 2 移动杯子，下次画时，下一个圆的边缘会接触第一个圆。
-- 3 重复此操作，直到纸上排成五个圆。给它们编号为 1, 2, 3, 4, 和 5。
-- 4 将一叠倒过来的杯放在圆1 的左侧。
-- 5 在下一页上，阅读每一行代码。第二列显示了按照所有代码后杯子应该有的样子。遵循这段代码看看。
+1. 将一个杯子倒过来，在纸上画出。这将形成一个圆。
+2. 移动杯子，下次画时，下一个圆的边缘会接触第一个圆。
+3. 重复此操作，直到纸上排成五个圆。给它们编号为 1, 2, 3, 4, 和 5。
+4. 将一叠倒过来的杯放在圆 1 的左侧。
+5. 在下一页上，阅读每一行代码。第二列显示了按照所有代码后杯子应该有的样子。遵循这段代码看看。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_0.png)
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_1.png)
@@ -5118,6 +2620,7 @@ frogbot 发生了一小点变化，它可以握住铅笔了。
 这是一个例子：一排杯子的代码看起来像 ...
 
 | CODE TOOLBOX |
+|---|
 | A Pick up a cup |
 | Move right one circle |
 | Move left one circle |
@@ -5136,9 +2639,14 @@ frogbot 发生了一小点变化，它可以握住铅笔了。
 
 调试继续
 
-当我们处理这些杯子时，来一些 bug 水怎么样？
+## 轮你了
+
+## 编程概念：调试
+
+## 尝试一下
 
 ## 杯子堆叠
+
 ### 调试
 
 这个堆叠的代码正确吗？试试看！从杯子朝上开始。
@@ -5162,11 +2670,15 @@ frogbot 发生了一小点变化，它可以握住铅笔了。
 
 - 拿起一个杯子
 - 向右移动一圈
+
+
+
 - 向左移动一圈
 - 拿起杯子放下
 - 翻转杯子
 
 > 发生了什么
+
 计算机不会犯错……但人类拥有计算机没有的东西……需要人类的大脑来检查代码以发现并修复错误。这就是为什么调试如此重要！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_69_1.png)
@@ -5204,18 +2716,22 @@ frogbot 发生了一小点变化，它可以握住铅笔了。
 ```
 
 > 思考一下
+
 这是一段短代码，但如果你有一段很长的代码呢？如果有100个杯子呢？你会如何寻找 bug？
 
 > 进一步尝试
+
 高四层杯子的塔代码应该是什么样？
+
 底部有五个杯子的金字塔代码应该是什么样？
+
 你自己的杯子创作代码应该是什么样？
+
 试试看！
 
 ## CODY 的编程挑战
 
-## 编程概念：
-调试
+## 编程概念：调试
 
 ## 尝试一下
 
@@ -5243,10 +2759,6 @@ TURN RIGHT
 > 提示：为了调试不正常的代码，你可以问自己哪几个问题？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_71_1.png)
-
-
-
-
 
 ## 开始
 
@@ -5282,6 +2794,7 @@ TURN RIGHT
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_73_0.png)
 
 摩斯密码是一种二进制代码。摩斯字母表中的所有字母只由两种东西组成：点和划。
+
 摩斯密码最酷的地方之一是，你可以用光来制作短部分和长部分！亲自试一下吧！
 
 ## 试试看
@@ -5301,9 +2814,7 @@ TURN RIGHT
 
 # 1 写下你的秘密信息
 
-## 2
-
- 写 写 (WRITE)
+## 2 写 (WRITE)
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_74_0.png)
 
@@ -5363,6 +2874,7 @@ ASCII 字母由八个框组成。有些是填充的，有些是空的。ASCII �
 - 纸
 
 你能用 ASCII 写出你的名字吗？拿一张纸，从上往下写下你的名字。这就是计算机读取的方式。然后，使用 ASCII 图为每个字母画出正确的框。
+
 Code 是这样拼写它的名字的：
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_76_0.png)
@@ -5385,6 +2897,7 @@ Code 是这样拼写它的名字的：
 2. 每次猜错后，想数字的人必须说数字大还是小。可能是这样的：
 
 在游戏开始时，1 到 10 之间的任何数字都可能是答案。第一次猜之后，只有大于 3 的数字是正确的：4, 5, 6, 7, 8, 9 或 10。
+
 下次猜之后，只有 4, 5, 6, 7 或 8 可能是正确的。每次答案的数量都被分成两部分，直到剩下正确答案！
 
 ## 编码连接
@@ -5438,7 +2951,7 @@ Code 是这样拼写它的名字的：
 是
 否
 
-##我是危险货物
+## 我是危险货物
 
 ## 区域内有潜水员
 
@@ -5456,8 +2969,6 @@ Code 是这样拼写它的名字的：
 
 - 纸和铅笔！
 - 一个朋友或更多
-
-## 二十个问题
 
 ## 二十个问题
 
@@ -5508,10 +3019,6 @@ Code 是这样拼写它的名字的：
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_5.png)
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_6.png)
 
-
-
-
-
 # >> 挑战
 
 ## 深海惊喜
@@ -5519,7 +3026,6 @@ Code 是这样拼写它的名字的：
 目标：为 Cody 编写一个算法，用于拍摄每种生物并将名称发送给探险家。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_1.png)
 
 好了，程序员们。在这一章中，你们学习了许多关于调试、二分查找和二进制代码的知识。是时候它们整合在一起，让 Cody 出发深海探险了。
@@ -5529,7 +3035,6 @@ Code 是这样拼写它的名字的：
 Cody 的任务是找到并拍摄地图上显示的每种深海生物。Cody 需要先到达生物所在地且不能经过黑暗区域。然后 Cody 应该给生物拍照。最后，Cody 应该使用 ASCII 码将名称发送给船上的探险家。之后 Cody 就可以前往下一种生物。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_3.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_4.png)
 
 为 Cody 编写算法，以找到并拍摄每种海生物并将名称传回给探险家。然后按照你的算法进行操作。不要忘记调试你的代码。
@@ -5546,7 +3051,7 @@ Cody 的任务是找到并拍摄地图上显示的每种深海生物。Cody 需�
 
 # 第 3 章
 
-##拯救卫星
+## 拯救卫星
 
 ### 本章编程概念：
 
@@ -5565,7 +3070,7 @@ Cody 的任务是找到并拍摄地图上显示的每种深海生物。Cody 需�
 
 # 情况说明
 
-太空中到处都是火山。有些（像地球上的火山一样）喷出岩浆。有些被称为**冰火山**，会喷出超冷液体。**木星的卫星（卫二**是我们太阳系中火山最活跃的世界之一。探险家们认为其中一个活跃火山正在喷发！但从太空传回图像的卫星运行不正常。**你能帮助 Cody 采取正确的步骤让卫星重新工作吗？**
+太空中到处都是火山。有些（像地球上的火山一样）喷出岩浆。有些被称为**冰火山**，会喷出超冷液体。**木星的卫星（卫二）**是我们太阳系中火山最活跃的世界之一。探险家们认为其中一个活跃火山正在喷发！但从太空传回图像的卫星运行不正常。**你能帮助 Cody 采取正确的步骤让卫星重新工作吗？**
 
 > 当你编写让一台计算机与另一台计算机通信时，指令必须格外清晰！
 
@@ -5611,11 +3116,13 @@ Cody 的任务是找到并拍摄地图上显示的每种深海生物。Cody 需�
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_90_0.png)
 
 > 思考一下
+
 在开始解决问题之前，你如何向客户证明魔方中设置的所有行、列和对角线都是正确的？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_90_1.png)
 
 > 发生了什么？
+
 魔方完全不是魔术——它们基于行和列。完成魔方可能需要大量的尝试和错误。某一行或一列之和正确，并不意味着所有的都如此。
 
 # > 分解
@@ -5651,20 +3158,20 @@ JUMP
 
 # 工具箱
 
-- WHEN LEFT ARROW
-- WHEN RIGHT ARROW
-- WHEN UP ARROW
-- WHEN DOWN ARROW
-- JUMP LEFT
-- JUMP RIGHT
-- JUMP UP
-- LAND
+- `WHEN LEFT ARROW`
+- `WHEN RIGHT ARROW`
+- `WHEN UP ARROW`
+- `WHEN DOWN ARROW`
+- `JUMP LEFT`
+- `JUMP RIGHT`
+- `JUMP UP`
+- `LAND`
 
 > 思考一下
-如果你将 move-left 命令连接到 right-arrow 键会发生什么？
+
+如果你将 `move-left` 命令连接到 `right-arrow` 键会发生什么？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_92_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_92_1.png)
 
 # > 轮到你了
@@ -5690,38 +3197,51 @@ JUMP
 # 步骤
 
 1. 将气球并打结。将绳子系在气球的一端。
-2. 请成人帮助你将绳子**系在或胶在**房间中央的天花板上。气球应该挂得足够高，让你和朋友必须跳起来才能碰到（但不要高到你们完全够不到）。
-3. 将工具箱中的每个符号写在单独的纸上。确保符号足够大，能从房间另一头看到。代表键盘上的按键。
 
-![](img/ff0a36fd32e78d548bb789af8cd599c4_94_0.png)
 
-# 1,2
 
-![](img/ff0a36fd32e78d548bb789af8cd599c4_94_1.png)
+## 2
+
+请成人帮助你将绳子**系在或胶在**房间中央的天花板上。气球应该挂得足够高，让你和朋友必须跳起来才能碰到（但不要高到你们完全够不到）。
 
 ## 3
 
+将工具箱中的每个符号写在单独的纸上。确保符号足够大，能从房间另一头看到。代表键盘上的按键。
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_94_0.png)
+
+### 1,2
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_94_1.png)
+
+### 3
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_94_2.png)
 
-# 代码连接
+## 代码连接
 
 事件命令之所以视频之所以的原因。有些事件命令与键或鼠标相关，但另一些是因为代码的其他部分。当你捡起硬币时的叮当声，以及角色跳起时的弹簧声都是事件命令的结果：
 
+| 命令 |
+| :--- |
 | 向左移动一步 |
 | 向右移动一步 |
 | 向前移动一步 空格跳转 |
 
-# 视频游戏角色继续
+## 视频游戏角色继续
 
-第 3 章 91
+### 第 3 章 91
 
-# 你扮演视频游戏角色
+### 你扮演视频游戏角色
 
-# 步骤
+### 步骤
 
 4. 让一个人站在房间另一侧，**对着另一个人**。
+
 5. 一个人拥有所有的符号。这个人是用户。另一个人按照符号的指示做。这个人是视频游戏角色。
+
 6. 用户举起一个符号。角色随后执行该符号代表的动作。
+
 7. 游戏的目标是让视频游戏角色跳起来并触碰到气球。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_95_0.png)
@@ -5735,32 +3255,31 @@ JUMP
 - 向左移动一步
 - 向右移动一步
 - 向前移动一步
-空格：跳跃
+- 空格：跳跃
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_95_2.png)
 
-
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_96_0.png)
 
-# 双人网球
+## 双人网球
 
 最早的视频游戏之一可以追溯到1958年。《双人网球》（Tennis for Two）的玩家试图在球网两侧回击一个电子“球”。用户只能做两件事之一：旋转旋钮来控制球的角度，或按下按钮将球“击”回另一侧。
 
-## CODY 的编程挑战
+### CODY 的编程挑战
 
-## 编程概念：用户与事件
+### 编程概念：用户与事件
 
-## 尝试一下
+### 尝试一下
 
-## 遥控 CODY
+### 遥控 CODY
 
 Cody 为了让卫星恢复运行需要做的第一件事是按下控制面板上的某些按钮。使用命令块编写一段代码，告诉 Cody 当探险者在地球上按下键盘按钮时应该做什么。为探险者和 Cody 写出完整的算法，让他们按照正确的顺序按下按钮。每当 Cody 按按钮时，卫星就应该移动。
 
-# 代码箱
+## 代码箱
 
-| 当按下左箭头 |
+| 命令 |
 | :--- |
+| 当按下左箭头 |
 | 当按下右箭头 |
 | 当按下上箭头 |
 | 当按下下箭头 |
@@ -5777,7 +3296,7 @@ Cody 为了让卫星恢复运行需要做的第一件事是按下控制面板上
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_97_0.png)
 
-# 记住 Cody 只能做一件事
+## 记住 Cody 只能做一件事
 
 正确顺序：
 
@@ -5788,13 +3307,13 @@ Cody 为了让卫星恢复运行需要做的第一件事是按下控制面板上
 | 正方形 | 正方形 | 三角形 | 三角形 |
 | 正方形 | 三角形 | 圆形 | 正方形 |
 
-# 拆解它
+## 拆解它
 
-## 编程概念：像素
+### 编程概念：像素
 
 > 就叫我 Spot 吧！
 
-## 解码概念
+### 解码概念
 
 电脑屏幕上所有的图像或**图形**都是由**像素**组成的。程序员通过代码告诉计算机哪些点应该被上色。假设一个程序员想在屏幕上创建这张图片。
 
@@ -5802,37 +3321,40 @@ Cody 为了让卫星恢复运行需要做的第一件事是按下控制面板上
 
 你如何为所示的图案编写代码？
 
-# 像素
+### 像素
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_99_1.png)
 
-# 它是这样工作的。
+### 它是这样工作的。
 
 1. 从网格的第一个空格开始，即左上角的。（不要从网格外开始！）
-2. 第一个空格是白色的，所以你可以直接写代码向右移动一步：>
-3. 这个空格是黑色的，所以你需要使用表示“给这个空格上色！”的命令：X
-4. 哎，没格子了！告诉计算机向下移动一步：D
-5. 该空格是白色的，所以告诉计算机向左移动一步：。<这是一个黑色空格！所以给它上色：X
-6. 向左移动两个空格到达下一个黑色格子：<< 并给它上色：X
-
-向右移动到下一个空格：>
-它是白色的，再次向右移动：> 然后告诉计算机给该空格上色：X
+2. 第一个空格是白色的，所以你可以直接写代码向右移动一步：`>`
+3. 这个空格是黑色的，所以你需要使用表示“给这个空格上色！”的命令：`X`
+4. 哎，没格子了！告诉计算机向下移动一步：`D`
+5. 该空格是白色的，所以告诉计算机向左移动一步：`<`。这是一个黑色空格！所以给它上色：`X`
+6. 向左移动两个空格到达下一个黑色格子：`<<` 并给它上色：`X`
+7. 向右移动到下一个空格：`>`
+8. 它是白色的，再次向右移动：`>` 然后告诉计算机给该空格上色：`X`
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_0.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_1.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_2.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_3.png)
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_4.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_5.png)
 
-> 棋盘前两行的代码看起来这样：
-X>>KD<<X
-你能完成剩下的部分吗？
+> 棋盘前两行的代码看起来这样：`X>>KD<<X`
+>
+> 你能完成剩下的部分吗？
 
 > 你能用点组成图片？太让我惊艳了！
 
-# 要做什么
+### 要做什么
 
 1. 从左上角开始，向右移动再向下移动，看看哪些像素应该被上色。
 2. 现在**编写你的代码**。使用工具箱中的符号编写代码，让你的朋友可以在网格纸上重新创建这只河马。
@@ -5840,8 +3362,9 @@ X>>KD<<X
 
 ## 代码箱
 
-| 向右移动 | 涂蓝色 |
+| 命令 | 命令 |
 | :--- | :--- |
+| 向右移动 | 涂蓝色 |
 | 向左移动 | 涂粉色 |
 | 向下移动 | 涂灰色 |
 | | 涂黑色 |
@@ -5850,20 +3373,21 @@ X>>KD<<X
 
 我们在电脑屏幕上看到的所有东西，从我们输入的文字到我们喜爱的游戏，都是因为代码告诉电脑如何点亮像素。
 
-## CODY 的编程挑战
+### CODY 的编程挑战
 
-## 编程概念：像素
+### 编程概念：像素
 
-## 尝试一下
+### 尝试一下
 
-## 哪个按钮？
+### 哪个按钮？
 
 修复卫星的下一步是让 Cody 按按钮。探险者需要告诉 Cody 它应该寻找什么。按钮代码必须与 Cody 记忆中的完全匹配，否则它就不知道按哪些按钮。（这很挑剔。）Cody 无法读取图片，所以你需要发送每个按钮的样子。这样 Cody 就会知道找什么。
 
 ## 代码箱
 
-| 向右移动 | 涂黑色 |
+| 命令 | 命令 |
 | :--- | :--- |
+| 向右移动 | 涂黑色 |
 | 向左移动 | 涂红色 |
 | 向下移动 | 涂黄色 |
 | | 涂粉色 |
@@ -5874,34 +3398,41 @@ X>>KD<<X
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_103_0.png)
 
-# 按钮 1 开始
-# 按钮 2 开始
-# 按钮 3 开始
-# 按钮 4 开始
+### 按钮 1 开始
+
+### 按钮 2 开始
+
+### 按钮 3 开始
+
+### 按钮 4 开始
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_0.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_1.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_2.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_3.png)
 
-# 拆解它
+## 拆解它
 
-## 编程概念：拆解
+### 编程概念：拆解
 
-## 解码概念
+### 解码概念
 
 有时候问题看起来非常大。程序员在编写算法时也一样。**拆解**（Decomposition）是一种可以更容易处理大问题的策略。在拆解中，你将一个大问题拆分成更小的部分。
 
 > 你知道吗
+>
 > 扎特和贝多芬这样的音乐家被称为作曲家，是因为他们把音符组合成故事，变成更大的交响乐。问题的拆解则是相反的——将其分成更小的部分。
 
 我可以通过把一天拆分成 2 小时的小块来睡一整天！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_105_0.png)
 
-## 尝试一下
+### 尝试一下
 
-## 你需要
+### 你需要
 
 - 彩色纸
 - 这种形状：
@@ -5912,7 +3443,7 @@ X>>KD<<X
 - 剪刀
 - 一张白纸
 
-## 圆盘拆解
+### 圆盘拆解
 
 练习拆解的方法之一是使用这样的谜题。
 
@@ -5920,35 +3451,36 @@ X>>KD<<X
 
 这个游戏的目标是将所有的圆盘从1号移动到3号。有两个限制：你不能将大盘放在小盘上，并且每次只能移动一个盘。尝试自己制作一些盘，看看是否能拆解出解决方案。
 
-# 要做什么
+## 要做什么
 
 1. 在单独的彩色纸上**画出每个圆形**。
 2. 用剪刀小心地**剪出每个圆形**。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_106_1.png)
 
-# 圆盘拆解继续
+## 圆盘拆解继续
 
-# 圆盘拆解
+### 圆盘拆解
 
 > 有人说圆盘吗？我来玩！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_0.png)
 
-# 要做什么
+### 要做什么
 
 3. 将这张白纸分成三列。将第一列标记为“1号塔”，第二列标记为“2号塔”，第三列标记为“3号塔”。
 4. 将三个圆形叠放在标记为“1号塔”的列中。最大的圆形应该在底部，最小的在上面。
 5. 你能想出如何将所有圆盘移动到3号塔，而不将大盘放在小盘之上吗？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_1.png)
+
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_2.png)
 
-# 5
+### 5
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_108_0.png)
 
-## 发生了什么？
+### 发生了什么？
 
 解决问题可能巨大的挑战。程序员将它们拆分成小部分……更小的部分……甚至更小的部分……直到找到一个可以解决的问题部分。然后，他们应用学到的知识来解决问题的其他部分。他们重复这个过程，直到可以将他们所有的解决方案组合起来解决整个问题。
 
@@ -5956,18 +3488,13 @@ X>>KD<<X
 
 你能利用角度和排列来帮助我们解决这个谜题吗？有一个传说说，一个人试图解决这个问题花费了 64 年。如果这个传说发生在现实生活中，结果将需要 SBS 十亿年才能完成！
 
+### CODY 的编程挑战
 
+### 编程概念：分解
 
+### 尝试一下
 
-
-## CODY 的编程挑战
-
-## 编程概念：
-分解
-
-## 尝试一下
-
-### 镜子移动
+#### 镜子移动
 
 Cody 需要做的最后一步是将这些望远镜镜子从 A 柱移动到 C 柱。Cody 需要非常小心。镜子是易的。所以 Cody 每次只能移动一个，而且较小的镜子不能放在较大的镜子上面。为 Cody 写一个算法。
 
@@ -5986,6 +3513,7 @@ C 柱
 ## 拯救卫星
 
 好了，程序员伙伴们。在这一章中，你们学习了许多关于试错、添加用户事件、像素和分解的知识。**是时候把它们都整合在一起了……拯救卫星吧！**
+
 你需要发送这些指令来告诉 Cody 需要按下哪些按钮，以及按什么顺序。你能写代码将这张图片发送给 Cody 吗？
 
 ## 按钮顺序
@@ -5994,19 +3522,20 @@ C 柱
 
 | 代码工具箱 |
 | :--- |
-| > 向右 |
-| < 向左 |
-| D 向下 |
-| R 填充蓝色 |
-| B 填充蓝色 |
-| G 填充绿色 |
-| Y 填充黄色 |
+| `>` 向右 |
+| `<` 向左 |
+| `D` 向下 |
+| `R` 填充蓝色 |
+| `B` 填充蓝色 |
+| `G` 填充绿色 |
+| `Y` 填充黄色 |
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_112_0.png)
 
 Cody 必须按照每个像素颜色的出现顺序按下指定的按钮。
 
 # 第 4 章
+
 复杂的特平山
 
 本章的编程概念：
@@ -6026,41 +3555,52 @@ Cody 必须按照每个像素颜色的出现顺序按下指定的按钮。
 **特平山是南洲的高原——高耸于委内瑞拉雨林之岩石岛。** 有些特平山全年云雾缭绕、雾气腾腾，使得前往它们的探险极其危险。但特平山也是世界上最酷的大猫的家园，包括美洲豹和美洲狮。**你能通过编程让 Cody 拍摄这些神奇动物之一的照片来帮助探险家吗？**
 
 ### 缩放
+
 特平山的墙
+
 将
+
 具有挑战性！
 
 Cody 需要
+
 小心……如果如果在
+
 特平山上受损
+
 探险家们将
+
 无法
+
 修复它。
 
 为什么我觉得
+
 有什么东西
+
 看着我？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_116_0.png)
 
 ## 分解它
 
-## 编程概念：
-优化
+### 编程概念：优化
 
-解读概念
+### 解读概念
+
 如果你曾经需要为长途旅行收拾行李，你就知道不能把所有都带上。编程也是如此。虽然通常有许多方法编写相同的指令，但更短的代码会让计算机运行得更高效。
 
 > 通过选择你最需要的且能放入包中的物品，来优化你包的空间。
-
-尝试对此页面上的物品最佳组合进行优化。
-你能为海滩之之旅做出最佳选择吗？
+>
+> 尝试对此页面上的物品最佳组合进行优化。
+>
+> 你能为海滩之之旅做出最佳选择吗？
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_117_0.png)
 
-## 尝试一下
+### 尝试一下
 
-### Cody 的营地椅
+#### Cody 的营地椅
 
 美洲豹是著名的害羞动物，所以可能需要过一段时间，它们才会觉得足够安全而接近 Cody 的营地。Cody 需要准备好等一会儿。你能构造一个既轻便易折叠（这样就可以放入 Cody 的货物舱内），又足够坚固到能承受 Cody 体重的椅子吗？
 
@@ -6087,7 +3627,7 @@ Cody 需要
 
 1. 使用纸和笔为你的椅子勾勒几个主意。你的模型应该足够小，能放入塑料行李箱中（你可以折叠椅子或将其拆解，只要在到达营地后能将其重新装好即可）。记住，你只能使用列表上的材料！
 
-Cody 的营地椅
+### Cody 的营地椅
 
 2. 一旦你有两个（或更多！）主意，挑选你最喜欢的，并制作它。
 3. 确保你测试了你的模型——它能放进袋子里吗？它能装住你的模型吗？如果不能，尝试另一种设计。
@@ -6101,21 +3641,23 @@ Cody 的营地椅
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_120.png)
 
 ### 编程连接
+
 当程序员编写计算机程序时，他们必须做出像你在寻找解决方案时那样的某些选择。某些类型的代码会与其他代码兼容，或者会让程序运行变慢。程序员必须考虑程序的目标，然后选择最有效的、或最优的运行代码。
 
 > 如果你想建造某种伟大的东西，你必须从小处开始。一个伟大的主意始于一个小小的角度。
 
-更进一步！
+### 更进一步！
+
 你能使用周围发现的其他材料建造一把更好的椅子吗？
 
-## Cody 的编程挑战
+### CODY 的编程挑战
 
-## 编程概念：
-优化
+### 编程概念：优化
 
-## 尝试一下
+### 尝试一下
 
-### Cody 的背包
+#### Cody 的背包
+
 Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按下颜色所示指示的按钮。
 
 - 5
@@ -6139,17 +3681,18 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_121.png)
 
-### 背包问题
+#### 背包问题
+
 一个著名的优化问题是背包问题。它的目标是在不超出限制的情况下携带尽可能多的物品。
 
 29
 
 ## 分解它
 
-## 编程概念：
-制作形状
+### 编程概念：制作形状
 
-解读概念
+### 解读概念
+
 形状可能是你学会的最早的东西之一。简单的形状——如圆圈、正方形和三角形——是艺术家和平面设计师创建各种绘画的基础。
 
 我完全
@@ -6158,9 +3701,10 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 
 编程也是如此。学生程序员并不是一开始就写超真实的 3D 游戏代码。相反，他们学习给计算机指令来绘制他们制作的简单形状。而且在运行程序之前，他们并不知道看到的结果。
 
-## 尝试一下
+### 尝试一下
 
-### 塑造
+#### 塑造
+
 几何形状很容易画——而且它们应该是这样的！用基础形状绘制物体可以快速交流想法。找个朋友尝试这个形状挑战。
 
 ## 你需要什么
@@ -6179,28 +3723,28 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_124_1.png)
 
 > 发生了什么？
-记住，程序员不能直接告诉计算机画某个东西。他们必须编写指令告诉计算机具体如何制作形状——而且在运行程序之前，他们并不确定形状的样子。这有点像闭着眼睛画画！
+>
+> 记住，程序员不能直接告诉计算机画某个东西。他们必须编写指令告诉计算机具体如何制作形状——而且在运行程序之前，他们并不确定形状的样子。这有点像闭着眼睛画画！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_124_2.png)
 
-## 更进一步！
+### 更进一步！
+
 给朋友提供指令来画某个东西，但不要告诉他们是什么！
 
-
-
-
-
-## 发生了什么？
+### 发生了什么？
 
 当我们使用著名游戏中的动作捕捉技术时，看到的图像都是基于代码的。演员现在处于现实生活中，只是屏幕上的一个部分。电影捕捉了这些图像和他们的服装。
 
 # 动作捕捉
 
+
+
 某些计算机图形离不开真实演员的帮助。许多视频游戏和某些电影中的画面都始于一个穿着特殊服装的演员。特殊的电脑零件会记录演员在服装内的动作。然后，人们使用图形技术来创建视频游戏或电影角色。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_126_0.png)
 
-# > CODY 的编程挑战
+# CODY 的编程挑战
 
 ## 编程概念：制作形状
 
@@ -6212,12 +3756,11 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 
 ## 代码工具箱
 
-- 向移动 12 英寸
-- 向左转
-- 向右转
-- 重复 次（执行）
-
-在地面上画一个点
+- `向移动 12 英寸`
+- `向左转`
+- `向右转`
+- `重复 次（执行）`
+- `在地面上画一个点`
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_128_0.png)
 
@@ -6234,7 +3777,6 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 条件语句设定为“如果/那么”语句：如果发生了某事，就执行某事。例如，如果交通灯是红色的，就停止。如果条件不满足（例如，交通灯是红色以外的任何颜色），动作就不会发生。
 
 如果它是奶酪
-
 那么吃奶酪！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_129_0.png)
@@ -6262,7 +3804,8 @@ Cody 的背包只有有限的空间。按照每个像素颜色的出现顺序按
 ## 解码概念
 
 现在你理解了条件语句是如何运作的，是时候编写代码了！
-If/Else 块像这样：
+
+`If/Else` 块像这样：
 
 如果你有一颗坚果
 那么把它给我！
@@ -6272,7 +3815,7 @@ IF THEN
 ELSE
 ```
 
-要使用 If/Else 块，只需**“插入”**正确的单词来描述你想要计算机寻找的条件。
+要使用 `If/Else` 块，只需**插入**正确的单词来描述你想要计算机寻找的条件。
 
 ```
 IF CAN'T GO FORWARD THEN
@@ -6323,28 +3866,22 @@ IF CAN'T GO FORWARD THEN
 
 ## 动作建议
 
-如果掷出 3，举左手。否则移动相应的格。
-
-如果掷出 3，拍手。否则移动相应的格。
-
-如果掷出 3，吐出舌头。否则移动相应的格。
-
-如果掷出 3，上下跳。否则移动相应的格。
-
-如果掷出 3，说出你喜欢的书的名字。否则移动相应的格。
-
-如果掷出 3，唱一首歌。否则移动相应的格。
-
-如果掷出 3，拍拍并揉揉肚子。否则移动相应的格。
+- 如果掷出 3，举左手。否则移动相应的格。
+- 如果掷出 3，拍手。否则移动相应的格。
+- 如果掷出 3，吐出舌头。否则移动相应的格。
+- 如果掷出 3，上下跳。否则移动相应的格。
+- 如果掷出 3，说出你喜欢的书的名字。否则移动相应的格。
+- 如果掷出 3，唱一首歌。否则移动相应的格。
+- 如果掷出 3，拍拍并揉揉肚子。否则移动相应的格。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_134_0.png)
 
 ## 怎么做
 
 1. 在每个回合中，一人担任程序员。所有人都是该回合的计算机。
-2. 每个回合开始时，程序员掷骰子。骰子上显示的任何数字将是该回合的 IF 数字。
+2. 每个回合开始时，程序员掷骰子。骰子上显示的任何数字将是该回合的 `IF` 数字。
 3. 程序员决定计算机在掷出该点数时应该做什么（查看建议！）。
-4. 每个计算机轮到时并掷骰子。如果计算机掷中了 IF 数字，它将执行在回合开始时选择的动作。如果没有，走 ELSE 路径并移动相应的格。
+4. 每个计算机轮到时并掷骰子。如果计算机掷中了 `IF` 数字，它将执行在回合开始时选择的动作。如果没有，走 `ELSE` 路径并移动相应的格。
 5. 所有计算机掷完后，回合结束。程序员右侧的人成为下一个程序员，并开始新回合。
 6. 当有人到达路径尽头时，游戏结束！找几个朋友。是时候玩条件之地了！
 
@@ -6362,7 +3899,7 @@ IF CAN'T GO FORWARD THEN
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_136_0.png)
 
-# > CODY 的编程挑战
+# CODY 的编程挑战
 
 ## 编程概念：条件语句
 
@@ -6374,7 +3911,7 @@ IF CAN'T GO FORWARD THEN
 
 # 什么是 GPS？
 
-Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作。GPS 设备使用空间中的卫星发送和接收有关地球物体位置的信息。早期，GPS 仅少数人（如军队）可用。但现在实用的技术可以在许多汽车、船只和手机中找到
+Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作。GPS 设备使用空间中的卫星发送和接收有关地球物体位置的信息。早期，GPS 仅少数人（如军队）可用。但现在实用的技术可以在许多汽车、船只和手机中找到。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_137_0.png)
 
@@ -6388,17 +3925,18 @@ Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作�
 
 ## 代码工具箱
 
-- 向移动 1
-- 向左转
-- 向右转
-- 无法向前
+- `向移动 1`
+- `向左转`
+- `向右转`
+- `无法向前`
 
 | IF THEN |
+| :--- |
 | ELSE |
 
 # 结束
 
-# >> 挑战
+# 挑战
 
 ## 险险的桌山
 
@@ -6421,8 +3959,6 @@ Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作�
 最早的一些计算机（如 ENIAC）占据了整个房间。今天，许多人带着一个可以装进口袋的智能手机。计算机编程艺术也发生了很大变化。人们正在发明使用计算机的新方法，发明新型计算机，并研究如何让计算机运行得更快、比以往任何时候都更多。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_141_0.png)
-
-
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_142_0.png)
 
@@ -6448,13 +3984,14 @@ Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作�
 
 ## 第一章
 
-第 21 页 如何制作奶昔
+### 第 21 页 如何制作奶昔
 
-第 31 页 洞穴探险者代码
+### 第 31 页 洞穴探险者代码
 
-第 35 页 替换密码
+### 第 35 页 替换密码
 
-+ 步骤：
+**步骤：**
+
 - 摸摸香蕉并将其切成碎片。
 - 将香蕉碎片放入搅拌机中。
 - 取一杯你最喜欢的冷水果。
@@ -6469,16 +4006,18 @@ Cody 的地图部分是由使用全球定位系统（简称 GPS）的人制作�
 - 将奶昔倒入杯中。
 - 喝下奶昔。
 
-最短路径：
-A → B
-B → C
-C → D
-D → A
+**最短路径：**
 
-总耗时：
+- A → B
+- B → C
+- C → D
+- D → A
+
+**总耗时：**
 140 分钟
 
 FNCEHRG BZM KDZOM
+
 香蕉可以学会
 金鱼可以学会
 技巧。
@@ -6500,7 +4039,7 @@ FNCEHRG BZM KDZOM
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_0.png)
 
-第 33 页 密码
+### 第 33 页 密码
 
 你解开了密码
 Cody 喜欢探险者
@@ -6510,11 +4049,11 @@ Cody 喜欢探险者
 
 （从上到下）
 
-第 28-29 页 旅行中的探险者
+### 第 28-29 页 旅行中的探险者
 
-第 34 页 替换密码
+### 第 34 页 替换密码
 
-第 41 页 日期代码
+### 第 41 页 日期代码
 
 最短路径应该是超市、然后是办公室、图书馆（或者反过来），总共 29 分钟。
 
@@ -6541,13 +4080,10 @@ OLAHHKHCU
 
 # 第 48-49 页 Cody 与迷宫
 
-我们的解决方案：
+**我们的解决方案：**
 
-我们的解决方案：
-
-我们的解决方案：
-
-+ 开始
+```
+开始
 >
 >
 >
@@ -6556,6 +4092,7 @@ OLAHHKHCU
 >
 >
 停止
+```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_0.png)
 
@@ -6566,7 +4103,6 @@ OLAHHKHCU
 | 重复 4 次 |
 | :--- |
 | 重复 3 次 |
-
 | 重复 4 次 |
 | :--- |
 | 重复 3 次 |
@@ -6624,21 +4160,22 @@ OLAHHKHCU
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_9.png)
 
-# 第二章
+## 第二章
 
-# 第 59 页 跳到那里
+### 第 59 页 跳到那里
 
-# 第 66-67 页 堆叠调试
+### 第 66-67 页 堆叠调试
 
-# 第 68-69 页 Cody 错过了标记
+### 第 68-69 页 Cody 错过了标记
 
-第 66 页：正确的代码应该是：
+**第 66 页：正确的代码应该是：**
 
 为了让 Cody 到达相机，将这些块添加到现有代码底部：
 
 ```
 ^>>V<<<
 ```
+
 ```
 ^>>V<<<
 ```
@@ -6659,20 +4196,21 @@ OLAHHKHCU
 
 > 缺少了这一行
 
-# 第 71 页 ASCII 作业
+### 第 71 页 ASCII 作业
 
 熊猫
 
-第 67 页（顶部）：正确的代码应该是：
+**第 67 页（顶部）：正确的代码应该是：**
 
 ```
 ^>>V<<<
 ```
+
 ```
 ^>>V<<<
 ```
 
-# 第 76-77 页 Cody 通信
+### 第 76-77 页 Cody 通信
 
 ```
 ^>>V<<<
@@ -6689,67 +4227,74 @@ OLAHHKHCU
 ```
 ^>>TV<<<
 ```
+
 ```
 ^>TV<<<
 ```
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_3.png)
 
-# 第 64-65 页 特殊交付
+### 第 64-65 页 特殊交付
 
-步骤：
+**步骤：**
 
-- 1 将狗从船上带下来，让猫和野餐篮一起留在岸上。
-- 2 将狗留在船外，独自回到岸上。
-- 3 将野餐篮提到船上。将野餐篮留在船上，把狗带回岸上。
-- 4 将狗留在岸上，把猫带到船上。让猫和野餐篮留在船上。
-- 5 独自回到岸上。
-- 6 拿起狗并带到船上。
+1. 将狗从船上带下来，让猫和野餐篮一起留在岸上。
+2. 将狗留在船外，独自回到岸上。
+3. 将野餐篮提到船上。将野餐篮留在船上，把狗带回岸上。
+4. 将狗留在岸上，把猫带到船上。让猫和野餐篮留在船上。
+5. 独自回到岸上。
+6. 拿起狗并带到船上。
 
-# 第 77 页 二分查找：继续深挖
+### 第 77 页 二分查找：继续深挖
 
-第 67 页（底部）：正确的代码应该是：
+**第 67 页（底部）：正确的代码应该是：**
 
 ```
 ^>>V<<<
 ```
+
 ```
 ^>>TV<<<
 ```
+
 ```
 ^>>V<<<
 ```
+
 ```
 ^>TV<<<
 ```
+
 ```
 ^>V<
 ```
+
 ```
 ^>>V<<<
 ```
+
 ```
 ^>V<<<
 ```
 
 是的
-
 我向右转
-
 请求进入港口
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_4.png)
 
-# 第 80-81 页 深海惊喜
+### 第 80-81 页 深海惊喜
 
-# 第三章
+## 第三章
 
-我们的解决方案：
+**我们的解决方案：**
+
 ASCII:
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_146_0.png)
 
 重复 4 次
+
 | | | | |
 | | | |
 | | | |
@@ -6757,9 +4302,11 @@ ASCII:
 | | | |
 | | |
 | | | 鱼
+
 重复 2 次
 
-第 87 页 魔正方形
+### 第 87 页 魔正方形
+
 | 2 | 4 |
 | 7 | 5 |
 | 6 | 8 | 水章鱼
@@ -6772,8 +4319,9 @@ ASCII:
 | | |
 | | |
 | | |
+| | |
 
-第 89 页 主题事件
+### 第 89 页 主题事件
 
 向左跳
 螃蟹
@@ -6789,7 +4337,7 @@ ASCII:
 
 图片
 
-第 94-95 页 远程控制身体
+### 第 94-95 页 远程控制身体
 
 | 重复 2 次 | 向左跳 | 按钮 |
 | :--- | :--- | :--- |
@@ -6800,13 +4348,13 @@ ASCII:
 | 重复 2 次 | 按钮 | 按钮 |
 | 跳 | 向下跳 | 向下跳 |
 
-第 97 页 像素
+### 第 97 页 像素
 
-剩余的棋盘代码应该是：XD
+剩余的棋盘代码应该是：`XD`
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_147_0.png)
 
-第 98-99 页 像素绘画
+### 第 98-99 页 像素绘画
 
 对于像素谜，遵循以下答案：
 
@@ -6819,6 +4367,9 @@ ASCII:
 | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>M | M<<<<C<C<C<C<C<C | M |
 | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<G>> |
 | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>M | M<<<<C<C<C<C<C<C<C>H |
+
+
+
 | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<<<<<<<<<<C<<C>> |
 | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>M | M<<<<C<C<C<C<C<C<C>C |
 | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<C<C>M |
@@ -6826,17 +4377,13 @@ ASCII:
 | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C |
 | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>M | END<<<C<C<C<C<C<C<<C |
 
+# 拯救卫星
 
+## 第 4 章
 
+### 分解问题
 
-
-## 拯救卫星
-
-# 第 4 章
-
-## 分解问题
-
-## CODY 的背包
+### CODY 的背包
 
 我们的解决方案：
 
@@ -6877,16 +4424,16 @@ END<<<<<B
 
 步骤 5
 
-## 制作形状
+### 制作形状
 
 + 重复 3 次
-向前移动 12 英寸
+  向前移动 12 英寸
 
 + 重复 3 次
-向前移动 12 英寸
+  向前移动 12 英寸
 
 + 重复 3 次
-向前移动 12 英寸
+  向前移动 12 英寸
 
 步骤 6
 
@@ -6894,13 +4441,13 @@ END<<<<<B
 
 步骤 8
 
-## 镜像移动
+### 镜像移动
 
 + 重复 3 次
-向前移动 12 英寸
+  向前移动 12 英寸
 
 + 重复 3 次
-向前移动 12 英寸
+  向前移动 12 英寸
 
 步骤 1
 
@@ -6914,7 +4461,7 @@ END<<<<<B
 
 步骤 11
 
-## 设置图片
+### 设置图片
 
 我们的解决方案：
 
@@ -6939,24 +4486,21 @@ END<<<<<B
 步骤 15
 
 + 重复 3 次
-向前移动 1 码
+  向前移动 1 码
 
 步骤 8
 
 步骤 16
 
 + 重复 3 次
-向前移动 1 码
+  向前移动 1 码
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_0.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_1.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_2.png)
-
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_3.png)
 
-## 青蛙
+### 青蛙
 
 ```
 如果点击了上箭头，则
@@ -7002,7 +4546,7 @@ END<<<<<B
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_149_0.png)
 
-## 蛇
+### 蛇
 
 ```
 如果点击了上箭头，则
@@ -7048,7 +4592,7 @@ END<<<<<B
   隐藏项目；
 ```
 
-## 回家
+### 回家
 
 我们的解决方案：
 
@@ -7076,7 +4620,7 @@ END<<<<<B
     向前移动 ?
 ```
 
-## 我们的解决方案：
+### 我们的解决方案：
 
 蓝色路径：
 
@@ -7086,12 +4630,13 @@ END<<<<<B
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
 
-## 继续前远！
+### 继续前远！
 
 准备好尝试一些高级编程了吗？
+
 运用你所学的知识，尝试一下这些活动。
 
-## 蝙蝠二二树搜索
+### 蝙蝠二二树搜索
 
 为这个生物写一个二分搜索树！
 
@@ -7099,17 +4644,17 @@ END<<<<<B
 
 红唇蝠鱼生活在哥斯达黎加附近的海域；它们喜欢沿着海底行走。这里有一个入门建议。
 
-## 从这里开始
+### 从这里开始
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_151_1.png)
 
-## 制作你自己的二进制代码！
+### 制作你自己的二进制代码！
 
 你可以为任何事物制作自己的二进制代码。只需选择两个物体来代表代码的一部分。然后，给别人写一条信息，并让他们阅读！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_152_0.png)
 
-## 你的家：迷宫
+### 你的家：迷宫
 
 在你家里的一间房间里隐藏一个惊喜。写一个算法，帮助家里成员从另一个房间开始找到惊喜。
 
@@ -7117,39 +4662,39 @@ END<<<<<B
 
 更多尝试！
 
-## 继续前远
+### 继续前远
 
-## 自己的语言
+### 自己的语言
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_153_0.png)
 
-## IF/ELSE 西蒙说游戏
+### IF/ELSE 西蒙说游戏
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## 做法
+### 做法
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## IF/ELSE 西蒙说游戏
+### IF/ELSE 西蒙说游戏
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## 做法
+### 做法
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## IF/ELSE 西蒙说游戏
+### IF/ELSE 西蒙说游戏
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## 做法
+### 做法
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
-## 做法
+### 做法
 
 ```
   如果无法前进，则
@@ -7158,14 +4703,16 @@ END<<<<<B
     向前移动 ?
 ```
 
-## 做法
+### 做法
 
 ```
   如果无法前进，则
     向左移动
   否则
     向前移动 ?
-``````
+```
+
+```
 重复 3 次
   如果无法前进，则
     向左移动
@@ -7189,7 +4736,7 @@ END<<<<<B
     向前移动 ?
 ```
 
-## 我们的解决方案：
+### 我们的解决方案：
 
 蓝色路径：
 
@@ -7199,12 +4746,111 @@ END<<<<<B
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
 
-## 继续前远！
+### 继续前远！
 
 准备好尝试一些高级编程了吗？
 运用你所学的知识，尝试一下这些活动。
 
-## 蝙蝠二二树搜索
+### 蝙蝠二二树搜索
+
+为这个生物写一个二分搜索树！
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_151_0.png)
+
+红唇蝠鱼生活在哥斯达黎加附近的海域；它们喜欢沿着海底行走。这里有一个入门建议。
+
+### 从这里开始
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_151_1.png)
+
+### 制作你自己的二进制代码！
+
+你可以为任何事物制作自己的二进制代码。只需选择两个物体来代表代码的一部分。然后，给别人写一条信息，并让他们阅读！
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_152_0.png)
+
+### 你的家：迷宫
+
+在你家里的一间房间里隐藏一个惊喜。写一个算法，帮助家里成员从另一个房间开始找到惊喜。
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_152_1.png)
+
+更多尝试！
+
+### 继续前远
+
+### 自己的语言
+
+使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_153_0.png)
+
+### 自己的语言
+
+使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
+
+### 做法
+
+```
+  如果无法前进，则
+    向左移动
+  否则
+    向前移动 ?
+```
+
+```
+  如果无法前进，则
+    向左移动
+  否则
+    向前移动 ?
+```
+
+### 我们的解决方案：
+
+### 我们的解决方案：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
+
+### 我们的解决方案：
+
+```
+  如果无法前进，则
+    向左移动
+  否则
+    向前移动 ?
+```
+
+```
+  如果无法前进，则
+    向左移动
+  否则
+    向前移动 ?
+```
+
+```
+  如果无法前进，则
+    向左移动
+  否则
+    向前移动 ?
+```
+
+
+
+# 我们的解决方案
+
+蓝色路径：
+
+橙色路径：
+
+绿色路径：
+
+![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
+
+## 继续前行！
+
+准备好尝试一些高级编程了吗？运用你所学的知识，尝试一下这些活动。
+
+## 蝙蝠二叉树搜索
 
 为这个生物写一个二分搜索树！
 
@@ -7230,190 +4876,54 @@ END<<<<<B
 
 更多尝试！
 
-## 继续前远
+## 继续前行
 
 ## 自己的语言
 
 使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_153_0.png)
-
-## 自己的语言
-
-使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
-
-## 做法
-
-```
-  如果无法前进，则
-    向左移动
-  否则
-    向前移动 ?
-```
-
-```
-  如果无法前进，则
-    向左移动
-  否则
-    向前移动 ?
-```
-
-## 我们的解决方案：
-
-## 我们的解决方案：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
-
-## 我们的解决方案：
-
-```
-  如果无法前进，则
-    向左移动
-  否则
-    向前移动 ?
-```
-
-```
-  如果无法前进，则
-    向左移动
-  否则
-    向前移动 ?
-```
-
-```
-  如果无法前进，则
-    向左移动
-  否则
-    向前移动 ?
-```
-
-## 我们的解决方案：
-
-蓝色路径：
-
-橙色路径：
-
-绿色路径：
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)
-
-## 继续前远！
-
-准备好尝试一些高级编程了吗？
-运用你所学的知识，尝试一下这些活动。
-
-## 蝙蝠二二树搜索
-
-为这个生物写一个二分搜索树！
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_151_0.png)
-
-红唇蝠鱼生活在哥斯达黎加附近的海域；它们喜欢沿着海底行走。这里有一个入门建议。
-
-## 从这里开始
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_151_1.png)
-
-## 制作你自己的二进制代码！
-
-你可以为任何事物制作自己的二进制代码。只需选择两个物体来代表代码的一部分。然后，给别人写一条信息，并让他们阅读！
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_152_0.png)
-
-## 你的家：迷宫
-
-在你家里的一间房间里隐藏一个惊喜。写一个算法，帮助家里成员从另一个房间开始找到惊喜。
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_152_1.png)
-
-更多尝试！
-
-## 继续前远
-
-## 自己的语言
-
-使用符号编写你自己的加密信息！首先，在纸上写下字母表——然后想一个不同的符号来代表每个字母。在字母表下方画出符号。这就是你的密钥。使用符号给别人写一条信息。给他们一份密钥，并让他们解码信息。尽可能在你的符号上发挥创意——使用不同的颜色和大小！
-
-![](img/ff0a36fd32e78d548bb789af8cd599c4_153_0.png)
-
-
-
-
 
 # 术语表
 
 - **algorithm (算法)**：计算机用于实现目标的一系列步骤或指令列表。
-
 - **coding (编码)**：思考并写下计算机指令的过程。
-
 - **ASCII**：一种表示字母、数字和符号的二进制代码（ASCII 代表“美国标准信息交换码”）。
-
 - **combine (合并)**：将某物的两个或多个部分组合在一起。
-
 - **binary (二进制)**：由两个事物组成的。
-
 - **command (命令)**：计算机遵循的指令。
-
 - **binary code (二进制代码)**：使用两个符号表示字母、数字和其他字符的代码。
-
 - **computer science (计算机科学)**：研究如何编写逻辑计算机程序的学科。
-
 - **binary search (二分查找)**：通过反复划分大量信息来寻找特定信息的过程。
-
 - **conditional (条件)**：导致计算机选择两条路径之一的代码段。
-
 - **constraint (约束)**：任何可能阻止问题解决方案运行（或运行不佳）的因素。
-
 - **bug (错误)**：计算机代码中的错误，会导致程序运行不佳或以非预期的方式运行。
-
 - **cryptology (密码学)**：编写和破解密码的研究。
-
 - **cipher (密码)**：用秘密语言编写的消息。
-
 - **debugging (调试)**：检查代码以寻找问题的过程。
-
 - **cipher wheel (密码轮)**：用于编写和解密密码的工具。
-
 - **decomposition (分解)**：将问题拆分为更容易解决的较小部分的过程。
-
 - **code (代码)**：为计算机遵循而写的特定指令。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_157_0.png)
 
 - **efficient (高效)**：以最好的方式运行。
-
 - **pixel (像素)**：计算机屏幕上图像的微小部分。
-
 - **event (事件)**：任何导致计算机程序以特定方式运行的情况。
-
 - **programming (编程)**：为计算机编写代码的过程。
-
 - **global positioning system (GPS) (全球定位系统)**：利用计算机和卫星信号帮助人们寻找地球上位置的工具。
-
 - **sonar (声纳)**：利用声波从物体反射来确定其位置的工具。
-
 - **graphics (图形)**：计算机通过读取代码生成的图片。
-
 - **labyrinth (迷宫)**：迷宫。
-
 - **logic (逻辑)**：以合逻辑的方式思考某事。
-
 - **strategy (策略)**：用于实现目标的计划。
-
 - **substitution cipher (替换密码)**：用秘密语言编写的消息，其中每个字母都被替换为不同的符号。
-
 - **loop (循环)**：反复执行的一系列步骤。
-
 - **Traveling Salesperson (旅行推销员)**：一个计算机逻辑问题，要求用户找到一组点之间的最短路径。
-
 - **Lovelace, Ada (爱达·洛芙莱斯)**：一位英国伯爵夫人，她编写了第一个算法，并被认为是世界上第一位计算机程序员。
-
 - **trial and error (试错)**：一种解决问题的方法，涉及猜测、犯错然后再次尝试。
-
 - **Morse code (摩斯电码)**：一种由点和破线（短信号和长信号）组成的二进制代码。
-
 - **user (用户)**：使用计算机的人。
-
 - **optimize (优化)**：编写计算机代码使其在特定情况下运行得最好。
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_0.png)
@@ -7518,16 +5028,30 @@ END<<<<<B
 - 谜密码 (Enigma code) 32
 - 事件命令 (Event commands) 91
 
-## K
-
-- 键盘 (Keyboards, computer) 88, 89, 91
-- 背包问题 (Knapsack Problem) 119
-
 ## F
 
 - 青蛙机器人 (Frogbot activities) 10–15, 63, 88–89
 - 青蛙和蟾蜍 (Frogs and toads) (逻辑问题) 57–59
 - 水果昔 (Fruit smoothies) 23, 23
+
+## G
+
+- 游戏 (Games)
+  - 条件之地 (Conditional Land) 130–131, 132–133
+  - 猜猜数字 (Guess My Number) 74–75
+  - 蒙萨模仿 (Simon Says) 150
+  - 二十问 (Twenty Questions) 78–79
+- 几何形状 (Geometric shapes) 120, 121–121
+- 德国：第二次世界大战 (Germany: World War II) 32
+- 全球定位系统 (Global positioning system (GPS)) 设备 134, 134
+- 涂鸦 (Graffiti) 27
+- 图形 (Graphics) 96, 99, 120, 123
+- 理查德·盖伊 (Guy, Richard) 58, 58
+
+## K
+
+- 键盘 (Keyboards, computer) 88, 89, 91
+- 背包问题 (Knapsack Problem) 119
 
 ## L
 
@@ -7541,20 +5065,6 @@ END<<<<<B
 - 逻辑问题 (Logic problems) 8, 26–27, 59
 - 循环 (Loops) 46–49
 - 爱达·洛芙莱斯 (Lovelace, Ada) 22, 22
-
-## G
-
-- 游戏 (Games)
-- 条件之地 (Conditional Land) 130–131, 132–133
-- 猜猜数字 (Guess My Number) 74–75
-- 蒙萨模仿 (Simon Says) 150
-- 二十问 (Twenty Questions) 78–79
-- 几何形状 (Geometric shapes) 120, 121–121
-- 德国：第二次世界大战 (Germany: World War II) 32
-- 全球定位系统 (Global positioning system (GPS)) 设备 134, 134
-- 涂鸦 (Graffiti) 27
-- 图形 (Graphics) 96, 99, 120, 123
-- 理查德·盖伊 (Guy, Richard) 58, 58
 
 ## M
 
@@ -7591,20 +5101,6 @@ END<<<<<B
 - 计算机编程 (Programming, computer) 7, 8, 84, 122, 138
 - Python (编程语言) 152
 
-## T
-
-- 平板应用 (Tablet apps) 47
-- 电报 (Telegrams) 71
-- 双人网球 (Tennis for Two) (游戏) 93, 93
-- 顶山 (Tepui) 112–137
-- 顶山 (Tepuis) 112, 113, 136
-- 发短信 (Texting) 71
-- 交通灯 (Traffic lights) 126
-- 旅行推销员 (Traveling Salesperson) (逻辑问题) 26–27
-- 试错 (Trial and error) 86–87
-- 艾兰·图灵 (Turing, Alan) 32
-- 二十问 (Twenty Questions) (游戏) 78–79
-
 ## R
 
 - 食谱 (Recipes) 23, 151
@@ -7612,23 +5108,6 @@ END<<<<<B
 - 机器人控制车辆 (Robotically controlled vehicles) 54
 - 机器人 (Robots) 10, 16, 44, 139, 139
 - 红唇鲈鱼 (Rosy-lipped batfish) 148, 148
-
-## U
-
-- 用户和事件 (Users and events) 88–95
-
-## V
-
-- 委内瑞拉：顶山 (Venezuela: tepui) 112
-- 视频游戏 (Video games)
-  - 条件 (conditions) 133
-  - 早期视频游戏 (early video games) 93, 93
-  - 事件命令 (event commands) 91
-  - 图形 (graphics) 123
-  - 依赖计算机 (reliance on computers)
-  - 用户和事件 (users and events) 90
-  - “变成角色”（you be the character） 90–93
-- 火山 (Volcanoes) 84
 
 ## S
 
@@ -7655,6 +5134,37 @@ END<<<<<B
 - 替换密码 (Substitution ciphers) 34, 34
 - 手术：计算机程序 (Surgery: computer programs) 77
 
+## T
+
+- 平板应用 (Tablet apps) 47
+- 电报 (Telegrams) 71
+- 双人网球 (Tennis for Two) (游戏) 93, 93
+- 顶山 (Tepui) 112–137
+- 顶山 (Tepuis) 112, 113, 136
+- 发短信 (Texting) 71
+- 交通灯 (Traffic lights) 126
+- 旅行推销员 (Traveling Salesperson) (逻辑问题) 26–27
+- 试错 (Trial and error) 86–87
+- 艾兰·图灵 (Turing, Alan) 32
+- 二十问 (Twenty Questions) (游戏) 78–79
+
+## U
+
+- 用户和事件 (Users and events) 88–95
+
+## V
+
+- 委内瑞拉：顶山 (Venezuela: tepui) 112
+- 视频游戏 (Video games)
+  - 条件 (conditions) 133
+  - 早期视频游戏 (early video games) 93, 93
+  - 事件命令 (event commands) 91
+  - 图形 (graphics) 123
+  - 依赖计算机 (reliance on computers)
+  - 用户和事件 (users and events) 90
+  - “变成角色”（you be the character） 90–93
+- 火山 (Volcanoes) 84
+
 ## W
 
 - 墙跟随 (Wall-following) 44
@@ -7662,10 +5172,6 @@ END<<<<<B
 - 戈登·韦尔曼 (Welchman, Gordon) 32
 - 鲸鱼 (Whales) 68
 - 第二世界大战 (World War II) 32
-
-
-
-
 
 # 致谢
 
@@ -7840,7 +5346,7 @@ DL: Showtime; Getty Images; Shutterstock.
 - 89 (叶子), Lorstein/Shutterstock;
 - 90 (叶子), Lorstein/Shutterstock
 
-## 第四章:
+## 第四章
 
 - 11. 国家地理学会;
 - 12. Creative Life; Science & Society Publisher; 13. Art History, Getty;
@@ -7929,10 +5435,6 @@ DL: Showtime; Getty Images; Shutterstock.
 
 The Art of Making Book, by James James of from the Collection, New York, 1998 (gift,), J of of of of, 1n14. The Art of stock/47 (leaves), Lorstein/Shutterstock
 
-
-
-
-
 版权 © 2019 National Geographic Partners, LLC
 
 由 National Geographic Partners, LLC 出版。保留所有权利。未经出版社许可，禁止复制内容的全部或任何部分。
@@ -7975,13 +5477,13 @@ LC 记录可用于：lcc.loc.gov/20180316281
 
 160 动手编程吧！
 
-# # 欢迎来到编码员团队！
+# 欢迎来到编码员团队！
 
-无论你是一个有抱的计算机科学家，还是仅仅对编程充满好奇，这本书都是为你准备的！
+无论你是一个有抱负的计算机科学家，还是仅仅对编程充满好奇，这本书都是为你准备的！
 
 ## 认识 Cody。
 
-这个酷酷的机器人可以完成你可能想要的一切，但只有一个小问题：它需要**你**来编写指令以完成工作。
+这个酷酷的机器人可以完成你可能想要的一切，但只有一个小问题：它需要`你`来编写指令以完成工作。
 
 别担心，初级编码员们！这本书将让你能够利用编程和计算机程序的基础知识，很快就能应对超级酷的编程挑战。每个挑战都帮助 Cody 距离完成任务更近一步。你准备好迎接地球上一些最艰巨、最狡猾、最棒的任务了吗？
 
@@ -7998,4 +5500,3 @@ LC 记录可用于：lcc.loc.gov/20180316281
 查看我们的其他动手类 STEM 书籍！
 
 ![](img/ff0a36fd32e78d548bb789af8cd599c4_167_2.png)
-

@@ -1,7 +1,7 @@
+
 # 第八章：精炼 MySQL 8.0：下一级改进
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter8.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter8.html)
-
 
 本章探讨了 MySQL 8.0 改进中发现的优化机会和解决方案，包括 SQL 层的改进、InnoDB 存储引擎的增强、事务节流机制以及低并发读写性能的改进。
 
@@ -15,13 +15,13 @@
 
 只有在用户报告了在升级后性能显著下降之后，我们才开始认真对待这个问题。用户的可靠反馈表明，虽然 MySQL 8.0.25 的性能良好，但升级到 MySQL 8.0.29 导致了显著的性能下降。这一关键信息表明存在性能问题。
 
-同时，确认 MySQL 8.0.27 中的性能下降问题与 MySQL 8.0.29 中的问题相同。MySQL 8.0.27 对 trx-sys 进行了两次针对可扩展性的优化，理论上应该会增加吞吐量。回顾 latch sharding 在 trx-sys 上的性能影响：
+同时，确认 MySQL 8.0.27 中的性能下降问题与 MySQL 8.0.29 中的问题相同。MySQL 8.0.27 对 `trx-sys` 进行了两次针对可扩展性的优化，理论上应该会增加吞吐量。回顾 latch sharding 在 `trx-sys` 上的性能影响：
 
 ![image-20240829102323261](img/4d71032cd37aa0881e0ffd416fa3f9de.png)
 
-图 8-1\. 不同并发级别下 trx-sys 中 latch sharding 的影响。
+图 8-1\. 不同并发级别下 `trx-sys` 中 latch sharding 的影响。
 
-让我们继续比较 trx-sys latch sharding 优化与 MySQL 8.0.27 发布版本之间的吞吐量和并发性。具体细节如下所示：
+让我们继续比较 `trx-sys` latch sharding 优化与 MySQL 8.0.27 发布版本之间的吞吐量和并发性。具体细节如下所示：
 
 ![image-20240829102344815](img/e95bbab82b6fa4a743016fc885f2c7aa.png)
 
@@ -44,21 +44,21 @@ Date:   Tue Jun 8 15:14:35 2021 +0200
     Change-Id: Ie0fcce71dfc813920711c43c3d62635dae0d7d20 
 ```
 
-使用提交信息，编译了两个版本，并识别出在 TPC-C 测试中执行特别缓慢的 SQL 查询。使用“*explain*”分析了这些慢速 SQL 查询的执行计划。具体细节如下图所示：
+使用提交信息，编译了两个版本，并识别出在 TPC-C 测试中执行特别缓慢的 SQL 查询。使用 `explain` 分析了这些慢速 SQL 查询的执行计划。具体细节如下图所示：
 
 ![图片](img/c5a58f9e4c7f0722c97d2b126f5aa230.png)
 
-图 8-3。“*explain*”中行数显示的异常。
+图 8-3。`explain` 中行数显示的异常。
 
-从图中可以看出，大多数执行计划是相同的，除了“*行数*”列。在正常版本中，“*行数*”列显示略超过 200，而在有问题的版本中，它显示超过 1,000,000。经过不断地简化 SQL 语句，最终确定了一个具有高度代表性的 SQL 查询。具体细节如下图所示：
+从图中可以看出，大多数执行计划是相同的，除了 `行数` 列。在正常版本中，`行数` 列显示略超过 200，而在有问题的版本中，它显示超过 1,000,000。经过不断地简化 SQL 语句，最终确定了一个具有高度代表性的 SQL 查询。具体细节如下图所示：
 
 ![图片](img/d9517156aa8e41eb66e105f7fe29e112.png)
 
-图 8-4。SQL 执行结果与“*explain*”输出的显著差异。
+图 8-4。SQL 执行结果与 `explain` 输出的显著差异。
 
-根据从“*explain*”获得的“*过滤*”信息，构建了图中所显示的最后一个查询。图显示，尽管最后一个查询只返回了 193 行，但“*explain*”显示“*行数*”超过 1.17 百万行。这种差异凸显了一个复杂问题，因为并非所有 MySQL 开发者都能完全理解执行计划。幸运的是，识别出导致性能下降的提交为解决问题提供了关键的基础。尽管有了这些信息解决问题相对直接，但分析 SQL 语句本身的根本原因证明要困难得多。
+根据从 `explain` 获得的 `过滤` 信息，构建了图中所显示的最后一个查询。图显示，尽管最后一个查询只返回了 193 行，但 `explain` 显示 `行数` 超过 1.17 百万行。这种差异凸显了一个复杂问题，因为并非所有 MySQL 开发者都能完全理解执行计划。幸运的是，识别出导致性能下降的提交为解决问题提供了关键的基础。尽管有了这些信息解决问题相对直接，但分析 SQL 语句本身的根本原因证明要困难得多。
 
-让我们继续深入分析这个问题。以下图显示了特定 SQL 查询的“*explain*”结果：
+让我们继续深入分析这个问题。以下图显示了特定 SQL 查询的 `explain` 结果：
 
 ![图片](img/e0c1b3f120ff1b645df8d3ecf211f60a.png)
 
@@ -78,7 +78,7 @@ Date:   Tue Jun 8 15:14:35 2021 +0200
 
 图 8-7。正常版本的调试跟踪信息。
 
-比较上述两个图，可以注意到正常版本在绿色框内包含额外的内容，表明在正常版本中应用了条件，而异常版本缺少这些条件。为了理解为什么异常版本缺少这些条件，有必要在*get_full_func_mm_tree*函数中添加额外的跟踪信息，以捕获导致这种差异的具体细节。
+比较上述两个图，可以注意到正常版本在绿色框内包含额外的内容，表明在正常版本中应用了条件，而异常版本缺少这些条件。为了理解为什么异常版本缺少这些条件，有必要在 `get_full_func_mm_tree` 函数中添加额外的跟踪信息，以捕获导致这种差异的具体细节。
 
 添加额外的跟踪信息后，异常版本的调试跟踪结果如下：
 
@@ -92,7 +92,7 @@ Date:   Tue Jun 8 15:14:35 2021 +0200
 
 图 8-9。正常版本的补充调试跟踪信息。
 
-比较上述两个图，可以观察到显著的差异。在正常版本中，*param_comp*的值为 16140901064495857660，而在异常版本中，它为 16140901064495857661，相差 1。为了理解这种差异，让我们首先检查*param_comp*值的计算方法，如下面的代码片段中详细说明：
+比较上述两个图，可以观察到显著的差异。在正常版本中，`param_comp` 的值为 16140901064495857660，而在异常版本中，它为 16140901064495857661，相差 1。为了理解这种差异，让我们首先检查 `param_comp` 值的计算方法，如下面的代码片段中详细说明：
 
 ```cpp
 static SEL_TREE *get_full_func_mm_tree(THD *thd, RANGE_OPT_PARAM *param,
@@ -108,9 +108,9 @@ static SEL_TREE *get_full_func_mm_tree(THD *thd, RANGE_OPT_PARAM *param,
   ... 
 ```
 
-从代码中可以看出，*param_comp*是通过三个变量的位或操作计算得出的，然后是位非操作。1 的差值表明至少有一个这些变量不同，有助于缩小问题范围。
+从代码中可以看出，`param_comp` 是通过三个变量的位或操作计算得出的，然后是位非操作。1 的差值表明至少有一个这些变量不同，有助于缩小问题范围。
 
-计算涉及三个具有长值的*table_map*变量，使得普通计算器不足，而且过程过于复杂，无法在此详细说明。
+计算涉及三个具有长值的 `table_map` 变量，使得普通计算器不足，而且过程过于复杂，无法在此详细说明。
 
 关键点在于调试跟踪揭示了关键差异。结合识别出导致性能差异的 Git 提交信息，分析根本原因就不再困难。
 
@@ -120,7 +120,7 @@ static SEL_TREE *get_full_func_mm_tree(THD *thd, RANGE_OPT_PARAM *param,
 
 图 8-10。解决查询执行计划性能下降的最终补丁。
 
-在调用*test_quick_select*函数时，重新引入*const_table*和*read_tables*变量（与之前讨论的变量相关）。这确保了执行计划中的过滤条件不会被忽略。
+在调用 `test_quick_select` 函数时，重新引入 `const_table` 和 `read_tables` 变量（与之前讨论的变量相关）。这确保了执行计划中的过滤条件不会被忽略。
 
 在将上述补丁应用到 MySQL 8.0.27 后，性能下降问题得到了解决。进行了比较补丁前后在不同并发级别下 TPC-C 吞吐量的测试。具体细节如图所示：
 
@@ -154,13 +154,13 @@ static SEL_TREE *get_full_func_mm_tree(THD *thd, RANGE_OPT_PARAM *param,
 
 binlog 组提交机制相当复杂，这种复杂性使得识别其固有的性能问题变得具有挑战性。
 
-首先，使用*perf*工具在 TPC-C 测试中捕获 500 并发性能问题，如图所示：
+首先，使用 `perf` 工具在 TPC-C 测试中捕获 500 并发性能问题，如图所示：
 
 ![图片](img/ab128d40d411ca9a7e2059f7d33fe130.png)
 
-图 8-14. *_pthread_mutex_cond_lock*瓶颈揭示了性能问题。
+图 8-14. `_pthread_mutex_cond_lock` 瓶颈揭示了性能问题。
 
-显然，*_pthread_mutex_cond_lock*是一个重要的瓶颈，占大约 9.5%的开销。尽管*perf*没有直接指出确切的问题，但它表明了这种瓶颈的存在。
+显然，`_pthread_mutex_cond_lock` 是一个重要的瓶颈，占大约 9.5% 的开销。尽管 `perf` 没有直接指出确切的问题，但它表明了这种瓶颈的存在。
 
 为了解决这个问题，对 MySQL 内部进行了深入探索，以揭示导致这种性能瓶颈的因素。使用了一种传统的二分搜索方法，并尽量减少日志记录，以确定在执行过程中产生重大开销的函数或代码段。选择最小化日志记录方法是为了在诊断问题的根本原因时减少性能干扰。过多的日志记录可能会干扰性能分析，尽管有些人可能使用 MySQL 的内部机制进行故障排除，但这些通常会引入大量的性能开销。
 
@@ -194,7 +194,7 @@ binlog 组提交机制相当复杂，这种复杂性使得识别其固有的性�
   } 
 ```
 
-“等待时间过长”输出的多次出现表明瓶颈已被暴露。为了调查为什么会出现“等待时间过长”，日志被添加和相应修改。请参见以下具体代码：
+`等待时间过长` 输出的多次出现表明瓶颈已被暴露。为了调查为什么会出现 `等待时间过长`，日志被添加和相应修改。请参见以下具体代码：
 
 ```cpp
  /*
@@ -226,9 +226,11 @@ binlog 组提交机制相当复杂，这种复杂性使得识别其固有的性�
   } 
 ```
 
-在另一轮测试后，观察到一种奇特的现象：当出现“等待时间过长”消息时，“唤醒线程”日志显示许多用户线程被唤醒多次。
+在另一轮测试后，观察到一种奇特的现象：当出现 `等待时间过长` 消息时，`唤醒线程` 日志显示许多用户线程被唤醒多次。
 
-问题追踪到*thd->tx_commit_pending*值没有变化，导致线程反复重新进入等待过程。进一步检查揭示了该变量变为 false 的条件，如下面的代码所示：
+问题追踪到 `thd->tx_commit_pending` 值没有变化，导致线程反复重新进入等待过程。进一步检查揭示了该变量变为 false 的条件，如下面的代码所示：
+
+
 
 ```cpp
 void Commit_stage_manager::signal_done(THD *queue, StageID stage) {
@@ -243,10 +245,10 @@ void Commit_stage_manager::signal_done(THD *queue, StageID stage) {
   else
     mysql_cond_broadcast(&m_stage_cond_binlog);
   mysql_mutex_unlock(&m_lock_done);
-} 
+}
 ```
 
-从代码中可以看出，在*signal_done*函数中，*thd->tx_commit_pending*被设置为 false。随后，*mysql_cond_broadcast*函数激活所有等待的线程，导致类似暴风群问题的情况。当所有之前等待的用户线程被激活后，它们会检查 tx_commit_pending 是否被设置为 false。如果是，它们将继续处理；否则，它们将继续等待。
+从代码中可以看出，在`signal_done`函数中，`thd->tx_commit_pending`被设置为`false`。随后，`mysql_cond_broadcast`函数激活所有等待的线程，导致类似暴风群问题的情况。当所有之前等待的用户线程被激活后，它们会检查`tx_commit_pending`是否被设置为`false`。如果是，它们将继续处理；否则，它们将继续等待。
 
 尽管 binlog 组提交机制很复杂，但简单的分析就能确定根本原因：应该不被激活的线程被触发，导致每次激活都产生不必要的上下文切换。
 
@@ -258,15 +260,15 @@ void Commit_stage_manager::signal_done(THD *queue, StageID stage) {
 
 等待一次是正常的，表示 100%的效率。等待两次表明 50%的效率，而等待三次则表示 33.3%的效率。根据图表，整体激活效率计算为 52.7%。
 
-为了解决这个问题，一个理想的解决方案是具有 100%效率的多播激活机制，其中将 tx_commit_pending 设置为 false 的用户线程一起激活。然而，实现这一点需要深入理解 binlog 组提交背后的复杂逻辑。
+为了解决这个问题，一个理想的解决方案是具有 100%效率的多播激活机制，其中将`tx_commit_pending`设置为`false`的用户线程一起激活。然而，实现这一点需要深入理解 binlog 组提交背后的复杂逻辑。
 
 在这种情况下，使用了点对点激活机制，实现了 100%的效率，但引入了显著的系统调用开销。以下图表展示了优化前后 TPC-C 吞吐量和并发的变化关系。
 
 ![image-20240829103236734](img/d48990eaef9215af54c8cc0e1fed399a.png)
 
-图 8-16. 使用 innodb_thread_concurrency=128 的组提交优化的影响。
+图 8-16. 使用`innodb_thread_concurrency=128`的组提交优化的影响。
 
-从图表中可以看出，当 innodb_thread_concurrency=128 时，binlog 组提交的优化在高并发下显著提高了吞吐量。
+从图表中可以看出，当`innodb_thread_concurrency=128`时，binlog 组提交的优化在高并发下显著提高了吞吐量。
 
 重要的是要注意，这种优化的有效性可能因配置设置和特定场景等因素而异。然而，总的来说，它在高并发条件下显著提高了吞吐量。
 
@@ -278,11 +280,11 @@ void Commit_stage_manager::signal_done(THD *queue, StageID stage) {
 
 从图表中可以看出，这次优化与之前的优化相比不那么明显，但仍然显示出整体上的改进。广泛的测试表明，MySQL 的可扩展性越差，binlog 组提交优化的效果就越显著。
 
-同时，之前识别出的*b pthread_mutex_cond_lock*瓶颈在优化后得到了显著缓解，如下面的图表所示：
+同时，之前识别出的`b pthread_mutex_cond_lock`瓶颈在优化后得到了显著缓解，如下面的图表所示：
 
 ![图片](img/b2b0c08856a0f3b019c50ffc1df2720a.png)
 
-图 8-18. *b pthread_mutex_cond_lock*瓶颈的缓解。
+图 8-18. `b pthread_mutex_cond_lock`瓶颈的缓解。
 
 总结来说，这次优化有助于解决与 binlog 组提交相关的可扩展性问题。
 
@@ -317,51 +319,51 @@ private:
   whose transaction number is strictly smaller (<) than this value:
   they can be removed in purge if not needed by other views */
   trx_id_t m_low_limit_no;
-  ... 
+  ...
 ```
 
-在这里，*m_ids* 是一个类型为 *ids_t* 的数据结构，它非常类似于 *std::vector*。具体解释如下：
+在这里，`m_ids`是一个类型为`ids_t`的数据结构，它非常类似于`std::vector`。具体解释如下：
 
 ```cpp
- /** This is similar to a std::vector but it is not a drop
-  in replacement. It is specific to ReadView. */
-  class ids_t {
-    typedef trx_ids_t::value_type;
-    /**
-    Constructor */
-    ids_t() : m_ptr(), m_size(), m_reserved() {}
-    /**
-    Destructor */
-    ~ids_t() { ut::delete_arr(m_ptr); }
-    /** Try and increase the size of the array. Old elements are copied across.
-    It is a no-op if n is < current size.
-    @param n            Make space for n elements */
-    void reserve(ulint n);
-    ... 
+/** This is similar to a std::vector but it is not a drop
+in replacement. It is specific to ReadView. */
+class ids_t {
+  typedef trx_ids_t::value_type;
+  /**
+  Constructor */
+  ids_t() : m_ptr(), m_size(), m_reserved() {}
+  /**
+  Destructor */
+  ~ids_t() { ut::delete_arr(m_ptr); }
+  /** Try and increase the size of the array. Old elements are copied across.
+  It is a no-op if n is < current size.
+  @param n            Make space for n elements */
+  void reserve(ulint n);
+  ...
 ```
 
-MVCC ReadView 可见性确定算法，具体参考下面的 *changes_visible* 函数：
+MVCC ReadView 可见性确定算法，具体参考下面的`changes_visible`函数：
 
 ```cpp
- /** Check whether the changes by id are visible.
-  @param[in]    id      transaction id to check against the view
-  @param[in]    name    table name
-  @return whether the view sees the modifications of id. */
-  [[nodiscard]] bool changes_visible(trx_id_t id,
-                                     const table_name_t &name) const {
-    ut_ad(id > 0);
-    if (id < m_up_limit_id || id == m_creator_trx_id) {
-      return (true);
-    }
-    check_trx_id_sanity(id, name);
-    if (id >= m_low_limit_id) {
-      return (false);
-    } else if (m_ids.empty()) {
-      return (true);
-    }
-    const ids_t::value_type *p = m_ids.data();
-    return (!std::binary_search(p, p + m_ids.size(), id));
- } 
+/** Check whether the changes by id are visible.
+@param[in]    id      transaction id to check against the view
+@param[in]    name    table name
+@return whether the view sees the modifications of id. */
+[[nodiscard]] bool changes_visible(trx_id_t id,
+                                   const table_name_t &name) const {
+  ut_ad(id > 0);
+  if (id < m_up_limit_id || id == m_creator_trx_id) {
+    return (true);
+  }
+  check_trx_id_sanity(id, name);
+  if (id >= m_low_limit_id) {
+    return (false);
+  } else if (m_ids.empty()) {
+    return (true);
+  }
+  const ids_t::value_type *p = m_ids.data();
+  return (!std::binary_search(p, p + m_ids.size(), id));
+}
 ```
 
 从代码中可以看出，当并发性低时，可见性算法效率很高。然而，随着并发性的增加，使用二分查找来确定可见性的效率显著降低，尤其是在 NUMA 环境中。
@@ -384,29 +386,29 @@ MVCC ReadView 可见性确定算法，具体参考下面的 *changes_visible* �
 
 ```cpp
 class ReadView {
- ...
- private:
-  // Disable copying
-  ReadView &operator=(const ReadView &);
- public:
-  bool skip_view_list{false};
- private:
-  unsigned char top_active[MAX_TOP_ACTIVE_BYTES];
-  trx_id_t m_short_min_id;
-  trx_id_t m_short_max_id;
-  bool m_has_short_actives;
-  /** The read should not see any transaction with trx id >= this
-  value. In other words, this is the "high water mark". */
-  trx_id_t m_low_limit_id;
-  /** The read should see all trx ids which are strictly
-  smaller (<) than this value.  In other words, this is the low water mark". */
-  trx_id_t m_up_limit_id;
-  /** trx id of creating transaction, set to TRX_ID_MAX for free views. */
-  trx_id_t m_creator_trx_id;
-  /** Set of RW transactions that was active when this snapshot
-  was taken */
-  ids_t m_long_ids;
-  ... 
+  ...
+  private:
+    // Disable copying
+    ReadView &operator=(const ReadView &);
+  public:
+    bool skip_view_list{false};
+  private:
+    unsigned char top_active[MAX_TOP_ACTIVE_BYTES];
+    trx_id_t m_short_min_id;
+    trx_id_t m_short_max_id;
+    bool m_has_short_actives;
+    /** The read should not see any transaction with trx id >= this
+    value. In other words, this is the "high water mark". */
+    trx_id_t m_low_limit_id;
+    /** The read should see all trx ids which are strictly
+    smaller (<) than this value.  In other words, this is the low water mark". */
+    trx_id_t m_up_limit_id;
+    /** trx id of creating transaction, set to TRX_ID_MAX for free views. */
+    trx_id_t m_creator_trx_id;
+    /** Set of RW transactions that was active when this snapshot
+    was taken */
+    ids_t m_long_ids;
+    ...
 ```
 
 此外，在相关的接口函数中进行了相应的代码修改，因为数据结构的更改需要调整这些函数内部的内部代码。
@@ -421,35 +423,35 @@ class ReadView {
 
 通常，在线事务是短事务而不是长事务，事务 ID 持续增加。为了利用这些特性，使用混合数据结构：一个静态数组用于连续的短事务 ID，一个向量用于长事务。使用 2048 字节的数组可以存储多达 16,384 个连续的活跃事务 ID，每个位代表一个事务 ID。
 
-最小短事务 ID 用于区分短事务和长事务。小于此最小值的 ID 进入长事务向量，而等于或大于此值的 ID 则放置在短事务数组中。对于 changes_visible 中的 ID，如果它低于最小短事务 ID，则直接查询向量，由于长事务通常数量较少，因此这种方法效率较高。如果 ID 等于或高于最小短事务 ID，则执行位查询，时间复杂度为 O(1)，与之前的 O(log n)复杂度相比。这种改进提高了效率并减少了 NUMA 节点之间的缓存迁移，因为 O(1)查询通常在单个 CPU 时间片中完成。
+最小短事务 ID 用于区分短事务和长事务。小于此最小值的 ID 进入长事务向量，而等于或大于此值的 ID 则放置在短事务数组中。对于`changes_visible`中的 ID，如果它低于最小短事务 ID，则直接查询向量，由于长事务通常数量较少，因此这种方法效率较高。如果 ID 等于或高于最小短事务 ID，则执行位查询，时间复杂度为 O(1)，与之前的 O(log n)复杂度相比。这种改进提高了效率并减少了 NUMA 节点之间的缓存迁移，因为 O(1)查询通常在单个 CPU 时间片中完成。
 
 除了之前提到的转换外，类似的修改也应用于全局事务活跃列表。用于此列表的原始数据结构如下代码片段所示：
 
 ```cpp
- /** Array of Read write transaction IDs for MVCC snapshot. A ReadView would
-  take a snapshot of these transactions whose changes are not visible to it.
-  We should remove transactions from the list before committing in memory and
-  releasing locks to ensure right order of removal and consistent snapshot. */
-  trx_ids_t rw_trx_ids; 
+/** Array of Read write transaction IDs for MVCC snapshot. A ReadView would
+take a snapshot of these transactions whose changes are not visible to it.
+We should remove transactions from the list before committing in memory and
+releasing locks to ensure right order of removal and consistent snapshot. */
+trx_ids_t rw_trx_ids;
 ```
 
 现在它已经改为以下数据结构：
 
 ```cpp
- /** Array of Read write transaction IDs for MVCC snapshot. A ReadView would
-  take a snapshot of these transactions whose changes are not visible to it.
-  We should remove transactions from the list before committing in memory and
-  releasing locks to ensure right order of removal and consistent snapshot. */
-  trx_ids_t long_rw_trx_ids;
-  unsigned char short_rw_trx_ids_bitmap[MAX_SHORT_ACTIVE_BYTES];
-  int short_rw_trx_valid_number;
-  trx_id_t min_short_valid_id;
-  trx_id_t max_short_valid_id 
+/** Array of Read write transaction IDs for MVCC snapshot. A ReadView would
+take a snapshot of these transactions whose changes are not visible to it.
+We should remove transactions from the list before committing in memory and
+releasing locks to ensure right order of removal and consistent snapshot. */
+trx_ids_t long_rw_trx_ids;
+unsigned char short_rw_trx_ids_bitmap[MAX_SHORT_ACTIVE_BYTES];
+int short_rw_trx_valid_number;
+trx_id_t min_short_valid_id;
+trx_id_t max_short_valid_id
 ```
 
-在*short_rw_trx_ids_bitmap*结构中，*MAX_SHORT_ACTIVE_BYTES*设置为 65536，理论上可以容纳多达 524,288 个连续的短事务 ID。如果超过此限制，最老的短事务 ID 将被转换为长事务并存储在*long_rw_trx_ids*中。全局长事务和短事务通过*min_short_valid_id*区分：小于此值的 ID 被视为全局长事务，而等于或大于此值的 ID 被视为全局短事务。
+在`short_rw_trx_ids_bitmap`结构中，`MAX_SHORT_ACTIVE_BYTES`设置为 65536，理论上可以容纳多达 524,288 个连续的短事务 ID。如果超过此限制，最老的短事务 ID 将被转换为长事务并存储在`long_rw_trx_ids`中。全局长事务和短事务通过`min_short_valid_id`区分：小于此值的 ID 被视为全局长事务，而等于或大于此值的 ID 被视为全局短事务。
 
-在从全局活跃事务列表复制过程中，仅使用一个位表示每个事务 ID 的*short_rw_trx_ids_bitmap*结构，与原生的 MySQL 解决方案相比，允许实现更高的复制效率。例如，对于 1000 个活跃事务，原生 MySQL 版本至少需要复制 8000 字节，而优化后的解决方案可能只需要几百字节。这导致复制效率显著提高。
+在从全局活跃事务列表复制过程中，仅使用一个位表示每个事务 ID 的`short_rw_trx_ids_bitmap`结构，与原生的 MySQL 解决方案相比，允许实现更高的复制效率。例如，对于 1000 个活跃事务，原生 MySQL 版本至少需要复制 8000 字节，而优化后的解决方案可能只需要几百字节。这导致复制效率显著提高。
 
 在实施这些修改后，进行了性能比较测试，以评估 MVCC ReadView 优化的有效性。下面的图显示了修改 MVCC ReadView 数据结构前后，不同并发级别下的 TPC-C 吞吐量比较。
 
@@ -457,21 +459,23 @@ class ReadView {
 
 图 8-20. 采用新的混合数据结构前后在 NUMA 中的性能比较。
 
-从图中可以明显看出，这种转换主要优化了可扩展性，并提高了 NUMA 环境下的 MySQL 峰值吞吐量。可以使用*perf*等工具分析优化前后的性能比较。以下是优化前 300 并发下的*perf*截图：
+
+
+从图中可以明显看出，这种转换主要优化了可扩展性，并提高了 NUMA 环境下的 MySQL 峰值吞吐量。可以使用`perf`等工具分析优化前后的性能比较。以下是优化前 300 并发下的`perf`截图：
 
 ![](img/5d383d113a8a0b3178e71e6eceb047d5.png)
 
-图 8-21\. 在*perf*截图中观察到的与闩锁相关的瓶颈。
+图 8-21. 在`perf`截图中观察到的与闌锁相关的瓶颈。
 
-从图中可以看出，前两个瓶颈非常显著，占大约 33%的开销。优化后，300 并发下的*perf*截图如下：
+从图中可以看出，前两个瓶颈非常显著，占大约 33%的开销。优化后，300 并发下的`perf`截图如下：
 
 ![](img/b65f8f76e1a83e4082df6dcb03af4be4.png)
 
-图 8-22\. 与闩锁相关的瓶颈显著缓解。
+图 8-22. 与闌锁相关的瓶颈显著缓解。
 
 优化后，如上图所示，之前前两个瓶颈的比例已经显著降低。
 
-为什么改变 MVCC ReadView 数据结构能显著提高可扩展性？这是因为访问这些结构涉及到获取全局闩锁。优化数据结构加速了对关键资源的访问，减少了并发冲突并最小化了 NUMA 节点间的缓存迁移。
+为什么改变 MVCC ReadView 数据结构能显著提高可扩展性？这是因为访问这些结构涉及到获取全局闌锁。优化数据结构加速了对关键资源的访问，减少了并发冲突并最小化了 NUMA 节点间的缓存迁移。
 
 原生的 MVCC ReadView 使用一个向量来存储活动事务的列表。在高并发场景下，这个列表可能会变得很大，导致更大的工作集。在 NUMA 环境中，查询和复制都可能变慢，可能造成单个 CPU 时间片错过其截止时间，从而导致显著的上下文切换成本。这一方面的理论基础如下[21]：
 
@@ -481,7 +485,7 @@ class ReadView {
 
 ![image-20240829104512068](img/7d6acf6b20bf936f3a027bc456e5fae2.png)
 
-图 8-23\. ARM 架构下的吞吐量提升。
+图 8-23. ARM 架构下的吞吐量提升。
 
 从图中可以看出，在 ARM 架构下也有显著的提升。大量的测试数据证实，无论架构是 ARM 还是 x86，MVCC ReadView 优化在 NUMA 环境中都能带来明显的收益。
 
@@ -489,25 +493,25 @@ class ReadView {
 
 ![image-20240829104533718](img/4bb8dae8ea938bd73dbd5cb04fc2ed9f.png)
 
-图 8-24\. 采用新的混合数据结构前后 SMP 的性能比较。
+图 8-24. 采用新的混合数据结构前后 SMP 的性能比较。
 
 从图中可以看出，绑定到 NUMA 节点 0 之后，MVCC ReadView 优化带来的提升并不显著。这表明优化主要增强了 NUMA 架构的可扩展性。
 
-在实际的 MySQL 使用中，防止过多的用户线程进入 InnoDB 存储引擎可以显著减少全局活动事务列表的大小。这种事务节流机制有效地补充了 MVCC ReadView 优化，提高了整体性能。结合下一节讨论的双重闩锁避免，以下图中的 TPC-C 测试结果清楚地展示了这些改进。
+在实际的 MySQL 使用中，防止过多的用户线程进入 InnoDB 存储引擎可以显著减少全局活动事务列表的大小。这种事务节流机制有效地补充了 MVCC ReadView 优化，提高了整体性能。结合下一节讨论的双重闌锁避免，以下图中的 TPC-C 测试结果清楚地展示了这些改进。
 
 ![image-20240829104554155](img/b76ceb837bbfe2d9e92688d834f04658.png)
 
-图 8-25\. 带事务节流机制的 BenchmarkSQL 中的最大 TPC-C 吞吐量。
+图 8-25. 带事务节流机制的 BenchmarkSQL 中的最大 TPC-C 吞吐量。
 
-### 8.2.4 避免双重闩锁问题
+### 8.2.4 避免双重闌锁问题
 
 在 MVCC ReadView 优化后的测试期间，在极高并发条件下观察到吞吐量明显下降。具体细节如下所示：
 
 ![image-20240829104639402](img/2d5f5f538623a28aa1ddf03d6f16f853.png)
 
-图 8-26\. 在并发级别超过 500 时的性能下降。
+图 8-26. 在并发级别超过 500 时的性能下降。
 
-从图中可以看出，一旦并发超过 500，吞吐量会显著下降。问题追踪到频繁获取*trx-sys*闩锁，如下面的代码片段所示：
+从图中可以看出，一旦并发超过 500，吞吐量会显著下降。问题追踪到频繁获取`trx-sys`闌锁，如下面的代码片段所示：
 
 ```cpp
  } else if (trx->isolation_level <= TRX_ISO_READ_COMMITTED &&
@@ -535,7 +539,7 @@ class ReadView {
   } 
 ```
 
-InnoDB 在视图关闭过程中引入了一个全局 trx-sys 闩锁，在高并发下影响了可伸缩性。为了解决这个问题，尝试移除全局闩锁。以下是一个修改示例：
+InnoDB 在视图关闭过程中引入了一个全局`trx-sys`闌锁，在高并发下影响了可伸缩性。为了解决这个问题，尝试移除全局闌锁。以下是一个修改示例：
 
 ```cpp
  } else if (trx->isolation_level <= TRX_ISO_READ_COMMITTED &&
@@ -563,23 +567,23 @@ InnoDB 在视图关闭过程中引入了一个全局 trx-sys 闩锁，在高并�
 
 ![image-20240829104851205](img/779c5517441e8d96cc3be821afab3742.png)
 
-图 8-27\. 消除双重闩锁瓶颈后的性能提升。
+图 8-27. 消除双重闌锁瓶颈后的性能提升。
 
-从图中可以看出，修改显著提高了高并发条件下的可伸缩性。为了了解这种改进的原因，让我们使用*perf*工具进行进一步调查。以下是修改前的 2000 并发时的*perf*截图：
+从图中可以看出，修改显著提高了高并发条件下的可伸缩性。为了了解这种改进的原因，让我们使用`perf`工具进行进一步调查。以下是修改前的 2000 并发时的`perf`截图：
 
 ![](img/b695cae35d943eedce4428ea53ddbc14.png)
 
-图 8-28\. 在*perf*截图观察到的与闩锁相关的瓶颈。
+图 8-28. 在`perf`截图观察到的与闌锁相关的瓶颈。
 
-从图中可以看出，与闩锁相关的瓶颈相当明显。在代码修改后，以下是 3000 并发时的*perf*截图：
+从图中可以看出，与闌锁相关的瓶颈相当明显。在代码修改后，以下是 3000 并发时的`perf`截图：
 
 ![](img/61b5194615f9be3584a0c4db467ccbaa.png)
 
-图 8-29\. 与闩锁相关的瓶颈显著缓解。
+图 8-29. 与闌锁相关的瓶颈显著缓解。
 
-即使在高并发情况下，如 3000，瓶颈并不明显。这表明优化有效地缓解了与闩锁相关的性能问题，在极端条件下提高了可伸缩性。
+即使在高并发情况下，如 3000，瓶颈并不明显。这表明优化有效地缓解了与闌锁相关的性能问题，在极端条件下提高了可伸缩性。
 
-在*view_close*函数调用前后排除全局闩锁可以提高可伸缩性，而在高并发情况下包含它会严重降低可伸缩性。尽管*view_close*函数在其关键部分内运行效率很高，但频繁获取全局使用的*trx-sys*闩锁——在整个*trx-sys*子系统中使用——导致显著的竞争和头阻塞。这个问题被称为“双重闩锁”问题，它源于*view_open*和*view_close*都需要全局*trx-sys*闩锁。值得注意的是，从最终阶段移除闩锁或使用新的闩锁可以显著缓解这个问题。
+在`view_close`函数调用前后排除全局闌锁可以提高可伸缩性，而在高并发情况下包含它会严重降低可伸缩性。尽管`view_close`函数在其关键部分内运行效率很高，但频繁获取全局使用的`trx-sys`闌锁——在整个`trx-sys`子系统中使用——导致显著的竞争和头阻塞。这个问题被称为“双重闌锁”问题，它源于`view_open`和`view_close`都需要全局`trx-sys`闌锁。值得注意的是，从最终阶段移除闌锁或使用新的闌锁可以显著缓解这个问题。
 
 ### 8.2.5 解释超线性性能现象
 
@@ -587,7 +591,7 @@ InnoDB 在视图关闭过程中引入了一个全局 trx-sys 闩锁，在高并�
 
 ![image-20240829104924497](img/7323d9486156900a9a7b099201997433.png)
 
-图 8-30\. MVCC 优化后 MySQL 独立运行的吞吐量。
+图 8-30. MVCC 优化后 MySQL 独立运行的吞吐量。
 
 每个实例的吞吐量都有显著提高，MySQL 实例 1 实现了 524,381 QPS，MySQL 实例 2 达到了 553,008 QPS。合并起来，它们提供了 1,077,389 QPS，大幅超过了之前的 328,168 QPS。
 
@@ -595,7 +599,7 @@ SysBench 用于同时评估这两个实例的读写性能，如图下所示。
 
 ![image-20240829104945257](img/a809a96686d28e7c97a28b3b4ecc16fb.png)
 
-图 8-31\. MVCC 优化后 MySQL 一起运行的吞吐量。
+图 8-31. MVCC 优化后 MySQL 一起运行的吞吐量。
 
 从图中可以看出，一个实例实现了 289,702 QPS 的吞吐量，而另一个实例达到了 285,026 QPS。两个 MySQL 实例的总吞吐量为 574,728 QPS，与 MySQL 发布版本观察到的 546,429 QPS 非常接近。这说明了 Linux 操作系统在 NUMA 环境中有效调度多个进程的作用。
 
@@ -603,7 +607,7 @@ SysBench 用于同时评估这两个实例的读写性能，如图下所示。
 
 ![image-20240829105004347](img/1b95d5e8c2456dd67560f1341385874c.png)
 
-图 8-32\. MVCC 优化后单独运行和一起运行的吞吐量总和。
+图 8-32. MVCC 优化后单独运行和一起运行的吞吐量总和。
 
 在改进 InnoDB 存储引擎之后，超线性扩展问题得到了解决，揭示了 MySQL 发布版本中潜在的原因是 InnoDB 中设计不良的 MVCC 机制。这种设计缺陷放大了 NUMA 环境中的问题，导致了观察到的超线性扩展效应。
 
@@ -619,13 +623,13 @@ SysBench 用于同时评估这两个实例的读写性能，如图下所示。
 
 1.  **缓解短连接风暴**：通过管理和重用线程，线程池有助于防止在短期连接突然激增时系统过载。
 
-1.  **增强可扩展性**：线程池通过使 MySQL 更有效地利用可用的 CPU 核心来提高可扩展性，尤其是在高竞争场景中。
+2.  **增强可扩展性**：线程池通过使 MySQL 更有效地利用可用的 CPU 核心来提高可扩展性，尤其是在高竞争场景中。
 
 以 Percona 的线程池作为案例研究，让我们来考察线程池在提高 MySQL 可扩展性方面的成本效益。以下图表比较了实施线程池前后吞吐量和并发的变化。
 
 ![image-20240829105130499](img/4170aa73f79f39dd66136a6331d2010b.png)
 
-图 8-33。启用 Percona 线程池导致吞吐量明显下降。
+图 8-33. 启用 Percona 线程池导致吞吐量明显下降。
 
 从图中可以看出，采用线程池后，吞吐量有所下降。这种下降归因于 Percona 线程池的高固有成本。此外，由于改进版的 MySQL 已经实现了显著的可扩展性改进，Percona 线程池在提高 TPC-C 应用程序可扩展性方面的额外好处有限。
 
@@ -643,7 +647,7 @@ MySQL 在其线程池中引入了“最大事务限制”功能，以减轻性�
 
 ![](img/63a4b5f8a5215a183c98014d20f80cab.png)
 
-图 8-34\. MySQL 中的新事务节流机制。
+图 8-34. MySQL 中的新事务节流机制。
 
 在开始新事务之前，检查并发事务的数量是否超过限制。如果是，事务进入等待状态。否则，它将继续进入事务系统。事务完成后，从等待列表中激活一个用户线程以继续执行另一个事务。
 
@@ -651,7 +655,7 @@ MySQL 在其线程池中引入了“最大事务限制”功能，以减轻性�
 
 ![image-20240829105242300](img/1c0e147423c310c208469e6c855764d1.png)
 
-图 8-35\. 事务节流机制的影响。
+图 8-35. 事务节流机制的影响。
 
 从图中可以看出，节流方法优于 Percona 线程池方法，并且这种优势是全面的。
 
@@ -659,7 +663,7 @@ MySQL 在其线程池中引入了“最大事务限制”功能，以减轻性�
 
 ![image-20240829105258689](img/2f74bf5b55d5674c4eed2cc60720f9a6.png)
 
-图 8-36\. 在 BenchmarkSQL 中使用事务节流机制的最大 TPC-C 吞吐量。
+图 8-36. 在 BenchmarkSQL 中使用事务节流机制的最大 TPC-C 吞吐量。
 
 从图中可以看出，吞吐量更加稳定。这种稳定性主要归因于在 BIOS 中禁用 NUMA，这提高了内存访问效率并增强了整体系统稳定性。
 
@@ -689,17 +693,17 @@ MySQL 开发者往往未能注意到性能下降，因为代码库的每次增�
 
 ![image-join-degrade](img/33ce04c643f3855aea7871e389914908.png)
 
-图 8-37\. MySQL 8.0.40 中连接性能的显著下降。
+图 8-37. MySQL 8.0.40 中连接性能的显著下降。
 
 下图显示了在单并发情况下的批量插入性能测试，与 MySQL 5.7.44 版本相比，MySQL 8.0.40 的性能有所下降：
 
 ![image-bulk-insert-degrade](img/56ffd9da7183234125d6a5ab8e0ee6f2.png)
 
-图 8-38\. MySQL 8.0.40 中批量插入性能的显著下降。
+图 8-38. MySQL 8.0.40 中批量插入性能的显著下降。
 
 从上面的两个图表中可以看出，8.0.40 版本的性能并不好。
 
-接下来，让我们从代码层面分析 MySQL 性能下降的根本原因。以下是 MySQL 8.0 中的***PT_insert_values_list::contextualize***函数：
+接下来，让我们从代码层面分析 MySQL 性能下降的根本原因。以下是 MySQL 8.0 中的`PT_insert_values_list::contextualize`函数：
 
 ```cpp
 bool PT_insert_values_list::contextualize(Parse_context *pc) {
@@ -714,7 +718,9 @@ bool PT_insert_values_list::contextualize(Parse_context *pc) {
 } 
 ```
 
-MySQL 5.7 中对应的***PT_insert_values_list::contextualize***函数如下：
+
+
+MySQL 5.7 中对应的`PT_insert_values_list::contextualize`函数如下：
 
 ```cpp
 bool PT_insert_values_list::contextualize(Parse_context *pc)
@@ -736,12 +742,12 @@ bool PT_insert_values_list::contextualize(Parse_context *pc)
   }
 
   return false;
-} 
+}
 ```
 
 从代码比较来看，MySQL 8.0 似乎有更优雅的代码，看起来有所进步。
 
-不幸的是，很多时候，正是这些代码改进背后的动机导致了性能下降。MySQL 官方团队将之前的***List***数据结构替换为***deque***，这已成为性能逐渐下降的根本原因之一。让我们看看***deque***的文档：
+不幸的是，很多时候，正是这些代码改进背后的动机导致了性能下降。MySQL 官方团队将之前的`List`数据结构替换为`deque`，这已成为性能逐渐下降的根本原因之一。让我们看看`deque`的文档：
 
 ```cpp
 std::deque (double-ended queue) is an indexed sequence container that allows fast insertion and deletion at both its 
@@ -761,24 +767,24 @@ whichever is larger, on 64-bit libc++).
 The complexity (efficiency) of common operations on deques is as follows:
 Random access - constant O(1).
 Insertion or removal of elements at the end or beginning - constant O(1).
-Insertion or removal of elements - linear O(n). 
+Insertion or removal of elements - linear O(n).
 ```
 
-如上述描述所示，在极端情况下，保留单个元素需要分配整个数组，导致非常低的内存效率。例如，在批量插入中，需要插入大量记录，官方实现将每条记录存储在单独的 deque 中。即使记录内容很少，仍然需要分配 deque。MySQL deque 实现为每个 deque 分配 1KB 的内存以支持快速查找。
+如上述描述所示，在极端情况下，保留单个元素需要分配整个数组，导致非常低的内存效率。例如，在批量插入中，需要插入大量记录，官方实现将每条记录存储在单独的`deque`中。即使记录内容很少，仍然需要分配`deque`。MySQL`deque`实现为每个`deque`分配 1KB 的内存以支持快速查找。
 
 ```cpp
-The implementation is the same as classic std::deque: Elements are held in blocks of about 1 kB each. 
+The implementation is the same as classic std::deque: Elements are held in blocks of about 1 kB each.
 ```
 
 官方实现使用 1KB 的内存来存储索引信息，即使记录长度不大但记录数量很多，内存访问地址可能变得不连续，导致缓存友好性差。这种设计旨在提高缓存友好性，但效果并不完全。
 
-值得注意的是，原始实现使用 List 数据结构，内存通过内存池分配，提供了一定程度的缓存友好性。虽然随机访问效率较低，但优化 List 元素的顺序访问可以显著提高性能。
+值得注意的是，原始实现使用`List`数据结构，内存通过内存池分配，提供了一定程度的缓存友好性。虽然随机访问效率较低，但优化`List`元素的顺序访问可以显著提高性能。
 
 在升级到 MySQL 8.0 的过程中，用户观察到批量插入性能显著下降，其中一个主要原因是底层数据结构的重大变化。
 
 此外，尽管官方团队改进了重做日志机制，这也导致了 MTR 提交操作效率的降低。与 MySQL 5.7 相比，添加的代码显著降低了单个提交的性能，尽管整体写入吞吐量已经大幅提高。
 
-让我们分析 MySQL 5.7.44 中 MTR 提交的核心 ***execute*** 操作：
+让我们分析 MySQL 5.7.44 中 MTR 提交的核心`execute`操作：
 
 ```cpp
 /** Write the redo log record, add dirty pages to the flush list and 
@@ -803,10 +809,10 @@ void mtr_t::Command::execute()
   }
   release_all();
   release_resources();
-} 
+}
 ```
 
-让我们分析 MySQL 8.0.40 中 MTR 提交的核心 ***execute*** 操作：
+让我们分析 MySQL 8.0.40 中 MTR 提交的核心`execute`操作：
 
 ```cpp
 /** Write the redo log record, add dirty pages to the flush list and 
@@ -833,16 +839,16 @@ void mtr_t::Command::execute() {
     DEBUG_SYNC_C("mtr_noredo_before_add_dirty_blocks");
     add_dirty_blocks_to_flush_list(0, 0);
   }
-#endif /* !UNIV_HOTBACKUP */ 
+#endif /* !UNIV_HOTBACKUP */
 ```
 
 通过比较，可以看出在 MySQL 8.0.40 中，MTR 提交中的执行操作变得更加复杂，涉及更多步骤。这种复杂性是低并发写性能下降的主要原因之一。
 
-特别是，操作 ***m_impl->m_log.for_each_block(write_log)*** 和 **log_wait_for_space_in_log_recent_closed(*log_sys, handle.start_lsn)** 具有显著的开销。这些更改是为了提高高并发性能，但它们以低并发性能为代价。
+特别是，操作`m_impl->m_log.for_each_block(write_log)`和`log_wait_for_space_in_log_recent_closed(*log_sys, handle.start_lsn)`具有显著的开销。这些更改是为了提高高并发性能，但它们以低并发性能为代价。
 
-在高并发模式下，重做日志的优先级导致低并发工作负载的性能较差。尽管引入 ***innodb_log_writer_threads*** 的目的是为了缓解低并发性能问题，但它并不影响上述函数的执行。由于这些操作变得更加复杂且需要频繁的 MTR 提交，性能仍然显著下降。
+在高并发模式下，重做日志的优先级导致低并发工作负载的性能较差。尽管引入`innodb_log_writer_threads`的目的是为了缓解低并发性能问题，但它并不影响上述函数的执行。由于这些操作变得更加复杂且需要频繁的 MTR 提交，性能仍然显著下降。
 
-让我们看看即时添加/删除功能对性能的影响。以下是 MySQL 5.7 中的 ***rec_init_offsets_comp_ordinary*** 函数：
+让我们看看即时添加/删除功能对性能的影响。以下是 MySQL 5.7 中的`rec_init_offsets_comp_ordinary`函数：
 
 ```cpp
 /******************************************************//**
@@ -887,10 +893,26 @@ rec_init_offsets_comp_ordinary(
     const dict_col_t* col
       = dict_field_get_col(field);
     ulint     len;
-  ... 
+  ...
 ```
 
-MySQL 8.0.40 中的 ***rec_init_offsets_comp_ordinary*** 函数如下：
+MySQL 8.0.40 中的`rec_init_offsets_comp_ordinary`函数如下：
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+---
 
 ```cpp
 /** Determine the offset to each field in a leaf-page record in
@@ -972,7 +994,7 @@ inline void rec_init_offsets_comp_ordinary(const rec_t *rec, bool temp,
     ... 
 ```
 
-从上述代码中可以看出，随着即时添加/删除列功能的引入，`***rec_init_offsets_comp_ordinary***` 函数变得更加复杂，引入了更多的函数调用，并添加了一个影响缓存优化的开关语句。由于这个函数被频繁调用，它直接影响了更新索引、批量插入和连接的性能，导致性能大幅下降。
+从上述代码中可以看出，随着即时添加/删除列功能的引入，`rec_init_offsets_comp_ordinary`函数变得更加复杂，引入了更多的函数调用，并添加了一个影响缓存优化的开关语句。由于这个函数被频繁调用，它直接影响了更新索引、批量插入和连接的性能，导致性能大幅下降。
 
 此外，MySQL 8.0 的性能下降不仅限于上述问题；还有许多其他领域对整体性能下降做出了贡献，特别是对内联函数扩展的影响。例如，以下代码影响了内联函数的扩展：
 
@@ -989,9 +1011,9 @@ void validate_rec_offset(const dict_index_t *index, const ulint *offsets,
 } 
 ```
 
-根据我们的测试，`***ib::fatal***` 语句严重干扰了内联优化。对于频繁访问的函数，建议避免干扰内联优化的语句。
+根据我们的测试，`ib::fatal`语句严重干扰了内联优化。对于频繁访问的函数，建议避免干扰内联优化的语句。
 
-接下来，让我们看看一个类似的问题。`***row_sel_store_mysql_field function***` 被频繁调用，其中 `***row_sel_field_store_in_mysql_format***` 是其中的热点函数。具体代码如下：
+接下来，让我们看看一个类似的问题。`row_sel_store_mysql_field function`被频繁调用，其中`row_sel_field_store_in_mysql_format`是其中的热点函数。具体代码如下：
 
 ```cpp
 // clang-format off
@@ -1065,7 +1087,7 @@ void validate_rec_offset(const dict_index_t *index, const ulint *offsets,
     ... 
 ```
 
-`***row_sel_field_store_in_mysql_format***` 函数最终调用 `***row_sel_field_store_in_mysql_format_func***`。
+`row_sel_field_store_in_mysql_format`函数最终调用`row_sel_field_store_in_mysql_format_func`。
 
 ```cpp
 /** Convert a non-SQL-NULL field from Innobase format to MySQL format. */
@@ -1077,7 +1099,7 @@ static inline void row_sel_field_store_in_mysql_format(
 } 
 ```
 
-由于存在 `***ib::fatal***` 代码，`***row_sel_field_store_in_mysql_format_func***` 函数不能内联。
+由于存在`ib::fatal`代码，`row_sel_field_store_in_mysql_format_func`函数不能内联。
 
 ```cpp
 void row_sel_field_store_in_mysql_format_func(
@@ -1098,6 +1120,8 @@ void row_sel_field_store_in_mysql_format_func(
 频繁调用的低效函数，每秒执行数千万次，会严重影响连接性能。
 
 让我们继续探讨性能下降的原因。以下官方性能优化实际上是一系列导致连接性能下降的根本原因之一。尽管某些查询可能得到改善，但它仍然是普通连接操作性能下降的原因之一。
+
+
 
 ```cpp
 commit ffe1726f2542505e486c4bcd516c30f36c8ed5f6 (HEAD)
@@ -1139,7 +1163,7 @@ Date:   Wed Dec 21 14:29:02 2022 +0100
     results (it added a streaming step right before the aggregation). This
     workaround is also removed now.
 
-    Change-Id: I554a90213cae60749dd6407e48a745bc71578e0c 
+    Change-Id: I554a90213cae60749dd6407e48a745bc71578e0c
 ```
 
 MySQL 的问题不仅限于此。如上述分析所示，MySQL 性能下降并非没有原因。一系列小问题积累起来，可能导致用户感受到的性能明显下降。然而，这些问题往往难以识别，使得它们更加难以解决。

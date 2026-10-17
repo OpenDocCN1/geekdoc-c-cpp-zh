@@ -1,94 +1,28 @@
+
 # Windows Phone 7 编程 - XNA Framework 版
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **采购编辑：** Devon Musgrave
+
 **开发编辑：** Devon Musgrave
+
 **项目编辑：** Devon Musgrave
+
 **编辑制作：** Ashley Schneider, S4Carlis Publishing Services
+
 **技术评审：** Per Blomqvist, 由 Content Master（CM Group, Ltd. 成员）提供的技术评审服务
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 更好的气泡视觉化 ................................................................................. . . . . . . . . . . 347
 - 追踪滚动的球 ...................................................................................................................................... 364
 
-
 你对这本书怎么样？我们希望听听你的意见！
+
 微软非常重视您的反馈，以便我们不断为您改进书籍和学习资源。如需参与简短在线调查，请访问：
-microsoft.com/learning/booksurvey
+
+`microsoft.com/learning/booksurvey`
 
 # 引言
 
-> **重要** 本书与《Microsoft Silverlight Edition: Programming Windows Phone 7》是同一本名为《Programming Windows Phone 7》的免费电子版的印刷版版本，且两者均有完整的索引。该电子版你可以在 Microsoft Press 博客上找到它：http://blogs.msn.com/b/microsoft_press/；原始版本的文本未作任何更改，包括对原始图像颜色的引用（这些图像在书中显示为黑白）。以下是最初出现在 *版权 Windows Phone 7* 中的引言；只有“代码示例”部分是该引言中更新过的。
+> **重要** 本书与《Microsoft Silverlight Edition: Programming Windows Phone 7》是同一本名为《Programming Windows Phone 7》的免费电子版的印刷版版本，且两者均有完整的索引。该电子版你可以在 Microsoft Press 博客上找到它：`http://blogs.msn.com/b/microsoft_press/`；原始版本的文本未作任何更改，包括对原始图像颜色的引用（这些图像在书中显示为黑白）。以下是最初出现在 *版权 Windows Phone 7* 中的引言；只有“代码示例”部分是该引言中更新过的。
 
 这本书是微软 Windows Phone 7 团队给编程社区的礼物，我很自豪能参与其中。在接下来的页面中，我将向你展示使用 C# 编程语言结合 Silverlight 和 XNA 框架为 Windows Phone 7 编写应用程序的基础。
 
@@ -100,63 +34,59 @@ microsoft.com/learning/booksurvey
 
 我的出版商 Microsoft Press 即将推出另外旧朋友 Doug Boling 的 Windows Phone 7 企业编程书籍，这可能会被认为是他的杰作。请务必关注。
 
-
-
-
-
-# 体系结构
+## 体系结构
 
 本书分为三个部分。第一部分通过针对 Silverlight 和 XNA 框架的示例程序，讨论了 Windows Phone 7 编程的基础概念。Windows Phone 7 开发者可能会选择其中一个平台，但对于所有至少对所选路径稍有了解的开发者来说，了解另一种路径也是重要的。
 
 本书的第二部分完全关注 Silverlight，第三部分关注 XNA 2D。为了方便起见，每个部分的章节都将在之前的知识的基础上，以渐进式的教程叙述方式构建，旨在按顺序阅读。
 
-# 我对你的假设
+## 我对你的假设
 
-我假设你了解 .NET 编程的基本原理，并对 C# 编程语言有实际的熟悉。如果不是，你可能会从阅读我网站上提供的免费在线书籍[.NET 零基础：C 或 C++ 程序员需要了解的 C# 和 .NET 框架知识](http://www.charlespetzold.com/dotnet) 中获益。
+我假设你了解 .NET 编程的基本原理，并对 C# 编程语言有实际的熟悉。如果不是，你可能会从阅读我网站上提供的免费在线书籍[.NET 零基础：C 或 C++ 程序员需要了解的 C# 和 .NET 框架知识](`http://www.charlespetzold.com/dotnet`) 中获益。
 
-# 系统要求
+## 系统要求
 
-为了正确使用本书，你需要下载并安装 Windows Phone 开发者工具，其中包含适用于 Windows Phone 的 Visual Studio 2010 Express、XNA Game Studio 4.0 以及一个用于在没有实际设备的情况下测试程序的屏幕手机模拟器。你可以在 http://developer/windowsphone.com 获取最新信息和下载。
+为了正确使用本书，你需要下载并安装 Windows Phone 开发者工具，其中包含适用于 Windows Phone 的 Visual Studio 2010 Express、XNA Game Studio 4.0 以及一个用于在没有实际设备的情况下测试程序的屏幕手机模拟器。你可以在 `http://developer/windowsphone.com` 获取最新信息和下载。
 
 你可以将这些工具安装在 Visual Studio 2010 之上，实际上增强了 Visual Studio 2010 的手机开发功能。这就是我使用的配置。
 
-虽然你可以用手机模拟器做一些事情，但在某些时刻，你会想要将程序部署到实际的 Windows Phone 7 设备上。你可以在 http://developer.windowsphone.com 注册成为手机开发者，然后解锁你的手机以便从 Visual Studio 进行部署。
+虽然你可以用手机模拟器做一些事情，但在某些时刻，你会想要将程序部署到实际的 Windows Phone 7 设备上。你可以在 `http://developer.windowsphone.com` 注册成为手机开发者，然后解锁你的手机以便从 Visual Studio 进行部署。
 
 自 2010 年 7 月以来，我有一部 LG GW910 手机用于测试书中的程序。记录一下，我安装的最终版本是 7.0.7003.0。
 
-# 使用手机模拟器
+## 使用手机模拟器
 
 Windows Phone 7 支持多点触控，处理多点触控是开发手机程序的重要部分。使用 Windows Phone 模拟器时，PC 上的鼠标移动和点击可以模拟模拟器上的触摸，但仅限于单手指。如果你在运行 Windows 7 下有多点触摸显示器，你可以在手机模拟器上真实测试多点触控。
 
-在没有多点触摸显示器的情况下，你可能想探索使用多个鼠标设备模拟多点触控。网站 http://multitouchvista.codplex.com 有你需要的下载内容，并包含指向 http://michaelysync.net/2010/04/06/step-by-step-tutorial-installing-multi-touch-simulator-for-silverlight-phone-7 的链接，该链接提供了操作说明。
+在没有多点触摸显示器的情况下，你可能想探索使用多个鼠标设备模拟多点触控。网站 `http://multitouchvista.codplex.com` 有你需要的下载内容，并包含指向 `http://michaelysync.net/2010/04/06/step-by-step-tutorial-installing-multi-touch-simulator-for-silverlight-phone-7` 的链接，该链接提供了操作说明。
 
-Windows Phone 7 设备内置了加速度计，这在模拟器中很难模拟。本书的技术评审员 Blomqvist 在 accelkit.codplex.com 上发现了一个应用程序，它利用网络摄像头和 ARToolkit 来模拟加速度计传感器，并通过 TCP/HTTP 服务器将数据馈入 Windows Phone 7 模拟器；另一个也是我们尝试过的程序，听起来非常有趣。
+Windows Phone 7 设备内置了加速度计，这在模拟器中很难模拟。本书的技术评审员 Blomqvist 在 `accelkit.codplex.com` 上发现了一个应用程序，它利用网络摄像头和 ARToolkit 来模拟加速度计传感器，并通过 TCP/HTTP 服务器将数据馈入 Windows Phone 7 模拟器；另一个也是我们尝试过的程序，听起来非常有趣。
 
-# 代码示例
+## 代码示例
 
 为了说明 Silverlight 和 XNA 编程概念，本书描述了 190 个完整的程序。其中许多程序都很小且很简单，但另一些则更大、更有趣。
 
-有些人人喜欢通过在 Visual Studio 中重新创建项目并从书中的页面中手动输入源代码来学习新的编程环境。另一些人则倾向于研究代码并运行现有的程序以查看代码的作用。如果你属于后一类，可以通过 http://oreilly.com/catalog/0790145316899/ 上的配套内容链接通过 ZIP 文件下载所有源代码。
+有些人人喜欢通过在 Visual Studio 中重新创建项目并从书中的页面中手动输入源代码来学习新的编程环境。另一些人则倾向于研究代码并运行现有的程序以查看代码的作用。如果你属于后一类，可以通过 `http://oreilly.com/catalog/0790145316899/` 上的配套内容链接通过 ZIP 文件下载所有源代码。
 
 如果你在代码中发现了一些对你自己的软件项目有用的内容，请随时不受限制地使用这些代码——无论是直接使用还是按你的意愿进行修改。这正是它的用途。
 
-# 最后的事项
+## 最后的事项
 
-当我接近完成这本书时，适用于 Windows Phone Toolkit 的 Silverlight 第一版本发布了，包含了一些额外的元素，并可以在 http://silverlight.codplex.com 下载。从历史上来看，这些 Silverlight 工具包通常包含元素和控件的预览，这些元素会被整合到后的 Silverlight 版本中。遗憾的是，我未能在这本书的相关章节中讨论该工具包的内容。
+当我接近完成这本书时，适用于 Windows Phone Toolkit 的 Silverlight 第一版本发布了，包含了一些额外的元素，并可以在 `http://silverlight.codplex.com` 下载。从历史上来看，这些 Silverlight 工具包通常包含元素和控件的预览，这些元素会被整合到后的 Silverlight 版本中。遗憾的是，我未能在这本书的相关章节中讨论该工具包的内容。
 
-# 引言
+## 引言
 
 对于 XNA 程序，有时用户会抱怨无法生成或部署程序。如果你遇到该问题，请在标准工具栏上的“解决方案平台”（Solution Platforms）下拉列表中选择“Windows Phone”而不是“Any CPU”。或者，从“生成”（Build）菜单调用“配置管理器（Configuration Manager）”，并在“活动解决方案平台”（Active Solution Platform）下拉列表中选择“Windows Phone”而不是“Any CPU”。
 
-我网站上的 charlespetzold.com/phone 页面将包含关于本书的信息，甚至可能包含关于未来版本的信息。我也希望尽可能写 Windows 7 编程的博客。
+我网站上的 `charlespetzold.com/phone` 页面将包含关于本书的信息，甚至可能包含关于未来版本的信息。我也希望尽可能写 Windows 7 编程的博客。
 
-# 关键人物
+## 关键人物
 
 本书的诞生归功于 Dave Edson——一位 20 世纪 90 年代《微软系统杂志》早期的老友——他产生了一个天才的主意，认为我是编写 Windows Phone 7 教程完美人选。Dave 安排我在 2009 年 12 月在微软参加手机技术深度研讨会，我被迷住了。Todd Brix 对这本书表示了赞同，Anand Iyer 与微软出版社协调了该项目。
 
 在微软出版社，Ben Ryan 启动了该项目，Devon Musgrave 承担了这项艰巨的工作，将我的稿复制并润色成一本真正的书。（我们都是老交：你将在 1998 年出版的《Programming Windows》第五版的版权页底部看到 Ben 和 Devon 的名字）。
 
-我的技术评审员是勤奋的 Blomquist，他显然测试了书中所有示例文件中的代码，并且由于这个过程，导致我在方面出现了几个确实是……嗯，令人震惊的错误。
+我的技术评审员是勤奋的 Blomqvist，他显然测试了书中所有示例文件中的代码，并且由于这个过程，导致我在方面出现了几个确实是……嗯，令人震惊的错误。
 
 Dave Edson 还评审了某些章节，并担任 Windows Phone 团队的渠道，处理我的技术问题和问题。早期，Aaron Steiner 提供了必要的指导；Michael Klucher 评审了章节；Kirti Deshpande、Charlie Kindel、Casey McGee 和 Shawn Oster 也有重要的事情要告诉我。感谢 Bonnie Lehenbauer 评审了一个章节。
 
@@ -168,42 +98,39 @@ Dave Edson 还评审了某些章节，并担任 Windows Phone 团队的渠道，
 
 Charles Petzold
 
-# 勘误与书籍支持
+## 勘误与书籍支持
 
-我们已尽一切努力确保本书及其配套内容的准确性。如果你发现错误，请发送电子邮件至微软出版社支持邮箱 mspinput@microsoft.com。（请注意，该地址不提供微软软件的产品支持。）
+我们已尽一切努力确保本书及其配套内容的准确性。如果你发现错误，请发送电子邮件至微软出版社支持邮箱 `mspinput@microsoft.com`。（请注意，该地址不提供微软软件的产品支持。）
 
-# 我们想听听你的声音
+## 我们想听听你的声音
 
 在微软出版社，你的满意度是我们的首要任务，你的反馈是我们最宝贵的资产。请通过以下地址告诉我们你对这本书的看法：
 
-- http://www.microsoft.com/learning/booksur
+- `http://www.microsoft.com/learning/booksur`
 
 调查卷很短，我们会阅读你的每一个评论和想法。提前感谢你的投入。
 
-# 保持联系
+## 保持联系
 
-让我们继续交流吧！我们在 Twitter 上：http://twitter.com/MicrosoftPress
+让我们继续交流吧！我们在 Twitter 上：`http://twitter.com/MicrosoftPress`
 
 # 第一部分
+
 ## 基础
 
-
 # 第一章
+
 ## Hello， Windows 7
 
 Windows Phone 7 支持多点触控，处理多点触控是开发手机程序的重要部分。使用 Windows Phone 模拟器时，PC 上的鼠标移动和点击可以模拟模拟器上的触摸，但仅限于单手指。如果你在运行 Windows 7 下有多点触摸显示器，你可以在手机模拟器上真实测试多点触控。
 
-在没有多点触摸显示器的情况下，你可能想探索使用多个鼠标设备模拟多点触控。网站 http://multitouchvista.codplex.com 有你需要的下载内容，并包含指向 http://michaelysync.net/2010/04/06/step-by-step-tutorial-installing-multi-touch-simulator-for-silverlight-phone-7 的链接，该链接提供了操作说明。
+在没有多点触摸显示器的情况下，你可能想探索使用多个鼠标设备模拟多点触控。网站 `http://multitouchvista.codplex.com` 有你需要的下载内容，并包含指向 `http://michaelysync.net/2010/04/06/step-by-step-tutorial-installing-multi-touch-simulator-for-silverlight-phone-7` 的链接，该链接提供了操作说明。
 
-Windows Phone 7 设备内置了加速度计，这在模拟器中很难模拟。本书的技术评审员 Blomqvist 在 accelkit.codplex.com 上发现了一个应用程序，它利用网络摄像头和 ARToolkit 来模拟加速度计传感器，并通过 TCP/HTTP 服务器将数据馈入 Windows Phone 7 模拟器；另一个也是我们尝试过的程序，听起来非常有趣。
+Windows Phone 7 设备内置了加速度计，这在模拟器中很难模拟。本书的技术评审员 Blomqvist 在 `accelkit.codplex.com` 上发现了一个应用程序，它利用网络摄像头和 ARToolkit 来模拟加速度计传感器，并通过 TCP/HTTP 服务器将数据馈入 Windows Phone 7 模拟器；另一个也是我们尝试过的程序，听起来非常有趣。
 
 ## 目标 Windows Phone 7
 
 所有 Windows Phone 7 的程序都是用 .NET 管理代码编写的。书中的程序使用 C# 编程语言编写，也可以使用 Visual Basic .NET 编写 Windows Phone 7 程序。免费下载的 Microsoft Visual Studio 2010 Express for Windows Phone 包含 XNA Game Studio 4.0 和一个屏幕手机模拟器，并与 Visual Studio 2010 集成。你可以使用 Microsoft Blend 为 Silverlight 应用开发视觉效果和动画。
-
-
-
-
 
 # 第一部分 基础
 
@@ -235,133 +162,91 @@ XNA 主要用于编写高性能游戏。对于 2D 游戏，你围绕位图定义
 
 Windows Phone 7 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
 
-手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 Back（返回）、Start（开始）和 Search（搜索）：
+
+
+手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 `Back`（返回）、`Start`（开始）和 `Search`（搜索）：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_19_0.png)
 
-- Back：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
-- Start：此按钮可以进入主界面，就像手机上的开始按钮一样。
-- Search：此按钮用于搜索。
+- `Back`：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
+- `Start`：此按钮可以进入主界面，就像手机上的开始按钮一样。
+- `Search`：此按钮用于搜索。
 
 # 第一部分 基础
 
-Windows Phone 7 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
+`Windows Phone 7` 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
 
-手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 Back（返回）、Start（开始）和 Search（搜索）：
-
-![](img/d9347c1f55fa6d523479d2cd9b4d5459_19_0.png)
-
-- Back：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
-- Start：此按钮可以进入主界面，就像手机上的开始按钮一样。
-- Search：此按钮用于搜索。
-
-# 第一部分 基础
-
-Windows Phone 7 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
-
-手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 Back（返回）、Start（开始）和 Search（搜索）：
+手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 `Back`（返回）、`Start`（开始）和 `Search`（搜索）：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_19_0.png)
 
-- Back：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
-- Start：此按钮可以进入主界面，就像手机上的开始按钮一样。
-- Search：此按钮用于搜索。
+- `Back`：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
+- `Start`：此按钮可以进入主界面，就像手机上的开始按钮一样。
+- `Search`：此按钮用于搜索。
 
-# 第一部分 基础 
+`Windows Phone 7` 的 `Silverlight` `XNA` 平台共享一些库，你可以在 `Silverlight` 程序中使用 `XNA` 库，反之亦然。但你无法创建一个同时混合了两个平台视觉效果的程序。也许未来将是可行的，但目前还没有。在创建 `Visual Studio` 项目之前，你必须决定你那个价值百万美元的构思是一个 `Silverlight` 程序还是 `XNA` 程序。
 
-Windows Phone 7 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
+通常，在编写可能被归类为应用程序或实用工具的程序时，你会选择 `Silverlight`。这些程序是由标记语言和代码组合而成的。标记语言是可扩展应用程序标记语言（`XAML`），发音为“zamel”。`XAML` 主要定义用户界面控件和面板的布局。后台代码文件（`Code-behind files`）也可以执行初始化和逻辑，但通常被归类为处理来自控件的事件。`Silverlight` 非常适合带来 `Windows Phone` 风格的丰富互联网应用程序（`RIA`），包括媒体和 Web。针对 `Windows Phone` 的 `Silverlight` 是 `Silverlight 3` 的一个版本，它排除了一些不适合手机的功能，但通过一些增强进行了补偿。
 
-手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 Back（返回）、Start（开始）和 Search（搜索）：
+`XNA` 主要用于编写高性能游戏。对于 2D 游戏，你围绕位图定义精灵图和背景；对于 3D 游戏，你在 3D 空间中定义模型。游戏的动作（包括在场景中移动对象和轮询用户输入）由内置的 `XNA` 游戏循环进行同步。
 
-![](img/d9347c1f55fa6d523479d2cd9b4d5459_19_0.png)
+基于 `Silverlight` 的应用程序与基于 `XNA` 的游戏之间的区分虽然方便，但并没有限制性。你完全可以使用 `Silverlight` 编写游戏，甚至可以使用 `XNA` 编写传统的应用程序，尽管这样做有时可能具有挑战性。
 
-- Back：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
-- Start：此按钮可以进入主界面，就像手机上的开始按钮一样。
-- Search：此按钮用于搜索。
+特别是，`Silverlight` 可能对于那些对图形要求不高、使用矢量图形而非位图、或以用户时间而非时钟时间为节奏的游戏来说是理想的。一个俄罗斯方块类型的程序可能非常适合 `Silverlight`。然而，你可能会发现 `XNA` 想要扩展到 `Silverlight` 领域要困难一些。在 `XNA` 中实现一个列表框（`list box`）在某些程序员看来可能是“有趣的”，但在许多许多人看来可能不是。
 
-*(注：由于提供的原文中存在大量重复的段落，根据“一定不要重复输出原文”的原则，此处仅展示核心内容的翻译逻辑。若需完整去重后翻译，请告知。)*
+本书的前几章将 `Silverlight` 和 `XNA` 放在一起，然后书籍将分为针对两个平台的指南。我怀疑某些开发者将只坚持使用 `Silverlight` 或 `XNA`，甚至懒得去学习另一个环境。我希望这不是一种普遍的态度。好消息是，`Silverlight` 和 `XNA` 如此不同，以至于你可以在它们之间来回切换而产生困惑！
 
----
-
-**更正后的完整译文（去重版）：**
-
-[content]
-
-# 第一部分 基础
-
-Windows Phone 7 的 Silverlight XNA 平台共享一些库，你可以在 Silverlight 程序中使用 XNA 库，反之亦然。但你无法创建一个同时混合了两个平台视觉效果的程序。也许未来将是可行的，但目前还没有。在创建 Visual Studio 项目之前，你必须决定你那个价值百万美元的构思是一个 Silverlight 程序还是 XNA 程序。
-
-通常，在编写可能被归类为应用程序或实用工具的程序时，你会选择 Silverlight。这些程序是由标记语言和代码组合而成的。标记语言是可扩展应用程序标记语言（XAML），发音为“zamel”。XAML 主要定义用户界面控件和面板的布局。后台代码文件（Code-behind files）也可以执行初始化和逻辑，但通常被归类为处理来自控件的事件。Silverlight 非常适合带来 Windows Phone 风格的丰富互联网应用程序（RIA），包括媒体和 Web。针对 Windows Phone 的 Silverlight 是 Silverlight 3 的一个版本，它排除了一些不适合手机的功能，但通过一些增强进行了补偿。
-
-XNA 主要用于编写高性能游戏。对于 2D 游戏，你围绕位图定义精灵图和背景；对于 3D 游戏，你在 3D 空间中定义模型。游戏的动作（包括在场景中移动对象和轮询用户输入）由内置的 XNA 游戏循环进行同步。
-
-基于 Silverlight 的应用程序与基于 XNA 的游戏之间的区分虽然方便，但并没有限制性。你完全可以使用 Silverlight 编写游戏，甚至可以使用 XNA 编写传统的应用程序，尽管这样做有时可能具有挑战性。
-
-特别是，Silverlight 可能对于那些对图形要求不高、使用矢量图形而非位图、或以用户时间而非时钟时间为节奏的游戏来说是理想的。一个俄罗斯方块类型的程序可能非常适合 Silverlight。然而，你可能会发现 XNA 想要扩展到 Silverlight 领域要困难一些。在 XNA 中实现一个列表框（list box）在某些程序员看来可能是“有趣的”，但在许多许多人看来可能不是。
-
-本书的前几章将 Silverlight 和 XNA 放在一起，然后书籍将分为针对两个平台的指南。我怀疑某些开发者将只坚持使用 Silverlight 或 XNA，甚至懒得去学习另一个环境。我希望这不是一种普遍的态度。好消息是，Silverlight 和 XNA 如此不同，以至于你可以在它们之间来回切换而产生困惑！
-
-微软一直将 Silverlight 定位为云的前端或“脸”，因此云服务和 Windows Azure 成了 Windows Phone 7 开发的重要部分。Windows Phone 是“云就绪的”。程序具有位置感知能力，并通过 Bing 和 Windows Live 访问地图和其他数据。可用的云服务之一是 Xbox Live，
+微软一直将 `Silverlight` 定位为云的前端或“脸”，因此云服务和 `Windows Azure` 成了 `Windows Phone 7` 开发的重要部分。`Windows Phone` 是“云就绪的”。程序具有位置感知能力，并通过 `Bing` 和 `Windows Live` 访问地图和其他数据。可用的云服务之一是 `Xbox Live`，
 
 # 第 1 章 你好，Windows Phone 7
 
-它允许基于 XNA 的程序参与在线多人游戏，并被 Silverlight 应用程序访问。
+它允许基于 `XNA` 的程序参与在线多人游戏，并被 `Silverlight` 应用程序访问。
 
-你为 Windows Phone 7 编写的程序将通过 Windows Phone Marketplace 进行销售和部署，它提供注册服务，并证明程序符合可靠性、效率和良好行为的最低标准。
+你为 `Windows Phone 7` 编写的程序将通过 `Windows Phone Marketplace` 进行销售和部署，它提供注册服务，并证明程序符合可靠性、效率和良好行为的最低标准。
 
-我将 Windows Phone 7 描述为与过去的剧烈断裂。如果你将其与过去的 Windows Mobile 版本相比，那确实如此。但对 Silverlight、XNA 和 C# 的支持并不是与过去的断裂，而是连续与创新的平衡。正如你所知道的，Silverlight 和 XNA 已经证明了自己是强大且流行的平台。许多熟练的程序员已经在使用其中一个框架了——可能还没有人同时使用两者——并且他们通过丰富的在线信息和社区表达了他们的热情。C# 已经成为许多程序员（包括我自己）的最爱语言，开发者可以使用 C# 在他们的 Silverlight 和 XNA 程序之间以及其他 .NET 环境的程序之间共享库。
+我将 `Windows Phone 7` 描述为与过去的剧烈断裂。如果你将其与过去的 `Windows Mobile` 版本相比，那确实如此。但对 `Silverlight`、`XNA` 和 `C#` 的支持并不是与过去的断裂，而是连续与创新的平衡。正如你所知道的，`Silverlight` 和 `XNA` 已经证明了自己是强大且流行的平台。许多熟练的程序员已经在使用其中一个框架了——可能还没有人同时使用两者——并且他们通过丰富的在线信息和社区表达了他们的热情。`C#` 已经成为许多程序员（包括我自己）的最爱语言，开发者可以使用 `C#` 在他们的 `Silverlight` 和 `XNA` 程序之间以及其他 `.NET` 环境的程序之间共享库。
 
 ## 硬件底盘
 
-具有针对过去 Windows Mobile 设备经验的开发者将发现微软在 Windows Phone 7 策略上发生了重大变化。微软在定义硬件规范方面非常积极，这些规范通常被称为“底盘”（chassis）。
+具有针对过去 `Windows Mobile` 设备经验的开发者将发现微软在 `Windows Phone 7` 策略上发生了重大变化。微软在定义硬件规范方面非常积极，这些规范通常被称为“底盘”（`chassis`）。
 
-Windows Phone 7 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
+`Windows Phone 7` 设备的初始版本将具有统一的屏幕尺寸。（预计未来会有第二种屏幕尺寸）许多其他硬件特征将存在于每台设备上。
 
-手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 Back（返回）、Start（开始）和 Search（搜索）：
+手机的正面由一个多点触摸屏和位于显示屏下方的一行的三个硬件按钮组成。从左到右，这些按钮被称为 `Back`（返回）、`Start`（开始）和 `Search`（搜索）：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_19_0.png)
 
-- Back：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
-- Start：此按钮可以进入主界面，就像手机上的开始按钮一样。
-- Search：此按钮用于搜索。
-
-*(注：后续部分原文中存在大量重复，此处已按要求去重处理。)*
-
-
-
-
+- `Back`：程序可以使用此按钮满足自己的导航需求，就像 Windows 上的返回按钮一样。
+- `Start`：此按钮可以进入主界面，就像手机上的开始按钮一样。
+- `Search`：此按钮用于搜索。
 
 ## 第一部分 基础知识
 
--   **加速度计**：加速度计检测加速度，在物理学中是指速度的变化。当相机静止时，加速度计会对重力做出响应。程序可以获取一个三维向量，指示相机相对于地球的取向。加速度计还可以检测手机的剧烈运动。
-
--   **位置服务**：如果用户需要，手机可以使用多种策略来确定其地理位置。手机通过硬件 GPS 设备提供来自 Web 或手机网络的信息。如果手机正在移动，可能还可以获取航向和速度信息。
-
--   **振动**：可以通过程序控制手机进行振动。
-
--   **FM 电台**：提供 FM 电台功能，并可以通过程序控制访问。
-
--   **推送通知**：某些 Web 服务通常需要手机频繁轮询服务以获取更新信息。这会消耗电池寿命。为了解决这个问题，开发了一种推送通知服务，它允许在手机外部进行任何必要的轮询，手机仅在数据更新时接收通知。
+- **加速度计**：加速度计检测加速度，在物理学中是指速度的变化。当相机静止时，加速度计会对重力做出响应。程序可以获取一个三维向量，指示相机相对于地球的取向。加速度计还可以检测手机的剧烈运动。
+- **位置服务**：如果用户需要，手机可以使用多种策略来确定其地理位置。手机通过硬件 `GPS` 设备提供来自 Web 或手机网络的信息。如果手机正在移动，可能还可以获取航向和速度信息。
+- **振动**：可以通过程序控制手机进行振动。
+- **FM 电台**：提供 `FM` 电台功能，并可以通过程序控制访问。
+- **推送通知**：某些 Web 服务通常需要手机频繁轮询服务以获取更新信息。这会消耗电池寿命。为了解决这个问题，开发了一种推送通知服务，它允许在手机外部进行任何必要的轮询，手机仅在数据更新时接收通知。
 
 ## 文件 | 新建 | 项目
 
-我假设你已经安装了适用于 Windows Phone 的 Visual Studio 2010 Express，无论是单独安装，还是作为标准版 Visual Studio 2010 的补充。为了方便起见，我将简单地把此开发环境称为“Visual Studio”。
+我假设你已经安装了适用于 `Windows Phone` 的 `Visual Studio 2010 Express`，无论是单独安装，还是作为标准版 `Visual Studio 2010` 的补充。为了方便起见，我将简单地把此开发环境称为“`Visual Studio`”。
 
 显示少量文本的传统“hello, world”程序对非程序员来说可能看起来很愚蠢，但程序员发现这样的程序至少有两个作用：首先，该程序提供了一种方法，用来检查显示简单文本有多容易（或多么荒谬地复杂）。其次，它为程序员提供了一个机会，在没有太多干扰的情况下体验创建、编译和运行程序的过程。在开发在移动设备上运行的程序时，这个过程比通常要复杂一点，因为你将在 PC 上创建并编译程序，然后将其部署并在实际手机或至少是模拟器上运行。
 
-本章将介绍针对 Microsoft Silverlight 和 Microsoft XNA 的程序，这些程序将显示“Hello World”文本。
+本章将介绍针对 `Microsoft Silverlight` 和 `Microsoft XNA` 的程序，这些程序将显示“Hello World”文本。
 
-为了让这些程序更有趣，我想在屏幕中心显示这段文本。Silverlight 程序将使用用户在手机设置屏幕的“主题”部分选择的背景色和前景颜色。在 XNA 程序中，文本将为深色背景上的白色，以减少在 OLED 屏幕上的功耗。
+为了让这些程序更有趣，我想在屏幕中心显示这段文本。`Silverlight` 程序将使用用户在手机设置屏幕的“主题”部分选择的背景色和前景颜色。在 `XNA` 程序中，文本将为深色背景上的白色，以减少在 `OLED` 屏幕上的功耗。
 
-如果你正在跟着操作，是时候调出 Visual Studio，并从“文件”菜单中选择“新建”和“项目”了。
+如果你正在跟着操作，是时候调出 `Visual Studio`，并从“文件”菜单中选择“新建”和“项目”了。
 
-## 第一个 Silverlight 手机程序
+### 第一个 Silverlight 手机程序
 
-在“新建项目”对话框中，在左侧“已安装模板”下选择“Visual C#”，然后选择“Silverlight for Windows Phone”。在中间区域，选择“Windows Phone Application”。为项目选择位置，并输入项目名称：SilverlightHelloPhone。
+在“新建项目”对话框中，在左侧“已安装模板”下选择“`Visual C#`”，然后选择“`Silverlight for Windows Phone`”。在中间区域，选择“`Windows Phone Application`”。为项目选择位置，并输入项目名称：`SilverlightHelloPhone`。
 
-项目创建后，你将看到一张竖屏模式的大屏手机图像，屏幕区域大小为 480 × 800 像素。这是设计视图。虽然你可以交互式地从工具箱中拖入控件来设计应用程序，但我将重点展示如何编写你自己的代码和标记。
+项目创建后，你将看到一张竖屏模式的大屏手机图像，屏幕区域大小为 `480 × 800` 像素。这是设计视图。虽然你可以交互式地从工具箱中拖入控件来设计应用程序，但我将重点展示如何编写你自己的代码和标记。
 
-为此 SilverlightHelloPhone 项目创建了几个文件，它们列在“解决方案管理器”（或位于右侧）的项目名称下。在“属性（Properties）”文件夹中有三个文件，当你为手机创建小型 Silverlight 示例程序时，通常可以忽略它们。只有当你真正开始制作实际应用程序时，这些文件才会变得重要。
+为此 `SilverlightHelloPhone` 项目创建了几个文件，它们列在“解决方案管理器”（或位于右侧）的项目名称下。在“属性（`Properties`）”文件夹中有三个文件，当你为手机创建小型 `Silverlight` 示例程序时，通常可以忽略它们。只有当你真正开始制作实际应用程序时，这些文件才会变得重要。
 
 不过，你可能想打开 `WMAAppManifest.xml` 文件。在顶部的 `App` 标签中，你会看到：
 
@@ -377,29 +262,27 @@ Title="Silverlight Hello Phone"
 
 这是手机和模拟器在呈现给用户的已安装应用程序列表中显示程序时使用的。如果你野心勃勃，还可以编辑手机使用的 `ApplicationIcon.png` 和 `Background.png` 文件，这些文件在视觉上代表程序。`SplashScreen.jpg` 文件是程序在初始化时显示的内容。
 
-在程序下方的标准 Visual Studio 工具栏中，你会看到一个下拉列表，可能显示“Windows 7 Emulator”。另一个是“Windows 7 Device”。这就是你将项目部署到模拟器或通过 USB 连接到计算机的实际手机的方式。
+在程序下方的标准 `Visual Studio` 工具栏中，你会看到一个下拉列表，可能显示“`Windows 7 Emulator`”。另一个是“`Windows 7 Device`”。这就是你将项目部署到模拟器或通过 `USB` 连接到计算机的实际手机的方式。
 
-为了确认一切运行正常，选择“Windows 7 Emulator”并按 F5（或从“调试（Debugging）”菜单选择“调试”）。你的程序将快速生成，在状态栏中你将看到“Connecting to Windows 7 Emulator...”。在一次会话中第一次使用模拟器时，启动可能需要一点时间。如果你在编辑/编译/运行周期之间保持模拟器运行，Visual Studio 就不需要重新建立这种连接。
+为了确认一切运行正常，选择“`Windows 7 Emulator`”并按 `F5`（或从“调试（`Debugging`）”菜单选择“调试”）。你的程序将快速生成，在状态栏中你将看到“Connecting to Windows 7 Emulator...”。在一次会话中第一次使用模拟器时，启动可能需要一点时间。如果你在编辑/编译/运行周期之间保持模拟器运行，`Visual Studio` 就不需要重新建立这种连接。
 
-很快，模拟器将出现在桌面上，你将看到屏幕，随后是这个微不足道的 Silverlight 程序在模拟器上被部署并运行。在手机上，你将看到与在设计视图中看到的几乎相同的图像。
-
-## 第一部分 基础知识
+很快，模拟器将出现在桌面上，你将看到屏幕，随后是这个微不足道的 `Silverlight` 程序在模拟器上被部署并运行。在手机上，你将看到与在设计视图中看到的几乎相同的图像。
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_24_0.png)
 
 手机模拟器在右上角有一个浮动菜单，当鼠标移动到该位置时，它就会出现。你可以通过此菜单更改方向，或更改模拟器尺寸。默认情况下，模拟器以实际大小的 50% 显示，与此页面上的图像大小相似。当你以 100% 显示模拟器时，它会变得巨大，你可能会想：“我怎么才能把这台手机放进口袋里？”
 
-区别在于像素密度。默认情况下，Windows 假设屏幕为 96 DPI。实际手机 7 设备屏幕是其 2 倍。当你以 100% 显示模拟器时，你看到的是手机的所有像素，但其尺寸是 250%。保持模拟器运行将使后续部署快得多。
+区别在于像素密度。默认情况下，`Windows` 假设屏幕为 96 DPI。实际手机 7 设备屏幕是其 2 倍。当你以 100% 显示模拟器时，你看到的是手机的所有像素，但其尺寸是 250%。保持模拟器运行将使后续部署快得多。
 
-当模拟器运行时，它保留所有部署到它的程序。如果你点击屏幕右上角的箭头，将看到一个包含此程序的列表，标识为“Silverlight Phone”。当你退出模拟器时，程序将从列表中消失。
+当模拟器运行时，它保留所有部署到它的程序。如果你点击屏幕右上角的箭头，将看到一个包含此程序的列表，标识为“`Silverlight Phone`”。当你退出模拟器时，程序将从列表中消失。
 
-如果你有一台 Windows Phone 7 设备，需要在 Windows Phone 7 门户 http://developer.windowsphone.com 注册。获得批准后，通过运行 Windows Phone 开发者注册程序并输入 Live ID 来解锁手机。然后你就可以从 Visual Studio 将程序部署到手机。
+如果你有一台 `Windows Phone 7` 设备，需要在 `Windows Phone 7` 门户 `http://developer.windowsphone.com` 注册。获得批准后，通过运行 `Windows Phone` 开发者注册程序并输入 `Live ID` 来解锁手机。然后你就可以从 `Visual Studio` 将程序部署到手机。
 
-## 标准 Silverlight 文件
+### 标准 Silverlight 文件
 
-在 Visual Studio 中加载项目后，请查看“解决方案管理器”中的项目。你会看到两对文件：App.xaml 和 App.cs，以及 MainPage.xaml 和 MainPage.xaml.cs。App.xaml 和 MainPage.xaml 文件是 XAML（可扩展应用程序标记语言）文件，而 App.cs 和 MainPage.cs 是 C# 代码文件。这种奇特的命名方案意味着这两个 C# 代码文件是与两个 XAML 文件相关的“代码后台（code-behind）”文件。它们为标记提供了代码支持。这是一个基础 Silverlight 概念。
+在 `Visual Studio` 中加载项目后，请查看“解决方案管理器”中的项目。你会看到两对文件：`App.xaml` 和 `App.cs`，以及 `MainPage.xaml` 和 `MainPage.xaml.cs`。`App.xaml` 和 `MainPage.xaml` 文件是 `XAML`（可扩展应用程序标记语言）文件，而 `App.cs` 和 `MainPage.cs` 是 `C#` 代码文件。这种奇特的命名方案意味着这两个 `C#` 代码文件是与两个 `XAML` 文件相关的“代码后台（`code-behind`）”文件。它们为标记提供了代码支持。这是一个基础 `Silverlight` 概念。
 
-我想带你简单了解这四个文件。如果你查看 App.xaml 文件，你会看到一个与项目名称相同的命名空间定义，以及一个名为 App 的派自 Silverlight Application 类。这里是显示通用结构的节选：
+我想带你简单了解这四个文件。如果你查看 `App.xaml` 文件，你会看到一个与项目名称相同的命名空间定义，以及一个名为 `App` 的派自 `Silverlight Application` 类。这里是显示通用结构的节选：
 
 ```
 Silverlight Project: SilverlightPhone File: App.xaml.cs (excerpt)
@@ -416,13 +299,9 @@ namespace SilverlightPhone
 }
 ```
 
- Silverlight 程序包含一个派自 Application 的 App 类；该类执行应用程序级的初始化、启动和关闭工作。你会注意到该类被定义为部分类（partial class），这意味着项目可能应该包含另一个包含 App 类额外成员的 C# 文件。但它在哪里呢？
+`Silverlight` 程序包含一个派自 `Application` 的 `App` 类；该类执行应用程序级的初始化、启动和关闭工作。你会注意到该类被定义为部分类（`partial class`），这意味着项目可能应该包含另一个包含 `App` 类额外成员的 `C#` 文件。但它在哪里呢？
 
-项目还包含一个 App.xaml 文件，其整体结构如下：
-
-
-
-
+项目还包含一个 `App.xaml` 文件，其整体结构如下：
 
 ## Silverlight 项目：SilverlightHelloPhone 文件：App.xaml (节选)
 
@@ -436,19 +315,21 @@ xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
 </Application>
 ```
 
-你会认出这个文件是 XAML，但更准确地说，它是一个 XAML 文件，特别是开发者经常使用 `App.xaml` 文件来存储整个应用程序中使用的资源。这些资源可能包括颜色方案、渐变画笔、样式等。
+你会认出这个文件是 `XAML`，但更准确地说，它是一个 `XAML` 文件，特别是开发者经常使用 `App.xaml` 文件来存储整个应用程序中使用的资源。这些资源可能包括颜色方案、渐变画笔、样式等。
 
-根元素是 `Application`，它是 `App` 类派自的 Silverlight 类。根元素包含四个 XML 命名空间声明。其中两个在所有的 Silverlight 应用程序中都是通用的；另外两个是手机特有的。
+根元素是 `Application`，它是 `App` 类派自的 `Silverlight` 类。根元素包含四个 `XML` 命名空间声明。其中两个在所有的 `Silverlight` 应用程序中都是通用的；另外两个是手机特有的。
 
-第一个命名空间声明（"xmlns"）是 Silverlight 的标准命名空间，它帮助编译器定位和识别如 `Application` 之类的 Silverlight 类。对于大多数 XML 命名空间声明，此 URI 实际上并不指向任何内容；它是微软拥有的并为此目的而定义的 URI。
+第一个命名空间声明（"xmlns"）是 `Silverlight` 的标准命名空间，它帮助编译器定位和识别如 `Application` 之类的 `Silverlight` 类。对于大多数 `XML` 命名空间声明，此 `URI` 实际上并不指向任何内容；它是微软拥有的并为此目的而定义的 `URI`。
 
-在 XAML 支持的几个通过此 "x" 前缀引用的属性中，一个是 `Class`，在这个特定的 XAML 文件中，`x:Class` 被赋值为名称 `SilverlightHelloPhone.App`。这意味着在 .NET `SilverlightHelloPhone` 命名空间中，名为 `App` 的类派生自根元素，即 `Silverlight` 类。这就是你在 `App.xaml` 文件中看到的类定义，但语法完全不同。
+在 `XAML` 支持的几个通过此 "x" 前缀引用的属性中，一个是 `Class`，在这个特定的 `XAML` 文件中，`x:Class` 被赋值为名称 `SilverlightHelloPhone.App`。这意味着在 `.NET` `SilverlightHelloPhone` 命名空间中，名为 `App` 的类派生自根元素，即 `Silverlight` 类。这就是你在 `App.xaml` 文件中看到的类定义，但语法完全不同。
+
+
 
 `App.xaml` 和 `App.cs` 文件实际上定义了 `App` 类的部分。在编译期间，Visual Studio 会解析 `App.xaml` 并生成另一个名为 `App.g.cs` 的文件。“g” 代表 "generated"（生成的）。如果你查看此文件，可以在项目的 `\obj\` 子目录中找到它。`App.g.cs` 文件包含了 `App` 类的另一个部分定义，并且它包含一个名为 `InitializeComponent` 的方法，该方法在 `App.cs` 文件的构造函数中调用。
 
 你可以自由编辑 `App.xaml` 和 `App.cs` 文件，但不要乱动 `App.g.cs`。该文件在构建项目时会重新创建。
 
-# 第一章 你好，Windows Phone 7 13
+# 第一章 你好，Windows Phone 7
 
 当程序运行时，`App` 类会创建一个 `PhoneApplication` 类型的对象，并将该对象设置为它自己的 `RootVisual` 属性。这个框架宽 480 像素，高 800 像素，占据了手机的整个显示区域。`PhoneApplication` 通过导航到名为 `MainPage` 的对象，其行为有点类似于网页浏览器。
 
@@ -547,7 +428,9 @@ shell:SystemTray.IsVisible="True">
 +   Object
 
   DependencyObject（抽象）
+
     UIElement（抽象）
+
       FrameworkElement（抽象）
 
 除了 *UIElement* 之外，其他 Silverlight 类派生自 *DependencyObject*。但 *UIElement* 的区别在于它是能够作为视觉对象出现在屏幕上并接收用户输入的类。（在 Silverlight 中，所有视觉对象都可以接收用户输入。）
@@ -556,9 +439,7 @@ shell:SystemTray.IsVisible="True">
 
 派自 *FrameworkElement* 的类之一是 `Control`，在传统的图形用户界面编程中这个词比“元素”更常见。某些对象
 
-
-
-# 第一部分 基础
+## 第一部分 基础
 
 在其他编程环境中被称为控件（controls），在 Silverlight 中更准确的称应该是元素（elements）。控件派生类包括按钮和滑动条，我将在第 10 章中讨论它们。
 
@@ -604,15 +485,11 @@ Text、HorizontalAlignment 和 VerticalAlignment 都是 TextBlock 类的属性�
 
 当你编辑 MainPage.xaml 时，可能还想修复其他 TextBlock 元素，使其不再是通用的。将
 
-
-
 ```xml
 <TextBlock ... Text="MY APPLICATION" ... />
 ```
 
 改为
-
-
 
 ```xml
 <TextBlock ... Text="SILVERLIGHT HELLO PHONE" ... />
@@ -632,15 +509,13 @@ Text、HorizontalAlignment 和 VerticalAlignment 都是 TextBlock 类的属性�
 
 在只有一个只有一个页面的 Silverlight 应用程序中设置页面标题没有太大意义，如果你愿意，可以删除第二个 TextBlock。对此 XAML 文件的更改将反映在设计视图中。你现在可以编译并运行此程序了：
 
-# 第一部分 基础
-
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_32_0.png)
 
 这张截图——以及书中剩余的一些截图——以接近实际手机大小的显示在书的页面上，周围环绕着一些简单的“外壳（chrome）”，它们象征着真实的手机或手机模拟器。
 
 尽管程序很简单，但它演示了 Silverlight 编程的一些基本概念，包括动态布局。XAML 文件定义了视觉树中元素的布局。这些元素能够动态地排列自己。HorizontalAlignment 和 VerticalAlignment 属性可以将一个元素放置在另一个元素的中心，或者（正如你可能想的那样）沿着其中一个边缘或其中一个角。TextBlock 是你可以在 Silverlight 程序中使用的许多可能元素之一；其他还包括位图图像、电影以及熟悉的按钮、滑动条和列表框等控件。
 
-## 颜色主题
+### 颜色主题
 
 从手机或手机模拟器开始，点击或触摸右上角的箭头导航到设置页面，然后选择它们。Windows Phone 7 主题由背景（Background）和强调色（Accent color）组成。对于背景，你可以选择 Dark（深色背景上的浅色文本，你一直看到的）或 Light（相反）。选择 Light 主题，再次运行 SilverlightHelloPhone，并对主题颜色自动应用感到满意：
 
@@ -660,9 +535,11 @@ Silverlight 项目: SilverlightHelloPhone 文件: MainPage.xaml (节选)
 </Grid>
 ```
 
-Text、HorizontalAlignment 和 VerticalAlignment 都是 TextBlock 类的属性。Text 属性的类型是 string。HorizontalAlignment 和 VerticalAlignment 属性分别是多种 HorizontalAlignment 和 VerticalAlignment 类型。当你需要在 XAML 中引用枚举类型时，你只需要成员名。
 
-当你编辑 MainPage.xaml 时，可能还想修复其他 TextBlock 元素，使其不再是通用的。将
+
+`Text`、`HorizontalAlignment` 和 `VerticalAlignment` 都是 `TextBlock` 类的属性。`Text` 属性的类型是 `string`。`HorizontalAlignment` 和 `VerticalAlignment` 属性分别是多种 `HorizontalAlignment` 和 `VerticalAlignment` 类型。当你需要在 XAML 中引用枚举类型时，你只需要成员名。
+
+当你编辑 `MainPage.xaml` 时，可能还想修复其他 `TextBlock` 元素，使其不再是通用的。将
 
 ```xml
 <TextBlock ... Text="MY APPLICATION" ... />
@@ -686,23 +563,19 @@ Text、HorizontalAlignment 和 VerticalAlignment 都是 TextBlock 类的属性�
 <TextBlock ... Text="main page" ... />
 ```
 
-在只有一个页面的 Silverlight 应用程序中设置页面标题没有太大意义，如果你愿意，可以删除第二个 TextBlock。对此 XAML 文件的更改将反映在设计视图中。你现在可以编译并运行此程序了：
+在只有一个页面的 Silverlight 应用程序中设置页面标题没有太大意义，如果你愿意，可以删除第二个 `TextBlock`。对此 XAML 文件的更改将反映在设计视图中。你现在可以编译并运行此程序了：
 
 ## 磅与像素
 
 默认情况下，Microsoft Windows 假设视频显示的分辨率为 96 DPI。在该假设下，字体大小和像素通过以下公式相关：
 
-points = ¼ × pixels
+`points = ¼ × pixels`
 
-pixels = 4/3 × points
+`pixels = 4/3 × points`
 
 尽管这种关系仅适用于常见的视频显示，但人们如此喜欢拥有这些转换公式，以至于它们在 Windows Phone 7 编程中显示为
 
-FontSize="36"
-
-
-
-
+`FontSize="36"`
 
 在 Web 浏览器中运行时，默认的 Silverlight 字体大小为 11 像素，对应 8.25 磅，这对于桌面视图显示很好，但对于手机来说又太小了。为此，适用于 Windows Phone 的 Silverlight 定义了一组常用字体供你使用。（我稍后会在第 7 章中详细描述）。标准的 `MainPage.xml` 文件在根元素中包含以下属性：
 
@@ -716,7 +589,7 @@ FontSize={StaticResource FontSizeNormal}"
 
 ## XAP 是一个 ZIP 包
 
-如果你导航到 SilverlightHelloPhone Visual Studio 项目的 `\bin\Debug` 目录，你会发现名为 `SilverlightHelloPhone.xap` 的文件。这通常被称为 XAP 文件，读音为“zap”。这是部署到手机或手机模拟器上的文件。
+如果你导航到 `SilverlightHelloPhone` Visual Studio 项目的 `\bin\Debug` 目录，你会发现名为 `SilverlightHelloPhone.xap` 的文件。这通常被称为 XAP 文件，读音为“zap”。这是部署到手机或手机模拟器上的文件。
 
 XAP 文件是其他文件的组合包，采用了非常流行的压缩格式，即 ZIP（在拥挤的遗嘱执行会议上大喊“The XAP is a ZIP”会吸引所有 Silverlight 程序员的注意。）。如果你将 `SilverlightHelloPhone.xap` 重命名为 `SilverlightHelloPhone.zip`，你就可以查看内部内容了。你会看到项目包含的几个 `bin` 文件、一个 XML 文件、一个 XAML 文件以及一个 `SilverlightHelloPhone.dll` 文件，它是你程序的编译后二进制文件。
 
@@ -751,7 +624,7 @@ Visual Studio 创建了两个项目，一个用于程序，另一个用于你的
 
 你会看到 `SpriteFont1.spritefont` 出现在 Content 目录的文件列表中，你可以编辑一个带有详细注释的描述字体的 XML 文件。
 
-## XNA 项目: XnaHelloPhone 文件: SpriteFont1.spritefont（完整且无注释）
+### XNA 项目: XnaHelloPhone 文件: SpriteFont1.spritefont（完整且无注释）
 
 ```
 <XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Pipeline.Graphics">
@@ -771,90 +644,19 @@ Visual Studio 创建了两个项目，一个用于程序，另一个用于你的
 </XnaContent>
 ```
 
-这里的 FontName 标签显示 `Segoe UI Mono`，`Size` 标签为 `14`，`Spacing` 标签为 `0`，`UseKerning` 标签为 `true`，`Style` 标签为 `Regular`。`CharacterRegions` 包含一个 `CharacterRegion`，其 `Start` 为 `#32`，`End` 为 `#126`。这里的 `FontName` 标签显示 `Segoe UI Mono`，`Size` 标签为 `14`，`Spacing` 标签为 `0`，`UseKerning` 标签为 `true`，`Style` 标签为 `Regular`。`CharacterRegions` 包含一个 `CharacterRegion`，其 `Start` 为 `#32`，`End` 为 `#126`。
+这里的 `FontName` 标签显示 `Segoe UI Mono`，`Size` 标签为 `14`，`Spacing` 标签为 `0`，`UseKerning` 标签为 `true`，`Style` 标签为 `Regular`。`CharacterRegions` 包含一个 `CharacterRegion`，其 `Start` 为 `#32`，`End` 为 `#126`。
 
-对于 Silverlight for Windows Phone，`FontSize` 标签中的 `FontSize` 属性是 20 像素。此 `FontSize` 通过视觉树继承，并应用于所有没有设置自己的 `FontSize` 属性的 `TextBlock` 元素。它的值为 20 像素——几乎是桌面端 Silverlight 字体的两倍。使用标准公式，这个 20 像素的 `FontSize` 对应 15 磅，但在手机上的实际显示大约是 15 磅字体在打印文本中大小的 2/5。像素，在本例中为 27 像素。
-
-显示字体文本的 Text 实际高度比 `FontSize` 高出 33%，在本例中为 27 像素。
-
-## XAP 是一个 ZIP 包
-
-如果你导航到 SilverlightHelloPhone Visual Studio 项目的 `bin\Debug` 目录，你会发现名为 `SilverlightHelloPhone.xap` 的文件。这通常被称为 XAP 文件，读音为“zap”。这是部署到手机或手机模拟器上的文件。
-
-XAP 文件是其他文件的组合包，采用了非常流行的压缩格式，即 ZIP（在拥挤的遗嘱执行会议上大喊“The XAP is a ZIP”会吸引所有 Silverlight 程序员的注意）。如果你将 `SilverlightHelloPhone.xap` 重命名为 `SilverlightHelloPhone.zip`，你就可以查看内部内容了。你会看到项目包含的几个 `bin` 文件、一个 XML 文件、一个 XAML 文件以及一个 `SilverlightHelloPhone.dll` 文件，它是你程序的编译后二进制文件。
-
-你的程序所需的任何资源都可以被制为 Visual Studio 项目的一部分并添加到此 XAP 文件中。你的程序可以在运行时访问这些文件。我将在第 4 章讨论其中的一些概念。
-
-## 手机端的 XNA 程序
-
-接下来的议程是一个在屏幕中心显示简短问候语的 XNA 程序。虽然文本在 Silverlight 中很常见，但在图形游戏中并不常见。在游戏中，文本通常被归类为描述游戏如何运作或显示分值，“你好，世界”程序的整个概念并不适用于整个 XNA 编程范式。
-
-## 第一部分 基础知识
-
-事实上，XNA 并没有内置任何字体。你可能认为运行在手机上的 XNA 程序可以使用与 Silverlight 程序相同的原生字体，但事实并非如此。Silverlight 使用基于向量的 TrueType 字体，而 XNA 对此类奇特的概念无所知。对于 XNA 来说，一切都是位图，包括字体。
-
-如果你想在 XNA 程序中使用特定的字体，该字体必须被嵌入到可执行文件中，作为每个字符的位图集合。XNA Game Studio（集成在 Visual Studio 中）使得字体嵌入的实际过程非常简单，但这引发了一些法律问题。除非你也合法地分发嵌入的字体，否则你无法合法分发 XNA 程序，而大多数随 Windows 本身或 Windows 应用分发的字体，情况并非如此。
-
-为了帮助你解决这一昂贵问题，微软从 Ascender 公司许可了一些字体，专门用于允许你将它们嵌入到 XNA 程序中。这里是这些字体：
-
-| Kootenay | Lindsey |
-| :--- | :--- |
-| Miramonte | Pescadero |
-| Miramonte Bold | Pescadero Bold |
-| PERICLES | Segoe UI Mono |
-| PERICLES LIGHT | Segoe UI Mono Bold |
-
-注意 Pericles 字体的小写字母使用了小型大字母，因此它可能只适用于标题。
-
-从 Visual Studio 菜单中选择 New（新建）和 Project（项目）。在对话框左侧，选择 Visual C# 和 XNA Game Studio 4.0。选择 Windows Phone Game (4.0)。选择一个位置并输入项目名称 `XnaHelloWorld`。
-
-Visual Studio 创建了两个项目，一个用于程序，另一个用于你的程序内容（`Content` 项目）。XNA 程序通常包含大量内容，大部分是位图和 3D 模型，但也包括字体。要向此程序添加字体，请右键点击 Content 项目（标记为 "XnaHelloWorldContent (Content)"），并从弹出菜单中选择 Add（添加）和 New Item（新建项）。选择 Sprite font（精灵字体），保留文件名为 `Sprite1.spritefont`，点击 Add（添加）。
-
-“sprite”（精灵）一词在游戏编程中很常见，通常指可以非常快速移动的小位图，就像你在魔法森林中可能遇到的精灵一样。在 XNA 中，即使字体也是精灵。
-
-你会看到 `SpriteFont1.spritefont` 出现在 Content 目录的文件列表中，你可以编辑一个带有详细注释的描述字体的 XML 文件。
-
-## XNA 项目: XnaHelloPhone 文件: SpriteFont1.spritefont（完整且无注释）
-
-```
-<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Pipeline.Graphics">
-<Asset Type="Graphics:FontDescription">
-<FontName>Segoe UI Mono</FontName>
-<Size>14</Size>
-<Spacing>0</Spacing>
-<UseKerning>true</Kerning>
-<Style>Regular</Style>
-<CharacterRegions>
-<CharacterRegion>
-<Start>#32</Start>
-<End>#126</End>
-</CharacterRegion>
-</CharacterRegions>
-</Asset>
-</XnaContent>
-```
-
-这里的 `FontName` 标签显示 `Segoe UI Mono`，`Size` 标签为 `14`，`Spacing` 标签为 `0`，`UseKerning` 标签为 `true`，`Style` 标签为 `Regular`。`CharacterRegions` 包含一个 `CharacterRegion`，其 `Start` 为 `#32`，`End` 为 `#126`。这里的 `FontName` 标签显示 `Segoe UI Mono`，`Size` 标签为 `14`，`Spacing` 标签为 `0`，`UseKerning` 标签为 `true`，`Style` 标签为 `Regular`。`CharacterRegions` 包含一个 `CharacterRegion`，其 `Start` 为 `#32`，`End` 为 `#126`。
-
-
-
-对于 Silverlight for Windows Phone，`FontSize` 标签中的 `FontSize` 属性是 20 像素。此 `FontSize` 通过视觉树继承，并应用于所有没有设置自己的 `FontSize` 属性的 `TextBlock` 元素。它的值为 20 像素——几乎是桌面端 Silverlight 字体的两倍。使用标准公式，这个 20 像素的 `FontSize` 对应 15 磅，但在手机上的实际显示大约是 15 磅字体在打印文本中大小的 2/5。像素，在本例中为 27 像素。
+对于 Silverlight for Windows Phone，`FontSize` 标签中的 `FontSize` 属性是 20 像素。此 `FontSize` 通过视觉树继承，并应用于所有没有设置自己的 `FontSize` 属性的 `TextBlock` 元素。它的值为 20 像素——几乎是桌面端 Silverlight 字体的两倍。使用标准公式，这个 20 像素的 `FontSize` 对应 15 磅，但在手机上的实际显示大约是 15 磅字体在打印文本中大小的 2/5。
 
 显示字体文本的 Text 实际高度比 `FontSize` 高出 33%，在本例中为 27 像素。
 
-对于 Silverlight for Windows Phone，`FontSize` 标签中的 `FontSize` 属性是 20 像素。此 `FontSize` 通过视觉树继承，并应用于所有没有设置自己的 `FontSize` 属性的 `TextBlock` 元素。
-
- 
-
-像素 文件的 `CharacterRegions` 部分指明了十六进制编码范围。0x32 到 0x26 包含了 ASCII 字符集。文件名 `Sprite1.spritefont` 是描述性的。如果你查看此文件的属性（右键点击文件名并选择属性），你会看到一个没有扩展名的 `Segoe14`。`Asset Name` 是你程序中的字体。如果你想混淆你自己，可以更改 `Asset Name`。在初始状态下，XNAHelloProject 包含两个 C# 代码文件：`Program.cs` 和 `Game1.cs`。第一个非常简单，对于 Windows Phone 7 它是无关的。预处理器指令仅在定义符号 `XBOX` 时启用 `Program` 类。编译 Windows Phone 程序时，定义的符号是 `WINDOWS_PHONE`。
-
- 基础知识
+## XNA 项目: XnaHelloPhone 文件: Game1.cs（显示字段的片段）
 
 对于大多数小游戏，你所有的时间都会花在 `Game1.cs` 文件上。`Game1` 类派生自 `Game` 并在其中两个两个字段：`graphics` 和 `spriteBatch`。在那两个基础上我想添加三个：
 
-XNA 项目: XnaHelloPhone 文件: Game1.cs（显示字段的片段）
 
-```
+
+```csharp
 namespace XnaPhone
 {
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -868,13 +670,13 @@ namespace XnaPhone
 }
 ```
 
-这些新字段简单地指示了程序显示的文本、使用的字体以及在屏幕上的位置。该位置是相对于显示器左上角的像素坐标。`Vector2` 结构有两个名为 `X` 和 `Y` 的字段，类型为 `float`。为了性能考虑，XNA 中所有的浮点值都是单精度的。（Silverlight 是双精度的）`Vector2` 结构通常用于二维位置、大小，甚至是向量。
+这些新字段简单地指示了程序显示的文本、使用的字体以及在屏幕上的位置。该位置是相对于显示器左上角的像素坐标。`Vector2`结构有两个名为`X`和`Y`的字段，类型为`float`。为了性能考虑，XNA 中所有的浮点值都是单精度的。（Silverlight 是双精度的）`Vector2`结构通常用于二维位置、大小，甚至是向量。
 
-当游戏在手机上运行时，会实例化 `Game1` 类并执行 `Game1` 构造函数。这段标准代码为你提供：
+当游戏在手机上运行时，会实例化`Game1`类并执行`Game1`构造函数。这段标准代码为你提供：
 
-XNA 项目: XnaHelloPhone 文件: Game1.cs（片段）
+XNA 项目: `XnaHelloPhone` 文件: `Game1.cs`（片段）
 
-```
+```csharp
 public Game1()
 {
     graphics = new GraphicsDeviceManager(this);
@@ -885,17 +687,13 @@ public Game1()
 }
 ```
 
-第一个语句初始化了 `graphics` 字段。在第二个语句中，`Content` 是 `Game` 的属性，类型为 `ContentManager`，而 `RootDirectory` 是类的属性。
-
-
-
-
+第一个语句初始化了`graphics`字段。在第二个语句中，`Content`是`Game`的属性，类型为`ContentManager`，而`RootDirectory`是类的属性。
 
 # 第1章 你好，Windows Phone 7 25
 
 将此属性设置为“Content”与当前存储 14 点 Segoe 字体的 Content 目录一致。第三条语句为程序的游戏循环设置了时间，该循环控制着程序更新视频显示的速度。Phone 7 屏幕的刷新频率为每秒 30 帧。
 
-在实例化 Game1 之后，会在 Game1 实例上调用 `Run` 方法，基类 Game 类将启动游戏的过程。初始步骤之一是调用 `Initialize` 方法，Game 的派生类可以重写该方法。XNA Studio 生成了一个骨架方法，我不会为其添加内容：
+在实例化`Game1`之后，会在`Game1`实例上调用`Run`方法，基类`Game`类将启动游戏的过程。初始步骤之一是调用`Initialize`方法，`Game`的派生类可以重写该方法。XNA Studio 生成了一个骨架方法，我不会为其添加内容：
 
 ```
 XNA Project: XnaHelloPhone File: Game1.cs (excerpt)
@@ -906,7 +704,7 @@ protected override void Initialize()
 }
 ```
 
-`Initialize` 方法并不是加载字体或其他内容的地方。那将在稍后当基类调用 `LoadContent` 方法时进行。
+`Initialize`方法并不是加载字体或其他内容的地方。那将在稍后当基类调用`LoadContent`方法时进行。
 
 ```
 XNA Project: XnaHelloPhone File: Game1.cs (excerpt)
@@ -924,29 +722,29 @@ protected override void LoadContent()
 }
 ```
 
-该方法中的第一条语句是提供的。你很快就会看到如何使用 `spriteBatch` 将精灵绘制到显示器上。
+该方法中的第一条语句是提供的。你很快就会看到如何使用`spriteBatch`将精灵绘制到显示器上。
 
-其他语句是我添加的，你会注意到需要对如 `Content` 和 `GraphicsDevice` 等名称加前缀，因为它们的属性不属于静态类。正如我提到的，`Content` 属性的类型为 `ContentManager`。泛型 `Load` 方法允许将内容加载到程序中，例如类型为 `SpriteFont`的内容。引号中的名称是内容属性中指定的资源名称（Asset Name）。该语句将加载的字体存储在类型为 `SpriteFont` 的字段 `sego14` 中。
+其他语句是我添加的，你会注意到需要对如`Content`和`GraphicsDevice`等名称加前缀，因为它们的属性不属于静态类。正如我提到的，`Content`属性的类型为`ContentManager`。泛型`Load`方法允许将内容加载到程序中，例如类型为`SpriteFont`的内容。引号中的名称是内容属性中指定的资源名称（Asset Name）。该语句将加载的字体存储在类型为`SpriteFont`的字段`sego14`中。
 
 在 XNA 中，精灵（包括文本字符串）通过指定相对于显示器左上角或相对于精灵左上角的像素坐标来显示。为了计算这些坐标，了解屏幕尺寸以及使用特定字体显示文本时的尺寸是有帮助的。
 
-`SpriteFont` 类有一个非常实用的方法名为 `MeasureString`，它返回一个 `Vector2` 对象，表示特定文本字符串的像素大小。（对于 14 点 Segoe UI Mono 字体，其等高度为 18-2/3 像素，`MeasureString` 调用返回的高度为 28 像素。）
+`SpriteFont`类有一个非常实用的方法名为`MeasureString`，它返回一个`Vector2`对象，表示特定文本字符串的像素大小。（对于 14 点 Segoe UI Mono 字体，其等高度为 18-2/3 像素，`MeasureString`调用返回的高度为 28 像素。）
 
-XNA 程序通常使用 `GraphicsDevice` 类的 `Viewport` 属性来获取屏幕尺寸。这可以通过 `Game` 的 `GraphicsDevice` 属性访问，并提供 `Width` 和 `Height` 属性。
+XNA 程序通常使用`GraphicsDevice`类的`Viewport`属性来获取屏幕尺寸。这可以通过`Game`的`GraphicsDevice`属性访问，并提供`Width`和`Height`属性。
 
-随后计算 `textPosition`——即文本字符串要显示的相对于视口（viewport）左上角的点——就是轻而易举的。
+随后计算`textPosition`——即文本字符串要显示的相对于视口（viewport）左上角的点——就是轻而易举的。
 
-程序的初始化阶段现在已经结束，结果操作开始。程序进入游戏循环。与视频显示的每秒 30 帧刷新同步，你程序中的两个方法会被调用：先是 `Update`，然后是 `Draw`。交替进行：Update、Draw、Update、Draw、Update、Draw……（如果 `Update` 需要的时间超过 1/30 秒才能完成，情况实际上会复杂一些，我将在 a) 中详细讨论这些问题）
+程序的初始化阶段现在已经结束，结果操作开始。程序进入游戏循环。与视频显示的每秒 30 帧刷新同步，你程序中的两个方法会被调用：先是`Update`，然后是`Draw`。交替进行：Update、Draw、Update、Draw、Update、Draw……（如果`Update`需要的时间超过 1/30 秒才能完成，情况实际上会复杂一些，我将在 a) 中详细讨论这些问题）
 
-在 `Draw` 方法中，你想要在显示器上绘制。这就是你唯一想做的。如果你需要为绘制准备一些计算，你应该在 `Update` 方法中进行。`Update` 方法为 `Draw` 方法做准备。很多时候，XNA 程序会根据用户输入在显示器上移动。对于手机，这种用户输入涉及手指触摸屏幕。所有对用户输入的处理也应该在 `Update` 方法期间发生。你将在第 3 章看到一个示例。
+在`Draw`方法中，你想要在显示器上绘制。这就是你唯一想做的。如果你需要为绘制准备一些计算，你应该在`Update`方法中进行。`Update`方法为`Draw`方法做准备。很多时候，XNA 程序会根据用户输入在显示器上移动。对于手机，这种用户输入涉及手指触摸屏幕。所有对用户输入的处理也应该在`Update`方法期间发生。你将在第 3 章看到一个示例。
 
-你应该编写 `Update` 和 `Draw` 方法，使其执行尽可能快。我想这是显而易见的，但有一点非常重要，可能并不如此：
+你应该编写`Update`和`Draw`方法，使其执行尽可能快。我想这是显而易见的，但有一点非常重要，可能并不如此：
 
-你应该避免在 `Update` 和 `Draw` 中编写经常从程序本地堆分配内存的代码。.NET 垃圾回收器想要回收部分此类内存，当垃圾回收器工作时，你的游戏可能会出现卡顿。在关于 XNA 编程的章节中，你将看到避免从堆分配内存的技术。
+你应该避免在`Update`和`Draw`中编写经常从程序本地堆分配内存的代码。.NET 垃圾回收器想要回收部分此类内存，当垃圾回收器工作时，你的游戏可能会出现卡顿。在关于 XNA 编程的章节中，你将看到避免从堆分配内存的技术。
 
-你的 `Draw` 方法可能不会包含任何可疑的代码；问题通常隐藏在 `Update` 方法中。避免任何涉及类的 `new` 表达式。这些总是会导致内存分配。然而，实例化结构体（structure）是可以的，因为结构体实例存储在栈上而不是堆上（XNA 使用结构体而非类来处理经常需要在 Update 中创建的对象类型）。堆分配也可以在没有显式 `new` 表达式的情况下发生。例如，拼接两个字符串会在堆上创建另一个字符串。如果你需要在 `Update` 中执行字符串操作，应该使用 `StringBuilder`。方便的是，XNA 提供了使用 `StringBuilder` 对象显示文本的方法。
+你的`Draw`方法可能不会包含任何可疑的代码；问题通常隐藏在`Update`方法中。避免任何涉及类的`new`表达式。这些总是会导致内存分配。然而，实例化结构体（structure）是可以的，因为结构体实例存储在栈上而不是堆上（XNA 使用结构体而非类来处理经常需要在 Update 中创建的对象类型）。堆分配也可以在没有显式`new`表达式的情况下发生。例如，拼接两个字符串会在堆上创建另一个字符串。如果你需要在`Update`中执行字符串操作，应该使用`StringBuilder`。方便的是，XNA 提供了使用`StringBuilder`对象显示文本的方法。
 
-在 `XnaHelloPhone` 中，`Update` 方法是简单而易的。文本固定在一个位置。所有必要的计算已经在 `LoadContent` 方法中完成。出于某种原因，`Update` 方法将简单保持为 XNA Game Studio 创建的原样：
+在`XnaHelloPhone`中，`Update`方法是简单而易的。文本固定在一个位置。所有必要的计算已经在`LoadContent`方法中完成。出于某种原因，`Update`方法将简单保持为 XNA Game Studio 创建的原样：
 
 ```
 ## XNA Project: XnaHelloPhone File: Game1.cs (excerpt)
@@ -959,7 +757,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-最后是 `Draw` 方法。你提供的版本只是将背景涂成浅蓝色：
+最后是`Draw`方法。你提供的版本只是将背景涂成浅蓝色：
 
 ```
 ## XNA Project: XnaHelloPhone File: Game1.cs (excerpt)
@@ -972,7 +770,7 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-名为 `CornflowerBlue` 的颜色在 XNA 社区中具有标志性地位。当你开发 XNA 程序时，浅蓝色屏幕的外观非常舒适。但如果你想在 OLED 显示器上节能，你需要深色背景。在我的修订版本中，我通过将背景设置为
+名为`CornflowerBlue`的颜色在 XNA 社区中具有标志性地位。当你开发 XNA 程序时，浅蓝色屏幕的外观非常舒适。但如果你想在 OLED 显示器上节能，你需要深色背景。在我的修订版本中，我通过将背景设置为
 
 第一部分 基础
 
@@ -993,7 +791,7 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-精灵通过封装进 `SpriteBatch` 对象显示在显示器上，该对象是在调用 `LoadContent` 时创建的。在 `Begin` 和 `End` 调用之间，可以多次调用 `DrawString` 来绘制文本并调用 `Draw` 来绘制位图。这些是唯一的选项。这个特定的 `DrawString` 引用了字体、要显示的文本、相对于屏幕左上角的文本左上角位置以及颜色。它在这里：
+精灵通过封装进`SpriteBatch`对象显示在显示器上，该对象是在调用`LoadContent`时创建的。在`Begin`和`End`调用之间，可以多次调用`DrawString`来绘制文本并调用`Draw`来绘制位图。这些是唯一的选项。这个特定的`DrawString`引用了字体、要显示的文本、相对于屏幕左上角的文本左上角位置以及颜色。它在这里：
 
 img/d9347c1f55fa6d523479d2cd9b4d5459_42_0.png
 
@@ -1007,18 +805,15 @@ img/d9347c1f55fa6d523479d2cd9b4d5459_43_0.png
 
 程序的生物学就是宿命吗？
 
-
-
-
-
 ## 第2章
- 确定方向
+
+确定方向
 
 默认情况下，适用于 Windows Phone 7 的 Silverlight 程序竖屏模式运行，而 XNA 程序则以横屏模式运行。本章将讨论如何超越这些默认设置，并探索涉及屏幕尺寸、元素尺寸和事件的其他问题。
 
 ## Silverlight 与动态布局
 
-如果你运行上一章中的 SilverlightHelloPhone 程序，并将手机或模拟器侧向放置，你会发现显示并没有改变以适应新的方向。这很容易修复。在 MainPage.xaml 的根 `ApplicationPage` 标签中，将属性
+如果你运行上一章中的 SilverlightHelloPhone 程序，并将手机或模拟器侧向放置，你会发现显示并没有改变以适应新的方向。这很容易修复。在 `MainPage.xaml` 的根 `ApplicationPage` 标签中，将属性
 
 ```
 SupportedOrientations="Portrait"
@@ -1030,13 +825,13 @@ SupportedOrientations="Portrait"
 SupportedOrientations="PortraitOrLandscape"
 ```
 
-SupportedOrientations 是 ApplicationPage 的一个属性。它被设置为 `SupportedPageOrientation` 枚举的一个成员，可以是 Portrait（竖屏）、Landscape（横屏）或 PortraitOrLandscape（竖屏或横屏）。
+`SupportedOrientations`是 `ApplicationPage` 的一个属性。它被设置为 `SupportedPageOrientation` 枚举的一个成员，可以是 `Portrait`（竖屏）、`Landscape`（横屏）或 `PortraitOrLandscape`（竖屏或横屏）。
 
 重新编译。现在，当你将手机或模拟器侧向放置时，页面的内容会相应地移动：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_45_0.png)
 
-SupportedOrientations 属性还允许你需要将程序限制为 Landscape（横屏）。
+`SupportedOrientations`属性还允许你需要将程序限制为 `Landscape`（横屏）。
 
 这种对方向的响应确实展示了 Silverlight 的动态布局。一切都移动了，某些元素的大小也发生了变化。Silverlight 源于 WPF 和
 
@@ -1044,15 +839,15 @@ SupportedOrientations 属性还允许你需要将程序限制为 Landscape（横
 
 桌面，从历史角度来看，它设计用于响应窗口大小和宽高比的变化。这种功能很好地延续到了手机上。
 
-在使用动态布局时最重要的两个属性是 HorizontalAlignment（水平对齐）和 VerticalAlignment（垂直对齐）。在上一章中，使用这些属性在 Silverlight 程序中居中文本显然比在 XNA 中根据屏幕尺寸和文本大小进行计算简单得多。
+在使用动态布局时最重要的两个属性是 `HorizontalAlignment`（水平对齐）和 `VerticalAlignment`（垂直对齐）。在上一章中，使用这些属性在 Silverlight 程序中居中文本显然比在 XNA 中根据屏幕尺寸和文本大小进行计算简单得多。
 
 另一方面，如果你需要堆叠许多文本字符串，在 XNA 中可能觉得这很简单，但在 Silverlight 中并不显而易见。
 
 请放心，Silverlight 有有组织元素的方法。有一整类元素面板（panels）专门为此目的存在。如果你有需要，甚至可以根据像素坐标来定位元素。对面板的全面介绍将等到第 9 章。
 
-在此，你可以将多个元素放入内容 `Grid` 中。Grid 将内容组织成由行和列标识的单元格，但此程序将 TextBlocks 放在单单元格 Grid 中，以演示不同组合下的 HorizontalAlignment 和 VerticalAlignment 的用法。
+在此，你可以将多个元素放入内容 `Grid` 中。`Grid` 将内容组织成由行和列标识的单元格，但此程序将 `TextBlocks` 放在单单元格 `Grid` 中，以演示不同组合下的 `HorizontalAlignment` 和 `VerticalAlignment` 的用法。
 
-Silverlight 项目: SilverlightCornersAndEdges 文件: MainPage.xaml
+Silverlight 项目: `SilverlightCornersAndEdges` 文件: `MainPage.xaml`
 
 ```
 <Grid Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
@@ -1093,13 +888,13 @@ HorizontalAlignment="Right" />
 </Grid>
 ```
 
-正如书中的许多简单 Silverlight 程序一样，我将 MainPage 的 SupportedOrientations 属性设置为 PortraitLandscape。这里是它侧向放置的：：
+正如书中的许多简单 Silverlight 程序一样，我将 `MainPage` 的 `SupportedOrientations` 属性设置为 `PortraitLandscape`。这里是它侧向放置的：：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_47_0.png)
 
-尽管此屏幕似乎显示了所有组合，但程序实际上并没有显示 HorizontalAlignment 和 VerticalAlignment 属性的默认设置。默认设置是名为 Stretch（拉伸）的枚举成员。如果你尝试它们，你会发现 TextBlock 位于左上角，就像使用 Top 和 Left 一样。但显而易见的是，TextBlock 占据了 Grid 的整个内部。TextBlock 具有透明背景（你无法设置备选方案），所以很难区分。我将在下一章演示这种效果。
+尽管此屏幕似乎显示了所有组合，但程序实际上并没有显示 `HorizontalAlignment` 和 `VerticalAlignment` 属性的默认设置。默认设置是名为 `Stretch`（拉伸）的枚举成员。如果你尝试它们，你会发现 `TextBlock` 位于左上角，就像使用 `Top` 和 `Left` 一样。但显而易见的是，`TextBlock` 占据了 `Grid` 的整个内部。`TextBlock` 具有透明背景（你无法设置备选方案），所以很难区分。我将在下一章演示这种效果。
 
-显然，HorizontalAlignment 和 VerticalAlignment 属性在 Silverlight 的布局系统中非常重要。Margin（外边距）也是如此。尝试在本程序的第一个 TextBlock 中添加一个 Margin 设置：
+显然，`HorizontalAlignment` 和 `VerticalAlignment` 属性在 Silverlight 的布局系统中非常重要。`Margin`（外边距）也是如此。尝试在本程序的第一个 `TextBlock` 中添加一个 `Margin` 设置：
 
 ```
 <TextBlock Text="Top-Left"
@@ -1108,7 +903,7 @@ HorizontalAlignment="Left"
 Margin="100" />
 ```
 
-现在，TextBlock 与客户区域左侧和顶部边缘之间有 100 像素的呼吸。Margin 属性类型为 Thickness，这是一个具有四个名为 Left、Top、Right 和 Bottom 属性的结构。如果你在 XAML 中指定一个数字，它将用于四个边。你也可以这样指定两个数字：
+现在，`TextBlock` 与客户区域左侧和顶部边缘之间有 100 像素的呼吸。`Margin` 属性类型为 `Thickness`，这是一个具有四个名为 `Left`、`Top`、`Right` 和 `Bottom` 属性的结构。如果你在 XAML 中指定一个数字，它将用于四个边。你也可以这样指定两个数字：
 
 ```
 Margin="100 200"
@@ -1122,7 +917,9 @@ Margin="100 200 50 300"
 
 顺序是左右上下。注意：如果边距太大，文本将会消失。Silverlight 会保留这些边距。
 
-如果你将 HorizontalAlignment 和 VerticalAlignment 都设置为 Center，你会发现文本是非零的。SupportedOrientations 的可能受到 Margin 的可能影响：
+如果你将 `HorizontalAlignment` 和 `VerticalAlignment` 都设置为 `Center`，你会发现文本是非零的。`SupportedOrientations` 的可能受到 `Margin` 的可能影响：
+
+
 
 ```
 <TextBlock Text="Top-Left"
@@ -1131,7 +928,7 @@ HorizontalAlignment="Left"
 Margin="100 200" />
 ```
 
-Padding（内边距）也是 Thickness 类型，这是一个具有四个名为 Left、Top、Right 和 Bottom 属性的结构。如果你在 XAML 中指定一个数字，它将用于四个边。你也可以这样指定两个数字：
+`Padding`（内边距）也是 `Thickness` 类型，这是一个具有四个名为 `Left`、`Top`、`Right` 和 `Bottom` 属性的结构。如果你在 XAML 中指定一个数字，它将用于四个边。你也可以这样指定两个数字：
 
 ```
 Margin="100 200"
@@ -1139,23 +936,23 @@ Margin="100 200"
 
 第一个应用于左右；第二个应用于上下。
 
-Name 属性在 Silverlight 中起着非常特殊的角色。你会在 MainPage 类中看到一组字段，其中一个类型为 txtblk 的字段。你还会注意到该字段在 InitializeComponent 方法中被赋值：
+`Name` 属性在 Silverlight 中起着非常特殊的角色。你会在 `MainPage` 类中看到一组字段，其中一个类型为 `txtblk` 的字段。你还会注意到该字段在 `InitializeComponent` 方法中被赋值：
 
 ```cs
 this.txtblk = ((System.Windows.Controls.TextBlock)(this.FindName("txtblk")));
 ```
 
-## 第2章 确定方向 35
+### 第2章 确定方向 35
 
-你可以在不了解元素本身足够信息的情况下，推测 TextBlock 的大小。在某些情况下，设置 Width 和 Height 是合适的，但这里不是。
+你可以在不了解元素本身足够信息的情况下，推测 `TextBlock` 的大小。在某些情况下，设置 `Width` 和 `Height` 是合适的，但这里不是。
 
-Width 和 Height 属性类型为 double，默认值是那些特殊的浮点值，即 NaN（非数字）。如果你需要获取元素在屏幕上渲染时的实际宽度和高度，请访问名为 ActualWidth 和 ActualHeight 的属性。（注意：这些值在元素渲染后将为非零。）
+`Width` 和 `Height` 属性类型为 `double`，默认值是那些特殊的浮点值，即 `NaN`（非数字）。如果你需要获取元素在屏幕上渲染时的实际宽度和高度，请访问名为 `ActualWidth` 和 `ActualHeight` 的属性。（注意：这些值在元素渲染后将为非零。）
 
-还有一些实用的事件用于获取涉及尺寸的信息。Loaded 事件在视觉元素首次排列在屏幕上时触发；SizeChanged 被元素支持以指示它们大小的变化；LayoutUpdated 在布局周期发生时非常有用，例如当方向改变时。
+还有一些实用的事件用于获取涉及尺寸的信息。`Loaded` 事件在视觉元素首次排列在屏幕上时触发；`SizeChanged` 被元素支持以指示它们大小的变化；`LayoutUpdated` 在布局周期发生时非常有用，例如当方向改变时。
 
-该项目通过显示标准页面中元素的尺寸演示了 SizeChanged 的用法。你并不经常需要精确尺寸，但偶尔可能会感兴趣。
+该项目通过显示标准页面中元素的尺寸演示了 `SizeChanged` 的用法。你并不经常需要精确尺寸，但偶尔可能会感兴趣。
 
-你可以在 XAML 中将特定事件与事件处理程序关联，实际的事件处理程序必须在代码中实现。当你在 XAML 中事件名称（如 SizeChanged）时，Visual Studio 将为你创建事件处理程序。这就是我对内容网格的 SizeChanged 事件所做的：
+你可以在 XAML 中将特定事件与事件处理程序关联，实际的事件处理程序必须在代码中实现。当你在 XAML 中事件名称（如 `SizeChanged`）时，Visual Studio 将为你创建事件处理程序。这就是我对内容网格的 `SizeChanged` 事件所做的：
 
 > Silverlight项目: SilverWhatSize 文件: MainPage.xaml (摘)
 
@@ -1168,17 +965,13 @@ Width 和 Height 属性类型为 double，默认值是那些特殊的浮点值�
 </Grid>
 ```
 
-
-
-
-
 # 第一部分 基础
 
-这意味着在 MainPage.xml.cs 中的构造函数执行完 `InitializeComponent` 之后，MainPage 类中的任何代码都可以使用存储为类字段的 `txtblk` 变量来引用 XAML 文件中的 TextBlock 元素。
+这意味着在 `MainPage.xml.cs` 中的构造函数执行完 `InitializeComponent` 之后，`MainPage` 类中的任何代码都可以使用存储为类字段的 `txtblk` 变量来引用 XAML 文件中的 `TextBlock` 元素。
 
-你会发现 MainPage.xml 文件中的元素使用的是 `x:Name` 而不是 `Name` 来命名。在 XAML 中，这两个属性基本上是等价的。`Name` 适用于元素（即派自 `FrameworkElement` 的类实例，因为 `Name` 属性定义在那里），而 `x:Name` 适用于所有对象。
+你会发现 `MainPage.xml` 文件中的元素使用的是 `x:Name` 而不是 `Name` 来命名。在 XAML 中，这两个属性基本上是等价的。`Name` 适用于元素（即派自 `FrameworkElement` 的类实例，因为 `Name` 属性定义在那里），而 `x:Name` 适用于所有对象。
 
-MainPage.xml.cs 中 MainPage 类的这段代码有一个名为 `ContentPanel` 的字段，用于引用 MainPage.xml 中显示的 grid，MainPage.xaml 中的其他元素也是如此。
+`MainPage.xml.cs` 中 `MainPage` 类的这段代码有一个名为 `ContentPanel` 的字段，用于引用 `MainPage.xml` 中显示的 grid，`MainPage.xaml` 中的其他元素也是如此。
 
 为元素分配名称是代码与 XAML 交互的两种主要方式之一。第二种方法是在 XAML 中定义的事件触发一个在代码中处理的事件。这里是 Visual Studio 创建的内容网格 `SizeChanged` 事件的处理程序：
 
@@ -1219,7 +1012,7 @@ Application.Current.RootVisual.Render);
 }
 ```
 
-这五个项目都是 `Size` 类型，这是一个带有 `Width` 和 `Height` 属性的结构体。ContentGrid 本身的大小可以通过事件参数的 `NewSize` 属性获取。对于后三个，它是 `ActualWidth` 和 `ActualHeight` 属性。
+这五个项目都是 `Size` 类型，这是一个带有 `Width` 和 `Height` 属性的结构体。`ContentGrid` 本身的大小可以通过事件参数的 `NewSize` 属性获取。对于后三个，它是 `ActualWidth` 和 `ActualHeight` 属性。
 
 注意这一项：静态属性 `Application.Current` 返回与当前进程关联的 `Application` 对象。这是程序创建的 `App` 对象。它有一个名为 `RootVisual` 的属性引用框架，但该属性的定义类型为 `UIElement`。`ActualWidth` 和 `ActualHeight` 属性由 `FrameworkElement`（派自 `UIElement` 的类）定义。我没有使用类型转换，而是选择使用 `UIElement` 定义的 `Size` 类型属性。
 
@@ -1229,7 +1022,7 @@ Application.Current.RootVisual.Render);
 
 # 第一部分 基础
 
-MainPage 大小与框架大小之间的 32 像素差异为顶部的系统栏留出了空间。你可以通过更改 MainPage.xaml 根元素中的属性，在应用程序运行时防止系统栏出现（并实际上，从而可以访问整个屏幕）：
+`MainPage` 大小与框架大小之间的 32 像素差异为顶部的系统栏留出了空间。你可以通过更改 `MainPage.xaml` 根元素中的属性，在应用程序运行时防止系统栏出现（并实际上，从而可以访问整个屏幕）：
 
 ```xml
 shell:SystemTray.IsVisible="True"
@@ -1243,13 +1036,13 @@ shell:SystemTray.IsVisible="False"
 
 该属性的语法看起来可能有点奇怪。`SystemTray` 是 `Microsoft.Phone.Shell` 空间中的一个类，`IsVisible` 是该类的一个属性，类和属性一起出现是因为它是一种特殊的被称为“附加属性”（attached property）的属性。
 
-最顶部的网格 `LayoutRoot` 与 MainPage 大小相同。由于 `TitlePanel`（包含两个标题）的垂直尺寸和 `ContentPanel` 的垂直尺寸相加并不等于 `LayoutRoot` 的垂直尺寸，因为 `TitlePanel` 有 45 像素的垂直边距（顶部 17 像素，底部 28 像素）。
+最顶部的网格 `LayoutRoot` 与 `MainPage` 大小相同。由于 `TitlePanel`（包含两个标题）的垂直尺寸和 `ContentPanel` 的垂直尺寸相加并不等于 `LayoutRoot` 的垂直尺寸，因为 `TitlePanel` 有 45 像素的垂直边距（顶部 17 像素，底部 28 像素）。
 
 随后的 `Size` 事件发生在视觉树中的某些项引起变化，或者手机方向发生变化时：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_52_0.png)
 
-注意框架不会改变方向。在横屏视图下，系统栏占据了 MainPage 72 像素的宽度。
+注意框架不会改变方向。在横屏视图下，系统栏占据了 `MainPage` 72 像素的宽度。
 
 ## 方向事件
 
@@ -1257,7 +1050,7 @@ shell:SystemTray.IsVisible="False"
 
 # 第二章 熟悉环境 39
 
-显然，处理方向变化不仅仅是设置 `SupportedOrientations` 属性！在某些情况下，你可能想从代码中操作布局。`ApplicationPage` 通过一个方便的可重写方法 `OnChanged` 补充了此事件。SilverlightDisplay 项目中的 `MainPage` 展示了如何重写 `OrientationChanged`，但它的作用仅仅是显示当前的方向。
+显然，处理方向变化不仅仅是设置 `SupportedOrientations` 属性！在某些情况下，你可能想从代码中操作布局。`ApplicationPage` 通过一个方便的可重写方法 `OnChanged` 补充了此事件。`SilverlightDisplay` 项目中的 `MainPage` 展示了如何重写 `OrientationChanged`，但它的作用仅仅是显示当前的方向。
 
 > SilverlightProject: SilverlightOrientationDisplay File: MainPage.xaml (节录)
 
@@ -1296,7 +1089,7 @@ namespace SilverlightOrientationDisplay
 
 ## XNA 方向
 
-默认情况下，适用于 Windows Phone 的 XNA 设置为横屏方向，可能是为了兼容其他游戏的屏幕。支持两种横屏方向，当你将手机从一种横屏方向转到另一种时，显示会自动翻转。如果你倾向于为竖屏显示设计游戏，这很容易。在 XnaHello 的 `Game1` 类构造函数中，尝试插入以下语句：
+默认情况下，适用于 Windows Phone 的 XNA 设置为横屏方向，可能是为了兼容其他游戏的屏幕。支持两种横屏方向，当你将手机从一种横屏方向转到另一种时，显示会自动翻转。如果你倾向于为竖屏显示设计游戏，这很容易。在 `XnaHello` 的 `Game1` 类构造函数中，尝试插入以下语句：
 
 ```csharp
 graphics.PreferredBackعرض = 320;
@@ -1309,23 +1102,19 @@ graphics.PreferredBackBufferHeight = 480;
 
 看！我指定的缓冲区与 Windows Phone 7 显示器的纵横比不同，因此绘制区域被添加了黑边（letter-boxed）！文本变大了，因为像素大小保持相同，但现在显示分辨率降低了。
 
-
-
-
-
 ## 第2章 确定方向
 
 尽管你可能并不喜欢这种特定显示器的复古颗粒感，但如果你的游戏不需要手机提供的高分辨率，你应该认真考虑指定一个较小的缓冲区。这样性能会提高，电池电量也会减少。你可以将缓冲区设置为从 240 x 240 到 480 x 800（竖屏模式）或 800 x 480（横屏）之间的任意值。XNA 使用宽高比来确定你想要竖屏还是横屏。
 
 在代码中设置期望的后缓冲区也是目标特定显示尺寸的极佳方法，同时允许未来出现其他尺寸的设备。
 
-默认情况下，后缓冲区为 800 x 480，但它实际上并不是以该大小显示的。它被稍微缩小了以适应系统栏。要去掉系统栏（并可能骚扰那些想知道时间的用户），你需要在 Game1 构造函数中设置：
+默认情况下，后缓冲区为 800 x 480，但它实际上并不是以该大小显示的。它被稍微缩小了以适应系统栏。要去掉系统栏（并可能骚扰那些想知道时间的用户），你需要在 `Game1` 构造函数中设置：
 
 ```c
 graphics.IsFullScreen = true;
 ```
 
-让你的 XNA 游戏响应方向的变化也是可能的，但它们绝对需要对结构进行一些重构。为了适应方向变化的最简单重构类型在 XnaOrientableHelloProject 中有所演示。在你包含的字段中有一个 textSize 变量：
+让你的 XNA 游戏响应方向的变化也是可能的，但它们绝对需要对结构进行一些重构。为了适应方向变化的最简单重构类型在 `XnaOrientableHelloProject` 中有所演示。在你包含的字段中有一个 `textSize` 变量：
 
 > XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (显示字段的节录)
 
@@ -1342,7 +1131,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-Game1 构造函数包含一个设置 graphics 字段的 SupportedOrientations 属性的语句：
+`Game1` 构造函数包含一个设置 `graphics` 字段的 `SupportedOrientations` 属性的语句：
 
 > XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (节录)
 
@@ -1365,23 +1154,31 @@ DisplayOrientation.LandscapeRight;
 TargetElapsedTime = TimeSpan.Ticks(333333);
 ```
 
-你可以使用 SupportedOrientation 将手机限制为两种横屏方向之一。同时支持竖屏和横屏的设置看起来简单，但会产生影响。当方向发生变化时，图形设备实际上会被重置（这会产生一些事件），并且后缓冲区的维度会交换。你可以订阅 Game 类的 OrientationChanged 事件（可以通过 Window 属性访问），或者你可以检查 GameWindow 对象的 CurrentOrientation 属性。
+你可以使用 `SupportedOrientation` 将手机限制为两种横屏方向之一。同时支持竖屏和横屏的设置看起来简单，但会产生影响。当方向发生变化时，图形设备实际上会被重置（这会产生一些事件），并且后缓冲区的维度会交换。你可以订阅 `Game` 类的 `OrientationChanged` 事件（可以通过 `Window` 属性访问），或者你可以检查 `GameWindow` 对象的 `CurrentOrientation` 属性。
 
-我选择了一种不同的方法。这里是新的 LoadContent 方法，你会注意到它获取了测试尺寸并将其为字段，但没有获取视口（viewport）。
+我选择了一种不同的方法。这里是新的 `LoadContent` 方法，你会注意到它获取了测试尺寸并将其为字段，但没有获取视口（viewport）。
 
 ```XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (节录)
 
 ```csharp
+
 protected override void LoadContent()
+
 {
+
     spriteBatch = new SpriteBatch(GraphicsDevice);
+
     sego14 = this.Content.LoadSpriteFont("Segoe14");
+
     textSize = sego14.MeasureString(text);
+
 ```
 
-相反，视口是在 Update 方法期间更新的，因为视口的维度反映了显示器的方向。
+相反，视口是在 `Update` 方法期间更新的，因为视口的维度反映了显示器的方向。
 
 ```XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (节录)
+
+
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -1398,26 +1195,24 @@ protected override void Update(GameTime gameTime)
 
 ## 第2章 确定方向 43
 
-无论当前方向是什么，Update 方法都会为文本计算一个位置。Draw 方法与你之前见过的几个方法相同。
+无论当前方向是什么，`Update`方法都会为文本计算一个位置。`Draw`方法与你之前见过的几个方法相同。
 
-```XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (节录)
+`XNA 项目: XnaOrientableHelloPhone 文件: Game1.cs (节录)`
 
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.Navy);
-
     spriteBatch.Begin();
     spriteBatch.DrawString(segoe14, textPosition, Color.White);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
 
 现在手机或模拟器可以在竖屏和横屏之间切换，显示器也会随之切换。
 
-如果你需要独立于任何后缓冲区或方向获取手机显示器的尺寸（但要考虑到系统栏），可以从 Window 类的 ClientBounds 属性获取，你可以从该类的 Window 属性访问它：
+如果你需要独立于任何后缓冲区或方向获取手机显示器的尺寸（但要考虑到系统栏），可以从`Window`类的`ClientBounds`属性获取，你可以从该类的`Window`属性访问它：
 
 ```csharp
 Rectangle ClientBounds = this.Window.ClientBounds;
@@ -1425,19 +1220,16 @@ Rectangle ClientBounds = this.Window.ClientBounds;
 
 ### 简单时钟（非常简单的时钟）
 
-到本章目前为止，我描述了两个 Silverlight 事件——SizeChanged 和 OrientationChanged——但以不同的方式使用了。对于 SizeChanged，我将事件与 XAML 中的事件处理程序关联；对于 OrientationChanged，我重写了 OrientationChanged 方法。
+到本章目前为止，我描述了两个 Silverlight 事件——`SizeChanged`和`OrientationChanged`——但以不同的方式使用了。对于`SizeChanged`，我将事件与 XAML 中的事件处理程序关联；对于`OrientationChanged`，我重写了`OrientationChanged`方法。
 
-当然，你也可以完全在代码中为事件附加处理程序。Silverlight 程序中一个实用的类是 DispatcherTimer，它通过 Tick 事件定期“提醒”程序并让程序执行一些工作。对于时钟程序来说，定时器是必不可少的。
-
-
-
+当然，你也可以完全在代码中为事件附加处理程序。Silverlight 程序中一个实用的类是`DispatcherTimer`，它通过`Tick`事件定期“提醒”程序并让程序执行一些工作。对于时钟程序来说，定时器是必不可少的。
 
 # 46 第一部分 基础
 
-这里是 XnaSimpleClock 的文件：Game1.cs（显示字段的片段）
+这里是`XnaSimpleClock`的文件：`Game1.cs`（显示字段的片段）
 
-```csharp
-XNA Project: XnaSimpleClock File: Game1.cs
+`XNA Project: XnaSimpleClock File: Game1.cs`
+
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
 {
@@ -1451,14 +1243,14 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-注意，我没有定义类型为 `string` 的字段 `text`，而是定义了一个 `StringBuilder`。如果你在 `Update` 方法中创建字符串用于 `Draw` 显示（正如本程序将的那样），你应该使用 `StringBuilder` 来避免普通 `string` 类型带来的堆分配。这个程序每秒只会创建一个新字符串，所以我在这里并不真的需要使用 `StringBuilder`，但习惯使用它并无坏。`StringBuilder` 需要使用 `System.Text` 命名空间的指令。
+注意，我没有定义类型为`string`的字段`text`，而是定义了一个`StringBuilder`。如果你在`Update`方法中创建字符串用于`Draw`显示（正如本程序将的那样），你应该使用`StringBuilder`来避免普通`string`类型带来的堆分配。这个程序每秒只会创建一个新字符串，所以我在这里并不真的需要使用`StringBuilder`，但习惯使用它并无坏。`StringBuilder`需要使用`System.Text`命名空间的指令。
 
-同样注意 `lastDateTime` 字段。它在 `Update` 方法中用于确定显示的时间是否需要更新。
+同样注意`lastDateTime`字段。它在`Update`方法中用于确定显示的时间是否需要更新。
 
-`LoadContent` 方法获取字体和显示器的视口：
+`LoadContent`方法获取字体和显示器的视口：
 
-```csharp
-XNA Project: XnaSimpleClock File: Game1.cs (片段)
+`XNA Project: XnaSimpleClock File: Game1.cs (片段)`
+
 ```csharp
 protected override void LoadContent()
 {
@@ -1468,21 +1260,19 @@ protected override void LoadContent()
 }
 ```
 
-比较两个 `DateTime` 值以查看时间是否发生变化的逻辑稍微有点复杂，因为在两次连续的 `Update` 调用期间获取的 `DateTime` 对象总是不同的，因为它们的毫秒（Millisecond）字段不同。因此，根据从 `DateTime.Now` 获取的当前时间计算一个新的 `DateTime`，但减去毫秒：
+比较两个`DateTime`值以查看时间是否发生变化的逻辑稍微有点复杂，因为在两次连续的`Update`调用期间获取的`DateTime`对象总是不同的，因为它们的毫秒（`Millisecond`）字段不同。因此，根据从`DateTime.Now`获取的当前时间计算一个新的`DateTime`，但减去毫秒：
+
+`XNA Project: XnaSimpleClock File: Game1.cs (片段)`
 
 ```csharp
-## XNA Project: XnaSimpleClock File: Game1.cs (片段)
-
 protected override void Update(GameTime gameTime)
 {
     // 允许游戏退出
     if (Pad.GetState(PlayerIndex.One).Back == ButtonState.Pressed)
         this.Exit();
-
     // 获取没有毫秒的 DateTime
     DateTime dateTime = DateTime.Now;
     dateTime = dateTime - new TimeSpan(0, 0, 0, 0, dateTime.Millisecond);
-
     if (dateTime != lastDateTime)
     {
         text.Remove(0, text.Length);
@@ -1495,25 +1285,23 @@ protected override void Update(GameTime gameTime)
     {
         SuppressDraw();
     }
-
     base.Update(gameTime);
+}
 ```
 
-到这一步就很简单。如果时间发生了变化，就会计算 `text`、`textSize` 和 `textPosition` 的新值。由于 `text` 是 `StringBuilder` 而不是 `string`，会移除旧内容并追加新内容。`SpriteFont` 的 `MeasureString` 方法有一个针对 `StringBuilder` 的重载，因此这些调用看起来完全一样。
-如果时间没有变化，则调用 `SuppressDraw`。结果 `Draw` 每秒只被调用一次。
-`DrawString` 也有针对 `StringBuilder` 的重载：
+到这一步就很简单。如果时间发生了变化，就会计算`text`、`textSize`和`textPosition`的新值。由于`text`是`StringBuilder`而不是`string`，会移除旧内容并追加新内容。`SpriteFont`的`MeasureString`方法有一个针对`StringBuilder`的重载，因此这些调用看起来完全一样。
+如果时间没有变化，则调用`SuppressDraw`。结果`Draw`每秒只被调用一次。
+`DrawString`也有针对`StringBuilder`的重载：
+
+`XNA Project: XnaSimpleClock File: Game1.cs (片段)`
 
 ```csharp
-## XNA Project: XnaSimpleClock File: Game1.cs (片段)
-
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.Navy);
-
     spriteBatch.Begin();
     spriteBatch.DrawString(sego14, text, textPosition, Color.White);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
@@ -1522,7 +1310,7 @@ protected override void Draw(GameTime gameTime)
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_62_0.png)
 
-`SuppressDraw` 可能有点难用——我发现它在程序刚启动期间特别棘手——但它是 XNA 中减少程序功耗的主要技术之一。
+`SuppressDraw`可能有点难用——我发现它在程序刚启动期间特别棘手——但它是 XNA 中减少程序功耗的主要技术之一。
 
 # 第 3 章
 
@@ -1536,25 +1324,21 @@ Windows Phone 7 设备上的多点触摸屏幕可以同时检测至少四根手�
 
 本章程序与第一章中的“Hello, Windows Phone 7!”程序非常，，当你用手指点击文本时，它会变成随机颜色；当你点击文本区域外部时，它会变回白色（无论程序启动时文本是什么颜色）。
 
-在 Silverlight 程序中，触摸输入通过事件获取。在 XNA 程序中，触摸输入也通过事件获取。（等等，文中虽然说“在 XNA 程序中，触摸输入通过事件获取”，但随后又讨论了 `Update` 中的轮询）。让我们重读一遍：在 Silverlight 程序中，触摸输入通过事件获取。在 XNA 程序中，触摸输入也通过事件获取。（注：此处似乎存在重复或 OCR 错误，我将遵循逻辑流）。
-
-
-
+在 Silverlight 程序中，触摸输入通过事件获取。在 XNA 程序中，触摸输入也通过事件获取。（等等，文中虽然说“在 XNA 程序中，触摸输入通过事件获取”，但随后又讨论了`Update`中的轮询）。让我们重读一遍：在 Silverlight 程序中，触摸输入通过事件获取。在 XNA 程序中，触摸输入也通过事件获取。（注：此处似乎存在重复或 OCR 错误，我将遵循逻辑流）。
 
 # 第 3 章 触摸简介 51
 
-我建议的程序会在用户触摸文本字符串时更改文本颜色，因为 `TouchPanel.GetStates` 的处理相对简单。程序将只检查 `State` 为 `Pressed` 的 `TouchLocation` 对象。
+我建议的程序会在用户触摸文本字符串时更改文本颜色，因为`TouchPanel.GetStates`的处理相对简单。程序将只检查`State`为`Pressed`的`TouchLocation`对象。
 
-这个项目被称为 XnaTouchHello。与你目前看到的其他 XNA 项目一样，它需要一个字体，我把它调大了一点，以便提供一个更大的触摸目标。需要几个字段：
+这个项目被称为`XnaTouchHello`。与你目前看到的其他 XNA 项目一样，它需要一个字体，我把它调大了一点，以便提供一个更大的触摸目标。需要几个字段：
 
-```
-XNA Project: XnaTouchHello File: Game1.cs (显示字段的片段)
+`XNA Project: XnaTouchHello File: Game1.cs (显示字段的片段)`
 
+```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
-
     Random rand = new Random();
     string text = "Hello, Windows Phone 7!";
     SpriteFont segno36;
@@ -1565,11 +1349,11 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-`LoadContent` 方法与之前的版本相似，但 `textSize` 被保存为一个字段，因为在随后的计算中需要访问它：
+`LoadContent`方法与之前的版本相似，但`textSize`被保存为一个字段，因为在随后的计算中需要访问它：
 
-```
-XNA Project: XnaTouchHello File: Game1.cs (片段)
+`XNA Project: XnaTouchHello File: Game1.cs (片段)`
 
+```csharp
 protected override void LoadContent()
 {
     spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -1580,24 +1364,21 @@ protected override void LoadContent()
 }
 ```
 
-与典型的 XNA 程序一样，大部分“动作”发生在 `Update` 方法中。该方法调用 `TouchPanel.GetStates` 并遍历 `TouchLocation` 对象集合，只寻找 `State` 等于 `Pressed` 的对象。
+与典型的 XNA 程序一样，大部分“动作”发生在`Update`方法中。该方法调用`TouchPanel.GetStates`并遍历`TouchLocation`对象集合，只寻找`State`等于`Pressed`的对象。
 
-## XNA Project: XnaTouchHello File: Game1.cs (片段)
+`XNA Project: XnaTouchHello File: Game1.cs (片段)`
 
 ```c
 protected override void Update(GameTime time)
 {
     if (Gamepad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     TouchCollection touchLocations = TouchPanel.GetState();
-
     foreach (Touch touchLocation in touchLocations)
     {
         if (touchLocation.State == TouchState.Pressed)
         {
             Vector2 position = touchLocation.Position;
-
             if (touchPosition.X > textPosition.X &&
                 touchPosition.X < textPosition.X + textSize.X &&
                 touchPosition.Y >= textPosition.Y + textSize.Y &&
@@ -1617,17 +1398,16 @@ protected override void Update(GameTime time)
 }
 ```
 
-`Position` 位于文本字符串占据的矩形内部，`textColor` 使用 `Color` 结构的一个构造函数被设置为随机 RGB 颜色值。否则，`textColor` 设置为 `Color.White`。
+`Position`位于文本字符串占据的矩形内部，`textColor`使用`Color`结构的一个构造函数被设置为随机 RGB 颜色值。否则，`textColor`设置为`Color.White`。
 
-`Draw` 方法与你看到的版本非常相似，只是文本是一个变量：
+`Draw`方法与你看到的版本非常相似，只是文本是一个变量：
 
-## XNA Project: XnaTouchHello File: Game1.cs (片段)
+`XNA Project: XnaTouchHello File: Game1.cs (片段)`
 
 ```c
 protected override void Draw(GameTime gameTime)
 {
     this.GraphicsDevice.Clear(Color.Navy);
-
     spriteBatch.Begin();
     spriteBatch.DrawString(sego36, text, textPosition, textColor);
     spriteBatch.End();
@@ -1635,13 +1415,13 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-你可能会注意到的问题是，触摸并不像你希望的那样具有确定性。即使你用单指触摸屏幕，手指也可能在屏幕上的多个位置接触。在某些情况下，`Update` 中的同一个 `foreach` 循环可能会多次设置 `textColor`！
+你可能会注意到的问题是，触摸并不像你希望的那样具有确定性。即使你用单指触摸屏幕，手指也可能在屏幕上的多个位置接触。在某些情况下，`Update`中的同一个`foreach`循环可能会多次设置`textColor`！
 
 ## XNA 手势接口
 
-`TouchPanel` 类包含了手势识别，这通过 `XnaTapHello` 项目进行了演示。该项目的字段与 `XnaTouchHello` 相同，但 `LoadContent` 方法略有不同：
+`TouchPanel`类包含了手势识别，这通过`XnaTapHello`项目进行了演示。该项目的字段与`XnaTouchHello`相同，但`LoadContent`方法略有不同：
 
-XNA Project: XnaTapHello File: Game1.cs (片段)
+`XNA Project: XnaTapHello File: Game1.cs (片段)`
 
 ```c
 protected override void LoadContent(GraphicsDevice device)
@@ -1655,9 +1435,13 @@ protected override void LoadContent(GraphicsDevice device)
 }
 ```
 
-最后一条语句。`GestureType` 是一个枚举，包含 `Tap`、`DoubleTap`、`Flick`、`Hold`、`Pinch`、`PinchComplete`、`FreeDrag`、`HorizontalDrag`、`VerticalDrag` 和 `DragComplete`，被定义为位标志，因此你可以使用 C# 的位或 运算符组合你想要的项。`Update` 方法非常不同。
 
-XNA Project: XnaTapHello File: Game1.cs (片段)
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+最后一条语句。`GestureType`是一个枚举，包含`Tap`、`DoubleTap`、`Flick`、`Hold`、`Pinch`、`PinchComplete`、`FreeDrag`、`HorizontalDrag`、`VerticalDrag`和`DragComplete`，被定义为位标志，因此你可以使用 C# 的位或运算符组合你想要的项。`Update`方法非常不同。
+
+XNA Project: `XnaTapHello` File: `Game1.cs` (片段)
 
 ```c
 protected override void Update(GameTime gameTime)
@@ -1674,11 +1458,9 @@ protected override void Update(GameTime gameTime)
 while (TouchPanel.IsGestureAvailable)
 {
     GestureSample gestureSample = TouchPanel.ReadGesture();
-
     if (gestureSample.GestureType == GestureType.Tap)
     {
         Vector2 touchPosition = gestureSample.Position;
-
         if (touchPosition.X >= textPosition.X &&
             touchPosition.X < textPosition.X + textSize.X &&
             touchPosition.Y < textPosition.Y + textSize.Y &&
@@ -1696,54 +1478,51 @@ while (TouchPanel.IsGestureAvailable)
 base.Update(gameTime);
 ```
 
-尽管这个程序只对一种手势感兴趣，但代码相当通用的。如果手势可用，它将作为 `GestureSample` 类型的对象从 `TouchPanel.ReadGesture` 方法返回。除了这里使用的 `GestureType` 和 `Position` 之外，`Delta` 属性提供了移动信息。对于某些手势（如 `Pinch`），`GestureSample` 还会报告带有 `Delta` 的触摸点状态。
+尽管这个程序只对一种手势感兴趣，但代码相当通用的。如果手势可用，它将作为`GestureSample`类型的对象从`TouchPanel.ReadGesture`方法返回。除了这里使用的`GestureType`和`Position`之外，`Delta`属性提供了移动信息。对于某些手势（如`Pinch`），`GestureSample`还会报告带有`Delta`的触摸点状态。
 
-`Draw` 方法与之前的版本相同，当手指触摸屏幕时，颜色发生变化；当手指离开屏幕时，手势识别器需要等到那个时候来确定是哪种手势。
+`Draw`方法与之前的版本相同，当手指触摸屏幕时，颜色发生变化；当手指离开屏幕时，手势识别器需要等到那个时候来确定是哪种手势。
 
 ## Silverlight 中的低级触摸
 
-与 XNA 一样，Silverlight 支持两种不同的接口来处理多点触摸，可以分为低级和高级。低级接口基于静态的 `Touch.FrameReported` 事件，它包含了手势。
+与 XNA 一样，Silverlight 支持两种不同的接口来处理多点触摸，可以分为低级和高级。低级接口基于静态的`Touch.FrameReported`事件，它包含了手势。
 
-高级接口由 `UIElement` 类定义的三个事件组成：`ManipulationStarted`、`ManipulationDelta` 和 `ManipulationCompleted`。这些统称为 `Manipulation` 事件将多个手指的交互整合为缩放因子。
+高级接口由`UIElement`类定义的三个事件组成：`ManipulationStarted`、`ManipulationDelta`和`ManipulationCompleted`。这些统称为`Manipulation`事件将多个手指的交互整合为缩放因子。
 
-Silverlight 低级接口的核心是 `TouchPoint` 类，其实例代表触摸屏幕的特定手指。`TouchPoint` 有只读属性：
+Silverlight 低级接口的核心是`TouchPoint`类，其实例代表触摸屏幕的特定手指。`TouchPoint`有只读属性：
 
-- `Action` 类型为 `TouchAction`，枚举 `Down`、`Move` 和 `Up`。
-- `Position` 类型为 `Point`，相对于特定元素的左上角。我们称这个元素为 `refElement`。
-- `Size` 类型。这本应该代表触摸区域（因此，大致代表压力），但 Windows Phone 7 没有返回有用的值。
-- `TouchDevice` 类型为 `TouchDevice`。
+- `Action`类型为`TouchAction`，枚举`Down`、`Move`和`Up`。
+- `Position`类型为`Point`，相对于特定元素的左上角。我们称这个元素为`refElement`。
+- `Size`类型。这本应该代表触摸区域（因此，大致代表压力），但 Windows Phone 7 没有返回有用的值。
+- `TouchDevice`类型为`TouchDevice`。
 
-`TouchDevice` 对象有两个只读属性：
+`TouchDevice`对象有两个只读属性：
 
-- `Id` 类型为 `Id`，用于区分手指。特定手指在从 `Down` 到 `Up` 的所有事件中关联唯一的 `Id`。
-- `DirectlyOver` 类型为 `UIElement`，手指下方的顶部元素。
+- `Id`类型为`Id`，用于区分手指。特定手指在从`Down`到`Up`的所有事件中关联唯一的`Id`。
+- `DirectlyOver`类型为`UIElement`，手指下方的顶部元素。
 
-正如你所看到的，Silverlight 的 `TouchPoint` 和 `TouchDevice` 对象提供的信息与 XNA 对象相似，但 `TouchDevice` 的 `DirectlyOver` 对于确定用户触摸哪个元素非常有帮助。
+正如你所看到的，Silverlight 的`TouchPoint`和`TouchDevice`对象提供的信息与 XNA 对象相似，但`TouchDevice`的`DirectlyOver`对于确定用户触摸哪个元素非常有帮助。
 
-要使用低级触摸接口，你需要为静态的 `Touch.FrameReported` 事件安装处理器：
+要使用低级触摸接口，你需要为静态的`Touch.FrameReported`事件安装处理器：
 
 ```
 Touch.FrameReported += OnTouchReported;
 ```
 
-`OnTouchReported` 方法如下：
+`OnTouchReported`方法如下：
 
 ```c
 void OnTouchReported(object sender, TouchFrameEventArgs args)
 {
-
 }
 ```
 
-
-
 # 第一部分 基础
 
-在通常情况下，你可以调用 `GetTouchPoints` 并传递一个引用元素。返回集合中的 `TouchPoint` 对象具有相对于该元素的 `Position` 属性。你可以向 `GetTouchPoints` 传递 `null`，以获取相对于应用程序左上角的 `Position` 属性。
+在通常情况下，你可以调用`GetTouchPoints`并传递一个引用元素。返回集合中的`TouchPoint`对象具有相对于该元素的`Position`属性。你可以向`GetTouchPoints`传递`null`，以获取相对于应用程序左上角的`Position`属性。
 
-引用元素和 `DirectlyOver` 元素之间没有相互关系。事件始终获取整个程序的所有触摸操作。带有特定元素调用 `GetTouchPoints` 或 `GetPrimaryTouchPoints` 并不会事件限制为仅发生在该元素上的事件。因此，如果手指位于引用元素的左侧或上方，`Position` 坐标很容易变成负值。`DirectlyOver` 元素指示手指下方的元素。
+引用元素和`DirectlyOver`元素之间没有相互关系。事件始终获取整个程序的所有触摸操作。带有特定元素调用`GetTouchPoints`或`GetPrimaryTouchPoints`并不会事件限制为仅发生在该元素上的事件。因此，如果手指位于引用元素的左侧或上方，`Position`坐标很容易变成负值。`DirectlyOver`元素指示手指下方的元素。
 
-关于第二和第三种方法的讨论需要注意：`TouchFrameReported` 事件源于桌面版 Silverlight，在那里，现有控件的鼠标逻辑可以方便地自动使用触摸。由于这个原因，触摸事件被“提升”为鼠标事件。
+关于第二和第三种方法的讨论需要注意：`TouchFrameReported`事件源于桌面版 Silverlight，在那里，现有控件的鼠标逻辑可以方便地自动使用触摸。由于这个原因，触摸事件被“提升”为鼠标事件。
 
 但这种提升仅涉及“主”触摸点，即在没有其他手指触摸屏幕时，第一个手指触摸屏幕的活动。如果你不希望这个手指的活动被提升为鼠标事件，事件处理程序通常如下所示：
 
@@ -1751,7 +1530,6 @@ void OnTouchReported(object sender, TouchFrameEventArgs args)
 void OnTouchFrameReported(object sender, TouchEventArgs args)
 {
     TouchPoint primaryTouchPoint = args.GetPrimaryTouchPoint(null);
-
     if (primaryTouchPoint != null && primaryTouchPoint.Action == TouchAction.Down)
     {
         args.SuspendMousePromotionUntilTouchUp();
@@ -1760,17 +1538,17 @@ void OnTouchFrameReported(object sender, TouchEventArgs args)
 }
 ```
 
-`SuspendMousePromotionUntilTouchUp` 方法只有在没有其他手指触摸屏幕时，手指首次触摸屏幕时才能调用。
+`SuspendMousePromotionUntilTouchUp`方法只有在没有其他手指触摸屏幕时，手指首次触摸屏幕时才能调用。
 
 在 Windows Phone 7 上，这种逻辑呈现出某种困境。按照目前的写法，它基本上消除了整个应用程序中的所有鼠标提升。如果你的手机应用程序整合了原本为鼠标输入编写但尚未升级为触摸输入的鼠标控件，那么你基本上禁用了这些控件。
 
-当然，你也可以检查 `DirectlyOver` 属性来选择性地挂起鼠标提升。在手机上，除了不处理触摸输入的元素外，不应该有元素处理鼠标输入！因此，从不挂起鼠标提升可能更有意义。
+当然，你也可以检查`DirectlyOver`属性来选择性地挂起鼠标提升。在手机上，除了不处理触摸输入的元素外，不应该有元素处理鼠标输入！因此，从不挂起鼠标提升可能更有意义。
 
-我将这一点留给你考虑，以及你那些旧的鼠标处理控件。与此同时，我想写的程序只对 `TouchAction` 为 `Down` 的主触摸点感兴趣，所以我可以使用相同的逻辑。
+我将这一点留给你考虑，以及你那些旧的鼠标处理控件。与此同时，我想写的程序只对`TouchAction`为`Down`的主触摸点感兴趣，所以我可以使用相同的逻辑。
 
 # 第 3 章 触摸简介 57
 
-SilverlightTouchHello 项目在 XAML 文件中有一个 `TextBlock`：Silverlight 项目：
+SilverlightTouchHello 项目在 XAML 文件中有一个`TextBlock`：Silverlight 项目：
 
 | Silverlight 项目：SilverlightTouchHello 文件：MainPage.xaml (片段) |
 ```xml
@@ -1784,11 +1562,11 @@ VerticalAlignment="Center" />
 ```
 | | |
 
-注意 `Padding` 值。我知道所示的字体 `FontSize` 为 20 像素。
+注意`Padding`值。我知道所示的字体`FontSize`为 20 像素。
 
-我使用 `Padding` 而不是 `Margin`，是因为 `Padding` 是 `TextBlock` 内部的空间。`TextBlock` 实际上会比字体字体大。`Margin` 是 `TextBlock` 外部的空间。它不是 `TextBlock` 本身的一部分，在命中测试（hit-testing）中会被排除。
+我使用`Padding`而不是`Margin`，是因为`Padding`是`TextBlock`内部的空间。`TextBlock`实际上会比字体字体大。`Margin`是`TextBlock`外部的空间。它不是`TextBlock`本身的一部分，在命中测试（hit-testing）中会被排除。
 
-这是后台代码文件。`MainPage` 的构造函数安装了 `Touch.FrameReported` 事件处理程序。
+这是后台代码文件。`MainPage`的构造函数安装了`Touch.FrameReported`事件处理程序。
 
 | Silverlight 项目：SilverlightTouchHello 文件：MainPage.xaml |
 ```cs
@@ -1796,14 +1574,12 @@ using System;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Phone.Controls;
-
 namespace SilverlightTouchHello
 {
     public partial class MainPage : PhoneApplicationPage
     {
         Random rand = new Random();
         Brush originalBrush;
-
         public MainPage()
         {
             InitializeComponent();
@@ -1833,21 +1609,21 @@ void OnTouchFrameReported(object sender, TouchFrameEventArgs args)
 }
 ```
 
-该处理程序只对 `Action` 为 `Down` 的主触摸点感兴趣。如果 `DirectlyOver` 属性是名为 `txtblk` 的元素，则创建一个随机颜色。与 XNA 中的 `Color` 结构不同，Silverlight 的 `Color` 结构没有从红、绿、蓝设置颜色的构造函数，但它有一个 `FromArgb` 方法，可以根据 alpha、红、绿、蓝值创建 `Color` 对象，其中 alpha 是透明度。将 alpha 通道设置为 255 以获得不透明颜色。尽管在 XAML 文件中完全不明显，但 `Foreground` 属性实际上实际上是 `Brush`，这是一个派自 `SolidColorBrush` 的抽象类。
+该处理程序只对`Action`为`Down`的主触摸点感兴趣。如果`DirectlyOver`属性是名为`txtblk`的元素，则创建一个随机颜色。与 XNA 中的`Color`结构不同，Silverlight 的`Color`结构没有从红、绿、蓝设置颜色的构造函数，但它有一个`FromArgb`方法，可以根据 alpha、红、绿、蓝值创建`Color`对象，其中 alpha 是透明度。将 alpha 通道设置为 255 以获得不透明颜色。尽管在 XAML 文件中完全不明显，但`Foreground`属性实际上实际上是`Brush`，这是一个派自`SolidColorBrush`的抽象类。
 
-如果未设置 `DirectlyOver`，程序不会将颜色更改为白色，因为如果用户选择了白色背景黑色文字的主题，这将会不起作用。相反，它将 `Foreground` 设置为 `originalBrush`。
+如果未设置`DirectlyOver`，程序不会将颜色更改为白色，因为如果用户选择了白色背景黑色文字的主题，这将会不起作用。相反，它将`Foreground`设置为`originalBrush`。
 
 ## 操纵事件
 
-Silverlight 中的高级接口涉及三个事件：`ManipulationStarted`、`ManipulationDelta` 和 `ManipulationCompleted`。这些事件合并了手指的活动。
+Silverlight 中的高级接口涉及三个事件：`ManipulationStarted`、`ManipulationDelta`和`ManipulationCompleted`。这些事件合并了手指的活动。
 
 # 第 3 章 触摸简介 59
 
-按照我的规范正常运行的程序需要获取页面任意位置的触摸。`ManipulationStarted` 事件的处理程序需要安装在 `MainPage` 上，而不是 `TextBlock` 上。
+按照我的规范正常运行的程序需要获取页面任意位置的触摸。`ManipulationStarted`事件的处理程序需要安装在`MainPage`上，而不是`TextBlock`上。
 
-虽然这是可能的，但实际上有一种更简单的方法。`UIElement` 类定义了所有的 `Manipulation` 事件。`Control` 类（`MainPage` 派自）具有保护虚拟方法。你不需要在 `MainPage` 上为 `ManipulationStarted` 事件安装处理程序；相反，你可以重写虚拟方法 `OnManipulationStarted`。
+虽然这是可能的，但实际上有一种更简单的方法。`UIElement`类定义了所有的`Manipulation`事件。`Control`类（`MainPage`派自）具有保护虚拟方法。你不需要在`MainPage`上为`ManipulationStarted`事件安装处理程序；相反，你可以重写虚拟方法`OnManipulationStarted`。
 
-这种方法在 SilverlightTouchHello 项目中实现。XAML 文件没有引用，但给 `TextBlock` 指定了一个名称，以便在以下位置引用它：
+这种方法在 SilverlightTouchHello 项目中实现。XAML 文件没有引用，但给`TextBlock`指定了一个名称，以便在以下位置引用它：
 
 | Silverlight 项目：SilverlightTouchHello 文件：MainPage.xaml (片段) |
 ```xml
@@ -1861,7 +1637,7 @@ Silverlight 中的高级接口涉及三个事件：`ManipulationStarted`、`Mani
 </Grid>
 ```
 
-`MainPage` 类重写了 `OnManipulationStarted` 方法：
+`MainPage`类重写了`OnManipulationStarted`方法：
 
 | Silverlight 项目：SilverlightTouchHello 文件：MainPage.xaml.cs (片段) |
 ```cs
@@ -1869,13 +1645,11 @@ public partial class MainPage : PhoneApplicationPage
 {
     Random rand = new Random();
     Brush originalBrush;
-
     public MainPage()
     {
         InitializeComponent();
         originalBrush = txtblk.Foreground;
     }
-
     protected override void OnManipulationStarted(object sender, ManipulationEventArgs args)
     {
         TextBlock txtblk = sender as TextBlock;
@@ -1883,10 +1657,6 @@ public partial class MainPage : PhoneApplicationPage
     }
 }
 ```
-
-
-
-
 
 ## 第 3 章 触摸简介
 
@@ -1909,9 +1679,11 @@ protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
 }
 ```
 
+
+
 在 `ManipulationStartedEventArgs` 中，有一个名为 `OriginalSource` 的属性指示了事件的起始位置——换说，就是用户点击的最上元素。如果它等于 `txtblock` 对象，方法将为 `Foreground` 属性创建一个随机颜色。如果不是，则 `Foreground` 属性被设置为原始画刷。
 
-在在这个 `OnManipulation` 方法中，我们正在处理 `MainPage` 的事件，但 `OriginalSource` 属性告诉我们事件实际上源于视觉树中更低的位置。这是 Silverlight 作为路由事件处理特性的优势之一。
+在这个 `OnManipulation` 方法中，我们正在处理 `MainPage` 的事件，但 `OriginalSource` 属性告诉我们事件实际上源于视觉树中更低的位置。这是 Silverlight 作为路由事件处理特性的优势之一。
 
 ## 路由事件
 
@@ -1927,56 +1699,88 @@ protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
 
 但这暗示了另一种方法，结合了 `SilverlightTapHello1` 和 `SilverlightTapHello2` 中显示的两种技术。这里是 `SilverlightTapHello3` 的 XAML 文件：
 
-Silverlight 项目：SilverlightTapHello3 文件：MainPage.xml（节选）
+Silverlight 项目：`SilverlightTapHello3` 文件：`MainPage.xml`（节选）
 
 ```xml
+
 <Grid xName="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
 <TextBlock xName="txtblk"
+
     Text="Hello, Windows Phone 7!"
+
     Padding="0 34"
+
     HorizontalAlignment="Center"
+
     VerticalAlignment="Center"
+
     ManipulationStarted="OnTextBlockManipulationStarted" />
+
 </Grid>
+
 ```
 
 `TextBox` 在第一个处理程序中有一个 `Name`。`ManipulationStarted` 事件在第一个程序被设置在 `TextBlock` 上。事件处理程序和 `OnManipulationStarted` 的重写都出现在后台文件中：
 
-Silverlight 项目：SilverlightTapHello3 文件：MainPage.xml.cs（节选）
+Silverlight 项目：`SilverlightTapHello3` 文件：`MainPage.xml.cs`（节选）
 
 ```csharp
+
 public partial class MainPage : PhoneApplicationPage
+
 {
+
     Random rand = new Random();
+
     Brush originalBrush;
 
 public MainPage()
+
 {
+
     InitializeComponent();
+
     originalBrush = txtblk.Foreground;
+
 }
 
 void OnTextBlockManipulationStarted(object sender,
+
     ManipulationStartedEventArgs args)
+
 {
+
     txtblk.Foreground = new SolidColorBrush(
+
         Color.FromArgb(255,(byte)rand.Next(256),
+
         (byte)rand.Next(256),
+
         (byte)rand.Next(256));
 
     args.Complete();
+
     args.Handled = true;
+
 }
+
 ```
 
 ```csharp
+
 protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
+
 {
+
     txtbl.Foreground = originalBrush;
 
     args.Complete();
+
     base.OnManipulationStarted(args);
+
 }
+
 ```
 
 逻辑被分在两个方法之间，我认为这使得整个过程相当优雅。`OnTextBlockManipulationStarted` 方法仅在 `TextBlock` 被触碰时获取事件。`OnManipulationStarted` 事件事件都是针对 `MainPage` 的。
@@ -1991,14 +1795,14 @@ protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
 
 现在试一下这个。在我目前为止展示的许多 Silverlight 程序中，我通过设置以下属性将 `TextBlock` 在内容网格上居中：
 
-HorizontalAlignment="Center"
-VerticalAlignment="Center"
+`HorizontalAlignment="Center"`
+`VerticalAlignment="Center"`
 
 从 `SilverlightHello3` 中删除它们，然后重新编译并运行程序。文本出现在 `Grid` 的左上角。如果你触碰 `TextBlock` 下方大区域内的*任何地方*，文本将变为随机颜色，或者通过触碰文本上方的标题可以将其改回白色。
 
 默认情况下，*HorizontalAlignment* 和 *VerticalAlignment* 属性设置为名为 *Stretch*（拉伸）的枚举值。`TextBlock` 实际上正在填充 `Grid`。你看不见它，但是。
 
-## 第 4 章 位图（也称为纹理）
+# 第 4 章 位图，也称为纹理
 
 位图，也称为纹理
 
@@ -2018,54 +1822,74 @@ VerticalAlignment="Center"
 
 目标是将位图在屏幕上居中显示。在 `Game1.cs` 文件中定义一个字段来存储 `Texture2D`，以及另一个字段用于位置：
 
-
-
-
-
 # 第 4 章 位图，也称为纹理 67
 
-XNA 项目：XnaLocalBitmap 文件：Game1.cs（显示字段的片段）
+XNA 项目：`XnaLocalBitmap` 文件：`Game1.cs`（显示字段的片段）
 
 ```csharp
+
 public class Game1 : Microsoft.Xna.Framework.Game
+
 {
+
     GraphicsDeviceManager graphics;
+
     SpriteBatch spriteBatch;
+
     Texture2D helloTexture;
+
     Vector2 position;
+
     ...
+
 }
+
 ```
 
 这两个字段都在 `LoadContent` 方法中设置。使用与加载 `SpriteFont` 相同的泛型方法来加载 `Texture2D`。`Texture2D` 类具有名为 `Width` 和 `Height` 的属性，它们以像素为单位提供位图的尺寸。与第 1 章中以显示器为核心的程序一样，`position` 字段指示了显示器上对应位图左上角的像素位置：
 
-XNA 项目：XnaLocalBitmap 文件：Game1.cs（片段）
+XNA 项目：`XnaLocalBitmap` 文件：`Game1.cs`（片段）
 
 ```csharp
+
 protected override void LoadContent()
+
 {
+
     spriteBatch = new SpriteBatch(GraphicsDevice);
+
     helloTexture = this.Content.Load<Texture2D>("Hello");
+
     viewport = this.GraphicsDevice.Viewport;
+
     position = new Vector2((viewport.Width - helloTexture.Width) / 2, (viewport.Height - helloTexture.Height) / 2);
+
 }
+
 ```
 
 `SpriteBatch` 类拥有用于渲染位图的 `Draw` 方法。这是最简单的之一：
 
-XNA 项目：XnaLocalBitmap 文件：Game1.cs（片段）
+XNA 项目：`XnaLocalBitmap` 文件：`Game1.cs`（片段）
 
 ```csharp
+
 protected override void Draw(GameTime gameTime)
+
 {
+
     GraphicsDevice.Clear(Color.Navy);
 
     spriteBatch.Begin();
+
     spriteBatch.Draw(helloTexture, position, Color.White);
+
     spriteBatch.End();
 
     base.Draw(gameTime);
+
 }
+
 ```
 
 第一部分 基础
@@ -2088,12 +1912,16 @@ Silverlight 中的对应程序甚至更简单。让我们创建一个名为 `Sil
 
 # 第 4 章 位图，也称为纹理 69
 
-Silverlight 项目：SilverlightLocalBitmap 文件：MainPage.xaml（片段）
+Silverlight 项目：`SilverlightLocalBitmap` 文件：`MainPage.xaml`（片段）
 
 ```xml
+
 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
   <Image Source="Images/Hello.png" />
+
 </Grid>
+
 ```
 
 显示效果与 XNA 程序略有不同，不仅仅是标题。默认情况下，`Image` 元素会尽可能扩展或收缩位图以填充其容器（内容网格），同时保持正确的宽高比例。如果你将 `PhoneApplicationPage` 起始标签的 `SupportedOrientations` 属性设置为 `PortraitOrLandscape`（横或竖屏）并将手机侧向放置，这种变化最为明显：
@@ -2103,20 +1931,27 @@ Silverlight 项目：SilverlightLocalBitmap 文件：MainPage.xaml（片段）
 如果你想以原始像素大小显示位图，可以将 `Image` 的 `Stretch` 属性设置为 `None`：
 
 ```xml
+
 <Image Source="Images/Hello.png"
+
 Stretch="None" />
+
 ```
 
 ## 通过网络引入图像
 
 `Image` 元素的一个非常棒的特性是，你可以将 `Source` 属性设置为 URL，如在这个 Silverlight 项目中所示：
 
-Silverlight 项目：SilverlightWebBitmap 文件：MainPage.xaml（片段）
+Silverlight 项目：`SilverlightWebBitmap` 文件：`MainPage.xaml`（片段）
 
 ```xml
+
 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
   <Image Source="http://www.charlespetold.com/Media/HellowP7.jpg" />
+
 </Grid>
+
 ```
 
 # 第一部分 基础
@@ -2135,7 +1970,8 @@ Silverlight 项目：SilverlightWebBitmap 文件：MainPage.xaml（片段）
 
 要使用 `WebClient`，XNA 程序需要引用 `System.Net` 命名空间。在解决方案管理器中，右键点击 `System.Net` 添加引用。`WebClient` 异步执行传输，程序定义如下：
 
-XNA 项目：XnaBitmap 文件：Game1.cs（显示字段的片段）
+XNA 项目：`XnaBitmap` 文件：`Game1.cs`（显示字段的片段）
+```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDeviceManager graphics;
@@ -2149,7 +1985,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
 `LoadContent` 创建一个 `WebClient` 实例，设置回调方法，然后启动传输：
 
 ```csharp
-XNA 项目：XnaWebBitmap 文件：Game1.cs（片段）
+XNA 项目：`XnaWebBitmap` 文件：`Game1.cs`（片段）
 protected override void LoadContent()
 {
     spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -2161,6 +1997,8 @@ protected override void LoadContent()
 ```
 
 `OpenCompleted` 在文件下载完成后调用。你需要检查下载是否已取消以及是否报告了错误。如果一切正常，事件的 `Result` 属性为 `Stream`。你可以使用 `Stream` 调用静态方法 `Texture2D.FromStream` 来创建 `Texture2D` 对象：
+
+
 
 ```csharp
 XNA 项目：XnaReadBitmap 文件：Game1.cs（片段）
@@ -2182,17 +2020,13 @@ void OnWebCompleted(object sender, OpenCompletedEventArgs args)
 
 如果你将 `AllowBuffering` 设置为 `false`，`Result` 将是一个网络流。`Texture2D` 类不允许你在主线程从流中读取。
 
-
-
-
-
-# 第 4 章 位图，也称为纹
+# 第 4 章 位图，也称为纹理
 
 ## Image 和 ImageSource
 
-虽然你完全可以在 Silverlight 应用程序中使用 WebClient，但对于位图来说，这通常是没有必要的，因为与位图相关的类已经实现了异步下载。
+虽然你完全可以在 Silverlight 应用程序中使用 `WebClient`，但对于位图来说，这通常是没有必要的，因为与位图相关的类已经实现了异步下载。
 
-然而，一旦你开始研究 Image 元素，可能会让你觉得有些困惑。Image 元素并不是位图；Image 元素仅仅是显示位图。在到目前为止你看到的用法中，位图的 `Source` 属性被设置为相对路径或 URL：
+然而，一旦你开始研究 `Image` 元素，可能会让你觉得有些困惑。`Image` 元素并不是位图；`Image` 元素仅仅是显示位图。在到目前为止你看到的用法中，位图的 `Source` 属性被设置为相对路径或 URL：
 
 ```
 <Image Source="Hello.png" />
@@ -2201,20 +2035,24 @@ void OnWebCompleted(object sender, OpenCompletedEventArgs args)
 
 你可能认为这个 `Source` 属性的类型是 `String`，但完全并非如此！你实际上的是 XAML 语法，它在后台隐藏了一些操作活动。`Source` 属性的类型实际上是 `ImageSource`，这是一个派生自 `BitmapSource` 的抽象类，而另一个抽象类定义了一个名为 `SetSource` 的方法，允许从 `Stream` 对象加载位图。
 
-`BitmapImage` 派生自 `BitmapSource`，它支持一个接受 `Uri` 对象的构造函数，并包含一个类型为 `Uri` 的 `Uri` 属性。`SilverlightToDownload` 项目模拟了一个需要在运行时已知位图 URI 并进行下载的程序。XAML 包含一个没有要显示位图的 Image 元素：
+`BitmapImage` 派生自 `BitmapSource`，它支持一个接受 `Uri` 对象的构造函数，并包含一个类型为 `Uri` 的 `Uri` 属性。`SilverlightToDownload` 项目模拟了一个需要在运行时已知位图 URI 并进行下载的程序。XAML 包含一个没有要显示位图的 `Image` 元素：
 
 | Silverlight 项目: SilverlightToDownload1 | 文件: MainPage.xaml (节选) |
+
 | :--- | :--- |
+
 ```xml
 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
   <Image Source="img" />
 </Grid>
 ```
 
-位图需要对 `System.Windows.Media.Imaging` 命名空间的 `using` 指令。当 `MainPage` 接收到点击时，它会从 `Uri` 对象创建一个 `BitmapImage` 并将其设置为 Image 的 `Source` 属性：
+位图需要对 `System.Windows.Media.Imaging` 命名空间的 `using` 指令。当 `MainPage` 接收到点击时，它会从 `Uri` 对象创建一个 `BitmapImage` 并将其设置为 `Image` 的 `Source` 属性：
 
 | Silverlight 项目: SilverlightToDownload1 | 文件: MainPage.xaml.cs (节选) |
+
 | :--- | :--- |
+
 ```cs
 protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
 {
@@ -2232,7 +2070,7 @@ protected override void OnManipulationStarted(ManipulationStartedEventArgs args)
 
 记得点击屏幕以启动下载！
 
-`Bitmap` 类定义了 `ImageOpened` 和 `ImageFailed` 事件（Image 元素也复制了这些事件），并且包含一个 `DownloadProgress` 事件。
+`Bitmap` 类定义了 `ImageOpened` 和 `ImageFailed` 事件（`Image` 元素也复制了这些事件），并且包含一个 `DownloadProgress` 事件。
 
 如果你想在 Silverlight 程序中显式地使用 `WebClient`，你也可以这样做，正如下一个项目所示。`SilverlightTapToDownload2.xaml` 文件与 `SilverlightTapToDownload1.xaml` 相同。代码后的文件使用 `WebClient` 的方式与之前的 XNA 程序非常：
 
@@ -2267,7 +2105,7 @@ void OnWebClientReadCompleted(object sender, OpenReadCompletedEventArgs args)
 
 在 Silverlight 程序中，你已经看到作为资源添加到项目的位图被绑定到可执行文件中。直接从 XAML 中引用该本地位图是常例，以至于很少有经验的 Silverlight 程序员能说出如何在代码中实现。`SilverlightTapToLoad` 项目向你展示了如何实现。
 
-与本章中的其他 Silverlight 程序一样，`SilverlightTapToLoad` 项目在其内容网格中包含一个 Image 元素。`Hello.png` 位图存储在目录中，其生成操作（Build Action）为 `Resource`。
+与本章中的其他 Silverlight 程序一样，`SilverlightTapToLoad` 项目在其内容网格中包含一个 `Image` 元素。`Hello.png` 位图存储在目录中，其生成操作（Build Action）为 `Resource`。
 
 `MainPage.xaml.cs` 文件需要对 `System.Windows.Media.Imaging` 命名空间的 `using` 指令。`StreamResource` 类还需要对 `System.Windows.Resources` 的另一个 `using` 指令。
 
@@ -2321,7 +2159,7 @@ Uri uri = new Uri("Images/Hello.png", UriKind.Relative);
 
 `CameraCaptureTask` 派生自通用 `ChooserBase` 类，该类定义了 `Completed` 事件和 `Show` 方法。你的程序为 `Completed` 事件附加处理器并调用 `Show`。当 `Completed` 事件被处理时，`PhotoResult` 参数包含指向 `Stream` 对象。从那里，你已经知道该做什么。
 
-与本章之前的程序一样，`SilverlightTapToShoot` 程序在其 `MainPage.xaml` true的代码中包含一个 Image 元素。这里是整个代码后的文件：
+与本章之前的程序一样，`SilverlightTapToShoot` 程序在其 `MainPage.xaml` true的代码中包含一个 `Image` 元素。这里是整个代码后的文件：
 
 ```cs
 Silverlight 项目: SilverlightTapToShoot 文件: MainPage.xaml.cs
@@ -2333,8 +2171,6 @@ using Microsoft.Phone.Tasks;
 namespace SilverlightTapToShoot
 {
 ```
-
-
 
 ```csharp
 public partial class MainPage : PhoneApplicationPage
@@ -2399,11 +2235,13 @@ public partial class MainPage : PhoneApplicationPage
 
 尽管如此，在 Windows Phone 7 操作系统的后续版本中（包括我用于完成本书章节时所使用的版本），我没有看到在使用 `CameraCaptureTask` 时发生墓碑机制。但为它做准备也无益处。
 
+
+
 ## 手机照片库
 
 当你用手机拍照并将手机与 PC 同步时，手机会积累一个照片库。运行在手机上的程序可以通过以下两种方式访问此库：
 
-- 从你的程序的角度来看，`PhotoChooser` get `CameraCaptureTask` 非常相似，它允许用户进入照片库并允许用户选择一张照片，然后将其返回给程序。
+- 从你的程序的角度来看，`PhotoChooser` `get` `CameraCaptureTask` 非常相似，它允许用户进入照片库并允许用户选择一张照片，然后将其返回给程序。
 - XNA 命名 `Microsoft.Xna.Framework.Media` 拥有 `MediaLibrary` 和相关类，这些类允许程序获取照片库中存储的所有照片集合，并将它们呈现给用户。
 
 我将通过两个程序向你展示这两种方法。为了多样性（并为了演示如何在 Silverlight 程序中使用 XNA 类），我将在第一种方法中使用 XNA，在第二种方法中使用 Silverlight。
@@ -2412,7 +2250,7 @@ public partial class MainPage : PhoneApplicationPage
 
 `XnapToBrowse` 程序需要 `Microsoft.Phone.Tasks` 的使用指令。它使用以下字段创建 `PhotoChooser` 对象：
 
-> Silver Project: XnapToBrowse File: Game1.cs (显示字段)
+> Silver Project: `XnapToBrowse` File: `Game1.cs` (显示字段)
 
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -2424,7 +2262,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-## 第一部分 基础知识
+### 第一部分 基础知识
 
 根据文档建议，类在构造函数中附加了 `Completed` 事件的处理程序：
 
@@ -2469,19 +2307,15 @@ void OnPhotoChooserCompleted(object sender, PhotoResult args)
 
 `Completed` 事件的处理程序从 `ChosenPhoto` 属性提供的流中创建 `Texture2D`。`Draw` 覆盖在对象可用之前不会尝试渲染它：
 
+### 第 4 章 位图，也称为纹理
 
-
-
-
-## 第 4 章 位图，也称为纹理
-
-Silverlight 项目: XnaTapToBrowse 文件: Game1.cs (节录)
+Silverlight 项目: `XnaTapToBrowse` 文件: `Game1.cs` (节录)
 
 在这里我使用了 `SpriteBatch.Draw` 方法的一个轻微变体。我没有在第二个参数中为 `Texture2D` 提供位置，而是提供了一个等于视口大小的整个矩形。这会导致照片尺寸放大（或更可能是缩小），并且由于没有考虑到原始的纵横比，极有可能导致图像失真。当然，更复杂的代码可以处理这些问题。
 
 `SilverlightAccessLibrary` 程序需要引用 `Microsoft.Xna.Framework.DLL`，你可能会收到一个关于在 Silverlight 程序中包含 XNA 库的警告。没关系！`MainPage.xml` 文件中的内容区域在 `Grid` 中同时包含了一个没有图片的 `Image` 和没有文本的 `TextBlock`：
 
-Silverlight 项目 SilverlightAccessLibrary 文件: MainPage.xml (节录)
+Silverlight 项目 `SilverlightAccessLibrary` 文件: `MainPage.xml` (节录)
 
 ```xml
 <Grid Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
@@ -2496,7 +2330,7 @@ Silverlight 项目 SilverlightAccessLibrary 文件: MainPage.xml (节录)
 
 程序并没有向用户展示整个照片库（如果仅用我目前为止描述的这些基础 Silverlight 布局元素，完成这个任务会有点困难），而是随机挑选一张，并在用户点击屏幕时选择另一张：
 
-## Silverlight 项目: SilverlightAccessLibrary 文件: MainPagePage.xaml.cs (节录)
+### Silverlight 项目: SilverlightAccessLibrary 文件: MainPagePage.xaml.cs (节录)
 
 ```csharp
 public partial class MainPage : PhoneApplicationPage
@@ -2564,14 +2398,11 @@ Magnitude = $\sqrt{x^2 + y^2 + z^2}$
 
 在处理加速度计时，你可以想象定义了一个了一个维坐标系。无论手机如何放置，正 Y 轴指向上方，正 X 轴指向右侧，而 Z 轴指向用户。
 
-
-
-
-# 第一部分 基础
+### 第一部分 基础
 
 此程序将在整个生命周期显示加速度计向量，因此它在构造函数中创建了 `Accelerometer` 类并调用了 `Start`：
 
-> Silverlight 项目：SilverlightAccelerometer 文件：MainPage.xaml.cs（节选）
+> Silverlight 项目：`SilverlightAccelerometer` 文件：`MainPage.xaml.cs`（节选）
 
 ```csharp
 public MainPagePageComponent()
@@ -2607,7 +2438,7 @@ SilverlightAccelerometer 项目实现了一个语法上复杂的代码版本，�
 
 冗长的版本需要一个委托（delegate）和一个根据该委托定义的方法。该委托（方法）不应该有返回值，但需要根据任务需要尽可能数量的参数，在本例中，任务是将一个字符串设置为 TextBlock 的 `Text` 属性。
 
-> 项目：SilverlightAccelerometer 文件：MainPage.xaml.cs（节选）
+> 项目：`SilverlightAccelerometer` 文件：`MainPage.xaml.cs`（节选）
 
 ```csharp
 delegate void SetTextBlockDelegate(TextBlock txtblk, string text);
@@ -2620,7 +2451,7 @@ void SetTextBlockText(TextBlock txtblk, string text)
 
 `OnAccelerometerReadingChanged` 负责调用 `SetTextBlock`。它首先利用 `CheckAccess` 检查是否可以直接调用 `SetTextBlockText`。如果不能，句处理器会调用 `BeginInvoke` 方法。第一个参数是带有 `SetTextBlock` 方法的委托实例化；随后是 `SetTextBlockText` 需要的所有参数：
 
-> 项目：SilverlightAccelerometerReadingChanged 文件：MainPage.xaml.cs（节选）
+> 项目：`SilverlightAccelerometerReadingChanged` 文件：`MainPage.xaml.cs`（节选）
 
 ```csharp
 void OnAccelerometerReadingChanged(object sender, AccelerometerReadingEventArgs args)
@@ -2656,6 +2487,8 @@ if (txtblk.CheckAccess()) {
 }
 ```
 
+
+
 匿名方法以 `delegate` 关键字开始，以方法体后的大括号结束。`delegate` 关键字后面的空括号不是必须的。
 
 匿名方法也可以使用 lambda 表达式来定义：
@@ -2670,9 +2503,9 @@ if (txtblk.CheckAccess()) {
 }
 ```
 
-这里设置 TextBlock `Text` 属性的重复代码看起来有点丑（如果涉及多个语句，则将是不理想的），但你并不真的需要调用 `CheckAccess`。你只需要调用 `BeginInvoke`，如果你是从 UI 线程调用它的，就不会发生任何坏事。
+这里设置 `TextBlock` `Text` 属性的重复代码看起来有点丑（如果涉及多个语句，则将是不理想的），但你并不真的需要调用 `CheckAccess`。你只需要调用 `BeginInvoke`，如果你是从 UI 线程调用它的，就不会发生任何坏事。
 
-Windows Phone 7 模拟器不包含任何实际加速度计，因此它始终报告 (0, 0, -1)，这表示手机平放在水平面上。由于该程序只有在实际手机上运行时才有意义：
+Windows Phone 7 模拟器不包含任何实际加速度计，因此它始终报告 `(0, 0, -1)`，这表示手机平放在水平面上。由于该程序只有在实际手机上运行时才有意义：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_103_0.png)
 
@@ -2683,7 +2516,6 @@ Windows Phone 7 模拟器不包含任何实际加速度计，因此它始终报�
 任何工作间都能找到的一种实用工具是水平仪，也称为气泡水。小气泡总是浮在液体顶部，因此它在视觉上指示了某物是与地球平行还是垂直，或者以某种方式倾斜。
 
 （注：原文后续存在大量重复段落，此处已按要求去重处理）
-
 
 ```
 lock (accelerometerVector)
@@ -2696,7 +2528,7 @@ lock (accelerometerVector)
 
 `LoadContent` 方法加载气泡的位图并初始化了几个用于定位位图的变量：
 
-## XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
+### XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
 
 ```cs
 protected override void LoadContent()
@@ -2707,11 +2539,11 @@ protected override void LoadContent()
   screenCenter = new Vector2(viewport.Width / 2
 ```
 
-当加速度的 X 和 Y 属性为 0 时，气泡将显示在屏幕中心。其原因同时取决于 `screenCenter` 和 `bubbleCenter`。`screenRadius` 值是当 X 和 Y 分量的幅值为 1 时距离中心的距离。
+当加速度的 `X` 和 `Y` 属性为 `0` 时，气泡将显示在屏幕中心。其原因同时取决于 `screenCenter` 和 `bubbleCenter`。`screenRadius` 值是当 `X` 和 `Y` 分量的幅值为 `1` 时距离中心的距离。
 
-`Update` 方法安全地访问 `accelerometerVector` 字段，并根据 X 和 Y 分量计算 `bubblePosition`。看起来似乎我在计算中交换了 X 和 Y 分量，但这是因为 XNA 的默认方向是竖屏，所以它与加速度向量的坐标相反。默认支持两种横屏模式，此外，当手机被倾斜至横屏模式时，也有必要将加速度向量的值乘以 -1：
+`Update` 方法安全地访问 `accelerometerVector` 字段，并根据 `X` 和 `Y` 分量计算 `bubblePosition`。看起来似乎我在计算中交换了 `X` 和 `Y` 分量，但这是因为 XNA 的默认方向是竖屏，所以它与加速度向量的坐标相反。默认支持两种横屏模式，此外，当手机被倾斜至横屏模式时，也有必要将加速度向量的值乘以 `-1`：
 
-## XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
+### XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
 
 ```cs
 protected override void Update(GameTime gameTime)
@@ -2722,7 +2554,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-## 第 5 章 传感器与服务 93
+## 第 5 章 传感器与服务
 
 ```cs
 Vector3 accVector;
@@ -2744,11 +2576,11 @@ bubbleScale = bubbleRadius / (bubbleTexture.Width / 2);
 base.Update(gameTime);
 ```
 
-此外，`bubbleScale` 因子是根据向量的 Z 分量计算的。其想法是：当屏幕朝上时气泡最大，当屏幕朝下时气泡最小，就像屏幕真的是延伸到手机下方矩形液体池的一侧，气泡的大小表示它距离表面的远近。
+此外，`bubbleScale` 因子是根据向量的 `Z` 分量计算的。其想法是：当屏幕朝上时气泡最大，当屏幕朝下时气泡最小，就像屏幕真的是延伸到手机下方矩形液体池的一侧，气泡的大小表示它距离表面的远近。
 
 `Draw` 重写方法使用了 `SpriteBatch` 的长版本 `Draw` 方法。
 
-## XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
+### XNA 项目: XnaAccelerometer 文件: Game1.cs (摘)
 
 ```cs
 protected override void Draw(GameTime gameTime)
@@ -2765,7 +2597,7 @@ protected override void Draw(GameTime gameTime)
 
 `bubbleScale` 参数将位图缩放到特定大小。缩放中心由该方法的上一个参数 `bubbleCenter` 提供。该点也与相对于屏幕的 `bubblePosition` 值对齐。
 
-## 94 第一部分 基础知识
+## 第一部分 基础知识
 
 该程序看起来没什么大不了，在模拟器上运行时更是无无味。这里是手机大致直立并略向后倾斜的指示：
 
@@ -2773,7 +2605,7 @@ protected override void Draw(GameTime gameTime)
 
 你会发现加速度计非常抖，急需进行数据平滑处理。我将在第 12 章中讨论这个问题以及与其他加速度相关的问题。
 
-## 地理位置
+### 地理位置
 
 在用户许可的情况下，Windows Phone 7 程序可以使用称为“辅助 GPS”（A-GPS）的技术获取手机的地理位置。
 
@@ -2791,28 +2623,28 @@ protected override void Draw(GameTime gameTime)
 
 `GeoCoordinateWatcher` 构造函数可选接收 `GeoPositionAccuracy` 枚举的成员：
 
-- Default（默认）
-- High（高）
+- `Default`（默认）
+- `High`（高）
 
 在创建 `GeoCoordinate` 对象后，你想为 `PositionChanged` 事件安装处理程序并调用 `Start`。`PositionChanged` 事件交付一个具有八个属性的 `GeoCoordinate` 对象：
 
-- Latitude（纬度），一个 -90 到 90 之间的 double
-- Longitude（经度），一个 -180 到 180 之间的 double
-- Altitude（高度），double 类型
-- HorizontalAccuracy（水平精度）和 VerticalAccuracy（垂直精度），double 类型
-- Course（航向），一个 0 到 360 之间的 double
-- Speed（速度），double 类型
-- IsUnknown，如果纬度或经度不是数字则为 true 的 Boolean
+- `Latitude`（纬度），一个 `-90` 到 `90` 之间的 `double`
+- `Longitude`（经度），一个 `-180` 到 `180` 之间的 `double`
+- `Altitude`（高度），`double` 类型
+- `HorizontalAccuracy`（水平精度）和 `VerticalAccuracy`（垂直精度），`double` 类型
+- `Course`（航向），一个 `0` 到 `360` 之间的 `double`
+- `Speed`（速度），`double` 类型
+- `IsUnknown`，如果纬度或经度不是数字则为 `true` 的 `Boolean`
 
 如果应用程序没有权限获取位置，那么 `Latitude` 和 `Longitude` 将为 `Double.NaN`，且 `IsUnknown` 为 `true`。
 
-此外，`GeoCoordinate` 有 `GetDistanceTo` 方法，可以计算两个 `GeoCoordinate` 对象之间的距离。我将关注前两个属性，它们统称为坐标，表示地球表面的一个点。纬度是距离赤道的角距离。在常用法中，纬度是 0 到 90 度之间的角，后面跟着 N 或 S 表示北或南。例如，纽约的纬度大约是 40°N。在 `GeoCoordinate` 中，具有相同纬度的位置定义了一条纬线。在某条特定的线上，经度是距离子午线的角距离，子午线通过格林尼治的皇家天文台。在常用法中，经度是东或西。纽约市是 74°W，因为它位于子午线。在 `GeoCoordinate` 对象中，正经度表示东，负值西。经度 180 和 -180 在国际日期变更线汇合。
+此外，`GeoCoordinate` 有 `GetDistanceTo` 方法，可以计算两个 `GeoCoordinate` 对象之间的距离。我将关注前两个属性，它们统称为坐标，表示地球表面的一个点。纬度是距离赤道的角距离。在常用法中，纬度是 `0` 到 `90` 度之间的角，后面跟着 `N` 或 `S` 表示北或南。例如，纽约的纬度大约是 `40°N`。在 `GeoCoordinate` 中，具有相同纬度的位置定义了一条纬线。在某条特定的线上，经度是距离子午线的角距离，子午线通过格林尼治的皇家天文台。在常用法中，经度是东或西。纽约市是 `74°W`，因为它位于子午线。在 `GeoCoordinate` 对象中，正经度表示东，负值西。经度 `180` 和 `-180` 在国际日期变更线汇合。
 
 尽管 `System.Device.Location` 命名空间包含了使用地理坐标确定地址（街道和城市）的类，但这些在 Windows 7 的初始版本中尚未实现。
 
 ## 第一部分 基础知识
 
-XnaLocation 项目仅显示数值。
+`XnaLocation` 项目仅显示数值。
 
 ```cs
 XNA 项目: XnaLocation 文件: Game1.cs (摘，显示字段)
@@ -2851,8 +2683,7 @@ void OnGeoWatcherPositionChanged(object sender, GeoPositionChangedEventArgs<GeoC
 }
 ```
 
-
-LoadContent 方法简单地获取字体并保存视口（Viewport）以便后续进行文本定位：
+`LoadContent` 方法简单地获取字体并保存视口（`Viewport`）以便后续进行文本定位：
 
 ```
 XNA Project: Xnalocation File: Game1.cs (excerpt)
@@ -2865,7 +2696,7 @@ protected override void LoadContent()
 }
 ```
 
-显示的字符串的大小可能会根据不同的值而不同。这就是为什么在 Update 方法中，根据字符串的大小和视口值来计算字符串的位置：
+显示的字符串的大小可能会根据不同的值而不同。这就是为什么在 `Update` 方法中，根据字符串的大小和视口值来计算字符串的位置：
 
 ```
 XNA Project: Xnalocation File: Game1.cs (excerpt)
@@ -2882,7 +2713,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-Draw 方法非常简单易懂：
+`Draw` 方法非常简单易懂：
 
 ```
 XNA Project: Xnalocation File: Game1.cs (excerpt)
@@ -2901,11 +2732,11 @@ protected override void Draw(GameTime gameTime)
 
 # 第一部分 基础
 
-由于 GeoCoordinateWatcher 在整个程序运行期间一直在运行，它应该随着手机的移动而更新位置。这里是我住的地方：
+由于 `GeoCoordinateWatcher` 在整个程序运行期间一直在运行，它应该随着手机的移动而更新位置。这里是我住的地方：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_112_0.png)
 
-然而，使用手机模拟器时，GeoCoordinateWatcher 程序可能无法工作。在 Windows Phone 7 开发工具的某些测试版软件中，加速度计总是返回新泽州普林斯顿某地的坐标，这可能是为了微妙地暗示艾兰·图灵（Alan Turing）获得博士学位的大学。
+然而，使用手机模拟器时，`GeoCoordinateWatcher` 程序可能无法工作。在 Windows Phone 7 开发工具的某些测试版软件中，加速度计总是返回新泽州普林斯顿某地的坐标，这可能是为了微妙地暗示艾兰·图灵（Alan Turing）获得博士学位的大学。
 
 ## 使用地图服务
 
@@ -2913,29 +2744,31 @@ protected override void Draw(GameTime gameTime)
 
 在实际应用中，你可能会使用 Bing Maps，特别是考虑到存在专为手机定制的 Bing Maps Silverlight 。遗憾的是，在程序中使用 Bing Maps 涉及打开开发者账户、获取地图密钥（key）和开发者令牌（token）。这些都是免费且简单的，但对于一个要在书中所有读者之间共享的程序来说，并不方便。
 
-出于这个原因，我将使用一种不需要密钥或令牌的替代方案。这种替代方案是微软研究院地图（Microsoft Research Maps），你可以在 msmaps.com 了解它。航空由美国美国质调查局（USGS）提供。微软研究院地图通过名为 MSR Maps 的网络服务提供这些图像，但仍被旧名 TerraService 称为。
+出于这个原因，我将使用一种不需要密钥或令牌的替代方案。这种替代方案是微软研究院地图（Microsoft Research Maps），你可以在 `msmaps.com` 了解它。航空由美国美国质调查局（USGS）提供。微软研究院地图通过名为 `MSR Maps` 的网络服务提供这些图像，但仍被旧名 `TerraService` 称为。
 
 缺点是这些图像并不先进，而且该服务看起来并不完全可靠。
 
-MSR Maps 服务是一种 SOAP（简单对象访问协议）服务，其事务在 WSDL（Web 服务描述语言）文件中描述。在后台，你的程序与网络服务之间的所有事务都以 XML 文件的形式存在。然而，为了避免程序员的痛苦，通常使用 WSDL 文件来生成代理（proxy），它是一个类和结构的集合，允许你的程序通过方法调用和事件与网络服务通信。
+`MSR Maps` 服务是一种 `SOAP`（简单对象访问协议）服务，其事务在 `WSDL`（Web 服务描述语言）文件中描述。在后台，你的程序与网络服务之间的所有事务都以 `XML` 文件的形式存在。然而，为了避免程序员的痛苦，通常使用 `WSDL` 文件来生成代理（proxy），它是一个类和结构的集合，允许你的程序通过方法调用和事件与网络服务通信。
 
-你可以在 Visual Studio 中生成此代理。以下是我的做法：我首先在 Visual Studio 中创建了一个名为 SilverlightLocationMapper 的 Windows Phone 7 项目。在解决方案管理器中，我右键点击项目名称并选择“添加服务引用”。在“地址”（Address）字段中，我输入了 MSR Maps 服务 WSDL 文件的 URL：http://MSRMaps.com/TerraService2.asmx。
+你可以在 Visual Studio 中生成此代理。以下是我的做法：我首先在 Visual Studio 中创建了一个名为 `SilverlightLocationMapper` 的 Windows Phone 7 项目。在解决方案管理器中，我右键点击项目名称并选择“添加服务引用”。在“地址”（Address）字段中，我输入了 `MSR Maps` 服务 `WSDL` 文件的 URL：`http://MSRMaps.com/TerraService2.asmx`。
 
-（你可能会想 URL 是否应该是 http://msrmaps.com/TerraService2.asmx?WSDL，因为 WSDL 文件通常是这样引用的。那个地址起初似乎有效，但你会发现的是过时的 URL。）
+（你可能会想 URL 是否应该是 `http://msrmaps.com/TerraService2.asmx?WSDL`，因为 `WSDL` 文件通常是这样引用的。那个地址起初似乎有效，但你会发现的是过时的 URL。）
 
-在地址字段中输入 URL 后，按转车。Visual Studio 将识别该站点并报告它发现的内容。将有一个服务，名称为 TerraService。
+在地址字段中输入 URL 后，按转车。Visual Studio 将识别该站点并报告它发现的内容。将有一个服务，名称为 `TerraService`。
 
-接下来，你需要在“命名空间”（Namespace）字段中输入一个名称，以替换通用的 ServiceReference1。我使用了 MsrMapsService 并点击了确定。
+接下来，你需要在“命名空间”（Namespace）字段中输入一个名称，以替换通用的 `ServiceReference1`。我使用了 `MsrMapsService` 并点击了确定。
 
-你会看到 MsrMapsService 显示在解决方案管理器的项目下。当你点击解决方案管理器上的“显示所有”图标时，可以查看生成的文件。特别是嵌套的 MsrMapsService 和 Reference.svcmap，你会看到 Reference.cs，这是一个大文件（超过 4000 行），命名空间为 XnaLocationMapper.MsrMapsService，它结合原始项目名称为你网络服务指定的名称。
 
-此 Reference.cs 文件包含了访问网络服务所需的所有类和结构，这些内容在 msrmaps.com 网站上有文档。要在程序中使用这些内容，请添加
+
+你会看到 `MsrMapsService` 显示在解决方案管理器的项目下。当你点击解决方案管理器上的“显示所有”图标时，可以查看生成的文件。特别是嵌套的 `MsrMapsService` 和 `Reference.svcmap`，你会看到 `Reference.cs`，这是一个大文件（超过 4000 行），命名空间为 `XnaLocationMapper.MsrMapsService`，它结合原始项目名称为你网络服务指定的名称。
+
+此 `Reference.cs` 文件包含了访问网络服务所需的所有类和结构，这些内容在 `msrmaps.com` 网站上有文档。要在程序中使用这些内容，请添加
 
 ```
 using SilverlightLocationMapper.MsrMapsService;
 ```
 
-在 MainPage.xml 中，我添加了 System.Device、System.IO 和 System.Windows.Imaging 命名空间的指令。
+在 `MainPage.xml` 中，我添加了 `System.Device`、`System.IO` 和 `System.Windows.Imaging` 命名空间的指令。
 
 ## 第5章 传感器与服务 99
 
@@ -2950,16 +2783,13 @@ using SilverlightLocationMapper.MsrMapsService;
 </Grid>
 ```
 
-TextBlock 用于显示，Image 保持在最上方。
+`TextBlock` 用于显示，`Image` 保持在最上方。
 
-代码后部有两个字段，一个用于提供位置的 GeoCoordinateWatcher，另一个是添加网络服务时创建的代理。
+代码后部有两个字段，一个用于提供位置的 `GeoCoordinateWatcher`，另一个是添加网络服务时创建的代理。
 
 ## 第5章 传感器与服务 101
 
-我希望处理进程在程序加载并显示后开始，因此我为 Loaded 事件设置了处理器。该 Loaded 处理器为我将需要的两个完成事件设置了处理器，并启动了 GeoCoordinateWatcher。
-
-
-
+我希望处理进程在程序加载并显示后开始，因此我为 `Loaded` 事件设置了处理器。该 `Loaded` 处理器为我将需要的两个完成事件设置了处理器，并启动了 `GeoCoordinateWatcher`。
 
 # 102 第一部分 基础
 
@@ -3038,7 +2868,7 @@ void OnProxyGetAreaFromPtCompleted(object sender, GetAreaFromCompletedEventArgs 
 
 # 第一部分 基础
 
-我不会讨论 `AreaBoundingBox` 的细节，因为它在 msrmaps.com 网站上有或没有文档，而且该网站上针对 Windows Forms 的类似逻辑提供了很大帮助（尽管那有点过时了）。
+我不会讨论 `AreaBoundingBox` 的细节，因为它在 `msrmaps.com` 网站上有或没有文档，而且该网站上针对 Windows Forms 的类似逻辑提供了很大帮助（尽管那有点过时了）。
 
 注意循环创建了每个 `Image` 对象来显示每个瓦片。这些 `Image` 对象具有相同的 `Stretch`、`HorizontalAlignment` 和 `VerticalAlignment` 属性，但 `Margin` 不同。`Margin` 是单个瓦片在内容网格中的定位方式。`XOffset` 和 `YOffset` 值会导致瓦片超出内容网格的顶部和左边缘。内容网格不会裁剪其内容，因此瓦片可能会延伸程序页面的顶部。
 
@@ -3063,9 +2893,7 @@ void OnProxyGetTileCompleted(object sender, GetTileCompletedEventArgs args)
 }
 ```
 
-
-
-如果你点击页面上 TextBlock 之外的任何地方，`ContentPanel` 的背景将设置为随机颜色。点击 TextBlock 时，处理程序将访问页面的 `NavigationService` 属性。这是一个类型为 `NavigationService`的对象，包含了与导航相关的属性、方法和事件，包括至关重要的 `Navigate` 方法：
+如果你点击页面上 `TextBlock` 之外的任何地方，`ContentPanel` 的背景将设置为随机颜色。点击 `TextBlock` 时，处理程序将访问页面的 `NavigationService` 属性。这是一个类型为 `NavigationService` 的对象，包含了与导航相关的属性、方法和事件，包括至关重要的 `Navigate` 方法：
 
 ```
 this.NavigationService.Navigate(new Uri("/SecondPage.xaml"), UriKind.Relative);
@@ -3135,7 +2963,7 @@ public partial class SecondPage : PhoneApplicationPage
 }
 ```
 
-同样，当你点击页面上除 TextBlock 以外的任何地方时，背景会变为随机颜色。当你点击 TextBlock 时，处理程序调用了 `NavigationService` 的另一个方法。
+同样，当你点击页面上除 `TextBlock` 以外的任何地方时，背景会变为随机颜色。当你点击 `TextBlock` 时，处理程序调用了 `NavigationService` 的另一个方法。
 
 this.NavigationService.GoBack();
 
@@ -3149,7 +2977,7 @@ Silverlight 程序中的导航是围绕 XAML 文件构建的，就像传统 Web 
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_125_0.png)
 
-现在点击显示“Navigate to 2nd Page”（导航到第二页）的 TextBox，第二页就会进入视野：
+现在点击显示“Navigate to 2nd Page”（导航到第二页）的 `TextBox`，第二页就会进入视野：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_125_1.png)
 
@@ -3163,7 +2991,7 @@ Silverlight 程序中的导航是围绕 XAML 文件构建的，就像传统 Web 
 
 ## 第 6 章 应用程序架构中的问题
 
-现在再次点击 TextBlock 导航到第二页：
+现在再次点击 `TextBlock` 导航到第二页：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_127_0.png)
 
@@ -3174,6 +3002,8 @@ Silverlight 程序中的导航是围绕 XAML 文件构建的，就像传统 Web 
 ```
 this.NavigationService.Navigate(new Uri("/SecondPage.xaml"), UriKind.Relative);
 ```
+
+
 
 这与 `GoBack` 调用不同。这会导致 `SecondPage` 导航到一个 `MainPage` 的新实例，如果你持续点击每个页面上的 TextBlock，将构建一个由 `MainPage` 和 `SecondPage` 实例交替组成的栈，每个实例都有自己的 `Navigate` 和 `GoBack`。这些是 `NavigationService` 的基本方法，你的应用程序不太可能需要使用这些之外的任何内容。请记住，你正在为手机编写代码，如果在程序中没有某种提醒用户如何到达当前页面以及如何返回机制，那么复杂的导航方案是没有意义的。
 
@@ -3205,13 +3035,9 @@ Silverlight Project: SilverlightPassData File: MainPage.xaml（节录）
 
 我不会显示 `OnManipulationStarted` 重写方法，因为它与之前的程序相同，但 TextBlock 的 `ManipulationStarted` 事件处理程序稍微增强。
 
+### 第 6 章 架构中的问题 115
 
-
-
-
-## 第 6 章 架构中的问题 115
-
-## Silverlight 项目：SilverlightPassData 文件：MainPage.xaml.cs（片段）
+### Silverlight 项目：SilverlightPassData 文件：MainPage.xaml.cs（片段）
 
 ```csharp
 void OnTextManipulationStarted(object sender, ManipulationStartedEventArgs args)
@@ -3231,14 +3057,15 @@ void OnTextManipulationStarted(object sender, ManipulationStartedEventArgs args)
 }
 ```
 
-如果 ContentPanel 的 Background 画笔是 SolidColorBrush，则处理程序会获取 Color 以及红、绿、蓝值并将其转换为字符串，然后附加到目标页面名称之后。现在的 URI 看起来像这样：
+如果 `ContentPanel` 的 `Background` 画笔是 `SolidColorBrush`，则处理程序会获取 `Color` 以及红、绿、蓝值并将其转换为字符串，然后附加到目标页面名称之后。现在的 URI 看起来像这样：
 
-/SecondPage.xaml?Red=244&Green=43&Blue=91
+`/SecondPage.xaml?Red=244&Green=43&Blue=91`
 
 你会认出这是一个 HTML 查询字符串的常见格式。
-SilverlightPassData 项目还包含一个 SecondPage 类，它与第一个项目中的类相同，但代码后备文件重写了 OnNavigatedTo 方法：
 
-## Silverlight 项目：SilverlightPassData 文件：SecondPage.xaml.cs（片段）
+`SilverlightPassData` 项目还包含一个 `SecondPage` 类，它与第一个项目中的类相同，但代码后备文件重写了 `OnNavigatedTo` 方法：
+
+### Silverlight 项目：SilverlightPassData 文件：SecondPage.xaml.cs（片段）
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs args)
@@ -3259,21 +3086,21 @@ protected override void OnNavigatedTo(NavigationEventArgs args)
 }
 ```
 
-# 第一部分 基础
+### 第一部分 基础
 
-你需要一个用于 `System.Windows.Navigation` 命名空间的 using 指令来使用 `NavigationEventArgs` 类。
+你需要一个用于 `System.Windows.Navigation` 命名空间的 `using` 指令来使用 `NavigationEventArgs` 类。
 
-OnNavigatedTo 方法由 Page 定义，Page 是 PhoneApplicationPage 的派生类。该方法在页面创建后立即被调用。当调用 OnNavigatedTo 时，当然，页面构造函数已经执行完毕，但还没有发生太大变化。
+`OnNavigatedTo` 方法由 `Page` 定义，`Page` 是 `PhoneApplicationPage` 的派生类。该方法在页面创建后立即被调用。当调用 `OnNavigatedTo` 时，当然，页面构造函数已经执行完毕，但还没有发生太大变化。
 
-目标类可以通过页面的 `NavigationContext` 访问用于调用页面时使用的查询字符串。此属性的类型为 `NavigationView`，该类只有一个名为 `QueryString` 的公共属性，它返回一个字典，我将其保存在一个名为 `parameters` 的变量中。这里的代码假设如果存在 "Red" 查询字符串，那么 "Blue" 和 "Green" 也一定存在。它将所有字符串传递给 `Byte.Parse` 方法并重构颜色。
+目标类可以通过页面的 `NavigationContext` 访问用于调用页面时使用的查询字符串。此属性的类型为 `NavigationView`，该类只有一个名为 `QueryString` 的公共属性，它返回一个字典，我将其保存在一个名为 `parameters` 的变量中。这里的代码假设如果存在 `"Red"` 查询字符串，那么 `"Blue"` 和 `"Green"` 也一定存在。它将所有字符串传递给 `Byte.Parse` 方法并重构颜色。
 
-现在，当你从 MainPage 导航到 SecondPage 时，背景颜色保持不变。然而，当你移动时，情况并非如此。并没有内置机制将查询字符串从一个页面传递到另一个页面。
+现在，当你从 `MainPage` 导航到 `SecondPage` 时，背景颜色保持不变。然而，当你移动时，情况并非如此。并没有内置机制将查询字符串从一个页面传递到另一个页面。
 
 ## 在页面之间共享数据
 
-请记住，程序中的所有页面都可以方便地访问派生自 Application 的 App 类。静态 `Application.Current` 属性返回与程序关联的 Application 对象，你可以简单地将其强制转换为 App。这意味着你可以使用 App 类来存储你想在应用程序多个页面之间共享的数据。
+请记住，程序中的所有页面都可以方便地访问派生自 `Application` 的 `App` 类。静态 `Application.Current` 属性返回与程序关联的 `Application` 对象，你可以简单地将其强制转换为 `App`。这意味着你可以使用 `App` 类来存储你想在应用程序多个页面之间共享的数据。
 
-在 SilverlightShareData 项目中，我在 App 类中定义了一个简单的属性：
+在 `SilverlightShareData` 项目中，我在 `App` 类中定义了一个简单的属性：
 
 ```csharp
 Silverlight 项目：SilverlightShareData 文件：App.xaml.cs（片段）
@@ -3285,11 +3112,11 @@ public partial class App : Application
 }
 ```
 
-我将此属性类型定义为可空 Color 而不是简单的 Color，是为了处理 ContentPanel 的 Background 属性未设置 SolidColorBrush 的情况。在这些情况下，Background 属性为 null，该属性中就不会存储 Color。如果该属性类型为 Color，那么 Color 将有一个默认值；该 Color 值将是透明黑色，这是不对的。如果用户选择了浅色方案，即使是非透明的黑色也是错误的。
+我将此属性类型定义为可空 `Color` 而不是简单的 `Color`，是为了处理 `ContentPanel` 的 `Background` 属性未设置 `SolidColorBrush` 的情况。在这些情况下，`Background` 属性为 `null`，该属性中就不会存储 `Color`。如果该属性类型为 `Color`，那么 `Color` 将有一个默认值；该 `Color` 值将是透明黑色，这是不对的。如果用户选择了浅色方案，即使是非透明的黑色也是错误的。
 
-## 第 6 章 架构中的问题 117
+### 第 6 章 架构中的问题 117
 
-程序的大部分保持不变，但当你碰 MainPage 中的 TextBlock 时，处理程序首先尝试在新的 App 类属性中保存一个颜色，然后导航到 SecondPage：
+程序的大部分保持不变，但当你碰 `MainPage` 中的 `TextBlock` 时，处理程序首先尝试在新的 `App` 类属性中保存一个颜色，然后导航到 `SecondPage`：
 
 ```csharp
 Silverlight 项目：SilverlightShareData ：：MainPage.xaml.cs（片段）
@@ -3307,7 +3134,7 @@ void OnTextBlockManipulationStarted(object sender, ManipulationStartedEventArgs 
 }
 ```
 
-SecondPage 中的 OnNavigatedTo 重写访问了该属性：
+`SecondPage` 中的 `OnNavigatedTo` 重写访问了该属性：
 
 ```csharp
 Silverlight 项目：SilverlightShareData ：：SecondPage.xaml.cs（片段）
@@ -3322,7 +3149,7 @@ protected override void OnNavigatedTo(NavigationEventArgs args)
 }
 ```
 
-同样，当你按下 SecondPage 上的 TextBlock 时，处理程序在调用 GoBack 之前，将当前的背景颜色保存回 App 类中：
+同样，当你按下 `SecondPage` 上的 `TextBlock` 时，处理程序在调用 `GoBack` 之前，将当前的背景颜色保存回 `App` 类中：
 
 ```csharp
 Silverlight 项目：SilverlightShareData ：：SecondPage.xaml.cs（片段）
@@ -3336,14 +3163,14 @@ void OnTextBlockManipulationStarted(object sender, ManipulationStartedEventArgs 
 }
 ```
 
-## 118 第一部分 基础
+### 118 第一部分 基础
 
 ```csharp
 args.Complete();
 args.Handled = true;
 ```
 
-MainPage 类也重写了 OnNavigatedTo，以便它可以检索存储的颜色并将其设置为网格的背景。
+`MainPage` 类也重写了 `OnNavigatedTo`，以便它可以检索存储的颜色并将其设置为网格的背景。
 
 Silverlight 项目：SilverlightShareData ：：MainPage.xaml.cs（片段）
 
@@ -3362,19 +3189,19 @@ protected override void OnNavigatedTo(NavigationEventArgs args)
 
 当你在页面之间导航时，它们共享相同的颜色。
 
-使用 App 类作为页面间共享数据的仓库是非常方便的，以至于你可能会发现自己在使用它。但你实际上应该考虑更结构化的解决方案，即页面之间相互跳转，而不是像第三方类这样的 App。
+使用 `App` 类作为页面间共享数据的仓库是非常方便的，以至于你可能会发现自己在使用它。但你实际上应该考虑更结构化的解决方案，即页面之间相互跳转，而不是像第三方类这样的 `App`。
 
-除了 OnNavigatedTo 虚拟方法外，Page 还定义了 OnNavigatedFrom 方法，这看起来要有用得多。毕竟，页面知道自己正从哪里跳转，因为它只是调用了 Navigate 或 GoBack。
+除了 `OnNavigatedTo` 虚拟方法外，`Page` 还定义了 `OnNavigatedFrom` 方法，这看起来要有用得多。毕竟，页面知道自己正从哪里跳转，因为它只是调用了 `Navigate` 或 `GoBack`。
 
-然而，OnNavigatedFrom 和 OnNavigatedTo 都具有 `NavigationEventArgs` 类型的参数，其中包含两个属性：Uri 和 Content。这些属性始终指示了要导航到的页面。
+然而，`OnNavigatedFrom` 和 `OnNavigatedTo` 都具有 `NavigationEventArgs` 类型的参数，其中包含两个属性：`Uri` 和 `Content`。这些属性始终指示了要导航到的页面。
 
-例如，MainPage 调用 Navigate 到 "SecondPage.xaml"。MainPage 的 OnNavigatedFrom 方法带有指向 "SecondPage.xaml" 的 Uri 参数。
+例如，`MainPage` 调用 `Navigate` 到 `"SecondPage.xaml"`。`MainPage` 的 `OnNavigatedFrom` 方法带有指向 `"SecondPage.xaml"` 的 `Uri` 参数。
 
-## 第 6 章 架构中的问题 119
+### 第 6 章 架构中的问题 119
 
-这意味着在 OnNavigatedFrom 方法中，类有机会设置一个属性或调用目标页面的方法。
+这意味着在 `OnNavigatedFrom` 方法中，类有机会设置一个属性或调用目标页面的方法。
 
-让我们来看一个名为 SilverlightInsertData 的示例。该项目有两个名为 MainPage 和 SecondPage 的页面，XAML 文件与之前看到的相同。MainPage 类没有随机更改颜色的逻辑。相反，它使用 SecondPage 来获取颜色。你可以将 SecondPage 视为一个返回随机颜色的对话框，在 MainPage 的大部分代码后备文件中：
+让我们来看一个名为 `SilverlightInsertData` 的示例。该项目有两个名为 `MainPage` 和 `SecondPage` 的页面，XAML 文件与之前看到的相同。`MainPage` 类没有随机更改颜色的逻辑。相反，它使用 `SecondPage` 来获取颜色。你可以将 `SecondPage` 视为一个返回随机颜色的对话框，在 `MainPage` 的大部分代码后备文件中：
 
 img/d9347c1f55fa6d523479d2cd9b4d5459_133_0.png)
 
@@ -3398,9 +3225,9 @@ public partial class MainPage : PhoneApplicationPage
 }
 ```
 
-注意 ReturnedColor 属性，其类型为可空 Color，就像上一个程序 App 类中的属性一样。
+注意 `ReturnedColor` 属性，其类型为可空 `Color`，就像上一个程序 `App` 类中的属性一样。
 
-这是 SecondPage 的代码后备文件：
+这是 `SecondPage` 的代码后备文件：
 
 img/d9347c1f55fa6d523479d2cd9b4d5459_133_1.png)
 
@@ -3416,11 +3243,7 @@ public partial class SecondPage : PhoneApplicationPage
 }
 ```
 
-
-
-
-
-# 第一部分 基础
+### 第一部分 基础
 
 ```csharp
 void OnTextBlockManipulationStarted(object sender, ManipulationStartedEventArgs args)
@@ -3456,11 +3279,13 @@ protected override void OnNavigatedFrom(NavigationEventArgs args)
 }
 ```
 
-在之前的程序中，SecondPage 在被触碰时会将背景更改为随机颜色，并在 TextBlock 被触碰时调用 GoBack。新代码是 `OnNavigatedFrom` 的覆盖方法，它会在类调用 `GoBack` 后不久被调用。如果存在有效的 `SolidColorBrush`，该方法会检查它是否正在导航到 `MainPage` 类型的对象。如果是的话，它会将 `Color` 对象保存到 `MainPage` 的 `ReturnedColor` 属性中。
 
-MainPage 可以在它的 `OnNavigatedTo` 覆盖方法中检索该属性的值：
 
-Silverlight 项目: SilverlightInsertData 文件: MainPage.xaml.cs (摘)
+在之前的程序中，`SecondPage` 在被触碰时会将背景更改为随机颜色，并在 `TextBlock` 被触碰时调用 `GoBack`。新代码是 `OnNavigatedFrom` 的覆盖方法，它会在类调用 `GoBack` 后不久被调用。如果存在有效的 `SolidColorBrush`，该方法会检查它是否正在导航到 `MainPage` 类型的对象。如果是的话，它会将 `Color` 对象保存到 `MainPage` 的 `ReturnedColor` 属性中。
+
+`MainPage` 可以在它的 `OnNavigatedTo` 覆盖方法中检索该属性的值：
+
+Silverlight 项目: SilverlightInsertData 文件: `MainPage.xaml.cs` (摘)
 
 ```csharp
 public partial class MainPage : PhoneApplicationPage
@@ -3478,25 +3303,25 @@ public partial class MainPage : PhoneApplicationPage
     }
 ```
 
-从某种意义上说，MainPage 调用 SecondPage 来获取 `Color` 值，就像一个真实的对话框一样。如果你后续导航到 SecondPage，它将从黑色屏幕开始（或者如果你选择了浅色主题）。
+从某种意义上说，`MainPage` 调用 `SecondPage` 来获取 `Color` 值，就像一个真实的对话框一样。如果你后续导航到 `SecondPage`，它将从黑色屏幕开始（或者如果你选择了浅色主题）。
 
-有趣的是，SecondPage 无法从任何 MainPage 初始化自己，因为 SecondPage 接收到的 `OnNavigatedTo` 调用没有接收源页面。为了以对称的方式工作，SecondPage 需要定义它自己的 `Color` 属性，并在它的 `OnNavigatedFrom` 覆盖方法中进行。
+有趣的是，`SecondPage` 无法从任何 `MainPage` 初始化自己，因为 `SecondPage` 接收到的 `OnNavigatedTo` 调用没有接收源页面。为了以对称的方式工作，`SecondPage` 需要定义它自己的 `Color` 属性，并在它的 `OnNavigatedFrom` 覆盖方法中进行。
 
-你可能会考虑对此程序进行一点变体，让 SecondPage 定义 `ReturnedColor` 属性。当 MainPage 导航到 SecondPage 时，MainPage 中的 `OnNavigatedFrom` 方法会被调用，该方法将正在被导航的 SecondPage 实例保存到 MainPage 的一个字段中。当 SecondPage 完成后，它会在其 `Returned` 属性中设置 `Color` 值并调用 `GoBack`。随后会调用 MainPage 中的 `OnNavigatedTo` 方法。MainPage 可以使用保存为字段的 `SecondPage` 实例来访问 `ReturnedColor` 属性。
+你可能会考虑对此程序进行一点变体，让 `SecondPage` 定义 `ReturnedColor` 属性。当 `MainPage` 导航到 `SecondPage` 时，`MainPage` 中的 `OnNavigatedFrom` 方法会被调用，该方法将正在被导航的 `SecondPage` 实例保存到 `MainPage` 的一个字段中。当 `SecondPage` 完成后，它会在其 `Returned` 属性中设置 `Color` 值并调用 `GoBack`。随后会调用 `MainPage` 中的 `OnNavigatedTo` 方法。`MainPage` 可以使用保存为字段的 `SecondPage` 实例来访问 `ReturnedColor` 属性。
 
-这种方案听起来不错，但它并不总是有效。问题在于，MainPage 无法确保它导航到的 SecondPage 实例与返回到 MainPage 的 SecondPage 实例是同一个。你将对这个问题有更深入的理解。
+这种方案听起来不错，但它并不总是有效。问题在于，`MainPage` 无法确保它导航到的 `SecondPage` 实例与返回到 `MainPage` 的 `SecondPage` 实例是同一个。你将对这个问题有更深入的理解。
 
 # 跨实例保留数据
 
-每当 MainPage 导航到 SecondPage 时，它都是 SecondPage 的不同实例。这就是为什么 SecondPage 总是从相同的状态开始。它总是一个新实例。
+每当 `MainPage` 导航到 `SecondPage` 时，它都是 `SecondPage` 的不同实例。这就是为什么 `SecondPage` 总是从相同的状态开始。它总是一个新实例。
 
-如果我们希望 SecondPage “记住”它最后被设置的颜色，必须由 SecondPage 之外的某个负责保存这些数据。这可以是 MainPage。
+如果我们希望 `SecondPage` “记住”它最后被设置的颜色，必须由 `SecondPage` 之外的某个负责保存这些数据。这可以是 `MainPage`。
 
-或者，SecondPage 可以将其状态保存在隔离存储（isolated storage）中。隔离存储非常像普通的磁盘存储。要访问它，你可以使用 `System.IO.IsolatedStorage` 命名空间中的类。每个 Windows Phone 7 应用程序访问隔离存储，但仅限于该应用程序创建的文件。隔离存储允许应用程序在多次执行之间保存数据，非常适合保存应用程序设置。
+或者，`SecondPage` 可以将其状态保存在隔离存储（isolated storage）中。隔离存储非常像普通的磁盘存储。要访问它，你可以使用 `System.IO.IsolatedStorage` 命名空间中的类。每个 Windows Phone 7 应用程序访问隔离存储，但仅限于该应用程序创建的文件。隔离存储允许应用程序在多次执行之间保存数据，非常适合保存应用程序设置。
 
 我将在本章后面的部分介绍隔离存储的示例。
 
-解决方案由命名的 `PhoneApplicationService` 提供，它定义在 `Microsoft.Phone.Shell` 命名空间中。`PhoneApplicationService` 的实例在标准的 App.xml 文件中创建。
+解决方案由命名的 `PhoneApplicationService` 提供，它定义在 `Microsoft.Phone.Shell` 命名空间中。`PhoneApplicationService` 的实例在标准的 `App.xml` 文件中创建。
 
 ```xml
 <Application.ApplicationLifetimeObjects>
@@ -3513,9 +3338,9 @@ public partial class MainPage : PhoneApplicationPage
 
 你存储在 `State` 字典中的任何对象必须是可序列化的，否则可能无法将对象转换为 XML 并从 XML 重新创建对象。它必须有一个公共参数构造函数，并且它所有的属性要么是可序列化的，要么是具有 `Parse` 方法的类型（可以将字符串转换回对象）。
 
-哪些对象是可序列化的，哪些并不是总是显而易见的。当我刚开始实验时，我遇到了一个说“Type System.Windows.Media.Brush 无法序列化”的异常。我花了一段时间才想起应该是 `Color`。让我们修改之前的程序，让 SecondPage 使用这个 `State`。在 `SilverlightRetData` 项目中，除了使用 `Microsoft.Phone.Shell` 命名空间的引用指令以及 SecondPage 中的两个覆盖方法外，其他都相同。这里如下：
+哪些对象是可序列化的，哪些并不是总是显而易见的。当我刚开始实验时，我遇到了一个说“Type System.Windows.Media.Brush 无法序列化”的异常。我花了一段时间才想起应该是 `Color`。让我们修改之前的程序，让 `SecondPage` 使用这个 `State`。在 `SilverlightRetData` 项目中，除了使用 `Microsoft.Phone.Shell` 命名空间的引用指令以及 `SecondPage` 中的两个覆盖方法外，其他都相同。这里如下：
 
-Silverlight 项目: SilverlightRetData 文件: SecondPage.xaml (摘)
+Silverlight 项目: SilverlightRetData 文件: `SecondPage.xaml` (摘)
 
 ```csharp
 protected override void OnNavigatedFrom(NavigationEventArgs args)
@@ -3549,21 +3374,17 @@ protected override void OnNavigatedTo(NavigationEventArgs args)
 }
 ```
 
-在 `OnNavigatedFrom` 调用期间，如果有可用的 `Color` 对象，它将以键 "Color" 保存在 `State` 字典中：`PhoneApplicationService.Current.State["Color"] = clr;`。
+在 `OnNavigatedFrom` 调用期间，如果有可用的 `Color` 对象，它将以键 `"Color"` 保存在 `State` 字典中：`PhoneApplicationService.Current.State["Color"] = clr;`。
 
-在 `OnNavigatedTo` 覆盖方法中，如果键存在，则从字典中加载 `Color` 值并根据 `Color` 创建 `SolidColorBrush`。如果你刚刚开始运行程序并第一次导航到 SecondPage，则该键不存在。但在后续导航到 SecondPage 时，页面将恢复到你刚刚设置的颜色。
+在 `OnNavigatedTo` 覆盖方法中，如果键存在，则从字典中加载 `Color` 值并根据 `Color` 创建 `SolidColorBrush`。如果你刚刚开始运行程序并第一次导航到 `SecondPage`，则该键不存在。但在后续导航到 `SecondPage` 时，页面将恢复到你刚刚设置的颜色。
 
 每当你通过主页面上的返回键退出程序时，`State` 会随 `PhoneApplicationService` 一起丢弃。此字典仅适用于保存程序运行时需要保留的瞬态数据。如果你需要在程序的多次执行之间保存数据，请使用隔离存储。
 
-现在尝试 SecondPage。触摸更改颜色。现在按手机的硬件 Start 键。你离开了手机主屏幕上的 SilverlightRetData 程序，你可以导航到其他程序，最终你将按返回键返回 SilverlightRetData 程序和 SecondPage。颜色仍然。
+现在尝试 `SecondPage`。触摸更改颜色。现在按手机的硬件 `Start` 键。你离开了手机主屏幕上的 `SilverlightRetData` 程序，你可以导航到其他程序，最终你将按返回键返回 `SilverlightRetData` 程序和 `SecondPage`。颜色仍然。
 
-现在返回 MainPage。显示了你在 SecondPage 中设置的颜色。从 MainPage 开始，按手机的硬件 Start 键离开程序。如果你想最终按返回键回到 SilverlightRetData 和 MainPage，可以四绕一下。
+现在返回 `MainPage`。显示了你在 `SecondPage` 中设置的颜色。从 `MainPage` 开始，按手机的硬件 `Start` 键离开程序。如果你想最终按返回键回到 `SilverlightRetData` 和 `MainPage`，可以四绕一下。
 
 结果，看，屏幕丢失了颜色！发生了什么？
-
-
-
-
 
 ## 多任务处理理想
 
@@ -3583,15 +3404,13 @@ protected override void OnNavigatedTo(NavigationEventArgs args)
 
 相反，Windows Phone 7 通过实现“任务”（task）来管理多个活动应用程序。在某种意义上，这个应用程序扩展了单个 Silverlight 程序内的页面栈。你可以把手机想象成一个没有标签页功能且没有前进按钮的老式网页浏览器。但它确实有一个返回按钮，还有一个开始按钮，它可以带你回到开始屏幕并允许你启动新程序。
 
-假设你选择启动一个名为 Analyze 的程序。你用 Analyze 工作了一会儿，然后决定你结束了。按下返回按钮。Analyze 程序被终止，你回到了开始屏幕。这就是简单的场景。
+假设你选择启动一个名为 `Analyze` 的程序。你用 `Analyze` 工作了一会儿，然后决定你结束了。按下返回按钮。`Analyze` 程序被终止，你回到了开始屏幕。这就是简单的场景。
 
-## 第6章 应用程序架构中的问题 125
+后来你决定需要运行 `Analyze`。当你使用 `Analyze` 时，需要在 Web 上检查某些东西。你按下开始按钮进入开始屏幕并选择 `Internet Explorer`。当你浏览时，你记得最近没有玩过游戏了。你按下开始按钮，选择 `Backgammon`（双棋）并玩了一会儿。玩双棋时，你好奇某个移动的概率，于是你按下开始按钮并运行 `Calc`。然后你觉得没有做工作很内疚，再次按下开始按钮并运行 `Draft`。
 
-后来你决定需要运行 Analyze。当你使用 Analyze 时，需要在 Web 上检查某些东西。你按下开始按钮进入开始屏幕并选择 Internet Explorer。当你浏览时，你记得最近没有玩过游戏了。你按下开始按钮，选择 Backgammon（双棋）并玩了一会儿。玩双棋时，你好奇某个移动的概率，于是你按下开始按钮并运行 Calc。然后你觉得没有做工作很内疚，再次按下开始按钮并运行 Draft。
+`Draft` 是一个带有多个面的 Silverlight 程序。从主页面，你导航到其他页面。
 
-Draft 是一个带有多个面的 Silverlight 程序。从主页面，你导航到其他页面。
-
-现在按下返回按钮。你通过 Draft 页面栈中的所有页面向后移动，当你回到 Calc 时，Draft 被终止。Calc 仍然显示着你工作的残留物，当你回到 Backgammon 时，Calc 被终止；Backgammon 显示了一个正在进行中的游戏，当你回到 Internet Explorer 时，Backgammon 被终止；你通过你导航过的任何网页向后移动，当你回到 Analyze 时，IE 被终止；当你回到开始屏幕时，Analyze 被终止。现在栈现在是空了。
+现在按下返回按钮。你通过 `Draft` 页面栈中的所有页面向后移动，当你回到 `Calc` 时，`Draft` 被终止。`Calc` 仍然显示着你工作的残留物，当你回到 `Backgammon` 时，`Calc` 被终止；`Backgammon` 显示了一个正在进行中的游戏，当你回到 `Internet Explorer` 时，`Backgammon` 被终止；你通过你导航过的任何网页向后移动，当你回到 `Analyze` 时，IE 被终止；当你回到开始屏幕时，`Analyze` 被终止。现在栈现在是空了。
 
 然而，手机有限的资源让 Windows 7 的开发者相信，栈上的应用程序应该具有尽可能小的内存占用。出于这个原因，栈上的应用程序不会继续离开工作。它没有被放入某种挂起状态，而是比发生的情况更严重。进程实际上被终止了。当这个被终止的进程从栈上移除时，它将从头开始重新执行。
 
@@ -3612,15 +3431,18 @@ Draft 是一个带有多个面的 Silverlight 程序。从主页面，你导航�
 让我们设定一些和我讨论的某些事件一致的术语：
 
 - 当程序启动时，被称为“已启动”（launched）
+
 - 当用户离开它时，被称为“已关闭”（closed）
+
 - 当程序被激活时，被称为“正在运行”（running）
+
 - 当程序被终止时，被称为“已死亡”（dead）
 
 ## 页面状态
 
 Silverlight 项目是一个只有一个页面的简单程序。所有感兴趣的事情都发生在代码后代码（code-behind）：
 
-> 项目: Silverlight 文件: MainPage.xaml (节选)
+> 项目: Silverlight 文件: `MainPage.xaml` (节选)
 
 ```csharp
 public partial class MainPage : PhoneApplicationPage
@@ -3655,23 +3477,21 @@ void UpdatePageTitle(int taps)
 }
 ```
 
-UpdatePageTitle 方法从程序的构造函数中调用（在那里结果始终为 0）以及从 NavigationStarted 重写方法调用。
+`UpdatePageTitle` 方法从程序的构造函数中调用（在那里结果始终为 0）以及从 `NavigationStarted` 重写方法调用。
 
-通过按下 F5 构建并部署程序到调试手机或模拟器。安排 Visual Studio 以便你可以看到输出窗口。当程序启动时，点击屏幕更改颜色并增加点击次数。现在按下手机的开始按钮。你可以从 Visual Studio 看到程序的两个线程结束，程序已终止，但对手机来说，程序已禁用并墓碑化了。
+通过按下 `F5` 构建并部署程序到调试手机或模拟器。安排 Visual Studio 以便你可以看到输出窗口。当程序启动时，点击屏幕更改颜色并增加点击次数。现在按下手机的开始按钮。你可以从 Visual Studio 看到程序的两个线程结束，程序已终止，但对手机来说，程序已禁用并墓碑化了。
 
 现在按下返回按钮回到程序。你会看到一个带有“Resuming...”的空白屏幕，输出窗口显示正在加载库。这就是程序的复活。
 
-然而，当程序进入视野时，你会发现颜色和点击次数都丢失了。你所有的心血！全没了！这不是程序从墓碑化中恢复的好方法。现在你可能看到我在 InsertData 之后描述的方法不可行。该方案涉及在 MainPage 导航到该页面时保存 SecondPage 的实例。但如果用户从 SecondPage 进入开始屏幕并返回，那是 SecondPage 的新实例，而不是保存过的那一个。
+然而，当程序进入视野时，你会发现颜色和点击次数都丢失了。你所有的心血！全没了！这不是程序从墓碑化中恢复的好方法。现在你可能看到我在 InsertData 之后描述的方法不可行。该方案涉及在 `MainPage` 导航到该页面时保存 `SecondPage` 的实例。但如果用户从 `SecondPage` 进入开始屏幕并返回，那是 `SecondPage` 的新实例，而不是保存过的那一个。
 
-为页面保存和重新加载状态数据的机会是通过重写由 PhoneApplicationPage 继承的 Page 类定义的 OnNavigatedTo OnNavigatedFrom 实现。正如你所见，这些方法在页面通过 frame 加载进入视图以及页面从 frame 分离时调用。
+为页面保存和重新加载状态数据的机会是通过重写由 `PhoneApplicationPage` 继承的 `Page` 类定义的 `OnNavigatedTo` `OnNavigatedFrom` 实现。正如你所见，这些方法在页面通过 frame 加载进入视图以及页面从 frame 分离时调用。
 
-如果你的 Silverlight 应用程序有用户可以导航的多个页面，使用这些方法将为特别。你已经发现，每当用户导航到页面时，都会创建一个 PhoneApplicationPage 新实例，以便为普通导航保存和重新加载状态数据。通过重写 OnNavigatedTo OnNavigatedFrom，你实际上用一个解决方案解决了两个问题。
+
+
+如果你的 Silverlight 应用程序有用户可以导航的多个页面，使用这些方法将为特别。你已经发现，每当用户导航到页面时，都会创建一个 `PhoneApplicationPage` 新实例，以便为普通导航保存和重新加载状态数据。通过重写 `OnNavigatedTo` `OnNavigatedFrom`，你实际上用一个解决方案解决了两个问题。
 
 尽管 Windows Phone 7 将恢复墓碑化应用程序的大部分责任留给了程序本身，但它会在激活时加载正确的页面，
-
-
-
-
 
 # 第一部分 基础
 
@@ -3679,7 +3499,7 @@ UpdatePageTitle 方法从程序的构造函数中调用（在那里结果始终�
 
 `SilverlightBetterTombstoning` 的代码文件包含了 `Microsoft.Phone.Shell` 的 `using` 指令，并使用了 `State` 字典。
 
-Silverlight 项目: SilverlightBetterTombstoning 文件: MainPage.xml.cs (节选)
+Silverlight 项目: `SilverlightBetterTombstoning` 文件: `MainPage.xml.cs` (节选)
 
 ```csharp
 public partial class MainPage : PhoneApplicationPage
@@ -3726,7 +3546,7 @@ public partial class MainPage : PhoneApplicationPage
 }
 ```
 
-# 第 6 章 架构中的问题
+## 第 6 章 架构中的问题
 
 注意设置为 `PhoneApplicationService.Current` 的 `appService` 字段。这只是为了方便访问 `State` 属性。如果你愿意，可以使用较长的 `PhoneApplicationService.Current.State`。
 
@@ -3736,13 +3556,13 @@ public partial class MainPage : PhoneApplicationPage
 appService.State["numTaps"] = numTaps;
 ```
 
-如果 "numTaps" 键存在，则替换该项；如果键不存在，则添加新项。保存背景颜色稍微复杂：默认情况下，`ContentPanel` 的 `Background` 属性为 `null`，代码在尝试保存 `Color` 属性之前会检查该值是否非空。
+如果 `"numTaps"` 键存在，则替换该项；如果键不存在，则添加新项。保存背景颜色稍微复杂：默认情况下，`ContentPanel` 的 `Background` 属性为 `null`，代码在尝试保存 `Color` 属性之前会检查该值是否非空。
 
 要从字典中提取项，不能使用类似的语法。如果键不存在，你会抛出异常（而且当应用程序启动时，这些键是不存在的）。`OnNavigatedTo` 方法展示了访问项目的两种方法：第一种检查字典是否包含该键；第二种使用 `TryGetValue`，如果键存在则它返回 `true`。
 
 在实际程序中，你可能希望使用字符串变量作为键，以避免不小心输入不一致的值。（如果你的输入无懈可击，就不用担心多个相同的字符串占用存储：字符串是内部的，相同的字符串会被合并成一个。）你可能还想编写一些执行此任务的标准例程。
 
-尝试像你之前那样运行此程序：按 F5 将其从 Visual Studio 部署到手机或手机模拟器。点击屏幕几次。如果你打算启动一个新程序，Visual Studio 会指示进程已终止。现在按后退键。当程序恢复时，设置已经保存，而且“尸体”看起来像新的一样样！
+尝试像你之前那样运行此程序：按 `F5` 将其从 Visual Studio 部署到手机或手机模拟器。点击屏幕几次。如果你打算启动一个新程序，Visual Studio 会指示进程已终止。现在按后退键。当程序恢复时，设置已经保存，而且“尸体”看起来像新的一样样！
 
 # 第一部分 基础
 
@@ -3750,7 +3570,7 @@ appService.State["numTaps"] = numTaps;
 
 如果你想在程序的所有实例之间共享某些数据，你可能想要实现所谓的“应用程序设置”。你也可以这样做。
 
-## 孤立存储 (Isolated Storage)
+### 孤立存储 (Isolated Storage)
 
 安装在 Windows Phone 7 上的每个程序都可以访问其专用的永久磁盘区域，被称为“孤立存储”，程序可以使用 `System.IO.IsolatedStorage` 命名空间中的类来访问它。虽然可以对孤立存储进行读写操作，我将在本章结束的程序中向你展示如何操作。对于我将要关注的程序，将把孤立存储的特殊用途用于存储应用程序设置。`IsolatedStorageSettings` 类专门为此目的而存在。
 
@@ -3777,7 +3597,7 @@ deactivated="Application_Deactivated"/>
 
 在 `App.xaml.cs` 中，我定义了以下公共属性：
 
-Silverlight 项目: SilverlightisolatedStorage 文件: App.xaml.cs (节选)
+Silverlight 项目: `SilverlightisolatedStorage` 文件: `App.xaml.cs` (节选)
 
 ```csharp
 public partial class App : Application
@@ -3792,7 +3612,7 @@ public partial class App : Application
 
 `App.xaml.cs` 已经有了 `PhoneApplicationService` 事件的处理程序。我为每个处理程序提供了一个包含单个方法调体：
 
-Silverlight 项目: Silverlightstorage 文件: App.xaml.cs (节选)
+Silverlight 项目: `Silverlightstorage` 文件: `App.xaml.cs` (节选)
 
 ```csharp
 private void Application_Launching(object sender, LaunchingEventArgs e)
@@ -3820,7 +3640,7 @@ private void Application_Closing(object sender, ClosingEventArgs e)
 
 这里是 `LoadSettings` 和 `SaveSettings` 方法。这两个方法获取了 `IsolatedStorageSettings` 对象。类似于 `PhoneApplicationService` 的 `State` 属性，`IsolatedStorageSettings` 对象是一个字典。程序中的一个方法加载（另一个保存）`BackgroundBrush` 属性的 `Color` 属性，代码与你之前看到的类似。
 
-Silverlight 项目: SilverlightIsolatedStorage 文件: App.xaml.cs (节选)
+Silverlight 项目: `SilverlightIsolatedStorage` 文件: `App.xaml.cs` (节选)
 
 ```csharp
 void LoadSettings()
@@ -3846,10 +3666,6 @@ void SaveSettings()
 ```
 
 最后，这是新的 `MainPage.xaml.cs` 文件。此文件——程序中的任何其他类——都可以使用静态 `Application.Current` 属性并转换为 `App` 来获取 `App` 对象的访问。`MainPage` 的构造函数从 `App` 类获取 `BackgroundBrush` 属性，而 `OnManipulationStarted` 方法设置了该 `BackgroundBrush` 属性。
-
-
-
-
 
 ## 第6章 应用程序架构中的问题 133
 
@@ -3894,7 +3710,7 @@ protected override void OnNavigatedTo(NavigationEventArgs args) {
 
 由于背景颜色已从临时页面数据升级为应用程序设置，因此在 `OnNavigatedFrom` 和 `OnNavigatedTo` 重写方法中删除了对它的引用。
 
-## XNA 墓碑化与设置
+### XNA 墓碑化与设置
 
 XNA 应用程序不像 Silverlight 应用程序那样基于页面构建的。如果你愿意，完全可以在 XNA 程序中实现自己的类页结构。你可能记得，在每次调用标准的 `Update` 重写方法期间，都会检查手机返回键的状态。你可以将此逻辑用于导航目的，也可以终止程序。不过这我就留给你自己去尝试了。
 
@@ -3904,11 +3720,13 @@ XNA 程序还可以利用 Silverlight 程序使用的相同的 `PhoneApplication
 
 `Game` 类还定义了名为 `Activated` 和 `OnDeactivated` 的方便虚拟方法，它们对于处理墓碑化同样有用。`Activated` 方法在启动和重新激活期间调用，而 `OnDeactivated` 在取消激活和程序关闭期间调用，类似于 Silverlight 页面的 `OnNavigatedTo` 和 `OnNavigatedFrom` 虚拟方法。
 
-在结束本章的 XnaTombstoning 程序中，我尝试模拟了 SilverlightIsolatedStorage 程序的功能和结构。该程序使用 `PhoneApplicationService` 事件来保存和恢复应用程序设置（颜色），并重写 `Deactivated` 和 `Activated` 事件来保留临时数据（点击次数）。
+在结束本章的 `XnaTombstoning` 程序中，我尝试模拟了 `SilverlightIsolatedStorage` 程序的功能和结构。该程序使用 `PhoneApplicationService` 事件来保存和恢复应用程序设置（颜色），并重写 `Deactivated` 和 `Activated` 事件来保留临时数据（点击次数）。
+
+
 
 但为了给应用程序设置提供更通用的解决方案，我更进了一。我为 XnaTombstoning 项目提供了一个专门的 `Settings` 类，它使用了隔离存储中更通用的功能，涉及真实文件而不仅仅是设置。你需要为此类引用 `System.Xml.Serialization` 库，并使用 `System.IO`、`System.IO.IsolatedStorage` 和 `System.Xml.Serialization` 命名空间的指令。
 
-> Silverlight 项目: XnaTombstoning 文件: Settings.cs（节选）
+> Silverlight 项目: XnaTombstoning 文件: `Settings.cs`（节选）
 
 ```csharp
 public class Settings
@@ -3975,7 +3793,7 @@ XnaTombstoning 项目的剩余部分允许你点击屏幕并响应显示新的�
 
 以下是 `Game1` 类的节选，显示了字段、构造函数和 `PhoneApplicationService` 事件：
 
-> Silverlight 项目: XnaTombstoning 文件: Game1.cs（节选）
+> Silverlight 项目: XnaTombstoning 文件: `Game1.cs`（节选）
 
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -3988,16 +3806,16 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-
-
-
-
 ## 第6章 应用架构中的问题 137
 
 viewport viewport;
+
 Random rand = new Random();
+
 StringBuilder text = new StringBuilder();
+
 Vector2 position;
+
 int numTaps = 0;
 
 ```csharp
@@ -4007,6 +3825,7 @@ public Game1() {
 ```
 
 // Windows Phone 的默认帧率为 30 fps。
+
 TargetElapsedTime = TimeSpan.FromTicks(333333);
 
 ```csharp
@@ -4033,7 +3852,7 @@ void OnAppServiceClosing(object sender, ClosingEventArgs args) {
 }
 ```
 
-名为 settings 的 Settings 对象被保存为一个字段。构造函数为 `PhoneApplicationService` 的四个事件绑定了处理程序，而在这些事件的处理程序中保存并加载了应用程序设置。
+名为 `settings` 的 `Settings` 对象被保存为一个字段。构造函数为 `PhoneApplicationService` 的四个事件绑定了处理程序，而在这些事件的处理程序中保存并加载了应用程序设置。
 
 `LoadContent` 重写方法并没有特别之处：
 
@@ -4108,16 +3927,13 @@ protected override void OnActivated(object sender
 
 编写 Windows Phone 7 应用的时间比我们许多人的微软工程师报告说，处理标记（tombstoning）可能是手机开发中最复杂的方面之一。我在本章中向你展示的技术提供了一个良好的起点，但所有应用程序都有略不同的需求。你肯定会在自己的程序中进行大量测试，而且确切知道程序的哪些方法被调用以及调用顺序总是有帮助。这种区别更多是概念上的，因为 `OnActivated` 和 `OnDeactivated` 与 `Game` 实例相关，因此它们应该用于与游戏相关的属性，而不是整个应用程序设置。
 
-## 第二部分 运动原理
+# 第二部分 运动原理
 
 如果你不习惯用向量的方式思考，改进初看起来似乎会让程序变得更复杂，但你会发现程序实际上变得更简单了。
 
 ## 朴素的方法
 
 对于第一次尝试运动，我想尝试一些简单的方法。我只需让文本垂直上下移动，使运动完全是在一维的。我们唯一需要担心的就是增加和减少 `textPosition` 的 Y 坐标。
-
-
-
 
 向量具有幅度和维度，但没有位置。像点一样，向量用数值对 (x, y) 表示，只不过它通常用粗体写为 **(x, y)** 以表示这是一个向量而不是点。
 
@@ -4164,6 +3980,8 @@ textPosition = new Vector2((viewport.Width - textSize.X) / 2,
 Draw(Texture2D texture, Rectangle destination, color color)
 ```
 
+
+
 你不再使用 `Vector2` 来指示纹理的位置，而是使用 `Rectangle`，它是点（左上角）、宽度和高度的组合。如果 `Rectangle` 的高度与纹理的宽度和高度不匹配，纹理将被缩放到 `Rectangle` 的大小。原始宽高比将被忽略。
 
 如果你只想显示纹理的矩形子集，可以使用 `Draw` 方法的两个稍微扩展的版本之一：
@@ -4196,7 +4014,7 @@ Draw(Texture2D texture, Vector2 position, Rectangle?, source, Color color,
 XNA 项目: CarOnlineCourse File: Game1.cs (节选)
 
 ```
-protected override void LoadContent()\{
+protected override void LoadContent(){
     spriteBatch = new SpriteBatch(GraphicsDevice);
     var car = this.Content.LoadTexture2D("Car");
     carCenter = new Vector2(car.Width / 2, car.Height / 2);
@@ -4223,16 +4041,13 @@ protected override void LoadContent()\{
 XNA 项目: CarOnlineCourse File: Game1.cs (节选)
 
 ```
-protected override void Update(GameTime gameTime)\{
+protected override void Update(GameTime gameTime){
     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
 
     float t = (SPEED * (float)gameTime.TotalGameTime.TotalSeconds) % 1;
     float angle;
 ```
-
-
-
 
 ## 第二部分 XNA
 
@@ -4272,6 +4087,7 @@ protected override void Draw(Game gameTime)
 # 第 8 章 纹理与精灵 183
 
 为了演示目的，`PolylineInterpolator` 类为了简单性牺牲了效率。
+
 以下是整个类：
 
 XNA 项目：CarOnPolylineCourse 文件：PolylineInterpolator.cs（完整）
@@ -4365,10 +4181,6 @@ Vector2 GetValue(Vector2 vertex1, Vector2 vertex2, float t,
 
 等一下：`GetValue` 有一个布尔参数，导致该方法使用 `Vector2.SmoothStep` 而不是 `Vector2.Lerp`。
 
-
-
-
-
 ## XNA 项目: CarOnOvalCourse 文件: Game1.cs (片段)
 
 请注意下面的 `Update` 方法计算了两个角度。第一个称为 `ellipseAngle`，基于 `t` 并决定了在椭圆上的位置。这是传递给椭圆参数方程的角度，用于获取作为 x 和 y 组合的位置：
@@ -4432,7 +4244,9 @@ protected override void Draw(GameTime gameTime)
 
 如果每个圆的半径为 1 个单位，整个图形宽 4 个单位，高 2 个单位。这些点的 X 坐标（从左到右）值是 0, 0.293, 1, 0.707, 2, 2.293, 3, 3.707 和 4，Y 坐标（从上到下）的值为 0, 0.293, 1, 1.707 和 2。值 0.707 只是 45 度的正弦和余弦，而 0.293 是 1 减去该值。
 
-让我们从最左侧的点开始，顺时针环绕第一个圆移动。在图形中心，我们切换到逆时针环绕第二个圆，形成一个无穷符号，并以我们开始的同一个点结束。X 值为：
+
+
+让我们从最左侧的点开始，顺时针环绕第一个圆移动。在图形中心，我们切换到逆时针环绕第二个圆，形成一个无穷符号，并以我们开始的同一个点结束。`X` 值为：
 
 1, 0.293, 1, 1.707, 2, 1.707, 0.293, 0.293, 1, 1.707, 2, 1。
 
@@ -4456,7 +4270,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-注意这两个 `Curve` 对象，一个用于 X 坐标，另一个用于 Y。由于这些对象的初始化使用了我上面描述的坐标，并且不需要访问任何资源或程序内容，我决定使用 `Initialize` 重写来完成这项工作。
+注意这两个 `Curve` 对象，一个用于 `X` 坐标，另一个用于 `Y`。由于这些对象的初始化使用了我上面描述的坐标，并且不需要访问任何资源或程序内容，我决定使用 `Initialize` 重写来完成这项工作。
 
 ### XNA 项目: CarOnInfinityCourse 文件: Game1.cs (片段)
 
@@ -4475,16 +4289,13 @@ protected override void Initialize()
 }
 ```
 
-
-
-
 计算完位置场后，我们遇到了一个小问题，因为 `Curve` 类缺少一个关键方法：提供样条切线的方法。`Curve` 类在计算样条时需要切线，但在计算完样条后，该类并没有提供对样条本身切线的访问权限！
 
 这就是另外四次调用 `GetValue` 的目的。通过对 `t` 进行微小的加减来近似导数，并允许 `Math.Atan2` 计算旋转角度。
 
 再次，`Draw` 方法是非常易的：
 
-```c
+```csharp
 XNA Project: CarOnInfinityCourse File: Game1.cs (excerpt)
 
 protected override void Draw(GameTime gameTime)
@@ -4523,7 +4334,7 @@ Texture2D texture = new Texture2D(this.GraphicsDevice, width, height);
 
 你可以单独使用这两种技术，也可以结合使用。你可以从初始图像开始，使用这些技术对其进行修改。
 
-## Render Target
+### Render Target
 
 严格来说，你不能对 `Texture2D` 对象使用两种技术中的第一种。你需要创建一个派自 `Texture2D` 的类实例，即 `RenderTarget2D`：
 
@@ -4531,7 +4342,7 @@ Texture2D texture = new Texture2D(this.GraphicsDevice, width, height);
 RenderTarget2D renderTarget = new RenderTarget2D(this.GraphicsDevice, width, height);
 ```
 
-与任何引用 Game 类Device 属性的代码一样，你会希望等到 `LoadContent` 方法再创建程序所需的任何 `Texture2D` 或 `RenderTarget2D` 对象。你通常会将这些对象存储在字段中，以便稍后在 `Draw` 重写方法中显示它们。
+与任何引用 Game 类 `Device` 属性的代码一样，你会希望等到 `LoadContent` 方法再创建程序所需的任何 `Texture2D` 或 `RenderTarget2D` 对象。你通常会将这些对象存储在字段中，以便稍后在 `Draw` 重写方法中显示它们。
 
 `RenderTarget` 的原理相当简单，但理解它需要一些背景知识：
 
@@ -4566,7 +4377,7 @@ RRRRGGGGGB
 
 绿色额外多一位是因为人类对可见光谱的中心部分最为敏感。如果你在 Windows Phone 7 设备上见过任何颜色渐变（本章中将会出现），你可能会注意到它们不像桌面显示器那样平滑。桌面显示器每个主色使用 8 位。Phone 7 显示器不足以表示人类感知的渐变。未来的 Windows 设备可能会超越16 位颜色。
 
-XNA 程序可以使用类型为 `RenderTarget2D`的对象临时替换 `GraphicsDevice` 对象中的缓冲区：
+XNA 程序可以使用类型为 `RenderTarget2D` 的对象临时替换 `GraphicsDevice` 对象中的缓冲区：
 
 ```csharp
 this.GraphicsDevice.SetRenderTarget(renderTarget);
@@ -4578,7 +4389,7 @@ this.GraphicsDevice.SetRenderTarget(renderTarget);
 this.GraphicsDevice.SetRenderTarget(null);
 ```
 
-现在 `GraphicsDevice` 恢复了正常。如果你在程序运行期间创建一个保持相同的 `RenderTarget2D`，你可以在 `LoadContent` 重写中拥有它。如果 `RenderTarget2D` 需要更改，你也可以在 `Update` 重写期间在位图上画图。因为 `RenderTarget2D` 派自 `Texture2D`，你可以在 `Draw` 重写期间在屏幕上显示 `RenderTarget2D`，就像显示任何其他 `Texture2D`图像一样。当然，你不限于一个 `RenderTarget2D` 对象。如果你有一系列形成动画的复杂图像，可以创建一系列 `RenderTarget2D` 对象，然后像电影一样顺序显示。
+现在 `GraphicsDevice` 恢复了正常。如果你在程序运行期间创建一个保持相同的 `RenderTarget2D`，你可以在 `LoadContent` 重写中拥有它。如果 `RenderTarget2D` 需要更改，你也可以在 `Update` 重写期间在位图上画图。因为 `RenderTarget2D` 派自 `Texture2D`，你可以在 `Draw` 重写期间在屏幕上显示 `RenderTarget2D`，就像显示任何其他 `Texture2D` 图像一样。当然，你不限于一个 `RenderTarget2D` 对象。如果你有一系列形成动画的复杂图像，可以创建一系列 `RenderTarget2D` 对象，然后像电影一样顺序显示。
 
 假设你想显示这样的内容：
 
@@ -4605,7 +4416,7 @@ public class Game : Microsoft.Framework.Game
 
 `LoadContent` 方法是程序中最复杂的部分，但它只是设置了 `screenCenter`、`renderTarget` 和 `textureCenter` 字段。方法早期设置的 `font` 和 `textSize` 变量通常保存为字段，但在这里只需要局部使用：
 
-## XNA Project: PinwheelText File: Game1.cs (excerpt)
+### XNA Project: PinwheelText File: Game1.cs (excerpt)
 
 ```csharp
 protected override void LoadContent()
@@ -4630,8 +4441,7 @@ protected override void LoadContent()
 }
 ```
 
-
-```c
+```csharp
 Vector2 textOrigin = new Vector2(0, textSize.Y / 2);
 
 // 将 RenderTarget2D 设置为 GraphicsDevice
@@ -4657,7 +4467,7 @@ this.GraphicsDevice.SetRenderTarget(null);
 
 `Update` 方法为生成的位图计算一个旋转角度，使其每八秒旋转 360°：
 
-## XNA 项目：PinwheelText 文件：Game1.cs (节选)
+### XNA 项目：PinwheelText 文件：Game1.cs (节选)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -4701,6 +4511,8 @@ Texture2D vertBar = Content.LoadTexture2D("VertBar");
 
 替换为：
 
+
+
 ```csharp
 RenderTarget2D horBar = new RenderTarget2D(this.GraphicsDevice, 4, 5);
 this.GraphicsDevice.SetRenderTarget(horBar);
@@ -4721,7 +4533,7 @@ this.GraphicsDevice.SetRenderTarget(null);
 
 该单一的 `RenderTarget2D` 对象被存储为一个字段，并配有一个 `RectangleInfo` 集合，用于描述每个绘制的矩形：
 
-## XNA 项目：DragAndDraw 文件：Game1.cs (字段字段节选)
+### XNA 项目：DragAndDraw 文件：Game1.cs 字段节选
 
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -4759,7 +4571,7 @@ public class Game1 : Microsoft.Xna.Framework.Game
 
 `LoadContent` 方法创建了微小的 `RenderTarget2D` 对象并将其涂为白色：
 
-## XNA 项目：DragAndDraw 文件：Game1.cs (节选)
+### XNA 项目：DragAndDraw 文件：Game1.cs 节选
 
 ```csharp
 protected override void LoadContent()
@@ -4772,13 +4584,9 @@ protected override void LoadContent()
 }
 ```
 
+## 第二部分 XNA
 
-
-
-
-第二部分 XNA
-
-传递给 `Draw` 的 `Rectangle` 对象需要一个指示左上角的点，且宽度和高度值必须为非负。（实际上，`Rectangle` 也接受指示右下角的点，且宽度和高度值为负数，但这一事实并不能简化逻辑。）这就是调用 `Math.Min` 和 `Math.Abs` 的目的所在：
+传递给 `Draw` 的 `Rectangle` 对象需要一个指示左上角的点，且宽度和高度值必须为非负。实际上，`Rectangle` 也接受指示右下角的点，且宽度和高度值为负数，但这一事实并不能简化逻辑。这就是调用 `Math.Min` 和 `Math.Abs` 的目的所在：
 
 ```
 XNA Project: DragAndDraw File: Game1.cs (excerpt)
@@ -4830,7 +4638,7 @@ protected override void Draw(GameTime gameTime)
 
 这两个位图与一个 `Random` 对象一起作为文件形式存储在 `RandomRectangles` 程序中：
 
-> XNA Project: RandomRectangles File: Game1.cs (显示字段的片段)
+> XNA Project: RandomRectangles File: Game1.cs 显示字段的片段
 
 ```
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -4846,11 +4654,11 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
 `LoadContent` 方法创建了两个 `RenderTarget2D` 对象。较大的那个需要一个复杂的构造函数，其中一些参数引用了本书范围之外的功能：
 
-> XNA Project: RandomRectangles File: Game1.cs (excerpt)
+> XNA Project: RandomRectangles File: Game1.cs excerpt
 
 ```
 protected override void LoadContent()
@@ -4874,13 +4682,13 @@ protected override void LoadContent()
 
 你可以在构造函数看到对 `BackBuffer` 的引用，但也要注意最后一个参数：枚举成员 `RenderTargetUsage.PreserveContents`。这并不是默认选项。通常当在 `GraphicsDevice` 中设置 `RenderTarget2D` 时，位图的现有内容会被忽略并实质上丢弃。`PreserveContents` 选项保留位图的现有内容并允许你在其上方进行绘制。`Update` 方法确定坐标，而 `Draw` 调用使用 `RenderTarget2D` 显示矩形。
 
-# 第二部分 XNA
+## 第二部分 XNA
 
-## 绘制线条
+### 绘制线条
 
 对于来自更多图形化编程环境的开发者来说，他们开始意识到 XNA 没有办法在 2D 中渲染简单的线条和曲线。在本章中，我将向你展示如何克服这一限制。
 
-假设你想在点 (x₁, y₁) 和 (x₂, y₂) 之间画一条线，并且希望这条线具有 3 像素的厚度。首先，创建一个高度为 3 像素的 `RenderTarget2D`，宽度为：
+假设你想在点 `(x₁, y₁)` 和 `(x₂, y₂)` 之间画一条线，并且希望这条线具有 3 像素的厚度。首先，创建一个高度为 3 像素的 `RenderTarget2D`，宽度为：
 
 ```
 sqrt((x₂ - x₁)² + (y₂ - y₁)²)
@@ -4888,9 +4696,9 @@ sqrt((x₂ - x₁)² + (y₂ - y₁)²)
 
 这是点之间线条的长度。现在将 `RenderTarget2D` 设置为 `GraphicsDevice`，用 `Color.Red` 将其清空，并将 `GraphicsDevice` 重置为正常。
 
-在 `Draw` 重写期间，使用位置 (x₁, y₁) 和原点 (0, 1) 将此位图绘制到屏幕上。原点是 `RenderTarget2D` 内部与位置参数对齐的点。这条线应该具有 3 像素的厚度，因此位图的垂直中心线应该与 (x₁, y₁) 对齐。
+在 `Draw` 重写期间，使用位置 `(x₁, y₁)` 和原点 `(0, 1)` 将此位图绘制到屏幕上。原点是 `RenderTarget2D` 内部与位置参数对齐的点。这条线应该具有 3 像素的厚度，因此位图的垂直中心线应该与 `(x₁, y₁)` 对齐。
 
-实际上，你不需要映射一个与线条大小相同的位图。你可以使用一个小得多的位图并应用缩放因子。为了此目的最简单的位图是 2 像素宽、3 像素高。这允许你在 `Draw` 调用中设置原点为 (0, 1)，这意味着位图中的点 (0, 1) 固定不变。水平缩放因子随后增强位图以匹配长度，而垂直缩放因子则处理厚度。
+实际上，你不需要映射一个与线条大小相同的位图。你可以使用一个小得多的位图并应用缩放因子。为了此目的最简单的位图是 2 像素宽、3 像素高。这允许你在 `Draw` 调用中设置原点为 `(0, 1)`，这意味着位图中的点 `(0, 1)` 固定不变。水平缩放因子随后增强位图以匹配长度，而垂直缩放因子则处理厚度。
 
 我在 XNA 库项目 `Petzold.Phone` 中有这样一个类。我在 Visual Studio 中通过选择项目类型 `Windows Phone Game Library (4.0)` 创建了该项目。以下是我称为 `LineRenderer` 的完整类：
 
@@ -4901,10 +4709,6 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 ```
-
-
-
-
 
 # 第 9 章 动态纹理 207
 
@@ -4944,7 +4748,7 @@ namespace Petzold.Phone.Xna
 
 要在任何项目中使用它，你需要构建该库项目。然后，在任何常规的 XNA 项目中，你可以在解决方案管理器中右键点击“引用”部分并选择“添加引用”。在“添加引用”对话框中，选择“浏览”标签。导航到 `Petzold.Phone.Xna.dll` 所在的目录并选择它。
 
-在代码文件中，你需要一个使用 指令：
+在代码文件中，你需要一个使用指令：
 
 ```cs
 using Petzold.Phone.Xna;
@@ -4958,7 +4762,9 @@ using Petzold.Phone.Xna;
 
 `Game1` 类拥有 `LineRenderer` 字段以及一些有用的变量。
 
-# XNA 项目：TapForPolygon 文件：Game1.cs (显示字段的片段)
+# XNA 项目：TapForPolygon 文件：Game1.cs 显示字段的片段
+
+
 
 ```cs
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -4986,9 +4792,9 @@ public class Game1 : Microsoft.Xna.Framework.Game
 ...
 ```
 
-注意在构造函数中启用了 Tap 点击手势。该 `LineRenderer` 是在 `LoadContent` 重写中创建的。
+注意在构造函数中启用了 `Tap` 点击手势。该 `LineRenderer` 是在 `LoadContent` 重写中创建的。
 
-# XNA 项目：TapForPolygon 文件：Game1.cs (片段)
+### XNA 项目：TapForPolygon 文件：Game1.cs (片段)
 
 ```cs
 protected override void LoadContent()
@@ -5006,7 +4812,7 @@ protected override void LoadContent()
 
 `Update` 重写负责判断是否发生了点击；如果是，则 `vertexCount` 会增加，如上所示，从（例如）六边形变为七边形。
 
-# XNA 项目：TapForPolygon 文件：Game1.cs (片段)
+### XNA 项目：TapForPolygon 文件：Game1.cs (片段)
 
 ```cs
 protected override void Update(GameTime gameTime)
@@ -5028,7 +4834,7 @@ protected override void Update(GameTime gameTime)
 
 线条——实际上只是拉伸成长线形状的 `RenderTarget2D` 对象——在 `Draw` 重写中渲染。`for` 循环基于 `vertexCount`；它每次迭代绘制两条线：一条从中心到顶点的，另一条从上一个顶点到当前顶点的：
 
-# XNA 项目：TapForPolygon 文件：Game1.cs (片段)
+### XNA 项目：TapForPolygon 文件：Game1.cs (片段)
 
 ```cs
 protected override void Draw(GameTime gameTime)
@@ -5040,7 +4846,7 @@ protected override void Draw(GameTime gameTime)
     Vector2 saved = new Vector2();
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
 ```cs
 for (int vertex = 0; vertex < vertexCount; vertex++)
@@ -5062,11 +4868,11 @@ base.Draw(gameTime);
 
 名为 `Target` 的 `RenderTarget2D` 对象被用作“画布”，你可以在上面用手指绘画。它在 `LoadContent` 方法中创建，大小与后缓冲区相同，且颜色相同，以保留内容：
 
-# 第 9 章 动态纹理 211
+## 第 9 章 动态纹理 211
 
-注意只启用了 FreeDrag 自由拖动手势。每个手势都会导致绘制一条与前一条线连接的新线。
+注意只启用了 `FreeDrag` 自由拖动手势。每个手势都会导致绘制一条与前一条线连接的新线。
 
-# XNA 项目：FlawedPaint 文件：Game1.cs (字段片段)
+### XNA 项目：FlawedPaint 文件：Game1.cs (字段片段)
 
 ```cs
 public class Gamel : Microsoft.Xna.Framework.Game
@@ -5091,7 +4897,7 @@ public class Gamel : Microsoft.Xna.Framework.Game
 }
 ```
 
-# XNA 项目：FlawedPaint 文件：Game1.cs (片段)
+### XNA 项目：FlawedPaint 文件：Game1.cs (片段)
 
 ```cs
 protected override void LoadContent()
@@ -5117,7 +4923,7 @@ protected override void LoadContent()
 
 `LoadContent` 重写同样创建了 `LineRenderer` 对象。
 
-你可能记得 FreeDrag 手势伴随着一个 `Position` 属性，指示手指当前的位置，以及一个 `Delta` 属性，它是手指当前位置与上一个位置之间的差异。上位置可以通过从 `Position` 中减去 `Delta` 来计算，这两个点用于在 `RenderTarget2D` 画布上绘制一条短线：
+你可能记得 `FreeDrag` 手势伴随着一个 `Position` 属性，指示手指当前的位置，以及一个 `Delta` 属性，它是手指当前位置与上一个位置之间的差异。上位置可以通过从 `Position` 中减去 `Delta` 来计算，这两个点用于在 `RenderTarget2D` 画布上绘制一条短线：
 
 ```cs
 protected override void Update(GameTime gameTime)
@@ -5130,10 +4936,6 @@ protected override void Update(GameTime gameTime)
     {
         GestureSample gesture = TouchPanel.ReadGesture();
 ```
-
-
-
-
 
 ## 212 第二部分 XNA
 
@@ -5152,7 +4954,7 @@ if (gesture.GestureType == GestureType.FreeDrag &&
 
 base.Update(gameTime);
 
-Draw 重写只需要将画布绘制在显示器上：
+`Draw` 重写只需要将画布绘制在显示器上：
 
 > XNA 项目: FlawedFingerPaint 文件: Game1.cs (节选)
 
@@ -5197,55 +4999,55 @@ protected override void Draw(GameTime gameTime)
 Texture2D texture = new Texture2D(this.GraphicsDevice, width, height);
 ```
 
-作为后缓冲区和 RenderTarget2D，每个像素位与特定颜对应关系由 *SurfaceFormat* 枚举的一个成员指示。使用此简单构造函数创建的 *Texture2D* 将具有 *Format* 属性为 *SurfaceFormat.Color*，这意味着每个像素都由 4 个字节（或 32 位）数据组成，每个字节分别用于红、绿、蓝值，另一个字节用于 alpha 通道（即该像素的透明度）。
+作为后缓冲区和 `RenderTarget2D`，每个像素位与特定颜对应关系由 `SurfaceFormat` 枚举的一个成员指示。使用此简单构造函数创建的 `Texture2D` 将具有 `Format` 属性为 `SurfaceFormat.Color`，这意味着每个像素都由 4 个字节（或 32 位）数据组成，每个字节分别用于红、绿、蓝值，另一个字节用于 alpha 通道（即该像素的透明度）。
 
 ## 第二部分 XNA
 
-同样可能（而且非常方便）将每个像素视为 32 位无符号整数，这在 C# 中是 uint。颜色以该 uint 的 8 位十六进制值形式出现，如下：
+同样可能（而且非常方便）将每个像素视为 32 位无符号整数，这在 C# 中是 `uint`。颜色以该 `uint` 的 8 位十六进制值形式出现，如下：
 
 AABBGGGR
 
-每个字母代表 4 位。如果你有一个作为内容加载或如上述创建的 Texture2D，它具有 SurfaceFormat.Color 的 Format 属性，你可以通过先创建一个足够大的、能容纳所有像素的 uint 类型数组，来获取位图的所有像素：
+每个字母代表 4 位。如果你有一个作为内容加载或如上述创建的 `Texture2D`，它具有 `SurfaceFormat.Color` 的 `Format` 属性，你可以通过先创建一个足够大的、能容纳所有像素的 `uint` 类型数组，来获取位图的所有像素：
 
 ```csharp
 uint[] pixels = new uint[texture.width * texture.height];
 ```
 
-然后你像下面将 Texture2D 的所有像素传输到数组中：
+然后你像下面将 `Texture2D` 的所有像素传输到数组中：
 
 ```csharp
 texture.GetData<uint>(pixels);
 ```
 
-GetData 是一个泛型方法，你只需要指定数组的数据类型。GetData 的重载允许你获取与位图矩形子集对应的像素，或者通过像素数组中的偏移量开始获取。
+`GetData` 是一个泛型方法，你只需要指定数组的数据类型。`GetData` 的重载允许你获取与位图矩形子集对应的像素，或者通过像素数组中的偏移量开始获取。
 
-由于 RenderTarget2D 派生自 Texture2D，你也可以对 RenderTarget2D 对象使用这种技术。
+由于 `RenderTarget2D` 派生自 `Texture2D`，你也可以对 `RenderTarget2D` 对象使用这种技术。
 
-你也可以反过来，将 pixels 数组中的数据传输回位图：
+你也可以反过来，将 `pixels` 数组中的数据传输回位图：
 
 ```csharp
 texture.Set<uint>(pixels);
 ```
 
-pixels 数组中的像素按行排列，从顶行开始。每行的像素从左到右排列。对于位图中特定的行 y 和列 x，你可以使用简单的公式对像素数组索引：
+`pixels` 数组中的像素按行排列，从顶行开始。每行的像素从左到右排列。对于位图中特定的行 `y` 和列 `x`，你可以使用简单的公式对像素数组索引：
 
 ```csharp
 pixels[y * texture.width + x]
 ```
 
-Color 结构体一个非常方便的属性是 PackedValue。它将 Color 对象转换为此数组所需的精确格式的 uint，例如：
+`Color` 结构体一个非常方便的属性是 `PackedValue`。它将 `Color` 对象转换为此数组所需的精确格式的 `uint`，例如：
 
 ```csharp
 pixels[y * texture.width + x] = Color.Fuchsia.PackedValue;
 ```
 
-事实上，Color 和 uint 的关系非常紧密，你也可以创建一个类型为的 pixels 数组：
+事实上，`Color` 和 `uint` 的关系非常紧密，你也可以创建一个类型为的 `pixels` 数组：
 
 ```csharp
 Color[] pixels = new Color[texture.width * texture.height];
 ```
 
-然后你可以配合 GetData 使用该数组：
+然后你可以配合 `GetData` 使用该数组：
 
 ```csharp
 texture.GetData<Color>(pixels);
@@ -5255,7 +5057,7 @@ texture.GetData<Color>(pixels);
 
 ## 216 第二部分 XNA
 
-让我们来看一个简单的例子。假设你想要一个背景，它由从左到右的蓝色渐变组成。渐变的插值是通过基于 x 值的 Lerp 方法实现的：
+让我们来看一个简单的例子。假设你想要一个背景，它由从左到右的蓝色渐变组成。渐变的插值是通过基于 `x` 值的 `Lerp` 方法实现的：
 
 ```csharp
 for (int x = 0; x < background.Width; x++)
@@ -5268,9 +5070,9 @@ for (int x = 0; x < background.Width; x++)
 background.SetData<Color>(pixels);
 ```
 
-在用数据填充 pixels 数组后不要忘记调用 SetData！假设 Texture2D 和数组之间存在某种后台绑定是令人愉快的，但实际上并没有那回事。
+在用数据填充 `pixels` 数组后不要忘记调用 `SetData`！假设 `Texture2D` 和数组之间存在某种后台绑定是令人愉快的，但实际上并没有那回事。
 
-Draw 方法只是像常一样绘制 Texture2D：
+`Draw` 方法只是像常一样绘制 `Texture2D`：
 
 > XNA 项目: GradientBackground 文件: Game.cs (节选)
 
@@ -5291,7 +5093,7 @@ protected override void Draw(GameTime gameTime)
 
 虽然代码似乎在纯蓝色和纯红色之间有很多种渐变，但 Windows Phone 7 视频显示的 16 位色彩分辨率清晰显示有 32 个带。
 
-对于这个例子，由于 Texture2D 从上到下都是相同的，没有那么多行。事实上，你可以只创建一个一行的背景对象：
+对于这个例子，由于 `Texture2D` 从上到下都是相同的，没有那么多行。事实上，你可以只创建一个一行的背景对象：
 
 ```csharp
 background = new Texture2D(this.GraphicsDevice, viewportBounds.Width, 1);
@@ -5300,6 +5102,8 @@ background = new Texture2D(this.GraphicsDevice, viewportBounds.Width, 1);
 这些是文件：
 
 > XNA 项目: GradientBackground 文件: Game.cs (节选)
+
+
 
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -5323,9 +5127,6 @@ protected override void LoadContent()
     Color[] pixels = new Color[background.Width * background.Height];
 }
 ```
-
-
-
 
 由于 `LoadContent` 中的其他代码是基于 `background.Width` 和 `background.Height` 属性的，因此不需要更改其他内容（尽管循环可以简化）。在 `Draw` 方法中，位图会被拉伸以适应 `Rectangle`：
 
@@ -5357,7 +5158,7 @@ tinyTexture.SetData<Color>(new Color[] { Color.White });
 
 这条几何线的厚度为零，但渲染后的线条具有非零厚度，我们假设厚度为 2R 像素。（R 代表半径，很快你就会理解为什么我用这个术语来考虑它）。你实际上想画的是一个矩形，其中 `pt1` 和 `pt2` 向两侧各扩展 R 个像素：
 
-## 第二部分 XNA
+### 第二部分 XNA
 
 这些角点是如何计算的呢？嗯，使用向量其实非常简单。让我们计算从 `pt1` 到 `pt2` 的归一化向量并对其归一化：
 
@@ -5439,9 +5240,6 @@ x = xc ± R² - (y - yc)²
 如果平方根下为负数，那么 y 完全在圆之外。否则（通常情况下）每个 y 有两个 x 值。唯一的例外是平方根为零时，即 y 正好距离 `yc` R 单位之时，那是圆的顶部和底部点。
 
 我们处理的是半圆，所以会稍微复杂一点，但并不多。考虑图顶部的半圆。中心是 `pt1`，以及从 `pt1` 到 `pt1a` 的半圆。从 `pt1` 到 `pt1b` 的线形成一个角度 `angle1`，可以通过 `Math.Atan2` 计算。同样，从 `pt1` 到 `pt1` 的线也有一个 `angle2`。如果点 (x, y) 如上所述计算的在圆上，它形成了一个相对于中心 `pt1` 的角度。如果该角度在 `angle1` 和 `angle2` 之间，则该点在半圆上。（这种对“之间”的判断变得稍微复杂，因为 `Math.Atan2` 返回的角度会从 π 绕回到 —π）。
-
-
-
 
 # 第二部分 XNA
 
@@ -5539,7 +5337,7 @@ public RoundCappedLine(Vector2 point1, Vector2 point2, float radius)
 
 在实际程序中使用这些结构并没有使用 `Renderer` 类那么简单。该技术在 BetterFinger 项目中得到了演示。字段包括一个用于绘制的 `Texture2D`、该纹理的像素数组，以及一个用于传递线条绘制结构的可重用 `float` 对象集合。
 
-# XNA Project: BetterFingerPaint File: Game1.cs (显示的片段)
+## XNA Project: BetterFingerPaint File: Game1.cs (显示的片段)
 
 ```csharp
 public class Game1 : Microsoft.Framework.Game
@@ -5570,7 +5368,7 @@ public class Game1 : Microsoft.Framework.Game
 
 `LoadContent` 重写方法创建了这个屏幕大小的 `Texture2D`，然后用 `Color.Navy` 像素对其初始化：
 
-## XNA Project: BetterFingerPaint File: Game1.cs (片段)
+### XNA Project: BetterFingerPaint File: Game1.cs (片段)
 
 ```csharp
 protected override void LoadContent()
@@ -5595,6 +5393,8 @@ protected override void LoadContent()
 `Update` 重写方法中的关键调用是调用 `RoundedCappedLine` 构造函数，传入点和半径（半径是线条厚度的一半）。随后，程序可以遍历画布上所有的 Y 值，调用 `RoundedCappedLine` 对象的 `GetAllX` 方法，并填充集合中 x 值之间的区域。然而，该程序尝试将循环方法调用限制在可能受特定手势影响的 X 和 Y 值上。
 
 ## XNA Project: BetterFingerPaint File: Game1.cs (片段)
+
+
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -5642,15 +5442,11 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-
-
-
-
 # 第 9 章 动态纹理 227
 
-类型为 Rectangle 的矩形参数将更新范围限制在 Texture2D 内的特定矩形区域。`startIndex` 指向 *pixels* 数组的索引，但 `count` 必须等于 *rectangle* 宽度和高度的乘积。该方法假设从 *startIndex* 开始的 *count* 个像素属于该矩形区域。
+类型为 `Rectangle` 的矩形参数将更新范围限制在 `Texture2D` 内的特定矩形区域。`startIndex` 指向 *pixels* 数组的索引，但 `count` 必须等于 *rectangle* 宽度和高度的乘积。该方法假设从 *startIndex* 开始的 *count* 个像素属于该矩形区域。
 
-如果你正在处理一个对应于整个 Texture2D 的单个 *pixels* 数组，并且不想限制在某个矩形区域进行更新，那么你无法灵活地指定任何你想要的矩形，因为 *pixels* 数组中的像素行仍然是基于 *Texture2D* 的全宽排列的。这意味着矩形的宽度必须与 *Texture2D* 的宽度相同。简而言之，你只能将 *SetData* 调用限制为一个或多个整行。这就是为什么你的代码保留了 *yminUpdate* 和 *yMaxUpdate*，而没有保留 X 轴的等效值。
+如果你正在处理一个对应于整个 `Texture2D` 的单个 *pixels* 数组，并且不想限制在某个矩形区域进行更新，那么你无法灵活地指定任何你想要的矩形，因为 *pixels* 数组中的像素行仍然是基于 *Texture2D* 的全宽排列的。这意味着矩形的宽度必须与 *Texture2D* 的宽度相同。简而言之，你只能将 *SetData* 调用限制为一个或多个整行。这就是为什么你的代码保留了 *yminUpdate* 和 *yMaxUpdate*，而没有保留 X 轴的等效值。
 
 在上面显示的 *Update* 方法中，你还会在调用 *SetData* 之前看到此调用：
 
@@ -5663,7 +5459,9 @@ this.GraphicsDevice.Textures[] = null;
 *Draw* 覆盖方法非常简单：
 
 | XNA 项目: BetterFingerPaint 文件: Game1.cs (节选) |
+
 | :--- |
+
 ```c
 protected override void Draw(GameTime gameTime)
 {
@@ -5698,7 +5496,7 @@ public Game1()
 }
 ```
 
-我只会向你展示 *Update* 覆盖方法的一部分，因为其余部分与之前相同。该方法本质上是枚举了从 TouchPanel.GetState 调用获取的 TouchCollection。该集合包含了多个手指触摸屏幕、移动和抬起屏幕的 TouchLocation 对象，程序只对移动感兴趣。它不需要跟踪多个手指。它所做的就是获取一个特定的触摸点，通过 GetPreviousLocation 获取该手指的上一个触摸点，并在这些点之间画一条线：
+我只会向你展示 *Update* 覆盖方法的一部分，因为其余部分与之前相同。该方法本质上是枚举了从 `TouchPanel.GetState` 调用获取的 `TouchCollection`。该集合包含了多个手指触摸屏幕、移动和抬起屏幕的 `TouchLocation` 对象，程序只对移动感兴趣。它不需要跟踪多个手指。它所做的就是获取一个特定的触摸点，通过 `GetPreviousLocation` 获取该手指的上一个触摸点，并在这些点之间画一条线：
 
 # XNA 项目: MultiFingerPaint 文件: Game1.cs (节选)
 
@@ -5718,15 +5516,23 @@ protected void Update(GameTime gameTime)
 ```
 
 if (touch.State == TouchLocation.Moved)
+
 {
+
     TouchLocation previousTouch;
+
     touch.GetPreviousLocation(out previousTouch);
+
     Vector2 point1 = previousTouch.Position;
+
     Vector2 point2 = touch.Position;
+
     float radius = 12;
 
     RoundCappedLine line = new RoundCappedLine(point1, point2, radius);
+
 }
+
 ```
 
 这里是同时四个手指的情况：
@@ -5735,91 +5541,126 @@ if (touch.State == TouchLocation.Moved)
 
 ## 修改现有图像
 
-你可以通过对“源”Texture2D 调用 GetData 来修改图像，然后通过算法修改像素并使用 SetData 将其传输到“目标”Texture2D。这在 RippleEffect 项目中所示。源 Texture2D 是从网站复制的位图。程序修改像素，使得图像具有横向移动的波浪：
+你可以通过对“源”`Texture2D` 调用 `GetData` 来修改图像，然后通过算法修改像素并使用 `SetData` 将其传输到“目标”`Texture2D`。这在 RippleEffect 项目中所示。源 `Texture2D` 是从网站复制的位图。程序修改像素，使得图像具有横向移动的波浪：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_243_1.png)
 
-程序的字段存储了源（src）和目标（dst）Texture2D 对象以及对应的像素数组：
+程序的字段存储了源（src）和目标（dst）`Texture2D` 对象以及对应的像素数组：
 
 # XNA 项目: RippleEffect 文件: Game1.cs (字段节选)
 
 ```c
+
 public class Game : Microsoft.Xna.Framework.Game
+
 {
+
     GraphicsDevice graphics;
+
     SpriteBatch spriteBatch;
 
     const int RIPPLE = 10;
+
     Texture2d srcTexture;
+
     Texture2d dstTexture;
+
     uint[] srcPixels;
+
     uint[] dstPixels;
+
     Vector2 position;
 
     ..
+
 }
+
 ```
 
 该常量表示源位图中的像素将上下移动 10 像素。这既用于从源像素计算目标像素的算法，也用于确定目标图像必须比源图像大多少。
 
-LoadContent 从程序内容加载 srcTexture，并将像素复制到 srcPixels 数组中。dstTexture 比 srcTexture 高 20 像素；为目标像素分配了数组，但尚未对其进行任何操作：
+`LoadContent` 从程序内容加载 `srcTexture`，并将像素复制到 `srcPixels` 数组中。`dstTexture` 比 `srcTexture` 高 20 像素；为目标像素分配了数组，但尚未对其进行任何操作：
 
 # XNA 项目: RippleEffect 文件: Game1.cs (节选)
 
 ```c
+
 protected override void LoadContent()
+
 {
+
     // 创建一个新的 SpriteBatch，可用于绘制纹理。
+
     spriteBatch = new SpriteBatch(GraphicsDevice);
 
     srcTexture = this.Content.Load<Texture2D>("PetoldTattoo");
+
     srcPixels = new uint[srcTexture.Width * srcTexture.Height];
+
     srcTexture.GetData(srcPixels);
 
     dstTexture = new Texture2D(GraphicsDevice, srcTexture.Width, srcTexture.Height + 20);
+
     dstPixels = new uint[dstTexture.Width * dstTexture.Height];
 
     Viewport viewport = GraphicsDevice.Viewport;
+
     position = new Vector2((viewport.Width - dstTexture.Width) / 2, (viewport.Height - dstTexture.Height) / 2);
+
 }
+
 ```
 
 
 ```cs
+
 dstPixels[dstIndex] = srcPixels[srcIndex];
+
 }
+
   this.GraphicsDevice.Textures[0] = null;
+
   dstTexture.SetData((uint*)dstPixels);
+
   base.Update(gameTime);
+
 }
+
 ```
 
-在这个 Update 重写中，srcTexture 仅用于判断 yDst 是否超出了位图的底一行；显然，我本保存行数并丢弃实际的 srcTexture 图像。
+在这个 `Update` 重写中，`srcTexture` 仅用于判断 `yDst` 是否超出了位图的底一行；显然，我本保存行数并丢弃实际的 `srcTexture` 图像。
 
-Update 重写以从数组中的像素更新 dstTexture 结束，而 Draw 重写只是简单地显示该图像：
+`Update` 重写以从数组中的像素更新 `dstTexture` 结束，而 `Draw` 重写只是简单地显示该图像：
 
 ## XNA 项目：RippleEffect 文件：Game1.cs (节选)
 
 ```cs
+
 protected override void Draw(GameTime gameTime)
+
 {
+
   GraphicsDevice.Clear(Color.Navy);
 
   spriteBatch.Begin();
+
   spriteBatch.Draw(dstTexture, position, Color.White);
+
   spriteBatch.End();
 
   base.Draw(gameTime);
+
 }
+
 ```
 
 虽然这个程序只修改了坐标，但类似的程序可以修改像素的实际颜色值。还可以基于多个源像素生成目标像素以实现过滤效果。
 
-但如果你在每次 Update 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 SetData 都需要不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
+但如果你在每次 `Update` 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 `SetData` 都需要不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
 
 在下一章中，我将向你展示如何在第二个执行线程中通过算法计算像素。
 
-## 第 10 章
+# 第 10 章
 
 ## 从手势到变换 (From Gestures to Transforms)
 
@@ -5827,72 +5668,79 @@ Windows Phone 7 应用程序用户输入的主要手段是触摸。Windows Phone
 
 正如你所见到的，XNA 程序员具有获取触摸输入的两种基本方法。通过底层的 `TouchPanel.GetState` 方法，程序可以跟踪单个手指——每个手指由一个 ID 数字识别——在它们触摸屏幕、移动和抬起的过程。`TouchPanel.ReadGesture` 方法提供了一个稍高级的接口，允许对惯性以及以“捏合”（pinch）和“拉伸”（stretch）手势形式的双指操作进行粗略处理。
 
-## 手势与属性 (Gestures and Properties)
+### 手势与属性 (Gestures and Properties)
 
-TouchPanel 类支持的各种手势对应于 `GestureType` 枚举的成员：
+`TouchPanel` 类支持的各种手势对应于 `GestureType` 枚举的成员：
 
-- Tap（轻点）：快速触摸并抬起
-- DoubleTap（双击）：两次连续点击中的第二次
-- Hold（长按）：按住一秒
-- FreeDrag（自由拖动）：在屏幕上移动手指
-- HorizontalDrag（水平拖动）：FreeDrag 的水平分
-- VerticalDrag（垂直拖动）：FreeDrag 的垂直分
-- DragComplete（拖动完成）：手指抬离屏幕
-- Flick（快速滑动）：单指滑动运动
-- Pinch（捏合）：两个手指相互靠近或分开
-- PinchComplete（捏合完成）：手指抬离屏幕
+- `Tap`（轻点）：快速触摸并抬起
+- `DoubleTap`（双击）：两次连续点击中的第二次
+- `Hold`（长按）：按住一秒
+- `FreeDrag`（自由拖动）：在屏幕上移动手指
+- `HorizontalDrag`（水平拖动）：`FreeDrag` 的水平分
+- `VerticalDrag`（垂直拖动）：`FreeDrag` 的垂直分
+- `DragComplete`（拖动完成）：手指抬离屏幕
+- `Flick`（快速滑动）：单指滑动运动
+- `Pinch`（捏合）：两个手指相互靠近或分开
+- `PinchComplete`（捏合完成）：手指抬离屏幕
 
-要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 Game 类的 Update 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
+要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 `Game` 类的 `Update` 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
 
-## 第二部分 XNA
+`GestureSample` 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
 
-GestureSample 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
+- `Position` 除 `Flick` 之外对所有手势均有效。
+- `Delta` 对所有 `Drag` 手势、`Pinch` 和 `Flick` 都有效。
+- `Position2` 和 `Delta2` 仅对 `Pinch` 有效。
 
-- Position 除 Flick 之外对所有手势均有效。
-- Delta 对所有 Drag 手势、Pinch 和 Flick 都有效。
-- Position2 和 Delta2 仅对 Pinch 有效。
+`Position` 属性指示手指相对于屏幕的当前位置。`Delta` 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 `GestureSample` 类型对象，
 
-Position 属性指示手指相对于屏幕的当前位置。Delta 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 GestureSample 类型对象，
+`Vector2 previousPosition = gestureSample.Position - gestureSample.Delta;`
 
-Vector2 previousPosition = gestureSample.Position - gestureSample.Delta;
+当第一个手指触摸屏幕或手指静止时，`Delta` 向量等于为零。
 
-当第一个手指触摸屏幕或手指静止时，Delta 向量等于为零。
+假设你只对拖动操作感兴趣，并且启用了 `FreeDrag` 和 `DragComplete` 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 `DragComplete` 之后保存来自 `FreeDrag` 的值并将其与随后的 `Position` 值进行比较，要么将 `Delta` 值累加到一个运行总和中。
 
-假设你只对拖动操作感兴趣，并且启用了 FreeDrag 和 DragComplete 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 DragComplete 之后保存来自 FreeDrag 的值并将其与随后的 Position 值进行比较，要么将 Delta 值累加到一个运行总和中。
+让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 `Texture2D` 并维护其位置：
 
-让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 Texture2D 并维护其位置：
-
-> XNA 项目：OneFingerDrag 文件：Game1.cs (显示字段的节选)
+> XNA 项目：OneFingerDrag 文件: Game1.cs (显示字段的节选)
 
 ```cs
+
 public class Game1 : Microsoft.Xna.Framework.Game
+
 {
+
     GraphicsDevice graphics;
+
     SpriteBatch spriteBatch;
 
     Texture2D texture;
+
     Vector2 texturePosition = Vector2.Zero;
 
     public Game1()
+
     {
+
         graphics = new GraphicsDevice(this);
+
         Content.RootDirectory = "Content";
 
-        // Windows Phone 默认帧率为 30 fps。
-        TargetElapsedTime = TimeSpan.FromTicks(333333);
 
-        TouchPanel.EnabledGestures = GestureType.FreeDrag;
-    }
-    ...
+
 ```
+// Windows Phone 默认帧率为 30 fps。
+TargetElapsedTime = TimeSpan.FromTicks(333333);
+TouchPanel.EnabledGestures = GestureType.FreeDrag;
+}
+...
+```
+# 第 10 章 从手势到变换
 
-## 第 10 章 从手势到变换
+注意构造函数底部启用的 `FreeDrag` 手势。
 
-注意构造函数底部启用的 FreeDrag 手势。
+`LoadContent` 重写加载了与上一章中 `RippleEffect` 项目使用的相同的 `Texture2D`。
 
-LoadContent 重写加载了与上一章中 RippleEffect 项目使用的相同的 Texture2D。
-
-> XNA 项目：OneFingerDrag 文件：Game1.cs (节选)
+> XNA 项目：`OneFingerDrag` 文件：`Game1.cs` (节选)
 
 ```cs
 protected override void LoadContent()
@@ -5900,7 +5748,6 @@ protected override void LoadContent()
     texture = Content.Load<Texture2D>("ripple");
     spriteBatch = new SpriteBatch(GraphicsDevice);
 }
-
 protected override void Update(GameTime gameTime)
 {
     GestureSample sample = TouchPanel.ReadGesture();
@@ -5917,43 +5764,38 @@ protected override void Update(GameTime gameTime)
     }
     base.Update(gameTime);
 }
-
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.Navy);
-
     spriteBatch.Begin();
     spriteBatch.Draw(texture, texturePosition, Color.White);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
 
 ## 第二部分 XNA
 
-Update 重写以从数组中的像素更新 dstTexture 结束，而 Draw 重写只是简单地显示该图像：
+`Update` 重写以从数组中的像素更新 `dstTexture` 结束，而 `Draw` 重写只是简单地显示该图像：
 
 ```cs
 protected override void Draw(GameTime gameTime)
 {
   GraphicsDevice.Clear(Color.Navy);
-
   spriteBatch.Begin();
   spriteBatch.Draw(dstTexture, position, Color.White);
   spriteBatch.End();
-
   base.Draw(gameTime);
 }
 ```
 
 虽然这个程序只修改了坐标，但类似的程序可以修改像素的实际颜色值。还可以基于多个源像素生成目标像素以实现过滤效果。
 
-但如果你在每次 Update 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 SetData 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
+但如果你在每次 `Update` 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 `SetData` 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
 
 在下一章中，我将向你展示如何在第二个执行线程中通过算法计算像素。
 
-## 第10 章
+# 第10 章
 
 从手势到变换
 
@@ -5961,72 +5803,71 @@ Windows Phone 7 应用程序用户输入的主要手段是触摸。Windows Phone
 
 正如你所见到的，XNA 程序员具有获取触摸输入的两种基本方法。通过底层的 `TouchPanel.GetState` 方法，程序可以跟踪单个手指——每个手指由一个 ID 数字识别——在它们触摸屏幕、移动和抬起的过程。`TouchPanel.ReadGesture` 方法提供了一个稍高级的接口，允许对惯性以及以“捏合”（pinch）和“拉伸”（stretch）手势形式的双指操作进行粗略处理。
 
-手势与属性
+### 手势与属性
 
-TouchPanel 类支持的各种手势对应于 `GestureType` 枚举的成员：
+`TouchPanel` 类支持的各种手势对应于 `GestureType` 枚举的成员：
 
-- Tap（轻点）：快速触摸并抬起
-- DoubleTap（双击）：两次连续点击中的第二次
-- Hold（长按）：按住一秒
-- FreeDrag（自由拖动）：在屏幕上移动手指
-- HorizontalDrag（水平拖动）：FreeDrag 的水平分
-- VerticalDrag（垂直拖动）：FreeDrag 的垂直分
-- DragComplete（拖动完成）：手指抬离屏幕
-- Flick（快速滑动）：单指滑动运动
-- Pinch（捏合）：两个手指相互靠近或分开
-- PinchComplete（捏合完成）：手指抬离屏幕
+- `Tap`（轻点）：快速触摸并抬起
+- `DoubleTap`（双击）：两次连续点击中的第二次
+- `Hold`（长按）：按住一秒
+- `FreeDrag`（自由拖动）：在屏幕上移动手指
+- `HorizontalDrag`（水平拖动）：`FreeDrag` 的水平分
+- `VerticalDrag`（垂直拖动）：`FreeDrag` 的垂直分
+- `DragComplete`（拖动完成）：手指抬离屏幕
+- `Flick`（快速滑动）：单指滑动运动
+- `Pinch`（捏合）：两个手指相互靠近或分开
+- `PinchComplete`（捏合完成）：手指抬离屏幕
 
-要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 Game 类的 Update 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
+要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 `Game` 类的 `Update` 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
 
-第二部分 XNA
+## 第二部分 XNA
 
-GestureSample 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
+`GestureSample` 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
 
-- Position 除 Flick 之外对所有手势均有效。
-- Delta 对所有 Drag 手势、Pinch 和 Flick 都有效。
-- Position2 和 Delta2 仅对 Pinch 有效。
+- `Position` 除 `Flick` 之外对所有手势均有效。
+- `Delta` 对所有 `Drag` 手势、`Pinch` 和 `Flick` 都有效。
+- `Position2` 和 `Delta2` 仅对 `Pinch` 有效。
 
-Position 属性指示手指相对于屏幕的当前位置。Delta 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 GestureSample 类型对象，
+`Position` 属性指示手指相对于屏幕的当前位置。`Delta` 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 `GestureSample` 类型对象，
 
+```cs
 Vector2 previousPosition = gestureSample.Position - gestureSample.Delta;
+```
 
-当第一个手指触摸屏幕或手指静止时，Delta 向量等于为零。
+当第一个手指触摸屏幕或手指静止时，`Delta` 向量等于为零。
 
-假设你只对拖动操作感兴趣，并且启用了 FreeDrag 和 DragComplete 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 DragComplete 之后保存来自 FreeDrag 的值并将其与随后的 Position 值进行比较，要么将 Delta 值累加到一个运行总和中。
+假设你只对拖动操作感兴趣，并且启用了 `FreeDrag` 和 `DragComplete` 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 `DragComplete` 之后保存来自 `FreeDrag` 的值并将其与随后的 `Position` 值进行比较，要么将 `Delta` 值累加到一个运行总和中。
 
-让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 Texture2D 并维护其位置：
+让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 `Texture2D` 并维护其位置：
 
-> XNA 项目：OneFingerDrag 文件：Game1.cs (显示字段的节选)
+> XNA 项目：`OneFingerDrag` 文件：`Game1.cs` (显示字段的节选)
 
 ```cs
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDevice graphics;
     SpriteBatch spriteBatch;
-
     Texture2D texture;
     Vector2 texturePosition = Vector2.Zero;
-
     public Game1()
     {
         graphics = new GraphicsDevice(this);
         Content.RootDirectory = "Content";
-
         // Windows Phone 默认帧率为 30 fps。
         TargetElapsedTime = TimeSpan.FromTicks(333333);
-
         TouchPanel.EnabledGestures = GestureType.FreeDrag;
     }
     ...
+}
 ```
 
-第10 章 从手势到变换
+# 第10 章 从手势到变换
 
-注意构造函数底部启用的 FreeDrag 手势。
+注意构造函数底部启用的 `FreeDrag` 手势。
 
-LoadContent 重写加载了与上一章中 RippleEffect 项目使用的相同的 Texture2D。
+`LoadContent` 重写加载了与上一章中 `RippleEffect` 项目使用的相同的 `Texture2D`。
 
-> XNA 项目：OneFingerDrag 文件：Game1.cs (节选)
+> XNA 项目：`OneFingerDrag` 文件：`Game1.cs` (节选)
 
 ```cs
 protected override void LoadContent()
@@ -6034,7 +5875,6 @@ protected override void LoadContent()
     texture = Content.Load<Texture2D>("ripple");
     spriteBatch = new SpriteBatch(GraphicsDevice);
 }
-
 protected override void Update(GameTime gameTime)
 {
     GestureSample sample = TouchPanel.ReadGesture();
@@ -6051,283 +5891,158 @@ protected override void Update(GameTime gameTime)
     }
     base.Update(gameTime);
 }
-
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.Navy);
-
     spriteBatch.Begin();
     spriteBatch.Draw(texture, texturePosition, Color.White);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
 
-第二部分 XNA
+## 第二部分 XNA
 
-Update 重写以从数组中的像素更新 dstTexture 结束，而 Draw 重写只是简单地显示该图像：
+`Update` 重写以从数组中的像素更新 `dstTexture` 结束，而 `Draw` 重写只是简单地显示该图像：
 
 ```cs
 protected override void Draw(GameTime gameTime)
 {
   GraphicsDevice.Clear(Color.Navy);
-
   spriteBatch.Begin();
   spriteBatch.Draw(dstTexture, position, Color.White);
   spriteBatch.End();
-
   base.Draw(gameTime);
 }
 ```
 
 虽然这个程序只修改了坐标，但类似的程序可以修改像素的实际颜色值。还可以基于多个源像素生成目标像素以实现过滤效果。
 
-但如果你在每次 Update 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 SetData 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
+但如果你在每次 `Update` 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 `SetData` 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
 
 在下一章中，我将向你展示如何在第二个执行线程中通过算法计算像素。
 
-第10 章
 
-从手势到变换
 
-Windows Phone 7 应用程序用户输入的主要手段是触摸。Windows Phone 7 设备拥有支持至少四个触摸点的屏幕，应用程序可以编写成一种让用户感到自然直观的方式来适应触摸。
+# 第二部分 XNA
 
-正如你所见到的，XNA 程序员具有获取触摸输入的两种基本方法。通过底层的 `TouchPanel.GetState` 方法，程序可以跟踪单个手指——每个手指由一个 ID 数字识别——在它们触摸屏幕、移动和抬起的过程。`TouchPanel.ReadGesture` 方法提供了一个稍高级的接口，允许对惯性以及以“捏合”（pinch）和“拉伸”（stretch）手势形式的双指操作进行粗略处理。
-
-手势与属性
-
-TouchPanel 类支持的各种手势对应于 `GestureType` 枚举的成员：
-
-- Tap（轻点）：快速触摸并抬起
-- DoubleTap（双击）：两次连续点击中的第二次
-- Hold（长按）：按住一秒
-- FreeDrag（自由拖动）：在屏幕上移动手指
-- HorizontalDrag（水平拖动）：FreeDrag 的水平分
-- VerticalDrag（垂直拖动）：FreeDrag 的垂直分
-- DragComplete（拖动完成）：手指抬离屏幕
-- Flick（快速滑动）：单指滑动运动
-- Pinch（捏合）：两个手指相互靠近或分开
-- PinchComplete（捏合完成）：手指抬离屏幕
-
-要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 Game 类的 Update 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
-
-第二部分 XNA
-
-GestureSample 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
-
-- Position 除 Flick 之外对所有手势均有效。
-- Delta 对所有 Drag 手势、Pinch 和 Flick 都有效。
-- Position2 和 Delta2 仅对 Pinch 有效。
-
-Position 属性指示手指相对于屏幕的当前位置。Delta 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 GestureSample 类型对象，
-
-Vector2 previousPosition = gestureSample.Position - gestureSample.Delta;
-
-当第一个手指触摸屏幕或手指静止时，Delta 向量等于为零。
-
-假设你只对拖动操作感兴趣，并且启用了 FreeDrag 和 DragComplete 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 DragComplete 之后保存来自 FreeDrag 的值并将其与随后的 Position 值进行比较，要么将 Delta 值累加到一个运行总和中。
-
-让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 Texture2D 并维护其位置：
-
-> XNA 项目：OneFingerDrag 文件：Game1.cs (显示字段的节选)
-
-```cs
-public class Game1 : Microsoft.Xna.Framework.Game
-{
-    GraphicsDevice graphics;
-    SpriteBatch spriteBatch;
-
-    Texture2D texture;
-    Vector2 texturePosition = Vector2.Zero;
-
-    public Game1()
-    {
-        graphics = new GraphicsDevice(this);
-        Content.RootDirectory = "Content";
-
-        // Windows Phone 默认帧率为 30 fps。
-        TargetElapsedTime = TimeSpan.FromTicks(333333);
-
-        TouchPanel.EnabledGestures = GestureType.FreeDrag;
-    }
-    ...
-```
-
-第10 章 从手势到变换
-
-注意构造函数底部启用的 FreeDrag 手势。
-
-LoadContent 重写加载了与上一章中 RippleEffect 项目使用的相同的 Texture2D。
-
-> XNA 项目：OneFingerDrag 文件：Game1.cs (节选)
-
-```cs
-protected override void LoadContent()
-{
-    texture = Content.Load<Texture2D>("ripple");
-    spriteBatch = new SpriteBatch(GraphicsDevice);
-}
-
-protected override void Update(GameTime gameTime)
-{
-    GestureSample sample = TouchPanel.ReadGesture();
-    if (sample.GestureType == GestureType.FreeDrag)
-    {
-        if (Contains(sample.Position))
-        {
-            texturePosition += sample.Delta;
-        }
-    }
-    if (sample.GestureType == GestureType.DragComplete)
-    {
-        Exit();
-    }
-    base.Update(gameTime);
-}
-
-protected override void Draw(GameTime gameTime)
-{
-    GraphicsDevice.Clear(Color.Navy);
-
-    spriteBatch.Begin();
-    spriteBatch.Draw(texture, texturePosition, Color.White);
-    spriteBatch.End();
-
-    base.Draw(gameTime);
-}
-```
-
-第二部分 XNA
-
-Update 重写以从数组中的像素更新 dstTexture 结束，而 Draw 重写只是简单地显示该图像：
+## Update 重写以从数组中的像素更新 `dstTexture` 结束，而 `Draw` 重写只是简单地显示该图像：
 
 ```cs
 protected override void Draw(GameTime gameTime)
 {
   GraphicsDevice.Clear(Color.Navy);
-
   spriteBatch.Begin();
   spriteBatch.Draw(dstTexture, position, Color.White);
   spriteBatch.End();
-
   base.Draw(gameTime);
 }
 ```
 
 虽然这个程序只修改了坐标，但类似的程序可以修改像素的实际颜色值。还可以基于多个源像素生成目标像素以实现过滤效果。
 
-但如果你在每次 Update 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 SetData 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 50%（像素数量的 1/4），这显著提升了性能。
+但如果你在每次 `Update` 调用期间计算像素并传输数据，请注意性能问题。每像素处理和 `SetData` 都不短的时间。该程序的第一个版本可以在手机模拟器上运行，但在手机本身上运行缓慢到每秒只有两次更新。我将位图缩小到原始尺寸的 `50%`（像素数量的 `1/4`），这显著提升了性能。
 
 在下一章中，我将向你展示如何在第二个执行线程中通过算法计算像素。
 
-第10 章
+# 第10 章
 
-从手势到变换
+## 从手势到变换
 
-Windows Phone 7 应用程序用户输入的主要手段是触摸。Windows Phone 7 设备拥有支持至少四个触摸点的屏幕，应用程序可以编写成一种让用户感到自然直观的方式来适应触摸。
+`Windows Phone 7` 应用程序用户输入的主要手段是触摸。`Windows Phone 7` 设备拥有支持至少四个触摸点的屏幕，应用程序可以编写成一种让用户感到自然直观的方式来适应触摸。
 
-正如你所见到的，XNA 程序员具有获取触摸输入的两种基本方法。通过底层的 `TouchPanel.GetState` 方法，程序可以跟踪单个手指——每个手指由一个 ID 数字识别——在它们触摸屏幕、移动和抬起的过程。`TouchPanel.ReadGesture` 方法提供了一个稍高级的接口，允许对惯性以及以“捏合”（pinch）和“拉伸”（stretch）手势形式的双指操作进行粗略处理。
+正如你所见到的，`XNA` 程序员具有获取触摸输入的两种基本方法。通过底层的 `TouchPanel.GetState` 方法，程序可以跟踪单个手指——每个手指由一个 `ID` 数字识别——在它们触摸屏幕、移动和抬起的过程。`TouchPanel.ReadGesture` 方法提供了一个稍高级的接口，允许对惯性以及以“捏合”（`pinch`）和“拉伸”（`stretch`）手势形式的双指操作进行粗略处理。
 
-手势与属性
+### 手势与属性
 
-TouchPanel 类支持的各种手势对应于 `GestureType` 枚举的成员：
+`TouchPanel` 类支持的各种手势对应于 `GestureType` 枚举的成员：
 
-- Tap（轻点）：快速触摸并抬起
-- DoubleTap（双击）：两次连续点击中的第二次
-- Hold（长按）：按住一秒
-- FreeDrag（自由拖动）：在屏幕上移动手指
-- HorizontalDrag（水平拖动）：FreeDrag 的水平分
-- VerticalDrag（垂直拖动）：FreeDrag 的垂直分
-- DragComplete（拖动完成）：手指抬离屏幕
-- Flick（快速滑动）：单指滑动运动
-- Pinch（捏合）：两个手指相互靠近或分开
-- PinchComplete（捏合完成）：手指抬离屏幕
+- `Tap`（轻点）：快速触摸并抬起
+- `DoubleTap`（双击）：两次连续点击中的第二次
+- `Hold`（长按）：按住一秒
+- `FreeDrag`（自由拖动）：在屏幕上移动手指
+- `HorizontalDrag`（水平拖动）：`FreeDrag` 的水平分
+- `VerticalDrag`（垂直拖动）：`FreeDrag` 的垂直分
+- `DragComplete`（拖动完成）：手指抬离屏幕
+- `Flick`（快速滑动）：单指滑动运动
+- `Pinch`（捏合）：两个手指相互靠近或分开
+- `PinchComplete`（捏合完成）：手指抬离屏幕
 
-要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 Game 类的 Update 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
+要接收特定手势的信息，必须通过设置 `TouchPanel.EnabledGestures` 属性来启用手势。程序随后在 `Game` 类的 `Update` 重写期间以 `GestureSample` 结构的形式获取手势，该结构包含一个用于识别手势的 `GestureType` 属性。
 
-第二部分 XNA
+### 第二部分 XNA
 
-GestureSample 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
+`GestureSample` 还定义了四个 `Vector2` 类型的属性。这些属性对于 `DragComplete` 和 `PinchComplete` 类型无效。其他情况下：
 
-- Position 除 Flick 之外对所有手势均有效。
-- Delta 对所有 Drag 手势、Pinch 和 Flick 都有效。
-- Position2 和 Delta2 仅对 Pinch 有效。
+- `Position` 除 `Flick` 之外对所有手势均有效。
+- `Delta` 对所有 `Drag` 手势、`Pinch` 和 `Flick` 都有效。
+- `Position2` 和 `Delta2` 仅对 `Pinch` 有效。
 
-Position 属性指示手指相对于屏幕的当前位置。Delta 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 GestureSample 类型对象，
+`Position` 属性指示手指相对于屏幕的当前位置。`Delta` 属性指示手指自上一次位置以来的移动。对于名为 `gestureSample` 的 `GestureSample` 类型对象，
 
+```cs
 Vector2 previousPosition = gestureSample.Position - gestureSample.Delta;
+```
 
-当第一个手指触摸屏幕或手指静止时，Delta 向量等于为零。
+当第一个手指触摸屏幕或手指静止时，`Delta` 向量等于为零。
 
-假设你只对拖动操作感兴趣，并且启用了 FreeDrag 和 DragComplete 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 DragComplete 之后保存来自 FreeDrag 的值并将其与随后的 Position 值进行比较，要么将 Delta 值累加到一个运行总和中。
+假设你只对拖动操作感兴趣，并且启用了 `FreeDrag` 和 `DragComplete` 手势。如果你需要跟踪手指从触摸屏幕到抬起期间移动的完整距离，可以使用两种策略之一：要么在 `DragComplete` 之后保存来自 `FreeDrag` 的值并将其与随后的 `Position` 值进行比较，要么将 `Delta` 值累加到一个运行总和中。
 
-让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 Texture2D 并维护其位置：
+让我们来看简单的程序，它允许用户在屏幕上拖动一个小位图。在 `OneFingerDrag` 中，`Game1` 类有字段用于存储 `Texture2D` 并维护其位置：
 
-> XNA 项目：OneFingerDrag 文件：Game1.cs (显示字段的节选)
+> `XNA` 项目：`OneFingerDrag` 文件：`Game1.cs` (显示字段的节选)
 
 ```cs
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDevice graphics;
     SpriteBatch spriteBatch;
-
     Texture2D texture;
     Vector2 texturePosition = Vector2.Zero;
-
     public Game1()
     {
         graphics = new GraphicsDevice(this);
         Content.RootDirectory = "Content";
-
         // Windows Phone 默认帧率为 30 fps。
         TargetElapsedTime = TimeSpan.FromTicks(333333);
-
         TouchPanel.EnabledGestures = GestureType.FreeDrag;
     }
     ...
+}
 ```
 
-第10 章 缩放与旋转 (Scale and Rotate)
+## 第10 章 缩放与旋转 (Scale and Rotate)
 
-让我们继续检查涉及拖动的手势，但使用这些手势来实现缩放和旋转而非移动。在接下来的三个程序中，我将 Texture2D 放置在屏幕中心，除非你用单指进行缩放或旋转。
+让我们继续检查涉及拖动的手势，但使用这些手势来实现缩放和旋转而非移动。在接下来的三个程序中，我将 `Texture2D` 放置在屏幕中心，除非你用单指进行缩放或旋转。
 
-OneFingerScale 项目比上一个程序多几个功能：
+`OneFingerScale` 项目比上一个程序多几个功能：
 
 ```cs
 XNA 项目：OneFingerScale 文件：Game1.cs (显示字段的节选)
-
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDevice graphics;
     SpriteBatch spriteBatch;
-
     Texture2D texture;
     Vector2 screenCenter;
     Vector2 textureCenter;
     Vector2 textureScale = Vector2.One;
-
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
-
         // Windows Phone 默认帧率为 30 fps。
         ElapsedTime = TimeSpan.FromTicks(33333);
-
         TouchPanel.EnabledGestures = GestureType.FreeDrag;
     }
 }
 ```
 
-缩放与旋转
+### 缩放与旋转
 
-程序需要 Texture2D 的中心是因为它使用了 SpriteBatch 的较长的 Draw 调用来包含一个 origin 参数。正如你记得的，Draw 的 origin 参数是 Texture2D 中与 position 参数对齐的点，同时也作为缩放和旋转的中心。
+程序需要 `Texture2D` 的中心是因为它使用了 `SpriteBatch` 的较长的 `Draw` 调用来包含一个 `origin` 参数。正如你记得的，`Draw` 的 `origin` 参数是 `Texture2D` 中与 `position` 参数对齐的点，同时也作为缩放和旋转的中心。
 
-注意 textureScale 字段被设置为向量 (1, 1)，这意味着将宽度和高度乘以 1。一个常见的错误是将缩放设置为 0，这往往会导致图形对象从屏幕上消失。
-
-
-
+注意 `textureScale` 字段被设置为向量 `(1, 1)`，这意味着将宽度和高度乘以 `1`。一个常见的错误是将缩放设置为 `0`，这往往会导致图形对象从屏幕上消失。
 
 所有未初始化的字段都在 `LoadContent` 重写中进行了设置：
 
@@ -6350,18 +6065,14 @@ protected override void Update(GameTime gameTime) {
     // 允许游戏退出
     if (GamePad.GetState(PlayerIndex.One).Buttons == ButtonState.Pressed)
         this.Exit();
-
     while (TouchPanel.IsGestureAvailable) {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         if (gesture.GestureType == gesture.FreeDrag) {
             Vector2 prevPosition = gesture.Position - gesture.Delta;
-
             float scaleX = (gesture.Position.X - screenCenter.X) /
                 (prevPosition.X - screenCenter.X);
             float scaleY = (gesture.Position.Y - screenCenter.Y) /
                 (prevPosition.Y - screenCenter.Y);
-
             textureScale.X *= scaleX;
             textureScale.Y *= scaleY;
         }
@@ -6370,20 +6081,18 @@ protected override void Update(GameTime gameTime) {
 }
 ```
 
-例如，屏幕中心是点 (400, 240)。假设在手势的这一特定部分，`Position` 属性为 (600, 200)，`Delta` 属性为 (20, 10)。这意味着上一个位置是 (580, 190)。在水平方向上，手指到纹理中心点的距离增加了 180 像素（580 减去 400），变为 200 像素（600 减去 400），缩放因子为 200 除以 180 或 1.11。在垂直方向上，到中心的距离减少了 50 像素（190 减去 240），变为 40 像素（240 减去 200），缩放因子为 40 除以 50 或 0.80。图像在水平方向上增大了 11%，在垂直方向上缩小了 20%。
+例如，屏幕中心是点 `(400, 240)`。假设在手势的这一特定部分，`Position` 属性为 `(600, 200)`，`Delta` 属性为 `(20, 10)`。这意味着上一个位置是 `(580, 190)`。在水平方向上，手指到纹理中心点的距离增加了 `180` 像素（`580` 减去 `400`），变为 `200` 像素（`600` 减去 `400`），缩放因子为 `200` 除以 `180` 或 `1.11`。在垂直方向上，到中心的距离减少了 `50` 像素（`190` 减去 `240`），变为 `40` 像素（`240` 减去 `200`），缩放因子为 `40` 除以 `50` 或 `0.80`。图像在水平方向上增大了 `11%`，在垂直方向上缩小了 `20%`。
 
-因此，将缩放因子的 X 分量乘以 1.11，将 Y 分量乘以 0.80。正如预期的那样，该因子出现在 `Draw` 重写方法中。
+因此，将缩放因子的 `X` 分量乘以 `1.11`，将 `Y` 分量乘以 `0.80`。正如预期的那样，该因子出现在 `Draw` 重写方法中。
 
 ```cs
 XNA Project: OneFingerScale File: Game1.cs (片段)
 protected override void Draw(GameTime gameTime) {
     GraphicsDevice.Clear(Color.CornflowerBlue);
-
     spriteBatch.Begin();
     spriteBatch.Draw(texture, screenCenter, null, Color.White, 0,
                      textureCenter, textureScale, SpriteEffects.None, 0);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
@@ -6394,21 +6103,19 @@ protected override void Draw(GameTime gameTime) {
 
 # 第二部分 XNA
 
-如你所见，正如上面的计算所示，没有任何机制可以阻止图像丢失纵横比。你甚至可以——通过手指在屏幕的垂直中心或水平中心滑动——导致图像缩小到完全消失！在实际应用中，你可能想为缩放因子设置一个下限，例如 0.25，以留出足够的空间让尺寸恢复。在某些应用程序中，你可能还想保留图像的纵横比。你会希望驱动一个同时应用于水平和垂直缩放的缩放因子。像 `OneFingerScale` 程序中那样计算单独的缩放因子然后对它们取平均值似乎是合理的，但这显然是错误的。你会在 `OneFingerScale` 中注意到，如果手指靠近中心但远离另一个中心，则水平和垂直移动的缩放因子是不同的。微小的移动会被放大成大量的缩放。也许最好的策略是检查 `Delta` 属性并确定哪个分量的幅度最大，然后用它来进行缩放计算。字段与上一个程序相同，只是 `Vector2` 缩放因子被替换为了 `float`。
+如你所见，正如上面的计算所示，没有任何机制可以阻止图像丢失纵横比。你甚至可以——通过手指在屏幕的垂直中心或水平中心滑动——导致图像缩小到完全消失！在实际应用中，你可能想为缩放因子设置一个下限，例如 `0.25`，以留出足够的空间让尺寸恢复。在某些应用程序中，你可能还想保留图像的纵横比。你会希望驱动一个同时应用于水平和垂直缩放的缩放因子。像 `OneFingerScale` 程序中那样计算单独的缩放因子然后对它们取平均值似乎是合理的，但这显然是错误的。你会在 `OneFingerScale` 中注意到，如果手指靠近中心但远离另一个中心，则水平和垂直移动的缩放因子是不同的。微小的移动会被放大成大量的缩放。也许最好的策略是检查 `Delta` 属性并确定哪个分量的幅度最大，然后用它来进行缩放计算。字段与上一个程序相同，只是 `Vector2` 缩放因子被替换为了 `float`。
 
 ## 项目: OneFingerScale File: Game1.cs (显示字段的片段)
 
 ```cs
 public class Game1 : Microsoft.Xna.Framework.Game
 {
-    GraphicsManager graphicsManager;
+    GraphicsDeviceManager graphicsManager;
     SpriteBatch spriteBatch;
-
     Texture2D texture;
     Vector2 screenCenter;
     Vector2 textureCenter;
     float textureScale = 1;
-
     ...
 }
 ```
@@ -6422,14 +6129,11 @@ protected override void Update(GameTime gameTime) {
     // 允许游戏退出
     if (GamePad.GetState(PlayerIndex.One).Buttons == ButtonState.Pressed)
         this.Exit();
-
     while (TouchPanel.IsGestureAvailable) {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         if (gesture.GestureType == gesture.FreeDrag) {
             Vector2 position = gesture.Position - gesture.Delta;
             float scale = 1;
-
             if (Math.Abs(gesture.Delta.X) > Math.Abs(gesture.Delta.Y)) {
                 scale = (gesture.Position.X - screenCenter.X) /
                     (position.X - screenCenter.X);
@@ -6437,7 +6141,6 @@ protected override void Update(GameTime gameTime) {
                 scale = (gesture.Position.Y - screenCenter.Y) /
                     (position.Y - screenCenter.Y);
             }
-
             if (!float.IsInfinity(scale) && !float.IsNaN(scale)) {
                 textureScale = Math.Min(10,
                     Math.Max(0.25f, scale));
@@ -6448,12 +6151,9 @@ protected override void Update(GameTime gameTime) {
 }
 ```
 
-这里的另一个预防措施是检查计算值是否为无穷大或非数字。如果用户触摸屏幕正中心导致除以零，就会出现这种情况。我还将整体缩放因子限制在 0.25 到 10 之间，这些是任意的值，但是一个重要的概念。
+这里的另一个预防措施是检查计算值是否为无穷大或非数字。如果用户触摸屏幕正中心导致除以零，就会出现这种情况。我还将整体缩放因子限制在 `0.25` 到 `10` 之间，这些是任意的值，但是一个重要的概念。
 
 `Draw` 重写与之前的程序相同，只是 `textureScale` 是 `float` 而不是 `Vector2`：
-
-
-
 
 # 第 10 章 从手势到变换 243
 
@@ -6466,14 +6166,15 @@ protected override void LoadContent()
 {
     // 创建一个新的 SpriteBatch，用于绘制纹理。
     spriteBatch = new SpriteBatch(GraphicsDevice);
-
     Viewport viewport = this.Viewport;
     texturePosition = new Vector2(viewport.Width / 2, viewport.Height / 2);
-
     texture = this.Content.Load<Texture2D>("Petzalattoo");
-    textureCenter = new Vector2(texture.Width / 2, texture.Height / 2);
 }
 ```
+
+
+
+`textureCenter = new Vector2(texture.Width / 2, texture.Height / 2);`
 
 `Update` 方法的思想是首先检查新的手指位置，以及新手指位置相对于 `texturePosition` 处 `Texture2D` 中心点的偏移。在 `Update` 中，我将这两个位置表示为从中心出的向量，称为 `oldVector` 和 `newVector`，我说的“旧”和“新”指的是“之前”和“当前”。如果这两个向量的角度不同，则通过这些角度之差重新计算 `textureRotation` 角度。
 
@@ -6487,11 +6188,9 @@ protected override void Update(GameTime gameTime)
     // 允许游戏退出
     if (Game.GetState(PlayerIndex.One).Buttons.Back == Button.Pressed)
         this.Exit();
-
     while (TouchPanel.IsGestureAvailable)
     {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         if (gesture.GestureType == GestureType.FreeDrag)
         {
             Vector2 delta = gesture.Delta;
@@ -6500,29 +6199,24 @@ protected override void Update(GameTime gameTime)
         }
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
 ```cs
 // 从位图中心到触摸点的向量
 Vector2 oldVector = oldPosition - texturePosition;
 Vector2 newVector = newPosition - texturePosition;
-
 // 如果手指靠近中心，则避免旋转
 if (newVector.Length() > 25 && oldVector.Length() > 25)
 {
     // 寻找从位图中心到触摸点的角度
     float oldAngle = (float)Math.Atan2(oldVector.Y, oldVector.X);
     float newAngle = (float)Math.Atan2(newVector.Y, newVector.X);
-
     // 调整旋转角度
     textureRotation += newAngle - oldAngle;
-
     // 本质上旋转旧向量
     oldVector = oldVector.Length() / newVector.Length() * newVector;
-
     // 重新计算 delta
     delta = newVector - oldVector;
-
     // 移动纹理
     texturePosition += delta;
 }
@@ -6536,12 +6230,10 @@ XNA 项目: OneFingerRotation 文件: Game1.cs (节选)
 protected override void Draw(Game gameTime)
 {
     GraphicsDevice.Clear(Color.CornflowerBlue);
-
     spriteBatch.Begin();
     spriteBatch.Draw(texture, texturePosition, null, Color.White,
         textureRotation, textureCenter, 1, SpriteEffects.None, 0);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
@@ -6556,22 +6248,20 @@ protected override void Draw(Game gameTime)
 
 数学计算可能会变得复杂；幸运的是，XNA 提供了一些非常强大的工具来帮助。
 
-## 矩阵变换
+### 矩阵变换
 
-传统的二维图形系统支持称为“变换”（transforms）的操作。这些从本质上是应用于坐标 (x, y) 的数学公式，用于生成新的坐标 (x', y')。虽然完全通用的变换非常复杂，但二维图形编程环境通常将变换限制为子集（“非无限”变换），这是线性变换的略微超集。
+传统的二维图形系统支持称为“变换”（transforms）的操作。这些从本质上是应用于坐标 `(x, y)` 的数学公式，用于生成新的坐标 `(x', y')`。虽然完全通用的变换非常复杂，但二维图形编程环境通常将变换限制为子集（“非无限”变换），这是线性变换的略微超集。
 
-x 和 y 的线性变换如下：
+`x` 和 `y` 的线性变换如下：
 
 ```
 x' = a*x + b*y
 y' = c*x + d*y
 ```
 
-其中下标 a 和 b 是定义特定变换的常数。
+其中下标 `a` 和 `b` 是定义特定变换的常数。
 
-
-
-# 第二部分 XNA
+## 第二部分 XNA
 
 如果你使用这种形式的 `Begin` 调用，那么 `Matrix` 对象将影响直到 `End` 之前的所有 `Draw` 和 `DrawString` 调用。这对于为一组图形对象应用变换非常有用。
 
@@ -6608,7 +6298,7 @@ M31 M32 M33 M34
 M41 M42 M43 M44
 ```
 
-# 第 10 章 从手势到变换 249
+### 第 10 章 从手势到变换 249
 
 与其使用 `Matrix` 的静态方法创建 `Matrix` 对象，你可以单独设置这些字段（或在 16 参数的构造函数中设置所有字段）。我之前使用的常量对应于这些单元格：
 
@@ -6628,7 +6318,7 @@ y' = M12 · x + M22 · y + M42
 
 了解这些字段与变换之间的关系，有助于从 `Matrix` 结构中提取信息，或者实现不涉及创建新 `Matrix` 对象并进行相乘的快捷方法。我将在接下来的章节中演示这些技术。
 
-# 缩放手势 (Pinch Gesture)
+### 缩放手势 (Pinch Gesture)
 
 使用缩放手势时，`GestureSample` 的 `Vector2` 属性有效：`Position`、`Delta`、`Position2` 和 `Delta2`。前两个反映一个手指的位置和移动；后两个代表第二个手指。这对于缩放是非常理想的，尽管实际的数学原理并不显而易见。
 
@@ -6646,31 +6336,25 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-Texture2D texture;
-Matrix matrix = Matrix.Identity;
+`Texture2D texture;`
+`Matrix matrix = Matrix.Identity;`
 
 ```
 public Game1()
 {
     graphics = new GraphicsDevice(this);
     Content.RootDirectory = "Content";
-
     // Windows Phone 默认帧率是 30 fps。
     TargetElapsedTime = TimeSpan.Ticks(333333);
-
     TouchPanel.EnabledGestures = GestureType.FreeDrag | GestureType.Pinch;
     ...
 }
 ```
 
 语句
-
 `Matrix matrix = Matrix.Identity;`
-
 不同于：
-
 `Matrix matrix = new Matrix();`
-
 `Matrix` 是一个结构体，它的所有字段都初始化为零值。全零的 `Matrix` 对象对任何操作都没用，因为它会完全销毁它应用到的任何东西。一个默认的、无操作的 `Matrix` 对象应该将其所有对角线单元格设置为 1，这正是 `Matrix.Identity` 属性提供的。
 
 所有的拖拽和缩放操作都将应用于 `matrix` 字段，然后在 `Draw` 覆盖方法中使用该字段。
@@ -6679,19 +6363,20 @@ public Game1()
 
 > XNA 项目: DragAndPinch 文件: Game1.cs (片段)
 
+```csharp
 protected override void LoadContent()
 {
     // 创建一个新的 SpriteBatch，可用于绘制纹理。
     spriteBatch = new SpriteBatch(GraphicsDevice);
-
     texture = this.Content.Load<Texture2D>("texture");
 }
+```
 
 `Update` 覆盖方法处理了（ `FreeDrag` 和 `Pinch`：
 
-# 第 10 章 从手势到变换 251
+### 第 10 章 从手势到变换 251
 
-# XNA 项目: DragAndPinch 文件: Game1.cs (片段)
+### XNA 项目: DragAndPinch 文件: Game1.cs (片段)
 
 ```
 protected override void Update(GameTime gameTime)
@@ -6699,7 +6384,6 @@ protected override void Update(GameTime gameTime)
     // 允许退出游戏
     if (Gamepad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     while (TouchPanel.IsGestureAvailable)
     {
         Gesture sample = TouchPanel.ReadGesture();
@@ -6708,16 +6392,12 @@ protected override void Update(GameTime gameTime)
             case GestureType.Drag:
                 matrix *= Matrix.CreateTranslation(gesture.Delta.X, gesture.Delta.Y, 0);
                 break;
-
             case GestureType.Pinch:
                 Vector2 oldPoint1 = gesture.Delta.X;
                 // ...
 ```
 
-
-
-
-# 第 10 章 从手势到变换 253
+### 第 10 章 从手势到变换 253
 
 ```csharp
 spriteBatch.Begin(SpriteMode.Deferred, null, null, null, null, matrix);
@@ -6749,7 +6429,6 @@ Vector3 translation3;
 
 ```csharp
 matrix.Decompose(out scale3, out quaternion, out translation3);
-
 Vector2 scale = new Vector2(scale3.X, scale3.Y);
 Vector2 position = new Vector2(translation3.X, translation3.Y);
 ```
@@ -6764,7 +6443,6 @@ protected override void Update(GameTime gameTime)
     // 允许游戏退出
     if (Gamepad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     while (TouchPanel.IsGestureAvailable)
     {
         Gesture sample = TouchPanel.ReadGesture();
@@ -6774,37 +6452,57 @@ protected override void Update(GameTime gameTime)
                 {
                     Vector2 newPoint = sample.Position;
                     Vector2 oldPoint = newPoint - sample.Delta;
-                    Vector2 textureCenter = new Vector2(texture.Width / 2, texture.Height / 2);
+```
 
-                    Vector2 refPoint = Vector2.Transform(textureCenter, matrix);
 
-                    matrix *= ComputeRotateAndTranslateMatrix(refPoint, oldPoint);
 
-                    break;
-                }
-            case GestureType.Pinch:
-                {
-                    Vector2 oldPoint1 = sample.Position - sample.Delta;
-                    Vector2 newPoint1 = sample.Position;
-                    Vector2 oldPoint2 = sample.Position2 - sample.Delta2;
-                    Vector2 newPoint2 = sample.Position2;
+```csharp
+Vector2 textureCenter = new Vector2(texture.Width / 2, texture.Height / 2);
 
-                    matrix *= ComputeScaleAndRotateMatrix(oldPoint1, oldPoint2);
-                    matrix *= ComputeScaleAndRotateMatrix(newPoint2, oldPoint1);
+Vector2 refPoint = Vector2.Transform(textureCenter, matrix);
 
-                    break;
-                }
-        }
-    }
-    base.Update(gameTime);
+matrix *= ComputeRotateAndTranslateMatrix(refPoint, oldPoint);
+
+break;
+
+}
+
+}
+
+case GestureType.Pinch:
+
+{
+
+Vector2 oldPoint1 = sample.Position - sample.Delta;
+
+Vector2 newPoint1 = sample.Position;
+
+Vector2 oldPoint2 = sample.Position2 - sample.Delta2;
+
+Vector2 newPoint2 = sample.Position2;
+
+matrix *= ComputeScaleAndRotateMatrix(oldPoint1, oldPoint2);
+
+matrix *= ComputeScaleAndRotateMatrix(newPoint2, oldPoint1);
+
+break;
+
+}
+
+}
+
+}
+
+base.Update(gameTime);
+
 }
 ```
 
-在早早演示单指旋转的程序中，`Texture2D` 始终位于对应于其中心的点上，因此旋转参考点始终是可读的。这个 `Texture2D` 是通过 `SpriteBatch` 的 `Draw` 调用置于显示器左上角的，但其实际位置根据 `Matrix` 对象位于其他地方。
+在早早演示单指旋转的程序中，`Texture2D`始终位于对应于其中心的点上，因此旋转参考点始终是可读的。这个`Texture2D`是通过`SpriteBatch`的`Draw`调用置于显示器左上角的，但其实际位置根据`Matrix`对象位于其他地方。
 
-出于原因，`FreeDrag` 逻辑将 `Texture2D` 的中心相对于其左上角的偏移表示为 `Vector2`，然后应用当前的矩阵变换以获得一个相对于屏幕的 `refPoint`。
+出于原因，`FreeDrag`逻辑将`Texture2D`的中心相对于其左上角的偏移表示为`Vector2`，然后应用当前的矩阵变换以获得一个相对于屏幕的`refPoint`。
 
-`Update` 在处理 `FreeDrag` 手势时调用的 `ComputeRotateAndTranslateMatrix` 方法与之前的单指旋转逻辑非常相似，不同之处在于它获取并相乘了变换结果。
+`Update`在处理`FreeDrag`手势时调用的`ComputeRotateAndTranslateMatrix`方法与之前的单指旋转逻辑非常相似，不同之处在于它获取并相乘了变换结果。
 
 # XNA 项目: DragPinchRotate 文件: Game1.cs (节选)
 
@@ -6815,36 +6513,30 @@ Matrix ComputeRotateAndTranslateMatrix(Vector2 refPoint, Vector2 oldPoint, Vecto
     Vector2 delta = newPoint - oldPoint;
     Vector2 oldVector = oldPoint - refPoint;
     Vector2 newVector = newPoint - refPoint;
-
     // 如果手指靠近中心则避免旋转
     if (newVector.Length() > 25 && oldVector.Length() > 25)
     {
         // 什么都不做
     }
-
     // 从位图中心到触摸点的角度
     float oldAngle = (float)Math.Atan2(oldVector.Y, oldVector.X);
     float newAngle = (float)Math.Atan2(newVector.Y, newVector.X);
-
     // 计算旋转矩阵
     float angle = newAngle - oldAngle;
     matrix *= Matrix.CreateTranslation(-refPoint.X, -refPoint.Y, 0);
     matrix *= Matrix.CreateRotation2(angle);
     matrix *= Matrix.CreateTranslation(refPoint.X, refPoint.Y, 0);
-
     // 本质上旋转旧向量
     oldVector = oldVector.Length() / newVector.Length() * newVector;
-
     // 重新计算 delta
     delta = newVector - oldVector;
-
     // 包含平移
     matrix *= Matrix.CreateTranslation(delta.X, delta.Y, 0);
     return matrix;
 }
 ```
 
-注意 `Matrix.CreateRotationZ` 调用被夹在两个 `Matrix.CreateTranslation` 调用之间，以便执行相对于参考点的旋转。该参考点是 `Texture2D` 的变换中心。最后，`Matrix.CreateTranslation` 处理平移。部分内容合并到了 `Pinch` 手势的 `ScaleAndRotate` 方法中：
+注意`Matrix.CreateRotationZ`调用被夹在两个`Matrix.CreateTranslation`调用之间，以便执行相对于参考点的旋转。该参考点是`Texture2D`的变换中心。最后，`Matrix.CreateTranslation`处理平移。部分内容合并到了`Pinch`手势的`ScaleAndRotate`方法中：
 
 # XNA 项目: DragPinchRotate 文件: Game1.cs (节选)
 
@@ -6862,24 +6554,21 @@ Matrix ComputeScaleAndRotateMatrix(Vector2 oldPoint1, Vector2 oldPoint2)
 
 ## 甩与惯性
 
-在很大程度上，在程序的触摸接口中实现惯性是你的责任。XNA 对 `Flick` 手势有一定的帮助，该手势用户在屏幕上快速滑动手指时产生。`GestureSample` 的 `Delta` 属性表示以每秒像素为单位的速度（至少应该是这样的。它看起来更接近实际速度。）速度由 `Vector2` 表示，因此它指示了方向和大小。
+在很大程度上，在程序的触摸接口中实现惯性是你的责任。XNA对`Flick`手势有一定的帮助，该手势用户在屏幕上快速滑动手指时产生。`GestureSample`的`Delta`属性表示以每秒像素为单位的速度（至少应该是这样的。它看起来更接近实际速度。）速度由`Vector2`表示，因此它指示了方向和大小。
 
-`Flick` 手势没有位置信息。基本上你在屏幕的哪里甩都没关系。如果你需要根据手指位置和速度来实现惯性，你可能会发现自己通过将 `Delta` 值除以 `Update` 参数 `GameTime` 的 `ElapsedGameTime` 属性来计算速度。
+`Flick`手势没有位置信息。基本上你在屏幕的哪里甩都没关系。如果你需要根据手指位置和速度来实现惯性，你可能会发现自己通过将`Delta`值除以`Update`参数`GameTime`的`ElapsedGameTime`属性来计算速度。
 
-要实现惯性，你需要根据初始速度和加速度值继续移动对象。如果速度是以每秒为单位，那么加速度可能是以每秒平方像素为单位。每秒，速度都会减少加速度值，直到大小降为零。对于每几秒发生一次的 `Update` 调用，速度会按比例减少。
+要实现惯性，你需要根据初始速度和加速度值继续移动对象。如果速度是以每秒为单位，那么加速度可能是以每秒平方像素为单位。每秒，速度都会减少加速度值，直到大小降为零。对于每几秒发生一次的`Update`调用，速度会按比例减少。
 
-`Flickinertia` 项目演示了非常简单的惯性实现。字段 `position`、`velocity` 以及加速度常量如下：
+`Flickinertia`项目演示了非常简单的惯性实现。字段`position`、`velocity`以及加速度常量如下：
 
 ```
 XNA 项目: Flickinertia 文件: Game1.cs (显示字段的节选)
-
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
-
     const float DEELERATION = 1000; // 每秒平方像素
-
     Texture2D texture;
     Vector2 position = Vector2.Zero;
     Vector2 velocity;
@@ -6887,21 +6576,18 @@ public class Game1 : Microsoft.Xna.Framework.Game
     StringBuilder text = new StringBuilder();
 ```
 
-
 ```csharp
 public Game1()
 {
     graphics = new GraphicsDeviceManager(this);
     Content.RootDirectory = "Content";
-
     // Windows Phone 默认帧率是 30 fps。
     TargetElapsedTime = TimeSpan.FromTicks(33333);
-
     TouchPanel.EnabledGestures = GestureType.Flick;
 }
 ```
 
-构造函数启用了滑动（Flick）手势。`LoadContent` 重写方法加载了 Texture2D 和一个字体，用于在屏幕上显示状态信息（位置和速度）：
+构造函数启用了滑动（Flick）手势。`LoadContent`重写方法加载了`Texture2D`和一个字体，用于在屏幕上显示状态信息（位置和速度）：
 
 ## XNA 项目: FlickInertia 文件: Game1.cs (节选)
 
@@ -6910,13 +6596,12 @@ protected override void LoadContent()
 {
     // 创建一个新的 SpriteBatch，可用于绘制纹理。
     spriteBatch = new SpriteBatch(GraphicsDevice);
-
     texture = this.Content.Load<Texture2D>("PetzoldTattoo");
     sego14 = this.Content.Load<SpriteFont>("sego14");
 }
 ```
 
-`Update` 重写方法有几个职责。第一个是读取手势并在 `velocity` 字段中累加额外的速度。如果速度正在生效，则将速度向量乘以经过的秒数以获得位置的变化。将此值加到位置向量上。然后，根据 `DECELERATION` 常数减少速度向量的模长，该减少量也由该常数乘以经过的秒数得到的。最后，格式化一个 `StringBuilder` 来显示这两个向量：
+`Update`重写方法有几个职责。第一个是读取手势并在`velocity`字段中累加额外的速度。如果速度正在生效，则将速度向量乘以经过的秒数以获得位置的变化。将此值加到位置向量上。然后，根据`DECELERATION`常数减少速度向量的模长，该减少量也由该常数乘以经过的秒数得到的。最后，格式化一个`StringBuilder`来显示这两个向量：
 
 ## XNA 项目: FlickInertia 文件: Game1.cs (节选)
 
@@ -6926,16 +6611,13 @@ protected override void Update(GameTime gameTime)
     // 允许游戏退出
     if (Gamepad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     // 从滑动手势设置速度
     while (TouchPanel.IsGestureAvailable)
     {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         if (gesture.Type == GestureType.Flick)
             velocity += gesture.Delta;
     }
-
     // 使用速度调整位置并减速
     if (velocity != Vector2.Zero)
     {
@@ -6945,16 +6627,14 @@ protected override void Update(GameTime gameTime)
         velocity.Normalize();
         velocity *= Math.Max(0, newMagnitude);
     }
-
     // 显示当前位置和速度
     text.Remove(0, text.Length);
     text.AppendFormat("Position: {0} Velocity: {1}", position, velocity);
-
     base.Update(gameTime);
 }
 ```
 
-`Draw` 重写方法绘制了 Texture2D 和 `StringBuilder`。
+`Draw`重写方法绘制了`Texture2D`和`StringBuilder`。
 
 ## XNA 项目: FlickInertia 文件: Game1.cs (节选)
 
@@ -6962,25 +6642,23 @@ protected override void Update(GameTime gameTime)
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.CornflowerBlue);
-
     spriteBatch.Begin();
     spriteBatch.Draw(texture, position, Color.White);
     spriteBatch.DrawString(segoe14, text, Vector2.Zero, Color.White);
     spriteBatch.End();
-
     base.Draw(GameTime);
 }
 ```
 
 是的，你可以将图像向滑出屏幕。然而，由于程序会响应屏幕上任何地方的滑动，你可以再次滑动将其带回视野内。
 
-1980 年，为 IBM 工作的波兰裔法国及美国数学家本努瓦·曼德博洛（Benoit Mandelbrot，1924–2010）首次看到了一个涉及复数的递归方程的图形可视化，该方程在那个世纪早些时候就已经研究过了。它看起来像这样：
+1980年，为IBM工作的波兰裔法国及美国数学家本努瓦·曼德博洛（Benoit Mandelbrot，1924–2010）首次看到了一个涉及复数的递归方程的图形可视化，该方程在那个世纪早些时候就已经研究过了。它看起来像这样：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_274_0.png)
 
 从那时起，曼德博洛集（Mandelbrot Set）成为了计算机程序员最喜欢的玩具。
 
-曼德博洛集在复平面上绘制，其中横轴代表实数（左侧为负，右侧为正），纵轴代表虚数（底部为负，顶部为正）。取平面上的任意点并称之为 $c$，并将 $z$ 设置为 0：
+曼德博洛集在复平面上绘制，其中横轴代表实数（左侧为负，右侧为正），纵轴代表虚数（底部为负，顶部为正）。取平面上的任意点并称之为$c$，并将$z$设置为0：
 
 ```
 z = 0
@@ -6992,7 +6670,7 @@ z = 0
 z = z² + c
 ```
 
-如果 $z$ 的模长不发散到无穷大，则认为 $c$ 属于曼德博洛集，并在上面的屏幕上涂成黑色。对于某些复数（例如实数 0），很清楚该数字属于该集合。对于其他数字（例如实数 1），很清楚它不属于。对于许多其他数字，你只需要不断计算这些值。幸运的是，如果 $z$ 的绝对值在有限次迭代后大于 2，你就知道 $c$ 不属于该集合。每个属于曼德博洛集的数字 $c$ 都有一个关联的“迭代”因子，即在 $z$ 的绝对值大于 2 之前计算 $z$ 的迭代次数。许多计算曼德博洛集可视化图像的人会使用该迭代因子为该点选择颜色，使得不属于集合的区域变得更加有趣：
+如果$z$的模长不发散到无穷大，则认为$c$属于曼德博洛集，并在上面的屏幕上涂成黑色。对于某些复数（例如实数0），很清楚该数字属于该集合。对于其他数字（例如实数1），很清楚它不属于。对于许多其他数字，你只需要不断计算这些值。幸运的是，如果$z$的绝对值在有限次迭代后大于2，你就知道$c$不属于该集合。每个属于曼德博洛集的数字$c$都有一个关联的“迭代”因子，即在$z$的绝对值大于2之前计算$z$的迭代次数。许多计算曼德博洛集可视化图像的人会使用该迭代因子为该点选择颜色，使得不属于集合的区域变得更加有趣：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_275_0.png)
 
@@ -7000,7 +6678,7 @@ z = z² + c
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_275_1.png)
 
-这使得曼德博洛集成为了一个分形（fractal），这是本努瓦·曼德博洛开创的一个数学分支。考虑到产生此图像的算法是如此简单，其结果确实令人震惊。你能想到一个更好的程序来演示多点拖放和缩放，以及在 `Texture2D` 中通过算法生成像素吗？程序员们在编写曼德博洛程序时，通常会决定一个特定的迭代因子，例如 100 或 1000。然后对于每个像素，$z$ 会被计算到这个最大次数，如果它还没有发散，则该像素被设置为黑色。在伪代码中，它如下：
+这使得曼德博洛集成为了一个分形（fractal），这是本努瓦·曼德博洛开创的一个数学分支。考虑到产生此图像的算法是如此简单，其结果确实令人震惊。你能想到一个更好的程序来演示多点拖放和缩放，以及在`Texture2D`中通过算法生成像素吗？程序员们在编写曼德博洛程序时，通常会决定一个特定的迭代因子，例如100或1000。然后对于每个像素，$z$会被计算到这个最大次数，如果它还没有发散，则该像素被设置为黑色。在伪代码中，它如下：
 
 ```
 对于每个像素
@@ -7010,56 +6688,66 @@ z = z² + c
 
 这种方法的问题在于，当你放大曼德博洛集的某个区域时，它往往是不够的。
 
+构造函数根据`pixelIndex`计算`cReal`和`climag`，`pixelIndex`的范围从0到（但不包含）显示器像素宽度与高度的积。静态`pixelWidth`和`pixelHeight`字段基于屏幕尺寸，并在整个程序运行期间保持不变。
 
+`cReal`和`climag`的计算还基于其他静态字段。`xCoordAtComplexOrigin`和`yCoordAtComplexOrigin`字段表示对应复平面原点的水平和垂直坐标。这些字段使用`double`类型，表明它们能够表示小数像素。`unitsPerPixel`字段表示与单个像素相关的实数或虚数范围。这些值会随着缩放操作而改变。
 
-构造函数根据 `pixelIndex` 计算 `cReal` 和 `climag`，`pixelIndex` 的范围从 0 到（但不包含）显示器像素宽度与高度的积。静态 `pixelWidth` 和 `pixelHeight` 字段基于屏幕尺寸，并在整个程序运行期间保持不变。
+这个`PixelInfo`结构包含的`double`值比书中所有其他XNA程序加起来还要多。最初我本将这些值都设为`float`（而且`pixelCoordAtComplexOrigin`是一个`Vector2`），当我第一次放大到超过`float`的精度时，我转而使用`double`。有趣的是，从`float`切换到`double`对性能的影响微乎其微。
 
-`cReal` 和 `climag` 的计算还基于其他静态字段。`xCoordAtComplexOrigin` 和 `yCoordAtComplexOrigin` 字段表示对应复平面原点的水平和垂直坐标。这些字段使用 `double` 类型，表明它们能够表示小数像素。`unitsPerPixel` 字段表示与单个像素相关的实数或虚数范围。这些值会随着缩放操作而改变。
+构造函数的第二个参数是可选的。如果存在，构造函数将将相应的颜色从像素数组中复制到它的`packedColor`字段中。你很快就会看到它是如何运作的。
 
-这个 `PixelInfo` 结构包含的 `double` 值比书中所有其他 XNA 程序加起来还要多。最初我本将这些值都设为 `float`（而且 `pixelCoordAtComplexOrigin` 是一个 `Vector2`），当我第一次放大到超过 `float` 的精度时，我转而使用 `double`。有趣的是，从 `float` 切换到 `double` 对性能的影响微乎其微。
+另外三个静态字段用于线程间通信。基本上，执行计算的线程在颜色值变化时设置这些字段；当使用`PixelInfo`结构体数组更新像素数组和`Texture2D`时，这些字段会被重置。
 
-构造函数的第二个参数是可选的。如果存在，构造函数将将相应的颜色从像素数组中复制到它的 `packedColor` 字段中。你很快就会看到它是如何运作的。
+最后，`Iterate`使用乘法而非`Math.Pow`执行基础的迭代计算。如果已知`z`将发散到无穷大，则`Iterate`返回`true`。
 
-另外三个静态字段用于线程间通信。基本上，执行计算的线程在颜色值变化时设置这些字段；当使用 `PixelInfo` 结构体数组更新像素数组和 `Texture2D` 时，这些字段会被重置。
-
-最后，`Iterate` 使用乘法而非 `Math.Pow` 执行基础的迭代计算。如果已知 `z` 将发散到无穷大，则 `Iterate` 返回 `true`。
-
-通过这些 `PixelInfo` 的静态字段，我成功地将 `Game` 派生类的字段保持在合理的数量范围内。你在这里也会看到普通的 `pixels` 数组以及 `PixelInfo` 数组。`pixelInfoLock` 用于线程同步。
+通过这些`PixelInfo`的静态字段，我成功地将`Game`派生类的字段保持在合理的数量范围内。你在这里也会看到普通的`pixels`数组以及`PixelInfo`数组。`pixelInfoLock`用于线程同步。
 
 # XNA 项目：MandelbrotSet 文件：Game1.cs（显示字段的节录）
 
 ```cs
 public class Game1 : Microsoft.Xna.Framework.Game
 {
-    GraphicsDeviceManager graphics;
-    SpriteBatch spriteBatch;
 
-    Viewport viewport;
-    Texture2D texture;
+
+
+# 第10章 从手势到变换
+
+```cs
+GraphicsDeviceManager graphics;
+
+SpriteBatch spriteBatch;
+
+Viewport viewport;
+
+Texture2D texture;
 ```
-
-# 第10章 从手势到变换 265
 
 ```cs
 int[] pixels;
+
 PixelInfo[] pixelInfos;
+
 Matrix drawMatrix = Matrix.Identity;
+
 int globalIteration = 0;
+
 object pixelInfosLock = new object();
 
 SpriteFont sequel4;
+
 StringBuilder upperLeftCoordText = new StringBuilder();
+
 StringBuilder lowerRightCoordText = new StringBuilder();
+
 StringBuilder upperRightStatusText = new StringBuilder();
+
 Vector2 lowerRightCoordPosition, topRightStatusPosition;
 
 public Game1() {
     graphics = new GraphicsDevice(this);
     Content.RootDirectory = "Content";
-
     // Windows Phone 默认帧率 own 30 fps。
     TargetElapsedTime = TimeSpan.Ticks(333333);
-
     // 全屏并启用手势
     graphics.IsFullScreen = true;
     GestureType.FreeDrag | GestureType.DragComplete;
@@ -7071,20 +6759,19 @@ public Game1() {
 
 `LoadContent` 覆盖实现意外地稀少：
 
-XNA 项目：MandelbrotSet 文件：Game1.cs（节录）
+XNA 项目：`MandelbrotSet` 文件：`Game1.cs`（节录）
 
 ```cs
 protected override void LoadContent() {
     // 创建一个新的 SpriteBatch，用于绘制纹理。
     spriteBatch = new SpriteBatch(GraphicsDevice);
-
     viewport = this.GraphicsDevice.Viewport;
     sego14 = this.Content.Load<SpriteFont>("Segoe14"); even}
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
-但那仅仅是因为许多其他初始化工作是结合“停用墓化”（tombstoning）一起完成的。当然，我想保存整个 `PixelInfo` 对象数组，考虑到每个对象的大小为 44 字节，而整个数组接近 77 MB，你可以理解为什么 Windows Phone 7 操作系统似乎不愿顺从我的意愿了。
+但那仅仅是因为许多其他初始化工作是结合“停用墓化”一起完成的。当然，我想保存整个 `PixelInfo` 对象数组，考虑到每个对象的大小为 44 字节，而整个数组接近 77 MB，你可以理解为什么 Windows Phone 7 操作系统似乎不愿顺从我的意愿了。
 
 扩展停用墓项以合理重启程序：`PixelInfo` 中的静态 `PixelCoordComplexOrigin`、`PixelCoordComplexOrigin` 和 `unitsPerPixel` 字段允许程序创建 `Pixel2D` 数组。此外，程序会将整个屏幕保存为 PNG 文件并恢复它。当程序从停用墓化返回时，它看起来和离开时一样，但这某种程度上具有欺骗性，因为它需要对每个像素重新开始计算。因此，屏幕可能会在那里停留一段时间才会得到更新。
 
@@ -7092,7 +6779,6 @@ protected override void LoadContent() {
 
 ```cs
 XNA 项目：Phone.Phone.Xna 文件：Texture2DExtensions.cs（节录）
-
 public static void SaveToPhoneServiceState(this Texture2D texture, string key)
 {
     MemoryStream memoryStream = new MemoryStream();
@@ -7105,7 +6791,6 @@ public static void SaveToPhoneServiceState(this Texture2D texture, string key)
 
 ```cs
 XNA 项目：Phone.Phone.Xna 文件：Texture2DExtensions.cs（节录）
-
 public static void SaveToPhoneServiceState(this Texture2D texture, string key)
 {
     MemoryStream memoryStream = new MemoryStream();
@@ -7114,7 +6799,7 @@ public static void SaveToPhoneServiceState(this Texture2D texture, string key)
 }
 ```
 
-# 10 从手势到变换 267
+# 10 从手势到变换
 
 ```cs
 if (PhoneApplicationService.Current.State.ContainsKey(key)) {
@@ -7128,7 +6813,7 @@ return texture;
 
 这里是 `MandelbSet` 中利用那两个方法的 `Activated` 和 `Onactivated` 覆盖实现，以及名为 `InitializePixelInfo` 的方法：
 
-XNA 项目：MandelbSet 文件：Game1.cs（节录）
+XNA 项目：`MandelbSet` 文件：`Game1.cs`（节录）
 
 ```cs
 protected void OnActivated(object sender, EventArgs args)
@@ -7137,7 +6822,6 @@ protected void OnActivated(object sender, EventArgs args)
 ```cs
 // 从停用墓化恢复或重建它
 texture = Texture2DExtensions.LoadFromServiceState(graphicsDevice, "mandelBitmap");
-
 if (texture == null)
     texture = new Texture2D(graphicsDevice, viewport.Width, viewport.Height);
 ```
@@ -7151,19 +6835,16 @@ pixels = new uint[numPixels];
 texture.GetData(uint[])pixels;
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
 ```cs
 // 创建并初始化 PixelInfo 数组
 pixelInfos = new PixelInfo[numPixels];
 InitializePixelInfo(pixels);
-
 // 启动计算线程
 Thread thread = new Thread(PixelSetterThread);
 thread.Start();
-
 base.OnActivated(sender, args);
-
 protected override void OnDeactivated(object sender, EventArgs args)
 {
     PhoneApplicationService.Current.State["xorigin"] = PixelInfo
@@ -7171,19 +6852,15 @@ protected override void OnDeactivated(object sender, EventArgs args)
     PhoneApplicationService.Current.State["yorigin"] = PixelInfo
 .yCoordAtComplexOrigin;
     PhoneApplicationService.Current.State["resolution"] = PixelInfo.unitsPerPixel;
-
     texture.SaveToPhonesState("mandelBitmap");
-
     base.OnDeactivated(sender, args);
 }
-
 void InitializePixelInfo(int[] pixels)
 {
     for (int index = 0; index < pixelInfos.Length; index++)
     {
         pixelInfos[index] = new PixelInfo(index, pixels);
     }
-
     PixelInfo.hasNewColors = true;
     PixelInfo.firstIndex = 0;
     PixelInfo.lastIndex = pixelInfos.Length - 1;
@@ -7192,19 +6869,16 @@ void InitializePixelInfo(int[] pixels)
 
 `Activated` 完成后，一切都已就绪，因此它启动了一个基于 `PixelSetter` 方法的第二个线程。该方法通过循环遍历 `PixelInfo` 数组中的所有成员并调用 `Iterate` 方法来执行剩余的计算。如果 `Iterate` 返回 `true`，则为像素分配颜色：
 
-> XNA 项目：MandelbrotSet 文件：Game1.cs（节录）
+> XNA 项目：`MandelbrotSet` 文件：`Game1.cs`（节录）
 
 ```cs
 void PixelSetterThread()
 {
     int pixelIndex = 0;
-
     while (true)
     {
         lock (pixelInfosLock)
 ```
-
-
 
 ```c
 {
@@ -7212,7 +6886,6 @@ void PixelSetterThread()
         if (pixelInfo[pixelIndex].Iterate()) {
             int iteration = pixelInfo[pixelIndex].iteration;
             pixelInfo[pixelIndex].packedColor = GetPixelColor(iteration).PackedValue;
-
             pixelInfo.hasNewColors = true;
             pixelInfo.firstNewIndex = Math.Min(pixelInfo.firstNewIndex, pixelIndex);
             pixelInfo.lastNewIndex = Math.Max(pixelInfo.lastNewIndex, pixelIndex);
@@ -7221,7 +6894,6 @@ void PixelSetterThread()
             // remaining inside the Mandelbrot Set
             if (pixelInfo[pixelIndex].iteration == 500 && pixelInfo[pixelIndex].packedColor != Color.Black.PackedValue) {
                 pixelInfo[pixelIndex].packedColor = Color.Black.PackedValue;
-
                 pixelInfo.hasNewColors = true;
                 pixelInfo.firstNewIndex = Math.Min(pixelInfo.firstNewIndex, pixelIndex);
                 pixelInfo.lastNewIndex = Math.Max(pixelInfo.lastNewIndex, pixelIndex);
@@ -7235,18 +6907,15 @@ void PixelSetterThread()
 }
 Color GetPixelColor(int iteration) {
     float proportion = (iteration / 32f) % 1;
-
     if (proportion < 0.5) {
         return new Color(1 - 2 * proportion, 0, 2 * proportion);
     }
-
     proportion = 2 * (proportion - 0.5f);
-
     return new Color(0, proportion, 1 - proportion);
 }
 ```
 
-# 第二部分 XNA
+## 第二部分 XNA
 
 虽然对于此线程来说，尽快执行计算很重要，但它也试图减轻 Update 覆盖方法（稍后介绍）中必须执行的一些工作。通过设置 `PixelInfo` 结构体中的静态字段，线程指示了已更改的像素索引最大索引。
 
@@ -7254,7 +6923,7 @@ Color GetPixelColor(int iteration) {
 
 以下是 Update 覆盖方法的第一部分，它将从第二个线程计算的 `PixelInfo` 数组中的颜色信息传输到像素数组中，然后根据该数组更新 `Texture2D`：
 
-XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
+XNA 项目: `MandelbrotSet` 文件: `Game1.cs` (节选)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -7262,7 +6931,6 @@ protected override void Update(GameTime gameTime)
     // 允许游戏退出
     if (Gamepad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     // 从 pixelInfos 数组的像素数组更新纹理
     if (PixelInfo.hasNewColors)
     {
@@ -7275,7 +6943,6 @@ protected override void Update(GameTime gameTime)
             {
                 pixels[pixelIndex] = PixelInfo[pixelIndex].packedColor;
             }
-
             // 将新像素传输到纹理
             int firstRow = PixelInfo.firstIndex / texture.Width;
             int numRows = PixelInfo.lastIndex / texture.Width - firstRow + 1;
@@ -7287,26 +6954,37 @@ protected override void Update(GameTime gameTime)
 ```
 
 ```csharp
+```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
 // 重置 PixelInfo
-PixelInfo.hasNewColors = false;
-PixelInfo.firstIndex = Int32.MaxValue;
-PixelInfo.lastIndex = 0;
+
+`PixelInfo.hasNewColors` = false;
+
+`PixelInfo.firstIndex` = `Int32.MaxValue`;
+
+`PixelInfo.lastIndex` = 0;
 
 // 更新 globalIteration。Remove(0, upperRightStatusText.Length);
-upperRightStatusText.AppendFormat("0", globalIteration + 1);
-Vector2 textSize = segoFont.MeasureString(upperRightStatusText);
-upperRightStatusPosition = new Vector2(viewport.Width - textSize.X, 0);
-```
+
+`upperRightStatusText.AppendFormat`("0", `globalIteration` + 1);
+
+`Vector2` `textSize` = `segoFont.MeasureString`(`upperRightStatusText`);
+
+`upperRightStatusPosition` = new `Vector2`(`viewport.Width` - `textSize.X`, 0);
 
 ## 平移与缩放
 
-Update 覆盖方法的剩余部分用于处理触摸输入。这里的想法非常简单：当你触摸屏幕并移动它时（可能在放大或缩小），没有任何操作都是*不可逆转的*。屏幕看起来似乎在移动和缩放，一个 Matrix 对象 `drawMatrix` 正在被修改，并被用于 `SpriteBatch` 的 `Begin` 调用。
+`Update`覆盖方法剩余部分用于处理触摸输入。这里的想法非常简单：当你触摸屏幕并移动它时（可能在放大或缩小），没有任何操作都是*不可逆转的*。屏幕看起来似乎在移动和缩放，一个`Matrix`对象`drawMatrix`正在被修改，并被用于`SpriteBatch`的`Begin`调用。
 
-然而，当你的手指离开屏幕时，程序会根据屏幕的新位置和缩放级别更改 `PixelInfo` 数组和 `pixels` 数组。程序并没有尝试保留屏幕之外的内容。
+然而，当你的手指离开屏幕时，程序会根据屏幕的新位置和缩放级别更改`PixelInfo`数组和`pixels`数组。程序并没有尝试保留屏幕之外的内容。
 
-以下是用于平移操作的 `FreeDrag` 和 `DragComplete` 手势的处理逻辑：
+以下是用于平移操作的`FreeDrag`和`DragComplete`手势的处理逻辑：
 
-XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
+### XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -7315,15 +6993,13 @@ protected override void Update(GameTime gameTime)
     while (TouchPanel.IsGestureAvailable())
     {
         Gesture gesture = TouchPanel.GetGesture();
-
         switch (gesture.GestureType)
         {
             case GestureType.FreeDrag:
-                //  drawMatrix
+                // drawMatrix
                 drawMatrix.M41 += gesture.X;
                 drawMatrix.M42 += gesture.Y;
                 break;
-
             case GestureType.DragComplete:
                 // 从 pixelinfos 更新纹理
                 lock (pixelInfo)
@@ -7348,9 +7024,9 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-当用户移动手指时，手指离开屏幕，`TranslatePixelInfo` 方法使用最终的 `drawMatrix` 设置 `PixelInfo` 的值：
+当用户移动手指时，手指离开屏幕，`TranslatePixelInfo`方法使用最终的`drawMatrix`设置`PixelInfo`的值：
 
-XNA 项目: Mandelbrot 文件: Game1.cs (节选)
+### XNA 项目: Mandelbrot 文件: Game1.cs (节选)
 
 ```csharp
 PixelInfo[] TranslatePixelInfo(PixelInfo[] pixelinfos, Matrix drawMatrix)
@@ -7360,16 +7036,13 @@ PixelInfo[] TranslatePixelInfo(PixelInfo[] pixelinfos, Matrix drawMatrix)
     PixelInfo.xPixelAtOrigin += x;
     PixelInfo.yPixelAtOrigin += y;
     PixelInfo[] dstPixelInfos = new PixelInfo[pixelinfos.Length];
-
     for (int dstY = 0; dstY < PixelInfo.pixelHeight; dstY++) {
         int srcY = dstY - y;
         int srcRow = srcY * PixelInfo.pixelWidth;
         int dstRow = dstY * PixelInfo.pixelWidth;
-
         for (int dstX = 0; dstX < PixelInfo.pixelWidth; dstX++) {
             int srcX = dstX - x;
             int dstIndex = dstRow + dstX;
-
             if (srcX > 0 && srcX < PixelInfo.pixelWidth && srcY > 0 && srcY < PixelInfo.pixelHeight) {
                 int srcIndex = srcRow + srcX;
                 dstPixelInfos[dstIndex] = pixelinfos[srcIndex];
@@ -7382,14 +7055,11 @@ PixelInfo[] TranslatePixelInfo(PixelInfo[] pixelinfos, Matrix drawMatrix)
 }
 ```
 
-缩放时，采用了相反的方法。Mandelbrot 集合的本质决定了每个点都是独特的，无法通过其邻居进行近似。因此，任何缩放操作都会导致整个 `PixelInfo` 数组重新创建，并从头开始所有计算。
+缩放时，采用了相反的方法。Mandelbrot集合的本质决定了每个点都是独特的，无法通过其邻居进行近似。因此，任何缩放操作都会导致整个`PixelInfo`数组重新创建，并从头开始所有计算。
 
-然而，视觉效果可以作为临时近似保留。因此，`Update` 通过处理 `PinchComplete` 手势并将变换应用到 `pixels` 数组，然后使用它来设置 `PixelInfo` 数组中的颜色。当你放大时，你会看到像下面的东西：
+然而，视觉效果可以作为临时近似保留。因此，`Update`通过处理`PinchComplete`手势并将变换应用到`pixels`数组，然后使用它来设置`PixelInfo`数组中的颜色。当你放大时，你会看到像下面的东西：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_287_0.png)
-
-
-
 
 # 274 第二部分 XNA
 
@@ -7397,9 +7067,9 @@ PixelInfo[] TranslatePixelInfo(PixelInfo[] pixelinfos, Matrix drawMatrix)
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_288_0.png)
 
-Pinch（缩放）代码看起来很熟悉，不同在于它决定了水平还是垂直增量占主。此信息被传递给 `ComputeScaleMatrix` 方法：
+Pinch（缩放）代码看起来很熟悉，不同在于它决定了水平还是垂直增量占主。此信息被传递给`ComputeScaleMatrix`方法：
 
-## XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
+### XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -7409,27 +7079,18 @@ protected override void Update(GameTime gameTime)
     while (TouchPanel.IsGestureAvailable)
     {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         switch (gesture.GestureType)
         {
             case GestureType.Pinch:
-                bool xDominates = Math.Abs(gesture.Delta.X) + Math.Abs(gesture
-.Delta2.X) >
-                    Math.Abs(gesture.Delta.Y) + Math.Abs(gesture
-.Delta2.Y);
-
+                bool xDominates = Math.Abs(gesture.Delta.X) + Math.Abs(gesture.Delta2.X) >
+                    Math.Abs(gesture.Delta.Y) + Math.Abs(gesture.Delta2.Y);
                 Vector2 oldPoint1 = gesture.Position - gesture.Delta;
                 Vector2 newPoint1 = gesture.Position;
                 Vector2 oldPoint2 = gesture.Position2 - gesture.Delta2;
                 Vector2 newPoint2 = gesture.Position2;
-
-                drawMatrix *= ComputeScaleMatrix(oldPoint1, oldPoint2, newPoint2,
-xDominates);
-                drawMatrix *= ComputeScaleMatrix(newPoint2, oldPoint1, newPoint1,
-xDominates);
-
+                drawMatrix *= ComputeScaleMatrix(oldPoint1, oldPoint2, newPoint2, xDominates);
+                drawMatrix *= ComputeScaleMatrix(newPoint2, oldPoint1, newPoint1, xDominates);
                 break;
-
         case GestureType.PinchComplete:
             // 从缩放像素设置纹理
             pixels = ZoomPixels(pixels, drawMatrix);
@@ -7443,57 +7104,49 @@ PixelInfo.xPixelCoordAtComplexOrigin += drawMatrix.M41;
 PixelInfo.yPixelCoordAtComplexOrigin *= drawMatrix.M22;
 PixelInfo.yPixelCoordAtComplexOrigin += drawMatrix.M42;
 PixelInfo.unitsPerPixel /= drawMatrix.M11;
-
 // 重新初始化 PixelInfos
 lock(pixelInfoLock)
 {
     InitializePixelInfo(pixels);
 }
-
 drawMatrix = Matrix.Identity;
 globalIteration = 0;
 break;
-
 UpdateCoordinateText();
 }
 base.Update(gameTime);
 }
 ```
 
-`ComputeScaleMatrix` 方法与 DragAndPinch 中的该方法非常相似，只是它在方法的布尔参数后面进行均匀缩放：
+`ComputeScaleMatrix`方法与 DragAndPinch 中的该方法非常相似，只是它在方法的布尔参数后面进行均匀缩放：
 
-## XNA 项目: MandelbrotSet 文件: Game.cs (节选)
+### XNA 项目: MandelbrotSet 文件: Game.cs (节选)
 
 ```csharp
 Matrix ComputeScaleMatrix(Vector2 refPoint, Vector2 oldPoint, Vector2 newPoint, bool xDominates)
 {
     float scale = 1;
-
     if (xDominates)
         scale = (newPoint.X - refPoint.X) / (oldPoint.X - refPoint.X);
     else
         scale = (newPoint.Y - refPoint.Y) / (oldPoint.Y - refPoint.Y);
-
     if (float.IsNaN(scale) || float.IsInfinity(scale) || scale < 0)
     {
         return Matrix.Identity;
     }
-
     scale = Math.Min(1.1f, Math.Max(0.9f, scale));
-
     Matrix matrix = Matrix.CreateTranslation(-refPoint.X, -refPoint.Y, 0);
     matrix *= Matrix.CreateScale(scale, 1);
     matrix *= Matrix.CreateTranslation(refPoint.X, refPoint.Y, 0);
-
     return matrix;
 }
 ```
 
 # 第二部分 XNA
 
-用于 PinchComplete 手势的 `ZoomPixels` 方法在从目标像素坐标计算源像素坐标时获取矩阵的逆。坦率地说，反转矩阵只是调用 `Matrix.Invert` 方法的问题。程序的早期版本调用 `Matrix.CreateScale`（上上）并将零作为第三个参数。这创建了一个可逆矩阵，而调用 `Invert` 则创建了一个所有字段都为 NaN（“非数字”）的矩阵。这并不可行。
+用于 PinchComplete 手势的`ZoomPixels`方法在从目标像素坐标计算源像素坐标时获取矩阵的逆。坦率地说，反转矩阵只是调用`Matrix.Invert`方法的问题。程序的早期版本调用`Matrix.CreateScale`（上上）并将零作为第三个参数。这创建了一个可逆矩阵，而调用`Invert`则创建了一个所有字段都为 NaN（“非数字”）的矩阵。这并不可行。
 
-## XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
+### XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
 
 ```csharp
 uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
@@ -7510,7 +7163,6 @@ uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
             Vector2 src = Vector2.Transform(dst, invMatrix);
             int srcX = (int)(src.X + 0.5f);
             int srcY = (int)(src.Y + 0.5f);
-
             if (srcX >= 0 && srcX < PixelInfo.pixelWidth &&
                 srcY >= 0 && srcY < PixelInfo.pixelHeight)
             {
@@ -7527,9 +7179,9 @@ uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
 }
 ```
 
-`UpdateCoordinateText` 方法负责计算左上和右下角的坐标、在 `StringBuilder` 中格式化它们并决定它们显示的位置：
+`UpdateCoordinateText`方法负责计算左上和右下角的坐标、在`StringBuilder`中格式化它们并决定它们显示的位置：
 
-## 第10章 手势到变换
+### 第10章 手势到变换
 
 XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
 
@@ -7540,14 +7192,9 @@ void UpdateCoordinateText()
 }
 ```
 
-（等待，OCR 文本在提供的页面中是碎片化的或重复的。我将根据提供的片段重构逻辑。）
 
-*修正：提供的 OCR 文本在第 290-291 页之间存在大量重叠。我将在保持所有内容的同时清理结构。*
 
-实际上，再次查看文本，第 290-291 页是一堆混乱的片段。我将提供清理后的文本。
-
-[content]
-# 274 第二部分 XNA
+# 第二部分 XNA
 
 但请等一下，它变成了这样：
 
@@ -7565,33 +7212,23 @@ protected override void Update(GameTime gameTime)
     while (TouchPanel.IsGestureAvailable)
     {
         GestureSample gesture = TouchPanel.ReadGesture();
-
         switch (gesture.GestureType)
         {
             case GestureType.Pinch:
-                bool xDominates = Math.Abs(gesture.Delta.X) + Math.Abs(gesture
-.Delta2.X) >
-                    Math.Abs(gesture.Delta.Y) + Math.Abs(gesture
-.Delta2.Y);
-
+                bool xDominates = Math.Abs(gesture.Delta.X) + Math.Abs(gesture.Delta2.X) >
+                    Math.Abs(gesture.Delta.Y) + Math.Abs(gesture.Delta2.Y);
                 Vector2 oldPoint1 = gesture.Position - gesture.Delta;
                 Vector2 newPoint1 = gesture.Position;
                 Vector2 oldPoint2 = gesture.Position2 - gesture.Delta2;
                 Vector2 newPoint2 = gesture.Position2;
-
-                drawMatrix *= ComputeScaleMatrix(oldPoint1, oldPoint2, newPoint2,
-xDominates);
-                drawMatrix *= ComputeScaleMatrix(newPoint2, oldPoint1, newPoint1,
-xDominates);
-
+                drawMatrix *= ComputeScaleMatrix(oldPoint1, oldPoint2, newPoint2, xDominates);
+                drawMatrix *= ComputeScaleMatrix(newPoint2, oldPoint1, newPoint1, xDominates);
                 break;
-
         case GestureType.PinchComplete:
             // 从缩放像素设置纹理
             pixels = ZoomPixels(pixels, drawMatrix);
             texture.SetData<uint>(pixels);
 ```
-
 ```csharp
 // 设置新的 PixelInfo 参数
 PixelInfo.xPixelCoordAtComplexOrigin *= drawMatrix.M11;
@@ -7605,11 +7242,9 @@ lock(pixelInfoLock)
 {
     InitializePixelInfo(pixels);
 }
-
 drawMatrix = Matrix.Identity;
 globalIteration = 0;
 break;
-
 UpdateCoordinateText();
 }
 base.Update(gameTime);
@@ -7624,23 +7259,18 @@ base.Update(gameTime);
 Matrix ComputeScaleMatrix(Vector2 refPoint, Vector2 oldPoint, Vector2 newPoint, bool xDominates)
 {
     float scale = 1;
-
     if (xDominates)
         scale = (newPoint.X - refPoint.X) / (oldPoint.X - refPoint.X);
     else
         scale = (newPoint.Y - refPoint.Y) / (oldPoint.Y - refPoint.Y);
-
     if (float.IsNaN(scale) || float.IsInfinity(scale) || scale < 0)
     {
         return Matrix.Identity;
     }
-
     scale = Math.Min(1.1f, Math.Max(0.9f, scale));
-
     Matrix matrix = Matrix.CreateTranslation(-refPoint.X, -refPoint.Y, 0);
     matrix *= Matrix.CreateScale(scale, 1);
     matrix *= Matrix.CreateTranslation(refPoint.X, refPoint.Y, 0);
-
     return matrix;
 }
 ```
@@ -7666,7 +7296,6 @@ uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
             Vector2 src = Vector2.Transform(dst, invMatrix);
             int srcX = (int)(src.X + 0.5f);
             int srcY = (int)(src.Y + 0.5f);
-
             if (srcX >= 0 && srcX < PixelInfo.pixelWidth &&
                 srcY >= 0 && srcY < PixelInfo.pixelHeight)
             {
@@ -7684,156 +7313,6 @@ uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
 ```
 
 `UpdateCoordinateText` 方法负责计算左上和右下角的坐标、在 `StringBuilder` 中格式化它们并决定它们显示的位置：
-
-（注意：OCR 文本在第 290-292 页是高度冗余/损坏的。我合并了提供的片段。）
-
-等待，提示词要求只输出文本。我将根据提供的片段提供版本。
-
-*最终检查：OCR 文本在第 290-291 页实际上是重叠的代码和文本。我将呈现最连贯的版本。*
-
-（等待，我意识到上面的输出被包裹在它自己的块中。我将提供清理后的最终输出。）
-
-[content]
-# 274 第二部分 XNA
-
-但请等一下，它变成了这样：
-
-![](img/d9347c1f55fa6d523479d2cd9b4d5459_288_0.png)
-
-Pinch 代码看起来很熟悉，不同在于它决定了水平还是垂直增量占主。此信息被传递给 `ComputeScaleMatrix` 方法：
-
-## XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
-
-```csharp
-protected override void Update(GameTime gameTime)
-{
-    ...
-    // 读取触摸手势
-    while (TouchPanel.IsGestureAvailable)
-    {
-        GestureSample gesture = TouchPanel.ReadGesture();
-
-        switch (gesture.GestureType)
-        {
-            case GestureType.Pinch:
-                bool xDominates = Math.Abs(gesture.Delta.X) + Math.Abs(gesture
-.Delta2.X) >
-                    Math.Abs(gesture.Delta.Y) + Math.Abs(gesture
-.Delta2.Y);
-
-                Vector2 oldPoint1 = gesture.Position - gesture.Delta;
-                Vector2 newPoint1 = gesture.Position;
-                Vector2 oldPoint2 = gesture.Position2 - gesture.Delta2;
-                Vector2 newPoint2 = gesture.Position2;
-
-                drawMatrix *= ComputeScaleMatrix(oldPoint1, oldPoint2, newPoint2,
-xDominates);
-                drawMatrix *= ComputeScaleMatrix(newPoint2, oldPoint1, newPoint1,
-xDominates);
-
-                break;
-
-        case GestureType.PinchComplete:
-            // 从缩放像素设置纹理
-            pixels = ZoomPixels(pixels, drawMatrix);
-            texture.SetData<uint>(pixels);
-```
-
-```csharp
-// 设置新的 PixelInfo 参数
-PixelInfo.xPixelCoordAtComplexOrigin *= drawMatrix.M11;
-PixelInfo.xPixelCoordAtComplexOrigin += drawMatrix.M41;
-PixelInfo.yPixelCoordAtComplexOrigin *= drawMatrix.M22;
-PixelInfo.yPixelCoordAtComplexOrigin += drawMatrix.M42;
-PixelInfo.unitsPerPixel /= drawMatrix.M11;
-
-// 重新初始化 PixelInfos
-lock(pixelInfoLock)
-{
-    InitializePixelInfo(pixels);
-}
-
-drawMatrix = Matrix.Identity;
-globalIteration = 0;
-break;
-
-UpdateCoordinateText();
-}
-base.Update(gameTime);
-}
-```
-
-`ComputeScaleMatrix` 方法与 DragAndPinch 中的该方法非常相似，只是它在方法的布尔参数后面进行均匀缩放：
-
-## XNA 项目: MandelbrotSet 文件: Game.cs (节选)
-
-```csharp
-Matrix ComputeScaleMatrix(Vector2 refPoint, Vector2 oldPoint, Vector2 newPoint, bool xDominates)
-{
-    float scale = 1;
-
-    if (xDominates)
-        scale = (newPoint.X - refPoint.X) / (oldPoint.X - refPoint.X);
-    else
-        scale = (newPoint.Y - refPoint.Y) / (oldPoint.Y - refPoint.Y);
-
-    if (float.IsNaN(scale) || float.IsInfinity(scale) || scale < 0)
-    {
-        return Matrix.Identity;
-    }
-
-    scale = Math.Min(1.1f, Math.Max(0.9f, scale));
-
-    Matrix matrix = Matrix.CreateTranslation(-refPoint.X, -refPoint.Y, 0);
-    matrix *= Matrix.CreateScale(scale, 1);
-    matrix *= Matrix.CreateTranslation(refPoint.X, refPoint.Y, 0);
-
-    return matrix;
-}
-```
-
-# 第二部分 XNA
-
-用于 PinchComplete 手势的 `ZoomPixels` 方法在从目标像素坐标计算源像素坐标时获取矩阵的逆。坦率地说，反转矩阵只是调用 `Matrix.Invert` 方法的问题。程序的早期版本调用 `Matrix.CreateScale`（上上）并将零作为第三个参数。这创建了一个可逆矩阵，而调用 `Invert` 则创建了一个所有字段都为 NaN（“非数字”）的矩阵。这并不可行。
-
-## XNA 项目: MandelbrotSet 文件: Game1.cs (节选)
-
-```csharp
-uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
-{
-    Matrix invMatrix = Matrix.Invert(matrix);
-    uint[] dstPixels = new uint[srcPixels.Length];
-    for (int dstY = 0; dstY < PixelInfo.pixelHeight; dstY++)
-    {
-        int dstRow;
-        for (int dstX = 0; dstX < PixelInfo.pixelWidth; dstX++)
-        {
-            int dstIndex = dstRow + dstX;
-            Vector2 dst = new Vector2(dstX, dstY);
-            Vector2 src = Vector2.Transform(dst, invMatrix);
-            int srcX = (int)(src.X + 0.5f);
-            int srcY = (int)(src.Y + 0.5f);
-
-            if (srcX >= 0 && srcX < PixelInfo.pixelWidth &&
-                srcY >= 0 && srcY < PixelInfo.pixelHeight)
-            {
-                int srcIndex = srcY * PixelInfo.pixelWidth + srcX;
-                dstPixels[dstIndex] = srcPixels[srcIndex];
-            }
-            else
-            {
-                dstPixels[dstIndex] = Color.Black.PackedValue;
-            }
-        }
-    }
-    return dstPixels;
-}
-```
-
-`UpdateCoordinateText` 方法负责计算左上和右下角的坐标、在 `StringBuilder` 中格式化它们并决定它们显示的位置：
-
-
-
 
 ## 第 10 章 从手势到变换
 
@@ -7841,7 +7320,11 @@ uint[] ZoomPixels(uint[] srcPixels, Matrix matrix)
 
 ```
 XNA Project: Petzold.Phone.Xna File: IProcessTouch.cs
+```
 
+
+
+```csharp
 using Microsoft.Xna.Framework.Input.Touch;
 
 namespace Petzold.Phone.Xna
@@ -7857,24 +7340,23 @@ namespace Petzold.Phone.Xna
 
 我要向你展示的第一个组件是 `Dragger`，它是 `Petzold.Phone.Xna` 库的一部分。`Dragger` 派自 `DrawableGameComponent` 并实现了 `IProcessTouch` 接口：
 
-```
-XNA Project: Petzold.Phone.Xna File: Dragger.cs (显示字段的节选)
+XNA Project: `Petzold.Phone.Xna` File: `Dragger.cs` (显示字段的节选)
 
+```csharp
 public class Dragger : DrawableGameComponent, IProcessTouch
 {
     SpriteBatch spriteBatch;
     int? touchId;
 
-public event EventHandler PositionChanged;
+    public event EventHandler PositionChanged;
 
     public Dragger(Game game)
         : base(game)
-
     public Texture2D Texture { set; get; }
     public Vector2 Origin { set; get; }
     public Vector2 Position { set; get; }
-
     ...
+}
 ```
 
 ## 第二部分 XNA
@@ -7885,22 +7367,19 @@ public event EventHandler PositionChanged;
 
 使用 `Dragger` 的程序可以为组件定义自定义的 `Texture2D` 并通过此公共 `Texture` 属性进行设置，此时它可能会设置 `Origin` 属性。然而，`Dragger` 在其 `LoadContent` 方法中为定义定义了一个默认的 `Texture` 属性：
 
-XNA Project: Petzold.Phone.Xna File: Dragger.cs (节选)
+XNA Project: `Petzold.Phone.Xna` File: `Dragger.cs` (节选)
 
 ```csharp
 protected override void LoadContent()
 {
     sprite = new SpriteBatch(this.GraphicsDevice);
-
     // 创建默认纹理
     int radius = 48;
     Texture2D texture = new Texture2D(this.GraphicsDevice, 2 * radius, 2 * radius);
     uint[] pixels = new uint[texture.Width * texture.Height];
-
     for (int y = 0; y < texture.Height; y++)
         for (int x = 0; x < texture.Width; x++) {
             Color clr = Color.Transparent;
-
             if ((x - radius) * (x - radius) + 
                 (y - radius) * (y - radius) < 
                 radius * radius) {
@@ -7909,26 +7388,22 @@ protected override void LoadContent()
             }
         }
     texture.SetData<uint>(pixels);
-
     Texture = texture;
     Origin = new Vector2(radius, radius);
-
     base.LoadContent();
 }
 ```
 
 `Dragger` 实现了 `IProcessTouch` 接口，因此它有一个 `ProcessTouch` 方法，由 `Game` 派类为每个 `TouchLocation` 对象调用。`ProcessTouch` 方法关注发生在组件自身之上的手指按下。如果是这种情况，它会保留该 ID 并基本上上“拥有”该手指，直到它离开屏幕。对于该手指的每一次移动，`Dragger` 都会触发 `PositionChanged` 事件。
 
-XNA Project: Petzold.Phone.Xna File: Dragger.cs (节选)
+XNA Project: `Petzold.Phone.Xna` File: `Dragger.cs` (节选)
 
 ```csharp
 public bool ProcessTouch(TouchLocation touch)
 {
     if (Texture == null)
         return false;
-
     bool touchHandled = false;
-
     switch (touch.State)
     {
         case TouchLocationState.Pressed:
@@ -7945,7 +7420,6 @@ public bool ProcessTouch(TouchLocation touch)
             {
                 touch.GetPreviousLocation(out Vector2 previousTouch);
                 Position += touch.Position - previousTouch;
-
                 // 触发事件
                 if (PositionChanged != null)
                     PositionChanged(this, EventArgs.Empty);
@@ -7965,7 +7439,7 @@ public bool ProcessTouch(TouchLocation touch)
 
 `Draw` 重写方法在新的位置绘制 `Texture2D`：
 
-XNA Project: Petzold.Phone.Xna File: Dragger.cs (节选)
+XNA Project: `Petzold.Phone.Xna` File: `Dragger.cs` (节选)
 
 ```csharp
 public override void Draw(GameTime gameTime)
@@ -7982,21 +7456,21 @@ public override void Draw(GameTime gameTime)
 
 现在让这个 `Dragger` 组件用于更高级的变换。
 
-## 仿射变换与非仿射变换
+### 仿射变换与非仿射变换
 
-有时推导出一个将特定点映射到特定地点的变换是非常方便的。例如，这里有一个程序包含了三个 `Dragger` ，允许将三个角拖动到屏幕上的任意位置：
+有时推导出一个将特定点映射到特定地点的变换是非常方便的。例如，这里有一个程序包含了三个 `Dragger`，允许将三个角拖动到屏幕上的任意位置：
 
-img/934c1ffa6d523479cd9b_296.png
+`img/934c1ffa6d523479cd9b_296.png`
 
 该程序使用仿射变换，这意味着矩形总是被映射为平行边形。第四个角不可拖动，因为它由另外三个角决定：
 
-img/934c1ffa6d523479cd9b_297.png
+`img/934c1ffa6d523479cd9b_297.png`
 
 你不能任意选择三个点。如果尝试让内角大于 180°，一切都会失败。为了确定数学关系，先假设我们要变换的原始图像宽为 1 像素，高为 1 像素会更容易。我们需要一个将图像角映射到三个任意点的变换：
 
-- (0,0) → (x_0, y_0)
-- (1,0) → (x_1, y_1)
-- (0,1) → (x_2, y_2)
+- `(0,0)` → `(x_0, y_0)`
+- `(1,0)` → `(x_1, y_1)`
+- `(0,1)` → `(x_2, y_2)`
 
 这些分别是左上、右上和左下角。使用 XNA 中的 `Matrix` 对象字段，变换公式为：
 
@@ -8005,7 +7479,7 @@ x' = M11 · x + M21 · y + M41
 y' = M12 · x + M22 · y + M42
 ```
 
-很容易将该变换应用到点 (0, 0)、(1, 0) 和 (0, 1) 并求解出矩阵元素：
+很容易将该变换应用到点 `(0, 0)`、`(1, 0)` 和 `(0, 1)` 并求解出矩阵元素：
 
 ```
 M11 = x_1 - x_0
@@ -8018,7 +7492,7 @@ M42 = y_0
 
 `Petzold.Xna` 库中名为 `MatrixHelper` 的静态类有一个名为 `ComputeAffineTransform` 的方法，它根据这些公式创建一个 `Matrix` 对象：
 
-XNA Project: Petzold.Xna File: MatrixHelper.cs (节选)
+XNA Project: `Petzold.Xna` File: `MatrixHelper.cs` (节选)
 
 ```csharp
 static Matrix ComputeAffineTransform(Vector2 ptUL, Vector2 ptUR, Vector2 ptLL)
@@ -8041,17 +7515,15 @@ static Matrix ComputeAffineTransform(Vector2 ptUL, Vector2 ptUR, Vector2 ptLL)
 
 为了计算适用于特定尺寸对象的仿射变换的 `Matrix`，下面的方法可能非常有用：
 
-XNA Project: Petzold.Xna File: MatrixHelper.cs (节选)
+XNA Project: `Petzold.Xna` File: `MatrixHelper.cs` (节选)
 
 ```csharp
 public static Matrix ComputeAffineTransform(Vector2 size, Vector2 ptUL, Vector2 ptUR, Vector2 ptLL)
 {
     // 缩放变换
     Matrix S = Matrix.CreateScale(1 / size.X, 1 / size.Y, 1);
-
     // 仿射变换
     Matrix A = ComputeAffineTransform(ptUL, ptUR);
-
     // 两个变换的乘积
     return S * A;
 }
@@ -8059,37 +7531,29 @@ public static Matrix ComputeAffineTransform(Vector2 size, Vector2 ptUL, Vector2 
 
 第一个变换在应用计算出的仿射变换之前，先将对象缩放到 1×1 的尺寸。
 
+`AffineTransform` 项目负责显示上方所示的屏幕。它在 `Initialize` 覆盖方法中创建了三个 `Dragger` 组件实例，为 `PositionChanged` 事件设置了处理器，并将组件添加到 `Components` 集合中：
 
+XNA Project: `AffineTransform` 文件: `Game1.cs` (节选)
 
-
-AffineTransform 项目负责显示上方所示的屏幕。它在 `Initialize` 覆盖方法中创建了三个 `Dragger` 组件实例，为 `PositionChanged` 事件设置了处理器，并将组件添加到 `Components` 集合中：
-
-## XNA Project: AffineTransform 文件: Game1.cs (节选)
-
-```sharp
+```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDeviceManager graphics;
     SpriteBatch spriteBatch;
-
     Texture2D texture;
     Matrix matrix = Matrix.Identity;
     Dragger draggerUL, draggerUR, draggerLL;
-
     protected override void Initialize()
     {
         draggerUL = new Dragger(this);
         draggerUL.PositionChanged += OnDraggerPositionChanged;
         this.Components.Add(draggerUL);
-
         draggerUR = new Dragger(this);
         draggerUR.PositionChanged += OnDraggerPositionChanged;
         this.Components.Add(draggerUR);
-
         draggerLL = new Dragger(this);
         draggerLL.PositionChanged += OnDraggerPositionChanged;
         this.Components.Add(draggerLL);
-
         base.Initialize();
     }
 }
@@ -8099,39 +7563,42 @@ public class Game1 : Microsoft.Xna.Framework.Game
 
 `LoadContent` 覆盖方法负责加载将转换的图像，并初始化图像三个角上三个 `Dragger` 组件的 `Position` 属性：
 
-## XNA Project: AffineTransform 文件: Game1.cs (节选)
+XNA Project: `AffineTransform` 文件: `Game1.cs` (节选)
 
-```sharp
+```csharp
 protected override void LoadContent()
 {
     // 创建一个新的 SpriteBatch，可用于绘制纹理。
     spriteBatch = new SpriteBatch(GraphicsDevice);
-
     Viewport viewport = this.GraphicsDevice.Viewport;
     texture = this.Content.Load<Texture2D>("Petzoldtattoo");
     draggerUL.Position = new Vector2((viewport.Width - texture.Width) / 2,
                                      (viewport.Height - texture.Height) / 2);
     draggerUR.Position = draggerUR.Position + new Vector2(texture.Width, 0);
     draggerLL.Position = draggerLL.Position + new Vector2(0, texture.Height);
-
     OnPositionChanged(null, EventArgs.Empty);
 }
 ```
 
 `Dragger` 只有在组件被用户意外拖动时才会触发 `PositionChanged` 事件，因此 `LoadContent` 通过模拟 `PositionChanged` 事件来实现更改，根据 `Texture2D` 的大小和 `Dragger` 组件的初始位置计算出初始 `Matrix`：
 
-## XNA Project: AffineTransform 文件: Game1.cs (节选)
+XNA Project: `AffineTransform` 文件: `Game1.cs` (节选)
 
-```sharp
+```csharp
 void OnDragPositionChanged(object sender, EventArgs e)
 {
     matrix = MatrixHelper.ComputeMatrix(
         draggerUL.Position,
-        draggerUR.Position,
-        draggerLL.Position,
-        texture.Size); // 简化的逻辑
+
+
+
+`draggerUR.Position`,
+
+`draggerLL.Position`,
+
+`texture.Size`); // 简化的逻辑
+
 }
-```
 
 程序本身不需要处理任何触摸输入，但 `Dragger` 实现了 `IProcessTouch` 接口，因此程序为 `Dragger` 组件提供了触摸输入。这些 `Dragger` 组件通过可能移动自身并设置新的 `Position` 属性来响应，这将触发 `PositionChanged` 事件。
 
@@ -8143,9 +7610,7 @@ protected override void Update(GameTime gameTime)
     // 允许退出游戏
     if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
         this.Exit();
-
     Touch touches = TouchPanel.GetState();
-
     foreach (TouchLocation touch in touches)
     {
         bool touchHandled = false;
@@ -8175,7 +7640,6 @@ protected override void Update(GameTime gameTime)
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.CornflowerBlue);
-
     spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null, matrix);
     spriteBatch.Draw(texture, Vector2.Zero, Color.White);
     spriteBatch.End();
@@ -8257,9 +7721,6 @@ img/d9347c1f55fa6d2cd4d559_303_1.png
 | a = (x3 - M14) / M11 | b = (y3 - M14) / M11 | | |
 | a = (x3 - M14) / M21 | b = (y3 - M14) / M21 | | |
 
-
-
-
 # 第10 章 从手势到变换 291
 
 点 (1, 1) 被映射到 (a, b)，这需要一些代数运算来推导：
@@ -8281,25 +7742,20 @@ public static Matrix ComputeMatrix(Vector2 size, Vector2 ptUL, Vector2 ptUR,
 {
   // 缩放变换
   Matrix S = Matrix.CreateScale(1 / size.X, 1 / size.Y, 1);
-
   // 仿变换
   Matrix A = ComputeAffineTransform(ptUL, ptUR, ptLL);
-
   // 非仿变换
   Matrix B = new Matrix();
   float a = (A.M11 * A.M22 - A.M12 * A.M21) * ptLR.Y +
     A.M21 * A.M42 - A.M22 * A.M41) / den;
-
   float b = (A.M11 * ptLR.Y - A.M12 * ptLR.X) * ptLR.X +
     A.M12 * A.M41 - A.M21 * A.M42) / den;
-
   B.M11 = a / (a + b - 1);
   B.M22 = b / (a + b - 1);
   B.M33 = 1;
   B.M14 = B.M11 - 1;
   B.M24 = B.M22 - 1;
   B.M44 = 1;
-
   // 三种变换的乘积
   return S * B * A;
 }
@@ -8323,50 +7779,38 @@ PhingerPaint 拥有 14 个 `ColorBlock` 和 `Button` 类的实例，它们派自
 
 `Button` 的行为非常像传统的图形按钮。它通常显示带有白色边框的文本，但当你把手指放在表面上时，颜色会反转，在白色背景上显示黑色文本。
 
-
-
-
-
 # 298 第二部分 XNA
 
 ```csharp
 public Color ColorBlock(Game game) : base(game)
 {
 }
-
 public Color Color { set; get; }
 public Rectangle Destination { set; get; }
 public bool IsSelected { set; get; }
-
 public override void Initialize()
 {
     base.Initialize();
 }
-
 protected override void LoadContent()
 {
     spriteBatch = new SpriteBatch(this.GraphicsDevice);
     block = new Texture2D(this.GraphicsDevice, 1, 1);
     block.SetData(new uint[] { Color.White.PackedValue });
-
     base.LoadContent();
 }
-
 public override void Update(GameTime gameTime)
 {
     base.Update(gameTime);
 }
-
 public override void Draw(GameTime gameTime)
 {
     Rectangle rect = Destination;
-
     spriteBatch.Begin();
     spriteBatch.Draw(block, rect, IsSelected ? Color.White : Color.DarkGray);
     rect.Inflate(-6, -6);
     spriteBatch.Draw(block, rect, Color);
     spriteBatch.End();
-
     base.Draw(gameTime);
 }
 ```
@@ -8379,25 +7823,20 @@ ColorBlock 依赖于三个公共属性——`Color`、`Destination` 和 `IsSelec
 
 ```csharp
 XNA Project: PhingerPaint File: Game1.cs (显示字段的片段)
-
 public class Game1 : Microsoft.Xna.Framework.Game
 {
     GraphicsDevice manager;
     SpriteBatch spriteBatch;
-
     Texture2D canvas;
     Vector2 canvasSize;
     Vector2 canvasPosition;
     uint[] pixels;
     List<float> xCollection = new List<float>();
-
     Button clearButton, saveButton;
     string filename;
-
     List<ColorBlock> colorBlocks = new List<ColorBlock>();
     Color drawingColor = Color.Blue;
     int? touchIdToIgnore;
-
 }
 ```
 
@@ -8405,12 +7844,10 @@ public class Game1 : Microsoft.Xna.Framework.Game
 
 ```csharp
 XNA Project: PhingerPaint File: Game1.cs (片段)
-
 public Game1()
 {
     graphics = new GraphicsDeviceManager(this);
     Content.RootDirectory = "Content";
-
     // Windows Phone 默认帧率为 30 fps。
     TargetElapsedTime = TimeSpan.FromTicks(333333);
 ```
@@ -8435,39 +7872,50 @@ protected override void Initialize()
     clearButton = new Button(this, "clear");
     clearButton.Click += OnButtonClick;
     this.Components.Add(clearButton);
-
     saveButton = new Button(this, "save");
     saveButton.Click += OnSaveButtonClick;
     this.Components.Add(saveButton);
+```
 
-    // 创建 ColorBlock 组件
-    Color[] colors = { Color.Red, Color.Red, Color.Green, Color.Blue,
-                       Color.Cyan, Color.Magenta, Color.Yellow,
-                       new Color(0.2f, 0.2f, 0.2f),
-                       Color.Black, new Color(0.4f, 0.4f, 0.4f),
-                       new Color(0.6f, 0.6f, 0.6f),
-                       new Color(0.8f, 0.8f, 0.8f), Color.White };
 
-    foreach (Color cl in colors)
-    {
-        ColorBlock colorBlock = new ColorBlock(this);
-        colorBlock.color = cl;
-        colorBlocks.Add(colorBlock);
-        this.Components.Add(colorBlock);
-    }
-    base.Initialize();
+
+# 创建 ColorBlock 组件
+
+```csharp
+// 创建 ColorBlock 组件
+
+Color[] colors = { Color.Red, Color.Red, Color.Green, Color.Blue,
+
+                   Color.Cyan, Color.Magenta, Color.Yellow,
+
+                   new Color(0.2f, 0.2f, 0.2f),
+
+                   Color.Black, new Color(0.4f, 0.4f, 0.4f),
+
+                   new Color(0.6f, 0.6f, 0.6f),
+
+                   new Color(0.8f, 0.8f, 0.8f), Color.White };
+
+foreach (Color cl in colors)
+{
+    ColorBlock colorBlock = new ColorBlock(this);
+    colorBlock.color = cl;
+    colorBlocks.Add(colorBlock);
+    this.Components.Add(colorBlock);
+}
+
+base.Initialize();
 }
 ```
 
 组件的剩余初始化工作在 `LoadContent` 覆盖中进行，此时可以为 `Button` 组件加载字体。在构造函数中显式设置后缓冲区的大小，而在 `LoadContent` 方法中以更抽象的方式计算维度，似乎有点奇怪，但通常保持代码尽可能通用化和灵活是最好的。
 
-# XNA Project: PhingerPaint File: Game1.cs (片段)
+## XNA Project: PhingerPaint File: Game1.cs (片段)
 
 ```csharp
 protected override void LoadContent()
 {
     spriteBatch = new SpriteBatch(this.GraphicsDevice);
-
     Rectangle bounds = this.GraphicsDevice.Viewport;
     SpriteFont font = Content.Load<SpriteFont>("font");
 
@@ -8491,34 +7939,29 @@ protected override void LoadContent()
 }
 ```
 
-
-
-
-
-# 第二部分 XNA
+## 第二部分 XNA
 
 它需要一些初始化信息和一个回调函数，因此该方法根据当前日期生成一个唯一文件名：
 
-```c
-XNA Project: PhingerPaint File:Game1.cs (excerpt e)
+### XNA Project: PhingerPaint File:Game1.cs (excerpt e)
 
+```c
 void OnSaveButtonClick(object sender, EventArgs e)
 {
     DateTime dt = DateTime.Now;
     filename = String.Format("PhingerPaint-{0:D2}-{1:D2}-{2:D2}-{3:D2}-{4:D2}-{5:D2}", dt.Year % 100, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second);
-
     Guide.BeginKeyboardInput(PlayerIndex.One, "phinger paint save file",
 "enter filename:", filename, KeyboardCallback, null);
 }
 ```
 
-Guide.BeginKeyboardInput 会调用程序接收对 OnDeactivated 的调用，之后会显示以下屏幕：
+`Guide.BeginKeyboardInput` 会调用程序接收对 `OnDeactivated` 的调用，之后会显示以下屏幕：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_318_0.png)
 
-此屏幕中你可以自定义的部分仅是标题中的文本字符串和输入框中的初始文本。该屏幕在竖屏模式下看起来比横屏模式好得多。在横屏模式下，所有标题、文本框和屏幕键盘都重新调整了方向，但两个按钮没有，这种组合看起来非常奇怪。看一眼你可能就会想在横屏模式下使用 Guide.BeginKeyboardInput！当点击“OK”或“Cancel”按钮之一时，程序会被去激活，并调用 PhingerPaint 中的回调函数：
+此屏幕中你可以自定义的部分仅是标题中的文本字符串和输入框中的初始文本。该屏幕在竖屏模式下看起来比横屏模式好得多。在横屏模式下，所有标题、文本框和屏幕键盘都重新调整了方向，但两个按钮没有，这种组合看起来非常奇怪。看一眼你可能就会想在横屏模式下使用 `Guide.BeginKeyboardInput`！当点击“OK”或“Cancel”按钮之一时，程序会被去激活，并调用 PhingerPaint 中的回调函数：
 
-# XNA Project: PhingerPaint File:Game1.cs (excerpt)
+### XNA Project: PhingerPaint File:Game1.cs (excerpt)
 
 ```csharp
 void KeyboardCallback(AsyncResult result)
@@ -8527,9 +7970,9 @@ void KeyboardCallback(AsyncResult result)
 }
 ```
 
-你的程序应该假设该回调函数是异步调用的（正如参数所暗示的那样），因此你不应该在这里做太多，除了调用 Guide.EndKeyboardInput 并将返回值保存到字段中。如果用户点击了“OK”按钮，则返回值为输入到字段的最终文本。如果用户点击了“Cancel”或返回键，Guide.EndKeyboardInput 将返回 null。处理该返回值的好位置是在下一次调用程序的 Update 时：
+你的程序应该假设该回调函数是异步调用的（正如参数所暗示的那样），因此你不应该在这里做太多，除了调用 `Guide.EndKeyboardInput` 并将返回值保存到字段中。如果用户点击了“OK”按钮，则返回值为输入到字段的最终文本。如果用户点击了“Cancel”或返回键，`Guide.EndKeyboardInput` 将返回 `null`。处理该返回值的好位置是在下一次调用程序的 `Update` 时：
 
-# XNA Project: PhingerPaint File:Game1.cs (excerpt)
+### XNA Project: PhingerPaint File:Game1.cs (excerpt)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -8538,7 +7981,6 @@ protected override void Update(GameTime gameTime)
     {
         this.Exit();
     }
-
     // 如果保存对话框返回，保存图像
     if (!string.IsNullOrEmpty(filename))
     {
@@ -8548,16 +7990,15 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-注意逻辑检查了 filename 字段是否非 null 且为空，但在结束时将其设回 null 以确保一次。SaveToLibrary 并不是 Texture2D 类的真实方法！它是 Petzold.Phone.Xna 中 TextureExtensions 类中的另一个扩展方法。
+注意逻辑检查了 `filename` 字段是否非 `null` 且为空，但在结束时将其设回 `null` 以确保一次。`SaveToLibrary` 并不是 `Texture2D` 类的真实方法！它是 `Petzold.Phone.Xna` 中 `TextureExtensions` 类中的另一个扩展方法。
 
-# XNA Project: Petzold.Phone.Xna File: TextureExtensions.class (excerpt)
+### XNA Project: Petzold.Phone.Xna File: TextureExtensions.class (excerpt)
 
 ```csharp
 public static void SaveToLibrary(this Texture2D texture, string filename)
 {
     MemoryStream memoryStream = new MemoryStream();
     texture.SaveAsJpeg(memoryStream, texture.Width, texture.Height);
-
     memoryStream.Position = 0;
     MediaLibrary mediaLibrary = new MediaLibrary();
     mediaLibrary.SavePicture(filename, memoryStream);
@@ -8565,21 +8006,19 @@ public static void SaveToLibrary(this Texture2D texture, string filename)
 }
 ```
 
-这是将 Texture2D 保存到手机相库的标准代码。尽管 FingerPaint 在保存图像时使用 PNG 格式，但相库中的图片是 JPEG。SaveAsJpeg 方法将图像保存到 MemoryStream，然后重置 MemoryStream 位置，并带有文件名传递给 MediaLibrary 的 SavePicture 方法。如果你正在部署到实际手机，并且运行的如 Visual Studio 之类的桌面软件可以与手机通信，这将抛出异常。当以独占模式访问手机媒体库运行时，你可能根据运行的是 32 位还是 64 位 Windows 来终止程序并重启。当然，重写了 Update 方法以避免处理触摸输入。我选择使用低级触摸，以便可以在画布上用多个手指绘图。Button 基本上根据 IProcessTouch 接口处理自己的触摸输入，但 ColorBlock 的处理方式不同。类get本身的 Update 方法也处理 ColorBlock 组件以及 Texture2D 画布。ColorBlock 组件的句方式比 Button 简单得多。只需触摸 ColorBlock 即可选择该项目并将程序切换到该颜色。触摸 ID 被保留且不允许用于其他任何地方。
+这是将 `Texture2D` 保存到手机相库的标准代码。尽管 FingerPaint 在保存图像时使用 PNG 格式，但相库中的图片是 JPEG。`SaveAsJpeg` 方法将图像保存到 `MemoryStream`，然后重置 `MemoryStream` 位置，并带有文件名传递给 `MediaLibrary` 的 `SavePicture` 方法。如果你正在部署到实际手机，并且运行的如 Visual Studio 之类的桌面软件可以与手机通信，这将抛出异常。当以独占模式访问手机媒体库运行时，你可能根据运行的是 32 位还是 64 位 Windows 来终止程序并重启。当然，重写了 `Update` 方法以避免处理触摸输入。我选择使用低级触摸，以便可以在画布上用多个手指绘图。`Button` 基本上根据 `IProcessTouch` 接口处理自己的触摸输入，但 `ColorBlock` 的处理方式不同。类 `get` 本身的 `Update` 方法也处理 `ColorBlock` 组件以及 `Texture2D` 画布。`ColorBlock` 组件的句方式比 `Button` 简单得多。只需触摸 `ColorBlock` 即可选择该项目并将程序切换到该颜色。触摸 ID 被保留且不允许用于其他任何地方。
 
-# XNA Project: FingerPaint File: Game1.cs (excerpt)
+### XNA Project: FingerPaint File: Game1.cs (excerpt)
 
 ```csharp
 protected override void Update(GameTime gameTime)
 {
     TouchCollection touches = TouchPanel.GetState();
-
     foreach (TouchLocation touch in touches)
     {
         // 忽略 ColorBlock 的进一步活动
         if (touchIdIgnore && touch.Id == touchIdIgnore)
             continue;
-
         // 让 Button 组件优先处理触摸
         bool touchHandled = false;
         foreach (GameComponent component in this.Components)
@@ -8591,16 +8030,13 @@ protected override void Update(GameTime gameTime)
                 break;
             }
         }
-
         if (touchHandled)
             continue;
-
         // 检查对 ColorBlock 的点击
         if (touch.State == TouchLocationState.Pressed)
         {
             Vector2 position = touch.Position;
             ColorBlock newSelectedColorBlock = null;
-
             foreach (ColorBlock colorBlock in colorBlocks)
             {
                 Rectangle rect = colorBlock.Bounds;
@@ -8611,13 +8047,11 @@ protected override void Update(GameTime gameTime)
                     newSelectedColorBlock = colorBlock;
                 }
             }
-
             if (newSelectedColorBlock != null)
             {
                 foreach (ColorBlock colorBlock in colorBlocks)
                     colorBlock.IsSelected = colorBlock == newSelectedColorBlock;
             }
-
             touchIdIgnore = touch.Id;
         }
         else
@@ -8628,9 +8062,9 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-剩余的触摸处理用于实际绘图，它只对 TouchLocationState.Moved 的值感兴趣。该状态允许调用 TryPreviousLocation 方法，然后将两个点传递给 Petzold.Phone.Xna 中 RoundedCapLine 类的构造函数，为每个笔触提供像素范围：
+剩余的触摸处理用于实际绘图，它只对 `TouchLocationState.Moved` 的值感兴趣。该状态允许调用 `TryPreviousLocation` 方法，然后将两个点传递给 `Petzold.Phone.Xna` 中 `RoundedCapLine` 类的构造函数，为每个笔触提供像素范围：
 
-# XNA Project: PhingerPaint File: Game1.cs (excerpt)
+### XNA Project: PhingerPaint File: Game1.cs (excerpt)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -8638,7 +8072,6 @@ protected override void Update(GameTime gameTime)
     // 处理触摸输入
     bool canvasNeedsUpdate = false;
     TouchCollection touches = TouchPanel.GetState();
-
     foreach (TouchLocation touch in touches)
     {
         // 检查触摸移动
@@ -8646,33 +8079,25 @@ protected override void Update(GameTime gameTime)
         {
             TouchLocation prevLocation;
             touch.GetPreviousLocation(out prevLocation);
-
             Vector2 point1 = prevLocation.Position - canvasPosition;
             Vector2 point2 = touch.Position - canvasPosition;
-
             // 确信触摸位置回来了！
             float radius = 12;
             RoundedCapLine line = new RoundedCapLine(point1, point2, radius);
-
             int yMin = (int)(Math.Min(point1.Y, point2.Y) - radius);
             int yMax = (int)(Math.Max(point1.Y, point2.Y) + radius);
-
             yMin = Math.Max(0, Math.Min(canvas.Height, yMin));
             yMax = Math.Max(0, Math.Min(canvas.Height, yMax));
-
             for (int y = yMin; y < yMax; y++)
             {
                 xCollection.Clear();
                 line.GetAll(y, xCollection);
-
                 if (xCollection.Count == 2)
                 {
                     int xMin = (int)(Math.Min(xCollection[0], xCollection[1]) - 0.5f);
                     int xMax = (int)(Math.Max(xCollection[0], xCollection[1]) + 0.5f);
-
                     xMin = Math.Max(0, Math.Min(canvas.Width, xMin));
                     xMax = Math.Max(0, Math.Min(canvas.Width, xMax));
-
                     for (int x = xMin; x < xMax; x++)
                     {
                         pixels[y * canvas.Width + x] = drawingColor.PackedValue;
@@ -8687,39 +8112,51 @@ protected override void Update(GameTime gameTime)
 
 
 ```cs
+
 canvasNeedsUpdate = true;
+
 }
+
 }
+
 if (canvasNeedsUpdate)
+
     canvas.SetData<uint>(pixels);
 
 base.Update(gameTime);
+
 }
+
 ```
 
-当一切都为一个简单的任务准备好 Draw 重写方法时，总是一件令人满足的事。ColorBlock 和 Button 组件会自己绘制，因此这里的 Draw 方法只需要渲染画布：
+当一切都为一个简单的任务准备好 `Draw` 重写方法时，总是一件令人满足的事。`ColorBlock` 和 `Button` 组件会自己绘制，因此这里的 `Draw` 方法只需要渲染画布：
 
 ```
 XNA Project: PhingerPaint File: Game1.cs (excerpt)
 protected override void Draw(GameTime gameTime)
+
 {
+
     this.GraphicsDevice.Clear(Color.Black);
 
     spriteBatch.Begin();
+
     spriteBatch.Draw(canvas, canvasPosition, Color.White);
+
     spriteBatch.End();
 
     base.Draw(gameTime);
+
 }
 ```
 
 ## 游览 SpinPaint
 
-SpinPaint 的起源非常不寻。我是在一个早上参加针对 Microsoft Surface 的为期两天编程课程时写了第一个版本——Surface 是那些为公共场所设计的咖啡桌电脑。那个版本是为 Windows Presentation Foundation 编写的，可以供坐在机器旁的几个人共同使用。
+`SpinPaint` 的起源非常不寻。我是在一个早上参加针对 Microsoft Surface 的为期两天编程课程时写了第一个版本——Surface 是那些为公共场所设计的咖啡桌电脑。那个版本是为 Windows Presentation Foundation 编写的，可以供坐在机器旁的几个人共同使用。
 
-我原本想在书中加入一个 Silverlight 版本的 SpinPaint 来演示 WriteableBitmap，但性能实在太糟糕了。在拥有真正的 Windows Phone 之前，我为 Zune HD 编写了第一个 XNA 版本，然后将该版本移植成了这里展示给你们的版本。
+我原本想在书中加入一个 Silverlight 版本的 `SpinPaint` 来演示 `WriteableBitmap`，但性能实在太糟糕了。在拥有真正的 Windows Phone 之前，我为 Zune HD 编写了第一个 XNA 版本，然后将该版本移植成了这里展示给你们的版本。
 
-SpinPaint 有了一个每分钟旋转 12 次的白色圆盘。你还会注意到程序的标题每 10 秒循环变换一次颜色：
+`SpinPaint` 有了一个每分钟旋转 12 次的白色圆盘。你还会注意到程序的标题每 10 秒循环变换一次颜色：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_324_0.png)
 
@@ -8733,19 +8170,24 @@ SpinPaint 有了一个每分钟旋转 12 次的白色圆盘。你还会注意到
 
 显然，你会想要点击“保存”按钮将结果保存到手机相册中，稍后通过电子邮件发送给你的朋友。
 
-与 PhingerPaint 程序一样，你可以使用最多四根手指同时绘画，这就是为什么两个程序都使用低级触摸输入，而不是手势接口。
+与 `PhingerPaint` 程序一样，你可以使用最多四根手指同时绘画，这就是为什么两个程序都使用低级触摸输入，而不是手势接口。
 
 ## SpinPaint 代码
 
-SpinPaint 需要以非常特殊的方式处理触摸。手指不仅可以在屏幕上移动，而且圆盘在手指下方旋转，即使手指没有移动，它仍在进行绘制。与 PhingerPaint 不同，这个程序需要跟踪每个手指。为此，它定义了一个带有整数键（即触摸 ID）的 *Dictionary*（字典），用于维护 *Touchinfo* 类型的对象。*Touchinfo* 是 *Game1* 内部的一个小类，存储了两个触摸位置：
+`SpinPaint` 需要以非常特殊的方式处理触摸。手指不仅可以在屏幕上移动，而且圆盘在手指下方旋转，即使手指没有移动，它仍在进行绘制。与 `PhingerPaint` 不同，这个程序需要跟踪每个手指。为此，它定义了一个带有整数键（即触摸 ID）的 `Dictionary`（字典），用于维护 `Touchinfo` 类型的对象。`Touchinfo` 是 `Game1` 内部的一个小类，存储了两个触摸位置：
 
 XNA Project: SpinPaint File: Game1.cs (excerpt showing fields)
 
 ```cs
+
 public class Game1 : Microsoft.Xna.Framework.Game
+
 {
+
     GraphicsDeviceManager graphics;
+
     SpriteBatch spriteBatch;
+
 ```
 
 # 与旋转圆盘纹理相关的字段
@@ -8777,7 +8219,7 @@ string filename;
 ...
 ```
 
-构造函数设置了竖屏模式的缓冲区，但像 PhingerPaint 一样，它将高度设置为 768 而不是 800，为状态栏留出空间：
+构造函数设置了竖屏模式的缓冲区，但像 `PhingerPaint` 一样，它将高度设置为 768 而不是 800，为状态栏留出空间：
 
 XNA Project: SpinPaint File: Game1.cs (excerpt)
 
@@ -8798,7 +8240,7 @@ public Game1()
 
 为状态栏留空间意味着你在屏幕上看到的是完整的缓冲区尺寸。
 
-两个 Button 组件在 Initialize 方法期间创建。它们被分配了 Text 属性，并绑定了 Click 事件处理程序，没有别的了：
+两个 `Button` 组件在 `Initialize` 方法期间创建。它们被分配了 `Text` 属性，并绑定了 `Click` 事件处理程序，没有别的了：
 
 ```
 XNA Project: SpinPoint File: Game1.cs (excerpt)
@@ -8817,7 +8259,7 @@ protected override void Initialize()
 }
 ```
 
-注意将组件添加到类中这一至关重要的步骤。如果你忘记这样做，它们将不会显示。两个 Button 组件是在 Initialize 方法期间创建的。这里是一切开始的地方。LoadContent 方法在需要时才会创建 Texture2D：
+注意将组件添加到类中这一至关重要的步骤。如果你忘记这样做，它们将不会显示。两个 `Button` 组件是在 `Initialize` 方法期间创建的。这里是一切开始的地方。`LoadContent` 方法在需要时才会创建 `Texture2D`：
 
 ```
 XNA Project: SpinPaint File: Game1.cs (excerpt)
@@ -8838,14 +8280,11 @@ protected override void LoadContent()
 }
 ```
 
-
-
-
 ## 第二部分 XNA
 
-当用户按下“清除（clear）”按钮时，也会调用 ClearPixelArray。
+当用户按下“清除（clear）”按钮时，也会调用 `ClearPixelArray`。
 
-“保存（save）”按钮的逻辑与 PhingerPaint 中的几乎相同：
+“保存（save）”按钮的逻辑与 `PhingerPaint` 中的几乎相同：
 
 ```
 XNA Project: SpinPaint File: Game1.cs (excerpt)
@@ -8866,7 +8305,7 @@ void KeyboardCallback(IAsyncResult result)
 }
 ```
 
-与 PhingerPaint 一样，文件通过 `Update` 的重写方法保存到照片库：
+与 `PhingerPaint` 一样，文件通过 `Update` 的重写方法保存到照片库：
 
 ```
 XNA Project: SpinPaint File: Game1.cs (excerpt)
@@ -8994,6 +8433,8 @@ Vector2 TranslateToTexture(Vector2 point)
 
 为了考虑到磁盘的旋转，字段包含了 `previousAngle` 和 `currentAngle`。注意，这些矩阵是从 `Texture2D` 对象通过 `PreviousPosition` 和 `CurrentPosition` 字段获取的。一旦定义了这些变换，就可以应用于 `Texture2D`并传递给 `RoundCappedLine` 在磁盘上绘制一条线。
 
+
+
 ```cs
 protected override void Update(GameTime gameTime)
 {
@@ -9051,10 +8492,6 @@ protected override void Update(GameTime gameTime)
     }
 }
 ```
-
-
-
-
 
 # 第11章 触摸与播放 321
 
@@ -9134,19 +8571,15 @@ namespace PhreeCell
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_337_0.png)
 
-我假设你熟悉规则。所有 52 张牌都朝上分布在 8 列中，我在程序中将它们称为“堆”（piles）。左上角有四个存放单牌的位置，我将这些区域称为“持有”（holds）。右上角有四个用于堆叠递增牌的位置，我将这些区域也称为“持有”（holds）。
+我假设你熟悉规则。所有 52 张牌都朝上分布在 8 列中，我在程序中将它们称为“堆”`piles`。左上角有四个存放单牌的位置，我将这些区域称为“持有”`holds`。右上角有四个用于堆叠递增牌的位置，我将这些区域也称为“持有”`holds`。
 
 游戏逻辑分布在多个文件中。主游戏类处理循环和输入，而 `PlayingField` 类处理逻辑。`AutoMoveComponent` 类处理移动牌的逻辑。`CongratulationsComponent` 类处理获胜的反馈。
 
 `CardInfo` 类处理每张牌的数据。`CardGenerator` 类处理牌的创建。`UI` 类处理游戏的渲染。
 
-
-
-
-
 ## 第二部分 XNA
 
-LoadContent 方法加载了包含卡片图片的位图，并调用了 `Game1.Helpers.cs` 中实现的 `Game1` 类两个方法：
+`LoadContent` 方法加载了包含卡片图片的位图，并调用了 `Game1.Helpers.cs` 中实现的 `Game1` 类两个方法：
 
 ```c
 XNA Project: PhreeCell File: Game1.cs (excerpt)
@@ -9201,7 +8634,7 @@ static readonly Vector2 centerReplay =
 
 注意 `wSurface`——游戏区域的宽度——被定义为 800 像素，因为那是大手机屏幕的宽度。然而，垂直维度可能需要大于 480。牌堆区域可能会存在20 张重叠的卡片。为了适应这种可能性，`hSurface` 根据这20 张重叠卡片计算出最大可能的高度。
 
-`CreateCardSpots` 方法使用这些常量来计算 16 个 `Rectangle` 对象，指示卡片在游戏区域上的位置。第一行包含持有（holds）和终局（finals），第二行用于牌堆（piles）：
+`CreateCardSpots` 方法使用这些常量来计算 16 个 `Rectangle` 对象，指示卡片在游戏区域上的位置。第一行包含持有 `holds` 和终局 `finals`，第二行用于牌堆 `piles`：
 
 ```c
 XNA Project: ThreeCell Game1.Helper.cs (excerpt)
@@ -9230,11 +8663,13 @@ static void CreateCardSpots(Rectangle[] cardSpots)
 }
 ```
 
-`CreateSurface` 方法创建游戏区域的位图。位图的大小基于 `hSurface`（设为常量 800）和 `wSurface`，后者远大于 480。为了绘制白色矩形和红色重置按钮，它直接操作像素并将其设置为位图：
+`CreateSurface` 方法创建游戏区域的位图。位图的大小基于 `hSurface` `设为常量 800` 和 `wSurface`，后者远大于 480。为了绘制白色矩形和红色重置按钮，它直接操作像素并将其设置为位图：
+
+
+
+# XNA Project: ThreeCell File: Game1.Helper.cs (excerpt)
 
 ```c
-XNA Project: ThreeCell File: Game1.Helper.cs (excerpt)
-
 static Texture2D CreateSurface(GraphicsDevice graphicsDevice, Rectangle[] cardSpots)
 {
     uint backgroundColor = new Color(0, 0, 0x60).PackedValue;
@@ -9267,9 +8702,9 @@ static Texture2D CreateSurface(GraphicsDevice graphicsDevice, Rectangle[] cardSp
 
 `Game1` 中的其他方法非常浅易懂：
 
-```c
-XNA Project: PhreeCell File: Game1.Helper.cs (excerpt)
+# XNA Project: PhreeCell File: Game1.Helper.cs (excerpt)
 
+```c
 static void ShuffleDeck(CardInfo[] deck)
 {
     Random rand = new Random();
@@ -9298,9 +8733,9 @@ static CardInfo TopCard(List<CardInfo> cardInfos)
 
 `GetTextureSource` 与大位图配合使用。它返回一个对应最上方卡片的 `Rectangle`。在 `LoadContent` 结束时，游戏几乎准备好调用 `Replay` 方法，该方法会将牌组洗入牌堆中。然而，还有墓碑机制（tombstoning）需要处理。该程序最初是围绕以下构建的：
 
-```c
-XNA Project: ThreeCell File: Game1.cs (excerpt)
+# XNA Project: ThreeCell File: Game1.cs (excerpt)
 
+```c
 protected override void Deactivated(object sender, EventArgs args)
 {
     PhoneApplicationService appService = PhoneApplicationService.Current;
@@ -9330,7 +8765,7 @@ protected override void Deactivated(object sender, EventArgs args)
         if (this.holds[i] == null)
             holds[i] = -1;
         else
-            holds[i] = 13 * this.holds[i].Suit + holds[i].Rank;
+            holds[i] = 13 * this.holds[i].Suit + this.holds[i].Rank;
     }
     appService.State("holds") = holds;
 
@@ -9343,10 +8778,6 @@ protected override void OnActivated(object sender, EventArgs args)
     // ... 激活逻辑
 }
 ```
-
-
-
-
 
 ```c
 if (appService.State.ContainsKey("piles"))
@@ -9391,7 +8822,7 @@ base.OnActivated(sender, args);
 
 ## 游戏与重放
 
-Replay 位于 `Game1.Helper.cs` 类中：
+`Replay` 位于 `Game1.Helper.cs` 类中：
 
 ```
 XNA Project: PhreeCell File: Game1.Helper.cs (excerpt)
@@ -9538,6 +8969,8 @@ base.Draw(gameTime);
 
 XNA Project: ThreeCell File: Game1.cs (excerpt)
 
+
+
 ```c
 protected override void Update(GameTime gameTime)
 {
@@ -9552,8 +8985,6 @@ foreach (List<CardInfo> final in finals)
         {
             cardInfo.AutoMoveTime -= gameTime.ElapsedGameTime;
 ```
-
-
 
 ```cs
 if (cardInfo.AutoMoveTime <= TimeSpan.Zero)
@@ -9765,6 +9196,12 @@ bool TryPickUpCard(Vector2 position)
 
 ## XNA 项目：ThreeCell 文件：Game1.Helpers.cs (节选)
 
+
+
+# 第二部分 XNA
+
+## 342 第二部分 XNA
+
 ```cs
 bool TryPutDownCard(CardInfo touchedCard)
 {
@@ -9814,12 +9251,6 @@ bool TryPutDownCard(CardInfo touchedCard)
 }
 ```
 
-
-
-
-
-# 342 第二部分 XNA
-
 ```sharp
 else {
     int pile = cardSpot - 8;
@@ -9846,7 +9277,7 @@ return false;
 
 所有这些工作通过以下方法的返回值 `true` 来证明，该方法仅用于判断每个最终集合中的卡牌是否为王牌：
 
-# XNA 项目：PhreeCell 文件：Game1.Helpers.cs（节）
+## XNA 项目：PhreeCell 文件：Game1.Helpers.cs（节）
 
 ```csharp
 bool HasWon() {
@@ -9858,9 +9289,9 @@ bool HasWon() {
 }
 ```
 
-# 第11章 触摸与操作 343
+## 第11章 触摸与操作 343
 
-Update 方法使用该逻辑来启用 `CongratulationsComponent`（祝贺组件），其完整代码如下：
+`Update` 方法使用该逻辑来启用 `CongratulationsComponent`（祝贺组件），其完整代码如下：
 
 ```csharp
 XNA 项目：PhreeCell 文件：CongratulationsComponent.cs
@@ -9941,7 +9372,7 @@ namespace PhreeCell
 
 ## 3D 向量
 
-正如你在第5章中看到的，来自手机加速度计的数据本质上是一个相对于手机固的三维向量 (**x, y, z**)。无论你以竖屏模式持有手机，加速度计坐标系保持不变：
+正如你在第5章中看到的，来自手机加速度计的数据本质上是一个相对于手机固的三维向量 `x, y, z`。无论你以竖屏模式持有手机，加速度计坐标系保持不变：
 
 ![](img/d9347c1f5fa6d523479d2cd9b4d5459_359.png)
 
@@ -9955,35 +9386,35 @@ namespace PhreeCell
 
 ![](img/d9347c1f5fa6d523479d2cd9b4d5459_360_1.png)
 
-注意 Y 坐标随手机向上增加，与真实的笛卡尔坐标系以及 XNA 3D 坐标系相同，但与 Y 值向下增加的 XNA 2D 坐标系不同。如果手机手机，加速度向量指向靠近地球的部分。例如，如果加速度向量大约为 **(0.7, -0.7, 0)**，那么手机是这样持有的：
+注意 `Y` 坐标随手机向上增加，与真实的笛卡尔坐标系以及 XNA 3D 坐标系相同，但与 Y 值向下增加的 XNA 2D 坐标系不同。如果手机手机，加速度向量指向靠近地球的部分。例如，如果加速度向量大约为 `0.7, -0.7, 0`，那么手机是这样持有的：
 
 ![](img/d9347c1f5fa6d523479d2cd9b4d5459_360_2.png)
 
-# 第12章 倾斜与操作 347
+## 第12章 倾斜与操作 347
 
-示例中的值 0.7 显然是 ½ 的近似平方根。如果你使用勾股定理计算加速度向量的幅度：
+示例中的值 `0.7` 显然是 `½` 的近似平方根。如果你使用勾股定理计算加速度向量的幅度：
 
 ```
 x^2 + y^2 + z^2
 ```
 
-如果手机静止，结果应为 1。放置在水平面上的手机加速度向量约为 (0, 0, -1)，这与手机模拟器显示的数值相同。
+如果手机静止，结果应为 `1`。放置在水平面上的手机加速度向量约为 `0, 0, -1`，这与手机模拟器显示的数值相同。
 
-我用“大约”是因为手机的加速度计并不是非常精确的硬件。向量的幅度应该是地球表面的重力单位，传统上表示 g，约为每秒 32 英尺。然而，你经常会在图中看到 5% 的误差。
+我用“大约”是因为手机的加速度计并不是非常精确的硬件。向量的幅度应该是地球表面的重力单位，传统上表示 `g`，约为每秒 32 英尺。然而，你经常会在图中看到 5% 的误差。
 
 你还会注意到放置在水平面上的手机加速度读数的 X、Y 和 Z 分可能有几点的误差。加速度计的数据也是抖动的，这在运行第5章所示的程序时无疑会被发现。数据平滑也是使用加速度的一部分。
 
-在本章中，我将使用非常低通滤波技术来平滑数据，不会涉及校准问题。可以帮助解决这些问题的库可以在 Dave Edison 的博客文章“Using the accelerometer on Windows Phone 7”中找到：http://windowsteamb.com/wpdev/archive/2010/09/08/using-the-accelerometer-on-windows-7.aspx。
+在本章中，我将使用非常低通滤波技术来平滑数据，不会涉及校准问题。可以帮助解决这些问题的库可以在 Dave Edison 的博客文章“Using the accelerometer on Windows Phone 7”中找到：`http://windowsteamb.com/wpdev/archive/2010/09/08/using-the-accelerometer-on-windows-7.aspx`。
 
-本章中的所有程序都需要引用 Microsoft.Devices.Sensors 程序集，并使用 Microsoft.Devices.Sensors 命名空间的指令。
+本章中的所有程序都需要引用 `Microsoft.Devices.Sensors` 程序集，并使用 `Microsoft.Devices.Sensors` 命名空间的指令。
 
 ## 更好的气泡
 
-AccelerometerVisualization 程序是第 5 章 Xna 程序的一个小改进。早早的程序只显示一个浮动的“气泡”，没有任何比例尺或数值。这一个增加了一个比例尺（由同心圆组成）和一些文本信息：
+`AccelerometerVisualization` 程序是第 5 章 Xna 程序的一个小改进。早早的程序只显示一个浮动的“气泡”，没有任何比例尺或数值。这一个增加了一个比例尺（由同心圆组成）和一些文本信息：
 
 ![](img/d9347c1f5fa6d523479d2cd9b4d5459_362_0.png)
 
-AccelerometerVisualization 还实现了最基本的平滑类型：低通滤波器，将当前值与之前的平滑值取平均值。原始加速度读数由标签“Raw”指示，而平滑后的值为“Avg”（平均值）。还显示了最小值和最大值。这些值是使用静态 Vector2.Min 和 Vector3.Max 方法计算的，分别寻找 X、Y、Z 分量的最小值和最大值。红色比例尺对应向量的幅度，当加速度向量的 Z 分量为正时，它会变为绿色。
+`AccelerometerVisualization` 还实现了最基本的平滑类型：低通滤波器，将当前值与之前的平滑值取平均值。原始加速度读数由标签“Raw”指示，而平滑后的值为“Avg”（平均值）。还显示了最小值和最大值。这些值是使用静态 `Vector2.Min` 和 `Vector3.Max` 方法计算的，分别寻找 X、Y、Z 分量的最小值和最大值。红色比例尺对应向量的幅度，当加速度向量的 Z 分量为正时，它会变为绿色。
 
 以下是程序的字段：
 
@@ -10016,11 +9447,7 @@ public class Gamel : Microsoft.Xna.Framework.Game
 }
 ```
 
-
-
-
-
-# 第 12 章 倾斜与游戏 349
+## 第 12 章 倾斜与游戏 349
 
 ```
 Vector3 oldAcceleration;
@@ -10029,13 +9456,13 @@ Vector3 maxAcceleration = -Vector3.One;
 ...
 ```
 
-尽管程序显示的内容类似于与重力和加速度向量相反方向移动的“气泡”，但在程序中它被称为“小球”。名为 `oldAcceleration` 的字段用于数值平滑处理；每当显示更新时，`oldAcceleration` 都是上一个平滑后的（"Avg"）值。
+尽管程序显示的内容类似于与重力和加速度向量相反方向移动的“气泡”，但在程序中它被称为“小球”。名为 `oldAcceleration` 的字段用于数值平滑处理；每当显示更新时，`oldAcceleration` 都是上一个平滑后的 `"Avg"` 值。
 
 默认情况下，XNA 程序会自动适应左横屏（left-landscape）和右横屏（right-landscape）方向。这种行为是程序永远不需要担心的——除非在处理加速度计时。在左横屏模式下，加速度计的 X 轴沿屏幕方向增加，Y 轴横跨屏幕增加。在右横屏模式下，加速度计的 X 轴沿屏幕向下方向增加，Y 轴横跨屏幕增加。
 
 如果你想减少这种混淆，`Game1` 类的构造函数用于将 `GraphicsManager`（由 `graphics` 字段引用）的 `Supportedations` 属性设置为 `DisplayOrientation.LandscapeLeft`。我的程序没有这样做，显示支持 `LandscapeRight` 方向。然而，它使用构造函数设置缓冲区大小以留出手机状态栏的空间：
 
-# XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
+## XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
 
 ```csharp
 public Game1()
@@ -10052,15 +9479,14 @@ public Game1()
 }
 ```
 
-`Initialize` 重写方法创建了 `Accelerometer` 对象，设置了事件处理器并启动它：
 
-# XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
+
+`Initialize`重写方法创建了`Accelerometer`对象，设置了事件处理器并启动它：
+
+### XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
 
 ```csharp
 protected override void Initialize()
-```
-
-```csharp
 {
   Accelerometer accelerometer = new Accelerometer();
   accelerometer.ReadingChanged += OnAccelerometerReadingChanged;
@@ -10074,9 +9500,9 @@ protected override void Initialize()
 }
 ```
 
-`ReadingChanged` 处理器是异步调用的，因此正确的做法仅仅是在受 `lock` 块保护的代码中保存该值：
+`ReadingChanged`处理器是异步调用的，因此正确的做法仅仅是在受`lock`块保护的代码中保存该值：
 
-# XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
+### XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
 
 ```csharp
 void OnAccelerometerReadingChanged(object sender, AccelerometerReadingEventArgs args) {
@@ -10086,11 +9512,11 @@ void OnAccelerometerReadingChanged(object sender, AccelerometerReadingEventArgs 
 }
 ```
 
-如果你对这个 `ReadingChanged` 处理器进行一些实验，你会发现它每秒被调用接近 50 次，比视频刷新率频率高得多，你可能想在这个处理器中直接实现平滑处理。（我在本章后面的某些程序中就是这么的）。
+如果你对这个`ReadingChanged`处理器进行一些实验，你会发现它每秒被调用接近 50 次，比视频刷新率频率高得多，你可能想在这个处理器中直接实现平滑处理。（我在本章后面的某些程序中就是这么的）。
 
-程序中的 `LoadContent` 重写方法主要负责准备两个纹理——覆盖整个表面并带有同心圆的大背景 `backgroundTexture`，以及在周围漂浮的小球 `ballTexture`。在 `backgroundTexture` 上绘制线和圆的代码是相当随意的，涉及简单的循环和几个设置像素颜色的方法。
+程序中的`LoadContent`重写方法主要负责准备两个纹理——覆盖整个表面并带有同心圆的大背景`backgroundTexture`，以及在周围漂浮的小球`ballTexture`。在`backgroundTexture`上绘制线和圆的代码是相当随意的，涉及简单的循环和几个设置像素颜色的方法。
 
-# XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
+### XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
 
 ```csharp
 protected override void LoadContent() {
@@ -10099,7 +9525,7 @@ protected override void LoadContent() {
 }
 ```
 
-# 第 12 章 倾斜与游戏 351
+### 第 12 章 倾斜与游戏 351
 
 ```csharp
 // 获取屏幕和字体信息
@@ -10155,9 +9581,7 @@ void DrawCenteredCircle(Texture2D texture, Color[] pixels, int radius, Color clr
   {
     int x1 = (int)Math.Round(Math.Sqrt(radius * radius) - Math.Pow(y, 2));
     int x2 = -x1;
-```
 
-```csharp
     SetPixel(texture, pixels, x1 + center.X, y + center.Y, clr);
     SetPixel(texture, pixels, x2 + center.X, y + center.Y, clr);
 
@@ -10165,6 +9589,7 @@ void DrawCenteredCircle(Texture2D texture, Color[] pixels, int radius, Color clr
     SetPixel(texture, pixels, y + center.X, x1 + center.Y, clr);
     SetPixel(texture, pixels, y + center.X, x2 + center.Y, clr);
   }
+}
 
 void DrawFilledCenteredCircle(Texture2D texture, Color[] pixels, int radius)
 {
@@ -10187,9 +9612,9 @@ void SetPixel(Texture2D texture, Color[] pixels, int x, int y, Color clr)
 }
 ```
 
-正是这种逻辑促使我显式地将后缓冲区宽度设置为 728。当设置为默认的 800 像素时，实际显示会被压缩约 10%，以为状态栏留出空间。由于我绘制的线和圆只有一个像素宽，且显然没有实现抗锯齿，它们丢失了一点锐利度。在 `Update` 顺序中发生了一些有趣的事情。该方法基本上负责获取加速度向量并以图形和视觉形式显示它。在这个方法中，原始值命名为 `newAcceleration`，而平滑后的值名为 `avgAcceleration`：
+正是这种逻辑促使我显式地将后缓冲区宽度设置为 728。当设置为默认的 800 像素时，实际显示会被压缩约 10%，以为状态栏留出空间。由于我绘制的线和圆只有一个像素宽，且显然没有实现抗锯齿，它们丢失了一点锐利度。在`Update`顺序中发生了一些有趣的事情。该方法基本上负责获取加速度向量并以图形和视觉形式显示它。在这个方法中，原始值命名为`newAcceleration`，而平滑后的值名为`avgAcceleration`：
 
-# XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
+### XNA 项目: AccelerometerVisualization 文件: Game1.cs (节选)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -10205,7 +9630,7 @@ protected override void Update(GameTime gameTime)
     }
 ```
 
-# 第 12 章 倾斜与游戏 353
+### 第 12 章 倾斜与游戏 353
 
 ```csharp
 ballScale = avgAcceleration.Length();
@@ -10218,31 +9643,31 @@ oldAcceleration = avgAcceleration;
 base.Update(gameTime);
 ```
 
-`accelerometerVector` 字段由 `ReadingChanged` 处理器在第二个线程中使用 `lock` 块进行感知，因此在程序主线程中访问它需要另一个使用相同对象的 `lock` 块：
+`accelerometerVector`字段由`ReadingChanged`处理器在第二个线程中使用`lock`块进行感知，因此在程序主线程中访问它需要另一个使用相同对象的`lock`块：
 
-平滑值从此原始值和 `oldAcceleration` 计算得出：
+平滑值从此原始值和`oldAcceleration`计算得出：
 
+```csharp
 Vector3 avgAcceleration = 0.5f * oldAcceleration + 0.5f * newAcceleration;
+```
 
-在 `Update` 使用此 `avgAcceleration` 用于显示后，它替换了 `oldAcceleration` 字段：
+在`Update`使用此`avgAcceleration`用于显示后，它替换了`oldAcceleration`字段：
 
+```csharp
 oldAcceleration = avgAcceleration;
+```
 
+### 第二部分 XNA
 
-
-
-
-# 第二部分 XNA
-
-这种被称为*低通滤波器*的平滑方法。高频抖动通过将当前值与之前的值取平均值来消除。如果 $v_0$ 是当前的原始向量读取值（newAcceleration），$v_1$ 是上一次的原始读取值，而 $v_{-2}$ 是之前的原始读取值，那么平滑后的值为：
+这种被称为*低通滤波器*的平滑方法。高频抖动通过将当前值与之前的值取平均值来消除。如果 `$v_0$` 是当前的原始向量读取值（`newAcceleration`），`$v_1$` 是上一次的原始读取值，而 `$v_{-2}$` 是之前的原始读取值，那么平滑后的值为：
 
 ```
 $v = \frac{v_0}{2} + \frac{v_1}{4} + \frac{v_{-2}}{8} + \frac{...}{16} + \dots$
 ```
 
-每个读取值的影响随着它向过去逐渐推远而迭代减半。在理论上，没有任何一个读取值会停止对平滑值产生影响，但在特定读取值一秒后（或在调用 *Update override* 30 次后），该读取值值的分母约为一百万，因此影响微乎其微。
+每个读取值的影响随着它向过去逐渐推远而迭代减半。在理论上，没有任何一个读取值会停止对平滑值产生影响，但在特定读取值一秒后（或在调用 `Update override` 30 次后），该读取值值的分母约为一百万，因此影响微乎其微。
 
-你可以调整旧数据和新数据之间的权重，但它们之和必须为 1。例如，这种 *avgAcceleration* 平滑方法对早期值的赋值权重较小：
+你可以调整旧数据和新数据之间的权重，但它们之和必须为 1。例如，这种 `avgAcceleration` 平滑方法对早期值的赋值权重较小：
 
 ```
 Vector3 avgAcceleration = 0.25f * oldAcceleration + 0.75f * newAcceleration;
@@ -10260,9 +9685,9 @@ Vector3 avgAcceleration = 0.75f * oldAcceleration + 0.25f * newAcceleration;
 Vector3 avgAcceleration = oldAcceleration + alpha * (newAcceleration - oldAcceleration);
 ```
 
-其中 alpha 的范围从 0（平滑到完全遗忘）到 1（完全不平滑）。该博客文章还讨论了当程序对突然变化或抖动感兴趣时，低通滤波的替代方案。
+其中 `alpha` 的范围从 0（平滑到完全遗忘）到 1（完全不平滑）。该博客文章还讨论了当程序对突然变化或抖动感兴趣时，低通滤波的替代方案。
 
-*Update* 的另一个有趣活动涉及补偿两种不同的横向方向，这些方向最终基于加速度向量。假设手机处于 *LandscapeLeft*（左向横屏模式）：
+`Update`的另一个有趣活动涉及补偿两种不同的横向方向，这些方向最终基于加速度向量。假设手机处于 *LandscapeLeft*（左向横屏模式）：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_368_0.png)
 
@@ -10280,13 +9705,13 @@ Vector3 avgAcceleration = oldAcceleration + alpha * (newAcceleration - oldAccele
 - 加速度计 Y 增加 -> 图形 X 减少
 - 加速度计 X 增加 -> 图形 Y 减少
 
-在 Update override 中首先计算一个符号值，LandscapeLeft 为 1，LandscapeRight 为 -1：
+在 `Update override` 中首先计算一个符号值，LandscapeLeft 为 1，LandscapeRight 为 -1：
 
 ```
 int sign = this.Window.CurrentOrientation == DisplayOrientation.Landscape ? 1 : -1;
 ```
 
-如果平滑后的加速度的 X 和 Y 分量都为 0，则球应该位于 (screenCenter.X, screenCenter.Y) 点。这很简单。相对于中心的偏移应该基于符号值以及从中心到外半径的距离：
+如果平滑后的加速度的 X 和 Y 分量都为 0，则球应该位于 (`screenCenter.X`, `screenCenter.Y`) 点。这很简单。相对于中心的偏移应该基于符号值以及从中心到外半径的距离：
 
 ```
 ballPosition =
@@ -10310,11 +9735,11 @@ ballPosition = =
                 screenCenter.Y + sign * unitRadius * avgAcceleration.X / ballScale);
 ```
 
-Draw override 绘制背景、球以及四行文本：
+`Draw override` 绘制背景、球以及四行文本：
 
 XNA Project: AccelerometerVisualization File: Game1.cs (节选)
 
-```
+```csharp
 protected override void Draw(GameTime gameTime)
 {
     GraphicsDevice.Clear(Color.Navy);
@@ -10336,9 +9761,9 @@ protected override void Draw(GameTime gameTime)
 
 ## 图形呈现
 
+
+
 本章中的程序使用平滑后的加速度读取值来移动和对齐对象。也可以使用加速度读取值的突然变化，例如为了“掷”出一对骰子。第一步是理解加速度读取值是如何变化的。
-
-
 
 ```sharp
 try
@@ -10361,7 +9786,7 @@ void OnAccelerometerChanged(object sender, AccelerometerReadingEventArgs args)
 }
 ```
 
-`LoadContent` 方法主要用于创建和初始化包含水平线和垂直线的 `backgroundTexture`。虽然这里的代码相当通化，但 `backgroundTexture` 的高度将计算为 30 像素，并且每隔 6 像素绘制一条水平线。
+`LoadContent`方法主要用于创建和初始化包含水平线和垂直线的`backgroundTexture`。虽然这里的代码相当通化，但`backgroundTexture`的高度将计算为30像素，并且每隔6像素绘制一条水平线。
 
 ```sharp
 protected override void LoadContent()
@@ -10412,17 +9837,17 @@ pixels = new uint[graphTexture.Width * graphTexture.Height];
 oldInsertRow = graphTexture.Height - 2;
 ```
 
-最后，`LoadContent` 创建了屏幕上的大型 `graphTexture`，并专门为该位图重新创建了 `pixels` 数组字段。
+最后，`LoadContent`创建了屏幕上的大型`graphTexture`，并专门为该位图重新创建了`pixels`数组字段。
 
-`LoadContent` 通过将 `oldInsertRow` 设置为 `Texture2D` 的倒数第二行来结束。正如你所看到的，在 `Update` 中执行的第一次 `insertRow` 计算将把 `insertRow` 设置为位图的最后一行。
+`LoadContent`通过将`oldInsertRow`设置为`Texture2D`的倒数第二行来结束。正如你所看到的，在`Update`中执行的第一次`insertRow`计算将把`insertRow`设置为位图的最后一行。
 
-每次调用 `Update` 都会在 `graphTexture` 上绘制三条线：一条红色、一条绿色和一条蓝色。如果你将每条线的绘制视为从坐标 (x1, y1) 到 (x2, y2)，那么除非发生导致 `Update` 跳变的情况，否则 `y2` 应该等于 `y1 + 1`。颜色线的 X 值基于旧加速度向量和新加速度向量的 X、Y、Z 分量。
+每次调用`Update`都会在`graphTexture`上绘制三条线：一条红色、一条绿色和一条蓝色。如果你将每条线的绘制视为从坐标`(x1, y1)`到`(x2, y2)`，那么除非发生导致`Update`跳变的情况，否则`y2`应该等于`y1 + 1`。颜色线的X值基于旧加速度向量和新加速度向量的X、Y、Z分量。
 
-问题在于 `y1` 可能在 `Texture2D` 的底部，而 `y2` 可能在顶部。在以下代码中，我发现使用三个值处理起来更容易：`oldInsertRow` 是我所指的 `y1`，但 `newInsertRow` 和 `insertRow` 代表 `y2`。区别在于 `insertRow` 始终在 `Texture2D` 的范围内（即，它小于位图的高度），但 `newInsertRow` 可能会超出范围。`newInsertRow` 的优势在于它被保证始终大于 `oldInsertRow`，这使得绘图算法比处理从位图底部开始到顶部的线条要简单一些。
+问题在于`y1`可能在`Texture2D`的底部，而`y2`可能在顶部。在以下代码中，我发现使用三个值处理起来更容易：`oldInsertRow`是我所指的`y1`，但`newInsertRow`和`insertRow`代表`y2`。区别在于`insertRow`始终在`Texture2D`的范围内，即它小于位图的高度，但`newInsertRow`可能会超出范围。`newInsertRow`的优势在于它被保证始终大于`oldInsertRow`，这使得绘图算法比处理从位图底部开始到顶部的线条要简单一些。
 
-`Update` 的主要目标是使用 `oldInsertRow`、`newInsertRow` 以及旧新加速度向量调用 `DrawLines`：
+`Update`的主要目标是使用`oldInsertRow`、`newInsertRow`以及旧新加速度向量调用`DrawLines`：
 
-# XNA 项目: Accelerometer 图形 文件: Game1.cs (片段)
+### XNA 项目: Accelerometer 图形 文件: Game1.cs (片段)
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -10464,15 +9889,13 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-
-
-
-
 ## 跟随滚球
 
 本章的最后四个程序将手机表面视为一个平面，球可以在其上自由滚动。
 
-球本身的创建是在 `Petzold.Phone.Xna` 库中的一个静态方法中完成的，名为 `Texture2DExtensions.CreateBall`：
+球本身的创建是在`Petzold.Phone.Xna`库中的一个静态方法中完成的，名为`Texture2DExtensions.CreateBall`：
+
+### XNA Project: Petzold.Phone.Xna File: Texture2DExtensions.cs (excerpt)
 
 ```cs
 XNA Project: Petzold.Phone.Xna File: Texture2DExtensions.cs (excerpt)
@@ -10505,29 +9928,29 @@ public static Texture2D CreateBall(GraphicsDevice graphicsDevice, 2 * radius, 2 
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_379_0.png)
 
-手机与水平面成一个角度 $\alpha$。能从加速度计向量计算出 $\alpha$ 的值吗？
+手机与水平面成一个角度`α`。能从加速度计向量计算出`α`的值吗？
 
-当手机平放在桌子上时，加速度向量为 (0, 0, -1)。当你像所示那样倾斜手机时，加速度向量可能变为 (0.34, 0, -0.94)。(随口一说，这些数字的平方和似乎并不等于 1，但确实如此。)
+当手机平放在桌子上时，加速度向量为`(0, 0, -1)`。当你像所示那样倾斜手机时，加速度向量可能变为`(0.34, 0, -0.94)`。随口一说，这些数字的平方和似乎并不等于1，但确实如此。
 
 加速度计向量始终指向地球，也就是说，垂直于水平面：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_379_1.png)
 
-你可以构造一个直三角形，其中加速度向量是斜边，另外两条边与手机的 X 轴和 Z 轴平行：
+你可以构造一个直三角形，其中加速度向量是斜边，另外两条边与手机的X轴和Z轴平行：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_379_2.png)
 
-这两边的长度等于加速度向量的 X 分量和 Z 分量：
+这两边的长度等于加速度向量的X分量和Z分量：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_379_3.png)
 
-通过相似三角形也可以证明，该三角形短边对角与手机与水平面的角 $\alpha$ 是同一个角：
+通过相似三角形也可以证明，该三角形短边对角与手机与水平面的角`α`是同一个角：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_380_0.png)
 
-这意味着 $\alpha$ 的正弦是 0.34，$\alpha$ 的余弦是 0.94，而 $\alpha$ 为 20°。
+这意味着`α`的正弦是0.34，`α`的余弦是0.94，而`α`为20°。
 
-总而言之，手机左右的倾斜角等于加速度向量 X 分量的反正弦；同样地，上下的倾斜角等于 Y 分量的反正弦。
+总而言之，手机左右的倾斜角等于加速度向量X分量的反正弦；同样地，上下的倾斜角等于Y分量的反正弦。
 
 现在，让我们让球从手机上滚下。在斜面上滚动的球所经历的加速度小于自由落体的球：
 
@@ -10535,31 +9958,27 @@ public static Texture2D CreateBall(GraphicsDevice graphicsDevice, 2 * radius, 2 
 
 伽利略利用长斜面上滚动的球来减慢加速过程，并对其进行更详细的研究。
 
-滚球加速度的计算有点复杂（例如，参见 A. P. French, *Newtonian Mechanics*, W. W. Norton, 1971, 第 652-653 页），但在没有摩擦的情况下，结果证明为：
+滚球加速度的计算有点复杂，例如参见 A. P. French, *Newtonian Mechanics*, W. W. Norton, 1971, 第652-653页，但在没有摩擦的情况下，结果证明为：
 
 ```
 acceleration = \frac{2}{3}g - g sin(α)
 ```
 
-其中 g 是重力加速度，单位为每秒 32 英尺。但即使对于在简单的 Windows Phone 7 中实现滚球来说，这些细节也太过多了。我们真正需要知道的是加速度与 $\alpha$ 的正弦成正比。这非常幸运，因为这意味着横跨手机宽度（竖屏模式）滚球加速度与加速度计向量的 X 分量成正比！对于沿平面滚动的球，加速度是一个二维向量，可以直接从加速度计向量的 X 和 Y 分量计算出来。
+其中`g`是重力加速度，单位为每秒32英尺。但即使对于在简单的Windows Phone 7中实现滚球来说，这些细节也太过多了。我们真正需要知道的是加速度与`α`的正弦成正比。这非常幸运，因为这意味着横跨手机宽度竖屏模式滚球加速度与加速度计向量的X分量成正比！对于沿平面滚动的球，加速度是一个二维向量，可以直接从加速度计向量的X和Y分量计算出来。
 
-TiltAndRoll 似乎是根据手机的倾斜在屏幕表面让球滚动。
+`TiltAndRoll`似乎是根据手机的倾斜在屏幕表面让球滚动。
 
+## 第二部分 XNA
 
+`acceleration2D`向量仅仅是忽略了Z坐标并对Y坐标取反的加速度向量。速度向量通过加速度向量乘以经过的时间秒进行调整。然后，球的位置通过合速度向量也乘以经过的时间秒进行调整。
 
+向量的美妙之处在于，我们真的不需要知道手机的倾斜方向与速度方向相同从而倾向于增加该速度，还是与相反方向相反在这种情况下倾向于减小速度，或者是以与速度无关的其他角度倾斜。
 
+`Update`方法结尾的语句检查球是否超出了其中一个边缘，如果是，则将其带回视野并将该方向的速度分量设置为零。这些不是`if-else`语句，因为球可能同时超出两个边缘的边界，这种情况需要被处理；如果是这样，球将会停在角上。
 
-# 第二部分 XNA
+`Draw`方法仅负责使用缩放因子绘制球：
 
-`acceleration2D` 向量仅仅是忽略了 Z 坐标并对 Y 坐标取反的加速度向量。速度向量通过加速度向量乘以经过的时间（秒）进行调整。然后，球的位置通过合速度向量也乘以经过的时间（秒）进行调整。
-
-向量的美妙之处在于，我们真的不需要知道手机的倾斜方向与速度方向相同（从而倾向于增加该速度），还是与相反方向相反（在这种情况下倾向于减小速度），或者是以与速度无关的其他角度倾斜。
-
-`Update` 方法结尾的语句检查球是否超出了其中一个边缘，如果是，则将其带回视野并将该方向的速度分量设置为零。这些不是 `if-else` 语句，因为球可能同时超出两个边缘的边界，这种情况需要被处理；如果是这样，球将会停在角上。
-
-`Draw` 方法仅负责使用缩放因子绘制球：
-
-XNA Project: TiltAndRoll File: Game1.cs (节)
+### XNA Project: TiltAndRoll File: Game1.cs (节)
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -10572,9 +9991,9 @@ protected override void Draw(GameTime gameTime)
 }
 ```
 
-`TiltAndBounce` 程序与 `TiltAndRoll` 非常相似，球会在边缘反弹，这意味着当球撞击屏幕的某个边缘时，它的速度分量会取反。在一种简单的方案中，如果球撞击屏幕右边缘或左边缘（例如）时速度为 (x, y)，那么在反弹时速度变为 (-x, y)。但这不符合实际情况。你可能希望球在反弹时损失一些速度。因此，`TiltAndBounce` 程序中的字段包含一个 2/3 的反弹衰减因子：
+`TiltAndBounce`程序与`TiltAndRoll`非常相似，球会在边缘反弹，这意味着当球撞击屏幕的某个边缘时，它的速度分量会取反。在一种简单的方案中，如果球撞击屏幕右边缘或左边缘例如时速度为`(x, y)`，那么在反弹时速度变为`(-x, y)`。但这不符合实际情况。你可能希望球在反弹时损失一些速度。因此，`TiltAndBounce`程序中的字段包含一个2/3的反弹衰减因子：
 
-XNA Project: TiltAndBounce File: Game1.cs (显示字段的节)
+### XNA Project: TiltAndBounce File: Game1.cs (显示字段的节)
 
 ```csharp
 public class Game : Microsoft.Xna.Framework.Game
@@ -10597,11 +10016,13 @@ public class Game : Microsoft.Xna.Framework.Game
     ...
 ```
 
-速度为 (x, y) 的球从屏幕右边缘或左边缘反弹时，反弹后的速度为 (-BOUNCE*x, y)。
+速度为`(x, y)`的球从屏幕右边缘或左边缘反弹时，反弹后的速度为`(-BOUNCE*x, y)`。
 
-构造函数与 `TiltAndRoll` 相同，包括 `Initialize` 重写、`ReadingChanged` 方法、`LoadContent` 和 `Draw`。唯一的区别是 `Update` 方法，现在碰撞边缘的逻辑实现了反弹。
+构造函数与`TiltAndRoll`相同，包括`Initialize`重写、`ReadingChanged`方法、`LoadContent`和`Draw`。唯一的区别是`Update`方法，现在碰撞边缘的逻辑实现了反弹。
 
-# XNA Project: TiltAndBounce File: Game1.cs (节)
+### XNA Project: TiltAndBounce File: Game1.cs (节)
+
+
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -10661,7 +10082,7 @@ protected override void Update(GameTime gameTime)
 
 字段包含了你之前看到的常量：
 
-XNA Project: EdgeSlam File: Game1.cs (节)
+XNA Project: `EdgeSlam` File: `Game1.cs` (节)
 
 ```csharp
 public class Game1 : Microsoft.Xna.Framework.Game
@@ -10724,10 +10145,6 @@ public class Game1 : Microsoft.Xna.Framework.Game
 ```
 
 `SpriteFont` 用于在屏幕中心以大数字显示分数。`tinyTexture` 用于高亮随机的一个侧，具体具体由 `highlightedSide` 的值决定。
-
-
-
-
 
 ```csharp
 // 检查是否弹出边缘
@@ -10808,13 +10225,13 @@ protected override void Draw(GameTime gameTime)
 
 对于滚动的球来说，迷宫游戏是很自然的选择。当然，这涉及到几个问题，包括创建一个随机迷宫以及编写让球留在迷宫范围内的逻辑。
 
-在研究了一些迷宫生成算法后，我选择了可能是简单的一种，被称为“递归划分”（recursive division），它创建的迷宫看起来像这样：
+在研究了一些迷宫生成算法后，我选择了可能是简单的一种，被称为“递归划分”(`recursive division`)，它创建的迷宫看起来像这样：
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_391_0.png)
 
 如你所见，这不是一个非常有趣的迷宫，但它最大的优势是迷宫内的任何区域都可以从其他任何区域到达。
 
-从概念上讲，该区域被划分为一个单元格矩阵。在这个例子中，水平方向有五个单元格，垂直方向有八个，总共40个。每个单元格的四边中最多有三边是“墙”。以下是 Petzold.Phone.Xna 库中封装单元格的简单公开结构：
+从概念上讲，该区域被划分为一个单元格矩阵。在这个例子中，水平方向有五个单元格，垂直方向有八个，总共40个。每个单元格的四边中最多有三边是“墙”。以下是 `Petzold.Phone.Xna` 库中封装单元格的简单公开结构：
 
 ```csharp
 // 项目: Petzold.Phone.Xna 文件: MazeCell.Xna
@@ -10840,6 +10257,8 @@ namespace Petzold.Phone.Xna
 ```
 
 顶部的单元格其 `HasTop` 属性被设置为 true，左边缘的所有单元格其 `HasLeft` 属性同样设置为 true，右侧和底部也是如此。构成迷宫的 `MazeCell` 对象数组由 `MazeGrid` 创建并维护，它有一个接受单元格数量的高宽（例如上面的5和8）的构造函数。以下是 `MazeGrid` 构造函数、三个属性以及 `Random` 对象：
+
+
 
 ```csharp
 // 项目: Petzold.Phone.Xna 文件: MazeGrid.cs (节录)
@@ -10873,11 +10292,11 @@ public class MazeGrid
 }
 ```
 
-构造函数通过创建一个与自身大小相同的 `MazeChamber` 类型对象并调用 `DivideChamber` 来结束，这是一个稍后我会向你们展示的递归方法。在迷宫生成算法中，“室”（chamber）是一个矩形单元格网格，其内部没有墙。然后，每个室都会被划分为两个，在室内随机放置一堵墙（但通常是跨越最短维度），并留出一个选定的间隙。这个过程创建了两个可以通过该间隙相互访问的室，子划分一直持续直到室的大小变为单元格的大小。`MazeChamber` 是 Petzold.Phone.Xna 库内部的。以下是带有自身 `Random` 字段的完整类：
+构造函数通过创建一个与自身大小相同的 `MazeChamber` 类型对象并调用 `DivideChamber` 来结束，这是一个稍后我会向你们展示的递归方法。在迷宫生成算法中，“室”`chamber`是一个矩形单元格网格，其内部没有墙。然后，每个室都会被划分为两个，在室内随机放置一堵墙`wall`（但通常是跨越最短维度），并留出一个选定的间隙`gap`。这个过程创建了两个可以通过该间隙相互访问的室，子划分一直持续直到室的大小变为单元格的大小。`MazeChamber` 是 `Petzold.Phone.Xna` 库内部的。以下是带有自身 `Random` 字段的完整类：
+
+## 项目: Petzold.Phone.Xna 文件: MazeChamber.cs
 
 ```csharp
-// 项目: Petzold.Phone.Xna 文件: MazeChamber.cs
-
 using System;
 
 namespace Petzold.Phone.Xna
@@ -10971,10 +10390,6 @@ void DivideChamber(MazeChamber chamber)
 }
 ```
 
-
-
-
-
 # 第 12 章 倾斜与游戏 381
 
 ```cs
@@ -10983,7 +10398,7 @@ DivideChamber(chamber.Chamber2);
 }
 ```
 
-我意识到需要对反弹逻辑进行泛化，为此我需要一种良好的方法来表示几何线段，以便计算交点并执行其他有用操作。这是一个名为 Line2D 的结构。该线段由两个点定义，这两个点同时也定义了一个 Vector 属性和一个 Normal 属性，Normal 垂直于 Vector，因此从概念上讲，该线具有方向，并且还可以有“内部”和“外部”。
+我意识到需要对反弹逻辑进行泛化，为此我需要一种良好的方法来表示几何线段，以便计算交点并执行其他有用操作。这是一个名为 `Line2D` 的结构。该线段由两个点定义，这两个点同时也定义了一个 `Vector` 属性和一个 `Normal` 属性，`Normal` 垂直于 `Vector`，因此从概念上讲，该线具有方向，并且还可以有“内部”和“外部”。
 
 # 项目：Petzold.Phone.Xna 文件：Line2D.cs
 
@@ -11085,9 +10500,9 @@ public static bool IsValid(Vector2 vector)
 
 # 第 12 章 倾斜与游戏 383
 
-因为线在内部使用参数方程定义，所以通过等号与线上的点相关的隐式 t 值，很容易找到交点。
+因为线在内部使用参数方程定义，所以通过等号与线上的点相关的隐式 `t` 值，很容易找到交点。
 
-所有这些准备工作都是为了 TiltMaze 项目做的准备。这里是包含用于显示网格墙的 tinyTexture 的字段。名为 borders 的 Line2D 对象集合 List 是该程序中非常重要的一部分。borders 中的 Line2D 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 WALL_WIDTH 定义：
+所有这些准备工作都是为了 `TiltMaze` 项目做的准备。这里是包含用于显示网格墙的 `tinyTexture` 的字段。名为 `borders` 的 `Line2D` 对象集合 `List` 是该程序中非常重要的一部分。`borders` 中的 `Line2D` 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 `WALL_WIDTH` 定义：
 
 # XNA 项目：TiltMaze 文件：Game1.cs（显示字段的片段）
 
@@ -11130,15 +10545,17 @@ public class Game1 : Microsoft.Xna.Framework.Game
 }
 ```
 
-因为线在内部使用参数方程定义，所以通过等号与线上的点相关的隐式 t 值，很容易找到交点。
+因为线在内部使用参数方程定义，所以通过等号与线上的点相关的隐式 `t` 值，很容易找到交点。
 
-所有这些准备工作都是为了 TiltMaze 项目做的准备。这里是包含用于显示网格墙的 tinyTexture 的字段。名为 borders 的 Line2D 对象集合 List 是该程序中非常重要的一部分。borders 中的 Line2D 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 WALL_WIDTH 定义：
+所有这些准备工作都是为了 `TiltMaze` 项目做的准备。这里是包含用于显示网格墙的 `tinyTexture` 的字段。名为 `borders` 的 `Line2D` 对象集合 `List` 是该程序中非常重要的一部分。`borders` 中的 `Line2D` 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 `WALL_WIDTH` 定义：
 
 # 第二部分 加速度计
 
-照常，Initialize 定义了加速度计，ReadingChanged 处理程序提供值。
+照常，`Initialize` 定义了加速度计，`ReadingChanged` 处理程序提供值。
 
 # XNA 项目：TiltMaze 文件：Game1.cs（片段）
+
+
 
 ```csharp
 protected override void Initialize()
@@ -11159,7 +10576,7 @@ void OnAccelerometerChanged(object sender, AccelerometerEventArgs args)
 }
 ```
 
-大部分的 LoadContent 都用于构建 borders。borders 中的 Line2D 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 WALL_WIDTH 定义：
+大部分的 `LoadContent` 都用于构建 `borders`。`borders` 中的 `Line2D` 对象定义了分隔单元的墙的轮廓。每面墙的宽度由 `WALL_WIDTH` 定义：
 
 ```csharp
 protected override void LoadContent()
@@ -11172,19 +10589,15 @@ protected override void LoadContent()
 }
 ```
 
-
-
-
-
 # 第二部分 XNA
 
-问题在于有太 `Line2D` 对象进入 `borders` 集合。当墙从同一个单元格或相邻单元格组合时，许多这些 `Line2D` 对象就变得多余了，因为它们实际上位于复合墙内部。
+问题在于有太多 `Line2D` 对象进入 `borders` 集合。当墙从同一个单元格或相邻单元格组合时，许多这些 `Line2D` 对象就变得多余了，因为它们实际上位于复合墙内部。
 
 这本身并不是一个大问题，但这些多余的 `Line2D` 对象似乎影响了程序的功能。当球沿着墙滚动时，这一点显而易见。在不同的点，它似乎会卡住一下，仿佛遇到了这些幻影边界并发生了反弹。
 
 这个问题显然涉及 `Update` 方法中的某些逻辑。正如我之前指出的，我需要找到一种更通用的碰撞反弹的方法，这代表了一种方法。但再次，我不满意它。它依赖于 `borders` 集合并引入了微小的错误：
 
-XNA 项目: TiltMaze 文件: Game1.cs (节选)
+XNA 项目: `TiltMaze` 文件: `Game1.cs` (节选)
 
 ```cs
 protected override void Update(GameTime gameTime)
@@ -11237,7 +10650,7 @@ protected override void Update(GameTime gameTime)
 
 在 `borders` 集合之外的重写方法执行了类似的逻辑，有时会绘制重叠的矩形纹理：
 
-XNA 项目: TiltMaze 文件: Game1.cs (节选)
+XNA 项目: `TiltMaze` 文件: `Game1.cs` (节选)
 
 ```cs
 protected override void Draw(GameTime gameTime)
@@ -11297,23 +10710,22 @@ base.Draw(gameTime);
 
 ## 符号与数字
 
-- "d" 命名空间, 14
-- "hello world" 项目, Silverlight, 8
-- "hello, phone" 项目, XNA, 21–29
-- "mc" 命名空间, 14
-- (bin)/(bin) 目录
+- `"d"` 命名空间, 14
+- `"hello world"` 项目, Silverlight, 8
+- `"hello, phone"` 项目, XNA, 21–29
+- `"mc"` 命名空间, 14
+- `(bin)/(bin)` 目录
 - XAP 文件在
 - 16位 颜色, 194
-
-- accelerometerLock 变量, 91
-- AccelerometerVisualization 项目, 347–56
-- Action property, 55
-- Activated events, 130
+- `accelerometerLock` 变量, 91
+- `AccelerometerVisualization` 项目, 347–56
+- `Action` property, 55
+- `Activated` events, 130
 - activating programs, 126
-- ActualHeight property, 35
-- ActualWidth property, 35
+- `ActualHeight` property, 35
+- `ActualWidth` property, 35
 - New Item 数据框, 109
-- Angle reference, 207
+- `Angle` reference, 207
 - affine transforms, 282–88
 - constants in, 246
 - defined, 245
@@ -11325,16 +10737,16 @@ base.Draw(gameTime);
 - mathematics for, 283–84
 - matrix transform for, 288
 - multiplicative constants, 246
-- AffineTransform 项目, 285–88
-- AllowBuffering, 72
+- `AffineTransform` 项目, 285–88
+- `AllowBuffering`, 72
 - alpha channel, 205, 213
-- AnalyzeAutoMove 方法, 336
+- `AnalyzeAutoMove` 方法, 336
 
 ## A
 
-- acceleration, 366
+- `acceleration`, 366
 - rotation and, 162
-- ACCELERATION constant, 163
+- `ACCELERATION` constant, 163
 - vectors, 83, 346–47
 - calculating, 367
 - direction of, 84–85
@@ -11343,8 +10755,8 @@ base.Draw(gameTime);
 - tilt angles, relationship of, 36–64
 - velocity of, 85
 - zero and Y components, 355
-- acceleration2D vector, 370
-- accelerometer, 8, 83–89, 345
+- `acceleration2D` vector, 370
+- `accelerometer`, 8, 83–89, 345
 - vectors, 34–47
 - smoothing, 367
 - graphical display of, 356–63
@@ -11359,33 +10771,32 @@ base.Draw(gameTime);
 - X, Y components, 347
 - XNA project, 90–94
 - coordinates system, 346
-- Accelerometer class, 85
+- `Accelerometer` class, 85
 - dispose method, 86
 - Start method, 85–86
 - Stop method, 86
-- Accelerometer objects, creating, 349
-- Accelerometer vectors, X and Y components, 367
-- AccelerometerGraph, 356–63
-- AccelerometerReadingEvents, 86
-- AccelerometerVector field, 91, 353
-
-- angle variable
+- `Accelerometer` objects, creating, 349
+- `Accelerometer` vectors, X and Y components, 367
+- `AccelerometerGraph`, 356–63
+- `AccelerometerReadingEvents`, 86
+- `AccelerometerVector` field, 91, 353
+- `angle` variable
 - calculating, 166–67, 182
 - increasing, 163
 - initiating, 173
 - maintaining, 174
-- animationStart, 175
+- `animationStart`, 175
 - anonymous methods, 88–89
 - page data in, 116–18
-- App tag, 9
-- App.cs files, 12
-- InitializeComponent method, 12
+- `App` tag, 9
+- `App.cs` files, 12
+- `InitializeComponent` method, 12
 - problems with, 15
 - namespace declarations, 12
 - Service class in, 122
 - root element, 12
 - event handlers in, 131
-- Application class, 11–12
+- `Application` class, 11–12
 - application settings, 130
 - loading, 130
 - saving in event handlers, 137,139
@@ -11396,16 +10807,16 @@ base.Draw(gameTime);
 - saving in isolated storage, 121
 - storing, 130–33
 - application stack. See back
-- Application.Current property, 37, 132
-- .png files, 9
+- `Application.Current` property, 37, 132
+- `.png` files, 9
 - applications. Also Silverlight programs; also XNA programs
 - touch input, accommodating, 233
 - writing, 4
-- ArcSegment, 221–22
-- AreaBounding objects, 102
-- args.Handled statement, 63
-- args.ManuscriptContainer property, 59
-- args.OriginalSource property, 59
+- `ArcSegment`, 221–22
+- `AreaBounding` objects, 102
+- `args.Handled` statement, 63
+- `args.ManuscriptContainer` property, 59
+- `args.OriginalSource` property, 59
 - Ascender Corporation, 22
 - aspect ratio, 0–7
 - bitmaps and, 69
@@ -11421,130 +10832,220 @@ base.Draw(gameTime);
 - analyzing for, 336
 - implementation, 335
 - log code, 337
-- AutoMoveAndroidResource, 335
-- AutoMoveOffset property, 335
-- avgAcceleration value, 352–53
-
-
-
-
+- `AutoMoveAndroidResource`, 335
+- `AutoMoveOffset` property, 335
+- `avgAcceleration` value, 352–53
 
 # CongratulationsComponent 391
 
 气泡大小，计算，93
+
 增强程序，37–56
 
 ## Build Action（生成操作）
 
 内容，75
+
 内容与资源对比，75–76
+
 资源，74
 
-Button 类 (Button class)
+Button 类 (`Button` class)
+
 - 构造函数，294
 - Destination 属性，295
-- IProcessGameComponent, 294
+- `IProcessGameComponent`, 294
 - 私有字段，294
 - 公有属性的，294
 - SpriteFont, 295
 - 触摸输入，303, 306
 
-选择器 (choosers)，76
-墓碑化 (tombstoning)，78–79
-圆形 (circles)
+选择器 (`choosers`)，76
+
+墓碑化 (`tombstoning`)，78–79
+
+圆形 (`circles`)
+
 - 上的点，185
 - 上的，计算中，189
-- Clear 方法，194, 197
-- ClearPixelArray 方法，303, 316
-- ClientBounds 属性，43
+
+
+
+- `Clear` 方法，194, 197
+
+- `ClearPixelArray` 方法，303, 316
+
+- `ClientBounds` 属性，43
+
 - 时钟数组，48
+
 - 关闭事件，130
+
 - 关闭程序，126
+
 - 云系列，4–5
+
 - 代码路径，取决于大小的，6
+
 - 代码，加载位图，74–76
+
 - 代码后文件，4, 11
-- Color 颜色，169–170
+
+- `Color` 颜色，169–170
+
 - 代码通道调制，169
+
 - 代码格式
-  - 用于 TextFormField 对象，215
-  - 用于 RenderTarget2D 对象，202–3
+
+  - 用于 `TextFormField` 对象，215
+
+  - 用于 `RenderTarget2D` 对象，202–3
+
   - 性能与，203
+
 - 颜色渐变，194
+
 - 颜色对象，转换为 uint，214
-- color 属性，298
+
+- `color` 属性，298
+
 - 像素中的代码表示，194
+
 - 代码结构
+
   - 在 Silverlight 中，58
-- Lerp 方法，176
-- PackedValue 属性，214
+
+- `Lerp` 方法，176
+
+- `PackedValue` 属性，214
+
 - 代码主题，7, 18–19
+
 - 代码 Black，170
+
 - 代码 Blue，170
-- code.Green, 170
-- code.Red, 170
-- ColorBlock 类，294, 297–98
-- color 属性，298
-- Destination 属性，298
-- ISelected 属性，298
-- ColorBlock 组件
+
+- `code.Green`, 170
+
+- `code.Red`, 170
+
+- `ColorBlock` 类，294, 297–98
+
+- `color` 属性，298
+
+- `Destination` 属性，298
+
+- `ISelected` 属性，298
+
+- `ColorBlock` 组件
+
   - 创建、初始化和添加到集合中，300
+
   - 处理，306
+
   - 字符串，299
+
 - 编译，15
-- Complete 方法，调用，60
+
+- `Complete` 方法，调用，60
+
 - 完成事件处理程序，78, 80
+
 - 完成事件，100
-- nComponents 集合，278
+
+- `nComponents` 集合，278
+
 - 向其中添加组件，285, 300, 313
-- ComputeAffineTransform 方法，284
-- ComputeMatrix 方法，284
-- ComputeRotateAndTranslateMatrix 方法，254
-- ComputeScaleAndRotateMatrix 方法，255, 255, 274–75
-- ComputeScaleMatrix 方法，251
-- ComputeTangents，190
-- CongratulationsComponent，321
+
+- `ComputeAffineTransform` 方法，284
+
+- `ComputeMatrix` 方法，284
+
+- `ComputeRotateAndTranslateMatrix` 方法，254
+
+- `ComputeScaleAndRotateMatrix` 方法，255, 255, 274–75
+
+- `ComputeScaleMatrix` 方法，251
+
+- `ComputeTangents`，190
+
+- `CongratulationsComponent`，321
+
 - 创建，325
+
 - 启用，343–44
 
-- Click 事件处理程序，绑定，313
+- `Click` 事件处理程序，绑定，313
+
 - 创建，313
+
 - 创建、初始化和添加到集合中，300
-- destination，赋值，313
+
+- `destination`，赋值，313
+
 - 字体用于，加载，300
+
 - 字体，赋值，313
-- Text 属性，赋值，313
+
+- `Text` 属性，赋值，313
 
 # C
 
 - C# 属性，5
-- CalculateDisplayMatrix 方法，332
+
+- `CalculateDisplayMatrix` 方法，332
+
 - 异步回调函数，304–5
+
 - 摄像头应用，调试，77
+
 - 使用其捕捉图像，76–79
-- CameraCaptureTask 对象，76, 78
+
+- `CameraCaptureTask` 对象，76, 78
+
 - 摄像头，7
+
 - 容式技术触摸，7
-- car.png，177
-- carcenter 字段，185
-- CardInfo 类，322
-- AutoMove 字段，322
-- AutoMoveOffset 和 AutoMoveInterpolation 属性，335
-- Rank 属性，322
+
+- `car.png`，177
+
+- `carcenter` 字段，185
+
+- `CardInfo` 类，322
+
+- `AutoMove` 字段，322
+
+- `AutoMoveOffset` 和 `AutoMoveInterpolation` 属性，335
+
+- `Rank` 属性，322
+
 - 字符串数组，322
-- suit 属性，322
-- ToSize，322
-- CardInfo 对象，创建，325
-- 卡片 cards 对象，324
-- cardSpot 的位置，计算，335
-- cardsSpots 数组，292
-- CarOnOvalCourse 项目，189–92
-- CarOnPolyCourse 项目，186–88
-- CarOnRectangular 类项目，177–80
+
+- `suit` 属性，322
+
+- `ToSize`，322
+
+- `CardInfo` 对象，创建，325
+
+- 卡片 `cards` 对象，324
+
+- `cardSpot` 的位置，计算，335
+
+- `cardsSpots` 数组，292
+
+- `CarOnOvalCourse` 项目，189–92
+
+- `CarOnPolyCourse` 项目，186–88
+
+- `CarOnRectangular` 类项目，177–80
+
 - 居中，341
-- CharacterRegions 标签，23
-- CheckForAutoMove 方法，336
-- ChooserBase 类，76
+
+- `CharacterRegions` 标签，23
+
+- `CheckForAutoMove` 方法，336
+
+- `ChooserBase` 类，76
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_405_0.png)
 
@@ -11557,353 +11058,662 @@ Button 类 (Button class)
 ## 内容目录 (Content directory)
 
 - 添加内容，171
+
 - 添加元素项，171
+
 - 内容网格，16
+
 - 元素，放置，32–33
+
 - 内容项目，添加位图，66
+
 - XNA 内容项目，228
-- Content 属性，118
-- ContentManager 类型，257
-- ContentPanel，256
-- Control，15
+
+- `Content` 属性，118
+
+- `ContentManager` 类型，257
+
+- `ContentPanel`，256
+
+- `Control`，15
+
 - 控件，15
+
 - 右手坐标系，84
+
 - 坐标，288
-- CornflowerBlue，27
-- CreateCardSpots 方法，327
-- CreateRotation 方法，248
-- CreateScale 方法，248
-- CreateTranslation 方法，248
+
+- `CornflowerBlue`，27
+
+- `CreateCardSpots` 方法，327
+
+- `CreateRotation` 方法，248
+
+- `CreateScale` 方法，248
+
+- `CreateTranslation` 方法，248
+
 - 调用，255
-- Cruise，357
-- cspline，190
+
+- `Cruise`，357
+
+- `cspline`，190
+
 - 塞尔插值，190
+
 - 当前线程，来自对象，87
-- CurrentOrientationProperty，42
-- CurvePositionField，317
+
+- `CurrentOrientationProperty`，42
+
+- `CurvePositionField`，317
+
 - 变换，应用于，319
-- Curve，188
+
+- `Curve`，188
+
 - 塞尔插值，190
-- Evaluate 方法，191
-- Key 属性，188
-- Curves，185
-- Curve 对象，在 X 和 Y 坐标中，189
-- CurveKey，188
-- Position 属性，188
-- Value 属性，188
-- CurveCollection 集合，188
+
+- `Evaluate` 方法，191
+
+- `Key` 属性，188
+
+- `Curves`，185
+
+- `Curve` 对象，在 X 和 Y 坐标中，189
+
+- `CurveKey`，188
+
+- `Position` 属性，188
+
+- `Value` 属性，188
+
+- `CurveCollection` 集合，188
+
 - 曲线
+
 - 绘制手指，210–133
+
 - 沿移动，188–92
+
 - 切线，192
-- CurveTangent.Smooth，190
+
+- `CurveTangent.Smooth`，190
 
 # D
 
 - 数据
+
 - 服务，121
+
 - 传递到页面，114–16
+
 - 跨实例保留，221–23
+
 - 瞬态数据，124
+
 - 平滑，347–49
+
 - 低通滤波器，354
-- DateTime 值，计算，46
-- Deactivated 事件，130
+
+- `DateTime` 值，计算，46
+
+- `Deactivated` 事件，130
+
 - 停用程序，126
+
 - 调试 选项，10
+
 - 调试摄像头应用，77
-- DELATION 常数，258
+
+- `DELATION` 常数，258
+
 - 数组，324
+
 - 初始化，325
-- Decompose 方法，253
-- delegate 关键字，88
+
+- `Decompose` 方法，253
+
+- `delegate` 关键字，88
+
 - 委托，887
-- Delta 属性，54, 211, 234
-- 在 Update 中，238
-- DependencyObject 类，15, 87
-- DesignerHeight 属性，15
-- DesignerWidth 属性，15
-- destination 参数，171
+
+- `Delta` 属性，54, 211, 234
+
+- 在 `Update` 中，238
+
+- `DependencyObject` 类，15, 87
+
+- `DesignerHeight` 属性，15
+
+- `DesignerWidth` 属性，15
+
+- `destination` 参数，171
+
 - 目标页面，113
+
 - 作为对话框，114–19
+
 - 调用方法，121
+
 - 传递数据到，114–16
+
 - 设置属性，119
-- Destination 属性，295, 298
+
+- `Destination` 属性，295, 298
+
 - 设备
+
 - 显示大小，6
+
 - 硬件特性，7–8
+
 - 屏幕尺寸，5
+
 - 作为对话框，114, 19
-- Dispatcher，86–97
+
+- `Dispatcher`，86–97
+
 - 模拟器，10
+
 - 获取，43
+
 - 像素密度，10
+
 - 宽度，327
+
 - 显示时间，更新，46
-- displayMatrixField，垂直缩放，324
-- DisplayOrientation.LandscapeLeft，349
-- DisplayOrientation.LandscapeRight，349
+
+- `displayMatrixField`，垂直缩放，324
+
+- `DisplayOrientation.LandscapeLeft`，349
+
+- `DisplayOrientation.LandscapeRight`，349
+
 - 显示
+
 - 宽高比，0–7
+
 - 竖屏对比横屏模式，6–7
+
 - 功耗，7
+
 - 分辨率，20
-- Distance 方法，149
-- DistanceSquared 方法，149
-- Divide 方法，379
-- DivideChamber 方法，378–79
+
+- `Distance` 方法，149
+
+- `DistanceSquared` 方法，149
+
+- `Divide` 方法，379
+
+- `DivideChamber` 方法，378–79
+
 - 双类型，35
-- DoubleTap 手势，233
+
+- `DoubleTap` 手势，233
 
 # 393
 
 # 事件处理程序
 
 - 从 Web 绘制项目，70
-- DownloadProgress，74
-- Drag 手势，200–1
-- 用于 Delta，234
+
+- `DownloadProgress`，74
+
+- `Drag` 手势，200–1
+
+- 用于 `Delta`，234
+
 - 速度，计算，257
-- DragAndPinch 程序，198–202
-- DragAndPinch 手势，199–200, 233, 265
-- Dragcomplete 手势，219–272
-- Dragger 组件，279–82
--  Texture，280
-- IP 接口，286
-- Position 设置，285
-- PositionChanged 事件，286
+
+- `DragAndPinch` 程序，198–202
+
+- `DragAndPinch` 手势，199–200, 233, 265
+
+- `Dragcomplete` 手势，219–272
+
+- `Dragger` 组件，279–82
+
+- `Texture`，280
+
+- `IP` 接口，286
+
+- `Position` 设置，285
+
+- `PositionChanged` 事件，286
+
 - 拖拽
-- 用于 delta 向量，243
+
+- 用于 `delta` 向量，243
+
 - 与...缩放，240
-- DragPinchRotate，253-56
-- Drag 类参数，237
-- Draw 方法，26–27, 43, 93
+
+- `DragPinchRotate`，253-56
+
+- `Drag` 类参数，237
+
+- `Draw` 方法，26–27, 43, 93
+
 - 位图，渲染，67–68
+
 - 块对象，绘制，298
+
 - 调用，194
+
 - 画布，渲染，190
-- Color 参数，169–170
+
+- `Color` 参数，169–170
+
 - 默认代码，27–28
+
 - 绘制带缩放的球，370
+
 - 覆盖，176
-- 遍历 SpriteInfo，175
+
+- 遍历 `SpriteInfo`，175
+
 - 带有文本颜色变量，52
-- Draw 方法 (SpriteBatch)
-- Color 参数，169–70
-- 可空 Rectangle 对象，170
-- position 参数，169
-- Rectangle，170
+
+- `Draw` 方法 (`SpriteBatch`)
+
+- `Color` 参数，169–70
+
+- 可空 `Rectangle` 对象，170
+
+- `position` 参数，169
+
+- `Rectangle`，170
+
 - 旋转角度，170
-- SpriteBatch 对象，171
-- Texture2D 变体，169
 
+- `SpriteBatch` 对象，171
 
-
-
+- `Texture2D` 变体，169
 
 # 394
 
 ## events (事件)
 
-events
+`events`
 
 - 方向变化，检测, 6
+
 - 线程安全, 44
+
 - 执行，终止, 10
+
 - 可扩展的应用程序标记语言 (XAML), 4
+
 - 扩展方法, 266
-- embeddedName, 22
-- FontName 标签, 23
+
+- `embeddedName`, 22
+
+- `FontName` 标签, 23
+
 - 在 XNA 应用中, 22
+
 - 命名, 23
-- Size 标签, 23
-- FontSize 属性, 15
+
+- `Size` 标签, 23
+
+- `FontSize` 属性, 15
+
 - 编辑, 19–21
+
 - 点与像素, 19–21
-- Foreground 属性, 15, 19
-- Foreground 属性, 58
+
+- `Foreground` 属性, 15, 19
+
+- `Foreground` 属性, 58
+
 - 帧, 16
 
 # F
 
-fields (字段)
+`fields` (字段)
 
 - + 对象，作为定义为, 78
+
 - 将数据保存为, 121
+
 - 文件，保存, 305
+
 - 填充形状, 218–220
+
 - 总是, 324
+
 - 初始化, 325
+
 - 最终集合，显示, 335
+
 - 手指绘画程序, 210
+
 - 手指位置
+
     - 查找, 50
+
     - 复制, 243
+
 - 手指按下
+
     - 初始, 295
+
     - 释放, 296
+
 - 手指轻点, 50
+
 - 手指触摸, 50, 233
+
 - 手指触感
+
     - 移动距离, 274, 238–239
+
     - 绘制线条和曲线, 210–213
+
 - 手指按下，跟踪, 280
+
 - 抬起人员, 272
+
 - 定位, 211
+
 - 移动, 234
+
 - 多多个，处理, 228–229
+
 - 位置, 200–201, 234, 249
+
 - 上一个位置，确定, 238
+
 - 缩放操作, 251
+
 - 触摸对象或外部对象, 273
+
 - 触摸, 503
+
 - 在页面中, 16
-- FrameworkElement 类, 15, 37
-- FrameworkElement 属性, 34
-- FreeDragGesture, 199–201, 211, 228, 233
-    - Delta 属性, 211
+
+- `FrameworkElement` 类, 15, 37
+
+- `FrameworkElement` 属性, 34
+
+- `FreeDragGesture`, 199–201, 211, 228, 233
+
+    - `Delta` 属性, 211
+
     - 启用, 236
+
     - 处理, 248–253, 271–272
+
     - 忽略, 237
-    - Position 属性, 211
-- Texture2Dposition, 254
+
+    - `Position` 属性, 211
+
+- `Texture2Dposition`, 254
+
 - 调用, 162
-- fromArgb 方法, 58
+
+- `fromArgb` 方法, 58
 
 # G
 
 - 游戏动作, 294
-- 游戏参数, 294
-- game 类, 24
-    - + Components 集合, 278
-    - Draw 方法, 169
-    - Draw 方法重写, 169, 193–194
-    - GraphicsDevice 属性, 193
-    - OnActivated 方法, 134
-    - OnDeactivated 方法, 134
-    - Update 重写, 233
-- 游戏组件, 278–282
-    - 添加, 278
-    - Components 集合，添加到, 313
-- 构造函数, 294
-    - 定义, 278
-    - 初始化, 300
-    - 实例化, 278
-    - 存储和用于, 295
-- 触摸输入，访问, 278
-- 游戏循环, 226
-- 游戏时间, 145
-- game 类, 24, 144
-    - 后缓冲区设置, 40–41
-    - Draw 重写, 176
-    - 类中的字段, 24
-    - 实例化, 24–25
-    - LineRenderer 字段, 208
-    - 分割, 323
-- 游戏构造函数
-    - 执行, 24–25
-- 手势，在其中启用, 324
-- game1cs 文件, 23, 24, 323
-- FlawedFingerprint 属性, 210–213
-- Flick 手势, 233, 257–259
-    - Delta 属性, 234
-    - 启用, 258
-    - 位置信息, 257
-- FlickTexture 属性, 257–259
-- FlipHorizontally, 158, 370
-- FlipVertically, 158
-- FlyAwayHello, 171–176
-- 位图，加载, 198
-- FM 广播电, 8
-- 字体颜色，更改, 19
-- 字体大小，点，和, 19–21
-- FontFamily 设置, 15
-- FontName 标签, 23
-- 字体
-    - 位图字体, 161
-    - CharacterRegions 标签, 23
-- Game1.Helper.files, 323, 326
-- GameComponent 类, 278
-- GameComponent 派生类, 280
-- GamePad 类, 27
-- Game, 另见 XNA 程序
-- GameTime 参数, 145
-    - Elapsed 属性, 145
-    - TotalGameTime 属性, 145, 175
-- GameWindow 类
 
-- GradientBackgroundobject, 215–217
+- 游戏参数, 294
+
+- `game` 类, 24
+
+    - + `Components` 集合, 278
+
+    - `Draw` 方法, 169
+
+    - `Draw` 方法重写, 169, 193–194
+
+    - `GraphicsDevice` 属性, 193
+
+    - `OnActivated` 方法, 134
+
+    - `OnDeactivated` 方法, 134
+
+    - `Update` 重写, 233
+
+- 游戏组件, 278–282
+
+    - 添加, 278
+
+    - `Components` 集合，添加到, 313
+
+- 构造函数, 294
+
+    - 定义, 278
+
+    - 初始化, 300
+
+    - 实例化, 278
+
+    - 存储和用于, 295
+
+- 触摸输入，访问, 278
+
+- 游戏循环, 226
+
+- 游戏时间, 145
+
+- `game` 类, 24, 144
+
+    - 后缓冲区设置, 40–41
+
+    - `Draw` 重写, 176
+
+    - 类中的字段, 24
+
+    - 实例化, 24–25
+
+    - `LineRenderer` 字段, 208
+
+    - 分割, 323
+
+- 游戏构造函数
+
+    - 执行, 24–25
+
+- 手势，在其中启用, 324
+
+- `game1cs` 文件, 23, 24, 323
+
+- `FlawedFingerprint` 属性, 210–213
+
+- `Flick` 手势, 233, 257–259
+
+    - `Delta` 属性, 234
+
+    - 启用, 258
+
+    - 位置信息, 257
+
+- `FlickTexture` 属性, 257–259
+
+- `FlipHorizontally`, 158, 370
+
+- `FlipVertically`, 158
+
+- `FlyAwayHello`, 171–176
+
+- 位图，加载, 198
+
+- FM 广播电, 8
+
+- 字体颜色，更改, 19
+
+- 字体大小，点，和, 19–21
+
+- `FontFamily` 设置, 15
+
+- `FontName` 标签, 23
+
+- 字体
+
+    - 位图字体, 161
+
+    - `CharacterRegions` 标签, 23
+
+- `Game1.Helper.files`, 323, 326
+
+- `GameComponent` 类, 278
+
+- `GameComponent` 派生类, 280
+
+- `GamePad` 类, 27
+
+- `Game`, 另见 XNA 程序
+
+- `GameTime` 参数, 145
+
+    - `Elapsed` 属性, 145
+
+    - `TotalGameTime` 属性, 145, 175
+
+- `GameWindow` 类
+
+- `GradientBackgroundobject`, 215–217
+
 - 渐变
+
     - 背景，作为, 215–217
+
     - 插值, 215
+
     - 图形字段, 24
+
     - 初始化, 24
-    - SupportedOrientations 属性, 41–42
-- GraphicsDevice 类
-    - Clear 方法, 194
-    - PresentationParameters 属性, 194
-    - RenderTarget2Object，设置到, 197
-    - Viewport, 264
-- GraphicsDeviceObjects, 194
-- GraphicsDevice 属性属性, 193
-- GraphicsDeviceManager 对象
-    - SupportedOrientations 属性, 349
-- ClientBounds 属性, 423
-- CurrentOrientation 属性, 426
-- OrientationChanged 事件, 42
-- GeoCoordinate 类, 94–95, 98
+
+    - `SupportedOrientations` 属性, 41–42
+
+- `GraphicsDevice` 类
+
+    - `Clear` 方法, 194
+
+    - `PresentationParameters` 属性, 194
+
+    - `RenderTarget2Object`，设置到, 197
+
+    - `Viewport`, 264
+
+- `GraphicsDeviceObjects`, 194
+
+- `GraphicsDevice` 属性属性, 193
+
+- `GraphicsDeviceManager` 对象
+
+    - `SupportedOrientations` 属性, 349
+
+- `ClientBounds` 属性, 423
+
+- `CurrentOrientation` 属性, 426
+
+- `OrientationChanged` 事件, 42
+
+- `GeoCoordinate` 类, 94–95, 98
+
     - 地理坐标, 95
+
     - 地理位置, 94–98
+
     - 几何线条，厚度, 217
+
     - 线条绘制几何, 217–219
-- GeoPositionAccuracy 枚举, 95
+
+- `GeoPositionAccuracy` 枚举, 95
+
 - 手势，识别, 53–54
+
 - 手势，另见触摸输入
-    - Delta, 234
+
+    - `Delta`, 234
+
     - 启用, 199, 233, 324
-    - Flick 手势, 257–259
+
+    - `Flick` 手势, 257–259
+
     - 旋转, 242
+
     - 缩放, 237–232
+
     - 处理, 200
-- graphTexture
+
+- `graphTexture`
+
     - 创建, 360
+
     - 更新, 362
+
     - 常量, 367
+
     - 绿色：包含在, 194
+
     - 网格元素, 15–16
+
     - 内容方向, 32–33
+
     - 内容面板/内容区域, 16–17
-    - Body.BeginKeyboard 方法, 303–304
+
+    - `Body.BeginKeyboard` 方法, 303–304
+
     - 竖屏或横屏模式, 304
-    - Body.EndKeyboard 方法, 305
-    - inTouch 类, 233
+
+    - `Body.EndKeyboard` 方法, 305
+
+    - `inTouch` 类, 233
+
     - 参考点, 254
-    - Pinch 手势, 249–257
-    - Position 属性, 234
-    - Gesture 对象, 54, 233
-    - Gesture 属性, 257
-    - Vector 属性, 234
-    - Gesturetype 枚举, 53, 233
-    - Gesture 属性, 540, 233
-    - Gesturetype.Drag 成员, 208
-    - GestureFreeDrag 成员, 200
-    - GetXML 方法, 230
+
+    - `Pinch` 手势, 249–257
+
+    - `Position` 属性, 234
+
+    - `Gesture` 对象, 54, 233
+
+    - `Gesture` 属性, 257
+
+    - `Vector` 属性, 234
+
+    - `Gesturetype` 枚举, 53, 233
+
+    - `Gesture` 属性, 540, 233
+
+    - `Gesturetype.Drag` 成员, 208
+
+    - `GestureFreeDrag` 成员, 200
+
+    - `GetXML` 方法, 230
+
     - 在 语句中, 221
-    - GetCapabilities 方法, 49
-    - GetCardTextureSource, 329, 335
-    - GetCoordinate 对象, 95
+
+    - `GetCapabilities` 方法, 49
+
+    - `GetCardTextureSource`, 329, 335
+
+    - `GetCoordinate` 对象, 95
+
     - 距离, 95
+
     - 调用源, 224
-    - GetPrimaryTouchPoint(element) 属性, 55
-    - GetRectangle 方法, 82
-    - GetResourceStream 方法, 75
-    - GetTouchPoints(element) 属性, 55
-    - GetValue 方法, 182, 191–192
-    - Boolean 参数, 184
-    - GIF 格式, 65
-    - Global Positioning Satellite (GPS), 94
-    - GoBack 方法, 110, 113
+
+    - `GetPrimaryTouchPoint(element)` 属性, 55
+
+    - `GetRectangle` 方法, 82
+
+    - `GetResourceStream` 方法, 75
+
+    - `GetTouchPoints(element)` 属性, 55
+
+
+
+# H
+
+- `GetValue` 方法, 182, 191–192
+- `Boolean` 参数, 184
+- GIF 格式, 65
+- Global Positioning Satellite (GPS), 94
+- `GoBack` 方法, 110, 113
 
 # H
 
@@ -11913,337 +11723,495 @@ fields (字段)
 - GPU 设备, 8
 - 硬件键盘, 7
 - 程序，对齐, 38
-- Hastop, 378
+- `Hastop`, 378
 - 堆，分配, 26
 - 高级触摸绘制, 58–61
 - 高亮值, 373
-- hold 对象, 233
-- holds 数组, 324
+- `hold` 对象, 233
+- `holds` 数组, 324
 - 水平拖动，缩放, 240
 - 水平扫描线，基于, 219
-- 水平Alignment 属性, 18, 32–33
+- 水平`Alignment` 属性, 18, 32–33
 - 默认设置, 33
-- Stretch 值, 63
+- `Stretch` 值, 63
 - 水平拖动手势, 233
-- HorizontalBar.png, 171
+- `HorizontalBar.png`, 171
 - HTML 查询字符串, 115
 
 # I
 
-- id 属性, 50, 55
+- `id` 属性, 50, 55
 - 恒等矩阵, 247
 - 图像, 68
 - 图像元素, 68–69, 73–74
-- Source 属性, 68, 73
+- `Source` 属性, 68, 73
 
 # 396 image transparency (图像透明度)
 
-image transparency
-    - 捕捉, 76–79
-    - 闪烁, 259
-    - 翻转, 170
-    - 修改, 229–232
-    - 通过 Web, 69–72
-    - imageSource 类, 73–74
-    - 惯性, 257–259
-    - 减速值, 258
-    - 处理, 233
-    - 操控事件, 58
-    - 速度, 257
-    - 无限对象, 288
-    - 无限符号，绘制, 188–189
-    - 初始化，墓碑, 266
-    - Initialize 方法, 25
-    - 加速度计启动, 368
-    - 游戏组件，实例化, 278
-    - Initialize 重写, 189
-    - 加速度计对象创建, 349
-    - 组件，初始化并到集合中, 300
-    - InitializeComponent 方法, 12, 15, 35
-    - InitializePasswordField 方法, 267
-    - insertRow 方法, 350
-    - 实例
-    - stains
-    - 保留数据类, 121–123
-    - 保存字段, 121
-    - Internet Explorer, 7
-    - 插值
-    - 计算, 175
-    - Cubic Hermite 样条插值, 190
-    - 使用 Vector2Lerp, 184
-    - 使用 Vector2SmoothStep, 184
-    - interpolationFactor 属性, 172, 175
-    - 线程间通信, 264
-    - 逆矩阵, 324
-    - Invoke 方法, 67
-    - ProcessTouch 接口, 279, 306
-    - 实现, 279–80
-    - 在 Button 类中, 295
-    - isAnimationGoing 字段, 174
-    - isConnected 属性, 49
-    - isDragging 字段, 200–201
-    - isDraggingUp, 144–145
-    - 隔离, 130–133
-    - 可访问, 121
-    - 应用设置, 130–133
-    - 之间保存数据, 123, 121
-    - isolatedStorageFile 对象, 136
-    - isolatedStorageFile.GetUserApplication 方法, 136
-    - isolatedStorageSettings 类, 130–133
-    - isolatedStorageSettings 对象, 132
-    - IsSelected 属性, 298
-    - isVisible 属性, 38
-    - Iterate 方法, 264
-    - 抖动，消除, 354
-    - 键盘输入, 61
-    - 键盘方法, 303
-    - 键盘，硬件和屏幕, 77
-    - Keys 属性, 188
-    - lambda 表达式, 88
-    - 横屏方向, 5–7
-    - landscapeLeft , 354–355
-    - landscapeRight , 355
-    - 大屏幕, 66
-    - lastDateTimeField 字段, 46
-    - 纬度, 95
-    - Launching 事件, 130
-    - 启动程序, 126
-    - 布局周期，通知, 35
-    - LayoutRoot 元素，垂直大小, 38
-    - Updated 事件, 35
-    - LCD 显示，功耗, 77
-    - 库，共享, 4
-    - 线性插值, 152
-    - 线性变换, 245
-    - Renderer 类, 206–207
-    - Renderer 对象，创建, 208–211
-    - 绘制, 206–209
-    - 用手指绘制, 210–233
-    - 几何结构, 217–219
-    - 纬度线, 95
-    - 使用 RenderTarget2D 对象绘制, 206
-    - 圆角端，在, 213,218
-    - 厚度, 206
-    - LineSegment 顶点, 220–221
+`image transparency`
+
+- 捕捉, 76–79
+- 闪烁, 259
+- 翻转, 170
+- 修改, 229–232
+- 通过 Web, 69–72
+- `imageSource` 类, 73–74
+- 惯性, 257–259
+- 减速值, 258
+- 处理, 233
+- 操控事件, 58
+- 速度, 257
+- 无限对象, 288
+- 无限符号，绘制, 188–189
+- 初始化，墓碑, 266
+- `Initialize` 方法, 25
+- 加速度计启动, 368
+- 游戏组件，实例化, 278
+- `Initialize` 重写, 189
+- 加速度计对象创建, 349
+- 组件，初始化并到集合中, 300
+- `InitializeComponent` 方法, 12, 15, 35
+- `InitializePasswordField` 方法, 267
+- `insertRow` 方法, 350
+- 实例
+- stains
+- 保留数据类, 121–123
+- 保存字段, 121
+- Internet Explorer, 7
+- 插值
+- 计算, 175
+- Cubic Hermite 样条插值, 190
+- 使用 `Vector2Lerp`, 184
+- 使用 `Vector2SmoothStep`, 184
+- `interpolationFactor` 属性, 172, 175
+- 线程间通信, 264
+- 逆矩阵, 324
+- `Invoke` 方法, 67
+- `ProcessTouch` 接口, 279, 306
+- 实现, 279–80
+- 在 `Button` 类中, 295
+- `isAnimationGoing` 字段, 174
+- `isConnected` 属性, 49
+- `isDragging` 字段, 200–201
+- `isDraggingUp`, 144–145
+- 隔离, 130–133
+- 可访问, 121
+- 应用设置, 130–133
+- 之间保存数据, 123, 121
+- `isolatedStorageFile` 对象, 136
+- `isolatedStorageFile.GetUserApplication` 方法, 136
+- `isolatedStorageSettings` 类, 130–133
+- `isolatedStorageSettings` 对象, 132
+- `IsSelected` 属性, 298
+- `isVisible` 属性, 38
+- `Iterate` 方法, 264
+- 抖动，消除, 354
+- 键盘输入, 61
+- 键盘方法, 303
+- 键盘，硬件和屏幕, 77
+- `Keys` 属性, 188
+- lambda 表达式, 88
+- 横屏方向, 5–7
+- `landscapeLeft`, 354–355
+- `landscapeRight`, 355
+- 大屏幕, 66
+- `lastDateTimeField` 字段, 46
+- 纬度, 95
+- `Launching` 事件, 130
+- 启动程序, 126
+- 布局周期，通知, 35
+- `LayoutRoot` 元素，垂直大小, 38
+- `Updated` 事件, 35
+- LCD 显示，功耗, 77
+- 库，共享, 4
+- 线性插值, 152
+- 线性变换, 245
+- `Renderer` 类, 206–207
+- `Renderer` 对象，创建, 208–211
+- 绘制, 206–209
+- 用手指绘制, 210–233
+- 几何结构, 217–219
+- 纬度线, 95
+- 使用 `RenderTarget2D` 对象绘制, 206
+- 圆角端，在, 213,218
+- 厚度, 206
+- `LineSegment` 顶点, 220–221
 
 # MazeCell 结构 397
 
 - 链接，添加位图, 68
-- List, 299
-- LoadContent 方法, 25–26, 42, 46, 51, 74, 144, 151, 163
+- `List`, 299
+- `LoadContent` 方法, 25–26, 42, 46, 51, 74, 144, 151, 163
 - 位图，创建, 198
 - 边界集合, 34
 - 画布和大小, 301
 - 路径，确定, 186
 - 变量, 157
-- LoadContent 重写
-    - 游戏组件，初始化, 300
-    - 游戏组件，定位, 384
-    - 游戏组件, 295
-    - Renderer 对象, 208, 211
-    - RenderDefault 对象创建, 195
-    - Sprite 对象创建, 194
-    - TextureData, 236
-    - 纹理，准备, 350
-    - 未初始化字段，设置, 238
-    - Loaded 事件, 101
-    - LoadFromService 方法, 302
-    - LoadSettings 方法, 132
-    - 本地位图，编码自, 74–76
-    - 地理位置检测, 8, 94–99
-    - 纬度线, 95
-    - 地图服务, 98–105
-    - 锁块, 350–353
-    - 锁语句, 91–92
-    - Draw 重写中的循环, 195
-    - 有损压缩算法, 65
-    - 低级触摸
-    - 在 Silverlight 中, 54–60
-    - 在 XNA 中, 69–83
-    - 低通滤波器, 354
-
-
-
-
+- `LoadContent` 重写
+  - 游戏组件，初始化, 300
+  - 游戏组件，定位, 384
+  - 游戏组件, 295
+  - `Renderer` 对象, 208, 211
+  - `RenderDefault` 对象创建, 195
+  - `Sprite` 对象创建, 194
+  - `TextureData`, 236
+  - 纹理，准备, 350
+  - 未初始化字段，设置, 238
+- `Loaded` 事件, 101
+- `LoadFromService` 方法, 302
+- `LoadSettings` 方法, 132
+- 本地位图，编码自, 74–76
+- 地理位置检测, 8, 94–99
+- 纬度线, 95
+- 地图服务, 98–105
+- 锁块, 350–353
+- 锁语句, 91–92
+- `Draw` 重写中的循环, 195
+- 有损压缩算法, 65
+- 低级触摸
+  - 在 Silverlight 中, 54–60
+  - 在 XNA 中, 69–83
+- 低通滤波器, 354
 
 ## MazeChamber 对象, 38–79
 
-MazeChamber 对象, 38–79
-MazeGrid, 378
-MeasureString, 26, 47
+`MazeChamber` 对象, 38–79
+
+`MazeGrid`, 378
+
+`MeasureString`, 26, 47
+
 垂直缩放和, 161
+
 媒体库。Zone 软件访问, 306
-Mediibrary 类, 79, 82
-Memory, 拥有, 26
-MemoryStream 对象, 266
-Microsoft.Shell 命名空间, 302
-Microsoft.Phone 手机访问, 3
-Microsoft.Reports Map Service, 98
-Microsoft.Silverlight. 参见 Silverlight,
-Microsoft.Visual Studio 2010 Express for Windows
-Microsoft.Windows 7. 参见 Windows Phone 7
-Microsoft.Devices Sensors 程序集, 347
-Microsoft.Devices.Library, 85
-Microsoft.Devices.Sensors 命名空间, 85, 90, 347
-Microsoft.Phone 程序集, 302
-Microsoft.Phone.Control 命名空间, 13
-Microsoft.Shell 命名空间, 38, 122
-Microsoft.Phone.Tasks 命名空间, 76
-Microsoft.Xna.Framework DLL, 81
-Microsoft.Xna.Framework 命名空间, 188
-Microsoft.Xna.Framework.Media 命名空间, 79
+
+`Mediibrary` 类, 79, 82
+
+`Memory`, 拥有, 26
+
+`MemoryStream` 对象, 266
+
+`Microsoft.Shell` 命名空间, 302
+
+`Microsoft.Phone` 手机访问, 3
+
+`Microsoft.Reports` Map Service, 98
+
+`Microsoft.Silverlight`. 参见 Silverlight,
+
+`Microsoft.Visual Studio 2010 Express for Windows`
+
+`Microsoft.Windows 7`. 参见 Windows Phone 7
+
+`Microsoft.Devices Sensors` 程序集, 347
+
+`Microsoft.Devices.Library`, 85
+
+`Microsoft.Devices.Sensors` 命名空间, 85, 90, 347
+
+`Microsoft.Phone` 程序集, 302
+
+`Microsoft.Phone.Control` 命名空间, 13
+
+`Microsoft.Shell` 命名空间, 38, 122
+
+`Microsoft.Phone.Tasks` 命名空间, 76
+
+`Microsoft.Xna.Framework` DLL, 81
+
+`Microsoft.Xna.Framework` 命名空间, 188
+
+`Microsoft.Xna.Framework.Media` 命名空间, 79
+
 鼠标事件，提升为触摸事件, 56
+
 鼠标输入，挂, 56
-MultiFinger 项目, 228–99
+
+`MultiFinger` 项目, 228–99
+
 UI 中的多点触摸, 22–64
+
 多点触摸应用, 7
+
 缩放, 245
+
 测试, 49
+
 多点屏, 59–63
-new 表达式, 27
-New Project 对话框, 9
-new 项目，创建, 8
-newAcceleration 值, 352
-Newproperty, 37
+
+`new` 表达式, 27
+
+`New Project` 对话框, 9
+
+`new` 项目，创建, 8
+
+`newAcceleration` 值, 352
+
+`Newproperty`, 37
+
 非仿射变换, 288–91
+
 非仿射变换, 287
+
 (to)2d 变换公式, 290
+
 在 (three)3d 图形中, 287
+
 在 (to)2d 图形中, 288
+
 点的映射, 290
+
 矩阵变换用于, 288
-NonAffineTransform 项目, 289–91
+
+`NonAffineTransform` 项目, 289–91
+
 非均匀缩放, 249–53
+
 通知服务，推送通知, 8
+
 可空属性, 116
 
 ## O
 
-Silverlight 中的 object 类层级结构, 15
-objects
+Silverlight 中的 `object` 类层级结构, 15
+
+`objects`
+
 当前线程，从此处访问, 88
+
 定义字段为, 78
+
 可序列化对象, 122
+
 线程安全, 44
+
 变换，应用到, 248
-oldAcceleration 字段, 349, 353–54
+
+`oldAcceleration` 字段, 349, 353–54
+
 OLED, 7
+
 按需绘制, 44
-onAccelerometerChanged 事件, 86, 91
-OnActivated 方法, 134, 139
-OnActivated 方法重写, 301
-OnCameraUpdateTask 完成, 78
-OnClearButtonClick 点击, 303
-OnDeactivated 方法, 134, 139, 304
-Deactivated 方法重写, 302
+
+`onAccelerometerChanged` 事件, 86, 91
+
+`OnActivated` 方法, 134, 139
+
+`OnActivated` 方法重写, 301
+
+`OnCameraUpdateTask` 完成, 78
+
+`OnClearButtonClick` 点击, 303
+
+`OnDeactivated` 方法, 134, 139, 304
+
+`Deactivated` 方法重写, 302
+
 在其中保存图像, 314
+
 在其中存储存储纹理, 303
-OneFingerDrag 项目, 234–37
-OneFingerRotation 项目, 242–45
-OneFingerScale 项目, 237–40
-OneFingerUniformScale 项目, 240–42
-OnGeoWatcherPropertyChanged 方法, 210
-OnManipulationStarted 方法
+
+`OneFingerDrag` 项目, 234–37
+
+`OneFingerRotation` 项目, 242–45
+
+`OneFingerScale` 项目, 237–40
+
+`OneFingerUniformScale` 项目, 240–42
+
+`OnGeoWatcherPropertyChanged` 方法, 210
+
+`OnManipulationStarted` 方法
+
 路由到的事件, 63
+
 处理程序, 62
+
 重写, 0–62, 108–9
-OnNavigatedFrom 方法, 118–19
+
+`OnNavigatedFrom` 方法, 118–19
+
 重写, 127
-OnNavigatedTo 方法, 118
+
+`OnNavigatedTo` 方法, 118
+
 调用, 116
+
 重写, 115, 127
-OnOrientationChanged 方法, 39–40
+
+`OnOrientationChanged` 方法, 39–40
+
 重写, 39
+
 屏幕软键盘, 77
-OnTextBlockManipulationStarted 方法，路由到的事件, 63
+
+`OnTextBlockManipulationStarted` 方法，路由到的事件, 63
 
 ## N
 
-NaiveTextMethod 项目, 143–46
-Name 属性, 35–36
+`NaiveTextMethod` 项目, 143–46
+
+`Name` 属性, 35–36
+
 命名空间声明, 12
-navigate 方法, 109, 113–14
+
+`navigate` 方法, 109, 113–14
+
 调用, 110
+
 导航, 107–44
+
 XAML 文件周围, 114
+
 返回上一页, 110
+
 在 Silverlight 中, 104–不是栈, 124–75
+
 源页面和目标页面, 113
+
 其栈结构, 113
-NavigationContext 属性, 116
-NavigationEventArguments 方法, 118
-NavigationService 类, 116
-GoBack 方法, 110, 114
-Navigate 方法, 114
-NavigationService 属性, 109
-needAnotherSide 变量, 375
+
+`NavigationContext` 属性, 116
+
+`NavigationEventArguments` 方法, 118
+
+`NavigationService` 类, 116
+
+`GoBack` 方法, 110, 114
+
+`Navigate` 方法, 114
+
+`NavigationService` 属性, 109
+
+`needAnotherSide` 变量, 375
 
 ## PhreeCell 程序 399
 
-OnTimeFrameReported 方法, 55
-TouchClientOpenCompleted 方法, 71–72
-ReadCompleted 事件, 72
+`OnTimeFrameReported` 方法, 55
+
+`TouchClientOpenCompleted` 方法, 71–72
+
+`ReadCompleted` 事件, 72
+
 OR 操作, 36
+
 有机光二极管 (OLED) 技术;
+
 功耗, 7
+
 方向, 67–38
+
 补偿, 354–56
+
 在 XNA 中, 40–43, 49
-LandscapeLeft 模式, 352–55
-LandscapeRight 模式, 355
+
+`LandscapeLeft` 模式, 352–55
+
+`LandscapeRight` 模式, 355
+
 手机的响应, 31–32
+
 方向事件, 38–40
-Orientation 属性, 39
-OrientationChanged 事件, 39, 42–43
+
+`Orientation` 属性, 39
+
+`OrientationChanged` 事件, 39, 42–43
+
 独立应用, 38
-origin 参数, 158, 185, 237
-在 RenderTarget 中, 206
-origin 字段, 160
-OriginalSource 属性, 62
-FingerPaint 程序, 293–98
+
+`origin` 参数, 158, 185, 237
+
+在 `RenderTarget` 中, 206
+
+`origin` 字段, 160
+
+`OriginalSource` 属性, 62
+
+`FingerPaint` 程序, 293–98
+
 返回函数, 304–5
+
 功能性, 294
+
 OK 和 Cancel 按钮, 304–5
+
 保存按钮, 303
+
 墓碑化 (tombstoning), 202
+
 手机倾斜加速度顶点，现实, 364–66
+
 速度和, 370
-PhoneApplicationFrame, 107, 110
-OrientationChanged 事件, 309
-RootVirtual 属性, 13
-PhoneApplication 对象, 16
+
+`PhoneApplicationFrame`, 107, 110
+
+`OrientationChanged` 事件, 309
+
+`RootVirtual` 属性, 13
+
+`PhoneApplication` 对象, 16
+
 创建, 13
-PhoneApplicationPage 类, 13, 107
-Main 类, 13
+
+`PhoneApplicationPage` 类, 13, 107
+
+`Main` 类, 13
+
 命名空间声明, 14
-SupportedPage 举举, 31
-PhoneApplication 对象, 16
-PhoneApplicationService 类, 122, 302
-Current 属性, 122
-State 属性, 122
-PackedValue 属性, 214
-Padding 属性, 34
+
+`SupportedPage` 举举, 31
+
+`PhoneApplication` 对象, 16
+
+`PhoneApplicationService` 类, 122, 302
+
+`Current` 属性, 122
+
+`State` 属性, 122
+
+`PackedValue` 属性, 214
+
+`Padding` 属性, 34
+
 页面实例，保存为字段, 121
+
 页面状态, 126–30
+
 页面标题, 109
-PageOrientation 举举, 39
+
+`PageOrientation` 举举, 39
+
 页面, 15
+
 导航到, 114–16
+
 在之间共享数据, 116–21
+
 状态, 127–30 (等待，检查：在之间共享数据, 116–21 状态, 127–30)
-Paint 程序，位图透明度, 177
-Panel 类, 16
+
+`Paint` 程序，位图透明度, 177
+
+`Panel` 类, 16
+
 面板, 32
+
 椭圆的参数方程, 185–86
-ParametricTextObject 项目, 154–57
+
+`ParametricTextObject` 项目, 154–57
+
 部分类, 11
-partial 关键字, 323
+
+`partial` 关键字, 323
+
 向页面分发数据, 114–16
-pathDirection 字段, 151–52
+
+`pathDirection` 字段, 151–52
+
 月份，沿路径移动, 176–92
-pathVector 字段, 151–52
-[/content]
-```
+
+`pathVector` 字段, 151–52
+
+
 
 不起不起，我刚才在翻译中漏掉了部分内容。
 Microsoft.Devices Sensors 程序集, 347
@@ -12282,8 +12250,6 @@ NonAffineTransform 项目, 289–91
 可空属性, 116
 
 **抱歉，上面的输出出现了混乱。以下是完整且正确的翻译：**
-
-[content]
 
 ## MazeChamber 对象, 38–79
 
@@ -12461,9 +12427,6 @@ partial 关键字, 323
 pathDirection 字段, 151–52
 月份，沿路径移动, 176–92
 pathVector 字段, 151–52
-
-
-
 
 # R
 
@@ -12730,7 +12693,6 @@ pathVector 字段, 151–52
   - 设置到 GraphicsDevice, 194
   - Draw 方法, 177
   - End 方法, 277
-  - 水平和垂直翻转, 158
 - SpriteFont 类, 196
   - Measure 方法, 26
 - SpriteFont 属性, 295
@@ -12776,10 +12738,6 @@ pathVector 字段, 151–52
 - SuspendMouseUntilTouch
   方法, 62
   SuspendMouseUntilTouch() 属性, 55
-
-
-
-
 
 ## 计算
 
@@ -13123,10 +13081,6 @@ Vector2 对象, 存储为, 369
 velocity 方法, 370
 VertBarp.ping, 171
 
-
-
-
-
 # XNA Game Studio 字体嵌入过程 407
 
 - 顶点计数 (vertexCount), 209
@@ -13312,10 +13266,6 @@ Get practical, hands-on guidance for using WIFI to solve authentication, authori
 
 Ideal for developers with fundamental programming skills——but新接触 ASP.NET——who想要在 Microsoft Visual Studio® 2010 环境中开发 Web 应用程序的实践指导。
 
-
-
-
-
 # 面 Visual Visual Basic开发者
 
 ![](img/d9347c1f55fa6d523479d2cd9b4d5459_427_0.png)
@@ -13437,4 +13387,3 @@ ISBN 9780735626218
 要订阅 Microsoft Press Book Connection 通讯邮件——获取新书、活动和特别优惠的消息——请访问：
 
 microsoft.com/learning/books/newsletter
-

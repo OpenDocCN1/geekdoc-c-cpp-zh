@@ -1,24 +1,9 @@
+
 # 商业 C 编程。第一卷：C 语言问题解决入门指南
-
-
-
-
-
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_0_0.png)
 
-
-
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_1_0.png)
-
-
-
-
-
-
-
-
-
 
 # 献辞
 
@@ -28,17 +13,23 @@
 
 致 Choice Publishing 的全体员工
 
+## 第一章 - 引言
 
+保存 C 程序
 
-## 第一章 - 引言 ................................................................................... 2
-保存 C 程序...................................................................................................... 2
-输出空白屏幕的程序............................................................................... 3
-我的第一个程序 ................................................................................................ 4
-行号编号................................................................................................s 6
-错误纠正................................................................................................ 7
-遗漏的分号............................................................................................. 7
-代码的位置........................................................................................... 8
-代码注释................................................................................................ 9
+输出空白屏幕的程序
+
+我的第一个程序
+
+行号编号
+
+错误纠正
+
+遗漏的分号
+
+代码的位置
+
+代码注释
 
 ## 保存 C 程序
 
@@ -48,7 +39,7 @@
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_9_1.png)
 
-- 赋予一个合适的名称并确保其被保存为 .c 文件。
+- 赋予一个合适的名称并确保其被保存为 `.c` 文件。
 - “编译并运行”图标也用于运行已保存的程序。
 
 # 第一章 - 引言
@@ -70,11 +61,12 @@ main()
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_10_0.png)
 
 评注
-第一行由一个井号 # 开始，紧接着是单词 include。然后是一个空格。然后是左、右角括号，里面是小写的字母 stdio.h。这一行代码实际上的意思是包含标准输入输出库文件——这是 C 的下载包中包含的一个文件。如果不包含此头文件，程序将无法运行。重要的是，不要将角括号与括号、方括号或大括号混淆，以确保程序正确运行。
 
-代码的第二行包含小写的短语 main()。左、右圆括号（即圆括号）结束了这个短句。main 指的是程序的主体，该部分将紧跟在 main() 下方的大括号内部。通过按下键盘上的 Enter 键可以从一行移动到下一行。
+第一行由一个井号 `#` 开始，紧接着是单词 `include`。然后是一个空格。然后是左、右角括号，里面是小写的字母 `stdio.h`。这一行代码实际上的意思是包含标准输入输出库文件——这是 C 的下载包中包含的一个文件。如果不包含此头文件，程序将无法运行。重要的是，不要将角括号与括号、方括号或大括号混淆，以确保程序正确运行。
 
-紧接 main() 这一行之后，是左、右大括号（即花括号），短语为 `getch()`，其中 getch 表示“字符”，且是小写的。`getch()` 紧后的左、右圆括号之后是一个分号。几乎所有在 C 中运行的程序都需要 `getch();`。这行代码通常位于程序代码的末尾，它是程序的一部分，并且始终位于最后一个大括号之前。虽然 C 程序可以在没有 getch 的情况下运行，但输出并不总是打印到屏幕上。分号结束了上方程序 main() 部分中的 `getch();` 语句。分号对于结束许多行代码至关重要。遗漏分号会导致语法错误。因此，代码需要纠正。
+代码的第二行包含小写的短语 `main()`。左、右圆括号即圆括号结束了这个短句。`main` 指的是程序的主体，该部分将紧跟在 `main()` 下方的大括号内部。通过按下键盘上的 Enter 键可以从一行移动到下一行。
+
+紧接 `main()` 这一行之后，是左、右大括号，即花括号，短语为 `getch()`，其中 `getch` 表示“字符”，且是小写的。`getch()` 紧后的左、右圆括号之后是一个分号。几乎所有在 C 中运行的程序都需要 `getch();`。这行代码通常位于程序代码的末尾，它是程序的一部分，并且始终位于最后一个大括号之前。虽然 C 程序可以在没有 `getch` 的情况下运行，但输出并不总是打印到屏幕上。分号结束了上方程序 `main()` 部分中的 `getch();` 语句。分号对于结束许多行代码至关重要。遗漏分号会导致语法错误。因此，代码需要纠正。
 
 ## 我的第一个程序
 
@@ -86,14 +78,17 @@ main()
     getch();
 }
 ```
+
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_11_0.png)
 
 ## 评注
-在上面的示例中，第4行包含了打印到屏幕上的内容。在这种情况下是 "Hi"。在这一特定的第4行中，引号内包含什么并不重要；它可以是 "Hi world!"。引号内的内容将打印到屏幕上，前提是所有其他行代码都是准确且顺序正确的。第3行和第6行由左、右大括号组成。注意它们的位置。它们在各自的行中处于相同的位置，即垂直对应。这使得代码易于阅读。
+
+在上面的示例中，第4行包含了打印到屏幕上的内容。在这种情况下是 `"Hi"`。在这一特定的第4行中，引号内包含什么并不重要；它可以是 `"Hi world!"`。引号内的内容将打印到屏幕上，前提是所有其他行代码都是准确且顺序正确的。第3行和第6行由左、右大括号组成。注意它们的位置。它们在各自的行中处于相同的位置，即垂直对应。这使得代码易于阅读。
 
 ## 行号编号
 
-行号使得代码易于阅读。要启用行号，选择工具 (Tools)– 显示 (Display)– 开启行号。(img/d66aad4cac4279bfe1f0f55cccf5946a_13_0.png)
+行号使得代码易于阅读。要启用行号，选择工具 (Tools)– 显示 (Display)– 开启行号。![](img/d66aad4cac4279bfe1f0f55cccf5946a_13_0.png)
+
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_13_1.png)
 
 程序现在看起来如下：
@@ -123,16 +118,20 @@ firstProgram.c
 ```
 
 | 编译器 | 资源 | 编译日志 | 调试 | 结果 |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | 行 | 文件 | 消息 | | |
+
 | | E:\BookC\Draft1\ChapterOne\First... | 在函数 'main' 中 | | |
+
 | 5 | E:\BookC\Draft1\ChapterOne\First... | "getch" 之前的语法错误 | | |
 
-第5行被高亮。在下方语句中，"getch" 之前有错误。在其左侧是数字 5。该语句告诉我们在 getch(); 之前存在语法错误。仔细观察，我们发现第4行缺少了分号。在第4行的 printf("Hi"); 之后输入分号将修复错误并使程序正常运行。
+第5行被高亮。在下方语句中，`"getch"` 之前有错误。在其左侧是数字 5。该语句告诉我们在 `getch();` 之前存在语法错误。仔细观察，我们发现第4行缺少了分号。在第4行的 `printf("Hi");` 之后输入分号将修复错误并使程序正常运行。
 
 ## 代码的位置
 
-代码的位置需要两个项目。反斜杠和 t，\t，以及反斜杠和 n，\n。所有的制进和换行对于演示和打印到屏幕都非常重要。
+代码的位置需要两个项目。反斜杠和 t，`\t`，以及反斜杠和 n，`\n`。所有的制进和换行对于演示和打印到屏幕都非常重要。
 
 ```c
 firstProgram08072017.c
@@ -155,22 +154,20 @@ firstProgram08072017.c
 6 )
 7 ?
 ```
+
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_15_0.png)
-
-
-
-
 
 # 第一章 - 引言
 
 ## 注释代码
 
-代码可以被注释。这些内容不会被计算机读取。要进行注释，在注释行的开头放置两个正斜杠 //。该行正斜杠右侧的所有内容在编译期间会被忽略。如果注释跨越多行，每行都可以使用两个正斜杠。或者，可以使用一个正斜杠和一个星号 /* 来开始注释，然后用一个星号和一个正斜杠 */ 结束。
+代码可以被注释。这些内容不会被计算机读取。要进行注释，在注释行的开头放置两个正斜杠 `//`。该行正斜杠右侧的所有内容在编译期间会被忽略。如果注释跨越多行，每行都可以使用两个正斜杠。或者，可以使用一个正斜杠和一个星号 `/*` 来开始注释，然后用一个星号和一个正斜杠 `*/` 结束。
 
 示例
-//此行代码不会被读取，但对程序员可见。
 
-/*此部分代码不会被读取，但对程序员可见。它允许程序员输入注释来解释代码。例如，某段代码的开始、结束，另一段代码的开始和结束。当代码长达几页时，这会让程序员的工作更容易。*/
+`//此行代码不会被读取，但对程序员可见。`
+
+`/*此部分代码不会被读取，但对程序员可见。它允许程序员输入注释来解释代码。例如，某段代码的开始、结束，另一段代码的开始和结束。当代码长达几页时，这会让程序员的工作更容易。*/`
 
 ```c
 firstCHProgramWithComments.c
@@ -188,8 +185,6 @@ firstCHProgramWithComments.c
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_16_0.png)
-
-
 
 # 第二章 - 数据类型
 
@@ -227,7 +222,7 @@ C语言编程中最常用的数据类型是整数、浮点数和字符。整数�
 
 ## 注释
 
-当运行上述程序时，数据输入者会被提示输入 x 的值（代码第9行）。这里的 `printf` 语句后面跟着双引号内的文本行，包含在括号内并以分号结束，这告诉了我们这一点。所有元素都必须存在——`printf`、左括号和右括号、左双引号和右双引号，以及分号——程序才能执行到这一阶段。代码第10行允许输入者输入一个值。如果输入5并按回车，则执行第12行。第12行在屏幕上打印 `You entered: 5`。然而，此程序只有在代码设计正确的情况下才会运行。例如，第10行必须非常准确——双引号内的 `%d`告诉我们要从键盘扫描一个整数。`&` 允许该整数被扫描。如果缺少符号 `&`，程序将不会按预期运行，且不会提示输入 x 的值。
+当运行上述程序时，数据输入者会被提示输入 `x` 的值（代码第9行）。这里的 `printf` 语句后面跟着双引号内的文本行，包含在括号内并以分号结束，这告诉了我们这一点。所有元素都必须存在——`printf`、左括号和右括号、左双引号和右双引号，以及分号——程序才能执行到这一阶段。代码第10行允许输入者输入一个值。如果输入5并按回车，则执行第12行。第12行在屏幕上打印 `You entered: 5`。然而，此程序只有在代码设计正确的情况下才会运行。例如，第10行必须非常准确——双引号内的 `%d` 告诉我们要从键盘扫描一个整数。`&` 允许该整数被扫描。如果缺少符号 `&`，程序将不会按预期运行，且不会提示输入 `x` 的值。
 
 所有符号及其使用方法都非常重要。`&` 符号和百分号 `%` 符号在随后的章节中用于额外任务，即条件语句和数值处理。在特定情况下理解这些符号是非常关重要的。
 
@@ -268,6 +263,7 @@ getch2702215.c
 ```
 
 从键盘扫描
+
 到内存
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_21_0.png)
@@ -311,15 +307,11 @@ getch2702215.c
 
 第11行提示用户输入一个整数
 
-在第21行中，`z = x + y;` `z` 是 x 和 y 的和。第25行在屏幕上打印第21行计算的结果。`%d` 代表整数。但在右侧只有 `z` 而没有 `&`。`&` 用于从键盘输入的数值数据。但处理过程产生的输出不包含 `&`。
+在第21行中，`z = x + y;` `z` 是 `x` 和 `y` 的和。第25行在屏幕上打印第21行计算的结果。`%d` 代表整数。但在右侧只有 `z` 而没有 `&`。`&` 用于从键盘输入的数值数据。但处理过程产生的输出不包含 `&`。
 
-此外，第7行将 z 声明为 `z = 0`。这意味着 `z` 初始化为零。经过处理的变量必须初始化。许多计算机程序员建议初始化所有变量，而不仅仅是处理结果的变量。初始化为零这样的值意味着内存中的值不会导致错误的输出。
+此外，第7行将 `z` 声明为 `z = 0`。这意味着 `z` 初始化为零。经过处理的变量必须初始化。许多计算机程序员建议初始化所有变量，而不仅仅是处理结果的变量。初始化为零这样的值意味着内存中的值不会导致错误的输出。
 
-在上面的示例中，如果第7行按如下输入（假设整数 x、y 和 z 已经声明），即缺失了 `= 0`（等于零），那么到屏幕的输出可能是一个内存地址，而不是我们正在寻找的答案，即 x 和 y 的和。
-
-
-
-
+在上面的示例中，如果第7行按如下输入（假设整数 `x`、`y` 和 `z` 已经声明），即缺失了 `= 0`（等于零），那么到屏幕的输出可能是一个内存地址，而不是我们正在寻找的答案，即 `x` 和 `y` 的和。
 
 ## 在多行声明的整数变量
 
@@ -356,7 +348,7 @@ getch27022015.c
 
 Q2.1 下面程序第 25 行有什么错误？
 
-printf("z is: %%d", &z);
+`printf("z is: %%d", &z);`
 
 ```c
 getch27022015.c
@@ -392,7 +384,9 @@ getch27022015.c
 ```
 
 | Enter x: | 2 |
+
 | Enter y: | 3 |
+
 | z is: | 2359148 |
 
 18
@@ -402,36 +396,58 @@ getch27022015.c
 在第 17 行中正确使用与错误使用取地址符的区别
 
 | 27022015.c | 27022015.c |
+
 |--- |--- |
+
 | 1 /*程序目的：展示声明 | 1 /*程序目的：展示声明 |
+
 | 2 整数和数据操作的 | 2 整数和数据操作的 |
+
 | 3 | 3 |
+
 | 4 #include <stdio.h> | 4 #include <stdio.h> |
+
 | 5 main() | 5 main() |
+
 | 6 ( | 6 ( |
+
 | 7 int x, y, z = 0; | 7 int x, y, z = 0; |
+
 | 8 | 8 |
+
 | 9 printf("Enter x: \x\t"); | 9 printf("Enter x: \x\t"); |
+
 | 10 scanf("%d", x); | 10 scanf("%d", x); |
+
 | 11 | 11 |
+
 | 12 printf("Enter y: \y\t"); | 12 printf("Enter y: \y\t"); |
+
 | 13 scanf("%d", y); | 13 scanf("%d", y); |
+
 | 14 | 14 |
+
 | 15 z = x + y; | 15 z = x + y; |
+
 | 16 | 16 |
+
 | 17 printf("z is: \t\t%d", z); | 17 printf("z is: \t\t%d", z); |
+
 | 18 | 18 |
+
 | 19 get(); | 19 get(); |
+
 | 20 ) | 20 ) |
+
 | 21 | 21 |
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_26_0.png)
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_26_1.png)
 
-由于第 17 行使用了 `&z`，导致 z 的值为内存地址；而第 17 行不包含取地址符 `&` 时，z 的值为结果。
+由于第 17 行使用了 `&z`，导致 `z` 的值为内存地址；而第 17 行不包含取地址符 `&` 时，`z` 的值为结果。
 
-除了上述第 7 行声明了 `z = 0` 之外，第 15 行包含公式 `z = x + y;`。重要的是第 15 行的内容必须位于 x 和 y 输入之后（在本例中为第 10 行和 13 行之后）。如果省略第 15 行并让第 7 行包含 `z = x + y` 而不是 `z = 0`，程序将运行错误。
+除了上述第 7 行声明了 `z = 0` 之外，第 15 行包含公式 `z = x + y;`。重要的是第 15 行的内容必须位于 `x` 和 `y` 输入之后（在本例中为第 10 行和 13 行之后）。如果省略第 15 行并让第 7 行包含 `z = x + y` 而不是 `z = 0`，程序将运行错误。
 
 19
 
@@ -441,41 +457,46 @@ getch27022015.c
 
 getch27022015.c
 
+
+
 ```c
 1 /*程序目的：展示整数的
 2 声明和数据操作*/
-3
+
 4 #include <stdio.h>
 5 main()
 6 (
 7     int x, y, z = 0;
-8
-9          printf("Enter x: \t");
-10    scanf("%d", &x);
-11
-12    printf("Enter y: \t");
-13    scanf("%d", &y);
-14
-15    z = x + y;
-16
-17    printf("z is: \t%d", z);
-18
-19    getch();
-20 )
+
+          printf("Enter x: \t");
+    scanf("%d", &x);
+
+    printf("Enter y: \t");
+    scanf("%d", &y);
+
+    z = x + y;
+
+    printf("z is: \t%d", z);
+
+    getch();
+)
 ```
 
 | 行 | 文件 | 消息 |
+
 |---|---|---|
-| 7 | E:\getch27022015.c | "z" 之前的语法错误 |
-| 15 | E:\getch27022015.c | 未定义的标识符（函数中首次使用） |
+
+| 7 | `E:\getch27022015.c` | `"z"` 之前的语法错误 |
+
+| 15 | `E:\getch27022015.c` | 未定义的标识符（函数中首次使用） |
 
 每个未定义的标识符在每个函数中只报告一次。 # 注释
 
-上述出现了两个错误。消息显示第 15 行的 z 未定义。此外，在第 7 行 z 之前出现了语法错误。然而，第 7 行似乎已经声明了 z。经过调查，在第 17 行 y 之后、z 之前缺少逗号会导致计算机将 y 和 z 视为独立的整数。如果缺少逗号，第 15 行的 'z' 未定义错误也会消失。必须在程序早期进行声明，原因有二：首先，这使得代码易读；其次，在声明之前无法处理 y 和 z。上述错误导致计算机无法以预期方式处理。例如，缺少逗号或分号可能导致文件保存错误。熟悉小型程序中的错误有助于识别和修正大型程序中的错误。
+上述出现了两个错误。消息显示第 15 行的 `z` 未定义。此外，在第 7 行 `z` 之前出现了语法错误。然而，第 7 行似乎已经声明了 `z`。经过调查，在第 17 行 `y` 之后、`z` 之前缺少逗号会导致计算机将 `y` 和 `z` 视为独立的整数。如果缺少逗号，第 15 行的 '`z`' 未定义错误也会消失。必须在程序早期进行声明，原因有二：首先，这使得代码易读；其次，在声明之前无法处理 `y` 和 `z`。上述错误导致计算机无法以预期方式处理。例如，缺少逗号或分号可能导致文件保存错误。熟悉小型程序中的错误有助于识别和修正大型程序中的错误。
 
 ## 整数的数据操作
 
-getch27022015.c
+`getch27022015.c`
 
 ```c
 1 /*程序目的：展示整数的
@@ -485,25 +506,26 @@ getch27022015.c
 6 {
      int x, y, z = 0;
 8
-9     printf("Enter x: \t");
-10   scanf("%d", &x);
-11
-12   printf("Enter y: \t");
-13   scanf("%d", &y);
-14
-15   z = x + y;
-16
-17   printf("z is: %d + %d = \t%d", x, y, z);
-18
-19   getch();
-20 }
+
+    printf("Enter x: \t");
+  scanf("%d", &x);
+
+  printf("Enter y: \t");
+  scanf("%d", &y);
+
+  z = x + y;
+
+  printf("z is: %d + %d = \t%d", x, y, z);
+
+  getch();
+}
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_29_0.png)
 
 ## 注释
 
-第 17 行比之前的示例行包含更多细节，`%d` 出现了三次——表示三个整数。在该行的右侧，x y 和 z 意味着打印到屏幕时，整数顺序为 x、y 和 z，即 x+y=z。
+第 17 行比之前的示例行包含更多细节，`%d` 出现了三次——表示三个整数。在该行的右侧，`x` `y` 和 `z` 意味着打印到屏幕时，整数顺序为 `x`、`y` 和 `z`，即 `x+y=z`。
 
 上面的第 17 行可以按如下方式编写：
 
@@ -512,30 +534,39 @@ getch27022015.c
 ```c
 15      z = x + y;
 16
-17      printf("z is: %d + %d = %d",
-18      x, y, z);
+
+      printf("z is: %d + %d = %d",
+      x, y, z);
 19
-20      getch();
+
+      getch();
 21 }
 ```
 
-当在 printf 语句中使用多个变量进行屏幕输出时，这将非常有用。由于行长度较短，代码对易友好。
+当在 `printf` 语句中使用多个变量进行屏幕输出时，这将非常有用。由于行长度较短，代码对易友好。
 
 | 15 z = x + y; | 15 z = x + y; |
+
 | 16 | 16 |
+
 | 17 printf("z is: %d + %d = %d", x, y, z); | 17 printf("z is: %d + %d = %d", |
+
 | 18 | 18 x, y, z); |
+
 | 19 | 19 |
+
 | 20 | 20 getch(); |
+
 | 21 | 21 |
 
-单行 printf 语句。
+单行 `printf` 语句。
 
-双行 printf 语句。
+双行 `printf` 语句。
 
 # 第二章 – 数据类型
 
 ## 整数的间距
+
 程序和屏幕输入输出
 
 ```c
@@ -601,14 +632,6 @@ integer with 6 spaces:
 
 | Lines 16, 17 and 18 allow for 2, 4 and 6 spaces for integers respectively. Although lines 16 and 17 allow for less spacing than the input requires, data is printed accurately. | Lines 16, 17 and 18 allow for 2, 4 and 6 spaces for integers respectively. Should the integer data input less allowed for, input aligned right. |
 
-
-
-` 标签中似乎不完整（在代码块结束处截断了），但根据您提供的格式和要求，我已对提供的文本部分进行了完整翻译。
-
-以下是翻译后的内容：
-
-[content]
-
 # 第二章 – 数据类型
 
 # 代码
@@ -646,21 +669,30 @@ integer with 6 spaces:
 
 ## 注释
 
-第 7 行包含的是 `float` 而不是 `int`。第 12、17 和 25 行包含 `%f` 而不是 `%d`。屏幕上的最终输出结果为 z，小数点后有六位。
+第 7 行包含的是 `float` 而不是 `int`。第 12、17 和 25 行包含 `%f` 而不是 `%d`。屏幕上的最终输出结果为 `z`，小数点后有六位。
 
 ## 第二章 – 数据类型
 
 ## 整数与浮点数的比较
 
 | 整数使用 %d | 浮点数使用 %f |
+
 |---|---|
+
 | getch2702015.c | getch2702015.c |
+
 | 1 /* 整数：展示声明 | 1 /* 浮点：展示声明 |
+
 | 2 及其数据操作* */ | 2 浮点及其数据操作* */ |
+
 | 3 | 3 |
+
 | 4 #include <stdio.h> | 4 #include <stdio.h> |
+
 | 5 main() { | 5 main() { |
+
 | 6 | 6 |
+
 | 7 int x |
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_34_0.png)
@@ -668,22 +700,28 @@ integer with 6 spaces:
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_34_1.png)
 
 | 使用的整数 | 使用的浮点数 |
+
 |---|---|
+
 | 第 7 行包含 int。 | 第 7 行包含 float。 |
+
 | 第 10、13 和 17 行包含 %d | 第 10、13 和 17 行包含 %f。 |
 
 使用浮点数而非整数的优缺点如下：
 
 - *浮点数在小数点后提供多位数字——这在计算小数位数值时非常有价值。*
+
 - 整数会进行截断而不进行四舍五入。将它们声明为整数时，十一除以三的结果是三。四会是一个更准确的答案，因为 3.6666667 更加精确。
+
 - 浮点数可能会因为舍入导致速度较慢。
+
 - 如果使用余数（即模运算运算符 `%`），整数比浮点数更有优势，因为浮点数无法计算余数。
 
 ## 第二章 – 数据类型
 
 ## 整数相对于浮点数的缺点
 
-Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u 和 v 的值 4 乘以 5。
+Q2.2 为什么在下面的示例中 `w` 是 0？它应该是 20，即输入的 `u` 和 `v` 的值 4 乘以 5。
 
 ```
 1 "程序目的：展示变量声明和数据输出"
@@ -693,23 +731,26 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 5 int x, y, z = 0;
 6 float u, v, w = 0;
 7
-8
+
 9 printf("Enter integer x: %d\t", x);
 10 printf("Enter integer y: %d\t", y);
 11 scanf("%d", &y);
 12
+
 13 printf("\nnEnter float u: %f\t", u);
 14 scanf("%f", &u);
 15 printf("\nter float v: %f\t", v);
 16 scanf("%f", &v);
 17
+
 18 z = x * y;
 19 w = u * v;
 20
+
 21 printf("\ninteger z is: %d\t\n", z);
 22 printf("\nfloat w is: %f\t\n", w);
 23
-24
+
 25 ) getch();
 26
 ```
@@ -730,26 +771,27 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 5     int x, y, z = 0;
 6     float u, v, w = 0;
 7
-8     // 输入了整数
-9     printf("Enter x: \t");
-10    scanf("%d", &x);
-11    printf("Enter y: \t");
-12    scanf("%d", &y);
-13
-14    // 输入了浮点数
-15    printf("\nEnter u: \t");
-16    scanf("%f", &u);
-17    printf("Enter v: \t");
-18    scanf("%f", &w);
-19
-20    z = x / y;
-21    v = u / v;
-22
-23    printf("\nz is: %d\n", z);
-24    printf("\nw is: %f\n", w);
-25
-26 getch();
-27 )
+
+    // 输入了整数
+    printf("Enter x: \t");
+   scanf("%d", &x);
+   printf("Enter y: \t");
+   scanf("%d", &y);
+
+   // 输入了浮点数
+   printf("\nEnter u: \t");
+   scanf("%f", &u);
+   printf("Enter v: \t");
+   scanf("%f", &w);
+
+   z = x / y;
+   v = u / v;
+
+   printf("\nz is: %d\n", z);
+   printf("\nw is: %f\n", w);
+
+getch();
+)
 ```
 
 > 变量的声明、处理和输出比整数提供更准确的答案
@@ -790,7 +832,7 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 
 ## 注释
 
-整数会截断，即向下取整，尽管除数是九。默认情况下，浮点数保留六位小数。这在 printf 语句中使用 `%f` 或 `%f` 可以实现。这并不意味着整数相对于浮点数没有优势。将秒转换为小时、分钟以及判断是否为闰年或判断是否为质数的程序都依赖于整数。switch 语句也依赖整数。
+整数会截断，即向下取整，尽管除数是九。默认情况下，浮点数保留六位小数。这在 `printf` 语句中使用 `%f` 或 `%f` 可以实现。这并不意味着整数相对于浮点数没有优势。将秒转换为小时、分钟以及判断是否为闰年或判断是否为质数的程序都依赖于整数。`switch` 语句也依赖整数。
 
 ## 第二章 – 数据类型
 
@@ -805,12 +847,13 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 4 {
 5     int x, y, z = 0;
 6
-7
+
 8     printf("Enter Numerator x: ");
 9     scanf("%d", &x);
 10    printf("Denominator y: ");
 11    scanf("%d", &y);
 12
+
 13    z = x % y;
 14    printf("\nz = %d\n", // 为了进行模运算，变量必须声明为整数。
 15 }
@@ -823,8 +866,11 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 使用模运算符 `%` 可以计算余数。十除以九余数为一。模运算对于将秒转换为小时、分钟以及判断闰年有用。这些程序必须使用整数而不是浮点数。虽然浮点数在除法中提供小数，但不适用于计算模运算。
 
 | 目标 | 使用的数据类型 |
+
 |---|---|
+
 | 模运算 | int |
+
 | 除法 | float |
 
 ## 浮点数舍入
@@ -843,71 +889,72 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 9     printf("Enter integer y: \t");
 10    scanf("%d", &y);
 11
-12    printf("Enter float u: \t");
-13    scanf("%f", &u);
-14
-15    printf("Enter float v: \t");
-16    scanf("%f", &v);
-17
-18    printf("Enter float b: \t");
-19    scanf("%f", &b);
-20    printf("Enter float c: \t");
-21    scanf("%f", &c);
-22
-23    z = x/y;
-24    w = u/v;
-25    a = b/c;
-26
-27    printf("\nInteger z is: \t%d\n", z);
-28    printf("\nFloat w is: \t%0.2f\n", w);
-29    printf("\nFloat a is: \t%2.7f\n", a);
-30    getch();
-31}
+
+   printf("Enter float u: \t");
+   scanf("%f", &u);
+
+   printf("Enter float v: \t");
+   scanf("%f", &v);
+
+   printf("Enter float b: \t");
+   scanf("%f", &b);
+   printf("Enter float c: \t");
+   scanf("%f", &c);
+
+   z = x/y;
+   w = u/v;
+   a = b/c;
+
+   printf("\nInteger z is: \t%d\n", z);
+   printf("\nFloat w is: \t%0.2f\n", w);
+   printf("\nFloat a is: \t%2.7f\n", a);
+   getch();
+}
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_40_0.png)
 
 # 代码
 
+
+
+# 第二章 – 数据类型
+
+## 程序示例：浮点数与整数的区别
+
+```c
+/*程序目的：展示浮点数与整数的区别*/
+#include <stdio.h>
+main ()
+{
+    int x, y, z = 0;
+    float u, v, w = 0, c, b, a = 0;
+    printf("Enter integer x: \t");
+    scanf("%d", &x);
+    printf("Enter integer y: \t");
+    scanf("%d", &y);
+
+    printf("Enter float u: \t");
+    scanf("%f", &u);
+
+    printf("Enter float v: \t");
+    scanf("%f", &v);
+
+    printf("Enter float b: \t");
+    scanf("%f", &b);
+    printf("Enter float c: \t");
+    scanf("%f", &c);
+
+    z = x/y;
+    w = u/v;
+    a = b/c;
+
+    printf("\nInteger z is: \t%d\n", z);
+    printf("\nFloat w is: \t%0.2f\n", w);
+    printf("\nFloat a is: \t%2.7f\n", a);
+    getch();
+}
 ```
-1: /*程序目的：展示浮点数与整数的区别*/
-2: #include <stdio.h>
-3: main ()
-4: {
-5:     int x, y, z = 0;
-6:     float u, v, w = 0, c, b, a = 0;
-7:     printf("Enter integer x: \t");
-8:     scanf("%d", &x);
-9:     printf("Enter integer y: \t");
-10:    scanf("%d", &y);
-11:
-12:    printf("Enter float u: \t");
-13:    scanf("%f", &u);
-14:
-15:    printf("Enter float v: \t");
-16:    scanf("%f", &v);
-17:
-18:    printf("Enter float b: \t");
-19:    scanf("%f", &b);
-20:    printf("Enter float c: \t");
-21:    scanf("%f", &c);
-22:
-23:    z = x/y;
-24:    w = u/v;
-25:    a = b/c;
-26:
-27:    printf("\nInteger z is: \t%d\n", z);
-28:    printf("\nFloat w is: \t%0.2f\n", w);
-29:    printf("\nFloat a is: \t%2.7f\n", a);
-30:    getch();
-31: }
-```
-
-
-
-
-
-## 第二章 – 数据类型
 
 ## 其他数据类型
 
@@ -915,107 +962,98 @@ Q2.2 为什么在下面的示例中 w 是 0？它应该是 20，即输入的 u �
 
 | 数据类型 | 内存占用（字节） | 显示 | 数值范围 |
 | --- | --- | --- | --- |
-| long int | 4 | %d 或 %i | -2,147,483,648 到 2,147,483,647 |
-| long | 4 | %ld (即非数字 1 时使用 alpha 1) | -2,147,483,648 到 2,147,483,647 |
-| short int | 2 | | -32,768 到 32,767 |
-| short | 2 | | -32,768 到 32,767 |
-| unsigned long | 4 | 不允许负值，但正数范围增加 | 0 – 4,294,967,295，即 long 的正数范围的两倍，但去掉了负数 |
-| unsigned int | 4 | 不允许负值，但正数范围增加 | 0 到 65,535，即 short 正数范围的两倍 |
-| float | 4 | %f. | 属性未指定 |
-| double | 8 | %lf (即非数字 1 时使用 alpha 1) | 属性未指定 |
-| char | 1 | %s | 一个或一系列字母值，例如一个人的名字 |
+| long int | 4 | `%d` 或 `%i` | -2,147,483,648 到 2,147,483,647 |
+| long | 4 | `%ld` | -2,147,483,648 到 2,147,483,647 |
+| short int | 2 |  | -32,768 到 32,767 |
+| short | 2 |  | -32,768 到 32,767 |
+| unsigned long | 4 | 不允许负值，但正数范围增加 | 0 – 4,294,967,295 |
+| unsigned int | 4 | 不允许负值，但正数范围增加 | 0 到 65,535 |
+| float | 4 | `%f.` | 属性未指定 |
+| double | 8 | `%lf` | 属性未指定 |
+| char | 1 | `%s` | 一个或一系列字母值 |
 
 `double` 允许浮点小数比 `float` 和整数更精确，但需要更大的内存存储。其余的数据类型可在特定情况下使用。员工工号或工作证号可以声明为 `unsigned long`。
 
-# 第二章 - 数据类型
-
-## 示例
-
-程序中的屏幕输入与输出
+## 示例：程序中的屏幕输入与输出
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_43_0.png)
 
 ```c
-1: /*Program Aim: Show the Difference of Floats and Doubles*/
-2: #include <stdio.h>
-3: void main() {
-4: 
-5: float f, g, h=0;
-6: double x, y, z=0;
-7: 
-8: printf("Data Entry Showing Behaviour of Floats\n");
-9: printf("\nEnter float: %f\t");
-10: scanf("%f", &f);
-11: printf("Enter float g: \t");
-12: scanf("%f", &g);
-13:
-14: h = f/g;
-15: printf("\nFloat h = \t%0.16f", h);
-16:
-17: printf("\nData Entry Showing Behaviour of Doubles");
-18: printf("\nEnter double x: \t");
-19: scanf("%lf", &x);
-20: printf("\nEnter double y: \t");
-21: scanf("%lf", &y);
-22:
-23: z = x/y;
-24: printf("\nDouble z = \t%0.16f", z);
-25:
-26: getch();
-27:
-28: }
+/*Program Aim: Show the Difference of Floats and Doubles*/
+#include <stdio.h>
+void main() {
+
+float f, g, h=0;
+double x, y, z=0;
+
+printf("Data Entry Showing Behaviour of Floats\n");
+printf("\nEnter float: %f\t");
+scanf("%f", &f);
+printf("Enter float g: \t");
+scanf("%f", &g);
+
+h = f/g;
+printf("\nFloat h = \t%0.16f", h);
+
+printf("\nData Entry Showing Behaviour of Doubles");
+printf("\nEnter double x: \t");
+scanf("%lf", &x);
+printf("\nEnter double y: \t");
+scanf("%lf", &y);
+
+z = x/y;
+printf("\nDouble z = \t%0.16f", z);
+
+getch();
+
+}
 ```
 
 在上述代码中，第 15 行和第 24 行通过代码 `%0.16f` 和 `%0.16lf` 允许浮点数保留十六位小数。然而，是 `z` 在十六位小数上更为精确。`float h` 在八位小数处就会丢失精度，而 `double z` 在十六位小数处仍能保持精确。
 
 任何需要处理不超过七位小数数据的程序都应该使用 `float` 而不是 `double`，因为消耗的内存更少。
 
-## 第二章 – 数据类型
+### Q2.3
 
-Q2.3. 虽然下面的代码看起来运行正常，但平均值 $a$ 的计算是错误的。为什么？
+虽然下面的代码看起来运行正常，但平均值 `a` 的计算是错误的。为什么？
 
 ```c
-1: /*Program Aim: To show problems in
-2: inaccurate design*/
-3:
-4: #include <stdio.h>
-5: main()
-6: {
-7: float x, y, z, a = 0;
-8:
-9: printf("Enter x: \t");
-10: scanf("%f", &x);
-11:
-12: printf("Enter y: \t");
-13: scanf("%f", &y);
-14:
-15: printf("Enter z: \t");
-16: scanf("%f", &z); // 已从 &x 修改为 &z
- 在 17 行
-18: a = (x + y + z)/3;
-19:
-20: printf("average is: \t%f", a);
-21: getch();
-22: }
+/*Program Aim: To show problems in
+inaccurate design*/
+
+#include <stdio.h>
+main()
+{
+float x, y, z, a = 0;
+
+printf("Enter x: \t");
+scanf("%f", &x);
+
+printf("Enter y: \t");
+scanf("%f", &y);
+
+printf("Enter z: \t");
+scanf("%f", &z);
+a = (x + y + z)/3;
+
+printf("average is: \t%f", a);
+getch();
+}
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_45.png)
-
-## 第二章 – 数据类型
 
 ## 运算符函数
 
 | 运算符 | 功能 | 示例 |
 | --- | --- | --- |
-| + | 加法 | x + y = z; 2 + 3 = 5 |
-| - | 减法 | c = b - a; 15 - 5 = 10 |
-| * | 乘法 | d * c = f; 3 * 4 = 12 |
-| / | 除法 | g = h / j; 12 / 4 = 3 |
-| % | 取模 | k = m % n; 19 % 8 = 3 |
-| pow | 幂 | p = pow(a, b); pow(2, 4) = 16 |
-| exp(log) | 根 | k = exp(log(i) / j); 8 rooted 4 = 3 |
-
-## 第二章 – 数据类型
+| `+` | 加法 | `x + y = z; 2 + 3 = 5` |
+| `-` | 减法 | `c = b - a; 15 - 5 = 10` |
+| `*` | 乘法 | `d * c = f; 3 * 4 = 12` |
+| `/` | 除法 | `g = h / j; 12 / 4 = 3` |
+| `%` | 取模 | `k = m % n; 19 % 8 = 3` |
+| `pow` | 幂 | `p = pow(a, b); pow(2, 4) = 16` |
+| `exp(log)` | 根 | `k = exp(log(i) / j); 8 rooted 4 = 3` |
 
 ## 幂输入输出程序
 
@@ -1037,15 +1075,15 @@ main()
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_47.png)
 
-## 解析
+### 解析
 
-在上面的代码中，第 13 行允许计算 $i$ 的 $j$ 次幂。这通常写作 $k=i^j=2\times2\times2\times2 = 16$。
+在上面的代码中，第 13 行允许计算 `i` 的 `j` 次幂。这通常写作 `k=i^j=2×2×2×2 = 16`。
 
-结果：16，即值 $k$。在 C 语言中实现此操作的公式是 $k = pow(i, j)=pow(2, 4)$；
+结果：16，即值 `k`。在 C 语言中实现此操作的公式是 `k = pow(i, j)=pow(2, 4)`；
 
-其中 $i$ 是底，$j$ 是指数。
+其中 `i` 是底，`j` 是指数。
 
-第 7 行和第 10 行提示输入 $i$ 和 $j$ 的值，第 8 行和第 11 行允许将这些值扫描到内存中。第 15 行到第 16 行打印输入的值以及第 13 行计算出的答案。
+第 7 行和第 10 行提示输入 `i` 和 `j` 的值，第 8 行和第 11 行允许将这些值扫描到内存中。第 15 行到第 16 行打印输入的值以及第 13 行计算出的答案。
 
 ## 赌博场景中的幂函数
 
@@ -1053,189 +1091,173 @@ main()
 
 连续掷六点
 
-屏幕输入输出程序1402017.c
+屏幕输入输出程序 `1402017.c`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_49.png)
 
-# 代码
+### 代码
 
 ```c
-1: /*Program Aim: compute probability of
-2: getting maximum in Casino*/
-3: #include <stdio.h>
-4: main()
-5: {
-6:     int noOfDice
-17: printf("nProbability of getting %ds is %d to one",
-18: noOfDice, noOfSidesDice, probabilityOfWinning);
-19:
-20: printf("\Program End");
-21: getch();
-22: }
+/*Program Aim: compute probability of
+getting maximum in Casino*/
+#include <stdio.h>
+main()
+{
+    int noOfDice
+printf("nProbability of getting %ds is %d to one",
+noOfDice, noOfSidesDice, probabilityOfWinning);
+
+printf("\Program End");
+getch();
+}
 ```
 
-## 解析
+### 解析
 
 上述显示，如果赌徒需要掷两个骰子得到六点（每个骰子六面），那么获胜概率是 36 分之一。通过在第 9 行和第 12 行输入数据，可以发现掷四个骰子时的概率。
 
-## 第二章 — 数据类型
-
 ## 整数、浮点数和双数的精度
 
-屏幕输入输出 $10^7$
+屏幕输入输出 `10^7`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_51_0.png)
 
-屏幕输入输出 $10^8$
+屏幕输入输出 `10^8`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_51_1.png)
 
-屏幕输入输出 $10^{11}$
+屏幕输入输出 `10^11`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_51_2.png)
 
-屏幕输入输出 $10^{40}$
+屏幕输入输出 `10^40`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_51_3.png)
 
-## 第二章 — 数据类型
-
-## 程序
+## 程序：平均值计算
 
 ```c
-1: /*Program Aim: To show advantages of doubles, floats
-2: and ints over each other in whole number situations*/
-3: #include <stdio.h>
-4: main()
-5: {
-6: float x, y, z, a=0;
-7: printf("Enter x: \t");
-8: scanf("%f", &x);
-9:
-10: printf("Enter y: \t");
-11: scanf("%f", &y);
-12:
-13: printf("Enter z: \t");
-14: scanf("%f", &z);
-15:
-16: a = (x+y+z)/3;
-17: printf("average is: \t%f", a);
-18: getch();
-19: }
-```
+/*Program Aim: To show advantages of doubles, floats
+and ints over each other in whole number situations*/
+#include <stdio.h>
+main()
+{
+float x, y, z, a=0;
+printf("Enter x: \t");
+scanf("%f", &x);
 
-## 第二章 – 数据类型
+printf("Enter y: \t");
+scanf("%f", &y);
+
+printf("Enter z: \t");
+scanf("%f", &z);
+
+a = (x+y+z)/3;
+printf("average is: \t%f", a);
+getch();
+}
+```
 
 ## 平方根与立方
 
 ```c
-1: /*Program Aim: To Show Roots In*/
-2: #include <stdio.h>
-3: main()
-4: {
-5:     int i, j, k = 0;
-6:     printf("Enter i: \t\t");
-7:     scanf("%d", &i);
-8:     printf("Enter j: \t\t");
-9:     scanf("%d", &j);
-10:    k = exp(log(i) / j);
-11:    printf("%d rooted to %d is: \t%d\n", i, j, k);
-12:
-13:    getch();
-14: }
+/*Program Aim: To Show Roots In*/
+#include <stdio.h>
+main()
+{
+    int i, j, k = 0;
+    printf("Enter i: \t\t");
+    scanf("%d", &i);
+    printf("Enter j: \t\t");
+    scanf("%d", &j);
+   k = exp(log(i) / j);
+   printf("%d rooted to %d is: \t%d\n", i, j, k);
+
+   getch();
+}
 ```
 
-## 解析
+### 解析
 
-在上述代码中，第 13 行允许计算 $i$ 的 $j$ 次幂。这通常写作 $k=i^j=2\times2\times2\times2 = 16$。
+在上述代码中，第 13 行允许计算 `i` 的 `j` 次幂。这通常写作 `k=i^j=2×2×2×2 = 16`。
 
-结果：16，即值 $k$。在 C 语言中实现此操作的公式是 $k = pow(i, j)=pow(2, 4)$；
+结果：16，即值 `k`。在 C 语言中实现此操作的公式是 `k = pow(i, j)=pow(2, 4)`；
 
-其中 $i$ 是底，$j$ 是指数。
+其中 `i` 是底，`j` 是指数。
 
-第 7 行和第 10 行提示输入 $i$ 和 $j$ 的值，第 8 行和第 11 行允许将这些值扫描到内存中。第 15 行到第 16 行打印输入的值以及第 13 行计算出的答案。
-
-## 第二章 — 数据类型
+第 7 行和第 10 行提示输入 `i` 和 `j` 的值，第 8 行和第 11 行允许将这些值扫描到内存中。第 15 行到第 16 行打印输入的值以及第 13 行计算出的答案。
 
 ## 幂与根的对比
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_55.png)
 
-k = pow(i, j):
+`k = pow(i, j)`:
 
-k = exp(log(i)/j):
+`k = exp(log(i)/j)`:
 
 上述两个程序完全相同，只有第 13 行和第 15 行不同。在第一个程序中，计算的是幂；在第二个程序中，计算的是根。
 
+## 业务中的幂函数 - 投资金额计算
 
-
-
-
-# 业务中的幂函数 - 投资金额计算
-屏幕输入与程序
-
-CompinterestPow/ORKS151012016.c
+屏幕输入与程序 `CompinterestPow/ORKS151012016.c`
 
 ```c
-1 /*程序目的：根据给定的本金复利利率和年限
-2 计算金额*/
-3 #include <stdio.h>
-4 main()
-5 {
-6     float amount = 0, principal, years, rate;
-7 
-8     printf("Enter Principal: \t\t", &principal);
-9     printf("%f", &principal);
-10     printf("Enter Interest Rate percent: \t", &rate);
-11     scanf("%f", &rate);
-12     printf("Enter years: \t\t", &years);
-13     scanf("%f", &years);
-14 
-15     amount = principal * pow((100+rate)/100, years);
-16     //amount = principal * pow((1+rate/100), years);
-17 
-18     printf("\nAmount is: \t\t%0.2f", amount);
-19 getch();
+/*程序目的：根据给定的本金复利利率和年限
+计算金额*/
+#include <stdio.h>
+main()
+{
+    float amount = 0, principal, years, rate;
+
+    printf("Enter Principal: \t\t", &principal);
+    printf("%f", &principal);
+    printf("Enter Interest Rate percent: \t", &rate);
+    scanf("%f", &rate);
+    printf("Enter years: \t\t", &years);
+    scanf("%f", &years);
+
+    amount = principal * pow((100+rate)/100, years);
+    //amount = principal * pow((1+rate/100), years);
+
+    printf("\nAmount is: \t\t%0.2f", amount);
+getch();
+}
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_56_0.png)
 
-# 代码
+### 代码
 
 ```c
-1 /*程序目的：根据给定的本金复利利率和年限
-2 计算金额*/
-3 #include <stdio.h>
-4 main()
-5 {
-6     float amount = 0, principal, years, rate;
-7 
-8     printf("Enter Principal: \t\t", &principal);
-9     scanf("%f", &principal);
-10     printf("Enter Interest Rate percent: \t", &rate);
-11     scanf("%f", &rate);
-12     printf("Enter years: \t\t", &years);
-13     scanf("%f", &years);
-14 
-15     amount = principal * pow((100+rate)/100, years);
-16     //amount = principal * pow((1+rate/100), years);
-17 
-18     printf("\nAmount is: \t\t%0.2f", amount);
-19: getch();
-20: }
+/*程序目的：根据给定的本金复利利率和年限
+计算金额*/
+#include <stdio.h>
+main()
+{
+    float amount = 0, principal, years, rate;
+
+    printf("Enter Principal: \t\t", &principal);
+    scanf("%f", &principal);
+    printf("Enter Interest Rate percent: \t", &rate);
+    scanf("%f", &rate);
+    printf("Enter years: \t\t", &years);
+    scanf("%f", &years);
+
+    amount = principal * pow((100+rate)/100, years);
+    //amount = principal * pow((1+rate/100), years);
+
+    printf("\nAmount is: \t\t%0.2f", amount);
+: getch();
+: }
 ```
 
-49
+### 注释
 
-## 注释
-
-第15行和第16行均有效。每行都展示了将第11行的百分比率输入转换为小数的略有不同的方法。这样做是为了计算 $1.10^2$。
+第15行和第16行均有效。每行都展示了将第11行的百分比率输入转换为小数的略有不同的方法。这样做是为了计算 `1.10^2`。
 
 | 第15行 | 第16行 |
 | --- | --- |
-| amount = 1000 * ((100 + 10)/100)^2 | amount = 1000 * (1 + (10/100))^2 |
-
-# 第二章 – 数据类型
+| `amount = 1000 * ((100 + 10)/100)^2` | `amount = 1000 * (1 + (10/100))^2` |
 
 ## 使用 pow 和 exp 计算复利
 
@@ -1243,33 +1265,31 @@ CompinterestPow/ORKS151012016.c
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_58_0.png)
 
-## 注释
+### 注释
 
 该程序在输入本金、金额和年限时计算利率。金额是本金加上若干年后获得的复利。以10%的利率投资1000欧元，两年后金额为1210欧元。
 
-在第16行使用 (exp log 函数实现的效果与第15行完全相同。任何公式均可用。通常，pow 用于幂运算，而 explog 用于立方根。
+在第16行使用 `exp log` 函数实现的效果与第15行完全相同。任何公式均可用。通常，`pow` 用于幂运算，而 `explog` 用于立方根。
 
 | 数学语言 | C 语言 |
 |--- |--- |
-| power | amount = principal * ((100+r)/100)^f; | amount = principal * pow(1+r/100,n); |
-
-51
-
-# 第二章 – 数据类型
+| power | `amount = principal * ((100+r)/100)^f;` | `amount = principal * pow(1+r/100,n);` |
 
 ## 使用 Pow 和 Exp(Log) 计算本金
 
-CompinterestLogAndExp/WORKS16102016.c
+`CompinterestLogAndExp/WORKS16102016.c`
 
 ```c
-1 /*程序目的：根据金额、本金和年限
-2 计算利率*/
-3 given an amount
+/*程序目的：根据金额、本金和年限
+计算利率*/
+given an amount
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_59_0.png)
 
-# 代码
+### 代码
+
+
 
 ```c
 1: /程序目的：根据金额、本金和年限
@@ -1291,10 +1311,11 @@ CompinterestLogAndExp/WORKS16102016.c
 17: //rate = (exp(log(amount/principal)/years) - 1)*100;
 18:
 19: printf("nRate is: \t\t%f cent", rate);
+```
 
 ## 注释
 
-log 和 pow 对于使用 C 解决复杂问题至关重要。结合循环使用，power 和指数 log 函数可以快速解决许多业务问题，例如预测、现金流、年金价值、折旧和回收。
+`log` 和 `pow` 对于使用 C 解决复杂问题至关重要。结合循环使用，power 和指数 `log` 函数可以快速解决许多业务问题，例如预测、现金流、年金价值、折旧和回收。
 
 # 第二章 – 数据类型
 
@@ -1356,11 +1377,11 @@ z = 0.666667
 
 ## 错误的输出
 
-由于 x 和 y 是整数 – 第5行 - float z 可能不准确。
+由于 `x` 和 `y` 是整数 – 第5行 - `float z` 可能不准确。
 
 ## 正确的输出
 
-由于 x 和 y 是浮点数 – 第6行 - float z 是准确的。
+由于 `x` 和 `y` 是浮点数 – 第6行 - `float z` 是准确的。
 
 # 第二章 – 数据类型
 
@@ -1392,9 +1413,9 @@ z = 0.666667
 | 17 | 17 |
 | 18 | 18 |
 
-第13行 z = x/y;
+第13行 `z = x/y;`
 
-数据类型 x 仅为了第13行的除法目的更改为 float。如果 x 除以 y，在程序稍后的第13行，这将导致结果。
+数据类型 `x` 仅为了第13行的除法目的更改为 `float`。如果 `x` 除以 `y`，在程序稍后的第13行，这将导致结果。
 
 # 第二章 - 数据类型
 
@@ -1433,10 +1454,6 @@ z = 0.666667
 14     printf("nz = %f\n", z);
 15 }
 ```
-
-
-
-
 
 # 第三章 - 处理
 
@@ -1496,6 +1513,7 @@ z = 0.666667
 
 ```
 abcdefghijkWORKS14092016.c
+
 3 main() {
 4     (
 5      float a, b, c, d, e, f, g, h, j, k = 0;
@@ -1538,7 +1556,7 @@ k = a + b * c - d / e + f * g - h / j;
 = 47.311
 ```
 
-还有一点需要注意：计算 $k$ 的公式必须在所有 $k$ 公式中的变量输入后定义。如果公式在第 5 行而不是第 26 行，输出将是错误的。
+还有一点需要注意：计算 `$k$` 的公式必须在所有 `$k$` 公式中的变量输入后定义。如果公式在第 5 行而不是第 26 行，输出将是错误的。
 
 ## 优先级规则与变量声明
 
@@ -1569,7 +1587,7 @@ k = a + b * c - d / e + f * g - h / j;
 
 注释
 
-由于编译器从左到右处理，x 除以 y。由于这些被声明为整数，9 除以 10 等于零。如果变量声明为浮点型...
+由于编译器从左到右处理，`x` 除以 `y`。由于这些被声明为整数，9 除以 10 等于零。如果变量声明为浮点型...
 
 # 第三章 - 处理
 
@@ -1684,19 +1702,25 @@ DivisorsuvwxyzWORKS.c
 18
 19     z = v / w / x / y;
 20
-21     printf("z = v / w / x / y = %f", z);
+```
+
+
+
+21     `printf("z = v / w / x / y = %f", z);`
+
 22
-23     printf("\n\nProgram End");
+
+23     `printf("\n\nProgram End");`
+
 24
-25     getch();
+
+25     `getch();`
+
 26 )
+
 ```
 
 ![](img/d66aad4cac279bfe1f0f55ccc5946a_74_0.png)
-
-
-
-
 
 # 第三章 - 处理
 
@@ -1710,9 +1734,9 @@ DivisorsuvwxyzWORKS.c
 
 在除法运算中，C 语言从左到右移动。在上述示例中，40 被除以 30。得到的 1.33333 再除以 10。然后 0.13333 再除以 20，得到 0.06667 的答案。只有像如下使用括号时：
 
-z = (v / w) / (x / y);
+`z = (v / w) / (x / y);`
 
-才会输出 2.66667 的答案，这是 z 的第三个可能值。这个例子展示了设计和使用括号的重要性。
+才会输出 2.66667 的答案，这是 `z` 的第三个可能值。这个例子展示了设计和使用括号的重要性。
 
 ## 加减法规则
 
@@ -1728,7 +1752,7 @@ netPay = grossPay - incomeTax - prsi;
 netPay = grossPay - (incomeTax + prsi);
 ```
 
-在第一个公式中，减法应该从右向左移动，prsi 从 incomeTax 中扣除，留下的可从总薪中扣除的金额少于第二个公式中的 `(incomeTax + prsi)`。一旦建立了 Bodmas、Bomdas、从左到右和从右到左的规则，设计和测试就是至关重要的。
+在第一个公式中，减法应该从右向左移动，`prsi` 从 `incomeTax` 中扣除，留下的可从总薪中扣除的金额少于第二个公式中的 `(incomeTax + prsi)`。一旦建立了 Bodmas、Bomdas、从左到右和从右到左的规则，设计和测试就是至关重要的。
 
 ## 圆的处理属性
 
@@ -1736,21 +1760,27 @@ netPay = grossPay - (incomeTax + prsi);
 
 ```
 E:\Book\circleSphereWORKS31032017.exe
+
 输入单位（cm）的圆/球半径: 10
+
 半径为 10.00 cm 的圆/球
+
 直径: 20.00 cm
+
 周长: 62.84 cm
+
 圆面积: 314.20 cm
+
 球表面积: 1256.80 cm sqd
+
 球体积: 314.20 cm cubed
+
 程序结束
 ```
 
-# 第三章 - 处理
-
 ## 程序
 
-circleSphereWDRKS31032017.c
+`circleSphereWDRKS31032017.c`
 
 ```c
 1 /*程序目标：计算圆和球的属性*/
@@ -1770,10 +1800,9 @@ circleSphereWDRKS31032017.c
 5 float pi = 3.1415, radius, circleDiameter = 0,
 6 circleCircumference = 0, circleArea = 0,
 7 sphereArea = 0, sphereVolume = 0;
-8
+
 9 printf("输入单位（cm）的圆/球半径: ");
 10    scanf("%f", &radius);
-11
 ```
 
 ```c
@@ -1783,17 +1812,16 @@ circleSphereWDRKS31032017.c
 15: sphereSurfaceArea = 4 * pi * pow(radius, 2);
 16: sphereVolume = 4/3 * pi * pow(radius, 3);
 17:
+
 18: printf("\nA circle/sphere with radius of %.02f cm",
 ```
 
 ## 注释
 
-第 5 到 7 行将所有值声明为 `float`（浮点数）。这意味着圆的属性不是计算为向下取整的整数，而是计算到一系列的小数。
+第 5 到 7 行将所有值声明为 `float`。这意味着圆的属性不是计算为向下取整的整数，而是计算到一系列的小数。
 第 9 行在程序运行时提示用户输入半径。第 10 行允许将此值扫描到内存中。第 12 到 16 行包含了在输入半径后计算各种数值的公式。这些行位于半径输入值和随后的公式之后非常重要。`pi` 已初始化为值 3.142。所有经过处理的 `float` 均已初始化为零，以便打印屏幕值而不是内存地址。
 
 第 22 到 31 行根据半径输入和随后的公式在屏幕上显示结果。
-
-# 第三章 - 处理
 
 ## 计算木块体积的程序
 
@@ -1806,32 +1834,31 @@ VolumeBlockOfWood/WORKS31032017.c
 3  main()
 4  (
 5      int length, breadth, depth, volume = 0;
-6
+
 7      printf("输入长度 <cm>: \t");
 8      scanf("%d", &length);
-9
+
 10     printf("输入宽度 <cm>: \t");
 11     scanf("%d", &breadth);
-12
+
 13     printf("输入深度 <cm>: \t");
 14     scanf("%d", &depth);
-15
+
 16     volume = length * breadth * depth;
-17
+
 18     printf("体积为: \t%d cubic cm", volume);
-19
+
 20     getch();
 21 )
-22
-![](img/d66aadcac4279bfe1f0f55cccf594a_79_0.png)
+```
 
-# 第三章 - 处理
+![](img/d66aadcac4279bfe1f0f55cccf594a_79_0.png)
 
 ## 计算三角形面积的程序
 
 ### 程序面积/屏幕输入输出
 
-triangleAreaDRKS12072017.c
+`triangleAreaDRKS12072017.c`
 
 ```c
 1 /*程序目标 - 计算三角形面积*/
@@ -1862,21 +1889,16 @@ triangleAreaDRKS12072017.c
 16: 
 17: getch();
 18: 
+```
 
 ## 注释
 
 在计算三角形面积时，第 13 到 15 行根据底边输入和随后的公式在屏幕上显示结果。 (注：此处原文代码逻辑略有断层，已按原文结构翻译)
 
-
-
-
-
 ## 第四章 – 流程控制
 
 第四章 - 流程控制 .....................................................................80
-
 运算符...............................................................................................80
-
 if 语句 - 程序与屏幕输入输出..................................................82
 if else 语句 - 比较一个整数是否大于另一个的程序...............................84
 if, else if, else 语句 - 检查一个整数是否等于另一个................................86
@@ -1900,20 +1922,16 @@ Switch 和 if, else If, else 的总结........................................12
 确定最大或最小值...............................129
 四个整数的 if, Else If, Else 语句程序................132
 
-## 第四章 – 流程控制
-
-# 第四章 - 流程控制
-
 ## 条件运算符
 
 | 运算符 | 描述 |
 |---|---|
-| < | 小于 |
-| > | 大于 |
-| == | 等（两个等号，中间无空格） |
-| <= | 小于等于 |
-| >= | 大于等于 |
-| != | 不等于。一个感叹号和一个等号。 |
+| `<` | 小于 |
+| `>` | 大于 |
+| `==` | 等（两个等号，中间无空格） |
+| `<=` | 小于等于 |
+| `>=` | 大于等于 |
+| `!=` | 不等于。一个感叹号和一个等号。 |
 
 ## if 语句
 
@@ -1953,7 +1971,7 @@ getch();
 
 ## 注释
 
-上面的代码展示了使用 `<` 符号的 if 语句的用法。a 和 b 的值位于第四行。运行该程序时，没有数据输入提示。用户输入代码并保存为 C 语言。可以通过允许键盘操作员输入 a 和 b 的值来使代码更加详尽。
+上面的代码展示了使用 `<` 符号的 `if` 语句的用法。`a` 和 `b` 的值位于第四行。运行该程序时，没有数据输入提示。用户输入代码并保存为 C 语言。可以通过允许键盘操作员输入 `a` 和 `b` 的值来使代码更加详尽。
 
 ## if 语句 - 程序与屏幕输入输出
 
@@ -1963,10 +1981,12 @@ getch();
 1: #include <stdio.h>
 2: main()
 4: int a, b;
+
 6: printf("Enter value for a: ");
 7: scanf("%d", &a);
 8: printf("Enter value for b: ");
 9: scanf("%d", &b);
+
 11: if (a < b) {
 13: printf("a is less than b\n");
 14: }
@@ -1976,7 +1996,7 @@ getch();
 
 ## 注释
 
-第 6 到 9 行允许通过键盘输入 a 和 b 的值。第 11 行的语句表示，如果 a 小于 b，则打印第 13 行的语句“a is less than b”。由于这一特定语句的作用，如果 a 小于 b，就会打印到屏幕上。如果 a 大于或等于 b，则什么都不会发生。这段代码非常有限。因此，有扩展的需要。
+第 6 到 9 行允许通过键盘输入 `a` 和 `b` 的值。第 11 行的语句表示，如果 `a` 小于 `b`，则打印第 13 行的语句“a is less than b”。由于这一特定语句的作用，如果 `a` 小于 `b`，就会打印到屏幕上。如果 `a` 大于或等于 `b`，则什么都不会发生。这段代码非常有限。因此，有扩展的需要。
 
 ## if else 语句 - 比较一个整数大于另一个的程序
 
@@ -2035,7 +2055,7 @@ a is not than b
 
 ## 注释
 
-在上面的代码中，第 16 行表示如果 a 小于 b，则打印第 13 行的内容。此代码可以进一步扩展以处理 a 等的情况。
+在上面的代码中，第 16 行表示如果 `a` 小于 `b`，则打印第 13 行的内容。此代码可以进一步扩展以处理 `a` 等的情况。
 
 ## if, else if, else 语句 - 检查一个整数是否等于另一个
 
@@ -2046,27 +2066,27 @@ a is not than b
 2 main()
 3 {
 4     int a, b;
-5 
+
 6     printf("Enter value for a: ");
 7     scanf("%d", &a);
 8     printf("Enter value for b: ");
 9     scanf("%d", &b);
-10 
+
 11     if (a < b)
 12     {
 13         printf("a is less than b");
 14     }
-15 
+
 16     else if (a > b)
 17     {
 18         printf("a is greater than b");
 19     }
-20 
+
 21     else
 22     {
 23         printf("a equals b");
 24     }
-25 
+
 26     printf("\n\nProgram End");
 27     getch();
 28 }
@@ -2102,30 +2122,38 @@ a is not than b
 23:  printf("a equals b");
 24: }
 25:
+```
+
+
+
+```c
 26:  printf("\n\nProgram End");
+
 27: getch();
+
 28: }
 ```
 
 ## 注释
 
-在上面的代码中，扩展允许处理 a 小于 b、大于 b 或等于 b 的，并体现在第 11 到 24 行。不是在第 16 行使用 if 语句，而是使用了 else if 语句。第 21 行的 else 语句结束了这一 if, else if, else 代码块。如果在第 16 行使用 if 而非 else if，输出将不准确。如果在第 21 行使用 if 而非 else，打印到屏幕的输出也将不准确。
+在上面的代码中，扩展允许处理 `a` 小于 `b`、大于 `b` 或等于 `b` 的，并体现在第 11 到 24 行。不是在第 16 行使用 `if` 语句，而是使用了 `else if` 语句。第 21 行的 `else` 语句结束了这一 `if`, `else if`, `else` 代码块。如果在第 16 行使用 `if` 而非 `else if`，输出将不准确。如果在第 21 行使用 `if` 而非 `else`，打印到屏幕的输出也将不准确。
 
-关系运算符可以组合。例如，小于等于 <=，或大于等于 >=。
+关系运算符可以组合。例如，小于等于 `<=`，或大于等于 `>=`。
+
+# 第四章 流程控制
 
 ## 屏幕输入输出程序
 
 ```c
 #include <stdio.h>
+
 main() 
 {
     int a, b;
-
     printf("Enter Value for a: ");
     scanf("%d", &a);
     printf("Enter value for b: ");
     scanf("%d", &b);
-
     if (a <= b) {
         printf("a is less than or equal to b");
     } else {
@@ -2137,27 +2165,19 @@ main()
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_95_0.png)
 
-
-
-
-
 ```c
 else
 {
     printf("a is not less than or equal to b");
-    
-    
     getch();
 }
 ```
 
 ## 注释
 
-上面的代码展示了一个用于小于等于 `<=` 操作的 if 语句。代码也可以写成包含大于等于 `>=` 的值，而不是小于等于 `<=`。
+上面的代码展示了一个用于小于等于 `<=` 操作的 `if` 语句。代码也可以写成包含大于等于 `>=` 的值，而不是小于等于 `<=`。
 
-到目前为止，所有代码都是关于小于、大于、小于等于或大于等于的。等等的代码略有不同。它不是使用一个等号 =，而是必须使用两个等号 ==，且之间没有空格。
-
-# 第四章 流程控制
+到目前为止，所有代码都是关于小于、大于、小于等于或大于等于的。等等的代码略有不同。它不是使用一个等号 `=`，而是必须使用两个等号 `==`，且之间没有空格。
 
 ### 屏幕输入输出与程序
 
@@ -2184,31 +2204,26 @@ void main() {
 ```c
 #include <stdio.h>
 main()
-
 int a, b;
-
 printf("Enter a: ");
 scanf("%d", &a);
 printf("Enter b: ");
 scanf("%d", &b);
-
 if (a == b)
 {
     printf("a equals b");
 }
-
 else
 {
     printf("a is not equal to b");
 }
-
 getch();
 }
 ```
 
 ## 注释
 
-第 11 行展示了等号运算符的操作。需要使用两个等号 ==（中间没有空格）来比较两个变量是否。
+第 11 行展示了等号运算符的操作。需要使用两个等号 `==`（中间没有空格）来比较两个变量是否。
 
 # 第四章 - 流程控制
 
@@ -2222,23 +2237,18 @@ getch();
 main ()
 (
     int a, b;
-
     printf("Enter value for a: ");
     scanf("%d", &a);
-
     printf("Enter value for b: ");
     scanf("%d", &b);
-
     if (a != b)
     {
         printf("a is not equal to b");
     }
-
     else
     {
         printf("a equals b");
     }
-
     printf("\n\nProgram End");
     getch();
 )
@@ -2256,18 +2266,14 @@ main ()
 main()
 {
     int a, b;
-
     printf("Enter value for a: ");
     scanf("%d", &a);
-
     printf("Enter value for b: ");
     scanf("%d", &b);
-
     if (a != b)
     {
         printf("a is not equal to b");
     }
-
     else
     {
         printf("a equals b");
@@ -2280,7 +2286,7 @@ main()
 
 ## 注释
 
-不等于 != 关系运算符在游戏设计中非常重要。一个不等于条件
+不等于 `!=` 关系运算符在游戏设计中非常重要。一个不等于条件
 
 ```c
 if (a != b)
@@ -2298,15 +2304,13 @@ if (a < b || a > b)
 }
 ```
 
-第五章展示了循环相对于 if, else 条件的优势。
-
-# 第四章 流程控制
+第五章展示了循环相对于 `if`, `else` 条件的优势。
 
 ## 在同一条件语句中使用多个关系运算符
 
 ### 屏幕输入输出与程序
 
-关系运算符可能包含 &&，例如，如果路程超过 10 英里且员工开车上班，则有差津贴。
+关系运算符可能包含 `&&`，例如，如果路程超过 10 英里且员工开车上班，则有差津贴。
 
 ```c
 /* 程序目标: 展示两个运算符的操作 */
@@ -2343,22 +2347,19 @@ main()
 
 ## 注释
 
-第 12 行包含一个 if 语句，规定了获得差旅津贴所需的条件。决定一个人是否符合条件的整数变量在第 5 行声明。第 17 行到 20 行的 else 语句跟在 if 语句之后。程序显示，如果一个人开车上班且路程大于等于 10 英里，他们就符合差旅津贴的标准。双符号 && 意味着“和”。
+第 12 行包含一个 `if` 语句，规定了获得差旅津贴所需的条件。决定一个人是否符合条件的整数变量在第 5 行声明。第 17 行到 20 行的 `else` 语句跟在 `if` 语句之后。程序显示，如果一个人开车上班且路程大于等于 10 英里，他们就符合差旅津贴的标准。双符号 `&&` 意味着“和”。
 
 ```c
 /* 程序目标: 在 语句中演示“或”*/
 #include <stdio.h>
 main() {
     int age;
-
     printf("Enter age: \t");
     scanf("%d", &age);
-
     if (age < 16 || age > 65)
     {
         printf("a is not equal to b");
     }
-
     else
     {
         printf("a equals b");
@@ -2375,15 +2376,12 @@ main() {
 main()
 {
     int age;
-
     printf("Enter age: \t");
     scanf("%d", &age);
-
     if (age < 16 || age > 65)
     {
         printf("a is not equal to b");
     }
-
     else
     {
         printf("a equals b");
@@ -2395,11 +2393,9 @@ main()
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_103.png)
 
-# 第四章 流程控制
-
 ## 注释
 
-&& 表示“和”，|| 表示“或”。上面的例子展示了如何在一个逻辑判断中使用这些运算符。
+`&&` 表示“和”，`||` 表示“或”。上面的例子展示了如何在一个逻辑判断中使用这些运算符。
 
 ```c
 age < 16 || age > 65
@@ -2407,284 +2403,14 @@ age < 16 || age > 65
 
 ## 注释
 
-age < 16 || age > 65 表示年龄小于 16 岁或大于 65 岁。
-
-# 第四章 流程控制
+`age < 16 || age > 65` 表示年龄小于 16 岁或大于 65 岁。
 
 ### 屏幕输入输出与程序
 
-关系运算符可能包含 &&，例如...
+关系运算符可能包含 `&&`，例如...
 
-```
 
-[/content]
-```
 
-# 第四章 - 流程控制
-
-## 不等于关系运算符
-
-### 程序与屏幕输入输出
-
-```c
-// //程序目标 - 展示 != 的操作
-```
-
-[content]
-```
-译文：
-
-```c
-age < 16 || age > 65 表示年龄小于 16 岁或大于 65 岁。
-``` 
-[/content]
-
-```
-
-第 12 行包含一个 if 语句，规定了获得差旅津贴所需的条件。决定一个人是否符合条件的整数变量在第 5 行声明。第 17 行到 20 行的 else 语句跟在 if 语句之后。程序显示，如果一个人开车上班且路程大于等于 10 英里，他们就符合差旅津贴的标准。双符号 && 意味着“和”。
-
-```c
-/* 程序目标: 在 else 语句中演示“或”*/
-#include <stdio.h>
-main() {
-    int age;
-
-    printf("Enter age: \t");
-    scanf("%d", &age);
-
-    if (age < 16 || age > 65)
-    {
-        printf("a is not equal to b");
-    }
-
-    else
-    {
-        printf("a equals b");
-    }
-    printf("\n\nProgram End");
-    getch();
-}
-```
-
-代码
-```c
-/* 程序目标: 在 else 语句中演示“或”*/
-#include <stdio.h>
-main()
-{
-    int age;
-
-    printf("Enter age: \t");
-    scanf("%d", &age);
-
-    if (age < 16 || age > 65)
-    {
-        printf("a is not equal to b");
-    }
-
-    else
-    {
-        printf("a equals b");
-    }
-    printf("\n\nProgram End");
-    getch();
-}
-```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_103.png)
-
-# 第四章 流程控制
-
-## 注释
-
-&& 表示“和”，|| 表示“或”。上面的例子展示了如何在一个逻辑判断中使用这些运算符。
-
-```
-
----
-**抱歉，在处理你提供的原始长文本时，输出格式出现了混乱。由于你提供的原文包含大量的截断、重复和乱码（如 `age < 16 || age > 65` 散落在各处），我根据你提供的逻辑结构，重新为你梳理并翻译了完整的内容。**
-
-以下是修正后的译文：
-
-[content]
-```c
-else
-{
-    printf("a is not less than or equal to b");
-    
-    
-    getch();
-}
-```
-
-## 注释
-
-上面的代码展示了一个用于小于等于 `<=` 操作的 if 语句。代码也可以写成包含大于等于 `>=` 的值，而不是小于等于 `<=`。
-
-到目前为止，所有代码都是关于小于、大于、小于等于或大于等于的。等的代码略有不同。它不是使用一个等号 =，而是必须使用两个等号 ==，且之间没有空格。
-
-# 第四章 流程控制
-
-### 屏幕输入输出与程序
-
-```c
-#include <stdio.h>
-void main() {
-    int a, b;
-    printf("Enter a: ");
-    scanf("%d", &a);
-    printf("Enter b: ");
-    scanf("%d", &b);
-    if (a == b) {
-        printf("a equals b");
-    } else {
-        printf("a is not equal to b");
-    }
-    getch();
-}
-```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_97_0.png)
-
-代码
-```c
-#include <stdio.h>
-main()
-
-int a, b;
-
-printf("Enter a: ");
-scanf("%d", &a);
-printf("Enter b: ");
-scanf("%d", &b);
-
-if (a == b)
-{
-    printf("a equals b");
-}
-
-else
-{
-    printf("a is not equal to b");
-}
-
-getch();
-}
-```
-
-## 注释
-
-第 11 行展示了等号运算符的操作。需要使用两个等号 ==（中间没有空格）来比较两个变量是否相等。
-
-# 第四章 - 流程控制
-
-## 不等于关系运算符
-
-### 程序与屏幕输入输出
-
-```c
-// //程序目标 - 展示 != 的操作
-#include <stdio.h>
-main ()
-(
-    int a, b;
-
-    printf("Enter value for a: ");
-    scanf("%d", &a);
-
-    printf("Enter value for b: ");
-    scanf("%d", &b);
-
-    if (a != b)
-    {
-        printf("a is not equal to b");
-    }
-
-    else
-    {
-        printf("a equals b");
-    }
-
-    printf("\n\nProgram End");
-    getch();
-)
-```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_99_0.png)
-
-92
-
-# 代码
-
-```c
-// //程序目标 - 展示 != 的操作
-#include <stdio.h>
-main()
-{
-    int a, b;
-
-    printf("Enter value for a: ");
-    scanf("%d", &a);
-
-    printf("Enter value for b: ");
-    scanf("%d", &b);
-
-    if (a != b)
-    {
-        printf("a is not equal to b");
-    }
-
-    else
-    {
-        printf("a equals b");
-    }
-    printf("\n\nProgram End");
-    getch();
-}
-}
-```
-
-## 注释
-
-不等于 != 关系运算符在游戏设计中非常重要。一个不等于条件
-
-```c
-if (a != b)
-{
-    printf("a is not equal to b");
-}
-```
-
-比下面更容易写：
-
-```c
-if (a < b || a > b)
-{
-    printf("a is not equal to b");
-}
-```
-
-第五章展示了循环相对于 if, else 条件的优势。
-
-# 第四章 流程控制
-
-## 在同一条件语句中使用多个关系运算符
-
-### 屏幕输入输出与程序
-
-关系运算符可能包含 &&，例如，如果路程超过 10 英里且员工开车上班，则有差旅津贴。
-
-```c
-/* 程序目标: 展示两个运算符的操作 */
-#include <stdio.h>
-main()
-(
-    int drive
-```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_101_0.png)
-
-代码
 ```c
 /* 程序目标: 展示两个运算符的操作*/
 #include <stdio.h>
@@ -2709,7 +2435,7 @@ main()
 
 ## 注释
 
-第 12 行包含一个 if 语句，规定了获得差旅津贴所需的条件。决定一个人是否符合条件的整数变量在第 5 行声明。第 17 行到 20 行的 else 语句跟在 if 语句之后。程序显示，如果一个人开车上班且路程大于等于 10 英里，他们就符合差旅津贴的标准。双符号 && 意味着“和”。
+第 12 行包含一个 `if` 语句，规定了获得差旅津贴所需的条件。决定一个人是否符合条件的整数变量在第 5 行声明。第 17 行到 20 行的 `else` 语句跟在 `if` 语句之后。程序显示，如果一个人开车上班且路程大于等于 10 英里，他们就符合差旅津贴的标准。双符号 `&&` 意味着“和”。
 
 ```c
 /* 程序目标: 在 else 语句中演示“或”*/
@@ -2735,6 +2461,7 @@ main() {
 ```
 
 代码
+
 ```c
 /* 程序目标: 在 else 语句中演示“或”*/
 #include <stdio.h>
@@ -2765,24 +2492,22 @@ main()
 
 ## 注释
 
-&& 表示“和”，|| 表示“或”。上面的例子展示了如何在一个逻辑判断中使用这些运算符。
+`&&` 表示“和”，`||` 表示“或”。上面的例子展示了如何在一个逻辑判断中使用这些运算符。
 
 ---
 
 ### 屏幕输入输出与程序
 
-关系运算符可能包含 &&，例如...
-
-
-
-
+关系运算符可能包含 `&&`，例如...
 
 ## 第四章 – 流程控制
 
 ## If, Else If, Else 条件语句
-If, Else 语句可以根据需要扩展扩展为 If, Else If, Else。这允许在编程中包含一系列条件。
+
+`If`, `Else` 语句可以根据需要扩展扩展为 `If`, `Else If`, `Else`。这允许在编程中包含一系列条件。
 
 ## 成绩示例
+
 ### 屏幕输入输出与程序
 
 ```c
@@ -2862,7 +2587,8 @@ If, Else 语句可以根据需要扩展扩展为 If, Else If, Else。这允许�
 ```
 
 ## 注释
-上述展示了 if, else if, else 语句的正确用法。第 12、15、18、21 行使用 if 语句而非 else if 是错误的设计。
+
+上述展示了 `if`, `else if`, `else` 语句的正确用法。第 12、15、18、21 行使用 `if` 语句而非 `else if` 是错误的设计。
 
 102
 
@@ -2937,9 +2663,11 @@ int main()
 30: getch();
 31:
 32:
+```
 
 ## 注释
-在上述代码中，12 到 25 行使用了 if 语句而非 else if。这导致输出不符合预期。虽然分数小于 20、30、40、50、60 或 70，但程序的目的是从分值段内获得一个等级。因此，正确使用 if, else if 和 else 语句对于实现程序目的、正确的处理和输出至关重要。在上述代码中错误使用 if 语句导致屏幕上出现了额外的行。这并不是预期的。编译器识别第一个正确的输出行后，if 语句继续读取并继续输出。使用 if, else if, else 语句可以让选项相互互斥。这意味着只会选择一个选项。这个示例展示了准确使用 if, else if 和 else 语句的重要性。
+
+在上述代码中，12 到 25 行使用了 `if` 语句而非 `else if`。这导致输出不符合预期。虽然分数小于 20、30、40、50、60 或 70，但程序的目的是从分值段内获得一个等级。因此，正确使用 `if`, `else if` 和 `else` 语句对于实现程序目的、正确的处理和输出至关重要。在上述代码中错误使用 `if` 语句导致屏幕上出现了额外的行。这并不是预期的。编译器识别第一个正确的输出行后，`if` 语句继续读取并继续输出。使用 `if`, `else if`, `else` 语句可以让选项相互互斥。这意味着只会选择一个选项。这个示例展示了准确使用 `if`, `else if` 和 `else` 语句的重要性。
 
 ## 第四章 — 流程控制
 
@@ -2947,51 +2675,93 @@ int main()
 ### 屏幕输入输出与程序
 
 ```c
+
 1 /*程序目的：将秒转换为小时、分钟*/
+
 2 #include <stdio.h>
+
 3 main() {
+
 4 
+
 5     int hours = 0, mins = 0, secs = 0;
+
 6 
+
 7     printf("Enter Seconds: \t");
+
 8     scanf("%d", &secs);
+
 9 
+
 10    hours = secs/(60*60);
+
 11    mins = ((secs/60)%60);
+
 12    seconds = secs%60;
+
 13 
+
 14    printf("The no of hours mins secs are: \t%d:%d:%d ",
+
 15    hours, mins, seconds);
+
 16 
+
 17    printf("\n\nProgram End");
+
 18 
+
 19    getch();
+
 20 }
+
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_112_0.png)
 
 ```c
+
 1 /*程序目的：将秒转换为小时、分钟*/
+
 2 #include <stdio.h>
+
 3 main() {
+
 4 
+
 5     int hours = 0, mins = 0, secs = 0;
+
 6 
+
 7     printf("Enter Seconds: \t");
+
 8     scanf("%d", &secs);
+
 9 
+
 10    hours = secs/(60*60);
+
 11    mins = ((secs/60)%60);
+
 12    seconds = secs%60;
+
 13 
+
 14    printf("The no of hours mins secs are: \t%d:%d:%d ",
+
 15    hours, mins, seconds);
+
 16 
+
 17    printf("\n\nProgram End");
+
 18 
+
 19    getch();
+
 20 }
+
 ```
 
 ## 24 小时制
@@ -3002,97 +2772,167 @@ int main()
 # 第四章 - 流程控制
 
 ```c
+
 1 //程序目的：将24 小时制转换为12 小时制
+
 2 #include <stdio.h>
+
 3 main() {
+
 4 
+
 5     int time, hours, mins;
+
 6     char timeday;
+
 7
+
 8     printf("Enter Hours 24 hour clock: \t");
+
 9     scanf("%d", &hours);
+
 10
+
 11    printf("Enter Mins 24 hour clock: \t");
+
 12    scanf("%d", &mins);
+
 13
+
 14    printf("Time is: \t\t");
+
 15
+
 16    //Condition for Minutes 0 to 9
+
 17    if (mins < 10)
+
 18    {
+
 19        printf("%d:0d",hours,mins);
+
 20    }
+
 21
+
 22    //Condition for Minutes 10 to 59
+
 23    else
+
 24    {
+
 25        printf("%d : %d",hours,mins);
+
 26    }
+
 27
+
 28    //Condition for hours pm
+
 29    if (hours > 12)
+
 30    {
+
 31        printf(" pm");
+
 32    }
+
 33
+
 34    //Condition for hours am
+
 35    else
+
 36    {
+
 37        printf(" am");
+
 38    }
+
 39    getch();
+
 40
+
 41}
+
 ```
 
 ## 注释
-第 19 行允许在分钟小于10时在前面放置零。结果是屏幕上显示为 11:09 而非 11:9。如果分钟大于 10，零就消失了（第 23-26 行）。此外，第 23-26 行为 24 小时制中小时大于12 的情况提供了提醒。输入 2 或 14 小时（第 9 行），通过取模运算结果为 2（第 25 行）。额外的 if, else 语句使得会在时间后打印 am 或 pm。缺少换行符会导致 am 和 pm 与时间同一行打印。
+第 19 行允许在分钟小于10时在前面放置零。结果是屏幕上显示为 11:09 而非 11:9。如果分钟大于 10，零就消失了（第 23-26 行）。此外，第 23-26 行为 24 小时制中小时大于12 的情况提供了提醒。输入 2 或 14 小时（第 9 行），通过取模运算结果为 2（第 25 行）。额外的 `if`, `else` 语句使得会在时间后打印 `am` 或 `pm`。缺少换行符会导致 `am` 和 `pm` 与时间同一行打印。
 
 # 第四章 - 流程控制
 
 ## 闰年 - 屏幕输入输出与程序
 
 ```c
+
 1 /*程序目的：判断某年份是否为闰年*/
+
 2 #include <stdio.h>
+
 3 main()
+
 4 {
+
 5     int year = 0;
+
 6     printf("Enter mark: \t");
+
 7     scanf("%d", &year);
+
 8
+
 9     if ((year%4 == 0 && year%100 != 0) || (year%400 == 0))
+
 10         printf("\nGrade 'G'");
+
 11
+
 12     else if (mark <= 30)
+
 13     printf("\nGrade 'F'");
+
 14
+
 15     else if (mark <= 40)
+
 16     printf("\nGrade 'E'");
+
 17
+
 18     else if (mark <= 50)
+
 19     printf("\nGrade 'D'");
+
 20
+
 21     else if (mark <= 60)
+
 22     printf("\nGrade 'C'");
+
 23
+
 24     else if (mark <= 70)
+
 25     printf("\nGrade 'B'");
+
 26
+
 27     else (printf("\nGrade 'A'"));
+
 28
+
 29     printf("is grade for a mark of %d \n", mark);
+
 30     getch();
+
 31 )
-```
 
 ```
 
+```
 
-
-
-
-此示例展示了一个包含关系运算符组合的 *if* 语句。第9行结合了*等于*、*不等于*以及*或*和*或*来进行比较。如果输入的年份除以4没有余数，*且*该年份除以100有余数，*或者*该年份除以400没有余数。第9行末尾的*or* 条件实际上是替代了前两个条件的组合，而不是二选一。使用括号以及正确的设计和测试是非常重要的。
+此示例展示了一个包含关系运算符组合的 `if` 语句。第9行结合了 `等于`、`不等于` 以及 `或` 和 `或` 来进行比较。如果输入的年份除以4没有余数，`且` 该年份除以100有余数，`或者` 该年份除以400没有余数。第9行末尾的 `or` 条件实际上是替代了前两个条件的组合，而不是二选一。使用括号以及正确的设计和测试是非常重要的。
 
 # 第四章 - 流程控制
 
@@ -3140,6 +2980,8 @@ leapyear/WORKS24062017.c
 
 代码
 
+
+
 ```c
 1: /*程序目标：判断某一年是否为闰年*/
 2: #include <stdio.h>
@@ -3177,13 +3019,13 @@ leapyear/WORKS24062017.c
 
 ## 注释
 
-由于上述代码的结构，它比上一个示例更容易理解。使用 else ifs 以及稍微多一点代码可能会使程序对读者更友好。
+由于上述代码的结构，它比上一个示例更容易理解。使用 `else ifs` 以及稍微多一点代码可能会使程序对读者更友好。
 
 # 第四章 - 流程控制
 
 ## 两个分数的取模运算
 
-Division80r6wORKS24102016.c |
+`Division80r6wORKS24102016.c` |
 
 ```c
 /*程序目标：展示取模运算的用法 */
@@ -3205,7 +3047,7 @@ int main() {
 }
 ```
 
-# 代码
+## 代码
 
 ```c
 /*程序目标：展示取模运算的用法 */
@@ -3240,13 +3082,13 @@ int main() {
 
 ## 注释
 
-上述是使用 else, if, else 语句的另一个示例。如果整数能被 5 和 6 整除，则将打印第 13 行，而不是第 18 行。
+上述是使用 `else`, `if`, `else` 语句的另一个示例。如果整数能被 5 和 6 整除，则将打印第 13 行，而不是第 18 行。
 
 # 第四章 - 流程控制
 
 ## 使用整数的 switch 语句 - 星期
 
-屏幕输入输出与 SwitchDaysOfWeek2016.c
+屏幕输入输出与 `SwitchDaysOfWeek2016.c`
 
 ```c
 1 程序目标：展示 switch 语句的用法
@@ -3307,15 +3149,15 @@ int main() {
 
 ## 注释
 
-当有很多备选方案且每个方案都是整数值时，推荐使用 switch 代替 If Else If 语句。例如一、二、三代表星期中的特定几天。由于一周有七天，每天都可以由特定的数字表示，因此推荐使用 switch 语句。只有两个结果，推荐使用简单的 If, Else。如果结果源于值的范围（例如成绩 A 在 60 到 70 之间），则使用 If, Else, Else 语句。在特定情况下使用 Switch 代替 if, else else 的另一个原因是呈现方式。Switch 语句对读者非常友好。
+当有很多备选方案且每个方案都是整数值时，推荐使用 `switch` 代替 `If Else If` 语句。例如一、二、三代表星期中的特定几天。由于一周有七天，每天都可以由特定的数字表示，因此推荐使用 `switch` 语句。只有两个结果，推荐使用简单的 `If`, `Else`。如果结果源于值的范围（例如成绩 A 在 60 到 70 之间），则使用 `If`, `Else`, `Else` 语句。在特定情况下使用 `Switch` 代替 `if`, `else else` 的另一个原因是呈现方式。`Switch` 语句对读者非常友好。
 
 ## 第四章 — 流程控制
 
-编译器读取代码的方式 switch 不同于 if, else if, else 语句。当输入特定的 case 时（例如代表周二的 2），编译器直接跳转到 case 2，而不读取前面的或后面的 case。在 If, Else If, Else 语句中，编译器读取的代码比 switch 语句多。因此，对于运行数百行代码并包含许多选择的程序，switch 语句将导致更快的数据处理。
+编译器读取代码的方式 `switch` 不同于 `if`, `else if`, `else` 语句。当输入特定的 `case` 时（例如代表周二的 2），编译器直接跳转到 `case 2`，而不读取前面的或后面的 `case`。在 `If`, `Else If`, `Else` 语句中，编译器读取的代码比 `switch` 语句多。因此，对于运行数百行代码并包含许多选择的程序，`switch` 语句将导致更快的数据处理。
 
-编写代码涉及对 switch 中单双引号、分号和冒号的谨慎使用。switch 语句中的每个 case 语句都以冒号结束：
+编写代码涉及对 `switch` 中单双引号、分号和冒号的谨慎使用。`switch` 语句中的每个 `case` 语句都以冒号结束：
 
-switch 语句由 #include <stdio.h> 跟着 main()，然后是左括号（第 11 行）和右括号（第 38 行），中间是代码。Switch (no) – 第 10 行没有结束冒号或分号。变量紧接 main() 之后的大括号进行声明。第 5 行声明了整数 no。switch 语句本身从第 10 行开始到第 38 行结束。第 12 到 34 行内的几乎所有代码部分都是相似的。
+`switch` 语句由 `#include <stdio.h>` 跟着 `main()`，然后是左括号（第 11 行）和右括号（第 38 行），中间是代码。`Switch (no)` – 第 10 行没有结束冒号或分号。变量紧接 `main()` 之后的大括号进行声明。第 5 行声明了整数 `no`。`switch` 语句本身从第 10 行开始到第 38 行结束。第 12 到 34 行内的几乎所有代码部分都是相似的。
 
 ```c
 case ...:
@@ -3323,20 +3165,20 @@ printf("...");
 break;
 ```
 
-上述三个短语中的 printf 和 break 都是小写。case 行以冒号 ; 结束而不是分号 ;。包含 printf 和 break 语句的行以分号结束。这三行出现在所有的 switch 语句 case 中。一系列 switch 语句应该以 default 语句结束。第 37 和第 38 行通过以下行展示了这一点：
+上述三个短语中的 `printf` 和 `break` 都是小写。`case` 行以冒号 `:` 结束而不是分号 `;`。包含 `printf` 和 `break` 语句的行以分号结束。这三行出现在所有的 `switch` 语句 `case` 中。一系列 `switch` 语句应该以 `default` 语句结束。第 37 和第 38 行通过以下行展示了这一点：
 
 ```c
 default:
 printf("Incorrect Entry");
 ```
 
-default 行 与 case 行一样以冒号结束。default 语句结束了 switch – 第 36 行 - 在用户选择了不可用的选项时告知用户。
+`default` 行 与 `case` 行一样以冒号结束。`default` 语句结束了 `switch` – 第 36 行 - 在用户选择了不可用的选项时告知用户。
 
 ## 简化的 switch 语句
 
 星期 2
 
-SwitchDaysOfWeek223122014.c
+`SwitchDaysOfWeek223122014.c`
 
 ```c
 1 //程序目标：展示替代的 switch
@@ -3373,20 +3215,17 @@ SwitchDaysOfWeek223122014.c
 31 }}
 ```
 
-
-
-
-
 ## 第四章 –流程控制
 
 ## 注释
-在上述代码中，不需要为每周的每天编写 *case* 语句。*Case* 可以根据需要打印到屏幕的内容进行简化。如果是特定的某天，例如周一或周二，则 switch 代码会更详细。相反，如果只需要选择一个工作日或周末，则代码可以简化。第 14 行到 19 行展示了如何编写具有相同输出的各种选择。这对于工作日和周末都效果良好。
 
-如果所需的输出是根据分数得出的成绩等级，那么使用 *If, else if, else* 语句更好。一个处理从 0 到 100 分的 101 个分数以及由此产生的 6 种等级的 switch 语句将包含过多代码，且在 *switch* 中难以阅读。因此，在根据分数范围确定等级的成绩情况下，*If, Else If, Else* 看起来更好。
+在上述代码中，不需要为每周的每天编写 *case* 语句。*Case* 可以根据需要打印到屏幕的内容进行简化。如果是特定的某天，例如周一或周二，则 `switch` 代码会更详细。相反，如果只需要选择一个工作日或周末，则代码可以简化。第 14 行到 19 行展示了如何编写具有相同输出的各种选择。这对于工作日和周末都效果良好。
+
+如果所需的输出是根据分数得出的成绩等级，那么使用 *If, else if, else* 语句更好。一个处理从 0 到 100 分的 101 个分数以及由此产生的 6 种等级的 `switch` 语句将包含过多代码，且在 *switch* 中难以阅读。因此，在根据分数范围确定等级的成绩情况下，*If, Else If, Else* 看起来更好。
 
 ## Switch – 字符类型
 
-SwitchColoursChar23122014.c
+`SwitchColoursChar23122014.c`
 
 ```
 1 //程序目标：展示带有 char 数据类型的 switch
@@ -3421,8 +3260,11 @@ SwitchColoursChar23122014.c
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_126_0.png)
 
 代码
+
 1: //程序目标：展示带有 char 数据类型的 switch
+
 2:
+
 3: #include <stdio.h>
 
 # 第四章 - 流程控制
@@ -3460,11 +3302,12 @@ SwitchColoursChar23122014.c
 ```
 
 ## 注释
-Switch 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，char。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 colour。
 
-每个 switch 选择（此示例中的每个字母选项）的 case 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
+`Switch` 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，`char`。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 `colour`。
 
-case 选择也是区分大小写的。通过将 cases 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 R 或小写的 r 作为选项进行选择。
+每个 `switch` 选择（此示例中的每个字母选项）的 `case` 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
+
+`case` 选择也是区分大小写的。通过将 `cases` 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 R 或小写的 r 作为选项进行选择。
 
 ## Switch 程序设计一个简单计算器
 
@@ -3490,7 +3333,13 @@ Choose process:
 
 ## 程序
 
-```
+
+
+# 第四章 - 流程控制
+
+## 程序
+
+```c
 /* calculatorSimpleSwitch/ORKS14072017.c |
 1 //程序目标：实现 Switch Case - 简单计算器
 2 #include <stdio.h>
@@ -3535,11 +3384,11 @@ Choose process:
 40            break;
 41    }
 42 }
-43
 ```
 
-getch();
+`getch();`
 
+```c
 1: //程序目标：展示带有 char 数据类型的 switch
 2:
 3: #include <stdio.h>
@@ -3567,17 +3416,37 @@ getch();
 25:     }
 26:     getch();
 27: }
+```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_126_0.png)
+
+## 注释
+
+`Switch` 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，`char`。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 `colour`。
+
+每个 `switch` 选择（此示例中的每个字母选项）的 `case` 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
+
+`case` 选择也是区分大小写的。通过将 `cases` 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 `R` 或小写的 `r` 作为选项进行选择。
+
+## Switch 程序设计一个简单计算器
+
+### 屏幕输入与输出
+
+```
+E:\BookC\calculatorSimpleSwitchWORKS14072017.exe
+Enter no1: 12
+Enter no2: 14
+Choose process:
++
+-
+/
+  
+12.000000 divided by 14.000000 is: 0.857143
+```
 
 代码
-1: //程序目标：展示带有 char 数据类型的 switch
-2:
-3: #include <stdio.h>
 
-# 第四章 - 流程控制
-
-```
+```c
 4: main ()
 5: {
 6:   char colour;
@@ -3609,289 +3478,32 @@ getch();
 32: }
 ```
 
-## 注释
-Switch 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，char。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 colour。
 
-每个 switch 选择（此示例中的每个字母选项）的 case 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
-
-case 选择也是区分大小写的。通过将 cases 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 R 或小写的 r 作为选项进行选择。
-
-## Switch 程序设计一个简单计算器
-
-### 屏幕输入与输出
-
-120
 
 ## 第四章 – 流程控制
 
-```
-E:\BookC\calculatorSimpleSwitchWORKS14072017.exe
-Enter no1: 12
-Enter no2: 14
-Choose process:
-+
--
-/
-  
-12.000000 divided by 14.000000 is: 0.857143
-```
+### 注释
+在上述代码中，不需要为每周的每一都编写 `case` 语句。`case` 可以根据需要打印到屏幕的内容进行简化。如果是特定的某天，例如周一或周二，则 `switch` 代码会更详细。相反，如果只需要选择一个工作日或周末，则代码可以简化。第 14 行到 19 行展示了如何编写具有相同输出的各种选择。这对于工作日和周末都效果良好。
 
-# 第四章 - 流程控制
+如果所需的输出是根据分数得出的成绩等级，那么使用 `If, else if, else` 语句更好。一个处理从 0 到 100 分的 101 个分数以及由此产生的 6 种等级的 `switch` 语句将包含过多代码，且在 `switch` 中难以阅读。因此，在根据分数范围确定等级的成绩情况下，`If, Else If, Else` 看起来更好。
 
-## 程序
+### Switch – 字符类型
 
-```
-/* calculatorSimpleSwitch/ORKS14072017.c |
-1 //程序目标：实现 Switch Case - 简单计算器
-2 #include <stdio.h>
-3 int main()
-4 {
-5     float no1, no2, ans = 0;
-6     char process;
-7     printf("Enter number 1: %f");
-8     scanf("%f", &no1);
-9     printf("Enter number 2: %f");
-10    scanf("%f", &no2);
-11
-12    printf("Choose process: + - * /
-");
-13    printf("%c\n", &process);
-14    printf("\n");
-15
-16    switch (process)
-17    {
-18        case '+':
-19            ans = no1 + no2;
-20            printf("%f added to %f is: %f\n", no1, ans);
-21            break;
-22
-23        case '-':
-24            ans = no1 - no2;
-25            printf("%f subtracted from %f is: %f\n", no1, ans);
-26            break;
-27
-28        case '*':
-29            ans = no1 * no2;
-30            printf("%f multiplied by %f is: %f\n", no1, ans);
-31            break;
-32
-33        case '/':
-34            ans = no1 / no2;
-35            printf("%f divided by %f is: %f\n", no1, ans);
-36            break;
-37
-38        default:
-39            printf("You chose incorrectly");
-40            break;
-41    }
-42 }
-```
-
-getch();
-
-1: //程序目标：展示带有 char 数据类型的 switch
-2:
-3: #include <stdio.h>
-4: main ()
-5: {
-6:     char colour;
-7:     printf("Please enter a letter - R, G or B: ");
-8:     scanf("%c", &colour);
-9:     switch (colour)
-10: {
-11:         case 'R':
-12:         case 'r':
-13:             printf("You chose Red");
-14:             break;
-15:         case 'B':
-16:         case 'b':
-17:             printf("You chose Blue");
-18:             break;
-19:         case 'G':
-20:         case 'g':
-21:             printf("You chose Green");
-22:             break;
-23:         default:
-24:             printf("You chose incorrectly");
-25:     }
-26:     getch();
-27: }
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_126_0.png)
-
-# 第四章 - 流程控制
-
-```
-4: main ()
-5: {
-6:   char colour;
-7:   printf("Please enter a letter - R, G or B: ");
-8:   scanf("%c",&colour);
-9: 
-10:  switch (colour)
-11: {
-12:     case 'R':
-13:     case 'r':
-14:      printf("You chose Red");
-15:      break;
-16:
-17:     case 'B':
-18:     case 'b':
-19:      printf("You chose Blue");
-20:      break;
-21:
-22:     case 'G':
-23:     case 'g':
-24:      printf("You chose Green");
-25:      break;
-26:
-27:     default:
-28:      printf("You chose incorrectly");
-29: }
-30:   getch();
-31: }
-32: }
-```
-
-## 注释
-Switch 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，char。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 colour。
-
-每个 switch 选择（此示例中的每个字母选项）的 case 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
-
-case 选择也是区分大小写的。通过将 cases 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 R 或小写的 r 作为选项进行选择。
-
-## Switch 程序设计一个简单计算器
-
-### 屏幕输入与输出
-
-120
-
-## 第四章 – 流程控制
-
-```
-E:\BookC\calculatorSimpleSwitchWORKS14072017.exe
-Enter no1: 12
-Enter no2: 14
-Choose process:
-+
--
-/
-  
-12.000000 divided by 14.000000 is: 0.857143
-```
-
-# 第四章 - 流程控制
-
-## 程序
-
-```
-/* calculatorSimpleSwitch/ORKS14072017.c |
-1 //程序目标：实现 Switch Case - 简单计算器
-2 #include <stdio.h>
-3 int main()
-4 {
-5     float no1, no2, ans = 0;
-6     char process;
-7     printf("Enter number 1: %f");
-8     scanf("%f", &no1);
-9     printf("Enter number 2: %f");
-10    scanf("%f", &no2);
-11
-12    printf("Choose process: + - * /
-");
-13    printf("%c\n", &process);
-14    printf("\n");
-15
-16    switch (process)
-17    {
-18        case '+':
-19            ans = no1 + no2;
-20            printf("%f added to %f is: %f\n", no1, ans);
-21            break;
-22
-23        case '-':
-24            ans = no1 - no2;
-25            printf("%f subtracted from %f is: %f\n", no1, ans);
-26            break;
-27
-28        case '*':
-29            ans = no1 * no2;
-30            printf("%f multiplied by %f is: %f\n", no1, ans);
-31            break;
-32
-33        case '/':
-34            ans = no1 / no2;
-35            printf("%f divided by %f is: %f\n", no1, ans);
-36            break;
-37
-38        default:
-39            printf("You chose incorrectly");
-40            break;
-41    }
-42 }
-```
-
-getch();
-
-1: //程序目标：展示带有 char 数据类型的 switch
-2:
-3: #include <stdio.h>
-4: main ()
-5: {
-6:     char colour;
-7:     printf("Please enter a letter - R, G or B: ");
-8:     scanf("%c", &colour);
-
-# 第四章 - 流程控制
-
-```
-floatans = 0
-```
-    printf("Please enter a letter - R, G or B: ");
-    scanf("%c", &colour);
-    switch (colour)
-    {
-        case 'R':
-        case 'r':
-            printf("You chose Red");
-            break;
-        case 'B':
-        case 'b':
-            printf("You chose Blue");
-            break;
-        case 'G':
-        case 'g':
-            printf("You chose Green");
-            break;
-        default:
-            printf("You chose incorrectly");
-    }
-    getch();
-}
-```
-
-等等，我之前的翻译在处理代码时出现了重复和格式混乱。我将重新为您提供一份干净、准确的翻译版本。
-
-[content]
-
-## 第四章 – 流程控制
-
-## 注释
-在上述代码中，不需要为每周的每一都编写 *case* 语句。*Case* 可以根据需要打印到屏幕的内容进行简化。如果是特定的某天，例如周一或周二，则 switch 代码会更详细。相反，如果只需要选择一个工作日或周末，则代码可以简化。第 14 行到 19 行展示了如何编写具有相同输出的各种选择。这对于工作日和周末都效果良好。
-
-如果所需的输出是根据分数得出的成绩等级，那么使用 *If, else if, else* 语句更好。一个处理从 0 到 100 分的 101 个分数以及由此产生的 6 种等级的 switch 语句将包含过多代码，且在 *switch* 中难以阅读。因此，在根据分数范围确定等级的成绩情况下，*If, Else If, Else* 看起来更好。
-
-## Switch – 字符类型
-
-SwitchColoursChar23122014.c
+`SwitchColoursChar23122014.c`
 
 ```
 1 //程序目标：展示带有 char 数据类型的 switch
+
 2
+
 3 #include <stdio.h>
+
 4 main ()
+
 5 {
+
 6     char colour;
+
 7     printf("Please enter a letter - R, G or B: ");
 8     scanf("%c", &colour);
 9     switch (colour)
@@ -3922,8 +3534,6 @@ SwitchColoursChar23122014.c
 2:
 3: #include <stdio.h>
 
-# 第四章 - 流程控制
-
 ```
 4: main ()
 5: {
@@ -3956,36 +3566,38 @@ SwitchColoursChar23122014.c
 32: }
 ```
 
-## 注释
-Switch 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，char。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 colour。
+### 注释
+`Switch` 同样适用于单个字母字符。第 6 行显示，这些可以不是整数声明，而是字符类型，`char`。第 8 行 `scanf("%c",&colour);` 意味着 `%c` 允许编译器读取单个字母字符 `colour`。
 
-每个 switch 选择（此示例中的每个字母选项）的 case 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
+每个 `switch` 选择（此示例中的每个字母选项）的 `case` 状态必须括在单引号的开始和结束引号中。第 12、13、17、18、22 和 23 行说明了这一点。例如，在第 12 行中，`case 'R':` 是正确的。如果省略了单引号使该行变为 `case R:`，程序将无法运行。
 
-case 选择也是区分大小写的。通过将 cases 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 R 或小写的 r 作为选项进行选择。
+`case` 选择也是区分大小写的。通过将 `cases` 同时包含大写和小写（例如第 12 行和第 13 行），可以确保红色这一选项可以通过输入大写的 `R` 或小写的 `r` 作为选项进行选择。
 
-## Switch 程序设计一个简单计算器
+### Switch 程序设计一个简单计算器
 
-### 屏幕输入与输出
+#### 屏幕输入与输出
 
 120
 
-## 第四章 – 流程控制
-
 ```
 E:\BookC\calculatorSimpleSwitchWORKS14072017.exe
+
 Enter no1: 12
+
 Enter no2: 14
+
 Choose process:
+
 +
+
 -
+
 /
-  
+
 12.000000 divided by 14.000000 is: 0.857143
 ```
 
-# 第四章 - 流程控制
-
-## 程序
+#### 程序
 
 ```
 /* calculatorSimpleSwitch/ORKS14072017.c |
@@ -3999,34 +3611,34 @@ Choose process:
 8     scanf("%f", &no1);
 9     printf("Enter number 2: %f");
 10    scanf("%f", &no2);
-11
+
 12    printf("Choose process: + - * /
 ");
 13    printf("%c\n", &process);
 14    printf("\n");
-15
+
 16    switch (process)
 17    {
 18        case '+':
 19            ans = no1 + no2;
 20            printf("%f added to %f is: %f\n", no1, ans);
 21            break;
-22
+
 23        case '-':
 24            ans = no1 - no2;
 25            printf("%f subtracted from %f is: %f\n", no1, ans);
 26            break;
-27
+
 28        case '*':
 29            ans = no1 * no2;
 30            printf("%f multiplied by %f is: %f\n", no1, ans);
 31            break;
-32
+
 33        case '/':
 34            ans = no1 / no2;
 35            printf("%f divided by %f is: %f\n", no1, ans);
 36            break;
-37
+
 38        default:
 39            printf("You chose incorrectly");
 40            break;
@@ -4034,31 +3646,25 @@ Choose process:
 42 }
 ```
 
-
-
-
-
-# 第四章 – 流程控制
-
-# 确定最大值或最小值
+### 确定最大值或最小值
 
 输入输出
 
 ```
 E:\BookCVW\ForLoopAges\WORKS27062017.exe
+
 请输入三个互不相同的年龄：
+
 Enter age1: 5
 Enter age2: 2
 Enter age3: 6
+
 age2 2 is lowest
+
 Program End_
 ```
 
 程序
-
-# 第四章 - 流程控制
-
-# 代码
 
 ```
 1: /* /程序目的：确定三个整数的最小值
@@ -4069,39 +3675,44 @@ Program End_
 ```
 23: printf("age1 of %d is lowest", age1);
 24:
+
 25:
+
 26: else if (age2 < age1 && age2 < age3)
 27:
+
 28: printf("age2 %d is lowest", age2);
 29:
+
 30:
+
 31: else
 32:
+
 33: printf("age3 %d is lowest", age3);
 34:
+
 35:
+
 36: printf("\n\nProgram End\");
 37: getch();
 38:
+
 39:
+
 ```
 
-## 注释
+### 注释
+上面的代码是上一个示例的详细扩展。该程序并不是设计用于计算两个整数的最大值，而是使用第 21 到 34 行的 `if`、`else if`、`else` 语句来确定三个整数的最小值。为了使此示例生效，输入的所有整数应该互不相同。虽然这段代码的设计是为了展示如何使用 `if`、`else if` 和 `else` 语句，但它表明，在确定三个整数的最小值时，代码会变得越来越臃肿。因此，如果在给定输入整数数量和每个值的情况下计算三个以上整数的最大值或最小值，则应该使用数组（第六章 数组简介）。数组可以实现代码简化并允许更强大的数据处理。
 
-上面的代码是上一个示例的详细扩展。该程序并不是设计用于计算两个整数的最大值，而是使用第 21 到 34 行的 if、else if、else 语句来确定三个整数的最小值。为了使此示例生效，输入的所有整数应该互不相同。虽然这段代码的设计是为了展示如何使用 if、else if 和 else 语句，但它表明，在确定三个整数的最小值时，代码会变得越来越臃肿。因此，如果在给定输入整数数量和每个值的情况下计算三个以上整数的最大值或最小值，则应该使用数组（第六章 数组简介）。数组可以实现代码简化并允许更强大的数据处理。
-
-# 第四章 — 流程控制
-
-# 针对四个整数的 If, Else If, Else 语句程序
+### 针对四个整数的 If, Else If, Else 语句程序
 
 ```c
 // ForLoopAge/WORKS29032017.c
-
 /* 程序目的：确定四个整数的最小值
  并打印到屏幕上。数据输入者决定
 四个整数的值，但不决定数量，即四个 */
 #include <stdio.h>
-
 int main() {
     int age1, age2, age3, age4;
     printf("Enter age1: ");
@@ -4112,7 +3723,6 @@ int main() {
     scanf("%d", &age3);
     printf("Enter age4: ");
     scanf("%d", &age4);
-
     if (age1 < age2 && age1 < age3 && age1 < age4) {
         printf("age1 %d is lowest,", age1);
     }
@@ -4130,51 +3740,46 @@ int main() {
 ```
 
 注释
+对于从输入的三个整数中确定最小值，需要 34 行代码，包括 14 行的 `if`、`else if`、`else` 语句（上一个示例）。对于四个整数的最小值，需要 39 行，包括 18 行的 `if`、`else if`、`else` 语句代码。比较的整数越多，在这种情况下需要的代码就越大且越难以管理。这说明了数组的必要性。
 
-对于从输入的三个整数中确定最小值，需要 34 行代码，包括 14 行的 if、else if、else 语句（上一个示例）。对于四个整数的最小值，需要 39 行，包括 18 行的 if、else if、else 语句代码。比较的整数越多，在这种情况下需要的代码就越大且越难以管理。这说明了数组的必要性。
-
-# 第四章 – 流程控制
-
-许多程序员可能更倾向于编写如下带有额外括号的 if、else if、else 语句：
+许多程序员可能更倾向于编写如下带有额外括号的 `if`、`else if`、`else` 语句：
 
 ```
 19    if ((age1 < age2) && (age1 < age3) && (age1 < age4))
 20{
 21        printf("age of %d is lowest", age1);
 22}
-23
+
 24    else if ((age2 < age1) && (age2 < age3) && (age2 < age4))
 25{
 26        printf("age2 %d is lowest", age2);
 27}
-28
+
 29    else if ((age3 < age1) && (age3 < age2) && (age3 < age4))
 30{
 31        printf("age3 %d is lowest", age3);
 32}
-33
+
 34    else
 35{
 36        printf("age4 %d is lowest", age4);
 37}
-38
+
 39getch();
 40
 ```
 
 第 19、24 和 29 行有四个左括号和四个右括号，可能表示更好的设计。紧之前的示例在每个条件行中只有一个左括号和一个右括号。
 
-# 第四章 - 流程控制
-
 Q4.1 下面程序是否存在错误？
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_141.png)
 
-# 第五章 - 循环
+## 第五章 - 循环
 
 第五章 - 循环简介
 
-## For 循环
+### For 循环
 
 输入输出和程序
 
@@ -4191,10 +3796,7 @@ main() {
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_146_0.png)
 
-
-
-
-上面的代码展示了一个*for循环*的执行过程。第 8 行的具体循环
+上面的代码展示了一个 `for循环` 的执行过程。第 8 行的具体循环
 
 ```
 for (i = 0; i < 5; i++)
@@ -4215,8 +3817,6 @@ printf("\t%d", i);
 ```
 
 屏幕上的呈现将如下所示。
-
-## 第五章 循环
 
 ### 屏幕输入输出与程序 – 制表
 
@@ -4240,8 +3840,6 @@ printf("\t%d", i);
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_148_0.png)
 
 第 10 行中的 `\t` 在打印到屏幕的循环每个整数之间放置了一个制表符。如果将 `\t` 改为 `\n`（即反斜杠和 `n`），屏幕输出将再次变为：
-
-## 第五章 循环
 
 ### 换行 – 屏幕输入输出与程序
 
@@ -4283,15 +3881,11 @@ printf("\t%d", i);
 15:
 ```
 
-## 第五章 循环
-
 字符 `\n` 创建换行，即在循环每个整数之间创建一个新行。
 
 反斜杠字符 `\` 位于大多数电脑键盘的左下角 – 靠近 Z 键。它不能与位于大多数键盘右下角、句号旁的正斜杠 `/` 混淆。正斜杠和反斜杠字符执行不同的功能。正斜杠向右上方倾斜。反斜杠向左倾斜。
 
 **Q5.1.** 在上面的示例中，第 10 行没有出现与符号 `&`。如果包含一个与符号会发生什么？
-
-## 第五章 循环
 
 ### for 循环扩展
 
@@ -4315,25 +3909,41 @@ ForloopExtended-31012015.c
 15
 ```
 
+
+
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_151_0.png)
 
 代码
 
 ```
 1: "*程序目标：展示 for 循环的开发*/
+
 2:
+
 3: #include <stdio.h>
+
 4: main()
+
 5: {
+
 6:     int i = 0;
+
 7:
+
 8:     for (i = 0; i < 5; i++)
+
 9:
+
 10:        printf("\n%d\t%d", i, i*2);
+
 11:
+
 12:
+
 13:   getch();
+
 14: }
+
 15:
 ```
 
@@ -4345,7 +3955,7 @@ ForloopExtended-31012015.c
 
 ## 键盘输入 - 扫描
 
-for 循环可以扩展以允许用户在循环内输入。这是通过在第 6 行添加一个整数 `n` 实现的。添加了两行代码：第 8 行包含
+`for` 循环可以扩展以允许用户在循环内输入。这是通过在第 6 行添加一个整数 `n` 实现的。添加了两行代码：第 8 行包含
 
 ```
 printf("Enter a no: \t");
@@ -4365,7 +3975,7 @@ for (i=0; i<n; i++)
 
 作为 `n` 的结果。
 
-## 第五章 循环
+# 第五章 循环
 
 ### Forloopwithin301215.c
 
@@ -4376,15 +3986,15 @@ for (i=0; i<n; i++)
 4 main()
 5 {
 6     int i = 0, n = 0;
-7
+
 8     printf("Enter a no: \t");
 9     scanf("%d", &n);
-10
+
 11     for (i = 0; i < n; i++)
 12     {
 13         printf("\n%d", i);
 14     }
-15
+
 16     getch();
 17 }
 ```
@@ -4411,7 +4021,7 @@ for (i=0; i<n; i++)
 17: }
 ```
 
-## 第五章 循环
+# 第五章 循环
 
 ### 比较 for Loops
 
@@ -4435,8 +4045,6 @@ for (i=0; i<n; i++)
 | 16 | getch(); | | 16 | getch(); |
 | 17 | } | | 17 | } |
 
-
-
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_154_0.png) 额外的代码允许用户输入 `n` 值，从而对数据输入数量提供了更大的控制。第 6 行添加了整数 `n`。第 8 行和第 9 行允许用户输入 `n`。第 11 行是 `i < n;` 而不是 `i < 5`。
 
 **Q5.3.** 下面代码有什么错误？
@@ -4451,16 +4059,18 @@ for (i=0; i<n; i++)
   0; i <
   n
 9
+
 10 ; i
 11 ++) printf("\n%d",
 12 }
 13
+
 14 : )getch();
 ```
 
-**Q5.4.** 创建一个 for 循环，允许用户确定零到十的数值范围，以及直到五的乘法表。
+**Q5.4.** 创建一个 `for` 循环，允许用户确定零到十的数值范围，以及直到五的乘法表。
 
-## 第五章 循环
+# 第五章 循环
 
 ### For 循环输入矩形面积
 
@@ -4497,9 +4107,9 @@ getch();
 | Enter height of cm: | 40 |
 | Volume of Rectangle 2 is: | 1200 squared |
 
-## 第五章 循环
+# 第五章 循环
 
-上述是计算二维对象的面积。第 13 行到 27 行的输入是一个 for 循环。这意味着一旦对矩形数量进行了声明（第 7 行）并进行了输入（第 10 行），就可以计算多个矩形（面积而不是一个。
+上述是计算二维对象的面积。第 13 行到 27 行的输入是一个 `for` 循环。这意味着一旦对矩形数量进行了声明（第 7 行）并进行了输入（第 10 行），就可以计算多个矩形（面积而不是一个。
 
 **Q5.5.** 创建一个程序计算三维对象的体积，例如木块。该程序允许数据输入者选择木块的数量以及它们的各种尺寸（宽度、高度和深度）。屏幕输出将包含数据输入和每个对象的体积。这个问题扩展了上面的示例以包含另一个维度。
 
@@ -4513,34 +4123,30 @@ getch();
 
 直径 = 半径 * 2。
 
-
-
-
-
 # 第五章 - 循环
 
 ## 递减 for 循环
-for 循环也可以递减。对于单行代码，其公式略有不同。
+`for` 循环也可以递减。对于单行代码，其公式略有不同。
 
 ForLoopDecrement04062015.c
 
 ```c
 1 /*程序目的：演示循环递减*/
-2
+
 3 #include <stdio.h>
 4 main()
-5
+
 6 {
 7   int x = 0, n = 0;
-8
+
 9   printf("Enter an int: ");
 10  scanf("%d", &n);
-11
+
 12  for (x = n; x >= 0; x--)
 13  {
 14    printf("\n%d", x);
 15  }
-16
+
 17  getch();
 18 )
 ```
@@ -4574,9 +4180,9 @@ ForLoopDecrement04062015.c
 | 18 | 18 |
 | 19 ) | 19 ) |
 
-第 12 行 for (x=n; x>=0; x--)
+第 12 行 `for (x=n; x>=0; x--)`
 
-第 12 行 for (x=0; x<=n; x++)
+第 12 行 `for (x=0; x<=n; x++)`
 
 ## 释
 
@@ -4595,16 +4201,16 @@ ForLoopDecrement04062015.c
 6    int i, j, n;
 7    printf("Enter n: ");
 8    scanf("%d", &n);
-9
+
 10   printf("\nni \tj");
-11
+
 12   for (i = 1, j = n; i <= n, j >= 1; i++, j--)
 13   (
 14      printf("\n%d \t%d", i, j);
 15   )
-16
+
 17 getch();
-18
+
 19
 ```
 
@@ -4612,7 +4218,7 @@ ForLoopDecrement04062015.c
 
 ## 释
 
-上述添加了另一个变量 j。创建了一个 *for* 循环，使得当 *i* 递增时，*j* 正在递减。第 12 行至关重要，它包含了将 *i* 和 *j* 值设置为 *n* 的 *for* 循环。*n* 是程序运行时用户在第 8 行输入的值。第 12 行通过 *i++* 将 *i* 值从 1 递增到 *n*，并通过 *j--* 将 *j* 值从 *n* 递减到 1。
+上述添加了另一个变量 `j`。创建了一个 *for* 循环，使得当 *i* 递增时，*j* 正在递减。第 12 行至关重要，它包含了将 *i* 和 *j* 值设置为 *n* 的 *for* 循环。*n* 是程序运行时用户在第 8 行输入的值。第 12 行通过 *i++* 将 *i* 值从 1 递增到 *n*，并通过 *j--* 将 *j* 值从 *n* 递减到 1。
 
 ## 在循环中两个两个值产生第三值
 屏幕输入
@@ -4622,7 +4228,8 @@ ForLoopDecrement04062015.c
 int main()
 {
     int i
-```上述代码通过 i 和 j 的值相乘来创建一个新值 k。从 1 开始递增的 i 乘以从 5 开始递减的 j，从而产生 k 的值。上述第 12 行的 i * j 可以通过少量额外代码修改为 k = i * j。结果如下。
+```
+上述代码通过 `i` 和 `j` 的值相乘来创建一个新值 `k`。从 1 开始递增的 `i` 乘以从 5 开始递减的 `j`，从而产生 `k` 的值。上述第 12 行的 `i * j` 可以通过少量额外代码修改为 `k = i * j`。结果如下。
 
 ## 在 for 循环中两个两个值产生第三值
 屏幕输入与程序
@@ -4648,7 +4255,7 @@ int main() {
 
 ## 对比
 
-第 12 行有 i * j。不需要在第 4 行声明变量 k。第 10 行的 for 循环包含了 k = i * j；第 12 行在第 13 行结束。作为结果，k 必须在第 4 行声明。上述示例中，计算 i * j 可能会变得复杂。例如，k = a+b*c-d/e+f*g 在第 12 行编写更为整洁——与上面类似——k 在第 12 行出现。额外的 for 循环可以提高可读性。**Q57.** 朋友们，完成 10 次。创建一个打印到屏幕的程序。
+第 12 行有 `i * j`。不需要在第 4 行声明变量 `k`。第 10 行的 `for` 循环包含了 `k = i * j；` 第 12 行在第 13 行结束。作为结果，`k` 必须在第 4 行声明。上述示例中，计算 `i * j` 可能会变得复杂。例如，`k = a+b*c-d/e+f*g` 在第 12 行编写更为整洁——与上面类似——`k` 在第 12 行出现。额外的 `for` 循环可以提高可读性。**Q57.** 朋友们，完成 10 次。创建一个打印到屏幕的程序。
 
 ## 双精度、浮点型和整数
 屏幕输入输出
@@ -4691,10 +4298,6 @@ int power = 32;
 | 27 | 2.0 | 2.0 | 134217728 |
 | 28 | 2.0 | 2.0 | 268435456 |
 
-
-
-
-
 # 第五章 - 循环
 
 ```
@@ -4704,15 +4307,15 @@ int power = 32;
 26: printf("%d\t%.0f\t%.0f\t%10d\t%10.0f\t%10.01f",
 27: i, f, d, n, ansint, ansfloat, ansdouble);
 28:
-29:
+
 30: getch();
-31:
+
 32:
 ```
 
 ## 注释
 
-上述内容包含一个从 0 次到 30 次 2 的幂的 for 循环。取整数 `i`（第 5 行）、浮点型 `f`（第 6 行）和双精度型 `d`（第 7 行）。这三个声明中的每一个都根据第 5 行声明了 0 到 30 次的 2。整数在 $2^{30}$ 后会丢失数值，而浮点型和双精度型则不会。for 循环的设计（第 21 到 28 行）在屏幕上生成了表格信息。第 14 行和 26 行的 `f` 都是字母。`l`（在杂志读作 Elle）不是数字。`lf` 表示长浮点型（long float）。
+上述内容包含一个从 0 次到 30 次 2 的幂的 `for` 循环。取整数 `i`（第 5 行）、浮点型 `f`（第 6 行）和双精度型 `d`（第 7 行）。这三个声明中的每一个都根据第 5 行声明了 0 到 30 次的 2。整数在 $2^{30}$ 后会丢失数值，而浮点型和双精度型则不会。`for` 循环的设计（第 21 到 28 行）在屏幕上生成了表格信息。第 14 行和 26 行的 `f` 都是字母。`l`（在杂志读作 Elle）不是数字。`lf` 表示长浮点型（long float）。
 
 # 显示双精度与浮点型相互比较精度的循环
 
@@ -4725,51 +4328,62 @@ int power = 32;
 powerFloatDoubleTable/DRKS12092015.c
 
 ```
-1 //程序目标：展示浮点型和双精度型作为整体数值的比较，
-2 以及 %21.0f 和 %21.0d 如何改进屏幕打印对齐*/
-3 #include <stdio.h>
-4 main() {
+//程序目标：展示浮点型和双精度型作为整体数值的比较，
+以及 %21.0f 和 %21.0d 如何改进屏幕打印对齐*/
+#include <stdio.h>
+main() {
 5 (
       int n
 ```
 
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
 ## 注释
 
-在上述中，值为 10 的浮点型和值为 10 的双精度型都已计算到幂值。幂范围从 0 到 20。循环显示浮点型在 $10^{10}$ 后丢失精度。双精度型在 $10^{20}$ 之后保持准确。上述程序采用了之前的示例，比较了浮点型和双精度型。排除了整数。已对第 18、19、23、26 和 27 行进行了修改，以从表格信息中排除整数。
+在上述中，值为 10 的浮点型和值为 10 的双精度型都已计算到幂值。幂范围从 0 到 20。循环显示浮点型在 `$10^{10}$` 后丢失精度。双精度型在 `$10^{20}$` 之后保持准确。上述程序采用了之前的示例，比较了浮点型和双精度型。排除了整数。已对第 18、19、23、26 和 27 行进行了修改，以从表格信息中排除整数。
 
 # 第五章 - 循环
 
-# 显示双精度与浮点型在进制精度的循环
+## 显示双精度与浮点型在进制精度的循环
 
 屏幕输入与输出
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_169_0.png)
 
-# 第五章 - 循环
-
 ## 程序
 
-# 代码
+### 代码
 
 ```
 /*程序目标：展示浮点型和双精度型作为小数的比较，
    以及 0.20f 和 0.20d 如何改进屏幕打印对齐*/
+
 #include <stdio.h>
+
 int main() {
     int n, root;
     float f, ansfloat = 0;
     double d, ansouble = 0;
-
     printf("Enter float f: \t\t");
     scanf("%f", &f);
     printf("Enter double d: \t\t");
     scanf("%lf", &d);
     printf("Enter int root: \t\t");
     scanf("%d", &root);
-
     printf("\nfloatdouble\tRoot");
     printf("\t\tAns Float \t\tAns Double");
-
     for (n = 0; n <= root; n++) {
         ansfloat = 1 / pow(f, n);
     }
@@ -4793,7 +4407,7 @@ int main() {
 
 # 第五章 - 循环
 
-# 使用整数和取模计算质数的 for 循环
+## 使用整数和取模计算质数的 for 循环
 
 屏幕输入与输出和程序
 
@@ -4818,7 +4432,7 @@ int main() {
 ```
 (img/d6aad4cacf55cccf946a_172_0.png)
 
-# 代码
+### 代码
 
 ```
 1: #include <stdio.h>
@@ -4840,7 +4454,7 @@ int main() {
 17: }
 ```
 
-该程序设计用于寻找数值 `n` 的因数。如果 `n` 可被小于 $n/2$（一半）且大于 2 的任何值整除（无余数），则它不是质数。第 9 行设置 for 循环的值从输入的值（即 `divisor / n`）运行到 2（即 `divisor >= 2`）。通过 `divisor--` 执行递减。如果第 5 行提示的 `n` 值在第 6 行扫描到内存中，被第 11 到 14 行的任何循环值整除（无余数），则第 9 行的 if 语句结果将打印到屏幕上。
+该程序设计用于寻找数值 `n` 的因数。如果 `n` 可被小于 `n/2`（一半）且大于 2 的任何值整除（无余数），则它不是质数。第 9 行设置 `for` 循环的值从输入的值（即 `divisor / n`）运行到 2（即 `divisor >= 2`）。通过 `divisor--` 执行递减。如果第 5 行提示的 `n` 值在第 6 行扫描到内存中，被第 11 到 14 行的任何循环值整除（无余数），则第 9 行的 `if` 语句结果将打印到屏幕上。
 
 # 第五章 - 循环
 
@@ -4869,11 +4483,11 @@ int main() {
 
 ## 注释
 
-`sum` 必须初始化为零（第 7 行）。该值包含在第 15 行的计算中。初始化为其他值将产生不准确的输出。第 15 行的 `sum += x` 必须包含在 for 循环内。
+`sum` 必须初始化为零（第 7 行）。该值包含在第 15 行的计算中。初始化为其他值将产生不准确的输出。第 15 行的 `sum += x` 必须包含在 `for` 循环内。
 
 # 第五章 - 循环
 
-# 在循环中使用 *=
+## 在循环中使用 *=
 
 屏幕输入输出和程序
 
@@ -4913,7 +4527,7 @@ yankee222017.c
       int noOfHorses = 0
 ```
 
-# 代码
+### 代码
 
 ```
 1: include <stdio.h>
@@ -4951,13 +4565,10 @@ yankee222017.c
 
 在上述中，玩家被提示输入累加中使用的马数。在这种情况下，是三。输入三并按下回车。随后玩家被提示输入第一只马获胜的赔率，然后是第二只和第三只。通过 `*=`，计算了第 12 到 17 行 1 美元投注的总收益。重要的是 `accumulator`（第 6 行）初始化为 1 而不是 0，程序才能正常工作。该程序是关于为博彩游戏编程的说明，而不是推荐博彩。对于任何想要获得 C 语言如何用于该系列的全面视角的人——本系列的第三本——业务中的数组——包含了一个以彩票游戏作为示例的博彩章节。然而，读者需要循环和概率理论的深厚知识。
 
-
-
-
-
 # 第五章 - 循环
 
 ## += 的实际示例：银行账户
+
 ### 屏幕输入输出与程序
 
 ```c
@@ -4974,15 +4585,16 @@ BankAccountWORKS20272017.c
 注释程序显示了一个简单的储蓄账户程序。用户被提示输入存款金额。在第 15 行使用 `+=` 计算总和。第 17 行和第 18 行将结果打印到屏幕上。在这种情况下，将 `total`（第 5 行）初始化为零对于准确处理和输出至关重要的。
 
 | 初始化规则 | | |
-|---|---|
-| += | 将总和初始化为 0 |
-| *= | 将阶乘初始化为 1 |
+|---|---|---|
+| `+=` | 将总和初始化为 0 |
+| `*=` | 将阶乘初始化为 1 |
 
 173
 
 # 第五章 - 循环
 
 ## while 循环
+
 ### 循环输入输出程序
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_181_0.png)
@@ -5032,6 +4644,7 @@ int main() {
 175
 
 ## 防止除零规则
+
 ## 屏幕输入输出程序
 
 DivideByZeroWhileLoop.16062015.c
@@ -5068,7 +4681,7 @@ DivideByZeroWhileLoop.16062015.c
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_183_0.png)
 
-# 代码
+### 代码
 
 ```c
 1: //程序目标：防止除零/
@@ -5132,15 +4745,19 @@ int main() {
 
 注释 在上面的 `while` 循环中，第 9 行提示输入一个数字。第 11 行将输入的数字扫描到内存中。第 13 行规定只要数字不等于 0，就执行括号内的内容，即“输入另一个数字”。输入 0 以外的任何数字都会执行 `while` 循环——第 13 到 17 行。此类循环的目标是允许输入整数直到输入 0 为止`while` 循环停止。此代码可用于访问文件的保护，例如银行账户的密码。
 
-```c
-printf("nPlease enter your pin\n");
-scanf("%d", &pin);
 
-while (pin != 0) {
-    printf("Incorrect pin entered. Re-enter pin\n");
-    scanf("%d", &pin);
-}
-```
+
+`printf("nPlease enter your pin\n");`
+
+`scanf("%d", &pin);`
+
+`while (pin != 0) {`
+
+`    printf("Incorrect pin entered. Re-enter pin\n");`
+
+`    scanf("%d", &pin);`
+
+`}`
 
 要成功运行，需要在更早的地方声明 `pin`。
 
@@ -5149,6 +4766,7 @@ while (pin != 0) {
 # 第五章 - 循环
 
 ## while 循环相对于 if 语句的优势
+
 ### 屏幕输入输出与程序
 
 ```c
@@ -5158,7 +4776,6 @@ while (pin != 0) {
 4 (
      int guess;
 ```
-
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_187_0.png)
 
 代码
@@ -5180,9 +4797,10 @@ while (pin != 0) {
 `while` 允许持续循环直到猜中正确数字。使用 `if`，当第二次猜错数字时，控制从第 13 行移动到第 16 行，而不是返回第 10 行。
 
 # while 循环在猜数字游戏中继续嵌套的 if
+
 ### 屏幕输入与程序
 
-guessANoWithIf/ORKS22072017.c
+`guessANoWithIf/ORKS22072017.c`
 
 ```c
 1 /*程序目标：使用 while 循环进行猜数字游戏
@@ -5216,10 +4834,6 @@ guessANoWithIf/ORKS22072017.c
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_190_0.png)
-
-
-
-
 
 # 第五章 - 循环
 
@@ -5258,7 +4872,7 @@ guessANoWithIf/ORKS22072017.c
 
 ## 注释
 
-猜数字游戏通过额外的代码进一步扩展。第 11 到 23 行的 while 循环包含两个嵌套的 if。这些判断告诉玩家猜的数字是太小还是太大。这些额外信息允许玩家更快地猜中目标数字。
+猜数字游戏通过额外的代码进一步扩展。第 11 到 23 行的 `while` 循环包含两个嵌套的 `if`。这些判断告诉玩家猜的数字是太小还是太大。这些额外信息允许玩家更快地猜中目标数字。
 
 ## 使用 rand 函数生成随机数的屏幕输入输出
 
@@ -5273,15 +4887,22 @@ guessANoWithIf/ORKS22072017.c
 int main() {
   int randomNo
 ```
-
 ```
+
 E:\Books\GuessANoRandomNoRandomWORKS15082017.exe
+
 猜一个数字: 5
+
 太高了。再试一次: 1
+
 太小了。再试一次: 3
+
 太高了。再试一次: 2
+
 是的。你猜对了。
+
 程序结束
+
 ```
 
 # 代码
@@ -5327,7 +4948,7 @@ E:\Books\GuessANoRandomNoRandomWORKS15082017.exe
 
 从 15 到 28 行的循环允许持续猜数字。这意味着通过第 9 行的 `rand()` 函数，中奖数字被随机设置为计算机处理器设置（而不是当前时间）。`%10` 意味着随机数范围是从 0 到 9，因为 `%10` 将计算机生成的随机数设置为小于 10 的余数。如果第 8 行的 `%10` 语句是 `%1000`，那么随机数范围将是 0 到 999。第 10 行的 `+1` 意味着中奖数字的范围是 1 到 10（包含边界值），而不是 0 到 9。
 
-循环通过第 12 行的 `printf` 语句提示玩家输入一个数字。第 13 行的 `scanf` 允许玩家从计算机键盘输入数字。第 17 行和 27 行让玩家知道猜的数字太小还是太大。由于在此阶段还没有猜中目标数字，因此第 15 到 28 行的 while 循环不会退出。相反，玩家会被提示再次猜测。由于第 15 行的结果会扫描另一个猜测。玩家将一直猜，直到选中目标数字为止。然后第 15 到 28 行的 while 循环退出，控制流转到第 29 行，该行让玩家知道猜中了。
+循环通过第 12 行的 `printf` 语句提示玩家输入一个数字。第 13 行的 `scanf` 允许玩家从计算机键盘输入数字。第 17 行和 27 行让玩家知道猜的数字太小还是太大。由于在此阶段还没有猜中目标数字，因此第 15 到 28 行的 `while` 循环不会退出。相反，玩家会被提示再次猜测。由于第 15 行的结果会扫描另一个猜测。玩家将一直猜，直到选中目标数字为止。然后第 15 到 28 行的 `while` 循环退出，控制流转到第 29 行，该行让玩家知道猜中了。
 
 第 3 行添加了另一个库，包含：
 
@@ -5426,27 +5047,40 @@ E:\Books\GuessANoRandomNoRandomWORKS15082017.exe
 ## 使用 while 循环进行多选题屏幕输入输出
 
 ```
+
 E:\C\WhileLoopTwice147WORK505.c
+
 选择以下数字之一：
+
 历史上最大的 147 是：
+
 1 John Parrot 在 1974 年对 Steve Davis。
+
 2 Steve Davis 在 1982 年对 John Spencer。
+
 3 Cliff Thorburn 在 1983 年对 Terry Griffiths。
+
 4 Jimmy White 在 1947 年对 Jimmy White。
+
 5 Jimmy White 完成 147 仅用 7 分 41 秒
+
 6 在 2014 年7月14日凌晨 1:47 在 147 Club。
+
 7 Steven Henry 在 1995 年对 Jimmy White。
+
 8 John Higgins 在 2007 年对 Dennis Taylor。
+
 9 Ding Junhui 在 2011 年 PFB 公开赛中的第二次 147。
+
 10 Marco Fo 在 2015 年大师赛中的 147。
+
 11 Ronnie O'Sullivan 在 147 Club 完成的 147。
+
 12 美美的 Virgin's 147 路通过了
+
 13 J S Bach 的 BMW 147，马力为 127。
+
 ```
-
-
-
-
 
 # 第五章 - 循环
 
@@ -5491,21 +5125,41 @@ int main() {
 3 main()
 4 {
 5     int ratePerHour, noOfHours, minimumRate = 5,
+```
+
+
+
+```c
 6     maximumRate = 20, payment = 0;
+
 7 
+
 8     printf("Enter no of hours worked: ");
+
 9     scanf("%d", &noOfHours);
+
 10    printf("Enter rate per hour: ");
+
 11    scanf("%d", &ratePerHour);
+
 12 
+
 13    while (ratePerHour < minimumRate || ratePerHour > maximumRate)
+
 14 {
+
 15         printf("Wage breached. Reenter rate per hour: ");
+
 16         scanf("%d", &ratePerHour);
+
 17     }
+
 18 
+
 19     payment = ratePerHour * noOfHours;
+
 20     printf("\nPayment is: %d\n", payment);
+
 21 }
 ```
 
@@ -5639,22 +5293,17 @@ DivideByZeroWhileLoopWORKS1062015.c
 int main(){
 {
     int numerator, denominator, ans = 0;
-
     printf("Enter numerator: \t");
     scanf("%d", &numerator);
-
     printf("Enter denominator: \t");
     scanf("%d", &denominator);
-
     while (denominator == 0)
     {
         printf("\nCannot divide by zero.");
         printf("\nReenter denominator: \t");
         scanf("%d", &denominator);
     }
-
     ans = numerator/denominator;
-
     printf("\n%d divided by %d equals: \t%d", numerator, denominator, ans);
     printf("\nProgram End. ");
     getch();
@@ -5717,10 +5366,6 @@ int main() {
 38: 
 ```
 
-
-
-
-
 # 第五章 循环
 
 ## 九九法表 - 使用整数间隔而非制表
@@ -5729,6 +5374,7 @@ int main() {
 
 ```
 E:\BookCV.oop TimesTablesSpacesDisplay.line WORKSO0170915.exe
+
 Enter Ma No Across: 12
 Enter Ma No down:    12
 12 ~ 12 Tables      0 1 2 3 4 5 6 7 8 9 10 11 12
@@ -5803,6 +5449,11 @@ int main() {
 19    if (no1 > no2 && no1 > no3 && no1 > no4 && no1 > no4)
 20        printf("%d is greatest,\n", no1);
 21
+```
+
+
+
+```c
 22    else if (no2 > no1 && no2 > no3 && no2 > no4 && no2 > no5)
 23        printf("%d is greatest,\n", no2);
 24
@@ -5836,18 +5487,15 @@ int main() {
 /* 程序目标：对输入的五个整数进行数据操作 */
 #include <stdio.h>
 #define quantity 5
-
 int main() {
     int heights[quantity];
     int totalHeights = 0;
     int smallest = 0;
     int largest = 0;
-
     for (int i = 0; i < quantity; i++) {
         printf("Enter height of Person %d: ", i + 1);
         scanf("%d", &heights[i]);
         totalHeights += heights[i];
-
         if (i == 0) {
             smallest = heights[i];
             largest = heights[i];
@@ -5860,65 +5508,50 @@ int main() {
             }
         }
     }
-
     printf("\nSmallest is %d\n", smallest);
     printf("Largest is %d\n", largest);
     printf("Total heights is %d\n", totalHeights);
     printf("Average height is %d\n", totalHeights / quantity);
-
     return 0;
 }
 ```
 
-
-
-
 # 数组
 
 ## 用户决定数量程序
-ArrayOIHeightSortDecidesWORKS03082017.c |
+`ArrayOIHeightSortDecidesWORKS03082017.c`
 
 ```c
 /*程序目的：展示如何对从键盘扫描的高度数组（整数型）数据进行操作。
 用户决定数量 */
-
 #include <stdio.h>
 main() {
 {
   int quantity = 100;
   int heights[quantity];
   int i = 0, total = 0, smallest = 0, largest = 0;
-
   printf("输入高度数量: %d");
   scanf("%d", &quantity);
-
   printf("输入 %d 个人的身高: \n\n", quantity);
-
   for (i = 0; i < quantity; i++) {
-
     printf("输入第 %d 个人的身高: ", i + 1);
     scanf("%d", &heights[i]);
     total += heights[i];
   }
-
   smallest = heights[quantity];
   largest = heights[quantity];
-
   for (i = 0; i < quantity; i++) {
     if (heights[i] > largest) {
       largest = heights[i];
     }
-
     if (heights[i] < smallest) {
       smallest = heights[i];
     }
   }
-
   printf("\n最小是 %d", smallest);
   printf("\n最大是 %d", largest);
   printf("\n总计是 %d", total);
   printf("\n平均是 %d", total/quantity);
-
   printf("\n\n程序结束\n");
   getchar();
 }
@@ -5936,27 +5569,23 @@ main() {
 E:\BookC\ArrayReversed010822017.exe
 输入要输入的年龄数量: 5
 输入 5 个年龄，每个输入后按回车：
-
 输入年龄 1: 20
 输入年龄 2: 60
 输入年龄 3: 40
 输入年龄 4: 80
 输入年龄 5: 100
-
 输入顺序为 ...
 20
 60
 40
 80
 100
-
 逆序输入为 ...
 100
 80
 40
 60
 20
-
 年龄总计 300
 平均年龄为 60
 程序结束
@@ -6033,9 +5662,6 @@ int main() {
   // (此处由于原文存在大量OCR重复，已按逻辑整合)
 ```
 
-
-
-
 # 数组下标声明不准确导致的错误示例
 
 | 行号 | 文件 | 消息 |
@@ -6047,7 +5673,7 @@ int main() {
 
 ## 泡排序
 
- 屏幕输入与输出
+屏幕输入与输出
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_229_0.png)
 
@@ -6061,10 +5687,9 @@ int main() {
 /* Arraybubblesortnetwork:17082017.c */
 1 /* 程序 Ai: 使用泡排序代码对整数进行升序 */
 2 #include <stdio.h>
-3
 4 int main(){
 5 {
-6     int array[100]
+    int array[100]
 ```
 
 ## 泡排序代码
@@ -6072,20 +5697,16 @@ int main() {
 ```c
 1 /* 程序 Ai: 使用泡排序代码对整数进行升序 */
 2 #include <stdio.h>
-3
 4 int main(){
 5 {
-6 int array[100], quantity, numEntered, precedingValue, swap;
-7
-8 printf("Enter quantity of integers: ");
-9     scanf("%d", &quantity);
-10
-11 printf("Enter %d integers\n", quantity);
-12
-13 for (numEntered = 0; numEntered < quantity; numEntered++)
-14 {
-15     scanf("%d", &array[numEntered]);
-16 }
+int array[100], quantity, numEntered, precedingValue, swap;
+printf("Enter quantity of integers: ");
+    scanf("%d", &quantity);
+printf("Enter %d integers\n", quantity);
+for (numEntered = 0; numEntered < quantity; numEntered++)
+{
+    scanf("%d", &array[numEntered]);
+}
 ```
 
 # 数组
@@ -6152,13 +5773,9 @@ int main() {
 
 第 18 行第二次迭代内部的第 20 行嵌套的第一次迭代完成。4 与 6 比较，不交换。6 与 8 比较，不交换。8 与 10 比较，不交换。第 18 行第二次迭代内部的第 20 行嵌套的第一次迭代完成。第 18 行第二次迭代内部的第 20 行嵌套的第二次迭代将开始。2 与 4 比较，发生了交换。现在的序列为 2, 4, 6, 8, 10。此过程将持续直到数组排序完成。
 
-
-
-
-
 ## 程序
 
-ArrayName.hArrayName[i]/ORKS0212026.c
+`ArrayName.hArrayName[i]/ORKS0212026.c`
 
 ```c
 1 /*程序目的：用于姓名列表的字符数组*
@@ -6213,13 +5830,16 @@ firstName[10][no] (第 6 行)
 ```
 firstName
 ```
-printf 语句现在变为
 
-firstName[i]
 
-其中 i 是范围从 1 到 no 的值，允许在屏幕上打印一系列输入的姓名。
 
-在第 5 行声明这些额外的整数变量意味着程序构建了之前的示例。
+`printf`语句现在变为
+
+`firstName[i]`
+
+其中`i`是范围从`1`到`no`的值，允许在屏幕上打印一系列输入的姓名。
+
+在第`5`行声明这些额外的整数变量意味着程序构建了之前的示例。
 
 ## 字符数组与数值数组结合
 
@@ -6227,11 +5847,11 @@ firstName[i]
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_240_0.png)
 
-## 数组 (ARRAYS)
+### 数组 (ARRAYS)
 
 # 数组
 
-AmayCha:NamesIndexAndEarnings_10082017.c
+`AmayCha:NamesIndexAndEarnings_10082017.c`
 
 ```c
 1 // 第一个循环：除最后一个的所有数组元素
@@ -6294,7 +5914,7 @@ AmayCha:NamesIndexAndEarnings_10082017.c
 44: getch();
 ```
 
-在上述代码中，第 44 行允许对数值数据进行处理并放在人员之后。字符数组对于单据准备至关重要，因为名字和姓氏会出现在单据上。
+在上述代码中，第`44`行允许对数值数据进行处理并放在人员之后。字符数组对于单据准备至关重要，因为名字和姓氏会出现在单据上。
 
 ## 数组案例研究 - 图书销员
 
@@ -6306,7 +5926,6 @@ AmayCha:NamesIndexAndEarnings_10082017.c
 
 ```c
 #include <stdio.h>
-
 int main() {
     int noAuthors = 10;
     char firstName[noAuthors][20];
@@ -6314,7 +5933,6 @@ int main() {
     float salesPrice[noAuthors];
     int i;
     float maxSales = 0, totalSales = 0;
-    
     printf("输入作者人数: ");
     scanf("%d", &noAuthors);
     printf("输入详情: \n姓名\t姓\t价格\n");
@@ -6325,10 +5943,8 @@ int main() {
         }
         totalSales += salesPrice[i];
     }
-    
     printf("总销售额: %.2f\n", totalSales);
     printf("最大销售额: %.2f\n", maxSales);
-    
     for (i = 0; i < noAuthors; i++) {
         if (salesPrice[i] == maxSales) {
             printf("%s\t%s\t%.2f\n", firstName[i], lastName[i], salesPrice[i]);
@@ -6338,7 +5954,7 @@ int main() {
 }
 ```
 
-第 7 到 9 行需要声明并初始化下标值。for 循环允许数据扫描到内存中。计算总销售额。循环打印畅销作者的详情。
+第`7`到`9`行需要声明并初始化下标值。`for`循环允许数据扫描到内存中。计算总销售额。循环打印畅销作者的详情。
 
 ## 图书销员代码
 
@@ -6398,15 +6014,11 @@ int main() {
 53: &lastName[author], &firstName[author], salesPrice[author], salesValue[author]);
 ```
 
-
-
-
-
 ## 数组案例研究 - 书籍销售
 
-将会导致结果。如果 `noOfAuthors` 初始化为 0 或小于第 12 行扫描的值，输出也将是不准确的。
+将会导致结果。如果`noOfAuthors`初始化为`0`或小于第`12`行扫描的值，输出也将是不准确的。
 
-第 7 行中三个带有下标的整数值，即 `qty[noOfAuthors]`、`salesPrice[noOfAuthors]`、`salesValue[noOfAuthors]` 无法初始化，因为 `qty`、`salesPrice` 和 `salesValue` 是每个作者都不同的值。初始化这些值将导致程序声明“变变大小对象不可初始化”的错误。
+第`7`行中三个带有下标的整数值，即`qty[noOfAuthors]`、`salesPrice[noOfAuthors]`、`salesValue[noOfAuthors]`无法初始化，因为`qty`、`salesPrice`和`salesValue`是每个作者都不同的值。初始化这些值将导致程序声明“变变大小对象不可初始化”的错误。
 
 # 函数
 
@@ -6439,7 +6051,7 @@ int main() {
 6     int max(int not1, int not2, int not3);
 7     int val1, val2, val3, max_val;
 8 
-9 //Read in 3 Numbers
+//Read in 3 Numbers
 10 printf("Program to find maximum of 3 numbers\n\n");
 11 printf("\nEnter number 1: \t");
 12 scanf("%d", &val1);
@@ -6447,24 +6059,20 @@ int main() {
 14 scanf("%d", &val2);
 15 printf("Enter number 3: \t");
 16 scanf("%d", &val3);
-17 
-18 //Invoking (calling) Function to find max
+//Invoking (calling) Function to find max
 19 max_val = max(val1, val2, val3);
 20 printf("Max of %d, %d and %d is: %d\n", val1, val2, val3, max_val);
 21 
 22 printf("\nProgram End\n\n");
 23 getch();
 24 }
-25 
-26 //Function to compute maximum
+//Function to compute maximum
 27 int max(int not1, int not2, int not3)
 28 {
 29 if ((not1 > not2) && (not1 > not3))
 30 return (not1);
-31 
 32 else if ((not2 > not1) && (not2 > not3))
 33 return (not2);
-34 
 35 else return (not3);
 36 }
 ```
@@ -6479,8 +6087,7 @@ int main() {
 5 
 6 int max(int not1, int not2, int not3);
 7 int val1, val2, val3, max_val;
-8 
-9 //Read in 3 Numbers
+//Read in 3 Numbers
 10 printf("Program to find maximum of 3 numbers\n\n");
 11 printf("\nEnter number 1: \t");
 12 scanf("%d", &val1);
@@ -6513,7 +6120,7 @@ int main() {
 
 ## 注释
 
-第 27 行到 37 行包含一个函数。第 19 行到 21 行调用了此函数。函数在第 6 行声明。
+第`27`行到`37`行包含一个函数。第`19`行到`21`行调用了此函数。函数在第`6`行声明。
 
 ## 使用函数与不使用函数的比较
 
@@ -6544,7 +6151,7 @@ int main() {
 
 | 无函数 | 函数 |
 | :--- | :--- |
-| 在上面使用了函数。在很多情况下，没有函数意味着代码更少。 | 在上面，函数在第 28 到 37 行声明并在第 19 到 21 行调用。虽然函数看起来需要更多代码，但程序员觉得数据管理更有结构化。 |
+| 在上面使用了函数。在很多情况下，没有函数意味着代码更少。 | 在上面，函数在第`28`到`37`行声明并在第`19`到`21`行调用。虽然函数看起来需要更多代码，但程序员觉得数据管理更有结构化。 |
 | 两个程序都实现了相同的目标：从键盘确定三个整数的最大值。 | 创建函数来确定两个整数... |
 
 ## 一个程序中的两个函数
@@ -6560,52 +6167,10 @@ int main() {
 5     int max(int no1, int no2, int no3);
 6     int min(int no1, int no2, int no3);
 7     int val1, val2, max_val, min_val;
-8     
-9     //Read 3 Numbers
-10    printf("Program to find maximum of 3 numbers\n\n");
-11    printf("\n\nEnter number 1: \t", &val1);
-12    scanf("%d", &val1);
-13    printf("Enter number 2: \t",
-14    scanf("%d", &val2);
-15    printf("Enter number 3: \t",
-16    scanf("%d", &val3);
-17
-18
-19    //find max
-20    max_val = max(val1, val2, val3);
-21    printf("maximum of %d, %d and %d is: %d\n",
-22    val1, val2, val3, max_val);
-23
-24    //find min
-25    min_val = min(val1, val2, val3);
-26    printf("minimum of %d, %d and %d is: %d\n",
-27    val1, val2, val3, min_val);
-28    getch();
-29 }
-30
-31   //Function to compute maximum
-32   int max(int no1, int no2, int no3)
-33   {
-34     if ((no1 > no2) && (no1 > no3))
-35        return (no1);
-36
-37     else if ((no2 > no1) && (no2 > no3))
-38        return (no2);
-39     else return (no3);
-40   }
-41
-42   //Function to compute minimum
-43   int min(int no1, int no2, int no3)
-44   {
-45     if ((no1 < no2) && (no1 < no3))
-46        return (no1);
-47
-48     else if ((no2 < no1) && (no2 < no3))
-50        return (no2);
-51
-52     else return (no3);
-53   }
 ```
+
+
+
 
 # 函数
 
@@ -6667,11 +6232,9 @@ int main() {
 53:   }
 ```
 
-
-
 # 代码
 
-```
+```c
 1: //程序目标 - 使用函数计算圆的属性/
 2: #include <stdio.h>
 3: 
@@ -6756,9 +6319,6 @@ Q7.2. 扩展上述程序，创建一个计算圆面积的函数。
 
 猜数字游戏得到了扩展。一个案例研究详细查看了早期不完善彩票设计的陷阱、随机数是如何生成的以及如何避免重复。循环和数组与 C 语言的一些高级领域相结合，以实现正确的程序设计。为了对玩家公平，该章节扩展涵盖了使用循环、数组和概率论计算中奖的概率。出于本性，程序员通过程序设计中内置的安全措施来防止过度利用赌者的弱点，允许赌徒进行有限次数的游戏并设有最大投注限制。彩票游戏从整体上进行了研究，这在编程历史上任何语言中都是未包含过的。
 
-
-
-
 # 附录一 – 答案
 
 A2.1. 第 25 行错误。它应该是 `z` 而不是 `&x`。向屏幕输出数据时不应有 `&` 符号。
@@ -6793,8 +6353,6 @@ A2.3. 第 16 行应该是 `z` 而不是 `&x`。由于设计不当导致。
 19
 20 getch();
 ```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_267_0.png)
 
 # 附录一 - 答案
 
@@ -6833,8 +6391,6 @@ A2.3. 第 16 行应该是 `z` 而不是 `&x`。由于设计不当导致。
 30 get();
 31 }
 ```
-
-![](img/d66aad4cac4279bfe1f0f55cccf5946a_268_0.png)
 
 # 代码
 
@@ -6880,25 +6436,39 @@ A2.3. 第 16 行应该是 `z` 而不是 `&x`。由于设计不当导致。
 ```c
 #include <stdio.h>
 int main() {
+```
+
+
+
+```c
     float gross, taxAllowance, incomeTaxRate,
+
     incomeTaxAmount, takeHome = 0;
 
     printf("\enter gross: %f", &gross);
+
     scanf("%f", &gross);
 
     printf("\enter income tax rate percent: %f", &incomeTaxRate);
+
     scanf("%f", &incomeTaxRate);
 
     if (gross > 5000) {
+
         incomeTaxAmount = (gross - 5000) * incomeTaxRate/100;
+
         takeHome = gross - incomeTaxAmount;
+
     }
 
     printf("\gross: \t%.2f,\n", gross);
+
     printf("\income Tax: \t%.2f,\n", incomeTaxAmount);
+
     printf("\takehome: \t%.2f,\n", takeHome);
 
     return 0;
+
 }
 ```
 
@@ -6947,22 +6517,17 @@ int main() {
 int main() {
     float gross, taxAllowance, incomeTaxRate,
     incomeTaxAmount, takeHome = 0;
-
     printf("\enter gross: %f", &gross);
     scanf("%f", &gross);
-
     printf("\enter income tax rate percent: %f", &incomeTaxRate);
     scanf("%f", &incomeTaxRate);
-
     if (gross > 5000) {
         incomeTaxAmount = (gross - 5000) * incomeTaxRate/100;
         takeHome = gross - incomeTaxAmount;
     }
-
     printf("\gross: \t%.2f,\n", gross);
     printf("\income Tax: \t%.2f,\n", incomeTaxAmount);
     printf("\takehome: \t%.2f,\n", takeHome);
-
     return 0;
 }
 ```
@@ -7002,20 +6567,6 @@ int main() {
 30:
 31: }
 ```
-
-*(注：由于原始文本中存在大量重复的代码块和标题，翻译文已根据“不要重复输出原文”的原则进行了去重处理，仅保留了唯一的逻辑部分翻译。)*
-
----
-**更正说明：** 提供的待翻译文本包含大量完全重复的段落。以下是基于唯一内容的精简翻译：
-
-[content]
-# 附录一 – 答案
-
-A2.1. 第 25 行错误。它应该是 `z` 而不是 `&x`。向屏幕输出数据时不应有 `&` 符号。
-
-A2.2. 第 22 行错误。它应该是 `%f` 而不是 `%d`。`%f` 用于浮点数，`%d` 用于整数，`w` 在第 6 行中已声明为浮点型。
-
-A2.3. 第 16 行应该是 `z` 而不是 `&x`。由于设计不当导致。
 
 # 附录一 - 答案
 
@@ -7132,30 +6683,22 @@ A2.3. 第 16 行应该是 `z` 而不是 `&x`。由于设计不当导致。
 int main() {
     float gross, taxAllowance, incomeTaxRate,
     incomeTaxAmount, takeHome = 0;
-
     printf("\enter gross: %f", &gross);
     scanf("%f", &gross);
-
     printf("\enter income tax rate percent: %f", &incomeTaxRate);
     scanf("%f", &incomeTaxRate);
-
     if (gross > 5000) {
         incomeTaxAmount = (gross - 5000) * incomeTaxRate/100;
         takeHome = gross - incomeTaxAmount;
     }
-
     printf("\gross: \t%.2f,\n", gross);
     printf("\income Tax: \t%.2f,\n", incomeTaxAmount);
     printf("\takehome: \t%.2f,\n", takeHome);
-
     return 0;
 }
 ```
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_270_0.png)
-
-
-
 
 # 附录一 - 答案
 
@@ -7205,12 +6748,9 @@ main()
 main()
 {
     int answer, guess;
-    
     printf("\nwelcome to the book quiz");
     printf("\nYou have two questions to answer");
-    
     printf("\nWhich book did Barbara Taylor Bradford not write");
-    
     printf("\n1 Act of Will");
 ```
 
@@ -7226,40 +6766,42 @@ A5.10. 分号结束了第 13 行。while 循环后面不应该以分号结尾。
 ```c
 "Program Aim - Compute various functions"
 #include <stdio.h>
-
 void main() {
     int radius;
     float pi = 3.142;
     printf("Enter a radius: ");
     scanf("%d", &radius);
-
     // 计算直径和周长
     printf("Diameter is %d cm\n", 2*radius);
     printf("Circumference is %.2f cm\n", 2*pi*radius);
-
     // 计算面积
     printf("Area of %d is %.2f cm squared\n", radius, pi*radius*radius);
 }
-
 int diameter(int radius) {
     return (2 * radius);
 }
-
 int circumference(int radius) {
     float pi = 3.142;
     return (2 * pi * radius);
 }
+```
 
+
+
+```c
 int area(int radius) {
+
     float pi = 3.142;
+
     return (pi * pow(radius, 2));
+
 }
 ```
 
 # 附录二 – 下载 C语言
 
 # 下载 C
-http://www.bloodshed.net/devcpp.html
+`http://www.bloodshed.net/devcpp.html`
 
 ![](img/d66aad4cac4279bfe1f0f55cccf5946a_282_0.png)
 
@@ -7349,8 +6891,8 @@ GNU 通用公共许可证
 | Dev-C++ 已成功配置，现在可以点击 OK 继续。 | | |
 | 如果你需要帮助 Dev-C++,请参考菜单中的 Dev-C++ 帮助。在遇到问题时，阅读这一点非常重要。 | | |
 | 你还可以下载包（如工具）与 Dev-C++ 使用，并从工具菜单中查找更新。 | | |
-| #include < | | |
-| /* Decl | | |
+| `#include <` | | |
+| `/* Decl` | | |
 | RESULT | | |
 | char Make | | |
 | int WINAPI | | |
@@ -7424,7 +6966,7 @@ GNU 通用公共许可证
 - 字符数组，217
 - 注释，9
 - 组合运算符，253
-- if if else，72, 79, 86, 87, 93, 102, 115, 128, 131, 132
+- `if if else`，72, 79, 86, 87, 93, 102, 115, 128, 131, 132
 - 销售贡献，253
 - 随机数生成的批判，138
 - 数据处理，11, 54, 206, 218
@@ -7437,7 +6979,7 @@ GNU 通用公共许可证
 - 折现现金流，251
 - 分布，251
 - 除以零，91
-- do while 循环，138, 195
+- `do while` 循环，138, 195
 - 下载 C语言，271
 - 错误，5, 20
 - 错误，11, 20, 206, 222
@@ -7448,7 +6990,7 @@ GNU 通用公共许可证
 - 浮点型，22, 25, 27, 30, 31, 46, 54, 57, 71, 77, 164
 - 流程控制，100
 - 扩展 for 循环，144
-- for 循环，139, 148, 160
+- `for` 循环，139, 148, 160
 - 预测，53
 - 函数调用，247
 - 函数，239
@@ -7458,10 +7000,10 @@ GNU 通用公共许可证
 - 猜测数字，254
 - 水平条形图，253
 - 小时分秒，79, 105
-- if if else，72, 79, 86, 87, 93, 102, 115, 128, 131, 132
+- `if if else`，72, 79, 86, 87, 93, 102, 115, 128, 131, 132
 - 设计不当，254
 - 所得税，59, 75, 258
-- 错误地使用 if 而非 else if，79, 103
+- 错误地使用 `if` 而非 `else if`，79, 103
 - 递增，137, 140, 152
 - 初始化，15, 71, 168, 172, 173
 - 浮点型和字符，12
@@ -7471,9 +7013,6 @@ GNU 通用公共许可证
 - 小于等于，89, 87, 89, 95
 - 行号，6
 - 循环，139
-
-
-
 
 # 第一章 - 引绪
 
@@ -7495,14 +7034,14 @@ GNU 通用公共许可证
 - 周周，150
 - 指针和文件创建，251
 - 泊松分布，251
-- pow，11, 39, 40, 43, 46, 48, 49, 50, 51, 52, 53, 71, 126, 160, 164, 220, 221
+- `pow`，11, 39, 40, 43, 46, 48, 49, 50, 51, 52, 53, 71, 126, 160, 164, 220, 221
 - Pow 和 ExpLog，11, 52
 - 幂函数，11, 42, 49
 - 幂，11, 39, 40, 48
 - 主金，11, 49, 52
-- printf，139, 140, 142, 144, 145, 146, 150, 152, 153, 154, 159, 160, 163, 164, 165, 166, 172, 175, 178, 180, 181, 185, 187, 190, 194, 201
+- `printf`，139, 140, 142, 144, 145, 146, 150, 152, 153, 154, 159, 160, 163, 164, 165, 166, 172, 175, 178, 180, 181, 185, 187, 190, 194, 201
 - 概率，42, 172, 250, 254
-- rand，137, 186, 187, 188, 190
+- `rand`，137, 186, 187, 188, 190
 - 随机数设置为当前时间，138, 189
 - 随机数，188, 254
 - 随机数，137, 186
@@ -7514,7 +7053,7 @@ GNU 通用公共许可证
 - 保存 C 程序，1, 2
 - 扫描，137, 145
 - 平方和立方根，11, 47
-- srand，190
+- `srand`，190
 - 标准差，217, 220, 221, 253
 - 标准差，253
 - 直线图，250
@@ -7523,14 +7062,14 @@ GNU 通用公共许可证
 - Switch，115
 - 税率范围，253
 - 时间表，201
-- time_t，190
+- `time_t`，190
 - 截断，27
 - 一个程序中的两个函数，238, 243
 - 变动成本计算，253
 - 变动成本，75, 253
 - 方差，217, 220, 221
 - 工资，59, 75, 193
-- while 循环，137, 175, 181
+- `while` 循环，137, 175, 181
 
 # 商业 C 编程
 
@@ -7539,29 +7078,34 @@ GNU 通用公共许可证
 为了充分利用此本书，读者需要接触 C 编程语言。
 C 并不是 C++、C#、C Sharp、Visual C、Objective C 或 Python。
 
-在出版时，可以在运行 Windows XP、Windows 7 和 Windows 8 的笔记本上从 http://www.bloodshed.net/dev/devcpp.html 免费下载 C。
+在出版时，可以在运行 Windows XP、Windows 7 和 Windows 8 的笔记本上从 `http://www.bloodshed.net/dev/devcpp.html` 免费下载 C。
 
 在购买书籍之前，您应该在 C 中运行以下程序（全小写）：
 
 ```c
 #include <stdio.h>
+
 main()
+
 {
+
     printf("Hi");
+
     getch();
+
 }
 ```
 
 涵盖的主题包括：
 
 - 变量声明与处理
-- 包含条件语句的流 - If, Else If, Else 和 Switch
-- 包含循环的迭代流 - For, While, Do-while
+- 包含条件语句的流 - `If`, `Else If`, `Else` 和 `Switch`
+- 包含循环的迭代流 - `For`, `While`, `Do-while`
 - 数组简介——标准差的计算
 - 函数简介
 
 通过以下方式联系作者：
 
-- https://www.facebook.com/WilliamKane2017
-- https://twitter.com/williamkane2017
-- WilliamKane2017@gmail.com
+- `https://www.facebook.com/WilliamKane2017`
+- `https://twitter.com/williamkane2017`
+- `WilliamKane2017@gmail.com`

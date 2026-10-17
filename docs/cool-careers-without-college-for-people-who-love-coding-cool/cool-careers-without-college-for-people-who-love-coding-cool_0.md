@@ -1,18 +1,18 @@
+
 # 热爱编程者的非大学学历酷职业（无需大学的酷职业）
 
-
-
-
-
 2018 年由 The Rosen Publishing Group, Inc. 出版
+
 29 East 21st Street, New York, NY 10010
+
 版权所有 © 2018 The Rosen Publishing Group, Inc.
+
 第一版
+
 保留所有权利。未经出版者书面许可，不得以任何形式复制本书的任何部分，评论者除外。
 
-
-
 ## 引言
+
 由于高等教育的成本高昂，学生们在不得不申请学生贷款之前会想要考虑所有的选择。但我们的世界比以往任何时候都更加节奏快、竞争激烈，而且技术似乎总是在变化。从平板电脑到电脑再到手机，我们与世界其他地方连接在一起。
 
 连接有多紧？2015 年的一项研究发现，64%的美国成年人拥有智能手机，与 2011 年的 35%相比是一个巨大的飞跃。我们在手机上做什么做什么？我们利用它们来学习和与他人分享。同一项研究还发现，68%的智能手机用户至少偶尔使用手机关注新闻；67% 的人使用手机分享照片、视频或对事件的评论；56% 的人使用手机学习各种活动。
@@ -28,6 +28,7 @@
 我们无法涵盖本资源中提供的所有编程工作，因此请将其作为一个工具，让你对可能探索的编程特定领域和技术行业有一个大致的想法。当你读到你感兴趣的职业时，请利用“更多信息”部分以及互联网来进一步了解该职业以及关注相似编程方面的其他职业。在浏览不同的职业时，你会发现一个共同的主题：建立人脉、参加在线课程和教程以及从事自己的项目将让你走得很远。因此，具有高度自律性、能够在无人管理的情况下完成项目的人将最适合这些职业中的大多数。你还会发现，随着对本资源的学习，初级职业可以引导需要更多经验的职业。所以虽然你可能从 iOS 开发人员做起，某一天你可能会借此成为产品经理。
 
 ## 第一章：UX 设计师
+
 你喜欢颜色吗？设计吗？艺术吗？你打开应用时的样子吗？用户体验设计师（或 UX 设计师）是那些关注数字产品给用户带来的视觉和感受的人。你使用的每个应用——从给朋友发消息到在出门吃饭前查看天气——都需要一名 UX 设计师。
 
 UX 设计师关注用户如何与应用程序或产品交互，以及应用程序在屏幕上的布局。目标是让产品不仅能执行预期功能，而且易于使用和交互。
@@ -37,15 +38,12 @@ UX 设计师关注用户如何与应用程序或产品交互，以及应用程�
 用户体验可以成为一种艺术职业。喜欢创意和构思大量设计的人可能喜欢创建产品的形象。
 
 ### 用户界面的历程
+
 当设计师初开始工作时，他们需要知道目标是什么。他们希望人们如何与产品交互？这个屏幕或界面看起来应该什么样？它需要如何运行？通常这是一个涉及其他团队成员的头脑风暴会议，生成消费者对产品的需求列表。
 
 从那里开始，设计师可能会在纸上绘制草图，勾勒出界面可能的样子。在完成草图后，设计师将使用电脑构建线框图（wireframe），即对设计的数字测试。可能会有很多线框图；有些只是静态的。另一些是交互式设计，可以反复进行测试和调整。这些线框图由用户不断测试，他们的反馈允许设计师对界面进行修改。
 
 接下来是视觉设计。线框图被赋予最终的颜色、排版和添加的设计元素，以变成原型（mock-ups）。原型看起来和感觉应该已经准备好使用了，但这是另一个测试、评审和重做的阶段。颜色可能需要更改；标志可能需要经过多次设计，直到团队确定正确的方案。
-
-
-
-
 
 这是不断扩张的科技领域中一个蓬勃且重要的部分，它通常被认为是最令人满意的工作之一，原因在于拥有灵活的工作时间、具有竞争力的薪资以及远程办公（即广为人知的居家办公）的能力。但通往成功设计的道路可能是漫长的。竞争可能非常激烈，一旦进入该行业，UX 设计师必须具备极大的耐心，因为他们需要不断地构建、测试并接受设计评审。一个成功的设计师必须能够理解产品的某些后端内容，还要理解更多基于艺术的概念和技能，如色彩、设计和矢量图画。由于需要利用许多不同的技能，并且创建一个成功的设计涉及许多步骤，良好的项目管理和团队协作能力是必不可少的。而且随着截止日期的临近，你可能需要在压力下工作并加班完成完成任务。
 
@@ -76,25 +74,41 @@ UX 设计师的需求很大，但竞争可能非常激烈。通常情况下，�
 ### 机构
 
 **Center for Digital Media**
+
 685 Great Northern Way
+
 Vancouver, BC V5T 006
+
 Canada
+
 (778) 370-1001
+
 网站: [`thecdm.ca`](http://thecdm.ca)
+
 Center for Digital Media 是一所提供数字媒体硕士课程的前端学校。
 
 **GrowthX Academy**
+
 44 Tehama Street
+
 San Francisco, CA 94104
+
 (415) 638-9161
+
 网站: [`gxacademy.com`](http://gxacademy.com)
+
 GrowthX Academy 提供为十二周的 UX 设计课程。
 
 **UX Club at UT Dallas**
+
 800 W Campbell Road
+
 Richardson, TX 75080
+
 邮箱: uxutdallas@gmail.com
+
 网站: [`www.uxutd.com`](http://www.uxutd.com)
+
 德克萨斯大学达拉斯分校 UX Klub。
 
 ### 书籍
@@ -126,9 +140,6 @@ Raska, Robin. “Great Books for Designers to Read in 2016.” Design Pttrns, 20
 ## 构建、维修、重启
 
 `sys admin` 可能还负责组织的硬件。任何购买的新设备都可能需要记录并加入清单，并安装任何必要的软件。损坏的设备可能需要维修，或者需要从零开始构建全新的设备。
-
-
-
 
 系统管理员执行的最重要任务之一是维护员工使用的标准和规范。当新员工入职公司时，系统管理员会配置公司电脑，并确保该人员拥有正确的程序、密码和访问权限。他们通常会在员工的手机上设置公司邮箱以及任何其他重要的应用程序。他们会解释相关标准和规范，并确保员工理解预期要求以及如何使用公司的设备和软件。他们可能会回答新员工对系统提出的任何问题，并帮助他或她学习如何浏览公司内网（即内部通信网络）。当员工离开时，系统管理员转而负责确保所有公司设备归还并删除员工的账户。
 
@@ -169,24 +180,39 @@ Raska, Robin. “Great Books for Designers to Read in 2016.” Design Pttrns, 20
 ### 组织
 
 专业系统管理员联盟 (`LOPSA`）
+
 1200 Route 22 East, Suite 200
+
 Bridgewater, NJ 08807
+
 (609) 219-6787
-网站：[`https://lopsa.org](https://lopsa.org)
+
+网站：[`https://lopsa.org`](https://lopsa.org)
+
 这是一个非营利组织，为全球的系统管理员提供资源和支持。
 
 网络专业人士协会 (`NPA`）
+
 3517 Camino Del Rio S, Suite 215
+
 San Diego, CA 92108-4098
+
 (888) `NPA-NPA0`
-网站：[`http://www.npa.org](http://www.npa.org)
+
+网站：[`http://www.npa.org`](http://www.npa.org)
+
 这是一个面向网络计算人士的组织。
 
 Usenix：高级计算系统协会
+
 2560 Ninth Street, Suite 215
+
 Berkeley, CA 94710
+
 (510) 528-8649
-网站：[`https://www.usenix.org](https://www.usenix.org)
+
+网站：[`https://www.usenix.org`](https://www.usenix.org)
+
 该协会为系统管理员、工程师、计算机科学家和技术人员提供社区。
 
 ### 书籍
@@ -213,27 +239,25 @@ White, Kevin M., and Gordon Davisson. *OS X Support Essentials 10.11: Supporting
 
 
 
-
-
-无论是 iOS 还是 Android 开发者都会发现自己处于一个庞大且节奏快速的行业，有许多类型的项目可以满足各种兴趣。你喜欢开发金融类应用吗？即时通讯应用？购物应用？作为一名开发者，你可以选择你感兴趣的内容并专注于该领域。应用软件种类繁多，如果你喜欢探索和尝试新项目，这可能非常适合你。
+无论是 iOS 还是 Android 开发者，都会发现自己处于一个庞大且节奏快速的行业，有许多类型的项目可以满足各种兴趣。你喜欢开发金融类应用吗？即时通讯应用？购物应用？作为一名开发者，你可以选择你感兴趣的内容并专注于该领域。应用软件种类繁多，如果你喜欢探索和尝试新项目，这可能非常适合你。
 
 作为一名开发者，获取教育资源非常容易。Android 和 Apple 都有自己的课程和资源，让开发者能够立即获得学习所需的工具和培训。除了操作系统本身，还有许多课程、书籍、教程、纳米微学位和博客，它们提供了丰富的知识。虽然支付金钱进行培训和教育并非必须的，但付费培训可以为你开启额外的资源供你使用，因此你可以考虑一下。研究付费资源是重要的，因为它们的价格从几美元到数百美元不等，并提供各种类型和数量的培训和信息。
 
 开发 iOS 和 Android 的人是构建者。他们想要获取一个解决问题的概念，并使用工具将该概念转化为实际的产品。他们理解移动设备在不断接收软件更新，他们的产品永远不会真正完成；它必须不断进行补丁、修复和升级，以满足手机或平板电脑不断变化的操作系统的需求。作为开发者，他们通常是团队中的一员，频繁进行协作、分享想法和评审。如果你喜欢团队合作并与他人紧密工作，这可能就是适合你的职业。
 
-### 选苹果还是安卓？
+## 选苹果还是安卓？
 
-**一些开发者努力同时学习 iOS 和 Android。这两个操作系统占据了全球市场 96.7%。但当你刚起步时，要决定先学习哪种操作系统（也称为 `OS`）可能是困难的。**
+一些开发者努力同时学习 iOS 和 Android。这两个操作系统占据了全球市场 96.7%。但当你刚起步时，要决定先学习哪种操作系统（也称为 `OS`）可能是困难的。
 
-**Apple 移动设备的操作系统是 iOS。这个 `OS` 的标准比 Android 严格得多。因为其仅适用于 Apple 产品，所以你只能在 Macbook 上开发 iOS 项目，因为工具集 `Xcode` 仅兼容 Mac。对于那些负担不起 Mac 或没有时间借用 Mac 的人来说，这可能是一个障碍。Apple 还要求开发者订阅开发者计划，这允许他们向应用 Store 提交应用。订阅包含年度费用。**
+Apple 移动设备的操作系统是 iOS。这个 `OS` 的标准比 Android 严格得多。因为其仅适用于 Apple 产品，所以你只能在 Macbook 上开发 iOS 项目，因为工具集 `Xcode` 仅兼容 Mac。对于那些负担不起 Mac 或没有时间借用 Mac 的人来说，这可能是一个障碍。Apple 还要求开发者订阅开发者计划，这允许他们向应用 Store 提交应用。订阅包含年度费用。
 
-**Android 的开发工具 `Android Studio` 兼容 Mac、Linux 和 Windows 电脑。虽然 Android 在可用性上优于 iOS，但 `Android Studio` 缺乏 `Xcode` 为开发者提供的某些功能和特性，这使得创建应用程序变得更加困难。虽然 Android 没有订阅费，但在提交应用之前需要支付一次性的注册费用。**
+Android 的开发工具 `Android Studio` 兼容 Mac、Linux 和 Windows 电脑。虽然 Android 在可用性上优于 iOS，但 `Android Studio` 缺乏 `Xcode` 为开发者提供的某些功能和特性，这使得创建应用程序变得更加困难。虽然 Android 没有订阅费，但在提交应用之前需要支付一次性的注册费用。
 
 ![](img/f0031-01.jpg)
 
 先学习哪种操作系统取决于你，只需记住每种系统都有其优缺点即可。
 
-### 展现你的黑客松实力
+## 展现你的黑客松实力
 
 与其他许多职业一样，你可以在 iOS 或 Android 开发者的黑客松上展示才华。你可以通过当地开发者社区和在线聚会小组找到本地黑客松，它们是开发者成长的绝佳方式，因为它们都从一个你必须解决的问题开始。它们允许你发挥解决问题的能力，并以独自无法实现的方式挑战自己。评审将查看你的最终产品，你将获得宝贵的反馈，并将其应用于你的产品或未来的产品中。你开发的产品可以放入你的作品集和简历中，为你向潜在雇主提供新素材。
 
@@ -245,35 +269,47 @@ White, Kevin M., and Gordon Davisson. *OS X Support Essentials 10.11: Supporting
 
 如果你赢了黑客松，可能会获得大额现金奖、硬件以及参加更具声誉的黑客松的邀请。这让你能够继续练习、赚钱并在潜在雇主面前获得关注。黑客松越有声誉、越独特，奖品、曝光和接触机会就越多。这就是为什么参加黑客松并利用它们提高你的开发者技能对你来说是一项重要的练习。
 
-### 开发者的机会与薪资
+## 开发者的机会与薪资
 
 由于这么多应用不仅在应用 Store 中，还在上线等待发布，拥有强大作品集的 iOS/Android 开发者需求巨大。典型的薪资将处于薪资的高端，并随着经验的增长有加薪的空间。但开发者的薪资差异很大，取决于开发者是自由职业者还是全职员工。记住，自由职业者不会自动扣税，所以虽然看起来很多，但请务必留出部分收入以在明年年初缴税。
 
-### 了解更多信息
+## 了解更多信息
 
 ### 组织
 
-**ACT: 应用协会 (The App Association)**
+**ACT：应用协会（The App Association）**
+
 1401 K Street NW, Suite 501
+
 Washington, DC 20005
+
 (202) 331-2130
-网站: [`actonline.org`](http://actonline.org)
+
+网站：[`actonline.org`](http://actonline.org)
 
 该协会代表应用公司和企业，促进就业创造并扩大应用行业和移动经济。
 
-**应用开发者联盟 (App Developers Alliance)**
+**应用开发者联盟（App Developers Alliance）**
+
 1015 7th St NW
+
 Washington, DC 20001
-邮箱: Membership@AppAlliance.org
-网站: [`www.appdevelopersalliance.org`](http://www.appdevelopersalliance.org)
+
+邮箱：Membership@AppAlliance.org
+
+网站：[`www.appdevelopersalliance.org`](http://www.appdevelopersalliance.org)
 
 这个国际协会旨在聚集开发者和公司，成为应用开发者的倡者。
 
-**伯克利移动开发者 (Mobile Developers of Berkeley)**
+**伯克利移动开发者（Mobile Developers of Berkeley）**
+
 2360 Ellsworth Street, Apt. F
+
 Berkeley, CA 94704
+
 (425) 633-4156
-网站: [`www.mobiledevs.org`](http://www.mobiledevs.org)
+
+网站：[`www.mobiledevs.org`](http://www.mobiledevs.org)
 
 这是一个位于伯克利的移动开发者社区。
 
@@ -283,7 +319,7 @@ Eyal, Nir. *Hooked: How to Build Habit Products.* New York, NY: Portfolio, 2014.
 
 Keur, Christian. *IOS Programming: The Big Nerd Guide. 5th ed. Atlanta, GA: Big Nerd Guide, 2015.*
 
-Phillips, Bill. *Android Programming: The Big Nerd Guide.2nd ed. Atlanta, GA: Big Nerd Guide, 2015.*
+Phillips, Bill. *Android Programming: The Big Nerd Guide. 2nd ed. Atlanta, GA: Big Nerd Guide, 2015.*
 
 ### 网站
 
@@ -291,15 +327,11 @@ Phillips, Bill. *Android Programming: The Big Nerd Guide.2nd ed. Atlanta, GA: Bi
 
 [`www.rosenlinks.com/CCWC/coding`](http://www.rosenlinks.com/CCWC/coding)
 
-## 第 4 章
+# 第 4 章
 
-### 全栈开发者
+## 全栈开发者
 
 公司需要一个既熟悉网站前端又熟悉后端的开发者。它需要一个精通大多数主流编程语言并能够桥接前端开发与后端之间鸿沟的人。全栈开发者擅长处理各种类型的框架，并在前端和后端之间工作。掌握前端和后端的语言让全栈开发者能够跨越两者之间的鸿沟。
-
-
-
-
 
 前端也称为客户端开发。这是产品中客户与之交互的部分。不要与 UX 设计混淆，前端更多地涉及产品的结构和编码，而与界面设计的关系较小。然而，他们经常与 UX 设计师一起工作，协助构建和测试线框图（wireframes）和原型（mock-ups）。他们将 UX 设计师的设计工作转化为程序使用的代码，让 UX 设计师能够测试设计并发现哪种用户界面对应用程序最有效。
 
@@ -309,11 +341,11 @@ Phillips, Bill. *Android Programming: The Big Nerd Guide.2nd ed. Atlanta, GA: Bi
 
 后端开发者需要掌握多种语言，如 `Ruby on Rails`、`Python`、`Java` 和 `PHP`，以创建和维护他们的后端。对于后端开发者来说，了解 `PHP` 框架、`MySQL` 等工具以及 `Git` 等软件也是非常有价值的。
 
-### 不要样样样精通
+## 不要样样样精通
 
 全栈开发者想要学习每种可用语言、工具和软件的愿望可能非常强烈。但尝试学习所有内容面临着精力分散且在任何某一方面都不特别出色的风险。开始阶段，将自己限制在少数技能上，并努力成为这些领域的专家。随着你在全栈工程师职业上走得越远，你将会有更多机会学习更多并丰富简历。雇主希望招聘精通他们所掌握的语言并能够用这些语言创建设计良好的产品的全栈开发者。想要成为一个通才很容易，但成为一个样样精通的人要容易得多。
 
-### 成为全栈开发者
+## 成为全栈开发者
 
 全栈教程、课程和项目在网上非常流行。诸如 `Udacity`、`ibento`、`Fullstack Academy` 和 `Fullstack. io` 等网站创建了多门课程供学习，从入门水平一直进步到更高级的主题。大学很少谈论全栈开发，因此面向职业的教育可以在网上找到。
 
@@ -325,44 +357,55 @@ Phillips, Bill. *Android Programming: The Big Nerd Guide.2nd ed. Atlanta, GA: Bi
 
 对于全栈开发者来说，熟能生巧。行业关注的是你有多少经验，所以要想出自己的项目，构建自己的产品，发布它们，并向他人展示你构建了什么。参与朋友的项目，共同学习并提高技能。黑客松（Hackathons）——设计和开发团队创建产品的竞赛——是对全栈开发者的完美挑战。许多人与朋友组成小组并参加这些比赛。奖品从小小的购物礼品卡到大到数千美元以及参加更大比赛的邀请函不等。赢得黑客松是简历中极佳的成就，向雇主展示了你具有出色的问题解决能力，并且可以在非常短的时间内完成工作。
 
-### 全栈开发者的薪资与职业前景
+## 全栈开发者的薪资与职业前景
 
 全栈开发者的需求很大。即使你之前没有被雇佣，让潜在雇主看到你的个人项目也能表明你认真对待作为一名开发者的成长和学习。通过你参与过的项目进行面试（即使是免费的），也将帮助你在正确的团队中找到合适的开发者工作。
 
 全栈开发者的薪资取决于公司所在地，但员工的工作收入通常高于平均水平。你需要加班按时完成大项目，所以如果你不在意加班，这可能就是你的工作。
 
-***获取更多信息***
+## 获取更多信息
 
 ### 组织
 
-**计算机协会协会 (Association for Computing Machinery)**
+**计算机协会协会（Association for Computing Machinery）**
+
 2 Penn Plaza, Suite 701
+
 New York, NY 10121-0701
+
 (800) 342-6626
+
 网站：[`www.acm.org`](http://www.acm.org)
+
 这是最大的计算协会，聚集了专业人士、教育工作者和学生，并将与社区和资源连接起来。
 
-**软件工程学院 (Software Engineering Institute)**
+**软件工程学院（Software Engineering Institute）**
+
 4500 Fifth Avenue
+
 Pittsburgh, PA 15213-2612
+
 (412) 268-5800
+
 网站：[`www.sei.cmu.edu`](https://www.sei.cmu.edu)
+
 卡内基基梅隆隆大学内的该学院专注于软件工程师的教育和进步。
 
-**Usenix：高级计算系统协会 (Usenix: The Advanced Computing Systems Association)**
+**Usenix：高级计算系统协会（Usenix: The Advanced Computing Systems Association）**
+
 2560 Ninth Street, Suite 215
+
 Berkeley, CA 94710
+
 (510) 528-8649
+
 网站：[`www.usenix.org`](https://www.usenix.org)
+
 该协会为系统管理员、工程师、计算机科学家和技术人员提供了一个社区。
-
-
-
-
 
 这就是数据科学家——统计学界的巨星们大身手的地方。通过获取原始数据并使用算法和数学进行处理，数据科学家在数字中发现故事和趋势。他们帮助大型零售商降低成本并提高销售，帮助公用事业公司预测使用模式，帮助公司专注于营销活动，并协助许多其他行业。数据科学家需要用每个人都能理解的语言来讲述这些故事，所以如果你是一个喜欢将复杂的想法和信息转化为更简单术语的人，那么这份工作可能适合你。
 
-### 如何成为数据科学家
+## 如何成为数据科学家
 
 目前对数据科学的需求很大，正因如此，该领域拥有高薪。其中最高的薪资达到六位数或更高，并授予拥有博士学位（PhDs）的数据科学家。然而，你不需要上大学就可以开始数据科学家的职业。
 
@@ -378,7 +421,7 @@ Berkeley, CA 94710
 
 这些知识也有助于数据科学家学习和理解机器学习。机器学习是计算机在没有被专门编程的情况下进行学习的能力。对于数据科学家来说，机器学习允许他们获取一组特定的信息并让计算机深入研究，提取出深处的数据。
 
-### 数据科学家 vs. 数据分析师
+## 数据科学家 vs. 数据分析师
 
 数据科学家和数据分析师听起来可能相似，但它们完全不同。那么，你该如何区分它们的区别呢？
 
@@ -388,7 +431,7 @@ Berkeley, CA 94710
 
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位（nanodegrees）。
 
-### 竞争型数据科学家
+## 竞争型数据科学家
 
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
 
@@ -424,6 +467,8 @@ Berkeley, CA 94710
 
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
 
+
+
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
 
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
@@ -437,12 +482,9 @@ Berkeley, CA 94710
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
 
 所有这些更具技术性的方面——编码语言、框架和机器学习——都可以在网上找到。对于想要自学的人，有免费的教程、练习和资源可用。对于喜欢更有结构化内容的人，还有书籍、在线课程和微学位。
-
-
-
-
 
 - Import.io. “数据科学家 VS 数据分析师：为什么这种区别很重要。” 2016. [`www.import.io/post/data-scientists-vs-data-analysts-why-the-distinction-matters`](http://www.import.io/post/data-scientists-vs-data-analysts-why-the-distinction-matters)。
+
 - Levine, Daniel. “如何在没有学位的情况下成为数据科学家。”Stitch, 2015. [`blog.stitchdata.com/5-things-you-should-know-before-getting-a-degree-in-data-science-40cddf44aac3#.ym5kxyy72`](http://blog.stitchdata.com/5-things-you-should-know-before-getting-a-degree-in-data-science-40cddf44aac3#.ym5kxyy72)。
 
 ### 网站
@@ -492,10 +534,6 @@ Berkeley, CA 94710
 每年公司都会在 GDC 向公众发布他们开发的游戏。
 
 游戏开发者的收入通常很好，可以让开发者过上舒适的生活。实际金额取决于许多因素。有些开发者是全职的，而另一些可能是合同制的。虽然合同工作最初看起来收入更多，但请注意，自由职业需要自己缴纳税款，并且你需要留出部分付款以便在纳税季节有足够的资金。
-
-
-
-
 
 Manning, Jon, and Paris Buttfield-Addison. *使用 Unity 开发移动游戏：一次构建，到处部署。* Sebastopol, CA: O’Reilly Media, 2017.
 
@@ -558,35 +596,42 @@ QA 工程师可能还想学习沟通。在与许多不同的人合作时，他�
 ### 组织 (ORGANIZATIONS)
 
 计算机历史博物馆 (Computer History Museum)
+
 1401 North Boulevard
+
 Mountain View, CA 94043
+
 (650) 810-1010
+
 网站：[`www.computerhistory.org`](http://www.computerhistory.org)
 
 这家非营利博物馆保护计算对世界历史和影响。
 
 IEEE 计算机学会 (IEEE Computer Society)
+
 2001 L Street NW, Suite 700
+
 Washington, DC 20036-4928
+
 (202) 371-0101
+
 网站：[`www.computer.org/web/guest`](https://www.computer.org/web/guest)
 
 IEEE 计算机学会为对计算机科学和技术感兴趣的人士提供资源、会议、期刊和数字图书馆。
 
 Usenix：先进计算系统协会 (Usenix: The Advanced Computing Systems Association)
 
-
-
-
-
 2560 Ninth Street, Suite 215
+
 Berkeley, CA 94710
+
 (510) 528-8649
+
 网站：[`www.usenix.org`](http://www.usenix.org)
 
 该协会为系统管理员、工程师、计算机科学家和技术人员提供了一个社区。
 
-##书籍
+## 书籍
 
 Crispin, Lisa, and Janet Gregory. *More Agile Testing: Learning Journeys for the Whole Team.* Boston, MA: Addison-Wesley Professional, 2014.
 
@@ -612,53 +657,64 @@ Donovan Brown 是微软高级开发经理。他曾在加利福尼亚州旧金山
 
 ### 如何成为 DevOps 开发者
 
-成为 DevOps 开发者与成为 QA 工程师类似。这是一项不需要学位的职业，但在进入该领域之前以前的工作经验。DevOps 开发者需要掌握许多技能，包括一些 IT 运维、对至少一种语言的编码有理解，以及使用和构建工具的能力。因此，学习另一个触及产品开发的职业，并在另一个角色中工作时扩展你的知识可能会更容易。对于对 DevOps 职业感兴趣的人来说，有很多书籍、教程和在线资源，网络上也有许多人可以提供建议。阅读和学习新系统和编码语言，以及如何使用许多工具和开源软件开发产品，是必不可少的步骤。
 
-想要在 DevOps 工作的人应该寻找他人正在创建的、需要 DevOps 角色的项目。与他人合作完成项目，与其他工程师和开发人员的工作一样，可以让你培养出 DevOps 领域所需的专业技能。项目完成后，这些项目可以放入你的简历或作品集中，让你在面试 DevOps 工作时将它们作为你所做工作的示例，并解释你为了获得结果而使用的不同流程。这就是为什么在技术领域内通过在线网站和线下聚会建立人脉持续保持重要性。你不知道你遇到的下一个人是否可能是你未来的团队成员。
+
+成为`DevOps`开发者与成为`QA`工程师类似。这是一项不需要学位的职业，但在进入该领域之前以前的工作经验。`DevOps`开发者需要掌握许多技能，包括一些`IT`运维、对至少一种语言的编码有理解，以及使用和构建工具的能力。因此，学习另一个触及产品开发的职业，并在另一个角色中工作时扩展你的知识可能会更容易。对于对`DevOps`职业感兴趣的人来说，有很多书籍、教程和在线资源，网络上也有许多人可以提供建议。阅读和学习新系统和编码语言，以及如何使用许多工具和开源软件开发产品，是必不可少的步骤。
+
+想要在`DevOps`工作的人应该寻找他人正在创建的、需要`DevOps`角色的项目。与他人合作完成项目，与其他工程师和开发人员的工作一样，可以让你培养出`DevOps`领域所需的专业技能。项目完成后，这些项目可以放入你的简历或作品集中，让你在面试`DevOps`工作时将它们作为你所做工作的示例，并解释你为了获得结果而使用的不同流程。这就是为什么在技术领域内通过在线网站和线下聚会建立人脉持续保持重要性。你不知道你遇到的下一个人是否可能是你未来的团队成员。
 
 ### 工具、工具以及更多工具
 
-DevOps 开发者被期望知道如何使用许多不同类型的工具。这些工具通常免费下载和使用，这使得学习和理解多种工具的过程变得更容易。某些工具可能简单如允许项目内部更大通信的消息平台，而另一些工具可能更复杂，协助软件的开发、测试和交付。
+`DevOps`开发者被期望知道如何使用许多不同类型的工具。这些工具通常免费下载和使用，这使得学习和理解多种工具的过程变得更容易。某些工具可能简单如允许项目内部更大通信的消息平台，而另一些工具可能更复杂，协助软件的开发、测试和交付。
 
 有时开发者会遇到必须解决的问题，但没有可供下载的工具，他们可能会发现自己正在创建工具。痛点或问题可能是你项目特有的，其他人没有经历过。问题甚至可能针对特定的团队以及他们正在处理的构建阶段。你会被要求运用问题解决能力和代码方面的创造力来开发工具以解决这些问题。如果你不能自己创建工具，你需要与项目中的其他人协作，他们可以帮助你解决问题并创建你所需的工具。
 
-自动化工具是 DevOps 开发者数字工具箱中较重要的工具之一。这些工具允许随时反复对软件应用程序进行测试，而不需要 DevOps 开发者在场。这些测试是快速的，每个结果都存储并与上一次进行比较。这允许开发者能够快速高效地查看这些多次测试的数据。通过这些数据，他们对软件进行适当调整，提高质量并修复漏洞。自动化工具减少了时间和工作，公司寻找知道如何使用工具的 DevOps 开发者。
+自动化工具是`DevOps`开发者数字工具箱中较重要的工具之一。这些工具允许随时反复对软件应用程序进行测试，而不需要`DevOps`开发者在场。这些测试是快速的，每个结果都存储并与上一次进行比较。这允许开发者能够快速高效地查看这些多次测试的数据。通过这些数据，他们对软件进行适当调整，提高质量并修复漏洞。自动化工具减少了时间和工作，公司寻找知道如何使用工具的`DevOps`开发者。
 
 ### DevOps 开发者的薪资与前景
 
-DevOps 是源自硅谷一些最大最成功公司的角色。亚马逊、Google 和 Facebook 是最早采用 DevOps 的公司。由于更多知名公司推崇这一领域，DevOps 已遍及整个技术行业。公司渴望简化并优化其生产流程，因此需要 DevOps 开发者。DevOps 开发者的薪资很有竞争力，在硅谷等地区，开发者的收入高于高于平均水平。
+`DevOps`是源自硅谷一些最大最成功公司的角色。`亚马逊`、`Google`和`Facebook`是最早采用`DevOps`的公司。由于更多知名公司推崇这一领域，`DevOps`已遍及整个技术行业。公司渴望简化并优化其生产流程，因此需要`DevOps`开发者。`DevOps`开发者的薪资很有竞争力，在硅谷等地区，开发者的收入高于高于平均水平。
 
-由于该领域与 QA 工程相似，对 DevOps 感兴趣的人需要问自己开发多种技能的努力以及在另一个领域花费的时间是否值得追求。成为 DevOps 开发者需要纪律、专注和耐心，因此这份工作可能并不所有人。
+由于该领域与`QA`工程相似，对`DevOps`感兴趣的人需要问自己开发多种技能的努力以及在另一个领域花费的时间是否值得追求。成为`DevOps`开发者需要纪律、专注和耐心，因此这份工作可能并不所有人。
 
 ![](img/f0083-01.jpg)
 
-科技领域最大的公司需要熟练、经验丰富的 DevOps 开发者为他们工作，以保持其网站顺畅运行。
+科技领域最大的公司需要熟练、经验丰富的`DevOps`开发者为他们工作，以保持其网站顺畅运行。
 
 ### 更多信息：组织
 
-BSA
+#### BSA
+
 20 F Street NW, Suite 800
+
 Washington, DC 20001
+
 (202) 872-5500
+
 网站：[`www.bsa.org`](http://www.bsa.org)
+
 该协会是软件行业的全球倡导者。
 
-IEEE Computer Society
+#### IEEE Computer Society
+
 2001 L Street NW, Suite 700
+
 Washington, DC 20036-4928
+
 (202) 371-0101
+
 网站：[`www.computer.org/web/guest`](https://www.computer.org/web/guest)
+
 IEEE 计算机学会对计算机科学和技术的人士提供资源、会议、期刊和数字图书馆。
 
-软件与信息行业协会 (SIIA)
+#### 软件与信息行业协会（SIIA）
+
 1090 Vermont Avenue NW, Sixth Floor
+
 Washington, DC 20005-4905
 
-
-
-
-
 网站：[`www.siia.net`](http://www.siia.net)
+
 (202) 289-7442
 
 这是一个针对软件和数字内容行业的行业协会。
@@ -669,7 +725,7 @@ Kim, Gene. *凤凰项目：一本关于 IT、DevOps 以及帮助你的业务获�
 
 Kim, Gene, Jez Humble, Patrick Debois, John Willis 和 John Allspaw. *DevOps 手册：如何在技术组织中创建世界级的敏捷性、可靠性和安全性.* 波特兰，俄勒冈州：IT Revolution Press, 2016.
 
-Warnock, Dan. *DevOps：从新手到专业。DevOps 快速简单指南.* 查尔斯顿，南卡罗纳州：CreateSpace Independent Publishing Platform, 2016.
+Warnock, Dan. *DevOps：从新手到专业。DevOps 快速简单指南.* 查尔斯顿，南卡罗来纳州：CreateSpace Independent Publishing Platform, 2016.
 
 ### 博客
 
@@ -687,72 +743,82 @@ Reynolds, Phillip. “我想成为 DevOps！” Brassy, 2015. [http://brassy.net
 
 [http://www.rosenlinks.com/CCWC/coding]
 
-## 第 9 章
+## 第 9 章：人工智能开发人员
 
-### 人工智能开发人员
-
-人工智能（简称 AI）被描述为硅谷的新心脏。虽然我们经常会想到科幻电影中那些具有人类特征的复杂机器人，但目前的 AI 在达到那种复杂程度之前还有很长一段路要走。人工智能目前执行的功能在大多数人看来是简单的，但这些功能通常是我们作为人类认为理所当然的复杂动作，例如理解我们的上网习惯并推荐页面。然而，随着每一步小小的进步，AI 越来越接近于执行更复杂的工作，例如在没有人类驾驶员的情况下驾驶、在战斗中跟随并协助士兵，或帮助老年人。人工智能作为一个前沿且广泛的领域，涵盖了从计算机翻译文本到计算机提供客户服务，以及谷歌和特斯拉的新自动驾驶汽车的所有领域。
+人工智能（简称`AI`）被描述为硅谷的新心脏。虽然我们经常会想到科幻电影中那些具有人类特征的复杂机器人，但目前的`AI`在达到那种复杂程度之前还有很长一段路要走。人工智能目前执行的功能在大多数人看来是简单的，但这些功能通常是我们作为人类认为理所当然的复杂动作，例如理解我们的上网习惯并推荐页面。然而，随着每一步小小的进步，`AI`越来越接近于执行更复杂的工作，例如在没有人类驾驶员的情况下驾驶、在战斗中跟随并协助士兵，或帮助老年人。人工智能作为一个前沿且广泛的领域，涵盖了从计算机翻译文本到计算机提供客户服务，以及谷歌和特斯拉的新自动驾驶汽车的所有领域。
 
 (image)
-```
 
-机器学习正在驱动着埃隆·马斯克和他的特斯拉公司设想的未来交通工具——驾驶汽车。
+> 机器学习正在驱动着埃隆·马斯克和他的特斯拉公司设想的未来交通工具——驾驶汽车。
 
 ### 机器学习与神经网络
 
-今天人工智能中最大的两个领域是机器学习和神经网络。正如我们之前讨论过的，机器学习是计算机在无需经过专门编程的情况下学习的能力。机器会经过许多、许多测试，每次都获取结果信息并对其进行分析，以应用并调整自己的程序。这可以是非常简单的，例如你的手机在发短信时学习俚语，并在下次发送消息时不再通过自动纠错功能将其标记；再到 Facebook 推荐新朋友；再到机器人在没有科学家指导的情况下探索小行星表面。
+今天人工智能中最大的两个领域是机器学习和神经网络。正如我们之前讨论过的，机器学习是计算机在无需经过专门编程的情况下学习的能力。机器会经过许多、许多测试，每次都获取结果信息并对其进行分析，以应用并调整自己的程序。这可以是非常简单的，例如你的手机在发短信时学习俚语，并在下次发送消息时不再通过自动纠错功能将其标记；再到`Facebook`推荐新朋友；再到机器人在没有科学家指导的情况下探索小行星表面。
 
 ### 自动驾驶汽车与道路的未来
 
-今天最令人兴奋和广受讨论的技术之一是即将对我们的生活和通勤时间产生重大影响的人工智能。自动驾驶汽车可以在没有人类驾驶员的情况下行驶的自主车辆。它们使用 `GPS`、传感器、内部导航系统和人工智能来自己从一个地点行驶到另一个地点。
+今天最令人兴奋和广受讨论的技术之一是即将对我们的生活和通勤时间产生重大影响的人工智能。自动驾驶汽车可以在没有人类驾驶员的情况下行驶的自主车辆。它们使用`GPS`、传感器、内部导航系统和人工智能来自己从一个地点行驶到另一个地点。
 
 (image)
-特斯拉 Model S 汽车配备了自动辅助技术，使驾驶员能够自动换道并进行平行泊车。这距离自动驾驶汽车又近了一步。
 
-目前，自动驾驶汽车的能力受到限制，还无法将人们送往上班或杂杂商店。然而，预计到 2020 年，将有数百万辆自动驾驶汽车上路。这项技术不仅会让你的旅程更加轻松，还将为无法自己驾驶的人们（如老年人和残障人士）提供交通便利。自动驾驶汽车还意味着更少的交通事故，因为汽车不会超速、行驶得太慢或离得太近——这些都是人类常见的坏习惯。随着安全性的提高以及无法驾驶的人员便利性和移动性的增加，汽车行业是那些致力于工作的人的许多可能领域之一。神经网络是机器学习的一种，存在于一个被称为深度学习的子集中。神经网络是旨在模仿大脑神经网络的软件或硬件系统。它的构建包含许多分层结构的处理器，每一层都向下一层提供数据。这意味着当输入数据时，它会逐层通过每一层，并在最终层输出其结果。这使得 AI 具有适应性，并且通常用于模式识别。神经网络目前的用途包括预测股市的模式、在你写支票时识别你的手迹，以及执行更复杂的动作，如让机器人识别你的脸。
+特斯拉`Model S`汽车配备了自动辅助技术，使驾驶员能够自动换道并进行平行泊车。这距离自动驾驶汽车又近了一步。
+
+目前，自动驾驶汽车的能力受到限制，还无法将人们送往上班或杂杂商店。然而，预计到 2020 年，将有数百万辆自动驾驶汽车上路。这项技术不仅会让你的旅程更加轻松，还将为无法自己驾驶的人们（如老年人和残障人士）提供交通便利。自动驾驶汽车还意味着更少的交通事故，因为汽车不会超速、行驶得太慢或离得太近——这些都是人类常见的坏习惯。随着安全性的提高以及无法驾驶的人员便利性和移动性的增加，汽车行业是那些致力于工作的人的许多可能领域之一。
+
+神经网络是机器学习的一种，存在于一个被称为深度学习的子集中。神经网络是旨在模仿大脑神经网络的软件或硬件系统。它的构建包含许多分层结构的处理器，每一层都向下一层提供数据。这意味着当输入数据时，它会逐层通过每一层，并在最终层输出其结果。这使得`AI`具有适应性，并且通常用于模式识别。神经网络目前的用途包括预测股市的模式、在你写支票时识别你的手迹，以及执行更复杂的动作，如让机器人识别你的脸。
 
 ### 如何成为人工智能开发人员
 
-一些人认为，要在人工智能领域工作，你需要一个博士学位。然而，并不一定需要高级学位，甚至是大学学位。但是，你必须积累其他技能和知识。了解 `Python` 和 `R` 等编程语言以及如何处理和读取数据是重要的，因为你对 AI 工作是构建能够自己处理数据并学习的程序。作为数据科学家可以作为通往人工智能领域工作的明智第一职业。因为数据科学家必须熟悉机器学习，所以你在该领域工作时不断完善自己的教育，随着你发现自己在人工智能领域可能想做什么，学习更多关于深度学习和神经网络的知识。
+一些人认为，要在人工智能领域工作，你需要一个博士学位。然而，并不一定需要高级学位，甚至是大学学位。但是，你必须积累其他技能和知识。了解`Python`和`R`等编程语言以及如何处理和读取数据是重要的，因为你对`AI`工作是构建能够自己处理数据并学习的程序。作为数据科学家可以作为通往人工智能领域工作的明智第一职业。因为数据科学家必须熟悉机器学习，所以你在该领域工作时不断完善自己的教育，随着你发现自己在人工智能领域可能想做什么，学习更多关于深度学习和神经网络的知识。
 
 (image)
-人工智能可以在你获得的其他职业和技能基础上建立建立。微软的 Cortana 写作团队由许多来自不同领域的专家组成。人工智能是一项热门技术，这意味着学习者可以轻松获得在线资源。博客、视频和教程都是学习的好方法。Kaggle 是另一个章节中提到的数据科学网站，通过其竞赛和公共数据集提供了练习机器学习问题的完美场所。竞赛让你不仅能够展示自己的工作，还能与其他对人工智能感兴趣的人建立联系，并接触到潜在的项目和雇主。
+
+人工智能可以在你获得的其他职业和技能基础上建立建立。微软的`Cortana`写作团队由许多来自不同领域的专家组成。人工智能是一项热门技术，这意味着学习者可以轻松获得在线资源。博客、视频和教程都是学习的好方法。`Kaggle`是另一个章节中提到的数据科学网站，通过其竞赛和公共数据集提供了练习机器学习问题的完美场所。竞赛让你不仅能够展示自己的工作，还能与其他对人工智能感兴趣的人建立联系，并接触到潜在的项目和雇主。
 
 ### 人工智能开发人员的薪资与前景
-```
 
+人工智能是一个席卷了科技行业的领域。人工智能有许多用途。从视频游戏、金融到汽车行业，再到智能手机应用程序，`AI`开发者拥有广泛的职业选择。对人工智能感兴趣的人应该关注其在不同行业中的各种用途，并看看哪种职业最吸引他们。由于有这么多选择和对技能水平的要求，`AI`开发者的需求很大，薪资范围也非常广泛。开发者在全职工作时，通常可以获得丰厚的薪水和公司福利。随着你表现优异并积累更多经验，晋升和加薪都是可能的。
 
-
-
-## 人工智能
-
-人工智能是一个席卷了科技行业的领域。人工智能有许多用途。从视频游戏、金融到汽车行业，再到智能手机应用程序，AI 开发者拥有广泛的职业选择。对人工智能感兴趣的人应该关注其在不同行业中的各种用途，并看看哪种职业最吸引他们。由于有这么多选择和对技能水平的要求，AI 开发者的需求很大，薪资范围也非常广泛。开发者在全职工作时，通常可以获得丰厚的薪水和公司福利。随着你表现优异并积累更多经验，晋升和加薪都是可能的。
-
-由于这是一项建立在以往经验基础上的职业，对成为人工智能开发者感兴趣的人应该考虑学习该领域所需技能的时间和精力投入。AI 工作在某些国家的某些地区可能更充足，因此考虑可能为了追求职业而搬迁是很重要的。
+由于这是一项建立在以往经验基础上的职业，对成为人工智能开发者感兴趣的人应该考虑学习该领域所需技能的时间和精力投入。`AI`工作在某些国家的某些地区可能更充足，因此考虑可能为了追求职业而搬迁是很重要的。
 
 ### 了解更多信息
 
-### 组织
+#### 组织
 
-计算机学术协会 (Association for Computing Machinery)
+##### 计算机学术协会（Association for Computing Machinery）
+
 2 Penn Plaza, Suite 701
+
 New York, NY 10121-0701
+
 (800) 342-6626
+
 网站：[`www.acm.org`](http://www.acm.org)
+
 这个计算学会聚集了专业人士、教育工作者学生，并将他们与社区和资源连接起来。
 
-人工智能促进协会 (Association for the Advancement of Artificial Intelligence)
+##### 人工智能促进协会（Association for the Advancement of Artificial Intelligence）
+
 2275 East Bayshore Road, Suite 160
+
 Palo Alto, CA 94303
+
 (650) 859-2000
+
 网站：[`www.aaai.org`](http://www.aaai.org)
+
 该非营利组织专注于思想和智能行为底层机制的推进与理解。
 
-国际神经网络学会 (INNS)
+##### 国际神经网络学会（INNS）
+
 11123 Comanche Path
+
 Bandera, TX 78003-421
+
 (830) 796-9393
+
 网站：[`www.inns.org`](http://www.inns.org)
+
 这是一个旨在对大脑进行理论和计算理解，并将这些知识用于开发新的、更有效的机器智能形式的组织。
 
 ### 书籍
@@ -769,39 +835,35 @@ Raschka, Sebastian. *Python Machine Learning*. Birmingham, UK: Packt Publishing,
 
 [`www.rosenlinks.com/CCWC/coding`](http://www.rosenlinks.com/CCWC/coding)
 
-## 第 10 章 加密货币开发者
+## 第 10 章：加密货币开发者
 
-当比特币（Bitcoin）在 2008 年出现时，它让加密货币进入了人们的视野。无论你是想为加密货币工作还是想构建自己的加密货币，随着我们使用越来越多的数字交易，这个行业将变得越来越至重要。
+当比特币（`Bitcoin`）在 2008 年出现时，它让加密货币进入了人们的视野。无论你是想为加密货币工作还是想构建自己的加密货币，随着我们使用越来越多的数字交易，这个行业将变得越来越至重要。
 
-加密货币对数字交易非常重要，因为与其他形式的数字货币相比，它们极其安全。随着我们在线购物越来越多，我们的信用卡和银行信息越来越容易受到黑客的攻击。大规模的黑客丑闻可能会获取成千上万人的个人信息，使他们的金钱和身份面临风险。加密货币将这种风险降至最低，因为它们是非中心化的，这意味着信息分散在所有用户之间，而不是存储在一个位置。这种去中心化的财务交易形式被称为 `blockchain`，它被认为是我们时代最重要的技术发现之一，仅次于互联网本身。
+加密货币对数字交易非常重要，因为与其他形式的数字货币相比，它们极其安全。随着我们在线购物越来越多，我们的信用卡和银行信息越来越容易受到黑客的攻击。大规模的黑客丑闻可能会获取成千上万人的个人信息，使他们的金钱和身份面临风险。加密货币将这种风险降至最低，因为它们是非中心化的，这意味着信息分散在所有用户之间，而不是存储在一个位置。这种去中心化的财务交易形式被称为`blockchain`，它被认为是我们时代最重要的技术发现之一，仅次于互联网本身。
 
 ![](img/f0098-01.jpg)
 
 比特币席卷了科技行业，现在是现有的最大的加密货币之一。你对今天出现的一些新技术感兴趣吗？
 
-`blockchain` 的交易信息保存在一个账本上。账本不仅仅一份副本，而是有多个分散在网络中并存储在称为 `nodes`（节点）的点上的副本。当一笔交易发生时，它会被记录在这个账本上，这意味着该笔交易有多个完全相同的副本。当账本满时，它就会被形成所谓的 `block`（区块），由加密代码进行保护。每个 `block` 都与前一个区块连接，因此你当前的交易与该货币产生以来的第一笔交易相连。这就是该系统闻名的区块链的产生。
+`blockchain`的交易信息保存在一个账本上。账本不仅仅一份副本，而是有多个分散在网络中并存储在称为`nodes`（节点）的点上的副本。当一笔交易发生时，它会被记录在这个账本上，这意味着该笔交易有多个完全相同的副本。当账本满时，它就会被形成所谓的`block`（区块），由加密代码进行保护。每个`block`都与前一个区块连接，因此你当前的交易与该货币产生以来的第一笔交易相连。这就是该系统闻名的区块链的产生。
 
-但让这种货币形式如此安全的实是，账本对用户开放的。这些用户不断地交叉检查账本，这使得黑客想要更改 `blockchain` 的任何部分都极其困难，因为任何更改在网络中的所有副本面前都会非常显眼。每笔交易都是透明的，而且有这么多人不断地检查和协作，任何黑客尝试都会被迅速发现。由于其安全性，区块链交易非常快，因为它们不需要长时间的安全检查期。
+但让这种货币形式如此安全的实是，账本对用户开放的。这些用户不断地交叉检查账本，这使得黑客想要更改`blockchain`的任何部分都极其困难，因为任何更改在网络中的所有副本面前都会非常显眼。每笔交易都是透明的，而且有这么多人不断地检查和协作，任何黑客尝试都会被迅速发现。由于其安全性，区块链交易非常快，因为它们不需要长时间的安全检查期。
 
-### 尖端技术 (THE BLEEDING EDGE)
+### 尖端技术（THE BLEEDING EDGE）
 
-每个人都知道什么是尖端技术——最新、最好、最先进和创新的技术。`Bleeding edge`（前沿）是 `cutting edge`（尖端）还要新的东西；它是新到仍然被认为一种风险的技术。前沿技术可能会改变世界，也可能失败并消失。这类技术如此激进且独特，人们需要时间来理解它们，而且教育资源匮乏，因为即使是专家仍在学习它们如何工作以及如何最好利用它们。这种技术可能需要几年时间才能改进并被公众利用。
+每个人都知道什么是尖端技术——最新、最好、最先进和创新的技术。`Bleeding edge`（前沿）是`cutting edge`（尖端）还要新的东西；它是新到仍然被认为一种风险的技术。前沿技术可能会改变世界，也可能失败并消失。这类技术如此激进且独特，人们需要时间来理解它们，而且教育资源匮乏，因为即使是专家仍在学习它们如何工作以及如何最好利用它们。这种技术可能需要几年时间才能改进并被公众利用。
 
-加密货币是最近被认为是 `bleeding edge` 的技术。在席卷世界后，它在 2013 年经历了一个泡沫，比特币价格飙升并达到每币 1000 美元的巅峰。这被认为是一个炒作周期，即技术处于快速增长泡沫中，人们兴奋并参与其中的时期。
+加密货币是最近被认为是`bleeding edge`的技术。在席卷世界后，它在 2013 年经历了一个泡沫，比特币价格飙升并达到每币 1000 美元的巅峰。这被认为是一个炒作周期，即技术处于快速增长泡沫中，人们兴奋并参与其中的时期。
 
-在过去的几年里，`bitcoin` 已经稳定下来，不再像在 `bleeding edge` 时那样增长得快。然而，这项技术仍然是新的，该领域仍在不断产生。始终考虑进入一个新且不断演变的领域与一个更成熟领域的优缺点。
+在过去的几年里，`bitcoin`已经稳定下来，不再像在`bleeding edge`时那样增长得快。然而，这项技术仍然是新的，该领域仍在不断产生。始终考虑进入一个新且不断演变的领域与一个更成熟领域的优缺点。
 
 ### 如何成为加密货币开发者
 
-加密货币和 `blockchain` 是一种如此新且开放的技术，因此很容易找到教育资源。视频、文章和论文均供任何人观看、阅读并获得更好的理解。书籍和在线课程可用，某些课程由大公司和常青藤学院赞助。
+加密货币和`blockchain`是一种如此新且开放的技术，因此很容易找到教育资源。视频、文章和论文均供任何人观看、阅读并获得更好的理解。书籍和在线课程可用，某些课程由大公司和常青藤学院赞助。
 
 开发者应该理解整个加密货币系统的工作原理。他们可以通过注册并购买一些加密货币进行交易来实现。像比特币这样的加密货币有解释其工作方式的页面，让任何人学习其及其各种用途。
 
-由于 `blockchain` 和加密货币正被大公司实施和探索，对该行业感兴趣的人需要对传统的编程和软件构建有坚实的掌握。这是因为 `blockchain` 通常被集成到现有的技术和服务中，新的产品需要在通用框架的基础上构建。因此，对加密货币感兴趣的人不仅在学习 `blockchain`，还在学习多种编程语言，以便将 `blockchain` 带到科技世界的其他领域。
-
-
-
-
+由于`blockchain`和加密货币正被大公司实施和探索，对该行业感兴趣的人需要对传统的编程和软件构建有坚实的掌握。这是因为`blockchain`通常被集成到现有的技术和服务中，新的产品需要在通用框架的基础上构建。因此，对加密货币感兴趣的人不仅在学习`blockchain`，还在学习多种编程语言，以便将`blockchain`带到科技世界的其他领域。
 
 在学习了编程并阅读和理解区块链之后，联系加密货币社区至关重要。加密货币具有高度透明性，并且由人员网络组成，这些社区对于任何对学习感兴趣的人来说都是信息的宝库。社区成员分享知识并解决问题，让你在尝试加密货币的同时从同伴身上学习学习。这些地方也是人们聚在一起共同开发项目的地方。加入一个项目将帮助你获得团队合作的经验，并解决在加密货币开发过程中出现的问题。
 
@@ -809,59 +871,76 @@ Raschka, Sebastian. *Python Machine Learning*. Birmingham, UK: Packt Publishing,
 
 加密货币目前是一项尖端技术。这意味着大公司正在探索它，但尚未完全整合。由于它非常新，公司正在不断测试和发明，以寻找如何最好地利用这项技术，而且专家非常少。随着加密货币的普及持续提高并被更多公司使用，对开发者的需求也会随之增长。开发者可以获得具有竞争力的薪资，以吸引短缺的人才。
 
+
+
 加密货币是一项复杂的新技术，因此对这一职业感兴趣的人应该不仅喜欢学习编程，还喜欢研究金融世界。喜欢解决复杂问题并为技术构思新用途的人可能非常适合开发加密货币，因为行业本身正在快速演变和成型。行业的快速增长应当被考虑在内，因为实践、法规、标准和其他指南仍在讨论和开发中。
 
-![](img/f0104-01.jpg)
+![img](/img/f0104-01.jpg)
 
 你可以通过举办线下或在线活动、聚会的俱乐部或小组，与其他对加密货币感兴趣的人见面。
 
 ### 更多信息
 
-### 组织
+#### 组织
 
 **美国统计协会 (American Statistical Association)**
-732 North Washington Street
-Alexandria, VA 22314-1943
+
+732 North Washington Street  
+Alexandria, VA 22314-1943  
 (703) 684-1221
-网站：[`www.amstat.org`](http://www.amstat.org)
+
+网站：<http://www.amstat.org>
+
 ASA 成立于 1839 年，是全球最大的统计学家社区。ASA 支持统计科学的发展、应用和传播。
 
 **加密货币标准协会 (Cryptocurrency Standards Association)**
-NYDesigns
-45-50 30th Street, Suite 9
-Long Island City, NY 11101
+
+NYDesigns  
+45-50 30th Street, Suite 9  
+Long Island City, NY 11101  
 (718) 663-8463
-网站：[`www.crypsa.org`](http://www.crypsa.org)
+
+网站：<http://www.crypsa.org>
+
 该组织专注于稳定比特币行业并创建一系列标准。
 
 **IEEE 计算机学会 (IEEE Computer Society)**
-2001 L Street NW, Suite 700
-Washington, DC 20036-4928
+
+2001 L Street NW, Suite 700  
+Washington, DC 20036-4928  
 (202) 371-0101
-网站：[`www.computer.org/web/guest`](https://www.computer.org/web/guest)
+
+网站：<https://www.computer.org/web/guest>
+
 IEEE 计算机学会为计算机科学和技术感兴趣的人提供资源、会议、期刊和数字图书馆。
 
-### 书籍
-* Antonopoulos, Andreas. *Mastering Bitcoin: Unlocking Digital Cryptocurrencies.* Sebastopol, CA: O’Reilly Media, 2014.
-* Narayanan, Arvind. *Bitcoin and Cryptocurrency Technologies: A Comprehensive Introduction.* Princeton, NJ: Princeton University Press, 2016.
-* Vigna, Paul. *The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order.* New York, NY: Picador, 2016.
+#### 书籍
 
-### 博客
-* Blockchain Technologies. “Cryptocurrency Explained: The Ultimate Guide to Understanding Cryptocurrency.” 2016. [`www.blockchaintechnologies.com/blockchain-cryptocurrency`](http://www.blockchaintechnologies.com/blockchain-cryptocurrency).
-* Grothaus, Michael. “How to Create Your Own Cryptocurrency.” Fast Company, 2014. [`www.fastcompany.com/3025700/how-to-create-your-own-cryptocurrency`](https://www.fastcompany.com/3025700/how-to-create-your-own-cryptocurrency).
-* Hutt, Rosamund. “All You Need to Know About Blockchain, Explained Simply.” World Economic Forum, 2016. [`www.weforum.org/agenda/2016/06/blockchain-explained-simply`](https://www.weforum.org/agenda/2016/06/blockchain-explained-simply).
+- Antonopoulos, Andreas. *Mastering Bitcoin: Unlocking Digital Cryptocurrencies.* Sebastopol, CA: O’Reilly Media, 2014.
+- Narayanan, Arvind. *Bitcoin and Cryptocurrency Technologies: A Comprehensive Introduction.* Princeton, NJ: Princeton University Press, 2016.
+- Vigna, Paul. *The Age of Cryptocurrency: How Bitcoin and the Blockchain Are Challenging the Global Economic Order.* New York, NY: Picador, 2016.
 
-### 网站
-由于互联网链接具有变动性，Rosen 出版开发了一个与本书书主题相关的在线网站列表。该网站定期更新。请使用此链接访问列表：
-[`www.rosenlinks.com/CCWC/coding`](http://www.rosenlinks.com/CCWC/coding)
+#### 博客
+
+- Blockchain Technologies. “Cryptocurrency Explained: The Ultimate Guide to Understanding Cryptocurrency.” 2016. <http://www.blockchaintechnologies.com/blockchain-cryptocurrency>.
+- Grothaus, Michael. “How to Create Your Own Cryptocurrency.” Fast Company, 2014. <https://www.fastcompany.com/3025700/how-to-create-your-own-cryptocurrency>.
+- Hutt, Rosamund. “All You Need to Know About Blockchain, Explained Simply.” World Economic Forum, 2016. <https://www.weforum.org/agenda/2016/06/blockchain-explained-simply>.
+
+#### 网站
+
+由于互联网链接具有变动性，Rosen 出版开发了一个与本书主题相关的在线网站列表。该网站定期更新。请使用此链接访问列表：
+
+<http://www.rosenlinks.com/CCWC/coding>
+
+---
 
 ## 第 11 章
 
 ### 产品管理
 
-产品管理是一个负责监督产品生命周期每个阶段的角色。产品经理（有时被称为项目经理）了解开发者是如何构建项目的，但他们同时也与市场、测试部门交流，并监控指标。产品经理是一位经验丰富的构建者，也是一位业务敏锐的团队领袖，他们了解产品的目标市场以及如何销售它。产品经理不仅能接受批评，还能以对他具有建设性的方式提出批评。每个部门的每个团队在产品的每个阶段都会向项目经理汇报。产品经理确保截止截止日期，并处理解决任何出现的问题。他们是使整个项目凝聚在一起的胶水，也是代表产品和团队发言的人。
+产品管理是一个负责监督产品生命周期每个阶段的角色。产品经理（有时被称为项目经理）了解开发者是如何构建项目的，但他们同时也与市场、测试部门交流，并监控指标。产品经理是一位经验丰富的构建者，也是一位业务敏锐的团队领袖，他们了解产品的目标市场以及如何销售它。产品经理不仅能接受批评，还能以对他具有建设性的方式提出批评。每个部门的每个团队在产品的每个阶段都会向项目经理汇报。产品经理确保截止日期，并处理解决任何出现的问题。他们是使整个项目凝聚在一起的胶水，也是代表产品和团队发言的人。
 
-![](img/f0110-01.jpg)
+![img](/img/f0110-01.jpg)
 
 所有其他职业都可以引导你成为产品经理；经验是关键。
 
@@ -875,22 +954,19 @@ IEEE 计算机学会为计算机科学和技术感兴趣的人提供资源、会
 
 产品经理需要掌握三个业务领域：技术、用户体验和业务意识。这三个领域完全不同，虽然项目经理可能精通其中之一，但在他们承担更多领导角色时，被要求学习其他。
 
-对于他们管理的任何项目，产品经理都需要对创建的技术有工作性的了解。他们需要一些编程知识，并理解构建产品的框架。这样他们才能与项目的项目的工程师进行准确清晰的沟通。优秀的产品经理知道发生了什么以及原因，以及工程师团队必须解决哪些问题。
+对于他们管理的任何项目，产品经理都需要对创建的技术有工作性的了解。他们需要一些编程知识，并理解构建产品的框架。这样他们才能与项目的工程师进行准确清晰的沟通。优秀的产品经理知道发生了什么以及原因，以及工程师团队必须解决哪些问题。
 
-产品经理还需要理解用户体验，以便他们与 UX 设计师和测试人员交流，改进面向客户的产品。产品经理理解测试、设计以及产品对用户的基本原理。最终，产品将交由用户，项目经理应该知道需要什么样的体验才能使项目成功。
-
-
-
+产品经理还需要理解用户体验，以便他们与 `UX` 设计师和测试人员交流，改进面向客户的产品。产品经理理解测试、设计以及产品对用户的基本原理。最终，产品将交由用户，项目经理应该知道需要什么样的体验才能使项目成功。
 
 传达项目的这些内部和外部部分至关重要。这意味着不仅要能够传达它们，还要能够解释产品对业务的整体影响。这需要第三个领域——业务直觉。项目经理需要牢牢掌握公司的业务运营以及产品所属的市场，并能够向公司内部其他同事、客户、合作伙伴和用户讨论这些内容。他们的业务经验使他们能够将所有知识整合起来，并向其他所有人推销这个项目。
 
 在团队中开发产品的经验，应该通过学习更多如何成为一名产品经理来补充。有许多书籍和在线资源讨论了如何成功地进行产品管理。学习公开演讲是非常重要的，因为产品经理必须与每一个没有参与产品工作的人进行交流。对产品管理感兴趣的人可能想参加公开演讲课程，或者学习如何写作和提高沟通技巧的课程。他们可能还想参加关于管理、团队建设和冲突解决的课程或阅读书籍。
 
-![](img/f0114-01.jpg)
+![img](/img/f0114-01.jpg)
 
 哪里都需要产品经理。野村龙（Tatsuo Nomura）是热门手游游戏《宝可梦 Go》的高级产品经理。
 
-为了获得作为项目经理的经验，可以关注聚会和如黑客松之类的活动。在黑客松比赛中带领一个小型小组将帮助你作为产品经理的成长，并在极短的时间内练习所需的领导力和团队技巧。你也可以成为那个站出来向评委推销你们团队的的成员，向他们解释你想要解决的问题，你如何通过你的产品解决该问题，并向他们演示产品。你参加并竞争的黑客松越多，你就能在简历上增加越多的内容，用以展示你作为产品经理的技能。
+为了获得作为项目经理的经验，可以关注聚会和如黑客松之类的活动。在黑客松比赛中带领一个小型小组将帮助你作为产品经理的成长，并在极短的时间内练习所需的领导力和团队技巧。你也可以成为那个站出来向评委推销你们团队的成员，向他们解释你想要解决的问题，你如何通过你的产品解决该问题，并向他们演示产品。你参加并竞争的黑客松越多，你就能在简历上增加越多的内容，用以展示你作为产品经理的技能。
 
 ### 产品经理的薪资与职业前景
 
@@ -898,19 +974,25 @@ IEEE 计算机学会为计算机科学和技术感兴趣的人提供资源、会
 
 ### 更多信息：组织
 
-### 项目管理协会 (Association for Project Management)
+#### 项目管理协会 (Association for Project Management)
+
 Ibis House, Regent Park, Summer Road, Risborough, United Kingdom。这家慈善机构专注于项目管理的职位安置与晋升。
-网站：[`http://www.apm.org`](http://www.apm.org)
 
-### 计算机历史博物馆 (Computer History Museum)
+网站：<http://www.apm.org>
+
+#### 计算机历史博物馆 (Computer History Museum)
+
 1401 N Shoreline Boulevard, Mountain View, CA. 这家非营利机构保护历史，并探索计算对世界的影响。
-网站：[`http://www.computerhistory.org`](http://www.computerhistory.org)
 
-### 项目管理协会 (Project Management Institute)
+网站：<http://www.computerhistory.org>
+
+#### 项目管理协会 (Project Management Institute)
+
 14 Campus Boulevard, Newtown Square, PA. 该组织专注于项目管理角色人员的职业发展。
-网站：[`http://www.pmi.org`](http://www.pmi.org)
 
-### 书籍
+网站：<http://www.pmi.org>
+
+#### 书籍
 
 Cagan, Marty. *Inspired: How to Create Products Love*. Sunnyvale, CA: SVPG Press, 2016.
 
@@ -918,15 +1000,16 @@ Haines, Steven. *The Product Manager’s Survival Guide: Everything You Need to 
 
 McDowell, Gayle Laakmann. *Cracking the PM Interview: How to Land a Product Manager Job in Technology*. New York, NY: Mcraw-Hill Education, 2013.
 
-### 博客
+#### 博客
 
-Chu, Brandon. “PMs, You Don’t Need That Degree.” 2014. [`https://medium.com/@brandonmchu/pms-you-dont-need-that-technical-degree-7d8fb196bcc#gewomlb0`](https://medium.com/@brandonmchu/pms-you-dont-need-that-technical-degree-7d8fb196bcc#gewomlb0).
+Chu, Brandon. “PMs, You Don’t Need That Degree.” 2014. <https://medium.com/@brandonmchu/pms-you-dont-need-that-technical-degree-7d8fb196bcc#gewomlb0>.
+Walk, Hunter. “Ode to a Non-Technical Product Manager.” 2012. <https://hunterwalk.com/2012/08/18/ode-to-a-non-technical-product-manager>.
 
-Walk, Hunter. “Ode to a Non-Technical Product Manager.” 2012. [`https://hunterwalk.com/2012/08/18/ode-to-a-non-technical-product-manager`](https://hunterwalk.com/2012/08/18/ode-to-a-non-technical-product-manager).
+#### 网站
 
-### 网站
+由于互联网链接的易变性，Rosen Publishing 开发了一个与本书主题相关的在线网站列表。该网站定期更新。请使用此链接访问列表：<http://www.rosenlinks.com/CCWC/coding>
 
-由于互联网链接的易变性，Rosen Publishing 开发了一个与本书主题相关的在线网站列表。该网站定期更新。请使用此链接访问列表：[`http://www.rosenlinks.com/CCWC/coding`](http://www.rosenlinks.com/CCWC/coding)
+---
 
 ## 术语表
 
@@ -950,122 +1033,179 @@ Walk, Hunter. “Ode to a Non-Technical Product Manager.” 2012. [`https://hunt
 - **系统管理员 (SYS ADMIN)**：系统管理员。
 - **UX**：用户体验。
 
+---
+
 ## 参考文献
 
-Albright, Dan. “How to Become a Data Scientist.” MakeUseOf, 2015 年 3 月 6 日. 于 2016 年 11 月 21 日检索[`http://www.makeuseof.com/tag/become-data-scientist`](http://www.makeuseof.com/tag/become-data-scientist).
+Albright, Dan. “How to Become a Data Scientist.” MakeUseOf, 2015 年 3 月 6 日. 于 2016 年 11 月 21 日检索 <http://www.makeuseof.com/tag/become-data-scientist>.
 
-“Must Read Books for Beginners on Machine Learning and Artificial Intelligence.”*Analytics Vidhya*, 2016 年 10 月 1 日. 于 2016 年 10 月 16 日检索[`https://www.analyticsvidhya.com/blog/2015/10/read-books-for-beginners-machine-learning-artificial-intelligence/`](https://www.analyticsvidhya.com/blog/2015/10/read-books-for-beginners-machine-learning-artificial-intelligence/).
+“Must Read Books for Beginners on Machine Learning and Artificial Intelligence.” *Analytics Vidhya*, 2016 年 10 月 1 日. 于 2016 年 10 月 16 日检索 <https://www.analyticsvidhya.com/blog/2015/10/read-books-for-beginners-machine-learning-artificial-intelligence/>.
 
-Cooper, Michael W. “7 Critical Skills for QA Testing Career Survival.”*TechBeacon*, 2016 年 10 月 31 日. 网络版. 于 2016 年 11 月 1 日检索[`https://techbeacon.com/7-soft-skills-every-qa-tester-needs`](https://techbeacon.com/7-soft-skills-every-qa-tester-needs).
+Cooper, Michael W. “7 Critical Skills for QA Testing Career Survival.” *TechBeacon*, 2016 年 10 月 31 日. 网络版. 于 2016 年 11 月 1 日检索 <https://techbeacon.com/7-soft-skills-every-qa-tester-needs>.
 
-Donnelly, Jacob. “Here’s What the Future of Bitcoin Looks like—and It’s bright.”*Venture Beat*, 2016 年 2 月 14 日. 于 2016 年 11 月 30 日检索`http://venturebeat.com/2016/02/14/heres-what-the-future-of-bitcoin-looks-like-and-its-bright/`.
+Donnelly, Jacob. “Here’s What the Future of Bitcoin Looks like—and It’s bright.” *Venture Beat*, 2016 年 2 月 14 日. 于 2016 年 11 月 30 日检索 <http://venturebeat.com/2016/02/14/heres-what-the-future-of-bitcoin-looks-like-and-its-bright/>.
+
+- Finley, Klint. “现代数据极客并不像你想象的那么书呆。” *Wired*. Conde Nast, 2013 年 11 月 4 日. Web 检索于 2016 年 9 月 15 日. <http://www.wired.com/2013/04/phd-data-scientist/>.
+- Francis, William J. “你想成为 Android 开发者吗？从这些资源开始。” TechRepublic, 2015 年 7 月 31 日. 检索于 2016 年 10 月 3 日. <http://www.techrepublic.com/article/so-you-want-to-be-an-android-developer-start-with-these-resources/>.
 
 
 
-
-- Finley, Klint. “现代数据极客并不像你想象的那么书呆。” *Wired*. Conde Nast, 2013 年 11 月 4 日. Web 检索于 2016 年 9 月 15 日. [`www.wired.com/2013/04/phd-data-scientist/`](http://www.wired.com/2013/04/phd-data-scientist/)。
-- Francis, William J. “你想成为 Android 开发者吗？从这些资源开始。” TechRepublic, 2015 年 7 月 31 日. 检索于 2016 年 10 月 3 日. [`www.techrepublic.com/article/so-you-want-to-be-an-android-developer-start-with-these-resources/`](http://www.techrepublic.com/article/so-you-want-to-be-an-android-developer-start-with-these-resources/)。
 - Golson, Jordan. “苹果 App Store 现在拥有超过 200 万个应用。” The Verge. The Verge, 2016 年 6 月 13 日. 检索于 2016 年 9 月 30 日. [`www.theverge.com/2016/6/13/11922926/apple-apps-2-million-wwdc-2016`](http://www.theverge.com/2016/6/13/11922926/apple-apps-2-million-wwdc-2016)。
+
 - Ivins, Jessica. “我关于成为 UX 设计者的建议。” Jessica Ivins. Jessica Ivins, 2014 年 5 月 27 日. 检索于 2016 年 10 月 3 日. [`jessicaivins.net/my-advice-for-becoming-a-ux-designer/`](http://jessicaivins.net/my-advice-for-becoming-a-ux-designer/)。
+
 - Magain, Matthew. “如何开始学习 UX 设计 – UX Mastery。” UX Mastery. UX Mastery, 2016 年 3 月 16 日. 检索于 2016 年 9 月 15 日. [`uxmastery.com/%20how-to-get-started-in-ux-design/`](http://uxmastery.com/%20how-to-get-started-in-ux-design/)。
+
 - Na. “成为游戏设计师需要学位吗？” 游戏设计者. Game Designing, 2016 年 10 月 5 日. 检索于 2016 年 10 月 12 日. [`www.gamedesigning.org/career/do-you-need-college/`](http://www.gamedesigning.org/career/do-you-need-college/)。
+
 - Norma, Lindsay. “当你一无知时如何成为 UX/UI 设计师。” LinkedIn. LinkedIn, 2014 年 7 月 2 日. 检索于 2016 年 9 月 15 日 [`www.linkedin.com/pulse/20140702131658-43610144-how-to-become-a-ux-ui-designer-without-design-school`](http://www.linkedin.com/pulse/20140702131658-43610144-how-to-become-a-ux-ui-designer-without-design-school)。
+
 - Rayej, Shima. “自动驾驶汽车是如何工作的？” Robohub. 2014 年 6 月 3 日. 检索于 2016 年 9 月 30 日. [`robohub.org/how-do-self-driving-cars-work/`](http://robohub.org/how-do-self-driving-cars-work/)。
-- Reillr, Brendan. “存储管理员的常见任务。” SearchStorage. Tech Target. 检索于 2016 年 10 月 30 日. [`searchstorage.techtarget.com/answer/Common-tasks-for-a-storage-administrator`](http://searchstorage.techtarget.com/answer/Common-tasks-for-a-storage-administrator)。。
-- Schreier, Jason. “视频游戏加班文化的可怕世界。” Kotaku. Gawker Media, 2016 年 9 月 26 日. 检索于 2016 年 10 月 3 日. [`kotaku.com/%20crunch-time-why-game-developers-work-such-insane-hours-1704744577`](http://kotaku.com/%20crunch-time-why-game-developers-work-such-insane-hours-1704744577)。。
-- Stuart, Keith. “如何进入游戏行业 – 业内人士指南。” The Guardian. Guardian News and Media, 2014 年 3 月 20 日. 检索于 2016 年 9 月 15 日. [`www.theguardian.com/technology/2014/%20mar/20/how-to-get-into-the-games-industry-an-insiders-guide`](http://www.theguardian.com/technology/2014/%20mar/20/how-to-get-into-the-games-industry-an-insiders-guide)。。
+
+- Reillr, Brendan. “存储管理员的常见任务。” SearchStorage. Tech Target. 检索于 2016 年 10 月 30 日. [`searchstorage.techtarget.com/answer/Common-tasks-for-a-storage-administrator`](http://searchstorage.techtarget.com/answer/Common-tasks-for-a-storage-administrator)。
+
+- Schreier, Jason. “视频游戏加班文化的可怕世界。” Kotaku. Gawker Media, 2016 年 9 月 26 日. 检索于 2016 年 10 月 3 日. [`kotaku.com/%20crunch-time-why-game-developers-work-such-insane-hours-1704744577`](http://kotaku.com/%20crunch-time-why-game-developers-work-such-insane-hours-1704744577)。
+
+- Stuart, Keith. “如何进入游戏行业 – 业内人士指南。” The Guardian. Guardian News and Media, 2014 年 3 月 20 日. 检索于 2016 年 9 月 15 日. [`www.theguardian.com/technology/2014/%20mar/20/how-to-get-into-the-games-industry-an-insiders-guide`](http://www.theguardian.com/technology/2014/%20mar/20/how-to-get-into-the-games-industry-an-insiders-guide)。
+
 - Watkins, Christopher. “成为 iOS 开发者所需的 7 项技能。” Udacity, 2016 年 3 月 5 日. 检索于 2016 年 10 月 12 日. [`www.udacity.com/7-skills-you-need-to-be-an-ios-developer-2130537/`](https://www.udacity.com/7-skills-you-need-to-be-an-ios-developer-2130537/)。
 
 ### 索引
 
 **A**
+
 - Adobe Illustrator, 12
+
 - Adobe Photoshop, 12
+
 - Android, 30, 72
+
 - artificial intelligence, 87, 89
+
 - artistic design, 12
 
 **B**
+
 - Bitcoin, 48
+
 - boot camp, 50
 
 **C**
+
 - coding, 40
+
 - cryptocurrency, 52, 54
 
 **D**
+
 - data up, 21, 23
+
 - data analyst, 51, 52
+
 - data scientist, 48, 50
 
 **E**
+
 - enterprise communication, 20, 24
 
 **F**
+
 - Facebook, 58, 82
+
 - front end, 37, 38
+
 - full stack developer, 39, 42
 
 **G**
+
 - game developer, 58, 61
 
 **H**
+
 - hackathon, 32, 33
 
 **I**
+
 - interface, 10, 12
+
 - iOs, 30, 34, 72
 
 **K**
+
 - Kaggle, 51, 52
 
 **L**
+
 - LinkedIn, 12, 13
+
 - Lynda, 12
 
 **M**
+
 - mobile communication, 4, 6, 28, 30
 
 **N**
+
 - networking, 7, 24
 
 **P**
+
 - project management, 109, 112
+
 - product manager, 111, 113, 115
+
 - Python, 50, 92
 
 **Q**
+
 - QA (quality assurance) engineer, 72, 73
 
 **R**
+
 - routers, 20
 
 **S**
+
 - scripting, 79
+
 - servers, 23
+
 - Silicon Valley, 15, 82, 87
+
 - Sketch, 12
+
 - Skillshare, 12
+
 - Skillwise, 12
+
 - smartphone, 4, 94
+
 - startups, 111
+
 - Steam, 58
+
 - system administrator, 24, 25
 
 **T**
+
 - telecommuting, 11
 
 **U**
+
 - usability testing, 11, 112
+
 - UX (user experience) designer, 12, 13
 
 **V**
+
 - virtual reality, 62
 
 **W**
+
 - wireframe, 10, 38
 
 **Y**
+
 - YouTube, 12
 
 ### 关于作者
@@ -1073,9 +1213,6 @@ Donnelly, Jacob. “Here’s What the Future of Bitcoin Looks like—and It’s 
 Asher Powell 是一位自豪的极客，前科技行业从业人士，曾在硅谷担任社交媒体营销人员。现在他是一位作家，喜欢在他非常毛茸的猫身边讲述故事，并学习技术的未来。
 
 ### 图片致谢
-
-
-
 
 封面，第 1 页 [Rawpixel.com](http://Rawpixel.com)/[Shutterstock.com](http://Shutterstock.com)；第 4–5 页 nenetus/[Shutterstock.com](http://Shutterstock.com)；第 8–9 页 © [iStockphoto.com](http://iStockphoto.com)/Squaredpixels；第 14–15 页 Bildagentur Zoonar GmbH/[Shutterstock.com](http://Shutterstock.com)；第 18–19 页 © [iStockphoto.com](http://iStockphoto.com)/bjdlzx；第 24 页 chainarong06/[Shutterstock.com](http://Shutterstock.com)；第 28–29 页 Alexey Boldin/[Shutterstock.com](http://Shutterstock.com)；第 31 页，32 页，第 48–49 页，第 63 页，第 78–79 页，第 90–91 页，第 114–115 页 Bloomberg/Getty Images；第 37 页 McIek/[Shutterstock.com](http://Shutterstock.com)；第 40–41 页 ProStockStudio/[Shutterstock.com](http://Shutterstock.com)；第 53 页 WAYHOME studio/[Shutterstock.com](http://Shutterstock.com)；第 58–59 页 Monkey Business Images/ [Shutterstock.com](http://Shutterstock.com)；第 61 页 Edge Magazine/Future/Getty Images；第 68–69 页 © [iStockphoto.com](http://iStockphoto.com)/vgajic；第 73 页 © [iStockphoto.com](http://iStockphoto.com)/gilaxia；第 83 页 JaysonPhotography/[Shutterstock.com](http://Shutterstock.com)；第 88–89 页 VCG/Getty Images；第 93 页 The Washington Post/Getty Images；第 98–99 页 Zapp2Photo/[Shutterstock.com](http://Shutterstock.com)；第 104–105 页 © AP Images；第 110–111 页 © [iStockphoto.com](http://iStockphoto.com)/alvarez；封面及内设计元素 © [iStockphoto.com](http://iStockphoto.com)/David Shultz (点), Melamory/ [Shutterstock.com](http://Shutterstock.com) (六边形图案), Lost & Taken (文本框背景纹理), tasnadi_otto/[Shutterstock.com](http://Shutterstock.com) (章节开启图标)。
 

@@ -1,22 +1,5 @@
-# 动态符号链接的细节
 
-*   前言
-*   基本概念
-    *   ELF
-    *   符号
-    *   重定位：[是将符号引用与符号定义进行链接的过程](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)
-    *   动态链接
-    *   动态链接库
-    *   动态链接器（dynamic linker/loader）
-    *   过程链接表（plt）
-    *   全局偏移表（got）
-    *   重定位表
-*   动态链接库的创建和调用
-    *   创建动态链接库
-    *   隐式使用该库
-    *   显式使用库
-*   动态链接过程
-*   参考资料
+# 动态符号链接的细节
 
 ## 前言
 
@@ -202,48 +185,54 @@ Linux 下 `elf` 文件的动态链接器是 `ld-linux.so`，即 `/lib/ld-linux.s
 那么在 `exec` （）之后和程序指令运行之前的过程是怎样的呢？ `ld-linux.so` 主要为程序本身创建了内存映像（以下内容摘自资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)），大体过程如下：
 
 *   将可执行文件的内存段添加到进程映像中；
+
 *   把共享目标内存段添加到进程映像中；
+
 *   为可执行文件和它的共享目标（动态链接库）执行重定位操作；
+
 *   关闭用来读入可执行文件的文件描述符，如果动态链接程序收到过这样的文件描述符的话；
+
 *   将控制转交给程序，使得程序好像从 `exec()` 直接得到控制
 
 关于第 1 步，在 `ELF` 文件的文件头中就指定了该文件的入口地址，程序的代码和数据部分会相继 `map` 到对应的内存中。而关于可执行文件本身的路径，如果指定了 `PATH` 环境变量，`ld-linux` 会到 `PATH` 指定的相关目录下查找。
 
+
+
 ```cpp
 $ readelf -h test | grep Entry
-  Entry point address:               0x80482b0 
+  Entry point address:               0x80482b0
 ```
 
-对于第 2 步，上一节提到的 `.dynamic` 节区指定了可执行文件依赖的库名，`ld-linux` （在这里叫做动态装载器或程序解释器比较合适）再从 `LD_LIBRARY_PATH` 指定的路径中找到相关的库文件或者直接从 `/etc/ld.so.cache` 库缓冲中加载相关库到内存中。（关于进程的内存映像，推荐参考资料 [[14]](http://www.ibm.com/developerworks/cn/linux/l-elf/part2/index.html)）
+对于第 2 步，上一节提到的`.dynamic`节区指定了可执行文件依赖的库名，`ld-linux`（在这里叫做动态装载器或程序解释器比较合适）再从`LD_LIBRARY_PATH`指定的路径中找到相关的库文件或者直接从`/etc/ld.so.cache`库缓冲中加载相关库到内存中。（关于进程的内存映像，推荐参考资料 [[14]](http://www.ibm.com/developerworks/cn/linux/l-elf/part2/index.html)）
 
-对于第 3 步，在前面已提到，如果设置了 `LD_BIND_NOW` 环境变量，这个动作就会在此时发生，否则将会采用 `lazy mode` 方式，即当某个符号被使用时才会进行符号的重定位。不过无论在什么时候发生这个动作，重定位的过程大体是一样的（在后面将主要介绍该过程）。
+对于第 3 步，在前面已提到，如果设置了`LD_BIND_NOW`环境变量，这个动作就会在此时发生，否则将会采用`lazy mode`方式，即当某个符号被使用时才会进行符号的重定位。不过无论在什么时候发生这个动作，重定位的过程大体是一样的（在后面将主要介绍该过程）。
 
 对于第 4 步，这个主要是释放文件描述符。
 
 对于第 5 步，动态链接器把程序控制权交还给程序。
 
-现在关心的主要是第 3 步，即如何进行符号的重定位？下面来探求这个过程。期间会逐步讨论到和动态链接密切相关的三个数据结构，它们分别是 `ELF` 文件的过程链接表、全局偏移表和重定位表，这三个表都是 `ELF` 文件的节区。
+现在关心的主要是第 3 步，即如何进行符号的重定位？下面来探求这个过程。期间会逐步讨论到和动态链接密切相关的三个数据结构，它们分别是`ELF`文件的过程链接表、全局偏移表和重定位表，这三个表都是`ELF`文件的节区。
 
-### 过程链接表（plt）
+## 过程链接表（`plt`）
 
-从上面的演示发现，还有一个 `printf` 符号的地址没有确定，它应该在动态链接库 `libc.so` 中定义，需要进行动态链接。这里假设采用 `lazy mode` 方式，即执行到 `printf` 所在位置时才去解析该符号的地址。
+从上面的演示发现，还有一个`printf`符号的地址没有确定，它应该在动态链接库`libc.so`中定义，需要进行动态链接。这里假设采用`lazy mode`方式，即执行到`printf`所在位置时才去解析该符号的地址。
 
-假设当前已经执行到了 `printf` 所在位置，即 `call printf`，我们通过 `objdump` 反编译 `test` 程序的正文段看看。
+假设当前已经执行到了`printf`所在位置，即`call printf`，我们通过`objdump`反编译`test`程序的正文段看看。
 
 ```cpp
 $ objdump -d -s -j .text test | grep printf
- 804837c:       e8 1f ff ff ff          call   80482a0 <printf@plt> 
+ 804837c:       e8 1f ff ff ff          call   80482a0 <printf@plt>
 ```
 
-发现，该地址指向了 `plt` （即过程链接表）即地址 `80482a0` 处。下面查看该地址处的内容。
+发现，该地址指向了`plt`（即过程链接表）即地址`80482a0`处。下面查看该地址处的内容。
 
 ```cpp
 $ objdump -D test | grep "80482a0" | grep -v call
 080482a0 <printf@plt>:
- 80482a0:       ff 25 8c 95 04 08       jmp    *0x804958c 
+ 80482a0:       ff 25 8c 95 04 08       jmp    *0x804958c
 ```
 
-发现 `80482a0` 地址对应的是一条跳转指令，跳转到 `0x804958c` 地址指向的地址。到底 `0x804958c` 地址本身在什么地方呢？我们能否从 `.dynamic` 节区（该节区存放了和动态链接相关的数据）获取相关的信息呢？
+发现`80482a0`地址对应的是一条跳转指令，跳转到`0x804958c`地址指向的地址。到底`0x804958c`地址本身在什么地方呢？我们能否从`.dynamic`节区（该节区存放了和动态链接相关的数据）获取相关的信息呢？
 
 ```cpp
 $ readelf -d test
@@ -269,12 +258,12 @@ Dynamic section at offset 0x4ac contains 20 entries:
  0x6ffffffe (VERNEED)                    0x8048218
  0x6fffffff (VERNEEDNUM)                 1
  0x6ffffff0 (VERSYM)                     0x804820c
- 0x00000000 (NULL)                       0x0 
+ 0x00000000 (NULL)                       0x0
 ```
 
-发现 `0x8049578` 地址和 `0x804958c` 地址比较近，通过资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 查到前者正好是 `.got.plt` （即过程链接表）对应的全局偏移表的入口地址。难道 `0x804958c` 正好位于 `.got.plt` 节区中？
+发现`0x8049578`地址和`0x804958c`地址比较近，通过资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 查到前者正好是`.got.plt`（即过程链接表）对应的全局偏移表的入口地址。难道`0x804958c`正好位于`.got.plt`节区中？
 
-### 全局偏移表（got）
+## 全局偏移表（`got`）
 
 现在进入全局偏移表看看，
 
@@ -283,49 +272,51 @@ $ readelf -x .got.plt test
 
 Hex dump of section '.got.plt':
   0x08049578 ac940408 00000000 00000000 86820408 ................
-  0x08049588 96820408 a6820408                   ........ 
+  0x08049588 96820408 a6820408                   ........
 ```
 
-从上述结果可以看出 `0x804958c` 地址（即 `0x08049588+4`）处存放的是 `a6820408`，考虑到我的实验平台是 `i386`，字节顺序是 `little-endian` 的，所以实际数值应该是 `080482a6`，也就是说 `*` （`0x804958c`）`的值是`080482a6`，这个地址刚好是过程链接表的最后一项`call 80482a0printf@plt`中`80482a0`地址往后偏移`6 `个字节，容易猜到该地址应该就是`jmp` 指令的后一条地址。
+从上述结果可以看出`0x804958c`地址（即`0x08049588+4`）处存放的是`a6820408`，考虑到我的实验平台是`i386`，字节顺序是`little-endian`的，所以实际数值应该是`080482a6`，也就是说`*`（`0x804958c`）`的值是`080482a6`，这个地址刚好是过程链接表的最后一项`call 80482a0printf@plt`中`80482a0`地址往后偏移`6`个字节，容易猜到该地址应该就是`jmp`指令的后一条地址。
 
 ```cpp
 $ objdump -d -d -s -j .plt test |  grep "080482a0 <printf@plt>:" -A 3
 080482a0 <printf@plt>:
  80482a0:       ff 25 8c 95 04 08       jmp    *0x804958c
  80482a6:       68 10 00 00 00          push   $0x10
- 80482ab:       e9 c0 ff ff ff          jmp    8048270 <_init+0x18> 
+ 80482ab:       e9 c0 ff ff ff          jmp    8048270 <_init+0x18>
 ```
 
-`80482a6` 地址恰巧是一条 `push` 指令，随后是一条 `jmp` 指令（暂且不管 `push` 指令入栈的内容有什么意义），执行完 `push` 指令之后，就会跳转到 `8048270` 地址处，下面看看 `8048270` 地址处到底有哪些指令。
+`80482a6`地址恰巧是一条`push`指令，随后是一条`jmp`指令（暂且不管`push`指令入栈的内容有什么意义），执行完`push`指令之后，就会跳转到`8048270`地址处，下面看看`8048270`地址处到底有哪些指令。
 
 ```cpp
 $ objdump -d -d -s -j .plt test | grep -v "jmp    8048270 <_init+0x18>" | grep "08048270" -A 2
 08048270 <__gmon_start__@plt-0x10>:
  8048270:       ff 35 7c 95 04 08       pushl  0x804957c
- 8048276:       ff 25 80 95 04 08       jmp    *0x8049580 
+ 8048276:       ff 25 80 95 04 08       jmp    *0x8049580
 ```
 
-同样是一条入栈指令跟着一条跳转指令。不过这两个地址 `0x804957c` 和 `0x8049580` 是连续的，而且都很熟悉，刚好都在 `.got.plt` 表里头（从上面我们已经知道 `.got.plt` 的入口是 `0x08049578`）。这样的话，我们得确认这两个地址到底有什么内容。
+同样是一条入栈指令跟着一条跳转指令。不过这两个地址`0x804957c`和`0x8049580`是连续的，而且都很熟悉，刚好都在`.got.plt`表里头（从上面我们已经知道`.got.plt`的入口是`0x08049578`）。这样的话，我们得确认这两个地址到底有什么内容。
 
 ```cpp
 $ readelf -x .got.plt test
 
 Hex dump of section '.got.plt':
   0x08049578 ac940408 00000000 00000000 86820408 ................
-  0x08049588 96820408 a6820408                   ........ 
+  0x08049588 96820408 a6820408                   ........
 ```
 
-不过，遗憾的是通过 `readelf` 查看到的这两个地址信息都是 0，它们到底是什么呢？
+不过，遗憾的是通过`readelf`查看到的这两个地址信息都是 0，它们到底是什么呢？
 
-现在只能求助参考资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)，该资料的“3.8.5 过程链接表”部分在介绍过程链接表和全局偏移表相互合作解析符号的过程中的三步涉及到了这两个地址和前面没有说明的 `push` $ `0x10` 指令。
+现在只能求助参考资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)，该资料的“3.8.5 过程链接表”部分在介绍过程链接表和全局偏移表相互合作解析符号的过程中的三步涉及到了这两个地址和前面没有说明的`push $0x10`指令。
 
-*   在程序第一次创建内存映像时，动态链接器为全局偏移表的第二（`0x804957c`）和第三项（`0x8049580`）设置特殊值。
-*   原步骤 5。在跳转到 `08048270 <__gmon_start__@plt-0x10>`，即过程链接表的第一项之前，有一条压入栈指令，即`push $0x10`，0x10 是相对于重定位表起始地址的一个偏移地址，这个偏移地址到底有什么用呢？它应该是提供给动态链接器的什么信息吧？后面再说明。
-*   原步骤 6。跳转到过程链接表的第一项之后，压入了全局偏移表中的第二项（即 `0x804957c` 处），“为动态链接器提供了识别信息的机会”（具体是什么呢？后面会简单提到，但这个并不是很重要)，然后跳转到全局偏移表的第三项（`0x8049580`，这一项比较重要），把控制权交给动态链接器。
+- 在程序第一次创建内存映像时，动态链接器为全局偏移表的第二（`0x804957c`）和第三项（`0x8049580`）设置特殊值。
 
-从这三步发现程序运行时地址 `0x8049580` 处存放的应该是动态链接器的入口地址，而重定位表 `0x10` 位置处和 `0x804957c` 处应该为动态链接器提供了解析符号需要的某些信息。
+- 原步骤 5。在跳转到`08048270 <__gmon_start__@plt-0x10>`，即过程链接表的第一项之前，有一条压入栈指令，即`push $0x10`，0x10 是相对于重定位表起始地址的一个偏移地址，这个偏移地址到底有什么用呢？它应该是提供给动态链接器的什么信息吧？后面再说明。
 
-在继续之前先总结一下过程链接表和全局偏移表。上面的操作过程仅仅从“局部”看过了这两个表，但是并没有宏观地看里头的内容。下面将宏观的分析一下， 对于过程链接表：
+- 原步骤 6。跳转到过程链接表的第一项之后，压入了全局偏移表中的第二项（即`0x804957c`处），“为动态链接器提供了识别信息的机会”（具体是什么呢？后面会简单提到，但这个并不是很重要），然后跳转到全局偏移表的第三项（`0x8049580`，这一项比较重要），把控制权交给动态链接器。
+
+从这三步发现程序运行时地址`0x8049580`处存放的应该是动态链接器的入口地址，而重定位表`0x10`位置处和`0x804957c`处应该为动态链接器提供了解析符号需要的某些信息。
+
+在继续之前先总结一下过程链接表和全局偏移表。上面的操作过程仅仅从“局部”看过了这两个表，但是并没有宏观地看里头的内容。下面将宏观的分析一下，对于过程链接表：
 
 ```cpp
 $ objdump -d -d -s -j .plt test
@@ -348,33 +339,35 @@ $ objdump -d -d -s -j .plt test
 080482a0 <printf@plt>:
  80482a0:       ff 25 8c 95 04 08       jmp    *0x804958c
  80482a6:       68 10 00 00 00          push   $0x10
- 80482ab:       e9 c0 ff ff ff          jmp    8048270 <_init+0x18> 
+ 80482ab:       e9 c0 ff ff ff          jmp    8048270 <_init+0x18>
 ```
 
-除了该表中的第一项外，其他各项实际上是类似的。而最后一项 `080482a0 <printf@plt>` 和第一项我们都分析过，因此不难理解其他几项的作用。过程链接表没有办法单独工作，因为它和全局偏移表是关联的，所以在说明它的作用之前，先从总体上来看一下全局偏移表。
+除了该表中的第一项外，其他各项实际上是类似的。而最后一项`080482a0 <printf@plt>`和第一项我们都分析过，因此不难理解其他几项的作用。过程链接表没有办法单独工作，因为它和全局偏移表是关联的，所以在说明它的作用之前，先从总体上来看一下全局偏移表。
 
 ```cpp
 $ readelf -x .got.plt test
 
 Hex dump of section '.got.plt':
   0x08049578 ac940408 00000000 00000000 86820408 ................
-  0x08049588 96820408 a6820408                   ........ 
+  0x08049588 96820408 a6820408                   ........
 ```
 
-比较全局偏移表中 `0x08049584` 处开始的数据和过程链接表第二项开始的连续三项中 `push` 指定所在的地址，不难发现，它们是对应的。而 `0x0804958c` 即 `push 0x10` 对应的地址我们刚才提到过（下一节会进一步分析），其他几项的作用类似，都是跳回到过程链接表的 `push` 指令处，随后就跳转到过程链接表的第一项，以便解析相应的符号（实际上过程链接表的第一个表项是进入动态链接器，而之前的连续两个指令则传送了需要解析的符号等信息）。另外 `0x08049578` 和 `0x08049580` 处分别存放有传递给动态链接库的相关信息和动态链接器本身的入口地址。但是还有一个地址 `0x08049578`，这个地址刚好是 `.dynamic` 的入口地址，该节区存放了和动态链接过程相关的信息，资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 提到这个表项实际上保留给动态链接器自己使用的，以便在不依赖其他程序的情况下对自己进行初始化，所以下面将不再关注该表项。
+比较全局偏移表中`0x08049584`处开始的数据和过程链接表第二项开始的连续三项中`push`指定所在的地址，不难发现，它们是对应的。而`0x0804958c`即`push 0x10`对应的地址我们刚才提到过（下一节会进一步分析），其他几项的作用类似，都是跳回到过程链接表的`push`指令处，随后就跳转到过程链接表的第一项，以便解析相应的符号（实际上过程链接表的第一个表项是进入动态链接器，而之前的连续两个指令则传送了需要解析的符号等信息）。另外`0x08049578`和`0x08049580`处分别存放有传递给动态链接库的相关信息和动态链接器本身的入口地址。但是还有一个地址`0x08049578`，这个地址刚好是`.dynamic`的入口地址，该节区存放了和动态链接过程相关的信息，资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 提到这个表项实际上保留给动态链接器自己使用的，以便在不依赖其他程序的情况下对自己进行初始化，所以下面将不再关注该表项。
 
 ```cpp
 $ objdump -D test | grep 080494ac
-080494ac <_DYNAMIC>: 
+080494ac <_DYNAMIC>:
 ```
 
-### 重定位表
+## 重定位表
 
-这里主要接着上面的 `push 0x10` 指令来分析。通过资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 发现重定位表包含如何修改其他节区的信息，以便动态链接器对某些节区内的符号地址进行重定位（修改为新的地址）。那到底重定位表项提供了什么样的信息呢？
+这里主要接着上面的`push 0x10`指令来分析。通过资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 发现重定位表包含如何修改其他节区的信息，以便动态链接器对某些节区内的符号地址进行重定位（修改为新的地址）。那到底重定位表项提供了什么样的信息呢？
 
-*   每一个重定位项有三部分内容，我们重点关注前两部分。
-*   第一部分是 `r_offset`，这里考虑的是可执行文件，因此根据资料发现，它的取值是被重定位影响（可以说改变或修改）到的存储单元的虚拟地址。
-*   第二部分是 `r_info`，此成员给出要进行重定位的符号表索引（重定位表项引用到的符号表），以及将实施的重定位类型（如何进行符号的重定位）。(Type)。
+- 每一个重定位项有三部分内容，我们重点关注前两部分。
+
+- 第一部分是`r_offset`，这里考虑的是可执行文件，因此根据资料发现，它的取值是被重定位影响（可以说改变或修改）到的存储单元的虚拟地址。
+
+- 第二部分是`r_info`，此成员给出要进行重定位的符号表索引（重定位表项引用到的符号表），以及将实施的重定位类型（如何进行符号的重定位）。(Type)。
 
 先来看看重定位表的具体内容，
 
@@ -389,10 +382,12 @@ Relocation section '.rel.plt' at offset 0x240 contains 3 entries:
  Offset     Info    Type            Sym.Value  Sym. Name
 08049584  00000107 R_386_JUMP_SLOT   00000000   __gmon_start__
 08049588  00000207 R_386_JUMP_SLOT   00000000   __libc_start_main
-0804958c  00000407 R_386_JUMP_SLOT   00000000   printf 
+0804958c  00000407 R_386_JUMP_SLOT   00000000   printf
 ```
 
-仅仅关注和过程链接表相关的 `.rel.plt` 部分，`0x10` 刚好是 `1*16+0*1`，即 16 字节，作为重定位表的偏移，刚好对应该表的第三行。发现这个结果中竟然包含了和 `printf` 符号相关的各种信息。不过重定位表中没有直接指定符号 `printf`，而是根据 `r_info` 部分从动态符号表中计算出来的，注意观察上述结果中的 `Info` 一列的 1，2，4 和下面结果的 `Num` 列的对应关系。
+仅仅关注和过程链接表相关的`.rel.plt`部分，`0x10`刚好是`1*16+0*1`，即 16 字节，作为重定位表的偏移，刚好对应该表的第三行。发现这个结果中竟然包含了和`printf`符号相关的各种信息。不过重定位表中没有直接指定符号`printf`，而是根据`r_info`部分从动态符号表中计算出来的，注意观察上述结果中的`Info`一列的 1，2，4 和下面结果的`Num`列的对应关系。
+
+
 
 ```cpp
 $ readelf -s test | grep ".dynsym" -A 6
@@ -402,24 +397,24 @@ Symbol table '.dynsym' contains 5 entries:
      1: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
      2: 00000000   410 FUNC    GLOBAL DEFAULT  UND __libc_start_main@GLIBC_2.0 (2)
      3: 08048474     4 OBJECT  GLOBAL DEFAULT   14 _IO_stdin_used
-     4: 00000000    57 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.0 (2) 
+     4: 00000000    57 FUNC    GLOBAL DEFAULT  UND printf@GLIBC_2.0 (2)
 ```
 
-也就是说在执行过程链接表中的第一项的跳转指令（`jmp *0x8049580`）调用动态链接器以后，动态链接器因为有了 `push 0x10`，从而可以通过该重定位表项中的 `r_info` 找到对应符号（`printf`）在符号表（`.dynsym`）中的相关信息。
+也就是说在执行过程链接表中的第一项的跳转指令（`jmp *0x8049580`）调用动态链接器以后，动态链接器因为有了`push 0x10`，从而可以通过该重定位表项中的`r_info` 找到对应符号（`printf`）在符号表（`.dynsym`）中的相关信息。
 
-除此之外，符号表中还有 `Offset` （`r_offset`）`以及`Type`这两个重要信息，前者表示该重定位操作后可能影响的地址`0804958c`，这个地址刚好是`got`表项的最后一项，原来存放的是`push 0x10`指令的地址。这意味着，该地址处的内容将被修改，而如何修改呢？根据`Type`类型`R_386_JUMP_SLOT`，通过资料 [[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf) 查找到该类型对应的说明如下（原资料有误，下面做了修改）：链接编辑器创建这种重定位类型主要是为了支持动态链接。其偏移地址成员给出过程链接表项的位置。动态链接器修改全局偏移表项的内容，把控制传输给指定符号的地址。
+除此之外，符号表中还有`Offset`（`r_offset`）以及`Type`这两个重要信息，前者表示该重定位操作后可能影响的地址`0804958c`，这个地址刚好是`got`表项的最后一项，原来存放的是`push 0x10`指令的地址。这意味着，该地址处的内容将被修改，而如何修改呢？根据`Type`类型`R_386_JUMP_SLOT`，通过资料[[8]](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)查找到该类型对应的说明如下（原资料有误，下面做了修改）：链接编辑器创建这种重定位类型主要是为了支持动态链接。其偏移地址成员给出过程链接表项的位置。动态链接器修改全局偏移表项的内容，把控制传输给指定符号的地址。
 
-这说明，动态链接器将根据该类型对全局偏移表中的最有一项，即 `0804958c` 地址处的内容进行修改，修改为符号的实际地址，即 `printf` 函数在动态链接库的内存映像中的地址。
+这说明，动态链接器将根据该类型对全局偏移表中的最有一项，即`0804958c`地址处的内容进行修改，修改为符号的实际地址，即`printf`函数在动态链接库的内存映像中的地址。
 
 到这里，动态链接的宏观过程似乎已经了然于心，不过一些细节还是不太清楚。
 
-下面先介绍动态链接库的创建，隐式调用和显示调用，接着进一步澄清上面还不太清楚的细节，即全局偏移表中第二项到底传递给了动态链接器什么信息？第三项是否就是动态链接器的地址？并讨论通过设置 `LD_BIND_NOW` 而不采用默认的 lazy mode 进行动态链接和采用 lazy mode 动态链接的区别？
+下面先介绍动态链接库的创建，隐式调用和显示调用，接着进一步澄清上面还不太清楚的细节，即全局偏移表中第二项到底传递给了动态链接器什么信息？第三项是否就是动态链接器的地址？并讨论通过设置`LD_BIND_NOW`而不采用默认的`lazy mode`进行动态链接和采用`lazy mode`动态链接的区别？
 
-## 动态链接库的创建和调用
+# 动态链接库的创建和调用
 
 在介绍动态符号链接的更多细节之前，先来了解一下动态链接库的创建和两种使用方法，进而引出符号解析的后台细节。
 
-### 创建动态链接库
+## 创建动态链接库
 
 首先来创建一个简单动态链接库。
 
@@ -433,7 +428,7 @@ int myprintf(char *str)
 {
         printf("%s\n", str);
         return 0;
-} 
+}
 ```
 
 ```cpp
@@ -443,7 +438,7 @@ int myprintf(char *str)
 
 int myprintf(char *);
 
-#endif 
+#endif
 ```
 
 演示：
@@ -454,18 +449,18 @@ $ gcc -shared -Wl,-soname,libmyprintf.so.0 -o libmyprintf.so.0.0 myprintf.o
 $ ln -sf libmyprintf.so.0.0 libmyprintf.so.0
 $ ln -fs libmyprintf.so.0 libmyprintf.so
 $ ls
-libmyprintf.so  libmyprintf.so.0  libmyprintf.so.0.0  myprintf.c  myprintf.h  myprintf.o 
+libmyprintf.so  libmyprintf.so.0  libmyprintf.so.0.0  myprintf.c  myprintf.h  myprintf.o
 ```
 
-得到三个文件 `libmyprintf.so`，`libmyprintf.so.0`，`libmyprintf.so.0.0`，这些库暂且存放在当前目录下。这里有一个问题值得关注，那就是为什么要创建两个符号链接呢？答案是为了在不影响兼容性的前提下升级库 [[5]](http://www.ibm.com/developerworks/linux/library/l-shlibs.html) 。
+得到三个文件`libmyprintf.so`，`libmyprintf.so.0`，`libmyprintf.so.0.0`，这些库暂且存放在当前目录下。这里有一个问题值得关注，那就是为什么要创建两个符号链接呢？答案是为了在不影响兼容性的前提下升级库[[5]](http://www.ibm.com/developerworks/linux/library/l-shlibs.html)。
 
-### 隐式使用该库
+## 隐式使用该库
 
-现在写一段代码来使用该库，调用其中的 `myprintf` 函数，这里是隐式使用该库：在代码中并没有直接使用该库，而是通过调用 `myprintf` 隐式地使用了该库，在编译引用该库的可执行文件时需要通过 `-l` 参数指定该库的名字。
+现在写一段代码来使用该库，调用其中的`myprintf`函数，这里是隐式使用该库：在代码中并没有直接使用该库，而是通过调用`myprintf`隐式地使用了该库，在编译引用该库的可执行文件时需要通过`-l`参数指定该库的名字。
 
 ```cpp
 /* test.c */
-#include <stdio.h>   
+#include <stdio.h>
 #include <myprintf.h>
 
 int main()
@@ -473,32 +468,32 @@ int main()
         myprintf("Hello World");
 
         return 0;
-} 
+}
 ```
 
 编译：
 
 ```cpp
-$ gcc -o test test.c -lmyprintf -L./ -I./ 
+$ gcc -o test test.c -lmyprintf -L./ -I./
 ```
 
-直接运行 `test`，提示找不到该库，因为库的默认搜索路径里头没有包含当前目录：
+直接运行`test`，提示找不到该库，因为库的默认搜索路径里头没有包含当前目录：
 
 ```cpp
 $ ./test
-./test: error while loading shared libraries: libmyprintf.so: cannot open shared object file: No such file or directory 
+./test: error while loading shared libraries: libmyprintf.so: cannot open shared object file: No such file or directory
 ```
 
 如果指定库的搜索路径，则可以运行：
 
 ```cpp
 $ LD_LIBRARY_PATH=$PWD ./test
-Hello World 
+Hello World
 ```
 
-### 显式使用库
+## 显式使用库
 
-`LD_LIBRARY_PATH` 环境变量使得库可以放到某些指定的路径下面，而无须在调用程序中显式的指定该库的绝对路径，这样避免了把程序限制在某些绝对路径下，方便库的移动。
+`LD_LIBRARY_PATH`环境变量使得库可以放到某些指定的路径下面，而无须在调用程序中显式的指定该库的绝对路径，这样避免了把程序限制在某些绝对路径下，方便库的移动。
 
 虽然显式调用有不便，但是能够避免隐式调用搜索路径的时间消耗，提高效率，除此之外，显式调用为我们提供了一组函数调用，让符号的重定位过程一览无遗。
 
@@ -534,31 +529,34 @@ int main(void)
         f("Hello World");
 
         exit(0);
-} 
+}
 ```
 
 演示：
 
 ```cpp
-$ gcc -o test1 test1.c -ldl 
+$ gcc -o test1 test1.c -ldl
 ```
 
 这种情况下，无须包含头文件。从这个代码中很容易看出符号重定位的过程：
 
-*   首先通过 `dlopen` 找到依赖库，并加载到内存中，再返回该库的 `handle`，通过 `dlopen` 我们可以指定 `RTLD_LAZY` 采用 `lazy mode` 动态链接模式，如果采用 `RTLD_NOW` 则和隐式调用时设置 `LD_BIN_NOW` 类似。
-*   找到该库以后就是对某个符号进行重定位，这里是确定 `myprintf` 函数的地址。
-*   找到函数地址以后就可以直接调用该函数了。
+* 首先通过`dlopen`找到依赖库，并加载到内存中，再返回该库的`handle`，通过`dlopen`我们可以指定`RTLD_LAZY`采用`lazy mode`动态链接模式，如果采用`RTLD_NOW`则和隐式调用时设置`LD_BIN_NOW`类似。
 
-关于 `dlopen`，`dlsym` 等后台工作细节建议参考资料 [[15]](http://www.x86.org/ftp/manuals/tools/elf.pdf) 。
+* 找到该库以后就是对某个符号进行重定位，这里是确定`myprintf`函数的地址。
 
-隐式调用的动态符号链接过程和上面类似。下面通过一些实例来确定之前没有明确的两个内容：即全局偏移表中的第二项和第三项，并进一步讨论 lazy mode 和非 lazy mode 的区别。
+* 找到函数地址以后就可以直接调用该函数了。
 
-## 动态链接过程
+关于`dlopen`，`dlsym`等后台工作细节建议参考资料[[15]](http://www.x86.org/ftp/manuals/tools/elf.pdf)。
 
-因为通过 `ELF` 文件，我们就可以确定全局偏移表的位置，因此为了确定全局偏移表位置的第三项和第四项的内容，有两种办法：
+隐式调用的动态符号链接过程和上面类似。下面通过一些实例来确定之前没有明确的两个内容：即全局偏移表中的第二项和第三项，并进一步讨论`lazy mode`和非`lazy mode`的区别。
 
-*   通过 `gdb` 调试。
-*   直接在函数内部打印。
+# 动态链接过程
+
+因为通过`ELF`文件，我们就可以确定全局偏移表的位置，因此为了确定全局偏移表位置的第三项和第四项的内容，有两种办法：
+
+* 通过`gdb`调试。
+
+* 直接在函数内部打印。
 
 因为资料[[3]](http://elfhack.whitecell.org/mydocs/ELF_symbol_resolve_process1.txt)详细介绍了第一种方法，这里试着通过第二种方法来确定这两个地址的值。
 
@@ -588,24 +586,24 @@ int main(int argc, char *argv[])
                                         got2, got3, old_addr, new_addr);
 
         return 0;
-} 
+}
 ```
 
-在写好上面的代码后就需要确定全局偏移表的地址，然后把该地址设置为代码中的宏 `GOT` 。
+在写好上面的代码后就需要确定全局偏移表的地址，然后把该地址设置为代码中的宏`GOT`。
 
 ```cpp
 $ make got
 $ readelf -d got | grep PLTGOT
- 0x00000003 (PLTGOT)                     0x8049614 
+ 0x00000003 (PLTGOT)                     0x8049614
 ```
 
-**注**：这里假设大家用的都是 `i386` 的系统，如果要在 `X86_64` 位系统上要编译生成 `i386` 上的可执行文件，需要给 `gcc` 传递一个 `-m32` 参数，例如：
+**注**：这里假设大家用的都是`i386`的系统，如果要在`X86_64`位系统上要编译生成`i386`上的可执行文件，需要给`gcc`传递一个`-m32`参数，例如：
 
 ```cpp
-$ gcc -m32 -o got got.c 
+$ gcc -m32 -o got got.c
 ```
 
-把地址 `0x8049614` 替换到上述代码中，然后重新编译运行，查看结果。
+把地址`0x8049614`替换到上述代码中，然后重新编译运行，查看结果。
 
 ```cpp
 $ make got
@@ -613,12 +611,12 @@ $ Hello World
 got2: 0xb7f376d8, got3: 0xb7f2ef10, old_addr: 0x80482da, new_addr: 0xb7e19a20
 $ ./got
 Hello World
-got2: 0xb7f1e6d8, got3: 0xb7f15f10, old_addr: 0x80482da, new_addr: 0xb7e00a20 
+got2: 0xb7f1e6d8, got3: 0xb7f15f10, old_addr: 0x80482da, new_addr: 0xb7e00a20
 ```
 
-通过两次运行，发现全局偏移表中的这两项是变化的，并且 `printf` 的地址对应的 `new_addr` 也是变化的，说明 `libc` 和 `ld-linux` 这两个库启动以后对应的虚拟地址并不确定。因此，无法直接跟踪到那个地址处的内容，还得借助调试工具，以便确认它们。
+通过两次运行，发现全局偏移表中的这两项是变化的，并且`printf`的地址对应的`new_addr`也是变化的，说明`libc`和`ld-linux`这两个库启动以后对应的虚拟地址并不确定。因此，无法直接跟踪到那个地址处的内容，还得借助调试工具，以便确认它们。
 
-下面重新编译 `got`，加上 `-g` 参数以便调试，并通过调试确认 `got2`，`got3`，以及调用 `printf` 前后 `printf` 地址的重定位情况。
+下面重新编译`got`，加上`-g`参数以便调试，并通过调试确认`got2`，`got3`，以及调用`printf`前后`printf`地址的重定位情况。
 
 ```cpp
 $ gcc -g -o got got.c
@@ -644,74 +642,75 @@ $ gdb -q ./got
 21
 22              printf("got2: 0x%0x, got3: 0x%0x, old_addr: 0x%0x, new_addr: 0x%0x\n",
 23                                              got2, got3, old_addr, new_addr);
-24 
 ```
 
-在第一个 `printf` 处设置一个断点：
+在第一个`printf`处设置一个断点：
 
 ```cpp
 (gdb) break 18
-Breakpoint 1 at 0x80483c3: file got.c, line 18. 
+Breakpoint 1 at 0x80483c3: file got.c, line 18.
 ```
 
-在第二个 `printf` 处设置一个断点：
+在第二个`printf`处设置一个断点：
 
 ```cpp
 (gdb) break 22
-Breakpoint 2 at 0x80483dd: file got.c, line 22. 
+Breakpoint 2 at 0x80483dd: file got.c, line 22.
 ```
 
-运行到第一个 `printf` 之前会停止：
+运行到第一个`printf`之前会停止：
 
 ```cpp
 (gdb) r
 Starting program: /mnt/hda8/Temp/c/program/got
 
 Breakpoint 1, main () at got.c:18
-18              printf("Hello World\n"); 
+18              printf("Hello World\n");
 ```
 
-查看执行 `printf` 之前的全局偏移表内容：
+查看执行`printf`之前的全局偏移表内容：
 
 ```cpp
 (gdb) x/8x 0x8049614
 0x8049614 <_GLOBAL_OFFSET_TABLE_>:      0x08049548      0xb7f3c6d8      0xb7f33f10      0x080482aa
-0x8049624 <_GLOBAL_OFFSET_TABLE_+16>:   0xb7ddbd20      0x080482ca      0x080482da      0x00000000 
+0x8049624 <_GLOBAL_OFFSET_TABLE_+16>:   0xb7ddbd20      0x080482ca      0x080482da      0x00000000
 ```
 
-查看 `GOT` 表项的最有一项，发现刚好是 `PLT` 表中 `push` 指令的地址：
+查看`GOT`表项的最有一项，发现刚好是`PLT`表中`push`指令的地址：
 
 ```cpp
 (gdb) disassemble 0x080482da
 Dump of assembler code for function puts@plt:
 0x080482d4 <puts@plt+0>:        jmp    *0x804962c
 0x080482da <puts@plt+6>:        push   $0x18
-0x080482df <puts@plt+11>:       jmp    0x8048294 <_init+24> 
+0x080482df <puts@plt+11>:       jmp    0x8048294 <_init+24>
 ```
 
-说明此时还没有进行进行符号的重定位，不过发现并非 `printf`，而是 `puts(1)`。
+说明此时还没有进行进行符号的重定位，不过发现并非`printf`，而是`puts(1)`。
 
-接着查看 `GOT` 第三项的内容，刚好是 `dl-linux` 对应的代码：
+接着查看`GOT`第三项的内容，刚好是`dl-linux`对应的代码：
 
 ```cpp
 (gdb) disassemble 0xb7f33f10
 Dump of assembler code for function _dl_runtime_resolve:
 0xb7f33f10 <_dl_runtime_resolve+0>:     push   %eax
 0xb7f33f11 <_dl_runtime_resolve+1>:     push   %ecx
-0xb7f33f12 <_dl_runtime_resolve+2>:     push   %edx 
+0xb7f33f12 <_dl_runtime_resolve+2>:     push   %edx
 ```
 
-可通过 `nm /lib/ld-linux.so.2 | grep _dl_runtime_resolve` 进行确认。
+可通过`nm /lib/ld-linux.so.2 | grep _dl_runtime_resolve`进行确认。
 
-然后查看 `GOT` 表第二项处的内容，看不出什么特别的信息，反编译时提示无法反编译：
+然后查看`GOT`表第二项处的内容，看不出什么特别的信息，反编译时提示无法反编译：
 
 ```cpp
 (gdb) x/8x 0xb7f3c6d8
 0xb7f3c6d8:     0x00000000      0xb7f39c3d      0x08049548      0xb7f3c9b8
-0xb7f3c6e8:     0x00000000      0xb7f3c6d8      0x00000000      0xb7f3c9a4 
+0xb7f3c6e8:     0x00000000      0xb7f3c6d8      0x00000000      0xb7f3c9a4
 ```
 
-在 `*(0xb7f33f10)` 指向的代码处设置一个断点，确认它是否被执行：
+在`*(0xb7f33f10)`指向的代码处设置一个断点，确认它是否被执行：
+
+
 
 ```cpp
 (gdb) break *(0xb7f33f10)
@@ -720,10 +719,10 @@ Breakpoint 3 at 0xb7f3cf10
 (gdb) c
 Continuing.
 
-Breakpoint 3, 0xb7f3cf10 in _dl_runtime_resolve () from /lib/ld-linux.so.2 
+Breakpoint 3, 0xb7f3cf10 in _dl_runtime_resolve () from /lib/ld-linux.so.2
 ```
 
-继续运行，直到第二次调用 `printf` ：
+继续运行，直到第二次调用`printf`：
 
 ```cpp
 (gdb)  c
@@ -731,86 +730,73 @@ Continuing.
 Hello World
 
 Breakpoint 2, main () at got.c:22
-22              printf("got2: 0x%0x, got3: 0x%0x, old_addr: 0x%0x, new_addr: 0x%0x\n", 
+22              printf("got2: 0x%0x, got3: 0x%0x, old_addr: 0x%0x, new_addr: 0x%0x\n",
 ```
 
-再次查看 `GOT` 表项，发现 `GOT` 表的最后一项的值应该被修改：
+再次查看`GOT`表项，发现`GOT`表的最后一项的值应该被修改：
 
 ```cpp
 (gdb) x/8x 0x8049614
 0x8049614 <_GLOBAL_OFFSET_TABLE_>:      0x08049548      0xb7f3c6d8      0xb7f33f10      0x080482aa
-0x8049624 <_GLOBAL_OFFSET_TABLE_+16>:   0xb7ddbd20      0x080482ca      0xb7e1ea20      0x00000000 
+0x8049624 <_GLOBAL_OFFSET_TABLE_+16>:   0xb7ddbd20      0x080482ca      0xb7e1ea20      0x00000000
 ```
 
-查看 `GOT` 表最后一项，发现变成了 `puts` 函数的代码，说明进行了符号 `puts` 的重定位（2）：
+查看`GOT`表最后一项，发现变成了`puts`函数的代码，说明进行了符号`puts`的重定位（2）：
 
 ```cpp
 (gdb) disassemble 0xb7e1ea20
 Dump of assembler code for function puts:
 0xb7e1ea20 <puts+0>:    push   %ebp
 0xb7e1ea21 <puts+1>:    mov    %esp,%ebp
-0xb7e1ea23 <puts+3>:    sub    $0x1c,%esp 
+0xb7e1ea23 <puts+3>:    sub    $0x1c,%esp
 ```
 
-通过演示发现一个问题（1）（2），即本来调用的是 `printf`，为什么会进行 `puts` 的重定位呢？通过 `gcc -S` 参数编译生成汇编代码后发现，`gcc` 把 `printf` 替换成了 `puts`，因此不难理解程序运行过程为什么对 `puts` 进行了重定位。
+通过演示发现一个问题（1）（2），即本来调用的是`printf`，为什么会进行`puts`的重定位呢？通过`gcc -S`参数编译生成汇编代码后发现，`gcc`把`printf`替换成了`puts`，因此不难理解程序运行过程为什么对`puts`进行了重定位。
 
-从演示中不难发现，当符号被使用到时才进行重定位。因为通过调试发现在执行 `printf` 之后，`GOT` 表项的最后一项才被修改为 `printf` （确切的说是 `puts`）的地址。这就是所谓的 `lazy mode` 动态符号链接方式。
+从演示中不难发现，当符号被使用到时才进行重定位。因为通过调试发现在执行`printf`之后，`GOT`表项的最后一项才被修改为`printf`（确切的说是`puts`）的地址。这就是所谓的`lazy mode`动态符号链接方式。
 
-除此之外，我们容易发现 `GOT` 表第三项确实是 `ld-linux.so` 中的某个函数地址，并且发现在执行 `printf` 语句之前，先进入了 `ld-linux.so` 的 `_dl_runtime_resolve` 函数，而且在它返回之后，`GOT` 表的最后一项才变为 `printf` （`puts`）的地址。
+除此之外，我们容易发现`GOT`表第三项确实是`ld-linux.so`中的某个函数地址，并且发现在执行`printf`语句之前，先进入了`ld-linux.so`的`_dl_runtime_resolve`函数，而且在它返回之后，`GOT`表的最后一项才变为`printf`（`puts`）的地址。
 
-本来打算通过第一个断点确认第二次调用 `printf` 时不再需要进行动态符号链接的，不过因为 `gcc` 把第一个替换成了 `puts`，所以这里没有办法继续调试。如果想确认这个，你可以通过写两个一样的 `printf` 语句看看。实际上第一次链接以后，`GOT` 表的第三项已经修改了，当下次再进入过程链接表，并执行 `jmp *(全局偏移表中某一个地址)` 指令时，`*(全局偏移表中某一个地址)` 已经被修改为了对应符号的实际地址，这样 `jmp` 语句会自动跳转到符号的地址处运行，执行具体的函数代码，因此无须再进行重定位。
+本来打算通过第一个断点确认第二次调用`printf`时不再需要进行动态符号链接的，不过因为`gcc`把第一个替换成了`puts`，所以这里没有办法继续调试。如果想确认这个，你可以通过写两个一样的`printf`语句看看。实际上第一次链接以后，`GOT`表的第三项已经修改了，当下次再进入过程链接表，并执行`jmp *(全局偏移表中某一个地址)`指令时，`*(全局偏移表中某一个地址)`已经被修改为了对应符号的实际地址，这样`jmp`语句会自动跳转到符号的地址处运行，执行具体的函数代码，因此无须再进行重定位。
 
-到现在 `GOT` 表中只剩下第二项还没有被确认，通过资料 [[3]](http://elfhack.whitecell.org/mydocs/ELF_symbol_resolve_process1.txt) 我们发现，该项指向一个 `link_map` 类型的数据，是一个鉴别信息，具体作用对我们来说并不是很重要，如果想了解，请参考资料 [[16]](http://www.muppetlabs.com/~breadbox/software/ELF.txt) 。
+到现在`GOT`表中只剩下第二项还没有被确认，通过资料[[3]](http://elfhack.whitecell.org/mydocs/ELF_symbol_resolve_process1.txt)我们发现，该项指向一个`link_map`类型的数据，是一个鉴别信息，具体作用对我们来说并不是很重要，如果想了解，请参考资料[[16]](http://www.muppetlabs.com/~breadbox/software/ELF.txt)。
 
-下面通过设置 `LD_BIND_NOW` 再运行一下 `got` 程序并查看结果，比较它与默认的动态链接方式（`lazy mode`）的异同。
+下面通过设置`LD_BIND_NOW`再运行一下`got`程序并查看结果，比较它与默认的动态链接方式（`lazy mode`）的异同。
 
-*   设置 `LD_BIND_NOW` 环境变量的运行结果
+* 设置`LD_BIND_NOW`环境变量的运行结果
 
-    ```cpp
-     $ LD_BIND_NOW=1 ./got
-      Hello World
-      got2: 0x0, got3: 0x0, old_addr: 0xb7e61a20, new_addr: 0xb7e61a20 
-    ```
+  ```cpp
+  $ LD_BIND_NOW=1 ./got
+  Hello World
+  got2: 0x0, got3: 0x0, old_addr: 0xb7e61a20, new_addr: 0xb7e61a20
+  ```
 
-*   默认情况下的运行结果
+* 默认情况下的运行结果
 
-    ```cpp
-     $ ./got
-      Hello World
-      got2: 0xb7f806d8, got3: 0xb7f77f10, old_addr: 0x80482da, new_addr: 0xb7e62a20 
-    ```
+  ```cpp
+  $ ./got
+  Hello World
+  got2: 0xb7f806d8, got3: 0xb7f77f10, old_addr: 0x80482da, new_addr: 0xb7e62a20
+  ```
 
-通过比较容易发现，在非 `lazy mode` （设置 `LD_BIND_NOW` 后）下，程序运行之前符号的地址就已经被确定，即调用 `printf` 之前 `GOT` 表的最后一项已经被确定为了 `printf` 函数对应的地址，即 `0xb7e61a20`，因此在程序运行之后，`GOT` 表的第二项和第三项就保持为 0，因为此时不再需要它们进行符号的重定位了。通过这样一个比较，就更容易理解 `lazy mode` 的特点了：在用到的时候才解析。
+通过比较容易发现，在非`lazy mode`（设置`LD_BIND_NOW`后）下，程序运行之前符号的地址就已经被确定，即调用`printf`之前`GOT`表的最后一项已经被确定为了`printf`函数对应的地址，即`0xb7e61a20`，因此在程序运行之后，`GOT`表的第二项和第三项就保持为0，因为此时不再需要它们进行符号的重定位了。通过这样一个比较，就更容易理解`lazy mode`的特点了：在用到的时候才解析。
 
 到这里，符号动态链接的细节基本上就已经清楚了。
 
 ## 参考资料
 
-*   [LINUX 系统中动态链接库的创建与使用](http://www.ccw.com.cn/htm/app/linux/develop/01_8_6_2.asp)
-
-*   [LINUX 动态链接库高级应用](http://www.vchome.net/tech/dll/dll9.htm)
-
-*   [ELF 动态解析符号过程(修订版)](http://elfhack.whitecell.org/mydocs/ELF_symbol_resolve_process1.txt)
-
-*   [如何在 Linux 下调试动态链接库](http://unix-cd.com/unixcd12/article_5065.html)
-
-*   [Dissecting shared libraries](http://www.ibm.com/developerworks/linux/library/l-shlibs.html)
-
-*   [关于 Linux 和 Unix 动态链接库的安全](http://fanqiang.chinaunix.net/safe/system/2007-02-01/4870.shtml)
-
-*   [Linux 系统下解析 ELF 文件 DT_RPATH 后门](http://article.pchome.net/content-323084.html)
-
-*   [ELF 文件格式分析](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)
-
-*   缓冲区溢出与注入分析(第二部分：缓冲区溢出和注入实例)
-
-*   Gcc 编译的背后(第二部分：汇编和链接)
-*   程序执行的那一刹那
-
-*   What is Linux-gate.so.1: [[1]](http://www.trilithium.com/johan/2005/08/linux-gate/), [[2]](http://isomerica.net/archives/2007/05/28/what-is-linux-gateso1-and-why-is-it-missing-on-x86-64/), [[3]](http://www.linux010.cn/program/Linux-gateso1-DeHanYi-pcee6103.htm)
-
-*   [Linux 下缓冲区溢出攻击的原理及对策](http://www.ibm.com/developerworks/cn/linux/l-overflow/index.html)
-
-*   Intel 平台下 Linux 中 ELF 文件动态链接的加载、解析及实例分析 [part1](http://www.ibm.com/developerworks/cn/linux/l-elf/part1/index.html), [part2](http://www.ibm.com/developerworks/cn/linux/l-elf/part2/index.html)
-
-*   [ELF file format and ABI](http://www.x86.org/ftp/manuals/tools/elf.pdf)
+* [LINUX 系统中动态链接库的创建与使用](http://www.ccw.com.cn/htm/app/linux/develop/01_8_6_2.asp)
+* [LINUX 动态链接库高级应用](http://www.vchome.net/tech/dll/dll9.htm)
+* [ELF 动态解析符号过程(修订版)](http://elfhack.whitecell.org/mydocs/ELF_symbol_resolve_process1.txt)
+* [如何在 Linux 下调试动态链接库](http://unix-cd.com/unixcd12/article_5065.html)
+* [Dissecting shared libraries](http://www.ibm.com/developerworks/linux/library/l-shlibs.html)
+* [关于 Linux 和 Unix 动态链接库的安全](http://fanqiang.chinaunix.net/safe/system/2007-02-01/4870.shtml)
+* [Linux 系统下解析 ELF 文件 DT_RPATH 后门](http://article.pchome.net/content-323084.html)
+* [ELF 文件格式分析](http://162.105.203.48/web/gaikuang/submission/TN05.ELF.Format.Summary.pdf)
+* 缓冲区溢出与注入分析(第二部分：缓冲区溢出和注入实例)
+* Gcc 编译的背后(第二部分：汇编和链接)
+* 程序执行的那一刹那
+* What is Linux-gate.so.1: [[1]](http://www.trilithium.com/johan/2005/08/linux-gate/), [[2]](http://isomerica.net/archives/2007/05/28/what-is-linux-gateso1-and-why-is-it-missing-on-x86-64/), [[3]](http://www.linux010.cn/program/Linux-gateso1-DeHanYi-pcee6103.htm)
+* [Linux 下缓冲区溢出攻击的原理及对策](http://www.ibm.com/developerworks/cn/linux/l-overflow/index.html)
+* Intel 平台下 Linux 中 ELF 文件动态链接的加载、解析及实例分析 [part1](http://www.ibm.com/developerworks/cn/linux/l-elf/part1/index.html), [part2](http://www.ibm.com/developerworks/cn/linux/l-elf/part2/index.html)
+* [ELF file format and ABI](http://www.x86.org/ftp/manuals/tools/elf.pdf)

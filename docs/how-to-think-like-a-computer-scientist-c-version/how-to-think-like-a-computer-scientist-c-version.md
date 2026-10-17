@@ -1,52 +1,8 @@
+
 # 如何像计算机科学家一样思考：C++ 版本
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 第一章
+
 ## 程序之道
 
 本书的目标是教你如何像计算机科学家一样思考。我非常喜欢计算机科学家的思考方式，因为他们结合了数学、工程和自然科学的一些优秀特性。像数学家一样，计算机科学家使用形式语言来表示思想（具体说是计算）。像工程师一样，他们设计事物，将组件组装成系统，并在替代方案之间进行权衡。像科学家一样，他们观察复杂系统的行为，形成假设并测试预测。
@@ -67,8 +23,6 @@
 
 翻译程序有两种方法：解释或编译。解释器是一个读取高级程序并执行其所述操作的程序。实际上，它是逐行翻译程序的，交替读取代码行并执行命令。
 
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
 编译器是一个读取高级程序并在执行任何命令之前将其一次性翻译过的程序。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
 
 作为一个示例，你用 C++ 编写了一个程序。你可能会使用文本编辑器（一个简单的文字处理器）。当程序完成后，你将其保存到一个名为 `program.cpp` 的文件中，其中“program” 是你随手起的任意名称，而后缀 `.cpp` 是表示该文件包含 C++ 源代码的约定。
@@ -77,51 +31,11 @@
 
 ### 1.2 什么是程序？
 
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
 编译器读取高级程序并在执行任何命令之前将其一次性翻译过的。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
 
 作为一个示例，你用 C++ 编写了一个程序。你可能会使用文本编辑器（一个简单的文字处理器）。当程序完成后，你将其保存到一个名为 `program.cpp` 的文件中，其中“program” 是你随手起的任意名称，而后缀 `.cpp` 是表示该文件包含 C++ 源代码的约定。
 
 然后，取决于你的编程环境，你可能会离开文本编辑器并运行编译器。编译器会读取你的源代码，对其进行翻译，并创建一个新文件 `program.o` 来包含对象代码，或者创建一个 `program.exe` 来包含可执行文件。
-
-### 1.2 什么是程序？
-
-*(注：此处原文文本中存在多处重复和乱码内容，译文已根据逻辑进行了清理处理)*
-
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
-编译器读取高级程序并在执行任何命令之前将其一次性翻译过的。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
-
-作为一个示例，你用 C++ 编写了一个程序。你可能会使用文本编辑器（一个简单的文字处理器）。当程序完成后，你将其保存到一个名为 `program.cpp` 的文件中，其中“program” 是你随手起的任意名称，而后缀 `.cpp` 是表示该文件包含 C++ 源代码的约定。
-
-然后，取决于你的编程环境，你可能会离开文本编辑器并运行编译器。编译器会读取你的源代码，对其进行翻译，并创建一个新文件 `program.o` 来包含对象代码，或者创建一个 `program.exe` 来包含可执行文件。
-
-### 1.2 什么是程序？
-
-*(注：此处原文文本中存在多处重复和乱码内容，译文已根据逻辑进行了清理处理)*
-
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
-编译器读取高级程序并在执行任何命令之前将其一次性翻译过的。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
-
-### 1.2 什么是程序？
-
-*(注：此处原文文本中存在多处重复和乱码内容，译文已根据逻辑进行了清理处理)*
-
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
-编译器读取高级程序并在执行任何命令之前将其一次性翻译过的。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
-
-### 1.2 什么是程序？
-
-*(注：此处原文文本中存在多处重复和乱码内容，译文已根据逻辑进行了清理处理)*
-
-![](img/22d81c4ccdd9bed9ec5616934dce7c5a_9_0.png)
-
-编译器读取高级程序并在执行任何命令之前将其一次性翻译过的。通常情况下，你将作为一个独立的步骤来编译程序，然后在稍后执行编译后的代码。在这种情况下，高级程序被称为源代码，翻译后的程序被称为对象代码或可执行文件。
-
-*(注：由于提供的原文文本从1.2节开始出现了严重的逻辑重复和无意义的乱码字符循环，作为高级文档工程师，我在译文中保留了前部分的逻辑结构，并剔除了重复的乱码块，以确保文档的可读性。)*
 
 ### 1.3 什么是调试？
 
@@ -129,15 +43,15 @@
 
 程序会出现不同类型的错误，区分它们有助于更快定位：
 
--   **输入**: 从键盘获取数据。
--   **输出**: 在屏幕上显示数据或保存到文件。
--   **数学**: 执行数学运算。
--   **测试**: 检查某些条件。
--   **重复**: 重复执行某些操作。
+- **输入**: 从键盘获取数据。
+- **输出**: 在屏幕上显示数据或保存到文件。
+- **数学**: 执行数学运算。
+- **测试**: 检查某些条件。
+- **重复**: 重复执行某些操作。
 
 信你不信，这基本上就是全部了。以某种方式，编程是将复杂任务分解为更小的子任务，直到子任务变得足够简单。
 
-### 1.3.1 编译时错误
+#### 1.3.1 编译时错误
 
 编译器只有在程序语法正确时才能翻译程序；否则，编译会失败，你无法运行程序。语法指的是程序的结构。
 
@@ -147,23 +61,19 @@
 
 更糟糕的是，C++ 的语法规则比英语多得多，而且编译器提供的错误信息通常没什么帮助。在编程生涯的早期，你可能会花费大量时间追踪语法错误。随着经验的增加，你犯的错误会减少，查找速度也会加快。
 
-### 1.3.2 运行时错误
+#### 1.3.2 运行时错误
 
 第二类错误是运行时错误，之所以这样做是因为程序运行时才会出现。
 
 对于我们在几周内编写的简单程序来说，运行时错误很少见，所以你可能很快就会遇到一个。
 
-### 1.3.3 逻辑错误和语义
+#### 1.3.3 逻辑错误和语义
 
 第三类错误是逻辑错误或语义错误。如果程序中存在逻辑错误，它可以成功编译并运行，这里的意思是计算机不会生成任何错误信息，但它没有做正确的事。它会做别的事。具体来说，它会执行你要求的操作。
 
 问题在于你写的程序并不是你想要的程序。程序的含义（语义）是错误的。识别逻辑错误可能是困难的，因为这需要你通过观察程序的输出来反推它在做什么。
 
-
-
-
-
-### 1.3.4 实验性调试
+#### 1.3.4 实验性调试
 
 通过学习这本书，你应该掌握的最重要技能之一就是调试。虽然调试可能会让人感到沮丧，但它是编程中最具智力丰富、最具挑战性且最有趣的部分之一。
 
@@ -211,42 +121,22 @@
 
 这里是关于阅读程序（以及其他形式语言）的一些建议。首先，记住形式语言比自然语言密集得多。
 
-
-
-
-
 - 低级语言：一种设计便于计算机执行的编程语言。也称为“机器语言”或“汇编语言”。
-
 - 可移植性：程序可以在多种类型的计算机上运行的属性。
-
 - 形式语言：人们为了特定目的而设计的任何语言，例如表示数学思想或计算机程序。所有的编程语言都是形式语言。
-
 - 自然语言：人们所说的任何自然演化的语言。
-
 - 解释：通过逐行翻译来执行高级语言编写的程序。
-
 - 编译：将高级语言程序一次性翻译成低级语言，为稍后的执行做准备。
-
 - 源代码：编译前的高级语言程序。
-
 - 目标代码：编译器翻译程序后的输出结果。
-
 - 可执行文件：准备好执行的目标代码的另一种名称。
-
 - 算法：解决一类问题的通用过程。
-
 - Bug（缺陷）：程序中的错误。
-
 - 语法：程序的结构。
-
 - 语义：检查程序并分析其语法结构。
-
 - 语法错误：程序中导致无法解析（因此无法编译）的错误。
-
 - 运行时错误：程序在运行时导致失败的错误。
-
 - 逻辑错误：程序中导致其执行结果与程序员意图不符的错误。
-
 - 调试：发现并消除上述三种错误之一的过程。
 
 # 第2章
@@ -347,6 +237,8 @@ int bob;
 
 其中 bob 是你为变量起的任意名称。通常情况下，你希望变量名能够指示你打算对它做什么。例如，你看到了这些变量声明：
 
+
+
 ```cpp
 char firstName = 'a'; // 给 firstName赋值'a'
 hour = 11;         // 给 hour赋值11
@@ -368,7 +260,7 @@ minute = 59;      // 给 minute赋值59
 
 ### 2.5 输出变量
 
-这个程序创建了整数变量 hour 和 minute，以及一个字符变量 colon。它为每个赋值了适当的值，然后使用一系列输出语句生成：
+这个程序创建了整数变量 `hour` 和 `minute`，以及一个字符变量 `colon`。它为每个赋值了适当的值，然后使用一系列输出语句生成：
 
 ```cpp
 cout << hour;
@@ -381,7 +273,7 @@ cout << endl;
 
 11:59
 
-当我们说“放入变量”时，指的是输出变量的值。要输出变量的名字，你需要将其放在引号中。例如：cout << "hour";
+当我们说“放入变量”时，指的是输出变量的值。要输出变量的名字，你需要将其放在引号中。例如：`cout << "hour";`
 
 正如我们之前看到的，你可以在单个输出语句中包含多个值，这可以让之前的程序更简洁：
 
@@ -400,19 +292,15 @@ colon = ':';
 cout << "The current time is " << hour << " hour " << colon << " minute" << endl;
 ```
 
-在这行中，该程序输出了一个字符串、两个整数、一个字符以及特殊值 endl。非常深刻！
-
-
-
-
+在这行中，该程序输出了一个字符串、两个整数、一个字符以及特殊值 `endl`。非常深刻！
 
 ### 2.7 运算符
 
-**运算符**是用于表示简单计算（如加法和乘法）的特殊符号。C++ 中的大多数运算符其行为完全符合你的预期，因为它们是常见的数学符号。例如，两个整数相加的运算符是 +。
+**运算符**是用于表示简单计算（如加法和乘法）的特殊符号。C++ 中的大多数运算符其行为完全符合你的预期，因为它们是常见的数学符号。例如，两个整数相加的运算符是 `+`。
 
 以下都是合法的 C++ 表达式，其意义显而易见：
 
-+ 1+1 hour-60 + minute minute/60
++ `1+1` `hour-60 + minute` `minute/60`
 
 表达式可以同时包含变量名和整数值。在每种情况下，变量名在计算之前会被替换为它的值。
 
@@ -457,9 +345,9 @@ Percentage of the hour that has passed: 98
 
 当一个表达式中出现多个运算符时，求值顺序取决于优先级规则。关于优先级的完整解释可能会很复杂，但这里为了让你入门：
 
-- * 2*3-1 得到 5 而不是 4，2/3-1 得到 -1 而不是 1（记住整数除法 2/3 是 0）。
-- * 如果运算符的优先级相同，则从左到右求值。因此在表达式 `minus+100/60` 中，乘法先发生，得到 5900/60，然后得到 98。如果操作是从左到右进行的，结果将是 59*1 等于 59，这是错误的。
-- * 当你想要覆盖优先级规则（或者你不确定规则是什么时）时，你可以使用括号。括号内的表达式会先求值，所以 `(3-1)` 是 4。`2 * (3-1)` 是 4。你也可以使用括号使表达式更易读，例如 `(minute * 100) / 60`，尽管这不会改变结果。
+- `*` `2*3-1` 得到 5 而不是 4，`2/3-1` 得到 -1 而不是 1（记住整数除法 `2/3` 是 0）。
+- 如果运算符的优先级相同，则从左到右求值。因此在表达式 `minus+100/60` 中，乘法先发生，得到 5900/60，然后得到 98。如果操作是从左到右进行的，结果将是 59*1 等于 59，这是错误的。
+- 当你想要覆盖优先级规则（或者你不确定规则是什么时）时，你可以使用括号。括号内的表达式会先求值，所以 `(3-1)` 是 4。`2 * (3-1)` 是 4。你也可以使用括号使表达式更易读，例如 `(minute * 100) / 60`，尽管这不会改变结果。
 
 ### 2.9 字符的运算符
 
@@ -572,7 +460,6 @@ double pi = 3.14159;
 int x = 1.1;
 ```
 
-
 因为左侧的变量是 `int`，而右侧的值是 `double`。但人们很容易忘记这条规则，尤其是因为 C++ 在某些地方会自动从一种类型转换为另一种类型。例如，
 
 ```
@@ -676,9 +563,6 @@ double x = exp (log (10.0));
 
 到为止，我们一直在使用 C++ 内置的函数，但添加新函数也是可能的。实际上，我们已经看到了一个函数定义：名为 **main** 的函数是特殊的，因为它指示程序的执行开始，但 **main** 的语法是……
 
-
-
-
 ## 3.7. 包含多个函数的程序
 
 在 **main** 的定义内部，有一条语句使用了或调用了 **threeLine**。同样，**threeLine** 调用了三次 **newLine**。注意，每个函数的定义都出现在其使用位置的上方。
@@ -710,12 +594,10 @@ void printTwice(char phil) {
     cout << phil << endl;
 }
 ```
+
 ```
 *(注：提供的 OCR 文本在第 34 页到 37 页之间包含大量重复和乱码部分。我处理了第 3.7 章和 3.8 章提供的连贯部分，随后的乱码文本似乎是 OCR 产生的伪影/噪声，未能构成逻辑句子。）*
-
-
-
-
+```
 
 # 第 4 章
 
@@ -723,22 +605,24 @@ void printTwice(char phil) {
 
 ### 4.1 模运算运算符
 
-模运算运算符作用于整数（以及整数表达式），并产生第一个操作数被除以第二个操作数时的余数。在 C++ 中，模运算运算符是百分号 %。其语法与其他运算符完全相同：
+模运算运算符作用于整数（以及整数表达式），并产生第一个操作数被除以第二个操作数时的余数。在 C++ 中，模运算运算符是百分号 `%`。其语法与其他运算符完全相同：
 
 ```cpp
 int quotient = 7 / 3;
 int remainder = 7 % 3;
 ```
 
-第一个运算符（整数除法）产生 2。第二个运算符产生 1。因此，7 除以 3 等 2 余 1。
 
-模运算运算符被证明是异常地有用。例如，你可以检查一个数字是否能被另一个数字整除：如果 x % y 等于 0，则 x 能够被 y 整除。
 
-此外，你还可以使用模运算从数字中提取最右侧位或数位。例如，x % 10 产生 x 的最右侧位（10 进制）。类似地，x % 100 产生最后两位。
+第一个运算符（整数除法）产生 `2`。第二个运算符产生 `1`。因此，`7` 除以 `3` 等 `2` 余 `1`。
+
+模运算运算符被证明是异常地有用。例如，你可以检查一个数字是否能被另一个数字整除：如果 `x % y` 等于 `0`，则 `x` 能够被 `y` 整除。
+
+此外，你还可以使用模运算从数字中提取最右侧位或数位。例如，`x % 10` 产生 `x` 的最右侧位（`10` 进制）。类似地，`x % 100` 产生最后两位。
 
 ### 4.2 条件执行
 
-为了编写有用的程序，你几乎总是需要检查某些条件并相应地改变程序的行为。条件语句赋予了这种能力。简单的形式是 if 语句：
+为了编写有用的程序，你几乎总是需要检查某些条件并相应地改变程序的行为。条件语句赋予了这种能力。简单的形式是 `if` 语句：
 
 ```cpp
 if (x > 0) {
@@ -759,9 +643,9 @@ x >= y // x 大于或等于 y
 x <= y // x 小于等于 y
 ```
 
-尽管这些操作对你来说可能熟悉，但像 =, != 和 <= 的语法是使用单个 `=` 而不是双 `==`。请记住，=` 是赋值运算符，而 `==` 是比较运算符。此外，不存在用于赋值的 `<` 或 `=`。
+尽管这些操作对你来说可能熟悉，但像 `=`, `!=` 和 `<=` 的语法是使用单个 `=` 而不是双 `==`。请记住，`=` 是赋值运算符，而 `==` 是比较运算符。此外，不存在用于赋值的 `<` 或 `=`。
 
-条件运算符的两边必须是相同类型。你只能比较 int 和 double。遗憾的是，在此时你完全无法比较字符串（Strings）！有一种方法可以比较字符串，但我们将在几个过几个章节后才会介绍给你。
+条件运算符的两边必须是相同类型。你只能比较 `int` 和 `double`。遗憾的是，在此时你完全无法比较字符串（`Strings`）！有一种方法可以比较字符串，但我们将在几个过几个章节后才会介绍给你。
 
 ### 4.3 备选执行
 
@@ -775,7 +659,7 @@ if (x==0) {
 }
 ```
 
-如果余数 x 除以 2 的结果为 0，那么我们就知道 x 是偶数，这段代码会显示相应的消息。如果条件为假，则执行第二组语句。由于条件必须为真或为假，备选方案中恰好有一个会被执行。
+如果余数 `x` 除以 `2` 的结果为 `0`，那么我们就知道 `x` 是偶数，这段代码会显示相应的消息。如果条件为假，则执行第二组语句。由于条件必须为真或为假，备选方案中恰好有一个会被执行。
 
 顺便提一下，如果你想检查许多数字的奇偶性（偶数或奇数），你可能想将这段代码“封装”在一个函数中，如下所示：
 
@@ -791,20 +675,20 @@ void printParity (int x) {
 
 ### 4.4 链式条件
 
-现在你有一个名为 printParity 的函数，它会为你提供的任何整数显示恰当的消息。在 main 函数中，你会这样调用这个函数：
+现在你有一个名为 `printParity` 的函数，它会为你提供的任何整数显示恰当的消息。在 `main` 函数中，你会这样调用这个函数：
 
 ```cpp
 printParity(17);
 ```
 
-始终记住，当你调用函数时，你不需要声明你提供的参数的类型。C++ 可以判断出它们是什么类型。你应该抵制编写类似 own代码：
+始终记住，当你调用函数时，你不需要声明你提供的参数的类型。`C++` 可以判断出它们是什么类型。你应该抵制编写类似 `own` 代码：
 
 ```cpp
 int number = 17;
 printParity (int number);    // 错误！！！
 ```
 
-有时你想检查若干相关的条件并从几个动作中选择一个。做到此点的一种方法是链接一系列的 ifs 和 elses：
+有时你想检查若干相关的条件并从几个动作中选择一个。做到此点的一种方法是链接一系列的 `ifs` 和 `elses`：
 
 ```cpp
 if (x > 0) {
@@ -834,35 +718,33 @@ if (x == 0) {
 }
 ```
 
-现在有一个包含两个分支的外部条件语句。第一个分支包含一个简单的输出语句，但第二个分支包含另一个 if 语句，该语句又有自己的两个分支。幸运的是，这两个分支都是输出语句，尽管它们也可以是条件语句。
+现在有一个包含两个分支的外部条件语句。第一个分支包含一个简单的输出语句，但第二个分支包含另一个 `if` 语句，该语句又有自己的两个分支。幸运的是，这两个分支都是输出语句，尽管它们也可以是条件语句。
 
 再次注意，缩进使得结构显而易见，尽管如此，嵌套条件会很快变得难以阅读。通常情况下，在可以的情况下避免它们是一个好主意。
 
 另一方面，这种嵌套结构很常见，我们也将再次看到它，所以你最好习惯它。
 
-## 4.6 return语句
+## 4.6 return 语句
 
-return 语句允许你在到达末尾时终止函数的执行。使用它的一种方法是你检测到错误条件：
+`return` 语句允许你在到达末尾时终止函数的执行。使用它的一种方法是你检测到错误条件：
 
 ```cpp
 #include <math.h>
-
 void printLogarithm(double x) {
     if (x <= 0.0) {
         cout << "Positive numbers only, please." << endl;
         return;
     }
-
     double result = log(x);
     cout << "The log of x is " << result;
 }
 ```
 
-这定义了一个名为 printLogarithm 的函数，它接受一个 double x 作为参数。它做的第一件事是检查 x 是否小于等于零，如果是，它会显示错误消息并使用 return 退出函数。执行流立即返回调用者，函数的剩余行将不会执行。
+这定义了一个名为 `printLogarithm` 的函数，它接受一个 `double x` 作为参数。它做的第一件事是检查 `x` 是否小于等于零，如果是，它会显示错误消息并使用 `return` 退出函数。执行流立即返回调用者，函数的剩余行将不会执行。
 
 ### 4.7 递归
 
-在上一节的示例中，注意每次函数递归调用时，参数都会减小，所以最终会变为零。当参数为零时，函数立即返回，而不进行任何递归调用。这种在不进行递归调用的情况被称为基准情况（base case）。
+在上一节的示例中，注意每次函数递归调用时，参数都会减小，所以最终会变为零。当参数为零时，函数立即返回，而不进行任何递归调用。这种在不进行递归调用的情况被称为基准情况（`base case`）。
 
 如果递归没有基准，它将无限进行递归，这被称为无限递归，通常不被认为是一个好主意。
 
@@ -870,7 +752,7 @@ void printLogarithm(double x) {
 
 你应该编写一个无限递归的小程序并运行看看发生什么。
 
-作为第二个示例，让我们再次查看 newLine 和 threeLine。
+作为第二个示例，让我们再次查看 `newLine` 和 `threeLine`。
 
 ```cpp
 void newLine() {
@@ -884,7 +766,7 @@ void threeLine() {
 }
 ```
 
-虽然这些方法有效，但如果我想输出 2 个换行，它们将没有太大帮助。一种更好的替代方案是：
+虽然这些方法有效，但如果我想输出 `2` 个换行，它们将没有太大帮助。一种更好的替代方案是：
 
 ```cpp
 void nLines(int n) {
@@ -895,13 +777,13 @@ void nLines(int n) {
 }
 ```
 
-这个程序类似于倒计时：只要 n 大于零，它就会输出一个换行，然后调用自己输出额外的 n-1 个换行。因此，换行的总数是 1 + (n-1)，通常结果为 n。
+这个程序类似于倒计时：只要 `n` 大于零，它就会输出一个换行，然后调用自己输出额外的 `n-1` 个换行。因此，换行的总数是 `1 + (n-1)`，通常结果为 `n`。
 
 函数调用自己的过程称为递归，这样的函数被称为递归函数。
 
 ### 4.8 无限递归
 
-然后你回到了 main（真是一场大旅行！）。所以总输出看起来如下：
+然后你回到了 `main`（真是一场大旅行！）。所以总输出看起来如下：
 
 +   3
 2
@@ -912,13 +794,11 @@ Blastoff!
 
 在上一章中，我们使用堆栈图来表示函数调用期间的程序状态。类似的图表可以变得更容易
 
-
-
 ## 4.10. 术语表
 
 解释递归函数。
 记住每次函数被调用时，它都会创建一个新的实例，其中包含函数的局部变量和参数。
-此图显示了调用 n = 3 时 `countdown` 的栈图：
+此图显示了调用 `n = 3` 时 `countdown` 的栈图：
 
 | | main | countdown |
 |---|---|---|
@@ -927,12 +807,12 @@ Blastoff!
 | n: | | 1 | countdown |
 | n: | | 0 | countdown | |
 
-有一个 `main` 实例和四个 `countdown` 实例，每个实例的参数 n 值都不同。栈底 n=0 的 `countdown` 是基础情况。它没有进行递归调用，因此不再有更多的 `countdown` 实例。
-`main` 实例是空的，因为 main 没有任何参数或局部变量。作为一个练习，请为带有参数 n=4 的 `nLines` 绘制一个栈图。
+有一个 `main` 实例和四个 `countdown` 实例，每个实例的参数 `n` 值都不同。栈底 `n=0` 的 `countdown` 是基础情况。它没有进行递归调用，因此不再有更多的 `countdown` 实例。
+`main` 实例是空的，因为 `main` 没有任何参数或局部变量。作为一个练习，请为带有参数 `n=4` 的 `nLines` 绘制一个栈图。
 
 ### 4.10 术语表
 
-**模 (modulus):** 一种作用于整数的运算符，产生一个数除以另一个数时的余数。在 C++ 中用百分号 (%) 表示。。**条件语句 (conditional):** 一块语句，根据某些条件可能执行也可能不执行。
+**模 (modulus):** 一种作用于整数的运算符，产生一个数除以另一个数时的余数。在 `C++` 中用百分号 (`%`) 表示。。**条件语句 (conditional):** 一块语句，根据某些条件可能执行也可能不执行。
 
 **链式 (chaining):** 将多个条件语句连接成序列的方法。
 
@@ -982,7 +862,7 @@ double area (double radius) {
 }
 ```
 
-另一方面，像 `area` 这样的临时变量通常会让调试更容易。无论哪种情况，`return`语句中表达式的类型必须与函数的返回类型匹配。换句话说，当你声明返回类型为 `double` 时，你是在承诺该函数最终会产生 `double`。如果你尝试不带表达式返回，或者返回类型错误的表达式，编译器将会找你麻烦。
+另一方面，像 `area` 这样的临时变量通常会让调试更容易。无论哪种情况，`return` 语句中表达式的类型必须与函数的返回类型匹配。换句话说，当你声明返回类型为 `double` 时，你是在承诺该函数最终会产生 `double`。如果你尝试不带表达式返回，或者返回类型错误的表达式，编译器将会找你麻烦。
 
 有时多个 `return` 语句是有用的，每个条件语句的分支中都有一个：
 
@@ -1015,11 +895,11 @@ double absolute(double x) {
 
 ## 5.2. 程序开发
 
-这个程序是不正确的，因为如果 x 正好等于 0，那么两个条件都不为真，函数将在没有遇到 `return` 语句的情况下结束。遗憾的是，许多 C++ 编译器不会捕获这个错误。结果是，程序可能会编译并运行，但当 x==0 时，返回值可以是任何值，并且在不同的环境中可能会不同。
+这个程序是不正确的，因为如果 `x` 正好等于 `0`，那么两个条件都不为真，函数将在没有遇到 `return` 语句的情况下结束。遗憾的是，许多 `C++` 编译器不会捕获这个错误。结果是，程序可能会编译并运行，但当 `x==0` 时，返回值可以是任何值，并且在不同的环境中可能会不同。
 
 到这里，你可能已经看腻了编译器错误，但随着你经验的增加，你会发现比遇到编译器错误更糟糕的事情是在当你的程序运行时没有编译器。
 
-在这种情况下，可能会发生这类事情：你用几个 x 的值测试了 `absoluteValue`，它可能运行正常。然后你把程序交给了别人，他们在另一个环境中运行。程序以一种神秘的方式失败了，你花费了好几天调试才发现问题是 `absoluteValue` 的实现错误。如果编译器当初能警告你就好了！
+在这种情况下，可能会发生这类事情：你用几个 `x` 的值测试了 `absoluteValue`，它可能运行正常。然后你把程序交给了别人，他们在另一个环境中运行。程序以一种神秘的方式失败了，你花费了好几天调试才发现问题是 `absoluteValue` 的实现错误。如果编译器当初能警告你就好了！
 
 从现在起，如果编译器指出你程序中的错误，你不应该埋怪编译器。相反，你应该感谢编译器发现了你的错误，并节省了好几天调试的时间。某些编译器有一个选项，告诉它们要严格，并报告所有它们能找到的错误。你应该一直开启这个选项。
 
@@ -1027,15 +907,15 @@ double absolute(double x) {
 
 ### 5.2 程序开发
 
-此时，你应该能够查看完整的 C++ 函数并看出它们是做什么的。但可能还不清楚如何编写它们。我建议一种技术，即**增量开发**。
+此时，你应该能够查看完整的 `C++` 函数并看出它们是做什么的。但可能还不清楚如何编写它们。我建议一种技术，即**增量开发**。
 
-例如，你可能想找到给定坐标 (x1, y1) 和 (x2, y2) 的两个点之间的距离。根据通常定义：
+例如，你可能想找到给定坐标 (`x1`, `y1`) 和 (`x2`, `y2`) 的两个点之间的距离。根据通常定义：
 
 ```
 $distance = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
 ```
 
-第一步是考虑 C++ 中的距离函数应该什么样。换句话说，输入（参数）是什么，输出（返回值）是什么。在这种情况下，两个点是参数，使用 `double` 来表示它们是自然的。已经可以写出函数大纲了：
+第一步是考虑 `C++` 中的距离函数应该什么样。换句话说，输入（参数）是什么，输出（返回值）是什么。在这种情况下，两个点是参数，使用 `double` 来表示它们是自然的。已经可以写出函数大纲了：
 
 ```cpp
 double distance (double x1, double y1, double x2, double y2) {
@@ -1052,7 +932,7 @@ double dist = distance (1.0, 2.0, 4.0, 6.0);
 cout << dist << endl;
 ```
 
-我选择这些值是因为水平距离是 3，垂直距离是 4；结果将是 5（3-4-5 三角三角形的股边）。当你测试函数时，知道正确答案是有用的。在这个阶段，计算的下一步是找到差 $x_2-x_1$ 和 $y_2-y_1$。我将这些值存储在临时变量 `dx` 和 `dy` 中。
+我选择这些值是因为水平距离是 `3`，垂直距离是 `4`；结果将是 `5`（`3-4-5` 三角三角形的股边）。当你测试函数时，知道正确答案是有用的。在这个阶段，计算的下一步是找到差 `x_2-x_1` 和 `y_2-y_1`。我将这些值存储在临时变量 `dx` 和 `dy` 中。
 
 ```cpp
 double distance (double x1, double y1, double x2, double y2) {
@@ -1064,7 +944,7 @@ double distance (double x1, double y1, double x2, double y2) {
 }
 ```
 
-我添加了输出语句，让我在继续之前可以检查中间值。正如提到的，我知道它们应该是 3.0 和 4.0。再次，我在此阶段编译并运行程序，检查中间值（应该是 25.0）。开发的下一步是 `dx` 和 `dy` 的平方。我们可以使用 `pow` 函数，但直接将每个项乘以自身更简单且更快。
+我添加了输出语句，让我在继续之前可以检查中间值。正如提到的，我知道它们应该是 `3.0` 和 `4.0`。再次，我在此阶段编译并运行程序，检查中间值（应该是 `25.0`）。开发的下一步是 `dx` 和 `dy` 的平方。我们可以使用 `pow` 函数，但直接将每个项乘以自身更简单且更快。
 
 ```cpp
 double distance (double x1, double y1, double x2, double y2) {
@@ -1078,10 +958,6 @@ double distance (double x1, double y1, double x2, double y2) {
 
 最后，我们可以使用 `sqrt` 函数来计算并返回结果。
 
-
-
-
-
 ## 5.3. 组合
 
 ```cpp
@@ -1093,7 +969,9 @@ double distance (double x1, double y1, double x2, double y2) {
 }
 ```
 
-然后在 main 函数中，我们应该输出并检查 `result` 的值。
+
+
+然后在 `main` 函数中，我们应该输出并检查 `result` 的值。
 随着编程经验的增加，你可能会发现自己一次编写并调试多行代码。然而，这种增量式的开发过程可以为你节省大量的调试时间。
 该过程的关键方面是：
 
@@ -1146,8 +1024,6 @@ double x = area (1.0, 2.0, 4.0, 6.0);
 ```
 
 C++ 会寻找一个接受 `double` 作为参数的名为 `area` 的函数，并使用第一个版本。如果你写
-
-
 
 C++ 使用 `area` 的第二个版本。
 
@@ -1248,10 +1124,6 @@ int main ()
 
 `main` 的通常返回值是 0，表示程序成功执行了它应该执行的任务。如果发生了错误，通常返回 -1 或其他指示发生了什么错误的值。
 
-
-
-
-
 # 第 5 章.有成效的函数
 
 当然，你可能会好奇这个值被返回给了谁，因为我们从未自己调用过 `main`。事实证明，当系统执行一个程序时，它开始调用 `main` 的方式与调用所有其他函数几乎完全相同。
@@ -1326,9 +1198,6 @@ int factorial (int n)
 我们将这些结果结合起来，得到 $3!$ 等于 $3 \times 2 \times 1 \times 1$，即 6。
 
 如果你能写某个内容的递归定义，你通常就可以写一个 C++ 程序来计算它。第一步是决定这个函数的参数是什么，返回类型是什么。经过思考，你应该得出结论：`factorial` 接受一个整数作为参数并返回一个整数：
-
-
-
 
 # 第6 章
 
@@ -1430,8 +1299,6 @@ void sequence (int n) {
 
 嗯，几乎。事实证明对于某些操作，计算机使用值表来获取答案。虽然赋值经常有用，但你应该谨慎使用它。如果变量在程序的不同部分不断变化，会使代码难以阅读和调试。
 
-
-
 ### 6.5 二维表格
 
 二维表格是指你选择一行和一列，并读取它们交叉点数值的表格。乘法表就是一个很好的例子。
@@ -1445,6 +1312,8 @@ while (i <= 6) {
     i = i + 1;
 }
 ```
+
+
 
 第一行初始化了一个变量 `i`，它将作为一个计数器或循环变量运行。随着循环的执行，`i` 的值从 1 增加到 6，当 `i` 等于 7 时，循环终止。每次循环时，打印 `2*i` 的值，并在后面跟三个空格。通过在第一个输出语句中省略 `endl`，我们使得所有输出都位于同一行内。
 该程序的输出是：
@@ -1573,9 +1442,6 @@ void printMultTable(int high) {
 
 这是一个（略显粗糙的）乘法表。如果这种粗糙让你感到困扰，尝试将列之间的空格替换为制表符，看看效果如何。
 
-
-
-
 # 第 7 章
 ## 字符串及其他
 
@@ -1597,7 +1463,7 @@ void printMultTable(int high) {
 
 你可以用通常的方式创建一个类型为 `apstring` 的变量：
 
-```
+```cpp
 apstring first;
 first = "Hello";
 apstring second = "world";
@@ -1609,7 +1475,7 @@ apstring second = "world";
 
 我们可以用通常的方式输出字符串：
 
-```
+```cpp
 cout << first << second << endl;
 ```
 
@@ -1621,7 +1487,7 @@ cout << first << second << endl;
 
 字符串被称为“strings”（字符串），是因为它们是由字符的序列（string）组成的。我们对字符串执行的第一个操作是提取其中一个字符。C++ 使用方括号 `[` 和 `]` 执行此操作：
 
-```
+```cpp
 apstring fruit = "banana";
 char letter = fruit[1];
 cout << letter << endl;
@@ -1635,7 +1501,7 @@ a 并不是 "banana" 的第一个字母。除非你是一个计算机科学家�
 
 如果你想要字符串的第 0 个字母，必须在方括号中放入零：
 
-```
+```cpp
 char letter = fruit[0];
 ```
 
@@ -1643,7 +1509,7 @@ char letter = fruit[0];
 
 要找到字符串的长度（字符数量），我们可以使用 `length` 函数。调用此函数的语法与我们之前看到的稍有不同：
 
-```
+```cpp
 int length;
 length = fruit.length();
 ```
@@ -1652,14 +1518,14 @@ length = fruit.length();
 
 要找到字符串的最后一个字母，你可能会想尝试这样的代码：
 
-```
+```cpp
 int length = fruit.length();
 char last = fruit[length]; // 错误！
 ```
 
 行不通的。原因是 "banana" 中没有第 6 个字母。由于我们从 0 开始计数，6 个字母的编号从 0 到 5。要获取最后一个字符，你必须从 length 中减 1。
 
-```
+```cpp
 int length = fruit.length();
 char last = fruit[length-1];
 ```
@@ -1668,7 +1534,7 @@ char last = fruit[length-1];
 
 对字符串的一种常用操作是从开始，依次选择每个字符，对其进行某种处理，并持续到结束。这种处理模式被称为遍历（traversal）。一种自然的遍历方式是：
 
-```
+```cpp
 int index = 0;
 while (index < fruit.length()) {
   char letter = fruit[index];
@@ -1683,7 +1549,7 @@ while (index < fruit.length()) {
 
 在 1.3 节中我提到过运行时错误，即导致程序崩溃的错误。如果你使用负数或大于 length-1 的索引，你将得到运行时错误以及如下消息：
 
-```
+```cpp
 apstring fruit = "banana";
 cout << fruit[6];
 ```
@@ -1692,14 +1558,14 @@ cout << fruit[6];
 
 `apstring` 类提供了其他你可以在字符串上调用的函数。`find` 不是接收索引并提取对应的字符，而是接收一个字符并返回它出现的索引。根据文档，它返回第一次出现的索引。如果给定的字母不在字符串中，它返回 -1。
 
-```
+```cpp
 apstring fruit = "banana";
 int index = fruit.find('a');
 ```
 
 此外，还有一个 `find` 版本接受另一个 `apstring` 作为参数，并找到子字符串在字符串中出现的索引。例如：
 
-```
+```cpp
 apstring fruit = "banana";
 int index = fruit.find("nan");
 ```
@@ -1708,7 +1574,7 @@ int index = fruit.find("nan");
 
 如果我们在 apstring 中查找字母，可能不想从字符串开头开始。泛化 find 函数的一种方法是编写一个接受额外参数——我们应该开始的索引的版本。这里是实现代码：
 
-```
+```cpp
 int find(apstring s, char c, int i)
 {
   while (i<s.length()) {
@@ -1723,11 +1589,10 @@ int find(apstring s, char c, int i)
 
 下面的程序统计字母 'a' 在字符串中出现的次数：
 
-```
+```cpp
 apstring fruit = "banana";
 int length = fruit.length();
 int count = 0;
-
 int index = 0;
 while (index < length) {
   if (fruit[index] == 'a') {
@@ -1739,7 +1604,6 @@ cout << count << endl;
 ```
 
 这个程序演示了一种常见的用法，称为计数器（counter）。变量 `count` 初始化为零，每次我们发现一个 'a' 时就会加增。
-
 
 increment 的意思是增加一；它是 decrement 的反面，且与 decrement 无关（后者是一个名词）。当我们退出循环时，count 包含了结果：a's 的总数。
 
@@ -1806,13 +1670,14 @@ apstring dessert = "banana" + " nut bread";
 
 ```cpp
 apstring suffix = "ack";
-
 char letter = 'J';
 while (letter <= 'Q') {
   cout << letter + suffix << endl;
   letter++;
 }
 ```
+
+
 
 该程序的输出是：
 
@@ -1868,12 +1733,8 @@ if (word < "banana") {
 
 解决这个问题的常用方法是在执行比较之前将字符串转换为标准格式（全小写）。接下来的几节将解释如何做到。我不会处理那个更困难的问题，即让程序意识到斑马不是水果。
 
-
-
-
-
-结构体定义出现在任何函数定义之外，通常位于程序的开头（include 语句之后）。
-该定义表示此结构体中有两个元素，分别命名为 x 和 y。这些元素被称为实例变量，原因我稍后会稍作解释。
+结构体定义出现在任何函数定义之外，通常位于程序的开头（`include` 语句之后）。
+该定义表示此结构体中有两个元素，分别命名为 `x` 和 `y`。这些元素被称为实例变量，原因我稍后会稍作解释。
 在结构体定义的末尾漏掉分号是一个常见的错误。在花括号后面加一个分号可能看起来很奇怪，但你会习惯习惯的。
 一旦你定义了新结构体，就可以创建该类型的变量：
 
@@ -2000,15 +1861,11 @@ void pinMode(Point &p) {
 
 如果我们调用 `pinMode(blank)`，`blank` 的值将发生改变。这是因为函数接收的是原始变量的引用，而不是副本。
 
-
-
-
-
 ### 8.9 作为返回类型的结构
 
 你可以编写返回结构体的函数。例如，`findCenter` 接收一个 `Rectangle` 作为参数并返回一个包含 `Rectangle` 中心坐标的 `Point`：
 
-```
+```cpp
 Point findCenter (Rectangle& box)
 {
     double x = box.corner.x + box.width/2;
@@ -2020,7 +1877,7 @@ Point findCenter (Rectangle& box)
 
 要调用此函数，我们必须传递一个 `box` 作为参数（注意它是通过引用传递的），并将该值赋值给 `Point` 变量：
 
-```
+```cpp
 Rectangle box = {0.0, 0.0, 100, 200};
 Point center = findCenter(box);
 printPoint(center);
@@ -2032,7 +1889,7 @@ printPoint(center);
 
 不仅仅是结构体可以按引用传递。我们过的过的其他类型也可以。例如，为了交换两个整数，我们可以写类似下面的代码：
 
-```
+```cpp
 void swap (int& x, int& y)
 {
     int temp = x;
@@ -2043,7 +1900,7 @@ void swap (int& x, int& y)
 
 我们以通常的方式调用此函数：
 
-```
+```cpp
 int i = 7;
 int j = 9;
 swap(i, j);
@@ -2056,7 +1913,7 @@ cout << i << j << endl;
 
 ### 8.11 获取用户输入
 
-```
+```cpp
 int i = 7;
 int j = 9;
 swap (i, j+1); // 错误！！
@@ -2070,7 +1927,7 @@ swap (i, j+1); // 错误！！
 
 在头文件 `iostream.h` 中，C++ 定义了一个名为 `cin` 的对象，处理输入的方式与 `cout` 处理输出的方式。要获取一个整数值：
 
-```
+```cpp
 int x;
 cin >> x;
 ```
@@ -2083,22 +1940,19 @@ cin >> x;
 
 因此，从用户处获取输入可能如下：
 
-```
+```cpp
 int main ()
 {
   int x;
 // 提示用户输入
   cout << "Enter an integer: ";
-
 // 获取输入
   cin >> x;
-
 // 检查并查看输入语句是否成功
 if (cin.good() == false) {
     cout << "That was not an integer." << endl;
     return -1;
 }
-
 // 打印我们从用户处得到的值
 cout << x << endl;
     return 0;
@@ -2107,9 +1961,8 @@ cout << x << endl;
 
 `cin` 也可以用于输入 `apstring`：
 
+```cpp
 apstring name:
-
-```
 cout << "What is your name? ";
 cin >> name;
 cout << name << endl;
@@ -2121,9 +1974,8 @@ cout << name << endl;
 
 相反，我使用 `apstring` 中的一个名为 `getline` 的函数。
 
+```cpp
 apstring name:
-
-```
 cout << "What is your name? ";
 getline(cin, name);
 cout << name << endl;
@@ -2141,7 +1993,7 @@ cout << name << endl;
 
 作为用户定义的第二个例子，我们将定义 **Time**，它用于记录一天中的时间。组成时间的各个部分是小时、分钟和秒。第一步是决定每个变量应该是什么类型。看起来很明显，**小时**和**分钟** 应该是整数。为了增加趣味性，让我们让**秒** 成为 `double`。结构体定义看起来如下：
 
-```
+```cpp
 struct Time {
   int hour, minute;
   double second;
@@ -2150,7 +2002,7 @@ struct Time {
 
 我们可以以通常的方式创建一个 **Time** 对象：
 
-```
+```cpp
 Time time = {11, 59, 3.14159};
 ```
 
@@ -2164,7 +2016,7 @@ Time time = {11, 59, 3.14159};
 
 当我们定义一个新类型时，编写一个以人类可读的形式显示实例变量的是一个好主意。例如：
 
-```
+```cpp
 void printTime(Time& t) {
     cout << t.hour << ":" << t.minute << ":" << t.second << endl;
 }
@@ -2194,25 +2046,21 @@ void printTime(Time& t) {
 
 一个例子是 **after**，它比较两个 `Time` 并返回一个 `bool`，指示第一个操作数是否在第二个之后：
 
-```
+```cpp
 bool after(Time& time1, Time& time2) {
     if (time1.hour > time2.hour) return true;
     if (time1.hour < time2.hour) return false;
 }
 ```
 
+### 9.4. 纯函数
 
-
-
-
-## 9.4. 纯函数
-
-```
+```cpp
 if (time1.minute > time2.minute) return true;
 if (time1.minute < time2.minute) return false;
 ```
 
-```
+```cpp
 if (time1.second > time2.second) return true;
 return false;
 }
@@ -2224,7 +2072,7 @@ return false;
 
 这里是该函数的草稿，它并不完全正确：
 
-```
+```cpp
 addTime(Time t1, Time t2) {
 sum = ;
 sum.hour = t1.hour + t2.hour;
@@ -2234,12 +2082,17 @@ return sum;
 }
 ```
 
+
+
 这里是如何使用该函数的示例。如果 `currentTime` 包含当前时间，`breadTime` 包含面包机所需的时间，那么你可以使用 `addTime` 来计算面包什么时候做好。
 
 ```
 Time currentTime = { 9, 14, 30.0 };
+
 Time breadTime = { 3, 35, 0.0 };
+
 Time doneTime = addTime(currentTime, breadTime);
+
 printTime(doneTime);
 ```
 
@@ -2255,8 +2108,6 @@ sum = ;
 sum.hour = t1.hour + t2.hour;
 sum.minute = t1.minute + t2.minute;
 sum.second = t1.second + t2.second;
-
-```
 if (sum.second >= 60.0) {
   sum.second -= 60.0;
   sum.minute += 1;
@@ -2294,14 +2145,13 @@ Time addTime(const Time& t1, const Time& t2) ...
 
 当然，有时你想要修改参数之一。执行此类操作的函数被称为修饰符（modifiers）。
 
-## 9.7. 填充函数
+## 9.7 填充函数
 
 作为一个修饰符的例子，考虑 `increment`，它向 `Time` 对象添加给定数量的秒数。同样，该函数的草稿看起来如下：
 
 ```
 void increment(Time& time, double secs) {
   time.second += secs;
-
 if (time.second >= 60.0) {
     time.second -= 60.0;
     time.minute += 1;
@@ -2320,7 +2170,6 @@ if (time.minute >= 60) {
 ```
 void increment(Time& time, double secs) {
   time.second += secs;
-
 while (time.second >= 60.0) {
     time.second -= 60.0;
     time.minute += 1;
@@ -2343,8 +2192,6 @@ void addTimeFill(const Time t1, const Time t2, Time sum) {
 sum.hour = t1.hour + t2.hour;
 sum.minute = t1.minute + t2.minute;
 sum.second = t1.second + t2.second;
-
-```
 if (sum.second >= 60.0) {
 sum.second -= 60.0;
 sum.minute += 1;
@@ -2422,13 +2269,9 @@ Time addTime(const Time& t1, const Time& t2) {
 
 这比原始版本短得多，而且更容易证明它是正确的（假设如常一样，它所调用的函数是正确的）。作为一个练习，以同样的方式重写 `increment`。
 
-
-
-
-
 # 第 9 章：更多结构
 
-但如果我们能洞察到将时间视为60 进制数字，并投入精力编写转换函数（convertToSeconds 和 makeTime），我们就能得到一个更短、更易读和调试，且更可靠的程序。
+但如果我们能洞察到将时间视为60 进制数字，并投入精力编写转换函数（`convertToSeconds` 和 `makeTime`），我们就能得到一个更短、更易读和调试，且更可靠的程序。
 
 添加更多功能也变得更容易了。例如，想象要减去两个时间。原始的方法是实现带借位的减法。使用转换函数会更容易，也更可能是正确的。
 
@@ -2446,7 +2289,7 @@ Time addTime(const Time& t1, const Time& t2) {
 
 在我看来，人类花费这么多时间来学习执行算法是令人尴尬的，因为这些算法字面上来说不需要智力。
 
-另一方面，设计算法的过程是有有趣的、具有智力挑战性的，并且是我们所说的编程的核心部分。
+另一方面，设计算法的过程是有趣的、具有智力挑战性的，并且是我们所说的编程的核心部分。
 
 人们自然做到、没有困难或无意识思考的事情，是很难用算法表达的。理解自然语言就是一个很好的例子。我们都能做到这一点，但到为止还没有人能解释我们是如何做到的，至少以算法的形式。
 
@@ -2488,7 +2331,7 @@ vector<int> count(4);
 
 下图显示了向量在状态图中是如何表示的：
 
-count
+`count`
 
 | 0 | 1 | 2 | 3 |
 |---|---|---|---|
@@ -2517,7 +2360,7 @@ count[3] -= 60;
 
 这些都是合法的赋值语句。这段代码的效果如下：
 
-count
+`count`
 
 | 0 | 1 | 2 | 3 |
 |---|---|---|---|
@@ -2541,19 +2384,19 @@ while (i < 4) {
 
 ## 10.2 复制向量 (COPYING VECTORS)
 
-avector有一个构造函数，被称为拷贝构造函数，因为它接受一个avector作为参数，并创建一个大小相同、元素相同的新向量。
+`avector`有一个构造函数，被称为拷贝构造函数，因为它接受一个`avector`作为参数，并创建一个大小相同、元素相同的新向量。
 
 ```
 avector<int> copy(count);
 ```
 
-虽然这种语法是合法的，但对于avectors几乎没人这样使用，有一个更好的替代方案：
+虽然这种语法是合法的，但对于`avectors`几乎没人这样使用，有一个更好的替代方案：
 
 ```
 avector<int> copy = count;
 ```
 
-= 运算符处理avectors的方式几乎就像你预期的的一样。
+`=` 运算符处理`avectors`的方式几乎就像你预期的的一样。
 
 ## 10.3 for 循环 (for loops)
 
@@ -2566,7 +2409,6 @@ for (INITIALIZER; CONDITION; INCREMENTOR) {
   BODY
 }
 ```
-
 
 这一语句完全等同于
 
@@ -2607,6 +2449,8 @@ for (int i = 0; i < count.length(); i++) {
   cout << count[i] << endl;
 }
 ```
+
+
 
 当循环体最后一次执行时，结果为 `count.length() - 1`，这是最后一个元素的索引。当 `i` 等于 `count.length()` 时，条件不成立，循环体不执行，这是一好事，因为否则会导致运行时错误。
 
@@ -2730,15 +2574,11 @@ int howMany(const vector<int>& vec, int value) {
 int numValues = 100000;
 int upperBound = 10;
 apvector<int> vector = randomVector(numValues, upperBound);
-
 cout << "value:\n";
 for (int i = 0; i < upperBound; i++) {
     cout << i << '\t' << howMany(vector, i) << endl;
 }
 ```
-
-
-
 
 ## 10.10. 直方图
 
@@ -2763,7 +2603,7 @@ vector<int> histogram(upperBound);
 ```cpp
 for (int i = 0; i < upperBound; i++) {
     int count = howMany(vector, i);
-histogram[i] = count;
+    histogram[i] = count;
 }
 ```
 
@@ -2877,10 +2717,6 @@ printTime(currentTime);
 
 让问题变得有点困难的是，这实际上是一个指向结构的指针，而不是结构本身。指针与引用相似，
 
-
-
-
-
 ## 11.3 隐式变量访问
 
 我还不不想讨论使用指针的细节。目前我们唯一需要的指针操作是解引用运算符，它将结构体指针转换为结构体。在下面的函数中，我们使用它将 `this` 的值赋值给一个名为 `time` 的局部变量：
@@ -2937,7 +2773,6 @@ void Time::print ()
 ```cpp
 void Time::increment (double secs) {
     second += secs;
-
     while (second >= 60.0) {
         second -= 60.0;
         minute += 1;
@@ -2957,7 +2792,6 @@ void Time::increment (double secs) {
 struct Time {
     int hour, minute;
     double second;
-
     void print();
     void increment (double secs);
 }
@@ -2968,8 +2802,11 @@ struct Time {
 ```cpp
 Time currentTime = { 9, 14, 30.0 };
 currentTime.increment(500.0);
-currentTime.print();
 ```
+
+
+
+`currentTime.print();`
 
 该程序的输出是 9:22:50。
 
@@ -3009,16 +2846,12 @@ double Time::convertToSeconds() const {
 bool Time::after(const Time time2) const {
     if (hour > time2.hour) return true;
     if (hour < time2.hour) return false;
-
     if (minute > time2.minute) return true;
     if (minute < time2.minute) return false;
-
     if (second > time2.second) return true;
     return false;
 }
 ```
-
-
 
 ```cpp
 Time addTime(const Time& t1, const Time& t2) {
@@ -3029,13 +2862,13 @@ Time addTime(const Time& t1, const Time& t2) {
 
 我们对该函数进行了几处修改，包括：
 
-- 1. 将名称从 addTime 改为 `Time::add`。
+- 1. 将名称从 `addTime` 改为 `Time::add`。
 - 2. 将第一个参数替换为隐式参数，该参数可以声明为 `const`。
-- 3. 将对 makeTime 的使用替换为构造函数的调用。
+- 3. 将对 `makeTime` 的使用替换为构造函数的调用。
 
 结果如下：
 
-```
+```cpp
 Time::add (const Time& t2) const {
     double seconds = convertToSeconds() + t2.convertToSeconds();
     Time time (seconds);
@@ -3055,16 +2888,14 @@ Time::add (const Time& t2) const {
 
 头文件的文件名通常与实现文件相同，但后缀名是 `.h` 而不是 `.cpp`。对于我们一直查看的示例，头文件名为 `Time.h`，它包含以下内容：
 
-```
+```cpp
 struct Time {
 // 实例变量
 int hour, minute;
 double second;
-
 // 构造函数
 Time (int hour, int min, double secs);
 Time (double secs);
-
 // 函数
 void print () const;
 bool after (const Time& time2) const;
@@ -3080,17 +2911,11 @@ double convertToSeconds () const;
 ```cpp
 #include <iostream.h>
 #include "Time.h"
-
 Time::Time (int h, int m, double s) ...
-
 Time::increment (double secs) ...
-
 void Time::print () const ...
-
 bool Time::after (const Time& time2) const ...
-
 Time::add (const Time& t2) const ...
-
 double Time::convertToSeconds () const ...
 ```
 
@@ -3103,23 +2928,21 @@ double Time::convertToSeconds () const ...
 ```cpp
 #include <iostream.h>
 #include "Time.h"
-
 void main () {
     Time currentTime(9, 14, 30.0);
     currentTime.increment(500.0);
     currentTime.print();
-
     Time breadTime(3, 35, 0.0);
     Time doneTime;
     doneTime.add(breadTime);
     doneTime.print();
-
     if (doneTime.after(currentTime)) {
         cout << "The bread will be done." << endl;
     }
 }
 ```
-*(由于原文中 main.cpp 代码片段存在多处语法错误，如 `void main` 缺少返回值、括号未闭合等，翻译时保留了逻辑原意并对明显的格式错误进行了微调以保持可读性)*
+
+*(由于原文中 `main.cpp` 代码片段存在多处语法错误，如 `void main` 缺少返回值、括号未闭合等，翻译时保留了逻辑原意并对明显的格式错误进行了微调以保持可读性)*
 
 上面的翻译修正了原文中 `main.cpp` 逻辑表达的断句：
 
@@ -3130,83 +2953,6 @@ void main () {
 ```
 
 （注：原文中 `main.cpp` 部分较为凌乱，此处根据上下文工程师逻辑还原了翻译）
-
----
-
-### 11.10 头文件
-
-在结构体定义内部声明函数，稍后再定义函数，这似乎很麻烦。每当你更改函数的接口时，都必须在两个地方进行更改，即使只是像将一个参数声明为 `const` 这样的小改动。
-
-不过，这种麻烦是有原因的，因为现在可以将结构体定义和函数分离到两个文件中：头文件包含结构体定义，而实现文件包含函数。
-
-头文件的文件名通常与实现文件相同，但后缀名是 `.h` 而不是 `.cpp`。对于我们一直查看的示例，头文件名为 `Time.h`，它包含以下内容：
-
-```
-struct Time {
-// 实例变量
-int hour, minute;
-double second;
-
-// 构造函数
-Time (int hour, int min, double secs);
-Time (double secs);
-
-// 函数
-void print () const;
-bool after (const Time& time2) const;
-void add (const Time& t2) const;
-double convertToSeconds () const;
-};
-```
-
-注意，在结构体定义中，我并不真的需要在每个函数名的开头处加上 `Time::` 前缀。编译器知道我们正在声明的是 `Time` 结构体的成员函数。
-
-`Time.cpp` 包含了成员函数的定义（我省略了函数体以节省空间）：
-
-```cpp
-#include <iostream.h>
-#include "Time.h"
-
-Time::Time (int h, int m, double s) ...
-
-Time::increment (double secs) ...
-
-void Time::print () const ...
-
-bool Time::after (const Time& time2) const ...
-
-Time::add (const Time& t2) const ...
-
-double Time::convertToSeconds () const ...
-```
-
-在这种情况下，`Time.cpp` 中的定义顺序与 `Time.h` 中的声明顺序相同，尽管这并不是必须。
-
-另一方面，有必要使用 `include` 语句包含头文件。当编译器读取函数定义时，它已经拥有足够关于结构的信息来检查代码并捕获错误。
-
-最后，`main.cpp` 包含了 `main` 函数以及任何我们不是 `Time` 结构体成员的函数（在本情况下没有）：
-
-```cpp
-#include <iostream.h>
-#include "Time.h"
-
-void main () {
-    Time currentTime(9, 14, 30.0);
-    currentTime.increment(500.0);
-    currentTime.print();
-
-    Time breadTime(3, 35, 0.0);
-    Time doneTime;
-    doneTime.add(breadTime);
-    doneTime.print();
-
-    if (doneTime.after(currentTime)) {
-        cout << "The bread will be done." << endl;
-    }
-}
-```
-
-*(注：原文提供的英文文本后半部分存在大量重复和乱码，以下为基于核心逻辑的清理后翻译)*
 
 ## 12 对象的向量
 
@@ -3223,9 +2969,6 @@ void main () {
 如果你不熟悉扑牌，现在是一个获取一副牌的好时机，否则本章可能没有太大意义。一副牌有 52 张牌，每张牌属于四种花色的 13 个点数之一。花色是黑桃、红心、方片和梅花（桥牌顺序）。点数是 A、2,3,4、5、6、7,8、9、10、J、Q 和 K。取决于你玩什么游戏，A 的点数可能比 K 大，也可能比 2 小。
 
 如果我们想定义一个新对象来表示扑牌，显然实例变量应该是点数和花色。实例变量应该是什么类型并不明显。一种可能性是字符串，包含诸如“Spade”的花色和“Queen”的点数。这种实现的一个问题是，将无法轻松比较牌以查看谁的点数或花色更高。
-
-
-
 
 另一种方法是使用整数来对点数和花色进行编码。我说的“编码”并不是像某些人认为的那样，即加密或翻译秘密代码。计算机科学家所说的“编码”是指“在数字序列与我想要表示的对象之间定义一种映射”。例如：
 
@@ -3245,15 +2988,12 @@ void main () {
 ```cpp
 struct Card {
     int suit, rank;
-
     Card ();
     Card(int s, int r);
 }
-
 Card::Card() {
     suit = 0; rank = 0;
 }
-
 Card::Card(int s, int r) {
     suit = s; rank = r;
 }
@@ -3263,9 +3003,9 @@ Card::Card(int s, int r) {
 
 第二个构造函数更有用。它接受两个参数：牌的花色和点数。
 
-## 12.3. PRINTCARD 函数
+### 12.3 printCard 函数
 
-以下代码创建了一个名为 **threeOfClubs** 的对象，代表梅花 3：
+以下代码创建了一个名为 `threeOfClubs` 的对象，代表梅花 3：
 
 ```cpp
 Card threeOfClubs (0, 3);
@@ -3273,7 +3013,7 @@ Card threeOfClubs (0, 3);
 
 第一个参数 0 代表花色梅花（Clubs），第二个参数自然地代表点数 3。
 
-## 12.3 printCard 函数
+### 12.3 printCard 函数
 
 当你创建一个新类型时，第一步通常是声明实例变量并编写构造函数。第二步通常是编写一个以以人类可读的格式打印对象的函数。
 
@@ -3296,7 +3036,7 @@ suits[3] = "Spades";
 
 该向量的状态图如下：
 
-> apvectors 与字符串略有不同，它包含一个模板，允许编译器创建各种种类的向量。当你第一次使用整数向量时，编译器会生成相应的代码来支持该种类的向量。如果你使用字符串向量，编译器会生成不同的代码来处理该类型的向量。因此，通常包含 `apvector.h` 头文件就足够了，你不需要编译 `apvector.cpp`！遗憾的是，如果你这样做了，可能会收到一长串错误信息。这个脚注可以帮助你避免不快的意外，但你开发环境中的细节可能会有所不同。
+> `apvectors` 与字符串略有不同，它包含一个模板，允许编译器创建各种种类的向量。当你第一次使用整数向量时，编译器会生成相应的代码来支持该种类的向量。如果你使用字符串向量，编译器会生成不同的代码来处理该类型的向量。因此，通常包含 `apvector.h` 头文件就足够了，你不需要编译 `apvector.cpp`！遗憾的是，如果你这样做了，可能会收到一长串错误信息。这个脚注可以帮助你避免不快的意外，但你开发环境中的细节可能会有所不同。
 
 suits |
 | :--- |
@@ -3305,7 +3045,7 @@ suits |
 | "Hearts" |
 | "Spades" |
 
-我们可以构建一个类似的向量来解码点数。然后我们可以使用 **suit** 和 **rank** 作为索引来选择合适的元素。最后，我们可以写一个名为 **print** 的函数，输出调用它时所对应的代码：
+我们可以构建一个类似的向量来解码点数。然后我们可以使用 `suit` 和 `rank` 作为索引来选择合适的元素。最后，我们可以写一个名为 `print` 的函数，输出调用它时所对应的代码：
 
 ```cpp
 void Card::print() const
@@ -3315,7 +3055,6 @@ void Card::print() const
     suits[1] = "Diamonds";
     suits[2] = "Hearts";
     suits[3] = "Spades";
-
     vector<string> ranks(14);
     ranks[1] = "Ace";
     ranks[2] = "2";
@@ -3330,14 +3069,13 @@ void Card::print() const
     ranks[11] = "Jack";
     ranks[12] = "Queen";
     ranks[13] = "King";
-
     cout << ranks[rank] << " of " << suits[suit] << endl;
 }
 ```
 
 表达式 `suits[suit]` 的意思是“将当前对象的实例变量 `suit` 作为名为 `suits` 的向量的索引，并选择相应的字符串”。
 
-## 12.4. EQUALS 函数
+### 12.4 EQUALS 函数
 
 由于 `print` 是 `Card` 的成员函数，它可以隐式地引用当前对象的实例变量（而无需使用点符号来指定对象）。这段代码的输出：
 
@@ -3345,6 +3083,8 @@ void Card::print() const
 Card card (1, 11);
 card.print ();
 ```
+
+
 
 输出是 Jack of Diamonds（方形 J）。
 你可能会注意到我们没有使用 `ranks` 向量的零索引元素。因为唯一有效的点数是 1-13。通过在向量开头留出一个元素，我们得到了一种编码，其中 2 映射到 "3" 等等。从用户的角度来看，编码是什么并不重要，因为所有的输入和输出都使用人类可读的格式。另一方面，如果映射容易记忆，对程序员来说通常很有帮助。
@@ -3402,21 +3142,17 @@ if (equals(card1, card2)) {
 
 为了让牌具有可比性，我们必须决定点数和花色哪个更重要。诚实地说，这个选择完全是随机的。为了方便选择，我将说花色更重要，因为当你买一幅新牌时，它是按花色排序的，所有的梅花在一起，然后是所有的方形，以此类推。
 
-
-
 既然已经决定，我们就可以编写 `isGreater`。同样，参数（两张 `Card`）和返回类型（`boolean`）是显而易见的，而且我们需要在成员函数和非成员函数之间进行选择。这一次，参数是不对称的。我们是想知道“A 是否大于 B？”还是“B 是否大于 A？”，这很重要。因此，我认为将 `isGreater` 写成一个成员函数更有意义：
 
-```
+```cpp
 bool Card::isGreater(const Card& c2) const
 {
     // 先检查花色
     if (suit > c2.suit) return true;
     if (suit < c2.suit) return false;
-
     // 如果花色相同，则检查点数
     if (rank > c2.rank) return true;
     if (rank < c2.rank) return false;
-
     // 如果点数也相同，返回 false
     return false;
 }
@@ -3427,7 +3163,7 @@ bool Card::isGreater(const Card& c2) const
 - Card1 (2, 11)
 - Card2 (1, 11)
 
-```
+```cpp
 if (card1.isGreater(card2)) {
     card1.print();
     cout << "is greater than" << endl;
@@ -3468,7 +3204,7 @@ deck
 
 外层循环从 0 到 3 枚举花色。对于每个花色，内层循环从 1 到 13 枚举点数。由于外层循环迭代 4 次，内层循环迭代 13 次，循环体总共执行 52 次（13 乘以 4）。
 
-```
+```cpp
 int i = 0;
 for (int suit = 0; suit <= 3; suit++) {
   for (int rank = 1; rank <= 13; rank++) {
@@ -3487,7 +3223,7 @@ for (int suit = 0; suit <= 3; suit++) {
 
 每当你处理向量时，拥有一个包含向量内容的函数是非常方便的。我们已经见过好几次遍历向量的模式了，所以下面的函数应该读起来很熟悉：
 
-```
+```cpp
 void printDeck(const apvector<Card>& deck) {
   for (int i = 0; i < deck.length(); i++) {
     deck[i].print();
@@ -3503,7 +3239,7 @@ void printDeck(const apvector<Card>& deck) {
 
 线性搜索是两者中显而易见的：它遍历牌组并将每张卡片与我们要找的卡片进行比较。如果我们找到了，就返回卡片出现的索引。如果不在牌组中，我们返回 -1。
 
-```
+```cpp
 int find(const Card& card, const apvector<Card>& deck) {
   for (int i = 0; i < deck.length(); i++) {
     if (equals(deck[i], card)) return i;
@@ -3518,9 +3254,8 @@ int find(const Card& card, const apvector<Card>& deck) {
 
 为了测试这个函数，我写了以下代码：
 
-```
+```cpp
 apvector<Card> deck = buildDeck();
-
 int index = card.find(deck[17]);
 cout << "I found the card at index = " << index << endl;
 ```
@@ -3552,18 +3287,18 @@ I found the card at index = 17
 
 步骤 3 和 4 看起来非常像递归调用。这里是这一切翻译成 C++ 的样子：
 
-```
+```cpp
 int findBect(const Card& card, const apvector<Card>& deck,
     int low, int high) {
     int mid = (high + low) / 2;
 ```
 
-```
+```cpp
 // 如果找到了卡片，返回它的索引
 if (equals(deck[mid], card)) return mid;
 ```
 
-```
+```cpp
 // 否则，将卡片与中间卡片进行比较
 if (deck[mid].isGreater(card)) {
     // 搜索牌组的前半部分
@@ -3580,14 +3315,11 @@ if (deck[mid].isGreater(card)) {
 
 加上那行后，函数就能正常工作了：
 
-```
+```cpp
 cout << low << " << " << high << endl;
-
 if (high < low) return -1;
-
 int mid = (high + low) / 2;
 ```
-
 
 ```cpp
 if (equals(deck[mid], card)) return mid;
@@ -3603,7 +3335,7 @@ if (deck[mid].isGreater(card)) {
 
 我在开头添加了一个输出语句，以便观察递归调用的序列，并说服自己最终会到达基础情况。我尝试了以下代码：
 
-```
+```cpp
 cout << findBisect(deck, deck[23], 0, 51);
 ```
 
@@ -3675,30 +3407,26 @@ enum Suit { CLUBS, DIAMONDS, HEARTS, SPADES };
 ```
 
 ```cpp
-enum Rank { ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING };
 ```
 
-默认情况下，枚举类型中的第一个值是 0。
-
-通过枚举类型，我们可以将点数映射到整数。例如 `CLUBS` 是 0，`DIAMDS` 是 1，`HEARTS` 是 2，`SPADES` 是 3。
-
-在枚举类型中，`ACE` 是 1，`TWO`   。
 
 
+`enum Rank { ACE=1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING };`
 
-枚举类型，我们可以使用 `Suit` 和 **Rank**：
+默认情况下，枚举类型中的第一个值是 `0`。
+
+通过枚举类型，我们可以将点数映射到整数。例如 `CLUBS` 是 `0`，`DIAMDS` 是 `1`，`HEARTS` 是 `2`，`SPADES` 是 `3`。
+
+在枚举类型中，`ACE` 是 `1`，`TWO` 。
+
+枚举类型，我们可以使用 `Suit` 和 `Rank`：
 
 ```cpp
 switch (suit) {
 case ACE:
     //;
-
-
 break
-
-
-``````
-
+```
 使用 `break` 语句，例如：
 
 ```cpp
@@ -3724,7 +3452,8 @@ default:
     cout << "I only know to perform addition and multiplication" << endl;
     break;
 }
-```这个 `switch` 语句等同于以下链式条件：
+```
+这个 `switch` 语句等同于以下链式条件：
 
 ```cpp
 if (symbol == '+') {
@@ -3734,7 +3463,8 @@ if (symbol == '+') {
 } else {
     cout << "I only know to perform addition and multiplication" << endl;
 }
-``` `break` 语句在 `switch` 语句的每个分支中都是必要的，否则执行流会“穿透”到下一个分支。如果没有 `break` 语句，符号 `+` 会执行 `perform_addition`，然后执行 `perform_multiplication`，最后打印错误信息。这种特性偶尔很有用，但大多数时候它是人们忘记 `break` 语句时的错误来源。
+```
+`break` 语句在 `switch` 语句的每个分支中都是必要的，否则执行流会“穿透”到下一个分支。如果没有 `break` 语句，符号 `+` 会执行 `perform_addition`，然后执行 `perform_multiplication`，最后打印错误信息。这种特性偶尔很有用，但大多数时候它是人们忘记 `break` 语句时的错误来源。
 
 - `switch` 语句适用于整数、字符和枚举类型。
 - 例如，为了将 `Suit` 转换为字符串，我们可以使用如下代码：
@@ -3753,10 +3483,6 @@ default: return "Not a valid suit";
 
 通常，在每个 `switch` 语句中包含一个 `default` 分支是良好的习惯，用于处理错误或意外值。
 
-
-
-
-
 ## 13.3 牌组 (Decks)
 
 在上一章中，我们处理了对象向量，但也提到过可以创建一个包含向量作为其实例变量的对象。在本章中，我将创建一个名为 `Deck` 的新对象，它包含一个 `Cards` 向量。
@@ -3766,10 +3492,8 @@ default: return "Not a valid suit";
 ```cpp
 struct Deck {
   avector<Card> cards;
-
   Deck(int n);
 };
-
 Deck::Deck(int size) {
   avector<Card> temp(size);
   cards = temp;
@@ -3782,7 +3506,7 @@ Deck::Deck(int size) {
 
 我们可以这样创建一个牌组：
 
-Deck (52):
+`Deck (52)`:
 
 下面的状态图展示了 `Deck` 对象的内部样子：
 
@@ -3809,7 +3533,6 @@ for (int i = 0; i<52; i++) {
 Deck::Deck() {
     apvector<Card> temp (52);
     cards = temp;
-
     int i = 0;
     for (Suit suit = CLUBS; suit <= SPADES; suit = Suit(suit+1)) {
         cards[i].suit = suit;
@@ -3857,10 +3580,8 @@ struct Deck;
 // 这样我们可以在 Card 的定义中引用它
 struct Card {
   int suit, rank;
-
   Card();
   Card(int s, int r);
-
   void print() const;
   bool isGreater(const Card& c2) const;
   int find(const Deck& deck) const;
@@ -3927,10 +3648,6 @@ Deck::subdeck(int low, int high) const {
 
 创建局部变量 `subdeck` 时，我们使用了接受牌组大小作为参数且不初始化卡牌的 `Deck` 构造函数。卡牌是在从原始牌组拷贝时初始化的。牌组的长度为 `high-low+1`，是因为低索引和高索引都被包含在内。这种计算很令人困惑，容易导致“差一错误”。画图通常是避免此类错误最好的方法。
 
-
-
-
-
 ## 13.9 洗牌与发牌
 
 在 13.6 节中，我写了一个洗牌算法的伪代码。假设我们有一个名为 `shuffleDeck` 的函数，它接受牌组作为参数并对其洗牌，我们可以创建并洗一副牌：
@@ -3972,17 +3689,14 @@ Deck pack = deck.subdeck(10, 51);
 Deck merge (const Deck& d1, const Deck& d2) {
   // 创建一个足够容纳所有牌的 d1
   Deck result (d1.cards.length() + d2.cards.length());
-
   // 使用索引 i 跟踪我们在第一个牌组的位置，
   // 使用索引 j 跟踪第二个牌组的位置
   int i = 0;
   int j = 0;
-
   // 索引 k 遍历结果牌组
   for (int k = 0; k <result.cards.length(); k++) {
     // 如果 d1 为空，则 d2 胜；如果 d2 为空，则 d1 胜；
     // 否则，比较两张牌
-
     // 将胜者加入新牌
     return result;
   }
@@ -4024,10 +3738,6 @@ DeckSort::mergeSort (Deck deck) const {
 
 通常情况下，思考递归程序有两种方式：你可以通思考整个执行流，或者你可以进行“信仰之跳跃（leap of faith）”。我刻意构建了这个例子来鼓励你进行这次跳跃。
 
-
-
-
-
 # 14.3. 复数 149
 
 我将 `struct` 一词替换为 `class` 并删除了 `private:` 标签。这两个定义的结果是完全相同的。
@@ -4046,12 +3756,16 @@ DeckSort::mergeSort (Deck deck) const {
 class Complex 
 {
     double r, imag;
-
 public:
-    Complex() { }
-    Complex(double r, double i) { real = r; imag = i; }
-};
 ```
+
+
+
+`Complex()` { }
+
+`Complex(double r, double i)` { `real` = `r`; `imag` = `i`; }
+
+};
 
 由于这是一个 `class` 定义，实例变量 `real` 和 `imag` 是私有的，我们必须包含 `public:` 标签以允许客户端代码调用构造函数。
 
@@ -4095,10 +3809,8 @@ class Complex
     double real, imag;
     double mag, theta;
     bool cartesian, polar;
-
 public:
     Complex () { cartesian = false; polar = false; }
-
 Complex(double r, double i)
 ```
 
@@ -4208,7 +3920,6 @@ Complex add (Complex& a, Complex& b)
 ```
 Complex c1 (2.0, 3.0);
 Complex c2 (3.0, 4.0);
-
 Complex sum = add (c1, c2);
 sum.printCartesian();
 ```
@@ -4228,10 +3939,6 @@ Complex mult (Complex& a, Complex& b)
   double mag = a.getMag() * b.getMag()
 ```
 
-
-
-
-
 # 第 14 章：类与不变性
 
 ```cpp
@@ -4250,7 +3957,6 @@ return product;
 ```cpp
 Complex c1 (2.0, 3.0);
 Complex c2 (3.0, 4.0);
-
 Complex product = mult(c1, c2);
 product.printCartesian();
 ```
@@ -4333,53 +4039,6 @@ void calculateCartesian ()
 }
 ```
 
-```cpp
-void calculateCartesian ()
-// 前置条件：当前对象包含有效的极坐标
-// 后置条件：polar 标志被设置，且 cartesian 标志为真
-{
-    if (!polar) {
-        cout << "polar flag must be set" << endl;
-        exit(1);
-    }
-    real = mag;
-    imag = mag * sin(theta);
-    cartesian = true;
-}
-```
-
-```cpp
-void calculateCartesian ()
-// 前置条件：当前对象包含有效的极坐标
-// 后置条件：polar 标志被设置，且 cartesian 标志为真
-{
-    if (!polar) {
-        cout << "polar flag must be set" << endl;
-        exit(1);
-    }
-    real = mag;
-    imag = mag * sin(theta);
-    cartesian = true;
-}
-```
-
-```cpp
-void calculateCartesian ()
-// 前置条件：当前对象包含有效的极坐标
-// 后置条件：polar 标志被设置，且 cartesian 标志为真
-{
-    if (!polar) {
-        cout << "polar flag must be set" << endl;
-        exit(1);
-    }
-    real = mag;
-    imag = mag * sin(theta);
-    cartesian = true;
-}
-```
-
-（注：由于原文文本在后部分出现了大量关于 `calculateCartesian` 描述的重复和断裂，此处已根据逻辑整合翻译，以确保连贯。）
-
 为了让你的程序更健壮，显式地考虑你的假设是一个好习惯，将它们作为程序的一部分记录下来，并编写代码来检查它们。
 
 例如，让我们再次观察 `calculateCartesian`。我们是否对当前对象做了某种假设？是的，我们假设极坐标是有效的。
@@ -4403,13 +4062,14 @@ void calculateCartesian ()
 
 ```cpp
 #include <assert.h>
-
 void calculateCartesian () {
     assert(polar); // 前置条件
     // ... 逻辑 ...
     assert(cartesian); // 后置条件
 }
 ```
+
+
 
 这种检查方法在开发中非常常见。包含 `assert.h` 头文件后，可以使用断言函数。断言接收一个布尔值作为参数。如果参数为假，它会打印错误并退出。
 
@@ -4421,14 +4081,10 @@ void calculateCartesian () {
 - **前置条件 (Precondition)**：在函数开始时假设为真的条件。如果前置条件不成立，函数可能无法正常工作。如果可能，函数检查其前置条件是一个好习惯。
 - **后置条件 (Postcondition)**：在函数结束时为真的条件。
 
-
-
-
-
 # 第 15 章
 ## 文件输入/输出与 apmatrix
 
-在本章中，我们将开发一个能够读取和写入文件、解析输入并演示 apmatrix 类的程序。我们还将实现一种名为 Set 的数据结构，它可以随着你添加元素的增加而自动扩展。
+在本章中，我们将开发一个能够读取和写入文件、解析输入并演示 `apmatrix` 类的程序。我们还将实现一种名为 `Set` 的数据结构，它可以随着你添加元素的增加而自动扩展。
 
 除了演示所有这些功能外，该程序的真实目的是生成一个美国城市之间距离的二维表格。输出的表格如下所示：
 
@@ -4469,7 +4125,6 @@ ifstream infile ("file-name");
 ```cpp
 int x;
 apstring line;
-
 infile >> x;           // 获取单个整数并存储在 x 中
 getline(infile, line); // 获取整行并存储在 line 中
 ```
@@ -4480,7 +4135,6 @@ getline(infile, line); // 获取整行并存储在 line 中
 ```cpp
 apstring filename = "...";
 ifstream infile(filename.c_str());
-
 if (infile.good() == false) {
     cout << "无法打开名为 " << filename << " 的文件" << endl;
     exit(1);
@@ -4541,7 +4195,6 @@ while (true) {
 ```cpp
 apstring filename = "...";
 ifstream infile(filename.c_str());
-
 if (infile.good() == false) {
     cout << "无法打开名为 " << filename << " 的文件" << endl;
     exit(1);
@@ -4577,17 +4230,10 @@ int convertToInt(const apstring& s)
 }
 ```
 
-
-
-
-
-# 第15章 文件输入/输出与 apmatrix
-
 ```cpp
 if (isdigit(s[i])) {
     digitString += s[i];
 }
-
 return atoi(digitString.c_str());
 ```
 
@@ -4632,10 +4278,8 @@ class Set {
 private:
     apvector<apstring> elements;
     int numElements;
-
 public:
     Set(int n);
-
     int getNumElements() const;
     apstring getElement(int i) const;
     int find(const apstring& s) const;
@@ -4699,12 +4343,10 @@ int Set::add (const apstring& s) {
   // 如果元素已经在集合中，返回它的索引
   int index = find(s);
   if (index == -1) return index;
-
   // 如果 apvector 满了，将其大小翻倍
   if (numElements == elements.length()) {
     elements.resize(elements.length() * 2);
   }
-
   // 添加新元素并返回它的索引
   index = numElements;
   elements[index] = s;
@@ -4756,6 +4398,8 @@ apmatrix<double> m3 (rows, cols, 0.0);
 apmatrix<double> m4 (m3);
 ```
 
+
+
 第一个是无所作为的构造函数，创建一个两个维度均为 0 的矩阵。第二个接受两个整数，即初始行数和列数，顺序如此。第三个与第二个相同，但额外接受一个用于初始化矩阵元素的参数。第四个是拷贝构造函数，接受另一个 `apmatrix` 作为行和列：
 
 就像 `avectors` 一样，我们可以创建任何类型元素的 `apmatrix`（甚至是 `apmatrix`）。访问元素时，我们使用 `[]` 运算符指定行和列：
@@ -4799,10 +4443,6 @@ for (int row=0; row < m2.numrows(); row++) {
 apmatrix<int> distances (50, 50, 0);
 ```
 
-
-
-
-
 ## 15.9. 适当距离矩阵
 
 在 `processLine` 中，我们通过从 `Set` 中获取两个城市的索引并使用它们作为矩阵索引，向矩阵添加新信息：
@@ -4811,7 +4451,6 @@ apmatrix<int> distances (50, 50, 0);
 int dist = convertToInt(distString);
 int index1 = cities.add(city1);
 int index2 = cities.add(city2);
-
 dist[index1][index2] = distance;
 dist[index2][index1] = distance;
 ```
@@ -4821,7 +4460,6 @@ dist[index2][index1] = distance;
 ```cpp
 for (int i=0; i<cities.getNumElements(); i++) {
   cout << cities.getElement(i) << "\t";
-
   for (int j=0; j<=i; j++) {
     cout << distances[i][j] << "\t";
   }
@@ -4870,7 +4508,6 @@ void main () {
     apstream line;
     ifstream infile("distances");
     DistMatrix distances (2);
-
     while (true) {
         getline(infile, line);
         if (infile.eof()) break;
@@ -4900,7 +4537,6 @@ string city2 = line.substr(quoteIndex[2]+1, len2);
 int len3 = line.length() - quoteIndex[2] - 1;
 string distString = line.substr(quoteIndex[3]+1, len3);
 int distance = convertToInt(distString);
-
 // 将新数据添加到距离矩阵
 distances.add(city1, city2, distance);
 ```
@@ -5032,6 +4668,7 @@ const char & operator[](int index) const;
 // 修改
 apstring &operator+==(const apstring& str); // 追加字符串
 apstring &operator+==(char ch); // 追加字符
+```
 
 ## 附录 A AP 类的快速参考（注意：此部分重复了上述定义）
 
@@ -5148,8 +4785,6 @@ apstring &operator+==(const apstring& str); // 追加字符串
 apstring &operator+==(char ch); // 追加字符
 ```
 
-
-
 ```cpp
 // 索引
 // 范围索引
@@ -5184,43 +4819,46 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
 - 赋值, 13, 19, 53
 - atoi, 163
 - 反斜杠, 162
+
+
+
 - 二分查找, 130
 - 主体, 63
 - 循环, 55
 - 池池, 42
 - 布尔, 45
 - 自下而上设计, 103, 142, 145
-- break 语句, 133, 161
-- aug, 4
+- `break` 语句, 133, 161
+- `aug`, 4
 - C 字符串, 161
-- c.str, 161
-- scall, 30
+- `c.str`, 161
+- `scall`, 30
 - 引用传递, 79, 82
 - 值传递, 78
-- Card, 121
+- `Card`, 121
 - 卡卡尔坐标, 149
 - 字符
     - 分类, 163
     - 特殊序列, 162
     - 字符运算符, 17
-- cin, 83, 169
+- `cin`, 83, 169
 - 类, 147, 148, 158
-- apstring, 72
-- Card, 121
-- Complex, 149
-- Time, 29
+- `apstring`, 72
+- `Card`, 121
+- `Complex`, 149
+- `Time`, 29
 - 客户端程序, 147
-- cmath, 23
+- `cmath`, 23
 - 注释, 7
 - 可比较, 126
 - 比较
-    - apstring, 72
+    - `apstring`, 72
     - 运算符, 31
     - 比较运算符, 45, 126
 - 复数, 2
 - 编译时错误, 4, 41
 - 编译顺序, 126
-- Complex, 149
+- `Complex`, 149
 - 复数类型, 149
 - 组合, 18, 19, 24, 43, 81, 121
 - 拼接, 74
@@ -5238,7 +4876,7 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
 - 极坐标, 149
 - 正确性, 132
 - 计数器, 70, 74, 103
-- cout, 83, 160
+- `cout`, 83, 160
 - 当前对象, 110
 - 数据封装, 147, 155, 165
 - 数据结构, 164
@@ -5258,7 +4896,7 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
 - 除法
     - 浮点, 56
     - 整数, 160
-    - double (浮点), 21
+    - `double` (浮点), 21
 - 阿瑟·柯南·道尔尔, 5
 - 效率, 143
 - 元素, 98, 107
@@ -5266,10 +4904,10 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
 - 数据, 147, 155, 160
 - 功能性的, 147
 - 编码, 121
-- nrypt, 121
+- `nrypt`, 121
 - 文件末尾, 160
 - 枚举类型, 135
-- edf, 160
+- `edf`, 160
 - 错误, 9
 - 编译时, 4, 41
 - 逻辑, 4
@@ -5282,40 +4920,40 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
     - 文件输出, 161
 - 填充函数, 91
 - 查找, 68, 129, 162
-- findBisection, 130
+- `findBisection`, 130
 - 标记, 46, 151
 - 浮点数, 30
 - 浮点数, 21
-- for, 39
+- `for`, 39
 - 形式语言, 5, 9
-- fabjuous, 48
+- `fabjuous`, 48
 - 有成果的函数, 30, 39
 - 函数, 30, 59, 88
     - 访问器, 148, 151
-    - bool, 46
+    - `bool`, 46
     - 定义, 24
     - 填充, 91
     - 对象的, 88
     - 有成果的, 30, 39
     - 辅助, 142, 145
-    - main, 24
-    - Math, 23
+    - `main`, 24
+    - `Math`, 23
     - 成员, 109, 119, 139
     - 修改器, 90
     - 多重参数, 29
     - 非成员, 110, 119
-    - void, 39
+    - `void`, 39
     - 功能性编程, 95
     - 泛化, 58, 61, 63, 70
-    - getline, 161
+    - `getline`, 161
     - 好的, 160
     - 头文件, 23, 159
-    - hello world, 7
+    - `hello world`, 7
     - 辅助函数, 142, 145
     - 高层语言, 2, 9
     - 直方图, 105, 107
     - 霍尔斯, 5
-    - iostream, 160
+    - `iostream`, 160
     - 可变的, 72
     - 实现, 119, 147
     - 递增, 70, 74, 90
@@ -5332,22 +4970,22 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
     - 解释, 2, 9
     - 不变的, 154, 158
     - 调用, 119
-    - isdigit, 163
-    - istream, 160
+    - `isdigit`, 163
+    - `istream`, 160
     - 迭代, 54, 63
     - 关键字, 15, 19
     - 嵌套, 128, 139, 168
     - 搜索, 129
     - 循环变量, 58, 61, 68, 99
     - 低层语言, 2, 9
-    - main, 24
-    - map to, 121
+    - `main`, 24
+    - `map to`, 121
     - 映射, 135
-    - Math 函数, 23
-    - acos, 39
-    - exp, 39
-    - abs, 41
-    - sin, 39
+    - `Math` 函数, 23
+    - `acos`, 39
+    - `exp`, 39
+    - `abs`, 41
+    - `sin`, 39
     - 矩阵, 167
     - 均, 102
     - 成员函数, 109, 119, 139
@@ -5371,7 +5009,7 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
     - 逻辑运算符, 46
     - 循环, 55, 63, 99
     - 计数, 69, 103
-    - for, 99
+    - `for`, 99
     - 无限, 55, 63, 161
     - 自然语言, 5, 9
     - 嵌套循环, 128
@@ -5384,7 +5022,7 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
     - 输出, 88
     - 向量的, 127
     - 面向对象编程, 148
-    - ofstream, 161
+    - `ofstream`, 161
     - 操作数, 16, 19
     - 运算符, 7, 16, 19
     - 字符, 17
@@ -5398,32 +5036,31 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
     - 编程语言, 1
     - 编程风格, 92
     - 散文, 6
-    - for, 99
+    - `for`, 99
     - 初始化, 45
     - 输出, 7, 11, 88
     - 返回, 34, 39, 82, 129
-    - switch, 160
-    - while, 54
+    - `switch`, 160
+    - `while`, 54
     - 统计, 102
     - 流, 83, 159, 171
-- 
-- String, 11
+- `String`, 11
 - 字符串拼接, 164
 - 原生 C, 161
-- struct, 75, 178
+- `struct`, 75, 178
 - 作为参数, 78
 - 作为返回类型, 82
 - 实例变量, 76
 - 操作, 77
-- Point, 75
-- Rectangle, 80
-- Time, 87
+- `Point`, 75
+- `Rectangle`, 80
+- `Time`, 87
 - 结构, 85
 - 结构定义, 140
 - 子细节, 133, 142
 - 花色, 121
-- swapCards, 141
-- switch 语句, 136
+- `swapCards`, 141
+- `switch` 语句, 136
 - 语法, 4, 9
 - 向量, 97
 - 类型转换, 22
@@ -5441,23 +5078,22 @@ void resize(int newRows, int newCols); // 将矩阵调整为 newRows x newCols
 - 方面的方面, 123
 - 牌的, 138
 - 对象的, 127
-- void, 39, 52, 88
-- while 语句, 54
-- tab, 63
+- `void`, 39, 52, 88
+- `while` 语句, 54
+- `tab`, 63
 - 表, 56
 - 二维, 58
 - 临时变量, 40
 - 测试, 132, 144
-- this, 110
-- Time, 87
+- `this`, 110
+- `Time`, 87
 - 自上而下设计, 142
 - 遍历, 67, 74, 129
 - 计数, 69, 103
 - 图灵·图灵, 48
 - 类型, 12, 19
-- bool, 45
-- double, 21
+- `bool`, 45
+- `double`, 21
 - 枚举, 135
-- int, 16
-- String, 11
-
+- `int`, 16
+- `String`, 11

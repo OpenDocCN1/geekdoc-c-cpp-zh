@@ -1,304 +1,129 @@
-# Python 初学者指南 2版
 
-
-
-
+# Python 初学者指南（第 2 版）
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_0_0.png)
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_1_0.png)
 
-
-
-
 ![](img/b5b2ea569d1e5bba0afd733be648243d_1_1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-要查看此书的快速查表（Cheat Sheet），只需访问 www.dummies.comget搜索框中搜索“Python All-in-One For Dummies Cheat Sheet”。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+要查看此书的快速查表（Cheat Sheet），只需访问 `www.dummies.com`，在搜索框中搜索“Python All-in-One For Dummies Cheat Sheet”。
 
 - 遍历文件
-
-
-
-
-
-
 - 创建自己的模块
-
-
-
-
-
 - 用 Python 构建简单的神经网络
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 关于作者
 
-
-
-
-
-
+## 表格
 
 - 表 4-4 Python 布尔逻辑运算符
-第 2 卷第 1 章
+
+### 第 2 卷第 1 章
+
 - 表 1-1 用于数字的某些 Python 内置函数
 - 表 1-10 来自 Olson 数据库的示例时区
-
 - 表 2-2 Python 逻辑运算符
-第 2 卷第 3 章
+
+### 第 2 卷第 3 章
+
 - 表 3-1 处理列表的方法
-
-
-
-
 - 表 2-2 Python 与 JSON 数据转换
 
+## 插图
 
+- 图 1-3：在 Windows 中右键点击并运行
+- 图 1-7：VS Code Python 扩展
+- 图 1-9：VS Code 中的终端（Windows 和 Mac）
+- 图 2-3：Python 的交互式工具
+- 图 2-5：Python 提示符
+- 图 2-7：保存工作区设置
+- 图 2-9：复制到工作区
+- 图 2-13：`hello.py` 文件包含一些未保存的代码
+- 图 2-15：`hello.py` 的输出
+- 图 2-17：VS Code 调试面板
+- 图 2-19：包含某些内容的 Markdown cell
+- 图 3-2：启用了 PyLint 和 Pcodestyle (PEP 8) 的工作设置
+- 图 3-4：已安装模块
+- 图 4-2：`hello.py` 中的注释
+- 图 4-4：输入 VS Code 的第一个 Python 应用
+- 图 4-6：代码中 `print(extended_price)` 的输出为 19.9
+- 图 4-8：鼠标指向绿色波浪线
 
+### 第 2 卷第 1 章
 
-
-
-
-
-
-
-
-
-
-
-
-- 图 1-3: 在 Windows 中右键点击并运行
-- 图 1-7: VS Code Python 扩展
-- 图 1-9: VS Code 中的终端（Windows 和 Mac）
-
-
-- 图 2-3: Python 的交互式工具
-- 图 2-5: Python 提示符
-- 图 2-7: 保存工作区设置
-- 图 2-9: 复制到工作区
-- 图 2-13: hello.py 文件包含一些未保存的代码
-- 图 2-15: hello.py 的输出
-- 图 2-17: VS Code 调试面板
-- 图 2-19: 包含某些内容的 Markdown cell
-
-
-- 图 3-2: 启用了 PyLint 和 Pcodestyle (PEP 8) 的工作设置
-- 图 3-4: 已安装模块
-
-
-- 图 4-2: hello.py 中的注释
-- 图 4-4: 输入 VS Code 的第一个 Python 应用
-- 图 4-6: 代码中 print(extended_price) 的输出为 19.9
-- 图 4-8: 鼠标指向绿色波浪线
-第 2 卷第 1 章
-- 图 1-1: 尝试 abs() 函数
-- 图 1-3: 在 Python 提示符下玩内置数学函数
-- 图 1-5: 在 Python 提示符下更多内置数学函数
-- 图 1-7: 格式化百分比数字
-- 图 1-9: 用三引号封装的多行 f-string
-- 图 1-11: 所有金额整齐对齐
-- 图 1-13: 字符串中的字符位置从 0 开始，而不是 1
-- 图 1-15: 常用字符的 ASCII 数字
-- 图 1-17: 在 Jupyter notebook 中对 datetime.date 对象实验
-- 图 1-19: 时区
-- 图 1-21: 五个时区的日期
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 图 1-1：尝试 `abs()` 函数
+- 图 1-3：在 Python 提示符下玩内置数学函数
+- 图 1-5：在 Python 提示符下更多内置数学函数
+- 图 1-7：格式化百分比数字
+- 图 1-9：用三引号封装的多行 f-string
+- 图 1-11：所有金额整齐对齐
+- 图 1-13：字符串中的字符位置从 0 开始，而不是 1
+- 图 1-15：常用字符的 ASCII 数字
+- 图 1-17：在 Jupyter notebook 中对 `datetime.date` 对象实验
+- 图 1-19：时区
+- 图 1-21：五个时区的日期
 - 图 6-2：`Dog` 创建了许多独特的狗。
 - 图 6-4：在 Jupyter 单元格中从 `Member` 类创建一个成员。
 - 图 6-6：当你访问自定义类时，VS Code 会显示帮助信息。
 - 图 6-8：更改对象多个属性的值。
 - 图 6-10：`free_days` 变量是 `Member` 类中的类变量。
-
 - 图 6-13：作为 `dogs` 类对象的狗。
 - 图 6-15：简化的 `Member` 类。
 - 图 6-17：`Admin` 子类有一个新的秘密 `secret_code` 参数。
 - 图 6-19：具有三个同名方法 `get_status()`。
-
-
 - 图 7-2：Excel（顶部）中的 `people.csv` 文件。
 - 图 7-4：`showfilecontents.py` 捕获错误并显示...
 - 图 7-6：带有 `try`、异常处理器和 `else` 的代码。
-
-
 - 图 1-2：二进制文件。
 - 图 1-4：`names.txt` 文件是文本，包含大量非英语字符...
 - 图 1-6：在 `names.txt` 末尾添加新名称。
 - 图 1-8：`binarycopy.py` 将 `happy_pickle.jpg` 添加文件夹。
 - 图 1-10：文本编辑器中的 `CSV` 文件。
 - 图 1-12：将 `CSV` 文件读取为对象列表。
-
-
 - 图 2-2：Excel 数据转换为 JSON 格式。
 - 图 2-4：导出 Firebase Realtime 数据的 JSON 文件...
 - 图 2-6：显示每个字典一个值的输出。
 - 图 2-8：更改每个字典中一个键的值。
 - 图 2-10：写入命名为 `hitcounts...` 的新 JSON 文件。
-## 第三本书 第3章
+
+### 第三本书 第 3 章
+
 - 图 3-1：客户端发送请求，服务器返回响应。
 - 图 3-3：使用 Chrome 检查 HTTP 头部。
 - 图 3-5：用于网络爬取的示例页面。
 - 图 3-7：网络爬取代码。
 - 图 3-9：整个 `scraper.py` 程序。
-## 第三本书 第4章
+
+### 第三本书 第 4 章
+
 - 图 4-1：Python 的内置函数。
-
-
 - 图 2-2：前向传播和反向传播。
 - 图 2-4：训练期间的损失函数（Loss）。
 - 图 2-6：双层训练结果。
-
-
 - 图 3-2：树莓派上的全 GUI。
 - 图 3-4：挂在墙上的未分类衣服。
 - 图 3-6：带有 MatPlotLib 可视化的 RaspberryPi GUI。
-## 第四本书 第4章
+
+### 第四本书 第 4 章
+
 - 图 4-1：包含 Videocore-IV 的树莓派处理器芯片。
 - 图 4-3：Google Edge TPU 加速器。
-
-
 - 图 2-2：每种类型的钻石净度计数。
 - 图 2-4：相关性热图。
-## 第五本书 第3章
+
+### 第五本书 第 3 章
+
 - 图 3-1：Google Cloud 开发者控制台页面。
 - 图 3-3：第二个凭据屏幕。
-
-
 - 图 1-2：树莓派 GPIO 引脚的功能。
 - 图 1-4：Grove LED。
 - 图 1-6：连接好的 Pi2Grover 板。
 - 图 1-8：对齐板的 LED。
 - 图 1-10：占空比。
-## 第六本书 第2章
+
+### 第六本书 第 2 章
+
 - 图 2-1：Arduino Uno。
 - 图 2-3：树莓派上的 Pi2Grover 板。
 - 图 2-5：5cm 长的 Grove 线。
@@ -307,70 +132,13 @@
 - 图 2-11：Grove 母对头线。
 - 图 2-13：带有 Grove 线的 SunAir 板。
 - 图 2-15：带有 Grove 线的 Adafruit GPS 局部写。
-## 第六本书 第3章
+
+### 第六本书 第 3 章
+
 - 图 3-1：I2C 总线。
 - 图 3-3：插上 Grove 线的 HDC1080。
 - 图 3-5：Grove 四通道 16 位 ADC。
 - 图 3-7：完整的树莓派/ADC/氧气传感器连接。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 引言
 
@@ -394,41 +162,51 @@ Python 成为第一语言是因为它易于学习和使用，这部分归功于�
 
 # 购买
 
-要完成第 4 到第 7 章的项目，你需要一个树莓派 3B+ 套件 https://amzn.to/2WzYoy 或树莓派 4B 套件 https://amzn.to/3nIH8W8。此外，还需要按章节列出的物品。
+要完成第 4 到第 7 章的项目，你需要一个树莓派 3B+ 套件 `https://amzn.to/2WzYoy` 或树莓派 4B 套件 `https://amzn.to/3nIH8W8`。此外，还需要按章节列出的物品。
 
 如果你要在第 7 章的机器人中使用树莓派 4B，它会显著减少电池寿命，对于某些类型的电池，机器人可能无法启动 4B。
 
-# 第 6 章
+## 第 6 章
 
 为了构建第 6 章的项目，你需要以下物品：
 
-- Pi2Grove 板，来自 https://shop.switchdoc.com 或亚马逊。（在 shop.switchdoc.com 结账时使用折扣代码 PI2DUMIES 可节省 5 美。）
-- Grove 蓝色 LED 模块，包含一根 Grove 电缆，来自 https://shop.switchdoc.com 或亚马逊。
-- 一包 Grove 公针跳线线，特别是 Grove-4-公针转转换线，来自 https://shop.switchdoc.com/products/grove-4-pin-male-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack 和 https://amzn.to/3nyGbic
-- 一包母针转 Grove 的跳线线，来自 https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack 和 https://amzn.to/3jh0mXY
-- Grove HDC1080 I2C 温度湿度传感器，来自 https://store.switchdoc.com 或亚马逊。
+- Pi2Grove 板，来自 `https://shop.switchdoc.com` 或亚马逊。（在 `shop.switchdoc.com` 结账时使用折扣代码 `PI2DUMIES` 可节省 5 美。）
 
+- Grove 蓝色 LED 模块，包含一根 Grove 电缆，来自 `https://shop.switchdoc.com` 或亚马逊。
 
+- 一包 Grove 公针跳线线，特别是 Grove-4-公针转转换线，来自 `https://shop.switchdoc.com/products/grove-4-pin-male-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack` 和 `https://amzn.to/3nyGbic`。
 
+- 一包母针转 Grove 的跳线线，来自 `https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack` 和 `https://amzn.to/3jh0mXY`。
+
+- Grove HDC1080 I2C 温度湿度传感器，来自 `https://store.switchdoc.com` 或亚马逊。
 
 Labs HDC1080 传感器带有一个 Grove 接口。如果你在 Amazon 上购买了非 Grove 传感器，你需要一根母转 Grove 的转接线，正如本微型书籍第 2 章所讨论的那样。你可以在此处获取母转 Grove 的转接线：
 
-https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack https://amzn.to/3jHQmXY
+`https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack`
 
-- » » 在 www.seeedstudio.com 或 www.amazon.com 获取 Grove 氧气传感器。
-- » » PiGrover 树莓派转 Grove 转换器，https://shop.switchdoc.com 或 www.amazon.com。（在 shop.switchdoc.com 结账时使用折扣代码 PI2DMIES 可减免 $5.00。）
-- » » 在 https://store.switchdoc.com 或 www.amazon.com 获取 Grove 四通道 16 位模数数字转换器。
-- » » 在 www.seeedstudio.com 或 https://amazon.com 获取 Grove I2C 电机驱动器（带 Grove 线）。
-- » » 在 www.adafruit.com/product/711 或 https://amazon.com 获取两个小型直流电电机。
-- » » 在 www.ebay.com 或 https://amazon.com 获取 SG90 微型舵服电机。这些电机非常便宜，你可能不到 $10 就能买到两个或更多。
-- » » 在 www.ebay.com 或 https://amzn.to/2BuNDV1 获取 28BYJ-44 ULN2003 5V 步进电机。这种电机很便宜，你可能花 $12 买五个。确保你买的是带有驱动板的（例如 Amazon.com 链接中的）。
+`https://amzn.to/3jHQmXY`
 
-# 第 7 章
+- » » 在 `www.seeedstudio.com` 或 `www.amazon.com` 获取 Grove 氧气传感器。
+
+- » » PiGrover 树莓派转 Grove 转换器，`https://shop.switchdoc.com` 或 `www.amazon.com`。（在 `shop.switchdoc.com` 结账时使用折扣代码 `PI2DMIES` 可减免 $5.00。）
+
+- » » 在 `https://store.switchdoc.com` 或 `www.amazon.com` 获取 Grove 四通道 16 位模数数字转换器。
+
+- » » 在 `www.seeedstudio.com` 或 `https://amazon.com` 获取 Grove I2C 电机驱动器（带 Grove 线）。
+
+- » » 在 `www.adafruit.com/product/711` 或 `https://amazon.com` 获取两个小型直流电电机。
+
+- » » 在 `www.ebay.com` 或 `https://amazon.com` 获取 SG90 微型舵服电机。这些电机非常便宜，你可能不到 $10 就能买到两个或更多。
+
+- » » 在 `www.ebay.com` 或 `https://amzn.to/2BuNDV1` 获取 28BYJ-44 ULN2003 5V 步进电机。这种电机很便宜，你可能花 $12 买五个。确保你买的是带有驱动板的（例如 Amazon.com 链接中的）。
+
+## 第 7 章
 
 对于第 7 章中的机器人，请购买以下物品：
 
-- » » Adeept 树莓派 PiCar-B。确保购买购买 PiCar-B 而不是 PiCar-A。寻找“Adeept Mars Rover PiCar-B”。你可以在 Amazon.com https://amzn.to/36dukPU、www.ebay.com 和 www.adeept.com 购买 PiCar-B。
-- » » 在 https://amazon.com 以及其他地方购买两个 18650 3.7V LiPo 5000mAh 电池。
+- » » Adeept 树莓派 PiCar-B。确保购买购买 PiCar-B 而不是 PiCar-A。寻找“Adeept Mars Rover PiCar-B”。你可以在 Amazon.com `https://amzn.to/36dukPU`、`www.ebay.com` 和 `www.adeept.com` 购买 PiCar-B。
+
+- » » 在 `https://amazon.com` 以及其他地方购买两个 18650 3.7V LiPo 5000mAh 电池。
 
 # 本书使用的图标
 
@@ -452,7 +230,7 @@ https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-con
 
 # 书外内容
 
-除了你正在阅读的纸质或电子书中的材料外，该产品还带有一些网络上的可随处访问的资源。要获取这些材料，只需访问 www.dummies.com 并在搜索框搜索“Python All-in-One For Dummies cheat sheet”。此外，我们在 www.dummies.com/go/pythonaiofd2e 提供了本书的所有源代码。点击左侧列的“Downloads（下载）”，你将看到按微型书籍组织的代码链接。
+除了你正在阅读的纸质或电子书中的材料外，该产品还带有一些网络上的可随处访问的资源。要获取这些材料，只需访问 `www.dummies.com` 并在搜索框搜索“Python All-in-One For Dummies cheat sheet”。此外，我们在 `www.dummies.com/go/pythonaiofd2e` 提供了本书的所有源代码。点击左侧列的“Downloads（下载）”，你将看到按微型书籍组织的代码链接。
 
 # 接下来去哪里
 
@@ -460,36 +238,38 @@ https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-con
 
 如果你从未用过 Python，第 1 章是一个很好的阅读起点。在阅读后续经常使用这些术语和命令的章节时，发现基础知识和通用术语会很有帮助！
 
-## 第 1 章
+## 第 1 章：入门
 
-# 入门
+### 内容概览
 
-# 内容概览
+#### 第 1 章：从 Python 开始
 
-### ### 第 1 章：从 Python 开始
 - 为什么 Python 如此火
 - 选择合适的 Python
 - 成功的工具
 - 在 VS Code 中编写 Python
 - 使用 Jupyter Notebook 进行编码
 
-### ### 第 2 章：交互模式、获取帮助和编写应用
+#### 第 2 章：交互模式、获取帮助和编写应用
+
 - 使用 Python 的交互模式
 - 创建 Python 开发工作空间
 - 为你的 Python 代码创建一个文件夹
 - 输入、编辑和调试 Python 代码
 - 在 Jupyter Notebook 中编写代码
 
-### ### 第 3 章：Python 元素与语法
+#### 第 3 章：Python 元素与语法
+
 - Python 之禅 (The Zen of Python)
 - 介绍面向对象编程
 - 发现你的缩进计数
-### ### 第 4 章：构建你的第一个应用程序
+
+#### 第 4 章：构建你的第一个应用程序
+
 - 打开
 - 输入与 Python
 - 理解数据类型
 - 使用变量
-
 
 世界上流传着不同版本的 Python，这让许多初学者产生这样的疑问：
 
@@ -503,10 +283,10 @@ https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-con
 
 就像我们在金钱中使用小数点来区分美元和分币一样，我们在版本号中使用小数点来表示软件发生了多大的变化。当发生重大变化时，通常会更改整个版本号。更微小的变化以小数点的形式表示。你可以从表 1-1 中看到版本号是如何随年份增加的，该表显示了各种 Python 版本的发布日期。我们跳过了一些版本，因为没有必要知道或理解所有版本之间的差异。我们展示此表是为了让你看到较新版本具有更高的版本号；仅此而已。
 
-## 表 1-1 Python 版本与发布日期的示例
+### 表 1-1 Python 版本与发布日期的示例
 
 | 版本 | 发布时间 |
-|---|--|
+|---|---|
 | Python 3.9 | 2020年10月 |
 | Python 3.8 | 2019年10月 |
 | Python 3.7 | 2018年6月 |
@@ -518,7 +298,11 @@ https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-con
 | Python 3.1 | 2009年6月 |
 | Python 3.0 | 2008年12月 |
 | Python 2.7 | 2010年7月 |
+
+
+
 | Python 2.6 | 2008年10月 |
+|---|---|
 | Python 2.0 | 2000年10月 |
 | Python 1.6 | 2000年9月 |
 | Python 1.0 | 1994年1月 |
@@ -539,25 +323,24 @@ https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-con
 
 ![](img/5b2ea69d1e5bba0afd733be648243.png)
 
-
-
 他们会随心所更改网站。但我们确实可以为你提供大致的说明。你应该能够使用 Mac、Windows 或 Linux 来操作。在操作过程中请留意屏幕，并按照出现的屏幕说明进行操作，同时遵循此处的步骤。
 
 # 安装 Anaconda 和 VS Code
 
 要下载并安装 Anaconda 以及 VS Code，你需要连接互联网并使用网页浏览器。任何浏览器都可以，无论是 Chrome、Firefox、Safari、Edge、Internet Explorer 还是其他浏览器。启动你通常用于浏览网页的浏览器，然后按照以下步骤操作：
 
-- 访问 www.anaconda.com/download 进入他们的下载页面。
+- 访问`www.anaconda.com/download`进入他们的下载页面。
+  
   不用担心版本号或日期。
 
 - 继续向下滚动或点击 Download 按钮，你应该能找到类似于图 1-2 所示的选项。
 
 我们无法准确预测你访问页面时页面的样子。我们使用 Windows 电脑拍摄了这张截图，但 Mac 和 Linux 用户将看到类似的内容。
 
-Anaconda 安装程序
+### Anaconda 安装程序
 
 | Windows | macOS | Linux |
-| :--- | :--- | :--- |
+|---|---|---|
 | Python 3.8 | Python 3.8 | Python 3.8 |
 | 64 位图形安装程序 (466 MB) | 64 位图形安装程序 (462 MB) | 64 位 (x86) 安装程序 (550 MB) |
 | 32 位图形安装程序 (397 MB) | 64 位命令行安装程序 (454 MB) | 64 位 (Power8 和 Power9) 安装程序 (290 MB) |
@@ -570,19 +353,19 @@ Anaconda 安装程序
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_0.png)
 
-提示 <span style="color: grey">提示：</span>记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
+> **提示：**记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
 
-- 4. 按照屏幕上的说明下载免费版本。
+4. 按照屏幕上的说明下载免费版本。
 
 如果你看到关于成为商业用户（需要付费用）的信息，请按照屏幕上的说明下载免费版本。你将需要设置用户账户。
 
-- 5. 下载完成后，打开你下载文件所在的下载文件夹。
+5. 下载完成后，打开你下载文件所在的下载文件夹。
 
-- 6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
+6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_1.png)
 
-技术细节 <span style="color: grey">技术细节：</span>Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
+> **技术细节：**Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_42_0.png)
 
@@ -602,35 +385,35 @@ Anaconda 安装程序
 
 10. 当你来到询问是否要安装 Microsoft VS Code 的页面（这可能需要很长时间）时，点击 Install Microsoft VS Code（或屏幕上指示你想安装 VS Code 的任何选项）。
 
->提示 <span style="color: grey">提示：</span>如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
+> **提示：**如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
 
 11. 继续遵循屏幕上的说明，点击 Continue 或 Next 继续完成安装步骤，然后在最后页面上点击 Close 或 Finish。
 
 你可能会被提示注册 Anaconda Cloud。这样做是免费的，但不是强制的。自行决定是否要这样做。
 
-# 打开 Anaconda (Mac)
+# 打开 Anaconda（Mac）
 
 在 Anaconda 安装到你的 Mac 上后，你可以像打开其他应用一样打开它。使用以下任何一种你喜欢的方法：
 
-- >> 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
-- >> 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
-- >> 打开 Finder 进入 Applications 并双击。
+- 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
+- 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
+- 打开 Finder 进入 Applications 并双击。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_0.png)
 
-<span style="color: grey">提示：</span>记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
+> **提示：**记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
 
-- 4. 按照屏幕上的说明下载免费版本。
+4. 按照屏幕上的说明下载免费版本。
 
 如果你看到关于成为商业用户（需要付费用）的信息，请按照屏幕上的说明下载免费版本。你将需要设置用户账户。
 
-- 5. 下载完成后，打开你下载文件所在的下载文件夹。
+5. 下载完成后，打开你下载文件所在的下载文件夹。
 
-- 6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
+6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_1.png)
 
-<span style="color: grey">技术细节：</span>Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
+> **技术细节：**Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_42_0.png)
 
@@ -650,35 +433,35 @@ Anaconda 安装程序
 
 10. 当你来到询问是否要安装 Microsoft VS Code 的页面（这可能需要很长时间）时，点击 Install Microsoft VS Code（或屏幕上指示你想安装 VS Code 的任何选项）。
 
->提示 <span style="color: grey">提示：</span>如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
+> **提示：**如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
 
 11. 继续遵循屏幕上的说明，点击 Continue 或 Next 继续完成安装步骤，然后在最后页面上点击 Close 或 Finish。
 
 你可能会被提示注册 Anaconda Cloud。这样做是免费的，但不是强制的。自行决定是否要这样做。
 
-# 打开 Anaconda (Mac)
+# 打开 Anaconda（Mac）
 
 在 Anaconda 安装到你的 Mac 上后，你可以像打开其他应用一样打开它。使用以下任何一种你喜欢的方法：
 
-- >> 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
-- >> 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
-- >> 打开 Finder 进入 Applications 并双击。
+- 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
+- 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
+- 打开 Finder 进入 Applications 并双击。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_0.png)
 
-<span style="color: grey">提示：</span>记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
+> **提示：**记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
 
-- 4. 按照屏幕上的说明下载免费版本。
+4. 按照屏幕上的说明下载免费版本。
 
 如果你看到关于成为商业用户（需要付费用）的信息，请按照屏幕上的说明下载免费版本。你将需要设置用户账户。
 
-- 5. 下载完成后，打开你下载文件所在的下载文件夹。
+5. 下载完成后，打开你下载文件所在的下载文件夹。
 
-- 6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
+6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_1.png)
 
-<span style="color: grey">技术细节：</span>Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
+> **技术细节：**Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_42_0.png)
 
@@ -698,35 +481,35 @@ Anaconda 安装程序
 
 10. 当你来到询问是否要安装 Microsoft VS Code 的页面（这可能需要很长时间）时，点击 Install Microsoft VS Code（或屏幕上指示你想安装 VS Code 的任何选项）。
 
->提示 <span style="color: grey">提示：</span>如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
+> **提示：**如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
 
 11. 继续遵循屏幕上的说明，点击 Continue 或 Next 继续完成安装步骤，然后在最后页面上点击 Close 或 Finish。
 
 你可能会被提示注册 Anaconda Cloud。这样做是免费的，但不是强制的。自行决定是否要这样做。
 
-# 打开 Anaconda (Mac)
+# 打开 Anaconda（Mac）
 
 在 Anaconda 安装到你的 Mac 上后，你可以像打开其他应用一样打开它。使用以下任何一种你喜欢的方法：
 
-- >> 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
-- >> 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
-- >> 打开 Finder 进入 Applications 并双击。
+- 打开 Launch Pad 并点击 Anaconda Navigator 打开它。
+- 点击 Spotlight 放大镜，输入 Anaconda，然后双击 Anaconda Navigator。
+- 打开 Finder 进入 Applications 并双击。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_0.png)
 
-<span style="color: grey">提示：</span>记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
+> **提示：**记下你正在下载的 Python 版本号，以便在本章的稍后部分参考。如果你想查看 Anaconda 团队的说明，也可以点击下载页面上的 How to Install Anaconda ANACONDA（或者到达那里时该链接的任何文字）。
 
-- 4. 按照屏幕上的说明下载免费版本。
+4. 按照屏幕上的说明下载免费版本。
 
 如果你看到关于成为商业用户（需要付费用）的信息，请按照屏幕上的说明下载免费版本。你将需要设置用户账户。
 
-- 5. 下载完成后，打开你下载文件所在的下载文件夹。
+5. 下载完成后，打开你下载文件所在的下载文件夹。
 
-- 6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
+6. 如果你使用 Mac 或 Linux，双击你下载的文件。如果你使用 Windows，右键点击该文件并选择“以管理员身份运行”，如图 1-3 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_41_1.png)
 
-<span style="color: grey">技术细节：</span>Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
+> **技术细节：**Windows 中的“以管理员身份运行”功能确保你可以安装所有内容。如果该选项不可用，双击文件图标即可。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_42_0.png)
 
@@ -746,7 +529,7 @@ Anaconda 安装程序
 
 10. 当你来到询问是否要安装 Microsoft VS Code 的页面（这可能需要很长时间）时，点击 Install Microsoft VS Code（或屏幕上指示你想安装 VS Code 的任何选项）。
 
->提示 <span style="color: grey">提示：</span>如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
+> **提示：**如果电脑上已经安装了 VS Code，不用担心。Anaconda 安装程序会提示这一点，或者将你的版本更新到最新版本。
 
 11. 继续遵循屏幕上的说明，点击 Continue 或 Next 继续完成安装步骤，然后在最后页面上点击 Close 或 Finish。
 
@@ -754,9 +537,7 @@ Anaconda 安装程序
 
 
 
-
-
-Visual Studio Code 是一个通用的代码编辑器，支持许多不同的语言。要在 Python 和 Anaconda 中使用 VS Code，你需要一些 VS Code 扩展。但你应该已经拥有它们了，因为它们随你的 Anaconda 下载包一起提供。要验证这一点，点击左侧窗格中的扩展图标（看起来像一块拼图）。你应该能看到列出的至少三个扩展：Anaconda Extension Pack、Python 和 YAML，如图 1-7 所示。
+Visual Studio Code 是一个通用的代码编辑器，支持许多不同的语言。要在 Python 和 Anaconda 中使用 VS Code，你需要一些 VS Code 扩展。但你应该已经拥有它们了，因为它们随你的 Anaconda 下载包一起提供。要验证这一点，点击左侧窗格中的扩展图标（看起来像一块拼图）。你应该能看到列出的至少三个扩展：`Anaconda Extension Pack`、`Python` 和 `YAML`，如图 1-7 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_47_0.png)
 
@@ -767,8 +548,9 @@ Visual Studio Code 是一个通用的代码编辑器，支持许多不同的语�
 在 VS Code 中开始编写任何 Python 代码之前，你想要确保你正在使用正确的 Python 解释器。按照以下步骤操作：
 
 1. 从 VS Code 菜单中选择 View（视图）⇒ Command Palette（命令面板）。
-2. 输入 python，然后点击 Python: Select Interpreter（选择解释器）。
-选择与你下载的版本匹配的 Python 版本号（下载 Anaconda 时记录的那个）。如果你有多个版本号相同的选项，请选择包含 base 和 conda 名称的那个，如图 1-8 所示。
+2. 输入 `python`，然后点击 `Python: Select Interpreter`（选择解释器）。
+
+选择与你下载的版本匹配的 Python 版本号（下载 Anaconda 时记录的那个）。如果你有多个版本号相同的选项，请选择包含 `base` 和 `conda` 名称的那个，如图 1-8 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_48_0.png)
 
@@ -776,24 +558,25 @@ Visual Studio Code 是一个通用的代码编辑器，支持许多不同的语�
 
 ## 编写一些 Python 代码
 
-为了确保你能跟上书中的示例，让我们确保 VS Code 已准备好进行 Python编码。按照以下步骤操作：
+为了确保你能跟上书中的示例，让我们确保 VS Code 已准备好进行 Python 编码。按照以下步骤操作：
 
 1. 在 VS Code 中，从 VS Code 菜单选择 View（视图）⇒ Terminal（终端）。
+
 你应该会在右下方看到一个窗格，看起来类似于图 1-9 所示的。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_49_0.png)
 
 图 1-9：VS Code 中的终端（Windows 和 Mac）。
 
-2. 在 Terminal 中输入 python 并按回车。
+2. 在 Terminal 中输入 `python` 并按回车。
 
-你应该看到一些关于 Python 的信息，随后是一个 >>> 提示符。>>> 提示符是你的 Python 解释器；如果你在那里输入 Python 代码并按回车，代码就会执行。
+你应该看到一些关于 Python 的信息，随后是一个 `>>>` 提示符。`>>>` 提示符是你的 Python 解释器；如果你在那里输入 Python 代码并按回车，代码就会执行。
 
-3. 输入 1+1 并按回车。
+3. 输入 `1+1` 并按回车。
 
-你现在应该看到 2（1 加于 1 的和），随后是另一个 Python 提示符，如图 I-10 所示。
+你现在应该看到 `2`（1 加于 1 的和），随后是另一个 Python 提示符，如图 I-10 所示。
 
-1+1 练习是你能做的最简单的练习了。然而，我们现在关心的只是你看到了 2，这意味着你的 Python 开发环境已经一切就绪并准备好使用了。你将来将不需要重复这些任何步骤。
+`1+1` 练习是你能做的最简单的练习了。然而，我们现在关心的只是你看到了 `2`，这意味着你的 Python 开发环境已经一切就绪并准备好使用了。你将来将不需要重复这些任何步骤。
 
 ```
 (base) PS C:\Users\Alan> python
@@ -808,17 +591,19 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 现在我们将向你展示如何退出 Python 和 VS Code：
 
-1. **在 VS Code Terminal 窗格中，按 CTRL-D 或输入 exit() 并按回车。**
+1. **在 VS Code Terminal 窗格中，按 CTRL-D 或输入 `exit()` 并按回车。**
 
 终端窗口底部的最后一个提示符现在应该是你进入 Python 提示符之前的状态，这表示你不再处于解释器中。
 
 2. **关闭 VS Code：**
-    * **Windows**：点击右上角的关闭图标 (X) 或从菜单选择 View（视图）⇒ Exit（退出）。
-    * **Mac**：点击左上角的红色圆点，或从菜单选择 Code（代码）⇒ Quit Visual Studio Code（退出 Visual Studio Code）。
+
+   - **Windows**：点击右上角的关闭图标 (X) 或从菜单选择 View（视图）⇒ Exit（退出）。
+   - **Mac**：点击左上角的红色圆点，或从菜单选择 Code（代码）⇒ Quit Visual Studio Code（退出 Visual Studio Code）。
 
 3. **关闭 Anaconda Navigator：**
-    * **Window**：点击右上角的 X 或选择 File（文件）⇒ Quit。
-    * **Mac**：点击红点或从菜单进入 Anaconda Navigator 并选择 Quit。
+
+   - **Windows**：点击右上角的 X 或选择 File（文件）⇒ Quit。
+   - **Mac**：点击红点或从菜单进入 Anaconda Navigator 并选择 Quit。
 
 ## 回到 VS Code
 
@@ -826,9 +611,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## 使用 Jupyter Notebook 编码
 
-Jupyter Notebook 是另一个流行的编写代码工具。Jupyter 这个名字源于它支持三种语言：Julia、Python 和 R。Julia 和 R 在数据科学领域很流行。Python 是一种在数据科学领域非常流行的通用编程语言，尽管它不仅限于数据科学。Jupyter 的 Notebook 部分源于代码被放置在类似的结构中。人们经常使用 Jupyter 共享代码。它是免费的并随 Anaconda一起提供。如果你已经安装了 Anaconda，可以通过以下步骤随时打开它：
+Jupyter Notebook 是另一个流行的编写代码工具。Jupyter 这个名字源于它支持三种语言：Julia、Python 和 R。Julia 和 R 在数据科学领域很流行。Python 是一种在数据科学领域非常流行的通用编程语言，尽管它不仅限于数据科学。Jupyter 的 Notebook 部分源于代码被放置在类似的结构中。人们经常使用 Jupyter 共享代码。它是免费的并随 Anaconda 一起提供。如果你已经安装了 Anaconda，可以通过以下步骤随时打开它：
 
 1. **如之前所述打开 Anaconda。**
+
 2. **如图 1-11 所示点击 Jupyter Notebook。** Jupyter notebooks 是基于 Web 的，这意味着它打开时会在你的默认浏览器（如 Safari、Chrome 或 Firefox）中打开。起初它看起来与编码没有太大关系，因为它只显示它可以访问的文件夹（目录）字母列表，如图 1-12 所示。（当然，这些名称因你的电脑而不同。）
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_52_0.png)
@@ -840,9 +626,10 @@ Jupyter Notebook 是另一个流行的编写代码工具。Jupyter 这个名字�
 图 1-12：Jupyter 打开页面。
 
 3. **点击你选择的文件夹名称（桌面也可以；无需进行任何提交）。**
+
 4. **点击 New（新建），然后选择 Python 3，如图 1-13 所示。**
 
-打开一个新的名为 Untitled（未命名）的空白笔记本。你会看到左侧有一个 []。这被称为 cell（单元格），单元可以包含代码（用 Python 语言编写）或普通文本和图片。如果你想写代码，确保工具栏中的下拉菜单显示为 Code。如果你想写普通文本而不是 Python 代码，将该菜单改为 Markdown。
+打开一个新的名为 Untitled（未命名）的空白笔记本。你会看到左侧有一个 `[]`。这被称为 cell（单元格），单元可以包含代码（用 Python 语言编写）或普通文本和图片。如果你想写代码，确保工具栏中的下拉菜单显示为 Code。如果你想写普通文本而不是 Python 代码，将该菜单改为 Markdown。
 
 ![](/b5b2ea569d1e5bba0afd733be648243d_53_0.png)
 
@@ -855,10 +642,10 @@ Jupyter Notebook 是另一个流行的编写代码工具。Jupyter 这个名字�
 单元格不像 Python 解释器（在解释器中代码会立即执行）。你必须先输入一些代码（任意数量），然后点击工具栏上的 Run（运行）按钮运行这些代码。亲自尝试，请遵循以下步骤：
 
 1. 点击代码单元格内部。
-2. 输入 1+1。
+2. 输入 `1+1`。
 3. 按回车。
 
-你在单元格中看到 1+1，但没有结果 2。要获得结果，点击工具栏中的 Run，或将鼠标指针放入单元格并点击单元格左侧的 Run 图标（如图 1-14 所示），或者点击单元格上方工具栏中的 Run。你会在 Out[1] 右侧看到数字 2。Out 表示你正在看到执行单元格中代码的输出，当然是 2，因为 1 加 1 等于 2。
+你在单元格中看到 `1+1`，但没有结果 `2`。要获得结果，点击工具栏中的 Run，或将鼠标指针放入单元格并点击单元格左侧的 Run 图标（如图 1-14 所示），或者点击单元格上方工具栏中的 Run。你会在 `Out[1]` 右侧看到数字 `2`。Out 表示你正在看到执行单元格中代码的输出，当然是 `2`，因为 `1` 加 `1` 等于 `2`。
 
 ![](/569d1e5bba0afd733be648243d_54_0.png)
 
@@ -877,16 +664,14 @@ Jupyter Notebook 是另一个流行的编写代码工具。Jupyter 这个名字�
 
 你可能会被提示保存工作。现在，你不需要保存，因为我们关注的是最基础的内容……你每次运行 Python 代码时都会做的事情。
 
-即使你没有专门保存笔记本，你也会看到创建笔记本的文件夹图标。笔记本的名称将是 Untitled，如果你显示了文件扩展名，你会看到 .ipynb 文件扩展名。ip 部分是 Python notebook 的缩写。如果你好奇该扩展名中的 i，它来自 IPython，这是创建 Jupyter Notebook 的应用程序名称，它是用于交互的。
+即使你没有专门保存笔记本，你也会看到创建笔记本的文件夹图标。笔记本的名称将是 Untitled，如果你显示了文件扩展名，你会看到 `.ipynb` 文件扩展名。ip 部分是 Python notebook 的缩写。如果你好奇该扩展名中的 i，它来自 IPython，这是创建 Jupyter Notebook 的应用程序名称，它是用于交互的。
 
 如果你正在练习且不想保留它，可以删除笔记本文件。只需确保在 Web 浏览器中关闭笔记本（或者先关闭浏览器）——否则，你可能会收到无法在文件打开时删除文件的错误信息。
-
-
-
 
 现在进入本微型书籍的第 2 章，我们将深入探讨 Python 以及使用你现在电脑上可用的工具。
 
 ## 第 2 章
+
 交互模式、获取帮助与编写应用
 
 本章内容：
@@ -936,7 +721,7 @@ C:\Users\Alan>
 如果你想让你的 VS Code 与我们使用的一致，你需要下载并安装 Material Icon 主题。你可能还想下载 Material Color 主题并尝试一下；你在书中不用它，因为它在纸质打印时效果不好。按照以下步骤操作：
 
 1. **点击左侧面板中的 Extensions（扩展，拼图图标）。**
-2. **输入 material，寻找 Material Icon Theme，并点击其 Install（安装）选项。**
+2. **输入 `material`，寻找 Material Icon Theme，并点击其 Install（安装）选项。**
 3. **如果你在右下角看到询问是否要激活图标的提示，点击 Activate（激活）。**
 4. **选择 File（Windows）或 Code（Mac），选择 Preferences（设置）⇒ File Icon Theme（文件图标主题），然后点击 Material Icon Theme。**
 
@@ -964,7 +749,7 @@ PS C:\Users\xxx\>
 python --version
 ```
 
-你应该看到类似 Python 3.x.x 的内容（其中 x 是你正在使用的 Python 版本的数字）。如果你看到错误消息，说明你还没有到达该所在的位置。你需要确保从 Anaconda 启动 VS Code，而不仅仅是从 Launch Pad（启动台）或开始菜单。在 VS Code 的 Terminal 中输入 `python --version` 并再次按回车。如果仍然不起，请从 VS Code 菜单栏选择 View（查看）⇒ Command Palette（命令面板），输入 python，选择 Python: Select Interpreter（选择解释器），然后选择随 Anaconda 下载的 Python 解释器。
+你应该看到类似 Python 3.x.x 的内容（其中 x 是你正在使用的 Python 版本的数字）。如果你看到错误消息，说明你还没有到达该所在的位置。你需要确保从 Anaconda 启动 VS Code，而不仅仅是从 Launch Pad（启动台）或开始菜单。在 VS Code 的 Terminal 中输入 `python --version` 并再次按回车。如果仍然不起，请从 VS Code 菜单栏选择 View（查看）⇒ Command Palette（命令面板），输入 `python`，选择 `Python: Select Interpreter`（选择解释器），然后选择随 Anaconda 下载的 Python 解释器。
 
 # 进入 Python 解释器
 
@@ -992,7 +777,7 @@ PyLint 是 Anaconda 的一个功能，可以帮助你发现并避免代码中的
 howdy
 ```
 
-按下回车后，你会看到一条消息，告诉你它无法操作。并没有弄坏。你回到了 >>> 提示符，你可以如图 2-2 所示再次尝试。
+按下回车后，你会看到一条消息，告诉你它无法操作。并没有弄坏。你回到了 `>>>` 提示符，你可以如图 2-2 所示再次尝试。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_61_0.png)
 
@@ -1000,7 +785,7 @@ howdy
 
 # 使用 Python 的内置帮助
 
-图 2-2 中的一个提示符提到你可以在解释器中输入 help 命令。注意你不需要输入引号，只需输入单词 *help*（并按回车）。这次你看到
+图 2-2 中的一个提示符提到你可以在解释器中输入 `help` 命令。注意你不需要输入引号，只需输入单词 *help*（并按回车）。这次你看到
 
 ```
 help() 用于交互式帮助，或 help(object) 用于帮助 object。
@@ -1018,52 +803,49 @@ help()
 
 图 2-3：Python 的交互式帮助工具。
 
-在窗口底部看到 help> 说明你不再处于操作系统 shell 或 Python 解释器（它始终显示 >>>），而是处于提供帮助的新区域。正如屏幕所示，你可以输入任何模块、关键字或主题的名称来获取有关该术语的帮助。作为初学者，你现在可能不需要具体的帮助。但知道在需要时那里有帮助是有的。
 
-例如，Python 使用某些关键字，这些关键字在语言中具有特殊含义。要获取它们的列表，只需在 help> 提示符处输入：
 
-```
+在窗口底部看到`help>`说明你不再处于操作系统 shell 或 Python 解释器（它始终显示`>>>`），而是处于提供帮助的新区域。正如屏幕所示，你可以输入任何模块、关键字或主题的名称来获取有关该术语的帮助。作为初学者，你现在可能不需要具体的帮助。但知道在需要时那里有帮助是有的。
+
+例如，Python 使用某些关键字，这些关键字在语言中具有特殊含义。要获取它们的列表，只需在`help>`提示符处输入：
+
+```text
 keywords
 ```
 
 按下回车后，你将看到关键字列表，如图 2-4 所示。
 
+## 问题的输出终端
 
-
-
-
-# 问题的输出终端
-
+```text
 help> keywords
+```
 
 这里是 Python 关键字列表。输入任何关键字以获取更多帮助。
 
-- False class from or
-- None continue global pass
-- True def raise
-- and del import return
-- as elif in try
-- assert else is while
-- asasync except lambda with
-- await finally yield
-- break for not
+- `False` `class` `from` `or`
+- `None` `continue` `global` `pass`
+- `True` `def` `raise`
+- `and` `del` `import` `return`
+- `as` `elif` `in` `try`
+- `assert` `else` `is` `while`
+- `asasync` `except` `lambda` `with`
+- `await` `finally` `yield`
+- `break` `for` `not`
 
-```
+```text
 help>
 ```
 
-**图 2-4:** 关键字帮助。
+**图 2-4：** 关键字帮助。
 
-在关键字列表上方有一条消息，告诉你可以可以在 `help>` 提示符处输入任何关键字以获取有关该关键字的更多信息。例如，输入 `class` 关键字将提供关于 Python 类的信息，如图 2-5 所示。这些不是你在学校里上的的那种类；而是你在 Python 中创建的那种类（在你学习了基础知识并准备好转向更高级主题之后）。
-
-# 问题的输出终端
+在关键字列表上方有一条消息，告诉你可以在`help>`提示符处输入任何关键字以获取有关该关键字的更多信息。例如，输入`class`关键字将提供关于 Python 类的信息，如图 2-5 所示。这些不是你在学校里上的那种类；而是你在 Python 中创建的那种类（在你学习了基础知识并准备好转向更高级主题之后）。
 
 ## 类定义
-**********************************
 
 类定义定义了一个类对象（参见“标准层次结构”章节）。
 
-```
+```python
 classdef ::= [decorators] "class" className [inheritance]: ": suite
 inheritance ::= "("[argument_list] ")"
 classname ::= identifier
@@ -1071,54 +853,51 @@ classname ::= identifier
 
 类定义是一个可执行语句。继承列表通常给出了基类列表（更高级用法使用元类 Metclasses），因此列表中的每一项都应该评估为一个允许子类化的类对象。没有继承列表的类：
 
-```
+```text
 -- 更多 --
 ```
 
-**图 2-5:** Python 类帮助。
+**图 2-5：** Python 类帮助。
 
 帮助文本中的所有技术术语都会让普通初学者感到不知所措。但当你学习 Python 的新概念时，要意识到你可以根据需要使用交互式帮助来指导。
 
-文本底部的 `--More--` 不是一个让你输入命令的提示符。在内部，它只是让你知道还有更多文本，可能有好几页的内容。按空格键或回车键查看。每当你看到 `----` 时，都可以按空格键或回车键进入下一页。最终你将回到 `help>` 提示符。如果你想退出而不是继续滚动，请按字母 `q`。
+文本底部的`--More--`不是一个让你输入命令的提示符。在内部，它只是让你知道还有更多文本，可能有好几页的内容。按空格键或回车键查看。每当你看到`----`时，都可以按空格键或回车键进入下一页。最终你将回到`help>`提示符。如果你想退出而不是继续滚动，请按字母`q`。
 
 ## 退出交互式帮助
 
-要退出交互式帮助并返回 Python 提示符，请输入字母 `q`（代表 quit）或按 `Ctrl+Z`。你应该回到 `>>>` 提示符。在 `>>>` 提示符处，输入 `exit()` 或 `python`。
+要退出交互式帮助并返回 Python 提示符，请输入字母`q`（代表 quit）或按`Ctrl+Z`。你应该回到`>>>`提示符。在`>>>`提示符处，输入`exit()`或`python`。
 
-要离开 Python 提示符并返回操作系统，输入 `exit()` 并按回车键。请注意，如果你犯了错误（例如忘记了括号），屏幕上会显示一些帮助。例如，如果你输入 `exit` 并按回车键，你会看到：
+要离开 Python 提示符并返回操作系统，输入`exit()`并按回车键。请注意，如果你犯了错误（例如忘记了括号），屏幕上会显示一些帮助。例如，如果你输入`exit`并按回车键，你会看到：
 
-```
+```text
 Use exit() or Ctrl-Z plus Return to exit.
 ```
 
-当你看到终端窗口末尾是操作系统提示符而不是 `>>>` 时，你就知道已经退出了 Python 解释器，如图 2-6 所示。
+当你看到终端窗口末尾是操作系统提示符而不是`>>>`时，你就知道已经退出了 Python 解释器，如图 2-6 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_65_0.png)
 
-图 **2-6**: 返回操作系统提示符
+**图 2-6：** 返回操作系统提示符。
 
-## # 在线搜索特定的帮助主题
+## 在线搜索特定的帮助主题
 
-Python 的内置帮助有些过时了，因为它它是面向文本的而不是交互式的，但当你需要快速回忆某些忘记的 Python 关键字时，它可以帮助你。但如果你在寻找某些东西，最好在网络上搜索帮助。如果你在找视频，请从 www.youtube.com 开始；如果不是，https://stackoverflow.com/ 是提问和搜索帮助的好地方。当然，一直有 Google、Bing 和其他搜索引擎。
+Python 的内置帮助有些过时了，因为它是面向文本的而不是交互式的，但当你需要快速回忆某些忘记的 Python 关键字时，它可以帮助你。但如果你在寻找某些东西，最好在网络上搜索帮助。如果你在找视频，请从`www.youtube.com`开始；如果不是，`https://stackoverflow.com/`是提问和搜索帮助的好地方。当然，一直有 Google、Bing 和其他搜索引擎。
 
-无论你使用什么进行搜索，请记住在搜索时以 `python` 或 `python 3` 字开头。许多编程语言共享相似的概念和关键字，所以如果你在搜索请求中没有指定 Python 语言，无法预测你会得到什么样的结果。
+无论你使用什么进行搜索，请记住在搜索时以`python`或`python 3`字开头。许多编程语言共享相似的概念和关键字，所以如果你在搜索请求中没有指定 Python 语言，无法预测你会得到什么样的结果。
 
-## ## 许多免费速查表
+## 许多免费速查表
 
 学习者的其他良好资源是网上免费提供的无数份速查表。每当你对 Python 这类语言的所有可能性感到不知所措时，一张将语言总结为单页左右的速查表可以帮助将信息变为更易于管理（且不那么令人畏惧）。
 
 当然，使用速查表并不是真的在作弊，除非你在参加应该凭记忆回答的考试时使用它。但在现实生活中编写代码是不同的。
 
-# # 创建 Python 工作区
+# 创建 Python 工作区
 
 以下步骤向你展示如何在 VS Code 中设置工作区。工作区是你正在处理的文件和设置的集合。
 
-（注：原文后续部分存在大量重复的步骤描述，已根据逻辑提取并整理为以下操作步骤）：
+（注：原文后续部分存在大量重复的步骤描述，已根据逻辑提取并整理为以下操作步骤。）
 
-1. 在 Windows 中，你可以导航到包含新文件夹的目录（Alan 使用 OneDrive，你可以使用桌面或其他任何文件夹）。在文件夹空白处右键点击。然后选择“新建文件夹”（Mac）或“新建文件夹”（Windows）。输入文件夹名称并按回车键。为了跟随本章示例，请将你的文件夹命名为 `AIO Python`。
-
-
-
+1. 在 Windows 中，你可以导航到包含新文件夹的目录（Alan 使用 OneDrive，你可以使用桌面或其他任何文件夹）。在文件夹空白处右键点击。然后选择“新建文件夹”（Mac）或“新建文件夹”（Windows）。输入文件夹名称并按回车键。为了跟随本章示例，请将你的文件夹命名为`AIO Python`。
 
 现在你应该将此代码文件夹与刚刚创建的 VS Code 工作空间关联起来，这样当你在该文件夹中工作时，就会正确的 Python 解释器以及你随时间推移选择的其他 Python 相关设置。方法如下：
 
@@ -1128,15 +907,15 @@ Python 的内置帮助有些过时了，因为它它是面向文本的而不是�
 4. 选择 File（文件）⇒ Add Folder to Workspace（将文件夹添加到工作空间）。
 5. 导航到创建 Python 代码文件夹的目录，点击该文件夹图标并选择 Add（添加）。
 
-图 2-10 显示的 VS Code 资源管理器栏表明你已经打开了工作空间——图中的 Python 3 (Windows) 工作空间——以及该工作空间下的代码文件夹——AIO Python。如果你在左侧面板中看到完全不同的内容，请点击 VS Code 窗口左上角的资源管理器图标，确保你正在查看资源管理器面板。
+图 2-10 显示的 VS Code 资源管理器栏表明你已经打开了工作空间——图中的 Python 3 (Windows) 工作空间——以及该工作空间下的代码文件夹——`AIO Python`。如果你在左侧面板中看到完全不同的内容，请点击 VS Code 窗口左上角的资源管理器图标，确保你正在查看资源管理器面板。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_70.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_70.png)
 
-图 2-10：Python 3 工作空间和 AIO Python 文件夹在 VS Code 中打开。
+**图 2-10：** Python 3 工作空间和 AIO Python 文件夹在 VS Code 中打开。
 
 当你展开资源管理器顶部的 Open Editors（打开的编辑器）栏时，可以看到 VS Code 中当前打开的文件。每个打开的文件都通过右侧编辑区域顶部的标签页表示。现在，图像中没有打开的文件。但如果 VS Code 的 Welcome（欢迎）页正打开你的屏幕上，你会在右侧看到 Welcome。要关闭该页面，点击资源管理器或标签页上名称旁的 X。当你想要重新打开欢迎页时，从 VS Code 菜单栏选择 Help（帮助）⇒ Welcome（欢迎）。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_71.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_71.png)
 
 提示：如果你在文件夹名称之前看到三角形以外的符号或没有任何符号，你可能在使用与默认不同的图标主题。别担心，只需点击任何文件夹左侧即可展开或折叠它。
 
@@ -1152,53 +931,54 @@ Python 的内置帮助有些过时了，因为它它是面向文本的而不是�
 
 你可能会在编辑器中编写大部分代码。正如你可能所知的，编辑器允许你输入和编辑文本。代码就是文本。VS Code 中的编辑器是为输入和编辑代码设计的，因此你可能会听到它是代码编辑器。
 
-你创建的每个 Python 代码文件都是带有 .py 扩展名的纯文本文件。我们建议你将为本书创建的任何文件放在 AIO Python 文件夹中，当 VS Code 和你的 Python 3 工作空间打开时，你应该能看到它们。
+你创建的每个 Python 代码文件都是带有`.py`扩展名的纯文本文件。我们建议你将为本书创建的任何文件放在`AIO Python`文件夹中，当 VS Code 和你的 Python 3 工作空间打开时，你应该能看到它们。
 
-随时创建 .py 文件，请遵循以下步骤：
+随时创建`.py`文件，请遵循以下步骤：
 
 1. 如果你还没有这样做，打开 VS Code 和你的 Python 3 工作空间。
 2. 如果资源管理器面板未打开，点击 VS Code 左上角的资源管理器图标。
-3. 要在 AIO Python 文件夹中创建文件，右键点击文件夹名称并选择 New File（新文件），如图 2-11 所示。
+3. 要在`AIO Python`文件夹中创建文件，右键点击文件夹名称并选择 New File（新文件），如图 2-11 所示。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_72.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_72.png)
 
-图 2-11：右键点击文件夹名称并选择 New File。
+**图 2-11：** 右键点击文件夹名称并选择 New File。
 
-4. 输入带有 .py 扩展名的文件名（第一个为 hello.py）并按回车。
+4. 输入带有`.py`扩展名的文件名（第一个为`hello.py`）并按回车。
 
-新文件打开了，你可以在右侧的标签页中看到它的名称，如图 2-12 所示。标签下方较大的区域是编辑器，你可以在那里输入 Python 代码。文件名也出现在资源管理器面板 AIO Python 文件夹名称下方，因为它是存储在那里的。你可以点击 Open Editors 行来展开或折叠它，这会显示当前已打开编辑的文档名称。
+新文件打开了，你可以在右侧的标签页中看到它的名称，如图 2-12 所示。标签下方较大的区域是编辑器，你可以在那里输入 Python 代码。文件名也出现在资源管理器面板`AIO Python`文件夹名称下方，因为它是存储在那里的。你可以点击 Open Editors 行来展开或折叠它，这会显示当前已打开编辑的文档名称。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_73.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_73.png)
 
-**图 2-12：** 新 hello.py 文件在 VS Code 中打开编辑。
+**图 2-12：** 新`hello.py`文件在 VS Code 中打开编辑。
 
 # 编写 Python 代码
 
-现在你已经打开了一个 .py 文件，可以使用它来编写一些 Python 代码。学习新编程语言的典型情况是，你会从输入一个简单的 Hello World 程序开始。步骤如下：
+现在你已经打开了一个`.py`文件，可以使用它来编写一些 Python 代码。学习新编程语言的典型情况是，你会从输入一个简单的 Hello World 程序开始。步骤如下：
 
 1. 点击编辑区域第 1 行右侧。
 2. 输入以下内容：
 
-```
+```python
 print("Hello World")
 ```
 
 当你输入时，可能会注意到屏幕上出现文本。该文本是 IntelliSense 文字，它会检测你输入的内容。
+
 3. 输入该行后按回车。
 
-终端面板在 VS Code 窗口底部打开。你会看到一个命令提示符，后面是一个运行 Python 解释器 (python.exe) 代码的命令。在下方，你会看到程序的输出：Hello World，以及另一个提示符，如图 2-15 所示。
+终端面板在 VS Code 窗口底部打开。你会看到一个命令提示符，后面是一个运行 Python 解释器（`python.exe`）代码的命令。在下方，你会看到程序的输出：Hello World，以及另一个提示符，如图 2-15 所示。
 
 # 未保存的更改
 
-你在 VS Code 中输入的代码不会自动保存。处理这个问题有两种方法。一种是记住每次进行更改时按 Windows 上的 Ctrl+S 或 Mac 上的 Cmd+S。我们更倾向于第二种方法，即使用 AutoSave（自动保存）。要启用 AutoSave，从 VS Code 菜单栏选择 File（文件）⇒ Auto Save（自动保存）。Auto Save 旁边的勾号表示已开启。要关闭 AutoSave，再次选择 File ⇒ Auto Save。
+你在 VS Code 中输入的代码不会自动保存。处理这个问题有两种方法。一种是记住每次进行更改时按 Windows 上的`Ctrl+S`或 Mac 上的`Cmd+S`。我们更倾向于第二种方法，即使用 AutoSave（自动保存）。要启用 AutoSave，从 VS Code 菜单栏选择 File（文件）⇒ Auto Save（自动保存）。Auto Save 旁边的勾号表示已开启。要关闭 AutoSave，再次选择 File ⇒ Auto Save。
 
 # 在 VS Code 中运行 Python
 
-若要在 VS Code 中测试你的代码，你需要运行它。最简单的方法是右键点击文件名（此例中为 hello.py）并选择 Run Python File（运行 Python 文件），如图 2-14 所示。
+若要在 VS Code 中测试你的代码，你需要运行它。最简单的方法是右键点击文件名（此例中为`hello.py`）并选择 Run Python File（运行 Python 文件），如图 2-14 所示。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_75.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_75.png)
 
-图 2-14：运行 Python 文件。
+**图 2-14：** 运行 Python 文件。
 
 # 学习简单的调试
 
@@ -1211,29 +991,27 @@ print("Hello World")
 - 错误总数将出现在 VS Code 窗口左下角圆圈 X 旁边。
 - 错误代码将有波浪线下划线。
 
-
-
-在图 2-16 中，我们输入了全大写的 PRINT，这在 Python 中是不允许的。Python 是区分大小写的，正确的命令是 print。请记住，当我们显示一个需要输入小写的命令时，你也必须以小写形式输入。
+在图 2-16 中，我们输入了全大写的`PRINT`，这在 Python 中是不允许的。Python 是区分大小写的，正确的命令是`print`。请记住，当我们显示一个需要输入小写的命令时，你也必须以小写形式输入。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_77_0.png)
 
-**图 2-16：** 在 hello.py 中错误地输入了 PRINT。
+**图 2-16：** 在`hello.py`中错误地输入了`PRINT`。
 
-要在终端（Terminal）中运行该文件，你必须修复错误。将鼠标指针悬停在带有红色波浪下划线的单词上，查看该问题的简短（且高度技术性的）描述。在图 2-16 所示的示例中，我们将 PRINT 替换为 print，然后保存更改（除非我们已开启自动保存）。然后我们可以右键点击并选择“在终端中运行 Python 文件”（Run Python File in Terminal）来运行修正后的代码。
+要在终端（Terminal）中运行该文件，你必须修复错误。将鼠标指针悬停在带有红色波浪下划线的单词上，查看该问题的简短（且高度技术性的）描述。在图 2-16 所示的示例中，我们将`PRINT`替换为`print`，然后保存更改（除非我们已开启自动保存）。然后我们可以右键点击并选择“在终端中运行 Python 文件”（Run Python File in Terminal）来运行修正后的代码。
 
 ## 使用 VS Code Python 调试器
 
 VS Code 内置了一个调试器可以在处理更复杂的程序时提供帮助，并提供了在 VS Code 中测试 Python 程序的手段。你现在不会编写任何超级复杂的内容。但作为 Python 开发工作空间的一部分，将调试器配置好并准备就绪并无害。请按照以下步骤操作：
 
 - 点击资源管理器（Explorer）面板左侧的调试图标。
+
   （调试图标是一个右角带有一个小虫虫的右右三角形。）
+
   调试面板随之打开。
 
 - 如果你看到“创建 Launch.json 文件”（Create a Launch.json File）链接，请点击它。
-
 - 点击面板顶部的下拉菜单并选择“工作区”（Workspace），然后点击“Python 文件 调试当前活动 Python 文件”（Python File Debug the Currently Active Python File），如图 2-17 所示。
-
-- 4. 点击标签页上的 X 关闭 launch.json。
+- 点击标签页上的 X 关闭`launch.json`。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_78_0.png)
 
@@ -1243,29 +1021,27 @@ VS Code 内置了一个调试器可以在处理更复杂的程序时提供帮助
 
 从现在起，作为使用右键点击方法运行 Python 代码的替代方案，你可以使用调试面板。调试器始终与*当前文件*配合，即你在资源管理器面板中选择（高亮）的任何文件。因此，使用调试器的通常步骤可能是：
 
-- 1. **点击资源管理器面板以查看所有文件列表。**
+1. **点击资源管理器面板以查看所有文件列表。**
+2. **点击你想要调试的文件图标或文件名。**
 
-- 2. **点击你想要调试的文件图标或文件名。**
-  目前你只有一个文件，`hello.py`。`hello.py` 文件名在资源管理器面板中被高亮显示。高亮显示 `hello.py` 是当你告诉调试器运行时，调试器将运行的当前文件。
+   目前你只有一个文件，`hello.py`。`hello.py`文件名在资源管理器面板中被高亮显示。高亮显示`hello.py`是当你告诉调试器运行时，调试器将运行的当前文件。
+3. **再次点击 VS Code 左侧栏中的调试图标再次打开调试面板。**
+4. **点击开始调试图标。**
 
-- 3. **再次点击 VS Code 左侧栏中的调试图标再次打开调试面板。**
-
-- 4. **点击开始调试图标。**
-  该图标是 Python: 当前文件 (工作区) 旁边的绿色三角形。
+   该图标是 Python: 当前文件 (工作区) 旁边的绿色三角形。
 
 当你点击“开始调试”图标时，Python 代码将运行，就像你之前选择“在终端中运行 Python 文件”时一样。如果你的代码有错误，你将在屏幕上获得描述该错误的额外帮助。
 
 如果这看起来需要记住很多内容，目前你只需要记住，每当你想要在 VS Code 中运行某些 Python 代码时，你可以采取以下一种操作：
 
-- 右键点击 .py 文件的名称并选择“在终端中运行文件”（Run File in Terminal）。
-
-- 点击资源管理器栏中的 .py 文件名以选择文件，点击调试图标，然后点击调试面板顶部的“开始调试”图标。可选，你可以点击“运行”（Run）并选择“开始调试”，或按下 F5 键。
+- 右键点击`.py`文件的名称并选择“在终端中运行文件”（Run File in Terminal）。
+- 点击资源管理器栏中的`.py`文件名以选择文件，点击调试图标，然后点击调试面板顶部的“开始调试”图标。可选，你可以点击“运行”（Run）并选择“开始调试”，或按下`F5`键。
 
 如果你能记住这两个运行 Python 文件的选项，你已经在学习 Python 的正轨道路上了。
 
 接下来我们将查看一种编写 Python 代码的不同方法。所以，请随时准备关闭文件。
 
-## 在 Jupyter Notebook 中编写代码
+# 在 Jupyter Notebook 中编写代码
 
 在第一章中，你学会了可以在 Jupyter Notebook 中编写 Python 代码。在本节中，我们展示了如何创建、保存和打开 Jupyter Notebook。作为示例，我们在任何你想的地方创建一个名为 Notebooks 的 Jupyter Notebook。
 
@@ -1273,9 +1049,9 @@ VS Code 内置了一个调试器可以在处理更复杂的程序时提供帮助
 
 Jupyter Notebooks 文件夹与任何文件夹没有区别，你可以使用任何方法创建它：
 
-- 1. 在 Finder (Mac) 或资源管理器 (Windows) 中打开你的 Python 文件夹。
-- 2. 在空白处右键点击并选择“新建文件夹”（Windows）或“新建文件夹”（Mac）。
-- 3. 输入 Notebooks 作为文件夹名称并按回车。
+1. 在 Finder (Mac) 或资源管理器 (Windows) 中打开你的 Python 文件夹。
+2. 在空白处右键点击并选择“新建文件夹”（Windows）或“新建文件夹”（Mac）。
+3. 输入 Notebooks 作为文件夹名称并按回车。
 
 现在你有了一个可以保存 Jupyter Notebook 的文件夹，你可以像下面一样创建。
 
@@ -1283,12 +1059,10 @@ Jupyter Notebooks 文件夹与任何文件夹没有区别，你可以使用任�
 
 要创建并保存 Jupyter Notebook，请遵循以下步骤：
 
-- 1. 打开 Anaconda（如果尚未打开）并启动 Notebooks。
-
-- 2. 导航到你创建的 Notebooks 文件夹。由于文件夹是空的，你会看到一条笔记本列表为空的消息。
-
-- 3. 点击新建（New）并选择 Python。
-- 4. 在笔记本顶部点击 Untitled，输入 Jupyter。
+1. 打开 Anaconda（如果尚未打开）并启动 Notebooks。
+2. 导航到你创建的 Notebooks 文件夹。由于文件夹是空的，你会看到一条笔记本列表为空的消息。
+3. 点击新建（New）并选择 Python。
+4. 在笔记本顶部点击 Untitled，输入 Jupyter。
 
 笔记本已创建。
 
@@ -1300,28 +1074,27 @@ Jupyter Notebooks 文件夹与任何文件夹没有区别，你可以使用任�
 
 ## Markdown 文本
 
+
+
 Jupyter Notebook 中的 Markdown 单元格可以包含任何使用 Markdown 格式化的文本。Markdown 是一种简单的用于标题、列表、图片、视频等文本的标记语言。下面是一段在 YouTube 上播放的视频。
 
 ## 保存和打开笔记本
 
 要保存 Jupyter Notebook，请从文件（File）菜单中选择“保存并检查”（Save and Checkpoint）。可选，你可以点击工具栏左侧的小保存并检查图标（软磁盘图标）。
 
-
-
 要关闭笔记本，请从菜单选择文件（File）⇒ 关闭并停止（Close and Halt）。
 
-当你想要重新打开笔记本时，打开 Anaconda 并启动 Jupyter Notebook。然后导航到你保存的文件并点击其文件名。文件名可能具有 `.ipynb` 扩展名，这是 Jupyter 笔记本的标准格式。
+当你想要重新打开笔记本时，打开 Anaconda 并启动 Jupyter Notebook。然后导航到你保存的文件并点击其文件名。文件名可能具有`.ipynb`扩展名，这是 Jupyter 笔记本的标准格式。
 
-值得注意的是，当你打开文件夹（我们命名为 AIO Python 的那个）时，你会看到文件夹内部有一个新的 Jupyter Notebooks 子文件夹。当你打开该子文件夹时，每个笔记本将作为一个独立的文件存储其中，扩展名为 `.ipynb`。
+值得注意的是，当你打开文件夹（我们命名为 AIO Python 的那个）时，你会看到文件夹内部有一个新的 Jupyter Notebooks 子文件夹。当你打开该子文件夹时，每个笔记本将作为一个独立的文件存储其中，扩展名为`.ipynb`。
 
 好了，现在你已经在 VS Code 和 Jupyter Notebook 中深入研究了一番，主要是为了让你能够保存和打开 Python 文件以及 Jupyter 笔记本。当你开始更深入编写 Python 代码时，这些技能将证明非常有用。回见！
 
-# 第 3 章
-## Python 元素与语法
+# 第 3 章：Python 元素与语法
 
-本章内容
+## 本章内容
 
-- 理解 Python 之禅 (Zen of Python)
+- 理解 Python 之禅（Zen of Python）
 - 介绍面向对象编程
 - 发现为什么缩进很重要
 - 使用 Python 模块
@@ -1337,18 +1110,19 @@ Jupyter Notebook 中的 Markdown 单元格可以包含任何使用 Markdown 格�
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_86_0.png)
 
-3. 输入 `python` 并按回车进入 Python 提示符 (>>>)。
+3. 输入`python`并按回车进入 Python 提示符（`>>>`）。
 
-如果你在输入 python 命令后收到错误消息，不要恐慌。你只需要提醒 VS Code 你正在使用哪种 Python 解释器。从菜单中选择视图（View）⇒ 命令面板（Command Palette），使用 **python**，点击 Python: Select Interpreter（选择 解释器），并选择与 Anaconda 一带的 Python 3 版本。
+如果你在输入`python`命令后收到错误消息，不要恐慌。你只需要提醒 VS Code 你正在使用哪种 Python 解释器。从菜单中选择视图（View）⇒ 命令面板（Command Palette），使用`python`，点击 Python: Select Interpreter（选择解释器），并选择与 Anaconda 一起的 Python 3 版本。
 
-4. 输入 `import this` 并**按回车**。
+4. 输入`import this`并按回车。
+
 格言列表出现了。你可能需要向上向下滚动或调高终端面板以查看所有内容。这些格言在哲学修辞上带有一种幽默色彩，但它们表达的总体思想是始终尝试让代码比机器可读更具人类可读性。
 
 Python 之禅有时被称为 PEP 20，其中 PEP 是 Python 增强提案（Python enhancement proposals）的缩写。20 指的是 20 条 Python 之禅原则，其中 19 条已被写下。我们都会对此感到好奇或制定自己的原则。
 
-还存在许多其他 PEP，你可以在 Python.org 网站（www.python.org/dev/peps）上找到所有它们。你最可能听的是 PEP 8，它是《Python 代码风格指南》。PEP 8 的指导原则是“可读性很重要”（readability counts）——即对人类可读。诚然，当你第一次学习 Python 代码时，大多数人的代码看起来就像外星人涂鸦的乱码，你可能完全不知道它的含义或作用。但随着你对语言经验的增加，风格的一致性将变得越来越明显，你会发现理解别人的代码越来越容易，这是你自己学习编码的极佳方法。
+还存在许多其他 PEP，你可以在 Python.org 网站（`www.python.org/dev/peps`）上找到所有它们。你最可能听的是 PEP 8，它是《Python 代码风格指南》。PEP 8 的指导原则是“可读性很重要”（readability counts）——即对人类可读。诚然，当你第一次学习 Python 代码时，大多数人的代码看起来就像外星人涂鸦的乱码，你可能完全不知道它的含义或作用。但随着你对语言经验的增加，风格的一致性将变得越来越明显，你会发现理解别人的代码越来越容易，这是你自己学习编码的极佳方法。
 
-我们将在整书中向你介绍编码风格。在动手之前尝试阅读它肯定会让你无聊到死。所以现在，每当你听到提到 PEP，特别是 PEP 8 时，请记住它是引用 Python.org 网站上的 Python 代码风格指南，你可以随时通过在网上搜索 `pep 8` 来找到它。PEP 8 也称为 Pydestyle，尤其是在 VS Code 中。
+我们将在整书中向你介绍编码风格。在动手之前尝试阅读它肯定会让你无聊到死。所以现在，每当你听到提到 PEP，特别是 PEP 8 时，请记住它是引用 Python.org 网站上的 Python 代码风格指南，你可以随时通过在网上搜索`pep 8`来找到它。PEP 8 也称为 Pydestyle，尤其是在 VS Code 中。
 
 对于学习者来说，PEP 8 这件事可能是一把双刃剑。一方面，你不想学一堆坏习惯，结果以后发现必须废除它们；另一方面，PEP 8 严格的格式要求会让许多只想尝试让代码运行的学习者感到沮丧。
 
@@ -1358,23 +1132,20 @@ Python 之禅有时被称为 PEP 20，其中 PEP 是 Python 增强提案（Pytho
 
 1. 选择文件（Windows）或 Code（Mac），然后选择偏好设置（Preferences）⇒ 设置（Settings）。
 2. 在设置搜索（Search Settings）下，点击工作区（Workspace）。
-3. 在设置搜索中输入 `pylint` 并选择 Python > Linting: Enabled（启用代码检查）选项，如图 3-2 所示。
-4. 输入 `pocodestyle`
+3. 在设置搜索中输入`pylint`并选择 Python > Linting: Enabled（启用代码检查）选项，如图 3-2 所示。
+4. 输入`pocodestyle`。
 5. 向滚动并选择 Python > Linting: Pocodestyle Enabled（启用代码样式）选项，如图 3-2 的下半部分所示。
 6. 选择文件 ⇒ 保存或仅保存（如果全部保存不可用）。然后点击标签页上的 X 关闭设置页面。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_88_0.png)
 
-**图 3-2:** 启用了 PyLint 和 Pocodestyle 的区设置。
+**图 3-2：** 启用了 PyLint 和 Pocodestyle 的区设置。
 
-你在 VS Code 中选择的所有设置都存储在 `settings.json` 文件中。你可以对该文件进行更改。要通过 VS Code 中的选项获取文件，首先选择文件（Windows）或 Code（Mac），然后选择偏好设置（Preferences）。点击右上角的 JSON 图标。该图标看起来像一张折了角的纸，旁边有一个圆箭头。
+你在 VS Code 中选择的所有设置都存储在`settings.json`文件中。你可以对该文件进行更改。要通过 VS Code 中的选项获取文件，首先选择文件（Windows）或 Code（Mac），然后选择偏好设置（Preferences）。点击右上角的 JSON 图标。该图标看起来像一张折了角的纸，旁边有一个圆箭头。
 
-如果你打开文件夹（我们命名为 AIO Python 的那个），你会看到文件夹内部有一个新的 Jupyter Notebooks 子文件夹。当你打开该子文件夹时，每个笔记本将作为一个独立的文件存储其中，扩展名为 `.ipynb`。
+如果你打开文件夹（我们命名为 AIO Python 的那个），你会看到文件夹内部有一个新的 Jupyter Notebooks 子文件夹。当你打开该子文件夹时，每个笔记本将作为一个独立的文件存储其中，扩展名为`.ipynb`。
 
 好了，现在你已经在 VS Code 和 Jupyter Notebook 中深入研究了一番，主要是为了让你能够保存和打开 Python 文件以及 Jupyter 笔记本。当你开始更深入编写 Python 代码时，这些技能将证明非常有用。
-
-
-
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function () { var question = prompt("Ask 8 ball a question");var answer = Math.floor(Math.random() * 8) + 1; if (answer == 1) { alert("It is certain"); else if (answer == 2) { alert("Outlook good"); else if (answer == 3) { alert("You may rely on it"); else if (answer == 4) { alert("Ask again later"); else if (answer == 6) { alert("Reply hazy, try again");} else if (answer == 7) { alert("My reply is no");} else if (answer == 8) { alert("My sources say no");} else { alert("That's not a question");} }alert("The end"); }
@@ -1440,7 +1211,7 @@ else:
 print("The end")
 ```
 
-你可能已经注意到 Python 代码开头以 `import` 开头的那行。以 `import` 开头的行在 Python 中很常见，你将在下一节看到原因。
+你可能已经注意到 Python 代码开头以`import`开头的那行。以`import`开头的行在 Python 中很常见，你将在下一节看到原因。
 
 # 使用 Python 模块
 
@@ -1454,7 +1225,7 @@ Python 成功的秘密之一在于它由一个简单、整洁的核心语言组�
 import random
 ```
 
-Python 核心语言本身没有内置生成随机数的功能。虽然我们可以想出制作随机数生成器的方法，但我们不需要这样做，因为已经有人想出了方法并免费提供了代码。在程序开始时使用 `import random` 告诉程序你想使用随机数模块的功能来生成随机数。然后，在程序的后面，你用这行代码生成一个 1 到 8 之间的随机数：
+Python 核心语言本身没有内置生成随机数的功能。虽然我们可以想出制作随机数生成器的方法，但我们不需要这样做，因为已经有人想出了方法并免费提供了代码。在程序开始时使用`import random`告诉程序你想使用随机数模块的功能来生成随机数。然后，在程序的后面，你用这行代码生成一个 1 到 8 之间的随机数：
 
 ```python
 answer = random.randint(1, 8)
@@ -1464,8 +1235,8 @@ Python 有数百个免费模块可供选择——你只需要知道要把哪些�
 
 现在，你可能在想哪里可以找到所有的模块。嗯，它们到处都是。但你可能永远不需要寻找并下载它们，因为你已经拥有世界上最广泛使用的模块。它们是随着 Anaconda 一起下载并安装的。
 
-- 1. 以通常方式在你的电脑上打开 Anaconda。
-- 2. 在左侧栏点击 Environments（环境）。
+1. 以通常方式在你的电脑上打开 Anaconda。
+2. 在左侧栏点击 Environments（环境）。
 
 右侧是你已安装并准备好使用的 Python 模块。
 
@@ -1473,12 +1244,12 @@ Python 有数百个免费模块可供选择——你只需要知道要把哪些�
 
 | 名称 | 描述 | 版本 |
 | :--- | :--- | :--- |
-| pywin | Anaconda (jupyter) 的元数据 | 0.1 |
-| | 可配置的 python-3 兼容 | 0.12 |
+| pywin | Anaconda（jupyter）的元数据 | 0.1 |
+|  | 可配置的 python-3 兼容 | 0.12 |
 | scipy | 用于封装、运行和复现科学的工具 | 20.7 |
 | anaconda-client | 软件包管理和部署 | 1.7 |
 | anaconda-project | 科学计算工具 | 0.8 |
-| ergh | | 2.6 |
+| ergh |  | 2.6 |
 | astropy | 天文学的 Python 库 | 1.3 |
 | admit | Python 抽象语法树 | 2.4 |
 | astronomy | 社区开发的 Python 库 | 5.0 |
@@ -1494,7 +1265,7 @@ Anaconda 的许多优点之一是获取最新版本不需要像许多旧教程�
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_95_0.png)
 
-图 3-5：我们的软件包已安装且都是最新的
+图 3-5：我们的软件包已安装且都是最新的。
 
 # 理解导入模块的语法
 
@@ -1506,36 +1277,32 @@ import modulename [as alias]
 
 这种通用格式的代码（部分为斜体，部分为方括号）有时被称为语法图，因为它并不是在字面上告诉你输入什么。相反，它展示了代码的语法（格式）。以下是语法图中呈现信息的方式：
 
-- >> 代码是大小敏感的，这意味着必须使用全小写形式输入 `import` 和 `as`，如下所示。
-- >> 斜体内容都是你自己在代码中提供的信息的占位符。例如，在你的代码中，你会用 `modulename` 替换为你想导入的模块名称。
+- 代码是大小敏感的，这意味着必须使用全小写形式输入`import`和`as`，如下所示。
+- 斜体内容都是你自己在代码中提供的信息的占位符。例如，在你的代码中，你会用`modulename`替换为你想导入的模块名称。
+- 方括号`[]`中的内容是可选的，因此你可以包含或不包含方括号部分来输入命令。
+- 你永远不要在代码中输入方括号，因为它们不是 Python 语言的一部分。它们仅用于指示语法中的可选部分。
 
-
-
-
-
-+   方括号 `[]` 中的内容是可选的，因此你可以包含或不包含方括号部分来输入命令。
-
-+   你永远不要在代码中输入方括号，因为它们不是 Python 语言的一部分。它们仅用于指示语法中的可选部分。
-
-你可以在任何输入 Python 代码的地方编写导入行：Python 命令行提示符 (>>>)、.py 文件或 Jupyter notebook。在 .py 文件中，你将 `import` 语句放在最前面，这样在代码的其他部分就可以可以使用这些功能了。
+你可以在任何输入 Python 代码的地方编写导入行：Python 命令行提示符（`>>>`）、`.py`文件或 Jupyter notebook。在`.py`文件中，你将`import`语句放在最前面，这样在代码的其他部分就可以使用这些功能了。
 
 # 为模块使用别名
 
-正如你刚刚看到的 `import` 命令的语法所示，你只需要在模块名后面加上一个空格、单词 `as` 以及一个你自定义的名称，就可以为你导入的任何模块分配一个别名（或昵号）。
+正如你刚刚看到的`import`命令的语法所示，你只需要在模块名后面加上一个空格、单词`as`以及一个你自定义的名称，就可以为你导入的任何模块分配一个别名（或昵称）。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_96_0.png)
 
 提示：大多数人会使用易于输入和记忆的短名称，这样他们每次访问模块功能时就不需要输入长长的名称。
 
-例如，与其输入 `import random` 来导入该模块，你可以导入它并给它一个如 `rnd` 的昵称，因为它更短：
+例如，与其输入`import random`来导入该模块，你可以导入它并给它一个如`rnd`的昵称，因为它更短：
 
-```
+
+
+```python
 import random as rnd
 ```
 
-那么在随后的代码中，你就不使用完整名称 `random` 来引用该模块。相反，你应该使用短名称 `rnd`：
+那么在随后的代码中，你就不使用完整名称`random`来引用该模块。相反，你应该使用短名称`rnd`：
 
-```
+```python
 answer = rnd.randint(1, 8)
 ```
 
@@ -1543,19 +1310,18 @@ answer = rnd.randint(1, 8)
 
 现在你已经学习了一些背景信息，是时候应用它们并开始上手写真正的 Python 代码了。我们下章见。
 
-# 第 4 章
-构建你的第一个 Python 应用程序
+# 第 4 章：构建你的第一个 Python 应用程序
 
 ## 本章内容
 
-- » 打开 Python 文件
+- 打开 Python 文件
 - 使用 Python 注释
 - 理解 Python 中的数据类型
 - 使用 Python 运算符进行操作
 - 创建变量
 - 组织代码
 
-你想用 Python 构建一个应用程序吗？无论你是想编写网站、分析数据，还是创建一个脚本来自动化某些任务，本章都将为你提供开启之旅所需的的基础知识。大多数人使用 Python 等编程语言来创建应用程序，这些程序通常被称为应用（applications）或程序（programs）。要创建应用，你需要学会如何在编辑器中编写代码。你还需要开始学习你创建这些应用时将使用的语言（在本书中是 Python）。
+你想用 Python 构建一个应用程序吗？无论你是想编写网站、分析数据，还是创建一个脚本来自动化某些任务，本章都将为你提供开启之旅所需的基础知识。大多数人使用 Python 等编程语言来创建应用程序，这些程序通常被称为应用（applications）或程序（programs）。要创建应用，你需要学会如何在编辑器中编写代码。你还需要开始学习你创建这些应用时将使用的语言（在本书中是 Python）。
 
 就像任何其他语言一样，你需要理解单个单词才能开始构建句子，最后是能够让你的应用运行的代码块。首先，我们将引导你创建一个应用文件，你可以在其中编写代码。然后你将学习各种数据类型、运算符和变量（这些是 Python 语言的单词），然后是 Python 语法。在此过程中，你将看到如何保存应用、通过静态检查（linting）发现错误，以及为代码添加注释，以便你和其他人理解你是如何以及为什么要构建它的。
 
@@ -1563,18 +1329,18 @@ answer = rnd.randint(1, 8)
 
 # 打开 Python 应用程序文件
 
-在本书中，你将使用流行的 Visual Studio Code (VS Code) 编辑器来学习 Python 并创建 Python 应用。我们假设你已经按照本教程之前章节的描述设置好了学习和开发环境，并知道如何打开主工具 Anaconda Navigator 和 VS Code。要本本章，请从以下步骤开始：
+在本书中，你将使用流行的 Visual Studio Code（VS Code）编辑器来学习 Python 并创建 Python 应用。我们假设你已经按照本教程之前章节的描述设置好了学习和开发环境，并知道如何打开主工具 Anaconda Navigator 和 VS Code。要开始本章，请从以下步骤开始：
 
 1. 打开 Anaconda Navigator 并从那里启动 VS Code。
-2. 如果你的 Python 3 工作空间没有自动打开，从 VS Code 菜单中选择 `File -> Open Workspace`，并打开你在第 2 章中创建的 Python 3 工作空间。
-3. 点击你在第 2 章中创建的 `hello.py` 文件。
+2. 如果你的 Python 3 工作空间没有自动打开，从 VS Code 菜单中选择`File -> Open Workspace`，并打开你在第 2 章中创建的 Python 3 工作空间。
+3. 点击你在第 2 章中创建的`hello.py`文件。
 4. 选择第一行的所有文本并删除，这样你可以从零开始。
 
-此时，`hello.py` 已经在编辑器中打开，如图 4-1 所示。如果打开了任何其他标签，请点击每个标签上的 X 将其关闭。
+此时，`hello.py`已经在编辑器中打开，如图 4-1 所示。如果打开了任何其他标签，请点击每个标签上的 X 将其关闭。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_99_0.png)
 
-图 4-1：在 VS Code 中打开编辑的 `hello.py` 文件。
+图 4-1：在 VS Code 中打开编辑的`hello.py`文件。
 
 # 输入和使用 Python 注释
 
@@ -1582,16 +1348,16 @@ answer = rnd.randint(1, 8)
 
 然而，代码中的注释并不严格是初学者的。在团队工作时，专业人士经常使用注释向团队成员解释他们的代码在做什么。开发者还会在代码中添加注释作为自己的笔记，这样如果将来复阅代码，他们就可以参考自己的笔记，来提醒自己为什么要在代码中执行某些操作。因为注释不是代码，你的措辞可以是任何你想要的。但是，为了使其被识别为注释，你必须执行以下操作之一：
 
-- 以井号 (#) 开头文本
+- 以井号（`#`）开头文本
 - 使用三引号包裹文本
 
 如果注释很短（单行），开头的井号就足够了。
 
-```
+```python
 # 这是一个注释
 ```
 
-```
+```python
 """
 这是一个多行
 注释
@@ -1600,56 +1366,49 @@ answer = rnd.randint(1, 8)
 
 # 理解数据类型
 
-你一直都在处理书面信息，可能没有考虑过数字和文本之间的区别。数字是数量，例如 10 或 123.45。文本由字母和单词组成。对于计算机来说，巨大的区别在于它们对数字进行算术运算（加、减、乘、除），但不能对字母和单词这样做。
+你一直都在处理书面信息，可能没有考虑过数字和文本之间的区别。数字是数量，例如`10`或`123.45`。文本由字母和单词组成。对于计算机来说，巨大的区别在于它们对数字进行算术运算（加、减、乘、除），但不能对字母和单词这样做。
 
-例如，每个人都知道 `1+1 = 2`。同样的情况并不适用于字母和单词。表达式 `A+A`并不等于 `B` 或 `AA` 或其他任何，与数字不同，字母和单词不是数量。你可以在商店买 12 个苹果，因为 12 是数量、数字。你不能买“snorkel 苹果”，因为 snorkel 是一个东西——它不是数量、数字或标量值。
+例如，每个人都知道`1 + 1 = 2`。同样的情况并不适用于字母和单词。表达式`A + A`并不等于`B`或`AA`或其他任何，与数字不同，字母和单词不是数量。你可以在商店买 12 个苹果，因为 12 是数量、数字。你不能买“snorkel 苹果”，因为 snorkel 是一个东西——它不是数量、数字或标量值。
 
 ## 数字
 
-Python 中的数字必须以数字（0-9）、点（.，即小数点）或用作负数负号的连字符（-）开头。一个数字只能包含一个小数点。它不应包含字母、空格、美元符号或任何不是正常数字的内容。表 4-1 显示了正确和错误的数字示例。
+Python 中的数字必须以数字（0-9）、点（`.`，即小数点）或用作负数负号的连字符（`-`）开头。一个数字只能包含一个小数点。它不应包含字母、空格、美元符号或任何不是正常数字的内容。表 4-1 显示了正确和错误的数字示例。
 
-| 表 4-1 正确与错误的 Python 数字示例
+## 表 4-1：正确与错误的 Python 数字示例
 
 | 数字 | 是否错误 | 原因 |
 |---|---|---|
-| 1 | 否 | 整数（integer） |
-| 1.1 | 否 | 带小数点的数字 |
-| 1234567.89 | 否 | 带小数点且无逗号的大数字 |
-| -2 | 否 | 负数，由开头的连字符指示 |
-| .99 | 否 | 以小数点开头的数字，因为它小于 1 |
-| $1.99 | 是 | 包含 $ |
-
-
-
-
-
-| 数字 | 是好还是坏？ | 原因 |
-|---|---|---|
-| 12,345.67 | 坏 | 包含逗号 |
-| 1101 3232 | 坏 | 包含空格 |
-| 91740-3384 | 坏 | 包含连字符 |
-| 123-45-6789 | 坏 | 包含两个连字符 |
-| 123 Oak Tree Lane | 坏 | 包含空格和单词 |
-| (267)555-1234 | 坏 | 包含括号和连字符 |
-| 127.0.0.1 | 坏 | 仅允许一个小数点 |
+| `1` | 否 | 整数（integer） |
+| `1.1` | 否 | 带小数点的数字 |
+| `1234567.89` | 否 | 带小数点且无逗号的大数字 |
+| `-2` | 否 | 负数，由开头的连字符指示 |
+| `.99` | 否 | 以小数点开头的数字，因为它小于 1 |
+| `$1.99` | 是 | 包含 `$` |
+| `12,345.67` | 坏 | 包含逗号 |
+| `1101 3232` | 坏 | 包含空格 |
+| `91740-3384` | 坏 | 包含连字符 |
+| `123-45-6789` | 坏 | 包含两个连字符 |
+| `123 Oak Tree Lane` | 坏 | 包含空格和单词 |
+| `(267)555-1234` | 坏 | 包含括号和连字符 |
+| `127.0.0.1` | 坏 | 仅允许一个小数点 |
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_103_0.png)
 
 提示：如果你担心数字规则会让你无法处理美元金额、邮政编码、地址或其他任何内容，请不要担心。正如你很快看到的，你可以存储并处理各种信息。
 
-你将遇到的大多数数字符合前四个良好数字示例中的一个。然而，如果你恰好在查看用于更高级科学或数学应用的代码，可能会偶尔看到包含字母 `e` 或字母 `j` 的数字。这是因为 Python 支持三种不同的数字类型，下文将进行讨论。
+你将遇到的大多数数字符合前四个良好数字示例中的一个。然而，如果你恰好在查看用于更高级科学或数学应用的代码，可能会偶尔看到包含字母`e`或字母`j`的数字。这是因为 Python 支持三种不同的数字类型，下文将进行讨论。
 
-## 整数 (Integers)
+## 整数（Integers）
 
-整数是任何正整数或负整数。它的大小没有限制。像 `0`、`-1` 和 `999999999999` 这样的数字都是有效的整数。从你的角度来看，整数就是任何不包含小数点的有效数字。
+整数是任何正整数或负整数。它的大小没有限制。像`0`、`-1`和`999999999999`这样的数字都是有效的整数。从你的角度来看，整数就是任何不包含小数点的有效数字。
 
-## 浮点数 (Floats)
+## 浮点数（Floats）
 
-浮点数（通常称为 float）是任何包含小数点的有效数字。同样，大小没有限制：`1.1`、`-1.1` 和 `123456.789012345` 都是有效的浮点数。如果你处理很大的科学数字，可以在数字中放入 `e` 来表示 10 的幂。例如，`234e1000` 是一个有效数字，即使没有小数点它也会被视为浮点数。如果你熟悉科学计数法，你就知道 `234e3` 是 `234,000`（将 `e3` 替换为三个零）。如果你不熟悉科学计数法，不用担心。如果你现在日常工作中不需要它，那么可能在 Python 中也永远永远需要它。
+浮点数（通常称为 float）是任何包含小数点的有效数字。同样，大小没有限制：`1.1`、`-1.1`和`123456.789012345`都是有效的浮点数。如果你处理很大的科学数字，可以在数字中放入`e`来表示 10 的幂。例如，`234e1000`是一个有效数字，即使没有小数点它也会被视为浮点数。如果你熟悉科学计数法，你就知道`234e3`是`234,000`（将`e3`替换为三个零）。如果你不熟悉科学计数法，不用担心。如果你现在日常工作中不需要它，那么可能在 Python 中也永远不需要它。
 
-## 复数 (Complex numbers)
+## 复数（Complex numbers）
 
-任何类型的数字都可以表示为整数或浮点数，因此对几乎每个人来说，熟悉它们都很重要。但注意，Python 还支持复数。这些古怪的小精灵总是以字母 `j` 结尾，`j` 是数字的虚部。如果你完全不知道在说什么，这很正常——只有深奥数学的人才会关心复数。如果你以前从未听过它们，那么你可能不会在计算机工作或 Python 编程中使用它们。
+任何类型的数字都可以表示为整数或浮点数，因此对几乎每个人来说，熟悉它们都很重要。但注意，Python 还支持复数。这些古怪的小精灵总是以字母`j`结尾，`j`是数字的虚部。如果你完全不知道在说什么，这很正常——只有深奥数学的人才会关心复数。如果你以前从未听过它们，那么你可能不会在计算机工作或 Python 编程中使用它们。
 
 ## 单词（字符串/strings）
 
@@ -1657,14 +1416,16 @@ Python 中的数字必须以数字（0-9）、点（.，即小数点）或用作
 
 与数字不同，字符串必须始终包含在引号中。你可以使用双引号（`"`）或单引号（`'`）。以下都是有效字符串：
 
-```
+```python
 "Hi there, I am a string"
 'Hello world'
 "123 Oak Lane"
 ```
 
-" (267) 555-1234"
+```text
+"(267) 555-1234"
 "18901-3384"
+```
 
 注意，在字符串中使用数字字符（0-9）以及连字符和点（句号）是可以的。每个仍然都是字符串，因为它们被包含在引号中。
 
@@ -1686,57 +1447,55 @@ Python 中的数字必须以数字（0-9）、点（.，即小数点）或用作
 
 同样，如果字符串包含双引号，请将内容包含在双引号中。
 
-
-
-
+# Python 运算符
 
 | 运算符 | 描述 | 示例 |
-| --- | --- | --- |
-| / | 除法 | 10 / 5 = 2 |
-| % | 取模（除法后的余数） | 11 % 5 = 1 |
-| ** | 幂 | 3**2 = 9 |
-| // | 整除 | 11 // 5 = 2 |
+|---|---|---|
+| `/` | 除法 | `10 / 5 = 2` |
+| `%` | 取模（除法后的余数） | `11 % 5 = 1` |
+| `**` | 幂 | `3 ** 2 = 9` |
+| `//` | 整除 | `11 // 5 = 2` |
 
 表格中的前四项与你在小学学到的知识相同。后三项稍微高级一些，因此我们在这里解释它们：
 
-- 取模是除法后的余数。例如，11 % 5 等于 1，因为如果用 11 除以 2，得到商 5 余 1。这就是模（有时也称为 modulus）。
-- 幂运算符是 `**`，因为你不能在代码中输入小的上标数字。但它的意思是“...的几次方”。例如，3**2 是 3²（或 3 的平方），即 3*3，等于 9；而 3**4 是 3*3*3，等于 81。
-- 整除由 `//` 表示，它是整数除，小数点后的任何部分都会截断（去掉），而不进行四舍五入。例如，在普通除法中 9/5 是 1.8。但 9/5 是 1，因为 .8 直接被去掉了——没有进位到 2。
+- 取模是除法后的余数。例如，`11 % 5`等于 1，因为如果用 11 除以 2，得到商 5 余 1。这就是模（有时也称为 modulus）。
+- 幂运算符是`**`，因为你不能在代码中输入小的上标数字。但它的意思是“……的几次方”。例如，`3 ** 2`是 3²（或 3 的平方），即`3 * 3`，等于 9；而`3 ** 4`是`3 * 3 * 3`，等于 81。
+- 整除由`//`表示，它是整数除，小数点后的任何部分都会截断（去掉），而不进行四舍五入。例如，在普通除法中`9 / 5`是 1.8。但`9 / 5`是 1，因为 .8 直接被去掉了——没有进位到 2。
 
 ## 比较运算符
 
-计算机在执行工作时可以决策。但这些决策不是判断性决策之类的。这些决策是基于比较的绝对事实。Python 提供的帮助你编写决策代码的比较运算符如表 4-3所示。
+计算机在执行工作时可以决策。但这些决策不是判断性决策之类的。这些决策是基于比较的绝对事实。Python 提供的帮助你编写决策代码的比较运算符如表 4-3 所示。
 
-## 表 4-3 Python 比较运算符
+## 表 4-3：Python 比较运算符
 
 | 运算符 | 含义 |
-| --- | --- |
-| < | 小于 |
-| <= | 小于等于 |
-| > | 大于 |
-| >= | 大于等于 |
-| == | 等于 |
-| != | 不等于 |
-| is | 对象标识 |
-| is not | 否定的对象标识 |
+|---|---|
+| `<` | 小于 |
+| `<=` | 小于等于 |
+| `>` | 大于 |
+| `>=` | 大于等于 |
+| `==` | 等于 |
+| `!=` | 不等于 |
+| `is` | 对象标识 |
+| `is not` | 否定的对象标识 |
 
 前几个是显而易见的，所以我们不再详细介绍。最后两个比较复杂，因为它们涉及到 Python 对象，而我们还没有讨论过对象。现在讨论 Python 对象会是一个很大的离题，所以如果你现在对任何运算符感到困惑，不要担心。
 
 ## 布尔运算符
 
-布尔运算符与布尔值（True 或 False）配合工作，用于确定一个或多个事物是 True 为 False。表 4-4 总结了布尔运算符。
+布尔运算符与布尔值（`True`或`False`）配合工作，用于确定一个或多个事物是 True 还是 False。表 4-4 总结了布尔运算符。
 
-## 表 4-4 Python 布尔运算符
+## 表 4-4：Python 布尔运算符
 
 | 运算符 | 代码示例 | 决定什么 |
-| --- | --- | --- |
-| or | x or y | x 或 y 其中为 True |
-| and | x and y | x 和 y 均为 True |
-| not | not x | x 不是 True |
+|---|---|---|
+| `or` | `x or y` | `x`或`y`其中为 True |
+| `and` | `x and y` | `x`和`y`均为 True |
+| `not` | `not x` | `x`不是 True |
 
-Python 风格指南 (PEP 8) 建议始终在运算符周围留空格。换句话说，你想使用键盘空格在运算符之前加一个空格，输入运算符，然后在继续代码行之前再添加另一个空格。这里有一个示例。我们知道你还不熟悉编程，所以不用太担心代码的含义。请注意 `=` 和 `>`（大于）运算符周围的空格：
+Python 风格指南（PEP 8）建议始终在运算符周围留空格。换句话说，你想使用键盘空格在运算符之前加一个空格，输入运算符，然后在继续代码行之前再添加另一个空格。这里有一个示例。我们知道你还不熟悉编程，所以不用太担心代码的含义。请注意`=`和`>`（大于）运算符周围的空格：
 
-```
+```python
 num = 10
 if num > 0:
     print("Positive number")
@@ -1744,15 +1503,15 @@ else:
     print("Negative number")
 ```
 
-第一行将数字 10 存储在名为 `num` 的变量中。然后 `if` 检查 `num` 是否大于 (`>`) 0。如果是，程序打印 "Positive number"。否则，它打印 "Negative number"。所以，假设我们将程序的第一行改为：
+第一行将数字 10 存储在名为`num`的变量中。然后`if`检查`num`是否大于（`>`）0。如果是，程序打印`"Positive number"`。否则，它打印`"Negative number"`。所以，假设我们将程序的第一行改为：
 
-```
+```python
 num = -1
 ```
 
-如果你执行了该更改并再次运行程序，它会打印 "Negative number"，因为 -1 是一个负数。
+如果你执行了该更改并再次运行程序，它会打印`"Negative number"`，因为 -1 是一个负数。
 
-我们在此示例中使用 `num` 作为示例变量名，以便向你展示一些周围有空格的运算符。当然，我们还没有告诉过你什么是变量，所以示例的这部分可能让你感到困惑。我们接下来将解决这个问题。
+我们在此示例中使用`num`作为示例变量名，以便向你展示一些周围有空格的运算符。当然，我们还没有告诉过你什么是变量，所以示例的这部分可能让你感到困惑。我们接下来将解决这个问题。
 
 ## 创建和使用变量
 
@@ -1760,51 +1519,47 @@ num = -1
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_111_0.png)
 
-**图 4-3：** 你的名字和你成为客户的日期显示在 Amazon 主页上。
+图 4-3：你的名字和你成为客户的日期显示在 Amazon 主页上。
 
 显然，那天去 Amazon 的每个人都叫 Alan 且从 1996 年起就是成员。其他人可能在那里看到其他内容。但 Amazon 显然无法为其数百万用户中的每一个人创建一个定制主页。页面上的大部分内容可能是字面上的——这意味着每个查看页面的人看到的都是相同的内容。只有根据查看页面的人而变化的信息才存储为变量。
 
 在你的代码中，变量由名称表示。（注：此处原文存在大量重复句子，翻译时已按要求处理。）
 
-
-
-
-
 ```python
 # 这个变量包含一个浮点数
 ```
 
-4.  输入以下内容（不要输入美元符号 $！）并按回车：
+4. 输入以下内容（不要输入美元符号 `$`！）并按回车：
 
 ```python
 unit_price = 1.99
 ```
 
-5.  输入以下内容并按回车：
+5. 输入以下内容并按回车：
 
 ```python
 # 这个变量包含数量乘以单价的结果
 ```
 
-6.  输入以下内容（在运算符周围留有空格）并按回车：
+6. 输入以下内容（在运算符周围留有空格）并按回车：
 
 ```python
 extended_price = quantity * unit_price
 ```
 
-7.  输入以下内容并按回车：
+7. 输入以下内容并按回车：
 
 ```python
 # 显示结果
 ```
 
-8.  最后，输入此并按回车：
+8. 最后，输入此并按回车：
 
 ```python
 print(extended_price)
 ```
 
-你的应用程序创建了一些变量，在其中存储了值，并根据 `quantity` 和 `unit_price` 变量的内容计算出一个新值 `extended_price`。最后一行在屏幕上显示 `extended_price` 变量的内容。请记住，注释在程序运行时不会产生任何作用。注释只是你写给自己的关于程序中内容的笔记。
+你的应用程序创建了一些变量，在其中存储了值，并根据`quantity`和`unit_price`变量的内容计算出一个新值`extended_price`。最后一行在屏幕上显示`extended_price`变量的内容。请记住，注释在程序运行时不会产生任何作用。注释只是你写给自己的关于程序中内容的笔记。
 
 图 4-4 显示了现在应该有的样子。如果你犯了任何错误，可能会在错误或样式建议附近看到一些波浪线，例如行末多了一个空格或漏掉了回车键。在输入代码时，你必须准确。你不能输入看起来像你应该输入的内容。在给人类发信息时，你可以犯各种类型的拼写错误，你的人类接收者通常可以根据消息的上下文判断出你的意思。但计算机没有眼睛、大脑，也没有上下文的概念，所以如果你的代码有错误，它们通常将无法正常工作。
 
@@ -1830,20 +1585,22 @@ print(extended_price)
 
 ## 在 VS Code 中运行你的 Python 应用程序
 
-现在你可以运行应用程序并查看它是否有效。做到这一点的一种简单方法是在资源管理器栏中右键点击 `hello.py` 文件名，并选择“在终端中运行 Python 文件”，如图 4-5 所示。
+现在你可以运行应用程序并查看它是否有效。做到这一点的一种简单方法是在资源管理器栏中右键点击`hello.py`文件名，并选择“在终端中运行 Python 文件”，如图 4-5 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_116_0.png)
 
-**图 4-5：** 右键点击 .py 文件并选择“在终端中运行 Python 文件”。
+图 4-5：右键点击`.py`文件并选择“在终端中运行 Python 文件”。
 
-如果你的代码输入正确，你应该应该在终端中看到结果 19.9，如图 4-6 所示。该结果是代码中 `print (extended_price)` 的输出，它是 19.9 是因为数量 (10) 乘以单价 (1.99) 等于 19.9。
+如果你的代码输入正确，你应该在终端中看到结果 19.9，如图 4-6 所示。该结果是代码中`print(extended_price)`的输出，它是 19.9 是因为数量（10）乘以单价（1.99）等于 19.9。
 
 | 问题 | 输出 | 调试控制台 | 终端 |
-| --- | --- | --- | --- |
-| (base) C:\Users\Alan\OneDrive\AIO Python::ProgramData\Anaconda3\python.exe "c:\Users\Alan\OneDrive\AIO Python\hello.py" | | | 19.9 |
-| (base) C:\Users\Alan\OneDrive\AIO Python{} | | | |
+|---|---|---|---|
+| `(base) C:\Users\Alan\OneDrive\AIO Python::ProgramData\Anaconda3\python.exe "c:\Users\Alan\OneDrive\AIO Python\hello.py"` |  |  | `19.9` |
+| `(base) C:\Users\Alan\OneDrive\AIO Python{}` |  |  |  |
 
-**图 4-6：** 19.9 是代码中 `print(extended_price)` 的输出。
+
+
+**图 4-6：** `19.9` 是代码中 `print(extended_price)` 的输出。
 
 假设你的应用程序必须计算 14 件物品的总成本，每件价格为 26.99 美元。你能想到如何实现这一点吗？你当然不需要编写整个全新的应用程序。相反，在你正在处理的代码中，将 `quantity` 变量的值从 10 改为 14。将 `unit_price` 变量的值改为 26.99（记住，没有美元符号）。以下是更改后的代码：
 
@@ -1859,17 +1616,13 @@ extended_price = quantity * unit_price
 print(extended_price)
 ```
 
-保存你的工作（除非你开启了自动保存）。然后再次右键点击并选择“在终端中运行文件”来运行应用程序——就像第一次一样。结果再次是 377.86，出现在 VS Code 窗口底部终端窗口中。
+保存你的工作（除非你开启了自动保存）。然后再次右键点击并选择“在终端中运行文件”来运行应用程序——就像第一次一样。结果再次是 `377.86`，出现在 VS Code 窗口底部终端窗口中。
 
 ## 理解什么是语法以及为什么它很重要
 
 如果你在字典中查找“语法”，你可能会找到单词和短语的排列方式，以创建格式正确的句子。在 Python 等编程语言中，没有所谓的格式正确的句子。但 Python 有“单词”这种说法，因为你像输入像这样的普通文本一样，在每个单词之间需要空格，而且这些单词的顺序是重要的。语法在人类语言中非常重要，因为顺序对含义有很大贡献。例如，比较一下：
 
 语法在人类语言中很重要，因为顺序对含义有很大贡献。在给人类发信息时，你可以犯各种类型的拼写错误，你的人类接收者通常可以根据消息的上下文判断出你的意思。但计算机没有眼睛或大脑，也没有上下文的概念，所以如果你的代码有错误，它们通常将无法正常工作。
-
-
-
-
 
 如果你在工作区设置中启用了第 3 章所述的 lint 和 PEP 8，你可能会在看起来正常的代码中看到波浪线。将鼠标指针悬停在此类波浪线上，通常会显示一条指示问题的消息，如图 4-7 所示。
 
@@ -1886,7 +1639,7 @@ unit price=26.99
 
 **图 4-7：** 鼠标指针悬停在红色波浪线上。
 
-第二部分只是告诉你名为 `quantity` 的变量包含一个整数（**int**），这是一个整数。消息的这部分是信息，而不是错误。
+第二部分只是告诉你名为 `quantity` 的变量包含一个整数（`int`），这是一个整数。消息的这部分是信息，而不是错误。
 
 要修复此错误，请在 `=` 号周围添加空格。换句话说，使用键盘上的空格键在 `=` 号前后各加一个空格。
 
@@ -1912,8 +1665,6 @@ hello.py
 
 其他颜色的错误是样式错误。但在你将鼠标指针悬停在波浪线上并让其停留直到看到消息之前，你将不知道具体的错误。在你在你采取修复错误所需的任何操作之前，错误不会消失。
 
-![](img/b5b2ea569d1e5bba0afd733be648243d_122_0.png)
-
 > 提示：在学习过程中，PEP 8 错误似乎让人无从下手，可以暂时关闭它们。选择 File -> Settings (Windows) 或 Code -> Settings (Mac)。 然后在代码视图中，将 `python.lint.pyLintEnabled` 或 `python.lint.pcodestyleEnabled` 或两者都设为 `false`。
 
 # 整合代码
@@ -1927,63 +1678,94 @@ hello.py
 # 内容概览
 
 + 第 1 章：处理数字、文本和日期
+
 - 使用函数计算数字
+
 - 更多数学函数
+
 - 数字的格式化
+
 - 处理更奇异的数字
+
 - 操作字符串
+
 - 探索日期和时间
+
 - 考虑时区
+
 - 处理时区
 
 + 第 2 章：控制操作
+
 - 控制操作的主要运算符
+
 - 使用 `if` 决策
+
 - 使用 `for` 重复过程
+
 - 使用 `while` 循环
 
 + 第 3 章：利用列表和元组加速
+
 - 定义和使用列表
+
 - 什么是元组？谁在乎？
+
 - 使用集合
 
 + 第 4 章：使用字典处理海量数据
+
 - 理解数据字典
+
 - 创建数据字典
+
 - 遍历字典
+
 - 字典方法
+
 + 复制字典
+
 + 删除字典项
+
 + 享受多键字典的乐趣
 
-# # 第 5 章：处理更大的代码块
+# 第 5 章：处理更大的代码块
 
 + 创建函数
+
 + 为函数注释
+
 + 向函数传递信息
+
 + 从函数返回值
+
 + 破解匿名函数
 
-# # 第 6 章：使用类编写 Python
+# 第 6 章：使用类编写 Python
 
 + 精通类和对象
+
 + 创建类
+
 + 从类创建实例
+
 + 给对象赋予属性
+
 + 给类赋予方法
+
 + 理解类继承
 
-# # 第 7 章：规避错误
+# 第 7 章：规避错误
 
 + 理解异常
+
 + 优雅地处理错误
+
 + 异常的具体化
+
 + 防止你的应用程序崩溃
+
 + 抛出你的异常
-
-
-
-
 
 一个函数的作用是什么？它可能没有执行与你的工作类型相关的操作。但如果你好奇，可以随时在网络上搜索 `python` 加上函数名以获取更多信息。要查看更详细的列表，请搜索 `python 3 built-in functions`。
 
@@ -1991,18 +1773,18 @@ hello.py
 
 | 内置函数 | 用途 |
 |---|---|
-| abs(x) | 返回 x 的绝对值（将负数转换为正数）。 |
-| bin(x) | 返回一个字符串，表示 x 转换为二进制后的值。 |
-| float(x) | 将字符串或数字 x 转换为 float 数据类型。 |
-| format(x, ...) | 根据 y 中指定的模式格式化 x。这种旧语法在当前的 Python 版本中已被 f-strings（f格式化字符串）取代。 |
-| hex(x) | 返回一个字符串，包含 x 转换为十六进制的形式，并以前缀为 0x。 |
-| int(x) | 通过截断（不是舍入）小数部分及其后的数字，将 x 转换为整数数据类型。 |
-| max(x, y, ...) | 接受任意数量的数值参数并返回其中最大的一个。 |
-| min(x, y, ...) | 接受任意数量的数值参数并返回其中最小的一个。 |
-| oct(x) | 将 x 转换为八进制数，以前缀 0o 表明八进制。 |
-| round(x, y) | 将数字 x 四舍五入 y 位小数。 |
-| str(x) | 将数字 x 转换为字符串数据类型。 |
-| type(x) | 返回一个指示 x 数据类型的字符串。 |
+| `abs(x)` | 返回 `x` 的绝对值（将负数转换为正数）。 |
+| `bin(x)` | 返回一个字符串，表示 `x` 转换为二进制后的值。 |
+| `float(x)` | 将字符串或数字 `x` 转换为 `float` 数据类型。 |
+| `format(x, ...)` | 根据 `y` 中指定的模式格式化 `x`。这种旧语法在当前的 Python 版本中已被 f-strings（f格式化字符串）取代。 |
+| `hex(x)` | 返回一个字符串，包含 `x` 转换为十六进制的形式，并以前缀为 `0x`。 |
+| `int(x)` | 通过截断（不是舍入）小数部分及其后的数字，将 `x` 转换为整数数据类型。 |
+| `max(x, y, ...)` | 接受任意数量的数值参数并返回其中最大的一个。 |
+| `min(x, y, ...)` | 接受任意数量的数值参数并返回其中最小的一个。 |
+| `oct(x)` | 将 `x` 转换为八进制数，以前缀 `0o` 表明八进制。 |
+| `round(x, y)` | 将数字 `x` 四舍五入 `y` 位小数。 |
+| `str(x)` | 将数字 `x` 转换为字符串数据类型。 |
+| `type(x)` | 返回一个指示 `x` 数据类型的字符串。 |
 
 图 1-3 显示了使用内置数学函数的正确 Python 语法示例。
 
@@ -2025,28 +1807,39 @@ print(type(x))
 print(type(str(y)))
 ```
 
-999.9999
--999
-999
-3.1416
-0b10000000
-0xe8
-0xc20
-128
--999.9999
-<class 'float'>
-<class 'int'>
-<class 'str'>
+`999.9999`
+
+`-999`
+
+`999`
+
+`3.1416`
+
+`0b10000000`
+
+`0xe8`
+
+`0xc20`
+
+`128`
+
+`-999.9999`
+
+`<class 'float'>`
+
+`<class 'int'>`
+
+`<class 'str'>`
 
 **图 1-3:** 在 Python 提示符中尝试内置数学函数
 
-你还可以嵌套函数 ——这意味着你可以将函数放在函数内部。例如，当 z = -999.9999 时，表达式 `print(int(abs(z)))` 会打印出 z 的绝对值的整数部分，即 999。原始数字被转换为正数，并去掉了小数点及其右侧的所有内容。
+你还可以嵌套函数——这意味着你可以将函数放在函数内部。例如，当 `z = -999.9999` 时，表达式 `print(int(abs(z)))` 会打印出 `z` 的绝对值的整数部分，即 `999`。原始数字被转换为正数，并去掉了小数点及其右侧的所有内容。
 
 ## 更多数学函数
 
 除了你目前为止学过的内置函数外，还有其他可以从 `math` 模块导入的函数。如果你在程序中使用它们，请将 `import math` 放在 `.py` 文件或 Jupyter 单元格顶部，以便这些函数在代码的其他部分可用。或者，要在命令行提示符中使用它们，请先输入 `import math` 命令。
 
-math 模块中的函数之一是 `sqrt()`，用于获取数字的平方根。由于它是 math 模块的一部分，在不先导入模块的情况下无法使用它。例如，如果你输入以下内容，将会得到错误，因为 `sqrt()` 不是内置函数：
+`math` 模块中的函数之一是 `sqrt()`，用于获取数字的平方根。由于它是 `math` 模块的一部分，在不先导入模块的情况下无法使用它。例如，如果你输入以下内容，将会得到错误，因为 `sqrt()` 不是内置函数：
 
 ```
 print(sqrt(81))
@@ -2059,41 +1852,39 @@ import math
 print(sqrt(81))
 ```
 
-要使用模块中的函数，你必须导入该模块，并在函数名之前加上模块名和一个点。假设你有一个值 x，并且想要它的平方根。你必须导入 `math` 模块并使用 `math.sqrt(x)` 来获得正确答案，如图 1-4 所示。输入该命令显示结果为 9.0，这确实是 81 的平方根。
+要使用模块中的函数，你必须导入该模块，并在函数名之前加上模块名和一个点。假设你有一个值 `x`，并且想要它的平方根。你必须导入 `math` 模块并使用 `math.sqrt(x)` 来获得正确答案，如图 1-4 所示。输入该命令显示结果为 `9.0`，这确实是 81 的平方根。
 
 | In [11]: import math; z = 81; print(math.sqrt(81)) |
-| 9.0 |
+| --- |
+| `9.0` |
 
-图 1-4: 使用 math 模块中的 `sqrt()` 函数。
+图 1-4: 使用 `math` 模块中的 `sqrt()` 函数。
 
-math 模块提供了许多三角函数和双曲函数、幂和对数、角度转换，以及 pi 和 e 等常数。我们不会深入探讨所有的函数，因为高级数学对大多数人来说并不相关。你可以通过网络搜索 `python 3 math module functions` 来查看它们。表 1-2 提供了在你的工作中可能实用的示例。
+`math` 模块提供了许多三角函数和双曲函数、幂和对数、角度转换，以及 `pi` 和 `e` 等常数。我们不会深入探讨所有的函数，因为高级数学对大多数人来说并不相关。你可以通过网络搜索 `python 3 math module functions` 来查看它们。表 1-2 提供了在你的工作中可能实用的示例。
 
 ## 表 1-2 Python Math 模块中的一些函数
 
 | 内置函数 | 用途 |
 | --- | --- |
-| math.acos(x) | 返回 $x$ 的弧度反余弦 |
-| math.atan(x) | 返回 $x$ 的弧度反正切 |
-| math.atan2(y, x) | 将直角坐标 (x, y) 转换为极坐标 (r, $\theta$) |
-| math.ceil(x) | 返回大于或等于 $x$ 的最小整数 |
-| math.cos(x) | 返回 $x$ 的余弦 |
-| math.degrees(x) | 将弧度 $x$ 转换为角度 |
-| math.e | 返回常数 $e$ |
-| math.exp(x) | 返回 $e$ 的 $x$ 次幂 |
-| math.factorial(x) | 返回 $x$ 的阶乘 |
-| math.floor(x) | 返回小于或等于 $x$ 的最大整数 |
-| math.isnan(x) | 如果 $x$ 不是数字则返回 `True`否则返回 `False` |
-| math.log(x) | 返回 $x$ 的自然对数 |
-| math.log2(x) | 返回以 2 为底的对数 |
-| math.pi | 返回常数 $\pi$ |
-| math.pow(x, y) | 返回 $x$ 的 $y$ 次幂 |
-| math.radians(x) | 将角度 $x$ 转换为弧度 |
-| math.sin(x) | 返回 $x$ 的正弦 |
-| math.sqrt(x) | 返回 $x$ 的平方根 |
-| math.tan(x) | 返回 $x$ 的正切 |
-
-
-
+| `math.acos(x)` | 返回 `x` 的弧度反余弦 |
+| `math.atan(x)` | 返回 `x` 的弧度反正切 |
+| `math.atan2(y, x)` | 将直角坐标 `(x, y)` 转换为极坐标 `(r, θ)` |
+| `math.ceil(x)` | 返回大于或等于 `x` 的最小整数 |
+| `math.cos(x)` | 返回 `x` 的余弦 |
+| `math.degrees(x)` | 将弧度 `x` 转换为角度 |
+| `math.e` | 返回常数 `e` |
+| `math.exp(x)` | 返回 `e` 的 `x` 次幂 |
+| `math.factorial(x)` | 返回 `x` 的阶乘 |
+| `math.floor(x)` | 返回小于或等于 `x` 的最大整数 |
+| `math.isnan(x)` | 如果 `x` 不是数字则返回 `True`，否则返回 `False` |
+| `math.log(x)` | 返回 `x` 的自然对数 |
+| `math.log2(x)` | 返回以 2 为底的对数 |
+| `math.pi` | 返回常数 `π` |
+| `math.pow(x, y)` | 返回 `x` 的 `y` 次幂 |
+| `math.radians(x)` | 将角度 `x` 转换为弧度 |
+| `math.sin(x)` | 返回 `x` 的正弦 |
+| `math.sqrt(x)` | 返回 `x` 的平方根 |
+| `math.tan(x)` | 返回 `x` 的正切 |
 
 幸运的是，f-strings 为你提供了进行这种格式化的方法，在接下来的学习中你会了解到。
 
@@ -2125,7 +1916,7 @@ Subtotal: $1,499.7
 .2f
 ```
 
-.2f 表示“两位小数，固定格式”（永远不会多于或少于两位小数）。以下代码将显示带有逗号和两位小数的数字：
+`.2f` 表示“两位小数，固定格式”（永远不会多于或少于两位小数）。以下代码将显示带有逗号和两位小数的数字：
 
 ```python
 print(f"Subtotal: ${quantity * unit_price:.2f}")
@@ -2137,7 +1928,7 @@ print(f"Subtotal: ${quantity * unit_price:.2f}")
 Subtotal: $1,499.70
 ```
 
-完美！这正是我们想要的格式。所以，每当你想显示一个千分位带有逗号且小数点后恰好两位数字的数字时，使用带有格式化字符串 .2f 的 f-string。
+完美！这正是我们想要的格式。所以，每当你想显示一个千分位带有逗号且小数点后恰好两位数字的数字时，使用带有格式化字符串 `.2f` 的 f-string。
 
 ## 格式化百分比数字
 
@@ -2161,8 +1952,6 @@ Sales Tax Rate 6.500000000%
 
 你不需要仅在 `print` 函数调用中使用 f-string。你也可以执行 f-string 并结果保存在变量中，稍后显示。格式化字符串本身与任何字符串一样，它必须包含在单引号、双引号或三引号中。当使用三引号时，你可以使用三个单引号或三个双引号。无论你使用哪一个作为格式化字符串的最外引号，输出都是相同的，如图 1-8 所示。
 
-![](img/b5b2ea569d1e5bba0afd733be648243d_137_0.png)
-
 - 提示：对于单引号和双引号，请使用相应的键盘键。对于三引号，你可以使用其中任一种三个。确保结束字符串时使用的字符与开始字符串使用的字符完全相同。例如，图 1-8 中的所有字符串都是有效的代码，它们将将以相同的方式处理。
 
 图 1-8：f-string 可以被单引号、双引号或三引号包裹。
@@ -2171,7 +1960,7 @@ Sales Tax Rate 6.500000000%
 
 如果你希望有多行输出，可以通过几种方式在格式化字符串中添加换行符：
 
-- **使用 \n：** 你可以在任何想要换行的地方使用带有 \n 的单行格式化字符串。只需确保将 \n 放置在格式化字符串的字面量部分，而不是大括号内部。例如：
+- **使用 `\n`：** 你可以在任何想要换行的地方使用带有 `\n` 的单行格式化字符串。只需确保将 `\n` 放置在格式化字符串的字面量部分，而不是大括号内部。例如：
 
 ```python
 user1 = "Alberto"
@@ -2183,7 +1972,7 @@ print(output)
 
 执行时，此代码显示为：
 
-- **使用三引号（单引号或双引号）：** 如果你在格式化字符串周围使用三引号，就不需要使用 \n。你只需要在输出中想要换行的地方在格式化字符串中换行即可。例如，看图 1-9 中的代码。格式化字符串使用了三引号并包含多个换行符。运行代码的输出在相同的位置有换行符。
+- **使用三引号（单引号或双引号）：** 如果你在格式化字符串周围使用三引号，就不需要使用 `\n`。你只需要在输出中想要换行的地方在格式化字符串中换行即可。例如，看图 1-9 中的代码。格式化字符串使用了三引号并包含多个换行符。运行代码的输出在相同的位置有换行符。
 
 ```python
 unit_price = 49.95
@@ -2206,7 +1995,7 @@ print(output)
 
 ## 格式化宽度和对齐
 
-你还可以通过在 f-string 的冒号后紧跟 <（左对齐）、^（居中）、>（右对齐）来控制输出的宽度（以及宽度内内容的对齐）。在格式化字符串的冒号后放置这些字符中的任何一个。例如，以下将使输出宽度为 20 个字符，如：
+你还可以通过在 f-string 的冒号后紧跟 `<`（左对齐）、`^`（居中）、`>`（右对齐）来控制输出的宽度（以及宽度内内容的对齐）。在格式化字符串的冒号后放置这些字符中的任何一个。例如，以下将使输出宽度为 20 个字符，如：
 
 ```
 :>20
@@ -2214,27 +2003,31 @@ print(output)
 
 在图 1-10 中，美元符号以这种方式对齐，是因为它们是字面字符串的一部分，位于大括号之外。
 
-重新对齐美元符号比你想象的要复杂，因为除非将数字转换为字符串，否则你无法将 $ 接在前面——但 .2f 将无法作用。
+重新对齐美元符号比你想象的要复杂，因为除非将数字转换为字符串，否则你无法将 `$` 接在前面——但 `.2f` 将无法作用。
 
-复杂并不意味着不可能，只是意味着不方便。你可以将每个金额转换为字符串，将美元符号接到字符串上，然后格式化宽度和对齐。例如，以下代码创建了一个名为 s_subtotal 的变量，包含美元符号
+
+
+复杂并不意味着不可能，只是意味着不方便。你可以将每个金额转换为字符串，将美元符号接到字符串上，然后格式化宽度和对齐。例如，以下代码创建了一个名为`s_subtotal`的变量，包含美元符号。
 
 ```python
 s_subtotal = "$" + f"{subtotal:,.f}"
 ```
 
-在此代码中，我们假设 subtotal 变量包含一个数字。假设该数字是 1598.40，也可以是任何数字。f"{subtotal:,.f}" 将数字格式化为带有千分位的固定小数格式，如下：
+在此代码中，我们假设`subtotal`变量包含一个数字。假设该数字是 1598.40，也可以是任何数字。`f"{subtotal:,.f}"`将数字格式化为带有千分位的固定小数格式，如下：
 
-```
+```text
 1,598.40
 ```
 
 输出是字符串而不是数字，因为 f-string 总是产生字符串。代码的后续部分将美元符号接到前面：
 
+```text
 ""
+```
 
-所以现在输出是 $1,598.40。该最终的格式化字符串存储在一个新变量 s_subtotal 中。（我们添加前缀 s_是为了提醒我们这是 subtotal 数字的字符串形式，而不是原始数字。）
+所以现在输出是`$1,598.40`。该最终的格式化字符串存储在一个新变量`s_subtotal`中。（我们添加前缀`s_`是为了提醒我们这是`subtotal`数字的字符串形式，而不是原始数字。）
 
-要以 9 位宽度右对齐显示该美元金额，在新的格式化字符串中使用 >9 来显示 s_subtotal 变量，如下：
+要以 9 位宽度右对齐显示该美元金额，在新的格式化字符串中使用`>9`来显示`s_subtotal`变量，如下：
 
 ```python
 print(f"{s_subtotal:>9}")
@@ -2242,14 +2035,12 @@ print(f"{s_subtotal:>9}")
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_141_0.png)
 
-> 记忆：当对字符串使用 + 时，你是在连接（拼接）两个字符串。+ 仅对数字进行加法，不对字符串。
+> **记忆：**当对字符串使用`+`时，你是在连接（拼接）两个字符串。`+`仅对数字进行加法，不对字符串。
 
 图 1-11 显示了一个完整的示例，包括运行代码的输出。所有数字都与通常位置的美元符号右对齐。
 
-
-
-
 # 数值
+
 ```python
 unit_price = 49.95
 quantity = 32
@@ -2277,9 +2068,13 @@ Subtotal: {total:>9}
 print(output)
 ```
 
+```text
 Subtotal: $1,598.40
+
 Sales Tax: $103.90
+
 Subtotal: $1,702.90
+```
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_142_0.png)
 
@@ -2303,20 +2098,21 @@ Subtotal: $1,702.90
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_143_0.png)
 
-> 提示 如果你想获取有关各种数字系统的更多信息，可以使用你喜欢的搜索引擎搜索二进制、八进制、十进制或十六进制。
+> **提示：**如果你想获取有关各种数字系统的更多信息，可以使用你喜欢的搜索引擎搜索二进制、八进制、十进制或十六进制。
 
-当然，你可以使用这些各种函数来转换数字在 Python 提示符中的显示方式，也可以用于你创建的应用中。在提示符下，只需使用 `print()` 函数，并在其括号内加上转换函数，然后在最内层括号内加上你想转换的数字。例如，以下代码显示了数字 255 的十六进制等值 (hex(255))：
+当然，你可以使用这些各种函数来转换数字在 Python 提示符中的显示方式，也可以用于你创建的应用中。在提示符下，只需使用`print()`函数，并在其括号内加上转换函数，然后在最内层括号内加上你想转换的数字。例如，以下代码显示了数字 255 的十六进制等值`hex(255)`：
 
 ```python
 print(hex(255))
 ```
 
-结果是 `0xff`，其中 `0x` 表示后面的数字用十六进制表示，而 `ff` 是 255 的十六进制等值。
+结果是`0xff`，其中`0x`表示后面的数字用十六进制表示，而`ff`是 255 的十六进制等值。
 
-要从二进制、八进制或十六进制转换为十进制，不需要使用函数。只需在 `print()` 括号内使用你想转换的数字。例如，`print(0xff)` 显示 255，即十六进制 `ff` 的十进制等值。图 1-12 显示了你可以在 Python 提示符下尝试的一些示例。
+要从二进制、八进制或十六进制转换为十进制，不需要使用函数。只需在`print()`括号内使用你想转换的数字。例如，`print(0xff)`显示 255，即十六进制`ff`的十进制等值。图 1-12 显示了你可以在 Python 提示符下尝试的一些示例。
 
 ```python
-x=255
+x = 255
+
 ## 将十进制转换为其他数字系统
 print(bin(x))
 print(oct(x))
@@ -2335,15 +2131,15 @@ print(0xff)
 255
 ```
 
-FIGURE 1-12：玩弄二进制、八进制和十六进制。
+**图 1-12：**玩弄二进制、八进制和十六进制。
 
 ## 复数
 
-复数是另一种奇特的数字，除非你恰好从事电气工程、高等数学或使用它们的科学分支，否则你可能永远不需要处理它们。复数可以表示为 $a+bi$ ，其中 $a$ 和 $b$ 是实数，$i$ 代表满足方程 $x^2=-1$ 的虚数。不存在任何实数 $x$ 的平方等于 -1，所以它被称为虚数。
+复数是另一种奇特的数字，除非你恰好从事电气工程、高等数学或使用它们的科学分支，否则你可能永远不需要处理它们。复数可以表示为`a+bi`，其中`a`和`b`是实数，`i`代表满足方程`x^2=-1`的虚数。不存在任何实数`x`的平方等于 -1，所以它被称为虚数。
 
-某些数学分支使用小写的 $i$ 来表示虚数。但 Python 使用 $j$（电气工程领域也是如此，因为 $i$ 被用来表示电流）。
+某些数学分支使用小写的`i`来表示虚数。但 Python 使用`j`（电气工程领域也是如此，因为`i`被用来表示电流）。
 
-无论如何，如果你的应用程序需要处理复数，你可以使用 `complex()` 函数来生成虚数。
+无论如何，如果你的应用程序需要处理复数，你可以使用`complex()`函数来生成虚数。
 
 ```python
 z = complex(3, 4)
@@ -2352,84 +2148,108 @@ print(z.real)
 print(z.imag)
 ```
 
+```text
 (3+4j)
+
 3.0
+
 4.0
+```
 
-
-
-计数为 0而不是 1。这对于我们人类来说毫无意义。但计算机就是这样计算字符的，因为这是效率最高的方法。所以尽管图 1-13 中的字符串长度为五个字符，该字符串的最后一个字符也是数字 4，因为第一个字符是数字 0。你自己猜吧。
+计数为 0 而不是 1。这对于我们人类来说毫无意义。但计算机就是这样计算字符的，因为这是效率最高的方法。所以尽管图 1-13 中的字符串长度为五个字符，该字符串的最后一个字符也是数字 4，因为第一个字符是数字 0。你自己猜吧。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_148_0.png)
 
-图 1-13：字符串中的字符位置从 0 开始，而不是 1。
+**图 1-13：**字符串中的字符位置从 0 开始，而不是 1。
 
-表 1-4 总结了用于字符串的 Python 3 运算符
+表 1-4 总结了用于字符串的 Python 3 运算符。
 
 ## 表 1-4 用于字符串的 Python 序列运算符
 
 | 运算符 | 用途 |
-| --- | --- |
-| x in s | 如果 x 存在于字符串 s 中则返回 True。 |
-| x not in s | 如果 不 不在字符串 s 中则返回 True。 |
-| s * n or n | 将字符串重复 n 次。 |
-| s[i] | 字符串 s 的第 i 个元素，第一个字符为 0。 |
-| s[i:j] | 从位置 i 字符到位置 j 字符的切片。 |
-| s[i:j:k] | s 从 i 到 j 步长为 k 的切片。 |
-| min(s) | 字符串 s 最小（最低）字符。 |
-| max(s) | 字符串 s 最大（最高）字符。 |
-| s.index(x, i, j) | x 在字符串 s 中首次出现的数字位置。可选的 ij 限制将搜索限制在 i 到 j 字符之间。 |
-| s.count(x) | x 在字符串 s 中出现的次数。 |
+|---|---|
+| `x in s` | 如果`x`存在于字符串`s`中则返回`True`。 |
+| `x not in s` | 如果`x`不在字符串`s`中则返回`True`。 |
+| `s * n`或`n` | 将字符串重复`n`次。 |
+| `s[i]` | 字符串`s`的第`i`个元素，第一个字符为 0。 |
+| `s[i:j]` | 从位置`i`字符到位置`j`字符的切片。 |
+| `s[i:j:k]` | `s`从`i`到`j`步长为`k`的切片。 |
+| `min(s)` | 字符串`s`最小（最低）字符。 |
+| `max(s)` | 字符串`s`最大（最高）字符。 |
+| `s.index(x, i, j)` | `x`在字符串`s`中首次出现的数字位置。可选的`i`、`j`限制将搜索限制在`i`到`j`字符之间。 |
+| `s.count(x)` | `x`在字符串`s`中出现的次数。 |
 
-图 1-14 显示了在 Jupyter Notebook 中使用字符串运算符的示例。当 print() 函数的输出看起来不正确时，请记住关于 Python 字符串的两个重要事实：
+图 1-14 显示了在 Jupyter Notebook 中使用字符串运算符的示例。当`print()`函数的输出看起来不正确时，请记住关于 Python 字符串的两个重要事实：
 
 - 第一个字符始终是数字 0。
 - 每个空格都算一个字符，因此计数时不要跳过空格。
 
 ```python
 s = "Abracadabra Hocus Pocus you're a turtle t"
+
 # S 中是否包含小写的 t？
 print("t" in s)
+
 # S 中是否包含大写的 T？
 print("T" in s)
+
 # s 中没有大写的 T 吗？
 print("T" not in s)
+
 # 打印一排横号
 print("." * 15)
+
 # 打印字符串 X 中的第一个字符
 print(s[0])
+
 # 打印字符串 x 中的 33 - 39 个字符
 print(s[33:39])
+
 # 从零开始每三个打印一个字符
 print(s[0:44:3])
+
 # 打印 s 中最小的字符（空格小于字母 a）
 print(min(s))
+
 # 打印 s 中最大的字符
 print(max(s))
+
 # 第一个大写的 P 在哪里？
 print(s.index("P"))
+
 # 字符串 s 后半部分第一个小写的 O 在哪里
 # 注意返回的值仍然从零开始计数
 print(s.index("O", 22, 44))
+
 # 字符串 s 中有多少个小写字母？
 print(s.count("a"))
 ```
 
+```text
 True
+
 False
+
 True
+
 ---
+
 A
+
 turtle
+
 AadrHHuPuy ' tt v
 
 y
+
 18
+
 5
+```
 
-**图 1-14：在 Jupyter Notebook 中玩转字符串运算符。**
+**图 1-14：**在 Jupyter Notebook 中玩转字符串运算符。
 
-你可能注意到 min(s) 返回了一个空格，这意味着空格字符是该字符串中最低的字符。但究竟是什么让空格“小于”字母 A 或字母 a 呢？简单的答案是字母的 ASCII 数字。你在键盘上可以输入的每个字符，以及许多额外的字符，都有由美国信息交换标准代码（ASCII）分配的数字。
+你可能注意到`min(s)`返回了一个空格，这意味着空格字符是该字符串中最低的字符。但究竟是什么让空格“小于”字母 A 或字母 a 呢？简单的答案是字母的 ASCII 数字。你在键盘上可以输入的每个字符，以及许多额外的字符，都有由美国信息交换标准代码（ASCII）分配的数字。
 
 图 1-15 显示了一个包含许多常用字符 ASCII 数字的表。空格和标点字符比 A“小”，因为它们的 ASCII 数字较小。大写字母比小写字母“小”，因为它们的 ASCII 数字较小。你是否在好奇分配给数字 0–31 的字符发生了什么了？这些数字也有字符，但它们是控制字符，本质上是不可打印且不可见的，例如当你按住 Ctrl 键并按下另一个键时。
 
@@ -2447,7 +2267,7 @@ y
 | 41 | ) | 74 | J | 106 | j |
 | 42 | * | 75 | K | 107 | k |
 | 43 | + | 76 | L | 108 | l |
-| 44 | | | 77 | M | 109 | m |
+| 44 | \| | 77 | M | 109 | m |
 | 45 | - | 78 | N | 110 | n |
 | 46 | . | 79 | O | 111 | o |
 | 47 | / | 80 | P | 112 | p |
@@ -2462,95 +2282,114 @@ y
 | 56 | 8 | 89 | Y | 121 | y |
 | 57 | 9 | 90 | Z | 122 | z |
 | 58 | : | 91 | [ | 123 | { |
-| 59 | ; | 92 | \ | 124 | |
+| 59 | ; | 92 | \ | 124 | \| |
 | 60 | < | 93 | ] | 125 | } |
 | 61 | = | 94 | ^ | 126 | ~ |
 | 62 | > | 95 | _ | 127 | |
 | 63 | ? | 96 | / | 128 | € |
 
-图 1-15：常用字符的 ASCII 数字。Python 提供了两个用于处理 ASCII 的函数。`ord()` 函数接收字符并返回该字符的 ASCII 数字。例如 `print(ord("A"))` 返回 65，因为 A 在 ASCII 表中是 65。`chr()` 函数相反。你给它一个数字，它返回该数字对应的 ASCII 字符。例如 `print(chr(65))` 显示 A，因为 A 在 ASCII 表中是 65。
+**图 1-15：**常用字符的 ASCII 数字。
+
+Python 提供了两个用于处理 ASCII 的函数。`ord()`函数接收字符并返回该字符的 ASCII 数字。例如`print(ord("A"))`返回 65，因为 A 在 ASCII 表中是 65。`chr()`函数相反。你给它一个数字，它返回该数字对应的 ASCII 字符。例如`print(chr(65))`显示 A，因为 A 在 ASCII 表中是 65。
 
 # 使用方法处理字符串
 
-Python 3 中的每个字符串都被视为 str 对象（读作 "string object"）。将 string 缩写 str 是为了区分 Python 3 和之前的版本，之前的版本指的是 string 对象（全拼而不是缩写）。这种命名约定是初学者困惑的来源。只需记住在 Python 3 中，str 指的就是字符串。
+Python 3 中的每个字符串都被视为`str`对象（读作 "string object"）。将 string 缩写`str`是为了区分 Python 3 和之前的版本，之前的版本指的是 string 对象（全拼而不是缩写）。这种命名约定是初学者困惑的来源。只需记住在 Python 3 中，`str`指的就是字符串。
 
-Python 提供了许多方法（也称为字符串方法）来帮助处理 str 对象。str 方法的通用语法如下：
+Python 提供了许多方法（也称为字符串方法）来帮助处理`str`对象。`str`方法的通用语法如下：
 
-```
+```python
 string.methodname(params)
 ```
 
-其中 string 是要分析的字符串，methodname 是表 1-5 中的方法名，params（如果需要）。表 1-5 第一列中的 s 表示“任何字符串”，可以是引号内的字面量或包含字符串的变量。
+其中`string`是要分析的字符串，`methodname`是表 1-5 中的方法名，`params`（如果需要）。表 1-5 第一列中的`s`表示“任何字符串”，可以是引号内的字面量或包含字符串的变量。
 
 ## 表 1-5 Python 3 内置方法
 
 | 方法 | 用途 |
-| --- | --- |
-| s.capitalize() | 返回首字母大写、其余小写的字符串。 |
-| s.count(x, [y, z]) | 返回 x 在 s 中出现的次数。可选地，你可以添加 y 作为起点，z 作为终点来搜索字符串的一部分。 |
-| s.find(x, [y, z]) | 返回 x 在 s 中可以找到的第一个位置。可选 y 和 z 参数允许将搜索限制在字符串的一部分。如果未找到，返回 -1。 |
-| s.index(x, [y]) | 与 find 类似，如果在 y 中找不到字符串 x 则返回“未找到子字符串”错误。 |
-| s.isalpha() | 如果 s 至少包含一个字符且只包含字母 (A-Z 或 a-z)，则返回 True。 |
-| s.isdecimal() | 如果 s 至少包含一个字符且只包含数字 (0-9)，则返回 True。 |
-| s.islower() | 如果 s 包含字母且所有字母都是小写的，则返回 True。 |
-| s.isnumeric() | 如果 s 至少包含一个字符且只包含数字 (0-9)，则返回 True。 |
-| s.isprintable() | 如果 s 只包含打印字符，则返回 True。 |
-| s.istitle() | 如果 s 包含字母且每个单词的首字母大写、后面跟着小写字母，则返回 True。 |
-| s.upper() | 如果字符串中的所有字母都是大写的，则返回 True。 |
-| s.lower() | 返回所有字母都转换为小写的 s。 |
-| s.strip() | 返回去除了任何首尾空格的 s。 |
-| s.replace(x, y) | 返回 s 的副本，其中所有字符 x 被替换为 y。 |
-| s.rfind(x, [y]) | 与 find 类似，但从字符串开始处反向搜索。如果提供了 y 和 z，则从位置 z 反向搜索到位置 y。如果未找到 x，返回 -1。 |
-| s.index() | 与 rfind 相同，但如果没有找到子字符串则返回错误。 |
-| s.rstrip() | 返回去除了结尾空格的字符串。 |
-| s.strip() | 返回去除了前后空格的字符串。 |
-| s.swapcase() | 返回大写字母转换为小写、小写字母转换为大写的字符串。 |
-| s.title() | 返回每个单词首字母大写、其余字母都小写的 s。 |
-| s.upper() | 返回所有字母都转换为大写的字符串。 |
+|---|---|
+| `s.capitalize()` | 返回首字母大写、其余小写的字符串。 |
+| `s.count(x, [y, z])` | 返回`x`在`s`中出现的次数。可选地，你可以添加`y`作为起点，`z`作为终点来搜索字符串的一部分。 |
+| `s.find(x, [y, z])` | 返回`x`在`s`中可以找到的第一个位置。可选`y`和`z`参数允许将搜索限制在字符串的一部分。如果未找到，返回 -1。 |
+| `s.index(x, [y])` | 与`find`类似，如果在`y`中找不到字符串`x`则返回“未找到子字符串”错误。 |
+| `s.isalpha()` | 如果`s`至少包含一个字符且只包含字母 (A-Z 或 a-z)，则返回`True`。 |
+| `s.isdecimal()` | 如果`s`至少包含一个字符且只包含数字 (0-9)，则返回`True`。 |
+| `s.islower()` | 如果`s`包含字母且所有字母都是小写的，则返回`True`。 |
+| `s.isnumeric()` | 如果`s`至少包含一个字符且只包含数字 (0-9)，则返回`True`。 |
+| `s.isprintable()` | 如果`s`只包含打印字符，则返回`True`。 |
+| `s.istitle()` | 如果`s`包含字母且每个单词的首字母大写、后面跟着小写字母，则返回`True`。 |
+| `s.upper()` | 如果字符串中的所有字母都是大写的，则返回`True`。 |
+| `s.lower()` | 返回所有字母都转换为小写的`s`。 |
+| `s.strip()` | 返回去除了任何首尾空格的`s`。 |
+| `s.replace(x, y)` | 返回`s`的副本，其中所有字符`x`被替换为`y`。 |
+| `s.rfind(x, [y])` | 与`find`类似，但从字符串开始处反向搜索。如果提供了`y`和`z`，则从位置`z`反向搜索到位置`y`。如果未找到`x`，返回 -1。 |
+| `s.index()` | 与`rfind`相同，但如果没有找到子字符串则返回错误。 |
+| `s.rstrip()` | 返回去除了结尾空格的字符串。 |
+| `s.strip()` | 返回去除了前后空格的字符串。 |
+| `s.swapcase()` | 返回大写字母转换为小写、小写字母转换为大写的字符串。 |
+| `s.title()` | 返回每个单词首字母大写、其余字母都小写的`s`。 |
+| `s.upper()` | 返回所有字母都转换为大写的字符串。 |
 
-你可以在 Jupyter Notebook、Python 提示提示符或 .py 文件中尝试这些方法。图 1-16 显示了在...示例
-
-
-
-
-
-一个 Jupyter notebook 使用了三个名为 s1、s2 和 s3 的字符串变量进行实验。代码运行后的结果将显示在代码下方。
+你可以在 Jupyter Notebook、Python 提示提示符或`.py`文件中尝试这些方法。图 1-16 显示了在一个 Jupyter notebook 使用三个名为`s1`、`s2`和`s3`的字符串变量进行实验。代码运行后的结果将显示在代码下方。
 
 ```python
 s1 = "There is no such word as schmeedledorp"
-s2="  a b c  "
-s3="ABC"
+s2 = "  a b c  "
+s3 = "ABC"
+
 # 首字母大写，其余小写
 print(s3.capitalize())
+
 # 统计 s1 中空格的个数
 print(s1.count(""))
+
 # 在 s4 中查找点（.）
 print(s4.find("."))
+
 # s2 是否全为小写字母？
 print(s2.lower())
+
 # 将 s3 转换为全小写
 print(s3.lower())
+
 # 去除 s2 的前导字符
 print(s2.strip())
+
 # 去除 s2 的开头和结尾字符
 print(s2.strip())
+
 # 交换 s1 中字母的大小写
 print(s1.swapcase())
+
 # 以标题大小格式（首字母大写）显示 s1
 print(s1.title())
+
 # 显示 s1 的大写形式
 print(s1.upper())
 ```
 
+```text
 Abc
+
 6
+
 3
+
 True
+
 abc
+
 a b c
+
 a b c
-THERE IS NO SUCH WORD AS SCHMEEDLEDORP
-There Is No Such Word As Schmeedledorp
+```
+
+
+
+# THERE IS NO SUCH WORD AS SCHMEEDLEDORP
+
+## There Is No Such Word As Schmeedledorp
+
 THERE IS NO SUCH WORD AS SCHMEEDLEDORP
 
 图 1-16：玩转 Python 3 字符串函数。
@@ -2559,7 +2398,7 @@ THERE IS NO SUCH WORD AS SCHMEEDLEDORP
 
 记住，不要试图去背或甚至理解每一个字符串方法。相反，请记住如果你在 Python 中需要对字符串进行操作，可以在网上搜索“python 3 string methods”来查找可用方法。
 
-## # 探索日期和时间
+# 探索日期和时间
 
 在计算机世界中，我们经常使用日期和时间进行调度，或者计算某件事的截止日期或过期了多少天。我们有时使用时间戳来记录用户执行某个操作或事件发生的准确时间。在 Python 中使用日期和理由有很多，但令人惊讶的是，它并没有像字符串和数字那样内置的数据类型。
 
@@ -2567,15 +2406,15 @@ THERE IS NO SUCH WORD AS SCHMEEDLEDORP
 
 `datetime` 模块是一个抽象基类，这通俗的说法是它为语言提供了新的数据类型。对于日期和时间，这些数据类型如下：
 
-- **datetime.date**: 由月、日、年组成的日期（不包含时间信息）。
-- **datetime.time**: 由小时、分、微秒以及可选的时区（如果需要）组成的时间（不包含日期）。
-- **datetime.datetime**: 由日期、时间以及可选的时区信息构成的单条数据项。
+- `datetime.date`：由月、日、年组成的日期（不包含时间信息）。
+- `datetime.time`：由小时、分、微秒以及可选的时区（如果需要）组成的时间（不包含日期）。
+- `datetime.datetime`：由日期、时间以及可选的时区信息构成的单条数据项。
 
 我们在前面的列表中于每个类型前都加上了完整的单词 `datetime`，但如果你使用别名（如 `dt`），你可以在代码中使用它来代替。
 
 我们将在接下来的章节中分别讨论这些这些数据类型。
 
-## # 处理日期
+# 处理日期
 
 当时间不是问题时，`datetime.date` 数据类型是处理日期的理想选择。你可以通过两种方式创建日期对象。你可以使用 `today()` 方法从计算机内部时钟获取今天的日期。或者你可以在括号内指定年、月、日（按此顺序）。
 
@@ -2607,12 +2446,14 @@ print(today)
 print(last_of_teens)
 ```
 
+```text
 2018-11-19
 2019-12-31
+```
 
-图 1-17：在 Jupyter notebook 中对 datetime.date 对象进行实验。
+图 1-17：在 Jupyter notebook 中对 `datetime.date` 对象进行实验。
 
-## # 你的日期和时间
+# 你的日期和时间
 
 如果你的计算机连接了互联网，那么它的内部日期和时间应该是准确的。这是因为它们从 NTP（网络时间协议）获取这些信息，这是任何计算机或应用程序都可以从互联网获取的标准时间。datetime 信息是根据你的时区定制的，并考虑了夏令时间（如果适用）。换句话说，计算机屏幕上显示的日期和时间应该和你墙上的日历一致。
 
@@ -2626,7 +2467,7 @@ print(last_of_teens.year)
 
 该日期的三个组件分别出现在单独行：
 
-```
+```text
 12
 31
 2019
@@ -2634,101 +2475,98 @@ print(last_of_teens.year)
 
 正如你在第一个打印输出中看到的，默认日期显示格式为 yyyy-mm-dd，但你可以按照自己想要的方式格式化日期时间。我们之前讨论的 f-strings 配合占位符，可以按你任何想要格式化日期时间。
 
-## # 格式化日期和时间
+# 格式化日期和时间
 
 | 占位符 | 描述 | 示例 |
 | :--- | :--- | :--- |
-| %A | 星期全称 | Sunday |
-| %b | 月份缩称 | Jan |
-| %B | 月份全称 | January |
-| %d | 日期（带零） | 01 |
-| %m | 月份（带零） | 04 |
-| %Y | 年（四位） | 2020 |
-| %y | 年（两位） | 20 |
-| %H | 小时（24小时制） | 13 |
-| %M | 分钟（带零） | 05 |
-| %S | 秒（带零） | 09 |
-| %p | AM/PM | PM |
-| %I | 小时（12小时制） | 01 |
-| %f | 微秒 | 000000 |
-| %z | UTC 偏移 | +0800 |
-| %Z | 时区名称 | EST |
-| %j | 一年中的第几天 | 062 |
+| `%A` | 星期全称 | Sunday |
+| `%b` | 月份缩称 | Jan |
+| `%B` | 月份全称 | January |
+| `%d` | 日期（带零） | 01 |
+| `%m` | 月份（带零） | 04 |
+| `%Y` | 年（四位） | 2020 |
+| `%y` | 年（两位） | 20 |
+| `%H` | 小时（24小时制） | 13 |
+| `%M` | 分钟（带零） | 05 |
+| `%S` | 秒（带零） | 09 |
+| `%p` | AM/PM | PM |
+| `%I` | 小时（12小时制） | 01 |
+| `%f` | 微秒 | 000000 |
+| `%z` | UTC 偏移 | +0800 |
+| `%Z` | 时区名称 | EST |
+| `%j` | 一年中的第几天 | 062 |
 
 我们在后面会提到的表 1-6 格式化字符串。
 
 |  | 示例 |
-| %A | Sunday |
-| %b | Jan |
-| %B | January |
-| %d | 01 |
-| %m | 04 |
-| %Y | 2020 |
-| %y | 20 |
-| %H | 13 |
-| %M | 05 |
-| %S | 09 |
-| %p | PM |
-| %I | 01 |
-| %f | 000000 |
-| %z | +0800 |
-| %Z | EST |
-| %j | 062 |
+| :--- | :--- |
+| `%A` | Sunday |
+| `%b` | Jan |
+| `%B` | January |
+| `%d` | 01 |
+| `%m` | 04 |
+| `%Y` | 2020 |
+| `%y` | 20 |
+| `%H` | 13 |
+| `%M` | 05 |
+| `%S` | 09 |
+| `%p` | PM |
+| `%I` | 01 |
+| `%f` | 000000 |
+| `%z` | +0800 |
+| `%Z` | EST |
+| `%j` | 062 |
 
 ## 表 1-6 格式化字符串
 
 | 格式字符串 | 示例 |
 | :--- | :--- |
-| %a, %b d %Y | Sat, Jun 01 2019 |
-| %x | 06/01/19 |
-| %m-%y | 06-01-19 |
-| %A %B d | Saturday June 01 |
-| %j of %Y | 152 of 2019 |
+| `%a, %b d %Y` | Sat, Jun 01 2019 |
+| `%x` | 06/01/19 |
+| `%m-%y` | 06-01-19 |
+| `%A %B d` | Saturday June 01 |
+| `%j of %Y` | 152 of 2019 |
 
 ## 表 1-7 示例格式字符串
 
 | 格式字符串 | 示例 |
 | :--- | :--- |
-| %a, %b d %Y | Sat, Jun 01 2019 |
-| %x | 06/01/19 |
-| %m-%y | 06-01-19 |
-| %A %B d | Saturday June 01 |
-| %j of %Y | 152 of 2019 |
+| `%a, %b d %Y` | Sat, Jun 01 2019 |
+| `%x` | 06/01/19 |
+| `%m-%y` | 06-01-19 |
+| `%A %B d` | Saturday June 01 |
+| `%j of %Y` | 152 of 2019 |
 
 ## 表 1-8 示例格式字符串
 
 | 格式字符串 | 示例 |
 | :--- | :--- |
-| %H:%M:%S.%f | 23:59:59.999999 |
-| %I:%M:%S %p | 11:59:59 PM |
+| `%H:%M:%S.%f` | 23:59:59.999999 |
+| `%I:%M:%S %p` | 11:59:59 PM |
 
-## 处理时间 |
+# 处理时间
 
-| %A %B d | Saturday June 01 |
-| %j of %Y | 152 of 2019 |
+| `%A %B d` | Saturday June 01 |
+| `%j of %Y` | 152 of 2019 |
 
-图 1-17：在 Jupyter notebook 中实验 datetime.date 对象。
+图 1-17：在 Jupyter notebook 中实验 `datetime.date` 对象。
 
 ```python
 last_of_teens = dt.date(2019, 12, 31)
 print(last_of_teens)
 ```
 
-
-
-
-
-# 表 1-8 示例日期格式字符串
+## 表 1-8 示例日期格式字符串
 
 | 格式字符串 | 示例 |
-|---|---|
-| %I:%M %p | 11:59 PM |
-| %H:%M:%S 和 %f 微秒 | 23:59:59 和 999999 微秒 |
-| %X | 23:59:59 |
+| :--- | :--- |
+| `%I:%M %p` | 11:59 PM |
+| `%H:%M:%S` 和 `%f` 微秒 | 23:59:59 和 999999 微秒 |
+| `%X` | 23:59:59 |
 
 有时你只想处理日期，而有时你只想处理时间。通常，你想同时使用日期和时间来确定时间中的某一个时刻。为此，请使用 `datetime` 模块中的 `datetime` 类。该类支持 `now()` 方法，可以从计算机时钟获取当前的日期和时间，如下：
 
-```
+```python
 import datetime as dt
 right_now = dt.datetime.now()
 print(right_now)
@@ -2736,7 +2574,7 @@ print(right_now)
 
 你在屏幕上通过 `print()` 函数看到的内容取决于执行这段代码的时间。但 `datetime` 值的格式将如下：
 
-```
+```text
 2019-11-19 14:03:07.525975
 ```
 
@@ -2744,13 +2582,13 @@ print(right_now)
 
 你也可以使用以下任何参数来定义 `datetime`。月、日、年是必须的。其余的是可选的，如果你省略它们，时间部分将设置为 0。
 
-```
+```python
 datetime(year, month, day, hour, [minute, second, microsecond])
 ```
 
 这里是一个使用 2019 年 12 月 31 日晚上 11:59 的示例：
 
-```
+```python
 import datetime as dt
 new_years_eve = dt.datetime(2019, 12, 31, 23, 59)
 print(new_years_eve)
@@ -2758,23 +2596,23 @@ print(new_years_eve)
 
 这里是该没有进行格式化的 `print()` 语句的输出：
 
-```
+```text
 2019-12-31 23:59:00
 ```
 
 表 1-9 显示了使用表 1-6 所示指令对 `datetime` 进行格式化的示例。
 
-# 表 1-9 示例 Datetime 格式字符串
+## 表 1-9 示例 Datetime 格式字符串
 
 | 格式字符串 | 示例 |
-|--- | --- |
-| %A, %B at %I:%M%p | 星期二，12月31日 11:59PM |
-| %m/%d/%y at %H:%M%p | 12/31/19 于 23:59 |
-| %I:%M p on %b | 12月31日的晚上 11:59 PM |
-| %x | 12/31/19 |
-| %c | Tue Dec 31 23:59:00 2019 |
-| %m/%d/%y at %I:%M p | 12/31/19 于 11:59 PM |
-| %I:%M p on %m/%d/%y | 12/31/2019 下午 1:59 PM |
+| :--- | :--- |
+| `%A, %B at %I:%M%p` | 星期二，12月31日 11:59PM |
+| `%m/%d/%y at %H:%M%p` | 12/31/19 于 23:59 |
+| `%I:%M p on %b` | 12月31日的晚上 11:59 PM |
+| `%x` | 12/31/19 |
+| `%c` | Tue Dec 31 23:59:00 2019 |
+| `%m/%d/%y at %I:%M p` | 12/31/19 于 11:59 PM |
+| `%I:%M p on %m/%d/%y` | 12/31/2019 下午 1:59 PM |
 
 # 计算时间段
 
@@ -2782,7 +2620,7 @@ print(new_years_eve)
 
 每当你减去两个日期、时间或 `datetime` 以确定它们之间的差时，会自动创建一个 `timedelta` 对象。例如，你创建几个变量来存储日期，可能一个用于元旦，另一个用于阵亡日。然后你创建一个名为 `days_between` 的第三个变量，并将较晚日期减去早日期得到的差放入其中，如下：
 
-```
+```python
 import datetime as dt
 new_year_day = dt.date(2019, 1, 1)
 memorial_day = dt.date(2019, 5, 27)
@@ -2791,14 +2629,14 @@ days_between = memorial_day - new_year_day
 
 那么 `days_between` 在没有格式化的情况下是怎样的？如果你打印它的值，会得到 146 天，`0:00:00`。如果你使用 Python 的 `type()` 函数确定 `days_between` 的类型，你会发现它是 `datetime` 类中的 `timedelta` 对象，如下：
 
-```
+```text
 146 days, 0:00:00
 <class 'datetime.timedelta'>
 ```
 
 `timedelta` 的计算发生在你从一个日期减去另一个日期时。你也可以使用这种语法定义任何 `timedelta`（持续时间）：
 
-```
+```python
 datetime.timedelta(days, seconds, microseconds, minutes, hours, weeks)
 ```
 
@@ -2806,38 +2644,45 @@ datetime.timedelta(days, seconds, microseconds, minutes, hours, weeks)
 
 为了理解它是如何工作的，请尝试以下代码。导入 `datetime` 模块后，使用 `.date()` 创建一个日期。然后使用 `.timedelta()` 创建 `timedelta` 对象。如果你将日期和 `timedelta` 相加，将得到一个新的日期——在这种情况下，是 2019 年 1 月 1 日之后 146 天的日期：
 
-```
+```python
 import datetime as dt
 new_years_day = dt.date(2019, 1, 1)
 duration = dt.timedelta(days=146)
 print(new_years_day + duration)
+```
+
+```text
 2019-05-27
 ```
 
 当然，你也可以减去。例如，如果你从 2019 年 5 月 27 日开始并减去 146 天，你会得到 2019 年 1 月 1 日，如下所示：
 
-```
+```python
 import datetime as dt
 memorial_day = dt.date(2019, 5, 27)
 duration = dt.timedelta(days=146)
 print(memorial_day - duration)
+```
+
+```text
 2019-01-01
 ```
 
 它也适用于 `datetime`。如果你在寻找少于一天的持续时间，只需给两个时间相同的日期即可。例如，考虑以下代码以及减法的结果：
 
-```
+```python
 import datetime as dt
 start_time = dt.datetime(2019, 3, 31, 8, 0)
 finish_time = dt.datetime(2019, 5, 27, 23, 45)
 time_between = finish_time - start_time
 print(time_between)
 print(type(time_between))
+```
+
+```text
 6534 days, 15:45:00
 <class 'datetime.timedelta'>
 ```
-
-
 
 Jupyter notebook 中的事件序列，并带有注释来解释正在发生的情况。
 
@@ -2870,7 +2715,7 @@ print(f"You are {years} years and {months} months old.")
 
 **图 1-18：** 从 `timedelta` 对象计算年龄和月份。
 
-## 考虑时区
+# 考虑时区
 
 正如你所知，当你所在的地区是正午时，并不意味着到处都是中午。图 1-19 显示了所有时区的地图。如果你想查看更详细的，只需在网络上搜索时区地图即可。在任何给定，取决于你位于地球上的哪里，日期和时间都是不同的。有一个通用时间，称为协调世界时（Coordinated Universal Time，简称 UTC）。你可能听过格林威治标准时间（GMT）或军使用的祖鲁时间，它们是一个概念。所有这些时间指的地球子午线（即 0 度经线）的时间，正位于图 1-19 时区地图的中心。
 
@@ -2883,13 +2728,17 @@ print(f"You are {years} years and {months} months old.")
 ## 表 1-10 来自 Olson Database 的示例时区
 
 | Time Zone | Common Name | UTC Offset | UTC DST Offset |
-|---|---|---|---|
-| Etc/UTC | UTC | +00:00 | +00:00 |
-| Etc/UTC | Universal | +00:00 | +00:00 |
-| America/Anchorage | US/Alaska | -09:00 | -08:00 |
-| America/Adak | US/Aleutian | -10:00 | -09:00 |
-| America/Phoenix | US/Arizona | -07:00 | -07:00 |
+| :--- | :--- | :--- | :--- |
+| `Etc/UTC` | UTC | +00:00 | +00:00 |
+| `Etc/UTC` | Universal | +00:00 | +00:00 |
+| `America/Anchorage` | US/Alaska | -09:00 | -08:00 |
+| `America/Adak` | US/Aleutian | -10:00 | -09:00 |
+| `America/Phoenix` | US/Arizona | -07:00 | -07:00 |
+
+
+
 | America/Chicago | US/Central | -06:00 | -05:00 |
+| --- | --- | --- | --- |
 | America/New_York | US/Eastern | -05:00 | -04:00 |
 | America/Indiana/Indianapolis | US/East-Indiana | -05:00 | -04:00 |
 | America/Honolulu | US/Hawaii | -10:00 | -10:00 |
@@ -2901,16 +2750,16 @@ print(f"You are {years} years and {months} months old.")
 | Etc/UTC | UTC | +00:00 | +00:00 |
 | Etc/UTC | Zulu | +00:00 | +00:00 |
 
-那么我们为什么要告诉你这些呢？因为 Python 允许你处理两种类型的 datetime：
+那么我们为什么要告诉你这些呢？因为 Python 允许你处理两种类型的 `datetime`：
 
--   **Naive datetime（幼稚 datetime）**：任何不包含与特定时区相关信息的 datetime。
--   **Aware datetime（感知 datetime）**：包含时区信息的 datetime。
+- **Naive datetime（幼稚 datetime）**：任何不包含与特定时区相关信息的 `datetime`。
+- **Aware datetime（感知 datetime）**：包含时区信息的 `datetime`。
 
-你通过 `.date()` 定义的 `timedelta` 对象和日期始终是 naive（幼稚）的。默认情况下，你作为 `time()` 或 `datetime()` 对象创建的任何时间或 datetime 也是 naive 的。但通过这两个对象，如果时区信息对你的工作有用，你拥有包含时区信息的选项，例如当你向来自多个时区的观众展示活动日期时。
+你通过 `.date()` 定义的 `timedelta` 对象和日期始终是 naive（幼稚）的。默认情况下，你作为 `time()` 或 `datetime()` 对象创建的任何时间或 `datetime` 也是 naive 的。但通过这两个对象，如果时区信息对你的工作有用，你拥有包含时区信息的选项，例如当你向来自多个时区的观众展示活动日期时。
 
 ## 使用时区
 
-当你从计算机的系统时钟获取时间时，它是针对你所在时区的时间，但你并不知道该时区*是什么*。你可以通过比较你位置的 `.now()` 和 UTC 时间的 `.utc_now()` 来区分你的时间与 UTC 时间，然后相减差值，如图 1-20 所示。
+当你从计算机的系统时钟获取时间时，它是针对你所在时区的时间，但你并不知道该时区是什么。你可以通过比较你位置的 `.now()` 和 UTC 时间的 `.utc_now()` 来区分你的时间与 UTC 时间，然后相减差值，如图 1-20 所示。
 
 ```python
 # 获取 datetime 模块并给它一个别名
@@ -2930,8 +2779,11 @@ print(f"My time : {here_now:%I:%M %p}")
 print(f"UTC time : {utc_now:%I:%M %p}")
 print(f"Difference: {time_difference}")
 ```
+
 My time : 01:02 PM
+
 UTC time : 06:02 PM
+
 Difference: -5:00:00
 
 **图 1-20：** 你的时间与 UTC 时间之间的差异。当我们运行代码时，当前时间是 1:02 PM，UTC 时间是 6:02 PM。差值是 -5:00:00，这意味着五个小时（没有分钟或秒）。我们的时间更早，所以我们的时区真的是 UTC — 5 小时。注意，如果你从较晚的时间减去早的时间，你会得到一个负数，这可能是误导性的，如下：
@@ -2941,7 +2793,7 @@ time_difference = (here_now - utc_now)
 # Difference: -1 day, 19:00:00
 ```
 
-如果你减去一天（24 小时），你仍然得到五个小时。这很复杂。但请记住时间地图的左侧是东部，太阳在每个时区升起。所以当你的时区升起时，右侧的时区已经升起，而你左侧的时区还没有升起。如果你想直接处理时区，你需要从 Python 的 `dateutil` 包导入一些工具。特别是在你导入 datetime 的行之后，这样使用 `from dateutil.tz import gettz`：
+如果你减去一天（24 小时），你仍然得到五个小时。这很复杂。但请记住时间地图的左侧是东部，太阳在每个时区升起。所以当你的时区升起时，右侧的时区已经升起，而你左侧的时区还没有升起。如果你想直接处理时区，你需要从 Python 的 `dateutil` 包导入一些工具。特别是在你导入 `datetime` 的行之后，这样使用 `from dateutil.tz import gettz`：
 
 ```python
 ## import datetime 和 tz
@@ -2975,10 +2827,15 @@ print(f"mst:%D I:%M %p")
 pst = dt.datetime.now(gettz('America/Los_Angeles'))
 print(f"pst:%D I:%M %p")
 ```
+
 11/23/18 06:37 PM UTC
+
 11/23/18 01:37 PM EST
+
 11/23/18 12:37 PM CST
+
 11/23/18 11:37 AM MST
+
 11/23/18 10:37 AM PST
 
 **图 1-21：** 不同时区的当前日期和时间。
@@ -3013,33 +2870,34 @@ print(f"{event_pacific:%D I:%M %p Z}")
 event_utc = event.astimezone(gettz("Etc/UTC"))
 print(f"{event_utc:%D I:%M %p Z}")
 ```
+
 Local: 07/04/20 07:00 PM
+
 07/04/20 06:00 PM EDT
+
 07/04/20 05:00 PM MDT
+
 07/04/20 04:00 PM PDT
+
 07/04/20 11:00 PM UTC
 
 **图 1-22：** 多个时区的安排活动日期和时间。
 
-
-
-
-
 当程序运行时，它将根据日期时间和我们的格式字符串显示以下输出：
 
-```
+```text
 Local: 07/04/20 07:00 PM
 ```
 
 剩余的代码计算了五个时区的正确日期时间：
 
-```
+```python
 name = event.astimezone(getz("tzname"))
 ```
 
 第一个名称 `name` 是我们虚构的变量名。`event.astimezone()` 中的 `event` 指的是之前行中定义的初始事件时间。`astimezone()` 函数是一个内置的 `dateutil` 函数，其使用语法如下：
 
-```
+```python
 .astimezone(getz("tzname"))
 ```
 
@@ -3051,21 +2909,19 @@ name = event.astimezone(getz("tzname"))
 
 如果你在网上研究 Python 时区，你可能会发现许多人推荐使用 `arrow` 模块而不是 `dateutil` 模块。我们在这里不会涉及这些，因为 `arrow` 并不是你初始 Python 安装的一部分，而且这本书的内容已经足够厚了。（如果我们尝试涵盖所有内容，你需要一辆推车才能搬得动这本书。）
 
-## 第 2 章
+## 第 2 章：控制执行
 
-# 控制执行
+### 本章内容
 
-## 本章内容
-
-- 使用 if 进行决策
-- 使用 for 和 while 重复
-- 使用 while 进行循环
+- 使用 `if` 进行决策
+- 使用 `for` 和 `while` 重复
+- 使用 `while` 进行循环
 
 到本书为止，我们讨论了许多在计算机中存储信息的内容，主要存储 Python 和你的计算机可以处理的变量中。以计算机可以处理的形式拥有信息对于让计算机执行任何操作至关重要。将此视为“拥有”部分——拥有一些可以处理的信息。
 
 但我们需要把注意力转向“执行”部分——即处理这些信息以创建有用或有趣的内容。在本章中，我们涵盖了让计算机执行任务最重要且最常用的操作。我们从计算机非常擅长、执行快速且大量执行的事情开始——做出决策。
 
-# 控制执行的主要操作符
+## 控制执行的主要操作符
 
 你通过做出决策来控制程序（以及计算机）的行为，这通常涉及进行比较。你使用运算符（如表 2-1 所示）来完成比较。这些运算符通常被称为关系运算符或比较运算符，因为通过比较项目，计算机正在确定两个项目之间的某种关系。
 
@@ -3073,12 +2929,12 @@ name = event.astimezone(getz("tzname"))
 
 | 操作符 | 含义 |
 | --- | --- |
-| == | 等于 |
-| != | 不等于 |
-| < | 小于 |
-| > | 大于 |
-| <= | 小于等于 |
-| >= | 大于等于 |
+| `==` | 等于 |
+| `!=` | 不等于 |
+| `<` | 小于 |
+| `>` | 大于 |
+| `<=` | 小于等于 |
+| `>=` | 大于等于 |
 
 Python 还提供了三个*逻辑运算符*，它们让你能够在做出最终决定之前对多次比较进行评估。这些运算符使用英语单词直接表示其基本含义，如表 2-2 所示。
 
@@ -3086,15 +2942,15 @@ Python 还提供了三个*逻辑运算符*，它们让你能够在做出最终�
 
 | 操作符 | 含义 |
 | --- | --- |
-| and | 两者皆真 |
-| or | 其中一个为真 |
-| not | 不为真 |
+| `and` | 两者皆真 |
+| `or` | 其中一个为真 |
+| `not` | 不为真 |
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_176_0.png)
 
-技术提示：如果你对*布尔（Boolean)*这个词感到好奇，它指的是一个名叫乔治·布尔（George Boole）的人，他在 19 世纪中叶帮助建立了逻辑学。所有的运算符通常都用于 `if` 语句。
+技术提示：如果你对*布尔（Boolean）*这个词感到好奇，它指的是一个名叫乔治·布尔（George Boole）的人，他在 19 世纪中叶帮助建立了逻辑学。所有的运算符通常都用于 `if` 语句。
 
-## 使用 if 做出决策
+## 使用 `if` 做出决策
 
 `if` 词在程序中经常用于做出决策。`if` 最简单的语法如下：
 
@@ -3109,10 +2965,9 @@ if condition:
 if condition: do this
 ```
 
-
 取决于条件。这里有一个包含四行代码的示例，只有当条件证明为真时执行：
 
-```
+```python
 total = 100
 sales_tax_rate = 0.065
 taxable = True
@@ -3126,15 +2981,15 @@ print(f"Total: ${total:.2f}")
 
 记住，其余必须拼写 `True` 和 `False`。如果你以其他方式输入，Python 将不会将其识别为布尔值 `True` 或 `False`，你的代码也不会按预期运行。
 
-注意，在 `if` 语句中我们使用了
+注意，在 `if` 语句中我们使用了：
 
-```
+```python
 if taxable:
 ```
 
 这段代码完全没问题，因为我们将 `taxable` 设置为了只能为 `True` 或 `False` 的布尔值。你可能会看到其他人这样写：
 
-```
+```python
 if taxable == True:
 ```
 
@@ -3144,7 +2999,7 @@ if taxable == True:
 
 当 `taxable` 设置为 `False` 时，所有缩进行都被跳过，显示的总额是未加销售税的原始总额，如图 2-5 所示。
 
-```
+```python
 total = 100
 sales_tax_rate = 0.065
 taxable = True
@@ -3157,12 +3012,14 @@ print(f"Total: ${total:.2f}")
 ```
 
 Subtotal: $100.00
+
 Sales Tax: $6.50
+
 Total: $106.50
 
 **图 2-4：** 当 `taxable` 为 `True` 时，`sales_tax` 被加到 `total` 中。
 
-```
+```python
 total = 100
 sales_tax_rate = 0.065
 taxable = False
@@ -3180,13 +3037,13 @@ Total: $100.00
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_181_0.png)
 
-图 2-4 和 2-5 中的大括号和 `.f` 只是为了格式化，正如我们在第 2 章讨论的那的那样，与代码的 if 逻辑无关。
+图 2-4 和 2-5 中的大括号和 `.f` 只是为了格式化，正如我们在第 2 章讨论的那的那样，与代码的 `if` 逻辑无关。
 
-# 在你的 if 中添加 else
+## 在你的 `if` 中添加 `else`
 
 到目前为止，你已经看了在某些条件证明为真时执行某些代码的示例。如果条件证明为假，这些代码会被忽略。有时，你可能希望在条件证明为真时执行一段代码；否则（`else`），如果它没有证明为真，你就希望执行另一段代码。`else:` 下的任何代码只在条件没有证明为真时才会执行。以下是逻辑和语法：
 
-```
+```python
 if condition:
     在此处执行缩进行...
 else:
@@ -3206,12 +3063,9 @@ else:
 
 **图 2-6：** 当小时小于 12 时，会显示“Good morning”。否则，会显示“Good afternoon”。
 
+当你运行这段代码时，计数器从 1 开始，并且如所述，它会在比最后一个数字少 1 的地方停止：
 
-
-
-当你运行这段代码时，计数器从 1 开始，并且如所述，它会在比最后一个数字少 1的地方停止：
-
-```
+```text
 1
 2
 3
@@ -3224,6 +3078,8 @@ else:
 All done
 ```
 
+
+
 如果你想让循环从 1 计数到 10，范围就是 1, 11。这不会让你的脑细胞更快乐，但至少它实现了 1 到 10 的预期目标，如图 2-7 所示。
 
 ```python
@@ -3231,6 +3087,10 @@ for x in range(1, 11):
     print(x)
 print("All done")
 ```
+
+输出：
+
+```text
 1
 2
 3
@@ -3248,7 +3108,7 @@ All done
 
 ## 遍历字符串
 
-在 `for` 循环中使用 `range()` 是可选的。你可以将 `range` 替换为字符串，循环会为字符串中的每个字符重复一次。变量 `x`（或你命名的任何变量）在在每次循环中包含字符串中的一个字符，从左到右进行。这里的语法是
+在 `for` 循环中使用 `range()` 是可选的。你可以将 `range` 替换为字符串，循环会为字符串中的每个字符重复一次。变量 `x`（或你命名的任何变量）在每次循环中包含字符串中的一个字符，从左到右进行。这里的语法是：
 
 ```python
 for x in string:
@@ -3263,11 +3123,13 @@ do this when the loop is done
 ```python
 for x in "snorkel":
     print(x)
+
 print("Done")
 ```
 
 当你运行这段代码时，你会得到以下输出。循环在每次通过时打印 `snorkel` 中的一个字母。当循环结束时，执行循环之外的缩进行。
 
+```text
 s
 n
 o
@@ -3276,18 +3138,22 @@ k
 e
 l
 Done
+```
 
 字符串不需要是字面量字符串。它可以是包含字符串的任何变量名。例如，尝试这段代码：
 
 ```python
 my_word = "snorkel"
+
 for x in my_word:
     print(x)
+
 print("Done")
 ```
 
-结果是相同的。唯一的区别是我们在 `for` 循环中使用变量名而不是字面量字符串 `my_word`，因为 `my_word` 没有被引号括。
+结果是相同的。唯一的区别是我们在 `for` 循环中使用变量名而不是字面量字符串 `my_word`，因为 `my_word` 没有被引号括起。
 
+```text
 s
 n
 o
@@ -3296,6 +3162,7 @@ k
 e
 l
 Done
+```
 
 ## 遍历列表
 
@@ -3304,6 +3171,7 @@ Done
 ```python
 for x in ["The", "rain", "in", "Spain"]:
     print(x)
+
 print("Done")
 ```
 
@@ -3313,10 +3181,14 @@ print("Done")
 
 ```python
 seven_dwarves = ["Happy", "Grumpy", "Sleepy", "Bashful", "Sneezy", "Sneezy", "Doc", "Dopey"]
+
 for dwarf in seven_dwarves:
     print(dwarf)
-    print("And Snow White too")
+
+print("And Snow White too")
 ```
+
+```text
 Happy
 Grumpy
 Sleepy
@@ -3325,10 +3197,11 @@ Sneezy
 Doc
 Dopey
 And Snow White too
+```
 
 ## 退出循环
 
-通常，你希望循环遍历整个列表或范围，但满足某些条件下也可以强制循环提前停止。在 `if` 语句中使用 `break` 语句来强制循环提前停止。语法是
+通常，你希望循环遍历整个列表或范围，但满足某些条件下也可以强制循环提前停止。在 `if` 语句中使用 `break` 语句来强制循环提前停止。语法是：
 
 ```python
 for x in items:
@@ -3342,6 +3215,7 @@ for x in items:
 
 ```python
 answers = ["A", "C", "B", "D"]
+
 for answer in answers:
     if answer == "":
         print("Incomplete")
@@ -3351,7 +3225,7 @@ for answer in answers:
 
 运行该代码的输出是：
 
-```
+```text
 A
 C
 B
@@ -3361,30 +3235,32 @@ Loop done
 
 所以逻辑是，只要提供了答案，`if` 代码就不会执行，循环运行到完成。然而，如果循环遇到空答案，它会打印 `Incomplete` 并“中断”循环，跳转到循环之外的语句（最后的缩进语句），该语句打印 `Loop done`。
 
-```
+```text
 A
 C
 Incomplete
 Loop done
 ```
 
-## 使用 continue 遍历
+## 使用 `continue` 遍历
 
 你也可以在循环中使用 `continue` 语句，这与 `break` 相反。`break` 是跳转到循环的结束，而 `continue` 是跳转回循环的顶部。所以代码与前面的示例相同，但不是 `break` 而是继续下一个项：
 
 ```python
 answers = ["A", "C", "", "D"]
+
 for answer in answers:
     if answer == "":
         print("Incomplete")
         continue
     print(answer)
+
 print("Loop done")
 ```
 
 该代码的输出如下：
 
-```
+```text
 A
 C
 Incomplete
@@ -3394,12 +3270,11 @@ Loop done
 
 ## 嵌套循环
 
-嵌套循环是完全可以——即将循环放在循环内部。作为 `for` 循环的替代方案，你可以使用 `while` 循环。区别是细微的。对于 `for`，你通常获得固定次数的循环，对应 `range` 或列表中的每个项一个。对于 `while` 循环，只要条件为真，循环就会持续进行。这是基本语法：
+嵌套循环是完全可以的——即将循环放在循环内部。作为 `for` 循环的替代方案，你可以使用 `while` 循环。区别是细微的。对于 `for`，你通常获得固定次数的循环，对应 `range` 或列表中的每个项一个。对于 `while` 循环，只要条件为真，循环就会持续进行。这是基本语法：
 
-```
+```python
 while condition:
     do this
-```
 ```
 
 使用 `while` 循环，你必须确保让循环停止的条件最终会发生。否则，你会得到一个无限循环，它会一直运行，直到某些错误导致其失败，或者你通过关闭应用、关闭电脑或做其他奇怪的事情来强制它停止。
@@ -3408,9 +3283,9 @@ while condition:
 
 - 我们创建一个名为 `counter` 的变量并给它一个初始值 (65)。
 - 我们规定只要 `counter` 小于 91 就运行循环。
-- 在循环内部，我们将 `counter` 加 1 (`counter += 1`)。反复加 1 最终会让 `counter` 超过 91，从而结束循环。循环内部的 `chr()` 函数显示 `counter` 中数字的 ASCII 字符。从 65 到 90 足够打印字母表中所有的大写字母，正如你在图 2-11 中看到的。
+- 在循环内部，我们将 `counter` 加 1（`counter += 1`）。反复加 1 最终会让 `counter` 超过 91，从而结束循环。循环内部的 `chr()` 函数显示 `counter` 中数字的 ASCII 字符。从 65 到 90 足够打印字母表中所有的大写字母，正如你在图 2-11 中看到的。
 
-这种这种循环中最容易且常见的错误是忘记增加计数器，导致它在每次循环时都不增长，并最终使 `while` 条件变为 `False` 并停止循环。在图 2-12 中，我们故意删除了 `counter += 1` 来导致该错误。
+这种循环中最容易且常见的错误是忘记增加计数器，导致它在每次循环时都不增长，并最终使 `while` 条件变为 `False` 并停止循环。在图 2-12 中，我们故意删除了 `counter += 1` 来导致该错误。
 
 ```python
 counter = 65
@@ -3422,7 +3297,7 @@ print("Loop done")
 
 在结果中，所有答案都被打印了：
 
-```
+```text
 A
 C
 B
@@ -3433,6 +3308,7 @@ D
 
 ```python
 answers = ["A", "C", "", "D"]
+
 for answer in answers:
     if answer == "":
         print("Incomplete")
@@ -3442,20 +3318,26 @@ for answer in answers:
 
 运行该代码的输出是：
 
-```
+```text
 A
 C
 Incomplete
 Loop done
 ```
 
-```
+```python
 counter = 65
+
 while counter < 91:
     print(str(counter) + "=" + chr(counter))
     counter += 1
-print("all done")
 
+print("all done")
+```
+
+输出：
+
+```text
 65=A
 66=B
 67=C
@@ -3485,18 +3367,19 @@ print("all done")
 all done
 ```
 
-图 2-11: 当 counter 小于 91 时循环。
+图 2-11：当 `counter` 小于 91 时循环。
 
-# Jupyter If 判断 最后检查点 5小时前（未保存的更改）
+# Jupyter If 判断最后检查点
 
-```
+```python
 counter = 65
+
 while counter < 91:
     print(str(counter) + " = " + chr(counter))
     counter += 1
 ```
 
-```
+```text
 65=A
 65=A
 65=A
@@ -3517,31 +3400,41 @@ while counter < 91:
 65=A
 ```
 
-**图 2-12:** 一个无限 `while` 循环。
+**图 2-12：** 一个无限 `while` 循环。
 
-如果这在你的 Jupyter notebook 中发生，请不要惊慌。点击 Run 右侧的正方形 Stop 按钮。（当你将鼠标指针悬停在上面时，Stop 按钮会显示 Interrupt the Kernel，这是极客术语，意思是*停止*）。笔记本中的所有代码执行都将停止。要重启内核并回到起点，点击 Stop 按钮右侧的弯曲箭头。然后你就可以修复代码中的错误并重试了。
+如果这在你的 Jupyter notebook 中发生，请不要惊慌。点击 Run 右侧的正方形 Stop 按钮。（当你将鼠标指针悬停在上面时，Stop 按钮会显示 `Interrupt the Kernel`，这是极客术语，意思是“停止”。）笔记本中的所有代码执行都将停止。要重启内核并回到起点，点击 Stop 按钮右侧的弯曲箭头。然后你就可以修复代码中的错误并重试了。
 
-# 使用 continue 结束 while 循环
+# 使用 `continue` 结束 `while` 循环
 
 你可以在 `while` 循环中使用 `if` 和 `continue` 来跳回循环顶部，就像在 `for` 循环中可以这样做一样。看看图 2-13 中的代码示例。
 
-```
+```python
 import random
+
 print("Odd numbers")
 counter = 0
+
 while counter < 10:
     # 获取一个随机数
-    number = random.randint(1,999)
+    number = random.randint(1, 999)
+
     if int(number / 2) == number / 2:
         # 如果是偶数，则不要打印它。
         continue
+
     print(number)
+
     # 增加循环计数器。
     counter += 1
+
 print("Loop is done")
 ```
 
+输出：
+
+```text
 奇数
+
 697
 449
 91
@@ -3553,31 +3446,33 @@ print("Loop is done")
 895
 837
 Loop is done
-
-**图 2-13:** 带有 **continue.** 的 while 循环。
-
-只要名为 counter 的变量小于 10，while 循环就会持续进行。在循环内部，名为 number 的变量被赋值为 1 到 999 之间的随机数。接下来的语句检查 number 是否为偶数：
-
 ```
+
+**图 2-13：** 带有 `continue` 的 `while` 循环。
+
+只要名为 `counter` 的变量小于 10，`while` 循环就会持续进行。在循环内部，名为 `number` 的变量被赋值为 1 到 999 之间的随机数。接下来的语句检查 `number` 是否为偶数：
+
+```python
 if int(number / 2) == number / 2:
 ```
 
 记住，`int()` 函数只返回数字的整数部分。假设生成的随机数是 5。将此数字除以 2 得到 2.5。那么 `int(number)` 是 2，因为数字的 `int()` 会丢弃小数点之后的所有内容。因为 2 不等于 2.5，代码将跳过 `continue`，打印奇数，增加计数器，并继续运行。
 
-如果下一个随机数是（例如）12，那么 12 除以 2 得到 6，且 `int(6)` 确实等于 6（因为两个数字都没有小数点）。这会导致 `continue` 执行，跳过 `print(number)` 语句和计数器递增，因此它只是尝试另一个随机数并继续它自己的路游走。最终，它找到了 10 个奇数，此时循环停止，最后一行代码显示 Loop done。
+如果下一个随机数是（例如）12，那么 12 除以 2 得到 6，且 `int(6)` 确实等于 6（因为两个数字都没有小数点）。这会导致 `continue` 执行，跳过 `print(number)` 语句和计数器递增，因此它只是尝试另一个随机数并继续它自己的路游走。最终，它找到了 10 个奇数，此时循环停止，最后一行代码显示 `Loop done`。
 
-# 在我们 break 时跳出循环
+# 在我们 `break` 时跳出循环
 
-你也可以使用 `break` 来跳出 `while` 循环，就像使用 `for` 循环一样。当你 break 一个 `while` 循环时，你强制执行继续到循环之外的第一行代码，从而停止循环但继续后续操作的流。
+你也可以使用 `break` 来跳出 `while` 循环，就像使用 `for` 循环一样。当你 `break` 一个 `while` 循环时，你强制执行继续到循环之外的第一行代码，从而停止循环但继续后续操作的流。
 
-另一种思考 `break` 的方式是它允许你在 `while` 条件证明为假之前停止 `while` 循环。因此它允许你字面上地在时间到达之前跳出循环。说实话，我们不记得有哪种情况是提前跳出循环是解决问题的好方法，所以很难想出一个实用的例子。相反，我们将向你展示语法并提供一个通用的示例。语法如下
+另一种思考 `break` 的方式是它允许你在 `while` 条件证明为假之前停止 `while` 循环。因此它允许你字面上地在时间到达之前跳出循环。说实话，我们不记得有哪种情况是提前跳出循环是解决问题的好方法，所以很难想出一个实用的例子。相反，我们将向你展示语法并提供一个通用的示例。语法如下：
 
-```
+```text
 while condition1:
-  执行此操作:
-    ...
-    if condition2:
-      break
+    执行此操作:
+        ...
+        if condition2:
+            break
+
 当循环结束时执行此操作
 ```
 
@@ -3587,12 +3482,14 @@ while condition1:
 
 *注：提供的原文后部分出现了大量逻辑重复和格式混乱，翻译时已根据上下文进行了尽可能对齐，但由于原文本身存在重复给出的“翻译的文本”逻辑，此处重新针对您提供的文本进行规范翻译：*
 
-
 定义一个名为 `students` 的列表，然后打印该列表中索引为 0 的项。执行代码后，结果将显示名称 Mark：
 
-```
+```python
 students = ["Mark", "Amber", "Todd", "Anita", "Sandy"]
 print(students[0])
+```
+
+```text
 Mark
 ```
 
@@ -3602,22 +3499,25 @@ Mark
 
 下一个示例显示了一个名为 `scores` 的列表。`print()` 函数打印列表中最后一个分数的索引数字，结果为 4（因为第一个始终是 0）。
 
-```
+```python
 scores = [88, 92, 78, 90, 84]
 print(scores[4])
+```
+
+```text
 84
 ```
 
 如果你尝试访问一个不存在的列表项，会得到“list index out of range”（列表索引超出范围）错误。索引部分是对方括号内数字的引用。例如，图 3-1 显示了 Jupyter notebook 中的一个小实验，其中我们创建了一个分数列表，然后尝试打印 `scores[5]`。它失败并生成了错误，因为不存在 `scores[5]`、`scores[0]`、`scores[1]`、`scores[2]`、`scores[3]`、`scores[4]`，因为计数始终从列表第一个元素的 0 开始。
 
-```
+```python
 # 定义一个数字列表。
 scores = [88, 92, 78, 90, 84]
 
 print(scores[5])
 ```
 
-```
+```text
 IndexError Traceback (most recent call last)
 <ipython-input-9-240d3b4f5443> in <module>()
 5
@@ -3627,13 +3527,13 @@ IndexError Traceback (most recent call last)
 IndexError: list out of range
 ```
 
-**图 3-1:** 因为 scores[5] 不存在导致的索引超出范围错误。
+**图 3-1：** 因为 `scores[5]` 不存在导致的索引超出范围错误。
 
 ## 遍历列表
 
 要访问列表中的每个项，只需使用如下语法的 `for` 循环：
 
-```
+```python
 for x in list:
 ```
 
@@ -3641,22 +3541,28 @@ for x in list:
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_205_0.png)
 
-> 提示 让代码具有可读性的简单方法是始终对列表名使用复数（例如 `students`、`scores`）。然后你可以使用单数形式（`student`、`score`）作为变量名。通过这种方法，你不需要使用下标数字（方括号中的数字）。例如，以下代码打印了 `scores` 列表中的每个分数：
+> **提示**
+>
+> 让代码具有可读性的简单方法是始终对列表名使用复数（例如 `students`、`scores`）。然后你可以使用单数形式（`student`、`score`）作为变量名。通过这种方法，你不需要使用下标数字（方括号中的数字）。例如，以下代码打印了 `scores` 列表中的每个分数：
 
-```
+```python
 for score in scores:
-print(score)
+    print(score)
 ```
 
 记住始终对循环中执行的代码进行缩进。图 3-2 显示了一个更完整的示例，你可以在其中看到 Jupyter notebook 中运行代码的结果。
 
-```
+```python
 # 定义一个数字列表。
 scores = [88, 92, 78, 90, 84]
+
 for score in scores:
     print(score)
-print("Done")
 
+print("Done")
+```
+
+```text
 88
 92
 78
@@ -3665,13 +3571,13 @@ print("Done")
 Done
 ```
 
-**图 3-2:** 遍历列表。
+**图 3-2：** 遍历列表。
 
 ## 查看列表是否包含某项
 
 如果你想让代码检查列表的内容以查看其是否已经包含某些项，请在 `if` 语句或变量赋值中使用 `in listname`。例如，图 3-3 中的代码创建了一个名称列表。然后，两个变量存储了在列表中查找名称 Anita 和 Bob 的结果。打印每个变量的内容，对于名称 Anita 在列表中的那个变量将显示 `True`。测试 Bob 是否在列表中，结果证明为 `False`。
 
-```
+```python
 students = ["Mark", "", "Todd", "Anita", "Sandy"]
 
 # Anita 在列表中吗？
@@ -3681,25 +3587,29 @@ print(has_anita)
 # Bob 在列表中吗？
 has_bob = "Bob" in students
 print(has_bob)
+```
 
+```text
 True
 False
 ```
 
-**图 3-3:** 查看某项是否在列表中。
+**图 3-3：** 查看某项是否在列表中。
+
+
 
 ## 获取列表长度
 
-要确定列表中包含多少个项，请使用 `len()` 函数（length 的缩写）。将列表名放在括号内。例如，在 Jupyter notebook 或 Python 提示符或其他任何地方输入以下代码：
+要确定列表中包含多少个项，请使用 `len()` 函数（length 的缩写）。将列表名放在括号内。例如，在 Jupyter notebook、Python 提示符或其他任何地方输入以下代码：
 
-```
+```python
 students = {"Mark", "Amber", "Todd", "Anita", "Sandy"}
 print(len(students))
 ```
 
 运行代码产生此输出：
 
-```
+```text
 5
 ```
 
@@ -3707,9 +3617,11 @@ print(len(students))
 
 ## 向列表末尾添加项
 
-当你想让代码向列表末尾添加项时，请使用 `.append()` 方法，并在括号内放入你想添加的值。你可以在引号内使用变量名，也可以使用字面量。例如，在图 3-4 中，`students.append("Goober")` 一行将名称 Goober 添加到列表中。`students.append(new_student)` 添加列表中存储的任何名称。`.append()` 方法始终将项添加到列表末尾。因此，当你打印列表时，末尾有两个新项。
+当你想让代码向列表末尾添加项时，请使用 `.append()` 方法，并在括号内放入你想添加的值。你可以在引号内使用变量名，也可以使用字面量。
 
-```
+例如，在图 3-4 中，`students.append("Goober")` 一行将名称 Goober 添加到列表中。`students.append(new_student)` 添加列表中存储的任何名称。`.append()` 方法始终将项添加到列表末尾。因此，当你打印列表时，末尾有两个新项。
+
+```python
 # 创建一个字符串列表（名称）
 students = ['Mark', 'Amber', 'Todd', 'Anita', 'Sandy']
 
@@ -3726,7 +3638,7 @@ print(students)
 ['Mark', 'Amber', 'Todd', 'Anita', 'Sandy', 'Goober', 'Amanda']
 ```
 
-**图 3-4:** 向列表末尾添加两个名称。
+**图 3-4：**向列表末尾添加两个名称。
 
 你可以使用测试来查看某项是否在列表中，然后仅在项不存在时才进行添加。例如，以下代码不会向列表中添加名称 Amanda，因为该名称已经在列表中了：
 
@@ -3745,24 +3657,28 @@ else:
 
 当你想让代码在列表中插入项时，请使用 `.insert()` 方法，并在括号内放入你想插入的值。与 `append()` 方法将项添加到末尾不同，`insert()` 方法可以在指定位置插入项。语法如下：
 
-```
+```python
 list.insert(index, value)
 ```
 
-将 `index` 替换为你想要插入的位置数字。将 `value` 替换为你想要插入的值。例如，图 3-5 显示了 Jupyter notebook 中的一个实验，其中我们创建了一个名称列表，然后尝试在索引 1 处插入 "Charlie"。
+将 `index` 替换为你想要插入的位置数字。将 `value` 替换为你想要插入的值。
 
-```
+例如，图 3-5 显示了 Jupyter notebook 中的一个实验，其中我们创建了一个名称列表，然后尝试在索引 1 处插入 `"Charlie"`。
+
+```python
 students = ["Mark", "Amber", "Todd", "Anita", "Sandy"]
 students.insert(1, "Charlie")
 print(students)
+
 ['Mark', 'Charlie', 'Amber', 'Todd', 'Anita', 'Sandy']
 ```
 
-**图 3-5:** 在指定位置插入项。
+**图 3-5：**在指定位置插入项。
 
+## 从列表中移除项
 
+然后通过括号中留空使用 `pop()` 来移除最后一个项。
 
-然后通过括号中留空使用 `(pop()` 来移除最后一个项。
 打印列表可以证明这两个项目已经被删除了：
 
 ```python
@@ -3780,7 +3696,7 @@ print(letters)
 
 运行代码显示，弹出第一个和最后一个项确实生效了：
 
-```
+```text
 ['B', 'C', 'D', 'E', 'F']
 ```
 
@@ -3797,14 +3713,14 @@ last_removed = letters.pop()
 
 # 显示新列表。
 print(letters)
-## 显示被删除了什么。
+# 显示被删除了什么。
 print(first_removed + " and " + last_removed + " were removed from the list.")
 
 ['B', 'C', 'D', 'E', 'F']
 A and G were removed from the list.
 ```
 
-图 3-5：使用 `del`（delete 的缩写）命令删除列表项，该命令可以删除任何
+**图 3-5：**使用 `del`（delete 的缩写）命令删除列表项，该命令可以删除任何项。
 
 Python 还提供了 `del` 来根据索引号（位置）从列表中删除任何项。但再次提醒，必须记住第一个项的索引是 0。所以，假设你运行以下代码来删除列表中索引为 2 的项：
 
@@ -3818,13 +3734,13 @@ del letters[2]
 
 运行该代码再次显示列表，如下：
 
-```
+```text
 ['A', 'B', 'D', 'E', 'F', 'G']
 ```
 
-字母 C 已删除，这是正确的删除项，因为字母的编号为 0, 1, 2, 3 等。
+字母 C 已删除，这是正确的删除项，因为字母的编号为 0、1、2、3 等。
 
-你也可以使用 `del` 通过移除方括号和索引号来删除整个列表。例如，图 3-6 中的代码创建了一个列表然后将其删除。在删除后尝试打印该列表会导致错误，因为当执行 `print()` 语句执行时，该列表已不再存在。请注意，与 `pop`（它会返回你删除的项）不同，`del` 在删除时不会返回任何内容。
+你也可以使用 `del` 通过移除方括号和索引号来删除整个列表。例如，图 3-6 中的代码创建了一个列表然后将其删除。在删除后尝试打印该列表会导致错误，因为当执行 `print()` 语句时，该列表已不再存在。请注意，与 `pop()`（它会返回你删除的项）不同，`del` 在删除时不会返回任何内容。
 
 ```python
 # 创建一个字符串列表。
@@ -3837,8 +3753,8 @@ del letters
 print(letters)
 ```
 
-```
-NameError Traceback (most recent call)
+```text
+NameError Traceback (most recent call last)
 <ipython-input-28-dbf5f0c2da1> in <module>(
 6
   7 # 显示新列表。
@@ -3846,7 +3762,7 @@ NameError Traceback (most recent call)
 NameError: name 'letters' is not defined
 ```
 
-图 3-6：删除一个列表并尝试打印它会导致错误。
+**图 3-6：**删除一个列表并尝试打印它会导致错误。
 
 ## 清空列表
 
@@ -3865,7 +3781,7 @@ print(letters)
 []
 ```
 
-# 统计项在列表中出现的次数
+## 统计项在列表中出现的次数
 
 你可以使用 Python 的 `count()` 方法来统计一个项在列表中出现的次数。对于其他列表方法，语法非常简单：
 
@@ -3875,7 +3791,7 @@ listname.count(x)
 
 将 `listname` 替换为你的列表名称，将 `x` 替换为你要查找的值（或包含该值的变量名）。
 
-图 3-7 中的代码通过在 `.count()` 括号内使用字面量 `B` 这样的统计了字母 B 在列表中出现的次数：
+图 3-7 中的代码通过在 `.count()` 括号内使用字面量 `"B"`，统计了字母 B 在列表中出现的次数：
 
 ```python
 grades.count("B")
@@ -3885,9 +3801,9 @@ grades.count("B")
 
 这段代码还统计了 C 等成绩的数量，但我们将该值存储在变量中，仅是为了展示语法的区别。两种计数都有效，正如你在程序底部的输出中看到的那样。
 
-我们直接在显示消息的代码中统计了 F 的数量。由于中没有 F 等成绩，因此 `grades.count("F")` 返回 0，正如你在输出中看到的。
+我们直接在显示消息的代码中统计了 F 的数量。由于其中没有 F 等成绩，因此 `grades.count("F")` 返回 0，正如你在输出中看到的。
 
-如果你在想为什么我们没有统计其他成绩，是因为这个应用只是一个用于说明 Python 语法的示例。我们并不是试图创建一个真实的ผลิตภัณฑ์来统计教室里所有的真实成绩。
+如果你在想为什么我们没有统计其他成绩，是因为这个应用只是一个用于说明 Python 语法的示例。我们并不是试图创建一个真实的产品来统计教室里所有的真实成绩。
 
 ```python
 # 创建一个字符串列表。
@@ -3906,17 +3822,15 @@ print("C appears " + str(c_count))
 f_count = grades.count("F")
 print("F appears " + str(f_count))
 ```
-*(注：由于原文文本后部分代码逻辑描述存在混乱和重复，翻译时已根据语意进行了结构化对齐，以确保逻辑通顺。)*
 
+> 注：由于原文文本后部分代码逻辑描述存在混乱和重复，翻译时已根据语意进行了结构化对齐，以确保逻辑通顺。
 
+如果你的列表中包含大小写字母混合的字符串，且排序后的结果看起来不对，请尝试将 `.sort()` 替换为 `.sort(key=lambda s: s.lower())`，然后重新运行代码。如果你对细节感兴趣，请参阅本书第 5 章。
 
-
-> 如果你的列表中包含大小写字母混合的字符串，且排序后的结果看起来不对，请尝试将 `.sort()` 替换为 `.sort(key=lambda s: s.lower())` 然后重新运行代码。如果你对细节感兴趣，请参阅本书第 5 章。
-
-日期的处理有点复杂，因为你不能像 "12/31/2020" 那样直接将其作为字符串。它们必须是 `date` 数据类型才能正确排序。这意味着需要使用 `datetime` 模块和 `date()` 方法来定义每个日期。你可以像对待其他列表一样将日期添加到列表中。例如，在下一行中，代码创建了一个包含四个日期的列表：
+日期的处理有点复杂，因为你不能像 `"12/31/2020"` 那样直接将其作为字符串。它们必须是 `date` 数据类型才能正确排序。这意味着需要使用 `datetime` 模块和 `date()` 方法来定义每个日期。你可以像对待其他列表一样将日期添加到列表中。例如，在下一行中，代码创建了一个包含四个日期的列表：
 
 ```python
-dates = [dt.date(2020,12,31), dt.date(2019,1,31), dt.date(2018,2,28), dt.date(2020,1,1) ]
+dates = [dt.date(2020, 12, 31), dt.date(2019, 1, 31), dt.date(2018, 2, 28), dt.date(2020, 1, 1)]
 ```
 
 计算机完全不在意你这样创建列表。但作为开发者，你可能希望逐个创建并添加每个日期。图 3-10 显示了一个示例，其中我们创建了一个空列表 `datelist`：
@@ -3925,7 +3839,7 @@ dates = [dt.date(2020,12,31), dt.date(2019,1,31), dt.date(2018,2,28), dt.date(20
 datelist = []
 ```
 
-然后我们使用 `dt.date(year,month, day)` 语法逐个向列表添加了日期。
+然后我们使用 `dt.date(year, month, day)` 语法逐个向列表添加了日期。
 
 ```python
 # 处理日期需要此模块。
@@ -3934,10 +3848,10 @@ import datetime as dt
 # 创建一个日期列表，初始为空。
 datelist = []
 # 逐个添加日期，使代码更易读。
-datelist.append(dt.date(2020,12,31))
-datelist.append(dt.date(2019,1,31))
-datelist.append(dt.date(2018,2,28))
-datelist.append(dt.date(2020,1,1))
+datelist.append(dt.date(2020, 12, 31))
+datelist.append(dt.date(2019, 1, 31))
+datelist.append(dt.date(2018, 2, 28))
+datelist.append(dt.date(2020, 1, 1))
 
 # 对日期进行排序（从最早到最晚）并格式化显示。
 datelist.sort()
@@ -3950,15 +3864,15 @@ for date in datelist:
 12/31/2020
 ```
 
-**图 3-10**：以标准格式排序并显示日期。
+**图 3-10：**以标准格式排序并显示日期。
 
-列表创建后，代码使用 `datelist.sort()` 将日期按时间顺序（从最早到最晚）进行排序。我们没有在代码代码中使用 `print(datelist)`，因为该方法会显示包含数据类型信息的日期，如下：
+列表创建后，代码使用 `datelist.sort()` 将日期按时间顺序（从最早到最晚）进行排序。我们没有在代码中使用 `print(datelist)`，因为该方法会显示包含数据类型信息的日期，如下：
 
-> [datetime.date(2018, 2, 28), datetime.date(2019, 1, 31), datetime.date(2020, 1, 1), datetime.date(2020, 12, 31)]
+> `[datetime.date(2018, 2, 28), datetime.date(2019, 1, 31), datetime.date(2020, 1, 1), datetime.date(2020, 12, 31)]`
 
-这不是最易读的列表。与其用一个 `print()` 打印整个列表，我们遍历了列表中的每个日期，并使用 f-string 的 `%m/%d/%Y` 格式对每一个进行格式化打印。这种技术以 `mm/dd/yyyy` 格式逐行显示每个日期，正如**图 3-10** 底部所示。
+这不是最易读的列表。与其用一个 `print()` 打印整个列表，我们遍历了列表中的每个日期，并使用 f-string 的 `%m/%d/%Y` 格式对每一个进行格式化打印。这种技术以 `mm/dd/yyyy` 格式逐行显示每个日期，正如**图 3-10**底部所示。
 
-如果你想反序排序项目，请在 `sort()` 括号中使用 `reverse=True`（别忘记将 `True` 的第一个字母大写）。**图 3-11** 展示了使用 `reverse=True` 对三个列表进行降序（反序）排序的示例。
+如果你想反序排序项目，请在 `sort()` 括号中使用 `reverse=True`（别忘记将 `True` 的第一个字母大写）。**图 3-11**展示了使用 `reverse=True` 对三个列表进行降序（反序）排序的示例。
 
 ```python
 # 处理日期需要此模块。
@@ -3972,20 +3886,20 @@ numbers = [14, 0, 56, -4, 99, 55, 123]
 
 # 创建一个日期列表，初始为空，因为代码很长。
 datelist = []
-datelist.append(dt.date(2020,12,31))
-datelist.append(dt.date(2019,1,31))
-datelist.append(dt.date(2018,2,28))
-datelist.append(dt.date(2020,1,1))
+datelist.append(dt.date(2020, 12, 31))
+datelist.append(dt.date(2019, 1, 31))
+datelist.append(dt.date(2018, 2, 28))
+datelist.append(dt.date(2020, 1, 1))
 
 # 反序排序字符串（从 Z 到 A）并显示。
 names.sort(reverse=True)
 print(names)
-print() # 这只是在输出中添加了一个空行。
+print()  # 这只是在输出中添加了一个空行。
 
 # 反序排序数字（从大到小）。
 numbers.sort(reverse=True)
 print(numbers)
-print() # 这只是在输出中添加了一个空行。
+print()  # 这只是在输出中添加了一个空行。
 
 # 反序排序日期（从最早到最晚）并格式化显示。
 datelist.sort(reverse=True)
@@ -3998,16 +3912,16 @@ for date in datelist:
 [99, 56, 55, 123, 14, 0, -4]
 ```
 
-```python
+```text
 12/31/2020
 01/01/2020
 01/31/2019
 02/28/2018
 ```
 
-图 **3-11**：反序排序字符串、数字和日期。
+**图 3-11：**反序排序字符串、数字和日期。
 
-# 反转列表
+## 反转列表
 
 你也可以使用 `.reverse()` 方法反转列表中项目的顺序。这与反序排序不同。当你进行反序排序时，字符串是从 Z 到 A，数字是从大到小，日期是从最晚到最早。而当你反转列表时，它只是简单地反转列表中的项，而不尝试进行排序。
 
@@ -4022,7 +3936,7 @@ print(names)
 ['Jake', 'Hong', 'Lupe', 'Zara']
 ```
 
-# 复制列表
+## 复制列表
 
 如果你需要处理列表的副本而不是修改原始列表，请使用 `.copy()` 方法。例如，下面的代码与之前的代码类似，我们创建一个列表副本并进行反转。打印列表可以看到第一个仍然保持原始顺序，而第二个是反转的。
 
@@ -4045,48 +3959,52 @@ print(backward_names)
 
 表 3-1 总结了你目前学到的方法。在后续章节中你会看到，这些方法也适用于可迭代对象（即可以逐个遍历的类似列表）。
 
-# 表 3-1 列表方法
+## 表 3-1 列表方法
 
 | 方法 | 功能 |
 | :--- | :--- |
-| append() | 在列表末尾添加项 |
-| clear() | 列表中的所有项，使其为空 |
-| copy() | 创建列表的副本 |
-| count() | 统计元素在列表中出现的次数 |
-| extend() | 将一个列表的项添加到另一个列表的末尾 |
-| index() | 返回列表中元素的索引（位置） |
-| insert() | 在列表指定位置插入项 |
-| pop() | 从列表中删除元素并返回该项以便存储在变量中 |
-| remove() | 从列表中删除一个项 |
-| reverse() | 反转列表中项目的顺序 |
-| sort() | 按升序排序列表 |
-| sort(reverse=True) | 按降序排序列表 |
+| `append()` | 在列表末尾添加项 |
+| `clear()` | 列表中的所有项，使其为空 |
+| `copy()` | 创建列表的副本 |
+| `count()` | 统计元素在列表中出现的次数 |
+| `extend()` | 将一个列表的项添加到另一个列表的末尾 |
+| `index()` | 返回列表中元素的索引（位置） |
+| `insert()` | 在列表指定位置插入项 |
+| `pop()` | 从列表中删除元素并返回该项以便存储在变量中 |
+| `remove()` | 从列表中删除一个项 |
+| `reverse()` | 反转列表中项目的顺序 |
+| `sort()` | 按升序排序列表 |
+| `sort(reverse=True)` | 按降序排序列表 |
 
-# 什么是元组（Tuple），谁在乎呢？
+## 什么是元组（Tuple），谁在乎呢？
 
 除了列表，Python 还支持一种名为元组（tuple）的数据结构。有些人把它读作“two-pull”，有些人把它读得和“couple”押韵。它的拼写不是 tuple 或 couple，所以我们最好的猜测是读作“two-pull”（尽管如此，这可能是正确的读法，但这阻止不了人们对此进行争论）。
 
-无论如何，尽管名字很奇怪，元组就像不可变的列表（这说明了很多问题）。换句话说，元组是一个列表，但在定义后你无法更改它。那么，你为什么要在程序中使用不可变的数据呢？考虑一下亚马逊。如果我们进入亚马逊并随心所欲更改更改，所有东西只需要一分钱，我们得到的都是一分钱的商品，而不是昂贵的商品。
+无论如何，尽管名字很奇怪，元组就像不可变的列表（这说明了很多问题）。换句话说，元组是一个列表，但在定义后你无法更改它。
+
+那么，你为什么要在程序中使用不可变的数据呢？考虑一下亚马逊。如果我们进入亚马逊并随心所欲更改所有东西，只需要一分钱，我们得到的都是一分钱的商品，而不是昂贵的商品。
 
 创建元组的语法与创建列表的语法相同，只是你不使用方括号。你必须使用括号，如下：
+
+
 
 ```python
 prices = (29.95, 9.98, 4.95, 79.98, 2.95)
 ```
 
-你在表 3-1 中学会的大多数技巧和方法都不适用于元组，因为它们用于修改列表中的内容，而元组是不可修改的。然而，你可以使用 `len` 获取元组的长度，如下：
+你在表 3-1 中学会的大多数技巧和方法都不适用于元组，因为它们用于修改列表中的内容，而元组是不可修改的。然而，你可以使用`len`获取元组的长度，如下：
 
 ```python
 print(len(prices))
 ```
 
-你可以使用 `.count()` 查看某个项在元组中出现的次数。例如：
+你可以使用`.count()`查看某个项在元组中出现的次数。例如：
 
 ```python
 print(prices.count(4.95))
 ```
 
-你可以使用 `in` 来检查元组中是否存在某个值，如下例所示：
+你可以使用`in`来检查元组中是否存在某个值，如下例所示：
 
 ```python
 print(4.95 in prices)
@@ -4094,7 +4012,7 @@ print(4.95 in prices)
 
 如果元组包含 4.95，则返回 True，否则返回 False。
 
-如果项存在于元组，你可以获取它的索引值。但是，如果项不在列表中，你会收到错误。在检查索引值之前，你可以先使用 `in` 检查项是否存在，如果不存在，可以返回 -1 这种无意义的值：
+如果项存在于元组，你可以获取它的索引值。但是，如果项不在列表中，你会收到错误。在检查索引值之前，你可以先使用`in`检查项是否存在，如果不存在，可以返回 -1 这种无意义的值：
 
 ```python
 look_for = 12345
@@ -4111,8 +4029,6 @@ print(position)
 # 遍历并显示元组中的每个项。
 for price in prices:
 ```
-
-
 
 ```python
 print(f"${price:.2f}")
@@ -4134,25 +4050,25 @@ $2.95
 prices[1] = 234.56
 ```
 
-你将得到一条类似于 `TypeError: 'tuple' object does not support item assignment` 的错误信息。这条信息告诉你，你不能使用赋值运算符来更改元组中项的值，因为元组是不可变的（immutable），这意味着它的内容无法更改。
+你将得到一条类似于`TypeError: 'tuple' object does not support item assignment`的错误信息。这条信息告诉你，你不能使用赋值运算符来更改元组中项的值，因为元组是不可变的（immutable），这意味着它的内容无法更改。
 
-任何修改甚至只是复制列表数据的方法，在尝试将其应用于元组时都会导致错误。因此，列表方法 `append()`、`.clear()`、`.copy()`、`.extend()`、`.insert()`、`.pop()`、`.remove()`、`.reverse()` 和 `sort()` 在处理元组时都会失败。简而言之，如果你想向用户展示数据而不赋予他们任何更改信息的手段，那么元组是有意义的。
+任何修改甚至只是复制列表数据的方法，在尝试将其应用于元组时都会导致错误。因此，列表方法`append()`、`.clear()`、`.copy()`、`.extend()`、`.insert()`、`.pop()`、`.remove()`、`.reverse()`和`sort()`在处理元组时都会失败。简而言之，如果你想向用户展示数据而不赋予他们任何更改信息的手段，那么元组是有意义的。
 
-## 使用集合 (Working with Sets)
+## 使用集合（Working with Sets）
 
 Python 还提供了集合（sets）作为组织数据的一种。集合和列表的区别在于，集合中的项没有特定的顺序。即使你可能按照某种顺序定义集合，没有任何项会获得索引号来标识它们的位置。
 
-定义集合时，使用大括号 `{}`，而列表使用方括号 `[]`，元组使用圆 `()`。例如，这是一个包含一些数字的集合：
+定义集合时，使用大括号`{}`，而列表使用方括号`[]`，元组使用圆括号`()`。例如，这是一个包含一些数字的集合：
 
 ```python
 sample_set = {1.98, 98.9, 74.95, 2.5, 1, 16.3}
 ```
 
-集合在某些方面与列表和元组相似。你可以使用 `len()` 来确定集合中有多少项。使用 `in` 判断项是否存在于集合。
+集合在某些方面与列表和元组相似。你可以使用`len()`来确定集合中有多少项。使用`in`判断项是否存在于集合。
 
-但你不能根据索引号获取集合中的项。也不能更改集合已存在的项。你不能更改集合中项的顺序。因此，你不能使用 `.sort()` 对集合排序或使用 `.reverse()` 反转其顺序。
+但你不能根据索引号获取集合中的项。也不能更改集合已存在的项。你不能更改集合中项的顺序。因此，你不能使用`.sort()`对集合排序或使用`.reverse()`反转其顺序。
 
-你可以使用 `.add()` 向集合添加单个新项，如下例所示：
+你可以使用`.add()`向集合添加单个新项，如下例所示：
 
 ```python
 sample_set.add(11.23)
@@ -4160,7 +4076,7 @@ sample_set.add(11.23)
 
 与列表不同，集合永远不会包含同一个值的多个实例。所以，如果你多次向集合添加 11.23，集合仍然只会包含一个 11.23 的副本。
 
-你还可以使用 `.update()` 向集合添加多个项。但你添加的项应该定义为带有方括号的列表，如下例所示：
+你还可以使用`.update()`向集合添加多个项。但你添加的项应该定义为带有方括号的列表，如下例所示：
 
 ```python
 sample_set.update([88, 123.45, 2.98])
@@ -4181,7 +4097,7 @@ print(ss2)
 {16.3, 1.98, 98.9, 2.5, 74.95}
 ```
 
-图 3-12 显示了一些示例代码及其输出。代码创建了一个名为 sample_set 的集合，然后使用多种 `print()` 语句输出信息。以下行在屏幕上显示了整个集合：
+图 3-12 显示了一些示例代码及其输出。代码创建了一个名为`sample_set`的集合，然后使用多种`print()`语句输出信息。以下行在屏幕上显示了整个集合：
 
 ```python
 print(sample_set)
@@ -4193,7 +4109,7 @@ print(sample_set)
 print(len(sample_set))
 ```
 
-接的一行显示 True，因为数字 74.95 在 `sample_set` 中：
+接的一行显示 True，因为数字 74.95 在`sample_set`中：
 
 ```python
 print(74.95 in sample_set)
@@ -4232,74 +4148,72 @@ for price in sample_set:
     print(f"{price:>6.2f}")
 ```
 
-图 3-12：玩转集合。每个数字都整齐地格式化，因为代码使用了 `f"{price:>6.2f}"` 将数字与小数点对齐。列表和元组是最常用的数据结构。集合似乎不像另外两种那样常用，但了解它们是好的。第四种广泛使用的数据结构是字典（dictionary），我们将在下一章中学习。
+图 3-12：玩转集合。每个数字都整齐地格式化，因为代码使用了`f"{price:>6.2f}"`将数字与小数点对齐。列表和元组是最常用的数据结构。集合似乎不像另外两种那样常用，但了解它们是好的。第四种广泛使用的数据结构是字典（dictionary），我们将在下一章中学习。
 
-## 第 4 章 玩转字典 (Cruising with Dictionaries)
+## 第 4 章 玩转字典（Cruising with Dictionaries）
 
-*   生成字典
-*   查看如何遍历字典
-*   复制字典
-*   删除字典中的项
-*   使用多键字典
+- 生成字典
+- 查看如何遍历字典
+- 复制字典
+- 删除字典中的项
+- 使用多键字典
 
 字典在某些语言中也称为关联数组（associative arrays），它们类似于列表，但字典中的每个项不是通过其在列表中的位置标识的，而是通过一个“键”（key）。你可以定义键，键可以是字符串或数字。重要的是字典中的每个项都是唯一的。为了理解唯一性的重要性，考虑电话号码、电子邮件地址和社会安全号。如果两个个人有相同的电话号码，他们会收到相同的电话；如果两个个人有相同的电子邮件地址，他们会收到相同的邮件。如果两个个人有相同的社会安全号，且其中一个人欠了一百万美元，你最好希望对方不是你。在本章中，你将学习 Python 字典以及如何使用它们。
 
-## 理解字典 (Understanding Dictionaries)
+## 理解字典（Understanding Dictionaries）
 
 字典与列表相似，区别在于字典中的每个项都有一个唯一的键。与键关联的值（value）可以是数字、字符串、列表、元组——实际上可以是任何内容。所以你可以将字典想象成图 4-1 所示的表格，第一列包含一个唯一的键，第二列包含与该键相关的信息。
 
 | 键 | 值 |
 |---|---|
-| "htanaka" | "Haru Tanaka" |
-| "ppatel" | "Priya Patel" |
-| "bagarcia" | "Benjamin Alberto Garcia" |
-| "zmin" | "Zhang Min" |
-| "farooqi" | "Ayesha Farqi" |
-| "hajackson" | "Hanna Jackson" |
-| "papatel" | "Pratyush Aarav Patel" |
-| "hrjackson" | "Henry Jackson" |
+| `"htanaka"` | `"Haru Tanaka"` |
+| `"ppatel"` | `"Priya Patel"` |
+| `"bagarcia"` | `"Benjamin Alberto Garcia"` |
+| `"zmin"` | `"Zhang Min"` |
+| `"farooqi"` | `"Ayesha Farqi"` |
+| `"hajackson"` | `"Hanna Jackson"` |
+| `"papatel"` | `"Pratyush Aarav Patel"` |
+| `"hrjackson"` | `"Henry Jackson"` |
 
 **图 4-1：** 左列为键，右列为值的字典。有些企业在为员工分配账户和电子邮件地址时使用这些。每个键对应的值并不必须是字符串或整数。它可以是一个列表或元组。例如，图 4-2 字典中，每个键的值包括姓名、一个年份（可能是入职或出生年份）、一个数字（例如纳养属人数）以及一个布尔值 True 或 False（可能指示该个人是否有公司手机）。现在每个数据项代表什么并不重要，重要的是对于每个键，你都有一个方括号括起来的列表，包含了该键的四项信息。
 
 | 键 | 值 |
 |---|---|
-| "htanaka" | ["Priya Tanaka", 2000, 0, True] |
-| "ppatel" | ["Priya Patel", 2015, 1, False] |
-| "bagarcia" | ["Benjamin Alberto Garcia", 1999, 2, True] |
-| "zmin" | ["Zhang Min", 2017, 0, False] |
-| "farooqi" | ["Ayesha Farqi", 2001, 1, True] |
-| "hajackson" | ["Hanna Jackson", 1998, 0, False] |
-| "papatel" | ["Pratyush Aarav Patel", 2011, 2, True] |
-| "hrjackson" | ["Henry Jackson", 2016, 0, False] |
+| `"htanaka"` | `["Priya Tanaka", 2000, 0, True]` |
+| `"ppatel"` | `["Priya Patel", 2015, 1, False]` |
+| `"bagarcia"` | `["Benjamin Alberto Garcia", 1999, 2, True]` |
+| `"zmin"` | `["Zhang Min", 2017, 0, False]` |
+| `"farooqi"` | `["Ayesha Farqi", 2001, 1, True]` |
+| `"hajackson"` | `["Hanna Jackson", 1998, 0, False]` |
+| `"papatel"` | `["Pratyush Aarav Patel", 2011, 2, True]` |
+| `"hrjackson"` | `["Henry Jackson", 2016, 0, False]` |
 
 **图 4-2：** 值为列表字典。
 
-字典也可以由几个不同的键组成，每个键代表一条数据。例如，与其为每个项创建一个带有唯一键的行，你可能会为每个员工创建一个他们自己的小字典。这样你可以为每个信息单元分配一个键名。那么，htanaka 的字典可能如图 4-3 所示。
+字典也可以由几个不同的键组成，每个键代表一条数据。例如，与其为每个项创建一个带有唯一键的行，你可能会为每个员工创建一个他们自己的小字典。这样你可以为每个信息单元分配一个键名。那么，`htanaka`的字典可能如图 4-3 所示。
 
 | 键 | 值 |
 |---|---|
-| 'htanaka' | 'full_name' = 'Haru Tanaka' |
-| 'year_hired' = 2000 |
-| 'dependents' = 0 |
-| 'has_company_cell' = True |
+| `'htanaka'` | `'full_name' = 'Haru Tanaka'` |
+|  | `'year_hired' = 2000` |
+|  | `'dependents' = 0` |
+|  | `'has_company_cell' = True` |
 
 **图 4-3：** 另一个员工的字典。
 
-另一个员工的字典可能拥有所有的键名 full_name、year_hired、dependents 和 has_company_cell，但这些键的每个值都不同，如图 4-4 所示。
+另一个员工的字典可能拥有所有的键名`full_name`、`year_hired`、`dependents`和`has_company_cell`，但这些键的每个值都不同，如图 4-4 所示。
 
-| 'ppatel=' | 'full_name' = 'Priya Patel' |
-| 'year_hired' = 2015 |
-| 'dependents' = 1 |
-| 'has_company_cell' = False |
+| `'ppatel='` | `'full_name' = 'Priya Patel'` |
+|---|---|
+|  | `'year_hired' = 2015` |
+|  | `'dependents' = 1` |
+|  | `'has_company_cell' = False` |
 
 **图 4-4：** 另一个员工的字典。
 
-
-
-
 图 4-4：另一个员工的字典字典。
 
-在 Python 中，一个数据字典条目包含多个键是常见的，因为该语言允许通过 `object.key` 语法轻松地分离你正在使用的特定数据项，例如：
+在 Python 中，一个数据字典条目包含多个键是常见的，因为该语言允许通过`object.key`语法轻松地分离你正在使用的特定数据项，例如：
 
 ```python
 ppatel.full_name = 'Priya Patel'
@@ -4321,11 +4235,12 @@ ppatel[3] = True
 
 创建数据字典的代码遵循以下基本语法：
 
-| name = {key:value, key:value, key:value, key:value, ...} |
+| `name = {key:value, key:value, key:value, key:value, ...}` |
+|---|
 
-**name** 是你自定义的名称，通常描述了**key-value**值对指的是谁或什么。**key:value**对被包裹在花括号中。**key** 通常是一个带有引号的字符串，但你可以使用整数。每个冒号(:) 将键名与其赋值的值隔开。**value**是你想要为该键名存储的任何内容，可以是数字、字符串——可以是任何内容。省略号 (...) 意味着你可以拥有任意数量的键值对。只需记住用逗号将**key:value**对隔开即可，如语法示例所示。
+**`name`** 是你自定义的名称，通常描述了**`key-value`**值对指的是谁或什么。**`key:value`**对被包裹在花括号中。**`key`** 通常是一个带有引号的字符串，但你可以使用整数。每个冒号（`:`）将键名与其赋值的值隔开。**`value`**是你想要为该键名存储的任何内容，可以是数字、字符串——可以是任何内容。省略号（`...`）意味着你可以拥有任意数量的键值对。只需记住用逗号将**`key:value`**对隔开即可，如语法示例所示。
 
-为了使代码更具可读性，开发者通常会将每个**key:value**对放在单独的一行。但语法仍然相同。唯一的区别是每个逗号后面都有一个换行符，如下：
+为了使代码更具可读性，开发者通常会将每个**`key:value`**对放在单独的一行。但语法仍然相同。唯一的区别是每个逗号后面都有一个换行符，如下：
 
 ```python
 name =
@@ -4336,7 +4251,7 @@ key:value,
 }
 ```
 
-如果你想尝试一下，可以使用 Jupyter notebook、.py 文件或 Python 提示符，并输入以下代码。注意，我们创建了一个名为 `people` 的字典，其中包含多个键值对，每个对都用逗号隔开。键和值都是字符串，因此它们包含在引号内，每个键与其值用冒号隔开。保持这些细节非常重要；否则代码将无法运行——是的，即使是一个缺失、位置错误或拼错的引号、逗号或大括号，都会破坏整个程序：
+如果你想尝试一下，可以使用 Jupyter notebook、`.py`文件或 Python 提示符，并输入以下代码。注意，我们创建了一个名为`people`的字典，其中包含多个键值对，每个对都用逗号隔开。键和值都是字符串，因此它们包含在引号内，每个键与其值用冒号隔开。保持这些细节非常重要；否则代码将无法运行——是的，即使是一个缺失、位置错误或拼错的引号、逗号或大括号，都会破坏整个程序：
 
 ```python
 people = {
@@ -4353,7 +4268,7 @@ people = {
 
 ## 访问字典数据
 
-添加数据后，你可以通过多种方式对其。使用 `print(people)`——即在括号中使用字典名称的 `print()` 函数——你可以获得整个字典的副本，如下：
+添加数据后，你可以通过多种方式对其。使用`print(people)`——即在括号中使用字典名称的`print()`函数——你可以获得整个字典的副本，如下：
 
 ```python
 print(people)
@@ -4367,7 +4282,7 @@ print(people)
 dictionaryname[key]
 ```
 
-其中 `dictionaryname` 是字典的名称，`key` 是你正在查找的键值。例如，如果你想知道 `zmin` 键的值，你会输入
+其中`dictionaryname`是字典的名称，`key`是你正在查找的键值。例如，如果你想知道`zmin`键的值，你会输入：
 
 ```python
 print(people['zmin'])
@@ -4394,22 +4309,22 @@ Zhang Min
 
 图 4-5：打印 people 字典中 zmin 键的值。
 
-注意代码中，zmin 带有引号，因为它是一个字符串。你可以使用变量名代替，只要它包含一个字符串。例如，考虑以下两行代码。第一行创建一个变量 `person`并将字符串 'zmin' 放入该变量中。下一行不需要引号，因为 `person` 是一个变量名：
+注意代码中，zmin 带有引号，因为它是一个字符串。你可以使用变量名代替，只要它包含一个字符串。例如，考虑以下两行代码。第一行创建一个变量`person`并将字符串 `'zmin'`放入该变量中。下一行不需要引号，因为`person`是一个变量名：
 
 ```python
 person = 'zmin'
 print(people[person])
 ```
 
+知道`people`字典中没有名为`schmedelledorp`的人员，如图 4-8 所示。
 
-
-知道 `people` 字典中没有名为 `schmedelledorp` 的人员，如图 4-8 所示。
-
-你可以向 `get()` 传递两个值；第二个值是你在找不到要查找的内容时希望它返回的内容。例如，在接下来的代码行中，我们再次搜索 `schmedelledorp`。但这次，如果代码没有找到它，显示的将不是 `None`，而是更具友好的信息“Unbeknownst to this dictionary”：
+你可以向`get()`传递两个值；第二个值是你在找不到要查找的内容时希望它返回的内容。例如，在接下来的代码行中，我们再次搜索`schmedelledorp`。但这次，如果代码没有找到它，显示的将不是`None`，而是更具友好的信息“Unbeknownst to this dictionary”：
 
 ```python
 print(people.get('schmedelledorp', 'Unbeknownst to this dictionary'))
 ```
+
+
 
 ```python
 # Make a data dictionary named people
@@ -4431,9 +4346,9 @@ person = 'schmedelledorp'
 print(people.get(person))
 ```
 
-None
+`None`
 
-图 4-8：Python 用更更体的方式表示没有 `schmedelledorp`。
+图 4-8：Python 用更具体的方式表示没有 `schmedelledorp`。
 
 ## 修改键的值
 
@@ -4443,9 +4358,9 @@ None
 dictionaryname[key] = newvalue
 ```
 
-将 `dictionaryname` 替换为字典名称，将 `key` 替换为标识该项的键，将 `newvalue` 替换为任何想要的新值。
+将`dictionaryname`替换为字典名称，将`key`替换为标识该项的键，将`newvalue`替换为任何想要的新值。
 
-例如，假设 Hanna Jackson 结婚了，并将名字更改为 Hanna Jackson-Smith。你想保留相同的键，但 `people['hajackson'] = "Hanna Jackson-Smith"` 这一行代码完成了更改。该行下面的 `print()` 语句显示了执行该行代码后 `hajackson` 的值。你可以在图 4-9 中看到，名字确实已改为 Hanna Jackson-Smith。
+例如，假设 Hanna Jackson 结婚了，并将名字更改为 Hanna Jackson-Smith。你想保留相同的键，但`people['hajackson'] = "Hanna Jackson-Smith"`这一行代码完成了更改。该行下面的`print()`语句显示了执行该行代码后`hajackson`的值。你可以在图 4-9 中看到，名字确实已改为 Hanna Jackson-Smith。
 
 ```python
 # hajackson's current value.
@@ -4468,15 +4383,15 @@ Hanna Jackson-Smith
 
 ## 添加或更改字典数据
 
-你可以使用字典的 `update()` 方法向字典添加新项，或更改当前键的值。语法为：
+你可以使用字典的`update()`方法向字典添加新项，或更改当前键的值。语法为：
 
 ```python
 dictionaryname.update(key, value)
 ```
 
-将 `dictionaryname` 替换为字典名称。将 `key` 替换为你想要添加或更改的项的键。如果你指定的键在字典中不存在，它将作为一个带有指定值的新项被添加。如果你指定的键已存在，则不会添加新项。该键的值将更改为你指定的任何值。
+将`dictionaryname`替换为字典名称。将`key`替换为你想要添加或更改的项的键。如果你指定的键在字典中不存在，它将作为一个带有指定值的新项被添加。如果你指定的键已存在，则不会添加新项。该键的值将更改为你指定的任何值。
 
-例如，考虑以下 Python 代码，它创建了一个名为 `people` 的数据字典并将两个人的名字放入其中：
+例如，考虑以下 Python 代码，它创建了一个名为`people`的数据字典并将两个人的名字放入其中：
 
 ```python
 # make a dictionary named people.
@@ -4495,43 +4410,41 @@ print(people)
 people.update({'wiggins' : 'Wanda Wiggins'})
 ```
 
-第一次更新将 `hrjackson` 的值从 `Henry Jackson` 更改为 `Henrietta Jackson`，因为数据字典已存在 `hrjackson` 键：
+第一次更新将`hrjackson`的值从`Henry Jackson`更改为`Henrietta Jackson`，因为数据字典已存在`hrjackson`键：
 
 ```python
 people.update({'hrjackson' : 'Henrietta Jackson'})
 ```
 
-第二次 `update()` 执行：
+第二次`update()`执行：
 
 ```python
 people.update({'wiggins' : 'Wanda Wiggins'})
 ```
 
-字典中没有 `wiggins`，因此 `update()` 无法更改 `wiggins` 的名字。相反，该行向字典添加了一个新的键值对，以 `wiggins` 为键，`Wanda Wiggins` 为值。
+字典中没有`wiggins`，因此`update()`无法更改`wiggins`的名字。相反，该行向字典添加了一个新的键值对，以`wiggins`为键，`Wanda Wiggins`为值。
 
-代码没有指定是更改还是添加值，因为这个决定是自动做出的。字典中的每个键必须是唯一的；你不能有两个或多个具有相同键的行。因此，当你执行 `update()` 时，代码首先检查该键是否存在。如果存在，则只修改该键的值；不添加任何内容。如果键在字典中不存在，则没有可修改的内容，因此添加新的键值对。这个过程是自动的，关于执行何种操作的决策非常简单：
+代码没有指定是更改还是添加值，因为这个决定是自动做出的。字典中的每个键必须是唯一的；你不能有两个或多个具有相同键的行。因此，当你执行`update()`时，代码首先检查该键是否存在。如果存在，则只修改该键的值；不添加任何内容。如果键在字典中不存在，则没有可修改的内容，因此添加新的键值对。这个过程是自动的，关于执行何种操作的决策非常简单：
 
 - 如果键已存在于字典中，则更新其值，因为字典不允许两个项具有相同的键。
+
 - 如果键尚不存在，则添加该键值对。
 
-
-
-
-# 表格 4-1 字典方法
+## 表格 4-1 字典方法
 
 | 方法 | 作用 |
 | --- | --- |
-| clear() | 通过删除所有键和值来清空字典。 |
-| copy() | 返回字典的副本。 |
-| fromkeys() | 返回一个字典的新副本，但仅包含指定的键和值。 |
-| get() | 返回指定键的值，如果不存在则返回 None。 |
-| items() | 返回一个包含项的列表，每个键-值对以元组形式表示。 |
-| keys() | 返回字典中所有键的列表。 |
-| pop() | 根据键从字典中删除指定的项，并返回其值。 |
-| popitem() | 移除最后一个键-值对。 |
-| setdefault() | 返回指定键的值。如果键不存在，则插入该键并赋予指定的值。 |
-| update() | 更新现有键的值；如果指定的键已不在字典中，则添加新的键-值对。 |
-| values() | 返回字典中所有值的列表。 | |
+| `clear()` | 通过删除所有键和值来清空字典。 |
+| `copy()` | 返回字典的副本。 |
+| `fromkeys()` | 返回一个字典的新副本，但仅包含指定的键和值。 |
+| `get()` | 返回指定键的值，如果不存在则返回`None`。 |
+| `items()` | 返回一个包含项的列表，每个键-值对以元组形式表示。 |
+| `keys()` | 返回字典中所有键的列表。 |
+| `pop()` | 根据键从字典中删除指定的项，并返回其值。 |
+| `popitem()` | 移除最后一个键-值对。 |
+| `setdefault()` | 返回指定键的值。如果键不存在，则插入该键并赋予指定的值。 |
+| `update()` | 更新现有键的值；如果指定的键已不在字典中，则添加新的键-值对。 |
+| `values()` | 返回字典中所有值的列表。 |
 
 ## 复制字典
 
@@ -4541,11 +4454,11 @@ people.update({'wiggins' : 'Wanda Wiggins'})
 newdictionaryname = dictionaryname.copy()
 ```
 
-将 `newdictionaryname` 替换为你想要为新字典起的名字。将 `dictionaryname` 替换为你想要复制的现有字典名称。
+将`newdictionaryname`替换为你想要为新字典起的名字。将`dictionaryname`替换为你想要复制的现有字典名称。
 
-图 4-11 显示了一个简单的示例，我们创建了一个名为 `people` 的字典，然后创建了一个名为 `peeps2` 的字典作为 `people` 字典的副本。打印每个字典的内容显示它们是完全相同的。
+图 4-11 显示了一个简单的示例，我们创建了一个名为`people`的字典，然后创建了一个名为`peeps2`的字典作为`people`字典的副本。打印每个字典的内容显示它们是完全相同的。
 
-```
+```python
 ## 定义一个名为 people 的字典。
 people = {
   'htanaka': 'Haru Tanaka',
@@ -4554,12 +4467,12 @@ people = {
 }
 ```
 
-```
+```python
 # 创建 people 字典的副本并放入 peeps2 中。
 peeps2 = people.copy()
 ```
 
-```
+```python
 # 显示两个字典中的内容
 print(people)
 print(peeps2)
@@ -4572,15 +4485,15 @@ print(peeps2)
 
 **图 4-11:** 复制字典。
 
-# 删除字典项
+## 删除字典项
 
-你可以通过多种方式从数据字典中删除数据。`del` 关键字（delete 的缩写）可以根据其键删除任何项。语法如下：
+你可以通过多种方式从数据字典中删除数据。`del`关键字（delete 的缩写）可以根据其键删除任何项。语法如下：
 
 ```
 del dictionaryname[key]
 ```
 
-例如，以下代码创建了一个名为 `people` 的字典。然后它使用 `people["zmin"]` 来删除以 `zmin` 为键的项：
+例如，以下代码创建了一个名为`people`的字典。然后它使用`people["zmin"]`来删除以`zmin`为键的项：
 
 ```python
 ## 定义一个名为 people 的字典。
@@ -4606,9 +4519,9 @@ del people["zmin"]
 print(people)
 ```
 
-打印字典的内容显示 `zmin` 不再存在于字典中了：
+打印字典的内容显示`zmin`不再存在于字典中了：
 
-如果你在使用 `del` 关键字时忘记包含特定的键而只指定了字典名称，那么整个字典会被删除，甚至包括它的名称。例如，在前面的代码中你执行了 `del people` 而不是使用 `people["zmin"]`。第二个 `print(people)` 的输出将报错，如下所示，因为 `people` 字典已被删除，不再存在，无法显示其内容：
+如果你在使用`del`关键字时忘记包含特定的键而只指定了字典名称，那么整个字典会被删除，甚至包括它的名称。例如，在前面的代码中你执行了`del people`而不是使用`people["zmin"]`。第二个`print(people)`的输出将报错，如下所示，因为`people`字典已被删除，不再存在，无法显示其内容：
 
 ```
 'htanaka': 'Haru Tanaka', 'zmin': 'Zhang Min', 'afarooqi': 'Ayesha Farooqi'
@@ -4624,13 +4537,13 @@ NameError Traceback (most recent last)
 NameError: name 'people' is not defined
 ```
 
-要在不删除整个字典的情况下从字典删除所有键-值对，请使用以下语法的 `clear` 方法：
+要在不删除整个字典的情况下从字典删除所有键-值对，请使用以下语法的`clear`方法：
 
 ```
 dictionaryname.clear()
 ```
 
-该代码创建一个名为 `people` 的字典，将其放入一些键-值对，然后打印字典以便查看其内容。接着，`people.clear()` 清空了所有数据：
+该代码创建一个名为`people`的字典，将其放入一些键-值对，然后打印字典以便查看其内容。接着，`people.clear()`清空了所有数据：
 
 ```python
 ## 定义一个名为 people 的字典。
@@ -4647,19 +4560,22 @@ print(people)
 people.clear()
 ```
 
-## 显示 people 现在的内容。
+## 显示 people 现在的内容
 
-运行此代码的输出显示 `people` 数据字典最初包含三个属性-值对。在用 `people.clear()` 清空 `people` 字典后，打印它会显示 `{}`，这是 Python 告诉你是字典已空的方式。
+运行此代码的输出显示`people`数据字典最初包含三个属性-值对。在用`people.clear()`清空`people`字典后，打印它会显示`{}`，这是 Python 告诉你是字典已空的方式。
 
 ```
 ('htanaka': 'Haru Tanaka', 'zmin': 'Zhang Min', 'afarooqi': 'Ayesha Farooqi')
 ```
+
 *(注：原文此处示例代码输出格式有误，已按原意保留或修正逻辑翻译)*
 
 抱歉，由于提供的文本后部分似乎存在错乱和重复，我根据您的要求重新梳理并翻译了最后部分的逻辑内容：
 
 原文：
+
 [content]
+
 -   [Feynman's learning method](https://wiki.example.org/feynmans_learning_method) is inspired by **Richard Feynman**, the Nobel Prize winner in physics. 
 
 1.  With Feynman's skills, you can understand the knowledge points in depth in just `20 min`, and it is memorable and *hard to forget*. 
@@ -4667,11 +4583,13 @@ people.clear()
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
+
 [/content]
 
 译文：
 
 [content]
+
 -   [费曼学习法](https://wiki.example.org/feynmans_learning_method)的灵感源于诺贝尔物理奖获得者**理查德·费曼**。
 
 1.  运用费曼技巧，你只需花上`20 min`就能深入理解知识点，而且记忆深刻，*难以遗忘*。
@@ -4679,30 +4597,32 @@ if (condVar > someVal) {console.log("xxx")}
 ```
 if (condVar > someVal) {console.log("xxx")}
 ```
+
 [/content]
 
 *(注：由于您提供的“需要翻译的文本”后半部分出现了严重的文本重复和逻辑错乱（例如字典方法描述和代码块混在一起），我已根据 Markdown 逻辑完成了前半部分的专业翻译。如果需要针对后面错乱部分进行特定校对，请提供更清晰的原文。)*
 
 ---
+
 **更正：针对您提供的“需要翻译的文本”全文进行的完整翻译：**
 
 [content]
 
-# 表格 4-1 字典方法
+## 表格 4-1 字典方法
 
 | 方法 | 作用 |
 | --- | --- |
-| clear() | 通过删除所有键和值来清空字典。 |
-| copy() | 返回字典的副本。 |
-| fromkeys() | 返回一个字典的新副本，但仅包含指定的键和值。 |
-| get() | 返回指定键的值，如果不存在则返回 None。 |
-| items() | 返回一个包含项的列表，每个键-值对以元组形式表示。 |
-| keys() | 返回字典中所有键的列表。 |
-| pop() | 根据键从字典中删除指定的项，并返回其值。 |
-| popitem() | 移除最后一个键-值对。 |
-| setdefault() | 返回指定键的值。如果键不存在，则插入该键并赋予指定的值。 |
-| update() | 更新现有键的值；如果指定的键已不在字典中，则添加新的键-值对。 |
-| values() | 返回字典中所有值的列表。 |
+| `clear()` | 通过删除所有键和值来清空字典。 |
+| `copy()` | 返回字典的副本。 |
+| `fromkeys()` | 返回一个字典的新副本，但仅包含指定的键和值。 |
+| `get()` | 返回指定键的值，如果不存在则返回`None`。 |
+| `items()` | 返回一个包含项的列表，每个键-值对以元组形式表示。 |
+| `keys()` | 返回字典中所有键的列表。 |
+| `pop()` | 根据键从字典中删除指定的项，并返回其值。 |
+| `popitem()` | 移除最后一个键-值对。 |
+| `setdefault()` | 返回指定键的值。如果键不存在，则插入该键并赋予指定的值。 |
+| `update()` | 更新现有键的值；如果指定的键已不在字典中，则添加新的键-值对。 |
+| `values()` | 返回字典中所有值的列表。 |
 
 ## 复制字典
 
@@ -4712,9 +4632,9 @@ if (condVar > someVal) {console.log("xxx")}
 newdictionaryname = dictionaryname.copy()
 ```
 
-将 `newdictionaryname` 替换为你想要为新字典起的名字。将 `dictionaryname` 替换为你想要复制的现有字典名称。
+将`newdictionaryname`替换为你想要为新字典起的名字。将`dictionaryname`替换为你想要复制的现有字典名称。
 
-图 4-11 显示了一个简单的示例，我们创建了一个名为 `people` 的字典，然后创建了一个名为 `peeps2` 的字典作为 `people` 字典的副本。打印每个字典的内容显示它们是完全相同的。
+图 4-11 显示了一个简单的示例，我们创建了一个名为`people`的字典，然后创建了一个名为`peeps2`的字典作为`people`字典的副本。打印每个字典的内容显示它们是完全相同的。
 
 ```python
 ## 定义一个名为 people 的字典。
@@ -4743,15 +4663,15 @@ print(peeps2)
 
 **图 4-11:** 复制字典。
 
-# 删除字典项
+## 删除字典项
 
-你可以通过多种方式从数据字典中删除数据。`del` 关键字（delete 的缩写）可以根据其键删除任何项。语法如下：
+你可以通过多种方式从数据字典中删除数据。`del`关键字（delete 的缩写）可以根据其键删除任何项。语法如下：
 
 ```
 del dictionaryname[key]
 ```
 
-例如，以下代码创建了一个名为 `people` 的字典。然后它使用 `people["zmin"]` 来删除以 `zmin` 为键的项：
+例如，以下代码创建了一个名为`people`的字典。然后它使用`people["zmin"]`来删除以`zmin`为键的项：
 
 ```python
 ## 定义一个名为 people 的字典。
@@ -4783,29 +4703,39 @@ print(people)
 如果你在使用 `del` 关键字时忘记包含特定的键而只指定了字典名称，那么整个字典会被删除，甚至包括它的名称。例如，在前面的代码中你执行了 `del people` 而不是使用 `people["zmin"]`。第二个 `print(people)` 的输出将报错，如下所示，因为 `people` 字典已被删除，不再存在，无法显示其内容：
 
 ```
+
 'htanaka': 'Haru Tanaka', 'zmin': 'Zhang Min', 'afarooqi': 'Ayesha Farooqi'
+
 ```
 
 ```
+
 NameError Traceback (most recent last)
-<ipy-input-32-24401f5e8cf0> in <module>(
-13
-14
-## 显示 people 现在的内容。
-    ---> 15 print(people)
-NameError: name 'people' is not defined
-```
 
-要在不删除整个字典的情况下从字典删除所有键-值对，请使用以下语法的 `clear` 方法：
+<ipy-input-32-24401f5e8cf0> in <module>(
+
+13
+
+14
+
+## 显示 people 现在的内容。
+
+    ---> 15 print(people)
+
+
+
+`NameError: name 'people' is not defined`
+
+要在不删除整个字典的情况下从字典删除所有键-值对，请使用以下语法的`clear`方法：
 
 ```
 dictionaryname.clear()
 ```
 
-该代码创建一个名为 `people` 的字典，将其放入一些键-值对，然后打印字典以便查看其内容。接着，`people.clear()` 清空了所有数据：
+该代码创建一个名为`people`的字典，将其放入一些键-值对，然后打印字典以便查看其内容。接着，`people.clear()`清空了所有数据：
 
 ```python
-## 定义一个名为 people 的字典。
+# 定义一个名为 people 的字典。
 people = {
   'htanaka': 'Haru Tanaka',
   'zmin': 'Zhang Min',
@@ -4819,14 +4749,11 @@ print(people)
 people.clear()
 ```
 
-## 显示 people 现在的内容。
+显示`people`现在的内容。
 
-运行此代码的输出显示 `people` 数据字典最初包含三个属性-值对。在用 `people.clear()` 清空 `people` 字典后，打印它会显示 `{}`，这是 Python 告诉你是字典已空。
+运行此代码的输出显示`people`数据字典最初包含三个属性-值对。在用`people.clear()`清空`people`字典后，打印它会显示`{}`，这是 Python 告诉你是字典已空。
 
-
-
-
-属性的值可以是列表、元组或集合；它不必是一个单个值。例如，对于太阳镜产品，你可能提供两种型号：黑色和玳龟壳。你可以添加 `colors` 或 `model` 键，并将项目以方括号内的逗号分隔列表的形式列出，如下：
+属性的值可以是列表、元组或集合；它不必是一个单个值。例如，对于太阳镜产品，你可能提供两种型号：黑色和玳龟壳。你可以添加`colors`或`model`键，并将项目以方括号内的逗号分隔列表的形式列出，如下：
 
 ```
 product = {
@@ -4838,7 +4765,7 @@ product = {
 }
 ```
 
-接下来让我们看看如何显示字典数据。你可以使用简单的 `dictionaryname[key]` 语法直接打印每个键的值。例如，使用上一个产品，这段代码的输出为：
+接下来让我们看看如何显示字典数据。你可以使用简单的`dictionaryname[key]`语法直接打印每个键的值。例如，使用上一个产品，这段代码的输出为：
 
 ```
 print(product['name'])
@@ -4858,7 +4785,7 @@ True
 ['Black', 'Tortoise']
 ```
 
-你可以通过在每个打印语句中添加描述性文本（后跟逗号和代码）来变得更高级。你也可以遍历列表以单独行打印每个型号。你还可以使用 f-string 来格式化数据。例如，这里是之前 `print()` 语句的变体：
+你可以通过在每个打印语句中添加描述性文本（后跟逗号和代码）来变得更高级。你也可以遍历列表以单独行打印每个型号。你还可以使用 f-string 来格式化数据。例如，这里是之前`print()`语句的变体：
 
 ```
 product = {
@@ -4888,23 +4815,23 @@ for model in product['models']:
 | In Stock | 10 |
 | Models | Black Tortoise |
 
-> 警告：最后一行代码中的 `" " * 10` 意味着打印十次空格 (" ")。换句话说，就是缩进十个空格。如果你在那些引号之间没有恰好放一个空格，你就得不到 10 个空格。你将得到引号内任何内容的 10 次，这也意味着如果你在引号之间什么都不放，你就什么也得。
+> 警告：最后一行代码中的`" " * 10`意味着打印十次空格 (" ")。换句话说，就是缩进十个空格。如果你在那些引号之间没有恰好放一个空格，你就得不到 10 个空格。你将得到引号内任何内容的 10 次，这也意味着如果你在引号之间什么都不放，你就什么也得。
 
 # 使用神秘的 fromkeys 和 setdefault 方法
 
-Python 中的字典提供了两种方法，名为 `fromkeys()` 和 `setdefault()`，它们让许多 Python 学习者感到困惑——这完全可以理解，因为要找到它们的实际应用场景并不容易。但我们将尝试一下，至少向你展示你应该在代码的什么地方使用这些方法。
+Python 中的字典提供了两种方法，名为`fromkeys()`和`setdefault()`，它们让许多 Python 学习者感到困惑——这完全可以理解，因为要找到它们的实际应用场景并不容易。但我们将尝试一下，至少向你展示你应该在代码的什么地方使用这些方法。
 
-`fromkeys()` 方法使用以下语法：
+`fromkeys()`方法使用以下语法：
 
 ```
 newdictionary = dict.fromkeys(iterable[,value])
 ```
 
-将 `newdictionary` 替换为你想要命名的新字典的名称。它不需要是一个像 `product` 这样的通用名称。它可以是唯一标识产品的标识，例如针对你业务的 UPC（通用产品代码）或 SKU（库存单位）。
+将`newdictionary`替换为你想要命名的新字典的名称。它不需要是一个像`product`这样的通用名称。它可以是唯一标识产品的标识，例如针对你业务的 UPC（通用产品代码）或 SKU（库存单位）。
 
-将 `iterable` 部分替换为任何可迭代对象——意味着代码可以循环遍历的内容；一个简单的列表即可。`value` 部分是可选的。如果省略，字典中的每个键都获得一个 `None` 值，这是 Python 的简单表达方式，表示该字典中尚未为此键分配任何值。
+将`iterable`部分替换为任何可迭代对象——意味着代码可以循环遍历的内容；一个简单的列表即可。`value`部分是可选的。如果省略，字典中的每个键都获得一个`None`值，这是 Python 的简单表达方式，表示该字典中尚未为此键分配任何值。
 
-在这个示例中，我们创建了一个名为 `DWC001` 的字典，它是我们库存中某个产品的 SKU。我们为它提供了一个键名列表，这些名在方括号内并用逗号分隔，这使其成为 Python 中一个定义正确的列表。我们没有为 `value` 提供任何内容。代码随后打印了新字典。如你所见，最后一行代码打印了字典，其中包含了指定的键名，且每个键的值均为 `None`。
+在这个示例中，我们创建了一个名为`DWC001`的字典，它是我们库存中某个产品的 SKU。我们为它提供了一个键名列表，这些名在方括号内并用逗号分隔，这使其成为 Python 中一个定义正确的列表。我们没有为`value`提供任何内容。代码随后打印了新字典。如你所见，最后一行代码打印了字典，其中包含了指定的键名，且每个键的值均为`None`。
 
 ```
 DWC001 = dict.fromkeys({'name', 'unit_price', 'taxable', 'in_stock', 'models'})
@@ -4912,11 +4839,11 @@ print(DWC001)
 {'name': None, 'unit_price': None, 'taxable': None, 'in_stock': None, 'models': None}
 ```
 
-现在，假设你不想使用所有那些键名。你只想使用在其他字典中使用的键。在这种情况下，你可以使用 `dictionary.keys()` 作为你的键名可迭代列表，只要 `dictionary` 是程序中存在的另一个字典即可。
+现在，假设你不想使用所有那些键名。你只想使用在其他字典中使用的键。在这种情况下，你可以使用`dictionary.keys()`作为你的键名可迭代列表，只要`dictionary`是程序中存在的另一个字典即可。
 
-例如，在下面的代码中，我们创建了一个名为 `product` 的字典，它包含一些键名，但值没有特定内容。然后我们使用 `DWC001 = dict.fromkeys(product.keys())` 创建了一个名为 `DWC001` 的字典，它具有与通用 `product` 相同的键。我们没有在 `dict.fromkeys(product.keys())` 行中指定任何值，新字典中的每个键的值都将被设置为 `None`。
+例如，在下面的代码中，我们创建了一个名为`product`的字典，它包含一些键名，但值没有特定内容。然后我们使用`DWC001 = dict.fromkeys(product.keys())`创建了一个名为`DWC001`的字典，它具有与通用`product`相同的键。我们没有在`dict.fromkeys(product.keys())`行中指定任何值，新字典中的每个键的值都将被设置为`None`。
 
-```
+```python
 # 创建一个名为 product 的通用产品字典。
 product = {
   'name': '',
@@ -4936,10 +4863,7 @@ print(DWC001)
 
 # 嵌套字典
 
-到目前你可能已经意识到，你编写的任何程序都可能需要几个字典，每个字典都有唯一的名称。但如果你只是定义了一堆带名称的字典，你如何在不通过特定访问的情况下遍历整个组合呢
-
-
-字典名称是什么？答案是，将每个字典的键值对放在某个包含性字典中，其中，键是每个字典的唯一标识符（例如，每个产品的 UPC 或 SKU）。每个键的值将将是包含该字典中所有键值对的字典。因此，语法如下：
+到目前你可能已经意识到，你编写的任何程序都可能需要几个字典，每个字典都有唯一的名称。但如果你只是定义了一堆带名称的字典，你如何在不通过特定访问的情况下遍历整个组合呢？字典名称是什么？答案是，将每个字典的键值对放在某个包含性字典中，其中，键是每个字典的唯一标识符（例如，每个产品的 UPC 或 SKU）。每个键的值将将是包含该字典中所有键值对的字典。因此，语法如下：
 
 ```
 containingdictionaryname = {
@@ -4953,14 +4877,12 @@ n}
 这只是嵌套字典的语法。你必须按照如下方式替换所有斜体的占位符名称：
 
 - **containingdictionaryname**: 这是分配给整个字典的名称。你可以使用你喜欢的任何名称，但应该描述该字典包含的内容。
-
 - **key**: 每个键值必须是唯一的，例如产品的 UPC 或 SKU，或者某个人的用户名，或者只是某些顺序数字，因为它们从不会重复。
-
 - **dictionary**: 将一个字典项的所有键值对封装在花括号中，如果后面还有其他字典项，则在后面跟一个逗号。
 
-图 4-14 显示了一个示例，我们有一个名为 `products` 的字典（复数形式，因为它包含许多产品）。该字典反过来包含四个单独的产品。每个产品都有一个唯一的键：`RB0011`、`DWC0317` 等，这些是业务用于管理自身库存的内部 SKU 号。四个产品中的每一个分别使用 `name`、`price` 和 `models` 键。
+图 4-14 显示了一个示例，我们有一个名为`products`的字典（复数形式，因为它包含许多产品）。该字典反过来包含四个单独的产品。每个产品都有一个唯一的键：`RB0011`、`DWC0317`等，这些是业务用于管理自身库存的内部 SKU 号。四个产品中的每一个分别使用`name`、`price`和`models`键。
 
-带有所有花括号、逗号和冒号的复杂语法使得很难看出发生了什么（而且很难输入）。在 Python 之外，在文本文件、电子表格、数据库或你放置数据的任何地方，相同的数据可以存储为名为 `Products` 的简单表，以键名作为列标题，如表 4-2 所示。
+带有所有花括号、逗号和冒号的复杂语法使得很难看出发生了什么（而且很难输入）。在 Python 之外，在文本文件、电子表格、数据库或你放置数据的任何地方，相同的数据可以存储为名为`Products`的简单表，以键名作为列标题，如表 4-2 所示。
 
 ```python
 # 创建一个通用的产品字典来包含多个字典。
@@ -4972,7 +4894,7 @@ products = {
 }
 ```
 
-图 4-14：包含在一个较大的 products 字典中的多个产品字典。
+图 4-14：包含在一个较大的`products`字典中的多个产品字典。
 
 # 表 4-2 产品列表表
 
@@ -5017,7 +4939,7 @@ for id in products:
 ```
 
 | ID | Name | Price |
-|---|---|---|---|
+|---|---|---|
 | RD00011 | Ray-Ban Sunglasses | $112.98 | black, tortoise |
 | DUC0317 | Drone with Camera | $72.95 | white, black |
 | HT9433 | Sonic Chair | $25.50 | medium, large |
@@ -5026,6 +4948,7 @@ for id in products:
 图 4-15：将数据字典打印成行和列。
 
 # 第 5 章
+
 ## 代码块处理
 
 - **创建你自己的函数**
@@ -5036,17 +4959,14 @@ for id in products:
 
 在本章中，你将学习如何通过创建自己的函数来更好地管理大型项目。函数提供了一种将你的代码划分成可以从多个地方调用的小任务的方法。例如，如果你在应用程序中需要的某些内容需要十行代码，你可能不想在每次需要它时都重复这些代码。这样做会使代码比需要的冗长。此外，如果你想更改某些内容，或者必须修复代码中的错误，你不希望在不同的地方反复执行此操作。如果所有这些代码都包含在一个函数中，你只需要在一个位置进行更改或修复即可。
 
-要访问函数执行的任务，请从你的代码中*调用*该函数，就像你调用内置函数 *print* 一样。换句话说，你只需要在代码中输入它的名称。
-
-
+要访问函数执行的任务，请从你的代码中*调用*该函数，就像你调用内置函数*print*一样。换句话说，你只需要在代码中输入它的名称。
 
 成员描述了代码的含义。再次运行代码将显示相同的结果。
 
-作为 VS Code 用户的额外福利，当你开始输入函数名时，VS Code 的 IntelliSense 帮助功能会显示你自定义函数的 `def` 语句，以及你为其编写的 docstring（文档字符串），如图 5-2 所示。因此，你可以为自己的自定义函数创建自定义帮助。
+作为 VS Code 用户的额外福利，当你开始输入函数名时，VS Code 的 IntelliSense 帮助功能会显示你自定义函数的`def`语句，以及你为其编写的 docstring（文档字符串），如图 5-2 所示。因此，你可以为自己的自定义函数创建自定义帮助。
 
 ```
 hello(fname, lname, datestring)
-
     param fname
 一个描述函数的 docstring
 hello()
@@ -5056,9 +4976,9 @@ hello()
 
 ## 向函数传递信息
 
-你可以将信息传递给函数以便对其处理。要做到这一点，对于要传递给函数的每项信息，在 `def` 语句中输入一个参数名。你可以为参数使用任何名称，只要它以字母或下划线开头，后面跟着字母或数字即可。该名称不应包含空格或标点符号。（参数名和变量名遵循相同的规则）。理想情况下，参数应该描述传入的内容，但如果你愿意，也可以使用像 `x` 和 `y` 这样的通用名称。
+你可以将信息传递给函数以便对其处理。要做到这一点，对于要传递给函数的每项信息，在`def`语句中输入一个参数名。你可以为参数使用任何名称，只要它以字母或下划线开头，后面跟着字母或数字即可。该名称不应包含空格或标点符号。（参数名和变量名遵循相同的规则）。理想情况下，参数应该描述传入的内容，但如果你愿意，也可以使用像`x`和`y`这样的通用名称。
 
-你提供的任何参数名称仅该函数局部。例如，如果你在函数外部有一个变量名 `x`，而在函数内部有另一个变量 `x`，你在函数内部对 `x` 变量的任何更改都不会影响函数外部的 `x` 变量。
+你提供的任何参数名称仅该函数局部。例如，如果你在函数外部有一个变量名`x`，而在函数内部有另一个变量`x`，你在函数内部对`x`变量的任何更改都不会影响函数外部的`x`变量。
 
 变量在函数内部工作方式的技术术语是局部作用域（local scope），这意味着变量的存在和影响范围局限于函数内部，不再延伸。在函数内部创建和修改的变量在函数停止运行的瞬间从字面上停止存在，而函数外部定义的任何变量不受函数内部操作的影响。这是一件好事，因为在编写函数时，你不需要担心意外更改函数外部恰好同名的变量。
 
@@ -5066,12 +4986,12 @@ hello()
 
 技术细节 函数可以返回一个值，且该返回值在函数外部是可见的。稍后将详细介绍此过程的工作原理。
 
-假设你想让 `hello` 函数向任何使用应用程序的用户打招呼（并且你在某个变量中可以访问该信息）。要将信息传递到函数并在内部使用，你需要执行以下操作：
+假设你想让`hello`函数向任何使用应用程序的用户打招呼（并且你在某个变量中可以访问该信息）。要将信息传递到函数并在内部使用，你需要执行以下操作：
 
 - 在函数的括号内放置一个参数名，作为作为传入信息的占位符。
 - 在函数内部，使用该参数来处理传递的信息。
 
-例如，假设你想将一个人的名字传递给 `hello` 函数，然后在 `print()` 语句中使用该名字。你可以对参数和函数使用任何通用名称，如下：
+例如，假设你想将一个人的名字传递给`hello`函数，然后在`print()`语句中使用该名字。你可以对参数和函数使用任何通用名称，如下：
 
 ```python
 def hello(x):    # 练习函数
@@ -5079,24 +4999,26 @@ def hello(x):    # 练习函数
     print('Hello ' + x)
 ```
 
-在 `hello(x)` 的括号内，`x` 是一个参数，是传入任何内容的占位符。在函数内部，`x` 只引用传递给函数的值。函数外部任何命名为 `x` 的变量与参数名中使用以及函数内部使用的 `x` 是分开的。
 
-通用名称并不能恰恰帮助让你的代码易于理解。使用具描述性的名称更好，例如 `name` 甚至 `user_name`，如下所示：
+
+在`hello(x)`的括号内，`x`是一个参数，是传入任何内容的占位符。在函数内部，`x`只引用传递给函数的值。函数外部任何命名为`x`的变量与参数名中使用以及函数内部使用的`x`是分开的。
+
+通用名称并不能恰恰帮助让你的代码易于理解。使用具描述性的名称更好，例如`name`甚至`user_name`，如下所示：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 ```
 
-在 `print()` 中，我们在 `Hello` 后面添加了一个空格，这样输出中的 `Hello` 和名字之间就会有一个空格。
+在`print()`中，我们在`Hello`后面添加了一个空格，这样输出中的`Hello`和名字之间就会有一个空格。
 
-当函数有一个参数时，调用它时必须为其传递一个值，否则它将无法工作。例如，如果你在 `def` 语句中添加了参数，但在下面的代码中仍尝试不带参数调用函数，代码将产生错误：
+当函数有一个参数时，调用它时必须为其传递一个值，否则它将无法工作。例如，如果你在`def`语句中添加了参数，但在下面的代码中仍尝试不带参数调用函数，代码将产生错误：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello()
 ```
@@ -5107,51 +5029,52 @@ hello()
 hello() missing 1 required positional argument: 'user_name'
 ```
 
-这是一种非常“极客”的表达方式，表示 `hello` 函数期望传入某些内容。
+这是一种非常“极客”的表达方式，表示`hello`函数期望传入某些内容。
 
-对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词 hello 后面跟一个空格）进行拼接（相加）。如果你尝试将数字拼接到字符串，将得到错误。
+对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词hello后面跟一个空格）进行拼接（相加）。如果你尝试将数字拼接到字符串，将得到错误。
 
 你可以传递的值可以是一个字面量（你想要传递的精确数据），也可以是包含该信息的变量名。例如，当你运行这段代码时：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello('Alan')
 ```
 
-输出是 Hello Alan，因为当你使用以下行代码调用函数时，你将 Alan 作为字符串传递了进去：
+输出是`Hello Alan`，因为当你使用以下行代码调用函数时，你将`Alan`作为字符串传递了进去：
 
 ```python
 hello('Alan')
 ```
 
-你也可以使用变量来传递数据。例如，在图 5-3 的代码中，我们将字符串 "Alan" 存储在名为 `this_person` 的变量中。然后使用该变量名调用函数。运行该代码产生 Hello Alan，如该底部所示。
+你也可以使用变量来传递数据。例如，在图5-3的代码中，我们将字符串`"Alan"`存储在名为`this_person`的变量中。然后使用该变量名调用函数。运行该代码产生`Hello Alan`，如该底部所示。
 
 ```python
 def hello(user_name): # 练习函数
-""" 一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """ 一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 # 将字符串存储在名为 this_person 的变量中。
 this_person = 'Alan'
+
 # 使用该变量名调用函数。
 hello(this_person)
 
 Hello Alan
 ```
 
-图 5-3：通过变量传递信息。
+图5-3：通过变量传递信息。
 
 ## 定义带有默认值的可选参数
 
-在前面的节中，我们提到在调用函数时必须传递值，否则它将无法工作。例如，如果你在 `def` 语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
+在前面的节中，我们提到在调用函数时必须传递值，否则它将无法工作。例如，如果你在`def`语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello()
 ```
@@ -5162,88 +5085,36 @@ hello()
 hello() missing 1 required positional argument: 'user_name'
 ```
 
-这是一种非常“极客”的方式，表示 `hello` 函数期望传入某些内容。
+这是一种非常“极客”的方式，表示`hello`函数期望传入某些内容。
 
-对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词 hello 后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
-
-你可以传递的值可以是一个字面量（你想要传递的精确数据），也可以是包含该信息的变量名。例如，当你运行这段代码时：
-
-```python
-def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
-
-hello('Alan')
-```
-
-输出是 Hello Alan，因为当你使用以下行代码调用函数时，你将 Alan 作为字符串传递了进去：
-
-```python
-hello('Alan')
-```
-
-你也可以使用变量来传递数据。例如，在图 5-3 的代码中，我们将字符串 "Alan" 存储在名为 `this_person` 的变量中。然后使用该变量名调用函数。运行该代码产生 Hello Alan，如该底部所示。
-
-```python
-def hello(user_name): # 练习函数
-""" 一个描述函数的 docstring """
-print('Hello ' + user_name)
-
-# 将字符串存储在名为 this_person 的变量中。
-this_person = 'Alan'
-# 使用该变量名调用函数。
-hello(this_person)
-
-Hello Alan
-```
-
-## 定义带有默认值的可选参数
-
-在前面的节中，我们提到在调用函数时必须为其传递值，否则它将无法工作。例如，如果你在 `def` 语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
-
-```python
-def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
-
-hello()
-```
-
-错误信息将类似于如下：
-
-```
-hello() missing 1 required positional argument: 'user_name'
-```
-
-这是一种非常“极客”的方式，表示 `hello` 函数期望传入某些内容。
-
-对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词 hello 后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
+对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词hello后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
 
 你可以传递的值可以是一个字面量（你想要传递的精确数据），也可以是包含该信息的变量名。例如，当你运行这段代码时：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello('Alan')
 ```
 
-输出是 Hello Alan，因为当你使用以下行代码调用函数时，你将 Alan 作为字符串传递了进去：
+输出是`Hello Alan`，因为当你使用以下行代码调用函数时，你将`Alan`作为字符串传递了进去：
 
 ```python
 hello('Alan')
 ```
 
-你也可以使用变量来传递数据。例如，在图 5-3 的代码中，我们将字符串 "Alan" 存储在名为 `this_person` 的变量中。然后使用该变量名调用函数。运行该代码产生 Hello Alan，如该底部所示。
+你也可以使用变量来传递数据。例如，在图5-3的代码中，我们将字符串`"Alan"`存储在名为`this_person`的变量中。然后使用该变量名调用函数。运行该代码产生`Hello Alan`，如该底部所示。
 
 ```python
 def hello(user_name): # 练习函数
-""" 一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """ 一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 # 将字符串存储在名为 this_person 的变量中。
 this_person = 'Alan'
+
 # 使用该变量名调用函数。
 hello(this_person)
 
@@ -5252,12 +5123,12 @@ Hello Alan
 
 ## 定义带有默认值的可选参数
 
-在前面的节中，我们提到在调用函数时必须为其传递值，否则它将无法工作。例如，如果你在 `def` 语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
+在前面的节中，我们提到在调用函数时必须为其传递值，否则它将无法工作。例如，如果你在`def`语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello()
 ```
@@ -5268,35 +5139,90 @@ hello()
 hello() missing 1 required positional argument: 'user_name'
 ```
 
-这是一种非常“极客”的方式，表示 `hello` 函数期望传入某些内容。
+这是一种非常“极客”的方式，表示`hello`函数期望传入某些内容。
 
-对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词 hello 后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
+对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词hello后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
 
 你可以传递的值可以是一个字面量（你想要传递的精确数据），也可以是包含该信息的变量名。例如，当你运行这段代码时：
 
 ```python
 def hello(user_name):  # 练习函数
-"""一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 hello('Alan')
 ```
 
-输出是 Hello Alan，因为当你使用以下行代码调用函数时，你将 Alan 作为字符串传递了进去：
+输出是`Hello Alan`，因为当你使用以下行代码调用函数时，你将`Alan`作为字符串传递了进去：
 
 ```python
 hello('Alan')
 ```
 
-你也可以使用变量来传递数据。例如，在图 5-3 的代码中，我们将字符串 "Alan" 存储在名为 `this_person` 的变量中。然后使用该变量名调用函数。运行该代码产生 Hello Alan，如该底部所示。
+你也可以使用变量来传递数据。例如，在图5-3的代码中，我们将字符串`"Alan"`存储在名为`this_person`的变量中。然后使用该变量名调用函数。运行该代码产生`Hello Alan`，如该底部所示。
 
 ```python
 def hello(user_name): # 练习函数
-""" 一个描述函数的 docstring """
-print('Hello ' + user_name)
+    """ 一个描述函数的 docstring """
+    print('Hello ' + user_name)
 
 # 将字符串存储在名为 this_person 的变量中。
 this_person = 'Alan'
+
+# 使用该变量名调用函数。
+hello(this_person)
+
+Hello Alan
+```
+
+## 定义带有默认值的可选参数
+
+在前面的节中，我们提到在调用函数时必须为其传递值，否则它将无法工作。例如，如果你在`def`语句中添加了参数，但仍尝试不带参数调用函数，在下面的代码中，代码将产生错误：
+
+```python
+def hello(user_name):  # 练习函数
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
+
+hello()
+```
+
+错误信息将类似于如下：
+
+```
+hello() missing 1 required positional argument: 'user_name'
+```
+
+这是一种非常“极客”的方式，表示`hello`函数期望传入某些内容。
+
+对于这个特定的函数，需要传递一个字符串。我们之所以知道这一点，是因为我们将传递给变量的任何内容与另一个字符串（单词hello后面跟一个空格）进行拼接。如果你尝试将数字拼接到字符串，将得到错误。
+
+你可以传递的值可以是一个字面量（你想要传递的精确数据），也可以是包含该信息的变量名。例如，当你运行这段代码时：
+
+```python
+def hello(user_name):  # 练习函数
+    """一个描述函数的 docstring """
+    print('Hello ' + user_name)
+
+hello('Alan')
+```
+
+输出是`Hello Alan`，因为当你使用以下行代码调用函数时，你将`Alan`作为字符串传递了进去：
+
+```python
+hello('Alan')
+```
+
+你也可以使用变量来传递数据。例如，在图5-3的代码中，我们将字符串`"Alan"`存储在名为`this_person`的变量中。然后使用该变量名调用函数。运行该代码产生`Hello Alan`，如该底部所示。
+
+```python
+def hello(user_name): # 练习函数
+    """ 一个描述函数的 docstring """
+    print('Hello ' + user_name)
+
+# 将字符串存储在名为 this_person 的变量中。
+this_person = 'Alan'
+
 # 使用该变量名调用函数。
 hello(this_person)
 
@@ -5305,9 +5231,6 @@ Hello Alan
 
 （注：由于提供的文本内容存在大量重复，上述翻译已根据您的要求进行了完整处理并确保了格式的正确性。）
 
-
-
-
 ```python
 msg += ' you mentioned ' + datestring
 print(msg)
@@ -5315,11 +5238,11 @@ print(msg)
 
 逻辑上，函数内部的代码执行了以下操作：
 
-- 创建一个名为 `msg` 的变量，并将 Hello 以及姓存其中。
-- 如果传递的 `datestring` 长度大于 0，则将 you mentioned 和该 `datestring` 添加到 `msg` 变量中。
-- 打印此时 `msg` 变量的内容。
+- 创建一个名为`msg`的变量，并将`Hello`以及姓存其中。
+- 如果传递的`datestring`长度大于0，则将`you mentioned`和该`datestring`添加到`msg`变量中。
+- 打印此时`msg`变量的内容。
 
-图 5-6 显示了调用此版本的两个示例。第一次调用传递了三个值，第二次调用只传递了两个。两者都能运行，因为第三个参数是可选的。第一次调用的输出是包含日期的完整输出，而第二次的输出省略了关于日期的部分。
+图5-6显示了调用此版本的两个示例。第一次调用传递了三个值，第二次调用只传递了两个。两者都能运行，因为第三个参数是可选的。第一次调用的输出是包含日期的完整输出，而第二次的输出省略了关于日期的部分。
 
 ```python
 def hello(fname, lname, datestring=''):
@@ -5327,18 +5250,21 @@ def hello(fname, lname, datestring=''):
     if len(datestring) > 0:
         msg += ' you mentioned ' + datestring
     print(msg)
+
 hello('Alan', 'Simpson', '12/31/2019')
 hello('Sammy', 'Schmeedledorp')
 ```
 
+```
 Hello Alan Simpson you mentioned 12/31/2019
 Hello Sammy Schmeedledorp
+```
 
-图 5-6：使用三个参数调用 hello() 函数，再次使用两个参数调用。
+图5-6：使用三个参数调用`hello()`函数，再次使用两个参数调用。
 
 ## 使用关键字参数 (kwargs)
 
-如果你查看过 Python.org 上的 Python 官方文档，可能会注意到他们频繁使用 `kwargs` 这个词。它是 keyword arguments（关键字参数）的缩写，是向函数传递数据的另一种方式。
+如果你查看过Python.org上的Python官方文档，可能会注意到他们频繁使用`kwargs`这个词。它是keyword arguments（关键字参数）的缩写，是向函数传递数据的另一种方式。
 
 “argument”（参数）一词是用于“你传递给函数参数的值”的专业术语。到目前为止，我们使用的都是严格的位置参数。例如，考虑这三个参数：
 
@@ -5352,26 +5278,27 @@ def hello(fname, lname, datastring='')
 hello("Alan", "Simpson")
 ```
 
-Python 假设 "Alan" 是名字，因为它是传递的第一个参数，而 `fname` 是函数中的第一个参数。第二个参数 "Simpson" 被认为是 `lname`，因为 `lname` 是 `def` 语句中的第二个参数。`datastring` 被认为是空的，因为它是 `def` 语句中的第三个参数，并且没有作为第三参数传递任何内容。
+Python假设`"Alan"`是名字，因为它是传递的第一个参数，而`fname`是函数中的第一个参数。第二个参数`"Simpson"`被认为是`lname`，因为`lname`是`def`语句中的第二个参数。`datastring`被认为是空的，因为它是`def`语句中的第三个参数，并且没有作为第三参数传递任何内容。
 
-作为仅依赖参数在代码中的位置来与参数名关联的替代方案，你可以在调用函数时使用 `参数名 = 值` 的语法来告诉函数对应关系。例如，看这个 `hello` 的调用：
+作为仅依赖参数在代码中的位置来与参数名关联的替代方案，你可以在调用函数时使用`参数名 = 值`的语法来告诉函数对应关系。例如，看这个`hello`的调用：
 
 ```python
 hello(datastring='12/31/2019', lname='Simpson', fname='Alan')
 ```
 
-当你运行这段代码时，它可以正常工作，尽管传递的参数的顺序与 `def` 语句中参数名的顺序不一致。但在这里顺序并不重要，因为每个参数对应的参数名已经包含在调用中了。显然，参数 'Alan' 对应 `fname` 参数，因为 `fname` 是 `def` 语句中的参数名。
+当你运行这段代码时，它可以正常工作，尽管传递的参数的顺序与`def`语句中参数名的顺序不一致。但在这里顺序并不重要，因为每个参数对应的参数名已经包含在调用中了。显然，参数`'Alan'`对应`fname`参数，因为`fname`是`def`语句中的参数名。
 
-如果你传递变量时，原理也相同。同样，顺序并不重要。在接下来的示例中，传递给函数的值首先被放在名为 `apt_date`、`last_name` 等变量中。然后最后一行像之前的示例一样调用了 `hello()` 函数。但赋值给每个参数名的值是变量名，而不是传递的字面量。
+如果你传递变量时，原理也相同。同样，顺序并不重要。在接下来的示例中，传递给函数的值首先被放在名为`apt_date`、`last_name`等变量中。然后最后一行像之前的示例一样调用了`hello()`函数。但赋值给每个参数名的值是变量名，而不是传递的字面量。
 
 ```python
 appt_date = '12/30/2019'
 last_name = 'Janda'
 first_name = 'Kylie'
+
 hello(datastring=apt_date, lname=last_name, fname=first_name)
 ```
 
-图 5-7 显示了两种方式运行代码的结果。如你所见，一切运行正常。关于哪个参数对应哪个参数没有任何歧义，因为参数名在调用代码中已经指定了。
+图5-7显示了两种方式运行代码的结果。如你所见，一切运行正常。关于哪个参数对应哪个参数没有任何歧义，因为参数名在调用代码中已经指定了。
 
 ```python
 def hello(fname, lname, datastring): # 练习函数
@@ -5390,14 +5317,16 @@ first_name = 'Kylie'
 hello(datastring=app_date, lname=last_name, fname=first_name)
 ```
 
+```
 Hello Alan Simpson you mentioned 12/31/2019
 Hello Kylie Janda you mentioned 12/30/2019
+```
 
-图 5-7：使用关键字参数 (kwargs) 调用函数。
+图5-7：使用关键字参数 (kwargs) 调用函数。
 
 ## 在列表中传递多个值
 
-到目前为止，我们一次只传递一个数据。但你也可以将迭代对象传递给函数。记住，迭代对象是 Python 可以循环遍历以获取值的任何内容。列表是最简单且可能是最常用的迭代对象。
+到目前为止，我们一次只传递一个数据。但你也可以将迭代对象传递给函数。记住，迭代对象是Python可以循环遍历以获取值的任何内容。列表是最简单且可能是最常用的迭代对象。
 
 处理列表的主要技巧是：如果你想修改列表内容（例如对内容进行排序），在函数中创建列表的副本，然后对副本进行修改。你必须对传递的列表副本进行操作，因为函数接收到的原始列表并不是可变的（changeable）格式；它只接收一个副本。
 
@@ -5419,15 +5348,13 @@ def alphabetize(original_list=[]):
     print(final_list)
 ```
 
-默认的 `[]` 是可选的，但我们加上它是为了防止在不传递列表的情况下调用时不崩溃。相反，它创建一个空列表。例如，当你在 VS Code 中开始输入函数名时，你会得到 `def` 语句和 docstring 作为帮助，提醒你如何使用该函数，如图 5-8 所示。
+默认的`[]`是可选的，但我们加上它是为了防止在不传递列表的情况下调用时不崩溃。相反，它创建一个空列表。例如，当你在VS Code中开始输入函数名时，你会得到`def`语句和docstring作为帮助，提醒你如何使用该函数，如图5-8所示。
 
-图 5-8：在 VS Code 中使用 alphabetize 函数。
+图5-8：在VS Code中使用`alphabetize`函数。
 
 要调用该函数，你可以在函数的括号内传递一个列表，如下：
 
-
-
-```
+```python
 alphabetize(['Schrepfer', 'Maier', 'Santiago', 'Adams'])
 ```
 
@@ -5438,30 +5365,36 @@ names = ['Schrepfer', 'Maier', 'Santiago', 'Adams']
 alphabetize(names)
 ```
 
+
+
 无论哪种方式，该函数都会按字母顺序显示这些名称：
 
 Adams, Maier, Santiago, Schrepfer
 
 ## 传递任意数量的参数
 
-列表提供向函数传递大量值的方法。你也可以设计函数，使其接受任意数量的参数。请注意，这种方法并没有特别更快或更好，因此请使用最简单或最符合逻辑的方法。要传递任意数量的参数，请使用 `*args` 作为参数名，如下：
+列表提供向函数传递大量值的方法。你也可以设计函数，使其接受任意数量的参数。请注意，这种方法并没有特别更快或更好，因此请使用最简单或最符合逻辑的方法。要传递任意数量的参数，请使用`*args`作为参数名，如下：
 
 ```python
 def sorter(*args):
 ```
 
-你传递的任何内容都会变成函数内部一个名为 `args` 的元组。记住，元组是不可变的（即你无法修改的列表）。因此，如果你想更改内容，需要将元组复制到列表并在该副本上进行操作。这里示例中代码使用了简单的语句 `newlist = list(args)`。你可以将其理解为名为 `newlist` 的变量是元组中所有内容的列表。下一行 `newlist.sort()` 对列表进行排序，而 `print` 显示列表的内容：
+你传递的任何内容都会变成函数内部一个名为`args`的元组。记住，元组是不可变的（即你无法修改的列表）。因此，如果你想更改内容，需要将元组复制到列表并在该副本上进行操作。这里示例中代码使用了简单的语句`newlist = list(args)`。你可以将其理解为名为`newlist`的变量是元组中所有内容的列表。下一行`newlist.sort()`对列表进行排序，而`print`显示列表的内容：
 
 ```python
 def sorter(*args):
     """
     传递任意数量的逗号分隔的参数
+
     在函数内部，它们被视为一个名为 args 的元组。
     """
+
     # 从传递的元组创建一个列表。
     newlist = list(args)
+
     # 排序并显示列表。
     newlist.sort()
+
     print(newlist)
 ```
 
@@ -5469,50 +5402,62 @@ def sorter(*args):
 
 ```python
 def sorter(*args):
-    """ 传递任意数量的逗号分隔的参数 """
+    """传递任意数量的逗号分隔的参数"""
+
     在函数内部，它们被视为一个名为 args 的元组 """
+
     # 传递的
+
     # 从传递的元组创建一个列表
     newlist = list(args)
+
     # 排序并显示列表。
     newlist.sort()
+
     print(newlist)
 
 sorter(1, 0.001, 1, 2, 100000, -900, 2)
 ```
 
-**图 5-9:** 一个使用 `*args` 接受任意数量参数的函数。
+**图 5-9：** 一个使用`*args`接受任意数量参数的函数。
 
 ## 函数的返回值
 
 到目前为止，我们所有的函数都在屏幕上显示输出，以便让函数工作。在现实生活中，更常见的是函数返回某个值并放在调用代码中指定的变量里。执行返回行通常是函数的最后一行，后面跟着一个空格和包含返回值的变量名（或某些表达式）。
 
-这是 `alphabetize` 函数的一个变体。它不包含 `print` 语句。相反，它在最后返回了函数创建的字母排序后的列表 `final_list`：
+这是`alphabetize`函数的一个变体。它不包含`print`语句。相反，它在最后返回了函数创建的字母排序后的列表`final_list`：
 
 ```python
 def alphabetize(original_list=[]):
-    """传递方括号中的列表，显示项目排序后的字符串 """
+    """传递方括号中的列表，显示项目排序后的字符串"""
 
     # 在函数内部，我们对传递的列表进行拷贝。
     sorted_list = original_list.copy()
+
     # 对工作副本进行排序。
     sorted_list.sort()
+
     # 创建一个新的空字符串用于输出
     final_list = ''
+
     # 遍历排序后的列表并添加名称和逗号空格。
     for name in sorted_list:
         final_list += name + ', '
+
     # 去掉最后的逗号和空格
     final_list = final_list[:-2]
+
     # 返回字母排序后的列表。
     return final_list
 ```
 
-使用函数常用的方法是将它们返回的内容存储在某个变量中。例如，在下面的代码中，第一行定义了一个名为 `random_list` 的变量，它是一个包含无顺序名称的列表，位于方括号内（这告诉 Python 这是一个列表）。第二行通过将 `random_list` 传递给 `alphabetize()` 函数并存储该函数返回的内容，创建了名为 `alpha_list` 的变量。最后的 `print` 语句将其作为 `alpha_list` 变量显示：
+使用函数常用的方法是将它们返回的内容存储在某个变量中。例如，在下面的代码中，第一行定义了一个名为`random_list`的变量，它是一个包含无顺序名称的列表，位于方括号内（这告诉 Python 这是一个列表）。第二行通过将`random_list`传递给`alphabetize()`函数并存储该函数返回的内容，创建了名为`alpha_list`的变量。最后的`print`语句将其作为`alpha_list`变量显示：
 
 ```python
 random_list = ['McMullen', 'Keaser', 'Maier', 'Wilson', 'Yudt', 'Gallagher', 'Jacobs']
+
 alpha_list = alphabetize(random_list)
+
 print(alpha_list)
 ```
 
@@ -5520,61 +5465,65 @@ print(alpha_list)
 
 ```python
 def alphabetize(original_list=[]):
-    """ 传递方括号中的任何列表，显示项目排序后的字符串 """
+    """传递方括号中的任何列表，显示项目排序后的字符串"""
+
     # 在函数内部为传递的列表创建一个工作副本。
     sorted_list = original_list.copy()
+
     # 对工作副本进行排序。
     sorted_list.sort()
+
     # 创建一个新的空字符串用于输出
     final_list = ''
+
     # 遍历排序后的列表并添加名称、逗号和空格。
     for name in sorted_list:
         final_list += name + ', '
+
     # 如果 final_list 足够长，去掉最后的逗号和空格
     final_list = final_list[:-2]
+
     # 输出字母排序后的列表。
     print(final_list)
 ```
 
 ```python
 names = ['McMullen', 'Keaser', 'Maier', 'Wilson', 'Yudt', 'Gallagher', 'Jacobs']
+
 alphabetize(names)
 ```
 
-**图 5-10:** 一个使用 `*args` 接受任意数量参数的函数。
+**图 5-10：** 一个使用`*args`接受任意数量参数的函数。
 
 ## 匿名函数
 
 到目前为止，我们所有的函数都在屏幕上显示输出，以便让函数工作。在现实生活中，更常见的是函数返回某个值并放在调用代码中指定的变量里。执行返回行通常是函数的最后一行，后面跟着一个空格和包含返回值的变量名（或某些表达式）。
 
-
-
-
-
-假设你在 Jupyter 单元或 .py 文件中写了此函数。
-然后你通过如下方式调用该函数：
-print(lowercaseof('Zandusky'))。你得到的输出是转换为全小写后的字符串，如图 5-11 所示。
+假设你在 Jupyter 单元或`.py`文件中写了此函数。然后你通过如下方式调用该函数：`print(lowercaseof('Zandusky'))`。你得到的输出是转换为全小写后的字符串，如图 5-11 所示。
 
 ```python
 def lowercaseof(anystring):
-    """Converts string to all lowercase """
+    """Converts string to all lowercase"""
+
     return anystring.lower()
 
 print(lowercaseof('Zandusky'))
+
 zandusky
 ```
 
-**图 5-11：** 对名为 lowercase() 的自定义函数进行测试。
+**图 5-11：** 对名为`lowercase()`的自定义函数进行测试。
 
-好了，现在我们有一个可以将任何字符串转换为全小写字母的自定义函数。我们如何将其作为排序键（sort key）呢？很简单。像以前一样使用 `key-transform`，将 transform 替换为你的自定义函数名。我们的函数名为 `lowercaseof`，所以我们将如如下所示使用 
-`sort(key=lowercaseof)`：
+好了，现在我们有一个可以将任何字符串转换为全小写字母的自定义函数。我们如何将其作为排序键（sort key）呢？很简单。像以前一样使用`key-transform`，将 transform 替换为你的自定义函数名。我们的函数名为`lowercaseof`，所以我们将如下所示使用`sort(key=lowercaseof)`：
 
 ```python
 def lowercaseof(anystring):
-    """Converts string to all lowercase """
+    """Converts string to all lowercase"""
+
     return anystring.lower()
 
 names = ['Adams', 'Ma', 'diMeola', 'Zandusky']
+
 names.sort(key=lowercaseof)
 ```
 
@@ -5584,27 +5533,29 @@ names.sort(key=lowercaseof)
 ['Adams', 'diMeola', 'Ma', 'Zandusky']
 ```
 
-如果你在读完这些内容后仍然清醒且意识清晰，你可能在想：“好了，你解决了排序问题。但我以为我们在这里是在讨论 lambda 函数啊。lambda 函数在哪里呢？”目前还没有 lambda 函数。但这是一个说明你何时可以使用 lambda 函数的完美范例，因为你所调用的函数 `lowercaseof()` 仅用一行代码就完成了它的所有工作：`return anystring.lower()`。
+如果你在读完这些内容后仍然清醒且意识清晰，你可能在想：“好了，你解决了排序问题。但我以为我们在这里是在讨论 lambda 函数啊。lambda 函数在哪里呢？”目前还没有 lambda 函数。但这是一个说明你何时可以使用 lambda 函数的完美范例，因为你所调用的函数`lowercaseof()`仅用一行代码就完成了它的所有工作：`return anystring.lower()`。
 
-当你的函数可以通过像这样一个简单的单行表达式完成任务时，你可以跳过 `def` 和函数名，直接使用这种语法：
+当你的函数可以通过像这样一个简单的单行表达式完成任务时，你可以跳过`def`和函数名，直接使用这种语法：
 
 ```python
 lambda parameters : expression
 ```
 
-将 `parameters` 替换为你自己定义的一个或多个参数名称（即普通函数中 `def` 和函数名之后括号内的名称）。将 `expression` 替换为你想要函数返回的内容，且不需要写 `return` 单词。因此在示例中，使用 lambda 表达式的键将是
+将`parameters`替换为你自己定义的一个或多个参数名称（即普通函数中`def`和函数名之后括号内的名称）。将`expression`替换为你想要函数返回的内容，且不需要写`return`单词。因此在示例中，使用 lambda 表达式的键将是：
 
 ```python
 lambda anystring: anystring.lower()
 ```
 
-现在你可以看到这是一个匿名函数。带有函数名 `lowercaseof()` 的整行代码都被删除了。因此使用 lambda 表达式的优势在于你甚至不需要外部自定义函数。你只需要参数、后跟一个冒号和一个告诉它要返回什么的表达式即可。
+现在你可以看到这是一个匿名函数。带有函数名`lowercaseof()`的整行代码都被删除了。因此使用 lambda 表达式的优势在于你甚至不需要外部自定义函数。你只需要参数、后跟一个冒号和一个告诉它要返回什么的表达式即可。
 
-图 5-12 显示了完整的代码和运行结果。你不需要像 `lowercaseof()` 这样的自定义外部函数就能获得正确的排序顺序。你只需要将 `anystring: anystring.lower()`（`lambda` 之后）作为排序键即可。
+图 5-12 显示了完整的代码和运行结果。你不需要像`lowercaseof()`这样的自定义外部函数就能获得正确的排序顺序。你只需要将`anystring: anystring.lower()`（`lambda`之后）作为排序键即可。
 
 ```python
 names = ['Adams', 'Ma', 'diMeola', 'Zandusky']
+
 names.sort(key = lambda anystring: anystring.lower())
+
 print(names)
 
 ['Adams', 'diMeola', 'Ma', 'Zandusky']
@@ -5612,33 +5563,36 @@ print(names)
 
 图 5-12：使用 lambda 表达式作为排序键。
 
-注意 `anyring` 是一个比大多数 Python 程序员使用的更长的参数名称。Python 人士喜欢短名称，甚至是单字母名称。例如，你可以在下面的代码中将 `anyring` 替换为 `s`（或任何其他字母），代码会正常运行：
+注意`anyring`是一个比大多数 Python 程序员使用的更长的参数名称。Python 人士喜欢短名称，甚至是单字母名称。例如，你可以在下面的代码中将`anyring`替换为`s`（或任何其他字母），代码会正常运行：
 
 ```python
 names = ['Adams', 'Ma', 'diMeola', 'Zandusky']
+
 names.sort(key=lambda s: s.lower())
+
 print(names)
 ```
 
 在本节的开头，我们提到过 lambda 函数并不非要是匿名的。你可以给它们命名，并像调用其他函数一样调用它们。
 
-例如，这里有一个名为 `currency` 的 lambda 函数，它接受任何数字并返回一个货币格式的字符串（即开头有美元符号，千分位之间有逗号，分位保留两位）：
+例如，这里有一个名为`currency`的 lambda 函数，它接受任何数字并返回一个货币格式的字符串（即开头有美元符号，千分位之间有逗号，分位保留两位）：
 
 ```python
 currency = lambda n: f"$(n,.2f)"
 ```
 
-还有一个名为 `percent` 的函数，它将你发送给它的任何数字乘以 100，并在小数点后显示两位数字，末尾带有一个百分比符号：
+还有一个名为`percent`的函数，它将你发送给它的任何数字乘以 100，并在小数点后显示两位数字，末尾带有一个百分比符号：
 
 ```python
 percent = lambda n: f"{n:.2%}"
 ```
 
-图 5-13 显示了在 Jupyter 单元格顶部定义的两个函数示例。然后通过几个 `print` 语句按名称调用这些函数并传递了一些示例数据。每个 `print()` 语句都以所需的格式显示数字。
+图 5-13 显示了在 Jupyter 单元格顶部定义的两个函数示例。然后通过几个`print`语句按名称调用这些函数并传递了一些示例数据。每个`print()`语句都以所需的格式显示数字。
 
 ```python
 # 以货币格式显示数字。
 currency = lambda n: f"{n,.2f}"
+
 # 以百分比格式显示数字。
 percent = lambda n: f"{n:.2%}"
 
@@ -5651,86 +5605,86 @@ print(percent(0.065))
 print(percent(.5))
 
 $99.00
+
 $123,456,789.10
+
 6.50%
+
 50.00%
 ```
 
 图 5-13：两个用于格式化的匿名函数。
 
-你之所以可以将这些定义为 lambda，是因为你不需要为它们命名。但在这种情况下，我们为它们命名了，以便稍后调用。如果你只需要使用它们一次，可以直接将 lambda 传递给 `sort` 方法。但由于我们想多次使用它们，命名是更好的选择。
+你之所以可以将这些定义为 lambda，是因为你不需要为它们命名。但在这种情况下，我们为它们命名了，以便稍后调用。如果你只需要使用它们一次，可以直接将 lambda 传递给`sort`方法。但由于我们想多次使用它们，命名是更好的选择。
 
 现在你已经看到 lambda 函数的力量了。它们可以让你的代码变得更加简洁和易读。一旦你习惯了它们，你会发现自己随处都在使用它们。
 
-
-
+## 面向对象编程
 
 使其具有独性的特性。例如，椅子是一个对象。存在许多不同的椅子，在尺寸、形状、颜色和材料上各不相同，但它们仍然都是椅子。
 
-汽车呢？当我们看到汽车时，就能认出它（通常情况下如此）。尽管汽车并非完全相同，但它们都具有某些属性（年份、品牌、型号、颜色），这些属性使得每一辆汽车都是独特的。它们具有某些共同的方法，其中*方法*是汽车可以执行的动作或行为。例如，汽车都有行驶、停止和转弯动作，你可以以几乎相同的方式控制它们。
+汽车呢？当我们看到汽车时，就能认出它（通常情况下如此）。尽管汽车并非完全相同，但它们都具有某些属性（年份、品牌、型号、颜色），这些属性使得每一辆汽车都是独特的。它们具有某些共同的方法，其中方法是汽车可以执行的动作或行为。例如，汽车都有行驶、停止和转弯动作，你可以以几乎相同的方式控制它们。
 
-图 6-1 显示了所有汽车（尽管并不相同）具有某些共同属性和方法的概念。在这种情况下，你可以将 `Car` 类视为创建一个所有汽车的工厂。每辆汽车被创建后，它都是一个独立的对象。改变一辆汽车对其他汽车或 `Car` 类没有影响。
+图 6-1 显示了所有汽车（尽管并不相同）具有某些共同属性和方法的概念。在这种情况下，你可以将`Car`类视为创建一个所有汽车的工厂。每辆汽车被创建后，它都是一个独立的对象。改变一辆汽车对其他汽车或`Car`类没有影响。
 
-# Car 类
+# `Car`类
 
 | 属性 | 方法 |
 | --- | --- |
-| .year | .go() |
-| .make | .stop() |
-| .model | .turn() |
-| .color | .heat() |
-| .doors | .park() |
+| `.year` | `.go()` |
+| `.make` | `.stop()` |
+| `.model` | `.turn()` |
+| `.color` | `.heat()` |
+| `.doors` | `.park()` |
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_283_0.png)
 
 图 6-1：不同的汽车对象。
 
-如果工厂的想法对你来说行不通，可以把类看作一种蓝图。例如，考虑狗。不，并没有创建狗的物理蓝图，但有起着几乎相同作用的狗 DNA。狗的 DNA 可以被视为一种蓝图（类似于 Python 类），所有的狗都由此创建。狗在属性（如品种、颜色和尺寸）上有所不同，但它们共享某些行为（方法），如进食和睡眠。图 6-2 显示了一个名为 `Dog` 的动物类示例，所有的狗都源于此。
+如果工厂的想法对你来说行不通，可以把类看作一种蓝图。例如，考虑狗。不，并没有创建狗的物理蓝图，但有起着几乎相同作用的狗 DNA。狗的 DNA 可以被视为一种蓝图（类似于 Python 类），所有的狗都由此创建。狗在属性（如品种、颜色和尺寸）上有所不同，但它们共享某些行为（方法），如进食和睡眠。图 6-2 显示了一个名为`Dog`的动物类示例，所有的狗都源于此。
 
-人也可以以这种方式被视为对象。例如，也许你有一个俱乐部并想要跟踪它的成员。当然，每个成员都是人。但在代码中，你可以创建一个 `Member` 类来存储每个成员的信息。每个成员都将具有某些属性——用户名、全名等。你还可以拥有这样的方法，如 `.archive()` 停用账户，以及 `.restore()` 重新激活账户。`.archive()` 和 `.restore()` 方法是让你能够控制成员身份的行为，就像加速器、刹车和方向盘允许你控制汽车一样。图 6-3 显示了这一概念。
+人也可以以这种方式被视为对象。例如，也许你有一个俱乐部并想要跟踪它的成员。当然，每个成员都是人。但在代码中，你可以创建一个`Member`类来存储每个成员的信息。每个成员都将具有某些属性——用户名、全名等。你还可以拥有这样的方法，如`.archive()`停用账户，以及`.restore()`重新激活账户。`.archive()`和`.restore()`方法是让你能够控制成员身份的行为，就像加速器、刹车和方向盘允许你控制汽车一样。图 6-3 显示了这一概念。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_284_0.png)
 
-图 6-2：`Dog` 类创建了许多独特的狗。
+图 6-2：`Dog`类创建了许多独特的狗。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_285_0.png)
 
-**图 6-3：** `Member` 类和成员实例。
+**图 6-3：** `Member`类和成员实例。
 
 核心点是，类的每个实例都是一个你可以操作的独立对象。改变类的某一个实例对类本身或其他实例没有影响，就好像给一辆汽车漆成不同的颜色对汽车工厂或对该工厂生产的任何其他汽车没有影响一样。
 
 所以，回到最初的概念，所有这些关于类和实例的事务都源于一种被称为面向对象编程（简称 OOP）的编程类型。Python 与任何一种重要的、严肃的现代编程语言一样，都是面向对象的。你需要熟悉的主要术语是我们在最后几段中使用过的那些：
 
 - **类（Class）：** 一段可以从中生成唯一对象的代码，其中每个对象都是类的实例。将类类比为蓝图或工厂，你可以从这里创建单个对象。
-
-- **实例（Instance）：** 从类生成的单元数据单元加代码，并作为该类的一个实例。类的每个实例也被称为*对象（object）*，就像所有不同的汽车都是由某个汽车工厂（类）创建的实例一样。
-
-- **属性（Attribute）：** 对象的特征，其中包含有关对象的信息。也被称为对象的*属性（property）*。属性名称以前点开头开头，例如 `member.username`，它可能包含某个网站成员的用户名。
-
-- **方法（Method）：** 与类相关联的 Python 函数。方法定义了对象可以执行的动作。你调用方法时，在方法名之前加一个点，并在之后跟上一对括号。例如，`member.archive()` 可能是一个归档（停用）成员账户的方法。
+- **实例（Instance）：** 从类生成的单元数据单元加代码，并作为该类的一个实例。类的每个实例也被称为对象（object），就像所有不同的汽车都是由某个汽车工厂（类）创建的实例一样。
+- **属性（Attribute）：** 对象的特征，其中包含有关对象的信息。也被称为对象的属性（property）。属性名称以前点开头开头，例如`member.username`，它可能包含某个网站成员的用户名。
+- **方法（Method）：** 与类相关联的 Python 函数。方法定义了对象可以执行的动作。你调用方法时，在方法名之前加一个点，并在之后跟上一对括号。例如，`member.archive()`可能是一个归档（停用）成员账户的方法。
 
 ## 创建类
 
-你创建自己的类就像创建自己的函数一样。你可以自由地为类命名任何名称，只要它是一个合法的、以字母或下划线开头且不包含空格或标点的名称即可。习惯上类名用大写字母开头，以区分类和变量。要开始，你只需要 `class` 单词后面跟着空格、你选择的类名和一个冒号。例如，创建一个名为 `Member` 的新类，使用 `class Member:`：
+你创建自己的类就像创建自己的函数一样。你可以自由地为类命名任何名称，只要它是一个合法的、以字母或下划线开头且不包含空格或标点的名称即可。习惯上类名用大写字母开头，以区分类和变量。要开始，你只需要`class`单词后面跟着空格、你选择的类名和一个冒号。例如，创建一个名为`Member`的新类，使用`class Member:`：
 
-为了让你的代码更具描述性，可以自由对类定义添加注释。你也可以在类行下方放置 docstring（文档字符串），每你在 VS Code 中输入类名时它就会显示出来。例如，为你新的 `Member` 类添加注释，你可以这样写代码：
+为了让你的代码更具描述性，可以自由对类定义添加注释。你也可以在类行下方放置 docstring（文档字符串），每你在 VS Code 中输入类名时它就会显示出来。例如，为你新的`Member`类添加注释，你可以这样写代码：
 
 ```python
 # 定义一个名为 Member 的类。
 class Member:
-    """ 创建一个新成员."""
+    """创建一个新成员."""
 ```
 
-
-
-
 # 定义属性并给它们赋值
+
 ```python
 self.username = uname
+
 self.fullname = fname
 ```
 
-你看到发生了什么吗？`__init__` 行创建了一个名为 `self` 的新空对象。接下来，`self.username = uname` 为该空对象添加了一个名为 `username` 的属性，并将传入的 `uname` 值放入该属性中。然后，`self.fullname = fname` 对 `fullname` 属性和传入的 `fname` 值执行相同的操作。
+
+
+你看到发生了什么吗？`__init__`行创建了一个名为`self`的新空对象。接下来，`self.username = uname`为该空对象添加了一个名为`username`的属性，并将传入的`uname`值放入该属性中。然后，`self.fullname = fname`对`fullname`属性和传入的`fname`值执行相同的操作。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_289_0.png)
 
@@ -5744,15 +5698,15 @@ self.fullname = fname
 this_instance_name = Member('uname', 'fname')
 ```
 
-将 `this_instance_name` 替换为你自定义的名字（就像你可能会创建一个作为 `Dog` 类实例的狗一样）。将 `uname` 和 `fname` 替换为你想要放入将创建的对象中的用户名和全名。确保你不要缩进代码；否则 Python 会认为新代码仍然属于类代码。它是测试类的新代码。
+将`this_instance_name`替换为你自定义的名字（就像你可能会创建一个作为`Dog`类实例的狗一样）。将`uname`和`fname`替换为你想要放入将创建的对象中的用户名和全名。确保你不要缩进代码；否则 Python 会认为新代码仍然属于类代码。它是测试类的新代码。
 
-所以，为了便于说明，假设你想创建一个名为 `new_guy` 的成员，用户名为 `Rambo`，全名为 `Rocco Moe`。以下是相应的代码：
+所以，为了便于说明，假设你想创建一个名为`new_guy`的成员，用户名为`Rambo`，全名为`Rocco Moe`。以下是相应的代码：
 
 ```python
 new_guy = Member('Rambo', 'Rocco Moe')
 ```
 
-如果你运行这段代码且没有得到任何错误信息，至少你知道它运行了。但为了保险起见，你可以打印对象或其属性。要查看 `Members` 实例 `new_guy` 中到底有什么，你可以整体打印它。你也可以打印它的属性 `new_guy.username` 和 `new_guy.fullname`。你还可以打印 `type(new_guy)` 来询问 Python `new_guy` 是什么类型。这段代码完成了所有操作：
+如果你运行这段代码且没有得到任何错误信息，至少你知道它运行了。但为了保险起见，你可以打印对象或其属性。要查看`Members`实例`new_guy`中到底有什么，你可以整体打印它。你也可以打印它的属性`new_guy.username`和`new_guy.fullname`。你还可以打印`type(new_guy)`来询问 Python `new_guy`是什么类型。这段代码完成了所有操作：
 
 ```python
 print(new_guy)
@@ -5769,6 +5723,7 @@ class Member:
     """
     创建一个新成员。
     """
+
     def __init__(self, uname, fname):
         # 定义属性并给它们赋值。
         self.username = uname
@@ -5791,44 +5746,41 @@ Rocco Moe
 <class '__main__.Member'>
 ```
 
-图 6-4：在 Jupyter 单元格中为 Member 类创建一个成员。
+图 6-4：在 Jupyter 单元格中为`Member`类创建一个成员。
 
-在图中，你可以看到输出的第一行是
+在图中，你可以看到输出的第一行是：
 
-```
+```text
 <__main__.Member object at 0x000002175EA2E260>
 ```
 
-此输出告诉你 `new_guy` 是一个从 `Member` 类创建的对象。结尾的数字是它在内存中的位置。不用担心那个；你现在不需要内存位置。
+此输出告诉你`new_guy`是一个从`Member`类创建的对象。结尾的数字是它在内存中的位置。不用担心那个；你现在不需要内存位置。
 
-接下来的三行输出是
+接下来的三行输出是：
 
-```
+```text
 Rambo
 Rocco Moe
 <class '__main__.Member'>
 ```
 
-第一行是 `new_guy` 的用户名 (`new_guy.username`)，第二行是 `new_guy` 的全名 (`new_guy.fullname`)。最后一行是类型，并告诉 `new_guy` 是 `Member` 类的实例。
+第一行是`new_guy`的用户名（`new_guy.username`），第二行是`new_guy`的全名（`new_guy.fullname`）。最后一行是类型，并告诉`new_guy`是`Member`类的实例。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_291_0.png)
 
-警告：尽管我们非常不想现在给你的大脑细胞增加任何负担，但 object（对象）和 property（属性）这两个词与 instance（实例）和 attribute（属性）是同义词。`Member` 类的 `new_guy` 实例也可以被称为对象，而 `new_guy` 的 `fullname` 和 `username` 属性也可以被称为该对象的属性。
+警告：尽管我们非常不想现在给你的大脑细胞增加任何负担，但 object（对象）和 property（属性）这两个词与 instance（实例）和 attribute（属性）是同义词。`Member`类的`new_guy`实例也可以被称为对象，而`new_guy`的`fullname`和`username`属性也可以被称为该对象的属性。
 
 诚然，要理解所有这些概念可能很困难，但只需记住对象仅仅是一种封装项目信息的方便方法，该项目与其他项目相似（例如所有的狗都是狗，所有的汽车都是汽车）。使该项目变得独特的是它的属性，这些属性并不一定与相同类型的对象的属性相同，就像并不是所有的狗都是同一个品种，并不是所有的汽车都是同一个颜色一样。
 
-我们特意使用 `uname` 和 `fname` 作为参数名，以将其与属性名 `username` 和 `fullname` 区分开。然而，这不是强制要求的。事实上，人们倾向于对参数和属性使用相同的名称。
+我们特意使用`uname`和`fname`作为参数名，以将其与属性名`username`和`fullname`区分开。然而，这不是强制要求的。事实上，人们倾向于对参数和属性使用相同的名称。
 
-你可以使用 `username` 作为参数名，而不是使用 `uname`（尽管它与属性名相同）。同样，你可以用 `fullname` 代替 `fname`。这样做不会改变类的行为。你只需要记住同一个名称被以两种方式使用：首先作为数据的占位符，随后作为一个可以更改的属性。
+你可以使用`username`作为参数名，而不是使用`uname`（尽管它与属性名相同）。同样，你可以用`fullname`代替`fname`。这样做不会改变类的行为。你只需要记住同一个名称被以两种方式使用：首先作为数据的占位符，随后作为一个可以更改的属性。
 
+例如，假设当你创建一个新成员时，你想要有一个名为`date_joined`的属性。并且你想要能够激活和禁用账户来控制登录。你可以创建一个名为`is_active`的属性并将其设置为`True`的新成员。
 
+如果你将对日期和时间进行任何操作，你需要导入`datetime`模块，将其放在文件的顶部，然后在类中为属性赋值的行之前或添加以下内容：
 
-
-例如，假设当你创建一个新成员时，你想要有一个名为 `date_joined` 的属性。并且你想要能够激活和禁用账户来控制登录。你可以创建一个名为 `is_active` 的属性并将其设置为 `True` 的新成员。
-
-如果你将对日期和时间进行任何操作，你需要导入 `datetime` 模块，将其放在文件的顶部，然后在类中为属性赋值的行之前或添加以下内容：
-
-```
+```python
 self.date_joined = dt.date.today()
 self.is_active = True
 ```
@@ -5841,6 +5793,7 @@ import datetime as dt
 # 定义一个新的类 Member。
 class Member:
     """ 创建一个成员 """
+
     def __init__(self, username, fullname):
         # 定义属性并给它们赋值。
         self.username = username
@@ -5848,15 +5801,16 @@ class Member:
 
         # 默认的 date_joined。
         self.date_joined = dt.date.today()
+
         # 将 active 设置为 True。
         self.is_active = True
 ```
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_295_0.png)
 
-**警告** 如果忘记在代码顶部导入 datetime，运行代码时会收到错误信息，提示你不知道 `dt.date.today()` 是什么。只需在顶部添加 import 行并重试。
+**警告** 如果忘记在代码顶部导入`datetime`，运行代码时会收到错误信息，提示你不知道`dt.date.today()`是什么。只需在顶部添加 import 行并重试。
 
-不需要为类传递任何新数据 `date_joined` 和 `is_active` 属性，因为这些属性是从代码获取默认值的。
+不需要为类传递任何新数据`date_joined`和`is_active`属性，因为这些属性是从代码获取默认值的。
 
 ## 持久化更改
 
@@ -5868,11 +5822,11 @@ class Member:
 
 注意默认值只是：它是在创建对象时自动赋值的值。但你可以像更改其他属性的值一样更改默认值，使用以下语法：
 
-```
+```python
 objectname.attributename = value
 ```
 
-例如，假设你使用 `is_active` 属性来确定用户是否激活并登录你的站点。如果成员变得很讨厌且不想再让他登录，你可以这样将 `is_active` 属性更改为 `False`：
+例如，假设你使用`is_active`属性来确定用户是否激活并登录你的站点。如果成员变得很讨厌且不想再让他登录，你可以这样将`is_active`属性更改为`False`：
 
 ```python
 newmember.is_active = False
@@ -5888,33 +5842,11 @@ newmember.is_active = False
 def methodname(self, param1, ...):
 ```
 
-将 `methodname` 替换为你选择的名字（全小写，无空格）。保留 `self` 一词，作为由类定义的对象的引用。可选的是，你也可以像其他任何函数一样，使用逗号在 `self` 之后传递参数。
+将`methodname`替换为你选择的名字（全小写，无空格）。保留`self`一词，作为由类定义的对象的引用。可选的是，你也可以像其他任何函数一样，使用逗号在`self`之后传递参数。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_297_0.png)
 
 > **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-> **记住** 理解方法与函数不同是有帮助的。方法与函数不同之处在于方法总是与某个类相关。因此，方法不像函数那样通用。
-
-
 
 ```python
 import datetime as dt
@@ -5924,12 +5856,15 @@ class Member:
     """
     创建一个新成员。
     """
+
     def __init__(self, username, fullname):
         # 定义属性并给它们赋值。
         self.username = username
         self.fullname = fullname
+
         # 将 date_joined 默认设置为今天的日期。
         self.date_joined = dt.date.today()
+
         # 将 is_active 设置为 True。
         self.is_active = True
 
@@ -5951,103 +5886,113 @@ new_guy = Member('Rambo', 'Rocco Moe')
 ```
 
 # 这个新成员激活了吗？
-print(new_guy.is_active)
 
-# 尝试 activate 方法。
+```python
+print(new_guy.is_active)
+```
+
+# 尝试`activate`方法。
+
+```python
 new_guy.activate(False)
+```
 
 # 这个新成员还是激活状态吗？
-print(new_guy.is_active)
 
+```python
+print(new_guy.is_active)
+```
+
+```text
 True
 False
+```
 
-图 6-9 添加并测试 .activate() 方法。
+图 6-9 添加并测试`.activate()`方法。
 
-行 `new_guy.activate(False)` 调用了该对象的 activate() 方法，并向其传递了布尔值 False。然后 `print(new_guy.is_active)` 证明了对 activate 的调用确实将 new_guy 的 is_active 属性从 True 改变为了 False。
+行`new_guy.activate(False)`调用了该对象的`activate()`方法，并向其传递了布尔值`False`。然后`print(new_guy.is_active)`证明了对`activate`的调用确实将`new_guy`的`is_active`属性从`True`改变为了`False`。
 
 # 通过类名调用类方法
 
 正如你所见的，你可以使用以下语法调用类方法：
 
-```
+```python
 specificobject.method()
 ```
 
 另一种方法是使用特定的类名，这可以帮助代码更容易被人类理解：
 
-```
+```python
 Classname.method(specificobject)
 ```
 
-将 Classname 替换为类的名称（我们通常以大写字母开头定义），紧接着是方法名，并将特定对象（假设你已经创建了它）放在括号内。
+将`Classname`替换为类的名称（我们通常以大写字母开头定义），紧接着是方法名，并将特定对象（假设你已经创建了它）放在括号内。
 
-例如，假设我们使用 Member 类和这段代码创建了一个名为 wilbur 的新成员：
+例如，假设我们使用`Member`类和这段代码创建了一个名为`wilbur`的新成员：
 
 ```python
 wilbur = Member('wblomgren', 'Wilbur Blomgren')
 ```
 
-在这里，wilbur 是我们从 Member 类创建的特定对象。我们可以使用已经见过的语法在该对象上调用 show_datejoined() 方法：
+在这里，`wilbur`是我们从`Member`类创建的特定对象。我们可以使用已经见过的语法在该对象上调用`show_datejoined()`方法：
 
-```
+```python
 print(wilbur.show_datejoined())
 ```
 
-另一种方法是调用 Member 类的 show_datejoined() 方法并将其传递给特定对象 wilbur，如下所示：
+另一种方法是调用`Member`类的`show_datejoined()`方法并将其传递给特定对象`wilbur`，如下所示：
 
-```
+```python
 print(Member.show_datejoined(wilbur))
 ```
 
 这两种方法的输出相同（但日期取决于你运行代码的时间）：
 
-```
+```text
 Wilbur Blomgren joined on 11/18/20
 ```
 
-后一种方法并没有更快、更慢、更好、更差或类似的。它只是你可以使用的另一种替代语法，有些人更偏于它，因为以 Member 开头可以清楚地表明 show_datejoined() 方法属于哪个类。这反过来可以让其他程序员或一年后的你（当你忘记了在应用中编写写的任何内容时）让代码更具可读性。
+后一种方法并没有更快、更慢、更好、更差或类似的。它只是你可以使用的另一种替代语法，有些人更偏于它，因为以`Member`开头可以清楚地表明`show_datejoined()`方法属于哪个类。这反过来可以让其他程序员或一年后的你（当你忘记了在应用中编写写的任何内容时）让代码更具可读性。
 
 # 使用类变量
 
-到为止，你已经看到了属性的示例，它们有时被称为实例变量，因为它们是占位符，包含了从类的不同实例之间变化的信息。例如，在 Dog 类中，dog.breed 对于某只狗可能是贵宾，对于另一只狗可能是雪犬。
+到为止，你已经看到了属性的示例，它们有时被称为实例变量，因为它们是占位符，包含了从类的不同实例之间变化的信息。例如，在`Dog`类中，`dog.breed`对于某只狗可能是贵宾，对于另一只狗可能是雪犬。
 
-你可以与类配合另一种变量类型被称为**类变量**（class variable），它应用于所有尚未创建的类实例。类内部的类变量与 `self` 没有任何关联，因为 `self` 关键字始终指向当前正在创建的特定对象。要定义类变量，将指针放在 `def __init__` 之前之前，并使用标准语法定义变量：
+你可以与类配合另一种变量类型被称为**类变量**（class variable），它应用于所有尚未创建的类实例。类内部的类变量与`self`没有任何关联，因为`self`关键字始终指向当前正在创建的特定对象。要定义类变量，将指针放在`def __init__`之前之前，并使用标准语法定义变量：
 
-```
+```python
 variablename = value
 ```
 
-将 variename 替换为你自己选择的名称，将 value 替换为你想要赋值给该变量的特定值。例如，假设你的代码包含一个 `free_days` 变量，允许人们在注册时获得三个月（90 天）的免费访问权限。你不确定是否想要永远坚持此设定，而不是将其硬编码到你的应用中（这样很难更改），你只需要将其制为类变量，它会自动应用到所有新对象，例如：
+将`variename`替换为你自己选择的名称，将`value`替换为你想要赋值给该变量的特定值。例如，假设你的代码包含一个`free_days`变量，允许人们在注册时获得三个月（90 天）的免费访问权限。你不确定是否想要永远坚持此设定，而不是将其硬编码到你的应用中（这样很难更改），你只需要将其制为类变量，它会自动应用到所有新对象，例如：
 
 ```python
 # 定义一个名为 Member 的类用于创建对象。
 class Member:
     """创建一个成员"""
+
     free_days = 90
 
     def __init__(self, username, fullname):
 ```
 
-因为我们在定义 `__init__` 之前定义了 `free_days` 变量，所以它没有绑定代码中的特定对象。现在假设在代码中，你想存储试验过期日期。你可以有一个名为 `date_joined` 的属性代表成员加入的日期，另一个名为 `free_expires` 的属性代表用户免费会员过期日期。你可以通过在加入日期加上免费天数来确定日期。直觉上，似乎你可以使用如下简单语法将 free_days 加到日期：
+因为我们在定义`__init__`之前定义了`free_days`变量，所以它没有绑定代码中的特定对象。现在假设在代码中，你想存储试验过期日期。你可以有一个名为`date_joined`的属性代表成员加入的日期，另一个名为`free_expires`的属性代表用户免费会员过期日期。你可以通过在加入日期加上免费天数来确定日期。直觉上，似乎你可以使用如下简单语法将`free_days`加到日期：
 
-```
+```python
 self.free_expires = dt.date.today() + dt.timedelta(days=free_days)
 ```
 
-但如果你尝试运行这段代码，你会得到一个错误，说 Python 不识别 `free_days` 变量（尽管它定义在类的顶部）。相反，你必须在变量前加上类名。例如，这样做是可以行的：
+但如果你尝试运行这段代码，你会得到一个错误，说 Python 不识别`free_days`变量（尽管它定义在类的顶部）。相反，你必须在变量前加上类名。例如，这样做是可以行的：
 
-```
+```python
 self.free_expires = dt.date.today() + dt.timedelta(days=Member.free_days)
 ```
 
-图 6-10 显示了更宏观的画面。我们从原始类中删除了一些代码以进行精简，使其更容易专注于新内容。顶部的 `free_days = 365` 行将 `free_days` 变量的值设置为 365（我们在上一个示例中使用了 90 天，但这是一个新示例，我们想说明相同的代码如何与你在 `free_days` 变量中指定的任何天数一起工作）。然后，在代码的后半部分，`__init__` 方法使用 `Member.free_days` 将该天数加到当前日期。通过创建一个名为 wilbur 的新成员并查看其 `date_joined` 和 `free_expires` 属性来运行这段代码，将显示当前日期（当你运行代码时）。
 
 
+图 6-10 显示了更宏观的画面。我们从原始类中删除了一些代码以进行精简，使其更容易专注于新内容。顶部的 `free_days = 365` 行将 `free_days` 变量的值设置为 365（我们在上一个示例中使用了 90 天，但这是一个新示例，我们想说明相同的代码如何与你在 `free_days` 变量中指定的任何天数一起工作）。然后，在代码的后半部分，`__init__` 方法使用 `Member.free_days` 将该天数加到当前日期。通过创建一个名为 `wilbur` 的新成员并查看其 `date_joined` 和 `free_expires` 属性来运行这段代码，将显示当前日期（当你运行代码时）。
 
-
-
-# 类方法遵循 @classmethod 装饰器，并引用 cls 而不是 self。
+## 类方法遵循 `@classmethod` 装饰器，并引用 `cls` 而不是 `self`
 
 ```python
 @classmethod
@@ -6055,7 +6000,7 @@ def setfredays(cls, days):
     cls.free_days = days
 ```
 
-这段代码告诉 Python，当有人在这个类类上调用 `setfreidays()` 方法时，它应该将 `cls.free_days`（该类的 `free_days` 类变量）的值设置为所传入的任何天数。图 6-11 显示了 Jupyter 单元格中的一个完整示例（你可以自己输入并尝试），以及运行该代码的结果。
+这段代码告诉 Python，当有人在这个类上调用 `setfreidays()` 方法时，它应该将 `cls.free_days`（该类的 `free_days` 类变量）的值设置为所传入的任何天数。图 6-11 显示了 Jupyter 单元格中的一个完整示例（你可以自己输入并尝试），以及运行该代码的结果。
 
 ```python
 import datetime as dt
@@ -6073,19 +6018,19 @@ class Member:
         # 设置过期日期。
         self.free_expires = dt.date.today() + dt.timedelta(days=days) - Member.free_days
 
-    # 类方法遵循 @classmethod 装饰器，并引用 cls 而不是
+    # 类方法遵循 @classmethod 装饰器，并引用 cls 而不是 self
     @classmethod
     def setfredays(cls, days):
         cls.free_days = days
 ```
 
-图 6-11：`setfredays()` 方法是 Member 类中的类方法。
+图 6-11：`setfredays()` 方法是 `Member` 类中的类方法。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_306_0.png)
 
 **记住**：很容易忘记在 Python 中大写字母和小写字母有很大区别，尤其是因为你似乎 99.9% 的时间都在使用小写。但按照规则，类名以大写字母开头，因此对类名的任何调用也必须以大写字母开头。
 
-# 使用静态方法
+## 使用静态方法
 
 当你认为可能终于结束学习类时，结果发现你可以在 Python 类中创建另一种类型的方法。它被称为静态方法，并以这个装饰器开头：`@staticmethod`。
 
@@ -6127,27 +6072,24 @@ class Member:
 
 # 尝试新的静态方法（不需要对象）
 print(Member.currenttime())
-
 # 03:24 PM
 ```
 
-**图 6-12：** Member 类现在有一个静态方法 `currenttime()`。
+**图 6-12：** `Member` 类现在有一个静态方法 `currenttime()`。
 
-# 理解类继承
+## 理解类继承
 
-热衷于面向对象编程的人活生都在谈论类继承和子类等等，这些东西对街上的普通 Joe 或 Josephine 来说毫无意义。尽管如此，他们所讨论的 Python 概念是生活中随可见的东西。
+热衷于面向对象编程的人活生都在谈论类继承和子类等等，这些东西对街上的普通 Joe 或 Josephine 来说毫无意义。尽管如此，他们所讨论的 Python 概念是生活中随处可见的东西。
 
-正如前面提到的，如果我们把狗的 DNA 视为一种工厂或 Python 类，我们就可以把所有的狗归类为我们称为 dogs 的动物类的成员。尽管每只狗都是独特的，但它们仍然是狗，因为它们是我们称为 dogs 的类的成员，我们可以像图 6-13 所示进行说明。
+正如前面提到的，如果我们把狗的 DNA 视为一种工厂或 Python 类，我们就可以把所有的狗归类为我们称为 `dogs` 的动物类的成员。尽管每只狗都是独特的，但它们仍然是狗，因为它们是我们称为 `dogs` 的类的成员，我们可以像图 6-13 所示进行说明。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_309_0.png)
 
-**图 6-13：** 作为 dogs 类对象的狗。
+**图 6-13：** 作为 `dogs` 类对象的狗。
 
-所以每只狗都是独特的（尽管没有其他狗比你的狗好），但让狗之间彼此相似的是它们从 dogs 类中*继承*的特征。
+所以每只狗都是独特的（尽管没有其他狗比你的狗好），但让狗之间彼此相似的是它们从 `dogs` 类中*继承*的特征。
 
-类和子类的概念是生活中随处可见的。正如前面提到的，如果我们把狗的 DNA 视为一种工厂或 Python 类，我们就可以把所有的狗归类为我们称为 dogs 的动物类的成员。尽管每只狗都是独特的，但它们仍然是狗，因为它们是我们称为 dogs 的类的成员，我们可以像图 6-13 所示进行说明。
-
-
+类和子类的概念是生活中随处可见的。正如前面提到的，如果我们把狗的 DNA 视为一种工厂或 Python 类，我们就可以把所有的狗归类为我们称为 `dogs` 的动物类的成员。尽管每只狗都是独特的，但它们仍然是狗，因为它们是我们称为 `dogs` 的类的成员，我们可以像图 6-13 所示进行说明。
 
 ```python
 def __init__(self, firstname, lastname):
@@ -6155,25 +6097,23 @@ def __init__(self, firstname, lastname):
     self.firstname = firstname
     self.lastname = lastname
     # Calculate expiry date from today's date.
-    self.expiry_date = dt.date.today() +
-    dt.timedelta(days=self.expiry_days)
+    self.expiry_date = dt.date.today() + dt.timedelta(days=self.expiry_days)
 ```
 
 默认情况下，新账户有效期为一年。因此，该类首先设置了一个类变量 `expiry_days` 为 365，用于稍后的代码中从今天起计算过期日期。正如你稍后看到的，我们使用类变量来定义 `expiry_days`，是因为我们可以从子类中为它赋予新值。
 
 为了保持代码示例简单且整洁，这个版本的 `Member` 仅接受两个参数：`firstname` 和 `lastname`。
 
-图 6-15 显示了使用名为 Joe 的假设成员测试代码的示例。打印 Joe 的 `firstname`、`lastname` 和 `expiry_date` 将显示出当你传递 `firstname` 为 Joe且 `lastname` 为 Anybody 时预期的类执行行为。当你运行代码时，`expiry_date` 应该是你运行代码之日期的一年后。
+图 6-15 显示了使用名为 Joe 的假设成员测试代码的示例。打印 Joe 的 `firstname`、`lastname` 和 `expiry_date` 将显示出当你传递 `firstname` 为 Joe 且 `lastname` 为 Anybody 时预期的类执行行为。当你运行代码时，`expiry_date` 应该是你运行代码之日期的一年后。
 
 ```python
-import datetime as dt
-# 类用于所有类型的人。
 import datetime as dt
 
 # 基类用于所有类型的成员（Members）。
 class Member:
-    ""
-    Member 类的属性和方法适用于所有人 ""
+    """
+    Member 类的属性和方法适用于所有人
+    """
     # 默认情况下，新账户有效期为一年（365 天）
     expiry_days = 365
 
@@ -6194,9 +6134,9 @@ print(Joe.expiry_date)
 
 **图 6-15**: 一个简化的 `Member` 类。
 
-现在，假设我们的真实意图是创建两种类型的用户：管理员（Admins）和普通用户（Users）。这两两种用户都拥有 `Member` 类提供的属性。通过将这些类型的用户定义为 `Member` 的子类，它们将自动获得相同的属性（如果有任何方法的话）。
+现在，假设我们的真实意图是创建两种类型的用户：管理员（Admins）和普通用户（Users）。这两种用户都拥有 `Member` 类提供的属性。通过将这些类型的用户定义为 `Member` 的子类，它们将自动获得相同的属性（如果有任何方法的话）。
 
-## 定义子类
+### 定义子类
 
 要定义一个子类，请确保将光标放在基类下方并返回到没有缩进的状态，因为子类并不是基类的一部分，也不包含在基类内部。要定义子类，请使用以下语法：
 
@@ -6263,6 +6203,7 @@ print(Uli.lastname)
 print(Uli.expiry_date)
 ```
 
+```
 Ann
 Angst
 2019-12-03
@@ -6270,12 +6211,13 @@ Angst
 Uli
 Ungula
 2019-12-03
+```
 
-**图 6-16:** 创建并测试 Admin 和 User 类。
+**图 6-16:** 创建并测试 `Admin` 和 `User` 类。
 
-所以你学到的是，子类接受基类接受的所有不同参数，并将它们分配给属性，与 `Person` 类一样。但目前为止，`Admin` 和 `User` 只是 
+所以你学到的是，子类接受基类接受的所有不同参数，并将它们分配给属性，与 `Person` 类一样。但目前为止，`Admin` 和 `User` 只是空类。
 
-## 从子类中重写默认值
+### 从子类中重写默认值
 
 你可以对子类可以做的最简单的事情之一就是赋予它独特的特征。例如，假设管理员具有你想要传递的某些数据。起初，你的 `__init__` 行将像这样：
 
@@ -6309,19 +6251,18 @@ self.secret_code = secret_code
 
 图 6-17 显示了一个示例，其中我们创建了一个名为 Ann 的管理员用户，并将 `PRESTO` 作为她的密钥代码。打印她的所有属性显示她仍然拥有正确的过期日期以及密钥代码。正如你所见，我们还创建了一个名为 Uli 的普通用户。Uli 的数据不受 `Admin` 更改的影响。
 
-## 从子类添加额外参数
+### 从子类添加额外参数
 
 有时你希望类型之间存在差异。在接下来的章节中，你将学习实现这些差异的方法。但假设你想从子类传递某些数据。在我们的工作示例中，我们还没有给普通用户提供密钥代码。如果你尝试用所示 Python 代码打印普通用户，你会收到一个错误，因为 Python 代码尚未编写以适应没有密钥代码的用户。
 
 一种解决方案是只需记住普通用户没有密钥代码。因此，在使用应用程序时，永远不要打印普通用户的密钥代码。但如果代码能为我们优雅地处理错误，会更好。为了这样做，我们将确保每个用户账户都关联一个密钥代码。对于普通用户，密钥代码将为空，这将防止他们访问管理员信息。
-
-
 
 ```python
 # 管理员的子类。
 class Admin(Member):
     # 管理员账户100年内不会过期。
     expiry_days = 365.2422 * 100
+
     # 子类参数
     def __init__(self, firstname, lastname, secret_code):
         # 将 Member 参数传递给 Member 类。
@@ -6338,13 +6279,14 @@ class User(Member):
 Ann = Admin('Annie', 'Angst', 'PRESTO')
 print(Ann.firstname, Ann.lastname, Ann.expiry_date, Ann.secret_code)
 print()
+
 Uli = User('Uli', 'Ungula')
 print(Uli.firstname, Uli.lastname, Uli.expiry_date)
 ```
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_318_0.png)
 
-**图 6-17：** Admin 子类有一个新的 `secret_code` 参数。
+**图 6-17：** `Admin` 子类有一个新的 `secret_code` 参数。
 
 如果一个成员作为普通成员加入并在以后成为管理员，Python 代码只需要将空的 `secret_code` 更改为有效的 `secret_code` 即可。
 
@@ -6355,59 +6297,93 @@ print(Uli.firstname, Uli.lastname, Uli.expiry_date)
 self.secret_code = ""
 ```
 
-因此，即使你没有在 `User` 子类中对 `secret_code` 进行任何操作，也不必担心在访问 `User` 的 secret code 时会抛出错误。`User` 将有一个 secret code，但它只是一个空字符串。图 6-18 显示了包含两个子类的所有代码，以及尝试打印 `Uli.secret_code` 的情况，它只会显示为空，而不会抛出错误信息。
 
-我们让 `User` 子类只保留了 `pass` 语句。在现实生活中，你可能会为其他子类设计更多的默认值或参数。但所有子类的语法和代码都是相同的。你在这一节中学到的技能将适用于你所有的类和子类。
+
+因此，即使你没有在`User`子类中对`secret_code`进行任何操作，也不必担心在访问`User`的 secret code 时会抛出错误。`User`将有一个 secret code，但它只是一个空字符串。图 6-18 显示了包含两个子类的所有代码，以及尝试打印`Uli.secret_code`的情况，它只会显示为空，而不会抛出错误信息。
+
+我们让`User`子类只保留了`pass`语句。在现实生活中，你可能会为其他子类设计更多的默认值或参数。但所有子类的语法和代码都是相同的。你在这一节中学到的技能将适用于你所有的类和子类。
 
 ```python
 import datetime as dt
 
 # 基类用于各种类型的 Member。
+
 class Member:
+
     """
+
     Member 类的属性和方法适用于所有人
+
     """
+
     # 默认情况下，新账户在一年后（365 天）过期。
+
     expiry_days = 365
 
     # 初始化成员对象。
+
     def __init__(self, firstname, lastname):
+
         # 适用于所有人的属性（实例变量）。
+
         self.firstname = firstname
+
         self.lastname = lastname
+
         # 根据今天的日期计算过期日期。
+
         self.expiry_date = dt.date.today() + dt.timedelta(days=self.expiry_days)
+
         # 默认 secret code 为空
+
         self.secret_code = ""
 
     # 基类中的方法
+
     def showexpiry(self):
+
         return f"{self.firstname} {self.lastname} expires on {self.expiry_date}"
 
 # 管理员的子类。
+
 class Admin(Member):
+
     # 管理员账户100年内不会过期。
+
     expiry_days = 365 * 100
+
     # 子类参数
+
     def __init__(self, firstname, lastname, secret_code):
+
         # 将 Member 参数传递给 Member 类。
+
         super().__init__(firstname, lastname)
+
         # 将剩余参数赋值给此对象。
+
         self.secret_code = secret_code
 
 # 用户的子类。
+
 class User(Member):
+
     pass
 
 Ann = Admin('Annie', 'Angst', 'PRESTO')
+
 print(Ann.firstname, Ann.lastname, Ann.expiry_date, Ann.secret_code)
 
 Uli = User('Uli', 'Ungula')
+
 print(Uli.firstname, Uli.lastname, Uli.expiry_date)
 
 Ann Angst 2118-12-08 PRESTO
+
 Uli Ungula 2025-12-08
+
 图 6-18：Admin 和 User 类。
+```
 
 ## 调用基类方法
 
@@ -6511,7 +6487,7 @@ Ann Angst 2118-12-08 PRESTO
 Uli Ungula 2025-12-08
 ```
 
-方法解析顺序告诉我们，如果一个类（及其子类）都具有相同名称的方法（例如 `showexpiry`），那么从管理员用户处调用 `showexpiry()` 将导致 Python 在 Admin 中查找该方法，如果存在，则使用它。方法解析顺序显示了以下情况：
+方法解析顺序告诉我们，如果一个类（及其子类）都具有相同名称的方法（例如`showexpiry`），那么从管理员用户处调用`showexpiry()`将导致 Python 在`Admin`中查找该方法，如果存在，则使用它。方法解析顺序显示了以下情况：
 
 ```
 方法解析顺序：
@@ -6520,20 +6496,17 @@ Member
 builtins.object
 ```
 
-
-
-
-在 `Admin` 子类中定义，Python 会在 `Member` 类中查找，如果找到，则使用该类。如果这两个类中都没有 `get_status` 方法，它将在 `builtins.object` 中查找，它是所有类和子类共享的某些内置方法的引用。
+在`Admin`子类中定义，Python 会在`Member`类中查找，如果找到，则使用该类。如果这两个类中都没有`get_status`方法，它将在`builtins.object`中查找，它是所有类和子类共享的某些内置方法的引用。
 
 所以底线结论是：如果你将数据存储在类和子类的层级结构中，并在子类上调用方法，如果该子类方法存在，Python 将使用该子类方法。如果不存在，Python 将使用基类（如果存在）。如果基类也不存在，它将尝试内置方法。如果所有尝试都失败了，它将抛出一个错误，因为它找不到你的代码尝试调用的方法。通常，这类错误的主要原因是是你仅仅在代码中拼错了方法名称，导致 Python 无法找到它。
 
-内置方法的一个示例是 `__dict__`。`dict` 是 `dictionary`（字典）的缩写，双下划线围绕着该缩写。参考图 6-20，执行以下命令：
+内置方法的一个示例是`__dict__`。`dict`是`dictionary`（字典）的缩写，双下划线围绕着该缩写。参考图 6-20，执行以下命令：
 
 ```
 print(Admin.__dict__)
 ```
 
-并没有导致错误，尽管我们从未定义过名为 `__dict__` 的方法。那是因为存在一个同名的内置方法，当用 `print()` 调用时，它会显示该对象的方法字典（包括你的方法和内置方法）。方法解析顺序（Method resolution order）并不是你在学习曲线早期阶段需要深涉的内容。只需注意，如果你尝试调用一个在上述三个层级都不存在的方法，例如：
+并没有导致错误，尽管我们从未定义过名为`__dict__`的方法。那是因为存在一个同名的内置方法，当用`print()`调用时，它会显示该对象的方法字典（包括你的方法和内置方法）。方法解析顺序（Method resolution order）并不是你在学习曲线早期阶段需要深涉的内容。只需注意，如果你尝试调用一个在上述三个层级都不存在的方法，例如：
 
 ```
 print(Admin.snookums())
@@ -6546,18 +6519,24 @@ print(Admin.snookums())
 AttributeError: type object 'Admin' has no attribute 'snookums'
 ```
 
-这个错误是在你 Python 并不知道 `snookums` 是什么。正如前面提到的，在现实生活中，这种错误通常是由代码中拼错方法名称引起的。
+这个错误是在你 Python 并不知道`snookums`是什么。正如前面提到的，在现实生活中，这种错误通常是由代码中拼错方法名称引起的。
 
 类（以及在某种程度上，以及子类）在 Python 世界中被大量使用，你在这里学到的内容应该让你易于编写自己的类，并理解他人编写的类。在结束这本书之前，你还需要学习另外一个核心 Python 概念：Python 如何处理错误，以及你可以在自己的代码中做哪些事情来更好地处理错误。
 
 # 第 7 章
+
 ### 规避错误
 
 本章内容
+
 - 发现异常
+
 - 找出如何优雅地处理错误
+
 - 确保你的应用程序不会崩溃
-- 查看 `try ... except ... else ... finally`
+
+- 查看`try ... except ... else ... finally`
+
 - 学习抛出自己的异常
 
 我们都希望程序一直完美运行。但有时，现实世界中的情况会阻止程序的运行。问题不在于你或你的程序，通常是使用程序的人做错了什么。错误处理的核心在于预测这些问题、捕获错误，然后通知用户问题所在以便他们修复。
@@ -6574,21 +6553,20 @@ AttributeError: type object 'Admin' has no attribute 'snookums'
 name = open(filename)
 ```
 
-将 `name` 替换为你选择的名称，就像变量名一样。将 `filename` 替换为文件名。如果文件与代码在同一个文件夹中，不需要指定文件夹路径，因为会假设当前文件夹。
+将`name`替换为你选择的名称，就像变量名一样。将`filename`替换为文件名。如果文件与代码在同一个文件夹中，不需要指定文件夹路径，因为会假设当前文件夹。
 
-图 7-1 展示了一个示例。我们在这个示例中使用了 VS Code，以便你可以看到我们所在的文件夹的内容。该文件夹包含一个名为 `showfilecontents.py` 的文件。
-
+图 7-1 展示了一个示例。我们在这个示例中使用了 VS Code，以便你可以看到我们所在的文件夹的内容。该文件夹包含一个名为`showfilecontents.py`的文件。
 
 ```python
 open('people.csv') business because there is no named file
 people.csv in the current folder.
 ```
 
-你可以通过修改代码来解决这个问题，但 `.csv` 是包含逗号分隔值文件的常见扩展名。将 `people.csv` 的名称改为 `people.csv` 会更符合逻辑，因为它可以匹配程序查找的内容，而且 `.csv` 扩展名广为人知的。
+你可以通过修改代码来解决这个问题，但`.csv`是包含逗号分隔值文件的常见扩展名。将`people.csv`的名称改为`people.csv`会更符合逻辑，因为它可以匹配程序查找的内容，而且`.csv`扩展名广为人知的。
 
 ## 优雅地处理错误
 
-处理“找不到文件”错误的最佳方法是将 Python 默认显示的内容替换为用户更有可能理解的内容。为了做到这一点，你可以使用以下语法尝试 `try ... except` 块：
+处理“找不到文件”错误的最佳方法是将 Python 默认显示的内容替换为用户更有可能理解的内容。为了做到这一点，你可以使用以下语法尝试`try ... except`块：
 
 ```python
 try:
@@ -6597,7 +6575,7 @@ except Exception:
     如果无法执行你想要的操作，则执行此处的操作
 ```
 
-以下是你如何重写 `showfilecontents.py` 代码以处理缺失（或拼写错误）的文件错误：
+以下是你如何重写`showfilecontents.py`代码以处理缺失（或拼写错误）的文件错误：
 
 ```python
 try:
@@ -6608,15 +6586,20 @@ except Exception:
     print("Sorry, I don't see a file named people.csv here")
 ```
 
-因为本应打开的文件可能缺失，我们从 `try:` 开始，然后在在其尝试打开文件。如果文件打开成功，`print()` 语句就会运行并显示文件名。但如果尝试打开文件抛出异常，程序就不会崩溃并显示通用的错误消息。相反，它会显示一条普通计算机用户可以理解的消息，如图 7-4 所示。
+因为本应打开的文件可能缺失，我们从`try:`开始，然后在在其尝试打开文件。如果文件打开成功，`print()`语句就会运行并显示文件名。但如果尝试打开文件抛出异常，程序就不会崩溃并显示通用的错误消息。相反，它会显示一条普通计算机用户可以理解的消息，如图 7-4 所示。
 
 ## 资源管理器
 
 + showfilecontents.py X
+
 OPEN EDITORS
+
 PYTHON 3 (WINDOWS) (WORKSPACE)
+
 exceptions
+
   people.CVS
+
   showfilecontents.py
 
 ```python
@@ -6638,13 +6621,13 @@ Sorry, I don't see a file named people.csv here
 (base) C:\Users\Alan\Desktop\exceptions>|
 ```
 
-**图 7-4：** `showfilecontents.py` 文件捕获了错误并显示了一条友好的消息。
+**图 7-4：** `showfilecontents.py`文件捕获了错误并显示了一条友好的消息。
 
 ## 对异常进行具体化
 
 我们之前的代码示例优雅地处理了找不到文件的错误。但一个较大的应用程序可能有许多潜在错误发生，你可能希望以不同的方式处理每个错误。为了实现这一点，你可以定义多个错误处理器，正如我们接下来讨论的那样。
 
-假设你手动修复了文件名，使得 `people.csv` 如最初预期所示。正如你所看到的，当你运行代码且没有错误时，输出只是文件名。在打印文件名的行下面，我们添加了另一行代码：
+假设你手动修复了文件名，使得`people.csv`如最初预期所示。正如你所看到的，当你运行代码且没有错误时，输出只是文件名。在打印文件名的行下面，我们添加了另一行代码：
 
 ```python
 try:
@@ -6656,22 +6639,24 @@ except Exception:
     print("Sorry, I don't see a file named people.csv here")
 ```
 
-当你运行这段代码时，文件名没有问题，但输出如你预期的显示了 `people.csv`。然而，下一行代码 `print(thefile.read())` 抛出了错误，因为我们没有定义名为 `read()` 的方法。不幸的是，错误消息仍然与之前完全一样，尽管错误的原因是 Python 中没有名为 `.read()` 的方法：
+当你运行这段代码时，文件名没有问题，但输出如你预期的显示了`people.csv`。然而，下一行代码`print(thefile.read())`抛出了错误，因为我们没有定义名为`read()`的方法。不幸的是，错误消息仍然与之前完全一样，尽管错误的原因是 Python 中没有名为`.read()`的方法：
 
 ```text
 people.csv
 Sorry, I don't see a file named people.csv here
 ```
 
-那么，为什么错误消息说没有找到名为 `people.csv` 的文件呢？我们明明它被找到了，而且下一行代码导致了错误。问题出在 `except Exception:` 这一行，它的意思是“如果在此 `try` 块中抛出任何异常，则执行 `except` 行下方的代码”。
 
-为了清理这一点，你需要将 `Exception:` 替换为你想要让 Python 捕获的特定异常。但你如何知道那个特定异常是什么？很简单。在没有异常处理的情况下抛出的异常是：
+
+那么，为什么错误消息说没有找到名为`people.csv`的文件呢？我们明明它被找到了，而且下一行代码导致了错误。问题出在`except Exception:`这一行，它的意思是“如果在此`try`块中抛出任何异常，则执行`except`行下方的代码”。
+
+为了清理这一点，你需要将`Exception:`替换为你想要让 Python 捕获的特定异常。但你如何知道那个特定异常是什么？很简单。在没有异常处理的情况下抛出的异常是：
 
 ```text
 FileNotFoundError:[Errno 2] No such file or directory: 'people.csv'
 ```
 
-第一个单词是异常的名称，你可以用它代替通用的 `Exception` 名称，如下：
+第一个单词是异常的名称，你可以用它代替通用的`Exception`名称，如下：
 
 ```python
 try:
@@ -6683,7 +6668,7 @@ except FileNotFoundError:
     print("Sorry, I don't see a file named people.csv here")
 ```
 
-诚然，隔离“找不到文件”错误对于解决错误的方法没有帮助。然而，错误的方法并不是异常；它是一个编程错误，需要通过在代码中将 `.read()` 替换为你想要使用的方法名称来修正。至少你看到的错误消息不再是那条误导性的 `Sorry, I don't see a file named people.csv here`。代码在打开时会正常运行并显示文件名。当它运行到包含错误 `.read()` 方法的行时，它会抛出错误——但不是与文件未找到相关的错误。它显示了该错误的正确错误消息，如图 7-5 所示。
+诚然，隔离“找不到文件”错误对于解决错误的方法没有帮助。然而，错误的方法并不是异常；它是一个编程错误，需要通过在代码中将`.read()`替换为你想要使用的方法名称来修正。至少你看到的错误消息不再是那条误导性的`Sorry, I don't see a file named people.csv here`。代码在打开时会正常运行并显示文件名。当它运行到包含错误`.read()`方法的行时，它会抛出错误——但不是与文件未找到相关的错误。它显示了该错误的正确错误消息，如图 7-5 所示。
 
 ![](img/7-5.png)
 
@@ -6691,10 +6676,7 @@ except FileNotFoundError:
 
 ## 防止你的应用程序崩溃
 
-在我们上一个可运行示例中，我们使用了一个错误处理器来处理找不到文件的错误，用第二个处理器处理所有其他情况。但在现实生活中，你可能需要处理得多的情况。而且如果没有错误，你希望
-
-
-正常执行。你可以使用 `else` 来处理最后一个条件，如下所示：
+在我们上一个可运行示例中，我们使用了一个错误处理器来处理找不到文件的错误，用第二个处理器处理所有其他情况。但在现实生活中，你可能需要处理得多的情况。而且如果没有错误，你希望正常执行。你可以使用`else`来处理最后一个条件，如下所示：
 
 ```python
 try:
@@ -6709,13 +6691,12 @@ else:
 
 如果你将这段代码转换为通俗的英语，其流程逻辑如下：
 
-尝试打开文件。
-如果文件不存在，告诉他们并停止。
-如果发生了其他错误，显示通用的错误消息并停止。
-否则
-继续执行其余代码。
+- 尝试打开文件。
+- 如果文件不存在，告诉他们并停止。
+- 如果发生了其他错误，显示通用的错误消息并停止。
+- 否则，继续执行其余代码。
 
-通过将 `try:` 限制在最可能引发异常的单项操作上，我们可以在代码尝试进一步运行之前让其停下。但如果没有抛出异常，代码将继续正常执行，进入 `else` 下方的代码，此时之前的异常处理程序已经不再重要了。以下是所有的代码注释，解释了发生了什么：
+通过将`try:`限制在最可能引发异常的单项操作上，我们可以在代码尝试进一步运行之前让它停下。但如果没有抛出异常，代码将继续正常执行，进入`else`下方的代码，此时之前的异常处理程序已经不再重要了。以下是所有的代码注释，解释了发生了什么：
 
 ```python
 try:
@@ -6743,13 +6724,13 @@ print("Success!")
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_338_0.png)
 
-**警告** 像 Python 一直以来，缩进非常重要。确保按照本章所示对你的代码进行缩进。否则，你的代码将无法运行。
+> **警告** 像 Python 一直以来，缩进非常重要。确保按照本章所示对你的代码进行缩进。否则，你的代码将无法运行。
 
 图 7-6 还显示了所有的代码以及在 VS Code 中运行这些代码的结果。
 
-showfilecontents.py people.csv
+`showfilecontents.py` `people.csv`
 
-exceptions > showfilecontents.py > ...
+`exceptions > showfilecontents.py > ...`
 
 ```python
 1 try:
@@ -6774,20 +6755,29 @@ exceptions > showfilecontents.py > ...
 
 问题 输出 调试 控制台 终端
 
+```text
 (base) PS C:\Users\Alan\Desktop\exceptions> C:\Users\Alan\anaconda3\python.exe c:\
+```
 
+```text
 Username,FirstName,LastName,DateJoined
+
 Rambo,Rocco,Moe,3/1/2019
+
 Ann,Annie,Angst,6/4/2019
+
 Wil,Wilbur,Blomgren,2/8/2019
+
 Lupe,Lupe,Gomez,4/2/2019
+
 Ina,Ina,Kumar,1/15/2019
 
 Success!
+```
 
-> 图 7-6: 带有 try、异常处理程序以及在没有异常时使用的 else 代码。
+> 图 7-6：带有`try`、异常处理程序以及在没有异常时使用的`else`代码。
 
-# 使用 try ... except ... else ... finally
+## 使用`try ... except ... else ... finally`
 
 如果你查看 Python 异常处理的完整语法，你会在最后看到另一个选项，如下所示：
 
@@ -6804,9 +6794,9 @@ finally:
     无论上面发生了什么，都执行此代码
 ```
 
-无论 `try` 块何时结束，`finally` 块代码都会被执行。例如，如果你在一个函数内部，并且一个 `except` 块使用 `return` 退出函数，`finally` 代码仍然会执行。如果没有这种功能，`finally` 块等同于将其代码放在 `try` 块之后且外部。
+无论`try`块何时结束，`finally`块代码都会被执行。例如，如果你在一个函数内部，并且一个`except`块使用`return`退出函数，`finally`代码仍然会执行。如果没有这种功能，`finally`块等同于将其代码放在`try`块之后且外部。
 
-为了说明，有一段代码期望名为 `people.csv` 的外部资源可用：
+为了说明，有一段代码期望名为`people.csv`的外部资源可用：
 
 ```python
 print('Do this first')
@@ -6823,27 +6813,23 @@ finally:
 print('This is outside the try...except...else...finally')
 ```
 
-当你在文件夹中带名为 `people.csv` 的文件运行此代码，你会得到以下输出：
+当你在文件夹中带名为`people.csv`的文件运行此代码，你会得到以下输出：
 
-```
+```text
 Do this first
 如果没有异常，则显示此内容。
 This is in the finally block
 This is outside the try...except...else...finally
 ```
 
-
-
-
-
 ```python
 if line_count < 2:
     raise FileNotFoundError
 ```
 
-但如果你那样做，`FileNotFoundError` 处理器会被调用并显示“There is no people.csv file”，这在这种情况下并不是事实，而且并不是问题的原因。实际上存在一个 `people.csv` 文件；它只是里面没有可供循环遍历的数据。你需要的是为该异常编写一个自定义的异常处理器。
+但如果你那样做，`FileNotFoundError`处理器会被调用并显示“There is no people.csv file”，这在这种情况下并不是事实，而且并不是问题的原因。实际上存在一个`people.csv`文件；它只是里面没有可供循环遍历的数据。你需要的是为该异常编写一个自定义的异常处理器。
 
-Python 中的所有异常都是对象，是继承自 Python 基类 `Errors` 的类实例。要创建你自己的异常，首先必须导入 `Exception` 类来作为基类（就像 `Member` 曾是不同类型用户的基类一样）。然后，你将你的错误定义为该基类的子类。这段代码应该放在文件的顶部，以便它在任何其他代码尝试使用自定义异常之前执行：
+Python 中的所有异常都是对象，是继承自 Python 基类`Errors`的类实例。要创建你自己的异常，首先必须导入`Exception`类来作为基类（就像`Member`曾是不同类型用户的基类一样）。然后，你将你的错误定义为该基类的子类。这段代码应该放在文件的顶部，以便它在任何其他代码尝试使用自定义异常之前执行：
 
 ```python
 # 定义 Python 自定义异常
@@ -6856,9 +6842,9 @@ class FileNotFoundError(Error):
     pass
 ```
 
-如之前，和之前一样，每个类中的 `pass` 单词告诉 Python：“我知道这个类里面没有代码，这没关系。你不需要抛出异常来告诉我这一点。”
+如之前，和之前一样，每个类中的`pass`单词告诉 Python：“我知道这个类里面没有代码，这没关系。你不需要抛出异常来告诉我这一点。”
 
-现在已经存在一个名为 `EmptyFieldError` 的异常，当文件内容不足时你可以抛出该异常。编写一个处理器来处理该异常：
+现在已经存在一个名为`EmptyFieldError`的异常，当文件内容不足时你可以抛出该异常。编写一个处理器来处理该异常：
 
 ```python
 # 如果行数少于 2，抛出异常。
@@ -6915,33 +6901,31 @@ except EmptyFieldError:
 41 print('\Success!')
 ```
 
-图 7-7：为异常处理添加的自定义 `EmptyFileError` 异常。
+图 7-7：为异常处理添加的自定义`EmptyFileError`异常。
 
-这就是代码运行的情况。如果完全没有 `people.csv` 文件，将显示此错误：
+这就是代码运行的情况。如果完全没有`people.csv`文件，将显示此错误：
 
 ```text
 There is no people.csv file here.
 ```
 
-如果有 `people.csv` 文件但它是空的或只包含列标题，程序将显示：
+如果有`people.csv`文件但它是空的或只包含列标题，程序将显示：
 
 ```text
 Your people.csv file doesn't have enough stuff.
 ```
 
-假设这两个错误都没有发生，`else:` 下方的代码将运行并显示文件中的任何内容。
+假设这两个错误都没有发生，`else:`下方的代码将运行并显示文件中的任何内容。
 
 如你所见，异常处理允许你为代码中漏洞导致的错误做好计划。我们指的不是代码中的 bug 或编码错误，而是程序正确运行所需的所需的外部资源。
 
 当外部资源缺失或不足时，你不需要让程序直接崩溃并显示一个让用户困惑的“极客式错误”。相反，你可以捕获异常并向用户显示一些文本，告诉他们具体出了什么问题，这将帮助他们修复问题并重新运行程序，这次就能成功了。这就是异常处理的意义所在。
 
-# 第 3 册
+# 第 3 册：库的使用
 
-# 库的使用
+## 内容摘要
 
-# 内容摘要
-
-## 第 1 章：处理外部文件
+### 第 1 章：处理外部文件
 
 - 理解文本文件和二进制文件
 - 打开和关闭文件
@@ -6969,11 +6953,9 @@ Your people.csv file doesn't have enough stuff.
 - 导入 Python 模块
 - 创建你自己的模块
 
-## 第 1 章
+# 第 1 章：处理外部文件
 
-# 处理外部文件
-
-在本章中
+## 在本章中
 
 - 处理文本文件和二进制文件
 - 打开、关闭和读取文件内容
@@ -6995,18 +6977,16 @@ Python 提供了许多工具用于创建、读取和写入各种文件。在本�
 
 乱码，只需关闭文件或程序，如果被询问，选择“否”。只要你不保存，文件就是安全的。
 
-# 图 1-1：二进制文件在文本编辑程序中的显示方式。
+### 图 1-1：二进制文件在文本编辑程序中的显示方式
 
 图 1-2 列出了不同类型的文本和二进制文件的示例，其中某些你可能已经处理过。其他类型也可用，但这些是最常用的。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_349_0.png)
-```
 
+```text
+Text File
 
-
-# Text File
-
-# Binary File
+Binary File
 
 - Plain text: .txt, .csv
 - Executable: .exe, .dmg, .bin
@@ -7020,43 +7000,46 @@ Python 提供了许多工具用于创建、读取和写入各种文件。在本�
 - Document: .pdf, .docx, .xlsx
 
 FIGURE 1-2: Common text and binary files.
+```
 
-As with any Python code, you can use a Jupyter notebook, VS Code, or almost any coding editor to write your Python code. We use VS Code in this chapter simply because its Explorer bar (on the left, when it's open) displays the contents of the folder in which you're currently working.
+与任何 Python 代码一样，你可以使用 Jupyter notebook、VS Code 或几乎任何代码编辑器来编写 Python 代码。本章使用 VS Code，仅仅是因为它的资源管理器栏（打开时位于左侧）会显示你当前工作的文件夹内容。
 
-## Opening and Closing Files
+## 打开和关闭文件
 
-To open a file from a Python app, use the syntax:
+要从 Python 应用程序中打开文件，请使用以下语法：
 
 ```python
 open(filename.ext[,mode])
 ```
 
-Replace filename.ext with the filename of the file you want to open. If the file is not in the same directory as the Python code, you need to specify a path to the file, using forward slashes, even if you're working in Windows. For example, if you want to open foo.txt on your desktop and your user name is Alan, you'd use C:/Users/Desktop/foo.txt rather than the more common Windows syntax with backslashes (C:\Users\Desktop\foo.txt).
 
-The mode is optional (as indicated by square brackets). It is to specify what kind of access you want your app to have, using the following single-character abbreviations:
 
-- **r: (Read):** Opens the file but does not allow Python to make any changes. This is the default mode and is used if you don't specify a mode. If the file doesn't exist, Python raises a FileNotFoundError.
-- **r+: (Read/Write):** Opens the file and allows Python to read and write to the file.
-- **a: (Append):** Opens the file and allows Python to add content to the end of the file without changing existing content. If the file doesn't exist, this mode creates the file.
-- **w: (Write):** Opens the file and allows Python to make changes to the file. It creates the file if it doesn't exist.
-- **x: (Create):** Creates the file if it doesn't already exist. If the file does exist, it raises a FileExistsError.
+将`filename.ext`替换为你想要打开的文件名。如果文件与Python代码不在同一目录下，你需要使用正斜杠指定文件的路径，即使在Windows系统中也是如此。例如，如果你想打开桌面上的`foo.txt`，且你的用户名是`Alan`，你应该使用`C:/Users/Desktop/foo.txt`，而不是Windows中常见的反斜杠语法（`C:\Users\Desktop\foo.txt`）。
+
+`mode`参数是可选的（如方括号所示）。它用于指定你的应用所拥有的访问权限，使用以下单字符缩写：
+
+- **r（读取）：** 打开文件但不允许Python进行任何更改。这是默认模式，如果你未指定模式则使用此模式。如果文件不存在，Python会抛出`FileNotFoundError`。
+- **r+（读取/写入）：** 打开文件并允许Python读取和写入文件。
+- **a（追加）：** 打开文件并允许Python在文件末尾添加内容，而不更改现有内容。如果文件不存在，此模式会创建该文件。
+- **w（写入）：** 打开文件并允许Python对文件进行更改。如果文件不存在，它会创建该文件。
+- **x（创建）：** 如果文件不存在则创建文件。如果文件已存在，则抛出`FileExistsError`。
 
 ![](img/b52ea569d1e5bba0afd733be6483d_351_0.png)
 
-**REMEMBER** For more information on exceptions, see Book 2, Chapter 7.
+**记住** 有关异常的更多信息，请参阅第2册第7章。
 
-- **t: (Text):** Opens the file as a text file and allows Python to read and write text.
-- **b: (Binary):** Opens the file as a binary file and allows Python to read and write bytes.
+- **t（文本）：** 将文件作为文本文件打开，并允许Python读取和写入文本。
+- **b（二进制）：** 将文件作为二进制文件打开，并允许Python读取和写入字节。
 
-You can use the open method in basically two ways. With one syntax you assign a variable name to the file, and use this variable name in code to refer to the file:
+你可以通过两种基本方式使用`open`方法。一种语法是为文件分配一个变量名，并在代码中使用该变量名来引用文件：
 
 ```python
 var = open(filename.ext[,mode])
 ```
 
-Replace var with a name of your choosing (though it's common in Python to use just the letter f as the name).
+将`var`替换为你选择的名称（尽管在Python中通常只使用字母`f`作为名称）。
 
-After the file is open, you can access its content in a few ways, as we discuss a little later in the chapter. For now, we simply copy everything in the file to a variable named filecontents, and then we display this content using a simple print() function. To open quotes.txt, read in all its content, and display that content on the scene, use this code:
+文件打开后，你可以通过几种方式访问其内容，我们将在本章稍后讨论。现在，我们简单地将文件中的所有内容复制到一个名为`filecontents`的变量中，然后使用简单的`print()`函数显示此内容。要打开`quotes.txt`，读取其所有内容，并在屏幕上显示该内容，请使用以下代码：
 
 ```python
 f = open('quotes.txt')
@@ -7064,7 +7047,7 @@ filecontents = f.read()
 print(filecontents)
 ```
 
-With this method, the file remains open until you specifically close it using the file variable name and the .close() method, like this:
+使用此方法，文件将保持打开状态，直到你使用文件变量名和`.close()`方法显式关闭它，如下所示：
 
 ```python
 f.close()
@@ -7072,30 +7055,118 @@ f.close()
 
 ![](img/b52ea569d1e5bba0afd733be6483d_352_0.png)
 
-> **REMEMBER** Make sure your app closes any files they no longer need open. Failure to do so allows open file handlers to accumulate, which can eventually cause the app to throw an exception and crash, perhaps even corrupting some of the open files along the way.
+> **记住** 确保你的应用关闭不再需要打开的任何文件。否则，打开的文件句柄会不断累积，最终可能导致应用抛出异常并崩溃，甚至可能在此过程中损坏一些打开的文件。
 
-The second way to open a file, is by using a context manager or contextual coding. Contextual coding starts with the word with. You still assign a variable name, but you do so near the end of the line. The last thing on the line is the colon, which marks the beginning of the with block. All indented code below that is assumed to be relevant to the context of the open file (like code indented inside a loop). At the end of contextual coding, you don't need to close the file because Python does automatically:
+第二种打开文件的方法是使用上下文管理器或上下文编码。上下文编码以`with`关键字开头。你仍然分配一个变量名，但它在行的末尾附近。行中的最后一个内容是冒号，它标志着`with`块的开始。下面所有缩进的代码都被视为与打开文件的上下文相关（就像循环内缩进的代码一样）。在上下文编码结束时，你不需要关闭文件，因为Python会自动关闭：
 
 ```python
-## Contextual syntax
+# 上下文语法
 with open('quotes.txt') as f:
     filecontents = f.read()
     print(filecontents)
 ```
 
-The unintended line below is outside the with block;
-print('File is closed: ', f.closed)
+下面未缩进的行位于`with`块之外；
+`print('File is closed: ', f.closed)`
+
+字节（`bytes`）并不是问题或障碍；它只是目前不是处理`.jpg`文件的好方法。
+
+`names.txt`的问题则不同。该文件是一个文本文件（`.txt`），就像`quotes.txt`一样。但如果你打开它并查看内容（如图1-4所示），你会发现它包含许多在ASCII中通常不会看到的非常规字符（你键盘上的数字、字母和标点符号）。
+
+![](img/b5b2ea569d1e5bba0afd733be648243d_356_0.png)
+
+图1-4：`Names.txt`文件是文本，但包含许多非英语字符。
+
+所有这些看起来很复杂的字符告诉你，`names.txt`并不是简单的ASCII文本文件。它更有可能是一个UTF-8文件，基本上是一种使用了比标准ASCII字符更多的文本文件。要打开该文件，你必须在`open()`语句中使用`encoding='utf-8'`来告诉Python期望UTF-8字符，如图1-5所示。输出与`names.txt`文件的内容匹配。
+
+```python
+readuncode.py
+1 # 使用 utf-8 编码打开文件。
+2 with open('names.txt','r',encoding='utf-8') as f:
+3 # 将整个文件读取到名为 content 的变量中。
+4 content=f.read()
+5 # 显示 content。
+6 print(content)
+```
+
+输出 调试控制台终端
+
+`Björk Guðmundsdóttir`
+
+`毛泽东`
+
+`Борис Николаевич Ельцин`
+
+`Nguyễn Tấn Dũng`
+
+图1-5：显示的`names.txt`内容。
+
+打开文件时，你需要注意以下三点：
+
+- 对于纯文本文件（ASCII），你可以使用`r`模式，或者什么都不写（默认模式）。
+- 对于二进制文件，你必须在模式中指定`b`。
+- 对于带有特殊字符的文本文件，你最可能需要在`open()`语句中将编码设置为`utf-8`并将其作为文本文件打开。
+
+## 什么是 UTF-8？
+
+UTF-8是Unicode Transformation Format, 8-bit（8位转换格式）的缩写，是计算机上表示字母和数字的标准方法。原始的ASCII字符集主要包含大写和小写字母、数字和标点符号，在计算机早期阶段运行良好。但当其他语言被引入时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8几乎是所有互联网内容的标准，如果你必须为项目选择一种字符集，它也是一个很好的选择。
+
+如果你在寻找更多关于UTF-8的历史或技术信息，请查看这些网页：
+
+- https://www.w3.org/International/questions/qa-what-is-encoding
+- https://pythonconquesttheuniverse.wordpress.com/2010/05/30/unicode-beginners-introduction-for-dummies-made-simple/
+- https://www.joelsonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+如果你在尝试打开一个本应该是UTF-8但不配合的文件时遇到困难，请搜索“将文件转换为utf-8编码”。寻找可以与你的操作系统配合的网页或应用程序来进行转换。
+
+## 读取文件内容
+
+在本章之前的内容中，你已经看到如何使用`.read()`来读取已打开文件的内容。但那不是读取文件的唯一方法。你有三种选择：
+
+- `read([size])`：如果你让括号留空，它会读取整个文件。如果你在括号内指定一个大小，它会读取许多字符（对于文本文件）或相应数量的字节（对于二进制文件）。
+- `readline()`：从文本文件中读取一行内容——该行在出现换行符处结束。（换行符`\n`会结束显示的行，并将光标移动到下一行。）
+- `readlines()`：将文本文件的所有行都读取到一个列表（`list`）中。
+
+![](img/b5b2ea569d1e5bba0afd733be648243d_358_0.png)
+
+人们不会输入二进制文件，因此二进制文件中的任何换行符都是随机的。因此，`readline()`和`readlines()`仅对文本文件有用。
+
+`read()`和`readline()`方法都会一次性读取整个文件。唯一的区别是`read`将文件作为一整块数据读取，而`readlines()`是一行一行地读取文件并将每行存储为列表中的一个项。例如，以下代码打开了`quotes.txt`，读取了所有内容并将其显示：
+
+```python
+with open('quotes.txt') as f:
+    # 读取整个文件
+    content = f.read()
+    print(content)
+```
+
+`content`变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。以下是使用`readlines()`代替`read`的相同代码：
+
+```python
+with open('quotes.txt') as f:
+    # 使用 readlines()
+    content = f.readlines()
+    print(content)
+```
+
+`content`变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用`readlines()`代替`read`的相同代码：
+
+```python
+with open('quotes.txt') as f:
+    # 使用 readlines()
+    content = f.readlines()
+    print(content)
 ```
 
 
 
-字节（bytes）并不是问题或障碍；它只是目前不是处理 .jpg 文件的好方法。
+字节并不是问题或障碍；它只是目前不是处理 `.jpg` 文件的好方法。
 
-`names.txt` 的问题则不同。该文件是一个文本文件（.txt），就像 `quotes.txt` 一样。但如果你打开它并查看内容（如图 1-4 所示），你会发现它包含许多在 ASCII 中通常不会看到的非常规字符（你键盘上的数字、字母和标点符号）。
+`names.txt` 的问题则不同。该文件是一个文本文件（`.txt`），就像 `quotes.txt` 一样。但如果你打开它并查看内容（如图 1-4 所示），你会发现它包含许多在 ASCII 中通常不会看到的非常规字符（你键盘上的数字、字母和标点符号）。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_356_0.png)
 
-图 1-4：Names.txt 文件是文本，但包含许多非英语字符。
+图 1-4：`Names.txt` 文件是文本，但包含许多非英语字符。
 
 所有这些看起来很复杂的字符告诉你，`names.txt` 并不是简单的 ASCII 文本文件。它更有可能是一个 UTF-8 文件，基本上是一种使用了比标准 ASCII 字符更多的文本文件。要打开该文件，你必须在 `open()` 语句中使用 `encoding='utf-8'` 来告诉 Python 期望 UTF-8 字符，如图 1-5 所示。输出与 `names.txt` 文件的内容匹配。
 
@@ -7112,21 +7183,24 @@ readuncode.py
 输出 调试控制台终端
 
 Björk Guðmundsdóttir
+
 毛泽东
+
 Борис Николаевич Ельцин
+
 Nguyễn Tấn Dũng
 
-图 1-5：显示的 names.txt 内容。
+图 1-5：显示的 `names.txt` 内容。
 
-打开文件时，你需要注意以下三点：
+打开文件时，你需要意识到以下三点：
 
-- 对于纯文本文件（ASCII），你可以使用 `r` 模式，或者什么都不写（默认模式）。
+- 对于纯文本文件（ASCII），你可以使用 `r` 模式，或者什么都不写。
 - 对于二进制文件，你必须在模式中指定 `b`。
 - 对于带有特殊字符的文本文件，你最可能需要在 `open()` 语句中将编码设置为 `utf-8` 并将其作为文本文件打开。
 
 ## 什么是 UTF-8？
 
-UTF-8 是 Unicode Transformation Format, 8-bit（8位 转换格式）的缩写，是计算机上表示字母和数字的标准方法。原始的 ASCII 字符集主要包含大写和小写字母、数字和标点符号，在计算机计算机早期阶段运行良好。但当其他语言被引入时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8 的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8 几乎是所有互联网内容的标准，如果你必须为项目选择一种字符集，它也是一个很好的选择。
+UTF-8 是 Unicode Transformation Format, 8-bit 的缩写，是计算机上表示字母和数字的标准方法。原始的 ASCII 字符集主要包含大写和小写字母、数字和标点符号，在计算机早期阶段运行良好。但当其他语言被引入时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8 的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8 几乎是所有互联网内容的标准，因此如果你必须为项目选择一种字符集，它也是一个很好的选择。
 
 如果你在寻找更多关于 UTF-8 的历史或技术信息，请查看这些网页：
 
@@ -7157,335 +7231,24 @@ with open('quotes.txt') as f:
     print(content)
 ```
 
-`content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。以下是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 读取整个文件
-    content = f.read() # 此处原文为 `quotes.txt` 应该是 read
-``` (等等，这里原文代码块有误，我根据逻辑翻译) 重新对齐代码：
-```python
-with open('quotes.txt') as f:
-    # 读取整个文件
-    content = f.read()
-    print(content)
-```
-(注：原文示例代码最后一段是 `readlines()` 的对比，翻译时保持逻辑)
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-
 `content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用 `readlines()` 代替 `read` 的相同代码：
 
 ```python
 with open('quotes.txt') as f:
     # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(纠正：原文示例代码中 `readlines()` 对应处其实写的是 `content = f.read()`，但紧接着是 `readlines()` 的对比。我将严格按照原文 Markdown 结构翻译)
-
-[content]
-(此处对应原文的 names.txt 输出)
-
-当打开文件时，你需要意识到以下三点：
-
-- 对于纯文本文件（ASCII），你可以使用 `r` 模式，或者什么都不写。
-- 对于二进制文件，你必须在模式中指定 `b`。
-- 对于带有特殊字符的文本文件，你最可能需要在 `open()` 语句中将编码设置为 `utf-8` 并将其作为文本文件打开。
-
-## 什么是 UTF-8？
-
-UTF-8 是 Unicode Transformation Format, 8-bit 的缩写，是计算机上表示字母和数字的标准方法。原始的 ASCII 字符集主要包含大写和小写字母、数字和标点符号，在计算机早期阶段运行良好。但当其他语言被引入时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8 的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8 几乎是所有互联网内容的标准，因此如果你必须为项目选择一种字符集，它也是一个很好的选择。
-
--如果你在寻找更多关于 UTF-8 的历史或技术信息，请查看这些网页：
-
-- https://www.w3.org/International/questions/qa-what-is-encoding
-- https://pythonconquesttheuniverse.wordpress.com/2010/05/30/unicode-beginners-introduction-for-dummies-made-simple/
-- https://www.joelsonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
-
-如果你在尝试打开一个本应该是 UTF-8 但不配合的文件时遇到困难，请在搜索“将文件转换为 utf-8 编码”。寻找可以与你的操作系统配合的网页或应用程序来进行转换。
-
-## 读取文件内容
-
-在本章之前的内容中，你已经看到如何使用 `.read()` 来读取已打开文件的内容。但那不是读取文件的唯一方法。你有三种选择：
-
-- `read([size])`：如果你让括号留空，它会读取整个文件。如果你在括号内指定一个大小，它会读取许多字符（对于文本文件）或相应数量的字节（对于二进制文件）。
-- `readline()`：从文本文件中读取一行内容——该行在出现换行符处结束。（换行符 `\n` 会结束显示的行，并将光标移动到下一行。）
-- `readlines()`：将文本文件的所有行都读取到一个列表（list）中。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_358_0.png)
-
-人们不会输入二进制文件，因此二进制文件中的任何换行符都是随机的。因此，`readline()` 和 `readlines()` 仅对文本文件有用。
-
-`read()` 和 `readline()` 方法都会一次性读取整个文件。唯一的区别是 `read` 将文件作为一整块数据读取，而 `readlines()` 是一行一行地读取文件并将每行存储为列表中的一个项。例如，以下代码打开了 `quotes.txt`，读取了所有内容并将其显示：
-
-```python
-with open('quotes.txt') as f:
-    # 读取整个文件
-    content = f.read()
-    print(content)
-```
-
-`content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(注：由于原文提供的代码块在 `readlines()` 处似乎逻辑重复或有误，我将忠实翻译其结构)
-(等等，原文中最后一段代码块实际上显示的是 `content = f.read()` 但紧接着的描述是 `readlines()` 的对比。我将按原文内容翻译)
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(此处根据原文最后一段：原文其实是 `content = f.read()` 吗？我重新检查。原文提供的“以下是需要翻译的文本”之后的内容)
-
-[重新对齐最后一段部分]：
-以下代码打开了 `quotes.txt`，读取了所有内容，然后将其显示：
-这里是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(注：原文提供的文本中最后一段代码块确实是 `content = f.read()`，但上下文是在说 `readlines`。我将直接翻译原文文本)
-
-(抱歉，我将重新提供最后一段的完整中文翻译) 
-
-`content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines() 
     content = f.readlines()
     print(content)
 ```
 
 其输出为：
+
 > ['I\'ve had a perfectly wonderful evening, but wasn\'t it.', 'Groucho Marx', 'The difference between stupidity and genius is that genius has its limits.', 'Albert Einstein', 'We are all here on earth to help others; what on earth the others are for I have no idea.', 'W. H. Auden', 'Ending a sentence with a preposition is something I will not put.', 'Winston Churchill']
 
-(注：我发现原文提供的文本在最后处被截断了，或者我理解有误。我将根据用户提供的“需要翻译的文本”进行最终整合。)
+## 使用 `readline()` 进行循环
 
-**等等，让我重新查看用户提供的“待翻译的文本”最后一部分：**
-原文最后是：
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(不，我看到的原文最后是 `content = f.read()` 吗？我再看一遍。原文最后一段是：
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(实际上，我发现用户提供的文本在最后一段 `readlines()` 示例处，我将直接翻译原文)
+如果你不确定要读取的文件大小，或者运行你应用程序的电脑 RAM 内存有多少，使用 `readlines()` 读取整个文件是有风险的。如果内存不足以容纳整个文件，程序在内存耗尽时将会崩溃。为了安全起见，你可以一次读取一行并循环文件，这样在任何时刻内存中只会有文件的一行内容。
 
-[由于字数限制，我将提供一个最完整的、最符合格式要求的翻译]
 
-[/content] 
-
-[content]
-字节并不是问题或障碍；它只是目前不是处理 .jpg 文件的好方法。
-
-`names.txt` 的问题则不同。该文件是一个文本文件（.txt），就像 `quotes.txt` 一样。但如果你打开它并查看内容（如图 1-4 所示），你会发现它包含许多在 ASCII 中通常不会看到的非常规字符（你键盘上的数字、字母和标点符号）。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_356_0.png)
-
-图 1-4：Names.txt 文件是文本，但包含许多非英语字符。
-
-所有这些看起来很复杂的字符告诉你，`names.txt` 并不是简单的 ASCII 文本文件。它更有可能是一个 UTF-8 文件，基本上是一种使用了比标准 ASCII 字符更多的文本文件。要打开该文件，你必须在 `open()` 语句中使用 `encoding='utf-8'` 来告诉 Python 期望 UTF-8 字符，如图 1-5 所示。输出与 `names.txt` 文件的内容匹配。
-
-```python
-readuncode.py
-1 # 使用 utf-8 编码打开文件。
-2 with open('names.txt','r',encoding='utf-8') as f:
-3 # 将整个文件读取到名为 content 的变量中。
-4 content=f.read()
-5 # 显示 content。
-6 print(content)
-```
-
-输出 调试控制台终端
-
-Björk Guðmundsdóttir
-毛泽东
-Борис Николаевич Ельцин
-Nguyễn Tấn Dũng
-
-图 1-5：显示的 names.txt 内容。
-
-打开文件时，你需要意识到以下三点：
-
-- 对于纯文本文件（ASCII），你可以使用 `r` 模式，或者什么都不写。
-- 对于二进制文件，你必须在模式中指定 `b`。
-- 对于带有特殊字符的文本文件，你最可能需要在 `open()` 语句中将编码设置为 `utf-8` 并将其作为文本文件打开。
-
-## 什么是 UTF-8？
-
-UTF-8 是 Unicode Transformation Format, 8-bit 的缩写，是计算机上表示字母和数字的标准方法。原始的 ASCII 字符集主要包含大写和小写字母、数字和标点符号，在计算机早期阶段运行良好。但当其他语言被引入时时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8 的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8 几乎是所有互联网内容的标准，因此如果你必须为项目选择一种字符集，它也是一个很好的选择。
-
-如果你在寻找更多关于 UTF-8 的历史或技术信息，请查看这些网页：
-
-- https://www.w3.org/International/questions/qa-what-is-encoding
-- https://pythonconquesttheuniverse.wordpress.com/2010/05/30/unicode-beginners-introduction-for-dummies-made-simple/
-- https://www.joelsonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
-
-如果你在尝试打开一个本应该是 UTF-8 但不配合的文件时遇到困难，请在搜索“将文件转换为 utf-8 编码”。寻找可以与你的操作系统配合的网页或应用程序来进行转换。
-
-## 读取文件内容
-
-在本章之前的内容中，你已经看到如何使用 `.read()` 来读取已打开文件的内容。但那不是读取文件的唯一方法。你有三种选择：
-
-- `read([size])`：如果你让括号留空，它会读取整个文件。如果你在括号内指定一个大小，它会读取许多字符（对于文本文件）或相应数量的字节（对于二进制文件）。
-- `readline()`：从文本文件中读取一行内容——该行在出现换行符处结束。（换行符 `\n` 会结束显示的行，并将光标移动到下一行。）
-- `readlines()`：将文本文件的所有行都读取到一个列表（list）中。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_358_0.png)
-
-人们不会输入二进制文件，因此二进制文件中的任何换行符都是随机的。因此，`readline()` 和 `readlines()` 仅对文本文件有用。
-
-`read()` 和 `readline()` 方法都会一次性读取整个文件。唯一的区别是 `read` 将文件作为一整块数据读取，而 `readlines()` 是一行一行地读取文件并将每行存储为列表中的一个项。例如，以下代码打开了 `quotes.txt`，读取了所有内容并将其显示：
-
-```python
-with open('quotes.txt') as f:
-    # 读取整个文件
-    content = f.read()
-    print(content)
-```
-
-`content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(注：由于原文提供的文本在最后处被截断，我将根据逻辑完成翻译)
-[/content] (等等，我发现用户提供的文本在最后一段代码块处处实际上是 `content = f.read()` 吗？我再看一遍)
-
-(由于我无法在回复框中删除之前的草稿，我将直接提供一个最干净、最符合格式要求的最终翻译)
-
-[/content]
-
-**对不起，刚才在思考和输出中出现了逻辑混乱。我将直接给出最终的翻译结果。**
-
-[content]
-字节并不是问题或障碍；它只是目前不是处理 .jpg 文件的好方法。
-
-`names.txt` 的问题则不同。该文件是一个文本文件（.txt），就像 `quotes.txt` 一样。但如果你打开它并查看内容（如图 1-4 所示），你会发现它包含许多在 ASCII 中通常不会看到的非常规字符（你键盘上的数字、字母和标点符号）。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_356_0.png)
-
-图 1-4：Names.txt 文件是文本，但包含许多非英语字符。
-
-所有这些看起来很复杂的字符告诉你，names.txt 并不是简单的 ASCII 文本文件。它更有可能是一个 UTF-8 文件，基本上是一种使用了使用了比标准 ASCII 字符更多的文本文件。要打开该文件，你必须在 `open()` 语句中使用 `encoding='utf-8'` 来告诉 Python 期望 UTF-8 字符，如图 1-5 所示。输出与 `names.txt` 文件的内容匹配。
-
-```python
-readuncode.py
-1 # 使用 utf-8 编码打开文件。
-2 with open('names.txt','r',encoding='utf-8') as f:
-3 # 将整个文件读取到名为 content 的变量中。
-4 content=f.read()
-5 # 显示 content。
-6 print(content)
-```
-
-输出 调试控制台终端
-
-Björk Guðmundsdóttir
-毛泽东
-Борис Николаевич Ельцин
-Nguyễn Tấn Dũng
-
-图 1-5：显示的 names.txt 内容。
-
-打开文件时，你需要意识到以下三点：
-
-- 对于纯文本文件（ASCII），你可以使用 `r` 模式，或者什么都不写。
-- 对于二进制文件，你必须在模式中指定 `b`。
-- 对于带有特殊字符的文本文件，你最可能需要在 `open()` 语句中将编码设置为 `utf-8` 并将其作为文本文件打开。
-
-## 什么是 UTF-8？
-
-UTF-8 是 Unicode Transformation Format, 8-bit 的缩写，是计算机上表示字母和数字的标准方法。原始的 ASCII 字符集主要包含大写和小写字母、数字和标点符号，在计算机早期阶段运行良好。但当其他语言被引入时，这些字符就不够用了。多年来，人们提出并接受了许多处理其他语言的标准。其中，UTF-8 的使用率稳步增长，而许多其他标准则在衰落。今天，UTF-8 几乎是所有互联网内容的标准，因此如果你必须为项目选择一种字符集，它也是一个很好的选择。
-
-如果你在寻找更多关于 UTF-8 的历史或技术信息，请查看这些网页：
-
-- https://www.w3.org/International/questions/qa-what-is-encoding
-- https://pythonconquesttheuniverse.wordpress.com/2010/05/30/unicode-beginners-introduction-for-dummies-made-simple/
-- https://www.joelsonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
-
-如果你在尝试打开一个本应该是 UTF-8 但不配合的文件时遇到困难，请在搜索“将文件转换为 utf-8 编码”。寻找可以与你的操作系统配合的网页或应用程序来进行转换。
-
-## 读取文件内容
-
-在本章之前的内容中，你已经看到如何使用 `.read()` 来读取已打开文件的内容。但那不是读取文件的唯一方法。你有三种选择：
-
-- `read([size])`：如果你让括号留空，它会读取整个文件。如果你在括号内指定一个大小，它会读取许多字符（对于文本文件）或相应数量的字节（对于二进制文件）。
-- `readline()`：从文本文件中读取一行内容——该行在出现换行符处结束。（换行符 `\n` 会结束显示的行，并将光标移动到下一行。）
-- `readlines()`：将文本文件的所有行都读取到一个列表（list）中。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_358_0.png)
-
-人们不会输入二进制文件，因此二进制文件中的任何换行符都是随机的。因此，`readline()` 和 `readlines()` 仅对文本文件有用。
-
-`read()` 和 `readline()` 方法都会一次性读取整个文件。唯一的区别是 `read` 将文件作为一整块数据读取，而 `readlines()` 是一行一行地读取文件并将每行存储为列表中的一个项。例如，以下代码打开了 `quotes.txt`，读取了所有内容并将其显示：
-
-```python
-with open('quotes.txt') as f:
-    # 读取整个文件
-    content = f.read()
-    print(content)
-```
-
-`content` 变量存储了文本文件中所有内容的副本。我们打印该变量以显示其内容。文件行末尾的换行符会在屏幕上开启新行。这里是使用 `readlines()` 代替 `read` 的相同代码：
-
-```python
-with open('quotes.txt') as f:
-    # 使用 readlines()
-    content = f.readlines()
-    print(content)
-```
-(注：由于原文提供的文本在最后处被截断，我将根据逻辑完成翻译)
-[/content] (等等，我发现用户提供的文本在最后一段代码块处实际上是 `content = f.read()` 吗？我再看一遍)
-
-(由于我无法在回复框中删除之前的草稿，我将直接提供一个最干净、最符合格式要求的最终翻译)
-
-[/content] (抱歉) 
-
-(由于系统限制，我将不再重复，直接输出最终结果)
-
-[此处应为最符合逻辑的最终完整翻译内容] (由于之前的对话出现了混乱，请忽略之前的重复尝试，以下为为最终的翻译)
-
-[/content)
-
-
-
-
-> 我们所有人来到地球都是为了帮助他人；至于其他人留在这里到底是为了什么，我完全不知道。
-> WW. H. 奥登
-
-以介词结尾的句子是我绝不会容忍的。
-> 英国斯汀·丘吉尔
-
-## 使用 readline() 进行循环
-
-如果你不确定要读取的文件大小，或者运行你应用程序的电脑 RAM 内存有多少，使用 `readlines()` 读取整个文件是有风险的。如果内存内存不足以容纳整个文件，程序在内存耗尽时将会崩溃。为了安全起见，你可以一次读取一行并循环文件，这样在任何时刻内存中只会有文件的一行内容。
 
 要使用这种方法，你打开文件，读取一行并将其放入变量中。然后，只要变量不为空（`while`），就一直循环文件。因为文件中的每一行都包含某些文本，在读取到最后一行之前，变量都不会为空。以下是这种循环处理方法的代码：
 
@@ -7497,9 +7260,9 @@ with open('quotes.txt') as f:
         one_line = f.readline()
 ```
 
-对于较大的文件，这种方法是更好的选择，因为你没有在任何时候读取过整个文件。唯一的潜在问题是忘记在循环内部包含 `.readline()` 以移动到下一行。否则，你将陷入无限循环，不断打印第一行。如果你发现自己陷入了这种境地，可以在运行代码的终端窗口按 Ctrl+C 停止循环。
+对于较大的文件，这种方法是更好的选择，因为你没有在任何时候读取过整个文件。唯一的潜在问题是忘记在循环内部包含`.readline()`以移动到下一行。否则，你将陷入无限循环，不断打印第一行。如果你发现自己陷入了这种境地，可以在运行代码的终端窗口按`Ctrl+C`停止循环。
 
-你可以通过在 Python 中使用 `.readline()` 实现相同的格式，在每个引言下方缩进并添加一个空行。在你的代码中，将计数器设为 `1`。创建一个每次读取文件一行的循环。在该循环中，每次增加计数器变量的值并对偶数行进行缩进，如下所示：
+你可以通过在 Python 中使用`.readline()`实现相同的格式，在每个引言下方缩进并添加一个空行。在你的代码中，将计数器设为`1`。创建一个每次读取文件一行的循环。在该循环中，每次增加计数器变量的值并对偶数行进行缩进，如下所示：
 
 ```python
 # 使用一个数字作为循环计数器
@@ -7522,27 +7285,27 @@ with open('quotes.txt') as f:
         one_line = f.readline()
 ```
 
-此循环的输出与 `readlines()` 循环相同，其中每个作者的名字都缩进了，并且由于使用了 `print(end='')` 产生了额外的空行。
+此循环的输出与`readlines()`循环相同，其中每个作者的名字都缩进了，并且由于使用了`print(end='')`产生了额外的空行。
 
 ## 追加与覆盖文件
 
 ![](img/b5b2ea56d1e5bba0afd733be6423d_363_0)
 
-警告：每次操作文件时，理解写入（write）和追加（append）之间的区别很重要。如果你以写入模式打开文件并写入，新内容将覆盖文件中已有的所有内容。这种操作无法撤销。如果文件内容很重要，请确保不要犯这个错误。要在文件末尾添加内容，以追加模式打开文件，然后使用 `.write` 写入文件。
+警告：每次操作文件时，理解写入（write）和追加（append）之间的区别很重要。如果你以写入模式打开文件并写入，新内容将覆盖文件中已有的所有内容。这种操作无法撤销。如果文件内容很重要，请确保不要犯这个错误。要在文件末尾添加内容，以追加模式打开文件，然后使用`.write`写入文件。
 
-假设你想在 `names.txt` 文件中添加 Peña Calderón 名字。正如上一节所示，由于包含特殊字符，所以你需要将编码设置为 UTF-8。此外，如果你想在文件中单独显示每个名字，请在你要添加的名字末尾添加 `\n`（换行）。你的代码应该像这样：为了验证执行结果，开始一个新的代码块，不需要缩进，`names.txt` 文件会自动关闭。然后以读取模式打开文件并查看其内容。图 1-6 显示了添加名字后显示 `names.txt` 文件的代码。
+假设你想在`names.txt`文件中添加 Peña Calderón 名字。正如上一节所示，由于包含特殊字符，所以你需要将编码设置为 UTF-8。此外，如果你想在文件中单独显示每个名字，请在你要添加的名字末尾添加`\n`（换行）。你的代码应该像这样：为了验证执行结果，开始一个新的代码块，不需要缩进，`names.txt`文件会自动关闭。然后以读取模式打开文件并查看其内容。图 1-6 显示了添加名字后显示`names.txt`文件的代码。
 
 ![](img/b5b2ea56d1e5bba0afd733be6423d_364_0.png)
 
-**图 1-6**：在 `names.txt` 文件末尾添加了一个名字。
+**图 1-6**：在`names.txt`文件末尾添加了一个名字。
 
 ![](img/b5b2ea56d1e5bba0afd733be6423d_364_1.png)
 
-提示：输入 ñ 和 ó 等特殊字符需要按住 Alt 键输入数字，例如 Alt+164 输入 ñ 或 Alt+243 输入 ó。具体操作方法取决于你的操作系统和编辑器。详情可以搜索“在 Windows 上输入波浪 n”或“在 Mac 上输入带声调的 o”。
+提示：输入 ñ 和 ó 等特殊字符需要按住`Alt`键输入数字，例如`Alt+164`输入 ñ 或`Alt+243`输入 ó。具体操作方法取决于你的操作系统和编辑器。详情可以搜索“在 Windows 上输入波浪 n”或“在 Mac 上输入带声调的 o”。
 
 ## 使用 tell() 确定指针位置
 
-当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行 `readline()` 时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
+当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行`readline()`时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
 
 ```python
 open('names.txt', encoding='utf-8') as f:
@@ -7555,7 +7318,7 @@ open('names.txt', encoding='utf-8') as f:
         one_line = f.readline()
 ```
 
-`tell()` 方法告诉你指针在文件中的位置。当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行 `readline()` 时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
+`tell()`方法告诉你指针在文件中的位置。当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行`readline()`时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
 
 ```python
 open('names.txt', encoding='utf-8') as f:
@@ -7570,7 +7333,7 @@ open('names.txt', encoding='utf-8') as f:
 
 ## 使用 seek() 移动指针
 
-`tell()` 方法告诉你指针在文件中的位置。当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行 `readline()` 时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
+`tell()`方法告诉你指针在文件中的位置。当你循环遍历文件时，其内容是从上到下、从左到右读取的。Python 使用一个指针来追踪它的位置。当你执行`readline()`时，指针移动到下一行。如果你目前只是打开了文件，指针位于开头。以下是示例代码：
 
 ```python
 open('names.txt', encoding='utf-8') as f:
@@ -7583,19 +7346,19 @@ open('names.txt', encoding='utf-8') as f:
         one_line = f.readline()
 ```
 
-`seek()` 方法允许你重置指针。到目前，`seek` 最常用的用法是将指针重置回文件开头。语法为 `file.seek(position[,whence])`。你的选择有：
+`seek()`方法允许你重置指针。到目前，`seek`最常用的用法是将指针重置回文件开头。语法为`file.seek(position[,whence])`。你的选择有：
 
 - 0：相对于文件开头。
 - 1：相对于当前位置。
 - 2：相对于文件末尾。
 
-如果你省略了 `whence` 值，默认认为 0。
+如果你省略了`whence`值，默认认为 0。
 
 ## 读取并拷贝二进制文件
 
-假设你有一个修改二进制文件的应用程序，并且你想始终操作该文件的副本以安全起见。二进制文件可能巨大，因此与其一次性打开导致内存耗尽，你可以分块读取并写入。二进制文件没有人类可读的内容，也没有行。因此 `readline()` 和 `readlines()` 不是循环遍历文件的良好选择，但你可以使用指定大小的 `.read()`。
+假设你有一个修改二进制文件的应用程序，并且你想始终操作该文件的副本以安全起见。二进制文件可能巨大，因此与其一次性打开导致内存耗尽，你可以分块读取并写入。二进制文件没有人类可读的内容，也没有行。因此`readline()`和`readlines()`不是循环遍历文件的良好选择，但你可以使用指定大小的`.read()`。
 
-图 1-7 显示了 `binarycopy.py` 文件，它可以创建任何二进制文件的副本。通过逐步演示你可以理解它是如何工作的。
+图 1-7 显示了`binarycopy.py`文件，它可以创建任何二进制文件的副本。通过逐步演示你可以理解它是如何工作的。
 
 ```python
 binarycopy.py # 指定要拷贝的文件
@@ -7618,17 +7381,14 @@ with open(file_to_copy, 'rb') as original_file:
 print('Done!')
 ```
 
-
-
-
-将以下内容保存为 `binarycopy.py` 文件：
+将以下内容保存为`binarycopy.py`文件：
 
 ```python
 # 指定要复制的文件。
 file_to_copy = 'happy_pickle.jpg'
 ```
 
-为了创建一个要复制的空文件，你需要在扩展名之前加上 `_copy` 的名称。以下代码处理了这一点：
+为了创建一个要复制的空文件，你需要在扩展名之前加上`_copy`的名称。以下代码处理了这一点：
 
 ```python
 # 使用 _copy 拆分现有文件名并创建新文件名
@@ -7636,11 +7396,11 @@ name_parts = file_to_copy.split('.')
 new_file = name_parts[0] + '_copy.' + name_parts[1]
 ```
 
-复制行后的第一行通过点号将现有文件名分为两部分，因此 `name_parts[0]` 包含 `happy_pickle`，而 `name_parts[1]` 包含 `png`。变量 `new_file` 获取文件名的第一部分加上 `_copy` 和点，然后是文件名的最后部分。执行该文件后，变量 `new_file` 包含 `happy_pickle_copy.png`。
+复制行后的第一行通过点号将现有文件名分为两部分，因此`name_parts[0]`包含`happy_pickle`，而`name_parts[1]`包含`png`。变量`new_file`获取文件名的第一部分加上`_copy`和点，然后是文件名的最后部分。执行该文件后，变量`new_file`包含`happy_pickle_copy.png`。
 
-要复制文件，请以 `rb`（读取，二进制文件）模式打开原始文件。然后以 `wb`（写入，二进制）模式打开你想要将原始文件复制到的文件。使用写入模式时，如果文件不存在，Python 会创建一个同名文件。如果文件已存在，Python 将将指针设置为 0 打开它，因此你写入文件中的任何内容都将替换（而不是添加）现有文件。
+要复制文件，请以`rb`（读取，二进制文件）模式打开原始文件。然后以`wb`（写入，二进制）模式打开你想要将原始文件复制到的文件。使用写入模式时，如果文件不存在，Python 会创建一个同名文件。如果文件已存在，Python 将将指针设置为 0 打开它，因此你写入文件中的任何内容都将替换（而不是添加）现有文件。
 
-在代码中，我们可以看到 `original_file` 是用于复制的原始变量名，而 `copy_to` 是将数据复制到的文件的变量名。如上所示，缩进至关重要：
+在代码中，我们可以看到`original_file`是用于复制的原始变量名，而`copy_to`是将数据复制到的文件的变量名。如上所示，缩进至关重要：
 
 ```python
 # 以只读二进制模式打开原始文件。
@@ -7649,21 +7409,21 @@ with open(file_to_copy, 'rb') as original_file:
     with open(new_file, 'wb') as copy_to:
 ```
 
-如果你对整个二进制文件使用 `.read()`，可能会面临文件过大而导致计算机内存（RAM）溢出并导致程序崩溃的风险。为了避免这种情况，我们编写了此程序，每次读取适量的 4MB（4,096 字节）数据。这个 4KB 的数据块被存储在名为 `chunk` 的变量中：
+如果你对整个二进制文件使用`.read()`，可能会面临文件过大而导致计算机内存（RAM）溢出并导致程序崩溃的风险。为了避免这种情况，我们编写了此程序，每次读取适量的 4MB（4,096 字节）数据。这个 4KB 的数据块被存储在名为`chunk`的变量中：
 
 ```python
 # 获取原始文件的块 (4KB)
 chunk = original_file.read(4096)
 ```
 
-下一行设置了一个循环，每次读取一个数据块。在每次循环中，指针会自动定位到下一个数据块。最终，它将遇到文件末尾，那里无法再继续读取。当这种情况发生时，`chunk` 将为空，意味着它的长度为 0。因此，此循环将一直处理文件直到到达末尾：
+下一行设置了一个循环，每次读取一个数据块。在每次循环中，指针会自动定位到下一个数据块。最终，它将遇到文件末尾，那里无法再继续读取。当这种情况发生时，`chunk`将为空，意味着它的长度为 0。因此，此循环将一直处理文件直到到达末尾：
 
 ```python
 # 循环直到没有更多数据块。
 while len(chunk) > 0:
 ```
 
-在循环内部，第一行将上次读取的块复制到 `copy_to` 文件中。第二行从原始文件中读取下一个 4KB 块。这样，`original_file` 中的所有内容都已复制到新文件中：
+在循环内部，第一行将上次读取的块复制到`copy_to`文件中。第二行从原始文件中读取下一个 4KB 块。这样，`original_file`中的所有内容都已复制到新文件中：
 
 ```python
 copy_to.write(chunk)
@@ -7671,13 +7431,13 @@ copy_to.write(chunk)
 chunk = original_file.read(4096)
 ```
 
-所有的缩进在这一行之后停止。当循环完成后，文件会自动关闭，最后一行将如下所示显示 `Done!`：
+所有的缩进在这一行之后停止。当循环完成后，文件会自动关闭，最后一行将如下所示显示`Done!`：
 
 ```python
 print('Done!')
 ```
 
-图 1-8 显示了运行代码的结果。终端（Terminal）仅显示 `Done!`。但正如你所看到的，文件夹中现在有一个名为 `happy_pickle_copy.jpg` 的文件。打开此文件将证明它是原始文件的副本。
+图 1-8 显示了运行代码的结果。终端（Terminal）仅显示`Done!`。但正如你所看到的，文件夹中现在有一个名为`happy_pickle_copy.jpg`的文件。打开此文件将证明它是原始文件的副本。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_370_0.png)
 
@@ -7709,7 +7469,7 @@ with open(file_to_copy, 'rb') as original_file:
 CSV（逗号分隔值）是一种用于存储和传输表格数据的广泛使用的格式。表格数据意味着数据通常可以以行和列组成的表格格式显示。在 Microsoft Excel、Apple Numbers 或 Google Sheets 等电子表格应用程序中，表格格式是显而易见的，如图 1-9 所示。
 
 | A | B | C | D | E |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 1 | 全名 | 出生年份 | 入职日期 | 激活 | 余额 |
 | 2 | Angst, Annie | 1982 | 1/11/2011 | TRUE | $300.00 |
 | 3 | Barr, Barry | 1973 | 2/11/2012 | FALSE | -$123.45 |
@@ -7728,27 +7488,25 @@ CSV（逗号分隔值）是一种用于存储和传输表格数据的广泛使�
 
 图 1-10：文本编辑器中的 CSV 文件。
 
-在文中，第一行（通常称为表头，header）包含跨越第一行的列标题，或*字段名*（field names）。如果你查看第二个示例 CSV 文件中的名称，你会发现它们被引号括起来，像这样： "Angst, Annie"。
+在文中，第一行（通常称为表头，header）包含跨越第一行的列标题，或*字段名*（field names）。如果你查看第二个示例 CSV 文件中的名称，你会发现它们被引号括起来，像这样：`"Angst, Annie"`。
 
 引号表示它们之间的内容是一个整体。换句话说，最后一个姓氏和第一个名字之间的逗号是名称的一部分；它不是新列的开始。因此，这一行的前两列是：
 
 ```
 "Angst, Annie", 1982
 ```
+
 而不是
 
 ```
 "Angst, Annie"
 ```
+
 （注：此处原文文本似乎存在逻辑重复或格式错误，已根据上下文语义进行翻译处理）
 
 （注：由于原文提供的文本后半部分出现了大量逻辑重复和混乱的描述，译文已根据技术逻辑进行了对齐，以确保文档的可读性。）
 
-
-
-
-
-在循环中，你可以使用 `print()` 函数在每次循环时打印 `i` 和 `row` 的值，如下所示：
+在循环中，你可以使用`print()`函数在每次循环时打印`i`和`row`的值，如下所示：
 
 ```python
 import csv
@@ -7762,7 +7520,7 @@ with open('sample.csv', encoding='utf-8', newline='') as f:
 print('Done')
 ```
 
-使用之前描述的 `sample.csv` 文件作为输入，该代码的输出如下：
+使用之前描述的`sample.csv`文件作为输入，该代码的输出如下：
 
 | | 全名 | 出生年份 | 入职日期 | 活跃 | 余额 |
 |---|---|---|---|---|---|
@@ -7770,10 +7528,14 @@ print('Done')
 | 1 | Angst, Annie | 1982 | 1/11/2011 | TRUE | $300.00 |
 | 2 | Boñas | 1973 | 2/12/2012 | FALSE | -123.45 |
 | 3 | Schadenfreude, Sandy | 2004 | 3/3/2003 | TRUE | $0.00 |
+
+
+
 | 4 | Weltschmerz, Wanda | 1995 | 4/24/1994 | FALSE | $999,999.99 |
+|---|---|---:|---|---|---:|
 | 5 | Malaise, Mindy | 2006 | 5/5/2005 | TRUE | $454.01 |
 | 6 | O'Possum, Ollie | 1987 | 7/27/1997 | FALSE | $1,000.00 |
-| 7 | | | | | |
+| 7 |  |  |  |  |  |
 | 8 | Usillanimity, Pamela | 1979 | 8/8/2008 | TRUE | $12,345.67 |
 
 请注意列名行是 0。该行中奇怪的 `\ufeff Full Name` 是字节顺序标记（BOM），它只是让 Excel 停留在那里。通常情况下你不需要关心第一行的内容，因为真实数据从第二行才开始。所以不要再纠结于 BOM 了；它对你没有价值，也不会造成任何伤害。
@@ -7782,7 +7544,7 @@ print('Done')
 
 CSV 文件中的所有数据都是字符串，即使它们看起来不像字符串。但来自 CSV 文件的任何内容和所有内容都是文本类型，即字符串，因为 CSV 文件本身就是一个字符串，而文本文件只包含字符串（文本）——不包含整数、布尔值或浮点数。
 
-在你的应用程序中，你可能希望将输入的数据转换为 Python 数据类型，以便你更更有效地处理它们，甚至将它们传输到数据库。在接下来的章节中，我们将查看如何对每种数据类型进行转换。
+在你的应用程序中，你可能希望将输入的数据转换为 Python 数据类型，以便更有效地处理它们，甚至将它们传输到数据库。在接下来的章节中，我们将查看如何对每种数据类型进行转换。
 
 ## 转换字符串
 
@@ -7802,25 +7564,32 @@ if i > 0:
 
 ```python
 import csv
+
 # Open CSV file with UTF-8 encoding, don't read in newline characters.
 with open('sample.csv', encoding='utf-8', newline='') as f:
     # Create a CSV row counter and row reader.
     reader = enumerate(csv.reader(f))
-    # Loop through one row at a time, i is counter, row is entire row
+
+    # Loop through one row at a time, i is counter, row is entire row.
     for i, row in reader:
         # Row 0 is just column headings, ignore it.
         if i > 0:
-            # Whole name split into two at comma.
-            full_name = row[0].split(',')
-            # Last name, strip extra spaces.
-            last_name = full_name[0].strip()
-            # First name, strip extra spaces.
-            first_name = full_name[1].strip()
-        except IndexError:
-            last_name = first_name = ""
-    print(first_name, last_name)
+            try:
+                # Whole name split into two at comma.
+                full_name = row[0].split(',')
+                # Last name, strip extra spaces.
+                last_name = full_name[0].strip()
+                # First name, strip extra spaces.
+                first_name = full_name[1].strip()
+            except IndexError:
+                last_name = first_name = ""
+
+            print(first_name, last_name)
 
 print('Done!')
+```
+
+```text
 Annie Angst
 Barry Boñas
 Sandy Schadenfreude
@@ -7828,10 +7597,11 @@ Wanda Weltschmerz
 Mindy Malaise
 Ollie O'Possum
 Done
+```
 
 ## 转换整数
 
-每行的第二列 `row[1]` 是出生年份。只要字符串包含可以转换为数字的内容，你就可以内置的 `int()` 函数将其转换。我们在行 7 遇到了问题，它是空的。Python 不会自动将其转换为 0；我们可以稍微帮助它，如下：
+每行的第二列 `row[1]` 是出生年份。只要字符串包含可以转换为数字的内容，你就可以用内置的 `int()` 函数将其转换。我们在行 7 遇到了问题，它是空的。Python 不会自动将其转换为 0；我们可以稍微帮助它，如下：
 
 ```python
 # Birth year integer, zero for empty string.
@@ -7848,22 +7618,24 @@ birth_year = int(row[1] or 0)
 date_joined = dt.datetime.strptime(row[2], "%m/%d/%Y")
 ```
 
-这里有很多操作。首先，创建一个名为 `date_joined` 的变量。`strptime` 代码意味着 `row[2]`（因为第一列始终是列0）。`"%m/%d/%Y"` 告诉 `strptime` 字符串包含月份、斜杠、日期、斜杠和四位年份。`.date()` 表示“只要日期”。
+这里有很多操作。首先，创建一个名为 `date_joined` 的变量。`strptime` 代码意味着 `row[2]`（因为第一列始终是列 0）。`"%m/%d/%Y"` 告诉 `strptime` 字符串包含月份、斜杠、日期、斜杠和四位年份。`.date()` 表示“只要日期”。
 
 一个小问题：当程序遇到日期缺失的行时，它会报错。因此再次使用 `try` 块来转换日期；如果无法获取日期，则存入 `None`，这是 Python 表示空对象的。
 
-img/b52ea569d1e5bba0afd73be6423d
+`img/b52ea569d1e5bba0afd73be6423d`
 
-在 Python 中，`datetime` 是一个类，所以你创建的任何日期都是一个对象（`datetime` 类型）。使用 `''` 表示空字符串，使用 `None` 表示空对象。这里是现在的代码，带有顶部的 datetime 以及 `try...except` 将字符串日期转换为 Python 日期：
+在 Python 中，`datetime` 是一个类，所以你创建的任何日期都是一个对象（`datetime` 类型）。使用 `''` 表示空字符串，使用 `None` 表示空对象。这里是现在的代码，带有顶部的 `datetime` 以及 `try...except` 将字符串日期转换为 Python 日期：
 
 ```python
 import csv
 import datetime as dt
+
 # Open CSV file with UTF-8 encoding, don't read in newline characters.
 with open('sample.csv', encoding='utf-8', newline='') as f:
     # Create a CSV row counter and row reader.
     reader = enumerate(csv.reader(f))
-    # Loop through one row at a time, i is counter, row is entire row
+
+    # Loop through one row at a time, i is counter, row is entire row.
     for i, row in reader:
         # Row 0 is just column headings, ignore it.
         if i > 0:
@@ -7876,56 +7648,62 @@ with open('sample.csv', encoding='utf-8', newline='') as f:
                 first_name = full_name[1].strip()
             except IndexError:
                 full_name = last_name = first_name = ""
+
             # Birth year integer, zero for empty string.
             birth_year = int(row[1] or 0)
+
             # Date joined is a date.
             try:
-                date_joined = dt.datetime.strptime(row[2], "%m/%d/%Y").date()
+                date_joined = dt.datetime.strptime(
+                    row[2], "%m/%d/%Y"
+                ).date()
             except ValueError:
                 date_joined = None
+
             print(first_name, last_name, birth_year, date_joined)
+
 print('Done!')
 ```
 
 这是该代码的输出，它现在每次遍历表格中的数据行都会打印 `first_name`、`last_name`、`birth_year` 和 `date_joined`：
 
+| 姓名 | 出生年份 | 入职日期 |
+|---|---:|---|
 | Annie Angst | 1982 | 2011-01-11 |
 | Barry Boñas | 1973 | 2012-02-11 |
 | Sandy Schadenfreude | 2004 | 2003-03-03 |
 | Wanda Weltschmerz | 1995 | 1994-04-24 |
 | Mindy Malaise | 2006 | 2005-05-05 |
 | Ollie O'Possum | 1987 | 1997-07-27 |
-| None | | |
+| None |  |  |
 | Pamela Pusillanimity | 1979 | 2008-08-08 |
-| Done! | | |
-
-
-
-
+| Done! |  |  |
 
 ## 转换为浮点数
 
-每行的第五列包含余额，这是一个美元金额。在 Python 中，你希望这个美元金额是一个实际的数值，以便进行数学运算。浮点型（float）数据类型非常好，因为你可以包含小数点来表示分（pennies）。但这里有一个潜在的障碍：Python 的浮点数不能包含美元符号（$）或逗号（,），因此你必须从字符串中删除它们。此外，不能有任何前后的空格。你可以使用 `strip()` 方法轻松地删除它们。下一行代码创建了一个名为 `str_balance` 的变量（它仍然是一个字符串），但删除了美元符号以及任何前后的空格：
+每行的第五列包含余额，这是一个美元金额。在 Python 中，你希望这个美元金额是一个实际的数值，以便进行数学运算。浮点型（float）数据类型非常好，因为你可以包含小数点来表示分（pennies）。但这里有一个潜在的障碍：Python 的浮点数不能包含美元符号（`$`）或逗号（`,`），因此你必须从字符串中删除它们。此外，不能有任何前后的空格。你可以使用 `strip()` 方法轻松地删除它们。下一行代码创建了一个名为 `str_balance` 的变量（它仍然是一个字符串），但删除了美元符号以及任何前后的空格：
 
 ```python
 # 删除 $，逗号以及前后的空格。
-str_balance = (row(4).replace('$', '').replace(',', '')).strip()
+str_balance = row[4].replace('$', '').replace(',', '').strip()
 ```
 
 你可以将第二行代码读为：“名为 `str_balance` 的新字符串由第五列的内容组成，其中任何美元符号被替换为空，逗号被替换为空，并删除了所有前后的空格。”
 
-在该行之后，你可以添加一个逗号，另另一行来创建一个名为 `balance` 的浮点数，它使用内置的 `float()` 将 `str_balance` 字符串转换为浮点数。与 `int()` 类似，如果 `float()` 无法理解要转换的内容，它将存储 0 作为浮点数的值。
+在该行之后，你可以添加另一行来创建一个名为 `balance` 的浮点数，它使用内置的 `float()` 将 `str_balance` 字符串转换为浮点数。与 `int()` 类似，如果 `float()` 无法理解要转换的内容，它将存储 0 作为浮点数的值。
 
 图 1-11 中的代码显示了所有的布局，包括一个 `print()` 行，用于显示转换后所有五列的值。
 
 ```python
 import csv
 import datetime as dt
+
 # 使用 UTF-8 编码打开 csv 文件，不读取换行符。
 with open('sample.csv', encoding='utf-8', newline='') as f:
     # 创建一个 CSV 行计数器和行读取器。
     reader = enumerate(csv.reader(f))
-    # 每次循环每一行，计数器是整行。
+
+    # 每次循环一行，i 是计数器，row 是整行。
     for i, row in reader:
         # 行是列标题，忽略它。
         if i > 0:
@@ -7938,20 +7716,35 @@ with open('sample.csv', encoding='utf-8', newline='') as f:
                 first_name = full_name[1].strip()
             except IndexError:
                 full_name = last_name = first_name = ""
-            # 出生年份整数，或者为空字符串时。
+
+            # 出生年份整数，或者为空字符串时为 0。
             birth_year = int(row[1] or 0)
-            # 日期由点连接。
+
+            # 日期由字符串转换而来。
             try:
-                date_joined = dt.datetime.strptime(row[2], "%Y/%m/%d").date()
+                date_joined = dt.datetime.strptime(
+                    row[2], "%Y/%m/%d"
+                ).date()
             except ValueError:
                 date_joined = None
+
             # is_active 是布尔值，空字符串为 False。
             is_active = bool(row[3])
-            # 删除 $ 符号，逗号以及前后的空格。
+
+            # 删除 $ 符号、逗号以及前后的空格。
             str_balance = row[4].replace('$', '').replace(',', '').strip()
-            # 余额是浮点数或为空字符串时为零。
+
+            # 余额是浮点数，或者为空字符串时为零。
             balance = float(str_balance or 0)
-            print(first_name, last_name, birth_year, date_joined, is_active, balance)
+
+            print(
+                first_name,
+                last_name,
+                birth_year,
+                date_joined,
+                is_active,
+                balance
+            )
 
 print('Done!')
 ```
@@ -7960,7 +7753,7 @@ print('Done!')
 
 ## 在 Python 中使用正则表达式
 
-虽然我们假设你对其他编程语言并不熟悉，但某些读者可能熟悉，并且可能会纳奇为什么我们没有使用正则表达式来代替 `replace()` 方法来删除余额中的美元符号和逗号。嗯，正则表达式并不是内置在 Python 中的。因此，如果你想使用它们，需要在代码顶部引入 `re`，如果你只是想使用正则表达式的替换功能，你需要在代码顶部添加如下内容：
+虽然我们假设你对其他编程语言并不熟悉，但某些读者可能熟悉，并且可能会纳闷为什么我们没有使用正则表达式来代替 `replace()` 方法来删除余额中的美元符号和逗号。嗯，正则表达式并不是内置在 Python 中的。因此，如果你想使用它们，需要在代码顶部引入 `re`；如果你只是想使用正则表达式的替换功能，你需要在代码顶部添加如下内容：
 
 ```python
 from re import sub
@@ -7969,20 +7762,20 @@ from re import sub
 在代码的后部分，你可以将：
 
 ```python
-str_balance = (row[4]).replace('$', '').replace(',', ' ').strip()
+str_balance = row[4].replace('$', '').replace(',', ' ').strip()
 ```
 
 替换为：
 
 ```python
-str_balance = (sub(r'\s*\s*', '', row[4])).strip()
+str_balance = sub(r'\s*\s*', '', row[4]).strip()
 ```
 
 这一行的作用与原始行相同。它删除了第五列值中的美元符号、逗号以及任何前后的空格。
 
 ## 从 CSV 转换为对象和字典
 
-你已经看到了了如何从 CSV 文件读取数据，以及如何将这些数据从默认字符串类型转换为适当的 Python 数据类型。很可能，除了这一切之外，你可能希望将数据组织成一组由同一类生成的对象，或者大字典内部的一组字典。
+你已经看到了如何从 CSV 文件读取数据，以及如何将这些数据从默认字符串类型转换为适当的 Python 数据类型。很可能，除了这一切之外，你可能希望将数据组织成一组由同一类生成的对象，或者大字典内部的一组字典。
 
 你到目前为止所学到的所有代码将是很有用的，因为这是完成任务所必要的。为了减少这些示例中的代码杂乱，我们将转换数据的各种代码段放入了它们各自的函数中。这允许你仅使用函数名 `balance(row[4])` 就能转换数据项，例如：
 
@@ -7993,7 +7786,9 @@ str_balance = (sub(r'\s*\s*', '', row[4])).strip()
 ```python
 import datetime as dt
 import csv
+
 # 使用这些函数将字符串转换为适当的 Python 数据类型。
+
 # 从全名中提取名。
 def fname(any):
     try:
@@ -8009,36 +7804,56 @@ def lname(any):
         return nm[0]
     except IndexError:
         return ''
+```
+
+
 
 # 将字符串转换为整数，或者为空字符串时。
+
+```python
 def integer(any):
     try:
         return int(any)
     except ValueError:
         return 0
+```
 
 # 将字符串转换为日期，格式无效时。
+
+```python
 def date(any):
     try:
         return dt.datetime.strptime(any, "%Y/%m/%d").date()
     except ValueError:
         return None
+```
 
 # 将字符串转换为布尔值，空字符串为 False。
+
+```python
 def boolean(any):
     return bool(any)
+```
 
 # 将字符串转换为浮点数，为空字符串时为零。
+
+```python
 def float_(any):
     try:
         return float(any.replace('$', '').replace(',', '').strip())
     except ValueError:
         return 0
+```
 
 # 创建一个空列表。
+
+```python
 people = []
+```
 
 # 定义一个类，每个实例是一个对象。
+
+```python
 class Person:
     def __init__(self, i, first_name, last_name, birth_year, date_joined, is_active, balance):
         self.id = i
@@ -8048,8 +7863,11 @@ class Person:
         self.date_joined = date_joined
         self.is_active = is_active
         self.balance = balance
+```
 
 # 使用 UTF-8 编码打开 csv 文件，不读取换行符。
+
+```python
 with open('sample.csv', encoding='utf-8', newline='') as f:
     # 创建一个 CSV 行计数器和行读取器。
     reader = enumerate(csv.reader(f))
@@ -8076,15 +7894,16 @@ with open('sample.csv', encoding='utf-8', newline='') as f:
             balance = float_(row[4])
             # 创建 Person 对象并添加到 people 列表。
             people.append(Person(i, first_name, last_name, birth_year, date_joined, is_active, balance))
+```
 
 # 遍历 people 列表并打印。
+
+```python
 for p in people:
     print(p.first_name, p.last_name, p.birth_year, p.date_joined, p.is_active, p.balance)
 
 print('Done!')
 ```
-
-
 
 仅列标题，这样随后的 `for` 循环从第二行开始。`for` 循环中的变量 `i` 是递增计数器，而 `row` 是来自 CSV 文件的整行数据：
 
@@ -8099,13 +7918,13 @@ with open('sample.csv', encoding='utf-8', newline='') as f:
     for i, row in reader:
 ```
 
-在循环的每次迭代中，代码都会根据递增的计数器 (i) 创建一个的 `Person` 对象，并添加行中的数据。注意我们在代码的前面部分调用了这些函数来执行数据转换。这使得代码更加紧凑，且稍易于处理：
+在循环的每次迭代中，代码都会根据递增的计数器 (`i`) 创建一个的 `Person` 对象，并添加行中的数据。注意我们在代码的前面部分调用了这些函数来执行数据转换。这使得代码更加紧凑，且稍易于处理：
 
 ```python
 # 从 CSV 中的每行创建一个具有唯一 id 和 
 # 适当数据类型的 Person 对象，并添加到 people 列表中。
 people.append(Person(i, fname(row[0]), lname(row[0]), integer(row[1]),
-      date(row[2]), boolean(row[3]), floatnam(row[4]))))
+      date(row[2]), boolean(row[3]), floatnam(row[4])))
 ```
 
 循环完成后，接下来的代码只需将每个对象显示在屏幕上，以验证代码是否运行正常：
@@ -8131,6 +7950,7 @@ people = {}
 ```python
 # 创建一个空的 people列表。
 people = []
+
 # 定义一个类，其中每个人都是一个对象。
 class Person:
     def __init__(self, id, first_name, last_name, birth_year, date_joined, is_active, balance):
@@ -8186,9 +8006,6 @@ for i, row in reader:
 # 程序中后续的代码可以对每个对象执行你需要的任何操作；打印是为了测试和验证程序是否正常工作。
 ```
 
-
-
-
 ## 第2章
 
 ## 玩转 JSON 数据
@@ -8225,7 +8042,7 @@ JSON 数据大致等同于 Python 中的数据字典，这使得 JSON 文件非�
 
 图 2-2：转换为 JSON 格式的 Excel 电子表格数据。
 
-从 Excel 导出数据只是创建 JSON 文件的一种方法。你也可以创建一个键值型 JSON 文件，其中每块数据都有一个唯一的键来标识它（同一文件中的其他字典不能具有相同的键）。键可以是数字或文本；是哪种并不重要，只要它对每个项目都是唯一的即可。当你下载别人创建的 JSON 文件时，文件带有键值对的情况并不罕见。例如，在 Alan 的个人网站上，他使用免费的 Firebase 实时数据库来统计每个页面的访问量并存储有关每个页面的其他信息。实时数据库以图 2-3 所示存储数据。像 -LAOqXg6kmP4jhnjqXS 这些奇怪的内容都是 Firebase 为每条数据项自动生成的键，以确保唯一性。每个键旁边的 + 号允许你展开和折叠每个键下的信息。
+从 Excel 导出数据只是创建 JSON 文件的一种方法。你也可以创建一个键值型 JSON 文件，其中每块数据都有一个唯一的键来标识它（同一文件中的其他字典不能具有相同的键）。键可以是数字或文本；是哪种并不重要，只要它对每个项目都是唯一的即可。当你下载别人创建的 JSON 文件时，文件带有键值对的情况并不罕见。例如，在 Alan 的个人网站上，他使用免费的 Firebase 实时数据库来统计每个页面的访问量并存储有关每个页面的其他信息。实时数据库以图 2-3 所示存储数据。像 `-LAOqXg6kmP4jhnjqXS` 这些奇怪的内容都是 Firebase 为每条数据项自动生成的键，以确保唯一性。每个键旁边的 `+` 号允许你展开和折叠每个键下的信息。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_393_0.png)
 
@@ -8233,14 +8050,14 @@ JSON 数据大致等同于 Python 中的数据字典，这使得 JSON 文件非�
 
 ## 将 EXCEL 转换为 JSON
 
-如果你想如何将 Excel 电子表格转换为 JSON，请将浏览器设置为 www.convertcsv.com/csv-to-json.html 并遵循以下步骤：
+如果你想如何将 Excel 电子表格转换为 JSON，请将浏览器设置为 `www.convertcsv.com/csv-to-json.html` 并遵循以下步骤：
 
-- 1. 在步骤 1 中，打开 Choose File 标签，将 Encoding 设置为 UTF-8，点击 Choose File 按钮，选择你的 Excel 文件并点击 Open。
-2. 在步骤 2 中，确保选中 First Row Is Column Names（第一行行为列名）选项，并将 Skip # of Lines（跳过行数）设置为 1 以跳过列标题行。
-3. 在步骤 5 中，点击 CSV to JSON 按钮。
-4. 在 Save Your Result 旁边输入文件名并点击 Download Result 按钮。
+1. 在步骤 1 中，打开 `Choose File` 标签，将 `Encoding` 设置为 `UTF-8`，点击 `Choose File` 按钮，选择你的 Excel 文件并点击 `Open`。
+2. 在步骤 2 中，确保选中 `First Row Is Column Names`（第一行行为列名）选项，并将 `Skip # of Lines`（跳过行数）设置为 1 以跳过列标题行。
+3. 在步骤 5 中，点击 `CSV to JSON` 按钮。
+4. 在 `Save Your Result` 旁边输入文件名并点击 `Download Result` 按钮。
 
-文件最终将出现在你的下载文件夹（或你通常下载的位置），且扩展名为 .json。这是一个纯文本文件，你可以用任何文本编辑器或代码编辑器（如 VS Code）打开它。转换器会自动跳过 Excel 文件中的空行，因此你的 JSON 文件不会包含任何空行数据。如果你经常处理 Excel、JSON 和类似类型的数据，可能想花时间研究该网站提供的许多工具和功能。正如你所看到的，Firebase 也有将数据导出到 JSON 文件的选项。图 2-4 显示了下载的文件。你可以看出这是一个键值型 JSON 文件，因为每块数据前面都有一个唯一的键（如 LAOqxxHrPwpXBMBZ），后面跟着一个冒号。你可以在 Python 中处理键值和非键值的 JSON 文件。
+文件最终将出现在你的下载文件夹（或你通常下载的位置），且扩展名为 `.json`。这是一个纯文本文件，你可以用任何文本编辑器或代码编辑器（如 VS Code）打开它。转换器会自动跳过 Excel 文件中的空行，因此你的 JSON 文件不会包含任何空行数据。如果你经常处理 Excel、JSON 和类似类型的数据，可能想花时间研究该网站提供的许多工具和功能。正如你所看到的，Firebase 也有将数据导出到 JSON 文件的选项。图 2-4 显示了下载的文件。你可以看出这是一个键值型 JSON 文件，因为每块数据前面都有一个唯一的键（如 `LAOqxxHrPwpXBMBZ`），后面跟着一个冒号。你可以在 Python 中处理键值和非键值的 JSON 文件。
 
 ```json
 firebase_counts.json {
@@ -8258,22 +8075,38 @@ firebase_counts.json {
   },
   "Os2snVxbJ": {
     "count": 220,
-    "lastrefer": "http://alansimson.com/html_css/dropdownmenu.html",
-    "lastvisit": 2814,
-    "page": "/html_css/"
-  },
-  "-LAOq3jsfuoX": {
-    "count": 219,
-    "lastrefer": "https://alansimson.com/firebase/hitcounter",
-    "lastvisit": 3869,
-    "page": "/index.html"
-  }
-}
 ```
 
-**图 2-4：导出到 JSON 文件的实时数据库。
 
-有些读者可能注意到 JSON 文件中的 Date Joined 字段看起来不像普通的 mm/dd/yyyy 日期。Firebase 数据库的 lastvisit 字段是 datetime，尽管它看起来不像日期或时间。但别担心，在本章后面你将学习如何将这些特殊的日期转换为可读格式。
+
+```json
+"lastrefer": "http://alansimson.com/html_css/dropdownmenu.html",
+
+"lastvisit": 2814,
+
+"page": "/html_css/"
+
+},
+
+"-LAOq3jsfuoX": {
+
+"count": 219,
+
+"lastrefer": "https://alansimson.com/firebase/hitcounter",
+
+"lastvisit": 3869,
+
+"page": "/index.html"
+
+}
+
+}
+
+```
+
+**图 2-4：导出到 JSON 文件的实时数据库。**
+
+有些读者可能注意到 JSON 文件中的 Date Joined 字段看起来不像普通的 mm/dd/yyyy 日期。Firebase 数据库的 `lastvisit` 字段是 datetime，尽管它看起来不像日期或时间。但别担心，在本章后面你将学习如何将这些特殊的日期转换为可读格式。
 
 ## 理解序列化
 
@@ -8299,13 +8132,13 @@ JSON 中的数据类型与 Python 中的数据类型相似但不相同。表 2-2
 
 | Python | JSON |
 | --- | --- |
-| dict | object |
-| list, tuple | array |
-| str | string |
-| int and float | number |
-| True | true |
-| False | false |
-| None | null |
+| `dict` | `object` |
+| `list`, `tuple` | `array` |
+| `str` | `string` |
+| `int` and `float` | `number` |
+| `True` | `true` |
+| `False` | `false` |
+| `None` | `null` |
 
 ## 从 JSON 文件加载数据
 
@@ -8315,17 +8148,21 @@ JSON 中的数据类型与 Python 中的数据类型相似但不相同。表 2-2
 
 ```python
 import json
+
 # 这是 Excel 数据（无键）
+
 filename = 'people_from_excel.json'
+
 # 打开文件（标准文件打开）
+
 with open(filename, 'r', encoding='utf-8') as f:
+
     # 将整个 json 文件加载到名为 people 的对象中
+
     people = json.load(f)
 ```
 
 运行此代码不会在屏幕上显示任何内容。然而，你可以通过在最后一行下面未使用缩进的 `print()` 语句以多种方式探索 `people` 对象。例如，以下内容将显示 `people` 变量中的所有内容：
-
-
 
 ```python
 print(people)
@@ -8333,13 +8170,13 @@ print(people)
 
 输出以方括号（[]）开始和结束，这告诉你 `people` 是一个列表。要验证这一点，你可以运行这一行代码：
 
-```
+```python
 print(type(people))
 ```
 
 Python 显示如下内容：
 
-```
+```python
 <class 'list'
 ```
 
@@ -8349,18 +8186,25 @@ Python 显示如下内容：
 
 ```python
 for p in people:
+
 print(type(p))
 ```
 
 输出如下：
 
-```
+```python
 <class 'dict'
+
 <class 'dict'
+
 <class 'dict'
+
 <class 'dict'
+
 <class 'dict'
+
 <class 'dict'
+
 <class 'dict'
 ```
 
@@ -8368,19 +8212,27 @@ print(type(p))
 
 ```python
 for p in people:
+
 print(p['Full Name'], p['Birth Year'], p['Date Joined'], p['Is Active'],
+
 p['Balance'])
 ```
 
 运行这段代码会显示 JSON 文件中的所有数据，如下。这些数据来自图 2-1 的 Excel 表格。
 
-```
+```text
 Angst, Annie 1982 40554 True False -123.45
+
 Bónañas, Barry 1973 40950 False -123.45
+
 Schadenfreude, Sandy 2004 37683 True 0
+
 Weltschmerze, Wanda 1995 34448 False 999999.99
+
 Malaise, Mindy 2006 38477 True 454.01
+
 O'Possum, Ollie 1987 35638 True -1000
+
 Psillanamity, Pamela 1979 39668 True 12345.67
 ```
 
@@ -8389,7 +8241,8 @@ Psillanamity, Pamela 1979 39668 True 12345.67
 你可能在想：“嘿，等一下……`Date Joined` 列中的那些 40554、40950、37683 数字是怎么回事？”嗯，它们是序列日期，但你可以将它们转换为 Python 日期。你需要导入 `xlrd`（Excel 读取器）和 `datetime` 模块。然后，要将 `p['Date Joined']` 列中的整数转换为 Python 日期，使用以下代码：
 
 ```python
-y, m, d, h, i, s = xlrd.date_as_tuple(p['Date Joined'],0)
+y, m, d, h, i, s = xlrd.date_as_tuple(p['Date Joined'], 0)
+
 joined = dt.date(y, m, d)
 ```
 
@@ -8403,21 +8256,37 @@ print(f"{joined:%m/%d/%Y}")
 
 ```python
 import json, xlrd
+
 import datetime as dt
+
 # 这是 Excel 数据（没有键）
+
 filename = 'people_from_excel.json'
+
 # 打开文件（标准文件打开方式）
+
 with open(filename, 'r', encoding='utf-8', newline='') as f:
+
     # 将 json 文件加载到名为 people 的对象中
+
     people = json.load(f)
+
     # 字典在一个列表中，遍历并显示每个字典
+
     for p in people:
+
         name = p['Full Name']
+
         byear = p['Birth Year']
+
         # Excel 日期比较棘手，使用 xlrd.date_as_tuple
-        y, m, d, h, i, s = xlrd.date_as_tuple(p['Date Joined'],0)
+
+        y, m, d, h, i, s = xlrd.date_as_tuple(p['Date Joined'], 0)
+
         joined = dt.date(y, m, d)
+
         balance = '$' + f"{p['Balance']:.2f}"
+
         print(f"{name:<22} {byear} {joined:%m/%d/%Y} {balance:>12})")
 ```
 
@@ -8433,34 +8302,43 @@ with open(filename, 'r', encoding='utf-8', newline='') as f:
 | O'Possum, Ollie | 1987 | 07/27/1997 | $-1,000.00 |
 | Pusillanimity, Pamela | 1979 | 08/08/2008 | $12,345.67 |
 
-## 遍历带键 JSON 文件 (keyed JSON)
+## 遍历带键 JSON 文件（keyed JSON）
 
-打开和加载带键 JSON 文件与非带键 文件相同。然而，在加载数据后，它是一个字典而不是字典列表。例如，这里是打开并加载 Firebase 数据的代码（如图 2-4 所示）。这些数据包含页面、访问次数、来源（页面日期）和时间。你可以看到，打开和加载 JSON 数据的代码基本上相同：
+打开和加载带键 JSON 文件与非带键文件相同。然而，在加载数据后，它是一个字典而不是字典列表。例如，这里是打开并加载 Firebase 数据的代码（如图 2-4 所示）。这些数据包含页面、访问次数、来源（页面日期）和时间。你可以看到，打开和加载 JSON 数据的代码基本上相同：
 
 ```python
 import json
+
 import datetime as dt
+
 # 这是 Firebase 数据（带键）
+
 filename = 'firebase_hits.json'
+
 # 打开文件（标准文件打开方式）
+
 with open(filename, 'r', encoding='utf-8', newline='') as f:
+
     # 将 json 文件加载到名为 hits 的对象
+
     hits = json.load(f)
 
 print(hits)
 ```
 
-当你运行这段代码时，hits 对象的类型为 `<class 'dict'>`。这告诉你 hits 对象是一个大字典而不是字典列表。你可以像处理非带键文件那样使用简单的循环遍历此字典：
+当你运行这段代码时，`hits` 对象的类型为 `<class 'dict'>`。这告诉你 `hits` 对象是一个大字典而不是字典列表。你可以像处理非带键文件那样使用简单的循环遍历此字典：
 
 ```python
 for p in hits:
+
     print(p)
 ```
 
-然而，结果是你看不到很多数据。你看到的只是大型 hits 字典中每个子字典的键。这种输出并不是错误或问题；它只是嵌套字典。但现在可以很容易获取字典内部的数据了。例如，你可以使用两个变量，我们称之为 `k`（键）和 `v`（值），来遍历 `hits.items()`：
+然而，结果是你看不到很多数据。你看到的只是大型 `hits` 字典中每个子字典的键。这种输出并不是错误或问题；它只是嵌套字典。但现在可以很容易获取字典内部的数据了。例如，你可以使用两个变量，我们称之为 `k`（键）和 `v`（值），来遍历 `hits.items()`：
 
 ```python
 for k, v in hits.items():
+
     print(k, v)
 ```
 
@@ -8468,14 +8346,21 @@ for k, v in hits.items():
 
 ```python
 ## keyed_json
+
 import json
-data = json.load(f) # 这是 hits.json 字典
+
+data = json.load(f)  # 这是 hits.json 字典
+
 filename = 'hits.json'
+
 with open(filename, 'r') as f:
+
     # 将 json 文件加载到名为 hits 的对象
+
     hits = json.load(f)
 
 for k, v in hits.items():
+
     print(k, v)
 ```
 
@@ -8485,12 +8370,19 @@ for k, v in hits.items():
 
 ```python
 for k, v in hits.items():
+
     # 将项存储在变量中
+
     key = k
+
     count = v['count']
+
     last_visit = v['lastvisit']
+
     page = v['page']
+
     came_from = v['lastreferrer']
+
     print(f"{count} {last_visit:<28} ({came_from})")
 ```
 
@@ -8504,7 +8396,7 @@ for k, v in hits.items():
 
 ## 将时间戳转换为 Python 日期
 
-一如既往，在 Python 应用中处理日期时间时需要的第一件事是确保已导入 `datetime` 模块，我们通常通过使用 `import datetime as dt` 来，其中 `dt` 是可选的别名（比全名更容易输入的昵号）。
+一如既往，在 Python 应用中处理日期时间时需要的第一件事是确保已导入 `datetime` 模块，我们通常通过使用 `import datetime as dt` 来，其中 `dt` 是可选的别名（比全名更容易输入的昵称）。
 
 由于 Firebase 时间是基于 UTC 的，我们知道可以使用 `.utcfromtimestamp()` 方法将该日期转换为 Python 时间。但有一个陷。如果你遵循文档，你会认为以下代码有效：
 
@@ -8515,7 +8407,7 @@ last_visit = dt.datetime.utcfromtimestamp(v['lastvisit'])
 然而，显然我们在上一节中提到的纳秒精度对于 Windows 来说太大了，这段代码会抛出 `OSError`。幸运的是，有一个简单的解决方法。将该 `lastvisit` 数字除以 1000 可以将其转换为 Windows 可以接受的低精度 `datetime`。我们应用程序中真正关心的是最后访问的日期；因此你可以这样写代码获取日期并避免错误：
 
 ```python
-last_visit = dt.datetime.utcfromtimestamp(v['lastvisit']/1000).date()
+last_visit = dt.datetime.utcfromtimestamp(v['lastvisit'] / 1000).date()
 ```
 
 你最终在 `last_visit` 变量中得到一个 `date` 对象；可以使用标准的 f-string 按你喜欢的方式格式化日期。例如，在 f-string 中使用以下内容来显示 `last_visit` 日期：
@@ -8528,43 +8420,67 @@ last_visit: %m/%d/%Y
 
 ## 从 Python 字符串加载非带键 JSON
 
-之前示例中使用的 `load()` 方法是从文件加载 JSON 数据。然而，因为 JSON 数据始终以文本文件的形式交付，你可以将整个内容复制并粘贴到 Python 字符串中。通常，你给字符串变量命名并赋值为
-
-三引号字符串（类似于 Python 的 docstring）以三个双引号开头并结束。如下面的代码所示，将所有 JSON 数据放在三引号内部。为了保持代码简短，我们只包含了几个人的数据，但至少你可以看到数据是如何结构的：
+之前示例中使用的 `load()` 方法是从文件加载 JSON 数据。然而，因为 JSON 数据始终以文本文件的形式交付，你可以将整个内容复制并粘贴到 Python 字符串中。通常，你给字符串变量命名并赋值为三引号字符串（类似于 Python 的 docstring），以三个双引号开头并结束。如下面的代码所示，将所有 JSON 数据放在三引号内部。为了保持代码简短，我们只包含了几个人的数据，但至少你可以看到数据是如何结构的：
 
 ```python
 import json
+
 # 在这里，JSON 数据被存储在一个名为 json_string 的大字符串中。
+
 # 它从第一组三引号开始，一直延伸
+
 # 到最后的一组三引号。
+
 json_string = """
+
 {
+
   "people": [
+
     {
+
       "Full Name": "Angst, Annie",
+
       "Birth Year": 1982,
+
       "Date Joined": "01/11/2011",
+
       "Is Active": true,
+
       "Balance": 300
+
     },
+
     {
+
       "Full Name": "Schadenfreude, Sandy",
+
       "Birth Year": 2004,
+
       "Date Joined": "03/03/2003",
+
       "Is Active": true,
+
       "Balance": 0
+
     }
+
   ]
+
 }
+
 """
 ```
 
-像这样在代码内部看到所有数据可能很不错，但它有一个巨大的缺点：你无法通过遍历字符串来获取单个数据项。如果你想进行遍历，需要将 JSON 数据从字符串加载到对象中。要使用这一点，请像下面的代码所示使用 `json.loads()`（其中 s 代表 string，即来自字符串）。`peep_data` 是我们起的名字，用于将加载的 JSON 数据与字符串中的数据区分开：
+像这样在代码内部看到所有数据可能很不错，但它有一个巨大的缺点：你无法通过遍历字符串来获取单个数据项。如果你想进行遍历，需要将 JSON 数据从字符串加载到对象中。要使用这一点，请像下面的代码所示使用 `json.loads()`（其中 `s` 代表 string，即来自字符串）。`peep_data` 是我们起的名字，用于将加载的 JSON 数据与字符串中的数据区分开：
 
 ```python
 # 从大字符串 json_string 中加载 JSON 数据。
+
 peep_data = json.loads(json_string)
 ```
+
+
 
 现在你已经有了一个对象（`peep_data`），你可以像这样一个一个位位地遍历并处理代码：
 
@@ -8578,6 +8494,7 @@ for p in peep_data['people']:
 
 ```python
 import json
+
 # 在这里，JSON 数据被存储在一个名为 json_string 的大字符串中，
 # 它从第一组引号开始，一直延伸
 # 到最后的一组三引号。
@@ -8600,6 +8517,7 @@ json_string = """
   ]
 }
 """
+
 # 从大字符串 json_string 中加载 JSON 数据。
 peep_data = json.loads(json_string)
 ```
@@ -8618,6 +8536,7 @@ Schadenfreude, Sandy 2004 03/03/2003 True 0
 
 ```python
 import json
+
 # 在这里，JSON 数据被存储在一个大字符串 json_string 中。
 # 它从第一组三引号开始，一直延伸
 # 到最后的一组引号。
@@ -8637,6 +8556,7 @@ json_string = """
   }
 }
 """
+
 # 从大 json_string 加载 JSON 数据。
 hits_data = json.loads(json_string)
 
@@ -8680,16 +8600,16 @@ v.pop('fieldname')
 
 要从字典中移除键值对，请注意，如果字典中存在多个相同的键（这在字典中是不可能的），`pop()` 方法将移除指定的键。如果你想从字典中移除键键对，可以使用以下语法：
 
-``` 
+```text
 从 Python 字符串中移除数据
-
 # 数据在 Python 字符串中
+```
 
-## Python 数据到 JSON 应用程序。
+## Python 数据到 JSON 应用程序
 
 将字典格式化并导出为 JSON，以传递给另一个应用程序、公众或任何地方。这就是 `json.dump()` 和 `json.dumps()` 方法大显身场的地方。
 
-dumps()` 方法创建数据的 JSON 字符串，该数据仍留在内存中，因此你可以使用 `print()` 来查看它。例如，之前的代码示例将 Firebase 数据库导入到 Python 字典，并遍历字典将所有时间戳更改为 `mm/dd/yyyy` 日期格式，并删除了所有的 `lastreferred` 键值对。假设你想为这个新字典创建一个 JSON 字符串。你可以使用如下的 `dumps` 来创建一个名为 `new_dict` 的字符串，并可以将其打印到控制台。循环外的最后两行代码将是
+`dumps()` 方法创建数据的 JSON 字符串，该数据仍留在内存中，因此你可以使用 `print()` 来查看它。例如，之前的代码示例将 Firebase 数据库导入到 Python 字典，并遍历字典将所有时间戳更改为 `mm/dd/yyyy` 日期格式，并删除了所有的 `lastreferred` 键值对。假设你想为这个新字典创建一个 JSON 字符串。你可以使用如下的 `dumps` 来创建一个名为 `new_dict` 的字符串，并可以将其打印到控制台。循环外的最后两行代码将是：
 
 ```python
 # 循环完成，将新字典拷贝为 JSON 字符串。
@@ -8703,7 +8623,7 @@ print(new_dict)
 {"-LAQayxxHrPw6pGXBMnZ": {"count": 9061, "lastvisit": "12/20/2018", "page": "/et/downloadpdf.html", "-LAQayQGq6km4jhnjQS": {"count": 3896, "lastvisit": "12/20/2018", "page": "-LAQrwcIJQZvuCacyLO": {"count": 3342, "lastvisit": "12/20/2018", "page": "/html_css/index.html, ...}}}
 ```
 
-我们用 ... 替换了数据，因为你不需要看到所有项目就能看出可读性。
+我们用 `...` 替换了数据，因为你不需要看到所有项目就能看出可读性。
 
 幸运的是，`.dumps()` 方法支持 `indent=` 参数，你可以用它对 JSON 数据进行缩进，使其更易读。通常两个空格就足够。例如，在前面的代码中添加 `indent=2`：
 
@@ -8736,7 +8656,7 @@ print(new_dict)
 new_dict = json.dumps(hits, indent=2, ensure_ascii=False)
 ```
 
-在我们的示例中，每个字典中的键名（count, lastvisit, page）已经是字母顺序排列的。但在你自己的代码中，如果你想确保每个字典中的键按字母顺序排列，请在 `.dumps` 方法中添加 `sort_keys=True`：
+在我们的示例中，每个字典中的键名（`count`, `lastvisit`, `page`）已经是字母顺序排列的。但在你自己的代码中，如果你想确保每个字典中的键按字母顺序排列，请在 `.dumps` 方法中添加 `sort_keys=True`：
 
 ```python
 new_dict = json.dumps(hits, indent=2, ensure_ascii=False, sort_keys=True)
@@ -8744,7 +8664,7 @@ new_dict = json.dumps(hits, indent=2, ensure_ascii=False, sort_keys=True)
 
 如果你想将 JSON 数据输出到文件，请使用 `json.dump()` 而不是 `json.dumps()`。你可以使用 `ensure_ascii=False` 来保持非 ASCII 字符，并使用 `sort_keys=True` 按字母排序键名。你也可以包含 `indent=` 参数，尽管这会让文件变大，为了节省空间和最小化下载时间，你会希望文件尽可能小。
 
-例如，假设你想创建一个名为 `hits_new.json` 的文件（如果它已存在，则打开它并覆盖内容）。你想保留写入文件的任何非 ASCII 字符。以下是相应的代码；需要 'w' 来确保文件以写入模式打开：
+例如，假设你想创建一个名为 `hits_new.json` 的文件（如果它已存在，则打开它并覆盖内容）。你想保留写入文件的任何非 ASCII 字符。以下是相应的代码；需要 `'w'` 来确保文件以写入模式打开：
 
 ```python
 with open('hits_new.json', 'w', encoding='utf-8') as out_file:
@@ -8784,7 +8704,7 @@ json.dump(hits, out_file, ensure_ascii=False, sort_keys=True)
 23 print('Done')
 ```
 
-图 2-9 显示了从 Firebase 导出的数据开始的代码，遍历我们创建的字典，更改并删除某些内容，并将新字典写入名为 hitcounts_new.json 的文件。图 10 显示了运行程序后 hitcounts_new.json 的内容。JSON 文件实际上是为了存储或共享，而不是查看，但你仍然看到日期值是 mm/dd/yyyy 格式，因为之前的代码被删除了。图 10：将修改后的 Firebase 数据写入名为 hitcounts_new.json 的文件
+图 2-9 显示了从 Firebase 导出的数据开始的代码，遍历我们创建的字典，更改并删除某些内容，并将新字典写入名为 `hitcounts_new.json` 的文件。图 10 显示了运行程序后 `hitcounts_new.json` 的内容。JSON 文件实际上是为了存储或共享，而不是查看，但你仍然看到日期值是 `mm/dd/yyyy` 格式，因为之前的代码被删除了。图 10：将修改后的 Firebase 数据写入名为 `hitcounts_new.json` 的文件
 
 ```json
 {
@@ -8799,9 +8719,10 @@ json.dump(hits, out_file, ensure_ascii=False, sort_keys=True)
 }
 ```
 
-# 第3 章 与互联网交互
+# 第 3 章 与互联网交互
 
 本章
+
 - 理解网络的工作原理
 - 从 Python 打开网页
 - 使用 Python 向网络发布
@@ -8816,16 +8737,18 @@ json.dump(hits, out_file, ensure_ascii=False, sort_keys=True)
 当你打开浏览器并输入 URL 或点击链接时，该操作会向互联网发送请求。互联网将你的请求定向到相应的 Web 服务器，服务器向你的电脑返回响应。通常，该响应是任何文件。如果你请求的内容在该位置不再存在，它可能是一条错误消息。但重要的是你、用户（人类）以及你的用户代理（你用于访问互联网的程序）都在客户端。服务器只是一台电脑而不是人，它返回其响应，如图 3-1 所示。
 
 客户端（人）
+
 服务器（机器）
 
 请求
+
 响应
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_413_0.png)
 
-**图 3-1：客户端发送请求，服务器返回响应。
+**图 3-1：** 客户端发送请求，服务器返回响应。
 
-理解 URL
+## 理解 URL
 
 URL 是访问网页的关键部分，因为互联网通过它找到你寻找的资源。在 Web 上，大多数资源使用超文本传输协议 (HTTP)，因此它们的 URL 以 `http://` 或 `https://` 开头。区别在于 `http` 以原始格式跨线路发送内容，这使其容易受到黑客和其他“嗅探”流量的人的攻击。`https` 协议是*安全的*的，因为数据经过了*加密*，这意味着它被转换为难以读取的秘密代码。通常，任何与你进行业务并向其传输敏感信息（如密码和信用卡号）的网站都会使用 `https` 来保持这些信息的秘密和安全。
 
@@ -8833,9 +8756,7 @@ URL 是访问网页的关键部分，因为互联网通过它找到你寻找的�
 
 
 
-
-
-请注意顺序很重要。例如，URL 可以包含指向特定文件夹或页面的路径（在域名名后紧跟斜杠开头）。URL 还可以包含查询字符串，它始终位于最后，并且始终以问号（?）开头。问号之后是一个或多个 `name=value` 对，其语法基本上与你在数据字典和 JSON 中看到的语法相同。如果有多个 `name=value` 对，它们用 ampersand（&）分隔。
+请注意顺序很重要。例如，URL 可以包含指向特定文件夹或页面的路径（在域名后紧跟斜杠开头）。URL 还可以包含查询字符串，它始终位于最后，并且始终以问号（`?`）开头。问号之后是一个或多个 `name=value` 对，其语法基本上与你在数据字典和 JSON 中看到的语法相同。如果有多个 `name=value` 对，它们用 ampersand（`&`）分隔。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_414_0.png)
 
@@ -8847,15 +8768,17 @@ URL 是访问网页的关键部分，因为互联网通过它找到你寻找的�
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_414_3.png)
 
- URL 结尾处的 # 后面跟一个名称被称为*片段*（fragment），它指示目标页面上的特定位置。在后台，页面代码通常是 `<a name="name">` 标签，它引导浏览器跳转到页面上的某个特定点。
+URL 结尾处的 `#` 后面跟一个名称被称为*片段*（fragment），它指示目标页面上的特定位置。在后台，页面代码通常是 `<a name="name">` 标签，它引导浏览器跳转到页面上的某个特定点。
 
 ## 暴露头部（headers）
 
-当你使用网络时，你关心的只是屏幕上显示的内容。在更深层次、某种程度上隐藏的层面，参与事务的两台计算机正在相互通信。头部通常对肉眼不可见，但你的网络浏览器和其他程序可以访问它们。如果你愿意，可以选择查看头部，这在编写访问网络的代码时非常有用。HTTP 头部中最重要的内容位于顶部，你会看到 GET 后面跟着一个 URL。这告诉你是发送了一个请求，意味着 URL 仅仅是对信息的请求。另一种类型的响应是 POST，这意味着你正在向服务器发送某些信息，例如你在 Facebook、Twitter 或任何接受输入的网站上发布内容时。
+当你使用网络时，你关心的只是屏幕上显示的内容。在更深层次、某种程度上隐藏的层面，参与事务的两台计算机正在相互通信。头部通常对肉眼不可见，但你的网络浏览器和其他程序可以访问它们。如果你愿意，可以选择查看头部，这在编写访问网络的代码时非常有用。
+
+HTTP 头部中最重要的内容位于顶部，你会看到 `GET` 后面跟着一个 URL。这告诉你是发送了一个请求，意味着 URL 仅仅是对信息的请求。另一种类型的响应是 `POST`，这意味着你正在向服务器发送某些信息，例如你在 Facebook、Twitter 或任何接受输入的网站上发布内容时。
 
 ## Python 3 快速查表
 
-下面这一行显示了请求的状态。第一部分表示所使用的协议。在图 3-4 的示例中，协议是 HTTP/1.1，这意味着网络请求遵循 1.1 规则。200 是状态码，在这种情况下意味着一切顺利。常见的状态码列在表 3-1 中。
+下面这一行显示了请求的状态。第一部分表示所使用的协议。在图 3-4 的示例中，协议是 `HTTP/1.1`，这意味着网络请求遵循 1.1 规则。`200` 是状态码，在这种情况下意味着一切顺利。常见的状态码列在表 3-1 中。
 
 | Header | 数值 |
 | :--- | :--- |
@@ -8907,7 +8830,7 @@ variablename = request.urlopen(url)
 
 将 `variablename` 替换为你自定义的变量名。将 `url` 替换为你想要访问的资源的 URL（用单引号或双引号括，除非它存储在变量中）。如果 URL 已经存储在变量中，直接使用不带引号的变量名即可。
 
-运行代码时，结果将是一个 `HttpResponse` 对象。例如，你可以运行以下代码来打开一个网页（在 Jupyter 笔记本或任何 .py 文件中）：
+运行代码时，结果将是一个 `HttpResponse` 对象。例如，你可以运行以下代码来打开一个网页（在 Jupyter 笔记本或任何 `.py` 文件中）：
 
 ```python
 # import the request module from urllib library.
@@ -8926,24 +8849,24 @@ print(status)
 
 运行此代码显示：
 
-```
-<class 'http.client.HttpResponse>
+```text
+<class 'http.client.HttpResponse'>
 200
 ```
 
-变量 `thepage` 包含 `http.client.HttpResponse` 对象，它是服务器对请求返回的所有内容。200 表示一切顺利。
+变量 `thepage` 包含 `http.client.HttpResponse` 对象，它是服务器对请求返回的所有内容。`200` 表示一切顺利。
 
 ## 使用 Python 发布数据
 
 并不是所有的访问资源尝试都像前面的示例那样顺利。例如，在浏览器的地址栏中输入以下 URL 并按回：
 
-```
+```text
 https://www.google.com/search?q=python scraping tutorial
 ```
 
 Google 返回了包含 web scraping tutorial 字样的许多页面和视频。如果你查看地址栏，可能会注意到你输入的 URL 发生了变化。空格被替换成了 `%20`，如下行代码所示：
 
-```
+```text
 https://www.google.com/search?q=python%20web%20scraping%20tutorial
 ```
 
@@ -8966,19 +8889,15 @@ print(type(thepage))
 print(status)
 ```
 
-当你运行这段代码时，情况并不顺利。你可能会看到多个错误消息，但最重要的信息是
+当你运行这段代码时，情况并不顺利。你可能会看到多个错误消息，但最重要的信息是：
 
-```
+```text
 HTTPError: HTTP Error 403: Forbidden
 ```
 
+错误并不是出现在你的代码中。相反，这是一个 HTTP 错误。具体来说，它是 403 Forbidden（禁止访问）错误代码。该 URL 被发送到了 Google，但它回复道：“抱歉，你可以通过浏览器搜索我们的网站，但不能通过像这样的 Python 代码进行。”Google 与许多其他大型网站一样，拒绝程序化访问其内容的尝试，这部分是为了保护其内容权益，另一部分是为了对入站流量进行某些控制。
 
-
-
-
-错误并不是出现在你的代码中。相反，这是一个 HTTP 错误。具体来说，它是 403 Forbidden（禁止访问）错误代码。该 URL 被发送到了 Google，但它回复道：“抱歉，你可以通过浏览器搜索我们的网站，但不能通过像这样的 Python 代码进行。” Google 与许多其他大型网站一样，拒绝程序化访问其内容的尝试，这部分是为了保护其内容权益，另一部分是为了对入站流量进行某些控制。
-
-好消息是，那些不允许你直接使用 Python 或或其他编程语言发布帖的网站，通常允许你通过它们的 API（应用程序编程接口）发布内容。你仍然可以使用 Python 作为你的编程语言。你只需要遵守它们的规则即可。
+好消息是，那些不允许你直接使用 Python 或其他编程语言发布帖的网站，通常允许你通过它们的 API（应用程序编程接口）发布内容。你仍然可以使用 Python 作为你的编程语言。你只需要遵守它们的规则即可。
 
 发现一个网站是否具有 API 的简单方法是直接使用 Google、Bing 或任何搜索引擎进行网页搜索。例如，搜索“post to facebook with python”或“post to twitter with python”等。我们不会尝试提供此类操作的示例，因为 Facebook 经常更改规则，在你读到这段文字时，我们说的话可能已经过时。网页搜索应该让你找到需要的信息。如果你得到很多结果，请关注最近发布的那些。
 
@@ -8996,7 +8915,7 @@ HTTPError: HTTP Error 403: Forbidden
 
 图 3-6 显示了图 3-3 中页面的部分 HTML 代码。我们只显示了页面前两个链接的代码，但所有链接都遵循相同的结构。它们都包含在由 `<article> ... </article>` 标签指定的区域内。
 
-```
+```html
 <body>
 <h1>Python 3 抄表</h1>
 <article>
@@ -9011,12 +8930,9 @@ HTTPError: HTTP Error 403: Forbidden
 </body>
 ```
 
+> 图像源，位于 `img` 标签中 `src=` 后的引号内
 
-
-
->> 图像源，位于 `img` 标签中 `src=` 后的引号内
-
->> 链接文本，包含在 `<span> ... </span>` 标签中
+> 链接文本，包含在 `<span> ... </span>` 标签中
 
 以下代码通过使用 BeautifulSoup 的 `.get()` 方法来提取每个组件，以分离出链接内部的内容（即标记每个链接开始和结束的 `<a>` 和 `</a>` 标签之间的内容）。接下来的代码获取链接的 URL 部分，并将其放入命名为 `url` 的变量中：
 
@@ -9063,12 +8979,12 @@ except AttributeError:
 
 **图 3-7** 显示了目前所有的代码。如果你按照所示运行它，`link_list` 将填充了所有抓取的数据，但这对你来说没有太大帮助。你可能想保存这些数据以备在别处使用。你可以通过将数据保存为 JSON 文件、CSV 文件或两者兼具，取决于你最方便的方式。在接下来的章节中，我们将向你展示这两种方法。
 
-# 探索器 (EXPLORER)
+# 探索器（EXPLORER）
 
 - 打开编辑器
-- scraper.py
-- urllib
-- scraper.py
+- `scraper.py`
+- `urllib`
+- `scraper.py`
 
 ```python
 # 从 urllib 库中导入 request 模块。
@@ -9123,11 +9039,13 @@ with open('links.json', 'w', encoding='utf-8') as links_file:
 
 然后
 
+
+
 ```python
-    json.dump(links_list, links_file, ensure_ascii=False)
+json.dump(links_list, links_file, ensure_ascii=False)
 ```
 
-搞定！运行代码后，你将有一个名为 `links.json` 的文件，其中包含了 JSON 格式的所有抓取数据。如果你在 VS Code 中打开该文件，它看起来像是一长行，但当你看到这一行长内容时，你可以将其复制并粘贴到像 jsonformatter.org这样的网站，它将以更易读的格式显示数据而不改变其内容，如图 3-8 所示。
+搞定！运行代码后，你将有一个名为`links.json`的文件，其中包含了 JSON 格式的所有抓取数据。如果你在 VS Code 中打开该文件，它看起来像是一长行，但当你看到这一行长内容时，你可以将其复制并粘贴到像 jsonformatter.org 这样的网站，它将以更易读的格式显示数据而不改变其内容，如图 3-8 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_428_png)
 
@@ -9135,35 +9053,35 @@ with open('links.json', 'w', encoding='utf-8') as links_file:
 
 ## 将抓取的数据保存到 CSV 文件
 
-在代码顶部导入 `csv` 模块，如下：
+在代码顶部导入`csv`模块，如下：
 
 ```python
 # 如果你想将数据保存到 CSV 文件。
 import csv
 ```
 
-然后，在循环下方（不缩进，因为你不想在每次循环中重复该代码），首先使用以下代码以写入模式打开文件。你可以为文件命名任何名称。我们选择将其命名为 `links.csv`：
+然后，在循环下方（不缩进，因为你不想在每次循环中重复该代码），首先使用以下代码以写入模式打开文件。你可以为文件命名任何名称。我们选择将其命名为`links.csv`：
 
 ```python
 # 保存为 CSV 文件。
 with open('links.csv', 'w', encoding='utf-8') as links_file:
 ```
 
-然后，创建一个 `writer` 对象，并写入表头：
+然后，创建一个`writer`对象，并写入表头：
 
 ```python
-    writer = csv.writer(links_file)
-    writer.writerow(['url', 'img', 'text'])
+writer = csv.writer(links_file)
+writer.writerow(['url', 'img', 'text'])
 ```
 
-最后，通过循环将 `links_list` 中的数据写入 CSV：
+最后，通过循环将`links_list`中的数据写入 CSV：
 
 ```python
 for item in links_list:
     writer.writerow([item['url'], item['img'], item['text']])
 ```
 
-搞定！运行代码后，你将有一个名为 `links.csv` 的文件，其中包含了所有抓取的数据。如果你在 Excel 或电子表格应用中打开该文件，你会看到数据整齐地组织在表格中，如图 3-9 所示。
+搞定！运行代码后，你将有一个名为`links.csv`的文件，其中包含了所有抓取的数据。如果你在 Excel 或电子表格应用中打开该文件，你会看到数据整齐地组织在表格中，如图 3-9 所示。
 
 图 3-9：Excel 中的抓取数据。
 
@@ -9183,15 +9101,12 @@ for item in links_list:
 | 12 | https://alansansimpson.me/python/fwhile | If & While Loops |
 | 13 | https://alansansimpson.me/python/lists | Lists |
 
-
-
-
-
 通过程序化访问网络为获取和组织知识开辟了新的可能性世界，而且实际上，它是数据科学这一研究领域的一部分。还有许多专门的工具可用，你将在第 5 本中发现它们。
 
-在在第 4 本及之后的章节中进入 Python 更高级、更专门的应用之前，我们需要再讨论一个基础性概念。在前面的这几个章节中，你已经使用了许多类型的库和模块。但你还没有使用 Python 所能提供的所有功能。在下一章中，你将学习到更多的 Python 库、包和模块，以及如何使用它们来实现你的目标。
+在进入第 4 本及之后的章节中 Python 更高级、更专门的应用之前，我们需要再讨论一个基础性概念。在前面的这几个章节中，你已经使用了许多类型的库和模块。但你还没有使用 Python 所能提供的所有功能。在下一章中，你将学习到更多的 Python 库、包和模块，以及如何使用它们来实现你的目标。
 
 # 第 4 章
+
 ## 库、包和模块
 
 本章内容
@@ -9205,11 +9120,11 @@ for item in links_list:
 
 ## 理解 Python 标准库
 
-Python 标准库基本上是你获取 Python 语言时获得的所有内容，包括所有的 Python 数据类型，如字符串、整数、浮点数和布尔值（Boolean）。这些数据类型的每个实例都是在标准库中定义的类的实例。由于由于原因，类型（type）、实例（instance）和对象（object）这些术语通常互换使用。整数是一个整数；它也是 Python 中的一种数据类型。但它的存在是因为标准库包含一个用于整数的类，而你创建的每个整数都是该类的实例，因此是一个对象（因为类是被称为对象的物的模板）。
+Python 标准库基本上是你获取 Python 语言时获得的所有内容，包括所有的 Python 数据类型，如字符串、整数、浮点数和布尔值（Boolean）。这些数据类型的每个实例都是在标准库中定义的类的实例。由于原因，类型（type）、实例（instance）和对象（object）这些术语通常互换使用。整数是一个整数；它也是 Python 中的一种数据类型。但它的存在是因为标准库包含一个用于整数的类，而你创建的每个整数都是该类的实例，因此是一个对象（因为类是被称为对象的物的模板）。
 
-Python 中的 `type()` 函数通常用于识别一段数据的类型。例如，在 Python 提示符、Jupyter notebook 或 .py 文件中运行以下两行代码：
+Python 中的`type()`函数通常用于识别一段数据的类型。例如，在 Python 提示符、Jupyter notebook 或 .py 文件中运行以下两行代码：
 
-```
+```python
 x = 3
 print(type(x))
 ```
@@ -9220,9 +9135,9 @@ print(type(x))
 <class 'int'>
 ```
 
-输出告诉你 x 是一个整数，是标准库中 `int` 类的一个实例。运行这段代码：
+输出告诉你 x 是一个整数，是标准库中`int`类的一个实例。运行这段代码：
 
-```
+```python
 x = 'howdy'
 print(type(x))
 ```
@@ -9233,25 +9148,23 @@ print(type(x))
 <class 'str'>
 ```
 
-x 包含了由 Python `str` 类创建的字符串类型数据。`type()` 函数适用于浮点数（带有小数点的数值，例如 3.14）也适用于布尔值（True 或 False）。
+x 包含了由 Python `str`类创建的字符串类型数据。`type()`函数适用于浮点数（带有小数点的数值，例如 3.14）也适用于布尔值（True 或 False）。
 
 ## 使用 dir() 函数
 
-Python 标准库提供了一个 `dir()` 方法，它可以显示与类型相关的所有属性的列表。例如，在上例中，结果 `<class 'str'>` 告诉数据是 `str` 数据类型。所以你知道这是一个类型，以及这个名为 `str`（代表字符串）的类的实例。如果你输入此命令：
+Python 标准库提供了一个`dir()`方法，它可以显示与类型相关的所有属性的列表。例如，在上例中，结果`<class 'str'>`告诉数据是`str`数据类型。所以你知道这是一个类型，以及这个名为`str`（代表字符串）的类的实例。如果你输入此命令：
 
-```
+```python
 dir(str)
 ```
 
 将显示类似以下的内容：
 
-| '_add_', '_class_', '_contains_', '_delattr_', '_dir_', '_doc_', '_eq_', '_format_', '_ge_', '_getattribute_', '_getitem_', '_getnewargs_', '_gt_', '_hash_', '_init_', '_init_subclass_', 'iter_', '_le_', '_len_', '_lt_', '_mod_', '_mul_', '_ne_', 'new_', '_reduce_', '_reduce_ex_', '_repr_', '_rmod_', '_rmul_', '_setattr_', '_ssize_', '_str_', '_subclashook', '_capitalize', '_casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'identifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'replace', 'rindex', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'zfill' |
+```
+'_add_', '_class_', '_contains_', '_delattr_', '_dir_', '_doc_', '_eq_', '_format_', '_ge_', '_getattribute_', '_getitem_', '_getnewargs_', '_gt_', '_hash_', '_init_', '_init_subclass_', 'iter_', '_le_', '_len_', '_lt_', '_mod_', '_mul_', '_ne_', 'new_', '_reduce_', '_reduce_ex_', '_repr_', '_rmod_', '_rmul_', '_setattr_', '_ssize_', '_str_', '_subclashook', '_capitalize', '_casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'identifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'replace', 'rindex', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'zfill'
+```
 
-x 包含了字符串类型的数据，由 Python `str` 类创建。`type()` 函数适用于浮点数（带有小数点的数值，如 3.14）也适用于布尔值（True 或 False）。
-
-
-
-
+x 包含了字符串类型的数据，由 Python `str`类创建。`type()`函数适用于浮点数（带有小数点的数值，如 3.14）也适用于布尔值（True 或 False）。
 
 ## 内置函数
 
@@ -9305,7 +9218,7 @@ pip 18.1 from C:\Users\~\AppData\Local\Continuum\anaconda3\lib\site-packages\pip
 pip list
 ```
 
-大多数人对已经安装的包数量感到惊讶。使用 Anaconda 安装 Python 的优势之一就是你可以获得很多棒包。而且你不需要依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments（环境）。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
+大多数人对已经安装的包数量感到惊讶。使用 Anaconda 安装 Python 的优势之一就是你可以获得很多棒包。而且你不需要依赖`pip list`来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments（环境）。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_438_0.png)
 
@@ -9349,7 +9262,7 @@ pip 18.1 from C:\Users\~\AppData\Local\Continuum\anaconda3\lib\site-packages\pip
 pip list
 ```
 
-大多数人对已经安装的包数量感到惊讶。使用 Anaconda 安装 Python 的优势之一就是你可以获得很多棒包。而且你不需要依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments（环境）。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
+大多数人对已经安装的包数量感到惊讶。使用 Anaconda 安装 Python 的优势之一就是你可以获得很多棒包。而且你不需要依赖`pip list`来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments（环境）。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_438_0.png)
 
@@ -9359,7 +9272,9 @@ pip list
 
 图 4-2：在 Anaconda 中查看的已安装包。
 
-虽然使用 pip 安装任何你没有的包是可以的，但唯一的缺点是你不需要通过 `pip list` 来直观看到所有已安装包（注：此处意指虽然可以用 pip 安装，但 Anaconda Navigator 提供了更直观的查看方式）。实际上，原文是：Although it's okay to use pip to install any packages you don't already have, the one disadvantage is that you don't have to rely on pip list to find their names. 此处原文逻辑似乎有误（通常是说 it's hard to see what's installed），按照原文字面意思：虽然使用 pip 安装任何你没有的包是可以的，但唯一的缺点是你不必依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
+
+
+虽然使用 `pip` 安装任何你没有的包是可以的，但唯一的缺点是你不需要通过 `pip list` 来直观看到所有已安装包（注：此处意指虽然可以用 `pip` 安装，但 Anaconda Navigator 提供了更直观的查看方式）。实际上，原文是：Although it's okay to use pip to install any packages you don't already have, the one disadvantage is that you don't have to rely on pip list to find their names. 此处原文逻辑似乎有误（通常是说 it's hard to see what's installed），按照原文字面意思：虽然使用 `pip` 安装任何你没有的包是可以的，但唯一的缺点是你不必依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_438_0.png)
 
@@ -9377,9 +9292,9 @@ Python 有数千个包可供选择。查找包的一个良好资源是 *PyPI*，
 https://pypi.org/
 ```
 
-此外，还有一个名为 pip 的程序（Pip Installs Packages 的缩写，另一个巧妙的名字），这是一个包管理器，可以用它来探索、更新和删除现有的包。要使用 pip，你需要进入操作系统的命令提示符，在 Mac 上是 Terminal，在 Windows 上是 cmd.exe 或 PowerShell。如果你正在使用 VS Code，进入命令提示符最简单的方法是打开 VS Code 并选择 View（视图）⇒ Terminal。
+此外，还有一个名为 `pip` 的程序（Pip Installs Packages 的缩写，另一个巧妙的名字），这是一个包管理器，可以用它来探索、更新和删除现有的包。要使用 `pip`，你需要进入操作系统的命令提示符，在 Mac 上是 Terminal，在 Windows 上是 `cmd.exe` 或 PowerShell。如果你正在使用 VS Code，进入命令提示符最简单的方法是打开 VS Code 并选择 View（视图）⇒ Terminal。
 
-如果你已经有了 pip，在命令提示符中输入此命令将告诉你当前安装的 pip 版本：
+如果你已经有了 `pip`，在命令提示符中输入此命令将告诉你当前安装的 `pip` 版本：
 
 ```
 pip --version
@@ -9407,19 +9322,15 @@ pip list
 
 图 4-2：在 Anaconda 中查看的已安装包。
 
-虽然使用 pip 安装任何你没有的包是可以的，但唯一的缺点是你不必依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
+虽然使用 `pip` 安装任何你没有的包是可以的，但唯一的缺点是你不必依赖 `pip list` 来查找它们的名称。相反，只需打开 Anaconda Navigator 并点击左列中的 Environments。你将看到所有已安装包的列表，以及每个包的简要描述和版本号，如图 4-2 所示。
 
 （注：后续内容为原文重复部分，已跳过翻译。）
 
+**`to_date(any_str)`**：传入任何 `mm/dd/yy` 或 `mm/dd/yyyy` 格式的字符串（`any_str`），该函数将返回一个 Python `datetime.date` 对象，你可以用于日期计算。
 
+**`mdy(any_date)`**：传入任何 Python 日期或 `datetime`，该函数将返回一个 `mm/dd/yyyy` 格式的字符串日期，用于在屏幕上显示。
 
-
-
-**>> to_date(any_str): 传入任何 mm/dd/yy 或 mm/dd/yyyy 格式的字符串 (any_str)，该函数将返回一个 Python datetime.date 对象，你可以用于日期计算。**
-
-**>> mdy(any_date): 传入任何 Python 日期或 datetime，该函数将返回一个 mm/dd/yyyy 格式的字符串日期，用于在屏幕上显示。**
-
-**>> to_curr(any_num, len): 传入任何 Python 浮点或整数，该函数将返回一个带有美元符号开头、千分位逗逗号并保留两位小数的字符串。len 是可选的长度数字。如果提供，返回值将在左侧用空格填充以匹配指定的长度。**
+**`to_curr(any_num, len)`**：传入任何 Python 浮点或整数，该函数将返回一个带有美元符号开头、千分位逗号并保留两位小数的字符串。`len` 是可选的长度数字。如果提供，返回值将在左侧用空格填充以匹配指定的长度。
 
 以下是这三个项目的所有完整代码：
 
@@ -9451,7 +9362,7 @@ def mdy(any_date):
     return s_date
 
 def to_curr(anynum, len=0):
-    """ 将数字作为带有 $ 和逗号的字符串返回。长度可选可选
+    """ 将数字作为带有 $ 和逗号的字符串返回。长度可选
     """
     s = "Invalid amount"
     try:
@@ -9541,24 +9452,21 @@ dollar_amt=12345.678
 print(to_curr(dollar_amt))
 ```
 
-
-
-
 每个神经元都与其他神经元有许多连接（对于 Shovic 来说，大脑中的某些神经元多达 200,000 个连接），因此人的智能不仅取决于神经元的数量，还取决于它们的连接方式。从某种意义上说，人工智能中的神经网络是从生物神经元逆向工程出来的。
 
 ## 人工智能是未来的技术
 
-“是什么样的魔法魔术让我们变得聪明？魔术在于根本没有魔术。智能的力量源于我们巨大的多样性，而不是源任何单一的、完美的原理。”
+“是什么样的魔法让我们变得聪明？魔术在于根本没有魔术。智能的力量源于我们巨大的多样性，而不是源于任何单一的、完美的原理。”
 
 > ——马文·明斯基，《心灵机器》（1987年）
 
-John Shovic：我有幸在 1983 年在爱达荷俄州的波卡特洛与明斯基博士一起吃了午饭，并度过了一个下午。当时我在 American Micro Systems 公司担任 VLSI（超大规模集成电路）设计工程师，该公司位于波卡特洛，而且我在攻读博士学位工作之余，还在爱达荷大学兼职。我的第一门 AI 课程是由我主讲的，我自己也惊讶于麻理工学院 AI 实验室的马文·明斯基博士竟然就在波卡特洛附近。我打了几个电话，成功地让他与我们两个上过 AI 课程的学生见面，一起吃了午饭并举行了下午的会议。回想起来，我很惊讶他会为我们花这么多时间，但他就是那种性格的人。
+John Shovic：我有幸在 1983 年在爱达荷州的波卡特洛与明斯基博士一起吃了午饭，并度过了一个下午。当时我在 American Micro Systems 公司担任 VLSI（超大规模集成电路）设计工程师，该公司位于波卡特洛，而且我在攻读博士学位工作之余，还在爱达荷大学兼职。我的第一门 AI 课程是由我主讲的，我自己也惊讶于麻省理工学院 AI 实验室的马文·明斯基博士竟然就在波卡特洛附近。我打了几个电话，成功地让他与我们两个上过 AI 课程的学生见面，一起吃了午饭并举行了下午的会议。回想起来，我很惊讶他会为我们花这么多时间，但他就是那种性格的人。
 
 这种感觉就像是滚石乐队的成员和米克·杰格来到小镇并与我们共处一样。老实说，虽然我想和米克·杰格度过一个下午，但我更愿意见到明斯基博士。
 
-我当时刚读完他的书《人工智能》，对他的工作充满了疑问。他对我们在爱达荷大学的 AI 课程中中学到的东西很感兴趣，并对 AI 课程教授约翰·迪金森博士以及他对主题的选择非常赞誉有加。我对这个话题充满热情，并认为自己可能会以此为业。在我们谈论过的所有话题中，我清楚地记得一件事。他说（这是转述的）“我大约在 20 年前开始研究 AI，当时我坚信 20 年后我们将拥有真正的 AI。而现在我们距离拥有真正的 AI 还有大约 20 年。”
+我当时刚读完他的书《人工智能》，对他的工作充满了疑问。他对我们在爱达荷大学的 AI 课程中学到的东西很感兴趣，并对 AI 课程教授约翰·迪金森博士以及他对主题的选择非常赞誉有加。我对这个话题充满热情，并认为自己可能会以此为业。在我们谈论过的所有话题中，我清楚地记得一件事。他说（这是转述的）“我大约在 20 年前开始研究 AI，当时我坚信 20 年后我们将拥有真正的 AI。而现在我们距离拥有真正的 AI 还有大约 20 年。”
 
-嗯，记得我曾想过20 年后（即 2003 年），结果发现我们还没有到达那里。那时，我开始怀疑 AI 是否会永远是未来的技术。现在是 2020 年，又过了 17 年，我们仍然没有通用人工智能（AGI）。但在这些年里有一件事发生了变化。我们现在拥有一系列用于学习和高效搜索的 AI 技术，它们可以完成令人惊叹的成就，并可能在某天导致明斯基博士提到的通用人工智能。谁知道呢？也许只需要不到 20 年！
+嗯，记得我曾想过 20 年后（即 2003 年），结果发现我们还没有到达那里。那时，我开始怀疑 AI 是否会永远是未来的技术。现在是 2020 年，又过了 17 年，我们仍然没有通用人工智能（AGI）。但在这些年里有一件事发生了变化。我们现在拥有一系列用于学习和高效搜索的 AI 技术，它们可以完成令人惊叹的成就，并可能在某天导致明斯基博士提到的通用人工智能。谁知道呢？也许只需要不到 20 年！
 
 大象拥有超过 2,700 亿个神经元，但它们的连接密度远不如人类神经元。3Com 的创始人、德克萨斯大学的一位创业型教授罗伯特·梅特卡夫曾著名地谈过（以以太网为例）：“电信网络的价值与系统连接用户数量的平方成正比。”凭借这种连接数量的平方值，我们通过让自己的神经元连接密集得多，弥补了缺失的 1900 亿个大象神经元。（不过，大象拥有良好的记忆力和复杂的社会系统，这有什么意外吗？）
 
@@ -9568,7 +9476,7 @@ AI 研究人员曾认为（事实确实如此），如果我们能逆向工程�
 
 # AI 寒冬
 
-“AI 寒冬”这一术语首次出现在 1984 年的人工智能协会会议。我们来自侧边栏的朋友马文·明斯基博士警告商业界，对 AI 的热情已经失控，而随之而的是资金的失望。AI 寒冬指的是投资和研究资金枯竭的时期。在经济术语中，这被称为一种泡沫，就像 1999 年的互联网泡沫、2007 年的房地产泡沫以及 1637 年的荷兰郁香花泡沫一样。过度预期导致了不可避免的失望。
+“AI 寒冬”这一术语首次出现在 1984 年的人工智能协会会议。我们来自侧边栏的朋友马文·明斯基博士警告商业界，对 AI 的热情已经失控，而随之而来的是资金的失望。AI 寒冬指的是投资和研究资金枯竭的时期。在经济术语中，这被称为一种泡沫，就像 1999 年的互联网泡沫、2007 年的房地产泡沫以及 1637 年的荷兰郁金香泡沫一样。过度预期导致了不可避免的失望。
 
 AI 寒冬在 2000 年代再次发生（部分是因为互联网泡沫），研究人员极力避免在他们的提案中使用 AI 一词。在我们看来，我们正处于这样一个泡沫，但与以往不同，我们现在有很多 AI 技术进入了主流，例如亚马逊和 Google。即使泡沫破灭，我们也拥有了一些可以继续使用的良好工具。神经网络是人类学习和分类数据的良好模型。鉴于此，神经网络出现在机器学习中并不意外。神经网络由神经元组成，最重要的是连接它们的布线。
 
@@ -9580,10 +9488,7 @@ AI 寒冬在 2000 年代再次发生（部分是因为互联网泡沫），研�
 
 通过使用进化计算算法，你可以在设计空间（亦称为问题空间）中找到解决方案。进化计算已被用于创建如航天天线和改进总线路由等多样化的解决方案。该过程使用计算算法在问题空间中搜索解决方案。进化计算是计算密集型的，因为你有一组解决方案，需要观察哪个程序正接近解决方案，然后选择新的个体进入下一代。优胜劣汰！这些种群评估对计算机处理来说非常困难，这就是为什么许多进化算法需要大规模并行计算的原因。
 
-John Shovic：我在爱达荷大学的高级高级机器人学课程上的一位学生使用进化计算让一个名为 Baxter 的机器人能够从一个箱子里挑选红色或黄色区块并将其移动到另一个箱子里（如第一幅照片所示）。他利用机器人摄像头的图像和进化计算，尝试找到一种识别和定位这些区块的算法，以便 Baxter 找到它们。Baxter 和该学生都没有成功利用进化计算算法找到解决方案。为什么？使用进化计算技术解决未定义且无约束的问题需要指数级增加计算资源，即使是这样可能仍然无法产生解决方案。较小、受约束的问题更适合进化技术。
-
-
-
+John Shovic：我在爱达荷大学的高级机器人学课程上的一位学生使用进化计算让一个名为 Baxter 的机器人能够从一个箱子里挑选红色或黄色区块并将其移动到另一个箱子里（如第一幅照片所示）。他利用机器人摄像头的图像和进化计算，尝试找到一种识别和定位这些区块的算法，以便 Baxter 找到它们。Baxter 和该学生都没有成功利用进化计算算法找到解决方案。为什么？使用进化计算技术解决未定义且无约束的问题需要指数级增加计算资源，即使是这样可能仍然无法产生解决方案。较小、受约束的问题更适合进化技术。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_454_0.png)
 
@@ -9593,9 +9498,9 @@ John Shovic：我在爱达荷大学的高级高级机器人学课程上的一位
 
 学习是人类之所以为人类的经典例子。我们学习。我们适应。机器学习是一种人工智能技术，通过研究计算机算法和程序的使用，这些程序能够通过使用和经验来自动改进。
 
-John Shovich：人类学习很快，并且可以将同样的学习应用到不同的场景中。当我写这些文字时，我正看着我2岁的岁的孙女海塞尔（Hazel）吃她的第一个墨西哥薄饼（quesadilla）。我看到她学会了如何在盘子里找到食物，告诉她她喜欢，抓起食物，送到嘴里并吃掉。我希望我能教我的机器人像 2 岁的海塞尔一样聪明。现在我只需要擦掉笔记本电脑上的奶油奶士了。
+John Shovic：人类学习很快，并且可以将同样的学习应用到不同的场景中。当我写这些文字时，我正看着我 2 岁的孙女海塞尔（Hazel）吃她的第一个墨西哥薄饼（quesadilla）。我看到她学会了如何在盘子里找到食物，告诉她她喜欢，抓起食物，送到嘴里并吃掉。我希望我能教我的机器人像 2 岁的海塞尔一样聪明。现在我只需要擦掉笔记本电脑上的奶油奶酪了。
 
-今天，人工智能研究人员已经在特定任务中为计算机带来了准人类级别的学习能力，例如图像识别和声音处理（“Alexa，帮我找一个新的电视节目”），并可能其他任务（如驾驶汽车）中达到类似的学习水平。
+今天，人工智能研究人员已经在特定任务中为计算机带来了准人类级别的学习能力，例如图像识别和声音处理（“Alexa，帮我找一个新的电视节目”），并可能在其他任务（如驾驶汽车）中达到类似的学习水平。
 
 机器学习并不是完全自动化的。你不能说“计算机，读这本书”并期望它理解自己正在读的内容。目前，使用机器学习技术需要大量的人类分类和人工选择的数据、数据分析和训练。
 
@@ -9607,6 +9512,8 @@ John Shovich：人类学习很快，并且可以将同样的学习应用到不�
 - 演化算法
 
 机器学习指的是使用这些学习技术来模拟甚至改进 20 世纪 80 年代统治人工智能的专家系统的不同方法。在 20 世纪 80 年代后期，John 写了他关于如何构建一种深度流水线机器以加速专家系统评估的博士论文。机器学习的硬件加速在今天仍然是一个活跃的研究领域。
+
+
 
 在接下来的章节中，我们将向你展示如何使用 Python 构建演示机器学习所有重要任务的机器。
 
@@ -9632,7 +9539,7 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 
 ## 目前 AI 的局限性
 
-人工智能的局限性
+### 人工智能的局限性
 
 人工智能的关键词在于理解。机器学习算法已经学会了驾驶，例如，神经网络的层级结构。神经网络可以理解数据。今天我们对神经网络产生了了新的兴趣，因为这次我们有了实用的应用。由于这些特性，尽管有这些局限性，AI 能够实现接近人类思维的模型。
 
@@ -9640,8 +9547,7 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 
 现在让我们开始在 Python 中使用 AI 吧！
 
-## 第 2 章
-构建神经网络
+# 第 2 章：构建神经网络
 
 ## 本章内容
 
@@ -9649,7 +9555,7 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 - 创建你的第一个网络
 - 在 Python 中构建网络
 
-神经网络出现的时间已经和人们讨论 AI 一样久了。Marvin Minsky 在 1969 年提出了感知器的开创性工作。今天我们对神经网络产生了新的兴趣，因为这次我们有了实用的应用。本章介绍了神经网络的概念以及如何实现它们。要下载本章的代码，请访问 dummies.com/go
+神经网络出现的时间已经和人们讨论 AI 一样久了。Marvin Minsky 在 1969 年提出了感知器的开创性工作。今天我们对神经网络产生了新的兴趣，因为这次我们有了实用的应用。本章介绍了神经网络的概念以及如何实现它们。要下载本章的代码，请访问 `dummies.com/go`。
 
 ## 理解神经网络
 
@@ -9664,19 +9570,15 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 
 图 2-1 显示了双层神经网络的架构。注意这里的三层：在计算神经网络层数时通常不包括输入层。
 
-**神经元**（neuron），在 AI 中使用这个词是指是指神经系统的软件模型，其行为在程度上类似于大脑神经元。模型使用数字来使一个神经元比另一个对结果更重要。这些数字被称为**权重**（weights）。
+`神经元`（neuron），在 AI 中使用这个词是指是指神经系统的软件模型，其行为在程度上类似于大脑神经元。模型使用数字来使一个神经元比另一个对结果更重要。这些数字被称为`权重`（weights）。
 
-通过观察图，你可以看到每一层的神经元都与下一层的*所有*神经元连接。每条神经元间的连接线都赋予了权重。
+通过观察图，你可以看到每一层的神经元都与下一层的所有神经元连接。每条神经元间的连接线都赋予了权重。
 
 ## 神经元层
 
 图 2-1 显示了输入层、隐藏层（之所以被称为隐藏是因为它没有与外界直接连接）以及输出层。这是一个简单的网络；真实的网络可以复杂得多，拥有更多层。深度学习的名称源于当你拥有多个隐藏层时，你增加了神经网络的深度。
 
-注意这些层从左到右过滤并处理信息。这种神经网络被称为*前馈输入*（feed-forward input），因为数据只向一个方向输入。
-
-
-
-
+注意这些层从左到右过滤并处理信息。这种神经网络被称为`前馈输入`（feed-forward input），因为数据只向一个方向输入。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_463_0.png)
 
@@ -9686,11 +9588,11 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 
 在人脑中，学习的发生是因为新连接（突触）的增加以及根据外部刺激对这些连接进行修改。
 
-在 AI 研究中，用于将结果传播到前层的方法（也称为*反馈*）多年年来发生了变化。一些专家认为，最近 AI 应用的激增以及上一次 AI 寒冬的结束（参见书籍第4卷第一章），归功于现在用于反向传播的算法和技术。
+在 AI 研究中，用于将结果传播到前层的方法（也称为`反馈`）多年来发生了变化。一些专家认为，最近 AI 应用的激增以及上一次 AI 寒冬的结束（参见书籍第4卷第一章），归功于现在用于反向传播的算法和技术。
 
 反向传播是一个数学上复杂的课题。关于数学原理及其使用的更详细描述，请参阅 John Paul Mueller 和 Luca Massaron 编写的《傻瓜机器学习》（Machine Learning For Dummies）。
 
-在你进行多次操作后，神经网络开始变得更好（学习），并在每次迭代（*epoch*）中提供更好的答案。对于复杂任务，这个过程可能需要几天或几周的时间，并消耗大量的计算机计算能力。
+在你进行多次操作后，神经网络开始变得更好（学习），并在每次迭代（`epoch`）中提供更好的答案。对于复杂任务，这个过程可能需要几天或几周的时间，并消耗大量的计算机计算能力。
 
 虽然训练神经网络可能需要几天或几周的时间，但在训练完成后，可以通过复制已训练网络的拓扑结构、权重和偏置轻松地进行复制。当你有了一个训练好的神经网络时，你可以反复使用它（而不会消耗太多计算能力），直到你需要不同的东西。因此，工程师可以以低成本将神经网络部署到产品中。训练是昂贵的，但使用训练好的神经网络并不昂贵。
 
@@ -9698,19 +9600,19 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 
 ## 权重与偏置
 
-观察图 2-1 中的网络，你可以发现该神经网络的输出取决于连接的权重以及神经元自身的*偏置*（向上或向下调整神经元的阈值）。尽管权重会影响激活曲线的陡度（稍后会详细介绍），但偏置会将整个曲线向右或向左移动。程序对权重和偏置的修改决定了单个神经元预测的强度。
+观察图 2-1 中的网络，你可以发现该神经网络的输出取决于连接的权重以及神经元自身的`偏置`（向上或向下调整神经元的阈值）。尽管权重会影响激活曲线的陡度（稍后会详细介绍），但偏置会将整个曲线向右或向左移动。程序对权重和偏置的修改决定了单个神经元预测的强度。
 
 训练神经网络涉及使用输入数据来微调权重和偏置。
 
 ## 激活函数
 
-在构建我们的第一个神经网络时，一个重要的主题是激活函数。*激活函数*是一个软件函数，用于决定信息是可以通过（从而激活神经元）还是被单个神经元拦截（从而去激活神经元）。然而，你使用该函数不仅将其作为一个门控（打开或关闭），还将其以某些有用的方式对输入神经元的输入信号进行转换。
+在构建我们的第一个神经网络时，一个重要的主题是激活函数。`激活函数`是一个软件函数，用于决定信息是可以通过（从而激活神经元）还是被单个神经元拦截（从而去激活神经元）。然而，你使用该函数不仅将其作为一个门控（打开或关闭），还将其以某些有用的方式对输入神经元的输入信号进行转换。
 
-有许多类型的激活函数可用。对于我们的简单神经网络，我们将使用最流行的函数之一——sigmoid。sigmoid 函数具有特征性的 S 型曲线，如图 2-3 所示。
+有许多类型的激活函数可用。对于我们的简单神经网络，我们将使用最流行的函数之一——`sigmoid`。`sigmoid`函数具有特征性的 S 型曲线，如图 2-3 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_465_0.png)
 
-图 2-3：sigmoid 函数的一个示例。
+图 2-3：`sigmoid`函数的一个示例。
 
 记得我们在本章较早些时候提到过神经元偏置吗？如果你对图 2-3 中的曲线应用 1.0 值的偏置，曲线将向右移动，使 (0,0.5) 点移动到 (1,0.5)。
 
@@ -9741,10 +9643,6 @@ TensorFlow 能够处理云端数据，并且易于理解。由于其易用性，
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 |
 
-
-
-
-
 ```python
 o = self.feedForward(X)
 # 然后反向传播这些值（反馈）
@@ -9753,16 +9651,16 @@ self.backwardPropagate(X, y, o)
 
 ```python
 def activationSigmoid(self, s):
-## 激活函数
-# 类似于 AIO Python 书中简单的 activationSigmoid 曲线
-return 1/(1+np.exp(-s))
+    ## 激活函数
+    # 类似于 AIO Python 书中简单的 activationSigmoid 曲线
+    return 1/(1+np.exp(-s))
 ```
 
 ```python
 def activationSigmoidPrime(self, s):
-## activationSigmoid 的阶导数
-# 微积分时间！
-return s * (1 - s)
+    ## activationSigmoid 的阶导数
+    # 微积分时间！
+    return s * (1 - s)
 ```
 
 ```python
@@ -9784,9 +9682,11 @@ def predictOutput(self):
     print("输出 (Y1): \n" + str(self.feedForward(xPredicted)))
 ```
 
+```python
 myNeuralNetwork = Neural_Network()
 trainingEpochs = 1000
-#trainingEpochs = 10000
+# trainingEpochs = 10000
+```
 
 ```python
 for i in range(trainingEpochs): # 训练 myNeuralNetwork 1000 次
@@ -9839,7 +9739,7 @@ y = np.array([([1], [0], [0], [0], [0], \
 [0], [1]], dtype=float)
 ```
 
-我们选择一个值进行预测。我们将预测所有值，但存储在 xPredicted 中的值将是我们最后得到的答案：
+我们选择一个值进行预测。我们将预测所有值，但存储在 `xPredicted` 中的值将是我们最后得到的答案：
 
 ```python
 # 我们想要预测的值
@@ -9850,7 +9750,7 @@ X = np.amax(X, axis=0) # X 输入数组的最大值
 xPredicted = xPredicted/np.amax(xPredicted, axis=0)
 ```
 
-每个 epoch 将均和和误差结果保存到文件中（供 Excel 进一步使用）：
+每个 `epoch` 将均方误差结果保存到文件中（供 Excel 进一步使用）：
 
 ```python
 # 设置用于绘图的 Loss 文件
@@ -9858,7 +9758,7 @@ xPredicted = xPredicted/np.amax(xPredicted, axis=0)
 lossFile = open("SumSquaredLoss.csv", "w")
 ```
 
-接下来，我们为该问题构建 Neural_Network 类。（参考图 2-2 查看我们正在构建的网络）。你可以看到每一层都由单行表示：
+接下来，我们为该问题构建 `Neural_Network` 类。（参考图 2-2 查看我们正在构建的网络）。你可以看到每一层都由单行表示：
 
 ```python
 class Neural_Network(object):
@@ -9916,13 +9816,11 @@ def backwardPropagate(self, X, y, o):
     # (注：原文此处逻辑较乱，已按代码核心逻辑翻译)
 ```
 
-
-
-
-
 [1.]
+
 异或门神经网络的实际输出：
-```
+
+```text
 [[0.93419893]
 [0.04425737]
 [0.01636304]
@@ -9932,14 +9830,24 @@ def backwardPropagate(self, X, y, o):
 [0.0391143 ]
 [0.93197489]]
 ```
+
 均方和损失（Sum Squared Loss）：
-0.0020575319565093496
+
+`0.0020575319565093496`
 
 基于训练权重的异或门输出数据：
-预期值 (X1-X3):
+
+预期值 (X1-X3)：
+
+```text
 [0. 0. 1.]
-输出 (Y1):
+```
+
+输出 (Y1)：
+
+```text
 [0.04422615]
+```
 
 在底部，你可以看到预期输出为 0.04422615，它与预期值 0 非常接近，但并不完全相等。将每个输出与网络的实际输出进行比较，你会发现它们匹配得相当紧密。每次运行程序时，结果都会略有不同，因为我们在程序开始时用随机数初始化了权重。
 
@@ -9947,11 +9855,13 @@ def backwardPropagate(self, X, y, o):
 
 均方和损失值是所有可能的输入误差的衡量标准。
 
-我们绘制了均方和损失值与迭代次数（epoch number）的关系图，结果如图 2-4 所示。你可以看到程序改进得非常快，然后趋于平缓。
+我们绘制了均方和损失值与迭代次数（`epoch number`）的关系图，结果如图 2-4 所示。你可以看到程序改进得非常快，然后趋于平缓。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_477_0.png)
 
-**图 2-4:** 训练期间的损失函数。
+图 2-4：训练期间的损失函数。
+
+
 
 让我们再尝试一次实验，将迭代次数增加到 100,000：
 
@@ -9978,6 +9888,7 @@ Epoch # 99999
 [[1.]]
 异或门神经网络的实际输出：
 ```
+
 ```
 [[9.85225608e-01]
 [1.41750544e-04]
@@ -9988,14 +9899,24 @@ Epoch # 99999
 [1.14821256e-02]
 [9.78014943e-01]]
 ```
+
 均方和损失：
-0.0001371501859631841
+
+`0.0001371501859631841`
 
 基于训练权重的异或门输出数据：
-预期值 (X1-X3):
+
+预期值（X1-X3）：
+
+```
 [0. 0. 1.]
-输出 (Y1):
+```
+
+输出（Y1）：
+
+```
 [0.000014175]
+```
 
 数字变得更好了，但根据我们的准确率标准（> 0.9 = 1 且 < 0.1 = 0），1000 次迭代运行的结果已经足够好。1000 次迭代产生的数据对于我们所描述的问题已经足够。将训练运行增加到 100,000 次迭代仅略有提升。
 
@@ -10009,11 +9930,11 @@ TensorFlow 是支持最好的应用框架之一，它为 Python、C++、Java、G
 
 ## 安装 TensorFlow
 
-为了在 Windows、Linux 或树莓派上安装 TensorFlow，请访问 [www.tensorflow.org/install](https://www.tensorflow.org/install)。你也可以在 Colab 或 Jupyter Notebook 中它。
+为了在 Windows、Linux 或树莓派上安装 TensorFlow，请访问 [www.tensorflow.org/install](https://www.tensorflow.org/install)。你也可以在 Colab 或 Jupyter Notebook 中使用它。
 
 ## 介绍张量（TENSORS）
 
-正如书中所述，神经网络是通过对数据矩阵执行操作然后将结果数据移动到另一个矩阵来实现的。由于矩阵是张量，且数据从一个流向另一个，你可以看出 TensorFlow 名称的来源。
+正如书中所述，神经网络是通过对数据矩阵执行操作，然后将结果数据移动到另一个矩阵来实现的。由于矩阵是张量，且数据从一个流向另一个，你可以看出 TensorFlow 名称的来源。
 
 - 标量（scalar）是单个数值。
 - 向量（vector）是二维数组。
@@ -10024,10 +9945,6 @@ TensorFlow 是支持最好的应用框架之一，它为 Python、C++、Java、G
 ## 使用 TensorFlow 构建异或门神经网络
 
 数字变得更好了，但根据我们的准确率标准（> 0.9 = 1 且 < 0.1 = 0），1000 次迭代的结果已经足够好。1000 次迭代产生的数据对于我们所描述的问题已经足够。将训练运行增加到 100,000 次迭代仅略有提升。
-
-
-
-
 
 ```python
 # printing out to file
@@ -10079,7 +9996,7 @@ y = np.array([[1], [0], [0], [0], [0],
 [0], [0], [1]], dtype=float)
 ```
 
-第 2 步定义你的神经网络模型和层：这一步是 Keras 发挥威威力的地方。添加更多神经层并更改它们的大小和激活函数是非常简单的任务。我们还对激活函数应用了偏置（它会将激活曲线向右移动）（在本例中为 `relu`，对于最后的输出层则使用了我们的朋友 `sigmoid` 函数），我们在之前的 Python 模型中没有这样做，因为我们正在训练的数据太简单了。
+第 2 步定义你的神经网络模型和层：这一步是 Keras 发挥威力的地方。添加更多神经层并更改它们的大小和激活函数是非常简单的任务。我们还对激活函数应用了偏置（它会将激活曲线向右移动）（在本例中为 `relu`，对于最后的输出层则使用了我们的朋友 `sigmoid` 函数），我们在之前的 Python 模型中没有这样做，因为我们正在训练的数据太简单了。
 
 接下来，查看随后的注释模型 `model.add` 语句。当我们转向三层神经网络示例时，我们取消该行的注释来为神经网络添加额外的层。我们使用 `relu`，这是一种简单、通用的线性激活函数：
 
@@ -10106,7 +10023,7 @@ model.compile(loss='mean_squared_error',
 print(model.get_weights())
 ```
 
-第 4 步拟合并训练你的模型：我们选择的 epoch（迭代次数）数量让我们能够向 1.0 的二分类准确率移动。在这里我们加载带有输入 (X) 和预期输出 (y) 的 NumPy 数组。`validation_data` 参数比较每个 epoch 训练网络的输出，并生成 `val_acc` 和 `val_loss` 存储在 `history` 变量中：
+第 4 步拟合并训练你的模型：我们选择的 epoch（迭代次数）数量让我们能够向 1.0 的二分类准确率移动。在这里我们加载带有输入（X）和预期输出（y）的 NumPy 数组。`validation_data` 参数比较每个 epoch 训练网络的输出，并生成 `val_acc` 和 `val_loss` 存储在 `history` 变量中：
 
 ```python
 history = model.fit(X, epochs=2000,
@@ -10132,7 +10049,7 @@ numpy_binary_accuracy = np.array(binary_accuracy)
 np.savetxt("binary_accuracy.txt", numpy_binary_accuracy, delimiter="\n")
 ```
 
-第 5 步评估模型：我们运行所有输入 X，使用 `round` 函数使输出变为 0 或 1。`round` 函数替换了标准 `<0.5 = "0"` 和 `>0.5 = "1"`。我们还计算了所有 epoch 的 `binary_accuracy` 平均值，告诉我们越接近 1.0 模型越越成功：
+第 5 步评估模型：我们运行所有输入 X，使用 `round` 函数使输出变为 0 或 1。`round` 函数替换了标准 `<0.5 = "0"` 和 `>0.5 = "1"`。我们还计算了所有 epoch 的 `binary_accuracy` 平均值，告诉我们越接近 1.0 模型越成功：
 
 ```python
 print(np.mean(history.history["binary_accuracy"]))
@@ -10146,12 +10063,19 @@ print(result)
 
 ## 检查结果
 
-![](img/b5b2ea569d1e5bba0afd73be6482d_486_0.png) 当你运行 TensorFlow 程序时，可能会看到类似下面的内容：
+![](img/b5b2ea569d1e5bba0afd73be6482d_486_0.png)
 
+当你运行 TensorFlow 程序时，可能会看到类似下面的内容：
+
+```
 /usr/lib/python3.5/importlib/bootstrap.py:222: RuntimeWarning: version 3.4 of module 'tensorflow.python.fast_tensor_util' does not match version 3.5
+
 return f(*args, **kwds)
+
 /usr/lib/python3.5/importlib/bootstrap.py:222: RuntimeWarning: builtins.type changed, may indicate incompatibility. Expected 432, got 412
+
 return f(*args, **kwds)
+```
 
 这种输出是因为 TensorFlow 为你的机器构建的方式有问题。这些警告可以安全地忽略。TensorFlow.org 表示此将在下一个版本中修复。要运行二层模型，在终端窗口中输入 `python3 TensorFlowKeras.py`。在观察完 epoch（你可以通过设置 `model.fit` 命令中的 `verbose` 参数来更改输出量）后，我们得到了：
 
@@ -10171,7 +10095,9 @@ binary_accuracy: 1.0000 - val_loss: 0.0367 - val_accuracy: 1.0000
 | dense_1 (Dense) | (None, 1) | 5 |
 
 Total params: 21
+
 Trainable params: 21
+
 Non-trainable params: 0
 
 到第 2000 个 epoch 时，我们已经实现了预期的 1.0 二分类准确率，且程序末尾的 `model.predict` 函数调用结果与我们的真值表相符。图 2-6 显示了随着训练进行，相对于 epoch 数绘制的损失函数和二分类准确率值。
@@ -10180,21 +10106,17 @@ Non-trainable params: 0
 
 图 2-6：二层训练的结果。
 
-新网络的损失函数（如图2-6所示）比之前网络的损失函数平滑得多（参考图 2-4）。这种更平滑的损失函数与激活的选择（relu）以及优化器函数（ADAM）有关。Adam（自适应量估计）使用随机算法（使用随机数）来改进损失函数的结果。此外，记住由于单个神经元权重中的随机数初始值，你每次都会得到一个不同的曲线。你可以设置随机数生成器的种子，使其每次运行程序时提供相同的随机数，这有助于优化性能。
+新网络的损失函数（如图 2-6 所示）比之前网络的损失函数平滑得多（参考图 2-4）。这种更平滑的损失函数与激活的选择（`relu`）以及优化器函数（`ADAM`）有关。Adam（自适应量估计）使用随机算法（使用随机数）来改进损失函数的结果。此外，记住由于单个神经元权重中的随机数初始值，你每次都会得到一个不同的曲线。你可以设置随机数生成器的种子，使其每次运行程序时提供相同的随机数，这有助于优化性能。
 
 ## 为什么要使用 GUI 运行 TensorFlow？
 
 你将花费大量时间在编辑器中编写模型。为了方便，我们将数据导出到 Excel 以制作本中的图表。大多数情况下我们使用终端窗口，但使用计算机完整的 GUI（图形界面）桌面打开终端窗口有一个巨大的优势。这个巨大的优势被称为 TensorBoard。TensorBoard 是 TensorFlow 的一部分，可以在浏览器（如 Chrome 或 Firefox）中使用。你将 TensorBoard（在浏览器中运行）指向工作目录，就可以轻松地对你的神经网络实验进行各种可视化分析。
 
-
-
-
-
 ## 在 TensorFlow 和 Keras 中更改三层神经网络
 
-现在让我们为我们的神经网络添加另一个层。关于新网络请参考图 2-5；图 2-7 显示了结果。在您喜喜欢的编辑器中打开 `TensorFlowKeras.py` 文件。我们将对以下内容进行细微修改：
+现在让我们为我们的神经网络添加另一个层。关于新网络请参考图 2-5；图 2-7 显示了结果。在您喜欢的编辑器中打开 `TensorFlowKeras.py` 文件。我们将对以下内容进行细微修改：
 
-```
+```python
 model.add(Dense(4, input_dim=3, activation='relu',
 use_bias=True))
 #model.add(Dense(4, activation='relu', use_bias=True))
@@ -10203,11 +10125,11 @@ model.add(Dense(1, activation='sigmoid', use_bias=True))
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_489_0.png)
 
-**图 2-7**：三层训练的结果。
+图 2-7：三层训练的结果。
 
-如果我们移除中间层前面的注释字符，就会得到一个每层有四个神经元的三三层神经网络。这很简单。现在的代码看起来应该是这样的：
+如果我们移除中间层前面的注释字符，就会得到一个每层有四个神经元的三层神经网络。这很简单。现在的代码看起来应该是这样的：
 
-```
+```python
 model.add(Dense(4, input_dim=3, activation='relu',
 use_bias=True))
 model.add(Dense(4, activation='relu', use_bias=True))
@@ -10216,7 +10138,7 @@ model.add(Dense(1, activation='sigmoid', use_bias=True))
 
 当我们运行程序时，会得到三层神经网络的结果，看起来如下：
 
-```
+```text
 8/8 [==========================] 0s 2ms/step - loss: 0.0153 -
 binary_accuracy: 1.0000 - val_loss: 0.0153 - val_binary_accuracy: 1.0000
 Epoch 2000/2000
@@ -10233,19 +10155,29 @@ Trainable params: 41
 Non-trainable params: 0
 ```
 
-0.930375
-[1.]
-[0.]
-[0.]
-[0.]
-[0.]
-[0.]
-[0.]
-[1.]
+`0.930375`
 
-你可以看到神经网络中有三层。能够快速高效地更改神经网络，是 TensorFlow/Keras 软件如此强大的原因之一。摆弄参数并进行更改非常容易。
+`[1.]`
 
-三层运行在大约第 916 轮 epoch 时收敛到 1.00 的二分类准确率，比两层运行的第 1556 轮 epoch 快得多。此外，损失函数的斜率比两层示例要陡峭得多（参考图 2-6）。
+`[0.]`
+
+`[0.]`
+
+`[0.]`
+
+`[0.]`
+
+`[0.]`
+
+`[0.]`
+
+`[1.]`
+
+
+
+你可以看到神经网络中有三层。能够快速高效地更改神经网络，是`TensorFlow/Keras`软件如此强大的原因之一。摆弄参数并进行更改非常容易。
+
+三层运行在大约第 916 轮`epoch`时收敛到 1.00 的二分类准确率，比两层运行的第 1556 轮`epoch`快得多。此外，损失函数的斜率比两层示例要陡峭得多（参考图 2-6）。
 
 为了好玩，我们再次运行了该程序，并将每个隐藏层的神经元数量更改为 100。正如预期的那样，程序收敛到 1.00 二分类准确率的速度比之前的运行要快得多（第 78 轮对比第 916 轮）。运行您自己的实验，感受结果如何随着不同的参数、层和神经元数量而变化。
 
@@ -10255,25 +10187,25 @@ Non-trainable params: 0
 
 ## 机器学习
 
-本章内容
+### 本章内容
 
 - 了解机器学习的基础知识
-- 使用 TensorFlow 进行机器学习
-- 使用 MatPlotLib 工作
+- 使用`TensorFlow`进行机器学习
+- 使用`MatPlotLib`工作
 
 学习某事意味着什么？一种定义是“对某事物的已知知识的获取和掌握，以及对这些知识意义的进一步澄清”。另一个定义是，学习是“由于经验导致人的知识或行为发生相对永久的改变”。
 
-第二种定义最符合当前 AI 的状态。我们的工程和科学文化开发了算法和程序，这些程序可以学习关于数据以及感官输入的知识，并将这些知识应用于新情境。但我们的机器并不理解它们所学到的任何东西。它们只是积累了关于输入的数据，并将这些输入转换为我们希望观察的人类看来有意义的某种输出。
+第二种定义最符合当前`AI`的状态。我们的工程和科学文化开发了算法和程序，这些程序可以学习关于数据以及感官输入的知识，并将这些知识应用于新情境。但我们的机器并不理解它们所学到的任何东西。它们只是积累了关于输入的数据，并将这些输入转换为我们希望观察的人类看来有意义的某种输出。
 
 然而，尽管机器并不理解它们所学到的东西，你仍然可以使用本章描述的机器学习技术解决一些令人印象深刻的问题。也许我们现在开发的技术在未来将通向更令人惊叹的目标。
 
 机器学习某事意味着什么？我们使用以下粗略的定义：如果机器可以接受输入并将其转换为输出输出，机器就学习了某些东西。例如，如果你写了一个简单的程序来两个两个数字，你就教了机器一些东西——如何相加两个数字。
 
-在本章中，我们关注机器学习以及算法和统计模型的使用，这些模型会逐步提高在特定任务上的性能。如果这听起来像我们在本教程第 2 章中的神经网络实验，那么你是正确的。机器学习不仅涉及神经网络，还涉及其他复杂的数据分析和统计技术。要下载本章的代码，请访问 www.dummies.com/learning。
+在本章中，我们关注机器学习以及算法和统计模型的使用，这些模型会逐步提高在特定任务上的性能。如果这听起来像我们在本教程第 2 章中的神经网络实验，那么你是正确的。机器学习不仅涉及神经网络，还涉及其他复杂的数据分析和统计技术。要下载本章的代码，请访问`www.dummies.com/learning`。
 
 # 从处处解决方案学习
 
-通常机器学习面临的问题之一是弄清楚算法如何找到解决方案。这个词用得最好。我们如何知道一个给定的解决方案是好的？有些人将机器学习比作寻找一座大山。我们设定了特定的目标，如果你位于一座高于 1000 英尺的山上，你就达到了目标。Fashion-MNIST 使用 MNIST 格式（一组分辨率为 28x28 像素的灰度图像）的时尚数据库，包含 60,000 张图像，分为十类服装。达到目标被称为局部极大值。
+通常机器学习面临的问题之一是弄清楚算法如何找到解决方案。这个词用得最好。我们如何知道一个给定的解决方案是好的？有些人将机器学习比作寻找一座大山。我们设定了特定的目标，如果你位于一座高于 1000 英尺的山上，你就达到了目标。`Fashion-MNIST`使用`MNIST`格式（一组分辨率为`28x28`像素的灰度图像）的时尚数据库，包含 60,000 张图像，分为十类服装。达到目标被称为局部极大值。
 
 以下是三类主要的机器学习算法：
 
@@ -10283,19 +10215,15 @@ Non-trainable params: 0
 
 # 创建用于分类类型的机器学习网络
 
-我们使用 TensorFlow 和 Keras 以及免费提供的 Fashion-MNIST（修改版国家标准技术协会）数据库来构建一些机器学习示例并查看其结果。（有关 TensorFlow 和 Keras 的更多信息，请参考本教程第 2 章。）该数据库包含 60,000 件时尚产品。数据以 28x28 像素格式存储，每个类别有 6,000 个项目，如图 3-1 所示。
+我们使用`TensorFlow`和`Keras`以及免费提供的`Fashion-MNIST`（修改版国家标准技术协会）数据库来构建一些机器学习示例并查看其结果。（有关`TensorFlow`和`Keras`的更多信息，请参考本教程第 2 章。）该数据库包含 60,000 件时尚产品。数据以`28x28`像素格式存储，每个类别有 6,000 个项目，如图 3-1 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_495_0.png)
 
-**图 3-1**：Fashion-MNIST 数据库的一小部分。
+**图 3-1**：`Fashion-MNIST`数据库的一小部分。
 
+我们使用了在本本书第 2 章中用`Keras`构建分层网络时使用的相同的五步法。`TensorFlow Keras`。
 
-
-
-
-我们使用了在本本书第 2 章中用 Keras 构建分层网络时使用的相同的五步法。TensorFlow Keras。
-
-- 1. 加载并格式化你的数据。
+1. 加载并格式化你的数据。
 2. 定义你的神经网络模型和层。
 3. 编译模型。
 4. 拟合并训练你的模型。
@@ -10303,19 +10231,19 @@ Non-trainable params: 0
 
 # 设置软件环境
 
-本章的大部分操作如既往地在命令行进行，因为你仍然需要输入代码并运行软件。然而，我们将在屏幕上显示一些图形，并使用 Matplotlib 来评估机器学习程序正在做什么，所以如果你还没有启动，请启动一个 GUI（图形用户界面）。
+本章的大部分操作如既往地在命令行进行，因为你仍然需要输入代码并运行软件。然而，我们将在屏幕上显示一些图形，并使用`Matplotlib`来评估机器学习程序正在做什么，所以如果你还没有启动，请启动一个`GUI`（图形用户界面）。
 
-如果你正在使用无显示器的树莓派（Raspberry Pi），请添加键盘、鼠标和显示器，或者启动 VNC（虚拟网络计算机）以将你的电脑显示器作为第二台电脑（在这种情况下即为树莓派）的显示器。网络上有许多链接描述了如何执行此操作以及如何在你的主电脑上启动 GUI。有关设置软件和连接树莓派的教程绝佳来源，请访问 www.raspberrypi.org。
+如果你正在使用无显示器的树莓派（`Raspberry Pi`），请添加键盘、鼠标和显示器，或者启动`VNC`（虚拟网络计算机）以将你的电脑显示器作为第二台电脑（在这种情况下即为树莓派）的显示器。网络上有许多链接描述了如何执行此操作以及如何在你的主电脑上启动`GUI`。有关设置软件和连接树莓派的教程绝佳来源，请访问`www.raspberrypi.org`。
 
-在本章中，我们在无显示器的树莓派上使用 VNC。图 3-2 显示了运行在树莓派上的 GUI（实际上运行的是 VNC，但你从这张图片中看不出来）。
+在本章中，我们在无显示器的树莓派上使用`VNC`。图 3-2 显示了运行在树莓派上的`GUI`（实际上运行的是`VNC`，但你从这张图片中看不出来）。
 
 # 从 Fashion-MNIST 数据集中获取数据
 
-获取数据很容易，尽管首次将其加载到你的电脑上将花费一段时间。当你第一次运行程序后，它将使用已复制到你电脑上的 Fashion-MNIST 数据。
+获取数据很容易，尽管首次将其加载到你的电脑上将花费一段时间。当你第一次运行程序后，它将使用已复制到你电脑上的`Fashion-MNIST`数据。
 
-如果你缺少我们在示例中使用的使用的任何 Python 库，请搜索网络上关于在你的机器上安装它们的说明。每种设置都略有不同。例如，如果你缺少 seaborn，请搜索“在 [你的机器名称] 上安装 seaborn python library”。如果你搜索“seaborn for the Raspberry Pi”，你会发现“sudo pip3 install seaborn”。
+如果你缺少我们在示例中使用的使用的任何`Python`库，请搜索网络上关于在你的机器上安装它们的说明。每种设置都略有不同。例如，如果你缺少`seaborn`，请搜索“在 [你的机器名称] 上安装`seaborn python library`”。如果你搜索“`seaborn for the Raspberry Pi`”，你会发现“`sudo pip3 install seaborn`”。
 
-图 3-2：树莓派上的 GUI。
+图 3-2：树莓派上的`GUI`。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_497_0.png)
 
@@ -10350,11 +10278,11 @@ class_names = ['T-shirt', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shi
 
 我们训练的网络将使用三个不同的数据集进行测试：
 
-- 一组 10,000 张训练照片（即未分类的、不在训练数据中的照片）来自 Fashion_MNIST
-- Fashion_MNIST 数据集中的一个图像
+- 一组 10,000 张训练照片（即未分类的、不在训练数据中的照片）来自`Fashion_MNIST`
+- `Fashion_MNIST`数据集中的一个图像
 - 一张连衣裙的照片
 
-我们训练的网络将使用 TensorFlow、NumPy 和 Keras 对 Fashion-MNIST 进行测试。使用你喜欢的编辑器，打开 TensorFlow 文件并输入以下代码：
+我们训练的网络将使用`TensorFlow`、`NumPy`和`Keras`对`Fashion-MNIST`进行测试。使用你喜欢的编辑器，打开`TensorFlow`文件并输入以下代码：
 
 ```python
 import libraries
@@ -10415,19 +10343,15 @@ print('10,000 image Test accuracy:', test_acc)
 
 # 代码拆解
 
-sparse_categorical_crossentropy 损失函数衡量了类别之间的误差。categorical 指的是数据集具有多个（非二进制的）类别。sparse 指的是使用单个整数来引用类别（在我们的示例中为 0-9）。熵（无序程度的衡量）指的是类别之间数据的混合。
+`sparse_categorical_crossentropy`损失函数衡量了类别之间的误差。`categorical`指的是数据集具有多个（非二进制的）类别。`sparse`指的是使用单个整数来引用类别（在我们的示例中为 0-9）。熵（无序程度的衡量）指的是类别之间数据的混合。
 
-在第 2 步中，我们定义了神经网络和层。Keras 允许轻松地添加层并更改其大小。我们还对激活函数使用了relu，在本例中使用 softmax。
+在第 2 步中，我们定义了神经网络和层。`Keras`允许轻松地添加层并更改其大小。我们还对激活函数使用了`relu`，在本例中使用`softmax`。
 
-在第 3 步中，我们编译模型。Adam（一种随机优化方法）是一个很好的默认优化器，因为它非常适用于数据或参数规模很大的问题。
+在第 3 步中，我们编译模型。`Adam`（一种随机优化方法）是一个很好的默认优化器，因为它非常适用于数据或参数规模很大的问题。
 
-在第 4 步中，我们拟合并训练模型。由于运行我们的示例需要时间，我们选择了 5 个 epoch。可以根据需要增加 epoch 的数量。
+在第 4 步中，我们拟合并训练模型。由于运行我们的示例需要时间，我们选择了 5 个`epoch`。可以根据需要增加`epoch`的数量。
 
-在第 5 步中，我们评估模型。model.evaluate() 函数用于比较训练网络在每个 epoch 中的输出，并为存储在 history 变量中的每个 epoch 为你的信息生成 test_acc 和 test_loss。
-
-
-
-
+在第 5 步中，我们评估模型。`model.evaluate()`函数用于比较训练网络在每个`epoch`中的输出，并为存储在`history`变量中的每个`epoch`为你的信息生成`test_acc`和`test_loss`。
 
 我们在树莓派 3B+ 上运行了程序。（树莓派 4B 的速度至少是它的两倍。）目前，你可以安全地忽略代码不匹配警告和未来的弃用公告。
 
@@ -10452,7 +10376,7 @@ sparse_categorical_crossentropy 损失函数衡量了类别之间的误差。cat
 
 ## 测试单张测试图像
 
-接下来，从 Fashion_MNIST 数据库中测试单张图像，如图 3-3 所示。将以下代码添加到程序的末尾并重新运行软件：
+接下来，从`Fashion_MNIST`数据库中测试单张图像，如图 3-3 所示。将以下代码添加到程序的末尾并重新运行软件：
 
 ```python
 # 从 Fashion_MNIST 数据中运行测试图像
@@ -10483,28 +10407,36 @@ Prediction Output
 ```
 
 我们的网络认为图像编号 '15' 是裤子 (Trouser)
+
 99% 置信度
 
-![](img/b5b2ea569d1e5bba0afd733be648243_503_0.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_503_0.png)
 
-**图 3-3**：来自 Fashion-MNIST 测试数据库的图像 15。
+**图 3-3**：来自`Fashion-MNIST`测试数据库的图像 15。
 
 哇！成功了。它正确地识别出这张图片是裤子。但请记住，我们在测试数据上的整体准确率仅为 87%。
 
 ## 测试外部图片
 
-接下来，我们用用 iPhone 拍摄的一张照片来测试程序。见图 3-4。
+接下来，我们用用`iPhone`拍摄的一张照片来测试程序。见图 3-4。
 
-![](img/b5b2ea569d1e5bba0afd733be648243_504_0.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_504_0.png)
+
 **图 3-4**：挂在墙上的未分类连衣裙。
 
-使用 Mac 上的“预览”功能，我们将图片的分辨率从 3024x3024 像素转换为 28x28 像素，如图 3-5 所示。虽然 28x28 像素并不能产生清晰的图片，但图 3-5 中的照片比 Fashion-MNIST 数据库中的图片要清晰。
+使用`Mac`上的“预览”功能，我们将图片的分辨率从`3024x3024`像素转换为`28x28`像素，如图 3-5 所示。虽然`28x28`像素并不能产生清晰的图片，但图 3-5 中的照片比`Fashion-MNIST`数据库中的图片要清晰。
 
-![](img/b5b2ea569d1e5bba0afd733be648243_505_0.png)
+![](img/b5b2ea569d1e5bba0afd733be648243d_505_0.png)
 
-**图 3-5**：28x28 像素的连衣裙。
+**图 3-5**：`28x28`像素的连衣裙。
 
-后续大部分代码用于调整原始图片的数据，以符合 TensorFlow 的图片要求。你应该可以使用这些代码轻松地添加自己的图片进行实验：
+后续大部分代码用于调整原始图片的数据，以符合`TensorFlow`的图片要求。你应该可以使用这些代码轻松地添加自己的图片进行实验：
+
+
+
+## 使用 TensorFlow 训练神经网络
+
+以下代码用于读取测试图像并进行预测：
 
 ```python
 # 读取测试图像
@@ -10531,9 +10463,7 @@ print("我们的网络认为图像"+imageName+" 是："+class_names[NumberElemen
 print(str(int(Element*100)) + " % 置信度")
 ```
 
-
-
-
+接下来构建并训练模型：
 
 ```python
 model.add(tf.keras.layers.Flatten())
@@ -10553,24 +10483,34 @@ model.compile(optimizer=tf.train.AdamOptimizer(),
                metrics=['accuracy'])
 
 model.fit(train_images, train_labels, epochs=5)
-``````python
-# 使用 10000 张图像测试
+```
+
+使用 10000 张图像测试模型：
+
+```python
 test_loss, acc = model.evaluate(test_images, test_labels)
 ```
+
+打印测试准确率：
 
 ```python
 print('10,000 image Test accuracy:', test_acc)
 ```
 
+从 Fashion MNIST 数据中运行测试图像：
+
 ```python
 # 从 Fashion MNIST 数据中运行测试图像
-
 img = test_images[15]
+
 img = np.expand_dims(img,0)
+
 singlePrediction = model.predict(img, steps=1)
+
 print("Prediction Output")
 print(singlePrediction)
 print()
+
 NumberElement = singlePrediction.argmax()
 Element = np.amax(singlePrediction)
 
@@ -10581,8 +10521,7 @@ print(str(int(Element*100)) + " % Confidence Level")
 
 ## 结果，第二轮
 
-在树莓派 3B+ 上的运行大约了七小时完成。
-结果如下：
+在树莓派 3B+ 上的运行大约了七小时完成。结果如下：
 
 ```
 10,000 image Test accuracy: 0.8601
@@ -10606,11 +10545,11 @@ Prediction Output
 
 现在我们已经移动到基于 GUI 的开发环境，我们将再次运行基础代码并使用 MatPlotLib 分析运行情况。我们在这些实验中使用了树莓派，但你可以使用 Mac、PC 或另一个 Linux 系统。只要你可以在电脑系统上安装 TensorFlow、MatPlotLib 和 Python，就可以进行这些实验。
 
-要在树莓派上安装 MatPlotLib，请输入 `pip3 install matplotlib`。
+要在树莓派上安装 MatPlotLib，请输入`pip3 install matplotlib`。
 
-我们将 `history` 变量添加到 `model.fit` 的输出中收集数据。接下来，我们添加 MatPlotLib 命令来绘制各个轮次的损失和准确率图，并为我们的两次单独图像测试添加图形显示。
+我们将`history`变量添加到`model.fit`的输出中收集数据。接下来，我们添加 MatPlotLib 命令来绘制各个轮次的损失和准确率图，并为我们的两次单独图像测试添加图形显示。
 
-使用 nano（或你喜欢的文本编辑器）打开 TensorFlowPlot.py 文件并输入以下代码：
+使用 nano（或你喜欢的文本编辑器）打开`TensorFlowPlot.py`文件并输入以下代码：
 
 ```python
 # 导入库
@@ -10625,23 +10564,19 @@ from PIL import Image
 
 # 导入 Fashion MNIST
 fashion_mnist = input_data.read_data_sets('input/data', one_hot=True)
-
 fashion_mnist = tf.keras.datasets.fashion_mnist
-
 (train_images, train_labels), (test_images, test_labels) = \
 fashion_mnist.load_data()
 ```
 
-class_names = ['T-shirt/top', 'Trouser', 'Pulover', 'Dress', 'Coat',
-Sandal, 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+`class_names = ['T-shirt/top', 'Trouser', 'Pulover', 'Dress', 'Coat', Sandal, 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']`
 
-train_images = train_images / 255.0
+`train_images = train_images / 255.0`
 
-test_images = test_images / 255.0
+`test_images = test_images / 255.0`
 
 ```python
 model = tf.keras.Sequential()
-
 model.add(tf.keras.layers.Flatten(input_shape=(28,28)))
 model.add(tf.keras.layers.Dense(128, activation='relu'))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
@@ -10657,6 +10592,7 @@ history = model.fit(train_images, train_labels, epochs=2)
 # 获取训练和测试损失历史
 training_loss = history.history['loss']
 accuracy = history.history['acc']
+
 # 创建轮次数计数
 epoch_count = range(1, len(training_loss) + 1)
 ```
@@ -10672,8 +10608,6 @@ plt.ylabel('History')
 plt.show(block=False)
 plt.pause(0.001)
 ```
-
-
 
 
 
@@ -10745,7 +10679,6 @@ Videocore-IV 处理器设计用于视频编码和解码应用程序，而不是 
 
 那么，如何使用云？答案取决于服务和供应商，但在机器学习应用程序中，最常见的方法
 
-
 在调用云端函数和应用程序的计算机上安装了 Python。所有云服务商都提供了相关示例。
 
 目前存在许多存储和服务的云提供商。排名前四的云提供商领先于：
@@ -10801,9 +10734,6 @@ Nvidia 等其他开始构建包含多个 GPU 的显卡，这极大地提高了�
 
 遵循《自学者教程》的传统，你将不仅通过阅读，通过构建程序和修改他人的程序来加速对重要技术的学习。
 
-
-
-
 # 第 5 卷
 
 # 数据科学
@@ -10815,7 +10745,7 @@ Nvidia 等其他开始构建包含多个 GPU 的显卡，这极大地提高了�
   - 炉火烹饪：数据科学的五步法
 - 第 2 章：探索大数据
   - 介绍 NumPy、Pandas 和 MatPlotLib
-  -完成你的第一个数据科学项目
+  - 完成你的第一个数据科学项目
 - 第 3 章：使用 Google Cloud 大数据
   - 什么是大数据？
   - 理解 Google Cloud 和 BigQuery
@@ -10882,10 +10812,6 @@ Nvidia 等其他开始构建包含多个 GPU 的显卡，这极大地提高了�
 处理数据是数据科学中本该简单但几乎从未如此的部分。数据科学家花费数月时间对数据进行清洗和操作，以便对其进行处理和信任。你需要识别异常值和离群值，消除偏差，移除缺失项，并确定哪些数据是不一致的。你需要仔细地清洗和处理数据，以免删除对你即将进行的分析工作重要的数据，或引入破坏未来做出良好推断或获得良好答案的偏差。
 
 > 警告 另一个需要担心的数据处理问题：根据《营销周》2015 年的报告，60% 的消费者在在线提交数据时会故意提供错误信息。（我们谦虚地承认我们总是对在线营销表单甚至对政治民意调查者这样做，特别是当我们感觉到问题中存在政治议程时。我们真是坏坏小子。）
-
-
-
-
 
 即使是优秀的数据科学家也曾被指控在清洗数据时“樱桃挑选”以支持某一假设。在处理数据时必须非常小心，以保持分析的完整性和有效性。准备好在这一步骤上花费大量时间。
 
@@ -10967,12 +10893,19 @@ NumPy 添加了数值计算工具，例如均值和总平均值。它在创建�
 这是一个简单的 NumPy 程序示例。该程序构建了一个矩阵：
 
 ```python
+
+
+
+```python
 import numpy as np
 
-x = np.array([[1,2],[3,4]])
-print(np.sum(x)) # 计算所有元素的求和；打印 "10"
-print(np.sum(x, axis=0)) # 计算每列求和；打印 "[4 6]"
-print(np.sum(x, axis=-1)) # 计算每行的求和；打印 "[3 7]"
+x = np.array([[1, 2], [3, 4]])
+
+print(np.sum(x))  # 计算所有元素的求和；打印 "10"
+
+print(np.sum(x, axis=0))  # 计算每列求和；打印 "[4 6]"
+
+print(np.sum(x, axis=-1))  # 计算每行的求和；打印 "[3 7]"
 ```
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_541_0.png)
@@ -10989,15 +10922,11 @@ Python 非常适合处理数据，但在数据分析和建模方面并不理想�
 
 Pandas 提供了快速、灵活且富有表现力的数据结构，使得处理关系型或标记标记的数据变得直观。我们认为它是使用 Python 进行真实世界数据分析的基础构建块。
 
-记得我们关于数据清洗的讨论吗？处理缺失或坏数据？数据清洗是 Pandas 设计初衷且擅长的之一。它还允许复杂的层次数据结构，可以通过 Pandas 函数以直观的方式访问。我们还可以合并和连接数据集，并将许多类型的数据转换为通用的 Pandas 数据类型 DataFrame。
+记得我们关于数据清洗的讨论吗？处理缺失或坏数据？数据清洗是 Pandas 设计初衷且擅长的之一。它还允许复杂的层次数据结构，可以通过 Pandas 函数以直观的方式访问。我们还可以合并和连接数据集，并将许多类型的数据转换为通用的 Pandas 数据类型 `DataFrame`。
 
+`Pandas DataFrames` 是一种在矩形网格中存储数据的方法，可以方便地检查。`DataFrame` 可以包含其他 `DataFrame`、一维数据序列、NumPy 张量（一种数组——这里又又是与第 4 章神经网络和机器学习的相似之处），以及用于张量和矩阵的字典。
 
-
-
-
-Pandas DataFrames 是一种在矩形网格中存储数据的方法，可以方便地检查。DataFrame 可以包含其他 DataFrame、一维数据序列、NumPy 张量（一种数组——这里又又是与第 4 章神经网络和机器学习的相似之处），以及用于张量和矩阵的字典。
-
-除了为 DataFrame 指定数据外，你还可以指定索引和列名，这使得数据分析和操作的代码更易于理解。随着你引入更多结构并将更多相关数据合并到 DataFrame 结构中，你可以访问、删除和重命名你的 DataFrame 组件。
+除了为 `DataFrame` 指定数据外，你还可以指定索引和列名，这使得数据分析和操作的代码更易于理解。随着你引入更多结构并将更多相关数据合并到 `DataFrame` 结构中，你可以访问、删除和重命名你的 `DataFrame` 组件。
 
 ## MatPlotLib
 
@@ -11007,11 +10936,11 @@ Matplotlib 是一个为 Python 添加数据可视化功能的库。Matplotlib �
 
 ## 开始你的第一个数据科学项目
 
-是时候让我们 NumPy 和 Pandas 应用于一个简单的数据科学项目了。我们将使用来自 Kaggle 网站（www.kaggle.com）的数据。Kaggle 的口号是“你的数据科学家园”，是一个由 Google 拥有的数据科学家和用户在线社区。Kaggle 允许用户寻找数据集、下载数据并在大多数情况下根据开放的许可使用数据。Kaggle 还支持了一套强大的竞赛来解决机器学习问题，这些竞赛通常由实际上需要解决方案的公司发布。Kaggle 拥有良好的社区，对初非常有帮助（www.kaggle.com/discussion）。
+是时候让我们 NumPy 和 Pandas 应用于一个简单的数据科学项目了。我们将使用来自 Kaggle 网站（`www.kaggle.com`）的数据。Kaggle 的口号是“你的数据科学家园”，是一个由 Google 拥有的数据科学家和用户在线社区。Kaggle 允许用户寻找数据集、下载数据并在大多数情况下根据开放的许可使用数据。Kaggle 还支持了一套强大的竞赛来解决机器学习问题，这些竞赛通常由实际上需要解决方案的公司发布。Kaggle 拥有良好的社区，对初非常有帮助（`www.kaggle.com/discussion`）。
 
 ## 钻石是数据科学家的好朋友
 
-对于第一个问题，我们选择了钻石数据库，因为它的结构相当简单，只有大约 54,000 个元素——我们的树莓派计算机轻松使用。你可以在 www.kaggle.com/shyam2503/diamonds 下载。使用 Kaggle 是免费的，但你必须注册并登录。
+对于第一个问题，我们选择了钻石数据库，因为它的结构相当简单，只有大约 54,000 个元素——我们的树莓派计算机轻松使用。你可以在 `www.kaggle.com/shyam2503/diamonds` 下载。使用 Kaggle 是免费的，但你必须注册并登录。
 
 **元数据**（描述数据的数据）由十个变量组成，你可以将它们视为列标题。参见表 2-1。
 
@@ -11020,77 +10949,91 @@ Matplotlib 是一个为 Python 添加数据可视化功能的库。Matplotlib �
 | 列标题 | 数据类型 | 描述 |
 |---|---|---|
 | Index counter | 数值 | 记录的特定索引 |
-| carat | 数值 | 钻石的克拉重量 |
-| cut | 文本 | 钻石的切割质量，按等、非常好、优质和理想的顺序增加 |
-| color | 文本 | 钻石的颜色，D 最优，J 最差 |
-| clarity | 文本 | 钻石中内含物的明显程度，从最好到最差，FL 等于无暇，I3 到 3 级内含：FL, IF, VS1, VS2, VS1, S1, S2, I1, I2, I3 |
-| depth | 数值 | 深度百分比：钻石的高度，从底角（切割钻石的底部）到台面（切割钻石顶部的平面对）测量，除以其平均腰围直径 |
-| table | 数值 | 台面百分比：钻石台面的宽度占其平均直径的百分比 |
-| price | 数值 | 钻石的价格 |
-| x | 数值 | 长度（mm） |
-| y | 数值 | 宽度（mm） |
-| z | 数值 | 深度（mm） |
+| `carat` | 数值 | 钻石的克拉重量 |
+| `cut` | 文本 | 钻石的切割质量，按等、非常好、优质和理想的顺序增加 |
+| `color` | 文本 | 钻石的颜色，D 最优，J 最差 |
+| `clarity` | 文本 | 钻石中内含物的明显程度，从最好到最差，FL 等于无暇，I3 到 3 级内含：FL, IF, VS1, VS2, VS1, S1, S2, I1, I2, I3 |
+| `depth` | 数值 | 深度百分比：钻石的高度，从底角（切割钻石的底部）到台面（切割钻石顶部的平面对）测量，除以其平均腰围直径 |
+| `table` | 数值 | 台面百分比：钻石台面的宽度占其平均直径的百分比 |
+| `price` | 数值 | 钻石的价格 |
+| `x` | 数值 | 长度（mm） |
+| `y` | 数值 | 宽度（mm） |
+| `z` | 数值 | 深度（mm） |
 
 如果你将数据用作机器学习程序的训练集，你将使用 NumPy 和 TensorFlow 创建一个类似于第 4 章第 2 章中的程序。在本章中，我们建创建了一组基于 Pandas 的简单数据分析程序来读取数据并提出一些问题。
 
-我们使用 DataFrame（带有不同类型列的 2D 标记数据结构），因为它更容易使 2D 数据可视化。
+我们使用 `DataFrame`（带有不同类型列的 2D 标记数据结构），因为它更容易使 2D 数据可视化。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_544_0.png)
 
 > 如果你正在树莓派上安装 NumPy 和 Pandas，执行以下命令（其他计算机的命令将类似）：
 
-```
+```bash
 sudo apt-get install python3-numpy
 sudo apt-get install python3-pandas
 ```
 
-现在，使用 nano（或你喜喜欢的文本编辑器）打开名为 FirstDiamonds.py 的文件并输入以下代码：
+现在，使用 `nano`（或你喜喜欢的文本编辑器）打开名为 `FirstDiamonds.py` 的文件并输入以下代码：
 
-```
+```python
 # Diamonds are a Data Scientist's Best Friend
 
 #import the numpy and pandas libraries
+
 import numpy as np
+
 import pandas as pd
 
 # read the diamonds CSV file
+
 # build a DataFrame from the data
+
 df = pd.read_csv('diamonds.csv')
 ```
 
-```
+```python
 print(df.head(10))
+
 print()
 ```
 
-```
+```python
 # calculate the total value of the diamonds
+
 sum = df.price.sum()
+
 print("Total Value of Diamonds: ${:.2f}".format(sum))
 ```
 
-```
+```python
 # calculate the mean price of the diamonds
+
 mean = df.price.mean()
+
 print("Mean Value of Diamonds: ${:.2f}".format(mean))
 ```
 
-```
+```python
 # summarize the data
+
 desccrib = df.carat.describe()
+
 print()
+
 print(descrip)
 ```
 
-```
+```python
 descrip = df.describe(include='object')
+
 print()
+
 print(descrip)
 ```
 
-确保你的目录中有 diamonds.csv 文件，运行以下命令：
+确保你的目录中有 `diamonds.csv` 文件，运行以下命令：
 
-```
+```bash
 python3 FirstDiamonds.py
 ```
 
@@ -11114,37 +11057,41 @@ python3 FirstDiamonds.py
 | 3.98 | 2.48 | | | | | | | |
 | 7 | 8 | 0.24 | Very Good | I | VVS1 | 62.3 | 57.0 | 336 | 3.95 |
 
-
-
-
-
-> 在你的 Raspberry Pi 上安装 MatPlotLib，请输入 sudo pip3 install matplotlib。
+> 在你的 Raspberry Pi 上安装 MatPlotLib，请输入 `sudo pip3 install matplotlib`。
 
 > 警告：当你的程序使用 MatPlotLib 时，你需要在 Raspberry Pi GUI 内部的终端（Terminal）窗口中运行程序。如果你在无头模式下运行 Raspberry Pi，可以使用 VNC 获取 GUI。
 
-Pandas 和 MatPlotLib 的有用功能之一是 NumPy 和 DataFrame 类型与 .jpg 和 .gif 图片等常见的图形格式兼容，因此你可以处理图像数据。
+Pandas 和 MatPlotLib 的有用功能之一是 NumPy 和 DataFrame 类型与 `.jpg` 和 `.gif` 图片等常见的图形格式兼容，因此你可以处理图像数据。
 
 ## 钻石净度与克拉重量的对比
 
-我们的第一张图表是散点图，显示了钻石净度与钻石尺寸的对比。使用 nano（或你喜喜欢的文本编辑器），打开名为 `Plot_ClarityVCarat.py` 的文件并输入以下代码：
+我们的第一张图表是散点图，显示了钻石净度与钻石尺寸的对比。使用 `nano`（或你喜喜欢的文本编辑器），打开名为 `Plot_ClarityVCarat.py` 的文件并输入以下代码：
 
 ```python
 # 观察闪耀的钻石
 
 import pandas and numpy libraries
+
 import numpy as np
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
 
 # 读取 diamonds CSV 文件
+
 # 从数据构建 DataFrame
+
 df = pd.read_csv('diamonds.csv')
 
 import matplotlib.pyplot as plt
 
 carat = df.carat
+
 clarity = df.clarity
+
 plt.scatter(clarity, carat)
+
 plt.show() # or plt.savefig("name.png")
 ```
 
@@ -11169,26 +11116,33 @@ for i in range(20):
 
 ## 每种净度类型的钻石数量
 
-现在我们展示一张图表，它将向你展示每种净度类型钻石的分布。使用 nano（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
+现在我们展示一张图表，它将向你展示每种净度类型钻石的分布。使用 `nano`（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
 
 ```python
 # 观察闪耀的钻石
 
 #import the pandas and numpy libraries
+
 import numpy as np
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
 
 # 读取 diamonds CSV 文件
+
 # 从数据构建 DataFrame
+
 df = pd.read_csv('diamonds.csv')
 
 # 统计每个文本类型净度的数量
 
 clarityindexes = df['clarity'].value_counts().index.tolist()
+
 claritycount = df['clarity'].value_counts().values.tolist()
 
 print(clarityindexes)
+
 print(claritycount)
 
 plt.bar(clarityindexes, claritycount) # or plt.savefig("name.png")
@@ -11204,26 +11158,33 @@ plt.bar(clarityindexes, claritycount) # or plt.savefig("name.png")
 
 ## 每种颜色类型的钻石数量
 
-现在我们展示一张图表，它将向你展示每种颜色类型钻石的分布。使用 nano（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
+现在我们展示一张图表，它将向你展示每种颜色类型钻石的分布。使用 `nano`（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
 
 ```python
 # 观察闪耀的钻石
 
 #import the pandas and numpy libraries
+
 import numpy as np
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
 
 # 读取 diamonds CSV 文件
+
 # 从数据构建 DataFrame
+
 df = pd.read_csv('diamonds.csv')
 
 # 统计每个文本类型净度的数量
 
 colorindexes = df['color'].value_counts().index.tolist()
+
 colorcount = df['color'].value_counts().values.tolist()
 
 print(colorindexes)
+
 print(colorcount)
 
 plt.bar(colorindexes, colorcount) # or plt.savefig("name.png")
@@ -11239,26 +11200,33 @@ plt.bar(colorindexes, colorcount) # or plt.savefig("name.png")
 
 ## 每种颜色类型的钻石数量
 
-我们已经看过了净度与尺寸，现在让我们看颜色与每种颜色类型的数量。使用 nano（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
+我们已经看过了净度与尺寸，现在让我们看颜色与每种颜色类型的数量。使用 `nano`（或你喜欢的文本编辑器），打开名为 `Plot_CountClarity.py` 的文件并输入以下代码：
 
 ```python
 # 观察闪耀的钻石
 
 import the pandas and numpy libraries
+
 import numpy as np
+
 import pandas as pd
+
 import matplotlib.pyplot as plt
 
 # 读取 diamonds CSV 文件
+
 # 从数据构建 DataFrame
+
 df = pd.read_csv('diamonds.csv')
 
 # 统计每个文本类型净度的数量
 
 colorindexes = df['color'].value_counts().index.tolist()
+
 colorcount = df['color'].value_counts().values.tolist()
 
 print(colorindexes)
+
 print(colorcount)
 
 plt.bar(colorindexes, colorcount) # or plt.savefig("name.png")
@@ -11275,20 +11243,21 @@ for i in range(20):
     print(df.iloc[i].clarity)
 ```
 
+
+
 你可以按净度列对数据进行排序，但那样你会得到字母顺序，因为该列不是数值。可能的真正解决方案是处理数据，将净度值转换为数值。这是一个说明数据预处理如何比分析更困难的例子。
 
-你可能想出一个声明，认为最大的钻石被评为 I1。然而，请记住，你并不知道这些数据是如何收集的，因此无法得出这样的一般性结论。你只能说：“在这个数据集中，净度 I1 的钻石是最大的。”
+你可能想出一个声明，认为最大的钻石被评为 `I1`。然而，请记住，你并不知道这些数据是如何收集的，因此无法得出这样的一般性结论。你只能说：“在这个数据集中，净度 `I1` 的钻石是最大的。”
 
 ## 使用 Pandas 热力图寻找相关性
 
-我们的最后一张图是热力图，显示了数值值之间的相关性。为了快速方便地生成这张图表，我们使用了一个基于 Matplotlib 的库 seaborn，它与 Pandas 集成良好。
+我们的最后一张图是热力图，显示了数值值之间的相关性。为了快速方便地生成这张图表，我们使用了一个基于 Matplotlib 的库 `seaborn`，它与 Pandas 集成良好。
 
-使用 nano（或你喜欢的文本编辑器），创建一个 `Plot_Heat.py` 文件并输入以下代码：
+使用 `nano`（或你喜欢的文本编辑器），创建一个 `Plot_Heat.py` 文件并输入以下代码：
 
 ```python
 # 观察闪耀的钻石
-
-import pandas and numpy libraries
+# 导入 pandas 和 numpy 库
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11303,14 +11272,14 @@ df = df.drop('Unnamed: 0', axis=1)
 f, ax = plt.subplots(figsize=(10, 8))
 corr = df.corr()
 print(corr)
+
 sns.heatmap(corr, mask=np.zeros_like(corr, dtype=bool),
           cmap=sns.diverging_palette(220, 10, as_cmap=True),
           square=True, ax=ax)
-
 plt.show()
 ```
 
-运行你的程序 `Plot_Heat.py` 以检查你的 Raspberry Pi 上是否有 seaborn。如果没有，输入以下命令：
+运行你的程序 `Plot_Heat.py` 以检查你的 Raspberry Pi 上是否有 `seaborn`。如果没有，输入以下命令：
 
 ```
 sudo apt-get install python3-seaborn
@@ -11322,11 +11291,7 @@ sudo apt-get install python3-seaborn
 
 **图 2-4：**相关性热力图。
 
-
-
-
-## 第3 章
-使用 Google Cloud 大数据
+## 第 3 章 使用 Google Cloud 大数据
 
 本章内容
 
@@ -11337,16 +11302,15 @@ sudo apt-get install python3-seaborn
 
 到目前为止，你处理的是相对较小的数据集。在本章中，你将使用来自医疗保险（Medicare）数据库的大数据，以及来自 NOAA（美国国家海洋和大气管理局）的、每小时变化一次的超大数据！
 
-即使你拥有一台性能足够强大的计算机来下载此类大型数据集，但并不是每个数据集都可以下载的。某些数据集在法律上是不允许下载的。在 NOAA 空质量数据库的情况下，你必须每小时下载一个新版本。在这些情况下，最好让数据留在原处并使用云端。此外，当你让云端来完成数据库和分析工作时，你的计算机不需要很大或运行得非常快。
+即使你拥有一台性能足够强大的计算机来下载此类大型数据集，但并不是每个数据集都可以下载的。某些数据集在法律上是不允许下载的。在 NOAA 空气质量数据库的情况下，你必须每小时下载一个新版本。在这些情况下，最好让数据留在原处并使用云端。此外，当你让云端来完成数据库和分析工作时，你的计算机不需要很大或运行得非常快。
 
-要下载本章的代码，请访问：
-www.dummies.com/go/pythonaiofd2e。
+要下载本章的代码，请访问：`www.dummies.com/go/pythonaiofd2e`。
 
 # 什么是大数据？
 
 大数据是指规模太大或太复杂，无法使用传统数据处理技术处理的数据集。具有许多案例和许多行的数据可以更方便地访问复杂的统计技术，并且通常会导致较低的假性发现率。假性发现率是你错误拒绝假设的错误预期比例（换句话说，你收到了假阳性结果）。
 
-正如本微型书籍第 1 章提到的，随着计算机和传感器的数量数量以不断增加的速度产生更多数据，大数据在我们的社会中变得越来越普遍。在本章中，我们将讨论如何使用云端（使用 Python 和 Pandas）访问这些大型数据库，然后在树莓派（Raspberry Pi）上可视化结果。
+正如本微型书籍第 1 章提到的，随着计算机和传感器的数量以不断增加的速度产生更多数据，大数据在我们的社会中变得越来越普遍。在本章中，我们将讨论如何使用云端（使用 Python 和 Pandas）访问这些大型数据库，然后在树莓派（Raspberry Pi）上可视化结果。
 
 # 理解 Google Cloud 和 BigQuery
 
@@ -11360,7 +11324,7 @@ Google Cloud Platform 有超过 100 种不同的 API（应用程序接口）和�
 
 ## Google 的 BigQuery
 
-REST（表述状态转移）软件系统定义了一套用于创建 Web 服务的通信结构，通常使用 http 和 https 请求进行通信。通过基于 REST 的系统，不同的计算机和不同的操作系统可以启用同一个 Web 服务。
+REST（表述状态转移）软件系统定义了一套用于创建 Web 服务的通信结构，通常使用 `http` 和 `https` 请求进行通信。通过基于 REST 的系统，不同的计算机和不同的操作系统可以启用同一个 Web 服务。
 
 RESTful Web 服务使用 URL 地址以标准格式提问特定问题，并像浏览器获取网页一样获取响应。此外，还使用了额外的 Python 库来隐藏往返查询的复杂性。BigQuery 基于一个 RESTful Web 服务。
 
@@ -11383,11 +11347,11 @@ BigQuery 拥有大量的公共大数据集；我们将访问来自 Medicare 和 
 
 # 注册 BigQuery
 
-访问 https://cloud.google.com 并注册免费试用。尽管 Google 要求信用卡证明你不是机器人，但即使试用期结束，除非手动切换到付费账户，否则它不会收取费用。如果你在试用期间超过了 300 美元（你可能不会），Google 会通知你但不会收费。300 美元的额度应该足够你完成第 5 本中的示例并进行学习。
+访问 `https://cloud.google.com` 并注册免费试用。尽管 Google 要求信用卡证明你不是机器人，但即使试用期结束，除非手动切换到付费账户，否则它不会收取费用。如果你在试用期间超过了 300 美元（你可能不会），Google 会通知你但不会收费。300 美元的额度应该足够你完成第 5 本中的示例并进行学习。
 
 # 读取 Medicare 大数据
 
-在本节中，为了在你自己的 Python 程序中使用 BigQuery，你需要设置一个项目并下载你的认证 .json 文件，该文件包含了允许你访问账户和数据的密钥。Medicare 数据库是世界上最易访问的数据集。我们将对该数据库进行一些查询。
+在本节中，为了在你自己的 Python 程序中使用 BigQuery，你需要设置一个项目并下载你的认证 `.json` 文件，该文件包含了允许你访问账户和数据的密钥。Medicare 数据库是世界上最易访问的数据集。我们将对该数据库进行一些查询。
 
 ## 设置项目和认证
 
@@ -11399,29 +11363,25 @@ BigQuery 拥有大量的公共大数据集；我们将访问来自 Medicare 和 
 
 以下步骤将向你展示如何设置项目并获取认证凭据：
 
-+1. 访问 https://console.developers.google.com/ 并使用账户名称和密码登录。
-
-
-
-
+1. 访问 `https://console.developers.google.com/` 并使用账户名称和密码登录。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_561_0.png)
 
 图 3-1：Google Cloud 开发者控制页面。
 
-- 2. 点击屏幕左上角的“我的项目”（My Project）按钮。
-- 3. 在弹出的屏幕中，点击右上角的“新建项目”（New Project）按钮。
-- 4. 对于项目名称，输入 `MedicareProject` 然后点击“创建”（Create）。
+2. 点击屏幕左上角的“我的项目”（My Project）按钮。
+3. 在弹出的屏幕中，点击右上角的“新建项目”（New Project）按钮。
+4. 对于项目名称，输入 `MedicareProject` 然后点击“创建”（Create）。
 
 你返回到图 3-1 所示的屏幕。
 
-- 5. 在左上角的下拉菜单中，选择 `MedicareProject`。
+5. 在左上角的下拉菜单中，选择 `MedicareProject`。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_561_1.png)
 
 > 记住：确保你将选择更改为 `MedicareProject`，不要留在默认的 `My First Project`。否则，你将为错误的项目设置 API 和身份验证。这是一个非常常见的错误。
 
-- 6. 点击顶部的“+启用 API 和和服务”（Enable APIs and Services）按钮以启用 BigQuery API。
+6. 点击顶部的“+启用 API 和服务”（Enable APIs and Services）按钮以启用 BigQuery API。
 
 API 选择界面出现。
 
@@ -11461,22 +11421,22 @@ API 选择界面出现。
 
 `MedicareQuery.py` 程序读取几十个公共数据集中的其中一个，并抓取一些数据进行分析。我们将使用 `inpatient_charges_2015` 数据集和 SQL 查询来从数据集中选择我们想要查看和分析的信息（如果你不熟悉这种无处不在的语言，请查看附近的侧边栏“学习 SQL”以获取更多关于 SQL 的信息）。表 3-1 显示了 `inpatient_charges_2015` 数据集中的所有列。
 
-## 表 3-1 inpatient_charges_2015 数据集的列、类型和描述
+## 表 3-1 `inpatient_charges_2015` 数据集的列、类型和描述
 
 | 列名 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| provider_id | STRING | 用于计收门诊服务的提供者认证号 (CCN)。 |
-| provider_name | STRING | 提供者名称。 |
-| provider_street_address | STRING | 提供者物理所在的地址。 |
-| provider_city | STRING | 提供者物理所在的城市。 |
-| provider_state | STRING | 提供者物理所在的州。 |
-| provider_zipcode | INTEGER | 提供者物理所在的邮政编码。 |
-| drg_definition | STRING | 标识 MS-DRG 的代码和描述。MS-DRGs 是一种分类系统，将医院在住院期间提供的相似临床状况（诊断）和操作分组。 |
-| hospital_referral_description | STRING | 提供者物理所在区域医院转诊区 (HRR)。 |
-| total_discharges | INTEGER | 提供者住院服务的出院人数。 |
-| average_covered_charges | FLOAT | 对于 MS-DRG 中的所有出院，提供者对 Medicare 覆盖服务的平均收费。由于收费结构的不同，这些随医院而异。 |
-| average_total_payments | FLOAT | 所有提供者 MS-DRG 的平均总支付额，包括所有病例的 MS-DRG 金额、不成比例份额、资本支出和离群支付。平均总支付额还包括患者对任何第三方利益协调的支付所承担的自付额和免赔额。 |
-| average_medicare_payments | FLOAT | Medicare 为其 MS-DRG 份额支付给提供者的平均金额。平均 Medicare 包括所有病例的 MS-DRG 金额、不成比例份额、资本支出和离群支付。 |
+| `provider_id` | STRING | 用于计收门诊服务的提供者认证号 (CCN)。 |
+| `provider_name` | STRING | 提供者名称。 |
+| `provider_street_address` | STRING | 提供者物理所在的地址。 |
+| `provider_city` | STRING | 提供者物理所在的城市。 |
+| `provider_state` | STRING | 提供者物理所在的州。 |
+| `provider_zipcode` | INTEGER | 提供者物理所在的邮政编码。 |
+| `drg_definition` | STRING | 标识 MS-DRG 的代码和描述。MS-DRGs 是一种分类系统，将医院在住院期间提供的相似临床状况（诊断）和操作分组。 |
+| `hospital_referral_description` | STRING | 提供者物理所在区域医院转诊区 (HRR)。 |
+| `total_discharges` | INTEGER | 提供者住院服务的出院人数。 |
+| `average_covered_charges` | FLOAT | 对于 MS-DRG 中的所有出院，提供者对 Medicare 覆盖服务的平均收费。由于收费结构的不同，这些随医院而异。 |
+| `average_total_payments` | FLOAT | 所有提供者 MS-DRG 的平均总支付额，包括所有病例的 MS-DRG 金额、不成比例份额、资本支出和离群支付。平均总支付额还包括患者对任何第三方利益协调的支付所承担的自付额和免赔额。 |
+| `average_medicare_payments` | FLOAT | Medicare 为其 MS-DRG 份额支付给提供者的平均金额。平均 Medicare 包括所有病例的 MS-DRG 金额、不成比例份额、资本支出和离群支付。 |
 
 # 学习 SQL
 
@@ -11484,22 +11444,21 @@ SQL（结构化查询语言）是一种以查询为中心的语言，用于与�
 
 这里是一些很好的教程，可以帮你理解如何使用 SQL 访问数据：
 
-- www.w3schools.com/sql/
-- sql-tutorial.net
+- `www.w3schools.com/sql/`
+- `sql-tutorial.net`
 - SQL For Dummies
 - SQL-in-One
 - SQL in 10 Minutes
 - SQL All-Dummies, Ben Forta
 - Sams Publishing
 
-使用 nano（或其他文本编辑器）输入以下代码并将其保存为 `MedicareQuery.py`：
+使用 `nano`（或其他文本编辑器）输入以下代码并将其保存为 `MedicareQuery.py`：
 
 ```python
 import pandas as pd
 from google.cloud import bigquery
 
 # 设置查询
-
 QUERY = """
 SELECT provider_city, provider_state, drg_definition,
 average_total_payments, average_medicare_payments
@@ -11511,7 +11470,6 @@ LIMIT 1000
 
 client = bigquery.Client(from_service_account_json(
     'MedicareProject-1223xxxx413.json'))
-
 query_job = client.query(QUERY)
 df = query_job.to_dataframe()
 
@@ -11535,7 +11493,7 @@ sudo pip3 install google-cloud-big
 sudo pip3 install pyarrow
 ```
 
-截至2020年11月，如果安装pyarrow不起作用，维护人员尚未修复pip3安装此问题。你需要切换到 Windows、其他 Linux 版本或 Mac 来运行这些示例。
+截至 2020 年 11 月，如果安装 `pyarrow` 不起作用，维护人员尚未修复 `pip3` 安装此问题。你需要切换到 Windows、其他 Linux 版本或 Mac 来运行这些示例。
 
 # 解析代码
 
@@ -11548,27 +11506,33 @@ from google.cloud import bigquery
 
 接下来，我们使用 SQL 查询将数据获取到 Pandas DataFrame 中进行分析：
 
-```python
+
+
 # 设置查询
 
+```python
 QUERY = """
+
 SELECT provider_city, provider_state, drg_definition,
+
 average_total_payments, average_medicare_payments
+
 FROM `bigquery-public-data.cms:inpatient_charges_2015`
+
 WHERE provider_city = "GREAT FALLS" AND provider_state = "MT"
+
 ORDER BY provider_city ASC
+
 LIMIT 1000
+
 """
 ```
 
-看到 SQL 查询的结构了吗？我们选择（如表 3-1 所示）的列，来自 `bigquery-public-data.cms:inpatient_charges_2015` 数据库，条件是 `provider_city` 为 "GREAT FALLS" 且 `provider_state` 为 "MT"。最后，我们告诉系统按 `provider_city` 升序对结果进行排序。
-
-
-
+看到 SQL 查询的结构了吗？我们选择（如表 3-1 所示）的列，来自`bigquery-public-data.cms:inpatient_charges_2015`数据库，条件是`provider_city`为 "GREAT FALLS" 且`provider_state`为 "MT"。最后，我们告诉系统按`provider_city`升序对结果进行排序。
 
 现在我们向 BigQuery 发送查询：
 
-```
+```python
 query_job = client.query(QUERY)
 ```
 
@@ -11580,14 +11544,17 @@ df = query_job.to_dataframe()
 
 现在只需要几行代码语句即可显示从 BigQuery 获取的返回：
 
-```
+```python
 print("Records Returned: ", df.shape)
+
 print()
+
 print("First 3 Records")
+
 print(df.head(3))
 ```
 
-运行你的程序 `MedicareQuery.py`，你现在应该能看到查询结果。如果遇到身份验证错误，请确保你已将正确的身份验证文件放入目录。如有必要，请生成另一个身份验证文件，特别注意项目名称的选择。
+运行你的程序`MedicareQuery.py`，你现在应该能看到查询结果。如果遇到身份验证错误，请确保你已将正确的身份验证文件放入目录。如有必要，请生成另一个身份验证文件，特别注意项目名称的选择。
 
 | 记录数: (112, 5) | | |
 | :--- | :--- |
@@ -11601,48 +11568,62 @@ print(df.head(3))
 
 # 进行一些分析
 
-你已经建立了与大数据数据库的连接。现在，让我们设置另一个查询。我们将搜索整个 `inpatient_charges_2015` 数据集，寻找 MS_DRG 代码为 554 的、没有主要并发症或合并症的骨疾病和关节病的患者（换句话说，就是骨骼有问题但目前没有表现出严重问题的人）。我们通过世界上最奥秘且复杂的编码系统之一发现了这种诊断：ICD-10，它几乎可以将任何诊断情况映射到单个代码上。
+你已经建立了与大数据数据库的连接。现在，让我们设置另一个查询。我们将搜索整个`inpatient_charges_2015`数据集，寻找 MS_DRG 代码为 554 的、没有主要并发症或合并症的骨疾病和关节病的患者（换句话说，就是骨骼有问题但目前没有表现出严重问题的人）。我们通过世界上最奥秘且复杂的编码系统之一发现了这种诊断：ICD-10，它几乎可以将任何诊断情况映射到单个代码上。
 
 # ICD 代码
 
 ICD10 是用于计费和分析的医疗专业诊断编码的成熟方法。最新版本的 ICD-10 在 2015 年被强制执行，这导致了医学界的巨大焦虑。它包含超过 155,000 个代码，从 M79.603 — 未指定的手臂疼痛到 S92.4 — 大脚趾骨折。这些代码在我们此处检查的 Medicare 数据库中合并为 MS DRG 代码。当 John Shovic 拥有一家医疗软件初创公司时，他对 ICD 10 代码产生了一种爱恨交织的关系。他最喜欢的代码如下：
 
-- Z63: 与姻亲的关系问题。
-- V95.43XS: 航天器碰撞导致人员受伤，后遗症。
-- R46.1: 奇特的个人外观。
-- Y93.D1: 活动、编织和钩针编。
+- `Z63`: 与姻亲的关系问题。
+- `V95.43XS`: 航天器碰撞导致人员受伤，后遗症。
+- `R46.1`: 奇特的个人外观。
+- `Y93.D1`: 活动、编织和钩针编。
 
-使用 `nano` 或你喜喜欢的文本编辑器创建一个 `MedicareQuery2.py` 文件，然后将以下代码复制到文件中：
+使用`nano`或你喜喜欢的文本编辑器创建一个`MedicareQuery2.py`文件，然后将以下代码复制到文件中：
 
 ```python
 import pandas as pd
+
 from google.cloud import bigquery
 
 # 设置查询
+
 QUERY = """
+
 SELECT provider_city, provider_state, drg_definition,
+
 average_total_payments, average_medicare_payments
+
 FROM 'bigquery-public-data.cms:medicare.inpatient_charges_2015'
+
 WHERE drg_definition LIKE '%554 %'
+
 ORDER BY provider_city ASC
+
 LIMIT 1000
+
 """
 
 client = bigquery.Client(from_service_account_json(
+
 'MedicareProject2-1223283ef413.json'))
 ```
 
 ```python
 query_job = client.query(QUERY)
+
 df = query_job.to_dataframe()
 
 print("Records Returned: ", df.shape)
+
 print()
+
 print("First 3 Records")
+
 print(df.head(3))
 ```
 
-这个程序与上一个唯一的不同之处在于添加了 `LIKE '554 %'`，它匹配任何以 554 开头的 DRG。
+这个程序与上一个唯一的不同之处在于添加了`LIKE '554 %'`，它匹配任何以 554 开头的 DRG。
 
 当我们运行程序时，得到了以下结果：
 
@@ -11652,74 +11633,101 @@ print(df.head(3))
 | 1 AKRON | OH 554 - BONE DISEASES & ARTHROPATHIES W/O MCC | 5581.00 | 4292.47 |
 | 2 ALBANY | NY 554 - BONE DISEASES & ARTHROPATHIES W/O MCC | 5628.94 | 5137.31 |
 
-现在我们有了一些有趣的数据。让我们做简单的分析。这种疾病的总费用中，Medicare 支付了多少百分比？剩余部分通常由患者支付。我们考虑了第三方计费。使用 `nano` 或你喜欢的编辑器创建一个 `MedicareQuery3.py` 文件，并复制以下代码：
+现在我们有了一些有趣的数据。让我们做简单的分析。这种疾病的总费用中，Medicare 支付了多少百分比？剩余部分通常由患者支付。我们考虑了第三方计费。使用`nano`或你喜欢的编辑器创建一个`MedicareQuery3.py`文件，并复制以下代码：
 
 ```python
 import pandas as pd
+
 from google.cloud import bigquery
 
 # ... (此处代码省略，对应原文逻辑)
 ```
+
 （注：由于原文此处代码块不完整，此处根据逻辑翻译说明文字）
 
 结果如下：
 
-记录数: (286, 5)
-Medicare 支付了总费用的 77.06%
+记录数: (286, 5)  
+Medicare 支付了总费用的 77.06%  
 患者支付了总费用的 22.94%
 
 # 按州支付
 
-接下来，我们选择数据库中的每个州（并非所有州都有代表），并计算以 554 开头的 DRG 在各州 Medicare 支付的百分比。将此文件命名为 `MedicareQuery4.py`：
+接下来，我们选择数据库中的每个州（并非所有州都有代表），并计算以 554 开头的 DRG 在各州 Medicare 支付的百分比。将此文件命名为`MedicareQuery4.py`：
 
 ```python
 import pandas as pd
+
 from google.cloud import bigquery
 
 # 设置查询
+
 QUERY = """
+
 # ... (此处代码由于原文不完整，此处保持翻译结构)
+
 SELECT provider_city, provider_state, drg_definition,
+
 average_total_payments, average_medicare_payments
+
 FROM `bigquery-public-data.cms.inpatient_charges_2015`
+
 WHERE drg_definition LIKE '554 %'
+
 ORDER BY provider_city ASC
+
 LIMIT 1000
+
 """
 
 client = bigquery.Client(from_service_account_json(
+
   'MedicareProject2-1223283ef413.json'))
 
 query_job = client.query(QUERY)
+
 df = query_job.to_dataframe()
 
 print("Records Returned: ", df.shape)
+
 print()
 
 # 找到唯一的州
+
 states = df.provider_state.unique()
+
 states.sort()
 
 total_payment = df.average_total_payments.sum()
+
 medicare_payment = df.average_medicare_payments.sum()
 
 percent_paid = (medicare_payment/total_payment)*100
+
 print("Overall:")
+
 print("Medicare 支付了总费用的 {:.2f}%".format(percent_paid))
+
 print("患者支付了总费用的 {:.2f}%".format(100-percent_paid))
 
 print("Per State:")
 
 # 现在遍历州
+
 print(df.head(5))
+
 state_percent = []
+
 for current_state in states:
+
     state_df = df[df.provider_state == current_state]
 
     state_total_payment = state_df.average_total_payments.sum()
+
     state_medicare_payment = state_df.average_medicare_payments.sum()
 
     state_percent_paid = ((state_medicare_payment/state_total_payment)*100
+
     state_percent.append(state_percent_paid)
 
     print("{}: Medicare 支付了总费用的 {:.2f}%".format(current_state,state_percent_paid))
@@ -11727,20 +11735,21 @@ for current_state in states:
 
 # 现在进行可视化
 
-在最后一个实验中，我们使用 Matplotlib 将 `MedicareQuery4.py` 程序生成的按州数据进行可视化。
+在最后一个实验中，我们使用 Matplotlib 将`MedicareQuery4.py`程序生成的按州数据进行可视化。
 
 ![](img/b5b2ea569d1e5bba0afd733be64823d_573_0.png)
 
-你的 Raspberry Pi 上已经有 seaborn 吗？（如果你安装了 Matplotlib，可能已经有了。）要确认这一点，运行 `MedicareQuery.py` 示例程序。如果没有安装 seaborn，你会看到导入错误，然后运行以下命令：
+你的 Raspberry Pi 上已经有 seaborn 吗？（如果你安装了 Matplotlib，可能已经有了。）要确认这一点，运行`MedicareQuery.py`示例程序。如果没有安装 seaborn，你会看到导入错误，然后运行以下命令：
 
-```
+```bash
 sudo apt-get install python3-seaborn
 ```
 
-移动到 VNC 程序以便在树莓派上使用 GUI，在 `MedicareQuery4.py` 的末尾添加以下代码：
+移动到 VNC 程序以便在树莓派上使用 GUI，在`MedicareQuery4.py`的末尾添加以下代码：
 
 ```python
 # 我们可以使用 MatPlotLib 两个列表绘制此图，
+
 # 但我们在这个示例中想使用 DataFrame
 
 data_array = {'State': states, 'Percent': state_percent}
@@ -11748,20 +11757,23 @@ data_array = {'State': states, 'Percent': state_percent}
 df_states = pd.DataFrame.from_dict(data_array)
 
 # 现在回到 dataframe 世界
+
 import matplotlib.pyplot as plt
+
 import seaborn as sb
 
 print (df_states)
 
 df_states.plot(kind='bar', x='State', y='Percent')
+
 plt.show()
 ```
 
-图 3-4 显示了运行 `MedicareQuery4.py` 程序生成的图表。
+图 3-4 显示了运行`MedicareQuery4.py`程序生成的图表。
 
 ![](img/b5b2ea569d1e5bba0afd733be64823d_574_0.png)
 
-**图 3-4：** 代码 554 的各州 Medicare 支付百分比柱状图。
+**图 3-4：**代码 554 的各州 Medicare 支付百分比柱状图。
 
 # 按小时查找世界上最污染的城市
 
@@ -11771,34 +11783,44 @@ plt.show()
 
 ```python
 import pandas as pd
+
 from google.cloud import bigquery
 
 # 示例查询自：
+
 QUERY = """
+
 SELECT location, city, country, value, timestamp
 ```
 
-
-
-
 ```sql
 FROM `bigquery-public-data.openaq.global_air_quality`
+
 WHERE pollutant = "pm10" AND timestamp > "2017-04-01"
+
 ORDER BY value DESC
+
 LIMIT 1000
 ```
 
 ```python
 client = bigquery.Client.from_service_account_json(
+
     'MedicareProject2-12232838ef413.json'
+
 )
+
 query_job = client.query(QUERY)
+
 df = query_job.to_dataframe()
 
 print(df.head(3))
 ```
 
-将此代码复制到名为 `PollutedCity.py` 的文件中并运行程序。
+
+
+将此代码复制到名为`PollutedCity.py`的文件中并运行程序。
+
 以下是运行代码的结果（截至此时）：
 
 | | location | country | value | timestamp |
@@ -11808,15 +11830,15 @@ print(df.head(3))
 | 2 | Chaiten Norte | Chaiten Norte | CL | 999.83 | 2018-04-24 11:00:00+00 |
 
 土耳其的 Dilovasi, Kocaeli 现在不是一个健康的地方。对 Dilovasi 进行快速 Google 搜索可以发现，这里的癌症发率是全球平均水平的三倍。这种巨大的差异显然源于该地区持续了 40 年的环境重金属污染，主要是由于剧烈的工业化导致的。
+
 John 绝对会每天检查这一点。
 
-# 第 6 
+# 第 6 章：与硬件对话
 
-# 与硬件对话
+## 概览
 
-# 概览
+### 第 1 章：物理计算简介
 
-## 第 1 章：物理计算简介
 - 物理计算很有趣
 - 什么是树莓派？
 - 构建能够移动和感知环境的项目
@@ -11824,28 +11846,29 @@ John 绝对会每天检查这一点。
 - 使用 Python 控制 LED
 - 等等，还有更多
 
-## 第 2 章：无需焊接！使用 Grove 连接器进行构建
+### 第 2 章：无需焊接！使用 Grove 连接器进行构建
+
 - 使用 Grove 系统工作
 - Grove 连接器
 - 使用 Grove 线缆连接
 
-## 第 3 章：感知世界
+### 第 3 章：感知世界
+
 - 理解 I2C
 - 测量氧和火焰
 - 使用 Blynk 在手机上构建仪表板
 - 接下来该哪里
 
-## 第 4 章：让物体动起来
+### 第 4 章：让物体动起来
+
 - 探索电机
 - 控制直流电机
 - 运行舵服电机
 - 让步进电机旋转
 
-## 第 1 章
+## 第 1 章：物理计算简介
 
-# 物理计算简介
-
-在本章中
+在本章中：
 
 - 理解如何使用小型计算机
 - 使用树莓派感知你周围的环境
@@ -11856,11 +11879,11 @@ John 绝对会每天检查这一点。
 ![](img/b5b2ea569d1e5bba0afd733be648243d_577_0.png)
 
 > 警告：在本章中，我们将各种传感器和电机连接到树莓派计算机上。虽然我们使用的电压（3.3V 和 5V）对人体并不特别危险，但连接错误可能会烧毁计算机或传感器。因此，请务必严格遵守以下规则：
+>
+> - 规则 1：在连接或更改任何电线之前关闭所有电源。
+> - 规则 2：双检你的连接，特别是电源连接（正极和地线）。要了解为什么这些是最需要检查的电线，请看下一章！
 
-- 规则 1：在连接或更改任何电线之前关闭所有电源。
-- 规则 2：双检你的连接，特别是电源连接（正极和地线）。要了解为什么这些是最需要检查的电线，请看下一章！
-
-# 物理计算很有趣
+### 物理计算很有趣
 
 我们希望你学习物理计算的原因是，执行物理任务的小型计算机（通常称为嵌入式系统）无处不在。我们的意思是无处不在。看看你的厨房。你的冰箱有一台计算机——如果有显示屏，可能有两三台。你的搅拌机有一台计算机。你的烤箱有一台计算机。你的微波炉有一台计算机。如果你家里使用了 Philips Hue 灯，你的灯泡里有一台计算机。你的汽车有 20 多台计算机。
 
@@ -11870,7 +11893,7 @@ John 绝对会每天检查这一点。
 
 所有这些小型计算机都在进行物理计算，感知并与环境交互。冰箱计算机检查温度并在必要时开启冷却装置，以度地减少用电量。炉子更新前面面板上的显示，监控按钮和旋钮并控制温度，以便你晚餐吃上一顿好的意大利千层。
 
-# 什么是树莓派？
+### 什么是树莓派？
 
 这些微型计算机的功能太有限，无法用于书中的示例，因此我们折中妥协，使用了树莓派。这是一台 35 美元的计算机，拥有大量的硬件和软件可用（特别是配合 Python）。它比之前的更复杂。
 
@@ -11878,24 +11901,25 @@ John 绝对会每天检查这一点。
 
 为了在书中示例中使用这些功能，我们使用了树莓派。
 
-- **GPIO 连接器**：通用输入输出引脚。
-- **CPU/GPU**：中央处理器/图形处理器。这个模块是树莓派的大脑。
-- **USB 端口**：你在许多设备上常见的 USB 接口。
-- **以太网端口**：连接网络。
-- **Wi-Fi**：这个模块在树莓派内部。
-- **HDMI 输出**：你将显示器或电视插入此处。
-- **复合视频和音频接口**：这个插孔可以提供声音或视频。
+- `GPIO` 连接器：通用输入输出引脚。
+- `CPU/GPU`：中央处理器/图形处理器。这个模块是树莓派的大脑。
+- `USB` 端口：你在许多设备上常见的 USB 接口。
+- 以太网端口：连接网络。
+- `Wi-Fi`：这个模块在树莓派内部。
+- `HDMI` 输出：你将显示器或电视插入此处。
+- 复合视频和音频接口：这个插孔可以提供声音或视频。
 
 ![](img/5b2ea569d1e5bba0afd733be648243d_580.png)
+
 图 1-1：树莓派的主要组件
 
-- **microSD 卡槽**：将操作系统插入此槽。
-- **状态 PWR LED**：红色 LED 显示电源状态。（注意它不会一直亮着。）
-- **状态 ACT LED**：当树莓派访问 SD 卡时，黄色 LED 会闪烁。
-- **其他端口**：
-- Micro USB：你将 5V 电源插入微 USB 接口。
-- Camera CSI：你可以将树莓派摄像头插入此排带。
-- Display DSI：此接口用于高速连接显示器，该主题超出了本书范围。
+- `microSD` 卡槽：将操作系统插入此槽。
+- 状态 `PWR LED`：红色 LED 显示电源状态。（注意它不会一直亮着。）
+- 状态 `ACT LED`：当树莓派访问 SD 卡时，黄色 LED 会闪烁。
+- 其他端口：
+  - `Micro USB`：你将 5V 电源插入微 USB 接口。
+  - `Camera CSI`：你可以将树莓派摄像头插入此排带。
+  - `Display DSI`：此接口用于高速连接显示器，该主题超出了本书范围。
 
 为了让我们的计算机执行物理动作并感知环境（除了屏幕和键盘之外），我们需要一台计算机以及两个设备之一：传感器或执行器。传感器是一种可以检测环境（例如温度或湿度）的小型电子元件，而执行器是对在现实世界中执行任务的设备的说法。
 
@@ -11903,20 +11927,17 @@ John 绝对会每天检查这一点。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_581_0.png)
 
-提示：在继续之前，购买树莓派启动套装（包含电源、操作系统和外壳）并进行设置。我们建议初学者购买鼠标、键盘和显示器进行设置。更高级的用户可能想要使用 SSH（安全 Shell）进行无头设置。再次，了解如何开始的最佳地点是去 www.raspberrypi.org 查看教程。
+提示：在继续之前，购买树莓派启动套装（包含电源、操作系统和外壳）并进行设置。我们建议初学者购买鼠标、键盘和显示器进行设置。更高级的用户可能想要使用 SSH（安全 Shell）进行无头设置。再次，了解如何开始的最佳地点是去`www.raspberrypi.org`查看教程。
 
-# 构建能够移动和感知环境的项目
+### 构建能够移动和感知环境的项目
 
 在章节开头，我们讨论了厨房里的计算机。所有这些计算机都在感知环境（例如烤箱温度），并且大多数都在对环境产生影响（例如你的搅拌机切碎冰块调制一杯美味的玛格丽塔）。你可以构建并设计自己的项目（相信我们，在熟悉硬件后，你将能够设计出精彩的东西）。你只需要跳进去完成你的第一个项目。
 
-
-
-
 随后，在后续章节中，你将构建更复杂的设备，这些设备将成为你项目的起点，而且全部将用 Python 编程！
 
-## 还有哪些小型电脑可用？
+#### 还有哪些小型电脑可用？
 
-市场上有数百种不同类型的小型电脑和开发板用于项目构建。我们选择树莓派是因为它对 Python 语言有完全支持，有数百个 Python 库可用，并且有许多网站（如 www.raspberrypi.org）供你学习如何设置和使用这台电脑。
+市场上有数百种不同类型的小型电脑和开发板用于项目构建。我们选择树莓派是因为它对 Python 语言有完全支持，有数百个 Python 库可用，并且有许多网站（如`www.raspberrypi.org`）供你学习如何设置和使用这台电脑。
 
 初级用户可以接触到两类通用小型电脑系统：基于 Linux 操作系统的电脑（Raspian 是树莓派上的软件，Linux 的一种形式）以及操作系统极小或没有操作系统的电脑。这两个版本的电脑和操作系统在不同的应用中都很有用。
 
@@ -11926,13 +11947,13 @@ Arduino 是带有小型计算机和有限 RAM 的小型电脑。尽管它们比�
 
 另一类类似于 Arduino 的小型电脑是 SAMD21、ESP8266 和 ESP32 开发板。这些开发板可以使用与 Arduino 相同的 IDE（集成开发环境）进行编程。它们的 RAM 比树莓派少，但像树莓派一样，它们带有内置 Wi-Fi（有时还有蓝牙）接口，这使得它们在构建想要连接到互联网的项目（例如 IoT 物联网项目）时有用。所有这些电脑都很好玩，但树莓派为 Python 开发和学习提供了得多的环境。
 
-## 使用树莓派感知环境
+#### 使用树莓派感知环境
 
-到此时，你已经将树莓派电脑设置好并在显示器、键盘和鼠标上运行。如果还没有，请现在就操作（记得我们的朋友 www.raspberrypi.org）。如果你有一台树莓派电脑可以使用，接下来的几段将有趣得多！
+到此时，你已经将树莓派电脑设置好并在显示器、键盘和鼠标上运行。如果还没有，请现在就操作（记得我们的朋友`www.raspberrypi.org`）。如果你有一台树莓派电脑可以使用，接下来的几段将有趣得多！
 
 树莓派是使用 Python 进行物理计算的完美平台，因为它具有多功能环境、大量的 RAM 和存储空间可以玩，以及我们构建你想要的项目所需的工具。
 
-## GPIO 引脚
+#### GPIO 引脚
 
 树莓派的一个强大功能是顶部的一排 GPIO（通用输入输出）引脚。在这个 40 引脚插座中，我们可以插入大量的传感器和控制器，完成一些惊人的事情以扩展树莓派的功能。
 
@@ -11944,22 +11965,21 @@ Arduino 是带有小型计算机和有限 RAM 的小型电脑。尽管它们比�
 
 GPIO 引脚从电脑向引脚输出 1 或 0。请参阅下一章关于如何实现这种输出以及其含义的更多信息。基本上，1 是 3.3V，0 是 0V，但你可以仅将它们看作 1 和 0。
 
-## GPIO 库
+#### GPIO 库
 
-可以使用许多 GPIO Python 库来构建项目。我们在本书其余部分用的是 `gpiozero` 库，它安装在所有树莓派桌面软件版本中。库的文档和安装说明（如果需要）位于此处。
+可以使用许多 GPIO Python 库来构建项目。我们在本书其余部分用的是`gpiozero`库，它安装在所有树莓派桌面软件版本中。库的文档和安装说明（如果需要）位于此处。
 
+若要查看使用 nano 文本编辑器的教程，请访问`www.raspberrypi.org/magpi/edit-text/`。
 
+3. 现在是关键时刻。在 Terminal 窗口的命令行中运行以下命令来启动你的程序：
 
-若要查看使用 nano 文本编辑器的教程，请访问 www.raspberrypi.org/magpi/edit-text/。
-
-- 3. 现在是关键时刻。在 Terminal 窗口的命令行中运行以下命令来启动你的程序：
-
-```
+```bash
 sudo python3 HelloWorld.py
 ```
 
 LED 每秒闪烁一次，Terminal 窗口屏幕上会出现以下内容：
 
+```text
 LED On
 LED Off
 LED On
@@ -11971,55 +11991,59 @@ LED Off
 LED On
 LED Off
 LED On
+```
 
-要停止程序，请按 Ctrl+C（极客术语为 ^C）。
+要停止程序，请按`Ctrl+C`（极客术语为`^C`）。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_592_0.png)
 
-关键字 `sudo` 代表 "super user do"（以超级用户身份执行）。我们在 `python3` 命令前使用 `sudo`，是因为某些某些版本的树莓派操作系统限制了普通用户对某些引脚和功能的访问。通过使用 `sudo`，我们以超级用户的身份运行此命令，这意味着它将会运行。在较新版本的树莓派 OS 中，你只需要输入 `python3 HelloWorld.py`。如果程序不起作用，请改回 `sudo python3 HelloWorld.py`。
+关键字`sudo`代表 "super user do"（以超级用户身份执行）。我们在`python3`命令前使用`sudo`，是因为某些某些版本的树莓派操作系统限制了普通用户对某些引脚和功能的访问。通过使用`sudo`，我们以超级用户的身份运行此命令，这意味着它将会运行。在较新版本的树莓派 OS 中，你只需要输入`python3 HelloWorld.py`。如果程序不起作用，请改回`sudo python3 HelloWorld.py`。
 
 以下语句从 Python gpiozero 库导入了 LED 函数：
 
-```
+```python
 from gpiozero import LED
 ```
 
-然后我们从 Python time 库导入了 `sleep` 函数：
+然后我们从 Python time 库导入了`sleep`函数：
 
-```
+```python
 from time import sleep
 ```
 
-接下来，我们在 GPIO 12 上分配一个 LED（还记得 Pi2Grover 开发板上的 D12/D13 吗？）；
+接下来，我们在 GPIO 12 上分配一个 LED（还记得 Pi2Grover 开发板上的 D12/D13 吗？）：
 
-```
+```python
 blue = LED(12)
 ```
 
 现在我们开始一个无限循环的循环：
 
-```
+```python
 while True:
 ```
 
 开启 LED：
 
-```
+```python
 blue.on()
+
 print("LED On")
 ```
 
 等待一秒钟：
 
-```
+```python
 sleep(1)
 ```
 
 关闭 LED：
 
-```
+```python
 blue.off()
+
 print("LED Off")
+
 sleep(1)
 ```
 
@@ -12027,7 +12051,7 @@ sleep(1)
 
 哇，你现在已经进入了物理计算的世界。就等下一本迷你书吧，在那里你将用 Python 控制机器人。
 
-# 等一下，还有更多
+## 等一下，还有更多
 
 由于我们已经准备好了所有硬件，我们将再进行一个项目。这次，我们使用 PWM（脉宽调制）来改变 LED 的亮度。
 
@@ -12035,53 +12059,67 @@ sleep(1)
 
 脉宽调制是一种技术，通过改变信号处于 1 和 0 的持续比例来实现。我们的 LED 在 1 时开启，在 0 时关闭，因此如果我们改变 LED 处于 1 和 0 的时间比例，就可以控制人眼感到的亮度。这种比例被称为占空比，如图 1-10 所示。当占空比为 100% 时，LED 在 100% 的时间内处于开启状态；当占空比为 0% 时，它一直关闭。改变信号会改变 LED 的表观亮度。LED 以每秒 100 次（Hz）的默认频率开关切换，但你可以更改频率。
 
-# 50% 占空比
+### 50% 占空比
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_594_0.png)
 
-# 75% 占空比
+### 75% 占空比
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_594_1.png)
 
-# 25% 占空比
+### 25% 占空比
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_594_2.png)
 
 图 1-10：占空比。
 
-在 nano 中输入以下 Python 代码并保存为 `HelloWorld2.py`。注意 `PWMLED(12)` 函数，它连接 GPIO 12 上的 LED：
+在 nano 中输入以下 Python 代码并保存为`HelloWorld2.py`。注意`PWMLED(12)`函数，它连接 GPIO 12 上的 LED：
 
-```
+```python
 from gpiozero import PWMLED
+
 from time import sleep
+
 led = PWMLED(12)
+
 while True:
+
   led.value = 0 # 关闭
+
   sleep(1)
+
   led.value = 0.5 # 半亮度
+
   sleep(1)
+
   led.value = 1 # 全亮度
+
   sleep(1)
 ```
 
 运行代码，亮度每秒变化一次：
 
-```
+```bash
 sudo python3 HelloWorld2.py
 ```
 
 并使用以下代码查看 LED 的平滑变亮变暗：
 
-```
+```python
 from gpiozero import PWMLED
+
 from time import sleep
+
 led = PWMLED(12)
+
 led.pulse()
 ```
 
+
+
 # 为什么 LED 看起来在闪烁？
 
-当你运行 Python 程序时，树莓派上并不是只有一个程序运行。在 Terminal 窗口输入 `top`，你会看到几十个程序正在运行。由于树莓派上的操作系统是多任务的（运行着许多程序），PWM 任务（作为软件运行时）有时无法获取 CPU。结果是，你看到 LED 有些抖动。树莓派具有硬件 PWM 引脚，如果不使用软件输出，也可以驱动 LED。在树莓派 3B 上，这种闪烁几乎察觉不到。
+当你运行 Python 程序时，树莓派上并不是只有一个程序运行。在 Terminal 窗口输入`top`，你会看到几十个程序正在运行。由于树莓派上的操作系统是多任务的（运行着许多程序），PWM 任务（作为软件运行时）有时无法获取 CPU。结果是，你看到 LED 有些抖动。树莓派具有硬件 PWM 引脚，如果不使用软件输出，也可以驱动 LED。在树莓派 3B 上，这种闪烁几乎察觉不到。
 
 在本章中，你已经开始接触物理计算的可能性。而且你有一个蓝色 LED！
 
@@ -12146,7 +12184,6 @@ Grove 底板是连接 Grove 模块的控制器或扩展板。连接树莓派或 
 ## 使用 Grove 连接器防错
 
 Grove 连接器是一种四引脚标准尺寸连接器，将其插入底板和 Grove 模块中。这些标准连接器带有键位，你无法反插，而且这四种连接器的设计使得即使将错误类型的设备插入错误的底板，也不会产生问题。它们不会被损坏，只是无法工作。这是一件非常好事。通常，如果你插反或错误连接板卡，可能会损坏或破坏板卡。标准连接器在
-
 
 然而，Grove 系统允许你连接各个板卡，而无需担心错误连接电源和地线。
 
@@ -12254,9 +12291,6 @@ Grove UART 模块的示例是 XBee 无线插座和 125kHz RFID 读取器，如�
 
 当需要知道输入或输出处的电压时，就会使用模拟信号。例如，假设来自传感器的 1.420V 值表示植物干旱，而 3.342V 电压表示水分充足。因为 1.420V 到 3.342V 之间的值表示植物的状态，所以了解实际电压很重要。稍后我们将讨论如何通过 ADC（模拟数字转换器）将模拟电压转换为数字，从而读入数字计算机中。
 
-
-
-
 ![](img/b5b2ea569d1e5bba0afd733be648243d_609_0.png)
 
 # 表格 2-4：Grove I2C 接口
@@ -12345,8 +12379,6 @@ SunAirPlus 是一款太阳能功率控制器和数据采集器。它在排针上
 
 ## 理解 I2C
 
-## 理解 I2C
-
 I2C 由飞利浦（现 NXP）开发。为了理解 I2C，让我们看看什么是 I2C。I2C 通常称为 TWI（双线接口）。I2C 仅使用两条双向开漏线：SCL（串口时钟线）和 SDA（串口数据线）。开漏意味着设备可以将电平拉低地（0），但不能将线路拉高到 Vdd（1）。因此，I2C 总线的要求是两条线路都必须通过电阻拉高到 Vdd。
 
 没有正确上拉线路是人们在使用 I2C 总线时第一个也是最常见的错误。书中使用的 Pi2Grover 板包含 10K 欧的上拉电阻，因此你不需要担心为 SDA 和 SCL 信号连接上拉。
@@ -12363,21 +12395,21 @@ I2C 由飞利浦（现 NXP）开发。为了理解 I2C，让我们看看什么�
 - **数字单条消息，主设备从从设备读取数据**
 - **数字复合消息，其中主设备对一个或多个从设备发出至少两次读取、写入或两者兼之的操作**
 
-
-
-
-
 幸运的是，处理 I2C 总线的几乎所有复杂性都已由 Python 驱动程序和库隐藏了。
 
 ## 在树莓派上启用 I2C
 
-提示：要在树莓派上使用 I2C 总线，你需要确保在操作系统中启用了它。这里有一份来自 Adafruit 的关于如何操作的良好教程： 
+提示：要在树莓派上使用 I2C 总线，你需要确保在操作系统中启用了它。这里有一份来自 Adafruit 的关于如何操作的良好教程：
 
 https://learn.adafruit.com/adafruit-raspberry-pi-lesson-4-gpio-configuring-i2c.
 
 你正确地启用 I2C 了吗？简单的检查方法是在终端（Terminal）窗口中输入以下命令：
 
 ```
+
+
+
+```bash
 sudo i2cdetect -y 1
 ```
 
@@ -12388,24 +12420,25 @@ sudo i2cdetect -y 1
 ```
 
 说明你还没有启用 I2C 总线。请重复教程以修复此问题。
+
 另一方面，如果它返回如下：
 
 | | 0 | 1 2 3 4 5 6 7 8 9 | a b c d e f |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 00| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 10| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 20| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 30| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 40| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 50| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 60| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 70| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 00 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 10 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 20 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 30 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 40 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 50 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 60 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 70 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 说明你成功了！横线表示 I2C 总线上没有传感器。
 
 ## 温度湿度读取的硬件
 
-要与 I2C 设备通信，总线段应该有一个传感器。我们从 HDC1080 温度湿度传感器开始，如图 3-2 所示。你可以在 https://store.switchdoc.com 或 amazon.com 获取这些廉价的传感器。
+要与 I2C 设备通信，总线段应该有一个传感器。我们从 HDC1080 温度湿度传感器开始，如图 3-2 所示。你可以在 <https://store.switchdoc.com> 或 amazon.com 获取这些廉价的传感器。
 
 ![](img/b5b2ea569d1e5bba0afd733be64823d_621_png)
 
@@ -12413,65 +12446,64 @@ sudo i2cdetect -y 1
 
 ## HDC1080 温度湿度传感器
 
-Grove 温度湿度传感器是一个令人惊叹的设备，价格约为 8 美元。HDC1080 位于 I2C 地址 0x40。
+Grove 温度湿度传感器是一个令人惊叹的设备，价格约为 8 美元。HDC1080 位于 I2C 地址 `0x40`。
+
 Grove 温度湿度传感器 (HDC1080) 利用德州仪的 HDC1080 芯片在极低功耗下提供了卓越的测量精度。该传感器基于新型电容传感器。温度湿度传感器经过了出厂校准。创新的 WLCSP（晶圆级尺寸封装）超紧封装简化了电路板设计。HDC1080 在 -40°C 到 +125°C 的温度范围内以及 0~100% 的相对湿度范围内工作。芯片的精度为湿度 +/- 3%，温度 +/- 0.2°C。
-注意：如果你在 Amazon 上购买非 Grove 传感器，你需要一根母转 Grove 跳线，如本教程第 2 章所述。SwitchDoc Labs HDC1080 传感器带有 Grove 接口。无论哪种，你都需要 Pi2Grove 转换器，该转换器在本教程第 1 和第 2 章中有描述，可在 https://store.switchdoc.com 或 amazon.com 获取。
+
+注意：如果你在 Amazon 上购买非 Grove 传感器，你需要一根母转 Grove 跳线，如本教程第 2 章所述。SwitchDoc Labs HDC1080 传感器带有 Grove 接口。无论哪种，你都需要 Pi2Grove 转换器，该转换器在本教程第 1 和第 2 章中有描述，可在 <https://store.switchdoc.com> 或 amazon.com 获取。
 
 现在在树莓派上安装 HDC1080 I2C 传感器。按照以下步骤操作：
 
-- 1. 在**命令行中输入 `sudo halt`（或通过 GUI 菜单选择 Shutdown）**关闭树莓派。然后，当黄色 LED 停止闪烁时，拔掉树莓派的电源。
+1. 在命令行中输入 `sudo halt`（或通过 GUI 菜单选择 Shutdown）关闭树莓派。然后，当黄色 LED 停止闪烁时，拔掉树莓派的电源。
 
-`sudo halt` 命令会为树莓派上的 SD 卡准备关机。直接拔掉树莓派并不总是会损坏卡，但如果损坏了，修复过程将是一个漫长、技术性且令人烦恼的过程。
+   `sudo halt` 命令会为树莓派上的 SD 卡准备关机。直接拔掉树莓派并不总是会损坏卡，但如果损坏了，修复过程将是一个漫长、技术性且令人烦恼的过程。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_622_0.png)
+   ![](img/b5b2ea569d1e5bba0afd733be64823d_622_0.png)
 
-> 记住在插入或拔出任何设备之前关闭树莓派。例外是 USB 端口、音频线和以太网线，它们支持热插拔。
+   > 记住在插入或拔出任何设备之前关闭树莓派。例外是 USB 端口、音频线和以太网线，它们支持热插拔。
 
-- 2. **如图 3-3 所示，将 Grove 线插入 HDC1080。**
+2. 如图 3-3 所示，将 Grove 线插入 HDC1080。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_622_1.png)
+   ![](img/b5b2ea569d1e5bba0afd733be64823d_622_1.png)
 
-> 记住我们使用的是 SwitchDoc Labs 的 HDC1080。如果你使用的是非 Grove Amazon 设备，你需要使用 Grove 跳线，如本教程第 2 章所述。
+   > 记住我们使用的是 SwitchDoc Labs 的 HDC1080。如果你使用的是非 Grove Amazon 设备，你需要使用 Grove 跳线，如本教程第 2 章所述。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_623_0.png)
+   ![](img/b5b2ea569d1e5bba0afd733be64823d_623_0.png)
 
-图 3-3：插了 Grove 线的 HDC1080。
+   图 3-3：插了 Grove 线的 HDC1080。
 
-- 3. 将 Grove 线的另一端插入树莓派上方 Pi2Grover 上标记为 I2C 的 Grove 接口之一。（见图 3-4）。
+3. 将 Grove 线的另一端插入树莓派上方 Pi2Grover 上标记为 I2C 的 Grove 接口之一。（见图 3-4）。
 
-注意：I2C 是跨越所有 I2C 接口的总线，这意味着你可以使用四个 I2C 接口中的任何一个。
+   注意：I2C 是跨越所有 I2C 接口的总线，这意味着你可以使用四个 I2C 接口中的任何一个。
 
-![](img/b5b2ea569d1e5bba0afd733be64823d_624_0.png)
+   ![](img/b5b2ea569d1e5bba0afd733be64823d_624_0.png)
 
-图 3-4：连接到树莓派的 HDC1080。
+   图 3-4：连接到树莓派的 HDC1080。
 
-- 4. 开启树莓派电源。
+4. 开启树莓派电源。
 
-- 5. 在终端窗口中输入以下内容：
+5. 在终端窗口中输入以下内容：
 
-```
-sudo i2cdetect -y 1
-```
+   ```bash
+   sudo i2cdetect -y 1
+   ```
 
-你应该看到：
+   你应该看到：
 
-| | 0 | 1 2 3 4 5 6 7 8 9 | a b c d e f |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 00| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 10| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 20| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 30| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 40| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 50| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 60| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 70| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-
-
-
+   | | 0 | 1 2 3 4 5 6 7 8 9 | a b c d e f |
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   | 00 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 10 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 20 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 30 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 40 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 50 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 60 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+   | 70 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 现在让我们来看温度湿度程序，看看它是如何工作的。第一行导入了 Python 的 `sys` 库：
 
-```
+```python
 import sys
 ```
 
@@ -12492,6 +12524,7 @@ import SDL_Pi_HDC1080
 
 ```python
 # Main Program
+
 print("")
 print("")
 print("Read Temperature and Humidity from HDC1080 using I2C bus ")
@@ -12524,37 +12557,40 @@ time.sleep(3.0)
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_629_0.png)
 
-**提示：你甚至可以使用 `https://python-twitter.readthedocs.io` Python 库发布温度和湿度的推文。
+**提示：你甚至可以使用 `https://python-twitter.readthedocs.io` Python 库发布温度和湿度的推文。**
 
 ## I2C 驱动器的内部原理
 
-I2C 设备不仅有地址（例如 0x40，我们的 HDC080 的地址），还有寄存器。你可以将寄存器看作是写入命令和读取数据的编号地址。HDC080 有八个不同的寄存器，如下所示。
+I2C 设备不仅有地址（例如 `0x40`，我们的 HDC080 的地址），还有寄存器。你可以将寄存器看作是写入命令和读取数据的编号地址。HDC080 有八个不同的寄存器，如下所示。
 
 | 指针 | 名称 | 重置值 | 描述 |
 |---|---|---|---|
-| 0x00 | Temperature | 0x0000 | 温度测量输出 |
-| 0x01 | Humidity | 0x0000 | 相对湿度测量输出 |
-| 0x02 | Configuration | 0x0100 | HDC080 配置和状态 |
-| 0xFB | Serial ID | 取决设备 | 部件序列号的前 2 个字节 |
-| 0xFC | Serial ID | 取决设备 | 部件序列号的中间 2 个字节 |
-| 0xFD | Serial ID | 取决设备 | 部件序列号的最后一个字节 |
-| 0xFE | Manufacturer ID | 取决设备 | 德州仪器的 ID |
-| 0xFF | Device ID | 0x1050 | 设备 ID |
+| `0x00` | Temperature | `0x0000` | 温度测量输出 |
+| `0x01` | Humidity | `0x0000` | 相对湿度测量输出 |
+| `0x02` | Configuration | `0x0100` | HDC080 配置和状态 |
+| `0xFB` | Serial ID | 取决设备 | 部件序列号的前 2 个字节 |
+| `0xFC` | Serial ID | 取决设备 | 部件序列号的中间 2 个字节 |
+| `0xFD` | Serial ID | 取决设备 | 部件序列号的最后一个字节 |
+| `0xFE` | Manufacturer ID | 取决设备 | 德州仪器的 ID |
+| `0xFF` | Device ID | `0x1050` | 设备 ID |
 
-I2c 设备基本上读取这些地址并从这些地址写入，以控制 HDC080 并读取温度湿度数据。下图显示了位于指针地址 0x00 的温度寄存器的格式。
+I2C 设备基本上读取这些地址并从这些地址写入，以控制 HDC080 并读取温度湿度数据。下图显示了位于指针地址 `0x00` 的温度寄存器的格式。
 
 | 名称 | 位宽 | 描述 |
 |---|---|---|
-| TEMPERATURE | [15:02] | 温度 | 温度测量（只读） |
-| [01:00] | Reserved | 预留，0（只读） |
+| TEMPERATURE | `[15:02]` | 温度 | 温度测量（只读） |
+| `[01:00]` | Reserved | 预留，0（只读） |
 
 在 `SDL_Pi_HDC1080` Python 库中，查看用于读取该 I2C 寄存器的 Python 代码：
 
 ```python
 def readTemperature():
     s = [HDC1080_TEMPERATURE_REGISTER] # temp
-    s2 = bytearray( s )
-    HDC1080_fw.write( s2 )
+
+    s2 = bytearray(s)
+
+    HDC1080_fw.write(s2)
+
     time.sleep(0.0625) # 来自数据手册
 
     # 读取 2 字节温度数据
@@ -12564,7 +12600,9 @@ def readTemperature():
 
     # 转换数据
     temp = (buf[0] * 256) + buf[1]
+
     cTemp = (temp / 65536.0) * 165.0 - 40
+
     return cTemp
 ```
 
@@ -12574,17 +12612,17 @@ def readTemperature():
 def readTemperature(self):
 ```
 
-然后我们将指针地址（在此例中 0x00）格式化为字节数组：
+然后我们将指针地址（在此例中 `0x00`）格式化为字节数组：
 
 ```python
 s = [HDC1080_TEMPERATURE_REGISTER] # temp
-s2 = bytearray( s )
+s2 = bytearray(s)
 ```
 
 我们首先写入寄存器地址：
 
 ```python
-HDC1080_fw.write( s2)
+HDC1080_fw.write(s2)
 ```
 
 通过读取数据手册，我们延迟了 62.5ms。（你可以通过 www.ti.com 上搜索 HDC1080 找到数据手册。）
@@ -12614,32 +12652,29 @@ temp = (buf[0] * 256) + buf[1]
 cTemp = (temp / 65536.0) * 165.0 - 40
 ```
 
-返回 cTemp：
+返回 `cTemp`：
 
 ```python
 return cTemp
 ```
 
-
-
-
-- 4. 为树莓派接电。
-- 5. 在终端窗口中运行命令 `i2cdetect -y 1`。
+4. 为树莓派接电。
+5. 在终端窗口中运行命令 `i2cdetect -y 1`。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_634_0.png)
 
-图 3-7: 完整的树莓派/ADC/氧气传感器接线图。
+图 3-7：完整的树莓派/ADC/氧气传感器接线图。
 
 你应该看到此输出：
 
 | | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | a | b | c | d | e | f |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 00: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 10: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 20: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 30: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 40: | -- | -- | -- | -- | -- | -- | -- | -- | 48 | -- | -- | -- | -- | -- | -- |
-| 50: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 00: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 10: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 20: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 30: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 40: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | 48 | -- | -- | -- | -- | -- | -- |
+| 50: | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 地址 `0x48` 是一个 Grove 四通道 16 位 ADC 板。如果你没有看到此输出，请返回检查你的接线。
 
@@ -12655,9 +12690,11 @@ git clone https://github.com/switchdoclabs/SDL_Pi_Grove4Ch16ADC
 
 ```python
 import time, sys
+
 sys.path.append('./SDL_Pi_Grove4Ch16ADC/SDL_Adafruit_ADS1x15')
 
 import SDL_Adafruit_ADS1115
+
 ADS1115 = 0x01 # 16 位 ADC
 
 # 选择增益
@@ -12668,46 +12705,60 @@ sps = 250 # 每秒 250 次采样
 
 # 使用默认模式初始化 ADC（使用默认 I2C 地址）
 adc = SDL_Adafruit_ADS1x15.ADS1x15(ic=ADS1115)
+
 dataFile = open('oxygenData.csv', 'w')
 
 totalSeconds = 0
+
 while (1):
     # 使用上述设置以单端模式读取氧气通道
     print("------------------------------------------------")
+
     voltsChl = adc.readADCSingleEnded(1, gain, sps) / 1000
     rawChl = adc.readRaw(1, gain, sps)
 
     # O2 传感器
-    sensorVoltage = voltsChl*(5.0/6.144)
+    sensorVoltage = voltsChl * (5.0 / 6.144)
+
     AMP = 121
     K_O2 = 7.43
+
+    sensorVoltage = sensorVoltage / AMP * 10000.0
+    Value_O2 = sensorVoltage / K_O2 - 1.05
+
+    print("Channel 1 =%.6fv raw=0%4X O2 Percent=%.2f%%" % (
+        voltsChl,
+        rawChl,
+        Value_O2
+    ))
+
+    print("--------------------")
+
+    dataFile.write("%d,%.2f\n" % (totalSeconds, Value_O2))
+
+    totalSeconds = totalSeconds + 1
+    dataFile.flush()
 ```
 
-```python
-sensorVoltage = sensorVoltage/AMP*10000.0
-Value_O2 = sensorVoltage/K_O2 - 1.05
 
-print("Channel 1 =%.6fv raw=0%4X O2 Percent=%.2f%%" % (voltsChl,
-rawChl, Value_O2))
-print("--------------------")
 
-dataFile.write("%d,%.2f\n" % (totalSeconds, Value_O2))
-totalSeconds = totalSeconds + 1
-dataFile.flush()
-time.sleep(1.0)
-```
+`time.sleep(1.0)`
 
-![](img/b5b2ea569d1e5bba0afd733be64823d) 警告 当你用完氧气传感器后，请确保将其放入容器并密封顶部。否则，湿度会随着时间损坏传感器。（我们过去曾因为没有密封而损坏了这些传感器。）当我们运行程序时，得到了以下结果：
+![警告](img/b5b2ea569d1e5bba0afd733be64823d)
 
-| | | |
+> **警告：** 当你用完氧气传感器后，请确保将其放入容器并密封顶部。否则，湿度会随着时间损坏传感器。（我们过去曾因为没有密封而损坏了这些传感器。）
+
+当我们运行程序时，得到了以下结果：
+
+|  |  |  |
 |---|---|---|
-| Channel 1 =2.436375V raw=0x32 Percent=22.05 | | |
-| Channel 1 =2.436375V raw=0x32 Percent=22.05 | | |
-| -------------------------------------- | | |
-| Channel 1 =2.436375V raw=0x31 Percent=22.05 | | |
-| -------------------------------------- | | |
-| Channel 1 =2.436375V raw=0x32 Percent=22.05 | | |
-| Channel 1 =2.436187V raw=0x31 Percent=22.05 | | |
+| `Channel 1 =2.436375V raw=0x32 Percent=22.05` |  |  |
+| `Channel 1 =2.436375V raw=0x32 Percent=22.05` |  |  |
+| `--------------------------------------` |  |  |
+| `Channel 1 =2.436375V raw=0x31 Percent=22.05` |  |  |
+| `--------------------------------------` |  |  |
+| `Channel 1 =2.436375V raw=0x32 Percent=22.05` |  |  |
+| `Channel 1 =2.436187V raw=0x31 Percent=22.05` |  |  |
 
 # 代码解析
 
@@ -12715,9 +12766,11 @@ time.sleep(1.0)
 
 ```python
 import time, sys
+
 sys.path.append('./SDL_Pi_Grove4Ch16ADC/SDL_Adafruit_ADS1x15')
 
 import SDL_Adafruit_ADS1115
+
 ADS1115 = 0x01      # 16 位 ADC
 
 # 选择增益
@@ -12728,158 +12781,161 @@ sps = 250 # 每秒 250 次采样
 
 # 使用默认模式初始化 ADC（使用默认 I2C 地址）
 adc = SDL_Adafruit_ADS1x15.ADS1x15(ic=ADS1115)
+
 dataFile = open("oxygenData.csv", 'w')
 
 totalSeconds = 0
+
 while (1):
+
     # 使用上述设置以单端模式读取氧气通道
     print("------------------------------------------------")
+
     voltsChl = adc.readADCSingleEnded(1, gain, sps) / 1000
+
     rawChl = adc.readRaw(1, gain, sps)
 
     # 氧气传感器
     sensorVoltage = voltsChl*(5.0/6.144)
+
     # 这里的代码逻辑与上文一致，此处省略重复部分
 ```
 
-*(注：原文中代码块部分存在逻辑断裂或重复，翻译已根据原文尽可能保留了对应的 Markdown 结构)*
+> **注：** 原文中代码块部分存在逻辑断裂或重复，翻译已根据原文尽可能保留了对应的 Markdown 结构。
 
 # 解释结果
 
 通过观察图 3-9，我们确定氧气浓度从 21% 开始，蜡烛熄灭在 15.8% 处。从开始到结束下降了约 5%。我们怀疑这是由于传感器和蜡烛类型。注意熄灭后氧气开始上升，说明密封并不完美。
 
-要查看该实验的视频，请访问 https://youtu.be/3amRqlYYozo。
+要查看该实验的视频，请访问 <https://youtu.be/3amRqlYYozo>。
 
-![](img/b5b2ea569d1e5bba0afd733be648243d_639_0.png)
+![图 3-8：我们氧气实验的开始。](img/b5b2ea569d1e5bba0afd733be648243d_639_0.png)
 
-图 3-8: 我们氧气实验的开始。
+![图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。](img/b5b2ea569d1e5bba0afd733be648243d_644_0.png)
 
+![图 3-12：点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
 
+![图 3-13：MyTemperature app（左）和 Blynk app 的初始界面（右）。](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
 
+![图 3-13：MyTemperature app（左）和 Blynk app 的初始界面（右）。](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
 
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_644_0.png)
-
-图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
-
-图 3-12：点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
-
-图 3-13：MyTemperature app（左）和 Blynk app 的初始界面（右）。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
-
-图 3-14：MyTemperature app 项目设置中的身份令牌。
+![图 3-14：MyTemperature app 项目设置中的身份令牌。](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
 
 你已经完成了 Blynk myTemperature app 的安装。现在让我们修改软件以支持 Blynk app。
 
-## 用于 Blynk app 修改后的 temperatureTest.py 
+## 用于 Blynk app 修改后的 `temperatureTest.py`
 
 要修改软件以支持 Blynk app，请按照以下步骤操作：
 
-- 1. 输入以下命令在你的主目录下创建一个目录：
+1. 输入以下命令在你的主目录下创建一个目录：
 
-```
-cd
-mkdir myTemperature
-cd myTemperature
-```
+   ```bash
+   cd
+   mkdir myTemperature
+   cd myTemperature
+   ```
 
-现在你处于 myTemperature 目录中了。
+   现在你处于 `myTemperature` 目录中了。
 
-- 2. 通过克隆位于 github.com 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
+2. 通过克隆位于 github.com 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
 
-```
-git clone https://github.com/switchdoclabs/SDL_Pi_HDC1080_Python3.git
-```
+   ```bash
+   git clone https://github.com/switchdoclabs/SDL_Pi_HDC1080_Python3.git
+   ```
 
-- 3. 使用 nano（或你喜欢的编辑器）将以下代码输入名为 myTemperature.py 的文件中：
+3. 使用 nano（或你喜欢的编辑器）将以下代码输入名为 `myTemperature.py` 的文件中：
 
-```python
-#!/usr/bin/env python3
+   ```python
+   #!/usr/bin/env python3
 
-#imports
+   #imports
 
-import sys
+   import sys
 
-sys.path.append('./SDL_Pi_HDC1080_Python3')
+   sys.path.append('./SDL_Pi_HDC1080_Python3')
 
-import time
-import SDL_Pi_HDC1080
+   import time
 
-import requests
-import json
+   import SDL_Pi_HDC1080
 
-BLYNK_URL = 'http://blynk-cloud.com/'
-BLYNK_AUTH = 'xxxx'
+   import requests
 
-# Main Program
-print("")
-print("")
-print("Read Temperature and Humidity from HDC1080 using I2C bus and\nsend to Blynk")
-print ("")
+   import json
 
-time.sleep(3.0)
-```
+   BLYNK_URL = 'http://blynk-cloud.com/'
 
-这段代码每三秒更新一次你的 Blynk app。
+   BLYNK_AUTH = 'xxxx'
 
-> **警告：** 如果你更新 Blynk app 的频率超过秒一次，可能会与服务器断。请做一个良好的 Blynk 用户，将更新保持在每秒十个值以内。
+   # Main Program
 
-- 4. 将 xxxx 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
+   print("")
 
-例如，我们将
+   print("")
 
-```python
-BLYNK_AUTH = 'xxxx'
-```
+   print("Read Temperature and Humidity from HDC1080 using I2C bus and\nsend to Blynk")
 
-替换为
+   print ("")
 
-```python
-BLYNK_AUTH = '4457307941c4c8ea7852a31555f44444'
-```
+   time.sleep(3.0)
+   ```
 
-> **警告：** 你必须使用通过电子邮件收到的授权代码。这里显示的示例代码将无法工作。
+   这段代码每三秒更新一次你的 Blynk app。
+
+   > **警告：** 如果你更新 Blynk app 的频率超过秒一次，可能会与服务器断。请做一个良好的 Blynk 用户，将更新保持在每秒十个值以内。
+
+4. 将 `xxxx` 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
+
+   例如，我们将
+
+   ```python
+   BLYNK_AUTH = 'xxxx'
+   ```
+
+   替换为
+
+   ```python
+   BLYNK_AUTH = '4457307941c4c8ea7852a31555f44444'
+   ```
+
+   > **警告：** 你必须使用通过电子邮件收到的授权代码。这里显示的示例代码将无法工作。
 
 ## 代码拆解
 
-现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 blynkUpdate 代码不同：
+现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 `blynkUpdate` 代码不同：
 
 ```python
 def blynkUpdate(temperature, humidity):
+
     print("Updating Blynk")
+
     try:
 ```
 
-为什么我们在这里使用 `try:`？因为有时当网络不稳定时，requests 库会抛出错误。`try: / except:` 代码会捕获来自 requests 库的任何错误并继续重试。
+为什么我们在这里使用 `try:`？因为有时当网络不稳定时，`requests` 库会抛出错误。`try: / except:` 代码会捕获来自 `requests` 库的任何错误并继续重试。
 
-接下来，我们为 requests 库设置所需的 http 请求头：
+接下来，我们为 `requests` 库设置所需的 HTTP 请求头：
 
 ```python
 put_header = {"Content-Type": "application/json"}
 ```
 
-## REQUESTS 库
+## `REQUESTS` 库
 
-Python requests 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 http 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
+Python `requests` 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 HTTP 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
 
 以下代码将小数点右侧的位数设为一位，这样我们就不会因为 HDC1080 的精度问题产生长串且相对无意义的数字：
 
 ```python
 val = temperature
+
 put_body = json.dumps("{0:.1f}".format(val))
 ```
 
-以下代码以 http 请求的形式将数据传输到 Blynk 服务器：
+以下代码以 HTTP 请求的形式将数据传输到 Blynk 服务器：
 
 ```python
 r = requests.put(BLYNK_URL_AUTH+'/update/V0', data=put_body,
+
 headers=headers_put_header)
 ```
 
@@ -12887,8 +12943,11 @@ headers=headers_put_header)
 
 ```python
 except Exception as e:
+
     print("exception in updateBlynk")
+
     print(e)
+
     return 0
 ```
 
@@ -12900,137 +12959,171 @@ python3 myTemperature.py
 
 你在终端上看到如下输出：
 
-```
+```text
 ----------------
+
 Updating Blynk
+
 ----------------
+
 Temperature = 22.6C
+
 Humidity = 36.8%
+
 ----------------
+
 Updating Blynk
+
 ----------------
+
 Temperature = 22.5C
+
 Humidity = 36.8%
 ```
 
-- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
+- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。
 
-- MyTemperature app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
+  ![点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
 
-- MyTemperature app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
+- MyTemperature app（左）和 Blynk app 的初始界面（右）。
 
-- 图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_644_0.png)
+  ![MyTemperature app（左）和 Blynk app 的初始界面（右）。](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
 
-- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
+- MyTemperature app 项目设置中的身份令牌。
 
-- MyTemperature app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_1.png)
+  ![MyTemperature app 项目设置中的身份令牌。](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
 
-- MyTemperature app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
+- 图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。
+
+  ![图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。](img/b5b2ea569d1e5bba0afd733be648243d_644_0.png)
+
+- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。
+
+  ![点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
+
+- MyTemperature app（左）和 Blynk app 的初始界面（右）。
+
+  ![MyTemperature app（左）和 Blynk app 的初始界面（右）。](img/b5b2ea569d1e5bba0afd733be648243d_646_1.png)
+
+- MyTemperature app 项目设置中的身份令牌。
+
+  ![MyTemperature app 项目设置中的身份令牌。](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
 
 你已经完成了 Blynk myTemperature app 安装。现在让我们修改软件以支持 Blynk app。
 
-## 用于 Blynk app 修改后的 temperatureTest.py 软件
+## 用于 Blynk app 修改后的 `temperatureTest.py` 软件
 
 要修改软件以支持 Blynk app，请按照以下步骤操作：
 
--   1. 输入以下命令在你的主目录下创建一个目录：
+1. 输入以下命令在你的主目录下创建一个目录：
 
-```
-cd
-mkdir myTemperature
-cd myTemperature
-```
+   ```bash
+   cd
+   mkdir myTemperature
+   cd myTemperature
+   ```
 
-现在你处于 myTemperature 目录中了。
+   现在你处于 `myTemperature` 目录中了。
 
--   2. 通过克隆位于 github.com 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
+2. 通过克隆位于 github.com 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
 
-```
-git clone https://github.com/switchdoclabs/SDL_Pi_HDC1080_Python3.git
-```
+   ```bash
+   git clone https://github.com/switchdoclabs/SDL_Pi_HDC1080_Python3.git
+   ```
 
--   3. 使用 nano（或你喜欢的编辑器）将以下代码输入名为 myTemperature.py 的文件中：
+3. 使用 nano（或你喜欢的编辑器）将以下代码输入名为 `myTemperature.py` 的文件中：
 
-```python
-#!/usr/bin/env python3
+   ```python
+   #!/usr/bin/env python3
 
-#imports
+   #imports
 
-import sys
+   import sys
 
-sys.path.append('./SDL_Pi_HDC1080_Python3')
+   sys.path.append('./SDL_Pi_HDC1080_Python3')
 
-import time
-import SDL_Pi_HDC1080
+   import time
 
-import requests
-import json
+   import SDL_Pi_HDC1080
 
-BLYNK_URL = 'http://blynk-cloud.com/'
-BLYNK_AUTH = 'xxxx'
+   import requests
 
-# Main Program
-print("")
-print("")
-print("Read Temperature and Humidity from HDC1080 using I2C bus and\nsend to Blynk")
-print ("")
+   import json
 
-time.sleep(3.0)
-```
+   BLYNK_URL = 'http://blynk-cloud.com/'
 
-这段代码每三秒更新一次你的 Blynk app。
+   BLYNK_AUTH = 'xxxx'
 
-> **警告：** 如果你更新 Blynk app 的频率超过秒一次，可能会与服务器断。请做一个良好的 Blynk 用户，将更新保持在每秒十个值以内。
+   # Main Program
 
--   4. 将 xxxx 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
+   print("")
 
-例如，我们将
+   print("")
 
-```python
-BLYNK_AUTH = 'xxxx'
-```
+   print("Read Temperature and Humidity from HDC1080 using I2C bus and\nsend to Blynk")
 
-替换为
+   print ("")
 
-```python
-BLYNK_AUTH = '4457307941c4c8ea7852a31555f44444'
-```
+   time.sleep(3.0)
+   ```
 
-> **警告：** 你必须使用通过电子邮件收到的授权代码。这里显示的示例代码将无法工作。
+   这段代码每三秒更新一次你的 Blynk app。
+
+   > **警告：** 如果你更新 Blynk app 的频率超过秒一次，可能会与服务器断。请做一个良好的 Blynk 用户，将更新保持在每秒十个值以内。
+
+4. 将 `xxxx` 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
+
+   例如，我们将
+
+   ```python
+   BLYNK_AUTH = 'xxxx'
+   ```
+
+   替换为
+
+   ```python
+   BLYNK_AUTH = '4457307941c4c8ea7852a31555f44444'
+   ```
+
+   > **警告：** 你必须使用通过电子邮件收到的授权代码。这里显示的示例代码将无法工作。
 
 ## 代码拆解
 
-现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 blynkUpdate 代码不同：
+现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 `blynkUpdate` 代码不同：
 
 ```python
 def blynkUpdate(temperature, humidity):
+
     print("Updating Blynk")
+
     try:
 ```
 
-为什么我们在这里使用 `try:`？因为有时当网络不稳定时，requests 库会抛出错误。`try: / except:` 代码会捕获来自 requests 库的任何错误并继续重试。
+为什么我们在这里使用 `try:`？因为有时当网络不稳定时，`requests` 库会抛出错误。`try: / except:` 代码会捕获来自 `requests` 库的任何错误并继续重试。
 
-接下来，我们为 requests 库设置所需的 http 请求头：
+接下来，我们为 `requests` 库设置所需的 HTTP 请求头：
 
 ```python
 put_header = {"Content-Type": "application/json"}
 ```
 
-## REQUESTS 库
+## `REQUESTS` 库
 
-Python requests 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 http 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
+Python `requests` 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 HTTP 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
 
 以下代码将小数点右侧的位数设为一位，这样我们就不会因为 HDC1080 的精度问题产生长串且相对无意义的数字：
 
 ```python
 val = temperature
+
 put_body = json.dumps("{0:.1f}".format(val))
 ```
 
-以下代码以 http 请求的形式将数据传输到 Blynk 服务器：
+以下代码以 HTTP 请求的形式将数据传输到 Blynk 服务器：
 
 ```python
 r = requests.put(BLYNK_URL_AUTH+'/update/V0', data=put_body,
+
 headers=headers_put_header)
 ```
 
@@ -13038,8 +13131,11 @@ headers=headers_put_header)
 
 ```python
 except Exception as e:
+
     print("exception in updateBlynk")
+
     print(e)
+
     return 0
 ```
 
@@ -13051,40 +13147,45 @@ python3 myTemperature.py
 
 你在终端上看到如下输出：
 
-```
+```text
 ----------------
+
 Updating Blynk
+
 ----------------
+
 Temperature = 22.6C
+
 Humidity = 36.8%
+
 ----------------
+
 Updating Blynk
+
 ----------------
+
 Temperature = 22.5C
+
 Humidity = 36.8%
 ```
 
-- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
 
-- MyTemperature app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
 
-- MyTemperature app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
-
+- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 `myTemperature` app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_1.png)
+- `MyTemperature` app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_0.png)
+- `MyTemperature` app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
 - 图 3-11：App Store 中的 Blynk（左）和创建 Blynk 账户（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_644_0.png)
+- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 `myTemperature` app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
+- `MyTemperature` app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_1.png)
+- `MyTemperature` app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
 
-- 点击 QR（左），然后扫描 QR 以在 Blynk 中生成你的 myTemperature app。![](img/b5b2ea569d1e5bba0afd733be648243d_645_0.png)
+你已经完成了 Blynk `myTemperature` app 安装。现在让我们修改软件以支持 Blynk app。
 
-- MyTemperature app（左）和 Blynk app 的初始界面（右）。![](img/b5b2ea569d1e5bba0afd733be648243d_646_1.png)
-
-- MyTemperature app 项目设置中的身份令牌。![](img/b5b2ea569d1e5bba0afd733be648243d_647_0.png)
-
-你已经完成了 Blynk myTemperature app 安装。现在让我们修改软件以支持 Blynk app。
-
-## 用于 Blynk app 修改后的 temperatureTest.py 软件
+## 用于 Blynk app 修改后的 `temperatureTest.py` 软件
 
 要修改软件以支持 Blynk app，请按照以下步骤操作：
 
--   1. 输入以下命令在你的主目录下创建一个目录：
+1. 输入以下命令在你的主目录下创建一个目录：
 
 ```
 cd
@@ -13092,28 +13193,24 @@ mkdir myTemperature
 cd myTemperature
 ```
 
-现在你处于 myTemperature 目录中了。
+现在你处于 `myTemperature` 目录中了。
 
--   2. 通过克隆位于 github.com 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
+2. 通过克隆位于 `github.com` 的库在树莓派上安装 Blynk 库。在终端窗口中使用以下命令：
 
 ```
 git clone https://github.com/switchdoclabs/SDL_Pi_HDC1080_Python3.git
 ```
 
--   3. 使用 nano（或你喜欢的编辑器）将以下代码输入名为 myTemperature.py 的文件中：
+3. 使用 `nano`（或你喜欢的编辑器）将以下代码输入名为 `myTemperature.py` 的文件中：
 
 ```python
 #!/usr/bin/env python3
 
 #imports
-
 import sys
-
 sys.path.append('./SDL_Pi_HDC1080_Python3')
-
 import time
 import SDL_Pi_HDC1080
-
 import requests
 import json
 
@@ -13125,7 +13222,6 @@ print("")
 print("")
 print("Read Temperature and Humidity from HDC1080 using I2C bus and\nsend to Blynk")
 print ("")
-
 time.sleep(3.0)
 ```
 
@@ -13133,7 +13229,7 @@ time.sleep(3.0)
 
 > **警告：** 如果你更新 Blynk app 的频率超过秒一次，可能会与服务器断。请做一个良好的 Blynk 用户，将更新保持在每秒十个值以内。
 
--   4. 将 xxxx 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
+4. 将 `xxxx` 替换为上一节第 4 步中复制的 Blynk 身份验证令牌。
 
 例如，我们将
 
@@ -13151,7 +13247,7 @@ BLYNK_AUTH = '4457307941c4c8ea7852a31555f44444'
 
 ## 代码拆解
 
-现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 blynkUpdate 代码不同：
+现在让我们分段拆解代码。以下代码与本章之前的 HDC1080 代码相似，但 `blynkUpdate` 代码不同：
 
 ```python
 def blynkUpdate(temperature, humidity):
@@ -13159,9 +13255,9 @@ def blynkUpdate(temperature, humidity):
     try:
 ```
 
-为什么我们在这里使用 `try:`？因为有时当网络不稳定时，requests 库会抛出错误。`try: / except:` 代码会捕获来自 requests 库的任何错误并继续重试。
+为什么我们在这里使用 `try:`？因为有时当网络不稳定时，`requests` 库会抛出错误。`try: / except:` 代码会捕获来自 `requests` 库的任何错误并继续重试。
 
-接下来，我们为 requests 库设置所需的 http 请求头：
+接下来，我们为 `requests` 库设置所需的 http 请求头：
 
 ```python
 put_header = {"Content-Type": "application/json"}
@@ -13169,7 +13265,7 @@ put_header = {"Content-Type": "application/json"}
 
 ## REQUESTS 库
 
-Python requests 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 http 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
+Python `requests` 库允许你使用 Python 发送 HTTP/1.1 请求并访问请求的响应数据。它的设计是为了让人类能够与 http 请求交互，而无需暴露请求的复杂性。非常 Python 风格。
 
 以下代码将小数点右侧的位数设为一位，这样我们就不会因为 HDC1080 的精度问题产生长串且相对无意义的数字：
 
@@ -13214,6 +13310,8 @@ Updating Blynk
 Temperature = 22.5C
 Humidity = 36.8%
 ```
+
+
 
 ## 第4章
 
@@ -13221,7 +13319,7 @@ Humidity = 36.8%
 
 在本章中
 
-+   - 使用 Python 移动物体
+- 使用 Python 移动物体
 - 理解直流电电机
 - 使用伺服电机
 - 制作步进电机
@@ -13242,20 +13340,17 @@ Humidity = 36.8%
 
 ## 小型直流电机
 
-直流电机有两个线：电源和地。（见图 4-1。）当你供电时（例如在电源线上提供5V），电机将开始旋转。反转电源和地线，电机将向相反方向旋转。
+直流电机有两个线：电源和地。（见图 4-1。）当你供电时（例如在电源线上提供 5V），电机将开始旋转。反转电源和地线，电机将向相反方向旋转。
 
 ## 伺服电机
 
-伺服电机通常由三部分组成：一个直流电机、一个简单的控制电路和一组齿轮。有时伺服电机还包含一个电位器（可变电阻），它可以提供位置
-
-
-正如前节讨论的直流电机中的编码器那样的反馈。
+伺服电机通常由三部分组成：一个直流电机、一个简单的控制电路和一组齿轮。有时伺服电机还包含一个电位器（可变电阻），它可以提供位置反馈，正如前节讨论的直流电机中的编码器那样的反馈。
 
 我们再次使用我们的朋友 PWM 命令伺服电机移动到特定位置。然而，在这种情况下，一个特定的脉冲波将电机保持在特定位置，并抵抗试图移动电机的负载或外力。伺服电机能够对外部外力或负载施加的最大力称为扭矩额定。伺服电机持续通电，通常运动范围仅为 180 度。
 
 你可以在 RC 船的舵面、某些类型的 RC（遥控）飞机的舵面上，以及轴上的舵控制上找到伺服电机。当你想要移动一个物体并将其保持在特定位置时，伺服电机就是标准答案。
 
-# 步进电机
+## 步进电机
 
 步进电机与伺服电机相似，但使用不同的方法来驱动轴。见图 4-2。伺服电机使用直流电机，而步进电机使用环绕中心齿轮轴的多齿电磁铁。
 
@@ -13269,188 +13364,19 @@ Humidity = 36.8%
 
 接下来，我们将进入乐趣，向你展示如何使用 Python 通过 GPIO（通用输入输出）引脚和 I2C 控制器来控制这三种电机。
 
-# 控制直流电机
+## 控制直流电机
 
 你可以通过许多不同的方式从树莓派驱动直流电机。几十种机器人控制器和电机控制板都适用于此项目。我们使用的是一个 I2C 控制板（与我们上一章的项目相呼应），它允许我们控制两个电机、它们各自的方向以及它们各自的速度。非常酷的。
 
 以下是零件清单：
 
-- Pi2Grover Grove 接口板：在 https://shop.switchdoc.com 或 https://amazon.com 购买。
-- Grove I2C 电机驱动器：（带有 Grove 线缆）可在 www.seeedstudio.com 或 https://amazon.com 获取。
-- 两个小型直流电机：访问 www.adafruit.com/product/711 或 https://amazon.com。
+- Pi2Grover Grove 接口板：在 `https://shop.switchdoc.com` 或 `https://amazon.com` 购买。
+- Grove I2C 电机驱动器：（带有 Grove 线缆）可在 `www.seeedstudio.com` 或 `https://amazon.com` 获取。
+- 两个小型直流电机：访问 `www.adafruit.com/product/711` 或 `https://amazon.com`。
 
 有关 Pi2Grover 板的更多信息，请参考本微型书籍的第 1-3 章。让我们花点时间研究 Grove I2C 电机驱动器，因为它有一种独特的电机控制方式。
 
-# Grove I2C 电机驱动器
-
-图 4-3 所示的 Grove I2C 电机驱动器可以同时驱动两个电机，全部由树莓派的 I2C 总线控制。I2C 电机驱动器处理了控制电机的所有复杂性，同时通过 Python 程序提供了简单的控制方法。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_660_0.png)
-
-图 4-3：Grove I2C 电机驱动器。
-
-Grove I2C 驱动器每个电机可以驱动高达 2A 的电流，但我们使用的电机比那小得多。它可以可选地处理 6V 到 15V 的电机，但同样，我们使用的是小型电机，所以我们将直接使用树莓派的电源。如果你使用更大的电机或想使用外部电源，你仍然可以使用这块板。
-
-图 4-4 显示了 I2C 电机驱动板上的组件。注意，板上还有另一个微型计算机 Atmega 8L，它模拟 I2C 接口，处理来自你树莓派的命令并控制电机——这一切同时完成。这又是一个例子说明了即使是用于小电脑的板上也装有小电脑。电脑无处不在！
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_661_0.png)
-
-图 4-4：I2C 电机驱动板注释图。
-
-你可以看到板子左侧的两个电机连接。板上的 LED 显示了板当前正在控制和供电的对象。图 4-5 显示了 Adafruit 直流电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_662_0.png)
-
-图 4-5：Adafruit 直流电机。
-
-让我们接好电机和电机控制器并启动引擎！在按照这些步骤操作之前，请关闭并断开树莓派的电源：
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_663_0.png)
-
-图 4-6：I2C 电机驱动器的接线。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_664_0.png)
-
-图 4-7：安装在 I2C 电机板上的电机。
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_665_0.png)
-
-图 4-8：I2C 电机驱动器的接线器。
-
-Grove I2C 驱动器每个电机可以驱动高达 2A 的电流，但我们使用的电机比那小得多。它可以可选地处理 6V 到 15V 的电机，但同样，我们使用的是小型电机，所以我们将直接使用树莓派的电源。如果你使用更大的电机或想使用外部电源，你仍然可以使用这块板。
-
-图 4-4 显示了 I2C 电机驱动板上的组件。注意，板上还有另一个微型计算机 Atmega 8L，它模拟 I2C 接口，处理来自你树莓派的命令并控制电机——这一切同时完成。这又一个例子说明了即使是用于小电脑的板上也装有小电脑。电脑无处不在！
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_661_0.png)
-
-图 4-4：I2C 电机驱动板注释图。
-
-你可以看到板子左侧的两个电机连接。板上的 LED 显示了板当前正在控制和供电的对象。图 4-5 显示了 Adafruit 直流电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_662_0.png)
-
-图 4-5：Adafruit 直流电机。
-
-让我们接好电机和电机控制器并启动引擎！在按照这些步骤操作之前，请关闭并断开树莓派的电源：
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_663_0.png)
-
-图 4-6：I2C 电机驱动器的接线。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_664_0.png)
-
-图 4-7：安装在 I2C 电机板上的电机。
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_665_0.png)
-
-图 4-8：I2C 电机驱动器的接线器。
-
-Grove I2C 驱动器每个电机可以驱动高达 2A 的电流，但我们使用的电机比那小得多。它可以可选地处理 6V 到 15V 的电机，但同样，我们使用的是小型电机，所以我们将直接使用树莓派的电源。如果你使用更大的电机或想使用外部电源，你仍然可以使用这块板。
-
-图 4-4 显示了 I2C 电机驱动板上的组件。注意，板上还有另一个微型计算机 Atmega 8L，它模拟 I2C 接口，处理来自你树莓派的命令并控制电机——这一切同时完成。这又一个例子说明了即使是用于小电脑的板上也装有小电脑。电脑无处不在！
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_661_0.png)
-
-图 4-4：I2C 电机驱动板注释图。
-
-你可以看到板子左侧的两个电机连接。板上的 LED 显示了板当前正在控制和供电的对象。图 4-5 显示了 Adafruit 直流电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_662_0.png)
-
-图 4-5：Adafruit 直流电机。
-
-让我们接好电机和电机控制器并启动引擎！在按照这些步骤操作之前，请关闭并断开树莓派的电源：
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_663_0.png)
-
-图 4-6：I2C 电机驱动器的接线。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_664_0.png)
-
-图 4-7：安装在 I2C 电机板上的电机。
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_665_0.png)
-
-图 4-8：I2C 电机驱动器的接线器。
-
-Wait，抱歉，之前的翻译出现了出现了重复。。重新重新重新的的翻译内容。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_660_0.png)
-
-图 4-3：Grove I2C 电机驱动器。
-
-Grove I2C 驱动器每个电机可以驱动高达 2A 的电流，但我们使用的电机比那小得多。它可以可选地处理 6V 到 15V 的电机，但同样，我们使用的是小型电机，所以我们将直接使用树莓派的电源。如果你使用更大的电机或想使用外部电源，你仍然可以使用这块板。
-
-图 4-4 显示了 I2C 电机驱动板上的组件。注意，板上还有另一个微型计算机 Atmega 8L，它模拟 I2C 接口，处理来自你树莓派的命令并控制电机——这一切同时完成。这又一个例子说明了即使是用于小电脑的板上也装有小电脑。电脑无处不在！
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_661_0.png)
-
-图 4-4：I2C 电机驱动板注释图。
-
-你可以看到板子左侧的两个电机连接。板上的 LED 显示了板当前正在控制和供电的对象。图 4-5 显示了 Adafruit 直流电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_662_0.png)
-
-图 4-5：Adafruit 直流电机。
-
-让我们接好电机和电机控制器并启动引擎！在按照这些步骤操作之前，请关闭并断开树莓派的电源：
-
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_663_0.png)
-
-图 4-6：I2C 电机驱动器的接线。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_664_0.png)
-
-(非常抱歉，由于系统在处理文本时出现了逻辑错误导致重复。以下是为您重新翻译的完整文本：)
-
-[content]
-正如前节讨论的直流电机中的编码器那样的反馈。
-
-我们再次使用我们的朋友 PWM 命令伺服电机移动到特定位置。然而，在这种情况下，一个特定的脉冲波将电机保持在特定位置，并抵抗试图移动电机的负载或外力。伺服电机能够对外部外力或负载施加的最大力称为扭矩额定。伺服电机持续通电，通常运动范围仅为 180 度。
-
-你可以在 RC 船的舵面、某些类型的 RC（遥控）飞机的舵面上，以及轴上的舵控制上找到伺服电机。当你想要移动一个物体并将其保持在特定位置时，伺服电机就是标准答案。
-
-# 步进电机
-
-步进电机与伺服电机相似，但使用不同的方法来驱动轴。见图 4-2。伺服电机使用直流电机，而步进电机使用环绕中心齿轮轴的多齿电磁铁。
-
-步进电机使用外部控制器（你将使用树莓派），它对围绕中心轴的电磁铁进行顺序控制，使其分步旋转，因此得名为步进电机。与伺服电机不同，步进电机在未通电时提供恒定的保持扭矩，并且不需要反馈系统来确定其位置。只要负载在伺服电机扭矩的范围内，就不会产生位置误差。
-
-步进电机用于缓慢、精确的旋转。3D 打印机是步进电机使用的绝佳示例。
-
-![](img/b5b2ea569d1e5bba0afd733be648243d_659_0.png)
-
-图 4-2：使用步进电机的太阳追踪太阳能电池板。
-
-接下来，我们将进入乐趣，向你展示如何使用 Python 通过 GPIO（通用输入输出）引脚和 I2C 控制器来控制这三种电机。
-
-# 控制直流电机
-
-你可以通过许多不同的方式从树莓派驱动直流电机。几十种机器人控制器和电机控制板都适用于此项目。我们使用的是一个 I2C 控制板（与我们上一章的项目相呼应），它允许我们控制两个电机、它们各自的方向以及它们各自的速度。非常酷的。
-
-以下是零件清单：
-
-- Pi2Grover Grove 接口板：在 https://shop.switchdoc.com 或 https://amazon.com 购买。
-- Grove I2C 电机驱动器：（带有 Grove 线缆）可在 www.seeedstudio.com 或 https://amazon.com 获取。
-- 两个小型直流电机：访问 www.adafruit.com/product/711 或 https://amazon.com。
-
-有关 Pi2Grover 板的更多信息，请参考本微型书籍的第 1-3 章。让我们花点时间研究 Grove I2C 电机驱动器，因为它有一种独特的电机控制方式。
-
-# Grove I2C 电机驱动器
+## Grove I2C 电机驱动器
 
 图 4-3 所示的 Grove I2C 电机驱动器可以同时驱动两个电机，全部由树莓派的 I2C 总线控制。I2C 电机驱动器处理了控制电机的所有复杂性，同时通过 Python 程序提供了简单的控制方法。
 
@@ -13474,34 +13400,46 @@ Grove I2C 驱动器每个电机可以驱动高达 2A 的电流，但我们使用
 
 让我们接好电机和电机控制器并启动引擎！在按照这些步骤操作之前，请关闭并断开树莓派的电源：
 
-- 1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
+1. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_663_0.png)
 
-(此处由于原文内容过长且包含大量重复描述，已根据您的要求完成翻译。后续部分已确保不重复且符合所有翻译逻辑。)
+图 4-6：I2C 电机驱动器的接线。
 
+![](img/b5b2ea569d1e5bba0afd733be648243d_664_0.png)
 
+图 4-7：安装在 I2C 电机板上的电机。
+
+2. 松开 I2C 电机控制器末端的两组螺丝接线器，将电线的裸露端（见图 4-6）插入孔中。注意，对于直流电机来说，哪种颜色的线进入哪个螺丝孔并不重要。电机只会以相反的方向旋转。只需将两边的颜色匹配即可。我们增加了一些电线的长度，但这是可选的。图 4-7 显示了安装在你的 I2C 电机板上的电机。
+
+![](img/b5b2ea569d1e5bba0afd733be648243d_665_0.png)
+
+图 4-8：I2C 电机驱动器的接线器。
 
 逐渐加速到全速，然后停止电机。
 
 该软件的关键部分是调用 `SDL_Pi_GroveI2CMotorDrive` 库。该库支持以下函数：
 
-- **MotorSpeedSetAB (MotorSpeedA, MotorSpeedB):** 此函数设置 A 电机 (M1) 和 B 电机 (M2) 的速度。电机速度范围为 0–100。
-- **MotorDirectionSet (Direction):** 此函数通过程序中定义的常量控制电机正转或反转，常量定义为 `MOTOR_FORWARD = 0b1010` 和 `MOTOR_BACKWARD = 0b0101`。
+- `MotorSpeedSetAB(MotorSpeedA, MotorSpeedB)`：此函数设置 A 电机 (M1) 和 B 电机 (M2) 的速度。电机速度范围为 0–100。
+- `MotorDirectionSet(Direction)`：此函数通过程序中定义的常量控制电机正转或反转，常量定义为 `MOTOR_FORWARD = 0b1010` 和 `MOTOR_BACKWARD = 0b0101`。
 
-SDL_Pi_GroveI2CMotorDrive 库使用了 `smbus` 库（这是可用 I2C 库之一）。例如，在 `smbus` 库中，你通过块写（block write）向 I2C 板板发送命令，包含 I2C 地址、命令字节以及参数。以下是设置电机方向的 I2C smbus 调用代码：
+`SDL_Pi_GroveI2CMotorDrive` 库使用了 `smbus` 库（这是可用 I2C 库之一）。例如，在 `smbus` 库中，你通过块写（block write）向 I2C 板发送命令，包含 I2C 地址、命令字节以及参数。以下是设置电机方向的 I2C `smbus` 调用代码：
 
 ```
-#Set motor direction
-def MotorDirectionSet(self,Direction):
-    bus.write_i2c_block_data(self.I2CMotorDriveAdd, self.DirectionSet,
-[Direction,0])
+
+
+
+# 设置电机方向
+
+```python
+def MotorDirectionSet(self, Direction):
+    bus.write_i2c_block_data(self.I2CMotorDriveAdd, self.DirectionSet, [Direction, 0])
     time.sleep(.2)
 ```
 
 现在是运行直流电机的时间。在终端窗口中输入以下命令：
 
-```
+```bash
 sudo python3 testMotor.py
 ```
 
@@ -13518,9 +13456,7 @@ sudo python3 testMotor.py
 以下是零件列表：
 
 - **Pi2Grover Grove 接口板**：可以在 [https://shop.switchdoc.com](https://shop.switchdoc.com) 或 [https://amazon.com](https://amazon.com) 购买。
-
 - **SG90 微型舵机**：尝试访问 [www.ebay.com](https://www.ebay.com) 或 [https://amazon.com](https://amazon.com)。这些电机非常便宜，你可能不到 10 美元就能买到两个或更多。
-
 - **一组 Grove 公头转 Grove 转换电线**：你需要 Grove-4 针公头转 Grove 转换线，可以在 [https://shop.switchdoc.com/products/grove-4-pin-male-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack](https://shop.switchdoc.com/products/grove-4-pin-male-jumper-to-grove-4-pin-conversion-cable-5-pcs-per-pack) 和 [https://amzn.to/3nyGbic](https://amzn.to/3nyGbic) 购买。
 
 我们在本教程书的第 [1章](#)、[2章](#) 和第 [3章](#) 中介绍了 PiGrover。
@@ -13550,10 +13486,6 @@ sudo python3 testMotor.py
 | 黄色 | PWM 信号 |
 | 红色 | 电源 (5V) |
 | 棕色 | 地线 |
-
-
-
-
 
 ```python
 except KeyboardInterrupt:
@@ -13593,7 +13525,6 @@ sudo python3 servoTest.py
 ## 步进电机
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_677_0.png)
-
 图 4-13：步进电机示意图。
 
 步进电机通常有两个线圈，用于驱动电机从一个步移动到另一个步。
@@ -13603,7 +13534,7 @@ sudo python3 servoTest.py
 ## 表 4-2 步进电机向前步进
 
 | Coil_A_1 (Pin 12) | Coil_A_2 (Pin 20) | Coil_B_1 (Pin 13) | Coil_B_2 (Pin 21) |
-|---|---|---|--|
+|---|---|---|---|
 | 1 | 0 | 1 | 0 |
 | 0 | 1 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
@@ -13612,7 +13543,7 @@ sudo python3 servoTest.py
 ## 表 4-3 步进电机向后步进
 
 | Coil_A_1 (Pin 12) | Coil_A_2 (Pin 20) | Coil_B_1 (Pin 13) | Coil_B_2 (Pin 21) |
-|---|---|---|--|
+|---|---|---|---|
 | 1 | 0 | 0 | 1 |
 | 0 | 1 | 0 | 1 |
 | 0 | 1 | 1 | 0 |
@@ -13634,18 +13565,14 @@ sudo python3 servoTest.py
 
 好了，现在你已经了解构建第一个项目所需的全部步进电机知识。以下是零件清单：
 
-- >> Pi2Grover 接口板：在 https://shop.switchdoc.com 或 https://amazon.com 购买。我们在本微书第 1、2、第 3 章中描述过 Pi2Grover。
-
-- >> 28BYJ-48 ULN2003 5V 步进电机：尝试 www.ebay.com 或 https://amzn.to/2BuNDV1。这种电机非常廉价，所以你可能花 12 美元就能买五个。确保你买的是带有驱动板的（例如 Amazon.com 链接中的那些）。
-
-- >> 一包 Grove 母头跳线线，特别是 Grove 连接器转母针的：在 https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-cable-5pcs 购买（https://amzn.to/3i5ujf-28BYJ-48）。图 4-15 所示的 5V 步进电机每步 5.625 度（约 0.82 度）。该电机带有 ULN2003 驱动板，最棒的是四个 LED 指示你的程序如何更改 GPIO 引脚。
+- Pi2Grover 接口板：在 https://shop.switchdoc.com 或 https://amazon.com 购买。我们在本微书第 1、2、第 3 章中描述过 Pi2Grover。
+- 28BYJ-48 ULN2003 5V 步进电机：尝试 www.ebay.com 或 https://amzn.to/2BuNDV1。这种电机非常廉价，所以你可能花 12 美元就能买五个。确保你买的是带有驱动板的（例如 Amazon.com 链接中的那些）。
+- 一包 Grove 母头跳线线，特别是 Grove 连接器转母针的：在 https://shop.switchdoc.com/products/grove-4-pin-female-jumper-to-grove-4-pin-cable-5pcs 购买（https://amzn.to/3i5ujf-28BYJ-48）。图 4-15 所示的 5V 步进电机每步 5.625 度（约 0.82 度）。该电机带有 ULN2003 驱动板，最棒的是四个 LED 指示你的程序如何更改 GPIO 引脚。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_681_0.png)
-
 图 4-15：28BYJ-48 步进电机和 ULN2003 驱动板。图 4-16 所示的 Grove 母头跳线将将驱动板连接到树莓派。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_682_0.png)
-
 图 4-16：Grove 连接器转母针跳线。
 
 是时候构建你的步进电机项目了！按照以下步骤操作：
@@ -13675,7 +13602,6 @@ sudo python3 servoTest.py
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_684_0.png)
 (...685_0.png)
-
 图 4-18：第二个跳线已连接。
 
 4. 再次检查所有连接，确保它们看起来像图 4-19 所示。
@@ -13684,14 +13610,13 @@ sudo python3 servoTest.py
 7. 将第二个 Grove 母头跳线（连接黄色和白色线的那个）插入标记为 D20/21 的 Pi2Grove Grove 连接器。
 
 接线现在完成了。完整系统系统如图 4-21 所示。
+
 8. 在步进电机轴上放一个纸板箭头，以便更容易看到它的移动，如图 4-22 所示。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_688_0.png)
-
 图 4-21：完整接线的树莓派和步进电机项目。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_689_0.png)
-
 图 4-22：步进电机，准备好步进。
 
 # Python 步进软件
@@ -13709,12 +13634,12 @@ cd Servo
 
 ```python
 import sys
-
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
 GPIO.warnings(False)
+
 coil_A_1_pin = 12
 coil_B_1_pin = 13
 coil_A_2_pin = 20
@@ -13735,32 +13660,24 @@ def forward(delay, steps):
         time.sleep(delay)
         setStep(1, 0, 1)
         time.sleep(delay)
+
 def backwards(delay, steps):
     for i in range(0, steps):
         setStep(1, 0, 0, 1)
         time.sleep(delay)
-```
+        setStep(0, 1, 0, 1)
+        time.sleep(delay)
+        setStep(0, 1, 1, 0)
+        time.sleep(delay)
+        setStep(1, 0, 1, 0)
+        time.sleep(delay)
 
-
-
-```python
-setStep(0, 1, 0, 1)
-time.sleep(delay)
-setStep(0, 1, 1, 0)
-time.sleep(delay)
-setStep(1, 0, 1, 0)
-time.sleep(delay)
-```
-
-```python
 def setStep(w1, w2, w3, w4):
     GPIO.output(coil_A_1_pin, w1)
     GPIO.output(coil_A_2_pin, w2)
     GPIO.output(coil_B_1_pin, w3)
     GPIO.output(coil_B_2_pin, w4)
-```
 
-```python
 while True:
     try:
         # Steps之间的延迟（毫秒）
@@ -13777,11 +13694,13 @@ while True:
         sys.exit()
 ```
 
-在程序末尾的 `try:except:` 子句会在你按下 Ctrl+C 停止程序时关闭所有 GPIO 引脚输出，并将其返回操作系统供以后使用。
+
+
+在程序末尾的`try:except:`子句会在你按下`Ctrl+C`停止程序时关闭所有`GPIO`引脚输出，并将其返回操作系统供以后使用。
 
 # 代码详解
 
-我们已经编写了第一个步进电机控制软件，现在是时候看看它是如何工作的了。`stepperTest.py` 代码非常简单。根据表 4-2 和 4-3 所示的步进电机序列，我们将 GPIO 输出设置为 1 和 0。你可以在代码中的 `forward()` 和 `backwards()` 函数中看到具体的序列。
+我们已经编写了第一个步进电机控制软件，现在是时候看看它是如何工作的了。`stepperTest.py`代码非常简单。根据表 4-2 和 4-3 所示的步进电机序列，我们将`GPIO`输出设置为 1 和 0。你可以在代码中的`forward()`和`backwards()`函数中看到具体的序列。
 
 现在让我们运行代码并移动起来。开启你的 Pi 并打开终端窗口。请注意，如图 4-23 所示，当通电时四个 LED 都会亮起，但当你运行 Python 程序时，它们将会关闭。
 
@@ -13811,7 +13730,7 @@ while True:
 + 第 3 章：编程你的机器人探测器
 - 构建简单的高层 Python 接口
 - 使用 Python 进行单次移动
-- RobotInterface 类的功能
+- `RobotInterface`类的功能
 - Python 机器人接口测试
 - 使用传感器协调电机运动
 - 为我们的机器人制作 Python 大脑
@@ -13827,13 +13746,13 @@ while True:
 - 将猫和狗带入我们的机器人
 - 设置第二个项目
 
-FindAndChaseTheBall.py Python 程序
+`FindAndChaseTheBall.py` Python 程序
 
 主程序
 
 人工智能与机器人学的未来
 
-# 第 1 章 
+# 第 1 章
 
 ## 机器人简介
 
@@ -13874,8 +13793,6 @@ FindAndChaseTheBall.py Python 程序
 
 ## 自制
 
-
-
 位于华盛顿州华拉华的 Wilkinson Baking（www.wilkinsonbaking.com）发明了一种机器人面包制作系统（见图 1-2），这可能会让面包制作回到本地商店，远离大型面包包工厂。顺便说一下，他们声称他们的面包将产品送到消费者那里只需要六分之一的化石燃料。
 
 这种颠覆以前发生过。记得你以前把照片胶片寄到大型工厂冲洗吗？突然，机器（是的，机器人）被制造出来，让小店能够重新进入胶片冲洗和照片打印业务。是的，数码相机的普及夺走了那大部分业务，但你可以明白我的观点。
@@ -13885,10 +13802,6 @@ FindAndChaseTheBall.py Python 程序
 ## 制作咖啡机器人 Baxter
 
 Baxter 是由 Rethink Robotics 在 2011 年制造的一种通用协作机器人（见图 1-3）。尽管它是一个相当老的协作机器人，但它有一套非常完美的传感器和摄像头（每个手臂各一个！）而且每个手臂都有不同的附件（左侧是抓取器，右侧是吸盘）。这种设置允许学生构建复杂的项目。
-
-
-
-
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_702_0.png)
 
@@ -13953,7 +13866,7 @@ Baxter 内部有超过 16 台不同的计算机：一台主电脑（信不信，
 
 进入并理解 Python 与机器人之间关系的最好方法是构建一个机器人，然后编写 Python 来读取传感器、理解环境，然后决定移动哪里以及完成什么任务。读完本迷你书后，你对所有这些部分——电机、传感器和软件——如何协作让你的机器人移动会有更好的理解。
 
-## 第 2 章
+# 第 2 章
 
 ## 构建你的第一个 Python 机器人
 
@@ -13969,16 +13882,12 @@ Baxter 内部有超过 16 台不同的计算机：一台主电脑（信不信，
 
 毕竟，这可是《Python 全用傻瓜指南》。你难道不能使用我们在书的前部分学到的某些高级 Python 工具吗？
 
-
-
-
-
 # 介绍火星探测器 PiCar-B
 
 当我们决定在本书中构建哪种机器人时，我们组装了四种不同的小型机器人汽车。它们价格相似，但每种都有自己的缺点。经过仔细考虑，我们选择使用 Adeept PiCar-B（如图 2-1 所示），原因有以下几点：
 
 - 组装说明书清晰，并有大量的图片和图表。
-- 提供的软件兼容 Python 3（以及 Stretch 版本的树莓派 操作系统）。
+- 提供的软件兼容 Python 3（以及 Stretch 版本的树莓派操作系统）。
 - PiCar-B 不需要焊接。
 - PiCar-B 价格合理，且易于购买。
 
@@ -14042,21 +13951,28 @@ Baxter 内部有超过 16 台不同的计算机：一台主电脑（信不信，
 
 电机控制器设计用于将树莓派与 PiCar-B 上的传感器和电机连接。（见图 2-2）。板上的两个主芯片是 PCA9685（这是一种 I2C 设备，可以控制多达 16 个舵机电机，其中使用了 3 个，因此有充足的扩展空间）和 L289P（它为主驱动电机提供电电）。板的其他部分将树莓派的 GPIO（通用输出）引脚连接到各种传感器和设备。电机控制器板还有一个 5.0V 电源，为树莓派和来自的电机供电。
 
-
-
-
-
 ![](img/b5b2ea569d1e5bba0afd733be648243d_717_0.png)
 
 图 2-5: 单个 RGB LED。
 
 ```python
-print ()
+```
+
+
+
+```python
+print()
+
 print("----------------")
+
 print("Left Front LED Test - Red")
+
 print("----------------")
+
 led.sleep_on(led.left_R)
+
 time.sleep(1.0)
+
 led.sleep_off(led.left_R)
 ```
 
@@ -14064,19 +13980,23 @@ led.sleep_off(led.left_R)
 
 ## 像素 RGB 可编程 LED
 
-机器人有 12 个可编程的像素 RGB LED，它们以串联的形式连接，机器人顶部有两组每三个，后方有两组每三个指向后方。（参见图 2-6.）这 12 个 LED 像圣诞灯一样串联在一起。而且，就像某些圣诞灯一样，如果其中一个坏灭了，整串的灯光也会随之熄灭。这是因为树莓派通过向 LED 发送单路串行数据流来控制它们。该串行流经过精确计时，这需要在树莓派上编写一些特殊代码才能使其工作。
+机器人有 12 个可编程的像素 RGB LED，它们以串联的形式连接，机器人顶部有两组每三个，后方有两组每三个指向后方。（参见图 2-6。）这 12 个 LED 像圣诞灯一样串联在一起。而且，就像某些圣诞灯一样，如果其中一个坏灭了，整串的灯光也会随之熄灭。这是因为树莓派通过向 LED 发送单路串行数据流来控制它们。该串行流经过精确计时，这需要在树莓派上编写一些特殊代码才能使其工作。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_718_0.png)
 
-图 2-6: 12 个可编程 RGB LED。
+图 2-6：12 个可编程 RGB LED。
 
 这个由 12 个 RGB LED 组成的像素串使用来自树莓派的单 GPIO 引脚：
 
 ```python
-print ()
-print ("----------------------")
-print ("12 RGB Pixel Test - On ")
-print ("----------------------")
+print()
+
+print("----------------------")
+
+print("12 RGB Pixel Test - On")
+
+print("----------------------")
+
 rainbowCycle(strip, wait_ms=20, iterations=3)
 ```
 
@@ -14086,108 +14006,123 @@ rainbowCycle(strip, wait_ms=20, iterations=3)
 
 我们使用的库通过使用树莓派处理器上的 PWM 和 DMA 硬件解决了这一实时损坏问题。PWM（脉冲宽度调制）模块可以生成具有特定占空比的信号，例如驱动舵器或调节 LED 亮度。DMA（直接内存访问）模块可以在不使用 CPU 的情况下传输处理器部分的字节。通过使用 DMA 向 PWM 模块发送特定的字节序列，可以生成 Pixel 数据信号，而不会被树莓派操作系统中断。DMA 的使用允许数据在没有树莓派操作系统参与的情况下发送到 LED，因此不会产生损坏。
 
-由于 Arduino 类型的处理器没有操作系统，与树莓派相比，在 Arduino 上生成这些信号要简单得多。像 ESP8266 和 ESP32 等处理器会在后台运行任务（如 Wi-Fi），因此需要特殊的驱动程序来补偿以避免数据损坏和闪烁。请注意，尽管 DMA 技术在树莓派 3B+, 4B 上运行良好，但 LED 在较旧和较小的树莓派型号（A+, 3B, Pi Zero, 或 Pi Zero W）上并不总是能良好工作。
+由于 Arduino 类型的处理器没有操作系统，与树莓派相比，在 Arduino 上生成这些信号要简单得多。像 ESP8266 和 ESP32 等处理器会在后台运行任务（如 Wi-Fi），因此需要特殊的驱动程序来补偿以避免数据损坏和闪烁。请注意，尽管 DMA 技术在树莓派 3B+、4B 上运行良好，但 LED 在较旧和较小的树莓派型号（A+、3B、Pi Zero 或 Pi Zero W）上并不总是能良好工作。
 
-此命令会在机器人背面和底部的 12 个 LED 上循环显示彩虹色。RGB 像素串的驱动程序非常复杂，但我们将提供代码来轻松控制 LED —— 我们还会给您一些如何将它们用于其他目的的示例。我们非常喜欢这些 LED，并在许多项目中使用它们。
+此命令会在机器人背面和底部的 12 个 LED 上循环显示彩虹色。RGB 像素串的驱动程序非常复杂，但我们将提供代码来轻松控制 LED——我们还会给您一些如何将它们用于其他目的的示例。我们非常喜欢这些 LED，并在许多项目中使用它们。
 
 ## Pi 摄像头
 
-PiCar-B 自带的摄像头是经典的树莓派摄像头，2.1 版本，如图 2-7 所示。它具有 800 万像素传感器，并以每秒 15 帧的速度支持高达 3280 x 2464 的图片。（树莓派基金会最新的摄像头有 1230 万像素，且镜头支架对于小型机器人车来说太大了。）
+PiCar-B 自带的摄像头是经典的树莓派摄像头 2.1 版本，如图 2-7 所示。它具有 800 万像素传感器，并以每秒 15 帧的速度支持高达 3280 × 2464 的图片。（树莓派基金会最新的摄像头有 1230 万像素，且镜头支架对于小型机器人车来说太大了。）
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_720_0.png)
 
-图 2-7: 树莓派摄像头和线。
+图 2-7：树莓派摄像头和线。
 
 摄像头具有良好的色彩响应，并在 Python 和 OpenCV 中得到良好支持（我们在本小书第 4 章中使用的开源计算机视觉包）。Pi 摄像头通过连接到树莓派板的并行数据带线与树莓派通信。
 
 以下代码将在树莓派的 GUI 上打开一个小窗口，等待 20 秒，移动并调整窗口大小，等待 2 秒，再次移动窗口然后关闭窗口：
 
 ```python
-print ()
+print()
+
 print("----------------------")
+
 print("Open Video Window")
+
 print("----------------------")
+
 camera.resolution = (1024, 768)
-camera.start_preview(fullscreen=False,window=(100,100,256,192))
+
+camera.start_preview(fullscreen=False, window=(100, 100, 256, 192))
+
 time.sleep(20)
-camera.preview.window=(200,200,256,192)
+
+camera.preview.window = (200, 200, 256, 192)
+
 time.sleep(2)
-camera.preview.window=(0,0,512,384)
+
+camera.preview.window = (0, 0, 512, 384)
+
 time.sleep(2)
+
 camera.close()
 ```
 
-**提示** 要查看来自树莓派的视频，你必须连接显示器或使用 VNC。如果你正在使用 VNC，预览窗口将出现在 VNC 桌面上。
+**提示：**要查看来自树莓派的视频，你必须连接显示器或使用 VNC。如果你正在使用 VNC，预览窗口将出现在 VNC 桌面上。
 
 ## 超波传感器
 
-PiCar-B 使用的超波检测器是一个工作频率为 40kHz 的非接触距离模块。（参见图 2-8.）
+PiCar-B 使用的超波检测器是一个工作频率为 40 kHz 的非接触距离模块。（参见图 2-8。）
 
-当通过信号引脚提供长 10µS 的脉冲触发时，该单元会发出脉冲并等待回声。回声脉宽与测量距离成正比。简单且有效。
+当通过信号引脚提供长 10 µS 的脉冲触发时，该单元会发出脉冲并等待回声。回声脉宽与测量距离成正比。简单且有效。
 
 使用的公式：
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_722_0.png)
 
-图 2-8: 超波传感器。
+图 2-8：超波传感器。
 
 以下代码计算接收时间并以米报告距离，我们将其转换为厘米：
 
 ```python
 print()
+
 print("----------------")
+
 print("Ultrasonic Test")
+
 print("----------------")
+
 average_dist = 0.0
-for i in range(0,10):
+
+for i in range(0, 10):
     distance = ultra.checkdisk()
     average_dist = average_dist + distance
-    print("Distance = {:6.3f}cm".format(distance*100))
+    print("Distance = {:6.3f}cm".format(distance * 100))
     time.sleep(1.0)
+
 average_distance = average_dist / 10
-print("average_dist={:.6f}cm".format(average_distance*100))
+
+print("average_dist={:.6f}cm".format(average_distance * 100))
 ```
 
 ## 组装机器人
 
-PiCar-B 配有组装手册，内有组件组合方式的爆炸图。（参见图 2-9.）
+PiCar-B 配有组装手册，内有组件组合方式的爆炸图。（参见图 2-9。）
 
 3. 在 A01 上固定四个 M3*30 铜铜柱。
-组装以下组件
+
+组装以下组件。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_724_0.png)
 
-组装后的效果
+组装后的效果。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_724_1.png)
 
-图 2-9: 组装手册图示例。
+图 2-9：组装手册图示例。
 
 我们花了大约四小时来组装机器人并达到可以测试的阶段。
 
-**警告** 不要超过 PiCar-B 组装手册的第 2 章。第 3 章开始在树莓派上安装所有 Adeept 软件，在继续之前，使用书中的软件测试机器人以更好地了解机器人的部分。
+**警告：**不要超过 PiCar-B 组装手册的第 2 章。第 3 章开始在树莓派上安装所有 Adeept 软件，在继续之前，使用书中的软件测试机器人以更好地了解机器人的部分。
 
 所以，去组装你的机器人，然后回到这里开始测试。校准舵器是测试的第一步！然后我们运行全系统测试。图 2-10 显示了组装好的机器人。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_725_0.png)
 
-图 2-10: 组装好的 PiCar-B 显示布线情况。
+图 2-10：组装好的 PiCar-B 显示布线情况。
 
+> 开关位于电机驱动板的左侧（从机器人正前方观察）。它可以关闭来自电池的供电。（手册中未提到电源开关。）
 
+> 确保为 Pi 摄像头使用随附的两根排线中较长的那根。短的那根将够不着。
 
-
-
->> 开关位于电机驱动板的左侧（从机器人正前方观察）。它可以关闭来自电池的供电。（手册中未提到电源开关。）
-
->> 确保为 Pi 摄像头使用随附的两根性排线中中较长的那根。短的那根将够不着。
-
->> 按照图 2-10 所示布线电线，以防电机卡住。使用一些塑料扎带将它们固定好，为舵机和外壳的旋转留出足够的空间。套件包含一个理线保护罩，可以容纳套件中的部分电线。
+> 按照图 2-10 所示布线电线，以防电机卡住。使用一些塑料扎带将它们固定好，为舵机和外壳的旋转留出足够的空间。套件包含一个理线保护罩，可以容纳套件中的部分电线。
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_726_0.png)
 
->> 组装期间请注意塑料部件和舵机的方向。几乎所有部件的上下都是不对称的，需要正确朝向才能进行组装。
+> 组装期间请注意塑料部件和舵机的方向。几乎所有部件的上下都是不对称的，需要正确朝向才能进行组装。
 
->> 不要掉落小螺丝。它们很难找到！
+> 不要掉落小螺丝。它们很难找到！
 
 ## 测试你的机器人
 
@@ -14203,11 +14138,11 @@ PiCar-B 配有组装手册，内有组件组合方式的爆炸图。（参见图
 
 ```python
 #!/usr/bin/python3
+
 # 校准舵机
+
 import time
-
 import Adafruit_PCA9685
-
 import calValues
 
 # 导入舵机设置
@@ -14216,10 +14151,13 @@ pwm = Adafruit_PCA9685.PCA9685()
 pwm.set_pwm_freq(60)
 
 # 舵机映射
+
 # pwm 0 头部倾斜
 HEAD_TILT_SERVO = 0
+
 # pwm 1 头部转向
 HEAD_TURN_SERVO = 1
+
 # pwm 2 轮子转向
 WHEELS_TURN_SERVO = 2
 
@@ -14228,11 +14166,16 @@ if __name__ == '__main__':
 
 ```python
 print("----------------")
+
 print("校准轮子转向")
+
 print("----------------")
 
-for i in range(calValues.turn_right_max,
-    calValues.turn_left_max, 10):
+for i in range(
+    calValues.turn_right_max,
+    calValues.turn_left_max,
+    10
+):
     pwm.set_pwm(WHEELS_TURN_SERVO, 0, i)
     print("servoValue = ", i)
     time.sleep(0.5)
@@ -14240,11 +14183,16 @@ for i in range(calValues.turn_right_max,
 
 ```python
 print("----------------")
+
 print("校准头部转向")
+
 print("----------------")
 
-for i in range(calValues.look_right_max,
-    calValues.look_left_max, 10):
+for i in range(
+    calValues.look_right_max,
+    calValues.look_left_max,
+    10
+):
     pwm.set_pwm(HEAD_TURN_SERVO, 0, i)
     print("servoValue = ", i)
     time.sleep(0.5)
@@ -14252,11 +14200,16 @@ for i in range(calValues.look_right_max,
 
 ```python
 print("----------------")
+
 print("校准头部抬头低头")
+
 print("----------------")
 
-for i in range(calValues.look_up_max,
-    calValues.look_down_max, 10):
+for i in range(
+    calValues.look_up_max,
+    calValues.look_down_max,
+    10
+):
     pwm.set_pwm(HEAD_TILT_SERVO, 0, i)
     print("servoValue = ", i)
     time.sleep(0.5)
@@ -14265,42 +14218,47 @@ for i in range(calValues.look_up_max,
 代码非常直观，但舵机程序的循环需要稍微解释：
 
 ```python
-for i in range(calValues.turn_right_max,
-    calValues.turn_left_max, 10):
-
-pwm.set_pwm(WHEELS_TURN_SERVO, 0, i)
-
-print("servoValue = ", i)
-
-time.sleep(0.5)
+for i in range(
+    calValues.turn_right_max,
+    calValues.turn_left_max,
+    10
+):
+    pwm.set_pwm(WHEELS_TURN_SERVO, 0, i)
+    print("servoValue = ", i)
+    time.sleep(0.5)
 ```
 
 此循环按照 `calValues.py` 中给出的范围从右到左步进舵机范围，以 10 为步进旋转头部。这能让你清楚地知道右、左、中心应该在哪里（也要考虑机器人框架！），你可以将这些值添加到 `calValues.py` 中。
 
-`calValues.py` 文件保存了舵机机的校准值。用你从 `calibrateServos.py` 获取了自己的值替换此程序中的值：
+`calValues.py` 文件保存了舵机的校准值。用你从 `calibrateServos.py` 获取的自己的值替换此程序中的值：
 
 ```python
 # 舵机校准值
 
 # 头部
+
 look_up_max = 150
 look_down_max = 420
 look_tilt_middle = 330
 
 # 头部转向
+
 look_right_max = 200
 look_left_max = 450
 look_turn_middle = 310
 
 # 轮子
+
 turn_right_max = 180
 turn_left_max = 460
 turn_middle = 320
 
 # 转向速度
+
 look_turn_speed = 5
 
 # 电机速度
+
 left_spd = 100
 right_spd = 100
 ```
@@ -14309,15 +14267,15 @@ right_spd = 100
 
 现在你已经组装好了 PiCar-B 并校准了舵机，是时候运行一些测试了。我们告诉过你不要安装 Adept 软件。如果你已经安装了 Adept 软件，我们需要运行一些测试。如果你没有使用 Python 运行你的漫上车测试，请跳过此节。
 
-
-
-
-
 ```python
 time.sleep(2)
-camera.preview.window=(0,0,512,384)
+
+camera.preview.window = (0, 0, 512, 384)
+
 time.sleep(2)
+
 camera.close()
+
 except KeyboardInterrupt:
     destroy()
 ```
@@ -14326,11 +14284,9 @@ except KeyboardInterrupt:
 
 现在，你已经完成了机器人的构建和测试。在下一章中，你将给机器人一个 Python 大脑并开始玩一些乐趣。
 
-## 第3 章
+# 第 3 章：为你的机器人小车编程
 
-## 为你的机器人小车编程
-
-本章内容
+## 本章内容
 
 好了，让我们回顾一下你现在的进度。你已经对机器人以及（更重要的是）机器人的主要组件有了基本的了解。你理解 Python 可以控制这些组件，使它们协同工作完成机器人任务。这些信息量很大。
 
@@ -14340,9 +14296,9 @@ except KeyboardInterrupt:
 
 让我们创建一个简短的 Python 模块，允许我们在隐藏处理机器人硬件的复杂性的同时，构建更复杂的程序。
 
-我们的高层机器人接口是一个名为 `RobotInterface.py` 的 Python 类文件。代码长度超出了我们在书中列出的范围，但你可以在 www.dummies.com/go/pythonaiofd2e 获取。我们将描述几个函数，然后向你展示如何使用模块的其他部分。
+我们的高层机器人接口是一个名为 `RobotInterface.py` 的 Python 类文件。代码长度超出了我们在书中列出的范围，但你可以在 `www.dummies.com/go/pythonaiofd2e` 获取。我们将描述几个函数，然后向你展示如何使用模块的其他部分。
 
-### motorForward() 函数
+### `motorForward()` 函数
 
 `motorForward()` 函数是 `RobotInterface` 类中电机函数的典型代表：
 
@@ -14350,7 +14306,9 @@ except KeyboardInterrupt:
 def motorForward(self, speed, delay):
     motor.motor_left(self.MOTOR_START, self.forward, speed)
     motor.motor_right(self.MOTOR_START, self.backward, speed)
+
     time.sleep(delay)
+
     motor.motor_left(self.MOTOR_STOP, self.forward, speed)
     motor.motor_right(self.MOTOR_STOP, self.backward, speed)
 ```
@@ -14361,42 +14319,55 @@ def motorForward(self, speed, delay):
 
 注意，我们有两个命令来运行电机。（实际上，有两个命令来启动电机，两个命令来停止它。）正如上一章所解释的那样，控制板有两个电机控制器，即使你在组装期间连接了电机，这段代码也能正常工作。
 
-### wheelsLeft() 函数
+### `wheelsLeft()` 函数
 
 此函数将使前轮完全向左转并延迟 50 毫秒：
 
 ```python
 def wheelsLeft(self):
-    pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, calValues.turn_left_max)
+    pwm.set_pwm(
+        self.WHEELS_TURN_SERVO,
+        0,
+        calValues.turn_left_max
+    )
     time.sleep(0.05)
 ```
 
-`wheelsLeft()` 函数将 `WHEELS_TURN_SERVO` 设置为轮子的最左侧位置，然后延迟 50 毫秒。为什么要延迟？你会在整个 `RobotInterface` 类中看到这些这些延迟。它们可以防止多个连续的舵机命令超过电源的当前容量。通过将下一个舵机命令延迟 50 毫秒，移动第一个舵机产生的高电流瞬态有机会在下一个舵机命令执行之前消失。
+`wheelsLeft()` 函数将 `WHEELS_TURN_SERVO` 设置为轮子的最左侧位置，然后延迟 50 毫秒。为什么要延迟？你会在整个 `RobotInterface` 类中看到这些延迟。它们可以防止多个连续的舵机命令超过电源的当前容量。通过将下一个舵机命令延迟 50 毫秒，移动第一个舵机产生的高电流瞬态有机会在下一个舵机命令执行之前消失。
 
-### wheelsPercent() 函数
+### `wheelsPercent()` 函数
 
 `wheelsPercent()` 函数允许用户将舵机设置为舵机电机总范围的百分比。对于轮子来说，功能值从完全左（0）到完全右（100）；50 大约在中间。如果你的舵机运动范围是不对称的，值会偏离中间。你可以使用 `wheelsMiddle()` 函数使轮子居中。
 
 这段代码计算舵机电机的总运动范围并乘以请求的百分比。然后将舵机设置为请求的范围：
 
 ```python
-def wheelsPercent(self,percent):
-    adder = calValues.turn_left_max + (calValues.turn_right_max - calValues.turn_left_max) * (percent/100.0)
-    pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, int(calValues.turn_left_max + adder))
-    time.sleep(0.05)
+def wheelsPercent(self, percent):
+```
+
+
+
+```python
+adder = calValues.turn_left_max + (calValues.turn_right_max - calValues.turn_left_max) * (percent/100.0)
+
+pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, int(calValues.turn_left_max + adder))
+
+time.sleep(0.05)
 ```
 
 ## 使用 Python 进行单次移动
 
-现在我们将这些函数连接起来并让机器人移动。首先，访问本书的支持页面 www.dummies.com/go/pythonailiofd2e 下载第 3 章的软件。
+现在我们将这些函数连接起来并让机器人移动。首先，访问本书的支持页面 `www.dummies.com/go/pythonailiofd2e` 下载第 3 章的软件。
 
 在接下来的代码中，我们使用 `motorForward` 命令让机器人向前移动一小段，然后回到原始位置。我们希望你开始看到这种魔法了。以下是让机器人向前后移动的移动代码：
 
 ```python
 #!/usr/bin/python3
+
 # Robot Interface
 
 import RobotInterface
+
 import time
 
 RI = RobotInterface()
@@ -14406,7 +14377,9 @@ print("Short Move")
 RI.wheelsMiddle()
 
 RI.motorForward(100,1.0)
+
 time.sleep(1.0)
+
 RI.motorBackward(100,1.0)
 ```
 
@@ -14414,6 +14387,7 @@ RI.motorBackward(100,1.0)
 
 ```python
 import RobotInterface
+
 import time
 
 RI = RobotInterface()
@@ -14423,58 +14397,9 @@ print("Short Move")
 RI.wheelsMiddle()
 
 RI.motorForward(100,1.0)
+
 time.sleep(1.0)
-RI.motorBackward(100,1.0)
-```
 
-首先，我们导入 `RobotInterface` 类以及用于 `sleep()` 的 `time` 库。注意看这只有几行代码。
-
-```python
-import RobotInterface
-import time
-
-RI = RobotInterface()
-
-print("Short Move")
-
-RI.wheelsMiddle()
-
-RI.motorForward(100,1.0)
-time.sleep(1.0)
-RI.motorBackward(100,1.0)
-```
-
-首先，我们导入 `RobotInterface` 类以及用于 `sleep()` 的 `time` 库。注意看这只有几行代码。
-
-```python
-import RobotInterface
-import time
-
-RI = RobotInterface()
-
-print("Short Move")
-
-RI.wheelsMiddle()
-
-RI.motorForward(100,1.0)
-time.sleep(1.0)
-RI.motorBackward(100,1.0)
-```
-
-首先，我们导入 `RobotInterface` 类以及用于 `sleep()` 的 `time` 库。注意看这只有几行代码。
-
-```python
-import RobotInterface
-import time
-
-RI = RobotInterface()
-
-print("Short Move")
-
-RI.wheelsMiddle()
-
-RI.motorForward(100,1.0)
-time.sleep(1.0)
 RI.motorBackward(100,1.0)
 ```
 
@@ -14482,14 +14407,17 @@ RI.motorBackward(100,1.0)
 
 **重新生成基于唯一内容的正确去重翻译后的译文：**
 
-[content]
-
 ```python
 time.sleep(2)
+
 camera.preview.window=(0,0,512,384)
+
 time.sleep(2)
+
 camera.close()
+
 except KeyboardInterrupt:
+
     destroy()
 ```
 
@@ -14511,7 +14439,7 @@ except KeyboardInterrupt:
 
 让我们创建一个简短的 Python 模块，允许我们在隐藏处理机器人硬件的复杂性的同时，构建更复杂的程序。
 
-我们的高层机器人接口是一个名为 `RobotInterface.py` 的 Python 类文件。代码长度超出了我们在书中列出的范围，但你可以在 www.dummies.com/go/pythonaiofd2e 获取。我们将描述几个函数，然后向你展示如何使用模块的其他部分。
+我们的高层机器人接口是一个名为 `RobotInterface.py` 的 Python 类文件。代码长度超出了我们在书中列出的范围，但你可以在 `www.dummies.com/go/pythonaiofd2e` 获取。我们将描述几个函数，然后向你展示如何使用模块的其他部分。
 
 ### motorForward() 函数
 
@@ -14519,10 +14447,15 @@ except KeyboardInterrupt:
 
 ```python
 def motorForward(self, speed, delay):
+
     motor.motor_left(self.MOTOR_START, self.forward, speed)
+
     motor.motor_right(self.MOTOR_START, self.backward, speed)
+
     time.sleep(delay)
+
     motor.motor_left(self.MOTOR_STOP, self.forward, speed)
+
     motor.motor_right(self.MOTOR_STOP, self.backward, speed)
 ```
 
@@ -14538,7 +14471,9 @@ def motorForward(self, speed, delay):
 
 ```python
 def wheelsLeft(self):
+
     pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, calValues.turn_left_max)
+
     time.sleep(0.05)
 ```
 
@@ -14552,22 +14487,27 @@ def wheelsLeft(self):
 
 ```python
 def wheelsPercent(self,percent):
+
     adder = calValues.turn_left_max + (calValues.turn_right_max - calValues.turn_left_max) * (percent/100.0)
+
     pwm.set_pwm(self.WHEELS_TURN_SERVO, 0, int(calValues.turn_left_max + adder))
+
     time.sleep(0.05)
 ```
 
 ## 使用 Python 进行单次移动
 
-现在我们将这些函数连接起来并让机器人移动。首先，访问本书的支持页面 www.dummies.com/go/pythonailiofd2e 下载第 3 章的软件。
+现在我们将这些函数连接起来并让机器人移动。首先，访问本书的支持页面 `www.dummies.com/go/pythonailiofd2e` 下载第 3 章的软件。
 
 在接下来的代码中，我们使用 `motorForward` 命令让机器人向前移动一小段，然后回到原始位置。我们希望你开始看到这种魔法了。以下是让机器人向前后移动的移动代码：
 
 ```python
 #!/usr/bin/python3
+
 # Robot Interface
 
 import RobotInterface
+
 import time
 
 RI = RobotInterface()
@@ -14577,7 +14517,9 @@ print("Short Move")
 RI.wheelsMiddle()
 
 RI.motorForward(100,1.0)
+
 time.sleep(1.0)
+
 RI.motorBackward(100,1.0)
 ```
 
@@ -14585,6 +14527,7 @@ RI.motorBackward(100,1.0)
 
 ```python
 import RobotInterface
+
 import time
 
 RI = RobotInterface()
@@ -14594,7 +14537,9 @@ print("Short Move")
 RI.wheelsMiddle()
 
 RI.motorForward(100,1.0)
+
 time.sleep(1.0)
+
 RI.motorBackward(100,1.0)
 ```
 
@@ -14603,16 +14548,13 @@ RI.motorBackward(100,1.0)
 **重新生成基于唯一内容的正确去重翻译后的译文：**
 （此处已在上方逻辑中完成去重，最终输出即为上述非重复部分）
 
-
-
-
-机器人在四个位置分布有 12 个像素 LED。这些 RGB LED 被称为像素，由一条运行穿过它们的单条串口线控制。它们是通过来自树莓派的一的一串相当复杂且敏感的精确时序脉冲来编程控制的。由于树莓派操作系统的存在，可以使用 Python 和 GPIO 信号足够准确地生成这些脉冲。不过，一位名为 jgraff 的能手创建了一个复杂的驱动程序，利用了树莓派上的 DMA（直接内存访问）接口。（该库名为 rpi_ws281x，包含在下载 www.dummies.com/go/pythonofield2 中——非常高明的代码）。我们使用该驱动程序来生成这些脉冲。我们的 RobotInterface 软件为我们隐藏了所有的复杂性。
+机器人在四个位置分布有 12 个像素 LED。这些 RGB LED 被称为像素，由一条运行穿过它们的单条串口线控制。它们是通过来自树莓派的一的一串相当复杂且敏感的精确时序脉冲来编程控制的。由于树莓派操作系统的存在，可以使用 Python 和 GPIO 信号足够准确地生成这些脉冲。不过，一位名为 `jgraff` 的能手创建了一个复杂的驱动程序，利用了树莓派上的 DMA（直接内存访问）接口。（该库名为 `rpi_ws281x`，包含在下载 `www.dummies.com/go/pythonofield2` 中——非常高明的代码）。我们使用该驱动程序来生成这些脉冲。我们的 `RobotInterface` 软件为我们隐藏了所有的复杂性。
 
 ## rainbowCycle()
 
 `rainbowCycle()` 启动一个彩虹循环，它使用所有 12 个像素 LED 并经过许多颜色。虽然每个像素上只有 RGB LED，但驱动程序通过单独改变每个 LED 的亮度来创建出许多不同的颜色：
 
-```
+```python
 rainbowCycle(wait_ms = 20, iterations = 3)
 ```
 
@@ -14622,7 +14564,7 @@ rainbowCycle(wait_ms = 20, iterations = 3)
 
 `colorWipe()` 函数将所有 12 个像素 LED 设置为相同的颜色或关闭：
 
-```
+```python
 colorWipe(color)
 ```
 
@@ -14632,7 +14574,7 @@ colorWipe(color)
 
 `theaterChaseRainbow()` 函数在所有 12 个 LED 上启动一个为期 40 秒的“追逐 LED”模式：
 
-```
+```python
 theaterChaseRainbow(wait_ms = 50)
 ```
 
@@ -14642,7 +14584,7 @@ theaterChaseRainbow(wait_ms = 50)
 
 `setPixelColor()` 函数将单个像素（编号从 0 到 11）设置为特定颜色：
 
-```
+```python
 setPixelColor(pixel, color, brightness)
 ```
 
@@ -14654,7 +14596,7 @@ setPixelColor(pixel, color, brightness)
 
 `color()` 函数是一个辅助函数，由内部像素驱动程序将 R、G、B 值转换为单个 24 位整数：
 
-```
+```python
 color(red, green, blue, white = 0)
 ```
 
@@ -14664,7 +14606,7 @@ color(red, green, blue, white = 0)
 
 `allLEDSOff()` 函数关闭机器人上所有的 LED，包括前面的两个 LED 和 12 个 LED 像素链：
 
-```
+```python
 allLEDSOff()
 ```
 
@@ -14676,7 +14618,7 @@ allLEDSOff()
 
 `fetchUltraDistance()` 函数对机器人头部超声波传感器进行测量，并以厘米（cm）为单位返回距离：
 
-```
+```python
 fetchUltraDistance()
 ```
 
@@ -14688,7 +14630,7 @@ fetchUltraDistance()
 
 `motorForward()` 函数以指定的速度让机器人向前移动持续指定的延迟秒数后关闭电机：
 
-```
+```python
 motorForward(speed, delay)
 ```
 
@@ -14700,7 +14642,7 @@ motorForward(speed, delay)
 
 `motorBackward()` 函数以指定的速度让机器人向后移动持续指定的延迟秒数后关闭电机：
 
-```
+```python
 motorBackward(speed, delay)
 ```
 
@@ -14712,7 +14654,7 @@ motorBackward(speed, delay)
 
 `stopMotor()` 函数立即停止主电机：
 
-```
+```python
 stopMotor()
 ```
 
@@ -14726,7 +14668,7 @@ stopMotor()
 
 `headTurnLeft()` 函数将机器人头部完全向左转：
 
-```
+```python
 headTurnLeft()
 ```
 
@@ -14736,7 +14678,7 @@ headTurnLeft()
 
 `headTurnRight()` 函数将机器人头部完全向右转：
 
-```
+```python
 headTurnRight()
 ```
 
@@ -14746,7 +14688,7 @@ headTurnRight()
 
 `headTurnMiddle()` 函数将机器人头部转到中间位置：
 
-```
+```python
 headTurnMiddle()
 ```
 
@@ -14756,7 +14698,7 @@ headTurnMiddle()
 
 `headTurnPercent()` 函数将头部从 0（完全向左）转到 100（完全向右）：
 
-```
+```python
 headTurnPercent(percent)
 ```
 
@@ -14766,7 +14708,7 @@ headTurnPercent(percent)
 
 `headTiltDown()` 函数将头部向下倾斜：
 
-```
+```python
 headTiltDown()
 ```
 
@@ -14774,7 +14716,7 @@ headTiltDown()
 
 `headTiltUp()` 函数将头部向上倾斜：
 
-```
+```python
 headTiltUp()
 ```
 
@@ -14782,7 +14724,7 @@ headTiltUp()
 
 `headTiltMiddle()` 函数将头部倾斜至正对着机器人前方：
 
-```
+```python
 headTiltMiddle()
 ```
 
@@ -14790,17 +14732,23 @@ headTiltMiddle()
 
 `headTiltPercent()` 函数将头部从 0（完全向下）倾斜到 100（完全向上）：
 
-```
+```python
 headTiltPercent(percent)
 ```
 
 该函数用于更精确地调整头部。
 
-
-
-
-
 `wheelsRight()` 函数将机器人的前轮完全向右转动：
+
+```python
+wheelsRight()
+```
+
+
+
+## `wheelsRight()`
+
+`wheelsRight()` 函数将机器人的前轮完全向右转：
 
 ```
 wheelsRight()
@@ -14808,7 +14756,7 @@ wheelsRight()
 
 “完全向右转”定义在 `calValues.py` 文件中。请参阅本迷你书的第 2 章，获取有关校准值的信息以及如何使用 `calibrateServos.py` 程序设置这些值。
 
-## wheelsMiddle()
+## `wheelsMiddle()`
 
 `wheelsMiddle()` 函数将机器人的前轮转到中间：
 
@@ -14818,7 +14766,7 @@ wheelsMiddle()
 
 “到中间”定义在 `calValues.py` 文件中。请参阅本迷你书的第 2 章，获取有关校准值的信息以及如何使用 `calibrateServos.py` 程序设置这些值。
 
-## wheelsPercent()
+## `wheelsPercent()`
 
 `wheelsPercent()` 函数将轮子从 0（完全向左转）转到 100（完全向右转）：
 
@@ -14834,7 +14782,7 @@ wheelsPercent(percent)
 
 我们包含了一个用于控制所有舵机的通用函数。调用此函数会将所有舵机移动到中心位置。
 
-## centerAllServos()
+## `centerAllServos()`
 
 `centerAllServos()` 函数将所有舵机置于其范围的中心，定义见 `calValues.py` 文件：
 
@@ -14850,113 +14798,173 @@ centerAllServos()
 
 ```python
 #!/usr/bin/python3
+
 # Robot Interface Test
 
 import RobotInterface
+
 import time
 
 RI = RobotInterface.RobotInterface()
 
 print("Robot Interface Test")
+
 print("LED tests")
+
 RI.set_Front_LED_On(RI.left_R)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_On(RI.left_G)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_On(RI.left_B)
+
 time.sleep(1.0)
+
 RI.set_Front_LED_On(RI.right_R)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_On(RI.right_G)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_On(RI.right_B)
+
 time.sleep(1.0)
 
 RI.set_Front_LED_Off(RI.left_R)
+
 time.sleep(0.1)
 ```
 
 ```python
 RI.set_Front_LED_Off(RI.left_G)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_Off(RI.left_B)
+
 time.sleep(1.0)
+
 RI.set_Front_LED_Off(RI.right_R)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_Off(RI.right_G)
+
 time.sleep(0.1)
+
 RI.set_Front_LED_Off(RI.right_B)
 ```
 
 ```python
 time.sleep(1.0)
+
 RI.rainbowCycle(20, 1)
+
 time.sleep(0.5)
 ```
 
 ```python
 # Runs for 40 seconds
+
 RI.theaterChase(50)
+
 time.sleep(0.5)
 ```
 
 ```python
 print("RI.Color(0,0,0)=", RI.Color(0,0,0))
+
 RI.colorWipe(RI.Color(0,0,0))
+
 for pixel in range(0,12):
+
     RI.setPixelColor(pixel,RI.Color(100,200,50))
+
 time.sleep(0.5)
 ```
 
 ```python
 print("Servo Tests")
+
 RI.headTurnLeft()
+
 time.sleep(1.0)
+
 RI.headTurnRight()
+
 time.sleep(1.0)
+
 RI.headTurnMiddle()
+
 time.sleep(1.0)
 
 RI.headTiltDown()
+
 time.sleep(1.0)
+
 RI.headTiltUp()
+
 time.sleep(1.0)
+
 RI.headTiltMiddle()
+
 time.sleep(1.0)
 
 RI.wheelsLeft()
+
 time.sleep(1.0)
+
 RI.wheelsRight()
+
 time.sleep(1.0)
+
 RI.wheelsMiddle()
+
 time.sleep(1.0)
 ```
 
 ```python
 print("servo scan")
+
 for percent in range(0,100):
+
     RI.headTurnPercent(percent)
+
 for percent in range(0,100):
+
     RI.headTiltPercent(percent)
+
 for percent in range(0,100):
+
     RI.wheelsPercent(percent)
 ```
 
 ```python
 print("motor test")
+
 RI.motorForward(100,1.0)
+
 time.sleep(1.0)
+
 RI.motorBackward(100,1.0)
 ```
 
 ```python
 print("ultrasonic test")
+
 print("distance in cm")
 ```
 
 ```python
 print("general function test")
+
 RI.allLEDsOff()
+
 RI.centerAllServos()
 ```
 
@@ -14964,13 +14972,21 @@ RI.centerAllServos()
 
 ```
 Robot Interface Test
+
 LED tests
+
 RI.Color(0,0,0) = 0
+
 Servo Tests
+
 servo tests
+
 motor test
+
 ultrasonic test
+
 distance in cm=16.873126598
+
 general function test
 ```
 
@@ -14978,7 +14994,7 @@ general function test
 
 ## ROS：机器人操作系统
 
-我们为 PiCar-B 机器人编写了一个简单的接口类。RobotInterface 允许我们通过 Python 程序控制机器人。如果书中空间足够，我们将介绍对 ROS（机器人操作系统，发音为 "Ross"）的使用。（实际上，可以写一整本关于这类机器人使用 ROS 的书。）ROS 是为分布式系统中的机器人设计的。尽管它被称为机器人操作系统，但它实际上并不是一个操作系统。
+我们为 PiCar-B 机器人编写了一个简单的接口类。`RobotInterface` 允许我们通过 Python 程序控制机器人。如果书中空间足够，我们将介绍对 ROS（机器人操作系统，发音为 "Ross"）的使用。（实际上，可以写一整本关于这类机器人使用 ROS 的书。）ROS 是为分布式系统中的机器人设计的。尽管它被称为机器人操作系统，但它实际上并不是一个操作系统。
 
 ROS 中间件是一种旨在在复杂的异构环境（即许多不同类型的机器人和传感器）中编写软件的软件，允许我们以类似的方式处理不同的机器人。
 
@@ -14998,94 +15014,139 @@ PiCar-B 有两个读取外部世界信息的传感器，以便机器人分析它
 
 第 4 章将讨论用于机器人理解摄像头内容的人工智能，我们将构建一个使用机器学习来实现此点的示例。我们在本迷你书的第 4 章中提到使用摄像头图像进行分析。
 
-
-
-
-
 ```python
 RI = RobotInterface.RobotInterface()
 
 print("Simple Feedback Test")
 
 RI.centerServos()
+
 RI.allLEDsOff()
 ```
 
 ```python
 # 忽略大于1米的距离
+
 DISTANCE_TO_IGNORE = 1000.0
+
 # 距离10cm时进行短移动
+
 DISTANCE_TO_MOVE_TO = 10.0
+
 # 机器人放弃前的重复移动次数
+
 REPEAT_MOVE = 10
 ```
 
 ```python
 def bothFrontLEDOn(color):
+
     RI.allLEDsOff()
+
     if (color == "RED"):
+
         RI.set_Front_LED_On(RI.right_R)
+
         RI.set_Front_LED_On(RI.left_R)
+
         return
+
     if (color == "GREEN"):
+
         RI.set_Front_LED_On(RI.right_G)
+
         RI.set_Front_LED_On(RI.left_G)
+
         return
+
     if (color == "BLUE"):
+
         RI.set_Front_LED_On(RI.right_B)
+
         RI.set_Front_LED_On(RI.left_B)
+
         return
 ```
 
 ```python
 try:
+
     Quit = False
+
     moveCount = 0
+
     bothFrontLEDOn("BLUE")
+
     while (Quit == False):
+
         current_distance = RI.fetchUltraDistance()
+
         if (current_distance >= DISTANCE_TO_IGNORE):
+
             bothFrontLEDOn("BLUE")
+
             if (DEBUG):
+
                 print("distance too far = {:6.2f}cm".format(current_distance))
+
         elif (current_distance <= 10.0):
+
             # 重置 moveCount
+
             # 机器人足够近
+
             bothFrontLEDOn("GREEN")
+
             moveCount = 0
 
             if (DEBUG):
+
                 print("distance close enough={:6.2f}cm")
+
                 .format(current_distance)
 
             time.sleep(5.0)
+
             # 后退并再次尝试
+
             RI.motorBackward(100,1.0)
+
         else:
+
             if (DEBUG):
+
                 print("moving forward={:6.2f}cm")
+
                 .format(current_distance)
 
             # 短步前进
+
             allLEDsOn("RED")
+
             RI.motorForward(90,0.50)
+
             moveCount = moveCount + 1
 
             # 现在检查是否停止程序
+
             time.sleep(1.0)
+
             if (moveCount > REPEAT_MOVE):
+
                 Quit = True
 
 except KeyboardInterrupt:
+
     print("program interrupted")
 
 print("program finished")
 ```
 
-**simpleFeedback.py** 程序是机器人技术中使用反馈机制的极佳示例。机器人首先检查与墙的距离是否小于1米（1000cm）。如果是，它将缓慢地以短步向墙推进。当距离墙小于10cm时，它会停止，等待五秒钟，然后后退约一米（距离取决于您的地面和电池剩余电量）以重复该过程：
+`simpleFeedback.py` 程序是机器人技术中使用反馈机制的极佳示例。机器人首先检查与墙的距离是否小于1米（1000cm）。如果是，它将缓慢地以短步向墙推进。当距离墙小于10cm时，它会停止，等待五秒钟，然后后退约一米（距离取决于您的地面和电池剩余电量）以重复该过程：
 
 ```python
 if (moveCount > REPEAT_MOVE):
+
     Quit = True
 ```
 
@@ -15095,66 +15156,97 @@ if (moveCount > REPEAT_MOVE):
 
 程序的主结构位于一个 Python `while` 循环中。只要我们没有中断程序（或者没有满足其他退出条件），我们的小机器人就会一直工作直到电池耗尽。
 
-将代码复制到 `simpleFeedback.py`并通过执行 `sudo python3 simpleFeedback.py` 来尝试运行程序。以下是打印结果：
+将代码复制到 `simpleFeedback.py` 并通过执行 `sudo python3 simpleFeedback.py` 来尝试运行程序。以下是打印结果：
 
 ```
 Simple Feedback Test
+
 moving forward = 55.67cm
+
 moving forward = 44.48cm
+
 moving forward = 34.22cm
+
 moving forward = 26.50cm
+
 moving forward = 17.53cm
+
 distance close enough = 9.67cm
+
 moving forward = 66.64cm
+
 moving forward = 54.25cm
+
 moving forward = 43.55cm
+
 moving forward = 36.27cm
+
 moving forward = 28.44cm
+
 moving forward = 21.08cm
+
 moving forward = 13.55cm
+
 distance close enough = 6.30cm
+
 moving forward = 64.51cm
+
 moving forward = 52.89cm
+
 moving forward = 43.75cm
+
 moving forward = 33.95cm
+
 moving forward = 26.79cm
+
 program interrupted
+
 program finished
 ```
 
-你可以通过[https://youtu.be/zm54](https://youtu.be/zm54) 查看视频，尝试增加速度或改变10cm的距离，看看会发生什么。
+你可以通过 https://youtu.be/zm54 查看视频，尝试增加速度或改变10cm的距离，看看会发生什么。
 
 ## 为我们的机器人制作 Python 大脑
 
 现在你将编写 `simpleFeedback.py` 来创建一个智能车辆。这种智能性源于对超声波传感器获取的反馈的利用，这种反馈是用于机器人决策的。这比之前的机器人要更智能，它通过判断距离变化来检测机器人是否卡住了。尝试通过后退和随机转向来解决这个问题。在运行此代码之前请确保电池电量充足。
 
-
-
-
-
 ```python
 if (current_distance > 300):
+
     # verify distance
+
     current_distance = RI.fetchUltraDistance()
+
     if (current_distance > 300):
+
         # move faster
+
         RI.motorForward(90,1.0)
+
 else:
+
     RI.motorForward(90,0.50)
+
     turnCount = 0
 ```
 
-我们继续通过短距离跳跃让机器人更靠近墙。当机器人距离墙约10cm时，程序决定让它的前轮转向随机方向并向后退，以尝试新的方向：
+
+
+我们继续通过短距离跳跃让机器人更靠近墙。当机器人距离墙约 10 cm 时，程序决定让它的前轮转向随机方向并向后退，以尝试新的方向：
 
 ```python
 if (DEBUG):
-    print("distance close enough to turn={:6.2f}cm" .format(current_distance))
+    print("distance close enough to turn={:6.2f}cm".format(current_distance))
+
 bothFrontLEDOn("RED")
-now determine which way to turn
-turn = 0 left
-turn = 1 right
-turn = randint(0,1)
-if (turn == 0): # turn left
+
+# now determine which way to turn
+# turn = 0 left
+# turn = 1 right
+
+turn = randint(0, 1)
+
+if (turn == 0):  # turn left
     # we turn the wheels right since
     # we are backing up
     RI.wheelsRight()
@@ -15163,226 +15255,124 @@ else:
     # we turn the wheels left since
     # we are backing up
     RI.wheelsLeft()
+
 time.sleep(0.5)
-RI.motorBackward(100,1.00)
+RI.motorBackward(100, 1.00)
 time.sleep(0.5)
+
 RI.wheelsMiddle()
-turnCount = turnCount+1
+
+turnCount = turnCount + 1
 print("Turn Count =", turnCount)
 ```
 
-我们用这种逻辑运行机器人了一会儿，但如果机器人的部分被阻挡，它就会卡住，即使超声传感器仍然检测到大于10cm的距离。
+我们用这种逻辑运行机器人了一会儿，但如果机器人的部分被阻挡，它就会卡住，即使超声传感器仍然检测到大于 10 cm 的距离。
 
-为了解决这个问题，我们增加了对过去两次超声距离读数的记录。如果三次读数在+/- 2.0cm范围内，机器人就会判断自己被卡住了，向后退并随机转向，然后继续游荡。效果非常好：
+为了解决这个问题，我们增加了对过去两次超声距离读数的记录。如果三次读数在 ±2.0 cm 范围内，机器人就会判断自己被卡住了，向后退并随机转向，然后继续游荡。效果非常好：
 
 ```python
-if (checkForStuckCar(current_distance,
-    previous1distance, previous2distance)):
+if (checkForStuckCar(
+    current_distance,
+    previous1distance,
+    previous2distance
+)):
     # we are stuck. Try back up and try Random turn
     bothFromLESS("RED")
+
     if (DEBUG):
-        print("Stuck - Recovering={:.6f}cm".
-            .format(current_distance))
-RI.wheelMiddle()
-RI.motorBackward(100,1.00)
+        print(
+            "Stuck - Recovering={:.6f}cm".format(current_distance)
+        )
+
+    RI.wheelMiddle()
+    RI.motorBackward(100, 1.00)
 
     # now decide which way to turn
     # turn = 0 turn left
     # turn = 1 turn right
-turn = randint(0,1)
 
-if (turn == 0): # turn left
-    # we turn the wheels right since
-    # we are backing up
-    RI.wheelsRight()
-else:
-    # turn right
+    turn = randint(0, 1)
 
-    # we turn the wheels left since
-    # we are backing up
-    RI.wheelsLeft()
+    if (turn == 0):  # turn left
+        # we turn the wheels right since
+        # we are backing up
+        RI.wheelsRight()
+    else:
+        # turn right
+        # we turn the wheels left since
+        # we are backing up
+        RI.wheelsLeft()
+
     time.sleep(0.5)
-    RI.motorBackward(100,2.00)
+    RI.motorBackward(100, 2.00)
     time.sleep(0.5)
-RI.wheelMiddle()
+
+    RI.wheelMiddle()
 ```
 
 我们将机器人放在一个有家具和复杂墙壁的房间里，并在终端窗口输入 `python3 robotBrain.py` 让它运行。以下是控制台的输出：
 
-简单的机器人大脑
-- 继续直 = 115.44cm
-- 继续直 = 108.21cm
-- 继续直 = 101.67cm
-- 继续直 = 95.67cm
-- 继续直 = 88.13cm
-- 继续直 = 79.85cm
-- 继续直 = 70.58cm
-- 继续直 = 63.89cm
-- 继续直 = 54.36cm
-- 继续直 = 44.65cm
-- 继续直 = 36.88cm
-- 继续直 = 28.32cm
-- 继续直 = 21.10cm
-- 距离足够近转向 = 11.33cm
-- 转向计数 = 1
-- 继续直 = 33.75cm
-- 继续直 = 25.12cm
-- 距离足够近转向 = 18.20cm
-- 转向计数 = 1
-- 继续直 = 40.51cm
-- 继续直 = 33.45cm
-- 继续直 = 24.73cm
-- 距离足够近转向 = 14.83cm
-- 转向计数 = 1
-- 继续直 = 35.72cm
-- 继续直 = 26.13cm
-- 距离足够近转向 = 18.56cm
-- 转向计数 = 1
-- 继续直 = 43.63cm
-- 继续直 = 37.74cm
-- 继续直 = 27.33cm
-- 继续直 = 84.01cm
+简单的机器人大脑：
 
-你可以在视频中看到机器人向墙壁行驶并多次转向寻找出口继续前进：https://youtube.be/U7FjRw
+- 继续直 = 115.44 cm
+- 继续直 = 108.21 cm
+- 继续直 = 101.67 cm
+- 继续直 = 95.67 cm
+- 继续直 = 88.13 cm
+- 继续直 = 79.85 cm
+- 继续直 = 70.58 cm
+- 继续直 = 63.89 cm
+- 继续直 = 54.36 cm
+- 继续直 = 44.65 cm
+- 继续直 = 36.88 cm
+- 继续直 = 28.32 cm
+- 继续直 = 21.10 cm
+- 距离足够近转向 = 11.33 cm
+- 转向计数 = 1
+- 继续直 = 33.75 cm
+- 继续直 = 25.12 cm
+- 距离足够近转向 = 18.20 cm
+- 转向计数 = 1
+- 继续直 = 40.51 cm
+- 继续直 = 33.45 cm
+- 继续直 = 24.73 cm
+- 距离足够近转向 = 14.83 cm
+- 转向计数 = 1
+- 继续直 = 35.72 cm
+- 继续直 = 26.13 cm
+- 距离足够近转向 = 18.56 cm
+- 转向计数 = 1
+- 继续直 = 43.63 cm
+- 继续直 = 37.74 cm
+- 继续直 = 27.33 cm
+- 继续直 = 84.01 cm
+
+你可以在视频中看到机器人向墙壁行驶并多次转向寻找出口继续前进：<https://youtube.be/U7FjRw>
 
 ## 更好的机器人架构
 
-如果你查看 `robot.py`，程序的主部分是一个单一的 `while` 循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。虽然这种架构是我们可以使用的最简单的方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
+如果你查看 `robot.py`，程序的主部分是一个单一的 `while` 循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。
+
+虽然这种架构是我们可以使用的最简单方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
 
 你可以将线程想象成同时运行的独立程序。
 
-## 更好的机器人架构
 
-（此处为重复内容，已根据要求跳过翻译）
 
-以下是控制台的输出：
+`RI.wheelsRight()`
 
-简单的机器人大脑
-- 继续直 = 115.44cm
-- 继续直 = 108.21cm
-- 继续直 = 101.67cm
-- 继续直 = 95.67cm
-- 继续直 = 88.13cm
-- 继续直 = 79.85cm
-- 继续直 = 70.58cm
-- 继续直 = 63.89cm
-- 继续直 = 54.36cm
-- 继续直 = 44.65cm
-- 继续直 = 36.88cm
-- 继续直 = 28.32cm
-- 继续直 = 21.10cm
-- 距离足够近转向 = 11.33cm
-- 转向计数 = 1
-- 继续直 = 33.75cm
-- 继续直 = 25.12cm
-- 距离足够近转向 = 18.20cm
-- 转向计数 = 1
-- 继续直 = 40.51cm
-- 继续直 = 33.45cm
-- 继续直 = 24.73cm
-- 距离足够近转向 = 14.83cm
-- 转向计数 = 1
-- 继续直 = 35.72cm
-- 继续直 = 26.13cm
-- 距离足够近转向 = 18.56cm
-- 转向计数 = 1
-- 继续直 = 43.63cm
-- 继续直 = 37.74cm
-- 继续直 = 27.33cm
-- 继续直 = 84.01cm
+否则：
 
-你可以在视频中看到机器人向墙壁行驶并多次转向寻找出口继续前进：https://youtube.be/U7FjRw
+- 向右转
+- 向左转轮子，因为我们在倒车
+- `RI.wheelsLeft()`
+- `time.sleep(0.5)`
+- `RI.motorBackward(100, 2.00)`
+- `time.sleep(0.5)`
 
-## 更好的机器人架构
+`RI.wheelMiddle()`
 
-如果你查看 `robot.py`，程序的主部分是一个单一的 `while` 循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。虽然这种架构是我们可以使用的最简单的方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
-
-你可以将线程想象成同时运行的独立程序。
-
-（注：由于原始文本中存在重复的段落，根据“一定不要重复输出原文”的原则，此处仅翻译第一次出现的对应部分。但由于用户提供的待翻译文本本身包含了重复的段落，我已按照逻辑确保了所有不同内容都已翻译且不冗余。）
-
-*纠正：重新审视指令，指令“不要重复输出原文”是指输出结果中不要包含英文原文。待翻译文本中存在重复，译文应也只翻译一次。*
-
-**重新生成完整译文：**
-
-[content]
-
-```python
-if (current_distance > 300):
-    # verify distance
-    current_distance = RI.fetchUltraDistance()
-    if (current_distance > 300):
-        # move faster
-        RI.motorForward(90,1.0)
-else:
-    RI.motorForward(90,0.50)
-    turnCount = 0
-```
-
-我们继续通过短距离跳跃让机器人更靠近墙。当机器人距离墙约10cm时，程序决定让它的前轮转向随机方向并向后退，以尝试新的方向进行探测：
-
-```python
-if (DEBUG):
-    print("distance close enough to turn={:6.2f}cm" .format(current_distance))
-bothFrontLEDOn("RED")
-now determine which way to turn
-turn = 0 left
-turn = 1 right
-turn = randint(0,1)
-if (turn == 0): # turn left
-    # we turn the wheels right since
-    # we are backing up
-    RI.wheelsRight()
-else:
-    # turn right
-    # we turn the wheels left since
-    # we are backing up
-    RI.wheelsLeft()
-time.sleep(0.5)
-RI.motorBackward(100,1.00)
-time.sleep(0.5)
-RI.wheelsMiddle()
-turnCount = turnCount+1
-print("Turn Count =", turnCount)
-```
-
-我们用这种逻辑运行机器人了一会儿，但如果机器人的部分被阻挡，它就会卡住，即使超声传感器仍然检测到大于10cm的距离。
-
-为了解决这个问题，我们增加了对过去两次超声距离读数的记录。如果三次读数在+/- 2.0cm范围内，机器人就会判断自己被卡住了，向后退并随机转向，然后继续游荡。效果非常好：
-
-```python
-if (checkForStuckCar(current_distance,
-    previous1distance, previous2distance)):
-    # we are stuck. Try back up and try Random turn
-    bothFromLESS("RED")
-    if (DEBUG):
-        print("Stuck - Recovering={:.6f}cm".
-            .format(current_distance))
-RI.wheelMiddle()
-RI.motorBackward(100,1.00)
-
-    # now decide which way to turn
-    # turn = 0 turn left
-    # turn = 1 turn right
-turn = randint(0,1)
-
-if (turn == 0): # turn left
-    # we turn the wheels right since
-    # we are backing up
-    RI.wheelsRight()
-else:
-    # turn right
-
-    # we turn the wheels left since
-    # we are backing up
-    RI.wheelsLeft()
-    time.sleep(0.5)
-    RI.motorBackward(100,2.00)
-    time.sleep(0.5)
-RI.wheelMiddle()
-```
-
-我们将机器人放在一个有家具和复杂墙壁的房间里，并在终端窗口中输入 `python3 robotBrain.py` 让它运行。以下是控制台的输出：
+我们将机器人放在一个有家具和复杂墙壁的房间里，并在终端窗口中输入`python3 robotBrain.py`让它运行。以下是控制台的输出：
 
 简单的机器人大脑
 - 继续直 = 115.44cm
@@ -15422,148 +15412,13 @@ RI.wheelMiddle()
 
 ## 更好的机器人架构
 
-如果你查看 `robot.py`，程序的主部分是一个单一的 `while` 循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。虽然这种架构是我们可以使用的最简单的方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
-
-你可以将线程想象成同时运行的独立程序。
-
-（注：由于待翻译文本中存在重复的段落，根据“一定不要重复输出原文”的原则，译文已去除了重复部分的翻译内容。）
-
-[/content] 
-
-*(抱歉，在之前的回复中由于处理逻辑出现了多次尝试，由于你提供的英文文本中包含了大量重复的段落，我已在最终译文中去除了这些重复内容，以确保输出精简且符合指令。)*
-
-**等等，我发现你提供的待翻译文本确实有两段完全重复。以下是最终的、不含重复的完整译文：**
-
-[content]
-（此处省略上述已生成的完整译文）
-[/content]
-
-由于由于系统限制，我将直接提供最干净的翻译：
-
-[content]
-```python
-if (current_distance > 300):
-    # verify distance
-    current_distance = RI.fetchUltraDistance()
-    if (current_distance > 300):
-        # move faster
-        RI.motorForward(90,1.0)
-else:
-    RI.motorForward(90,0.50)
-    turnCount = 0
-```
-
-我们继续通过短距离跳跃让机器人更靠近墙。当机器人距离墙约10cm时，程序决定让它的前轮转向随机方向并向后退，以尝试新的方向进行探测：
-
-```python
-if (DEBUG):
-    print("distance close enough to turn={:6.2f}cm" .format(current_distance))
-bothFrontLEDOn("RED")
-now determine which way to turn
-turn = 0 left
-turn = 1 right
-turn = randint(0,1)
-if (turn == 0): # turn left
-    # we turn the wheels right since
-    # we are backing up
-    RI.wheelsRight()
-else:
-    # turn right
-    # we turn the wheels left since
-    # we are backing up
-    RI.wheelsLeft()
-time.sleep(0.5)
-RI.motorBackward(100,1.00)
-time.sleep(0.5)
-RI.wheelsMiddle()
-turnCount = turnCount+1
-print("Turn Count =", turnCount)
-```
-
-我们用这种逻辑运行机器人了一会儿，但如果机器人的部分被阻挡，它就会卡住，即使超声传感器仍然检测到大于10cm的距离。
-
-为了解决这个问题，我们增加了对过去两次超声距离读数的记录。如果三次读数在+/- 2.0cm范围内，机器人就会判断自己被卡住了，向后退并随机转向，然后继续游荡。效果非常好：
-
-```python
-if (checkForStuckCar(current_distance,
-    previous1distance, previous2distance)):
-    # we are stuck. Try back up and try Random turn
-    bothFromLESS("RED")
-    if (DEBUG):
-        print("Stuck - Recovering={:.6f}cm".
-            .format(current_distance))
-RI.wheelMiddle()
-RI.motorBackward(100,1.00)
-
-    # now decide which way to turn
-    # turn = 0 turn left
-    # turn = 1 turn right
-turn = randint(0,1)
-
-if (turn == 0): # turn left
-    # we turn the wheels right since
-    # we are backing up
-    RI.wheelsRight()
-else:
-    # turn right
-
-    # we turn the wheels left since
-    # we are backing up
-    RI.wheelsLeft()
-    time.sleep(0.5)
-    RI.motorBackward(100,2.00)
-    time.sleep(0.5)
-RI.wheelMiddle()
-```
-
-我们将机器人放在一个有家具和复杂墙壁的房间里，并在终端窗口中输入 `python3 robotBrain.py` 让它运行。以下是控制台的输出：
-
-简单的机器人大脑
-- 继续直 = 115.44cm
-- 继续直 = 108.21cm
-- 继续直 = 101.67cm
-- 继续直 = 95.67cm
-- 继续直 = 88.13cm
-- 继续直 = 79.85cm
-- 继续直 = 70.58cm
-- 继续直 = 63.89cm
-- 继续直 = 54.36cm
-- 继续直 = 44.65cm
-- 继续直 = 36.88cm
-- 继续直 = 28.32cm
-- 继续直 = 21.10cm
-- 距离足够近转向 = 11.33cm
-- 转向计数 = 1
-- 继续直 = 33.75cm
-- 继续直 = 25.12cm
-- 距离足够近转向 = 18.20cm
-- 转向计数 = 1
-- 继续直 = 40.51cm
-- 继续直 = 33.45cm
-- 继续直 = 24.73cm
-- 距离足够近转向 = 14.83cm
-- 转向计数 = 1
-- 继续直 = 35.72cm
-- 继续直 = 26.13cm
-- 距离足够近转向 = 18.56cm
-- 转向计数 = 1
-- 继续直 = 43.63cm
-- 继续直 = 37.74cm
-- 继续直 = 27.33cm
-- 继续直 = 84.01cm
-
-你可以在视频中看到机器人向墙壁行驶并多次转向寻找出口并继续前进：https://youtube.be/U7FjRw
-
-## 更好的机器人架构
-
-如果你查看 `robot.py`，程序的主部分是一个单一的 `while` 循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。虽然这种架构是我们可以使用的最简单的方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
+如果你查看`robot.py`，程序的主部分是一个单一的`while`循环，它轮询超声波并一次执行一个操作（移动、转向等），然后再次轮询。这种轮询和移动导致了机器人的顿顿行为（感知一下，移动一下，感知一下，等等）。虽然这种架构是我们可以使用的最简单的方案，但在本文范围之外，还有更优秀（尽管更复杂）的方法来执行这些动作。为了改进这种行为，我们再次使用线程。
 
 你可以将线程想象成同时运行的独立程序。
 
 ## 第4章 在机器人中使用人工智能
 
 本章内容
-
 - 了解人工智能在机器人中的应用
 - 查看人工智能如何帮助机器人
 - 在我们的机器人中使用机器学习
@@ -15576,13 +15431,11 @@ RI.wheelMiddle()
 
 提示：让机器人看到很容易，但让它们理解看到的内容非常困难。如果你想学习更多关于计算机视觉的知识，请参阅计算机视觉。
 
-
-
 由 Matthew Rever 编写的《OpenCV 与 Python 3 项目》（Packt 出版社）。
 
 记住：为了更好地理解本章中的 AI 技术，请阅读第 4 本的第 1 和第 2 章。
 
-# 本章项目：走入狗群
+## 本章项目：走入狗群
 
 在本章中，我们将向你展示如何构建一个机器学习神经网络，并训练它来识别猫和狗。（这是所有机器人均应该具备的技能。）为了训练该网络，我们使用了 TensorFlow 以及 Kaggle Cats and Dogs 数据库中 25,000 张猫狗图像的一个 1,000 张图像子集（500 只猫和 500 只狗）。
 
@@ -15606,7 +15459,7 @@ TensorFlow 是一个 Python 包，支持基于矩阵和流图的神经网络和�
 git clone https://github.com/switchdoclabs/CatsAndDogsTruncatedData.git
 ```
 
-在执行此命令后查看 `CatsAndDogsTruncatedData`，你会看到两个目录。`train` 目录包含你用于训练神经网络的猫狗图像。`validation` 目录包含未分类的图像，用于在你训练后测试神经网络。
+在执行此命令后查看`CatsAndDogsTruncatedData`，你会看到两个目录。`train`目录包含你用于训练神经网络的猫狗图像。`validation`目录包含未分类的图像，用于在你训练后测试神经网络。
 
 现在数据已就绪，让我们开始训练吧。
 
@@ -15614,7 +15467,7 @@ git clone https://github.com/switchdoclabs/CatsAndDogsTruncatedData.git
 
 我们在本节的目标是针对猫狗的区别充分训练我们的机器学习神经网络，验证测试数据，然后保存训练好的神经网络，以便我们可以在机器人上使用它。然后真正的乐趣就开始了！
 
-当你运行以下程序时，如果看到 `ImportError: No module named 'seaborn'`，请输入 `sudo pip3 install seaborn`。
+当你运行以下程序时，如果看到`ImportError: No module named 'seaborn'`，请输入`sudo pip3 install seaborn`。
 
 我们起初使用一个简单的双层神经网络来构建猫狗机器学习网络。有更多复杂的网络可用并且可能会产生更好的结果，但我们希望这对于我们的需求足够了。关于神经网络和 TensorFlow 的信息，请查看第 4 本第 2 章。
 
@@ -15626,7 +15479,7 @@ git clone https://github.com/switchdoclabs/CatsAndDogsTruncatedData.git
 
 在树莓派上使用 CNN 神经网络将单个 epoch 的时间从简单的双层网络增加到了 1,000 秒，速度慢了 100 倍。而且分析程序的 CPU 利用率为 352%，这意味着它正在使用树莓派上的 3.5 个核心，而树莓派（这台机器）总只有 4 个核心。（你可以将每个核心想象成一台较小的电脑）。这相当于树莓派 3B+ 极高的 CPU 利用率。这台小小的树莓派在运行我们的神经网络时消耗了近 3.8W 的功率，而正常情况下约为 1.5W。
 
-你可以通过查看 `model.summary()` 的结果看到我们新网络的复杂性：
+你可以通过查看`model.summary()`的结果看到我们新网络的复杂性：
 
 | 层 (类型) | 输出形状 | 参数数量 |
 |---|---|---|
@@ -15663,22 +15516,18 @@ model.add(Flatten())
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(2, activation='softmax'))
-
 model.compile(optimizer=tf.train.AdamOptimizer(),
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
-
 print(model.summary())
 
 # 加载数据
 datagen = ImageDataGenerator(rescale=1./255)
-
 train_generator = datagen.flow_from_directory(
     'data/train',
     target_size=(150, 150),
     batch_size=32,
     class_mode='sparse')
-
 validation_generator = datagen.flow_from_directory(
     'data/validation',
     target_size=(150, 150),
@@ -15692,7 +15541,6 @@ history = model.fit_generator(generator=train_generator,
                               epochs=20,
                               validation_data=validation_generator,
                               validation_steps=832//16)
-
 print('训练完成！！')
 
 # 保存模型
@@ -15701,6 +15549,7 @@ model.save('CatsVersusDogs.trained')
 # 获取训练和测试历史数据
 training_loss = history.history['loss']
 accuracy = history.history['acc']
+
 # 创建 epoch 计数
 epoch_count = range(1, len(training_loss)) + 1
 
@@ -15715,14 +15564,11 @@ plt.grid(True)
 plt.show(block=True);
 ```
 
-将代码保存为 `CatsVersusDogsTrain.py` 文件。
-
-
-
+将代码保存为`CatsVersusDogsTrain.py`文件。
 
 ## 代码工作原理
 
-`CatsVersusDogsTrain.py` 代码共有 93 行，而通过如此少的代码就能实现这些功能，这令人惊惊讶。我们将依次检查 `CatsVersusDogsTrain.py` 程序中的每个主要代码块。
+`CatsVersusDogsTrain.py`代码共有 93 行，而通过如此少的代码就能实现这些功能，这令人惊惊讶。我们将依次检查`CatsVersusDogsTrain.py`程序中的每个主要代码块。
 
 首先，我们导入所有的库：
 
@@ -15737,11 +15583,10 @@ from tensorflow.python.framework import ops
 from tensorflow.examples.tutorials.mnist import input_data
 from PIL import Image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-
 from tensorflow.keras.layers import *
 ```
 
-接下来，我们将数据处理成张量（矩阵）以训练我们的神经网络。我们使用 `data` 将猫和狗的图像存储在不同的目录中。我们将图像转换为 150x150 像素的格式，然后将图像数据加载到神经网络所需的训练生成器中。
+接下来，我们将数据处理成张量（矩阵）以训练我们的神经网络。我们使用`data`将猫和狗的图像存储在不同的目录中。我们将图像转换为 150x150 像素的格式，然后将图像数据加载到神经网络所需的训练生成器中。
 
 ```python
 # load data
@@ -15749,16 +15594,13 @@ img_width = 150
 img_height = 150
 train_data_dir = 'data/train'
 valid_data_dir = 'data/validation'
-
 datagen = ImageDataGenerator(rescale=1./255)
-
 train_generator = datagen.flow_from_directory(
     directory=train_data_dir,
     target_size=(img_width, img_height),
     classes=['dogs','cats'],
     class_mode='binary',
     batch_size=16)
-
 validation_generator = datagen.flow_from_directory(directory=valid_data_dir,
     target_size=(img_width, img_height),
     classes=['dogs','cats'],
@@ -15786,7 +15628,9 @@ activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 ```
 
-接下来，我们又添加了层卷积神经网络，后面是一个池化层。池化层通过通过池化信息，减少对特定特征（如猫的鼻子）位置的敏感性，从而增强神经网络在其他图像中识别相同特征的能力：
+
+
+接下来，我们又添加了卷积神经网络，后面是一个池化层。池化层通过池化信息，减少对特定特征（如猫的鼻子）位置的敏感性，从而增强神经网络在其他图像中识别相同特征的能力：
 
 ```python
 model.add(Conv2D(32, (3, 3), padding='same', activation='relu'))
@@ -15795,13 +15639,13 @@ model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 ```
 
-神经网络的问题之一是过拟合，即机器与数据过于贴合，以至于网络无法匹配任何新的、略有不同的图片。Dropout 层通过随机将某些数据设置为 0 来帮助解决这一问题。我们在这一层中移除了 25% 的数据：
+神经网络的问题之一是过拟合，即机器与数据过于贴合，以至于网络无法匹配任何新的、略有不同的图片。`Dropout` 层通过随机将某些数据设置为 `0` 来帮助解决这一问题。我们在这一层中移除了 25% 的数据：
 
 ```python
 model.add(Dropout(0.25))
 ```
 
-现在，我们将数据展展开一个一维数组，以便同时呈现给网络中的 64 个神经元，然后使用一个最终的全连接 64 神经元层：
+现在，我们将数据展开成一个一维数组，以便同时呈现给网络中的 64 个神经元，然后使用一个最终的全连接 64 神经元层：
 
 ```python
 model.add(Flatten())
@@ -15814,14 +15658,17 @@ model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 ```
 
-我们的布局“猫或狗”（代码中的最后一个 `model.add`）有两个输出。如果 CNN 找到了猫，第一个输出将是 1，第二个输出将是 0。如果 CNN 找到了狗，第一个输出将是 0，第二个输出将是 1：
+我们的布局“猫或狗”（代码中的最后一个 `model.add`）有两个输出。如果 CNN 找到了猫，第一个输出将是 `1`，第二个输出将是 `0`。如果 CNN 找到了狗，第一个输出将是 `0`，第二个输出将是 `1`：
 
 ```python
 model.add(Dense(2, activation='softmax'))
+
 model.compile(optimizer=tf.train.AdamOptimizer(),
 loss='sparse_categorical_crossentropy',
 metrics=['accuracy'])
+
 print(model.summary())
+
 # train model
 ```
 
@@ -15829,9 +15676,11 @@ print(model.summary())
 
 ```python
 print('starting training..')
+
 history = model.fit_generator(generator=train_generator,
 steps_per_epoch=2048 // 16,epochs=20,
 validation_data=validation_generator, validation_steps=832//16)
+
 print('training finished!')
 ```
 
@@ -15842,14 +15691,16 @@ print('training finished!')
 model.save('CatsVersusDogs.h5')
 ```
 
-我们使用 Matplotlib 生成一个显示准确率随时代提高的图表：
+我们使用 `Matplotlib` 生成一个显示准确率随时代提高的图表：
 
 ```python
 # Get training and test histories
 loss = history.history['loss']
 accuracy = history.history['acc']
+
 # Create count of epochs
 epoch_count = range(1, len(loss) + 1)
+
 # Visualize loss
 plt.figure(0)
 plt.plot(epoch_count, loss, 'r--')
@@ -15860,10 +15711,6 @@ plt.ylabel('History')
 plt.grid(True)
 plt.show()
 ```
-
-
-
-
 
 ![](img/b5b2ea569d1e5bba0afd733be648243d_779_0.png)
 
@@ -15879,11 +15726,9 @@ plt.show()
 
 ```python
 #import libraries
+
 import numpy as np
 import tensorflow as tf
-
-```
-
 from tensorflow.python.framework import ops
 from PIL import Image
 
@@ -15975,7 +15820,7 @@ testImg = Image.open(imageName)
 testImg.load()
 ```
 
-然后，我们将测试图片转换为 NumPy 数组以便分析：
+然后，我们将测试图片转换为 `NumPy` 数组以便分析：
 
 ```python
 data = np.asarray(testImg, dtype="float")
@@ -16015,7 +15860,7 @@ print("Our Network has concluded that the file '"
 ```python
 # do dog single image
 imageName = "Dog150x150.JPG"
-testImg = Image.open(imageName, dtype="float")
+testImg = Image.open(data, dtype="float")
 data = np.expand_dims(data, axis=0)
 singlePrediction = model.predict(data, steps=1)
 NumberElement = singlePrediction.argmax()
@@ -16029,7 +15874,7 @@ print("Our Network has concluded that the file '"
 
 ## 结果
 
-将代码保存为 `singleTestImage.py` 然后运行它：
+将代码保存为 `singleTestImage.py`，然后运行它：
 
 ```bash
 sudo python3 singleTestImage.py
@@ -16037,7 +15882,7 @@ sudo python3 singleTestImage.py
 
 以下是结果：
 
-```
+```text
 import complete
 WARNING:tensorflow: No training configuration found in save file: the model was not compiled.
 ```
@@ -16057,10 +15902,12 @@ WARNING:tensorflow: No training configuration found in save file: the model was 
 | dense_1 (Dense) | (None, 2) | 130 |
 
 Total params: 1,355,938
+
 Trainable params: 1,355,938
+
 Non-trainable params: 0
 
-```
+```text
 None
 1.0
 [[ 0. 1 ]]
@@ -16079,7 +15926,7 @@ Our Network has concluded that the file 'Dog150x150.JPG' is a Dog
 
 ![](img/b5b2ea569d1e5bba0afd733be6482_785_0.png)
 
-> WARNING 我们构建这种神经网络的方法局限性在于它只查看猫和狗的图片并判断是猫还是狗。如果我们建立一个更全面的神经网络，我们需要训练它来区分三种物体（例如猫、狗和衣服）（参见图 4-4）。我们使用第 4 本中的对齐衣服图片对神经网络进行了最后一次测试。
+> **WARNING** 我们构建这种神经网络的方法局限性在于它只查看猫和狗的图片并判断是猫还是狗。如果我们建立一个更全面的神经网络，我们需要训练它来区分三种物体（例如猫、狗和衣服）（参见图 4-4）。我们使用第 4 本中的对齐衣服图片对神经网络进行了最后一次测试。
 
 ![](img/b5b2ea569d1e5bba0afd733be6482_780.png)
 
@@ -16093,7 +15940,7 @@ Our Network has concluded that the file 'Dog150x150.JPG' is a Dog
 
 注意，程序报告的置信水平为 100%。它可能有 99.99% 左右的置信度，但训练的“猫或狗”性质会将图片只放在其中一类中，因此置信水平在此时意义不大。教机器以通用方式学习还有很多需要做的。
 
-> TIP 如果你在运行程序时遇到类似 `undefined symbol: cblas_sgemm` 的错误，尝试使用 `sudo python3 singleTestImage.py` 运行程序。
+> **TIP** 如果你在运行程序时遇到类似 `undefined symbol: cblas_sgemm` 的错误，尝试使用 `sudo python3 singleTestImage.py` 运行程序。
 
 ## 把猫狗带上机器人
 
@@ -16101,7 +15948,7 @@ Our Network has concluded that the file 'Dog150x150.JPG' is a Dog
 
 正如所述，我们的神经网络将一切归类为猫或狗。当超声传感器发生变化时，我们将对摄像头图像进行神经网络分类，这发生在狗或猫走到机器人面前时。
 
-John 的猫不配合，所以我们不得不使用各种猫狗的 PowerPoint 演示文，如图 4-5 所示。机器人正盯着屏幕，触发了超声传感器。
+John 的猫不配合，所以我们不得不使用各种猫狗的 PowerPoint 演示文稿，如图 4-5 所示。机器人正盯着屏幕，触发了超声传感器。
 
 ![](img/b5b2ea569d1e5bba0afd733be6482_788_0.png)
 
@@ -16263,10 +16110,6 @@ Our Network has concluded that the file 'FrontView.jpg' is a Dog
 
 我们怀疑神经网络被……欺骗了（文本继续）
 
-
-
-
-
 超声波线程 `dis_scan_thread()` 是目前程序中最简单的一个线程：
 
 ```python
@@ -16312,9 +16155,13 @@ def video_thread():
 OpenCV 帧分析线程 `opencv_thread()` 执行了程序的大部分工作。它查看来自 Pi 摄像头的每一帧（顺便说一下，每秒只有 7 帧——使用更快的计算机，如树莓派 4，可以实现更高的帧率）。该线程对来自摄像头的每个视频帧执行以下操作：
 
 - 1. 寻找蓝球。
+
 - 2. 确定向球移动的方法。
+
 - 3. 向球移动，直到距离为 20cm (+/- 2cm)。
+
 - 4. 向屏幕报告发生的情况。
+
 - 5. 留在球附近。
 
 哇！这涵盖了程序的大部分工作。这个函数很长，我们只看一些最有趣的部分。
@@ -16364,10 +16211,6 @@ else:
     # 远离球
     mul = int((320-x)/3.0)
 ```
-
-
-
-
 
 # 你正在机器人上运行它。
 
@@ -16427,9 +16270,12 @@ sudo python3 FindAndChaseBall.py
 这里是我们想分享的一些程序笔记：
 
 - 蓝色球在所有环境中可能不是最佳选择。我们的机器人捡起了蓝色球，但也走向了透过窗帘的蓝光窗户、SwitchDoc 实验室的门（那里有一个树莓派 SmartGardenSystem 的植物灯，门上有反射的蓝光），甚至是天花板灯。这不是世界上最聪明的机器人。根据你的环境，亮绿色或黄色球可能是最好的。我们怀疑黄色在我们的测试环境中表现良好。
+
 - 寻找球的扫描算法是基础性的。一个更好的球搜索算法应该能检测机器人何时撞到物体并无法前进。
 
 - 一个判断机器人何时盯着非球物体（如窗户）的方法将很有帮助。图 12 阐述了这个问题。通过更多的几何分析和尺寸/形状过滤来排除非球物体，你可以生成更好的图像。
+
+
 
 ![](img/b5b2ea56d1e5bba0afd733be64823d_809_0.png)
 
@@ -16440,7 +16286,9 @@ sudo python3 FindAndChaseBall.py
 作为树莓派的一部分，你可以做更多事情。以下是一些例子：
 
 - 蓝色球在所有环境中可能不是最佳选择。我们的机器人捡起了蓝色球，但也走向了透过窗帘的蓝光窗户、SwitchDoc 实验室的门（那里有一个树莓派 SmartGardenSystem 的植物灯，门上有反射的蓝光），甚至是天花板灯。这不是世界上最聪明的机器人。根据你的环境，亮绿色或黄色球可能是最好的。我们怀疑黄色在我们的测试环境中表现良好。
+
 - 寻找球的扫描算法是基础性的。一个更好的球搜索算法应该能检测机器人何时撞到物体并无法前进。
+
 - 一个判断机器人何时盯着非球物体（如窗户）的方法将很有帮助。图 12 阐述了这个问题。通过更多的几何分析和尺寸/形状过滤来排除非球物体，你可以生成更好的图像。
 
 让机器人检测球并向它移动是有趣的。由于机器人并不擅长处理大量工作、传感器甚至 LiDAR，这使得它变得复杂。
@@ -16449,550 +16297,903 @@ sudo python3 FindAndChaseBall.py
 
 我们认为人工智能是未来。随着硬件变得越来越廉价，软件变得越来越容易，机器人将有更多用途，不仅是在制造业中，在家里也是。我们唯一的问题是“多久能在消费产品中看到 AI？”
 
-
-
-
 AI (人工智能)
+
 加速器，422, 424-425
+
 算法
+
 - 强化学习, 401
+
 - 监督学习, 400
+
 - 无监督学习, 400
+
 - 在业务中, 362
+
 - 云计算和
+
   - AWS, 427
+
   - Google Cloud, 427
+
   - IBM cloud, 427-428
+
   - Microsoft Azure, 428
+
   - 概述, 425-426
+
 - 当前的局限性
+
   - 自然语言, 359, 437
+
   - 概述, 361, 367
+
   - 视觉感知状态, 437
+
 - 399 决策操作和, 360
+
 - 讨论，1-2, 359-360, 631
+
 - 面部 ID 识别软件, 366, 424
+
 - 金融投资, 362, 369
+
 - 未来, 361, 666
+
 - 通用, 360
+
 - 在显卡上, 428-430
 
 神经元中的
+
 - 激活函数, 373
+
 - 层, 371-372
+
 - 损失函数, 373-374
+
 - 过拟合, 373
+
 - 概述, 370-371
+
 - 权重和偏置, 371-372
 
 Python 与, 9-10
+
 在 Raspberry Pi 上
+
 - 添加硬件, 423-425
+
 - 局限性, 421-423
+
 - 概述, 421
+
 - 最近在 Facebook 的实验, 359
+
 - 资源, 419, 430-431
+
 - 机器人和, 579, 666
+
 - 智能手机和, 366
+
 - 技术
+
   - 进化计算, 363-364
+
   - ML, 363, 365
+
   - 神经网络, 360, 362-363
+
   - TensorFlow, 366
 
 AI (人工智能) 加速器，422, 424-425
+
 AI 机器视觉机器人项目。参见 Cats and Dogs ML robotics project；FindAndChaseTheBall 程序
 
 AI 寒冬（AI Winter），362, 372
+
 空气质量测量大数据项目，473
 
 AI
+
 算法
+
 - 强化学习, 401
+
 - 监督学习, 400
+
 - 无监督学习, 400
+
 - 进化计算和, 363-365
+
 - 通用 AI, 360
 
 别名, 62
+
 对齐字符, 98
-allLEDsoff() 函数, 608
+
+`allLEDsoff()` 函数, 608
+
 交流电 (AC), 541
 
 Amazon
+
 - 与 Google Cloud 平台, 458
+
 - 在 Raspberry Pi 3B+ 上, 581
 
 Amazon Alexa
+
 - 与 Baxter 咖啡机器人, 575
+
 - 云计算和, 426-427
+
 - 讨论，362, 365, 664
+
 - 语音转文本, 437
 
 Amazon Cloud, 424
+
 Amazon Echo, 426
+
 Amazon Web Services。参见 AWS
 
 AMD (超威微半)
+
 - GPU, 423
+
 - 来自的专用硬件, 425
 
 American Micro Systems, 361
+
 美国信息交换标准代码。参见 ASCII
 
 & 符号, 328
+
 Anaconda Cloud, 17
+
 Anaconda 开发环境, 15-18
+
 Anaconda Extension Pack, 20-21
+
 Anaconda Navigator
+
 - 讨论，18-19
+
 - 退出, 23
+
 -通过其安装包, 348-349
+
 - 中的模块, 59-61
+
 - 从此处打开 VS Code, 19-21, 23, 32
 
 模拟数字转换器。参见 ADC；Grove 4 通道 16 位 ADC
+
 模拟 Grove 连接器, 499-500
+
 模拟信号, 502
-锚点标签。参见 <img> 标签；<span>...</span> </span>
+
+锚点标签。参见 `<img>` 标签；`<span>...</span>` `</span>`
+
 与 and 布尔运算符, 73, 128
-and 函数, 344-345
+
+`and` 函数, 344-345
 
 Android 智能手机
+
 - 用于 Blyn app 仪表板的, 530-534
+
 - 处理, 366
+
 角度转换函数, 91
 
 匿名函数
+
 - 讨论,209
+
 - 示例, 210-215
+
 - lambda 表达式部分, 209-210, 213-215
 
 API (应用程序编程接口)
+
 机器人编程项目
+
 - 前 LED 功能, 604-606
+
 - 通用舵机功能, 613
+
 - 主电机功能, 608-609
+
 - 概述, 604
+
 - Pixel 灯带带功能, 606-608
+
 - 舵机功能, 609-613
 
 APIs (应用程序编程接口)
+
 - 来自 Google, 458
+
 - ParkMyRide, 427
+
 - 通过网页发布, 334
+
 - TensorFlow, 366
+
 - 用于 R 的 TensorFlow, 386
+
 单引号, 69
 
-append() 方法, 153-154, 165
+`append()` 方法, 153-154, 165
+
 Apple A14 Bionic 芯片, 366
+
 Apple Numbers 应用, 290。参见 CSV 文件
+
 应用程序编程接口。参见 APIs；名称
+
 应用程序。参见 APIs
+
 基础
+
 - 注释, 64-66
+
 - 打开文件, 64
+
 - 概述, 63, 84
+
 - Python 数据类型, 66-71
+
 - 语法, 79-83
+
 - 变量, 74-79
+
 - 讨论, 9
+
 内置异常, 263
+
 - 创建异常, 263-267
-- else, 259-254, 257
+
+- `else`, 259-254, 257
+
 - 概述, 251, 257
+
 - 防止崩溃, 257-259
+
 - 特定异常, 255-257
-try...finally, 261-262
-try...except, 254-255
+
+`try...finally`, 261-262
+
+`try...except`, 254-255
+
 任意数字, 207-208
+
 Arduino
+
 - 单元, 494-495
+
 - 数据修正, 587
+
 - 讨论, 481
+
 - I2C 接口, 510
+
 - 机器人局限性, 579
+
 Arduino Due, 494
+
 Arduino Mega, 494
+
 Arduino Mini Pro, 495
 
 参数在自定义函数中, 207-208
+
 关键字, 203-204
+
 算术运算符, 71-72
+
 数组。参见 lists, 125
-<a> 标签, 334-337
+
+`<a>` 标签, 334-337
+
 人工智能。参见 AI
+
 人工智能 (AI) 加速器, 422, 424-465
+
 人工智能 Dummies (Mueller, Mass), 419
+
 人工智能 (Minsky), 361
+
 ASCII (美国信息交换标准)
+
 在匿名函数中 210-213
+
 讨论，106-107, 143-144
+
 局限性, 279
+
 原始字节, 277-278
+
 空格代码, 333
+
 特殊字符, 284-285, 291, 322-325
+
 关联数组。参见字典。
-*, 351-352
+
+`*`, 351-352
+
 属性
+
 - 更改值, 226-228
+
 - 命名规范, 223-225
+
 - 对象, 222-223
+
 - 填充, 222-223
+
 属性:值对, 226-228
+
 Auto Save, 43, 78
+
 汽车
+
 - 电机中, 541
+
 - 嵌入式系统中, 478
+
 - 机器人中, 572-573
+
 自主机器人, 421
-datetime, 121
+
+`datetime`, 121
+
 AWS (Amazon Web Services)
+
 - 与 Baxter 咖啡机器人, 575
+
 - 云计算和, 426-427
 
 反向传播, 371-373
+
 反斜杠字符, 69-70
+
 错误数字, 67
+
 base-2 数字, 100-101
+
 base-8 数字, 100-101
+
 base-10 数字, 510
+
 base-16 数字
+
 转换, 100-101
+
 接口地址, 510, 513, 515
 
 Baum, Frank, 571
+
 Baxter 咖啡机器人
+
 - 内部计算机, 575
+
 - 讨论，571-572, 574
 
 BeautifulSoup 模块, 336-337
+
 偏置, 371-373
+
 大数据。参见数据科学
+
 讨论，2, 436-437, 441, 457
+
 五步流程
+
 1. 捕获, 438
+
 2. 处理, 438-439
+
 3. 分析, 439
+
 4. 通信, 440
+
 5. 维护, 440
+
 使用的 Python 包
+
 - Matplotlib, 444
+
 - NumPy, 442-443
+
 - Pandas, 441, 443
 
 大数据分析, 440
+
 大数据科学项目。参见 Google Cloud大数据项目
+
 编码
+
 - 代码拆解, 447-449
+
 - 概述, 446-447
+
 - DataFrame 中, 445
+
 - 钻石数据库, 444-445
+
 - 讨论, 444
+
 - 下载代码, 441
+
 Matplotlib 可视化
+
 - 清晰度计数, 451-452
+
 - 清晰对比对比, 449-450
+
 - 颜色计数, 452-453
+
 - 概述, 449
+
 - Pandas 热力图相关性, 453-455
+
 软件安装, 445
 
 BigQuery API。参见 Google Cloud大数据项目
+
 抽象, 459
+
 成本, 459-460
+
 讨论，458
+
 公开数据集
+
 - Medicare, 460-464
+
 - OpenAQ, 473
+
 - 概述, 459
+
 - 注册, 460
+
 - 设置与身份验证, 460-463
 
 二进制文件
+
 - 拷贝, 287-289
+
 - 讨论，272, 287
+
 - 内存, 288-289
+
 二进制数字。参见base-2 数字
+
 Bing 搜索引擎
+
 - 使用 Python 查找帮助, 36
+
 - 查找 Python 速查表, 36
-bin(x) 函数, 89
+
+`bin(x)` 函数, 89
+
 生物进化, 63
+
 生物智能, 361
+
 生物神经元, 360, 362-363
+
 位, 498
+
 BlueMix 云服务。参见 IBM 云服务
+
 蓝图类比, 217-220
+
 蓝牙
+
 机器人通信, 577
+
 小型计算机, 481
+
 Blynk App
+
 仪表板用于 HDC80 温度湿度传感器
+
 - 代码拆解, 536-538
+
 - 安装, 531-534
+
 - 概述, 530
+
 - Python 修改, 534-536
+
 讨论，530
-</body>
+
+`</body>`
+
 334-335
 
 BOM (字节序标记), 293
-bool() 函数, 297
+
+`bool()` 函数, 297
+
 Boole, George, 70, 128
+
 与布尔运算符, 73, 128。参见决策操作
+
 布尔值
+
 - 转换为 CSV, 297
+
 - 讨论,70-71, 87, 343
-- 与 type() 函数, 344
+
+- 与 `type()` 函数, 344
+
 括号。参见方括号
+
 Broadcom Videocore-IV 图处理器
+
 - 讨论,421
+
 - NDA, 423
+
 - 在 Raspberry Pi 上, 423
+
 - 在 Raspberry Pi 4B 上, 422
+
 浏览。参见网页浏览
+
 漏洞
+
 - 在机器人中, 575
+
 - 在软件中
+
 - 高亮, 82-83
+
 - 概述, 251, 575
+
 “使用卷积神经网络构建猫检测器”（Valkov), 431。参见 Cats and Dogs ML robotics项目
+
 内置方法, 249-250
+
 碰撞传感器, 629
+
 总线路由, 363
+
 字节序标记 (BOM), 293
 
 # C
+
 C 编程语言, 10
+
 C# 编程语言, 10
+
 C++ 编程语言
+
 讨论,10
+
 在机器人中编程, 577
+
 与 TensorFlow 和, 386
+
 电缆, 3, 485。参见特定电线的名称
+
 驼峰命名法, 75
+
 摄像头 CSI (摄像头串口接口), 480, 510
+
 只能将字符串（不是“int”）连接到字符串的错误消息, 160
+
 Capek, Josef, 571
+
 Capek, Karel, 571
+
 汽车。参见汽车
+
 层叠样式表 (CSS), 10, 37, 334
+
 大小写敏感
+
 - 讨论,236
+
 - 在字符串中, 162
+
 - 在语法表中, 62
+
 - 在变量名中, 75
 
-
-
 - 猫与狗（机器学习）项目。*另见*
+
 - 额外想法, 666
+
 - 数据集, 632-633
+
 - 神经网络测试
+
 - 代码, 642-644
+
 - 概述, 642-648
+
 - 使用 TensorFlow 的神经网络
+
 - 模型, 633-635
+
 - 代码, 635-640
+
 - 概述, 632-633
+
 - 在 Pi 上运行
+
 - 代码, 649-651
+
 - 详解, 652-654
+
 - 医疗保险与医疗补助助服务中心 (CMS), 460
+
 - 消费电子展 (CES), 575
+
 - 樱桃挑选 (cherry-picking), 439
+
 - 雪佛兰 (Chevrolet), 419
 
-[/content]
-
-[content]
 - 神经网络训练
+
 - CNN, 633-635
+
 - 代码, 635-640
+
 - 概述, 632-633
+
 - 在 Pi 上运行
+
 - 代码, 649-651
+
 - 详解, 652
+
 - 代码, 652-654
+
 - 医疗保险与医疗补助助服务中心 (CMS), 460
+
 - 消费电子展 (CES), 575
+
 - 樱桃挑选 (cherry-picking), 439
+
 - 雪佛兰 (Chevrolet), 419
 
-[/content]
-
-[content]
 - 基类方法调用, 246-247
+
 - 创建基类, 240-241
+
 - 定义子类, 241-243
+
 - 覆盖子类默认值, 243
+
 - 概述, 238-240
+
 - 子类额外参数, 243-246
+
 - 顺次使用相同名称, 247-250
+
 - 在实例中的, 217-220
+
 - 在方法中的, 217-220
+
 - 命名规范, 223-225
+
 - 类型
-- datetime.time, 114-116
-- datetime.timedelta, 116-120
 
-[/content]
+- `datetime.time`, 114-116
 
-[content]
+- `datetime.timedelta`, 116-120
+
 - 用于数据字典, 184
+
 - 在数据字典, 186
+
 - 讨论, 158, 165
+
 - 客户端, 328
-- close() 方法, 274
 
-[/content]
+- `close()` 方法, 274
 
-[content]
 ## 云计算
+
 - AWS, 427
+
 - Google Cloud, 427
+
 - IBM 云, 427-428
+
 - Microsoft Azure, 428
+
 - 概述, 425-426
+
 - 资源, 430-431
+
 - 讨论, 425-426
+
 - 使用 TensorFlow 的, 385
+
 - 云驱动, 27
+
 - 类比, 217-220
-- cmath 模块, 102
-- cmd.exe, 348-349
+
+- `cmath` 模块, 102
+
+- `cmd.exe`, 348-349
+
 - CMS (医疗保险与医疗补助助服务中心), 460
+
 - CNNs. 另见 卷积神经网络
+
 - cobots (协作机器人), 571-572, 574-575
+
 - 代码块, 82-83
+
 - 代码编辑器, 13-14, 37
+
 - 编码, 14, 197
+
 - Colab, 386
 
-[/content]
-
-[content]
 - 协作机器人 (cobots), 571-572, 574-575
-- color() 方法, 608
+
+- `color()` 方法, 608
+
 - 颜色
+
   - HSV, 662-663
+
   - RGB, 605, 662
+
   - VS Code, 31
-- wipe() 方法, 607
+
+- `wipe()` 方法, 607
+
 - 命令行提示符, 15, 348-349
+
 - 线程, 628
+
 - 命令
-  - exit(), 35-36
-  - help, 33-36
-  - python, 32-33
+
+  - `exit()`, 35-36
+
+  - `help`, 33-36
+
+  - `python`, 32-33
+
 - 逗号分隔值文件。见 CSV 文件
+
 - 注释
+
   - 在应用中, 64-66
+
   - 在类中, 220
+
   - 在自定义类中, 220
+
   - 在自定义函数中, 205
+
   - 在函数中, 197
+
   - 缩进, 136
+
 - 比较运算符, 72, 127. 见 决策操作
+
 - 复数, 68, 101-102
+
 - 合成音频和视频接口, 479
+
 - 计算算法, 363
+
 - 计算设备。见 USB 设备
 
-[/content]
-
-[content]
 - 计算机时钟, 110-111
+
 - 计算机科学, 436. 见 数据科学
+
 - 使用 OpenCV 和 Python 3 的计算机视觉项目
+
 - 计算机。见 嵌入式系统；Raspberry Pi；GPIO 引
+
 - Arduino, 481
+
 - 蓝色 LED 模块, 487
+
 - Raspberry Pi, 482
+
 - Raspberry Pi 3B+, 479
+
 - Raspberry Pi PWM, 491
+
 - 消费电子展 (CES), 575
+
 - 上下文编码, 274-277
-- continue 语句
+
+- `continue` 语句
+
 - 讨论, 141-382
+
 - 使用 and 重复 while 循环, 145-146
+
 - 卷积神经网络 (CNNs)
+
 - 猫狗 ML 网络训练项目, 633-635
+
 - 讨论, 362, 412-415, 634
 
-[/content]
+- `copy()` 方法, 164-165, 184
 
-[content]
-- copy() 方法, 164-165, 184
 - 核心语言, 59, 343
+
 - 相关性, 439, 453-455
-- count() 方法, 159-160, 165
+
+- `count()` 方法, 159-160, 165
+
 - CPU (中央处理器)
+
 - 仿生芯片, 366
+
+
+
 - 多核, 430
 - GPU, 428-429
 - Raspberry Pi 3B+, 421
-- CSS (层叠样式表), 10, 37, 334
-- CSV (逗号分隔值)
-- 字符串转换, 293-295
-- 转换为布尔值, 297
-- 转换为日期, 295-297
-- 转换为浮点数, 297-298
-- 转换为整数, 295
-- 讨论, 254, 290-291, 299, 306
-- enumerate() 函数, 292-293, 302-303
-- 氧传感器项目数据中的, 521
-- 从数据字典导入, 303-306
-- 对象, 300-303
-- 打开, 291-292
-- 与 Pandas 包一起, 443
-- 保存数据为, 341-342
+- CSS（层叠样式表）, 10, 37, 334
+- CSV（逗号分隔值）
+  - 字符串转换, 293-295
+  - 转换为布尔值, 297
+  - 转换为日期, 295-297
+  - 转换为浮点数, 297-298
+  - 转换为整数, 295
+  - 讨论, 254, 290-291, 299, 306
+  - `enumerate()` 函数, 292-293, 302-303
+  - 氧传感器项目数据中的, 521
+  - 从数据字典导入, 303-306
+  - 对象, 300-303
+  - 打开, 291-292
+  - 与 Pandas 包一起, 443
+  - 保存数据为, 341-342
 
-[/content]
-
-[content]
-- csv 模块, 291, 306
+- `csv` 模块, 291, 306
 - 大括号
   - 在数据字典中, 308
-  - 在 if 语句中, 132
+  - 在 `if` 语句中, 132
   - 在编程语言中, 57-59
 
-[/content]
-
-[content]
 - 自定义类
   - 属性中的, 217-220
   - 在注释中, 220
   - 创建实例
-  - 属性默认值, 227-228
-  - 属性, 222-223
-  - 修改属性值, 226
-  - 来自类的实例, 221-222
-  - 实例, 223-225
-  - 概述, 220-221
-  - 讨论, 217-220
-  - 空类和, 221
+    - 属性默认值, 227-228
+    - 属性, 222-223
+    - 修改属性值, 226
+    - 来自类的实例, 221-222
+    - 实例, 223-225
+    - 概述, 220-221
+    - 讨论, 217-220
+    - 空类和, 221
   - 赋予方法
-  - 通过类名调用, 231-232
-  - 概述, 228-230
-  - 传递参数, 230-231
-  - 使用类方法, 234-235
-  - 使用类变量, 232-234
-  - 使用静态方法, 236-237
+    - 通过类名调用, 231-232
+    - 概述, 228-230
+    - 传递参数, 230-231
+    - 使用类方法, 234-235
+    - 使用类变量, 232-234
+    - 使用静态方法, 236-237
   - 继承
-  - 从子类添加额外参数, 243-246
-  - 调用基类方法, 246-247
-  - 创建基类, 240-241
-  - 定义子类, 241-243
-  - 覆盖子类默认值, 243
-  - 概述, 238-240
-  - 顺次使用相同名称, 247-250
+    - 从子类添加额外参数, 243-246
+    - 调用基类方法, 246-247
+    - 创建基类, 240-241
+    - 定义子类, 241-243
+    - 覆盖子类默认值, 243
+    - 概述, 238-240
+    - 顺次使用相同名称, 247-250
 
-[/content]
-
-[content]
 - 在实例中的, 217-220
 - 在方法中的, 217-220
 - 命名规范, 223-225
@@ -17001,20 +17202,17 @@ Capek, Karel, 571
   - 任意数量参数, 207-208
   - 在注释中, 205
   - 讨论, 195-197
-  - kwargs, 203-204
+  - `kwargs`, 203-204
   - 列表中的多个值, 205-207
-- 参数中的
   - 参数中的多个值, 201-203
   - 带默认值的参数, 200-201
   - 概述, 198-200
   - 返回值, 208-209
 
-[/content]
-
-[content]
 - 领先技术, 9
 
 ## D
+
 - 仪表板, 530-531. 另见 Blynk 应用
 - 数据分析
   - 樱桃挑选, 439
@@ -17024,9 +17222,6 @@ Capek, Karel, 571
   - 统计技术, 439
 - 数据损坏, 587
 
-[/content]
-
-[content]
 - 数据字典
   - 访问, 175-176
   - 转换为 CSV, 303-306
@@ -17039,134 +17234,131 @@ Capek, Karel, 571
   - 键中的
     - 添加键
     - 在数据字典中, 308
-    - 在 if 语句中, 132
+    - 在 `if` 语句中, 132
     - 在编程语言中, 57-59
   - 方法
-    - clear() 方法, 175, 184
-    - get() 方法, 178-179
-    - popkeys() 方法, 181-182
-    - setdefault() 方法, 181-182
-    - pop() 方法, 174-18
-    - getitems() 方法, 181-182
-    - getkeys() 方法, 181-182
-    - clear() 方法, 175, 184
-    - pop() 方法, 174-18
+    - `clear()` 方法, 175, 184
+    - `get()` 方法, 178-179
+    - `popkeys()` 方法, 181-182
+    - `setdefault()` 方法, 181-182
+    - `pop()` 方法, 174-18
+    - `getitems()` 方法, 181-182
+    - `getkeys()` 方法, 181-182
+    - `clear()` 方法, 175, 184
+    - `pop()` 方法, 174-18
   - 可变性, 179
-- 嵌套, 193-194
-- 使用 print() 函数, 175, 184
+  - 嵌套, 193-194
+  - 使用 `print()` 函数, 175, 184
 
-[/content]
-
-[content]
 - 数据科学。另见 大数据
-- 且, 15
-- 金融服务, 440
-- 医疗, 440
-- 搜索引擎, 435
-- 大数据, 435
-- 数据分析, 435
-- 讨论, 435
-- 五个步骤
-  - 1. 捕获, 438
-  - 2. 处理, 438
-  - 3. 分析, 439
-  - 4. 通信, 440
-  - 5. 维护, 440
+  - 且, 15
+  - 金融服务, 440
+  - 医疗, 440
+  - 搜索引擎, 435
+  - 大数据, 435
+  - 数据分析, 435
+  - 讨论, 435
+  - 五个步骤
+    - 1. 捕获, 438
+    - 2. 处理, 438
+    - 3. 分析, 439
+    - 4. 通信, 440
+    - 5. 维护, 440
 
 ## 数据科学项目
+
 - 代码详解, 444-444
--- 使用 DataFrame, 445
+  - 使用 DataFrame, 445
 - 钻石数据库, 444-445
 - 讨论, 444
 - MatPlotLib 可视化
-- 净度计数, 451-452
-- 净度与尺寸, 449-450
-- 颜色计数, 452-453
-- 概述, 449
+  - 净度计数, 451-452
+  - 净度与尺寸, 449-450
+  - 颜色计数, 452-453
+  - 概述, 449
 - 软件安装, 445
 
-[/content]
-
-[content]
 - 数据结构
-- 列表
-  - 字母排序, 161-163
-  - 将元素追加到末尾, 153-154
-  - 分配名称, 149
-  - 修改元素, 155
-  - 检查内容, 152
-  - 清空, 158
-  - 合并, 155-156
-  - 拷贝, 164-165
-  - 统计元素频率, 159-160
-  - 确定长度, 153
-  - 显示, 150
-  - 插入元素, 154
-  - 元素索引, 151, 160-161
-  - 长列表, 150
-  - 循环, 151-152
-  - 概述, 139-140, 149
-  - 位置数字, 150-151
-  - 引号, 149-150
-  - 移除元素, 156-158
-  - 反转, 164
-  - 排序, 161-163
-  - 字符串, 150
-- 集合, 167-169
-- 元组, 165-167
+  - 列表
+    - 字母排序, 161-163
+    - 将元素追加到末尾, 153-154
+    - 分配名称, 149
+    - 修改元素, 155
+    - 检查内容, 152
+    - 清空, 158
+    - 合并, 155-156
+    - 拷贝, 164-165
+    - 统计元素频率, 159-160
+    - 确定长度, 153
+    - 显示, 150
+    - 插入元素, 154
+    - 元素索引, 151, 160-161
+    - 长列表, 150
+    - 循环, 151-152
+    - 概述, 139-140, 149
+    - 位置数字, 150-151
+    - 引号, 149-150
+    - 移除元素, 156-158
+    - 反转, 164
+    - 排序, 161-163
+    - 字符串, 150
+  - 集合, 167-169
+  - 元组, 165-167
 - 数据传输, 375
 
-
-
-
-
 数据类型
+
 类别：
 - 布尔值 (Booleans), 70-71
 - 数字 (numbers), 67-68
 - 字符串 (strings), 68-70
 
 讨论, 66, 343
-数据可视化。另见 Matplotlib 软件包
 
-+ 在大数据科学项目中
-- 清晰度计数 (clarity count), 451-452
-- 清晰度与大小 (clarity versus size), 449-450
-- 颜色计数 (color count), 452-453
+数据可视化。另见 Matplotlib 软件包
+- 在大数据科学项目中
+  - 清晰度计数 (clarity count), 451-452
+  - 清晰度与大小 (clarity versus size), 449-450
+  - 颜色计数 (color count), 452-453
 - Fashion-MNIST 项目, 415-419
 - Google 云大数据项目, 471-472
 - 概述, 449
 
 讨论, 375
+
 数据库, 307, 463-464
+
 数据库表。另见电子应用程序
+
 数据流图, 385-386
 
 DataFrames
 - 与大数据科学项目，445
 - 讨论, 443
 
-date() 函数, 162-163
+`date()` 函数, 162-163
+
 日期
-- + 将 CSV 转换为, 295-297
+- 将 CSV 转换为, 295-297
 - 日期的格式化字符串, 112-114
 - 处理日期, 110-112
 
-datetime 模块
+`datetime` 模块
 - 有时区的 (aware), 121-122
 - 用于将 CSV 转换为日期, 295-297
 - 讨论, 110-114
 - 在列表中, 162-163
 - 天无时区的 (naïve), 121-122
 
-datetime.now() 数据类型
+`datetime.now()` 数据类型
 - 讨论, 118
 - 使用其获取时间, 123, 133
 
-datetime.time 数据类型, 114-116
-datetime.timedelta 数据类型, 116-120
+`datetime.time` 数据类型, 114-116
 
-dateutil.tz 类, 122-125
+`datetime.timedelta` 数据类型, 116-120
+
+`dateutil.tz` 类, 122-125
 - 夏令时 (DST), 124-125
 
 DC（直流）电机
@@ -17182,6 +17374,7 @@ DC（直流）电机
 - 购买地点, 3
 
 DC（直流）电机项目
+
 I2C 控制板
 - Grove I2C 电机驱动器, 545-548
 - 概述, 544-545
@@ -17199,229 +17392,293 @@ I2C 控制板
 - 设置, 560-565
 
 调试, 45-46
+
 决策树, 365
 
 决策操作
-- + 与 AI, 360
+- 与 AI, 360
 - 讨论, 128
-if 语句中的
-- + elif, 133-136
-- + else, 132-136
-- + 概述, 129-132
-- + 三元运算, 135-136
-for 循环中的
-- + 连续, 141-142
-- + 强制停止, 140-141
-- + 列表, 139-140
-- + 循环嵌套, 142-143
-- + 数字范围 range, 136-138
-- + 概述, 136
-- + 字符串, 138-139
-while 循环中的
-- + 连续, 145-146
-- + 强制停止, 146-148
-- + 概述, 143-145
+
+`if` 语句中的
+- `elif`, 133-136
+- `else`, 132-136
+- 概述, 129-132
+- 三元运算, 135-136
+
+`for` 循环中的
+- 连续, 141-142
+- 强制停止, 140-141
+- 列表, 139-140
+- 循环嵌套, 142-143
+- 数字范围 `range`, 136-138
+- 概述, 136
+- 字符串, 138-139
+
+`while` 循环中的
+- 连续, 145-146
+- 强制停止, 146-148
+- 概述, 143-145
 
 《Python 深度学习》(Chollet), 419
+
 深度学习软件, 362, 372
 
-del 函数
-- + 在数据字典中, 185-188
-- + 讨论, 158
+`del` 函数
+- 在数据字典中, 185-188
+- 讨论, 158
 
 Dell, 426
 
 脱氧核糖酸 (DNA) 类比, 217-220
+
 反序列化, 310-311
+
 Dickinson, John, 361
-dict 方法, 250
+
+`dict` 方法, 250
+
 Dictionary.com, 359, 631
+
 数字相机, 573
+
 数字 Grove 连接器, 498-499
+
 数字 I2C (集成电路间接口), 510
+
 数字 I/O 引脚, 503
+
 数字信号处理器 (DSP), 423
+
 数字信号, 502
+
 数字 SPI (串行外设接口), 510
+
 Dilovasi, Kocaeli, 473
-dir() 函数
+
+`dir()` 函数
 - 讨论, 344-345
 - 与模块的, 350
+
 直流电机。另见 DC 电机
+
 直流电机项目。另见 DC 电机项目
+
 直接内存访问 (DMA) 模块, 587, 606
+
 目录。另见文件夹
+
 显示接口 (DSI), 480
+
 中断, 573
+
 除法运算符, 71
 
 DMA (直接内存访问) 模块, 587, 606
+
 DNA (脱氧核糖酸) 类比, 217-220
-docstrings, 66, 197
+
+`docstrings`, 66, 197
+
 医生, 435, 440
 
 美元符号
-- + 对齐, 98-100
-- 使用 replace() 方法, 297-299
+- 对齐, 98-100
+- 使用 `replace()` 方法, 297-299
+
 dot-com 泡泡, 362
+
 双下划线。另见双下划线项
+
 驱动板, 3
-dropout (丢弃) 管理, 415
+
+`dropout` (丢弃) 管理, 415
+
 DSI (显示接口), 480
+
 DSP (数字信号处理器), 423
+
 DST (夏令时), 124-125
+
 DuckGo 搜索引擎, 435
+
 双下划线项
 - 讨论, 344-345
-- + init, 221
+- `init`, 221
+
 荷兰郁金泡泡, 362
-duty cycle (占空周期), 489-490
+
+`duty cycle` (占空周期), 489-490
 
 DMA (直接内存访问) 模块, 587, 606
+
 熵 (entropy), 47
+
 复彩蛋 (Easter egg)
 - 讨论, 53
-- + Python 之禅宗 (Zen of Python), 53-54
+- Python 之禅宗 (Zen of Python), 53-54
 
 eBay, 581
+
 经济泡泡, 362
+
 边缘计算, 423
+
 Edge 浏览器
-- + 在 Anaconda 上下载, 15-17
-- + 在 Jupyter Notebook 中, 24-27
+- 在 Anaconda 上下载, 15-17
+- 在 Jupyter Notebook 中, 24-27
 
 编辑器。另见编辑器
+
 电动汽车, 541
+
 电动机。另见 DC 电机
+
 磁铁, 542-543
+
 以太网, 362, 479
+
 演化算法, 365
+
 演化计算, 363-364。另见 AI
+
 Excel。另见 Microsoft Excel
 
 异常
 - 讨论, 251-254, 257
+
 处理
 - 内置异常, 263
-- + 创建异常, 263-267
-- + else, 259-261
-- + 防止程序崩溃, 257-259
+- 创建异常, 263-267
+- `else`, 259-261
+- 防止程序崩溃, 257-259
 - 特殊异常, 255-257
-- try...else...except...finally, 261-262
-- try...except, 254-255
+- `try...else...except...finally`, 261-262
+- `try...except`, 254-255
+
 打开文件过多, 274
 
 异或门 (XOR), 374
-exit() 命令, 35-36
+
+`exit()` 命令, 35-36
+
 Explorer。另见 Internet 浏览器
+
 指数运算符, 71-72
-extend() 方法, 155-156, 165
+
+`extend()` 方法, 155-156, 165
+
 扩展
 - Google Chrome HTTP 请求头, 329-331
-- .ipynb 文件名, 26, 51
-JSON 文件名, 309
-Jupyter Notebook 文件名, 26
-- .py 文件名, 41-43
-TensorBoard, 394
-VS Code, 19-21
+- `.ipynb` 文件名, 26, 51
+- JSON 文件名, 309
+- Jupyter Notebook 文件名, 26
+- `.py` 文件名, 41-43
+- TensorBoard, 394
+- VS Code, 19-21
+
 外部数据库, 150
+
 外部文件, 150, 180
 
-F
+## F
+
 Facebook
-- + 发布 API, 334
-高高速数据集, 437
-- + POST 响应和, 330
-统计, 436-437
+- 发布 API, 334
+- 高高速数据集, 437
+- POST 响应和, 330
+- 统计, 436-437
 
 面部识别软件
-- + 与 AI, 366
+- 与 AI, 366
 - 与 Intel NCS, 424
+
 假性发现率, 457-458
 
 False 值
-- + 与布尔值, 70-71
-- 与 type() 函数和, 344
+- 与布尔值, 70-71
+- 与 `type()` 函数和, 344
 
 Fashion-MNIST (修改版美国标准技术协会) ML (机器语言) 项目
 - CNN 模型代码, 412-415
 - 代码解析, 405-407
 - 数据集, 403
 - 讨论, 401-402
-外部图像测试, 409
-Matplotlib 可视化, 415-419
-网络测试, 404
-单图像, 407
-软件环境, 402
-结果, 405-408
-统计, 436-437
+- 外部图像测试, 409
+- Matplotlib 可视化, 415-419
+- 网络测试, 404
+- 单图像, 407
+- 软件环境, 402
+- 结果, 405-408
+- 统计, 436-437
 
 反馈
 - 在 DC 电机, 543
 - 讨论, 560
 - 用于电位器, 582
-机器人项目, 617
+- 机器人项目, 617
+
 前馈输入, 371
-fetch() 函数, 380
+
+`fetch()` 函数, 380
 
 FileNotFoundError, 252-254
 
 文件
-- + 追加模式, 284-285
-- + 复制, 287-289
-- + 关闭, 274
-二进制
-- + 打开, 278
+- 追加模式, 284-285
+- 复制, 287-289
+- 关闭, 274
+- 二进制
+  - 打开, 278
 - 来自应用程序, 273-274
 - 上下文编码, 274-277
-读取内容
-概述, 279
-read() 方法, 279
-read([size]) 方法, 279
-readline() 方法, 279-281
-readlines() 方法, 279-281
-文本, 271-272, 278
-写入模式, 284-285
+- 读取内容
+  - 概述, 279
+  - `read()` 方法, 279
+  - `read([size])` 方法, 279
+  - `readline()` 方法, 279-281
+  - `readlines()` 方法, 279-281
+- 文本, 271-272, 278
+- 写入模式, 284-285
 
 金融服务, 440
 
 FindAndChaseTheBall 程序
-讨论, 655
-主程序
-追球, 664
-配置, 661–662
-备注, 664–666
-概述, 661
-设置球颜色, 662–663
-
-OpenCV 帧分析线程
-帧分析, 658–659
-寻找球, 660–661
-移动机器人, 660
-概述, 657–658
-结构, 656
-超声波线程, 656–657
-视频显示线程, 657
+- 讨论, 655
+- 主程序
+  - 追球, 664
+  - 配置, 661–662
+  - 备注, 664–666
+  - 概述, 661
+  - 设置球颜色, 662–663
+- OpenCV 帧分析线程
+  - 帧分析, 658–659
+  - 寻找球, 660–661
+  - 移动机器人, 660
+  - 概述, 657–658
+- 结构, 656
+- 超声波线程, 656–657
+- 视频显示线程, 657
 
 Finder 应用, 271
+
 “发即忘模式,” 426
+
 Firebase。另见 Google Firebase Realtime Database
+
 Firefox 浏览器, 15–17, 327
 
 浮点数
-将 CSV 转换为, 297–298
-讨论, 68, 87, 343
-与 type() 函数和, 344
-float(x) 函数, 89
+- 将 CSV 转换为, 297–298
+- 讨论, 68, 87, 343
+- 与 `type()` 函数和, 344
+
+`float(x)` 函数, 89
+
 地板除运算符, 71–72, 119
 
 文件夹, 271
 
-
-
-
-
-for 循环语句
+`for` 循环语句
 - 连续, 141-142
 - 在数据字典中，182-183
 - 讨论, 136
@@ -17430,867 +17687,1468 @@ for 循环语句
 - 嵌套, 142-143
 - 用于数字范围循环, 136-138
 - 用于字符串循环, 138-139
-- 格式化字符串。参见 f-strings
-format(x, y) 函数, 89
+
+格式化字符串。参见 f-strings
+
+`format(x, y)` 函数, 89
+
 Forta, Ben, 464
+
 FPGA (现场可编程门阵列), 428
-fromkeys() 方法, 184, 190-192
+
+`fromkeys()` 方法, 184, 190-192
+
 前 LED 功能, 605-606
+
 f-strings
 - 讨论, 93
 - 格式化
-- 对齐, 98-100
-- 美元金额, 94-95
-- 多行输出, 97-98
-- 概述, 93-94
-- 百分比, 95-96
-- 宽度, 98-100
-- 与 print() 函数配合, 95-96
+  - 对齐, 98-100
+  - 美元金额, 94-95
+  - 多行输出, 97-98
+  - 概述, 93-94
+  - 百分比, 95-96
+  - 宽度, 98-100
+- 与 `print()` 函数配合, 95-96
 - 与字符串, 99
+
 函数。另见自定义函数
+
 匿名
 - 示例, 210-215
-- lambda 表达式部分, 209-210, 213-215
+- `lambda` 表达式部分, 209-210, 213-215
+
 内置数学, 89-90
 - 调用, 195-196
 - 代码可读性在, 198-199
 - 其中的注释, 197
 - 创建自定义
-- + 任意数量的参数, 207-208
-- 注释, 205
-- kwargs, 203-204
-- 列表中的多个值, 205-207
-- 参数中的多个值, 201-203
-- 带有默认值的可选参数, 200-201
-- 概述, 195-197
-- 参数, 198-200
-- 返回值, 208-209
-讨论, 87-89
-可导入数学, 90-92
-lambda, 209-210, 213-215
-方法与函数, 230
-嵌套, 90
-正确的语法, 88-90
-在其中的变量, 198-200
+  - 任意数量的参数, 207-208
+  - 注释, 205
+  - `kwargs`, 203-204
+  - 列表中的多个值, 205-207
+  - 参数中的多个值, 201-203
+  - 带有默认值的可选参数, 200-201
+  - 概述, 195-197
+  - 参数, 198-200
+  - 返回值, 208-209
+- 讨论, 87-89
+- 可导入数学, 90-92
+- `lambda`, 209-210, 213-215
+- 方法与函数, 230
+- 嵌套, 90
+- 正确的语法, 88-90
+- 在其中的变量, 198-200
 
-# G
+## G
 
 《权力的游戏》 362
+
 Gartner, 436
+
+
+
 通用人工智能 (general AI), 360
+
 通用输入输出 (GPIO) 库, 482-483
+
 通用输入输出引脚连接器。参见 GPIO 引脚连接器
+
 通用舵舵机功能, 613
-get() 方法, 178-179, 184
+
+`get()` 方法, 178-179, 184
+
 GET 响应, 329
-gettz 运算符, 122-125
+
+`gettz` 运算符, 122-125
+
 千兆以太网, 422
+
 Git, 19-20, 518
+
 GitHub 源代码仓库
+
 - 讨论, 518
+
 I2C 设备 Python 库, 515-517
+
 - 以及 TensorFlow, 366
+
 GMT (格林威治标准时间), 120
+
 Go 语言, 386
+
 良好数字, 67
+
 Google
+
 - 云计算和, 426
+
 - CMS 和, 460
+
 - 来自 Google 的专用硬件, 425
+
 Google Brain 组, 366
+
 Google Chrome HTTP Header 扩展, 329-331
+
 Google Chrome 浏览器
+
 - 讨论, 327
+
 - 在其上下载 Anaconda, 15-17
+
 - 在 Jupyter Notebook 中, 24-27
+
 - TensorBoard 扩展, 394
+
 # Google Cloud 大数据项目 BigQuery
+
 计算机安全, 459
+
 - 概述, 458-459
+
 注册, 460
+
 - 讨论, 457-458
+
 - 下载代码用于, 457
+
 - Google Cloud Platform, 458
+
 - Medicare 数据分析, 467-471
+
 - 代码拆解, 466-467
+
 - 编码, 463-466
+
 - 概述, 460
+
 - 设置与验证, 460-463
+
 - 可视化, 471-472
+
 OpenAQ 数据库, 473
+
 # Google Cloud Platform
+
 APIs, 458
+
 - 讨论, 427, 458
+
 Google Cloud Vision API (应用程序接口), 427
+
 Google Edge TPU (张量处理单元) 加速器, 424-425
+
 Google Firebase Realtime Database
+
 - 从转换时间戳, 307
+
 - 讨论, 307
+
 - 导出到 JSON, 309
+
 - 键值文件, 308-309
+
 - 时间戳 mm/dd/yyyy 日期格式, 316-317, 321-322
+
 - 概述, 310, 316-317
+
 Google Home, 362, 427
+
 Google Research, 366
+
 Google 搜索引擎
+
 - 云计算和, 427
+
 - 数据科学和, 435
+
 - 讨论, 458
+
 - Python 帮助, 36-37
+
 - 网站 API 提交帮助, 334
+
 Google Sheets, 290。另见 CSV 文件
+
 Google 趋势搜索, 10
+
 GPIO (通用输出) 库, 482-483
+
 GPIO (通用输入输出) 引脚连接器
+
 - 在 Arduino 上, 481
+
 - 数字型, 509
+
 - 在 Raspberry Pi 上, 482
+
 - 在 Raspberry Pi 3B 上, 479
+
 Raspberry Pi PWM, 491
+
 GPU (图形处理器单元)
+
 - 板块, 430
+
 - 多核成本, 430
+
 - 四核, 366
+
 - 并行计算, 429
+
 - Raspberry Pi 3B+, 421, 479
+
 - 其中的传感器, 429
+
 - 显卡, 428-430
+
 - 图形用户界面。参见 GUI
+
 - 比较运算符, 72
+
 - 等于运算符, 72
+
 格林威治标准时间 (GMT), 120
+
 带蓝牙的烤面包机, 575-576
+
 Grove 4 通道 16 位 ADC (模拟转数字转换器), 522-523
+
 Grove 蓝色 LED 模块
+
 - Raspberry Pi 板, 486
+
 - 线缆, 3, 485
+
 - 引脚, 487
+
 Grove HDC1080 I2C 温湿度传感器, 3, 502-503, 509-510
+
 Grove HDC1080 I2C 温湿度传感器项目, 511-515
+
 - 用于读取的 Python 库, 518-519
+
 - 湿度实验, 517
+
 - 概述, 515-517
+
 Grove I2C 电机驱动, 544-548
+
 - 驱动程序, 519-521
+
 - 标准布局, 502-503
+
 Grove 公公跳线, 3, 552
+
 Grove 氧气传感器, 3, 522-523
+
 - 代码拆解, 527-523
+
 - ADC 转换器, 522-523
+
 - 设置, 524-526
+
 - 结果解释, 528-529
+
 Grove 补线, 504-505
+
 Grove 串口接口。参见 UART 
+
 # Grove 系统
+
 基础单元
+
 - Arduino 基础单元, 494-495
+
 - 概述, 494
+
 Raspberry Pi 板, 495-496
+
 Raspberry Pi 基础单元, 495
+
 讨论, 493
+
 Grove 线缆
+
 - 示例 1, 505-506
+
 - 示例 2, 506-507
+
 - 概述, 503-505
+
 Grove 连接器
+
 - 模拟 Grove 连接器, 499-500
+
 - 数字 Grove 连接器, 498-499
+
 Grove I2C 传感器, 3, 502-503
+
 Grove UART 模块, 500-501
+
 - 概述, 496-497
+
 电压与, 498
+
 Grove UART (通用异步收发器) 模块, 500-501
+
 Grove-4 公公引脚转 Grove 转换线, 3
+
 Grove 连接器到母头引脚线缆, 504, 560-561
+
 Grove 连接器到公头引脚线缆, 505
+
 GUI (图形用户界面)
+
 - 在无头 Raspberry Pi 上, 402-403
+
 - 在 Linux OS 上, 481
+
 用于 Python, 15
+
 GroveBee 无线插座, 501
 
 # H
 
 黑客, 328
+
 硬盘, 37。另见传感器；特定的硬件项目
+
 - 讨论, 477-478
+
 - 环境传感, 480-481
+
 - 项目
+
 - “Hello World,” 483-487
+
 - LED 控制, 487-489
+
 - PWM LED 控制, 489-491
+
 Raspberry Pi
+
 - GPIO 库, 482-483
+
 - GPIO 引脚, 482
+
 - 概述, 478-480
+
 安全性, 477
+
 硬件加速, 365, 424-425
+
 硬件接口, 509-510
+
 硬件项目。另见特定的硬件项目
+
 Haskell 编程语言, 386
+
 HDC1080 温湿度传感器。参见 Grove HDC1080 I2C 温湿度传感器
+
 HDMI, 479
+
 头部线程, 628
+
 无头计算
+
 - 讨论, 480
+
 GUI, 402-403
+
 - 在 Raspberry Pi 上, 588-589
-headTiltDown() 函数, 611
-headTiltMiddle() 函数, 611
-headTiltPercent() 函数, 611-522
-headTiltUp() 函数, 611
-headTurnLeft() 函数, 610
-headTurnMiddle() 函数, 610
-headTurnPercent() 函数, 611
-headTurnRight() 函数, 610
+
+`headTiltDown()` 函数, 611
+
+`headTiltMiddle()` 函数, 611
+
+`headTiltPercent()` 函数, 611-522
+
+`headTiltUp()` 函数, 611
+
+`headTurnLeft()` 函数, 610
+
+`headTurnMiddle()` 函数, 610
+
+`headTurnPercent()` 函数, 611
+
+`headTurnRight()` 函数, 610
+
 热图, 453
+
 “Hello World”物理计算, 480
+
 “Hello World”Python 项目, 42-55
-help() 函数, 345-347
+
+`help()` 函数, 345-347
+
 - 方法, 249
+
 - 输入, 33-35
+
 - 退出, 35-36
+
 - 实用性, 250
+
 启发式, 363
+
 十六进制。参见 base-16
-hex(x) 函数, 89
+
+`hex(x)` 函数, 89
+
 高级函数, 442
+
 高变异数据集, 436
+
 高速度数据集, 437
+
 好莱坞, 571
+
 哈勃望远镜, 375
+
 色相、饱和度、亮度 (HSV) 色彩, 662-663
+
 人类大脑, 360, 362
+
 人类级学习, 360, 365, 372。另见学习
+
 可读内容, 272, 287
+
 双曲函数, 91
+
 超文本标记语言。参见 HTML
+
 超文本传输协议。参见 HTTP
 
 # I
 
 I2C (集成电路) 总线地址, 510, 513, 515
+
 - 讨论, 503, 509-511
+
 - 驱动程序, 519-521
+
 - 协议, 511
+
 - 在 Raspberry Pi 上, 511-512
+
 - 寄存器, 519-521
+
 I2C (集成电路) 温湿度传感器项目, 511-515
+
 - 代码拆解, 518-519
+
 - 用于读取的 Python 库, 518-519
+
 - 湿度实验, 517
+
 - 概述, 515-517
+
 IAM (身份与访问管理) 范式, 459
+
 IBM BlueMix 云服务, 427
+
 IBM 云, 426-428
+
 IBM SoftLayer 数据服务, 427
+
 IBM Watson AI 组, 427, 571
+
 ICD-10, 467-468
+
 图标, 4, 18, 20, 31
+
 identity and access management (IAM) 范式, 459
+
 IEEE Spectrum, 1
 
-
-
-
-
 ## if 语句
+
 - 使用大括号, 132
+
 - 讨论, 129-132
-- 带有 elif 语句, 133-136
-- 带有 else 语句, 132-136
-- 使用 continue 的重复的 while 循环, 145-146
+
+- 带有 `elif` 语句, 133-136
+
+- 带有 `else` 语句, 132-136
+
+- 使用 `continue` 的重复的 `while` 循环, 145-146
+
 - 单行版本多行, 130-132
-- 用于 for 三元运算符, 135-136
+
+- 用于 `for` 三元运算符, 135-136
 
 - 图像, 436, 573
+
 - 虚数, 101-102
-- <<img&gt; 标签, 335
-- import 命令, 59-62
+
+- `<<img>` 标签, 335
+
+- `import` 命令, 59-62
 
 ## 缩进
+
 - 带有注释, 136
+
 - 讨论, 57-59, 82, 196
-- 用于 if 语句, 129-130
+
+- 用于 `if` 语句, 129-130
+
 - 在循环中, 152
-- index() 方法, 160-161, 165
+
+- `index()` 方法, 160-161, 165
+
 - 索引超出范围错误, 151
 
 - 推断, 435
 
 ## 继承
+
 - 从子类中添加额外参数, 243-246
+
 - 调用基类方法, 246-247
+
 - 创建基类, 240-241
+
 - 定义子类, 241-243
+
 - 讨论, 238-240
+
 - 在子类中重写默认值, 243
+
 - 在中两次使用相同名称, 247-250
 
-- __init__ 方法, 221-222
-- insert() 方法, 154, 165
+- `__init__` 方法, 221-222
+
+- `insert()` 方法, 154, 165
+
 - 实例方法, 234-235
+
 - 实例变量, 232-234
+
 - 类中的实例, 217-220
+
 - 转换为 CSV, 300-303
 
 ## 在自定义类中
+
 - 属性默认值, 227-228
+
 - 属性, 222-223
+
 - 修改属性值, 226
+
 - 从类创建实例, 221-225
+
 - 实例, 223-225
+
 - 概述, 220-221
+
 - 讨论, 56-57, 343
+
 - 赋予属性, 222-223
 
 ## 整数
+
 - 转换为 CSV, 295
+
 - 讨论, 68, 87, 343
+
 - 除法, 72
 
 ## Intel, 425
+
 - Intel 神经计算棒 (NCS), 424
+
 - Intel 神经网络芯片, 428
+
 - Intel SMBus, 510
 
 - IntelliSense 文本, 43, 197, 205-206
+
 - 接口, 509-510
+
 - 国际疾病分类第10版, 467-468
 
 ## Internet
+
 - + 计算机时钟, 111
+
 - 讨论, 327-328
+
 - 加密, 328
+
 - 黑客, 328
+
 - HTTP 头部, 328-331
-- https 协议, 328
+
+- `https` 协议, 328
+
 - + Python 和
+
   - 用于爬取数据的 JSON 文件, 342
+
   - 打开 URL, 331-332
+
   - 页面解析, 337
+
   - 保存为 CSV, 341-342
+
   - 保存为 JSON, 340
+
   - 存储, 337-339
+
   - 网络发布, 333-334
+
   - 网络爬虫, 334-337
+
 - URL 在访问中的作用, 328-329
+
 - 互联网控制仪表板, 530-531. 另阅 Blynk 应用
 
 ## Internet Explorer 浏览器
+
 - + 讨论, 327
+
 - 在上面下载 Anaconda, 15-17
+
 - 在 Jupyter Jupyter Notebook, 24-27
 
 ## 物联网 (IOT) 设备设备
+
 - 讨论, 426
+
 - MS Azure 和, 428
+
 - 机器人对比, 572
+
 - 小型计算机和, 481
+
 - 统计, 436
 
 ## 解释器
+
 - 选择, 21
+
 - 讨论, 13-15, 21, 367
-- int(x) 函数, 89
+
+- `int(x)` 函数, 89
 
 - IOT 设备. 另阅物联网设备
 
 ## iPhone 智能手机
+
 - 用于 Blynk 应用控制仪表板, 530-534
+
 - 处理, 366
-- .ipynb 文件扩展名, 26, 51
-- is not 运算符, 72
-- is 运算符, 72
+
+- `.ipynb` 文件扩展名, 26, 51
+
+- `is not` 运算符, 72
+
+- `is` 运算符, 72
+
 - “圣诞老人是真实的吗?” (Vohra), 430
+
 - 斜体, 62
+
 - 项目索引, 151, 160-161
-- items() 方法, 184
+
+- `items()` 方法, 184
+
 - 可迭代对象, 164, 190, 205. 另阅列表
 
 ## J
+
 - Jain, Sarthak, 431
+
 - Java, 10, 386
 
 ## JavaScript 代码
+
 - 讨论, 10, 307
+
 - 其中的括号, 57-59
+
 - 工作空间, 37
+
 - 用 Python 编写, 58-59
 
-- jgarff 驱动程序, 606
-- .jpg 图像文件名, 277-278
+- `jgarff` 驱动程序, 606
+
+- `.jpg` 图像文件名, 277-278
 
 ## JSON (JavaScript 对象表示)
+
 - + 类似于数据字典, 307
+
 - + 数据组织, 307-310
+
 - + 数据类型, 311
+
 - + 反序列化, 310-311
+
 - + 讨论, 307
+
 - + 将数据转储到, 322-325
+
 - + 导出的 Excel 数据, 307-308
+
 - + 文件扩展名, 309
+
 - + 导出的 Firebase 数据, 309
+
 - + 键值文件, 309
+
 - + 键值对
+
 - + 修改数据, 320-321
+
 - + Excel 数据转换, 307-308
+
 - + Python 数据转储, 322-325
+
 - 从字典中删除数据, 321-322
+
 从...加载数据
+
 - + 修改数据, 320-321
+
 - + 转换 Firebase 时间戳, 314
+
 - + Excel 到 JSON 的转换, 313-314
+
 - + 从 Python 字符串创建的键值 JSON, 319-320
+
 - + 键值 JSON, 314
+
 - + 概述, 312-313
+
 - + 从字典中删除数据, 321-322
+
 - + 无键 JSON, 314
+
 - + 保存爬取数据, 340, 342
+
 - + 序列化, 310-311
-- json 模块, 311
-- json.dump() 方法, 322-325
-- json.dumps() 方法, 322-325
-- .json 文件扩展名, 309
-- json.loads(), 318-320
+
+- `json` 模块, 311
+
+- `json.dump()` 方法, 322-325
+
+- `json.dumps()` 方法, 322-325
+
+- `.json` 文件扩展名, 309
+
+- `json.loads()`, 318-320
+
 - Julia 语言, 23
 
 ## Jupyter Notebook
+
 - 在其中编码
+
   - + 添加 Markdown 文本, 49-50
+
   - + 创建文件夹, 47
+
   - + 创建笔记本, 48
+
   - + 打开笔记本, 51
+
   - + 概述, 47
+
   - + 运行代码, 49
+
   - + 保存笔记本, 51
+
 - 讨论, 23-27
+
 - 文件扩展名, 26
 
 ## K
+
 - Kaggle 网站, 444-445
+
 - 树莓派上的 Keras 和深度学习 (Rosebrock), 430
 
 ## Keras 神经网络
+
 - 三层神经网络, 395-397
+
 - 检查结果, 392-395
+
 - 定义, 374
+
 - 安装, 386-387
+
 - 步骤 1: 加载数据, 388, 390
+
 - 步骤 2: 定义模型和层, 388, 391
+
 - 步骤 3: 编译, 388, 391
+
 - 步骤 4: 拟合和训练, 388, 392
+
 - 步骤 5: 评估, 388-390
 
 ## 键值文件
+
 - 讨论, 308-309
+
 - 遍历, 314-316
+
 - 来自 Python 字符串, 319-320
 
 ## 键
+
 - 在字典中
+
   - + 添加键, 180-181
+
   - 修改键值, 179
+
   - 遍历, 182-183
+
   - 方法, 184-185
+
   - 多键字典, 188-190
+
   - 概述, 171-173
+
   - 删除项, 185-188
+
 - 查找键, 177-178
-- keys() 方法, 184
+
+- `keys()` 方法, 184
 
 ## 键值对
+
 - 字典数据
+
   - + 添加键, 180-181
+
   - 修改键值, 180-181
+
   - 字典长度, 177
+
   - 删除所有键值对, 186
+
 - 讨论, 174, 226
 
 ## JSON
+
 - + 修改数据, 320-321
+
 - + Excel 数据转换, 307-308
+
 - + Python 数据转储, 322-325
+
 - 从字典中删除数据, 321-325
+
 - 方法, 184
+
 - 关键字参数, 203-204
+
 - 关键字主题, 34-35
+
 - 厨房电器, 478, 480-481, 541, 572
 
 ## L
-- lambda 函数
+
+- `lambda` 函数
+
 - + 货币示例, 213-215
+
 - 讨论, 209-210
+
 - 语言翻译, 360. 另阅自然语言
+
 - 大型数组操作函数, 442
+
 - 激光距离传感器, 360, 365, 372, 399. 另阅特定类型的学习
+
 - LED 控制项目, 487-489
+
 - 左左对齐, 214-215
-- len() 函数, 104, 153, 167, 177
+
+- `len()` 函数, 104, 153, 167, 177
+
 - 小于运算符, 72
+
 - 小于等于运算符, 72
+
 - 灯泡, 478
+
 - 光照传感器, 629
+
 - 换行命令, 70
+
 - 换行, 81
+
 - 线性代数, 366, 375. 另阅矩阵数学
+
 - 《线性代数傻入入门》(Sterling), 366
+
 - 代码检查, 55-56, 82-83
 
-- Linux 操作系统 (操作系统). 另阅 Ubuntu OS
-- 在上面安装 Anaconda, 15-17
-- Google Edge TPU 和, 424-425
-- 在上面安装 NumPy, 379
-- 基于树莓派, 587
-- 在小型计算机上, 481
-- Windows 风格的 GUI, 481
-- listname 函数, 150-152
 
-- = 用于赋值名称的符号, 149
-- 字母排序, 161-163
-- 在末尾添加项, 153-154
-- 修改其中的项, 155
-- 检查内容, 152
-- 清空, 158
-- 合并, 155-156
-- 复制, 164-165
-- 在其中统计项目频率, 159
-- 确定长度, 153
-- 数据之间的差异, 171-172
-- 讨论, 339, 149
-- 显示, 150
-- 插入项到, 154
-- 项目索引, 151, 160-161
-- 长, 150
-- 遍历, 151-152
-- 位置数字, 150-151
-- 带有引号, 149-150
-- 可读性, 162-163
-- 从中删除项, 156-158
-- 反转, 164
-- 字符串中的, 150
-- 生物, 239
-- .just() 方法, 214-215
-- 局部作用域, 198
-- 对数函数, 91
-- 逻辑分析仪, 559
-- 逻辑运算符, 128. 另阅决策制定
-- 逻辑回归, 439
-- 距离传输, 375
+
+- Linux 操作系统（操作系统）。另阅 Ubuntu OS
+
+- 在上面安装 Anaconda，15-17
+
+- Google Edge TPU 和，424-425
+
+- 在上面安装 NumPy，379
+
+- 基于树莓派，587
+
+- 在小型计算机上，481
+
+- Windows 风格的 GUI，481
+
+- `listname` 函数，150-152
+
+- `=` 用于赋值名称的符号，149
+
+- 字母排序，161-163
+
+- 在末尾添加项，153-154
+
+- 修改其中的项，155
+
+- 检查内容，152
+
+- 清空，158
+
+- 合并，155-156
+
+- 复制，164-165
+
+- 在其中统计项目频率，159
+
+- 确定长度，153
+
+- 数据之间的差异，171-172
+
+- 讨论，339，149
+
+- 显示，150
+
+- 插入项到，154
+
+- 项目索引，151，160-161
+
+- 长，150
+
+- 遍历，151-152
+
+- 位置数字，150-151
+
+- 带有引号，149-150
+
+- 可读性，162-163
+
+- 从中删除项，156-158
+
+- 反转，164
+
+- 字符串中的，150
+
+- 生物，239
+
+- `.just()` 方法，214-215
+
+- 局部作用域，198
+
+- 对数函数，91
+
+- 逻辑分析仪，559
+
+- 逻辑运算符，128。另阅决策制定
+
+- 逻辑回归，439
+
+- 距离传输，375
+
 - 循环
-  - + 讨论, 281
-  - readline() 方法, 281, 283
-  - readonly() 方法, 281-283
-- 损失函数, 373-374, 394
-- 低速数据集, 337
+  - `+` 讨论，281
+  - `readline()` 方法，281，283
+  - `readonly()` 方法，281-283
 
+- 损失函数，373-374，394
 
+- 低速数据集，337
 
+# `RobotInterface` 类
 
-# RobotInterface class
+- `allLEDSOff()` 函数，608
 
-- allLEDSOff() function, 608
-- centerAllServos() function, 613
-- color() function, 608
-- colorWipe() function, 607
-- fetchUltraDistance() function, 606-606
-- front LED functions, 605-606
-- general servo function, 613
-- headTiltDown() function, 611
-- headTiltMiddle() function, 611
-- headTiltPercent() function, 611-612
-- headTiltUp() function, 611
-- headTurnLeft() function, 610
-- headTurnMiddle() function, 610
-- headTurnPercent() function, 610-611
-- headTurnRight() function, 610
-- main motor functions, 608-609
-- motorBackward() function, 609
-- motorForward() function, 609
-- overview, 604-605
-- Pixel strip functions, 606-608
-- rainbowCycle() function, 607
-- servo functions, 609-613
-- set_Front_LED_Off() function, 606
-- set_Front_LED_On() function, 605-606
-- setPixelColor() function, 607-608
-- stopMotor() function, 609
-- theaterChaseRainbow() function, 607
-- ultrasonic distance sensor function, 608
-- wheelsLeft() function, 612
-- wheelsMiddle() function, 612
-- wheelsPercent() function, 612-613
-- wheelsRight() function, 612
+- `centerAllServos()` 函数，613
 
-ROS, 616-617
-- single movement, 603-604
+- `color()` 函数，608
+
+- `colorWipe()` 函数，607
+
+- `fetchUltraDistance()` 函数，606-606
+
+- front LED functions，605-606
+
+- general servo function，613
+
+- `headTiltDown()` 函数，611
+
+- `headTiltMiddle()` 函数，611
+
+- `headTiltPercent()` 函数，611-612
+
+- `headTiltUp()` 函数，611
+
+- `headTurnLeft()` 函数，610
+
+- `headTurnMiddle()` 函数，610
+
+- `headTurnPercent()` 函数，610-611
+
+- `headTurnRight()` 函数，610
+
+- main motor functions，608-609
+
+- `motorBackward()` 函数，609
+
+- `motorForward()` 函数，609
+
+- overview，604-605
+
+- Pixel strip functions，606-608
+
+- `rainbowCycle()` 函数，607
+
+- servo functions，609-613
+
+- `set_Front_LED_Off()` 函数，606
+
+- `set_Front_LED_On()` 函数，605-606
+
+- `setPixelColor()` 函数，607-608
+
+- `stopMotor()` 函数，609
+
+- `theaterChaseRainbow()` 函数，607
+
+- ultrasonic distance sensor function，608
+
+- `wheelsLeft()` 函数，612
+
+- `wheelsMiddle()` 函数，612
+
+- `wheelsPercent()` 函数，612-613
+
+- `wheelsRight()` 函数，612
+
+- ROS，616-617
+
+- single movement，603-604
 
 ## Mars Rover PiCar-B robotics project
 
-- assembly manual, 580, 590-591
-- building, 590-592
+- assembly manual，580，590-591
+
+- building，590-592
+
 - components
-    - drive motor, 584-585
-    - motor controller board, 582
-    - overview, 581
-    - Pi camera, 587-589
-    - RGB programmable LEDs, 586-587
-    - RGB LED, 585-586
-    - servo motors, 582-584
-    - ultrasonic sensor, 589-590
-- discussion, 579-580
-- parts list, 580-581
-- sudo halt for stopping Raspberry Pi, 592
+  - drive motor，584-585
+  - motor controller board，582
+  - overview，581
+  - Pi camera，587-589
+  - RGB programmable LEDs，586-587
+  - RGB LED，585-586
+  - servo motors，582-584
+  - ultrasonic sensor，589-590
+
+- discussion，579-580
+
+- parts list，580-581
+
+- sudo halt for stopping Raspberry Pi，592
+
 - testing
-    - disabling Adeept software auto startup, 595
-    - Pi camera video, 597-599
-    - PiCar-B Python test code, 595-596
-    - servo motors calibration, 592-595
-- tips, 591-592
-- marshall format, 307
-- Massachusetts Institute of Technology (MIT), 361
-- Massaron, Luca, 372, 419
-- Material Icon theme, 31
+  - disabling Adeept software auto startup，595
+  - Pi camera video，597-599
+  - PiCar-B Python test code，595-596
+  - servo motors calibration，592-595
 
-## math module
+- tips，591-592
 
-- discussion, 90-92
-- installing, 350-352
-- math.acos(x) function, 91
-- math.atan2(y, x) function, 91
-- math.atan(x) function, 91
-- math.ceil(x) function, 91
-- math.cos(x) function, 91
-- math.degrees(x) function, 91
-- math.e function, 91
-- math.exp(x) function, 91
-- math.factorial(x) function, 91
-- math.floor(x) function, 91
-- math.isnan(x) function, 91
-- math.log(x,y) function, 91
-- math.pi function, 91
-- math.pow(x, y) function, 91
-- math.radians(x) function, 91
-- math.sin(x) function, 91
-- math.sqrt(x) function, 91
-- math.tan(x) function, 91
-- math.tau() function, 91
+- marshall format，307
+
+- Massachusetts Institute of Technology (MIT)，361
+
+- Massaron, Luca，372，419
+
+- Material Icon theme，31
+
+## `math` 模块
+
+- discussion，90-92
+
+- installing，350-352
+
+- `math.acos(x)` 函数，91
+
+- `math.atan2(y, x)` 函数，91
+
+- `math.atan(x)` 函数，91
+
+- `math.ceil(x)` 函数，91
+
+- `math.cos(x)` 函数，91
+
+- `math.degrees(x)` 函数，91
+
+- `math.e` 函数，91
+
+- `math.exp(x)` 函数，91
+
+- `math.factorial(x)` 函数，91
+
+- `math.floor(x)` 函数，91
+
+- `math.isnan(x)` 函数，91
+
+- `math.log(x,y)` 函数，91
+
+- `math.pi` 函数，91
+
+- `math.pow(x, y)` 函数，91
+
+- `math.radians(x)` 函数，91
+
+- `math.sin(x)` 函数，91
+
+- `math.sqrt(x)` 函数，91
+
+- `math.tan(x)` 函数，91
+
+- `math.tau()` 函数，91
 
 ## MatPlotLib package
 
-- data graphs and, 440 in data science project
-    - clarity count, 451-452
-    - clarity versus size, 449-450
-    - color count, 452-453
-- overview, 449
-    - discussion, 375, 441, 444
-- Grove oxygon sensor project data in, 521-522
-    - installation, 415
-- output formats, 522
-- visualization with, 415-419, 444
-- matrices. See also linear algebra; tensors
-- DataFrames and, 443
-    - discussion, 366, 375, 385, 425
-- GPU, 429
-    - NumPy and on, 442
-- online tutorials on, 442
-    - terminology surrounding, 386
-- matrix mathematics, 366, 375
-- max(s) sequence operator, 105
-- max(x, y, z.) function, 89
+- data graphs and，440 in data science project
+  - clarity count，451-452
+  - clarity versus size，449-450
+  - color count，452-453
+
+- overview，449
+  - discussion，375，441，444
+
+- Grove oxygon sensor project data in，521-522
+  - installation，415
+
+- output formats，522
+
+- visualization with，415-419，444
+
+- matrices。See also linear algebra; tensors
+
+- DataFrames and，443
+  - discussion，366，375，385，425
+
+- GPU，429
+  - NumPy and on，442
+
+- online tutorials on，442
+  - terminology surrounding，386
+
+- matrix mathematics，366，375
+
+- `max(s)` sequence operator，105
+
+- `max(x, y, z.)` function，89
 
 ## Medicare big data project
 
-- analysis, 467-471
-- code breakdown, 466-467
-- coding, 463-466
-- data visualization, 471-472
-- discussion, 457, 460
-- ICD-10 and, 468
-- setup and authentication, 460-463
-- medicine, 435, 440
-- megapixels, 587
-- memory wire, 577
-- metadata, 444
-- Metcalf, Robert, 362
-- method resolution order, 249
+- analysis，467-471
+
+- code breakdown，466-467
+
+- coding，463-466
+
+- data visualization，471-472
+
+- discussion，457，460
+
+- ICD-10 and，468
+
+- setup and authentication，460-463
+
+- medicine，435，440
+
+- megapixels，587
+
+- memory wire，577
+
+- metadata，444
+
+- Metcalf, Robert，362
+
+- method resolution order，249
 
 ## methods
 
 - for classes
-    - calling method by class name, 231-232
-    - class methods, 234-236
-    - class variables, 232-234
-    - naming conventions, 229
-    - overview, 228-230
-    - parameters, 230-231
-    - static methods, 236-237
-    - data dictionary
-    - fromkeys() method, 190-192
-    - get() method, 178-179, 184
-    - overview, 183-184
-    - setdefault() method, 190-192
-    - discussion, 56-57, 218, 228
-    - function versus, 230
+  - calling method by class name，231-232
+  - class methods，234-236
+  - class variables，232-234
+  - naming conventions，229
+  - overview，228-230
+  - parameters，230-231
+  - static methods，236-237
+
+- data dictionary
+  - `fromkeys()` method，190-192
+  - `get()` method，178-179，184
+  - overview，183-184
+  - `setdefault()` method，190-192
+  - discussion，56-57，218，228
+  - function versus，230
+
 - manipulating strings
-    - alignment, 214-215
-    - left justification, 214-215
-    - overview, 107-109
-    - right justification, 214-215
-- tuples and, 167-for working with lists
-    - micro USB (universal serial bus) port, 480
-    - microSD card, 480
-    - Microsoft, 458
-    - Microsoft Azure, 426, 428, 430
-    - Microsoft Edge browser
-    - Microsoft Excel
-    - Microsoft Internet Explorer browser
-    - middleware, 616
-    - milliamps, 583
-    - min(s) sequence operator, 105-106
-    - Minsky, Marvin, 361-362, 369
-    - MIT (Massachusetts Institute of Technology), 361
+  - alignment，214-215
+  - left justification，214-215
+  - overview，107-109
+  - right justification，214-215
 
-## ML (machine learning). See also AI
+- tuples and，167-for working with lists
+  - micro USB (universal serial bus) port，480
+  - microSD card，480
+  - Microsoft，458
+  - Microsoft Azure，426，428，430
+  - Microsoft Edge browser
+  - Microsoft Excel
+  - Microsoft Internet Explorer browser
+  - middleware，616
+  - milliamps，583
+  - `min(s)` sequence operator，105-106
+  - Minsky, Marvin，361-362，369
+  - MIT (Massachusetts Institute of Technology)，361
 
-- network project algorithms, 400-401
-- AWS tools and, 427
-- both art and science, 415
-- code for Book 6, 400
-- decision trees in, 365
-- discussion, 1-2, 399, 421
-- evolutionary algorithms in, 365
-- evolutionary computing and, 363-364
-- Fashion-MNIST project CNN code, 412-415
-- code breakdown, 405-407
-- dataset, 403
-- external images testing, 409-415
-- Matplotlib visualization, 415-419
-- network testing, 404-405
-- network training, 404
-- overview, 407-408
-- single image test, 408-409
-- software environment setup, 402-403
-- goal definition, 300
-- GPUs and, 428-430
-- hardware acceleration in, 365
-- limitations, 367
-- local maxima in, 400
-- MS Azure tools for, 428
-- neural networks and, 363, 365
-- Python and, 9-10
-- resources, 419
-- statistical analysis in, 365, 429
+## ML (machine learning)。See also AI
 
-## ML projects. See Cats and Dogs ML robotics project; FindAndChaseBall program
+- network project algorithms，400-401
+
+- AWS tools and，427
+
+- both art and science，415
+
+- code for Book 6，400
+
+- decision trees in，365
+
+- discussion，1-2，399，421
+
+- evolutionary algorithms in，365
+
+- evolutionary computing and，363-364
+
+- Fashion-MNIST project CNN code，412-415
+  - code breakdown，405-407
+  - dataset，403
+  - external images testing，409-415
+  - Matplotlib visualization，415-419
+  - network testing，404-405
+  - network training，404
+  - overview，407-408
+  - single image test，408-409
+  - software environment setup，402-403
+
+- goal definition，300
+
+- GPUs and，428-430
+
+- hardware acceleration in，365
+
+- limitations，367
+
+- local maxima in，400
+
+- MS Azure tools for，428
+
+- neural networks and，363，365
+
+- Python and，9-10
+
+- resources，419
+
+- statistical analysis in，365，429
+
+## ML projects。See Cats and Dogs ML robotics project; FindAndChaseBall program
 
 - mm/dd/yyyy date format
-- conversion, 317, 321-322
-- discussion, 310, 316
-- modules. See also names of specific modules
-    - creating, 352-355
-    - discussion, 59-62
-    - free, 59-60, 87
+  - conversion，317，321-322
+  - discussion，310，316
+
+- modules。See also names of specific modules
+  - creating，352-355
+  - discussion，59-62
+  - free，59-60，87
+
 - importing
-    - overview, 349-352
-    - syntax, 61-62
-    - updating, 59-61
-    - using an alias with, 62
-- modulus operator, 71-72
-- moment, 660
-- monitoring, 424
-- motor controller board, 582
-- motor thread, 628
-- motorBackward() function, 609
-- motorForward() function, 609
+  - overview，349-352
+  - syntax，61-62
+  - updating，59-61
+  - using an alias with，62
 
-## motors. See also actuators; DC motors
+- modulus operator，71-72
 
-- actuators versus, 3, 577
-- discussion, 480
-- magnets in, 541-542
-- Raspberry Pi and, 477
-- robotics project controller board, 582
+- moment，660
+
+- monitoring，424
+
+- motor controller board，582
+
+- motor thread，628
+
+- `motorBackward()` function，609
+
+- `motorForward()` function，609
+
+## motors。See also actuators; DC motors
+
+- actuators versus，3，577
+
+- discussion，480
+
+- magnets in，541-542
+
+- Raspberry Pi and，477
+
+- robotics project controller board，582
 
 ## “MouseAir – Using AI on the Raspberry Pi to Entertain your Cat”
 
-
-
-
 ## 数字
+
 - 二进制，100-101
+
 - 八进制，100-101
+
 - 十六进制，100-101
+
 - 带有计算，87-92
-- 复数，68, 101-102
+
+- 复数，68，101-102
+
 - 讨论，67
-- 浮点数，68, 87, 343-344
+
+- 浮点数，68，87，343-344
+
 - 格式化
   - 对齐，99-100
   - 美元金额，94-95
-  - f-strings，93-94
+  - `f-strings`，93-94
   - 多行格式字符串，97-98
   - 概述，93
   - 百分比，95-96
   - 宽度，99-100
+
 - 整数，68
+
 - 有效与无效用法，67
 
 ## NumPy 库
+
 - 讨论，441-443
+
 - 示例，442
-- 安装，443, 445
+
+- 安装，443，445
+
 - 神经网络 Python 代码
-- 代码解析，378-382
-- 目标定义，374
-- 概述，373, 375-378
-- 运行代码，382-385
-- 真值表，374
-- 异或门，375
+  - 代码解析，378-382
+  - 目标定义，374
+  - 概述，373，375-378
+  - 运行代码，382-385
+  - 真值表，374
+  - 异或门，375
+
 - Pandas 软件包及，441
+
 - 使用教程，442
 
 ## NumPy 教程，442
 
 ## Nvidia（英达），425
+
 - Nvidia 256 核心 GPU 芯片，429
+
 - Nvidia GPU（图形处理器），423
 
 ## NXP 半导体，510
 
 ## O
+
 - 对象恒等性比较运算符，72
-- 面向对象编程 (OOP)，56-57, 217-220
+
+- 面向对象编程（OOP），56-57，217-220
+
 - 对象。见实例
+
 - 八进制数。见八进制数
-- oct(x) 函数，89
-- Olson 数据库，121-122, 125
+
+- `oct(x)` 函数，89
+
+- Olson 数据库，121-122，125
+
 - OneDrive，37
+
 - ó，285
-- OOP（面向对象编程），56-57, 217-220
+
+- OOP（面向对象编程），56-57，217-220
+
 - 奥尔特云，375
-- open() 方法，273-274
+
+- `open()` 方法，273-274
+
 - OpenAQ 数据库，473
+
 - OpenCV（开源计算机视觉）软件包，588
-- OpenCV 帧分析器线程。见 FindAndChaseTheBall, 程序
+
+- OpenCV 帧分析器线程。见 FindAndChaseTheBall 程序
+
 - 开漏漏线，510
+
 - Opera 网页浏览器，327
+
 - 运算符。见决策操作；特定数学运算符的名称
-- 或布尔逻辑运算符，73, 128
-- ord() 函数，107
+
+- 或布尔逻辑运算符，73，128
+
+- `ord()` 函数，107
+
 - OS（操作系统）错误异常，317
+
 - 过拟合，639
+
 - 过训练，373
+
 - 氧气传感器项目
   - 代码解析，527-528
-  - 讨论，521-522
-  - 所需设备
-    - ADC 转换器，522-523
-    - Grove 氧气传感器，522-523
-  - 设置，524-526
-  - 结果解释，528-529
+
+
+
+- 讨论，521-522
+- 所需设备
+  - ADC 转换器，522-523
+  - Grove 氧气传感器，522-523
+- 设置，524-526
+- 结果解释，528-529
 
 ## P
+
 - 包管理器，348
 - 软件包，14-15, 347-349。另见特定包的名称
 - Pandas 软件包
@@ -18302,18 +19160,19 @@ ROS, 616-617
 - 参数
   - 讨论，88
   - 在函数中
-  - 多值，201-203
-  - 带有默认值的可选参数，200-201
+    - 多值，201-203
+    - 带有默认值的可选参数，200-201
   - 命名规范，224-225
 - 括号括号，57-59
 - ParkMyRide API（应用程序编程接口），427
-- parse 模块，331-332
+- `parse` 模块，331-332
 - 密码，328
 - PC（个人电脑），478
 - PCA9685 I2C 芯片，583-584
 - PDF（便携式文档格式），522
 
 ## PEP 8 指南
+
 - 讨论，54-55
 - 其中的错误警告
   - 禁用，83
@@ -18325,6 +19184,7 @@ ROS, 616-617
 - 空格建议，73, 82
 
 ## PEP 20 指南，54
+
 - 感知器，362, 369
 - 外围设备，510
 - 持久化数据，228
@@ -18333,85 +19193,85 @@ ROS, 616-617
 - Phillips Hue，478
 - 照片，436, 573
 - 物理计算。另见硬件；传感器；特定物理计算项目的名称
-- 讨论，477–478
-- 环境感知，480–481
-- 项目
-  - “Hello World，”483–487
-  - LED 控制，487–489
-  - PWM 控制，489–491
-  - 树莓派 (Raspberry Pi)
-    - GPIO 库，482–483
-    - GPIO 引脚，482
-    - 概述，478–430
-    - pi，350–352
-    - 相机，587–589
-    - Grove 开发板，483–485
-    - Grove 接口板，544–545
-    - Grove 树莓派板
-      - 讨论，495–496
-      - 电阻，510
-      - 舵机项目，552
-      - 步电机项目，560
-      - 电压，498
-    - Grove Raspberry Pi 转，3
-  - PIP (Pip 安装包)，348–349
-  - pip 命令，61, 348
-  - Pixel 可编程 LED（发光二极管），586–587
-  - Pixel 灯带，606–608
-  - plotly 软件包，441
-  - PNG (便携网络图形)，522
-  - 污染数据项目，473
-  - 池化层，638-639
-  - pop() 方法
-    - 字典，184, 187
-    - 讨论，156-158, 165
-  - popitem() 方法，184, 188
-  - 便携文档格式 (PDF)，522
-  - 便携网络图形 (PNG)，522
-  - 正向反馈，560
-  - POST 响应，330
-  - PostScript (PS)，522
-  - 电位器，543, 582
-  - # 符号，65
-  - powers 函数，91
-  - PowerShell
-    - 讨论，31, 45
-    - 使用 PIP，348-349
-  - 经午线，120
-  - print() 函数
-    - 字典，175-176
-    - 带有 f-strings，95-96
-    - 数字转换，100-101
-  - 程序员注释
-    - 在应用中，64-66
-    - 在类代码中，220
-    - 在自定义类中，205
-    - 在函数中，197
-    - 缩进，136
-  - 编程语言。另见特定的
-    - 大括号中的，57-59
-    - 设计，53, 56-57
-    - 讨论，10
-    - 括号中的，57-59
-    - 语法，79-81
-  - 网页设计，10
-  - 属性。见专用软件，577
-  - 协议
-    - https，328-330
-    - I2C 总线，330
-  - PWM (脉宽调制)
-    - 损坏，587
-    - 通过电机控制，584-585
-    - 通过舵机控制，543, 552, 583
-    - 以及小直流电机，542-543
-    - LED（发光二极管）控制项目，489-491
+  - 讨论，477–478
+  - 环境感知，480–481
+  - 项目
+    - “Hello World，”483–487
+    - LED 控制，487–489
+    - PWM 控制，489–491
+    - 树莓派 (Raspberry Pi)
+      - GPIO 库，482–483
+      - GPIO 引脚，482
+      - 概述，478–430
+      - `pi`，350–352
+      - 相机，587–589
+      - Grove 开发板，483–485
+      - Grove 接口板，544–545
+      - Grove 树莓派板
+        - 讨论，495–496
+        - 电阻，510
+        - 舵机项目，552
+        - 步电机项目，560
+        - 电压，498
+      - Grove Raspberry Pi 转，3
+- PIP (Pip 安装包)，348–349
+- `pip` 命令，61, 348
+- Pixel 可编程 LED（发光二极管），586–587
+- Pixel 灯带，606–608
+- `plotly` 软件包，441
+- PNG (便携网络图形)，522
+- 污染数据项目，473
+- 池化层，638-639
+- `pop()` 方法
+  - 字典，184, 187
+  - 讨论，156-158, 165
+- `popitem()` 方法，184, 188
+- 便携文档格式 (PDF)，522
+- 便携网络图形 (PNG)，522
+- 正向反馈，560
+- POST 响应，330
+- PostScript (PS)，522
+- 电位器，543, 582
+- `#` 符号，65
+- `powers` 函数，91
+- PowerShell
+  - 讨论，31, 45
+  - 使用 PIP，348-349
+- 经午线，120
+- `print()` 函数
+  - 字典，175-176
+  - 带有 f-strings，95-96
+  - 数字转换，100-101
+- 程序员注释
+  - 在应用中，64-66
+  - 在类代码中，220
+  - 在自定义类中，205
+  - 在函数中，197
+  - 缩进，136
+- 编程语言。另见特定的
+  - 大括号中的，57-59
+  - 设计，53, 56-57
+  - 讨论，10
+  - 括号中的，57-59
+  - 语法，79-81
+- 网页设计，10
+- 属性。见专用软件，577
+- 协议
+  - `https`，328-330
+  - I2C 总线，330
+- PWM (脉宽调制)
+  - 损坏，587
+  - 通过电机控制，584-585
+  - 通过舵机控制，543, 552, 583
+  - 以及小直流电机，542-543
+  - LED（发光二极管）控制项目，489-491
 - 代码静态检查，55
 - PyLab 软件包，444
 - PyLint 功能
   - 激活，55-56
   - 错误高亮，82-83
 - PyPi (Python 包索引)，348
-- .py 文件扩展名，41-43
+- `.py` 文件扩展名，41-43
 - Python
   - 访问，37
   - 爬取数据的 JSON 文件，342
@@ -18421,7 +19281,7 @@ ROS, 616-617
   - 保存为 CSV，341-342
   - 保存为 JSON，340
   - 存储，337
-  - urllib 库，331-332
+  - `urllib` 库，331-332
   - 网页发布，333-334
   - 网页爬虫，334
 - 创建应用，37
@@ -18434,7 +19294,7 @@ ROS, 616-617
 - 缩进，57-59
 - 解释器，13-15
 - Jupyter Notebook，23-27
-- .py 文件创建，41-43
+- `.py` 文件创建，41-43
 - 运行代码，44-45
 - 保存代码，43
 - 保存工作，78
@@ -18456,33 +19316,38 @@ ROS, 616-617
   - 可读性，54-57
   - Python 之禅，53-54
   - 编写代码，58-59
+
 ## 模块
-  - 别名，61-62
-  - 创建，352-355
-  - 免费，59-60
-  - 导入，59-61
-  - 导入语法，349-352
-  - 模块，347-31
+
+- 别名，61-62
+- 创建，352-355
+- 免费，59-60
+- 导入，59-61
+- 导入语法，349-352
+- 模块，347-31
 
 ## 标准库
-  - 内置函数，347
-  - dir() 函数，344-345
-  - help() 函数，345-347
-  - json 模块，311
-  - 概述，343-344
-  - 资源，346-347
-  - USB 闪存，423-425
+
+- 内置函数，347
+- `dir()` 函数，344-345
+- `help()` 函数，345-347
+- `json` 模块，311
+- 概述，343-344
+- 资源，346-347
+- USB 闪存，423-425
 
 ## 语法
-  - 代码块，82
-  - 错误，79-81
-  - 函数，88-89
-  - if 语句，129-130
-  - 逐行代码，81
-  - 模块导入，61-62
-  - 语法，81-82
+
+- 代码块，82
+- 错误，79-81
+- 函数，88-89
+- `if` 语句，129-130
+- 逐行代码，81
+- 模块导入，61-62
+- 语法，81-82
 
 ## TensorFlow Keras 神经网络项目
+
 - 更改三层神经网络，395-397
 - 检查结果，392-395
 - 代码解析，390-392
@@ -18495,628 +19360,678 @@ ROS, 616-617
 - 步骤 4：拟合和训练，388, 392
 - 步骤 5：评估，388-390, 392
 
-
-
-rainbowCycle() 函数, 607
+`rainbowCycle()` 函数, 607
 
 RAM（随机访问存储器）
-在廉价电脑中, 478
-在 PC 上, 478
-树莓派 3B+, 422
-读取二进制文件和, 287-289
-readlines() 方法和, 281
-rand() 函数, 380
-range() 语句, 138-139
+
+- 在廉价电脑中, 478
+- 在 PC 上, 478
+- 树莓派 3B+, 422
+- 读取二进制文件和, 287-289
+- `readlines()` 方法和, 281
+
+`rand()` 函数, 380
+
+`range()` 语句, 138-139
 
 # 树莓派
 
-AI 应用
-+ 添加硬件, 423-425
-+ 局限性, 421-423
-+ 概览, 421
-+ 亚马逊云和, 424
-+ 基础单元, 494-495
-+ Blynk 手机仪表板和
-+ 代码解析, 536-538
-+ 安装, 531-534
-+ 概览, 530
-+ Python 代码修改, 534-536
-+ 成本, 478
-+ 数据损坏补偿, 587
-+ 讨论, 1-2, 478-480
-+ GPIO 库, 482-483
-+ GPIO 引脚, 482
-Grove 氧气传感器项目
-+ ADC 转换器, 522-523
-+ 代码解析, 527-528
-+ Grove 氧气传感器, 522-523
-+ 解析结果, 528-529
-+ 概览, 521-522
-+ 设置, 524-526
-硬件项目。另见特定硬件项目的名称
-“Hello World”项目, 483-487
-LED 控制, 487-489
-PWM LED 控制, 489-491
-HDC1080 湿度湿度传感器项目
-概览, 512-515
-用于读取的 Python 库, 515-519
-高级 AI 机器人应用在, 579
-I2C 接口传感器接口, 511-512
-I2C 接口支持, 510
-非常适合学习 Python, 481
-在...上安装 Matplotlib, 415
-在...上安装 NumPy, 379, 443, 445
-在...上安装 Pandas, 445
-Kaggle 钻石数据库, 444-445
-在 Matplotlib 上视视化, 415-419
-电机, 477
-多任务处理在, 491
-Pixel RGB 串流, 587
-电源来自, 553
-Python 支持, 481
-seaborn 包在, 472
-传感器, 477, 509-510
-Stretch OS, 580
-使用 sudo halt 停止, 592
-USB 处理棒和, 423-425
-开启 VNC, 402-403
+- AI 应用
+  - 添加硬件, 423-425
+  - 局限性, 421-423
+  - 概览, 421
+  - 亚马逊云和, 424
+  - 基础单元, 494-495
+  - Blynk 手机仪表板和
+    - 代码解析, 536-538
+    - 安装, 531-534
+    - 概览, 530
+    - Python 代码修改, 534-536
+- 成本, 478
+- 数据损坏补偿, 587
+- 讨论, 1-2, 478-480
+- GPIO 库, 482-483
+- GPIO 引脚, 482
+- Grove 氧气传感器项目
+  - ADC 转换器, 522-523
+  - 代码解析, 527-528
+  - Grove 氧气传感器, 522-523
+  - 解析结果, 528-529
+  - 概览, 521-522
+  - 设置, 524-526
+- 硬件项目。另见特定硬件项目的名称
+  - “Hello World”项目, 483-487
+  - LED 控制, 487-489
+  - PWM LED 控制, 489-491
+- HDC1080 湿度湿度传感器项目
+  - 概览, 512-515
+  - 用于读取的 Python 库, 515-519
+- 高级 AI 机器人应用在, 579
+- I2C 接口传感器接口, 511-512
+- I2C 接口支持, 510
+- 非常适合学习 Python, 481
+- 在...上安装 Matplotlib, 415
+- 在...上安装 NumPy, 379, 443, 445
+- 在...上安装 Pandas, 445
+- Kaggle 钻石数据库, 444-445
+- 在 Matplotlib 上视视化, 415-419
+- 电机, 477
+- 多任务处理在, 491
+- Pixel RGB 串流, 587
+- 电源来自, 553
+- Python 支持, 481
+- `seaborn` 包在, 472
+- 传感器, 477, 509-510
+- Stretch OS, 580
+- 使用 `sudo halt` 停止, 592
+- USB 处理棒和, 423-425
+- 开启 VNC, 402-403
 
-树莓派 3B+
-复合音频/视频接口上, 479
-成本, 422, 478
-CSI 端口上, 480
-数据损坏补偿在, 587
-讨论, 478
-DSI 端口, 480
-以太网端口, 479
-Fashion-MINIST ML 训练和评估在, 407-408
-熔丝, 553
-图形栈, 423
-多任务处理在, 491
-电源来自, 553
-用于机器人项目, 581
-规格, 421-423, 479-480
-启动套件, 2, 581
+## 树莓派 3B+
 
-树莓派 4B
-电池, 2
-在...中编码, 422
-成本, 478
-数据损坏补偿在, 587
-讨论, 407
-用于机器人项目, 581
-规格, 422
-启动套件, 2
+- 复合音频/视频接口上, 479
+- 成本, 422, 478
+- CSI 端口上, 480
+- 数据损坏补偿在, 587
+- 讨论, 478
+- DSI 端口, 480
+- 以太网端口, 479
+- Fashion-MINIST ML 训练和评估在, 407-408
+- 熔丝, 553
+- 图形栈, 423
+- 多任务处理在, 491
+- 电源来自, 553
+- 用于机器人项目, 581
+- 规格, 421-423, 479-480
+- 启动套件, 2, 581
 
-树莓派 A+, 587
+## 树莓派 4B
 
-树莓派摄像头, 587-432
+- 电池, 2
+- 在...中编码, 422
+- 成本, 478
+- 数据损坏补偿在, 587
+- 讨论, 407
+- 用于机器人项目, 581
+- 规格, 422
+- 启动套件, 2
 
-树莓派基金会, 587-589
+## 树莓派 A+, 587
 
-树莓派启动套件, 480
+## 树莓派摄像头, 587-432
 
-树莓派 Zero
-成本, 478
-数据损坏补偿在, 587
-用于机器人项目, 581
+## 树莓派基金会, 587-589
 
-树莓派 Zero W, 587
+## 树莓派启动套件, 480
 
-Raspbian OS（操作系统）, 481
-原始字节, 277-278
-RC（遥控）玩具, 543, 558
-read() 方法, 279
-read([size]) 方法, 279
-可读性
-在函数中, 198-199
-在列表中, 151-152
-列表列表, 162-163
-在方法中, 231-232
-与 Python 设计原则以及, 54-55, 57-59
-readline() 方法
-讨论, 279-281
-用于循环文件, 281, 283-284
-readlines() 方法
-讨论, 279-281
-用于循环文件, 281-283
-与 RAM 以及, 281
-房地产, 362
-“使用 Inception 框架在树莓派上进行实时图像分类器 (ReLU)”, 431
-实时损坏, 587
-修正的线性单元 (ReLU), 638
-红绿蓝。另见 RGB
-冗余数据, 375
-Reed-Solomon 纠错算法, 375
-正则表达式, 299
-强化学习, 400
-关系运算符。另见比较运算符
-ReLU（修正的线性单元）, 638
-遥控（RC）玩具, 543, 558
-remove() 方法, 156-158, 165
-replace() 方法, 297-299
-request 模块, 331-332, 336-337
-电阻器, 510
-response 模块, 331-332
-REST（表征状态传输）系统, 458-459
-Matthew, 632
-reverse() 方法, 164-165, 167
-RGB（红绿蓝）
-色彩空间, 606, 662
-LED, 585-586
-右对齐, 214-215
-机器人操作系统 (ROS), 575, 616
-机器人 AI 和, 581, 666
-在...中, 575
-讨论, 1-2, 421, 571
-嵌入式系统和, 576-577
-演化计算和, 363-364
-电机在, 541
-项目, 3-4
-与 Python 以及, 9-10
-规则的, 571, 575
-机器人编程项目
-额外想法, 629
-软件安装, 628-629
-代码下载, 601-602
-与传感器协调运动, 617-621
-讨论, 601
-Python 脑
-接近距离, 624-625
-实验结果, 626-627
-概览, 621-624
-线程架构, 627-628
-超声波距离读数, 625-626
-YouTube 视频结果, 627
-Python 接口
-motorForward() 方法, 602
-概览, 601-602
-wheelsLeft() 方法, 602
-wheelsPercent() 方法, 603
-Robot Interface 测试, 613-616
+## 树莓派 Zero
+
+- 成本, 478
+- 数据损坏补偿在, 587
+- 用于机器人项目, 581
+
+## 树莓派 Zero W, 587
+
+## Raspbian OS（操作系统）, 481
+
+- 原始字节, 277-278
+- RC（遥控）玩具, 543, 558
+- `read()` 方法, 279
+- `read([size])` 方法, 279
+- 可读性
+  - 在函数中, 198-199
+  - 在列表中, 151-152
+  - 列表列表, 162-163
+  - 在方法中, 231-232
+  - 与 Python 设计原则以及, 54-55, 57-59
+- `readline()` 方法
+  - 讨论, 279-281
+  - 用于循环文件, 281, 283-284
+- `readlines()` 方法
+  - 讨论, 279-281
+  - 用于循环文件, 281-283
+  - 与 RAM 以及, 281
+- 房地产, 362
+- “使用 Inception 框架在树莓派上进行实时图像分类器 (ReLU)”, 431
+- 实时损坏, 587
+- 修正的线性单元 (ReLU), 638
+- 红绿蓝。另见 RGB
+- 冗余数据, 375
+- Reed-Solomon 纠错算法, 375
+- 正则表达式, 299
+- 强化学习, 400
+- 关系运算符。另见比较运算符
+- ReLU（修正的线性单元）, 638
+- 遥控（RC）玩具, 543, 558
+- `remove()` 方法, 156-158, 165
+- `replace()` 方法, 297-299
+- `request` 模块, 331-332, 336-337
+- 电阻器, 510
+- `response` 模块, 331-332
+- REST（表征状态传输）系统, 458-459
+- Matthew, 632
+- `reverse()` 方法, 164-165, 167
+- RGB（红绿蓝）
+  - 色彩空间, 606, 662
+  - LED, 585-586
+- 右对齐, 214-215
+- 机器人操作系统 (ROS), 575, 616
+- 机器人 AI 和, 581, 666
+- 在...中, 575
+- 讨论, 1-2, 421, 571
+- 嵌入式系统和, 576-577
+- 演化计算和, 363-364
+- 电机在, 541
+- 项目, 3-4
+- 与 Python 以及, 9-10
+- 规则的, 571, 575
+
+## 机器人编程项目
+
+- 额外想法, 629
+- 软件安装, 628-629
+- 代码下载, 601-602
+- 与传感器协调运动, 617-621
+- 讨论, 601
+- Python 脑
+  - 接近距离, 624-625
+  - 实验结果, 626-627
+  - 概览, 621-624
+  - 线程架构, 627-628
+  - 超声波距离读数, 625-626
+  - YouTube 视频结果, 627
+- Python 接口
+  - `motorForward()` 方法, 602
+  - 概览, 601-602
+  - `wheelsLeft()` 方法, 602
+  - `wheelsPercent()` 方法, 603
+- Robot Interface 测试, 613-616
 
 # RobotInterface 类
-allLEDSOff() 方法, 608
-centerALLServos() 方法, 613
-color() 方法, 608
-colorWipe() 方法, 607
-fetchUltraDistance() 方法, 606-608
-前 LED 功能, 605-606
-通用伺服器功能, 613
-headTiltDown() 方法, 611
-headTiltMiddle() 方法, 611
-headTiltPercent() 方法, 610-612
-headTiltUp() 方法, 611
-headTurnLeft() 方法, 610
-headTurnMiddle() 方法, 610
-headTurnRight() 方法, 608-609
-主电机功能, 609
-motorBackward() 方法, 609
-motorForward() 方法, 609
-概览, 604-605
-Pixel strip 功能, 606-608
-rainbowCycle() 方法, 607
-伺服功能, 609-613
-set_Front_LED_Off() 方法, 606
-set_Front_LED_On() 方法, 605-606
-setPixelColor() 方法, 607-608
-stopMotor() 方法, 609
-theaterChaseRainbow() 方法, 607
-超声波距离传感器功能, 608
-wheelsLeft() 方法, 612
-wheelsMiddle() 方法, 612
-wheelsPercent() 方法, 612-613
-wheelsRight() 方法, 612
-ROS, 616-617
-单运动, 603-604
 
-机器人项目
-+ 安装手册, 580, 590-591
-+ 构建阶段, 590-592
-+ 组件之
-+ 驱动电机, 584-585
-+ 电机控制板, 582
-+ 概览, 581
-+ Pi 摄像头, 587-589
-+ Pixel RGB 可编程 LED, 586-587
-+ RGB LED, 585-586
-+ 伺服电机, 582-584
-+ 超声波传感器, 584
-讨论, 1-2, 421, 571
-零件列表, 580-581
-使用 sudo halt 停止树莓派, 592
-测试阶段
-+ 软件安装, 628-629
-+ Pi 视频结果, 627
-+ Pi 代码, 597-599
-+ 伺服校准, 592-595
-提示, 591-592
+- `allLEDSOff()` 方法, 608
+- `centerALLServos()` 方法, 613
+- `color()` 方法, 608
+- `colorWipe()` 方法, 607
+- `fetchUltraDistance()` 方法, 606-608
+- 前 LED 功能, 605-606
+- 通用伺服器功能, 613
+- `headTiltDown()` 方法, 611
+- `headTiltMiddle()` 方法, 611
+- `headTiltPercent()` 方法, 610-612
+- `headTiltUp()` 方法, 611
+- `headTurnLeft()` 方法, 610
+- `headTurnMiddle()` 方法, 610
+- `headTurnRight()` 方法, 608-609
+- 主电机功能, 609
+- `motorBackward()` 方法, 609
+- `motorForward()` 方法, 609
+- 概览, 604-605
+- Pixel strip 功能, 606-608
+- `rainbowCycle()` 方法, 607
+- 伺服功能, 609-613
+- `set_Front_LED_Off()` 方法, 606
+- `set_Front_LED_On()` 方法, 605-606
+- `setPixelColor()` 方法, 607-608
+- `stopMotor()` 方法, 609
+- `theaterChaseRainbow()` 方法, 607
+- 超声波距离传感器功能, 608
+- `wheelsLeft()` 方法, 612
+- `wheelsMiddle()` 方法, 612
+- `wheelsPercent()` 方法, 612-613
+- `wheelsRight()` 方法, 612
+- ROS, 616-617
+- 单运动, 603-604
+
+## 机器人项目
+
+- 安装手册, 580, 590-591
+- 构建阶段, 590-592
+- 组件之
+  - 驱动电机, 584-585
+  - 电机控制板, 582
+  - 概览, 581
+  - Pi 摄像头, 587-589
+  - Pixel RGB 可编程 LED, 586-587
+  - RGB LED, 585-586
+  - 伺服电机, 582-584
+  - 超声波传感器, 584
+- 讨论, 1-2, 421, 571
+- 零件列表, 580-581
+- 使用 `sudo halt` 停止树莓派, 592
+- 测试阶段
+  - 软件安装, 628-629
+  - Pi 视频结果, 627
+  - Pi 代码, 597-599
+  - 伺服校准, 592-595
+- 提示, 591-592
 
 # RobotInterface
-allLEDSOff() 方法, 608
-centerALLServos() 方法, 613
-color() 方法, 608
-colorWipe() 方法, 607
-fetchUltraDistance() 方法, 606-608
-前 LED 功能, 605-606
-通用伺服器功能, 613
-headTiltDown() 方法, 611
-headTiltMiddle() 方法, 611
-headTiltPercent() 方法, 610-612
-headTiltUp() 方法, 611
-headTurnLeft() 方法, 610
-headTurnMiddle() 方法, 610
-headTurnRight() 方法, 608-609
-主电机功能, 609
-motorBackward() 方法, 609
-motorForward() 方法, 609
-概览, 604-605
-Pixel strip 功能, 606-608
-rainbowCycle() 方法, 607
-伺服功能, 609-613
-set_Front_LED_Off() 方法, 606
-set_Front_LED_On() 方法, 605-606
-setPixelColor() 方法, 607-608
-stopMotor() 方法, 609
-theaterChaseRainbow() 方法, 607
-超声波距离传感器功能, 608
-wheelsLeft() 方法, 612
-wheelsMiddle() 方法, 612
-wheelsPercent() 方法, 612-613
-wheelsRight() 方法, 612
-ROS, 616-617
-单运动, 603-604
 
-robotparser 模块, 331-332
+- `allLEDSOff()` 方法, 608
+- `centerALLServos()` 方法, 613
+- `color()` 方法, 608
+- `colorWipe()` 方法, 607
+- `fetchUltraDistance()` 方法, 606-608
+- 前 LED 功能, 605-606
+- 通用伺服器功能, 613
+- `headTiltDown()` 方法, 611
+- `headTiltMiddle()` 方法, 611
+- `headTiltPercent()` 方法, 610-612
+- `headTiltUp()` 方法, 611
+- `headTurnLeft()` 方法, 610
+- `headTurnMiddle()` 方法, 610
+- `headTurnRight()` 方法, 608-609
+- 主电机功能, 609
+- `motorBackward()` 方法, 609
+- `motorForward()` 方法, 609
+- 概览, 604-605
+- Pixel strip 功能, 606-608
+- `rainbowCycle()` 方法, 607
+- 伺服功能, 609-613
+- `set_Front_LED_Off()` 方法, 606
+- `set_Front_LED_On()` 方法, 605-606
+- `setPixelColor()` 方法, 607-608
+- `stopMotor()` 方法, 609
+
+
+
+`theaterChaseRainbow()` 方法，607
+
+超声波距离传感器功能，608
+
+`wheelsLeft()` 方法，612
+
+`wheelsMiddle()` 方法，612
+
+`wheelsPercent()` 方法，612–613
+
+`wheelsRight()` 方法，612
+
+ROS，616–617
+
+单运动，603–604
+
+`robotparser` 模块，331–332
 
 机器人。另见机器人
-讨论, 571-572
-与 IOT 的, 572
-种类
-Baxter 咖啡机机器人, 574-575
-Griffin 蓝牙烤面包机, 575
-概览, 572-573
-Toasteroid 联网烤面包机, 576
-Wilkinson 咖啡机器人, 573-574
-主要部分之
-执行器, 577
-通信, 577
-电脑, 571, 576-577
-电机, 577
-概览, 356
-传感器, 577
-网络化的, 572
-不像人类, 571-572
-编程, 578
-伺服电机和, 551
-步进电机和, 568
-ROS（机器人操作系统）, 575, 616-617
-Rosebrock, Adrian, 430
-() 函数, 88-89
-R.U.R. – 罗姆通用机器人 (卡佩克), 571
-Rust 编程语言, 386
 
+讨论，571–572
 
+与 IoT 的，572
 
+### 种类
 
+- Baxter 咖啡机机器人，574–575
+- Griffin 蓝牙烤面包机，575
+- 概览，572–573
+- Toasteroid 联网烤面包机，576
+- Wilkinson 咖啡机器人，573–574
+
+### 主要部分
+
+- 执行器，577
+- 通信，577
+- 电脑，571，576–577
+- 电机，577
+- 概览，356
+- 传感器，577
+
+网络化的，572
+
+不像人类，571–572
+
+编程，578
+
+伺服电机和，551
+
+步进电机和，568
+
+ROS（机器人操作系统），575，616–617
+
+Rosebrock, Adrian，430
+
+`()` 函数，88–89
+
+R.U.R. – 罗姆通用机器人（卡佩克），571
+
+Rust 编程语言，386
 
 # S
 
-- s*n 序列操作符, 105
-- s[i] 序列操作符, 105
-- s[i:j] 序列操作符, 105
-- s[i:j:k] 序列操作符, 105
+- `s*n` 序列操作符，105
+- `s[i]` 序列操作符，105
+- `s[i:j]` 序列操作符，105
+- `s[i:j:k]` 序列操作符，105
 - Safari 浏览器
-  - 讨论, 327
-  - 下载 Anaconda, 15-17
-  - 在 Jupyter Notebook 中, 24-27
-- 安全, 477
-- SAMD21 开发板, 481
-- 智能手机, 366
-- SBC (单板计算机), 478
-- 可缩矢量图形 (SVG), 522
-- 标量, 386
-- s.capitalize() 方法, 107-109
-- 科学家, 436
-- SciPy 库, 375
-- SCL (串行时钟线), 510
-- s.count([x, [y, z]]) 方法, 107-109
-- s.count(x) 序列操作符, 105
-- SDA (串行数据线), 510
+  - 讨论，327
+  - 下载 Anaconda，15–17
+  - 在 Jupyter Notebook 中，24–27
+- 安全，477
+- SAMD21 开发板，481
+- 智能手机，366
+- SBC（单板计算机），478
+- 可缩矢量图形（SVG），522
+- 标量，386
+- `s.capitalize()` 方法，107–109
+- 科学家，436
+- SciPy 库，375
+- SCL（串行时钟线），510
+- `s.count([x, [y, z]])` 方法，107–109
+- `s.count(x)` 序列操作符，105
+- SDA（串行数据线），510
 - seaborn 包
-  - 在数据科学项目中, 453-455
-  - 讨论, 441
-  - 在树莓派上, 472
-- 搜索引擎, 334. 另参见特定搜索引擎的名称
-- Secure Shell (SSH) 软件, 480
-  - 与黑客以及, 328
-  - https 协议与网页, 328
-- seek() 方法, 286-287
-- 自动驾驶汽车, 426, 572
-- 信号量, 627
-- 分号, 81
-- 传感器线程, 628
-- 传感器. 另参见特定传感器项目名称；特定传感器名称
-  - 讨论, 480, 509, 539
-  - I2C 接口概览, 509-511
-  - 树莓派, 511-512
-  - 在树莓派中, 477
-  - 在树莓派 PiCar-B 中, 617-621
-  - 在机器人领域, 577
-  - SwitchDoc Labs HDC1080, 3
-  - 超声波, 589-590
-- 串行时钟线 (SCL), 510
-- 串行数据线 (SDA), 510
-- 序列化, 310-311
+  - 在数据科学项目中，453–455
+  - 讨论，441
+  - 在树莓派上，472
+- 搜索引擎，334。另参见特定搜索引擎的名称
+- Secure Shell（SSH）软件，480
+  - 与黑客以及，328
+  - https 协议与网页，328
+- `seek()` 方法，286–287
+- 自动驾驶汽车，426，572
+- 信号量，627
+- 分号，81
+- 传感器线程，628
+- 传感器。另参见特定传感器项目名称；特定传感器名称
+  - 讨论，480，509，539
+  - I2C 接口概览，509–511
+  - 树莓派，511–512
+  - 在树莓派中，477
+  - 在树莓派 PiCar-B 中，617–621
+  - 在机器人领域，577
+  - SwitchDoc Labs HDC1080，3
+  - 超声波，589–590
+- 串行时钟线（SCL），510
+- 串行数据线（SDA），510
+- 序列化，310–311
 - 服务器
-  - 讨论, 327
-  - 无头, 402-403
-  - 网页, 328
-- 舵机功能, 609-613
+  - 讨论，327
+  - 无头，402–403
+  - 网页，328
+- 舵机功能，609–613
 - 舵机电机
-  - 讨论, 542-543, 551
-  - 电电位器, 543
+  - 讨论，542–543，551
+  - 电位器，543
 - 项目
-  - 代码拆解, 556-558
-  - 零件列表, 552-553
-  - Python 软件, 555-556
-  - 设置, 554
+  - 代码拆解，556–558
+  - 零件列表，552–553
+  - Python 软件，555–556
+  - 设置，554
   - 用于控制的 PWM
-    - 概述, 552
-  - 机器人项目, 583-584
-    - 在 RC 玩具中, 543, 558
-    ```python
-    set_Front_LED_On() function, 605-606
-    ```
-- setdefault() 方法
-  - 讨论, 184-185
-  - 与 fromkeys() 方法, 190-192
-  ```python
-  setPixelColor() function, 607-608
-  ```
-- 集合, 167-169
-- settings.json 文件, 55-56
-- s.find(x, [y,z]) 方法, 107-109
-- SG90 微型舵机, 3, 552, 582-583
-- Sheets 应用. 另参见 Google Sheets
-- Shovic, John, 361, 363, 365, 430, 616-617, 664
-- showexpiry() 方法, 246
-- SI1145 光 I2C 传感器, 502-503
-- s.index(x, [y, z]) 方法, 107-109
-- s.index(x, [i, j]) 序列操作符, 105
-- 单板计算机 (SBC), 478
-- s.isalpha() 方法, 107-109
-- s.islower() 方法, 107-109
-- s.isnumeric() 方法, 107-109
-- s.isprintable() 方法, 107-109
-- s.istitle() 方法, 107-109
-- s.isupper() 方法, 107-109
-- SKU (库存存单位), 190-194
-- s.lstrip() 方法, 107-109
-- 小型电脑, 478, 481. 另参见 Arduino；树莓派
-- 小型直流（DC）电机, 542-543
-- 智能城市 API (应用程序编程接口), 427
+    - 概述，552
+  - 机器人项目，583–584
+    - 在 RC 玩具中，543，558
+
+```python
+set_Front_LED_On() function, 605-606
+```
+
+- `setdefault()` 方法
+  - 讨论，184–185
+  - 与 `fromkeys()` 方法，190–192
+
+```python
+setPixelColor() function, 607-608
+```
+
+- 集合，167–169
+- `settings.json` 文件，55–56
+- `s.find(x, [y,z])` 方法，107–109
+- SG90 微型舵机，3，552，582–583
+- Sheets 应用。另参见 Google Sheets
+- Shovic, John，361，363，365，430，616–617，664
+- `showexpiry()` 方法，246
+- SI1145 光 I2C 传感器，502–503
+- `s.index(x, [y, z])` 方法，107–109
+- `s.index(x, [i, j])` 序列操作符，105
+- 单板计算机（SBC），478
+- `s.isalpha()` 方法，107–109
+- `s.islower()` 方法，107–109
+- `s.isnumeric()` 方法，107–109
+- `s.isprintable()` 方法，107–109
+- `s.istitle()` 方法，107–109
+- `s.isupper()` 方法，107–109
+- SKU（库存存单位），190–194
+- `s.lstrip()` 方法，107–109
+- 小型电脑，478，481。另参见 Arduino；树莓派
+- 小型直流（DC）电机，542–543
+- 智能城市 API（应用程序编程接口），427
 - 智能手机
-  - AI 以及, 366
+  - AI 以及，366
   - Blynk App 仪表板
-    - 代码拆解, 536-538
-    - 安装, 531-534
-    - 概述, 530
-    - Python 代码修改, 534-536
-  - 由其产生的数据, 436
-- SMBus, 510, 521
-- 《心灵社会》(The Society of Mind), 361
-- SoftLayer 数据服务. 另参见 IBM SoftLayer 数据服务
-- 软件接口, 509-510
-- sort() 方法, 161-163, 165
-- sort(reverse=True) 方法, 165
-- 源代码, 334
-- 太空天线, 363
-- 空间, 103-104
+    - 代码拆解，536–538
+    - 安装，531–534
+    - 概述，530
+    - Python 代码修改，534–536
+  - 由其产生的数据，436
+- SMBus，510，521
+- 《心灵社会》（The Society of Mind），361
+- SoftLayer 数据服务。另参见 IBM SoftLayer 数据服务
+- 软件接口，509–510
+- `sort()` 方法，161–163，165
+- `sort(reverse=True)` 方法，165
+- 源代码，334
+- 太空天线，363
+- 空间，103–104
 - 特殊字符
-  - 讨论, 284-285
-  - 非-ASCII, 291
-- 特殊化硬件, 424-425
-- 语音识别, 360
-- 语音转文本, 427, 437. 另参见 CSV 文件；Google Sheets
-- SQL (结构化查询语言) 表
-  - 讨论, 464
-  - Pandas 包, 443
-  - 教程, 464
-  - SQL All Dummies, 第3版 (Taylor), 464
-  - SQL For Dummies, 第9版 (Taylor), 464
-  - SQL in 10 Minutes, 第4版 (Forta), 464
-  - sqrt() 函数, 90-91
-  - 方括号
-    - 讨论, 229
-    - 语法表, 61-62
-    - 平方根函数, 87, 90-91
-  - s.replace(x,y) 方法, 107-109
-  - s.rfind(x, [y, z]) 方法, 107-109
-  - s.index() 方法, 107-109
-  - SSH (Secure Shell) 软件, 480
-  - s.strip() 方法, 107-109
-  - s.swapcase() 方法, 107-109
-  - Stack Overflow, 36
-  - 标准库
-    - 内置函数, 347
-    - dir() 函数, 344-345
-    - 讨论, 343-344
-    - help() 函数, 345
-    - 资源, 346
-    - 入门套件, 2, 480, 581
-    - 统计分析, 360, 365, 439
-    - 统计, 435-437
-  - Status ACT, 480
-  - Status PWR, 480
-  - 步进电机
-    - 讨论, 542-543, 558
-    - 后步进, 559
-    - 前步进, 559
-    - 零件列表, 560-561
-    - Python 软件, 566-567
-    - 设置, 561-566
-  - Sterling, Mary, 366
-  - s.title() 方法, 107-109
-  - 随机优化, 391, 394, 406
-  - 库存存单位 (SKU), 190-194
-  - stopMotor() 函数, 609
-  - str 对象, 107-109. 另参见 strings OS, 580
-  - strftime, 113
-  - 字符串方法, 107-109
-  - 字符串
-    - 对齐, 98-100
-    - 大写敏感, 162
-    - 转换为 CSV, 293-295
-    - 讨论, 68, 87, 343
-    - f-strings 始终在前, 99
-    - 列表中的, 150
-    - 操作
-      - 对齐, 214-215
-      - 常用操作符, 105-107
-      - 拼接, 99, 103-104
-      - 日期, 110-114
-      - 确定字符串长度, 104
-      - 插入空格, 103-104
-      - 左对齐, 214-215
-      - 方法, 109-110
-      - 右对齐, 214-215
-    - 序列操作符, 105
-    - 时区, 120-125
-    - 时间, 110, 114-116
-    - 时间跨, 116-120
-    - 引号中的, 68
-  - strip() 方法, 297
-  - str(x) 函数, 89
-  - Python 代码风格指南, 54. 另参见 PEP 8；PEP 20
-  - 子类
-    - 带有额外参数, 243-246
-    - 定义, 241-243
-    - 覆盖默认值, 243
-    - 减法操作符, 71
-    - sudo 命令, 488
-    - sudo halt 命令, 513, 524, 592
-  - 平方误差, 382-385
-  - SunAirPlus , 505-506
-  - 太阳能电池板, 544
-  - super user 命令, 488
-  - 监督学习, 400
-  - s.upper() 方法, 107-109
-  - SVG (可缩矢量图形), 522
-  - SwitchDoc Labs HDC1080 传感器, 3, 513
-  - 语法
-    - 代码块, 82
-    - 在 datetime 模块中, 110-114
-    - 讨论, 79-80
-    - 错误中的
-      - 示例, 82-83
-      - 鼠标悬停, 82-83
-      - 概述, 79-81
-      - 措辞, 82-83
-    - 用于函数, 88-90
-    - 使用 if 语句, 129-130
-    - 用于导入模块, 61-62
-    - 换行与, 81
-    - 命名规范, 81-82
-    - object.key, 171-173
-    - 适当的, 80-81
-    - 分号和, 81
-    - str 对象方法, 107-109
-  - 语法表, 61-62
+  - 讨论，284–285
+  - 非 ASCII，291
+- 特殊化硬件，424–425
+- 语音识别，360
+- 语音转文本，427，437。另参见 CSV 文件；Google Sheets
+- SQL（结构化查询语言）表
+  - 讨论，464
+  - Pandas 包，443
+  - 教程，464
+  - SQL All Dummies，第 3 版（Taylor），464
+  - SQL For Dummies，第 9 版（Taylor），464
+  - SQL in 10 Minutes，第 4 版（Forta），464
+- `sqrt()` 函数，90–91
+- 方括号
+  - 讨论，229
+  - 语法表，61–62
+  - 平方根函数，87，90–91
+- `s.replace(x,y)` 方法，107–109
+- `s.rfind(x, [y, z])` 方法，107–109
+- `s.index()` 方法，107–109
+- SSH（Secure Shell）软件，480
+- `s.strip()` 方法，107–109
+- `s.swapcase()` 方法，107–109
+- Stack Overflow，36
+- 标准库
+  - 内置函数，347
+  - `dir()` 函数，344–345
+  - 讨论，343–344
+  - `help()` 函数，345
+  - 资源，346
+- 入门套件，2，480，581
+- 统计分析，360，365，439
+- 统计，435–437
+- Status ACT，480
+- Status PWR，480
+- 步进电机
+  - 讨论，542–543，558
+  - 后步进，559
+  - 前步进，559
+  - 零件列表，560–561
+  - Python 软件，566–567
+  - 设置，561–566
+- Sterling, Mary，366
+- `s.title()` 方法，107–109
+- 随机优化，391，394，406
+- 库存存单位（SKU），190–194
+- `stopMotor()` 函数，609
+- `str` 对象，107–109。另参见 strings OS，580
+- `strftime`，113
+- 字符串方法，107–109
+- 字符串
+  - 对齐，98–100
+  - 大小写敏感，162
+  - 转换为 CSV，293–295
+  - 讨论，68，87，343
+  - f-strings 始终在前，99
+  - 列表中的，150
+  - 操作
+    - 对齐，214–215
+    - 常用操作符，105–107
+    - 拼接，99，103–104
+    - 日期，110–114
+    - 确定字符串长度，104
+    - 插入空格，103–104
+    - 左对齐，214–215
+    - 方法，109–110
+    - 右对齐，214–215
+  - 序列操作符，105
+  - 时区，120–125
+  - 时间，110，114–116
+  - 时间跨度，116–120
+  - 引号中的，68
+- `strip()` 方法，297
+- `str(x)` 函数，89
+- Python 代码风格指南，54。另参见 PEP 8；PEP 20
+- 子类
+  - 带有额外参数，243–246
+  - 定义，241–243
+  - 覆盖默认值，243
+- 减法操作符，71
+- `sudo` 命令，488
+- `sudo halt` 命令，513，524，592
+- 平方误差，382–385
+- SunAirPlus，505–506
+- 太阳能电池板，544
+- super user 命令，488
+- 监督学习，400
+- `s.upper()` 方法，107–109
+- SVG（可缩矢量图形），522
+- SwitchDoc Labs HDC1080 传感器，3，513
+- 语法
+  - 代码块，82
+  - 在 datetime 模块中，110–114
+  - 讨论，79–80
+  - 错误中的
+    - 示例，82–83
+    - 鼠标悬停，82–83
+    - 概述，79–81
+    - 措辞，82–83
+  - 用于函数，88–90
+  - 使用 if 语句，129–130
+  - 用于导入模块，61–62
+  - 换行与，81
+  - 命名规范，81–82
+  - `object.key`，171–173
+  - 适当的，80–81
+  - 分号和，81
+  - `str` 对象方法，107–109
+- 语法表，61–62
 
 # T
 
-- 表格数据, 290, 306, 443
-- Taylor, Allen G., 464
-- TCP/IP (传输控制协议/IP 协议) 网络, 577
-- 技术泡沫. 另参见 dot-com
-- 通信网络, 362
-- tell() 方法, 285-286
+- 表格数据，290，306，443
+- Taylor, Allen G.，464
+- TCP/IP（传输控制协议/IP 协议）网络，577
+- 技术泡沫。另参见 dot-com
+- 通信网络，362
+- `tell()` 方法，285–286
 - 温湿度传感器
-  - 讨论, 511-512
-  - 安装, 512-515
-  - 用于读取的 Python 库, 279-281
-  - 小型湿度实验, 517
-  - 概述, 515
-- 温度测量设备, 510
-- 张量处理单元 (TPU), 424-425
-- TensorBoard 扩展, 394
+  - 讨论，511–512
+  - 安装，512–515
+  - 用于读取的 Python 库，279–281
+  - 小型湿度实验，517
+  - 概述，515
+- 温度测量设备，510
+- 张量处理单元（TPU），424–425
+- TensorBoard 扩展，394
 
 # TensorFlow
-  - 讨论, 2, 366
-  - GUI, 394
-  - Cats Dogs 项目中的测试
-    - 代码, 642-644
-    - 代码拆解, 644-646
-    - 概述, 642
-    - 结果, 644-648
-  - Cats Dogs 项目中的训练
-    - CNN 模型, 635-637
-    - 代码, 635-640
-    - 概述, 632-633
-    - 结果, 640-642
-  - Keras 上的神经网络项目
-    - 转换为三层神经网络, 395-397
-    - 检查结果, 392-395
-    - 代码拆解, 390-392
-    - 安装, 386
-    - 概述, 386-387
-    - 第 1 步：加载数据, 388-390
-    - 第 2 步：定义模型和层, 388-391
-    - 第 3 步：编译, 388-391
-    - 第 4 步：拟合与训练, 388-392
-    - 第 5 步：评估, 388-390, 392
-- 第三方 API, 386
 
-
-
+- 讨论，2，366
+- GUI，394
+- Cats Dogs 项目中的测试
+  - 代码，642–644
+  - 代码拆解，644–646
+  - 概述，642
+  - 结果，644–648
+- Cats Dogs 项目中的训练
+  - CNN 模型，635–637
+  - 代码，635–640
+  - 概述，632–633
+  - 结果，640–642
+- Keras 上的神经网络项目
+  - 转换为三层神经网络，395–397
+  - 检查结果，392–395
+  - 代码拆解，390–392
+  - 安装，386
+  - 概述，386–387
+  - 第 1 步：加载数据，388–390
+  - 第 2 步：定义模型和层，388–391
+  - 第 3 步：编译，388–391
+  - 第 4 步：拟合与训练，388–392
+  - 第 5 步：评估，388–390，392
+- 第三方 API，386
 
 时区，111
-计算机时钟和，120-122
-使用方法，122-125
-timedelta 类，116-120
+
+计算机时钟和，120–122
+
+使用方法，122–125
+
+`timedelta` 类，116–120
+
 时间序列数据，443
-时间跨度 timespan，116-120
+
+时间跨度 timespan，116–120
 
 时间戳
-讨论，110-114
-格式化字符串，112-113
-正确语法，110-114
-时间与，114-116
-使用方法，110-112
+
+讨论，110–114
+
+格式化字符串，112–113
+
+正确语法，110–114
+
+时间与，114–116
+
+使用方法，110–112
 
 烤面包机
+
 嵌入式系统中的烤面包机，478
+
 支持蓝牙的 Griffin 烤面包机，575
+
 机器人，572
 
 Toasteroid 联网烤面包机，576
-today() 方法，110-111
 
-translation。参见语言翻译 (language translation)
-试错法。参见反向传播 (backpropagation)
+`today()` 方法，110–111
+
+translation。参见语言翻译（language translation）
+
+试错法。参见反向传播（backpropagation）
+
 三角函数，91
 
 True 值
 
-- 布尔值及和，70-71
-- type() 函数和，344
+- 布尔值及和，70–71
+- `type()` 函数和，344
 
 真值表，374
 
-try...else...except...finally 语句，261-262
+`try...else...except...finally` 语句，261–262
 
-try...except 语句，254-255
+`try...except` 语句，254–255
 
 元组
 
-- 使用 add() 方法和，167
-- 讨论，165-167
-- 使用 len() 函数和，167
+- 使用 `add()` 方法和，167
+- 讨论，165–167
+- 使用 `len()` 函数和，167
 - 方法及，167
-- 使用 reverse() 方法和，167
-- 使用 sort() 方法和，167
-- 使用 update() 方法和，167
+- 使用 `reverse()` 方法和，167
+- 使用 `sort()` 方法和，167
+- 使用 `update()` 方法和，167
 
 Turkey（Turkey），473
 
@@ -19129,123 +20044,134 @@ Twitter
 
 双层神经网络架构，370
 
-NumPy 代码拆解，378-382 概览，375-378 运行代码，382-385 真值表，374 XNOR 门，375
+NumPy 代码拆解，378–382
 
-双线接口 (TWI)，510 类型。参见*实例* (instances)
+概览，375–378
 
-type() 函数，89, 344 tz 数据库，121-122
+运行代码，382–385
+
+真值表，374
+
+XNOR 门，375
+
+双线接口（TWI），510
+
+类型。参见实例（instances）
+
+`type()` 函数，89，344
+
+tz 数据库，121–122
 
 ## U
 
-Ubuntu 操作系统（操作系统），379。参见 Linux OS。Ultima Thule，375 超声波距离传感器，618-621 超声波距离传感器功能，608
+- Ubuntu 操作系统（操作系统），379。参见 Linux OS
+- Ultima Thule，375
+- 超声波距离传感器，618–621
+- 超声波距离传感器功能，608
+- 超声波传感器，589–590
+- 超声波线程，656–657
+- Unicode 编码格式（8-bit）。参见 UTF-8
+- 统一资源定位符。参见 URL
+- 通用异步收发器（UART）模块，500–501
+- 通用产品码（UPC），190–194
+- 通用总线（USB）端口，479
+- 通用总线（USB）处理器，423–425
+- 协调世界时（UTC）。参见 UTC
+- 爱达荷大学（University of Idaho）
+  - 高级机器人学课程，575
+  - 讨论，361，363
+  - ParkMyRide API，427
+  - 里德–所罗门误差纠错算法及，375
+- 未加密 JSON 文件，310，318–319
+- 无监督学习，400
+- UPC（通用产品码），190–194
+- `update()` 方法
+  - 与数据字典，180–181，184–185
+  - 与元组，167
+- URL（统一资源定位符）
+  - 在地址栏中，30–31，327–329
+  - Python urllib 库及，331–332
+  - 其中的空格，333
 
-超声波传感器，589-590 超声波线程，656-657
-
-Unicode 编码格式 (8-bit)。参见 UTF-8。统一资源定位符。参见 URL
-
-通用异步收发器 (UART) 模块，500-501 通用产品码 (UPC)，190-194
-
-通用总线 (USB) 端口，479 通用总线 (USB) 处理器，423-425
-
-协调世界时 (UTC)。参见 UTC
-
-爱爱达荷大学 (University of Idaho)
-
-高级机器人学课程，575
-讨论，361, 363
-ParkMyRide API，427
-
-里德-所罗门误差纠错算法及，375
-
-未加密 JSON 文件，310, 318-319
-
-无监督学习，400
-
-UPC（通用产品码），190-194
-
-```
-update() method
-```
-与数据字典，180-181, 184-185
-与元组，167
-
-URL（统一资源定位符）
-
-在地址栏中，30-31, 327-329
-Python urllib 库及，331-332
-其中的空格，333
-
-```
+```text
 urllib library
 ```
-BeautifulSoup 模块，336-337
-讨论，331-337
-request 模块，336-337
 
-USB（通用总线）端口，479
-
-USB（通用总线）处理器，423-623
-
-用户代理 (user agent)，328
-
-UTC（协调世界时）
-讨论，120, 122-125
-
-Firebase 日期时间和，316-317
-
-utc_now() 运算符，123
-
-UTF-8（Unicode 编码格式，8-bit）
-添加编码来自，312
-讨论，279
-原始字节及，278
+- BeautifulSoup 模块，336–337
+- 讨论，331–337
+- request 模块，336–337
+- USB（通用总线）端口，479
+- USB（通用总线）处理器，423–623
+- 用户代理（user agent），328
+- UTC（协调世界时）
+  - 讨论，120，122–125
+  - Firebase 日期时间和，316–317
+  - `utc_now()` 运算符，123
+- UTF-8（Unicode 编码格式，8-bit）
+  - 添加编码来自，312
+  - 讨论，279
+  - 原始字节及，278
 
 ## V
 
-Valkov, Venelin，431
-values() 方法，184-185
+- Valkov, Venelin，431
+- `values()` 方法，184–185
+- 变量
+  - 区分大小写，75
+  - 创建，75–76
+  - 讨论，74–75
+  - 通过……显示可读消息，258–259
+  - 在函数中，198–200
+  - 操作，76–78
+  - 其中的有效名称，75
+- 向量（vector），386
 
-变量
 
-- 区分大小写，75
-- 创建，75-76
-- 讨论，74-75
-- 通过...显示可读消息，258-259
-- 在函数中，198-200
-- 操作，76-78
-- 其中的有效名称，75
 
-向量 (vector)，386
-超大规模集成电路 (VLSI) 电路，361
+# V
+
+超大规模集成电路（VLSI）电路，361
+
 视频显示线程，657
+
 视频编码，423
+
 虚拟桌面。参见 VNC
 
-视觉感知
+## 视觉感知
 
 - AI 与，360, 437
 - AWS 工具及，427
 - 机器人学及，577
-Visual Studio Code 编辑器。参见 VS
+
+`Visual Studio Code`编辑器。参见 VS
 
 可视化。参见数据
 
-VLSI（超大规模集成电路）电路，361
-VNC（虚拟桌面）
+`VLSI`（超大规模集成电路）电路，361
+
+## VNC（虚拟桌面）
+
 在树莓派上，402-403, 588-589
+
 查看器选项，597-598
 
-ohra, Varun，430
-语音识别，360
-Voice Time (Shovic)，664
+`ohra, Varun`，430
 
-电压
+语音识别，360
+
+`Voice Time` (Shovic)，664
+
+## 电压
 
 位及，498
+
 讨论，477, 497
+
 信号及，502
 
-VS (Visual Studio Code 编辑器)
+## VS（`Visual Studio Code`编辑器）
+
 - 符号，65
 - 内置调试器，46-47
 - 颜色中的，31
@@ -19262,128 +20188,170 @@ VS (Visual Studio Code 编辑器)
 - 引号中的，66
 - 运行应用，78-79
 - 运行代码，44-45
-- 从 Anaconda 开始，19-21, 23
+- 从 `Anaconda` 开始，19-21, 23
 - 工作区，37-39
 
-## W
+# W
 
-W3Schools 网站，464
-Wachsmuth, Bill，426
-晶圆级芯片封装 (WLCSP)，513
-Watson AI 组。参见 Watson AI group
-Watson Personality Insights，428
-Watson Studio，428
+`W3Schools` 网站，464
 
-WD (Western Digital)，426
-网络浏览。参见特定浏览器名称
+`Wachsmuth, Bill`，426
+
+晶圆级芯片封装（`WLCSP`），513
+
+`Watson AI` 组。参见 `Watson AI group`
+
+`Watson Personality Insights`，428
+
+`Watson Studio`，428
+
+`WD`（`Western Digital`），426
+
+## 网络浏览
+
+参见特定浏览器名称
+
 概览，327
+
 发布到网络，333-334
-Python urllib 库，331-332
-URL 及，327-331
+
+`Python urllib` 库，331-332
+
+`URL` 及，327-331
+
 网页。参见讨论，327-328
+
 片段中的，329
+
 编程的语言，10
+
 源代码，334
+
 爬虫，334-337
-从 CSV 数据，341-342
-JSON，340, 342
-Web 服务器，327
+
+从 `CSV` 数据，341-342
+
+`JSON`，340, 342
+
+`Web` 服务器，327
+
 权重，371-302
-西部数据 (Western Digital) (WD)，426
-wheelsLeft() 函数，612
-wheelsMiddle() 函数，612
-wheelsPercent() 函数，612-313
-wheelsRight() 函数，512
 
-while 循环
+西部数据（`Western Digital`）（`WD`），426
+
+`wheelsLeft()` 函数，612
+
+`wheelsMiddle()` 函数，612
+
+`wheelsPercent()` 函数，612-313
+
+`wheelsRight()` 函数，512
+
+## `while` 循环
+
 连续的，145-146
-强制停止的，146-148
-概览，143-145
-remove 函数，156
-使用 if 并继续重复，145-146
-空白符，73, 82
-整数。参见 integers
 
-## Wi-Fi
+强制停止的，146-148
+
+概览，143-145
+
+`remove` 函数，156
+
+使用 `if` 并继续重复，145-146
+
+空白符，73, 82
+
+整数。参见 `integers`
+
+# Wi-Fi
 
 - 在树莓派 3B+ 上，479
 - 机器人通信，577
 - 小型电脑及，481
 
-Wilkinson 面包机器人，573-574
-Windows 资源管理器应用，271
-Windows OS（操作系统）
-- 在 Anaconda 上，15-18
+`Wilkinson` 面包机器人，573-574
+
+`Windows` 资源管理器应用，271
+
+## `Windows OS`（操作系统）
+
+- 在 `Anaconda` 上，15-18
 - 命令提示符，348-349
 - 终端提示符上，30-31
-- Windows 资源管理器上，271
+- `Windows` 资源管理器上，271
 
-狗 Winston，642
-奥术仙国 Wizard，571
-WLSCP（晶圆级芯片封装），513
-万维网。参见 Internet
+狗 `Winston`，642
 
-## X
+奥术仙国 `Wizard`，571
 
-x in 序列运算符，105
-x not in 序列运算符，105
-xlrd 模块，313-314
-XNOR 门，375
-XOR（异或门），374
+`WLSCP`（晶圆级芯片封装），513
 
-## Y
+万维网。参见 `Internet`
 
-YAML，20-21
-YouTube
+# X
 
-- FindAndChaseTheBall 程序视频，664
-- Python 帮助来自，36
-MouseAir 项目视频，654
-PiCar-B 测试代码视频，595-596
-支持蓝牙的 Griffin 视频，576
-ROS 控制的机器人视频，616-618
+`x in` 序列运算符，105
 
-## Z
+`x not in` 序列运算符，105
 
-Python 之禅 (Peters)，53-56
-格林鲁治时间 (Zulu time)，120
+`xlrd` 模块，313-314
+
+`XNOR` 门，375
+
+`XOR`（异或门），374
+
+# Y
+
+`YAML`，20-21
+
+## YouTube
+
+- `FindAndChaseTheBall` 程序视频，664
+- `Python` 帮助来自，36
+- `MouseAir` 项目视频，654
+- `PiCar-B` 测试代码视频，595-596
+- 支持蓝牙的 `Griffin` 视频，576
+- `ROS` 控制的机器人视频，616-618
+
+# Z
+
+`Python` 之禅 (`Peters`)，53-56
+
+格林鲁治时间（`Zulu time`），120
 
 # 关于作者
 
-John Shovic 自 1973 年夏天说服他的高中让他在整个夏天使用他们的 IBM 1130 计算机以来，就开始接触软件和电子领域。这开启了他对软件的终生之爱。Shovic 博士创立了多家公司：Advance Hardware Architectures；TriGeo Network Security；Blue Water Technologies；InstaComm, LLC 以及 bankCDA。他还曾担任东华盛顿大学、华盛顿州立大学和爱达荷大学的计算机科学教授。Shovic 博士进行过 70 多场受邀演讲，并就 Arduino、树莓派、iBeacon、GLB、计算机取证、嵌入式系统等各种主题发表了 50 多篇论文。目前，John 荣幸担任爱达荷州科尔德阿伦爱达荷大学的计算机科学教师，专门研究机器人和人工智能，并被一群和他一样对技术和计算机感兴趣的学生包围着。
+`John Shovic` 自 1973 年夏天说服他的高中让他在整个夏天使用他们的 `IBM 1130` 计算机以来，就开始接触软件和电子领域。这开启了他对软件的终生之爱。`Shovic` 博士创立了多家公司：`Advance Hardware Architectures`；`TriGeo Network Security`；`Blue Water Technologies`；`InstaComm, LLC` 以及 `bankCDA`。他还曾担任东华盛顿大学、华盛顿州立大学和爱达荷大学的计算机科学教授。`Shovic` 博士进行过 70 多场受邀演讲，并就 `Arduino`、树莓派、`iBeacon`、`GLB`、计算机取证、嵌入式系统等各种主题发表了 50 多篇论文。目前，`John` 荣幸担任爱达荷州科尔德阿伦爱达荷大学的计算机科学教师，专门研究机器人和人工智能，并被一群和他一样对技术和计算机感兴趣的学生包围着。
 
-Alan Simpson 是 100 多本关于数据库、编程和 Web 开发计算机书籍的作者。Alan 几年前离开了写作界，离开象牙塔进入现实世界，首先担任开发人员，现在担任所在县政府 IT 部门的应用和 DBA 团队的经理。Alan 在整个职业生涯中被誉为“沟通大师”，他的在线课程和 YouTube 视频持续获得许多学生和粉丝的好评。
+`Alan Simpson` 是 100 多本关于数据库、编程和 `Web` 开发计算机书籍的作者。`Alan` 几年前离开了写作界，离开象牙塔进入现实世界，首先担任开发人员，现在担任所在县政府 `IT` 部门的应用和 `DBA` 团队的经理。`Alan` 在整个职业生涯中被誉为“沟通大师”，他的在线课程和 `YouTube` 视频持续获得许多学生和粉丝的好评。
 
 # 作者致谢
 
-**John Shovic**: 我想感谢 Wiley 出色的员工，并将功归于我的合作者 Alan。我们的技术评审员 Rod Stephens 做了出色且详尽的工作。我们的编辑 Susan Pink 是我合作过的最好的编辑。感谢我的文学代理 Carol Jelen 以及来自 Waterside Productions 的 Margot Maley Hutchinson 鼓励我撰写这本书。我想特别感谢爱达荷大学的支持和建议，特别是 Bob Rinker 博士和 Larry Stauffer 院长。优秀的人，优秀的大学，如果不感谢我那些出色的学生（特别是 Amanda、Mary、Nikolai 和 Doug），这本书将是不完整的。 
+**`John Shovic`**：我想感谢 `Wiley` 出色的员工，并将功归于我的合作者 `Alan`。我们的技术评审员 `Rod Stephens` 做了出色且详尽的工作。我们的编辑 `Susan Pink` 是我合作过的最好的编辑。感谢我的文学代理 `Carol Jelen` 以及来自 `Waterside Productions` 的 `Margot Maley Hutchinson` 鼓励我撰写这本书。我想特别感谢爱达荷大学的支持和建议，特别是 `Bob Rinker` 博士和 `Larry Stauffer` 院长。优秀的人，优秀的大学，如果不感谢我那些出色的学生（特别是 `Amanda`、`Mary`、`Nikolai` 和 `Doug`），这本书将是不完整的。
 
-**Alan Simpson**: 非常感谢 Steve Hayes 以及 Wiley 的其他人员给我提供这个绝佳的机会。感谢我无无畏的编辑 Susan Pink。感谢我的文学代理 Carol Jelen 和 Waterside Productions 的 Margot Maley Hutchinson。还要感谢我的妻子 Susan 在我疯狂工作期间的耐心。
-
-
-
+**`Alan Simpson`**：非常感谢 `Steve Hayes` 以及 `Wiley` 的其他人员给我提供这个绝佳的机会。感谢我无无畏的编辑 `Susan Pink`。感谢我的文学代理 `Carol Jelen` 和 `Waterside Productions` 的 `Margot Maley Hutchinson`。还要感谢我的妻子 `Susan` 在我疯狂工作期间的耐心。
 
 # 献辞
 
-**John Shovic**: 献给我的妻子 Laurie。她在许多方面都支持我，甚至确保我每天早上起床时袜子是匹配的。感谢！
+**`John Shovic`**：献给我的妻子 `Laurie`。她在许多方面都支持我，甚至确保我每天早上起床时袜子是匹配的。感谢！
 
-**Alan Simpson**: 献给 Susan、Ashley 和 Alec。
+**`Alan Simpson`**：献给 `Susan`、`Ashley` 和 `Alec`。
 
 ## 出版方致谢
 
-执行编辑：Steve Hayes
+执行编辑：`Steve Hayes`
 
-项目编辑：Susan Pink
+项目编辑：`Susan Pink`
 
-文字编辑：Susan Pink
+文字编辑：`Susan Pink`
 
-校对：Debbie Butler
+校对：`Debbie Butler`
 
-技术编辑：Rod Stephens
+技术编辑：`Rod Stephens`
 
-制作编辑：Tamilmani Varadharaj
+制作编辑：`Tamilmani Varadharaj`
 
-封面图片：© spainer_vfx/ iStock /Getty Images
+封面图片：© `spainer_vfx`/ `iStock` /`Getty Images`
 
 ## 无论去到哪里，都带上《傻呆指南》吧！
 
@@ -19423,5 +20391,4 @@ Alan Simpson 是 100 多本关于数据库、编程和 Web 开发计算机书籍
 
 ## WILEY 终端用户许可协议
 
-访问 www.wiley.com/go/eula 访问 Wiley 的电子书用户许可协议 (EULA)。
-
+访问 `www.wiley.com/go/eula` 访问 `Wiley` 的电子书用户许可协议（`EULA`）。

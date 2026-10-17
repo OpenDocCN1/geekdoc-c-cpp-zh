@@ -1,30 +1,30 @@
+
+
 # Objective-C 精通：初学者指南
 
-
-
-
-
-# About the Series
+## About the Series
 
 `Mastering Computer Science` covers a wide range of topics, spanning programming languages as well as modern technologies and frameworks. The series has a special focus on beginner-level content and is presented in an easy-to-understand manner, comprising:
 
-* Crystal-clear text, spanning various topics sorted by relevance.
-* Special focus on practical exercises, with numerous code samples and programs.
-* A guided approach to programming, with step-by-step tutorials for absolute beginners.
-* Keen emphasis on real-world utility of skills, thereby cutting the redundant and seldom-used concepts and focusing instead of industry-prevalent paradigm.
-* A wide range of references and resources, to help both beginner and intermediate-level developers gain the most of the books.
+- Crystal-clear text, spanning various topics sorted by relevance.
+- Special focus on practical exercises, with numerous code samples and programs.
+- A guided approach to programming, with step-by-step tutorials for absolute beginners.
+- Keen emphasis on real-world utility of skills, thereby cutting the redundant and seldom-used concepts and focusing instead on industry-prevalent paradigms.
+- A wide range of references and resources, to help both beginner and intermediate-level developers gain the most from the books.
 
-Mastering Computer Science` series of books start from the core concepts, and then quickly move on to industry-standard coding practices, to help learners gain efficient and crucial skills in as little time as possible. The books assume no prior knowledge of coding, so even newbie coders can benefit from this series.
+The `Mastering Computer Science` series of books starts from the core concepts, and then quickly moves on to industry-standard coding practices, to help learners gain efficient and crucial skills in as little time as possible. The books assume no prior knowledge of coding, so even newbie coders can benefit from this series.
 
-Mastering Computer` series is edited by Sufyan Uzayr, a writer and educator having over a decade of experience in the computing field.
+The `Mastering Computer` series is edited by Sufyan Uzayr, a writer and educator having over a decade of experience in the computing field.
 
 For more information about this series, please visit: [`www.routledge.com/Mastering-Computer-Science/book-series/MCS`](https://www.routledge.com/Mastering-Computer-Science/book-series/MCS)
 
 First Edition published 2024 by CRC Press
+
 2385 NW Executive Center Drive, Suite 320, Boca Raton, FL 33431
+
 2 Park Square, Milton Park, Abingdon, Oxon, OX14 8RN
 
-`CRC Press is an imprint of Taylor & Francis Group, LLC` 
+`CRC Press is an imprint of Taylor & Francis Group, LLC`
 
 Reasonable efforts have been made to publish reliable data and information, but the author and publisher cannot assume responsibility for the validity of all materials or the consequences of their use. The authors and publishers have attempted to trace the copyright holders of all material reproduced in this publication and apologize to copyright holders if permission to publish in this form has not been obtained. If any copyright material has not been acknowledged please write and let us know so we may rectify in any future reprint.
 
@@ -35,17 +35,22 @@ For permission to photocopy or use material electronically from this work, acces
 **Trademark Notice:** Product or corporate names may be trademarks or registered trademarks and are used only for identification and explanation without intent to infringe.
 
 ISBN: 9781032415307 (hbk)
+
 ISBN: 9781032415284 (pbk)
+
 ISBN: 9781003358534 (ebk)
-DOI: [10.1201/9781003358534](http://dx.doi.org/10.1201/9781003358534)
+
+DOI: [`10.1201/9781003358534`](http://dx.doi.org/10.1201/9781003358534)
 
 Typeset in Minion by KnowledgeWorks Global Ltd.
 
 *For Mom*
 
-# 2. About the Editor
+## 2. About the Editor
 
-**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
+`Sufyan bin Uzayr` is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
+
+Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs `Parakozm`, a multinational IT company specializing in EdTech solutions.
 
 Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs `Parakozm`, a multinational IT company specializing in EdTech solutions.
 
@@ -87,100 +92,13 @@ Sufyan is the Director of `Parakozm`, a multinational IT company specializing in
 
 Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs `Parakozm`, a multinational IT company specializing in EdTech solutions. (Wait, let me re-read the provided text block for the editor).
 
-**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
+`Sufyan bin Uzayr` is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
 
 Sufyan bin Uzayr is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
 
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs... (Wait, I will just translate the text provided in the final section).
 
-# 2. About the Editor
 
-**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
 
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs... (Wait, the prompt text for the editor section is:)
-
-"**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
-
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs..."
-
-Actually, looking at the provided "Below is the text to be translated" section:
-
-**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
-
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs... (Wait, the prompt text has some repetition in my internal thought, I will translate exactly what is in the "Below is the text to be translated" block).
-
-The text to translate for the editor is:
-"**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
-
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs..." (Wait, I see the prompt ends there or has repeats. Let me look at the block again).
-
-Actually, the block provided is:
-"**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
-
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs..." (Wait, I will just provide the clean translation of the provided block).
-
----
-*Self-correction: I will translate the specific text provided under "Below is the text to be translated" starting.*
-
-[content]
-
-![](img/cover.jpg)
-
-![Cover: Mastering Objective-C: A Beginner’s Guide, Mastering Computer Science, edited by Sufyan Uzayr, published by CRC Press, Taylor and Francis Group, Boca Raton, London, CRC Press is an imprint of Taylor and Francis Group, an informa](img/cover.jpg)
-
-# 1. About the Series
-
-`Mastering Computer Science` covers a wide range of topics, spanning programming languages as well as modern technologies and frameworks. The series has a special focus on beginner-level content and is presented in an easy-to-understand manner, comprising:
-
-* Crystal-clear text, spanning various topics sorted by relevance.
-* Special focus on practical exercises, with numerous code samples and programs.
-* A guided approach to programming, with step-by-step tutorials for absolute beginners.
-* Keen emphasis on real-world utility of skills, thereby cutting the redundant and seldom-used concepts and focusing instead of industry-prevalent paradigm.
-* A wide range of references and resources, to help both beginner and intermediate-level developers gain the most of the books.
-
-`Mastering Computer Science` series of books start from the core concepts, and then quickly move on to industry-standard coding practices, to help learners gain efficient and crucial skills in as little time as possible. The books assume no prior knowledge of coding, so even newbie coders can benefit from this series.
-
-`Mastering Computer` series is edited by Sufyan Uzayr, a writer and educator having over a decade of experience in the computing field.
-
-For more information about this series, please visit: [`www.routledge.com/Mastering-Computer-Science/book-series/MCS`](https://www.routledge.com/Mastering-Computer-Science/book-series/MCS)
-
-First Edition published 2024 by CRC Press
-2385 NW Executive Center Drive, Suite 320, Boca Raton, FL 33431
-2 Park Square, Milton Park, Abingdon, Oxon, OX14 8RN
-
-`CRC Press is an imprint of Taylor & Francis Group, LLC`
-
-© 2024 Sufyan Uzayr
-
-Reasonable efforts have been made to publish reliable data and information, but the author and publisher cannot assume responsibility for the validity of all materials or the consequences of their use. The authors and publishers have attempted to trace the copyright holders of all material reproduced in this publication and apologize to copyright holders if permission to publish in this form has not been obtained. If any copyright material has not been acknowledged please write and let us know so we may rectify in any future reprint.
-
-Except as permitted under U.S. Copyright Law, no part of this book may be reprinted, reproduced, transmitted, or utilized in any form by any electronic, mechanical, or other means, now known or hereafter invented, including photocopying, microfilming, and recording, or in any information storage or retrieval system, without written permission from the publishers.
-
-For permission to photocopy or use material electronically from this work, access [www.copyright.com](https://www.copyright.com) or contact the Copyright Clearance Center, Inc. (CCC), 222 Rosewood Drive, Danvers, MA 01923, 978-750-8400. For works that are not available on CCC please contact mpkbookspermissions@tandf.co.uk
-
-**Trademark Notice:** Product or corporate names may be trademarks or registered trademarks and are used only for identification and explanation without intent to infringe.
-
-ISBN: 9781032415307 (hbk)
-ISBN: 9781032415284 (pbk)
-ISBN: 9781003358534 (ebk)
-DOI: [10.1201/9781003358534](http://dx.doi.org/10.1201/9781003358534)
-
-Typeset in Minion by KnowledgeWorks Global Ltd.
-
-*For Mom*
-
-# 2. About the Editor
-
-**Sufyan bin Uzayr** is a writer, coder, and entrepreneur having over a decade of experience in the industry. He has authored several books in the past, pertaining to a diverse range of topics, ranging from History to Computers/IT.
-
-Sufyan is the Director of `Parakozm`, a multinational IT company specializing in EdTech solutions. He also runs... (Wait, I will stop where the provided text ends).
-
-[/content] (Wait, I will provide the actual Chinese translation now).
-
----
-**Actual Translation Output:**
-
-[content]
 
 ![](img/cover.jpg)
 
@@ -190,11 +108,11 @@ Sufyan is the Director of `Parakozm`, a multinational IT company specializing in
 
 `Mastering Computer Science` 系列涵盖了广泛的主题，涉及编程语言以及现代技术和框架。该系列特别关注初级内容，并以易于理解的方式呈现，包括：
 
-* 清晰的文字，按相关性涵盖了各种主题。
-* 特别关注实践练习，包含大量的代码示例和程序。
-* 引导式编程方法，为初学者提供分步进的教程。
-* 强调技能在现实世界的实用性，从而消除冗余和少使用的概念，转而关注行业流行的编码范式。
-* 广泛的参考文献和资源，帮助初级和中级开发者从书中获得最大收益。
+- 清晰的文字，按相关性涵盖了各种主题。
+- 特别关注实践练习，包含大量的代码示例和程序。
+- 引导式编程方法，为初学者提供分步进的教程。
+- 强调技能在现实世界的实用性，从而消除冗余和少使用的概念，转而关注行业流行的编码范式。
+- 广泛的参考文献和资源，帮助初级和中级开发者从书中获得最大收益。
 
 `Mastering Computer Science` 系列书籍从核心概念开始，然后迅速过渡到行业标准的编码实践，帮助学习者在尽可能短的时间内获得高效且关键的技能。书籍假设读者没有先验知识，因此即使是编程新手也能受益。
 
@@ -202,28 +120,43 @@ Sufyan is the Director of `Parakozm`, a multinational IT company specializing in
 
 欲了解有关本系列的更多信息，请访问：[`www.routledge.com/Mastering-Computer-Science/book-series/MCS`](https://www.routledge.com/Mastering-Computer-Science/book-series/MCS)
 
-2024 年第一版由 CRC Press 出版
+2024 年第一版由 CRC Press 出版。
+
 2385 NW Executive Center Drive, Suite 320, Boca Raton, FL 33431
+
 2 Park Square, Milton Park, Abingdon, Oxon, OX14 8RN
 
-`CRC Press 是 Taylor & Francis Group, LLC 的分支`
+`CRC Press 是 Taylor & Francis Group, LLC 的分支。`
 
 © 2024 Sufyan Uzayr
 
-已尽合理努力发布可靠的数据和信息，但作者和出版社对所有材料的有效性或其使用的后果负责。作者和出版社已尝试追踪出版物中复制的所有材料的版权所有者，如果没有获得此类形式出版的许可，将向版权所有者道歉。如果任何版权材料未被说明，请写信告知，以便我们在未来的任何重印中进行纠正。
+已尽合理努力发布可靠的数据和信息，但作者和出版社对所有材料的有效性或其使用的后果不承担责任。作者和出版社已尝试追踪本出版物中复制的所有材料的版权所有者。如果未获得以此形式出版的许可，谨向版权所有者致歉。如果任何版权材料未被注明，请写信告知，以便我们在未来的任何重印中进行纠正。
 
-美国版权法允许外，本书的任何部分均在未经出版社书面许可的情况下，通过任何已知的电子、机械或其他手段（包括以后发明的复印、微缩胶和录制）或在任何信息存储或检索系统中进行重印、复制、传输或利用。
+除美国版权法允许的情况外，本书的任何部分均不得在未经出版社书面许可的情况下，通过任何已知或今后发明的电子、机械或其他手段（包括复印、缩微胶片和录音）进行重印、复制、传输或利用，也不得存储于任何信息存储或检索系统中。
 
-如需复印或电子化使用本作品的材料，请访问 [www.copyright.com](https://www.copyright.com) 或联系版权许可中心（CCC），地址为 222 Rosewood Drive, Danvers, MA 01923, 978-750-8400。对于 CCC 上无法获取的作品，请联系 mpkbookspermissions@tandf.co.uk
+# 2. 关于编辑
+
+**Sufyan bin Uzayr** 是一位作家、程序员和企业家，在该行业拥有十多年的经验。他曾出版过多本书，主题涉及广泛领域，从历史到计算机与信息技术。
+
+Sufyan 是 `Parakozm` 的董事。这是一家专注于教育科技解决方案的跨国 IT 公司。他还经营……
+
+
+
+
+如需复印或电子化使用本作品的材料，请访问 [www.copyright.com](https://www.copyright.com) 或联系版权许可中心（CCC），地址为我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。222 Rosewood Drive, Danvers, MA 01923, 978-750-8400。对于 CCC 上无法获取的作品，请联系 mpkbookspermissions@tandf.co.uk。
 
 **商标通知：** 产品或公司名称可能是商标或注册商标，仅用于识别和解释，无侵权意图。
 
-ISBN: 9781032415307 (hbk)
-ISBN: 9781032415284 (pbk)
-ISBN: 9781003358534 (ebk)
-DOI: [10.1201/9781003358534](http://dx.doi.org/10.1201/9781003358534)
+`ISBN: 9781032415307 (hbk)`
 
-使用 Minion 字体排版
+`ISBN: 9781032415284 (pbk)`
+
+`ISBN: 9781003358534 (ebk)`
+
+`DOI: 10.1201/9781003358534`
+
+使用 Minion 字体排版。
+
 KnowledgeWorks Global Ltd.
 
 *致给妈妈*
@@ -233,9 +166,6 @@ KnowledgeWorks Global Ltd.
 **Sufyan bin Uzayr** 是一位作家、编码员和企业家，在行业内拥有十年以上的经验。他过去编写过几本书，涵盖了从历史到计算机/IT 的多种主题。
 
 Sufyan 是 `Parakozm` 的董事监，这是一家专门从事教育技术解决方案的跨国 IT 公司。他运行运行……（此处根据给定文本结束翻译）。
-
-
-
 
 Objective-C 是一种优秀的内存管理语言；目前已有编译器可以将 Objective-C 代码转换为静态代码分析，该语言利用这种分析将有价值的信息与“垃圾”区分开来。
 
@@ -249,7 +179,7 @@ Swift 是一种更现代的 iOS 编程语言，与 Objective-C 竞争。关于�
 
 选择 Objective-C 编程语言有许多原因。首先也是重要的是，它是一种面向对象的语言。面向对象的方法对于提供 `Cocoa` 框架的功能是必不可少的。其次，由于 Objective-C 是 `ANSI C` 的扩展，现有的 `C` 程序可以转换为使用软件框架，而不会丢失开发投入的任何工作。由于 Objective-C 包含了 `C`，我们在与其交互时可以获得其所有的益处。
 
-我们可以决定是使用面向对象编程 (OOP) 方法（例如创建一个新的 `class`）还是过程化编程方法（定义一个结构和一些 `functions` 而不是 `class`）。
+我们可以决定是使用面向对象编程（OOP）方法（例如创建一个新的 `class`）还是过程化编程方法（定义一个结构和一些 `functions` 而不是 `class`）。
 
 此外，Objective-C 是一门相对简单的编程语言。它具有基础、无歧的语法，易于学习。
 
@@ -265,25 +195,25 @@ Objective-C 提供了一种开放的动态绑定方法，允许创建基础的�
 
 ## 优点
 
-* 与 `C++` 以及 `Objective-C` 的兼容性。
-* 方法元汇（Method swizzling）是一个有效特性。
-* 在二进制框架编码方面有更专用的支持。
+- 与 `C++` 以及 `Objective-C` 的兼容性。
+- 方法元汇（Method swizzling）是一个有效特性。
+- 在二进制框架编码方面有更专用的支持。
 
 ## 缺点
 
-* 由于 Objective-C 基于 `C`，因此命名空间至关重要。Objective-C 应用中的每个 `class` 必须在全局范围内是唯一的。为了尽量减少冲突，通常的做法是为类名添加前缀。我们拥有 `Foundation Framework` 类的 `NS` 前缀和 `UIKit` 类的 `UI` 前缀。
-* 特定的指针。
-* 在 `nil` 对象上发送消息而不会崩溃，且缺乏严格的类型检查，这使得识别和解决问题变得更加困难。
-* 语言的语法繁琐且困难。
+- 由于 Objective-C 基于 `C`，因此命名空间至关重要。Objective-C 应用中的每个 `class` 必须在全局范围内是唯一的。为了尽量减少冲突，通常的做法是为类名添加前缀。我们拥有 `Foundation Framework` 类的 `NS` 前缀和 `UIKit` 类的 `UI` 前缀。
+- 特定的指针。
+- 在 `nil` 对象上发送消息而不会崩溃，且缺乏严格的类型检查，这使得识别和解决问题变得更加困难。
+- 语言的语法繁琐且困难。
 
 # 需要考虑的因素
 
 Objective-C 应用开发可以加速，并且它是向程序添加基于对象的功能的有效方法。这种超集语言有许多基本的考虑因素：
 
-* 升级基于 Objective-C 构建的应用需要定期维护。虽然这种语言已经过时，但它并没有淘汰。为了保持更新，只需要少量的维护。
-* 许多 API 对于 `Swift` 开发的应用来说仍有很多追赶工作；因此需要的适应很少。这意味着 Objective-C 在 iOS 移动应用中可能更容易实现。
-* 对象处理使得苹果痴迷于对象网络。这些项目可以使用 Objective-C 轻松移动。
-* Objective-C 可能让所有 Apple iOS 设备（包括智能手机和平电脑）的应用更容易开发。
+- 升级基于 Objective-C 构建的应用需要定期维护。虽然这种语言已经过时，但它并没有淘汰。为了保持更新，只需要少量的维护。
+- 许多 API 对于 `Swift` 开发的应用来说仍有很多追赶工作；因此需要的适应很少。这意味着 Objective-C 在 iOS 移动应用中可能更容易实现。
+- 对象处理使得苹果痴迷于对象网络。这些项目可以使用 Objective-C 轻松移动。
+- Objective-C 可能让所有 Apple iOS 设备（包括智能手机和平电脑）的应用更容易开发。
 
 # OBJECT-C 与 C++
 
@@ -301,9 +231,9 @@ Swift 是 Apple 在 2014 年 6 月推出的的一种计算机语言。Objective-
 
 `Foundation Framework` 具有丰富的功能，下文描述：
 
-* 它包含了若干种扩展数据类型，如 `NSArray`、`NSDictionary`、`NSSet` 等。
-* 它拥有一系列函数用于处理文件、字符串等。
-* 它有 `URL` 处理 `functions` 以及如日期格式化、数据处理、错误处理等工具。
+- 它包含了若干种扩展数据类型，如 `NSArray`、`NSDictionary`、`NSSet` 等。
+- 它拥有一系列函数用于处理文件、字符串等。
+- 它有 `URL` 处理 `functions` 以及如日期格式化、数据处理、错误处理等工具。
 
 # 学习 OBJECT-C
 
@@ -313,10 +243,7 @@ Swift 是 Apple 在 2014 年 6 月推出的的一种计算机语言。Objective-
 
 # 面向对象编程
 
-
-
-
-Objective-C 被描述为一种面向对象编程（OOP）语言。OOP 是一种由对象组成的软件程序设计技术。换句话说，我们在程序中编写的大部分代码都在与某种形式的对象交互。`UIViewController`、`UIButton`、`UINavigationController` 和 `UITableView` 是 `iOS SDK`提供的一些项目。你不仅在我们的 `iOS` 应用中利用了内置对象，还生成了一些我们自己的对象，例如 `RecipeDetailViewController` 和 `SimpleTableCell`。
+Objective-C 被描述为一种面向对象编程（OOP）语言。OOP 是一种由对象组成的软件程序设计技术。换句话说，我们在程序中编写的大部分代码都在与某种形式的对象交互。`UIViewController`、`UIButton`、`UINavigationController` 和 `UITableView` 是 `iOS SDK` 提供的一些项目。你不仅在我们的 `iOS` 应用中利用了内置对象，还生成了一些我们自己的对象，例如 `RecipeDetailViewController` 和 `SimpleTableCell`。
 
 为什么要用 OOP 呢？一个关键原因是我们希望将一个复杂的程序拆分成更小的组件（或构建块），这些组件更易创建和维护。在这里，较小的部分就是对象。每个对象都有其职责，对象之间相互协作以使程序运行。这就是 OOP 的基本原则。
 
@@ -328,7 +255,7 @@ OOP 中的对象有两个特征：属性（properties）和功能（functionalit
 
 `Background`、`size`、`cooler` 和 `font` 是 `UIButton` 属性的示例。
 
-当按钮被按下时，它会识别事件并在屏幕上显示警报消息。因此，按钮的功能是“showMessage”。
+当按钮被按下时，它会识别事件并在屏幕上显示警报消息。因此，按钮的功能是 `showMessage`。
 
 ## 实例、对象和类
 
@@ -352,17 +279,17 @@ OOP 中的对象有两个特征：属性（properties）和功能（functionalit
 
 首先，我们将借助以下步骤创建 `Recipe` 类：
 
-*   右键点击 `SimpleTable` 文件夹并选择“New File…”。
-*   选择“Objective-C class”模板（在 Cocoa Touch 下）后点击“Next”。
-*   将类 `Recipe` 设置为 `NSObject` 的子类。
-*   点击“Next”将文件保存到我们的 Xcode 项目文件夹中。
-*   完成后，Xcode 将生成 `Recipe.h` 和 `Recipe.m` 文件。
+- 右键点击 `SimpleTable` 文件夹并选择“New File…”。
+- 选择“Objective-C class”模板（在 Cocoa Touch 下）后点击“Next”。
+- 将类 `Recipe` 设置为 `NSObject` 的子类。
+- 点击“Next”将文件保存到我们的 Xcode 项目文件夹中。
+- 完成后，Xcode 将生成 `Recipe.h` 和 `Recipe.m` 文件。
 
 在头文件中添加以下 `Recipe` 类属性：
 
 `@synthesis` 指令被添加到实现文件（即 `Recipe.m`）中。`@synt` 指令指示编译器为头文件中定义的属性创建 setter（set 器）和 getter（访问）。
 
-我们现在有一个具有三个属性的 `Recipe` 类。我们稍后需要它来实例化其他 `Recipe` 对象。那么，如何将数组转换为 Recipe 对象数组呢？我们可以使用新的 `Recipe` 类将这些数组合并成一个单一的 `Recipe` 对象数组，每个对象存储 `Recipe` 数据。
+我们现在有一个具有三个属性的 `Recipe` 类。我们稍后需要它来实例化其他 `Recipe` 对象。那么，如何将数组转换为 `Recipe` 对象数组呢？我们可以使用新的 `Recipe` 类将这些数组合并成一个单一的 `Recipe` 对象数组，每个对象存储 `Recipe` 数据。
 
 ### 设置 Recipe 对象数组
 
@@ -376,7 +303,7 @@ OOP 中的对象有两个特征：属性（properties）和功能（functionalit
 
 两种语法都能完成相同的任务。然而，我们在整个过程中将使用点语法。
 
-### 替换为 数组
+### 替换为数组
 
 为了使用 Recipes 数组，必须对几处进行更改。我们在 `numberOfRowsInSection` 方法中将 `tableData` 替换为 `Recipes`：
 
@@ -392,7 +319,7 @@ OOP 中的对象有两个特征：属性（properties）和功能（functionalit
 
 Xcode 现在将 `Clang` 作为编译器。我们在任何编写编译器的地方都可以读取 `Clang`。
 
-`Clang 是一个分析 Objective-C 代码并将其转换为低级表示的工具：LLVM 中间表示（LLVM IR）。
+`Clang` 是一个分析 Objective-C 代码并将其转换为低级表示的工具：LLVM 中间表示（LLVM IR）。
 
 `LLVM IR` 是低级的且独立于操作系统的。LLVM 将指令转换为目标原生字节码。这可以即时进行也可以在编译的同时进行。
 
@@ -401,9 +328,6 @@ LLVM 采用三层设计，这意味着它在第一层支持广泛的输入语言
 编译器在编译源文件时经过多个阶段。
 
 在编译源文件时，预处理是第一个发生的事情。预处理器处理宏处理语言，这意味着它会替换文本中的宏定义。例如，考虑以下：
-
-
-
 
 预处理器会处理该行并包含文件内容。头文件中的其他宏定义也会被替换。
 
@@ -449,82 +373,81 @@ LLVM 采用三层设计，这意味着它在第一层支持广泛的输入语言
 
 通过执行命令 `clang -Xclang -dump-tokens`，我们可以请求 Clang 导出该程序的标记符。`helloo.m`：
 
+
+
 正如我们所见，每个标记符由部分文本和源代码组成。源代码位置是在宏展开之前的，因此如果出现问题，Clang 将引导我们指向正确的位置。
 
 ## 解析
 
-有趣的部分来了：我们的标记符流被处理成抽象语法树（abstract syntax tree）。因为 Objective-C 是一种复杂的语言，解析并不总是那么简单。解析之后，程序现在以抽象语法树的形式存在：一棵反映原始程序的树。假设我们有程序 `hello.m`：
+有趣的部分来了：我们的标记符流被处理成抽象语法树（abstract syntax tree）。因为 Objective-C 是一种复杂的语言，解析并不总是那么简单。解析之后，程序现在以抽象语法树的形式存在：一棵反映原始程序的树。假设我们有程序`hello.m`：
 
-当我们运行 `clang -Xclang -ast-dump -fsyntax-only helloo.m` 时，命令行上会出现以下信息：
+当我们运行`clang -Xclang -ast-dump -fsyntax-only helloo.m`时，命令行上会出现以下信息：
 
 抽象语法树中的每个节点都是抽象语法树。
 
+在保留现有 Objective-C 资源的同时使用 Xamarin，可以通过绑定（bindings）让 C# 访问这些资源。这种 Xamarin 技术将 Objective-C 代码暴露给托管的`C#`世界。
 
+如果需要，也可以逐行将代码转换为`C#`。
 
-
-在保留现有 Objective-C 资源的同时使用 Xamarin，可以通过绑定（bindings）让 C# 访问这些资源。这种 Xamarin 技术将 Objective-C 代码暴露给托管的 `C#` 世界。
-
-如果需要，也可以逐行将代码转换为 `C#`。
-
-为了在使用 `Xamarin.iOS` 正确使用现有 Objective-C 代码，无论采用绑定还是迁移技术，都需要对 Objective-C 和 `C#` 有一定的了解。
+为了在使用`Xamarin.iOS`正确使用现有 Objective-C 代码，无论采用绑定还是迁移技术，都需要对 Objective-C 和`C#`有一定的了解。
 
 ## Objective-C 互操作
 
-目前还没有批准的方法可以通过 `Xamarin.iOS` 创建可以从 Objective-C 调用的 C#` 库。
+目前还没有批准的方法可以通过`Xamarin.iOS`创建可以从 Objective-C 调用的`C#`库。
 
-主要原因是除了绑定之外，还需要 `Mono` 运行时。我们的大部分逻辑（包括用户界面）仍然可以使用 Objective-C 编写。将 Objective-C 代码封装在库中并建立绑定。
+主要原因是除了绑定之外，还需要`Mono`运行时。我们的大部分逻辑（包括用户界面）仍然可以使用 Objective-C 编写。将 Objective-C 代码封装在库中并建立绑定。
 
-启动应用需要 `Xamarin.iOS`（这意味着它必须创建 `Main` 入口）。任何其他功能都可以 Objective-C 编写，并通过绑定（通过 `P/Invoke`）提供给 C#`。通过这种方式，我们可以在 `C#` 中构建平台无关的部分，同时在 Objective-C 中保留平台特定的逻辑。本节对比了这两种语言之间的一些显著相似点和不同，作为使用 `Xamarin.iOS` 迁移到 C#` 的入门指南，无论是绑定到现有的 Objective-C 代码还是将其转换为 C#`。
+启动应用需要`Xamarin.iOS`（这意味着它必须创建`Main`入口）。任何其他功能都可以用 Objective-C 编写，并通过绑定（通过`P/Invoke`）提供给`C#`。通过这种方式，我们可以在`C#`中构建平台无关的部分，同时在 Objective-C 中保留平台特定的逻辑。本节对比了这两种语言之间的一些显著相似点和不同，作为使用`Xamarin.iOS`迁移到`C#`的入门指南，无论是绑定到现有的 Objective-C 代码还是将其转换为`C#`。
 
 ## 语言比较
 
-在语法和运行时方面，Objective-C 和 `C#` 都是相当不同的语言。`C#` 是静态类型的，而 Objective-C 是动态的并采用消息传递系统。
+在语法和运行时方面，Objective-C 和`C#`都是相当不同的语言。`C#`是静态类型的，而 Objective-C 是动态的并采用消息传递系统。
 
-Objective-C 在语法上与 `Smalltalk` 相似；虽然 `C#` 的大部分基础语法借自 `Java`，但多年来它已经发展出了许多 `Java` 之外的特性。然而，在 Objective-C 和 `C#` 中，许多语言特性在功能上是等价的。在从 C# 为 Objective-C 代码建立绑定或将 Objective-C 转换为 `C#` 时，理解这些共同点至关重要。
+Objective-C 在语法上与`Smalltalk`相似；虽然`C#`的大部分基础语法借自`Java`，但多年来它已经发展出了许多`Java`之外的特性。然而，在 Objective-C 和`C#`中，许多语言特性在功能上是等价的。在从 C# 为 Objective-C 代码建立绑定或将 Objective-C 转换为`C#`时，理解这些共同点至关重要。
 
 ## 接口 vs. 协议
 
-Objective-C 和 `C#` 都是单继承语言。另一方面，两种语言都允许我们在单个类中实现多个接口。这些逻辑接口在 Objective-C 中被称为协议（protocols），在 `C#` 中被称为接口（interfaces）。从实现角度来看，`C#` 接口与 Objective-C 协议的关键区别在于后者可能有可选方法。
+Objective-C 和`C#`都是单继承语言。另一方面，两种语言都允许我们在单个类中实现多个接口。这些逻辑接口在 Objective-C 中被称为协议（protocols），在`C#`中被称为接口（interfaces）。从实现角度来看，`C#`接口与 Objective-C 协议的关键区别在于后者可能有可选方法。
 
 ## 扩展方法 vs. 分类
 
 通过分类（Categories），Objective-C 允许我们为可能没有实现代码的类添加方法。
 
-扩展方法类似于 `C#` 中的扩展方法，提供了类似的概念。`C#` 中的静态方法等同于 Objective-C 中的类方法，而扩展方法允许我们将它们添加到类中。
+扩展方法类似于`C#`中的扩展方法，提供了类似的概念。`C#`中的静态方法等同于 Objective-C 中的类方法，而扩展方法允许我们将它们添加到类中。
 
 ## 程序集 vs. 框架
 
-框架（Frameworks）是 Objective-C 组织相似类的特定文件夹。另一方面，程序集（Assemblies）用于 `C#` 和 `.NET`，提供可重用的预编译代码块。iOS 以外系统的程序集文件包含在运行时实时编译（`JIT`）的中间语言代码 (`IL`）。
+框架（Frameworks）是 Objective-C 组织相似类的特定文件夹。另一方面，程序集（Assemblies）用于`C#`和`.NET`，提供可重用的预编译代码块。iOS 以外系统的程序集文件包含在运行时实时编译（`JIT`）的中间语言代码（`IL`）。
 
-另一方面，Apple 不允许在 App Store 发布的 iOS 应用中执行 `JIT` 编译的代码。因此，Xamarin 提前（`AOT`）为 iOS 编译 `C#` 代码，生成包含在应用程序中的中的 Unix 执行文件和元数据文件。
+另一方面，Apple 不允许在 App Store 发布的 iOS 应用中执行`JIT`编译的代码。因此，Xamarin 提前（`AOT`）为 iOS 编译`C#`代码，生成包含在应用程序中的 Unix 执行文件和元数据文件。
 
 ## 命名参数 vs. 选择器
 
-根据其本质，Objective-C 方法在选择器（selectors）中包含了参数名称。在代码中使用时，如 `AddCrayon:WithColor:` 使每个参数的含义都显而易见。
+根据其本质，Objective-C 方法在选择器（selectors）中包含了参数名称。在代码中使用时，如`AddCrayon:WithColor:`使每个参数的含义都显而易见。
 
 ## 命名空间和头文件
 
-Objective-C 作为 `C` 的超集，使用头文件进行区别于实现文件的公共声明。`C#` 不使用头文件。与 Objective-C 代码不同，`C#` 代码封装在命名空间中。如果我们想包含另一个命名空间中的代码，可以在实现文件的开头添加 `using` 指令，或使用整个命名空间来限定类型。
+Objective-C 作为`C`的超集，使用头文件进行区别于实现文件的公共声明。`C#`不使用头文件。与 Objective-C 代码不同，`C#`代码封装在命名空间中。如果我们想包含另一个命名空间中的代码，可以在实现文件的开头添加`using`指令，或使用整个命名空间来限定类型。
 
 ## 属性
 
-属性（properties）的概念在 Objective-C 和 `C#` 中都用于对访问器方法提供高层级抽象。Objective-C 使用 `@property` 编译器指令来有效地构建访问器方法。另一方面，`C#` 内置了对属性的支持。
+属性（properties）的概念在 Objective-C 和`C#`中都用于对访问器方法提供高层级抽象。Objective-C 使用`@property`编译器指令来有效地构建访问器方法。另一方面，`C#`内置了对属性的支持。
 
-## static 关键字
+## `static`关键字
 
-Objective-C 和 `C#` 中的 `static` 关键字含义非常不同。
+Objective-C 和`C#`中的`static`关键字含义非常不同。
 
-静态函数在 Objective-C 中用于限制函数的作用范围到当前文件。另一方面，`C#` 中的 `public`、`private` 和 `internal` 关键字控制作用范围。当我们在 Objective-C 变量上使用 `static` 关键字时，它使其值在函数调用之间保持不变。`C#` 中也支持 `static` 关键字。
+静态函数在 Objective-C 中用于限制函数的作用范围到当前文件。另一方面，`C#`中的`public`、`private`和`internal`关键字控制作用范围。当我们在 Objective-C 变量上使用`static`关键字时，它使其值在函数调用之间保持不变。`C#`中也支持`static`关键字。
 
-当应用于方法时，它执行与 Objective-C 中 `+` 修饰符相同的功能。它通过创建类方法来实现这一点。当应用于字段、属性和事件等其他结构时，它使其成为定义所在类型的一部分，而不是该类型的任何实例。我们还可以创建 `static` 类，这要求类的所有方法都必须是静态的。
+当应用于方法时，它执行与 Objective-C 中`+`修饰符相同的功能。它通过创建类方法来实现这一点。当应用于字段、属性和事件等其他结构时，它使其成为定义所在类型的一部分，而不是该类型的任何实例。我们还可以创建`static`类，这要求类的所有方法都必须是静态的。
 
 ## List vs. NSArray 初始化
 
-Objective-C 中增加了用于 `NSArray` 的字面量语法，使其初始化变得更容易。另一方面，`C#` 拥有一种更丰富的类型称为 `List`，它是泛型的，这意味着列表承载的类型可以由构建列表的代码指定（类似于 `C++` 中的模板）。
+Objective-C 中增加了用于`NSArray`的字面量语法，使其初始化变得更容易。另一方面，`C#`拥有一种更丰富的类型称为`List`，它是泛型的，这意味着列表承载的类型可以由构建列表的代码指定（类似于`C++`中的模板）。
 
 ## Lambda 表达式 vs. 块
 
-Objective-C 使用块（blocks）来生成闭包，允许我们创建一个可能使用包含状态的内联函数。`C#` 使用 Lambda 表达式来实现类似的方法。
+Objective-C 使用块（blocks）来生成闭包，允许我们创建一个可能使用包含状态的内联函数。`C#`使用 Lambda 表达式来实现类似的方法。
 
 本章涵盖了 Objective-C 概述，包括框架、优点、缺点、编译器以及与其他语言的区别。
 
@@ -536,16 +459,16 @@ DOI: [10.1201/9781003358-2](https://doi.org/10.1201/9781003358-2)
 
 ## 本章内容
 
-*   本地环境设置
-*   文本编辑器
-*   GCC 编译器
-*   安装
-*   Hello World 示例
-*   编译并执行程序
+- 本地环境设置
+- 文本编辑器
+- GCC 编译器
+- 安装
+- Hello World 示例
+- 编译并执行程序
 
 在上一章中，我们涵盖了 Objective-C 概述，在本章中，我们将涵盖环境设置和程序结构。
 
-## **配置 Objective-C 环境**
+## 配置 Objective-C 环境
 
 ### 本地环境配置
 
@@ -553,18 +476,15 @@ DOI: [10.1201/9781003358-2](https://doi.org/10.1201/9781003358-2)
 
 ## 文本编辑器
 
-这是我们输入程序的地方。Windows 记事本、Edit 命令、Brief、Epsilon、EMACS 以及 vim 或 vi 都是编辑器。
+这是我们输入程序的地方。Windows 记事本、Edit 命令、Brief、Epsilon、EMACS 以及`vim`或`vi`都是编辑器。
 
-文本编辑器的名称和版本随操作系统而变化。Windows 使用记事本，而在 Windows 和 Linux 或 UNIX 上使用 vim 或 vi。
+文本编辑器的名称和版本随操作系统而变化。Windows 使用记事本，而在 Windows 和 Linux 或 UNIX 上使用`vim`或`vi`。
 
-
-
-
-下载并安装 `GNUStep` 以访问所有 Objective-C 特性。我们可以通过 [`wwwmain.gnustep.org/resources/downloads.php`](http://wwwmain.gnustep.org/resources/downloads.php) 获取包。
+下载并安装`GNUStep`以访问所有 Objective-C 特性。我们可以通过[`wwwmain.gnustep.org/resources/downloads.php`](http://wwwmain.gnustep.org/resources/downloads.php)获取包。
 
 我们现在必须转到下载位置并使用以下命令解压文件：
 
-现在我们必须访问 `gnustep-startup` 文件夹，该文件夹是通过以下命令创建：
+我们现在必须访问`gnustep-startup`文件夹，该文件夹是通过以下命令创建：
 
 之后，必须配置构建技术。
 
@@ -572,65 +492,65 @@ DOI: [10.1201/9781003358-2](https://doi.org/10.1201/9781003358-2)
 
 我们最终必须设计环境。
 
-我们有一个名为 `heyworld.m` 的 Objective-C 文件，内容如下：
+我们有一个名为`heyworld.m`的 Objective-C 文件，内容如下：
 
-我们现在可以通过 `cd` 进入文件所在目录，然后执行以下步骤来创建并运行一个 Objective-C 文件，例如 `heyworld.m`：
+我们现在可以通过`cd`进入文件所在目录，然后执行以下步骤来创建并运行一个 Objective-C 文件，例如`heyworld.m`：
 
 ## Mac OS 安装
 
-`Xcode` 可能没有预装在我们的 Mac OS X 机器上。
+`Xcode`可能没有预装在我们的 Mac OS X 机器上。
 
-要确定我们是否已经拥有它，请使用 `Finder`并在 `Applications` 文件夹下的 `Developer` 子目录中搜索它。
+要确定我们是否已经拥有它，请使用`Finder`并在`Applications`文件夹下的`Developer`子目录中搜索它。
 
-如果 `Developer` 文件夹不存在或不包含 `Xcode`，则你需要安装它。获取 `Xcode` 的简单方法是从 Apple 网站下载它。
+如果`Developer`文件夹不存在或不包含`Xcode`，则你需要安装它。获取`Xcode`的简单方法是从 Apple 网站下载它。
 
-下载 `Xcode` 的 URL 是 [`developer.apple.com/xcode/`](https://developer.apple.com/xcode)。
+下载`Xcode`的 URL 是[`developer.apple.com/xcode/`](https://developer.apple.com/xcode)。
 
 ![](img/ufig2_1.jpg)
 
 Xcode 在 Mac 上的安装。
 
-我们可能成为 iOS 开发者社区成员或从 Mac App Store 购买以获取带有 `iOS` 5 `SDK` 的 `Xcode` 4.3。下载大小超过 3.5GB，取决于网络连接速度，可能需要几个小时才能完成。
+我们可能成为 iOS 开发者社区成员或从 Mac App Store 购买以获取带有`iOS` 5`SDK`的`Xcode` 4.3。下载大小超过 3.5GB，取决于网络连接速度，可能需要几个小时才能完成。
 
 ## 启动 Xcode
 
-成功安装 SDK 和 `Xcode` 之后，下一步是激活它们以开发并构建示例 iPhone 应用程序。要启动 `Xcode`，打开 `Finder` 并寻找 `Xcode`。由于我们将频繁使用此工具，请利用此机会将其拖入我们的 dock 栏，以便以后方便。点击 dock 上的 `Xcode` 图标启动该工具。
+成功安装 SDK 和`Xcode`之后，下一步是激活它们以开发并构建示例 iPhone 应用程序。要启动`Xcode`，打开`Finder`并寻找`Xcode`。由于我们将频繁使用此工具，请利用此机会将其拖入我们的 dock 栏，以便以后方便。点击 dock 上的`Xcode`图标启动该工具。
 
-一旦 `Xcode` 加载，假设这是我们第一次在此台机器上使用 `Xcode`，我们将看到欢迎页面，从该页面继续。
+一旦`Xcode`加载，假设这是我们第一次在此台机器上使用`Xcode`，我们将看到欢迎页面，从该页面继续。
 
-要进入可以选择模板的屏幕，点击下拉菜单并选择 `Create a new Xcode project`（创建一个新的 Xcode 项目）。
+要进入可以选择模板的屏幕，点击下拉菜单并选择`Create a new Xcode project`（创建一个新的 Xcode 项目）。
 
-在左侧面板中选择 Mac OS X 下的 `Application` 项，然后在模板选择屏幕的主面板中选择 `Command Line Tool`（命令行工具）。
+在左侧面板中选择 Mac OS X 下的`Application`项，然后在模板选择屏幕的主面板中选择`Command Line Tool`（命令行工具）。
 
-点击 `Next`，然后将项目命名为 `sampleApp`，并在附带设置屏幕上的 `Type` 选择中选择 `Foundation`。
+点击`Next`，然后将项目命名为`sampleApp`，并在附带设置屏幕上的`Type`选择中选择`Foundation`。
 
-确保 `Use Automatic Reference Counting`（使用自动引用计数）选项已开启。
+确保`Use Automatic Reference Counting`（使用自动引用计数）选项已开启。
 
 Objective-C 程序员负责在应用程序代码中保留和释放对象，直到 Apple 编译器的当前版本添加了自动引用计数（`ARC`）功能。
 
-为了监控内存使用情况，这通常意味着在程序中手动插入 `keep` 和 `release` 方法调用。
+为了监控内存使用情况，这通常意味着在程序中手动插入`keep`和`release`方法调用。
 
 未释放对象会导致内存泄漏（导致运行中的程序内存占用随时间推移而增加），而过早删除对象会导致应用程序崩溃。
 
-Apple 的 `LLVM` 编译器实现了 `ARC`，它会读取源代码并在构建之前自动插入必要的 `retain` 和 `release` 调用，使得 Objective-C 程序员的编写变得简单许多。
+Apple 的`LLVM`编译器实现了`ARC`，它会读取源代码并在构建之前自动插入必要的`retain`和`release`调用，使得 Objective-C 程序员的编写变得简单许多。
 
-在点击 `Create` 按钮之前，转到下一页并在本地文件系统中为项目选择一个合适的位置。
+在点击`Create`按钮之前，转到下一页并在本地文件系统中为项目选择一个合适的位置。
 
-`Xcode` 将创建一个新项目并打开主 `Xcode` 窗口。
+`Xcode`将创建一个新项目并打开主`Xcode`窗口。
 
-## WINDOWS 安装
+## Windows 安装
 
-在 Windows 上执行 Objective-C 程序之前，我们必须首先安装 `MinGW` 和 `GNUStep Core`。两者都可以在 [`www.gnu.org/software/gnustep/windows/installer.html`](https://www.gnu.org/software/gnustep/windows/installer.html) 下载。
+在 Windows 上执行 Objective-C 程序之前，我们必须首先安装`MinGW`和`GNUStep Core`。两者都可以在[`www.gnu.org/software/gnustep/windows/installer.html`](https://www.gnu.org/software/gnustep/windows/installer.html)下载。
 
-首先，我们必须安装 `MSYS/MinGW` 系统包。然后通过自解释的 Windows 安装程序安装 `GNUstep Core` 包。
+首先，我们必须安装`MSYS/MinGW`系统包。然后通过自解释的 Windows 安装程序安装`GNUstep Core`包。
 
-然后，使用 `GNUstep` 使用 Objective-C，前往 `开始 -> 所有程序 -> GNUstep -> Shell`。
+然后，使用`GNUstep`使用 Objective-C，前往`开始 -> 所有程序 -> GNUstep -> Shell`。
 
-进入 `heyworld.m` 文件夹。
+进入`heyworld.m`文件夹。
 
 要编译代码，我们可能会使用。
 
-## OBJECT-C 程序的结构
+## Objective-C 程序的结构
 
 在深入 Objective-C 编程语言的核心构建部分之前，让我们看一下基本的 Objective-C 程序结构，我们可以将其作为后续章节的指南。
 
@@ -638,57 +558,54 @@ Apple 的 `LLVM` 编译器实现了 `ARC`，它会读取源代码并在构建之
 
 一个基础 Objective-C 程序包含以下元素：
 
-*   预处理器指令
-*   接口 (Interface)
-*   注释 (Comments)
-*   方法 (Method)
-*   实现 (Implementation)
-*   变量 (Variables)
-*   语句与表达式 (Statements & Expressions)
+- 预处理器指令
+- 接口（Interface）
+- 注释（Comments）
+- 方法（Method）
+- 实现（Implementation）
+- 变量（Variables）
+- 语句与表达式（Statements & Expressions）
 
 考虑一段打印“Hey World”单词的简单代码。
 
 让我们看看上面的部分代码：
 
-*   程序的第一行 `#import <Foundation/Foundation.h>` 是一个预处理器指令，告诉 Objective-C 编译器在实际编译之前导入 `Foundation.h` 文件。
-*   使用以下 `@interface SampleClass:`。
-*   接口使用 `NSObject` 创建。它继承自 `NSObject`，这是所有对象的基类。
-*   `(void)sampleMethod;` 显示了如何创建一个方法。
-*   `@end` 行表示接口的结束。
-*   下一行显示了如何实现 `SampleClass` 接口。
-*   `sampleMethod` 定义在 `(void)sampleMethod` 这一行中。
-*   `@end` 表明实现的结束。
-*   下一行 `int main()` 是程序的主函数，从这里开始执行。
-*   `/**/` 这一行被编译器忽略，并提供了额外的注释。作为结果，这些行在软件中被称为注释。
-*   `NSLog(...)` 是一个 Objective-C 函数，用于在屏幕上显示消息。
-*   返回 `0` 的这一行结束了 `main()` 方法。
+- 程序的第一行`#import <Foundation/Foundation.h>`是一个预处理器指令，告诉 Objective-C 编译器在实际编译之前导入`Foundation.h`文件。
+- 使用以下`@interface SampleClass:`。
+- 接口使用`NSObject`创建。它继承自`NSObject`，这是所有对象的基类。
+- `(void)sampleMethod;`显示了如何创建一个方法。
+- `@end`行表示接口的结束。
+- 下一行显示了如何实现`SampleClass`接口。
+- `sampleMethod`定义在`(void)sampleMethod`这一行中。
+- `@end`表明实现的结束。
+- 下一行`int main()`是程序的主函数，从这里开始执行。
+- `/**/`这一行被编译器忽略，并提供了额外的注释。作为结果，这些行在软件中被称为注释。
+- `NSLog(...)`是一个 Objective-C 函数，用于在屏幕上显示消息。
+- 返回`0`的这一行结束了`main()`方法。
 
-在点击 `Create` 按钮之前，转到下一页并在本地文件系统中为项目选择一个合适的位置。
+在点击`Create`按钮之前，转到下一页并在本地文件系统中为项目选择一个合适的位置。
 
-# 使用 Xcode 创建 OBJECT-C 应用
+# 使用 Xcode 创建 Objective-C 应用
 
-`Xcode` 将生成开发应用程序所需的文件版本。`.m` 文件名扩展用于标识 Objective-C 源文件。在我们场景中，`Xcode` 已经生成了源文件 `main.m` 并填充了一些基础代码。要查看代码，从文件列表中选择 `main.m` 并将其拖入编辑区域。以下是骨架代码：
+`Xcode`将生成开发应用程序所需的文件版本。`.m`文件名扩展用于标识 Objective-C 源文件。在我们场景中，`Xcode`已经生成了源文件`main.m`并填充了一些基础代码。要查看代码，从文件列表中选择`main.m`并将其拖入编辑区域。以下是骨架代码：
 
-修改 `NSLog` 行使其显示：
+修改`NSLog`行使其显示：
 
-修改后，必须编译并执行应用程序。由于代码目的是在控制台中显示消息，第一步是通过选择 `View -> Debug Area -> Activate Console` 显示 Xcode 控制台窗口。然后，点击 Xcode 工具栏上的 `Execute` 运行程序。当我们选择此选项时，`Xcode` 将编译源代码并启动程序，在 Xcode 控制台中显示消息。
+修改后，必须编译并执行应用程序。由于代码目的是在控制台中显示消息，第一步是通过选择`View -> Debug Area -> Activate Console`显示 Xcode 控制台窗口。然后，点击 Xcode 工具栏上的`Execute`运行程序。当我们选择此选项时，`Xcode`将编译源代码并启动程序，在 Xcode 控制台中显示消息。
 
 # 使用命令行编译 Objective-C
 
-`Xcode` 提供了一个强大的环境，对于较大的项目很有帮助，但对于开发和执行本章中使用的这种程序来说，它大材小用了。事实上，一些开发者认为像 `Xcode` 这样的开发环境阻碍了工作，倾向于使用简单的编辑器和命令行工具创建应用。毕竟，在集成开发环境流行之前，所有应用都是这样的。
+`Xcode`提供了一个强大的环境，对于较大的项目很有帮助，但对于开发和执行本章中使用的这种程序来说，它大材小用了。事实上，一些开发者认为像`Xcode`这样的开发环境阻碍了工作，倾向于使用简单的编辑器和命令行工具创建应用。毕竟，在集成开发环境流行之前，所有应用都是这样的。
 
-虽然我们不建议所有人切换到 `vi` 编辑器和 `GNU` 编译器来替代 `Xcode`，但知道命令行选项是有用的。
+虽然我们不建议所有人切换到`vi`编辑器和`GNU`编译器来替代`Xcode`，但知道命令行选项是有用的。
 
-从命令行编译代码的第一步是确保安装了 `Xcode Command Line Tools`。
+从命令行编译代码的第一步是确保安装了`Xcode Command Line Tools`。
 
-为此，导航到 `Xcode -> Preferences` 菜单项，并在偏好设置框中选择 `Downloads` 。如果我们还没有安装 `Command Line Tools`，点击 `Install` 按钮开始。
+为此，导航到`Xcode -> Preferences`菜单项，并在偏好设置框中选择`Downloads`。如果我们还没有安装`Command Line Tools`，点击`Install`按钮开始。
 
-在我们选择的文本或编程编辑器中创建一个名为 `hello.m` 的文件，包含以下 Objective-C 代码：
+在我们选择的文本或编程编辑器中创建一个名为`hello.m`的文件，包含以下 Objective-C 代码：
 
-保存文件，然后如果尚未启动，启动 `Terminal` 会话，更改到源文件所在的目录，并使用以下命令编译程序：
-
-
-
+保存文件，然后如果尚未启动，启动`Terminal`会话，更改到源文件所在的目录，并使用以下命令编译程序：
 
 如果代码编译无错误，则可以如下所示执行：
 
@@ -696,19 +613,19 @@ Apple 的 `LLVM` 编译器实现了 `ARC`，它会读取源代码并在构建之
 
 ## 文件扩展名
 
-Objective-C 源文件名的最后两个字符（称为扩展名）是 `.m`。下面是其他广泛使用的文件名扩展名：
+Objective-C 源文件名的最后两个字符（称为扩展名）是`.m`。下面是其他广泛使用的文件名扩展名：
 
 | 扩展名 | 含义 |
-| :--- | :--- |
-| .c | C 语言源文件 |
-| .cc, .cpp | C++ 语言源文件 |
-| .h | 头文件 |
-| .m | Objective-C 源文件 |
-| .mm | Objective-C++ 源文件 |
-| .pl | Perl 源文件 |
-| .o | 目标（编译后的）文件 |
+| --- | --- |
+| `.c` | C 语言源文件 |
+| `.cc`、`.cpp` | C++ 语言源文件 |
+| `.h` | 头文件 |
+| `.m` | Objective-C 源文件 |
+| `.mm` | Objective-C++ 源文件 |
+| `.pl` | Perl 源文件 |
+| `.o` | 目标（编译后的）文件 |
 
-当我们回到 Xcode 项目窗口时，右侧面板显示了 `main.m` 的内容，这是 Xcode 自动为我们生成的模板文件。
+当我们回到 Xcode 项目窗口时，右侧面板显示了`main.m`的内容，这是 Xcode 自动为我们生成的模板文件。
 
 它包含了以下行：
 
@@ -718,54 +635,56 @@ Objective-C 源文件名的最后两个字符（称为扩展名）是 `.m`。下
 
 现在是编译并运行你的第一个应用程序了，这在 Xcode 中被称为构建和执行。首先，我们必须显示一个显示应用程序结果（输出）的窗格。我们可以通过选择工具栏 View 下方的中心图标来最快地实现这一点。悬停在该符号上会显示文本“隐藏或显示调试区域（Hide or show the Debug area）”。需要注意的是，当向调试区域写入任何数据时，Xcode 通常会显示调试区域。
 
-如果你点击工具栏左上角的 Run 按钮，或者从 Product 菜单中选择 Run，Xcode 现在将通过两步过程：首先创建然后执行你的应用程序。
+
+
+如果你点击工具栏左上角的`Run`按钮，或者从`Product`菜单中选择`Run`，Xcode现在将通过两步过程：首先创建然后执行你的应用程序。
 
 后者只有在你的应用程序没有错误时才会发生。
 
 如果我们在程序中犯了错误，我们将看到沿途标有红色圆形停止标志和感叹号的故障故障。这些被称为致命错误（fatal errors），在修复它们之前，我们将无法执行它们。带有感叹号的黄色三角形是警告（warnings）；我们仍然可以执行程序，但我们应该检查并纠正它们。
 
-在清除所有错误并运行程序后，程序的输出应该出现在右下面板中。不要被出现的长文本吓到。**粗体输出行**是我们感兴趣的行。
+在清除所有错误并运行程序后，程序的输出应该出现在右下面板中。不要被出现的长文本吓到。粗体输出行是我们感兴趣的行。
 
 我们已经完成了构建和执行第一个 Xcode 应用程序的程序部分。
 
 使用 Xcode 生成新程序的步骤总结如下：
 
 1. 启动 Xcode 程序。
-2. 如果是新项目，从启动屏幕选择 `File`、`New`、`New Project …` 或 `Create a New Xcode Project`。
-3. 选择 `Program`、`Command Line Tool` 作为应用程序类型，然后点击 `Next`。
-4. 为你的应用程序命名，并将 `Type` 设置为 `Foundation`。勾选 `Use Automatic Reference Counting`（使用自动引用计数）框。然后选择 `Next`。
-5. 为你的项目文件夹命名并指定保存项目文件的位置。从下拉菜单中选择 `Create`。
-6. 在左侧面板中寻找文件 `main.m`（我们可能需要从产品名称文件夹内部显示它）。该文件应该会被高亮。在最侧面板的编辑框中输入我们的程序。
-7. 选择工具栏中 `View` 下方的中心图标。调试区域现在将可见。我们可以在那里查看你的输出。
-8. 点击工具栏中的 `Launch` 按钮或从 Product 菜单中选择 `Run` 来构建并运行我们的应用程序。
+2. 如果是新项目，从启动屏幕选择`File`、`New`、`New Project …`或`Create a New Xcode Project`。
+3. 选择`Program`、`Command Line Tool`作为应用程序类型，然后点击`Next`。
+4. 为你的应用程序命名，并将`Type`设置为`Foundation`。勾选`Use Automatic Reference Counting`（使用自动引用计数）框。然后选择`Next`。
+5. 为你的项目文件夹命名并指定保存项目文件的位置。从下拉菜单中选择`Create`。
+6. 在左侧面板中寻找文件`main.m`（我们可能需要从产品名称文件夹内部显示它）。该文件应该会被高亮。在最侧面板的编辑框中输入我们的程序。
+7. 选择工具栏中`View`下方的中心图标。调试区域现在将可见。我们可以在那里查看你的输出。
+8. 点击工具栏中的`Launch`按钮或从`Product`菜单中选择`Run`来构建并运行我们的应用程序。
 
-## 使用终端 (Terminal)
+## 使用终端（Terminal）
 
-有些人可能在不想学习 Xcode 的情况下开始使用 Objective-C 编程。如果我们习惯使用 UNIX shell 和命令行工具，我们可能希望利用 `Terminal`（终端）应用程序来编辑、编译和运行我们的应用程序。本节介绍了如何操作。
+有些人可能在不想学习 Xcode 的情况下开始使用 Objective-C 编程。如果我们习惯使用 UNIX shell 和命令行工具，我们可能希望利用`Terminal`（终端）应用程序来编辑、编译和运行我们的应用程序。本节介绍了如何操作。
 
-第一步是在我们的 Mac 上启动 Terminal 软件。Terminal 程序可以在 `Applications` 文件夹下的 `Utilities` 中找到。
+第一步是在我们的 Mac 上启动 Terminal 软件。Terminal 程序可以在`Applications`文件夹下的`Utilities`中找到。
 
 启动 Terminal 程序。将出现一个窗口。
 
-在每一行中，我们按照 `$`（或 `%`，取决于 Terminal 应用程序的设置）之后编写命令。如果我们熟悉 UNIX，这对于我们来说没有困难。
+在每一行中，我们按照`$`（或`%`，取决于 Terminal 应用程序的设置）之后编写命令。如果我们熟悉 UNIX，这对于我们来说没有困难。
 
-开始，将程序中的行复制到文件中。首先，创建一个用于保存我们软件示例的目录。然后，为了输入我们的程序，启动文本编辑器，如 `vi` 或 `emacs`：
+开始，将程序中的行复制到文件中。首先，创建一个用于保存我们软件示例的目录。然后，为了输入我们的程序，启动文本编辑器，如`vi`或`emacs`。
 
-我们可以随意为 Objective-C 文件命名；确保最后两个字符是 `.m` 即可。这告诉编译器我们正在处理一个 Objective-C 程序。
+我们可以随意为 Objective-C 文件命名；确保最后两个字符是`.m`即可。这告诉编译器我们正在处理一个 Objective-C 程序。
 
-在我们程序输入到文件中后（此处未在此显示输入和保存文本的编辑指令），我们可以使用 LLVM Clang Objective-C 编译器（称为 `Clang`）来构建并链接它。
+在我们程序输入到文件中后（此处未在此显示输入和保存文本的编辑指令），我们可以使用 LLVM Clang Objective-C 编译器（称为`Clang`）来构建并链接它。
 
-`clang` 命令采用以下通用格式：
+`clang`命令采用以下通用格式：
 
 此选项指示我们利用以下 Foundation 框架信息：
 
-由于我们的 `clang` 版本可能不理解此命令行选项，如果我们遇到错误，尝试在不带此选项的情况下运行 `Clang`。`File` 是将要汇的文件列表。在我们的实例中，只有一个这样的文件，我们称之为 `main.m`。
+由于我们的`clang`版本可能不理解此命令行选项，如果我们遇到错误，尝试在不带此选项的情况下运行`Clang`。`File`是将要汇的文件列表。在我们的实例中，只有一个这样的文件，我们称之为`main.m`。
 
-如果程序编译没有问题，`program` 是包含可执行文件的文件名。
+如果程序编译没有问题，`program`是包含可执行文件的文件名。
 
-程序将被命名为 `program1`；下面是编译我们的第一个 Objective-C 应用程序的命令行：
+程序将被命名为`program1`；下面是编译我们的第一个 Objective-C 应用程序的命令行：
 
-命令行提示符返回且没有任何警告，说明没有发现程序缺陷。我们现在可以通过在提示符处输入 `program1` 来运行程序：除非我们使用过 Terminal，这是最可能的结果。一种方法是在程序名前加上 `./`，以便 shell 查看当前目录。另一种方法是将包含应用程序的目录添加到 shell 的 `PATH` 变量中。让我们从第一种开始：
+命令行提示符返回且没有任何警告，说明没有发现程序缺陷。我们现在可以通过在提示符处输入`program1`来运行程序：除非我们使用过 Terminal，这是最可能的结果。一种方法是在程序名前加上`./`，以便 shell 查看当前目录。另一种方法是将包含应用程序的目录添加到 shell 的`PATH`变量中。让我们从第一种开始：
 
 注意的是通过终端开发和调试 Objective-C 程序是一个可行的方案，但这不是长期计划。创建 Mac OS X 或 iOS 程序不仅仅是必须“封装”进应用程序包的可执行文件。从 Terminal 程序完成这些并不简单，但它是 Xcode 的优势之一。因此，我们建议开始学习利用 Xcode 来构建我们的项目。这需要一些学习，但最终将是非常值得的。
 
@@ -783,14 +702,11 @@ Objective-C 源文件名的最后两个字符（称为扩展名）是 `.m`。下
 
 注释向程序的读者（无论是程序员还是负责维护程序的人员）解释程序员在开发特定程序时的想法。
 
-
-
-
-Objective-C 编译器会将起始符 `/*` 和结束符 `*/` 之间的任何字符视为注释语句的一部分，并忽略它们。
+Objective-C 编译器会将起始符`/*`和结束符`*/`之间的任何字符视为注释语句的一部分，并忽略它们。
 
 当注释跨越多行代码时（如下所示），这种注释经常被使用。你想写什么类型的注释完全由你决定。
 
-值得注意的是，`/*` 风格的注释不能嵌套。出于三个极佳的理由，请养成在创建软件或将其输入计算机时将注释语句融入其中的习惯。
+值得注意的是，`/*`风格的注释不能嵌套。出于三个极佳的理由，请养成在创建软件或将其输入计算机时将注释语句融入其中的习惯。
 
 首先，在脑中逻辑仍然清晰时对软件进行记录，比在完成后后再回头重做逻辑要简单得多。
 
@@ -798,31 +714,31 @@ Objective-C 编译器会将起始符 `/*` 和结束符 `*/` 之间的任何字�
 
 最后，我们还未遇到过哪一个程序员是热于为程序编写文档的。事实上，当你完成软件调试后，回头来为它添加注释的前景可能并不能吸引我们。在开发过程中为软件添加注释，可以让这项有时很困难的任务变得更容易处理。
 
-下行代码指示编译器查找并执行一个名为 `Foundation.h` 的文件：
+下行代码指示编译器查找并执行一个名为`Foundation.h`的文件：
 
 ```objc
 #import <Foundation.h>
 ```
 
-这是一个系统文件，意味着它并不是我们生成的。`#import` 告诉程序导入或包含该文件的信息，就像这些内容是在此时输入到其中一样。因为它包含了稍后将在应用程序使用的额外类和函数信息，因此我们导入了 `Foundation.h` 文件。`Program` 中的这一行声明程序的名称为 `main:`。
+这是一个系统文件，意味着它并不是我们生成的。`#import`告诉程序导入或包含该文件的信息，就像这些内容是在此时输入到其中一样。因为它包含了稍后将在应用程序使用的额外类和函数信息，因此我们导入了`Foundation.h`文件。`Program`中的这一行声明程序的名称为`main:`。
 
-`main` 是一个唯一的名称，指定了程序应该从哪里开始运行。
+`main`是一个唯一的名称，指定了程序应该从哪里开始运行。
 
-`main` 之前的保留字 `int` 表示 `main` 返回的值是一个整数。
+`main`之前的保留字`int`表示`main`返回的值是一个整数。
 
-暂时，请忽略左括号和右括号之间的内容；这些是命令行参数。既然我们已经向系统标识了 `main`，现在我们可以精确解释这个例程应该做什么了。
+暂时，请忽略左括号和右括号之间的内容；这些是命令行参数。既然我们已经向系统标识了`main`，现在我们可以精确解释这个例程应该做什么了。
 
 这是通过将例程所有的程序语句封装在一对大括号中实现的。在最简单的情况下，语句只是一个以分号结束的表达式。大括号之间的所有程序语句都被系统视为主过程的一部分。
 
-`main` 中的下一行代码是：
+`main`中的下一行代码是：
 
 ```objc
 @autoreleasepool {
 ```
 
-在与匹配闭括号之间的任何程序语句都在自动释放池（autorelease pool）上下文中执行。自动释放池是一个功能，可以帮助系统更有效地管理应用程序在产生新对象时所需的内存。“自动引用计数与内存管理。”在我们 `@autoreleasepool` 上下文中，有一行语句。这一行指示执行一个名为 `NSLog` 的函数。
+在与匹配闭括号之间的任何程序语句都在自动释放池（autorelease pool）上下文中执行。自动释放池是一个功能，可以帮助系统更有效地管理应用程序在产生新对象时所需的内存。“自动引用计数与内存管理。”在我们`@autoreleasepool`上下文中，有一行语句。这一行指示执行一个名为`NSLog`的函数。
 
-接下来的字符串是要提供或传递给 `NSLog` 例程的参数（或参数）：
+接下来的字符串是要提供或传递给`NSLog`例程的参数（或参数）：
 
 ```objc
 NSLog(@"Hello, World!");
@@ -830,48 +746,48 @@ NSLog(@"Hello, World!");
 }
 ```
 
-在这种情况下，`@` 符号紧跟一对双引号包含的文本字符串。这被称为常量 `NSString` 对象。
+在这种情况下，`@`符号紧跟一对双引号包含的文本字符串。这被称为常量`NSString`对象。
 
-`NSLog` 例程是一个 Objective-C 库函数，它只需显示或记录其输入。然而，在这样做之前，它会显示执行例程的日期和时间、程序名称以及我们在这里不会涉及的一些其他数字。
+`NSLog`例程是一个 Objective-C 库函数，它只需显示或记录其输入。然而，在这样做之前，它会显示执行例程的日期和时间、程序名称以及我们在这里不会涉及的一些其他数字。
 
-在 Objective-C 中，所有的程序语句必须以分号（`;`）结束。这就是为什么在 `NSLog` 用的右括号后面紧跟着分号。
+在 Objective-C 中，所有的程序语句必须以分号（`;`）结束。这就是为什么在`NSLog`用的右括号后面紧跟着分号。
 
-`main` 中的最后一个程序语句如下：
+`main`中的最后一个程序语句如下：
 
 ```objc
 return 0;
 ```
 
-它表示 `main` 应该终止，并返回一个状态值为 `0` 的值。按照惯例，`0` 表示程序正常终止。任何非零数字通常表示发生了问题，例如软件无法识别所需的文件。
+它表示`main`应该终止，并返回一个状态值为`0`的值。按照惯例，`0`表示程序正常终止。任何非零数字通常表示发生了问题，例如软件无法识别所需的文件。
 
-如果我们使用 `Xcode` 并返回输出窗口，我们会在 `NSLog` 的输出行之后看到以下内容：
+如果我们使用`Xcode`并返回输出窗口，我们会在`NSLog`的输出行之后看到以下内容：
 
-```
+```text
 2023-10-27 10:00:00 ProgramName: Hello, World!
 ```
 
-到此时，我们应该知道那条信息意味着什么了。既然我们已经完成了对第一个程序的讨论，让我们修改它，以包含语句“而且在 Objective-C 中编写要愉快得多！”。这通过只需添加另一个对 `NSLog` 函数的调用即可轻松实现，正如 `Program` 所示。请记住，每个 Objective-C 程序语句都必须以分号结束。在接下来的程序示例中省略了开头的注释行。
+到此时，我们应该知道那条信息意味着什么了。既然我们已经完成了对第一个程序的讨论，让我们修改它，以包含语句“而且在 Objective-C 中编写要愉快得多！”。这通过只需添加另一个对`NSLog`函数的调用即可轻松实现，正如`Program`所示。请记住，每个 Objective-C 程序语句都必须以分号结束。在接下来的程序示例中省略了开头的注释行。
 
-如果我们输入 `Program` 然后构建并执行它，我们可能会预期以下结果（不包括 `NSLog` 通常附加到输出中的文本）：
+如果我们输入`Program`然后构建并执行它，我们可能会预期以下结果（不包括`NSLog`通常附加到输出中的文本）：
 
-```
+```text
 Hello, World!
 And writing in Objective-C is much more enjoyable!
 ```
 
-如下面的软件示例所示，你不需要每一行输出都使用 `NSLog` 函数。让我们从一个独特的双字符序列开始。换行符由反斜线 `\` 和字母 `n` 组成。换行符指示系统执行其名称所含义的操作：跳转到新行。换行符后的任何字符都会打印在显示器的下一行上。事实上，换行符可以比比打字机上的回车键。
+如下面的软件示例所示，你不需要每一行输出都使用`NSLog`函数。让我们从一个独特的双字符序列开始。换行符由反斜线`\`和字母`n`组成。换行符指示系统执行其名称所含义的操作：跳转到新行。换行符后的任何字符都会打印在显示器的下一行上。事实上，换行符可以比比打字机上的回车键。
 
 ## 显示变量的值
 
-通过 `NSLog`，我们不仅可以显示基本句子，还可以显示变量值和计算结果。程序使用 `NSLog` 函数显示两个整数 `55` 和 `35` 相加的结果。
+通过`NSLog`，我们不仅可以显示基本句子，还可以显示变量值和计算结果。程序使用`NSLog`函数显示两个整数`55`和`35`相加的结果。
 
-在设置好自动释放池后，`main` 中的程序使用 `NSLog` 函数来显示两个整数 `55` 和 `35` 相加的结果。
+在设置好自动释放池后，`main`中的程序使用`NSLog`函数来显示两个整数`55`和`35`相加的结果。
 
-自动释放池设置后，`main` 内部第一个程序语句声明变量 `total` 为整数类型。所有的程序变量在使用之前必须先定义。变量的定义告诉 Objective-C 编译器程序如何使用该变量。编译器需要这些信息来构建存储和检索值的指令。类型为 `int` 的变量包含整数值——即没有小数的数字。
+自动释放池设置后，`main`内部第一个程序语句声明变量`total`为整数类型。所有的程序变量在使用之前必须先定义。变量的定义告诉 Objective-C 编译器程序如何使用该变量。编译器需要这些信息来构建存储和检索值的指令。类型为`int`的变量包含整数值——即没有小数的数字。
 
-整数包括 `3`、`5` 和 `-20`。带有小数的实数如 `2.14`、`2.455` 和 `27.0` 被称为浮点数。
+整数包括`3`、`5`和`-20`。带有小数的实数如`2.14`、`2.455`和`27.0`被称为浮点数。
 
-将 `55` 和 `35` 相加的结果存储在整数变量 `sum` 中。为了将例程的变量声明与程序语句隔离开，我们特意在变量定义后留了一个空行；这完全是一个风格问题。程序中的单个空行有时可以使其更易理解。
+将`55`和`35`相加的结果存储在整数变量`sum`中。为了将例程的变量声明与程序语句隔离开，我们特意在变量定义后留了一个空行；这完全是一个风格问题。程序中的单个空行有时可以使其更易理解。
 
 程序语句的写法与其他大多数编程语言相同：
 
@@ -879,19 +795,19 @@ And writing in Objective-C is much more enjoyable!
 total = 55 + 35;
 ```
 
-数字 `55` 与 `35` 相加（如加号 `+` 所示），结果放入变量 `total` 中（如赋值运算符 `=` 所示）。
+数字`55`与`35`相加（如加号`+`所示），结果放入变量`total`中（如赋值运算符`=`所示）。
 
-在 `Program` 中，`NSLog` 例程调用现在包含了两个参数。逗号分隔了这些参数。显示的字符串始终是 `NSLog` 函数的第一个输入。然而，除了显示字符串外，我们可能还希望显示特定程序变量的值。在这种情况下，你想在这些字符之后显示变量 `sum` 的值：
+在`Program`中，`NSLog`例程调用现在包含了两个参数。逗号分隔了这些参数。显示的字符串始终是`NSLog`函数的第一个输入。然而，除了显示字符串外，我们可能还希望显示特定程序变量的值。在这种情况下，你想在这些字符之后显示变量`sum`的值：
 
 ```objc
 NSLog(@"The sum of 55 and 35 is %d", sum);
 ```
 
-第一个参数中的 `%` 字符是 `NSLog` 方法识别的特殊字符。紧跟 `%` 符号后的字符指示了此时将呈现的值类型。前述软件中的 `NSLog` 方法识别字母 `d` 表示要显示整数值。
+第一个参数中的`%`字符是`NSLog`方法识别的特殊字符。紧跟`%`符号后的字符指示了此时将呈现的值类型。前述软件中的`NSLog`方法识别字母`d`表示要显示整数值。
 
-当 `NSLog` 例程在字符串中发现 `%d` 字符时，它会显示下一个参数的值。因为 `sum` 是 `NSLog` 的下一个输入，它的值会自动打印在“The sum of 55 and 35 is”之后。
+当`NSLog`例程在字符串中发现`%d`字符时，它会显示下一个参数的值。因为`sum`是`NSLog`的下一个输入，它的值会自动打印在“The sum of 55 and 35 is”之后。
 
-在 `main` 内部，第二个程序指令声明了三个 `int` 变量：`value1`、`value2` 和 `sum`。
+在`main`内部，第二个程序指令声明了三个`int`变量：`value1`、`value2`和`sum`。
 
 可以使用三个不同的语句来表示这条语句，如下：
 
@@ -901,21 +817,18 @@ int value2;
 int sum;
 ```
 
+- `int value2;`
+- `int sum;`
 
+在定义了三个变量后，程序将值`55`赋值给`value1`，将值`35`赋值给`value2`。
 
+之后，计算这两个变量的总和，并将结果赋值给变量`sum`。
 
-* `int value2;`
-* `int sum;`
+现在`NSLog`函数的调用中共有四个参数。
 
-在定义了三个变量后，程序将值 55 赋值给 `value1`，将值 35 赋值给 `value2`。
+第一个参数（通常称为格式化字符串）告诉系统如何呈现剩余的参数。在单词“The total of”之后，应该出现`value1`的值。
 
-之后，计算这两个变量的总和，并将结果赋值给变量 `sum`。
-
-现在 `NSLog` 函数的调用中共有四个参数。
-
-第一个参数（通常称为格式化字符串）告诉系统如何呈现剩余的参数。在单词 “The total of” 之后，应该出现 `value1` 的值。
-
-同样地，`value2` 和 `total` 的值应该写入格式化字符串中后续两个 `%i` 字母所在的位置。
+同样地，`value2`和`total`的值应该写入格式化字符串中后续两个`%i`字母所在的位置。
 
 ## 类、对象与方法
 
@@ -925,15 +838,15 @@ int sum;
 
 考虑一下我们日常生活中的以下场景。
 
-假设我们有一辆汽车，这是我们拥有的一个物品。我们不仅仅是有一辆汽车；我们拥有一辆在底特律、日本或其他地方工厂制造的具体汽车。车辆识别号码（VIN）是一个在美国境内唯一标识我们车辆的数字。在面向对象的术语中，我们的车辆是汽车（car）的一个实例（instance）。
+假设我们有一辆汽车，这是我们拥有的一个物品。我们不仅仅是有一辆汽车；我们拥有一辆在底特律、日本或其他地方工厂制造的具体汽车。车辆识别号码（VIN）是一个在美国境内唯一标识我们车辆的数字。在面向对象的术语中，我们的车辆是`Car`（car）的一个实例（instance）。
 
-为了符合命名法，`Car` 是形成该实例的类（class）名。因此，每当制造一辆新汽车，就会生成一个 `car` 类的新实例，每个 `car` 实例都被称为一个对象（object）。它可能是银色的，内饰是黑色的，敞篷车或硬顶车等等。此外，我们利用你的汽车来完成特定的任务。
+为了符合命名法，`Car`是形成该实例的类（class）名。因此，每当制造一辆新汽车，就会生成一个`car`类的新实例，每个`car`实例都被称为一个对象（object）。它可能是银色的，内饰是黑色的，敞篷车或硬顶车等等。此外，我们利用你的汽车来完成特定的任务。
 
 例如，我们会开车、加油、（理想情况下）洗车、以及进行保养等。这如下表所示：
 
 | 对象 | 对对象执行的操作 |
 | --- | --- |
-| 我们的汽车 | 你对它做的事： 驾驶它 | 加油 | 洗车 | 保养它 |
+| 我们的汽车 | 你对它做的事：驾驶它、加油、洗车、保养它 |
 
 表中所指示的任务可以在我们的汽车或其他车辆上执行。例如，姐姐开着她的车，洗洗车，加油等等。
 
@@ -951,13 +864,13 @@ int sum;
 
 返回之前的列表并用这种新语法重写所有内容。然而，我们必须先获得我们的新车。按照如下方式去工厂获取：
 
-我们向 `Automobile` 类（消息的接收者）发送一条新消息，请求它为我们交付一辆新车。生成的对象（代表我们独特的汽车）随后保存在变量 `ourCar` 中。从现在起，`ourCar` 可能指的是我们从工厂收到的汽车实例。
+我们向`Automobile`类（消息的接收者）发送一条新消息，请求它为我们交付一辆新车。生成的对象（代表我们独特的汽车）随后保存在变量`ourCar`中。从现在起，`ourCar`可能指的是我们从工厂收到的汽车实例。
 
-由于我们去工厂购买了汽车，`new` 方法被称为工厂方法或类方法。
+由于我们去工厂购买了汽车，`new`方法被称为工厂方法或类方法。
 
 在你新汽车上进行的其余活动都将是实例方法（instance methods），因为它们是我们车辆所独有的。以下是关于我们汽车的一些消息短语示例：
 
-最后这个示例演示了一个返回数据的实例方法——推测是里程表上显示的当前里程。我们将信息保存在应用程序中名为 `currentMileage` 的变量中。
+最后这个示例演示了一个返回数据的实例方法——推测是里程表上显示的当前里程。我们将信息保存在应用程序中名为`currentMileage`的变量中。
 
 这是一个接受参数的方法实例，该参数指定了一个可能在每次方法调用之间发生变化的特定值：
 
@@ -973,18 +886,17 @@ int sum;
 
 分数在程序中通过分子和分母表示。
 
-`main` 函数中 `@autoreleasepool` 之后的两行声明变量 `numerator` 和 `denominator` 为整数，并分别为它们赋值初始值 2 和 4。
+`main`函数中`@autoreleasepool`之后的两行声明变量`numerator`和`denominator`为整数，并分别为它们赋值初始值`2`和`4`。
 
 这对应于以下行：
 
-我们将 2 存储在变量 `numerator` 中，将 4 存储在变量 `denominator` 中，以表示分数 2/4。如果我们需要在程序中保存许多分数，这将非常不方便。每想要引用分数时，都必须引用分子和分母。对这些分数进行操作也将不方便。
-
-
-
+我们将`2`存储在变量`numerator`中，将`4`存储在变量`denominator`中，以表示分数 2/4。如果我们需要在程序中保存许多分数，这将非常不方便。每想要引用分数时，都必须引用分子和分母。对这些分数进行操作也将不方便。
 
 这些部分都包含在每个 Objective-C 程序中，即使我们可能不需要自己创建它们。正如我们所见，每个部分通常位于其自己的文件中。目前，我们将所有内容都保留在一个文件中。
 
-## @interface SECTION
+## `@interface`部分
+
+
 
 在创建一个新类时，你必须告知 Objective-C 编译器它源自何处。也就是说我们必须识别它的父类。接着，我们必须描述在与此类类的对象交互时使用的操作或方法。此外，正如我们将在稍后的章节中看到的，我们在程序中名为 `@interface` 的特定部分列出了被称为属性（properties）的元素。该部分的整体格式如下：
 
@@ -996,20 +908,20 @@ Objective-C 编程语言允许我们在变量中存储除整数以外的数据�
 
 命名的规则非常简单：它们必须以字母或下划线（`_`）开头，并包含字母（大写或小写）、下划线或数字 0–9 的任何组合。以下是接受的名称列表：
 
-* `sum`
-* `pieceFlag`
-* `i`
-* `myLocation`
-* `numberOfMoves`
-* `sysFlag`
-* `ChessBoard`
+- `sum`
+- `pieceFlag`
+- `i`
+- `myLocation`
+- `numberOfMoves`
+- `sysFlag`
+- `ChessBoard`
 
 另一方面，以下名称由于上述原因是不接受的：
 
-* `sum$value $`：字符 `sum$value ` 是无效。
-* `piece flag`：`piece flag` 中不允许嵌入空格。
-* `3Spencer`：名称不能以数字开头。
-* `int`：这是一个关键字。
+- `sum$value $`：字符 `sum$value` 是无效。
+- `piece flag`：`piece flag` 中不允许嵌入空格。
+- `3Spencer`：名称不能以数字开头。
+- `int`：这是一个关键字。
 
 变量名 `int` 不能使用，因为它对 Objective-C 编译器有特定的意义。这被称为保留名或保留术。通常情况下，任何对 Objective-C 编译器具有特殊性的名称都不能作为变量名。
 
@@ -1019,10 +931,10 @@ Objective-C 编程语言允许我们在变量中存储除整数以外的数据�
 
 如前所述，为类命名时，以大写字母开头。相比之下，实例变量、对象和方法名通常以小写字母开头。为了提高可读性，名称内部使用大写字母来表示新单词的开始，如下例所示：
 
-* `AddressBook`：这可能是一个类名。
-* `currentEntry`：这可能是一个对象。
-* `current entry`：某些程序员使用下划线作为单词分隔符。
-* `addNewEntry`：这可能是一个方法名。
+- `AddressBook`：这可能是一个类名。
+- `currentEntry`：这可能是一个对象。
+- `current_entry`：某些程序员使用下划线作为单词分隔符。
+- `addNewEntry`：这可能是一个方法名。
 
 在选择名称时请记住一点：不要偷懒。选择代表变量或对象预期用法的名称。其理由是显而易见的。正如注释语句一样，有意义的名称可以显著提高程序的可读性，并在整个调试和文档阶段产生丰厚回报。因为程序将更具自解释性，文档工作应该更易于管理。
 
@@ -1030,7 +942,7 @@ Objective-C 编程语言允许我们在变量中存储除整数以外的数据�
 
 新类名为 `Fraction`，它的父类是 `NSObject`。`NSObject` 类定义在文件 `NSObject.h` 中，当我们导入 `Foundation.h` 时，它会自动包含在我们的程序中。
 
-## CLASS AND INSTANCE METHODS
+## 类方法和实例方法
 
 我们必须为处理分数指定方法。我们必须能够将分数的数值设置为一个特定值。由于我们无法直接访问分数的内部表示，我们必须创建方法来设置分子（numerator）和分母（denominator）。我们还会创建一个打印方法来显示分数的数值。接口文件中的打印方法声明如下：
 
@@ -1038,7 +950,7 @@ Objective-C 编程语言允许我们在变量中存储除整数以外的数据�
 
 类方法对类本身执行任何操作，例如生成新实例。实例方法是在类的类的特定实例上执行某些操作的方法，例如设置、检索或显示其值。以汽车为例，在制造好后，我们可能需要给它加油。加油的动作类似于实例方法，因为它是在特定的汽车上进行的。
 
-## RETURN VALUES
+## 返回值
 
 当我们声明一个新方法时，必须告知 Objective-C 编译器该方法是公共的（public）还是私有的（private）。
 
@@ -1054,13 +966,13 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 这声明了一个返回空值的打印实例方法。在这种情况下，我们不需要在方法末尾执行 `return` 语句。或者，我们可以执行一个不指定特定值的 `return`，如下所示：
 
-## METHOD ARGUMENTS
+## 方法参数
 
 在 `Program` 的 `@interface` 部分，声明了另外两个方法：
 
-这些都是返回空值的实例方法。每个方法接受一个整数参数，由参数名前的 `(int)` 表示。`setNumerator` 实例中的参数名为 `nm`。这是方法引用该参数的任意名称。
+这些都是返回空值的实例方法。每个方法接受一个整数参数，由参数名前的 `(int)` 表示。`setNumerator:` 实例中的参数名为 `nm`。这是方法引用该参数的任意名称。
 
-因此，`setNumerator` 的定义表示该方法提供一个整数参数 `nm`，并且不返回值。这与 `setDenominator` 相同，只是参数名为 `dn`。注意这些方法的声明语法。方法名结尾的冒号向 Objective-C 编译器指示方法需要一个参数。然后以括号括起参数类型，方式与提供返回类型相同。
+因此，`setNumerator:` 的定义表示该方法提供一个整数参数 `nm`，并且不返回值。这与 `setDenominator:` 相同，只是参数名为 `dn`。注意这些方法的声明语法。方法名结尾的冒号向 Objective-C 编译器指示方法需要一个参数。然后以括号括起参数类型，方式与提供返回类型相同。
 
 最后，方法指定用于标识该参数的符号名称。用分号结束声明。此语法如图所示。当引用接受参数的方法时，必须在方法名后附加冒号。
 
@@ -1070,9 +982,9 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 方法声明。
 
-## @implementation SECTION
+## @implementation 部分
 
-如所述`@implementation` 部分包含了指定方法的实际代码。我们必须指示在此类对象中存储什么类型的数据。也就是说，我们必须指定类成员持有的数据。这些被称为实例变量（instance variables）。为了澄清术语，我们在 `@interface` 部分声明方法，并在 `@implementation` 部分描述它们（即提供实际代码）。以下是 `@implementation` 部分的标准格式：
+如所述，`@implementation` 部分包含了指定方法的实际代码。我们必须指示在此类对象中存储什么类型的数据。也就是说，我们必须指定类成员持有的数据。这些被称为实例变量（instance variables）。为了澄清术语，我们在 `@interface` 部分声明方法，并在 `@implementation` 部分描述它们（即提供实际代码）。以下是 `@implementation` 部分的标准格式：
 
 名称 `NewClass_Name` 与 `@interface` 部分赋予类的名称相同。
 
@@ -1080,20 +992,17 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 然而，这是可选的，且通常不这样做。
 
-
-
-
 `memberDeclarations` 部分描述了 `Fraction` 中存储了什么类型的数据及其名称。
 
 正如我们所看到的，该部分被自己的一组大括号包围。这些针对我们 `Fraction` 类的声明表示 `Fraction` 对象包含两个整数成员：`numerator`（分子）和 `denominator`（分母）。
 
-实例变量在此部分定义的成员。当我们创建一个新对象时，我们会生成一组全新的、不同的实例变量。因此，如果我们有两个 `Frractions` 对象，`fracA` 和 `fracB`，它们每个都拥有自己的一组实例变量——即 `fracA` 和 `fracB` 将各自拥有独立的 `numerator` 和 `denominator`。处理对象的优势之一是 Objective-C 系统会自动为我们维护这些内容。`@implementation` 部分的 `methodDefinitions` 部分为 `@interface` 部分声明的每个方法提供了代码。每个方法的定义与 `@interface` 部分一样，开头都指定方法的类型（类或实例）、其返回类型、以及参数及其类型。方法代码的末尾不是分号，而是被一系列大括号包围。需要提到，通过使用特定的 `@synthesize` 指令，我们可以让编译器为我们自动构建方法。
+实例变量在此部分定义的成员。当我们创建一个新对象时，我们会生成一组全新的、不同的实例变量。因此，如果我们有两个 `Fraction` 对象，`fracA` 和 `fracB`，它们每个都拥有自己的一组实例变量——即 `fracA` 和 `fracB` 将各自拥有独立的 `numerator` 和 `denominator`。处理对象的优势之一是 Objective-C 系统会自动为我们维护这些内容。`@implementation` 部分的 `methodDefinitions` 部分为 `@interface` 部分声明的每个方法提供了代码。每个方法的定义与 `@interface` 部分一样，开头都指定方法的类型（类或实例）、其返回类型、以及参数及其类型。方法代码的末尾不是分号，而是被一系列大括号包围。需要提到，通过使用特定的 `@synthesize` 指令，我们可以让编译器为我们自动构建方法。
 
 `print` 方法使用 `NSLog` 显示实例变量 `numerator` 和 `denominator` 的值。但这种方法指的是谁的 `numerator` 和 `denominator` 呢？它指的是消息接收者对象（receiver object）中的实例变量。这是一个关键课题，我们稍后会回到这里。
 
-整数参数 `n` 通过 `setNumerator:` 方法存储在实例变量 `numerator` 中。另一方面，`SetDenominator` 将其参数 `d` 的值保留在实例变量 `denominator` 中。
+整数参数 `n` 通过 `setNumerator:` 方法存储在实例变量 `numerator` 中。另一方面，`setDenominator:` 将其参数 `d` 的值保留在实例变量 `denominator` 中。
 
-## 程序部分 (PROGRAM SECTION)
+## 程序部分
 
 处理我们问题的代码包含在程序部分，必要时它可以跨越多个文件。正如之前说的，我们必须在某处有一个名为 `main` 的例程。我们的程序执行始终从那里开始。
 
@@ -1111,23 +1020,23 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 返回的结果保存在 `Program` 中的变量 `myFraction` 中。对象的所有实例变量都保证会被 `alloc` 过程置零。这并不意味着对象已经正确设置好供使用。在分配一个对象后，我们必须对其进行初始化。
 
-再次，我们正在使用一个我们并未创建的方法。`init` 方法会创建一个类的新实例。请记住，我们正在向 `my_Fraction` 发送 `init` 消息。也就是说，我们在这里初始化一个特定的 `Fraction` 对象，因此我们将它传递给类的一个实例，而不是类本身。在继续之前，请确保我们已经理解了这一点。`init` 方法也会返回一个值，即被初始化的对象。该返回值保存在我们的 `Fraction` 变量 `my_Fraction` 中。分配类的新实例然后对其初始化的两行序列在 Objective-C 中是非常标准的做法，以至于两条消息经常被合并，如下所示：
+再次，我们正在使用一个我们并未创建的方法。`init` 方法会创建一个类的新实例。请记住，我们正在向 `myFraction` 发送 `init` 消息。也就是说，我们在这里初始化一个特定的 `Fraction` 对象，因此我们将它传递给类的一个实例，而不是类本身。在继续之前，请确保我们已经理解了这一点。`init` 方法也会返回一个值，即被初始化的对象。该返回值保存在我们的 `Fraction` 变量 `myFraction` 中。分配类的新实例然后对其初始化的两行序列在 Objective-C 中是非常标准的做法，以至于两条消息经常被合并，如下所示：
 
 此内部消息表达式首先被求值：
 
-正如我们所知，实际分配的分数是该消息表达式的结果。我们没有之前那样将分配结果保存在变量中，而是直接对它应用 `init` 方法。因此，再次在初始化它之前，我们先分配了一个新的 `Fraction`。然后将初始化结果赋值给变量 `my_Fraction`。
+正如我们所知，实际分配的分数是该消息表达式的结果。我们没有之前那样将分配结果保存在变量中，而是直接对它应用 `init` 方法。因此，再次在初始化它之前，我们先分配了一个新的 `Fraction`。然后将初始化结果赋值给变量 `myFraction`。
 
 作为最后的一种简便处理方法，分配和初始化通常直接包含在声明行中，例如：
 
 回到 `Program`，我们现在可以指定分数的值。这些程序行恰恰实现了这一点：
 
-第一条消息语句向 `myFraction` 发送了 `setNumerator:` 消息。提供的参数值为 2。随后将控制权传递到你的 `Fraction` 类的 `setNumerator:` 方法。因为 `my_Fraction` 是 `Fraction` 类的对象，Objective-C 系统识别出应该使用该类的此方法。
+第一条消息语句向 `myFraction` 发送了 `setNumerator:` 消息。提供的参数值为 2。随后将控制权传递到你的 `Fraction` 类的 `setNumerator:` 方法。因为 `myFraction` 是 `Fraction` 类的对象，Objective-C 系统识别出应该使用该类的此方法。
 
 提供的值 2 被放置在 `setNumerator:` 方法中的变量 `n` 中。
 
-通过该方法中的单行程序代码，该值被存储在实例变量 `numerator` 中。因此我们将 `my_Fraction` 的 `numerator` 设置为 2。
+通过该方法中的单行程序代码，该值被存储在实例变量 `numerator` 中。因此我们将 `myFraction` 的 `numerator` 设置为 2。
 
-紧随其的是调用 `my_Fraction` 的 `setDenominator:` 方法的消息。
+紧随其的是调用 `myFraction` 的 `setDenominator:` 方法的消息。
 
 在 `setDenominator:` 方法内部，参数 4 被分配给变量 `d`。
 
@@ -1139,30 +1048,27 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 实例变量的 `numerator` 和 `denominator` 值在 `print` 方法内部被打印，用斜杠字符分隔。
 
-看起来我们必须在 `Program` 中创建更多代码来复制我们在 `Program` 中实现的内容。对于这个简单的例子来说是正确的，但处理对象的终极目的是让我们的程序更容易设计、维护和扩展。我们以后会研究这个问题。让我们暂时回到 `my_Fraction` 的声明。
+看起来我们必须在 `Program` 中创建更多代码来复制我们在 `Program` 中实现的内容。对于这个简单的例子来说是正确的，但处理对象的终极目的是让我们的程序更容易设计、维护和扩展。我们以后会研究这个问题。让我们暂时回到 `myFraction` 的声明。
 
-在它的声明中，星号 `*` 表示 `my_Fraction` 是一个 `Fraction` 对象的引用（指针）。
+在它的声明中，星号 `*` 表示 `myFraction` 是一个 `Fraction` 对象的引用（指针）。
 
-变量 `my_Fraction` 并不持有分数的数据（即它的分子和分母值）。相反，它保存了一个引用（这是一个内存地址），指定了对象内容存储的位置。当我们最初声明 `my_Fraction` 时，它的值是未定义的，因为它还没有被赋值给任何东西，也没有默认值。`myFraction` 可以被看作一个持有值的盒子。这个盒子最初有一个未定义的值，因为它还没有被赋值。接下来的图说明了这一点。
+变量 `myFraction` 并不持有分数的数据（即它的分子和分母值）。相反，它保存了一个引用（这是一个内存地址），指定了对象内容存储的位置。当我们最初声明 `myFraction` 时，它的值是未定义的，因为它还没有被赋值给任何东西，也没有默认值。`myFraction` 可以被看作一个持有值的盒子。这个盒子最初有一个未定义的值，因为它还没有被赋值。接下来的图说明了这一点。
 
-声明 `Fraction *my_Fraction`。
+声明 `Fraction *myFraction`。
 
-当我们分配一个新对象（例如使用 `alloc`）时，会预留足够的内存来包含对象的内容，包括实例变量的空间，外加额外一点。`alloc` 例程返回数据存储的位置（数据的引用），并将其赋值给变量 `my_Fraction`。这一切在 `Program` 中运行以下句子时发生：
+当我们分配一个新对象（例如使用 `alloc`）时，会预留足够的内存来包含对象的内容，包括实例变量的空间，外加额外一点。`alloc` 例程返回数据存储的位置（数据的引用），并将其赋值给变量 `myFraction`。这一切在 `Program` 中运行以下句子时发生：
 
-下图描绘了项目的分配以及将该对象的引用存储在 `my_Fraction` 中的过程。
-
-
-
+下图描绘了项目的分配以及将该对象的引用存储在 `myFraction` 中的过程。
 
 以下示例演示了如何在程序中处理多个分数。将一个分数设置为 3/4，另一个设置为 4/7，并在 `Program` 中显示它们。
 
 ![](img/ufig2_5.jpg)
 
-### 设置分数的分子和分母。
+### 设置分数的分子和分母
 
 ### 访问实例变量和数据封装
 
-我们已经看到处理分数的的方法可能如何通过名称直接访问 `numerator` 和 `denominator` 实例变量。在实际上，实例方法在各种情况下都非常有用。
+我们已经看到处理分数的方法可能如何通过名称直接访问 `numerator` 和 `denominator` 实例变量。在实际上，实例方法在各种情况下都非常有用。
 
 另一方面，类方法无法直接访问其实例变量，因为类方法仅处理类本身，而不是它的任何实例。如果我们需要从不同的位置（即从我们的主程序内部）访问实例变量，该怎么办？
 
@@ -1176,13 +1082,13 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 值得注意的是，方法名称与它们访问的实例变量名称是相同的。这并不是问题（尽管初看起来可能很奇怪）；这是正常做法。程序对我们的两个新方法进行了测试。
 
-此 `NSLog` 语句标明了向 `my_Fraction` 发送两个消息的结果：第一个用于获取分子的值，第二个用于检索分母的值：
+此 `NSLog` 语句标明了向 `myFraction` 发送两个消息的结果：第一个用于获取分子的值，第二个用于检索分母的值：
 
-结果，`numerator` 消息将在初始消息调用时传递给 `Fraction` 对象 `my_Fraction`。代码将返回该方法中该分数的 `numerator` 实例变量的值。记住，方法在运行时的上下文是消息接收者对象。当 `numerator` 方法访问并返回 `numerator` 实例变量的值时，就获取并返回了 `my_Fraction` 的 `numerator` 值。返回的整数值随后提供给 `NSLog` 并在其中显示。
+结果，`numerator` 消息将在初始消息调用时传递给 `Fraction` 对象 `myFraction`。代码将返回该方法中该分数的 `numerator` 实例变量的值。记住，方法在运行时的上下文是消息接收者对象。当 `numerator` 方法访问并返回 `numerator` 实例变量的值时，就获取并返回了 `myFraction` 的 `numerator` 值。返回的整数值随后提供给 `NSLog` 并在其中显示。
 
-第二个消息调用将调用 `denominator` 方法，以访问并返回 `my_Fraction` 的 `denominator` 值，该值随后将提供给 `NSLog` 显示。
+第二个消息调用将调用 `denominator` 方法，以访问并返回 `myFraction` 的 `denominator` 值，该值随后将提供给 `NSLog` 显示。
 
-此外，设置实例变量值的方法通常称为 **setter**（访问），而获取实例变量值的方法称为 **getter**（访问器）。`Fraction` 类的 setter 是 `setNumerator:` 和 `setDenominator:`，而 getter 是 `numerator` 和 `denominator`。setter 和 getter 结合使用时也被称为访问技术（accessor techniques）。
+此外，设置实例变量值的方法通常称为 setter（访问器），而获取实例变量值的方法称为 getter（访问器）。`Fraction` 类的 setter 是 `setNumerator:` 和 `setDenominator:`，而 getter 是 `numerator` 和 `denominator`。setter 和 getter 结合使用时也被称为访问技术（accessor techniques）。
 
 确保我们理解 setter 和 getter 之间的区别。由于 setter 的功能是接收一个参数并将相关的实例变量设置为该参数的值，因此 setter 不返回值。在这种情况下，不应返回任何值。setter 通常不返回值，因为它们的功能是设置实例变量的值。另一方面，getter 用于“获取”存储在对象中的实例变量的值并将其返回应用程序。为了实现这一点，getter 必须使用 `return` 语句来返回实例变量的值。
 
@@ -1198,16 +1104,18 @@ Objective-C 的 `return` 语句从方法返回一个值，类似于我们在之�
 
 # 第 3 章 基础语法
 
+
+
 DOI: [10.1201/9781003358534-3](https://doi.org/10.1201/9781003358534-3)
 
 ## 本章内容
 
-* 标记 (Tokens)
-* 分号 (Semicolons)
-* 注释 (Comments)
-* 标识符 (Identifiers)
-* 关键字 (Keywords)
-* 空格字符 (Whitespace)
+- 标记 (Tokens)
+- 分号 (Semicolons)
+- 注释 (Comments)
+- 标识符 (Identifiers)
+- 关键字 (Keywords)
+- 空格字符 (Whitespace)
 
 上一章涵盖了环境搭建和程序结构，本章将介绍 Objective-C 的基础语法。
 
@@ -1231,7 +1139,7 @@ DOI: [10.1201/9781003358534-3](https://doi.org/10.1201/9781003358534-3)
 
 ### 标识符
 
-Objective-C 标识符识别变量、函数或其他用户定义的实体。标识符以 A 到 Z、a 到 z 或下划线之一开头，并以零或多个字母、下划线或数字（0 到 9）结束。
+Objective-C 标识符识别变量、函数或其他用户定义的实体。标识符以 `A` 到 `Z`、`a` 到 `z` 或下划线之一开头，并以零或多个字母、下划线或数字（`0` 到 `9`）结束。
 
 Objective-C 标识符中不允许使用 `@`、`$` 和 `%` 等标点字符。Objective-C 是一种区分大小写的编程语言。因此，在 Objective-C 中，`Manpower` 和 `manpower` 是两个不同的 ID。以下是一些可接受的标识符示例：
 
@@ -1240,6 +1148,7 @@ Objective-C 标识符中不允许使用 `@`、`$` 和 `%` 等标点字符。Obje
 以下是 Objective-C 保留术语列表。这些保留字不能用作常量、变量或标识符名。
 
 | auto | return | else | switch |
+| --- | --- | --- | --- |
 | break | enum | register | typedef |
 | const | extern | short | union |
 | case | float | long | unsigned |
@@ -1249,8 +1158,9 @@ Objective-C 标识符中不允许使用 `@`、`$` 和 `%` 等标点字符。Obje
 | do | int | Static | _Packed |
 | double | protocol | interface | implementation |
 | NSObject | NSInteger | retain | CGFloat |
-| property | nonatomic; | NSNumber | weak | own| strong | unsafe_unretained; | readwrite | readonly |
-| | | | |
+| property | nonatomic; | NSNumber | weak |
+| own | strong | unsafe_unretained; | readwrite |
+| readonly | | | |
 
 ### OBJECTIVE-C 中的空格字符
 
@@ -1269,10 +1179,6 @@ intfruit=lichi;
 ```
 
 在 `fruit` 和 `=` 之间、或者 `=` 和 `lichi` 之间不需要空格。然而，为了可读性，我们允许加入任何空格。
-
-
-
-
 
 # 数据类型
 
@@ -1295,15 +1201,15 @@ intfruit=lichi;
 
 | 类型 | 存储大小 | 取值范围 |
 | --- | --- | --- |
-| char | 1 字节 | −128 到 127 或 0 到 255 |
-| unsigned char | 1 字节 | 0 到 255 |
-| signed char | 1 字节 | −128 到 127 |
-| int | 2 或 4 字节 | −32,768 到 32,767 或 −2,147,483,648 到 2,147,483,647 |
-| unsigned int | 2 或 4 字节 | 0 到 65,535 或 0 到 4,294,967,295 |
-| short | 2 字节 | −32,768 到 32,767 |
-| unsigned short | 2 字节 | 0 到 65,535 |
-| long | 4 字节 | −2,147,483,648 到 2,147,483,647 |
-| unsigned long | 4 字节 | 0 到 4,294,967,295 |
+| `char` | 1 字节 | −128 到 127 或 0 到 255 |
+| `unsigned char` | 1 字节 | 0 到 255 |
+| `signed char` | 1 字节 | −128 到 127 |
+| `int` | 2 或 4 字节 | −32,768 到 32,767 或 −2,147,483,648 到 2,147,483,647 |
+| `unsigned int` | 2 或 4 字节 | 0 到 65,535 或 0 到 4,294,967,295 |
+| `short` | 2 字节 | −32,768 到 32,767 |
+| `unsigned short` | 2 字节 | 0 到 65,535 |
+| `long` | 4 字节 | −2,147,483,648 到 2,147,483,647 |
+| `unsigned long` | 4 字节 | 0 到 4,294,967,295 |
 
 在特定平台上，`sizeof` 运算符可以识别类型或变量的精确大小。`sizeof(type)` 返回对象或类型以字节为单位的存储大小。下面的示例显示了如何在任何机器上确定 `int` 类型的大小。
 
@@ -1313,9 +1219,9 @@ intfruit=lichi;
 
 | 类型 | 存储大小 | 取值范围 | 精度 |
 | --- | --- | --- | --- |
-| float | 4 字节 | 1.2E−38 到 3.4E+38 | 6 位小数 |
-| double | 8 字节 | 2.3E−308 到 1.7E+308 | 15 位小数 |
-| long double | 10 字节 | 3.4E−4932 到 1.1E+4932 | 19 位小数 |
+| `float` | 4 字节 | 1.2E−38 到 3.4E+38 | 6 位小数 |
+| `double` | 8 字节 | 2.3E−308 到 1.7E+308 | 15 位小数 |
+| `long double` | 10 字节 | 3.4E−4932 到 1.1E+4932 | 19 位小数 |
 
 `float.h` 头文件包含宏，允许我们在程序中使用这些值以及实数的其他二进制表示信息。接下来的示例将返回 `float` 类型所占用的存储空间及其取值范围。
 
@@ -1325,8 +1231,8 @@ intfruit=lichi;
 
 | 序号 | 类型与描述 |
 | --- | --- |
-| 1 | 函数返回值为 void 某些 Objective-C 函数返回 `void` 或不返回值。没有返回值的函数的返回类型为 `void`。以 `void exit(int status)` 为例。 |
-| 2 | 函数参数为 void 某些 Objective-C 函数不接受任何参数。没有参数的函数可以接受 `void`。例如 `int rand(void)`。 |
+| 1 | 函数返回值为 `void` 某些 Objective-C 函数返回 `void` 或不返回值。没有返回值的函数的返回类型为 `void`。以 `void exit(int status)` 为例。 |
+| 2 | 函数参数为 `void` 某些 Objective-C 函数不接受任何参数。没有参数的函数可以接受 `void`。例如 `int rand(void)`。 |
 
 ## OBJECTIVE-C 中的变量
 
@@ -1336,11 +1242,11 @@ intfruit=lichi;
 
 | 序号 | 类型与描述 |
 | --- | --- |
-| 1 | char 单个字节（一个字节）。它是一种整数类型。 |
-| 2 | int 机器上最自然的整数大小。 |
-| 3 | float 单精度浮点值。 |
-| 4 | double 双精度浮点值。 |
-| 5 | void 表示类型的缺失。 |
+| 1 | `char` 单个字节（一个字节）。它是一种整数类型。 |
+| 2 | `int` 机器上最自然的整数大小。 |
+| 3 | `float` 单精度浮点值。 |
+| 4 | `double` 双精度浮点值。 |
+| 5 | `void` 表示类型的缺失。 |
 
 Objective-C 编程语言还提供了许多类型的变量，我们将在接后的章节中详细介绍，例如枚举、指针、数组、结构、联合体等。在这一部分，我们将介绍基础变量种类。
 
@@ -1355,6 +1261,7 @@ Objective-C 中的变量定义指示编译器为该变量在何处以及产生�
 `extern` 关键字可以在任何位置指定变量。
 
 **示例:** 考虑以下：
+
 ```c
 int e, f;
 int g = 10;
@@ -1383,10 +1290,6 @@ Objective-C 中有两种表达式。
 
 字面量数字也可以带有 `U` 或 `L` 后缀，分别代表无符号或长整。以任何顺序编写后缀，使用大写或小写字母。
 
-
-
-
-
 浮点数字面量由整数部分、小数点、小数部分和指数部分组成。浮点数字面量可以用十进制值或指数值的形式表示。
 
 用十进制形式表示时，应包含小数点、指数或两者；用指数形式表示时，应包含整数部分、小数部分或两者。带符号的指数由 `e` 或 `E` 引入。
@@ -1395,9 +1298,9 @@ Objective-C 中有两种表达式。
 
 ## 字符常量
 
-像“x”这样的字符字面量被单引号括起来，可以存储在基础 `char` 变量中。
+像 `'x'` 这样的字符字面量被单引号括起来，可以存储在基础 `char` 变量中。
 
-在 Objective-C 中，字符字面量可以是基础字符（如“x”）、转义序列（如 `\t`）或通用字符（如 `\u02C0`）。
+在 Objective-C 中，字符字面量可以是基础字符（如 `'x'`）、转义序列（如 `\t`）或通用字符（如 `\u02C0`）。
 
 C 中的某些字符在反斜杠后面具有特殊含义，例如换行符 `\n` 或制表符 `\t`。下面提供了这些转义序列代码的列表。
 
@@ -1421,13 +1324,14 @@ C 中的某些字符在反斜杠后面具有特殊含义，例如换行符 `\n` 
 
 ## 字符串字面量
 
-双引号围绕字符串字面量或常量 ""。在普通字符、转义序列和通用字符方面，字符串中的字符与字符字面量相似。我们可以使用字符串字面量和空白将长行分为多行。
+双引号围绕字符串字面量或常量 `""`。在普通字符、转义序列和通用字符方面，字符串中的字符与字符字面量相似。我们可以使用字符串字面量和空白将长行分为多行。
 
 以下是一些字符串字面量的示例。三种变体具有相同的字符串。
 
 ## 常量定义
 
 在 C 中定义常量有两种简单的方法：
+
 1. 使用 `#define` 预处理器
 2. 使用 `const` 关键字
 
@@ -1442,6 +1346,7 @@ C 中的某些字符在反斜杠后面具有特殊含义，例如换行符 `\n` 
 # 数据类型
 
 在上一章中，我们涵盖了基础语法，在本章中，我们将讨论数据类型：整数类型
+
 - 浮点数类型
 - `void` 类型
 
@@ -1451,13 +1356,13 @@ C 中的某些字符在反斜杠后面具有特殊含义，例如换行符 `\n` 
 
 `int` 变量只能用于存储整数值，即不包含小数位数字的数字。Objective-C 语言支持的其他数据类型包括 `float`、`double` 和 `char`。
 
-`float` 类型的变量可用于存储浮点数（包含小数位的值）。`double` 类型与 `float` 类型相似，但范围几乎是其两倍。最后，`char` 数据类型可以包含单个字符，例如字母 a、数字 6 或分号。
+`float` 类型的变量可用于存储浮点数（包含小数位的值）。`double` 类型与 `float` 类型相似，但范围几乎是其两倍。最后，`char` 数据类型可以包含单个字符，例如字母 `a`、数字 `6` 或分号。
 
-Objective-C 中的常量可以是任何字面量、单个字符或字符字符串。数字 6 表示常量值。常量字符字符串是字符串“Programming in Objective-C is interesting.”。常量表达式是指完全由常量值组成的表达式，因为它的每个项都有一个常量值：然而，如果我声明了一个整数变量，该语句将不是一个常量。
+Objective-C 中的常量可以是任何字面量、单个字符或字符字符串。数字 `6` 表示常量值。常量字符字符串是字符串 `"Programming in Objective-C is interesting."`。常量表达式是指完全由常量值组成的表达式，因为它的每个项都有一个常量值：然而，如果我声明了一个整数变量，该语句将不是一个常量。
 
 ## int int
 
-整数常量由一系列一个或多个数字组成。序列前面的负号表示该值为负数。整数常量由整数 6、-10 和 0 表示。数字之间不允许嵌入空格或逗号。每个值（无论是字符、整数还是浮点数）都有一个取值范围。这个范围指的是用于存储数据的可用存储空间。通常情况下，该数字在语言中并未标出；它通常依赖于我们运行的计算机，因此被称为取决于具体实现。例如，一个整数变量在我们的机器上可能占用 32 位或 64 位。当使用 64 位时，整数变量中存储的数字可能比使用 32 位时大得多。
+整数常量由一系列一个或多个数字组成。序列前面的负号表示该值为负数。整数常量由整数 `6`、`-10` 和 `0` 表示。数字之间不允许嵌入空格或逗号。每个值（无论是字符、整数还是浮点数）都有一个取值范围。这个范围指的是用于存储数据的可用存储空间。通常情况下，该数字在语言中并未标出；它通常依赖于我们运行的计算机，因此被称为取决于具体实现。例如，一个整数变量在我们的机器上可能占用 32 位或 64 位。当使用 64 位时，整数变量中存储的数字可能比使用 32 位时大得多。
 
 | 类型 | 存储大小 | 取值范围 |
 | --- | --- | --- |
@@ -1489,7 +1394,7 @@ Objective-C 中的常量可以是任何字面量、单个字符或字符字符�
 
 ## char 类型
 
-`char` 变量可用于包含单个字符。在单引号内封装字符创建字符常量。因此，‘a’、『；’和‘0’ 都是可接受的字符常量。字母 a 表示第一个常量，分号表示第二个，符号零表示第三个——它与数字零不同。
+`char` 变量可用于包含单个字符。在单引号内封装字符创建字符常量。因此，`'a'`、`';'` 和 `'0'` 都是可接受的字符常量。字母 `a` 表示第一个常量，分号表示第二个，符号零表示第三个——它与数字零不同。
 
 单引号内的单个字符与 C 风格的字符字符串不同，后者包含任意数量的字符。`NSString` 字符串对象是用双引号包裹并由 `@` 字符引导的字符串，正如在前一章提到的。尽管这违反了前面的规则，字符常量 `\n`（换行符）是一个合法的字符常量。因为反斜杠被视为特殊字符，所以如此。换句话说，即使 `\n` 由两个字符组成，Objective-C 编译器将其视为单个字符。反斜杠用于启动其他特殊字符。
 
@@ -1503,25 +1408,23 @@ Objective-C 中的常量可以是任何字面量、单个字符或字符字符�
 long factorial;
 ```
 
-变量 `factorial` 现在被声明为长整数变量。`long` 变量的范围与 float 和 double ，取决于您的计算机系统。在 `NSLog` 的整数格式字母前使用字母 `l` 作为修饰符来表示长整数的值。
-
-
-
-
+变量 `factorial` 现在被声明为长整数变量。`long` 变量的范围与 `float` 和 `double` 一样，取决于您的计算机系统。在 `NSLog` 的整数格式字母前使用字母 `l` 作为修饰符来表示长整数的值。
 
 当用于 `int` 声明之前时，修饰符 `short` 告诉 Objective-C 编译器定义的变量旨在存储较小的整数值。使用 `short` 变量的主要目的是节省内存空间，当软件需要大量内存且可用内存受限时，这可能会成为问题。
 
 当整数变量仅用于存储正值时，可以使用放在其前面的最后一个修饰符。以下内容告诉编译器计数器变量将仅存储正值：
 
+
+
 将整数变量的使用限制在仅存储正整数上可以扩展其范围。
 
 ## 类型 id (TYPE)
 
-`id` 数据类型用于存储任何类型的对象。在某些方面，它是一种通用的对象类型。例如，此行定义了 `graphic_Object` 为类型 `id` 的变量：
+`id` 数据类型用于存储任何类型的对象。在某些方面，它是一种通用的对象类型。例如，此行定义了`graphic_Object`为类型`id`的变量：
 
-方法可以按如下方式指定返回 `id` 类型的值：
+方法可以按如下方式指定返回`id`类型的值：
 
-这创建了一个 `new_Object` 实例方法，它接受一个名为 `type` 的单整数输入，并返回一个 `id` 类型的结果。`id` 数据类型是一个关键的数据类型，为了严谨起见，我们在这里简要地提到了它。`id` 类型为多态和动态绑定等主要的 Objective-C 特性提供了基础。
+这创建了一个`new_Object`实例方法，它接受一个名为`type`的单整数输入，并返回一个`id`类型的结果。`id`数据类型是一个关键的数据类型，为了严谨起见，我们在这里简要地提到了它。`id`类型为多态和动态绑定等主要的 Objective-C 特性提供了基础。
 
 | 类型 | 常量示例 | NSLog 字符 |
 | --- | --- | --- |
@@ -1541,14 +1444,14 @@ long factorial;
 
 ## void 类型 (THE void TYPE)
 
-`void` 类型表示没有可用值。它被用于三种不同的语境。
+`void`类型表示没有可用值。它被用于三种不同的语境。
 
 | 序号 | 类型和描述 |
 | --- | --- |
-| 1 | 函数返回为 void：若干 Objective-C 函数不返回返回值或返回 void。没有返回值的函数返回类型为 `void`。例如，考虑 `void exit (int status);` |
-| 2 | 函数参数为 void：某些 Objective-C 函数不接受任何参数。没有参数的函数可以接受 `void`。例如，`int rand(void);` |
+| 1 | 函数返回为 void：若干 Objective-C 函数不返回返回值或返回 void。没有返回值的函数返回类型为`void`。例如，考虑`void exit (int status);` |
+| 2 | 函数参数为 void：某些 Objective-C 函数不接受任何参数。没有参数的函数可以接受`void`。例如，`int rand(void);` |
 
-本章涵盖了 `int`、`float`、`char` 和 `void` 类型的数据类型。
+本章涵盖了`int`、`float`、`char`和`void`类型的数据类型。
 
 # 第 5 章 变量 (Variables)
 
@@ -1580,25 +1483,25 @@ Objective-C 编程语言还定义了不同的变量，我们将在接下来的�
 
 Objective-C 中的变量定义指示编译器为变量产生何处以及多少存储。如下所示，变量描述解释了数据类型并提供了相关信息。
 
-方法可以按如下方式指定返回 `id` 类型的值：
+方法可以按如下方式指定返回`id`类型的值：
 
-这创建了一个 `new_Object` 实例方法，它接受一个名为 `type` 的单整数输入，并返回一个 `id` 类型的结果。`id` 数据类型是一个关键的数据类型，为了严谨起见，我们在这里简要地提到了它。`id` 类型为多态和动态绑定等主要的 Objective-C 特性提供了基础。
+这创建了一个`new_Object`实例方法，它接受一个名为`type`的单整数输入，并返回一个`id`类型的结果。`id`数据类型是一个关键的数据类型，为了严谨起见，我们在这里简要地提到了它。`id`类型为多态和动态绑定等主要的 Objective-C 特性提供了基础。
 
 Objective-C 中的变量定义指示编译器为变量产生何处以及多少存储。如下所示，变量描述解释了数据类型并提供了相关信息。
 
-`int d, e, f;` 声明了 `int` 类型的变量。
+`int d, e, f;`声明了`int`类型的变量。
 
-`int d = 1, e = 2, f = 3;` 初始化了这些变量。
+`int d = 1, e = 2, f = 3;`初始化了这些变量。
 
-具有静态存储周期的变量自动初始化为 `NULL`。在声明中，变量可以赋值（给定初始值）。
+具有静态存储周期的变量自动初始化为`NULL`。在声明中，变量可以赋值（给定初始值）。
 
-如下所示，赋值是是 `char` 类型的 `d`、`e` 和 `f`。
+如下所示，赋值是是`char`类型的`d`、`e`和`f`。
 
 ## Objective-C 变量声明 (OBJECTIVE-C VARIABLE DECLARATION)
 
 变量声明确保在编译时存在指定类型的变量。
 
-在与多个文件工作时，需要变量声明。我们在程序链接时使用这些变量。`extern` 关键字将用于任何位置。Objective-C 中的变量可以声明多次，但在每个文件中只能定义一次。
+在与多个文件工作时，需要变量声明。我们在程序链接时使用这些变量。`extern`关键字将用于任何位置。Objective-C 中的变量可以声明多次，但在每个文件中只能定义一次。
 
 考虑以下示例。变量在顶部声明，在主函数内部定义。
 
@@ -1633,12 +1536,9 @@ DOI: [10.1201/9781003358534-6](https://doi.org/10.1201/9781003358534-6)
 
 ## 整数字面量 (INTEGER LITERALS)
 
-十进制、八进制或十六进制常量都可以作为整数字面量。对于十六进制，前缀提供了基或进制：`0x` 或 `0X`，八进制为 `0`，十进制无。
+十进制、八进制或十六进制常量都可以作为整数字面量。对于十六进制，前缀提供了基或进制：`0x`或`0X`，八进制为`0`，十进制无。
 
-字面量数字还可以带有 `U` 或 `L` 后缀，分别代表无符号或长型。以任何顺序编写后缀，使用大写或小写字母。
-
-
-
+字面量数字还可以带有`U`或`L`后缀，分别代表无符号或长型。以任何顺序编写后缀，使用大写或小写字母。
 
 以下是一些整数字面量的示例：
 
@@ -1648,17 +1548,17 @@ DOI: [10.1201/9781003358534-6](https://doi.org/10.1201/9781003358534-6)
 
 浮点字面量由整数部分、小数点、小数部分和指数部分组成。浮点字面量可以用十进制值或指数值表示。
 
-用十进制形式表示时，包含小数点、指数或两者；用指数形式表示时，包含整数部分、小数部分或两者。使用 `e` 或 `E` 引入带符号的指数。
+用十进制形式表示时，包含小数点、指数或两者；用指数形式表示时，包含整数部分、小数部分或两者。使用`e`或`E`引入带符号的指数。
 
 以下是浮点数字面量的实例：
 
 ## 字符常量
 
-像‘x’这样的字符字面量用单引号括起来，可以存储在 `char` 变量中。
+像‘x’这样的字符字面量用单引号括起来，可以存储在`char`变量中。
 
-在 Objective-C 中，字符字面量可以是基本字符（如‘x’）、转义序列（如 `\t`）或通用通用字符（如 `\u02C0`）。
+在 Objective-C 中，字符字面量可以是基本字符（如‘x’）、转义序列（如`\t`）或通用通用字符（如`\u02C0`）。
 
-C 中的某些字母在跟随反斜杠时具有特殊含义，例如换行符 `\n` 或制表符 `\t`。下面提供了部分转义序列代码的列表：
+C 中的某些字母在跟随反斜杠时具有特殊含义，例如换行符`\n`或制表符`\t`。下面提供了部分转义序列代码的列表：
 
 | 转义序列 | 含义 |
 | --- | --- |
@@ -1688,16 +1588,16 @@ C 中的某些字母在跟随反斜杠时具有特殊含义，例如换行符 `\
 
 在 C 中定义常量有两种简单的方法。
 
-- 使用 `#define` 预处理器
-- 使用 `const` 关键字
+- 使用`#define`预处理器
+- 使用`const`关键字
 
 ### #define 预处理器
 
-以下是使用 `#define` 预处理器声明常量的语法：
+以下是使用`#define`预处理器声明常量的语法：
 
 ### const 关键字
 
-`const` 前缀可用于声明特定类型的常量，如下所示：
+`const`前缀可用于声明特定类型的常量，如下所示：
 
 在本章中，我们结合相关示例涵盖了 Objective-C 中的常量。
 
@@ -1730,17 +1630,17 @@ DOI: [10.1201/9781003358534-7](https://doi.org/10.1201/9781003358534-7)
 
 ## OBJECTIVE-C 中的算术运算符
 
-下表涵盖了 Objective-C 编程语言提供的所有算术运算符。假设变量 `P` 等于 40，变量 `Q` 等于 20。
+下表涵盖了 Objective-C 编程语言提供的所有算术运算符。假设变量`P`等于 40，变量`Q`等于 20。
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `+` | 将两个操作数相加 | `P + Q` 将得到 40 |
-| `−` | 从第一个操作数减去第二个 | `p − Q` 将得到 `22` |
-| `*` | 两个两个操作数 | `P * Q` 将得到 200 |
-| `/` | 被除数除以除数 | `P / Q` 将得到 13 |
-| `%` | 取模运算符和整数除后的余数 | `P % Q` 将得到 0 |
-| `++` | 递增运算符将整数值加一 | `P++` 将得到 15 |
-| `--` | 递减运算符将整数值减一 | `P--` 将得到 17 |
+| `+` | 将两个操作数相加 | `P + Q`将得到 40 |
+| `−` | 从第一个操作数减去第二个 | `p − Q`将得到`22` |
+| `*` | 两个两个操作数 | `P * Q`将得到 200 |
+| `/` | 被除数除以除数 | `P / Q`将得到 13 |
+| `%` | 取模运算符和整数除后的余数 | `P % Q`将得到 0 |
+| `++` | 递增运算符将整数值加一 | `P++`将得到 15 |
+| `--` | 递减运算符将整数值减一 | `P--`将得到 17 |
 
 ## 运算符优先级
 
@@ -1748,15 +1648,15 @@ DOI: [10.1201/9781003358534-7](https://doi.org/10.1201/9781003358534-7)
 
 这种优先级决定了带有多个运算符的表达式如何求值：优先级较高的运算符先求值。具有相同优先级的运算符表达式从左到右或从右到左评估。这被称为运算符的结合律。
 
-程序声明了整数变量 `p`、`q`、`r`、`d` 和 `result`，然后将 `p` 减 `q` 的结果赋值给 `result` 并使用相应的 `NSLog` 调用显示其值。
+程序声明了整数变量`p`、`q`、`r`、`d`和`result`，然后将`p`减`q`的结果赋值给`result`并使用相应的`NSLog`调用显示其值。
 
-以下语句将 `q` 的值乘以 `r` 的值并将积存储在 `result` 中：
+以下语句将`q`的值乘以`r`的值并将积存储在`result`中：
 
-然后使用 `NSLog` 函数显示乘法结果，我们现在应该熟悉该函数。
+然后使用`NSLog`函数显示乘法结果，我们现在应该熟悉该函数。
 
 除法运算符（斜杠）在下面的程序行中引入。
 
-在用 `p` 除以 `r` 之后，`NSLog` 语句显示了 300 除以 15 得到的  20。
+在用`p`除以`r`之后，`NSLog`语句显示了 300 除以 15 得到的 20。
 
 尝试将整数除以零会导致异常终止。即使软件没有崩溃，这种除法的结果也是意义的。
 
@@ -1766,40 +1666,37 @@ DOI: [10.1201/9781003358534-7](https://doi.org/10.1201/9781003358534-7)
 
 程序重复了我们刚刚涵盖的内容，同时引入了整数算术的概念。
 
-为了对齐每个变量的声明，我们在前三句中 `int` 与 `p`、`q` 和 `result` 的声明之间添加了额外的空格。这使得软件更容易阅读。我们可能还注意到，在目前提供的每个程序中，每个运算符周围都添加了空格。这同样可选，主要出于美观考虑。在几乎任何允许单个空格的地方，我们都可以插入更多的空格。如果最终程序更易读，多按几次空格键将获得回报。
+为了对齐每个变量的声明，我们在前三句中`int`与`p`、`q`和`result`的声明之间添加了额外的空格。这使得软件更容易阅读。我们可能还注意到，在目前提供的每个程序中，每个运算符周围都添加了空格。这同样可选，主要出于美观考虑。在几乎任何允许单个空格的地方，我们都可以插入更多的空格。如果最终程序更易读，多按几次空格键将获得回报。
 
-程序初始 `NSLog` 调用中的语句支持运算符优先级的概念。以下是该表达式的求值方式：
+程序初始`NSLog`调用中的语句支持运算符优先级的概念。以下是该表达式的求值方式：
 
+由于除法的优先级高于加法，因此变量`p` (25) 的值首先除以`5`。这得到了一个中间结果`5`。由于乘法的优先级高于加法，中间结果`5`乘以变量`b`的值`2`，得到一个新的中间结果`10`。最后，计算`6`和`10`的和，得到最终值`16`。
 
+在第二个`NSLog`语句中引入了一个新的转折。我们本以为，将`a`除以`q`然后乘以`b`应该会得到`p`的值，即`25`。
 
+然而，如输出显示的`24`所示，事实并非如此。有没有可能是计算机在过程中丢失了一点信息？这不太可能的。事实是，在评估该等式时使用了整数算术。如果我们回溯它们的定义，会发现变量`p`和`q`被声明为`int`类型。
 
-由于除法的优先级高于加法，因此变量 `p` (25) 的值首先除以 `5`。这得到了一个中间结果 `5`。由于乘法的优先级高于加法，中间结果 `5` 乘以变量 `b` 的值 `2`，得到一个新的中间结果 `10`。最后，计算 `6` 和 `10` 的和，得到最终值 `16`。
+当表达式中的短语由两个整数组成时，Objective-C 系统会执行整数算术。在这种情况下，数字的所有小数部分都会丢失。因此，将`p`的值除以`q`的值（即`25`除以`2`）得到的中间结果是`12`，而不是我们预期的`12.5`。当我们将此中间结果乘以`2`时，得到了`24`，这解释了“丢失”的数字。
 
-在第二个 `NSLog` 语句中引入了一个新的转折。我们本以为，将 `a` 除以 `q` 然后乘以 `b` 应该会得到 `p` 的值，即 `25`。
+当我们使用浮点值而非整数执行相同的操作时，我们得到了预期的结果，如`Program`中倒数第二行的`NSLog`所示。`float`变量和`int`变量之间的选择取决于变量的预期用途。
 
-然而，如输出显示的 `24` 所示，事实并非如此。有没有可能是计算机在过程中丢失了一点信息？这不太可能的。事实是，在评估该等式时使用了整数算术。如果我们回溯它们的定义，会发现变量 `p` 和 `q` 被声明为 `int` 类型。
+如果我们不需要任何小数，请使用整数变量。最终的应用程序在几台机器上将更高效且运行速度更快。然而，如果我们需要小数精度，答案很简单。之后，我们只需要决定使用`float`还是`double`。这个问题的答案取决于所需的精度和数字的大小。
 
-当表达式中的短语由两个整数组成时，Objective-C 系统会执行整数算术。在这种情况下，数字的所有小数部分都会丢失。因此，将 `p` 的值除以 `q` 的值（即 `25` 除以 `2`）得到的中间结果是 `12`，而不是我们预期的 `12.5`。当我们将此中间结果乘以 `2` 时，得到了 `24`，这解释了“丢失”的数字。
-
-当我们使用浮点值而非整数执行相同的操作时，我们得到了预期的结果，如 `Program` 中倒数第二行的 `NSLog` 所示。`float` 变量和 `int` 变量之间的选择取决于变量的预期用途。
-
-如果我们不需要任何小数，请使用整数变量。最终的应用程序在几台机器上将更高效且运行速度更快。然而，如果我们需要小数精度，答案很简单。之后，我们只需要决定使用 `float` 还是 `double`。这个问题的答案取决于所需的精度和数字的大小。
-
-在最后一个 `NSLog` 语句中，使用一元负号运算符对变量 `p` 的值取反。与作用两个值的二元运算符不同，一元运算符作用于单个值。负号有两个功能：它既可以用作二元运算符减去两个值，也可以用一元运算符对一个值取反。除了与一元负号优先级相同的一元加运算符（`+`）外，一元负运算符的优先级高于所有其他算术运算符。因此，以下短语将 `-p` 乘以 `q`：
+在最后一个`NSLog`语句中，使用一元负号运算符对变量`p`的值取反。与作用两个值的二元运算符不同，一元运算符作用于单个值。负号有两个功能：它既可以用作二元运算符减去两个值，也可以用一元运算符对一个值取反。除了与一元负号优先级相同的一元加运算符（`+`）外，一元负运算符的优先级高于所有其他算术运算符。因此，以下短语将`-p`乘以`q`：
 
 ## 模运算符
 
-模运算符由百分号（`%`）表示，在本节介绍的最后一个算术运算符。分析 `Program` 的结果来尝试弄清楚这个运算符是如何工作的。
+模运算符由百分号（`%`）表示，在本节介绍的最后一个算术运算符。分析`Program`的结果来尝试弄清楚这个运算符是如何工作的。
 
-注意 `main` 中的语句，它在一行内声明并初始化了变量 `p`、`q`、`r` 和 `s`。众所知，`NSLog` 使用紧跟百分号的字符来指示如何打印后续参数。然而，如果百分号后面跟着另一个百分号，`NSLog` 过程将其解释为你确实想要显示一个百分号。程序会生成一个 `%` 符号并将其插入输出的相应位置。
+注意`main`中的语句，它在一行内声明并初始化了变量`p`、`q`、`r`和`s`。众所知，`NSLog`使用紧跟百分号的字符来指示如何打印后续参数。然而，如果百分号后面跟着另一个百分号，`NSLog`过程将其解释为你确实想要显示一个百分号。程序会生成一个`%`符号并将其插入输出的相应位置。
 
-如果我们确定模运算符 `%` 的功能是交付第一个值除以第二个值的余数，那么我们是正确的。在第一种情况下，`25` 除以 `5` 的余数为 `0`。如输出的第二行所示，`25` 除以 `10` 得到余数 `5`。如第三行输出所示，`25` 除以 `7` 得到余数 `4`。
+如果我们确定模运算符`%`的功能是交付第一个值除以第二个值的余数，那么我们是正确的。在第一种情况下，`25`除以`5`的余数为`0`。如输出的第二行所示，`25`除以`10`得到余数`5`。如第三行输出所示，`25`除以`7`得到余数`4`。
 
-现在，看上一个语句中评估的算术表达式。在 Objective-C 中，两个整数值之间的任何操作都是使用整数算术完成的。因此，两个整数相除产生的任何余数都会丢弃。公式 `p/s` 表示 `25` 除以 `7` 得到一个中间值 `3`。当这个数字乘以 `s` 的值（即 `7`）时，中间结果是 `21`。
+现在，看上一个语句中评估的算术表达式。在 Objective-C 中，两个整数值之间的任何操作都是使用整数算术完成的。因此，两个整数相除产生的任何余数都会丢弃。公式`p/s`表示`25`除以`7`得到一个中间值`3`。当这个数字乘以`s`的值（即`7`）时，中间结果是`21`。
 
-最后，通过加上 `p/s` 除法产生的余数（由短语 `p % s` 表示），得到了 `25` 的最终结果。意料之中的是，这个值与变量 `a` 的值相同。通常，只要 `p` 和 `q` 都是整数，该表达式始终等于 `p` 的值：
+最后，通过加上`p/s`除法产生的余数（由短语`p % s`表示），得到了`25`的最终结果。意料之中的是，这个值与变量`a`的值相同。通常，只要`p`和`q`都是整数，该表达式始终等于`p`的值：
 
-模运算符 `%` 仅用于处理整数。在优先级方面，模运算符的优先级高于乘法和除法运算符。当然，这意味着像这样的表达式：
+模运算符`%`仅用于处理整数。在优先级方面，模运算符的优先级高于乘法和除法运算符。当然，这意味着像这样的表达式：
 
 将被评估为：
 
@@ -1807,21 +1704,21 @@ DOI: [10.1201/9781003358534-7](https://doi.org/10.1201/9781003358534-7)
 
 为了高效地编写 Objective-C 应用程序，我们必须首先掌握 Objective-C 中浮点值和整数值的隐式转换规则。程序展示了数值数据格式之间极其简单的转换。
 
-在 Objective-C 中，当将浮点值赋值给整数变量时，数字的小数部分会被截断。因此，在之前的程序中，当 `f1` 的值赋值给 `i1` 时，数字 `223.125` 被截断，这意味着只有整数部分（即 `223`）被保存在 `i1` 中。程序输出的第一行证实了这一点。
+在 Objective-C 中，当将浮点值赋值给整数变量时，数字的小数部分会被截断。因此，在之前的程序中，当`f1`的值赋值给`i1`时，数字`223.125`被截断，这意味着只有整数部分（即`223`）被保存在`i1`中。程序输出的第一行证实了这一点。
 
-当将整数变量赋值给浮点变量时，数字的值不会改变；系统只是翻译该值并将其保存。程序输出的第二行证实了 `i2` 的值被正确翻译并保存在浮点变量中。
+当将整数变量赋值给浮点变量时，数字的值不会改变；系统只是翻译该值并将其保存。程序输出的第二行证实了`i2`的值被正确翻译并保存在浮点变量中。
 
-程序的两行强调了在创建算术表达式时需要注意的两点。当表达式中的两个操作数都是整数（包括短型、无符号和长型），操作遵循整数算术原则。因此，即使结果被放入浮点变量，除法操作产生的任何小数部分都会丢失（正如我们在程序中所做的那样）。当整数变量 `i2` 除以整数 `100` 时，系统按整数除法进行，浮点变量 `f1` 的值为 `-1`。
-
-在之前的程序中，随后的除法涉及一个整数变量和一个浮点常量。在 Objective-C 中，只要值中有一个浮点变量或常量，两个值之间的任何操作都是作为浮点操作完成的。因此，当 `i2` 除以 `100.0` 时，系统执行浮点除法并返回 `-1.6`，将其赋值给浮点变量 `f1`。
+程序的两行强调了在创建算术表达式时需要注意的两点。当表达式中的两个操作数都是整数（包括短型、无符号和长型），操作遵循整数算术原则。因此，即使结果被放入浮点变量，除法操作产生的任何小数部分都会丢失（正如我们在程序中所做的那样）。当整数变量`i2`除以整数`100`时，系统按整数除法进行，浮点变量`f1`的值为`-1`。
 
 
+
+在之前的程序中，随后的除法涉及一个整数变量和一个浮点常量。在 Objective-C 中，只要值中有一个浮点变量或常量，两个值之间的任何操作都是作为浮点操作完成的。因此，当`i2`除以`100.0`时，系统执行浮点除法并返回`-1.6`，将其赋值给浮点变量`f1`。
 
 在声明和定义方法时，我们之前已经见过将类型放在括号内用于指定返回和参数类型。在表达式内部，它有独特的用途。
 
-类型转换运算符在 `Program` 的最后一个除法操作中引入，如下：
+类型转换运算符在`Program`的最后一个除法操作中引入，如下：
 
-类型转换运算符将变量 `i2` 的值转换为 `float` 类型以评估该表达式。该运算符对变量 `i2` 的值没有持久影响；它是一个一元运算符，与其他一元运算符类似。表达式 `(float) p` 与表达式 `-p` 一样，对 `p` 的值没有永久影响。
+类型转换运算符将变量`i2`的值转换为`float`类型以评估该表达式。该运算符对变量`i2`的值没有持久影响；它是一个一元运算符，与其他一元运算符类似。表达式`(float) p`与表达式`-p`一样，对`p`的值没有永久影响。
 
 除了一元负和一元加，类型转换运算符的优先级高于所有算术运算符。当然，我们始终可以在表达式中使用括号来按照我们选择的任何顺序评估项。
 
@@ -1829,61 +1726,58 @@ DOI: [10.1201/9781003358534-7](https://doi.org/10.1201/9781003358534-7)
 
 因为将浮点数转换为整数的后果是截断浮点值。表达式
 
-以及如下表达式：得到值 `1.25`
+以及如下表达式：得到值`1.25`
 
+类型转换运算符经常用于将泛型`id`类型的项转换为特定类的对象。例如，以下几行将`id`变量`my_Number`的值类型转换为一个`Fraction`对象：
 
-
-
-类型转换运算符经常用于将泛型 id 类型的项转换为特定类的对象。例如，以下几行将 `id` 变量 `my_Number` 的值类型转换为一个 `Fraction` 对象：
-
-转换结果被赋值给 `Fraction` 变量 `my_Fraction`。
+转换结果被赋值给`Fraction`变量`my_Fraction`。
 
 ## 关系运算符
 
-Objective-C 编程语言支持下面列出的所有关系操作。假设变量 `P` 等于 40，变量 `Q` 等于 20。
+Objective-C 编程语言支持下面列出的所有关系操作。假设变量`P`等于 40，变量`Q`等于 20。
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `==` | 比较两个操作数的值；如果它们相等，则条件为真。 | `(P == Q)` 不为真。 |
-| `!=` | 比较两个操作数的值；如果值不相等，则条件求值为真。 | `(P != Q)` 为真。 |
-| `>` | 如果左操作数的值大于右操作数的值，则条件判定为真。 | `(P > Q)` 不为真。 |
-| `<` | 如果左操作数的值小于右操作数的值，则条件为真。 | `(P < Q)` 为真。 |
-| `>=` | 如果左操作数的值大于或等于右操作数的值，则条件为真。 | `(P >= Q)` 不为真。 |
-| `<=` | 如果左操作数的值小于或等于右操作数的值，则条件为真。 | `(P <= Q)` 为真。 |
+| `==` | 比较两个操作数的值；如果它们相等，则条件为真。 | `(P == Q)`不为真。 |
+| `!=` | 比较两个操作数的值；如果值不相等，则条件求值为真。 | `(P != Q)`为真。 |
+| `>` | 如果左操作数的值大于右操作数的值，则条件判定为真。 | `(P > Q)`不为真。 |
+| `<` | 如果左操作数的值小于右操作数的值，则条件为真。 | `(P < Q)`为真。 |
+| `>=` | 如果左操作数的值大于或等于右操作数的值，则条件为真。 | `(P >= Q)`不为真。 |
+| `<=` | 如果左操作数的值小于或等于右操作数的值，则条件为真。 | `(P <= Q)`为真。 |
 
-## OBJECTIVE-C 中的逻辑运算符
+## Objective-C 中的逻辑运算符
 
-下表包含了 Objective-C 编程语言支持的所有逻辑运算符。假设变量 `P` 为 1，变量 `Q` 为 0，
+下表包含了 Objective-C 编程语言支持的所有逻辑运算符。假设变量`P`为 1，变量`Q`为 0。
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `&&` | 定义了逻辑与（Logical AND）。如果两个操作数都非零，则满足条件。 | `(P && Q)` 为假。 |
-| `||` | 定义了逻辑或（Logical OR）。如果两个操作数中任一非零，则满足条件。 | `(P || Q)` 为真。 |
-| `!` | 定义了逻辑非（Logical NOT）。在 Objective-C 中反转操作数的逻辑状态，请使用它。当条件为真时，逻辑非运算符交付假。 | `!(P && Q)` 为真。 |
+| `&&` | 定义了逻辑与（Logical AND）。如果两个操作数都非零，则满足条件。 | `(P && Q)`为假。 |
+| `||` | 定义了逻辑或（Logical OR）。如果两个操作数中任一非零，则满足条件。 | `(P || Q)`为真。 |
+| `!` | 定义了逻辑非（Logical NOT）。在 Objective-C 中反转操作数的逻辑状态，请使用它。当条件为真时，逻辑非运算符交付假。 | `!(P && Q)`为真。 |
 
 ## 位运算符
 
-位运算符作用于位，并逐位执行操作。`&`、`|` 和 `^` 的真值表下所示。
+位运算符作用于位，并逐位执行操作。`&`、`|`和`^`的真值表如下所示。
 
-| p | q | p & q | p | q | p ^ q |
+| p | q | p & q | p \| q | p ^ q |
 | --- | --- | --- | --- | --- |
 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 0 |
 | 1 | 0 | 0 | 1 | 1 |
 
-假设 `P` = 70；且 `Q` = 23；现在，在二进制格式下，它们如下：
+假设`P` = 70，且`Q` = 23；现在，在二进制格式下，它们如下：
 
-下表列出了 Objective-C 支持的位运算。假设变量 `C` 等于 70，变量 `D` 等于 23。
+下表列出了 Objective-C 支持的位运算。假设变量`C`等于 70，变量`D`等于 23。
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `&` | 如果两个操作数中都存在某位，则二进制与运算符将将其复制到结果中。 | `(P & Q)` 将得到 12，即 0000 1100 |
-| `|` | 二进制或运算符会复制两个操作数中出现的任何位。 | `(P | Q)` 将得到 61，即 0011 1101 |
-| `^` | 如果某位在其中一个操作数中设置而在另一个未设置，则二进制异或运算符会重复它。 | `(P ^ Q)` 将得到 49，即 0011 0001 |
-| `~` | 二进制按位反运算符是一个一元运算符，用于“翻转”位。 | `(~P )` 将得到 −61，在补码形式下为 1100 0011。 |
-| `<<` | 二进制左移运算符：左操作数的值根据右操作数指定的位数向左平移。 | `P << 2` 将得到 240，即 1111 0000 |
-| `>>` | 二进制右移运算符：左操作数的值根据右操作数指定的位数向右平移。 | `P >> 2` 将得到 15，即 0000 1111 |
+| `&` | 如果两个操作数中都存在某位，则二进制与运算符将其复制到结果中。 | `(P & Q)`将得到 12，即 0000 1100 |
+| `\|` | 二进制或运算符会复制两个操作数中出现的任何位。 | `(P \| Q)`将得到 61，即 0011 1101 |
+| `^` | 如果某位在其中一个操作数中设置而在另一个未设置，则二进制异或运算符会重复它。 | `(P ^ Q)`将得到 49，即 0011 0001 |
+| `~` | 二进制按位反运算符是一个一元运算符，用于“翻转”位。 | `(~P)`将得到 −61，在补码形式下为 1100 0011。 |
+| `<<` | 二进制左移运算符：左操作数的值根据右操作数指定的位数向左平移。 | `P << 2`将得到 240，即 1111 0000 |
+| `>>` | 二进制右移运算符：左操作数的值根据右操作数指定的位数向右平移。 | `P >> 2`将得到 15，即 0000 1111 |
 
 ## 赋值运算符
 
@@ -1891,30 +1785,30 @@ Objective-C 语言支持以下赋值运算符：
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `=` | 简单赋值运算符将右操作数的值赋给左操作数。 | `Z = P + Q` 将 `P + Q` 的值赋值给 `Z` |
-| `+=` | 将右操作数加左操作数，然后将结果赋值给左操作数。 | `Z += P` 等于 `Z = Z + P` |
-| `-=` | 从左操作数减去右操作数，将结果赋值给左操作数，然后重复。 | `Z -= P` 等于 `Z = Z – P` |
-| `*=` | 乘法并赋值。右操作数与左操作数的乘积赋值给左操作数。 | `Z *= P` 等于 `Z = Z * P` |
-| `/=` | 除法并赋值。将左操作数除以右操作数，将结果赋值给左操作数。 | `Z /= P` 等于 `Z = Z / P` |
-| `%=` | 取模并赋值。将左操作数对右操作数取模，结果赋值给左操作数。 | `Z %= P` 等于 `Z = Z % P` |
-| `<<=` | 左移赋值。左操作数的值根据右操作数指定的位数向左移。 | `Z <<= 2` 等于 `Z = Z << 2` |
-| `>>=` | 右移赋值。左操作数的值根据右操作数指定的位数向右移。 | `Z >>= 2` 等于 `Z = Z >> 2` |
-| `&=` | 位与赋值。 | `Z &= P` 等于 `Z = Z & P` |
-| `^=` | 位异或赋值。 | `Z ^= P` 等于 `Z = Z ^ P` |
-| `|=` | 位或赋值。 | `Z |= P` 等于 `Z = Z | P` |
+| `=` | 简单赋值运算符将右操作数的值赋给左操作数。 | `Z = P + Q`将`P + Q`的值赋值给`Z` |
+| `+=` | 将右操作数加左操作数，然后将结果赋值给左操作数。 | `Z += P`等于`Z = Z + P` |
+| `-=` | 从左操作数减去右操作数，将结果赋值给左操作数，然后重复。 | `Z -= P`等于`Z = Z – P` |
+| `*=` | 乘法并赋值。右操作数与左操作数的乘积赋值给左操作数。 | `Z *= P`等于`Z = Z * P` |
+| `/=` | 除法并赋值。将左操作数除以右操作数，将结果赋值给左操作数。 | `Z /= P`等于`Z = Z / P` |
+| `%=` | 取模并赋值。将左操作数对右操作数取模，结果赋值给左操作数。 | `Z %= P`等于`Z = Z % P` |
+| `<<=` | 左移赋值。左操作数的值根据右操作数指定的位数向左移。 | `Z <<= 2`等于`Z = Z << 2` |
+| `>>=` | 右移赋值。左操作数的值根据右操作数指定的位数向右移。 | `Z >>= 2`等于`Z = Z >> 2` |
+| `&=` | 位与赋值。 | `Z &= P`等于`Z = Z & P` |
+| `^=` | 位异或赋值。 | `Z ^= P`等于`Z = Z ^ P` |
+| `\|=` | 位或赋值。 | `Z \|= P`等于`Z = Z \| P` |
 
 ## 杂项运算符
 
 | 运算符 | 描述 | 示例 |
 | --- | --- | --- |
-| `sizeof` | 变量的大小。 | `sizeof(x)`，其中 `x` 是整数，返回 4。 |
-| `&` | 变量的地址。 | `&x` 将得到变量的地址。 |
+| `sizeof` | 变量的大小。 | `sizeof(x)`，其中`x`是整数，返回 4。 |
+| `&` | 变量的地址。 | `&x`将得到变量的地址。 |
 | `*` | 变量的指针。 | `*x` |
 | `?:` | 条件表达式。 | 如果条件为真取值 A；否则取值 B。 |
 
-## OBJECTIVE-C 中的运算符优先级
+## Objective-C 中的运算符优先级
 
-表达式中单词的顺序由优先级决定。某些运算符的优先级高于其他；例如，乘法运算符优先级高于加法运算符。例如，`z = 37 + 13 * 5`；这里 `z` 被赋值为 102，而不是 250，因为优先级最高的运算符位于表格顶部，最低的位于底部。优先级较高的运算符将先计算。
+表达式中单词的顺序由优先级决定。某些运算符的优先级高于其他；例如，乘法运算符优先级高于加法运算符。例如，`z = 37 + 13 * 5`；这里`z`被赋值为 102，而不是 250，因为优先级最高的运算符位于表格顶部，最低的位于底部。优先级较高的运算符将先计算。
 
 | 类别 | 运算符 | 结合性 |
 | --- | --- | --- |
@@ -1926,27 +1820,24 @@ Objective-C 语言支持以下赋值运算符：
 | 关系 | `<` `<=` `>` `>=` | 左到右 |
 | 等于 | `==` `!=` | 左到右 |
 | 位异或 | `^` | 左到右 |
-| 位或 | `|` | 左到右 |
+| 位或 | `\|` | 左到右 |
 | 逻辑与 | `&&` | 左到右 |
-| 逻辑或 | `||` | 左到右 |
+| 逻辑或 | `\|\|` | 左到右 |
 | 条件 | `?:` | 右到左 |
-| 赋值 | `=` `+=` `-=` `*=` `/=` `%=` `<<=` `>>=` `&=` `^=` `|=` | 右到左 |
+| 赋值 | `=` `+=` `-=` `*=` `/=` `%=` `<<=` `>>=` `&=` `^=` `\|=` | 右到左 |
 | 逗号 | `,` | 左到右 |
 
 ## 计算器类
 
-现在是创建一个新类了。我们将创建一个 Calculator 类，这是一个简单的四则运算计算器，用于加、乘、减、除整数。该计算器像任何其他计算器一样，必须跟踪运行和，通常称为累加器。因此，方法允许我们设置累加器为指定的数字、将其清除（或设置为零），并在完成后获取其值。该应用程序包含了新类的描述和一个用于测试计算器性能的程序。
+现在是创建一个新类了。我们将创建一个`Calculator`类，这是一个简单的四则运算计算器，用于加、乘、减、除整数。该计算器像任何其他计算器一样，必须跟踪运行和，通常称为累加器。因此，方法允许我们设置累加器为指定的数字、将其清除（或设置为零），并在完成后获取其值。该应用程序包含了新类的描述和一个用于测试计算器性能的程序。
 
-方法定义本身非常简单。Calculator 类只有一个实例变量，一个双精度（double）值，包含累加器的值。
+方法定义本身非常简单。`Calculator`类只有一个实例变量，一个双精度（double）值，包含累加器的值。
 
 注意调用乘法方法的消息：
 
+该方法的参数是一个整数，但它期望的是一个`double`。这里没有问题，因为方法的数值型参数会立即转换为预期的类型。由于`multiply:`期望一个`double`，因此在调用函数时，整数值`6`会被自动转换为双精度浮点数。尽管发生了这种自动转换，但在调用方法时提供正确的参数类型是更好的编程实践。
 
-
-
-该方法的参数是一个整数，但它期望的是一个 `double`。这里没有问题，因为方法的数值型参数会立即转换为预期的类型。由于 `multiply:` 期望一个 `double`，因此在调用函数时，整数值 `6` 会被自动转换为双精度浮点数。尽管发生了这种自动转换，但在调用方法时提供正确的参数类型是更好的编程实践。
-
-请记住，与 `Fraction` 类不同（在那个类中我们可能需要与各种分数进行交互），在我们的程序中，我们可能只需要使用单一的 `Calculator` 对象。尽管如此，构建一个新类来方便操作该对象是有意义的。
+请记住，与`Fraction`类不同（在那个类中我们可能需要与各种分数进行交互），在我们的程序中，我们可能只需要使用单一的`Calculator`对象。尽管如此，构建一个新类来方便操作该对象是有意义的。
 
 在某个时候，我们可能想为计算器添加一个图形前端，以便用户可以点击屏幕上的按钮，类似于我们无疑已经加载在电脑或手机上的那种计算器程序。
 
@@ -1958,20 +1849,20 @@ DOI: [10.1201/9781003358534-8](https://doi.org/10.1201/9781003358534-8)
 
 ## 本章内容
 
-*   `while` 循环
-*   `for` 循环
-*   `do-while` 循环
-*   `嵌套循环`
-*   `break` 语句
-*   `continue` 语句
+- `while`循环
+- `for`循环
+- `do-while`循环
+- `嵌套循环`
+- `break`语句
+- `continue`语句
 
 在上一章中，我们学习了运算符，在本章中，我们将讨论循环和控制语句。
 
 在 Objective-C 中，我们可以通过多种方式执行一系列代码。本章重点关注这些循环能力，包括以下内容：
 
-*   `for` 语句
-*   `while` 语句
-*   `do` 语句
+- `for`语句
+- `while`语句
+- `do`语句
 
 让我们从一个基础示例开始：数字计数。
 
@@ -1981,37 +1872,37 @@ DOI: [10.1201/9781003358534-8](https://doi.org/10.1201/9781003358534-8)
 
 三角形排列。
 
-三角形的第一行有了一颗弹子；第二行包含两颗弹子，依此类推。构造一个具有 `n` 行的三角形所需的弹子数量是 1 到 `n` 的整数之和。这被称为三角形数。
+三角形的第一行有了一颗弹子；第二行包含两颗弹子，依此类推。构造一个具有`n`行的三角形所需的弹子数量是 1 到`n`的整数之和。这被称为三角形数。
 
 从 1 开始，第四个三角形数是连续数字 1–4 之和（`1 + 2 + 3 + 4`），即为 10。
 
-假设我们想开发一个程序来计算并展示第八个三角形数。我们可以轻松计算出这个值，但让我们假设我们想用 Objective-C 开发一个程序来完成这项工作。`program` 就是此类程序的一个示例。
+假设我们想开发一个程序来计算并展示第八个三角形数。我们可以轻松计算出这个值，但让我们假设我们想用 Objective-C 开发一个程序来完成这项工作。`program`就是此类程序的一个示例。
 
-`program` 方法非常适合计算较小的三角形数，但如果我们我们需要发现第 200 个三角形数的值呢？如果要通过修改 `Program` 来显式地添加从 1 到 200 的所有整数将是不方便的。幸运的是，有一种更直接的方法。
+`program`方法非常适合计算较小的三角形数，但如果我们我们需要发现第 200 个三角形数的值呢？如果要通过修改`Program`来显式地添加从 1 到 200 的所有整数将是不方便的。幸运的是，有一种更直接的方法。
 
 计算机的基本特性之一是其重复执行一组语句的能力。这些循环特性允许程序员创建简洁的程序，其中包含了重复执行的操作，而这些操作通常需要几十甚至数百万条程序语句才能完成。Objective-C 编程语言有三个用于循环的程序语句。
 
 ## for 语句
 
-让我们来看一个使用 `for` 语句的程序。`Program` 的目标是找到第 300 个三角形数。看看我们能否弄清楚 `for` 语句是如何工作的。
+让我们来看一个使用`for`语句的程序。`Program`的目标是找到第 300 个三角形数。看看我们能否弄清楚`for`语句是如何工作的。
 
 该程序需要一些解释。计算第 200 个三角形数的方法与前一个程序中计算第 8 个三角形数的方法相同：将从 1 到 300 的整数相加。
 
-在到达 `for` 语句之前，变量 `triangularNumber` 被设置为 `0`。在应用程序中使用所有变量之前，我们必须为所有变量赋值。某些类型的变量会被赋予默认的初始值，正如我们稍后将看到的），但不要依赖于此是更安全的，我们仍然应该为它们设置值。`for` 语句让我们避免了逐个写出从 1 到 300 的每一个数字。这句话在某种程度上为我们创建了这些数字。
+在到达`for`语句之前，变量`triangularNumber`被设置为`0`。在应用程序中使用所有变量之前，我们必须为所有变量赋值。某些类型的变量会被赋予默认的初始值，正如我们稍后将看到的），但不要依赖于此是更安全的，我们仍然应该为它们设置值。`for`语句让我们避免了逐个写出从 1 到 300 的每一个数字。这句话在某种程度上为我们创建了这些数字。
 
-以下是 `for` 语句的通用格式：
+以下是`for`语句的通用格式：
 
-三个圆括号内的短语 `init-expression`、`loop-condition` 和 `loop-expression` 为程序循环提供了环境。
+三个圆括号内的短语`init-expression`、`loop-condition`和`loop-expression`为程序循环提供了环境。
 
 紧随其后的程序语句（必须以分号结束）可以是任何可接受的 Objective-C 程序语句，并作为循环体。
 
-该语句的运行次数与 `for` 语句参数指定的次数相同。
+该语句的运行次数与`for`语句参数指定的次数相同。
 
-`for` 语句的 `init-expression` 组件在循环开始之前建立初始值。`for` 语句的这一组件在 `Program` 中用于将 `n` 的初始值为 `1`。正如我们看到的，赋值是一种有效的表达式形式。
+`for`语句的`init-expression`组件在循环开始之前建立初始值。`for`语句的这一组件在`Program`中用于将`n`的初始值为`1`。正如我们看到的，赋值是一种有效的表达式形式。
 
-`for` 语句的第二部分提供了循环继续必须满足的条件。换句话说，只要满足此条件，循环就会继续。再次引用 `Program`，`for` 语句的 `loop-condition` 由关系表达式定义：
+`for`语句的第二部分提供了循环继续必须满足的条件。换句话说，只要满足此条件，循环就会继续。再次引用`Program`，`for`语句的`loop-condition`由关系表达式定义：
 
-该语句等同于“n 小于或等于 300”。小于或等于运算符（小于号符号 `[<]` 紧跟等号符号 `[]=`）是 Objective-C 编程语言中提供的众多关系运算符之一。这些运算符用于测试某些情况。如果满足条件，则结果为真；否则为假。
+该语句等同于“n 小于或等于 300”。小于或等于运算符（小于号符号`[<]`紧跟等号符号`[]=`）是 Objective-C 编程语言中提供的众多关系运算符之一。这些运算符用于测试某些情况。如果满足条件，则结果为真；否则为假。
 
 下表包含了 Objective-C 中所有的关系运算符。
 
@@ -2028,141 +1919,131 @@ DOI: [10.1201/9781003358534-8](https://doi.org/10.1201/9781003358534-8)
 
 关系运算符的优先级高于所有算术运算符。这意味着，例如这样的表达式被视为：
 
-这是预期的。如果 `x` 的值小于 `y` 的值，则为真；否则为假。注意“等等于”运算符（`==`），不要将其与赋值运算符（`=`）混淆。所使用的关系运算符取决于执行的测试，在某些情况下取决于我们的喜好。例如，考虑关系表达式
+这是预期的。如果`x`的值小于`y`的值，则为真；否则为假。注意“等等于”运算符（`==`），不要将其与赋值运算符（`=`）混淆。所使用的关系运算符取决于执行的测试，在某些情况下取决于我们的喜好。例如，考虑关系表达式
 
 可以表示为：
 
-回到之前的示例，只要关系测试结果为真，就会重复执行程序语句 `triangularNumber += n;`，在本例中，只要 `n` 的值小于或等于 300。该程序语句的结果是将 `n` 的值加到 `triangularNumber`。
+回到之前的示例，只要关系测试结果为真，就会重复执行程序语句`triangularNumber += n;`，在本例中，只要`n`的值小于或等于 300。该程序语句的结果是将`n`的值加到`triangularNumber`。
 
-当循环条件不再满足时，程序恢复执行 `for` 语句之后的程序语句。循环结束后，该程序继续执行 `NSLog` 语句。`for` 语句的最后一个组件包含一个每次运行循环体时都会评估的表达式。`Program` 中的这个循环表达式将 `n` 的值加 1。结果是，当 `n` 的值加到 `triangularNumber` 时，`n` 的值增加了一个，其范围从 1 到 301。
+当循环条件不再满足时，程序恢复执行`for`语句之后的程序语句。循环结束后，该程序继续执行`NSLog`语句。`for`语句的最后一个组件包含一个每次运行循环体时都会评估的表达式。`Program`中的这个循环表达式将`n`的值加 1。结果是，当`n`的值加到`triangularNumber`时，`n`的值增加了一个，其范围从 1 到 301。
 
-注意的是，`n` 获得的最后一个值 301 没有包含在 `triangularNumber` 的值中，因为循环在条件不再满足或当 `n = 301` 时停止。
+注意的是，`n`获得的最后一个值 301 没有包含在`triangularNumber`的值中，因为循环在条件不再满足或当`n = 301`时停止。
 
-总之，`for` 语句的执行方式如下：
+总之，`for`语句的执行方式如下：
 
-1.  评估第一个表达式。该表达式通常为循环中使用的变量设置某个初始值（例如 0 或 1）。
-
-
-
-
+1. 评估第一个表达式。该表达式通常为循环中使用的变量设置某个初始值（例如 0 或 1）。
 2. 接着测试循环条件。如果条件不满足（表达式为假），循环将立即终止。执行紧随在循环之后的软件语句。
-
 3. 执行构成循环体的程序语句。
-
 4. 在第四步中评估循环表达式。该表达式通常用于调整索引变量的值，通常通过加 1 或减 1 来。
-
 5. 回到第 2 步。
 
 记住，循环条件是在循环体执行之前进入循环时立即评估的。记住不要在循环的右括号后使用分号，因为会导致循环立即终止。由于上述程序在通往终点的过程中创建了所有 300 个三角形数，因此生成这些数字的数据库可能是很有用的。为了节省空间，假设我们只想打印一个包含前十个三角形数的表格。此任务由下面列出的程序完成。
 
-`Program` 中的前三个 `NSLog` 语句仅用于建立一个基础标题并对输出列标记。
+`Program`中的前三个`NSLog`语句仅用于建立一个基础标题并对输出列标记。
 
-在显示完必要的标题后，应用程序计算了前十个三角形数。变量 `n` 用于计数我们正在计算的当前数字（计算从 1 到 `n` 的总和），变量 `triangularNumber` 则存储三角形数 `n` 的值。
+在显示完必要的标题后，应用程序计算了前十个三角形数。变量`n`用于计数我们正在计算的当前数字（计算从 1 到`n`的总和），变量`triangularNumber`则存储三角形数`n`的值。
 
-`for` 语句通过首先将变量 `n` 的值改为 `1` 来执行。如前所述，程序循环的体是紧随 `for` 语句之后的程序语句。但如果我们想运行一组程序语句而不是单个程序语句呢？这通过将所有此类程序语句封装在括号中来实现。这种语句的集合（或块）随后被系统视为单一实体。通常情况下，只要语句块被封装在一对括号之间，就可以在 Objective-C 程序中任何允许单个语句的地方使用语句块。
+`for`语句通过首先将变量`n`的值改为`1`来执行。如前所述，程序循环的体是紧随`for`语句之后的程序语句。但如果我们想运行一组程序语句而不是单个程序语句呢？这通过将所有此类程序语句封装在括号中来实现。这种语句的集合（或块）随后被系统视为单一实体。通常情况下，只要语句块被封装在一对括号之间，就可以在 Objective-C 程序中任何允许单个语句的地方使用语句块。
 
-因此，在 `Program` 中，该表达式将 `n` 的值加到 `triangularNumber` 的值上，随后是紧跟在程序循环体之后的 `NSLog` 语句。特别注意程序语句的缩进方式。我们可以通过观察语句来判断哪些语句是 `for` 循环的一部分。同样值得注意的是，程序员有不同的编码风格；例如，某些人喜欢像这样写循环：
+因此，在`Program`中，该表达式将`n`的值加到`triangularNumber`的值上，随后是紧跟在程序循环体之后的`NSLog`语句。特别注意程序语句的缩进方式。我们可以通过观察语句来判断哪些语句是`for`循环的一部分。同样值得注意的是，程序员有不同的编码风格；例如，某些人喜欢像这样写循环：
 
-在这种情况下，左括号被放在 `for` 之后的一行。这纯粹是一个个人喜好问题，对程序没有影响。
+在这种情况下，左括号被放在`for`之后的一行。这纯粹是一个个人喜好问题，对程序没有影响。
 
-简单地将 `n` 的值加到上一个三角形数即可得到下一个三角形数。
+简单地将`n`的值加到上一个三角形数即可得到下一个三角形数。
 
-因为第一次通过 `for` 循环时上一个三角形数是 0，所以当 `n` 等于 1 时，`triangularNumber` 的新值就是 `n` 的值，即 1。
 
-然后显示 `n` 和 `triangularNumber` 的值，在格式字符串中放置了足够的空格，以确保两个变量的值在相关的列标题下对齐。
 
-由于循环体现在已经执行，接下来评估循环表达式。然而，这个 `for` 语句中的表达式看起来很奇怪。我们一定犯了拼写错误，本意是输入 `n = n + 1` 而不是这个看起来奇怪的表达式：
+因为第一次通过`for`循环时上一个三角形数是 0，所以当`n`等于 1 时，`triangularNumber`的新值就是`n`的值，即 1。
 
-然而，`++n` 是一个完全有效的 Objective-C 表达式。增量运算符作为 Objective-C 编程语言中一种新的（且非常有特色的）运算符被引入。双加号符号（通常称为增量运算符）对其操作数加 1。因为在程序中加 1 是一项非常通用的操作，所以专门为它构建了一个特定的运算符。结果，表达式 `++n` 与 `n = n + 1` 是等价的。初一看，`n = n + 1` 似乎更具可读性，但你会很快习惯它的操作，甚至开始喜欢它的简洁。
+然后显示`n`和`triangularNumber`的值，在格式字符串中放置了足够的空格，以确保两个变量的值在相关的列标题下对齐。
 
-当然，任何具有用于加 1 的增量运算符的编程语言，如果不包含一个类似的用于减 1 的运算符，就是不完整的。这种运算符被称为减量运算符，双减号符号代表它。所以，在 Objective-C 中，读取为
+由于循环体现在已经执行，接下来评估循环表达式。然而，这个`for`语句中的表达式看起来很奇怪。我们一定犯了拼写错误，本意是输入`n = n + 1`而不是这个看起来奇怪的表达式：
 
-n = n - 1 的表达式可以使用减量运算符以类似的方式表示，如下：
+然而，`++n`是一个完全有效的 Objective-C 表达式。增量运算符作为 Objective-C 编程语言中一种新的（且非常有特色的）运算符被引入。双加号符号（通常称为增量运算符）对其操作数加 1。因为在程序中加 1 是一项非常通用的操作，所以专门为它构建了一个特定的运算符。结果，表达式`++n`与`n = n + 1`是等价的。初一看，`n = n + 1`似乎更具可读性，但你会很快习惯它的操作，甚至开始喜欢它的简洁。
 
-一些程序员喜欢在变量名后使用 `++` 或 `--` 符号，例如 `n++` 或 `bean-counter--`。在 `for` 语句示例中，这取决于个人喜好。
+当然，任何具有用于加 1 的增量运算符的编程语言，如果不包含一个类似的用于减 1 的运算符，就是不完整的。这种运算符被称为减量运算符，双减号符号代表它。所以，在 Objective-C 中，读取为`n = n - 1`的表达式可以使用减量运算符以类似的方式表示，如下：
 
-我们可能已经注意到 `Program` 输出的最后一行没有对齐。我们可以通过将 `Program` 中的相关代码替换为以下 `NSLog` 语句来修复这个小困扰：
+一些程序员喜欢在变量名后使用`++`或`--`符号，例如`n++`或`bean-counter--`。在`for`语句示例中，这取决于个人喜好。
+
+我们可能已经注意到`Program`输出的最后一行没有对齐。我们可以通过将`Program`中的相关代码替换为以下`NSLog`语句来修复这个小困扰：
 
 这里是修改后的程序的输出，以验证此更改是否解决了问题。
 
-`NSLog` 语句的主要修改是增加了字段宽度设置。字符 `% 2i` 告诉 `NSLog` 过程你想要显示在该特定时刻的整数值，并且要显示的整数大小至少占据显示中的两列。任何通常占用少于两列的整数（即数字 0–9）前面都会有一个空格。这被称为对齐（proper justification）。
+`NSLog`语句的主要修改是增加了字段宽度设置。字符`%2i`告诉`NSLog`过程你想要显示在该特定时刻的整数值，并且要显示的整数大小至少占据显示中的两列。任何通常占用少于两列的整数（即数字 0–9）前面都会有一个空格。这被称为对齐（proper justification）。
 
-因此，通过指定 `% 2i` 的字段宽度，我们确保了至少使用两列来表示 `n` 的值；我们还确保了 `triangularNumber` 的值是对齐的。
+因此，通过指定`%2i`的字段宽度，我们确保了至少使用两列来表示`n`的值；我们还确保了`triangularNumber`的值是对齐的。
 
 ## 键盘输入
 
-程序只计算第 200 个三角形数。如果我们想计算第 50 个或第 100 个三角形数呢？如果是那样，我们需要修改程序以确保 `for` 循环执行了正确的次数。我们还需要更改 `NSLog` 语句以显示正确的消息。
+程序只计算第 200 个三角形数。如果我们想计算第 50 个或第 100 个三角形数呢？如果是那样，我们需要修改程序以确保`for`循环执行了正确的次数。我们还需要更改`NSLog`语句以显示正确的消息。
 
-一种简单的方法是询问应用程序我们想要计算哪个三角形数。当我们提供响应时，程序可能会计算相应的三角形数。可以使用 `scanf` 过程来实现这种解决方案。`scanf` 例在概念上与 `NSLog` 例相同相同。与显示信息的 `NSLog` 函数不同，`scanf` 例允许程序员向程序输入值。当然，如果我们正在构建具有图形界面 (UI) 的 Objective-C 程序（例如 Cocoa 或 iOS 应用），我们将完全不会使用 `NSLog` 或 `scanf`。
+一种简单的方法是询问应用程序我们想要计算哪个三角形数。当我们提供响应时，程序可能会计算相应的三角形数。可以使用`scanf`过程来实现这种解决方案。`scanf`例在概念上与`NSLog`例相同。与显示信息的`NSLog`函数不同，`scanf`例允许程序员向程序输入值。当然，如果我们正在构建具有图形界面 (UI) 的 Objective-C 程序（例如 Cocoa 或 iOS 应用），我们将完全不会使用`NSLog`或`scanf`。
 
 程序询问用户应该计算哪个三角形数，然后计算并显示结果。
 
 ## 嵌套 for 循环
 
-应用程序允许用户让程序计算任何请求的三角形数。但如果给了给了一个五个三角形数的列表呢？在这个例子中，用户可能简单地运行应用程序五次，每次输入列表中的下一个三角形数。另一种实现相同目标且学习 Objective-C 时更具技巧的方法是让程序来处理这种情况。最好的方法是在程序中放入一个循环，使整组计算重复五次。为了创建这样的循环，我们可以利用 `for` 语句。这种方法通过一个程序及其相应的输出进行了演示。
+应用程序允许用户让程序计算任何请求的三角形数。但如果给了一个五个三角形数的列表呢？在这个例子中，用户可能简单地运行应用程序五次，每次输入列表中的下一个三角形数。另一种实现相同目标且学习 Objective-C 时更具技巧的方法是让程序来处理这种情况。最好的方法是在程序中放入一个循环，使整组计算重复五次。为了创建这样的循环，我们可以利用`for`语句。这种方法通过一个程序及其相应的输出进行了演示。
 
-程序分为两层 `for` 语句。下面是最外层的 `for` 语句：
+程序分为两层`for`语句。下面是最外层的`for`语句：
 
 这指示程序循环精确执行 6 次。计数器初始设置为 1，并每次加 1 直到它不再小于等于 6（也就是说，直到它达到 7）。
 
-与之前的实例不同，变量 `counter` 在程序的其他地方都没有被使用。它仅充当 `for` 语句中的循环计数器。但是，由于它是一个变量，必须在程序中声明。正如括号所示，程序循环由所有剩余程序语句组成。如果我们这样想，可能会更好地理解这个程序是如何工作的：
+与之前的实例不同，变量`counter`在程序的其他地方都没有被使用。它仅充当`for`语句中的循环计数器。但是，由于它是一个变量，必须在程序中声明。正如括号所示，程序循环由所有剩余程序语句组成。如果我们这样想，可能会更好地理解这个程序是如何工作的：
 
+前文提到的名为“计算所需的三角形数”的循环组件实际上由将变量`triangularNumber`的值设置为`0`，以及一个用于计算三角形数的`for`循环组成。因此，`for`语句被包含在另一个`for`语句之中。这在 Objective-C 中是完全合法的，且嵌套可以扩展到任何所需的级别。
 
-
-
-前文提到的名为“计算所需的三角形数”的循环组件实际上由将变量 `triangularNumber` 的值设置为 `0`，以及一个用于计算三角形数的 `for` 循环组成。因此，`for` 语句被包含在另一个 `for` 语句之中。这在 `Objective-C` 中是完全合法的，且嵌套可以扩展到任何所需的级别。
-
-在处理日益复杂的程序结构（如嵌套的 `for` 语句）时，适当的缩进变得尤为重要。我们可以快速地发现每个 `for` 语句中包含哪些语句。
+在处理日益复杂的程序结构（如嵌套的`for`语句）时，适当的缩进变得尤为重要。我们可以快速地发现每个`for`语句中包含哪些语句。
 
 ## for 循环的变体
 
-在结束对 `for` 循环的解释之前，我们应该涵盖一些用于创建此循环的语法变化。在构建 `for` 循环时，我们可能会发现在循环开始前想初始化多个变量，或者想在每次循环运行时评估多个表达式。只要用逗号隔开，多个表达式可以包含在 `for` 循环的任何字段中。例如，在以以下语句开头的 `for` 语句中：
+在结束对`for`循环的解释之前，我们应该涵盖一些用于创建此循环的语法变化。在构建`for`循环时，我们可能会发现在循环开始前想初始化多个变量，或者想在每次循环运行时评估多个表达式。只要用逗号隔开，多个表达式可以包含在`for`循环的任何字段中。例如，在以以下语句开头的`for`语句中：
 
 ```objc
 for (x = 0, y = 0; ...)
 ```
 
-在循环开始之前，`x` 的值被设置为 `0`，`y` 的值被设置为 `0`。逗号分隔了两个表达式 `x = 0` 和 `y = 0`，这两个表达式都被视为循环 `init-expression`（初始化表达式）字段的一部分。另一个是以以下方式开始 `for` 循环：
+在循环开始之前，`x`的值被设置为`0`，`y`的值被设置为`0`。逗号分隔了两个表达式`x = 0`和`y = 0`，这两个表达式都被视为循环`init-expression`（初始化表达式）字段的一部分。另一个是以以下方式开始`for`循环：
 
 ```objc
 for (x = 0, y = 100; ...)
 ```
 
-在循环开始之前，两个索引变量 `x` 和 `y` 分别赋值为 `0` 和 `100`。每次执行循环体时，`x` 的值增加 `1`，`y` 的值减少 `10`。
+在循环开始之前，两个索引变量`x`和`y`分别赋值为`0`和`100`。每次执行循环体时，`x`的值增加`1`，`y`的值减少`10`。
 
-我们可能需要在 `for` 语句的某个字段中包含多个一个表达式，也可能需要从语句中排除一个或多个字段。只需省略所需的字段并将其替换为分号即可。
+我们可能需要在`for`语句的某个字段中包含多个表达式，也可能需要从语句中排除一个或多个字段。只需省略所需的字段并将其替换为分号即可。
 
-当不需要评估起始表达式时，就会出现在 `for` 语句中省略字段的最典型用法。
+当不需要评估起始表达式时，就会出现在`for`语句中省略字段的最典型用法。
 
-在这种情况下，只要我们包含分号，就可以直接将 `init`（初始化）字段留空：
+在这种情况下，只要我们包含分号，就可以直接将`init`（初始化）字段留空：
 
 ```objc
 for (; ...)
 ```
 
-如果 `y` 在循环开始之前已经设置了某个初始值，则可能会使用此语句。
+如果`y`在循环开始之前已经设置了某个初始值，则可能会使用此语句。
 
-一个没有循环条件字段的 `for` 循环会创建一个无限循环，即在理论上会无限执行的循环。只要使用另一种退出方法，就可以这种循环。
+一个没有循环条件字段的`for`循环会创建一个无限循环，即在理论上会无限执行的循环。只要使用另一种退出方法，就可以使用这种循环。
 
-变量也可以定义为 `for` 循环内部第一条语句的一部分。这种方法与我们之前定义变量的方式相同。例如，以下代码可以创建一个带有整数变量 `counter` 的 `for` 循环，该变量被指定并初始化为值 `1`：
+变量也可以定义为`for`循环内部第一条语句的一部分。这种方法与我们之前定义变量的方式相同。例如，以下代码可以创建一个带有整数变量`counter`的`for`循环，该变量被指定并初始化为值`1`：
 
 ```objc
 for (int counter = 1; ...)
 ```
 
-变量 `counter` 仅在 `for` 循环执行期间可见（称为局部变量），且无法在循环外部被访问。
+变量`counter`仅在`for`循环执行期间可见（称为局部变量），且无法在循环外部被访问。
 
 ## while 语句
 
-`while` 语句进一步扩展了 `Objective-C` 语言的循环能力。这种广泛使用的结构具有以下语法：
+`while`语句进一步扩展了 Objective-C 语言的循环能力。这种广泛使用的结构具有以下语法：
 
 ```objc
 while (expression) { ...}
 ```
 
-括号中的 `expression` 会被评估。如果 `expression` 的评估结果为真，则执行后续的程序语句。在执行该语句（如果在大括号内则是多个语句）之后，会再次评估 `expression`。如果评估结果为真，则再次运行该程序语句。此操作不断重复，直到循环停止时 `expression` 评估为 `false`。随后，程序的执行将继续程序语句之后的语句。
+括号中的`expression`会被评估。如果`expression`的评估结果为真，则执行后续的程序语句。在执行该语句（如果在大括号内则是多个语句）之后，会再次评估`expression`。如果评估结果为真，则再次运行该程序语句。此操作不断重复，直到循环停止时`expression`评估为`false`。随后，程序的执行将继续程序语句之后的语句。
 
-例如，以下程序创建了一个简单的从 `1` 计数到 `6` 的 `while` 循环。
+例如，以下程序创建了一个简单的从`1`计数到`6`的`while`循环。
 
 ```objc
 int count = 1;
@@ -2172,61 +2053,55 @@ while (count <= 6) {
 }
 ```
 
-程序在启动 `while` 循环之前首先将 `count` 的值更改为 `1`。
+程序在启动`while`循环之前首先将`count`的值更改为`1`。
 
+我们可以通过对一个整数除以`10`取余数来获取其最后一位数字。例如，`3456 % 10`产生值`4`，这正是`3456`的最后一位数字，也是反转后数字的第一位。（记住，模运算符返回的是一个整数除以另一个整数的余数。）使用相同的方法，如果我们先将数字除以`10`（并记住整数除的工作原理），就可以获取数字的下一个数字。因此，`3456 / 10`等于`345`，而`345 % 10`等于`5`，即反转后数字的后续数字。
 
-
-我们可以通过对一个整数除以 `10` 取余数来获取其最后一位数字。例如，`3456% 10` 产生值 `4`，这正是 `3456` 的最后一位数字，也是反转后数字的第一位。（记住，模运算符返回的是一个整数除以另一个整数的余数。）使用相同的方法，如果我们先将数字除以 `10`（并记住整数除的工作原理），就可以获取数字的下一个数字。因此，`3456/10` 等于 `345`，而 `345% 10` 等于 `5`，即反转后数字的后续数字。
-
-我们可以继续使用这种技术直到获取最后一位数字。当最后一次整数除以 `10` 的结果为 `0` 时，我们就知道数字的最后一位已经被提取。
+我们可以继续使用这种技术直到获取最后一位数字。当最后一次整数除以`10`的结果为`0`时，我们就知道数字的最后一位已经被提取。
 
 该程序邀请用户输入一个数字，然后从右到左显示该数字的各个数字。
 
 ## do 语句
 
-在本节在此为止检查的两种循环结构在执行循环之前都会测试条件。因此，如果不符合要求，循环体可能永远不会执行。在设计程序时，有时让测试在循环结束时而不是开始运行更好。自然地，Objective-C 语言有一种名为 `do` 语句的独特语言结构来处理此类情况。该语句的语法如下：
+在本节至此为止检查的两种循环结构在执行循环之前都会测试条件。因此，如果不符合要求，循环体可能永远不会执行。在设计程序时，有时让测试在循环结束时而不是开始运行更好。自然地，Objective-C 语言有一种名为`do`语句的独特语言结构来处理此类情况。该语句的语法如下：
 
-`do` 语句按照以下顺序运行：首先执行程序语句。然后计算括号内的表达式。如果表达式求值为真（true），则继续循环并再次运行程序语句。只要表达式求值保持为真，就会重复程序语句。当表达式求值为为假（false）时，循环结束，并正常执行程序中的后续语句。
+`do`语句按照以下顺序运行：首先执行程序语句。然后计算括号内的表达式。如果表达式求值为真（true），则继续循环并再次运行程序语句。只要表达式求值保持为真，就会重复程序语句。当表达式求值为假（false）时，循环结束，并正常执行程序中的后续语句。
 
-`do` 语句只是 `while` 语句的转置，将循环条件置于循环的末尾而不是开头。
+`do`语句只是`while`语句的转置，将循环条件置于循环的末尾而不是开头。
 
-为了反转数字的数字，程序使用了 `while` 语句。回到该软件并尝试思考如果用户输入 `0` 而不是 `45678` 会发生什么。`while` 语句的循环将永远不会运行，也不会显示任何输出。如果我们使用 `do` 语句代替 `while` 语句，你就可以确保程序循环至少完成一次，从而确保在任何情况下至少显示一个数字。
+为了反转数字的数字，程序使用了`while`语句。回到该软件并尝试思考如果用户输入`0`而不是`45678`会发生什么。`while`语句的循环将永远不会运行，也不会显示任何输出。如果我们使用`do`语句代替`while`语句，你就可以确保程序循环至少完成一次，从而确保在任何情况下至少显示一个数字。
 
 ## do-while 循环
 
-与在循环顶部测试循环条件的 `for` 和 `while` 循环不同，Objective-C 中的 `do-while` 循环在循环底部检查其条件。
+与在循环顶部测试循环条件的`for`和`while`循环不同，Objective-C 中的`do-while`循环在循环底部检查其条件。
 
-`do-while` 循环与 `while` 循环相同，但它保证至少运行一次。
+`do-while`循环与`while`循环相同，但它保证至少运行一次。
 
-由于条件表达式位于循环的末尾，循环语句在测试条件之前只执行一次。如果条件为真，控制流返回到 `do`，再次执行循环中的语句。此步骤不断重复，直到指定的条件不再为真。
+由于条件表达式位于循环的末尾，循环语句在测试条件之前只执行一次。如果条件为真，控制流返回到`do`，再次执行循环中的语句。此步骤不断重复，直到指定的条件不再为真。
 
 ## break 语句
 
-在运行循环时，我们可能希望在特定条件发生时立即退出循环，例如检测到错误情况或在数据列表中找到正在寻找的数据。我们可以通过 `break` 语句来实现。当执行 `break` 语句时，程序将退出当前循环（无论是 `for`、`while` 还是 `do`）。
+在运行循环时，我们可能希望在特定条件发生时立即退出循环，例如检测到错误情况或在数据列表中找到正在寻找的数据。我们可以通过`break`语句来实现。当执行`break`语句时，程序将退出当前循环（无论是`for`、`while`还是`do`）。
 
 ## continue 语句
 
-
-
-
-
 不，完全不是。如所述，这种方法有两个显著的缺陷。我们能找到它们？第一个是关于数学转换的。记住，分子和分母都是整数实例变量。那么，当两个整数相除时会发生什么？没错，它是作为整数除法来执行的！如果我们尝试转换 1/2，上面的代码将返回 0！可以通过使用类型转换运算符在除法之前将一个或两个操作数转换为浮点值来轻松解决这个问题：
 
-由于该运算符的优先级很高，分子的值在被除之前会先被转换为 `double`。此外，我们不需要转换分母，因为算术转换规则会替我们完成这一步。
+由于该运算符的优先级很高，分子的值在被除之前会先被转换为`double`。此外，我们不需要转换分母，因为算术转换规则会替我们完成这一步。
 
-这种技术的第二个问题是，你必须检查除以零的情况（这是我们应该一直做的！）。我们不希望程序意外意外终止，因为该方法的调用者忽略了设置分数的分母，或者将分数的分母设置为 0。
+这种技术的第二个问题是，你必须检查除以零的情况（这是我们应该一直做的！）。我们不希望程序意外终止，因为该方法的调用者忽略了设置分数的分母，或者将分数的分母设置为 0。
 
-改进后的 `convertToNum` 方法如下：
+改进后的`convertToNum`方法如下：
 
-如果分数的分母为 0，我们选择返回特殊值 `NAN`（代表 Not A Number，非数字）。该符号定义在 `math.h` 系统头文件中，该头文件会自动导入到我们的应用程序中。
+如果分数的分母为 0，我们选择返回特殊值`NAN`（代表 Not A Number，非数字）。该符号定义在`math.h`系统头文件中，该头文件会自动导入到我们的应用程序中。
 
-让我们在 `Program` 中利用这种新方法。
+让我们在`Program`中利用这种新方法。
 
-在将 `aFraction` 设置为 1/4 后，程序使用 `convertToNum` 函数将分数转换为小数值。该数字随后显示为 0.25。
+在将`aFraction`设置为 1/4 后，程序使用`convertToNum`函数将分数转换为小数值。该数字随后显示为 0.25。
 
-由于在第二个示例中没有显式设置 `bFraction` 的值，因此它的分子和分母被初始化为零，这是实例变量的默认值。
+由于在第二个示例中没有显式设置`bFraction`的值，因此它的分子和分母被初始化为零，这是实例变量的默认值。
 
-这描述了 `print` 方法的结果。它还导致 `convertToNum` 函数内部的 `if` 语句返回值 `NAN`，它会被 `NSLog` 显示为 `nan`。
+这描述了`print`方法的结果。它还导致`convertToNum`函数内部的`if`语句返回值`NAN`，它会被`NSLog`显示为`nan`。
 
 ## if-else 结构
 
@@ -2234,50 +2109,47 @@ while (count <= 6) {
 
 计算机通过检查一个数字是否能被 2 整除，比检查整数的最后一位数字是否为 0, 2, 4, 6 或 8 更容易识别该数字是偶数还是奇数。如果能被整除，则是偶数；如果不能，则是奇数。
 
-之前，我们讨论过如何计算余数 `%`。因此，它是判断整数是否能被 2 整除的最佳运算符。如果除以 2 后的余数为 0，则为偶数；否则，为奇数。
+之前，我们讨论过如何计算余数`%`。因此，它是判断整数是否能被 2 整除的最佳运算符。如果除以 2 后的余数为 0，则为偶数；否则，为奇数。
 
 现在，编写一个程序，检查用户输入的整数是偶数还是奇数，然后在终端显示适当的消息。
 
-输入数字后，计算出除以 2 后的余数。第一个 `if` 语句检查该余数的值是否等于 0。如果是，它会显示消息“Number is even（数字是偶数）”。
+输入数字后，计算出除以 2 后的余数。第一个`if`语句检查该余数的值是否等于 0。如果是，它会显示消息“Number is even（数字是偶数）”。
 
-第二个 `if` 语句检查剩余值判断是否不等于 0，如果不等于，则显示一条表示该数字为奇数的消息。
+第二个`if`语句检查剩余值判断是否不等于 0，如果不等于，则显示一条表示该数字为奇数的消息。
 
-如果第一个 `if` 语句成功，则第二个必然失败，反之亦然。如果我们回想早些关于偶/奇数的讨论，我们曾提到如果数字能被 2 整除，它就是偶数；否则，就是奇数。
+如果第一个`if`语句成功，则第二个必然失败，反之亦然。如果我们回想早些关于偶/奇数的讨论，我们曾提到如果数字能被 2 整除，它就是偶数；否则，就是奇数。
 
-这种“else”的想法在编程中被频繁使用，因此提供了一个单独的结构来处理它。这在 Objective-C 中被称为 `if-else`，通常格式如下：
+这种“else”的想法在编程中被频繁使用，因此提供了一个单独的结构来处理它。这在 Objective-C 中被称为`if-else`，通常格式如下：
 
-`if-else` 语句仅仅是 `if` 语句基本样式的扩展。如果表达式求值的结果为真，立即运行程序语句 1；否则，执行程序语句 2。在任何情况下都会执行程序语句 1 或程序语句 2 之一，但不会两者都执行。
+`if-else`语句仅仅是`if`语句基本样式的扩展。如果表达式求值的结果为真，立即运行程序语句 1；否则，执行程序语句 2。在任何情况下都会执行程序语句 1 或程序语句 2 之一，但不会两者都执行。
 
-通过将两个 `if` 语句替换为单个 `if-else` 语句，可以将该语句包含在上述述程序中。
+通过将两个`if`语句替换为单个`if-else`语句，可以将该语句包含在上述程序中。
 
 我们将看到这种新的程序设计如何帮助最小化程序的复杂性，同时提高其可读性。
 
-记住双等号（`==`）表示相等性测试，而单等号（`=`）表示赋值运算符。忘记这一点并无意在 `if` 语句中使用赋值运算符会导致很多问题。
+记住双等号（`==`）表示相等性测试，而单等号（`=`）表示赋值运算符。忘记这一点并无意在`if`语句中使用赋值运算符会导致很多问题。
 
 ## 复合关系测试
 
-到本节为止，我们已经使用 `if` 语句在两个整数之间进行非常简单的关系检查。上面的程序比较了整数的值与 0，但下面的程序比较了分数的分母与 0。建立更高级的测试有时是必要的，即使不是必须的。假设我们想要统计测试中 60 到 69（包含边界）之间的成绩数量。在这个示例中，我们希望对成绩的值进行一项限制测试，并针对 60 和 69 的限制进行测试，以确保它在所需的范围内。
+到本节为止，我们已经使用`if`语句在两个整数之间进行非常简单的关系检查。上面的程序比较了整数的值与 0，但下面的程序比较了分数的分母与 0。建立更高级的测试有时是必要的，即使不是必须的。假设我们想要统计测试中 60 到 69（包含边界）之间的成绩数量。在这个示例中，我们希望对成绩的值进行一项限制测试，并针对 60 和 69 的限制进行测试，以确保它在所需的范围内。
 
-Objective-C 编程语言具有执行此类复合关系测试的能力。复合关系测试只是一个或多个通过逻辑 AND 或 OR 运算符连接的基础关系测试。字母对 `&&` 和 `||`（两个垂直竖线字符）分别表示这些运算符。例如，下面的 Objective-C 语句仅当成绩值大于等于 60 且小于等于 69 时，才会增加 `grades_60_to_69` 的值：
+Objective-C 编程语言具有执行此类复合关系测试的能力。复合关系测试只是一个或多个通过逻辑 AND 或 OR 运算符连接的基础关系测试。字母对`&&`和`||`（两个垂直竖线字符）分别表示这些运算符。例如，下面的 Objective-C 语句仅当成绩值大于等于 60 且小于等于 69 时，才会增加`grades_60_to_69`的值：
 
-同样，当 `index` 小于 0 或大于 8 时，下面的语句会导致执行 `NSLog` 语句：
+同样，当`index`小于 0 或大于 8 时，下面的语句会导致执行`NSLog`语句：
 
 在 Objective-C 中，复合运算符可以用于创建极其复杂的表达式。Objective-C 编程语言提供了完全的灵活性，但这种灵活性经常被滥用。简单性总是更容易阅读和调试的。
 
-在创建复合表达式时，大量使用括号可以提高可读性并防止由于对运算符优先级的错误假设导致问题。（`&&` 运算符的优先级高于任何算术运算符，但低于 `||` 运算符。）额外的空格也可以提高表达式的可读性。在 `&&` 和 `||` 运算符周围留空可以在视觉上将它们与其连接的表达式区分开。
+在创建复合表达式时，大量使用括号可以提高可读性并防止由于对运算符优先级的错误假设导致问题。（`&&`运算符的优先级高于任何算术运算符，但低于`||`运算符。）额外的空格也可以提高表达式的可读性。在`&&`和`||`运算符周围留空可以在视觉上将它们与其连接的表达式区分开。
 
 为了在实际示例中演示复合测试，让我们创建一个判断给定年份是否为闰年的代码。大家都知道闰年是可以被 4 整除的年份。但我们可能不知道，闰年只有在也能被 400 整除时才可能。
 
-考虑我们将如何创建一个这样的测试。首先，我们可以计算年份除以 4、100 和 400 后的余数，并将这些值赋值给命名适当的变量，分别为 `rem4`、`rem100` 和 `rem400`。然后测试余数是否满足了闰年的要求。
+考虑我们将如何创建一个这样的测试。首先，我们可以计算年份除以 4、100 和 400 后的余数，并将这些值赋值给命名适当的变量，分别为`rem4`、`rem100`和`rem400`。然后测试余数是否满足了闰年的要求。
 
 如果一个年份能被 4 整除且不能被 100 整除，或者它能被 400 整除，根据我们之前的定义，它就是闰年。
 
-
-
-
 之前的示例包含了 1955 年（它不是闰年，因为它不能被 4 整除）、2000 年（它是闰年，因为它能被 400 整除）以及 2013 年（它不是闰年，因为它能被 100 整除但不能被 400 整除）。请使用一个既能被 4 整除又不能被 100 整除的年份来完成测试用例的集合。
 
-我们注意到，Objective-C 在创建表达式时为程序员提供了很大的自由。例如，在之前的程序中，你不需要计算中间结果 `rem4`、`rem100` 和 `rem400`，我们可以直接在 `if` 语句内部进行计算，如下所示：
+我们注意到，Objective-C 在创建表达式时为程序员提供了很大的自由。例如，在之前的程序中，你不需要计算中间结果`rem4`、`rem100`和`rem400`，我们可以直接在`if`语句内部进行计算，如下所示：
 
 使用空格分隔各种操作符可以保持之前的表达式具有可读性。如果我们忽略这一点并删除不需要的括号组，可能会得到类似这样的结果：
 
@@ -2285,13 +2157,15 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 ## 嵌套 if 语句
 
-在之前关于 `if` 语句基本风格的讲解中，我们提到如果括号内表达式求值的结果为真，则执行后续语句。让此程序语句成为另一个 `if` 语句是完全可以的，如下：
+在之前关于`if`语句基本风格的讲解中，我们提到如果括号内表达式求值的结果为真，则执行后续语句。让此程序语句成为另一个`if`语句是完全可以的，如下：
 
-如果发送给 `chess_Game` 的 `isOver` 消息返回 `NO`，则执行下一条语句；而这句话又是另一个 `if` 语句。这个 `if` 语句将 `whoseTurn` 函数的结果与 `YOU` 进行比较。如果两个值相等，`chess_Game` 对象接收 `yourMove` 消息。结果是，只有游戏没有结束且轮到你时，才会发送 `yourMove` 消息。事实上，这个断言可以使用复合关系运算符来编写，如下：
+如果发送给`chess_Game`的`isOver`消息返回`NO`，则执行下一条语句；而这句话又是另一个`if`语句。这个`if`语句将`whoseTurn`函数的结果与`YOU`进行比较。如果两个值相等，`chess_Game`对象接收`yourMove`消息。结果是，只有游戏没有结束且轮到你时，才会发送`yourMove`消息。事实上，这个断言可以使用复合关系运算符来编写，如下：
 
-嵌套 `if` 语句更真实的实现方式是向之前的示例添加一个 `otherwise` 子句，此处所示：
+嵌套`if`语句更真实的实现方式是向之前的示例添加一个`otherwise`子句，此处所示：
 
-语句按照上述指示的方式执行。如果游戏没有结束且没有轮到你，则触发 `otherwise` 子句。这向 `chess_Game` 通送了 `myMove`。如果游戏已结束，随后的整个 `if` 语句将被跳过，包括其伴随的 `else` 子句。
+语句按照上述指示的方式执行。如果游戏没有结束且没有轮到你，则触发`otherwise`子句。这向`chess_Game`发送了`myMove`。如果游戏已结束，随后的整个`if`语句将被跳过，包括其伴随的`else`子句。
+
+
 
 注意 `else` 子句是如何与检查 `whoseTurn` 函数返回值的 `if` 语句相关的，而不是与测试游戏是否结束的 `if` 语句。通常情况下，`else` 子句与最后一个不包含 `else` 子句的 `if` 语句连接。我们可以通过向最外层的 `if` 语句添加一个 `else` 子句来扩展上面的示例。如果游戏结束，将执行此 `else` 子句：
 
@@ -2299,13 +2173,11 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 该语句将改为如下读取：
 
-## else if 结构
+## `else if` 结构
 
 我们已经看到，当针对两种备选结果运行测试时（例如数字是偶数还是奇数，或者年份是否为闰年），`else` 语句是如何发挥作用。然而，我们必须做出的编程决策并不总是如此简单。考虑构建这样一个程序的挑战：如果用户输入的数字小于 0 则显示 –1，等于 0 则显示 0，大于 0 则显示 1。
 
 我们必须做出的编程决策并不总是如此简单。考虑构建这样一个程序的挑战：如果用户输入的数字小于 0 则显示 –1，等于 0 则显示 0，大于 0 则显示 1。
-
-
 
 接着输入运算符。将其读入字符变量 `operator` 中，因为运算符是一个字符（`+`、`−`、`*` 或 `/`），而不是数字。`%c` 格式字符指示系统从终端读取下一个字符。格式字符串中的空格表示输入中允许任意数量的空格。在输入这些数字时，我们可以使用空格将操作数与运算符隔开。
 
@@ -2327,7 +2199,7 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 如果值非零，我们进行除法；否则，我们显示消息并将累加器设置为 `NAN`。通常情况下，让方法处理特殊场景比依赖程序员的创造力更好。
 
-## switch 语句
+## `switch` 语句
 
 你在上一个程序示例中看到的这种 `if-else` 语句链（将变量的值按顺序与多个值进行比较）在编程中非常普遍，以至于存在一种专门的 Objective-C 程序语句可以精确地实现这一目的。该语句被称为 `switch` 语句，其典型格式如下：
 
@@ -2343,7 +2215,7 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 记住在编写 `switch` 语句时，任何两个 `case` 值不能相同。然而，我们可以将多个 `case` 值与特定的程序指令关联起来。这只需在执行公共语句之前列出各种 `case` 值即可实现。例如，在下面的 `switch` 语句中，如果 `operator` 等于星号或小写字母 `x`，则运行 `multiply:` 方法。
 
-## 布尔变量 (BOOLEAN VARIABLES)
+## 布尔变量（`BOOLEAN VARIABLES`）
 
 几乎每个学习编程的人最终都将被要求编写一个生成质数表的程序。为了重温记忆，质数是指不能被 1 以外的任何数字整除的数字。第一个质数是 2。下一个质数是 3，因为它不能被 1 以外的任何整数整除；而 4 不是质数，因为它被 2 整除。
 
@@ -2354,9 +2226,6 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 关于程序有几点需要说明。外层的 `for` 语句创建一个遍历 2-55 数字的循环。循环变量 `p` 表示当前正在测试的是否为质数的值。变量 `isPrime` 在循环的第一行被赋值为 1。该变量的使用很快就会显而易见。
 
 使用第二个循环将 2 到 `p-1` 的数字除以 `p`。内部执行测试以判断 `p` 除以 `d` 的结果是否为 0。如果是，则 `p` 不可能是质数，因为它可以被 1 以外的任何整数整除。将 `isPrime` 变量设置为 0，以表示 `p` 不再是质数选项。
-
-
-
 
 此外，标志的值在整个程序运行过程中至少会被测试一次，以确定它是开启（true 或 `YES`）还是关闭（false 或 `NO`），并根据测试结果执行相应的操作。在 Objective-C 中，标志作为真或假的概念最自然的翻译方式是分别对应数字 1 和 0。当我们在程序循环内部将 `isPrime` 的值设置为 1 时，我们是将其设置为真，以表示 `p` “是素数”。如果在执行内部 `for` 循环期间发现了偶数因数，则将 `isPrime` 的值设置为假，以指示 `p` 不再是“素数”。
 
@@ -2420,10 +2289,6 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 条件表达式不仅限于赋值的右侧；它们可以用任何可以使用表达式的语文中。这意味着我们无需先使用 `NSLog` 命令将符号赋值给变量，就可以显示变量 `number` 的符号，如下所示：
 
-
-
-
-
 在 Objective-C 中，函数是一组执行特定任务的语句集合。每个 Objective-C 程序都有一个名为 `main()` 的单一 C 函数；即使是最简单的程序也可能声明额外的函数。我们可以将代码划分为许多函数。
 
 我们必须将代码划分为离散的函数，但每个函数应该在逻辑上执行特定的职责。函数声明向编译器指定函数的名称、返回类型和参数。函数的定义则指定了函数体。
@@ -2432,7 +2297,7 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 例如，`appendString()` 方法将一个字符串附加另一个字符串。方法有多个名称，包括函数（function）、子程序（subroutine）和过程（process）。
 
- 创建方法
+### 创建方法
 
 在 Objective-C 编程语言中，方法的定义采用以下通用形式：
 
@@ -2440,15 +2305,15 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 以下是方法的组成部分：
 
-*   **返回类型**：在 Objective-C 中，方法可以作为其 `returntype` 返回一个值。返回类型指定了函数返回值的数据类型。某些方法执行所需的操作但不返回任何值。在这种情况下，使用 `void` 作为 `returntype`。
-*   **方法名称**：方法的实际名称。方法签名由方法名和参数列表组成。
-*   **参数**：参数的作用类似于占位符。在调用函数时，我们发送一个包含值的参数。这个值本身被称为参数。方法的参数列表描述了参数的类型、顺序和数量。参数是可选的，方法可以没有任何任何参数。
-*   **连接参数**：连接参数在在使用时使其解释变得更简单、更清晰。
-*   **方法体**：方法体由解释方法功能的语句组成。
+- **返回类型**：在 Objective-C 中，方法可以作为其 `returntype` 返回一个值。返回类型指定了函数返回值的数据类型。某些方法执行所需的操作但不返回任何值。在这种情况下，使用 `void` 作为 `returntype`。
+- **方法名称**：方法的实际名称。方法签名由方法名和参数列表组成。
+- **参数**：参数的作用类似于占位符。在调用函数时，我们发送一个包含值的参数。这个值本身被称为参数。方法的参数列表描述了参数的类型、顺序和数量。参数是可选的，方法可以没有任何任何参数。
+- **连接参数**：连接参数在在使用时使其解释变得更简单、更清晰。
+- **方法体**：方法体由解释方法功能的语句组成。
 
 **示例：**下方显示了 `max()` 方法 get。该函数接受两个参数 `numbr1` 和 `numbr2`，并返回两者中较大的一个：
 
- 方法的声明
+### 方法的声明
 
 方法声明告诉编译器函数的名称以及如何调用它。在 Objective-C 中，函数的实际体可以单独提供。
 
@@ -2458,7 +2323,7 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 当在一个源文件中声明方法并在另一个源文件中调用它时，需要进行方法声明。在这种情况下，该函数应该定义在调用它的文件开头。
 
- 调用方法
+### 调用方法
 
 在编写 Objective-C 方法时，我们指定了函数必须做什么。我们必须调用该函数并使用方法完成指定的任务。
 
@@ -2466,7 +2331,7 @@ Objective-C 编程语言具有执行此类复合关系测试的能力。复合�
 
 要调用方法，请提供必要的参数以及方法名称；如果方法返回结果，我们可以将其存储。示例所示：
 
- 函数参数
+### 函数参数
 
 如果函数接收参数，它必须在 Objective-C 中指定接受参数值的变量。这些变量在 Objective-C 中被称为函数的形式参数（formal parameters）。
 
@@ -2495,31 +2360,36 @@ DOI: [10.1201/9781003358534-11](https://doi.org/10.1201/9781003358534-11)
 
 通常，Objective-C “实现”软件文件具有 `.m` 文件扩展名，但 Objective-C “头/接口”文件具有 `.h` 文件扩展名，与 C 头文件相同。用 Objective-C++ 编写的论文扩展名为 `.mm`。20 世纪 80 年代初，Objective-C 主要由 Brad Cox 和 Tom Love 在他们的公司 Stepstone 创建。
 
-尽管他非常谨慎地强调重用性问题不仅涉及语言本身，但在特性方面，Objective-C 经常与其他语言进行比较。1988 年一定见证了该语言许可以及 NeXTSTEP 代码库的开发。
-
-在 1996 年收购 NeXT 后，Apple 计算机在其新的操作系统 Mac OS X 中采用了 OpenStep。这包括 Objective-C、NeXT 基于 Objective-C 的开发者工具 Project Builder，以及其界面设计工具 Interface Builder（两者现在均已合并到 Xcode 应用程序中）。
-
-OpenStep 接口对象构成了 Apple 目前 Cocoa API 的大部分，它是目前正在使用的最重要的 Objective-C 开发环境。Apple 在 2014 年 WWDC 上引入的 Swift 被誉为“去掉了 C 的 Objective-C”。Objective-C 编程语言的历史非常悠久。Objective-C 在 2012 年 1 月获得 2011 年 TIOBE 编程语言奖。尽管在大部分时间里作为一种小众语言处于边缘状态，但 iPhone 的出现推动了它的普及。该奖授予过去一年使用量增长最大的语言；Objective-C 在 2011 年的排名从第八名升至第五名。
 
 
+尽管他非常谨慎地强调重用性问题不仅涉及语言本身，但在特性方面，`Objective-C` 经常与其他语言进行比较。1988 年一定见证了该语言许可以及 `NeXTSTEP` 代码库的开发。
 
+在 1996 年收购 `NeXT` 后，`Apple` 计算机在其新的操作系统 `Mac OS X` 中采用了 `OpenStep`。这包括 `Objective-C`、`NeXT` 基于 `Objective-C` 的开发者工具 `Project Builder`，以及其界面设计工具 `Interface Builder`（两者现在均已合并到 `Xcode` 应用程序中）。
 
-Objective-C 已经存在了 35 年，这比大多数当代的 macOS 和 iOS 程序员都要老。发布于 2014 年的 Swift 正迅速超越 Objective-C 并增加其市场份额。Swift 显然被用于 App Store 下载量排前 50% 的应用，这在短短五年内是一个巨大的增长。那个价值百万的问题是：在开发新的 iOS 应用时，从一开始应该使用 Objective-C 还是 Swift？让我们研究一下 Objective-C 的现状。首先，没有人收到过 Apple 关于废弃 Objective-C 支持的官方声明，也没有关于可能终止支持的日期。
+`OpenStep` 接口对象构成了 `Apple` 目前 `Cocoa API` 的大部分，它是目前正在使用的最重要的 `Objective-C` 开发环境。`Apple` 在 2014 年 WWDC 上引入的 `Swift` 被誉为“去掉了 C 的 `Objective-C`”。
 
-大量的 Objective-C 代码仍在维护中，而且许多流行程序是用这种语言编写的。考虑一下：谁会因为没有其他理由而致力于将这些应用转换为新语言呢？考虑一下这样的项目需要多少时间和金，而几乎没有可见的回报。因此我们可以假设 Objective-C 在可预见的未来将一直存在。Objective-C 程序员可以确定，他们的技能仍然会有需求。随着新应用的出现以及年轻开发者选择学习这种语言，情况已经发生了变化。
+`Objective-C` 编程语言的历史非常悠久。`Objective-C` 在 2012 年 1 月获得 2011 年 TIOBE 编程语言奖。尽管在大部分时间里作为一种小众语言处于边缘状态，但 `iPhone` 的出现推动了它的普及。该奖授予过去一年使用量增长最大的语言；`Objective-C` 在 2011 年的排名从第八名升至第五名。
+
+`Objective-C` 已经存在了 35 年，这比大多数当代的 `macOS` 和 `iOS` 程序员都要老。发布于 2014 年的 `Swift` 正迅速超越 `Objective-C` 并增加其市场份额。`Swift` 显然被用于 App Store 下载量排前 50% 的应用，这在短短五年内是一个巨大的增长。
+
+那个价值百万的问题是：在开发新的 `iOS` 应用时，从一开始应该使用 `Objective-C` 还是 `Swift`？让我们研究一下 `Objective-C` 的现状。首先，没有人收到过 `Apple` 关于废弃 `Objective-C` 支持的官方声明，也没有关于可能终止支持的日期。
+
+大量的 `Objective-C` 代码仍在维护中，而且许多流行程序是用这种语言编写的。考虑一下：谁会因为没有其他理由而致力于将这些应用转换为新语言呢？考虑一下这样的项目需要多少时间和金钱，而几乎没有可见的回报。因此我们可以假设 `Objective-C` 在可预见的未来将一直存在。
+
+`Objective-C` 程序员可以确定，他们的技能仍然会有需求。随着新应用的出现以及年轻开发者选择学习这种语言，情况已经发生了变化。
 
 ## Objective-C 与 Swift 的比较
 
-让我们看看 Objective-C 与 Swift 相比如何，以及哪些因素可以改变天平——在这种情况下，看看为我们的新 iOS 应用项目使用它是否是一个好主意。
+让我们看看 `Objective-C` 与 `Swift` 相比如何，以及哪些因素可以改变天平——在这种情况下，看看为我们的新 `iOS` 应用项目使用它是否是一个好主意。
 
-让我们检查 Swift 和 Objective-C 之间的差异。
+让我们检查 `Swift` 和 `Objective-C` 之间的差异。
 
-- 由于运行时代码编译，Objective-C 的性能较慢。根据 Apple 的官方发布，Swift 的效率是 Objective-C 的 `2.6` 倍。
-- Objective-C 继承了 C 语言的代码结构，因此具有非常有挑战性的语法，包含各种特殊符号。相反，Swift 接近于纯英语，比 Objective-C 更容易学习。
-- Objective-C 和 Swift 在代码安全方面最大的区别在于它们如何处理空引用。在 Objective-C 中，空指针不会导致应用程序崩溃，这使其难以检测和纠正。相反，Swift 中的空指针会导致可检测的崩溃。总的来说，Objective-C 程序可能比 Swift 程序有更多隐藏问题。
-- Objective-C 需要维护两个代码文件：这是耗时且费力的。使用 Swift，我们只需要维护一个代码文件，节省了人力。
-- Objective-C 需要的代码行数通常比 Swift 多。
-- Objective-C 不允许使用动态库，而是依赖静态库。静态库更大，对应用程序性能有负面影响。Swift 使用动态库在减少程序整体尺寸的同时提高了性能和响应速度。
+- 由于运行时代码编译，`Objective-C` 的性能较慢。根据 `Apple` 的官方发布，`Swift` 的效率是 `Objective-C` 的 `2.6` 倍。
+- `Objective-C` 继承了 `C` 语言的代码结构，因此具有非常有挑战性的语法，包含各种特殊符号。相反，`Swift` 接近于纯英语，比 `Objective-C` 更容易学习。
+- `Objective-C` 和 `Swift` 在代码安全方面最大的区别在于它们如何处理空引用。在 `Objective-C` 中，空指针不会导致应用程序崩溃，这使其难以检测和纠正。相反，`Swift` 中的空指针会导致可检测的崩溃。总的来说，`Objective-C` 程序可能比 `Swift` 程序有更多隐藏问题。
+- `Objective-C` 需要维护两个代码文件：这是耗时且费力的。使用 `Swift`，我们只需要维护一个代码文件，节省了人力。
+- `Objective-C` 需要的代码行数通常比 `Swift` 多。
+- `Objective-C` 不允许使用动态库，而是依赖静态库。静态库更大，对应用程序性能有负面影响。`Swift` 使用动态库在减少程序整体尺寸的同时提高了性能和响应速度。
 
 | Swift | Objective-C |
 | --- | --- |
@@ -2528,11 +2398,11 @@ Objective-C 已经存在了 35 年，这比大多数当代的 macOS 和 iOS 程�
 | 它受到 Objective-C、Rust、Ruby 和 Python 的影响。 | C 和 Smalltalk 是该语言的灵感来源。 |
 | Swift 在 2014 年亮相。 | Objective-C 在 1984 年首次引入。 |
 | Swift 类型是固定的。 | Objective-C 类型是动态的。 |
-| Swift 是一个 Apache 许可的开源项目。 | Objective-C 许可是通用公共许可证 (GPL)。 |
+| Swift 是一个 Apache 许可的开源项目。 | Objective-C 许可是通用公共许可证（GPL）。 |
 | 它仅包含课程。 | 结构体（Structs）和类（Classes）两者存在。 |
 | 它是为创建 iOS、Mac、Apple TV 和 Apple Watch 应用设计的。 | Objective-C 内置了 Smalltalk 通信机制。 |
 | Swift 的多态并不直接存在。 | Objective-C 的多态在编译时即可存在。 |
-| 它使用 true 和 false 值。 | 它使用 YES 和 NO 值，以及 BOOL。 |
+| 它使用 `true` 和 `false` 值。 | 它使用 `YES` 和 `NO` 值，以及 `BOOL`。 |
 | Objective-C 的模板类型比 Swift 少。 | Objective-C 的模板比 Swift 少。 |
 
 ## C 和 Objective-C
@@ -2548,7 +2418,7 @@ Objective-C 已经存在了 35 年，这比大多数当代的 macOS 和 iOS 程�
 | 大量的程序代码被分成较小的部分，称为函数。 | 这种编程语言将大型程序代码划分为更小的部分，称为对象和类。 |
 | 它只处理指针。 | 同时支持指针和引用。 |
 | 变量必须在程序开始声明。 | 在这种编程语言中，可以在任何地方声明变量。 |
-| C 语言中没有异常处理。 | Objective-C 中的异常处理可以通过 catch 和 try 实现。 |
+| C 语言中没有异常处理。 | Objective-C 中的异常处理可以通过 `catch` 和 `try` 实现。 |
 | C 禁止创建带默认参数的函数。 | 它允许构造带默认参数的函数。 |
 | Objective-C 代码不能在 C 中执行。 | 可以 Objective-C 执行 C 代码。 |
 | 对于动态内存分配和释放，C 有 `malloc()`、`calloc()` 和 `free()`。 | 对于内存分配和释放，Objective-C 有 `new` 和 `delete` 运算符。 |
@@ -2566,13 +2436,7 @@ Objective-C 已经存在了 35 年，这比大多数当代的 macOS 和 iOS 程�
 | Bjarne Stroustrup 于 1980 年在贝尔实验室发明了它。 | Productivity Products International 的 Brad Cox 和 Tom Love 在 1980 年创建了该设备。 |
 | 它支持多继承。 | 它不支持继承。 |
 | 在 C++ 中，结构体和类被相同的方式对待。 | Objective-C 不以相同的方式处理结构体和类。 |
-
-
-
-
-
 | C++ 中使用方法来调用实现的功能。 | Objective-C 使用消息传递来调用实现的功能。 |
-| :--- | :--- |
 | 它是一种静态类型语言。 | 它是一种动态类型语言。 |
 | 使用 `true`、`false` 和 `bool` 术。 | 它使用了 `YES`、`NO` 和 `BOOL`。 |
 | 有标准模板库。 | 它缺少模板库。 |
@@ -2581,44 +2445,48 @@ Objective-C 已经存在了 35 年，这比大多数当代的 macOS 和 iOS 程�
 ## 优点
 
 - 该语言是作为现代 C 编译器的 `GCC` 预处理器包而开发的。
-- Objective-C 与 `C++` 的兼容性更好。
-- Objective-C 更稳定。
-- Objective-C 使使用私有 API 更加容易。
+- `Objective-C` 与 `C++` 的兼容性更好。
+- `Objective-C` 更稳定。
+- `Objective-C` 使使用私有 API 更加容易。
 
 ## 缺点
 
-- 与 `C++` 不同，Objective-C 不支持运算符重载。
-- Objective-C 的第一个版本不支持垃圾收集，但它仍然使用基于 `-` 的运行时，这增加了程序的大小。
+- 与 `C++` 不同，`Objective-C` 不支持运算符重载。
+- `Objective-C` 的第一个版本不支持垃圾收集，但它仍然使用基于 `-` 的运行时，这增加了程序的大小。
 - 它需要头文件才能正常工作，因为它依赖于 `C` 编译器。
-- Objective-C 是一门相当困难的语言，考虑到它的历史，这是预料中的。
+- `Objective-C` 是一门相当困难的语言，考虑到它的历史，这是预料中的。
 
 ## 我们应该选择 Objective-C 吗？
 
-即使对这两种语言的主要特征进行简单检查，也能证明 `Swift` 优于 Objective-C。此外，Objective-C 相比 `Swift` 的优势之一最近已被移除。
+即使对这两种语言的主要特征进行简单检查，也能证明 `Swift` 优于 `Objective-C`。此外，`Objective-C` 相比 `Swift` 的优势之一最近已被移除。
 
-`Swift` 5 是该编程语言的最新版本，现在具有 `ABI` 稳定性，这是实现卓越性能和安全的关键一步。`Swift` 缺乏 `ABI` 稳定性直到最近一直是备关注的问题，尽管现在已经得到了解决。
+`Swift` 5 是该编程语言的最新版本，现在具有 `ABI` 稳定性，这是实现卓越性能和安全的关键一步。`Swift` 缺乏 `ABI` 稳定性直到最近一直是备受关注的问题，尽管现在已经得到了解决。
 
-随着最新 `Swift` 版本的发布，Apple 正在鼓励开发者在未来的 `iOS` 应用中使用。这是合理的，因为这种更年轻的语言相比较旧且更具挑战性的 Objective-C 有许多优势。
+随着最新 `Swift` 版本的发布，`Apple` 正在鼓励开发者在未来的 `iOS` 应用中使用。这是合理的，因为这种更年轻的语言相比较旧且更具挑战性的 `Objective-C` 有许多优势。
 
 ## 2022 年学习 Objective-C 的意义何？
 
-大多数 `macOS`、`XCode` 和 `iOS` 的内核代码是用 `C` 和 `C++` 编写的。因为 Objective-C 并不是编程语言，而是纯 `C` 的庞大预处理器，所以它与它们“契合”得。
+大多数 `macOS`、`XCode` 和 `iOS` 的内核代码是用 `C` 和 `C++` 编写的。因为 `Objective-C` 并不是编程语言，而是纯 `C` 的庞大预处理器，所以它与它们“契合”得。
 
-Apple 的整个生态系统都是构建在 Objective-C 之上的。`Swift` 主要基于它。要从内部理解系统如何工作，以及为什么 `Swift` 会像那样出现和运行，就需要理解“基础”。Objective-C 有助于理解某些概念，例如并不是所有的 `NSProxy` 对象都是 `NSObject`，以及 `Int`、`NSInteger` 和 `NSNumber` 之间的区别。此外 `Swizzling` 如何工作、`Selector` 是什么、响应链如何工作等。`Swift` 固地包含并抽象了这些内容，因此并不显而易见。此外，Objective-C 与任何 `C` 语言一样，有助于了解链接、指针和内存的底层行为知识。
+`Apple` 的整个生态系统都是构建在 `Objective-C` 之上的。`Swift` 主要基于它。要从内部理解系统如何工作，以及为什么 `Swift` 会像那样出现和运行，就需要理解“基础”。
+
+`Objective-C` 有助于理解某些概念，例如并不是所有的 `NSProxy` 对象都是 `NSObject`，以及 `Int`、`NSInteger` 和 `NSNumber` 之间的区别。此外 `Swizzling` 如何工作、`Selector` 是什么、响应链如何工作等。`Swift` 固地包含并抽象了这些内容，因此并不显而易见。
+
+此外，`Objective-C` 与任何 `C` 语言一样，有助于了解链接、指针和内存的底层行为知识。
 
 ## 在开发中，Objective-C 仍然被使用
 
-首先，似乎任何持续超过两三年的项目都包含 Objective-C 代码。它可能是一个隐藏的依赖层，不符合通用代码库，但它确实存在并需要定期维护：修复 Bug 和增强功能。
+首先，似乎任何持续超过两三年的项目都包含 `Objective-C` 代码。它可能是一个隐藏的依赖层，不符合通用代码库，但它确实存在并需要定期维护：修复 Bug 和增强功能。
 
 虽然特定的程序无法在 `Swift` 中重构，但这样做需要业务部门和客户都不准备投入的时间和资金。因此，Objective-C 的数据库正在不断增长。
 
-第三，由于抽象程度低于 `Swift` 的语言被用于涉及网络、内存和设备资源的复杂操作。可能是 Objective-C、`Objective-C++` 或仅仅是 `C` 和 `C++`，取决于所需的抽象级别。
+第三，由于抽象程度低于 `Swift` 的语言被用于涉及网络、内存和设备资源的复杂操作。可能是 `Objective-C`、`Objective-C++` 或仅仅是 `C` 和 `C++`，取决于所需的抽象级别。
 
-## OBJECTIVE-C 中的 BLOCKS
+## Objective-C 中的 Blocks
 
-Objective-C 中的类是某种将数据与相关功能相结合的对象。有时，指定单个任务或动作单元比指定一组方法更佳。
+`Objective-C` 中的类是某种将数据与相关功能相结合的对象。有时，指定单个任务或动作单元比指定一组方法更佳。
 
-Blocks 是一个添加到 `C`、Objective-C 和 `C++` 中的语言级特性，允许我们创建不同的代码块，并将它们像值一样传递给方法和函数。因为 blocks 是 Objective-C 对象，所以它们应该被添加到 `NSArray` 或 `NSDictionary` 等集合中。它们还可以捕获其他作用域的值，使其类似于其他编程语言中的闭包（closures）或 lambda 表达式。
+`Blocks` 是一个添加到 `C`、`Objective-C` 和 `C++` 中的语言级特性，允许我们创建不同的代码块，并将它们像值一样传递给方法和函数。因为 `blocks` 是 `Objective-C` 对象，所以它们应该被添加到 `NSArray` 或 `NSDictionary` 等集合中。它们还可以捕获其他作用域的值，使其类似于其他编程语言中的闭包（closures）或 `lambda` 表达式。
 
 ### 简单 Block 语法
 
@@ -2626,7 +2494,7 @@ Blocks 是一个添加到 `C`、Objective-C 和 `C++` 中的语言级特性，�
 
 ### 接收参数并返回值的 Blocks
 
-像方法和函数一样，blocks 可以接受参数并返回。
+像方法和函数一样，`blocks` 可以接受参数并返回。
 
 这是一个创建并运行带参数和返回值 block 的示例。
 
@@ -2634,9 +2502,9 @@ Blocks 是一个添加到 `C`、Objective-C 和 `C++` 中的语言级特性，�
 
 这是一个如何在 block 中使用 `typedef` 的示例。请记住此示例尚未与在线编译器兼容。请使用 `XCode` 运行代码。
 
-## OBJECTIVE-C 中的数字
+## Objective-C 中的数字
 
-下表涵盖了处理 `NSNumber` 的基本 Objective-C 方法，以便在 Objective-C 编程语言中将 `int`、`float` 和 `bool` 等基本数据类型以对象形式存在。
+下表涵盖了处理 `NSNumber` 的基本 `Objective-C` 方法，以便在 `Objective-C` 编程语言中将 `int`、`float` 和 `bool` 等基本数据类型以对象形式存在。
 
 | 序号 | 方法和描述 |
 | --- | --- |
@@ -2656,9 +2524,9 @@ Blocks 是一个添加到 `C`、Objective-C 和 `C++` 中的语言级特性，�
 
 这是一个使用 `NSNumber` 乘以两个整数并返回结果的简单示例。
 
-## OBJECTIVE-C 中的数组
+## Objective-C 中的数组
 
-Objective-C 语言中的数组是某种具有相同类型且定义大小的序列。数组存储数据集合，但通常将其构想变量的集合更为实际。
+`Objective-C` 语言中的数组是某种具有相同类型且定义大小的序列。数组存储数据集合，但通常将其构想变量的集合更为实际。
 
 我们创建一个单个数组变量 `numbers`，并使用 `numbers[0]`、`numbers[1]` 和 `numbers[99]` 来显示不同的变量，而不是单独定义 `number0`、`number1` 和 `number99`。
 
@@ -2666,23 +2534,19 @@ Objective-C 语言中的数组是某种具有相同类型且定义大小的序�
 
 ![](img/ufig11_1.jpg)
 
-Objective-C 中的数组。
+`Objective-C` 中的数组。
 
 ## 数组声明
 
-在 Objective-C 中，程序员通过提供元素类型和数组所需的元素数量来声明数组：
+在 `Objective-C` 中，程序员通过提供元素类型和数组所需的元素数量来声明数组。
 
-这被称为单维数组。`arraySize` 常数必须大于零，类型可以是任何允许的 Objective-C 数据类型。例如，定义一个名为 `balance` 的 10 个元素的 double 数组，使用以下语句：
+这被称为单维数组。`arraySize` 常数必须大于零，类型可以是任何允许的 `Objective-C` 数据类型。例如，定义一个名为 `balance` 的 10 个元素的 `double` 数组，使用以下语句：
 
-balance 现在是一个容量为 10 的 double 数组。
+`balance` 现在是一个容量为 10 的 `double` 数组。
 
 ## 数组初始化
 
-在 Objective-C 中，我们可以逐个初始化数组，也可以一次性初始化，如下所示。
-
-
-
-
+在 `Objective-C` 中，我们可以逐个初始化数组，也可以一次性初始化，如下所示。
 
 大括号 `{ }` 之间的值数量不能超过方括号 `[ ]` 之间指定的数组对象数量。这里有一个分配单个数组元素的示例。
 
@@ -2695,6 +2559,8 @@ balance 现在是一个容量为 10 的 double 数组。
 前述语句将数组的第五个项目赋值为值 `64.0`。由于所有数组的第一个元素的索引均为 `0`（也称为基索引），因此索引为 `4` 的元素将是第五个元素，即最后一个元素。
 
 ## 访问数组元素
+
+
 
 要找到某个元素，需要对数组进行索引。这通过在数组名后用方括号括起元素的索引来实现。为了说明这一点，
 
@@ -2715,15 +2581,13 @@ balance 现在是一个容量为 10 的 double 数组。
 
 Objective-C 指针易于理解且使用起来有趣。某些 Objective-C 编程工作通过指针变得更加简单，而另一些工作（如动态内存分配）如果没有指针则是无法完成的。因此，学习技巧对于成为丰富的 Objective-C 程序员至关重要。让我们从采取简单易行的措施开始学习它们。
 
-如你所知，每个变量都是一个内存位置。在 Objective-C 中，每个内存位置都有一个地址，可以使用取地址符 (`&`) 运算符来访问，该运算符表示内存地址。考虑以下示例，它会输出变量的地址。
+如你所知，每个变量都是一个内存位置。在 Objective-C 中，每个内存位置都有一个地址，可以使用取地址符（`&`）运算符来访问，该运算符表示内存地址。考虑以下示例，它会输出变量的地址。
 
 ## Objective-C 中的指针到底是什么？
 
 Objective-C 中的指针是一个变量，其值是内存区域的直接地址或另一个变量的地址。指针像任何变量或常量一样，在在使用它包含任何变量地址之前必须先定义。指针变量的声明具有以下通用形式：
 
 Objective-C 指针的基类型是 `type`，它必须是一个有效的 Objective-C 数据类型，指针变量的名为 `varname`。在 Objective-C 中用于声明指针的星号 `*` 与用于乘法的星号相同。然而，在这种情况下，星号将变量标记为指针。以下是有效的指针声明：
-
-
 
 所有指针值（无论是整数、浮点数、字符还是其他）都具有相同的真实数据类型：一个表示内存位置的长十六进制数字。不同数据类型指针之间的唯一区别在于指针所指向的变量或常量。
 
@@ -2765,26 +2629,21 @@ Objective-C 有大量的字符串功能。
 
 | 序号 | 方法与目的 |
 | --- | --- |
-| 1 | - (NSString *)capitalizedString;返回接收者的大写表示形式。 |
-| 2 | - (unichar)characterAtIndex:(NSUInteger)index;返回指定索引处的字符。 |
-| 3 | - (double)doubleValue;作为 double，此方法返回接收者的文本浮点值。 |
-| 4 | - (float)floatValue;作为 float，它返回接收者的文本浮点值。 |
-| 5 | - (BOOL)hasPrefix:(NSString *)aString;布尔值表示提供的字符串是否匹配接收者的起始字符。 |
-| 6 | - (BOOL)hasSuffix:(NSString *)aString;布尔值表示提供的字符串是否匹配接收者的结束字符。 |
-| 7 | - (id)initWithFormat:(NSString *)format ...;返回一个使用格式字符串作为模板并插入剩余输入值而产生的 NSString 对象。 |
-| 8 | - (NSInteger)integerValue;返回接收者文本的 IntegerLength 值。 |
-| 9 | - (BOOL)isEqualToString:(NSString *)aString;基于字面量 Unicode 的比较返回布尔结果，显示是否存在给定字符串且接收者相等。 |
-| 10 | - (NSUInteger)length;返回接收者的 Unicode 字符数。 |
-| 11 | - (NSString *)lowercaseString;返回接收者的小写表示形式。 |
-| 12 | - (NSRange)rangeOfString:(NSString *)aString;返回接收者首次出现给定字符串的范围。 |
-| 13 | - (NSString *)stringByAppendingFormat:(NSString *)format ...;通过在接收者上附加一个由提供的格式字符串和后续参数构造的字符串来返回一个字符串。 |
-
-
-
-
-
-| 14 | - `(NSString *)stringByTrimmingCharactersInSet:(NSCharacterSet *)set;` 返回一个新字符串，该字符串是从接收者的两端移除给定字符集中的字符。 |
-| 15 | - `(NSString *)substringFromIndex:(NSUInteger)anIndex;` 返回一个新字符串，包含从指定索引到结束的接收者的字符。 |
+| 1 | `- (NSString *)capitalizedString;` 返回接收者的大写表示形式。 |
+| 2 | `- (unichar)characterAtIndex:(NSUInteger)index;` 返回指定索引处的字符。 |
+| 3 | `- (double)doubleValue;` 作为 `double`，此方法返回接收者的文本浮点值。 |
+| 4 | `- (float)floatValue;` 作为 `float`，它返回接收者的文本浮点值。 |
+| 5 | `- (BOOL)hasPrefix:(NSString *)aString;` 布尔值表示提供的字符串是否匹配接收者的起始字符。 |
+| 6 | `- (BOOL)hasSuffix:(NSString *)aString;` 布尔值表示提供的字符串是否匹配接收者的结束字符。 |
+| 7 | `- (id)initWithFormat:(NSString *)format ...;` 返回一个使用格式字符串作为模板并插入剩余输入值而产生的 `NSString` 对象。 |
+| 8 | `- (NSInteger)integerValue;` 返回接收者文本的 `IntegerLength` 值。 |
+| 9 | `- (BOOL)isEqualToString:(NSString *)aString;` 基于字面量 Unicode 的比较返回布尔结果，显示是否存在给定字符串且接收者相等。 |
+| 10 | `- (NSUInteger)length;` 返回接收者的 Unicode 字符数。 |
+| 11 | `- (NSString *)lowercaseString;` 返回接收者的小写表示形式。 |
+| 12 | `- (NSRange)rangeOfString:(NSString *)aString;` 返回接收者首次出现给定字符串的范围。 |
+| 13 | `- (NSString *)stringByAppendingFormat:(NSString *)format ...;` 通过在接收者上附加一个由提供的格式字符串和后续参数构造的字符串来返回一个字符串。 |
+| 14 | `- (NSString *)stringByTrimmingCharactersInSet:(NSCharacterSet *)set;` 返回一个新字符串，该字符串是从接收者的两端移除给定字符集中的字符。 |
+| 15 | `- (NSString *)substringFromIndex:(NSUInteger)anIndex;` 返回一个新字符串，包含从指定索引到结束的接收者的字符。 |
 
 下面的示例使用了上述概述的一些函数：
 
@@ -2794,10 +2653,10 @@ Objective-C 中的数组允许我们创建可以包含许多相同类型数据�
 
 数据使用结构来表示。假设我们想跟踪你的图书馆书籍。我们可能想要考虑每本书的以下方面：
 
-* 标题
-* 作者
-* 图书 ID
-* 主题
+- 标题
+- 作者
+- 图书 ID
+- 主题
 
 ### 创建结构
 
@@ -2807,7 +2666,7 @@ Objective-C 中的每个成员定义都是标准的变量定义，例如 `int`�
 
 ### 访问结构成员
 
-使用访问运算符 (`.`) 来获取对任何结构成员的访问。在 Objective-C 中，访问运算符由结构变量名和我们想要访问的结构成员名之间的点来表示。`struct` 关键字用于定义结构类型的变量。下面的示例展示了如何使用结构。
+使用访问运算符（`.`）来获取对任何结构成员的访问。在 Objective-C 中，访问运算符由结构变量名和我们想要访问的结构成员名之间的点来表示。`struct` 关键字用于定义结构类型的变量。下面的示例展示了如何使用结构。
 
 ### 作为结构的函数参数
 
@@ -2841,7 +2700,7 @@ Objective-C 中的每个成员定义都是标准的变量定义，例如 `int`�
 
 Objective-C 预处理器是编译过程中的一个独立步骤，不包含在编译器中。Objective-C 预处理器只是一个文本替换工具，指示编译器在编译之前进行必要的预处理。Objective-C 预处理器将称为 `OCPP`。
 
-所有预处理器指令前面都有一个井号 (`#`)。为了可读性，它必须是第一个非空字符，且预处理器指令应该从第一列开始。下一节包含所有基本的预处理器指令。
+所有预处理器指令前面都有一个井号（`#`）。为了可读性，它必须是第一个非空字符，且预处理器指令应该从第一列开始。下一节包含所有基本的预处理器指令。
 
 | 序号 | 指令与描述 |
 | --- | --- |
@@ -2854,7 +2713,7 @@ Objective-C 预处理器是编译过程中的一个独立步骤，不包含在�
 | 7 | `#else` `#if` 的替代方案 |
 | 8 | `#elif` 一个语句中的 `#else` 和 `#if` |
 | 9 | `#endif` 结束预处理器条件判断 |
-| 10 | `#error` 在 stderr 上打印错误信息 |
+| 10 | `#error` 在 `stderr` 上打印错误信息 |
 | 11 | `#pragma` 使用标准方法向编译器发出特殊命令 |
 
 预处理器的示例：检查下面的示例以更好地理解各种指令。
@@ -2887,19 +2746,19 @@ ANSI C 定义了许多宏。虽然每个宏都可用，但预定义宏不会直�
 
 Objective-C 预处理器包含了以下运算符来帮助我们构建宏。
 
-### 宏续接 (\)
+### 宏续接（`\`）
 
 宏通常被限于单行。在 Objective-C 中，使用宏续接运算符来延续单行无法容纳的宏。示例如下，
 
-### 字符串化 (#)
+### 字符串化（`#`）
 
-当在宏定义中使用时，字符串化或数字号运算符 (`#`) 会将宏参数转换为字符串常量。在宏的预定参数或参数列表中使用此运算符。示例如下：
+当在宏定义中使用时，字符串化或数字号运算符（`#`）会将宏参数转换为字符串常量。在宏的预定参数或参数列表中使用此运算符。示例如下：
 
-### 标记粘贴 (##)
+### 标记粘贴（`##`）
 
-标记标记粘贴运算符 (`##`) 在宏声明中连接两个参数。它允许我们在宏定义中将两个独立的标记合并为一个单一标记。示例如下：
+标记标记粘贴运算符（`##`）在宏声明中连接两个参数。它允许我们在宏定义中将两个独立的标记合并为一个单一标记。示例如下：
 
-### defined() 运算符
+### `defined()` 运算符
 
 预处理器定义运算符用于常量表达式，以检查标识符是否已通过 `#define` 定义。如果指定的标识符已定义，则结果为真（非零）。如果未指定符号，则结果为假（零）。以下是 `defined()` 运算符的定义：
 
@@ -2910,9 +2769,6 @@ Objective-C 预处理器包含了以下运算符来帮助我们构建宏。
 我们可以使用以下宏修改上面的代码：
 
 带有参数的宏必须在使用之前通过 `#define` 指令定义。括号参数列表必须紧跟在宏名称之后。宏名与左括号之间不能有空格。示例如下：
-
-
-
 
 ## Objective-C 中的 TYPEDEF
 
@@ -2926,9 +2782,9 @@ Objective-C 编程语言中的 `typedef` 关键字用于重命名类型。下面
 
 ## typedef vs #define
 
-Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与 `typedef` ，但有以下差异：
+Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与 `typedef`，但有以下差异：
 
-- `typedef` 只能提供类型的符号化名称；然而，`#define` 也可以用于定义值的别名，例如将 `1` 定义为 `ONE` 等。
+- `typedef` 只能提供类型的符号化名称；然而，`#define` 也可以用于定义值的别名，例如将 1 定义为 `ONE` 等。
 - `typedef` 声明由编译器解释，而 `#define` 语句由预处理器处理。
 
 `#define` 最简单的基本应用如下：
@@ -2939,7 +2795,7 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 对于 Objective-C 中的浮点操作，我们经常利用 `CGFloat`，它在 32 位情况下派自基础 `float` 类型，在 64 位情况下派自 `double`。考虑以下示例，其中浮点操作中的转换运算符将一个整数变量除以另一个：
 
-需要注意的是，转换运算符的优先级高于除法运算符。因此，总值在除以 `count` 之前会被转换为 `double`，从而产生一个双 值。
+需要注意的是，转换运算符的优先级高于除法运算符。因此，总值在除以 `count` 之前会被转换为 `double`，从而产生一个双值。
 
 类型转换可以是隐式的（由编译器自动执行）或显式的（由用户执行，使用转换运算符显式表示）。在需要类型转换时，使用转换运算符被认为是良好的编程习惯。
 
@@ -2961,7 +2817,7 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 在这一部分，我们将讨论日志处理并提供示例。
 
-## NSLog 方法
+## `NSLog` 方法
 
 我们使用 Objective-C 编程语言的 `NSLog` 函数来打印日志，我们在之前的“Hey World”示例中第一次用过它。
 
@@ -2977,10 +2833,9 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 ## 错误
 
-需要注意的是，转换运算符的优先级高于除法运算符。因此，总值在除以 `count` 之前会被转换为 `double`，从而产生一个双 值。
+需要注意的是，转换运算符的优先级高于除法运算符。因此，总值在除以 `count` 之前会被转换为 `double`，从而产生一个双值。
 
 类型转换可以是隐式的（由编译器自动执行）或显式的（由用户执行，使用转换运算符显式表示）。在需要类型转换时，使用转换运算符被认为是良好的编程习惯。
-
 
 
 
@@ -3000,7 +2855,7 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 使用 `initWithName:reason:userInfo:` 初始化函数，我们可以轻松创建带有特定数据的新异常对象。通过遵循后续章节中概述步骤，也可以捕获和抛出自定义异常对象。
 
-# 创建异常
+## 创建异常
 
 让我们从程序的默认异常处理行为开始。在 Objective-C 中，当我们尝试访问不存在的索引时，`NSArray` 的 `object:` 函数会返回一个 `NSRangeException`（`NSException` 的子类）。因此，如果我们请求三个组件数组的第十项，我们就会有一个异常要处理了：
 
@@ -3010,7 +2865,7 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 为了管理异常，任何可能导致异常的代码都应该放在 `@try` 块中。然后应用 `@catch()` 指令来捕获特定异常。如有必要，我们可以在 `@finally` 块中执行任何清理代码。下面的示例演示了这三个异常处理指令：
 
-消息 `[crew objectAtIndex:10]` 导致软件产生 `NSRangeException`，该异常被 `@catch()` 指令捕获。实际的异常处理发生在 `@catch()` 子句中。在例例中，我们只是显示了一条条有用的错误信息，但在其他情况下，我们可能需要编写代码来解决问题。
+消息 `[crew objectAtIndex:10]` 导致软件产生 `NSRangeException`，该异常被 `@catch()` 指令捕获。实际的异常处理发生在 `@catch()` 子句中。在示例中，我们只是显示了一条有用的错误信息，但在其他情况下，我们可能需要编写代码来解决问题。
 
 当 `@try` 块中检测到错误时，程序移动到相应的 `@catch()` 块，防止异常后的代码被执行。如果 `@try` 块需要清理（例如，如果它打开了一个文件，则需要关闭），就会出现问题。这个问题通过 `@finally` 块解决，因为无论是否抛出异常，它的执行都能得到保证。这使得它成为解决 `@try` 块中任何遗留问题的绝佳位置。
 
@@ -3024,9 +2879,9 @@ Objective-C 中的 `#define` 指令用于为多个数据类型声明别名，与
 
 这段代码不会抛出错误，因为它为 `generateRandomInteger()` 提供了一个有效范围 (0, 10)。如果我们将范围更改为 (0, −10)，我们将看到 `@catch()` 部分在运行。这就是基础类获取异常时在后台发生的情况（例如 `NSArray` 抛出的 `NSRangeException`）。
 
-我们还可以重新抛出之前捕获的异常。当我们想要收到异常提醒但不想自己处理它时，这非常有用。为了起见，我们可以省略 `@throw` 指令的参数：
+我们还可以重新抛出之前捕获的异常。当我们想要收到异常提醒但不想自己处理它时，这非常有用。为了简洁起见，我们可以省略 `@throw` 指令的参数：
 
-捕获的异常随后被转发给下一个高别的处理器，在本例中，是顶层异常处理程序。这应该显示我们的 `@catch()` 块的结果，以及“由于未捕获的异常导致程序正常终止……”的消息，随后程序将突然关闭。
+捕获的异常随后被转发给下一个级别的处理器，在本例中，是顶层异常处理程序。这应该显示我们的 `@catch()` 块的结果，以及“由于未捕获的异常导致程序正常终止……”的消息，随后程序将突然关闭。
 
 `@throw` 指令并不非要抛出 `NSException` 对象；它可以抛出任何内容。下面的示例抛出了一个 `NSNumber` 对象而不是普通异常。此外，注意我们通过在 `@try` 块之后跟随一系列 `@catch()` 语句来针对某些对象：
 
@@ -3044,24 +2899,20 @@ Apple 的一些核心框架也期望抛出 `NSException` 对象，因此在与�
 
 - `code` – 一个唯一标识错误的 `NSInteger`。
 - `Domain` – 一个描述错误的 `NSString` 对象。
-- `userInfo` – 一个 `NSDictionary` 实例，持有特定于问题的的详细信息。这比 `NSException` 的 `userInfo` 字典要常用得多。
+- `userInfo` – 一个 `NSDictionary` 实例，持有特定于问题的详细信息。这比 `NSException` 的 `userInfo` 字典要常用得多。
 
 除了这些关键属性外，`NSError` 还包含许多有助于显示和处理错误的变量。
 
-- `localizedDescription` – 一个包含完整错误说明的 `NSString`，通常包含失败的原因。此数字通常通过警框显示给用户。
+- `localizedDescription` – 一个包含完整错误说明的 `NSString`，通常包含失败的原因。此信息通常通过警报框显示给用户。
 - `localizedFailureReason` – 一个对错误原因进行不同解释的 `NSString`。想要从综合解释中移除错误原因的用户可以使用此选项。
 - `recoverySuggestion` – 一个提供用户如何从错误中恢复信息的 `NSString`。
-- `localizedRecoveryOptions` – 一个包含错误对话框按钮标题的 `NSArray`。如果此数组为空，则显示单个 OK 按钮来关闭警框。
-- `helpAnchor` – 当按下警框中的帮助锚按钮时，会显示一个 `NSString`。
-
-- `initWithDomain:code:userInfo` 方法与 `NSException` 一一样，用于带有详细数据的初始化 `NSError` 对象。
+- `localizedRecoveryOptions` – 一个包含错误对话框按钮标题的 `NSArray`。如果此数组为空，则显示单个 OK 按钮来关闭警报框。
+- `helpAnchor` – 当按下警报框中的帮助锚按钮时，会显示一个 `NSString`。
+- `initWithDomain:code:userInfo` 方法与 `NSException` 一样，用于带有详细数据的初始化 `NSError` 对象。
 
 ## 错误域
 
-
-
-
-错误域（error domain）错误代码的命名空间。单个域内的代码必须是唯一的，尽管它们可能与其他域的代码重叠。域提供了有关问题来源的信息，并避免了代码冲突。四个主要的内置错误域是 `NSMachErrorDomain`、`NSPOSIXErrorDomain`、`NSOSStatusErrorDomain` 和 `NSCCocoaErrorDomain`。Apple 大多数标准 Objective-C 框架在 `NSCCocoaErrorDomain` 中包含错误代码；然而，某些框架定义了自己的错误域（例如 `NSXMLParserErrorDomain`）。
+错误域（error domain）是错误代码的命名空间。单个域内的代码必须是唯一的，尽管它们可能与其他域的代码重叠。域提供了有关问题来源的信息，并避免了代码冲突。四个主要的内置错误域是 `NSMachErrorDomain`、`NSPOSIXErrorDomain`、`NSOSStatusErrorDomain` 和 `NSCocoaErrorDomain`。Apple 大多数标准 Objective-C 框架在 `NSCocoaErrorDomain` 中包含错误代码；然而，某些框架定义了自己的错误域（例如 `NSXMLParserErrorDomain`）。
 
 如果我们需要为自己的库和应用程序生成新的错误代码，应该始终向我们的错误域添加新的错误代码；绝不扩大任何已有的错误域。创建我们的域是一项简单的任务。由于域本质上是字符串，我们必须定义一个与应用程序其他任何错误域都不冲突的字符串常量。Apple 建议域采用 `com.<company>.project>.ErrorDomain` 的形式。
 
@@ -3069,9 +2920,9 @@ Apple 的一些核心框架也期望抛出 `NSException` 对象，因此在与�
 
 语言中没有用于处理 `NSError` 对象的结构（尽管有几个内置类专为处理它们而设计）。它们的设计旨在与函数配合使用，函数在成功时返回对象，失败时返回 nil。捕获错误的典型方法如下：
 
-1.  创建一个名为 `NSError` 的变量。它不需要分配或设置。
-2.  将此变量作为双指针（double pointer）传递给可能出错的函数。如果发生问题，函数将使用此引用来记录任何错误。
-3.  检查函数的返回值以查看其是否成功。如果操作失败，我们可能会使用 `NSError` 来处理或显示错误。
+1. 创建一个名为 `NSError` 的变量。它不需要分配或设置。
+2. 将此变量作为双指针（double pointer）传递给可能出错的函数。如果发生问题，函数将使用此引用来记录任何错误。
+3. 检查函数的返回值以查看其是否成功。如果操作失败，我们可能会使用 `NSError` 来处理或显示错误。
 
 函数通常不返回 `NSError` 对象；相反，如果成功，它返回预期的结果，失败则返回 nil。要发现问题，始终使用函数的返回值；永远不要使用 `NSError` 对象的存在与否来判断操作是否成功。错误对象的设计是为了表示可能的错误，而不是告诉我们是否发生了错误。
 
@@ -3079,219 +2930,284 @@ Apple 的一些核心框架也期望抛出 `NSException` 对象，因此在与�
 
 ## 自定义错误
 
-我们可以通过接受 `NSError` 对象的双引用并填充填充我们的数据来建立自定义错误。记住，你的函数或方法应该根据其成功与返回对象或空（不要返回 `NSError` 引用）。下面的示例使用错误而不是异常处理发送到 `generateRandomInteger()` 函数的错误输入。由于 `error` 是双指针，我们可以在方法内部初始化底层值。
+我们可以通过接受 `NSError` 对象的双引用并填充我们的数据来建立自定义错误。记住，你的函数或方法应该根据其成功与返回对象或空（不要返回 `NSError` 引用）。下面的示例使用错误而不是异常处理发送到 `generateRandomInteger()` 函数的错误输入。由于 `error` 是双指针，我们可以在方法内部初始化底层值。
 
-使用 `if (error!= NULL)` 来验证用户是否提供了有效的 `error` 参数是重要的。这在生成错误的函数中完成。由于 `error` 参数是双指针，`error` 参数可能会为所引用的变量分配值。再次，我们检查返回值是否有错误（`if (result == nil)`），而不是检查错误变量。
+使用 `if (error != NULL)` 来验证用户是否提供了有效的 `error` 参数是重要的。这在生成错误的函数中完成。由于 `error` 参数是双指针，`error` 参数可能会为所引用的变量分配值。再次，我们检查返回值是否有错误（`if (result == nil)`），而不是检查错误变量。
 
 `NSError` 的 `localizedDescription`、`localizedFailureReason` 以及相关特征存储在它的 `userInfo` 字典中，使用特殊键如 `NSLocalizedDescriptionKey`、`NSLocalizedFailureReasonErrorKey` 等。因此，要定义问题，我们只需向适当的键添加一些字符串，如前面的示例所示。
 
 我们应该为某些错误域和代码提供常量，以保证类之间的一致性。
 
-## Objective-C 语言特性
+# Objective-C 语言特性
 
 以下是我认为有助于 Objective-C 成为一种优秀且有趣的编程语言的元素列表。
 
-### 类都是对象
+## 类都是对象
 
 每个 Objective-C 类都是运行时自动生成并管理的元类（meta-class）的实例。类方法可以创建类，类可以作为参数传递，类可以存储在集合中，等等。要产生一个实例，我们只需向想要实例化的 Objective-C 类发送消息。没有必要重新设计“工厂”系统。在语言级别，不需要特定的构造函数机制。这有助于语言保持基础且高效。此外，元类也是对象。
 
-### 动态类型
+## 动态类型
 
 与 Ruby、Python、Smalltalk 和 Groovy 类似……这非常有用，因为我们并不总是知道运行时对象会是什么。在 Objective-C 中使用动态类型非常简单。例如，这指定了一个可能持有对象引用的变量：
 
-### 可选静态类型
+## 可选静态类型
 
-尽管如此，Objective-C 也提供了静态类型。它是兼顾两者的者。这定义了一个可以持有 `NSView` 或子类对象引用的变量：
+尽管如此，Objective-C 也提供了静态类型。它是兼顾两者的。这定义了一个可以持有 `NSView` 或子类对象引用的变量：
 
-### 分类 (Categories)
+## 分类 (Categories)
 
-我们可以使用分类来创建新方法，并将它们添加到我们不知道源代码的类中（例如 Apple 提供的标准 Cocoa 类）。这使得在不需要子类的情况下进行类扩展成为。对于根据我们想要使用或设计的框架要求自定义现有类非常有用。
+我们可以使用分类来创建新方法，并将它们添加到我们不知道源代码的类中（例如 Apple 提供的标准 Cocoa 类）。这使得在不需要子类的情况下进行类扩展成为可能。对于根据我们想要使用或设计的框架要求自定义现有类非常有用。
 
-### 消息传递
+## 消息传递
 
 消息是我们与对象通信的方式。通常，消息的接收者有一个与消息直接匹配的方法（即具有相同的名称，或在 Objective-C 术语中具有相同的选择器 selector）。在这种情况下，方法将被调用。然而，这并不是唯一的结论。对象还可以通过将消息转发给另一个对象、广播给多个对象、对其进行内省、应用自定义逻辑等来处理消息。
 
-### 消息表达语法
+## 消息表达语法
 
 Objective-C 的消息模式类似于带有空格的自然语言句子（以冒号前缀）。当我们编写代码向对象发送消息时，我们用真实数据填充空白以构建一个逻辑语句。这种表达消息的方式借用自 Smalltalk，并增强了代码的表达力。
 
 例如，向有序集合发送消息，请求插入索引为 12 的项：
 
-一个消息发送表达式可以被视为一个句子，接收者为主语，消息是句子的剩余部分（例如，我们希望接收者执行的操作）：“在 myCollection 的索引 12 处，插入 myObject。”
+一个消息发送表达式可以被视为一个句子，接收者为主语，消息是句子的剩余部分（例如，我们希望接收者执行的操作）：“在 `myCollection` 的索引 12 处，插入 `myObject`。”
 
-### 内省 (Introspection)
+## 内省 (Introspection)
 
 对象内省很容易的。例如，我们可能使用以下语法向对象询问它的类：
 
-检查对象是否具有方法“fooo”：
+检查对象是否具有方法“`fooo`”：
 
-请求对象方法“foo0”的签名：
+请求对象方法“`foo0`”的签名：
 
 确定一个类是否是另一个类的子类：
 
-### 动态运行时
+## 动态运行时
 
 Objective-C 的运行时是动态的。它允许消息的动态生成、向现有类动态添加方法、更改方法的实现等。
 
-## 自动垃圾回收
+# 自动垃圾回收
 
-在在它的线程上，自动垃圾回收器与应用程序代码协作。它使用分代方法，通过关注更有可能包含垃圾的内存区域来提高性能。它与 `NSAllocateCollactable()` 函数及相关方法分配的对象和原始 C 内存块兼容。`malloc()` 函数按预期工作，允许访问收集器不保留的内存。
-
-
+在它自己的线程上，自动垃圾回收器与应用程序代码协作。它使用分代方法，通过关注更有可能包含垃圾的内存区域来提高性能。它与 `NSAllocateCollectable()` 函数及相关方法分配的对象和原始 C 内存块兼容。`malloc()` 函数按预期工作，允许访问收集器不保留的内存。
 
 垃圾回收器是一个可选服务；如果我们不想使用它，我们的应用程序可以依赖引用计数机制。该系统采用了一种新的延迟释放技术，极大地减少了人工引用计数所需的工作量。
 
 在编写时，iPhone 不支持自动垃圾回收器。
 
-## C 内部
+# C 内部
 
 Objective-C 编程语言是 `C` 编程语言的面向对象的扩展和超集。这意味着 `C` 的原生威力是可用的，且 `C` 库可以直接利用它。此外，由于 Mac OS X（一个 `UNIX` 系统）主要使用 `C` 和 Objective-C 编写（用于高层组件），这使得该语言与操作系统之间存在共生关系。
 
-## C++ 流畅性
+# C++ 流畅性
 
 Objective-C 不仅仅是 `C` 的超集；它还能理解并执行 `C++` 代码。在这种配置下，该语言被称为 Objective-C++，允许将 Objective-C 和 `C++` 代码语句相结合。它还允许直接使用 `C++` 库。
 
-## 简单性
+# 简单性
 
-Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言复杂的特性（模板、重载、多重继承等）在 Objective-C 中都是缺失，它利用其动态特性来实现更简单的编程范式。
+Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言复杂的特性（模板、重载、多重继承等）在 Objective-C 中都是缺失的，它利用其动态特性来实现更简单的编程范式。
 
-## 苹果产品访问
+# 苹果产品访问
 
 通过 Objective-C 的每一个 Mac OS X 新版本以及现在的 iPhone OS 都包含了许多有趣的新功能，这些功能可以从 Objective-C 直接访问。这显著提升了 Objective-C 的易用性。
 
-### 注意
+# 参考文献
+
+1. Objective-C 教程：[`www.tutorialspoint.com/objective_c/index.htm`](https://www.tutorialspoint.com)，访问于 2022 年 6 月 1 日。
+2. 使用 Objective-C 编程：[`developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html`](https://developer.apple.com)，访问于 2022 年 6 月 1 日。
+3. `C` 与 Objective-C 的区别：[`www.geeksforgeeks.org/difference-between-c-and-objective-c/`](https://www.geeksforgeeks.org)，访问于 2022 年 6 月 1 日。
+4. Objective-C 编程：[`educationecosystem.com/guide/objective-c`](https://educationecosystem.com)，访问于 2023 年 6 月 1 日。
+5. Objective-C 编程入门：[`medium.com/ios-objective-creation/lesson-1-introduction-to-objective-c-programming-22f5fe71172`](https://medium.com)，访问于 2022 年 6 月 1 日。
+6. Objective-C 概述：[`www.techotopia.com/index.php/An_Overview_of_Objective-C_Object_Oriented_Programming`](https://www.techotopia.com)，访问于 2022 年 6 月 1 日。
+7. Objective-C – 概述：[`www.tutorialspoint.com/objective_c/objective_c_overview.htm`](https://www.tutorialspoint.com)，访问于 2022 年 6 月 1 日。
+8. Designveloper. (2021, 2 月 19). 什么是 Objective-C? 获取自 [`www.designveloper.com/blog/what-is-objective-c/`](https://www.designveloper.com)，访问于 2022 年 6 月 1 日。
+
+
+
+9. Objective-C 编译器：[`www.objc.io/issues/6-build-tools/compiler/`](https://www.objc.io)，访问于 2022 年 6 月 1 日。
+
+10. Objective-C 开发者入门指南：[`docs.microsoft.com/en-us/xamarin/ios/get-started/objective-c-developers/primer`](https://docs.microsoft.com)，访问于 2022 年 6 月 1 日。
+
+11. Objective-C – Foundation 框架：[`www.tutorialspoint.com/objective_c/objective_c_foundation_framework.htm`](https://www.tutorialspoint.com)，访问于 2022 年 6 月 2 日。
+
+12. Objective-C Foundation 框架概述：[`www.techotopia.com/index.php/An_Overview_of_the_Objective-C_Foundation_Framework`](https://www.techotopia.com)，访问于 2022 年 6 月 2 日。
+
+13. Swift 对 Objective-C：[`www.javatpoint.com/swift-vs-objective-c#:∼:text=Advantages%20(Pros)%20of%20Objective%20C&text=There%20is%20a%20lot%20of,C%2B%2B%20runs%20smoothly%20on%20this`](https://www.javatpoint.com)，访问于 2022 年 6 月 2 日。
+
+14. Objective-C 环境配置：[`www.tutorialspoint.com/objective_c/objective_c_environment_setup.htm`](https://www.tutorialspoint.com)，访问于 2022 年 6 月 2 日。
+
+15. Objective-C 教程 – 学习 Objective-C 编程语言：[`referencedesigner.com/tutorials/objectivec/objectivec_0c`](http://referencedesigner.com)，访问于 2022 年 6 月 2 日。
+
+## 36. Objective-C 中的结构体指针
+
+[`www.geeksforgeeks.org/pointers-to-structures-in-objective-c/`](https://www.geeksforgeeks.org)，于 2022 年 6 月 4 日访问。
+
+## 37. Objective-C – 基础语法
+
+[`www.tutorialspoint.com/objective_c/objective_c_basic_syntax.htm`](https://www.tutorialspoint.com)，于 2022 年 6 月 4 日访问。
+
+## 38. 为什么 Objective-C 仍然需要分号？
+
+检索自[`developer.apple.com/forums/thread/651319`](https://developer.apple.com)，于 2022 年 6 月 4 日访问。
+
+## 39. Objective-C 代码中的注释
+
+[`www.techotopia.com/index.php/Commenting_Objective-C_Code#:∼:text=Comments%20in%20Objective%2DC%20enable,considered%20to%20be%20good%20practice`](https://www.techotopia.com)，于 2022 年 6 月 5 日访问。
+
+## 40. Objective-C 文档
+
+[`nshipster.com/objective-c-documentation/`](https://nshipster.com)，于 2022 年 6 月 5 日访问。
+
+## 41. Objective-C 基础语法
+
+[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0020__Objective_C_Basic_Syntax.htm`](http://www.java2s.com)，于 2022 年 6 月 5 日访问。
+
+## 42. Objective C 简介
+
+[`www.roseindia.net/iphone/objectivec/objective.shtml`](https://www.roseindia.net)，于 2022 年 6 月 5 日访问。
+
+## 43. Objective-C 留用关键字
+
+[`www.binpress.com/objective-c-reserved-keywords/`](https://www.binpress.com)，于 2022 年 6 月 5 日访问。
+
+## 44. 移除前后的空白
+
+[`riptutorial.com/objective-c/example/10335/removing-leading-and-trailing-whitespace`](https://riptutorial.com)，于 2022 年 6 月 5 日访问。
+
+## 45. Objective-C 数据类型
+
+[`www.tutorialspoint.com/objective_c/objective_c_data_types.htm#:∼:text=In%20the%20Objective%2DC%20programming,bit%20pattern%20stored%20is%20interpreted`](https://www.tutorialspoint.com)，于 2022 年 6 月 6 日访问。
+
+## 46. 类型
+
+[`code.tutsplus.com/objective-c-succinctly-data-types--mobile-21986t`](https://code.tutsplus.com)，于 2022 年 6 月 6 日访问。
+
+## 47. Objective-C 中的原始数据类型
+
+[`andybargh.com/primitive-data-types-objective-c/`](https://andybargh.com)，于 2022 年 6 月 6 日访问。
+
+## 48. Objective-C 数据类型
+
+[`developer.apple.com/documentation/objectivec/objective-c_data_types`](https://developer.apple.com)，于 2022 年 6 月 6 日访问。
+
+## 49. 数据类型
+
+[`www.techotopia.com/index.php/Objective-C_2.0_Data_Types`](https://www.techotopia.com)，于 2022 年 6 月 6 日访问。
+
+## 50. 如何在 Objective-C 中使用变量？
+
+[`www.educative.io/answers/how-to-use-variables-in-objective-c`](https://www.educative.io)，于 2022 年 6 月 7 日访问。
+
+## 51. Objective-C – 变量
+
+[在线]：[`www.tutorialspoint.com/objective_c/objective_c_variables.htm`](https://www.tutorialspoint.com)，于 2022 年 6 月 7 日访问。
+
+## 52. iOS 6 编程食谱：iOS 开发者的解决方案
+
+O’Reilly Media, Inc：[`www.oreilly.com/library/view/ios-6-programming/978144932746/ch01s08.html`](https://www.oreilly.com)，于 2022 年 6 月 7 日访问。
+
+## 53. 从 Objective-C 学习 Swift
+
+[`codewithchris.com/learn-swift-from-objective-c/`](https://codewithchris.com)，于 2022 年 6 月 7 日访问。
+
+## 54. 通过开发 iPhone 学习 Objective-C
+
+[`www.informit.com/articles/article.aspx?p=216175`](https://www.informit.com)，于 2022 年 6 月 7 日访问。
+
+## 55. 在 Objective-C 中变量和常量
+
+[`www.techotopia.com/index.php/Working_with_Variables_and_Constants_in_Objective-C`](https://www.techotopia.com)，于 2022 年 6 月 7 日访问。
+
+## 56. Objective-C 常量
+
+[`www.tutorialspoint.com/objective_c/objective_c_constants`](https://www.tutorialspoint.com)，于 2022 年 6 月 8 日访问。
+
+## 57. 在 Objective-C 中使用变量和常量
+
+[`www.techotopia.com/index.php/Working_with_Variables_and_Constants_in_Objective-C`](https://www.techotopia.com)，于 2022 年 6 月 8 日访问。
+
+## 58. Objective-C 常量
+
+[`developer.apple.com/documentation/objectivec/objective-c_constants`](https://developer.apple.com)，于 2022 年 6 月 8 日访问。
+
+## 59. Objective-C 运算符和表达式
+
+[`www.techotopia.com/index.php/Objective-C_Operators_and_Expressions`](https://www.techotopia.com)，于 2022 年 6 月 9 日访问。
+
+## 60. Objective-C 逻辑运算符
+
+[`www.tutorialspoint.com/objective_c/objective_c_logical_operators`](https://www.tutorialspoint.com)，于 2022 年 6 月 9 日访问。
+
+## 61. Objective-C 运算符
+
+[`www.tutorialspoint.com/objective_c/objective_c_operators.htm#:∼:text=Objective-2Clanguage%20is%20rich,Bitwise%20Operators`](https://www.tutorialspoint.com)，于 2022 年 6 月 9 日访问。
+
+## 62. `?` 运算符是什么？
+
+[`stackoverflow.com/questions/1796700/what-is-the-operator`](https://stackoverflow.com)，于 2022 年 6 月 9 日访问。
+
+## 63. Objective-C 运算符
+
+[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0050__Objective_C_Operator`](http://www.java2s.com)，于 2022 年 6 月 9 日访问。
+
+## 64. Objective-C 运算符
+
+[`www.tutorialspoint.com/objective_c/objective_c_operators`](https://www.tutorialspoint.com)，于 2022 年 6 月 9 日访问。
+
+## 65. Objective-C 运算符
+
+[`mycodetips.com/objective-c/objective-c-operators-3711.html`](https://mycodetips.com)，于 2022 年 6 月 9 日访问。
+
+## 66. Objective-C 循环
+
+[`www.tutorialspoint.com/objective_c/objective_c_loops.htm#:∼:text=Repeats%20a%20statement%20or%20group,that%20manages%20the%20loop%20variable`](https://www.tutorialspoint.com)，于 2022 年 6 月 10 日访问。
+
+## 67. Objective-C 中的控制语句和循环
+
+dummies：[`www.dummies.com/article/technology/programming-web-design/c/control-statements-and-loops-in-objective-c-172896/`](https://www.dummies.com)，于 2022 年 6 月 10 日访问。
+
+## 68. Objective C 控制语句和循环
+
+[`mycodetips.com/objective-c/objective-c-control-statements-and-loops-3713.html`](https://mycodetips.com)，于 2022 年 6 月 10 日访问。
+
+## 69. Objective-C for 循环
+
+[`www.tutorialspoint.com/objective_c/objective_c_for_loop.htm`](https://www.tutorialspoint.com)，于 2022 年 6 月 10 日访问。
+
+## 70. 循环控制结构 – C 语言编程
+
+[`developerinsider.co/the-loop-control-structure-c-programming/`](https://developerinsider.co)，于 2022 年 6 月 10 日访问。
+
+## 71. Objective-C for Loop
+
+[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0060__Objective_C_for_Loop.htm`](http://www.java2s.com)，于 2022 年 6 月 10 日访问。
+
+## 72. C 循环语句：for, while, do while
+
+[`www.guru99.com/c-loop-statement`](https://www.guru99.com)，于 2022 年 6 月 10 日访问。
+
+## 73. Objective-C – 决策
+
+[`www.tutorialspoint.com/objective_c/objective_c_decision_making`](https://www.tutorialspoint.com)，于 2022 年 6 月 11 日访问。
+
+## 74. 什么是 Objective-C 中的决策？
+
+检索自[`www.educative.io/answers/what-is-decision-making-in-objective-c`](https://www.educative.io)，于 2022 年 6 月 11 日访问。
+
+## 75. Objective-C 编程（第四版）
+
+Addison-Wesley Professional：[`www.oreilly.com/library/view/programming-in-objective-c/9780321712172/ch06.html`](https://www.oreilly.com)，于 2022 年 6 月 11 日访问。
 
 # 参考文献
 
-1. Objective-C 教程：[`www.tutorialspoint.com/objective_c/index.htm`](https://www.tutorialspoint.com), 访问于 2022 年 6 月 1 日。
+80. Objective-C 函数概述：[`www.techotopia.com/index.php/An_Overview_of_Objective-C_Functions`](https://www.techotopia.com/index.php/An_Overview_of_Objective-C_Functions)，访问于 2022 年 6 月 12 日。
 
-2. 使用 Objective-C 编程：[`developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html`](https://developer.apple.com), 访问于 2022 年 6 月 1 日。
+81. 如何像 C 语言一样在 Objective-C 中声明和定义函数？来自[`stackoverflow.com/questions/35092468/how-to-declare-and-define-functions-in-objective-c-like-in-c`](https://stackoverflow.com/questions/35092468/how-to-declare-and-define-functions-in-objective-c-like-in-c)，访问于 2022 年 6 月 12 日。
 
-3. `C` 与 Objective-C 的区别：[`www.geeksforgeeks.org/difference-between-c-and-objective-c/`](https://www.geeksforgeeks.org), 访问于 2022 年 6 月 1 日。
+82. 理解 Objective-C 中函数和方法的区别。Medium：[`medium.com/@jsogarro/understanding-the-difference-between-functions-and-methods-in-objective-c-152ed1629db9`](https://medium.com/@jsogarro/understanding-the-difference-between-functions-and-methods-in-objective-c-152ed1629db9)，访问于 2022 年 6 月 12 日。
 
-4. Objective-C 编程：[`educationecosystem.com/guide/objective-c`](https://educationecosystem.com), 访问于 2023 年 6 月 1 日。
 
-5. Objective-C 编程入门：[`medium.com/ios-objective-creation/lesson-1-introduction-to-objective-c-programming-22f5fe71172`](https://medium.com), 访问于 2022 年 6 月 1 日。
 
-6. Objective-C 概述：[`www.techotopia.com/index.php/An_Overview_of_Objective-C_Object_Oriented_Programming`](https://www.techotopia.com), 访问于 2022 年 6 月 1 日。
+83. Objective-C – 函数：[`www.tutorialspoint.com/objective_c/objective_c_functions.htm`](https://www.tutorialspoint.com/objective_c/objective_c_functions.htm)，访问于 2022 年 6 月 12 日。
 
-7. Objective-C – 概述：[`www.tutorialspoint.com/objective_c/objective_c_overview.htm`](https://www.tutorialspoint.com), 访问于 2022 年 6 月 1 日。
-
-8. Designveloper. (2021, 2 月 19). 什么是 Objective-C? 获取自 [`www.designveloper.com/blog/what-is-objective-c/`](https://www.designveloper.com), 访问于 2022 年 6 月 1 日。
-
-9. Objective-C 编译器：[`www.objc.io/issues/6-build-tools/compiler/`](https://www.objc.io), 访问于 2022 年 6 月 1 日。
-
-10. Objective-C 开发者入门指南：[`docs.microsoft.com/en-us/xamarin/ios/get-started/objective-c-developers/primer`](https://docs.microsoft.com), 访问于 2022 年 6 月 1 日。
-
-11. Objective-C – Foundation 框架：[`www.tutorialspoint.com/objective_c/objective_c_foundation_framework.htm`](https://www.tutorialspoint.com), 访问于 2022 年 6 月 2 日。
-
-12. Objective-C Foundation 框架概述：[`www.techotopia.com/index.php/An_Overview_of_the_Objective-C_Foundation_Framework`](https://www.techotopia.com), 访问于 2022 年 6 月 2 日。
-
-13. Swift 对 Objective-C：[`www.javatpoint.com/swift-vs-objective-c#:∼:text=Advantages%20(Pros)%20of%20Objective%20C&text=There%20is%20a%20lot%20of,C%2B%2B%20runs%20smoothly%20on%20this`](https://www.javatpoint.com), 访问于 2022 年 6 月 2 日。
-
-14. Objective-C 环境配置：[`www.tutorialspoint.com/objective_c/objective_c_environment_setup.htm`](https://www.tutorialspoint.com), 访问于 2022 年 6 月 2 日。
-
-15. Objective-C 教程 – 学习 Objective-C 编程语言：[`referencedesigner.com/tutorials/objectivec/objectivec_0c`](http://referencedesigner.com), 访问于 2022 年 6 月 2 日。
-
-
-
-
-
-# 36. Objective-C 中的结构体指针：[`www.geeksforgeeks.org/pointers-to-structures-in-objective-c/`](https://www.geeksforgeeks.org), 于 2022 年 6 月 4 日访问。
-
-# 37. Objective-C – 基础语法：[`www.tutorialspoint.com/objective_c/objective_c_basic_syntax.htm`](https://www.tutorialspoint.com), 于 2022 年 6 月 4 日访问。
-
-# 38. 为什么 Objective-C 仍然需要分号？检索自 [`developer.apple.com/forums/thread/651319`](https://developer.apple.com), 于 2022 年 6 月 4 日访问。
-
-# 39. Objective-C 代码中的注释：[`www.techotopia.com/index.php/Commenting_Objective-C_Code#:∼:text=Comments%20in%20Objective%2DC%20enable,considered%20to%20be%20good%20practice`](https://www.techotopia.com), 于 2022 年 6 月 5 日访问。
-
-# 40. Objective-C 文档：[`nshipster.com/objective-c-documentation/`](https://nshipster.com), 于 2022 年 6 月 5 日访问。
-
-# 41. Objective-C 基础语法：[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0020__Objective_C_Basic_Syntax.htm`](http://www.java2s.com), 于 2022 年 6 月 5 日访问。
-
-# 42. Objective C 简介：[`www.roseindia.net/iphone/objectivec/objective.shtml`](https://www.roseindia.net), 于 2022 年 6 月 5 日访问。
-
-# 43. Objective-C 留用关键字：[`www.binpress.com/objective-c-reserved-keywords/`](https://www.binpress.com), 于 2022 年 6 月 5 日访问。
-
-# 44. 移除前后的空白：[`riptutorial.com/objective-c/example/10335/removing-leading-and-trailing-whitespace`](https://riptutorial.com), 于 2022 年 6 月 5 日访问。
-
-# 45. Objective-C 数据类型：[`www.tutorialspoint.com/objective_c/objective_c_data_types.htm#:∼:text=In%20the%20Objective%2DC%20programming,bit%20pattern%20stored%20is%20interpreted`](https://www.tutorialspoint.com), 于 2022 年 6 月 6 日访问。
-
-# 46. 类型：[`code.tutsplus.com/objective-c-succinctly-data-types--mobile-21986t`](https://code.tutsplus.com), 于 2022 年 6 月 6 日访问。
-
-# 47. Objective-C 中的原始数据类型：[`andybargh.com/primitive-data-types-objective-c/`](https://andybargh.com), 于 2022 年 6 月 6 日访问。
-
-# 48. Objective-C 数据类型：[`developer.apple.com/documentation/objectivec/objective-c_data_types`](https://developer.apple.com), 于 2022 年 6 月 6 日访问。
-
-# 49. 数据类型：[`www.techotopia.com/index.php/Objective-C_2.0_Data_Types`](https://www.techotopia.com), 于 2022 年 6 月 6 日访问。
-
-# 50. 如何在 Objective-C 中使用变量？[`www.educative.io/answers/how-to-use-variables-in-objective-c`](https://www.educative.io), 于 2022 年 6 月 7 日访问。
-
-# 51. Objective-C – 变量。[在线]:[`www.tutorialspoint.com/objective_c/objective_c_variables.htm`](https://www.tutorialspoint.com), 于 2022 年 6 月 7 日访问。
-
-# 52. iOS 6 编程食谱：iOS 开发者的解决方案。O’Reilly Media, Inc: [`www.oreilly.com/library/view/ios-6-programming/978144932746/ch01s08.html`](https://www.oreilly.com), 于 2022 年 6 月 7 日访问。
-
-# 53. 从 Objective-C 学习 Swift：[`codewithchris.com/learn-swift-from-objective-c/`](https://codewithchris.com), 于 2022 年 6 月 7 日访问。
-
-# 54. 通过开发 iPhone 学习 Objective-C：[`www.informit.com/articles/article.aspx?p=216175`](https://www.informit.com), 于 2022 年 6 月 7 日访问。
-
-# 55. 在 Objective-C 中变量和常量：[`www.techotopia.com/index.php/Working_with_Variables_and_Constants_in_Objective-C`](https://www.techotopia.com), 于 2022 年 6 月 7 日访问。
-
-# 56. Objective-C 常量：[`www.tutorialspoint.com/objective_c/objective_c_constants`](https://www.tutorialspoint.com), 于 2022 年 6 月 8 日访问。
-
-# 57. 在 Objective-C 中使用变量和常量：[`www.techotopia.com/index.php/Working_with_Variables_and_Constants_in_Objective-C`](https://www.techotopia.com), 于 2022 年 6 月 8 日访问。
-
-# 58. Objective-C 常量：[`developer.apple.com/documentation/objectivec/objective-c_constants`](https://developer.apple.com), 于 2022 年 6 月 8 日访问。
-
-# 59. Objective-C 运算符和表达式：[`www.techotopia.com/index.php/Objective-C_Operators_and_Expressions`](https://www.techotopia.com), 于 2022 年 6 月 9 日访问。
-
-# 60. Objective-C 逻辑运算符：[`www.tutorialspoint.com/objective_c/objective_c_logical_operators`](https://www.tutorialspoint.com), 于 2022 年 6 月 9 日访问。
-
-# 61. Objective-C 运算符：[`www.tutorialspoint.com/objective_c/objective_c_operators.htm#:∼:text=Objective-2Clanguage%20is%20rich,Bitwise%20Operators`](https://www.tutorialspoint.com), 于 2022 年 6 月 9 日访问。
-
-# 62. `?` 运算符是什么？[`stackoverflow.com/questions/1796700/what-is-the-operator`](https://stackoverflow.com), 于 2022 年 6 月 9 日访问。
-
-# 63. Objective-C 运算符：[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0050__Objective_C_Operator`](http://www.java2s.com), 于 2022 年 6 月 9 日访问。
-
-# 64. Objective-C 运算符：[`www.tutorialspoint.com/objective_c/objective_c_operators`](https://www.tutorialspoint.com), 于 2022 年 6 月 9 日访问。
-
-# 65. Objective-C 运算符：[`mycodetips.com/objective-c/objective-c-operators-3711.html`](https://mycodetips.com), 于 2022 年 6 月 9 日访问。
-
-# 66. Objective-C 循环：[`www.tutorialspoint.com/objective_c/objective_c_loops.htm#:∼:text=Repeats%20a%20statement%20or%20group,that%20manages%20the%20loop%20variable`](https://www.tutorialspoint.com), 于 2022 年 6 月 10 日访问。
-
-# 67. Objective-C 中的控制语句和循环。dummies：[`www.dummies.com/article/technology/programming-web-design/c/control-statements-and-loops-in-objective-c-172896/`](https://www.dummies.com), 于 2022 年 6 月 10 日访问。
-
-# 68. Objective C 控制语句和循环：[`mycodetips.com/objective-c/objective-c-control-statements-and-loops-3713.html`](https://mycodetips.com), 于 2022 年 6 月 10 日访问。
-
-# 69. Objective-C for 循环：[`www.tutorialspoint.com/objective_c/objective_c_for_loop.htm`](https://www.tutorialspoint.com), 于 2022 年 6 月 10 日访问。
-
-# 70. 循环控制结构 – C 语言编程：[`developerinsider.co/the-loop-control-structure-c-programming/`](https://developerinsider.co), 于 2022 年 6 月 10 日访问。
-
-# 71. Objective-C for Loop：[`www.java2s.com/Tutorials/Objective_C/Language_Tutorial/0060__Objective_C_for_Loop.htm`](http://www.java2s.com), 于 2022 年 6 月 10 日访问。
-
-# 72. C 循环语句：for, while, do while：[`www.guru99.com/c-loop-statement`](https://www.guru99.com), 于 2022 年 6 月 10 日访问。
-
-# 73. Objective-C – 决策：[`www.tutorialspoint.com/objective_c/objective_c_decision_making`](https://www.tutorialspoint.com), 于 2022 年 6 月 11 日访问。
-
-# 74. 什么是 Objective-C 中的决策？检索自 [`www.educative.io/answers/what-is-decision-making-in-objective-c`](https://www.educative.io), 于 2022 年 6 月 11 日访问。
-
-# 75. Objective-C 编程（第四版）。Addison-Wesley Professional：[`www.oreilly.com/library/view/programming-in-objective-c/9780321712172/ch06.html`](https://www.oreilly.com), 于 2022 年 6 月 11 日访问。
-
-
-
-
-
-# 参考文献
-
-80. Objective-C 函数概述: [`www.techotopia.com/index.php/An_Overview_of_Objective-C_Functions`](https://www.techotopia.com/index.php/An_Overview_of_Objective-C_Functions), 访问于 2022 年 6 月 12 日。
-
-81. 如何像 C 语言一样在 Objective-C 中声明和定义函数？来自 [`stackoverflow.com/questions/35092468/how-to-declare-and-define-functions-in-objective-c-like-in-c`](https://stackoverflow.com/questions/35092468/how-to-declare-and-define-functions-in-objective-c-like-in-c),访问于 2022 年 6 月 12 日。
-
-82. 理解 Objective-C 中函数和方法的区别。Medium: [`medium.com/@jsogarro/understanding-the-difference-between-functions-and-methods-in-objective-c-152ed1629db9`](https://medium.com/@jsogarro/understanding-the-difference-between-functions-and-methods-in-objective-c-152ed1629db9), 访问于 2022 年 6 月 12 日。
-
-83. Objective-C – 函数: [`www.tutorialspoint.com/objective_c/objective_c_functions.htm`](https://www.tutorialspoint.com/objective_c/objective_c_functions.htm), 访问于 2022 年 6 月 12 日。
-
-84. 类与函数: [`oddinstitute.com/classes-functions-objective-c/`](https://oddinstitute.com/classes-functions-objective-c/), 访问于 2022 年 6 月 12 日。
+84. 类与函数：[`oddinstitute.com/classes-functions-objective-c/`](https://oddinstitute.com/classes-functions-objective-c/)，访问于 2022 年 6 月 12 日。
 
 # 索引
 
@@ -3299,21 +3215,21 @@ Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言
 
 * Objective-C 的优势，3
 * `appendString()` 方法，161
-* Apple，171, 217
+* Apple，171、217
 * Objective-C 中的算术运算符，98
-    * 整数和浮点数转换，103–105
-    * 取模运算符，102–103
-    * 运算符优先级，98–100
-    * 关系运算符，106
-    * 类型转换运算符，105–106
-    * 一一负号运算符与整数算术，100–102
+  * 整数和浮点数转换，103–105
+  * 取模运算符，102–103
+  * 运算符优先级，98–100
+  * 关系运算符，106
+  * 类型转换运算符，105–106
+  * 一元负号运算符与整数算术，100–102
 * 数组元素，访问，177–178
 * 数组初始化，177
-* Objective-C 中的数组，176, 178, 184
-    * 访问数组元素，177–178
-    * 数组初始化，177
-    * 声明数组，176
-    * 深入理解，178
+* Objective-C 中的数组，176、178、184
+  * 访问数组元素，177–178
+  * 数组初始化，177
+  * 声明数组，176
+  * 深入理解，178
 * 汇编文件与框架，26–27
 * 赋值运算符，108
 * 自动垃圾回收，216
@@ -3324,58 +3240,58 @@ Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言
 * 位运算运算符，107–108
 * 空格，140
 * Objective-C 中的 Blocks，172
-    * blocks 接收参数和返回值，173
-    * 使用类型定义的 blocks，173–174
-    * lambda 表达式对比，28
-    * 简单的 block 声明语法，173
+  * blocks 接收参数和返回值，173
+  * 使用类型定义的 blocks，173–174
+  * lambda 表达式对比，28
+  * 简单的 block 声明语法，173
 * blocks 接收参数和返回值，173
 * 使用类型定义的 blocks，173–174
 * 布尔变量，154–158
-* break 语句，131
+* `break` 语句，131
 
 ## C
 
 * C# 入门，25
-* C++ 与 Objective-C，4, 170–171
+* C++ 与 Objective-C，4、170–171
 * C++ 流式接口，217
 * 计算器类，110–112
 * 调用方法，163–165
 * C 与 Objective-C，169–170
 * 捕获异常，205–206
-* 分类 (Categories)，215
-    * 使用 Apple 产品，217
-    * 自动垃圾回收，216
-    * C++ 流式接口，217
-    * 内部的 C，216–217
-    * 动态运行时间，216
-    * 方法扩展对比，26
-    * 内省，216
-    * 消息发送，216
-    * 简单性，217
-    * 语法用法，215
+* 分类（Categories），215
+  * 使用 Apple 产品，217
+  * 自动垃圾回收，216
+  * C++ 流式接口，217
+  * 内部的 C，216–217
+  * 动态运行时间，216
+  * 方法扩展对比，26
+  * 内省，216
+  * 消息发送，216
+  * 简单性，217
+  * 语法用法，215
 * 字符常量，80
 * 字符变量，85
 * 选择 Objective-C，3
 * 内部的 C，216–217
-* Clang，14, 20
+* Clang，14、20
 * 类与方法，57
-* Cocoa，1, 166
-* 代码，17, 166
+* Cocoa，1、166
+* 代码，17、166
 * 命令行参数，201–202
 * 编译 Objective-C，36
 * 注释，72
 * 配置 Objective-C，30
-    * 本地环境，29
-* 常量定义，81, 95
-    * `const` 关键字，82, 95
-    * `#define` 预处理器，82, 95
+  * 本地环境，29
+* 常量定义，81、95
+  * `const` 关键字，82、95
+  * `#define` 预处理器，82、95
 * 常量表达式，83
-* Objective-C 中的常量，79, 92
-    * 字符常量，80, 94
-    * 浮点字面量，80, 93
-    * 整数字面量，79, 93
-    * 字符串字面量，81, 94
-* continue 语句，131
+* Objective-C 中的常量，79、92
+  * 字符常量，80、94
+  * 浮点字面量，80、93
+  * 整数字面量，79、93
+  * 字符串字面量，81、94
+* `continue` 语句，131
 * `convertToNum` 方法，135
 * 创建方法，162–163
 * 自定义错误，212–214
@@ -3386,259 +3302,249 @@ Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言
 
 * 数据封装，66–70
 * 数据类型，73–74
-    * 以及常量，83
-        * 长整数变量，86
-        * 长 long 变量，86
-        * 修饰符，86
-        * 短整数变量，86
-        * 有符号变量，86
-        * 类型 char，85–86
-
-
-
-
-
-* `type float`, 84–85
-* `type id`, 86–87
-* `type int`, 84
-* `unsigned variable`, 86
-* `void type`, 87
+  * 以及常量，83
+    * 长整数变量，86
+    * 长 `long` 变量，86
+    * 修饰符，86
+    * 短整数变量，86
+    * 有符号变量，86
+    * 类型 `char`，85–86
+* `type float`，84–85
+* `type id`，86–87
+* `type int`，84
+* `unsigned variable`，86
+* `void type`，87
 
 ## 决策制定，132
-* `Boolean variables`, 154–158
-* `compound relational tests`, 139–142
-* `conditional operator`, 159–160
-* `else if construct`, 144–151
-* `if-else construct`, 137–139
-* `if statement`, 133–137
-* `nested if statements`, 142–143
-* `switch statement`, 151–154
+
+* `Boolean variables`，154–158
+* `compound relational tests`，139–142
+* `conditional operator`，159–160
+* `else if construct`，144–151
+* `if-else construct`，137–139
+* `if statement`，133–137
+* `nested if statements`，142–143
+* `switch statement`，151–154
 
 ## 方法声明，163
-* `Declaring arrays`, 176
-* `Defined() operator`, 193–194
-* `#define directive in Objective-C`, 195–196
-* `#define preprocessor`, 82, 95
-* `Demerits of Objective-C`, 171
-* `Detecting errors`, 210–212
-* `Developer folder`, 32
-* `Development, Objective-C in`, 172
-* `Disabling logs in live apps`, 198
-* `Disadvantages of Objective-C`, 3
-* `Do statement`, 129–130
-* `Do-while loop`, 130
-* `Dynamic operating time`, 216
-* `Dynamic typing`, 214
-* `Dynamism`, 3
+
+* `Declaring arrays`，176
+* `Defined() operator`，193–194
+* `#define directive in Objective-C`，195–196
+* `#define preprocessor`，82、95
+* `Demerits of Objective-C`，171
+* `Detecting errors`，210–212
+* `Developer folder`，32
+* `Development, Objective-C in`，172
+* `Disabling logs in live apps`，198
+* `Disadvantages of Objective-C`，3
+* `Do statement`，129–130
+* `Do-while loop`，130
+* `Dynamic operating time`，216
+* `Dynamic typing`，214
+* `Dynamism`，3
 
 ## E
-* `Else if construct`, 144–151
-* `Environment setup and program structure`, 29
-    * `class and instance methods`, 57
-    * `configuring Objective-C`
-        * `configuration of the local environment`, 29
-        * `editor of text`, 30
-    * `fractions, Objective-C class for the working with`, 52–54
-    * `GCC compiler`, 30
-        * `command line to compile Objective-C`, 36–37
-        * `filename extention`, 37–39
-        * `first program's explanation`, 42–46
-        * `Hello Everyone, Objective-C example of`, 34–35
-        * `Mac OS installation`, 32
-        * `structure of the Objective-C program`, 34–35
-        * `terminal, using`, 40–41
-        * `UNIX/LINUX installation`, 30–31
-        * `variables, displaying the values of`, 46–48
-        * `Windows installation`, 33
-        * `Xcode, launching`, 32–33
-        * `Xcode to create Objective-C`, 35–36
-    * `@implementation`, 59–61
-    * `instances and methods`, 49–52
-    * `instance variables and encapsulation`, 66–70
-    * `@interface`, 54–56
-    * `method arguments`, 58–59
-    * `object`, 49
-    * `program section`, 61–66
-    * `return values`, 57–58
-    * `Error domains`, 210
-    * `Error handling in Objective-C`, 199, 203, 209
-    * `NSException`, 204
-    * `command-line arguments`, 201–202
-    * `custom errors`, 212–214
-    * `error domains`, 210
-    * `errors, detecting`, 210–212
-    * `exceptions, catching`, 205–206
-    * `exceptions, making`, 204–205
-    * `exceptions and errors`, 202–203
-    * `exception throwing`, 206–209
-    * `Exceptions and errors`, 202–203
-    * `Extension methods vs categories`, 26
+
+* `Else if construct`，144–151
+* `Environment setup and program structure`，29
+  * `class and instance methods`，57
+  * `configuring Objective-C`
+    * `configuration of the local environment`，29
+    * `editor of text`，30
+  * `fractions, Objective-C class for the working with`，52–54
+  * `GCC compiler`，30
+    * `command line to compile Objective-C`，36–37
+    * `filename extention`，37–39
+    * `first program's explanation`，42–46
+    * `Hello Everyone, Objective-C example of`，34–35
+    * `Mac OS installation`，32
+    * `structure of the Objective-C program`，34–35
+    * `terminal, using`，40–41
+    * `UNIX/LINUX installation`，30–31
+    * `variables, displaying the values of`，46–48
+    * `Windows installation`，33
+    * `Xcode, launching`，32–33
+    * `Xcode to create Objective-C`，35–36
+  * `@implementation`，59–61
+  * `instances and methods`，49–52
+  * `instance variables and encapsulation`，66–70
+  * `@interface`，54–56
+  * `method arguments`，58–59
+  * `object`，49
+  * `program section`，61–66
+  * `return values`，57–58
+  * `Error domains`，210
+  * `Error handling in Objective-C`，199、203、209
+  * `NSException`，204
+  * `command-line arguments`，201–202
+  * `custom errors`，212–214
+  * `error domains`，210
+  * `errors, detecting`，210–212
+  * `exceptions, catching`，205–206
+  * `exceptions, making`，204–205
+  * `exceptions and errors`，202–203
+  * `exception throwing`，206–209
+  * `Exceptions and errors`，202–203
+  * `Extension methods vs categories`，26
 
 ## F
-* `Features of Objective-C language`, 214
-    * `classes`, 214
-    * `dynamic typing`, 214
-    * `optional static typing`, 215
-* `Filename extention`, 37–39
-* `First program's explanation`, 42–46
-* `Floating-point, types of`, 75
-* `Floating-point literals`, 80, 93
-* `Floating-point value`, 103–105
-* `For loop variants`, 123–125
-* `For statement`, 115
-    * `break statement`, 131
-    * `continue statement`, 131
-    * `do statement`, 129–130
-    * `do-while loop`, 130
-    * `for loop variants`, 123–125
-    * `keyboard input`, 121–122
-    * `nested for loops`, 122–123
-    * `relational operators`, 116–121
-    * `while statement`, 125–128
-* `Foundation Framework`, 5
-* `Fraction class`, 59, 61–62
-* `Fractions, Objective-C class for the working with`, 52–54
-* `Frameworks, assemblies vs.`, 26–27
 
+* `Features of Objective-C language`，214
+  * `classes`，214
+  * `dynamic typing`，214
+  * `optional static typing`，215
+* `Filename extention`，37–39
+* `First program's explanation`，42–46
+* `Floating-point, types of`，75
+* `Floating-point literals`，80、93
+* `Floating-point value`，103–105
+* `For loop variants`，123–125
+* `For statement`，115
+  * `break statement`，131
+  * `continue statement`，131
+  * `do statement`，129–130
+  * `do-while loop`，130
+  * `for loop variants`，123–125
+  * `keyboard input`，121–122
+  * `nested for loops`，122–123
+  * `relational operators`，116–121
+  * `while statement`，125–128
+* `Foundation Framework`，5
+* `Fraction class`，59、61–62
+* `Fractions, Objective-C class for the working with`，52–54
+* `Frameworks, assemblies vs.`，26–27
 
+## GCC 编译器，29、30、166
 
-
-
-## GCC 编译器，29, 30, 166
-
-* 显示变量的值, 46–48
-* 文件扩展名, 37–39
-* 第一个程序的解释, 42–46
-* Mac OS 安装, 32
-* Objective-C 程序的结构, 34
-    * Hello Everyone 的 Objective-C 示例, 34–35
-* UNIX/LINUX 安装, 30–31
-* 使用命令行编译 Objective-C, 36–37
-* 使用终端, 40–41
-* 使用 Xcode 创建 Objective-C 应用程序, 35–36
-* Windows 安装, 33
-* Xcode 启动, 32–33
+* 显示变量的值，46–48
+* 文件扩展名，37–39
+* 第一个程序的解释，42–46
+* Mac OS 安装，32
+* Objective-C 程序的结构，34
+  * Hello Everyone 的 Objective-C 示例，34–35
+* UNIX/LINUX 安装，30–31
+* 使用命令行编译 Objective-C，36–37
+* 使用终端，40–41
+* 使用 Xcode 创建 Objective-C 应用程序，35–36
+* Windows 安装，33
+* Xcode 启动，32–33
 
 ## H
 
-* 头文件、命名空间和, 27
-* Hello Everyone, Objective-C 示例, 34–35
+* 头文件、命名空间和，27
+* Hello Everyone，Objective-C 示例，34–35
 
 ## I
 
-* Id 数据类型, 86–87
-* 标识符, 72
-* if-else 结构, 137–139
-* if 语句, 133–137
-    * 布尔变量, 154–158
-    * 复合关系测试, 139–142
-    * 条件运算符, 159–160
-    * else if 结构, 144–151
-    * if-else 结构, 137–139
-    * 嵌套 if 语句, 142–143
-    * switch 语句, 151–154
-* @implementation 部分, 59–61
-* 索引, 176
-* 实例, 6
-    * 以及方法, 49–52
-* 实例变量, 66–70
-* 整数与浮点数转换, 103–105
-* 整数算术, 100–102
-* 整数常量, 84
-* 整数字面量, 79–80, 93
-* 整数提升, 197
-* 整数，类型, 74–75
-* @interface 部分, 54–56
-* 接口对比 协议, 26
-* 国际电电 (ITT) 部门, 167
-* 互操作 Objective-C, 25–26
-* 内省, 216
-* int 变量, 83
-* ITT 部门，查看 国际电电
+* Id 数据类型，86–87
+* 标识符，72
+* `if-else` 结构，137–139
+* `if` 语句，133–137
+  * 布尔变量，154–158
+  * 复合关系测试，139–142
+  * 条件运算符，159–160
+  * `else if` 结构，144–151
+  * `if-else` 结构，137–139
+  * 嵌套 `if` 语句，142–143
+  * `switch` 语句，151–154
+* `@implementation` 部分，59–61
+* 索引，176
+* 实例，6
+  * 以及方法，49–52
+* 实例变量，66–70
+* 整数与浮点数转换，103–105
+* 整数算术，100–102
+* 整数常量，84
+* 整数字面量，79–80、93
+* 整数提升，197
+* 整数，类型，74–75
+* `@interface` 部分，54–56
+* 接口对比协议，26
+* 国际电电（ITT）部门，167
+* 互操作 Objective-C，25–26
+* 内省，216
+* `int` 变量，83
+* ITT 部门，查看国际电电
 
 ## K
 
-* 关键字, 72–73
+* 关键字，72–73
 
 ## L
 
-* Lambda 表达式与 blocks, 28
-* 语言，比较, 26
-* 学习 Objective-C, 5, 172
-* 词法, 17–18
-* List 与 NSArray 初始化, 28
-* Live apps，禁用方法, 198
-* LLVM 中间表示 (LLVM IR), 14
-* Objective-C 中的日志处理, 198
-    * 在 live apps 中禁用, 198
-    * NSLog 方法, 198
-* Objective-C 中的逻辑运算符, 106
-    * 赋值运算符, 108
-    * 位运算符, 107–108
-    * sizeof 以及三元运算符, 109
-* long 变量, 86
-* long int 变量, 86
-* 循环控制语句, 113
-    * for 语句, 115
-        * break 语句, 131
-        * continue 语句, 131
-        * do 语句, 129
-        * do-while 循环, 130
-        * for 循环, 123–125
-        * 嵌套循环, 122–123
-        * 关系运算符, 116–121
-        * while 语句, 125–128
-* l 值, 79
+* Lambda 表达式与 blocks，28
+* 语言，比较，26
+* 学习 Objective-C，5、172
+* 词法，17–18
+* List 与 NSArray 初始化，28
+* Live apps，禁用方法，198
+* LLVM 中间表示（LLVM IR），14
+* Objective-C 中的日志处理，198
+  * 在 live apps 中禁用，198
+  * `NSLog` 方法，198
+* Objective-C 中的逻辑运算符，106
+  * 赋值运算符，108
+  * 位运算符，107–108
+  * `sizeof` 以及三元运算符，109
+* `long` 变量，86
+* `long int` 变量，86
+* 循环控制语句，113
+  * `for` 语句，115
+    * `break` 语句，131
+    * `continue` 语句，131
+    * `do` 语句，129
+    * `do-while` 循环，130
+    * `for` 循环，123–125
+    * 嵌套循环，122–123
+    * 关系运算符，116–121
+    * `while` 语句，125–128
+* l 值，79
 
 ## M
 
-* Mac OS 安装, 32
-* 延续, 192
-* 宏, 194
-* 异常处理, 204
-* malloc() 函数, 162
-* max() 方法, 176
-* 成员访问运算符, 185
-* 成员声明部分, 59
-* Objective-C 的特性, 171
-* 消息:
-    * 发送, 215
-    * 语法, 215
-* 方法参数, 58–59
-* 取模运算符, 102–103
+* Mac OS 安装，32
+* 延续，192
+* 宏，194
+* 异常处理，204
+* `malloc()` 函数，162
+* `max()` 方法，176
+* 成员访问运算符，185
+* 成员声明部分，59
+* Objective-C 的特性，171
+* 消息：
+  * 发送，215
+  * 语法，215
+* 方法参数，58–59
+* 取模运算符，102–103
 
 ## N
 
-* 命名参数对比选择器, 27
-* 命名空间和头文件, 27
-* 嵌套循环, 122–123
-* 嵌套 if 语句, 142–143
-* NeXT 代码库, 166
-* NSArray, 28
-* NSError, 199–201
-* NSError 类, 209–210
-* NSError 对象, 199
-* NSLog 函数, 44, 46, 198
-* NSRangeException, 205
-* NSString 字符串对象, 85
-* 空指针, 180–181
-* Objective-C 中的数字, 174–176
+* 命名参数对比选择器，27
+* 命名空间和头文件，27
+* 嵌套循环，122–123
+* 嵌套 `if` 语句，142–143
+* NeXT 代码库，166
+* NSArray，28
+* NSError，199–201
+* NSError 类，209–210
+* NSError 对象，199
+* `NSLog` 函数，44、46、198
+* NSRangeException，205
+* NSString 字符串对象，85
+* 空指针，180–181
+* Objective-C 中的数字，174–176
 
 ## O
 
-* 对象, 6, 49
-* Objective-C 预处理器 (OCPP), 查看 Objective-C 中的预处理器
-* 面向对象编程 (OOP), 2, 5–6
-* OCPP, 查看 Objective-C 中的预处理器
-* OOP, 查看 面向对象编程
-* OpenStep 接口对象, 167
-* 运算符, 97
-    * Objective-C 中的算术运算符, 98
-
-
-
-
-
+* 对象，6、49
+* Objective-C 预处理器（OCPP），查看 Objective-C 中的预处理器
+* 面向对象编程（OOP），2、5–6
+* OCPP，查看 Objective-C 中的预处理器
+* OOP，查看面向对象编程
+* OpenStep 接口对象，167
+* 运算符，97
+  * Objective-C 中的算术运算符，98
 * 整数与浮点数转换，103–105
 * 取模运算符，102–103
 * 运算符优先级，98–100
@@ -3649,7 +3555,7 @@ Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言
 * Objective-C 中的逻辑运算符，106
 * 赋值运算符，108
 * 位运算运算符，107–108
-* sizeof 和三元运算符，109
+* `sizeof` 和三元运算符，109
 * Objective-C 中的运算符优先级，109
 * Calculator 类，110–112
 * 优先级，98–100
@@ -3659,185 +3565,321 @@ Objective-C 受 Smalltalk 启发的对象结构倾向于简单。许多使语言
 * 可选静态类型，215
 
 ## P
-* 参数化宏，194
-* 解析，18–20
-* Objective-C 中的指针，178, 179
-* 关于的细节，181
-* 空指针，180–181
-* Objective-C 中的字符串，181–184
-* Objective-C 中的结构体，184
-* 结构体成员的访问，185–186
-* 位域，189–190
-* 创建结构体，184–185
-* 作为结构体的函数参数，186–187
-* 指向结构体的指针，187–189
-* 工作原理，180
-* 宏，191–192
-* Objective-C 中的预处理器，14–15, 190
-* 的运算符，192
-* `defined()` 运算符，193–194
-* 宏延续，192
-* 字符串化，192–193
-* 标记粘贴，193
-* 参数化宏，194
-* 预定义宏，191–192
-* Objective-C 中的 typedef，194–195
-* typedef vs #define，195–196
-* 程序段，61–66
-* 属性，27
-* 协议，26
-* 标点符号，72
+
+
+
+# 参数化宏，194
+
+# 解析，18–20
+
+# Objective-C 中的指针，178, 179
+
+# 关于的细节，181
+
+# 空指针，180–181
+
+# Objective-C 中的字符串，181–184
+
+# Objective-C 中的结构体，184
+
+# 结构体成员的访问，185–186
+
+# 位域，189–190
+
+# 创建结构体，184–185
+
+# 作为结构体的函数参数，186–187
+
+# 指向结构体的指针，187–189
+
+# 工作原理，180
+
+# 宏，191–192
+
+# Objective-C 中的预处理器，14–15, 190
+
+# 的运算符，192
+
+# `defined()` 运算符，193–194
+
+# 宏延续，192
+
+# 字符串化，192–193
+
+# 标记粘贴，193
+
+# 参数化宏，194
+
+# 预定义宏，191–192
+
+# Objective-C 中的 typedef，194–195
+
+# typedef vs #define，195–196
+
+# 程序段，61–66
+
+# 属性，27
+
+# 协议，26
+
+# 标点符号，72
 
 ## Q
-* 修饰符，86
+
+# 修饰符，86
 
 ## R
-* Recipe 类，9
-* 创建 Recipe 类，8
-* recipes array，12–13
-* 设置对象数组，9–12
-* 关系运算符，106, 116
-* 返回值，57–58
-* 右值，79, 91
+
+# Recipe 类，9
+
+# 创建 Recipe 类，8
+
+# recipes array，12–13
+
+# 设置对象数组，9–12
+
+# 关系运算符，106, 116
+
+# 返回值，57–58
+
+# 右值，79, 91
 
 ## S
-* 选择器，命名参数，27
-* 分号，72
-* setDenominator，58, 67
-* setNumerator，58, 67
-* 短变量，86
-* 有符号变量，86
-* 简单声明，173
-* 一维数组，176
-* Sizeof 和三元运算符，109
-* 静态分析，20
-* Static 关键字，27
-* 字符串化，192–193
-* 字符串字面量，81, 94
-* Objective-C 中的字符串，181–184
-* Objective-C 的结构体，34–35, 184
-* 结构体成员访问，185–186
-* 位域，189–190
-* 创建结构体，184–185
-* 作为结构体的函数参数，186–187
-* 指向结构体的指针，187–189
-* Swift，2, 167
-* Objective-C vs，4, 168–169
-* Swift 5, 171
-* Switch 语句，151–154
-* 语法，71
-* 常量定义，81
-* `const` 关键字，82
-* `#define` 预处理器，82
-* Objective-C 中的常量，79
-* 字符常量，80–81
-* 浮点数字面量，80
-* 整数字面量，79–80
-* 字符串字面量，81
-* 标记，71
-* 注释，72
-* 数据类型，73–74
-* 浮点数类型，75
-* 标识符，72
-* 整数类型，74–75
-* 关键字，72–73
-* 左值和右值，79
-* 分号，72
-* 变量声明，77–78
-* 变量定义，76–77
-* Objective-C 中的变量，76
-* void 类型，75
-* Objective-C 中的空白，73
+
+# 选择器，命名参数，27
+
+# 分号，72
+
+# setDenominator，58, 67
+
+# setNumerator，58, 67
+
+# 短变量，86
+
+# 有符号变量，86
+
+# 简单声明，173
+
+# 一维数组，176
+
+# Sizeof 和三元运算符，109
+
+# 静态分析，20
+
+# Static 关键字，27
+
+# 字符串化，192–193
+
+# 字符串字面量，81, 94
+
+# Objective-C 中的字符串，181–184
+
+# Objective-C 的结构体，34–35, 184
+
+# 结构体成员访问，185–186
+
+# 位域，189–190
+
+# 创建结构体，184–185
+
+# 作为结构体的函数参数，186–187
+
+# 指向结构体的指针，187–189
+
+# Swift，2, 167
+
+# Objective-C vs，4, 168–169
+
+# Swift 5, 171
+
+# Switch 语句，151–154
+
+# 语法，71
+
+# 常量定义，81
+
+# `const` 关键字，82
+
+# `#define` 预处理器，82
+
+# Objective-C 中的常量，79
+
+# 字符常量，80–81
+
+# 浮点数字面量，80
+
+# 整数字面量，79–80
+
+# 字符串字面量，81
+
+# 标记，71
+
+# 注释，72
+
+# 数据类型，73–74
+
+# 浮点数类型，75
+
+# 标识符，72
+
+# 整数类型，74–75
+
+# 关键字，72–73
+
+# 左值和右值，79
+
+# 分号，72
+
+# 变量声明，77–78
+
+# 变量定义，76–77
+
+# Objective-C 中的变量，76
+
+# void 类型，75
+
+# Objective-C 中的空白，73
 
 ## T
-* Tabledata, 替换数组，12–13
-* 终端，使用，40–41
-* 文本编辑器，29
-* `@throw` 指令，203, 208
-* TIOBE 编程语言奖，167
-* 分词化（词法分析），17–18
 
+# Tabledata, 替换数组，12–13
 
+# 终端，使用，40–41
 
+# 文本编辑器，29
 
+# `@throw` 指令，203, 208
+
+# TIOBE 编程语言奖，167
+
+# 分词化（词法分析），17–18
 
 # 标记 (Tokens)
+
 - 标记, 71
+
 - 注释, 72
+
 - 数据类型, 73–74
+
 - 浮点型, 75
+
 - 标识符, 72
+
 - 整数型, 74–75
+
 - 关键字, 72–73
+
 - 左值和右值, 79
+
 - 分号, 72
+
 - 变量声明, 77–78
+
 - 变量定义, 76–77
+
 - Objective-C 中的变量, 76
+
 - void 类型, 75
+
 - Objective-C 中的空白符, 73
 
 ## Objective-C 中的类型转换
+
 - Objective-C 中的类型转换, 196
+
 - 整数提升, 197
+
 - 常规算术转换, 197–198
 
 # 类型转换运算符
+
 - 类型转换运算符, 105–106
 
 # 字符类型 (Type char)
+
 - 字符类型, 85–86
 
 # 类型检查
+
 - 类型检查, 20–21
 
 # Typedef
+
 - Typedef
+
 - 与 #define 的区别, 195–196
+
 - 在 Objective-C 中, 194–195
 
 # 类型定义，块的使用
+
 - 类型定义，块的使用, 173–174
 
 # 浮点类型 (Type float)
+
 - 点型, 84–85
 
 # id 类型 (Type id)
+
 - id 类型, 86–87
 
 # 整数类型 (Type int)
+
 - 整数型, 84
 
-# U
+## U
+
 - UI, *参见* 用户界面
+
 - 一元负号运算符与整数算术, 100–102
+
 - UNIX/LINUX 安装, 30–31
+
 - 无符号变量, 86
+
 - 用户界面 (UI), 121
+
 - 使用 Objective-C, 5
+
 - 常规算术转换, 197–198
 
-# V
+## V
+
 - 变量声明, 77–78, 90–91
+
 - 变量定义, 76–77, 89–90
+
 - 变量阶乘, 86
+
 - 变量, 88
+
 - 显示值, 46–48
+
 - 左值和右值, 91
+
 - 在 Objective-C 中, 76
+
 - `viewDidLoad()` 函数, 9
+
 - Void 类型, 75, 87
 
-# W
+## W
+
 - While 语句, 125–128
+
 - Objective-C 中的空白符, 73
+
 - Windows 安装, 33
 
-# X
+## X
+
 - Xcode, 13
+
 - 创建一个 Objective-C , 35–36
+
 - 启动, 32–33
 
-# Y
-- yourMove 消息, 142
+## Y
 
+- yourMove 消息, 142

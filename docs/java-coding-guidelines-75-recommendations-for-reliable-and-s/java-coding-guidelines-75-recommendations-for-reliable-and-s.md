@@ -1,98 +1,37 @@
+
 # Java 编码指南：构建可靠安全程序的 75 条建议（软件工程 SEI 系列）
-
-
-
-
-
 
 ![](img/3143b260199f0f09c503d13f99745e59_0_0.png)
 
-> “所有 Java 开发者的必读之。”
+> “所有 Java 开发者的必读之作。”
+
 —MARY ANN DAVIDSON，Oracle 首席安全官 (CSO)
 
-
 FRED Long | DHURV MOHINDRA | ROBERT C. SEACORD
+
 DEAN F. SUTHERLAND | DAVID SVOBODA
 
 JAMES A. GOSLING 序言，Java 编程语言之父
 
 ![](img/3143b260199f0f09c503d13f99745e59_1_0.png)
 
-
-
-
-
-
 ![](img/3143b260199f0f09c503d13f99745e59_3_0.png)
-
-
-
 
 ![](img/3143b260199f0f09c503d13f99745e59_3_1.png)
 
-
 ![](img/3143b260199f0f09c503d13f99745e59_3_2.png)
 
-
-
 Fred Long
+
 Dhruv Mohindra
+
 Robert C. Seacord
+
 Dean F. Sutherland
+
 David Svoboda
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Long, Fred, 1947.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
@@ -100,7 +39,7 @@ Long, Fred, 1947.
 
 这《Java™ 编码指南》是之前的《The CERT® Oracle® Secure Coding Standard for Java™》的后续，具有极高的价值。这本书几乎可以更名为《可靠的 Java™ 编码指南》。多年来，令我深刻的一点是可靠性与安全性之间的相互作用。有各种显性的安全工具——加密、身份验证等——但大多数入侵行为都是对漏洞的利用：即编写得糟糕的代码或防御性不足的代码。在许多方面，构建一个可靠的系统等同于构建一个安全的系统。你在可靠性方面的工作会在安全性上获得回报，反之亦然。
 
-本书强调了这样一个事实：安全性不是一个特性，而是一种在每一点都尽职尽度的态度。它应该是每个软件工程师设计思维过程的持续部分。它围绕一系列指南进行组织。书的精华在于这些指南背后的微妙之处。“使用哈希函数存储密码”似乎是一个非常基础且显而易见的点，然而，经常有关于重大数据泄露的新闻报道，仅仅是因为某些软件工程师没有考虑周全。做到这一点很棘手：魔鬼往往隐藏在很多细节中。书中充满了处理这些细节的极佳指导。
+本书强调了这样一个事实：安全性不是一个特性，而是一种在每一点都尽职尽责的态度。它应该是每个软件工程师设计思维过程的持续部分。它围绕一系列指南进行组织。书的精华在于这些指南背后的微妙之处。“使用哈希函数存储密码”似乎是一个非常基础且显而易见的点，然而，经常有关于重大数据泄露的新闻报道，仅仅是因为某些软件工程师没有考虑周全。做到这一点很棘手：魔鬼往往隐藏在很多细节中。书中充满了处理这些细节的极佳指导。
 
 ## 前言
 
@@ -114,31 +53,23 @@ Java 程序员需要比《Java 语言规范》（JLS）[JLS 2013] 提供的更�
 
 某些指南可能被认为是风格性的，但它们对于代码的可读性和可维护性仍然非常重要。对于 Java，Oracle 提供了一套代码规范 [Conventions 2009] 来帮助程序员产生一致的编程风格，这些规范被 Java 程序员广泛采用。
 
+《Java™ 编码指南》由《The CERT® Oracle® Secure Coding Standard for Java™》[Long 2012] 的作者编写。该编码标准为 Java 编程语言的安全编码提供了一套规则。这些规则的目标是消除可能导致可利用漏洞的不安全编码实践。《安全编码标准》为软件系统建立了规范性要求。然后可以对这些软件系统是否符合编码标准进行评估，例如通过使用源代码分析实验室（SCALE）[Secard 2012]。然而，存在一些糟糕的 Java 编码实践，尽管它们本应包含在 Java 编码标准中，但可能导致不可靠或不安全的程序。本书旨在记录并警示此类编码实践。
 
-《Java™ 编码指南》由《The CERT® Oracle® Secure Coding Standard for Java™》[Long 2012] 的作者编写。该编码标准为 Java 编程语言的安全编码提供了一set规则。这些规则的目标是消除可能导致可利用漏洞的不安全编码实践。《安全编码标准》为软件系统建立了规范性要求。然后可以对这些软件系统是否符合编码标准进行评估，例如通过使用源代码分析实验室（SCALE）[Secard 2012]。然而，存在一些糟糕的 Java 编码实践，尽管它们本应包含在 Java 编码标准中，但可能导致不可靠或不安全的程序。本书旨在记录并警示此类编码实践。
-
-虽然没有包含《The CERT® Oracle® Secure Coding Standard for Java™》中，但这些指南不应被认为不重要。当无法形成规范性要求时，指南会被从编码标准中排除。有许多原因无法形成规范性要求。也许常见的原因是规则取决于程序员的意图。除非能够指定程序员的意图，否则此类规则无法自动执行，在这种情况下，规则可能要求代码与指定的意图之间保持一致。形成规范性要求还需要违反该要求代表一个缺陷。因此，编码规则必须定义得精确。编码指南对安全性和可靠性具有更广泛的影响，定义的更广泛。
+虽然没有包含在《The CERT® Oracle® Secure Coding Standard for Java™》中，但这些指南不应被认为不重要。当无法形成规范性要求时，指南会被从编码标准中排除。有许多原因无法形成规范性要求。也许常见的原因是规则取决于程序员的意图。除非能够指定程序员的意图，否则此类规则无法自动执行，在这种情况下，规则可能要求代码与指定的意图之间保持一致。形成规范性要求还需要违反该要求代表一个缺陷。因此，编码规则必须定义得精确。编码指南对安全性和可靠性具有更广泛的影响，定义得更广泛。
 
 许多指南引用了《CERT® Oracle® Secure Coding Standard for Java™》。这些引用的格式为“IDS01-j. 在验证之前规范化字符串”，其中开头的前三个字母标识《CERT® Oracle® Secure Coding Standard for Java™》中的相应章节。例如，IDS 指向第二章“输入验证与数据清洗”。
 
-Java™ 安全编码标准规则也可以在 CERT 的安全编码 wiki [www.secoding.org](http://www.secoding.org) 上获取，在那里持续演进。《CERT® Oracle® Secure Coding Standard for Java™》提供了用于测试的规则定义，但 wiki 可能包含书中未提供的额外信息或见解，有助于解释这些规则的含义。
+Java™ 安全编码标准规则也可以在 CERT 的安全编码 wiki [www.securecoding.org](http://www.securecoding.org) 上获取，在那里持续演进。《CERT® Oracle® Secure Coding Standard for Java™》提供了用于测试的规则定义，但 wiki 可能包含书中未提供的额外信息或见解，有助于解释这些规则的含义。
 
 书中与其他指南的交叉引用直接给出编号和标题。
 
-
-《Java 编码指南》关注 Java SE 7平台环境，并包含了解决使用 Java 7 API 安全问题的指南。《Java 语言规范：Java SE 7 版》（JLS）[JLS 2013] 规定了 Java 语言的行为，是开发这些指南的主要参考。
+《Java 编码指南》关注 Java SE 7 平台环境，并包含了解决使用 Java 7 API 安全问题的指南。《Java 语言规范：Java SE 7 版》（JLS）[JLS 2013] 规定了 Java 语言的行为，是开发这些指南的主要参考。
 
 传统的语言标准（如 C 和 C++）包含了未定义、未指定和实现定义的行为，当程序员对这些行为的移植性做出错误假设时，会导致漏洞。相比之下，JLS 更完整地规定了语言行为，因为 Java 被设计为跨平台语言。尽管如此，某些行为仍由 Java 虚拟机（JVM）或 Java 编译器裁量。这些指南提供了解决方案以帮助实现者解决问题，并让程序员理解并理解这些局限性并绕过它们。
 
-
 图 P-1 是 Oracle Java SE 产品的概念图。
 
-这些编码指南主要针对所用基础库以及“其他库”的安全问题。它们避免包含已标记为将修复的开放 bug，或缺乏负面影响的 bug。只有当功能性 bug 可能频繁发生、引起严重的安全或可靠性担忧或影响依赖核心平台的 Java 技术时，才会将其包含。这些指南不限于安-
-
-
-
-
-
+这些编码指南主要针对所用基础库以及“其他库”的安全问题。它们避免包含已标记为将修复的开放 bug，或缺乏负面影响的 bug。只有当功能性 bug 可能频繁发生、引起严重的安全或可靠性担忧或影响依赖核心平台的 Java 技术时，才会将其包含。这些指南不限于安——
 
 | Java | Javac | Javadoc | Jar | Java | JPDA | |
 |---|---|---|---|---|---|---|
@@ -147,83 +78,59 @@ Java™ 安全编码标准规则也可以在 CERT 的安全编码 wiki [www.seco
 | 部署 | Java Web Start | | | | Applet / Java 插件 | |
 | | | | JavaFX | | | | |
 | 用户界面包 | | | Java 2D | AWT | 无障碍 |
-| | 拖放 | 输入法 | 图像 I/O | 打印服务 | 音频 | |
+| | 拖放 | 输入法 | 图像 I/O | 打印服务 | 音频 |
 | 集成库 | | | BC | JNI | RMI | RMI-IIOP | 脚本 |
 | 其他基础库 | Beans | 国际支持 | | 输入/输出 | | 覆盖机制 | Java SE |
 | | 安全 | 序列化 | 扩展机制 | XML JAXP | API | |
 | lang 和 util 基础库 | 管理 | 集合 | Preferences API | 引用对象 | JAR |
-| | 反射 | 正则表达式 | 版本控制 | Zip | 实例化 | |
+| | 反射 | 正则表达式 | 版本控制 | Zip | 实例化 |
 | Java 虚拟机 | HotSpot 客户端和服务器 VM | | |
 
 **图 P-1.** Oracle Java SE 产品的概念图。（来自 Oracle SE 文档，http://docs.oracle.com/java/7/docs/。版权所有 1995, 2010，Oracle 或其关联公司。保留所有权利。）
 
-不仅涉及核心 API 的特定性，还涵盖了与扩展标准 API（javax 包）相关的重要可靠性和安全考虑因素。本文展示了 Java 提供的代码与其他组件及框架交互的完整安全功能。有时，编码指南会使用来自 Spring 和 Struts 等 Web 和应用框架，以及 Java Server 页面 (JSP) 等技术的示例，以突出显示无法通过静态检查发现的安全漏洞。当标准 API 无法提供通过第三方库和解决方案缓解漏洞的选项时。
-
+不仅涉及核心 API 的特定性，还涵盖了与扩展标准 API（`javax` 包）相关的重要可靠性和安全考虑因素。本文展示了 Java 提供的代码与其他组件及框架交互的完整安全功能。有时，编码指南会使用来自 Spring 和 Struts 等 Web 和应用框架，以及 Java Server 页面 (JSP) 等技术的示例，以突出显示无法通过静态检查发现的安全漏洞。当标准 API 无法提供通过第三方库和解决方案缓解漏洞的选项时。
 
 本安全编码标准未涵盖若干问题。
 
-
 这些编码指南广泛适用于所有平台；仅针对某一个 Java 平台的特定考虑因素超出了本指南的范畴。例如，适用于 Android、Java 微型版 (ME) 或 Java 企业版 (EE) 而不适用于 Java 标准版 (SE) 的指南通常被排除在外。在 Java SE 中，处理用户界面（用户界面工具包）或用于提供音频、图形渲染、用户账户访问控制、会话管理、验证和授权等功能的 Web 接口 API 超出了本指南的范畴。尽管如此，指南结合与不当输入验证和注入漏洞相关的风险，讨论了网络化 Java 系统，并建议了适当的缓解策略。这些指南假设产品的功能规范已正确识别并防止了较高层设计和架构层面的漏洞。
-
 
 编码风格问题是主观的；事实证明，就适当的风格指南达成共识是不可能的。因此，Java™ 编码指南通常避免要求执行任何特定的编码风格。相反，我们建议用户自定义风格指南并一致地应用这些指南。一致应用编码风格最简单的方法是使用代码格式化工具。许多集成开发环境 (IDE) 都提供了此类功能。
 
-
-这些指南中的许多不适用于自动检测或纠正。在某些情况下，工具供应商可能会选择实现检查器以识别违背这些指南的行为。作为一个联邦资助的研究与开发中心 (FFRDC)，软件工程研究所 (SEI) 无法无法就为此目的推荐特定的供应商或工具。
-
+这些指南中的许多不适用于自动检测或纠正。在某些情况下，工具供应商可能会选择实现检查器以识别违背这些指南的行为。作为一个联邦资助的研究与开发中心 (FFRDC)，软件工程研究所 (SEI) 无法推荐特定的供应商或工具。
 
 通常情况下，Java™ 编码指南试图避免包含缺乏广泛共识的争议性指南。
 
-
 Java™ 编码指南主要面向 Java 语言程序的开发者。尽管这些指南关注 Java SE 7 平台环境，但它们对于使用 Java ME 或 Java EE 以及其他版本 Java 语言的开发者来说也应该具有参考价值（尽管不完整）。
 
-
-
-
-
-
 Java™ 编码指南由以下部分组成：
-
 
 该指南通常以术语表和参考文献结束。
 
 # 致谢
 
-本书的出版得益于社区的努力。首先，我们感谢贡献的人：Ron Bandes, Jose Sandoval, Ryan Hall, Fei He, Ron Hofler, Sam Kaplan, Michael Kross, Christopher Leonavicius, Bocong Liu, Bastian Marquis, Aniket Mokashi, Jonathan Paulson人员也对本书有贡献：James Ahborn, Neelkamal Gaharwar, Ankur Goyal, Tim Hallonan, Sujay Jain, Pranjal Jumde, Justin Loo, Yitzhak Mandelbaum, Todd Nowacki, Vishal Patel, Justin Pincar, Abhishek Ramani, Brendon Saulsbury, Kirk Sayre, Glenn Stroz, Yodo Toda, Shishir Kumar Yadav。我们还感谢 Hiroshi Kumagai 和 JPCERT 在 Android 附录方面的工作。我们还感谢以下评审人员：Thomas Hawaii, Dan Plakosh 和 Steve Scholnick。
+本书的出版得益于社区的努力。首先，我们感谢贡献的人：Ron Bandes, Jose Sandoval, Ryan Hall, Fei He, Ron Hofler, Sam Kaplan, Michael Kross, Christopher Leonavicius, Bocong Liu, Bastian Marquis, Aniket Mokashi, Jonathan Paulson。人员也对本书有贡献：James Ahborn, Neelkamal Gaharwar, Ankur Goyal, Tim Hallonan, Sujay Jain, Pranjal Jumde, Justin Loo, Yitzhak Mandelbaum, Todd Nowacki, Vishal Patel, Justin Pincar, Abhishek Ramani, Brendon Saulsbury, Kirk Sayre, Glenn Stroz, Yodo Toda, Shishir Kumar Yadav。我们还感谢 Hiroshi Kumagai 和 JPCERT 在 Android 附录方面的工作。我们还感谢以下评审人员：Thomas Hawaii, Dan Plakosh 和 Steve Scholnick。
 
 我们感谢鼓励并支持我们工作的 SEI 和 CERT 经理：Archie Gannon, Rich Pethia, Greg Shannon 和 Bill Wilson。
 
-感谢我们的编辑 Peter Gordon 以及我们在 Addison-Wesley 的感谢对象：Kim Boedigheimer, Jennifer Bortel, John Fuller, Stephanie Nakib 和 Julie Nahil。特别感谢项目编辑 Anna Popick 和校对编辑 Melinda Rankin。
+感谢我们的编辑 Peter Gordon 以及我们在 Addison-Wesley 的同事：Kim Boedigheimer, Jennifer Bortel, John Fuller, Stephanie Nakib 和 Julie Nahil。特别感谢项目编辑 Anna Popick 和校对编辑 Melinda Rankin。
 
 我们感谢 CERT 团队其他成员的支持与帮助，没有他们，本书无法完成。最后，我们要感谢我们的内部编辑 Carol J. Lallier，她让这项工作成为可能。
 
 # 作者简介
 
-Fred Long 是英国阿伯伊斯特威斯大学计算机科学系的高级讲师。他教授形式方法、Java、C++ 和 C 语言以及编程相关的安全问题。他是英国计算机学会 Soft-Wales 分会的主席。Fred 自 1992 年起一直是软件工程研究所的访问科学家。最近，他的研究涉及 Java 漏洞的调查。Fred 是《CERT® Oracle® Secure Coding-Standard for Java™》（Addison-Wesley, 2012）的合著者。
+Fred Long 是英国阿伯伊斯特威斯大学计算机科学系的高级讲师。他教授形式方法、Java、C++ 和 C 语言以及编程相关的安全问题。他是英国计算机学会 Soft-Wales 分会的主席。Fred 自 1992 年起一直是软件工程研究所的访问科学家。最近，他的研究涉及 Java 漏洞的调查。Fred 是《CERT® Oracle® Secure Coding Standard for Java™》（Addison-Wesley, 2012）的合著者。
 
 Dhruv Mohindra 是印度 Persistent Systems Limited CTO 办公室安全实践部门的技术负责人，在那里，他为云、协作、金融、电信、企业、移动、生命科学和医疗保健等各个技术领域提供信息安全咨询解决方案。他经常为财富 500 强、中小型企业和初创公司的管理层和开发团队提供信息安全最佳实践以及在软件开发生命周期中嵌入安全的建议。
 
+Dhruv 曾工作于软件工程学院（Software Engineering Institute）的 CERT 部门，并持续致力于合作提高编程社区的安全意识水平。Dhruv 在卡内基梅隆大学获得信息安全策略与管理硕士学位。他拥有印度普纳大学的计算机工程学士学位。此外，Dhruv 也是著作《The CERT® Oracle Secure Coding Standard for Java》（Addison-Wesley, 2012）的合著者。
 
-
-
-
-# 作者简介
-
-Dhruv 曾工作于软件工程学院（Software Engineering Institute）的 CERT 部门，并持续致力于合作提高编程社区的安全意识水平。Dhruv 在卡内基梅隆大学获得信息安全策略与管理硕士学位。他拥有印度普纳内大学的计算机工程学士学位。此外，Dhruv 也是著作《The CERT® Oracle Secure Coding Standard for Java》（Addison-Wesley, 2012）的合著者。
-
-![](img/3143b260199f0f09c503d13f99745e59_23_0.png)
-
-Robert C. Secord 是位于宾夕法尼亚州匹兹堡卡内基梅隆大学软件工程学院（SEI）CERT 部门的安全编码技术经理。Robert 也是卡内基梅隆大学计算机科学学院和信息网络学院的教授。他是《The CERT® Secure Coding Standard》（Addison-Wesley, 2009）的作者，以及《Building Systems from Commercial Components》（Addison-Wesley, 2002）、《Modernizing Legacy Systems》（Addison-Wesley, 2003）、《The CERT® Oracle Secure Coding Standard for Java》（Addison-Wesley, 2012）以及《Secure Coding in C and C++, Second Edition》（Addison-Wesley, 2013）的合著者。他发表了关于软件安全、基于组件的软件工程、基于 Web 的系统设计、遗留系统现代化、组件库与搜索引擎以及用户界面设计与开发的数十论文。2005 年以来，Robert 一直向私营企业、学术界和政府教授 C 和 C++ 安全编码课程。他于 1982 年开始在 IBM 从职业程序员，涉及通信和操作系统软件、处理器开发以及软件工程。Robert 还曾在 X 联盟工作，在在该处开发并维护了通用桌面环境（Common Desktop Environment）和 X 窗口系统的代码。他在 ISO/IEC JTC1/SC22/WG14 C 语言国际标准化工作组中代表卡内基梅隆大学（CMU）。
-
-![](img/3143b260199f0f09c503d13f99745e59_23_1.png)
+Robert C. Seacord 是位于宾夕法尼亚州匹兹堡卡内基梅隆大学软件工程学院（SEI）CERT 部门的安全编码技术经理。Robert 也是卡内基梅隆大学计算机科学学院和信息网络学院的教授。他是《The CERT® Secure Coding Standard》（Addison-Wesley, 2009）的作者，以及《Building Systems from Commercial Components》（Addison-Wesley, 2002）、《Modernizing Legacy Systems》（Addison-Wesley, 2003）、《The CERT® Oracle Secure Coding Standard for Java》（Addison-Wesley, 2012）以及《Secure Coding in C and C++, Second Edition》（Addison-Wesley, 2013）的合著者。他发表了关于软件安全、基于组件的软件工程、基于 Web 的系统设计、遗留系统现代化、组件库与搜索引擎以及用户界面设计与开发的数十篇论文。2005 年以来，Robert 一直向私营企业、学术界和政府教授 C 和 C++ 安全编码课程。他于 1982 年开始在 IBM 从事职业程序员，涉及通信和操作系统软件、处理器开发以及软件工程。Robert 还曾在 X 联盟工作，在该处开发并维护了通用桌面环境（Common Desktop Environment）和 X 窗口系统的代码。他在 ISO/IEC JTC1/SC22/WG14 C 语言国际标准化工作组中代表卡内基梅隆大学（CMU）。
 
 Dean F. Sutherland 是 CERT 的高级软件工程师。Dean 于 2008 年在卡内基梅隆大学获得软件工程博士学位。在回归学术界之前，他在 Tartan, Inc. 公司担任了 14 年专业软件工程师。在最后 6 年中，他担任技术团队的高级成员和编译器后端技术负责人。他是公司研发部门的主要活跃成员，是 Tartan 新型软件开发流程设计与部署的关键调查员，领导了多个项目，并为 12 人规模的编译器后端小组提供了技术和项目层面的领导工作。Dean 是《The CERT® Oracle Secure Coding Standard for Java™》（Addison-Wesley, 2012）的合著者。
 
-David Svoboda 是 CERT/SEI 的软件安全工程师，也是《The CERT® Oracle Secure Coding Standard for Java™》的合著者。他还维护着针对 Java 以及 C、C++ 和 Perl 的 CERT 安全编码网站。自 1991 年以来，David 一一直是卡内基梅隆大学各种软件开发项目的主要开发者，范围涵盖从分层芯片建模、社会组织仿真到自动机器翻译（AMT）。他在 1996 年开发的 KANTOO AMT 软件目前仍在卡特彼勒（Caterpillar）生产。他拥有超过十年的 Java 开发经验（从 Java 2 开始），他的 Java 项目包括 Tomcat Servlet 和 Eclipse 插件。他曾在全球为军事、政府和银行业的各个团体教授过 C 和 C++ 安全编码。David 也是 ISO/IEC JTC1/SC22/WG14 C 语言工作组以及 ISO/IEC JTC1/SC22/WG21 C++ 工作组的活跃参与者。
+David Svoboda 是 CERT/SEI 的软件安全工程师，也是《The CERT® Oracle Secure Coding Standard for Java™》的合著者。他还维护着针对 Java 以及 C、C++ 和 Perl 的 CERT 安全编码网站。自 1991 年以来，David 一直是卡内基梅隆大学各种软件开发项目的主要开发者，范围涵盖从分层芯片建模、社会组织仿真到自动机器翻译（AMT）。他在 1996 年开发的 KANTOO AMT 软件目前仍在卡特彼勒（Caterpillar）生产。他拥有超过十年的 Java 开发经验（从 Java 2 开始），他的 Java 项目包括 Tomcat Servlet 和 Eclipse 插件。他曾在全球为军事、政府和银行业的各个团体教授过 C 和 C++ 安全编码。David 也是 ISO/IEC JTC1/SC22/WG14 C 语言工作组以及 ISO/IEC JTC1/SC22/WG21 C++ 工作组的活跃参与者。
 
 ![](img/3143b260199f0f09c503d13f99745e59_24_0)
-
-
 
 
 
@@ -245,9 +152,9 @@ private static final boolean verify(String username, char[] password) {
 
 ## 不合规代码示例
 
-此不合规代码示例使用 `BufferedReader` 封装 `InputStream-Reader`，以便从文件中读取敏感数据：
+此不合规代码示例使用 `BufferedReader` 封装 `InputStreamReader`，以便从文件中读取敏感数据：
 
-```
+```java
 void readData() throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(
         new FileInputStream("file")));
@@ -262,13 +169,11 @@ void readData() throws IOException {
 
 此合规解决方案使用直接分配的 NIO（新 I/O）缓冲区从文件中读取敏感数据。数据可以在使用后立即清除，且不会在多个位置被缓存或缓冲。它只存在于系统内存中。
 
-## 2. 不要在客户端侧存储未加密的敏感信息
-
-```
+```java
 void readData() {
   ByteBuffer buffer = ByteBuffer.allocateDirect(16 * 1024);
   try (FileChannel rdr = 
-    new FileInputStream("file")).getChannel()) {
+    new FileInputStream("file").getChannel()) {
     while (rdr.read(buffer) > 0) {
       // 对缓冲区进行某些操作
       buffer.clear();
@@ -299,7 +204,7 @@ void readData() {
 
 Cookie 无法保护敏感信息免受跨站脚本 (XSS) 攻击。能够通过 XSS 攻击或直接攻击客户端获取 Cookie 的攻击者可以从服务器获取敏感信息。
 
-# 第 1 章安全
+### 第 1 章 安全
 
 使用 cookie。如果服务器在有限时间（例如 15 分钟）后使会话失效，则这种风险是受限制的。
 
@@ -309,11 +214,11 @@ Cookie 通常是一个短字符串。如果它包含敏感信息，则应该对�
 
 在此不合规代码示例中，登录 servlet 将用户名和密码存储在 cookie 中，以便在随后的请求中标识用户：
 
-```
+```java
 protected void doPost(HttpServletRequest request
 ```
 
-```
+```java
 if (validated) {
     Cookie loginCookie = new Cookie("rememberme", username +
         "." + new String(password));
@@ -339,7 +244,7 @@ Arrays.fill(password, ' ');
 
 此合规解决方案通过在 cookie 中存储用户名和安全随机字符串来实现“记住我”功能。它还使用 `HttpSession` 在会话中维护状态。
 
-```
+```java
 protected void doPost(HttpServletRequest request,
     HttpServletResponse response) {
 
@@ -357,7 +262,7 @@ protected void doPost(HttpServletRequest request,
             request.getCookies()[0].getValue() != null) {
 ```
 
-```
+```java
 String[] value = 
 request.getCookies()[0].getValue().split(":");
 
@@ -399,7 +304,7 @@ Arrays.fill(password, ' ');
 
 服务器维护用户名与安全随机字符串之间的映射。当用户选择“记住我”时，`doPost()` 方法检查提供的 cookie 是否包含有效的用户名和随机数对。映射包含匹配对，服务器对用户进行身份验证并将其跳转到欢迎页。如果没有，服务器向客户端返回错误。如果用户选择
 
-## 3. 为敏感可变类提供不可修改封装器
+### 3. 为敏感可变类提供不可修改封装器
 
 “记住我”但客户端未提供有效的 cookie，服务器要求用户使用凭据进行身份验证。如果身份验证成功，服务器将发放一个具有“记住我”特性的 cookie。
 
@@ -411,18 +316,18 @@ Arrays.fill(password, ' ');
 
 ## 参考文献
 
-+   - [Oracle 2011c] 包 javax.servlet.http
+- [Oracle 2011c] 包 javax.servlet.http
 - [OWASP 2009] Java Session Fixation
 - [OWASP 2011] 跨站脚本 (XSS)
 - [W3C 2003] 万维网安全 FAQ
 
-字段的不可变性可以防止无意修改以及恶意篡改，因此在接受输入或返回值时不需要防御性复制。然而，某些敏感类无法不可变的。幸运的是，可以使用不可修改封装器向不可信代码授予对可变类的只读访问。例如，Collection 类包含一组封装器，允许客户端观察 Collection 对象的不可修改视图。
+字段的不可变性可以防止无意修改以及恶意篡改，因此在接受输入或返回值时不需要防御性复制。然而，某些敏感类无法不可变的。幸运的是，可以使用不可修改封装器向不可信代码授予对可变类的只读访问。例如，`Collection` 类包含一组封装器，允许客户端观察 `Collection` 对象的不可修改视图。
 
 ## 不合规代码示例
 
 此不合规代码示例包含 `Mutable` 类，它允许内部数组对象被修改：
 
-```
+```java
 class Mutable {
     private int[] array = new int[10];
 
@@ -431,10 +336,6 @@ class Mutable {
     }
 }
 ```
-
-
-
-
 
 ```java
 public void setArray(int[] i) {
@@ -464,6 +365,7 @@ class MutableProtector extends Mutable {
   private Mutable mutable = new MutableProtector();
   // 具有读取权限的不可信调用者安全调用
   public Mutable getMutable() {return mutable;}
+}
 ```
 
 在此类中，根据“OBJ05-J. 在返回引用之前，防御性地复制私有可变类成员 [Long 2012]”，调用 getter 方法 `getArray()` 不允许修改类的私有内部状态。然而，不可信的调用者可能会调用 `setArray()` 方法并修改 `Mutable` 对象。
@@ -549,13 +451,15 @@ AccessController.doPrivileged(
 
 ## 参考文献
 
-- [API 2013] AccessController.doPrivileged(), System.setSecurityManager()
+- [API 2013] `AccessController.doPrivileged()`, `System.setSecurityManager()`
 
 ## 5. 防止任意文件上传
 
 接受文件上传的 Java 应用（包括 Web 应用）必须确保攻击者无法上传或传输恶意文件。如果包含代码的限制文件被目标系统执行，可能会破坏应用层防御。例如，允许上传 HTML 文件的应用程序将允许恶意代码执行——攻击者可以提交一个带有跨站脚本 (XSS) 负载的有效 HTML 文件，在缺少输出转义程序的情况下该负载将执行。出于这个原因，许多应用程序限制了可以上传的文件类型。
 
 可能可以上传具有 `.exe` 和 `.sh` 等危险扩展名的文件，这可能导致服务器端应用程序执行任意代码。仅限制 HTTP 请求头中 `Content-Type` 字段的应用程序可能会受到此类攻击。
+
+
 
 为了支持上传，典型的 Java Server 页面 (JSP) 页面包含如下代码：
 
@@ -610,11 +514,7 @@ public class UploadAction extends ActionSupport {
 
 ## 合规解决方案
 
-只有当内容类型与文件的实际内容匹配时，文件上传才能成功。例如，图像头部的文件必须只包含图像，且不能包含可执行代码。此合规解决方案使用 Apache Tika 库 [Apache 2013] 来检测并提取元数据和结构化文本
-
-
-
-
+只有当内容类型与文件的实际内容匹配时，文件上传才能成功。例如，图像头部的文件必须只包含图像，且不能包含可执行代码。此合规解决方案使用 Apache Tika 库 [Apache 2013] 来检测并提取元数据和结构化文本。
 
 ## 5. 防止任意文件上传
 
@@ -691,7 +591,7 @@ if (metadata.get(Metadata.CONTENT_TYPE).equalsIgnoreCase(
 
 适当的输入清理可以防止恶意数据插入到数据库等子系统中。然而，不同的子系统需要不同类型的清理。幸运的是，通常很清楚哪些子系统最终将接收哪些输入，因此需要什么种类型的清理。
 
-存在多个用于输出数据的子系统。HTML 渲染器是显示输出的一种常见子系统。发送到输出系统的数据似乎源于可信源。然而，假设不需要输出清理是危险的，因为此类数据可能间接源于不可信源，并可能包含恶意内容。未能正确清理传递给输出系统的数据会导致多种攻击。例如，HTML 渲染器容易受到 HTML 注入和跨站脚本 (XSS) 攻击 [OWASP 2011]。防止此类攻击的输出清理与输入清理同样关重要。
+存在多个用于输出数据的子系统。HTML 渲染器是显示输出的一种常见子系统。发送到输出系统的数据似乎源于可信源。然而，假设不需要输出清理是危险的，因为此类数据可能间接源于不可信源，并可能包含恶意内容。未能正确清理传递给输出系统的数据会导致多种攻击。例如，HTML 渲染器容易受到 HTML 注入和跨站脚本 (XSS) 攻击 [OWASP 2011]。防止此类攻击的输出清理与输入清理同样关键。
 
 通过输入验证，数据在针对恶意字符进行清理之前应进行归一化。对所有输出字符以外的安全字符进行正确编码，以避免由绕过验证的数据引起漏洞。更多信息请参见《Java CERT® Oracle® 编码标准》 [Long 2012]、“IDS01-J. 在验证字符串前对其归一化”。
 
@@ -809,10 +709,6 @@ public ModelAndView getNotifications(HttpServletRequest request,
 }
 ```
 
-
-
-
-
 ## 适用性
 
 在输出显示或跨越信任边界之前未进行编码或转义，可能会导致任意代码的执行。
@@ -831,7 +727,7 @@ public ModelAndView getNotifications(HttpServletRequest request,
 
 当不受信的输入注入到动态构建的代码中，就会发生代码注入。一个明显的潜在漏洞来源是在 Java 代码中使用 JavaScript。`javax.script` 包包含了一许多接口和类，这些接口和类定义了 Java 脚本引擎以及一个在 Java 代码中使用这些接口和类的框架。不当目使用 `javax.script` API 会允许攻击者在目标系统上执行任意代码。
 
-本指南是《Java  CERT® Oracle 安全编码标准》[Long 2012]，“IDS00-j. 清理跨信任边界的不受信数据”的具体实例。
+本指南是《Java CERT® Oracle 安全编码标准》[Long 2012]，“IDS00-j. 清理跨信任边界的不受信数据”的具体实例。
 
 ## 不合规代码示例
 
@@ -850,6 +746,8 @@ private static void evalScript(String firstName)
 
 攻击者可以输入特构造的参数来尝试注入恶意 JavaScript。此示例显示了一个包含 JavaScript 代码的恶意字符串，该代码可以在漏洞系统上创建或覆盖现有文件。
 
+
+
 ```javascript
 dummy();
 var bw = new JavaImporter(java.io.BufferedWriter);
@@ -861,11 +759,11 @@ with(fw) {
 //
 ```
 
-此示例中的脚本打印 "dummy"，然后向名为 config.cfg 的配置文件写入 "some text"。实际的利用程序可以执行任意代码。
+此示例中的脚本打印 "dummy"，然后向名为 `config.cfg` 的配置文件写入 "some text"。实际的利用程序可以执行任意代码。
 
 ### 合规解决方案（白名单）
 
-防止代码注入漏洞的最佳防御方法是防止将可执行的用户输入包含在代码中，这些代码必须经过清理，例如，确保它只包含有效的白名单内的字符。清理工作最好在数据输入后立即进行，使用用于存储和处理数据的数据抽象层的方法。更多细节请参考 [Long 2012] "IDS00-1. 清理跨信任边界的不受信数据”。名称中必须允许特殊字符，但在与其等效形式进行比较之前，必须对其进行归一化。此合规解决方案使用白名单来防止未清理的输入被脚本引擎解释。
+防止代码注入漏洞的最佳防御方法是防止将可执行的用户输入包含在代码中，这些代码必须经过清理，例如，确保它只包含有效的白名单内的字符。清理工作最好在数据输入后立即进行，使用用于存储和处理数据的数据抽象层的方法。更多细节请参考 [Long 2012] "IDS00-1. 清理跨信任边界的不受信数据"。名称中必须允许特殊字符，但在与其等效形式进行比较之前，必须对其进行归一化。此合规解决方案使用白名单来防止未清理的输入被脚本引擎解释。
 
 ```java
 private static void evalScript(String firstName)
@@ -878,20 +776,20 @@ throws ScriptException {
     }
     ScriptEngineManager manager = new ScriptEngineManager();
     ScriptEngine engine = manager.getEngineByName("javascript");
-    engine.eval("print('" + firstName + " ")");
+    engine.eval("print('" + firstName + " ')");
 }
 ```
 
 ### 合规解决方案（安全沙箱）
 
-另一种方法是使用安全管理器创建一个安全沙箱（请参见指南 20，“使用安全管理器创建安全沙箱”）。应用程序应防止脚本执行任意命令，例如查询本地文件系统。可以使用 `doPrivileged()` 的双参数形式以较高的权限降低权限的权限，但脚本引擎本身不能这样做。`RestrictedAccessControlType` 将默认策略文件中授予新创建的保护域的权限减少。有效权限是新创建的保护域的权限与系统安全策略的交集。有关 `doPrivileged()` 双参数形式的更多细节，请参考指南 16，“避免授予过度权限”。
+另一种方法是使用安全管理器创建一个安全沙箱（请参见指南 20，“使用安全管理器创建安全沙箱”）。应用程序应防止脚本执行任意命令，例如查询本地文件系统。可以使用 `doPrivileged()` 的双参数形式以降低权限，但脚本引擎本身不能这样做。`RestrictedAccessControlContext` 将默认策略文件中授予新创建的保护域的权限减少。有效权限是新创建的保护域的权限与系统安全策略的交集。有关 `doPrivileged()` 双参数形式的更多细节，请参考指南 16，“避免授予过度权限”。
 
 此合规解决方案演示了在 `doPrivileged()` 的双参数形式中使用 `AccessControlContext`。
 
 ```java
 class ACC {
     private static class RestrictedAccessControlContext {
-        private static final AccessControlContext INSTANCE =
+        private static final AccessControlContext INSTANCE;
 
         static {
             INSTANCE =
@@ -929,11 +827,11 @@ class ACC {
 
 此方法可以与白名单结合以获得额外的安全性。
 
-## 适用性
+### 适用性
 
 在输出显示或跨越信任边界之前未进行编码或转义，可能会导致任意代码的执行。
 
-## 参考文献
+### 参考文献
 
 - [Long 2012] IDS00-j. 清理跨信任边界的不受信数据。
 - [API 2013] javax.script
@@ -973,7 +871,7 @@ class ACC {
 
 如果攻击者知道 Utah 是一个有效的用户名，他或她可以指定输入如下
 
-Utah' or '1'='1
+`Utah' or '1'='1`
 
 这产生了以下查询字符串
 
@@ -981,9 +879,9 @@ Utah' or '1'='1
 //users[username/text()='Utah' or '1'='1' and password/text()='xxxx']
 ```
 
-由于 '1'='1' 自动为真，密码永远不会通过验证。因此，攻击者在不知道 Utah 密码的情况下，不当地作为用户 Utah 通过了身份验证。
+由于 `'1'='1'` 自动为真，密码永远不会通过验证。因此，攻击者在不知道 Utah 密码的情况下，不当地作为用户 Utah 通过了身份验证。
 
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规代码示例从用户处读取用户名密码，并使用它们构造查询字符串。密码以字符数组的形式传递并进行哈希处理。此示例容易受到上述攻击。如果将上述攻击字符串传递给 `evaluate()`，该方法调用将返回 XML 文件中相应的节点，导致 `getLogin()` 方法返回 `true` 并绕过任何授权。
 
@@ -991,15 +889,7 @@ Utah' or '1'='1
 private boolean doLogin(String username, char[] password)
 throws ParserConfigurationException, SAXException,
 IOException, XPathException {
-```
 
-
-
-
-
-## 8. 防止 XPath 注入
-
-```java
 DocumentBuilderFactory domFactory = 
 DocumentBuilderFactory.newInstance();
 domFactory.setNamespaceAware(true);
@@ -1022,9 +912,10 @@ for (int i = 0; i < nodes.getLength(); i++) {
 }
 
 return (nodes.getLength() >= 1);
+}
 ```
 
-## 解决方案 (XQuery)
+### 解决方案 (XQuery)
 
 通过采用与防止 SQL 注入类似的防御措施，可以防止 XPath 注入。
 
@@ -1033,7 +924,7 @@ return (nodes.getLength() >= 1);
 - 在客户端-服务器应用程序中，在客户端和服务器端均进行验证。
 - 对提供、传播或接受用户输入的应用程序进行广泛测试。
 
-输入文件：login.xq
+输入文件：`login.xq`
 
 ```xquery
 declare variable $userName as xs:string external;
@@ -1068,18 +959,16 @@ for (int i = 0; i < nodes.getLength(); i++) {
     nodes.item(i).getChildNodes().item(1);
     System.out.println(node.getNodeValue());
 }
-```
 
-## 9. 防止 LDAP 注入
-
-```java
 return (nodes.getLength() >= 1);
 }
 ```
 
+### 9. 防止 LDAP 注入
+
 使用此方法，`userName` 和 `password` 字段中指定的数据在运行时不会被解释为可执行内容。
 
-## 适用性
+### 适用性
 
 未验证用户输入可能导致信息泄露和特权代码执行。
 
@@ -1088,10 +977,12 @@ return (nodes.getLength() >= 1);
 [防止 XPath 注入] 需要移除（即禁止）或正确转义以下字符：
 
 - `< / ' = "` 以防止直接参数注入。
+
 XPath 查询不应包含任何元字符（如 `' = * ? //` 或类似字符）。
+
 XSLT 扩展不不应包含任何用户输入，或者如果包含，则[应该]全面测试文件的存在性，并确保文件在 Java 2 安全策略设置的范围之内。
 
-## 参考文献
+### 参考文献
 
 - [Fortify 2013] 输入验证与表示：XML 注入
 - [Long 2012] IDS00-J. 清理跨越信任边界的不可信数据
@@ -1105,7 +996,7 @@ XSLT 扩展不不应包含任何用户输入，或者如果包含，则[应该]�
 
 可以使用白名单将输入限制在有效字符列表中。必须从白名单中排除的字符和字符序列——包括 Java 命名和目录接口 (JNDI) 元字符和 LDAP 特殊字符——列在表 1–1 中。
 
-## 表 1–1. 从白名单中排除的字符和序列
+### 表 1–1. 从白名单中排除的字符和序列
 
 | 字符 | 名称 |
 | --- | --- |
@@ -1120,7 +1011,7 @@ XSLT 扩展不不应包含任何用户输入，或者如果包含，则[应该]�
 | ( ) | 圆括号 |
 | \u0000 | Unicode 空字符 |
 
-这种字符序列 # LDAP 注入示例
+### LDAP 注入示例
 
 考虑一个 LDAP 数据交换格式 (LDIF) 文件，包含以下记录：
 
@@ -1152,7 +1043,7 @@ userPassword: secret2
 mail: sherlock@holmesassociates.com
 ```
 
-## 这种 LDAP 注入
+### 这种 LDAP 注入
 
 对有效用户名和密码的搜索通常形式为
 
@@ -1162,7 +1053,7 @@ mail: sherlock@holmesassociates.com
 
 允许 LDAP 注入的验证程序将允许未经授权登录。同样，搜索程序将允许攻击者获取目录的部分或全部数据。
 
-# 非合规代码示例
+### 非合规代码示例
 
 此非合规代码示例允许调用 `searchRecord()` 方法的调用者使用 LDAP 协议搜索目录中的记录。
 
@@ -1172,6 +1063,8 @@ mail: sherlock@holmesassociates.com
 public class LDAPInjection {
     private void searchRecord(
 ```
+
+
 
 ```java
 System.out.println(attr);
@@ -1195,8 +1088,8 @@ String userPassword = "secret2"; // 有效
 sc.searchScope(SearchControls.SUBTREE_SCOPE);
 String base = "dc=example,dc=com";
 
-if (userSN.matches("[\\\w]**") ||
-    userPassword.matches("[\\\w]**")) {
+if (userSN.matches("[\\w]**") ||
+    userPassword.matches("[\\w]**")) {
   throw new IllegalArgumentException("无效输入");
 }
 
@@ -1204,10 +1097,6 @@ String filter = "(&sn( = " + userSN + ")(userPassword = " + userPassword + "))";
 
 // ... LDAPInjection.searchRecord() 的剩余部分
 ```
-
-
-
-
 
 ## 10. 不要使用 clone() 方法复制不可信的方法参数
 
@@ -1223,7 +1112,7 @@ String filter = "(&sn( = " + userSN + ")(userPassword = " + userPassword + "))";
 
 ## 10. 不要使用 clone() 方法复制不可信的方法参数
 
-对可变方法参数进行防御性拷贝可以缓解多种安全漏洞；更多信息请参见《The CERT® Oracle® Coding Standard for Java™ [2012] 中的“OBJ006-J. 防御性拷贝可变输入和可变内部组件”。然而，不恰当使用 `clone()` 方法可能允许攻击者通过提供看似正常但随后返回意外值的参数来利用漏洞。此类对象可能因此绕过验证和安全检查。当此类类可能被作为参数传递给方法时，应将该参数视为不可信，并且不要使用该类提供的 `clone()` 方法。此外，不要使用非 final 类的 `clone()` 方法来进行防御性拷贝。
+对可变方法参数进行防御性拷贝可以缓解多种安全漏洞；更多信息请参见《The CERT® Oracle® Coding Standard for Java™ [2012]》中的“OBJ006-J. 防御性拷贝可变输入和可变内部组件”。然而，不恰当使用 `clone()` 方法可能允许攻击者通过提供看似正常但随后返回意外值的参数来利用漏洞。此类对象可能因此绕过验证和安全检查。当此类类可能被作为参数传递给方法时，应将该参数视为不可信，并且不要使用该类提供的 `clone()` 方法。此外，不要使用非 final 类的 `clone()` 方法来进行防御性拷贝。
 
 本指南是指南 15 “不要依赖可以被不可信代码覆盖的方法”的一个具体实例。
 
@@ -1240,21 +1129,22 @@ private Boolean validateValue(long time) {
 private void storeDateInDB(java.util.Date date)
   throws SQLException {
 
-final java.util.Date copy = (java.util.Date)date.clone();
-if (validateValue(copy.getTime())) {
-  Connection con =
-    DriverManager.getConnection(
-      "jdbc:microsoft:sqlserver://<HOST>:<1433",
-      "<UID>","<PWD>"
-    );
-  PreparedStatement pstmtmt =
-    con.prepareStatement("UPDATE ACCESSDB TIME = ?");
-  pstmt.setLong(1, copy.getTime());
-  // ...
+  final java.util.Date copy = (java.util.Date)date.clone();
+  if (validateValue(copy.getTime())) {
+    Connection con =
+      DriverManager.getConnection(
+        "jdbc:microsoft:sqlserver://<HOST>:<1433",
+        "<UID>","<PWD>"
+      );
+    PreparedStatement pstmtmt =
+      con.prepareStatement("UPDATE ACCESSDB TIME = ?");
+    pstmt.setLong(1, copy.getTime());
+    // ...
+  }
 }
 ```
 
-`storeDateInDB()` 方法接收一个不可信的日期参数，并尝试使用其 `clone()` 方法进行防御性拷贝。这允许攻击者通过创建一个继承 `Date` 的恶意日期类来控制程序。如果攻击者的代码以与 `store-DateInDB()` 相同的权限运行，攻击者只需在他们的 `clone()` 方法中嵌入恶意代码即可。
+`storeDateInDB()` 方法接收一个不可信的日期参数，并尝试使用其 `clone()` 方法进行防御性拷贝。这允许攻击者通过创建一个继承 `Date` 的恶意日期类来控制程序。如果攻击者的代码以与 `storeDateInDB()` 相同的权限运行，攻击者只需在他们的 `clone()` 方法中嵌入恶意代码即可。
 
 ```java
 class MaliciousDate extends java.util.Date {
@@ -1363,7 +1253,7 @@ private static boolean equals(Key key1, Key key2) {
 
 ## 参考文献
 
-- API 2013: java.lang.Object.equals(), Object.equals()
+- API 2013: `java.lang.Object.equals()`, `Object.equals()`
 - [Oracle 2011b]: Determining If Keys Are Equal (JCA Reference Guide)
 
 ## 12. 不要使用不安全的或弱的加密算法
@@ -1394,22 +1284,14 @@ byte[] encrypted = cipher.doFinal(encoded);
 ```java
 Cipher cipher = Cipher.getInstance("AES");
 KeyGenerator kgen = KeyGenerator.getInstance("AES");
-kngen.init(128); // 192 和 256 位可能不可
+kgen.init(128); // 192 和 256 位可能不可用
 
 SecretKey key = kgen.generateKey();
 byte[] raw = key.getEncoded();
 
 SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");
 cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
-```
 
-
-
-
-
-## 13. 使用哈希函数存储密码
-
-```
 // 执行加密
 byte[] encrypted = cipher.doFinal(encoded);
 ```
@@ -1433,7 +1315,7 @@ Java SE 7 中可以禁用弱的加密算法；请参阅《Java SE PKI 程序员�
 
 限制密码暴露的一种接受技术是使用哈希函数，它允许程序间接地比较输入密码与原始密码字符串，而无需存储密码的明文或可还原版本。这种方法在没有任何实际缺点的情况下最大限度地减少了密码的暴露。
 
-## 哈希函数
+### 哈希函数
 
 哈希函数产生的值是哈希值或消息摘要。哈希函数是计算上可行的函数，其逆过程在计算上是不可行的。在实践中，可以将密码编码为哈希值，但解码仍然不可行。可以通过它们的哈希值的相等性来测试密码的相等性。
 
@@ -1443,9 +1325,9 @@ Java SE 7 中可以禁用弱的加密算法；请参阅《Java SE PKI 程序员�
 
 Java 的 `MessageDigest` 类提供了各种加密哈希的实现。避免使用缺陷性函数，例如消息摘要算法 (MD5)。安全哈希算法 (SHA)-1 和 SHA-2 等哈希函数由国家安全局维护，目前被认为是安全的。在实践中，许多应用程序使用 SHA-256，因为这种哈希函数具有良好的性能的同时认为是安全的。
 
-# 不合代码示例
+## 不合规代码示例
 
-此不合代码示例使用对称密钥算法加密和解密存储在 `password.bin` 中的密码。
+此不合规代码示例使用对称密钥算法加密和解密存储在 `password.bin` 中的密码。
 
 ```java
 public final class Password {
@@ -1454,7 +1336,7 @@ public final class Password {
         byte[] encrypted = encrypt(pass);
         clearArray(pass);
         // 将加密密码保存到 password.bin
-        saveBytes(encrypted,"password.bin");
+        saveBytes(encrypted, "password.bin");
         clearArray(encrypted);
     }
 
@@ -1462,29 +1344,27 @@ public final class Password {
         // 加载加密的密码
         byte[] encrypted = loadBytes("password.bin");
         byte[] decrypted = decrypt(encrypted);
-        boolean arraysEqual = Arrays.equal(decrypted, pass);
+        boolean arraysEqual = Arrays.equals(decrypted, pass);
         clearArray(encrypted);
         clearArray(pass);
+        return arraysEqual;
     }
-```
 
-## 13. 使用哈希函数存储密码
-
-```java
-return arraysEqual;
-}
-private void clearArray(byte[] a) {
-  for (int i = 0; i < a.length; i++) {
-    a[i] = 0;
-  }
+    private void clearArray(byte[] a) {
+      for (int i = 0; i < a.length; i++) {
+        a[i] = 0;
+      }
+    }
 }
 ```
 
 攻击者可能解密此文件以发现密码，特别是当攻击者了解程序所使用的密钥和加密方案时。密码甚至应该受到来自系统管理员和特权用户的保护。因此，使用加密在缓解密码泄露威胁方面仅部分有效。
 
-# 不合代码示例
+## 不合规代码示例
 
-此不合代码示例通过 `MessageDigest` 使用了 SHA-256 哈希函数来比较哈希值而非明文字符串，但它使用 `String` 来存储密码：
+此不合规代码示例通过 `MessageDigest` 使用了 SHA-256 哈希函数来比较哈希值而非明文字符串，但它使用 `String` 来存储密码：
+
+
 
 ```java
 import java.security.MessageDigest;
@@ -1517,7 +1397,7 @@ private byte[] generateSalt(int n) {
   // 生成长度为n的随机字节数组
 ```
 
-即使攻击者知道程序使用了 SHA-256 和 12 字节的盐，无法从 password.bin 中获取实际密码。由于 `String` 对象是不可变的，并且会在内存中被复制和存储，因此 Java 缺乏在存储为 String 后安全擦除密码的机制。更多信息请参见准则 1，“限制敏感数据的生命周期”。
+即使攻击者知道程序使用了 `SHA-256` 和 12 字节的盐，无法从 `password.bin` 中获取实际密码。由于 `String` 对象是不可变的，并且会在内存中被复制和存储，因此 Java 缺乏在存储为 `String` 后安全擦除密码的机制。更多信息请参见准则 1，“限制敏感数据的生命周期”。
 
 ## 合规解决方案
 
@@ -1587,10 +1467,6 @@ public final class Password {
 
 在 `setPassword()` 和 `checkPassword()` 方法中，密码的明文表示在转换为哈希值后会立即被擦除。因此，攻击者在擦除后必须付出更多努力才能获取明文密码。提供保证的擦除极具挑战性，这可能是特定于平台的，并且由于复制垃圾回收器、动态分页以及运行在 Java 语言级别之下的其他平台功能，可能是不可能的。
 
-
-
-
-
 ## 适用性
 
 如果不使用安全的哈希算法存储密码，可能会暴露给恶意用户。违反此准则通常会有与之相关的明确利用漏洞。
@@ -1616,11 +1492,11 @@ public final class Password {
 
 攻击者不应能够通过多个随机数样本确定原始种子。如果违反了这一限制，所有未来的随机数都可能被攻击者成功预测。
 
-# 不合代码示例
+### 不合代码示例
 
 此不合代码示例构造了一个使用指定种子字节初始化的安全随机数生成器。
 
-```
+```java
 SecureRandom random = new SecureRandom(
 String.valueOf(new Date()).getTime()).getBytes(
 );
@@ -1628,11 +1504,11 @@ String.valueOf(new Date()).getTime()).getBytes(
 
 此构造函数搜索安全数字提供者的注册表，并返回第一个支持安全随机数生成的提供者。如果不存在此类提供者，则选择一个特定实现的默认值。此外，系统提供的默认种子被程序员可预测的种子所覆盖。使用当前系统时间作为种子是可预测的，并导致生成熵不足的随机数。
 
-## 合规解决方案
+### 合规解决方案
 
 优先使用 `SecureRandom` 的无参数构造函数，该函数使用系统指定的种子值来生成 128 字节长的随机数。
 
-```
+```java
 byte[] randomBytes = new byte[128];
 SecureRandom random = new SecureRandom();
 random.nextBytes(randomBytes);
@@ -1640,12 +1516,13 @@ random.nextBytes(randomBytes);
 
 为了更好的可移植性，指定具体的随机数生成器和提供者也是一种良好的做法。
 
-## 适用性
+### 适用性
 
 不安全的随机数使攻击者能够获得关于其用上下文的特定信息。
+
 在某些不需要安全的上下文中，不安全的随机数是有用的。这些在“MSC02-J. 生成强随机数”的例外情况 [Long 2012] 中进行了讨论。
 
-## 参考文献
+### 参考文献
 
 - [API 2013] SecureRandom
 - [Sethi 2009] Java SecureRandom 的正确使用
@@ -1659,11 +1536,11 @@ random.nextBytes(randomBytes);
 
 关于覆盖 `Object.clone()` 方法的更多具体细节，请参考准则 10，“不要使用 `clone()` 方法复制不可信的方法参数”。
 
-# 不合代码示例 (hashCode)
+### 不合代码示例 (hashCode)
 
 此不合代码示例显示了一个维护 `licenseMap` 的 `LicenseManager` 类。该映射存储了 `LicenseType` 和许可值值对。
 
-```
+```java
 public class LicenseManager {
     Map<LicenseType, String> licenseMap =
         new HashMap<LicenseType, String>();
@@ -1695,8 +1572,6 @@ class LicenseType {
     }
 }
 ```
-
-# 15. 不要依赖可以被不可信代码重写的方法 45
 
 ```java
 @Override
@@ -1751,7 +1626,7 @@ public class DemoClient {
 }
 ```
 
-## 合规解决方案 (IdentityHashMap)
+### 合规解决方案 (IdentityHashMap)
 
 此合规解决方案使用 `IdentityHashMap` 而不是 `HashMap` 来存储许可信息：
 
@@ -1770,9 +1645,6 @@ public class LicenseManager {
 
 因此，重写的方法无法暴露类的内部细节。如下所示代码所示，客户端程序可以继续添加键，甚至可以检索已添加的键值对。
 
-
-
-
 ```java
 public class DemoClient {
     public static void main(String[] args) {
@@ -1787,21 +1659,23 @@ public class DemoClient {
 }
 ```
 
-## 合规解决方案（final 类）
+### 合规解决方案（final 类）
 
 此合规解决方案将 `LicenseType` 类声明为 `final`，这样它的方法无法被重写：
 
-```
+```java
 final class LicenseType {
     // ...
 }
 ```
 
-# 不规范代码示例
+### 不规范代码示例
 
 此不规范代码示例包含一个 `Widget` 类和一个包含一组组件的 `LayoutManager` 类：
 
-```
+
+
+```java
 public class Widget {
     private int noOfComponents;
 
@@ -1872,21 +1746,21 @@ manager.addWidget(widget);
 System.out.println(manager.getLayoutSize()); // 输出 2
 ```
 
-15. 不要依赖可以被不可信代码重写的方法 49
+### 15. 不要依赖可以被不可信代码重写的方法
 
 预计 `layouts` 集合只包含一个项目，因为添加的 `navigator` 和 `widget` 的数量都是 1。然而，`getLayoutSize()` 方法返回了 2。出现差异的原因是，`Widget` 的 `hashCode()` 方法在将组件添加到集合中时仅使用了一次。当添加 `navigator` 时，使用的是 `Navigator` 类提供的 `hashCode()` 方法。因此，集合中包含了两个不同的对象实例。
 
-## 合规解决方案（final 类）
+#### 合规解决方案（final 类）
 
 此合规解决方案将 `Widget` 类声明为 `final`，这样它的方法无法被重写：
 
-```
+```java
 public final class Widget {
 // ...
 }
 ```
 
-# 不规范代码示例（run()）
+### 不规范代码示例（run()）
 
 在此不规范代码示例中，`Worker` 类及其子类 `SubWorker` 各包含一个旨在启动线程的 `startThread()` 方法。
 
@@ -1924,7 +1798,7 @@ sw.startThread("child");
 
 预期输出是 `Parent` 和 `Child`。然而，由于 `startThread` 方法没有被重写，`SubWorker` 将执行其父类 `Worker` 的 `run()` 方法，导致输出两次 `Parent`。
 
-## 合规解决方案
+#### 合规解决方案
 
 此合规解决方案将 `startThread` 方法声明为 `final`，以便其无法被重写：
 
@@ -1951,10 +1825,7 @@ public class SubWorker extends Worker {
 }
 ```
 
-
-
-
-## 16. 避免授予过度权限
+### 16. 避免授予过度权限
 
 ```java
 // 通过传递上下文参数来限制权限
@@ -1987,22 +1858,22 @@ public void performActionOnFile() {
 
 缺乏创建适当 `AccessControlContext` 权限的调用者可以使用 `AccessController.getContext()` 请求一个上下文以创建实例。
 
-## 适用性
+#### 适用性
 
 未遵循最小权限原则可能导致不可信的无权限代码执行非预期的特权操作。然而，仔细限制权限会增加复杂性。这种增加的复杂性和相关的维护性降低必须与任何安全改进进行权衡。
 
-## 参考文献
+#### 参考文献
 
--   [API 2013] Class AccessController
+- [API 2013] Class AccessController
 - [Oracle 2013a] API for Privileged Blocks
 
-## 17. 最小化特权代码
+### 17. 最小化特权代码
 
 程序必须遵循最小权限原则，不仅要为特权块提供正确运行所需的最小权限（参见准则 16，“避免授予过度权限”），还要确保特权代码仅包含需要特权的操作。特权块中的多余代码将以该块的权限运行，从而增加攻击面。
 
-## 不合规代码示例
+#### 不合规代码示例
 
-此不合规代码示例包含一个 `changePassword()` 方法，该方法尝试在特权块内打开密码文件并使用该文件执行操作。特权块还包含一个多余的 `System.loadlibrary()` 调用，用于加载身份验证库。
+此不合规代码示例包含一个 `changePassword()` 方法，该方法尝试在特权块内打开密码文件并使用该文件执行操作。特权块还包含一个多余的 `System.loadLibrary()` 调用，用于加载身份验证库。
 
 ```java
 public void changePassword(String currentPassword,
@@ -2029,7 +1900,7 @@ public void changePassword(String currentPassword,
 
 此示例违背了最小权限原则，因为无权限的调用者也可以导致身份验证库被加载。无权限的调用者无法直接调用 `System.loadLibrary()` 方法，因为这可能会向无权限代码暴露原生方法 [SCG 2010]。此外，`System.loadLibrary()` 方法仅检查其直接调用者的权限，因此应极其谨慎地使用。有关更多信息，请参见准则 18，“不要将使用降低安全检查的方法暴露给不可信代码”。
 
-## 合规解决方案
+#### 合规解决方案
 
 此合规解决方案将 `System.loadLibrary()` 的调用移动到 `doPrivileged()` 块之外。这样做允许无权限的代码使用文件进行初步密码重置检查，但防止了它加载身份验证库。
 
@@ -2059,15 +1930,15 @@ public void changePassword(String currentPassword,
 
 `loadLibrary()` 调用也可以在执行初步重置检查之前发生；在本示例中，出于性能考虑，它是延迟的。
 
-## 适用性
+#### 适用性
 
 最小化特权代码可以减少应用程序的攻击面，并简化特权代码的审计工作。
 
-## 参考文献
+#### 参考文献
 
-[API 2013] Class AccessController
+- [API 2013] Class AccessController
 
-## 18. 不要将使用降低安全检查的方法暴露给不可信代码
+### 18. 不要将使用降低安全检查的方法暴露给不可信代码
 
 大多数方法缺乏安全检查器检查，因为它们没有提供对系统敏感部分的访问（例如文件系统）。大多数提供安全检查器检查的方法在继续执行之前会验证调用栈中的每个类和方法是否已授权。这种安全模型允许受限的程序（如 Java applet）拥有核心 Java 库的完全访问权限。它还可以防止敏感方法代表隐藏在调用栈中信任方法背后的恶意方法执行操作。
 
@@ -2075,21 +1946,22 @@ public void changePassword(String currentPassword,
 
 由于 `java.lang.reflect.Field.setAccessible()` 和 `getAccessible()` 用于检查 Java 虚拟机 (JVM) 以覆盖语言访问检查，它们执行的是标准的（且更严格的）安全检查，并存在漏洞。尽管如此，这些方法也应被极其谨慎地使用。
 
-## 类加载器
+#### 类加载器
 
 类加载器通过加载额外的类允许 Java 应用程序进行动态扩展。
 
-表 1–2 仅检查调用方法的方法
+**表 1–2 仅检查调用方法的方法**
 
+| 方法 |
 | :--- |
-| java.lang.Class.newInstance |
-| java.lang.reflect.Constructor.newInstance |
-| java.lang.reflect.Field.get* |
-| java.lang.reflect.Field.set* |
-| java.lang.reflect.Method.invoke |
-| java.util.concurrent.atomic.IntegerFieldUpdater.newUpdater |
-| java.util.concurrent.atomic.LongFieldUpdater.newUpdater |
-| java.util.concurrent.atomic.ReferenceFieldUpdater.newUpdater |
+| `java.lang.Class.newInstance` |
+| `java.lang.reflect.Constructor.newInstance` |
+| `java.lang.reflect.Field.get*` |
+| `java.lang.reflect.Field.set*` |
+| `java.lang.reflect.Method.invoke` |
+| `java.util.concurrent.atomic.IntegerFieldUpdater.newUpdater` |
+| `java.util.concurrent.atomic.LongFieldUpdater.newUpdater` |
+| `java.util.concurrent.atomic.ReferenceFieldUpdater.newUpdater` |
 
 架构通过使用不同的类加载器控制来自不同源的代码交互。类加载器的分离是代码分离的基础：它防止恶意代码访问并破坏信任代码。
 
@@ -2101,26 +1973,28 @@ public void changePassword(String currentPassword,
 
 类加载器委托模型是许多 Java 实现和框架的基础。避免向不可信代码暴露表 1–2 和表 1–3 中列的方法。例如，考虑一种不可信代码尝试执行的攻击场景
 
-表 1–3 使用调用者方法类加载器的方法
+**表 1–3 使用调用者方法类加载器的方法**
 
- | :--- |
-| java.lang.Class.forName |
-| java.lang.Package.getPackage |
-| java.lang.Package.getPackages |
-| java.lang.Runtime.load |
-| java.lang.Runtime.loadLibrary |
-| java.lang.System.load |
-| java.lang.System.loadLibrary |
-| java.sql.DriverManager.getConnection |
-| java.sql.DriverManager.getDriver |
-| java.sql.DriverManager.getDrivers |
-| java.sql.DriverManager.deregisterDriver |
-| java.util.ResourceBundle.getBundle |
+| 方法 |
+| :--- |
+| `java.lang.Class.forName` |
+| `java.lang.Package.getPackage` |
+| `java.lang.Package.getPackages` |
+| `java.lang.Runtime.load` |
+| `java.lang.Runtime.loadLibrary` |
+| `java.lang.System.load` |
+| `java.lang.System.loadLibrary` |
+| `java.sql.DriverManager.getConnection` |
+| `java.sql.DriverManager.getDriver` |
+| `java.sql.DriverManager.getDrivers` |
+| `java.sql.DriverManager.deregisterDriver` |
+| `java.util.ResourceBundle.getBundle` |
 
 
 
+# 一个特权类
 
-一个特权类。如果其类加载器没有权限自行加载请求的特权类，但该类加载器被允许将类加载委托给一个受信任类的类加载器，则可能会发生权限提升。此外，如果信任代码接受了受污染的输入，受信任代码的类加载器可能会被说服代表不可信代码加载特权的恶意类。
+如果其类加载器没有权限自行加载请求的特权类，但该类加载器被允许将类加载委托给一个受信任类的类加载器，则可能会发生权限提升。此外，如果信任代码接受了受污染的输入，受信任代码的类加载器可能会被说服代表不可信代码加载特权的恶意类。
 
 具有相同定义类加载器的类将存在相同的命名空间中，但它们根据安全策略具有不同的权限。当特权代码与由同一类加载器加载的非特权代码（或低权限代码）共存时，就会出现安全漏洞。在这种情况下，低权限代码可以根据特权代码声明的访问性自由访问特权代码的成员。当特权代码使用表中的任何 API 时，它将绕过安全管理器的检查（`loadLibrary()` 和 `load()` 除外）。
 
@@ -2214,20 +2088,21 @@ private Class getGetClass(String paramString)
 private Object invokeInternal() throws Exception {
     Object target = getTarget();
     String methodName = getMethodName();
-if (target == null || methodName == null) {
-    throw new NullPointerException(target == null ? "target" : "methodName");
-}
+    if (target == null || methodName == null) {
+        throw new NullPointerException(target == null ? "target" : "methodName");
+    }
 
-Object[] arguments = getArguments();
-if (arguments == null) {
-    arguments = emptyArray();
+    Object[] arguments = getArguments();
+    if (arguments == null) {
+        arguments = emptyArray();
+    }
+    // (注意：此处文本在 OCR 中似乎被断化/中断了)
+    if (target == Class.class && methodName.equals("forName")) {
+        return ClassFinder.resolveClass((String)arguments[0],
+            loader);
+    }
+    // ... (提供的代码段结束)
 }
-// (注意：此处文本在 OCR 中似乎被断化/中断了)
-if (target == Class.class && methodName.equals("forName")) {
-    return ClassFinder.resolveClass((String)arguments[0],
-        loader);
-}
-// ... (提供的代码段结束)
 ```
 
 `ClassFinder.resolveClass()` 方法将其工作委托给它的 `findClass()` 方法：
@@ -2253,7 +2128,7 @@ throws ClassNotFoundException {
 }
 ```
 
-尽管此方法是在 applet上下文中被调用的，但它使用 `Class.forName()` 来获取类。`Class.forName()` 将搜索委托给类加载器。在这种情况下，调用类（`com.sun.beans.finder.ClassFinder`）是核心部分，因此使用了受信任的类加载器代替了限制性更大的 applet 加载器；受信任的类加载器加载了类，却不知道正在代表恶意代码操作。
+尽管此方法是在 applet 上下文中被调用的，但它使用 `Class.forName()` 来获取类。`Class.forName()` 将搜索委托给类加载器。在这种情况下，调用类（`com.sun.beans.finder.ClassFinder`）是核心部分，因此使用了受信任的类加载器代替了限制性更大的 applet 加载器；受信任的类加载器加载了类，却不知道正在代表恶意代码操作。
 
 ## 合规解决方案 (CVE-2012-4681)
 
@@ -2290,10 +2165,8 @@ Java 1.7.0 update 10 在 2013 年 1 月因为多个漏洞而被广泛利用。`c
 /**
  * 使用指定的加载器加载类，或者如果指定的加载器为空，则使用此对象的
  * 类加载器。
- * /
+ */
 ```
-
-
 
 ```java
 static Class<?> loadClass(String ClassName, ClassLoader loader)
@@ -2365,9 +2238,9 @@ public static Class forName(String name, boolean initialize, ClassLoader loader)
 - SEC03-j. 在允许不可信代码加载任意类后不要加载信任的类
 - SEC05-j. 不要使用反射来增加类、方法或字段的可访问性
 - [Manion 2013] "Anatomy of Java Exploits"
-- [Oracle 2013d]  CVE-2013-0422 的 Oracle 安全公告
+- [Oracle 2013d] CVE-2013-0422 的 Oracle 安全公告
 
-## 19. 为细粒度安全定义自定义安全权限
+# 19. 为细粒度安全定义自定义安全权限
 
 默认的 `SecurityManager` 检查特定方法的调用者是否有足够的权限继续执行某项操作。在 Java 的安全架构中，操作被定义为一种访问级别，并在执行之前需要某些权限。例如，`java.io.FilePermission` 的读、写、执行和删除操作 [API 2013]。“权限描述与风险”指南 [Oracle 2011d] 列举了默认权限以及将这些权限授予 Java 代码时相关的风险。
 
@@ -2380,6 +2253,8 @@ public static Class forName(String name, boolean initialize, ClassLoader loader)
 ## 不合规代码示例
 
 此不合规代码示例包含一个特权块，用于用于执行两个敏感操作：加载库和设置默认异常处理器。
+
+
 
 ```java
 class LoadLibrary {
@@ -2474,7 +2349,7 @@ permission java.lang.RuntimePermission "loadmyLib";
 ## 参考文献
 
 - [API 2013] Class FilePermission
-Class SecurityManager
+- Class SecurityManager
 - [Oaks 2001] “权限”章节，第5章，“访问控制器”，“权限在 Java" SE 6 开发工具包 (JDK)
 - [Oracle 2011d] Java 平台标准版 7 文档
 - [Oracle 2013c] [Policy 2010] “权限描述与风险”
@@ -2483,12 +2358,10 @@ Class SecurityManager
 
 根据 Java API SecurityManager 文档 [API 2013]，
 
-安全管理器是一个允许应用程序实现安全策略的类。它允许应用程序在执行可能不安全的或
-
-
-敏感操作沙箱，该操作是，以及它是否正在一个允许执行该操作的安全上下文中尝试。应用程序可以允许或拒绝该操作。
+安全管理器是一个允许应用程序实现安全策略的类。它允许应用程序在执行可能不安全的或敏感操作沙箱，该操作是，以及它是否正在一个允许执行该操作的安全上下文中尝试。应用程序可以允许或拒绝该操作。
 
 安全管理器可以与任何 Java 代码关联。
+
 Applet 安全管理器拒绝所有除最基本的权限以外的权限。它的设计目的是防止无意的系统修改、信息泄露和用户冒充。安全管理器的使用不仅限于客户端保护。Web 服务器（如 Tomcat 和 WebSphere）使用此机制来隔离木马后门和恶意的 Java Servlets (JSP)，并保护敏感系统资源免受无意访问。
 
 从命令行运行的 Java 应用程序可以使用命令行标志设置默认或自定义的安全管理器。或者
@@ -2607,10 +2480,7 @@ try {
 
 Java 安全从根本上取决于安全管理器的存在与否。
 
-在运行时程序化检测 SecurityManager 的存在是简单的。静态分析可以处理在执行时会尝试安装 SecurityManager 的代码是否存在。检查 SecurityManager 是否安装得足够早，是否
-
-
-指定了所需的属性，或者在某些特殊情况下保证其已安装是可能的，但通常情况下是不可判定的。
+在运行时程序化检测 SecurityManager 的存在是简单的。静态分析可以处理在执行时会尝试安装 SecurityManager 的代码是否存在。检查 SecurityManager 是否安装得足够早，是否指定了所需的属性，或者在某些特殊情况下保证其已安装是可能的，但通常情况下是不可判定的。
 
 在受控环境中，如果已知从命令行始终会安装一个全局默认的安全管理器，则可以省略对 `setSecurityManager` 方法的调用。这很难被强制执行，且如果环境配置不当，可能会导致漏洞。
 
@@ -2666,6 +2536,8 @@ class Client {
 根据 Oracle 的安全代码编码指南 [SCG 2010]，
 
 回调方法通常从系统以全权限调用。预计恶意代码需要位于栈上才能执行操作似乎是合理的，但事实并非如此。恶意代码可以设置桥接回调与安全检查操作的对象。例如，文件选择对话框可以从用户操作操作文件系统，可能发布来自恶意代码的事件。或者，恶意代码可以伪装成良好的同时重定向用户事件。
+
+
 
 此指南是准则 17 “最小化特权代码”的一个实例，并与 CERT® Oracle® Secure Coding Standard for Java™ [Long 2012], SEC01-J 相关。不要在权限块中允许受污染变量。
 
@@ -2820,14 +2692,10 @@ final class UserLookupCallback implements Callback {
 
 ## 参考文献
 
-- [API 2013] AccessController.doPrivileged()
+- [API 2013] `AccessController.doPrivileged()`
 - [Long 2012] SEC01-j. 不要在权限块中允许受污染变量
 - [SCG 2010] Guideline 9-2: Beware of callback methods
 - Guideline 9-3: Safely invoke java.security.AccessController.doPrivileged
-
-
-
-
 
 ## 22. 最小化变量的作用范围
 
@@ -2840,11 +2708,11 @@ final class UserLookupCallback implements Callback {
 ```java
 public class Scope {
     public static void main(String[] args) {
-    int i = 0;
-    for (i = 0; i < 10; i++) {
-        // 执行操作
+        int i = 0;
+        for (i = 0; i < 10; i++) {
+            // 执行操作
+        }
     }
-}
 }
 ```
 
@@ -2857,8 +2725,9 @@ public class Scope {
 ```java
 public class Scope {
     public static void main(String[] args) {
-    for (int i = 0; i < 10; i++) { // 包含声明
-        // 执行操作
+        for (int i = 0; i < 10; i++) { // 包含声明
+            // 执行操作
+        }
     }
 }
 ```
@@ -2882,7 +2751,7 @@ public class Foo {
         }
     }
 
-    private boolean condition() {/* ...}$}
+    private boolean condition() {/* ...*/}
     // 没有其他方法引用 count
     // 但其他几个方法引用了 MAX_COUNT
 }
@@ -2914,7 +2783,6 @@ public class Foo {
 }
 ```
 
-
 ## 适用性
 
 检测比代码要求的更大的作用范围内声明的局部变量是简单的，并且可以消除误报的可能性。
@@ -2943,11 +2811,11 @@ public class Foo {
 ```java
 @SuppressWarnings("unchecked")
 class Legacy {
-  Set s = new HashSet();
-  public final void doLogic(int a, char c) {
-    s.add(a);
-    s.add(c); // 类型不的操作，被忽略
-  }
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c); // 类型不的操作，被忽略
+    }
 }
 ```
 
@@ -2959,76 +2827,80 @@ class Legacy {
 
 ```java
 class Legacy {
-  @SuppressWarnings("unchecked")
-  Set s = new HashSet();
-  public final void doLogic(int a, char c) {
-    s.add(a);
-    s.add(c);
-  }
-}
-```
-
-## 不合规代码示例 (ArrayList)
-
-在此不合规代码示例中，`@SuppressWarnings` 注解的作用范围涵盖了整个类。
-
-```java
-@SuppressWarnings("unchecked")
-class Legacy {
-  Set s = new HashSet();
-  public final void doLogic(int a, char c) {
-    s.add(a);
-    s.add(c);
-  }
-}
-```
-
-这段代码是危险的，因为类中所有的未检查警告都被抑制了。这种疏忽会导致运行时出现 `ClassCastException`。
-
-## 合规解决方案 (ArrayList)
-
-在此合规解决方案中，`count` 字段被声明为 `counter()` 方法的局部变量。
-
-```java
-public class Foo {
-    private static final int MAX_COUNT = 10;
-
-    public void counter() {
-        count = 0;
-        while (condition()) {
-            /* ... */
-            if (count++ > MAX_COUNT) {
-                return;
-            }
-        }
+    @SuppressWarnings("unchecked")
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c);
     }
-
-    private boolean condition() {/** ...*/}
-    // 没有其他方法引用 count
-    // 但其他几个方法引用 MAX_COUNT
 }
 ```
 
-## 不合规代码示例 (ArrayList)
+## 不合规代码示例
 
 在此不合规代码示例中，`@SuppressWarnings` 注解的作用范围涵盖了整个类。
 
 ```java
 @SuppressWarnings("unchecked")
 class Legacy {
-  Set s = new HashSet();
-  public final void doLogic(int a, char c) {
-    s.add(a);
-    s.add(c); // 类型不的操作，被忽略
-  }
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c);
+    }
 }
 ```
 
 这段代码是危险的，因为类中所有的未检查警告都被抑制了。这种疏忽会导致运行时出现 `ClassCastException`。
 
-## 合规解决方案 (ArrayList)
+## 合规解决方案
 
 将 `@SuppressWarnings` 注解的作用范围限制到产生警告的最近代码。在这种情况下，它可以在 `Set` 的声明中使用：
+
+```java
+class Legacy {
+    @SuppressWarnings("unchecked")
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c);
+    }
+}
+```
+
+## 不合规代码示例
+
+在此不合规代码示例中，`@SuppressWarnings` 注解的作用范围涵盖了整个类。
+
+```java
+@SuppressWarnings("unchecked")
+class Legacy {
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c); // 类型不的操作，被忽略
+    }
+}
+```
+
+这段代码是危险的，因为类中所有的未检查警告都被抑制了。这种疏忽会导致运行时出现 `ClassCastException`。
+
+## 合规解决方案
+
+将 `@SuppressWarnings` 注解的作用范围限制到产生警告的最近代码。在这种情况下，它可以在 `Set` 的声明中使用：
+
+```java
+class Legacy {
+    @SuppressWarnings("unchecked")
+    Set s = new HashSet();
+    public final void doLogic(int a, char c) {
+        s.add(a);
+        s.add(c);
+    }
+}
+```
+
+
 
 ```java
 class Legacy {
@@ -3089,32 +2961,28 @@ class Legacy {
 
 ## 24. 最小化类和成员的可访问性
 
-类和成员必须被赋予最小的权限，以便恶意类有最少的机会破坏安全性。访问通过访问修饰符（public、protected 或 private）或缺失访问修饰符（默认访问来指示。
+类和成员必须被赋予最小的权限，以便恶意类有最少的机会破坏安全性。访问通过访问修饰符（`public`、`protected` 或 `private`）或缺失访问修饰符（默认访问）来指示。
 
 ## 表 2–1. 访问控制
 
 | 访问修饰符 | 类 | 包 | 子类 | 世界 |
 | --- | --- | --- | --- | --- |
-| private | x | | | |
+| `private` | x | | | |
 | 无 | x | x | x | |
-| protected | x | x | x | |
-| public | x | x | x | x |
+| `protected` | x | x | x | |
+| `public` | x | x | x | x |
 
-访问规则的简化视图。x 表示在该在该域内允许该特定访问。例如，类列中的 x 表示该成员对位于相同类内的代码是可访问的。同样，包列表示该成员可以从相同包中的任何类（或子类）访问，前提是该类（或子类）是由加载该成员类的类加载器加载的。相同的类加载器条件仅适用于包私有访问。
+访问规则的简化视图。x 表示在该域内允许该特定访问。例如，类列中的 x 表示该成员对位于相同类内的代码是可访问的。同样，包列表示该成员可以从相同包中的任何类（或子类）访问，前提是该类（或子类）是由加载该成员类的类加载器加载的。相同的类加载器条件仅适用于包私有访问。
 
 *相同包内的子类也可以访问缺少访问修饰符（默认或包私有）的成员。不同包的子类无法访问此类包私有成员。
 
-执行所有必要安全检查并清理所有输入的方法必须通过接口暴露。尽可能，类应避免通过接口暴露包含（或调用）敏感代码的方法；接口仅允许可见的方法，而此类方法是该类的公共应用程序接口（API）的一部分。（注意，这与 Joshua Bloch 建议为 API 接口 [Bloch 2008, Item 16] 相相反。）一个例外是实现暴露公共不可变对象的不可修改接口。（参见《CERT® Oracle® Secure Coding Standard for Java™ [Long 2012, "OBJ04-J"。为可变类提供允许将实例传递给不受信代码的功能。）注意，如果非 final 类的可见性是默认的，如果它包含公共方法，则可能受到误用。
+执行所有必要安全检查并清理所有输入的方法必须通过接口暴露。尽可能，类应避免通过接口暴露包含（或调用）敏感代码的方法；接口仅允许可见的方法，而此类方法是该类的公共应用程序接口（API）的一部分。（注意，这与 Joshua Bloch 建议为 API 接口 [Bloch 2008, Item 16] 相相反。）一个例外是实现暴露公共不可变对象的不可修改接口。（参见《CERT® Oracle® Secure Coding Standard for Java™》 [Long 2012, "OBJ04-J"。为可变类提供允许将实例传递给不受信代码的功能。）注意，如果非 `final` 类的可见性是默认的，如果它包含公共方法，则可能受到误用。
 
-protected 权限对于非嵌套类无效，但嵌套类必须声明为 protected。非 final 公共类的字段很少声明为 protected
+`protected` 权限对于非嵌套类无效，但嵌套类必须声明为 `protected`。非 `final` 公共类的字段很少声明为 `protected`。
 
+## 防御性编程
 
-
-
-
-# 防御性编程
-
-protected; 另一个包中的不可信代码可以创建该类的子类并访问其成员。此外，`protected` 成员是类 API 的一部分，因此需要持续支持。当遵循此规则时，将字段声明为 `protected` 是没有必要的。“OBJ01-J 将数据成员声明为私并提供可访问的封装方法” [Long 2012] 建议将字段声明为 `private`。
+`protected`; 另一个包中的不可信代码可以创建该类的子类并访问其成员。此外，`protected` 成员是类 API 的一部分，因此需要持续支持。当遵循此规则时，将字段声明为 `protected` 是没有必要的。“OBJ01-J 将数据成员声明为私并提供可访问的封装方法” [Long 2012] 建议将字段声明为 `private`。
 
 如果类、接口、方法或字段是发布 API 的一部分（例如 Web 服务端点），则可以声明为 `public`。其他类和成员应声明为包私有（package-private）或私有（private）。例如，鼓励非安全关键类提供 `public static` 工厂方法，通过私有构造函数来实现实例控制。
 
@@ -3122,7 +2990,7 @@ protected; 另一个包中的不可信代码可以创建该类的子类并访问
 
 此不合规代码示例定义了一个系统内部的、不属于任何公共 API 的类。然而，该类被声明为 `public`。
 
-```
+```java
 public final class Point {
     private final int x;
     private final int y;
@@ -3146,7 +3014,7 @@ public final class Point {
 
 ## 24. 最小化类及其成员的访问访问性
 
-```
+```java
 final class Point {
     private final int x;
     private final int y;
@@ -3170,7 +3038,7 @@ final class Point {
 
 此合规解决方案将 `Point` 类及其 `getPoint()` 方法都声明为包私有，这允许 `Point` 类为非 `final`，并允许 `getPoint()` 被存在于相同包中由公共类加载器加载的类调用。
 
-```
+```java
 class Point {
     private final int x;
     private final int y;
@@ -3190,7 +3058,7 @@ class Point {
 
 此不合规代码示例再次定义了一个系统内部的、不属于任何公共 API 的类。然而，该类被声明为 `public`。
 
-```
+```java
 public final class Point {
   private static final int x = 1;
   private static final int y = 2;
@@ -3209,7 +3077,7 @@ public final class Point {
 
 此合规解决方案将类的访问权限降低到包私有。
 
-```
+```java
 class Point {
   private static final int x = 1;
   private static final int y = 2;
@@ -3253,13 +3121,15 @@ Java 语言注解机制用于记录设计意图。源码注解是一种与程序
 
 第二组更大的并发注解可用并由 SureLogic 支持。这些注解根据 Apache Software License, Version 2.0 发布，可以在 www.surelogic.com 下载。这些注解可以使用 SureLogic 工具进行验证，即使在工具不可用时，对于记录代码仍然有用。它们包含了 JCIP 注解，因为它们受注解支持、下载并支持使用 JCIP JAR 文件。
 
-将上述一个或两个 JAR 文件添加到代码的构建路径中。 # 记录预期的线程安全
+将上述一个或两个 JAR 文件添加到代码的构建路径中。
 
-JCIP 提供了三种类级注解来描述程序员在线程安全方面的设计意图。`@@ThreadSafe` 注解应用于类，以指示它是线程安全的。这意味着无论运行时或调用者通过外部同步或协调如何交织访问，任何访问序列（对字段的读写、对公共方法的调用）都不会让对象处于不一致状态。
+# 记录预期的线程安全
+
+JCIP 提供了三种类级注解来描述程序员在线程安全方面的设计意图。`@ThreadSafe` 注解应用于类，以指示它是线程安全的。这意味着无论运行时或调用者通过外部同步或协调如何交织访问，任何访问序列（对字段的读写、对公共方法的调用）都不会让对象处于不一致状态。
 
 例如，以下 `Aircraft` 类作为其锁定策略文档的一部分，指定了它是线程安全的。该类使用重入锁保护 `x` 和 `y` 字段。
 
-```
+```java
 @ThreadSafe
 @Region("private AircraftState")
 @RegionLock("StateLock protects AircraftState")
@@ -3270,10 +3140,7 @@ public final class Aircraft {
     private long x, y;
     // ...
 }
-```
 
-
-```java
 public void setPosition(long x, long y) {
     stateLock.lock();
     try {
@@ -3286,10 +3153,13 @@ public void setPosition(long x, long y) {
 }
 ```
 
-@Region 和 @RegionLock 注解记录了作为线程安全承诺基础的锁定策略。
-即使已经使用一个或多个 @RegionLock 或 @GuardedBy 注解来记录类的锁定策略，@ThreadSafe 注解也为代码审查人员提供了一个直观的视图，使其能够获知该类是线程安全的。
-@Immutable 注解应用于不可变类。不可变对象本质上是线程安全的；一旦它们完成完全构造，就可以通过引用发布并在多个线程之间安全地共享。
-接下来的示例展示了一个不可变的 Point 类：
+`@Region` 和 `@RegionLock` 注解记录了作为线程安全承诺基础的锁定策略。
+
+即使已经使用一个或多个 `@RegionLock` 或 `@GuardedBy` 注解来记录类的锁定策略，`@ThreadSafe` 注解也为代码审查人员提供了一个直观的视图，使其能够获知该类是线程安全的。
+
+`@Immutable` 注解应用于不可变类。不可变对象本质上是线程安全的；一旦它们完成完全构造，就可以通过引用发布并在多个线程之间安全地共享。
+
+接下来的示例展示了一个不可变的 `Point` 类：
 
 ```java
 @Immutable
@@ -3344,18 +3214,20 @@ public static void rememberPoint(MovablePoint value) {
 }
 ```
 
-xPos 和 yPos 字段上的 @GuardedBy 注解表示对这些字段的访问受通过持有 this 锁的保护。move() 方法也对 this 同同步，该方法会修改这些字段。memo 列表上的 @GuardedBy 注解表示对 ArrayList 对象的锁保护其内容。rememberPoint() 方法也对 memo 列表进行同步。
+`xPos` 和 `yPos` 字段上的 `@GuardedBy` 注解表示对这些字段的访问受通过持有 `this` 锁的保护。`move()` 方法也对 `this` 同步，该方法会修改这些字段。`memo` 列表上的 `@GuardedBy` 注解表示对 `ArrayList` 对象的锁保护其内容。`rememberPoint()` 方法也对 `memo` 列表进行同步。
 
-@GuardedBy 注解的一个问题是它无法指示类中字段之间是否存在关系。这种局限性可以通过使用 @RegionLock 注解来克服，该注解为应用该注解的类声明了一个新的区域锁。此声明创建了一个新的命名的锁，将特定的锁与类的某个区域关联起来。只有在持有该锁时才能访问该区域。例如，SimpleLock 锁定策略表明，同步实例保护了其所有的状态：
+`@GuardedBy` 注解的一个问题是它无法指示类中字段之间是否存在关系。这种局限性可以通过使用 `@RegionLock` 注解来克服，该注解为应用该注解的类声明了一个新的区域锁。此声明创建了一个新的命名的锁，将特定的锁与类的某个区域关联起来。只有在持有该锁时才能访问该区域。例如，`SimpleLock` 锁定策略表明，同步实例保护了其所有的状态：
 
 ```java
 @RegionLock("SimpleLock is this protects Instance")
 class Simple { ... }
 ```
 
-与 @GuardedBy 不同，@RegionLock 注解允许程序员为锁定策略提供一个显式的且希望是有意义的名称。
+与 `@GuardedBy` 不同，`@RegionLock` 注解允许程序员为锁定策略提供一个显式的且希望是有意义的名称。
 
-除了命名锁定策略外，@Region 注解还允许为被保护的状态区域命名。该名称使得人们很清楚状态和锁定策略是属于所属的，如下例所示：
+除了命名锁定策略外，`@Region` 注解还允许为被保护的状态区域命名。该名称使得人们很清楚状态和锁定策略是属于所属的，如下例所示：
+
+
 
 ```java
 @Region("private AircraftPosition")
@@ -3382,15 +3254,15 @@ public final class Aircraft {
 }
 ```
 
-在此示例中，使用了一个名为 StateLock 的锁定策略来指示锁定 stateLock 保护了命名的 AircraftPosition 区域，该区域包含了表示飞机位置的可变状态。
+在此示例中，使用了一个名为 `StateLock` 的锁定策略来指示锁定 `stateLock` 保护了命名的 `AircraftPosition` 区域，该区域包含了表示飞机位置的可变状态。
 
 # 可变对象的构造
 
-通常情况下，对象的构造被视为锁定策略的例外，因为当线程使用 new 运算符创建其实例时，该对象是线程私有的。创建后，该对象可以安全地发布到其他线程。然而，在创建实例的线程允许共享之前，该对象是不会共享的。CERT® Oracle® Secure Coding Standard for Java™ [Long 2012] 中讨论的“TSM01-J. 不要让此引用在对象构造期间逃逸”的安全发布方法可以使用 @Unique("return") 注解简洁地表达。
+通常情况下，对象的构造被视为锁定策略的例外，因为当线程使用 `new` 运算符创建其实例时，该对象是线程私有的。创建后，该对象可以安全地发布到其他线程。然而，在创建实例的线程允许共享之前，该对象是不会共享的。CERT® Oracle® Secure Coding Standard for Java™ [Long 2012] 中讨论的“TSM01-J. 不要让此引用在对象构造期间逃逸”的安全发布方法可以使用 `@Unique("return")` 注解简洁地表达。
 
 # 25. 文档化线程安全性并在适用处使用注解
 
-例如，在下面的代码中，@Unique("return") 注解记录了从构造函数返回的对象是一个唯一引用：
+例如，在下面的代码中，`@Unique("return")` 注解记录了从构造函数返回的对象是一个唯一引用：
 
 ```java
 @RegionLock("Lock is this protects Instance")
@@ -3433,23 +3305,19 @@ Dean Sutherland 和 William Scherlis 提议了可以记录线程隔离策略的�
 ## 参考文献
 
 +   [Bloch 2008] Item 70, "Document Thread Safety"
-[Goetz 2006] Java Concurrency in Practice
-[Long 2012] TSM01-J. 不要让此引用在对象构造期间逃逸
-[Sutherland 2010] "Composable Thread Coloring"
++   [Goetz 2006] Java Concurrency in Practice
++   [Long 2012] TSM01-J. 不要让此引用在对象构造期间逃逸
++   [Sutherland 2010] "Composable Thread Coloring"
 
 # 26. 始终对方法的结果反馈
 
 方法的设计应该返回一个允许开发者了解对象当前状态或操作结果的值。这一建议与 Java 安全标准 [Long 2012] 中的“EXP00-J. 不要忽略方法返回值”保持一致。返回的值应该代表最后的已知状态，并在选择时考虑到开发者的感知和模型。
 
-反馈也可以通过抛出标准异常或派自 Exception 类的自定义异常来实现。通过这种方法，开发者仍然获得有关方法的精确信息并采取必要的行动。为了这样做，异常应该在适当的抽象级别对异常情况提供详细说明。
+反馈也可以通过抛出标准异常或派自 `Exception` 类的自定义异常来实现。通过这种方法，开发者仍然获得有关方法的精确信息并采取必要的行动。为了这样做，异常应该在适当的抽象级别对异常情况提供详细说明。
 
 API 应该结合使用这些方法，以帮助客户端区分正确和错误的结果，并鼓励仔细处理错误结果。在存在一个公认且不会被误认为是方法有效返回值的情况下，应返回该错误值；而在其他情况下应抛出异常。方法不得返回一个既包含有效数据又包含错误代码的值；更多信息请参见指南 52，“避免带内错误指示器”。
 
 或者，对象可以提供一个状态测试方法 [Bloch 2008] 来检查对象是否处于一致状态。这种方法仅在对象状态无法被外部线程修改的情况下有效。这防止了
-
-
-
-
 
 ## 26. 始终对方法的返回值提供反馈
 
@@ -3496,7 +3364,7 @@ public boolean updateNode(int id, int newValue) {
 
 ## 合规解决方案（异常）
 
-此合规解决方案在找到节点时返回修改后的 Node，在列表中不存在节点时抛出 `NodeNotFoundException`。
+此合规解决方案在找到节点时返回修改后的 `Node`，在列表中不存在节点时抛出 `NodeNotFoundException`。
 
 ```java
 public Node updateNode(int id, int newValue)
@@ -3517,7 +3385,7 @@ public Node updateNode(int id, int newValue)
 
 ### 合规解决方案（返回空值）
 
-此合规解决方案返回更新后的 Node，以便开发者在操作失败时只需检查返回值是否为 `null`。
+此合规解决方案返回更新后的 `Node`，以便开发者在操作失败时只需检查返回值是否为 `null`。
 
 ```java
 public Node updateNode(int id, int newValue) {
@@ -3549,7 +3417,7 @@ public Node updateNode(int id, int newValue) {
 
 许多与文件相关的漏洞源于程序访问了非预期的文件对象。这通常是因为文件名与底层文件对象的绑定是松散的。文件名没有提供关于文件对象本身性质的信息。此外，文件名与文件对象的绑定在每次在操作中使用该文件时都会重新评估。这种重新评估可能会在应用程序中引入“检查时间与使用时间”（TOCTOU）竞态条件。`java.io.File` 类型对象和 `java.nio.file.Path` 类型对象只有在访问文件时才由操作系统绑定到底层文件对象。
 
-`java.io.File` 构造函数以及 `java.io.File` 的 `renameTo()` 和 `delete()` 方法完全依赖文件名进行文件标识。对于用于创建 Path 对象的 `java.nio.file.Path.get()` 方法以及 `java.nio.file.Files` 的 `move()` 和 `delete()` 方法也是如此。请谨慎使用所有这些方法。
+`java.io.File` 构造函数以及 `java.io.File` 的 `renameTo()` 和 `delete()` 方法完全依赖文件名进行文件标识。对于用于创建 `Path` 对象的 `java.nio.file.Path.get()` 方法以及 `java.nio.file.Files` 的 `move()` 和 `delete()` 方法也是如此。请谨慎使用所有这些方法。
 
 幸运的是，除了文件名还可以还可以其他属性标识文件——例如，比较文件的创建时间或修改时间。关于已创建并关闭的文件的信息会被存储起来，并在必须重新打开文件时用于验证文件的身份。比较文件的多个属性增加了重新打开的文件确实是之前打开的同一个文件的概率。
 
@@ -3590,7 +3458,7 @@ public void processFile(String filename) {
 }
 ```
 
-由于文件名与文件对象的绑定在创建 BufferedReader 时会重新评估，此代码无法保证读取的文件是之前打开的同一个。攻击者可能在第一次调用 `close()` 和随后创建 BufferedReader 之间替换了原始文件。
+由于文件名与文件对象的绑定在创建 `BufferedReader` 时会重新评估，此代码无法保证读取的文件是之前打开的同一个。攻击者可能在第一次调用 `close()` 和随后创建 `BufferedReader` 之间替换了原始文件。
 
 ### 不合规代码示例 (Files.isSameFile())
 
@@ -3630,14 +3498,15 @@ public void processFile(String filename) {
 
 遗憾的是，Java API 并没有保证 `isSameFile()` 实际上检查了文件是否为同一个文件。Java 7 的 `isSameFile()` API [API 2013] 提到：
 
-如果两个 Path 对象相等，则该方法返回 true，而不检查文件是否存在。
-
+> 如果两个 Path 对象相等，则该方法返回 true，而不检查文件是否存在。
 
 也就是说，`isSameFile()` 可能仅仅检查两个文件的路径是否相同，而无法检测在两次打开操作之间，该路径下的文件是否被另一个文件替换。
 
 ## 合规解决方案（多属性）
 
 该合规解决方案通过检查文件的创建时间和最后修改时间，来增加读取的文件与写入的文件是同一个文件的概率：
+
+
 
 ```java
 public void processFile(String filename) throws IOException{
@@ -3784,9 +3653,6 @@ public void doSomethingWithFile(String filename) {
 public enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
 ```
 
-
-
-
 ## 参考文献
 
 [API 2013] Class Enum<E extends Enum<E>>
@@ -3802,9 +3668,13 @@ public enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
 Java 规范 $5.6, "Numeric Promotions" [JLS 2013] 对数值提升的描述如下：
 
 - 1. 如果操作数之任为引用类型，则执行拆箱转换（unboxing conversion）。
+
 - 2. 如果其中一个操作数的类型为 double，则另一个被转换为 double。
+
 - 3. 否则，如果其中一个操作数的类型为 float，则另一个被转换为 float。
+
 - 4. 否则，如果其中一个操作数的类型为 long，则另一个被转换为 long。
+
 - 5. 否则，两个操作数都转换为 int 类型。
 
 由整数提升引起的拓宽转换（Widening conversions）会保持数字的整体幅度。然而，将操作数从 int 转换为 float 或从 long 转换为 double 的提升可能会导致精度丢失。（参见《CERT® Oracle Java 安全编码标准 [Long 2012], "NUM13-j"。更多信息请参见在将原始整数转换为浮点数时避免精度丢失。）
@@ -3868,6 +3738,7 @@ System.out.println(big * one);
 ```
 
 此解决方案产生了预期的输出 1.999999999E9，这是当 int 被赋值（隐式强制转换）给 double 时得到的值。
+
 有关混合整数和浮点运算的更多信息，请参见准则 60，“将整数转换为浮点数以进行浮点运算”。
 
 ## 不合规代码示例（左移）
@@ -3936,10 +3807,6 @@ int i = -1;
 i >>>= 1;
 ```
 
-
-
-
-
 ## 30. 启用变长参数参数的编译时类型检查
 
 参数类型。通过为方法参数使用尽可能具体的类型，对变长方法启用强力的编译时类型检查。
@@ -3948,7 +3815,11 @@ i >>>= 1;
 
 此不合规代码示例使用使用 `Object` 作为变长类型的变长方法来对一组数字求和。因此，该方法接受任何对象类型参数的任意混合。此类声明的合法用法非常罕见（但请参见本准则的“适用性”部分）。
 
-```
+
+
+## 不合规代码示例 (Object)
+
+```java
 double sum(Object... args) {
     double result = 0.0;
     for (Object arg : args) {
@@ -3976,7 +3847,7 @@ double sum(Object... args) {
 
 此合规解决方案定义了相同的方法，但使用了 `Number` 类型。这个抽象类足够通用，可以包含所有数值类型，同时足够具体，可以排除非数值类型。
 
-```
+```java
 double sum(Number... args) {
     // ...
 }
@@ -3986,7 +3857,7 @@ double sum(Number... args) {
 
 此不合规代码示例使用泛型类型参数声明了相同的变长方法。它接受任意数量的相同对象类型的参数；然而，它可以是任何对象类型。再次，此类声明的合法用法非常罕见。
 
-```
+```java
 <T> double sum(T... args) {
   // ...
 }
@@ -3996,7 +3867,7 @@ double sum(Number... args) {
 
 此合规解决方案使用 `Number` 类型定义了相同的泛型方法。
 
-```
+```java
 <T extends Number> double sum(T... args) {
   // ...
 }
@@ -4006,7 +3877,7 @@ double sum(Number... args) {
 
 此外，请注意自动装箱（autoboxing）防止了对原始类型及其相应包装类的编译时检查。例如，此合规解决方案会产生以下警告，但运行符合预期：
 
-```
+```text
 Java.java:10: warning: [unchecked] Possible heap pollution from parameterized vararg type T
 <T extends Number> double sum(T... args)
 ```
@@ -4031,9 +3902,9 @@ Java.java:10: warning: [unchecked] Possible heap pollution from parameterized va
 
 ## 不合规代码示例
 
-在此不合规代码示例中，`Foo.java` 中的类 `Foo` 了一个表示软件版本的字段：
+在此不合规代码示例中，`Foo.java` 中的类 `Foo` 定义了一个表示软件版本的字段：
 
-```
+```java
 class Foo {
     public static final int VERSION = 1;
     // ...
@@ -4042,7 +3913,7 @@ class Foo {
 
 该字段随后被来自独立编译单元（`Bar.java`）的类 `Bar` 访问：
 
-```
+```java
 class Bar {
     public static void main(String[] args) {
         System.out.println("You are using version " + Foo.VERSION);
@@ -4050,15 +3921,19 @@ class Bar {
 }
 ```
 
-编译并运行时，程序正确打印
+编译并运行时，程序正确打印：
 
+```
 You are using version 1
+```
 
-但如果开发者通过修改 `Foo.java` 将 `VERSION` 的值改为 2 并重新编译 `Foo.java`，但未重新编译 `Bar.java`，程序将错误打印
+但如果开发者通过修改 `Foo.java` 将 `VERSION` 的值改为 2 并重新编译 `Foo.java`，但未重新编译 `Bar.java`，程序将错误打印：
 
+```
 You are using version 1
+```
 
-虽然重新编译 `Bar.java` 可以解决这个问题，但有更好的解决方案
+虽然重新编译 `Bar.java` 可以解决这个问题，但有更好的解决方案。
 
 ## 合规解决方案
 
@@ -4066,20 +3941,19 @@ You are using version 1
 
 在此合规解决方案中，`Foo.java` 中的版本字段被声明为 `private static`，并通过 `getVersion()` 方法访问：
 
-```
+```java
 class Foo {
     private static int version = 1;
     public static int getVersion() {
         return version;
     }
-
     //...
 }
 ```
 
 `Bar.java` 中的 `Bar` 类被修改为调用 `getVersion()` 访问方法来从 `Foo.java` 获取版本字段：
 
-```
+```java
 class Bar {
     public static void main(String[] args) {
         System.out.println(
@@ -4095,39 +3969,32 @@ class Bar {
 
 将软件生命周期内变化的值声明为 `final` 可能会导致意外结果。
 
-
-
-
-
 ## 参考文献
 
 - [JLS 2013] §4.12.4, "final Variables"
-§8.3.1.1, "static Fields"
-§9.3, "Field (Constant) Declarations"
-§13.4.9, "final Fields and Constants"
+- [JLS 2013] §8.3.1.1, "static Fields"
+- [JLS 2013] §9.3, "Field (Constant) Declarations"
+- [JLS 2013] §13.4.9, "final Fields and Constants"
 
 ## 32. 避免包之间的循环依赖
 
 《Java 风格元素》[Allen 2000] 和《JPL Java 规范》[Havelund 2009] 都要求包的依赖结构永远不能包含循环；也就是说，它必须能够表示为有向无环图 (DAG)。消除包之间的循环依赖有多个优点。
 
-- 测试与可维护性。循环依赖会放大源代码更改或补丁的影响。减少更改的影响可以简化测试并提高可维护性。由于循环依赖导致无法进行充分测试是安全漏洞的常见根源。
+- **测试与可维护性**。循环依赖会放大源代码更改或补丁的影响。减少更改的影响可以简化测试并提高可维护性。由于循环依赖导致无法进行充分测试是安全漏洞的常见根源。
+- **可重用性**。包之间的循环依赖要求这些包必须同步发布和升级。这一要求降低了可重用性。
+- **发布与构建**。避免循环有助于引导开发向有利于促进模块化的环境发展。
+- **部署**。避免包之间的循环依赖可以降低包与包之间的耦合。耦合降低减少了如 `ClassNotFoundError` 等运行时错误的频率，反过来简化了部署。
 
-- 可重用性。包之间的循环依赖要求这些包必须同步发布和升级。这一要求降低了可重用性。
+## 不合规代码示例
 
-- 发布与构建。避免循环有助于引导开发向有利于促进模块化的环境发展。
-
-- 部署。避免包之间的循环依赖可以降低包与包之间的耦合。耦合降低减少了如 `ClassNotFoundError` 等运行时错误的频率，反过来简化了部署。
-
-# 不规范代码示例
-
-此不规范代码示例包含了名为 `account` 和 `user` 的包，分别由 `AccountHolder`、`User` 和 `UserDetails` 类组成。`UserDetails` 类继承自 `AccountHolder`，因为用户是一种账户持有者。`AccountHolder` 类依赖于 `user` 类中定义的非静态工具方法。同样`UserDetails` 通过扩展 `AccountHolder` 来依赖它。
+此不合规代码示例包含了名为 `account` 和 `user` 的包，分别由 `AccountHolder`、`User` 和 `UserDetails` 类组成。`UserDetails` 类继承自 `AccountHolder`，因为用户是一种账户持有者。`AccountHolder` 类依赖于 `user` 类中定义的非静态工具方法。同样 `UserDetails` 通过扩展 `AccountHolder` 来依赖它。
 
 ```java
 package account;
 import user.User;
 public class AccountHolder {
   private User user;
-  public void setUser(User newUser) {user = newUser; }
+  public void setUser(User newUser) { user = newUser; }
 
   synchronized void depositFunds(String username, double amount) {
     // 使用 User 的工具方法检查
@@ -4142,6 +4009,7 @@ public class AccountHolder {
     return 1.0;
   }
 }
+
 package user;
 import account.AccountHolder;
 public class UserDetails extends AccountHolder {
@@ -4159,11 +4027,11 @@ public class User {
 }
 ```
 
-# 规范解决方案
+## 合规解决方案
 
 通过在第三个包 `bank` 中引入名为 `BankApplication` 的接口，可以减轻两个包中类之间的紧耦合。通过确保 `AccountHolder` 不依赖于 `User`，而是通过导入 `bank` 包（而不是实现接口）来依赖接口，从而消除了包循环依赖。
 
-在此规范解决方案中，通过向 `depositFunds()` 方法添加接口类型 `BankApplication` 的参数来实现功能。该解决方案为 `AccountHolder` 提供了一个可以信赖的合同。此外，`UserDetails` 实现了该接口并提供了方法的具体实现，同时继承了 `AccountHolder` 的其他方法。
+在此合规解决方案中，通过向 `depositFunds()` 方法添加接口类型 `BankApplication` 的参数来实现功能。该解决方案为 `AccountHolder` 提供了一个可以信赖的合同。此外，`UserDetails` 实现了该接口并提供了方法的具体实现，同时继承了 `AccountHolder` 的其他方法。
 
 ```java
 package bank;
@@ -4173,6 +4041,7 @@ public interface BankApplication {
     double getUserBalance(String accountNumber);
     boolean exists(String username);
 }
+
 package account;
 import bank.BankApplication; // 从第三个包导入
 class AccountHolder {
@@ -4181,34 +4050,33 @@ class AccountHolder {
         ba = newBA;
     }
     public synchronized void depositFunds(BankApplication ba, String username, double amount) {
-    // 使用 UserDetails 的工具方法
-    // 检查 username 是否存在
-    if (ba.exists(username)) {
-        // 存款金额
-    }
+        // 使用 UserDetails 的工具方法
+        // 检查 username 是否存在
+        if (ba.exists(username)) {
+            // 存款金额
+        }
     }
     public double getBalance(String accountNumber) {
-    // 返回账户余额
-    return 1.0;
+        // 返回账户余额
+        return 1.0;
     }
 }
+
 package user;
 import account.AccountHolder; // 单向依赖
 import bank.BankApplication; // 从第三个包导入
 public class UserDetails extends AccountHolder
     implements BankApplication {
     public synchronized double getBalance(String accountNumber) {
-    // 使用 AccountHolder 的方法获取账户余额
-    return getBalance(accountNumber);
+        // 使用 AccountHolder 的方法获取账户余额
+        return getBalance(accountNumber);
     }
     public boolean exists(String username) {
-    // 检查用户是否存在
-    return true;
+        // 检查用户是否存在
+        return true;
     }
 }
 ```
-
-# 33. 优先使用用户定义的异常而非通用的异常类型
 
 `BankApplication` 接口似乎包含一些多余的方法，如 `depositFunds()` 和 `getBalance()`。存在这些方法是为了让子类保留在内部多态地调用子类方法的能力（例如，在 `UserDetails` 中重写方法并调用 `ba.getBalance()`）。该解决方案的后果之一是接口中声明的方法在定义它们的类中必须是公有的。
 
@@ -4222,13 +4090,13 @@ public class UserDetails extends AccountHolder
 - [Havelund 2009] JPL 编码规范，版本 1.1
 - [Knoernschild 2002] 第1章，“面向对象原则与模式”
 
+## 33. 优先使用用户定义的异常而非通用的异常类型
+
 由于异常是通过其类型被捕获的，因此为特定目的定义异常，比将通用异常类型用于多个目的更好。抛出通用异常类型会使代码难以理解和维护，并破坏了 Java 异常处理机制的许多优势。
 
-# 不规范代码示例
+## 不合规代码示例
 
-此不规范代码示例试图通过查看异常消息来区分不同的异常行为：
-
-如果 `something()` 抛出一个类型为 `Throwable` 的子类的异常或错误，`switch` 语句允许选择特定的用例进行执行。例如
+此不合规代码示例试图通过查看异常消息来区分不同的异常行为：
 
 ```java
 try {
@@ -4250,32 +4118,28 @@ try {
 }
 ```
 
-例如，如果异常消息是“file found”，则异常处理代码会采取适当的操作。然而，假设执行了以下代码：
+例如，如果异常消息是“file not found”，则异常处理代码会采取适当的操作。然而，假设执行了以下代码：
 
 ```java
 throw new Exception("cannot find file");
 ```
 
-此不规范代码属于《Java CERT® 安全编码标准》[Long 2012] 中的 ERR08-EX0，“ERR08-J. 不要捕获PointerException 或其任何祖类”，因为它捕获了通用异常并将其重新抛出。
+此不合规代码属于《Java CERT® 安全编码标准》[Long 2012] 中的 ERR08-EX0，“ERR08-J. 不要捕获 NullPointerException 或其任何祖类”，因为它捕获了通用异常并将其重新抛出。
 
-# 规范解决方案
+## 合规解决方案
 
-此规范解决方案使用了特定的异常类型，并在需要时定义了特殊用途类型。
+此合规解决方案使用了特定的异常类型，并在需要时定义了特殊用途类型。
 
 ```java
 public class TimeoutException extends Exception {
-  TimeoutException () {
+  TimeoutException() {
     super();
   }
-  TimeoutException (String msg) {
+  TimeoutException(String msg) {
     super(msg);
   }
 }
-```
 
-## 34. 尝试从系统错误中优雅恢复
-
-```java
 // ...
 try {
     doSomething();
@@ -4288,11 +4152,11 @@ try {
 }
 ```
 
+## 34. 尝试从系统错误中优雅恢复
+
 ## 适用性
 
 异常用于处理异常情况。如果异常未捕获，程序将终止。捕获不当或恢复层级错误的异常通常会导致错误的行为。
-
-
 
 
 
@@ -4350,7 +4214,7 @@ public class StackOverflow {
 
 在内存不足的情况下，某些程序数据可能处于不一致状态。因此，重启进程可能是最佳选择。如果尝试继续运行，减少线程数量可能是有效的变通方法。这种措施在这些情况下有所帮助，因为线程经常会泄漏内存，它们的持续存在会增加程序的内存占用。
 
-可以使用 `Thread.setUncaughtExceptionHandler()` 和 `ThreadGroup.uncaughtExceptionHandler()` 来帮助处理线程中的 `OutOfMemoryError`
+可以使用 `Thread.setUncaughtExceptionHandler()` 和 `ThreadGroup.uncaughtExceptionHandler()` 来帮助处理线程中的 `OutOfMemoryError`。
 
 ## 参考文献
 
@@ -4359,20 +4223,21 @@ public class StackOverflow {
 - [Long 2012]
 
 > §11.2, “异常的编译时检查”
-第 16 章, “拦截控制流: 拦截系统错误”
-ERR0-J. 不要捕获 NullPointerException 或其任何祖类
+>
+> 第 16 章, “拦截控制流: 拦截系统错误”
+>
+> ERR0-J. 不要捕获 NullPointerException 或其任何祖类
 
 ## 35. 在发布接口之前仔细设计
 
 接口用于对类类承诺公开暴露的所有方法。实现类有义务为所有这些方法提供具体实现。接口是大多数公共 API 的必要元素；一旦发布，在不破坏任何实现旧版本的代码的情况下，缺陷很难修复。其后果包括：
 
 - 修复引起的接口更改可能会严重损害实现类的合约。例如，在后续版本中引入的修复可能伴随着对无关接口的修改，而客户端现在必须实现该接口。由于新接口可能会给客户端带来额外的实现负担，客户端可能无法实现该修复。
-
 - 实现者可以为客户端提供接口方法的默认或骨架实现以供扩展；然而，此类代码可能会负面影响子类的行为。相反，当缺少此类默认实现时，子类必须提供空位实现。这种实现会导致一个出现诸如“忽略此代码，无实际作用”之类的注释的环境。此类代码可能从未经过测试。
 
 如果公共 API 中存在安全漏洞（例如，参见《The CERT® Oracle® Coding Standard for Java™ [Long 2012]》中 ThreadGroup 方法的讨论，“THI01-J. 不要调用 ThreadGroup 方法”），它将贯穿整个 API 的生命周期，影响使用它的任何应用程序或库的安全。即使在安全漏洞得到缓解后，应用程序和库在更新之前可能继续使用不安全的版本。
 
-## 第 2 章 = 防御性编程
+## 第 2 章 防御性编程
 
 ## 不合规代码示例
 
@@ -4392,8 +4257,6 @@ public interface User {
 ## 不合规代码示例
 
 另一种想法是使用抽象类来处理不断的演变，但这是以接口提供的灵活性为代价的（类可以实现多个接口，但只能扩展一个类）。一种著名的模式是提供者分发一个实现演变接口的抽象骨架类。该骨架类可以选择性地实现几个方法，并强制扩展类为其他方法提供具体实现。如果接口添加了新方法，骨架类可以提供一个非抽象的默认实现，扩展类可以选择性覆盖它。此不合规代码示例展示了这样一个骨架类。
-
-35. 在发布接口之前仔细设计
 
 ```java
 public interface User {
@@ -4458,17 +4321,13 @@ abstract class Client implements User {
 }
 ```
 
-
-
-
-
 ## 36. 编写对垃圾回收友的代码
 
 对象被异常长时间地保留。例如，某些版本的 GC 可能需要停止所有执行的线程，以跟上触发堆管理活动增加的传入分配请求。在这种情况下，系统吞吐量会迅速下降。
 
 特别是实时系统，容易受到一种更微妙的“慢堆耗尽” DoS 攻击（拒绝服务）的影响，这种攻击通过窃取 CPU 周期来实现。攻击者可以执行内存分配，增加资源（如 CPU、电池电量和内存）的消耗，而不会触发 `OutMemoryError`。编写对垃圾回收友的代码可以限制许多攻击。
 
-## 避免短命不可变对象
+### 避免短命不可变对象
 
 从 JDK 1.2 开始，分代 GC 降低了内存分配成本，在许多情况下，这种成本比 C 或 C++ 更低。分代收集通过将对象分组到不同的代来降低垃圾回收成本。新生代包含短命对象。当新生代被死亡对象填满时，GC 会对新生代进行 Minor GC（Minor GC）[Oracle 2010a]。改进后的垃圾回收算法降低了回收成本，使其与新生代中存活对象的数量成正比，而不是与自上次垃圾回收以来分配的对象数量成比。
 
@@ -4476,17 +4335,17 @@ abstract class Client implements User {
 
 对于分代 GC，使用短命不可变对象通常比使用对象池等长命可变对象更高效。避免对象池可以提高 GC 的效率。对象池带来了额外的成本和风险：它们可能会产生同步问题，并可能需要对释放进行显式管理，可能产生悬挂指针问题。此外，为对象池预留正确的内存量可能是困难的，特别是对于关键任务代码。当对象分配特别昂贵时（例如，在跨数据库执行多次连接时），使用长命可变对象仍然是。同样，当对象代表稀缺资源（如线程池和数据库连接）时，对象池是一个合适的选择。
 
-## 避免大对象
+### 避免大对象
 
 大对象的分配是昂贵的，部分原因是初始化它们的成本与其大小成正比。此外，频繁分配不同大小的大对象会导致碎片问题或压缩收集操作。
 
-## 不要显式调用垃圾回收器
+### 不要显式调用垃圾回收器
 
 可以通过调用 `System.gc()` 方法显式地调用 GC。尽管文档说它“运行垃圾回收器”，但无法保证 GC 实际上会在何时或是否会实际运行。事实上，该调用仅仅是建议 GC 随后执行；JVM 可以忽略此建议。
 
 不负责任地使用此功能可能会在不恰当的时刻严重降低系统性能，而不是等待在可以进行垃圾回收且不会对程序执行产生重大中断的成熟期。
 
-在 Java HotSpot VM 中（自 JDK 1.2 起的默认设置）中，`system.gc()` 会强制执行显式垃圾回收。此类调用可能深埋在库中，可能难以追踪。若要在这些情况下忽略所有此类调用，请使用标记 `-XX:+DisableExplicitGC`。为了在执行全量 GC 时避免长时间停顿，可以通过指定标记 `-XX:ExplicitInvokedGCConcurrent` 调用需求较低的并发模式。
+在 Java HotSpot VM 中（自 JDK 1.2 起的默认设置）中，`System.gc()` 会强制执行显式垃圾回收。此类调用可能深埋在库中，可能难以追踪。若要在这些情况下忽略所有此类调用，请使用标记 `-XX:+DisableExplicitGC`。为了在执行全量 GC 时避免长时间停顿，可以通过指定标记 `-XX:ExplicitInvokedGCConcurrent` 调用需求较低的并发模式。
 
 ## 适用性
 
@@ -4505,9 +4364,7 @@ abstract class Client implements User {
 - OBJ6-J. Defensively copy mutable inputs and mutable internal components
 - [Oracle 2010a] Java SE 6 HotSpot™ Virtual Machine Garbage Collection Tuning
 
-# 第 3 章
-
-# 可靠性
+# 第 3 章 可靠性
 
 ISO/IEC/IEEE 24765:2010《系统和软件工程—术语》将可靠性定义为系统或组件在规定的条件下在指定的时间内执行其所需功能的能力 [ISO/IEC/IEEE 24765:2010]。ISO/IEC 9126-1:2001《软件工程—产品质量—第1部分：质量模型》对可靠性提供了类似的定义，即软件产品在规定的条件下使用时保持指定性能水平的能力 [ISO/IEC 9126-1:2001]。
 
@@ -4535,8 +4392,6 @@ ISO/IEC/IEEE 24765:2010 定义软件可靠性为软件在指定时间内不会�
 ## 不合规代码示例（字段隐藏）
 
 此不合规代码示例在实例方法的作用域内重用了 `val` 实例字段的名称。
-
-
 
 ```java
 class MyVector {
@@ -4582,6 +4437,8 @@ class MyVector {
 
 在此合规解决方案中，循环计数器 `i` 仅定义在每个 `for` 循环块的作用域内：
 
+
+
 ```java
 class MyVector {
     private void doLogic() {
@@ -4599,11 +4456,11 @@ class MyVector {
 
 - [Bloch 2005] Puzzle 67, "All Strung Out"
 - [Bloch 2008] Item 16, "Prefer Interfaces to Abstract Classes"
-- [Conventions 2009] $6.3, "Placement"
+- [Conventions 2009] §6.3, "Placement"
 - [FindBugs 2008] DLS, "Dead store to local variable that shadows field"
-- [JLS 2013] $6.4.1, "Shadowing"
-- $6.4.2, "Obscuring"
-- $7.5.2, "Type-Import-on-Demand Declarations"
+- [JLS 2013] §6.4.1, "Shadowing"
+- §6.4.2, "Obscuring"
+- §7.5.2, "Type-Import-on-Demand Declarations"
 
 ## 38. 每个声明不要声明超过一个变量
 
@@ -4616,9 +4473,9 @@ class MyVector {
 
 - 局部变量声明语句 [JLS 2013, §14.4]
 - 字段声明 [JLS 2013, §8.3]
-- 字段（常量）声明 [JLS 19.3]
+- 字段（常量）声明 [JLS 2013, §19.3]
 
-## 不合规示例（初始化）
+### 不合规示例（初始化）
 
 此不合规代码示例可能会让程序员或代码审查人员误认为 `i` 和 `j` 都初始化为 1。事实上，只有 `j` 初始化了，而 `i` 仍未初始化：
 
@@ -4626,7 +4483,7 @@ class MyVector {
 int i, j = 1;
 ```
 
-## 合规解决方案（初始化）
+### 合规解决方案（初始化）
 
 在此合规解决方案中，显而可见 `i` 和 `j` 都初始化为 1：
 
@@ -4635,7 +4492,7 @@ int i = 1; // i 的作用...
 int j = 1; // j 的作用...
 ```
 
-## 合规解决方案（初始化）
+### 合规解决方案（初始化）
 
 在此合规解决方案中，显而可见 `i` 和 `j` 都初始化为 1：
 
@@ -4645,7 +4502,7 @@ int i = 1, j = 1;
 
 将每个变量单独声明一行是首选方法。然而，当多个变量作为数组索引等简单的临时变量时，在一行中使用多个变量是可以接受的。
 
-## 不合规示例（不同类型）
+### 不合规示例（不同类型）
 
 在此不合规代码示例中，程序员在同一行声明了多个变量（包括一个数组）。类型 `T` 的所有实例都可以访问 `Object` 类的方法。然而，很容易忘记的是当其中某些方法被重写时，数组需要特殊处理。
 
@@ -4662,7 +4519,7 @@ public class Example<T> {
 }
 ```
 
-当重写如 `toString()` 等 Object 方法时，程序员可能会意外为类型 `T` 提供一个实现，而没有考虑到 `c` 是 `T` 的数组，而不是指向 `T` 类型对象的引用。
+当重写如 `toString()` 等 `Object` 方法时，程序员可能会意外为类型 `T` 提供一个实现，而没有考虑到 `c` 是 `T` 的数组，而不是指向 `T` 类型对象的引用。
 
 ```java
 public String toString() {
@@ -4681,7 +4538,7 @@ public String toString() {
 }
 ```
 
-## 合规解决方案（不同类型）
+### 合规解决方案（不同类型）
 
 此合规解决方案将每个声明放在自己的行上，并使用首选符号：
 
@@ -4692,15 +4549,6 @@ public class Example<T> {
     private T c[]; // c 的作用...
     private T d; // d 的作用...
 }
-```
-
-## 38. 每个声明不要声明超过一个变量
-
-每行声明多个变量会降低可读性并导致困惑。当在一个声明中声明多个变量时，请确保每个变量的类型和值是显而易见的。
-
-```java
-public class Example<T> {
-    private T a, b;
 ```
 
 ## 适用性
@@ -4725,7 +4573,7 @@ Java 支持各种类型的字面量，例如整数（5, 2）、浮点数（2.5, 
 
 通过声明具有意义名称的常量类变量、将其赋值为所需的字面量并在程序中使用常量代替字面量可以避免这些问题。这种方法清楚地指示了每个字面量的含义或意图。此外，如果需要修改常量，更改仅限于声明处；无需搜索代码。
 
-常量应该声明为 `static` 和 `final`。然而，如果常量的值可能会发生变化，则不应声明为 `public static final`（详信息请参见准则 31 “不要对后续可能变化的常量应用 public”）。例如：
+常量应该声明为 `static` 和 `final`。然而，如果常量的值可能会发生变化，则不应声明为 `public static final`（详细信息请参见准则 31 “不要对后续可能变化的常量应用 public”）。例如：
 
 ```java
 private static final int SIZE = 25;
@@ -4733,15 +4581,11 @@ private static final int SIZE = 25;
 
 尽管 `final` 可用于指定不可变常量，但在处理复合对象时有一个例外。详情请参见准则 73 “不要混淆引用的不可变性与所引用对象的不可变性”。
 
-
-
-
-
-## 39. 在程序逻辑中使用有意义的符号常量来表示字面量（literal values）139
+## 39. 在程序逻辑中使用有意义的符号常量来表示字面量
 
 这些方法使用了看似任意的字面量 3.14、4.19 和 6.28 来表示计算这些维度所需的各种缩放因子。阅读此代码的开发或维护人员几乎不知道这些值是如何生成的，也不知道它们代表什么，因此无法理解这段代码的功能。
 
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规示例试图通过显式计算所需的常量来避免这个问题：
 
@@ -4761,9 +4605,9 @@ double greatCircleCircumference(double radius) {
 
 代码使用字面量 3.14 来表示值 π。虽然它消除了一些字面量的歧义，但它增加了代码维护的复杂性。如果程序员决定需要更精确的 π 值，则必须找到并替换代码中所有的 3.14。
 
-## 合规解决方案（常量）
+### 合规解决方案（常量）
 
-在这一合规解决方案，声明了一个常量 PI 并将其初始化为 3.14。此后，每当需要 π 的值时，都在代码中引用它。
+在这一合规解决方案，声明了一个常量 `PI` 并将其初始化为 3.14。此后，每当需要 π 的值时，都在代码中引用它。
 
 ```java
 private static final double PI = 3.14;
@@ -4783,9 +4627,9 @@ double greatCircleCircumference(double radius) {
 
 这种技术减少了冗余并提高了可维护性。如果需要 π 值的更精确近似值，程序员只需重新定义该常量即可。使用字面量 4.0、3.0 和 2 并不违反此准则，原因在本文准则的“适用性”部分已有解释。
 
-## 合规解决方案（预定义常量）
+### 合规解决方案（预定义常量）
 
-在可用预定义常量时请使用它们。java.lang.Math 类定义了一组数值常量，包括 PI 和指数常数 E。
+在可用预定义常量时请使用它们。`java.lang.Math` 类定义了一组数值常量，包括 `PI` 和指数常数 `E`。
 
 ```java
 double area(double radius) {
@@ -4801,9 +4645,9 @@ double greatCircleCircumference(double radius) {
 }
 ```
 
-## 不合规代码示例
+### 不合规代码示例
 
-此不合规示例定义了常量 BUFSIZE，但通过在后续表达式中假设 BUFSIZE 的特定值，违背了将 BUFSIZE 定义为常量的初衷：
+此不合规示例定义了常量 `BUFSIZE`，但通过在后续表达式中假设 `BUFSIZE` 的特定值，违背了将 `BUFSIZE` 定义为常量的初衷：
 
 ```java
 private static final int BUFSIZE = 512;
@@ -4814,10 +4658,11 @@ public void shiftBlock() {
 }
 ```
 
-程序员假设 BUFSIZE 为 512，且右移 9 位（对于正数）等同于除以 512。然而，如果未来 BUFSIZE 改变到 1024，修改将变得困难且容易出错。
-此代码同样不符合 CERT® Oracle® Secure Coding Standard for Java™ [Long 2012]，“NUM01-J. 不要对同一数据执行位运算和算术运算混合混合。”将除法操作替换为右移被认为是过早优化。通常，编译器会更好地判断何时应该执行这种优化。
+程序员假设 `BUFSIZE` 为 512，且右移 9 位（对于正数）等同于除以 512。然而，如果未来 `BUFSIZE` 改变到 1024，修改将变得困难且容易出错。
 
-## 合规解决方案
+此代码同样不符合 CERT® Oracle® Secure Coding Standard for Java™ [Long 2012]，“NUM01-J. 不要对同一数据执行位运算和算术运算混合。”将除法操作替换为右移被认为是过早优化。通常，编译器会更好地判断何时应该执行这种优化。
+
+### 合规解决方案
 
 此合规解决方案在表达式中使用了分配给常量值的标识符：
 
@@ -4833,6 +4678,7 @@ public void shiftBlock(int nbytes) {
 ## 适用性
 
 使用数值字面量会使代码更难以阅读、理解和编辑。
+
 符号常量的使用应限制在能够提高代码可读性和可维护性的情况下。当字面量的意图很明显，或者字面量不太可能改变时，使用符号常量会损害代码的可读性。以下代码示例通过使用许多符号常量模糊了代码的含义。
 
 ```java
@@ -4848,21 +4694,20 @@ double volume(double radius) {
 
 体积计算中的值 4.0 和 3.0 显然是用于计算球体积的缩放因子，且不会改变（与 π 的近似值不同），因此它们可以精确表示。没有理由通过更改它们来增加精度，因为将它们替换为符号常量实际上损害了代码的可读性。
 
-第3章 可靠性
+# 第3章 可靠性
 
 ## 参考文献
 
-[Core Java 2003]
-
-[Long 2012] NUM01-J. 不要对同一数据执行位运算和算术运算
+- [Core Java 2003]
+- [Long 2012] NUM01-J. 不要对同一数据执行位运算和算术运算
 
 ## 40. 在常量中正确地编码关系
 
 当常量之间存在关系时，应对这些关系进行编码。
 
-## 不合规代码示例
+### 不合规代码示例
 
-此不合规示例在列表大小为 0 时返回 null。该类包含一个 getStock() 方法，用于构建列表。
+此不合规示例在列表大小为 0 时返回 `null`。该类包含一个 `getStock()` 方法，用于构建列表。
 
 ```java
 class Inventory {
@@ -4901,11 +4746,11 @@ public class Client {
 }
 ```
 
-当列表大小为 0 时，返回 null 值是假设客户端会进行必要的检查。在代码示例中，客户端缺少任何空值检查，导致运行时出现 NullPointerException。
+当列表大小为 0 时，返回 `null` 值是假设客户端会进行必要的检查。在代码示例中，客户端缺少任何空值检查，导致运行时出现 `NullPointerException`。
 
-## 合规解决方案
+### 合规解决方案
 
-此合规解决方案不再返回 null 值，而是直接返回 List，即使它是空的。
+此合规解决方案不再返回 `null` 值，而是直接返回 `List`，即使它是空的。
 
 ```java
 class Inventory {
@@ -4929,13 +4774,9 @@ public List<String> getStock() {
 }
 ```
 
-
-
-
-
 ## 41. 返回空数组或集合，而不是 null 值
 
-```
+```java
 }
   return stock; // 返回列表（可能长度为零）
 }
@@ -4948,9 +4789,9 @@ public List<String> getStock() {
 }
 ```
 
-客户端可以有效地处理这种情况情况，而不会被运行时异常中断。在返回数组而非集合时，确保客户端避免尝试访问零长度数组的单个元素。这可以防止抛出 `ArrayOutOfBoundsException`。
+客户端可以有效地处理这种情况，而不会被运行时异常中断。在返回数组而非集合时，确保客户端避免尝试访问零长度数组的单个元素。这可以防止抛出 `ArrayOutOfBoundsException`。
 
-## 合规解决方案
+### 合规解决方案
 
 该合规解决方案返回一个显式的空列表，这是一种等效许可技术。
 
@@ -4979,9 +4820,11 @@ public List<String> getStock() {
 
 ## 适用性
 
-当客户端代码未能正确处理 null 返回值时，返回 null 值而非零长度数组或集合可能会导致拒绝服务漏洞。
+当客户端代码未能正确处理 `null` 返回值时，返回 `null` 值而非零长度数组或集合可能会导致拒绝服务漏洞。
 
 自动检测是直接的；但修复问题通常需要程序员的干预。
+
+
 
 ## 参考文献
 
@@ -5004,16 +4847,16 @@ public String processSingleString(String string) {
 }
 public String processStrings(String[] strings) {
   String result = "";
-int i = 0;
-try {
+  int i = 0;
+  try {
     while (true) {
-        result = result.concat(processSingleString(strings[i]));
-        i++;
+      result = result.concat(processSingleString(strings[i]));
+      i++;
     }
-} catch (ArrayIndexOutOfBoundsException e) {
+  } catch (ArrayIndexOutOfBoundsException e) {
     // 忽略，我们完成了
-}
-return result;
+  }
+  return result;
 }
 ```
 
@@ -5042,7 +4885,9 @@ public String processStrings(String[] strings) {
 ## 参考文献
 
 [Bloch 2001] Item 39, “仅对异常情况使用异常”
+
 [JLS 2013] Chapter 11, “异常”
+
 [Long 2012] ERR08-J. 不要捕获 NullPointerException 或其任何父类
 
 ## 43. 使用 try-with-resources 语句安全处理可关闭资源
@@ -5144,12 +4989,6 @@ public void processFile(String inPath, String outputPath) throws IOException {
 
 在处理可关闭资源时未能正确处理所有失败情况可能会导致某些资源未关闭或掩盖了重要异常，可能导致拒绝服务。注意，未使用 `try-with-resources` 语句本身不能被视为安全漏洞，因为可以编写结构正确的嵌套 `try-catch-finally` 块来保护正在使用的资源（见“ERR05-j. Long [2012]”）。尽管如此，未能正确处理此类错误情况是漏洞常见的来源。使用 `try-with-resources` 语句通过保证资源被正确管理且不会遗漏异常来缓解这一点。
 
-
-
-
-
-# 44. 不要使用断言来验证运行时错误的不存在
-
 ## 参考文献
 
 [JLS 2013] §14.20.3, "try-with-resources"
@@ -5184,7 +5023,7 @@ F004-J. 在不再需要时关闭资源
 
 此不合规代码示例使用 `assert` 语句来验证输入是否可用：
 
-```
+```java
 BufferedReader br;
 // 设置 up BufferedReader br
 String line;
@@ -5197,9 +5036,9 @@ assert line != null;
 
 ## 合规解决方案
 
-此合规解决方案演示了检测和处理输入不可态的推荐方法：
+此合规解决方案演示了检测和处理输入不可用状态的推荐方法：
 
-```
+```java
 BufferedReader br;
 // 设置 up BufferedReader br
 String line;
@@ -5214,22 +5053,20 @@ if (line == null) {
 
 断言是发现和消除可能导致漏洞的软件缺陷的有价值的诊断工具。然而，缺少断言并不意味着代码没有错误。
 
-# 45. 在条件表达式中使用相同类型作为第二和第三操作数
-
-通常，误用 `assert` 语句进行运行时检查而非检查逻辑错误是无法检测的。
-
 ## 参考文献
 
 [JLS 2013] §14.10, “assert 语句”
 
 ## 45. 在条件表达式中使用相同类型作为第二和第三操作数
 
+通常，误用 `assert` 语句进行运行时检查而非检查逻辑错误是无法检测的。
+
 条件运算符 `?:` 使用其第一个操作数的布尔值来决定评估另外两个表达式中的哪一个。（详见 JLS 的 §15.25，“Conditional Operator ?::”。）
 
 Java 条件表达式的一般形式是 `operand1 ? operand2 : operand3`。
 
-- 如果第一个操作数（operand1）的值为 `true`，则选择第二个操作数表达式（operand2）。
-- 如果第一个操作数的值为 `false`，则选择第三个操作数表达式（operand3）。
+- 如果第一个操作数（`operand1`）的值为 `true`，则选择第二个操作数表达式（`operand2`）。
+- 如果第一个操作数的值为 `false`，则选择第三个操作数表达式（`operand3`）。
 
 条件运算符在语法上是右关联的。例如，`a?b:c?d:e?f:g` 等于 `a?b:(c?d:(e?f:g))`。
 
@@ -5239,7 +5076,7 @@ JLS 确定条件表达式结果类型的规则（表 3-1）是复杂的；程序
 
 意外类型转换规则的复杂性可能会决定条件表达式的结果类型。因此，每个条件表达式的第二和第三操作数应该具有相同的类型。此建议也适用于箱后的原始类型。
 
-# 表 3–1. 确定条件表达式的结果类型
+### 表 3–1. 确定条件表达式的结果类型
 
 | 规则 | 操作数 2 | 操作数 3 | 结果类型 |
 | --- | --- | --- | --- |
@@ -5259,7 +5096,7 @@ JLS 确定条件表达式结果类型的规则（表 3-1）是复杂的；程序
 
 在此不合规代码示例中，程序员期望两个打印语句都会以 char 的类型打印 alpha 的值：
 
-```
+```java
 public class Expr {
     public static void main(String[] args) {
         char alpha = 'A';
@@ -5274,13 +5111,13 @@ public class Expr {
 
 第一个打印语句打印 A，是因为编译器应用结果类型表中的规则 8 来确定条件表达式的第二和第三操作数是 char 类型，或转换为 char 类型。然而，第二个打印语句打印了 65——alpha 作为 int 的值。
 
-
-
 ```java
 s.remove((i % 2) == 1) ? i-1 : workingVal);
 }
 System.out.println(s.size());
 ```
+
+
 
 条件表达式的第二个参数（操作 `i-1`）中 `short` 和 `int` 类型值的组合导致结果为 `int`，正如整数提升规则规定的。因此，第三个参数中的 `Short` 对象被拆箱为 `short`，然后被提升为 `int`。条件表达式的结果随后被自动装箱为 `Integer` 类型对象。由于 `HashSet` 只包含 `Short` 类型的值，因此对 `HashSet.remove()` 的调用没有影响。
 
@@ -5448,22 +5285,18 @@ class BankOperations {
 ## 参考文献
 
 - [API 2013] Interface Enumeration<E>
-Interface Iterator<E>
-- [Daconta 2003] Item 21, "使用 Iteration 代替 Enumeration",
-
-
-
-
+- [API 2013] Interface Iterator<E>
+- [Daconta 2003] Item 21, "使用 Iteration 代替 Enumeration"
 
 ## 48. 不要对短命且低频率的对象使用直接缓冲区
 
-java.nio 中的新的 I/O (NIO) 类允许创建和使用直接缓冲区（direct buffers）。这些缓冲区极大地提高了重复 I/O 活动的吞吐量。然而，它们的创建和回收比基于堆的非直接缓冲区的创建和回收昂得多，因为直接缓冲区是通过特定操作系统的原生代码管理的。这种额外的管理使得直接缓冲区成为单次或低频率使用场景的糟糕选择。直接缓冲区位于 Java 垃圾收集器的范围之外；因此，谨慎使用直接缓冲区会导致内存泄漏。最后，频繁分配大直接缓冲区会导致 `OutOfMemoryError`。
+java.nio 中的新的 I/O (NIO) 类允许创建和使用直接缓冲区（direct buffers）。这些缓冲区极大地提高了重复 I/O 活动的吞吐量。然而，它们的创建和回收比基于堆的非直接缓冲区的创建和回收昂贵得多，因为直接缓冲区是通过特定操作系统的原生代码管理的。这种额外的管理使得直接缓冲区成为单次或低频率使用场景的糟糕选择。直接缓冲区位于 Java 垃圾收集器的范围之外；因此，谨慎使用直接缓冲区会导致内存泄漏。最后，频繁分配大直接缓冲区会导致 `OutOfMemoryError`。
 
 ## 不合规代码示例
 
 此不合规代码同时使用了短命局部对象 `rarelyUsedBuffer` 和长寿且频繁使用的对象 `heavilyUsedBuffer`。两者都分配在非堆内存中；都不会被垃圾回收。
 
-```
+```java
 ByteBuffer rarelyUsedBuffer = ByteBuffer.allocateDirect(8192);
 // Use rarelyUsedBuffer once
 
@@ -5475,8 +5308,8 @@ ByteBuffer heavilyUsedBuffer = ByteBuffer.allocateDirect(8192);
 
 此合规解决方案使用间接缓冲区（indirect buffer）来分配短命且频繁使用的对象。频繁使用的缓冲区则相应地继续使用非堆、不受垃圾回收的直接缓冲区。
 
-```
-ByteBuffer rarelyUsedBuffer = ByteBuffer.allocateDirect(8192);
+```java
+ByteBuffer rarelyUsedBuffer = ByteBuffer.allocate(8192);
 // Use rarelyUsedBuffer once
 
 ByteBuffer heavilyUsedBuffer = ByteBuffer.allocateDirect(8192);
@@ -5489,7 +5322,7 @@ ByteBuffer heavilyUsedBuffer = ByteBuffer.allocateDirect(8192);
 
 ## 49. 从长寿容器对象中移除短命对象
 
-任务完成后，务必从长寿容器对象中移除短命对象。例如，当附加到 java.nio.channels.SelectionKey 对象的对象不再需要时，必须将其移除。这样做可以减少内存泄漏的概率。同样，使用 `ArrayList` 等基于数组的数据结构可能会引入一种需求，即通过明确将 `ArrayList` 的单个数组设置为 `null` 来指示条目的缺失。
+任务完成后，务必从长寿容器对象中移除短命对象。例如，当附加到 `java.nio.channels.SelectionKey` 对象的对象不再需要时，必须将其移除。这样做可以减少内存泄漏的概率。同样，使用 `ArrayList` 等基于数组的数据结构可能会引入一种需求，即通过明确将 `ArrayList` 的单个数组设置为 `null` 来指示条目的缺失。
 
 本指南专门针对容器引用的对象。对于将对象置空无助于垃圾回收的示例，请参阅指南 75，“不要尝试通过将局部变量引用设置为 null 来帮助垃圾回收器”。
 
@@ -5497,7 +5330,7 @@ ByteBuffer heavilyUsedBuffer = ByteBuffer.allocateDirect(8192);
 
 在此不合规代码示例中，一个长寿的 `ArrayList` 包含了对长寿和短命元素的引用。程序员通过在对象中设置“死亡”标记位来标记已无关的元素。
 
-```
+```java
 class DataElement {
     private boolean dead = false;
     // Other fields
@@ -5521,7 +5354,7 @@ longLivedList.get(someIndex).killMe();
 
 在此合规解决方案中，程序员不再使用死亡标记位，而是将已无关的 `ArrayList` 元素赋值为 `null`：
 
-```
+```java
 class DataElement {
     // Dead flag removed
     // Other fields
@@ -5542,7 +5375,7 @@ longLivedList.set(someIndex, null);
 
 此合规解决方案通过使用单例哨兵对象（sentinel object）避免了与故意空引用相关的问题。这种技术被称为空对象模式（Null Object pattern，也称为哨兵模式）。
 
-```
+```java
 class DataElement {
     public static final DataElement NULL = createSentinel();
     // Dead flag removed
@@ -5556,9 +5389,7 @@ class DataElement {
 
 // Elsewhere处
 List<DataElement> longLivedList = new ArrayList<DataElement>();
-```
 
-```
 // Processing that renders an element irrelevant
 // Set the reference to the irrelevant DataElement to
 // the NULL object
@@ -5569,23 +5400,26 @@ longLivedList.set(someIndex, DataElement.NULL);
 
 ## 适用性
 
-将短命对象留在长寿容器中可能会消耗垃圾回收无法无法的内存，导致内存耗尽并可能引发拒绝服务攻击。
+将短命对象留在长寿容器中可能会消耗垃圾回收无法回收的内存，导致内存耗尽并可能引发拒绝服务攻击。
 
 ## 参考文献
 
 - [Grand 2002] 第 8 章，“Behavioral Patterns, the Null Object"
-- ERR08-J. Do not catch NullPointerException or any of its ancestors
-- [API 2013] Class ByteBuffer
 
-## 第 4 章
 
-## 程序可理解性
+
+- ERR08-J. Do not catch `NullPointerException` or any of its ancestors
+- [API 2013] Class `ByteBuffer`
+
+# 第 4 章
+
+# 程序可理解性
 
 程序可理解性是指理解程序的难易程度——即通过阅读源代码和随附文档确定程序功能以及其工作原理的能力 [Grubb 2003]。易于理解的代码更容易维护，因为软件维护者不太可能在代码中引入缺陷。可理解性有助于在源码的人工分析中发现缺陷，因为它允许审计人员更容易地发现缺陷和漏洞。
 
 本章中的某些指南具有风格性性质；它们将帮助 Java 程序员编写出更清晰的代码。
 
-### 50. 小心使用具有误导性的标识符
+## 50. 小心使用具有误导性的标识符
 
 使用视觉上明显且不易被误读的标识符。取决于字体，某些字符非常相似。请考虑表 4-1 中的示例。
 
@@ -5605,33 +5439,29 @@ longLivedList.set(someIndex, DataElement.NULL);
 
 Java 语言规范 (JLS) 要求程序源码使用 Unicode 编码编写 [Unicode 2013]。不同的 Unicode 字符具有相同的表示。例如，希腊字母和科普特字母（Unicode 范围 0370–03FF）与数学字母符号（Unicode 范围 1D400–1DFTFF）经常无法区分。
 
+## 50. 小心使用视觉上误导性的标识符和字面量
 
-
-
-
-50. 小心使用视觉上误导性的标识符和字面量
-
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规代码示例在同一个作用域内有两个变量 `stem` 和 `stern`，它们很容易被混淆并意外交换：
 
-```
+```java
 int stem; // 靠近船头的位置
 /* ... */
 int stern; // 靠近船尾的位置
 ```
 
-## 合规解决方案
+### 合规解决方案
 
 此合规解决方案通过为变量分配视觉上明显的标识符来消除这种混淆：
 
-```
+```java
 int bow; // 靠近船头的位置
 /* ... */
 int stern; // 靠近船尾的位置
 ```
 
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规代码示例打印了一个 `int` 和 `long` 值相加的结果，尽管看起来像是在相加两个整数（11111）：
 
@@ -5643,7 +5473,7 @@ public class Visual {
 }
 ```
 
-## 合规解决方案
+### 合规解决方案
 
 此合规解决方案使用大写的 `L` (long) 代替小写的 `1`，以区分第二个整数的视觉外观。它的行为与不合规代码示例相同，但程序员的意图是清晰的：
 
@@ -5655,7 +5485,7 @@ public class Visual {
 }
 ```
 
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规代码示例在将值存储在数组时混合了十进制值和八进制值：
 
@@ -5672,7 +5502,7 @@ void exampleFunction() {
 
 看起来 `array` 中的第三个元素旨在持有十进制值 42。然而，赋值的是十进制值 34（对应八进制值 42）。
 
-## 合规解决方案
+### 合规解决方案
 
 当整数字面量旨在表示十进制值时，避免使用前导零填充。相反应使用其他技术，例如使用空格填充，以保持数字对齐。
 
@@ -5687,7 +5517,7 @@ void exampleFunction() {
 }
 ```
 
-## 适用性
+### 适用性
 
 未能使用视觉上明显的标识符可能会导致使用错误的标识符，并引起意外的程序行为。
 
@@ -5695,7 +5525,7 @@ void exampleFunction() {
 
 混合十进制和八进制值可能导致初始化或赋值不当。检测带有前导零的整数字面量是非常容易的。然而，确定程序员是意图使用八进制字面量还是十进制字面量是不行的。因此，可靠的自动化检测也是不可行的。启发式检查可能有所用。
 
-## 参考文献
+### 参考文献
 
 | | |
 | :--- | :--- |
@@ -5710,7 +5540,7 @@ void exampleFunction() {
 
 作为 API 设计师，你应该谨慎使用[可变参数方法]，仅在益处确实具有说服力时才使用。通常情况下，你不应该重载 varargs 方法，否则程序员将很难确定调用了哪个重载版本。
 
-## 不合规代码示例
+### 不合规代码示例
 
 在此不合规代码示例中，重载可变参数方法使得不确定调用了哪个 `displayBooleans()` 定义：
 
@@ -5739,21 +5569,21 @@ Overloaded method invoked
 
 这是因为非可变参数的定义更具体，因此更适合所提供的参数。然而，这种复杂性最好避免。
 
-## 合规解决方案
+### 合规解决方案
 
 为了避免重载可变参数方法，请使用不同的方法名以确保调用了预期的方法，如此合规解决方案所示：
 
-## 适用性
+### 适用性
 
 不智使用重载的可变参数方法可能会产生歧义并降低代码可读性。
 
 出于性能考虑，违反此规则可能是合理的。其中一个原因是为了避免每次调用时创建并初始化数组实例的代价。
 
-## 52. 避免带内指示器（In-band indicators）
+## 52. 避免带内指示器
 
 在使用可变参数方法时，避免关于应该调用哪种方法的歧义至关重要。带内指示器要求调用者检查错误；然而，检查往往会被忽略。在 Java 中，指示异常情况的最佳方法是抛出异常而不是返回错误码。异常可以跨作用域传播，且不像错误码那样容易忽略。
 
-## 参考文献
+### 参考文献
 
 - [Bloch 2008] Item "Use Varargs Judiciously"
 - [Oracle 2011b] Varargs
@@ -5761,7 +5591,7 @@ Overloaded method invoked
 
 带内指示器在 Java 核心库中比其他语言少得多；尽管如此，它们仍被使用于 [Long 2012], "EXP0-J. Do not ignore values returned by methods,"但它产生了无效值随后可能被视为有效值的不幸影响。
 
-## 不合规代码示例
+### 不合规代码示例
 
 此不合规代码示例尝试读取到一个字符数组，并在读取的字符之后立即向缓冲区添加一个额外的字符。
 
@@ -5781,7 +5611,7 @@ chBuff[read] = TERMINATOR;
 
 然而，如果输入缓冲区初始位于文件末尾，`read()` 方法将返回 -1，此时放置终止符字符将抛出 `ArrayOutOfBoundsException`。
 
-## 合规解决方案（包装）
+### 合规解决方案（包装）
 
 此合规解决方案定义了一个 `readSafe()` 方法，它包装了原始的 `read()` 方法并在检测文件末尾时抛出异常：
 
@@ -5801,15 +5631,7 @@ public static int readSafe(BufferedReader buffer, char[] cbuf,
 BufferedReader buffRdr;
 
 // Set up buffRdr
-```
 
-
-
-
-
-## 53. 不要在条件表达式中执行赋值
-
-```java
 try {
     read = readSafe(buffRdr, chBuff, 0, MAX_READ);
     chBuff[read] = TERMINATOR;
@@ -5818,17 +5640,17 @@ try {
 }
 ```
 
-## 适用性
+### 适用性
 
 使用带内错误指示（in-band error indicators）可能导致程序员未能检查状态码，或使用了错误的返回值，从而导致意外之外的行为。
 
 鉴于 Java 中带内错误指示出现的频率较高，可能会列出所有使用这些指示的标准库方法列表，并自动检测它们的使用。然而，在通用情况下，检测带内错误指示的安全使用是不可行的。
 
-在失败时返回一个可能为 null的对象，在成功时返回一个有效对象，是带内错误指示的一个常见示例。尽管通常有更好的方法设计，但在某些情况下，返回一个可能为空的对象是可以接受的。请参见准则 26，“始终对方法的结果提供反馈”的示例。
+在失败时返回一个可能为 `null` 的对象，在成功时返回一个有效对象，是带内错误指示的一个常见示例。尽管通常有更好的方法设计，但在某些情况下，返回一个可能为空的对象是可以接受的。请参见准则 26，“始终对方法的结果提供反馈”的示例。
 
-## 参考文献
+### 参考文献
 
-- [API 2013] Class Reader
+- [API 2013] Class `Reader`
 - [JLS 2013] Chapter 11, “Exceptions"
 - [Long 2012] EXP00-J. Do not ignore values returned by methods
 
@@ -5836,19 +5658,19 @@ try {
 
 在条件表达式中使用赋值运算符通常表明存在程序员错误，并可能导致意外的行为。在以下上下文中不应使用赋值运算符：
 
-- *if (控制表达式)*
-- *while (控制表达式)*
-- *do ... while (控制表达式)*
-- *for (第二个操作数)*
-- *switch (控制表达式)*
-- *?: (第一个操作数)*
-- *&& (任意操作数)*
-- *|| (任意操作数)*
-- *?: (第二个或第三操作数)，当三元表达式用于上述任何一种上下文时
+- `if` (控制表达式)
+- `while` (控制表达式)
+- `do ... while` (控制表达式)
+- `for` (第二个操作数)
+- `switch` (控制表达式)
+- `?:` (第一个操作数)
+- `&&` (任意操作数)
+- `||` (任意操作数)
+- `?:` (第二个或第三操作数)，当三元表达式用于上述任何一种上下文时
 
-## 不合规代码示例
+### 不合规代码示例
 
-在这个不合规代码示例中，if 语句中的控制表达式是一个赋值表达式。
+在这个不合规代码示例中，`if` 语句中的控制表达式是一个赋值表达式。
 
 ```java
 public void f(boolean a, boolean b) {
@@ -5858,11 +5680,11 @@ public void f(boolean a, boolean b) {
 }
 ```
 
-虽然程序员的意图可能是想将 b 赋值给 a 并测试结果的值，但这种用法经常出现在程序员误用赋值运算符 = 而不是相等运算符 == 的时候。
+虽然程序员的意图可能是想将 `b` 赋值给 `a` 并测试结果的值，但这种用法经常出现在程序员误用赋值运算符 `=` 而不是相等运算符 `==` 的时候。
 
-## 合规解决方案
+### 合规解决方案
 
-此合规解决方案所示的条件块仅在 a 等于 b 时执行。
+此合规解决方案所示的条件块仅在 `a` 等于 `b` 时执行。
 
 ```java
 public void f(boolean a, boolean b) {
@@ -5872,30 +5694,23 @@ public void f(boolean a, boolean b) {
 }
 ```
 
-此时不会发生 b 对 a 的意外赋值。
+此时不会发生 `b` 对 `a` 的意外赋值。
 
-## 合规解决方案
+### 合规解决方案
 
 当赋值是有意图时，此合规解决方案明确了程序的意图。
 
 ```java
 public void f(boolean a, boolean b) {
     if ((a = b) == true) {
+        /* ... */
     }
 }
 ```
 
-# 53. 不要在条件表达式中执行赋值 177
+### 合规解决方案
 
-```java
-/* ... */
-}
-}
-```
-
-## 合规解决方案
-
-将逻辑表示为显式赋值后接 if 条件会更清晰：
+将逻辑表示为显式赋值后接 `if` 条件会更清晰：
 
 ```java
 public void f(boolean a, boolean b) {
@@ -5906,9 +5721,9 @@ public void f(boolean a, boolean b) {
 }
 ```
 
-## 不合规代码示例
+### 不合规代码示例
 
-在这个不合规代码示例中，赋值表达式作为 && 运算符的操作数出现：
+在这个不合规代码示例中，赋值表达式作为 `&&` 运算符的操作数出现：
 
 ```java
 public void f(boolean a, boolean b, boolean flag) {
@@ -5918,11 +5733,11 @@ public void f(boolean a, boolean b, boolean flag) {
 }
 ```
 
-由于 && 不是比较运算符，赋值是一个非法的操作数。再次，这通常是程序员误用赋值运算符 = 而不是相等运算符 == 的情况。
+由于 `&&` 不是比较运算符，赋值是一个非法的操作数。再次，这通常是程序员误用赋值运算符 `=` 而不是相等运算符 `==` 的情况。
 
-## 合规解决方案
+### 合规解决方案
 
-当 b 对 a 的赋值是无意的时，此条件块现在仅在 a 等于 b 且 flag 为 true 时执行：
+当 `b` 对 `a` 的赋值是无意的时，此条件块现在仅在 `a` 等于 `b` 且 `flag` 为 `true` 时执行：
 
 ```java
 public void f(boolean a, boolean b, boolean flag) {
@@ -5932,7 +5747,7 @@ public void f(boolean a, boolean b, boolean flag) {
 }
 ```
 
-## 适用性
+### 适用性
 
 在控制条件表达式中使用赋值运算符通常表明存在程序员错误，并可能导致意外的行为。
 
@@ -5944,35 +5759,23 @@ throws IOException {
     String line;
     while ((line = reader.readLine()) != null) {
         // .. 处理 line
-}
+    }
 }
 ```
 
-## 参考文献
+### 参考文献
 
 - [Hatton 1995], “Errors of Omission and Addition”
 
 ## 54. 对 if、for 或 while 语句的体使用大括号
 
-即使 if、for 和 while 语句体只包含单个语句，也要使用大大括号。大括号可以提高代码的统一性和可读性。
+即使 `if`、`for` 和 `while` 语句体只包含单个语句，也要使用大括号。大括号可以提高代码的统一性和可读性。
 
 更重要的是，在只包含单个语句的体中插入额外语句时，很容易忘记添加大括号，因为传统的程序缩进对结构提供了强有力的（但误导性的）指导。
 
-## 不合规代码示例
+### 不合规代码示例
 
-这个不合规代码示例使用缺少大括号的 if 语句验证用户。
-
-```java
-int login;
-if (invalid_login())
-    login = 0;
-else
-    login = 1;
-```
-
-## 54. 对 if、for 或 while 语句的体使用大括号
-
-这个不合规代码示例使用缺少大括号的 if 语句验证用户。
+这个不合规代码示例使用缺少大括号的 `if` 语句验证用户。
 
 ```java
 int login;
@@ -5982,9 +5785,9 @@ else
     login = 1;
 ```
 
-## 合规解决方案
+### 合规解决方案
 
-此合规解决方案为 if 语句使用了起始和结束大括号：
+此合规解决方案为 `if` 语句使用了起始和结束大括号：
 
 ```java
 int login;
@@ -5995,9 +5798,9 @@ if (invalid_login()) {
 }
 ```
 
-## 不合规代码示例
+### 不合规代码示例
 
-这个不合规代码示例在没有大括号的情况下将 if 语句嵌套在另一个语句中：
+这个不合规代码示例在没有大括号的情况下将 `if` 语句嵌套在另一个语句中：
 
 ```java
 int privileges;
@@ -6008,7 +5811,7 @@ else
     privileges = ADMINISTRATOR;
 ```
 
-## 合规解决方案
+### 合规解决方案
 
 此合规解决方案使用大括号消除了歧义：
 
@@ -6023,17 +5826,19 @@ if (invalid_login()) {
 }
 ```
 
-## 适用性
+### 适用性
 
-不使用大括号包裹 if、for 或 while 语句的体会导致代码出错并增加维护成本。
+不使用大括号包裹 `if`、`for` 或 `while` 语句的体会导致代码出错并增加维护成本。
 
 ## 55. 不要在 if、for 或 while 条件后紧跟分号
 
-由于这通常表明存在程序员错误并可能导致意外的行为，不要在 if、for 或 while 条件后使用分号。
+
+
+由于这通常表明存在程序员错误并可能导致意外的行为，不要在 `if`、`for` 或 `while` 条件后使用分号。
 
 ## 不合规代码示例
 
-在这个不合规代码示例中，if 条件后紧跟了一个分号。
+在这个不合规代码示例中，`if` 条件后紧跟了一个分号。
 
 ```java
 if (a == b); {
@@ -6043,7 +5848,7 @@ if (a == b); {
 
 ## 合规解决方案
 
-此合规解决方案消除了分号，并确保仅在条件表达式为真时执行 if 语句体：
+此合规解决方案消除了分号，并确保仅在条件表达式为真时执行 `if` 语句体：
 
 ```java
 if (a == b) {
@@ -6053,21 +5858,15 @@ if (a == b) {
 
 ## 适用性
 
-在 if、for 或 while 条件后紧跟分号可能会导致意外的行为。
+在 `if`、`for` 或 `while` 条件后紧跟分号可能会导致意外的行为。
 
-# 56. 使用 break 语句结束与 case label 相关的语句集
+# 56. 使用 `break` 语句结束与 `case` label 相关的语句集
 
-switch 块由多个 case label 和可选但强烈建议的 default label 组成。每个 case label之后的语句必须以 break 语句结束，break 负责将控制转移到 switch 块的末尾。如果省略，将执行下一个 case label 中的语句。由于 break 语句是可选的，省略不会产生编译器警告。当这种行为是无意的时，会导致意外的控制流。
+`switch` 块由多个 `case` label 和可选但强烈建议的 `default` label 组成。每个 `case` label 之后的语句必须以 `break` 语句结束，`break` 负责将控制转移到 `switch` 块的末尾。如果省略，将执行下一个 `case` label 中的语句。由于 `break` 语句是可选的，省略不会产生编译器警告。当这种行为是无意的时，会导致意外的控制流。
 
 ## 不合规代码示例
 
-在这个不合规代码示例中，card 为 11 的 case 缺少 break 语句。结果，执行将继续 card = 12 的语句。
-
-
-
-
-
-# 182 第 4 章 - 程序的可理解性
+在这个不合规代码示例中，`card` 为 11 的 `case` 缺少 `break` 语句。结果，执行将继续 `card = 12` 的语句。
 
 ```java
 int card = 11;
@@ -6114,9 +5913,9 @@ switch (card) {
 
 未包含 `break` 语句会导致意外的控制流。
 
-`switch` 语句中最后一个 `case` 结尾的 `break` 语句可以省略。按照惯，这是默认标签。`break` 语句的作用是将控制转移到 `switch` 块的结束。贯穿（Fall-through）行为也会导致控制到达 `switch` 块的结束。因此，控制会转移到 `switch` 块之后的语句，而不论是否存在 `break` 语句。尽管如此，根据良好的编程风格，`switch` 语句中的最后一个 `case` 应该以 `break` 语句结束 [Allen 2000]。
+`switch` 语句中最后一个 `case` 结尾的 `break` 语句可以省略。按照惯例，这是默认标签。`break` 语句的作用是将控制转移到 `switch` 块的结束。贯穿行为也会导致控制到达 `switch` 块的结束。因此，控制会转移到 `switch` 块之后的语句，而不论是否存在 `break` 语句。尽管如此，根据良好的编程风格，`switch` 语句中的最后一个 `case` 应该以 `break` 语句结束 [Allen 2000]。
 
-特殊情况下，当多个 `case` 需要执行相同的代码时，可以省略除最后一个外所有分支的 `break` 语句。同样，当对一个 `case` 的处理逻辑是一个或多个 `case` 处理逻辑的适当缀时，可以省略前缀 `case` 中的 `break` 语句。这应该通过注释明确指出。例如：
+特殊情况下，当多个 `case` 需要执行相同的代码时，可以省略除最后一个外所有分支的 `break` 语句。同样，当对一个 `case` 的处理逻辑是一个或多个 `case` 处理逻辑的适当前缀时，可以省略前缀 `case` 中的 `break` 语句。这应该通过注释明确指出。例如：
 
 ```java
 int card = 11;
@@ -6210,10 +6009,6 @@ for (i = 0; i < Integer.MAX_VALUE; i++) {
 }
 ```
 
-
-
-
-
 | [ESA 2005] | 规则 65，使用括号明确指示数值操作符的执行顺序 |
 | [Long 2012] | EXP05-J。不要在一个表达式中对同一个变量进行多次写入 |
 | [Tutorials 2013] | 表达式、语句和代码块 |
@@ -6282,7 +6077,7 @@ throws FileNotFoundException {
 
 ## 参考文献
 
-- [API 2013] 类 java.nio.file.Files 类
+- [API 2013] 类 `java.nio.file.Files` 类
 - [Long 2012] FIO01-J。创建具有适当访问权限的文件
 - [Oracle 2010b] 新 I/O API
 
@@ -6325,27 +6120,21 @@ double e = b / 30.0; // e 是 226.0
 double f = c * 2.0; // f 是 -9.1179793305293046E18
 ```
 
-
-
-
-
 ## 参考文献
 
-[JLS 2013] §5.1.2. "原始类型宽转换"
+- [JLS 2013] §5.1.2. "原始类型宽转换"
+- [Long 2012] NUM13-j. 在将原始整数转换为浮点数时避免精度损失
+- [Long 2012] NUM00-j. 检测并防止整数溢出
 
-[Long 2012] NUM13-j. 在将原始整数转换为浮点数时避免精度损失
+## 61. 确保 `clone()` 方法调用了 `super.clone()`
 
-NUM00-j. 检测并防止整数溢出
+克隆一个非 `final` 类的子类，如果该子类定义的 `clone()` 方法未调用 `super.clone()`，将会产生一个类型错误的对象。Java API [API 2013] 对 `clone()` 方法的规定如下：
 
-## 61. 确保 clone() 方法调用了 super.clone()
-
-克隆一个非 final 类的子类，如果该子类定义的 clone() 方法未调用 super.clone()，将会产生一个类型错误的对象。Java API [API 2013] 对 clone() 方法的规定如下：
-
-按照惯例，返回的对象应该通过调用 super.clone 获取。如果一个类及其所有的父类（Object 除外）遵循这一惯例，则 x.clone().getClass() == x.getClass()。
+按照惯例，返回的对象应该通过调用 `super.clone` 获取。如果一个类及其所有的父类（`Object` 除外）遵循这一惯例，则 `x.clone().getClass() == x.getClass()`。
 
 ## 不合规代码示例
 
-在此不合规代码示例中，Base 类中的 clone() 方法未能调用 super.clone()：
+在此不合规代码示例中，`Base` 类中的 `clone()` 方法未能调用 `super.clone()`：
 
 ```java
 class Base implements Cloneable {
@@ -6376,11 +6165,13 @@ class Derived extends Base {
 }
 ```
 
-因此，克隆对象的类型变成了 Base 而不是 Derived，且 doLogic() 方法被错误地应用。
+因此，克隆对象的类型变成了 `Base` 而不是 `Derived`，且 `doLogic()` 方法被错误地应用。
 
 ## 合规解决方案
 
-此合规解决方案在 Base 类的 clone() 方法中正确调用了 super.clone()。
+此合规解决方案在 `Base` 类的 `clone()` 方法中正确调用了 `super.clone()`。
+
+
 
 ```java
 class Base implements Cloneable {
@@ -6412,15 +6203,15 @@ class Derived extends Base {
 
 ## 适用性
 
-未调用 super.clone() 可能导致克隆对象具有错误的类型。
+未调用 `super.clone()` 可能导致克隆对象具有错误的类型。
 
 ## 参考文献
 
 [API 2013] Class Object
 
-# 62. 一以一致且可读的方式使用注释
+# 62. 以一致且可读的方式使用注释
 
-混合使用传统注释或块注释（以 /* 开始并以 */ 结束）以及行尾注释（从 // 直到行尾）会导致具有误导性且混淆的代码，从而可能导致错误。
+混合使用传统注释或块注释（以 `/*` 开始并以 `*/` 结束）以及行尾注释（从 `//` 直到行尾）会导致具有误导性且混淆的代码，从而可能导致错误。
 
 ## 不合规代码示例
 
@@ -6447,7 +6238,7 @@ int i; // 计数器
 
 ## 不合规代码示例
 
-其他应避免的注释误用。此不合规代码示例使用了字符序列 /* 开始注释，但忽略了使用分隔符 /* 结束注释。因此，对安全关键方法的调用没有执行。检查此页面的审查人员可能会错误地认为代码正在执行。
+其他应避免的注释误用。此不合规代码示例使用了字符序列 `/*` 开始注释，但忽略了使用分隔符 `*/` 结束注释。因此，对安全关键方法的调用没有执行。检查此页面的审查人员可能会错误地认为代码正在执行。
 
 ```java
 /* 无意中遗漏了结束标记的注释
@@ -6461,9 +6252,9 @@ security_critical_method();
 
 ## 合规解决方案
 
-此合规解决方案演示了标记代码为“死代码”的推荐方法。它还利用了编译器移除不可达（死）代码的能力。if 内部的代码在语法上必须是正确的。如果程序的其他部分以后发生会导致语法错误的变化，必须更新未执行的代码以修正问题。如果将来再次需要它，程序员只需移除周围的语句和 NOTREACHED 注释即可。
+此合规解决方案演示了标记代码为“死代码”的推荐方法。它还利用了编译器移除不可达（死）代码的能力。`if` 内部的代码在语法上必须是正确的。如果程序的其他部分以后发生会导致语法错误的变化，必须更新未执行的代码以修正问题。如果将来再次需要它，程序员只需移除周围的语句和 `NOTREACHED` 注释即可。
 
-NOTREACHED 注释可以某些编译器和静态分析工具不要对这段不可达的代码报错。它同时也。
+`NOTREACHED` 注释可以某些编译器和静态分析工具不要对这段不可达的代码报错。它同时也。
 
 ```java
 if (false) {
@@ -6474,7 +6265,7 @@ if (false) {
 
 ## 适用性
 
-未调用 super.clone() 可能导致克隆对象具有错误的类型。
+未调用 `super.clone()` 可能导致克隆对象具有错误的类型。
 
 死代码的存在会导致维护问题和混淆。
 
@@ -6482,13 +6273,9 @@ if (false) {
 
 [JLS 2013] §5.1.2. "原始类型宽转换"
 
-# 62. 一以一致且可读的方式使用注释
+# 62. 以一致且可读的方式使用注释
 
-混合使用传统注释或块注释（以 /* 开始并以 */ 结束）以及行尾注释（从 // 直到行尾）会导致具有误导性且混淆的代码，从而可能导致错误。
-
-
-
-
+混合使用传统注释或块注释（以 `/*` 开始并以 `*/` 结束）以及行尾注释（从 `//` 直到行尾）会导致具有误导性且混淆的代码，从而可能导致错误。
 
 ## 合规解决方案
 
@@ -6584,9 +6371,10 @@ return p1;
 ## 参考文献
 
 [Fortify 2013] 代码质量：死代码
+
 [Coverity 2007] Coverity Prevent™ 用户手册 (3.3.0)
 
-## 64. 追求逻辑完整性
+# 64. 追求逻辑完整性
 
 当编程人员未能考虑所有可能的数据状态时，可能会产生软件漏洞。
 
@@ -6707,7 +6495,7 @@ public void countDays(long days) {
 
 ![](img/3143b26019f0f09c503d13f99745e59_229_0.png)
 
-## 65. 避免模糊或混淆的重载
+# 65. 避免模糊或混淆的重载
 
 方法重载允许声明具有相同但参数列表的方法。编译器检查每个对重载方法或构造函数的调用，并使用方法参数的声明类型来决定调用哪个方法。然而，在某些情况下，由于新语言特性（如自动装箱和泛型）的存在，可能会产生混淆。
 
@@ -6733,10 +6521,6 @@ class Con {
 
 向这些构造函数传递参数时如果不小心可能会产生混淆，因为对这些构造函数的调用包含了相同数量的相似类型实际参数。当重载在……时也应避免
 
-
-
-
-
 构造函数或方法为相同类型的形式化参数提供了不同的语义，其区别仅在于声明顺序。
 
 ## 合规解决方案（构造函数）
@@ -6755,9 +6539,9 @@ public static Con createCon3(Integer i, String s) {
 }
 ```
 
-## 不合代码示例（方法）
+## 不合规代码示例（方法）
 
-在这个不合的代码示例中，`OverLoader` 类持有 `HashMap` 实例并具有重载的 `getData(Object)` 方法。一个 `getData()` 方法根据映射中的键值选择要返回的记录；另一个则根据实际的映射值选择。
+在这个不合规代码示例中，`OverLoader` 类持有 `HashMap` 实例并具有重载的 `getData(Object)` 方法。一个 `getData()` 方法根据映射中的键值选择要返回的记录；另一个则根据实际的映射值选择。
 
 ```java
 class OverLoader extends HashMap<Integer,Integer> {
@@ -6782,7 +6566,7 @@ class OverLoader extends HashMap<Integer,Integer> {
 }
 ```
 
-## 65. 避免重载的歧义或混淆用法
+# 65. 避免重载的歧义或混淆用法
 
 ```java
 // Checks whether the ssn exists
@@ -6809,6 +6593,8 @@ public static void main(String[] args) {
 出于重载解析的目的，`getData()` 方法的签名区别仅在于其形式化参数的静态类型。`OverLoader` 类继承自 `java.util.HashMap` 并重写了 `get()` 方法以提供检查功能。这种实现对于期望两个 `getData()` 方法行为相似、且不依赖于记录索引或要检索的值的客户端来说，可能是极其困惑的。
 
 尽管客户端程序员可能会推断出这种行为，但其他情况（例如 `List` 接口）会被忽视，正如 Joshua Bloch [Bloch 2008] 所描述的：
+
+
 
 `List<E>` 接口有两个 `remove` 方法的重载：`remove(E)` 和 `remove(int)`。在 1.5 版本“生成”发布之前，`List` 接口使用 `remove(Object)` 方法代替 `remove(E)`，且相应的参数类型 `Object` 和 `int` 有本质区别。在泛型和自动装箱（autoboxing）的情况下，这两个参数类型不再有本质区别。
 
@@ -6839,7 +6625,7 @@ public String getDataValue(Integer i) {
 - [API 2013] 接口 Collection<E>
 - [Bloch 2008] Item 41, “审慎使用重载”
 
-## 第 5 章
+# 第 5 章
 
 ## 程序员的误解
 
@@ -6852,10 +6638,6 @@ public String getDataValue(Integer i) {
 - 3. 程序员想做某事但结果却做了另一事的情况
 
 > 66. 不要假设声明引用为 volatile 就能保证可见性
-
-
-
-
 
 ```java
 public synchronized void setFirst(int n) {
@@ -7028,10 +6810,6 @@ final class DateHandler {
 - [JLS 2013]
 - [Long 2012]
 
-
-
-
-
 `volatile` 关键字建立了当前线程与任何设置 `done` 的线程之间的先行发生（happens-before）关系。
 
 ## 合规解决方案 (Thread.interrupt())
@@ -7152,12 +6930,14 @@ JLS，§15.17.3, "Remainder Operator %" [JLS 2013] 规定：
 
 对于二进制数值提升（§5.6.2）后为整数的操作数，余数运算产生的值使得 `(a/b)*b+(a%b)` 等于 `a`。即使在被除数为其类型中可能值最大的负整数且除数为为 -1 的特殊情况下（余数为 0），该等式也成立。根据该规则可以得出，余数运算的结果只有在被除数为负时才可能为负，只有在被除数为正时才可能为正；此外，结果的绝对值小于除数的绝对值。
 
+
+
 余数运算符的结果与被除数（表达式中的第一个操作数）符号相同：
 
-- 5 % 3 产生 2
-- 5 % (-3) 产生 2
-- (-5) % 3 产生 -2
-- (-5) % (-3) 产生 -2
+- `5 % 3` 产生 `2`
+- `5 % (-3)` 产生 `2`
+- `(-5) % 3` 产生 `-2`
+- `(-5) % (-3)` 产生 `-2`
 
 因此，依赖余数运算总是返回正结果的代码错误的。
 
@@ -7209,7 +6989,7 @@ public int lookup(int hashCode) {
 
 Java 定义了 `==` 和 `!=` 运算符来测试引用相等性，但使用 `equals()` 方法进行抽象相等测试。这种混淆在处理 `String` 对象的上下文中非常常见。一般规则是，使用 `Object.equals()` 方法检查对象是否具有等效内容，并使用相等运算符 `==` 测试两个引用是否指向同一个对象。对于需要重写 `equals()` 实现的类，必须也重写 `hashCode()`（见《The CERT® Secure Coding Standard for Java [Long 2012], "MET09-J. 定义了 equals() 方法的类也必须定义 hashCode() 方法”）。
 
-数值包装类型（例如 Byte, Character, Short, Integer, Long, Float 和 Double）也应该使用 `Object.equals()` 进行比较，而不是 `==` 运算符。虽然引用相等性对于 -128 到 127 范围内的 `Integer` 值似乎有效，但如果任一操作数超出该范围，它可能会失效。除相等以外的数值关系运算符（如 `<`, `<=`, `=`, `>=`）可以安全地用于比较包装的原始类型（见 EXP03-J. 在比较包装原始类型的值时不要使用相等运算符，更多信息请参见）。
+数值包装类型（例如 `Byte`, `Character`, `Short`, `Integer`, `Long`, `Float` 和 `Double`）也应该使用 `Object.equals()` 进行比较，而不是 `==` 运算符。虽然引用相等性对于 -128 到 127 范围内的 `Integer` 值似乎有效，但如果任一操作数超出该范围，它可能会失效。除相等以外的数值关系运算符（如 `<`, `<=`, `>`, `>=`）可以安全地用于比较包装的原始类型（见 EXP03-J. 在比较包装原始类型的值时不要使用相等运算符，更多信息请参见）。
 
 ## 不合规代码示例
 
@@ -7220,7 +7000,7 @@ public class StringComparison {
     public static void main(String[] args) {
         String str1 = new String("one");
         String str2 = new String("one");
-        System.out.println(str1); // 输出 "false"
+        System.out.println(str1 == str2); // 输出 "false"
     }
 }
 ```
@@ -7245,10 +7025,6 @@ public class StringComparison {
 
 当比较两个 `String.intern()` 方法的结果字符串时，引用相等性表现类似于抽象对象相等性。当内存中只需要字符串 "one" 的副本时，使用 `String.intern()` 可以快速字符串比较。
 
-
-
-
-
 ```java
 public class StringComparison {
     public static void main(String[] args) {
@@ -7268,21 +7044,17 @@ public class StringComparison {
 JLS（Java语言规范）对 `String.intern()` 的实现提供的保证很少。例如：
 
 - `String.intern()` 的成本随着字符串数量的增加而增长。性能不应低于 O(n log n)，但 JLS 缺乏特定的性能保证。
-
 - 在早期的 Java 虚拟机（JVM）实现中，字符串是“永生”的：它们免于垃圾回收。当大量字符串被 intern 时，这可能会产生问题。较新的实现可以回收不再被引用的 intern 字符串所占内存。然而，JLS 缺乏对此类行为的任何规范。
-
 - 在 Java 1.7 之前的 JVM 实现中，intern 字符串被分配在永久代（permgen）存储区域，该区域通常比堆的其他部分小得多。因此，大量的字符串会导致内存溢出条件。在许多 Java 1.7 的实现中，intern 字符串被分配在堆上，从而缓解这一限制。一旦 JLS 未指定分配细节，相应的实现可能会有所不同。
 
 字符串池（String interning）也可以用于接受重复出现字符串的程序。它的使用可以提高比较的性能并最小化内存消耗。
 
-## 70. 了解位运算运算符与逻辑运算符之间的区别
-
-当需要对对象进行规范化时，使用基于 `ConcurrentHashMap` 构建的自定义规范化器可能是更明智的；详情请 Joshua Bloch 的《Effective Java——第二版》，第 69 条 [Bloch 2008]。
-
 ## 适用性
 
 混淆引用相等和对象相等会导致意外的结果。
+
 只有当定义类保证对于每个可能的对象值最多存在一个对象实例时，才允许使用引用相等代替对象相等。使用静态工厂方法而非公共构造函数有助于实例控制；这是一项关键的启用技术。另一种技术是使用枚举（enum）类型。
+
 使用引用相等来判断两个引用是否指向同一个对象。
 
 ## 参考文献
@@ -7309,8 +7081,8 @@ JLS（Java语言规范）对 `String.intern()` 的实现提供的保证很少。
 ```java
 int array[]; // 可能为 null
 int i; // 可能是 array 的无效索引
-if (array != null && i >= 0 &&
-  i < array.length && array[i] >= 0) {
+if (array != null & i >= 0 &
+  i < array.length & array[i] >= 0) {
   // 使用 array
 } else {
   // 处理错误
@@ -7326,9 +7098,9 @@ if (array != null && i >= 0 &&
 ```java
 int array[]; // 可能为 null
 int i; // 可能是 array 的无效索引
-if (array != null && i >= 0 &&&
+if (array != null && i >= 0 &&
   i < array.length && array[i] >= 0) {
-  // 处理错误
+  // 使用 array
 } else {
   // 处理错误
 }
@@ -7396,7 +7168,7 @@ if (end1 >= 0 && {
 通常，对于形式为 `\X` 的特定转义字符，等效的 Java 表示为
 
 ```
-\X
+\\X
 ```
 
 ## 71. 理解转义字符如何解释以及字符串如何加载
@@ -7404,10 +7176,6 @@ if (end1 >= 0 && {
 ## 不合规代码示例（字符串字面量）
 
 此不合规代码示例定义了一个方法 `splitWords()`，用于查找字符串字面量（WORDS）与输入序列之间的匹配。预期 `WORDS` 将持有匹配单词边界的转义序列。然而，Java 编译器将 `"\b"` 字面量视为 Java 转义序列，字符串 `WORDS` 径默编译为检查单个退格字符的正则表达式。
-
-
-
-
 
 ```java
 public class Splitter {
@@ -7423,7 +7191,7 @@ public class Splitter {
 }
 ```
 
-# 符合规范的解决方案（字符串字面量）
+## 符合规范的解决方案（字符串字面量）
 
 该解决方案展示了 WORDS 字面量的正确转义值，该值生成了一个按单词边界分割的正则表达式：
 
@@ -7441,7 +7209,7 @@ public class Splitter {
 }
 ```
 
-# 不符合规范的代码示例（字符串属性）
+## 不符合规范的代码示例（字符串属性）
 
 此不符合规范的代码示例使用了相同的方法 `splitWords()`。这一次，WORDS 字符串是从外部属性文件中加载的。
 
@@ -7464,13 +7232,15 @@ public class Splitter {
 ```
 
 在属性文件中，WORD 属性再次被错误地指定为 `\b`。
+
 `WORDS=\b`
 
 `Properties.load()` 方法将其读取为单个字符退格符，导致 `split()` 方法按退格字符分割字符串。虽然字符串的解释方式与字符串字面量不同（如上一个不符合规范示例所示），但这种解释是错误的。
 
-# 符合规范的解决方案（字符串属性）
+## 符合规范的解决方案（字符串属性）
 
 该解决方案展示了 WORDS 属性的正确转义值：
+
 `WORDS=\\b`
 
 ## 适用性
@@ -7482,9 +7252,11 @@ public class Splitter {
 - [API 2013] Class Pattern, "Backslashes, Escapes, and Quoting" Package java.util
 - [JLS 2013] §3.10.6, "Escape Sequences for Character and String Literals"
 
-# 72. 不要使用重载方法来区分运行时类型
+## 72. 不要使用重载方法来区分运行时类型
 
 Java 支持方法重载，并能够区分不同签名的方法。因此，在某些条件下，如果类中的方法具有不同的参数列表，它们可以具有相同的名称。在方法重载中，运行时调用的方法在编译时就已经确定了。因此，即使每次调用的运行时类型不同，也会调用与对象的静态类型相关的重载方法。
+
+
 
 为了程序的可读性，在重载时不要引入歧义（参见指南 65，“避免产生歧义或混淆的重载用法，并谨慎使用重载方法” [Tutorials 2013]）。
 
@@ -7615,10 +7387,6 @@ class Point {
 
 通过这种修改，实例变量的值变得不可变，从而符合程序员的预设使用模型。
 
-
-
-
-
 ## 合规解决方案（提供拷贝功能）
 
 如果类必须保持可变性，另一种合规方案是提供拷贝功能。该合规方案在 `Point` 类中提供了一个 `clone()` 方法，避免了消除 setter 方法：
@@ -7734,27 +7502,29 @@ Collections.unmodifiableList(Arrays.asList(items));
 
 错误地假设 `final` 引用会导致被引用对象的内容保持可变，可能会导致攻击者修改一个被认为是不可变的对象。
 
-## 74. 谨慎使用序列化方法 `writeUnShared()` 和 `readUnShared()`
+# 74. 谨慎使用序列化方法 `writeUnShared()` 和 `readUnShared()`
 
 ## 参考文献
 
 - [Bloch 2008] Item 13, "Minimize the Accessibility of Classes and Members"
 - [Core Java 2003] Chapter 6, "Interfaces and Inner Classes"
 - [JLS 2013] §4.12.14, "final Variables"
-§6.6, "Access Control"
+- [JLS 2013] §6.6, "Access Control"
 - [Long 2012] OBJ04-J. Provide mutable classes with copy functionality to safely allow instances to untrusted code
-OBJ06-J. Defensively copy mutable inputs and mutable internal components
+- [Long 2012] OBJ06-J. Defensively copy mutable inputs and mutable internal components
 - [Mettler 2010] "Class Properties for Security Review in an Object-Capability Subset of Java"
 
 ## 74. 谨慎使用序列化方法 `writeUnShared()` 和 `readUnShared()`
 
 当使用 `writeObject()` 方法序列化对象时，`writeUnShared()` 方法在输出流中只写入一次对象。根据 Java API [2013]，`writeUnShared()` 方法向输出流写入“非共享”对象。
 
-相应，`readUnShared()` 方法从 `InputStream` 读取“非共享”对象。该方法与 `readObject()` 相同，但它防止了后续调用 `readObject 和 readshared` 返回额外的反序列化实例引用。
+相应，`readUnShared()` 方法从 `InputStream` 读取“非共享”对象。该方法与 `readObject()` 相同，但它防止了后续调用 `readObject` 和 `readShared` 返回额外的反序列化实例引用。
 
 因此，`writeUnShared()` 和 `readShared()` 方法不适用于包含循环的数据结构。
 
 考虑以下代码示例：
+
+
 
 ```java
 public class Person {
@@ -7799,7 +7569,7 @@ public class Professor extends Person implements Serializable {
         super(theName);
     }
 
-    public List<Student> getTutees () {
+    public List<Student> getTutees() {
         return tutees;
     }
 
@@ -7807,9 +7577,9 @@ public class Professor extends Person implements Serializable {
      * checkTutees 检查所有的学生
      * 是否都以此教授作为导师
      */
-    public boolean checkTutees () {
+    public boolean checkTutees() {
         boolean result = true;
-        for (Student stu: tutees) {
+        for (Student stu : tutees) {
             if (stu.getTutor() != this) {
                 result = false;
                 break;
@@ -7833,10 +7603,6 @@ System.out.println("checkTutees returns: " + jane.checkTutees());
 
 如果在这些类上使用 `writeUnShared()` 和 `readUnShared()` 方法，就会出现问题，如上面的不合规代码示例所示。
 
-
-
-
-
 # 不规范代码示例
 
 此不规范代码示例尝试使用 `writeUnshared()` 来序列化数据。
@@ -7854,7 +7620,7 @@ try (ObjectOutputStream oos = new ObjectOutputStream(new
 // 使用 readUnshared 反序列化
 try (ObjectInputStream ois = new ObjectInputStream(new
     FileInputStream(filename))) {
-    Professor jane2 = (Professor)ois.readUnshared();
+    Professor jane2 = (Professor) ois.readUnshared();
     System.out.println("checkTutees returns: " +
     jane2.checkTutees());
 } catch (Throwable e) {
@@ -7876,30 +7642,18 @@ try (ObjectOutputStream oos = new ObjectOutputStream(new
     oos.writeObject(jane);
 } catch (Throwable e) {
     // 处理错误
-} 
-```
+}
 
-# 75. 不要试图帮助垃圾回收器
-
-```java
-// 使用 readShared 反序列化
+// 使用 readObject 反序列化
 try (ObjectInputStream ois = new ObjectInputStream(new
-FileInputStream(filename))) {
-    Professor jane2 = (Professor)ois.readObject();
+    FileInputStream(filename))) {
+    Professor jane2 = (Professor) ois.readObject();
     System.out.println("checkTutees returns: " +
     jane2.checkTutees());
 } catch (Throwable e) {
     // 处理错误
 }
 ```
-
-## 适用性
-
-当使用 `writeShared()` 和 `readShared()` 方法对包含循环循环的数据结构进行往返序列化时，可能会产生意料之外的结果。
-
-## 参考文献
-
-- [API 2013]
 
 # 75. 不要试图通过将本地引用变量设置为 null 来帮助垃圾回收器
 
@@ -7909,17 +7663,15 @@ FileInputStream(filename))) {
 
 本指南专门适用于本地变量。对于显式删除对象有用的情况，请参阅指南 49，“从长寿命容器对象中移除短寿命对象”。
 
-# 不规范代码示例
+## 不规范代码示例
 
 在此不规范代码示例中，`buffer` 是一个持有临时数组引用的本地变量。程序员试图在 `buffer` 数组不再需要时将其赋值 `null` 以帮助垃圾回收器。
 
-# 244 第5章 程序员的误区
-
 ```java
 { // 本地作用域
-int[] buffer = new int[100];
-doSomething(buffer);
-buffer = null;
+    int[] buffer = new int[100];
+    doSomething(buffer);
+    buffer = null;
 }
 ```
 
@@ -7931,8 +7683,8 @@ buffer = null;
 
 ```java
 { // 限制 buffer 的作用域
-int[] buffer = new int[100];
-doSomething(buffer);
+    int[] buffer = new int[100];
+    doSomething(buffer);
 }
 ```
 
@@ -7945,9 +7697,7 @@ doSomething(buffer);
 - [Bloch 2008] Item 6, "Eliminate Obsolete Object References"
 - [Long 2012] MET12-J. Do not use finalizers
 
-# 附录 A
-
-# Android
+# 附录 A Android
 
 本附录描述了书中指南对于开发 Android 平台 Java 应用的适用性。
 
@@ -7962,16 +7712,6 @@ doSomething(buffer);
 | 7. 防止代码注入 | 原则上适用³ |
 | 8. 防止 XPath 注入 | 适用 |
 | 9. 防止 LDAP 注入 | 原则上适用⁴ |
-
-¹ 1 不规范代码示例在 Dalvik 上更难被利用，因为每个应用都在它们自己的 Dalvik VM 中运行，使得其他应用更难访问字符串对象。
-² 2. 在 Android 上，`AccessControlContext()` 不可用用。
-³ 3. Android SDK 不包含 `ScriptEngineManager`。
-⁴ 4. 对于尝试实现自己 LDAP 的 Android 应用，在原则上适用。
-
-# 246 附录 A Android
-
-| 指南 | 适用性 |
-| --- | --- |
 | 10. 不要使用 `clone()` 复制 | 适用 |
 | 11. 使用 `equals()` 比较键 | 适用 |
 | 12. 避免不安全或弱的算法 | 适用 |
@@ -7994,15 +7734,6 @@ doSomething(buffer);
 | 29. 注意数值提升行为 | 适用 |
 | 30. 开启对变长参数方法的编译时类型检查 | 适用 |
 | 31. 对值可能在后续发布中更改的常量应用 `public final` | 适用 |
-
-⁵ 5. Android 不使用 `AccessController`。
-⁶ 6. Android 不使用 `AccessController`。
-⁷ 7. 在 Android 上，优选使用 `openOutputFile()` 和 `openFileInput()` 进行文件/O。
-
-# 附录 A = Android
-
-| 指南 | 适用性 |
-| --- | --- |
 | 32. 避免包之间的循环依赖 | 适用 |
 | 33. 优先使用用户定义异常而非更通用的异常类型 | 适用 |
 | 34. 尝试从系统错误中优雅恢复 | 适用 |
@@ -8015,7 +7746,7 @@ doSomething(buffer);
 | 41. 对于返回数组或集合的方法，返回空数组或集合而非空 | 适用 |
 | 42. 仅对异常情况使用异常 | 适用 |
 | 43. 使用 `try-with-resources` 语句安全处理关闭资源 | 不适用 |
-| 44. 不要使用断言验证运行时错误的不存在 | 原则上适用⁹
+| 44. 不要使用断言验证运行时错误的不存在 | 原则上适用⁹ |
 | 45. 在条件表达式中使用相同类型作为第二第三操作数 | 适用 |
 | 46. 不要序列化系统资源句柄 | 适用 |
 | 47. 优先使用迭代器而非枚举 | 适用 |
@@ -8026,40 +7757,37 @@ doSomething(buffer);
 | 53. 避免在条件表达式中赋值 | 适用 |
 | 54. 为 if、for 或 while 语句体使用大括号 | 适用 |
 | 55. 不要在 if、for 或 while 条件后直接紧跟分号 | 适用 |
+| 56. 为每个与 case 标签关联的语句块带上 `break` 语句结束 | 适用 |
+| 57. 避免循环计数器的意外换行 | 适用 |
+| 58. 使用括号确定操作优先级 | 适用 |
+| 59. 不要对文件创建做出假设 | 在原则上适用¹⁰ |
+| 60. 在进行浮点数操作时将整数转换为浮点数 | 适用 |
+| 61. 确保 `clone()` 方法调用了 `super.clone()` | 适用 |
+| 62. 一致地且以可读的方式使用注释 | 适用 |
+| 63. 检测并移除多余的代码和值 | 适用 |
+| 64. 力求逻辑完整性 | 适用 |
+| 65. 避免在声明 `volatile` 引用时使用歧义或混乱的重载 | 适用 |
+| 66. 不要假设声明能保证被引用对象成员的安全发布 | 适用 |
+| 67. 不要假设 `sleep()`、`yield()` 或 `getState()` 方法提供同步语义 | 适用 |
+| 68. 不要假设取余运算符对于整数操作总是返回非负结果 | 适用 |
+| 69. 不要将抽象对象的等性与引用等性混淆 | 适用 |
+| 70. 理解位运算符与逻辑运算符之间的区别 | 适用 |
+| 71. 理解字符串加载时转义字符是如何被解释的 | 适用 |
+| 72. 不要使用重载方法来区分运行时类型 | 适用 |
+| 73. 永远不要混淆引用不可变性与被引用对象的不可变性 | 适用 |
+| 74. 谨慎使用序列化方法 `writeUnshared()` 和 `readUnshared()` | 适用 |
+| 75. 不要试图通过将本地引用变量设置为 `null` 来帮助垃圾收集器 | 适用 |
 
-⁸ 8. Android SDK 目前不支持 Java7，因此 Android 上不可用 `try-with-resources`。
+¹ 1 不规范代码示例在 Dalvik 上更难被利用，因为每个应用都在它们自己的 Dalvik VM 中运行，使得其他应用更难访问字符串对象。
+² 2. 在 Android 上，`AccessControlContext()` 不可用。
+³ 3. Android SDK 不包含 `ScriptEngineManager`。
+⁴ 4. 对于尝试实现自己 LDAP 的 Android 应用，在原则上适用。
+⁵ 5. Android 不使用 `AccessController`。
+⁶ 6. Android 不使用 `AccessController`。
+⁷ 7. 在 Android 上，优选使用 `openOutputFile()` 和 `openFileInput()` 进行文件 I/O。
+⁸ 8. Android SDK 目前不支持 Java 7，因此 Android 上不可用 `try-with-resources`。
 ⁹ 9. 在 Android 上，`assert()` 默认被忽略。
-
-
-
-
-
-# 指南
-
-## 适用性
-
-- 56. 为每个与 case 标签关联的语句set带上 `break` 语句结束：适用
-- 57. 避免循环计数器的意外换行：适用
-- 58. 使用括号确定操作优先级：适用
-- 59. 不要对文件创建做出假设：在原则上适用¹¹⁰
-- 60. 在进行浮点数操作时将整数转换为浮点数：适用
-- 61. 确保 `clone()` 方法调用了 `super.clone()`：适用
-- 62. 一致地且以可读的方式使用注释：适用
-- 63. 检测并移除多余的代码和值：适用
-- 64. 力求逻辑完整性：适用
-- 65. 避免在声明 `volatile` 引用时使用歧义或混乱的重载：适用
-- 66. 不要假设声明能保证被引用对象成员的安全发布：适用
-- 67. 不要假设 `sleep()`、`yield()` 或 `getState()` 方法提供同步语义：适用
-- 68. 不要假设取余运算符对于整数操作总是返回非负结果：适用
-- 69. 不要将抽象对象的等性与引用等性混淆：适用
-- 70. 理解位运算符与逻辑运算符之间的区别：适用
-- 71. 理解字符串加载时转义字符是如何被解释的：适用
-- 72. 不要使用重载方法来区分运行时类型：适用
-- 73. 永远不要混淆引用不可变性与被引用对象的不可变性：适用
-- 74.谨慎使用序列化方法 `writeUnshared()` 和 `readUnshared()`：适用
-- 75. 不要试图通过将本地引用变量设置为 `null` 来帮助垃圾收集器：适用
-
-10. 在 Android 上不可用 `java.nio.file`。
+¹⁰ 10. 在 Android 上不可用 `java.nio.file`。
 
 # 术语表
 
@@ -8067,149 +7795,205 @@ doSomething(buffer);
 
 **规范化 (canonicalization)**：将输入还原为已知的最等效简单形式。
 
-**类变量 (class variable)**：“类变量是在类声明中使用 `static` 关键字声明的字段，或者在接口声明中使用带有或不带 `static` 关键字的字段。当类或接口被准备好并初始化为默认值时，就会创建类变量。当类或接口卸载时，类变量实际上不再存在” [JLS 2013, §84.12.3, "Kinds of Variables]。
+**类变量 (class variable)**：“类变量是在类声明中使用 `static` 关键字声明的字段，或者在接口声明中使用带有或不带 `static` 关键字的字段。当类或接口被准备好并初始化为默认值时，就会创建类变量。当类或接口卸载时，类变量实际上不再存在” [JLS 2013, §84.12.3, "Kinds of Variables"]。
 
 **条件谓词 (condition predicate)**：由类的状态变量构建的表达式，线程继续执行该其必须为真。线程通过 `Object.wait()`、`Thread.sleep()` 或其他机制暂停执行，并在稍后恢复，推测是在条件满足且收到通知时 [Goetz 2006]。
 
-**控制表达式 (controlling expression)**：`if`、`while`、`do... while` 或 `switch` 语句的条件表达式中的顶层表达式。
+**控制表达式 (controlling expression)**：`if`、`while`、`do...while` 或 `switch` 语句的条件表达式中的顶层表达式。
 
 **数据竞态 (data race)**：“当程序包含两个没有按照先发生于（happens-before）关系排序的冲突访问时，称为包含数据竞态” [JLS 2013, §17.4.5, "Happens-before Order"]。
 
-**先发生于顺序 (happens-before order)**：“两个动作可以通过先发生于关系进行排序。如果一个动作先发生于另一个动作，那么第一个动作对第二个动作是可见且排在其之前的。需要注意的是，两个动作之间存在先发生于关系并不一定意味着它们在实现中必须按顺序发生。重排序产生的结果与合法执行一致，这并不是非法的……更具体地说，如果两个动作共享一个先发生于关系，那么对于任何与它们不共享先发生于关系的代码，它们并不一定看起来是按该顺序发生的。例如，一个与另一个线程发生数据竞态的线程中的写入，对于那些读取操作来说可能看起来是无序执行的” [JLS 2013, 17.4.5, "Happens-before Order"]
+**先发生于顺序 (happens-before order)**：“两个动作可以通过先发生于关系进行排序。如果一个动作先发生于另一个动作，那么第一个动作对第二个动作是可见且排在其之前的。需要注意的是，两个动作之间存在先发生于关系并不一定意味着它们在实现中必须按顺序发生。重排序产生的结果与合法执行一致，这并不是非法的……更具体地说，如果两个动作共享一个先发生于关系，那么对于任何与它们不共享先发生于关系的代码，它们并不一定看起来是按该顺序发生的。例如，一个与另一个线程发生数据竞态的线程中的写入，对于那些读取操作来说可能看起来是无序执行的” [JLS 2013, 17.4.5, "Happens-before Order"]。
 
 **堆内存 (heap memory)**：“可以在线程之间共享的内存称为内存或堆内存……所有实例、静态字段和数组元素都存储在内存中……局部变量、方法形式参数或异常处理参数永远不会在线程间共享，不受内存模型的影响” [JLS 2013, 17.4.1, "Shared Variables"]。
 
-**隐藏 (hide)**：如果一个类的字段与父类的字段具有相同的标识符，则该类字段隐藏了父类字段。该类无法访问该隐藏字段。同样，如果一个类的方法与父类方法具有相同的标识符且签名不兼容，则该类方法隐藏了父类方法。该类无法访问该隐藏方法。正式定义见 JLS, § 8.4.8.2，“Hiding (by Class Methods)”。对比覆盖。
 
-**不可变 (immutable)**：当应用于对象时，不可变意味着其状态在初始化后无法更改。如果满足以下条件，对象是不可变的：
+
+# 术语表
+
+## 隐藏 (hide)
+
+如果一个类的字段与父类的字段具有相同的标识符，则该类字段隐藏了父类字段。该类无法访问该隐藏字段。同样，如果一个类的方法与父类方法具有相同的标识符且签名不兼容，则该类方法隐藏了父类方法。该类无法访问该隐藏方法。正式定义见 JLS, § 8.4.8.2，“Hiding (by Class Methods)”。对比覆盖。
+
+## 不可变 (immutable)
+
+当应用于对象时，不可变意味着其状态在初始化后无法更改。如果满足以下条件，对象是不可变的：
+
 - 构建后无法修改状态；
 - 它的所有字段都是 `final`；
 - 它是正确构造的（`this` 引用在构造过程中没有逃逸） [Goetz 2006]。
 
 在技术上，可能存在一个所有字段并非 `final` 的不可变对象。`String` 就是此类，但这依赖于对良性数据竞态的微妙推理，需要对 Java 内存模型有深入理解。
 
-**活跃性 (liveness)**：每个操作或方法调用都能执行到完成而不受中断，即使它违反了安全性。
+## 活跃性 (liveness)
 
-**内存模型 (memory model)**：“确定内存访问如何排序以及何时保证可见的规则就是 Java 编程语言的内存模型” [Arnold 2006]。“内存模型描述了给定程序和该程序的执行轨迹，该执行轨迹是否为该程序的合法执行 [JLS 2013, §17.4, "Memory Model"]”。
+每个操作或方法调用都能执行到完成而不受中断，即使它违反了安全性。
 
-**规范化 (normalization)**：将数据有损地转换为其最已知（预期的）简单形式。当实现保持字符串的规范化形式时，可以确保等效字符串具有唯一的二进制表示） [Davis 2008]。
+## 内存模型 (memory model)
 
-**模糊 (obscure)**：如果两个标识符相同但遮蔽标识符没有遮蔽被遮蔽的标识符，则一个作用域标识符模糊了作用域内的另一个标识符。这可能发生在遮蔽标识符是变量而被遮蔽标识符是类型时（例如）。更多信息见 JLS, §6.4.2, "Obscuring" [JLS 2013]。
+“确定内存访问如何排序以及何时保证可见的规则就是 Java 编程语言的内存模型” [Arnold 2006]。“内存模型描述了给定程序和该程序的执行轨迹，该执行轨迹是否为该程序的合法执行 [JLS 2013, §17.4, "Memory Model"]”。
 
-**覆盖 (override)**：如果一个类的方法与父类方法具有兼容的签名，则该类方法覆盖了父类方法。被覆盖的方法仍然可以通过 `super` 关键字从类访问。正式定义见 JLS, §8.4.8.1, "Overriding (by Instance Methods)" [JLS 2013]。对比隐藏。
+## 规范化 (normalization)
 
-**发布对象 (publishing objects)**：“发布对象意味着使其对其作用范围之外的代码可用，方法是：将它的引用存储在其他代码可以找到的地方、从非私有方法返回它，或传递给另一个类的方法” [Goetz 2006]。
+将数据有损地转换为其最已知（预期的）简单形式。当实现保持字符串的规范化形式时，可以确保等效字符串具有唯一的二进制表示） [Davis 2008]。
 
-**竞态条件 (race condition)**：“通用竞态会导致预期确定的程序出现非确定执行和失败 [Netzer 1992]。当计算的正确性取决于运行时多个线程的相对计时或交织时，就会发生竞态条件” [Goetz 2006]。
+## 模糊 (obscure)
 
-**安全发布 (safe publication)**：“为了安全地发布对象，对象的引用及其状态必须同时对其他线程可见。正确构造的对象可以通过以下方式安全发布：
+如果两个标识符相同但遮蔽标识符没有遮蔽被遮蔽的标识符，则一个作用域标识符模糊了作用域内的另一个标识符。这可能发生在遮蔽标识符是变量而被遮蔽标识符是类型时（例如）。更多信息见 JLS, §6.4.2, "Obscuring" [JLS 2013]。
+
+## 覆盖 (override)
+
+如果一个类的方法与父类方法具有兼容的签名，则该类方法覆盖了父类方法。被覆盖的方法仍然可以通过 `super` 关键字从类访问。正式定义见 JLS, §8.4.8.1, "Overriding (by Instance Methods)" [JLS 2013]。对比隐藏。
+
+## 发布对象 (publishing objects)
+
+“发布对象意味着使其对其作用范围之外的代码可用，方法是：将它的引用存储在其他代码可以找到的地方、从非私有方法返回它，或传递给另一个类的方法” [Goetz 2006]。
+
+## 竞态条件 (race condition)
+
+“通用竞态会导致预期确定的程序出现非确定执行和失败 [Netzer 1992]。当计算的正确性取决于运行时多个线程的相对计时或交织时，就会发生竞态条件” [Goetz 2006]。
+
+## 安全发布 (safe publication)
+
+“为了安全地发布对象，对象的引用及其状态必须同时对其他线程可见。正确构造的对象可以通过以下方式安全发布：
+
 - 从静态初始化器初始化对象引用；
 - 将引用存储到 `volatile` 字段或 `AtomicReference` 中；
 - 将引用存储到正确构造对象的 `final` 字段中；
--或将引用存储到受锁适当保护的字段中” [Goetz 2006, §3.5 “Safe Publication”]。
+- 或将引用存储到受锁适当保护的字段中” [Goetz 2006, §3.5 “Safe Publication”]。
 
-**安全性 (safety)**：其主要目标是确保所有对象在多线程环境中保持一致的状态 [Lea 2000]。
+## 安全性 (safety)
 
-**清理 (sanitization)**：验证输入并将其转换为符合复杂子系统输入要求的表示形式。例如，数据库可能
+其主要目标是确保所有对象在多线程环境中保持一致的状态 [Lea 2000]。
 
+## 清理 (sanitization)
 
+验证输入并将其转换为符合复杂子系统输入要求的表示形式。例如，数据库可能在存储之前，要求对所有无效字符进行转义或消除。输入清理（Input sanitization）是指通过移除、替换、编码或转义字符，从输入中消除不希望的字符的过程。
 
+## 安全缺陷 (security flaw)
 
+一种可能构成潜在安全风险的软件缺陷 [Seacord 2013]。
 
-# 术语表
+## 敏感代码 (sensitive code)
 
-在存储之前，要求对所有无效字符进行转义或消除。输入清理（Input sanitization）是指通过移除、替换、编码或转义字符，从输入中消除不希望的字符的过程。
+任何执行会被不受信代码所禁止的操作的代码。此外也包括任何访问敏感数据的代码。例如，为了正确运行需要增强权限的代码通常被认为是敏感的。
 
-安全缺陷（security flaw）一种可能构成潜在安全风险的软件缺陷 [Seacord 2013]。
+## 敏感数据 (sensitive data)
 
-敏感代码（sensitive code）任何执行会被不受信代码所禁止的操作的代码。此外也包括任何访问敏感数据的代码。例如，为了正确运行需要增强权限的代码通常被认为是敏感的。
-
-敏感数据（sensitive data）任何必须保持安全的数据。此此安全要求的后果包括以下内容：
+任何必须保持安全的数据。此安全要求的后果包括以下内容：
 
 - 不允许不可信代码访问敏感数据
 - 不允许受信代码将敏感数据泄露给不可信代码
 
 敏感数据的示例包括密码和个人身份信息。
 
-遮蔽（shadow）如果两个标识符相同且都引用变量或方法，则一个作用域范围内的标识符会遮蔽包含作用域内的另一个标识符。被遮蔽的标识符在遮蔽标识符的作用域内无法访问。更多信息请参阅 JLS, §6.4.1，“Shadowing” [JLS 2013]。与 obscure（晦涩）形成对比。
+## 遮蔽 (shadow)
 
-同步（synchronization）“Java 编程语言提供了多种线程间的通信机制。这些方法中最基础的是同步，它通过监器（monitors）实现。Java 中的每个对象都与一个监器相关，线程可以锁定或解锁监器。一次只有一个线程可以持有监器的锁。任何其他尝试锁定该监器的线程都会被阻塞，直到它们获取该监器的锁为止” [JLS 2013], §17.1，“Synchronization”。
+如果两个标识符相同且都引用变量或方法，则一个作用域范围内的标识符会遮蔽包含作用域内的另一个标识符。被遮蔽的标识符在遮蔽标识符的作用域内无法访问。更多信息请参阅 JLS, §6.4.1，“Shadowing” [JLS 2013]。与 obscure（晦涩）形成对比。
 
-线程安全（thread-safe）一个对象被多个线程共享且不会发生数据竞态。“一个线程安全的对象在内部执行同步，因此多个线程可以通过其公共接口自由地访问，而无需额外的同步” [Goetz 2006]。不可变类（Immutable classes）根据定义即是线程安全的。可变类如果经过适当的同步，也可以是线程安全的。
+## 同步 (synchronization)
 
-受信代码（trusted code）由原始类加载器加载的代码，无论其是否构成 Java API。在本文中此含义被扩展为包括从已知实体获取并被赋予不可信代码所缺乏的权限的代码。根据此定义，不可信代码和受信代码可以在单个类加载器的命名空间中共存（不一定是原始类加载器）。在这种情况下，安全策略必须通过为受信代码分配适当权限，同时拒绝不可信代码的相同权限，来明确区分这种区别。
+“Java 编程语言提供了多种线程间的通信机制。这些方法中最基础的是同步，它通过监器（monitors）实现。Java 中的每个对象都与一个监器相关，线程可以锁定或解锁监器。一次只有一个线程可以持有监器的锁。任何其他尝试锁定该监器的线程都会被阻塞，直到它们获取该监器的锁为止” [JLS 2013], §17.1，“Synchronization”。
 
-不可信代码（unrusted code）来源未知的代码，在执行时可能导致某些危害。不可信代码并不总是恶意的，但通常很难自动确定。因此，不可信代码应该运行在沙箱环境中。
+## 线程安全 (thread-safe)
 
-volatile “对一个 volatile 字段的写操作发生在该字段的每一个后续读取之前（happens-before）” [JLS 2013; §17.4.5, "Happens-before Order"]。“代表线程对 volatile 变量的主拷贝执行的操作，是由主内存严格按照线程请求的顺序执行的” [JVMSpec 1999]。对 volatile 变量的访问是顺序一致的，这也意味着这些操作不是来自编译器优化的结果。将变量声明为 volatile 可确保如果任何线程修改了该变量，所有线程都能看到变量的最新值。volatile 保证了原始值的原子性读写，但不保证复合操作（如变量自增，即读-修改-写序列）的原子性。
+一个对象被多个线程共享且不会发生数据竞态。“一个线程安全的对象在内部执行同步，因此多个线程可以通过其公共接口自由地访问，而无需额外的同步” [Goetz 2006]。不可变类（Immutable classes）根据定义即是线程安全的。可变类如果经过适当的同步，也可以是线程安全的。
 
-漏洞（vulnerability）“一组允许攻击者违反显式或隐式安全策略的条件” [Seacord 2013]。
+## 受信代码 (trusted code)
 
-## 参考文献
+由原始类加载器加载的代码，无论其是否构成 Java API。在本文中此含义被扩展为包括从已知实体获取并被赋予不可信代码所缺乏的权限的代码。根据此定义，不可信代码和受信代码可以在单个类加载器的命名空间中共存（不一定是原始类加载器）。在这种情况下，安全策略必须通过为受信代码分配适当权限，同时拒绝不可信代码的相同权限，来明确区分这种区别。
+
+## 不可信代码 (untrusted code)
+
+来源未知的代码，在执行时可能导致某些危害。不可信代码并不总是恶意的，但通常很难自动确定。因此，不可信代码应该运行在沙箱环境中。
+
+## volatile
+
+“对一个 volatile 字段的写操作发生在该字段的每一个后续读取之前（happens-before）” [JLS 2013; §17.4.5, "Happens-before Order"]。“代表线程对 volatile 变量的主拷贝执行的操作，是由主内存严格按照线程请求的顺序执行的” [JVMSpec 1999]。对 volatile 变量的访问是顺序一致的，这也意味着这些操作不是来自编译器优化的结果。将变量声明为 volatile 可确保如果任何线程修改了该变量，所有线程都能看到变量的最新值。volatile 保证了原始值的原子性读写，但不保证复合操作（如变量自增，即读-修改-写序列）的原子性。
+
+## 漏洞 (vulnerability)
+
+“一组允许攻击者违反显式或隐式安全策略的条件” [Seacord 2013]。
+
+# 参考文献
 
 - [Allen 2000] Vermeulen, Allan, Scott W. Ambler, Greg Bumgardner, Eldon Metz, Trevor Misfeld, Jim Shur, and Patrick Thompson. The Elements of Java™ Style. New York, NY: Cambridge University Press (2000).
+
 - [Apache 2013] Apache Tika: A Content Analysis Toolkit. The Apache Software Foundation (2013). http://tika.apache.org/index.html
+
 - [API 2006] Java Platform, Standard Edition 6 API Specification. Oracle (2006/2011). http://docs.oracle.com/javase/6/api/
+
 - [API 2013] Java™ Platform, Standard Edition 7 API Specification. Oracle (2013). http://docs.oracle.com/javase/7/docs/api/index.html
+
 - [Arnold 2006] Arnold, Ken, James Gosling, and David Holmes. The Java™ Programming Language, Fourth Edition. Boston: Addison-Wesley (2006).
+
 - [Bloch 2001] Bloch, Joshua. Effective Java™: Programming Language Guide. Boston, MA: Addison-Wesley (2001).
+
 - [Bloch 2005] Bloch, Joshua, and Neal Gafter. Java’s Puzzlers: Traps, Pitfalls and Corner Cases. Boston, MA: Addison-Wesley (2005).
+
 - [Bloch 2008] Bloch, Joshua. Effective Java™: Programming Language Guide, Second Edition. Boston, MA: Addison-Wesley (2008).
+
 - [Campione 1996] Campione, Mary, and Kathy Walrath. Java Tutorial: Object-Oriented Programming. The, MA. (1996).
+
 - [Chan 1998] Chan, Patrick, Rosanna Lee, and Douglas Kramer. The Java Platform: Libraries, Volume I, Second Edition. River Edge, NJ: World Scientific (1998).
+
 - [Conventions 2009] Code, John, Peter Kessler, and Tony Printeis. Java Conventions. Oracle (2009).
+
 - [Core 2003] Core, Cay, Horstmann, and David Lea. Core Java, Seventh Edition. Saddle River, NJ: Prentice Hall (2003).
+
 - [Daconta 2007] Daconta, Michael, Gary S., and Donald Richardson. Managing Volatility: Hints. (2007).
+
 - [Development 2005] Development, Joshua, and Al Niessner. Java Puzzlers. (2005).
+
 - [ESA 2003] ESA, Klaus. Architecture, API Design, and Implementation. (2003).
+
 - [Flanagan 2005] Flanagan, David. Java in a Nutshell. San Francisco, CA: O'Reilly (2005).
+
 - [FindBugs 2008] FindBugs, A Taxonomy of Errors. (2008).
+
 - [Fortify 2013] Fortify, A Use of Security. (2013).
+
 - [GNU 2013] GNU, Klaus, and Al Niessner. Syntactic Use of Constructs. (2013).
+
 - [Goetz 2004] Goetz, Brian. Theory and Practice. (2004).
+
 - [Goetz 2006] Goetz, Brian, Tim Peiers, Joshua Bloch, and David Lea. Java Concurrency in Practice. Boston, MA: Addison-Wesley (2006).
+
 - [Goetz 2007] Goetz, Brian. Memory Model. (2007).
 
+- [JLS 2013] Gosling, James, Bill Joy, Guy Steele, Gilad Bracha, and Alex Buckley. The Java Language Specification: Java SE 7 Edition. Oracle America, Inc. (2013). http://docs.oracle.com/javase/java/specs/se7/html.index
+
+- [JVMSpec 1999] The Java™ Virtual Machine Specification, Second Edition. Sun Microsystems, (1999). http://docs.oracle.com/jave/specs/
+
+- [Kalinovsky 2004] Kalinovsky, Alex. Cover Java™: Techniques for Decompiling, Patching, and Reverse Engineering. Indianapolis, IN: SAMS (2004).
+
+- [Knoernschild 2002] Knoernschild, Kirk. Java™: Design: Objects, UML, and Process. Boston, MA: Addison-Wesley (2002).
+
+- [Lea 2000] Lea, Doug. Concurrent Programming in Java: Design Principles and Second, Edition. Boston, MA: Addison-Wesley (2000).
+
+- [Lo 2005] Lo, Chloe-Tian Dan, Dwitas Srisa-an, and J. Morris Chang. Security Issues in Garbage Collection. STC Crosstalk (2005). www.eng.auburn.edu/users/hamilton/security/papers/STC%20ConcurrentTalk%20-%20Security%20Issues%20inGarbage%20Collection%20-%20%20Oct%202005.pdf
+
+- [Long 2012] Long, Fred, Dhruv Mohindra, Robert C. Seacard, Dean F. Sutherland, and David Svoboda. The CERT® Oracle® Coding Standard for Java”. Boston, MA: Addison-Wesley (2012).
+
+- [Manion 2013] Manion, Art. “Anatomy of Java Exploits,” CERT/CC Blog (2013). www.cert.org/certc/2013/01/anatomy_of_java_exploits.html
+
+- [McGraw 1999] McGraw, Gary, and Ed Felten. Securing Java: Getting Down to Mobile with Code. Second Edition. New York, NY: Wiley (1999).
+
+- [Mettler 2010] Mettler, Adrian, and David Wagner. “Class Properties for Security Review in an Object-Capability Subset of Java.” Proceedings of the ACM SIGPLAN Workshop on Programming Languages and Analysis for Security (CLAS '10). New York, NY: ACM (2010). DOI: 10.1145/1814217.1814224. http://dl.acm.org/citation.cfm?id=1814217.1814224
+
+- [Miller 2009] Miller, Alex. Java™ Platform Concurrency Gotchas. JavaOne Conference (2009).
+
+- [Netzer 1992] Netzer, Robert H. B., and Barton P. Miller. “What Are Race Conditions? Some Issues and Formalization.” ACM Letters on Programming Languages and Systems 1(1):74–88 (1992). http://dl.acm.org/citation?id=130616.130623
+
+- [Oaks2001] Oaks, Scott. Java™. Security. Sebastopol, CA: O’Reilly (2001).
+
+- [Oracle 2010a] Java SE6 HotSpot™ Virtual Machine Garbage Collection Tuning. Oracle (2010). www.oracle.com/technwork/java/javase/gc-tuning-6-140523.html
+
+- [Oracle 2010b] New I/O APIs. Oracle (2010). http://docs.oracle.com/javase/1.5/0/docs/nio/
 
 
 
-[content]
-
-# 258
-
-## 参考文献
-
-[JLS 2013] Gosling, James, Bill Joy, Guy Steele, Gilad Bracha, and Alex Buckley. The Java Language Specification: Java SE 7 Edition. Oracle America, Inc. (2013). http://docs.oracle.com/javase/java/specs/se7/html.index
-
-[JVMSpec 1999] The Java™ Virtual Machine Specification, Second Edition. Sun Microsystems, (1999). http://docs.oracle.com/jave/specs/
-
-[Kalinovsky 2004] Kalinovsky, Alex. Cover Java™: Techniques for Decompiling, Patching, and Reverse Engineering. Indianapolis, IN: SAMS (2004).
-
-[Knoernschild 2002] Knoernschild, Kirk. Java™: Design: Objects, UML, and Process. Boston, MA: Addison-Wesley (2002).
-
-[Lea 2000] Lea, Doug. Concurrent Programming in Java: Design Principles and Second, Edition. Boston, MA: Addison-Wesley (2000).
-
-[Lo 2005] Lo, Chloe-Tian Dan, Dwitas Srisa-an, and J. Morris Chang. Security Issues in Garbage Collection. STC Crosstalk (2005). www.eng.auburn.edu/users/hamilton/security/papers/STC%20ConcurrentTalk%20-%20Security%20Issues%20inGarbage%20Collection%20-%20%20Oct%202005.pdf
-
-[Long 2012] Long, Fred, Dhruv Mohindra, Robert C. Seacard, Dean F. Sutherland, and David Svoboda. The CERT® Oracle® Coding Standard for Java”. Boston, MA: Addison-Wesley (2012).
-
-[Manion 2013] Manion, Art. “Anatomy of Java Exploits,” CERT/CC Blog (2013). www.cert.org/certc/2013/01/anatomy_of_java_exploits.html
-
-[McGraw 1999] McGraw, Gary, and Ed Felten. Securing Java: Getting Down to Mobile with Code. Second Edition. New York, NY: Wiley (1999).
-
-[Mettler 2010] Mettler, Adrian, and David Wagner. “Class Properties for Security Review in an Object-Capability Subset of Java.” Proceedings of the ACM SIGPLAN Workshop on Programming Languages and Analysis for Security (CLAS '10). New York, NY: ACM (2010). DOI: 10.1145/1814217.1814224. http://dl.acm.org/citation.cfm?id=1814217.1814224
-
-[Miller 2009] Miller, Alex. Java™ Platform Concurrency Gotchas. JavaOne Conference (2009).
-
-[Netzer 1992] Netzer, Robert H. B., and Barton P. Miller. “What Are Race Conditions? Some Issues and Formalization.” ACM Letters on Programming Languages and Systems 1(1):74–88 (1992). http://dl.acm.org/citation?id=130616.130623
-
-[Oaks2001] Oaks, Scott. Java™. Security. Sebastopol, CA: O’Reilly (2001).
-
-## 参考文献
-
-[Oracle 2010a] Java SE6 HotSpot™ Virtual Machine Garbage Collection Tuning. Oracle (2010). www.oracle.com/technwork/java/javase/gc-tuning-6-140523.html
-
-[Oracle 2010b] New I/O APIs. Oracle (2010). http://docs.oracle.com/javase/1.5/0/docs/nio/
+# 参考文献
 
 [Oracle 2011a] Java™ PKI Programmer's Guide. Oracle (2011). http://docs.oracle.com/com/javase/6/docs/technotes/guides/security/certpath/CertPathProgGuide.html
 
@@ -8279,69 +8063,101 @@ volatile “对一个 volatile 字段的写操作发生在该字段的每一个�
 
 # 索引
 
-+   Symbols
+## Symbols
+
 & (AND)
-bitwise vs. logical operators, 225–228
-precedence of operation, 186
+
+- bitwise vs. logical operators, 225–228
+- precedence of operation, 186
+
 && (AND)
-assignments in conditional expressions, 176–177
-bitwise vs. logical operators, 225–228
+
+- assignments in conditional expressions, 176–177
+- bitwise vs. logical operators, 225–228
+
 | (OR)
-bitwise vs. logical operators, 225–228
-numeric promotion behavior, 110
-precedence of operation, 186
+
+- bitwise vs. logical operators, 225–228
+- numeric promotion behavior, 110
+- precedence of operation, 186
+
 || (OR)
-assignments in conditional expressions, 176
-bitwise vs. logical operators, 225–228
+
+- assignments in conditional expressions, 176
+- bitwise vs. logical operators, 225–228
+
 % (remainder operator), 220–222
+
 () (parentheses), 186–188
+
 */ (asterisk backslash), 196–197
+
 ' (single quote), 27
+
 " (double quotes)
-output sanitation, 19
-preventing XPath injection, 27
+
+- output sanitation, 19
+- preventing XPath injection, 27
+
 / (backslash), 27
+
 /* (asterisk backslash), 196–197
+
 // (double backslash), 196
+
 ; (semicolon), 180–181
+
 ? (conditional operator), 153, 176
+
 != (equality operator), 222
 
-+   ^ (caret), 186
+^ (caret), 186
+
 { (braces), 178–180
+
 ¤ (PI), 139–140
+
 <> (angle brackets)
-output sanitation, 19
-preventing XPath injection, 27
+
+- output sanitation, 19
+- preventing XPath injection, 27
+
 << (comparison operators), 186
+
 = (assignment operator), 176–178
+
 == (equality operator), 70, 222–225
+
 >> (comparison operators), 186
 
-A
+## A
+
 abstract classes, 126–127
+
 Abstract object equality, 222–225
+
 Abstract Window Toolkit (AWT), 95
+
 Access control
-avoiding granting excess privileges, 50–53
-calling security-sensitive methods with
-validated arguments, 11–13
-java.util.Date, 33
-minimize accessibility of classes and their
-members, 84–89
+
+- avoiding granting excess privileges, 50–53
+- calling security-sensitive methods with validated arguments, 11–13
+- java.util.Date, 33
+- minimize accessibility of classes and their members, 84–89
+
 AccessControlContext
-avoiding granting excess privileges, 52–53
-preventing code injection, 22
+
+- avoiding granting excess privileges, 52–53
+- preventing code injection, 22
+
 AccessController
-doPrivilegedObject(), 51
-SecurityManager, 68
 
+- doPrivilegedObject(), 51
+- SecurityManager, 68
 
+## 高级加密标准 (AES), 36–37
 
-
-# 高级加密标准 (AES), 36–37
-
-# ASCII 字符集, 168
+## ASCII 字符集, 168
 
 allowedType, 14
 
@@ -8360,18 +8176,27 @@ AND (&)
 假设。参见 程序员的误区
 
 + 位运算运算符 vs. 逻辑运算符, 225–228
+
 + 星号反斜杠 (\*/), 196–197
+
 + 运算优先级, 186–187
+
 + AtomicByteArray, 211
+
 + AND (&)
 
 原子性 (Atomicity)
+
 + 条件表达式中的赋值, 句定义, 249
+
 + 176–177
+
 + 保持复合操作, 213
+
 + 位运算运算符 vs. 逻辑运算符, 225–228
 
 AtomicReferenceArray, 33–34
+
 + Android 指南适用性, 245–246
 
 属性 (Attributes), 99–
@@ -8383,547 +8208,1011 @@ AtomicReferenceArray, 33–34
 + 输出消毒, 19
 
 身份验证 (Authentication)
-+ 防止 XPath 注入, 27
+
 + 防止 LDAP 注入, 29–31
+
 + 文档线程安全性, 89–96
+
 + 防止 XPath, 24
+
 + (suppressWarnings) 的范围, 82–84
+
 + AutoDetectParser, 15–16
+
 + Apache Generic 和 Tomcat 漏洞, 130
+
 + 避免使用歧义或混淆的接口, 125–128
+
 + 方法重载, 205–208
+
 + 最小化类及其成员的可访问性, 85
+
 + 避免变量可变长度的歧义重载, 118–121
+
 + 方法, 171–173
+
 + 优先使用用户而非枚举, 159–161
-+ 避免包之间的循环依赖, 118–121（等待，正文中重复）
+
++ 避免包之间的循环依赖, 118–121
+
 + 对方法的返回值提供反馈, 96–99
+
 + 避免授予过度权限, 50–53
+
 + 避免带内错误指示器, 173–175
+
 + 指南的范围, xv
+
 + 避免无意中包装循环计数器, 183–186
+
 + SecurityManager, 70–71
+
 + AWT (抽象窗口工具包), 95
+
 + writeString()
 
-# B
+## B
+
 + Applet 安全管理器, 68
+
 + 反斜杠 (/), 27
+
 + appletviewer, 70
+
 + 后置星号 (\*/), 196–197
+
 + 任意代码
+
 + SecurityManager 的向后兼容性, 68
+
 + 输出消毒, 16–19
+
 + BasePermission, 65–67
+
 + 防止上传, 13–16
+
 + 参数, 11–13
+
 + 算术运算
+
 + 小心使用具有视觉误导性的标识符
+
 + 浮点数运算, 191–194
+
 + 和, 167–171
+
 + 运算优先级, 186–188
+
 + 位运算运算符 vs. 逻辑运算符, 225–228
+
 + ArrayIndexOutOfBoundsException, 147
+
 + Bloch, Joshua
+
 + ArrayList
+
 + 方法重载, 207
+
 + 最小化 (SuppressWarnings) 的范围, 83–84
+
 + 线程安全性注解, 92
+
 + 块注释, 196–198
+
 + 从长寿命容器对象中移除短寿命对象, 163–164
 
 布尔 (Boolean)
+
 + 数组
+
 + 返回空而非 null, 143–146
+
 + 方法返回值的反馈, 97
+
 + 使用有意义的符号常量来表示, 138
+
 + 安全发布保证和 volatile, 210–211
+
 + 条件表达式, 153–154
+
 + 大括号 ({}), 178–180
 
-# 索引 (Index)
+## 索引 (Index)
+
 break 语句, 181–183
+
 BufferedReader (Long)
+
 + 字面量, 167–168
+
 + 文件识别, 100
+
 checkMetaData(), 15
+
 checkPackageAccess(), 62
+
 缓冲区 (Buffers)
+
 checkPassword(), 41
+
 + 帮助垃圾回收器, 243–244
+
 类加载器, 56–58, 60–62
+
 + 限制敏感数据的寿命, 2–5
+
 类变量, 249
+
 类 (Classes)
+
 + 短寿命且不常用的对象和, 162–163
+
 + 最小化可访问性, 84–89
-+ 最小化 @SuppressWarnings 的范围, 82–83
+
+
+
+# 索引
+
+## A
+
++ 最小化 `@SuppressWarnings` 的范围, 82–83
+
+## B
+
 错误 (Bugs), xv–xvi
+
 字节数组, 40–41
+
 字节码验证器, 1
+
 安全性, 1
-SecurityManager, 67–72
+
+`SecurityManager`, 67–72
+
 回调方法 (Callback methods), 72–77
-CallbackAction, 72–77
+
+`CallbackAction`, 72–77
+
 规范化 (Canonicalization)
+
 + 敏感信息的客户端源, 5–9
+
 + 定义, 213–264
+
 + 发布前经过精心设计的接口, 125–128
+
 + 受信的方法参数, 31–34
+
 可关闭资源 (Closeable resources), 148–151
-case, 181–183
-catch, 146–147
+
+`case`, 181–183
+
+`catch`, 146–147
+
 + 探测并移除多余的, 198–202
+
 垃圾回收, 128–130
+
 注入, 20–23
+
 源, 50–51
+
 样式, xvii
-可理解性. 124
+
+可理解性, 124
+
 带内错误指示, 173
+
 过早优化, 140–141
+
 防止代码, 20
+
 迭代器 vs. 枚举, 159–161
+
 剩余输入为空, 143
+
 不可变类的包装, 9
-try-with-resource 语句, 148
+
+`try-with-resource` 语句, 148
+
 命令行安全管理器
+
 复合运算符, 109, 111
+
 并发注解, 90
-DataElement, 164–165
-DateFormat, 214–215
+
+`DataElement`, 164–165
+
+`DateFormat`, 214–215
+
 定义, 249
+
 死代码, 198–202
+
 条件表达式, 175–178
+
 位运算运算符 vs. 逻辑运算符, 225–228
+
 相同和第三操作数的类型, 153–157
+
 声明, 134–137
+
 定义, 181–183
-将 public final 用于
-115–118
+
+将 `public final` 用于, 115–118
+
 在程序逻辑中编码, 96–99
+
 始终对方法的返回值提供反馈, 96–99
+
 控制表达式, 95, 175–248
+
 避免包之间的循环依赖, 118–121
+
 整数转换为浮点数运算, 191–194
+
 128–152
+
 Cookie, 5–9
+
 复制
+
 它们, 125–138
-通过 clone() 提供功能, 236–238
+
+通过 `clone()` 提供功能, 236–238
+
 不要为枚举的序数赋予意义, 106–108
-计数器(), 81–82
+
+`计数器()`, 81–82
+
 文档线程安全性并尽可能使用注解, 89–96
+
 使用安全管理器创建沙箱, 67–72
-createNew(), 189–190
+
+`createNew()`, 189–190
+
 各种数组参数类型, 112–115
+
 使用多个属性识别文件, 99–106
+
 知识共享署名许可, 90
+
 输出跨站脚本 (XSS) 攻击, 16–19
+
 输出消毒, 15–27
+
 成员, 84–89
+
 存储未加密的敏感信息, 5–6
-最小化变量范围 ~SuppressWarnings
+
+最小化变量范围 ~`@SuppressWarnings`
+
 加密算法, 36–37
+
 加密哈希函数, 37–38
+
 加密密钥比较, 34–35
+
 概述, 79
+
 自定义安全管理器, 71
+
 自定义安全权限, 64–67
+
 循环依赖, 118–121
+
 编写有利于垃圾回收的代码, 128–130
+
 为定义自定义安全权限
+
 D
+
 DAG (有向无环图), 118
+
 数据加密标准 (DES), 36
+
 定义, 249
+
 数据竞态。参见 竞态条件
+
 防止, 96
+
 拒绝服务 (DoS)
+
 双引号 (")
+
 使用具有视觉误导性的标识符和
+
 文件识别, 100
+
 限制敏感数据的寿命, 2–4
+
 帮助垃圾回收器, 243–244
+
 限制敏感数据的寿命, 2–5
+
 相同和和第三操作数的类型, 210–211
+
 逻辑完整性, 203
+
 防御性编程
+
 138–142
 
-
-
-
-
-# 268
-# 索引
-
 ## Exceptions
-float, 108–111
+
+`float`, 108–111
+
 关于文件创建的假设, 189–190
+
 浮点数
+
 - 避免带内错误指示器, 173
+
 - 将整数转换为, 199–194
+
 - 从系统错误中优雅恢复, 123–125
+
 - 使用有意义的符号常量来表示, 138
+
 - 对产生的方法值提供反馈, 96–99
+
 对于
-- try-with-resources 语句, 148–151
+
+- `try-with-resources` 语句, 148–151
+
   - 用于异常, 146–148
+
 - 用户定义类型与通用类型, 121–123
+
 - 在条件表达式中的赋值, 175
+
 - 分别声明变量, 136–137
+
 - 后面不在此加分号, 180–181
 
-# F
-false, 97
-循环计数器的无意包装, 183–186
-联邦资助的研究开发中心 (FRRDC), xvii
-最小化变量范围, 80–82
-- 使用大括号用于, 178–180
-- 使用异常处理特殊情况, 147
-反馈, 96–99
-字段遮蔽 (Field shadowing), 123–133
-“File not found”, 12
-FileChannel.size(), 10
+## F
 
-# G
-fileID, 103–104
+`false`, 97
+
+循环计数器的无意包装, 183–186
+
+联邦资助的研究开发中心 (FRRDC), xvii
+
+最小化变量范围, 80–82
+
+- 使用大括号用于, 178–180
+
+- 使用异常处理特殊情况, 147
+
+反馈, 96–99
+
+字段遮蔽 (Field shadowing), 123–133
+
+“File not found”, 12
+
+`FileChannel.size()`, 10
+
+## G
+
+`fileID`, 103–104
+
 垃圾收集 (GC)
+
 - 文件名, 100
+
 - 有利于垃圾回收的代码, 128–130
+
 - 从长寿命容器对象中移除短命对象, 163–164
-- 将局部变量引用置为 null, 243–244
+
+- 将局部变量引用置为 `null`, 243–244
+
 - 关于创建的假设, 189–190
+
 - 不序列化系统资源句柄, 157–158
+
 - 短命且频繁使用的对象, 62
+
 分代垃圾收集, 129
+
 识别多个文件属性, 99–106
+
 泛型类型参数, 112–115
-- getAll(), 9–11
-- getConnection(), 59–60
-- getData(), 206–208
-- getFirst(), 210–211
-- getState(), 218–220
-- getTime(), 33
+
+- `getAll()`, 9–11
+
+- `getConnection()`, 59–60
+
+- `getData()`, 206–208
+
+- `getFirst()`, 210–211
+
+- `getState()`, 218–220
+
+- `getTime()`, 33
+
 - 防止任意上传, 13–16
-Files.isSameFile(), 101–102
-- getVersion(), 116–117
+
+`Files.isSameFile()`, 101–102
+
+- `getVersion()`, 116–117
+
 Goetz, Brian
+
 - 记录锁定策略, 92
+
 - 记录等待-通知协议, 95
+
 - 授予权限, 50–53
-@GuardedBy, 1, 92–93
-final
-- public final 在常量上的应用, 115–118
+
+`@GuardedBy`, 1, 92–93
+
+`final`
+
+- `public final` 在常量上的应用, 115–118
+
 - 引用不可变性与被引用对象的不可变性, 234–238
-final class
+
+`final class`
+
 - 不要依赖可以被不可信代码覆盖的方法, 47–49
+
 - 最小化类及其成员的可访问性, 86–87
+
 终结器 (Finalizers), 243
 
-# H
-finally 块
+## H
+
+`finally` 块
+
 - 从系统错误中优雅恢复, 123–124
+
 先行发生关系 (Happens-before relationship), 211–212, 252
+
 哈希函数, 37–42
-- 与 try-with-resources 语句, 149
-findClass(), 61–62
-hashCode()
-- 使用 break 语句结束与 case 标签关联的所有语句set, 181–183
+
+- 与 `try-with-resources` 语句, 149
+
+`findClass()`, 61–62
+
+`hashCode()`
+
+- 使用 `break` 语句结束与 `case` 标签关联的所有语句set, 181–183
+
 - 抽象对象等性与引用质量, 222
+
 修复, 125
+
 - 可以被不可信代码覆盖的方法, 44–46, 48–49
+
 Flashback, 33
 
-# 269
-# 索引
-hashKey, 221–222
+## I
+
+`hashKey`, 221–222
+
 堆内存, 250
-heavilyUsedBuffer, 162
-Hide, 132, 250
+
+`heavilyUsedBuffer`, 162
+
+`Hide`, 132, 250
+
 HTML 文件, 13–16
+
 HTML 渲染器, 26
-HttpSession, 7–8
+
+`HttpSession`, 7–8
+
 循环计数器的无意包装, 184–186
+
 使用有意义的符号常量来表示, 138
+
 数值提升行为, 108–112
+
 整数操作数, 220–222
+
 程序员的意图
+
 Java 指南, 并在 xiv
+
 - 视觉上误导的标识符和字量值, 168
-# I
+
 标识符
+
 - 小心使用视觉上误导的符号, 167–171
+
 - 不在子作用域中遮蔽或隐藏, 132–134
+
 - 使用多个文件属性, 99–106
-identityHashMap, 46–47
-if
+
+`identityHashMap`, 46–47
+
+`if`
+
 - 在条件表达式中的赋值, 173–177
+
 - 位运算运算符与逻辑运算符, 227
+
 - 不要紧随其后加分号, 180–181
+
 接口
+
 - 严谨设计, 125–128
+
 - 包之间的循环依赖, 119–121
+
 字符串池字符串 (Interned strings), 223–225
-isSameFile(), 101–102
+
+`isSameFile()`, 101–102
+
 迭代器 (Iterators), 159–161
+
 -J Flag
+
 - 逻辑完整性, 202
+
 - 使用大括号用于, 178–180
+
 不可变性 (Immutability)
+
 - 将引用与被引用的对象混淆, 234–239
+
 - 定义, 252
+
 - 短命对象, 129
+
 - 线程安全注解, 91–92
+
 - 敏感可变类的不可变包装器, 9–10
-@Immutable, 91
-imod(), 221–222
+
+`@Immutable`, 91
+
+`imod()`, 221–222
+
 带内错误索引, 173–175
+
 索引值, 80–82
+
 间接缓冲区, 162–163
+
 初始化, 135
+
 注入攻击
+
 - Java 安全, 1–2
+
 - 防止代码, 20–23
+
 - 防止 LDAP, 27–31
+
 - 防止 XPath, 23–27
-# J
+
+## J
+
 Java Concurrency in Practice (Goetz), 90
+
 Java 语言规范 (JLS)
+
 - 小心使用视觉上误导的标识符和字量值, 167–168
+
 - 转义字符, 229
-- final 字段和常量, 116
+
+- `final` 字段和常量, 116
+
 - 数值提升行为, 108
+
 - 关于遮蔽, 132
+
 枚举相关的序数 (ordinal), 106
+
 - 余数运算符, 220–221
+
 - 确定条件表达式结果类型的规则, 153–154
+
 - 指南, xv
+
 - 安全, 1
-- sleep() 和 yield(), 215
-- String.intern(), 224
+
+- `sleep()` 和 `yield()`, 215
+
+- `String.intern()`, 224
+
 - 异常类型, 123
-- volatile 字段, 209
+
+- `volatile` 字段, 209
+
 Java 命名数据接口 (JNDI)
+
 - 字符, 27–28
+
 Java SE 7 平台, xv
+
 - 从系统错误中优雅恢复, 123
+
 - Java 虚拟机 (JVM)
+
 - 密码存储, 40
+
 - 的安全的安全, 56
+
 - 验证, 152
+
 - 归一化, 30–31
+
 不安全的加密算法, 36–37
+
 安装安全, 69–72
+
 整数
+
 - 浮点运算, 191–194
 
-# 270
-# 索引
-java.io, 189
-java.io.File, 99
-java.nio, 162
-java.nio.file.Path, 99
-java.util.Date, 33
-java.util.regex.Pattern, 228
-javax, 20
+`java.io`, 189
+
+`java.io.File`, 99
+
+`java.nio`, 162
+
+`java.nio.file.Path`, 99
+
+`java.util.Date`, 33
+
+`java.util.regex.Pattern`, 228
+
+`javax`, 20
+
 JavaScript 注入, 20–23
+
 JCIP (Java Concurrency in Practice), 90
+
 JLS (Java Language Specification), Java
+
 - 即时编译器 (JITs), 243
-long, 108–109
+
+`long`, 108–109
+
 长寿命容器对象, 163–165
+
 - 逻辑完整性, 203–204
+
 维护, 118
+
 数学表达式
+
 - 垃圾收集, 128–130
+
 MD5 (Message-Digest Algorithm), 38
-OutOfMemoryError, 125
+
+`OutOfMemoryError`, 125
+
 - 从长寿命容器对象中移除短命对象, 163–165
-# L
+
+## L
+
 Key 类, 34–35
+
 大型对象, 129
+
 LDAP (Lightweight Directory Protocol)
+
 - 注入, 27–31
-LicenseManager, 44–47
+
+`LicenseManager`, 44–47
+
 Lightweight Directory Access Protocol (LDAP)
+
 - 注入, 2–5
-List, 207, 232–233
+
+`List`, 207, 232–233
+
 字量值
+
 - 小心使用视觉上误导的, 167–171
+
 - 使用有意义的符号常量表示, 138–142
+
 活跃性 (Liveness), 243, 250
+
 加载库, 65–67
+
 锁定策略, 92–94
+
 逻辑完整性, 202–204
-volatile, 250
-MessageDigest.Algorithm (MD5), 38
+
+`volatile`, 250
+
+`MessageDigest.Algorithm` (MD5), 38
+
 消息, 121–122
+
 元字符
+
 - 防止 LDAP 注入, 27–28
+
 - 防止 XPath 注入, 27
+
 方法
+
 - 类及其成员的可访问性, 84–89
+
 - 变量个数的歧义重载, 171–173
+
 - 使用验证的参数调用安全敏感方法, 11–13
+
 - 不可信参数, 31–34
-- 确保 clone() 调用 super.clone(), 194–196
+
+- 确保 `clone()` 调用 `super.clone()`, 194–196
+
 - 暴露给不可信代码, 56–64
+
 结果反馈, 96–99
+
 带内错误指示器, 173
+
 - 使用重载来区分, 231–233
 
-# 271
-# 索引
 重载, 206–208
+
 被不可信代码覆盖, 44–50
+
 回调的权限, 72–77
-返回空数组或集合而非 null, 143–146
-@Warnings, 82, 84–84
+
+返回空数组或集合而非 `null`, 143–146
+
+`@Warnings`, 82, 84–84
+
 可变参数, 112
+
 最小化类及其成员的可访问性, 84–89
+
 最小化变量范围, 80–82
+
 误解, 见程序员误解
+
 误导性字符, 168
+
 模型-视图-控制器 (MVC), 17
+
 模块化接口, 127
-move(), 99
+
+`move()`, 99
+
 乘法
+
 - 整数转浮点, 191–192
+
 数值提升行为, 109–110
+
 可变类
-- final 变量和, 234–235
+
+- `final` 变量和, 234–235
+
 - 提供不可变包装器, 9–11
+
 可变对象
-- 应用 static final
+
+- 应用 `static final`
+
 - 注解, 94–95
-- 安全发布保证和 volatile, 210, 212–215
+
+- 安全发布保证和 `volatile`, 210, 212–215
+
 空对象模式, 164–165
-Number, 113–114
+
+`Number`, 113–114
+
 数值提升行为, 108–112
-Object
+
+`Object`
+
 - 参数类型的编译类型检查, 112–113
+
 分别声明变量, 135–136
+
 不可变性, 252
-Object.equals()
+
+`Object.equals()`
+
 - 抽象对象等性与引用质量, 222–225
+
 - 比较加密密钥, 34–35
+
 - 可以被不可信代码覆盖的方法, 44
-Object.hashCode(), 44
+
+`Object.hashCode()`, 44
+
 遮蔽, 132, 251
+
 八进制值, 170
+
 操作数
+
 - 浮点, 191–194
+
 - 数值提升行为, 108–112
+
 - 括号用于运算符优先级, 186–188
+
 - 整数余数运算符结果, 220–222
+
 - 条件表达式中第二个和第三个类型使用, 153–157
+
 - OR () 位运算符与逻辑运算符, 225–228
+
 - 数值提升行为, 110
+
 - 运算符优先级, 186–188
+
 - 条件表达式中的 OR (|)赋值, 176
+
 - 位运算符与逻辑运算符, 225–228
-ordinal(), 106–108
-OutOfMemoryError, 125, 162
 
+`ordinal()`, 106–108
 
+`OutOfMemoryError`, 125, 162
 
-
-
-# 索引
+## 索引
 
 输出清理，16–20
 
 策略文件，69–70
 
 重载
+
 - 运算符优先级，186–188
+
 - 避免歧义或混淆的使用，205–208
+
 - 预定义常量，140
+
 - 滥用方法来区分差异，231–233
+
 - 优先使用用户定义的异常而非更通用的异常类型，121–123
+
 - 变长参数方法，171–173
+
 - 优先使用迭代器而非枚举，159–161
+
 - 重写（Override），251
+
 - 过早优化，140–141
+
 - 防止任意文件上传，13–16
 
-# P
+## P
 
 防止代码注入，20–23
+
 - 包依赖项，118–121
+
 - 防止 LDAP 注入，27–31
+
 - 包私有访问（Package-private access），84–89
+
 - 防止 XPath 注入，23–27
 
 参数
+
 - 私有类
+
     - 避免重载的歧义或混淆使用，205–208
+
     - 类和成员的可访问性，84–89
+
     - 变长参数方法的编译时检查，112–115
-    - final 变量和，237–238
+
+    - `final` 变量和，237–238
+
     - 不要使用 `clone()` 拷贝不可信任的方法，31–34
+
     - 私有静态（private static），116–117
+
     - 防止 XPath 注入，26–27
+
 - 括号 ()，186–188
 
 权限
-- parse()，214–231
+
+- `parse()`，214–231
+
 - 避免过度，50–53
+
 - 回调方法，72–77
+
 - 调用安全敏感方法，11–13
+
 - 最小化特权代码，54–55
+
 - 防止 XPath 注入，24–27
-- processSingleString()，146–147
+
+- `processSingleString()`，146–147
 
 密码
+
 - 限制敏感数据的生命周期，3–4
+
 - 最小化特权代码，54–55
+
 - 使用哈希函数存储，37–42
 
 路径，99–101
+
 模式，228–231
 
 性能
+
 - 避免重载的歧义或混淆使用，205–208
+
 - 调用 `System.gc()`，130
+
 - 可靠性，131
+
 - 避免变长参数方法的歧义重载，171–173
+
 - 权限许可（perming），224
+
 - 带内错误指示，173–175
+
 - 循环计数器的无意包装，183–186
 
 - 权限（Permissions）。参见 权限（Privileges）
+
 - 关于文件创建的假设，189
+
 - 避免授予过度权限，50–53
+
 - 使用视觉上误导的标识符和字面量要小心，167–171
+
 - 定义自定义安全以实现细粒度安全，64–67
+
 - 将整数转换为浮点操作，191–194
+
 - 检测并移除多余的代码和值，198–202
-- SecurityManager，68
+
+- `SecurityManager`, 68
+
 - PIM，139–140
 
 平台
+
 - Android 指南的适用性，245–246
+
 - 指南的范围，xv
-- 在 if、for 或 while 条件后立即紧跟分号，180–181
-- Point，236–237
+
+- 在 `if`、`for` 或 `while` 条件后立即紧跟分号，180–181
+
+- `Point`, 236–237
+
 - 确保 `clone()` 方法调用了 `super.clone()`，194–196
 
-# 索引 273
+- 使用 `break` 语句结束与 `case` 标签关联的每组语句，181–183
 
-- 使用 `break` 语句结束与 case 标签关联的每组语句，181–183
 - 概述，167
+
 - 用于运算符优先级的括号，180–188
+
 - 追求逻辑上的完整性，202–204
-- 在 if、for 或 while 语句的主体使用大括号，178–180
+
+- 在 `if`、`for` 或 `while` 语句的主体使用大括号，178–180
+
 - 使用注释并以可读的方式编写，196–198
+
 - 编程安全管理器（Programming SecurityManager）
+
 - 安装，70–71
+
 - 程序员意图，xiv
+
 - 程序员的误区
+
 - 不要假设声明引用为 `volatile` 需要发布被引用对象的成员，209–216
+
 - 不要假设取余运算符对于整数操作数总是返回非 `volatile` 结果，220–222
+
+
+
+# 索引
+
 - 不要假设 `sleep()`、`yield()` 或 `getState()` 提供同步语义，216–220
 - 不要试图通过将本地引用变量设为 `null` 来帮助垃圾收集器，243–244
 - 不要混淆抽象对象相等与引用相等，222–225
@@ -8933,41 +9222,44 @@ OutOfMemoryError, 125, 162
 - 理解位运算符与逻辑运算符之间的区别，225–228
 - 理解在加载字符串时字符是如何被解释的，228–231
 - 使用序列化方法，并谨慎使用 `writeUnShared()` 和 `readUnShared()`，239–243
-- 防御性编程（Programming, defensive）。参见 防御性编程（Defensive programming）
+- 防御性编程。参见 防御性编程
 - 正确编码或转义输出，16–20
 - 正确编码常量定义中的关系，142–143
 - 保护类，88–89
-- 保护域（Protection domain），51
+- 保护域，51
 - 提供带有不可变包装器的合理可变类，9–11
 - 公共类，115–218, 237
-- 发布对象（Publishing objects）定义，251
+- 发布对象定义，251
 - 安全发布保证，209–216
 
-竞态条件
+## 竞态条件
+
 - 关于文件创建的假设，189
 - 通过注解防止，96
 - 通过测试防止，97
 - 随机数生成器，42–43
-- RandomAccessFile，104
-- 可读性（Readability）。参见 可读性（Readability）
+- `RandomAccessFile`，104
+- 可读性。参见 可读性
 - 一致性和可读性，196–198
 - 定义，167
 - `readObject()`，239
 - `readUnShared()`，239–243
 
-引用
+## 引用
+
 - 抽象对象相等对比引用相等，222–225
 - 不可变性与被引用对象的不可变性，234–239
 - 安全发布保证与 `volatile`，209–216
 - 将局部变量设为 `null`，243–244
-- @Region，91
-- @RegionLock，92–94
+- `@Region`，91
+- `@RegionLock`，92–94
 - 关系编码，142–143
 - 公共 `final` 的应用
 - 包之间的循环依赖，118
 - 留心的接口设计，125–128
 
-可靠性
+## 可靠性
+
 - 定义，xiii
 - 不要声明超过一个，134–137
 - 不要序列化系统资源，157–158
@@ -8983,235 +9275,225 @@ OutOfMemoryError, 125, 162
 - 在条件表达式的第二和第三操作数中使用类型，153–157
 - 使用 `try-with-resources` 语句处理关闭资源，148–151
 
-取余运算符，220–222
-记住我功能，5–9
-renameTo()，99
-资源，148–151
-受限访问控制（RestrictedAccessControl），22
-可重用性，118
-健壮性，79
-ROT13 密码，37
-RSAPrivateKey，35
-run()，49–50
-运行时错误，151–153
-运行时类型，233–233
-RuntimeException，147
-
-安全发布保证，209–216, 251
-安全性，251
-盐（Salt），38
-沙箱（Sandbox），安全
-- 使用安全管理器创建，67–72
-- 防止代码注入，22–23
-
-清理
-- 定义，251
-- 输入，30–31
-- 输出，16–20
-
-SCAL（源代码分析实验室），xiv
-Sherilium，95
-@SuppressWarnings 注解，82–84
-变量，80–82
-searchRecord()，29
-安全哈希算法（SHA），38–40
-安全沙箱
-- 使用安全管理器创建，67–72
-- 防止代码注入，22–23
-SecureRandom，42–43
-
-安全
-- 避免授予过度权限，50–53
-- 在发布前仔细设计接口，125–126
-- 使用安全管理器创建安全沙箱，67–72
-- 为细粒度定义自定义安全权限，64–67
-- 向不可信任代码暴露降低安全的方法，56–64
-- 不要信任回调方法的权限用，72–77
-- 不要依赖可以被不可信任代码覆盖的方法，44–50
-- 不要在客户端存储未加密的敏感信息，5–9
-- 不要使用 `clone()` 拷贝不可信任的方法参数，31–34
-- 不要使用不安全或弱的加密算法，36–37
-- 不要使用 `Object.equals()` 比较加密密钥，34–35
-
-# 索引 274
-
+- 取余运算符，220–222
+- 记住我功能，5–9
+- `renameTo()`，99
+- 资源，148–151
+- 受限访问控制，22
+- 可重用性，118
+- 健壮性，79
+- ROT13 密码，37
+- `RSAPrivateKey`，35
+- `run()`，49–50
+- 运行时错误，151–153
+- 运行时类型，233–233
+- `RuntimeException`，147
+- 安全发布保证，209–216, 251
+- 安全性，251
+- 盐，38
+- 沙箱，安全
+  - 使用安全管理器创建，67–72
+  - 防止代码注入，22–23
+- 清理
+  - 定义，251
+  - 输入，30–31
+  - 输出，16–20
+- SCAL（源代码分析实验室），xiv
+- Sherilium，95
+- `@SuppressWarnings` 注解，82–84
+- 变量，80–82
+- `searchRecord()`，29
+- 安全哈希算法（SHA），38–40
+- 安全沙箱
+  - 使用安全管理器创建，67–72
+  - 防止代码注入，22–23
+- `SecureRandom`，42–43
+- 安全
+  - 避免授予过度权限，50–53
+  - 在发布前仔细设计接口，125–126
+  - 使用安全管理器创建安全沙箱，67–72
+  - 为细粒度定义自定义安全权限，64–67
+  - 向不可信任代码暴露降低安全的方法，56–64
+  - 不要信任回调方法的权限用，72–77
+  - 不要依赖可以被不可信任代码覆盖的方法，44–50
+  - 不要在客户端存储未加密的敏感信息，5–9
+  - 不要使用 `clone()` 拷贝不可信任的方法参数，31–34
+  - 不要使用不安全或弱的加密算法，36–37
+  - 不要使用 `Object.equals()` 比较加密密钥，34–35
 - 确保 `clone()` 方法调用了 `super.clone()`，194–196
 - 确保调用安全敏感方法，11–13
 - 确保 `SecureRandom` 已被种子，42–43
-
 - 限制敏感数据的生命周期，3–4
 - 最小化特权代码，54–55
 - 概述，167
-
 - 防止任意文件上传，13–16
 - 防止代码注入，20–23
 - 防止 LDAP 注入，27–31
 - 防止 XPath 注入，23–27
-
 - 正确编码或转义输出，16–20
 - 提供带有不可变包装器的合理可变类，9–11
 - 使用哈希函数存储，37–42
-
 - 追求逻辑上的完整性，202–204
 
+---
 
+- `@SuppressWarnings`，82–84
+- SureLogic，90
+- Sutherland, Dean，95
+- switch
+  - 条件表达式中的赋值，176
+  - 死代码，201
+  - 使用 `break` 结束 case 语句，181–183
+  - 逻辑完备性，202–203
+- 符号常量，138–142
+- 对称密钥算法，38–39
+- 同步化
+  - 定义，252
+  - 安全发布保证与 `volatile`，211–214
+  - `sleep()`、`yield()` 和 `getState()`，216–220
+- 系统错误，123–125
+- 系统资源，157–158
+- `System.gc()`，130
+- `System.loadLibrary()`，54–55, 58
+- `try-catch` 块，123–124
+- `try-catch-finally` 块，148–150
+- 尝试从系统错误中优雅恢复，123–125
+- `try-with-resources` 语句，148–151
+- 类型
+  - 单独声明变量，135–137
+  - 使用重载方法进行区分，231–233
+  - 条件表达式中的第二和第三操作数，157–157
 
+## T
 
+- 老年代，129
+- 终止循环，183–186
+- 测试，118
+- 线程安全
+  - 定义，252
+  - 文档化，89–96
+  - `volatile` 引用与和，214–216
+- `Thread.interrupt()`，218
+- `Thread.Local`，215
+- `Thread.run()`，44
+- `@ThreadSafe`，90–92
+- `throw`，146–147
+- `Throwable`，123–125
+- 检查时间与使用时间 (TOCTOU) 竞态条件
+  - 关于文件创建的假设，189–190
+  - 文件标识，99, 103–105
+  - 通过状态测试预防，97
+- 时间值，31–33
+- `TIMED_WAITING`，219
+- 标记化，224
+- 工具，xvii
+- `transient`，158
+- `true`，97
+- 受信任代码，252–253
 
-# 276
-# 索引
+## U
 
-@SuppressWarnings, 82–84
-SureLogic, 90
-Sutherland, Dean, 95
-switch
-条件表达式中的赋值, 176
-死代码 (dead), 201
-使用 break 结束 case 语句, 181–183
-逻辑完备性, 202–203
-符号常量, 138–142
-对称密钥算法, 38–39
-同步化
-定义, 252
-安全发布保证与 volatile, 211–214
-sleep(), yield(), 和 getState(), 216–220
-系统错误, 123–125
-系统资源, 157–158
-System.gc(), 130
-System.loadLibrary(), 54–55, 58
-try-catch 块, 123–124
-try-catch-finally 块, 148–150
-尝试从系统错误中优雅恢复, 123–125
-try-with-resources 语句, 148–151
-类型
-单独声明变量, 135–137
-使用重载方法进行区分, 231–233
-条件表达式中的第二和第三操作数, 157–157
+- 未检查警告，82–84
+- 理解字符串加载时转义字符是如何被解释的，228–231
+- 理解位运算符与逻辑运算符之间的区别，225–228
+- 可理解性。参见程序可理解性
+- 未加密的敏感信息，5–9
+- Unicode 字符，167–168
+- `@Unique("return")`，94–95
+- 不可修改接口，9–11
+- 不可修改包装类，9–11
+- `UnsupportedOperationException`，10–11
+- 定义，253
+- 不要向其暴露使用了降低安全检查的方法，56–64
+- 不要让回调方法的权限被滥用，72–77
+- 不要依赖可以被重写的方法，44–50
+- 不可信的方法参数，31–34
+- 未使用值，201
+- `updateNode()`，97–98
+- 上传，16
+- 在 `if`、`for` 或 `while` 语句体中使用大括号，178–180
+- 始终且以可读的方式使用注释，196–198
+- 仅对异常情况使用异常，146–148
+- 在程序逻辑中使用有意义的符号常量来表示字面量值，138–142
+- 使用括号处理操作优先级，186–188
+- 在条件表达式的第二和第三操作数中使用相同类型，155–157
+- 使用序列化方法 `writeUnshared()` 和 `readUnshared()`，236–243
+- 使用 `try-with-resources` 语句安全处理资源，148–151
+- 用户凭据
+  - 防止 LDAP 注入，29
+  - 防止 XPath 注入，24–27
+  - 使用哈希函数存储密码，37–42
+  - 存储未加密的敏感信息，5–9
+- 自定义异常，121–123
+- `UserLookupCallback`，73–77
+- util，xvi
 
-T
-老年代代 (Tenured generation), 129
-终止循环, 183–186
-测试, 118
-线程安全
-定义, 252
-文档化, 89–96
-volatile 引用与和, 214–216
-Thread.interrupt(), 218
-Thread.Local, 215
-Thread.run(), 44
-@ThreadSafe, 90–92
-throw, 146–147
-Throwable, 123–125
-检查时间与使用时间 (TOCTOU) 竞态条件
-关于文件创建的假设, 189–190
-文件标识, 99, 103–105
-通过状态测试预防, 97
-时间值, 31–33
-TIMED_WAITING, 219
-标记化, 224
-工具, xvii
-transient, 158
-true, 97
-受信任代码, 252–253
+## V
 
-U
-未检查警告 (Unchecked warnings), 82–84
-理解字符串加载时转义字符是如何被解释的, 228–231
-理解位运算符与逻辑运算符之间的区别, 225–228
-可理解性。参见程序可理解性
-未加密的敏感信息, 5–9
-Unicode 字符, 167–168
-@Unique("return"), 94–95
-不可修改接口, 9–11
-不可修改包装类, 9–11
-UnsupportedOperationException, 10–11
-定义, 253
-不要向其暴露使用了降低安全检查的方法, 56–64
-不要让回调方法的权限被滥用, 72–77
-不要依赖可以被重写的方法, 44–50
-不可信的方法参数, 31–34
-未使用值, 201
-updateNode(), 97–98
-上传, 16
-在 if, for, 或 while 语句体中使用大括号, 178–180
-始终且以可读的方式使用注释, 196–198
-仅对异常情况使用异常, 146–148
-在程序逻辑中使用有意义的符号常量来表示字面量值, 138–142
-使用括号处理操作优先级, 186–188
-在条件表达式的第二和第三操作数中使用相同类型, 155–157
-使用序列化方法 writeUnshared() 和 readUnshared(), 236–243
-使用 try-with-resources 语句安全处理资源, 148–151
-用户凭据
-防止 LDAP 注入, 29
-防止 XPath 注入, 24–27
-使用哈希函数存储密码, 37–42
-存储未加密的敏感信息, 5–9
-自定义异常, 121–123
-UserLookupCallback, 73–77
-util, xvi
+- 已验证的参数，11–13
+- `ValidateOutput`，17–39
+- `validateValue()`，33
+- 检测并移除多余的，198–200
+- 使用有意义的符号常量表示字面量，138–142
+- 对结果的方法提供反馈，96–99
+- 组件，47–49
+- 工作线程，50
+- 包装器
+  - 避免带内错误指示，174–175
+  - 循环计数器的无意包装，183–186
+  - `performOnFile()`，51–52
+  - 针对可变状态的不可修改，9–11
+- 变量 (varargs) 类型，171–173
+- 避免歧义的重载，112–115
+- 编译时类型检查，112–115
+- 不要声明超过一个声明，134–137
+- 文档化锁策略，92–94
+- 常量中的关系，142–143
+- 最小化...的作用范围，80–82
+- 最小化 `@SuppressWarnings` 的作用范围，82
+- 将本地引用置为 `null`，243–244
+- 编写垃圾回收代码，128–130
+- `writeUnshared()`，239–243
 
-W
-等待-通知协议, 95–96
-WAIT, 219–220
-警告, 82–84
-弱加密算法, 36–37
-while
-条件表达式中的赋值, 177
-不要在后面立即紧跟分号, 180–181
-循环计数器的无意包装, 183–186
-使用大括号用于, 178–180
-白名单
-输出清理, 17–19
-防止代码注入, 21
-防止 LDAP 注入, 27–28, 30–31
+## W
 
-V
-已验证的参数, 11–13
-ValidateOutput, 17–39
-validateValue(), 33
-检测并移除多余的, 198–200
-使用有意义的符号常量表示字面量, 138–142
-对结果的方法提供反馈, 96–99
-组件 (Widget), 47–49
-工作线程 (Worker), 50
-包装器 (Wrapper)
-避免带内错误指示, 174–175
-循环计数器的无意包装, 183–186
-performOnFile(), 51–52
-针对可变状态的不可修改, 9–11
-变量 (varargs) 类型, 171–173
-避免歧义的重载, 112–115
-编译时类型检查, 112–115
-不要声明超过一个声明, 134–137
-文档化锁策略, 92–94
-常量中的关系, 142–143
-最小化...的作用范围, 80–82
-最小化 @SuppressWarnings 的作用范围, 82
-将本地引用置为 null, 243–244
-编写垃圾回收代码, 128–130
-writeUnshared(), 239–243
-X
-XML 文档, 3–27
-XPath 注入, 23–27
-XSS (跨站脚本) 攻击
-输出清理, 16
-存储未加密信息, 5–6
-DisableGC, 130
-并发,
-shadowing, 133–134
-Vector, 159
-版本, 116–138
-volatile
-定义, 252
-提供同步语义, 217–218
-安全发布保证与, 209
-yield(), 216–220
-漏洞, 253
-较年轻的, 129
-Zegan, Bryant, 204
-区域 (Zone), 203
+- 等待-通知协议，95–96
+- `WAIT`，219–220
+- 警告，82–84
+- 弱加密算法，36–37
+- while
+  - 条件表达式中的赋值，177
+  - 不要在后面立即紧跟分号，180–181
+  - 循环计数器的无意包装，183–186
+  - 使用大括号用于，178–180
+- 白名单
+  - 输出清理，17–19
+  - 防止代码注入，21
+  - 防止 LDAP 注入，27–28, 30–31
 
+## X
 
+- XML 文档，3–27
+- XPath 注入，23–27
+- XSS (跨站脚本) 攻击
+  - 输出清理，16
+  - 存储未加密信息，5–6
+- `DisableGC`，130
+- 并发
+- shadowing，133–134
+- `Vector`，159
+- 版本，116–138
+- `volatile`
+  - 定义，252
+  - 提供同步语义，217–218
+  - 安全发布保证与，209
+- `yield()`，216–220
+- 漏洞，253
+- 较年轻的，129
+- Zegan, Bryant，204
+- 区域，203
+
+---
 
 国立大学图书馆
 
@@ -9235,14 +9517,18 @@ Zegan, Bryant, 204
 | | | | | | | | |
 
 QA Long, Fred, 1947-
+
 76.73 Java coding.J38 guidelines
+
 L66
+
 2014
 
 # 编程/Java
 
-“每一位开发者都有责任编写没有重大安全漏洞的代码。本书提供了实用的指导，帮助 Java 开发者在考虑安全、可靠性和可维护性目标的同时，实现所需的功能。
-——Mary Ann，Oracle 公司首席安全官
+> “每一位开发者都有责任编写没有重大安全漏洞的代码。本书提供了实用的指导，帮助 Java 开发者在考虑安全、可靠性和可维护性目标的同时，实现所需的功能。
+>
+> ——Mary Ann，Oracle 公司首席安全官
 
 全球各机构都依赖 Java 代码来执行关键任务，因此，这些代码必须是可靠、健壮、快速、可维护且安全的。《Java 编码规范》汇集了专家指南、建议和代码示例，帮助您满足这些需求。
 
@@ -9255,7 +9541,9 @@ L66
 FRED LONG，Abersysth 大学计算机系高级讲师，自 1992 年以来一直是软件工程学院 (SEI) 的访问学者。DHUR MOHINDRA，Persistent Systems Ltd. 安全实践小组技术主管，为金融、电信和医疗保健领域的企业提供咨询。ROBERT C. SEACORD，多本计算机安全和软件工程书籍的作者，CERT 安全编码计划的技术经理，并在卡内基·梅隆大学 (CMU) 教授计算机科学。DEAN F. SUTHERLAND，CERT 高级软件安全工程师，曾是英特尔高级技术职员，在那里开发过优化编译器。DAVID SOBOVA，CERT 软件安全工程师，曾是多个 CMU 项目的主要开发人员。
 
 informit.com/seiseisers
+
 informit.com/aw
+
 cert.books/java-coding-guidelines
 
 | ISBN-13: 978-0-321-93315-7 |
@@ -9265,10 +9553,8 @@ cert.books/java-coding-guidelines
 
 ![](img/3143b260199f0f09c503d13f99745e59_307_0.png)
 
-- * 使用再生纸打印
+- 使用再生纸打印
 - Addison-Wesley
-
-持续学习
+- 持续学习
 
 # 培尔 (PEARSON)
-

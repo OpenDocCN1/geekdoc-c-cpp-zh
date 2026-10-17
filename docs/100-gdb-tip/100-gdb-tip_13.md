@@ -1,12 +1,13 @@
+
 # 脚本
 
-# 配置 gdb init 文件
+## 配置 `gdb` init 文件
 
-## 技巧
+### 技巧
 
-当 gdb 启动时，会读取 HOME 目录和当前目录下的的配置文件，执行里面的命令。这个文件通常为“.gdbinit”。
+当 `gdb` 启动时，会读取 `HOME` 目录和当前目录下的配置文件，执行里面的命令。这个文件通常为`.gdbinit`。
 
-这里给出了本文档中介绍过的，可以放在“.gdbinit”中的一些配置：
+这里给出了本文档中介绍过的，可以放在`.gdbinit`中的一些配置：
 
 ```cpp
 # 打印 STL 容器中的内容
@@ -36,13 +37,13 @@ set print pretty on
 
 欢迎补充。
 
-## 贡献者
+#### 贡献者
 
-xmj
+`xmj`
 
-# 按何种方式解析脚本文件
+## 按何种方式解析脚本文件
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -53,7 +54,7 @@ typedef struct
         int b;
         int c;
         int d;
-}ex_st;
+} ex_st;
 
 int main(void) {
         ex_st st = {1, 2, 3, 4};
@@ -62,13 +63,18 @@ int main(void) {
 } 
 ```
 
-## 技巧
+### 技巧
 
-gdb 支持的脚本文件分为两种：一种是只包含 gdb 自身命令的脚本，例如“.gdbinit”文件，当 gdb 在启动时，就会执行“.gdbinit”文件中的命令；此外，gdb 还支持其它一些语言写的脚本文件（比如 python）。
-gdb 用“`set script-extension`”命令来决定按何种格式来解析脚本文件。它可以取 3 个值：
-a）`off`：所有的脚本文件都解析成 gdb 的命令脚本；
-b）`soft`：根据脚本文件扩展名决定如何解析脚本。如果 gdb 支持解析这种脚本语言（比如 python），就按这种语言解析，否则就按命令脚本解析；
-c）`strict`：根据脚本文件扩展名决定如何解析脚本。如果 gdb 支持解析这种脚本语言（比如 python），就按这种语言解析，否则不解析；
+`gdb` 支持的脚本文件分为两种：一种是只包含 `gdb` 自身命令的脚本，例如`.gdbinit`文件，当 `gdb` 在启动时，就会执行`.gdbinit`文件中的命令；此外，`gdb` 还支持其它一些语言写的脚本文件（比如`python`）。
+
+`gdb` 用`set script-extension`命令来决定按何种格式来解析脚本文件。它可以取 3 个值：
+
+a）`off`：所有的脚本文件都解析成 `gdb` 的命令脚本；
+
+b）`soft`：根据脚本文件扩展名决定如何解析脚本。如果 `gdb` 支持解析这种脚本语言（比如`python`），就按这种语言解析，否则就按命令脚本解析；
+
+c）`strict`：根据脚本文件扩展名决定如何解析脚本。如果 `gdb` 支持解析这种脚本语言（比如`python`），就按这种语言解析，否则不解析；
+
 以上面程序为例，进行调试：
 
 ```cpp
@@ -86,9 +92,9 @@ A debugging session is active.
 Quit anyway? (y or n) y 
 ```
 
-可以看到 gdb 退出时，默认行为会提示用户是否退出。
+可以看到 `gdb` 退出时，默认行为会提示用户是否退出。
 
-下面写一个脚本文件（gdb.py），但内容是一个 gdb 命令，不是真正的 python 脚本。用途是退出 gdb 时不提示：
+下面写一个脚本文件（`gdb.py`），但内容是一个 `gdb` 命令，不是真正的 `python` 脚本。用途是退出 `gdb` 时不提示：
 
 ```cpp
 set confirm off 
@@ -112,7 +118,8 @@ Script filename extension recognition is "soft".
 SyntaxError: invalid syntax 
 ```
 
-可以看到“`script-extension`”默认值是`soft`，接下来执行“`source gdb.py`”,会按照 pyhton 语言解析 gdb.py 文件，但是由于这个文件实质上是一个 gdb 命令脚本，所以解析出错。
+可以看到`script-extension`默认值是`soft`，接下来执行`source gdb.py`，会按照 `python` 语言解析`gdb.py`文件，但是由于这个文件实质上是一个 `gdb` 命令脚本，所以解析出错。
+
 再执行一次：
 
 ```cpp
@@ -128,41 +135,41 @@ Temporary breakpoint 1, main () at a.c:12
 [root@linux:~]$ 
 ```
 
-这次把“`script-extension`”值改为`off`，所以脚本会按 gdb 命令脚本去解析，可以看到这次脚本命令生效了。
+这次把`script-extension`值改为`off`，所以脚本会按 `gdb` 命令脚本去解析，可以看到这次脚本命令生效了。
 
 参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Extending-GDB.html)
 
-## 贡献者
+#### 贡献者
 
-nanxiao
+`nanxiao`
 
-# 保存历史命令
+## 保存历史命令
 
-## 技巧
+### 技巧
 
-在 gdb 中，缺省是不保存历史命令的。你可以通过如下命令来设置成保存历史命令：
+在 `gdb` 中，缺省是不保存历史命令的。你可以通过如下命令来设置成保存历史命令：
 
 ```cpp
 (gdb) set history save on 
 ```
 
-但是，历史命令是缺省保存在了当前目录下的.gdb_history 文件中。可以通过如下命令来设置要保存的文件名和路径：
+但是，历史命令是缺省保存在了当前目录下的`.gdb_history`文件中。可以通过如下命令来设置要保存的文件名和路径：
 
 ```cpp
 (gdb) set history filename fname 
 ```
 
-现在，我们把这两个命令放到$HOME/.gdbinit 文件中：
+现在，我们把这两个命令放到`$HOME/.gdbinit`文件中：
 
 ```cpp
 set history filename ~/.gdb_history
 set history save on 
 ```
 
-好了，下次启动 gdb 时，你就可以直接查找使用之前的历史命令了。
+好了，下次启动 `gdb` 时，你就可以直接查找使用之前的历史命令了。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Command-History.html#Command-History)
 
-## 贡献者
+#### 贡献者
 
-xmj
+`xmj`

@@ -1,77 +1,19 @@
+
 # 现代计算金融：衍生品与 xVA 脚本编程 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Jesper Andreasen 的《我的脚本生活》 xi
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 11.2.1 新类型 116
-
-
-
-
-
 - 13.4 索引 129
-
-
-
-
-
-
-
-
-
-
 - 18.4 优化 180
+
 # 第 19 章
 
 条件域 189
+
 - 20.1.6 整合在一起 197
 
-
 # 第 22 章
-
-
-
-
-
-
 
 # 附录 A 解析 231
 
@@ -84,9 +26,6 @@ Jesper Andreasen 的《我的脚本生活》 xi
 # 参考文献 255
 
 # 索引 257
-
-
-
 
 其他机构的语言，例如，瑞银行（UBS）、德意志银行、日兴萨利文、花旗银行和 Reech Capital。
 
@@ -122,7 +61,7 @@ Jesper Andreasen，2018年6月
 
 ## 引言
 
-这部分由在给定日期发生的系列事件组成。作为说明，我们考虑了一个自动赎回交易的简化版本，它甚至被用于收益率校准。这是我知道唯一持续使用脚本语言的银行。开发工作主要集中在用于 xVA 和监管计算的聚合、压缩和装饰上。在这里，我们大量利用了访问者模式技术。但我们在自动伴随微分（AAD）方面也做了大量工作……
+这部分由在给定日期发生的系列事件组成。作为说明，我们考虑了一个自动赎回交易的简化版本，它甚至被用于收益率校准。这是我知道唯一持续使用脚本语言的银行。开发工作主要集中在用于 xVA 和监管计算的聚合、压缩和装饰上。在这里，我们大量利用了访问者模式技术。但我们在自动伴随微分（AAD）方面也做了大量工作…
 
 ¹连续屏障在某种程度上在此逻辑之外。²关于提前行权的讨论见第15章。
 
@@ -132,10 +71,10 @@ Jesper Andreasen，2018年6月
 
 | 日期 | 逻辑 |
 |---|---|
-| 2020年6月01日 | vRef=spot() |
-| 2021年6月01日 | if spot() > vRef then prd=110 vAlive=0 |
-| 2022年6月01日 | if spot() > vRef then vAlive=1 then prd=120 |
-| 2023年6月01日 | if vAlive=1 then if spot() > vRef then prd=130 else prd=50 |
+| 2020年6月01日 | `vRef=spot()` |
+| 2021年6月01日 | `if spot() > vRef then prd=110 vAlive=0` |
+| 2022年6月01日 | `if spot() > vRef then vAlive=1 then prd=120` |
+| 2023年6月01日 | `if vAlive=1 then if spot() > vRef then prd=130 else prd=50` |
 
 我们在事件日期上有四个事件：
 
@@ -144,12 +83,9 @@ Jesper Andreasen，2018年6月
 - 3. 第二年，我们检查现价在两年内是否上涨。在这种情况下，如果我们活过了第一年，我们支付20%的赎回金并终止。
 - 4. 第三年，在前两年存活的情况下，我们检查现价整体是否上涨。如果是，我们支付30%的赎回金。否则，偿还50%的名义金。
 
-我们看到我们的语言至少必须支持数字、算术运算和条件语句。我们还知道一些数学函数（如 log 或 sqrt）以及一些金融函数（如多参数 min 和 max）。关键是，我们必须能够读取、写入和比较变量，并通过 `spot()` 关键字访问模拟市场，该关键字引用对应日期的标的资产。这是一种简单的语言，类似于 Python，支持
+我们看到我们的语言至少必须支持数字、算术运算和条件语句。我们还知道一些数学函数（如 `log` 或 `sqrt`）以及一些金融函数（如多参数 `min` 和 `max`）。关键是，我们必须能够读取、写入和比较变量，并通过 `spot()` 关键字访问模拟市场，该关键字引用对应日期的标的资产。这是一种简单的语言，类似于 Python，支持
 
 ³我们对脚本语言的语法做出了一些任意选择。读者在熟悉这里解释的惯用法后，可以轻松实现自己偏好的语法。
-
-
-
 
 ## 引言
 
@@ -188,21 +124,29 @@ Jesper Andreasen，2018年6月
 # 
 
 ## 模型
+
 生成场景
 
 ## 产品
+
 现金流
 
 ## 变量
+
 事件日期
 
 ## 场景
+
 所有价格
 
 ## 线性模型
+
 ## 波动模型
+
 ## 动态模型
+
 # 
+
 - Black-Scholes
 - Bachelier
 - Dupire
@@ -224,9 +168,9 @@ Jesper Andreasen，2018年6月
 
 | 行权价 | 100 |
 | 障碍价 | 120 |
-| 2020年6月1日 | vAlive = 1 |
-| 开始：2020年6月1日 结束：2021年6月1日 每周 | if spot(t) > BARRIER then vAlive = 0 |
-| 2021年6月1日 | opt pays vAlive * max(0, spot()) - STRIKE |
+| 2020年6月1日 | `vAlive = 1` |
+| 开始：2020年6月1日 结束：2021年6月1日 每周 | `if spot(t) > BARRIER then vAlive = 0` |
+| 2021年6月1日 | `opt pays vAlive * max(0, spot()) - STRIKE` |
 
 ## 开场白
 
@@ -238,33 +182,28 @@ Jesper Andreasen，2018年6月
 | --- | --- |
 | | Call |
 | | 日期 事件 |
-| | 到期 opt pays max(0, spot) - strike |
-| 评估器 -深度优先访问器 |
+| | 到期 `opt pays max(0, spot) - strike` |
+| 评估器 -深度优先访问器 | |
 | 访问 | 节点 | 栈 |
-| 1 | spot | spot |
-| 2 | const strike, spot | spot |
-| 3 | | strike, spot |
-| 4 | const D | strike - spot |
-| 5 | max | max(0, strike - spot) |
-| 6 | var | &spot, max(0, strike - spot) |
-| 7 | pays | {empty} |
-| | | opt +(max, strike - spot) * numeraire |
+| 1 | `spot` | `spot` |
+| 2 | `const strike, spot` | `spot` |
+| 3 | | `strike, spot` |
+| 4 | `const D` | `strike - spot` |
+| 5 | `max` | `max(0, strike - spot)` |
+| 6 | `var` | `&spot, max(0, strike - spot)` |
+| 7 | `pays` | `{empty}` |
+| | | `opt +(max, strike - spot) * numeraire` |
 
 (img/3887ab6b5277fb99d77002948fa19470_24.png)
 
 > ¹取决于脚本语法，该障碍也可以以函数形式编写：
 
 | 行权价 障碍价 | 100 120 |
-| 2020年6月1日 | append (VFixings, spot()) |
-| 开始：2020年6月1日 结束：2021年6月1日 每周 | append (VFixings, spot()) |
-| 2021年6月1日 | opt pays max (VFixings) < BARRIER * max(0, spot()) - STRIKE |
+| 2020年6月1日 | `append (VFixings, spot())` |
+| 开始：2020年6月1日 结束：2021年6月1日 每周 | `append (VFixings, spot())` |
+| 2021年6月1日 | `opt pays max (VFixings) < BARRIER * max(0, spot()) - STRIKE` |
 
 我们在后文中开发了一种经典的过程式脚本语言，尽管读者可以轻松应用书中的逻辑和代码来设计如上面的函数式脚本语言，或者实现他们选择的语法。
-
-
-
-
-
 
 然而，早期的实现存在性能开销过大和语法过于晦涩的问题，这使得脚本编写除了经验量化分析师和交易员之外，其他人无法上手。随后的实现修复了这些缺陷。本书介绍的现代实现具有自然的语法，非编程人员也能上手，且其性能接近硬编码的损益函数。
 
@@ -284,7 +223,7 @@ Jesper Andreasen，2018年6月
 
 本书出版物的目的是为脚本的实现及其在衍生品系统中充分发挥潜的应用提供完整的参考。一个良好的脚本库的定义性基础已通过 C++ 代码描述并说明，这些代码可以在以下在线获取：
 
-https://github.com/asavine/Scripting/tree/Book-V1
+`https://github.com/asavine/Scripting/tree/Book-V1`
 
 读者会发现仓库代码与书中打印的代码之间存在显著差异。仓库已经过重大的现代化和性能改进，这些在本书的文本中并未涵盖。请确保你连接到 `Book-V1` 分支，而不是 `master` 分支。此外，代码在书中演进，而在线仓库包含了最终版本。建议在阅读本书时手动输入文中的代码，而不是使用在线仓库。
 
@@ -294,9 +233,11 @@ https://github.com/asavine/Scripting/tree/Book-V1
 
 我们的仓库还提供了用于自动风险平滑的模糊逻辑实现、该库的 Excel 接口、一个将 C++ 代码导出到 Excel 的教程、一个预构建的 xll 以及一个演示表格。
 
-C++ 实现将在第一部分讨论，我们在那里详细探讨了表达式树（expression trees）和访问者（visitors）的核心概念。我们展示了如何在现代 C++ 中实现它们，并为可扩展的脚本库奠定了基础。随机波动率模型在许多教科书中都有介绍，包括 [21]、[13] 或我们的讲义 [26]。我们还提供了一些（非常）基础的自包含模型来测试库，尽管该库在设计上与模型无关，并旨在与任何实现了我们指定的 API 的模型工作。为了清晰起见，与解析（将脚本转换为表达式树）相关的代码和注释已从正移动到附录。
 
-我们在第二部分讨论了某些基础扩展的实现，并在第三部分讨论了多货币和资产。我们讨论了模拟数据索引（indexing）的关键概念。索引是预处理的一个特殊特征——对性能至关重要。我们还讨论了 LSM，这是 Carriere 和 Longstaff-Schwartz 在 [6] 和 [22] 中设计的用于在蒙特卡洛模拟背景下处理早期行权的算法，后来被用于 xVA 和其他监管计算。这些部分包含了开发的详尽指南，但没有源代码。
+
+C++ 实现将在第一部分讨论，我们在那里详细探讨了表达式树（`expression trees`）和访问者（`visitors`）的核心概念。我们展示了如何在现代 C++ 中实现它们，并为可扩展的脚本库奠定了基础。随机波动率模型在许多教科书中都有介绍，包括 [21]、[13] 或我们的讲义 [26]。我们还提供了一些（非常）基础的自包含模型来测试库，尽管该库在设计上与模型无关，并旨在与任何实现了我们指定的 API 的模型工作。为了清晰起见，与解析（将脚本转换为表达式树）相关的代码和注释已从正移动到附录。
+
+我们在第二部分讨论了某些基础扩展的实现，并在第三部分讨论了多货币和资产。我们讨论了模拟数据索引（`indexing`）的关键概念。索引是预处理的一个特殊特征——对性能至关重要。我们还讨论了 LSM，这是 Carriere 和 Longstaff-Schwartz 在 [6] 和 [22] 中设计的用于在蒙特卡洛模拟背景下处理早期行权的算法，后来被用于 xVA 和其他监管计算。这些部分包含了开发的详尽指南，但没有源代码。
 
 本书的其余部分描述了脚本在其他领域的应用，并证明了我们基于访问者的框架可以解决许多其他问题。
 
@@ -306,11 +247,7 @@ C++ 实现将在第一部分讨论，我们在那里详细探讨了表达式树�
 
 虽然脚本损益现在是衍生品结构化标准工具的一部分，但它似乎在 xVA、CCR、VAR、FRTB、资本费用或其他相关计算的更广泛背景下并未被广泛使用。这是一个遗憾的疏忽。对于异构交易投资组合的市场风险、价值调整和资本计算，当所有交易的现金流……是最好的。
 
-
-
-
-## 开场白
-
+### 开场白
 
 以一种一致的方式表示，软件可以对其进行理解、分析并进行其他方式的操作。这正是脚本化所提供的，只要实现得当，其性能成本是极小的。
 
@@ -319,7 +256,6 @@ C++ 实现将在第一部分讨论，我们在那里详细探讨了表达式树�
 由于奇异交易在 2008 年全球金融危机后不再受青睐，一些从业者认为脚本化无关。这种想法可能是错误的。脚本化比以往任何时候都更重要的原因，不仅是因为奇异交易，更重要的是在如今，为大型异质投资组合计算风险、价值调整和资本费用而设计的完美系统领域。
 
 我们相信，脚本化不仅局限于供用户方便地创建交易的外部接口。脚本化提供了这种便利性，但其主要目的是将交易在内部表示为现金流集合，以便系统中的所有组件都能一致地访问。代码（实际上是作为代码的访问者）可以“看到”现金流并以多种方式对其进行操作。评估仅仅是此类操作之一。我们在第一部分中脚本库的设计正是由此类考虑驱动的。
-
 
 失去相关性的是仅针对奇异交易的脚本化。如今，脚本化 必须被重新思考，它不再是为复杂交易估值的手段，而是作为一种表示现金流的方式，以便这些现金流可以从系统的各个组件中访问并以多种方式进行分析，但不限于估值。为了这一目的，脚本化实际的现金流而非期权收益至关重要。
 
@@ -331,22 +267,28 @@ exerciseDate swapPv (startDate, endDate, fixCpn, fixFreq,
 Basis, floatRef))
 ```
 
-
 这种捷径对于估值可能是相关的，⁵，因为它在经济上有时等同于在行权日获得现金流的现值，或者有权获得这些在各自支付日支付的现金流。但这种捷径仅在特定背景和特定模型下有效。当考虑信用风险时，它不再等同于行权进入掉期或以现金结算期权。在特定情况下，脚本在 CVA 的背景下是不正确的。
 
 掉期期权的正确脚本必须描述底层掉期的现金流计划，并使用代理变量（proxy）来估计行权日未来现金流的现值，以做出行权决策。代理变量是行权日交易价值关于该模型状态变量的估计。代理变量通常通过回归产生，该过程由 Carriere [6] 和 Longstaff-Schwartz [22] 设计，并在第 15 章中讨论，并在我们即将出版的专门著作中进行更广泛的讨论。
 
 - * Start: start if vAlive = 1 then swaption pays
+
 DateEnd: end -libor(StartPeriod, EndPeriod, floatBasis, floatRef)
+
 DateFreq: float *vg(StartPeriod, EndPeriod, floatBasis)
+
 Freqing: start-2bd onPeriod
 
 - * Start: startDate if vAlive = 1 then swaption pays
+
 End: enddate fixCpn *vg(StartPeriod, EndPeriod, fixBasis)
+
 Freq: freqfreq
+
 Fixing: start-2bd
 
 - * tradeDate vAlive = 0
+
 exerciseDate if PV (swaption) > 0 then vAlive = 1 endif
 
 当我们对收益进行脚本化时，我们失去了它们是如何由实际现金流组合在一起的信息。这对于估值可能无关紧要，因此可能诱直接脚本化收益，这甚至可能被视为一种性能改进，但在更广泛的背景下，如果需要读取实际现金流并（例如确定它们是如何固定的以及何时支付的），此类信息将不再可用。因此，在现代金融中，最佳实践是始终脚本化原始现金流，并将优化留给实现。
@@ -357,10 +299,7 @@ exerciseDate if PV (swaption) > 0 then vAlive = 1 endif
 
 当付款可能发生日期、或约和非或约（确定性）付款的集合、欧式、路径依赖和/或早期行权现金流的识别、现金流对底层资产和市场变量的依赖性、交易或投资组合不同组件之间的依赖关系等等。这些信息可以帮助在模型运行之前优化设置。它还可以用于中台处理、回测和前测，例如用于 FRTB 或 PRIPS 监管计算。使用模糊逻辑（第四部分）需要访问原始现金流，如果包含了额外的（尖锐）逻辑，可能会失败。
 
-
-
-
-## 开场白
+### 开场白
 
 ## 1.4 预处理
 
@@ -392,11 +331,7 @@ SimulData := numeraire, vector of libors, vector of discounts,
 
 在我们的简单示例中，我们有一个事件日期：01Jun2021，我们需要在该事件日期固定一个 Libor，用于在几个工作日后的 03Jun2021 开始的贷款，该贷款于 03Sep2021 支付票息，以及一个支付日期的折现因子。我们人类通过阅读脚本知道这一点。预处理器通过在处理时访问脚本来找出。这不仅允许预分配向量，还允许在模拟开始前执行内存分配、索引和其他工作。在性能至关重要的模拟期间，模型在预索引的数组中通信模拟数据的值，以便进行快速、敏捷的访问。
 
-
-
-
-
-## 开场白
+### 开场白
 
 ## 1.6 C++ 中的现代实现
 
@@ -410,7 +345,6 @@ SimulData := numeraire, vector of libors, vector of discounts,
 我们使用自包含的 C++ 开发我们的脚本库。其他实现尝试重用现有的编程语言（如 Python、Visual Basic 或 C#），在这种背景下，通常用 C++ 编写的模型将生成场景，并将给定场景下的支付收益评估委托给用户用更简单的语言编写的代码。这初看之下很有吸引力：它节省了开发者实现脚本库的麻烦，也节省了用户学习它的成本。它仅仅是利用了通用编程语言计算支付收益的强大和多功能性，以增加的操作风险为换取最大的灵活性。然而，主要问题在于定价。Python 脚本并没有描述现金流；它们评估的是支付收益。从 C++ 代码的角度来看，它们是只能执行不能访问的黑盒函数。它们无法被预处理、查询或转换。这种框架对于奇异衍生品的风险管理（如果性能和操作风险不是问题的话）可能有价值，但它不符合我们的目的。这实际上与我们的设计恰相反，我们的目的是提供一种对整个系统中各种访问者都透明的现金流表示。
 
 我们还选择使用标准 C++11 开发一个自包含的实现。我们认为没有必要求助于第三方库来解析、表示或访问脚本。自包含的代码对算法提供了更好的控制，并且更容易维护和扩展代码，而无需依赖其他方。此外，自动伴随（AAD）是一种以极快速度获取衍生品敏感性的技术，在源代码可用时实现效果最好。这本身就足以让我们避免使用第三方黑盒。
-
 
 此外，一旦充分理解了基础设计和算法，产生优雅、高效、自包含的 C++ 代码是自然且相对不痛苦的，特别是利用 C++11 提供的现代功能。特别，我们在第一部分的附录中证明了解析器（将文本脚本转换为表达式树的代码部分）是用标准 C++ 实现的，没有遇到主要困难，也没有求助于第三方库。源代码在仓库中提供。
 
@@ -431,26 +365,28 @@ AAD 在我们的著作 [27] 中详细介绍，并带有专业的 C++ 代码。
 | CPN | 2% |
 
 Start: STARTDATE swap pays
+
 End: ENDDATE -libor(StartPeriod, EndPeriod, FLBAS, FLIDX)
+
 Freq: FIXFREQ * cvg(StartPeriod, EndPeriod, FLBAS) on EndPeriod
-Fixing: start-2bd
-Start: STARTDATE swap pays CPN
-End: ENDDATE * cvg(StartPeriod, EndPeriod, FIXBAS)
-Freq: FIXFREQ on EndPeriod
+
 Fixing: start-2bd
 
-（注：原文后续部分存在大量重复的占位性描述，根据指令“不要重复输出原文”及翻译逻辑，此处处理核心逻辑内容）
+Start: STARTDATE swap pays CPN
+
+End: ENDDATE * cvg(StartPeriod, EndPeriod, FIXBAS)
+
+Freq: FIXFREQ on EndPeriod
+
+Fixing: start-2bd
 
 对于这些频繁交易的品种，在电子表格或更高层次的语言中使用模板是实用的。这些模板通常用于普通掉期、欧式期权或外汇期权。它们结合了硬编码交易与脚本化的优点。许多交易被视为“几乎”普通掉期、“几乎”欧式期权或“几乎”标准障碍期权。在这些情况下，使用模板自动生成脚本是实用的。当某些交易在独立系统中记录时，模板也是有用的，例如，普通掉期。这种逻辑可以被推送到像 C# 这样的语言中，这样在没有专业知识的情况下，客户可以通过这些块来组装交易。这种表示随后自动转换为对应的脚本。
-
-
-
 
 我们将整个语句拆解为其项的层次化表示，其中每个项代表一个基础计算或动作，该动作可能依赖于多个参数，而这些参数本身也是被拆解为项层次化表示的表达式，到此为止，直到代表无参数操作的特殊且自包含的项为止：
 
 ![](img/3887ab6b5277fb99d77002948fa19470_42_0.png)
 
-## 递归定义
+### 递归定义
 
 这种对表达式中项的递归、层次化表示（我们刚刚手动执行了这一操作）被称为表达式树。为表达式建立树结构的过程被称为*解析*（parsing）。出于教学目的的考虑，我们只是手动粘贴了一个语句，尽管幸运的是，解析是可以完全自动化的。我们的附录中用文字和代码解释了解析过程。
 
@@ -477,9 +413,8 @@ Fixing: start-2bd
 | 4 | | | |
 | 5 | | | |
 | 6 | | | |
-| 7 | | | |
 
-## 
+
 
 这些概念是如此基础，以至于通过示例来说明它们，在后序顺序的情况下，对求值的实现的如下：
 
@@ -491,16 +426,12 @@ x = (y + z)
 
 ![](img/3887ab6b5277fb99d77002948fa19470_42_0.png)
 
-
-
-
-
-
 并将其解析为表达式树：
 
 ![](img/3887ab6b5277fb99d77002948fa19470_47_0.png)
 
 顶层 `if` 节点中的 `-1` 数据将在稍后进行解释。它的第一个参数（左侧第一个子树）是条件，右侧的后续参数是根据条件求值为真或假而执行的语句。
+
 移动到下一个事件：
 
 ```
@@ -528,9 +459,9 @@ else prod = 50 endIf
 
 ![](img/3887ab6b5277fb99d77002948fa19470_48_0.png)
 
-第 2 层的嵌套 `if` 节点持有数据 2，表示当条件为真时，必须评估从参数 1 到不包含 2 的参数（条件是参数 0）；当条件为假时，则要评估参数 2 及以上的参数。因此，该节点持有与第一个 `else` 语句对应的参数索引。数据 `-1` 表示我们没有 `else` 部分。
+第 2 层的嵌套 `if` 节点持有数据 `2`，表示当条件为真时，必须评估从参数 1 到不包含 2 的参数（条件是参数 0）；当条件为假时，则要评估参数 2 及以上的参数。因此，该节点持有与第一个 `else` 语句对应的参数索引。数据 `-1` 表示我们没有 `else` 部分。
 
-当一个产品交付多次支付时（例如阶式期权 cliquet，它支付某些指数在多个周期内的正收益率），我们可以使用某种相当优雅的运行语法¹
+当一个产品交付多次支付时（例如阶式期权 `cliquet`，它支付某些指数在多个周期内的正收益率），我们可以使用某种相当优雅的运行语法¹
 
 ```
 prod = prod + ...
@@ -540,10 +471,13 @@ prod = prod + ...
 
 因此，一个标准的阶式期权可以编写为（假设今天是 2020 年 6 月 1 日）：
 
-| 01Jun2020 | vPerf = spot() |
-| 01Jun2021 | vPerf = Max( spot() - vRef, 0) / vRef<br>pCliququet = vPerf<br>vRef = spot() |
-| 01Jun2022 | vPerf = Max( spot() - vRef, 0) / vRef<br>pCliququet = pCliquet + vPerf<br>vRef = spot() |
-| 01Jun2023 | vPerf = Max( spot() - vRef, 0) / vRef<br>pCliququet = pCliquet + vPerf |
+| 01Jun2020 | `vPerf = spot()` |
+
+| 01Jun2021 | `vPerf = Max( spot() - vRef, 0) / vRef`<br>`pCliququet = vPerf`<br>`vRef = spot()` |
+
+| 01Jun2022 | `vPerf = Max( spot() - vRef, 0) / vRef`<br>`pCliququet = pCliquet + vPerf`<br>`vRef = spot()` |
+
+| 01Jun2023 | `vPerf = Max( spot() - vRef, 0) / vRef`<br>`pCliququet = pCliquet + vPerf` |
 
 其中重复的语句
 
@@ -558,7 +492,6 @@ pCliququet = pCliquet + vPerf
 在求值时，首先从左下节点读取变量 `pCliququet` 的当前值，加上 `vPerf`，并将结果赋值回 `pCliquet`。当评估完成后，`pCliququet` 持有给定场景下（四个事件日期的价格路径）的支付总和。我们将在第 5 章中实现一种更具表现力、优雅且实用的语法。
 
 这结束了我们对表达式树的理论探索，我们将转向其在 C++ 中的实现。
-
 
 ## 2.2 代码实现
 
@@ -619,8 +552,6 @@ public:
 // ... 其他节点和访问器实现 ...
 ```
 
-
-
 `parse()` 函数的实现将在附录中详细说明并讨论。
 
 解析完成后，我们的 `Product` 包含一个 `myEvents` 向量，其与事件日期的向量 `myEventDates` 相对应。每个事件都是语句的集合；每个语句都是一个表达式树。该产品已准备好进行访问（visits）。
@@ -628,7 +559,6 @@ public:
 表达式树在其“DNA”中包含了构建现金流的操作。这些信息按照依赖关系进行排序，非常适合从系统的各个部分进行分析、修改或评估。我们将所有这些访问以及执行访问的组件称为访问者（visitors）。
 
 我们建议不熟悉解析的读者跳转到附录，在学习访问者之前，了解我们究竟是如何从文本构建表达式树的。
-
 
 ## 3.1 访问者模式
 
@@ -652,7 +582,8 @@ ASSIGN(VAR[X], MULT(CONST[2], VAR[Y]))
 
 所以，访问者遇到节点时会发生什么取决于节点和访问者。C++ 传统上提供了一种对象双分发的机制。为了克服这一局限性，GOF 产生了具有影响力的访问者模式，将在将在结合我们的表达式上下文中进行解释。首先，我们需要一个 Visitor 基类，它具有用于访问不同节点类型的虚函数。与其使用纯虚函数，对于所有遍历节点到参数的访问（例如，一个只查看变量的访问者），使用默认遍历方法来确保整棵树被遍历。
 
-```cppclass Visitor {
+```cpp
+class Visitor {
 protected:
     Visitor() {}
 
@@ -664,7 +595,6 @@ protected:
     virtual void visit(ExprTree& tree) = 0;
 };
 ```
-
 
 ```cpp
 // 访问子树的入口
@@ -769,9 +699,6 @@ virtual void visitVar(NodeVar& node)
 
 注意，所有节点类型的访问方法都可以显式地编写，尽管它们执行完全相同的操作。C++ 不支持虚模板方法，遗憾的是没有简单或优雅的替代方案。
 
-
-
-
 为了使之工作，我们必须在基类 Node 对象上有一个虚拟的 `acceptVisitor()` 方法，并为所有具体的 Node 类型重写该方法。
 
 ```cpp
@@ -824,6 +751,8 @@ void NodeAdd::acceptVisitor(Visitor& visitor)
 
 每一个除了遍历节点以访问其参数之外，对给定节点类型执行操作的访问者，必须重写其针对该特定节点类型的访问方法。我们的 Debugger 将不同类型的节点访问重写为：
 
+
+
 ```cpp
 void visitPlus(NodePlus& node) override
     debug(node, "PLUS");
@@ -847,9 +776,9 @@ void visitVar(NodeVar& node) override
     }
 ```
 
-除了 if、const 和 var 节点外，所有节点都会调用 `debug()` 方法并传递一个识别节点类型的字符串。我们稍后会回到这个 `debug()` 方法。if、const 和 var 节点也会调用 `debug()`，但在传递类型外，还会传递它们的内部数据，以便我们也能看到这些。
+除了 `if`、`const` 和 `var` 节点外，所有节点都会调用 `debug()` 方法并传递一个识别节点类型的字符串。我们稍后会回到这个 `debug()` 方法。`if`、`const` 和 `var` 节点也会调用 `debug()`，但在传递类型外，还会传递它们的内部数据，以便我们也能看到这些。
 
-让我们来看看双重分发是如何工作的。当调试器访问某个节点时（例如一个加法节点），它会调用节点上的虚拟 `acceptVisitor()` 方法，并将自身的引用作为参数传递。。该调用通过经典的函数重载解析到 `NodeAdd` 重写的 `acceptVisitor()`：
+让我们来看看双重分发是如何工作的。当调试器访问某个节点时（例如一个加法节点），它会调用节点上的虚拟 `acceptVisitor()` 方法，并将自身的引用作为参数传递。该调用通过经典的函数重载解析到 `NodeAdd` 重写的 `acceptVisitor()`：
 
 ```cpp
 void NodeAdd::acceptVisitor(Visitor& visitor)
@@ -860,10 +789,7 @@ void NodeAdd::acceptVisitor(Visitor& visitor)
 
 # 4. 现代计算金融
 
-这反过来会调用我们具体访问者（在本例中为 Debugger）的重写的 `visitAdd()` 方法，再次通过经典的类重写实现，因为作为参数传递给 `acceptVisitor()` 的 Visitor 类引用携带了它的具体类型。
-
-
-
+这反过来会调用我们具体访问者（在本例中为 `Debugger`）的重写的 `visitAdd()` 方法，再次通过经典的类重写实现，因为作为参数传递给 `acceptVisitor()` 的 `Visitor` 类引用携带了它的具体类型。
 
 ## 访问者 (Visitors)
 
@@ -924,184 +850,11 @@ public:
     vector<string> v(myVarMap.size()) const {
         for (auto varMapit = myVarMap.begin();
              varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit->first;
-        }
-        return v;
-    }
-};
-```
-（注：原文代码中 `v[varMapit->second] = varMapit;` 处似乎有笔误，根据逻辑推测为 `varMapit->first`，但根据指令要求不翻译代码块，保持原样。修正如下：
-
-```cpp
-class VarIndexer : public Visitor {
-    // 状态
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit->first;
-        }
-        return v;
-    }
-};
-```
-由于用户提供的原文示例代码中 `v[varMapit->second] = varMapit;` 且缺少闭合括号，遵循“代码块不需要翻译”原则，我将严格保留原文内容：
-
-```cpp
-class VarIndexer : public Visitor {
-    // 状态
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
             v[varMapit->second] = varMapit;
         }
     }
 };
 ```
-
-（注：由于原文提供的文本最后部分代码不完整且存在逻辑错误，我将基于原文逐字翻译描述部分，不修复代码逻辑。）
-
-我们需要添加一个方法来生成生成的变量名数组：
-
-```cpp
-class VarIndexer : public Visitor {
-    // 状态
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit;
-        }
-    }
-};
-```
-（重新审视原文，原文最后处确实断裂。以下为基于给定文本的翻译）：
-
-我们需要添加一个方法来生成生成的变量名数组：
-
-```cpp
-class VarIndexer : public Visitor {
-    // 状态
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit;
-        }
-    }
-};
-```
-（等等，原文提供的文本最后非常杂乱，我将按照原文的结构进行翻译）：
-
-我们需要添加一个方法来生成生成的变量名数组：
-
-```cpp
-class VarIndexer : public Visitor {
-    // 状态
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit;
-        }
-    }
-};
-```
-（注：由于原文文本后面包含大量重复和断裂的片段，我将根据“不要重复输出原文”的原则，仅翻译清晰的逻辑部分。）
-
----
-**更正：由于提供的原文文本后半部分存在严重的重复和乱码，我将提供一份逻辑清晰的翻译版本：**
-
-[content]
-## 访问者 (Visitors)
-
-在模拟过程中执行语句 `x = y` 时，评估器必须查找一个名为 `y` 的变量并读取其值，然后查找另一个名为 `x` 的变量的地址，并将 `y` 的值写入其中。在所有模拟场景中，每条包含变量的语句都会发生这些查找，这导致了不可接受的性能损耗。我们对脚本化产品的评估性能需要与高效的硬编码定价器相匹配。如果我们在运行时反复查找名称，这是无法实现的。我们需要评估器能够直接获取内存中变量的值和地址。因此，变量必须经过预索引处理，这样一来，如果 `x` 的索引为 3 且 `y` 的索引为 7，`x = y` 将被评估器读取为 `var[3] = var[7]` 并进行直接随机访问。
-
-为了在模拟之前进行索引，我们使用了一个名为变量索引器（variable indexer）的访问者。这个特定的访问者像所有访问者一样遍历所有树，但在访问变量时，它会对它们进行计数并在节点上设置唯一的索引。索引不仅是一个强迫性的性能需求，它还突显了访问者的一些理想特性，这些特性在调试器中并不明显：
-
-- 1. 访问者只重写它们感兴趣的节点的方法，在本例中，即变量节点。得益于基础访问者类中的默认访问方法，整个树仍然会被遍历。在这里，某些访问者的代码可能非常紧凑。
-- 2. 访问者持有状态，并在访问树的序列以及遍历语句和事件时携带该状态，根据所访问的节点更新其状态计数，并在访问当前节点时使用在后继节点上收集的信息。在本例中，我们的索引器维护了一个所有遇到过的变量的映射。
-- 3. 访问者不仅限于读取表达式树中存储的信息。变量索引器会将变量的索引写入变量节点。其他访问者甚至可以修改树的结构。
-
-首先，我们需要为变量节点添加索引：
-
-```cpp
-struct NodeVar : Node
-{
-    string name;
-    unsigned index;
-
-    void acceptVisitor(Visitor& visitor) override;
-};
-```
-
-然后，我们开发该访问者。这个特定的访问者只针对变量停止，因此它重写了每个 `visitVar()` 方法，使其代码非常紧凑。此外，它携带了一个自其构造以来访问的所有变量的状态，表现为从变量名到其索引的映射。
-
-# 52 现代计算金融
-
-```cpp
-#include <map>
-
-class VarIndexer : public Visitor {
-    // State
-    map<string, unsigned> myVarMap;
-
-public:
-    // 变量索引器：构建名称到索引的映射
-    // 并将索引写入变量节点
-    void visit(VarNode& node) override {
-        auto varit = myVarMap.find(node.name);
-        if(varit == myVarMap.end())
-            node.index = myVarMap[node.name].size();
-        else
-            node.index = varit->second;
-    }
-};
-```
-
-就是这样。当它访问一个变量时，它会在映射中查找该名称。如果找到，它会在节点上设置相应的索引。如果没找到，它会将该名称添加到映射中以备日后参考，并使用下一个索引（即当前映射的大小）在节点上设置相同的索引。整个代码仅占了三行，这足以访问者索引跨越语句和事件的树集合中的所有变量。我们需要添加一个方法来生成生成的变量名数组：
-
-```cpp
-class VarIndexer : public Visitor {
-    // State
-    map<string, unsigned> myVarMap;
-
-public:
-    // 访问变量名向量
-    // 访问所有事件的 v[index]-name
-    vector<string> v(myVarMap.size()) const {
-        for (auto varMapit = myVarMap.begin();
-             varMapit != myVarMap.end(); ++varMapit) {
-            v[varMapit->second] = varMapit;
-        }
-    }
-};
-```
-（注：由于原文提供的文本后面包含大量重复和断裂的片段，我已根据指令过滤掉重复内容。）
-
-
-
 
 # 56 现代计算金融
 
@@ -1115,51 +868,82 @@ virtual void visitArguments( const Node& node)
 public:
 
 // 访问（子）树的入口点
+
 void visit(const ExprTree& tree)
+
 {
+
     tree->acceptVisitor(*this);
+
 }
 
 // 所有具体节点的默认访问器，
+
 // 除非被重写，否则会访问参数
 
 virtual void visitUPlus(const NodeUplus& node)
+
 {
+
     visitArguments(node);
+
 }
+
 virtual void visitMinus(const NodeUminus& node)
+
 {
+
     visitArguments(node);
+
 }
+
 virtual void visitAdd(const NodeAdd& node)
+
 {
+
     visitArguments(node);
+
 }
+
 //
+
 virtual void visitVar(const NodeVar& node)
+
 {
+
     visitArguments(node);
+
 }
 ```
 
 并且我们在节点类中支持常量访问器（constVisitors）：
+
 ```cpp
 struct Node
 {
-    vector<ExprTree> arguments;
-    virtual ~Node() {}
 
-    virtual void acceptVisitor(Visitor& visitor) = 0;
-    virtual void acceptVisitor(const Visitor& visitor) const = 0;
+
+
+```cpp
+vector<ExprTree> arguments;
+
+virtual ~Node() {}
+
+virtual void acceptVisitor(Visitor& visitor) = 0;
+
+virtual void acceptVisitor(const Visitor& visitor) const = 0;
+
 };
 ```
 
+```
 // 一元 +
 struct NodeUplus : public Node
 {
     void acceptVisitor(Visitor& visitor) override;
     void acceptVisitor(const Visitor& visitor) const override;
 };
+```
 
 ```cpp
 void NodeUplus::acceptVisitor(const Visitor& visitor) const
@@ -1168,6 +952,7 @@ void NodeUplus::acceptVisitor(const Visitor& visitor) const
 }
 ```
 
+```
 // 一元 -
 struct NodeUminus : public Node
 {
@@ -1181,24 +966,29 @@ void NodeUminus::acceptVisitor(const Visitor& visitor) const
 {
     visitor.visitUminus(*this);
 }
+```
 
+```
 // operator+
 struct NodeAdd : public Node
 {
     void acceptVisitor(Visitor& visitor) override;
     void acceptVisitor(const Visitor& visitor) const override;
 };
+```
 
+```cpp
 void NodeAdd::acceptVisitor(const Visitor& visitor) const
 {
     visitor.visitAdd(*this);
 }
+```
 
+```
 // 等等
 ```
 
-```
-派生自 constVisitor 的访问器将不允许修改节点。尝试这样做将导致编译错误。只要评估器（evaluator）派生自 constVisitor，评估器就可以安全地并发访问相同的树。
+派生自 `constVisitor` 的访问器将不允许修改节点。尝试这样做将导致编译错误。只要评估器（evaluator）派生自 `constVisitor`，评估器就可以安全地并发访问相同的树。
 
 ## 3.6 评估器（THE EVALUATOR）
 
@@ -1206,29 +996,37 @@ void NodeAdd::acceptVisitor(const Visitor& visitor) const
 
 评估器仅在访问现货节点（spot node）时与模拟交互。在深入这种交互之前，我们先检查更简单的、与场景无关的脚本评估，例如（完全没用但在教学上可能有用）：
 
-``````
+```
 x = log(100)
+
 y = 3 * x
+
 if y < 50
+
 then y = 50 z = 100
+
 else z = y
+
 endif
-```````
+```
 
 > ²目前，我们将在第 5 章的支付部分引入其他与其他场景相关的节点，并在第三部分引入更多节点。
 
 执行此脚本后，涉及的变量的最终值为：
 
-``````
+```
 x = 4.61
-y = 50
-z = (100)
-```````
 
-第一个语句将 log(100) 赋值给 y。第二个语句读取 x 的值，将其乘以 3 并结果赋值给 y，依此类推。因此，评估器在遍历语句和事件时需要携带所有变量的值。变量的值实际上是将名称转换为索引并记录在产品中的。因此，我们可以这样开始我们的评估器：
+y = 50
+
+z = (100)
+```
+
+第一个语句将 `log(100)` 赋值给 `y`。第二个语句读取 `x` 的值，将其乘以 `3` 并结果赋值给 `y`，依此类推。因此，评估器在遍历语句和事件时需要携带所有变量的值。变量的值实际上是将名称转换为索引并记录在产品中的。因此，我们可以这样开始我们的评估器：
 
 ```cpp
 #include <vector>
+
 template <class T>
 class Evaluator : public constVisitor
 {
@@ -1241,7 +1039,6 @@ public:
     // 构造函数，nVar = 变量数量
     // 解析后的变量索引
     Evaluator(const size_t nVar) : myVariables(nVar) {}
-
     // 评估后的变量值
     const vector<T>& varVals() const
     {
@@ -1270,18 +1067,15 @@ template <class T> class Evaluator : constVisitor
 {
     // 状态
     vector<T> myVariables;
-
     // 栈
     quickStack<T> myStack;
     quickStack<bool> myStack;
-
     // 从右到左访问参数
     void evalArgs(const Node& node)
     {
         for(auto i = node.arguments.rbegin(); i != node.arguments.rend(); ++i)
             (*i)->acceptVisitor(*this);
     }
-
 public:
     // ...
 };
@@ -1316,7 +1110,7 @@ void visitDiv(const NodeDiv& node) override
 }
 ```
 
-一元运算符更简单。一元 + 将其右侧操作数留在栈上，一元 - 将其反转。
+一元运算符更简单。一元 `+` 将其右侧操作数留在栈上，一元 `-` 将其反转。
 
 ```cpp
 void visitUPlus(const NodeUplus& node) override { evalArgs(node ); }
@@ -1357,7 +1151,6 @@ void visitMin(const NodeMin& node) override
     evalArgs(node);
     double m = myStack.top();
     myStack.pop();
-
     for(size_t i=1; i<node.arguments.size(); ++i) {
         m = min(m, myStack.top());
         myStack.pop();
@@ -1367,10 +1160,6 @@ void visitMin(const NodeMin& node) override
 // ...
 ```
 
-
-
-
-```text
 条件运算符与二元运算符相同，不同在于它们使用的是布尔栈而非数字栈：
 
 ```cpp
@@ -1458,15 +1247,12 @@ template <class T> class Evaluator : public constVisitor
 {
     // 状态
     vector<T> myVariables;
-
     // 栈
     quickStack<T> myStack;
     quickStack<bool> myStackStack;
-
     // 正在访问左值？
     bool myLhsVar;
     T* myLhsVarAdr;
-
     // ...
 };
 void visitAssign(const NodeAssign& node) override {
@@ -1484,14 +1270,14 @@ myLhsVar = true;
 ```cpp
 node.arguments[0]->acceptVisitor( *this);
 myLhsVar = false;
-
 // 访问右值表达式
 node.arguments[1]->acceptVisitor( *this);
-
 // 将结果写入变量
 myLhsVarAdr = myStack.top();
 myData.pop();
+```
 
+```cpp
 void visitVar( const NodeVar& node) override
 {
     // 左值？
@@ -1514,9 +1300,6 @@ void visitVar( const NodeVar& node) override
 
 我们的脚本语言在设计之初特意采用了松耦合的设计。现在是时候在脚本库和模型之间最终建立起桥梁了。我们希望保持其通用性、简洁且齐到位。
 
-
-
-
 # 访客 67
 
 对事件进行评估，以便能够访问对应事件日期的模拟点。
@@ -1526,31 +1309,25 @@ template <class T> class Evaluator : public constVisitor
 {
     // 状态
     vector<T> variables;
-
     // 栈
     quickStack<T> myStack;
     quickStack<bool> myStack;
-
     // 正在访问的左值变量？
     bool myLhsVar;
     T* myLhsVarAdr;
-
     // 对当前场景的引用
     const Scenario<T>* myScenario;
-
     // 当前事件的索引
     size_t myCurEvt;
     // ...
 
 public:
     // ...
-
     // 设置当前场景的引用
     void setScenario(const Scenario<T>* scen)
 {
         myScenario = scen;
     }
-
     // 设置当前事件索引
     void setCurEvt(const size_t curEvt)
 {
@@ -1561,6 +1338,8 @@ public:
 ```
 
 之后，spot 节点访问器（spot node visitor）变得非常简单。就像 const 节点一样，它将一个值推入数字栈，但这个值不是常量，而是设置的事件日期索引在设置场景中的 spot 值：
+
+
 
 ```cpp
 void visitSpot(const NodeSpot& node) override
@@ -1604,7 +1383,7 @@ void init()
 }
 ```
 
-最后，我们在 Product 类中编写了一个方法，用于在给定场景下评估产品，并且方便起见，还编写了工厂方法来生成正确大小的评估器和空场景：
+最后，我们在 `Product` 类中编写了一个方法，用于在给定场景下评估产品，并且方便起见，还编写了工厂方法来生成正确大小的评估器和空场景：
 
 ```cpp
 class Product
@@ -1627,7 +1406,6 @@ void evaluate(const Scenario<T>& scen, Evaluator<T>& eval) const
         eval.setCurEvt(i);
     }
 ```
-
 ```cpp
 // 遍历事件中的语句
 for(auto& statIT : myEvents[i])
@@ -1636,42 +1414,39 @@ for(auto& statIT : myEvents[i])
     eval.visit(statIT);
 }
 ```
-
 ```cpp
 // 评估器工厂
 template <class T>
 unique_ptr<Evaluator<T>> buildEvaluator()
 {}
 ```
-
 ```cpp
 // 移动
 return unique_ptr<Evaluator<T>>(
     (new Evaluator<T>(myVariables.size())));
 ```
-
 ```cpp
 // 场景工厂
 template <class T>
 unique_ptr<Scenario<T>> buildScenario()
 {}
 ```
-
 ```cpp
 // 移动
 return unique_ptr<Scenario<T>>(
     new Scenario<T>(myEventDates.size()));
 ```
 
-我们的基础脚本语言现在已经完成。Product 类为操作它提供了一个方便的入口。
+我们的基础脚本语言现在已经完成。`Product` 类为操作它提供了一个方便的入口。
 
-它的 `parseEvents()` 方法返回按事件日期索引的由表达式树组成的字符串，并将生成的树存储在内部。它的 `indexVariables()` 方法计算并存储所有涉及变量的向量，并设置它们在变量节点中的索引。它可以作为 PreProcess 方法的一部分被调用，该方法按顺序调用所有必要的预处理器（目前只有 `indexVariables()`）。
+它的 `parseEvents()` 方法返回按事件日期索引的由表达式树组成的字符串，并将生成的树存储在内部。它的 `indexVariables()` 方法计算并存储所有涉及变量的向量，并设置它们在变量节点中的索引。它可以作为 `PreProcess` 方法的一部分被调用，该方法按顺序调用所有必要的预处理器（目前只有 `indexVariables()`）。
 
-`Product()` 的构建是通过调用 `parseEvents()` 后调用 `indexVariables()` 或 `preProcess()` 完成的，我们通过 `accessorDates()` 读取事件日期向量。模型需要这些信息，以便知道在模拟期间必须为哪些日期提供数据。我们的模型 API 将作为参数用于模型的初始化。变量名向量通过 Product 的 `accessorVarNames()` 访问。我们需要这些变量在定价/风险计算完成后与结果变量进行匹配。`buildEvaluator()` 工厂方法提供一个初始化正确的评估器。`buildScenario()` 工厂方法提供一个大小大小的空场景（`simulData` 结构体向量）供模型填充。我们的模型 API 将空场景作为引用参数传入，由模型逐次模拟进行填充。
+`Product()` 的构建是通过调用 `parseEvents()` 后调用 `indexVariables()` 或 `preProcess()` 完成的，我们通过 `accessorDates()` 读取事件日期向量。模型需要这些信息，以便知道在模拟期间必须为哪些日期提供数据。我们的模型 API 将作为参数用于模型的初始化。变量名向量通过 `Product` 的 `accessorVarNames()` 访问。我们需要这些变量在定价/风险计算完成后与结果变量进行匹配。`buildEvaluator()` 工厂方法提供一个初始化正确的评估器。`buildScenario()` 工厂方法提供一个大小大小的空场景（`simulData` 结构体向量）供模型填充。我们的模型 API 将空场景作为引用参数传入，由模型逐次模拟进行填充。
 
-对于每次模拟，我们需要模型用所有事件日期的模拟数据填充场景。然后，我们调用 Product 的 `evaluate()` 方法，传入生成的场景和评估器。产品的 `evaluate()` 方法运行脚本，库就准备好组合在一起了。在下一章中，我们将编写一个简单的 Black-Scholes 模型并展示如何将其链接到我们的库中。
+对于每次模拟，我们需要模型用所有事件日期的模拟数据填充场景。然后，我们调用 `Product` 的 `evaluate()` 方法，传入生成的场景和评估器。产品的 `evaluate()` 方法运行脚本，库就准备好组合在一起了。在下一章中，我们将编写一个简单的 Black-Scholes 模型并展示如何将其链接到我们的库中。
 
 # 第 4 章
+
 将脚本与模型结合
 
 ## 4.1 一个简单的 BLACK-SCHOLES 蒙特卡洛模拟器
@@ -1716,7 +1491,7 @@ public:
 };
 ```
 
-它通过维度 dim 初始化，即生成一条路径所需的数量。然后，连续调用 `genNextVec()` 生成一组相互独立的高斯分布数，通过 `getNorm()` 进行访问。使用拷贝函数实现虚拷贝模式也是有用的。此外，用于并行模拟的随机生成器（此处不讨论）必须实现跳跃。
+它通过维度 `dim` 初始化，即生成一条路径所需的数量。然后，连续调用 `genNextVec()` 生成一组相互独立的高斯分布数，通过 `getNorm()` 进行访问。使用拷贝函数实现虚拷贝模式也是有用的。此外，用于并行模拟的随机生成器（此处不讨论）必须实现跳跃。
 
 ```cpp
 class BasicRanGen : public RandomGen
@@ -1762,10 +1537,6 @@ public:
 };
 ```
 
-
-
-
-
 # 将脚本与模型结合
 
 ```cpp
@@ -1786,7 +1557,6 @@ const vector<double>& getNorm() const override
     return myNormVec;
 }
 ```
-
 ```cpp
 // Clone
 unique_ptr<RandomGen> clone() const
@@ -1860,55 +1630,96 @@ public:
     {
         return unique_ptr<Model>(new SimpleBlackScholes(*this));
     }
-``````cpp
+```
+```cpp
 // 参数访问器，只读
+
 const T& spot() { return mySpot; }
+
 const T& vol() { return myVol; }
 
 // 初始化模拟日期
+
 void initSimDates(const vector<Date>& simDates) override
+
 {
+
     myTime0 = simDates[0] == myToday;
 
     // 填充时间数组
+
     for(auto dateIt = simDates.begin();
+
     dateIt != simDates.end();
+
     ++dateIt)
+
     {
+
         myTimes.push_back(*dateIt - myToday) / 365);
+
         myDt.resize(myTimes.size());
+
         myDt[0] = myTimes[0];
+
         for(size_t i=1; i<myTimes.size(); ++i)
+
         {
+
             myDt[i] = myTimes[i] - myTimes[i-1];
+
         }
+
         mySqDt.resize(myTimes.size());
+
         for(size_t i=0; i<myTimes.size(); ++i)
+
         {
+
             mySqDt[i] = sqrt(myDt[i]);
+
         }
+
     }
 
     size_t dim() const override { return myTimes.size() - myTime0; }
 
     // 模拟一条路径
+
     void applySDE(const vector<double>& G, int dim,
+
                   // 填充每个事件日期的点值
+
                   vector<T>& spots)
+
     {
+
         // 应用 SDE
+
         size_t step = 0;
+
         // 第一步
+
         spots[0] = myTime0?
+
             mySpot:
+
             mySpot*exp(-myDrift*myDt[0]+myVol*mySqDt[0]*G[step++]);
+
         // 所有步骤
+
         for(size_t i=1; i<myTimes.size(); ++i)
+
         {
+
             spots[i] = spots[i-1]
+
                 *exp(-myDrift*myDt[i]+myVol*mySqDt[i]*G[step++]);
+
         }
+
     }
+
 };
 ```
 
@@ -1924,7 +1735,6 @@ class MonteCarloSimulator
 {
   RandomGen& myRandomGen;
   Model<T>& myModel;
-
 public:
   MonteCarloSimulator(Model<T>& model, RandomGen& ranGen)
     : myRandomGen(ranGen), myModel(model) {}
@@ -1935,10 +1745,18 @@ public:
   }
   void simulateOnePath(vector<T>& spots)
   {
-    myRandomGen.genNextVec();
-    myModel.applySDE(myRandomGen.getNorm(), spots);
-  }
+```
+
+
+
+`myRandomGen.genNextVec();`
+
+`myModel.applySDE(myRandomGen.getNorm(), spots);`
+
+}
+
 };
+
 ```
 
 再次，实现部分一而易懂。
@@ -1952,23 +1770,18 @@ template <class T>
 class ScriptSimulator : public MonteCarloSimulator<T>, public ModelApi<T>
 {
     vector<T> myTempSpots;
-
 public:
     ScriptSimulator(Model<T>& model, RandomGen& ranGen)
         : MonteCarloSimulator(model, ranGen) {}
-
     void initScripting(const vector<Date>& eventDates) override {
         MonteCarloSimulator::init(eventDates);
         myTempSpots.resize(eventDates.size());
     }
-
     void nextScenario(Scenario<T>& s) override {
         MonteCarloSimulator::simulateOnePath(myTempSpots);
-
         // 注意这种低效率
         for(size_t i=0; i<s.size(); ++i) s[i].spot = myTempSpots[i];
     }
-
     void simpleVal(
         const Date& today,
         const double spot,
@@ -1981,16 +1794,13 @@ public:
     {
         if (events.begin()->first < today)
             throw runtime_error("不允许出现过去期的事件!");
-
         // 初始化产品
         Product prd;
         prd.parseEvents(events.begin(), events.end());
         prd.indexVariables();
-
         // 构建评估器和场景
         unique_ptr<Scenario<double>> scen = prd.buildScenario<double>();
         unique_ptr<Evaluator<double>> eval = prd.buildEvaluator<double>();
-
         // 初始化模型
         BasicRanGen random;
         SimpleBlackScholes<double> model(today, spot, vol);
@@ -2006,7 +1816,6 @@ simulator.initScripting(prd.eventDates());
 // 初始化结果
 varNames = prd.varNames();
 varVals.resize(varNames.size(), 0.0);
-
 // 循环模拟
 for( size_t i=0; i<numSim; ++i) {
     // 生成下一个场景到 scen
@@ -2038,10 +1847,6 @@ cout << "输入点值: ";
 getline(cin, str);
 ```
 
-
-
-
-
 # 将脚本与 Model 79 结合
 
 ```cpp
@@ -2052,36 +1857,28 @@ vol = stod(str);
 cout << "Enter num sim: ";
 getline(cin, str);
 numSim = stoi(str);
-
 // 使用用户输入构建事件映射
-
 Date date;
 string evtStr;
 map<Date,string> events;
-
 cout << "Enter events, -1 when done" << endl;
-
 cout << "Enter date: ";
 getline(cin, str);
 date = stoi(str);
-
 if (date != -1) {
     cout << "Event event for date " << date << " >> ";
     getline(cin, evtStr);
 }
-
 while (date != -1) {
     events[date] = evtStr;
     cout << "Enter date: ";
     getline(cin, str);
     date = stoi(str);
 }
-
 if (date != -1) {
     cout << "Event event for date " << date << " >> ";
     getline(cin, evtStr);
 }
-
 // 主调用
 vector<string> varNames;
 vector<double> varVals;
@@ -2121,7 +1918,7 @@ return 0;
 
 ## 核心扩展与 "Pays" 关键字
 
-在结束本节之前，我们实现了对基础利率和现金流折现的支持。对于取决于利率定价的付款的支持将在稍后讨论；目前，我们只考虑付款的折现。然而，我们以一种非常通的方式考虑折现，以便包含随机折现。本段本身不仅是一个重要的扩展，还可以用作实现脚本语言核心扩展的必要步骤的参考。
+在结束本节之前，我们实现了对基础利率和现金流折现的支持。对于取决于利率定价的付款的支持将在稍后讨论；目前，我们只考虑付款的折现。然而，我们以一种非常通用的方式考虑折现，以便包含随机折现。本段本身不仅是一个重要的扩展，还可以用作实现脚本语言核心扩展的必要步骤的参考。
 
 ### 5.1 理论
 
@@ -2156,14 +1953,12 @@ prd pays expression
 prd = prd + expression / numeraire()
 ```
 
-
 ……因此，例如具有随机利率的 la Duprire 模型将得到支持。在这里我们扩展了简单的 Black-Scholes 模拟器以支持恒定利率。
 
 ```cpp
 template <class T> struct Model
 {
     // ...
-
     virtual void applySDE(
         // 高斯数，维度 dim()
         const vector<double>& G,
@@ -2172,21 +1967,16 @@ template <class T> struct Model
         // 为每个事件日期填充计价货币
         vector<T> numeraires)
         const t = 0;
-    };
-
+};
 template <class T> class SimpleBlackScholes : public Model<T>
 {
     Date Today;
-
     T mySpot;
     T myRate;
     T myVol;
     T myDrift;
-
     // ...
-
 private:
-
     // 计算所有确定性折因子
     void calcDF(vector<T>& dfs)
     {
@@ -2195,9 +1985,7 @@ private:
             // 而是它的倒数，因此，计价货币
             dfs[i] = exp(myRate * myTimes[i]);
     }
-
 public:
-
     // 使用 T0, S0 和利率构造
     SimpleBlackScholes(const Date& today,
         const double spot,
@@ -2206,7 +1994,6 @@ public:
     : myToday(today), mySpot(spot), myVol(vol), myRate(rate),
       myDrift(-rate+0.5*vol)
     {}
-
     const T& spot() { return mySpot; }
     const T& rate() { return myRate; }
     const T& vol() { return myVol; };
@@ -2216,7 +2003,6 @@ public:
 
 ```cpp
 // ...
-
 void applySDE(
     // 高斯数，维度 dim()
     const vector<double>& G,
@@ -2230,17 +2016,14 @@ void applySDE(
         calcDdf(numeraries);
         // 注意这里的低效率：
         // 在这种情况下，numeraries 只需要计算一次
-
         // 然后应用 SDE
         // ... 这里无须更改，利率已成为 myDrift 的一部分
     );
-
 template <class T>
 class MonteCarloSimulator
 {
     // ...
 public:
-
     void simulateOnePath(vector<T>& spots, vector<T>& numeraries)
     {
         myRandomGen.nextNormVec();
@@ -2257,14 +2040,17 @@ class ScriptSimulator
 public:
     ScriptSimulator(Model<T>& model, RandomGen& ranGen)
         : MonteCarloSimulator(model, ranGen) {}
-
     void initForScripting(const vector<Date>& eventDates) override
     {
         MonteCarloSimulator::init(eventDates);
-        myTempSpots.resize(eventDates.size());
-        myTempNumeraries.resize(eventDates.size());
-    }
-```
+
+
+
+`myTempSpots.resize(eventDates.size());`
+
+`myTempNumeraries.resize(eventDates.size());`
+
+}
 
 ## 86 现代计算金融学
 
@@ -2273,7 +2059,6 @@ void nextScenario( Scenario<T>& s) override
 {
     MonteCarloSimulator::
         simulateOnePath(myTempSpots, myTempNumeraires);
-
     // 注意这里的低效率
     for(size_t i=0; i<s.size(); ++i) {
         s[i].spot = myTempSpots[i];
@@ -2302,11 +2087,11 @@ inline void simpleBSScriptVal(
 
 这解决了与模型通信的问题。至于脚本语言的发展，我们需要：
 
-1. 创建 pays 节点类型，并在基础 visitor 类和 constVisitor 类中对其添加支持。
+1. 创建 `pays` 节点类型，并在基础 `visitor` 类和 `constVisitor` 类中对其添加支持。
 2. 在解析器中从指令级别添加支持。
-3. 在评估器和其他相关的 visitor 中添加支持。
+3. 在评估器和其他相关的 `visitor` 中添加支持。
 
-我们看到，我们建立的设计使得这些开发变得轻而易举。首先，像其他类型一样创建 pays 节点类型：
+我们看到，我们建立的设计使得这些开发变得轻而易举。首先，像其他类型一样创建 `pays` 节点类型：
 
 ```cpp
 struct NodePays : public Node
@@ -2330,7 +2115,7 @@ void NodePays::acceptVisitor(constVisitor& visitor) const
 }
 ```
 
-在基础 Visitor 和 constVisitor 类中添加支持：
+在基础 `Visitor` 和 `constVisitor` 类中添加支持：
 
 ```cpp
 class Visitor
@@ -2345,24 +2130,20 @@ class constVisitor
 };
 ```
 
-其次，在解析器中，为语句中的 pays 关键字添加支持：
+其次，在解析器中，为语句中的 `pays` 关键字添加支持：
 
 ```cpp
 static Statement parseStatement(TokIt& cur, constIt& end)
 {
     // 检查类型为 1 的指令，只有 'if'
     if (*cur == "IF") return parseIf(cur, end);
-
     // 解析为变量
     auto lhs = parseVar(cur);
-
     // 检查结束
     if (*cur == end) throw script_error("Unexpected end of statement");
-
     // 检查类型为 2 的指令，只有赋值
     if (*cur == "=") return parseAssign(cur, end, lhs);
     else if (*cur == "PAYS") return parsePays(cur, end, lhs);
-
     // 无指令
     throw script_error("Statement without an instruction");
     return Statement();
@@ -2371,7 +2152,7 @@ static Statement parseStatement(TokIt& cur, constIt& end)
 
 ## 88 现代计算金融学
 
-并实现 pays 的解析器：最后，在评估器中编写支付 visitor。记住在访问支付时切换 myLhsVar。在访问产品时：
+并实现 `pays` 的解析器：最后，在评估器中编写支付 `visitor`。记住在访问支付时切换 `myLhsVar`。在访问产品时：
 
 ```cpp
 void visitPays(const NodePays& node) override
@@ -2380,20 +2161,14 @@ void visitPays(const NodePays& node) override
     myLhsVar = true;
     node.arguments[0]->acceptVisitor(this);
     myLhsVar = false;
-
     // 访问右侧表达式
     node.arguments[1]->acceptVisitor(this);
-
     // 将结果写入变量
     myLhsVar += myStack.top() / (*Scenario[Evt]).numeraire;
 }
 ```
 
-注意与赋值的相似之处。pays 基本上是赋值，区别在于它是对变量进行加而不是覆盖，并用计价货币对右侧进行归一化。
-
-
-
-
+注意与赋值的相似之处。`pays` 基本上是赋值，区别在于它是对变量进行加而不是覆盖，并用计价货币对右侧进行归一化。
 
 # 基础改进
 
@@ -2401,13 +2176,13 @@ void visitPays(const NodePays& node) override
 
 在本节中，我们将讨论对我们的脚本语言进行某些外观上的改进，这些改进在某些情况下可以为用户带来巨大的差异。目前，我们不处理对多个底层资产或利率的支持。我们坚持使用单一股票、外汇或大宗商品类型作为标的，并描述脚本语言中的额外功能，使其在生产背景下更具相关性和实用性。
 
-此处讨论的改进的源代码未在文中或在线仓库中提供。然而，我们对其实现进行了深入讨论。对于这里讨论的功能，其实现主要由高层开发组成，在解析之前修改脚本，并且偶尔需要对解析代码、表达式树节点定义和访问器（visitors）进行微调。我们证明了，只需轻量级开发即可将我们的基础脚本库转换为适用于生产的专业工具。对利率和多个底层资产的支持更为复杂，将在第三部分考虑。
+此处讨论的改进的源代码未在文中或在线仓库中提供。然而，我们对其实现进行了深入讨论。对于这里讨论的功能，其实现主要由高层开发组成，在解析之前修改脚本，并且偶尔需要对解析代码、表达式树节点定义和访问器（`visitors`）进行微调。我们证明了，只需轻量级开发即可将我们的基础脚本库转换为适用于生产的专业工具。对利率和多个底层资产的支持更为复杂，将在第三部分考虑。
 
 # 第 6 章
 
 ## 历史评估器
 
-生产环境所需的另一项开发是对历史事件的支持。一旦下单了像障碍期权（barrier option）这样的产品，脚本在其整个生命周期内应保持不变。当在日后的日期重新计算其价值和风险敏感性时，某些事件（如障碍监控）会在事件中发生。仿真始终从估值日开始。为了评估历史事件，我们需要另一个访问器，一个专门的预处理器，在仿真之前评估历史事件。这个预处理器实际上是一个评估器，其工作方式与普通评估器完全相同，只是它从历史数据库中选取市场数据，而不是模拟场景。换句话之，这是一个“历史评估器”，它继承自评估器并重写了选取市场数据的节点访问方法（目前只有现点节点 spot node）。在评估完所有历史事件后，评估器的最终状态是实际评估器在每次仿真开始时被重置的初始状态。评估器的状态由所有变量的值组成。因此，仿真中所有变量的起始值是派生评估器对历史事件评估后的最终值。例如，考虑一个使用 `vAlive` 变量的障碍脚本，`vAlive` 在交易日开始为 1，在击中障碍时变为 0。在评估历史事件时，历史评估器会在估值日产生 `vValue` 的最终值：如果未击中障碍则为 1，如果命中则为 0。我们将 `vValue0` 称为历史事件评估后 `vValue` 的值。在仿真期间，每次仿真开始前，`vValue` 的值都会重置为 `vValue0`。此外，过去支付的现金流必须被忽略。因此，`pays` 访问器也必须派生自历史评估器，以标记支付并实例化将其发送给客户，而不是将其添加到相关变量中。主评估器中的变量不再在每次仿真前重置为 0，而是重置为历史评估器的输出。
+生产环境所需的另一项开发是对历史事件的支持。一旦下单了像障碍期权（`barrier option`）这样的产品，脚本在其整个生命周期内应保持不变。当在日后的日期重新计算其价值和风险敏感性时，某些事件（如障碍监控）会在事件中发生。仿真始终从估值日开始。为了评估历史事件，我们需要另一个访问器，一个专门的预处理器，在仿真之前评估历史事件。这个预处理器实际上是一个评估器，其工作方式与普通评估器完全相同，只是它从历史数据库中选取市场数据，而不是模拟场景。换句话之，这是一个“历史评估器”，它继承自评估器并重写了选取市场数据的节点访问方法（目前只有现点节点 `spot node`）。在评估完所有历史事件后，评估器的最终状态是实际评估器在每次仿真开始时被重置的初始状态。评估器的状态由所有变量的值组成。因此，仿真中所有变量的起始值是派生评估器对历史事件评估后的最终值。例如，考虑一个使用 `vAlive` 变量的障碍脚本，`vAlive` 在交易日开始为 1，在击中障碍时变为 0。在评估历史事件时，历史评估器会在估值日产生 `vValue` 的最终值：如果未击中障碍则为 1，如果命中则为 0。我们将 `vValue0` 称为历史事件评估后 `vValue` 的值。在仿真期间，每次仿真开始前，`vValue` 的值都会重置为 `vValue0`。此外，过去支付的现金流必须被忽略。因此，`pays` 访问器也必须派生自历史评估器，以标记支付并实例化将其发送给客户，而不是将其添加到相关变量中。主评估器中的变量不再在每次仿真前重置为 0，而是重置为历史评估器的输出。
 
 历史评估器访问器的实际实现在某种程度上取决于系统和环境，不再进一步讨论。然而，我们注意到，历史评估器可以一次性消除修复和向客户支付所需的任何特定产品或标的代码。
 
@@ -2415,35 +2190,32 @@ void visitPays(const NodePays& node) override
 
 # 第 7 章 宏
 
-第一个外观上的定价改进是支持类似 C/C++ 的宏。假设我们正在为一个年化表现行权为 5% 的 3 年 clique 产品定价（今天是 2020 年 6 月 1 日）：
+第一个外观上的定价改进是支持类似 C/C++ 的宏。假设我们正在为一个年化表现行权为 5% 的 3 年 `clique` 产品定价（今天是 2020 年 6 月 1 日）：
 
 | 日期 | 脚本 |
 | :--- | :--- |
-| 01Jun2020 | vRef = spot() |
-| 01Jun2021 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - 0.05, 0) <br> vRef = spot() |
-| 01Jun2022 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - 0.05, 0) <br> vRef = spot() |
-| 01Jun2023 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - 0.05, 0) |
+| 01Jun2020 | `vRef = spot()` |
+| 01Jun2021 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - 0.05, 0)` <br> `vRef = spot()` |
+| 01Jun2022 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - 0.05, 0)` <br> `vRef = spot()` |
+| 01Jun2023 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - 0.05, 0)` |
 
 如果我们想将行权价改为 2.5%，则需要在脚本中三个不同的地方将 0.05 替换为 0.25。这既不便又容易出错。定义一个宏要整洁得多：
 
-> STRIKE 0.05
+> `STRIKE 0.05`
 
 然后脚本变为：
 
 | 日期 | 脚本 |
 | :--- | :--- |
-| 01Jun2020 | vRef = spot() |
-| 01Jun2021 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - STRIKE, 0) <br> vRef = spot() |
+| 01Jun2020 | `vRef = spot()` |
+| 01Jun2021 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - STRIKE, 0)` <br> `vRef = spot()` |
 
 | 日期 | 脚本 |
 | :--- | :--- |
-| 01Jun2022 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - STRIKE, 0) <br> vRef = spot() |
-| 01Jun2023 | vPerf = (spot() - vRef) / vRef <br> prd pays max(vPerf - STRIKE, 0) |
+| 01Jun2022 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - STRIKE, 0)` <br> `vRef = spot()` |
+| 01Jun2023 | `vPerf = (spot() - vRef) / vRef` <br> `prd pays max(vPerf - STRIKE, 0)` |
 
-这是一个非常简单的改进，影响了脚本的清晰性和维护性。产品的参数存储在一个地方，宏在显式名称下定义，该名称指代参数的含义：STRIKE、BARRIER、THRESHOLD 等。脚本使用这些名称而不是魔术数字，使其更整洁、更于理解。我们可以在不修改任何内容的情况下更改参数。
-
-
-
+这是一个非常简单的改进，影响了脚本的清晰性和维护性。产品的参数存储在一个地方，宏在显式名称下定义，该名称指代参数的含义：`STRIKE`、`BARRIER`、`THRESHOLD` 等。脚本使用这些名称而不是魔术数字，使其更整洁、更于理解。我们可以在不修改任何内容的情况下更改参数。
 
 在语言中重新定义两个用于调度特殊宏也是方便的：`StartPeriod` 和 `EndPeriod`，它们代表调度周期的开始和结束日期。例如，我们需要开发一个函数 `cvg`，用于计算给定基准下两个日期之间的覆盖范围。该函数接受一个开始日期、一个结束和一个基准，并返回覆盖范围。使用特殊宏 `StartPeriod` 和 `EndPeriod` 后，以下脚本：
 
@@ -2458,16 +2230,16 @@ fixLeg pays CPN
 
 将解析为（忽略周末和节假日）：
 
-- 30May2020 fixLeg pays CPN * cvg(01Jun2020, 01Sep2020, act/360)
-- 30Aug2020 fixLeg pays CPN * cvg(01Sep2020, 01Dec2020, act/360)
-- 29Nov2020 fixLeg pays CPN * cvg(01Dec2020, 01Mar2021, act/360)
-- 28Feb2020 fixLeg pays CPN * cvg(01Mar2021, 01Jun2021, act/360)
+- 30May2020 `fixLeg pays CPN * cvg(01Jun2020, 01Sep2020, act/360)`
+- 30Aug2020 `fixLeg pays CPN * cvg(01Sep2020, 01Dec2020, act/360)`
+- 29Nov2020 `fixLeg pays CPN * cvg(01Dec2020, 01Mar2021, act/360)`
+- 28Feb2020 `fixLeg pays CPN * cvg(01Mar2021, 01Jun2021, act/360)`
 
 因此，现金流在调度中的事件日期上重复出现，但 `StartPeriod` 和 `EndPeriod` 的定义随每个周期而变化。`cvg` 在每个周期接受不同的日期作为输入，如果没有这些特殊关键词，该脚本将无法放在调度表中。此外，使用 `StartPeriod` 和 `EndPeriod` 代替实际日期使脚本更具可读性和表现力。
 
 我们完全可以实现第三个特殊宏 `FixingDate`，它指向该事件的事件日期。
 
-以接受定义作为参数的方式来实现调度也是有益的。这有助于构建模板脚本。例如，我们可以为所有的上 true和下出式障碍期权（up and out barrier options）构建一个模板：
+以接受定义作为参数的方式来实现调度也是有益的。这有助于构建模板脚本。例如，我们可以为所有的上 true和下出式障碍期权（`up and out barrier options`）构建一个模板：
 
 ```
 STRIKE 100
@@ -2491,6 +2263,8 @@ if spot() > BARRIER then vAlive = 0 endIf
 MATURITY opt pays vAlive * PAYOFF( spot(), STRIKE)
 ```
 
+
+
 ## 现金流调度
 
 最后一个建议的改进是能够使用日期或期限（tenors）作为调度的结束日期。例如：
@@ -2510,9 +2284,6 @@ MATURITY opt pays vAlive * PAYOFF( spot(), STRIKE)
 ### 日期支持
 
 第 8 章引入的 `cvg` 函数与我们目前为止在脚本语言中实现的任何函数都不同。它的参数是评估数字的表达式。参数是两个日期和一个基准。
-
-
-
 
 # 预定义计划与函数
 
@@ -2577,13 +2348,9 @@ MATURITY opt pays vAlive * PAYOFF( spot(), STRIKE)
 | start: 01Jul2022 end: 01Jun2023 freq: 1m fixing: end | if spot() > 130 then vAlive = 0 endif |
 | 01Jun2023 | opt pays vAlive * CALL(spot(), STRIKE) |
 
-
-
-
-
 作为表达式的一部分进行读取（再次，与变量相同）。注意，我们不需要完全的随机访问，即索引本身可以是变量或表达式。常量索引对我们来说足够了。这意味着 `v[expression]` 或 `v[variable]` 是禁止的。只允许 `v[constant]`，这既简化了实现又减少了运行时的开销。
 
-预定义向量如 STRIKES，类似于第 10 章中的预定义调度。
+预定义向量如 `STRIKES`，类似于第 10 章中的预定义调度。
 
 在 `loop (ii, firstIndex, lastIndex) ... endLoop.` 中的循环。我们可能将支持限制在常量的 startIndex 和 lastIndex。支持嵌套循环是必要的。注意，`ii` 不是一个变量，而是一个代表循环中当前索引的关键字。
 
@@ -2651,13 +2418,9 @@ MATURITY opt pays vAlive * PAYOFF( spot(), STRIKE)
 
 12.1 利率和掉期
 
-自然的利率原语是折现因子和远期 Libor 利率。令 P(t, T) 为 T 时期折现因子的时间值，即 T 时单位货币的 t 时现值。令 L(t, T1, T2) 为 [T1, T2] 区间存款的 t 时离散远期利率。
+自然的利率原语是折现因子和远期 Libor 利率。令 `P(t, T)` 为 T 时期折现因子的时间值，即 T 时单位货币的 t 时现值。令 `L(t, T1, T2)` 为 `[T1, T2]` 区间存款的 t 时离散远期利率。
 
-为了简单起见，我们将使用学术计息基准 cv(T1, T2) = T2 - T1，而不是典型的“ACT/360”。我们还假设每个利率期的结束日期是下一个利率期的开始日期，且结束日期恰好是支付日期。
-
-
-
-
+为了简单起见，我们将使用学术计息基准 `cv(T1, T2) = T2 - T1`，而不是典型的“ACT/360”。我们还假设每个利率期的结束日期是下一个利率期的开始日期，且结束日期恰好是支付日期。
 
 这在实践中绝非如此。此类细节对于部署很重要，但对本文的讨论并不真正重要。本节中的所有公式都可以轻松修改，以包含更真实的天数计数和日期安排生成。
 
@@ -2667,17 +2430,17 @@ MATURITY opt pays vAlive * PAYOFF( spot(), STRIKE)
 $L(t, T_1, T_2) = \frac{1}{T_2 - T_1} \left[ \frac{P(t, T_1)}{P(t, T_2)} - 1 \right]$
 ```
 
-这仍然成立，但重要的是，只有当 Libor 和相关产品遵循相同的质押规则时，该结论才成立，而这通常并非如此。标准利率通常是按日质押的，而远期 Libor $L(t, T_1, T_2)$ 指 $[t, T_2]$ 期间未质押的银行间存款。
+这仍然成立，但重要的是，只有当 Libor 和相关产品遵循相同的质押规则时，该结论才成立，而这通常并非如此。标准利率通常是按日质押的，而远期 Libor `$L(t, T_1, T_2)$` 指 `[t, T_2]` 期间未质押的银行间存款。
 
-对于折现因子 $P(t, T, I)$，我们为 $[t, T]$ 期间质品 $I$ 增加了一个额外参数。我们可以通过公式将 $P$ 与质品 $I$ 的即时折现率 $r$ 联系起来：
+对于折现因子 `$P(t, T, I)$`，我们为 `[t, T]` 期间质品 `I` 增加了一个额外参数。我们可以通过公式将 `P` 与质品 `I` 的即时折现率 `r` 联系起来：
 
 ```javascript
 $P(t, T, I) = E_t \left[ e^{-\int_t^T r(u, I) du} \right]$
 ```
 
-其中 $E_t[\cdot]$ 表示基于时间 $t$ 信息的风险中性期望。
+其中 `$E_t[\cdot]$` 表示基于时间 `t` 信息的风险中性期望。
 
-对于远期 Libor $L(t, T_1, T_2, I, J)$，我们包含了两个参数：$I$ 指定支付期 $[t, T_2]$ 期间的质品，$J$ 指定 $[T_1, T_2]$ 期间基础银行间存款的质品。我们有：
+对于远期 Libor `$L(t, T_1, T_2, I, J)$`，我们包含了两个参数：`I` 指定支付期 `[t, T_2]` 期间的质品，`J` 指定 `[T_1, T_2]` 期间基础银行间存款的质品。我们有：
 
 ```javascript
 $L(t, T_1, T_2, I, J) = \frac{1}{T_2 - T_1} \left[ \frac{1}{P(T_1, T_2, J)} - 1 \right]$
@@ -2697,16 +2460,16 @@ $= \frac{1}{T_2 - T_1} \left[ P(t, T_2, I) E_t \left[ e^{-\int_t^{T_1} r(u, I) d
 $= \frac{1}{T_2 - T_1} \left[ P(t, T_2, I) E_t \left[ e^{-\int_t^{T_1} r(u, I) du} \right] \frac{P(t, T_2, I)}{P(T_1, T_2, J)} \right]$
 ```
 
-这显示了质押品对 Libor 的影响取决于折现率 $r(\cdot, I)$ 与利差 $r(\cdot, J)$ 之间的相关性。对于到期影响，质押品对 Libor 的影响可能是微小的但不可忽视。
+这显示了质押品对 Libor 的影响取决于折现率 `r(\cdot, I)` 与利差 `r(\cdot, J)` 之间的相关性。对于到期影响，质押品对 Libor 的影响可能是微小的但不可忽视。
 
-在考虑了这些因素后，我们得到了 $\{T_0, \dots, T_K\}$ 期间浮动利率的定价公式：
+在考虑了这些因素后，我们得到了 `{T_0, \dots, T_K}` 期间浮动利率的定价公式：
 
 ```javascript
 $B(t) = \sum_{k=0}^{K-1} (T_{k+1} - T_k) P(t, T_{k+1}, I) L(t, T_k, T_{k+1}, I, J)$
 ```
 
-其中 $I$ 是掉期的质品，$J_k$ 是第 $k$ 期的质品。对于普通掉期，我们通常 $I$ 为隔夜存款，而 $J_k$ 为 $\{U_0, \dots, U_N\}$ 期间的 Libor 存款；对于年金，我们有：
-对于固定利率表示为 $S(t) = B(t)/A(t)$。
+其中 `I` 是掉期的质品，`J_k` 是第 `k` 期的质品。对于普通掉期，我们通常 `I` 为隔夜存款，而 `J_k` 为 `{U_0, \dots, U_N}` 期间的 Libor 存款；对于年金，我们有：
+对于固定利率表示为 `S(t) = B(t)/A(t)`。
 
 ```javascript
 $A(t) = \sum_{n=0}^{N-1} (U_{n+1} - U_n) P(t, U_{n+1}, I)$
@@ -2722,7 +2485,7 @@ $A(t) = \sum_{n=0}^{N-1} (U_{n+1} - U_n) P(t, U_{n+1}, I)$
 $F(t, I) = P(t, T, I)^{-1} E_t e^{-\int_t^T r(u, I) du} S(T)$
 ```
 
-其中 $t$ 是固定日，$T$ 是到期日，$I$ 指定期货的质品，$S(t)$ 是 $t$ 时刻的现价。
+其中 `t` 是固定日，`T` 是到期日，`I` 指定期货的质品，`S(t)` 是 `t` 时刻的现价。
 
 我们看到，支持股票、外汇和商品需要四个维度（固定日、到期日、质品、额外），其中“额外”是股票的货币、外汇的货币对以及商品的类型。
 
@@ -2730,19 +2493,15 @@ $F(t, I) = P(t, T, I)^{-1} E_t e^{-\int_t^T r(u, I) du} S(T)$
 
 实现线性利率产品的最高有效方法是直接使用折现因子。这避免了每一步都重新计算曲线的需要。索引器访问折现因子并为评估器提供所需的值。
 
-
-
-
-
 # 固定收益工具
 
 模型将模拟的折现率交付到该向量中。最佳分配是在仿真之前进行的。此外，模型必须提前知道不同的事件日期需要什么期限的折现率。评估器需要知道它可以在何处随机访问它们。我们需要一个专门的访问者（visitor）在仿真开始之前确定所有这些。我们将这个访问者称为模拟数据处理器，或简单的处理器（processor）。
 
 ## 13.3 模拟数据处理器
 
-处理器在仿真发生之前访问所有 df 节点，并为每个事件日期收集以下信息：
+处理器在仿真发生之前访问所有 `df` 节点，并为每个事件日期收集以下信息：
 
-- 所需不同折现因子的数量（即具有不同期限的折现因子），这样 SimulData 中的向量就可以进行预分配。
+- 所需不同折现因子的数量（即具有不同期限的折现因子），这样 `SimulData` 中的向量就可以进行预分配。
 - 所需的所有折现因子的期限，以便对它们进行索引，使得模型能够提前知道并进行相应的设置，并让评估器知道去哪里找到它们。
 
 模型和评估器究竟是如何达成一致的？我们创建了一个新的数据结构，存储每个事件日期所需的模拟数据信息：
@@ -2762,8 +2521,14 @@ template <class T>
 struct ScriptModelApi
 {
   virtual void initForScripting(const vector<Date>& eventDates,
-  const vector<SimulRequest>& requests) = 0;
-  virtual void nextScenario(Scenario<T>& s) = 0;
+
+
+
+```cpp
+const vector<SimulRequest>& requests) = 0;
+
+virtual void nextScenario(Scenario<T>& s) = 0;
+
 };
 ```
 
@@ -2771,7 +2536,7 @@ struct ScriptModelApi
 
 ## 13.4 索引
 
-此外，在运行时，当模型为某些事件日期通信若干折现因子时，我们希望评估器能够直接为每个 df 节点选择正确的因子，而不需要在某些映射或表中查找其期限。因此，我们需要我们的访问者也索引每个事件日期所需的所有折现因子，并将它们的索引存储在 df 节点上。这看起来可能很困惑，所以让我们来看一个例子。
+此外，在运行时，当模型为某些事件日期通信若干折现因子时，我们希望评估器能够直接为每个 `df` 节点选择正确的因子，而不需要在某些映射或表中查找其期限。因此，我们需要我们的访问者也索引每个事件日期所需的所有折现因子，并将它们的索引存储在 `df` 节点上。这看起来可能很困惑，所以让我们来看一个例子。
 
 考虑以下（虚拟）脚本：
 
@@ -2781,18 +2546,13 @@ struct ScriptModelApi
 | 05Jul2021 | Y pays 100 * df(05Jan2022) |
 | 05Jan2022 | Z1 pays 100 * df(05Jan2023)<br>Z2 pays 100 * df(05Jan2024)<br>Z3 pays 100 * df(05Jan2025)<br>Z4 pays 200 * df(05Jan2025) |
 
-解析后，折现期限被存储在 df 节点中：05Jul2021 事件对应为 05Jan2022；05Jan2022 事件的三个 df 节点对应为 05Jan2023、05Jan2024 和 05Jan2025。处理器访问所有 df 节点并收集以下信息：
+解析后，折现期限被存储在 `df` 节点中：05Jul2021 事件对应为 05Jan2022；05Jan2022 事件的三个 `df` 节点对应为 05Jan2023、05Jan2024 和 05Jan2025。处理器访问所有 `df` 节点并收集以下信息：
 
 - 05Jan2021 不需要折现因子。
 - 05Jul2021 需要一个折现因子。其期限为 05Jan2022。由于只有一个，所以它的索引为 0。
-- 05Jan2022 需要三个折现因子。它们的期限为 05Jan2023（索引 0）、05Jan2024（索引 1）和 05Jan2025（索引 2）。尽管我们四个 df 节点，但第三和第四个节点指向相同的期限；因此它们指向同一个折现因子。我们数了三个折现因子，所以索引了 0 到 2。
+- 05Jan2022 需要三个折现因子。它们的期限为 05Jan2023（索引 0）、05Jan2024（索引 1）和 05Jan2025（索引 2）。尽管我们四个 `df` 节点，但第三和第四个节点指向相同的期限；因此它们指向同一个折现因子。我们数了三个折现因子，所以索引了 0 到 2。
 
-为了避免在运行时搜索折现因子的期限，处理器将每个请求折现因子的索引存储在它的 df 节点上。换句话说，我们以索引变量相同的方式索引计数，这些变量是脚本全局的，而折现因子是事件日期局部的（每个事件日期）。关于许多折现因子的信息（它们的期限和索引是什么）全部封装在 `SimulRequest::discMats` 中。向量的大小是折现因子的数量，`SimulRequest::discMats[i]` 是期限。例如，对于日期 05Jan2022，我们有 05Jan2023（索引 0）、05Jan2024（索引 1）和 05Jan2025（索引 2）。因此，`discMats[0] = 05Jan2023`，`discMats[1] = 05Jan2024` 且 `discMats[2] = 05Jan2025`。
-
-（注：原文后续存在大量重复段落，已根据指令要求仅翻译核心逻辑且不重复输出。）
-
-
-
+为了避免在运行时搜索折现因子的期限，处理器将每个请求折现因子的索引存储在它的 `df` 节点上。换句话说，我们以索引变量相同的方式索引计数，这些变量是脚本全局的，而折现因子是事件日期局部的（每个事件日期）。关于许多折现因子的信息（它们的期限和索引是什么）全部封装在 `SimulRequest::discMats` 中。向量的大小是折现因子的数量，`SimulRequest::discMats[i]` 是期限。例如，对于日期 05Jan2022，我们有 05Jan2023（索引 0）、05Jan2024（索引 1）和 05Jan2025（索引 2）。因此，`discMats[0] = 05Jan2023`，`discMats[1] = 05Jan2024` 且 `discMats[2] = 05Jan2025`。
 
 固定收益工具
 
@@ -2804,9 +2564,9 @@ struct ScriptModelApi
 
 如何根据利率、回购（repo）、股息、便利收益率等计算远期合约是模型的职责。
 
-但处理器的职责是为每个事件计算需要多少个远期合约、它们的期限日是什么、对它们进行索引，并将索引存储在 fwd 节点（spot 节点）上。仿真期间，模型按照评估器可以访问的完全相同的顺序计算模拟远期合约。这显然对我们折扣因子的处理是理想的，并且意味着我们将 SimulRequest 和 SimulData 对象扩展为：
+但处理器的职责是为每个事件计算需要多少个远期合约、它们的期限日是什么、对它们进行索引，并将索引存储在 `fwd` 节点（spot 节点）上。仿真期间，模型按照评估器可以访问的完全相同的顺序计算模拟远期合约。这显然对我们折扣因子的处理是理想的，并且意味着我们将 `SimulRequest` 和 `SimulData` 对象扩展为：
 
-```
+```cpp
 struct SimulRequest
 {
     vector<Date> fwdMats;
@@ -2824,9 +2584,9 @@ struct SimulData
 
 ## 13.9 LIBOR 与利率锚定
 
-Libor 与折扣和远期一样，由模型内部计算。因此，对 Libor 的处理与折扣没有区别。所有事件日期的 Libor 都由处理器进行计数和索引，Libor 的期限存储在 Libor 节点上，连同其曲线的索引。这实际上是唯一的区别：Libor 通过三个要素进行指定、识别和索引：它们的索引和两个期限日。其他一切都相同：扩展的 SimulRequest 和 SimulData 对象被预先分配。Libor 的评估器从 SimulData :: libors[index] 处随机访问 Libor，其中 index 是处理器存储在 Libor 节点上的 Libor 索引。每个索引标识每个事件日期的一个 Libor，并唯一对应于一个三元组 (curveldx, T1, T2)。
+Libor 与折扣和远期一样，由模型内部计算。因此，对 Libor 的处理与折扣没有区别。所有事件日期的 Libor 都由处理器进行计数和索引，Libor 的期限存储在 Libor 节点上，连同其曲线的索引。这实际上是唯一的区别：Libor 通过三个要素进行指定、识别和索引：它们的索引和两个期限日。其他一切都相同：扩展的 `SimulRequest` 和 `SimulData` 对象被预先分配。Libor 的评估器从 `SimulData::libors[index]` 处随机访问 Libor，其中 `index` 是处理器存储在 Libor 节点上的 Libor 索引。每个索引标识每个事件日期的一个 Libor，并唯一对应于一个三元组 `(curveldx, T1, T2)`。
 
-```
+```cpp
 struct SimulRequest
 {
     vector<Date> fwdMats;
@@ -2835,7 +2595,7 @@ struct SimulRequest
 };
 ```
 
-```
+```cpp
 template <class T>
 struct SimulData
 {
@@ -2854,7 +2614,7 @@ template <class T1, class T2, class T3>
 using triplet = tuple<T1, T2, T3>;
 ```
 
-*Idx* 用于库中标识曲线，通常是一个字符串。
+`Idx` 用于库中标识曲线，通常是一个字符串。
 
 ```cpp
 typedef string Idx;
@@ -2927,7 +2687,6 @@ freq: FLFREQ
 if Exercised = 1
 fixing: start-2b
 then swap pays fixCpn on EndPeriod
-
 if PV (swap) > 0
     then Exercised = 1
     else Exercised = 0
@@ -2935,15 +2694,15 @@ endif
 STARTDATE-2B
 ```
 
-脚本的最后一行（按时间顺序是第一行）值得注释，特别是因为看起来我们似乎仍然缺少了一部分。它说，如果掉期的现值（PV）为正，我们将 Exercised 设置为 1，意味着我们行使期权；否则将其设置为 0。随后，掉期期权的现金流都是掉期的现金流乘以 Exercised，这意味着它们只有在掉期期权行使时才计算，即当 PV(swap) 为正时。
+脚本的最后一行（按时间顺序是第一行）值得注释，特别是因为看起来我们似乎仍然缺少了一部分。它说，如果掉期的现值（PV）为正，我们将 `Exercised` 设置为 1，意味着我们行使期权；否则将其设置为 0。随后，掉期期权的现金流都是掉期的现金流乘以 `Exercised`，这意味着它们只有在掉期期权行使时才计算，即当 `PV(swap)` 为正时。
 
 # 14 多种资产
 
 ## 14.1 多种资产
 
-某些衍生品依赖于多个标的资产。掉期通常由多个资产的联合路径组成。库中对这种支持与 Libor 类似，因为每条基础曲线都是命名的资产。实践中，这意味着 fwd 和 spot 关键字接受一个额外的参数，资产代码（通常是字符串）。现在，处理器不仅根据期限日索引远期合约，还根据资产代码索引。每个事件日期的远期合约根据代码和期限日进行指定、识别和索引。SimulRequest 对象相应扩展：
+某些衍生品依赖于多个标的资产。掉期通常由多个资产的联合路径组成。库中对这种支持与 Libor 类似，因为每条基础曲线都是命名的资产。实践中，这意味着 `fwd` 和 `spot` 关键字接受一个额外的参数，资产代码（通常是字符串）。现在，处理器不仅根据期限日索引远期合约，还根据资产代码索引。每个事件日期的远期合约根据代码和期限日进行指定、识别和索引。`SimulRequest` 对象相应扩展：
 
-```
+```cpp
 struct SimulRequest
 {
     vector<pair<Code, Date>> fwdMats;
@@ -2952,7 +2711,7 @@ struct SimulRequest
 };
 ```
 
-不需要扩展 SimulData。结合上一节介绍的向量和预定义向量（包括字符串），我们拥有编写篮子期权所需的所有工具：
+不需要扩展 `SimulData`。结合上一节介绍的向量和预定义向量（包括字符串），我们拥有编写篮子期权所需的所有工具：
 
 | NSTOCKS | 5 |
 | :--- |
@@ -2960,7 +2719,7 @@ struct SimulRequest
 | TRADATE | loop (0, NSTOCKS) s0[ii] = spot(stocks[ii]) endLoop |
 | EXPIRY | loop (0, NSTOCKS) s1 = spot(stocks[ii]) perf = perf + weights[ii] * (s1 - s0[ii]) / s0[ii] endLoop opt pays max(0, perf - STRIKE) |
 
-使用预定义的向量 WEIGHTS：
+使用预定义的向量 `WEIGHTS`：
 
 | 0.20 |
 | :--- |
@@ -2969,7 +2728,7 @@ struct SimulRequest
 | 0.25 |
 | 0.30 |
 
-以及预定义的字符串向量（资产代码）STOCKS：
+以及预定义的字符串向量（资产代码）`STOCKS`：
 
 | STOCK1 |
 | STOCK2 |
@@ -2978,9 +2737,6 @@ struct SimulRequest
 | STOCK5 |
 
 我们也可以做一个针对某只股票的看涨期权，带有另一只股票的障碍：
-
-
-
 
 # 多种底层资产
 
@@ -3012,9 +2768,9 @@ endif
 df(T1 , T2, CCY)
 ```
 
-其中如果省略 CCY，它在解析时将解析为本币。因此，折扣需要根据货币以及开始和结束时间进行索引，SimulRequest 对象也随之进行了扩展：
+其中如果省略 `CCY`，它在解析时将解析为本币。因此，折扣需要根据货币以及开始和结束时间进行索引，`SimulRequest` 对象也随之进行了扩展：
 
-```
+```cpp
 struct SimulRequest {
   vector<pair<Code, Date>> fwdMats;
   vector<triplet<Ccy, Date, Date>> discMats;
@@ -3022,15 +2778,15 @@ struct SimulRequest {
 };
 ```
 
-（CCY 是字符串或某些枚举的类型定义。）我们根据折扣在货币、开始和结束日期这个 3D 空间中的坐标来识别、指定并索引折扣。不需要扩展 SimulData。
+（`CCY` 是字符串或某些枚举的类型定义。）我们根据折扣在货币、开始和结束日期这个 3D 空间中的坐标来识别、指定并索引折扣。不需要扩展 `SimulData`。
 
-这处理了股票、大商品和利率资产，但外汇还需要进一步探索。为了清晰起见，由于需要特殊处理，我们建议将外汇与股票和大商品资产分开，并在 SimulRequest 和 SimulData 中使用专门的关键字、节点和项目，而不是复用 spot 和 fwd。访问外汇/本币外汇的关键字是：
+这处理了股票、大商品和利率资产，但外汇还需要进一步探索。为了清晰起见，由于需要特殊处理，我们建议将外汇与股票和大商品资产分开，并在 `SimulRequest` 和 `SimulData` 中使用专门的关键字、节点和项目，而不是复用 `spot` 和 `fwd`。访问外汇/本币外汇的关键字是：
 
 ```
 fx(dom, for, T)
 ```
 
-其中 T 是远期到期日（如果省略，则在解析时解析为 FixingDate），这样我们可以访问远期外汇或现货外汇。到目前为止，这与股票/大商品远期非常相似。但我们也可以为非本币的支付开发一种非常方便的语法，并将其构建 pays 关键字中：
+其中 `T` 是远期到期日（如果省略，则在解析时解析为 `FixingDate`），这样我们可以访问远期外汇或现货外汇。到目前为止，这与股票/大商品远期非常相似。但我们也可以为非本币的支付开发一种非常方便的语法，并将其构建 `pays` 关键字中：
 
 ```
 product pays amount on payDate payCcy
@@ -3042,14 +2798,13 @@ product pays amount on payDate payCcy
 product pays amount * fx(domCcy, payCcy, payDate) on payDate
 ```
 
+
+
 # 多种底层资产
 
 而且这种方法让脚本更自然、更有表现力、更容易编写且更不容易出错。
 
-这在模型中是如何工作的？假设模型包含四种货币：EUR、USD、GBP 和 JPY。显然，模型模拟了三种外汇。但是哪三种呢？本币是 GBP。人们可能想以本币的形式模拟外国货币：EUR/GBP、USD/GBP 和 JPY/GBP。但动力学可能难以校准。市场数据通常对 EUR/USD、GBP/USD 和 USD/JPY 可用。无论如何，模型根据自己的选择模拟三种外汇，但可能会请求十二种不同的外汇：EUR/USD、USD/EUR、EUR/GBP、GBP/EUR、EUR/JPY、JPY/EUR、USD/GBP、GBP/USD、USD/JPY、JPY/USD、GBP/JPY 和 JPY/GBP。模型必须能够通过其模拟的三种外汇的乘积/比例来提供任何组合。此外，模型不能在运行时浪费时间去计算，而必须在模拟开始之前通过将请求的外汇相对于模拟的外汇进行索引来设置自己。并不是所有多币种模型的实现都带有这一点。如果没有，逻辑必须在模型中编码。脚本库需要从模型请求外汇，模型必须在模拟开始之前通过将请求的外汇相对于模拟的外汇进行索引来设置自己。（此处后续为原文重复内容，已按要求处理）。
-
-
-
+这在模型中是如何工作的？假设模型包含四种货币：EUR、USD、GBP 和 JPY。显然，模型模拟了三种外汇。但是哪三种呢？本币是 GBP。人们可能想以本币的形式模拟外国货币：EUR/GBP、USD/GBP 和 JPY/GBP。但动力学可能难以校准。市场数据通常对 EUR/USD、GBP/USD 和 USD/JPY 可用。无论如何，模型根据自己的选择模拟三种外汇，但可能会请求十二种不同的外汇：EUR/USD、USD/EUR、EUR/GBP、GBP/EUR、EUR/JPY、JPY/EUR、USD/GBP、GBP/USD、USD/JPY、JPY/USD、GBP/JPY 和 JPY/GBP。模型必须能够通过其模拟的三种外汇的乘积/比例来提供任何组合。此外，模型不能在运行时浪费时间去计算，而必须在模拟开始之前通过将请求的外汇相对于模拟的外汇进行索引来设置自己。并不是所有多币种模型的实现都带有这一点。如果没有，逻辑必须在模型中编码。脚本库需要从模型请求外汇，模型必须在模拟开始之前通过将请求的外汇相对于模拟的外汇进行索引来设置自己。
 
 # 144 现代计算金融
 
@@ -3081,7 +2836,6 @@ struct SimulRequest
     vector<triplet<Ccy, Date>> discMats;
     vector<triplet<Idx, Date, Date>> liborMats;
     bool showSVs;
-
     SimulRequest() : showSVs(false) {}
 };
 ```
@@ -3109,9 +2863,7 @@ struct ScriptModelApi
 {
     virtual void initForScripting(const vector<Date>& eventDates,
         const vector<SimulRequest>& requests) = 0;
-
     virtual size_t numSVs() = 0;
-
     virtual void nextScenario(Scenario<T> &s) = 0;
 };
 ```
@@ -3171,7 +2923,6 @@ struct SimulRequest
     vector<triplet<Ccy, Date>> discMats;
     vector<triplet<Idx, Date, Date>> liborMats;
     bool showSVs;
-
     SimulRequest() : showSVs(false) {}
 };
 ```
@@ -3199,9 +2950,7 @@ struct ScriptModelApi
 {
     virtual void initForScripting(const vector<Date>& eventDates,
         const vector<SimulRequest>& requests) = 0;
-
     virtual size_t numSVs() = 0;
-
     virtual void nextScenario(Scenario<T> &s) = 0;
 };
 ```
@@ -3230,10 +2979,6 @@ struct ScriptModelApi
 | 2 | $X_2^2$ | ... | $X_J^2$ | $Y^2$ |
 | ... | ... | ... | ... |
 | M | $X_1^M$ | ... | $X_J^M$ | $Y^M$ |
-
-
-
-
 
 ## 美式蒙特卡洛
 
@@ -3309,9 +3054,9 @@ endif
 
 在美尔德式（Bermudas）的情况下，别无选择这样编写脚本，因为如果我们决定在某个行权日终止美尔德，我们实际上是进入了从下一个行权日开始的美尔德交易。对底层（非可回回）交易使用代理的技巧仅适用于一次性可回交易。
 
-很容易看出新脚本将运行。在 LSM 步骤期间，PV(swaption) 将始终返回 0，vExercised 将始终保持为 0，因此随后的现金流始终评估为 0，Y始终评估为 0，回归将失败。
+很容易看出新脚本将运行。在 LSM 步骤期间，`PV(swaption)` 将始终返回 0，`vExercised` 将始终保持为 0，因此随后的现金流始终评估为 0，`Y`始终评估为 0，回归将失败。
 
-我们在 LSM 评估的第一阶段（评估截至代理日期在内的事件）期间真正需要做的是忽略行权。这在 Longstaff 和 Schwartz 的论文以及 Hull 和 Savage 的书中都明确提到了。Y 的评估必须在忽略截至代理日期在内的行权的情况下进行。这些都很好，但我们如何识别行权呢？这一行：
+我们在 LSM 评估的第一阶段（评估截至代理日期在内的事件）期间真正需要做的是忽略行权。这在 Longstaff 和 Schwartz 的论文以及 Hull 和 Savage 的书中都明确提到了。`Y` 的评估必须在忽略截至代理日期在内的行权的情况下进行。这些都很好，但我们如何识别行权呢？这一行：
 
 ```
 if PV(swaption) > 0
@@ -3335,44 +3080,42 @@ if PV(transaction) < 0 then
 endif
 ```
 
+
+
 它的评估方式完全相同，只是现在我们（更重要的是）知道我们在处理一个在 LSM 步骤期间必须忽略早于或在代理日期的日期的行权。我们的新关键字 `terminate` 后面应该紧跟行权时设置为 0 的变量名，然后是 `when`，接着是行权条件（基础的或其他），可能还跟着一个关于退还（rebate）情况的表达式。使用这种语法，当条件不满足时，求值器的状态保持不变。因此，在 LSM 步骤中忽略整个语句是安全的。注意，整个语句被忽略了；条件甚至没有被评估。我们现在可以安全地编写以下脚本：
 
-| DATE | vExercised = 1 |
+| DATE | `vExercised = 1` |
 | --- | --- |
-| STARTDATE-2B | terminate vExercised when PV(swaption) < 0 |
-| start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b | flCpn = libor(StartPeriod, EndPeriod, FLBASIS, FLIDX) * cvcg(StartPeriod, EndPeriod, FLBASIS) if vExercised = 1 then swaption pays -flCpn on EndPeriod endif |
-| start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b | fixCpn = CPN * cvcg(StartPeriod, EndPeriod, FLBASIS) if vExercised = 1 then swaption pays fixCpn on EndPeriod endif |
+| `STARTDATE-2B` | `terminate vExercised when PV(swaption) < 0` |
+| `start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b` | `flCpn = libor(StartPeriod, EndPeriod, FLBASIS, FLIDX) * cvcg(StartPeriod, EndPeriod, FLBASIS) if vExercised = 1 then swaption pays -flCpn on EndPeriod endif` |
+| `start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b` | `fixCpn = CPN * cvcg(StartPeriod, EndPeriod, FLBASIS) if vExercised = 1 then swaption pays fixCpn on EndPeriod endif` |
 
 ## 15.5 多次行权与递归
 
 这完成了单代理情况下脚本语言对 LSM 的支持，实际上，我们也有适用于多个代理的有效语法。我们的脚本可以很容易扩展到美尔德式；我们只需将行权放在计划表中。在示例中，我们可以在两年后的固定支付日行权。
 
-| DATE | vAlive = 1 |
+| DATE | `vAlive = 1` |
 | --- | --- |
-| start: FIRSTEX end: LASTEX freq: EXFREQ fixing: start | terminate vAlive when PV(swaption) < 0 |
-| start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b | flCpn = libor(StartPeriod, EndPeriod, FLBASIS, FLIDX) * cvcg(StartPeriod, EndPeriod, FLBASIS) if vAlive = 1 then swaption pays -flCpn on EndPeriod endif |
-| start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b | fixCpn = CPN * cvcg(StartPeriod, EndPeriod, FLBASIS) if vAlive = 1 then swaption pays fixCpn on EndPeriod endif |
+| `start: FIRSTEX end: LASTEX freq: EXFREQ fixing: start` | `terminate vAlive when PV(swaption) < 0` |
+| `start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b` | `flCpn = libor(StartPeriod, EndPeriod, FLBASIS, FLIDX) * cvcg(StartPeriod, EndPeriod, FLBASIS) if vAlive = 1 then swaption pays -flCpn on EndPeriod endif` |
+| `start: STARTDATE end: ENDDATE freq: FLFREQ fixing: start-2b` | `fixCpn = CPN * cvcg(StartPeriod, EndPeriod, FLBASIS) if vAlive = 1 then swaption pays fixCpn on EndPeriod endif` |
 
-在主模拟期间，当 PV 为负时，vAlive 将终止。在 LSM 步骤期间，回归系数被递归计算，最后行权在前，行权在后，如下：
+在主模拟期间，当 `PV` 为负时，`vAlive` 将终止。在 LSM 步骤期间，回归系数被递归计算，最后行权在前，行权在后，如下：
 
 这些步骤由 LSM 库执行，通过调用脚本库来评估现金流。脚本库使用派生求值器。
 
-- 1. 对于每个预模拟场景 $m$
-  - (a) 计算行向量 $X^m$
+- 1. 对于每个预模拟场景 `$m$`
+  - (a) 计算行向量 `$X^m$`
       - i. 访问代理日的状态变量。
       - ii. 计算回归变量。
-      - iii. 评估脚本中的用户定义变量并加入 $X^m$。
-  - (b) 评估截至代理日期在内的所有事件。忽略所有行权。存储回归变量的值，记为 $V_0$，以及记账货币 $N_0^3$。
+      - iii. 评估脚本中的用户定义变量并加入 `$X^m$`。
+  - (b) 评估截至代理日期在内的所有事件。忽略所有行权。存储回归变量的值，记为 `$V_0$`，以及记账货币 `$N_0^3$`。
 
 > *该部分可以通过一次忽略所有行权的基准模拟来优化，并在所有场景的所有代理日存储求值器的状态。*
 
-
-
-
-
 (c) 评估代理日期之后的所有现金流，包括未来的行权。这就是递归所在的地方，也是我们我们必须按照倒时间顺序计算代理的系数的原因。
 
-设置 $Y^m = N_0(V_1 - V_0)$。
+设置 `$Y^m = N_0(V_1 - V_0)$`。
 
 - (d) 将 Y 对 X 回归。
 - 2. 将 Y 对 X 回归。
@@ -3382,7 +3125,7 @@ endif
 
 显然，PV 可以用于行权之外的其他语境，这使得该语言适用于 xVA 等监管计算。
 
-最后，请注意 LSM 步骤中大部分 CPU 时间消耗在场景的评估上。不同路径 $m$ 的评估（以及模型对路径的生成）是一个“极其并行”的任务，可以（并且应该）进行分布式或多线程处理。
+最后，请注意 LSM 步骤中大部分 CPU 时间消耗在场景的评估上。不同路径 `$m$` 的评估（以及模型对路径的生成）是一个“极其并行”的任务，可以（并且应该）进行分布式或多线程处理。
 
 只要每个线程都使用自己的评估器副本（包括主评估器和 LSM），脚本库就是线程安全的。
 
@@ -3390,7 +3133,7 @@ endif
 
 ## 模糊逻辑与风险敏感性
 
-## 引言
+### 引言
 
 到目前为止，我们已经涵盖了脚本交易的定价。在本节中，我们关注风险敏感性。这些敏感性传统上通过有限差分法逐个调整模型参数并重复估值来计算。最近，金融社区广泛采用了伴随微分（adjoint differentiation），这是一种高效得多的微分算法，它通过对计算的反向序列进行单次扫描，解析地计算出某些计算的导数。估值代码必须经过仪器处理以使用自定义数值类型，该类型的运算符被重载，使得估值中涉及的所有数学计算都记录在胶带上，最后通过链式法则反向通过胶带计算出所有导数敏感性。因此，伴随微分（或 AAD）可以在恒数时间内计算任意数量的导数。许多教材、论文和演示中都讨论了 AAD，包括 Giles 和 Glassmann 的 [14]（他们首次将 AAD 技术引入金融领域）、Uwe Naumann 的教材 [24] 以及这些著作的第一卷 [27]。
 
@@ -3400,11 +3143,13 @@ endif
 
 ```
 $$\frac{\partial}{\partial a_i} f[(\tilde{X})] = \frac{\partial}{\partial a_i} \int f(\tilde{X}) \varphi(\tilde{a}, \tilde{X}) d\tilde{X}$$
+
 $$\int_{\tilde{X}} f(\tilde{X}) \varphi_{a_i}(\tilde{a}, \tilde{X}) d\tilde{X} = \int_{\tilde{X}} f(\tilde{X}) \frac{\varphi_{a_i}(\tilde{X})}{\varphi(\tilde{X})} \varphi(\tilde{a}, \tilde{X}) d\tilde{X}$$
+
 $$\int_{\tilde{X}} f(\tilde{X}) [\log \varphi(\tilde{a}, \tilde{X})]_{a_i} d\tilde{X} = E [f(\tilde{X}) [\log \varphi(\tilde{a}, \tilde{X})]_{a_i}]$$
 ```
 
-因此，我们可以对状态变量中性分布的广连续对数似然进行微分，而不是尝试对可能不连续的收益 $f$ 进行微分。所谓的 Malliavin 权重可以根据 Malliavin 微（Malliavin calculus）的已知结果，作为状态变量漂移系数和扩散系数导数的函数逐路径计算。这种计算通过反向伴随传播可以变得非常高效。遗憾的是，Malliavin 权重的计算并不是通用的（modelic）。它依赖于模型以及库中的数值实现。此外，取决于模型，Malliavin 权重的计算可能可行也可能不可行。
+因此，我们可以对状态变量中性分布的广连续对数似然进行微分，而不是尝试对可能不连续的收益 `$f$` 进行微分。所谓的 Malliavin 权重可以根据 Malliavin 微（Malliavin calculus）的已知结果，作为状态变量漂移系数和扩散系数导数的函数逐路径计算。这种计算通过反向伴随传播可以变得非常高效。遗憾的是，Malliavin 权重的计算并不是通用的（modelic）。它依赖于模型以及库中的数值实现。此外，取决于模型，Malliavin 权重的计算可能可行也可能不可行。
 
 由于这些原因，似然比法尽管在形式上很有吸引力，但在交易台并未广泛应用。另一种广泛采用的做法是现金流平滑（也称为收益平滑），通过这种方法将不连续的现金流替换为近似连续的流。例如，数字现金流通过窄价差来近似。敲出产品（Knock-out products）通过所谓的软障碍（soft barriers）近似，其中部分本金会被敲出，取决于障碍索引落在 KO 区域的位置，模拟继续剩余部分。收益平滑不作用于模型或实现，只作用于收益。因此，我们将在后文中不再进一步讨论 Malliavin 微，也不讨论针对结构化产品的平滑及其实现。
 
@@ -3416,12 +3161,12 @@ $$\int_{\tilde{X}} f(\tilde{X}) [\log \varphi(\tilde{a}, \tilde{X})]_{a_i} d\til
 
 我们在第一部分的简化自动赎回脚本：
 
-| | |
+|  |  |
 |---|---|
-| 01Jun2020 | vRef=spot()<br>vAlive=1 |
-| 01Jun2021 | if spot() > vRef then<br>prd=110<br>vAlive=0<br>endIf |
-| 01Jun2022 | if spot() > vRef then<br>if vAlive=1 then prd=120 endif<br>vAlive=0<br>endIf |
-| 01Jun2023 | if vAlive=1 then<br>if spot() > vRef then prd=130 else prd=50 endif<br>endIf |
+| `01Jun2020` | `vRef=spot()`<br>`vAlive=1` |
+| `01Jun2021` | `if spot() > vRef then`<br>`prd=110`<br>`vAlive=0`<br>`endIf` |
+| `01Jun2022` | `if spot() > vRef then`<br>`if vAlive=1 then prd=120 endif`<br>`vAlive=0`<br>`endIf` |
+| `01Jun2023` | `if vAlive=1 then`<br>`if spot() > vRef then prd=130 else prd=50 endif`<br>`endIf` |
 
 对于到期时标的资产价格具有不连续的分布。只要交易存续到到期，它在现价高于参考价时支付 130，否则支付 50。这导致分布在参考价格（假设为 100）处出现 80 点的跳跃。
 
@@ -3431,8 +3176,11 @@ $$\int_{\tilde{X}} f(\tilde{X}) [\log \varphi(\tilde{a}, \tilde{X})]_{a_i} d\til
 
 ```
 if spot() > 100
+
 then D pays 1
+
 else D pays 0
+
 endif
 ```
 
@@ -3440,26 +3188,21 @@ endif
 
 ![](img/3887ab6b5277fb99d77002948fa19470_177_1.png)
 
+### 蒙特卡洛模拟中的风险敏感性
 
+`$D_{100}(S) = 1_{[S>100]}$`
 
+具有不连续性的欧式轮面可以写为连续轮面和数字期权组合之和。到期日的欧式轮面为 `$50+80D_{100}$`。我们的自动敲入产品具有不连续性的轮面可以写为 `$c(S) + \sum_{i=0}^{n-1} \alpha_i D_{K_i}(S)$`，其中 `$c$` 是连续函数，我们在点 `$(K_i)$` 上有 `$n$` 个不连续点，跳跃幅度为 `$(\alpha_i)$`。此类轮面的现值（PV）为 `$V_c + \sum_{i=0}^{n-1} \alpha_i V_{D_i}$`，其对初始现货或或波动率的敏感性为 `$\frac{\partial V_c}{\partial a} + \sum_{i=0}^{n-1} \alpha_i \frac{\partial V_{D_i}}{\partial a}$`。
 
+在这个表达式中，对 `$\frac{\partial V_c}{\partial a}$` 的蒙特卡洛估计并没有特殊问题，问题在于对 `$\frac{\partial V_{D_i}}{\partial a}$` 的估计。数字期权的价值（不考虑折现）是其处于该值的风险中性概率：`$V_{D_i} = \int K_i d\varphi_a = 1 - \varphi_a(K_i)$`，尽管积分函数 `$D_i$` 是不连续的，但它对于关于 `$a$` 通常是不同的。然而，通过 `$N$` 种场景得到的价值的蒙特卡洛估计为 `$\tilde{V}_{D_i} = \frac{1}{N} \sum_j [\varphi_a^{-1}(u_j)]$`，其中 `$(u_j)$` 属于 `$(0,1)$`，该表达式显然对 `$a$` 是不可微的。因此，在这种背景下，尝试计算 `$\frac{\partial \tilde{V}_{D_i}}{\partial a}$` 会导致不稳定且不准确的结果。
 
-## 蒙特卡洛模拟中的风险敏感性
+从直觉上说，如果 `$a$` 发生微小扰动，在扰动之前处于虚值（out of the money）的路径在扰动后仍然处于虚值，而在实值（in the money）的路径在扰动后仍然处于实值，扰动后产生相同的价值，因此敏感性为 0。AAD 在解析上计算了扰动大小趋于 0 时的有限差分极限，从而产生敏感性。对于有限差分法，敏感性取决于应用扰动时跨越临界点的路径比例，这是一个非常不稳定的数字。
 
-$D_{100}(S) = 1_{[S>100]}$
-
-具有不连续性的欧式轮面可以写为连续轮面和数字期权组合之和。到期日的欧式轮面为 $50+80D_{100}$。我们的自动敲入产品具有不连续性的轮面可以写为 $c(S) + \sum_{i=0}^{n-1} \alpha_i D_{K_i}(S)$，其中 $c$ 是连续函数，我们在点 $(K_i)$ 上有 $n$ 个不连续点，跳跃幅度为 $(\alpha_i)$。此类轮面的现值（PV）为 $V_c + \sum_{i=0}^{n-1} \alpha_i V_{D_i}$，其对初始现货或或波动率的敏感性为 $\frac{\partial V_c}{\partial a} + \sum_{i=0}^{n-1} \alpha_i \frac{\partial V_{D_i}}{\partial a}$。
-
-在这个表达式中，对 $\frac{\partial V_c}{\partial a}$ 的蒙特卡洛估计并没有特殊问题，问题在于对 $\frac{\partial V_{D_i}}{\partial a}$ 的估计。数字期权的价值（不考虑折现）是其处于该值的风险中性概率：$V_{D_i} = \int K_i d\varphi_a = 1 - \varphi_a(K_i)$，尽管积分函数 $D_i$ 是不连续的，但它对于关于 $a$ 通常是不同的。然而，通过 $N$ 种场景得到的价值的蒙特卡洛估计为 $\tilde{V}_{D_i} = \frac{1}{N} \sum_j [\varphi_a^{-1}(u_j)]$，其中 $(u_j)$ 属于 $(0,1)$，该表达式显然对 $a$ 是不可微的。因此，在这种背景下，尝试计算 $\frac{\partial \tilde{V}_{D_i}}{\partial a}$ 会导致不稳定且不准确的结果。
-
-从直觉上说，如果 $a$ 发生微小扰动，在扰动之前处于虚值（out of the money）的路径在扰动后仍然处于虚值，而在实值（in the money）的路径在扰动后仍然处于实值，扰动后产生相同的价值，因此敏感性为 0。AAD 在解析上计算了扰动大小趋于 0 时的有限差分极限，从而产生敏感性。对于有限差分法，敏感性取决于应用扰动时跨越临界点的路径比例，这是一个非常不稳定的数字。
-
-具有奇异不连续性（如障碍期权）的交易风险在模拟背景下也面临类似的问题。在这种情况下，$N$ 次模拟的估计值为 $\hat{\hat{V}} = \frac{1}{N} \sum_j (\hat{X}_j^a)$，其中场景数量 $j$ 是模型为所有事件日期采样的所有市场变量向量——这些变量采样自一个由 $a$ 参数化的联合风险中性分布——而 $f$ 是场景的收益函数。$\hat{X}_j^a$ 通过对超立方体 $(0,1)^D$ 进行均匀采样（其中 $D$ 是蒙特卡洛的维度，即第一条路径随机数的数量）并应用（通常是连续的）函数 $\phi_g$ 生成，$phi_g.f$ 是根据场景计算交易收益的函数。在脚本语言的背景下，$f$ 是脚本的评估（针对场景），并由评估器使用脚本中的表达式树进行执行。最后，
+具有奇异不连续性（如障碍期权）的交易风险在模拟背景下也面临类似的问题。在这种情况下，`$N$` 次模拟的估计值为 `$\hat{\hat{V}} = \frac{1}{N} \sum_j (\hat{X}_j^a)$`，其中场景数量 `$j$` 是模型为所有事件日期采样的所有市场变量向量——这些变量采样自一个由 `$a$` 参数化的联合风险中性分布——而 `$f$` 是场景的收益函数。`$\hat{X}_j^a$` 通过对超立方体 `$(0,1)^D$` 进行均匀采样（其中 `$D$` 是蒙特卡洛的维度，即第一条路径随机数的数量）并应用（通常是连续的）函数 `$\phi_g$` 生成，`$phi_g.f$` 是根据场景计算交易收益的函数。在脚本语言的背景下，`$f$` 是脚本的评估（针对场景），并由评估器使用脚本中的表达式树进行执行。最后，
 
 ```
 $\hat{V} = \frac{1}{N} \sum_{i=0}^{N-1} f[\phi_g(\hat{u}_i)]$ 且显然当 $f$ 不连续时，$\hat{V}$ 对 $a$ 是不可微的。
 ```
-
 
 
 
@@ -3469,11 +3212,11 @@ $\hat{V} = \frac{1}{N} \sum_{i=0}^{N-1} f[\phi_g(\hat{u}_i)]$ 且显然当 $f$ �
 
 模糊逻辑与传统的——尖锐或清晰的——逻辑相比，数字期权要么在价内结束并支付 1 元，要么在价外结束支付 0 元，因此导致了不连续性。相反，使用所谓的模糊逻辑进行推理，我们将高于 110 的执行价视为在价内，低于 90 的执行价视为在价外，任何介之间的执行价视为部分在价内，这就像薛胶谔的猫在容器里是死的，其“价内程度（degree of moneyness）”在 0% 和 90% 之间插值，在 110 处为 100%。看涨跨期平滑对应于对于处于价内的名义部分支付 1 美元的交易。我们将在后续章节中进一步研究模糊逻辑，它将引导出一个高效、优雅的平滑算法。
 
-有限差分：数字期权分布是欧式看涨期权分布相对于执行价的导数（分布意义上）：$D_K(S)\equiv I_{(S>K)} = -\frac{\partial}{\partial K}(S-K)^+ = \frac{\partial}{\partial K}C(S, K)$。看涨跨期平滑无非是导数的有限差分近似。在极限情况下，导数是不连续的，但在极限之前，所有有限差分近似都是连续的，因此该技术具有有效性和效力。
+有限差分：数字期权分布是欧式看涨期权分布相对于执行价的导数（分布意义上）：`D_K(S)≡ I_{(S>K)} = -∂/∂K (S-K)^+ = ∂/∂K C(S, K)`。看涨跨期平滑无非是导数的有限差分近似。在极限情况下，导数是不连续的，但在极限之前，所有有限差分近似都是连续的，因此该技术具有有效性和效力。
 
-正态平滑：我们将之前的方程反转为 $C(S, K-\epsilon) - C(S, K+\epsilon) = \int_{K-\epsilon}^K D_k(S)dk$。看涨跨期是执行价在区间内均匀分布的数字期权集合。因此，应用看涨平滑也对应于记录一组不同执行价的数字期权，而不是具有给定执行价的单个数字期权。原始交易的名义价值均匀分布在区间内的执行价上，从而实现了平滑。
+正态平滑：我们将之前的方程反转为 `C(S, K-ε) - C(S, K+ε) = ∫_{K-ε}^K D_k(S)dk`。看涨跨期是执行价在区间内均匀分布的数字期权集合。因此，应用看涨平滑也对应于记录一组不同执行价的数字期权，而不是具有给定执行价的单个数字期权。原始交易的名义价值均匀分布在区间内的执行价上，从而实现了平滑。
 
-行业通常将相同的方法应用于不连续的奇异期，特别是带有向上触出障碍（up-and-out barrier）的交易，例如一旦现价高于水平 B 就会停止的现金流计划，这导致了分布的不连续。为了解决这个问题，像处理数字期权一样，我们将交易的名义价值分散在 B 周围区域的障碍上。在所有障碍定价价日，我们可能只敲除部分在 $B-\epsilon$ 或以下与在等于或高于 $B+\epsilon$ 之间插值的名义。我们使用剩余的名义继续现金流计划，而剩余的名义在下次障碍定价价日可能会部分或全部被触发。就像薛胶谔的猫一样，我们的交易部分是活着的或在某种程度上是活着的。然而，这种“生存程度”的自然解释不是活着的概率，而是剩余的名义价值比例。这种看涨跨期平滑到障碍的扩展是行业标准，有时被称为“光滑障碍”（smooth barriers）。
+行业通常将相同的方法应用于不连续的奇异期，特别是带有向上触出障碍（up-and-out barrier）的交易，例如一旦现价高于水平 B 就会停止的现金流计划，这导致了分布的不连续。为了解决这个问题，像处理数字期权一样，我们将交易的名义价值分散在 B 周围区域的障碍上。在所有障碍定价价日，我们可能只敲除部分在 `B-ε` 或以下与在等于或高于 `B+ε` 之间插值的名义。我们使用剩余的名义继续现金流计划，而剩余的名义在下次障碍定价价日可能会部分或全部被触发。就像薛胶谔的猫一样，我们的交易部分是活着的或在某种程度上是活着的。然而，这种“生存程度”的自然解释不是活着的概率，而是剩余的名义价值比例。这种看涨跨期平滑到障碍的扩展是行业标准，有时被称为“光滑障碍”（smooth barriers）。
 
 ## 16.4 脚本交易的平滑
 
@@ -3481,7 +3224,7 @@ $\hat{V} = \frac{1}{N} \sum_{i=0}^{N-1} f[\phi_g(\hat{u}_i)]$ 且显然当 $f$ �
 
 ## 平滑的支持
 
-我们首先讨论脚本语法中对手动平滑的支持。这可以通过一个额外的函数轻松实现，我们可以称为“函数型 if（functional if）”或 flf，类似于 Excel 中的 if，但带有一个平滑因子，可以替换 if 语句。函数的签名如下：
+我们首先讨论脚本语法中对手动平滑的支持。这可以通过一个额外的函数轻松实现，我们可以称为“函数型 if（functional if）”或 `flf`，类似于 Excel 中的 if，但带有一个平滑因子，可以替换 if 语句。函数的签名如下：
 
 ```
 flf(x, value if x positive, value if x negative, smoothing factor)
@@ -3497,15 +3240,15 @@ $flf(x,a,b,\varepsilon) = b + \frac{a-b}{\varepsilon}\max(0,\min(\varepsilon,x+\
 
 ## 支持
 
-该函数可以用与其他任何函数（exp, log, sqrt 等相同的方式在脚本语言中实现。我们解释了如何使用额外的函数扩展语法，这一个特别轻量。一旦在语法中实现，该函数可以在脚本中替换 if 语句并对其条件应用看涨跨期平滑。对于数字期权（平滑因子为 1），我们将得到平滑脚本：
+该函数可以用与其他任何函数（`exp`, `log`, `sqrt` 等相同的方式在脚本语言中实现。我们解释了如何使用额外的函数扩展语法，这一个特别轻量。一旦在语法中实现，该函数可以在脚本中替换 if 语句并对其条件应用看涨跨期平滑。对于数字期权（平滑因子为 1），我们将得到平滑脚本：
 
 ```
 01Jun2021 pays fl(Spot) - 100, 0, 1
 ```
 
-这有效地消除了风险敏感性中的不稳定。if 语句通过 flf 修复。以下图表显示了在 0 利率和20% 波动率下，初始脚本和平滑脚本的 Black-Scholes 价格、Delta 和 Vega。种子在模拟之间重置，以直观展示蒙特卡洛误差。敏感性的改进立即可见，而对价值没有影响![](img/3887ab6b5277fb99d7700294fa19470_185.png)
+这有效地消除了风险敏感性中的不稳定。if 语句通过 `flf` 修复。以下图表显示了在 0 利率和20% 波动率下，初始脚本和平滑脚本的 Black-Scholes 价格、Delta 和 Vega。种子在模拟之间重置，以直观展示蒙特卡洛误差。敏感性的改进立即可见，而对价值没有影响![](img/3887ab6b5277fb99d7700294fa19470_185.png)
 
-flf 语法也适用于光滑障碍近似。对于带有向上触出（离散监测）障碍的看涨原始脚本：
+`flf` 语法也适用于光滑障碍近似。对于带有向上触出（离散监测）障碍的看涨原始脚本：
 
 | 日期 | 逻辑 |
 | :--- | :--- |
@@ -3547,14 +3290,10 @@ flf 语法也适用于光滑障碍近似。对于带有向上触出（离散监�
 
 但它清楚地证明了这种手动方法的局限性。平滑脚本是笨拙的、不自然的且容易出错的。这显然不符合我们在自然、易读的语法中原始描述现金流的目标。
 
-
-
-
-
 # 自动平滑算法
 
 在脚本上下文中，不连续性总是源于 `if` 语句。
-我们目前假设已经知道要应用的平滑因子 EPS，并且函数 `if`, `flf` 已经实现并可用。
+我们目前假设已经知道要应用的平滑因子 `EPS`，并且函数 `if`, `flf` 已经实现并可用。
 在不失一般性的情况下，我们还假设所有基础条件都表示为：
 
 ```
@@ -3589,19 +3328,29 @@ expression = 0
 
 ```
 Date1 ... (没有条件语句) ...
+
 if (spot() - x > 0 then
+
 ny = x
+
 z = y
+
 t pays z
+
 else
+
 z = 0
+
 r = 1
+
 endIf
+
 Date2
+
 Date3 ... (没有条件语句) ...
 ```
 
-我们知道，无条件的 `endifs` 不需要任何更改。我们只转换条件块“if... then ... [else]... endif”，包括条件语句和嵌套的条件 `if`。在我们的玩具脚本中，只有 `Date2` 的事件需要处理。直觉上，可以使用相当简单（但有缺陷）的算法（其中 EPS 是我们的平滑因子）进行平滑：
+我们知道，无条件的 `endifs` 不需要任何更改。我们只转换条件块“if... then ... [else]... endif”，包括条件语句和嵌套的条件 `if`。在我们的玩具脚本中，只有 `Date2` 的事件需要处理。直觉上，可以使用相当简单（但有缺陷）的算法（其中 `EPS` 是我们的平滑因子）进行平滑：
 
 - 1. 将基础条件替换为函数等价值计算条件的真度 `degTrue`。标记为
 
@@ -3619,12 +3368,17 @@ degFalse = 1 - degTrue
 
 ```
 degTrue = flf(spot) - x, 1, 0, EPS)
+
 degFalse = 1 - degTrue
 
 y = degTrue * x + degFalse * y
+
 z = degTrue * y + degFalse * z
+
 t pays degTrue * z
+
 z = degTrue * 0 + degTrue * z
+
 r = degFalse * 1 + degTrue * r
 ```
 
@@ -3685,21 +3439,23 @@ dt(not A) = 1 - dt(A)
 dt(A or B) = dt(A) + dt(B) - dt(A) * dt(B)
 ```
 
-公式 (1)(2)(3) 提供了复合条件的 DT 作为基础条件 DT 的计算，这完成了我们的算法。
+
+
+公式 `(1)(2)(3)` 提供了复合条件的 `DT` 作为基础条件 `DT` 的计算，这完成了我们的算法。
 
 ## 18.3 受影响的变量
 
-我们现在有一个针对连续条件的完整平滑算法，但它可能非常低效。我们对每个条件块都两次存储脚本涉及的所有变量的中间值。用于 xVA 或其他基于投资组合风险计算的脚本可能有数十万个变量。我们在评估每个条件块时应该复制所有它们（两次！），其中某些只修改一个变量的值。作为算法的一部分应该记录和恢复的变量是受条件块影响的变量，即在块的 `iftrue` 或 `iffalse` 语句中赋值或支付的变量，包括嵌套块。例如，在我们先的玩具示例中，`x` 没有受影响，不需要记录或恢复。
+我们现在有一个针对连续条件的完整平滑算法，但它可能非常低效。我们对每个条件块都两次存储脚本涉及的所有变量的中间值。用于 `xVA` 或其他基于投资组合风险计算的脚本可能有数十万个变量。我们在评估每个条件块时应该复制所有它们（两次！），其中某些只修改一个变量的值。作为算法的一部分应该记录和恢复的变量是受条件块影响的变量，即在块的 `iftrue` 或 `iffalse` 语句中赋值或支付的变量，包括嵌套块。例如，在我们先的玩具示例中，`x` 没有受影响，不需要记录或恢复。
 
 因此，为了优化算法，我们必须识别每个条件块的受影响变量。这可以在专门的预处理器中轻松实现。然后，只需很小的修改即可恢复我们算法的效能：
 
-- 1. 计算条件的真度 `degTrue`。标记为 `degFalse = 1 - degTrue`
-- 2. 在评估条件块之前，存储受影响变量的初始值 `(X0)`。
-- 3. 执行所有 `iftrue` 语句。
-- 4. 在执行 `iftrue` 块后，存储受影响变量的最终值 `(X1)`。
-- 5. 将受影响变量重置为 `(X0)`。
-- 6. 执行所有 `iffalse` 语句（如果有）。
-- 7. 我们将前两个步骤后受影响变量的值称为 `(X2)`。在评估条件块后，计算受影响变量的最终值为：`(X) = degTrue * (X1) + degFalse * (X2)`。
+- 计算条件的真度 `degTrue`。标记为 `degFalse = 1 - degTrue`
+- 在评估条件块之前，存储受影响变量的初始值 `(X0)`。
+- 执行所有 `iftrue` 语句。
+- 在执行 `iftrue` 块后，存储受影响变量的最终值 `(X1)`。
+- 将受影响变量重置为 `(X0)`。
+- 执行所有 `iffalse` 语句（如果有）。
+- 我们将前两个步骤后受影响变量的值称为 `(X2)`。在评估条件块后，计算受影响变量的最终值为：`(X) = degTrue * (X1) + degFalse * (X2)`。
 
 显然，受影响的变量不需要任何修改。
 
@@ -3707,51 +3463,48 @@ dt(A or B) = dt(A) + dt(B) - dt(A) * dt(B)
 
 最后，我们注意到一种重要的优化，它可以在情况下将平滑的性能开销降低到几乎忽略不计。修改后脚本的评估可能比原始脚本慢得多，因为 `iftrue` 和 `iffalse` 语句块都必须无条件地执行，而在原始脚本中，我们只执行其中一个（或者不执行）。但在实践中，我们使用日权价差平滑，因此 `iftrue` 或 `iffalse` 语句只是徒用地执行，最终只被应用0的权重。只有在条件落在 `-EPS/2` 到 `EPS/2` 之间的低概率事件中，才需要执行两个块。有了这一点，我们优化了算法，产生一个执行速度与原始脚本几乎一样的平滑脚本，从而免费提供平滑。
 
-
-
-
-
 # 自动化平滑算法
 
-2. 如果 $degTrue = 1$，评估所有 iftrue 语句并退出。
-3. 如果 $degTrue = 0$，评估所有 iffalse 语句并退出。
-4. 否则（如果 $0 < degTrue < 1$）：
+2. 如果 `$degTrue = 1$`，评估所有 `iftrue` 语句并退出。
+3. 如果 `$degTrue = 0$`，评估所有 `iffalse` 语句并退出。
+4. 否则（如果 `$0 < degTrue < 1$`）：
 
-   + (a) 存储受影响的 iftrue 语句的值 (X0)。
-   (b) 评估所有 iffalse 语句。
-   (c) 存储受影响变量的最终值 (X1)。
-   (d) 将变量重置为 (X0)。
-   (e) 评估所有 iffalse 语句（如果有）。
-   (f) 我们将 (X2) 称为前两个步骤后受影响变量的值。在评估该块后，计算受影响变量的最终值：
+   + (a) 存储受影响的 `iftrue` 语句的值 `(X0)`。
+   (b) 评估所有 `iffalse` 语句。
+   (c) 存储受影响变量的最终值 `(X1)`。
+   (d) 将变量重置为 `(X0)`。
+   (e) 评估所有 `iffalse` 语句（如果有）。
+   (f) 我们将 `(X2)` 称为前两个步骤后受影响变量的值。在评估该块后，计算受影响变量的最终值：
 
 ```
 (X) = degTrue * (X1) + degFalse * (X2)
 ```
 
-我们还应该优化受影响变量的预处理。该预处理器不仅要识别条件块中的受影响变量，还要将它们的索引存储在相应的 if 节点上。同一个预处理器（或另一个预处理器）还应该为受影响变量的存储预留空间，以便在仿真期间不需要进行内存分配。该实现并非易事，因为它必须处理潜在的嵌套条件块。
+我们还应该优化受影响变量的预处理。该预处理器不仅要识别条件块中的受影响变量，还要将它们的索引存储在相应的 `if` 节点上。同一个预处理器（或另一个预处理器）还应该为受影响变量的存储预留空间，以便在仿真期间不需要进行内存分配。该实现并非易事，因为它必须处理潜在的嵌套条件块。
 
 整个源代码可以在我们的在线仓库中访问。运行时算法是 `scriptingFuzzyIfProc.ch` 中派生的 `FuzzyEvaluator` 的一部分，以及 `Eval.h` 中的模糊条件评估器 `FCE`。这里讨论的所有优化都将成为代码的一部分。
 
-这是自动化平滑算法的最终版本。我们将其称为模糊评估器（Fuzzy Evaluator）或 FCE，原因很快就会明确。它适用于所有条件，包括嵌套和组合条件，前提是所有基本条件具有连续域（即 `expression > 0` 中表达式的值域），并且包含一个包含 0 的连续区间。我们在第 20 章中将其扩展到所有领域。目前，我们注意到在数字（digits）和障碍物（barriers）的情况下，算法精确地复制了经典平滑。对于其他具有不连续性的交易，算法也复制了交易员通常手动（且正确地）执行的平滑。换句话之，条件块的模糊评估以相同的方式实现了平滑，就像交易员手动且有效地消除了由不连续引起的不稳定性一样。
+这是自动化平滑算法的最终版本。我们将其称为模糊评估器（Fuzzy Evaluator）或 `FCE`，原因很快就会明确。它适用于所有条件，包括嵌套和组合条件，前提是所有基本条件具有连续域（即 `expression > 0` 中表达式的值域），并且包含一个包含 0 的连续区间。我们在第 20 章中将其扩展到所有领域。目前，我们注意到在数字（digits）和障碍物（barriers）的情况下，算法精确地复制了经典平滑。对于其他具有不连续性的交易，算法也复制了交易员通常手动（且正确地）执行的平滑。换句话之，条件块的模糊评估以相同的方式实现了平滑，就像交易员手动且有效地消除了由不连续引起的不稳定性一样。
 
 # 第 19 章
+
 ## 模糊逻辑
 
-我们的简单算法 (FCE) 可以有效地将自然脚本转换为平滑良好的脚本，前提是所有条件都是连续的。通过选择良好的平滑因子，对价格的影响是微不足道的，且风险敏感性与蒙特卡洛方法良好地收敛。性能几乎没有变化。
+我们的简单算法 `FCE` 可以有效地将自然脚本转换为平滑良好的脚本，前提是所有条件都是连续的。通过选择良好的平滑因子，对价格的影响是微不足道的，且风险敏感性与蒙特卡洛方法良好地收敛。性能几乎没有变化。
 
-我们将如何实现 FCE？我们真的要像第 18 章做的那样遍历脚本并将其转换为等效的平滑版本吗？新脚本将更难阅读，类似于计算机生成的任何内容。在实践中，我们必须保留原始脚本并与修改后的脚本一起存储。或者，可以在计算风险敏感性时按需进行修改，但这会产生开销。为了计算目的而修改脚本违反了我们代码的模块化以及现金流与其评估之间松耦合的原则。我们更倾向于在*不修改脚本*的情况下应用平滑，而是通过对评估器进行修改来实现。
+我们将如何实现 `FCE`？我们真的要像第 18 章做的那样遍历脚本并将其转换为等效的平滑版本吗？新脚本将更难阅读，类似于计算机生成的任何内容。在实践中，我们必须保留原始脚本并与修改后的脚本一起存储。或者，可以在计算风险敏感性时按需进行修改，但这会产生开销。为了计算目的而修改脚本违反了我们代码的模块化以及现金流与其评估之间松耦合的原则。我们更倾向于在*不修改脚本*的情况下应用平滑，而是通过对评估器进行修改来实现。
 
-回顾 FCE 涉及的步骤，我们可以将其视为对*同一份脚本*进行不同的*评估*，而不是对脚本的*修改*。此外，只有条件块是以不同的方式进行评估的，脚本的其余部分评估方式完全相同。在这里，只要我们修改评估器以对评估和条件块实现不同的*逻辑*，脚本就不需要更改。在实践中，这意味着我们*派生*评估器并*重写*与其访问 *if* 节点相关的方法。
+回顾 `FCE` 涉及的步骤，我们可以将其视为对*同一份脚本*进行不同的*评估*，而不是对脚本的*修改*。此外，只有条件块是以不同的方式进行评估的，脚本的其余部分评估方式完全相同。在这里，只要我们修改评估器以对评估和条件块实现不同的*逻辑*，脚本就不需要更改。在实践中，这意味着我们*派生*评估器并*重写*与其访问 `if` 节点相关的方法。
 
-我们在基础评估器中开发了对 *if* 节点的访问以执行以下步骤：
+我们在基础评估器中开发了对 `if` 节点的访问以执行以下步骤：
 
-   1. 评估条件。
-2. 如果条件为真，评估 *if true* 语句。
-3. 否则，评估 *if false* 语句（如果有）。
+1. 评估条件。
+2. 如果条件为真，评估 `if true` 语句。
+3. 否则，评估 `if false` 语句（如果有）。
 
-我们在派生评估器中重写了对 *if* 节点的访问以实现上述步骤。我们还重写了对条件和逻辑或、非的访问，将真度 (DT) 评估为 0 到 1 之间的数字，从而实现 FCE。我们注意到，在数字和障碍物的情况下，算法精确地复制了经典平滑。对于其他具有不连续性的交易，算法也复制了交易员通常手动（且正确地）执行的平滑。换句话之，条件块的模糊评估以相同的方式实现了平滑，就像交易员手动且有效地消除了由不连续引起的不稳定性一样。
+我们在派生评估器中重写了对 `if` 节点的访问以实现上述步骤。我们还重写了对条件和逻辑或、非的访问，将真度 `DT` 评估为 0 到 1 之间的数字，从而实现 `FCE`。我们注意到，在数字和障碍物的情况下，算法精确地复制了经典平滑。对于其他具有不连续性的交易，算法也复制了交易员通常手动（且正确地）执行的平滑。换句话之，条件块的模糊评估以相同的方式实现了平滑，就像交易员手动且有效地消除了由不连续引起的不稳定性一样。
 
-模糊逻辑是传统逻辑的扩展，由 Lotfi Zadeh 在 20 世纪 60 年代发明，花了 30 年进行开发和推广。他的主要著作汇于 [29]。初始目标是为专家系统的开发尝试模拟专家意见。模糊逻辑扩展了传统逻辑，其中条件为真或假，前提是条件可以是某种程度的。条件在 0 到 1 之间的数字称为其真度（我们简写为 DT）。`expression > 0` 是表达式的函数：`DT = dt(expression) = f(expression)`。
+模糊逻辑是传统逻辑的扩展，由 Lotfi Zadeh 在 20 世纪 60 年代发明，花了 30 年进行开发和推广。他的主要著作汇于 [29]。初始目标是为专家系统的开发尝试模拟专家意见。模糊逻辑扩展了传统逻辑，其中条件为真或假，前提是条件可以是某种程度的。条件在 0 到 1 之间的数字称为其真度（我们简写为 `DT`）。`expression > 0` 是表达式的函数：`DT = dt(expression) = f(expression)`。
 
 模糊逻辑中的另一个流行选择是 minMax 形式：
 
@@ -3767,36 +3520,33 @@ dt(not A) = 1 - dt(A)
 if(spot) > 100 then vDigPays = 130 else vDigPays = 50 endIf
 ```
 
-在硬性逻辑下，vDigPays 是一个二变量，根据条件评估为 50 或 130。其（离散）值域是 {50,130}。但在模糊逻辑下评估此语句时，vDigPays 根据条件的 DT 在 50 和 130 之间插值。隐式地，该语句变为：
+在硬性逻辑下，`vDigPays` 是一个二变量，根据条件评估为 50 或 130。其（离散）值域是 `{50,130}`。但在模糊逻辑下评估此语句时，`vDigPays` 根据条件的 `DT` 在 50 和 130 之间插值。隐式地，该语句变为：
 
 ```
 vDigPays = dt(spot) - 100) * 130 + [1 - dt(spot) - 100)] * 50
 ```
 
-vDigPays 变成实数区间 (50,130) 内的连续值。应用于条件的模糊逻辑传播到了 vDigPays。我们说 vDigPays 已模糊化。这很重要，因为脚本中的后续语句可能会测试 vDigPays：
+`vDigPays` 变成实数区间 `(50,130)` 内的连续值。应用于条件的模糊逻辑传播到了 `vDigPays`。我们说 `vDigPays` 已模糊化。这很重要，因为脚本中的后续语句可能会测试 `vDigPays`：
 
 ```
 If vDigPays = 50 then pr [payoff1] else pr [payoff2] endIf
 ```
 
-在 vDigPays 变为连续后，vDigPays = 50 这个条件不再具有意义。此外，两个测试（如 IfvDigPays > 100 和 IfvDigPays > 120）在条件逻辑下是等价的，但现在不再等价了。第 22 章处理了域和模糊性的传播，并解决了大部分问题。
+在 `vDigPays` 变为连续后，`vDigPays = 50` 这个条件不再具有意义。此外，两个测试（如 `If vDigPays > 100` 和 `If vDigPays > 120`）在条件逻辑下是等价的，但现在不再等价了。第 22 章处理了域和模糊性的传播，并解决了大部分问题。
 
+2. 从基本条件的 `DT`（确定性阈值/决策树）计算组合或嵌套条件的 `DT`，例如，使用概率公式。
 
+3. 将模糊性传播到条件语句中受影响的变量中。根据条件的 `DT`，这些变量在为“真”时的值和为“假”时的值之间进行隐式插值（或固定）。
 
-
-2. 从基本条件的 DT（确定性阈值/决策树）计算组合或嵌套条件的 DT，例如，使用概率公式。
-
-3. 将模糊性传播到条件语句中受影响的变量中。根据条件的 DT，这些变量在为“真”时的值和为“假”时的值之间进行隐式插值（或固定）。
-
-在带有模糊逻辑的脚本中评估条件块，或者使用 FCE 修改脚本，显然会产生相同的结果。令人关注的是，工业界几十年来一直执行的金融收益期报酬平滑处理，与我们通向模糊逻辑的条件评估和条件语句评估完全吻合。
+在带有模糊逻辑的脚本中评估条件块，或者使用 `FCE` 修改脚本，显然会产生相同的结果。令人关注的是，工业界几十年来一直执行的金融收益期报酬平滑处理，与我们通向模糊逻辑的条件评估和条件语句评估完全吻合。
 
 更重要的是，这种认识引导我们通过推导求值器（Evaluator）来实现该算法的一种更通用、简单、高效且优雅的实现，并对使用模糊逻辑的条件块实现重写的访问器（overridden visitors）。具体而言，我们将 `Evaluator` 类派生为 `FuzzyEvaluator`，它重写了以下访问器：
 
 - **基本条件**：我们提醒一下，不等式在解析或处理时会被转换为等价条件表达式 `expression > 0`。因此，我们只派生针对 `>` 节点的访问器。派生的求值器不再将求值器评估为真或假并将结果推入布尔栈，而是通过派生的 `dt = fl(expression, 1, 0, EPS)` 将结果推入一个 0 到 1 之间的专用数字栈（`dtstack`）中。
 
-- **组合器**：派生的求值器根据涉及的基本条件的 DT，通过概率公式计算出组合条件的 DT，这是通过对组合器 `and`、`or` 和 `not` 的重写访问器来实现的。
+- **组合器**：派生的求值器根据涉及的基本条件的 `DT`，通过概率公式计算出组合条件的 `DT`，这是通过对组合器 `and`、`or` 和 `not` 的重写访问器来实现的。
 
-- **条件块**：派生的求值器重写了节点的访问器，以使用 FCE 算法实现模糊逻辑。
+- **条件块**：派生的求值器重写了节点的访问器，以使用 `FCE` 算法实现模糊逻辑。
 
 我们的入门级评估函数接受一个参数，以便应用精确逻辑（sharp logic）或模糊逻辑。当取值为精确逻辑时，我们使用基础求值器。当使用模糊逻辑时，我们改为使用派生的 `FuzzyEvaluator` 实例。脚本保持不变。我们可以用精确逻辑和模糊逻辑对其进行评估，并比较敏感性（sensitives）、值和计算时间的稳定性。在风险管理系统中，我们可以
 
@@ -3807,15 +3557,16 @@ If vDigPays = 50 then pr [payoff1] else pr [payoff2] endIf
 模糊求值器的源代码位于 `FuzzyEval.h` 中。执行必要的预计算和预分配的处理器代码位于 `scriptingIfProc.h` 中。第 20 章处理更复杂的域（domains）处理。事实上，我们对域按顺序使用了两个不同的处理器。两者的源码分别位于 `scriptingDmainProc.h` 和 `scriptingConstCondProc.h` 中。
 
 # 第 20 章
-条件域 (Domains)
 
-我们在之前的章节中设计了一种通用的平滑算法（FCE），只要所有条件具有连续域，它就能工作。这还不够。我们无法平滑我们的自动调用脚本，因为它包含了针对离散值表达式的条件。现在我们处理这个问题并完善我们的算法。
+## 条件域 (Domains)
 
-首先，我们讨论在域已知的情况下对非连续条件的 DT 进行评估。然后，我们讨论如何通过专门的预处理器来实际识别域。
+我们在之前的章节中设计了一种通用的平滑算法（`FCE`），只要所有条件具有连续域，它就能工作。这还不够。我们无法平滑我们的自动调用脚本，因为它包含了针对离散值表达式的条件。现在我们处理这个问题并完善我们的算法。
 
-## 20.1 离散条件的模糊评估
+首先，我们讨论在域已知的情况下对非连续条件的 `DT` 进行评估。然后，我们讨论如何通过专门的预处理器来实际识别域。
 
-### 20.1.1 条件域
+### 20.1 离散条件的模糊评估
+
+#### 20.1.1 条件域
 
 考虑类型为 `e > 0`、`e >= 0` 或 `e = 0` 的条件，其中 `e` 是某个评估数字的表达式。只要我们在解析或预处理时进行必要的转换，这三种形式就涵盖了所有基本条件。
 
@@ -3823,9 +3574,9 @@ If vDigPays = 50 then pr [payoff1] else pr [payoff2] endIf
 
 当 `dom(e)` 是实数空间，或至少包含一个包含 0 的连续区间时，我们称该条件域为连续域。在这种情况下，等式没有意义，不等式必须是严格的。在第 19 章中设计的模糊求值器适用于所有连续条件。
 
-我们现在探索如何计算其他类型条件的 DT，从最简单的常数条件（`dom(e)` 为单个数字）开始，然后向通用条件过渡。
+我们现在探索如何计算其他类型条件的 `DT`，从最简单的常数条件（`dom(e)` 为单个数字）开始，然后向通用条件过渡。
 
-### 20.1.2 常数条件
+#### 20.1.2 常数条件
 
 当 `dom(e)` 是单例 `{c}` 时，我们称该条件为常数条件。等式是有意义的，不等式不一定是严格的。我们的模糊求值器无法正确评估常数条件。考虑以下示例：
 
@@ -3833,13 +3584,13 @@ If vDigPays = 50 then pr [payoff1] else pr [payoff2] endIf
 | --- | --- |
 | 日期 | if vCst > 1 then x = 1 else x = 0 |
 
-这个脚本乍看可能无关，但在实践中，测试经常被用于开关。如果我们对 `vCst >= 1` 运行模糊求值器，它将（隐式地）评估 `vCst - 1` 中围绕 0 的看涨价差（call spread），该值始终评估为 0，因此看涨价差评估为 0.5，导致 DT 为 0.5，最终结果为 `x = 0.5`。这显然是错误的，正确结果 `x = 1`。
+这个脚本乍看可能无关，但在实践中，测试经常被用于开关。如果我们对 `vCst >= 1` 运行模糊求值器，它将（隐式地）评估 `vCst - 1` 中围绕 0 的看涨价差（call spread），该值始终评估为 0，因此看涨价差评估为 0.5，导致 `DT` 为 0.5，最终结果为 `x = 0.5`。这显然是错误的，正确结果 `x = 1`。
 
-处理常数条件的正确方法是立即尝试真或假（DT = 1 或 0）并跳过评估。当 `dom(e) = {c}` 时，我们知道无论场景如何，`dt(e) = c`。对基本条件 DT 的正确模糊评估取决于每个域。当域是连续的时，应用 FCE。当域是离散的时，我们需要进行不同的计算。当域是常数时，条件必须标记为真或假，以便其评估被预计算并跳过评估。
+处理常数条件的正确方法是立即尝试真或假（`DT = 1` 或 `0`）并跳过评估。当 `dom(e) = {c}` 时，我们知道无论场景如何，`dt(e) = c`。对基本条件 `DT` 的正确模糊评估取决于每个域。当域是连续的时，应用 `FCE`。当域是离散的时，我们需要进行不同的计算。当域是常数时，条件必须标记为真或假，以便其评估被预计算并跳过评估。
 
 显然，为了继续，我们必须计算脚本中所有基本条件的域，特别是识别哪些域是连续的。为了继续，我们必须计算脚本中所有基本条件的域，特别是识别哪些域是连续的。为了继续，我们必须计算脚本中所有基本条件的域，特别是识别哪些域是连续的。在继续之前，我们需要知道域是连续还是离散的。
 
-### 20.1.3 布尔条件
+#### 20.1.3 布尔条件
 
 当 `dom(e)` 是 `{0, 1}` 时，我们称为布尔条件。在这种情况下，就像常数情况一样，等式是有意义的，不等式不一定是严格的。模糊求值器给出了以下示例：
 
@@ -3848,55 +3599,51 @@ If vDigPays = 50 then pr [payoff1] else pr [payoff2] endIf
 | 日期1 | 连续: if vAlive > 100 then x = 1 else x = 0 |
 | 日期2 | 布尔: if vAlive > 0 then x = 1 else x = 0 |
 
-布尔条件在现实中非常常见。在应用 FCE 之前，我们需要知道域是连续还是离散的。在继续之前，我们需要计算脚本中所有基本条件的域，特别是识别哪些域是连续的。
+布尔条件在现实中非常常见。在应用 `FCE` 之前，我们需要知道域是连续还是离散的。在继续之前，我们需要计算脚本中所有基本条件的域，特别是识别哪些域是连续的。
 
-布尔条件在现实世界中非常常见。在这些情况下，应用 FCE 会导致（完全）错误的结果。
+布尔条件在现实世界中非常常见。在这些情况下，应用 `FCE` 会导致（完全）错误的结果。
 
-我们在这里画出 x 的最终值随不同 ε 选择变化的函数：
+我们在这里画出 `x` 的最终值随不同 `ε` 选择变化的函数：
 
 ![](img/3887ab6b5277fb99d7702948fa9470_207_0.png)
 
-偏差是显而易见的。不仅我们严重高估了 x，而且随着 ε 趋向于 0，情况变得更糟。在收敛时，偏差实际上是最大的。
+偏差是显而易见的。不仅我们严重高估了 `x`，而且随着 `ε` 趋向于 0，情况变得更糟。在收敛时，偏差实际上是最大的。
 
-我们无法将连续域公式应用于布尔条件。那么 `dt(vAlive > 0)` 的正确公式是什么？在我们的脚本中，x 评估 `dt(vAlive > 0)`，其正确值显然是 `dt(spot) > 100`。因此。
+我们无法将连续域公式应用于布尔条件。那么 `dt(vAlive > 0)` 的正确公式是什么？在我们的脚本中，`x` 评估 `dt(vAlive > 0)`，其正确值显然是 `dt(spot) > 100`。因此。
 
-dt(vAlive > 0) = dt(spot) > 100) = vAlive
+`dt(vAlive > 0) = dt(spot) > 100) = vAlive`
 
-记住，vAlive 在日期 1 上被模糊化，当评估 `vAlive = 0` 时，其模糊域是 (0, 1)。当 `vAlive = 0` 时，显然 `vAlive > 0` 不为真，DT 为 0。当 `vAlive = 1` 时，它显然优于 0，DT 为 1。在之间，DT 在 `vAlive = 0` 和 `vAlive = 1` 之间进行插值。因此，`vAlive > 0` 的 DT 就是 `vAlive` 本身。布尔条件 `e > 0` 的正确 DT 是
+记住，`vAlive` 在日期 1 上被模糊化，当评估 `vAlive = 0` 时，其模糊域是 `(0, 1)`。当 `vAlive = 0` 时，显然 `vAlive > 0` 不为真，`DT` 为 0。当 `vAlive = 1` 时，它显然优于 0，`DT` 为 1。在之间，`DT` 在 `vAlive = 0` 和 `vAlive = 1` 之间进行插值。因此，`vAlive > 0` 的 `DT` 就是 `vAlive` 本身。布尔条件 `e > 0` 的正确 `DT` 是
 
 ```
 dt(e > 0) = e
 ```
 
-作为一个重要的补充，从精确逻辑读取事件 1 会导致 vAlive 的域变为 {0,1}。但从模糊逻辑角度来看，vAlive 是连续的，域为 (0, 1)。然而，我们处理连续域的算法无法正确评估日期 2 上的条件。尽管模糊评估使所有域变为连续的（常数表达式除外），
-
-
-
-
+作为一个重要的补充，从精确逻辑读取事件 1 会导致 `vAlive` 的域变为 `{0,1}`。但从模糊逻辑角度来看，`vAlive` 是连续的，域为 `(0, 1)`。然而，我们处理连续域的算法无法正确评估日期 2 上的条件。尽管模糊评估使所有域变为连续的（常数表达式除外），
 
 ## 条件域
 
-重要的是根据脚本的清晰读取推导出的域。在这里，域是 {0, 1}，而不是 (0, 1)。它是一个离散域，因此连续条件的计算会失败，而在 dt( > 0) = e 处适用不同的计算方法。
+重要的是根据脚本的清晰读取推导出的域。在这里，域是 `{0, 1}`，而不是 `(0, 1)`。它是一个离散域，因此连续条件的计算会失败，而在 `dt( > 0) = e` 处适用不同的计算方法。
 
-## 20.1.4 二元条件
+#### 20.1.4 二元条件
 
-更一般地说，当在 `e > 0` 中 `dom(e) = {-a, b}` 时，我们将该条件称为二元。必须满足 `-a <= 0`、`b >= 0` 且 `a ≠ b`，否则条件始终为真或为假，因此不是二元的。FCE 无法正确评估二元条件的 DT，这在布尔情况中已得到明确证明。在这种情况下，DT 的正确评估是通过前述结果的初等扩展实现的：
+更一般地说，当在 `e > 0` 中 `dom(e) = {-a, b}` 时，我们将该条件称为二元。必须满足 `-a <= 0`、`b >= 0` 且 `a ≠ b`，否则条件始终为真或为假，因此不是二元的。`FCE` 无法正确评估二元条件的 `DT`，这在布尔情况中已得到明确证明。在这种情况下，`DT` 的正确评估是通过前述结果的初等扩展实现的：
 
 ```
 dt(e > 0) = \frac{a+e}{a+b}
 ```
 
-在上一段文字的布尔脚本中，我们可以用 "vAlive > 0.5" 代替 "vAlive > 0" 或 "vAlive > 0.9"。对于布尔变量，这三个条件是等价，我们的计算在三种情况下都应该产生相同的结果。这三个条件意味着 vAlive = 1，等价于 vAlive ≠ 0。我们的公式满足这一属性。对于 (0, 1) 中的任何 y，对 `vAlive > x` 赋值得到 `e = vAlive - x`，其域为 `{-x, 1-x}`。通过对公式赋值，我们：
+在上一段文字的布尔脚本中，我们可以用 "`vAlive > 0.5`" 代替 "`vAlive > 0`" 或 "`vAlive > 0.9`"。对于布尔变量，这三个条件是等价，我们的计算在三种情况下都应该产生相同的结果。这三个条件意味着 `vAlive = 1`，等价于 `vAlive ≠ 0`。我们的公式满足这一属性。对于 `(0, 1)` 中的任何 `y`，对 `vAlive > x` 赋值得到 `e = vAlive - x`，其域为 `{-x, 1-x}`。通过对公式赋值，我们：
 
 ```
 dt(e > 0) = \frac{vAlive-x-(-x)}}{a-x-(-x)}} = vAlive
 ```
 
-非严格不等式呢？如果 a 和 b 不为 0，则 `e > 0` 与 `e >= 0` 是相同的，且适用相同的公式。如果其中一个为 0 且不等式不严格，那么该条件要么始终为真要么始终为假，因此我们单独处理。最后，我们考虑等式 `e = 0`。`dt(e ≠ 0) = 1 - dt(e = 0)`，因此对于一个取值为 {a,b} 的二元变量，必须满足 `a = 0` 或 `b = 0`，否则始终为假。（不失一般性地）`a = 0` 且 `b > 0`。当 e 求值为 0 时，结果显然为真。DT 为 1。当它求值为 b 时，`e = 0` 的 DT 为 0。在之间，它通过模糊插值得到。因此：
+非严格不等式呢？如果 `a` 和 `b` 不为 0，则 `e > 0` 与 `e >= 0` 是相同的，且适用相同的公式。如果其中一个为 0 且不等式不严格，那么该条件要么始终为真要么始终为假，因此我们单独处理。最后，我们考虑等式 `e = 0`。`dt(e ≠ 0) = 1 - dt(e = 0)`，因此对于一个取值为 `{a,b}` 的二元变量，必须满足 `a = 0` 或 `b = 0`，否则始终为假。（不失一般性地）`a = 0` 且 `b > 0`。当 `e` 求值为 0 时，结果显然为真。`DT` 为 1。当它求值为 `b` 时，`e = 0` 的 `DT` 为 0。在之间，它通过模糊插值得到。因此：
 
-```
+
+
 DT(e = 0) = 1 - \frac{e}{b}, DT(e ≠ 0) = \frac{e}{b}
-```
 
 ## 20.1.5 离散条件
 
@@ -3904,24 +3651,43 @@ DT(e = 0) = 1 - \frac{e}{b}, DT(e ≠ 0) = \frac{e}{b}
 
 ```
 If spot() < 100
+
 vLadder = 0
+
 else
+
 if Spot() < 110
+
 vLadder = 1
+
 else
+
 if spot() < 120
+
 vLadder = 2
+
 else
+
 if spot() < 130
+
 vLadder = 3
+
 else
+
 if spot() > 150
+
 vLadder = 5
+
 else
+
 vLadder = 4
+
 endif
+
 endif
+
 endif
+
 endif
 ```
 
@@ -3946,13 +3712,13 @@ endif
 endif
 endif | Date2 | if vLadder > 3 then y = 1 else y = 0 |
 
-在这个脚本中，vLadder 是一个域为 {0, 1, 2, 3, 4, 5} 的离散变量，模糊逻辑使其在日期 0、日期 1 上模糊化，所以当 `vLadder > 3` 时它属于 (0, 5)，而 `e = vLadder - 3` 属于 `{-3, -2, -1, 0, 1, 2}`。考虑到这一点，我们期望当 `e >= 1` 时 `dt(e > 0)` 为 1，当 `e <= 0` 时，在之间进行插值。更通地说，第 II 部分第 1 章显示了当一个表达式具有离散域 {e_0, e_1, ..., e_n} 时，模糊逻辑将其域转换为 (e_0, n)，我们通过插值计算 `e > 0` 的 DT：
+在这个脚本中，`vLadder` 是一个域为 `{0, 1, 2, 3, 4, 5}` 的离散变量，模糊逻辑使其在日期 0、日期 1 上模糊化，所以当 `vLadder > 3` 时它属于 `(0, 5)`，而 `e = vLadder - 3` 属于 `{-3, -2, -1, 0, 1, 2}`。考虑到这一点，我们期望当 `e >= 1` 时 `dt(e > 0)` 为 1，当 `e <= 0` 时，在之间进行插值。更通地说，第 II 部分第 1 章显示了当一个表达式具有离散域 `{e_0, e_1, ..., e_n}` 时，模糊逻辑将其域转换为 `(e_0, n)`，我们通过插值计算 `e > 0` 的 DT：
 
 $$\begin{aligned}e \le e_{i_0} \to DT(e > 0) = 0 \\
 e \ge e_{i_1} \to DT(e > 0) = 1 \\
 e_{i_0} < e < e_{i_1} \to DT(e > 0) = \frac{e-e_{i_0}}{e_{i_1}-e_{i_0}}\end{aligned}$$
 
-其中 $e_{i_0}$ 是最大的负值 $e$，且 $i_1 = i_0 + 1$。当我们在 $\{e_0, e_1, \dots, e_n\}$ 中找不到这样的对 $\{e_{i_0}, e_{i_1}\}$ 时，意味着条件始终为真或假。一个相关的示例是关于在范围内的停留计数器：
+其中 `$e_{i_0}$` 是最大的负值 `$e$`，且 `$i_1 = i_0 + 1$`。当我们在 `{$e_0, e_1, \dots, e_n$}` 中找不到这样的对 `{$e_{i_0}, e_{i_1}$}` 时，意味着条件始终为真或假。一个相关的示例是关于在范围内的停留计数器：
 
 | Week | Logic |
 | :--- | :--- |
@@ -3961,30 +3727,33 @@ e_{i_0} < e < e_{i_1} \to DT(e > 0) = \frac{e-e_{i_0}}{e_{i_1}-e_{i_0}}\end{alig
 | W3 | if(spot() > 90 and spot() < 110 then vCount = vCount + 1 |
 | W4 | if(spot() > 90 and spot() < 110 then vCount = vCount + 1; if vCount > 1.5 then pays 100 |
 
-在第 4 周当 `vCount > 1.5` 被评估时，vCount 的清晰域是 {0, 1, 2, 3, 4}。我们刻意将条件写为 `vCount > 1.5`，这与 `vCount > 1` 相同。我们评估 `e > 0`，其中 `e = vCount - 1.5` 且 `dom(e) = {-1.5, -0.5, 0, 1.5, 2.5}`。应用 DT 公式，我们发现 $\{e_{i-1}, e_i\} = \{-0.5, 0.5\}$。
+在第 4 周当 `vCount > 1.5` 被评估时，vCount 的清晰域是 `{0, 1, 2, 3, 4}`。我们刻意将条件写为 `vCount > 1.5`，这与 `vCount > 1` 相同。我们评估 `e > 0`，其中 `e = vCount - 1.5` 且 `dom(e) = {-1.5, -0.5, 0, 1.5, 2.5}`。应用 DT 公式，我们发现 `{$e_{i-1}, e_i$} = {-0.5, 0.5}`。
 
 ```
 DT(e > 0) = 1_{-0.5 \le e < 0.5}(e + 0.5) + 1_{e \ge 0.5}
 ```
 
-所以，如果在范围内的停留了一个周或更短，则 `vCount <= 1`，其中 `e = -0.5`，且 `DT=0`。如果它范围内停留了两周或更久，则 `e > 0.5`，且 `DT=1`。记住当脚本用模糊逻辑评估时，`vCount` 是模糊的，在这里是连续的。模糊后的 `vCount` 属于 (0,4)，我们的公式在 `vCount`  1 到 2 之间时正确插值 DT。我们发现 `vCount > 1` 在所有情况下产生相同的结果，条件评估一致。
+所以，如果在范围内的停留了一个周或更短，则 `vCount <= 1`，其中 `e = -0.5`，且 `DT=0`。如果它范围内停留了两周或更久，则 `e > 0.5`，且 `DT=1`。记住当脚本用模糊逻辑评估时，`vCount` 是模糊的，在这里是连续的。模糊后的 `vCount` 属于 `(0,4)`，我们的公式在 `vCount` 1 到 2 之间时正确插值 DT。我们发现 `vCount > 1` 在所有情况下产生相同的结果，条件评估一致。
 
-如果我们有非严格条件，例如 `vCount >= 2`，解析为 `vCount - 2 >= 0` 呢？公式同样适用，但在这种情况下，我们选择 $e_i$ 为最大的负值 $e$。我们可以检查如果将此公式应用于重写为 `vCount > 2` 的之前的脚本，它是否在所有场景下产生相同的结果。
+如果我们有非严格条件，例如 `vCount >= 2`，解析为 `vCount - 2 >= 0` 呢？公式同样适用，但在这种情况下，我们选择 `$e_i$` 为最大的负值 `$e$`。我们可以检查如果将此公式应用于重写为 `vCount > 2` 的之前的脚本，它是否在所有场景下产生相同的结果。
 
-最后，等式条件在离散值条件下是有意义的。在这种情况下，我们计算 $\{e_{i-1}, 0, e_i\}$：
+最后，等式条件在离散值条件下是有意义的。在这种情况下，我们计算 `{$e_{i-1}, 0, e_i$}`：
 
 ```
 e \le e_{i-1} \rightarrow DT(e = 0) = 0
+
 e \ge e_i \rightarrow DT(e = 0) = 1
+
 e_{i-1} < e < 0 \rightarrow DT(e = 0) = \frac{e-e_{i-1}}{-e_{i-1}}
+
 0 < e < e_i \rightarrow DT(e = 0) = \frac{e_i-e}{e_i}
 ```
 
 其中：
 
-- $e_{i-1}$ 是最大的严格负单值，或者当所有单值均为正时为 -EPS。
-- $e_i$ 是最小的正单值，或者当所有单值均为负时为 +EPS。
-- $\{0\}$ 必须是域的一部分，否则条件始终为假。
+- `$e_{i-1}$` 是最大的严格负单值，或者当所有单值均为正时为 -EPS。
+- `$e_i$` 是最小的正单值，或者当所有单值均为负时为 +EPS。
+- `{$0$}` 必须是域的一部分，否则条件始终为假。
 
 ## 20.1.6 整合
 
@@ -3994,22 +3763,21 @@ e_{i-1} < e < 0 \rightarrow DT(e = 0) = \frac{e-e_{i-1}}{-e_{i-1}}
 2. 如果条件被标记为 `alwaysfalse`，`dt = 0`。
 3. 如果条件的域是连续的，其 `dt = flf(e, 1, 0, EPS)`。注意对于连续域，等式没有意义，且不等式被视为严格的。
 
-4. 如果条件域是离散的 {e_0,e_1,...,e_n} 且条件不是始终为真或假（否则会被早捕获）：
-   a) 如果条件是形式为 `e > 0` 的严格不等式，在 {e_0,e_1,...,e_n} 中找到对 $\{e_{i},e_{j}\}$，使得 $e_{i}$ 是最大的非负 $e_{i}$，且 $i_{j} = i_i + 1$，并应用：
+4. 如果条件域是离散的 `{e_0,e_1,...,e_n}` 且条件不是始终为真或假（否则会被早捕获）：
+   a) 如果条件是形式为 `e > 0` 的严格不等式，在 `{e_0,e_1,...,e_n}` 中找到对 `{$e_{i},e_{j}$}`，使得 `$e_{i}$` 是最大的非负 `$e_{i}$`，且 `$i_{j} = i_i + 1$`，并应用：
 
    ```
    e \leq e_i → DT(e > 0) = 0
+
    e \geq e_i → DT(e > 0) = 1
+
    e_i < e < e_j → DT(e > 0) = \frac{e-e_{i}}{e_{j-1}-e_{i}}
    ```
 
-   b) 如果条件是形式为 `e >= 0` 的非严格不等式，应用相同的公式，但 $e_i$ 是最大的严格负 $e_{i}$。
+   b) 如果条件是形式为 `e >= 0` 的非严格不等式，应用相同的公式，但 `$e_i$` 是最大的严格负 `$e_{i}$`。
    c) 如果条件是形式为 `e = 0` 的等式。
 
-
-
-
-严格负的 $e_i$ 或若无则为 -EPS，$e_i$，即最小的严格正的 $e_i$，或若无则为 +EPS，应用蝴蝶公式：
+严格负的 `$e_i$` 或若无则为 -EPS，`$e_i$`，即最小的严格正的 `$e_i$`，或若无则为 +EPS，应用蝴蝶公式：
 
 ```
 $e \le e_{i-1} \rightarrow DT(e=0) = 0\ne e \ge e_{i-1} \rightarrow DT(e=0) = 1\ne e_{i-1} < e < 0 \rightarrow DT(e=0) = \frac{e-e_{i-1}}{-e_{i-1}}\n0 < e < e_i \rightarrow DT(e=0) = \frac{e}{e_i}$
@@ -4029,7 +3797,7 @@ $e \le e_{i-1} \rightarrow DT(e=0) = 0\ne e \ge e_{i-1} \rightarrow DT(e=0) = 1\
 - 2. 如果不是，表达式是连续域还是离散定义域
 - 3. 如果定义域是离散的，表达式定义域中包围 0 的两个单元素值，其严格性取决于条件的严格性
 
-为了计算这些信息，定义域处理器必须按顺序遍历脚本中的所有语句，并将所有变量的定义域视为状态。所有变量的起始定义域是单元素集 {0}。
+为了计算这些信息，定义域处理器必须按顺序遍历脚本中的所有语句，并将所有变量的定义域视为状态。所有变量的起始定义域是单元素集 `{0}`。
 
 ## 条件定义域 199
 
@@ -4037,21 +3805,19 @@ $e \le e_{i-1} \rightarrow DT(e=0) = 0\ne e \ge e_{i-1} \rightarrow DT(e=0) = 1\
 
 ```
 if spot() > 100
+
 then z = spot() - 100
+
 elelse if spot() > 810 then z = -2 else z = -1 endlf
 ```
 
-z 的最终定义域是 {-2, -1} 和正实域的并集。然而，这是一个扭曲的例子。我们可以认为它在实践无关并像后文那样忽略它，或者使用（明显更复杂的）访问器处理它。
+z 的最终定义域是 `{-2, -1}` 和正实域的并集。然而，这是一个扭曲的例子。我们可以认为它在实践无关并像后文那样忽略它，或者使用（明显更复杂的）访问器处理它。
 
 因此，定义域要么表示为已知数字的离散集，要么标记为连续。访问器维护一个所有变量定义域向量作为状态。它还维护一个子表达式/树定义域的栈。像通常一样，计算利用了表达式树的递归性质和访问器框架。为了计算表达式的定义域，我们计算其参数的定义域并将其推入定义域栈。然后我们从栈中取出参数定义域，在定义域上应用节点的操作以产生节点的定义域，并将其推回栈。对定义域的操作方式与评估器对数字的操作方式完全相同。
 
 当访问的节点是原子条件时，其左侧（LHS）表达式的定义域被用于存储条件节点上的必要信息——恒真/假标志、定义域是否为连续（如果不是，则是离散域中靠近 0 的两个单元素）以及一个严格性标志。
 
-为了计算这些信息，定义域处理器必须顺序遍历脚本中的所有语句，并将所有变量的定义域跟踪为状态。所有变量的起始定义域是单元素 {0}。
-
-
-
-
+为了计算这些信息，定义域处理器必须顺序遍历脚本中的所有语句，并将所有变量的定义域跟踪为状态。所有变量的起始定义域是单元素 `{0}`。
 
 # 第 21 章
 ## 局限性
@@ -4076,6 +3842,7 @@ eDate if spot() > 100 then x = 1 else x= 0 endIf
 
 ```
 eDate x = 100
+
 if spot() > 100 then x = 1 else x= 0 endIf
 ```
 
@@ -4107,8 +3874,11 @@ x = dt(Spot() > 100)^2 + 100dt(Spot() > 100)[1 - dt(Spot() > 100)]
 
 ```
 if spot() > vRef then
+
 vAlive = 1 then prd pays 120 endIf
+
 vAlive = 0
+
 endif
 ```
 
@@ -4116,8 +3886,11 @@ endif
 
 ```
 if vAlive = 1 and spot() > vRef
+
 then prd pays 120
+
 vAlive = 0
+
 endif
 ```
 
@@ -4142,27 +3915,31 @@ endif
 01Jun2021 if spot() > 100 then dig pays 1 endIf
 ```
 
-
-
-
-
 （今天是 2020 年 6 月 1 日），我们可以传递 1 作为平滑因子。为了评估另一个脚本，例如：
 
 ```
 01Jun2021    if spot() / 100 > 1 then dig pays 1 endif
 ```
 
-我们需要传递另一个平滑因子，显然不是 1；0.01 是一个更合理的选择。如果我们在同一个脚本中同时拥有这两个条件呢？在实践中，脚本中不同条件需要不同价差（spread）的情况经常发生。我们可能有两个股票在 20 之前交易，另一个在 5,000 之前；或者有一个订单为 100 的订单和一个利率为 0.0025 的订单，非常显然，平滑因子不能同时应用于涉及其中任一者的条件。我们可以对所有条件进行归一化，使得 `expression > 0` 中的表达式始终处于相同的数量级。这意味着要修改脚本以适应算法，这并不令人满意。我们可以设计一个访问者（visitor）来自动执行这种归一化。但既然，如果我们走到了这一步，我们也可以一步到位，设计一个算法为所有条件自动设置价差。
+
+
+我们需要传递另一个平滑因子，显然不是 `1`；`0.01` 是一个更合理的选择。如果我们在同一个脚本中同时拥有这两个条件呢？在实践中，脚本中不同条件需要不同价差（spread）的情况经常发生。我们可能有两个股票在 `20` 之前交易，另一个在 `5,000` 之前；或者有一个订单为 `100` 的订单和一个利率为 `0.0025` 的订单，非常显然，平滑因子不能同时应用于涉及其中任一者的条件。我们可以对所有条件进行归一化，使得 `expression > 0` 中的表达式始终处于相同的数量级。这意味着要修改脚本以适应算法，这并不令人满意。我们可以设计一个访问者（visitor）来自动执行这种归一化。但既然，如果我们走到了这一步，我们也可以一步到位，设计一个算法为所有条件自动设置价差。
 
 无论如何，我们都需要为我们的脚本语言提供语法，以便手动在单个基础元素上设置价差。我们建议如下：
 
-- D1 vRef = spot()
+```
+D1 vRef = spot()
  if spot(spot) > 100 : 1 then pays 1 endif
  vPerf = (spot) - vRef) / vRef
-- D2 if vPerf > 1 : 0.1 then pays 1 endif
+```
+```
+D2 if vPerf > 1 : 0.1 then pays 1 endif
  vRef2 = spot()
  vPerf2 = (spot) - vRef2) / vRef2
-- D3 if vRef > 1 : 0.1 and spot() > vRef : 2 then pays 1 endif
+```
+```
+D3 if vRef > 1 : 0.1 and spot() > vRef : 2 then pays 1 endif
+```
 
 我们坚持在每个带有用于平滑的价差的基础条件后跟一个分号。如果某个特定条件上省略了该语法，则将使用传递给入值评估函数的默认值。这允许我们在需要时手动指定价差，或者用于测试我们的自动算法。在我们的脚本语言中实现它是必要的，但自动确定是更优的。请注意，即使是自动确定，我们可能也希望某些特定条件使用用户定义的价差。我们的语法可能支持此类情况。我们可以编写代码，使得对于省略了分号语法的条件，由算法决定价差，而对于显式存在分号的条件，使用用户提供的价差。
 
@@ -4174,92 +3951,47 @@ endif
 
 确定 `expression > 0` 的平滑价差的一种种合理方法是什么？
 
-一个自然的线索是将其与`expression`的标准差联系起来。在实践中，使用 `EPS = .05 std(expression)` 通常能对值值附近（about the money）的表达式产生满意的结果（这些值预计接近 0）。
+一个自然的线索是将其与 `expression` 的标准差联系起来。在实践中，使用 `EPS = .05 std(expression)` 通常能对值值附近（about the money）的表达式产生满意的结果（这些值预计接近 `0`）。
 
-有人认为，价外（out-of-the-money）表达式应该使用更大的价差，以便让更多路径进入模糊区域，从而改进平滑效果。这意味着我们可以选择价差，使得落在模糊区域的路径比例 $P(\epsilon \le \epsilon < EPS/2)$ 为某个目标值，例如为了与值值附近的 0.5 个标准差保持一致，将其设定为 0.04。我们需要评估表达式的概率分布来实现这一点，这可能是一个成本高昂或不稳定的过程。相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
+有人认为，价外（out-of-the-money）表达式应该使用更大的价差，以便让更多路径进入模糊区域，从而改进平滑效果。这意味着我们可以选择价差，使得落在模糊区域的路径比例 `$P(\epsilon \le \epsilon < EPS/2)$` 为某个目标值，例如为了与值值附近的 `0.5` 个标准差保持一致，将其设定为 `0.04`。我们需要评估表达式的概率分布来实现这一点，这可能是一个成本高昂或不稳定的过程。相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
 
-只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟（pre-simulations）。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
+只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟（pre-simulations）。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 `LSM` 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
 
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-（注：由于提供的原文中存在大量段落重复，根据指令“一定不要重复输出原文”的原则，上述译文仅保留核心逻辑部分的翻译。以下为后续剩余部分的翻译：）
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-（注：原文后续内容呈现高度重复，以下为最后非重复部分的翻译：）
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-（注：由于输入文本在“For our purpose...”之后出现了大量完全相同的重复，为了保证输出质量并符合“不重复输出”的要求，此处仅翻译最后一段逻辑内容：）
-
-对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：此处原文重复，已按逻辑处理或跳过重复翻译*）相反，我们只能估计表达式的前两个矩阶，并使用高斯近似进行计算。
-
-（注：由于原文文本存在严重的重复，译文将基于核心逻辑进行整合。以下是剩余的完整翻译：）
-
-We could design a visitor to perform this normalization automatically. But then, if we go that far, we as well go all the way and design an algorithm to set the spread automatically for all conditions.
-
-Either way, we need to provide a syntax for our scripting language to manually set the spread on individual elementary elements. We suggest the following:
-
-- D1 vRef = spot()
- if spot(spot) > 100 : 1 then pays 1 endif
- vPerf = (spot) - vRef) / vRef
-- D2 if vPerf > 1 : 0.1 then pays 1 endif
- vRef2 = spot()
- vPerf2 = (spot) - vRef2) / vRef2
-- D3 if vRef > 1 : 0.1 and spot() > vRef : 2 then pays 1 endif
-
-We persist a semicolon following each elementary condition with the spread to be used for smoothing. This syntax is omitted on a particular condition, a default passed to the entry valuation function is used. This allows us to manually specify spreads if we wish to do so or for testing our automatic algorithm. It is necessary to implement it in our scripting language but automatic determination is preferable. Note that even with automatic determination, we may want some specific conditions to use a user-defined spread instead. Our syntax may support such cases. We can write the code so that the spread is determined by the algorithm for conditions where the semicolon syntax is omitted and use the user-provided spread for conditions where it is explicitly present.
-
-Our code in the online repository supports this syntax.
+对于我们的目的，我们需要预模拟来计算所有条件的矩。
 
 ## The Smoothing Factor
 
 ## 22.2 AUTOMATIC DETERMINATION
 
-What is a sensible way to determine the smoothing spread for expression > 0?
+What is a sensible way to determine the smoothing spread for `expression > 0`?
 
-One natural lead is to relate it to the standard deviation of expression. In practice, using EPS = .05 std(expression) generally produces satisfactory results with expressions about the money (which is expected to be close to 0).
+One natural lead is to relate it to the standard deviation of `expression`. In practice, using `EPS = .05 std(expression)` generally produces satisfactory results with expressions about the money (which is expected to be close to `0`).
 
-It has been argued that out-of-the-money expressions should use a larger spread so that more paths fall into the fuzzy region, improving smoothing. This means we could choose the spread so that the proportion of paths landing in the fuzzy region $P(\epsilon \le \epsilon < EPS/2)$ is some target number, like 0.04 for consistency .5 standard deviations at money. We would need to evaluate the probability distribution for expression to implement this and that may be a costly or unstable procedure. Instead, we can only estimate the first two moments of expression and use a Gaussian approximation for the calculation.
+It has been argued that out-of-the-money expressions should use a larger spread so that more paths fall into the fuzzy region, improving smoothing. This means we could choose the spread so that the proportion of paths landing in the fuzzy region `$P(\epsilon \le \epsilon < EPS/2)$` is some target number, like `0.04` for consistency `.5` standard deviations at money. We would need to evaluate the probability distribution for `expression` to implement this and that may be a costly or unstable procedure. Instead, we can only estimate the first two moments of `expression` and use a Gaussian approximation for the calculation.
 
-This is all fine as long as we can estimate the moments of expressions involved in all elementary conditions. For this kind of computation, we would typically use pre-simulations. They consist of running a small number of Monte-Carlo simulations to pre-compute some quantities that are necessary for the main simulation before it takes place. It is typically used in modern implementations of the LSM algorithm to determine the coefficients used in the main simulation for the regression of a number of different purposes, in case we need pre-simulations and reuse the pre-simulations to compute all the quantities we need.
+This is all fine as long as we can estimate the moments of expressions involved in all elementary conditions. For this kind of computation, we would typically use pre-simulations. They consist of running a small number of Monte-Carlo simulations to pre-compute some quantities that are necessary for the main simulation before it takes place. It is typically used in modern implementations of the `LSM` algorithm to determine the coefficients used in the main simulation for the regression of a number of different purposes, in case we need pre-simulations and reuse the pre-simulations to compute all the quantities we need.
 
-For our purpose, we need pre-simulations to compute the moments of all conditions. 为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：由于您提供的原始文本中存在大量的段落完全重复，作为高级文档工程师，我已为您剔除了冗余部分，以下是精炼的、无重复的完整逻辑翻译：）
+For our purpose, we need pre-simulations to compute the moments of all conditions.
 
-[content]
-（今天是 2020 年 6 月 1 日），我们可以传递 1 作为平滑因子。为了评估另一个脚本，例如：
+（今天是 `2020` 年 `6` 月 `1` 日），我们可以传递 `1` 作为平滑因子。为了评估另一个脚本，例如：
 
 ```
 01Jun2021    if spot() / 100 > 1 then dig pays 1 endif
 ```
 
-我们需要传递另一个平滑因子，显然不是 1；0.01 是一个更合理的选择。如果我们在同一个脚本中同时拥有这两个条件呢？在实践中，脚本中不同条件需要不同价差（spread）的情况经常发生。我们可能有两个股票在 20 之前交易，另一个在 5,000 之前；或者有一个订单为 100 的订单和一个利率为 0.0025 的订单，非常显然，平滑因子不能同时应用于涉及其中任一者的条件。我们可以对所有条件进行归一化，使得 `expression > 0` 中的表达式始终处于相同的数量级。这意味着要修改脚本以适应算法，这并不令人满意。我们可以设计一个访问者（visitor）来自动执行这种归一化。但既然如果我们走到了这一步，我们也可以一步到位，设计一个算法为所有条件自动设置价差。
+
+
+我们需要传递另一个平滑因子，显然不是 `1`；`0.01` 是一个更合理的选择。如果我们在同一个脚本中同时拥有这两个条件呢？在实践中，脚本中不同条件需要不同价差（spread）的情况经常发生。我们可能有两个股票在 `20` 之前交易，另一个在 `5,000` 之前；或者有一个订单为 `100` 的订单和一个利率为 `0.0025` 的订单，非常显然，平滑因子不能同时应用于涉及其中任一者的条件。我们可以对所有条件进行归一化，使得 `expression > 0` 中的表达式始终处于相同的数量级。这意味着要修改脚本以适应算法，这并不令人满意。我们可以设计一个访问者（visitor）来自动执行这种归一化。但既然如果我们走到了这一步，我们也可以一步到位，设计一个算法为所有条件自动设置价差。
 
 无论如何，我们都需要为我们的脚本语言提供语法，以便手动在单个基础元素上设置价差。我们建议如下：
 
-- D1 vRef = spot()
- if spot(spot) > 100 : 1 then pays 1 endif
- vPerf = (spot) - vRef) / vRef
-- D2 if vPerf > 1 : 0.1 then pays 1 endif
- vRef2 = spot()
- vPerf2 = (spot) - vRef2) / vRef2
-- D3 if vRef > 1 : 0.1 and spot() > vRef : 2 then pays 1 endif
+- `D1` `vRef = spot()`
+  `if spot(spot) > 100 : 1 then pays 1 endif`
+  `vPerf = (spot) - vRef) / vRef`
+- `D2` `if vPerf > 1 : 0.1 then pays 1 endif`
+  `vRef2 = spot()`
+  `vPerf2 = (spot) - vRef2) / vRef2`
+- `D3` `if vRef > 1 : 0.1 and spot() > vRef : 2 then pays 1 endif`
 
 我们坚持在每个带有用于平滑的价差的基础条件后跟一个分号。如果某个特定条件上省略了该语法，则将使用传递给入值评估函数的默认值。这允许我们在需要时手动指定价差，或者用于测试我们的自动算法。在我们的脚本语言中实现它是必要的，但自动确定是更优的。请注意，即使是自动确定，我们可能也希望某些特定条件使用用户定义的价差。我们的语法可能支持此类情况。我们可以编写代码，使得对于省略了分号语法的条件，由算法决定价差，而对于显式存在分号的条件，使用用户提供的价差。
 
@@ -4267,19 +3999,20 @@ For our purpose, we need pre-simulations to compute the moments of all condition
 
 ## 平滑因子
 
-## 22.2 自动确定
+### 22.2 自动确定
 
 确定 `expression > 0` 的平滑价差的一种合理方法是什么？
 
-一个自然的线索是将其与`expression`的标准差联系起来。在实践中，使用 `EPS = .05 std(expression)` 通常能对值值附近（about the money）的表达式产生满意的结果（这些值预计接近 0）。
+一个自然的线索是将其与 `expression` 的标准差联系起来。在实践中，使用 `EPS = .05 std(expression)` 通常能对值值附近（about the money）的表达式产生满意的结果（这些值预计接近 `0`）。
 
-有人认为，价外（out-of-the-money）表达式应该使用更大的价差，以便让更多路径进入模糊区域，从而改进平滑效果。这意味着我们可以选择价差，使得落在模糊区域的路径比例 $P(\epsilon \le \epsilon < EPS/2)$ 为某个目标值，例如为了与值值附近的 0.5 个标准差保持一致，将其设定为 0.04。我们需要评估表达式的概率分布来实现这一点，这可能是一个成本高昂或不稳定的过程。相反，我们只能估计表达式的前两个矩，并使用高斯近似进行计算。
+有人认为，价外（out-of-the-money）表达式应该使用更大的价差，以便让更多路径进入模糊区域，从而改进平滑效果。这意味着我们可以选择价差，使得落在模糊区域的路径比例 `$P(\epsilon \le \epsilon < EPS/2)$` 为某个目标值，例如为了与值值附近的 `0.5` 个标准差保持一致，将其设定为 `0.04`。我们需要评估表达式的概率分布来实现这一点，这可能是一个成本高昂或不稳定的过程。相反，我们只能估计表达式的前两个矩，并使用高斯近似进行计算。
 
 只要我们能估计所有基础条件中涉及的表达式的矩，这一切都是没问题的。对于这类计算，我们通常会使用预模拟。它们由运行少数量的蒙特卡洛模拟组成，在主模拟开始之前预计算主模拟所需的某些量。这通常用于 LSM 算法的现代实现，以确定主模拟中用于不同目的回归的系数，以防我们需要预模拟并复用预模拟来计算我们需要的所有量。
 
 对于我们的目的，我们需要预模拟来计算所有条件的矩。为了实现这一点，我们需要评估表达式的概率分布，这可能是一个成本高昂或不稳定的过程。（注：由于原文存在大量重复，此处仅翻译核心逻辑部分）
 
 ## PART V
+
 ### Application to xVA
 
 我们多次强调脚本以一种特别实用且高效的方式支持 xVA。在不失通用性的情况下，CVA 的定义如下：
@@ -4288,81 +4021,85 @@ For our purpose, we need pre-simulations to compute the moments of all condition
 $CVA = E \left[ \sum_i (1 - R_{T_i}) 1_{\{T_i \le \tau < T_{i+1}\}} \max(0, V_{T_i}) \right]$
 ```
 
-其中 $\tau$ 是默认时间，$R$ 是恢复率，$V_{T_i}$ 是净值在风险时间 $i_i$ 的现值，即未来现金流的现值。我们看到语言需要覆盖信贷，以便我们可以编写违约和恢复。这可以用与实现资产价格相同的方法：我们可以实现一个向前生存概率关键字/节点/请求/数据，方式与现价相同。此外，$fwd$ 用于股票/商品，恢复率则通常在忽略反向风险的情况下计算，即假设信用与净值现值的驱动因素相互独立。在这种情况下，公式简化为：
+其中 `$\tau$` 是默认时间，`$R$` 是恢复率，`$V_{T_i}$` 是净值在风险时间 `i_i` 的现值，即未来现金流的现值。我们看到语言需要覆盖信贷，以便我们可以编写违约和恢复。这可以用与实现资产价格相同的方法：我们可以实现一个向前生存概率关键字/节点/请求/数据，方式与现价相同。此外，`$fwd$` 用于股票/商品，恢复率则通常在忽略反向风险的情况下计算，即假设信用与净值现值的驱动因素相互独立。在这种情况下，公式简化为：
 
 ```
 $CVA = E \left[ \sum_i [1 - R(0, V_{T_i})] |S(0, T_i) - S(0, T_{i+1})| \max(0, V_{T_i}) \right]$
 ```
 
-其中 $R$ 和 $S$ 以及确定的恢复率和生存概率从今天的信贷市场读取。由于这些量在这种情况下是确定的，它们可以简单放在预定义的计划中——见第二部分第十章，无需进一步开发即可支持 xVA。Huge 和 Savine [18] 报告了 Andreasen 的证明，CVA 也可以写成：
+其中 `$R$` 和 `$S$` 以及确定的恢复率和生存概率从今天的信贷市场读取。由于这些量在这种情况下是确定的，它们可以简单放在预定义的计划中——见第二部分第十章，无需进一步开发即可支持 xVA。Huge 和 Savine [18] 报告了 Andreasen 的证明，CVA 也可以写成：
 
 （此处省略重复的公式及描述...）
 
-其中 $CF_k$ 是在日期 $T_k$ 支付结算集合（netting set）的现金流，且
+其中 `$CF_k$` 是在日期 `$T_k$` 支付结算集合（netting set）的现金流，且
 
-$$\eta_{T_k} = \sum_{T_i < T_k} (1 - R_{T_i})1_{\{T_{i-1}\leq r<T_i\}}{V_{T_i}>0\}}$$
+`$$\eta_{T_k} = \sum_{T_i < T_k} (1 - R_{T_i})1_{\{T_{i-1}\leq r<T_i\}}{V_{T_i}>0\}}$$`
 
 换句话说，对 CVA 定值意味着对底层支付定价，并通过单一路径依赖过程进行折现：
 
-$$\eta_0 = 0, \eta_{T_{i+1}} = \eta_{T_i} + (1 - R_{T_i})1_{\{T_{i-1}\leq r<T_i\}}{V_{T_i}>0\}}$$
+`$$\eta_0 = 0, \eta_{T_{i+1}} = \eta_{T_i} + (1 - R_{T_i})1_{\{T_{i-1}\leq r<T_i\}}{V_{T_i}>0\}}$$`
 
 或者在信用缺陷的情况下：
 
-$$\eta_{T_{i+1}} = \eta_{T_i} + [1 - R (0, T_i)] [S (0, T_i) - S (0, T_{i+1})]1_{\{V_{T_i}>0\}}$$
+`$$\eta_{T_{i+1}} = \eta_{T_i} + [1 - R (0, T_i)] [S (0, T_i) - S (0, T_{i+1})]1_{\{V_{T_i}>0\}}$$`
 
-因此，只要结算集合中的所有交易都经过了正确的脚本化、聚合和压缩，$1$ 我们将结算集合中的所有现金流通过一个变量 $ns$ 包含在一个单一（通常是长的）脚本中：
+因此，只要结算集合中的所有交易都经过了正确的脚本化、聚合和压缩，`1` 我们将结算集合中的所有现金流通过一个变量 `ns` 包含在一个单一（通常是长的）脚本中：
 
-| | ns pays ... |
+|  | `ns` pays ... |
 | :--- | :--- |
-| CFDate1 | ns pays ... |
-| | ... |
-| | ns pays ... |
-| | ns pays ... |
-| CFDate2 | ns pays ... |
-| | ns pays ... |
-| | ... |
-| | ns pays ... |
-| | ... |
-| CFDateN | ns pays ... |
-| | ns pays ... |
-| | ... |
-| | ns pays ... |
+| `CFDate1` | `ns` pays ... |
+|  | ... |
+|  | `ns` pays ... |
+|  | `ns` pays ... |
+| `CFDate2` | `ns` pays ... |
+|  | `ns` pays ... |
+|  | ... |
+|  | `ns` pays ... |
+|  | ... |
+| `CFDateN` | `ns` pays ... |
+|  | `ns` pays ... |
+|  | ... |
+|  | `ns` pays ... |
 
-$1$ 这也是通过一个特定的访问者完成的；参考 Andreasen’s CVA on an iPad Mini Part 3 [1]，第 26 页及后续内容。
+`1` 这也是通过一个特定的访问者完成的；参考 Andreasen’s CVA on an iPad Mini Part 3 [1]，第 26 页及后续内容。
 
 # xVA 217
 
 计算 CVA（或任何其他 xVA）我们只需要对这个脚本进行装饰，即保持其不变，但添加以下内容：
 
-- 1. 将所有支付项复制到一个名为 `cva` 的变量中，但乘以 $\nu$。这是通过一个特定的访问者完成的：
+- 1. 将所有支付项复制到一个名为 `cva` 的变量中，但乘以 `$\nu$`。这是通过一个特定的访问者完成的：
 
 | ... | ... |
 | :--- | :--- |
-| ns pays ... | |
-| ns pays ... | |
+| `ns` pays ... |  |
+| `ns` pays ... |  |
 | ... | ... |
-| ns pays ... | |
-| CFDate1 | cva pays $\nu \times$ ... |
-| cva pays $\nu \times$ ... | |
+| `ns` pays ... |  |
+| `CFDate1` | `cva` pays `$\nu \times$` ... |
+| `cva` pays `$\nu \times$` ... |  |
 | ... | ... |
-| ns pays ... $\nu \times$ ... | |
+| `ns` pays ... `$\nu \times$` ... |  |
 | ... | ... |
 
 - 2. 用于以下内容的脚本
 
-$\eta_{T_{i+1}} = \eta_{T_i} + [1 - R(0, T_i)] [S(0, T_i) - S(0, T_{i+1})] \{V_{T_i}>0\}$
+`$\eta_{T_{i+1}} = \eta_{T_i} + [1 - R(0, T_i)] [S(0, T_i) - S(0, T_{i+1})] \{V_{T_i}>0\}$`
 
 ```
 Start: TODAY          if PV(ns) > 0 then
+
 End: FINALDATE       nu = nu + ( 1 - rec( StartPeriod) )
+
 Freq: CFAVREQ        * = ( surv(StartPeriod) - surv( EndPeriod) )
+
 Fixing: end           endIf
 ```
 
 就这样，我们有了一个类似方式的 CVA（或任何其他 xVA）脚本。当然，我们需要一个混合模型来正确执行此脚本。
 
 # 第24 章
-分支（Branching）
+
+## 分支（Branching）
 
 令人惊讶的是，Andreasen 的 CVA 重新公式并没有扩展到抵押情况，在该情况下，CVA 定义为：
 
@@ -4382,10 +4119,10 @@ $CVA = E \sum (1 - R_{T_i}) 1_{\{T_i \le r < T_{i+1}\}} \max(0, V_{T_i} - V_{T_i
 $d\tilde{S} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$
 ```
 
-在时间 $T_B$ 伸出的二级分支 $\tilde{S}^{T_B}$ 是同一场景的一部分，并按如下方式模拟：
+在时间 `$T_B$` 伸出的二级分支 `$\tilde{S}^{T_B}$` 是同一场景的一部分，并按如下方式模拟：
 
-- 对于 $t \le T_B$，$\tilde{S}^{T_B}$ 是同一场景的一部分；
-- 对于 $t > T_B$，$\tilde{S}^{T_B} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$。
+- 对于 `t \le T_B`，`$\tilde{S}^{T_B}$` 是同一场景的一部分；
+- 对于 `t > T_B`，`$\tilde{S}^{T_B} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$`。
 
 分支蒙特卡洛包括在每种场景下不仅模拟世界的某种演化，还模拟若干个“分支”，每个分支在特定时间点（对于我们的目的，即抵押确定日）从主模拟中伸出，并开始一个与“主分支”遵循相同动力学但相互独立的并行模拟：
 
@@ -4397,42 +4134,42 @@ $d\tilde{S} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$
 $d\tilde{S} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$
 ```
 
-在时间 $T_B$ 伸出的二级分支 $\tilde{S}^{T_B}$ 是同一场景的一部分，并按如下方式模拟：
-
-- 对于 $t \le T_B$，$\tilde{S}^{T_B}$ 是同一场景的一部分；
-- 对于 $t > T_B$，$\tilde{S}^{T_B} = a\left(\tilde{S}, t\right)dt + b\left(\tilde{S}, t\right)dW$。
 
 
+在时间 `$T_B$` 伸出的二级分支 `$\tilde{S}^{T_B}$` 是同一场景的一部分，并按如下方式模拟：
+
+- 对于 `t <= T_B`，`$\tilde{S}^{T_B}$` 是同一场景的一部分；
+- 对于 `t > T_B`，`$\tilde{S}^{T_B} = a(\tilde{S}, t)dt + b(\tilde{S}, t)dW`。
 
 ## 股票看涨期权
 
 | 行权价 | 120 |
 | :--- | :--- |
 | 到期 | 01Jun2021 |
-| 看涨期权(S,K) | max(0, S-K) |
-| 到期 | 期权支付 CALL ( Spot(), STRIKE) |
+| 看涨期权(S,K) | `max(0, S-K)` |
+| 到期 | 期权支付 `CALL ( Spot(), STRIKE)` |
 
 ## 外汇障碍期权
 
-| 索引 | fx( EUR, USD) |
+| 索引 | `fx( EUR, USD)` |
 | :--- | :--- |
 | 行权价 | 100 |
 | 障碍价 | 120 |
-| 收益(S, K) | max(0, S-K) |
+| 收益(S, K) | `max(0, S-K)` |
 | 到期 | 01Jun2021 |
 | 障碍开始 | 01Jun2020 |
 | 障碍结束 | 01Jun2021 |
 | 障碍频率 | 1m |
 
-| 障碍开始 | vAlive = 1 |
+| 障碍开始 | `vAlive = 1` |
 | :--- | :--- |
-| 到期 | 期权支付 vAlive * PAYOFF( INDEX, STRIKE) |
+| 到期 | 期权支付 `vAlive * PAYOFF( INDEX, STRIKE)` |
 
-开始：BARSTART
-结束：BAREND
-频率：BARFREQ
+开始：`BARSTART`
+结束：`BAREND`
+频率：`BARFREQ`
 锁价：end
-if INDEX > BARRIER then vAlive = 0 endIf
+`if INDEX > BARRIER then vAlive = 0 endIf`
 
 ## 篮子期权
 
@@ -4443,20 +4180,16 @@ if INDEX > BARRIER then vAlive = 0 endIf
 
 | 股票 | 权重 |
 | :--- | :--- |
-| STOCK1 | 0.2 |
-| STOCK2 | 0.1 |
-| STOCK3 | 0.15 |
-| STOCK4 | 0.25 |
-| STOCK5 | 0.3 |
+| `STOCK1` | 0.2 |
+| `STOCK2` | 0.1 |
+| `STOCK3` | 0.15 |
+| `STOCK4` | 0.25 |
+| `STOCK5` | 0.3 |
 
 ## 结语
 
-| 交易日 | loop (0, NSTOCKS) s0[ii] = spot(stocks[ii]) endLoop
-loop (0, NSTOCKS)
-s1 = spot(stocks[ii]) |
-| 到期 | perf = perf + weights[ii] * ( s1 - s0[ii] ) / s0[ii]
-endLoop
-期权支付 max( 0, perf - STRIKE) |
+| 交易日 | `loop (0, NSTOCKS) s0[ii] = spot(stocks[ii]) endLoop` `loop (0, NSTOCKS)` `s1 = spot(stocks[ii])` |
+| 到期 | `perf = perf + weights[ii] * ( s1 - s0[ii] ) / s0[ii]` `endLoop` 期权支付 `max( 0, perf - STRIKE)` |
 
 ## 利率互换
 
@@ -4469,14 +4202,14 @@ endLoop
 | 锁基 | 30/360 |
 | 票息 | 2% |
 
-- * 开始：STARTDATE 互换支付 -libor(StartPeriod, EndPeriod, FLBAS)
-结束：ENDDATE FLIDX)
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
+- 开始：`STARTDATE` 互换支付 `-libor(StartPeriod, EndPeriod, FLBAS)`
+结束：`ENDDATE FLIDX)`
+频率：`FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)`
 锁价：EndPeriod 前两个交易日
 
-- * 开始：STARTDATE 互换支付 CPN
-结束：ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)
-频率：FIXFREQ
+- 开始：`STARTDATE` 互换支付 `CPN`
+结束：`ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)`
+频率：`FIXFREQ`
 锁价：EndPeriod 前两个交易日
 
 ## 利率上限
@@ -4488,9 +4221,9 @@ endLoop
 | 浮动指数 | L3M |
 | 行权价 | 1.5% |
 
-- * 开始：STARTDATE 上限期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
+- 开始：`STARTDATE` 上限期权支付`( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX`
+结束：`ENDDATE -STRIKE`
+频率：`FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)`
 锁价：EndPeriod 前两个交易日
 
 ## 带上限票息的利率互换
@@ -4504,29 +4237,11 @@ endLoop
 | 锁基 | 30/360 |
 | 票息 | 2% |
 
-- 开始：STARTDATE
-vAlive = 1
-期权支付 vAlive * PAYOFF( INDEX, STRIKE)
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-## 带上限票息的利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 1.5% |
-| 票息 | 2% |
-
-- 开始：STARTDATE
-期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
+- 开始：`STARTDATE`
+`vAlive = 1`
+期权支付 `vAlive * PAYOFF( INDEX, STRIKE)`
+结束：`ENDDATE -STRIKE`
+频率：`FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)`
 锁价：EndPeriod 前两个交易日
 
 ## 上限期权
@@ -4538,286 +4253,19 @@ vAlive = 1
 | 浮动指数 | L3M |
 | 行权价 | 1.5% |
 
-- * 开始：STARTDATE 上限期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
+- 开始：`STARTDATE` 上限期权支付`( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX`
+结束：`ENDDATE -STRIKE`
+频率：`FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)`
 锁价：EndPeriod 前两个交易日
 
-## 带上限票息的利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 1.5% |
-| 票息 | 2% |
-
-- 开始：STARTDATE
-vAlive = 1
-期权支付 vAlive * PAYOFF( INDEX, STRIKE)
-结束：ENDDATE -STRIKE
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-## 利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 2% |
-
-- * 开始：STARTDATE 互换支付 -libor(StartPeriod, EndPeriod, FLBAS)
-结束：ENDDATE FLIDX)
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-- * 开始：STARTDATE 互换支付 CPN
-结束：ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)
-频率：FIXFREQ
-锁价：EndPeriod 前两个交易日
-
-# 上限
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 行权价 | 1.5% |
-
-- * 开始：STARTDATE 上限期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-## 带上限票息的利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 1.5% |
-| 票息 | 2% |
-
-- 开始：STARTDATE
-vAlive = 1
-期权支付 vAlive * PAYOFF( INDEX, STRIKE)
-结束：ENDDATE -STRIKE
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-## 利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 2% |
-
-- * 开始：STARTDATE 互换支付 -libor(StartPeriod, EndPeriod, FLBAS)
-结束：ENDDATE FLIDX)
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-- * 开始：STARTDATE 互换支付 CPN
-结束：ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)
-频率：FIXFREQ
-锁价：EndPeriod 前两个交易日
-
-# 上限
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 行权价 | 1.5% |
-
-- * 开始：STARTDATE 上限期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-# 不起抱歉，我将重新为您翻译上述文本内容。
-
-- * Start: STARTDATE swap pays -libor(StartPeriod, EndPeriod, FLBAS)
-End: ENDDATE FLIDX)
-Freq: FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-Fix: start-2bd on EndPeriod
-
-- * Start: STARTDATE swap pays CPN
-End: ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)
-Freq: FIXFREQ
-: start-2bd on EndPeriod
-
-# Cap
-
-| STARTDATE | 01Jun2020 |
-| ENDDATE | 01Jun2030 |
-| FLFREQ | 3m |
-| FLBAS | act/360 |
-| FLIDX | L3M |
-| STRIKE | 1.5% |
-
-- * Start: STARTDATE cap pays( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-End: ENDDATE -STRIKE
-Freq: FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
-Fix: start-2bd on EndPeriod
-
-# Interest Rate Swap with Capped Coupons
-
-| STARTDATE | 01Jun2020 |
-| ENDDATE | 01Jun2030 |
-| FREQ | 3m |
-| FLBASIS | act/360 |
-| FLIDX | L3M |
-| FIXFREQ | 1y |
-| FIXBAS | 30/360 |
-| CPN | 2% |
-
-- Start：STARTDATE
-vAlive = 1
-opt pays vAlive * PAYOFF( INDEX, STRIKE)
-End: ENDDATE -STRIKE
-Freq: FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-Fix: start-2bd on EndPeriod
-
-... (抱歉，由于之前的处理出现了逻辑重复和混乱，以下是根据您的要求重新生成的完整且准确的翻译结果)
-
-[content]
-## 股票看涨期权
-
-| 行权价 | 120 |
-| :--- | :--- |
-| 到期 | 01Jun2021 |
-| 看涨期权(S,K) | max(0, S-K) |
-| 到期 | 期权支付 CALL ( Spot(), STRIKE) |
-
-## 外汇障碍期权
-
-| 索引 | fx( EUR, USD) |
-| :--- | :--- |
-| 行权价 | 100 |
-| 障碍价 | 120 |
-| 收益(S, K) | max(0, S-K) |
-| 到期 | 01Jun2021 |
-| 障碍开始 | 01Jun2020 |
-| 障碍结束 | 01Jun2021 |
-| 障碍频率 | 1m |
-
-| 障碍开始 | vAlive = 1 |
-| :--- | :--- |
-| 到期 | 期权支付 vAlive * PAYOFF( INDEX, STRIKE) |
-
-开始：BARSTART
-结束：BAREND
-频率：BARFREQ
-锁价：end
-if INDEX > BARRIER then vAlive = 0 endIf
-
-## 篮子期权
-
-| 交易日 | 01Jun2020 |
-| :--- | :--- |
-| 到期 | 01Jun2021 |
-| 行权价 0.1 |
-
-| 股票 | 权重 |
-| :--- | :--- |
-| STOCK1 | 0.2 |
-| STOCK2 | 0.1 |
-| STOCK3 | 0.15 |
-| STOCK4 | 0.25 |
-| STOCK5 | 0.3 |
-
-## 结语
-
-| 交易日 | loop (0, NSTOCKS) s0[ii] = spot(stocks[ii]) endLoop
-loop (0, NSTOCKS)
-s1 = spot(stocks[ii]) |
-| 到期 | perf = perf + weights[ii] * ( s1 - s0[ii] ) / s0[ii]
-endLoop
-期权支付 max( 0, perf - STRIKE) |
-
-## 利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 2% |
-
-- * 开始：STARTDATE 互换支付 -libor(StartPeriod, EndPeriod, FLBAS)
-结束：ENDDATE FLIDX)
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-- * 开始：STARTDATE 互换支付 CPN
-结束：ENDDATE cvg(StartPeriod, EndPeriod, FIXBAS)
-频率：FIXFREQ
-:锁价：EndPeriod 前两个交易日
-
-# 上限
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 浮频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 行权价 | 1.5% |
-
-- * 开始：STARTDATE 上限期权支付( 0, libor(StartPeriod, EndPeriod, FLBAS, FLIDX
-结束：ENDDATE -STRIKE
-频率：FLFREQ cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-## 带上限票息的利率互换
-
-| 开始日期 | 01Jun2020 |
-| 结束日期 | 01Jun2030 |
-| 频率 | 3m |
-| 浮基 | act/360 |
-| 浮动指数 | L3M |
-| 锁频率 | 1y |
-| 锁基 | 30/360 |
-| 票息 | 2% |
-
-- 开始：STARTDATE
-vAlive = 1
-opt pays vAlive * PAYOFF( INDEX, STRIKE)
-结束：ENDDATE -STRIKE
-频率：FLFREQ * cvg(StartPeriod, EndPeriod, FLBAS)
-锁价：EndPeriod 前两个交易日
-
-... (注：由于原始文本中存在大量重复和格式混乱，上述翻译已根据逻辑进行了去重和整理)
-
-
-
-
-# 解析
+## 解析
 
 ```cpp
 {
-// 拷贝事件日期
-myEventDates.push_back(evtIt->first);
-// 解析事件字符串
-myEvents.push_back(parse(evtIt->second));
+  // 拷贝事件日期
+  myEventDates.push_back(evtIt->first);
+  // 解析事件字符串
+  myEvents.push_back(parse(evtIt->second));
 };
 ```
 
@@ -4839,7 +4287,10 @@ Event parse(const string& eventString)
 }
 ```
 
+
+
 该事件首先对事件字符串进行分词处理，然后将迭代器 `it` 初始化为第一个标记，并在循环中调用语句解析器。语句解析器恰好解析以 `it` 标记开头的语句。它返回生成的表达式（子）树的顶层节点，并将 `it` 移动到该语句中最后一个标记之后的标记。我们将结果记录在事件中——提醒一下事件是树的向量，每个语句一棵树——并循环直到到达标记末尾。因此，像 "x = 0 or y = 0" 这样的语法会在事件中产生两棵树。
+
 对于这种（无论多么晦涩的）语法：
 
 ```cpp
@@ -4883,8 +4334,7 @@ if a>b then c=d+e endIf
 
 第一种指令可以通过其第一个标记很容易识别。如果匹配成功，我们调用对应指令的专用解析函数。如果没有匹配，我们将第一个标记解析为变量，并用第二个标记来识别指令。如果仍然没有匹配，则我们的语句格式不正确，我们遇到了一个错误。
 
-# 解析
-# 235
+### 解析 235
 
 ```cpp
 struct script_error : public runtime_error {
@@ -4895,16 +4345,12 @@ struct script_error : public runtime_error {
 static Statement parseStatement(Tokit& cur, const Tokit end) {
   // 检查类型1的指令，目前只有 'if'
   if (cur == "IF") return parseIf(cur, end);
-
   // 将 cur 解析为变量
   auto lhs = parseVar(cur);
-
   // 检查是否末尾
   if (cur == end) throw script_error("Unexpected end");
-
   // 检查类型2的指令，目前只有 '='
   if (cur == "=") return parseAssign(cur, end, lhs);
-
   // 无匹配
   throw script_error("Unexpected statement");
 }
@@ -4916,27 +4362,20 @@ static Statement parseStatement(Tokit& cur, const Tokit end) {
 static ExprTree parseIf(Tokit& cur, const Tokit end) {
   // 移动到 "if" 之后的标记
   ++cur;
-
   // 检查是否末尾
   if (cur == end) throw script_error("Unexpected end");
-
   // 解析条件
   auto cond = parseExpr(cur, end);
-
   // 检查 "then"
   if (cur != "THEN") throw script_error("Expected THEN");
-
   // 跳过 "then"
   ++cur;
-
   vector<Statement> stats;
   int elseIdx = -1;
-
   while (cur != "ELSE" && cur != "ENDIF") {
     stats.push_back(parseStatement(cur, end));
     if (cur == end) throw script_error("Unexpected end");
   }
-
   if (cur == "ELSE") {
     elseIdx = stats.size();
     ++cur; // 跳过 "else"
@@ -4946,7 +4385,6 @@ static ExprTree parseIf(Tokit& cur, const Tokit end) {
     }
   }
   ++cur; // 跳过 "endif"
-
   auto top = make_node<IfNode>();
   top->cond = cond;
   top->elseIdx = elseIdx;
@@ -4959,8 +4397,7 @@ static ExprTree parseIf(Tokit& cur, const Tokit end) {
 
 上述代码自言自懂。返回语句中使用显式 rValue 转换是因为我们构建了一个具体的指针并将其作为基类指针返回。在这种情况下，编译器不会自动移动结果，必须手动完成，因为 `unique_ptr` 是一个移动类型。
 
-# 解析
-# 237
+### 解析 237
 
 ```cpp
 static ExprTree parseVar(TokIt& cur) {
@@ -4968,11 +4405,9 @@ static ExprTree parseVar(TokIt& cur) {
     if (*cur[0] < 'A' || (*cur[0] > 'Z')
         throw script_error(
             (string("variable name ") + *cur + " is invalid")).c_str());
-
     // 构建变量节点
     auto top = make_node<VarNode>();
     top->name = *cur;
-
     // 跳过变量并返回
     ++cur;
     return move(top);
@@ -4981,7 +4416,7 @@ static ExprTree parseVar(TokIt& cur) {
 }
 ```
 
-进入 parseAssign():
+进入 `parseAssign()`:
 
 ```cpp
 static ExprTree parseAssign(TokIt& cur, const Tokit end, ExprTree& lhs) {
@@ -4989,22 +4424,16 @@ static ExprTree parseAssign(TokIt& cur, const Tokit end, ExprTree& lhs) {
     ++cur;
     if (cur == end) throw script_error(
         ("Unexpected end of statement"));
-
     // 解析 RHS
     auto rhs = parseExpr(cur, end);
-
     // 构建并返回顶层节点
     return buildBinary<NodeAssign>(lhs, rhs);
 }
 ```
 
+### 238
 
-
-
-
-# 238
-
-# 现代计算金融
+### 现代计算金融
 
 在这里，`buildBinary()` 是一个辅助函数，用于构建与模板参数类型对应的节点，将 LHS 和 RHS 设置为其参数，并返回指向所构建节点的基类 `Node`（智能指针）：
 
@@ -5036,22 +4465,18 @@ static ExprTree parseCondElem(TokIt cur, const TokIt end)
   auto lhs = parseExpr(cur, end);
 ```
 
-# 解析
+### 解析
 
 ```cpp
 // 检查是否结束
 if (cur == end) throw script_error("Unexpected end of statement");
-
 // 移动到比较运算符后的 token
 string comparator = *cur;
 ++cur;
-
 // 检查是否结束
 if (cur == end) throw script_error("Unexpected end of statement");
-
 // 解析 RHS
 auto rhs = parseExpr(cur, end);
-
 // 构建顶部节点，设置其参数并返回
 if (comparator == "=")
     return binary::NodeEqual(lhs, rhs);
@@ -5080,30 +4505,25 @@ static ExprTree parseCondL2(TokIt cur, const TokIt end)
 {
     // 首先解析基础条件
     auto lhs = parseElem(cur, end);
-
     // 是否有 'and'？
     while (cur != end && cur == "AND")
     {
         // 移动到 'and' 后的 token
         ++cur;
-
         if (cur == end)
             throw script_error("Unexpected end of statement");
-
         // 解析 RHS
         auto rhs = parseElem(cur, end);
-
         // 构建顶部节点，设置其参数
         lhs = buildBinary<NodeAnd>(lhs, rhs);
     }
-
     // 没有更多 'and'，L2 及以上已完成
     // 返回 lhs
     return lhs;
 }
 ```
 
-# 解析 241
+### 解析 241
 
 `parseCondL2()` 的调用耗尽了左侧所有的 `and` 条件，并将对应的树存入 LHS。然后，只要遇到 `or`，就会耗尽右侧的所有的 `and` 条件，并绑定 `or` 节点作为新的 LHS，如此循环。
 
@@ -5117,25 +4537,20 @@ static ExprTree parseCond(TokIt& cur, const TokIt end)
     // 耗尽 L2 (and) 及以上
     // LHS 上的条件
     auto lhs = parseCondL2(cur, end);
-
     // 是否有 'or'？
     while (cur != end && cur == "OR")
     {
         // 移动到 'or' 后的 token
         ++cur;
-
         // 不应在 'or' 之后立即停止
         if (cur == end)
             throw script_error("Unexpected end of statement");
     }
-
     // 耗尽 L2 (and) 及以上
     // RHS 上的条件
     auto rhs = parseCondL2(cur, end);
-
     // 构建节点并赋值其参数
     lhs = buildBinary<NodeOr>(lhs, rhs);
-
     // 没有更多 'or'L2 及以上已耗尽，
     // 因此条件完成
     return lhs;
@@ -5144,11 +4559,9 @@ static ExprTree parseCond(TokIt& cur, const TokIt end)
 
 
 
-
-
 ## 242 LHS 现代计算金融
 
-以 "c1 and c2" 为 LHS，RHS "c3 and c4" 为参数，如果我们遇到另一个 or，则将其存储在 LHS 中。在我们的示例中情况并非如此，而且我们已经知道不在一个 and 结构上，否则 `parseCondL2()` 不会存在了。因此，我们已经耗尽了所有条件运算符，这部分工作已经完全完成。如果我们还有另一个 `or`，我们将一直循环直到所有的 `ors` 以及基础元素（elementaries）都被消耗完毕。
+以 `"c1 and c2"` 为 LHS，RHS `"c3 and c4"` 为参数，如果我们遇到另一个 `or`，则将其存储在 LHS 中。在我们的示例中情况并非如此，而且我们已经知道不在一个 `and` 结构上，否则 `parseCondL2()` 不会存在了。因此，我们已经耗尽了所有条件运算符，这部分工作已经完全完成。如果我们还有另一个 `or`，我们将一直循环直到所有的 `ors` 以及基础元素 `elementaries` 都被消耗完毕。
 
 这种多级递归结构是递归下降算法的核心。不熟悉递归模式的读者可能需要一些时间来理解这种结构。我们强烈建议花这段时间。我们在脚本语言中随处使用递归编程，包括在条件的解析、即将到来的表达式解析，以及在蒙特卡洛模拟之前和期间对树执行操作的访问者实现中。
 
@@ -5158,15 +4571,19 @@ static ExprTree parseCond(TokIt& cur, const TokIt end)
 
 ```cpp
 // 匹配的闭合字符，例如为 ( 匹配 )
+
 // 跳过嵌套的对
+
 // 不改变 cur 迭代器，
+
 // 假设位于左括号上
+
 // 并返回匹配闭合的迭代器
+
 template <char OpChar, char ClChar>
 static Tokit findMatch(Tokit cur, const Tokit end)
 {
     unsigned opens = 1;
-
     ++cur;
     while (cur != end && opens > 0)
     {
@@ -5191,24 +4608,19 @@ static ExprTree parseCondL2 (TokIt& cur, const TokIt end)
     // 解析最左侧元素
     // 或括号化条件
     auto lhs = parseCondParentheses(cur, end);
-
     // 我们是否有一个 'and'
     while(cur != end && *cur == "AND") {
         // 进过 'and' 并解析 rhs
         ++cur;
-
         // 不应在 'and' 之后直接停止
         if(cur == end)
             throw script_error("Unexpected end of statement");
-
         // 解析 rhs 元素或括号化条件
         auto rhs = parseCondParentheses(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs 中
         lhs = buildBinary::NodeAnd(lhs, rhs);
     }
-
     // 没有更多 'and'，
     // 所以 L2 及以上已耗尽，
     // 返回以检查是否有 or
@@ -5222,12 +4634,10 @@ static ExprTree parseCondL2 (TokIt& cur, const TokIt end)
 static ExprTree parseCondParentheses(TokIt& cur, const TokIt end)
 {
     ExprTree tree;
-
     // 我们是否有一个左括号 '('
     if(*cur == "(") {
         // 寻找匹配项
         TokIt closeIt = findMatch('(', ')', cur, end);
-
         // 括号化条件
         tree = parseCond(cur, closeIt);
         ++cur;
@@ -5238,10 +4648,6 @@ static ExprTree parseCondParentheses(TokIt& cur, const TokIt end)
     return tree;
 }
 ```
-
-
-
-
 
 # 解析 247
 
@@ -5270,27 +4676,26 @@ while (cur != closeIt) {
 }
 ```
 
-我们检查是否以 '(' 开头，使用我们的辅助函数 `findMatch()` 找到跳过嵌套 '}' 的匹配 ')'，并让标记迭代器向移动。每个参数恰好包含一个表达式，我们递归调用解析器 `parseExpr()` 来解析它们，直到遇到匹配的 ')'。在每次调用 `parseExpr()` 之间，我们检查是否有逗号并跳过它。一旦解析完函数后面圆括号中所有由逗号分隔的表达式，我们将它们以 vector 的形式返回。C++11 使用移动语义（move）处理返回的 vector，因此不会产生拷贝。
+我们检查是否以 `(` 开头，使用我们的辅助函数 `findMatch()` 找到跳过嵌套 `}` 的匹配 `)`，并让标记迭代器向移动。每个参数恰好包含一个表达式，我们递归调用解析器 `parseExpr()` 来解析它们，直到遇到匹配的 `)`。在每次调用 `parseExpr()` 之间，我们检查是否有逗号并跳过它。一旦解析完函数后面圆括号中所有由逗号分隔的表达式，我们将它们以 `vector` 的形式返回。C++11 使用移动语义 `move` 处理返回的 `vector`，因此不会产生拷贝。
 
 在紧邻常量、变量和函数之后，是圆括号。带括号表达式的代码与带括号条件完全相同，区别在于要调用的两个函数是 `parseExpr`（最低层级表达式解析器）而不是 `parseCond`（最低层级解析器），如果
 
-> ¹ 高效的编译器最有可能执行返回值优化（Return Value Optimization，简称 RVO），这意味着 vector 将在调用者的栈上创建，而不是在函数内部创建或移动到调用者处。
+> ¹ 高效的编译器最有可能执行返回值优化 `Return Value Optimization`，简称 `RVO`，这意味着 `vector` 将在调用者的栈上创建，而不是在函数内部创建或移动到调用者处。
 
 ```cpp
 typedef ExprTree (*ParseFunc)(TokIt&
 ```
 
-# 解析
-# 249
+## 解析
+
+### 249
 
 ```cpp
 auto rhs = parseParentheses<parseCond,parseCondElem>(cur, end);
-
 // 构建节点并将 lhs 和 rhs 作为其参数，
 // 存储在 lhs
 lhs = buildBinary::NodeAnd(lhs, rhs);
 }
-
 // 没有更多 'and' 了，
 // 所以 L2 及以上已耗尽，
 // 返回到处理 or 的代码
@@ -5298,7 +4703,7 @@ return lhs;
 }
 ```
 
-下一层级 4 用于一元运算符 '+' 和 '-'。我们支持像 "x * -y" 这样的表达式，甚至支持像 "x * -y" 中这样的连续一元运算符序列。
+下一层级 4 用于一元运算符 `'+'` 和 `'-'`。我们支持像 `"x * -y"` 这样的表达式，甚至支持像 `"x * -y"` 中这样的连续一元运算符序列。
 
 ```cpp
 static ExprTree parseExprL4(TokIt& cur, const TokIt end)
@@ -5309,14 +4714,11 @@ static ExprTree parseExprL4(TokIt& cur, const TokIt end)
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 解析 rhs，递归调用
         // 以支持连续多个一元运算符
         auto rhs = parseExprL4(cur, end);
-
         // 构建节点并将 rhs 作为其（唯一）参数
         auto top = op = '+';
         make_base_nodeUPlus();
@@ -5324,18 +4726,16 @@ static ExprTree parseExprL4(TokIt& cur, const TokIt end)
         top->arguments.resize(1);
         // 获得 rhs 的所有权
         top->arguments[0] = move(rhs);
-
         // 返回顶部节点
         return top;
     }
-
     // 不再有匹配，
     // 我们将其交给 L5（圆括号）解析器
     return parseParentheses<parseExpr,parseVarConstFunc>(cur, end);
 }
 ```
 
-像圆括号一样，一元运算符解析器从检查表达式最左侧标记的运算符 '+' 或 '-' 开始
+像圆括号一样，一元运算符解析器从检查表达式最左侧标记的运算符 `'+'` 或 `'-'` 开始
 
 ```cpp
 // 父，层级，'+ 和 '-'
@@ -5344,21 +4744,17 @@ static ExprTree parseExpr(TokIt cur, const Tok end)
     // 耗尽左侧所有的 L2 ('*' 和 //) 
     // 及以上的表达式
     auto lhs = parseExprL2(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '-' || (cur)[0] == '+'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L2 ('*' 和 //) 
         // 及以上的表达式
         auto rhs = parseExprL2(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = (op == '+') ? buildBinary<NodeAdd>(lhs, rhs) : buildBinary<NodeSub>(lhs, rhs);
@@ -5373,21 +4769,17 @@ static ExprTree parseExprL2(TokIt& cur, const TokIt end)
     // 首先耗尽左侧所有的 L3 ('^')
     // 及以上的表达式
     auto lhs = parseExprL3(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '*' || (cur)[0] == '/'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L3 ('^')
         // 及以上的表达式
         auto rhs = parseExprL3(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = (op == '*') ? buildBinary<NodeMult>(lhs, rhs) : buildBinary<NodeDiv>(lhs, rhs);
@@ -5402,21 +4794,17 @@ static ExprTree parseExprL3(TokIt& cur, const TokIt end)
     // 首先耗尽左侧所有的 L4 (圆元)
     // 及以上的表达式
     auto lhs = parseExprL4(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && (cur)[0] == '^')
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L4 (圆元)
         // 及以上的表达式
         auto rhs = parseExprL4(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = buildBinary<NodePow>(lhs, rhs);
@@ -5426,7 +4814,7 @@ static ExprTree parseExprL3(TokIt& cur, const TokIt end)
 }
 ```
 
-一元运算符解析器与圆括号一样，从检查表达式最左侧标记的运算符 '+' 或 '-' 开始
+一元运算符解析器与圆括号一样，从检查表达式最左侧标记的运算符 `'+'` 或 `'-'` 开始
 
 ```cpp
 // 父，层级，'+ 和 '-'
@@ -5435,21 +4823,17 @@ static ExprTree parseExpr(TokIt cur, const Tok end)
     // 耗尽左侧所有的 L2 ('*' 和 //) 
     // 及以上的表达式
     auto lhs = parseExprL2(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '-' || (cur)[0] == '+'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L2 ('*' 和 //) 
         // 及以上的表达式
         auto rhs = parseExprL2(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = (op == '+') ? buildBinary<NodeAdd>(lhs, rhs) : buildBinary<NodeSub>(lhs, rhs);
@@ -5464,27 +4848,33 @@ static ExprTree parseExprL2(TokIt& cur, const TokIt end)
     // 首先耗尽左侧所有的 L3 ('^')
     // 及以上的表达式
     auto lhs = parseExprL3(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '*' || (cur)[0] == '/'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L3 ('^')
         // 及以上的表达式
         auto rhs = parseExprL3(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
-        lhs = (op == '*') ? buildBinary<NodeMult>(lhs, rhs) : buildBinary<NodeDiv>(lhs, rhs);
-    }
-    // 不再有匹配，返回 lhs
-    return lhs;
+```
+
+
+
+# 解析
+
+## 249
+
+```cpp
+lhs = (op == '*') ? buildBinary<NodeMult>(lhs, rhs) : buildBinary<NodeDiv>(lhs, rhs);
+}
+
+// 不再有匹配，返回 lhs
+return lhs;
 }
 
 // 层级 3，'^'
@@ -5493,21 +4883,17 @@ static ExprTree parseExprL3(TokIt& cur, const TokIt end)
     // 首先耗尽左侧所有的 L4 (圆元)
     // 及以上的表达式
     auto lhs = parseExprL4(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && (cur)[0] == '^')
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L4 (圆元)
         // 及以上的表达式
         auto rhs = parseExprL4(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = buildBinary<NodePow>(lhs, rhs);
@@ -5525,17 +4911,14 @@ static ExprTree parseExprL3(TokIt& cur, const TokIt end)
 typedef ExprTree (*ParseFunc)(TokIt&
 ```
 
-# 解析
-# 249
+## 解析
 
 ```cpp
 auto rhs = parseParentheses<parseCond,parseCondElem>(cur, end);
-
 // 构建节点并将 lhs 和 rhs 作为其参数，
 // 存储在 lhs
 lhs = buildBinary::NodeAnd(lhs, rhs);
 }
-
 // 没有更多 'and' 了，
 // 所以 L2 及以上已耗尽，
 // 返回到处理 or 的代码
@@ -5543,7 +4926,7 @@ return lhs;
 }
 ```
 
-下一层级 4 用于一元运算符 '+' 和 '-'。我们支持像 "x * -y" 这样的表达式，甚至支持像 "x * -y" 中这样的连续一元运算符序列。
+下一层级 4 用于一元运算符 `'+'` 和 `'-'`。我们支持像 `"x * -y"` 这样的表达式，甚至支持像 `"x * -y"` 中这样的连续一元运算符序列。
 
 ```cpp
 static ExprTree parseExprL4(TokIt& cur, const TokIt end)
@@ -5554,14 +4937,11 @@ static ExprTree parseExprL4(TokIt& cur, const TokIt end)
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 解析 rhs，递归调用
         // 以支持连续多个一元运算符
         auto rhs = parseExprL4(cur, end);
-
         // 构建节点并将 rhs 作为其（唯一）参数
         auto top = op = '+';
         make_base_nodeUPlus();
@@ -5569,18 +4949,16 @@ static ExprTree parseExprL4(TokIt& cur, const TokIt end)
         top->arguments.resize(1);
         // 获得 rhs 的所有权
         top->arguments[0] = move(rhs);
-
         // 返回顶部节点
         return top;
     }
-
     // 不再有匹配，
     // 我们将其交给 L5（圆括号）解析器
     return parseParentheses<parseExpr,parseVarConstFunc>(cur, end);
 }
 ```
 
-像圆括号一样，一元运算符解析器从检查表达式最左侧标记的运算符 '+' 或 '-' 开始
+像圆括号一样，一元运算符解析器从检查表达式最左侧标记的运算符 `'+'` 或 `'-'` 开始
 
 ```cpp
 // 父，层级，'+ 和 '-'
@@ -5589,21 +4967,17 @@ static ExprTree parseExpr(TokIt cur, const Tok end)
     // 耗尽左侧所有的 L2 ('*' 和 //) 
     // 及以上的表达式
     auto lhs = parseExprL2(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '-' || (cur)[0] == '+'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L2 ('*' 和 //) 
         // 及以上的表达式
         auto rhs = parseExprL2(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = (op == '+') ? buildBinary<NodeAdd>(lhs, rhs) : buildBinary<NodeSub>(lhs, rhs);
@@ -5611,28 +4985,23 @@ static ExprTree parseExpr(TokIt cur, const Tok end)
     // 不再有匹配，返回 lhs
     return lhs;
 }
-
 // 层级 2，'* 和 '/'
 static ExprTree parseExprL2(TokIt& cur, const TokIt end)
 {
     // 首先耗尽左侧所有的 L3 ('^')
     // 及以上的表达式
     auto lhs = parseExprL3(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && ((cur)[0] == '*' || (cur)[0] == '/'))
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L3 ('^')
         // 及以上的表达式
         auto rhs = parseExprL3(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = (op == '*') ? buildBinary<NodeMult>(lhs, rhs) : buildBinary<NodeDiv>(lhs, rhs);
@@ -5640,28 +5009,23 @@ static ExprTree parseExprL2(TokIt& cur, const TokIt end)
     // 不再有匹配，返回 lhs
     return lhs;
 }
-
 // 层级 3，'^'
 static ExprTree parseExprL3(TokIt& cur, const TokIt end)
 {
     // 首先耗尽左侧所有的 L4 (圆元)
     // 及以上的表达式
     auto lhs = parseExprL4(cur, end);
-
     // 我们有匹配吗？
     while (cur != end && (cur)[0] == '^')
     {
         // 记录运算符并前进
         char op = (*cur)[0];
         ++cur;
-
         // 不应在运算符后直接停止
         if (cur == end) throw script_error("语句意外结束");
-
         // 耗尽右侧所有的 L4 (圆元)
         // 及以上的表达式
         auto rhs = parseExprL4(cur, end);
-
         // 构建节点并将 lhs 和 rhs 作为其参数，
         // 存储在 lhs
         lhs = buildBinary<NodePow>(lhs, rhs);
@@ -5679,14 +5043,13 @@ static ExprTree parseExprL3(TokIt& cur, const TokIt end)
 typedef ExprTree (*ParseFunc)(TokIt&
 ```
 
-# A.5 PERFORMANCE
+## A.5 PERFORMANCE
 
 我们从未发现解析是瓶颈，即使在复杂的脚本中。这是因为解析只执行一次，因此相对于生成和评估，其开销通常忽略不计。只有在评估时需要优化性能，因为它在大量的场景中被重复执行。
 
 然而，如果你由于某些原因需要进一步提高解析器的性能，请注意通过多线程和内存池可以获得显著的加速。
 
-# 解析
-# 253
+## 253
 
 ```cpp
 // 从事件字符串构建事件
@@ -5706,8 +5069,6 @@ void parseEvents(EvtIt begin, EvtIt end)
     }
 }
 ```
-
-
 
 
 
@@ -5809,10 +5170,6 @@ void parseEvents(EvtIt begin, EvtIt end)
 - A. Savine. Modern Computational Finance: AAD and Parallel Simulations. Wiley Finance, 2018.
 - A. Williams. C++ Concurrency in Action. Manning, 2012.
 - L. A. Zadeh. Fuzzy Sets, Fuzzy Logic, and Fuzzy Systems, Selected Papers by Lotfi. Zadeh. World Scientific, 1949–1995.
-
-
-
-
 
 # 260
 # 索引
@@ -6059,10 +5416,6 @@ C++ (续)
 - 非严格条件，196
 - 非严格不等式，197
 - 非类型模板参数，248
-
-
-
-
 
 # 266
 # 索引
@@ -6347,9 +5700,6 @@ Tikhonov 正则化 SVD
 标记迭代器（Token iterators）
 推进, 247
 
-
-
-
 # 索引
 
 # 271
@@ -6413,3 +5763,4 @@ Tikhonov 正则化 SVD
 
 请访问 www.wiley.com/go/eula 获取 Wiley 电子书用户许可协议 (EULA)。
 
+```

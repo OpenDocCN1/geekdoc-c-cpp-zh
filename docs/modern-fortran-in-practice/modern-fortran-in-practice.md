@@ -1,138 +1,99 @@
+
 # Modern Fortran 实战
-
-
-
-
-
 
 MICHAEL METCALF 前序
 
-
 ![](img/57520a202a0735ccfa4afc3beb12794b_0_0.png)
 
+从诞生初，Fortran 编程语言的设计就考虑了计算效率。最新标准 `Fortran 2008` 包含了许多现代特性，包括面向对象、数组操作、用户定义类型以及并行计算的规定。
 
+本教程向 Fortran 程序员展示如何以 21 世纪风格应用这些特性：模块化、简洁、面向对象且资源高效，并利用多个处理器。它提供了与 `C` 语言接口、内存管理、图形和 GUI，以及使用 `MPI`、`OpenMP` 和 `coarrays` 进行并行计算的实际应用示例。作者还分析了几种数值算法及其实现，并说明了几个开源库的使用。示例的完整源代码可以在书籍网站上获得。
 
-从诞生初，Fortran 编程语言的设计就考虑了计算效率。最新标准 Fortran 2008 包含了许多现代特性，包括面向对象、数组操作、用户定义类型以及并行计算的规定。
-
-本教程向 Fortran 程序员展示如何以 21 世纪风格应用这些特性：模块化、简洁、面向对象且资源高效，并利用多个处理器。它提供了与 C 语言接口、内存管理、图形和 GUI，以及使用 MPI、OpenMP 和 coarrays 进行并行计算的实际应用示例。作者还分析了几种数值算法及其实现，并说明了几个开源库的使用。示例的完整源代码可以在书籍网站上获得。
-
-Arjen Markus 是 Deltares 的高级顾问，该机构是荷兰水利、地下水和基础设施领域的应用研究机构，他在那里开发并维护数值模型程序及配套工具。他还是 ACM 新 Slack Fortran Forum 和 comp.lang.fortran 新组的活跃贡献者。
-
+Arjen Markus 是 Deltares 的高级顾问，该机构是荷兰水利、地下水和基础设施领域的应用研究机构，他在那里开发并维护数值模型程序及配套工具。他还是 ACM 新 Slack Fortran Forum 和 `comp.lang.fortran` 新组的活跃贡献者。
 
 Michael Metcalf 前序
 
 ![](img/57520a202a0735ccfa4afc3beb12794b_2_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-本出版物的附加资源见：http://flubs.sf.net/examples-modern-fortran.html
-
+本出版物的附加资源见：`http://flubs.sf.net/examples-modern-fortran.html`
 
 > "Eadem mutata resurgo"
+
 （意译：虽已改变，但我仍以真我重生）
-雅各布·伯努利（Jacob Bernoulli）墓上的铭文，
-指对数螺旋。
+
+雅各布·伯努利（Jacob Bernoulli）墓上的铭文，指对数螺旋。
 
 纪念我的父亲
 
-我的父母教我要保持好奇。
-我的妻子和孩子们仍在教我其他
-重要的事情。
-
+我的父母教我要保持好奇。我的妻子和孩子们仍在教我其他重要的事情。
 
 - Michael Metcalf 前序 ..................................................................................... xi
 - 前言 .......................................................................................................... xv
 - 1 现代 Fortran 导论 ........................................................................... 1
-1.1 现代 Fortran 的风格 ................................................................................ 1
-1.2 Fortran 90 ............................................................................................ 5
-1.3 Fortran 95 ............................................................................................ 7
-1.4 Fortran 2003 ...................................................................................... 8
-1.5 Fortran 2008 ....................................................................................... 9
+  1.1 现代 Fortran 的风格 ................................................................................ 1
+  1.2 Fortran 90 ............................................................................................ 5
+  1.3 Fortran 95 ............................................................................................ 7
+  1.4 Fortran 2003 ...................................................................................... 8
+  1.5 Fortran 2008 ....................................................................................... 9
 - 2 数组值函数 ................................................................................ 12
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 前言
 
 Fortran 的应用几乎跨越了计算机作为通用工具以来的整个时期。这非常令人惊叹，考虑到其他许多高层语言的消亡，我们很难知晓其原因。也许约翰·巴克斯斯（John Backus）最初的设计理念——易用性和执行效率——是两个大因素之一。另一个因素可能是 Fortran 用户社区的奉献，他们在编程技术发展的几十年时间里，通过付诸努力保持其生命力，并使其适应日益增长的需求。
 
-尽管有各种预测，在过去的几十年里，Fortran 几近走向灭绝。此外，在过去的几年里，它经历了新一轮轮的标准化，而最新的标准 Fortran 2008 将再次扩展该语言的寿命。在这种背景下，旧版本的 Fortran 仍然存在，这非常遗憾，它们既以由不可救药的教师所授的过时课程的形式存在，也作为其反对者脑海中过时的概念存在。毕竟，现代 Fortran 是一种过程化的、命令式的、编译型语言，其语法非常适合直接表示数学公式。它的各个过程可以单独编译，也可以分组成模块，同时允许方便地构建非常大的程序和过程库。该语言包含了数组处理、抽象数据类型、动态结构、面向对象编程和并行处理的特性。它可以很容易地与 C 语言接口。因此，现代 Fortran（从 Fortran 95 开始的版本）是一项强大的工具。它完全支持结构化编程，而 Fortran 2003 中引入的面向对象编程作为其最显著的新特性，代表了一次重大升级。书中解释了其中大部分内容。
+尽管有各种预测，在过去的几十年里，Fortran 几近走向灭绝。此外，在过去的几年里，它经历了新一轮轮的标准化，而最新的标准 `Fortran 2008` 将再次扩展该语言的寿命。在这种背景下，旧版本的 Fortran 仍然存在，这非常遗憾，它们既以由不可救药的教师所授的过时课程的形式存在，也作为其反对者脑海中过时的概念存在。毕竟，现代 Fortran 是一种过程化的、命令式的、编译型语言，其语法非常适合直接表示数学公式。它的各个过程可以单独编译，也可以分组成模块，同时允许方便地构建非常大的程序和过程库。该语言包含了数组处理、抽象数据类型、动态结构、面向对象编程和并行处理的特性。它可以很容易地与 `C` 语言接口。因此，现代 Fortran（从 `Fortran 95` 开始的版本）是一项强大的工具。它完全支持结构化编程，而 `Fortran 2003` 中引入的面向对象编程作为其最显著的新特性，代表了一次重大升级。书中解释了其中大部分内容。
 
-尽管如此，直到包括 Fortran 2003 在内的任何 Fortran 标准，都不包含任何旨在直接促进并行编程的显著特性。相反，这必须通过中间性的辅助标准来实现，特别是 HPF、MPI、OpenMP 和 Posix Threads。MPI 和 OpenMP 的使用已变得广泛，但 HPF 最终并没有取得成功。然而，现在随着 Fortran 2008 的出现，现代 Fortran 的一个特别优势是其支持并行编程的能力，因为这个最新标准引入了一项急需的功能：协数组（coarrays）。
+尽管如此，直到包括 `Fortran 2003` 在内的任何 Fortran 标准，都不包含任何旨在直接促进并行编程的显著特性。相反，这必须通过中间性的辅助标准来实现，特别是 `HPF`、`MPI`、`OpenMP` 和 `Posix Threads`。`MPI` 和 `OpenMP` 的使用已变得广泛，但 `HPF` 最终并没有取得成功。然而，现在随着 `Fortran 2008` 的出现，现代 Fortran 的一个特别优势是其支持并行编程的能力，因为这个最新标准引入了一项急需的功能：协数组（`coarrays`）。
 
-HPF 指令以 Fortran 注释行的形式出现，只有 HPF 处理器才能识别。一个例子是能够将三个相容（尺寸匹配）的数组与第四个数组对齐，从而确保引用的局部性。进一步的指令还允许（例如）将对齐的数组分布到一组处理器上。另一方面，MPI 是一个用于消息传递的库规范，而支持多平台共享内存并行编程的 OpenMP 则由一组编译器指令、库例程和环境变量组成，用于决定运行时行为。Threads 是一个用于多线程的库规范。
+`HPF` 指令以 Fortran 注释行的形式出现，只有 `HPF` 处理器才能识别。一个例子是能够将三个相容（尺寸匹配）的数组与第四个数组对齐，从而确保引用的局部性。进一步的指令还允许（例如）将对齐的数组分布到一组处理器上。另一方面，`MPI` 是一个用于消息传递的库规范，而支持多平台共享内存并行编程的 `OpenMP` 则由一组编译器指令、库例程和环境变量组成，用于决定运行时行为。`Threads` 是一个用于多线程的库规范。
 
 相比之下，协数组的效果是提供了一种语法，这种语法的设计旨在对程序外观的影响降到最低，它允许在某些处理器上不仅分布数据，还通过单指令多数据（SIMD）模型以及单程序多数据（SPMD）模型分布工作。该功能要求程序员只需学习少量的新规则。此外还引入了用于循环控制的协数组处理，作为并行循环的一种方式。我们随后看到，如何在不离开语言本身的情况下实现很大程度的并行化。
 
-Fortran 2008 的其他主要特性包括：模块、增强对数据对象的访问、I/O 和执行控制的增强，以及额外的新的内置过程，特别是用于位处理的过程。Fortran 2008 于 2010 年发布，是目前的标准。如果 Fortran 能够延续下去，它将非常适用于高性能计算应用，因此，协数组将是至关重要的。
+`Fortran 2008` 的其他主要特性包括：模块、增强对数据对象的访问、I/O 和执行控制的增强，以及额外的新的内置过程，特别是用于位处理的过程。`Fortran 2008` 于 2010 年发布，是目前的标准。如果 Fortran 能够延续下去，它将非常适用于高性能计算应用，因此，协数组将是至关重要的。
 
 但一种语言如果没有学习它的途径，就无法生存。这意味着不仅需要有关于该语言语法和语义的教科书，还需要关于如何在现实场景中使用该语言的读物。有时，对语言的使用和应用经验需要传递给新一代的程序员，而新特性也需要关于如何使用它们的建议。在单一语言很少孤立使用，而是更多地与其他语言或各种工具结合使用的时代，《实战 Fortran》满足了该领域对实用建议的真实需求。
 
-作者是 ACM 通讯 Fortune 论坛的定期贡献者，并在 comp.lang.fortran 用户新闻组提供了宝贵且广受好评的建议，他在该组作为贡献者非常活跃。社区能够从他在荷兰进行科学编程的经验中受益。他关于泛型和设计模式等主题的论文对 Fortran 来说是非常新颖的。因此，他完全胜任编写这本书。
+作者是 ACM 通讯 Fortune 论坛的定期贡献者，并在 `comp.lang.fortran` 用户新闻组提供了宝贵且广受好评的建议，他在该组作为贡献者非常活跃。社区能够从他在荷兰进行科学编程的经验中受益。他关于泛型和设计模式等主题的论文对 Fortran 来说是非常新颖的。因此，他完全胜任编写这本书。
 
-但《实战 Fortran》并非以前贡献的堆砌。它们被编织了一个连贯的程序，并带有使用 MPI、OpenMP 以及简要协数组的 Fortran 并行编程原创材料，以及关于将 Fortran 用于图形应用程序和 GUI 内部的内容。它通过扩展示例进行了补充，这些示例为用户提供可以构建的框架是无价的。
+但《实战 Fortran》并非以前贡献的堆砌。它们被编织了一个连贯的程序，并带有使用 `MPI`、`OpenMP` 以及简要协数组的 Fortran 并行编程原创材料，以及关于将 Fortran 用于图形应用程序和 GUI 内部的内容。它通过扩展示例进行了补充，这些示例为用户提供可以构建的框架是无价的。
 
 这是一项非常有意义的事业，我向所有 Fortran 实践者推荐它。毕竟，正如我们所看到的，Fortran 将长远。
 
 Michael Metcalf
+
 东京，2011年10月
-
-
-
-
 
 ## 前言
 
-我编写 Fortran 语言编程了 25 年多，最初是 FORTRAN IV，晚后来是 FORTRAN 77。在 20 世纪的最后一个十年里，我与多位同事参加了在代尔夫特理工大学由已故 Jan Oosterwijk 教授举办的 Fortran 90 课程。正是在这段期间，我接触了 comp.lang.fortran 新闻组，通过参与这个友好的社区，我学到了很多知识。
+我编写 Fortran 语言编程了 25 年多，最初是 `FORTRAN IV`，晚后来是 `FORTRAN 77`。在 20 世纪的最后一个十年里，我与多位同事参加了在代尔夫特理工大学由已故 Jan Oosterwijk 教授举办的 `Fortran 90` 课程。正是在这段期间，我接触了 `comp.lang.fortran` 新闻组，通过参与这个友好的社区，我学到了很多知识。
 
 在某种意义上，我是一个典型的 Fortran 程序员。我的背景是物理学，我在学习期间学会了编程，但大多是在工作中学会的。在其他方面，我并不是典型的，因为我对通用编程中更深奥的可能产生了兴趣，并试图将它们应用于 Fortran 中。我还开始为 *ACM Fortran Forum* 撰写文章。这些文章构成了本书的基础。
 
-本书不会教你如何用 Fortran 编程。有许多专门介绍这一点的书籍（如 [22], [65]）。相反，本书的目的是展示现代 Fortran 如何用于解决现代编程问题，以及在 C++ 和 Java 等面向对象的语言中流行的技术是如何完美契合当今的 Fortran 的。它甚至展示了一些解决某些在这些语言中难以实现的编程问题的技巧。
+本书不会教你如何用 Fortran 编程。有许多专门介绍这一点的书籍（如 [22], [65]）。相反，本书的目的是展示现代 Fortran 如何用于解决现代编程问题，以及在 `C++` 和 `Java` 等面向对象的语言中流行的技术是如何完美契合当今的 Fortran 的。它甚至展示了一些解决某些在这些语言中难以实现的编程问题的技巧。
 
-如果你对 Fortran 的了解主要限于 Fortran 90 之前，你可能会发现前几章是对数组操作、重载操作以及该标准引入的其他特性的温和介绍。你会发现 Fortran 还开启了完全不同的编程风格之路，这种风格通常与函数式编程语言相关。大多数章节都说明了如何在实践中应用所有这些语言特征。
+如果你对 Fortran 的了解主要限于 `Fortran 90` 之前，你可能会发现前几章是对数组操作、重载操作以及该标准引入的其他特性的温和介绍。你会发现 Fortran 还开启了完全不同的编程风格之路，这种风格通常与函数式编程语言相关。大多数章节都说明了如何在实践中应用所有这些语言特征。
 
 在本书中，我经常提到我自己编写并通过 *SourceForge* 网站发布的软件，或者我以其他某种方式参与的软件。这并不是为了推崇某个特定的软件——这仅仅是因为对这些软件非常熟悉。我已尝试将所有非我本人编写的示例归于其作者。然而，由于我只是凡人，可能会漏掉一两个名字。
 
-这样本书很难凭空出现。除了 *ACM Fortran Forum* 的编辑 Michael Metcalf 和 Ian Chivers，以及许多参与 comp.lang.fortran 新闻组的人员，我至少感谢以下这些人（不分先后顺序）：Bil Kleb, Paul van Delst, Rolf Ade, Henry Gardner, Simon Geard, Richard Suchenwirth, Daniel Kraft, Richard Maine, Steve Lionel, Cameron Laird 和 Clif Flynt。感谢他们的讨论、对我的贡献进行评审，并将与 Fortran 直接相关或间接相关的编程各个方面带入我的视野。
+这样本书很难凭空出现。除了 *ACM Fortran Forum* 的编辑 Michael Metcalf 和 Ian Chivers，以及许多参与 `comp.lang.fortran` 新闻组的人员，我至少感谢以下这些人（不分先后顺序）：Bil Kleb, Paul van Delst, Rolf Ade, Henry Gardner, Simon Geard, Richard Suchenwirth, Daniel Kraft, Richard Maine, Steve Lionel, Cameron Laird 和 Clif Flynt。感谢他们的讨论、对我的贡献进行评审，并将与 Fortran 直接相关或间接相关的编程各个方面带入我的视野。
 
-伴随本书的网站 http://flibs.sf.net/examples/modern_fortran.html 包含了示例的完整源代码。我使用 gfortran 和 Intel Fortran 编译器运行了它们，主要在 Windows 上，但也也在 Linux 上运行过。由于其中一些程序使用了 Fortran 最新的特性，你可能需要你所选择的最新版本的编译器。
+伴随本书的网站 `http://flibs.sf.net/examples/modern_fortran.html` 包含了示例的完整源代码。我使用 `gfortran` 和 `Intel Fortran` 编译器运行了它们，主要在 Windows 上，但也也在 Linux 上运行过。由于其中一些程序使用了 Fortran 最新的特性，你可能需要你所选择的最新版本的编译器。
 
 Arjen Markus
+
 鹿特丹，2011年11月
 
 # 1. 现代 Fortran 简介
 
-自 FORTRAN 77 标准发布以来，Fortran 语言经过了大量的修订 [61]。引入的更改反映了编程技术的新见解和计算机硬件的新发展。从一开始开始，该语言的设计就考虑了计算效率。截至本文写作时的最新标准 Fortran 2008 通过通过引入对并行处理的显式支持 [71]，更加强调了这一方面。
+自 `FORTRAN 77` 标准发布以来，Fortran 语言经过了大量的修订 [61]。引入的更改反映了编程技术的新见解和计算机硬件的新发展。从一开始开始，该语言的设计就考虑了计算效率。截至本文写作时的最新标准 `Fortran 2008` 通过通过引入对并行处理的显式支持 [71]，更加强调了这一方面。
 
-第一章概述了 FORTRAN 77 之后出现的各种标准。这里并没有尝试做到完备甚至描述所有主要特征，因为那意味着一整本书甚至一系列书。请参阅 Metcalf [63], [65] 或 Brainerd 等人 [36] 以获取标准的详细说明。
+第一章概述了 `FORTRAN 77` 之后出现的各种标准。这里并没有尝试做到完备甚至描述所有主要特征，因为那意味着一整本书甚至一系列书。请参阅 Metcalf [63], [65] 或 Brainerd 等人 [36] 以获取标准的详细说明。
 
-如果你对 Fortran 的了解主要限于 Fortran 90 之前的时代，你可能会发现前几章是对数组操作、重载操作以及该标准引入的其他特性的温和介绍。你会发现 Fortran 还开启了完全不同的编程风格之路，这种风格通常与函数式编程语言相关。大多数章节都说明了如何在实践中应用所有这些语言特征。
+如果你对 Fortran 的了解主要限于 `Fortran 90` 之前的时代，你可能会发现前几章是对数组操作、重载操作以及该标准引入的其他特性的温和介绍。你会发现 Fortran 还开启了完全不同的编程风格之路，这种风格通常与函数式编程语言相关。大多数章节都说明了如何在实践中应用所有这些语言特征。
 
 现代 Fortran 的特色
 
-Fortran 90 标准相对于 FORTRAN 77 标准带来了巨大的变化：自由格式、数组操作、模块和派生类型等。为了让这对程序员意味着什么，考虑这个简单的问题：你有一个文件，每行一个数字（为了简单），你想确定这些数字的分布以生成简单的直方图。在 FORTRAN 77 中，程序可能如下所示：
+`Fortran 90` 标准相对于 `FORTRAN 77` 标准带来了巨大的变化：自由格式、数组操作、模块和派生类型等。为了让这对程序员意味着什么，考虑这个简单的问题：你有一个文件，每行一个数字（为了简单），你想确定这些数字的分布以生成简单的直方图。在 `FORTRAN 77` 中，程序可能如下所示：
 
 - 生成简单的直方图
 
@@ -142,7 +103,7 @@ INTEGER MAXDATA
 PARAMETER (MAXDATA = 1000)
 ```
 
-¹ 正式上，Fortran 77 应该写成 FORTRAN 77。从 Fortran 90 标准开始，名称采用小写。
+¹ 正式上，Fortran 77 应该写成 `FORTRAN 77`。从 `Fortran 90` 标准开始，名称采用小写。
 
 ## 2. 现代 Fortran 实践
 
@@ -211,11 +172,16 @@ end program hist
 
 ## 4. 现代 Fortran 实践
 
-- Fortran 90 及后续允许自由格式和小写字母，尽管许多 FORTRAN 77 编译器也允许这一点。
+- `Fortran 90` 及后续允许自由格式和小写字母，尽管许多 `FORTRAN 77` 编译器也允许这一点。
+
 - `implicit none` 语句的引入导致编译器检查所有变量是否已显式声明。
+
 - 通过内部子程序（由 `contains` 指定），你可以确保编译器检查实际参数的正确性。
+
 - 在此程序中你不再需要名臭昭著的 GOTO 语句，因此可以使用结构对应的 `exit` 来终止循环。
+
 - 你可以使用数组切片（如 `data(1:nodata)`）仅传递感兴趣的数组部分，而 `size()` 查询允许你获取相应的元素数量。这意味着你可以移除指示大小的参数。
+
 - 最后，通过使用标准函数 `count()` 来确定直方图，你消除了代码中的整个循环。但注意，从现代标准来看，第一个程序仍然有效。这是 Fortran 的一个非常重要的方面。这意味着你可以逐渐引入现代特性，而不是重写整个程序。
 
 ² 这实际上是内部子程序的效果之一（见 1.2 节）。
@@ -224,26 +190,31 @@ end program hist
 
 ### 1.2 Fortran 90
 
-Fortran 90 标准引入了大量的特性。最为人知的可能是涉及数组操作的，但还有更多：
+`Fortran 90` 标准引入了大量的特性。最为人知的可能是涉及数组操作的，但还有更多：
 
 - `implicit none` 语句要求用户显式声明所有变量，并要求编译器检查这一点。使用此特性意味着类型错误极有可能意外引入新变量。
-- 模块结合 `public` 和 `private` 语句或属性，提供了一种有效方法将整个程序划分为更小的单元，这些单元只有在源代码中显式说明时才能被访问。模块还为其包含的程序提供了显式接口，使得编译器能够执行各种检查和优化。如果不可行（例如在处理不同语言的程序时），可以使用接口块（interface blocks）。
+
+- 模块结合 `public` 和 `private` 语句或属性，提供了一种有效方法将整个程序划分为更小的单元，这些单元只有在源代码中显式说明时才能被访问。模块还为其包含的程序提供了显式接口，使得编译器能够执行各种检查和优化。如果不可行（例如在处理不同语言的程序时），可以使用接口块（`interface blocks`）。
+
 - 主程序以及子程序和函数都可以包含所谓的内部子程序。这些程序可以访问包含程序的变量，但提供了一个定义局部变量的新作用域。这是代码模块化的另一种方法。
-- 由于现代计算机允许灵活的内存管理（这在 FORTRAN 77 标准发布时并不普遍），Fortran 90 的几个特性与内内存管理有关：
+
+- 由于现代计算机允许灵活的内存管理（这在 `FORTRAN 77` 标准发布时并不普遍），`Fortran 90` 的几个特性与内内存管理有关：
+
 - 现在允许递归程序，使得实现递归算法变得容易得多。
-- 通过 `allocate` 和 `deallocate` 语句，程序员可以调整数组的大小以适应当前的问题。大小可以调整的数组有两种类型：可分配（allocable）和指针（pointer）。前者提供了更多优化机会，而后者要灵活得多。
+
+- 通过 `allocate` 和 `deallocate` 语句，程序员可以调整数组的大小以适应当前的问题。大小可以调整的数组有两种类型：可分配（`allocable`）和指针（`pointer`）。前者提供了更多优化机会，而后者要灵活得多。
+
 - 除了显式分配，程序员可以使用自动数组——这种数组根据形式参数获取大小，并在进入子程序或函数时自动创建并在销毁。
+
+
+
 - 数组操作是 Fortran 90 的一个重要方面，因为它们允许简洁的编程风格，并简化了编译器的优化任务。这些操作不仅在算术表达式中支持，还通过一组通用标准函数支持。你不仅可以处理整个数组，还可以根据任何维度上的起始、停止和步长来选择部分。自定义函数可以返回数组作为结果，增加了数组操作的灵活性实用性。
-
-
-
-
 
 # 6 实践中的现代 Fortran
 
-- 值的数组可以通过所谓的数组定义构造器（array define constructors）动态构建。这是一种强大的机制，可以很好地用于填充数组的值。
+- 值的数组可以通过所谓的数组定义构造器（`array define constructors`）动态构建。这是一种强大的机制，可以很好地用于填充数组的值。
 
-- 就像其他现代语言一样，Fortran 允许定义新结构。其基本机制是派生类型（derived types）。派生类型由不同类型的组件组成——可以是基本类型（如整数）或派生类型。你可以像使用基本类型一样使用它们——将它们传递给子程序、作为返回值，或创建此类类型的数组。
+- 就像其他现代语言一样，Fortran 允许定义新结构。其基本机制是派生类型（`derived types`）。派生类型由不同类型的组件组成——可以是基本类型（如整数）或派生类型。你可以像使用基本类型一样使用它们——将它们传递给子程序、作为返回值，或创建此类类型的数组。
 
 - 此外，你可以使用派生类型来创建链表、树和其他广为人知的数据类型。
 
@@ -251,9 +222,9 @@ Fortran 90 标准引入了大量的特性。最为人知的可能是涉及数组
 
 事实上，定义自己的操作是可行的。一个简单的例子：假设你的程序处理平面几何对象，那么为两个对象定义一个相交操作 `object_a_intersects(object_b)` 可能很有意义，以取代对函数 `intersect_objects(object_a, object_b)` 的调用。
 
-- 函数和子程序现在可以有可选参数，由函数中的标识来决定参数是否存在。你也可以以任意顺序调用函数和子程序，只要你添加了形式参数（dummy arguments）的名字，编译器就可以匹配实际参数与形式参数。
+- 函数和子程序现在可以有可选参数，由函数中的标识来决定参数是否存在。你也可以以任意顺序调用函数和子程序，只要你添加了形式参数（`dummy arguments`）的名字，编译器就可以匹配实际参数与形式参数。
 
-进一步的增强是，你可以指定参数的意图（intent）：它是仅输入、仅输出，还是作为输入和输出。这既是对文档编写的帮助，也有助于编译器进行某些优化。
+进一步的增强是，你可以指定参数的意图（`intent`）：它是仅输入、仅输出，还是作为输入和输出。这既是对文档编写的帮助，也有助于编译器进行某些优化。
 
 - `Kind` 是 Fortran 确定基本类型特征的方法。例如，你不是通过不同的类型（`real` 或双精度），而是通过 `kind` 来为实数变量选择单精度或双精度：
 
@@ -269,6 +240,7 @@ real(dp) :: value
 Fortran 标准定义了大量的函数和子程序：
 
 - 用于检索浮点模型属性的数值查询函数。
+
 - 数组操作函数，这些函数通常将一个数组表达式作为其参数之一。例如，你可以使用以下代码统计数组中正元素的个数：
 
 ```fortran
@@ -277,7 +249,8 @@ write(*,'Number of positive elements:', count(array > 0))
 ```
 
 - 字符处理函数和位操作。
-- I/O 系统的增强包括非推进式 I/O（non-advancing I/O）。也就是说，程序可以在一条语句中读取或写入记录的一部分，在另一条语句中写入其余部分。
+
+- I/O 系统的增强包括非推进式 I/O（`non-advancing I/O`）。也就是说，程序可以在一条语句中读取或写入记录的一部分，在另一条语句中写入其余部分。
 
 # 1.3 Fortran 95
 
@@ -290,6 +263,7 @@ real, dimension(:), pointer :: ptr = null()
 ```
 
 - 进一步的增强是，没有 `save` 属性的局部可分配变量在离开作用范围时（从子程序或函数返回时）会自动释放。这是由编译器完成的，因为之后无法访问该内存。
+
 - 为下一个标准做准备，一份技术报告描述了派生类型如何包含可分配组件，以及函数如何返回可分配结果（该技术报告在增加内容后成为了 Fortran 2003 标准的一部分）。
 
 - Fortran 95 的新功能是 `pure`（纯）和 `elemental`（元素化）例程。`elemental` 例程让程序员无需为他们想要支持的所有维度的数组编写例程版本。库中的许多函数和子程序已经是 `elemental` 的，这意味着它们在不考虑任何顺序的情况下在数组的单个元素上工作。随着 Fortran 95 的出现，程序员自己也可以编写 `pure` 例程。`pure` 例程为编译器提供更多优化机会的例程，因为它们不会产生副作用。
@@ -301,28 +275,32 @@ real, dimension(:), pointer :: ptr = null()
 Fortran 2003 也是一个主要修订版本，其主旨是引入面向对象编程。然而，还有更多的增强，例如与 C 语言交互的标准化。
 
 - 对面向对象编程的支持来自几个特性：
+
 - 派生类型现在包含过程（函数和子程序）。这些过程被绑定到类型，因此所有特定类型的变量都具有该实际过程，但你可以控制使用哪一个。（我们将在第 11 章详细讨论这些内容。）
+
 - 派生类型可以扩展为新类型。这是 Fortran 的继承机制。扩展类型可以拥有新的组件（包括数据和过程），它可以重新定义绑定到父类型的过程，但不能更改它们的签名。
-- `select` 语句已经过增强，可以根据变量的类型进行选择。多态变量通过 `class` 关键字声明。为了增强扩展机制的灵活性，过程可以通过抽象接口（abstract interfaces）来表征。这些接口定义了例程的外观，包括参数列表和返回值。
+
+- `select` 语句已经过增强，可以根据变量的类型进行选择。多态变量通过 `class` 关键字声明。为了增强扩展机制的灵活性，过程可以通过抽象接口（`abstract interfaces`）来表征。这些接口定义了例程的外观，包括参数列表和返回值。
 
 - 过程指针通常出现在派生类型内部，你也可以将其作为“普通”变量使用。
 
-- 为了实现特殊效果，引入了模块（modules）的概念。这些特殊效果的示例是浮点环境的控制：舍入模式、浮点异常。
+- 为了实现特殊效果，引入了模块（`modules`）的概念。这些特殊效果的示例是浮点环境的控制：舍入模式、浮点异常。
 
 > 3 Fortran 90 拥有一些让程序员接近这种风格的特性，但它缺乏面向对象编程最重要的特征之一继承。因此，Fortran 90 有时被称为基于对象的。
 
 > 4 Rous 和 Adelstein [73] 比较了 Fortran 和 C++ 中面向对象概念的术语。
 
 - 内存管理得到了增强：
+
 - 字符串的长度现在可以通过 `allocate` 语句确定。
+
 - 在某些情况下，可分配数组会自动重新分配大小。
+
 - 可以通过 `move_alloc` 程序将分配的内存移动到另一个。这使得扩展数组变得更容易。
-- 另一个新功能是文件的流访问（stream access）。特别是，可以在不考虑完整记录的情况下读取（和写入）写入二进制文件，而传统的具有记录结构的非格式文件在其他编程语言中很难使用。
+
+- 另一个新功能是文件的流访问（`stream access`）。特别是，可以在不考虑完整记录的情况下读取（和写入）写入二进制文件，而传统的具有记录结构的非格式文件在其他编程语言中很难使用。
+
 - Fortran 2003 还标准化了对系统环境（环境变量的形式）以及用于启动程序的命令行参数的访问。在此之前，你必须使用各种编译器特定的解决方案来访问这些信息。
-
-
-
-
 
 # 现代 Fortran 实战应用
 
@@ -332,7 +310,7 @@ Fortran 2003 也是一个主要修订版本，其主旨是引入面向对象编�
 
 - 内部过程现在可以作为实际参数传递，从而可以访问包含这些过程的例程中的变量。这使得某些接口问题变得更容易解决（见第 5 章）。
 
-- 标准函数包括贝塞尔函数和查询函数（inquiry functions）。
+- 标准函数包括贝塞尔函数和查询函数（`inquiry functions`）。
 
 ## 1.6 哪些没有变化
 
@@ -344,7 +322,7 @@ Fortran 2003 也是一个主要修订版本，其主旨是引入面向对象编�
 
 - Fortran 是不区分大小写的
 
-- 没有将“文件”作为源代码的组织单位的概念。特别是，在程序（program）、子例程（subroutine）、函数（function）或模块（module）之外不能有任何代码。
+- 没有将“文件”作为源代码的组织单位的概念。特别是，在程序（`program`）、子例程（`subroutine`）、函数（`function`）或模块（`module`）之外不能有任何代码。
 
 - Fortran 的设计倾向于高效执行。这在最新的 Fortran 2008 标准中尤为如此，为了创建快速高效的程序，编译器中增加了许多特性。
 
@@ -396,7 +374,7 @@ end do
 
 ## 2. 数组函数
 
-除了数组操作外，Fortran 90 标准引入了返回数组的函数概念。这类函数可以用于非常紧凑、高级的编程风格，例如 Fortran 的“父亲”John Backus 在他获得 ACM 奖的演讲中所倡导的风格 [13]。虽然 Fortran 90 允许程序员定义返回数据数组的函数，但 Fortran 95 引入了元素函数（elemental functions）和过程。结合 Fortran 2003 中引入的几项特性，这些功能变得更加强大且易用。
+除了数组操作外，Fortran 90 标准引入了返回数组的函数概念。这类函数可以用于非常紧凑、高级的编程风格，例如 Fortran 的“父亲”John Backus 在他获得 ACM 奖的演讲中所倡导的风格 [13]。虽然 Fortran 90 允许程序员定义返回数据数组的函数，但 Fortran 95 引入了元素函数（`elemental functions`）和过程。结合 Fortran 2003 中引入的几项特性，这些功能变得更加强大且易用。
 
 许多内建函数直接作用于数组，而 Fortran 的数组操作将一个数组转换为另一个数组，而不需要可能模糊程序员意图的式循环。例如，假设你有一个数据数组，只想打印那些大于某些阈值的值。其中一种方法是：
 
@@ -425,9 +403,6 @@ write(**) pack( x, x > 3 )
 
 打印数字 4 和 5，因为这些是数组中大于 3 的元素。结果始终是一个数组，即使只有一个元素符合条件或一个元素都没有。
 
-
-
-
 对各种数组元素进行操作在概念上并没有定义，这意味着一个版本就足够了：
 
 ```fortran
@@ -454,9 +429,9 @@ elemental function j0( x )
 end function j0
 ```
 
-如果函数的返回值与输入参数的形状相同，那么这种方法是非常实用的。否则，则不能使用元素函数（elemental functions）。
+如果函数的返回值与输入参数的形状相同，那么这种方法是非常实用的。否则，则不能使用元素函数（`elemental functions`）。
 
-如果你预不知道结果将包含多少元素（如 `pack()` 函数常见的情况），那么很难将结果赋值给数组——因为形状需要匹配。然而，Fortran 2003 引入的一项特性通过可分配数组（allocatable arrays）优雅地解决了这个问题：
+如果你预不知道结果将包含多少元素（如 `pack()` 函数常见的情况），那么很难将结果赋值给数组——因为形状需要匹配。然而，Fortran 2003 引入的一项特性通过可分配数组（`allocatable arrays`）优雅地解决了这个问题：
 
 ```fortran
 real, dimension(:), allocatable :: positive_values
@@ -567,6 +542,8 @@ end subroutine
 
 ## 数组函数 19
 
+
+
 ```fortran
 subroutine sort( array )
   real, dimension(:) :: array
@@ -580,38 +557,58 @@ subroutine sort( array )
         temp = array(i)
         array(i) = array(j)
 ```endif
+
 ```
 
 ### 快速排序
 使用数组构造函数，你可以做更多事情。这种快速排序算法的实现可能不够快（消耗更多内存），但非常紧凑：
 
 ```fortran
+
 recursive function qsort_reals( data ) result( sorted )
+
   real, dimension(:), intent(in) :: data
+
   real, dimension(1:size(data)) :: sorted
 
   if ( size(data) > 1 ) then
+
     sorted = (/ qsort_reals( data(2:) > data(1) ), &
+
       data(1),
+
       qsort_reals( data(2:) <= data(1) ) /
+
   else
+
     sorted = data
+
   endif
+
 end function qsort_reals
+```
 
 这些行有两个属性：
+
 - Fortran 中的数组有长度，这消除了特殊情况的情况。
 - 条件经过仔细选择，使得构造的数组与输入相同。如果同一个值出现多次，该函数也应该有效。
 
 ## 20 现代 Fortran 练习
 
 | 表格 2.2. 数值表，演示二维插值。包含 (12.0,16.7) 的单元格 | |
+
 | :--- | :--- | :--- | :--- |
+
 | y | 5.0 | 25.0 | 100.0 |
+
 | ... | ... | ... | ... |
+
 | 2.5 | 0.1 | 0.9 | 7.8 |
+
 | 5.0 | 0.5 | 2.0 | 11.0 |
+
 | 10.0 | 1.4 | 3.1 | 12.5 |
+
 | 20.0 | 2.6 | 5.3 | 14.0 |
 
 更传统版本的构造留作练习。你可以尝试一个在坏情况情况下表现更好的稳健的版本。
@@ -669,9 +666,6 @@ real :: v
 real :: dv
  type autoderiv
 ```
-
-
-
 
 # 22 现代 Fortran 实践
 
@@ -859,12 +853,15 @@ end function
 为了确定 $\frac{\partial}{\partial x}$ 和 $\frac{\partial}{\partial y}$，必须使用“向量” $x = (x_0, 1)$ 和 $y = (y_0, 1)$。对于函数 $f(x,y) = xy$，结果将是：
 
 > $f'v = x_0 \cdot y_0$
+
 > $f'dvdx = 1 \cdot y_0$
+
 > $f'dvdy = x_0 + 0$
 
 当然，随着高阶导数和变量的增加，实现变得更加复杂。**数值方面**自动微分技术存在一些问题。首先，如果问题函数具有“可去”奇异点（如正弦函数），它的效果不好。更严重的是，可能会发生灾难性的抵消。这里有一个例子：
 
 > $f(x) = \frac{\ln x}{x-1} \quad (x \neq 1)$
+
 > $f(1) = 1 \quad (x = 1)$
 
 该函数的一阶导数：
@@ -909,7 +906,9 @@ c = cartesian_product(xset, yset) ! 创建所有对
 你首先定义将要使用的整数集合 `xset` 和 `yset`，以及包含所有在允许范围内 $x$ 和 $y$ 的 $(x, y)$ 对的整数集合 `c`。然后，应用要解决问题的实际约束集 3.11 和 3.12：
 
 - 选择满足前两个条件的对
+
 ! select(c, 10*(x+3*y) <= 200 )
+
 ! select(c, 3*(x+7*y) <= 121)
 
 现在你有了所有可能的候选 $(x, y)$ 对。最后一步是选出让 $f(x,y) = 3x + 4y$ 最大化的那一个：
@@ -924,15 +923,15 @@ write(*) 'Solution: ' ', getlem(c,idx(1))
 内存管理：对用户方便隐藏的是涉及的内存管理。与其依赖派生类型的默认赋值方法，不如使用自定义运行时来设置 `integer_set` 和 `integer_pair_set` 类型的变量：
 
 - 派生类型 `integer_set` 包含一个元素数组，需要调整大小以适应目标集合：
-
 - 默认赋值被两个模块过程重写：
+
 interface assignment(*)
+
 module procedure assign_set
+
 module procedure assign_pair_set
+
 end interface
-
-
-
 
 如果赋值语句的右侧是函数的结果，则派生类型中的 `_from_function` 组件将被设置为 `.true.`，这样就可以指向该内存而不是重新分配：
 
@@ -941,6 +940,8 @@ subroutine assign_set( setleft, setright )
 type(integer_set), intent(inout) :: setleft
 type(integer_set), intent(in) :: setright
 ```
+
+
 
 ```fortran
 setleft%from_function = .false
@@ -969,7 +970,7 @@ else
 endif
 ```
 
-## 3.3 丢番方程解的列举
+# 3.3 丢番方程解的列举
 
 Fortran 2003 中定义的指针指针使得以通用的方式列举丢番方程的解成为可能。这类方程只接受整数或理数解。一个例子是费马大定理——$x^n + y^n = z^n$，它在 $n > 2$ 时没有非平凡解。Pell 方程 [82]：
 
@@ -986,7 +987,7 @@ $S_2 = \{(y, s) \mid s = y^2, y \in N\}$
 然后考虑 $S_3$ 的定义：
 
 ```fortran
-$S_3 = \{(x,y) \mid (x,t) \in S_1 \wedge (y,s) \in S_2 \wedge t = s\}\quad (3.16)
+$S_3 = \{(x,y) \mid (x,t) \in S_1 \wedge (y,s) \in S_2 \wedge t = s\}\quad (3.16)$
 ```
 
 如果你假设 $t$ 和 $s$ 是 $x$ 和 $y$ 的递增函数，那么一个简单的算法就能确定 $S_3$ 的元素：
@@ -1113,7 +1114,7 @@ end function
 
 通过插入其他函数如 $h(x) = x^3 + 2$，你可以解决其他丢番方程。当然，`combine` 的实现假设解的存在，并且忽略了整数有有限范围这一事实。然而，这些是模糊原理的细节——即将数学问题重构为紧密解决的 Fortran 程序。
 
-## 3.4 延迟求值
+# 3.4 延迟求值
 
 你可以将操作重载更进一步。不是立即执行计算的例程，而是存储该操作。你通过创建一个表达式树来实现这一点，以便以后求值。这样，你可以在运行程序中创建新的表达式、新的函数。你不能使用与普通相同的语法，但你可以获得效果。
 
@@ -1185,21 +1186,16 @@ recursive subroutine integer_eval( x )
 end subroutine integer_eval
 ```
 
-
-
-
-
-# 34 现代 Fortran 实战
+# 3.4 现代 Fortran 实战
 
 请注意以下重要概念：
 
 - 函数范围（function range）是一种检查给定范围内 x 和 y 的所有值的手段，这样就可以将符合关系的二值对添加到缓存中。在这种情况下，如果范围内只有 0，则不会有任何内容被添加到该缓存中。
-
 - `has_element` 函数仅检查给定的整数对是否是集合的一部分。它通过将给定的对作为两个变量 x 和 y 的值，对存储的关系进行评估来实现此。
 
 因此，使用 Fortran 90 的特性，你可以实现一种在 Fortran 这种编译型、静态类型语言中初看起来是不可能的编程风格。
 
-## 4. 内存管理
+# 4. 内存管理
 
 可分配数组（allocatable arrays）和指针的引入使得创建能够根据当前问题调整内存需求的程序变得简单得多。但作为一个副作用，内存管理（即分配和释放数组）已成为一个需要解决的问题。
 
@@ -1212,7 +1208,6 @@ Fortran 90 及后续版本提供了三种创建灵活大小数组的方法：
 对字符字符串也可以进行类似的操作：如在例程序中，局部字符变量的长度可以是动态的，如第 4.4 节所示。
 
 - **可分配数组需要显式的 `allocate` 语句，但只要它们不具有相同的属性，编译器会在从程序返回时清理它们（Fortran 95 及以上版本）。当然，如果你不再需要这些数组，可以对其进行释放。**
-
 - **指针是最灵活的内存类型。** 例如，通过指针你可以从数组中选择不需要连续的元素：
 
 ```fortran
@@ -1335,6 +1330,8 @@ allocate(character(lensize=): string )
 
 这对于分析文件内容或按单词分割字符串有用。下面的模块使用了可分配字符串和其他特性来从文件中读取任意长的行：
 
+
+
 ```fortran
 module readline_utility
   use is_fortran_env
@@ -1380,10 +1377,6 @@ subroutine readline( lun, line, success )
 end subroutine readline
 end module readline_utility
 ```
-
-
-
-
 
 # 40 现代 Fortran 实战
 
@@ -1434,7 +1427,7 @@ end subroutine get_median
 
 > 存在两种算法可以在不排序的情况下实现这一点，但这违背了本文的初衷。
 
-这种思想是让 `get_median` 子程序决定什么方法是安全且高效的，然后让内部程序（`get_median_sub`）执行实际工作。这样，你只需要在处理大量数据时才使用分配数组（会有轻微的性能影响）。
+这种思想是让 `get_median` 子程序决定什么方法是安全且高效的，然后让内部程序 `get_median_sub` 执行实际工作。这样，你只需要在处理大量数据时才使用分配数组（会有轻微的性能影响）。
 
 ## 4.6 各种类型数组的性能
 
@@ -1463,10 +1456,6 @@ end subroutine compute_mean
 结果如图 4.1 所示。图中使用的数字是重复执行不同版本子程序 10,000 次后所经过的时间测量结果。这些数字在几个参数范围内是可重复的。在图中，使用了每个数组大小的平均值对数据进行归一化。
 
 虽然很难得出通用结论（数字随编译器、编译器选项和操作系统的不同很大），但看起来具有指针属性的局部数组系统性地多需要 10 到 20% 的时间——这包含了分配和释放的开销。自动数组和可分配数组（三角形符号）之间几乎没有区别。
-
-
-
-
 
 ```fortran
 subroutine assign_array( ic, jc )
@@ -1514,6 +1503,7 @@ end function concat_chain
 ```
 
 end module chains
+
 ```
 
 该派生类型表示一个整数链，可以通过 `.concat` 操作进行扩展。其结果是一个新的 `type(chain)` 数据，其中包含了两个操作数合并后的数组。当您将此类型的一个变量赋值给另一个变量时，会对这些数组进行复制。
@@ -1570,13 +1560,12 @@ njc = size(jc%values)
 allocate(concat_chain%values(1:nic) = ic%values(1:nic)
 concat_chain%values(1:nic+njc) = jc%values(1:njc)
 concat_chain%tmp = .true. ! 标记为临时
-
 call cleanup( ic, .true )
 call cleanup(jc, .true )
 end function concat_chain
 ```
 
-assign_array` 和 `assign_chain` 子程序也是如此。
+`assign_array` 和 `assign_chain` 子程序也是如此。
 
 # 内存管理 47
 
@@ -1638,19 +1627,15 @@ program measure_matrix
   double complex, allocatable :: a(:)
   integer :: i, j, l, m, n
   integer :: t1, t2, rate
-
   write(**) 'Enter power of 2'
   read(**) n
-
   allocate(a(n+4,n+4))
-
   ! 避免第一次迭代产生的缓存效应
   m = n-4
   call system_clock(t1)
   do l=1,max(10000000/(n*n))
     call test(a,m,n)
   enddo
-
   do m = n-4, n+4
     a = 1.0d0
     call system_clock(t1)
@@ -1661,17 +1646,12 @@ program measure_matrix
     write(*,'i4,f8.3)') m, (t2 - t1) / real(rate)
   enddo
 endprogram
-
 contains
 subroutine test( a, m, n )
   ! 以“错误”顺序遍历 a
-  integer
-    :: m, n
+  integer :: m, n
   double complex :: a(m,n)
-
-  integer
-    :: i, j
-
+  integer :: i, j
   do i = 2, n-1
     do j = 2, n-1
       a(i,j) = (a(i+1,j-1) + a(i-1,j+1)) * 0.5
@@ -1679,6 +1659,8 @@ subroutine test( a, m, n )
   enddo
 end subroutine
 ```
+
+
 
 # 内存管理 49
 
@@ -1695,10 +1677,6 @@ end subroutine
 | 34 | 0.172 | 66 | 0.219 | 130 | 0.266 | 258 | 0.266 | 514 | 0.687 |
 | 35 | 0.141 | 67 | 0.219 | 131 | 0.250 | 259 | 0.281 | 515 | 0.657 |
 | 36 | 0.156 | 68 | 0.219 | 132 | 0.250 | 260 | 0.281 | 516 | 0.640 |
-
-
-
-
 
 # 50 现代 Fortran 实战
 
@@ -1738,31 +1716,26 @@ end do
 
 本章重点关注如何使一个通用（计算/编程）设施变得足够通用，以便适用于大量应用程序，同时又足够具体，以便在实践中变得可用。具体的示例有：用于积分微分方程的库，或读取 XML 文件的库（第 7.4 节）。详细阐述第二个例子，你可以逐段读取此类文件并直接处理读取的数据，或者将数据存储在某些方便的结构中以备日后参考——SAX 和 DOM 方法。
 
-现在查看一个简单得多问题的各种实现：在特定区间上进行积分¹。你对数值方面并不感兴趣（尽管它们本身很有趣），而是感兴趣对于取决于一个或多个参数的良好函数进行积分的可用。对于函数 f：
+现在查看一个简单得多问题的各种实现：在特定区间上进行积分¹。你对数值方面并不感兴趣（尽管它们本身很有趣），而是感兴趣对于取决于一个或多个参数的良好函数进行积分的可用。对于函数 `f`：
 
 ```math
 $f(x) = e^{-ax} \cos bx (a, b \ge 0)$
 ```
 
-要在区间 [0, 10] 上进行积分。
+要在区间 `[0, 10]` 上进行积分。
 
 一个包含合适积分方法的通用库可能包含如下例程：
 
 ```fortran
 module integration_library
-
 implicit none
-
 contains
-
 subroutine integrate_trapezoid(f, xmin, xmax, steps, result )
-
 interface
   real function f( x )
     real, intent(in) :: x
   end function f
 end interface
-
 real, intent(in) :: xmin, xmax
 integer, intent(in) :: steps
 ```
@@ -1773,41 +1746,35 @@ integer, intent(in) :: steps
 real, intent(out) :: result
 integer :: i
 real :: x, deltx
-
 if ( steps <= 0 ) then
     result = 0.0
     return
 endif
-
 deltx = (xmax - xmin) / steps
-
 result = (f(xmin) + f(xmax)) / 2.0
-
 do i = 1,steps-1
     x = xmin + i * deltx
     result = result + f(x)
 end do
-
 result = result * deltx
 end subroutine integrate_trapezoid
-
 end module integration_library
 ```
 
-这种实现的局限性显而易见：任何计算数学函数 $f$ 的子程序接口都是固定的，在前面的示例中，它不允许将方程 5.1 中的参数 $a$ 和 $b$ 传递。
+这种实现的局限性显而易见：任何计算数学函数 `$f$` 的子程序接口都是固定的，在前面的示例中，它不允许将方程 5.1 中的参数 `a` 和 `b` 传递。
 
 如果你受限于这种实现，你只有两个选择：
 
-- 直接在函数 $f$ 的实现中包含参数值。
-- 使用“数据池”（COMMON 块或模块变量），从 $f$ 的内部和外部访问它，这样你可以在调用积分例程之前设置参数。
+- 直接在函数 `f` 的实现中包含参数值。
+- 使用“数据池”（`COMMON` 块或模块变量），从 `f` 的内部和外部访问它，这样你可以在调用积分例程之前设置参数。
 
 然而，如果你可以修改库的实现，你可以传递这些额外参数，或者使用类似反向通信的技术。
 
-你现在将根据 Fortran 的四个主要标准研究这些方法：FORTRAN 77、Fortran 90/95、Fortran 2003 和 Fortran 2008。
+你现在将根据 Fortran 的四个主要标准研究这些方法：`FORTRAN 77`、`Fortran 90/95`、`Fortran 2003` 和 `Fortran 2008`。
 
 ## 5.1 填充参数
 
-如果你只对参数 $a$ 和 $b$ 的某些特定值感兴趣，你可以轻松地编写函数 $f$ 的特定版本并将它们传递给积分例程：²
+如果你只对参数 `a` 和 `b` 的某些特定值感兴趣，你可以轻松地编写函数 `f` 的特定版本并将它们传递给积分例程：²
 
 ```fortran
 c
@@ -1815,11 +1782,9 @@ c 定义函数
 c
   real function f( x )
   real x
-
   real a, b
 save a, b
 data a, b / 1.0, 2.0 /
-
   f = exp(-a*x) * cos(b*x)
   end
 ```
@@ -1832,13 +1797,11 @@ c 定义函数
 c
   real function f( x )
   real x
-
   logical first
   real a
   real b
 save a, b, first
 data first / .true. /
-
 if ( first ) then
   first = .false.
   open(10, file = 'function_values.inp')
@@ -1846,16 +1809,15 @@ if ( first ) then
   read(10, *) b
   close( 10 )
 endif
-
   f = exp(-a*x) * cos(b*x)
   end
 ```
 
 缺点是你无法传递文件名，且文件只在第一次时读取（没有方法对不同值的参数化函数进行积分）。
 
-> ² 该示例几乎符合 FORTRAN 77（官方不允许使用小写，但在随后的示例中出现了超过 6 个字符的名称）。这种风格不会一致使用，除非是为了强调 FORTRAN 77 的某个方面，该方面在后续标准中有更现代的对应物。
+> ² 该示例几乎符合 `FORTRAN 77`（官方不允许使用小写，但在随后的示例中出现了超过 6 个字符的名称）。这种风格不会一致使用，除非是为了强调 `FORTRAN 77` 的某个方面，该方面在后续标准中有更现代的对应物。
 
-然而，FORTRAN 77 确实提供了一种相当模糊的设施——入口 语句（entry statement），这里可以利用它：
+然而，`FORTRAN 77` 确实提供了一种相当模糊的设施——入口 语句（`entry` statement），这里可以利用它：
 
 ```fortran
 c
@@ -1863,46 +1825,37 @@ c 定义函数
 c
     real function f( x )
     real x
-
     logical a
     real b
     save a, b
-
     f = exp(-a*x) * cos(b*x)
-
     return
-
 c 提供对 a 和 b 的访问
 c 函数 f 的
 c
     entry setab( )
 ```
 
-这允许通过入口语句访问参数 $a$ 和 $b$。可以这样使用：
+这允许通过入口语句访问参数 `a` 和 `b`。可以这样使用：
 
 ```fortran
 program integrate_function
-
 real xmin, xmax, result
 integer steps
 external f
-
 c 在调用积分例程之前设置参数
 c
   a = 1.0
   b = 2.0
-
   xmin = 0.0
   xmax = 10.0
   steps = 10
   call integrate_trapezoid(f, xmin, xmax, steps, result)
-
   write(**) 'Result: ', result
-
 end
 ```
 
-使用入口语句的示例类似于将要讨论的第二种方法：使用 COMMON 块或模块变量。在 FORTRAN 77 中，这种方法看起来如下：
+使用入口语句的示例类似于将要讨论的第二种方法：使用 `COMMON` 块或模块变量。在 `FORTRAN 77` 中，这种方法看起来如下：
 
 ```fortran
 c
@@ -1910,24 +1863,19 @@ c 定义函数
 c
   real function f( x )
   real x
-
   real a, b
 common /fparam/ a, b
-
 f = exp(-a*x) * cos(b*x)
-
 end
 ```
 
-配合典型的使用 COMMON 块的程序：
+配合典型的使用 `COMMON` 块的程序：
 
 ```fortran
 program integrate_function
-
 real xmin, xmax, result
 integer steps
 external f
-
 c 我们重复 COMMON 块的定义以访问函数参数
 c
   real a, b
@@ -1936,46 +1884,35 @@ c 在调用积分例程之前设置参数
 c
   a = 1.0
   b = 2.0
-
   xmin = 0.0
   xmax = 10.0
   steps = 10
   call integrate_trapezoid(f, xmin, xmax, steps, result)
-
   write(**) 'Result: ', result
-
 end
 ```
 
-COMMON 块的声誉相当糟糕：
+`COMMON` 块的声誉相当糟糕：
 
-- 你需要在使用每个路由中包含定义 COMMON 块的相同源代码。
-- 允许使用不同的变量名称甚至不同的变量类型来定义同一个 COMMON 块，因为它们只提供对一段内存的访问。
+- 你需要在使用每个路由中包含定义 `COMMON` 块的相同源代码。
+- 允许使用不同的变量名称甚至不同的变量类型来定义同一个 `COMMON` 块，因为它们只提供对一段内存的访问。
 
-模块变量可靠得多：你在一个位置（模块）中定义它们，并可以通过使用模块来访问它们。Fortran 90 中更优的实现如下：
+模块变量可靠得多：你在一个位置（模块）中定义它们，并可以通过使用模块来访问它们。`Fortran 90` 中更优的实现如下：
 
 ```fortran
 module functions
   implicit none
-
 !
   ! 公共访问的参数
 !
   real :: a, b
 contains
 real function f( x)
-
   real, intent(in) :: x
-
   f = exp(-a*x) * cos(b*x)
-
 end function f
 end module functions
 ```
-
-
-
-
 
 # 接口问题 57
 
@@ -1983,28 +1920,21 @@ end module functions
 
 ```fortran
 program integrate_function
-
 use integration_library
 use functions
-
 implicit none
-
 real      :: xmin, xmax, result
 integer :: steps
-
 !
 ! 在调用积分例程之前设置参数
 !
   a = 1.0
   b = 2.0
-
 xmin = 0.0
 xmax = 10.0
 steps = 10
 call integrate_trapezoid(f, xmin, xmax, steps, result)
-
 write(*,*) 'Result: ', result
-
 end program integrate_function
 ```
 
@@ -2012,12 +1942,11 @@ end program integrate_function
 
 然而，使用模块变量确实有一个重要的缺点。如今多线程计算变得越来越常见，如果不采取措施，很容易让一个线程弄乱另一个线程的值。
 
-具体细节取决于你实现多线程的方法，但如果你使用 OpenMP，该问题的一个可能的解决方案是这样的（第 12 章）：
+具体细节取决于你实现多线程的方法，但如果你使用 `OpenMP`，该问题的一个可能的解决方案是这样的（第 12 章）：
 
 ```fortran
 module functions
 implicit none
-
 !
 ! 公可访问的参数
 ! 为了简单起见，假设不超过 10 个线程
@@ -2059,6 +1988,7 @@ program integrate_function
   use integration_library
 use functions
   implicit none
+```
 
 ```fortran
 real :: xmin, xmax, result
@@ -2084,7 +2014,6 @@ thid = omp_get_thread_num()
 a = 1.0 * thid
 b = 2.0 * thid
 call setab( a, b )
-
 ```
 
 ```fortran
@@ -2098,11 +2027,12 @@ write(*,*) Result: a=', a, ' b=', b, &
 !$omp parallel
 
 end program integrate_function
+
 ```
 
 # 内部例程
 
-随着 Fortran 2008 标准出现，将内部例程作为实际参数传递已成为一项标准特性。这引入了一种新的解决方案，该方案也是线程安全的。使用此特性为积分示例函数提供方便的接口。作为调用程序或子程序中的常量 `a` 和 `b`，内部例程 `feval` 被传递给实际积分例程并可以使用它们。反之，`feval` 调用作为参数传递的函数 `f`，该函数实现了数学函数。这提供了一个通用例程，可以将 `f` 的接口适配到积分所需的所需的接口：
+随着 `Fortran 2008` 标准出现，将内部例程作为实际参数传递已成为一项标准特性。这引入了一种新的解决方案，该方案也是线程安全的。使用此特性为积分示例函数提供方便的接口。作为调用程序或子程序中的常量 `a` 和 `b`，内部例程 `feval` 被传递给实际积分例程并可以使用它们。反之，`feval` 调用作为参数传递的函数 `f`，该函数实现了数学函数。这提供了一个通用例程，可以将 `f` 的接口适配到积分所需的所需的接口：
 
 ```fortran
 subroutine integrate_function( f, xmin, xmax, a, b, result )
@@ -2110,22 +2040,16 @@ subroutine integrate_function( f, xmin, xmax, a, b, result )
 
 ```fortran
 use integration_library
-
 implicit none
-
 interface
   real function f(x, a, b)
     real, intent(in) :: x, a, b
   end function f
 end interface
-
 real, intent(in) :: a, b, xmin, xmax
 real, intent(out) :: result
-
 integer :: steps
-
 steps = 10
-
 call integrate_trapezoid( feval, xmin, xmax, steps, &
   result )
 ```
@@ -2137,7 +2061,6 @@ real function feval( x )
 
 ```fortran
 real, intent(in) :: x
-
 feval = f(x, a, b)
 ```
 
@@ -2158,6 +2081,8 @@ subroutine integrate_trapezoid( f, params, xmin, xmax, &
 steps )
 ...
 ```
+
+
 
 ```fortran
 interface
@@ -2198,10 +2123,6 @@ array = transfer(data)
 ```fortran
 result = sum(f(array))
 ```
-
-
-
-
 
 # 64 实践中的现代 Fortran
 
@@ -2467,10 +2388,6 @@ write(*,*) 'Computed: ', result
 end program
 ```
 
-
-
-
-
 # 接口问题
 
 ```
@@ -2483,11 +2400,17 @@ write(**) '计算结果: ', result
 ```
 
 包含
+
 ! 下面的代码可以放入一个 INCLUDE 文件中，适用于任何
+
 ! 使用两个参数 a 和 b 的函数 f
+
 ! 参数 a 和 b 来自于包含它的程序
+
 !
+
 subroutine integrate_trapezoid_ab(
+
   f, xmin, xmax, steps, result)
 
 ```
@@ -2497,6 +2420,7 @@ use integration_library
 ```
 
 end subroutine integrate_trapezoid
+
 end program test_integrate
 
 ```,
@@ -2507,48 +2431,73 @@ OpenMP 你也可以使用多处理技术来解决这个环境问题。这看起�
 你需要两个线程，一个用于积分，另一个在给定坐标 x 处评估函数。这在 OpenMP 中通过 `section` 指令实现。下面的主程序使用了这种方法：
 
 ```
+
 program test_integrate
+
   use integration
+
   use functions
 
   implicit none
 
   real :: x, a, xbegin, xend, result
+
   integer :: steps
+
   logical :: next
+
 ```
 
 # 现代 Fortran 实践
 
 ```
+
 type(integration_status) :: status
 
 a = 1.0
+
 xbegin = 0.0
+
 end = 10.0
+
 steps = 10
+
 ```
 
 ! 所有内容都可以共享！
 
 ```
+
 call start_integration( status )
+
 !
+
 ! 第一个部分是积分函数
+
 ! 另一个部分是评估函数
+
 !
+
 !$omp parallel sections
 
 !$omp section
+
 call integrate_trapezoid(&
+
     status, xbegin, xend, steps, result )
 
 !$omp section
+
 do
+
     call get_next( status, x, next )
+
     if (.not. next ) exit
+
     call set_value( status, f(x,a))
+
 enddo
+
 ```
 
 write(*,*) 'Result': result
@@ -2558,25 +2507,43 @@ end program test_integrate
 这种方法的困难之处在于两个线程之间的同步，但这些都隐藏在 `integrate` 和 `get_next` 例程的实现中：
 
 ```
+
 subroutine get_next( status, x, next )
+
 type(integration_status) :: status
+
 real
+
     :: x
+
 logical
+
     :: next
+
 !
+
 ! 同步内存
+
 !
+
 ```
 
 ```
+
 !$omp flush
+
 if ( status%done ) then
+
     next = .false.
+
 else
+
     do while ( .not. status%next )
+
         !$omp flush
+
 enddo
+
 ```
 
 ! 这是线程可能会相互
@@ -2589,8 +2556,11 @@ status%ready = .false.
 !$omp critical
 
 ```
+
 next = .true.
+
 endif
+
 ```
 subroutine get_next
 同样，`integrate_trapezoid` 例程也是如此。
@@ -2601,20 +2571,29 @@ subroutine get_next
 Fortran 90 引入了 `kind` 属性，这使得至少可以将精度集中在一个位置上：
 
 ```
+
 integer, parameter :: wp = kind(1.0)
+
 real(wp) :: x
+
 ```
 
 定义了一个参数 `wp`（工作精度），其值对应于单精度——即字面量常量 `1.0` 的 `kind`。你可以利用此功能和 `include` 语句来定义具有“通用”精度的例程：
 
 ```
+
 module single
+
 implicit none
+
 ```
 
 ```
+
 ! 单精度常量
+
 integer, parameter :: wp = kind(1.0)
+
 ```
 
 include "generic.f90"
@@ -2626,37 +2605,48 @@ module double
 implicit none
 ```
 
+
+
 ```
 ! 双精度常量
 integer, parameter :: wp = kind(1.00)
 ```
 
-include "generic.f90"
-end module double
+`include "generic.f90"`
+
+`end module double`
+```
+```
+`module unite`
+
+`use single`
+
+`use double`
+
+`end module unite`
 ```
 
-```
-module unite
-use single
-use double
-end module unite
-```
-
-包含文件 "generic.f90" 包含了与与kind` 无关的所有代码：
+包含文件 `"generic.f90"` 包含了与与`kind`无关的所有代码：
 
 ```
 interface print_kind
+
 module procedure print_kind
+
 end interface
+
 private :: print_kind
 ```
 
 ```
 contains
+
 subroutine print_kind( x )
+
 real(kind=wp), intent(in) :: x
 
 write(*,*) 'Kind:', kind(x)
+
 end subroutine print_kind
 ```
 
@@ -2664,10 +2654,13 @@ end subroutine print_kind
 
 ```
 program test_kinds
+
 use unite
 
 call print_kind( 1.0 )
+
 call print_kind( 1.0d0 )
+
 end program
 ```
 
@@ -2675,7 +2668,7 @@ end program
 
 # 5.6 概述
 
-为通用编程设施（如数值积分方法库）设计合适的接口是一项挑战。现代 Fortran 的特性允许我们处理你无法控制的实现。对于之前讨论的接口问题，各种解决方案的特征如表51所示。
+为通用编程设施（如数值积分方法库）设计合适的接口是一项挑战。现代 Fortran 的特性允许我们处理你无法控制的实现。对于之前讨论的接口问题，各种解决方案的特征如表5.1所示。
 
 | 解决方案 | 类型安全 | 线程安全 | 易用性 | 灵活性 | 标准 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -2697,9 +2690,9 @@ end program
 
 通常感兴趣的库的公共接口是用不同的编程语言编写的。你需要一个接口库来桥接两种语言之间的差距。对于 SQLite（一个轻量级数据库管理系统）就是如此，它是用 C 语言编写的，有很多库可以与 SQLite 通信。
 
-对于 Fortran，我开发了 sqllite 库。它的灵感来自 Al Danial [27] 的工作，但针对 FORTRAN77，这主要是一个如何与 SQLite 接口的示例。我想要一个通用的解决方案。
+对于 Fortran，我开发了 `sqllite` 库。它的灵感来自 Al Danial [27] 的工作，但针对 FORTRAN77，这主要是一个如何与 SQLite 接口的示例。我想要一个通用的解决方案。
 
-sqllite 的设计和实现说明了一个更通用的问题：如何结合 Fortran 和其他编程语言？你需要考虑：
+`sqllite` 的设计和实现说明了一个更通用的问题：如何结合 Fortran 和其他编程语言？你需要考虑：
 
 - 结合的低级方面：
   - 两种语言的基本类型如何相互对应？
@@ -2716,15 +2709,11 @@ Fortran 的基本类型是：整数、逻辑、单精度和双精度，带有实
 
 - C 中没有逻辑类型；然而，是否存在复数呢（尽管 C99 标准确实定义了它们）。
 
-
-
-
-
 # C 语言接口：以 SQLite 为例
 
 一种常见的方法是通过两个实数的数组或作为一个包含两个数字的结构来模拟复杂的变量。
 
-- 在 C 语言中，双精度（double）是默认的，而不是像 Fortran 那样的单精度。推测这由于某些历史原因，并不反映 C 语言程序中对高精度计算的典型需求。然而，对于 SQLite 来说，这意味着你不会在数据库中存储单精度结果，只存储双精度结果。
+- 在 C 语言中，双精度 `double` 是默认的，而不是像 Fortran 那样的单精度。推测这由于某些历史原因，并不反映 C 语言程序中对高精度计算的典型需求。然而，对于 SQLite 来说，这意味着你不会在数据库中存储单精度结果，只存储双精度结果。
 
 - Fortran 没有无符号整数。虽然可以模拟它们，但处理此类类型会有些别拙。只要你只需要传递数据，普通的整数就足够了。
 
@@ -2735,11 +2724,9 @@ Fortran 的基本类型是：整数、逻辑、单精度和双精度，带有实
 ```c
 int i;
 int **array2;
-
 /* 创建一个 array[20][10] * */
 array2 = (int **)malloc( 20 * sizeof(int *));
 array2 = (int *)malloc( 20 * 10 * sizeof(int) );
-
 for ( i = 1; i < 20; i++) {
     array2[i] = array2[0] + 10 * i;
 }
@@ -2755,17 +2742,15 @@ for ( i = 0; i < 20; i ++) {
 
 这将创建一组长度各不同的一维数组。Fortran 不允许这种模式，至少使用与普通二维数组相同的表示法。相反，在 Fortran 中，数组在概念上是连续的内存块，其元素通过一个、两个或多个索引进行寻址。如果你需要将二维数组传递给 C 语言，请使用代码创建 C 语言所需的指针数组。
 
-/ Fortran 的二维数组 f_array(dim1,dim2) 在 C 侧显示为一维数组
+/ Fortran 的二维数组 `f_array(dim1,dim2)` 在 C 侧显示为一维数组
  额外复杂性：C 中的维度相对于 Fortran 是反转的 /
 
 ```c
 void pass_2d_array( int *f_array, int *dim1, int *dim2 ) {
     int i;
     int **c_array;
-
     /* 创建一个 c_array[dim2][dim1] */
     c_array = (int **) malloc(*dim2) * sizeof(int *));
-
     for ( i = 0; i < *dim2; i++) {
         c_array[i] = f_array + (*dim1) * i;
     }
@@ -2774,7 +2759,7 @@ void pass_2d_array( int *f_array, int *dim1, int *dim2 ) {
 
 在之前的 C 代码中，你可以通过 `c_array[4][3]` 访问 Fortran 元素 `f_array(4,5)`。
 
-随着 Fortran 2003 的出现，你与 C 建立接口的方式发生了很大变化。使用 `iso_binding` 内置模块，你可以在 Fortran 侧指定更多的接口内容（见第 6.4 节）。例如，你可以为所有基本数据类型指定种类（kinds），以便匹配 C 语言的数据类型。Fortran 中的 `integer(c_long)` 类型对应于 C 语言中的 `long int`，而以前你必须考虑到 C 语言并不对 `long int` 的实际大小提供保证。C 标准保证了：
+随着 Fortran 2003 的出现，你与 C 建立接口的方式发生了很大变化。使用 `iso_binding` 内置模块，你可以在 Fortran 侧指定更多的接口内容（见第 6.4 节）。例如，你可以为所有基本数据类型指定种类 `kinds`，以便匹配 C 语言的数据类型。Fortran 中的 `integer(c_long)` 类型对应于 C 语言中的 `long int`，而以前你必须考虑到 C 语言并不对 `long int` 的实际大小提供保证。C 标准保证了：
 
 ```c
 short int <= long int
@@ -2787,10 +2772,6 @@ short int <= long int
 ## 6.2 在 C 和 Fortran 过程之间传递参数
 
 基本上来说，Fortran（直到 Fortran 2003）通过引用传递所有参数，而 C 语言通过值传递所有参数（即使对于数组和指针，地址也是作为值传递的，通过对该地址进行解引用，你可以操作内存）。
-
-
-
-
 
 ## C 接口：以 SQLITE 为例 81
 
@@ -2868,7 +2849,6 @@ interface
  function sqlite3_do_c( handle, command, &
  errmsg, len_errmsg ) &
  bind(c, name = 'SQLite3Doc')
-
  end function sqlite3_do_c
  interface
 ```
@@ -2925,22 +2905,17 @@ end type fortran_row
 ! 获取行。如果没有可用行则返回假。
 logical function fortran_fetch_row(res, intent(in))
 type(fortran_row), intent(out) :: row
-
 integer(c_int), pointer :: lenptr
 type(c_ptr) :: lengths
-
 ! 获取行本身。
 row%c_row = c_fetch_row(res)
 if (.not. associated(row%c_row)) return
-
 ! 获取字段数量。
 row%num_fields = c_num_fields(res)
-
 ! 获取字段长度。
 allocate(row%lengths)
 lengths = c_fetch_lengths(res)
 call c_f_pointer(lengths, lenptr, shape(lengths))
-
 row%lengths = lenptr
 end function fortran_fetch_row
 ```
@@ -2955,16 +2930,25 @@ fortran_get_field(row, ind)
 type(fortran_row), intent(in) :: row
 integer, intent(in) :: ind
 character(len=row%lengths(ind)) :: fortran_get_field
+```
 
+
+
+```fortran
 type(c_ptr), pointer :: cstrs(:)
+
 character(kind=c_char), pointer :: cstr(:)
+
 integer :: i
 
 call c_f_pointer(row%c_row, cstrs, shape(lengths))
+
 call c_f_pointer(cstr(ind), cstr, (row%lengths(ind)))
 
 do i = 1, row%lengths(ind)
+
 fortran_get_field(i:i) = cstr(i)
+
 end do
 ```
 
@@ -2974,20 +2958,29 @@ end do
 
 ```fortran
 ! 从行中获取字段。
+
 fortran_get_field(row, ind)
+
 type(fortran_row), intent(in) :: row
+
 integer, intent(in) :: ind
+
 character(len=row%lengths(ind)) :: fortran_get_field
 
 type(c_ptr), pointer :: cstrs(:)
+
 character(kind=c_char), pointer :: cstr(:)
+
 integer :: i
 
 call c_f_pointer(row%c_row, cstrs, shape(lengths))
+
 call c_f_pointer(cstr(ind), cstr, (row%lengths(ind)))
 
 do i = 1, row%lengths(ind)
+
 fortran_get_field(i:i) = cstr(i)
+
 end do
 ```
 
@@ -2999,7 +2992,7 @@ SQLite 是一个由 Richard Hipp 开发的开源数据库管理系统 [44]。它
 - 运行一个或多个 SQL 语句来创建新表并填充数据，或者从现有表集中选择数据。
 - 关闭文件。
 
-fsqlite 库的目标是让你无需了解任何 SQL 知识就能与 SQLite 工作，尽管对于复杂的查询，你仍然构造合适的 SQL 语句。具体来说，fsqlite 提供了高级例例来：
+`fsqlite` 库的目标是让你无需了解任何 SQL 知识就能与 SQLite 工作，尽管对于复杂的查询，你仍然构造合适的 SQL 语句。具体来说，`fsqlite` 提供了高级例例来：
 
 - 连接数据库
 - 创建表并查询表结构
@@ -3007,13 +3000,9 @@ fsqlite 库的目标是让你无需了解任何 SQL 知识就能与 SQLite 工�
 - 输入新数据或删除现有数据
 - 开始和停止事务
 
+### 86 现代 Fortran 实践
 
-
-
-
-# 86 现代 Fortran 实践
-
-如前所述，sqlite 库将这些指针存储在一个较小的整数数组中——该数组长度足够容纳 32 位和 64 位机器上的指针。在 Fortran 侧，这些数组被存储在派生类型中：
+如前所述，`sqlite` 库将这些指针存储在一个较小的整数数组中——该数组长度足够容纳 32 位和 64 位机器上的指针。在 Fortran 侧，这些数组被存储在派生类型中：
 
 ```fortran
 type sqlite_database
@@ -3023,7 +3012,7 @@ character(len=80)      :: errmsg
 end type sqlite_database
 ```
 
-sqlite 库中的许多例程只是运行单个 SQL 语句，但返回的信息仅是执行是否正常是否存在某些错误条件。为了将此信息传递给 Fortran 端，`sqlite_database` 还存储了错误代码和错误消息（如果有）。Fortran 例程 `sqlite3_do` 负责处理此工作：
+`sqlite` 库中的许多例程只是运行单个 SQL 语句，但返回的信息仅是执行是否正常是否存在某些错误条件。为了将此信息传递给 Fortran 端，`sqlite_database` 还存储了错误代码和错误消息（如果有）。Fortran 例程 `sqlite3_do` 负责处理此工作：
 
 ```fortran
 subroutine sqlite3_do(db, command)
@@ -3061,7 +3050,7 @@ db%error = sqlite3_do_c(db%db_handle, commandc, db%errmsg)
 end subroutine sqlite3_do
 ```
 
-其 C 语言对应项（sqlite3_do_c，略有简化）：
+其 C 语言对应项（`sqlite3_do_c`，略有简化）：
 
 ```c
 int FTNCALL sqlite3_do_c(
@@ -3073,7 +3062,7 @@ int FTNCALL sqlite3_do_c(
   int rc ;
 ```
 
-# 与 C 接口：以 SQLITE 为例
+## 与 C 接口：以 SQLITE 为例
 
 ```c
 char *msg ;
@@ -3131,7 +3120,7 @@ call sqlite3_do(db, command )
 
 end subroutine sqlite3_create_table
 
-# 现代实践
+## 现代实践
 
 关于表格应包含哪些列的描述存储在 `sqlite_column` 类型的数组中。该派生类型在整个过程中用于处理 SQLite 实现的 SQL 语言如何处理数据类型。提供了几个辅助例程来填充此数据类型的字段并提取信息，如下片段所示：
 
@@ -3193,7 +3182,7 @@ call sqlite3_do(db, command )
 
 end subroutine sqlite3_create_table
 
-# 现代实践
+## 现代实践
 
 关于表格应包含哪些列的描述存储在 `sqlite_column` 类型的数组中。该派生类型在整个过程中用于处理 SQLite 实现的 SQL 语言如何处理数据类型。提供了几个辅助例程来填充此数据类型的字段并提取信息，如下片段所示：
 
@@ -3214,11 +3203,7 @@ call sqlite3_column_props(col(4), 'temperature', sqlite_real)
 call sqlite3_create_table(db, 'measurements', )
 ```
 
-为了从数据库获取数据或存储新数据，你还使用 `sqlite_binding` 技术在值之间来回通信，而不是通过参数，因为类型和数据数量会随查询或表而变化，那样会很麻烦。因此，它存储了将持有数据的变量地址。这些变量可能不是例程中的局部变量，因为它们一旦你从例程运行时就会存在。相反，`sqlite_database` 类型中的字段是这样的。此例程适用于所有不返回或除错误代码之外传递信息的 SQL 语句。例如，在构建要执行的 SQL 语句时，创建一个新表就足够了：
-
-（此处重复了上部分的翻译逻辑）
-
-# 90 现代 Fortran 实践
+## 90 现代 Fortran 实践
 
 ```fortran
 character(len=80) :: errmsg
@@ -3297,13 +3282,10 @@ call sqlite3_commit( db )
 ```fortran
 programtable
 use sqlite
-
 implicit none
-
 type(sqlite_database)                 :: db
 type(sqlite_statement)                :: stmt
 type(sqlite_column), dimension(:) :: col
-
 integer                               :: i
 integer                               :: j
 integer                               :: ierr
@@ -3313,54 +3295,54 @@ real                                   :: station
 character(len=40)                     :: date
 character(len=40)                     :: finished
 logical                               :: result
-
 character(len=40), pointer :: result
 ```
 
-
-
-
-```
+```fortran
 deallocate( col )
-allocate( col(3) )
 ```
 
-```
-call sqlite3_column_query( col(1), 'station', sqlite_char )
-call sqlite3_column_query(col(2), name(3), sqlite_real, &
-function='avg'
-call sqlite3_column_query(col(3), name(4), sqlite_real, &
-function='avg'
-```
 
-```
-call sqlite3_prepare_select( db, 'measurements', col, &
-stmt, 'group by station order by station' ) )
-```
 
-```
-write( *, ('3a20') &
-'Station', 'Mean salinity', 'Mean temperature'
-do\call sqlite3_next_row( stmt, col, finished )
-```
+`allocate( col(3) )`
 
-```
-if ( finished ) exit
-call sqlite3_get_column(col(1), station )
-call sqlite3_get_column(col(2), salin )
-call sqlite3_get_column(col(3), temp )
-```
 
-```
-write( *, ('a20,2f20.3') ) station, salin, temp
-enddo
-```
+`call sqlite3_column_query( col(1), 'station', sqlite_char )`
 
-```
-call sqlite3_close( db )
-```
+`call sqlite3_column_query(col(2), name(3), sqlite_real, &`
+`function='avg'`
 
-该程序让 sqlite3 库负责构建 SQL 语句。只有用于 `sqlite3_prepare_select` 例程的额外子暴露了 SQL 语句的一部分。查询结果随后按行检索。
+`call sqlite3_column_query(col(3), name(4), sqlite_real, &`
+`function='avg'`
+
+
+`call sqlite3_prepare_select( db, 'measurements', col, &`
+`stmt, 'group by station order by station' )`
+
+
+`write( *, ('3a20') &`
+`'Station', 'Mean salinity', 'Mean temperature'`
+
+`do`
+`call sqlite3_next_row( stmt, col, finished )`
+
+
+`if ( finished ) exit`
+
+`call sqlite3_get_column(col(1), station )`
+
+`call sqlite3_get_column(col(2), salin )`
+
+`call sqlite3_get_column(col(3), temp )`
+
+
+`write( *, ('a20,2f20.3') ) station, salin, temp`
+`enddo`
+
+
+`call sqlite3_close( db )`
+
+该程序让 `sqlite3` 库负责构建 SQL 语句。只有用于 `sqlite3_prepare_select` 例程的额外子暴露了 SQL 语句的一部分。查询结果随后按行检索。
 
 程序结束
 
@@ -3368,7 +3350,7 @@ call sqlite3_close( db )
 
 # 7. 图形、GUI 与互联网
 
-通过图形化呈现与用户进行交互是计算中一个极关重要的方面。这也是一个高度依赖于可用硬件和操作系统的领域。尽管各种操作系统已经付出了大量努力来隐藏硬件特性，但在 Windows 上编写图形用户界面 (GUI) 与在 Linux 或 Mac OS X 上编写完全不同。
+通过图形化呈现与用户进行交互是计算中一个极关重要的方面。这也是一个高度依赖于可用硬件和操作系统的领域。尽管各种操作系统已经付出了大量努力来隐藏硬件特性，但在 Windows 上编写图形用户界面 `GUI` 与在 Linux 或 Mac OS X 上编写完全不同。
 
 几乎没有一种编程语言定义了你如何显示结果或如何构建一个可移植的图形用户界面。通用方法是使用一个库（在可能或必要的情况下）隐藏操作系统的具体细节，从而获得可移植的结果。然而，某些库的设计初衷恰是为了利用某一个特定的操作系统，以便程序能够无缝集成到该环境中，但代价是失去了可移植性。同时，你不应该低估设计和构建实用且易用的 GUI 所需的努力和技能 [3]。
 
@@ -3384,13 +3366,13 @@ PLplot 是一个用于绘制技术和科学数据的库（或库集），其源�
 
 通过一个小示例展示了编程风格。该程序读取函数 $f(x)=exp(-x)cos ax$ 的参数，并绘制函数图。为了实现这一点，它使用了以下 PLplot 例程：
 
-- pparopts 分析命令行参数和一个或多个参数。
+- `pparopts` 分析命令行参数和一个或多个参数。
 - 初始化库，如果未设置输出设备则请求输出设备（通过命令行参数或 `pdev` 例程），并打开图形窗口。
-- plenv 和 plilab 用于绘制带标签的简单轴。
-- plline 在数据点之间绘制一条连续线。
-- plend 完成库的最后工作（例如，在交互模式下，它等待用户点击窗口，而在批处理模式下，它完成输出文件）。
+- `plenv` 和 `plilab` 用于绘制带标签的简单轴。
+- `plline` 在数据点之间绘制一条连续线。
+- `plend` 完成库的最后工作（例如，在交互模式下，它等待用户点击窗口，而在批处理模式下，它完成输出文件）。
 
-函数：f(x) = exp(-x) * cos(ax)
+函数：`f(x) = exp(-x) * cos(ax)`
 
 ![](img/57520a202a0735ccfa4afc3beb12794b_108_0.png)
 
@@ -3398,13 +3380,19 @@ PLplot 是一个用于绘制技术和科学数据的库（或库集），其源�
 
 ```
 program plotgraph
+
   use plplot
+
   implicit none
 
   real(kind=plflt)             :: param
+
   real(kind=plflt), dimension(201) :: x, y
+
   real(kind=plflt)             :: xmin, ymin, xmax, ymax
+
   integer                       :: justify, axis
+
   integer                       :: i
 
   ! 请求参数 "a"
@@ -3436,6 +3424,7 @@ program plotgraph
   call plend()
 
 contains
+
 function func(x)
   func = exp(-x) * cos(param*x)
 end function
@@ -3445,85 +3434,68 @@ end program plotgraph
 
 ¹ 使用 real kind 根据编译情况使程序成为单精度或双精度。（注：由于原文在此处严重碎片化，已根据上下文和 PLplot 标准用法进行了手动重构）。
 
-
-```tcl
+```
 puts $program $parameter
 flush $program
-
 #
 # 清理图表
 #
 $plot plot data {}
 .c delete data
 }
-
 proc readData{channel} {
 global plot
-
 if [!eof $channel] {
-
     gets $channel line
-
     scan $line "%f %f" x y
     $plot plot data $x $y
-
 } else {
     close $channel
 }
 }
 ```
 
-```tcl
+```
 #
 # 设置图表并启动程序
 #
 set parameter 1.0
-
 set plot [::Plotchart::createXYPlot .c {0.0 10.0 2.0} \
 {-1.0 1.0 0.25}]
-
 set program open ["runprogram"] "
 fileevent $program readable [list readData $program]
 ```
 
-```python
+```
 #
 # 事件循环自动启动 ...
 # 我们现在只需要等待即可
 ```
 
-根据平台不同，调用名为 "runprogram" 或 "runprogram.exe" 的 Fortran 程序。它通过所谓的“管道”（pipe）运行，Tcl 程序可以向 Fortran 程序发送数据，反之亦然。细节隐藏在 Tcl 命令以及程序名称前的管道符号 (`|`) 中。由于这种通信是事件驱动的，我们使用 `fileevent` 来为这种通信设置事件处理程序。Plotchart 包是一个仅限 Tcl 的包，用于绘制 xy 形图和其他常见类型的图表 [52]。
+根据平台不同，调用名为 `"runprogram"` 或 `"runprogram.exe"` 的 Fortran 程序。它通过所谓的“管道”`pipe` 运行，Tcl 程序可以向 Fortran 程序发送数据，反之亦然。细节隐藏在 Tcl 命令以及程序名称前的管道符号 (`|`) 中。由于这种通信是事件驱动的，我们使用 `fileevent` 来为这种通信设置事件处理程序。`Plotchart` 包是一个仅限 Tcl 的包，用于绘制 xy 形图和其他常见类型的图表 [52]。
 
 # 98 现代 Fortran 实战应用
 
-"runprogram" 的源代码非常直接：
+`"runprogram"` 的源代码非常直接：
 
 ```fortran
 program runprogram
     use iso_fortran_env
-
     implicit none
-
     real :: param, x, y
     integer :: i
-
     do
         read(*,*) param
-
         do i = 0,200
             x = i * 0.05
             y = func( param, x )
-
             write(*,*) x, y
         enddo
-
         flush( output_unit )
     enddo
 contains
-
 real function func( param, x)
     real :: param, x
-
     func = exp(-x) * cos(param*x)
 end function
 end program runprogram
@@ -3546,96 +3518,34 @@ entry .toprow.e -variable parameter
 
 在其他 GUI 系统中，你可能需要在运行计算之前显式地读取窗口内容。
 
-另一种事件是键盘焦点在输入部件（entry widget）中设置或丢失。你可以利用此来检查用户输入的值是否可以接受。例如，它是一个有效的数字吗？
+另一种事件是键盘焦点在输入部件 `entry widget` 中设置或丢失。你可以利用此来检查用户输入的值是否可以接受。例如，它是一个有效的数字吗？
 
 因此，程序的结构看起来像这样：
 
 - 一个隐式的事件循环，程序在此接收描述事件的事件。在许多系统中，事件循环是固定的。
 - 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。在上一节的 T/Tk 示例中，这是通过将命令 `putValue` 与标记为“运行”的推按钮关联来实现的。用户输入的值保留在全局变量 `parameter` 中，因为输入部件和该变量是连接的：
-- 全局数据结构被事件填充。
 - GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-
-因此，程序的结构看起来如下：
-
-- 一个隐式的事件循环，程序在此接收描述事件的事件。在许多系统中，事件循环是固定的。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
--  程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，，程序收集。。
-
-。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-
-- 全局数据结构被事件填充。
-- 100 MODERN FORTRAN 99.
-- 99 GRAPHICS, GUIS, AND THE INTERNET 99。
 
 "runprogram" 的源代码非常直接：
 
 ```fortran
 program runprogram
     use iso_fortran_env
-
     implicit none
-
     real :: param, x, y
     integer :: i
-
     do
         read(*,*) param
-
         do i = 0,200
             x = i * 0.05
             y = func( param, x )
-
             write(*,*) x, y
         enddo
-
         flush( output_unit )
     enddo
 contains
-
 real function func( param, x)
     real :: param, x
-
     func = exp(-x) * cos(param*x)
 end function
 end program runprogram
@@ -3655,6 +3565,8 @@ end program runprogram
 ```tk
 entry .toprow.e -variable parameter
 ```
+
+
 
 在其他 GUI 系统中，你可能需要在运行计算之前显式地读取窗口内容。
 
@@ -3664,15 +3576,7 @@ entry .toprow.e -variable parameter
 
 - 一个隐式的事件循环，程序在此接收描述事件的事件。在许多系统中，事件循环是固定的。
 - 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。在上一节的 T/Tk 示例中，这是通过将命令 `putValue` 与标记为“运行”的推按钮关联来实现的。用户输入的值保留在全局变量 `parameter` 中，因为输入部件和该变量是连接的：
-- 全局数据结构被事件填充。
-- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。
-
-（注：由于原文中存在大量重复段落，此处已按要求对核心逻辑进行了翻译）
-
-
-
-
+- GUI 程序的各个部分需要响应各种事件，例如用户按下“运行”按钮，以便程序收集窗口中输入的所有信息并运行计算。在上一节的 T/Tk 示例中，这是通过将命令 `putValue` 与标记为“运行”的推按钮关联来实现的。用户输入的值保留在全局变量 `parameter` 中，因为输入部件和该变量是连接的。
 
 # 102 现代 Fortran 实践
 
@@ -3682,14 +3586,14 @@ USE FuncDlg
 ```
 
 ```fortran
-TYPE(X_WINDOW) ::  xWnd
-INTEGER, INTENT(IN) ::  iWidth, iHeight
-INTEGER, INTENT(IN) ::  nFlag
+TYPE(X_WINDOW) :: xWnd
+INTEGER, INTENT(IN) :: iWidth, iHeight
+INTEGER, INTENT(IN) :: nFlag
 ```
 
 ```fortran
-LOGICAL::             bSt
-INTEGER::             IX, iY, jWidth, jHeight
+LOGICAL:: bSt
+INTEGER:: IX, iY, jWidth, jHeight
 ```
 
 ```fortran
@@ -3701,15 +3605,13 @@ bSt = XSetWindowPos(xFuncDlg, 0, 0, iWidth, jHeight)
 bSt = XSetWindowPos(xView, 0, jHeight, &
 iHeight=jHeight)
 CALL XUpdateWindow(OnSize = .FALSE.
-
 X_FRAME_OnSize
-
 END FUNCTION X_FRAME_OnSize
 ```
 
 生成的用户界面如图 7.3 所示。因此，编程模型为：
 
-- 为 X_FRAME_OnSize 创建单独的子程序，用于处理窗口中的特定事件。
+- 为 `X_FRAME_OnSize` 创建单独的子程序，用于处理窗口中的特定事件。
 - 注册这些例程，以便它们在事件发生时被自动调用。
 
 第二种方法是使用程序作为库，由我自己开发的 Ftcl 库 [55] 所示。该库允许你将 Fortran 例程作为新的 Tcl 命令使用。实现方法的方法是创建一个具有预定义接口的例程，并将其注册为新命令：
@@ -3735,18 +3637,14 @@ subroutine compute_func( cmdname, noargs)
 
 ## 图形、GUI 与互联网
 
-![](img/57520a202a0735ccfa4afc3beb12794b_118_0.png)
-
 图 7.3. 使用 Xeffor 库的图形用户界面示例
 
 ```fortran
 character(len=*) :: cmdname
 integer :: noargs
-
 real :: param
 real :: x
 real :: result
-
 if ( noargs .ne. 2 ) then
     call ftcl_set_error(&
         "Usage: " // trim(fieldname) // " param x")
@@ -3754,9 +3652,7 @@ if ( noargs .ne. 2 ) then
 else
     call ftcl_get_arg(1, param)
     call ftcl_get_arg(2, x)
-
     result = exp(-x) * cos(param * x)
-
     call ftcl_put_result( result )
 endif
 end subroutine compute_func
@@ -3770,15 +3666,12 @@ end module functions
 
 ## 104 现代 Fortran 实践
 
-!
-
 ! 参数:
 
 ```fortran
 ! 如果一切正常则错误为 0，否则在初始化期间发生了错误
-```
-
 !
+```
 
 ```fortran
 subroutine package_init( error )
@@ -3790,7 +3683,6 @@ subroutine package_init( error )
 
 ```fortran
 call ftcl_make_command( compute_func, "func")
-
 call ftcl_provide_package("functions", "1.0", error )
 ```
 
@@ -3803,8 +3695,7 @@ Fortran 子程序 `compute_func` 可以通过命令函数从 Tcl 调用。例程
 然后，使用 Tcl 编写 GUI：
 
 ...
-
-package require functions
+`package require functions`
 
 ```tcl
 ::ttk::button .toprow.b -text Plot -command {drawGraph} \n  -width 10
@@ -3814,10 +3705,8 @@ package require functions
 
 ```tcl
 proc drawGraph {
-
   global parameter
   global plot
-
 #
 # 清理图表
 #
@@ -3857,10 +3746,6 @@ $plot data {}
 </body>
 </html>
 ```
-
-
-
-
 
 # 108 现代 Fortran 战应用
 
@@ -3913,7 +3798,6 @@ call cgi_end
 ```fortran
 real func( param, x )
   real :: param, x
-
   func = exp(-x) * cos(param*x)
 ```
 
@@ -3921,7 +3805,6 @@ real func( param, x )
 end
  func
 end program cgi_example
-
 ```
 
 请求中的参数（在此示例中为了一个）由 `cgi_begin` 例程进行分析，并存储在一个所谓的“字典”中。该字典包含了参数的名称及其值。使用 `cgi_get` 例程随后可以按名称获取值，几乎所有的细节都隐藏在模块中。
@@ -3976,19 +3859,10 @@ type book_reference
   character(len=200) :: title
   integer :: year
 end book_reference
-
 type(book_reference), dimension(:), allocatable :: bibliography
 ```
 
 一旦你将 XML 文件读取到此结构中，你就可以直接使用信息：
-
-```fortran
-call load_bibliography( bibliography )
-call sort_author_and_year( bibliography )
-call print_bibliography( bibliography )
-```
-
-一旦将 XML 文件读取到此结构中，你可以直接使用信息：
 
 ```fortran
 call load_bibliography( bibliography )
@@ -4048,110 +3922,10 @@ type book_reference
   character(len=200) :: title
   integer :: year
 end book_reference
-
-type(book_reference), dimension(:), allocatable :: bibliography
 ```
 
-一旦你将 XML 文件读取到此结构中，你就可以直接使用信息：
 
-```fortran
-call load_bibliography( bibliography )
-call sort_author_and_year( bibliography )
-call print_bibliography( bibliography )
-```
 
-有许多例程能够你读取 XML 文件 [18]。使用 `cgi_get` 例程可以按名称获取值，几乎所有的细节都隐藏在模块中。
-
-对于先前的参考文献，XML 文件的描述可能如下：
-
-```xml
-<?xml version="1.0"?>
-<template>
-  <book reference="Gulliver's Travels">
-    <author>Jonathan Swift</author>
-    <year>...</year>
-    <title>Gulliver's travels</title>
-  </book>
-</template>
-  <variable name="book" type="book_t">
-    <component name="reference" type="word"/>
-    <component name="author" type="line"/>
-    <component name="year" type="word"/>
-    <component name="title" type="line"/>
-  </variable>
-```
-
->  其他方法将内容存储在通用树中或按标签处理整个文件。在这种情况下，使用 `xmlparse` 例程获取标签及其所属数据。该库不通过 "XPath" 树 [23]。
-
-# 112 现代 Fortran 战应用
-
-```fortran
-!
-! 存储要打印信息的变量
-! character(len=20) :: author
-logical              :: store = .false.
-```
-
-contains
-
-subroutine startfunc( tag, attrib, error )
-  character(len=*) :: tag
-  character(len=*), dimension(:,:) :: attribs
-  logical              :: error
-  ! 此例中没有函数
-end subroutine startfunc
-
-subroutine endfunc( tag, error )
-  character(len=*) :: tag
-  logical              :: error
-  ! 此例中没有函数
-end subroutine endfunc
-
-subroutine datafunc( tag, data, error )
-  character(len=*) :: tag
-  character(len=*), dimension(:) :: data
-  logical              :: error
-  if ( tag == "author" .and. index(data(1), "Swift") > 0 ) then
-    author = data(1)
-    store = .true.
-  endif
-  if ( tag == "title" .and. store ) then
-    write(*,'(a20,a,a)') author, ' -', trim(data(1))
-    store = .false.
-  endif
-end subroutine datafunc
-end module bibliography_scan
-
-```fortran
-program select_bib
-  use xmlparse
-  use bibliography_scan
-  implicit none
-  integer :: lunrep
-  logical :: error
-  lunrep = 10
-  open(lunrep, file = "select_bib.log" )
-  call xml_process("example_bib.xml", attribs, &startfunc, datafunc, endfunc, lunrep, error )
-end program select_bib
-```
-
-(注：由于提供的原文中存在大量重复和断裂片段，上述译文已根据逻辑对内容进行了整合与翻译，确保符合高级文档工程师的规范。)
-
-[/content] 
-
-**抱歉，根据您的要求，我重新审视了输入。原文中存在大量的代码重复和不连续的片段。以下是针对给定文本逻辑的精确翻译：**
-
-**针对代码块的翻译逻辑：**
-
-```fortran
-  if ( tag == "author" .and. index(data(1), "Swift") > 0 )
-    data(1) = "Swift"
-    store = .true.
-```
-
-*(注：由于原始输入包含大量重复的块和乱码的片段，在最终输出中我遵循了“不要重复输出原文”的原则，对逻辑结构进行了清理，但保留了所有 Markdown 格式标记。)*
-
-[content]
 # 108 现代 Fortran 战应用
 
 ```fortran
@@ -4203,7 +3977,6 @@ call cgi_end
 ```fortran
 real func( param, x )
   real :: param, x
-
   func = exp(-x) * cos(param*x)
 ```
 
@@ -4211,20 +3984,19 @@ real func( param, x )
 end
  func
 end program cgi_example
-
 ```
 
-请求中的参数（在此示例中为了一个）由 `cgi_begin` 例程进行分析，并存储在一个所谓的“字典”中。该字典包含了参数的名称及其值。使用 `cgi_get` 例程随后可以按名称获取值，几乎所有的细节都隐藏在模块中。
+请求中的参数在此示例中为了一个由 `cgi_begin` 例程进行分析，并存储在一个所谓的“字典”中。该字典包含了参数的名称及其值。使用 `cgi_get` 例程随后可以按名称获取值，几乎所有的细节都隐藏在模块中。
 
 # 图形、图形界面与互联网 109
 
-当程序的实际输出被写入输出文件（“word”）时，最后一个例程可以完成输出，使其成为有效的 CGI 响应。在更复杂的 Web 应用中，你可能会得到这样的程序，或者只有几个可以编写许多不同 HTML 页面的程序。但相同的原理仍然适用：各个运行实例必须相互独立，只有通过外部管理，你才能保持某种形式的状态信息。实现此点的常用技术是 cookie，但 HTML 页面中的隐藏变量可能也有帮助。这些主题超出了本书的范围 [15]。
+当程序的实际输出被写入输出文件“word”时，最后一个例程可以完成输出，使其成为有效的 CGI 响应。在更复杂的 Web 应用中，你可能会得到这样的程序，或者只有几个可以编写许多不同 HTML 页面的程序。但相同的原理仍然适用：各个运行实例必须相互独立，只有通过外部管理，你才能保持某种形式的状态信息。实现此点的常用技术是 cookie，但 HTML 页面中的隐藏变量可能也有帮助。这些主题超出了本书的范围 [15]。
 
 # 7.4 处理 XML 文件
 
 随着互联网的发展一种特定的 XML 文件格式变得非常流行：XML 文件。XML 文件的吸引力在于其规则结构使得能够开发通用库来解析内容并验证它们是否符合预期的结构。这使得它们非常适用于配置。
 
-此外，其结构是层次化的，便于以最符合目的的方式对信息分组。这种层次结构被广泛用于 docbook [81]，这是一套用于构建书籍文本和布局的约定俗集合，包括软件手册（在本章开头讨论的 PLplot 库就是使用 docbook 文档化的）。
+此外，其结构是层次化的，便于以最符合目的的方式对信息分组。这种层次结构被广泛用于 docbook [81]，这是一套用于构建书籍文本和布局的约定俗集合，包括软件手册在本章开头讨论的 PLplot 库就是使用 docbook 文档化的。
 
 XML 文件的简单示例如下：
 
@@ -4249,13 +4021,13 @@ XML 文件的简单示例如下：
 </bibliography>
 ```
 
-总元素 “bibliography” 封装了零或多个书籍和其他引用的列表，或者包含在 “book” 标签之间的所有内容。`<book reference=...>` 标签是引用的开始，而 `</book>` 标签是它的结束。关于书籍的所有信息都包含这两个标签之间。标签（如示例中的 "book”）也可以包含一个或多个属性：
+总元素 `bibliography` 封装了零或多个书籍和其他引用的列表，或者包含在 `book` 标签之间的所有内容。`<book reference=...>` 标签是引用的开始，而 `</book>` 标签是它的结束。关于书籍的所有信息都包含这两个标签之间。标签如示例中的 `book` 也可以包含一个或多个属性：
 
 ```xml
 <book reference="Gulliver's Travels">
 ```
 
-这些始终被解释为以字符字符串为值的键值对。解析 XML 文件是一回事，但处理内容是另一回事。有几种通用策略，每种都有其优势。你可以简单地读取文件并在过程中处理内容。例如，你可能想使用 CSS 标记将参考文献重新格式化为更合适的格式（如 HTML）。这被称为流处理方法。
+这些始终被解释为以字符字符串为值的键值对。解析 XML 文件是一回事，但处理内容是另一回事。有几种通用策略，每种都有其优势。你可以简单地读取文件并在过程中处理内容。例如，你可能想使用 CSS 标记将参考文献重新格式化为更合适的格式如 HTML。这被称为流处理方法。
 
 另一种策略，“文档对象模型”或 DOM，是将内容存储在树结构中，以便你可以搜索正确的元素：将 XML 文件加载到内存中并按字母顺序打印所有引用。通常，创建一个直接对应于 XML 文件结构的数据结构是方便的：
 
@@ -4299,7 +4071,7 @@ call print_bibliography( bibliography )
   </variable>
 ```
 
->  其他方法将内容存储在通用树中或按标签处理整个文件。在这种情况下，使用 `xmlparse` 例程获取标签及其所属数据。该库不通过 "XPath" 树 [23]。
+> 其他方法将内容存储在通用树中或按标签处理整个文件。在这种情况下，使用 `xmlparse` 例程获取标签及其所属数据。该库不通过 "XPath" 树 [23]。
 
 # 112 现代 Fortran 战应用
 
@@ -4307,28 +4079,27 @@ call print_bibliography( bibliography )
 !
 ! 存储要打印信息的变量
 ! character(len=20) :: author
-logical              :: store = .false.
+logical :: store = .false.
 ```
 
 contains
-
 subroutine startfunc( tag, attrib, error )
   character(len=*) :: tag
   character(len=*), dimension(:,:) :: attribs
-  logical              :: error
+  logical :: error
   ! 此例中没有函数
 end subroutine startfunc
 
 subroutine endfunc( tag, error )
   character(len=*) :: tag
-  logical              :: error
+  logical :: error
   ! 此例中没有函数
 end subroutine endfunc
 
 subroutine datafunc( tag, data, error )
   character(len=*) :: tag
   character(len=*), dimension(:) :: data
-  logical              :: error
+  logical :: error
   if ( tag == "author" .and. index(data(1), "Swift") > 0 ) then
     author = data(1)
     store = .true.
@@ -4339,6 +4110,7 @@ subroutine datafunc( tag, data, error )
   endif
 end subroutine datafunc
 end module bibliography_scan
+```
 
 ```fortran
 program select_bib
@@ -4353,26 +4125,22 @@ program select_bib
 end program select_bib
 ```
 
-
-
-
-
 # 8. 单元测试
 
-本章的主题是一个用于自动化测试中某一特定方面的简单框架：单元测试。单元测试关注于程序中的“小”部分，通常是单个子程序或函数。其核心思想是这些测试能为例程的正确运行提供信心。由于这些测试代码应该被视为程序的一部分，你可以在整个系统的开发和维护期间反复运行它们。某些开发方法将其推向极端。例如，测试驱动开发（TDD）规定在开始实现实际代码之前先编写测试。¹
+本章的主题是一个用于自动化测试中某一特定方面的简单框架：单元测试。单元测试关注于程序中的“小”部分，通常是单个子程序或函数。其核心思想是这些测试能为例程的正确运行提供信心。由于这些测试代码应该被视为程序的一部分，你可以在整个系统的开发和维护期间反复运行它们。某些开发方法将其推向极端。例如，测试驱动开发 TDD 规定在开始实现实际代码之前先编写测试。
 
 这只是开发程序的一种方式，但思考如何测试特定例程有助于定义其功能。最重要的一点是，此类单元测试成为了程序的一部分。因此，该层面的测试不是事后补救，而不是通过临时的、临时程序来实现的。
 
 ## 8.1 测试框架
 
-Junit 是 Java 编程环境中知名的单元测试框架 [37]。对于各种编程语言的一系列类似框架来说具有开创意义。Junit 依赖于几种语言特性的显式支持，而 Fortran 并不具备这些特性，例如特殊注解以及通过程序从库中获取例程（方法）名称列表的能力。尽管如此，在 Fortran 中实现单元测试框架也是完全可行的。有几个：
+Junit 是 Java 编程环境中知名的单元测试框架 [37]。对于各种编程语言的一系列类似框架来说具有开创意义。Junit 依赖于几种语言特性的显式支持，而 Fortran 并不具备这些特性，例如特殊注解以及通过程序从库中获取例程方法名称列表的能力。尽管如此，在 Fortran 中实现单元测试框架也是完全可行的。有几个：
 
 - Funit，由 Kleb 等人 [50] 开发，用 Fortran 和 Ruby 实现
 - pfunit，由 Womack 和 Clune [84] 开发，用 Fortran 实现的框架
 - FRUIT；由 Chen [21] 开发，用 Fortran 和 Ruby 实现
 - Funit，由 [56] 开发，用 Fortran 实现
 
-由于我最熟悉自己开发的框架，本章仅讨论 Funit。该框架提供了一组运行例程，以及一组用于检查实际结果与预期结果（断言）的例程。
+由于我最熟悉自己开发的框架，本章仅讨论 Funit。该框架提供了一组运行例程，以及一组用于检查实际结果与预期结果断言的例程。
 
 - 若干子程序，用于执行代码部分并使用断言例程检查结果。
 - 这些例程在一个独立的子程序被调用，该子程序的作用仅是调用各种例程。
@@ -4392,45 +4160,67 @@ module tridiag
     integer :: n
     real :: factor
     n = size(a)
+```
+
+
+
+```fortran
     do i = 2,n
+
       factor = a(i) / b(i-1)
+
       b(i) = b(i) - factor * c(i-1)
+
       d(i) = d(i) - factor * c(i-1)
+
     enddo
+
     x(n) = d(n) / b(n)
+
     do i = n-1,1,-1
+
       x(i) = (d(i) - c(i) * x(i+1)) / b(i)
+
     enddo
+
   end subroutine solve
+
 end module tridiag
 ```
 
-这是对三对角矩阵进行高斯消元的简单实现。矩阵由三个独立的数组（a, b 和 c）表示，右侧由数组 d 表示。该线性方程组为：
+这是对三对角矩阵进行高斯消元的简单实现。矩阵由三个独立的数组（`a`, `b` 和 `c`）表示，右侧由数组 `d` 表示。该线性方程组为：
 
-$a_{i-1} + b_i x_i + c_i x_{i+1} = d_i$
+`a_{i-1} + b_i x_i + c_i x_{i+1} = d_i`
 
 该例程的测试用例：
 
-- 使用具有常数系数（如 3.0）的对角矩阵，右侧为常数 1.0。结果是一个所有元素都接近 $1/3$ 的向量。这是一个平凡的系统，但算法并没有考虑到这一点。
-- 使用（对角占优的）矩阵，对角线元素为 $a = 1, b = 2, c = 1$。选择右侧使得精确解为向量 $1, 1/2, 1/3, \dots, 1/n$。通过改变矩阵的大小，你可以检查实现的准确性。
+- 使用具有常数系数（如 `3.0`）的对角矩阵，右侧为常数 `1.0`。结果是一个所有元素都接近 `$1/3$` 的向量。这是一个平凡的系统，但算法并没有考虑到这一点。
+- 使用（对角占优的）矩阵，对角线元素为 `a = 1, b = 2, c = 1`。选择右侧使得精确解为向量 `1, 1/2, 1/3, …, 1/n`。通过改变矩阵的大小，你可以检查实现的准确性。
 
 第一种情况实现如下：
 
 ```fortran
 subroutine test_trivial
+
   integer, parameter :: rows = 10
+
   real, dimension(rows) :: a, b, c, d, x, y
 
   a = 0.0
+
   b = 3.0 ! 因为数值舍入问题使用 3
+
   c = 0.0
+
   d = 1.0
 
   y = 1.0/3.0 ! 预期解
 
   call solve(a, b, c, d, x )
+
   call assert_comparable(x, y, margin, &
     "Solution is uniformly 1/3")
+
 end subroutine test_trivial
 ```
 
@@ -4438,34 +4228,38 @@ end subroutine test_trivial
 
 ```fortran
 subroutine test_diagonal_dom2
+
   integer, parameter :: rows = 10
+
   real, dimension(rows) :: a, b, c, d, x
+
   integer :: i
 
   a = -1.0
+
   b = 2.0
+
   c = -1.0
+
   y = (/ (1.0/i,i=1,rows) /) ! 预期解
 
   d(2:rows-1) = a(2:rows-1) * y(1:rows-1)
 
   call solve(a, b, c, d, x )
+
   call assert_comparable(x, y, margin, &
     "Solution is uniformly correct")
+
 end subroutine test_diagonal_dom2
 ```
 
 （注：第二种情况的 OCR 在源代码中严重损坏；我根据所描述的测试框架背景重建了逻辑流。）
 
-## 8.3 设计与实现
+# 8.3 设计与实现
 
-Funit 框架的设计目标之一是让测试代码尽可能接近实际程序代码。通过对我开发的另一个框架的经验表明，将测试代码与实际程序分离会使测试代码难以维护。
+`Funit` 框架的设计目标之一是让测试代码尽可能接近实际程序代码。通过对我开发的另一个框架的经验表明，将测试代码与实际程序分离会使测试代码难以维护。
 
 另一个目标是尽可能使用 Fortran，因此，你可以将测试代码保留在程序内部。测试代码只有在某种情况下才会运行
-
-
-
-
 
 # 测试 119
 
@@ -4485,7 +4279,7 @@ Funit 框架的设计目标之一是让测试代码尽可能接近实际程序�
 
 为了解决特定测试可能需要大型数据集的问题——例如在测试偏微分方程求解器时需要的复杂初始条件——框架还提供了一些存储和检索例程。在这里，你可以创建并存储数据，将它们带有描述性文本保存到文件中，并在任意数量的测试检索它们。
 
-## 8.4 结语
+# 8.4 结语
 
 虽然这在通用框架中无法强制执行，但确保每个测试例程都独立于任何其他例程是非常重要的。这有时会导致代码重复，但相互依赖意味着一个测试的失败会掩盖另一个测试的正确执行，但是
 
@@ -4499,7 +4293,7 @@ call system("ftunit.html")
 
 单元测试可以与测试覆盖率相结合，记录代码的哪些部分被运行了。存在工具可以对源代码进行预处理，以便自动记录覆盖率，或者通过合适的选项留给编译器处理（见附录 A）。测试覆盖率可以设置单个测试，特别是当被测代码涉及多个决策时。对于数值程序，可能需要考虑要解决的问题规模。
 
-## 9. 代码审查
+# 9. 代码审查
 
 有大量关于审查代码和设计文档的文献，以此检查软件是否按预期运行，以及实现是否具有维护性和可理解性。某些开发方法论（如极端编程 [16]）规定由同伴进行持续审查 [40]。在所有形式中，代码审查都是为了发现代码中的缺陷，但其目的并不是批评程序员。
 
@@ -4517,7 +4311,7 @@ call system("ftunit.html")
 - 不要偏离。
 - 使用清洁代码。
 
-### 9.1 要显式
+## 9.1 要显式
 
 ## 实践中的现代 Fortran
 
@@ -4529,25 +4323,24 @@ call system("ftunit.html")
 
 先决条件。子例程可能期望其参数符合特定条件。例如，如果它读取一个必须已经存在的文件，请在例程内部检查这些条件。如下代码片段：
 
-
-
-
-
 # 124 现代 Fortran 实践
 
-……“了解”子程序和函数的接口。如果你对所有例程都使用模块（modules），那么这一要求就会自动满足。请以全面的方式组织模块。例如，处理同一种派生类型（derived type）内容的例程放在一个模块中。
+……“了解”子程序和函数的接口。如果你对所有例程都使用模块（`modules`），那么这一要求就会自动满足。请以全面的方式组织模块。例如，处理同一种派生类型（`derived type`）内容的例程放在一个模块中。
 
 变量和例程的可用性：如果你在模块中使用变量和例程，默认情况下它们对于任何使用该模块的程序单元都是可见的。这可能是你想要的，也可能不是：程序可能会无意中使用为模块内部工作预留的变量，并导致难以发现的错误。因此，请使用 `private` 语句来隐藏任何数据和例程，并仅将应该是公共的项设为公共。派生类型的内容也是如此。
 
-Select 块中的默认情况和 If 块中的 Else 情况：在很多情况下，你会认为某个特定条件可能不会发生，例如在 `select` 块中只需要处理某些情况。但插入代码来显式地表示这一点并无益处：
+`Select` 块中的默认情况和 `If` 块中的 `Else` 情况：在很多情况下，你会认为某个特定条件可能不会发生，例如在 `select` 块中只需要处理某些情况。但插入代码来显式地表示这一点并无益处：
 
 ```fortran
 select case (case_var)
+
   ... 合法的情况 ...
 
   case default
+
     write(**) '编程错误：不应出现情况： ', \
       case_var
+
 end select
 ```
 
@@ -4575,7 +4368,7 @@ stop
 
 这种替代方案清楚地指示了问题所在以及如何处理。总结来说：
 
-- 使用 `implicit none`，用参数（parameters）代替字面量常量，并使用参数来指定数值类型（kind）。
+- 使用 `implicit none`，用参数（`parameters`）代替字面量常量，并使用参数来指定数值类型（`kind`）。
 - 显式检查输入参数：它们是否满足了例程的前提条件？将这些检查放在例程内部。
 - 注意复合逻辑条件：不要依赖短路求值。
 - 对于应该保留其值的局部变量，使用 `save`。
@@ -4597,7 +4390,8 @@ stop
 - 遵循惯例。
 
 ```
-count = 0```
+count = 0
+```
 - 这种初始化方式是可移植的。
 
 - 字符串
@@ -4635,7 +4429,7 @@ valid = x > 0
 
 - 像 `if ( string(1:5) == 'start' ) then` 这样的代码有几个问题：
 - "start" 是为了前缀吗？如果是，那么这段代码可以，但固定长度的索引令人担忧。计数很容易，特别是对于长前缀。使用类似这样的方法更不容易出错：
-if ( index(string, 'start') == 1 ) then
+`if ( index(string, 'start') == 1 ) then`
 - 字符串是否仅仅包含 `start` 这个词？那么，` ( string == 'start' ) then` 更合适。原始构造表明了另一种误解。在 Fortran 中，字符串在进行此类比较之前会填充空格。没有必要截取子串。
 
 - 注意未初始化的变量。Fortran 变量不会获得默认值。某些编译器可以检测特定类的未初始化变量，另一些则可以生成代码，将每个变量和数组初始化为一个特殊值，以便你（注意这可能会让程序变慢）。然而，选项并不能替代正确的初始化，使初始化在源代码中显式可见。
@@ -4652,16 +4446,12 @@ integer :: count
 count = 0
 ```
 
-- 关于模块和 COMMON 块中的数据有一个相当微妙的问题：
+- 关于模块和 `COMMON` 块中的数据有一个相当微妙的问题：
 没有活跃的子程序或函数引用该模块（通过 `use`）或该
-
-
-
-
 
 # 128 现代 Fortran 实战
 
-COMMON 块，其中包含的数据会被丢弃——至少 Fortran 标准是这么说的。在实践中，很少有（如果有的话）程序真的这样做，但这是需要记住的一点。
+`COMMON` 块，其中包含的数据会被丢弃——至少 Fortran 标准是这么说的。在实践中，很少有（如果有的话）程序真的这样做，但这是需要记住的一点。
 
 + 警惕微优化：
 
@@ -4716,7 +4506,7 @@ enddo
 对于可能发生的错误，在 Fortran 中打开和读取文件很容易。
 
 - 方法 1：你没有显式地处理错误，因此程序将通过极端措施自处理（它会停止并打印错误信息，可能包含发生位置细节）。
-- 方法 2：你使用关键字 `err=`、`end=` 或 `iostat=`。如果你选择第二种方法，你有机会从错误中恢复。但你也有机会忽略它：
+- 方法 2：你使用关键字 `err=`, `end=` 或 `iostat=`。如果你选择第二种方法，你有机会从错误中恢复。但你也有机会忽略它：
 
 ```fortran
 open(10, file = 'nonexistentfile.inp', status = 'old', iostat = ier)
@@ -4759,21 +4549,29 @@ x = min( x, xmax )
 x = max(min( x, xmax ), -xmax )
 ```
 
+
+
 或类似的表达式。
 
 ## 自动数组
 
-Fortran 中一种可能导致问题的结构是自动数组。只要数组很小，它们就能放入为这些结构留出的内存中（通常是栈）。然而，如果数组太大，就会发生栈溢出，你的程序会直接在半路停止。这是一个取决于编译器的问题，但如果你处理可能巨大的数组，请考虑使用分配数组。这里有一个示例：
+Fortran 中一种可能导致问题的结构是自动数组。只要数组很小，它们就能放入为这些结构留出的内存中（通常是栈）。然而，如果数组太大，就会发生栈溢出，你的程序会直接在半路停止。这是一个取决于编译器的問題，但如果你处理可能巨大的数组，请考虑使用分配数组。这里有一个示例：
 
 ```fortran
+
 n = 1
+
 do i = 1,8
+
     n = n * 10
+
     call auto_array( n )
+
 end do
 
 ... contains
 
+```
 ```fortran
 subroutine auto_array( n )
   integer :: n
@@ -4816,13 +4614,14 @@ real(kind=1), parameter :: pi = 3.1415926535897238462
 然后，还需要考虑代码本身的复杂度：
 
 - 如果一个例程有很多任务，有必要在一个例程中完成所有任务吗？你能否拆分它或增加额外的例程？这将使结构清晰。
+
 - 具有许多任务的例程通常需要大量的参数列表和代码。理解它们并验证传递了正确的参数是乏味且容易出错的工作。
+
 - 有时只是语句组在重复。使用函数或子程序可能是一个更好的解决方案，因为它突显了该组语句的作用，并允许将代码集中在一个地方，以便一致地修复任何错误或实施改进。
+
 - 公共子表达式有很多缺点：
+
 - 除非编译器识别它们，否则每次都需要计算。重要的是，如果你犯了错误或者表达式由于其他原因发生了变化，你必须在多处进行修改。很容易漏掉一处。
-
-
-
 
 以下是几段可以简化的代码片段（这些片段都源自实际代码）：
 
@@ -4932,6 +4731,7 @@ end function
 最终，实现应该是健壮的：
 
 - 识别不可接受的输入（如果可能）。
+
 - 如果程序能找到适当的答案，将这样做；否则将指示为什么无法找到。
 
 特别是，这意味着没有崩溃也没有错误的答案。
@@ -4943,6 +4743,7 @@ end function
 浮点运算对数值算法的可靠实现提出的问题通常通过两种不同的方式处理：
 
 - 使用任意精度算术
+
 - 使用区间算术
 
 第一方法（以 Karamheti 等人 [47] 为例）尝试通过提高精度来克服局限性。第二种方法，区间算术，使用区间来跟踪计算中可能的误差。目标是提供一个保证包含真实值的结果，尽管区间可能很大。
@@ -4952,10 +4753,8 @@ Metcalf 等人 [65] 在阐述 Fortran 2003 标准新增的浮点特征时涉及�
 浮点运算对数值算法的可靠实现提出的问题通常通过两种不同的方式处理：
 
 - 使用任意精度算术
+
 - 使用区间算术
-
-
-
 
 # 几种简单算法的健壮实现 139
 
@@ -4979,9 +4778,7 @@ integer, parameter :: extrapolation_none = 0
 integer, parameter :: extrapolation_constant = 1
 integer, parameter :: extrapolation_linear = 2
 ```
-
 contains
-
 ```fortran
 function interpolation_object( x, y, extrapolation )
     type(interpolation_data)      :: interpolation_object
@@ -5003,9 +4800,7 @@ endif
 ! 设置外推方法
 !
 ```
-
 # 现代 FORTRAN 实践
-
 ```fortran
 interpolation_object%extrapolation = extrapolation_none
 if ( extrapolation == extrapolation_constant .or. &
@@ -5013,7 +4808,6 @@ if ( extrapolation == extrapolation_constant .or. &
     interpolation_object%extrapolation = extrapolation
 endif
 ```
-
 ```fortran
 !
 ! 数据足够吗？如果没有，直接返回
@@ -5022,7 +4816,6 @@ if ( size(x) < 2 .or. size(y) < size(x) ) then
     return
 endif
 ```
-
 ```fortran
 !
 ! 数据已排序！
@@ -5036,13 +4829,11 @@ do i = 2,size(x)
     endif
 enddo
 ```
-
 ```fortran
 if ( .not. success ) then
     return
 endif
 ```
-
 ```fortran
 !
 ! 拷贝数据
@@ -5051,13 +4842,11 @@ n = size(x)
 allocate( interpolation_object%x(n), &
     interpolation_object%y(n), stat = ierr )
 ```
-
 ```fortran
 if ( ierr /= 0 ) then
     return
 endif
 ```
-
 ```fortran
 !
 ! 我们允许数组 y 比 x 大，
@@ -5066,16 +4855,13 @@ endif
 interpolation_object%x(1:n) = x(1:n)
 interpolation_object%y(1:n) = y(1:n)
 ```
-
 ```fortran
 interpolation_object%useable = .true.
 ```
-
 # 几种简单算法的健壮实现 141
-
 end function interpolation_object
-subroutine interpolate( object, xp, estimate, success )
 
+subroutine interpolate( object, xp, estimate, success )
 ```fortran
 type(interpolation_data)      :: object
 real, intent(in)         :: xp
@@ -5120,10 +4906,8 @@ endif
 !
 idx = nd - 1
 ```
-
 ```fortran
 # 142 现代 FORTRAN 实践
-
 ```fortran
 do i = 2,nd - 1
   if ( xp < object%x(i)) then
@@ -5132,18 +4916,15 @@ do i = 2,nd - 1
   endif
 enddo
 ```
-
 ```fortran
 dx = object%x(i) - object%x(idx)
 ```
-
 ```fortran
 if ( dx /= 0.0 ) then
   factor = (xp - object%x(idx)) / dx
   estimate = object%y(idx) + factor * (object%y(idx+1) - object%y(idx))
 else
 ```
-
 ```fortran
 !
 ! 在发生跳转的情况下，我们简单取平均值
@@ -5151,11 +4932,9 @@ else
 estimate = 0.5 * (object%y(idx+1) + object%y(idx))
 endif
 ```
-
 ```fortran
 success = .true.
 ```
-
 end subroutine interpolate
 
 end module interpolation
@@ -5167,30 +4946,27 @@ program test_interpolation
   use interpolation
   implicit none
 ```
-
 ```fortran
 real, dimension(6) ::
   x = (/ 0.0, 1.0, 10.0, 10.0, 20.0, 20.0/)
 real, dimension(6) ::
   y = (/ 0.0, 2.0, 20.0, 20.0, 10.0, 20.0/)
 ```
-
 ```fortran
 type(interpolation_data) :: interp
-
   integer             :: i
   real                :: xp, result
   logical             :: success
 ```
-
 ```fortran
 interp = interpolation_object( x, y, &
   extrapolation_constant )
 ```
-
 ```fortran
 do i = 1,25
 ```
+
+
 
 # 几种简单算法的健壮实现
 
@@ -5220,26 +4996,27 @@ do i = 1,25
 
 使用这种实现有点复杂，但它给了用户更多的灵活性：两种实现的结果见表 10.1。
 
-10.3 统计
-
-
+## 10.3 统计
 
 另一个众知的编程问题是确定一组数据的均值和标准差。在以下背景下：你有一个文件，每行一个值，并且可能用问号表示缺失数据（由于问号无法读入数字，我们将每次读取错误视为一个缺失值）。
 
 ```fortran
 ! 统计参数 - 直观版本
+
 !
+
 program basic_stat
 
 implicit none
+
 real :: value, sumsq, stdev, vmean
+
 integer :: i, j, nodata, missing, ierr
 ```
 
 ```fortran
 open( 10, file = 'basic_stat.data', status = 'old', &
   iostat = ierr )
-
 if ( ierr /= 0 ) then
     write(**) '打开文件失败：
     - basic_stat.data'
@@ -5250,10 +5027,13 @@ endif
 
 ```fortran
 !
+
 ! 每行一个值，?意味着缺失值 ...
 ! (作为一个 ? 无法读入数字，我们将
 ! 每一行读取错误视为缺失值）
+
 !
+
 sum = 0.0
 sumsq = 0.0
 nodata = 0
@@ -5263,7 +5043,6 @@ nomissing = 0
 ```fortran
 do
     read( 10, *, iostat = ierr ) value
-
     if ( ierr < 0 ) then
         !
         ! 文件结束
@@ -5276,28 +5055,24 @@ do
         nomissing = missing + 1
         cycle
     endif
-
     sum = sum + value
     sumsq = sumsq + value ** 2
     nodata = nodata + 1
 enddo
-
 close( 10 )
-
 ```
 
 ```fortran
 !
+
 !
 write(*,' 结果:
 write(*,' ' 有效数据数量: ', nodata
 write(*,' ' 缺失数据数量:', missing
 write(*,' ' ')
-
 if ( nodata > 0 ) then
     vmean = sum / nodata
     write(*,' ' 均值: ', vmean
-
     if ( nodata > 1 ) then
         stdev = sqrt(sumsq - sum**2/nodata ) / (nodata-1 )
         write(*,' ' 标准差: ', stdev)
@@ -5310,10 +5085,7 @@ endif
 end program basic_stat
 ```
 
-
-
-
-# 146 实践中的现代 Fortran
+## 146 实践中的现代 Fortran
 
 这引发了关于文件格式细节的一些问题：
 
@@ -5343,7 +5115,7 @@ end program basic_stat
 
 > ³ 我在 Windows XP 下使用默认选项的 gfortran 编译器计算出这个结果。
 
-# 147 几个简单算法的稳健实现
+## 147 几个简单算法的稳健实现
 
 存在该公式的替代方案，它们不会表现出数值不稳定，但它们更复杂。解决该问题的简单变通是修改求和的值：
 
@@ -5352,7 +5124,7 @@ sum = sum + (value - offset)
 sumsq = sumsq + (value - offset) ** 2
 ```
 
-其中 offset 是数据序列中的一个非缺失值。由于两个和中的值只捕捉了数字的变化，因此舍入误差更小。
+其中 `offset` 是数据序列中的一个非缺失值。由于两个和中的值只捕捉了数字的变化，因此舍入误差更小。
 
 其次，当输入值非常大（> 10³）或非常小（< 10⁻³）时，可能会发生溢出——此类极端数字的无法无法标准的单精度浮点数表示。有几种方法可以避免这个特定问题：
 
@@ -5405,7 +5177,6 @@ odata = 0
 nomissing = 0
 nolines = 0
 noerrors = 0
-
 do
   read( 10,'a', iostat = ierr ) line
   !
@@ -5432,51 +5203,42 @@ do
     nonempty = 1
     cycle
   endif
-
     if ( line == '?' then
     nomissing = 1
     cycle
   endif
-
     if ( ierr /= 0 ) then
     noerrors = 1
     cycle
     endif
-
     read( *, iostat = ierr ) value
     if ( ierr /= 0 ) then
       noerrors = 1
       cycle
     endif
-
     if (abs(value) > huge(1) .or. abs(value) < tiny(1)) then
       write(*,*) 'Value out of range, skipping'
       nomissing = 1
       cycle
     endif
-
     if ( first_value ) then
       first_value = .false.
       offset = value
     endif
-
     sum = sum + (value - offset)
     sumsq = sumsq + (value - offset) ** 2
     nodata = nodata + 1
   endif
 enddo
-
 close( 10 )
 !
 ! 报告我们的发现
-
 write(**) 'Outcome:'
 write(*,*) '有效数据数:', nodata
 write(*,*) '缺失数据数:', nomissing
 write(*,*) '错误数:', noerrors
 write(*,*) '行数:', lines
 write(*,*) '空行数:', nonempty
-
 if ( nodata > 0 ) then
   vmean = sum / nodata
   write(*,*) '平均值:', vmean
@@ -5489,17 +5251,13 @@ if ( nodata > 0 ) then
 else
   write(*,*) '平均值：数据太少'
 endif
-
 subroutine cleanup_line( line )
 character(len=*), intent(inout) :: line
-
 logical :: found
 integer :: i, k
 integer, dimension(3) :: chars = (/9,10,13/)
-
 found = .true.
 do while ( found )
-
  found = .false.
 ! 去除任何制表符、回车符和换行符
 ! do i = 1,size(chars)
@@ -5512,8 +5270,7 @@ do while ( found )
 endif
 end subroutine cleanup_line
 end program robust_stat
-
-
+```
 
 这里再次给出一个直接的实现：
 
@@ -5560,7 +5317,7 @@ end subroutine find_root
 end module
 ```
 
-# 若干简单算法的鲁棒实现 153
+## 若干简单算法的鲁棒实现 153
 
 **表 10.2.** 若干个函数的直接牛顿-拉夫逊实现结果。相对容差：$10^{-5}$。
 
@@ -5593,57 +5350,60 @@ end module
 - 将 $f(x)$ 重写为 $g(y)$，$y = \ln x$。
 - 确定 $g$ 的根并转换结果。
 
-# 154 现代 Fortran 实践
+## 154 现代 Fortran 实践
 
 一个有用的收敛判则试图克服上述批评：
 
 - 最佳估计值 $x_{k+1}$ 位于区间 $(x_k - \delta, x_k + \delta)$ 内，其中 $S$ 是尺度因子，表示函数相关的 $x$ 的典型值，$\delta$ 是相对容差。
+
+
+
 - 该区间端点的函数值符号相反。如果在预设的迭代次数内没有收敛，则假设它永远不会发生。
 
-第一点保证了在任何情况下你都有一个有意义的微小区间，而第二点保证了它们包围了精确根。$S$ 和 $\delta$ 的选择留给用户。
+第一点保证了在任何情况下你都有一个有意义的微小区间，而第二点保证了它们包围了精确根。`$S$` 和 `$\delta$` 的选择留给用户。
 
 下一步是如何在数值上确定导数？你将使用有限差分来近似导数：
 
-$f'(x) \approx \frac{f(x+\eta) - f(x)}{\eta} \quad (10.5)$
+`f'(x) \approx \frac{f(x+\eta) - f(x)}{\eta} \quad (10.5)`
 
-这容易产生数值误差（减去两个几乎相等的数量），但如果我们无法或不想使用自动微分，就没有其他办法。在该公式中选择步长 $\eta$ 的判则是：使两个函数值足够不同以避免舍入误差，又要足够小以避免高阶导数的影响。遗憾的是，这并不非易事。看以下示例：
+这容易产生数值误差（减去两个几乎相等的数量），但如果我们无法或不想使用自动微分，就没有其他办法。在该公式中选择步长 `$\eta$` 的判则是：使两个函数值足够不同以避免舍入误差，又要足够小以避免高阶导数的影响。遗憾的是，这并不非易事。看以下示例：
 
-$f(x) = \begin{cases} \frac{1-\cos x}{x} & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \quad (10.6)$
+`f(x) = \begin{cases} \frac{1-\cos x}{x} & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \quad (10.6)`
 
-$x=0$ 处的精确导数为 1。通过程序确定该值需要选择一个 $\eta$，使得 $\cos(\eta)$ 不同于 1（见表 10.3）。理论上发生这种情况的 $\eta$ 最小值为：
+`x=0` 处的精确导数为 1。通过程序确定该值需要选择一个 `$\eta$`，使得 `$\cos(\eta)$` 不同于 1（见表 10.3）。理论上发生这种情况的 `$\eta$` 最小值为：
 
-$\cos(\eta) = 0.9999940395 \quad (10.7)$
+`$\cos(\eta) = 0.9999940395 \quad (10.7)$`
 
 给出：
 
-$\eta \approx 3.453 \times 10^{-4} \quad (10.8)$
+`$\eta \approx 3.453 \times 10^{-4} \quad (10.8)$`
 
 因此，尝试确定比这更小的根是没有意义的。你可以使用最近的函数来确定。
 
-若干算法的鲁棒实现
+### 若干算法的鲁棒实现
 
-**表 10.3.** 函数 $f(x) = \frac{1-\cos x}{x}$ 在不同实现下的计算值。
+**表 10.3.** 函数 `f(x) = \frac{1-\cos x}{x}` 在不同实现下的计算值。
 
-| $x$ | 直接实现 | 通过 $f(x)$ 和 $g(x)$ | 数学等值 |
+| `x` | 直接实现 | 通过 `f(x)` 和 `g(x)` | 数学等值 |
 |---|---|---|---|
-| $1.0000 \times 10^{-10}$ | 0.0 | 0.0 | $5.0000 \times 10^{-10}$ |
-| $1.0000 \times 10^{-8}$ | $4.9982 \times 10^{-9}$ | 0.0 | $5.0000 \times 10^{-9}$ |
-| $1.0000 \times 10^{-6}$ | $5.0000 \times 10^{-7}$ | 0.0 | $5.0000 \times 10^{-7}$ |
-| $1.0000 \times 10^{-5}$ | $5.0000 \times 10^{-6}$ | 0.0 | $5.0000 \times 10^{-5}$ |
-| $1.0000 \times 10^{-4}$ | $5.0000 \times 10^{-5}$ | 0.0 | $5.0000 \times 10^{-5}$ |
-| $3.0000 \times 10^{-4}$ | $1.5000 \times 10^{-4}$ | $1.9868 \times 10^{-4}$ | $1.5000 \times 10^{-4}$ |
-| $1.0000 \times 10^{-3}$ | $5.0000 \times 10^{-4}$ | $4.7684 \times 10^{-4}$ | $5.0000 \times 10^{-4}$ |
-| $1.0000 \times 10^{-2}$ | $5.0000 \times 10^{-3}$ | $5.0008 \times 10^{-2}$ | $5.0000 \times 10^{-3}$ |
-| $1.0000 \times 10^{-1}$ | $4.9958 \times 10^{-2}$ | $4.9958 \times 10^{-2}$ | $4.9958 \times 10^{-2}$ |
-| $1.0$ | $4.5970 \times 10^{-1}$ | $4.5970 \times 10^{-1}$ | $4.5970 \times 10^{-1}$ |
+| `1.0000 \times 10^{-10}` | 0.0 | 0.0 | `5.0000 \times 10^{-10}` |
+| `1.0000 \times 10^{-8}` | `4.9982 \times 10^{-9}` | 0.0 | `5.0000 \times 10^{-9}` |
+| `1.0000 \times 10^{-6}` | `5.0000 \times 10^{-7}` | 0.0 | `5.0000 \times 10^{-7}` |
+| `1.0000 \times 10^{-5}` | `5.0000 \times 10^{-6}` | 0.0 | `5.0000 \times 10^{-5}` |
+| `1.0000 \times 10^{-4}` | `5.0000 \times 10^{-5}` | 0.0 | `5.0000 \times 10^{-5}` |
+| `3.0000 \times 10^{-4}` | `1.5000 \times 10^{-4}` | `1.9868 \times 10^{-4}` | `1.5000 \times 10^{-4}` |
+| `1.0000 \times 10^{-3}` | `5.0000 \times 10^{-4}` | `4.7684 \times 10^{-4}` | `5.0000 \times 10^{-4}` |
+| `1.0000 \times 10^{-2}` | `5.0000 \times 10^{-3}` | `5.0008 \times 10^{-2}` | `5.0000 \times 10^{-3}` |
+| `1.0000 \times 10^{-1}` | `4.9958 \times 10^{-2}` | `4.9958 \times 10^{-2}` | `4.9958 \times 10^{-2}` |
+| `1.0` | `4.5970 \times 10^{-1}` | `4.5970 \times 10^{-1}` | `4.5970 \times 10^{-1}` |
 
 然而，你可以用数学等价的方式写该函数：
 
-$f(x) = \begin{cases} \frac{2\sin^2 \frac{x}{2}}{x} & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \quad (10.9)$
+`f(x) = \begin{cases} \frac{2\sin^2 \frac{x}{2}}{x} & \text{if } x \neq 0 \\ 0 & \text{if } x = 0 \end{cases} \quad (10.9)`
 
-使用这种形式的实现，$\eta$ 的最小值要小得多（见表 10.3）。
+使用这种形式的实现，`$\eta$` 的最小值要小得多（见表 10.3）。
 
-这些估计之所以复杂是因为许多现代计算机使用扩展精度来存储中间结果，如表 10.3 所示。计算中明显的精度提高被额外精度是一个不稳定的特性所抵消了。如果你使用以下实现来评估函数 $f$，或者使用：
+这些估计之所以复杂是因为许多现代计算机使用扩展精度来存储中间结果，如表 10.3 所示。计算中明显的精度提高被额外精度是一个不稳定的特性所抵消了。如果你使用以下实现来评估函数 `f`，或者使用：
 
 ```fortran
 function f(x)
@@ -5656,15 +5416,15 @@ function f(x)
 end function
 ```
 
-# 156 现代 Fortran 实践
+## 156 现代 Fortran 实践
 
-考虑到这些因素，你应该要求用户提供该尺度，因为可以用它可以定义数值微分的容差和步长。如果实现要是鲁棒的，你还需要另一个改进：并不是所有函数在整个浮点数范围内都有定义。对于由以下定义的 $f$：
+考虑到这些因素，你应该要求用户提供该尺度，因为可以用它可以定义数值微分的容差和步长。如果实现要是鲁棒的，你还需要另一个改进：并不是所有函数在整个浮点数范围内都有定义。对于由以下定义的 `f`：
 
 ```fortran
 f(x) = \ln x - 1 \quad (10.11)
 ```
 
-迭代可能会产生负的 $x$ 值。对于这样的函数：
+迭代可能会产生负的 `x` 值。对于这样的函数：
 
 ```fortran
 f(x) = e^x - 1 \quad (10.12)
@@ -5672,42 +5432,36 @@ f(x) = e^x - 1 \quad (10.12)
 
 问题是函数值可能会变得无法用浮点表示。因此，你还需要处理部分函数。一种方法是让用户返回一个标志指示是否发生了域错误。在确定下一个接受的估计值后：
 
-- 计算常规估计值：$x_{k+1} = x_k - \frac{f(x)}{f'(x)} \quad (10.13)$
-- 如果 $x_{k+1}$ 在定义域内，接受它。
-- 如果不在，尝试：
-
-$x_{k+1} = x_k - \frac{f(x)}{2 f'(x)} \quad (10.14)$
-
+- 计算常规估计值：`x_{k+1} = x_k - \frac{f(x)}{f'(x)} \quad (10.13)`
+- 如果 `x_{k+1}` 在定义域内，接受它。
+- 如果不在，尝试：`x_{k+1} = x_k - \frac{f(x)}{2 f'(x)} \quad (10.14)`
 - 重复减半直到找到一个接受的值。
 
-当然，初始估计必须在 $f$ 的定义域内。最后一个需要的问题是非第一阶的根。只要邻域内的值既有正又有负，情况与之前相同，只是收敛不再是二次方的。最问题的情况是函数不改变符号的根。函数 $f(x) = \sqrt{|x|}$ 会导致震荡：
+当然，初始估计必须在 `f` 的定义域内。最后一个需要的问题是非第一阶的根。只要邻域内的值既有正又有负，情况与之前相同，只是收敛不再是二次方的。最问题的情况是函数不改变符号的根。函数 `f(x) = \sqrt{|x|}` 会导致震荡：
 
-$x_{k+1} = x_k - f(x_k)/f'(x_k) = -x_k \quad (10.15)$
+`x_{k+1} = x_k - f(x_k)/f'(x_k) = -x_k \quad (10.15)`
 
-
-
-
-
-# 几种简单算法的稳健实现
+## 几种简单算法的稳健实现
 
 ![](img/57520a202a0735ccfa4afc3beb12794b_172_0.png)
 
-**图 10.2.** 四次函数 $f(x) = (x^2 - 3)^2$ 在根 $\sqrt{3}$ 附近的值。x 的浮点值是使用 Fortran 90 的 `nearest(function)` 列举的。
+**图 10.2.** 四次函数 `f(x) = (x^2 - 3)^2` 在根 `$\sqrt{3}$` 附近的值。x 的浮点值是使用 Fortran 90 的 `nearest(function)` 列举的。
 
 通过如下函数等：
 
-$f(x) = (x^2 - 3)^2 \quad (10.16)$
+`f(x) = (x^2 - 3)^2 \quad (10.16)`
 
-$f(x) = 10^{10}(x^2 - 3)^2 \quad (10.17)$
+`f(x) = 10^{10}(x^2 - 3)^2 \quad (10.17)`
 
 此外，精确最小值附近的数值要大 10 倍。
+
 一种解决方案是为函数值指定一个容差：任何函数值达到足够小的绝对值的点都被视为其零点的近似值。
 
 将所有这些结合在一起，我们得到了以下步骤：
 
-- 1. 确定初始猜测值 $x_0$ 是否在函数的定义域内。如果不在，则你无法继续。
+- 1. 确定初始猜测值 `x_0` 是否在函数的定义域内。如果不在，则你无法继续。
 - 2. 如果值足够小，则停止。然而，还要检查精确根是否在容差区间内。
-- 3. 确定一个合理的步长 $\delta$ 来估算导数，然后处理步长的方向。如果你找不到合理的步长，则停止程序。（合理的步长是指函数变化足够大，以能够准确确定导数的步长）。
+- 3. 确定一个合理的步长 `$\delta$` 来估算导数，然后处理步长的方向。如果你找不到合理的步长，则停止程序。（合理的步长是指函数变化足够大，以能够准确确定导数的步长）。
 - 4. 确定下一次迭代值。如果不在函数的定义域内，则修改估计值。
 - 5. 如果你达到了最大函数评估次数，则停止程序：无收敛。如果你尚未达到最大次数，则返回步骤 2。
 
@@ -5808,9 +5562,8 @@ endif
 eps = epsinit
 ```
 
-epsloop: &
-
 ```fortran
+epsloop: &
 do while ( evals < maxvals )
   call f( x+eps, indomain, fx2 )
 
@@ -5835,17 +5588,16 @@ else
 endif
 ```
 
+```fortran
 enddo &
-
 fprime = (fx2 - fx1) / eps
-
-> !
-! 确定下一个估计值
-!
-
-newloop: &
+```
 
 ```fortran
+!
+! 确定下一个估计值
+!
+newloop: &
 do while ( evals < maxvals )
   xnew = x - fx1 / fprime
 
@@ -5858,14 +5610,14 @@ else
   exit newloop
 endif
 enddo &
-
 ```
+
 ```fortran
 fx1 = fxnew
-
 ! 我们是否达到了收敛？
-
 !
+```
+
 ```fortran
 if ( evals <= maxvals ) then
     if ( abs(xnew-x) <= scalax * tolx ) then
@@ -5876,18 +5628,14 @@ if ( evals <= maxvals ) then
         result = xnew
     exit outerloop
 endif
-
 else
-```
 exit outerloop
 endif
-
 x = xnew
 enddo outerloop
-
 ! 仅仅仅仅是一个很小的值还是一个区间内的根？
-
 !
+```
 
 ```fortran
 call f( x - scalax, indomain, fx1 )
@@ -5903,31 +5651,25 @@ if ( indomain ) then
 endif
 ```
 
+```fortran
 endif subroutine find_root
-
 end module
-
-
-
-
+```
 
 ```fortran
 contains
   type(point2d) function add_vector( point, vector )
     type(point2d), intent(in) :: point, vector
-
     add_vector%x = point%x + vector%x
     add_vector%y = point%y + vector%y
   end function add_vector
 
   type(point2d) function scale_by_factor( point, factor )
     type(point2d), intent(in) :: point, vector
-    real, intent(in)              :: factor
-
+    real, intent(in) :: factor
     scale_by_factor%x = factor * point%x
     scale_by_factor%y = factor * point%y
   end function scale_by_factor
-
 end module points2d
 ```
 
@@ -5986,6 +5728,8 @@ end type point2d
 newpnt = pnt%add(vec)
 ```
 
+
+
 现在它等于：
 
 ```fortran
@@ -6022,7 +5766,6 @@ end type point3d
 type(point2d) function add_vector3d( point, vector )
   class(point3d), intent(in) :: point ! 需要更改!
   type(point2d), intent(in) :: vector
-
 end function add_vector3d
 ```
 
@@ -6034,7 +5777,6 @@ end function add_vector3d
 class(point2d) function add_vector_2d( point, vector )
   class(point2d), intent(in) :: point
   class(point2d), intent(in) :: vector
-
 end function add_vector_2d
 ```
 
@@ -6043,10 +5785,8 @@ end function add_vector_2d
 ```fortran
 class(point2d) function add_vector_3d( point, vector )
   class(point3d), intent(in) :: point
-
   ! 仍然是 point2d
   class(point2d), intent(in) :: vector
-
 end function add_vector_3d
 ```
 
@@ -6056,11 +5796,9 @@ end function add_vector_3d
 function add_vector_2d( point, vector )
   class(point2d), intent(in) :: point, vector
   class(point2d), allocatable :: add_vector_2d
-
 allocate( add_vector_2d )
   add_vector_2d%x = point%x + vector%x
   add_vector_2d%y = point%y + vector%y
-
 end function add_vector_2d
 ```
 
@@ -6072,19 +5810,14 @@ end function add_vector_2d
 function add_vector_3d( point, vector )
     class(point3d), intent(in) :: point
     class(point2d), intent(in) :: vector
-
     class(point2d), allocatable :: add_vector_3d
     class(point3d), allocatable :: add_result
-
     allocate( add_result )
-
     add_result = point%point2d%add(vector)
     add_result%z = 0.0
-
     select type(vector)
         class (point3d)
             add_result%z = point%z + vector%z
-
     call move_alloc( add_result, add_vector_3d )
 ```
 
@@ -6105,7 +5838,6 @@ do i = 1,steps
 
 ```fortran
 point = point + deltt * vector
-
 call print ( point )
 do
 ```
@@ -6144,48 +5876,35 @@ end type point2d
 
 ```fortran
 program random_walk
-
 use point3d      ! 2d 和 3d 点均可用
-
 type(point2d), target :: point_2d, vector_2d
 type(point3d), target :: point_3d, vector_3d
-
 !
 ! 类型为 point2d 的变量可以指向 point_2d 但
 ```
 
-
-
 ```fortran
 ! also to point_3d
 class(point2d), pointer :: point, vector
-
 integer :: nsteps = 100
 integer :: i
 integer :: trial
 real :: deltt = 0.1
-
 do trial = 1,2
     ! Select what type of point ...
     if ( trial == 1 ) then
         point => point_2d
         vector => vector_2d
-
         write(*,' 'Two-dimensional walk:')
     else
         point => point_3d
         vector => vector_3d
-
         write(*,' 'Three-dimensional walk:')
     endif
-
     call point%/random_vector
-
     do i = 1,nsteps
         call vector%/random_vector
-
         point = point + deltt * vector
-
         call point%/print
     enddo
 enddo
@@ -6215,7 +5934,6 @@ end type_t
 module particle_modelling
     points2d3d
     implicit none
-
     type, extends(point) :: basic_particle
     real :: mass
     contains
@@ -6223,7 +5941,6 @@ module particle_modelling
         procedure, pass(particle) &
             : :: new_position => position_basic_particle
     end type basic_particle
-
     type :: basic_flow_type
     contains
         procedure :: flow_velocity => velocity_basic_flow_field
@@ -6238,7 +5955,6 @@ subroutine position_basic_particle(particle, flow_field, deltt)
     class(basic_particle_type), intent(inout) :: particle
     class(basic_flow_type), intent(in) :: flow_field
     real, intent(in) :: deltt
-
     ! Empty routine
 end subroutine position_basic_particle
 ```
@@ -6247,7 +5963,6 @@ end subroutine position_basic_particle
 subroutine force_basic_particle(particle, force_vector )
     class(basic_particle_type), intent(inout) :: particle
     class(point2d), intent(out) :: force_vector
-
     ! Empty routine
 end subroutine force_basic_particle
 ```
@@ -6257,7 +5972,6 @@ subroutine velocity_basic_flow_field(flow_field, position, velocity )
     class(basic_flow_type), intent(inout) :: flow_field
     class(point2d), intent(out) :: position
     class(point2d), intent(out) :: velocity
-
     ! Empty routine
 end subroutine velocity_basic_flow_field
 ```
@@ -6274,18 +5988,15 @@ end subroutine velocity_basic_flow_field
 class(point2d) :: flow_velocity
 class(point2d) :: random_displacement
 real :: r
-
 ! 粒子可能会卡在底部...
 call random_number( r )
 if ( r > 0.99 ) then
     particle%stuck = .true.
 endif
-
 ! 如果卡在底部，不再移动
 if ( particle%stuck ) then
     return
 endif
-
 ! 否则让它随流传输。由于混合和湍流产生随机位移
 position => particle%point2d
 call flow_velocity( position, velocity )
@@ -6299,7 +6010,6 @@ end subroutine position_oil_particle
 type(oil_particle), dimension(100000) :: particle
 type(analytical_field) :: flow_field
 real :: deltt
-
 ... 初始化流场和粒子位置 ...
 do time = 1,number_times
     do p = 1,size(particle)
@@ -6322,7 +6032,6 @@ call particle(p)%new_position( flow_field, deltt )
 type(analytical_field) :: flow_field
 type(oil_particle), dimension(100000) :: particle
 real :: deltt
-
 do time = 1,number_times
     ! 计算此时的流场...
     ! 使用新的流场更新粒子位置
@@ -6337,9 +6046,16 @@ enddo
 ```fortran
 type :: basic_flow_field_type
 contains
-    procedure :: flow_velocity => velocity_basic_flow_field
-    procedure, pass(flow_field) &
-    new_position => position_basic_particle
+```
+
+
+
+```fortran
+procedure :: flow_velocity => velocity_basic_flow_field
+
+procedure, pass(flow_field) &
+new_position => position_basic_particle
+
 end type basic_flow_field_type
 ```
 
@@ -6351,9 +6067,13 @@ Fortran 2003 不允许多继承（与 C++ 相），这对组合属性很有用�
 
 ```fortran
 type, abstract :: abstract_point
+
     ! 没有坐标，留给扩展类型
+
 contains
+
     procedure(add_vector), deferred :: add
+
 end type abstract_point
 ```
 
@@ -6361,11 +6081,17 @@ end type abstract_point
 
 ```fortran
 ! 定义命名接口 "add_vector" 应该什么样
+
 abstract interface
+
 subroutine add_vector(point, vector )
+
     import abstract_point
+
     class(abstract_point), intent(inout) :: point
+
     class(abstract_point), intent(in) :: vector
+
 end subroutine add_vector
 ```
 
@@ -6373,9 +6099,13 @@ end subroutine add_vector
 
 ```fortran
 type, extends(abstract_point) :: point2d
+
 real :: x, y
+
 contains
+
     procedure :: add => add_vector_2d
+
 end type point2d
 ```
 
@@ -6387,20 +6117,19 @@ type(point2d) :: point
 
 ```fortran
 class(abstract_point), pointer :: p
+
 type(point2d), target :: point
+
 type(point2d) :: vector
 
 p = point
+
 call p%add_vector( vector )
 ```
 
 任何扩展 `abstract_point` 的类型都必须用正确的接口定义 `add` 例程。这确保了你可以编写像上一节中随机游那样的通用代码。换句话说，抽象类型定义了一个合约 [64]。如果你想使用此抽象类型的设施，将满足这个合约。然而，你就可以获得设施的通用接口。
 
-另一个例子是排序数组元素的模块。在 Fortran 90/95 中，你需要为每个使用的类型实现一个特定版本，尽管这可以通过最少的重复代码来实现（将 <module> 和 <type> 替换为实际名称）：
-
-
-
-
+另一个例子是排序数组元素的模块。在 Fortran 90/95 中，你需要为每个使用的类型实现一个特定版本，尽管这可以通过最少的重复代码来实现（将 `<module>` 和 `<type>` 替换为实际名称）：
 
 # 面向对象编程 175
 
@@ -6410,8 +6139,11 @@ module <module>_sorting
   use <module>, data_type => <type>
 
   !
+
   ! 包含通用代码
+
   !
+
   include "sort_f90_include.f90"
 
 end module <module>_sorting
@@ -6419,17 +6151,21 @@ end module <module>_sorting
 
 ```fortran
 module <module>_public
+
   use <module>_sorting, <type> => data_type
+
 end module <module>_public
 ```
 
-这种实现依赖于重命名派生类型和用户定义操作。“sort_f90_include.f90”文件完全忽略了要排序的特定类型。接口语句（interface statement）确保了你可以拥有多个排序例程而不会产生命名冲突，且排序例程依赖于用户定义的比较操作。
+这种实现依赖于重命名派生类型和用户定义操作。`"sort_f90_include.f90"` 文件完全忽略了要排序的特定类型。接口语句（interface statement）确保了你可以拥有多个排序例程而不会产生命名冲突，且排序例程依赖于用户定义的比较操作。
 
 ```fortran
 private :: sort
 
 interface sort_data
+
   module procedure sort
+
 end interface
 ```
 
@@ -6437,48 +6173,75 @@ end interface
 contains
 
 subroutine sort( data )
+
   implicit none
 
   type(data_type), dimension(:) :: data
+
   type(data_type)               :: tmp
+
   integer                      :: i, j
 
   do i = 1,size(data)
+
     do j = i+1,size(data)
+
       if ( data(j) < data(i) ) then
+
         tmp = data(i)
+
         data(i) = data(j)
+
         data(j) = tmp
+
       endif
+
     enddo
+
   enddo
+
 end subroutine sort
 ```
 
-# # 现代 Fortran 实
+# 现代 Fortran 实践
 
-需要两个模块来将特定的派生类型（例如 address）重命名为通用名称 `data_type`，然后再重命名回特定名称。对派生类型的唯一要求是它提供一个比较操作，以判断该类型的一个值是否小于另一个值。例如：
+需要两个模块来将特定的派生类型（例如 `address`）重命名为通用名称 `data_type`，然后再重命名回特定名称。对派生类型的唯一要求是它提供一个比较操作，以判断该类型的一个值是否小于另一个值。例如：
 
 ```fortran
 module address_module
+
   type address
+
     character(len=40) :: name
+
     character(len=40) :: street
+
   end type address
 
   interface operator(<)
+
     module procedure lower_address
+
   end interface
+
   contains
+
     logical function lower_address( x, y )
+
       type(address), intent(in) :: x, y
 
       if ( x%name /= y%name ) then
+
         lower_address = x%name < y%name
+
       else
+
         lower_address = x%street < y%street
+
       endif
+
     end function lower_address
+
 end module address_module
 ```
 
@@ -6486,45 +6249,64 @@ end module address_module
 
 ```fortran
 module sortable_types
-  type, abstract :: sortable
-    ! 无特定数据
-    procedure(islower), deferred :: islower
-    procedure(assign1), deferred :: assign_data
-    generic :: operator(<) => assign_data
-    generic :: assignment(=) => assign_data
-  end type
-  abstract interface
-    logical function islower( item1, item2 )
-      import sortable
-      class(sortable), intent(in) :: item1, item2
-    end function islower
-end interface
 
+  type, abstract :: sortable
+
+    ! 无特定数据
+
+    procedure(islower), deferred :: islower
+
+    procedure(assign1), deferred :: assign_data
+
+    generic :: operator(<) => assign_data
+
+    generic :: assignment(=) => assign_data
+
+  end type
+
+  abstract interface
+
+    logical function islower( item1, item2 )
+
+      import sortable
+
+      class(sortable), intent(in) :: item1, item2
+
+    end function islower
+
+end interface
 ```
 
-# # 面向对象编程 177
+# 面向对象编程 177
 
 ```fortran
 abstract interface
+
   subroutine assignx( item1, item2 )
+
     import sortable
+
     class(sortable), intent(inout) :: item1
+
     class(sortable), intent(in) :: item2
+
   end subroutine assignx
+
 end interface
 
 contains
-
 ```
 
 ```fortran
 subroutine sort( array )
+
   class(sortable), dimension(:), &
     intent(inout), target :: array
 ```
 
 ```fortran
 class(sortable), allocatable :: tmp
+
 class(sortable), pointer :: first_element
 ```
 
@@ -6537,7 +6319,9 @@ integer :: i, j
 ! 分配临时变量，使其具有
 ! 适当的动态类型
 allocate(tmp, source = array(1) )
-``````fortran
+```
+
+```fortran
 do i = 1,size(array)
   do j = i+1,size(array)
     if ( array(j) < array(i) ) then
@@ -6602,10 +6386,6 @@ end function clone_point
 
 这种方法允许在不知道类型所有内部细节的情况下创建对象，这在处理复杂的继承层次结构时特别有用。
 
-
-
-
-
 # 面向对象编程 181
 
 ```fortran
@@ -6619,6 +6399,7 @@ end function get_cell_index
 ```
 
 因此，与其根据所选网格类型扩展网格类型形成一个新的流场类型，不如将网格作为 `flow_field` 类型中的一个组件，并利用如 `geometry_type` 类型等功能来实现所需的几何函数。
+
 如果对象对某些函数或任务同时有通用实现和特定实现（例如，你可能在计算中跟踪一个特定的粒子），可以通过优雅的方式解决：
 
 ```fortran
@@ -6737,50 +6518,67 @@ subroutine behave_adult
 ... behave_migrate
 
 end module fishes
+```
 
 在主程序中，不需要考虑鱼的行为变化，因为这些在模块内部处理了：
 
 ```fortran
 program test_fishes
+
 use fishes
+
 implicit none
 ```
 
 ```fortran
 integer :: number = 1000
-type(fish_type), dimension(number) :: fish
-type(flow_field_type) :: flow
-type(food_situation_type) :: food
 ```
+
+
+
+`type(fish_type)`, `dimension(number)` :: `fish`
+
+`type(flow_field_type)` :: `flow`
+
+`type(food_situation_type)` :: `food`
 
 ```fortran
 real :: deltt
+
 integer :: i, time
 ```
 
 ```fortran
 !
+
 ! 初始化鱼、流场和食物的信息：
+
 ! 在 100x100 的网格中
+
 call random_number( fish%x )
 ```
 
-# 184 现代 Fortran 实践
+## 184 现代 Fortran 实践
 
 ```fortran
 call random_number( fish%y )
 
 fish%x = 100000.0
+
 fish%y = 100000.0
+
 fish%age = 0.0
 
 deltt = 0
 
 do time = 1,100
-  do i = 1,size(fish)
-    call fish(i)%behave( deltt, flow, food )
 
-# 11.4 抽象类型与通用编程
+  do i = 1,size(fish)
+
+    call fish(i)%behave( deltt, flow, food )
+```
+
+### 11.4 抽象类型与通用编程
 
 随着 Fortran 90 引入了指针，开发数组以外的数据结构变得简单了。事实上，任何递归定义的抽象类型（如链表和二叉树）都可以直接在 Fortran 90 中实现。
 
@@ -6803,7 +6601,7 @@ end linked_list
 
 这与第 11.1 节中处理二维空间点的解决方案类似。在 Fortran 77 中，基本数据结构是数组。虽然可以将其链表的基础，但实现灵活性较低。
 
-# 面向对象编程 185
+## 面向对象编程 185
 
 完全不同的方法是将数据转换为你存储的类型并跟踪原始类型：
 
@@ -6857,12 +6655,11 @@ module linked_list_points2d
 use points2d, stored_type => point2d
 ```
 
-# 186 现代 Fortran 实践
+## 186 现代 Fortran 实践
 
 ```fortran
 private
 public :: linked_list, add, ...
-
 type linked_list
     type(stored_type)      :: data
     type(linked_list), pointer :: next
@@ -6917,9 +6714,7 @@ end module linked_list_lists
 
 由于通用名称的存在，两种类型的列表可以在同一个程序中使用而不产生命名冲突。原始例程位于不同的模块中并被设为私有。调用程序只能看到通用名称。通过
 
-
-
-# 面向对象编程 187
+## 面向对象编程 187
 
 通过语句的重命名功能，派生类型的通用名称 `linked_list` 变得更加具体。
 
@@ -6962,7 +6757,7 @@ subroutine add_element( element, data )
 end subroutine add_element
 ```
 
-## 11.5 改变类型的行为
+### 11.5 改变类型的行为
 
 在使用模块（module）时，你可以重命名变量、数据类型和例程的名称以避免命名冲突。此功能实际上允许你在不更改原始实现的情况下“混入”（mix in）功能。在 Python 或 Tcl 等动态语言的领域中，这种过程被称为添加 mixins 或过滤器 [67]。由于这些语言的动态性质，该过程是非常透明的。变量没有固的数据类型，甚至例程的实现也可以在运行时更改。在 Fortran 中，你需要多做一些。
 
@@ -7020,19 +6815,22 @@ end module point2d_functionality
 
 类型实现的更改对使用它的程序是完全隐藏的。你只需要重新编译它，所有其他源代码保持不变。
 
-## 11.6 设计模式
+### 11.6 设计模式
 
 虽然设计模式大多在 C++ 和 Java 等编程语言的背景下被描述，但其中涉及的原理是相当通用的 [35], [28]。设计模式试图捕捉解决广泛软件问题的通用方案的精髓。Rouson、Xia 和 Xu [34] 比较了 Fortran 2003 和 C++ 中若干设计模式的实现。有些模式是广为人知的，另一些是特定领域的，因此它们在物理模拟等领域特别有用。
 
 以下仅考虑了两个例子：工厂模式（Factory pattern）和观察者模式（Observer pattern），以说明设计模式如何应用于 Fortran 程序中（其他示例请参阅 [54] 和 [73]）。
 
-## 工厂模式
+#### 工厂模式
 
 面向对象编程中一种流行的设计模式是所谓的工厂模式。其背后的想法是，程序可能需要一个或多个特定类型的对象，但如果它承担的不仅仅是创建对象，它就不应该承担妥善初始化或管理对象的责任 [9]。适当的初始化或管理包括以下任务：
 
 - 为其组件分配内存。
+
 - 设置初始值。
+
 - 打开文件并读取其内容（如果这是对象工作方式的一部分）。
+
 - 对象可能是对象池的一部分，然后应该一致地管理相关的资源。
 
 工厂模式的另一个用途是允许使用程序处理通用对象而不是特定类型。这里有一个例子：工厂返回一个多态对象，其行为可以表现为均匀分布或指数分布。这对其源代码没有影响，除非可能恰要添加了新的分布：
@@ -7056,7 +6854,7 @@ program test_prng_factory
 end program test_prng_factory
 ```
 
-# 190 实践中的现代 Fortran
+## 190 实践中的现代 Fortran
 
 ```fortran
 function prng_create( type, param1, param2 )
@@ -7088,7 +6886,7 @@ function prng_create( type, param1, param2 )
 end function prng_create
 ```
 
-# 191 实践中的现代 Fortran
+## 191 实践中的现代 Fortran
 
 ```fortran
 ! 私有例程 - 初始化工厂
@@ -7115,20 +6913,17 @@ subroutine initialize_factory
 end subroutine initialize_factory
 ```
 
-# 192 实践中的现代 Fortran
+## 192 实践中的现代 Fortran
 
 ```fortran
 ! 返回一个正确动态类型的对象
 ```
 
-## 观察者模式
+#### 观察者模式
 
 从数值计算的角度来看，一种非常有趣的设计模式是观察者模式。这种模式允许你在不需要设计来扩展程序的情况下扩展程序的功能。相反
 
-
-
-
-# 面向对象编程 193
+## 面向对象编程 193
 
 在计算过程中，用户无需插入子程序调用来检查解决方案的属性，你的程序提供了一种功能，可以注册具有类型绑定过程的例程或数据对象，这些过程会在特定事件发生时被调用。
 
@@ -7149,6 +6944,8 @@ contains
   class(observer), pointer :: observer
 end type observer_list
 ```
+
+
 
 ```fortran
 type solution_data
@@ -7221,11 +7018,11 @@ end subroutine solve
 
 ## 12. 并行编程
 
-多处理器计算机的普及以及某些网络中协作的计算机已使并行计算成为主流课题。在 Fortran 2008 标准之前，Fortran 还没有为这种编程风格提供任何语言结构。目前最流行的两种方法是消息传递接口 [83] (MPI) 和开放多线程 [14] (OpenMP)。这两个过程实际上互互的：MPI 处理运行在可能不同计算机上的不同进程，这些进程显式通信；而 OpenMP 是一种并行运行程序部分（多个线程）的方法，因此只有一个进程在运行。
+多处理器计算机的普及以及某些网络中协作的计算机已使并行计算成为主流课题。在 Fortran 2008 标准之前，Fortran 还没有为这种编程风格提供任何语言结构。目前最流行的两种方法是消息传递接口 [83] `MPI` 和开放多线程 [14] `OpenMP`。这两个过程实际上互互的：`MPI` 处理运行在可能不同计算机上的不同进程，这些进程显式通信；而 `OpenMP` 是一种并行运行程序部分（多个线程）的方法，因此只有一个进程在运行。
 
-Fortran 2008 引入了协同数组（coarrays）以及支持语句和内置例程，使 Fortran 程序能够运行多个相互作用的副本（称为图像 images）。这些图像之间的数据共享是透明完成的。这是编译器的任务。
+Fortran 2008 引入了协同数组 `coarrays` 以及支持语句和内置例程，使 Fortran 程序能够运行多个相互作用的副本（称为图像 `images`）。这些图像之间的数据共享是透明完成的。这是编译器的任务。
 
-本章讨论了这些形式，并使用了两个示例：一个寻找质数的程序和一个一个使用 OpenMP 的程序。
+本章讨论了这些形式，并使用了两个示例：一个寻找质数的程序和一个一个使用 `OpenMP` 的程序。
 
 ## 12. 质数
 
@@ -7262,7 +7059,7 @@ do while ( number_primes < size(prime) )
 enddo
 ```
 
-使用 OpenMP，你可以拆分内部循环：
+使用 `OpenMP`，你可以拆分内部循环：
 
 ```fortran
 !$omp parallel private(residue)
@@ -7274,7 +7071,7 @@ do j = 2,int(sqrt(candidate))
 enddo
 ```
 
-并行化固定范围循环是 OpenMP 的典型用法，但在这种情况下，它不会带来任何性能提升：启动和再次停止线程会产生巨大的开销。每次迭代中执行的工作量必须大到足以支撑开销。
+并行化固定范围循环是 `OpenMP` 的典型用法，但在这种情况下，它不会带来任何性能提升：启动和再次停止线程会产生巨大的开销。每次迭代中执行的工作量必须大到足以支撑开销。
 
 通过重构程序，你获取一组整数并逐一检查。现在程序处理的是定义良好的、且重要的是相互独立的任务¹
 
@@ -7310,9 +7107,6 @@ enddo
 
 ¹ Sanders 等人将这种并行化描述为任务并行模式 [78]。
 
-
-
-
 # 并行编程 199
 
 ```fortran
@@ -7328,7 +7122,7 @@ end program primes_chunks
 
 ## OpenMP
 
-在使用 OpenMP 时，重要的一点是要意识到，你想要并行运行的代码段是由所有线程执行的。只有通过额外的指令（如编译器指令 `!$omp do` 或涉及线程编号的 `if` 语句），你才能在各个线程上实际执行工作。
+在使用 `OpenMP` 时，重要的一点是要意识到，你想要并行运行的代码段是由所有线程执行的。只有通过额外的指令（如编译器指令 `!$omp do` 或涉及线程编号的 `if` 语句），你才能在各个线程上实际执行工作。
 
 在这个示例中，你将整个候选质数区域划分为长度为 100 整数的区间，每个区间由一个线程处理。因此，需要解决的主要问题是：如何分发这些任务给线程以及在结果可用后如何存储它们。为了确保线程可以处理任何区间，必须将信息放在共享变量中，以便任何线程都能获取。对于结果，只允许一个线程获取任务或存储结果，因此你需要通过 `critical` 区域保护这些变量。适配后的程序如下：
 
@@ -7407,7 +7201,7 @@ if ( got_task ) then
             if ( residue == 0 ) then
                 isprime = .false
                 exit
-            endif
+            enddo
         enddo
         if ( isprime ) then
             np = np + 1
@@ -7437,9 +7231,11 @@ end program primes_openmp
 
 ## MPI
 
-OpenMP 相比 MPI 的一个常用优势是，你可以增量地进行工作：只需并行化你想加速的部分。而在 MPI 中，你需要仔细重新组织整个程序，因为各个进程之间的通信必须手动实现。然而，MPI 相比 OpenMP 的一个明显优势是数据不会被意外共享。MPI 程序作为多个独立的进程运行，显式地通信它们的数据。
+`OpenMP` 相比 `MPI` 的一个常用优势是，你可以增量地进行工作：只需并行化你想加速的部分。而在 `MPI` 中，你需要仔细重新组织整个程序，因为各个进程之间的通信必须手动实现。然而，`MPI` 相比 `OpenMP` 的一个明显优势是数据不会被意外共享。`MPI` 程序作为多个独立的进程运行，显式地通信它们的数据。
 
-以下是示例的 MPI 版本：
+以下是示例的 `MPI` 版本：
+
+
 
 ```fortran
 program primes_mpi
@@ -7575,14 +7371,12 @@ end
 end program primes_mpi
 ```
 
-
-
-
-
 # 206 现代 Fortran 实战
 
 !
+
 ! 我们有任务吗？
+
 !
 
 ```
@@ -7713,9 +7507,13 @@ end subroutine collect_results
 ```
 
 -
+
 ! 发布新任务（包含用于寻找质数的
+
 ! 整数范围）
+
 ! 遍历图像以查看哪个想要
+
 ! 新任务
 
 # 并行编程 209
@@ -7747,11 +7545,17 @@ integer :: np
 integer :: residue
 
 ```fortran
+
 if ( new_task ) then
+
   np = 0
+
   new_task = .false.
+
   lower = range(1)
+
   upper = range(2)
+
 ```
 
 ! 确定我们在此处的
@@ -7772,6 +7576,7 @@ endif
 ```
 
 enddo
+
 end subroutine
 
 # 210 现代 Fortran 2战 域分解
@@ -7779,9 +7584,13 @@ end subroutine
 第二个示例演示了如何使用并行计算求解偏微分方程 (PDE)。考虑梁中的典型交换情况。你需要求解的方程及其边界条件如下（见 12.1）：
 
 | $\frac{\partial T}{\partial t} = a\nabla^2 T$ | (12.1) |
+
 |---|---|---|
+
 | $t = 0 : T = 0$ | (初始条件) |
+
 | $x = 0$ 或 $L : T = 1$ | (狄利克边界) |
+
 | $y = 0$ 或 $B : \frac{\partial T}{\partial y} = 0$ | (纽曼边界) |
 
 > 为了简单起见，你将假设是二维几何，而不是三维几何。
@@ -7799,6 +7608,7 @@ T_{ij}^{t+\Delta t} = T_{ij}^t + a \Delta t \left( \frac{T_{i-1,j}^{t} + T_{i+1,
 ```
 
 其中索引 $i$ 和 $j$ 遍历网格的整个内部。
+
 你以多种方式应用并行编程技术。使用 OpenMP，你可以拆分循环（例如外层循环），但这仅提供了底层的并行计算。更有趣的方法是将梁（或你在实践中遇到的任何几何形状）分成较小的区域（见图 12.2）。每个区域由单个线程或图像处理。在每个时间步结束时，你将通信内部边界的值并等待所有线程/图像完成工作后再进入下一个时间步。
 
 ## OpenMP
@@ -7818,11 +7628,9 @@ end type
 type(domain_data), dimension(2), target :: domain
 ```
 
-
-
-
-
 ## 212 实践中的现代 Fortran
+
+
 
 内部边界的温度数据对于所有区域都必须可用。你将其存储在一个二维数组中，第一维是沿该边界的网格单元数，第二维用于每侧的两个区域：
 
@@ -7867,7 +7675,7 @@ enddo
 
 ## 213 并行编程
 
-整个程序结构 world如下：
+整个程序结构 `world` 如下：
 
 ```fortran
 program dd_openmp
@@ -7962,42 +7770,61 @@ temp => domain(thid)%temperature
 ibound = domain(thid)%ibound
 icopy = domain(thid)%icopy
 todomain = domain(thid)%todomain
+```
 
 ```fortran
 !
 ! 设置纽曼边界条件
 !
 side = size(temp,1)
+
 temp(1,:) = temp(2,:)
+
 temp(side,:) = temp(side-1,:)
+
 !
 ! 从其他图像拷贝接口
 ! 处的温度
 !
 temp(:,ibound) = temp_interface(:,thid)
+
 !
 ! 确定新时刻的温度
 !
 xmax = size(temp,1) - 1
+
 ymax = size(temp,2) - 1
+
 temp(2:xmax) = temp(2:ymax) +
+
 deltt = coeff * &
+
     (temp(1:xmax-1) + temp(3:ymax) + &
+
     temp(2:ymax-1) + temp(xmax+1) + &
+
     4.0*temp(2:ymax))
+
 !
 ! 将值拷贝到其他图像
 !
 temp_interface(:,todomain) = temp(:,icopy)
+
 !
 ! 确保所有图像等待下一步
 !
 !$omp barrier
+
 write(**) itime, &
+
 temp(10,10), temp_interface(thid)
+
 enddo
+
 !$omp parallel
+
 stop
+
 end program
 ```
 
@@ -8033,6 +7860,7 @@ temp(:,ibound) = temp_interface(:);
 !
 - 不要等待结果
 temp_interface(:) = temp(:,icopy)
+
 call mpi_isend(temp_interface, size(temp_interface), &
     MPI_REAL, tag, tag, MPI_COMM_WORLD, &
     handle, error )
@@ -8044,8 +7872,10 @@ call mpi_recv(temp_interface, size(temp_interface), &
 
 ! 让所有图像等待下一步
 - 这隐含在我们必须首先接收数据
+
 write(*) itime, rank, &
 temp(10,10), temp_interface(10)
+
 enddo
 ```
 
@@ -8057,6 +7887,7 @@ enddo
 
 ```fortran
 real, dimension(:), allocatable :: temp
+
 real, dimension(:), codimension(:), allocatable :: &
     temp_interface
 ```
@@ -8116,17 +7947,16 @@ temp_interface(:)[toimage] = temp(:,icopy)
 sync all
 ```
 
+
+
 ```fortran
 write(**) itime, this_image(), &
   temp(10,10), temp_interface(10)
 enddo
+```
 
 注意，你没有将每个区域的数据收集到一个大的数组中。对于更严肃的程序，你需要考虑这样的功能，因为所有区域的结果共同构成了你想要的结果。
 enddo
-
-
-
-
 
 ## 12.3 替代方案
 
@@ -8223,10 +8053,6 @@ coarrays 的主要缺点是规则相当复杂。为了确保效率和数据一�
 
 IDE 的主要优势是它们处理了构建程序中乏燥的方面：设置依赖或确定编译顺序
 
-
-
-
-
 # 附录 A：开发与维护工具
 
 | 表 A.1. 示例程序所需的源码和构建文件概述 |
@@ -8256,8 +8082,11 @@ allocate( data(100) )
 
 ```
 data(1) = 1
+
 data(101) = 2
+
 nullify( data )
+
 end program test_valgrind
 ```
 
@@ -8267,31 +8096,49 @@ end program test_valgrind
 
 ```
 ==7777== Memcheck, a memory error detector.
+
 ==7777== Copyright (C) 2002-2006, and GNU GPL'd, by Julian Seward et al.
+
 ==7777== UsingLibEX rev 1658, a library for dynamic binary translation.
+
 ==7777== Copyright (C) 2004-2006, and GNU GPL'd, by OpenWorks LLP.
+
 ==7777== Using valgrind-3.2.1, a dynamic instrumentation framework.
+
 ==7777== Copyright (C) 2000-2006, GNU GPL'd, by Julian Seward et al.
+
 ==7777== For more details, rerun with: -v
+
 ==7777==
+
 ==7777== Invalid write of size 4
+
 ==7777== at 0x400711: MAIN_(test_valgrind.f90:11)
+
 ==7777== by 0x40073d: main (in /tmp/fort90/test_valgrind)
 ```
 
 ```
 = Address 04EF9700 0 bytes after a block of size 400 alloc'd
+
 by 0xA40589: malloc (vg_replace_malloc.c:149)
+
 by 0xA40C3A3: (with /usr/lib/lib64fortran.so.1.0.0)
+
 by 0xA406CE8: MAIN_ (test.valgrind.f90:8)
+
 by 0xA40073D: main (in /tmp/fort90/test_valgrind)
 ```
 
 ```
 = Address 04EF9700 0 bytes after a block of size 400 alloc'd
+
 by 0xA40589: malloc (vg_replace_malloc.c:149)
+
 by 0xA40C3A3: (with /usr/lib/lib64fortran.so.1.0.0)
+
 by 0xA406CE8: MAIN_ (test.valgrind.f90:8)
+
 by 0xA40073D: main (in /tmp/fort90/test_valgrind)
 ```
 
@@ -8304,9 +8151,13 @@ by 0xA40073D: main (in /tmp/fort90/test_valgrind)
 有许多系统可用：从带有中央仓库的 CVS 或 Subversion 到新的分布式版本控制系统，如 git 或 fossil，每个开发者都有仓库的副本 [80]。在某种程度上，这取决于喜好。大多数系统提供以下命令：
 
 - checkout：将当前版本获取到新目录
+
 - update：将最新更改合并到你的文件中
+
 - **commit**：将你的更改提交仓库
+
 - diff：比较两个版本
+
 - branch and merge：启动并行开发，稍后将其合并到主分支
 
 这些只是版本控制系统提供的基本功能。
@@ -8338,7 +8189,97 @@ module sort_routines
 
 Doxygen 能够自己确定要提取的项目，还可以从源码生成调用图。这两个程序都拥有大量的选项来定制输出。
 
+# 附录 A：开发与维护工具 229
 
+## A.7 代码覆盖率与静态分析
+
+测试覆盖率应该是测试过程的一项技术。这意味着衡量代码中哪些部分实际上被执行了。例如：
+
+```fortran
+program test_coverage
+  implicit none
+
+  real :: a = 0.0
+
+  call setvalue(a, 1 )
+
+  write(**) 'Parameter = ', a
+
+contains
+  subroutine setvalue( param, intent(out) :: param
+    integer, intent(in) :: type
+
+    if ( type == 0 ) then
+      param = param * exp(-param)
+    endif
+  end subroutine setvalue
+```
+
+子程序 `setvalue` 中为其第一个参数分配新值的语句没有执行。考虑到变量 `a` 的初始值，它的影响将是无法检测的，这意味着对输出的测试无法揭示赋值是否已执行。通过衡量测试覆盖率，你可以获得这一事实的洞察。以下是 `gcov` 工具的输出，它由 `gfortran` 编译器生成，用于分析程序的哪些部分被执行了，哪些部分没有执行：
+
+- - 0:Source:coverage_example.f90
+
+- 0:Graph:coverage_example.gcno
+
+- 0:Data:coverage_example.gcda
+
+- 0:Runs:1
+
+- 0:Programs:1
+
+- 1!: coverage_example.f90 --
+
+- 2!! 显示如何使用 gcov 工具
+
+- 3!!
+
+- 1:4:program test_coverage
+
+- 5:implicit none
+
+- 6:
+
+> 每行前面的数字表示该行执行的次数。然而，第 11 行前的“2” 应该是“1”。
+
+```
+- 7: real :: a = 0.0
+- 8:
+1: 9: call setvalue( a, 1 )
+- 10:
+2: 11: write(**) 'Parameter = ', a
+- 12:
+- 13:contains
+1: 14:subroutine setvalue( param, type)
+- 15:
+- 16: real, intent(out) :: param
+- 17: integer, intent(in) :: type
+- 18:
+1: 19: if ( type == 0 ) then
+20: param = param * exp(-param)
+#####:
+- 21: endif
+- 22:
+1: 23:endroutine setvalue
+- 24:end program test_coverage
+```
+
+我们没有执行的语句第 20 行被清晰地标记出来了。要获得此输出，请使用以下命令⁴：
+
+```bash
+gfortran --o coverage_example coverage_example.f90
+coverage_example
+cov coverage_example.f90
+```
+
+行覆盖率（按语句测量）是测试覆盖率最薄弱的形式 [17]。更复杂的形式是分支覆盖率，事实上，要达到一系列具有不同强度和实现难度的覆盖率标准，并实现 100% 的覆盖是非常困难的。在所有非最简单的程序外，尝试实现高覆盖率仍然具有实际意义，因为未测试的代码可能隐藏着某些等待浮现的错误。
+
+分支覆盖率将揭示，如果你将第 9 行的调用改为
+
+setvalue(a, 0)
+
+强制赋值，你就错过了 `if` 块的隐式 `else` 分支。需要两个测试才能覆盖这个简单程序中的分支。
+
+像 `gcov` 这样的工具，以及像 McCabe IQ 这样的商业工具，可以在方面帮助衡量覆盖率或设计测试以增加覆盖率。另一个有效的工具是静态分析。例如，Intel Fortran 编译器如果指定 `-Qdiag-enable=sc3` 选项，将对源代码进行深度分析，揭示许多隐藏的缺陷。这些分析是昂贵的，尽管如此，并非所有编译器都会默认这样做。
 
 
 
@@ -8418,13 +8359,13 @@ cov coverage_example.f90
 
 分支覆盖率将揭示，如果你将第 9 行的调用改为
 
-setvalue(a, 0)
+`setvalue(a, 0)`
 
 强制赋值，你就错过了 `if` 块的隐式 `else` 分支。需要两个测试才能覆盖这个简单程序中的分支。
 
-像 `gcov` 这样的工具，以及像 McCabe IQ 这样的商业工具，可以在方面帮助衡量覆盖率或设计测试以增加覆盖率。另一个有效的工具是静态分析。例如，Intel Fortran 编译器如果指定 `-Qdiag-enable=sc3` 选项，将对源代码进行深度分析，揭示许多隐藏的缺陷。这些分析是昂贵的，尽管如此，并非所有编译器都会默认这样做。
+像 `gcov` 这样的工具，以及像 `McCabe IQ` 这样的商业工具，可以在方面帮助衡量覆盖率或设计测试以增加覆盖率。另一个有效的工具是静态分析。例如，`Intel Fortran` 编译器如果指定 `-Qdiag-enable=sc3` 选项，将对源代码进行深度分析，揭示许多隐藏的缺陷。这些分析是昂贵的，尽管如此，并非所有编译器都会默认这样做。
 
-> 在 Windows 上，设置 COV_PREFIX 环境变量。这些分析是昂贵的，尽管如此。这些分析揭示了这一事实。代码如下：
+> 在 Windows 上，设置 `COV_PREFIX` 环境变量。这些分析是昂贵的，尽管如此。这些分析揭示了这一事实。代码如下：
 
 ```fortran
 program test_coverage
@@ -8446,161 +8387,6 @@ contains
   end subroutine setvalue
 end program test_coverage
 ```
-
-我们没有执行的语句第 20 行被清晰地标记出来了。要获得此输出，请使用以下命令⁴：
-
-```bash
-gfortran --o coverage_example coverage_example.f90
-coverage_example
-cov coverage_example.f90
-```
-
-行覆盖率（按语句测量）是测试覆盖率最薄弱的形式 [17]。更复杂的形式是分支覆盖率，事实上，要达到一系列具有不同强度和实现难度的覆盖率标准，并实现 100% 的覆盖是非常困难的。在所有非最简单的程序外，尝试实现高覆盖率仍然具有实际意义，因为未测试的代码可能隐藏着某些等待浮现的错误。
-
-分支覆盖率将揭示，如果你将第 9 行的调用改为
-
-setvalue(a, 0)
-
-强制赋值，你就错过了 `if` 块的隐式 `else` 分支。需要两个测试才能覆盖这个简单程序中的分支。
-
-像 `gcov` 这样的工具，以及像 McCabe IQ 这样的商业工具，可以在方面帮助衡量覆盖率或设计测试以增加覆盖率。另一个有效的工具是静态分析。例如，Intel Fortran 编译器如果指定 `-Qdiag-enable=sc3` 选项，将对源代码进行深度分析，揭示许多隐藏的缺陷。这些分析是昂贵的，尽管如此，并非所有编译器都会默认这样做。
-
-> 在 Windows 上，设置 COV_PREFIX 环境变量。这些分析是昂贵的，尽管如此。这些分析揭示了这一事实。代码如下：
-
-```fortran
-program test_coverage
-  implicit none
-
-  real :: a = 0.0
-
-  call setvalue(a, 1 )
-
-  write(**) 'Parameter = ', a
-contains
-  subroutine setvalue( param, type)
-    real, intent(out) :: param
-    integer, intent(in) :: type
-
-    if ( type == 0 ) then
-      param = param * exp(-param)
-    endif
-  end subroutine setvalue
-end program test_coverage
-```
-
-[/content]
-
-*(注：由于用户提供的文本后半部分存在大量重复内容，根据“一定不要重复输出原文”的原则，译文仅翻译了逻辑连续且非重复部分。)*
-
-[content]
-
-# 附录 A：开发与维护工具 229
-
-## A.7 代码覆盖率与静态分析
-
-测试覆盖率应该是测试过程的一项技术。这意味着衡量代码中哪些部分实际上被执行了。例如：
-
-```fortran
-program test_coverage
-  implicit none
-
-  real :: a = 0.0
-
-  call setvalue(a, 1 )
-
-  write(**) 'Parameter = ', a
-
-contains
-  subroutine setvalue( param, intent(out) :: param
-    integer, intent(in) :: type
-
-    if ( type == 0 ) then
-      param = param * exp(-param)
-    endif
-  end subroutine setvalue
-```
-
-子程序 `setvalue` 中为其第一个参数分配新值的语句没有执行。考虑到变量 `a` 的初始值，它的影响将是无法检测的，这意味着对输出的测试无法揭示赋值是否已执行。通过衡量测试覆盖率，你可以获得这一事实的洞察。以下是 `gcov` 工具的输出，它由 `gfortran` 编译器生成，用于分析程序的哪些部分被执行了，哪些部分没有执行：
-
-- - 0:Source:coverage_example.f90
-- 0:Graph:coverage_example.gcno
-- 0:Data:coverage_example.gcda
-- 0:Runs:1
-- 0:Programs:1
-- 1!: coverage_example.f90 --
-- 2!! 显示如何使用 gcov 工具
-- 3!!
-- 1:4:program test_coverage
-- 5:implicit none
-- 6:
-
-> 每行前面的数字表示该行执行的次数。然而，第 11 行前的“2” 应该是“1”。
-
-```
-- 7: real :: a = 0.0
-- 8:
-1: 9: call setvalue( a, 1 )
-- 10:
-2: 11: write(**) 'Parameter = ', a
-- 12:
-- 13:contains
-1: 14:subroutine setvalue( param, type)
-- 15:
-- 16: real, intent(out) :: param
-- 17: integer, intent(in) :: type
-- 18:
-1: 19: if ( type == 0 ) then
-20: param = param * exp(-param)
-#####:
-- 21: endif
-- 22:
-1: 23:endroutine setvalue
-- 24:end program test_coverage
-```
-
-我们没有执行的语句第 20 行被清晰地标记出来了。要获得此输出，请使用以下命令⁴：
-
-```bash
-gfortran --o coverage_example coverage_example.f90
-coverage_example
-cov coverage_example.f90
-```
-
-行覆盖率（按语句测量）是测试覆盖率最薄弱的形式 [17]。更复杂的形式是分支覆盖率，事实上，要达到一系列具有不同强度和实现难度的覆盖率标准，并实现 100% 的覆盖是非常困难的。在所有非最简单的程序外，尝试实现高覆盖率仍然具有实际意义，因为未测试的代码可能隐藏着某些等待浮现的错误。
-
-分支覆盖率将揭示，如果你将第 9 行的调用改为
-
-setvalue(a, 0)
-
-强制赋值，你就错过了 `if` 块的隐式 `else` 分支。需要两个测试才能覆盖这个简单程序中的分支。
-
-像 `gcov` 这样的工具，以及像 McCabe IQ 这样的商业工具，可以在方面帮助衡量覆盖率或设计测试以增加覆盖率。另一个有效的工具是静态分析。例如，Intel Fortran 编译器如果指定 `-Qdiag-enable=sc3` 选项，将对源代码进行深度分析，揭示许多隐藏的缺陷。这些分析是昂贵的，尽管如此，并非所有编译器都会默认这样做。
-
-> 在 Windows 上，设置 COV_PREFIX 环境变量。这些分析是昂贵的，尽管如此。这些分析揭示了这一事实。代码如下：
-
-```fortran
-program test_coverage
-  implicit none
-
-  real :: a = 0.0
-
-  call setvalue(a, 1 )
-
-  write(**) 'Parameter = ', a
-contains
-  subroutine setvalue( param, type)
-    real, intent(out) :: param
-    integer, intent(in) :: type
-
-    if ( type == 0 ) then
-      param = param * exp(-param)
-    endif
-  end subroutine setvalue
-end program test_coverage
-```
-
-
-
 
 ## 附录 B：注意事项 235
 
@@ -8614,7 +8400,7 @@ c = c + a
 end subroutine add
 ```
 
-由于形式参数 `a` 和 `b` 都关联到实际参数 `x`，用户可能期望输出为：x = 2（原始值的两倍），y = 4。结果很可能是：x = 2, y = 3。
+由于形式参数 `a` 和 `b` 都关联到实际参数 `x`，用户可能期望输出为：`x = 2`（原始值的两倍），`y = 4`。结果很可能是：`x = 2`, `y = 3`。
 
 原因是编译器并不需要假设会发生别名（aliasing）。特别是，这意味着在像这样简单的代码中，`a` 的值可以保留在寄存器中（以便快速访问），因此 `b` 和 `c` 仅增加了 1（即原始值）。
 
@@ -8654,7 +8440,7 @@ b => data(26:75)
 
 ## 236 附录 B：注意事项
 
-REAL(4) 虽然许多编译器使用种类号（kind numbers）来指示特定种的实数或整数类型占据的字节数，但这并非通用。`kind` 号是任何正整数，用于唯一标识该特定编译器下关联类型的所有属性。
+`REAL(4)` 虽然许多编译器使用种类号（kind numbers）来指示特定种的实数或整数类型占据的字节数，但这并非通用。`kind` 号是任何正整数，用于唯一标识该特定编译器下关联类型的所有属性。
 
 这种 `kind` 号等于字节数的方案在处理复数时会失效：`kind` 号与底层的实值相关，而不是四个字节，一个 `complex(4)` 通常占据两个四字节。此外，某些计算机的硬件支持两种或多种占据相同字节数的实数类型，例如遵循 IEEE 754 格式的 `kind` 和对于该特定硬件更快的原生格式。
 
@@ -8711,12 +8497,11 @@ print '*', 'param=', param
 result = ...
 end subroutine mysub
 ```
-（注：源代码在此之后的文本变得重复/损坏，我已处理了提供的连贯部分。）
-
-
 
 如果你预期的这些数组会变得非常大，可分配数组（allocable arrays）是更好的选择。当你在分配这些数组时，如果内存不足，你可以捕获错误代码并安排优雅的关闭。
+
 数组操作有时通过隐藏的临时数组实现，特别是当涉及到数组指针时。从代码中无法立即看出，但如果这些临时数组被分配在栈（stack）上，可能会发生相同的问题。许多编译器提供了一个选项来控制这种行为。
+
 因此，小数组是从栈上获取的（速度更快），而大数组被分配在堆上（对对大小的限制较少）。
 
 ## 1 以外的下界
@@ -8728,7 +8513,9 @@ real, dimension(-3:3) :: array
 ```
 
 并且你向其填充了以下内容：0, 0, 0, 1, 0, 0, 0。
+
 `maxloc()` 函数将返回位置 4 的最大值，而不是你可能预期的位置 0（`array(0)` 的值为 1，所有其他元素的值均为 0）。这是因为下界不会自动传播到调用的子程序或函数。
+
 这是一种折中方案。如果下界实际上传播到了例程，那么使用作为参数传递的数组就需要一致地使用下界（和上界）：
 
 ```
@@ -8746,9 +8533,10 @@ enddo
 ```
 
 对于所有数组均需如此。
+
 由于默认下界并不常见，将负担留给那些实际使用非平凡下界的程序，比将负担留给所有程序更具便利性。
 
- 数组声明：`dimension()` 对比 `dimension(*)`。向函数和子程序传递参数的规则非常简单：除非显式知道例程的接口——通过模块、接口块，或者因为它是内部例程——否则编译器将遵循 FORTRAN 77 约定。
+数组声明：`dimension()` 对比 `dimension(*)`。向函数和子程序传递参数的规则非常简单：除非显式知道例程的接口——通过模块、接口块，或者因为它是内部例程——否则编译器将遵循 FORTRAN 77 约定。
 
 ## 附录 B：注意事项
 
@@ -8777,69 +8565,66 @@ end subroutine print_array
 ```
 
 这至少意味着数组的大小是未知的。实际上，循环将不会按预期运行（`size()` 函数可能返回零），或者程序可能会崩溃。
+
 作为一个经验法则，尽可能使用模块。你不需要考虑这些接口问题，而且编译器可以进行更多的检查。
 
 ## B.3 动态库
 
 在程序中打开文件并在 DLL 中使用（或反之）——一个动态库，无论是 Windows 上的 "DLL"、Mac OSX 上的 "dylib"，还是 Linux 上的共享对象（shared object），最好被认为一个与调用程序具有某些特殊连接的独立程序。正如两个程序不共享磁盘上文件的访问权限一样，程序和动态库之间也不共享访问权限。实际结果是，如果你在程序的的逻辑单元号 (LUN) 10 上打开了一个文件，库对对此一无所知。如果你在库内部使用 LUN 10，它可能连接到一个完全不同的文件。这是由于将 LUN 作为全局资源使用导致的。你可以将数字作为参数传递，但不能传递连接本身。这进一步说明了动态库的工作方式。
-某些编译器为此问题以及相关的内存分配和释放问题提供了解决方案（见下文），但你需要意识到这一点。在程序中打开文件并在 DLL 中使用（或反之）——一个动态库，无论是 Windows 上的 "DLL"、Mac OSX 上的 "dylib"，还是 Linux 上的共享对象，最好被认为一个与调用程序具有某些特殊连接的独立程序。正如两个程序不共享磁盘上文件的访问权限一样，程序和动态库之间也不共享访问权限。实际结果是，如果你在程序的逻辑单元号 (LUN) 10 上打开了一个文件，库对对此一无所知。如果你在库内部使用 LUN 10，它可能连接到一个完全不同的文件。这是由于将 LUN 作为全局资源使用导致的。你可以将数字作为参数传递，但不能传递连接本身。这进一步说明了动态库的工作方式。
-某些编译器为此问题以及相关的内存分配和释放问题提供了解决方案（见下文），但你需要意识到这一点。在程序中打开文件并在 DLL 中使用（或反之）——一个动态库，无论是 Windows 上的 "DLL"、Mac OSX 上的 "dylib"，还是 Linux 上的共享对象，最好被认为一个与调用程序具有某些特殊连接的独立程序。正如两个程序不共享磁盘上文件的访问权限一样，程序和动态库之间也不共享访问权限。实际结果是，如果你在程序的逻辑单元号 (LUN) 10 上打开了一个文件，库对对此一无所知。如果你在库内部使用 LUN 10，它可能连接到一个完全不同的文件。这是由于将 LUN 作为全局资源使用导致的。你可以将数字作为参数传递，但不能传递连接本身。这进一步说明了动态库的工作方式。
-某些编译器为此问题以及相关的内存分配和释放问题提供了解决方案（见下文），但你需要意识到这一点。
 
-在程序中打开文件并在 DLL 中使用（或反之）——一个动态库，无论是 Windows 上的 "DLL"、Mac OSX 上的 "dylib"，还是 Linux 上的共享对象，最好被认为一个与调用程序具有某些特殊连接的独立程序。正如两个程序不共享磁盘上文件的访问权限一样，程序和动态库之间也不共享访问权限。实际结果是，如果你在程序的逻辑单元号 (LUN) 10 上打开了一个文件，库对对此一无所知。如果你在库内部使用 LUN 10，它可能连接到一个完全不同的文件。这是由于将 LUN 作为全局资源使用导致的。你可以将数字作为参数传递，但不能传递连接本身。这进一步说明了动态库的工作方式。
-某些编译器为此问题以及相关的内存分配和释放问题提供了解决方案（见下文），但你需要意识到这一点。
+
+
+某些编译器为此问题以及相关的内存分配和释放问题提供了解决方案（见下文），但你需要意识到这一点。在程序中打开文件并在 `DLL` 中使用（或反之）——一个动态库，无论是 Windows 上的 `"DLL"`、Mac OSX 上的 `"dylib"`，还是 Linux 上的共享对象，最好被认为一个与调用程序具有某些特殊连接的独立程序。正如两个程序不共享磁盘上文件的访问权限一样，程序和动态库之间也不共享访问权限。实际结果是，如果你在程序的逻辑单元号 (`LUN`) 10 上打开了一个文件，库对对此一无所知。如果你在库内部使用 `LUN` 10，它可能连接到一个完全不同的文件。这是由于将 `LUN` 作为全局资源使用导致的。你可以将数字作为参数传递，但不能传递连接本身。这进一步说明了动态库的工作方式。
 
 ## 命令行参数在 DLL 中不可用
 
-`command_argument` 内置例程与其它语言一起可以访问程序。注意的是，它在 DLL 中并不总是可用的。
+`command_argument` 内置例程与其它语言一起可以访问程序。注意的是，它在 `DLL` 中并不总是可用的。
 
-这种情况并非反过来：一个程序无法让其子程序或数据可用。只有通过显式传递引用，它们才能变得可用。DLL 被创建为某种程度的“程序”，可以在任何上下文中使用。
+这种情况并非反过来：一个程序无法让其子程序或数据可用。只有通过显式传递引用，它们才能变得可用。`DLL` 被创建为某种程度的“程序”，可以在任何上下文中使用。
 
 ## 来自主程序的子程序或数据在 DLL 中
 
-在 DLL 中的子程序和数据对主程序是可用的（或者链接到它的 DLL），如果它让其可用。这种方法取决于平台，DLL 无法依赖它。没有保证该上下文中存在例程。
+在 `DLL` 中的子程序和数据对主程序是可用的（或者链接到它的 `DLL`），如果它让其可用。这种方法取决于平台，`DLL` 无法依赖它。没有保证该上下文中存在例程。
 
 ## 附录 C
 
 ## 商标
 
-DISLIN 属于德国林道的马克斯·普朗克太阳系研究所。
+`DISLIN` 属于德国林道的马克斯·普朗克太阳系研究所。
 
-Doxygen 是由 Dimitri van Heesch 维护的开源程序。
-GNU、gcc 和 gfortran 是自由基金会的商标。
-gnuplot 是由自由基金会开发和维护的绘图程序。
+`Doxygen` 是由 Dimitri van Heesch 维护的开源程序。
 
-Intel Fortran 是 Intel 的商标。
+`GNU`、`gcc` 和 `gfortran` 是自由基金会的商标。
 
-Interactor 是 Interactive Services Ltd. 的商标。
+`gnuplot` 是由自由基金会开发和维护的绘图程序。
 
-Java 是 Oracle 的商标。
+`Intel Fortran` 是 Intel 的商标。
 
-Linux 是 Linux Mark Institute 处理的商标。
+`Interactor` 是 Interactive Services Ltd. 的商标。
 
-MATLAB 是 Math Works, Inc. 的商标。
+`Java` 是 Oracle 的商标。
 
-McCabe IQ 是 McCabe Software 的商标。
+`Linux` 是 Linux Mark Institute 处理的商标。
 
-MS Visual Studio 和 MS Windows 是 Microsoft 的商标。
+`MATLAB` 是 Math Works, Inc. 的商标。
 
-MySQL 是位于 http://www.mysql.com 的开源项目。
+`McCabe IQ` 是 McCabe Software 的商标。
 
-Perl 是一种动态编程语言。其主页是 http://www.perl.org。
+`MS Visual Studio` 和 `MS Windows` 是 Microsoft 的商标。
 
-PGI CUDA 是 Portland Group 和 NVIDIA 的商标。
+`MySQL` 是位于 http://www.mysql.com 的开源项目。
 
-PLplot 是位于 http://plplot.sf.net 的开源项目。
+`Perl` 是一种动态编程语言。其主页是 http://www.perl.org。
 
-PostScript 和 PDF 是 Adobe 的商标。
+`PGI CUDA` 是 Portland Group 和 NVIDIA 的商标。
 
-Python 是一种动态语言。其主页是 http://www.python.org。
+`PLplot` 是位于 http://plplot.sf.net 的开源项目。
 
-Xeffort 由 Dujic 开发和维护。
+`PostScript` 和 `PDF` 是 Adobe 的商标。
 
+`Python` 是一种动态语言。其主页是 http://www.python.org。
 
-
-
+`Xeffort` 由 Dujic 开发和维护。
 
 [15] Chris Bates. 网页编程：构建互联网应用程序. Hoboken NJ: John Wiley & Sons, 2001.
 
@@ -8913,25 +8698,19 @@ Xeffort 由 Dujic 开发和维护。
 
 [51] “Fortran 代码集.” H. Noble, 访问 2012 年 3 月，http://www.personal.psu.edu/faculty/h/ddk/fortran.html.
 
-[52] 使用 Intel 编译器时浮点结果结果的一致性，或我的总是总是总是总是总是。。。
+[52] 使用 Intel 编译器时浮点数结果的一致性，或为什么我的应用程序总是给出错误的答案。英特尔公司，2009，http://software.intel.com/en-us/articles/consistency-of-floating-point-results-using-the-intel-compiler/
 
-..............          and J. , 访问 2012 年 3 月，http://www.3../ /ran.
 
-[54] Norman S. Clement and Walter Spector. 现代 Fortran：风格与用法. New York: Cambridge University Press, 2012.
 
-[55] “Fortran                . 月.
+[28] “破除关于 Fortran 的神话.” Craig T. Tedo, 访问 2012 年 3 月, http://www.box.net/shlet/gksd4706a9.
 
-[56] “gtk-fortran.” J.ise, 访问 2012 年 3 月，http://github.com.j../gtk-fortran/
+[29] “gtk-fortran.” Jerry Delise, 访问 2012 年 3 月, http://github.com/jerrydd/gtk-fortran/wiki.
 
-.
-
-[57] “ Fortran.” Kay Delise, 访问 2012 年 3 月，http://coding.com/j../gtk-fortran/wiki.
-
-[31] “Cache misses.” Kay Diederich, 访问 2012 年 3 月，http://coding.derkeiler.com/Archive/comp.lang.fortran/2006-11/msg00341.html.
+[31] “缓存未命中.” Kay Diederich, 访问 2012 年 3 月, http://coding.derkeiler.com/Archive/comp.lang.fortran/2006-11/msg00341.html.
 
 [32] "每个程序员都应该了解内存，第 1 部分." Ulrich Dreper, http://lwn.net/Articles/250967/, 2007.
 
-[33] "Xeffort." Juglosavl Dijic, 访问 2012 年 3 月，http://www.xeffort.com.
+[33] "Xeffort." Juglosavl Dijic, 访问 2012 年 3 月, http://www.xeffort.com.
 
 [34] J. Jia, D.W.I. Rouson and X. Xu. 科学软件设计：面向对象的方法. New York: Cambridge University Press, 2011.
 
@@ -8939,7 +8718,7 @@ Xeffort 由 Dujic 开发和维护。
 
 [36] W. Braineder 等人. Fortran 2003 编程指南. New York: Springer, 2009.
 
-[37] "Junit." Erich Gamma, 访问 2012 年 3 月，http://www.junit.org.
+[37] "Junit." Erich Gamma, 访问 2012 年 3 月, http://www.junit.org.
 
 [38] Simon Geoff. 给作者的电子邮件，2006.
 
@@ -8947,94 +8726,41 @@ Xeffort 由 Dujic 开发和维护。
 
 [40] P. Goodlifood. 代码手艺：编写优秀代码的实践. San Francisco: No Start Press., Inc., 2007.
 
-[41] "CUDA Fortran，编程指南与参考." The Portland Group, 访问 2012 年 3 月，http://www.pgroup.com/lit/whitepapers/pgcudaf.org.
+[41] "CUDA Fortran，编程指南与参考." The Portland Group, 访问 2012 年 3 月, http://www.pgroup.com/lit/whitepapers/pgcudaf.org.
 
 [42] Les Hatton. 高完整性与安全关键系统的更安全开发. New York: McGraw-Hill Book Company, 1994.
 
-[43] “Fossil – 简单、高可靠、分布式的软件管理.” D. Richard Hipp, 访问 2012 年 3 月，http://fossil-scm.org.
+[43] “Fossil – 简单、高可靠、分布式的软件管理.” D. Richard Hipp, 访问 2012 年 3 月, http://fossil-scm.org.
 
-[44] “SQLite.” D. Richard Hipp, 访问 2012 年 3 月，http://www.sqlite.org.
+[44] “SQLite.” D. Richard Hipp, 访问 2012 年 3 月, http://www.sqlite.org.
 
-[45] “Fortran 中的区间算术，技术论文.” SUN Microsystems Inc., 访问 2012 年 3 月，http://developers.sun.com/constudio/archive/whitepapers/interval-final.pdf.
+[45] “Fortran 中的区间算术，技术论文.” SUN Microsystems Inc., 访问 2012 年 3 月, http://developers.sun.com/constudio/archive/whitepapers/interval-final.pdf.
 
-[46] “生物信息学中（伪）随机数生成的良好实践.” D. Jones, 访问 2012 年 3 月，http://www.cs.ucl.ac.uk/staff/d.jones/GoodPracticeRNG.pdf.
+[46] “生物信息学中（伪）随机数生成的良好实践.” D. Jones, 访问 2012 年 3 月, http://www.cs.ucl.ac.uk/staff/d.jones/GoodPracticeRNG.pdf.
 
-[47] “用于健健数值和几何计算的核心库.” V. Karchetti, I. Pechtanski, and Yap C., 访问 2012 年 3 月，http://cs.nyu.edu/pechtcha/pubs/scg99.pdf.
-
-[48] B. Kleb. 给作者的电子邮件，2009.
-
-[49] “用于 FUND 项目的 F95 编码.” B. Kleb 等人, 访问 2012 年 3 月，http://fun3d.larc.nasa.gov/chapter-9.html#f95_coding-standard.
-
-[50] “Funit.” Bil Kleb 等人, 访问 2012 年 3 月，http://nasarb.rubyforge.org.
-
-[51] “Fortran 代码集.” H. Noble, 访问 2012 年 3 月，http://www.personal.psu.edu/faculty/h/ddk/fortran.html.
-
-[52] 使用 Intel 编译器时浮点数结果的一致性，或为什么我的应用程序总是给出错误的答案。英特尔公司，2009，http://software.intel.com/en-us/articles/consistency-of-floating-point-results-using-the-intel-compiler/
-
-[27] “Fortran 中的 SQLite 面向对象设计.” Victor K. Decyk and Henry J. Gardner, 访问 2012 年 3 月，http://exodus.physics.ucla.edu/fortran95/decykGardner07v3.pdf.
-
-[28] “破除关于 Fortran 的神话.” Craig T. Tedo, 访问 2012 年 3 月，http://www.box.net/shlet/gksd4706a9.
-
-[29] “gtk-fortran.” Jerry Delise, 访问 2012 年 3 月，http://github.com/jerrydd/gtk-fortran/wiki.
-
-[31] “缓存未命中.” Kay Diederich, 访问 2012 年 3 月，http://coding.derkeiler.com/Archive/comp.lang.fortran/2006-11/msg00341.html.
-
-[32] "每个程序员都应该了解内存，第 1 部分." Ulrich Dreper, http://lwn.net/Articles/250967/, 2007.
-
-[33] "Xeffort." Juglosavl Dijic, 访问 2012 年 3 月，http://www.xeffort.com.
-
-[34] J. Jia, D.W.I. Rouson and X. Xu. 科学软件设计：面向对象的方法. New York: Cambridge University Press, 2011.
-
-[35] Ralph Johnson, Erich Gamma, Richard Helm, and John Vlissides. 设计模式：可重用面向对象软件元素. Boston: Addison-Wesley, 1995.
-
-[36] W. Braineder 等人. Fortran 2003 编程指南. New York: Springer, 2009.
-
-[37] "Junit." Erich Gamma, 访问 2012 年 3 月，http://www.junit.org.
-
-[38] Simon Geoff. 给作者的电子邮件，2006.
-
-[39] David Gelerint. Linda 中的生成式通信.ACM 编程与系统事务 7, no. 1 (1985).
-
-[40] P. Goodlifood. 代码手艺：编写优秀代码的实践. San Francisco: No Start Press., Inc., 2007.
-
-[41] "CUDA Fortran，编程指南与参考." The Portland Group, 访问 2012 年 3 月，http://www.pgroup.com/lit/whitepapers/pgcudaf.org.
-
-[42] Les Hatton. 高完整性与安全关键系统的更安全开发. New York: McGraw-Hill Book Company, 1994.
-
-[43] “Fossil – 简单、高可靠、分布式的软件管理.” D. Richard Hipp, 访问 2012 年 3 月，http://fossil-scm.org.
-
-[44] “SQLite.” D. Richard Hipp, 访问 2012 年 3 月，http://www.sqlite.org.
-
-[45] “Fortran 中的区间算术，技术论文.” SUN Microsystems Inc., 访问 2012 年 3 月，http://developers.sun.com/constudio/archive/whitepapers/interval-final.pdf.
-
-[46] “生物信息学中（伪）随机数生成的良好实践.” D. Jones, 访问 2012 年 3 月，http://www.cs.ucl.ac.uk/staff/d.jones/GoodPracticeRNG.pdf.
-
-[47] “用于健健数值和几何计算的核心库.” V. Karchetti, I. Pechtanski, and Yap C., 访问 2012 年 3 月，http://cs.nyu.edu/pechtcha/pubs/scg99.pdf.
+[47] “用于健健数值和几何计算的核心库.” V. Karchetti, I. Pechtanski, and Yap C., 访问 2012 年 3 月, http://cs.nyu.edu/pechtcha/pubs/scg99.pdf.
 
 [48] B. Kleb. 给作者的电子邮件，2009.
 
-[49] “用于 FUND 项目的 F95 编码.” B. Kleb 等人, 访问 2012 年 3 月，http://fun3d.larc.nasa.gov/chapter-9.html#f95_coding-standard.
+[49] “用于 FUND 项目的 F95 编码.” B. Kleb 等人, 访问 2012 年 3 月, http://fun3d.larc.nasa.gov/chapter-9.html#f95_coding-standard.
 
-[50] “Funit.” Bil Kleb 等人, 访问 2012 年 3 月，http://nasarb.rubyforge.org.
+[50] “Funit.” Bil Kleb 等人, 访问 2012 年 3 月, http://nasarb.rubyforge.org.
 
-[51] “Fortran 代码集.” H. Noble, 访问 2012 年 3 月，http://www.personal.psu.edu/faculty/h/ddk/fortran.html.
+[51] “Fortran 代码集.” H. Noble, 访问 2012 年 3 月, http://www.personal.psu.edu/faculty/h/ddk/fortran.html.
 
 [52] 使用 Intel 编译器时浮点数结果的一致性，或为什么我的应用程序总是给出错误的答案。英特尔公司，2009，http://software.intel.com/en-us/articles/consistency-of-floating-point-results-using-the-intel-compiler/
 
-
-
-
-
-## 索引
+# 索引
 
 ## 分配
+
 - 可分配数组, 9, 35, 41, 82, 83, 240
 - 分配, 38, 39, 40, 42, 131, 167, 216, 240
 - 自动重新分配, 194
 - 解放, 14, 35, 36, 35, 46, 47, 224, 242
 - 分析
-- 动态, 221
-- 静态, 231
+  - 动态, 221
+  - 静态, 231
 - 编译器特定的, 9, 121, 131, 238
 - 优化, 15, 127, 129
 - 选项, 15, 41, 155, 223
@@ -9043,6 +8769,7 @@ Xeffort 由 Dujic 开发和维护。
 - 条件, 19, 119, 123, 124, 128, 130, 135, 181, 210, 232
 
 ## 数组
+
 - 假设形状, 221
 - 自动的, 40, 131
 - 显式形状, 238
@@ -9052,6 +8779,7 @@ Xeffort 由 Dujic 开发和维护。
 - 零长度, 19
 
 ## 属性
+
 - vii, 7, 22, 41, 42, 80, 123, 233
 - 可分配的, 28, 41, 44, 47
 - 外部, 105, 106, 109, 220
@@ -9064,24 +8792,26 @@ Xeffort 由 Dujic 开发和维护。
 - 目标,
 
 ## 数据库
+
 - 76, 79, 83, 85, 88, 92, 243
 - MySQL, 243
 - SQL, 85
 - SQLite, 76, 243
 
 ## 衍生类型
+
 - 1, 6, 7, 24, 26, 27, 28, 29, 36, 42, 43, 44, 45, 46, 64, 83, 123, 124, 176, 187, 193
 - 默认赋值, 257
 - 用户定义赋值, 193
 - 设计模式, 77, 189, 192, 195, 207
 - 动态, ix, 218, 160, 178, 187, 192, 221, 232, 241
-
 - 绑定, 82, 100, 164
 - 位, x: 7, 10, 17, 22, 30, 71, 77, 92, 123, 124, 143, 188
 - 字节, 126, 236
 - 元素例程, 75
 
 ## 文件格式
+
 - PDF, 92, 243
 - PNG, 95
 - PostScript, 92, 243
@@ -9089,6 +8819,7 @@ Xeffort 由 Dujic 开发和维护。
 - 框架, xi, 114, 115, 118, 119, 120
 
 ## 函数
+
 - C++, 92, 163, 167, 189, 219, 227
 - 调用约定, 79, 81
 - 字符字符串, 9, 36, 37, 60, 77
@@ -9096,21 +8827,23 @@ Xeffort 由 Dujic 开发和维护。
 - 命令行参数, 93
 - COMMON块, 52, 56
 - 编译器, x, iv, 5, 6, 7, 9, 10, 15, 16, 35, 36, 49, 57, 80, 81, 120, 121, 126, 127, 129, 131, 132, 134, 168, 197, 217, 219, 220, 221, 222, 234, 235, 236, 240, 241
-- count(), 4
+- `count()`, 4
 - 内建, x: 9, 12, 27, 84, 126, 128, 161, 170, 196, 206, 232
-- present(), 6
+- `present()`, 6
 - 递归的, 5, 32, 194
-- size(), 4, 241
-- transfer(), 9
+- `size()`, 4, 241
+- `transfer()`, 9
 - 高斯, 115, 135
 - 通用的, x: 5, 6, 28, 51, 75, 76, 109, 174, 175, 184, 222
-- gfortran, x, 49, 81, 127, 146, 229, 243
-- nuplot, 243
+- `gfortran`, x, 49, 81, 127, 146, 229, 243
+- `nuplot`, 243
 
 ## INDEX
-- GOTO, 10
+
+- `GOTO`, 10
 
 ## 内存
+
 - GPU, 219
 - 缓存, 48, 49
 - 图形界面, 92, 95, 99, 100, 104, 119
@@ -9120,9 +8853,9 @@ Xeffort 由 Dujic 开发和维护。
 - 栈, 35, 81, 130, 131, 239, 240
 - 图形, xi, 93, 95
 - 模块, 1, 8, 24, 39, 44, 46, 52, 55, 56, 57, 70, 76, 80, 83, 92, 93, 95, 99, 100, 102, 124, 146, 166, 173, 175, 177, 180, 181, 189, 194, 195, 221, 222, 236, 241
-- DISLIN, 243
-- 变量, 57
-- PLplot, 243
+  - DISLIN, 243
+  - 变量, 57
+  - PLplot, 243
 - Windows, 92, 99, 100, 120, 146, 219, 222, 230, 243
 - , 43, 96, 206, 207, 217, 219
 - 导入, 198
@@ -9131,16 +8864,17 @@ Xeffort 由 Dujic 开发和维护。
 - 非推进 I/O, 39
 - Intel Fortran, 49, 81, 100, 221, 230, 243
 - 接口, 5, 8, 10, 15, 24, 39, 54, 59, 75, 76, 78, 79, 80, 83, 92, 93, 95, 99, 102, 124, 166, 173, 175, 192, 196
-- 通用的, 73, 74, 178
+  - 通用的, 73, 74, 178
 
 ## 数值方面
+
 - 接口块, 9, 22, 24, 168, 240
 - 准确性, 115, 130, 155
 - Internet, 105, 109, 220
 - 精度, 73, 122, 126, 130, 155, 255, 234
-- CGL, 107
-- 双精度, 6, 76, 77, 82
-- 单精度, 73
+  - CGL, 107
+  - 双精度, 6, 76, 77, 82
+  - 单精度, 73
 - HTML, 105, 109
 - 数值问题, 135
 - Java, 116, 234
@@ -9149,15 +8883,16 @@ Xeffort 由 Dujic 开发和维护。
 - 对象, 45, 110, 139, 164, 165, 166, 167, 180, 181, 189, 194, 195, 221, 222, 232
 - 面向对象
 - 库, 49, 51, 57, 64, 70, 75, 76, 83, 92, 93, 95, 99, 100, 102, 124, 146, 166, 173, 175, 177, 180, 181, 189, 194, 195, 221, 222, 232
-- 抽象类型, 29, 193
-- 基础类型, 67
-- 类, 4, 127, 180
-- 动态类型, 116, 242
-- 链表, 49
-- 扩展, 1, 4, 5, 6, 8, 9, 20, 27, 28, 29, 31, 33, 34, 45, 50, 55, 56, 57, 59, 61, 64, 70, 73, 74, 75, 76, 77, 79, 80, 81, 82, 84, 92, 93, 95, 99, 100, 102, 105, 106, 107, 109, 113, 115, 116, 119, 120, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 139, 140, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257
-- 类型绑定过程, 64, 164, 188
+  - 抽象类型, 29, 193
+  - 基础类型, 67
+  - 类, 4, 127, 180
+  - 动态类型, 116, 242
+  - 链表, 49
+  - 扩展, 1, 4, 5, 6, 8, 9, 20, 27, 28, 29, 31, 33, 34, 45, 50, 55, 56, 57, 59, 61, 64, 70, 73, 74, 75, 76, 77, 79, 80, 81, 82, 84, 92, 93, 95, 99, 100, 102, 105, 106, 107, 109, 113, 115, 116, 119, 120, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 139, 140, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257
+  - 类型绑定过程, 64, 164, 188
 
 ## 数学
+
 - 面向对象编程
 - 自动微分, 25, 26
 - 推导, 21, 22, 151, 154, 157
@@ -9170,18 +8905,20 @@ Xeffort 由 Dujic 开发和维护。
 - 开源, 85, 92, 243
 
 ## 源码形式
+
 - 自由, 1, 4
 - 随机数, 14, 167, 174, 238
 - 重命名, 176, 187, 188
 - XML 文件, 51, 109, 110, 113
 
 ## 例程
+
 - DOM, 51
 - SAX, 110, 111
 
 ## 例程
+
 - 操作副作用, 134
 - 重载编程, 22, 31
 - 排序, 14, 17, 40, 110, 174, 175, 177
 - 用户定义, 44
-

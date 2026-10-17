@@ -1,23 +1,7 @@
+
 # Arduino：操作系统、编程、项目及更多 Arduino 用户指南（树莓派 2, xml, c++, ruby, html, 项目, php, 编程, 机器人... php, sql, 主机, 微型计算机）
 
-
-
-
-
-
 ![](img/a76f70476fe313ae0aea50fdd57d7f99_0_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 引言
 
@@ -55,51 +39,47 @@ Arduino 生板子、配件、套件和扩展板。目前他们有 21 块板子�
 | AtMega32U4 | 16 |
 | SAM3X | 16 |
 
-
-
-
-
 ### NEWTC 原型板
 
 你可以从 NEWTC 购买预装好的板子，也可以购买单个部件并自行组装。显然，后种方案更有趣，并能让你获得尝试设计实验的机会。如果遇到问题，请不要担心，Arduino 社区随时准备着支持你并回答你的所有问题。
 
-原型板使用的 CPU 是 ATMEGA328P-PU。你还会发现芯片中已经烧录了 Arduino Uno 引导程序。该 DIY 套件的典型特性列如下：
+原型板使用的 CPU 是 `ATMEGA328P-PU`。你还会发现芯片中已经烧录了 Arduino Uno 引导程序。该 DIY 套件的典型特性列如下：
 
 - 原型板自组装版本已预烧录 ArduinoHeart Arduino Uno 引导程序。
-- 支持 HC-06 蓝牙连接器接口
+- 支持 `HC-06` 蓝牙连接器接口
 - TTL 电平 (5V) 4 针连接器
 - 支持 MCU 及兼容接口
 - 外部 12 V 供电，内部提供 3.3V 和 5 V 电源
 
-获取单个部件并开始焊接。你可以在在线商店购买套件。你可以将各个部件焊接在板上，并使用 DM-USB2Serial 进行测试。从 sketch 软件中上传适用于 DM-USTYLE V1.0 DIY 版本板板的程序。插入板子并点击“编译并上传”（Program Compile and Upload）。
+获取单个部件并开始焊接。你可以在在线商店购买套件。你可以将各个部件焊接在板上，并使用 `DM-USB2Serial` 进行测试。从 sketch 软件中上传适用于 `DM-USTYLE V1.0 DIY` 版本板板的程序。插入板子并点击“编译并上传”（`Program Compile and Upload`）。
 
-对于希望将该板作为 AVR 板使用的用户，你有多种编译器可选，从 WINAV、IAR 到 CodeVision AVR 和 ICC AVR。通常情况下，用户会使用板载 ISP 下载编译器生成的输出文件。你可以使用 AD-ISPRO 或 AD-USBISP 进行下载。
+对于希望将该板作为 AVR 板使用的用户，你有多种编译器可选，从 `WINAV`、`IAR` 到 `CodeVision AVR` 和 `ICC AVR`。通常情况下，用户会使用板载 ISP 下载编译器生成的输出文件。你可以使用 `AD-ISPRO` 或 `AD-USBISP` 进行下载。
 
-前者适用于并行端口类型的 STK200/300，而后者对 USB 类型的 STK500 则非常有用。
+前者适用于并行端口类型的 `STK200/300`，而后者对 USB 类型的 `STK500` 则非常有用。
 
 ### 使用 IMAGECRAFT IDE
 
-现在我们将介绍如何建立编译器将代码渲染为 hex 文件，以及如何将其下载到设备。此示例将向你展示如何使用适用于 AT90S23-13 的 STK200入门套装。你可以从 ImageCraft 网站获取更多详情。确保从 ICC 获取“解锁代码”，这会让你的程序获得授权。随后你把程序安装到默认驱动器（例如 C 盘），程序的快捷方式 ICC AVR 将安装在“c:\ice”目录下。在菜单（Menu）中搜索并找到 ImageCraft 开发工具组。
+现在我们将介绍如何建立编译器将代码渲染为 hex 文件，以及如何将其下载到设备。此示例将向你展示如何使用适用于 `AT90S23-13` 的 `STK200` 入门套装。你可以从 ImageCraft 网站获取更多详情。确保从 ICC 获取“解锁代码”，这会让你的程序获得授权。随后你把程序安装到默认驱动器（例如 C 盘），程序的快捷方式 `ICC AVR` 将安装在 `c:\ice` 目录下。在菜单中搜索并找到 ImageCraft 开发工具组。
 
 ### 开始你的项目
 
-当启动 ICC AVR 程序时，你会看到三个区域——项目文件、状态窗口和编辑器。刚开始，它们都是空的。所有项目文件都存储在项目文件列表中。每个具有语法感知的编辑器窗口都将在编辑器部分分配单独的标签页。在项目构建过程中，每条消息都会显示在你的状态窗口中。你可以通过不显示状态窗口或编辑器来为项目文件列表留出最大空间。
+当启动 `ICC AVR` 程序时，你会看到三个区域——项目文件、状态窗口和编辑器。刚开始，它们都是空的。所有项目文件都存储在项目文件列表中。每个具有语法感知的编辑器窗口都将在编辑器部分分配单独的标签页。在项目构建过程中，每条消息都会显示在你的状态窗口中。你可以通过不显示状态窗口或编辑器来为项目文件列表留出最大空间。
 
-在对话框中选择 Project New（新建项目），创建一个新文件夹 c:\icctest。在文件名窗口中输入 First 作为文件名。你的项目名称现在为 First。若要编写并编译代码，你的编译器必须具备正确的选项。项目需要设置，你可以在 Projects（项目）下的 Options（选项）选项卡中选择这些选项。
+在对话框中选择 `Project New`（新建项目），创建一个新文件夹 `c:\icctest`。在文件名窗口中输入 `First` 作为文件名。你的项目名称现在为 `First`。若要编写并编译代码，你的编译器必须具备正确的选项。项目需要设置，你可以在 `Projects`（项目）下的 `Options`（选项）选项卡中选择这些选项。
 
-在选项框中，选择 Paths（路径）选项卡。输出目录、库和头文件的目录路径将在此处指定。库路径和包含路径将自动设置为“c:\icelib”和“c:\iceinclude”。
+在选项框中，选择 `Paths`（路径）选项卡。输出目录、库和头文件的目录路径将在此处指定。库路径和包含路径将自动设置为 `c:\icelib` 和 `c:\iceinclude`。
 
-在输出目录中，你会找到与项目相关的文件以及输出结果。除非指定为绝对路径，否则它们相对于项目目录。在编辑框中，如果你输入“objects”，IDE 将“c:\icctest\first\objects”输出文件。
+在输出目录中，你会找到与项目相关的文件以及输出结果。除非指定为绝对路径，否则它们相对于项目目录。在编辑框中，如果你输入 `objects`，IDE 将 `c:\icctest\first\objects` 输出文件。
 
 ### 编译器
 
-进入对话框中的编译器页面并选择选项。在列表中，点击 **Output Format**（输出格式）并点击 **Intel HEX**。保持勾选“Accept C++ Comments”（接受 C++ 注释）旁边的复选框。
+进入对话框中的编译器页面并选择选项。在列表中，点击 `Output Format`（输出格式）并点击 `Intel HEX`。保持勾选“Accept C++ Comments”（接受 C++ 注释）旁边的复选框。
 
 ### 目标
 
-接下来点击 **target**（目标）选项卡。在这里你可以针对特定目标设置特定选项。在本特定的教程中，你必须点击 **Device Configuration**（设备配置）选项卡并选择 2313。此 ImageCraft IDE 会变得非常简单，因为它只显示编译器中整个工具链所需的选项。这包含了链接器、汇编器和编译器。
+接下来点击 `target`（目标）选项卡。在这里你可以针对特定目标设置特定选项。在本特定的教程中，你必须点击 `Device Configuration`（设备配置）选项卡并选择 `2313`。此 ImageCraft IDE 会变得非常简单，因为它只显示编译器中整个工具链所需的选项。这包含了链接器、汇编器和编译器。
 
-应用说明将使用一个简单的程序来递增 PORTB，那里连接了 8 个 LED。一个 8 位定时器将为每个 LED产生延迟。
+应用说明将使用一个简单的程序来递增 `PORTB`，那里连接了 8 个 LED。一个 8 位定时器将为每个 LED 产生延迟。
 
 ```c
 #include <io2313.h>
@@ -127,12 +107,8 @@ void delay(void) {
 }
 ```
 
-
-
-
-
-- 当你下次在 **Tools** 下选择 **Board** 时，它实际上意味着你正在选择你打算写入引导加载程序的开发板。这并不意味着你当前正在用于编写运行的开发板。
-- 然后在 **Burn Bootloader.** 下点击 **Arduino as ISP**。
+- 当你下次在 `Tools` 下选择 `Board` 时，它实际上意味着你正在选择你打算写入引导加载程序的开发板。这并不意味着你当前正在用于编写运行的开发板。
+- 然后在 `Burn Bootloader` 下点击 `Arduino as ISP`。
 
 # 第 5 章
 
@@ -148,11 +124,11 @@ void delay(void) {
 
 对于此示例，你需要一个 Arduino Yun 微处理器。它带有以太网、用于输入/输出编号为 20 的数字引脚以及 WiFi，因此你可以直接开始，除非你所在的国家对使用支持 WiFi 的设备有法律限制。
 
-Arduino Yun 有一个 micro-SD 卡槽、一个 micro-USB 连接接口、3 个复位按钮和 USCP Header。你 Yun 中的 Atheros 处理器支持 Linux 发行版 OpenWrt-Yun。这让用户拥有良好的计算机网络能力以及强大的工作功能。
+Arduino Yun 有一个 micro-SD 卡槽、一个 micro-USB 连接接口、3 个复位按钮和 USCP Header。你 Yun 中的 Atheros 处理器支持 Linux 发行版 `OpenWrt-Yun`。这让用户拥有良好的计算机网络能力以及强大的工作功能。
 
 ##### 开始检查 Yun WiFi 状态项目
 
-当你运行 Yun 中 `/usr/bin` 文件夹下示例所示的 "pretty-wifi-info.lua" 脚本时，你将获得有关 Yun WiFi 状态的信息。但请注意，要通过串口连接 Yun，否则它将不会打印。将电脑 USB 线连接到 Yun，并在 Port 菜单中选择正确的端口。
+当你运行 Yun 中 `/usr/bin` 文件夹下示例所示的 `pretty-wifi-info.lua` 脚本时，你将获得有关 Yun WiFi 状态的信息。但请注意，要通过串口连接 Yun，否则它将不会打印。将电脑 USB 线连接到 Yun，并在 Port 菜单中选择正确的端口。
 
 ##### 硬件与电路
 
@@ -163,8 +139,12 @@ Arduino Yun 有一个 micro-SD 卡槽、一个 micro-USB 连接接口、3 个复
 
 ##### WiFi 状态项目代码
 
-首先，你需要在头文件中包含 Process 类。
+首先，你需要在头文件中包含 `Process` 类。
+
+```cpp
 #include <Process.h>
+```
+
 接下来，你需要启动 Bridge 和串口通信。如果未能通过串口连接电脑，程序将无法运行。
 
 ```cpp
@@ -256,7 +236,7 @@ void loop() {
 
 #### B) 文件写入脚本
 
-此示例告诉你如何使用 FileIO 类在 Yun 的文件系统中写入文件。首先在 `/tmp` 中创建一个 shell 脚本。然后执行它。
+此示例告诉你如何使用 `FileIO` 类在 Yun 的文件系统中写入文件。首先在 `/tmp` 中创建一个 shell 脚本。然后执行它。
 
 ##### 硬件与电路
 
@@ -264,7 +244,7 @@ void loop() {
 
 ##### 文件写入脚本代码
 
-为了与文件系统通信，必须包含 FileIO 头文件 `#include<FileIO.h>`。接下来，你需要在 `setup()` 中初始化 FileSystem。一旦串口连接，启动自定义函数 `uploadScript()`。
+为了与文件系统通信，必须包含 FileIO 头文件 `#include <FileIO.h>`。接下来，你需要在 `setup()` 中初始化 FileSystem。一旦串口连接，启动自定义函数 `uploadScript()`。
 
 ```cpp
 void setup () {
@@ -304,7 +284,7 @@ script.print("ifconfig wlan0 | grep 'RX bytes\n'");
 script.close(); // 关闭文件
 ```
 
-为了使脚本可执行，你必须实例化 Process。现在使用 `chmod` 修改文件模式；带有路径发送 `chmod`。shell 脚本现在将像应用程序一样运行。通过 `runScript()` 函数创建 Process。这将运行你的脚本并将结果打印到串口监视器。在创建它后，通过调用两个函数 `Process.begin (filepath)` 和 `Process.run()` 启动脚本。
+为了使脚本可执行，你必须实例化 Process。现在使用 `chmod` 修改文件模式；带有路径发送 `chmod`。shell 脚本现在将像应用程序一样运行。通过 `runScript()` 函数创建 Process。这将运行你的脚本并将结果打印到串口监视器。在创建它后，通过调用两个函数 `Process.begin(filepath)` 和 `Process.run()` 启动脚本。
 
 ```cpp
 void runScript() {
@@ -329,16 +309,21 @@ Serial.println(output);
 ```
 
 完整代码如下：
+
 /*
+
 使用 FileIO 类写入文件。
 
 此程序演示了如何向 Yun 文件系统写入文件。
+
 在 /tmp 中创建一个 shell 脚本，并在之后执行。
 
 创建于 2010年6月7日
+
 作者: Cristian Maglie
 
 此示例代码属于公有领域。
+
 */
 
 ```cpp
@@ -379,9 +364,9 @@ void runScript() {
 }
 ```
 
+```cpp
 String output = "";
 
-```cpp
 // 读取脚本的输出
 while (myscript.available()) {
   output += (char)myscript.read();
@@ -405,14 +390,14 @@ Serial.flush();
 
 ### 代码
 
-首先包含 HTTPClient 以及 Bridge 库。
+首先包含 `HTTPClient` 以及 `Bridge` 库。
 
 ```cpp
 #include <Bridge.h>
 #include <HttpClient.h>
 ```
 
-开始设置 Bridge () 并确保串口连接已建立。然后你可以开始循环 ()。
+开始设置 `Bridge()` 并确保串口连接已建立。然后你可以开始 `loop()`。
 
 ```cpp
 void setup() {
@@ -424,26 +409,19 @@ void setup() {
 }
 ```
 
-在 loop () 中创建 HTTPClient 实例。调用你选择的 URL client.get(URL) 函数。
+在 `loop()` 中创建 `HTTPClient` 实例。调用你选择的 URL `client.get(URL)` 函数。
 
 ```cpp
 void loop() {
   HttpClient client;
   client.get("http://arduino.cc/asciilogo.txt");
-```
 
-检查客户端缓冲区服务器内存并读取字节以将其打印到串口监视器中。使用 5 秒的周期。
-
-```cpp
-while (client.available()) {
-  char c = client.read();
-  Serial.print(c);
-}
-Serial.flush();
-```
-
-```cpp
-delay(5000);
+  while (client.available()) {
+    char c = client.read();
+    Serial.print(c);
+  }
+  Serial.flush();
+  delay(5000);
 }
 ```
 
@@ -452,28 +430,24 @@ delay(5000);
 ```cpp
 #include <Bridge.h>
 #include <HttpClient.h>
-```
 
-```cpp
 void setup() {
-pinMode(13, OUTPUT);
-digitalWrite(13, LOW);
-Bridge.begin();
-Serial.begin(9600);
-while(!Serial);
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
+  Bridge.begin();
+  Serial.begin(9600);
+  while(!Serial);
 }
-```
 
-```cpp
 void loop() {
-HttpClient client;
-client.get("http://arduino.cc/asciilogo.txt");
-while (client.available()) {
-char c = client.read();
-Serial.print(c);
-}
-Serial.flush();
-delay(5000);
+  HttpClient client;
+  client.get("http://arduino.cc/asciilogo.txt");
+  while (client.available()) {
+    char c = client.read();
+    Serial.print(c);
+  }
+  Serial.flush();
+  delay(5000);
 }
 ```
 
@@ -495,7 +469,7 @@ delay(5000);
 
 现在使用剩余的导线配合电阻连接到引脚 5 和绿色阴极、引脚 3 和红色阴极，以及引脚 6 和蓝色阴极。如果所有 RGB LED 具有共阴极，则它们共用电源引脚。
 
-现在，将一个引脚设为 LOW 而不是 HIGH，在该二极管上将产生某些电压差。现在，如果你使用 `analogWrite()` 使用 255，LED 将关闭，而值 0 将使其以全亮度开启。实际上上，你调用的是 `analogWrite (pin, 255-brightness)` 而不是 `analogWrite (pin, 255)`。这在数学上并不复杂。
+现在，将一个引脚设为 LOW 而不是 HIGH，在该二极管上将产生某些电压差。现在，如果你使用 `analogWrite()` 使用 255，LED 将关闭，而值 0 将使其以全亮度开启。实际上上，你调用的是 `analogWrite(pin, 255-brightness)` 而不是 `analogWrite(pin, 255)`。这在数学上并不复杂。
 
 #### 读取 ASCII 字符串的代码
 
@@ -509,7 +483,7 @@ const int greenPin = 5;
 const int bluePin = 6;
 ```
 
-串口通信将在你的电脑和 Arduino setup () 之间以每秒 9600 比特的速度开始。此外，配置引脚为输出。
+串口通信将在你的电脑和 Arduino `setup()` 之间以每秒 9600 比特的速度开始。此外，配置引脚为输出。
 
 ```cpp
 Serial.begin(9600);
@@ -548,38 +522,31 @@ while (Serial.available() > 0) {
 
 这就是示例的结束。
 
-
-
-
 电阻器串联并根据其值连接，它们各自都有电压。
 
 ![](img/a76f70476fe313ae0aea50fdd57d7f99_37_0.png)
-
 ![](img/a76f70476fe313ae0aea50fdd57d7f99_38_0.png)
 
 ### 代码
-传感器值以 ASCII 编码的小进制数字从 Arduino 传递到计算机。使用0 到 9 每个数字的 ASCII 字符来传输数字。例如，对于数字 348，你会得到 ASCII 字节值 51、52 和 56。（3 的字节值为 51，……依此类推）。
 
-```
-/*/*
-```
+传感器值以 ASCII 编码的小进制数字从 Arduino 传递到计算机。使用 0 到 9 每个数字的 ASCII 字符来传输数字。例如，对于数字 348，你会得到 ASCII 字节值 51、52 和 56。（3 的字节值为 51，……依此类推）。
 
+```cpp
+/*
 此示例读取三个模拟传感器（电位器最容易实现）并串行发送它们的值。底部的 Processing 和 Max/MSP 程序接收这三个值并使用它们来改变屏幕的背景颜色。
 
 电路：
 - 电位器连接到模拟输入 0、1 和 2
-
 http://www.arduino.cc/en/Tutorial/VirtualColorMixer
-
 创建于 2006年2月2日
 作者 David A. Mellis
 修改于 2011年8月30日
 作者 Tom Igoe 和 Scott Fitzgerald
-
 此示例代码属于公有领域。
 */
-
 ```
+
+```cpp
 const int redPin = A0; // 控制红色的传感器
 const int greenPin = A1; // 控制绿色的传感器
 const int bluePin = A2; // 控制蓝色的传感器
@@ -594,18 +561,12 @@ void loop() {
   Serial.print(analogRead(greenPin));
   Serial.print(",");
   Serial.println(analogRead(bluePin));
-```
-
-```
 }
-
 ```
 
-```
+```cpp
 /* 用于此示例的 Processing 代码
-
 // 此示例代码属于公共领域。
-
 import processing.serial.*;
 
 float redValue = 0; // 红色值
@@ -615,64 +576,58 @@ float blueValue = 0; // 蓝色值
 Serial myPort;
 
 void setup() {
-size(200, 200);
-
-// 列出所有可用串口端口
-println(Serial.list());
-// 我知道我的 Mac 上串口列表中的第一个端口
-// 始终是我的 Arduino，所以我打开 Serial.list()[0]。
-// 打开你正在使用的任何端口。
-myPort = new Serial(this, Serial.list()[0], 9600);
-// 除非收到换行符，否则不生成 serialEvent()：
-myPort.bufferUntil('\n');
+  size(200, 200);
+  // 列出所有可用串口端口
+  println(Serial.list());
+  // 我知道我的 Mac 上串口列表中的第一个端口
+  // 始终是我的 Arduino，所以我打开 Serial.list()[0]。
+  // 打开你正在使用的任何端口。
+  myPort = new Serial(this, Serial.list()[0], 9600);
+  // 除非收到换行符，否则不生成 serialEvent()：
+  myPort.bufferUntil('\n');
 }
 
 void draw() {
-// 使用颜色值设置背景颜色：
-background(redValue, greenValue, blueValue);
+  // 使用颜色值设置背景颜色：
+  background(redValue, greenValue, blueValue);
 }
 
 void serialEvent(Serial myPort) {
-```
+  // 获取 ASCII 字符串：
+  String inString = myPort.readUntil('\n');
 
-```
-// 获取 ASCII 字符串：
-String inString = myPort.readUntil('\n');
-
-if (inString != null) {
- // 去除任何空白字符
- inString = trim(inString);
- // 按逗号分割字符串，并将生成的
- // 子字符串转换为浮点数组；
- float[] colors = float(split(inString, ","));
- // 如果数组至少有三个元素，你就知道
- // 你获取了完整内容。将数字放入
- // 颜色变量中：
- if (colors.length>=3) {
- // 映射到范围 0-255：
-  redValue = map(colors[0], 0, 1023, 0, 255);
-  greenValue = map(colors[1], 0, 1023, 0, 255);
-  blueValue = map(colors[2], 0, 1023, 0, 255);
- }
+  if (inString != null) {
+    // 去除任何空白字符
+    inString = trim(inString);
+    // 按逗号分割字符串，并将生成的
+    // 子字符串转换为浮点数组；
+    float[] colors = float(split(inString, ","));
+    // 如果数组至少有三个元素，你就知道
+    // 你获取了完整内容。将数字放入
+    // 颜色变量中：
+    if (colors.length >= 3) {
+      // 映射到范围 0-255：
+      redValue = map(colors[0], 0, 1023, 0, 255);
+      greenValue = map(colors[1], 0, 1023, 0, 255);
+      blueValue = map(colors[2], 0, 1023, 0, 255);
+    }
+  }
 }
+```
+
+```cpp
 /*
 此示例的 Max/MSP 补丁
-
 ----------begin_max5_patcher----------
 1512.3oc4Z00aaEE8YmeD9ktB3sXojrIaAsXX4g8xQYeoXfVh1gqRjdT
 TsIn2K+PJUvP1J14444
 ...
 ... (Max/MSP 补丁代码在原始 OCR 中损坏/不完整)
-```
-} if (colors.length>=3) {
-...（其余逻辑如下）
+----------end_max5_patcher----------
 */
-
-
-
-
-
 ```
+
+```cpp
 // 绘制从黑色到白的渐变
 for (int i = 0; i < 256; i++) {
   stroke(i);
@@ -689,10 +644,11 @@ port.write(mouse);
 
 ### 此示例使用了 Max/MSP v5 touch
 
-----------begin_max5_patch----------
+```
+----------begin_max5_patcher----------
 1008.3ocXsaiaCD9r8uhA5qr4eHia0aAMaVf1S6hdoQAsDiL6JQQHQ2MnYr+2KeX4vjnjXKKKhhiGQ9QMeCNz+X9rnMp63sQvuB+MLa1OIalSjUvrC mYEmUtKuh75TKJUWyk5nE9yuSvu6SjesHu4F4MxOuUzB657sPKWvZBLXl tZxtJgt6g2vafaaT0.Bjfji.p8PukazqvcfpcpFs8mXR3pl8BBoXurIYYWKxrZP0YI.tCEH5gtF5q+wGtFXMXK6EZC3cyWzWwTdCMY.BBkidby8v0r+ST. W sD9SDukn8FsYspBqnBNFIztLyMml2Jo0vuKueuj2rvjpJLA7yiE7wRE+ow FpDpD1KAcBf4cP55Y4JqouiqDIXwt102DGZHIocKllEx+ow AdoeADks.RrRoow1Arc.R0N2J9amytjkqkvnAE01+8WnjHqK6 zmuk4IKd+Knv3jtvvsJs8mMHHmsIt25JbXbXczclI5sPVhTCTGFU nX9rUtgt7c3gY8C*+EuIJYmg8K3dkPcrQnXhb3XrY3rWqPO+qG2 unBQWFh1X7qqQ3+3.VhrMT999iR21YltP9MD9SLKQVZ260.+Sjc5j1Yk jknw29NPRL793WBA0nB926lyGrmRM4ZUF7Yfi7iA5azXhKda 4rRTRG7V4COiSbAjkdXWnnHfH0N7uBa4Ma0b1J7k+omjDMWkSVn95i1 Tokwdp7W0pRmN6sRsi4uKj5v3ckJftYXMGYgGMv448vPIIIPizrutZuSKW xGPPcmPmIoyLdh83wpjBmylwFMNHHpFTL1aNLaS9gck1tMXZC57t WIH202coxSDM00qPFRyFphsprhRG6C99ozBZ0NDW2R2y9WDA2F85jG2v5 FG4048a1c77zQnNmpPs3Y7BRYVBJMJQ1uvomtRRkWhn9R0MNZ2Yzz+5s 3WTVnToOnUydg5KHKML4qAOaJtfe2nS6XozDkRMrBRqG9j11Y8k4g8v0cmxfxVihW6a3qY9NazzUYkua9UnynadOtogW.JfsVGRNEbWF8I+eHcwJ+wLXqZeSDWLo+FQF6731Tva0BISKTx.ClwmgJsUTTVkglYsnXmxDge.CDR7x D6MyX6fMznaF7kcdzJXw.XSOORdoHNa7GMIYLZZR.+4lconMaJP6JOZ: FtCs1YWHZI30.sIxXZ5ihMSuXuZkt3ai1mXRScrczoCS32hAydeyXNEEu5HySxxqQbd3DLeralipqOxm+7SUSC
 ----------end_max5_patcher----------
-*/
+```
 
 ### Processing 代码
 
@@ -710,7 +666,7 @@ port.write(mouse);
 
 ### SHOW
 
-在本教程中，我们将学习如何直接从摇杆获取值。串口监视器以 RGB LED 颜的形式输出。你可以沿着 X 轴或 Y 轴移动摇杆。每个轴控制一种 LED 颜色——X 轴显示红色，Y 轴显示绿色。线性电位计的位置将控制蓝色。
+在本教程中，我们将学习如何直接从摇杆获取值。串口监视器以 RGB LED 颜色的形式输出。你可以沿着 X 轴或 Y 轴移动摇杆。每个轴控制一种 LED 颜色——X 轴显示红色，Y 轴显示绿色。线性电位计的位置将控制蓝色。
 
 ### 硬件和电路要求
 
@@ -722,9 +678,7 @@ port.write(mouse);
 
 RGB 灯的亮度可以通过 Explora 库单独控制。光由三种颜色组成：红色、绿色和蓝色。
 
-writeRed();
-writeBlue();
-writeGreen();
+`writeRed()`; `writeBlue()`; `writeGreen()`;
 
 你也可以使用单个命令 `writeRGB()` 控制所有颜色。移动线性电位计可以产生新的输出。一个输出通过串口监视器，另一个显示 RGB LED。
 
@@ -739,65 +693,59 @@ Explora LED 显示
 修改于 2012年12月22日
 作者 Tom Igo
 */
-#include <Explora.h>
+#include <Esplora.h>
 ```
 
 ```cpp
 void setup() {
-// 初始化串口
-Serial.begin(9600);
+  // 初始化串口
+  Serial.begin(9600);
 }
 ```
 
 ```cpp
 void loop() {
-// 读取传感器到变量：
-int xAxis = Explora.readJoystickX();
-int yAxis = Explora.readJoystickY();
-int slider = Explora.readSlider();
-```
+  // 读取传感器到变量：
+  int xAxis = Esplora.readJoystickX();
+  int yAxis = Esplora.readJoystickY();
+  int slider = Esplora.readSlider();
 
-```cpp
-// 将传感器读取值转换为亮度：
-byte red = map(xAxis, -512, 512, 0, 255);
-byte green = map(yAxis, -512, 512, 0, 255);
-byte blue = slider / 4;
-```
+  // 将传感器读取值转换为亮度：
+  byte red = map(xAxis, -512, 512, 0, 255);
+  byte green = map(yAxis, -512, 512, 0, 255);
+  byte blue = slider / 4;
 
-```cpp
-// 打印亮度：
-Serial.print(red);
-Serial.print(' ');
-Serial.print(green);
-Serial.print(' ');
-Serial.println(blue);
-```
+  // 打印亮度：
+  Serial.print(red);
+  Serial.print(' ');
+  Serial.print(green);
+  Serial.print(' ');
+  Serial.println(blue);
 
-```cpp
-// 将亮度写入 LED。
-Explora.writeRGB(red, green, blue);
-```
+  // 将亮度写入 LED。
+  Esplora.writeRGB(red, green, blue);
 
-```cpp
-// 添加延迟防止 LED 闪烁：
-delay(10);
+  // 添加延迟防止 LED 闪烁：
+  delay(10);
 }
 ```
 
 ## IV) 来自 ROBOT 库的示例
 
-#### A) 寻迹
+### A) 寻迹
+
+
 
 这是一个有趣的项目，你可以与其他机器人进行比赛。控制机器人的方法是在纸上画线。你的机器人将寻找线条并跟随它。有很多机器人时很有趣！
 
-### 硬件和电路要求
+## 硬件和电路要求
 
-Arduino Robot
-大白纸
-黑色标记
-胶带
+- Arduino Robot
+- 大白纸
+- 黑色标记
+- 胶带
 
-##### 步骤
+## 步骤
 
 1. 为机器人制作轨道。这些轨道在纸上。它们必须有 1 英（约 2 厘米）宽。线条不能与起点相交。
 2. 使用胶带将纸固定在地面上。这将防止机器人运行时打滑。尽量保持表面清洁。（注意：不清洁会导致识别错误）
@@ -806,14 +754,15 @@ Arduino Robot
 5. 在最初几次尝试（启动时），机器人将进行校准并调整自身检测线条。
 6. 一旦机器人检测到线条，它将继续运行而不停止。更多细节请查看 `lineFollowConfig`。
 
-##### 尝试运行
+## 尝试运行
 
 ![](img/a76f70476fe313ae0aea50fdd57d7f99_55_0.png)
-![](img/a76f704750fdd57d7f99_55_1.png)
+
+![](img/a76f70476fe313ae0aea50fdd57d7f99_55_1.png)
 
 现在你的机器人准备好了！
 
-### 代码
+## 代码
 
 ```cpp
 /* 机器人寻迹
@@ -837,11 +786,11 @@ Arduino Robot
 long timerOrigin; // 用于计时
 
 void setup() {
-// 初始化机器人、SD 卡、显示器和扬声器
-Robot.begin();
-Robot.beginTFT();
-Robot.beginSD();
-Robot.beginSpeaker();
+  // 初始化机器人、SD 卡、显示器和扬声器
+  Robot.begin();
+  Robot.beginTFT();
+  Robot.beginSD();
+  Robot.beginSpeaker();
 }
 ```
 
@@ -854,7 +803,7 @@ Robot.playFile("chase.wav"); // 从 SD 卡播放歌曲
 
 ```cpp
 // 添加指令
-Robot.text("寻迹\n将机器人放在\n轨道上\并看它运行",5, 5);
+Robot.text("寻迹\n将机器人放在\n轨道上\并看它运行", 5, 5);
 Robot.text("按下中间\n按钮开始...", 5, 61);
 Robot.waitContinue();
 ```
@@ -862,7 +811,7 @@ Robot.waitContinue();
 ```cpp
 // 这些是一些适用于寻迹的通用值
 // 取消其中一个以查看机器人不同的行为
-//Robot.lineFollowConfig(14, 9, 50, 10);
+// Robot.lineFollowConfig(14, 9, 50, 10);
 Robot.lineFollowConfig(11, 7, 60, 5);
 ```
 
@@ -875,7 +824,7 @@ Robot.setMode(MODE_LINE_FOLLOW);
 // 开始
 Robot.fill(255, 255, 255);
 Robot.stroke(255, 255, 255);
-Robot.rect(0, 0, 128, 80); //擦除之前的文本
+Robot.rect(0, 0, 128, 80); // 擦除之前的文本
 Robot.stroke(0, 0, 0);
 Robot.text("Start", 5, 5);
 Robot.stroke(0, 0, 0); // 为文本选择颜色
@@ -884,7 +833,7 @@ Robot.text("已通过:", 5, 21); // 向屏幕写入一些文本
 timerOrigin = millis(); // 跟踪已通过的时间
 
 while (!Robot.isActionDone()) { // 等待完成信号
-Robot.debugPrint(millis() - timerOrigin, 5, 29); // 显示经过了多久
+  Robot.debugPrint(millis() - timerOrigin, 5, 29); // 显示经过了多久
 }
 Robot.stroke(0, 0, 0);
 Robot.text("Done!", 5, 45);
@@ -893,12 +842,10 @@ Robot.text("Done!", 5, 45);
 
 ```cpp
 void loop() {
-// 这里没有内容，程序只运行一次。重置机器人
-//再次运行！
+  // 这里没有内容，程序只运行一次。重置机器人
+  // 再次运行！
 }
 ```
-
-
 
 ```cpp
 delay(250);
@@ -906,8 +853,7 @@ delay(250);
 ```
 
 ```cpp
-void dash()
-{
+void dash() {
   digitalWrite(pin, HIGH);
   delay(1000);
   digitalWrite(pin, LOW);
@@ -922,8 +868,7 @@ void dash()
 头文件的核心将由库中每个函数的单行表示组成。它以类的形式表示，并与你可能需要的任何变量放在一起。
 
 ```cpp
-class Morse
-{
+class Morse {
 public:
   Morse(int pin);
   void dot();
@@ -965,7 +910,7 @@ Morse.h - 用于闪烁摩尔斯电码的库。
 由 David A. Mellis 创建，2007年11月2日。
 发布于公有领域。
 */
-#ifdef Morse_h
+#ifndef Morse_h
 #define Morse_h
 
 #include "Arduino.h"
@@ -992,8 +937,7 @@ private:
 之后，你编写构造函数。这允许用户选择类的特定实例。他们通过选择一个配置为输出的引脚来实现。
 
 ```cpp
-Morse::Morse (int pin)
-{
+Morse::Morse(int pin) {
   pinMode(pin, OUTPUT);
   _pin = pin;
 }
@@ -1002,8 +946,7 @@ Morse::Morse (int pin)
 在这些代码行中，你会注意到略有不同的命名约定。一个是 `::` 运算符，它是作用域操作符。它为所选变量提供了全局可见性。你看到的另一个变化分配在引脚类之前的下划线。添加下划线有助于在破坏命名规范之前命名类或变量。你可以更清晰地看到你的代码。为了让你更容易工作，将那些类进行分组。例如，你可能需要在类名前前面加上下划线。现在，继续库的代码。
 
 ```cpp
-void Morse::dot()
-{
+void Morse::dot() {
   digitalWrite(_pin, HIGH);
   delay(250);
   digitalWrite(_pin, LOW);
@@ -1012,8 +955,7 @@ void Morse::dot()
 ```
 
 ```cpp
-void Morse::dash()
-{
+void Morse::dash() {
   digitalWrite(_pin, HIGH);
   delay(1000);
   digitalWrite(_pin, LOW);
@@ -1038,13 +980,11 @@ Morse.cpp - 用于闪烁摩尔斯电码的库。
 
 Morse morse(13);
 
-void setup()
-{
+void setup() {
   // 设置代码
 }
 
-void loop()
-{
+void loop() {
   morse.dot();
   delay(500);
   morse.dash();
@@ -1052,19 +992,20 @@ void loop()
 }
 ```
 
+## 电路详情
 
-
-
-电路详情：
-在模拟口 A0 处连接压电元件正极
-地线连接到压电元件
-在地的线和模拟口0 之间连接一个 1 兆欧姆电阻
+- 在模拟口 A0 处连接压电元件正极
+- 地线连接到压电元件
+- 在地的线和模拟口0 之间连接一个 1 兆欧姆电阻
 
 [敲门教程](http://www.arduino.cc/en/Tutorial/Knock)
 
 创建于 2007年3月25日
+
 作者：David Cuartielles <http://www.0j0.org>
+
 修改于 2011年8月30日
+
 作者：Tom Igoe
 
 此示例代码属于公领域。
@@ -1137,6 +1078,7 @@ stringThird = stringFirst + stringSecond;
 ```
 
 你可以做的另一件事是将某些操作的结果添加到字符串中。
+
 唯一的限制是字符串返回的数据类型必须有效。
 
 ```cpp
@@ -1168,7 +1110,7 @@ Serial.println(stringThird);
 
 由于你最初没有给 `stringThird` 赋值，结果将是不可预测的。检查另一种不当的初始化方式。
 
-Serial.println("I want " + analogRead(A0) + " donuts");
+`Serial.println("I want " + analogRead(A0) + " donuts");`
 
 运算符优先级错误，因此代码无法编译。下面的示例可以编译，但结果将不符合预期。
 
@@ -1180,15 +1122,14 @@ Serial.println(stringThird + " donuts");
 
 错误的原因再次显而易见。`stringThird` 从未被初始化。
 
-### 硬件和电路要求
+## 硬件和电路要求
 
-Arduino 板
-
-此示例不需要其他电路。
+- Arduino 板
+- 此示例不需要其他电路。
 
 ![电路图](img/a76f70476fe313ae0aea50fdd57df99_73_0.png) Fritzing 开发
 
-### 代码
+## 代码
 
 以下是几种拼接类型示例的代码。
 
@@ -1219,7 +1160,6 @@ void setup() {
   }
 }
 ```
-
 
 ```cpp
 else {
@@ -1286,9 +1226,12 @@ if (stringOne >= "Brow") {
 ```
 
 // compareTo() 运算符允许你比较字符串
+
+
+
 // 它在第一个不同的字符上进行评估。
-// 如果你正在比较的字符串的首字符
-// 在字母数字顺序中更靠前，那么 compareTo() 的结果大于 0：
+
+// 如果你正在比较的字符串的首字符在字母数字顺序中更靠前，那么 `compareTo()` 的结果大于 0：
 
 ```cpp
 stringOne = "Cucumber";
@@ -1300,30 +1243,29 @@ if (stringOne.compareTo(stringTwo) < 0) {
 }
 ```
 
-delay(10000); // 因为下一部分是一个循环：
+`delay(10000);` // 因为下一部分是一个循环：
 
-// 当字符串中也包含数字时，compareTo() 别非常好用：
+// 当字符串中也包含数字时，`compareTo()` 别非常好用：
 
 ```cpp
 while (true) {
-stringOne = "Sensor: ";
-stringTwo="Sensor: ";
+  stringOne = "Sensor: ";
+  stringTwo = "Sensor: ";
 
-stringOne += analogRead(A0);
-stringTwo += analogRead(A5);
+  stringOne += analogRead(A0);
+  stringTwo += analogRead(A5);
 
-if (stringOne.compareTo(stringTwo) < 0 ) {
-  Serial.println(stringOne + " comes before " + stringTwo);
+  if (stringOne.compareTo(stringTwo) < 0) {
+    Serial.println(stringOne + " comes before " + stringTwo);
+  } else {
+    Serial.println(stringOne + " comes after " + stringTwo);
+  }
 }
-else {
-  Serial.println(stringOne + " comes after " + stringTwo);
-}
-
 ```
 
-## # 第 6 章
+# 第 6 章
 
-## 硬件接口中的 ARDUINO
+## 硬件接口中的 Arduino
 
 Arduino 用于连接作为输入、输出或用户界面的设备。它们也为通信设备和 ISP 编程器提供帮助。为了使用此套件或对其组装，你必须了解这个革命性计算设备的全部功能。
 
@@ -1339,7 +1281,7 @@ Arduino 用于连接作为输入、输出或用户界面的设备。它们也为
 
 - 面包板
 - 220 欧姆电阻
-- Arduino 板板
+- Arduino 板
 - 一个 LED
 
 选择你 Arduino 的 9 号引脚并向其焊接一个 220 欧姆电阻。将电阻的另一端连接到阳极，即 LED 的正极。LED 中较短的阴极应直接连接到地。现在来编写代码。
@@ -1369,7 +1311,7 @@ int goDark = 5; // LED 渐变的步长点
 
 ```cpp
 // 当你按下重置键时，setup 程序例运行
-void setup () {
+void setup() {
   // 将引脚 9 为输出：
   pinMode(led, OUTPUT);
 }
@@ -1377,7 +1319,7 @@ void setup () {
 
 ```cpp
 // loop 将停止执行，它会一直运行
-void loop () {
+void loop() {
   // 设置 9 号引脚的 fullOrOff：
   analogWrite(led, fullOrOff);
 
@@ -1390,7 +1332,7 @@ void loop () {
   }
 
   // 调暗将在 30 秒后发生
-  delay (30);
+  delay(30);
 }
 ```
 
@@ -1455,42 +1397,37 @@ void loop() {
 
 - 动按钮
 - 面包板
-- Arduino 板板
+- Arduino 板
 - 10K 欧姆电阻
 - 邦接线
 
-你必须进行三线连接来开始你的按钮控制。面包板侧面有两个长且垂直的行。这将是连接 5V 地和电源的红黑线。从引2 连接一根线到按钮引脚。在同一个按钮引脚上，连接一个 10K 欧姆拉低电阻接地。按钮的另一个引脚将被赋予 5V 电源。
+你必须进行三线连接来开始你的按钮控制。面包板侧面有两个长且垂直的行。这将是连接 5V 地和电源的红黑线。从引脚 2 连接一根线到按钮引脚。在同一个按钮引脚上，连接一个 10K 欧姆拉低电阻接地。按钮的另一个引脚将被赋予 5V 电源。
 
 当按钮按下时，引脚之间的连接保持开启状态。引脚仅连接到地，因此返回低读取值。当你按下按钮时，读取现在变为 5V，因此你获得高读取值。
 
 注意，你可以通过反转连接来反转按钮的功能。这会让 LED 按钮始终开启，但在按下按钮时会关闭。如果你完全断开 I/O 引脚，你会看到灯非常随机地闪烁。原因是输入端现在有了一个浮空值，因此随机返回高或低值。这就是我们包含拉低电阻的原因。
 
-
-
-
-
 ```cpp
 /*
 按钮
-```
 
 当按下连接到引脚 2 的按钮时，开启或关闭连接到数字引脚 13 的发光二极管(LED)。
 
 电路图：
 
-- LED 连接从引脚 13 到地 - 按钮连接从 +5V 到引脚 2
+- LED 连接从引脚 13 到地
+- 按钮连接从 +5V 到引脚 2
 - 10K 电阻连接从引脚 2 到地
 
 * 注意：在 Arduino 开发板上，板载上已经自带了一个连接到引脚 13 的 LED。
 
 创建于 2005 年
-作者：DojoDave <http://www.0j0.org> 
-修改于 2011 年8 月 30 日
+作者：DojoDave <http://www.0j0.org>
+修改于 2011 年 8 月 30 日
 作者：Tom Igo
 
 此示例代码属于公有领域。
 
-```
 http://www.arduino.cc/en/Tutorial/Button
 */
 ```
@@ -1498,38 +1435,38 @@ http://www.arduino.cc/en/Tutorial/Button
 ```cpp
 // 常量不会改变。它们在这里被用于
 // 设置引脚编号：
-const int buttonPin = 2; // 按钮引脚编号 
+const int buttonPin = 2; // 按钮引脚编号
 const int ledPin = 13; // LED 引脚编号
 ```
 
 ```cpp
 // 变量会改变：
-int buttonState = 0;  // 用于读取按钮状态的变量
+int buttonState = 0; // 用于读取按钮状态的变量
 ```
 
 ```cpp
 void setup() {
-// 将 LED 引脚初始化为输出：
-pinMode(ledPin, OUTPUT);
-// 将按钮引脚初始化为输入：
-pinMode(buttonPin, INPUT);
+  // 将 LED 引脚初始化为输出：
+  pinMode(ledPin, OUTPUT);
+  // 将按钮引脚初始化为输入：
+  pinMode(buttonPin, INPUT);
 }
 ```
 
 ```cpp
 void loop() {
-// 读取按钮的状态：
-buttonState = digitalRead(buttonPin);
+  // 读取按钮的状态：
+  buttonState = digitalRead(buttonPin);
 
-// 检查按钮是否被按下。
-// 如果按下，buttonState 为 HIGH（高电平）：
-if (buttonState == HIGH) {
-// 开启 LED：
-digitalWrite(ledPin, HIGH);
-} else {
-// 关闭 LED：
-digitalWrite(ledPin, LOW);
-}
+  // 检查按钮是否被按下。
+  // 如果按下，buttonState 为 HIGH（高电平）：
+  if (buttonState == HIGH) {
+    // 开启 LED：
+    digitalWrite(ledPin, HIGH);
+  } else {
+    // 关闭 LED：
+    digitalWrite(ledPin, LOW);
+  }
 }
 ```
 
@@ -1555,10 +1492,10 @@ digitalWrite(ledPin, LOW);
 电路：
 * 3 个力敏电阻从 +5V 连接到模拟输入 0 到 5
 * 3 个 10K 电阻从模拟输入 0 到 5 接地
-* 8 姆扬声器连接到数字引脚 8
+* 8 Ω 扬声器连接到数字引脚 8
 
-创建于 2010年1月21日
-修改于 2012年4月9日
+创建于 2010 年 1 月 21 日
+修改于 2012 年 4 月 9 日
 作者：Tom Igo
 
 此示例代码属于公有领域
@@ -1571,7 +1508,8 @@ const int threshold = 10; // 产生音符的传感器最小读取值
 
 // 播放的音符，对应 3 个传感器：
 int notes[] = {
-  NOTE_A4, NOTE_B4, NOTE_C3 };
+  NOTE_A4, NOTE_B4, NOTE_C3
+};
 ```
 
 ```cpp
@@ -1581,25 +1519,26 @@ void setup() {
 
 ```cpp
 void loop() {
-for (int thisSensor = 0; thisSensor < 3; thisSensor++) {
-// 获取传感器读取值：
-int sensorReading = analogRead(thisSensor);
+  for (int thisSensor = 0; thisSensor < 3; thisSensor++) {
+    // 获取传感器读取值：
+    int sensorReading = analogRead(thisSensor);
 
-// 如果传感器按得得足够：
-if(sensorReading > threshold) {
-// 播放与此传感器对应的音符：
-tone(8, notes[thisSensor], 20);
-}
-}
+    // 如果传感器按得足够：
+    if (sensorReading > threshold) {
+      // 播放与此传感器对应的音符：
+      tone(8, notes[thisSensor], 20);
+    }
+  }
 }
 ```
 
 你会发现有一个 `pitches.h` 文件，其中包含了每个音符的所有音高。音符通过其键名和一个根据音高升序排列的数字表示。此表最初由 Brett Hagmann 制作，他因开发 `tone()` 函数而闻名。你必须创建一个新标签并粘贴以下代码以创建该文件。
-********************************************************************
-# * 公共常量
-********************************************************************/
 
 ```cpp
+/********************************************************************
+# 公共常量
+********************************************************************/
+
 #define NOTE_B0 31
 #define NOTE_C1 33
 #define NOTE_CS1 35
@@ -1708,6 +1647,8 @@ void setup() {
 }
 ```
 
+
+
 ```cpp
 unsigned long ping() {
   pinMode(ultraSoundSignal, OUTPUT); // 将引脚切换为输出
@@ -1739,6 +1680,7 @@ void loop() {
 ### F) NewPing 示例程序
 
 （每秒进行 20 次测量）
+
 （更多信息请点击。）
 
 ```cpp
@@ -1765,19 +1707,14 @@ void loop() {
 }
 ```
 
-
-
-
-
 # Arduino 伪造板学习如何识别假品
 
 首先，检查颜色。颜色必须是青绿色（teal）。你可以翻转板子查看背面的图案。典型的标志应该是一个侧卧的数字“8”，在两个圆圈内各有一个负号和一个正号。仿制品的颜色会是蓝色到深蓝色。字体不会像原版那样是 Silk 字体。原版的打印清晰且对称。如果打印不清晰或不对称，那么它很可能是假品。你还将看到意大利的地图，这部分也必须是清晰的。
 
-寻找 501K 元件。大多数假货会使用一种随处可买的绿色元件。而棕色的元件是为 Arduino 特别制造的。最后，检查该 Arduino 是否由授权销售商出售。
+寻找 `501K` 元件。大多数假货会使用一种随处可买的绿色元件。而棕色的元件是为 Arduino 特别制造的。最后，检查该 Arduino 是否由授权销售商出售。
 
 # 使用 C 语言为你的 Arduino 板板编程
 
 Arduino 语言大部分由你调用的 C/C++ 函数组成。程序（sketch）会发生细微变化（例如，当你自动创建函数原型时），然后由 C/C++ 编译器 `avr-g++` 处理。因此，任何适用于 `avr-g++` 的 C 或 C++ 结构都可以在 Arduino 上运行。你可以在此处获取更多详细信息。
 
 欲了解更多信息，请访问此页面。
-

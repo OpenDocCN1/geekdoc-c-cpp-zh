@@ -1,12 +1,14 @@
+
+
 # Lambda、闭包和函数对象
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/closures.html`](https://cel.cs.brown.edu/crp/idioms/closures.html)
 
 ## 函数指针
 
-C++ 和 Rust 都允许将函数用作值。在两者中，值都可以具有 [函数指针类型](https://doc.rust-lang.org/std/primitive.fn.html)。
+C++ 和 Rust 都允许将函数用作值。在两者中，值都可以具有[函数指针类型](https://doc.rust-lang.org/std/primitive.fn.html)。
 
-```rs
+```cpp
 #include <iostream>
 
 int process(int n) {
@@ -20,36 +22,28 @@ int main() {
   // int (*f)(int) = process;
 
   std::cout << f(42) << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn process(n: i32) -> i32 {
-
     println!("{}", n);
-
     2 * n
-
 }
 
 fn main() {
-
     let f = process;
 
     // 或使用类型注解
-
     // let f: fn(i32) -> i32 = process;
 
     println!("{}", f(42));
-
 }
-
 ```
 
 非捕获闭包在 C++ 和 Rust 中也都是可转换的函数指针。在下面的示例中，类型在 C++ 和 Rust 中都可以推断出来，但类型被显式给出，以表明在两种情况下闭包都具有函数指针类型。
 
-```rs
+```cpp
 #include <iostream>
 
 int main() {
@@ -59,49 +53,34 @@ int main() {
   };
 
   std::cout << f(42) << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let f = |n: i32| {
-
         println!("{}", n);
-
         2 * n
-
     };
 
     // 或使用类型注解
-
     // let f: fn(i32) -> i32 = process;
 
     println!("{}", f(42));
-
 }
-
 ```
 
 与 C++ 不同，在 Rust 中可以在其他函数内部定义函数。这具有与在函数外部定义函数相同的意义（即，该函数不是捕获闭包，因此不能捕获外部函数中定义的变量），但函数的名称仅在外部函数内部可用。
 
-```rs
-
+```rust
 fn main() {
-
     fn process(n: i32) -> i32 {
-
         println!("{}", n);
-
         2 * n
-
     }
 
     println!("{}", process(42));
-
 }
-
 ```
 
 ## Rust 的调用操作符特质
@@ -116,9 +95,10 @@ fn main() {
 
 Rust 函数指针实现了所有三个特质。其他闭包根据它们如何使用捕获的变量实现相应的特质。
 
-<details><summary>仅实现 `FnOnce` 的闭包</summary>
+<details>
+<summary>仅实现 <code>FnOnce</code> 的闭包</summary>
 
-```rs
+```cpp
 #include <iostream>
 #include <string>
 
@@ -132,36 +112,32 @@ int main() {
   // compiles, but the captured value has been
   // moved
   std::cout << f() << std::endl; // prints ""
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
+    let f = {
+        let x = String::from("hi");
 
-let f = {
+        // f : FnOnce()
+        move || x
+    };
 
-    let x = String::from("hi");
+    // f() 等价于 f.call_once()
+    println!("{}", f()); // 打印 "hi"
 
-    // f : FnOnce()
-
-    move || x
-
-};
-
-// f() 等价于 f.call_once()
-
-println!("{}", f()); // 打印 "hi"
-
-// 无法编译--call_once 消耗了 f。
-
-// println!("{}", f());
-
+    // 无法编译--call_once 消耗了 f。
+    // println!("{}", f());
 }
+```
 
-```</details>  <details><summary>实现 `FnMut` 并捕获所有权的闭包</summary>
+</details>
 
-```rs
+<details>
+<summary>实现 <code>FnMut</code> 并捕获所有权的闭包</summary>
+
+```cpp
 #include <string>
 
 int main() {
@@ -173,40 +149,34 @@ int main() {
 
   std::cout << f() << std::endl; // prints "1"
   std::cout << f() << std::endl; // prints "2"
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let mut f = {
-
         let mut x = String::from("");
 
         // f : FnMut() -> usize
-
         move || {
-
             x.push('!');
-
             x.len()
-
         }
-
     };
 
     println!("{}", f()); // 打印 "1"
-
     println!("{}", f()); // 打印 "2"
-
 }
+```
 
-```</details>  <details><summary>实现 `FnMut` 并通过可变引用捕获的闭包</summary>
+</details>
+
+<details>
+<summary>实现 <code>FnMut</code> 并通过可变引用捕获的闭包</summary>
 
 在这种情况下，由于闭包会借用 `x`，因此 `x` 必须在闭包可能被使用的时间内保持有效。因此，`x` 不能像上一个示例中那样在 lambda 的代码块中声明。
 
-```rs
+```cpp
 #include <iostream>
 #include <string>
 
@@ -219,36 +189,32 @@ int main() {
 
   std::cout << f() << std::endl; // prints "1"
   std::cout << f() << std::endl; // prints "2"
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let mut x = String::from("");
 
     // g : FnMut() -> usize
-
     let mut f = || {
-
         x.push('!');
-
         x.len()
-
     };
 
     println!("{}", f()); // 打印 "1"
-
     println!("{}", f()); // 打印 "2"
-
 }
+```
 
-```</details>  <details><summary>实现 `Fn` 的闭包</summary>
+</details>
+
+<details>
+<summary>实现 <code>Fn</code> 的闭包</summary>
 
 `x` 是否为 `mut` 不影响闭包是否实现 `Fn` 或 `FnMut`。重要的是闭包如何使用 `x`。
 
-```rs
+```cpp
 #include <iostream>
 #include <string>
 
@@ -258,36 +224,30 @@ int main() {
 
   std::cout << f() << std::endl; // prints "0"
   std::cout << f() << std::endl; // prints "0"
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let f = {
-
         let x = String::from("");
 
         // g : Fn() -> usize
-
         move || x.len()
-
     };
 
     println!("{}", f()); // 打印 "0"
-
     println!("{}", f()); // 打印 "0"
-
 }
+```
 
-```</details>
+</details>
 
 ## Lambdas and closures
 
 在 C++ 和 Rust 中，捕获闭包的具体类型都不能写出来。在这两种语言中，对于局部变量，这意味着类型必须被推断。
 
-```rs
+```cpp
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -306,34 +266,26 @@ int main() {
 
   std::cout << sayHelloTo(world) << std::endl;
   std::cout << sayHelloTo(moon) << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let greeting = "hello";
 
     // 无法写出闭包的类型
-
     let say_hello_to = |who: &str| {
-
         format!("{} {}", greeting, who)
-
     };
 
     println!("{}", say_hello_to("world"));
-
     println!("{}", say_hello_to("moon"));
-
 }
-
 ```
 
 在 C++ 和 Rust 中，如果闭包是堆分配的，则可以给出类型。在 C++ 中，这是通过 `std::function` 实现的，而在 Rust 中则是通过调用操作符特性实现的。
 
-```rs
+```cpp
 #include <functional>
 #include <iostream>
 #include <sstream>
@@ -354,66 +306,48 @@ int main() {
 
   std::cout << sayHelloTo(world) << std::endl;
   std::cout << sayHelloTo(moon) << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     let greeting = "hello";
 
     // 无法写出闭包的类型
-
     let say_hello_to: Box<
-
         dyn Fn(&str) -> String,
-
     > = Box::new(|who: &str| {
-
         format!("{} {}", greeting, who)
-
     });
 
     println!("{}", say_hello_to("world"));
-
     println!("{}", say_hello_to("moon"));
-
 }
-
 ```
 
 由于 `std::function` 可以是空的，所以上面的示例并不严格等价。然而，由于 `std::function` 通常与值不为空的附加条件一起使用，所以没有 `Option` 包装器的 `Box` 是表示空情况更实用的翻译。
 
 在 Rust 中，也可以用函数操作符特性之一来给出闭包引用的类型。
 
-```rs
-
+```rust
 fn main() {
-
     let greeting = "hello";
 
     // 无法写出闭包的类型
-
     let say_hello_to = |who: &str| {
-
         format!("{} {}", greeting, who)
-
     };
 
     let say: &dyn Fn(&str) -> String = &say_hello_to;
 
     println!("{}", say("world"));
-
     println!("{}", say("moon"));
-
 }
-
 ```
 
 此外，在 C++ 和 Rust 中，闭包的返回类型可以作为 lambda 表达式的一部分进行注解。当返回类型无法推断或应该比推断出的类型更具体时，这很有用。在下面的示例中，这是用来以实现接口的值返回，而不是推断出的具体类型。
 
-```rs
+```cpp
 #include <iostream>
 #include <memory>
 #include <string>
@@ -456,41 +390,29 @@ int main() {
   std::cout << *f(std::make_unique<A>(),
                   std::make_unique<B>())
             << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 // 常见接口
-
 use std::fmt::Debug;
 
 // 实现接口的两个东西
-
 #[derive(Debug)]
-
 struct A;
 
 #[derive(Debug)]
-
 struct B;
 
 fn main() {
-
     // 没有返回类型注解，
-
     // Box<A> 将会被推断。
-
     let f = move |a: Box<A>,
-
-                b: Box<B>|
-
+                  b: Box<B>|
         -> Box<dyn Debug> { a };
 
     println!("{:?}", f(Box::new(A), Box::new(B)));
-
 }
-
 ```
 
 ## 捕获变量
@@ -498,6 +420,9 @@ fn main() {
 在 C++ 中，捕获指定符用于指示变量是否应该通过引用、复制或移动来捕获。捕获指定符可以一次为所有变量提供，为每个变量提供，或作为默认值与每个变量的特定选择一起提供。
 
 在 Rust 中，变量要么全部通过引用（默认）捕获，要么全部通过移动（使用 `move` 指定符）。为了表达其他捕获策略，需要显式定义引用和副本，并且闭包需要捕获这些变量。
+
+
+
 
 通过显式地创建副本或获取引用的模式表达，利用了 Rust 中块是表达式的这一事实。在需要执行此操作的示例中，注意被分配给持有闭包的变量的块的最后一个语句中没有分号。
 
@@ -1044,11 +969,13 @@ fn main() {
 
 在 Rust 中接受闭包作为类型参数时，最好指定所需的最不限制接口，以确定闭包将被如何使用。
 
-使用 `FnOnce` 作为边界是最不限制的，因此应该使用它，以便接受闭包作为参数的函数尽可能与尽可能多的闭包兼容。`FnOnce` 与 `Fn` 和 `FnMut` 一起工作，因为为 `&Fn` 和 `&FnMut` 提供了 `FnOnce` 特例实现。`FnMut` 特例是下一个最限制的，然后是 `Fn`，最后是实际函数指针，其类型以小写 `fn` 编写。
+
+
+使用`FnOnce`作为边界是最不限制的，因此应该使用它，以便接受闭包作为参数的函数尽可能与尽可能多的闭包兼容。`FnOnce`与`Fn`和`FnMut`一起工作，因为为`&Fn`和`&FnMut`提供了`FnOnce`特例实现。`FnMut`特例是下一个最限制的，然后是`Fn`，最后是实际函数指针，其类型以小写`fn`编写。
 
 在 C++ 和 Rust 中，也可以传递闭包的引用或指针。在以下示例中，闭包在 C++ 和 Rust 中都在动态分配的存储中。
 
-```rs
+```cpp
 #include <functional>
 #include <iostream>
 
@@ -1062,36 +989,28 @@ int main() {
   auto f(std::function(
       = { return n + x; }));
   std::cout << apply_to_0(f) << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn apply_to_0(f: Box<dyn FnOnce(i32) -> i32>) -> i32 {
-
     f(0)
-
 }
 
 fn main() {
-
     let x = 1;
-
     let f = Box::new(move |n: i32| x + n);
-
     println!("{}", apply_to_0(f));
-
 }
-
 ```
 
-`FnOnce` 可以在 `Box` 中调用，因为盒子拥有特例对象的所有权，但不在引用中调用，因为引用没有所有权。`Fn` 和 `FnMut` 没有相同的限制。
+`FnOnce`可以在`Box`中调用，因为盒子拥有特例对象的所有权，但不在引用中调用，因为引用没有所有权。`Fn`和`FnMut`没有相同的限制。
 
 ## 返回闭包
 
-在 C++中，可以使用`auto`或`decltype(auto)`作为返回闭包的函数的返回类型。在 Rust 中，再次使用`impl Trait`语法。就像在 C++中使用`auto`这种方式并不表示简化的函数模板一样，它也不表示泛型函数。相反，类型是推断的，并且必须满足特质的约束。
+在 C++ 中，可以使用`auto`或`decltype(auto)`作为返回闭包的函数的返回类型。在 Rust 中，再次使用`impl Trait`语法。就像在 C++ 中使用`auto`这种方式并不表示简化的函数模板一样，它也不表示泛型函数。相反，类型是推断的，并且必须满足特质的约束。
 
-```rs
+```cpp
 #include <iostream>
 
 decltype(auto) makeConst(int n) {
@@ -1101,62 +1020,45 @@ decltype(auto) makeConst(int n) {
 int main() {
   auto f = makeConst(42);
   std::cout << f() << std::endl;
-} 
+}
 ```
 
-```rs
-
+```rust
 fn make_const(n: i32) -> impl Fn() -> i32 {
-
     move || n
-
 }
 
 fn main() {
-
     let f = make_const(42);
-
     println!("{}", f());
-
 }
-
 ```
 
-在 C++中使用`decltype`来命名闭包的地方，例如在模板类中返回闭包时，在 Rust 中则使用`impl Trait`语法。如果需要在 let 绑定中指定类型，可以使用下划线`_`来表示类型中闭包的类型部分应该被推断。
+在 C++ 中使用`decltype`来命名闭包的地方，例如在模板类中返回闭包时，在 Rust 中则使用`impl Trait`语法。如果需要在 let 绑定中指定类型，可以使用下划线`_`来表示类型中闭包的类型部分应该被推断。
 
-```rs
-
+```rust
 struct Wrapper<T>(T);
 
-fn make_closure() -> Wrapper<impl Fn(i32) -> i32>
-
-{
-
+fn make_closure() -> Wrapper<impl Fn(i32) -> i32> {
     let x = 1;
-
     Wrapper(move |n: i32| x + n)
-
 }
 
 fn main() {
-
     let w: Wrapper<_> = make_closure();
-
     w.0(0);
-
 }
-
 ```
 
-有几个其他地方`decltype`可以工作，但`impl Trait`还不能，例如[`Fn`特质的输出类型](https://github.com/rust-lang/rust/issues/99697)。这意味着在 Rust 中可以定义返回闭包的闭包，但不能为它们指定类型，因此不能从函数中返回它们。下面的代码在 C++中可以编译，但在 Rust 中由于这个原因无法编译。
+有几个其他地方`decltype`可以工作，但`impl Trait`还不能，例如[`Fn`特质的输出类型](https://github.com/rust-lang/rust/issues/99697)。这意味着在 Rust 中可以定义返回闭包的闭包，但不能为它们指定类型，因此不能从函数中返回它们。下面的代码在 C++ 中可以编译，但在 Rust 中由于这个原因无法编译。
 
-```rs
+```cpp
 decltype(auto) makeClosure(int n) {
   return [n]() { return [n]() { return n; }; };
-} 
+}
 ```
 
-```rs
+```rust
 // Does not compile: not yet supported
 fn make_closure(
     n: i32,
@@ -1169,7 +1071,7 @@ fn make_closure(
 
 Rust 不支持泛型闭包。因此，以下在 Rust 中没有等效功能。
 
-```rs
+```cpp
 #include <string>
 
 int main() {
@@ -1183,44 +1085,37 @@ int main() {
   int y = idCounter(5);
   std::string z =
       idCounter.template operator()<std::string>(std::string("hi"));
-} 
+}
 ```
 
 然而，如果 lambda 没有捕获任何内容，可以通过使用内部函数定义在 Rust 中写出等效的代码。
 
-```rs
+```cpp
 #include <string>
 
 int main() {
   auto id = []<typename T>(T x) { return x; };
   int y = id(5);
   std::string z = id(std::string("hi"));
-} 
+}
 ```
 
-```rs
-
+```rust
 fn main() {
-
     fn id<T>(x: T) -> T {
-
         x
-
     }
 
     id(5);
-
     id(String::from("hi"));
-
 }
-
 ```
 
 ## 部分应用和`std::bind`
 
-Rust 标准库中没有与 C++模板`std::bind`等效的功能。在 Rust 中表达部分应用的传统方式是写出 lambda 表达式。
+Rust 标准库中没有与 C++ 模板`std::bind`等效的功能。在 Rust 中表达部分应用的传统方式是写出 lambda 表达式。
 
-```rs
+```cpp
 #include <cassert>
 #include <functional>
 
@@ -1233,30 +1128,23 @@ int main() {
 
   auto addTen = std::bind(add, 10, _1);
   assert(42 == addTen(32));
-} 
+}
 ```
 
-```rs
-
+```rust
 fn add(x: i32, y: i32) -> i32 {
-
     x + y
-
 }
 
 fn main() {
-
     let add_ten = move |y| add(10, y);
-
     assert_eq!(42, add_ten(32));
-
 }
-
 ```
 
 第三方 crate [partial_application](https://docs.rs/partial_application/latest/partial_application/) 提供了类似于`std::bind`的功能，使用 Rust 宏实现。
 
-```rs
+```rust
 use partial_application::*;
 
 fn add(x: i32, y: i32) -> i32 {
@@ -1265,7 +1153,6 @@ fn add(x: i32, y: i32) -> i32 {
 
 fn main() {
     let add_ten = partial!(move add => 10, _);
-
     assert_eq!(42, add_ten(32));
 }
 ```
@@ -1274,7 +1161,7 @@ fn main() {
 
 在 Rust 中，闭包无法返回对捕获变量的引用。这是由于`Fn`族特质的定义限制造成的：`Fn::Output`没有表达生命周期边界的方法。
 
-```rs
+```cpp
 #include <iostream>
 #include <string>
 
@@ -1284,10 +1171,10 @@ int main() {
     return msg;
   };
   std::cout << f() << std::endl;
-} 
+}
 ```
 
-```rs
+```rust
 fn main() {
     let msg = String::from("hello world");
     // fails to compile!
@@ -1297,73 +1184,50 @@ fn main() {
 }
 ```
 
-在 Rust 中解决这种限制的方法包括：要么堆分配并使用共享指针 `Rc`，要么定义一个新的特质而不是使用 `Fn` 特质之一。以下示例展示了使用 [泛型关联类型](https://doc.rust-lang.org/reference/items/associated-items.html#r-items.associated.type.generic) 定义通用 `Fn` 特质的特质。然而，在实践中，通常更好的做法是为每个用例定义一个自定义特质，或者如果单个结构体就足够了，则完全省略特质。
+在 Rust 中解决这种限制的方法包括：要么堆分配并使用共享指针`Rc`，要么定义一个新的特质而不是使用`Fn`特质之一。以下示例展示了使用[泛型关联类型](https://doc.rust-lang.org/reference/items/associated-items.html#r-items.associated.type.generic)定义通用`Fn`特质的特质。然而，在实践中，通常更好的做法是为每个用例定义一个自定义特质，或者如果单个结构体就足够了，则完全省略特质。
 
-```rs
-
+```rust
 trait Closure<Args> {
-
     // 生命周期参数允许表达
-
     // 界限。
-
-    类型 Output<'a>
-
+    type Output<'a>
     where
-
         Self: 'a;
 
     // 来自 self 的界限可以是
-
     // 提供给 Output。
-
     fn call<'a>(
-
         &'a self,
-
         args: Args,
-
     ) -> Self::Output<'a>;
-
 }
 
 struct MyClosure {
-
     msg: String,
-
 }
 
-实现闭包类型 `Closure<()>` for MyClosure {
-
+实现闭包类型`Closure<()>` for MyClosure {
     类型 Output<'a> = &'a str;
 
     fn call(&self, _: ()) -> &str {
-
         &self.msg
-
     }
-
 }
 
 fn main() {
-
     let f = MyClosure {
-
         msg: String::from("hello world"),
-
     };
 
     println!("{}", f.call(()));
-
 }
-
 ```
 
-## 闭包、所有权和 `FnOnce`
+## 闭包、所有权和`FnOnce`
 
 在 Rust 中，闭包是其中借用检查可能会让 C++ 程序员感到沮丧的部分。这通常不是因为生命周期，在 C++ 中也需要类似地考虑生命周期，而是因为 C++ 默认使用复制语义，而 Rust 默认使用移动语义。例如，对早期示例中的一次小调整无法编译。
 
-```rs
+```rust
 fn main() {
     let greeting = "hello ".to_string();
 
@@ -1377,9 +1241,9 @@ fn main() {
 }
 ```
 
-这无法编译，因为 `+` 运算符会获取 `greeting` 的所有权，这使得它对于后续调用不再可访问。因此，闭包只实现了 `FnOnce`，而不是 `Fn`，因此只能调用一次，因为调用会获取闭包本身的所有权。
+这无法编译，因为`+`运算符会获取`greeting`的所有权，这使得它对于后续调用不再可访问。因此，闭包只实现了`FnOnce`，而不是`Fn`，因此只能调用一次，因为调用会获取闭包本身的所有权。
 
-```rs
+```text
 error[E0382]: use of moved value: `say_hello_to`
  --> example.rs:9:20
   |
@@ -1397,31 +1261,23 @@ note: this value implements `FnOnce`, which causes it to be moved when called
  --> example.rs:8:20
   |
 8 |     println!("{}", say_hello_to("world"));
-  | 
+  |
 ```
 
 In many cases like this, the answer is to clone the value so that the copy owned by the closure can be retained for future invocations.
 
-```rs
-
+```rust
 fn main() {
-
     let greeting = "hello ".to_string();
 
     // 无法写出闭包的类型
-
     let say_hello_to = move |who: &str| {
-
         greeting.clone() + who
-
     };
 
     println!("{}", say_hello_to("world"));
-
     println!("{}", say_hello_to("moon"));
-
 }
-
 ```
 
 如果克隆是不希望的，因为它太昂贵，那么闭包需要重新设计以避免放弃其捕获变量的所有权。
@@ -1434,12 +1290,12 @@ C++ 常常建议在 lambda 表达式中显式列出捕获项，尤其是在闭�
 
 这导致在 Rust 中记录闭包的最佳实践不包括列举捕获，即使在 C++ 中可能会这样做的情况下。
 
-闭包中捕获内容的可破坏性也是如此。在 上一节 中涉及 `FnOnce` 函数的例子可能最初是一个令人沮丧的点，但该行为的好处是减少了文档和推理的负担。
+闭包中捕获内容的可破坏性也是如此。在上一节中涉及`FnOnce`函数的例子可能最初是一个令人沮丧的点，但该行为的好处是减少了文档和推理的负担。
 
 <link rel="stylesheet" type="text/css" href="../quiz/style.css">
 
-* * *
+---
 
-1.  也就是说，既不能编写 `impl From<&MyClosure> for impl Fn() -> usize {...}` 也不能编写 `impl Into<impl Fn() -> usize> for &MyClosure {...}`。 ↩
+1. 也就是说，既不能编写`impl From<&MyClosure> for impl Fn() -> usize {...}`，也不能编写`impl Into<impl Fn() -> usize> for &MyClosure {...}`。 ↩
 
 [点击此处给我们关于此页面的反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Lambdas, closures, and function objects)

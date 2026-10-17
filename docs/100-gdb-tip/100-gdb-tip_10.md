@@ -1,8 +1,9 @@
+
 # 改变程序的执行
 
-# 改变字符串的值
+## 改变字符串的值
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -17,7 +18,7 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 使用 gdb 调试程序时，可以用“`set`”命令改变字符串的值，以上面程序为例：
 
@@ -67,15 +68,16 @@ p1 is Ace, p2 is Bob
 ```
 
 在改变字符串的值时候，一定要注意内存越界的问题。
+
 参见[stackoverflow](http://stackoverflow.com/questions/19503057/in-gdb-how-can-i-write-a-string-to-memory).
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 设置变量的值
+## 设置变量的值
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -97,7 +99,7 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 在 gdb 中，可以用“`set var variable=expr`”命令设置变量的值，以上面代码为例：
 
@@ -152,13 +154,13 @@ main () at a.c:15
 
 详情参见[gdb 手册](https://sourceware.org/gdb/current/onlinedocs/gdb/Assignment.html#Assignment)
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 修改 PC 寄存器的值
+## 修改 PC 寄存器的值
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -173,9 +175,10 @@ int main(void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 PC 寄存器会存储程序下一条要执行的指令，通过修改这个寄存器的值，可以达到改变程序执行流程的目的。
+
 上面的程序会输出“`a=2`”，下面介绍一下如何通过修改 PC 寄存器的值，改变程序执行流程。
 
 ```cpp
@@ -234,13 +237,13 @@ a=1
 
 接下来执行，可以看到程序输出“`a=1`”，也就是跳过了第一条“`a++;`”语句。
 
-## 贡献者
+### 贡献者
 
 nanxiao
 
-# 跳转到指定位置执行
+## 跳转到指定位置执行
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -263,7 +266,7 @@ int main (void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 当调试程序时，你可能不小心走过了出错的地方：
 
@@ -279,7 +282,7 @@ error
 17      return 0; 
 ```
 
-看起来是在 15 行，调用 fun 的时候出错了。常见的办法是在 15 行设置个断点，然后从头`run`一次。
+看起来是在 15 行，调用`fun`的时候出错了。常见的办法是在 15 行设置个断点，然后从头`run`一次。
 
 如果你的环境支持反向执行，那么更好了。
 
@@ -302,18 +305,19 @@ fun (x=-2) at jump.c:5
 
 需要注意的是：
 
-1.  `jump`命令只改变 pc 的值，所以改变程序执行可能会出现不同的结果，比如变量 i 的值
+1.  `jump`命令只改变 pc 的值，所以改变程序执行可能会出现不同的结果，比如变量`i`的值
+
 2.  通过（临时）断点的配合，可以让你的程序跳到指定的位置，并停下来
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Jumping.html#Jumping)
 
-## 贡献者
+### 贡献者
 
 xmj
 
-# 使用断点命令改变程序的执行
+## 使用断点命令改变程序的执行
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -340,7 +344,7 @@ int main (void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 这个例子程序可能不太好，只是可以用来演示下断点命令的用法：
 
@@ -363,19 +367,19 @@ You win $3000!
 [Inferior 1 (process 4134) exited normally] 
 ```
 
-可以看到，当程序运行到断点处，会自动把变量 n 的值修改为 0，然后继续执行。
+可以看到，当程序运行到断点处，会自动把变量`n`的值修改为 0，然后继续执行。
 
 如果你在调试一个大程序，重新编译一次会花费很长时间，比如调试编译器的 bug，那么你可以用这种方式在 gdb 中先实验性的修改下试试，而不需要修改源码，重新编译。
 
 详情参见[gdb 手册](https://sourceware.org/gdb/onlinedocs/gdb/Break-Commands.html#Break-Commands)
 
-## 贡献者
+### 贡献者
 
 xmj
 
-# 修改被调试程序的二进制文件
+## 修改被调试程序的二进制文件
 
-## 例子
+### 例子
 
 ```cpp
 #include <stdio.h>
@@ -402,7 +406,7 @@ int main (void)
 } 
 ```
 
-## 技巧
+### 技巧
 
 gdb 不仅可以用来调试程序，还可以修改程序的二进制代码。
 
@@ -422,6 +426,8 @@ Writing into executable and core files is on.
 ```
 
 接下来，查看反汇编：
+
+
 
 ```cpp
 (gdb) disassemble /mr drawing 
@@ -486,7 +492,7 @@ Dump of assembler code for function drawing:
 End of assembler dump. 
 ```
 
-可以看到，条件跳转指令“je”已经被改为无条件跳转“jmp”了。
+可以看到，条件跳转指令“`je`”已经被改为无条件跳转“`jmp`”了。
 
 退出，运行一下：
 
@@ -500,4 +506,4 @@ You win $3000!
 
 ## 贡献者
 
-xmj
+`xmj`

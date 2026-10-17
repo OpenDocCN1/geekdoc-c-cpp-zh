@@ -1,18 +1,19 @@
+
 # 第二十章 链接详解
 
 **目录**
 
-*   1\. 多目标文件的链接
-*   2\. 定义和声明
-    *   2.1\. `extern`和`static`关键字
-    *   2.2\. 头文件
-    *   2.3\. 定义和声明的详细规则
-*   3\. 静态库
-*   4\. 共享库
-    *   4.1\. 编译、链接、运行
-    *   4.2\. 动态链接的过程
-    *   4.3\. 共享库的命名惯例
-*   5\. 虚拟内存管理
+* 1\. 多目标文件的链接
+* 2\. 定义和声明
+  * 2.1\. `extern`和`static`关键字
+  * 2.2\. 头文件
+  * 2.3\. 定义和声明的详细规则
+* 3\. 静态库
+* 4\. 共享库
+  * 4.1\. 编译、链接、运行
+  * 4.2\. 动态链接的过程
+  * 4.3\. 共享库的命名惯例
+* 5\. 虚拟内存管理
 
 ## 1\. 多目标文件的链接
 
@@ -36,10 +37,10 @@ char pop(void)
 int is_empty(void)
 {
     return top == -1;
-} 
+}
 ```
 
-这段程序和原来有点不同，在例 12.1 “用堆栈实现倒序打印”中`top`总是指向栈顶元素的下一个元素，而在这段程序中`top`总是指向栈顶元素，所以要初始化成-1 才表示空堆栈，这两种堆栈使用习惯都很常见。
+这段程序和原来有点不同，在例 12.1 “用堆栈实现倒序打印”中`top`总是指向栈顶元素的下一个元素，而在这段程序中`top`总是指向栈顶元素，所以要初始化成-1才表示空堆栈，这两种堆栈使用习惯都很常见。
 
 ```cpp
 /* main.c */
@@ -58,13 +59,13 @@ int main(void)
     putchar('\n');
 
     return 0;
-} 
+}
 ```
 
 `a`和`b`这两个变量没有用，只是为了顺便说明链接过程才加上的。编译的步骤和以前一样，可以一步编译：
 
 ```cpp
-$ gcc main.c stack.c -o main 
+$ gcc main.c stack.c -o main
 ```
 
 也分可以多步编译：
@@ -72,7 +73,7 @@ $ gcc main.c stack.c -o main
 ```cpp
 $ gcc -c main.c
 $ gcc -c stack.c
-$ gcc main.o stack.o -o main 
+$ gcc main.o stack.o -o main
 ```
 
 如果按照第 2 节 “`main`函数和启动例程”的做法，用`nm`命令查看目标文件的符号表，会发现`main.o`中有未定义的符号`push`、`pop`、`is_empty`、`putchar`，前三个符号在`stack.o`中实现了，链接生成可执行文件`main`时可以做符号解析，而`putchar`是`libc`的库函数，在可执行文件`main`中仍然是未定义的，要在程序运行时做动态链接。
@@ -86,7 +87,7 @@ $ gcc main.o stack.o -o main
 为什么在可执行文件`main`的每个段中来自`main.o`的变量或函数都在前面，而来自`stack.o`的变量或函数都在后面呢？我们可以试试把`gcc`命令中的两个目标文件反过来写：
 
 ```cpp
-$ gcc stack.o main.o -o main 
+$ gcc stack.o main.o -o main
 ```
 
 结果正如我们所预料的，可执行文件`main`的每个段中来自`main.o`的变量或函数都排到后面了。实际上链接的过程是由一个链接脚本（Linker Script）控制的，链接脚本决定了给每个段分配什么地址，如何对齐，哪个段在前，哪个段在后，哪些段合并到同一个 Segment，另外链接脚本还要插入一些符号到最终生成的文件中，例如`__bss_start`、`_edata`、`_end`等。如果用`ld`做链接时没有用`-T`选项指定链接脚本，则使用`ld`的默认链接脚本，默认链接脚本可以用`ld --verbose`命令查看（由于比较长，只列出一些片断）：
@@ -160,7 +161,7 @@ SECTIONS
 ...
 }
 
-================================================== 
+==================================================
 ```
 
 `ENTRY(_start)`说明`_start`是整个程序的入口点，因此`_start`是入口点并不是规定死的，是可以改用其它函数做入口点的。
@@ -182,7 +183,7 @@ $ gcc -c main.c -Wall
 main.c: In function ‘main’:
 main.c:8: warning: implicit declaration of function ‘push’
 main.c:12: warning: implicit declaration of function ‘is_empty’
-main.c:13: warning: implicit declaration of function ‘pop’ 
+main.c:13: warning: implicit declaration of function ‘pop’
 ```
 
 这个问题我们在第 2 节 “自定义函数”讨论过，由于编译器在处理函数调用代码时没有找到函数原型，只好根据函数调用代码做隐式声明，把这三个函数声明为：
@@ -190,7 +191,7 @@ main.c:13: warning: implicit declaration of function ‘pop’
 ```cpp
 int push(char);
 int pop(void);
-int is_empty(void); 
+int is_empty(void);
 ```
 
 现在你应该比学第 2 节 “自定义函数”的时候更容易理解这条规则了。为什么编译器在处理函数调用代码时需要有函数原型？因为必须知道参数的类型和个数以及返回值的类型才知道生成什么样的指令。为什么隐式声明靠不住呢？因为隐式声明是从函数调用代码推导而来的，而事实上函数定义的形参类型可能跟函数调用代码传的实参类型并不一致，如果函数定义带有可变参数（例如`printf`），那么从函数调用代码也看不出来这个函数带有可变参数，另外，从函数调用代码也看不出来返回值应该是什么类型，所以隐式声明只能规定返回值都是`int`型的。既然隐式声明靠不住，那编译器为什么不自己去找函数定义，而非要让我们在调用之前写函数原型呢？因为编译器往往不知道去哪里找函数定义，像上面的例子，我让编译器编译`main.c`，而这几个函数的定义却在`stack.c`里，编译器又怎么会知道呢？所以编译器只能通过隐式声明来猜测函数原型，这种猜测往往会出错，但在比较简单的情况下还算可用，比如上一节的例子这么编译过去了也能得到正确结果。
@@ -216,7 +217,7 @@ int main(void)
     putchar('\n');
 
     return 0;
-} 
+}
 ```
 
 这样编译器就不会报警告了。在这里`extern`关键字表示这个标识符具有 External Linkage。External Linkage 的定义在上一章讲过，但现在应该更容易理解了，`push`这个标识符具有 External Linkage 指的是：如果把`main.c`和`stack.c`链接在一起，如果`push`在`main.c`和`stack.c`中都有声明（在`stack.c`中的声明同时也是定义），那么这些声明指的是同一个函数，链接之后是同一个`GLOBAL`符号，代表同一个地址。函数声明中的`extern`也可以省略不写，不写`extern`的函数声明也表示这个函数具有 External Linkage。
@@ -225,13 +226,13 @@ int main(void)
 
 ```cpp
 /* foo.c */
-static void foo(void) {} 
+static void foo(void) {}
 ```
 
 ```cpp
 /* main.c */
 void foo(void);
-int main(void) { foo(); return 0; } 
+int main(void) { foo(); return 0; }
 ```
 
 编译链接在一起会出错：
@@ -240,7 +241,7 @@ int main(void) { foo(); return 0; }
 $ gcc foo.c main.c
 /tmp/ccRC2Yjn.o: In function `main':
 main.c:(.text+0x12): undefined reference to `foo'
-collect2: ld returned 1 exit status 
+collect2: ld returned 1 exit status
 ```
 
 虽然在`foo.c`中定义了函数`foo`，但这个函数只具有 Internal Linkage，只有在`foo.c`中多次声明才表示同一个函数，而在`main.c`中声明就不表示它了。如果把`foo.c`编译成目标文件，函数名`foo`在其中是一个`LOCAL`的符号，不参与链接过程，所以在链接时，`main.c`中用到一个 External Linkage 的`foo`函数，链接器却找不到它的定义在哪儿，无法确定它的地址，也就无法做符号解析，只好报错。*凡是被多次声明的变量或函数，必须有且只有一个声明是定义，如果有多个定义，或者一个定义都没有，链接器就无法完成链接。*
@@ -269,7 +270,7 @@ int main(void)
     printf("%d\n", top);
 
     return 0;
-} 
+}
 ```
 
 变量`top`具有 External Linkage，它的存储空间是在`stack.c`中分配的，所以`main.c`中的变量声明`extern int top;`不是变量定义，因为它不分配存储空间。以上函数和变量声明也可以写在`main`函数体里面，使所声明的标识符具有块作用域：
@@ -293,12 +294,16 @@ int main(void)
     printf("%d\n", top);
 
     return 0;
-} 
+}
 ```
 
 注意，变量声明和函数声明有一点不同，函数声明的`extern`可写可不写，而变量声明如果不写`extern`意思就完全变了，如果上面的例子不写`extern`就表示在`main`函数中定义一个局部变量`top`。另外要注意，`stack.c`中的定义是`int top = -1;`，而`main.c`中的声明不能加 Initializer，如果上面的例子写成`extern int top = -1;`则编译器会报错。
 
-在`main.c`中可以通过变量声明来访问`stack.c`中的变量`top`，但是从实现`stack.c`这个模块的角度来看，`top`这个变量是不希望被外界访问到的，变量`top`和`stack`都属于这个模块的内部状态，外界应该只允许通过`push`和`pop`函数来改变模块的内部状态，这样才能保证堆栈的 LIFO 特性，如果外界可以随机访问`stack`或者随便修改`top`，那么堆栈的状态就乱了。那怎么才能阻止外界访问`top`和`stack`呢？答案就是用`static`关键字把它们声明为 Internal Linkage 的：
+
+
+在`main.c`中可以通过变量声明来访问`stack.c`中的变量`top`，但是从实现`stack.c`这个模块的角度来看，`top`这个变量是不希望被外界访问到的，变量`top`和`stack`都属于这个模块的内部状态，外界应该只允许通过`push`和`pop`函数来改变模块的内部状态，这样才能保证堆栈的 LIFO 特性。如果外界可以随机访问`stack`或者随便修改`top`，那么堆栈的状态就乱了。
+
+那怎么才能阻止外界访问`top`和`stack`呢？答案就是用`static`关键字把它们声明为 Internal Linkage 的：
 
 ```cpp
 /* stack.c */
@@ -318,16 +323,18 @@ char pop(void)
 int is_empty(void)
 {
     return top == -1;
-} 
+}
 ```
 
-这样，即使在`main.c`中用`extern`声明也访问不到`stack.c`的变量`top`和`stack`。从而保护了`stack.c`模块的内部状态，这也是一种封装（Encapsulation）的思想。
+这样，即使在`main.c`中用`extern`声明也访问不到`stack.c`的变量`top`和`stack`，从而保护了`stack.c`模块的内部状态，这也是一种封装（Encapsulation）的思想。
 
 用`static`关键字声明具有 Internal Linkage 的函数也是出于这个目的。在一个模块中，有些函数是提供给外界使用的，也称为导出（Export）给外界使用，这些函数声明为 External Linkage 的。有些函数只在模块内部使用而不希望被外界访问到，则声明为 Internal Linkage 的。
 
-### 2.2\. 头文件
+### 2.2. 头文件
 
-我们继续前面关于`stack.c`和`main.c`的讨论。`stack.c`这个模块封装了`top`和`stack`两个变量，导出了`push`、`pop`、`is_empty`三个函数接口，已经设计得比较完善了。但是使用这个模块的每个程序文件都要写三个函数声明也是很麻烦的，假设又有一个`foo.c`也使用这个模块，`main.c`和`foo.c`中各自要写三个函数声明。重复的代码总是应该尽量避免的，以前我们通过各种办法把重复的代码提取出来，比如在第 2 节 “数组应用实例：统计随机数”讲过用宏定义避免硬编码的问题，这次有什么办法呢？答案就是可以自己写一个头文件`stack.h`：
+我们继续前面关于`stack.c`和`main.c`的讨论。`stack.c`这个模块封装了`top`和`stack`两个变量，导出了`push`、`pop`、`is_empty`三个函数接口，已经设计得比较完善了。但是使用这个模块的每个程序文件都要写三个函数声明也是很麻烦的。假设又有一个`foo.c`也使用这个模块，`main.c`和`foo.c`中各自要写三个函数声明。
+
+重复的代码总是应该尽量避免的。以前我们通过各种办法把重复的代码提取出来，比如在第 2 节“数组应用实例：统计随机数”讲过用宏定义避免硬编码的问题，这次有什么办法呢？答案就是可以自己写一个头文件`stack.h`：
 
 ```cpp
 /* stack.h */
@@ -336,7 +343,7 @@ int is_empty(void)
 extern void push(char);
 extern char pop(void);
 extern int is_empty(void);
-#endif 
+#endif
 ```
 
 这样在`main.c`中只需包含这个头文件就可以了，而不需要写三个函数声明：
@@ -357,10 +364,10 @@ int main(void)
     putchar('\n');
 
     return 0;
-} 
+}
 ```
 
-首先说为什么`#include &lt;stdio.h&gt;`用角括号，而`#include "stack.h"`用引号。对于用角括号包含的头文件，`gcc`首先查找`-I`选项指定的目录，然后查找系统的头文件目录（通常是`/usr/include`，在我的系统上还包括`/usr/lib/gcc/i486-linux-gnu/4.3.2/include`）；而对于用引号包含的头文件，`gcc`首先查找包含头文件的`.c`文件所在的目录，然后查找`-I`选项指定的目录，然后查找系统的头文件目录。
+首先说为什么`#include <stdio.h>`用角括号，而`#include "stack.h"`用引号。对于用角括号包含的头文件，`gcc`首先查找`-I`选项指定的目录，然后查找系统的头文件目录（通常是`/usr/include`，在我的系统上还包括`/usr/lib/gcc/i486-linux-gnu/4.3.2/include`）；而对于用引号包含的头文件，`gcc`首先查找包含头文件的`.c`文件所在的目录，然后查找`-I`选项指定的目录，然后查找系统的头文件目录。
 
 假如三个代码文件都放在当前目录下：
 
@@ -371,7 +378,7 @@ $ tree
 |-- stack.c
 `-- stack.h
 
-0 directories, 3 files 
+0 directories, 3 files
 ```
 
 则可以用`gcc -c main.c`编译，`gcc`会自动在`main.c`所在的目录中找到`stack.h`。假如把`stack.h`移到一个子目录下：
@@ -384,14 +391,18 @@ $ tree
     |-- stack.c
     `-- stack.h
 
-1 directory, 3 files 
+1 directory, 3 files
 ```
 
 则需要用`gcc -c main.c -Istack`编译。用`-I`选项告诉`gcc`头文件要到子目录`stack`里找。
 
 在`#include`预处理指示中可以使用相对路径，例如把上面的代码改成`#include "stack/stack.h"`，那么编译时就不需要加`-Istack`选项了，因为`gcc`会自动在`main.c`所在的目录中查找，而头文件相对于`main.c`所在目录的相对路径正是`stack/stack.h`。
 
-在`stack.h`中我们又看到两个新的预处理指示`#ifndef STACK_H`和`#endif`，意思是说，如果`STACK_H`这个宏没有定义过，那么从`#ifndef`到`#endif`之间的代码就包含在预处理的输出结果中，否则这一段代码就不出现在预处理的输出结果中。`stack.h`这个头文件的内容整个被`#ifndef`和`#endif`括起来了，如果在包含这个头文件时`STACK_H`这个宏已经定义过了，则相当于这个头文件里什么都没有，包含了一个空文件。这有什么用呢？假如`main.c`包含了两次`stack.h`：
+在`stack.h`中我们又看到两个新的预处理指示`#ifndef STACK_H`和`#endif`，意思是说，如果`STACK_H`这个宏没有定义过，那么从`#ifndef`到`#endif`之间的代码就包含在预处理的输出结果中，否则这一段代码就不出现在预处理的输出结果中。
+
+`stack.h`这个头文件的内容整个被`#ifndef`和`#endif`括起来了。如果在包含这个头文件时`STACK_H`这个宏已经定义过了，则相当于这个头文件里什么都没有，包含了一个空文件。
+
+这有什么用呢？假如`main.c`包含了两次`stack.h`：
 
 ```cpp
 ...
@@ -400,7 +411,7 @@ $ tree
 
 int main(void)
 {
-... 
+...
 ```
 
 则第一次包含`stack.h`时并没有定义`STACK_H`这个宏，因此头文件的内容包含在预处理的输出结果中：
@@ -415,7 +426,7 @@ extern int is_empty(void);
 
 int main(void)
 {
-... 
+...
 ```
 
 其中已经定义了`STACK_H`这个宏，因此第二次再包含`stack.h`就相当于包含了一个空文件，这就避免了头文件的内容被重复包含。这种保护头文件的写法称为 Header Guard，以后我们每写一个头文件都要加上 Header Guard，宏定义名就用头文件名的大写形式，这是规范的做法。
@@ -424,34 +435,36 @@ int main(void)
 
 ```cpp
 #include "stack.h"
-#include "foo.h" 
+#include "foo.h"
 ```
 
 然而`foo.h`里又包含了`bar.h`，`bar.h`里又包含了`stack.h`。在规模较大的项目中头文件包含头文件的情况很常见，经常会包含四五层，这时候重复包含的问题就很难发现了。比如在我的系统头文件目录`/usr/include`中，`errno.h`包含了`bits/errno.h`，后者又包含了`linux/errno.h`，后者又包含了`asm/errno.h`，后者又包含了`asm-generic/errno.h`。
 
-另外一个问题是，就算我是重复包含了头文件，那有什么危害么？像上面的三个函数声明，在程序中声明两次也没有问题，对于具有 External Linkage 的函数，声明任意多次也都代表同一个函数。重复包含头文件有以下问题：
+另外一个问题是，就算是重复包含了头文件，那有什么危害么？像上面的三个函数声明，在程序中声明两次也没有问题，对于具有 External Linkage 的函数，声明任意多次也都代表同一个函数。重复包含头文件有以下问题：
 
-1.  一是使预处理的速度变慢了，要处理很多本来不需要处理的头文件。
+1. 一是使预处理的速度变慢了，要处理很多本来不需要处理的头文件。
+2. 二是如果有`foo.h`包含`bar.h`，`bar.h`又包含`foo.h`的情况，预处理器就陷入死循环了（其实编译器都会规定一个包含层数的上限）。
+3. 三是头文件里有些代码不允许重复出现。虽然变量和函数允许多次声明（只要不是多次定义就行），但头文件里有些代码是不允许多次出现的，比如`typedef`类型定义和结构体 Tag 定义等，在一个程序文件中只允许出现一次。
 
-2.  二是如果有`foo.h`包含`bar.h`，`bar.h`又包含`foo.h`的情况，预处理器就陷入死循环了（其实编译器都会规定一个包含层数的上限）。
+还有一个问题，既然要`#include`头文件，那我不如直接在`main.c`中`#include "stack.c"`得了。这样把`stack.c`和`main.c`合并为同一个程序文件，相当于又回到最初的例 12.1“用堆栈实现倒序打印”了。
 
-3.  三是头文件里有些代码不允许重复出现，虽然变量和函数允许多次声明（只要不是多次定义就行），但头文件里有些代码是不允许多次出现的，比如`typedef`类型定义和结构体 Tag 定义等，在一个程序文件中只允许出现一次。
+当然这样也能编译通过，但是在一个规模较大的项目中不能这么做。假如又有一个`foo.c`也要使用`stack.c`这个模块怎么办呢？如果在`foo.c`里面也`#include "stack.c"`，就相当于`push`、`pop`、`is_empty`这三个函数在`main.c`和`foo.c`中都有定义，那么`main.c`和`foo.c`就不能链接在一起了。
 
-还有一个问题，既然要`#include`头文件，那我不如直接在`main.c`中`#include "stack.c"`得了。这样把`stack.c`和`main.c`合并为同一个程序文件，相当于又回到最初的例 12.1 “用堆栈实现倒序打印”了。当然这样也能编译通过，但是在一个规模较大的项目中不能这么做，假如又有一个`foo.c`也要使用`stack.c`这个模块怎么办呢？如果在`foo.c`里面也`#include "stack.c"`，就相当于`push`、`pop`、`is_empty`这三个函数在`main.c`和`foo.c`中都有定义，那么`main.c`和`foo.c`就不能链接在一起了。如果采用包含头文件的办法，那么这三个函数只在`stack.c`中定义了一次，最后可以把`main.c`、`stack.c`、`foo.c`链接在一起。如下图所示：
+如果采用包含头文件的办法，那么这三个函数只在`stack.c`中定义了一次，最后可以把`main.c`、`stack.c`、`foo.c`链接在一起。如下图所示：
 
-**图 20.2\. 为什么要包含头文件而不是`.c`文件**
+**图 20.2. 为什么要包含头文件而不是`.c`文件**
 
 ![为什么要包含头文件而不是.c 文件](img/link.includeh.png)
 
 同样道理，头文件中的变量和函数声明一定不能是定义。如果头文件中出现变量或函数定义，这个头文件又被多个`.c`文件包含，那么这些`.c`文件就不能链接在一起了。
 
-### 2.3\. 定义和声明的详细规则
+### 2.3. 定义和声明的详细规则
 
 以上两节关于定义和声明只介绍了最基本的规则，在写代码时掌握这些基本规则就够用了，但其实 C 语言关于定义和声明还有很多复杂的规则，在分析错误原因或者维护规模较大的项目时需要了解这些规则。本节的两个表格出自[[Standard C]](bi01.html#bibli.standardc "Standard C: A Reference")。
 
 首先看关于函数声明的规则。
 
-**表 20.1\. Storage Class 关键字对函数声明的作用**
+**表 20.1. Storage Class 关键字对函数声明的作用**
 
 | Storage Class | File Scope Declaration | Block Scope Declaration |
 | --- | --- | --- |
@@ -459,18 +472,20 @@ int main(void)
 | extern | previous linkage, can define | previous linkage, cannot define |
 | static | internal linkage, can define | N/A |
 
-以前我们说“`extern`关键字表示这个标识符具有 External Linkage”其实是不准确的，准确地说应该是 Previous Linkage。Previous Linkage 的定义是：这次声明的标识符具有什么样的 Linkage 取决于前一次声明，这前一次声明具有相同的标识符名，而且必须是文件作用域的声明，如果在程序文件中找不到前一次声明（这次声明是第一次声明），那么这个标识符具有 External Linkage。例如在一个程序文件中在文件作用域两次声明同一个函数：
+以前我们说“`extern`关键字表示这个标识符具有 External Linkage”其实是不准确的，准确地说应该是 Previous Linkage。Previous Linkage 的定义是：这次声明的标识符具有什么样的 Linkage 取决于前一次声明，这前一次声明具有相同的标识符名，而且必须是文件作用域的声明。如果在程序文件中找不到前一次声明（这次声明是第一次声明），那么这个标识符具有 External Linkage。
+
+例如在一个程序文件中在文件作用域两次声明同一个函数：
 
 ```cpp
 static int f(void); /* internal linkage */
-extern int f(void); /* previous linkage */ 
+extern int f(void); /* previous linkage */
 ```
 
-则这里的`extern`修饰的标识符具有 Interanl Linkage 而不是 External Linkage。从上表的前两行可以总结出我们先前所说的规则“函数声明加不加`extern`关键字都一样”。上表也说明了在文件作用域允许定义函数，在块作用域不允许定义函数，或者说函数定义不能嵌套。另外，在块作用域中不允许用`static`关键字声明函数。
+则这里的`extern`修饰的标识符具有 Internal Linkage 而不是 External Linkage。从上表的前两行可以总结出我们先前所说的规则“函数声明加不加`extern`关键字都一样”。上表也说明了在文件作用域允许定义函数，在块作用域不允许定义函数，或者说函数定义不能嵌套。另外，在块作用域中不允许用`static`关键字声明函数。
 
 关于变量声明的规则要复杂一些：
 
-**表 20.2\. Storage Class 关键字对变量声明的作用**
+**表 20.2. Storage Class 关键字对变量声明的作用**
 
 | Storage Class | File Scope Declaration | Block Scope Declaration |
 | --- | --- | --- |
@@ -478,7 +493,15 @@ extern int f(void); /* previous linkage */
 | extern | previous linkage, static duration, no initializer[*], not a definition | previous linkage, static duration, no initializer, not a definition |
 | static | internal linkage, static duration, static initializer, tentative definition | no linkage, static duration, static initializer, definition |
 
-上表的每个单元格里分成四行，分别描述变量的链接属性、生存期，以及这种变量如何初始化，是否算变量定义。链接属性有 External Linkage、Internal Linkage、No Linkage 和 Previous Linkage 四种情况，生存期有 Static Duration 和 Automatic Duration 两种情况，请参考本章和上一章的定义。初始化有 Static Initializer 和 Dynamic Initializer 两种情况，前者表示 Initializer 中只能使用常量表达式，表达式的值必须在编译时就能确定，后者表示 Initializer 中可以使用任意的右值表达式，表达式的值可以在运行时计算。是否算变量定义有三种情况，Definition（算变量定义）、Not a Definition（不算变量定义）和 Tentative Definition（暂定的变量定义）。什么叫“暂定的变量定义”呢？一个变量声明具有文件作用域，没有 Storage Class 关键字修饰，或者用`static`关键字修饰，那么如果它有 Initializer 则编译器认为它就是一个变量定义，如果它没有 Initializer 则编译器暂定它是变量定义，如果程序文件中有这个变量的明确定义就用明确定义，如果程序文件没有这个变量的明确定义，就用这个暂定的变量定义^([32])，这种情况下变量以 0 初始化。在[[C99]](bi01.html#bibli.c99 "ISO/IEC 9899: Programming Languages － C")中有一个例子：
+上表的每个单元格里分成四行，分别描述变量的链接属性、生存期，以及这种变量如何初始化，是否算变量定义。链接属性有 External Linkage、Internal Linkage、No Linkage 和 Previous Linkage 四种情况，生存期有 Static Duration 和 Automatic Duration 两种情况，请参考本章和上一章的定义。
+
+初始化有 Static Initializer 和 Dynamic Initializer 两种情况。前者表示 Initializer 中只能使用常量表达式，表达式的值必须在编译时就能确定；后者表示 Initializer 中可以使用任意的右值表达式，表达式的值可以在运行时计算。
+
+是否算变量定义有三种情况，Definition（算变量定义）、Not a Definition（不算变量定义）和 Tentative Definition（暂定的变量定义）。
+
+什么叫“暂定的变量定义”呢？一个变量声明具有文件作用域，没有 Storage Class 关键字修饰，或者用`static`关键字修饰，那么如果它有 Initializer，则编译器认为它就是一个变量定义；如果它没有 Initializer，则编译器暂定它是变量定义。如果程序文件中有这个变量的明确定义就用明确定义，如果程序文件没有这个变量的明确定义，就用这个暂定的变量定义^([32])，这种情况下变量以 0 初始化。
+
+在[[C99]](bi01.html#bibli.c99 "ISO/IEC 9899: Programming Languages － C")中有一个例子：
 
 ```cpp
 int i1 = 1; // definition, external linkage
@@ -495,25 +518,29 @@ extern int i1; // refers to previous, whose linkage is external
 extern int i2; // refers to previous, whose linkage is internal
 extern int i3; // refers to previous, whose linkage is external
 extern int i4; // refers to previous, whose linkage is external
-extern int i5; // refers to previous, whose linkage is internal 
+extern int i5; // refers to previous, whose linkage is internal
 ```
 
-变量`i2`和`i5`第一次声明为 Internal Linkage，第二次又声明为 External Linkage，这是不允许的，编译器会报错。注意上表中标有`[*]`的单元格，对于文件作用域的`extern`变量声明，C99 是允许带 Initializer 的，并且认为它是一个定义，但是`gcc`对于这种写法会报警告，为了兼容性应避免这种写法。
+变量`i2`和`i5`第一次声明为 Internal Linkage，第二次又声明为 External Linkage，这是不允许的，编译器会报错。
 
-* * *
+注意上表中标有`[*]`的单元格，对于文件作用域的`extern`变量声明，C99 是允许带 Initializer 的，并且认为它是一个定义，但是`gcc`对于这种写法会报警告，为了兼容性应避免这种写法。
+
+---
 
 ^([32]) 由于本书没有提及将不完全类型进行组合的问题，所以这条规则被我简化了，真正的规则还要复杂一些。读者可以参考 C99 中有关 Incomplete Type 和 Composite Type 的条款。Tentative Definition 的完整定义在 C99 的 6.9.2 节条款 2。
 
-## 3\. 静态库
+## 3. 静态库
 
 有时候需要把一组代码编译成一个库，这个库在很多项目中都要用到，例如`libc`就是这样一个库，我们在不同的程序中都会用到`libc`中的库函数（例如`printf`），也会用到`libc`中的变量（例如以后要讲到的`environ`变量）。本节介绍怎么创建这样一个库。
 
 我们继续用`stack.c`的例子。为了便于理解，我们把`stack.c`拆成四个程序文件（虽然实际上没太大必要），把`main.c`改得简单一些，头文件`stack.h`不变，本节用到的代码如下所示：
 
+
+
 ```cpp
 /* stack.c */
 char stack[512];
-int top = -1; 
+int top = -1;
 ```
 
 ```cpp
@@ -524,7 +551,7 @@ extern int top;
 void push(char c)
 {
     stack[++top] = c;
-} 
+}
 ```
 
 ```cpp
@@ -535,7 +562,7 @@ extern int top;
 char pop(void)
 {
     return stack[top--];
-} 
+}
 ```
 
 ```cpp
@@ -545,7 +572,7 @@ extern int top;
 int is_empty(void)
 {
     return top == -1;
-} 
+}
 ```
 
 ```cpp
@@ -555,7 +582,7 @@ int is_empty(void)
 extern void push(char);
 extern char pop(void);
 extern int is_empty(void);
-#endif 
+#endif
 ```
 
 ```cpp
@@ -567,12 +594,12 @@ int main(void)
 {
     push('a');
     return 0;
-} 
+}
 ```
 
 这些文件的目录结构是：
 
-```cpp
+```text
 $ tree
 .
 |-- main.c
@@ -583,49 +610,49 @@ $ tree
     |-- stack.c
     `-- stack.h
 
-1 directory, 6 files 
+1 directory, 6 files
 ```
 
 我们把`stack.c`、`push.c`、`pop.c`、`is_empty.c`编译成目标文件：
 
-```cpp
-$ gcc -c stack/stack.c stack/push.c stack/pop.c stack/is_empty.c 
+```bash
+$ gcc -c stack/stack.c stack/push.c stack/pop.c stack/is_empty.c
 ```
 
 然后打包成一个静态库`libstack.a`：
 
-```cpp
+```text
 $ ar rs libstack.a stack.o push.o pop.o is_empty.o
-ar: creating libstack.a 
+ar: creating libstack.a
 ```
 
 库文件名都是以`lib`开头的，静态库以`.a`作为后缀，表示 Archive。`ar`命令类似于`tar`命令，起一个打包的作用，但是把目标文件打包成静态库只能用`ar`命令而不能用`tar`命令。选项`r`表示将后面的文件列表添加到文件包，如果文件包不存在就创建它，如果文件包中已有同名文件就替换成新的。`s`是专用于生成静态库的，表示为静态库创建索引，这个索引被链接器使用。`ranlib`命令也可以为静态库创建索引，以上命令等价于：
 
-```cpp
+```bash
 $ ar r libstack.a stack.o push.o pop.o is_empty.o
-$ ranlib libstack.a 
+$ ranlib libstack.a
 ```
 
 然后我们把`libstack.a`和`main.c`编译链接在一起：
 
-```cpp
-$ gcc main.c -L. -lstack -Istack -o main 
+```bash
+$ gcc main.c -L. -lstack -Istack -o main
 ```
 
 `-L`选项告诉编译器去哪里找需要的库文件，`-L.`表示在当前目录找。`-lstack`告诉编译器要链接`libstack`库，`-I`选项告诉编译器去哪里找头文件。注意，即使库文件就在当前目录，编译器默认也不会去找的，所以`-L.`选项不能少。编译器默认会找的目录可以用`-print-search-dirs`选项查看：
 
-```cpp
+```text
 $ gcc -print-search-dirs
 install: /usr/lib/gcc/i486-linux-gnu/4.3.2/
-programs: =/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/libexec/gcc/i486-linux-gnu/4.3.2/:/usr/libexec/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/bin/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/bin/
-libraries: =/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/../lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../lib/:/lib/i486-linux-gnu/4.3.2/:/lib/../lib/:/usr/lib/i486-linux-gnu/4.3.2/:/usr/lib/../lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../:/lib/:/usr/lib/ 
+programs: =/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/libexec/gcc/i486-linux-gnu/4.3.2/:/usr/libexec/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/bin/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/bin/
+libraries: =/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/../lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../i486-linux-gnu/4.3.2/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../lib/:/lib/i486-linux-gnu/4.3.2/:/lib/../lib/:/usr/lib/i486-linux-gnu/4.3.2/:/usr/lib/../lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../../i486-linux-gnu/lib/:/usr/lib/gcc/i486-linux-gnu/4.3.2/../../../:/lib/:/usr/lib/
 ```
 
 其中的`libraries`就是库文件的搜索路径列表，各路径之间用`:`号隔开。编译器会在这些搜索路径以及`-L`选项指定的路径中查找用`-l`选项指定的库，比如`-lstack`，编译器会首先找有没有共享库`libstack.so`，如果有就链接它，如果没有就找有没有静态库`libstack.a`，如果有就链接它。所以编译器是优先考虑共享库的，如果希望编译器只链接静态库，可以指定`-static`选项。
 
 那么链接共享库和链接静态库有什么区别呢？在第 2 节 “`main`函数和启动例程”讲过，在链接`libc`共享库时只是指定了动态链接器和该程序所需要的库文件，并没有真的做链接，可执行文件`main`中调用的`libc`库函数仍然是未定义符号，要在运行时做动态链接。而在链接静态库时，链接器会把静态库中的目标文件取出来和可执行文件真正链接在一起。我们通过反汇编看上一步生成的可执行文件`main`：
 
-```cpp
+```text
 $ objdump -d main
 ...
 08048394 <main>:
@@ -636,39 +663,39 @@ $ objdump -d main
 080483c0 <push>:
  80483c0:       55                      push   %ebp
  80483c1:       89 e5                   mov    %esp,%ebp
- 80483c3:       83 ec 04                sub    $0x4,%esp 
+ 80483c3:       83 ec 04                sub    $0x4,%esp
 ```
 
 有意思的是，`main.c`只调用了`push`这一个函数，所以链接生成的可执行文件中也只有`push`而没有`pop`和`is_empty`。这是使用静态库的一个好处，链接器可以从静态库中只取出需要的部分来做链接。如果是直接把那些目标文件和`main.c`编译链接在一起：
 
-```cpp
-$ gcc main.c stack.o push.o pop.o is_empty.o -Istack -o main 
+```bash
+$ gcc main.c stack.o push.o pop.o is_empty.o -Istack -o main
 ```
 
 则没有用到的函数也会链接进来。当然另一个好处就是使用静态库只需写一个库文件名，而不需要写一长串目标文件名。
 
-## 4\. 共享库
+## 4. 共享库
 
-### 4.1\. 编译、链接、运行
+### 4.1. 编译、链接、运行
 
 组成共享库的目标文件和一般的目标文件有所不同，在编译时要加`-fPIC`选项，例如：
 
-```cpp
-$ gcc -c -fPIC stack/stack.c stack/push.c stack/pop.c stack/is_empty.c 
+```bash
+$ gcc -c -fPIC stack/stack.c stack/push.c stack/pop.c stack/is_empty.c
 ```
 
 `-f`后面跟一些编译选项，`PIC`是其中一种，表示生成位置无关代码（Position Independent Code）。那么用`-fPIC`生成的目标文件和一般的目标文件有什么不同呢？下面分析这个问题。
 
 我们知道一般的目标文件称为 Relocatable，在链接时可以把目标文件中各段的地址做重定位，重定位时需要修改指令。我们先不加`-fPIC`选项编译生成目标文件：
 
-```cpp
-$ gcc -c -g stack/stack.c stack/push.c stack/pop.c stack/is_empty.c 
+```bash
+$ gcc -c -g stack/stack.c stack/push.c stack/pop.c stack/is_empty.c
 ```
 
 由于接下来要用`objdump -dS`把反汇编指令和源代码穿插起来分析，所以用`-g`选项加调试信息。注意，加调试信息必须在编译每个目标文件时用`-g`选项，而不能只在最后编译生成可执行文件时用`-g`选项。反汇编查看`push.o`：
 
-```cpp
-$ objdump -dS push.o 
+```text
+$ objdump -dS push.o
 
 push.o:     file format elf32-i386
 
@@ -694,24 +721,24 @@ void push(char c)
   1f:    0f b6 45 fc              movzbl -0x4(%ebp),%eax
   23:    88 82 00 00 00 00        mov    %al,0x0(%edx)
 }
-  29:    c9                       leave  
-  2a:    c3                       ret 
+  29:    c9                       leave
+  2a:    c3                       ret
 ```
 
 指令中凡是用到`stack`和`top`的地址都用 0x0 表示，准备在重定位时修改。再看`readelf`输出的`.rel.text`段的信息：
 
-```cpp
+```text
 Relocation section '.rel.text' at offset 0x848 contains 4 entries:
- Offset     Info    Type            Sym.Value  Sym. Name
-0000000d  00001001 R_386_32          00000000   top
-00000015  00001001 R_386_32          00000000   top
-0000001b  00001001 R_386_32          00000000   top
-00000025  00001101 R_386_32          00000000   stack 
+ Offset     Info            Type        Sym.Value  Sym. Name
+0000000d  00001001          R_386_32    00000000   top
+00000015  00001001          R_386_32    00000000   top
+0000001b  00001001          R_386_32    00000000   top
+00000025  00001101          R_386_32    00000000   stack
 ```
 
 标出了指令中有四处需要在重定位时修改。下面编译链接成可执行文件之后再做反汇编分析：
 
-```cpp
+```bash
 $ gcc -g main.c stack.o push.o pop.o is_empty.o -Istack -o main
 $ objdump -dS main
 ...
@@ -735,15 +762,17 @@ void push(char c)
  80483df:       0f b6 45 fc             movzbl -0x4(%ebp),%eax
  80483e3:       88 82 40 a0 04 08       mov    %al,0x804a040(%edx)
 }
- 80483e9:       c9                      leave  
- 80483ea:       c3                      ret    
- 80483eb:       90                      nop    
-... 
+ 80483e9:       c9                      leave
+ 80483ea:       c3                      ret
+ 80483eb:       90                      nop
+...
 ```
 
 原来指令中的 0x0 被修改成了 0x804a010 和 0x804a040，这样做了重定位之后，各段的加载地址就定死了，因为在指令中使用了绝对地址。
 
 现在看用`-fPIC`编译生成的目标文件有什么不同：
+
+
 
 ```cpp
 $ gcc -c -g -fPIC stack/stack.c stack/push.c stack/pop.c stack/is_empty.c
@@ -792,7 +821,7 @@ Disassembly of section .text.__i686.get_pc_thunk.bx:
    3:    c3                       ret 
 ```
 
-指令中用到的`stack`和`top`的地址不再以 0x0 表示，而是以`0x0(%ebx)`表示，但其中还是留有 0x0 准备做进一步修改。再看`readelf`输出的`.rel.text`段：
+指令中用到的`stack`和`top`的地址不再以`0x0`表示，而是以`0x0(%ebx)`表示，但其中还是留有`0x0`准备做进一步修改。再看`readelf`输出的`.rel.text`段：
 
 ```cpp
 Relocation section '.rel.text' at offset 0x94c contains 6 entries:
@@ -894,7 +923,7 @@ $ ldd main
 
 2.  然后从缓存文件`/etc/ld.so.cache`中查找。这个缓存文件由`ldconfig`命令读取配置文件`/etc/ld.so.conf`之后生成，稍后详细解释。
 
-3.  如果上述步骤都找不到，则到默认的系统路径中查找，先是/usr/lib 然后是/lib。
+3.  如果上述步骤都找不到，则到默认的系统路径中查找，先是`/usr/lib`然后是`/lib`。
 
 先试试第一种方法，在运行`main`时通过环境变量`LD_LIBRARY_PATH`把当前目录添加到共享库的搜索路径：
 
@@ -904,7 +933,7 @@ $ LD_LIBRARY_PATH=. ./main
 
 这种方法只适合在开发中临时用一下，通常`LD_LIBRARY_PATH`是不推荐使用的，尽量不要设置这个环境变量，理由可以参考 Why LD_LIBRARY_PATH is bad（[`www.visi.com/~barr/ldpath.html`](http://www.visi.com/~barr/ldpath.html)）。
 
-再试试第二种方法，这是最常用的方法。把`libstack.so`所在目录的绝对路径（比如/home/akaedu/somedir）添加到`/etc/ld.so.conf`中（该文件中每个路径占一行），然后运行`ldconfig`：
+再试试第二种方法，这是最常用的方法。把`libstack.so`所在目录的绝对路径（比如`/home/akaedu/somedir`）添加到`/etc/ld.so.conf`中（该文件中每个路径占一行），然后运行`ldconfig`：
 
 ```cpp
 $ sudo ldconfig -v
@@ -955,6 +984,8 @@ $ gcc main.c -g -L. -lstack -Istack -o main -Wl,-rpath,/home/akaedu/somedir
 ```
 
 `-Wl,-rpath,/home/akaedu/somedir`表示`-rpath /home/akaedu/somedir`是由`gcc`传递给链接器的选项。可以看到`readelf`的结果多了一条`rpath`记录：
+
+
 
 ```cpp
 $ readelf -a main
@@ -1010,7 +1041,7 @@ int main(void)
 ... 
 ```
 
-和第 3 节 “静态库”链接静态库不同，`push`函数没有链接到可执行文件中。而且`call 80483d8 &lt;push@plt&gt;`这条指令调用的也不是`push`函数的地址。共享库是位置无关代码，在运行时可以加载到任意地址，其加载地址只有在动态链接时才能确定，所以在`main`函数中不可能直接通过绝对地址调用`push`函数，也是通过间接寻址来找`push`函数的。对照着上面的指令，我们用`gdb`跟踪一下：
+和第 3 节 “静态库”链接静态库不同，`push`函数没有链接到可执行文件中。而且`call 80483d8 <push@plt>`这条指令调用的也不是`push`函数的地址。共享库是位置无关代码，在运行时可以加载到任意地址，其加载地址只有在动态链接时才能确定，所以在`main`函数中不可能直接通过绝对地址调用`push`函数，也是通过间接寻址来找`push`函数的。对照着上面的指令，我们用`gdb`跟踪一下：
 
 ```cpp
 $ gdb main
@@ -1183,15 +1214,33 @@ bfac5000-bfada000 rw-p bffeb000 00:00 0          [stack]
 
 在第 4 节 “MMU”讲过，x86 平台的虚拟地址空间是 0x0000 0000~0xffff ffff，大致上前 3GB（0x0000 0000~0xbfff ffff）是用户空间，后 1GB（0xc000 0000~0xffff ffff）是内核空间，在这里得到了印证。0x0804 8000-0x080f 4000 是从`/bin/bash`加载到内存的，访问权限为`r-x`，表示 Text Segment，包含`.text`段、`.rodata`段、`.plt`段等。0x080f 4000-0x080f 9000 也是从`/bin/bash`加载到内存的，访问权限为`rw-`，表示 Data Segment，包含`.data`段、`.bss`段等。
 
-0x0928 3000-0x0949 7000 不是从磁盘文件加载到内存的，这段空间称为堆（Heap），以后会讲到用`malloc`函数动态分配内存是在这里分配的。从 0xb7ca 8000 开始是共享库的映射空间，每个共享库也分为几个 Segment，每个 Segment 有不同的访问权限。可以看到，从堆空间的结束地址（0x0949 7000）到共享库映射空间的起始地址（0xb7ca 8000）之间有很大的地址空洞，在动态分配内存时堆空间是可以向高地址增长的。堆空间的地址上限（0x09497000）称为 Break，堆空间要向高地址增长就要抬高 Break，映射新的虚拟内存页面到物理内存，这是通过系统调用`brk`实现的，`malloc`函数也是调用`brk`向内核请求分配内存的。
 
-`/lib/ld-2.8.90.so`就是动态链接器`/lib/ld-linux.so.2`，后者是前者的符号链接。标有`[vdso]`的地址范围是`linux-gate.so.1`的映射空间，我们讲过这个共享库是由内核虚拟出来的。0xbfac 5000-0xbfad a000 是栈空间，其中高地址的部分保存着进程的环境变量和命令行参数，低地址的部分保存函数栈帧，栈空间是向低地址增长的，但显然没有堆空间那么大的可供增长的余地，因为实际的应用程序动态分配大量内存的并不少见，但是有几十层深的函数调用并且每层调用都有很多局部变量的非常少见。总之，栈空间是可能用尽的，并且比堆空间更容易用尽，在第 3 节 “递归”讲过，无穷递归会用尽栈空间最终导致段错误。
+
+`0x0928 3000-0x0949 7000`不是从磁盘文件加载到内存的，这段空间称为堆（Heap），以后会讲到用`malloc`函数动态分配内存是在这里分配的。
+
+从`0xb7ca 8000`开始是共享库的映射空间，每个共享库也分为几个 Segment，每个 Segment 有不同的访问权限。可以看到，从堆空间的结束地址（`0x0949 7000`）到共享库映射空间的起始地址（`0xb7ca 8000`）之间有很大的地址空洞。在动态分配内存时，堆空间是可以向高地址增长的。堆空间的地址上限（`0x09497000`）称为 Break，堆空间要向高地址增长就要抬高 Break，映射新的虚拟内存页面到物理内存，这是通过系统调用`brk`实现的，`malloc`函数也是调用`brk`向内核请求分配内存的。
+
+`/lib/ld-2.8.90.so`就是动态链接器`/lib/ld-linux.so.2`，后者是前者的符号链接。标有`[vdso]`的地址范围是`linux-gate.so.1`的映射空间，我们讲过这个共享库是由内核虚拟出来的。
+
+`0xbfac 5000-0xbfad a000`是栈空间，其中高地址的部分保存着进程的环境变量和命令行参数，低地址的部分保存函数栈帧，栈空间是向低地址增长的。但显然没有堆空间那么大的可供增长的余地，因为实际的应用程序动态分配大量内存的并不少见，但是有几十层深的函数调用并且每层调用都有很多局部变量的非常少见。
+
+总之，栈空间是可能用尽的，并且比堆空间更容易用尽。在第 3 节“递归”讲过，无穷递归会用尽栈空间，最终导致段错误。
+
+## 虚拟内存管理的作用
 
 虚拟内存管理起到了什么作用呢？可以从以下几个方面来理解。
 
-第一，虚拟内存管理可以控制物理内存的访问权限。物理内存本身是不限制访问的，任何地址都可以读写，而操作系统要求不同的页面具有不同的访问权限，这是利用 CPU 模式和 MMU 的内存保护机制实现的。例如，Text Segment 被只读保护起来，防止被错误的指令意外改写，内核地址空间也被保护起来，防止在用户模式下执行错误的指令意外改写内核数据。这样，执行错误指令或恶意代码的破坏能力受到了限制，顶多使当前进程因段错误终止，而不会影响整个系统的稳定性。
+### 控制物理内存的访问权限
 
-第二，虚拟内存管理最主要的作用是让每个进程有独立的地址空间。所谓独立的地址空间是指，不同进程中的同一个 VA 被 MMU 映射到不同的 PA，并且在某一个进程中访问任何地址都不可能访问到另外一个进程的数据，这样使得任何一个进程由于执行错误指令或恶意代码导致的非法内存访问都不会意外改写其它进程的数据，不会影响其它进程的运行，从而保证整个系统的稳定性。另一方面，每个进程都认为自己独占整个虚拟地址空间，这样链接器和加载器的实现会比较容易，不必考虑各进程的地址范围是否冲突。
+第一，虚拟内存管理可以控制物理内存的访问权限。物理内存本身是不限制访问的，任何地址都可以读写，而操作系统要求不同的页面具有不同的访问权限，这是利用 CPU 模式和 MMU 的内存保护机制实现的。
+
+例如，Text Segment 被只读保护起来，防止被错误的指令意外改写；内核地址空间也被保护起来，防止在用户模式下执行错误的指令意外改写内核数据。这样，执行错误指令或恶意代码的破坏能力受到了限制，顶多使当前进程因段错误终止，而不会影响整个系统的稳定性。
+
+### 为每个进程提供独立的地址空间
+
+第二，虚拟内存管理最主要的作用是让每个进程有独立的地址空间。所谓独立的地址空间是指，不同进程中的同一个 VA 被 MMU 映射到不同的 PA，并且在某一个进程中访问任何地址都不可能访问到另外一个进程的数据。
+
+这样使得任何一个进程由于执行错误指令或恶意代码导致的非法内存访问，都不会意外改写其它进程的数据，不会影响其它进程的运行，从而保证整个系统的稳定性。另一方面，每个进程都认为自己独占整个虚拟地址空间，这样链接器和加载器的实现会比较容易，不必考虑各进程的地址范围是否冲突。
 
 继续前面的实验，再打开一个终端窗口，看一下这个新的`bash`进程的地址空间，可以发现和先前的`bash`进程地址空间的布局差不多：
 
@@ -1220,29 +1269,45 @@ b8022000-b8023000 rw-p 0001b000 08:15 565466     /lib/ld-2.8.90.so
 bff0e000-bff23000 rw-p bffeb000 00:00 0          [stack] 
 ```
 
-该进程也占用了 0x0000 0000-0xbfff ffff 的地址空间，Text Segment 也是 0x0804 8000-0x080f 4000，Data Segment 也是 0x080f 4000-0x080f 9000，和先前的进程一模一样，因为这些地址是在编译链接时写进`/bin/bash`这个可执行文件的，两个进程都加载它。这两个进程在同一个系统中同时运行着，它们的 Data Segment 占用相同的 VA，但是两个进程各自干各自的事情，显然 Data Segment 中的数据应该是不同的，相同的 VA 怎么会有不同的数据呢？因为它们被映射到不同的 PA。如下图所示。
+该进程也占用了`0x0000 0000-0xbfff ffff`的地址空间，Text Segment 也是`0x0804 8000-0x080f 4000`，Data Segment 也是`0x080f 4000-0x080f 9000`，和先前的进程一模一样，因为这些地址是在编译链接时写进`/bin/bash`这个可执行文件的，两个进程都加载它。
+
+这两个进程在同一个系统中同时运行着，它们的 Data Segment 占用相同的 VA，但是两个进程各自干各自的事情，显然 Data Segment 中的数据应该是不同的，相同的 VA 怎么会有不同的数据呢？因为它们被映射到不同的 PA。如下图所示。
 
 **图 20.5\. 进程地址空间是独立的**
 
 ![进程地址空间是独立的](img/link.sepva.png)
 
-从图中还可以看到，两个进程都是`bash`进程，Text Segment 是一样的，并且 Text Segment 是只读的，不会被改写，因此操作系统会安排两个进程的 Text Segment 共享相同的物理页面。由于每个进程都有自己的一套 VA 到 PA 的映射表，整个地址空间中的任何 VA 都在每个进程自己的映射表中查找相应的 PA，因此不可能访问到其它进程的地址，也就没有可能意外改写其它进程的数据。
+从图中还可以看到，两个进程都是`bash`进程，Text Segment 是一样的，并且 Text Segment 是只读的，不会被改写，因此操作系统会安排两个进程的 Text Segment 共享相同的物理页面。
 
-另外，注意到两个进程的共享库加载地址并不相同，共享库的加载地址是在运行时决定的，而不是写在`/bin/bash`这个可执行文件中。但即使如此，也不影响两个进程共享相同物理页面中的共享库，当然，只有只读的部分是共享的，可读可写的部分不共享。
+由于每个进程都有自己的一套 VA 到 PA 的映射表，整个地址空间中的任何 VA 都在每个进程自己的映射表中查找相应的 PA，因此不可能访问到其它进程的地址，也就没有可能意外改写其它进程的数据。
+
+另外，注意到两个进程的共享库加载地址并不相同，共享库的加载地址是在运行时决定的，而不是写在`/bin/bash`这个可执行文件中。但即使如此，也不影响两个进程共享相同物理页面中的共享库。当然，只有只读的部分是共享的，可读可写的部分不共享。
 
 使用共享库可以大大节省内存。比如`libc`，系统中几乎所有的进程都映射`libc`到自己的进程地址空间，而`libc`的只读部分在物理内存中只需要存在一份，就可以被所有进程共享，这就是“共享库”这个名称的由来了。
 
 现在我们也可以理解为什么共享库必须是位置无关代码了。比如`libc`，不同的进程虽然共享`libc`所在的物理页面，但这些物理页面被映射到各进程的虚拟地址空间时却位于不同的地址，所以要求`libc`的代码不管加载到什么地址都能正确执行。
 
-第三，VA 到 PA 的映射会给分配和释放内存带来方便，物理地址不连续的几块内存可以映射成虚拟地址连续的一块内存。比如要用`malloc`分配一块很大的内存空间，虽然有足够多的空闲物理内存，却没有足够大的*连续*空闲内存，这时就可以分配多个不连续的物理页面而映射到连续的虚拟地址范围。如下图所示。
+### 简化内存的分配和释放
+
+第三，VA 到 PA 的映射会给分配和释放内存带来方便，物理地址不连续的几块内存可以映射成虚拟地址连续的一块内存。
+
+比如要用`malloc`分配一块很大的内存空间，虽然有足够多的空闲物理内存，却没有足够大的**连续**空闲内存，这时就可以分配多个不连续的物理页面而映射到连续的虚拟地址范围。如下图所示。
 
 **图 20.6\. 不连续的 PA 可以映射为连续的 VA**
 
 ![不连续的 PA 可以映射为连续的 VA](img/link.discontpa.png)
 
-第四，一个系统如果同时运行着很多进程，为各进程分配的内存之和可能会大于实际可用的物理内存，虚拟内存管理使得这种情况下各进程仍然能够正常运行。因为各进程分配的只不过是虚拟内存的页面，这些页面的数据可以映射到物理页面，也可以临时保存到磁盘上而不占用物理页面，在磁盘上临时保存虚拟内存页面的可能是一个磁盘分区，也可能是一个磁盘文件，称为交换设备（Swap Device）。当物理内存不够用时，将一些不常用的物理页面中的数据临时保存到交换设备，然后这个物理页面就认为是空闲的了，可以重新分配给进程使用，这个过程称为换出（Page out）。如果进程要用到被换出的页面，就从交换设备再加载回物理内存，这称为换入（Page in）。换出和换入操作统称为换页（Paging），因此：
+### 支持超出物理内存容量的内存分配
 
-系统中可分配的内存总量 = 物理内存的大小 + 交换设备的大小
+第四，一个系统如果同时运行着很多进程，为各进程分配的内存之和可能会大于实际可用的物理内存，虚拟内存管理使得这种情况下各进程仍然能够正常运行。
+
+因为各进程分配的只不过是虚拟内存的页面，这些页面的数据可以映射到物理页面，也可以临时保存到磁盘上而不占用物理页面。在磁盘上临时保存虚拟内存页面的可能是一个磁盘分区，也可能是一个磁盘文件，称为交换设备（Swap Device）。
+
+当物理内存不够用时，将一些不常用的物理页面中的数据临时保存到交换设备，然后这个物理页面就认为是空闲的了，可以重新分配给进程使用，这个过程称为换出（Page out）。
+
+如果进程要用到被换出的页面，就从交换设备再加载回物理内存，这称为换入（Page in）。换出和换入操作统称为换页（Paging），因此：
+
+> 系统中可分配的内存总量 = 物理内存的大小 + 交换设备的大小
 
 如下图所示。第一张图是换出，将物理页面中的数据保存到磁盘，并解除地址映射，释放物理页面。第二张图是换入，从空闲的物理页面中分配一个，将磁盘暂存的页面加载回内存，并建立地址映射。
 

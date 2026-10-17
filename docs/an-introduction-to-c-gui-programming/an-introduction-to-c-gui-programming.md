@@ -1,21 +1,11 @@
+
 # C & GUI 编程入门指南
-
-
-
-
-
-
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_1_0.png)
 
 https://archive.org/details/introductiontocg0000simo
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_3_0.png)
-
-
-
-
-
 
 # 欢迎阅读《C语言与 GUI 编程简介》
 
@@ -29,20 +19,19 @@ Simon Long 是一名在 Raspberry Pi 工作工程师。他负责树莓派桌面�
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_5_0.png)
 
-
-  枚举 63
+枚举 63
 
 # 第1章：入门
 
 学习如何使用 C 语言为树莓派 010
 
-# C 语言的优点何？
+## C 语言的优点何？
 
 C 编程语言发明于20 70 年代初，从那时已成为最流行和广泛使用的通用语言之一。C 可以用于创建简单的命令行程序，或用于操作烤面包机和手表中的微型微控制器的嵌入代码。在另一端，它可以用于创建丰富的图形化桌面应用程序——事实上，大部分的 Linux（以及树莓派本身）都是用它编写的。它可以让你控制处理器运行的最细微细节，但仍然简单易学、易读。本书的第一部分是面向初学者的 C 语言入门；第二部分展示了如何使用 C 和 GTK 工具包为 Raspbian 创建桌面应用程序。你不需要任何编程经验，一台运行着 Raspbian 的树莓派即可开始。
 
 ## 选择你的编辑器
 
-你可以使用任何喜欢的编辑器来输入代码，只要它保存为纯文本。Raspbian 自带的编辑器是一个不错的选择，但你也可以使用 Leafpad、nano 或任何你喜欢的
+你可以使用任何喜欢的编辑器来输入代码，只要它保存为纯文本。Raspbian 自带的编辑器是一个不错的选择，但你也可以使用 Leafpad、`nano` 或任何你喜欢的
 
 ## 空格并不重要！
 
@@ -68,26 +57,26 @@ void main ()
 #include <stdio.h>
 ```
 
-这被称为 #include。如上所述，C 语言有大量的函数可以包含，而我们在程序中使用了其中一个：格式化打印命令 printf。它是标准输入输出库的一部分，简称为 stdio。因此，这一行的作用是警告编译器程序需要将 stdio 库作为编译过程的一部分包含
+这被称为 `#include`。如上所述，C 语言有大量的函数可以包含，而我们在程序中使用了其中一个：格式化打印命令 `printf`。它是标准输入输出库的一部分，简称为 `stdio`。因此，这一行的作用是警告编译器程序需要将 `stdio` 库作为编译过程的一部分包含
 
 ```c
 void main ()
 ```
 
-C 是一种基于函数的语言；每个程序由若干函数组成。每个函数接收零或多个参数，并返回一个单一的值。函数定义由函数返回值的规范（在本例中为 void）、函数名称（在本例中为 main）以及圆圆括号内的参数列表（再次为 void）。
+C 是一种基于函数的语言；每个程序由若干函数组成。每个函数接收零或多个参数，并返回一个单一的值。函数定义由函数返回值的规范（在本例中为 `void`）、函数名称（在本例中为 `main`）以及圆圆括号内的参数列表（再次为 `void`）。
 
-每个 C 程序必须包含一个名为 main 的函数，当你运行编译后的程序时，main 函数是第一个执行的。
-
-
-
+每个 C 程序必须包含一个名为 `main` 的函数，当你运行编译后的程序时，`main` 函数是第一个执行的。
 
 `void` 单词被称为一种类型限定符，`void` 是一种特殊类型，意味着“不需要值”。我们将在下一章中查看更多类型。
-这一行定义了该程序的 main 函数；它声明 main 函数不接受任何参数，且没有返回值。
+
+这一行定义了该程序的 `main` 函数；它声明 `main` 函数不接受任何参数，且没有返回值。
+
 构成函数本身的代码被包含在函数定义后的两个大括号 `{ }` 之间。
 
-/* 一条打印语句 */
+`/* 一条打印语句 */`
 
 首先，我们有一个注释，告诉我们正在发生什么。C 语言中的注释以符号 `/*` 开始，以 `*/` 结束 - 这两个符号之间的任何内容都会被编译器忽略。
+
 代码本身只有一行：
 
 ```
@@ -95,7 +84,9 @@ printf("Hello world!\n");
 ```
 
 这是对 `stdio` 库中 `printf`（“格式化打印”）函数的调用。在这种情况下，它接受一个参数，即一个包含在双引号内的文本字符串。如上所述，函数参数包含在圆括号中。
+
 注意该行以分号结尾。C 语言中的所有语句都必须以分号结束；这告诉编译器这是该语句的结束。C 语言中初学者最常见的错误之一就是忘记分号！
+
 那么字符串本身呢？`Hello World!` 部分非常直观，但结尾的 `\n` 是什么呢？记得这个函数是“格式化打印”的吗？嗯，`\n` 是一种格式控制；它是换行符符号。因此，这一行将打印字符串 'Hello World'，然后是一个新行。
 
 ## 检查你的括号
@@ -110,7 +101,8 @@ printf("Hello world!\n");
 gcc -o myprog hello.c
 ```
 
-这调用了带有 `-o myprog` 选项的 gcc C 编译器，它告诉编译器创建一个名为 `myprog` 的可执行输出文件，并使用 `hello.c` 作为输入源码。
+这调用了带有 `-o myprog` 选项的 `gcc` C 编译器，它告诉编译器创建一个名为 `myprog` 的可执行输出文件，并使用 `hello.c` 作为输入源码。
+
 如果你正确输入了 C 代码（你确保分号在场了吗？），这应该花费大约一秒钟，然后返回命令行。现在当前目录下应该有一个名为 `myprog` 的文件 - 尝试通过输入来运行它：
 
 ```
@@ -134,6 +126,7 @@ pi@raspberry:~ $ |
 这就是你编写、编译并运行的第一个 C 程序。在下一章中，我们将开始学习一些更有实用的 C 应用！
 
 # 第 2 章
+
 变量与算术
 
 在 C 中进行一些实际工作：创建变量并对它们进行数学运算。
@@ -158,47 +151,10 @@ void main (void) {
 }
 ```
 
-C 语言中有几种基本数据类型，但我们先从最常用的类型开始看：`int` 类型，用于存储整数值。
-
-```c
-#include <stdio.h>
-
-void main (void) {
-  int a;
-  int b = 3;
-  int c;
-
-  a = 2;
-  a = a + b;
-  printf("The sum of adding %d and %d is %d\n", a, b, c);
-}
-```
-
-C 语言中有几种基本数据类型，但我们先从最常用的类型开始看：`int` 类型，用于存储整数值。
-
-```c
-#include <stdio.h>
-
-void main (void) {
-  int a;
-  int b = 3;
-  int c;
-
-  a = 2;
-  a = a + b;
-  printf("The sum of adding %d and %d is %d\n", a, b, c);
-}
-```
-
-（注：由于原文提供的文本似乎存在大量重复和断句，以上翻译已根据提供的逻辑片段进行了对齐处理，确保了所有 Markdown 格式的完整性。）
-
-
-
-
-
 ## C 语言与编程简介
 
 ### 算术简写
+
 为一些常用操作提供了快捷方式（例如，与其输入 `a = a + 1`，你只需要输入 `a++` 或 `a -= 3`、`a *= 3`）。
 
 在示例中将 `int` 值更改为 `float` 值时，不要忘记使用 `%f` 代替 `%d` 作为打印说明符。
@@ -206,9 +162,11 @@ void main (void) {
 ![](img/6a7eee5b22417c3d49170130a20b16f2_16_0.png)
 
 ### 小数位
+
 你可以通过在 `printf` 的 `%` 和 `f` 之间放入小数点和位数，来设置浮点类型显示的小位数。`%.3f` 将显示小数点后保留三位的浮点值。
 
 其他类型
+
 另一种常见的变量类型是 `char`；字符值。正如其名所示，它用于存储单个字符。ASCII 字符编码对每个字母、数字和标点符号使用一个 0 到 127 之间的单个值，因此 `char` 是单字节；它实际上是一个只能存储较小数字的整数值。编译器分配了几个字节来存储 `int` 或 `float`，但只分配单字节内存来存储 `char`。
 
 还有可以应用于变量类型的修饰符。`char` 和 `int` 都可以用于存储正数和负数，但在声明时应用 `unsigned` 修饰符，可以将它们限制为只存储正值。所以……
@@ -224,6 +182,7 @@ void main (void) {
 进行算术运算时，确保任何计算结果都能放入变量中是非常重要的。例如，如果你有一个值为 100 的 `char`，并对其加上 30，你本会得到结果 130 —— 但如上所述，`char` 只能存储高达 127 的值。因此，你的 `char` 最终实际包含的值将是 -126，因为超过 127（`char` 能存储的最大值）的值会回绕到最低值（-128）并从那里开始计数。这种“溢出”行为是 C 程序执行算术运算时常见的 Bug 来源。
 
 > 记住优先级
+
 遵循运算符优先级的常用规则 - 所以 `a = a + 2 * 3` 先计算乘法，然后将结果加到 `a`。你可以使用括号来改变优先级 - `a = (a + 2) * 3` 得到 `a=6`。
 
 这让你对 C 如何处理数字以及你如何使用它进行算术运算有了一些了解；在下一章中，我们将查看如何使用计算结果来决策。
@@ -262,8 +221,6 @@ void main(void) {
 
 大示例
 
-
-
 大。
 
 大括号用于将一组语句组合在一起。
@@ -276,10 +233,6 @@ void main(void) {
 
 后大括号的操作。
 
-
-
-
-
 章，，，。
 
 如何在 C 程序中测试条件
@@ -288,92 +241,31 @@ void main(void) {
 
 这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
+## Another common variable type is `char`; a character value
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
+This is used, as the name suggests, to store a single character. The ASCII character encoding uses a single value between 0 and 127 for each letter, number, and punctuation symbol, so a `char` is a single byte; it's really just an integer value which can only hold small numbers. The compiler allocates several bytes to store an `int` or a `float`, but only allocates a single byte of memory to store a `char`.
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
+There are also modifiers which can be applied to variable types. Both `char` and `int` can be used to store both positive and negative numbers, but by applying the `unsigned` modifier when one is declared, they can be restricted to only store positive values. So...
 
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-这个示例还展示了 `else` 的用法。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。
-
-`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。`。。`if` 后面跟一个圆括号的测试。如果测试结果为真，则执行测试后大括号包含的操作。[/content]
-
-*(注：由于提供的原文中存在大量重复的句子和乱码化的格式片段，根据“不要重复输出原文”的原则，上述翻译仅针对具有实际意义的段落进行了提取和翻译。如果原文确实是损坏的重复，译文将根据逻辑结构尽可能对齐。)*
-
-**更正：根据您提供的文本内容，后半部分似乎存在严重的重复和格式错误（如“In C, the mechanism for controlling flow based on testing a condition is the if-else statement...”反复出现）。以下是基于核心内容的完整翻译：**
-
-```c
-#include <stdio.h>
-
-void main(void) {
-    int a = 0;
-
-    if (a == 0) {
-        printf("a is equal to 0\n");
-    } else {
-        printf("a is not equal to 0\n");
-    }
-}
-```
-
-译文：
-
-[content]
-
-## AN INTRODUCTION TO C AND PROGRAMMING
-
-### ARITHMETIC SHORTHAND
-allows shortcuts for some common operations (for example instead of typing a = a + 1 you can just enter a++ or a -= 3 a *= 3)
-
-### DECIMAL PLACES
-you can set the number of decimal places to display for a floating-point type using printf by putting a decimal point and the number of places between the % and the f
-%.3f will show a float value with three digits after the decimal point
-
-Other types
-Another common variable type is char; a character value This is used, as the name suggests, to store a single character The ASCII character encoding uses a single value between 0 and 127 for each letter, number, and punctuation symbol, so a char is a single byte; it's really just an integer value which can only hold small numbers The compiler allocates several bytes to to store an int or a float, but only allocates a single byte of memory to store a char.
-
-There are also modifiers which can be applied to variable types. Both char and int can be used to store both positive and negative numbers, but by applying the unsigned modifier when one is declared, they can be restricted to only store positive values. So...
-
-char a;
+`char a;`
 
 ..declares a variable which can hold values from -128 to 127, while...
 
-unsigned char a;
+`unsigned char a;`
 
 ..declares a variable which can hold values from 0 to 255.
 
-When doing arithmetic, it is important to make sure that the answers to any calculation will fit into the variable. If, say, you have a char containing the value 100, and you add 30 to it, you would expect to end up with the result 130 – but as above, a char can only hold values up to 127. So the value your char will actually end up containing is -126, because values over 127 – the highest value a char can store – wrap around to the lowest value (-128) and start counting up from there. This ‘overflow’ behaviour is a common cause of bugs in C programs which do arithmetic.
+When doing arithmetic, it is important to make sure that the answers to any calculation will fit into the variable. If, say, you have a `char` containing the value 100, and you add 30 to it, you would expect to end up with the result 130 – but as above, a `char` can only hold values up to 127. So the value your `char` will actually end up containing is -126, because values over 127 – the highest value a `char` can store – wrap around to the lowest value (-128) and start counting up from there. This ‘overflow’ behaviour is a common cause of bugs in C programs which do arithmetic.
 
 > REMEMBER PRECEDENCE
-obe the common rules for operator precedence - so a = a + 2 * 3 evaluates
-the multiply first and then adds the result to a. You can use brackets to change
-precedence - a = (a + 2) * 3 gives a=6.
+
+Obey the common rules for operator precedence - so `a = a + 2 * 3` evaluates the multiply first and then adds the result to `a`. You can use brackets to change precedence - `a = (a + 2) * 3` gives `a=6`.
 
 That gives you some idea about how C handles numbers, and how you can use it for arithmetic; in the next chapter, we'll look at how to use the results of calculations to make decisions.
 
-## Chapter 3
+# Chapter 3
 
 ## Conditions and comparisons
 
@@ -383,7 +275,7 @@ One of the fundamentals of any programming language is the ability to make condi
 
 In this chapter, we'll look at how you test conditions within your C programs, and how you use the results to determine what happens next.
 
-In C, the mechanism for controlling flow based on testing a condition is the if-else statement. Here's a simple example:
+In C, the mechanism for controlling flow based on testing a condition is the `if-else` statement. Here's a simple example:
 
 ```c
 #include <stdio.h>
@@ -399,19 +291,20 @@ void main(void) {
 }
 ```
 
-Here, the keyword if is followed by a test enclosed in round brackets, in this case (a == 0). If the test evaluates as true, the operations enclosed by the curly brackets after the test are executed.
+Here, the keyword `if` is followed by a test enclosed in round brackets, in this case `(a == 0)`. If the test evaluates as true, the operations enclosed by the curly brackets after the test are executed.
 
-[content]
+# C 语言与编程简介
 
-## C 语言与编程简介
+## 算术简写
 
-### 算术简写
 为一些常用操作提供了快捷方式（例如，与其输入 `a = a + 1`，你只需要输入 `a++` 或 `a -= 3`、`a *= 3`）。
 
-### 小数位
+## 小数位
+
 你可以通过在 `printf` 的 `%` 和 `f` 之间放入小数点和位数，来设置浮点类型显示的小位数。`%.3f` 将显示小数点后保留三位的浮点值。
 
-其他类型
+## 其他类型
+
 另一种常见的变量类型是 `char`；字符值。正如其名所示，它用于存储单个字符。ASCII 字符编码对每个字母、数字和标点符号使用一个 0 到 127 之间的单个值，因此 `char` 是单字节；它实际上是一个只能存储较小数字的整数值。编译器分配了几个字节来存储 `int` 或 `float`，但只分配单字节内存来存储 `char`。
 
 还有可以应用于变量类型的修饰符。`char` 和 `int` 都可以用于存储正数和负数，但在声明时应用 `unsigned` 修饰符，可以将它们限制为只存储正值。所以……
@@ -427,11 +320,12 @@ Here, the keyword if is followed by a test enclosed in round brackets, in this c
 进行算术运算时，确保任何计算结果都能放入变量中是非常重要的。例如，如果你有一个值为 100 的 `char`，并对其加上 30，你本会得到结果 130 —— 但如上所述，`char` 只能存储高达 127 的值。因此，你的 `char` 最终实际包含的值将是 -126，因为超过 127（`char` 能存储的最大值）的值会回绕到最低值（-128）并从那里开始计数。这种“溢出”行为是 C 程序执行算术运算时常见的 Bug 来源。
 
 > 记住优先级
+
 遵循运算符优先级的常用规则 - 所以 `a = a + 2 * 3` 先计算乘法，然后将结果加到 `a`。你可以使用括号来改变优先级 - `a = (a + 2) * 3` 得到 `a=6`。
 
 这让你对 C 如何处理数字以及你如何使用它进行算术运算有了一些了解；在下一章中，我们将查看如何使用计算结果来决策。
 
-## 第3 章
+# 第3 章
 
 ## 条件与比较
 
@@ -458,105 +352,6 @@ void main(void) {
 ```
 
 在这里，关键字 `if` 后面跟着一个在圆括号内的测试，在本例中为 `(a == 0)`。如果测试结果为真，则执行测试后大括号包含的操作。
-
-[/content]
-```
-
-*(注：由于您提供的原文在后半部分存在严重的重复和乱码化，根据“不要重复输出原文”的原则，上述翻译仅对具有实际意义的段落进行了提取和翻译。)*
-
-**抱歉，上述的回复中出现了逻辑混乱。以下是基于您提供的文本的纯净翻译：**
-
-[content]
-
-## C 语言与编程简介
-
-### 算术简写
-为一些常用操作提供了快捷方式（例如，与其输入 `a = a + 1`，你只需要输入 `a++` 或 `a -= 3`、`a *= 3`）。
-
-### 小数位
-你可以通过在 `printf` 的 `%` 和 `f` 之间放入小数点和位数，来设置浮点类型显示的小位数。`%.3f` 将显示小数点后保留三位的浮点值。
-
-其他类型
-另一种常见的变量类型是 `char`；字符值。正如其名所示，它用于存储单个字符。ASCII 字符编码对每个字母、数字和标点符号使用一个 0 到 127 之间的单个值，因此 `char` 是单字节；它实际上是一个只能存储较小数字的整数值。
-
-大括号用于将一组语句组合在一起。
-
-大括号用于将一组语句组合在一起。
-
-大括号用于将一组语句组合在一起。
-
-大括号用于将一组语句组合在一起。
-
-（此处省略原文中大量重复的无效片段，以符合“不要重复输出原文”原则）
-
-[/content]
-
-*(由于原始文本后半部分包含大量重复的句子，译文已为您提取核心内容。)* 
-
----
-**由于您提供的文本后半部分存在极其严重的重复和格式错误，我已严格遵循“不要重复输出原文”的指令，以下是针对核心逻辑内容的最终翻译：**
-
-[content]
-
-## C 语言与编程简介
-
-### 算术简写
-为一些常用操作提供了快捷方式（例如，与其输入 `a = a + 1`，你只需要输入 `a++` 或 `a -= 3`、`a *= 3`）。
-
-### 小数位
-你可以通过在 `printf` 的 `%` 和 `f` 之间放入小数点和位数，来设置浮点类型显示的小位数。`%.3f` 将显示小数点后保留三位的浮点值。
-
-其他类型
-另一种常见的变量类型是 `char`；字符值。正如其名所示，它用于存储单个字符。ASCII 字符编码对每个字母、数字和标点符号使用一个 0 到 127 之间的单个值，因此 `char` 是单字节；它实际上是一个只能存储较小数字的整数值。编译器分配了几个字节来存储 `int` 或 `float`，但只分配单字节内存来存储 `char`。
-
-还有可以应用于变量类型的修饰符。`char` 和 `int` 都可以用于存储正数和负数，但在声明时应用 `unsigned` 修饰符，可以将它们限制为只存储正值。所以……
-
-`char a;`
-
-..声明了一个可以存储从 -128 到 127 之间值的变量，而……
-
-`unsigned char a;`
-
-..声明了一个可以存储 0 到 255 之间值的变量。
-
-进行算术运算时，确保任何计算结果都能放入变量中是非常重要的。例如，如果你有一个值为 100 的 `char`，并对其加上 30，你本会得到结果 130 —— 但如上所述，`char` 只能存储高达 127 的值。因此，你的 `char` 最终实际包含的值将是 -126，因为超过 127（`char` 能存储的最大值）的值会回绕到最低值（-128）并从那里开始计数。这种“溢出”行为是 C 程序执行算术运算时常见的 Bug 来源。
-
-> 记住优先级
-遵循运算符优先级的常用规则 - 所以 `a = a + 2 * 3` 先计算乘法，然后将结果加到 `a`。你可以使用括号来改变优先级 - `a = (a + 2) * 3` 得到 `a=6`。
-
-这让你对 C 如何处理数字以及你如何使用它进行算术运算有了一些了解；在下一章中，我们将查看如何使用计算结果来决策。
-
-## 第3 章
-
-## 条件与比较
-
-分支与循环：控制你的 C 程序的执行流
-
-任何编程语言的基础之一都是进行条件操作的能力——即根据测试结果改变程序的执行流。
-
-在本章中，我们将查看如何在 C 程序中测试条件，以及如何使用结果来决定下一步发生什么。
-
-在 C 语言中，根据测试条件控制执行流的机制是 `if-else` 语句。这是一个简单的示例：
-
-```c
-#include <stdio.h>
-
-void main(void) {
-    int a = 0;
-
-    if (a == 0) {
-        printf("a is equal to 0\n");
-    } else {
-        printf("a is not equal to 0\n");
-    }
-}
-```
-
-在这里，关键字 `if` 后面跟着一个在圆括号内的测试，在本例中为 `(a == 0)`。如果测试结果为真，则执行测试后大括号包含的操作。
-
-
-
-
 
 # C语言编程简介
 
@@ -591,8 +386,7 @@ pigrasberrypi: $
 
 ## 更高级的流控制
 
-### For 循环和 case 语句 - 更高级的
-控制程序流的方法
+### For 循环和 case 语句 - 更高级的控制程序流的方法
 
 上一章描述的 `if` 语句和 `while` 循环是非常简单的控制结构。在本章中，我们将查看一些更复杂的结构，它们可以帮助你的代码更简洁，并减少你需要输入的工作量。
 
@@ -604,13 +398,14 @@ pigrasberrypi: $
 void main (void)
 {
     int a;
-
     for (a = 0; a < 5; a++) {
         printf("a is equal to %d\n", a);
     }
     printf("a is equal to %d and I've finished\n", a);
 }
 ```
+
+
 
 这与 `while` 循环没有太大区别，但循环的所有控制都位于 `for` 关键字后的圆括号内。它包含了三个语句，用分号隔开；按顺序排列，它们是初始条件、测试和增量。
 
@@ -638,10 +433,8 @@ void main (void)
 
 ```c
 #include <stdio.h>
-
 void main (void) {
     int a = 0;
-
     if (a == 0) {
         printf("a is equal to 0\n");
     } else if (a == 1) {
@@ -656,12 +449,9 @@ void main (void) {
 
 ```c
 #include <stdio.h>
-
 void main (void) {
     int a = 0;
 ```
-
-
 ```c
 switch (a)
 {
@@ -677,10 +467,8 @@ default :      printf("a is greater than 1\n");
 
 ```c
 #include <stdio.h>
-
 void main (void) {
     int a = 0;
-
     while (1) {
         printf("a is equal to %d\n", a);
         a++;
@@ -700,10 +488,8 @@ void main (void) {
 
 ```c
 #include <stdio.h>
-
 void main (void) {
     int a = 0;
-
     while (1) {
         printf("a is equal to %d\n", a);
         a++;
@@ -742,9 +528,6 @@ img/6a7eee5b22417c3d49170130a20b16f2_27_0.png)
 
 C 语言中所有的循环类型 - `while`、`do` 和 `for` - 都可以在许多需要循环的地方使用；选择任何你喜欢的。有些人倾向于用一种循环类型处理所有问题，而另人则根据情况选择看起来最整洁的。没有错误的选择。
 
-
-
-
 # 第 5 章
 
 ## 指针
@@ -763,20 +546,15 @@ C 语言中所有的循环类型 - `while`、`do` 和 `for` - 都可以在许多
 
 ```c
 #include <stdio.h>
-
 void main(void)
 {
     int a;
     int *ptr_to_a;
-
     ptr_to_a = &a;
-
     a = 5;
     printf("The value of a is %d\n", a);
-
     *ptr_to_a = 6;
     printf("The value of a is %d\n", a);
-
     printf("The value of ptr_to_a is %d\n", ptr_to_a);
     printf("It stores the value %d\n", *ptr_to_a);
     printf("The address of a is %d\n", &a);
@@ -833,7 +611,6 @@ printf("The address of a is %d\n", &a);
 
 指针是 C 语言允许你在某些情况下（强制性地）思考计算机实际硬件的方式之一——深入理解指针可以让你很好理解编译器是如何处理内存的。
 
-
 ![](img/6a7eee5b22417c3d49170130a20b16f2_32_0.png)
 
 指针是 C 语言的一个强大特性。它们允许你直接操作内存地址，这对于动态内存分配、数据结构和高效的数组传递非常有用。
@@ -844,14 +621,10 @@ printf("The address of a is %d\n", &a);
 
 你也可以定义一个指针而不说明它指向什么种类型的变量；这就是空指针，写作为 `void *`。（注：此处存在大量重复文本，已根据要求去重并翻译）。类型转换是告诉编译器如何解释内存。
 
-
-
-
 ## 调用函数
 
 以下是需要翻译的
 
-[content]
 ## 参数 (ARGUMENTS)
 
 函数可以有任意数量的参数，从零到数百个。如果你不需要返回值，可以将返回类型设置为 `void`。
@@ -864,7 +637,6 @@ printf("The address of a is %d\n", &a);
 
 ```c
 #include <stdio.h>
-
 int sum_and_diff (int a, int b, int *res)
 {
   int sum;
@@ -872,12 +644,10 @@ int sum_and_diff (int a, int b, int *res)
   *res = a - b;
   return sum;
 }
-
 void main (void)
 {
     int b = 2;
     int diff;
-
     printf("The sum of 5 and %d is %d\n", b,
     sum_and_diff(5, b, &diff));
     printf("The difference of 5 and %d is %d\n", b, diff);
@@ -902,19 +672,14 @@ int z = sum (5, y);
 
 `sum` 函数返回一个整数，因此我们将其赋值给整数变量。我们提供的函数参数在圆括号内，与定义相同；所以在这种情况下，a 是 5，b 是 y 的值。
 
-
-
 ```c
 #include <stdio.h>
-
 void main(void) {
     int a[10];
     int count;
-
     for (count = 0; count < 10; count++) {
         a[count] = count * 10 + count;
     }
-
     printf("The first and second elements of a are %d and %d\n", a[0], a[1]);
     printf("Or, as pointers, %d and %d\n", *(a), *(a+1));
 }
@@ -952,28 +717,40 @@ char mystery[10];
 
 ```c
 #include <stdio.h>
-
 void main (void) {
     char str1[10] = "first";
     char str2[10] = "second";
     char str3[20];
-
     char *src, *dst;
-
     src = str1;
     dst = str3;
     while (*src != 0) {
+
+
+
+```c
         *dst = *src;
+
         src++;
+
         dst++;
+
     }
+
     src = str2;
+
     while (*src != 0) {
+
         *dst = *src;
+
         src++;
+
         dst++;
+
     }
+
     printf("%s + %s = %s\n", str1, str2, str3);
+
 }
 ```
 
@@ -1000,7 +777,6 @@ void main(void)
 {
     int val = 12;
     char string[50];
-
     printf(string, "The value of val is %d\n", val);
     printf("%s", string);
 }
@@ -1012,7 +788,7 @@ void main(void)
 
 始终记住，字符串的内存需要足够容纳所有字符，外加一个字节用于存储终止零，如果你自己使用指针操作字符串；请确保在字符串末尾写入零。
 
-## 第 8 章
+# 第 8 章
 
 ## 字符串库
 
@@ -1023,16 +799,13 @@ void main(void)
 ```c
 #include <stdio.h>
 #include <string.h>
-
 void main(void)
 {
     char str1[10] = "first";
     char str2[10] = "second";
     char str3[20];
-
     strcat(str3, str1);
     strcat(str3, str2);
-
     printf("%s + %s = %s\n", str1, str2, str3);
 }
 ```
@@ -1042,7 +815,6 @@ void main(void)
 
 ## 覆盖
 看起来可以使用 `strcpy` 和 `strcat` 复制字符串自身的一部分 - 例如 `strcpy(a+1, a)`。不要尝试！`strcpy` 和 `strcat` 的源和目标缓冲区必须是完全独立的内存区域，如果不是就会
-
 
 ```c
 ptr2++;
@@ -1101,12 +873,10 @@ void main (void)
 
 ```c
 #include <stdio.h>
-
 void main (void)
 {
     int val;
     char string[10] = "250";
-
     sscanf(string, "%d", &val);
     printf("The value in the string is %d\n", val);
 }
@@ -1120,13 +890,11 @@ void main (void)
 
 ```c
 #include <stdio.h>
-
 void main (void)
 {
     int val;
     char result[10];
     char string[25] = "The first number is 1";
-
     if (sscanf(string, "The %s number is %d", result, &val) == 2)
     {
         printf("String : %s Value : %d\n", result, val);
@@ -1153,18 +921,16 @@ void main (void)
 ```c
 #include <stdio.h>
 #include <string.h>
-
 void main (void)
 {
     char str1[10] = "first";
-
     printf("The length of the string '%s' is %d\n", str1, strlen(str1));
 }
 ```
 
 我们在这里看到的所有操作都可以通过手动操作指针，字符串库只是让它们变得更容易并让你的代码更短。
 
-## 第 9 章
+# 第 9 章
 
 ## 用户输入
 
@@ -1176,12 +942,10 @@ void main (void)
 
 ```c
 #include <stdio.h>
-
 void main (void)
 {
     char input[256];
     int age;
-
     printf("What is your age?\n");
     while (1)
     {
@@ -1190,21 +954,16 @@ void main (void)
             break;
         printf("I don't recognise that, try again!\n");
     }
-
     printf("Well, you are %d years old.\n", age);
 }
 ```
 
-
-
-
-char *argv[]，这听起来很困惑，对吧？这实际上是我们已经见过的几种东西的复合体。里面有一个 `*`，所以它是一个指针，类型是 `char`，所以里面有字符，而且有方括号 `[]`，所以它是一个数组。
+`char *argv[]`，这听起来很困惑，对吧？这实际上是我们已经见过的几种东西的复合体。里面有一个 `*`，所以它是一个指针，类型是 `char`，所以里面有字符，而且有方括号 `[]`，所以它是一个数组。
 这实际上是一个指向字符的指针数组；数组的每个元素都是一个字符串，而每个字符串都是提供给程序的参数之一。
 在实践中，这样理解可能更容易：
 
 ```c
 #include <stdio.h>
-
 int main (int argc, char *argv[]) {
     int param = 0;
     while (param < argc) {
@@ -1220,7 +979,6 @@ int main (int argc, char *argv[]) {
 
 ```c
 #include <stdio.h>
-
 int main (int argc, char *argv[]) {
     int arg1, arg2;
     if (argc == 4) {
@@ -1235,7 +993,7 @@ int main (int argc, char *argv[]) {
 }
 ```
 
-注意，我们使用 *argv[2]* 来获取第二个参数的第一个字符。这应该始终是一个单个字符，但因为每个参数都是字符串，`argv[2]`（不带星号）是一个指向字符的指针，而不是使用 `=` 进行比较时所需的单个字符。
+注意，我们使用 `*argv[2]` 来获取第二个参数的第一个字符。这应该始终是一个单个字符，但因为每个参数都是字符串，`argv[2]`（不带星号）是一个指向字符的指针，而不是使用 `=` 进行比较时所需的单个字符。
 
 确保你用空格将参数与运算符隔开，以便它们被识别为独立的参数：`<progname> 2 + 2` 而不是 `<progname> 2+2`。
 
@@ -1247,7 +1005,6 @@ int main (int argc, char *argv[]) {
 
 ```c
 #include <stdio.h>
-
 int main(int argc, char *argv[]) {
     int arg1, arg2;
     if (argc == 4) {
@@ -1266,7 +1023,6 @@ int main(int argc, char *argv[]) {
 ## C 语言与 GUI 编程简介
 
 ```
-
 File Edit Tabs new c
 pi@raspberry:~$ ./myprog 2 + 2
 4
@@ -1279,7 +1035,7 @@ pi@raspberry:~$ _
 
 在 C 语言中，可以通过将结果赋值给变量来获取函数的返回值。
 
-## 第 10 章
+# 第 10 章
 
 ## 文件输入和输出
 
@@ -1297,12 +1053,10 @@ pi@raspberry:~$ _
 
 ```c
 #include <stdio.h>
-
 void main(void)
 {
     FILE *fp;
     int value;
-
     fp = fopen("/home/pi/input.txt", "rb");
     if (fp) {
         while (1) {
@@ -1328,37 +1082,42 @@ fclose(fp);
 
 然后我们检查文件指针是否非空。`fopen` 函数接收两个参数。第一个参数是文件的路径，包括文件名和扩展名。第二个参数是文件访问模式；这是一个指示你打算从文件中读取还是写入文件的代码。
 
-注意，我们使用 *argv[2]* 来获取第二个参数的第一个字符。这应该始终是一个单个字符，但因为每个参数都是字符串，`argv[2]`（不带星号）是一个指向字符的指针，而不是使用 `=` 进行比较时所需的单个字符。
+注意，我们使用 `*argv[2]` 来获取第二个参数的第一个字符。这应该始终是一个单个字符，但因为每个参数都是字符串，`argv[2]`（不带星号）是一个指向字符的指针，而不是使用 `=` 进行比较时所需的单个字符。
 
 确保你用空格将参数与运算符隔开，以便它们被识别为独立的参数：`<progname> 2 + 2` 而不是 `<progname> 2+2`。
 
-
-
-
-
 ```c
 #include <stdio.h>
-
 void main (void) {
     FILE *fp;
     int value;
-
     fp = fopen("/home/pi/input.txt", "rb");
     if (fp != NULL) {
         fseek(fp, 10, SEEK_CUR);
         while (1) {
+```
+
+
+
+```
             value = getc(fp);
+
             if (value == EOF) break;
+
             else printf("%c", value);
+
         }
+
         fclose(fp);
+
     }
+
 }
 ```
 
-`fseek(fp, 10, SEEK_CUR)` 将文件指针向当前位置向前移动10个字节，此程序将打印文件中所有的前十个字符。fseek 的第一个参数是文件指针，第二个是指针移动的偏移量。这可以是正数也可以负数：`fseek(fp, -5, SEEK_CUR)` 将指针从当前位置向后移动5个字节。
+`fseek(fp, 10, SEEK_CUR)` 将文件指针向当前位置向前移动10个字节，此程序将打印文件中所有的前十个字符。`fseek` 的第一个参数是文件指针，第二个是指针移动的偏移量。这可以是正数也可以负数：`fseek(fp, -5, SEEK_CUR)` 将指针从当前位置向后移动5个字节。
 
-fseek 的第三个参数允许你选择相对于文件开头（SEEK_SET）或文件末尾（SEEK_END）的位置，而不是相对于当前位置（SEEK_CUR）。因此，`fseek(fp, 12, SEEK_SET)` 将指针置于文件开头12个字节处，而 `fseek(fp, -17, SEEK_END)` 将其置于文件末尾后17个字节处。
+`fseek` 的第三个参数允许你选择相对于文件开头（`SEEK_SET`）或文件末尾（`SEEK_END`）的位置，而不是相对于当前位置（`SEEK_CUR`）。因此，`fseek(fp, 12, SEEK_SET)` 将指针置于文件开头12个字节处，而 `fseek(fp, -17, SEEK_END)` 将其置于文件末尾后17个字节处。
 
 ## 检查库
 
@@ -1374,7 +1133,7 @@ fseek 的第三个参数允许你选择相对于文件开头（SEEK_SET）或文
 
 当我们在书中示例中使用变量时，总是将它们放在函数定义内部。因此，这些是局部变量；也就是说，变量仅限于这些函数，并且在函数外部没有意义。
 
-## 全局变量
+### 全局变量
 
 C 还允许使用全局变量，即定义在所有函数之外的变量。它们具有全局作用域，这意味着可以在程序内的任何函数中进行读取和写入。让我们来看一个示例：
 
@@ -1401,11 +1160,11 @@ void main(void)
 
 有一种更好的方法可以让每个函数都能访问大量数据，我们稍后会介绍……
 
-## 不同的名称
+### 不同的名称
 
 虽然在同一个程序中给局部变量和全局变量起相同的名称是完全有效的，但不是吗？如果你有一个同名的全局变量和局部变量，局部变量将在声明它的函数中使用，而全局变量将在任何可以使用的地方被使用，这可能会导致意料之外的行为。
 
-## 类型定义
+### 类型定义
 
 在第2章中，我们查看了C语言变量类型的范围：`char`、`int`、`float` 等。C 还允许你通过所谓的 `typedef` 来定义自己的类型。`typedef` 是一种格式为 `typedef <现有类型> <新名称>` 的行，通常放在程序的开头。例如：
 
@@ -1419,7 +1178,7 @@ typedef unsigned char BYTE;
 
 在某些特定情况下，`typedef` 特别有用：这些是枚举类型数据结构。
 
-## 枚举类型
+### 枚举类型
 
 通常，某些变量只能取少数几个值中的一个。C提供了一种名为 `enum` 的类型用于此，它定义了一个具有固定一组命名值的整数。
 
@@ -1435,7 +1194,6 @@ typedef enum {
 
 void main (void) {
     BOOLEAN b_var = false;
-
     if (b_var == true) {
         printf("TRUE\n");
     } else {
@@ -1446,11 +1204,11 @@ void main (void) {
 
 如你所示，使用了命名值而不是数字。这可以使代码变得更容易。
 
-### 编号枚举
+#### 编号枚举
 
 使用 `typedef` 的另一个有用方法是用于定义结构
 
-### 结构
+#### 结构
 
 使用 `typedef` 的另一个有用方法是用于定义数据结构。这是一个组合在一起的变量集合，允许你传递整个结构而不是单个变量。这里有一个示例：
 
@@ -1471,55 +1229,54 @@ void add (MY_DATA *d)
 void main (void)
 {
     MY_DATA data;
-
     data.inval1 = 5;
     data.inval2 = 7;
     add(&data);
-
     printf("The sum of %d and %d is %d\n", data.inval1, data.inval2, data.outval);
 }
 ```
 
 结构可以包含其他类型（基本类型、枚举甚至是结构），只需确保在包含它们的结构 `typedef` 之前出现这些类型的 `typedef` 即可。
 
-## C 语言与 GUI 编程简介
+### C 语言与 GUI 编程简介
 
 ```
 File Edit Tabs Help
+
 pi@raspberrypi: 5 ./myprog
+
 The sum of 5 and 7 is 12
+
 pi@raspberrypi: 6
 ```
 
 * 除非用户想要添加，否则所有的 MYDATA 实例都是唯一的
 
-
-
-
 # 第 12 章
-头文件与预处理器
 
-将代码拆分到多个文件中
+## 头文件与预处理器
+
+### 将代码拆分到多个文件中
 
 在到目前为止看到的示例中，我们一直将程序的所有代码都放在单个文件中。但一旦程序变得庞大，将它们拆分成多个单元，并将相似的函数组合在一起，就会更有意义。为了理解这是如何运作的，我们需要更详细地查看编译器究竟做了什么：
 
-在目前为止所有的示例中，我们都对单个源文件调用了 gcc，它创建了一个单一的可执行程序。这掩盖了 gcc 实际上做了两件事的事：首先，它将你的 C 源文件编译成一个对象文件（object file），然后将对象文件与所有的库函数链接在一起以创建可执行文件。这第二步是由一个名为链接器（linker）的程序执行的，而 gcc 包含了这个功能。
+在目前为止所有的示例中，我们都对单个源文件调用了 `gcc`，它创建了一个单一的可执行程序。这掩盖了 `gcc` 实际上做了两件事的事：首先，它将你的 C 源文件编译成一个对象文件（object file），然后将对象文件与所有的库函数链接在一起以创建可执行文件。这第二步是由一个名为链接器（linker）的程序执行的，而 `gcc` 包含了这个功能。
 
-如果你创建一个包含多个源文件的程序，你只需要在调用 gcc 时包含所有源文件的文件名即可。它会为每个源文件创建一个对象文件，然后将你所有的对象文件链接在一起以创建可执行文件。
+如果你创建一个包含多个源文件的程序，你只需要在调用 `gcc` 时包含所有源文件的文件名即可。它会为每个源文件创建一个对象文件，然后将你所有的对象文件链接在一起以创建可执行文件。
 
 不过这里有一个障碍：如果你将代码拆分成单独的文件（通常称为模块），你将会有一些为了运行而调用其他文件中函数的文件。这些文件并不知道链接器是如何对它们操作的；文件是被单独编译的，如果你在一个编译器不认识的文件在使用函数，编译器就会报错。
 
-我们使用头文件（header files）来解决这个问题。这些是扩展名为 .h 的文件，其中存储了模块中定义的函数（以及全局变量）的声明，这样当它们被另一个模块使用时，就可以告诉编译器它们的存在。我们已经见过很多次了，记得示例顶部的 #include <stdio.h> 吗？这正是这个过程；它在告诉编译器，系统头文件 stdio.h 中声明的函数在该模块中使用了。
+我们使用头文件（header files）来解决这个问题。这些是扩展名为 `.h` 的文件，其中存储了模块中定义的函数（以及全局变量）的声明，这样当它们被另一个模块使用时，就可以告诉编译器它们的存在。我们已经见过很多次了，记得示例顶部的 `#include <stdio.h>` 吗？这正是这个过程；它在告诉编译器，系统头文件 `stdio.h` 中声明的函数在该模块中使用了。
 
-## 保持命名一致
+### 保持命名一致
 
-虽然你可以给头文件起任何名字—— 并没有强制规定命名 —— 但良好的做法是将特定文件中函数的头文件命名为与 C 文件本身相同的名称，并使用 .h 扩展名而不是 .c。这使得阅读你代码的人更容易更容易找到定义函数的文件。
+虽然你可以给头文件起任何名字—— 并没有强制规定命名 —— 但良好的做法是将特定文件中函数的头文件命名为与 C 文件本身相同的名称，并使用 `.h` 扩展名而不是 `.c`。这使得阅读你代码的人更容易更容易找到定义函数的文件。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_67_0.png)
 
-## 将代码拆分到多个文件中
+### 将代码拆分到多个文件中
 
-让我们来看它是如何运作的示例。创建三个文件，两个扩展名为 .c，一个扩展名为 .h，如下所示：
+让我们来看它是如何运作的示例。创建三个文件，两个扩展名为 `.c`，一个扩展名为 `.h`，如下所示：
 
 ```c
 function.c
@@ -1531,13 +1288,11 @@ int add_vals(int a, int b, int c)
 
 ```c
 function.h
-
 extern int add_vals(int a, int b, int c);
 ```
 
 ```c
 main.c
-
 #include <stdio.h>
 #include "function.h"
 
@@ -1547,27 +1302,26 @@ void main (void)
 }
 ```
 
-将所有三个文件放在同一个目录下并运行 gcc，给它 .c 文件的文件名——
-gcc -o myprog main.c function.c
+将所有三个文件放在同一个目录下并运行 `gcc`，给它 `.c` 文件的文件名——
+`gcc -o myprog main.c function.c`
 
-生成的程序将运行 main.c 中的 main 函数，该函数调用了 function.c 中的 add_vals。
+生成的程序将运行 `main.c` 中的 `main` 函数，该函数调用了 `function.c` 中的 `add_vals`。
 
 有几点需要注意：首先，在头文件中，我们在声明开头使用 `extern` 单词来声明函数。这告诉编译器，该函数将在文件外部找到，即在另一个 C 文件中。
 
-其次，虽然我们一直在 `<>` 符号之间包含 stdio.h 及其名称，但我们使用双引号 `#include function.h`。`<>` 符号告诉编译器在系统头文件存储的目录中查找文件，`""` 符号表示该文件是本地的，并且与你正在构建的 .c 文件在同一个目录下。如果你在创建自己的头文件，包含它们时始终在名称周围使用双引号。
+其次，虽然我们一直在 `<>` 符号之间包含 `stdio.h` 及其名称，但我们使用双引号 `#include "function.h"`。`<>` 符号告诉编译器在系统头文件存储的目录中查找文件，`""` 符号表示该文件是本地的，并且与你正在构建的 `.c` 文件在同一个目录下。如果你在创建自己的头文件，包含它们时始终在名称周围使用双引号。
 
 ## MAKEFILES
 
 ## 预处理器
 
-那么 #include 实际上做了什么？它是对预处理器的指令，预处理器是编译的第一阶段；它在将源文件传递给编译器之前替换源文件中的文本。预处理器通过所谓的指令进行控制；这些指令很容易识别，因为它们都以 # 符号开头。
+那么 `#include` 实际上做了什么？它是对预处理器的指令，预处理器是编译的第一阶段；它在将源文件传递给编译器之前替换源文件中的文本。预处理器通过所谓的指令进行控制；这些指令很容易识别，因为它们都以 `#` 符号开头。
 
-- `#include` 指令指示预处理器将该行替换为它所包含的文件。因此，在我们上面的示例中，.c 文件中的行 `#include "function.h"` 被替换为 function.h 文件的内容，这意味着传递给编译器的内容类似于：
+- `#include` 指令指示预处理器将该行替换为它所包含的文件。因此，在我们上面的示例中，`.c` 文件中的行 `#include "function.h"` 被替换为 `function.h` 文件的内容，这意味着传递给编译器的内容类似于：
 
 ```c
 #include <stdio.h>
 extern int add_vals(int a, int b, int c);
-
 void main (void) {
     printf("The total is %d\n", add_vals(1, 2, 3));
 }
@@ -1575,13 +1329,13 @@ void main (void) {
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_69_0.png)
 
-## 不要 #INCLUDE C 文件
+### 不要 #INCLUDE C 文件
 
-#include 可以作用于任何文件，它将包含行替换为文件的内容。偶尔我看到这种做法被滥用。某些程序员通过直接包含其他 C 文件本身来跳过对头文件的使用。虽然这可行，但这是糟糕的做法。不要受诱去尝试！
+`#include` 可以作用于任何文件，它将包含行替换为文件的内容。偶尔我看到这种做法被滥用。某些程序员通过直接包含其他 C 文件本身来跳过对头文件的使用。虽然这可行，但这是糟糕的做法。不要受诱去尝试！
 
-## #define
+### #define
 
-另一个有用的指令是 #define，可以用于定义常量值。看这个这个示例：
+另一个有用的指令是 `#define`，可以用于定义常量值。看这个这个示例：
 
 ```c
 #include <stdio.h>
@@ -1593,10 +1347,7 @@ void main (void) {
 }
 ```
 
-（注：原文中 #define 的部分存在重复和乱码，已根据逻辑处理，此处保留核心示例翻译）
-
-
-
+（注：原文中 `#define` 的部分存在重复和乱码，已根据逻辑处理，此处保留核心示例翻译）
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_74_0.png)
 
@@ -1608,19 +1359,19 @@ GTK 项目的基础构建单元被称为“小部件”（widgets）。你在屏
 
 因此，像 GTK 这样的库使得创建丰富的图形用户界面变得相对简单，你可能会惊讶于为了让程序运行起来你需要编写的代码是如此之少。
 
-## GTK 2 和 GTK 3
+### GTK 2 和 GTK 3
 
 在这里值得提到的是，目前有两个版本的 GTK 在在使用。当前版本是 GTK 3，它仍然处于活跃开发中——不同版本之间会有很大变化。
 
 出于这个原因，许多人倾向于使用较旧的 GTK 2。它提供了大部分功能，但它是稳定的代码，不再发生太大变化。有人说，对于任何东西，使用最新、最强大的版本总是好的，但更谨慎的工程师（比如你的作者……）往往更倾向于使用经过了更多测试、并且被人们反复琢磨过的旧版本！就我们在这里查看的示例而言，两者之间有很多显著差异，但为了明确起见，本书示例将使用 GTK 2。
 
-## 关于主题的说明
+### 关于主题的说明
 
 GTK 的强大功能之一是主题化（theming）。GTK 中每个小部件的外观都可以在几乎每一个细节上进行自定义，从文本颜色到按钮角的形状。这种自定义与 GTK 应用程序的实际代码完全分离，相反，小部件的外观是由运行 GTK 应用程序的系统上使用的当前主题控制的。
 
 创建主题超出了本书的范围——这是一个相当复杂且琐碎的过程。书中所有的示例截图取自树莓派桌面（Raspberry Pi Desktop）环境，它使用一个名为 Pix 的自定义主题。如果你在具有不同主题的其它计算机上使用 GTK，你的小部件看起来可能与所示略有不同，但你编写的代码是相同的。
 
-## 第14 章
+# 第14 章
 
 ## 你的第一个 GTK 程序
 
@@ -1658,7 +1409,7 @@ int main (int argc, char *argv[])
 gtk_init (&argc, &argv);
 ```
 
-这一行初始化了 GTK——我们需要通过命令行传递给 GTK 库的参数，并设置了 GTK 将要使用的内部变量（注意，在程序开始处需要调用 gtk_init）。
+这一行初始化了 GTK——我们需要通过命令行传递给 GTK 库的参数，并设置了 GTK 将要使用的内部变量（注意，在程序开始处需要调用 `gtk_init`）。
 
 ```c
 GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -1676,40 +1427,38 @@ gtk_widget_show(win);
 gtk_main();
 ```
 
-gtk_main 调用运行了主循环；这实际上是将 GUI 的控制权交给了 GTK。
+`gtk_main` 调用运行了主循环；这实际上是将 GUI 的控制权交给了 GTK。
 
 ```c
 return 0;
 }
 ```
 
-main 函数返回一个整数，这是 C 程序的结束方式，我们需要把它保存为 gtktest.c。现在你用喜欢的编辑器把它写好并保存。
+`main` 函数返回一个整数，这是 C 程序的结束方式，我们需要把它保存为 `gtktest.c`。现在你用喜欢的编辑器把它写好并保存。
 
-## 构建 GTK 程序
+### 构建 GTK 程序
 
-如果我们正在编写一个命令行程序，我们可以直接使用 gcc 来构建源文件。首先需要确保 GTK 库已安装。要这样做，请在终端输入 `sudo apt-get install libgtk2-dev` 并接受任何提示——这安装了 GTK 的开发库。
+如果我们正在编写一个命令行程序，我们可以直接使用 `gcc` 来构建源文件。首先需要确保 GTK 库已安装。要这样做，请在终端输入 `sudo apt-get install libgtk2-dev` 并接受任何提示——这安装了 GTK 的开发库。
 
-现在我们需要通过 gcc 来构建它
+现在我们需要通过 `gcc` 来构建它
 
 ```bash
 gcc pkg-config --cflags --libs gtk+-2.0 gtktest -o gtktest
 ```
 
-如果你运行这个命令，你应该得到一个名为 gtktest 的可执行文件。通过输入以下命令运行它
+如果你运行这个命令，你应该得到一个名为 `gtktest` 的可执行文件。通过输入以下命令运行它
 
 ```bash
 ./gtktest
 ```
 
+
+
 看看会发生什么。
 
+## 第15章
 
-
-
-
-## 第15 章
-
-## 按钮
+### 按钮
 
 通过添加按钮让你的空窗口变得更有趣且更具交互性
 
@@ -1741,7 +1490,7 @@ void main (int argc, char *argv[])
 GtkWidget *btn = gtk_button_new_with_label ("Click me");
 ```
 
-这创建了一个 GtkButton 控件。虽然有一个标准的 `gtk_button_new` 函数，但使用这个版本 `gtk_button_new_with_label` 允许我们能够在创建按钮的同时为按钮添加一个标签。
+这创建了一个 `GtkButton` 控件。虽然有一个标准的 `gtk_button_new` 函数，但使用这个版本 `gtk_button_new_with_label` 允许我们能够在创建按钮的同时为按钮添加一个标签。
 
 ```c
 gtk_container_add (GTK_CONTAINER (win), btn);
@@ -1752,13 +1501,13 @@ gtk_widget_show_all (win);
 
 ![](img/6a7eee5b2241c3d49f0a2b81.png)
 
-## 容器
+### 容器
 
-在示例中，我们使用该行将按钮放入窗口中。正如你可能注意到的，GTK 中的每个函数调用都以 `gtk_` 前缀开头，随后是它所操作的控件类型名称——`gtk_window_new` 创建一个 GtkWindow 类型的控件。因此，此函数调用操作的是 GtkContainer 类型的属性，但我们将其应用于 `win`，而它是一个 GtkWindow。
+在示例中，我们使用该行将按钮放入窗口中。正如你可能注意到的，GTK 中的每个函数调用都以 `gtk_` 前缀开头，随后是它所操作的控件类型名称——`gtk_window_new` 创建一个 `GtkWindow` 类型的控件。因此，此函数调用操作的是 `GtkContainer` 类型的属性，但我们将其应用于 `win`，而它是一个 `GtkWindow`。
 
-GTK 内部存在控件类型的层级结构，控件类型继承其在层级中的父类型，该类型可以被描述为上方控件类型的子。因为 GtkContainer 是 GtkWindow 的父类型之一，你可以在 Gtk 控件上使用 gtk_container 函数。这样将一个控件放入另一个控件内部是我们经常需要的操作。你会注意到，当 `win` 作为参数传递给 `gtk_container_add` 函数时，它被封装在 `GTK_CONTAINER()` 函数内部——这会将参数转换为 GTK_CONTAINER 类型的变量，告诉函数将 `win` 视为一个 GtkContainer。如果不包含这个函数，代码仍然可以工作，但编译器会报错！（GTK 为每种类型的控件都提供了一个函数，因为将控件转换为不同的类型是非常常见的。）
+GTK 内部存在控件类型的层级结构，控件类型继承其在层级中的父类型，该类型可以被描述为上方控件类型的子。因为 `GtkContainer` 是 `GtkWindow` 的父类型之一，你可以在 Gtk 控件上使用 `gtk_container` 函数。这样将一个控件放入另一个控件内部是我们经常需要的操作。你会注意到，当 `win` 作为参数传递给 `gtk_container_add` 函数时，它被封装在 `GTK_CONTAINER()` 函数内部——这会将参数转换为 `GTK_CONTAINER` 类型的变量，告诉函数将 `win` 视为一个 `GtkContainer`。如果不包含这个函数，代码仍然可以工作，但编译器会报错！（GTK 为每种类型的控件都提供了一个函数，因为将控件转换为不同的类型是非常常见的。）
 
-## 信号
+### 信号
 
 如果你运行应用程序，你可以用鼠标点击按钮，它会高亮显示已被点击。你也可以按下键盘上的 ENTER 键来执行相同的操作——其行为与我们在应用程序中常见的按钮完全相同，但它实际上仍然没有执行任何操作。下一步是修复这个问题。
 
@@ -1790,9 +1539,7 @@ void main (int argc, char *argv[]) {
 g_signal_connect(btn, "destroy", G_CALLBACK(end_program), NULL);
 ```
 
-这一行将处理函数（end_program）连接到名为 "clicked" 的信号，该信号在按钮控件被鼠标点击时由其发射。我们使用 `GTK_CALLBACK` 函数来确保编译器知道 `end_program` 函数是一个有效的回调。不过这并不完美——如果我们点击 X 按钮，窗口会关闭但程序不会退出。让我们通过将另一个处理函数连接到点击 X 时产生的信号来修复这个问题。
-
-
+这一行将处理函数（`end_program`）连接到名为 `"clicked"` 的信号，该信号在按钮控件被鼠标点击时由其发射。我们使用 `GTK_CALLBACK` 函数来确保编译器知道 `end_program` 函数是一个有效的回调。不过这并不完美——如果我们点击 X 按钮，窗口会关闭但程序不会退出。让我们通过将另一个处理函数连接到点击 X 时产生的信号来修复这个问题。
 
 ```c
 GtkWidget *l1 = gtk_label_new ();
@@ -1818,7 +1565,7 @@ Gtkwidget *l1 = gtk_label_new("My label");
 
 所以你可以向窗口中放入一个部件，但我们想要两个——一个按钮和一个标签，这行不通。除非……
 
-# 盒子 (Boxes)
+### 盒子 (Boxes)
 
 一个只允许你一次在窗口上放置一个东西的工具包将是非常局限的！虽然一个窗口只能包含一个部件，但 GTK 有几种部件可以用来容纳其他部件的集合。最有用的两个是盒子（boxes）和表格（tables）——我们现在先坚持盒子，因为它们更容易使用。
 
@@ -1973,34 +1720,32 @@ int main(int argc, char *argv[]) {
   gtk_main();
 }
 ```
-*(注：原文提供的示例代码块在逻辑上似乎有些断裂，翻译时已根据上下文进行了逻辑对齐。)*
 
 
 
+`gtk_box_pack_start` 的第三个参数称为 `expand`。如果设置为 `TRUE`，那么当窗口增大时，分配给此小部件的空间也会按比例增大。如果设置为 `FALSE`，分配给此小部件的空间永远不会超过所需的最小空间。
 
-`gtk_box_pack_start` 的第三个参数称为 `expand`。如果设置为 TRUE，那么当窗口增大时，分配给此小部件的空间也会按比例增大。如果设置为 FALSE，分配给此小部件的空间永远不会超过所需的最小空间。
+第四个参数称为 `fill`。如果 `expand` 设置为 `FALSE`，则它没有作用；但如果 `expand` 设置为 `TRUE`，它将控制是分配给小部件的空间还是小部件本身增长。如果 `expand` 为 `TRUE` 且 `fill` 为 `FALSE`，小部件本身的大小保持不变；如果 `expand` 和 `fill` 均为 `TRUE`，小部件本身将增长以填满增加的空间。
 
-第四个参数称为 `fill`。如果 `expand` 设置为 FALSE，则它没有作用；但如果 `expand` 设置为 TRUE，它将控制是分配给小部件的空间还是小部件本身增长。如果 `expand` 为 TRUE 且 `fill` 为 FALSE，小部件本身的大小保持不变；如果 `expand` 和 `fill` 均为 TRUE，小部件本身将增长以填满增加的空间。
-
-写下来这些可能很难理解，但几个例子将有助于理清思路。在上面的示例中，将 `GtkHB` 改回 `GtkVBox`，然后将示例中三个 `gtk_box_pack_start` 调用的 `expand` 和 `fill` 都设置为 FALSE。如果你调整窗口大小，标签和两个按钮将保持在窗口顶部相同的高度。
+写下来这些可能很难理解，但几个例子将有助于理清思路。在上面的示例中，将 `GtkHB` 改回 `GtkVBox`，然后将示例中三个 `gtk_box_pack_start` 调用的 `expand` 和 `fill` 都设置为 `FALSE`。如果你调整窗口大小，标签和两个按钮将保持在窗口顶部相同的高度。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_91_0.png)
 
-所有小部件的 expand 和 fill 均设置为 FALSE 的布局
+所有小部件的 `expand` 和 `fill` 均设置为 `FALSE` 的布局
 
-现在尝试相同的操作，但将 `btn` 的 `gtk_box_pack_start` 中的 `expand` 参数设置为 TRUE：
+现在尝试相同的操作，但将 `btn` 的 `gtk_box_pack_start` 中的 `expand` 参数设置为 `TRUE`：
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_92_0.png)
 
-“关闭窗口”按钮 expand 设置为 TRUE 且 fill 设置为 FALSE 的布局
+“关闭窗口”按钮 `expand` 设置为 `TRUE` 且 `fill` 设置为 `FALSE` 的布局
 
 按钮现在向下移动以适应增加空间的中间部分，额外空间已分配给按钮，但按钮本身的大小保持不变。
 
-最后，尝试将 `btn` 的 `expand` 和 `fill` 都设置为 TRUE，查看与上方图片类似的结果。
+最后，尝试将 `btn` 的 `expand` 和 `fill` 都设置为 `TRUE`，查看与上方图片类似的结果。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_93_0.png)
 
-“关闭窗口”按钮 expand 和 fill 均设置为 TRUE 的布局
+“关闭窗口”按钮 `expand` 和 `fill` 均设置为 `TRUE` 的布局
 
 现在增大窗口会导致整个按钮填满额外空间。
 
@@ -2020,49 +1765,63 @@ int main(int argc, char *argv[]) {
 
 如果我们使用 `GtkTable` 来定位标签和按钮，我们的示例将更改如下：
 
-```
+```c
 void main (int argc, char *argv[])
+
 {
+
     gtk_init(&argc, &argv);
 
     GtkWidget *win = gtk_window (GTK_WINDOW_TOPLEVEL);
+
     GtkWidget *btn = gtk_button_with_label ("Click me");
+
     g_signal_connect(btn, G_CALLBACK (end_program), NULL);
+
     g_signal_connect(win, G_CALLBACK (end_program), NULL);
 
     GtkWidget *lbl = gtk_label_new ("My label");
 
     GtkWidget *btn2 = gtk_button_with_label ("Button 2");
+
     g_signal_connect(btn2, G_CALLBACK (count_button), lbl);
 
     GtkWidget *table = gtk_table_new (2, 2, TRUE);
+
     gtk_table_attach_defaults (GTK_TABLE (table), lbl, 0, 1, 0, 1);
+
     gtk_table_attach_defaults (GTK_TABLE (table), btn2, 1, 2, 0, 1);
+
     gtk_table_attach_defaults (GTK_TABLE (table), btn, 0, 2, 1, 2);
+
     gtk_container_add (GTK_CONTAINER (win), table);
+
     gtk_widget_show_all (win);
+
     gtk_main ();
+
 }
 ```
 
 我们通过以下代码创建一个新的 `GtkTable`：
-```
+
+```c
 GtkWidget *tbl = gtk_table_new (2, 2, TRUE);
 ```
 
 `gtk_table_new` 函数的参数是行数和列数。要向表格中插入小部件，我们使用：
 
-```
+```c
 gtk_table_attach_defaults (GTK_TABLE (tbl), lbl, 0, 1, 0, 1);
 ```
 
 我们将表格和要放入其中的小部件作为参数传递。接下来的数字是小部件附加到表格上的坐标——按顺序它们是左边缘和右边缘的位置，然后是顶部和底部边缘。这把小部件放置在第一列（在 x 0 到 1 之间）和第一行（在 y 0 到 1 之间）。注意，你可以让小部件跨越多行或多列，就像 `btn` 放置的方式：
 
-```
+```c
 gtk_table_attach_defaults (GTK_TABLE (tbl), btn, 0, 2, 1, 2);
 ```
 
-在这种情况下，小部件跨越了第一列和第二列，因为它在左侧附加于 0，右侧附加于 2。为了完整性，请注意 `gtk_table_attach_defaults` 是函数 `gtk_table_attach` 的简化版本，后者具有许多其他选项。这些其他选项包括为每个小部件提供扩展、填充和设置 `padding` 的功能，就像上一章描述的 `gtk_box_pack` 函数一样。但这些函数写起来很麻烦——使用 `gtk_table_attach_defaults` 会将每个小部件的 `padding` 设置为 0并将 `expand` 设置为 TRUE。如果你编译并运行此代码，你将得到一个像下面的窗口。注意，“关闭窗口”按钮如上所述跨越了表格的两个列。
+在这种情况下，小部件跨越了第一列和第二列，因为它在左侧附加于 0，右侧附加于 2。为了完整性，请注意 `gtk_table_attach_defaults` 是函数 `gtk_table_attach` 的简化版本，后者具有许多其他选项。这些其他选项包括为每个小部件提供扩展、填充和设置 `padding` 的功能，就像上一章描述的 `gtk_box_pack` 函数一样。但这些函数写起来很麻烦——使用 `gtk_table_attach_defaults` 会将每个小部件的 `padding` 设置为 0 并将 `expand` 设置为 `TRUE`。如果你编译并运行此代码，你将得到一个像下面的窗口。注意，“关闭窗口”按钮如上所述跨越了表格的两个列。
 
 img/6a7eee5b22417c3d49170130a20b16f2_95_0.png)
 
@@ -2078,23 +1837,37 @@ img/6a7eee5b22417c3d49170130a20b16f2_95_0.png)
 GtkWidget *txt;
 
 void end_program(GtkWidget *wid, gpointer ptr)
+
 {
+
     gtk_main_quit();
+
 }
 
 void edit(GtkWidget *wid, gpointer ptr)
+
 {
+
     const char *input = gtk_entry_get_text(GTK_ENTRY(txt));
+
     gtk_label_set_text(GTK_LABEL(ptr), input);
+
 }
 
 void main(int argc, char *argv[])
+
 {
+
     gtk_init(&argc, &argv);
+
     GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+
     GtkWidget *btn = gtk_button_new_with_label("edit");
+
     gtk_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
+
     gtk_signal_connect(win, "delete_event", G_CALLBACK(end_program), NULL);
+
 }
 ```
 
@@ -2104,6 +1877,7 @@ GtkWidget *lbl = gtk_label_new ("My label");
 
 ```c
 GtkWidget *btn2 = gtk_button_new_with_label ("Button 2");
+
 g_signal_connect(btn2, "clicked", G_CALLBACK(edit), lbl);
 ```
 
@@ -2113,12 +1887,15 @@ txt = gtk_entry_new();
 
 ```c
 GtkWidget *tab = gtk_table_new (2, 2, TRUE);
+
 gtk_table_attach_defaults (GTK_TABLE (tab), lbl, 0, 0, 1, 1);
+
 gtk_table_attach_defaults (GTK_TABLE (tab), btn2, 1, 0, 0, 1);
+
 gtk_table_attach_defaults (GTK_TABLE (tab), win, 0, 1, 1, 2); // 注意：此处原文误为win
+
 gtk_table_attach_defaults (GTK_TABLE (tab), txt, 1, 1, 1, 1);
 ```
-*(注：原文提供的代码块片段在翻译处较为混乱，已根据逻辑整理以保持代码可读性)*
 
 在这个示例中，我们将 `GtkEntry` 小部件的指针 `txt` 声明为全局变量。这是因为我们需要从按钮处理程序访问它，而在这种情况下处理程序也需要访问标签小部件。我们之前使用 `g_signal_connect` 函数中的通用指针将小部件信息传递给处理程序，但对于两个独立的小部件，我们只有一个指针（有很多方法可以使用单个指针，但使用全局变量更容易理解）。
 
@@ -2130,54 +1907,51 @@ gtk_table_attach_defaults (GTK_TABLE (tab), txt, 1, 1, 1, 1);
 
 img/6a7eee5b22417c3d49170130a20b16f2_97_0.png)
 
-添加到表格右下角的 GtkEntry
-
-
-
-
+添加到表格右下角的 `GtkEntry`
 
 ## 数字调节旋按钮 (Spin buttons)
 
-用户有多种输入数据的方式。通常，他们需要从多个选项中选择一个，而不是被给一个框并要求输入内容。GTK 为此目的提供了许多控件，它们与 GtkEntry、GtkSpinButton 密切相关。
+用户有多种输入数据的方式。通常，他们需要从多个选项中选择一个，而不是被给一个框并要求输入内容。GTK 为此目的提供了许多控件，它们与 `GtkEntry`、`GtkSpinButton` 密切相关。
 
 数字调节旋按钮用于在特定范围内输入数值值。你可以指定最小值、最大值，以及每次按下按钮时数值变化的步长。这提供了一个文本输入控件——用户仍然可以向其中输入——同时也提供了一种更改值的方便方法。如果用户输入了超出你设置的范围的值，当你尝试读取它时，它会自动舍入到范围内最接近的值。
 
-在上面的示例中，我们只需要更改一行代码即可将 GtkEntry 转换为 GtkSpinButton。将：
+在上面的示例中，我们只需要更改一行代码即可将 `GtkEntry` 转换为 `GtkSpinButton`。将：
 
-```
+```c
 txt gtk_entry_new ();
 ```
 
 替换为：
 
-```
+```c
 GtkObject *adj = gtk_adjustment_new (0, -10, 10, 1, 0, 0);
+
 txt gtk_spin_button_new (GTK_ADJUSTMENT (adj), 0, 0);
 ```
 
-这使得 txt 从 GtkEntry 变为 GtkSpinButton。我们可以看到 `gtk_spin_button_new` 函数的参数之一被称为 GtkAdjustment 的东西——它是什么？
+这使得 `txt` 从 `GtkEntry` 变为 `GtkSpinButton`。我们可以看到 `gtk_spin_button_new` 函数的参数之一被称为 `GtkAdjustment` 的东西——它是什么？
 
-GtkAdjustment 用于设置数字调节旋按钮（以及其他具有类似行为的控件）可以取值的值范围。`gtk_adjustment_new` 函数的参数按顺序指定了默认值（在本例中为 0）、最小值（-10）、最大值（10）和步长（1）。（最后两个参数指定“页增量”，用于那些有两组不同的按钮来更改值的情况——数字调节旋按钮不使用这些，因此它们可以设置为 0）。
+`GtkAdjustment` 用于设置数字调节旋按钮（以及其他具有类似行为的控件）可以取值的值范围。`gtk_adjustment_new` 函数的参数按顺序指定了默认值（在本例中为 0）、最小值（-10）、最大值（10）和步长（1）。（最后两个参数指定“页增量”，用于那些有两组不同的按钮来更改值的情况——数字调节旋按钮不使用这些，因此它们可以设置为 0）。
 
-GtkAdjustment 作为参数传递给 `gtk_spin_button_new` 函数。
+`GtkAdjustment` 作为参数传递给 `gtk_spin_button_new` 函数。
 
 另外两个参数是爬升速率——即按住按钮时值变化的速度——以及数值上显示的小数位数。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_98_0.png)
 
--   用 GtkSpinButton 代替 GtkEntry
+-   用 `GtkSpinButton` 代替 `GtkEntry`
 
-编译并运行新版本的代码，文本输入框现在右侧有两个小按钮；这些按钮可以用来更改值。你仍然可以向框内输入内容，如果你输入的值不是数字，或者超出了 GtkAdjustment 指定范围，当按下其中一个按钮（或“复制按钮”）时，它将被纠正为范围内的一个值。
+编译并运行新版本的代码，文本输入框现在右侧有两个小按钮；这些按钮可以用来更改值。你仍然可以向框内输入内容，如果你输入的值不是数字，或者超出了 `GtkAdjustment` 指定范围，当按下其中一个按钮（或“复制按钮”）时，它将被纠正为范围内的一个值。
 
 ## 切换按钮 (Toggle buttons)
 
-获取用户输入的一种简单方法是使用按钮来选择选项。GTK 为此目的提供了几个控件，其中两个比较有用的是复选按钮（check buttons——可以被勾选或取消勾选的框）和单选按钮（radio buttons——在一组中同时只有一个成员处于激活状态的选择器）。它们都是 GtkToggleButton 控件的子控件，而该控件本身是我们已经使用过几次的 GtkButton 控件的子控件。切换按钮是一种处于已选中或未选中状态之一的按钮。
+获取用户输入的一种简单方法是使用按钮来选择选项。GTK 为此目的提供了几个控件，其中两个比较有用的是复选按钮（check buttons——可以被勾选或取消勾选的框）和单选按钮（radio buttons——在一组中同时只有一个成员处于激活状态的选择器）。它们都是 `GtkToggleButton` 控件的子控件，而该控件本身是我们已经使用过几次的 `GtkButton` 控件的子控件。切换按钮是一种处于已选中或未选中状态之一的按钮。
 
 ## 复选按钮 (Check buttons)
 
-复选按钮是两者中最简单的，所以我们先看它们。一个 GtkCheckButton 是一个可以是空框也可以带有勾选标记的框；点击它可以在这两种状态之间切换。创建一个复选按钮就像这样简单：
+复选按钮是两者中最简单的，所以我们先看它们。一个 `GtkCheckButton` 是一个可以是空框也可以带有勾选标记的框；点击它可以在这两种状态之间切换。创建一个复选按钮就像这样简单：
 
-```
+```c
 GtkWidget *chk = gtk_check_button_new_with_label ("My check");
 ```
 
@@ -2189,44 +1963,51 @@ GtkWidget *chk = gtk_check_button_new_with_label ("My check");
 
 默认情况下，新建的复选按钮处于未勾选状态。要勾选按钮，你调用：
 
-```
+```c
 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (chk), TRUE);
 ```
 
-将按钮的激活状态设置为 TRUE 会勾选方框，设置为 FALSE 则会取消勾选。有一个相应的函数来读取切换按钮的激活状态——要将复选按钮当前是否被勾选读取到一个变量中，请执行：
+将按钮的激活状态设置为 `TRUE` 会勾选方框，设置为 `FALSE` 则会取消勾选。有一个相应的函数来读取切换按钮的激活状态——要将复选按钮当前是否被勾选读取到一个变量中，请执行：
 
 # C语言编程入门
 
-```
+```c
 int state = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (chk));
 ```
 
-如果按钮被勾选，state 的值将为1，否则为 0。
+如果按钮被勾选，`state` 的值将为1，否则为 0。
 
-你也可以通过 `signal_connect` 为复选按钮的 `toggled` 信号连接一个处理函数——这等于我们在之前的示例中看到的连接到普通 GtkButton 的 `clicked` 信号：
+你也可以通过 `signal_connect` 为复选按钮的 `toggled` 信号连接一个处理函数——这等于我们在之前的示例中看到的连接到普通 `GtkButton` 的 `clicked` 信号：
 
-```
+```c
 g_signal_connect(chk, "toggled", G_CALLBACK(check_toggle), NULL);
 ```
 
 `toggled` 用的处理函数如下：
 
-```
+```c
 void check_toggle(GtkWidget *wid, gpointer ptr)
+
 {
+
     printf("The state of the button is %d", gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON (wid)));
+
 }
 ```
 
-注意，toggled 信号的第一个参数是控件本身，第二个是信号名称，第三个是回调函数。第四个参数用于传递给回调函数的数据。
+
+
+注意，`toggled`信号的第一个参数是控件本身，第二个是信号名称，第三个是回调函数。第四个参数用于传递给回调函数的数据。
 
 ## 单选按钮 (Radio buttons)
 
 单选按钮可以被视为一组，其中一次只有一个能被选中。单选按钮和复选按钮之间的区别在于，单选按钮需要关联到一个组才能使链接生效。以下是创建一个组并向其中添加单选按钮的方法：
 
-```
+```c
 GtkButtonGroup *group = gtk_button_group_new();
+
 GtkWidget *rad1 = gtk_radio_button_new_with_label(group, "Button 1");
+
 GtkWidget *rad2 = gtk_radio_button_new_with_label(group, "Button 2");
 ```
 
@@ -2234,7 +2015,7 @@ GtkWidget *rad2 = gtk_radio_button_new_with_label(group, "Button 2");
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_101_0.png)
 
-窗口顶部的两个 GtkButton
+窗口顶部的两个 `GtkButton`
 
 # 第19章
 
@@ -2246,13 +2027,15 @@ GtkWidget *rad2 = gtk_radio_button_new_with_label(group, "Button 2");
 
 ### 文本下拉框
 
-更简单的下拉框类型是 GtkComboBoxText，它允许每个选项仅纯文本。以下是创建它的方法：
+更简单的下拉框类型是 `GtkComboBoxText`，它允许每个选项仅纯文本。以下是创建它的方法：
 
-```
+```c
 GtkWidget *comb = gtk_combo_box_text_new ();
 
 gtk_combo_box_text_append_text (comb, "Option 1");
+
 gtk_combo_box_text_append_text (comb, "Option 2");
+
 gtk_combo_box_text_append_text (comb, "Option 3");
 
 gtk_combo_box_set_active (comb, 0);
@@ -2262,36 +2045,30 @@ gtk_combo_box_set_active (comb, 0);
 
 最后所示的函数调用 `gtk_combo_box_set_active` 设置了下拉框的初始值——在本例中，设置为 0 选择了第一个添加到下拉框的选项。
 
-
-
-
-
-box，'Option 1'。注意，这是针对 GtkComboBox 组件的函数，而不是针对
-GtkComboBoxText - 因为 GtkComboBox 是 GtkComboBoxText 的父类，你可以通过适当的类型转换在子类上使用父类的函数。
+`box`，'Option 1'。注意，这是针对 `GtkComboBox` 组件的函数，而不是针对 `GtkComboBoxText` - 因为 `GtkComboBox` 是 `GtkComboBoxText` 的父类，你可以通过适当的类型转换在子类上使用父类的函数。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
 
-窗口右下角的 GtkComboBoxText
+窗口右下角的 `GtkComboBoxText`
 
 读取当前选中的值，请使用：
 
-```
+```c
 int sel = gtk_combo_box_get_active (GTK_COMBO_BOX ());
 ```
 
-此函数返回当前选中项的索引 - 0 表示 'Option 1'，1 表示 'Option 2'，
-依此类类推。或者，
+此函数返回当前选中项的索引 - 0 表示 'Option 1'，1 表示 'Option 2'，依此类推。或者，
 
-```
+```c
 char *selected = gtk_combo_box_text_get_active_text (
 GTK_COMBO_BOX_TEXT (comb));
 ```
 
 ...可以使用它来返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
 
-当用户更改值时，combo box 生成的信号称为 changed，因此可以使用如下的回调函数：
+当用户更改值时，combo box 生成的信号称为 `changed`，因此可以使用如下的回调函数：
 
-```
+```c
 void combo_changed (GtkWidget *wid, gpointer ptr) {
   int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
   char *selected = gtk_combo_box_text_get_active_text (
@@ -2301,411 +2078,257 @@ void combo_changed (GtkWidget *wid, gpointer ptr) {
 ```
 
 ...可以使用以下代码进行连接：
+
+### C语言编程简介
+
+```c
+g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
+```
+
+`GtkComboBoxText` 是一个简单情况的有用控件，但完整的 `GtkComboBox` 提供了更多的灵活性。像其他用于自由形式数据显示的组件一样，它被用作一个名为 list store 的数据库结构的前端。
+
+## 列表存储 (List stores)
+
+`list store` 可以被认为是一个具有多行多列的数据表。表格的每个单元格都可以存储文本字符串、整数，甚至是图像。
+
+一旦创建了 list store，就可以将其与 combo box 关联，并使用 list store 的一列来为框提供选项。这部分代码比上面的 `GtkComboBoxText` 代码稍微长且更复杂，但它为对 combo box 进行更复杂的处理提供了可能。
+
+```c
+int pos = 0;
+GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
+gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
+    "Option 1", -1);
+gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
+    "Option 2", -1);
+gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
+    "Option 3", -1);
+```
+
+```c
+GtkWidget *comb = gtk_combo_box_new_with_model (
+    Gtk_TREE_MODEL (ls));
+```
+
+```c
+GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
+```
+
+```c
+gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
+gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
+    "text", 0);
+```
+
+首先，我们创建一个 `GtkListStore`：
+
+```c
+GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
+```
+
+`gtk_list_store_new` 函数接收一个参数列表 - 第一个是 list store 中的列数，随后是每列所存储的数据类型类型列表。在例例中，我们正在创建一个单列的框，该列将包含一个文本字符串。
+然后我们向 list store 添加一些条目：
+
+```c
+gtk_list_store_insert_values (ls, NULL, pos++, 0,
+    "Option 1", -1);
+gtk_list_store_insert_values (ls, NULL, pos++, 0,
+    "Option 2", -1);
+gtk_list_store_insert_values (ls, NULL, pos++, 0,
+    "Option 3", -1);
+```
+
+每次调用 `gtk_list_store_insert_with_values` 都会将 list store 作为参数，随后是一个 NULL 指针。在某些情况下，这将是一个指向迭代器（iterator）的指针，它是对刚刚添加的条目的引用 - 我们不需要此功能，所以将指针设置为 NULL。
+
+随后是新条目要放置在 list store 中的索引 - 实际上是用于数据的行号 - 然后是一组成对的值。每对值的第一个值是要存储数据的列，第二个值是数据本身，值对列表以列值 -1 结束。在这种情况下，我们只在每行的第 0 列添加一个单一字符串项。
+我们将 combo box 与 list store 关联起来：
+
+```c
+GtkWidget *comb = gtk_combo_box_new_with_model (
+    GTK_TREE_MODEL (ls));
+```
+
+这创建了一个 combo box，并告诉它数据来自于我们创建的 list store。combo box 的类型是 `GtkTreeModel`。现在我们设置渲染器来显示 combo box 的内容：
+
+```c
+GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
+```
+
+我们将渲染器放置到 cell 布局中：
+
+```c
+gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
+```
+
+然后设置属性：
+
+```c
+gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
+    "text", 0);
+```
+
+尝试构建并运行代码，看看 combo box 的效果是否与 `GtkComboBoxText` 相同![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
+
+右下角的 `GtkComboBoxText`
+
+有些情况下，使用 list store 来处理 combo box 可能是多此一举的 -但在某些情况下，它是正确的做法！由于 list store 允许对数据排序，这在 combo box 中非常有用：
+
+```c
+char *selected = gtk_combo_box_text_get_active_text (
+    GTK_COMBO_BOX_TEXT (wid));
+```
+
+...可以返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
+
+当用户更改值时，combo box 生成的信号称为 `changed`，因此可以使用如下的回调函数：
+
+```c
+void combo_changed (GtkWidget *wid, gpointer ptr) {
+  int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
+  char *selected = gtk_combo_box_text_get_active_text (
+    GTK_COMBO_BOX_TEXT (wid));
+  printf("The value of the combo is %d %s\n", sel, selected);
+}
+```
+
+...可以使用以下代码进行连接：
+
+```c
+g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
+```
+
+
 
 # C语言编程简介
 
-```
-g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
-```
+`g_signal_connect(comb, "changed", G_CALLBACK(combo_changed), NULL);`
 
-GtkComboBoxText 是一个简单情况的有用控件，但完整的 GtkComboBox 提供了更多的灵活性。像其他用于自由形式数据显示的组件一样，它被用作一个名为 list store 的数据库结构的前端。
-
-## 列表存储 (List stores)
-
-list store 可以被认为是一个具有多行多列的数据表。表格的每个单元格都可以存储文本字符串、整数，甚至是图像。
-
-一旦创建了 list store，就可以将其与 combo box 关联，并使用 list store 的一列来为框提供选项。这部分代码比上面的 GtkComboBoxText 代码稍微长且更复杂，但它为对 combo box 进行更复杂的处理提供了可能。
-
-```
-int pos = 0;
-
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
-```
-
-```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    Gtk_TREE_MODEL (ls));
-```
-
-```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
-```
-
-```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
-```
-
-首先，我们创建一个 GtkListStore：
-
-```
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
-```
-
-gtk_list_store_new 函数接收一个参数列表 - 第一个是 list store 中的列数，随后是每列所存储的数据类型类型列表。在例例中，我们正在创建一个单列的框，该列将包含一个文本字符串。
-然后我们向 list store 添加一些条目：
-
-```
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
-```
-
-每次调用 gtk_list_store_insert_with_values 都会将 list store 作为参数，随后是一个 NULL 指针。在某些情况下，这将是一个指向迭代器（iterator）的指针，它是对刚刚添加的条目的引用 - 我们不需要此功能，所以将指针设置为 NULL。
-
-随后是新条目要放置在 list store 中的索引 - 实际上是用于数据的行号 - 然后是一组成对的值。每对值的第一个值是要存储数据的列，第二个值是数据本身，值对列表以列值 -1 结束。在这种情况下，我们只在每行的第 0 列添加一个单一字符串项。
-我们将 combo box 与 list store 关联起来：
-
-```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    GTK_TREE_MODEL (ls));
-```
-
-这创建了一个 combo box，并告诉它数据来自于我们创建的 list store。combo box 的类型是 GtkTreeModel。现在我们设置渲染器来显示 combo box 的内容：
-
-```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
-```
-
-我们将渲染器放置到 cell 布局中：
-
-```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
-```
-
-然后设置属性：
-
-```
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
-```
-
-尝试构建并运行代码，看看 combo box 的效果是否与 GtkComboBoxText 相同![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
-
-右下角的 GtkComboBoxText
-
-有些情况下，使用 list store 来处理 combo box 可能是多此一举的 -但在某些情况下，它是正确的做法！由于 list store 允许对数据排序，这在 combo box 中非常有用：
-
-```
-char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
-```
-
-...可以返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
-
-当用户更改值时，combo box 生成的信号称为 changed，因此可以使用如下的回调函数：
-
-```c
-void combo_changed (GtkWidget *wid, gpointer ptr) {
-  int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
-  char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
-  printf("The value of the combo is %d %s\n", sel, selected);
-}
-```
-
-...可以使用以下代码进行连接：
-
-```
-g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
-```
-
-GtkComboBoxText 是一个简单情况的有用控件，但完整的 GtkComboBox 提供了更多的灵活性。像其他用于自由形式数据显示的组件一样，它被用作一个名为 list store 的数据库结构的前端。
-
-## 列表存储 (List stores)
-
-list store 可以被认为是一个具有多行多列的数据表。表格的每个单元格都可以存储文本字符串、整数，甚至是图像。
-
-一旦创建了 list store，就可以将其与 combo box 关联，并使用 list store 的一列来为框提供选项。这部分代码比上面的 GtkComboBoxText 代码稍微长且更复杂，但它为对 combo box 进行更复杂的处理提供了可能。
-
-```
-int pos = 0;
-
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
-```
-
-```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    Gtk_TREE_MODEL (ls));
-```
-
-```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
-```
-
-```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
-```
-
-首先，我们创建一个 GtkListStore：
-
-```
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
-```
-
-gtk_list_store_new 函数接收一个参数列表 - 第一个是 list store 中的列数，随后是每列所存储的数据类型类型列表。在例例中，我们正在创建一个单列的框，该列将包含一个文本字符串。
-然后我们向 list store 添加一些条目：
-
-```
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
-```
-
-每次调用 gtk_list_store_insert_with_values 都会将 list store 作为参数，随后是一个 NULL 指针。在某些情况下，这将是一个指向迭代器（iterator）的指针，它是对刚刚添加的条目的引用 - 我们不需要此功能，所以将指针设置为 NULL。
-
-随后是新条目要放置在 list store 中的索引 - 实际上是用于数据的行号 - 然后是一组成对的值。每对值的第一个值是要存储数据的列，第二个值是数据本身，值对列表以列值 -1 结束。在这种情况下，我们只在每行的第 0 列添加一个单一字符串项。
-我们将 combo box 与 list store 关联起来：
-
-```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    GTK_TREE_MODEL (ls));
-```
-
-这创建了一个 combo box，并告诉它数据来自于我们创建的 list store。combo box 的类型是 GtkTreeModel。现在我们设置渲染器来显示 combo box 的内容：
-
-```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
-```
-
-我们将渲染器放置到 cell 布局中：
-
-```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
-```
-
-然后设置属性：
-
-```
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
-```
-
-尝试构建并运行代码，看看 combo box 的效果是否与 GtkComboBoxText 相同![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
-
-右下角的 GtkComboBoxText
-
-有些情况下，使用 list store 来处理 combo box 可能是多此一举的 -但在某些情况下，它是正确的做法！由于 list store 允许对数据排序，这在 combo box 中非常有用：
-
-```
-char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
-```
-
-...可以返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
-
-当用户更改值时，combo box 生成的信号称为 changed，因此可以使用如下的回调函数：
-
-```c
-void combo_changed (GtkWidget *wid, gpointer ptr) {
-  int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
-  char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
-  printf("The value of the combo is %d %s\n", sel, selected);
-}
-```
-
-...可以使用以下代码进行连接：
-
-```
-g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
-```
-
-# 第20章
-树视图
-
-使用 GtkTreeView 组件来显示
-信息和用户输入
-
-正如在前一节提到的，将 list store 用于 combo box
-有时是多此一举的！但在某些情况下，它是正确的做法！但 list store 真正设计的场景是作为名为 GtkTreeView 组件的数据存储。GtkTreeView 是一个按列排列的数据表。表格可以显示图像以及文本，甚至可以包含其他组件，如复选按钮。
-
-创建树视图
-
-为了演示这一点，我们将创建一个新的 list store，每行包含两个条目：一个字符串和一个图标。以下是实现该点的代码：
-
-```c
-void main(int argc, char *argv[]) {
-  gtk_init(&argc, &argv);
-
-  GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-  GtkWidget *btn = gtk_button_new_with_label ("Click me");
-  g_signal_connect(btn, "clicked", G_CALLBACK(end_program),n NULL);
-  g_signal_connect(win, "delete_event", G_CALLBACK(end_program),n NULL);
-
-  int pos = 0;
-
-  GtkListStore *ls = gtk_list_store_new(2, GTK_TYPE_STRING,
-GTK_TYPE_PIXBUF);
-  GdkPixbuf *icon = gtk_icon_theme_load_icon (
-    gtk_icon_theme_get_default(), 2, 0, NULL);
-```
-[/content] (注：由于提供的文本中存在大量重复和逻辑乱码，译文已根据逻辑进行了整理和去重处理) 抱歉，您提供的原文中存在大量的段落重复和格式错乱，我已根据您的要求，为您整理了清晰的翻译内容。
-
-[content]
-box，'Option 1'。注意，这是针对 GtkComboBox 组件的函数，而不是针对 GtkComboBoxText - 因为 GtkComboBox 是 GtkComboBoxText 的父类，你可以通过适当的类型转换在子类上使用父类的函数。
+`box`，`'Option 1'`。注意，这是针对 `GtkComboBox` 组件的函数，而不是针对 `GtkComboBoxText` —— 因为 `GtkComboBox` 是 `GtkComboBoxText` 的父类，你可以通过适当的类型转换在子类上使用父类的函数。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
 
-窗口右下角的 GtkComboBoxText
+窗口右下角的 `GtkComboBoxText`
 
 读取当前选中的值，请使用：
 
 ```
-int sel = gtk_combo_box_get_active (GTK_COMBO_BOX ());
+int sel = gtk_combo_box_get_active(GTK_COMBO_BOX());
 ```
 
-此函数返回当前选中项的索引 - 0 表示 'Option 1'，1 表示 'Option 2'，依此类类推。或者，
+此函数返回当前选中项的索引 - 0 表示 `'Option 1'`，1 表示 `'Option 2'`，依此类推。或者，
 
 ```
-char *selected = gtk_combo_box_text_get_active_text (
-GTK_COMBO_BOX_TEXT (comb));
+char *selected = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(comb));
 ```
 
-...可以使用它来返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
+...可以使用它来返回被选中的实际文本字符串。注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。
 
-当用户更改值时，combo box 生成的信号称为 changed，因此可以使用如下的回调函数：
+当用户更改值时，combo box 生成的信号称为 `changed`，因此可以使用如下的回调函数：
 
 ```c
-void combo_changed (GtkWidget *wid, gpointer ptr) {
-  int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
-  char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
+void combo_changed(GtkWidget *wid, gpointer ptr) {
+  int sel = gtk_combo_box_get_active(GTK_COMBO_BOX(wid));
+  char *selected = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(wid));
   printf("The value of the combo is %d %s\n", sel, selected);
 }
 ```
 
 ...可以使用以下代码进行连接：
 
-# C语言编程简介
-
 ```
-g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
+g_signal_connect(comb, "changed", G_CALLBACK(combo_changed), NULL);
 ```
 
-GtkComboBoxText 是一个简单情况的有用控件，但完整的 GtkComboBox 提供了更多的灵活性。像其他用于自由形式数据显示的组件一样，它被用作一个名为 list store 的数据库结构的前端。
+`GtkComboBoxText` 是一个简单情况的有用控件，但完整的 `GtkComboBox` 提供了更多的灵活性。像其他用于自由形式数据显示的组件一样，它被用作一个名为 `list store` 的数据库结构的前端。
 
-## 列表存储 (List stores)
+## 列表存储 List stores
 
-list store 可以被认为是一个具有多行多列的数据表。表格的每个单元格都可以存储文本字符串、整数，甚至是图像。
+`list store` 可以被认为是一个具有多行多列的数据表。表格的每个单元格都可以存储文本字符串、整数，甚至是图像。
 
-一旦创建了 list store，就可以将其与 combo box 关联，并使用 list store 的一列来为框提供选项。这部分代码比上面的 GtkComboBoxText 代码稍微长且更复杂，但它为对 combo box 进行更复杂的处理提供了可能。
+一旦创建了 `list store`，就可以将其与 combo box 关联，并使用 `list store` 的一列来为框提供选项。这部分代码比上面的 `GtkComboBoxText` 代码稍微长且更复杂，但它为对 combo box 进行更复杂的处理提供了可能。
 
 ```
 int pos = 0;
-
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
+GtkListStore *ls = gtk_list_store_new(1, G_TYPE_STRING);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 1", -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 2", -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 3", -1);
 ```
 
 ```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    Gtk_TREE_MODEL (ls));
+GtkWidget *comb = gtk_combo_box_new_with_model(GTK_TREE_MODEL(ls));
 ```
 
 ```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
+GtkCellRenderer *rend = gtk_cell_renderer_text_new();
 ```
 
 ```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
+gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(comb), rend, FALSE);
+gtk_cell_layout_add_attributes(GTK_CELL_LAYOUT(comb), rend, "text", 0);
 ```
 
-首先，我们创建一个 GtkListStore：
+首先，我们创建一个 `GtkListStore`：
 
 ```
-GtkListStore *ls = gtk_list_store_new (1, G_TYPE_STRING);
+GtkListStore *ls = gtk_list_store_new(1, G_TYPE_STRING);
 ```
 
-gtk_list_store_new 函数接收一个参数列表 - 第一个是 list store 中的列数，随后是每列所存储的数据类型类型列表。在例例中，我们正在创建一个单列的框，该列将包含一个文本字符串。
-然后我们向 list store 添加一些条目：
+`gtk_list_store_new` 函数接收一个参数列表 - 第一个是 `list store` 中的列数，随后是每列所存储的数据类型列表。在例中，我们正在创建一个单列的框，该列将包含一个文本字符串。
+
+然后我们向 `list store` 添加一些条目：
 
 ```
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 1", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 2", -1);
-gtk_list_store_insert_values (ls, NULL, pos++, 0,
-    "Option 3", -1);
+gtk_list_store_insert_values(ls, NULL, pos++, 0, "Option 1", -1);
+gtk_list_store_insert_values(ls, NULL, pos++, 0, "Option 2", -1);
+gtk_list_store_insert_values(ls, NULL, pos++, 0, "Option 3", -1);
 ```
 
-每次调用 gtk_list_store_insert_with_values 都会将 list store 作为参数，随后是一个 NULL 指针。在某些情况下，这将是一个指向迭代器（iterator）的指针，它是对刚刚添加的条目的引用 - 我们不需要此功能，所以将指针设置为 NULL。
+每次调用 `gtk_list_store_insert_with_values` 都会将 `list store` 作为参数，随后是一个 `NULL` 指针。在某些情况下，这将是一个指向迭代器 `iterator` 的指针，它是对刚刚添加的条目的引用 - 我们不需要此功能，所以将指针设置为 `NULL`。
 
-随后是新条目要放置在 list store 中的索引 - 实际上是用于数据的行号 - 然后是一组成对的值。每对值的第一个值是要存储数据的列，第二个值是数据本身，值对列表以列值 -1 结束。在这种情况下，我们只在每行的第 0 列添加一个单一字符串项。
-我们将 combo box 与 list store 关联起来：
+随后是新条目要放置在 `list store` 中的索引 - 实际上是用于数据的行号 - 然后是一组成对的值。每对值的第一个值是要存储数据的列，第二个值是数据本身，值对列表以列值 `-1` 结束。在这种情况下，我们只在每行的第 0 列添加一个单一字符串项。
 
-```
-GtkWidget *comb = gtk_combo_box_new_with_model (
-    GTK_TREE_MODEL (ls));
-```
-
-这创建了一个 combo box，并告诉它数据来自于我们创建的 list store。combo box 的类型是 GtkTreeModel。现在我们设置渲染器来显示 combo box 的内容：
+我们将 combo box 与 `list store` 关联起来：
 
 ```
-GtkCellRenderer *rend = gtk_cell_renderer_text_new ();
+GtkWidget *comb = gtk_combo_box_new_with_model(GTK_TREE_MODEL(ls));
+```
+
+这创建了一个 combo box，并告诉它数据来自于我们创建的 `list store`。combo box 的类型是 `GtkTreeModel`。现在我们设置渲染器来显示 combo box 的内容：
+
+```
+GtkCellRenderer *rend = gtk_cell_renderer_text_new();
 ```
 
 我们将渲染器放置到 cell 布局中：
 
 ```
-gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (comb), rend, FALSE);
+gtk_cell_layout_pack_start(GTK_CELL_LAYOUT(comb), rend, FALSE);
 ```
 
 然后设置属性：
 
 ```
-gtk_cell_layout_add_attributes (GTK_CELL_LAYOUT (comb), rend,
-    "text", 0);
+gtk_cell_layout_add_attributes(GTK_CELL_LAYOUT(comb), rend, "text", 0);
 ```
 
-尝试构建并运行代码，看看 combo box 的效果是否与 GtkComboBoxText 相同![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
+尝试构建并运行代码，看看 combo box 的效果是否与 `GtkComboBoxText` 相同 ![](img/6a7eee5b22417c3d49170130a20b16f2_103_0.png)
 
-右下角的 GtkComboBoxText
+右下角的 `GtkComboBoxText`
 
-有些情况下，使用 list store 来处理 combo box 可能是多此一举的 -但在某些情况下，它是正确的做法！由于 list store 允许对数据排序，这在 combo box 中非常有用：
+有些情况下，使用 `list store` 来处理 combo box 可能是多此一举的 - 但在某些情况下，它是正确的做法！由于 `list store` 允许对数据排序，这在 combo box 中非常有用：
 
 ```
-char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
+char *selected = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(wid));
 ```
 
-...可以返回被选中的实际文本字符串。（注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。）
+...可以返回被选中的实际文本字符串。注意，此函数仅适用于 combo box；不能用于下一节中描述的完整 combo box。
 
-当用户更改值时，combo box 生成的信号称为 changed，因此可以使用如下的回调函数：
+当用户更改值时，combo box 生成的信号称为 `changed`，因此可以使用如下的回调函数：
 
 ```c
-void combo_changed (GtkWidget *wid, gpointer ptr) {
-  int sel = gtk_combo_box_get_active (GTK_COMBO_BOX (wid));
-  char *selected = gtk_combo_box_text_get_active_text (
-    GTK_COMBO_BOX_TEXT (wid));
+void combo_changed(GtkWidget *wid, gpointer ptr) {
+  int sel = gtk_combo_box_get_active(GTK_COMBO_BOX(wid));
+  char *selected = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(wid));
   printf("The value of the combo is %d %s\n", sel, selected);
 }
 ```
@@ -2713,106 +2336,87 @@ void combo_changed (GtkWidget *wid, gpointer ptr) {
 ...可以使用以下代码进行连接：
 
 ```
-g_signal_connect (comb, "changed", G_CALLBACK(combo_changed), NULL);
+g_signal_connect(comb, "changed", G_CALLBACK(combo_changed), NULL);
 ```
 
-# 第20章
-树视图
+# 第20章 树视图
 
-使用 GtkTreeView 组件来显示
-信息和用户输入
+使用 `GtkTreeView` 组件来显示信息和用户输入
 
-正如在前一节提到的，将 list store 用于 combo box
-有时是多此一举的！但在某些情况下，它是正确的做法！但 list store 真正设计的场景是作为名为 GtkTreeView 组件的数据存储。GtkTreeView 是一个按列排列的数据表。表格可以显示图像以及文本，甚至可以包含其他组件，如复选按钮。
+正如在前一节提到的，将 `list store` 用于 combo box 有时是多此一举的！但在某些情况下，它是正确的做法！但 `list store` 真正设计的场景是作为名为 `GtkTreeView` 组件的数据存储。`GtkTreeView` 是一个按列排列的数据表。表格可以显示图像以及文本，甚至可以包含其他组件，如复选按钮。
 
-创建树视图
+## 创建树视图
 
-为了演示这一点，我们将创建一个新的 list store，每行包含两个条目：一个字符串和一个图标。以下是实现该点的代码：
+为了演示这一点，我们将创建一个新的 `list store`，每行包含两个条目：一个字符串和一个图标。以下是实现该点的代码：
 
 ```c
 void main(int argc, char *argv[]) {
   gtk_init(&argc, &argv);
-
   GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-  GtkWidget *btn = gtk_button_new_with_label ("Click me");
-  g_signal_connect(btn, "clicked", G_CALLBACK(end_program),n NULL);
-  g_signal_connect(win, "delete_event", G_CALLBACK(end_program),n NULL);
-
+  GtkWidget *btn = gtk_button_new_with_label("Click me");
+  g_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
+  g_signal_connect(win, "delete_event", G_CALLBACK(end_program), NULL);
   int pos = 0;
-
-  GtkListStore *ls = gtk_list_store_new(2, GTK_TYPE_STRING,
-GTK_TYPE_PIXBUF);
-  GdkPixbuf *icon = gtk_icon_theme_load_icon (
-    gtk_icon_theme_get_default(), 2, 0, NULL);
+  GtkListStore *ls = gtk_list_store_new(2, GTK_TYPE_STRING, GTK_TYPE_PIXBUF);
+  GdkPixbuf *icon = gtk_icon_theme_load_icon(gtk_icon_theme_get_default(), 2, 0, NULL);
+}
 ```
 
 ```c
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-  "Option 1", 1, icon, -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-  "Option 2", 1, icon, -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0,
-  "Option 3", 1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 1", 1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 2", 1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, "Option 3", 1, icon, -1);
 ```
 
-GtkWidget *tv = gtk_tree_view_new_with_model (
-  GTK_TREE_MODEL (ls));
-
-GtkCellRenderer *prend = gtk_cell_renderer_pixbuf_new ();
-GtkCellRenderer *trend = gtk_cell_renderer_text_new ();
-
-```c
-gtk_tree_view_insert_column_with_attributes (
-  GTK_TREE_VIEW (tv), -1, "Icon", prend, "pixbuf", 1, NULL);
-gtk_tree_view_insert_column_with_attributes (
-  GTK_TREE_VIEW (tv), -1, "Option", trend, "text", 0, NULL);
+```
+GtkWidget *tv = gtk_tree_view_new_with_model(GTK_TREE_MODEL(ls));
+GtkCellRenderer *prend = gtk_cell_renderer_pixbuf_new();
+GtkCellRenderer *trend = gtk_cell_renderer_text_new();
 ```
 
 ```c
-GtkWidget *tbl = gtk_table_new (2, 2, FALSE);
-gtk_table_attach_defaults (GTK_TABLE (tbl), tv, 0, 2, 0, 1);
-gtk_table_attach_defaults (GTK_TABLE (tbl), btn, 0, 1, 1, 2);
-gtk_container_add (GTK_CONTAINER (win), tbl);
-gtk_widget_show_all (win);
+gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW(tv), -1, "Icon", prend, "pixbuf", 1, NULL);
+gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW(tv), -1, "Option", trend, "text", 0, NULL);
+```
+
+```c
+GtkWidget *tbl = gtk_table_new(2, 2, FALSE);
+gtk_table_attach_defaults(GTK_TABLE(tbl), tv, 0, 2, 0, 1);
+gtk_table_attach_defaults(GTK_TABLE(tbl), btn, 0, 1, 1, 2);
+gtk_container_add(GTK_CONTAINER(win), tbl);
+gtk_widget_show_all(win);
 gtk_main();
 ```
 
-首先，我们调用 `gtk_list_store_new` 创建一个包含2列的列表存储；列 0 包含一个如上一章所示的文本字符串；列 1 包含一个 pixbuf（pixel buffer 的缩写），用于存储图像。
+首先，我们调用 `gtk_list_store_new` 创建一个包含 2 列的列表存储；列 0 包含一个如上一章所示的文本字符串；列 1 包含一个 `pixbuf`，用于存储图像。
 
 ```c
-GtkListStore *ls = gtk_list_store_new (2, G_TYPE_STRING,
-  GTK_TYPE_PIXBUF);
+GtkListStore *ls = gtk_list_store_new(2, G_TYPE_STRING, GTK_TYPE_PIXBUF);
 ```
 
-我们创建了一个包含小图像的 `GdkPixbuf` ——在这种情况下，我们从当前项加载一个图标到其中，通过 `GdkPixbuf` 可以存储任何你选择要显示的图像。
+我们创建了一个包含小图像的 `GdkPixbuf` —— 在这种情况下，我们从当前项加载一个图标到其中，通过 `GdkPixbuf` 可以存储任何你选择要显示的图像。
 
 ```c
-GdkPixbuf *icon = gtk_icon_theme_load_icon (
-  gtk_icon_theme_get_default (), "dialog-ok-apply", 32, 0,
-  NULL);
+GdkPixbuf *icon = gtk_icon_theme_load_icon(gtk_icon_theme_get_default(), "dialog-ok-apply", 32, 0, NULL);
 ```
 
-在每个情况下，我们都向列表存储添加了三行；我们在行的第 0 列放入一个文本字符串，并在第 1 列放入我们创建的 pixbuf。
+在每个情况下，我们都向列表存储添加了三行；我们在行的第 0 列放入一个文本字符串，并在第 1 列放入我们创建的 `pixbuf`。
 
 ## C语言与 GTK 编程简介
 
 ```c
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0, icon, \
-1, icon, -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0, icon, \
-1, icon, -1);
-gtk_list_store_insert_with_values (ls, NULL, pos++, 0, icon, \
-1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, icon, 1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, icon, 1, icon, -1);
+gtk_list_store_insert_with_values(ls, NULL, pos++, 0, icon, 1, icon, -1);
 ```
 
 我们需要创建一个 `GtkTreeView` 来显示列表存储。这一步与上一章中创建 `GtkListStore` 类似 —— 将新的 `GtkTreeView` 与我们创建的 `GtkListStore` 关联。
 
 ```c
-GtkWidget *tv = gtk_tree_view_new_model (
-GTK_TREE_MODEL (ls));
+GtkWidget *tv = gtk_tree_view_new_model(GTK_TREE_MODEL(ls));
 ```
 
-与组合框一样，我们需要为想要在此显示的所有数据类型创建单元渲染器，在这种情况下，我们有两个 —— 一个文本渲染器和一个 pixbuf 渲染器。
+与组合框一样，我们需要为想要在此显示的所有数据类型创建单元渲染器，在这种情况下，我们有两个 —— 一个文本渲染器和一个 `pixbuf` 渲染器。
 
 ```c
 GtkCellRenderer *prend = gtk_cell_renderer_pixbuf_new();
@@ -2822,11 +2426,13 @@ GtkCellRenderer *trend = gtk_cell_renderer_text_new();
 最后，我们将想要查看的列插入树视图中。
 
 ```c
-gtk_tree_view_insert_column_with_attributes (
-  GTK_TREE_VIEW (tv), -1, "Icon", prend, "pixbuf", 1, NULL);
-gtk_tree_view_insert_column_with_attributes (
-  GTK_TREE_VIEW (tv), -1, "Option", trend, "text", 0, NULL);
+gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW(tv), -1, "Icon", prend, "pixbuf", 1, NULL);
+gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW(tv), -1, "Option", trend, "text", 0, NULL);
 ```
+
+
+
+`GTK_TREE_VIEW (tv)`, -1, "Option", trend, "text", 0, NULL);
 
 每次对 `tree_view` 的调用都将树本身作为第一个参数。该参数是列的位置 —— 这可以是实际位置（从表格左侧的 0 开始编号），也可以在这里是 -1，这表示该列应作为下一列添加；即表格中已存在的最右侧列的右侧。下一个参数是列标题（可以显示在表格顶部），然后是我们创建的用于该列的渲染器。
 
@@ -2864,7 +2470,6 @@ void row_selected (GtkWidget *wid, gpointer ptr)
     GtkTreeModel *model;
     GtkTreeIter iter;
     char *option;
-
     sel = gtk_tree_view_get_selection (GTK_TREE_VIEW (wid));
     if (gtk_tree_selection_get_selected (sel, &model, &iter))
     {
@@ -2898,7 +2503,7 @@ gtk_tree_model_get (model, &iter, 0, &option, -1);
 
 当设置列表存储中的值时，传递给函数的模型和迭代器之后的参数是一对值，每对第一个是要读取的列，第二个是要写入数据的指针。在这种情况下，第一列的文本指针作为 `option` 返回。`-1` 表示没有更多要设置的属性。
 
-# 第21 章
+# 第21章
 
 ## 菜单
 
@@ -2906,7 +2511,7 @@ gtk_tree_model_get (model, &iter, 0, &option, -1);
 
 应用程序顶部都有菜单栏。GTK 提供了许多创建菜单栏或弹出菜单的控件。菜单的构建块是 `GtkMenuItem`。菜单中的每个项都是 `GtkMenuItem`，它关联有一个文本标签。使用 `GtkWidget` 来包含一个或多个 `GtkMenuItem`；创建一个类型在应用程序菜单栏项被选中时看到的弹出菜单。
 
-## 菜单栏
+### 菜单栏
 
 `GtkMenuBar` 可以显示在应用程序顶部；它包含许多 `GtkMenuItem`；每个项为 `GtkMenu` 提供名称，如上所述，认为 `GtkMenuItem` 既是菜单的成员又是整个菜单的名称可能有些困惑，但希望示例会让情况更清晰。这是带有菜单栏应用程序的代码：
 
@@ -2924,8 +2529,6 @@ void main (int argc, char *argv[]) {
     gtk_container_add (GTK_CONTAINER (win), hbox);
 }
 ```
-
-
 
 ```c
 Gtkwidget *file_mi = gtk_menu_item_with_label ( "File" );
@@ -2976,7 +2579,7 @@ gtk_menu_shell_append (GTK_MENU_SHELL(mbar), file_mi);
 Gtkwidget *f_menu = gtk_menu_new ( );
 ```
 
-# C 语言 GUI 编程简介
+# C语言 GUI 编程简介
 
 创建菜单后，我们使用 `gtk_menu_item_set_submenu` 将其设为“文件”菜单项的子菜单。
 
@@ -2993,7 +2596,7 @@ gtk_menu_shell_append(GTK_MENU_SHELL(menu), quit_mi);
 
 我们有一个包含单个菜单（“文件”）的菜单栏，该菜单包含单个选项（“退出”），但目前该选项还不会执行任何操作。要让菜单项执行操作，我们需要通过 `connect` 将处理回调连接到激活（activate）信号，就像处理按钮一样。
 
-将现有的 `end_program`处理器连接到“退出”菜单项的代码如下：
+将现有的 `end_program` 处理器连接到“退出”菜单项的代码如下：
 
 ```c
 g_signal_connect(quit_mi, "activate", G_CALLBACK(end_program), NULL);
@@ -3009,7 +2612,7 @@ g_signal_connect(quit_mi, "activate", G_CALLBACK(end_program), NULL);
 
 从易用性的角度来看，建议子菜单不要超过一级——让一个菜单从某些项创建子菜单是可以的，但如果你从子菜单本身又创建更多子菜单，用户可能会感到困惑！
 
-## 弹出菜单
+### 弹出菜单
 
 工具栏是向应用程序添加菜单最常见的方法，但也可以使用非常相似的代码来添加点击按钮、树视图或其他各种部件时产生的弹出菜单。
 
@@ -3021,7 +2624,6 @@ void button_popup (GtkWidget *wid, gpointer ptr) {
   GtkWidget *quit_mi = gtk_menu_item_new_with_label ("Quit");
   gtk_menu_shell_append (GTK_MENU_SHELL(f_menu), quit_mi);
   g_signal_connect (quit_mi, "activate", G_CALLBACK (end_program), NULL);
-
   gtk_widget_show_all (f_menu);
   gtk_menu_popup (GTK_MENU(f_menu), NULL, NULL, NULL, NULL, 1);
   gtk_get_current_event_time ();
@@ -3038,7 +2640,7 @@ void button_popup (GtkWidget *wid, gpointer ptr) {
 
 此示例显示了通过按下按钮生成的弹出窗口，但它也可以链接到许多其他部件的鼠标事件上。
 
-# 第 22 章
+# 第22章
 
 ## 对话框
 
@@ -3056,7 +2658,6 @@ void open_dialog(GtkWidget *wid, gpointer ptr) {
       GTK_WINDOW(wid),
       GTK_DIALOG_MODAL,
       "Cancel", 0, "OK", 1, NULL);
-
   int result = gtk_dialog_run(GTK_DIALOG(dlg));
   printf("Return code = %d\n", result);
   gtk_widget_destroy(dlg);
@@ -3075,10 +2676,7 @@ void open_dialog(GtkWidget *wid, gpointer ptr) {
 
 一个简单的 GtkDialog，动作区域内有两个按钮
 
-这是一个基础对话框，但它看起来有点小且单调！让我们向它添加一个标签来向用户提问。为了实现这一点，我们访问对话框的内容区域，实际上，一个对话框是一个 GtkWindow，它内部包含一个带有两个 GtkContainer 容器的 GtkBox ——一个是底部的包含按钮的动作区域，另一个是顶部的内容区域。我们添加任何
-
-
-内容区域对话的额外内容，可以通过 `gtk_dialog_get_content_area` 函数访问。
+这是一个基础对话框，但它看起来有点小且单调！让我们向它添加一个标签来向用户提问。为了实现这一点，我们访问对话框的内容区域，实际上，一个对话框是一个 GtkWindow，它内部包含一个带有两个 GtkContainer 容器的 GtkBox ——一个是底部的包含按钮的动作区域，另一个是顶部的内容区域。我们添加任何内容区域对话的额外内容，可以通过 `gtk_dialog_get_content_area` 函数访问。
 
 像如下所示修改上面的处理函数：
 
@@ -3088,7 +2686,6 @@ void open_dialog(Gtkwidget *wid, gpointer ptr) {
       GTK_WINDOW (ptr),
       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
       "Cancel", 0, "OK", NULL);
-
   Gtkwidget *lbl = gtk_label_new (
     gtk_container_add(
       GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dlg))),
@@ -3104,6 +2701,8 @@ g_widget_destroy (dlg);
 printf("Return code: %d\n", result);
 ```
 
+
+
 我们使用了熟悉的 `gtk_container_add` 函数将标签添加到对话框的内容区域。请注意，我们还需要对添加的标签调用 `gtk_widget_show` —— `gtk_dialog_run` 会自动显示对话框本身的组件（如背景和按钮），但你需要显式地显示你添加的所有其他内容。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_121_0.png)
@@ -3113,17 +2712,17 @@ printf("Return code: %d\n", result);
 
 ## 第 23 章
 
-## 内置对话框
+### 内置对话框
 
 GTK 包含了一些用于常用函数的预制对话框。
 
 在许多桌面应用程序中都有常用的对话框；例如，用于选择加载或保存的文件，或者选择颜色。GTK 包含了这些常用对话框的预制版本，可以轻松地包含在应用程序中，无需从头创建对话框的每个方面。对于大多数此类对话框，有一个 GTK 按钮可以启动对话框；最简单的方法是在应用程序中包含相应的按钮，剩下的工作都会为你完成。
 
-## 文件选择器对话框
+#### 文件选择器对话框
 
 让我们来看一个文件选择器对话框的示例，它用于获取文件的名称和路径，这些路径可以在后续的文件读取操作中使用。
 
-```
+```c
 static void label(GtkFileFileChooser *btn, gpointer ptr)
 {
     char *filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(btn));
@@ -3133,16 +2732,12 @@ static void label(GtkFileFileChooser *btn, gpointer ptr)
 void main (int argc, char *argv[])
 {
     gtk_init(&argc, &argv);
-
     GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(win, "FileChooser");
     GtkWidget *btn = gtk_button_new_with_label("Open");
     g_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
-
     g_signal_connect(win, "delete_event", G_CALLBACK(end_program), NULL);
-
     GtkWidget *vbox = gtk_vbox_new(FALSE, 5);
-
     gtk_container_add GTK_CONTAINER (win, bbox);
     GtkWidget *fc_btn = gtk_file_choose_button_new (
   GTK_FILE_CHOOSER_ACTION_OPEN);
@@ -3152,6 +2747,7 @@ void main (int argc, char *argv[])
     gtk_box_pack_start (GTK_BOX, vbox), btn, TRUE, TRUE, 0);
     gtk_widget_show_all (win);
     gtk_main ();
+}
 ```
 
 创建了一个类型为 FileFileChooser 的组件并将其添加到窗口中。`gtk_file_chooser_button_new` 函数接受两个参数。第一个是应用于文件选择器窗口的标题。在这种情况下，我们想要打开一个现有文件，因此使用了 `GTK_FILE_CHOOSER_ACTION_OPEN`。另一种是选择一个现有文件夹，对应的代码为 `GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER`。
@@ -3166,7 +2762,7 @@ void main (int argc, char *argv[])
 
 顶部按钮右侧的文件夹图标表示它是文件选择器；按钮的标题是当前选定的文件名，当程序首次运行时显示为“(None)”。如果你点击该按钮，将打开一个文件选择对话框：
 
-## C 语言与 GUI 编程简介
+### C 语言与 GUI 编程简介
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_124_0.png)
 
@@ -3174,7 +2770,7 @@ void main (int argc, char *argv[])
 
 你可以使用 GtkFileChooserButton 打开选择现有文件或文件夹的浏览器，但 GTK 的设计者认为你不能使用这种方法来选择保存新文件的地方。为此，你需要自己创建一个 Gtk 对话框。修改代码如下：
 
-```
+```c
 static void func(GtkWidget *btn, gpointer *ptr) {
     GtkWidget *sch = gtk_file_chooser_dialog_new ("Save",
         GTK_WINDOW(ptr), GTK_FILE_CHOOSER_ACTION_SAVE,
@@ -3190,19 +2786,15 @@ static void func(GtkWidget *btn, gpointer *ptr) {
 ```c
 void main (int argc, char *argv[]) {
     gtk_init(&argc, &argv);
-
     GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(win, "FileChooser");
     GtkWidget *btn = gtk_button_new_with_label("Open");
     g_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
-
     g_signal_connect(win, "delete_event", G_CALLBACK(end_program), NULL);
-
     GtkWidget *vbox = gtk_vbox_new(FALSE, 5);
     GtkWidget *bbox = gtk_get_border_width(vbox);
     gtk_container_add(GTK_CONTAINER(win), vbox);
     gtk_container_set_border_width(GTK_CONTAINER(vbox), 10);
-
     GtkWidget *fc_btn = gtk_file_choose_button_new(
       GTK_FILE_CHOOSER_ACTION_OPEN);
     gtk_signal_connect(fc_btn,
@@ -3234,7 +2826,7 @@ void main (int argc, char *argv[]) {
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_125_0.png)
 
-## C 语言 GUI 编程简介
+### C 语言 GUI 编程简介
 
 如果你运行这段代码并点击“Save file”按钮，你会发现文件保存选择器与文件打开选择器有不同，因为它有一个允许输入新文件名的框：
 
@@ -3248,11 +2840,9 @@ void main (int argc, char *argv[]) {
 
 颜色在 GTK 中存储在 GdkColor 结构中，包含红、绿、蓝分量的独立值。因此，GtkColorButton 操作的是存储为 GdkColor 格式的数据。
 
-
-
 这里是一个使用 GtkColorButton 的示例：
 
-```
+```c
 static void (GtkButton *btn, gpointer ptr)
 {
   GdkColor col;
@@ -3265,18 +2855,14 @@ static void (GtkButton *btn, gpointer ptr)
 void main (int argc, char *argv[])
 {
   gtk_init(&argc, argv);
-
   GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   GtkWidget *btn = gtk_button_new_label("Close window");
   g_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
   g_signal_connect(win, "destroy", G_CALLBACK(end_program), NULL);
-
   GtkWidget *vbox = gtk_vbox_new(FALSE, 5);
   gtk_container_add(vbox, btn);
-
   GtkWidget *col_btn = gtk_color_button_new(0);
   g_signal_connect(col_btn, "changed", G_CALLBACK(col_selected), NULL);
-
   gtk_box_pack_start(GTK_BOX(vbox), col_btn, TRUE, TRUE, 0);
   gtk_box_pack_start(GTK_BOX(vbox), btn, TRUE, TRUE, 0);
   gtk_widget_show_all(win);
@@ -3301,7 +2887,7 @@ void main (int argc, char *argv[])
 
 当你点击 OK 时，选定的红、绿、蓝值将打印到终端。
 
-## 字体选择
+#### 字体选择
 
 另一个常见操作是选择字体，这在许多办公应用程序中都会用到。例如 GTK 提供了一个字体选择器，工作原理与颜色选择器相同。只需将 `GtkColorButton` 替换为 `GtkFontButton` 即可：
 
@@ -3333,7 +2919,7 @@ static void font_cb(GtkButton *btn, gpointer ptr)
 
 ## 自定义组件
 
-## 修改组件的属性
+### 修改组件的属性
 改变它们的外
 
 在我们目前为止看到的所有示例中，我们都是以默认状态使用组件；我们只是通过 `gtk_<widget name>_new` 函数创建组件并使用它。然而，GTK 允许通过设置每个组件的属性来对组件进行某种程度的自定义。
@@ -3342,28 +2928,26 @@ static void font_cb(GtkButton *btn, gpointer ptr)
 ```c
 void main (int argc, char *argv[]) {
   gtk_init(&argc, &argv);
-
   GtkWidget *win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   GtkWidget *btn = gtk_button_new_with_label("clicked");
   g_signal_connect(btn, "clicked", G_CALLBACK(end_program), NULL);
   g_signal_connect(win, "delete_event", G_CALLBACK(end_program), NULL);
-
   GtkWidget *btn2 = gtk_button_new_with_label("exit");
   g_object_set(G_OBJECT(btn2), "relief", GTK_RELIEF_NONE, NULL);
-
   GtkWidget *box = gtk_box_new(FALSE, 5);
   gtk_pack_start(GTK_BOX(box), btn2, TRUE, TRUE, 0);
   gtk_pack_start(GTK_BOX(box), btn, TRUE, TRUE, 0);
   gtk_container_add(GTK_CONTAINER(win), box);
   gtk_widget_show_all(win);
-
   gtk_main();
 }
 ```
 
+
+
 这是来自之前示例的熟悉代码，但高亮的行是新的。
-`g_object_set` 接收参数为组件名称，后跟一个 NULL 终止符、属性名称列表和属性值。在这种情况下，我们正在将 `GtkButton` `btn2` 的 `relief` 属性设置为 `GTK_RELIEF_NONE`。
-`GtkButton` 的 `relief`（凹凸）控制边框的外。某些 GTK 组件的边缘应用了某种程度的阴影以提供 3D 效果——默认情况下，`GtkButton` 应用了这种阴影，使得按钮看起来略微突出窗口背景。通过将 `relief` 设置为 `GTK_RELIEF_NONE`，3D 效果会被移除——如果你运行此程序，你应该看到按钮之间的差异。
+`g_object_set`接收参数为组件名称，后跟一个 NULL 终止符、属性名称列表和属性值。在这种情况下，我们正在将`GtkButton``btn2`的`relief`属性设置为`GTK_RELIEF_NONE`。
+`GtkButton`的`relief`（凹凸）控制边框的外。某些 GTK 组件的边缘应用了某种程度的阴影以提供 3D 效果——默认情况下，`GtkButton`应用了这种阴影，使得按钮看起来略微突出窗口背景。通过将`relief`设置为`GTK_RELIEF_NONE`，3D 效果会被移除——如果你运行此程序，你应该看到按钮之间的差异。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_131_0.png)
 
@@ -3376,14 +2960,11 @@ GtkWidget *btn2 = gtk_button_new_with_label("exit");
 g_object_set(G_OBJECT(btn2), "relief", GTK_RELIEF_NONE, NULL);
 ```
 
-在这种情况下，我们正在设置 `underline`（下划线）属性，它应该像这样：
+在这种情况下，我们正在设置`underline`（下划线）属性，它应该像这样：
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_131_1.png)
 
 - 设置了 underline 的 GtkButton
-
-
-
 
 # 第 25 章
 
@@ -3401,13 +2982,13 @@ GTK 最广泛使用的布局编辑器是一个名为 Glade 的工具。Glade 有
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_135_0.png)
 
-## Glade 布局编辑器
+### Glade 布局编辑器
 
 这是 Glade 中的基础设计界面。左侧是所有可用组件的调色板。中间是你实际设计窗口的区域，右侧是一个允许你设置单个组件属性的区域。
 
-## 使用 Glade 创建布局文件
+### 使用 Glade 创建布局文件
 
-我们将为应用程序创建一个简单的窗口，要做的第一件事是添加一个顶层窗口。在标记为“Toplevels”（顶层窗口）的调色板部分，左上角的项目是 GtkWindow——如果你用鼠标悬停在上面，会弹出一个带有“Window”标签的工具提示以确认这一点。只需点击此图标即可在中间的设计区域添加一个空窗口：
+我们将为应用程序创建一个简单的窗口，要做的第一件事是添加一个顶层窗口。在标记为“Toplevels”（顶层窗口）的调色板部分，左上角的项目是 `GtkWindow`——如果你用鼠标悬停在上面，会弹出一个带有“Window”标签的工具提示以确认这一点。只需点击此图标即可在中间的设计区域添加一个空窗口：
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_136_0.png)
 
@@ -3415,7 +2996,7 @@ GTK 最广泛使用的布局编辑器是一个名为 Glade 的工具。Glade 有
 
 接下来，让我们添加一个 VBox 以便我们在其中放置一些组件。组件调色板有一个标记为“Containers”（容器）的部分，其中前两个项目是 HBox 和 VBox——点击 VBox，然后将光标移动到空窗口内并点击。会弹出一个对话框，询问你想在 VBox 中放置多少个项目——设置为 2，并点击“Create”（创建）：
 
-## 添加垂直框
+### 添加垂直框
 
 现在你有了一个中间有一条线的空窗口，显示了 VBox。我们将在顶部添加一个标签，在底部添加一个按钮。在调色板的“Control and Display”（控制与显示）部分找到这些内容——首先在调色板中点击每个项目，然后点击设计区域中相应的 VBox 以添加它们。
 
@@ -3425,56 +3006,46 @@ GTK 最广泛使用的布局编辑器是一个名为 Glade 的工具。Glade 有
 
 - 添加了标签和按钮后：
 
-如果你查看右侧列的顶部，你会看到显示的组件层级结构——一个 GtkWindow，包含一个 GtkBox，GtkBox 包含一个 GtkLabel 和一个 GtkButton。如果你点击层级结构中的一个组件，右侧列标签区域显示的选项将是该组件的选项。
+如果你查看右侧列的顶部，你会看到显示的组件层级结构——一个 `GtkWindow`，包含一个 `GtkBox`，`GtkBox`包含一个 `GtkLabel`和一个 `GtkButton`。如果你点击层级结构中的一个组件，右侧列标签区域显示的选项将是该组件的选项。
 
-点击 GtkLabel 并浏览“General”（常规）选项卡上的选项，你会找到一个标记为“Edit label appearance”（编辑标签外观）的部分，包括“Label”（标签）项目——使用它来设置标签中的任意文本。
+点击 `GtkLabel`并浏览“General”（常规）选项卡上的选项，你会找到一个标记为“Edit label appearance”（编辑标签外观）的部分，包括“Label”（标签）项目——使用它来设置标签中的任意文本。
 
 ![](img/6a7eee5b22417c3d49170130a20b16f2_139_0.png)
 
 组件属性编辑器
 
-点击 GtkButton，并找到它的 Label 部分——它位于“Label with optional image”（带有可选图像的标签）下方——在右侧列底部将按钮的标签更改为“Quit”（退出）——在此处时，值得研究所有选项卡上的选项，但特别感兴趣的是“Packing”（填充）选项卡上的选项，这些允许你扩展在添加组件到框时可用的 expand（扩展）、fill（填充）和 padding（内边距）选项。如果你尝试它们，你就能对窗口布局的控制程度有一个很好的感觉，特别是当 Glade 允许你组合多个框时。
+点击 `GtkButton`，并找到它的 Label 部分——它位于“Label with optional image”（带有可选图像的标签）下方——在右侧列底部将按钮的标签更改为“Quit”（退出）——在此处时，值得研究所有选项卡上的选项，但特别感兴趣的是“Packing”（填充）选项卡上的选项，这些允许你扩展在添加组件到框时可用的 expand（扩展）、fill（填充）和 padding（内边距）选项。如果你尝试它们，你就能对窗口布局的控制程度有一个很好的感觉，特别是当 Glade 允许你组合多个框时。
 
 关于右侧列需要注意的重要点是 Glade 为每个组件分配名称——这可以在顶部的层级列表中看到，在“General”选项卡的最后一项中，Glade 以组件类型加上数字进行命名，但如果你愿意，可以更改这些。但有一条关键规则——布局文件中的每个组件必须具有唯一的名称。如果两个组件具有相同的名称，则布局文件是无效且无法正确加载。
 
-# C 语言和编程简介
-
-你的按钮和标签组件名称应该是 'button1' 和 'label1$，你的窗口应该是 Window1——记住这些名称；因为它们在将代码与布局文件关联时非常重要。现在，将你的布局保存为 mylayout.glade。
+你的按钮和标签组件名称应该是 'button1' 和 'label1$，你的窗口应该是 Window1——记住这些名称；因为它们在将代码与布局文件关联时非常重要。现在，将你的布局保存为 `mylayout.glade`。
 
 ```c
 #include <gtk/gtk.h>
-
 void on_destroy (GtkWidget *wid, gpointer ptr)
 {
     gtk_main_quit(NULL);
 }
-
 void main (int argc, char *argv[])
 {
     gtk_init(&argc, &argv);
-
     GBuilder *builder = gtk_builder_new();
     gtk_builder_load_from_file(builder, "mylayout.glade", NULL);
-
     GtkWidget *win = (GtkWidget*)gtk_builder_get_object(builder, "window");
     GtkWidget *btn = (GtkWidget*)gtk_builder_get_object(builder, "button");
     g_signal_connect(btn, "clicked", G_CALLBACK(on_destroy), NULL);
-
     gtk_widget_show_all(win);
     gtk_main();
 }
 ```
 
+# 第 26 章
 
-
-
-
-## 第 26 章
-C 快速参考
+## C 快速参考
 
 利用这些实用的备查表和代码示例
 
-## 控制结构
+### 控制结构
 
 ```
 if (<test>)
@@ -3548,10 +3119,10 @@ for (<初始条件>; <递增>; <终止条件>)
 
 在所有循环中，都可以使用关键字 `continue` 来跳过循环体中剩余的代码，并在下一次循环迭代测试处恢复执行。
 
-## 变量类型
+### 变量类型
 
 | 名称 | 描述 | 大小 |
-|---|---|--|
+|---|---|---|
 | char | 单个字母数字字符 | 1 |
 | signed char | 有符号 8 位整数 (-128 - 127) | 1 |
 | unsigned char | 无符号 8 位整数 (0 - 255) | 1 |
@@ -3566,15 +3137,15 @@ for (<初始条件>; <递增>; <终止条件>)
 
 取决于平台，`int` 可以是 `short`（16位）或 `long`（32位）。在 Raspian 上，如上表所示，`int` 是 `long`（32位）整数值。
 
-## 格式说明符
+### 格式说明符
 
 | 说明符 | 格式 / 类型 |
-|---|--|
+|---|---|
 | %c | 字母数字字符 / char |
 | %d | 有符号十进制值 / int |
 | %ld | 有符号十进制值 / long int |
 
-## C 和 C++ 编程简介
+### C 和 C++ 编程简介
 
 ```
 %u 无符号十进制值 / int
@@ -3587,7 +3158,7 @@ for (<初始条件>; <递增>; <终止条件>)
 %e 指数值 / float
 ```
 
-* %x 以十六进制形式显示值，使用小写字母 a 到 f；%X 使用大写字母 A 到 F 显示。
+* `%x` 以十六进制形式显示值，使用小写字母 a 到 f；`%X` 使用大写字母 A 到 F 显示。
 
 宽度（或打印的最小字符数）可以通过在 `%` 和字母之间插入一个数字来设置；这将短于宽度的值在开头填充空格。要在末尾填充空格，请在 `%` 和数字之间插入一个 `-`。要在开头填充导零，请在 `%` 和数字之间插入一个 `0`。
 
@@ -3597,7 +3168,7 @@ for (<初始条件>; <递增>; <终止条件>)
 
 例如，要打印一个值为 76.54321 的浮点变量，格式说明符 `%.2f` 将其打印为 76.54。格式说明符 `%0.2f` 将其打印为 00076.54（注意小数点占了指定宽度中的一个字符）。
 
-## 运算符
+### 运算符
 
 下表中的运算符产生的结果可以赋值给另一个变量，例如 `c = a + b`，但不会影响 `a` 或 `b` 的值。
 
@@ -3624,7 +3195,7 @@ for (<初始条件>; <递增>; <终止条件>)
 | a-- | a 减 1 |
 | ++a | a 递增 1 |
 
-## C 编程简介
+### C 编程简介
 
 a-- | a 减 1
 a += b | a 增加 b
@@ -3650,4 +3221,3 @@ a >>= b | a 右移 b
 | < | 小于 |
 | >= | 大于等于 |
 | <= | 小于等于 |
-

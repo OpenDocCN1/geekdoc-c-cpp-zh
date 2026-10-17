@@ -1,3 +1,4 @@
+
 # Arduino C++ 蓝牙低功耗
 
 ## 献词
@@ -83,13 +84,17 @@ static const char[] someReallyLongVariableNameWillBeBroken = \
 在本书中，您将学习如何使用 Java 在 Android 上编写通过低功耗蓝牙进行通信的中心设备（Central）和外围设备（Peripheral）程序的基础知识。这些教程最终将完成三个项目：
 
 - 信标与扫描器
+
 - 回声服务器与客户端
+
 - 遥控设备
 
 在本书的课程中，您将学习与以下内容相关的重要概念：
 
 - 低功耗蓝牙如何工作
+
 - 数据如何发送和接收
+
 - 处理数据的常见模式
 
 本书非常适合任何熟悉 Android 编程、想要构建物联网设备或构建一个与蓝牙设备通信的工具的读者。
@@ -137,10 +142,6 @@ static const char[] someReallyLongVariableNameWillBeBroken = \
 中心设备可以通过称为“特征”（Characteristic）的机制向外围设备发送数据和请求数据。特征由外围设备提供，供中心设备访问。一个特征可能具有一个或多个属性，例如 READ 或 WRITE。每个特征属于一个服务（Service），服务就像特征的容器。这种范式称为蓝牙通用属性规范（GATT）。
 
 GATT 范式如下所示（图1-2）。
-
-
-
-
 
 ![](img/d7b9d81704fe6839dbdc99a45736bfb5_14_0.png)
 
@@ -194,25 +195,25 @@ BLE 使用 UUID 来标记服务和特征，这样即使在切换设备或多个�
 
 UUID 通常是 128 位字符串，看起来像这样：
 
-ca06ea56-9f42-4fc3-8b75-e31212c97123
+`ca06ea56-9f42-4fc3-8b75-e31212c97123`
 
 但由于 BLE 的数据传输能力非常有限，因此也支持 16 位 UUID，它看起来像这样：
 
-0x1815
+`0x1815`
 
 每个特征和每个服务都由其自身的 UUID 标识。某些 UUID 被保留用于特定用途。
 
-例如，UUID 0x180F 被保留用于包含电池报告特征的服务。
+例如，UUID `0x180F` 被保留用于包含电池报告特征的服务。
 
 同样，蓝牙规范中也保留了特征的 UUID。
 
-例如，UUID 0x2A19 被保留用于报告电池电量的特征。
+例如，UUID `0x2A19` 被保留用于报告电池电量的特征。
 
 保留用于特定服务的 UUID 列表可在*附录 IV：保留的 GATT 服务*中找到。
 
 保留用于特定特征的 UUID 列表可在*附录 V：保留的 GATT 特征*中找到。
 
-如果你不确定在项目中该使用哪些 UUID，可以选择一个未分配的服务（例如 0x180C）作为服务，以及一个通用的特征（0x2A56）。
+如果你不确定在项目中该使用哪些 UUID，可以选择一个未分配的服务（例如 `0x180C`）作为服务，以及一个通用的特征（`0x2A56`）。
 
 虽然两个生成的 UUID 相同的可能性极低，但程序员可以自由地定义可能已存在的任意 UUID。只要定义服务和特征的 UUID 在单个 GATT 配置文件中不重叠，使用在其他上下文中已存在的 UUID 就没有问题。
 
@@ -305,7 +306,9 @@ mbed IDE 看起来像一个典型的编码环境，包含文件列表、文本�
 从下面的列表中选择一个平台，然后点击“选择平台”按钮进行选择。
 
 | 描述 | 引脚 |
+
 | --- | --- |
+
 | 不适用 | 更多信息 |
 
 你注册的平台
@@ -314,7 +317,6 @@ mbed IDE 看起来像一个典型的编码环境，包含文件列表、文本�
 
 选择平台
 
-
 开发板，筛选器，mbed 已启用，mbed OS 支持，目标厂商，平台厂商
 
 **图 2-5. 支持的 nRF 平台**
@@ -322,28 +324,41 @@ mbed IDE 看起来像一个典型的编码环境，包含文件列表、文本�
 搜索你正在开发的设备名称。点击设备以打开详细信息，然后点击“添加到你的 mbed 编译器”。页面将重新加载，并显示一条消息：“该平台现已添加到你的账户中。”关闭此选项卡即可重新看到 IDE。
 
 - **mbed LPC1768**
+
   - Cortex-M3，96MHz
+
   - 512KB Flash，32KB RAM
 
 - **mbed LPC11U24**
+
   - Cortex-M0，48MHz
+
   - 32KB Flash，8KB RAM
 
 - **FRDM-KL25Z**
+
   - Cortex-M0+
+
   - 128KB Flash，16KB RAM
+
   - USB OTG
 
 - **NXP LPC800-MAX**
+
   - Cortex-M0+
+
   - 16KB Flash，4KB RAM
 
 - **EA LPC4088 QuickStart Board**
+
   - Cortex-M4，120MHz
+
   - 512KB Flash，96KB SRAM
 
 - **Seeeduino-Arch**
+
   - Cortex-M0，48MHz
+
   - 32KB Flash，8KB RAM
 
 要将 IDE 配置为编译到该设备，请关闭平台选择器，然后再次点击“未选择设备”按钮重新打开它。从底部的已注册平台列表中选择新安装的平台，并点击“选择平台”按钮以激活该平台（图 2-6）。
@@ -388,7 +403,7 @@ mbed IDE 看起来像一个典型的编码环境，包含文件列表、文本�
 
 ### 打开蓝牙
 
-为了使用 nRF 芯片的蓝牙功能，必须包含某些 C 头文件。在 mbed 平台上，这些文件是 mbed.h 和 ble/BLE.h：
+为了使用 nRF 芯片的蓝牙功能，必须包含某些 C 头文件。在 mbed 平台上，这些文件是 `mbed.h` 和 `ble/BLE.h`：
 
 ```c
 #include "mbed.h"
@@ -398,7 +413,7 @@ mbed IDE 看起来像一个典型的编码环境，包含文件列表、文本�
 
 ### 调试
 
-打印出 nRF 的“想法”有助于后续调试。这可以通过实例化一个 Serial 对象并向该 Serial 对象打印文本来实现。
+打印出 nRF 的“想法”有助于后续调试。这可以通过实例化一个 `Serial` 对象并向该 `Serial` 对象打印文本来实现。
 
 ```cpp
 Serial serial(USBTX, USBRX); // initialize the Serial object
@@ -408,23 +423,25 @@ serial.baud(9600); // set the baud rate
 serial.printf("Hello World\r\n"); // print text
 ```
 
-有许多方法可以读取 nRF 打印的内容，具体取决于可用的软件和平台。在 Mac OS 和 Linux 上，可以使用名为 screen 的程序：
+有许多方法可以读取 nRF 打印的内容，具体取决于可用的软件和平台。在 Mac OS 和 Linux 上，可以使用名为 `screen` 的程序：
 
 ```shell
 $ screen /dev/tty.usbmodemXXXX 9600
 ```
 
-使用 screen 时，请确保波特率（此处为 9600）与 nRF Serial 对象上的波特率匹配，并且设备名称是为可用 nRF 设备创建的那个。
+使用 `screen` 时，请确保波特率（此处为 9600）与 nRF `Serial` 对象上的波特率匹配，并且设备名称是为可用 nRF 设备创建的那个。
 
-尝试将程序上传到 nRF 时，必须关闭与 nRF 的串行连接。可以通过发出以下按键序列来关闭 screen 会话：
+尝试将程序上传到 nRF 时，必须关闭与 nRF 的串行连接。可以通过发出以下按键序列来关闭 `screen` 会话：
 
 Ctrl+a, k, y
 
 ### 整合所有内容
 
-在 nRF IDE 中创建一个名为 ble_serial 的新项目，并输入以下代码：
+在 nRF IDE 中创建一个名为 `ble_serial` 的新项目，并输入以下代码：
 
-**示例 3-1. ble_serial/main.c**
+**示例 3-1. `ble_serial/main.c`**
+
+
 
 ```c
 #include "mbed.h"
@@ -479,7 +496,7 @@ void blinkHeartbeat(void) {
 
 **图 3-2. 将程序上传到 nRF 芯片**
 
-上传完成后，创建一个与 nRF 的串行连接来读取其打印输出。这可以使用 Terminal 或 CMD 应用程序完成。实际命令因平台而异。以下是 Mac OS X 上的示例（图 3-3）：
+上传完成后，创建一个与 nRF 的串行连接来读取其打印输出。这可以使用 `Terminal` 或 `CMD` 应用程序完成。实际命令因平台而异。以下是 Mac OS X 上的示例（图 3-3）：
 
 ```shell
 $ screen /dev/tty.usbmodem1412 9600
@@ -513,7 +530,7 @@ Hello World
 **表 4-1. 蓝牙低功耗发现射频信道**
 
 | 信道 | 射频 |
-|---|---|
+| --- | --- |
 | 37 | 2402 MHz |
 | 38 | 2426 MHz |
 | 39 | 2480 MHz |
@@ -544,7 +561,7 @@ Hello World
 #include "ble/BLE.h"
 ```
 
-必须创建一个 BLE 对象
+必须创建一个 BLE 对象：
 
 ```cpp
 // Broadcast name
@@ -561,10 +578,6 @@ int main(void) {
 
 }
 ```
-
-
-
-
 
 某些事情在芯片内部从这里开始发生，在此之前无法设置广告名称和其他参数。需要一个回调来处理转换：
 
@@ -733,7 +746,7 @@ void onBluetoothInitialized(
 }
 ```
 
-此草图将创建一个广告为“ MyDevice。”的外设。附近的中心在扫描时将看到此外设。
+此草图将创建一个广告为“MyDevice”的外设。附近的中心在扫描时将看到此外设。
 
 ## Example code
 
@@ -765,19 +778,16 @@ void onBluetoothInitialized(
 
 连接和断开连接过程如下（图 5-2）。
 
+```text
 外设
-
 中心
-
 请求连接
-
 连接已建立
-
 请求断开连接
-
 断开连接已授予
+```
 
-onConnection 回调允许外设对传入连接做出反应。
+`onConnection` 回调允许外设对传入连接做出反应。
 
 ```cpp
 void onBluetoothInitialized(
@@ -797,11 +807,13 @@ void onCentralConnected(const Gap::ConnectionCallbackParams_t *params) {
 
 ## Putting It All Together
 
-创建一个新的草图并将其保存为 ble_connect。
+创建一个新的草图并将其保存为 `ble_connect`。
 
 此草图将进行广告并管理与中心的连接。当中心连接时，外设将把中心的 MAC 地址打印到串行监视器中。
 
-### Example 5-1. ble_connect/main.c
+### Example 5-1. `ble_connect/main.c`
+
+
 
 ```cpp
 #include "mbed.h"
@@ -887,26 +899,45 @@ void blinkHeartbeat(void) {
 }
 ```
 
+```cpp
 statusLed = !statusLed;
+
 }
 
 void onBluetoothInitialized(
+
     BLE::InitializationCompleteCallbackContext *params)
+
 {
+
     BLE& ble = params->ble;
+
     BLE_error_t error = params->error;
+
     // quit if there's a problem
+
     if(error != BLE_ERROR_NONE) {
+
         return;
+
     }
+
     // Ensure that it is the default instance of BLE
+
     if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
+
         return;
+
     }
+
     serial.printf("Describing Peripheral...");
+
     // process disconnections with a callback
+
     ble.gap().onDisconnection(onCentralDisconnected);
+
     // advertising parametirs
+
 ble.gap().accumulateAdvertisingPayload(
 
   // Device is Peripheral only
@@ -918,6 +949,7 @@ ble.gap().accumulateAdvertisingPayload(
   GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
 
 // broadcast name
+
 ble.gap().accumulateAdvertisingPayload(
 
   GapAdvertisingData::COMPLETE_LOCAL_NAME,
@@ -929,6 +961,7 @@ ble.gap().accumulateAdvertisingPayload(
 );
 
 // allow connections
+
 ble.gap().setAdvertisingType(
 
   GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED
@@ -936,26 +969,33 @@ ble.gap().setAdvertisingType(
 );
 
 // advertise every 1000ms
+
 ble.gap().setAdvertisingInterval(1000); // 1000ms
 
 // begin advertising
+
 ble.gap().startAdvertising();
 
 serial.printf(" done\r\n");
+
 }
 ```
 
+```cpp
 void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 {
     BLE::Instance().gap().startAdvertising();
     serial.printf("Central disconnected\r\n");
 }
+```
 
 当中心设备连接后，随后与外设断开时，串口监视器的输出应类似于下面这样（图5-3）。
 
+```
 Central connected: 45:b5:7d:96:01:2f
 
 Central disconnected
+```
 
 ## 图3-4 串口输出
 
@@ -1026,17 +1066,17 @@ Central disconnected
 
 ![](img/d7b9d81704fe6839dbdc99a45736bfb5_68_0.png)
 
-特征的最大长度为20字节。由于16位和8位数据类型在C++中易于传递，在示例中我们将使用uint16_t（无符号16位整数）和uint8_t（无符号8位整数）值。任何数据类型，包括自定义字节缓冲区，都可以通过BLE传输和组装。
+特征的最大长度为20字节。由于16位和8位数据类型在C++中易于传递，在示例中我们将使用`uint16_t`（无符号16位整数）和`uint8_t`（无符号8位整数）值。任何数据类型，包括自定义字节缓冲区，都可以通过BLE传输和组装。
 
-定义一个UUID为180c（一个未注册的通用UUID）的服务：
+定义一个UUID为`180c`（一个未注册的通用UUID）的服务：
 
-```
+```cpp
 BLEService service("180C");
 ```
 
 或者
 
-```
+```cpp
 BLEService service("0000180C-000-1000-8000-00805f9-b34fb");
 ```
 
@@ -1046,13 +1086,13 @@ BLEService service("0000180C-000-1000-8000-00805f9-b34fb");
 
 nRF51822中提供了多种类型的特征，具体取决于你需要传输的数据类型。数组、整数、浮点数、布尔值和其他数据类型都有各自的特征构造函数。
 
-例如，这个长度为2字节、UUID为1801的特征可以被中心设备读取，并且可以通知中心设备变更：
+例如，这个长度为2字节、UUID为`1801`的特征可以被中心设备读取，并且可以通知中心设备变更：
 
-```
+```cpp
 static char readValue[2] = {0};
 ```
 
-```
+```cpp
 ReadOnlyArrayGattCharacteristic
 <uint8_t, sizeof(readValue)> readCharacteristic(
 "1801",
@@ -1061,13 +1101,13 @@ GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | \
 GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY
 ```
 
-这个长度为8字节、UUID为2A56（数字特征）的特征可以被中心设备写入：
+这个长度为8字节、UUID为`2A56`（数字特征）的特征可以被中心设备写入：
 
-```
+```cpp
 static char writeValue[8] = {0};
 ```
 
-```
+```cpp
 WriteOnlyArrayGattCharacteristic
 <uint8_t, sizeof(writeValue)>writeCharacteristic(
 writeCharacteristicUuid,
@@ -1077,24 +1117,17 @@ GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE);
 
 以下是可以创建的各种特定数据类型特征的示例：
 
-```
+```cpp
 int properties = BLERead | BLEWrite | BLENotify;
-```
 
-```
 ReadWriteBooleanCharacteristic booleanCharacteristic(
 UUID,
 properties,
 maxLen
 );
-```
 
-```
 ReadWriteIntegerCharacteristic integerDataCharacteristicName(
 UUID,
-```
-
-```
 properties,
 maxLen
 );
@@ -1120,10 +1153,11 @@ BLEUnsignedLongCharacteristic yourCharacteristicName(
 BLEFloatCharacteristic yourCharacteristicName(UUID, properties, maxLen);
 ```
 
-服务与特征通过BLEPeripheral添加到GATT配置文件中。将两个特征添加到服务之后，它们
-
+服务与特征通过`BLEPeripheral`添加到GATT配置文件中。将两个特征添加到服务之后，它们
 
 它们被假定为同一个服务的一部分。这必须在 `blePeripheral.begin()` 之前发生。
+
+```cpp
 ...
 BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
 ...
@@ -1141,14 +1175,15 @@ ble.addService(customService);
 ...
 ble.gap().startAdvertising();
 ...
+```
 
 # 综合应用
 
 创建一个名为 `ble_characteristics` 的新草图，并复制以下代码。
 
-## 示例 6-1：sketches/ble_characteristics/ble_characteristics.c
+## 示例 6-1：`sketches/ble_characteristics/ble_characteristics.c`
 
-```
+```cpp
 #include "mbed.h"
 
 #include "ble/BLE.h"
@@ -1156,111 +1191,66 @@ ble.gap().startAdvertising();
 /** User interface I/O **/
 
 // instantiate USB Serial
-
 Serial serial(USBTX, USBRX);
 
 // Status LED
-
 DigitalOut statusLed(LED1, 0);
 
 // Timer for blinking the statusLed
-
 Ticker ticker;
 
 /** Bluetooth Peripheral Properties **/
 
 // Broadcast name
-
 const static char BROADCAST_NAME[] = "MyDevice";
 
 // Device Information UUID
-```
 
-```
 static const uint16_t deviceInformationServiceUuid = 0x180a;
-```
 
-```
 // Battery Level UUID
-```
 
-```
 static const uint16_t batteryLevelServiceUuid = 0x180f;
-```
 
-```
 // array of all Service UUIDs
-```
 
-```
 static const uint16_t uuid16_list[] = { customServiceUuid };
-```
 
-```
 // Number of bytes in Characteristic
-```
 
-```
 static const uint8_t characteristicLength = 20;
-```
 
-```
 // Device Name Characteristic UUID
-```
 
-```
 static const uint16_t deviceNameCharacteristicUuid = 0x2a00;
-```
 
-```
 // Model Number Characteristic UUID
-```
 
-```
 static const uint16_t modelNumberCharacteristicUuid = 0x2a24;
-```
 
-```
 // Serial Number Characteristic UUID
 ```
 
-```
+
+
+
+```cpp
 static const uint16_t serialNumberCharacteristicUuid = 0x2a04;
-```
 
-```
 // Battery Level Characteristic UUID
-```
-
-```
 static const uint16_t batteryLevelCharacteristicUuid = 0x2a19;
-```
 
-```
 // model and serial numbers
-```
-
-```
 static const char* modelNumber = "1AB2";
-```
-
-```
 static const char* serialNumber = "1234";
-```
 
-```
 int batteryLevel = 100;
-```
 
-```
 /** Functions **/
-```
 
-```
 /**
  * visually signal that program has not crashed
  */
-
 void blinkHeartbeat(void);
 
 /**
@@ -1268,7 +1258,6 @@ void blinkHeartbeat(void);
  *
  * @param[in] params Information about the initialized Peripheral
  */
-
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params
 );
@@ -1278,14 +1267,11 @@ void onBluetoothInitialized(
  *
  * @param[in] params Information about the connection
  */
-
 void onCentralDisconnected(
     const Gap::DisconnectionCallbackParams_t *params
-```
+);
 
-```cpp
 /** Build Service and Characteristic Relationships */
-
 // Create a read/write/notify Characteristic
 static uint8_t deviceNameCharacteristicValue[characteristicLength] = \
     BROADCAST_NAME;
@@ -1307,194 +1293,132 @@ static uint8_t serialNumberCharacteristicValue[characteristicLength] = \
     serialNumber;
 
 ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
-```
-
-```
 characteristicValue,
-
 GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | \
-
 GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY
-
 );
-```
 
-```
 GattCharacteristic *batteryLevelCharacteristics[] = {
-
   &batteryLevelCharacteristic
-
 }
 
 GattService batteryLevelService(
-
   batteryLevelServiceUuid,
-
   batteryLevelCharacteristics,
-
   sizeof(batteryLevelCharacteristics) / sizeof(GattCharacteristic *)
-
 );
-```
 
-```
 /**
-
  * Main program and loop
-
  */
-
 int main(void) {
-
   serial.baud(9600);
-
   serial.printf("Starting Peripheral\\r\\n");
-
   ticker.attach(blinkHeartbeat, 1); // Blink status led every 1 second
-
   // initialized Bluetooth Radio
-```
 
-```
 BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
-
 ble.init(onBluetoothInitialized);
-
 // wait for Bluetooth Radio to be initialized
-
 while (ble.hasInitialized() == false);
+
 while (1) {
-
     // save power when possible
-
     ble.waitForEvent();
-
 }
+
 }
 
 void blinkHeartbeat(void) {
-
 /* Do blinky on LED1 to indicate system aliveness. */
-
 statusLed = !statusLed;
 }
 
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params)
 {
-
 BLE&   ble = params->ble;
-
 ble_error_t error = params->error;
-```
 
-```
 // quit if there's a problem
 if(error != BLE_ERROR_NONE) {
     return;
 }
-
 // Ensure that it is the default instance of BLE
 if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
     return;
 }
 
 serial.printf("Describing Peripheral...");
-
 // attach Services
 ble.addService(customService);
-
 // process disconnections with a callback
 ble.gap().onDisconnection(onCentralDisconnected);
-
 // advertising parameters
 ble.gap().accumulateAdvertisingPayload(
     // Device is Peripheral only
     GapAdvertisingData::BREDR_NOT_SUPPORTED |
     // always discoverable
     GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-
 // broadcast name
 ble.gap().accumulateAdvertisingPayload(
-```
-
-```
-GapAdvertisingData::COMPLETE_LOCAL_NAME,
+    GapAdvertisingData::COMPLETE_LOCAL_NAME,
     (uint8_t *)BROADCAST_NAME, sizeof(BROADCAST_NAME)
 );
-
 // advertise services
-
 ble.gap().accumulateAdvertisingPayload(
     GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,
     (uint8_t *)uuid16_list, sizeof(uuid16_list)
 );
-
 // allow connections
-
 ble.gap().setAdvertisingType(
     GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
-
 // advertise every 1000ms
-
 ble.gap().setAdvertisingInterval(1000); // 1000ms
-
-
 // set the GATT values
-
 ble.gattServer().write(
     deviceNameCharacteristic.getValueHandle(),
     BROADCAST_NAME,
     characteristicLength
 );
-
 ble.gattServer().write(
     modelNumberCharacteristic.getValueHandle(),
-```
-
-```
-modelNumber,
-characteristicLength
+    modelNumber,
+    characteristicLength
 );
-
 ble.gattServer().write(
     serialNumber.getValueHandle(),
     serialNumber,
     characteristicLength
 );
-
 ble.gattServer().write(
     batteryLevelCharacteristic.getValueHandle(),
     batteryLevel,
     characteristicLength
 );
-
 // begin advertising
-
 ble.gap().startAdvertising();
-
 serial.printf(" done\r\n");
 }
-```
 
-```
 void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 {
     BLE::Instance().gap().startAdvertising();
     serial.printf("Central disconnected\r\n");
+}
 ```
 
 运行时，这个草图会创建一个以“MyDevice”为广播名称的外设（Peripheral），并提供一个 GATT 配置文件（profile），其中包含一个具有读写权限的特性（Characteristic）（图 6-2）。
 
-- 设备信息服务：000180a-000-1000-8000-00805f9-b34fb
-- 设备名称特性：0002a00-000-1000-8000-00805f9-b34fb
-- 型号特性：0002a24-000-1000-8000-00805f9-b34fb
-- 序列号特性：0002a04-000-1000-8000-00805f9-b34fb
-- 设备信息服务：000180a-000-1000-8000-00805f9-b34fb
-- 电池电量服务：000180f-000-1000-8000-00805f9-b34fb
-- 电池电量特性：0002a19-000-1000-8000-00805f9-b34fb
-- 服务：000180c-000-1000-8000-00805f9-b34fb
-- 特性：0002a56-000-1000-8000-00805f9-b34fb
+- 设备信息服务：`000180a-000-1000-8000-00805f9-b34fb`
+- 设备名称特性：`0002a00-000-1000-8000-00805f9-b34fb`
+- 型号特性：`0002a24-000-1000-8000-00805f9-b34fb`
+- 序列号特性：`0002a04-000-1000-8000-00805f9-b34fb`
+- 设备信息服务：`000180a-000-1000-8000-00805f9-b34fb`
+- 电池电量服务：`000180f-000-1000-8000-00805f9-b34fb`
+- 电池电量特性：`0002a19-000-1000-8000-00805f9-b34fb`
+- 服务：`000180c-000-1000-8000-00805f9-b34fb`
+- 特性：`0002a56-000-1000-8000-00805f9-b34fb`
 
 图 6-2：nRF 上承载的 GATT 配置文件
 
@@ -1514,11 +1438,11 @@ void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 
 ![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_0.png)
 
-## 外设
+**外设**
 
 ![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_1.png)
 
-## 中心设备
+**中心设备**
 
 ![](img/d7b9d81704fe6839dbdc99a45736bfb5_85_2.png)
 
@@ -1538,7 +1462,7 @@ void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 
 创建一个服务和一个具有读取属性、最长 20 字节的特征值。例如，一个 16 字节的只读特征值：
 
-```
+```cpp
 // create a 16-byte long Characteristic value, initialize with zeroes
 static uint8_t characteristicValue[16] = {0};
 
@@ -1554,77 +1478,55 @@ characteristicValue // use the Characteristic value
 
 这样，特征值中的数据就可以在本地设置，以便已连接的中心设备从中读取。
 
-```
+```cpp
 char* outputString = "Hello World";
-
 int stringLength = 12;
 
 ble.gattServer().write(
-
     characteristic.getValueHandle(),
-
     outputString,
-
     stringLength
-
 );
 ```
 
 ### 整合全部内容
 
-创建一个名为 ble_send_data 的新草图，然后将以下代码复制到该草图中。
+创建一个名为 `ble_send_data` 的新草图，然后将以下代码复制到该草图中。
 
 该草图每 5 秒将特征值设置为一个随机字符串。
 
-## 示例 7–1. ble_send_data/main.c
+#### 示例 7–1. `ble_send_data/main.c`
 
-```
+```cpp
 #include "mbed.h"
-
 #include "ble/BLE.h"
 
 /** User interface I/O */
-```
+
 // instantiate USB Serial
-
 Serial serial(USBTX, USBRX);
-
 // Status LED
-
 DigitalOut statusLed(LED1, 0);
-
 // Timer for blinking the statusLed
-
 Ticker ticker;
 
 /** Bluetooth Peripheral Properties **/
 
 // Broadcast name
-
 const static char BROADCAST_NAME[] = "MyDevice";
-
 // Service UUID
-
 static const uint16_t customServiceUuid = 0x180C;
-
 // array of all Service UUIDs
-
 static const uint16_t uuid16_list[] = { customServiceUuid };
-
 // Number of bytes in Characteristic
-
 static const uint8_t characteristicLength = 20;
-
 // Characteristic UUID
-
 static const uint16_t characteristicUuid = 0x2A56;
 
 /** State **/
-```
+
 // Storage for written Characteristic value
-
 char bleCharacteristicValue[characteristicLength];
-
 uint16_t bleCharacteristicValueLength = 0;
 
 /** Functions **/
@@ -1632,7 +1534,6 @@ uint16_t bleCharacteristicValueLength = 0;
 /**
 * create a random string
 */
-
 static const char alphanum[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 void writeRandomStringToCharacteristic();
@@ -1642,176 +1543,14 @@ void writeRandomStringToCharacteristic();
 *
 * @param[in] params Information about the initialized Peripheral
 */
-
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params
 );
 
 /**
 ```
-* Callback handler when a Central has disconnected
-*
-* @param[i] params Information about the connection
-*/
 
-void onCentralDisconnected(
-    const Gap::DisconnectionCallbackParams_t *params
-);
 
-/** Build Service and Characteristic Relationships **/
-
-// Create a read/write/notify Characteristic
-
-static uint8_t characteristicValue[characteristicLength] = {0};
-ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)>\
-    characteristic(
-    characteristicUuid,
-    characteristicValue);
-
-// Bind Characteristics to Services
-
-GattCharacteristic *characteristics[] = {&characteristic};
-
-GattService customService(
-    customServiceUuid,
-    characteristics,
-```
-```cpp
-sizeof(characteristics) / sizeof(GattCharacteristic *)
-
-);
-
-/**
- * Main program and loop
- */
-
-int main(void) {
-
-    serial.baud(9600);
-
-    serial.printf("Starting Peripheral\\r\\n");
-
-    // write random text every 5 seconds
-    ticker.attach(writeRandomStringToCharacteristic, 5);
-
-    // initialized Bluetooth Radio
-    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
-    ble.init(onBluetoothInitialized);
-
-    // wait for Bluetooth Radio to be initialized
-    while (ble.hasInitialized() == false);
-
-    while (1) {
-
-        // save power when possible
-        ble.waitForEvent();
-    }
-
-}
-```
-```
-
-```
-void writeRandomStringToCharacteristic() {
-    statusLed = !statusLed;
-    static const uint16_t stringLength = rand() % characteristicLength;
-    uint8_t outputString[stringLength];
-    for (int i=0; i < stringLength-1; i++) {
-        outputString[i] = alphanum[rand() % alphanumLength];
-    }
-    outputString[stringLength-1] = '\0';
-    BLE::Instance(
-        BLE::DEFAULT_INSTANCE).gattServer().write(
-            characteristic.getValueHandle(), outputString, stringLength);
-}
-
-void onBluetoothInitialized(
-    BLE::InitializationCompleteCallbackContext *params)
-{
-    BLE& ble = params->ble;
-    ble_error_t error = params->error;
-    // quit if there's a problem
-    if(error != BLE_ERROR_NONE) {
-        return;
-
-```
-// Ensure that it is the default instance of BLE
-if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
-    return;
-}
-
-serial.printf("Describing Peripheral...");
-
-// attach Services
-ble.addService(customService);
-
-// process disconnections with a callback
-ble.gap().onDisconnection(onCentralDisconnected);
-
-// advertising parametirs
-ble.gap().accumulateAdvertisingPayload(
-    // Device is Peripheral only
-    GapAdvertisingData::BREDR_NOT_SUPPORTED |
-    // always discoverable
-    GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-
-// broadcast name
-```
-ble.gap().accumulateAdvertisingPayload(
-    GapAdvertisingData::COMPLETE_LOCAL_NAME,
-    (uint8_t *)BROADCAST_NAME,
-    sizeof(BROADCAST_NAME)
-);
-
-// advertise services
-
-ble.gap().accumulateAdvertisingPayload(
-    GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,
-    (uint8_t *)uuid16_list,
-    sizeof(uuid16_list)
-);
-
-// allow connections
-
-ble.gap().setAdvertisingType(
-    GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED
-);
-
-// advertise every 1000ms
-
-ble.gap().setAdvertisingInterval(1000); // 1000ms
-
-// begin advertising
-
-ble.gap().startAdvertising();
-
-serial.printf(" done\r\n");
-}
-```
-
-```
-void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
-{
-    BLE::Instance().gap().startAdvertising();
-    serial.printf("Central disconnected\r\n");
-}
-```
-
-运行该草图时，串口监视器输出应类似于以下内容（图 7-2）：
-
-设置特征值为：RY0G5WSWG5YTh
-
-设置特征值为：HFVTh
-
-设置特征值为：88L9J25245ZUh
-
-设置特征值为：A6D7SZZFYQ8Sh
-
-图 7-2. 串口输出
-
-## 示例代码
-
-本章代码可在线获取：https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter07
 
 # 向外设写入数据
 
@@ -1827,20 +1566,21 @@ void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 
 图 8-1. 中心设备向外设写入数据的过程
 
-### 外设编程
+## 外设编程
 
-为了让外设能够接收来自中心设备的数据，它必须拥有一个
-
-允许写入的特征值。
+为了让外设能够接收来自中心设备的数据，它必须拥有一个允许写入的特征值。
 
 例如，这个 8 字节的特征值支持“写入”操作：
 
-```
+```cpp
 // Create a read/write/notify Characteristic
+
 static const uint8_t characteristicLength = 8;
+
 static uint8_t characteristicValue[characteristicLength] = {0};
+
 WriteOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
-characteristic(
+    characteristic(
     "2A56",
     characteristicValue
 );
@@ -1850,73 +1590,115 @@ characteristic(
 
 回调在中断中处理，处于正常操作之外。最好不在回调内实现大量功能。一种最佳实践是设置一个布尔标志，然后在主循环中检查该标志。
 
-```
-// flag when Central has written to a Characteristic
-bool bleDataWritten = false; // true if data ha
-// Storage for written Characteristic
-```
-
 ```cpp
+// flag when Central has written to a Characteristic
+
+bool bleDataWritten = false; // true if data ha
+
+// Storage for written Characteristic
+
 // 值已写入特征
+
 char bleCharacteristicValue[characteristicLength];
 
 /**
+
  * 此回调处理对特征（Characteristic）的传入写入。
+
  *
+
  * @param[in] params
+
  *   有关正在更新的特征的信息。
+
  */
+
 void onBleCharacteristicWritten(const GattWriteCallbackParams *params) {
+
     // 如果本地特征已被写入
+
     if (params->handle == characteristic.getValueHandle()) {
+
         bleDataWritten = true;
+
         bleCharacteristicValueLength = params->len;
+
         // 将新值复制到占位符中以备后用。
+
         // 最好不要在此函数中做太多事情，因为这是一个中断
+
         strncpy(bleCharacteristicValue, (char *) params->data, params->len);
+
     }
+
 }
+
 ```
 
 回调必须像这样绑定到 GATT 服务器：
 
 ```cpp
+
 void onBluetoothInitialized(
+
     BLE::InitializationCompleteCallbackContext *params)
+
 {
+
     ...
+
     ble.gattServer().onDataWritten(onBleCharacteristicWritten);
+
     ...
+
 }
+
 ```
 
 当不在中断中时，可以从主循环中提取传入的 8 位数据值并将其打印到串口：
 
 ```cpp
+
 int main(void) {
+
     ...
+
     while (1) {
+
         // 当中心设备（Central）写入本地特征时，
+
         // 在此处处理更改
+
         if (bleDataWritten) {
+
             bleDataWritten = false; // 确保只发生一次
+
             serial.printf(
+
                 "Data written to characteristic: %s\r\n",
+
                 bleCharacteristicValue
+
             );
+
         }
+
         ...
+
     }
+
 }
+
 ```
 
 # 综合应用
 
 创建一个名为 `ble_receive_data` 的新草图，代码如下。
 
-### 示例 8-1. ble_receive_data/main.c
+## 示例 8-1. ble_receive_data/main.c
 
 ```cpp
+
 #include "mbed.h"
 
 #include "ble/BLE.h"
@@ -1924,38 +1706,49 @@ int main(void) {
 /** 用户界面 I/O **/
 
 // 实例化 USB 串口
+
 Serial serial(USBTX, USBRX);
 
 // 状态 LED
+
 DigitalOut statusLed(LED1, 0);
 
 // 用于闪烁 statusLed 的定时器
+
 Ticker ticker;
 
 /** 蓝牙外设属性 **/
 
 // 广播名称
+
 const static char BROADCAST_NAME[] = "MyDevice";
 
 // 服务 UUID
+
 static const uint16_t customServiceUuid = 0x180C;
 
 // 所有服务 UUID 的数组
+
 static const uint16_t uuid16_list[] = { customServiceUuid };
 
 // 特征中的字节数
+
 static const uint8_t characteristicLength = 20;
 
 // 特征 UUID
+
 static const uint16_t characteristicUuid = 0x2A56;
 
 /** 状态 **/
 
 // 当中心设备已写入特征时的标志
+
 // 如果数据已写入特征，则为 true
+
 bool bleDataWritten = false;
 
 // 存储写入的特征值
+
 char bleCharacteristicValue[characteristicLength];
 
 uint16_t bleCharacteristicValueLength = 0;
@@ -1963,41 +1756,67 @@ uint16_t bleCharacteristicValueLength = 0;
 /** 函数 **/
 
 /**
+
  * 以视觉方式表明程序未崩溃
+
  */
+
 void blinkHeartbeat(void);
 
 /**
+
  * 蓝牙初始化过程完成时触发的回调
+
  *
+
  * @param[in] params 有关已初始化外设的信息
+
  */
+
 void onBluetoothInitialized(
+
     BLE::InitializationCompleteCallbackContext *params
+
 );
 
 /**
+
  * 此回调处理对特征（Characteristic）的传入写入。
+
  *
+
  * @param[in] params
+
  *   有关正在更新的特征的信息。
+
  */
+
 void onBleCharacteristicWritten(const GattWriteCallbackParams *params);
 
 /**
+
  * 当中心设备断开连接时的回调处理程序
+
  *
+
  * @param[in] params 有关连接的信息
+
  */
+
 void onCentralDisconnected(
+
     const Gap::DisconnectionCallbackParams_t *params
+
 );
 
 /** 构建服务与特征的关系 **/
 
 // 创建读/写/通知特征
+
 static uint8_t characteristicValue[characteristicLength] = {0};
+
 WriteOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
+
     characteristic(
         characteristicUuid,
         characteristicValue);
@@ -2007,50 +1826,76 @@ WriteOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
 bleDataWritten = false; // 确保只发生一次
 
 serial.printf(
+
     "Data written to characteristic: %s\r\n",
+
     bleCharacteristicValue
+
 );
-}
 
 // 尽可能省电
+
 ble.waitForEvent();
+
 }
+
 }
 
 void blinkHeartbeat(void) {
+
     /* 在 LED1 上闪烁以指示系统正常运行。 */
+
     statusLed = !statusLed;
+
 }
 
 void onBluetoothInitialized(
+
     BLE::InitializationCompleteCallbackContext *params)
+
 {
+
     BLE& ble = params->ble;
+
     ble_error_t error = params->error;
+
     // 如果有问题则退出
 
     if (error != BLE_ERROR_NONE) {
+
         return;
+
     }
 
     // 确保这是 BLE 的默认实例
+
     if (ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
+
         return;
+
     }
 
     serial.printf("Describing Peripheral...");
 
     // 附加服务
+
     ble.addService(customService);
 
     // 如果中心设备写入特征，
+
     // 使用回调处理事件
+
     ble.gattServer().onDataWritten(onBleCharacteristicWritten);
 
     // 使用回调处理断开连接
+
+
+
+```cpp
     ble.gap().onDisconnection(onCentralDisconnected);
 
     // 广播参数
+
     ble.gap().accumulateAdvertisingPayload(
         // 设备仅作为外设
         GapAdvertisingData::BREDR_NOT_SUPPORTED |
@@ -2083,6 +1928,7 @@ void onBluetoothInitialized(
     ble.gap().startAdvertising();
 
     serial.printf(" done\r\n");
+
 }
 
 void onBleCharacteristicWritten(const GattWriteCallbackParams *params) {
@@ -2090,6 +1936,7 @@ void onBleCharacteristicWritten(const GattWriteCallbackParams *params) {
     if (params->handle == characteristic.getValueHandle()) {
         bleDataWritten = true;
         bleCharacteristicValueLength = params->len;
+
         // 将新值复制到占位符中以备后用。
         // 最好不要在此函数中做太多事情，因为这是一个中断
         strncpy(bleCharacteristicValue, (char *) params->data, params->len);
@@ -2144,9 +1991,11 @@ void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 
 ```cpp
 // 初始化特征值
+
 static uint8_t characteristicValue[characteristicLength] = {0};
 
 // 创建具有读取和通知属性的只读特征
+
 ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> \
 characteristic(
 
@@ -2155,12 +2004,6 @@ characteristicUuid,
 characteristicValue,
 
 GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | \
-```
-
-
-
-
-```cpp
 GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);
 ```
 
@@ -2180,67 +2023,44 @@ ble.gattServer().write(
 
 ### 整合所有内容
 
-创建一个名为 ble_notifications 的新 sketch，包含以下代码。
+创建一个名为 `ble_notifications` 的新 sketch，包含以下代码。
 
-Example 9-1. ble_notifications/main.cpp
+Example 9-1. `ble_notifications/main.cpp`
 
 ```cpp
 #include "mbed.h"
-
 #include "ble/BLE.h"
 
 /** User interface I/O **/
-
 // instantiate USB Serial
-
 Serial serial(USBTX, USBRX);
-
 // Status LED
-
 DigitalOut statusLed(LED1, 0);
-
 // Timer for blinking the statusLed
-
 Ticker ticker;
 
 /** Bluetooth Peripheral Properties **/
-
 // Broadcast name
-
 const static char BROADCAST_NAME[] = "MyDevice";
-
 // Service UUID
-
 static const uint16_t customServiceUuid = 0x180C;
-
 // array of all Service UUIDs
-
 static const uint16_t uuid16_list[] = { customServiceUuid };
-
 // Number of bytes in Characteristic
-
 static const uint8_t characteristicLength = 20;
-
 // Characteristic UUID
-
 static const uint16_t characteristicUuid = 0x2A56;
 
 /** State **/
-
 // Storage for written Characteristic value
-
 char bleCharacteristicValue[characteristicLength];
-
 uint16_t bleCharacteristicValueLength = 0;
 
 /** Functions **/
-
 /**
  * create a random string
  */
-
 static const char alphanum[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 void writeRandomStringToCharacteristic();
 
 /**
@@ -2248,7 +2068,6 @@ void writeRandomStringToCharacteristic();
  *
  * @param[in] params Information about the initialized Peripheral
  */
-
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params
 );
@@ -2258,15 +2077,12 @@ void onBluetoothInitialized(
  *
  * @param[in] params Information about the connection
  */
-
 void onCentralDisconnected(
     const Gap::DisconnectionCallbackParams_t *params
 );
 
 /** Build Service and Characteristic Relationships **/
-
 // Create a read/write/notify Characteristic
-
 static uint8_t characteristicValue[characteristicLength] = {0};
 ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> characteristic(
     characteristicUuid,
@@ -2275,9 +2091,7 @@ ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(characteristicValue)> characteri
         GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);
 
 // Bind Characteristics to Services
-
 GattCharacteristic *characteristics[] = {&characteristic};
-
 GattService customService(
     customServiceUuid, characteristics,
 ```
@@ -2303,64 +2117,51 @@ void onBluetoothInitialized(
 {
     BLE& ble = params->ble;
     ble_error_t error = params->error;
-
     // quit if there's a problem
     if(error != BLE_ERROR_NONE) {
         return;
     }
-
     // Ensure that it is the default instance of BLE
     if(ble.getInstanceID() != BLE::DEFAULT_INSTANCE) {
         return;
     }
-
     serial.printf("Describing Peripheral...");
-
     // attach Services
     ble.addService(customService);
-
     // process disconnections with a callback
     ble.gap().onDisconnection(onCentralDisconnected);
-
     // advertising parameters
     ble.gap().accumulateAdvertisingPayload(
         // Device is Peripheral only
         GapAdvertisingData::BREDR_NOT_SUPPORTED |
         // always discoverable
         GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-
     // broadcast name
     ble.gap().accumulateAdvertisingPayload(
         GapAdvertisingData::COMPLETE_LOCAL_NAME,
         (uint8_t *)BROADCAST_NAME,
         sizeof(BROADCAST_NAME)
     );
-
     // advertise services
     ble.gap().accumulateAdvertisingPayload(
         GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,
         (uint8_t *)uuid16_list,
         sizeof(uuid16_list)
     );
-
     // allow connections
     ble.gap().setAdvertisingType(
         GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED
     );
-
     // advertise every 1000ms
     ble.gap().setAdvertisingInterval(1000); // 1000ms
-
     // begin advertising
     ble.gap().startAdvertising();
-
     serial.printf(" done\r\n");
 }
 
 void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 {
     BLE::Instance().gap().startAdvertising();
-
     serial.printf("Central disconnected\r\n");
 }
 ```
@@ -2372,6 +2173,8 @@ Setting characteristic to: FMZAP
 Setting characteristic to: GGORPFNU7KYJCNJKP
 Setting characteristic to: G665P
 ```
+
+
 
 ### Figure 9-2. Serial Output
 
@@ -2429,72 +2232,46 @@ BLECharacteristic characteristic(
 
 当此 Characteristic 被写入且数据被处理后，Characteristic 的值将被切换为流控制消息；在此示例中为“ready”。
 
-由于 onCharacteristicWritten 被处理为中断，因此最佳实践是避免在该函数内部处理数据。相反，最好设置一个标志并在主循环中处理数据。
+由于 `onCharacteristicWritten` 被处理为中断，因此最佳实践是避免在该函数内部处理数据。相反，最好设置一个标志并在主循环中处理数据。
 
 ```cpp
 ...
 static const char* bleFlowControlMessage = "ready";
-
 static const int bleFlowControlMessageLength = 5;
-
 bool bleDataWritten = false; // true if data has been received
-
 char bleCharacteristicValue[16] = {0};
-
 int bleCharacteristicValueLength;
-
 char bleCharacteristicUUID[32];
 
 void onCharacteristicWritten(
   BLECentral& central,
   BLECharacteristic &characteristic) {
-
   bleDataWritten = true; // alert that data has been written
-
   bleCharacteristicUUID = characteristic.uuid();
-
   bleCharacteristicValueLength = characteristic.valueLength();
-
   // Since we are playing with strings, use strcpy
-
   strcpy(bleCharacteristicValue, (char*) characteristic.value());
-
 }
 
 // setup
-
 void loop() {
-
 if (bleDataWritten) { // has data been written?
-
   bleDataWritten = false; // clear the flag
 ```
 
-
-
 ```cpp
 char uuid[32];
-
 };
 
 BleTransmission bleTransmissionData;
-
 bool bleDataWritten = false; // true if data has been received
-
 BLEService service("180C");
-
 BLECharacteristic characteristic(
-
   "2A56",
-
   BLERRead | BLENotify | BLEWrite, // read, write, notify
-
   characteristicTransmissionLength
-
 );
-
 BLEPeripheral blePeripheral;
-
 bool bleCharacteristicSubscribed = false; // true when a client subscribes
 
 // When data is sent from the client, it is processed here inside a callback
@@ -2527,40 +2304,34 @@ void setup() {
     );
     blePeripheral.begin();
 }
+
 void loop() {
     // if the bleDataWritten flag has been set, print out the incoming data
     if (bleDataWritten) {
         bleDataWritten = false; // ensure only happens once
 ```
 
-```
+```cpp
 Serial.print(bleTransmissionData.length);
-
 Serial.print(" bytes sent to characteristic ");
-
 Serial.print(bleTransmissionData.uuid);
-
 Serial.print(": ");
-
 Serial.println(bleTransmissionData.data);
 
 // send out flow control message
-
 setBleCharacteristicValue((char*) bleReadReceiptMessage,
     bleReadReceiptMessageLength);
-}
 }
 ```
 
 运行草图时，外设会将收到的数据打印到串行监视器中，然后通知已连接的中央设备它已准备好接收更多数据（图 10-2）。
 
+```
 16 bytes sent to characteristic 2A56: this is a super
-
 Ready for more data
-
 16 bytes sent to characteristic 2A56: long message
-
 Ready for more data
+```
 
 ### 图 10-2. 串行监视器输出
 
@@ -2570,13 +2341,13 @@ Ready for more data
 
 # 第 11 章
 
-# # 项目：iBeacon
+## 项目：iBeacon
 
 信标可用于测距或空间感知。iBeacon 是一种特殊的信标类型，得到了行业的广泛支持。它支持某些标识 iBeacon 的数据，使跨平台的测距和空间感知变得更加容易。
 
 由于无线电信号强度会随距离增加而自然衰减，蓝牙外设既可用于测距，也可用于空间感知。
 
-# ## 测距
+## 测距
 
 蓝牙信号可用于估算外设与中央设备之间的距离，因为无线电信号质量会随距离以可预测的方式下降。下图展示了信号如何随距离增加而下降（图 11-1）。
 
@@ -2588,167 +2359,72 @@ Ready for more data
 
 这是一个相当依赖数学计算的过程，但其基础全部是毕达哥拉斯定理。通过计算由所有 iBeacon 与中央设备的相对位置构成的三角形形状，就可以确定中央设备的位置（图 11-3）。
 
-读取。通过查询所发现 iBeacon 的 Major 和 Minor 编号，可以知道用户位于博物馆特定楼层的某个房间。相关内容从博物馆的 API 获取并加载到智能手机应用中。
+读取。通过查询所发现 iBeacon 的 `Major` 和 `Minor` 编号，可以知道用户位于博物馆特定楼层的某个房间。相关内容从博物馆的 API 获取并加载到智能手机应用中。
 
 ## 对 Peripheral 进行编程
 
-每个 iBeacon 都使用一个 UUID 加上 Major 和 Minor 编号进行标识。
+每个 iBeacon 都使用一个 `UUID` 加上 `Major` 和 `Minor` 编号进行标识。
 
-属于同一组织单元的 iBeacon 共享同一个 UUID。例如，属于同一家连锁杂货店的所有 iBeacon。
+属于同一组织单元的 iBeacon 共享同一个 `UUID`。例如，属于同一家连锁杂货店的所有 iBeacon。
 
-```
+```cpp
 // Beacon UUID - use the same UUID for a group of Beacons
-```
-
-```
 static const uint8_t UUID[] = {
-
     0xE2, 0x0A, 0x39, 0xF4, 0x73, 0xF5, 0x4B, 0xC4,
-
     0xA1, 0x2F, 0x17, 0xD1, 0xAD, 0x07, 0xA9, 0x61
 };
-```
-
-Major 编号通常用于标识 iBeacon——具有相同用途的 iBeacon 通常具有相同的 Major 编号，例如用于标识该连锁店中的各家门店。
-
-```
 // Major Number identifies the iBeacon
-```
-
-```
 static const uint16_t MAJOR_NUMBER = 1122;
-```
-
-Minor 编号通常在 Major 编号范围内是唯一的，这样用户就可以通过 iBeacon 的 Minor 编号来跟踪自己在杂货店内的活动轨迹。
-
-```
 // Minor number identifies the iBeacon
-```
-
-```
 static const uint16_t MINOR_NUMBER = 3344;
+// radio transmission power
+// 0xC8 = 200, 2's compliment is 256-200 = (-56dB)
+static const uint16_t TRANSMISSION_POWER = 0xC8;
 ```
 
 发射功率很重要，它既用于设置 iBeacon 的广播范围，也用于让中央设备判断自身与 iBeacon 的距离。
-
-```
-// radio transmission power
-```
-
-```
-// 0xC8 = 200, 2's compliment is 256-200 = (-56dB)
-```
-
-```
-static const uint16_t TRANSMISSION_POWER = 0xC8;
-```
 
 ### 整合所有内容
 
 下面的草图创建了一个 Beacon 外设，它将其参考 RSSI 以及相对于某个点的 x、y 距离存储在特征值中。实现起来非常简单；在前几章中你已经完成了大部分工作。
 
-创建一个名为 ble_security 的新草图，并复制以下代码。
+创建一个名为`ble_security`的新草图，并复制以下代码。
 
-示例 11-1. sketches/ble_beacon/ble_beacon.c
+示例 11-1. `sketches/ble_beacon/ble_beacon.c`
 
-```
 ```cpp
 #include "mbed.h"
-```
-```
 
-```
-```cpp
 #include "ble/services/iBeacon.h"
-```
-```
 
-```
-```cpp
 /** User interface I/O **/
-```
-```
-
-```
-```cpp
 // instantiate USB Serial
-```
-```
-
-```
-```cpp
 Serial serial(USBTX, USBRX);
-```
-```
 
-```
-```cpp
 // Status LED
-```
-```
-
-```
-```cpp
 DigitalOut statusLed(LED1, 0);
-```
-```
 
-```
-```cpp
 // Timer for blinking the statusLed
-```
-```
-
-```
-```cpp
 Ticker ticker;
-```
-```
 
-```
-```cpp
 /** Bluetooth Peripheral Properties **/
-```
-```
-
-```
-```cpp
 // Bluetooth Peripheral Singleton
-```
-```
-
-```
-```cpp
 // Beacon UUID - use the same UUID for a group of Beacons
-```
-```
-
-```
-```cpp
 static const uint8_t UUID[] = {0xE2, 0x0A, 0x39, 0xF4, 0x73, 0xF5, 0x4B, 0xC4,
                                 0xA1, 0x2F, 0x17, 0xD1, 0xAD, 0x07, 0xA9, 0x61};
-```
-```
 
-```
 // Major Number and Minor number identify the Beacon
-
 static const uint16_t MAJOR_NUMBER = 1122;
-
 static const uint16_t MINOR_NUMBER = 3344;
 
 // radio transmission power
-
 // 0xC8 = 200, 2's compliment is 256-200 = (-56dB)
-
 static const uint16_t TRANSMISSION_POWER = 0xC8;
 
 /** Functions **/
-
 /**
 * visually signal that program has not crashed
 */
-
 void blinkHeartbeat(void);
 
 /**
@@ -2756,84 +2432,107 @@ void blinkHeartbeat(void);
 *
 * @param[in] params Information about the initialized Peripheral
 */
-
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params
-```
+);
 
-```
 /**
  * Main program and loop
  */
-
 int main(void) {
-
     serial.baud(9600);
-
     serial.printf("Starting iBeacon\r\n");
-
     ticker.attach(blinkHeartbeat, 1); // Blink LED every 1 seconds
+```
 
-    // initialized Bluetooth Radio
 
-    BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
 
-    ble.init(onBluetoothInitialized);
 
-    // wait for Bluetooth Radio to be initialized
+```cpp
+// initialized Bluetooth Radio
 
-    while (ble.hasInitialized() == false);
+BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
 
-    while (1) {
+ble.init(onBluetoothInitialized);
 
-        // put radio to sleep in between broadcasts
+// wait for Bluetooth Radio to be initialized
 
-        ble.waitForEvent();
-    }
+while (ble.hasInitialized() == false);
+
+while (1) {
+
+    // put radio to sleep in between broadcasts
+
+    ble.waitForEvent();
 
 }
+
+}
+
 ```
 
 ```
+
 void blinkHeartbeat(void) {
 
     /* Do blinky on LED1 to indicate system aliveness. */
+
 ```
 
 
 ```cpp
+
 statusLed = !statusLed;
+
 }
 
 void onBluetoothInitialized(
+
     BLE::InitializationCompleteCallbackContext *params)
+
 {
+
     BLE &ble = params->ble;
+
     ble_error_t error = params->error;
+
     if(error != BLE_ERROR_NONE) {
+
         return;
+
     }
+
     // create beacon with these properties
+
     iBeacon *ibeacon = new iBeacon(
+
         ble, UUID, MAJOR_NUMBER, MINOR_NUMBER, TRANSMISSION_POWER);
+
     // begin broadcast
+
     ble.gap().setAdvertisingInterval(1000); // 1000ms
+
     ble.gap().startAdvertising();
+
 }
+
 ```
 
 当 Beacon 草图运行时，串口监视器的输出如下（图 11-2）：
 
 ```text
+
 Setting device name to: MyBeacon
+
 Starting Bluetooth Advertising
+
 ```
 
 **图 11-2. 串口输出**
 
 ## 示例代码
 
-本章的代码可在以下网址获取：https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter11
+本章的代码可在以下网址获取：`https://github.com/BluetoothLowEnergyInCppWithnRFx/Chapter11`
 
 ## 项目：Echo 客户端与服务器
 
@@ -2849,173 +2548,280 @@ Starting Bluetooth Advertising
 
 这个项目相对简单，因为中央设备和外围设备都用它们的母语——二进制——进行通信。因此，与文本相比，处理数据所需的步骤更少。
 
-必须有两条特征值（Characteristic）：一条用于写入命令，另一条用于读取响应，它们位于自动化 IO 服务（0x1815）下。响应特征值将支持通知：
+必须有两条特征值（Characteristic）：一条用于写入命令，另一条用于读取响应，它们位于自动化 IO 服务（`0x1815`）下。响应特征值将支持通知：
 
 ```cpp
+
 // Automation IO Service UUID
+
 static const uint16_t customServiceUuid = 0x1815;
 
 // Number of bytes in Characteristic
+
 static const uint8_t characteristicLength = 2;
 
 // Write commands to this Characteristic
+
 uint16_t commandCharacteristicUuid = 0x2A56;
 
 // Respond to connected Central from this Characteristic
+
 uint16_t responseCharacteristicUuid = 0x2A57;
 
 static char commandValue[characteristicLength] = {0};
+
 ```
 
 ```cpp
+
 WriteOnlyArrayGattCharacteristic<uint8_t, sizeof(commandValue)>
+
     commandCharacteristic(
+
         commandCharacteristicUuid,
+
         (uint8_t *)commandValue,
+
         GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE);
 
 static char responseValue[characteristicLength] = {0};
+
 ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(responseValue)>
+
     responseCharacteristic(
+
         responseCharacteristicUuid,
+
         (uint8_t *)responseValue,
+
         GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ |
+
         GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY
+
     );
 
 // Set up custom service
+
 GattCharacteristic *characteristics[] = {
+
     &commandCharacteristic,
+
     &responseCharacteristic
+
 };
 
 GattService customService(
+
     customServiceUuid, characteristics,
+
     sizeof(characteristics) / sizeof(GattCharacteristic *)
+
 );
+
 ```
 
 命令特征值需要能够访问中央设备写入的数据，如下所示：
 
 ```cpp
+
 // true if data has been written to the characteristic
+
 bool bleDataWritten = false;
 
 // incoming command
+
 uint8_t bleCommandValue[characteristicLength] = {0};
 
 const char* uuid;
+
 ```
 
 ```cpp
+
 void onDataWrittenCallback(const GattWriteCallbackParams *params) {
+
     serial.printf("command written");
+
     if (params->handle == commandCharacteristic.getValueHandle()) {
+
         bleDataWritten = true;
+
         memcpy(
+
             bleCommandValue,
+
             (char*) params->data,
+
             sizeof(bleCommandValue) * params->len
+
         );
+
     }
+
 }
+
 ```
 
 必须将消息类型定义为尾部（footer）、命令和响应：
 
 ```cpp
+
 /** Commands **/
+
 static const uint8_t bleCommandFooterPosition = 1;
+
 static const uint8_t bleCommandDataPosition = 0;
+
 static const uint8_t bleCommandFooter = 1;
+
 static const uint8_t bleCommandLedOn = 1;
+
 static const uint8_t bleCommandLedOff = 2;
+
 ```
 
 ```cpp
+
 /** Response **/
+
 static const uint8_t bleResponseFooterPosition = 1;
+
 static const uint8_t bleResponseDataPosition = 0;
+
 static const uint8_t bleResponseErrorFooter = 0;
+
 static const uint8_t bleResponseConfirmationFooter = 1;
+
 static const uint8_t bleResponseLedError = 0;
+
 static const uint8_t bleResponseLedOn = 1;
+
 static const uint8_t bleResponseLedOff = 2;
+
 ```
 
 该程序有两条命令：一条用于打开 LED，一条用于关闭 LED。
 
 ```cpp
+
 static const unsigned int ledOn = 1;
+
 ```
 
 ```cpp
+
 static const unsigned int ledOff = 2;
+
 ```
 
 对中央设备的响应必须表示 LED 的状态。
 
 ```cpp
+
 void sendBleCommandResponse(int ledState) {
+
     byte confirmation[characteristicLength] = {0x0};
+
     confirmation[bleResponseDataPosition] = (byte)ledState;
+
     confirmation[bleResponseFooterPosition] =
+
         (byte)bleResponseConfirmationFooter;
+
     responseCharacteristic.setValue(
+
         (const unsigned char*) confirmation,
+
         characteristicLength
+
     );
+
 }
+
 ```
 
 一旦收到命令，外围设备需要改变 LED 状态，然后通知中央设备命令已处理。
 
 ```cpp
+
 DigitalOut statusLed(LED1, 0);
 
 int main(void) {
+
     while (1) {
+
         if (bleDataWritten) {
+
             bleDataWritten = false; // ensure only happens once
+
             if (bleCommandValue[bleCommandFooterPosition] ==
+
                 bleCommandFooter)
+
             {
+
                 serial.printf("command in footer\r\n");
+
                 switch (bleCommandValue[bleCommandDataPosition]) {
+
                     case bleCommandLedOn:
+
                         statusLed.write(0);
+
                         sendBleResponse(bleResponseLedOn);
+
                         break;
+
                     case bleCommandLedOff:
+
                         statusLed.write(1);
+
                         sendBleResponse(bleResponseLedOff);
+
                         break;
+
                     default:
+
                         // handle unknown condition
+
                         serial.printf("Unknown command\r\n");
+
                 }
+
             }
+
         }
+
     }
+
 }
+
 ```
 
 向中央设备发送确认 LED 状态的响应如下所示：
 
 ```cpp
+
 void sendBleResponse(uint8_t ledState) {
+
     uint8_t responseValue[characteristicLength];
 
     responseValue[bleResponseFooterPosition] =
+
         bleResponseConfirmationFooter;
 
     responseValue[bleResponseDataPosition] = ledState;
 
     BLE::Instance(BLE::DEFAULT_INSTANCE).gattServer().write(
+
         responseCharacteristic.getValueHandle(),
+
         (const uint8_t *)responseValue,
+
         characteristicLength);
+
 }
+
 ```
 
 ### 整合所有内容
@@ -3027,6 +2833,7 @@ void sendBleResponse(uint8_t ledState) {
 **示例 13-1. sketches/led_remote/led_remote.c**
 
 ```c
+
 #include "mbed.h"
 
 #include "ble/BLE.h"
@@ -3034,74 +2841,91 @@ void sendBleResponse(uint8_t ledState) {
 /** User interface I/O **/
 
 // instantiate USB Serial
+
 Serial serial(USBTX, USBRX);
 
 // Status LED
+
 DigitalOut statusLed(LED1, 0);
 
 /** Bluetooth Peripheral Properties **/
 
 // Broadcast name
+
 const static char BROADCAST_NAME[] = "RemoteLed";
 
 // Automation IO Service UUID
+
 static const uint16_t customServiceUuid = 0x1815;
 
 // array of all Service UUIDs
+
 static const uint16_t uuid16_list[] = { customServiceUuid };
 
 // Number of bytes in Characteristic
+
 static const uint8_t characteristicLength = 2;
 
 // Write commands to this Characteristic
+
 uint16_t commandCharacteristicUuid = 0x2A56;
 
 // Respond to connected Central from this Characteristic
+
 uint16_t responseCharacteristicUuid = 0x2A57;
 
 /** Commands **/
+
 static const uint8_t bleCommandFooterPosition = 1;
+
 static const uint8_t bleCommandDataPosition = 0;
+
 static const uint8_t bleCommandFooter = 1;
+
 static const uint8_t bleCommandLedOn = 1;
+
 static const uint8_t bleCommandLedOff = 2;
 
 /** Response **/
+
 static const uint8_t bleResponseFooterPosition = 1;
+
 static const uint8_t bleResponseDataPosition = 0;
+
 static const uint8_t bleResponseErrorFooter = 0;
+
 static const uint8_t bleResponseConfirmationFooter = 1;
+
 static const uint8_t bleResponseLedError = 0;
-```
 
 
 
 
-
+```cpp
 static const uint8_t bleResponseLedOn = 1;
 
 static const uint8_t bleResponseLedOff = 2;
+```
 
-## /** State **/
+## State
 
+```cpp
 // flag when Central has written to a Characteristic
-
 // true if data has been written to the characteristic
-
 bool bleDataWritten = false;
 
 // incoming command
-
 uint8_t bleCommandValue[characteristicLength] = {0};
+```
 
-## /** Functions **/
+## Functions
 
+```cpp
 /**
  * Callback triggered when the ble initialization process has finished
  *
  * @param[in] params Information about the initialized Peripheral
  */
-
 void onBluetoothInitialized(
     BLE::InitializationCompleteCallbackContext *params
 );
@@ -3128,12 +2952,14 @@ void sendBleResponse(uint8_t ledState);
 *
 * @param[i] params Information about the connection
 */
-
 void onCentralDisconnected(
     const Gap::DisconnectionCallbackParams_t *params
 );
+```
 
-/** Build Service and Characteristic Relationships **/
+## Build Service and Characteristic Relationships
+
+```cpp
 // Set Up custom Characteristics
 
 static char commandValue[characteristicLength] = {0};
@@ -3154,7 +2980,6 @@ ReadOnlyArrayGattCharacteristic<uint8_t, sizeof(responseValue)> \
     GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY
 );
 
-```cpp
 // Set up custom service
 
 GattCharacteristic *characteristics[] = {
@@ -3174,10 +2999,17 @@ GattService customService(
     sizeof(characteristics) / sizeof(GattCharacteristic *)
 
 );
+```
 
+## Main Program and Loop
+
+```cpp
 /**
+
  * Main program and loop
+
  */
+
 int main(void) {
 
   serial.baud(9600);
@@ -3185,6 +3017,7 @@ int main(void) {
   serial.printf("Starting LedRemote\r\n");
 
   // initialized Bluetooth Radio
+
   BLE &ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
 
   ble.init(onBluetoothInitialized);
@@ -3196,29 +3029,41 @@ int main(void) {
 while (ble.hasInitialized() == false);
 
 while (1) {
+
     if (bleDataWritten) {
+
         bleDataWritten = false; // ensure only happens once
 
         // do something with the bleCharacteristicValue
+
         serial.printf("responding to command\r\n");
 
         for (int i=0; i<characteristicLength; i++) {
+
             serial.printf("0x%x ", bleCommandValue[i]);
+
         }
 
         serial.printf("\r\n");
 
         if (bleCommandValue[bleCommandFooterPosition] == \
+
             bleCommandFooter)
+
         {
+
             serial.printf("command in footer\r\n");
 
             switch (bleCommandValue[bleCommandDataPosition]) {
+
                 case bleCommandLedOn:
+
                     serial.printf("Led on\r\n");
+
                     statusLed.write(0);
 ```
 
+```cpp
 // quit if there's a problem
 if(error != BLE_ERROR_NONE) {
     return;
@@ -3282,6 +3127,7 @@ ble.gap().startAdvertising();
 
 serial.printf(" done\r\n");
 }
+```
 
 ```cpp
 void onDataWrittenCallback(const GattWriteCallbackParams *params) {
@@ -3306,7 +3152,6 @@ void onDataWrittenCallback(const GattWriteCallbackParams *params) {
 
 }
 
-
 void sendBleResponse(uint8_t ledState) {
 
     serial.printf("writing response\r\n");
@@ -3314,6 +3159,7 @@ void sendBleResponse(uint8_t ledState) {
     uint8_t responseValue[characteristicLength];
 
     responseValue[bleResponseFooterPosition] = \
+
         bleResponseConfirmationFooter;
 
     responseValue[bleResponseDataPosition] = ledState;
@@ -3323,15 +3169,19 @@ void sendBleResponse(uint8_t ledState) {
         responseCharacteristic.getValueHandle(),
 
         (const uint8_t*)responseValue,
+
 characteristicLength);
 
 }
 
 void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
+
 {
+
     BLE::Instance().gap().startAdvertising();
 
     serial.printf("Central disconnected\r\n");
+
 }
 ```
 
@@ -3339,7 +3189,7 @@ void onCentralDisconnected(const Gap::DisconnectionCallbackParams_t *params)
 
 当中央发送“Light On”命令时，串行监视器应类似于此（[Figure 13-4](#figure-13-4)）：
 
-```
+```text
 Starting LedRemote
 
 responding to command
@@ -3406,9 +3256,6 @@ Send confirmation
 
 ### Table 13-1. Footer Values
 
-|  |  |  |
-|---|---|---|
-
 | Name | Value | Description |
 |---|---:|---|
 | `bleResponseError` | 0 | The Central is sending a error |
@@ -3430,10 +3277,6 @@ Send confirmation
 
 ### Figure 13-3. Packet structure for responses
 
-
-
-
-
 This program has two commands: one to turn the LED on and one to turn the LED off.
 
 ```cpp
@@ -3446,16 +3289,27 @@ Responses to the Central must represent the state of the LED.
 
 ```cpp
 void sendBleCommandResponse(int ledState) {
+
   byte confirmation[characteristicTransmissionLength] = {0x0};
+
   confirmation[bleResponseDataPosition] = (byte)ledState;
+
   confirmation[bleResponseFooterPosition] = \
+
     (byte)bleResponseConfirmationFooter;
+
   responseCharacteristic.setValue(
+
     (const unsigned char*) confirmation,
+
     characteristicTransmissionLength
+
   );
+
 }
 ```
+
+
 
 Once a command has been received, the Peripheral needs to change the LED state, then notify the Central that the command has been processed.
 
@@ -3465,25 +3319,16 @@ void loop() {
     bleCommandReceived = false; // ensures only executed once
 
     // incoming command is one byte
-
     unsigned int command = bleMessage[bleMessageDataPosition];
 
     if(command == bleCommandLedOn) {
-
       Serial.println("Turning LED on");
-
       ledState = HIGH;
-
       sendBleCommandResponse(ledState);
-
     } else {
-
       Serial.println("Turning LED off");
-
       ledState = LOW;
-
       sendBleCommandResponse(ledState);
-
     }
 
     digitalWrite(ledPin, ledState);
@@ -3495,76 +3340,54 @@ void loop() {
 
 The following sketch will create a Peripheral that can receive pre-programmed commands to turn the onboard LED on and off.
 
-Create a new project called led_remote, and copy the following code:
+Create a new project called `led_remote`, and copy the following code:
 
-**Example 12-1. sketches/led_remote/led_remote.ino**
+**Example 12-1.** `sketches/led_remote/led_remote.ino`
 
 ```cpp
 #include "CurieBle.h"
 
 static const char* bluetoothDeviceName = "LedRemote";
-
 static const int characteristicTransmissionLength = 2;
 
 // Commands
-
 static const uint8_t bleCommandFooterPosition = 1;
-
 static const uint8_t bleCommandDataPosition = 0;
-
 static const uint8_t bleCommandFooter = 1;
-
 static const uint8_t bleCommandLedOn = 1;
-
 static const uint8_t bleCommandLedOff = 2;
 
 // Responses
-
 static const uint8_t bleResponseFooterPosition = 1;
-
 static const uint8_t bleResponseDataPosition = 0;
-
 static const uint8_t bleResponseErrorFooter = 0;
-
 static const uint8_t bleResponseConfirmationFooter = 1;
-
 static const uint8_t bleResponseLedError = 0;
-
 static const uint8_t bleResponseLedOn = 1;
-
 static const uint8_t bleResponseLedOff = 2;
 
 // Peripheral Properties
-
 static const byte ledPin = 13;
-
 static const unsigned int ledError = 0;
-
 static const unsigned int ledOn = 1;
-
 static const unsigned int ledOff = 2;
 
 int ledState = ledOff;
 
 // internal state
-
 char bleMessage[characteristicTransmissionLength];
-
 const char* uuid;
-
 bool bleCommandReceived = false;
 
 BLEService service("180C");
 
 BLECharacteristic commandCharacteristic(
-
   "2A56",
   BLEWrite,
   characteristicTransmissionLength
 );
 
 BLECharacteristic responseCharacteristic(
-
   "2A57",
   BLERead | BLENotify,
   characteristicTransmissionLength
@@ -3584,9 +3407,11 @@ void onCentralDisconnected(BLECentral& central) {
 void setup() {
     Serial.begin(9600);
     while (!Serial) {} // wait for Serial to connect
+
     digitalWrite(ledPin, LOW); // start with LED off
+
     blePeripheral.setLocalName(bluetoothDeviceName);
-    
+
     // attach callback when central connects
     blePeripheral.setEventHandler(
         BLEConnected,
@@ -3594,18 +3419,14 @@ void setup() {
     );
 
     // attach callback when central disconnects
-
     blePeripheral.setEventHandler(
         BLEDisconnected,
         onCentralDisconnected
     );
 
     blePeripheral.setAdvertisedServiceUuid(service.uuid());
-
     blePeripheral.addAttribute(service);
-
     blePeripheral.addAttribute(commandCharacteristic);
-
     blePeripheral.addAttribute(responseCharacteristic);
 
     commandCharacteristic.setEventHandler(
@@ -3614,7 +3435,6 @@ void setup() {
     );
 
     Serial.print("Starting ");
-
     Serial.println(bluetoothDeviceName);
 
     blePeripheral.begin();
@@ -3622,35 +3442,28 @@ void setup() {
 
 void loop() {
     if(bleCommandReceived) {
-
         bleCommandReceived = false; // ensures only executed once
 
         // incoming command is one byte
-
         unsigned int command = bleMessage[bleCommandDataPosition];
 
         if(command == bleCommandLedOn) {
-
             Serial.println("Turning LED on");
-
             ledState = HIGH;
-
             sendBleCommandResponse(ledState);
-
         } else {
-
             Serial.println("Turning LED off");
-
             ledState = LOW;
-
             sendBleCommandResponse(ledState);
-
         }
 
         digitalWrite(ledPin, ledState);
     }
 }
 ```
+
+
+
 
 The resulting Peripheral turns an LED on and off when instructed, and reports that it’s processed the command.
 
@@ -3713,9 +3526,6 @@ As a best practice, it is good to host a standard set of Services and Characteri
 | Environmental Sensing | 0x181A | org.bluetooth.service.environmental_sensing |
 | Generic Access | 0x1800 | org.bluetooth.service.generic_access |
 | Generic |  |  |
-
-
-
 
 | 属性 | UUID | 服务 UUID |
 | --- | --- | --- |
@@ -3831,8 +3641,6 @@ As a best practice, it is good to host a standard set of Services and Characteri
 | 软件版本字符串 | 0x2A28 | org.bluetooth.characteristic.software_revision_string |
 | 有氧和无氧阈值的运动类型 | 0x2A93 | org.bluetooth.characteristic.sport_type_for_aerobic_and_anaerobic_thresholds |
 | 支持的新提醒类别 | 0x2A47 | org.bluetooth.characteristic.supported_new_alert_category |
-
-
 
 | 名称 | UUID | 描述 |
 |---|---|---|
@@ -3969,8 +3777,6 @@ GATT 描述符用于描述特征中可修改的属性，例如，客户端特征
 - **蓝牙低功耗（BLE）** - 一种用于微型电子设备的低功率、短距离无线协议。
 - **广播** - 蓝牙低功耗的一项功能，外设通过它输出自己的名称和其他特定数据。
 
-
-
 - **中心设备** - 一种低功耗蓝牙设备，可连接多个外围设备。
 - **信道** - 一种经过精细调谐的射频频率，用于广播或数据传输。
 - **特征** - 一个端口或数据端点，可在此读取或写入数据。
@@ -4080,9 +3886,6 @@ ISBN: 978-1-7751280-3-8
 - **低功耗蓝牙（BLE）** - 一种供微电子设备使用的低功耗、短距离无线协议。
 - **中心设备** - 一种低功耗蓝牙设备，可连接多个外围设备。
 - **信道** - 一种经过精细调谐的射频频率，用于广播或数据传输。
-
-
-
 
 ## 特征
 

@@ -1,36 +1,23 @@
-# C-C++ 自建 Redis指南：通过从零编码学习网络编程与数据结构
 
-
-
-
-
-
-
+# C-C++ 自建 Redis 指南：通过从零编码学习网络编程与数据结构
 
 ![](img/e11cab1295d9145a4d6446f9d2e698e3_0_0.png)
 
 > “我无法创造的，我无法理解”
-
-
-
-
-James Smith
-
-
-
-
+>
+> — James Smith
 
 # 第一部分 入门指南
 
 创建一个能够响应命令的功能性服务器。
 
-# 01. 简介
+## 01. 简介
 
-## 本书是关于什么的？
+### 本书是关于什么的？
 
 本书包含了一个类 Redis 服务器简单实现的步骤逐步指南。它旨在作为网络编程以及 C 语言中基础数据结构实现与应用的实战指南或教程。
 
-## 从书中可以学到什么？
+### 从书中可以学到什么？
 
 Redis 可以被认为是现代计算中经受时间考验的基石之一。构建这样一个项目所需的知识比通常的应用层开发更广、也更深。从此类项目中学习是软件开发者提升技能的好方法。
 
@@ -39,19 +26,19 @@ Redis 是学习的一个良好目标，因为它涵盖了软件工程的两个�
 - 尽管有很多关于 socket API 或高层库的指南，但网络编程不仅仅是调用 API 或库。理解核心概念（如事件循环、协议、定时器等）至关重要，本书将涵盖这些内容。即使你只是在应用程序中使用高层网络库或框架，缺乏对这些概念的理解也会导致致命错误。
 - 尽管许多人从教科书中学习过一些基础数据结构，但仍然有东西可以学习。在真实项目中实现的数据结构通常具有教科书中未触及的实际考量。学习如何在非玩具环境（尤其是使用 C 语言）中使用数据结构，将是构建 Redis 带来的独特体验。
 
-与与大多数真实世界项目一样，Redis 是一个投入大量精力构建的复杂项目，对初学者来说可能难以掌握。相反，本书采取了相反的方法：通过从零开始构建来学习。
+与大多数真实世界项目一样，Redis 是一个投入大量精力构建的复杂项目，对初学者来说可能难以掌握。相反，本书采取了相反的方法：通过从零开始构建来学习。
 
-## 为什么要从零开始？
+### 为什么要从零开始？
 
 有几点：
 
-- 更快。从零开始构建东西，可以逐渐引入概念。从小开始，增量式地添加内容，最后获得全局观。
-- 更深。虽然有很多材料解释现有东西如何工作，但通过阅读这些材料获得的理解往往与自己构建这些东西是不同的。人们很容易将记忆误认为是理解，而且比起原理和基础，更容易去关注无关紧要的细节。
-- 更多。“从零开始”的方法迫使你接触该主题的每一个方面——知识没有捷径！而且并不是每一个方面都是你预先已知的，在过程中你可能会发现“我并不知道自己不知道的东西”。
+- **更快**。从零开始构建东西，可以逐渐引入概念。从小开始，增量式地添加内容，最后获得全局观。
+- **更深**。虽然有很多材料解释现有东西如何工作，但通过阅读这些材料获得的理解往往与自己构建这些东西是不同的。人们很容易将记忆误认为是理解，而且比起原理和基础，更容易去关注无关紧要的细节。
+- **更多**。“从零开始”的方法迫使你接触该主题的每一个方面——知识没有捷径！而且并不是每一个方面都是你预先已知的，在过程中你可能会发现“我并不知道自己不知道的东西”。
 
 费曼的一句名言完美总结了这一点：“我无法创造的，我无法理解”。
 
-## 如何使用本书？
+### 如何使用本书？
 
 本书采用循序渐进的方法。每一步都建立在上一步的基础上增加新概念。完整的源代码在网上提供供参考，建议读者对其进行调优或在没有代码的情况下进行动手实现（DIY）。
 
@@ -59,7 +46,7 @@ Redis 是学习的一个良好目标，因为它涵盖了软件工程的两个�
 
 最终结果是一个大约 1200 行代码的迷你 Redis。1200 行代码（LoC）看起来很少，但它说明了书中试图涵盖的许多重要方面。
 
-书中使用的技术和方法与真实的 Redis并不完全相同。有些是刻意简化的，有些是为了说明某个通用主题而选择的。读者通过比较方法可以学到更多。
+书中使用的技术和方法与真实的 Redis 并不完全相同。有些是刻意简化的，有些是为了说明某个通用主题而选择的。读者通过比较方法可以学到更多。
 
 书中使用的代码仅旨在在 Linux 上运行，可以在此 URL 下载：
 
@@ -71,27 +58,11 @@ https://build-your-own.org
 
 ## 02. Sockets 简介
 
-本章是 socket 编程的介绍。假设读者具有计算机网络的基础知识，但没有网络编程经验。本书不包含如何使用 socket API 的所有细节，建议你在学习本书的同时，阅读相关的管理手册和其他网络编程指南。（https://beej.us/ 是获取 socket API 的良好来源。）
+本章是 socket 编程的介绍。假设读者具有计算机网络的基础知识，但没有网络编程经验。本书不包含如何使用 socket API 的所有细节，建议你在学习本书的同时，阅读相关的管理手册和其他网络编程指南（https://beej.us/ 是获取 socket API 的良好来源）。
 
 Redis 是服务器/客户端系统的示例。多个客户端连接到一个服务器，服务器接收来自 TCP 连接的请求并发送响应。在开始 socket 编程之前，我们需要学习几个 Linux 系统调用。
 
 `socket()` 系统调用返回一个 `fd`。如果你对 Unix 系统不熟悉：`fd` 是一个整数，指向 Linux 内核中的某些东西，例如 TCP 连接、磁盘文件。
-
-（注：此处原文存在大量重复的 OCR 错误，翻译时已根据逻辑进行了清理和去重）
-
-本章将介绍 socket 编程。
-
-在开始 socket 编程之前，我们需要学习几个 Linux 系统调用。
-
-首先，我们需要获取一个 socket fd：`int fd = socket(AF_INET, SOCK_STREAM, 0);` Redis 是服务器/客户端系统的示例。多个客户端连接到一个服务器，服务器接收来自 TCP 连接的请求并发送响应。在开始 socket 编程之前，我们需要学习几个 Linux 系统调用。
-
-`socket()` 系统调用返回一个 `fd`。如果你对 Unix 系统不熟悉：`fd` 是一个整数，指向 Linux 内核中的某些东西，例如 TCP 连接、磁盘文件。
-
-（注：此处原文存在大量重复的 OCR 错误，翻译时已根据逻辑进行了清理和去重）
-
-## 03. Hello 服务器/客户端
-
-本章继续 socket 编程的介绍。我们将 2 个简单的程序来演示这些系统调用。
 
 首先，我们需要获取一个 socket fd：`int fd = socket(AF_INET, SOCK_STREAM, 0);`
 
@@ -106,9 +77,7 @@ int val = 1;
 setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
 ```
 
-`setsockopt()` 用于配置 socket 的各种方面。这个特定的调用开启了 `SO_REUSEADDR` 。如果没有这个选项，服务器重启将无法绑定同一个地址。练习题：找出到底什么是 `SO_REUSEADDR` 以及为什么需要它。
-
-
+`setsockopt()` 用于配置 socket 的各种方面。这个特定的调用开启了 `SO_REUSEADDR`。如果没有这个选项，服务器重启将无法绑定同一个地址。练习题：找出到底什么是 `SO_REUSEADDR` 以及为什么需要它。
 
 ```cpp
 // 监听
@@ -125,7 +94,7 @@ while (true) {
     // accept
     struct sockaddr_in client_addr = {};
     socklen_t socklen = sizeof(client_addr);
-    int connfd = accept(fd, (struct sockaddr*)client_addr, &socklen);
+    int connfd = accept(fd, (struct sockaddr*)&client_addr, &socklen);
     if (connfd < 0) {
         continue;
         // 错误
@@ -206,15 +175,18 @@ server says: world
 - 03_client.cpp
 - 03_server.cpp
 
+## 03. Hello 服务器/客户端
+
+本章继续 socket 编程的介绍。我们将通过 2 个简单的程序来演示这些系统调用。
+
 ## 04. 协议解析
 
 我们的服务器将能够处理来自客户端的多个请求，为了这一点，我们需要实现某种“协议”，至少要将请求从 TCP 字节流中分离出来。拆分请求最简单的方法是在请求开头声明请求的长度。让我们使用以下方案。
 
-|------+--------------------------------------|
-| len | msg1 | len | msg2 | more...|
-|------+--------------------------------------+
+| len | msg1 | len | msg2 | more... |
+| :--- | :--- | :--- | :--- | :--- |
 
-该协议由两部分组成：一个 4 字节的小端整数，表示后续请求的长度，以及一个变变长度的请求。
+该协议由两部分组成：一个 4 字节的小端整数，表示后续请求的长度，以及一个变长的请求。
 
 从上一章的代码开始，服务器的循环被修改为处理多个请求：
 
@@ -223,7 +195,7 @@ while (true) {
     // accept
     struct sockaddr_in client_addr = {};
     socklen_t socklen = sizeof(client_addr);
-    int connfd = accept(fd, (struct sockaddr*)client_addr, &socklen);
+    int connfd = accept(fd, (struct sockaddr*)&client_addr, &socklen);
     if (connfd < 0) {
         continue; // 错误
     }
@@ -293,10 +265,6 @@ static int32_t one_request(int connfd) {
 }
 ```
 
-
-
-
-
 协议正在传输任意数据，因为数据中的分隔符需要被“转义”。后续章节我们将坚持简单的二进制协议。
 
 - 04_client.cpp
@@ -304,7 +272,7 @@ static int32_t one_request(int connfd) {
 
 ## 05. 事件循环与非阻塞 IO
 
-在服务器端网络编程中，处理并发连接有3 种方法。它们分别是：进程 fork（forking）、多线程和事件循环。进程为每个客户端连接创建一个新进程来实现并发。多线程使用线程代替进程。事件循环使用轮询和非阻塞 IO，并且通常运行在单线程上。由于进程和线程的开销，大多数现代生产级软件在网络中使用事件循环。
+在服务器端网络编程中，处理并发连接有 3 种方法。它们分别是：进程 fork、多线程和事件循环。进程为每个客户端连接创建一个新进程来实现并发。多线程使用线程代替进程。事件循环使用轮询和非阻塞 IO，并且通常运行在单线程上。由于进程和线程的开销，大多数现代生产级软件在网络中使用事件循环。
 
 我们服务器事件循环的简化伪代码如下：
 
@@ -317,7 +285,7 @@ while True:
 
 def do_something_with(fd):
     if fd is a listening socket:
-        add_new.client(fd)
+        add_new_client(fd)
     elif fd is a client connection:
         while work_not_done(fd):
             do_something_to_client(fd)
@@ -332,37 +300,38 @@ def do_something_to_client(fd):
         destroy_client(fd)
 ```
 
-我们不仅仅是执行操作（读取、写入或接受），而是使用 `poll` 操作告诉我们哪些 fd 可以立即操作而无需阻塞。当 big对 fd 执行 IO 操作时，该操作应在非阻塞模式下进行。
+我们不仅仅是执行操作（读取、写入或接受），而是使用 `poll` 操作告诉我们哪些 fd 可以立即操作而无需阻塞。当对 fd 执行 IO 操作时，该操作应在非阻塞模式下进行。
 
-
-05. 事件循环与非阻塞 IO
+### 阻塞与非阻塞模式
 
 在阻塞模式下，当内核中没有数据时，`read` 会阻塞调用者；当写缓冲区满时，`write` 会阻塞；当内核队列中没有新连接时，`accept` 会阻塞。在非阻塞模式下，这些操作要么在阻塞的情况下成功，要么带有错误 `EAGAIN` 失败，这意味着“尚未就绪”。以 `EAGAIN` 失败的非阻塞操作必须在收到 `poll` 通知后重试。
 
-`poll` 是事件循环中唯一的阻塞操作，其他所有操作都必须是非阻塞的；单线程可以处理多个并发连接。所有的网络 IO API（如 `read`、`write` 和 `accept`）都有非阻塞模式。没有非阻塞模式的 API（如 `gethostname`）和磁盘 IO 应该在线程池中执行，这将在后续层介绍。此外，定时器必须在事件循环内部实现，因为我们不能在事件循环内部 `sleep`。
+`poll` 是事件循环中唯一的阻塞操作，其他所有操作都必须是非阻塞的；单线程可以处理多个并发连接。所有的网络 IO API（如 `read`、`write` 和 `accept`）都有非阻塞模式。没有非阻塞模式的 API（如 `gethostname`）和磁盘 IO 应该在线程池中执行，这将在后续章节介绍。此外，定时器必须在事件循环内部实现，因为我们不能在事件循环内部 `sleep`。
 
-设置 `fd_set_nb(int fd)` 的系统调用
+### 设置非阻塞 fd 的系统调用 `fd_set_nb(int fd)`
 
 ```cpp
 static void fd_set_nb(int fd) {
-  int errno = 0;
-  int flags = fcntl(fd, F_GETFL, 0);
-  if (errno) {
-    die("fcntl error");
-    return;
-  }
+    int errno = 0;
+    int flags = fcntl(fd, F_GETFL, 0);
+    if (errno) {
+        die("fcntl error");
+        return;
+    }
 
-  flags |= O_NONBLOCK;
+    flags |= O_NONBLOCK;
 
-  errno = 0;
-  (void) fcntl(fd, F_SETFL, flags);
-  if (errno) {
-    die("fcntl error");
-  }
+    errno = 0;
+    (void) fcntl(fd, F_SETFL, flags);
+    if (errno) {
+        die("fcntl error");
+    }
 }
 ```
 
-在 Linux 上，除了 `poll` 系统调用外，还有 `select` 和 `epoll`。古老的 `select` 系统调用基本上与 `poll` 相同，但最大 fd 数被限制在一个小的范围内，这使得它在现代应用中过时了。`epoll` API 由3 个系统调用组成：`epoll_create`、`epoll_wait` 和 `epoll_ctl`。`epoll` API 是有状态的，它不是提供一组 fds 作为系统调用参数，而是使用 `epoll_ctl` 来操作由 `epoll_create` 创建的 fd，由 `epoll_wait` 进行操作。
+
+
+在 Linux 上，除了 `poll` 系统调用外，还有 `select` 和 `epoll`。古老的 `select` 系统调用基本上与 `poll` 相同，但最大 fd 数被限制在一个小的范围内，这使得它在现代应用中过时了。`epoll` API 由 3 个系统调用组成：`epoll_create`、`epoll_wait` 和 `epoll_ctl`。`epoll` API 是有状态的，它不是提供一组 fds 作为系统调用参数，而是使用 `epoll_ctl` 来操作由 `epoll_create` 创建的 fd，由 `epoll_wait` 进行操作。
 
 build-your-own.org
 
@@ -381,7 +350,7 @@ enum {
     STATE_REQ = 0,
     STATE_RES = 1,
     STATE_END = 2,    // 标记连接删除
-}
+};
 
 struct Conn {
     int fd = -1;
@@ -407,39 +376,40 @@ int main() {
         die("socket()");
     }
 
-// bind, listen 等
-// 所有客户端连接的 map
-std::vector<Conn *> fd2conn;
+    // bind, listen 等
+    // 所有客户端连接的 map
+    std::vector<Conn *> fd2conn;
 
-// 将监听 fd 设置为非阻塞
-fd_set_nb(fd);
+    // 将监听 fd 设置为非阻塞
+    fd_set_nb(fd);
 
-// 事件循环
-std::vector<struct pollfd> poll_args;
-while (true) {
-  // 准备 poll() 的参数
-  poll_args.clear();
-  // 为了方便，监听 fd 放在第一个位置
-  struct pollfd pfd = {fd, POLLIN, 0};
-  poll_args.push_back(pfd);
-  // 连接 fds
-  for (Conn *conn : fd2conn) {
-    if (!conn) {
-      continue;
+    // 事件循环
+    std::vector<struct pollfd> poll_args;
+    while (true) {
+        // 准备 poll() 的参数
+        poll_args.clear();
+        // 为了方便，监听 fd 放在第一个位置
+        struct pollfd pfd = {fd, POLLIN, 0};
+        poll_args.push_back(pfd);
+        // 连接 fds
+        for (Conn *conn : fd2conn) {
+            if (!conn) {
+                continue;
+            }
+            struct pollfd pfd = {};
+            pfd.fd = conn->fd;
+            pfd.events = (conn->state == STATE_REQ) ? POLLIN : POLLOUT;
+            pfd.events = pfd.events | POLLERR;
+            poll_args.push_back(pfd);
+        }
+
+        // poll 活跃 fds
+        // 在这里超时并不重要
+        int rv = poll(poll_args.data(), (nfds_t)poll_args.size(), 1000);
+        if (rv < 0) {
+            die("poll");
+        }
     }
-    struct pollfd pfd = {};
-    pfd.fd = conn->fd;
-    pfd.events = (conn->state == STATE_REQ) ? POLLIN : POLLOUT;
-    pfd.events = pfd.events | POLLERR;
-    poll_args.push_back(pfd);
-  }
-
-  // poll 活跃 fds
-  // 在这里超时并不重要
-  int rv = poll(poll_args.data(), (nfds_t)poll_args.size(), 1000);
-  if (rv < 0) {
-    die("poll");
-  }
 }
 ```
 
@@ -448,7 +418,7 @@ while (true) {
 for (size_t i = 1; i < poll_args.size(); ++i) {
     if (poll_args[i].events) {
         Conn *conn = fd2conn[poll_args[i].fd];
-        connection.io(conn);
+        connection_io(conn);
         if (conn->state == STATE_END) {
             // 客户端正常关闭，或者发生了某些异常
             // 销毁此连接
@@ -465,18 +435,15 @@ if (poll_args[0].events) {
 }
 ```
 
-
-06. 事件循环实现
-
 ```cpp
-static void conn_put(std::vector<Conn *>fd2conn, struct Conn *conn) {
+static void conn_put(std::vector<Conn *> &fd2conn, struct Conn *conn) {
     if (fd2conn.size() <= (size_t)conn->fd) {
         fd2conn.resize(conn->fd + 1);
     }
     fd2conn[conn->fd] = conn;
 }
 
-static int32_t accept_new(std::vector<Conn *>fd2conn, int fd) {
+static int32_t accept_new(std::vector<Conn *> &fd2conn, int fd) {
     // accept
     struct sockaddr_in client_addr = {};
     socklen_t len = sizeof(client_addr);
@@ -507,11 +474,7 @@ static int32_t accept_new(std::vector<Conn *>fd2conn, int fd) {
 
 `connection_io()` 是客户端连接的状态机。
 
-`accept_new_conn()` 函数接受新连接并创建 struct Conn 对象。
-
-
-
-
+`accept_new_conn()` 函数接受新连接并创建 `struct Conn` 对象。
 
 ```c
 static void connection_io(Conn *conn) {
@@ -525,21 +488,21 @@ static void connection_io(Conn *conn) {
 }
 ```
 
-STATE_REQ 状态用于读取：
+`STATE_REQ` 状态用于读取：
 
 ```c
 static void state_req(Conn *conn) {
     while (try_fill_buffer(conn)) {
-}
+    }
 }
 
 static bool try_fill_buffer(Conn *conn) {
     // try to fill the buffer
-    assert(conn->rbuf->size < sizeof(conn->rbuf));
+    assert(conn->rbuf_size < sizeof(conn->rbuf));
     ssize_t rv = 0;
     do {
-        size_t cap = sizeof(conn->rbuf) - conn->rbuf->size;
-        rv = read(conn->fd, &conn->rbuf[conn->rbuf->size], cap);
+        size_t cap = sizeof(conn->rbuf) - conn->rbuf_size;
+        rv = read(conn->fd, &conn->rbuf[conn->rbuf_size], cap);
     } while (rv < 0 && errno == EINTR);
     if (rv < 0 && errno == EAGAIN) {
         // EAGAIN, stop.
@@ -551,7 +514,7 @@ static bool try_fill_buffer(Conn *conn) {
         return false;
     }
     if (rv == 0) {
-        if (conn->rbuf->size > 0) {
+        if (conn->rbuf_size > 0) {
             msg("unexpected EOF");
         } else {
             msg("EOF");
@@ -559,8 +522,8 @@ static bool try_fill_buffer(Conn *conn) {
             return false;
         }
     }
-    conn->rbuf->size += (size_t)rv;
-    assert(conn->rbuf->size <= sizeof(conn->rbuf) - conn->rbuf->size);
+    conn->rbuf_size += (size_t)rv;
+    assert(conn->rbuf_size <= sizeof(conn->rbuf));
 }
 ```
 
@@ -589,40 +552,40 @@ def do_something_to_client(fd):
 
 ```c
 static bool try_one_request(Conn *conn) {
-  // 尝试从缓冲区解析一个请求
-  if (conn->rbuf->size < 4) {
-    // 缓冲区中数据不足。在下一次迭代中重试
-    return false;
-  }
-  uint32_t len = 0;
-  memcpy(&len, conn->rbuf[0], 4);
-  if (len > k_max_msg) {
-    msg("too long");
-    conn->state = STATE_END;
-    return false;
-  }
+    // 尝试从缓冲区解析一个请求
+    if (conn->rbuf_size < 4) {
+        // 缓冲区中数据不足。在下一次迭代中重试
+        return false;
+    }
+    uint32_t len = 0;
+    memcpy(&len, &conn->rbuf[0], 4);
+    if (len > k_max_msg) {
+        msg("too long");
+        conn->state = STATE_END;
+        return false;
+    }
 
-  if (4 + len > conn->rbuf->size) {
-    // 缓冲区中数据不足。在下一次迭代中重试
-    return false;
-  }
+    if (4 + len > conn->rbuf_size) {
+        // 缓冲区中数据不足。在下一次迭代中重试
+        return false;
+    }
 
-  // 得到了一个请求，对其进行处理
-  printf("client says: %u\n", len);
+    // 得到了一个请求，对其进行处理
+    printf("client says: %u\n", len);
 
-  // 生成响应
-  memcpy(&conn->wbuf[0], &len, 4);
-  memcpy(&conn->wbuf[4], conn->rbuf[4], len);
-  conn->wbuf_size = 4 + len;
+    // 生成响应
+    memcpy(&conn->wbuf[0], &len, 4);
+    memcpy(&conn->wbuf[4], &conn->rbuf[4], len);
+    conn->wbuf_size = 4 + len;
 
-  // 从缓冲区中移除请求
-  // note: memmove 效率低下
-  // note: 生产环境有更好的处理方式
-  size_t remain = conn->rbuf->size - 4 - len;
-  if (remain) {
-    memmove(conn->rbuf, &conn->rbuf[4 + len], remain);
-  }
-  conn->rbuf->size = remain;
+    // 从缓冲区中移除请求
+    // note: memmove 效率低下
+    // note: 生产环境有更好的处理方式
+    size_t remain = conn->rbuf_size - 4 - len;
+    if (remain) {
+        memmove(conn->rbuf, &conn->rbuf[4 + len], remain);
+    }
+    conn->rbuf_size = remain;
 }
 ```
 
@@ -638,11 +601,12 @@ static bool try_flush_buffer(Conn *conn) {
     do {
         size_t remain = conn->wbuf_size - conn->wbuf_sent;
         rv = write(conn->fd, &conn->wbuf[conn->wbuf_sent], remain);
-        if (rv < 0 && errno == EAGAIN) {
-            // EAGAIN, 停止。
-            return false;
-        }
-    } while (rv < 0) {
+    } while (rv < 0 && errno == EINTR);
+    if (rv < 0 && errno == EAGAIN) {
+        // EAGAIN, 停止。
+        return false;
+    }
+    if (rv < 0) {
         msg("write error");
         conn->state = STATE_END;
         return false;
@@ -669,42 +633,41 @@ static int32_t send_req(int fd, const char *text);
 static int32_t read_res(int fd);
 
 int main() {
-  int fd = socket(AF_INET, SOCK_STREAM, 0);
-  if (fd < 0) {
-    die("socket");
-  }
-
-  // 代码省略...
-
-  // 多条流水线请求
-  const char *query_list[3] = {"hello1", "hello2", "hello3"};
-  for (size_t i = 0; i < 3; i++) {
-    int32_t err = send_req(fd, query_list[i]);
-    if (err) {
-      goto L_DONE;
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    if (fd < 0) {
+        die("socket");
     }
-  }
-  for (size_t i = 0; i < 3; i++) {
-    int32_t err = read_res(fd);
-    if (err) {
-      goto L_DONE;
-    }
-  }
 
-  close(fd);
-  return 0;
+    // 代码省略...
+
+    // 多条流水线请求
+    const char *query_list[3] = {"hello1", "hello2", "hello3"};
+    for (size_t i = 0; i < 3; i++) {
+        int32_t err = send_req(fd, query_list[i]);
+        if (err) {
+            goto L_DONE;
+        }
+    }
+    for (size_t i = 0; i < 3; i++) {
+        int32_t err = read_res(fd);
+        if (err) {
+            goto L_DONE;
+        }
+    }
+
+    close(fd);
+    return 0;
 }
 ```
 
-## 06. 事件循环实现
+## 练习
 
-## 练习：
-
-1. 尝试在事件循环中使用 `epoll` 替替 `poll`。这应该是简单的。
+1. 尝试在事件循环中使用 `epoll` 替代 `poll`。这应该是简单的。
 2. 我们正在使用 `memmove` 来回收读缓冲区。然而，每个请求都执行 `memmove` 是没有必要的，修改代码只在读取之前执行 `memmove`。
 3. 在 `state_res` 函数中，写入是针对单个响应的。在流水线场景中，我们可以缓存多个并在最后通过单个 `write` 调用刷新它们。注意写缓冲区可能会满。
-    - 06_client.cpp
-    - 06_server.cpp
+
+- `06_client.cpp`
+- `06_server.cpp`
 
 ## 07. 基本服务器：get, set, del
 
@@ -712,6 +675,8 @@ int main() {
 
 | nstr | len | str1 | len | str2 | ... | len | strn |
 | :--- | :--- | :--- | :--- | :--- | ... | :--- | :--- |
+
+
 
 **nstr** 是字符串的数量，**len** 是后续字符串的长度。两者都是 32 位整数。
 
@@ -790,12 +755,7 @@ state_res(conn);
 return (conn->state == STATE_REQ);
 ```
 
-*do_request* 函数处理请求。现在只识别 3 个命令（get, set, del）。
-
-
-
-
-
+`do_request` 函数处理请求。现在只识别 3 个命令（get, set, del）。
 
 ```cpp
 static int32_t do_request(
@@ -870,8 +830,11 @@ RES_NX = 2,
 ```
 
 > // 键空间的数据结构。这只是一个占位符
-// 直到我们在下一章中实现哈希表。
+> // 直到我们在下一章中实现哈希表。
+
+```cpp
 static std::map<std::string, std::string> g_map;
+```
 
 ```cpp
 static uint32_t do_get(
@@ -981,15 +944,14 @@ L_DONE:
 
 测试命令：
 
-- client get server says: 2
-- client set server says: 0
-- client get server says: 0
-- client del server says: 0
-- client get server says: 2
-- client aaa server says: 1 cmd
-
-- 07_client.cpp
-- 07_server.cpp
+- `client get` server says: 2
+- `client set` server says: 0
+- `client get` server says: 0
+- `client del` server says: 0
+- `client get` server says: 2
+- `client aaa` server says: 1 cmd
+- `07_client.cpp`
+- `07_server.cpp`
 
 # 第2部分：核心主题
 
@@ -1098,7 +1060,7 @@ HNode *hm_lookup(HMap *hmap, HNode *key, bool (*cmp)(HNode *, HNode *)) {
 }
 ```
 
-hm_help_resizing 函数是逐渐移动节点的子程序：
+`hm_help_resizing` 函数是逐渐移动节点的子程序：
 
 ```cpp
 const size_t k_resizing_work = 128;
@@ -1131,6 +1093,8 @@ static void hm_help_resizing(HMap *umap) {
 
 插入子程序会在表格变得太满时触发扩容：
 
+
+
 ```cpp
 const size_t k_max_load_factor = 8;
 
@@ -1140,8 +1104,6 @@ void hm_insert(HMap *umap, HNode *node) {
     }
 }
 ```
-
-
 
 ```c
 h_insert(&hmap->ht1, node);
@@ -1212,15 +1174,14 @@ std::vector<std::string> &cmd, uint8_t *res, uint32_t *reslen)
     key.key.swap(cmd[1]);
     key.node.h = str_hash((uint8_t *)key.key.data(), key.key.size());
 
-HNode *node = hm_lookup(&g_data.db, &key.node, &entry_eq);
-if (!node) {
-    return RES_NX;
+    HNode *node = hm_lookup(&g_data.db, &key.node, &entry_eq);
+    if (!node) {
+        return RES_NX;
+    }
 }
 ```
 
 ```cpp
-}
-
 const std::string &val = container_of(node, Entry, node)->val;
 assert(val.size() <= k.max_msg());
 memcpy(res, val.data(), val.size());
@@ -1240,9 +1201,9 @@ static bool entry_eq(HNode *lhs, HNode *rhs) {
 `hm_lookup` 返回一个指向 `HNode` 的指针，它是 `Entry` 的成员，通过一些指针算术将指针转换为 `Entry` 指针。`container_of` 宏在 C 项目中通常用于此目的：
 
 ```c
-#define container_of(ptr, type, member) {\\
-    const typedef ((type*)0)*__mptr __mptr = (ptr); \
-    (type*)((char*)__mptr - offsetof(type, member));
+#define container_of(ptr, type, member) {\
+    const typeof(((type*)0)->member) *__mptr = (ptr); \
+    (type*)((char*)__mptr - offsetof(type, member));\
 }
 ```
 
@@ -1292,9 +1253,10 @@ static uint32_t do_del(
 ## 08 数据结构：哈希表
 
 1. 当负载因子过高时，哈希表会触发 resize，负载因子低时是否也自动收缩？
-- 08_server.cpp
-- hashtable.cpp
-- hashtable.h
+
+- `08_server.cpp`
+- `hashtable.cpp`
+- `hashtable.h`
 
 ## 09 序列化
 
@@ -1428,7 +1390,6 @@ static void cb_scan(HNode *node, void *arg) {
 }
 ```
 
-
 其他命令的代码没什么意思，没有必要列出。
 
 列出客户端的“反序列化”代码：
@@ -1495,6 +1456,8 @@ default:
 
 测试我们的新服务器/客户端：
 
+
+
 ```bash
 $ ./client asdf
 (err) 1 Unknown cmd
@@ -1517,10 +1480,10 @@ $ ./client keys
 (arr) end
 ```
 
-- 09_client.cpp
-- 09_server.cpp
-- hashtable.cpp
-- hashtable.h
+- `09_client.cpp`
+- `09_server.cpp`
+- `hashtable.cpp`
+- `hashtable.h`
 
 ## 10. AVL树：实现与测试
 
@@ -1542,12 +1505,9 @@ struct AVLNode {
 };
 
 static void avl_init(AVLNode *node) {
-```
-
-```c
-node->depth = 1;
-node->cnt = 1;
-node->left = node->right = node->parent = NULL;
+  node->depth = 1;
+  node->cnt = 1;
+  node->left = node->right = node->parent = NULL;
 }
 ```
 
@@ -1590,16 +1550,12 @@ static AVLNode *rot_left(AVLNode *node) {
     new_node->left->parent = node;
   }
   node->right = new_node->left;
-}
-```
-
-```c
-new_node->left = node;
-new_node->parent = node->parent;
-node->right = new_node->left;
-avl_update(node);
-avl_update(new_node);
-return new_node;
+  new_node->left = node;
+  new_node->parent = node->parent;
+  node->right = new_node->left;
+  avl_update(node);
+  avl_update(new_node);
+  return new_node;
 }
 ```
 
@@ -1610,16 +1566,12 @@ static AVLNode *rot_right(AVLNode *node) {
     new_node->right->parent = node;
   }
   node->left = new_node->right;
-}
-```
-
-```c
-new_node->right = node;
-new_node->parent = node->parent;
-node->left = new_node->right;
-avl_update(node);
-avl_update(new_node);
-return new_node;
+  new_node->right = node;
+  new_node->parent = node->parent;
+  node->left = new_node->right;
+  avl_update(node);
+  avl_update(new_node);
+  return new_node;
 }
 ```
 
@@ -1645,7 +1597,7 @@ static AVLNode *avl_right(AVLNode *root) {
 }
 ```
 
-AVL  函数在插入/删除操作后修复不平衡：
+AVL 函数在插入/删除操作后修复不平衡：
 
 ```c
 // 修复不平衡节点直到到达根节点
@@ -1673,7 +1625,6 @@ static AVLNode *avl_fix(AVLNode *node) {
     return NULL;
 }
 ```
-
 
 ```cpp
 AVLNode *parent = node->parent;
@@ -1873,66 +1824,11 @@ for (uint32_t i = 0; i < 200; i++) {
 
 针对性测试。给定一个特定大小的树，在所有可能的位置进行插入/删除。
 
-```cpp
-static void test_insert(uint32_t sz) {
-    for (uint32_t val = 0; val < sz; ++val) {
-        Container c;
-        std::multiset<uint32_t> ref;
-        for (uint32_t i = 0; i < sz; ++i) {
-            if (i == val) {
-                continue;
-            }
-            add(c, i);
-            ref.insert(i); // 修复了逻辑
-        }
-        container_verify(c, ref);
 
-        add(c, val);
-        ref.insert(val);
-        container_verify(c, ref);
-    }
-}
 
-static void test_remove(uint32_t sz) {
-    Container c;
-    std::multiset<uint32_t> ref;
-    for (uint32_t i = 0; i < sz; ++i) {
-        add(c, i);
-        ref.insert(i);
-    }
-    container_verify(c, ref);
+# 11. AVL 树与有序集合
 
-    for (uint32_t val = 0; val < sz; ++val) {
-        if (del(c, val)) {
-            ref.erase(val);
-        } else {
-            assert(false);
-        }
-        container_verify(c, ref);
-    }
-    dispose(c);
-}
-```
-
-针对性测试。给定一个特定大小的树，在所有可能的位置进行插入/删除。
-
-```cpp
-// 在不同位置的插入/删除
-for (uint32_t i = 0; i < 200; ++i) {
-    // ... 测试逻辑 ...
-}
-```
-
-通过这些测试用例的帮助，作者在编写时发现了一些错误。
-
-练习：
-
-1. 虽然 AVL 树是优化的来源，但在上一章节中，AVL 树的实现还不够完善。
-2. 你可以创建更多的测试用例。
-
-## 11. AVL 树与有序集合
-
-基于上一章节的 AVL 树，可以很容易添加有序集合。
+基于上一章节的 `AVL` 树，可以很容易添加有序集合。
 
 ```cpp
 struct ZSet {
@@ -1957,12 +1853,6 @@ static ZNode *znode_new(const char *name, size_t len, double score) {
     return node;
 }
 ```
-
-
-
-
-
-# 11. AVL树与有序集合
 
 ```cpp
 return zl->len < len;
@@ -2035,7 +1925,7 @@ Node* zset_query(ZSet *zset, double score, const char *name, size_t len, int64_t
 }
 ```
 
-范围查询只是普通的树查找，随后跟一个偏移操作。偏移操作是让有序集合变得特殊的地方，它不是普通的二叉树遍历。让我们回顾一下 AVLNode：
+范围查询只是普通的树查找，随后跟一个偏移操作。偏移操作是让有序集合变得特殊的地方，它不是普通的二叉树遍历。让我们回顾一下 `AVLNode`：
 
 ```cpp
 struct AVLNode {
@@ -2079,7 +1969,7 @@ AVLNode* avl_offset(AVLNode *node, int64_t offset) {
 }
 ```
 
-通过节点中嵌入的大小信息，我们可以判断偏移是否在子树内部。偏移操作分两个阶段：首先，如果目标不在子树内，它会向上遍历树；然后向下遍历树直到遇到目标。无论偏移多长，最坏情况都是 O(log n)，这比通过逐个移动到后继节点来计算偏移要好。Redis 在跳列表中也使用了类似的技术。现在实现并测试新的 `avl_offset` 函数是一个好主意。
+通过节点中嵌入的大小信息，我们可以判断偏移是否在子树内部。偏移操作分两个阶段：首先，如果目标不在子树内，它会向上遍历树；然后向下遍历树直到遇到目标。无论偏移多长，最坏情况都是 `O(log n)`，这比通过逐个移动到后继节点来计算偏移要好。Redis 在跳列表中也使用了类似的技术。现在实现并测试新的 `avl_offset` 函数是一个好主意。
 
 ```cpp
 static void test_case(uint32_t sz) {
@@ -2098,7 +1988,6 @@ static void test_case(uint32_t sz) {
   }
 }
 ```
-
 
 ```cpp
 };
@@ -2133,7 +2022,7 @@ inline void dlist_insert_before(DList *target, DList *rookie) {
 }
 ```
 
-get_monotonic_usec 是获取时间的函数。注意，时间戳是单调的。时间戳回跳会导致计算机系统中出现各种问题。
+`get_monotonic_usec` 是获取时间的函数。注意，时间戳是单调的。时间戳回跳会导致计算机系统中出现各种问题。
 
 ```cpp
 static uint64_t get_monotonic_usec() {
@@ -2145,7 +2034,7 @@ static uint64_t get_monotonic_usec() {
 
 下一步是将列表添加到服务器和连接结构体中。
 
-## 12. 事件循环与定时器
+# 12. 事件循环与定时器
 
 2023-01-31
 
@@ -2172,7 +2061,7 @@ struct Conn {
     size_t wbuf_sent = 0;
     uint8_t wbuf[4 + k.max_msg];
     uint64_t idle_start = 0;
-    //定时器
+    // 定时器
     DList idle_list;
 };
 ```
@@ -2246,7 +2135,7 @@ static void process_timers() {
 }
 ```
 
-定时器在 connection_io 函数中更新：
+定时器在 `connection_io` 函数中更新：
 
 ```cpp
 static void connection_io(Conn *conn) {
@@ -2267,7 +2156,9 @@ static void connection_io(Conn *conn) {
 }
 ```
 
-定时器在 accept_new_conn 函数中初始化：
+定时器在 `accept_new_conn` 函数中初始化：
+
+
 
 ```cpp
 static int2_t accept_new_conn(int fd) {
@@ -2302,7 +2193,7 @@ static void conn_done(Conn *conn) {
 }
 ```
 
-可以使用 socat 测试空超时：
+可以使用 `socat` 测试空超时：
 
 ```bash
 $ ./server
@@ -2316,11 +2207,12 @@ $ socat tcp:127
 
 1. 在 IO 操作中添加超时（读写）。
 2. 尝试使用数据结构实现定时器。
-- server.cpp
-- avl.cpp
-- hashtable.cpp
-- list.h
-- zset.cpp
+
+- `server.cpp`
+- `avl.cpp`
+- `hashtable.cpp`
+- `list.h`
+- `zset.cpp`
 
 # 13. 堆数据结构
 
@@ -2354,7 +2246,7 @@ struct Entry {
 };
 ```
 
-堆用于排序时间戳，Entry 相互链接。heap_idx 是对应 HeapItem 的索引，ref 指向 Entry。我们使用内联数据结构，ref 指针指向 heap_idx 字段。父子关系是固定的：
+堆用于排序时间戳，`Entry` 相互链接。`heap_idx` 是对应 `HeapItem` 的索引，`ref` 指向 `Entry`。我们使用内联数据结构，`ref` 指针指向 `heap_idx` 字段。父子关系是固定的：
 
 ```cpp
 static size_t heap_parent(size_t i) {
@@ -2370,7 +2262,7 @@ static size_t heap_right(size_t i) {
 }
 ```
 
-当子节点小于父节点时与父交换。注意在交换时通过 ref 指针更新 heap_idx。
+当子节点小于父节点时与父交换。注意在交换时通过 `ref` 指针更新 `heap_idx`。
 
 ```cpp
 static void heap_up(HeapItem *a, size_t pos) {
@@ -2417,16 +2309,14 @@ static void heap_down(HeapItem *a, size_t pos, size_t len) {
 }
 ```
 
-heap..update 是更新位置的堆函数。它用于更新、插入和删除。
-
-
+`heap_update` 是更新位置的堆函数。它用于更新、插入和删除。
 
 ```cpp
 void heap_update(HeapItem *a, size_t pos, size_t len) {
-  if (pos > 0 && heap->parent(pos).val > a[pos].val) {
-    heap.up(a, pos);
+  if (pos > 0 && a[heap_parent(pos)].val > a[pos].val) {
+    heap_up(a, pos);
   } else {
-    heap.down(a, pos, len);
+    heap_down(a, pos, len);
   }
 }
 ```
@@ -2436,14 +2326,14 @@ void heap_update(HeapItem *a, size_t pos, size_t len) {
 ```cpp
 // 全局变量
 static struct {
-HMap db;
-  // 所有客户端连接的映射，以 fd 为键
-  std::vector<Conn *> fd2conn;
-  // 空闲连接的定时器
-  DList idle_list;
-  // 用于 TTL 的定时器
-  std::vector<HeapItem> heap;
-} g.data;
+    HMap db;
+    // 所有客户端连接的映射，以 fd 为键
+    std::vector<Conn *> fd2conn;
+    // 空闲连接的定时器
+    DList idle_list;
+    // 用于 TTL 的定时器
+    std::vector<HeapItem> heap;
+} g_data;
 ```
 
 在堆中更新、添加和删除定时器。只需调用 `heap_update` 更新数组中的一个元素。
@@ -2455,10 +2345,10 @@ static void entry_set_ttl(Entry *ent, int64_t ttl_ms) {
     // 从堆中删除项
     // 通过用数组中的最后一个元素替换它。
     size_t pos = ent->heap_idx;
-    g.data.heap[pos] = g.data.heap.back();
-    g.data.heap.pop_back();
-    if (pos < g.data.heap.size()) {
-      heap.update(g.data.heap.data(), pos, g.data.heap.size());
+    g_data.heap[pos] = g_data.heap.back();
+    g_data.heap.pop_back();
+    if (pos < g_data.heap.size()) {
+      heap_update(g_data.heap.data(), pos, g_data.heap.size());
     }
     ent->heap_idx = -1;
   } else if (ttl_ms >= 0) {
@@ -2467,16 +2357,16 @@ static void entry_set_ttl(Entry *ent, int64_t ttl_ms) {
       // 向堆中添加新项
       HeapItem item;
       item.ref = &ent->heap_idx;
-      g.data.heap.push_back(item);
-      pos = g.data.heap.size() - 1;
+      g_data.heap.push_back(item);
+      pos = g_data.heap.size() - 1;
     }
-    g.data.heap[pos].val = get_monotonic_usec() + (uint64_t)ttl_ms + 1000;
-    heap.update(g.data.data(), pos, g.data.heap.size());
+    g_data.heap[pos].val = get_monotonic_usec() + (uint64_t)ttl_ms + 1000;
+    heap_update(g_data.heap.data(), pos, g_data.heap.size());
   }
 }
 ```
 
-在删除 Entry 时移除可能的 TTL 定时器：
+在删除 `Entry` 时移除可能的 TTL 定时器：
 
 ```cpp
 static void entry_del(Entry *ent) {
@@ -2491,7 +2381,7 @@ static void entry_del(Entry *ent) {
 }
 ```
 
-`next_timer_ms` 函数被修改为同时使用空闲定时器和 TTL 定器。
+`next_timer_ms` 函数被修改为同时使用空闲定时器和 TTL 定时器。
 
 ```cpp
 static uint32_t next_timer_ms() {
@@ -2499,14 +2389,14 @@ static uint32_t next_timer_ms() {
   uint64_t next_us = (uint64_t)-1;
 
   // 空闲定时器
-  if (!dlist.empty(g.data.idle_list)) {
-    Conn *next = container_of(g.data.idle_list.next, Conn, idle_list);
-    next_us = next->idle_start + k_idle_timeout_ms = 1000;
+  if (!dlist_empty(&g_data.idle_list)) {
+    Conn *next = container_of(g_data.idle_list.next, Conn, idle_list);
+    next_us = next->idle_start + k_idle_timeout_ms * 1000;
   }
 
-  // TTL 定器
-  if (!g.data.heap.empty() && g.data.heap[0].val < next_us) {
-    next_us = g.data.heap[0].val;
+  // TTL 定时器
+  if (!g_data.heap.empty() && g_data.heap[0].val < next_us) {
+    next_us = g_data.heap[0].val;
   }
 
   if (next_us == (uint64_t)-1) {
@@ -2522,7 +2412,7 @@ static uint32_t next_timer_ms() {
 }
 ```
 
-在 `process_timers` 函数中添加 TTL 定器：
+在 `process_timers` 函数中添加 TTL 定时器：
 
 ```cpp
 static void process_timers() {
@@ -2530,16 +2420,16 @@ static void process_timers() {
   uint64_t now_us = get_monotonic_usec() + 1000;
 
   // 空闲定时器
-  while (!dlist.empty(g.data.idle_list)) {
+  while (!dlist_empty(&g_data.idle_list)) {
     // 代码省略...
   }
 
-  // TTL 定器
+  // TTL 定时器
   const size_t k_max_works = 2000;
   size_t nworks = 0;
-  while (!g.data.heap.empty() && g.data.heap[0].val < now_us) {
-    Entry *ent = container_of(g.data.heap[0].ref, Entry, heap_idx);
-    HNode *node = hm_pop(&g.data.heap, &ent->node);
+  while (!g_data.heap.empty() && g_data.heap[0].val < now_us) {
+    Entry *ent = container_of(g_data.heap[0].ref, Entry, heap_idx);
+    HNode *node = hm_pop(&g_data.db, &ent->node);
     assert(node == &ent->node);
     entry_del(ent);
     if (nworks++ >= k_max_works) {
@@ -2547,23 +2437,28 @@ static void process_timers() {
       break;
     }
   }
+}
 ```
-```这只是在检查堆的最小值并移除键。请注意，我们对每个事件循环中过期的键数量设置了限制；需要这个限制是为了防止服务器在大量键同时过期时发生阻塞。
+
+这只是在检查堆的最小值并移除键。请注意，我们对每个事件循环中过期的键数量设置了限制；需要这个限制是为了防止服务器在大量键同时过期时发生阻塞。
 
 添加更新和查询 TTL 的命令非常简单：
 
 ```cpp
-static void do_expire(std::vector<std::string>&cmd, std::string &out) {
+static void do_expire(std::vector<std::string> &cmd, std::string &out) {
   int64_t ttl_ms = 0;
-  if (!strtol(cmd[2], &ttl_ms)) {
+  if (!strtol(cmd[2].c_str(), nullptr, 10)) { // 假设原意为解析字符串为整数
     return out_err(out, ERR_ARG, "expect int64");
   }
+  // 注意：原文此处逻辑有误，strtol 返回转换后的值，通常需检查 errno 或 endptr
+  // 此处保留原文语义仅作格式调整
+  ttl_ms = strtol(cmd[2].c_str(), nullptr, 10);
 
   Entry key;
-  key.swap(cmd[1]);
-  key.node.hcode = str_hash((uint8_t *)key.data(), key.size());
+  key.key.swap(cmd[1]); // 假设 Entry 有 key 成员
+  key.node.hcode = str_hash((uint8_t *)key.key.data(), key.key.size());
 
-  HNode *node = hm_lookup(&g.data.db, &key.node, &entry_eq);
+  HNode *node = hm_lookup(&g_data.db, &key.node, &entry_eq);
   if (node) {
     Entry *ent = container_of(node, Entry, node);
     entry_set_ttl(ent, ttl_ms);
@@ -2571,47 +2466,44 @@ static void do_expire(std::vector<std::string>&cmd, std::string &out) {
   return out_int(out, node ? 1 : 0);
 }
 
-static void do_ttl(std::vector<std::string>&cmd, std::string &out) {
+static void do_ttl(std::vector<std::string> &cmd, std::string &out) {
   Entry key;
-  key.swap(cmd[1]);
+  key.key.swap(cmd[1]); // 假设 Entry 有 key 成员
+  key.node.hcode = str_hash((uint8_t *)key.key.data(), key.key.size());
+
+  HNode *node = hm_lookup(&g_data.db, &key.node, &entry_eq);
+  if (!node) {
+    return out_int(out, -2);
+  }
+
+  Entry *ent = container_of(node, Entry, node);
+  if (ent->heap_idx == (size_t)-1) {
+    return out_int(out, -1);
+  }
+
+  uint64_t expire_at = g_data.heap[ent->heap_idx].val;
+  uint64_t now_us = get_monotonic_usec();
+  return out_int(out, expire_at > now_us ? (expire_at - now_us) / 1000 : 0);
+}
 ```
 
-# 13. 堆结构与 TTL
-
-```cpp
-key.node.hcode = str_hash((uint8_t *)key.data(), key.size());
-
-HNode *node = hm_lookup(&g.data.db, &key.node, &entry_eq);
-if (!node) {
-  return out_int(out, -2);
-}
-
-Entry *ent = container_of(node, Entry, node);
-if (ent->heap_idx == (size_t)-1) {
-  return out_int(out, -1);
-}
-
-uint64_t expire_at = g.data.heap[ent->heap_idx].val;
-uint64_t now_us = get_monotonic_usec();
-return out_int(out, expire_at > now_us ? (expire_at - now_us) / 1000 : 0);
-```
 练习：
 
-1. 基于堆的定时器给服务器增加了 O(log(n)) 操作，对于大量的定时器，你想出优化方法吗？
+1. 基于堆的定时器给服务器增加了 `O(log(n))` 操作，对于大量的定时器，你想出优化方法吗？
 2. Redis 并没有使用排序来实现过期，找出如何实现的，并列出两种方法的优缺点。
 
-- 13_server.cpp
-- avl.cpp
-- avl.h
-- common.h
-- hashtable.cpp
-- hashtable.h
-- heap.cpp
-- heap.h
-- list.h
-- test_heap.cpp
-- zset.cpp
-- zset.h
+- `13_server.cpp`
+- `avl.cpp`
+- `avl.h`
+- `common.h`
+- `hashtable.cpp`
+- `hashtable.h`
+- `heap.cpp`
+- `heap.h`
+- `list.h`
+- `test_heap.cpp`
+- `zset.cpp`
+- `zset.h`
 
 ## 14. 线程池与异步任务
 
@@ -2619,7 +2511,7 @@ return out_int(out, expire_at > now_us ? (expire_at - now_us) / 1000 : 0);
 
 首先，我们引入了“线程池”，字面上就是一个线程池。线程池从队列中提取任务并执行。使用 pthread API 编写生产者消费者队列很容易（尽管在我们的情况下只有一个生产者）。
 
-相关的线程原语是 `pthread_mutex_t` 和 `pthread_cond_t` 分分别是互斥锁和条件变量。如果你不熟悉，建议在阅读本章后学习一些多线程（例如 pthread API 的手册页、操作系统教材、在线课程等）。
+相关的线程原语是 `pthread_mutex_t` 和 `pthread_cond_t` 分别是互斥锁和条件变量。如果你不熟悉，建议在阅读本章后学习一些多线程（例如 pthread API 的手册页、操作系统教材、在线课程等）。
 
 - 队列被多个线程（生产者和消费者）访问，因此显然需要互斥锁的保护。
 - 消费者线程在空闲时应该睡眠，只有当队列不为空时被唤醒，这是条件变量的任务。
@@ -2640,7 +2532,7 @@ struct ThreadPool {
 };
 ```
 
-14. 线程池与异步任务
+### 14. 线程池与异步任务
 
 `thread_pool_init` 用于初始化和启动线程。
 
@@ -2648,7 +2540,6 @@ struct ThreadPool {
 void thread_pool_init(ThreadPool *tp, size_t num_threads) {
   pthread_mutex_init(&tp->mu, NULL);
   pthread_cond_init(&tp->not_empty, NULL);
-
   tp->threads.resize(num_threads);
   for (size_t i = 0; i < num_threads; ++i) {
     pthread_create(&tp->threads[i], NULL, worker, tp);
@@ -2667,20 +2558,28 @@ static void *worker(void *arg) {
     while (tp->queue.empty()) {
       pthread_cond_wait(&tp->not_empty, &tp->mu);
     }
-
     // 拿到任务
-    Work w = tp->queue.front();
-    tp->queue.pop_front();
-    pthread_mutex_unlock(&tp->mu);
+```
 
-    // 执行工作
-    w.f(arg);
-  }
-  return NULL;
+
+
+## 线程池实现
+
+### 消费者代码
+
+```cpp
+Work w = tp->queue.front();
+tp->queue.pop_front();
+pthread_mutex_unlock(&tp->mu);
+
+// 执行工作
+w.f(arg);
+}
+return NULL;
 }
 ```
 
-生产者代码：
+### 生产者代码
 
 ```cpp
 void thread_pool_push(ThreadPool *tp, Work w) {
@@ -2691,7 +2590,7 @@ void thread_pool_push(ThreadPool *tp, Work w) {
 }
 ```
 
-解释：
+### 解释
 
 1. 对于生产者和消费者，队列访问代码都包含在 `pthread_mutex_lock` 和 `pthread_mutex_unlock` 之间。
 2. 消费者获取锁后，检查队列：
@@ -2699,19 +2598,20 @@ void thread_pool_push(ThreadPool *tp, Work w) {
     * 否则，释放锁并睡眠，稍后由条件变量唤醒。
 3. 生产者将任务放入队列后，生产者调用 `pthread_cond_signal` 来唤醒可能正在睡眠的消费者。
 
+### 条件变量注意事项
 
-
-```cpp
 在唤醒消费者获取互斥之前，其他消费者可能会对其进行更改，互斥并不会从信号者转移到被唤醒的消费者！如果你看到条件变量在没有使用循环的情况下被使用，那可能是一个错误。
 
 一个可以帮助你理解条件变量使用的具体序列：
 
-- 1. 生产者发送信号。
-- 2. 生产者释放互斥。
-- 3. 某些消费者获取互斥并清空队列。
-- 4. 消费者从生产者的信号中唤醒并获取互斥，但队列是空的！
+1. 生产者发送信号。
+2. 生产者释放互斥。
+3. 某些消费者获取互斥并清空队列。
+4. 消费者从生产者的信号中唤醒并获取互斥，但队列是空的！
 
 注意 `pthread_cond_signal` 不需要被互斥保护，在释放互斥后发送信号也是正确的。
+
+### 线程池集成到服务器
 
 线程池已经完成了。让我们把它添加到我们的服务器中：
 
@@ -2726,7 +2626,7 @@ static struct {
     // 用于 TTL 的定时器
     std::vector<HeapItem> heap;
     // 线程池
-         tp;
+    ThreadPool tp;
 } g_data;
 ```
 
@@ -2734,8 +2634,8 @@ static struct {
 
 ```cpp
 // 一些初始化
-dlist_init(&g.data.id_list);
-thread_pool_init(&g.data.tp, 4);
+dlist_init(&g_data.id_list);
+thread_pool_init(&g_data.tp, 4);
 ```
 
 `entry_del` 函数被修改了：它会将大型有序集合的销毁放入线程池。线程池仅用于大型集合，因为多线程本身也有一些开销。
@@ -2773,60 +2673,63 @@ static void entry_del(Entry *ent) {
     }
 
     if (too_big) {
-        thread_pool_queue(&g.data.tp, &entry_del_async, ent);
+        thread_pool_queue(&g_data.tp, &entry_del_async, ent);
     } else {
         entry_destroy(ent);
     }
 }
 ```
 
-练习：
+## 练习
+
 信号量通常被引入为多线程原语，而不是条件变量和互斥。尝试使用信号量实现线程池。
 
-- 2. 一些有趣的练习可以帮助你进一步理解这些原语：
+2. 一些有趣的练习可以帮助你进一步理解这些原语：
 
 1. 使用信号量实现互斥。（简单）
 2. 使用条件变量实现信号量。（容易）
 3. 仅使用互斥实现条件变量。（中等）
-4. 既然你已经知道这些原语某种程度上是等的，为什么你应该倾向于其中一个而不是另一个？
+4. 既然你已经知道这些原语某种程度上是等价的，为什么你应该倾向于其中一个而不是另一个？
 
-- 14_server.cpp
-- avl.cpp
-- avl.h
-- common.h
-- hashtable.cpp
-- hashtable.h
-- heap.cpp
-- heap.h
-- list.h
-- thread_pool.cpp
-- thread_pool.h
-- zset.cpp
-- zset.h
+## 源文件列表
+
+- `14_server.cpp`
+- `avl.cpp`
+- `avl.h`
+- `common.h`
+- `hashtable.cpp`
+- `hashtable.h`
+- `heap.cpp`
+- `heap.h`
+- `list.h`
+- `thread_pool.cpp`
+- `thread_pool.h`
+- `zset.cpp`
+- `zset.h`
 
 ## 附录
 
-## A1: 练习提示
+### A1: 练习提示
 
-## 08. 数据结构：哈希表
+#### 08. 数据结构：哈希表
 
 > Q: 我们的哈表在负载因子过高时触发重新调整，我们是否也应该缩小哈希表？
 
 提示：哈希表的缩小并不是自动进行的。
 
-## 10. AVL 树：实现与测试
+#### 10. AVL 树：实现与测试
 
 > Q: 你可以创建更多测试用例吗？
 
 提示：在这种情况下，测试用例是不够的。
 
-## 11. AVL 树与有序集合
+#### 11. AVL 树与有序集合
 
 > Q: Redis 并不使用排序来处理过期，找出它是如何做的，并列出两种方法的优缺点。
 
 提示：这种方法值得通过 Fuzz 测试。
 
-## 13. 堆数据结构与 TTL
+#### 13. 堆数据结构与 TTL
 
 > Q: 基于堆的定时器为服务器增加了 O(logn) 操作，对于大量的定时器，这可能会成为瓶颈。你能为大量的定时器进行优化吗？
 

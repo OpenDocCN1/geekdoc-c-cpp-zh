@@ -1,49 +1,11 @@
+
 # Haynes 自组游戏电脑构建指南：终极电脑组装逐步手册
 
+## PART 1（第一部分）
 
+### BUILD YOUR OWN GAMING PC（自行组装游戏电脑）
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## PART 1
-
-第一部分
-
-### BUILD YOUR OWN GAMING PC
-
-自行组装游戏电脑
-
-#### Why build your own gaming PC?
-
-为什么要自行组装游戏电脑？
+#### Why build your own gaming PC?（为什么要自行组装游戏电脑？）
 
 - Advantages of PC gaming 8
 - PC 游戏的优势 8
@@ -68,9 +30,7 @@ As you might already know, high-end gaming hardware tends to be more expensive t
 
 正如你可能已经知道的，高端游戏硬件往往比普通套件更贵，所以无论你喜不喜欢，可用预算将在最终结果中发挥非常关键的作用。但这或许就是自己动手的最大优势；你完全掌控一切，可以精确决定资金投向何处。你想要一台快速的电脑？顶级游戏的最好画质？还是希望在机器上随时多任务处理？回答这些问题，你不仅会找到自己的需求，还会找到合适的预算。
 
-#### Advantages of PC gaming
-
-PC 游戏的优势
+#### Advantages of PC gaming（PC 游戏的优势）
 
 Perhaps the prevailing thought surrounding building a gaming PC is just how prohibitively expensive it is, but that's only true if you're not smart about your purchasing decisions. Sure, it'd be a simple task to pick out the most expensive parts and fit them all together, but while that could lead to issues of its own – compatibility being the biggest disaster you may encounter – it's also a fruitless endeavour in terms of power and gains. Building a gaming PC is about picking the right parts, and rule numero uno here comes first down to budget: knowing what you can afford and trying to stick to it rigidly will make the decision-making process considerably less daunting.
 
@@ -96,12 +56,11 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 
 但需要知道的是，仅仅选择自行组装，你就会自动节省资金。无论你是在网上还是在实体店购买预装游戏电脑，都会有额外的成本。没错，这样需要更多的人工投入，但最终意味着你会降低初始支出。事实上，你可以自由比价，在找到愿意支付的价格时购买，这只会增加节省的潜力。
 
-
-
-
 ![](img/f51994701f272059dc108a0376ffceb8_12_0.png)
 
-### 独立游戏玩家
+#### What type of gamer are you?（你是哪种类型的玩家？）
+
+##### 独立游戏玩家
 
 如今，PC 游戏已经不再只追求前沿画质。在过去几年中，所谓的“独立游戏”蓬勃发展，即由不超过十人的小型团队开发的游戏。自然，由于这些开发者的预算有限，独立游戏在技术上受到更多限制，但通常会带来更具创新性或实验性的玩法概念，而这些是大预算开发者没有自由去创造的。
 
@@ -125,7 +84,7 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 
 《堡垒之夜》是玩家最多的游戏之一，也一直是最常直播（和收看）的游戏之一。这个泡沫看上去还不会立即破裂。
 
-### 主播
+##### 主播
 
 在 Twitch 上直播游戏过程或为 YouTube 录制视频是一种极为流行的游戏方式；一些人受到大型视频内容创作者巨大成功的驱使，另一些人则只是喜欢在玩游戏时有人互动、学习。由于首要问题归根结底取决于你想直播哪类游戏，这也会决定你需要什么样的硬件。值得一提的是，由于你的目的是与全世界分享你的游戏过程，人们对画质会有一定预期；如果观众看不清游戏内容，他们为什么要留下来观看呢？
 
@@ -144,7 +103,7 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 - 1TB 希捷 SSHD 混合硬盘
 - 海盗船 CX600 电源
 
-### 职业玩家
+##### 职业玩家
 
 “职业玩家”的定义相当宽泛；虽然它越来越主要指的是职业选手——即在电竞赛事中参加高水平竞技的人——但也可以指那些将游戏当作严肃爱好并全心投入的玩家。无论哪种情况，这类玩家的需求都是拥有一台能让他们以最佳画质流畅运行最高端游戏的 PC。也就是说，这台机器要能在“超高”画质下以流畅的 60FPS（或更高）运行任何游戏，理想情况下还不需要太多调整设置或挑剔硬件。
 
@@ -166,14 +125,14 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 
 ![](img/f51994701f272059dc108a0376ffceb8_14_0.png)
 
-### 你是哪种类型的玩家？
+
+
 
 所以现在你大致知道自己可能想组装一台什么样的 PC 了。但要真正引导自己走上正确方向，你还需要考虑自己属于哪种玩家类型。虽然主机游戏通常也会登陆 PC，但有些游戏是专门为电脑设计的；从这个意义上说，知道你想玩哪些游戏，最终会告诉你你在寻找什么。这里有一份方便的速查表，帮助你认清自己是哪种类型的玩家。
 
 像 *《魔兽世界》* 这样的 MMO 通常是 PC 平台独占，这往往是因为它们的深度、技术需求以及任意时刻可能的操作数量，都确实能从电脑相对于主机的优势中获益。
 
 ![](img/f51994701f272059dc108a0376ffceb8_15_0.png)
-
 ![](img/f51994701f272059dc108a0376ffceb8_15_1.png)
 
 策略游戏通常更适合 PC，因为它们通常带有大量菜单和需要点击的按钮；所以如果你喜欢能让你思考的游戏，那么 PC 游戏正适合你。
@@ -186,10 +145,6 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 | 开放世界 | 虽然开放世界游戏并非 PC 独占，但它们的优势在于这些游戏由能快速流式传输数据的系统驱动。这也是模组制作者非常喜欢的类型，而 PC 游戏的这一支线能带来主机无法企及的全新游戏和体验。 | • 作为一个类型，开放世界游戏或许提供了最广泛的设置范围，从而允许各种系统配置。机器每个关键部件越强大，你就越能在这个类型中感受到差异。<br>• 开放世界游戏通常依赖将数据流式传输进出活跃内存，因此内存和 CPU 是这里的最佳投入方向。 |
 | 策略 | 由于策略游戏以菜单为中心，PC 游戏更适合这一类型，因为鼠标输入更便利。这可以涵盖回合制、类似桌游的体验（如《文明》），节奏极快的即时战略，以及庞大的模拟游戏子类型。后者通常围绕建造城市、经营企业或管理贸易展开。 | • 虽然策略游戏在画面清晰度上不会超越第一人称游戏，但有时它们对 GPU 的要求会出奇地高，所以必须要有能胜任的部件。<br>• 话虽如此，许多技术需求会受你的偏好影响。城市建造类游戏自然受益于更好的显卡，而回合制策略游戏则需要计算能力来更快速地应对 AI 敌方队伍。 |
 | 大逃杀 | 作为这里唯一可以被视为“新兴”的类型，大逃杀的典型特征是多人体验，一大群玩家竞争成为最后存活者。其理念是在世界中搜寻越来越强但位置随机的武器和物品，同时活动空间不断缩小，因此紧张感不断上升。这也使它成为一个非常适合直播的类型。 | • 大多数人一定听说过《堡垒之夜》这个名字；正是这款游戏以其亲和的系统要求和对核心玩法的简化，让这一类型流行起来。不过，其他争夺王位的竞争者试图以更高的画质来区分自己，因此对图形性能的关注至关重要。<br>• 值得指出的一点是，这一类型非常新，因此这些游戏以我们无法预测的方式演变的潜力还是未知的。 |
-
-
-
-
 
 ### 需要考虑的事项
 
@@ -243,7 +198,7 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 
 ### 安装软件
 
-你可能会注意到，我们在任何装机方案中都没有包含 DVD（光驱）。这主要是因为本书的制作人员在过去五年里根本没有接触过任何 DVD 或光盘。我们理解这可能不适用于每个人，一些读者可能会想知道他们该如何安装 Windows 或像 Ubuntu 或 Steam OS 这样的 Linux 发行版。对于 Windows，你只需从微软下载官方 ISO（磁盘映像）以及他们的便捷 USB 工具，即可在 http://windows.microsoft.com/en-GB/windows-8/create-reset-refresh-media 找到。所有你需要的是一个 8GB 的 USB 闪存盘。现在 Steam OS，这款为 Steam Machines 提供动力的基于 Linux 的操作系统，已支持超过 1,000 款游戏，你可能想尝试一下。有关如何通过 USB 闪存盘安装的完整说明，只需访问 http://store.steampowered.com/steamos。
+你可能会注意到，我们在任何装机方案中都没有包含 DVD（光驱）。这主要是因为本书的制作人员在过去五年里根本没有接触过任何 DVD 或光盘。我们理解这可能不适用于每个人，一些读者可能会想知道他们该如何安装 Windows 或像 Ubuntu 或 Steam OS 这样的 Linux 发行版。对于 Windows，你只需从微软下载官方 ISO（磁盘映像）以及他们的便捷 USB 工具，即可在 `http://windows.microsoft.com/en-GB/windows-8/create-reset-refresh-media` 找到。所有你需要的是一个 8GB 的 USB 闪存盘。现在 Steam OS，这款为 Steam Machines 提供动力的基于 Linux 的操作系统，已支持超过 1,000 款游戏，你可能想尝试一下。有关如何通过 USB 闪存盘安装的完整说明，只需访问 `http://store.steampowered.com/steamos`。
 
 ## PART 2 游戏 PC 的结构
 
@@ -261,10 +216,6 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 也许这听起来不可能，但想想它的各个部分总和。打开机箱后，只需安装电源和主板，然后再添加 CPU、内存、显卡以及任何存储或媒体驱动器。或许这对新手来说听起来有点轻视这项看似复杂的任务，但事实是，现代电脑硬件在多年来已被标准化到极致，基本上就是即插即用。只要你有条理并正确连接，机器可以在安装 Windows 所需的时间内以最少的麻烦启动运行。
 
 然而，与许多事情一样，工作的很大一部分成功取决于规划阶段。如果你规划不当，你可能需要花时间去购买电源延长线或完成工作所必需的散热风扇。我们还应发出警告：如果订购了不兼容的零件（例如错误的内存或处理器），你可能会发现自己无法在不订购替换组件的情况下完成 PC 装机。
-
-
-
-
 
 ## PART 2：理解基础知识
 
@@ -307,15 +258,16 @@ But the thing to know is that simply by choosing to self-build, you'll automatic
 
 ![](img/f51994701f272059dc108a0376ffceb8_23_0.png)
 
-
-
-
-
 ### Strategy
 
 | Game: | *Planet Coaster* | *Total War: Three Kingdoms* |
 |---|---|---|
+
+
+
+
 | Recommended system specs: | CPU: Intel Core i7-4770 3.90 GHz or AMD FX-8350 4.0GHz<br>GPU: Nvidia GeForce GTX 980 4GB or AMD R9 380 4GB<br>RAM: 12GB | CPU: Intel Core i5 6600 or AMD Ryzen 5 2600X<br>GPU: Nvidia GeForce GTX 970 or AMD R9 Fury X 4GB<br>RAM: 8GB |
+|---|---|---|
 
 尽管现在已经过去几年了，*Planet Coaster* 仍然是策略游戏模拟分支有多么密集的绝佳例子。坦白说，更新的可比游戏可能会为潜在的建造者提供更当代的见解，例如 *Anno 1800* 的要求高得多，而且当然也有与之相匹配的高级视觉效果。但 *Planet Coaster* 是现代模拟游戏的典型代表，并突出了游戏系统可能有多复杂；高端视觉效果、过山车的物理计算、你公园游客的 AI 计算——*Planet Coaster* 应有尽有，这也体现在其配置要求上。*Total War* 则是完全不同的故事。这些游戏是关于在图形精美、逼真的战斗中管理庞大军队。有趣的是，它同样具有实时 AI 计算、高端视觉效果和弹药的基于物理的计算。尽管如此，它并不推荐使用游戏硬件的绝对顶峰来流畅运行，因此如果你对策略游戏感兴趣，这是一个很好的目标估计。
 
@@ -384,9 +336,6 @@ Planet Coaster 可能因为其卡通视觉效果而不像是一款密集的游�
 
 你的 PC 机箱尺寸将控制主板尺寸。当然，更小的 Mini ITX 有更多限制，但仍然可以构建一个微型动力核心。
 
-
-
-
 除此之外，还有更小尺寸的 Micro ATX 和 Mini ITX。Micro ATX 在占用空间较小与提供足够数量的扩展插槽之间取得了很好的平衡。它们依然是 ATX 的不错替代选择，并不一定需要做出太多妥协。另一方面，Mini ITX 是三者中最小的，自然在可安装的部件上限制更多，但只要你追求的不是最高端的游戏技术，那么对于想组装一台不占太多空间且便携性极高的 PC 的用户来说，它就是一个可选方案。值得补充的是，还有更大的 E-ATX 或 XL-ATX 规格，但如果你考虑的系统需要这么大的空间，那么你本来就打算组装一台远远超出 PC 组装入门阶段需求的机器。
 
 更通用的芯片组适合游戏玩家。AMD 在耐用性方面稍微更公平一些，目前 Ryzen AM4 插槽系列的处理器应该还能持续一段时间。从这个意义上说，X370 和 X470 芯片组偏向发烧友级别，而更广泛的预算选项意味着游戏玩家有更多选择，并且不一定会限制未来升级的选择。
@@ -431,10 +380,8 @@ Intel 和 AMD 都提供非常高端的芯片组——分别是 X299 和 X399—�
 
 购买主板时要记住的重要事情是，让它与你的处理器所属的芯片组正确匹配。
 
-
-
-
 # 第二部分
+
 中央处理器（CPU）
 
 我们来谈谈处理器。具体来说，我们讨论的是CPU（中央处理器），而不是GPU（图形处理器）甚至APU（加速处理器）。CPU常被称为计算机的大脑，但硅片并不能真正独立思考。事实上，CPU只不过是一台非常聪明的计算器，每秒执行数十亿次的数学计算。
@@ -471,6 +418,8 @@ AMD的Ryzen系列是当前的选择，比英特尔的同级产品便宜，但也
 
 ## 核心尺寸
 
+
+
 以纳米（nm）为单位，相对于CPU上的单个核心，核心尺寸这个指标在很大程度上可以忽略。如果你组装一台相当典型的计算机——无论预算如何——在CPU的核心尺寸方面，你很可能会看到14nm、22nm或32nm这些数字。如果你要深入研究硬件采购的细节，那么值得知道的是，较小的核心尺寸会带来更高效的功耗和计算速度，在这方面英特尔芯片目前领先。但实际上，与一些更核心的指标相比，核心尺寸是一个相当微不足道的考量因素；在挑选处理器时，不必担心忽略核心尺寸。
 
 ## 核心名称
@@ -488,9 +437,6 @@ AMD的Ryzen系列是当前的选择，比英特尔的同级产品便宜，但也
 这些缩写真的那么重要吗？嗯，既是也不是。每个缩写都指处理器中使用的“总线”类型。计算机的“总线”——正如其名——是将数据从CPU传输到其他硬件的载体。因此，这个部件的速度会影响其他元件（如显卡或内存）向计算机中央大脑接收和回传数据的速度。就像你乘坐的公共汽车一样，它跑得越快，到达目的地就越快。然而，这些缩写本身并不那么重要。FSB可能是最常见的，尽管已越来越过时，而较新的——如DMI——每秒最高可传输20 GT/s。你可能还会发现这个数值以MHz（兆赫兹）为单位，这二者是有区别的。MHz是总线的速度，而GT/s是它能够完成的传输次数。虽然速度对于计算机总线来说很重要，但现代架构要求能够完成的传输次数同样重要。在这方面，总线的宽度往往比速度更重要；再用交通运输来类比，如果一辆公交车在满载时能载两倍于另一辆较小却稍快的公交车的乘客，那么它就能运送更多乘客。幸好你并不需要太担心其中的原理；只需明白这个数字越高——无论以何种方式衡量——对你系统的整体性能就越好。
 
 ![](img/f51994701f272059dc108a0376ffceb8_33_0.png)
-
-
-
 
 ## 电压、功率与温度
 
@@ -602,6 +548,8 @@ Titan是NVIDIA最高端的产物，单张显卡售价超过2000英镑。这真�
 
 #### 核心/加速时钟
 
+
+
 与核心总数相关的是单个核心速度，这也是某些具有相同（甚至更少）核心数的显卡比其他显卡更强大的原因。把核心想象成显卡的微型引擎；核心时钟速度（以MHz为单位）表示该引擎的工作速度。这意味着更高的数字表示显卡的核心工作速度比竞争对手更快，所以这是一个很好的——虽然不是必须的——衡量指标。而加速时钟（Boost Clock）则是GPU所能达到的速度；与所有PC硬件一样，GPU以低于其真实性能的速度出售，以保持系统安全和显卡寿命。虽然你不需要一开始就提高该时钟速度，但还是要注意这个数字——如果你将来想超频，它有助于你了解其潜力。
 
 ### 散热
@@ -615,9 +563,6 @@ Titan是NVIDIA最高端的产物，单张显卡售价超过2000英镑。这真�
 ![](img/f51994701f272059dc108a0376ffceb8_40_0.png)
 
 显卡上的风扇越多，运行温度自然就越低。根据你打算如何为系统散热，这一点可能很重要。
-
-
-
 
 ![](img/f51994701f272059dc108a0376ffceb8_41_0.png)
 
@@ -675,8 +620,6 @@ Mini-ITX尺寸的机箱是最难组装的，因为空间非常有限，但只要
 
 如今，PC组装变得越来越简单，这在很大程度上要归功于“免工具”机箱的标准化。这些优点不应当左右你的购买决定，主要是因为在设计更适合游戏的机箱时通常已经考虑了这些结构优势，但它们足以帮助你在一众选项中做出选择。虽然你确实希望看到这一优点——基本上意味着通过指旋螺钉或卡扣减少了损坏螺丝的风险——但还有其他优势
 
-
-
 一些厂商在机箱的某些方面做得更好，而在另一些方面则稍逊一筹。在你研究想要的机箱时，很快就会发现这些差异。
 
 ![](img/f51994701f272059dc108a0376ffceb8_45_0.png)
@@ -717,21 +660,7 @@ NZXT 的机箱因其时尚现代的设计而备受好评，但该厂商在机箱
 
 就存储而言，行业相当一致。总是会有更快、更安全的存储选项的创新，而这些通常是最昂贵的购买。硬盘驱动器 HDD 已存在数十年，以物理方式将数据写入存储介质，是最便宜的选项。固态硬盘也存在一段时间了，但速度快得多，并且仍在不断演进。除此之外，还有 M.2 SSD 选项，越来越受欢迎，并以更小的外形直接安装在主板上。虽然 M.2 连接比其 SATA SSD 驱动器等价物更快，但加载时间之间的差异不足以成为选择此版本的主要原因，然而两者之间的价格通常也没有太大差异——事实上，大多数厂商会以几乎相同的价格将任一选项作为特定 SSD 型号的一部分提供。虽然固态硬盘在近年来变得更加实惠，但它们在容量和价格方面仍然有限。由于安装大量游戏很容易消耗一 TB 数据，因此对我们大多数人来说，完全用 SSD 配置一台机器是不切实际的。所以大多数人倾向于的做法是同时配备两种类型：250GB 或 500GB 的更快的 SSD 存储用于操作系统和经常访问的程序和游戏的安装，以及 2TB 或 3TB 的标准硬盘存储用于所有那些游戏。你可能可以只购买一块 1TB 固态硬盘花费更少，但这样你更可能遇到需要权衡要安装哪些游戏的情况。这是一个偏好问题，你很容易找到适合自己需求的平衡点，但存储的美妙之处在于它是少数可以按需随时升级的电脑硬件部件之一。
 
-当然，由于所有数据都将存储在这些驱动器上，你会希望确保所购买的驱动器值得信赖。我们无法完全帮你做到这一点，不过购买三星、西数、 crucial 或希捷的驱动器更有可能提供一定程度的安全性。[content]
-
-一些厂商在机箱的某些方面做得更好，而在另一些方面则稍逊一筹。在你研究想要的机箱时，很快就会发现这些差异。
-
-![](img/f51994701f272059dc108a0376ffceb8_45_0.png)
-
-可以改变局势的东西包括：用于保护存储驱动器的橡胶理线孔、定制的驱动器托架位置，或是始终有用的理线管理选项，仅举几例。
-
-### 前面板选项
-
-这又是一个取决于个人喜好的情况。大多数机箱至少会配备几个 USB 3.0 接口，也许还有耳机和麦克风插孔。这些接口有助于减少移动电脑以访问后部连接所需的时间，但还可以提供更多。有些机箱配备 SD 卡或 Thunderbolt 3 接口、音量和单个风扇控制，甚至用于监控温度的 LCD 显示屏。不仅如此，前面板的设计方式本身也可以是一个重要特性，因为有些机箱会将按钮和接口隐藏在门后或机箱顶部，而另一些则旨在更炫目，配备 LED 照明。既然这是你通常会最常看到的机器部分，这就不是一个可以轻率做出的决定。
-
-![](img/f51994701f272059dc108a0376ffceb8_45_1.png)
-
-NZXT 的机箱因其时尚现代的设计而备受好评，但该厂商在机箱的功能特性上也毫不松懈。
+当然，由于所有数据都将存储在这些驱动器上，你会希望确保所购买的驱动器值得信赖。我们无法完全帮你做到这一点，不过购买三星、西数、 crucial 或希捷的驱动器更有可能提供一定程度的安全性。
 
 ## PART 2 Power, storage and cooling
 
@@ -757,6 +686,8 @@ NZXT 的机箱因其时尚现代的设计而备受好评，但该厂商在机箱
 
 ### Storage
 
+
+
 就存储而言，行业相当一致。总是会有更快、更安全的存储选项的创新，而这些通常是最昂贵的购买。Hard disk drives (HDD) 已存在数十年，以物理方式将数据写入存储介质，是最便宜的选项。Solid-state drives 已存在一段时间了，但速度快得多，并且仍在不断演进。除此之外，还有 M.2 SSD 选项，越来越受欢迎，并以更小的外形直接安装在主板上。虽然 M.2 连接比其 SATA SSD 驱动器等价物更快，但加载时间之间的差异不足以成为选择此版本的主要原因，然而两者之间的价格通常也没有太大差异——事实上，大多数厂商会以几乎相同的价格将任一选项作为特定 SSD 型号的一部分提供。虽然固态硬盘在近年来变得更加实惠，但它们在容量和价格方面仍然有限。由于安装大量游戏很容易消耗一 TB 数据，因此对我们大多数人来说，完全用 SSD 配置一台机器是不切实际的。所以大多数人倾向于的做法是同时配备两种类型：250GB 或 500GB 的更快的 SSD 存储用于操作系统和经常访问的程序和游戏的安装，以及 2TB 或 3TB 的标准硬盘存储用于所有那些游戏。你可能可以只购买一块 1TB 固态硬盘花费更少，但这样你更可能遇到需要权衡要安装哪些游戏的情况。这是一个偏好问题，你很容易找到适合自己需求的平衡点，但存储的美妙之处在于它是少数可以按需随时升级的电脑硬件部件之一。
 
 当然，由于所有数据都将存储在这些驱动器上，你会希望确保所购买的驱动器值得信赖。我们无法完全帮你做到这一点，不过购买 Samsung, Western Digital, Crucial 或 Seagate 驱动器更有可能提供一定程度的安全性。As ever, user reviews 将是你的朋友。
@@ -771,37 +702,34 @@ NZXT 的机箱因其时尚现代的设计而备受好评，但该厂商在机箱
 
 确保你的游戏 PC 保持凉爽非常重要，但液冷并不是每个系统的自动最佳选择。
 
-
-
-
-
 # PART 3
-组装一台游戏 PC
 
-+   安装 CPU 53
-+   安装 CPU 散热器 55
-+   安装内存和 M.2 存储 58
-+   安装主板 60
-+   安装两个硬盘 62
-+   安装显卡 64
-+   安装电源 66
-+   线缆布线 69
+## 组装一台游戏 PC
+
+- 安装 CPU 53
+- 安装 CPU 散热器 55
+- 安装内存和 M.2 存储 58
+- 安装主板 60
+- 安装两个硬盘 62
+- 安装显卡 64
+- 安装电源 66
+- 线缆布线 69
 
 到目前为止，希望你已经完成了所有可以做的研究，并挑选出一套你满意的组件来组装你的第一台游戏 PC。如果是这样，就进入下一步令人紧张的环节：把所有东西组装起来。可以理解如果你感到有些忐忑；某种程度上这是真相大白的时刻。但相信我们所说，它并没有看起来那么困难。当然你需要小心，但大部分情况下所有东西都会很顺畅地卡合在一起。
 
 在我们开始逐步操作之前，我们先来介绍一下我们的装机方案。这不应被视为你自己装机的建议（如果你到目前为止学到了什么，那就是 PC 装机是一项真正个性化的体验），但了解我们的思路会很有帮助，因为这将指导后续的组装过程。
 
-+   - Fractal Design Define S 中塔机箱 £75
-+   - Gigabyte Intel Z390 UD 主板 £105
-+   - Intel i7 9700K 3.60GHz CPU £385
-+   - Gigabyte NVIDIA GeForce GTX 1660 6GB 显卡 £230
-+   - Corsair Vengeance LPX CL16 16GB DDR4 内存 £70
-+   - Crucial MX500 1TB 3D NAND M.2 SSD £110
-+   - Fractal Design R3 Silent Case Fan 120mm £10
-+   - Be Quiet! 600W Pure Power 11 CM 80 Plus Gold 电源 £75
-+   - Cooler Master Hyper 212X Tower CPU 散热器 £25
-+   - Gigabyte Combo Intel 11ac 无线网卡 £25
-+   TOTAL COST £1,105
+- Fractal Design Define S 中塔机箱 £75
+- Gigabyte Intel Z390 UD 主板 £105
+- Intel i7 9700K 3.60GHz CPU £385
+- Gigabyte NVIDIA GeForce GTX 1660 6GB 显卡 £230
+- Corsair Vengeance LPX CL16 16GB DDR4 内存 £70
+- Crucial MX500 1TB 3D NAND M.2 SSD £110
+- Fractal Design R3 Silent Case Fan 120mm £10
+- Be Quiet! 600W Pure Power 11 CM 80 Plus Gold 电源 £75
+- Cooler Master Hyper 212X Tower CPU 散热器 £25
+- Gigabyte Combo Intel 11ac 无线网卡 £25
+- TOTAL COST £1,105
 
 我们本可以很容易地为这个假设的装机投入大量资金并仍然在后面的指南中解释一切，但这样有什么乐趣呢？正如我们在研究电脑的章节中解释的那样，在确定游戏 PC 需要哪些部件时有一个目标是很重要的——我们正是这样做的。当然，我们本可以构想我们的梦想装机，但那对本书的大多数读者来说并不现实。我们的目标是，组装一台游戏 PC，能够舒适地运行最新的高端游戏并兼顾 VR 能力，同时仍保持在适中的预算内。我们还希望设计一台运行安静的 PC，因为在我们想象的家中，它会放在客厅角落，所以不能发出太多分贝。
 
@@ -833,15 +761,13 @@ M.2 存储驱动器有许多优点，但如果 1TB 最终不够用，扩展起�
 
 ## PART 3 安装 CPU
 
-### 1
-准备机箱
+### 1 准备机箱
 
 最糟糕的第一步就是在没有先安装整个系统最重要的——更不用说最精密的——组件之前就把主板拧进机箱。先取下 PC 机箱的面板，通常通过机箱后部两侧的两个拇指螺丝。然后取出主板包装并将其放在坚固、光线充足的桌子上。
 
 ![](img/f51994701f272059dc108a0376ffceb8_54_0.png)
 
-### 2
-解锁 CPU 插槽
+### 2 解锁 CPU 插槽
 
 CPU 插槽两侧各有一个或两个杠杆；逐一向下并远离插槽推动它们以释放。将其拉起并移离插槽。这将释放负载板，随后可以将其抬起以取下 CPU 插槽的保护盖。注意裸露插槽四个角上的四个对齐键以及其中一个角的三角形标记。
 
@@ -859,63 +785,40 @@ CPU 插槽两侧各有一个或两个杠杆；逐一向下并远离插槽推动�
 
 ![](img/f51994701f272059dc108a0376ffceb8_55_1.png)
 
-
-
-
-
 ## PART 3 安装 CPU 散热器
 
 ### 1 准备安装板
+
 风冷散热器有无数种形状和尺寸，但较大的散热器都会附带一个安装板，该板安装在主板的背面。这可以平衡重型散热器的重量，散热器在机箱内水平放置。首先将支架放入 CPU 四角的每个孔中。你可能需要对这一步和下一步分别重复四次。
 
 ![](img/f51994701f272059dc108a0376ffceb8_56_0.png)
 
 ### 2 安装安装板
+
 将板定位到主板背面，使用角部的凹槽对齐正确位置。这些板设计为适配多块主板，但只有在每个孔都正确对齐的位置才适用。将螺母附着到每个支架上，将安装板固定在背面。
 
 ![](img/f51994701f272059dc108a0376ffceb8_56_1.png)
 
 ### 3 拧紧螺母
+
 你必须确保这个安装板非常牢固地安装好，因为这些散热风扇相当重。方法因型号而异，但在大多数情况下，你会提供一个盖子，可用于将螺母拧得更紧。然后你需要翻转主板，并将十字形握把与支架的对应位置对齐。
 
 ![](img/f51994701f272059dc108a0376ffceb8_57_0.png)
 
 ### 4 安装握把
+
 不要立即将握把固定到位，因为在之前还有一个至关重要的步骤需要完成。先进行一次空试，将两者就位，然后一旦找到所有部件正确对齐的位置，就将握把的中央螺丝附着到散热器底座的中央点上。这将是使散热器牢固地固定在风扇上的部件。
 
 ![](img/f51994701f272059dc108a0376ffceb8_57_1.png)
 
 ### 5 涂抹导热膏
-在安装散热器之前就是令人害怕的部分：导热膏。清洁已安装 CPU 的顶部；通常你的散热器会提供一块擦拭布，如果没有，则使用异丙醇和干净的擦拭布去除 CPU 顶部任何灰尘和污垢。然后在 CPU 中央仅涂抹非常少量导热膏；其原理是散热器会为你[content]
 
-## PART 3 安装 CPU 散热器
-
-### 1 准备安装板
-风冷散热器有无数种形状和尺寸，但较大的散热器都会附带一个安装板，该板安装在主板的背面。这可以平衡重型散热器的重量，散热器在机箱内水平放置。首先将支架放入 CPU 四角的每个孔中。你可能需要对这一步和下一步分别重复四次。
-
-![](img/f51994701f272059dc108a0376ffceb8_56_0.png)
-
-### 2 安装安装板
-将板定位到主板背面，使用角部的凹槽对齐正确位置。这些板设计为适配多块主板，但只有在每个孔都正确对齐的位置才适用。将螺母附着到每个支架上，将安装板固定在背面。
-
-![](img/f51994701f272059dc108a0376ffceb8_56_1.png)
-
-### 3 拧紧螺母
-你必须确保这个安装板非常牢固地安装好，因为这些散热风扇相当重。方法因型号而异，但在大多数情况下，你会提供一个盖子，可用于将螺母拧得更紧。然后你需要翻转主板，并将十字形握把与支架的对应位置对齐。
-
-![](img/f51994701f272059dc108a0376ffceb8_57_0.png)
-
-### 4 安装握把
-不要立即将握把固定到位，因为在之前还有一个至关重要的步骤需要完成。先进行一次空试，将两者就位，然后一旦找到所有部件正确对齐的位置，就将握把的中央螺丝附着到散热器底座的中央点上。这将是使散热器牢固地固定在风扇上的部件。
-
-![](img/f51994701f272059dc108a0376ffceb8_57_1.png)
-
-### 5 涂抹导热膏
 在安装散热器之前就是令人害怕的部分：导热膏。清洁已安装 CPU 的顶部；通常你的散热器会提供一块擦拭布，如果没有，则使用异丙醇和干净的擦拭布去除 CPU 顶部任何灰尘和污垢。然后在 CPU 中央仅涂抹非常少量导热膏；其原理是散热器会为你扩散膏体。这是你在更换风扇、CPU 或发现处理器无故过热时可能需要重复的步骤。
 
 ![](img/f51994701f272059dc108a0376ffceb8_58_0.png)
 
 ### 6 固定散热器
+
 轻轻将散热器放置到 CPU 插槽上，使安装座上的螺丝孔与散热器本身的螺丝孔对齐。现在用十字螺丝刀将散热器牢固地固定到安装座上。接下来将 CPU 风扇连接器接到 CPU 插槽上方左侧，然后轻轻将风扇支架卡到散热器的平坦侧面上，注意叶片，因为它们既锋利又脆弱。
 
 ![](img/f51994701f272059dc108a0376ffceb8_58_1.png)
@@ -923,21 +826,25 @@ CPU 插槽两侧各有一个或两个杠杆；逐一向下并远离插槽推动�
 ## PART 3 安装内存和 M.2 存储
 
 ### 1 定位内存插槽
+
 虽然长条形的黑色和灰色内存插槽通常位于 CPU 的右侧，但在许多情况下，处理器两侧可能有平行的插槽，或者更罕见地位于上方或下方。无论如何，找到它们并按下插槽两侧翘起的塑料卡扣。
 
 ![](img/f51994701f272059dc108a0376ffceb8_59_0.png)
 
 ### 2 插入每个内存模块
+
 安装内存是一个非常简单的过程：只需将内存中间的小缺口与内存插槽中对应的凸起对齐，然后两侧用力向下按，直到听到令人满意的“咔嗒”声。如果你暂时不填满主板的所有内存插槽，那么唯一棘手的部分就是知道应该使用哪些插槽。对于这一点，请参考你的主板手册。
 
 ![](img/f51994701f272059dc108a0376ffceb8_59_1.png)
 
 ### 定位 M.2 空间
+
 根据你的主板，你可能有一个或多个 M.2 存储槽——如果是的话，你可能已决定利用它来获得该类型存储带来的快速 SSD 读取速度。这些插槽很难找到，因为实际连接本身非常小（驱动器平放，与主板平行）。一个螺丝很可能已安装在其中一个节点上，每个节点都有数字，对应与该特定插槽和主板整体兼容的不同尺寸的 M.2 驱动器。
 
 ![](img/f51994701f272059dc108a0376ffceb8_60_0.png)
 
 ### 安装 M.2 驱动器
+
 拧下节点上的螺丝并放在一旁。将 M.2 驱动器以大约 30 度角推入连接口。与内存一样，驱动器只有一个方向可以插入，所以如果它不配合，不要强行插入，而是翻转它再试一次。连接后，将驱动器向下按（它会自行弹起），然后将螺丝重新装回驱动器左侧末端的节点以固定其位置。
 
 ![](img/f51994701f272059dc108a0376ffceb8_60_1.png)
@@ -945,26 +852,33 @@ CPU 插槽两侧各有一个或两个杠杆；逐一向下并远离插槽推动�
 ## PART 3 安装主板
 
 ### 1 安装 I/O 挡板
+
 将主板就位的第一步是最简单的：只需取出将保护计算机背面所有连接的 I/O 挡板并将其卡入到位。这些挡板上有小凸起，会卡住机箱，所以只需对齐并卡入到位即可。你的机箱可能已安装了某些东西，你可能需要也可能不需要使用它。
 
 ![](img/f51994701f272059dc108a0376ffceb8_61_0.png)
 
 ### 2 安装金属柱
+
 许多现代机箱在主板放置位置的中心有一个小柱，允许你将主板悬挂在机箱直立时就位。这很方便，但并非所有机箱都如此。如果没有，请找到机箱背面上的小孔并拧入机箱随附的每个金属柱。
 
 ![](img/f51994701f272059dc108a0376ffceb8_61_1.png)
 
 ### 固定主板
+
 这些柱子就是主板将放置其上的位置，使其与机箱金属背面分离，防止电气短路。你可能不需要所有这些螺丝，因为这取决于你的机箱和主板。无论如何，通过找到对应的孔将主板放置在柱子上方。牢固地将主板固定到这些柱子上，这在角落可能具有挑战性。
+
+
 
 ![](img/f51994701f272059dc108a0376ffceb8_62_0.png)
 
 ### 水平安装
+
 固定主板是较困难的任务之一，因为它需要牢固固定（自然地，它将固定所有那些昂贵的部件）。如果你因机箱顶部空间不足而难以正确安装角落螺丝——安装了巨大的 CPU 散热器后——那么请仔细抬起电脑。只要大部分螺丝已就位，你会发现更容易操作。
 
 ![](img/f51994701f272059dc108a0376ffceb8_62_1.png)
 
 ### 可选风扇
+
 如果你决定安装一些额外的机箱风扇以排出机箱内的热空气，那么现在可能是安装它们的最佳时机。一些机箱会在风扇插槽未使用时提供盖子，但就大多数而言，这些东西相当模块化：只需选择你想要风扇的位置，找到螺丝孔并将其附着到机箱上。
 
 ![](img/f51994701f272059dc108a0376ffceb8_62_2.png)
@@ -972,13 +886,10 @@ CPU 插槽两侧各有一个或两个杠杆；逐一向下并远离插槽推动�
 ## PART 3 安装硬盘
 
 ### 1 定位存储舱位
+
 PC 机箱设计中最灵活的部分可能是存储舱位。不仅这些舱位数量可能很多，而且它们可能出现在各种奇怪而美妙的地方。它们甚至可以从机箱上拆下并安装在其他位置，适合真正的定制构建者。以我们的 Define S 为例，没有传统的驱动器舱位，而是可以从后面板拆下的机箱，用于固定你想要的存储驱动器。无论如何，你首先需要弄清楚你的机箱如何利用存储舱位，并决定如何安装你的固态硬盘。
 
 ![](img/f51994701f272059dc108a0376ffceb8_63_0.png)
-
-
-
-
 
 ### 安装存储驱动器
 
@@ -1081,17 +992,11 @@ ed aborted.
 
 ![](img/f51994701f272059dc108a0376ffceb8_74_0.png)
 
-
-
-
-
 ![](img/f51994701f272059dc108a0376ffceb8_75_0.png)
 
 Mint 或许是功能和设计上最接近 Windows 的 Linux 发行版，并提供了一个漂亮、简洁的界面。
 
-下载和安装 – 如果你想省点钱，这是一个很不错的选择。但值得注意的是，Linux 确实存在一些问题：首先，对于过去十年里使用过 PC 的任何人来说，它都不会完全熟悉——这不是 Windows，你需要学习一些东西。它还有一些兼容性问题，虽然这问题已不像以前那么严重，但仍可能担心某些东西——无论是想要使用的特定软件，还是硬件及其
-
-驱动程序——无法正常工作。还值得注意的是，存在着各种各样的 Linux 发行版或发行版——这个术语用来描述操作系统的不同“口味”。对于这些发行版中的每一个，Linux 仍然是基础，但创建者（或创建者们）提供了他们自己的偏好或风格。这可能会让寻找新操作系统的用户感到困惑，但坚持使用更受欢迎的发行版——如 Ubuntu 或 Linux Mint——将最大程度地减少这些麻烦。
+下载和安装 – 如果你想省点钱，这是一个很不错的选择。但值得注意的是，Linux 确实存在一些问题：首先，对于过去十年里使用过 PC 的任何人来说，它都不会完全熟悉——这不是 Windows，你需要学习一些东西。它还有一些兼容性问题，虽然这问题已不像以前那么严重，但仍可能担心某些东西——无论是想要使用的特定软件，还是硬件及其驱动程序——无法正常工作。还值得注意的是，存在着各种各样的 Linux 发行版或发行版——这个术语用来描述操作系统的不同“口味”。对于这些发行版中的每一个，Linux 仍然是基础，但创建者（或创建者们）提供了他们自己的偏好或风格。这可能会让寻找新操作系统的用户感到困惑，但坚持使用更受欢迎的发行版——如 Ubuntu 或 Linux Mint——将最大程度地减少这些麻烦。
 
 ## PART 4 Windows versus Linux
 
@@ -1103,9 +1008,6 @@ Windows 占据了绝大多数市场份额，是全球 PC 上最受欢迎的操�
 | Compatibility (Software) | 这是 Windows 的终极优势，至少在游戏方面是如此。 由于其巨大的市场份额，开发人员会首先专注于 Windows 版本的游戏，其次是 Mac 的 OS X，然后才是 Linux。 如果你希望在游戏发布时就能玩到每一款游戏，那么 Windows 很可能就是操作系统的首选。 | 曾经 Linux 在游戏发布方面举步维艰；很少有游戏在该平台上发布，这对许多游戏玩家来说是一个痛点。 然而，如今——随着 Linux 的普及度不断提高——它已成为游戏平台中越来越可行的选择。 在这方面，它无法与 Windows 相提并论，但如今，每款新游戏通常都会移植到 Linux——尽管并不总是与 Windows 同时发布。 |
 | Compatibility (Hardware) | 我们会经常提到这一点，但 Windows 是最受欢迎的操作系统，因此，作为结果，它更有可能获得硬件制造商的驱动程序支持。 因此，使用 Windows 时，你不太可能遇到硬件问题。 | 制造商在为 Linux 提供驱动程序支持方面取得了长足进步，而且由于技术娴熟的游戏玩家——在很大程度上——是 Linux 的常见用户之一，因此需要为专用 PC 游戏硬件创建兼容驱动程序，这意味着在你的机器上找到对昂贵部件的支持变得越来越不罕见。 不过，仍然值得检查一下。 |
 | Ease of use | 由于 Windows 是 PC 平台中最受欢迎的平台，微软一直致力于其软件的易用性。 大多数人都会知道如何使用 Windows PC——即使是最基本的任务——就直观性而言，Windows 在这方面胜出。 | Linux 的易用性主要取决于所使用的发行版。 更受欢迎的发行版如 Ubuntu、Mint 和 Debian 都提供了一个对 Windows 用户非常熟悉的用户界面，但许多选项和设置的位置不同。 如果你精通技术并且不介意最初的学习阶段，那么 Linux 本身并不是反直觉的。 |
-
-|  | Windows | Linux |
-|---|---|---|
 | Software | Windows 附带了大量额外的软件——有些人甚至会说太多了。 事实上，即使是基本的 Windows 安装中也包含大量臃肿软件，不过其中有许多可访问性和系统选项可供使用，而在 Linux 中却没有等价物。 然而，如今通常可以为非常具体的需要下载免费工具。 | Linux 依赖于特定的发行版来确定安装时捆绑了多少额外的实用程序和软件包。 有些发行版在这方面刻意更精简，而有些则尽可能多地捆绑。 这完全取决于个人喜好，但大多数“必备”实用程序通常都已具备。 然而，使用 Linux 安装额外的实用程序和软件完全免费要容易得多。 |
 | Performance | Windows 无疑是一个用户友好的操作系统，但它并不算快。 在全新的 PC 上进行全新安装可能看起来相当敏捷，但在多次强制更新和启动时在后台运行的软件之后，操作系统很快就会开始运行缓慢。 需要更多的手动维护才能让 Windows 保持最佳运行状态。 | 由于 Linux 对 CPU 的整体需求较小，因此操作系统本身不会干扰日常使用。 由于性能等要素受安装的软件影响很大，因此很难客观地比较两者。 但平均而言，Linux 在使用速度方面胜过 Windows，因为它对系统的需求要低得多，而且对臃肿软件的渴望也较少。 |
 | Security | 虽然受欢迎程度确实与 Windows 电脑潜在攻击数量有关，但真正的问题在于 Windows 处理文件和文件夹访问的方式。 如果你不努力保护自己，你将面临更大的风险。 | 从基础层面来看，Linux 发行版通常比 Windows 提供更高的安全性。 其中一部分原因是 Linux 并没有那么受欢迎，但 Linux 处理管理员权限的方式（默认情况下所有用户都具有受限访问权限）意味着，如果病毒设法侵入，其造成的实际损害会减少。 |
@@ -1114,10 +1016,6 @@ Windows 占据了绝大多数市场份额，是全球 PC 上最受欢迎的操�
 ![](img/f51994701f272059dc108a0376ffceb8_77_0.png)
 
 Windows 拥有 DirectX 12，而 Linux 拥有 Vulkan，但由于前者的操作系统更受欢迎，因此 DirectX 获得了开发商的大部分支持。 最新版本支持光线追踪、可变速率着色和最新的抗锯齿技术等复杂功能，换句话说，它让游戏看起来更逼真。
-
-
-
-
 
 ## 第4部分 安装操作系统
 
@@ -1132,6 +1030,8 @@ Windows 拥有 DirectX 12，而 Linux 拥有 Vulkan，但由于前者的操作�
 如果你购买了盒装Windows，那么最大的麻烦已经解决了；里面包含你所需的一切，包括如何安装软件的详细说明和相关的序列号——直接将其放入光驱，很快就能开始运行。
 
 不同版本的Windows之间差别不大——除了价格——但最好了解包含和不包含哪些内容，以免错过对你至关重要的功能。
+
+
 
 如果你从微软网站购买了数字版本——或者因为不再有原始光盘而需要下载可启动光盘文件——那么你需要自己制作启动盘。
 
@@ -1185,10 +1085,6 @@ Internet Explorer会随Windows预装，而且无法完全卸载。不要害怕�
 
 ![](img/f51994701f272059dc108a0376ffceb8_83_0.png)
 
-
-
-
-
 ![](img/f51994701f272059dc108a0376ffceb8_84_0.png)
 
 Firefox 以可下载并安装到浏览器上的众多附加组件而闻名。of extensibility as Chrome but with greater emphasis on privacy (Google is an ads-driven company, after all, so your data is valuable to them). 然后是 Opera，它基于与 Chrome 相同的引擎——甚至可以使用 Chrome 网上应用店中的许多扩展——并附带了一些非常有益的功能：内置 VPN、与即时通讯平台的连接以及广告拦截器，这些都在帮助 Opera 成为互联网浏览器选择时更好的选择之一。
@@ -1210,6 +1106,7 @@ Opera 在市场份额上仍然偏低，但它是一款很棒且快速的浏览�
 以下是免费套餐与付费套餐相比，你可以期待获得的内容。
 
 ### Basic
+
 AVG AntiVirus FREE
 
 不会让你失望的基本免费保护
@@ -1220,6 +1117,7 @@ AVG AntiVirus FREE
 - 获取实时安全更新
 
 ### Pro
+
 AVG Internet Security Unlimited
 
 我们无限制的、最好的全方位保护，无论你在线做什么
@@ -1239,6 +1137,7 @@ AVG Internet Security Unlimited
 FREE Download
 
 Buy Now
+
 $79.99 $63.99
 
 就这些东西而言，即使是最基本的也会有帮助。其他地方，像密码管理器这样的工具可以成为你已安装软件套件的有用补充。它们会自动将你的账户和密码详细信息存储在加密保险库中，并自动将其输入网站的登录页面。这对于保护你免受网络钓鱼攻击很有用——在这种攻击中，官方网站的仿冒版本会诱骗你泄露你的凭证——但更重要的是，它在一般互联网使用中让你的生活更轻松。最后是 VPN，虽然这看起来像是多余的、偏执的极端，但使用加密的互联网连接确实有好处，尤其是如果你——像我们中的许多人一样——越来越担心你的在线数据被如何使用。与防病毒软件一样，有无数 VPN 提供商可供选择，不过还有一个额外的好处是可以订阅完整的互联网安全套件，它将提供你所需的一切来保护你免受潜在威胁。值得补充的是，VPN 会对你的互联网连接产生明显影响，因此，如果你想要 VPN 带来的增强安全性，那么如果你未加密的连接本身就相当慢，你可能最希望在在线玩游戏时将其停用。
@@ -1257,11 +1156,8 @@ $79.99 $63.99
 
 ![](img/f51994701f272059dc108a0376ffceb8_87_0.png)
 
-
-
-
-
 ## PART 4
+
 ### 流媒体和视频采集
 
 如果你是因为在 Twitch 或 YouTube 上看到人们玩游戏时的乐趣而开始组装游戏 PC，希望在你游戏时有玩家社区加入其中，那么你需要考虑硬件和软件的一些重要方面。虽然并非完全必要，但除了电脑之外，你还需要考虑一些重要的额外设备，同时拥有用于直播或录制游戏画面和音频的合适软件。
@@ -1302,6 +1198,8 @@ Steam 绝不是如今唯一的数字发行平台，但它无疑是主要的。
 
 ### 存储清理
 
+
+
 虽然与游戏本身没有直接关系，但不可否认，保持存储驱动器清洁和优化是让系统平稳高效运行的好方法。多年来，你电脑的存储空间可能会被不需要的、不必要的甚至未使用的數據塞满。硬盘或 SSD 上的数据越多，一次性需要检查和整理的内容就越多。你可能不会注意到这种情况的发生，但最终，过度堵塞的存储驱动器会影响电脑性能——尤其是在空间不足时。问题是，定期手动翻找所有文件夹和文件既不有趣，也无效，因为你几乎总会遗漏一些东西。
 
 保持 PC 上垃圾数据的整洁，将在很大程度上帮助系统平稳运行。
@@ -1309,9 +1207,6 @@ Steam 绝不是如今唯一的数字发行平台，但它无疑是主要的。
 因此，考虑安装软件来为你完成这项工作可能是值得的。有无数程序可以扫描你的磁盘驱动器，找出无价值且可以删除的内容。其中许多还内置了多种其他工具，例如磁盘碎片整理或应用程序卸载，本质上使这些套件更偏向于通用系统优化，而不仅仅是清理磁盘。众多可用软件包中挑选一个可能很棘手，尤其是你需要考虑是否想要免费选项、一次性许可付费或订阅以获得软件的定期更新。CCleaner 这个名字多年来一直是行业的支柱，并为免费用户提供大部分核心功能，因此如果你在确定自己的需求时感到困惑，这是一个安全的选择。
 
 ![](img/f51994701f272059dc108a0376ffceb8_92_0.png)
-
-
-
 
 ## 社交软件，以及其他……
 
@@ -1348,8 +1243,6 @@ Steam 绝不是如今唯一的数字发行平台，但它无疑是主要的。
 | Foobar2k | 音频播放器。 | 如果音乐对你很重要，Windows Media Player 不是你想使用的软件。免费选择有很多，但 Foobar2k 是当今最受欢迎的。快速且轻量的软件。 |
 | iTunes | 管理媒体文件。 | 虽然我们完全不赞成使用 iTunes——作为一款软件，它糟糕透顶且侵入性强——但遗憾的是，如果你拥有 iPod、iPad 或 iPhone，它就是必需的。 |
 
-## 5
-
 ## 第 5 部分 配件
 
 - 游戏鼠标 97
@@ -1366,7 +1259,7 @@ Steam 绝不是如今唯一的数字发行平台，但它无疑是主要的。
 
 鼠标的问题——尤其是对游戏玩家而言——在于，在很多方面，什么才是“最好”的鼠标完全取决于主观判断，实际上归结为你希望从这一外设中获得什么。显然，每台 PC 都需要一个鼠标，但如果你玩的 MMO 比射击游戏多，那么你对鼠标的功能和优点的需求会有很大不同。它的形状、握在手中的“贴合感”，甚至重量，在寻找适合你的鼠标时都很重要；在开始寻找购买之前，先想清楚你需要鼠标做什么，这一点很重要。从好的方面看，你的选择并不一定要具备所有花哨功能——在大多数情况下，基本款的表现与其竞争产品一样好。而且，由于如今大多数鼠标都是 USB 供电的即插即用设备，你不需要太担心兼容性问题。
 
-### 选购要点
+#### 选购要点
 
 DPI——这是你在考虑购买鼠标时会经常遇到的度量单位。它代表每英寸点数（dots per inch），较少被提及为技术上更准确的 CPI，即每英寸计数。DPI 越高，它读取你移动的“速度”就越快，本质上意味着与低 DPI 鼠标相比，你需要移动鼠标的距离更少，即可获得相同的响应。幸运的是，大多数现代游戏鼠标都允许你调整 DPI 设置，而其他一些鼠标甚至具有可激活的精准模式——通过鼠标上的按钮降低 DPI 以获得精准度，并让你可以快速切换回来。
 
@@ -1374,48 +1267,49 @@ DPI——这是你在考虑购买鼠标时会经常遇到的度量单位。它�
 
 ![](img/f51994701f272059dc108a0376ffceb8_98_0.png)
 
-
-
-
 ![](img/f51994701f272059dc108a0376ffceb8_99_0.png)
 
 游玩时的速度和效率。例如，在《英雄联盟》这类MOBA游戏中，快速反应至关重要——你越快完成那一记关键操作，优势就越大。你玩的游戏类型会影响你需要多少按键——MMO玩家可能希望鼠标上有更多按键——但关键在于找到舒适性、实用性与额外按键带来的优势之间的平衡。
 
-### 鼠标推荐
+加速（加速度）——大多数鼠标都带有某种形式的加速功能，即鼠标移动得越快，光标也移动得越快。在某些情况下这很有用，比如你的鼠标垫或桌面空间较小，可以用更小的鼠标移动来操作。然而，许多玩家普遍不喜欢加速功能，因为它意味着你无法对光标进行精确的一对一控制，光标的移动带有一定的不确定性。游戏鼠标上的加速功能通常不会太过激进，而且一般可以禁用。
 
-#### 罗技 G502 Proteus Spectrum
+#### 鼠标推荐
+
+##### 罗技 G502 Proteus Spectrum
 
 建议零售价：£79.99
+
 如果你没有特殊需求，只想要一款全能的优秀游戏鼠标，那么G502无疑是目前最好的选择之一。它的11个按键均可编程，让你完全掌控设备；配备高达16,000 DPI的传感器，甚至还附带五种不同的配重块，可自定义鼠标在鼠标垫上移动时的重量感。
 
 精度更高，抖动（或表面对读数的误判）更少。在这两者中，你很可能更倾向于激光鼠标。
 
-加速（加速度）——大多数鼠标都带有某种形式的加速功能，即鼠标移动得越快，光标也移动得越快。在某些情况下这很有用，比如你的鼠标垫或桌面空间较小，可以用更小的鼠标移动来操作。然而，许多玩家普遍不喜欢加速功能，因为它意味着你无法对光标进行精确的一对一控制，光标的移动带有一定的不确定性。游戏鼠标上的加速功能通常不会太过激进，而且一般可以禁用。
-
-#### 雷蛇 娜迦 Trinity
+##### 雷蛇 娜迦 Trinity
 
 建议零售价：£99.99
+
 雷蛇的娜迦系列一直被认为是MMO游戏的首选，得益于其侧面众多的额外按键。Trinity型号更进一步，采用可互换的侧面板，可提供2个、7个或12个附加按键，使其成为市场上最多功能的鼠标，能胜任日常使用、MOBA游戏或MMO游戏的各种需求。
 
 额外按键——每款鼠标至少有两个按键，并且很可能还有可点击的滚轮。在游戏方面，你肯定希望鼠标本身至少内置几个额外按键，以获得额外的
 
-#### 海盗船 M65 RGB Elite
+##### 海盗船 M65 RGB Elite
 
 建议零售价：£49.99
+
 如果你更喜欢FPS游戏，那么你绝对应该入手海盗船M65。它不仅拥有高达18,000 DPI的出色速度与精度范围，还配备了可切换的“狙击模式”，可切换至低DPI进行精确瞄准——这对FPS玩家来说是一个重要功能。这款鼠标也相当重，这既是提醒也是赞许——FPS玩家需要这样的重量来获得更好的控制力。
 
 ![](img/f51994701f272059dc108a0376ffceb8_99_1.png)
 
-#### 雷蛇 死亡蝰蛇 Elite
+##### 雷蛇 死亡蝰蛇 Elite
 
 建议零售价：£69.99
+
 雷蛇死亡蝰蛇Elite之所以如此出色，主要在于其精心设计的外观。就手感而言，这绝对是市面上最好的游戏鼠标之一；虽然它只有两个额外的侧键，但对于绝大多数游戏来说，你确实不需要更多了。这是一个高端选择，但绝对是最出色的产品之一。
 
 ### 游戏键盘
 
 游戏键盘比鼠标更容易明确选择标准。鼠标需要贴合一种非常特定的手感，而键盘则可以用更客观的标准来衡量。首要的选择是在机械键盘（即每个按键都是独立的开关）和薄膜键盘之间进行。两者各有优劣，但机械键盘在可靠性方面往往更胜一筹。严肃的游戏玩家绝对应该考虑机械键盘，但如果你追求更便宜、更便携的选项（也许是为了参加局域网赛事），市面上仍有一些不错的薄膜键盘。除此之外，除了人体工学设计和可能提供的额外功能（如额外的可自定义按键）之外，其实没有太多区别。
 
-### 选购要点
+#### 选购要点
 
 **机械键盘 vs 薄膜键盘**——这将是你做出的重大决定，值得花些时间研究各种选项。如前所述，机械键盘采用独立开关系统，因此你每按一个键都是精确的——不会出现多重按键之间的混淆，它们使用寿命更长，使用感觉也更一致。但机械键盘需要一定的时间来适应，它们比薄膜键盘更重，价格也贵得多。在游戏方面，机械键盘总是更好的选择，但可能不值得花费那么多。
 
@@ -1461,10 +1355,6 @@ _建议零售价：£199.99_
 
 虽然这个价格标签可能会让人望而却步，但这块键盘已经奠定了自己作为硬核玩家梦想之选的地位。它内置可调节的每键独立机械开关，让你可以单独控制每个按键的灵敏度，从而按需定制你的游戏体验。此外，OLED屏幕还能显示某些游戏的信息，增添额外优势。
 
-
-
-
-
 ## 第5部分 显示器
 
 为游戏购买显示器甚至比买新电视还要费劲；在关注所有相同的技术细节（例如对比度）的同时，你现在还需要更加注意刷新率和响应时间。这导致的结果就是一大堆令人困惑的数字，而且无法真正确定你买到的那款就是最好的；希望我们能消除其中一些顾虑。进一步的问题源于你希望自己的设备看起来是什么样子：你想用多屏显示吗？一个更大的单屏？还是具有不寻常宽高比的超宽屏？选项太多，需要考虑的变量也太多，因此我们挑选出了购买最佳PC游戏显示器时你需要了解的关键方面。
@@ -1476,6 +1366,9 @@ _建议零售价：£199.99_
 游戏显示器有各种形状和尺寸，而宽高比——即屏幕宽度与高度的比例——是造成这种差异的主要原因。但随着多年来游戏尺寸逐渐标准化，16:9 已成为主流标准。这很可能与你的电视相同，如果你对游戏中能看到多少画面不太挑剔，那么坚持这个比例会更省事。然而，如果你想要更宽广的游戏视野，获得更接近人眼的视觉体验，那么你可能需要考虑更宽的宽高比。同样，这些也有多种尺寸可选，但 21:9 是更常见的选择，这意味着更多游戏可能兼容这一尺寸。
 
 ![](img/f51994701f272059dc108a0376ffceb8_103_0.png)
+
+
+
 ![](img/f51994701f272059dc108a0376ffceb8_104_0.png)
 
 #### 分辨率与尺寸
@@ -1548,11 +1441,7 @@ _建议零售价：£199.99_
 
 #### 线控
 
-这似乎是一个很平常的提及点，尤其是大量耳机的线缆上都自带控制按钮。但这很重要，因为这些控制通常让你能够调节游戏音量和语音聊天的音量，以及
-
-
-
-静音你自己的麦克风。它们可能带有不同的选项，所以如果可能的话，请尝试查看任何潜在购买品上的内联控件，以便你知道你的需求在这里得到考虑。
+这似乎是一个很平常的提及点，尤其是大量耳机的线缆上都自带控制按钮。但这很重要，因为这些控制通常让你能够调节游戏音量和语音聊天的音量，以及静音你自己的麦克风。它们可能带有不同的选项，所以如果可能的话，请尝试查看任何潜在购买品上的内联控件，以便你知道你的需求在这里得到考虑。
 
 **频率响应范围** – 现在这听起来可能像行话，在某种程度上确实如此，但如今在现代耳机中它在很大程度上无关紧要，许多耳机甚至不屑于宣传可能的范围。任何音频设备的频率响应范围都是对其最低低音和最高高音的测量，虽然范围越宽越好，但显然我们人类能听到的范围也有限。实际上如今几乎每款耳机都提供相同的 20–20,000Hz 范围。
 
@@ -1574,35 +1463,11 @@ HyperX 以生产高质量产品而享有盛名，其耳机也不例外。Cloud �
 
 *RRP: £149.99*
 
-在游戏耳机方面，Turtle Beach 长期以来一直是难以超越的名字。Elite Pro 系列是其高端型号，提供市场上最好的音效还原之一。里面还捆绑了一些不错的小[content]
-
-静音你自己的麦克风。它们可能带有不同的选项，所以如果可能的话，请尝试查看任何潜在购买品上的内联控件，以便你知道你的需求在这里得到考虑。
-
-**频率响应范围** – 现在这听起来可能像行话，在某种程度上确实如此，但如今在现代耳机中它在很大程度上无关紧要，许多耳机甚至不屑于宣传可能的范围。任何音频设备的频率响应范围都是对其最低低音和最高高音的测量，虽然范围越宽越好，但显然我们人类能听到的范围也有限。实际上如今几乎每款耳机都提供相同的 20–20,000Hz 范围。
-
-## 耳机和麦克风建议
-
-### HyperX Cloud
-
-*RRP: £99.99*
-
-HyperX 以生产高质量产品而享有盛名，其耳机也不例外。Cloud 系列有众多不同的型号和类型，因此仅筛选这一系列就可能是一项挑战。然而，Cloud Alpha 是一套均衡的套装，具有出色的 13–27,000Hz 频率响应，并且拥有对优质音频体验至关重要的所有必要功能。
-
-### SteelSeries Arctis
-
-*RRP: £179.99*
-
-如果你想为电脑音效多花一点钱，SteelSeries Arctis 系列是不错的选择，特别是 Pro 版的完整套装——甚至还有精致的 LED 照明，带来终极极客时尚——不过 9X 也是一个不错的选择，如果你希望在其他平台上使用此音频设备的话。
-
-### Turtle Beach Elite Pro 2
-
-*RRP: £149.99*
-
-在游戏耳机方面，Turtle Beach 长期以来一直是难以超越的名字。Elite Pro 系列是其高端型号，提供市场上最好的音效还原之一。里面还捆绑了一些不错的小玩意
+在游戏耳机方面，Turtle Beach 长期以来一直是难以超越的名字。Elite Pro 系列是其高端型号，提供市场上最好的音效还原之一。里面还捆绑了一些不错的小玩意。
 
 ![](img/f51994701f272059dc108a0376ffceb8_108_0.png)
 
-，这些听起来像是营销用语，但确实有助于音质。它佩戴起来也很舒适，这是一个令人惊讶的罕见优势。
+这些听起来像是营销用语，但确实有助于音质。它佩戴起来也很舒适，这是一个令人惊讶的罕见优势。
 
 ### Blue Yeti Microphone
 
@@ -1680,10 +1545,6 @@ PlayStation 和 Xbox 一直有竞争，在控制器方面这一点更为明显�
 
 Hori 是格斗游戏粉丝熟悉的名字，他们信赖该公司的街机摇杆。就此而言，其更便宜的赛车方向盘如果想要严肃的、发烧友的赛车游戏体验就不是一个选择。凭借其有限的 270 度转弯角度，这个控制器更适合街机赛车，而不是像 *Forza* 这样的游戏。
 
-
-
-
-
 ## 摇杆
 
 最近飞行模拟游戏似乎又流行起来了，例如《精英：危险》和《星际公民》——以及其他非太空题材的同类游戏——确实让对摇杆的需求大增。在所有可用的配件和外设中，摇杆也许是最古老的，因此也显得最多余。但就像赛车方向盘对驾驶模拟的影响一样，一个好摇杆也能对飞行模拟产生类似的效果。如果你想真正沉迷于《精英：危险》等游戏，那这绝对是一款值得考虑的购买品。
@@ -1702,26 +1563,34 @@ Hori 是格斗游戏粉丝熟悉的名字，他们信赖该公司的街机摇杆
 
 ### 摇杆推荐
 
-- **Saitek X56 HOTAS**  
-  建议零售价：£219.99  
+- **Saitek X56 HOTAS**
+
+  建议零售价：£219.99
+
   X56 的做工质量绝对对得起它公认的高价，还配备双油门，可用于控制双引擎飞行器，并且加入了至关重要的 Z 轴控制。你甚至可以调整控制操纵杆松紧度的弹簧，从而获得适合自己手感的压力。
 
-- **Thrustmaster HOTAS Warthog**  
-  建议零售价：£349.99  
+- **Thrustmaster HOTAS Warthog**
+
+  建议零售价：£349.99
+
   这款产品可能定价过高，而且由于该设置不具备 Z 轴控制，感觉有点不必要。但它以真实世界中的 A-10C 雷电 II 攻击机为模型，采用金属部件外壳，带来坚固而逼真的手感，并配备双油门和大量额外按钮（可以重新映射为油门控制）。
 
-- **Thrustmaster T-Flight HOTAS X**  
-  建议零售价：£49.99  
+- **Thrustmaster T-Flight HOTAS X**
+
+  建议零售价：£49.99
+
   作为 Warthog 的替代品，Thrustmaster 的 T-Flight HOTAS X 设置提供了一个非常实惠的选择。它的附加功能不如那些昂贵的同类产品丰富，但它确实具备 Z 轴控制，正如我们一直强调的，这是一个重要的功能，尤其是在如此低的价格下。
 
-- **Logitech Extreme 3D Pro**  
-  建议零售价：£44.99  
-  Extreme 3D Pro 的售价往往远低于其建议零售价，使其成为市面上最便宜的摇杆之一。就这个价格而言，它也是性价比更高的低端摇杆之一，虽然按钮手感确实有点廉价，但作为一款价格实惠的摇杆，它整体扎实，很难挑剔。也非常适合手小的人。
+- **Logitech Extreme 3D Pro**
+
+  建议零售价：£44.99
+
+
+
+Extreme 3D Pro 的售价往往远低于其建议零售价，使其成为市面上最便宜的摇杆之一。就这个价格而言，它也是性价比更高的低端摇杆之一，虽然按钮手感确实有点廉价，但作为一款价格实惠的摇杆，它整体扎实，很难挑剔。也非常适合手小的人。
 
 ![](img/f51994701f272059dc108a0376ffceb8_114_0.png)
-
 ![](img/f51994701f272059dc108a0376ffceb8_114_1.png)
-
 ![](img/f51994701f272059dc108a0376ffceb8_114_2.png)
 
 ## 第 5 部分：网络摄像头
@@ -1741,32 +1610,35 @@ Hori 是格斗游戏粉丝熟悉的名字，他们信赖该公司的街机摇杆
 - **附加功能** – 这类东西很难具体说明，因为网络摄像头的附加功能列表与产品数量一样多。有些可能具有自动对焦、低光功能、HDR 或色彩校正。有些可能是无线或支持 60FPS 视频采集。还可能有诸如面部跟踪或背景移除等技术功能——基本上是为了直播——而机载处理会减轻视频采集对 PC 的额外负担。在每种情况下，你不仅需要质疑这些功能对你有多大用处（以帮助你克服术语过载），还要了解这些附加功能在实现其目标方面有多成功。
 
 ![](img/f51994701f272059dc108a0376ffceb8_116_0.png)
-
 ![](img/f51994701f272059dc108a0376ffceb8_116_1.png)
 
 ### 网络摄像头推荐
 
 - **Logitech C920**  
+
   建议零售价：£89.99  
+
   实际上，你会以远低于零售价的价格买到这款网络摄像头，这已经是一个相当有吸引力的套餐上的额外福利。C920 是一款出色的全能摄像头，凭借其 1080p 分辨率和 90 度视野，可满足大多数需求。它提供出色的画质和低光性能，并可配合 Logitech 的 ChromaCam 应用使用，该应用可用于自动移除（或替换）背景。
 
 - **Microsoft LifeCam HD-3000**  
+
   建议零售价：£23.99  
+
   就预算而言，LifeCam HD-3000 无疑是首选。大多数企业都会选择它，因为它拥有不错的 720p 分辨率，同时具备出色的图像质量、清晰度和色彩还原。它绝不是同类产品中最好的，你很容易找到更好的摄像头，但在这个价位上，没有任何产品能匹敌这种质量。
 
 - **Razer Kiyo**  
+
   建议零售价：£99.99  
+
   Kiyo 在视频采集方面毫不逊色，这要归功于其 1080p 分辨率、90 度视野、快速自动对焦以及非常出色的图像清晰度。然而，它独特的卖点也是最显眼的细节：环绕摄像头镜头的明亮环形灯，使其成为外观独特的设备。它非常适合提高你面部的饱和度——正如任何模特都会告诉你的那样，这会让你看起来更好看——但这也意味着它在低光环境下也能表现出色。
 
 - **Logitech BRIO**  
+
   建议零售价：£199.99  
+
   这几乎是网络摄像头能达到的高端水平，光是价格就足以让很多人望而却步。然而，它是目前唯一支持 4K 分辨率的摄像头，这可能足以左右你的购买决定。凭借 HDR 支持、数字变焦和 90 度视野等功能，它在某种程度上物有所值，不过自动对焦的问题可能会让人头疼。
 
 ![](img/f51994701f272059dc108a0376ffceb8_116_2.png)
-
-
-
-
 
 ## PART 5 虚拟现实
 
@@ -1819,10 +1691,6 @@ HTC 是另一家大型头戴设备生产商，并且在对抗 Oculus 方面取�
 
 ![](img/f51994701f272059dc108a0376ffceb8_120_1.png)
 
-
-
-
-
 # 6
 
 ## AFTERBURNER
@@ -1861,7 +1729,7 @@ Apply Reset Settings
 
 Min : 40 Max : 64
 
-## PART 5  Overclocking your gaming PC
+## PART 5 Overclocking your gaming PC
 
 - Understanding overclocking ........ 123
 - Overclocking your CPU ........ 126
@@ -1877,35 +1745,35 @@ Overclocking lets you access more power from your processor, graphics card and e
 
 Since overclocking does mean you're tampering with the base optimal settings, it will mean those parts will run hotter, and higher temperatures can lead to failing hardware – and not only the parts that you've overclocked. Yet remember that these factory settings are often set quite a bit lower than they need to be, making the out-of-the-box hardware you buy for your PC more likely to be compatible with a wide range of PCs and suffer fewer faults as a result. In the eyes of the manufacturer it's better to be safe than sorry, so don't let the potential issues put you off. That's not to say you shouldn't be careful, of course: it's a gradual
 
+
+
 process of incremental upgrades, and if you are interested in attempting to supercharge your PC then you need to do so in small stages with regular tests. In that sense it can be a bit of a laborious task, but much like the thrill of putting together your first gaming PC the sensation of reaching new and better benchmarking tests can be enough of a thrill to get enthusiasts interested.
 
 To help you get your head around overclocking your hardware we've detailed everything you need to know to assist in your own overclocking adventures. Since every piece of hardware is different, there's no sure-fire, step-by-step method to unlocking your PC's full potential, but as long as you have the knowledge to follow the process without any concern then you'll soon find it's not nearly as scary as it first sounds. We'll also document some of the best, most useful pieces of software you'll need for benchmarking – the process of stress-testing your PC to ensure your changes are safe – and some of the most popular games and applications overclockers like to use to show off just how powerful their PCs really are.
 
 ![](img/f51994701f272059dc108a0376ffceb8_123_0.png)
 
-### Understanding overclocking
+## Understanding overclocking
 
 Before you actually jump into the overclocking itself, it is important that you first understand the technical side of what it is you’re trying to achieve. Every piece of hardware is different; one part could be minutely different to another of the exact same make and model due to the manufacturing process, so it’s important to know what you’re changing and what effect that change has. To help we’re going to explain some of the terms you’ll need to understand when overclocking – that way you won’t have any problems when overclocking your own system. And since you can enhance the performance of parts such as your graphics card, processor and memory, we’ll try to keep this section as general as possible across all forms of overclocking.
 
-#### Key terms to learn
+### Key terms to learn
 
 **Overclocking** – Let’s start with the phrase itself, which is fairly self-explanatory. Overclocking is the process of increasing the clock speed of a particular piece of PC hardware to run faster than its initial factory settings, unlocking performance gains. Additionally this can mean increasing the voltage that piece of hardware accepts to help it attain higher speeds.
 
 **BIOS** – This is the set-up screen where you’ll do your adjustments to the hardware – the actual process of overclocking itself. This is essentially the software hardwired into your motherboard, and lets you control the system’s hardware and how it performs. You may have seen the BIOS before or you may not have needed to, but either way it is always accessed immediately after starting the system up.
 
-**Clock** – With all this mention of ‘clocks’ you’re probably asking ‘What is a clock?’ Well, this is the microchip inside your computer that regulates timing, that vibrates when electricity is applied. It is measured in hertz, with a 2.0GHz processor capable of two billion cycles – or vibrations – a second. It is often represented in your BIOS as ‘BCLK’. This is your base clock speed, and is used to calculate your CPU’s overall speed: so if your system has a base clock of 100MHz (perhaps shown as slightly under that) with a CPU multiplier or ratio of 30 then your CPU will have a total speed of 3,000MHz, or 3.0GHz. Increasing the multiplier to 33 will make your CPU a 3.3GHz processor.
+**Clock** – With all this mention of ‘clocks’ you’re probably asking ‘What is a clock?’ Well, this is the microchip inside your computer that regulates timing, that vibrates when electricity is applied. It is measured in hertz, with a 2.0GHz processor capable of two billion cycles – or vibrations – a second. It is often represented in your BIOS as `BCLK`. This is your base clock speed, and is used to calculate your CPU’s overall speed: so if your system has a base clock of 100MHz (perhaps shown as slightly under that) with a CPU multiplier or ratio of 30 then your CPU will have a total speed of 3,000MHz, or 3.0GHz. Increasing the multiplier to 33 will make your CPU a 3.3GHz processor.
 
 **Data buses** – There are multiple buses inside your computer, but the most important is the main one connecting your CPU to the rest of the system. It is the communication interface that transfers data from your processor to the rest of your PC’s hardware, so essentially its speed affects how fast the other parts of your computer can be given commands from the CPU. These can come in various forms, but the function is always the same. Older processors call this the frontside bus (or FSB), while more recent terms include AMD’s EV6 or Intel’s QuickPath Interconnect. Though these don’t all work in exactly the same way, they do control the processing of information and so are pivotal to understand when overclocking.
 
 **Clock multiplier/ratio** – Otherwise known as CPU multiplier, bus/core ratio or internal multiplier, this is the number of times the processor’s own internal clock completes a cycle within every external clock count. This is used to calculate the total speed of your processor by multiplying the clock multiplier with the external clock’s speed. It is one of the first numbers you’ll want to try and adjust in the overclocking process.
 
-**Voltage** – This is an extra side to overclocking that is important to understand. While increasing the voltage supply to a particular piece of
+**Voltage** – This is an extra side to overclocking that is important to understand. While increasing the voltage supply to a particular piece of hardware won't actually increase its performance – much like putting extra fuel into a car – it is often a necessity as you increase the speed of that component. The faster an overclocked part runs the more power it's going to need to function at its best. As with the overclocking process, this should be done slowly and incrementally, to ensure the right voltage is set.
 
 ![](img/f51994701f272059dc108a0376ffceb8_125_0.png)
 
 If you want to achieve the very best graphics from your games, overclocking can be a good option for achieving that with cheaper or mid-range parts.
-
-hardware won't actually increase its performance – much like putting extra fuel into a car – it is often a necessity as you increase the speed of that component. The faster an overclocked part runs the more power it's going to need to function at its best. As with the overclocking process, this should be done slowly and incrementally, to ensure the right voltage is set.
 
 ## Benchmarking
 
@@ -1913,17 +1781,11 @@ This is a process whereby you will monitor your PC – often under stress-test s
 
 ## DirectX
 
-When it comes to graphics cards, you'll often see the term DirectX pop up –
-
-often seen as DX9 or DX11. This is an API that a lot of modern games rely on to function, and though it's not a prerequisite for PC gaming a large portion of games do need a compatible graphics card to function well. Thankfully your only concern is whether or not you're running a DX9 or a DX11 card. DX11 is a more recent, up-to-date and powerful version of DirectX, and enables a lot of fancy extras within games, and most recent GPUs are powerful enough to handle DX11. Make sure you know which yours is, however, before going about overclocking, as it'll help you understand which games you're best testing it with.
+When it comes to graphics cards, you'll often see the term DirectX pop up – often seen as DX9 or DX11. This is an API that a lot of modern games rely on to function, and though it's not a prerequisite for PC gaming a large portion of games do need a compatible graphics card to function well. Thankfully your only concern is whether or not you're running a DX9 or a DX11 card. DX11 is a more recent, up-to-date and powerful version of DirectX, and enables a lot of fancy extras within games, and most recent GPUs are powerful enough to handle DX11. Make sure you know which yours is, however, before going about overclocking, as it'll help you understand which games you're best testing it with.
 
 ## Preparation
 
 Before you actually start overclocking there are a few things you'll want to consider first. This will mean downloading and installing some software to help monitor your changes – and stress-test those that you have made – as well as consider some of the hardware requirements for overclocking. This latter part might not be relevant to you, but it's worth knowing about if it is something you want to do in the future.
-
-
-
-
 
 ### CPU-Z/GPU-Z
 
@@ -1949,6 +1811,8 @@ Before you actually start overclocking there are a few things you'll want to con
 
 并非所有主板，甚至处理器和显卡都适合超频。有些厂商喜欢将功能锁定，而其他厂商则默认解锁硬件潜力供发烧友使用。值得庆幸的是，大多数高端 PC 游戏组件都是考虑到超频而构建的，尽管你通常需要为此支付溢价。
 
+
+
 CPU-Z 和 GPU-Z 分别帮助你监控系统的处理器和显卡，以确保超频改动正常运行。
 
 ![](img/f51994701f272059dc108a0376ffceb8_126_0.png)
@@ -1961,120 +1825,93 @@ CPU 超频是最常见的增强方式，但就游戏而言，你可能更想超�
 
 超频处理器时，你将花费大量时间在 BIOS 中。它看起来很吓人，所以可以四处查看——你始终可以不做改动就退出。
 
-- **1. 测试机器**
+### 1. 测试机器
+首先：你需要知道机器在未改动时的能力。这将为你提供一个坚实的基础，了解改动设置后机器应如何运行。使用之前建议的软件，例如 `Prime95` 配合 `CPU-Z` 和 `Real Temp`，对机器进行压力测试。记录下你达到的数值，既有未受压状态也有受压状态。看起来可能不重要，但这将帮助你判断超频后的部件是否运行良好。
 
-  首先：你需要知道机器在未改动时的能力。这将为你提供一个坚实的基础，了解改动设置后机器应如何运行。使用之前建议的软件，例如 Prime95 配合 CPU-Z 和 Real Temp，对机器进行压力测试。记录下你达到的数值，既有未受压状态也有受压状态。看起来可能不重要，但这将帮助你判断超频后的部件是否运行良好。
+### 2. 进入 BIOS
+在获得机器默认状态的详细信息后，你就可以开始超频过程。重新启动系统，并在启动时按下正确的键以启动 BIOS 屏幕。这因主板而异，通常需要在提示时按下“删除”键或键盘顶部 12 个功能键之一。会出现带有主板制造商名称的屏幕，通常在这里会告诉你按哪个按钮加载 BIOS 系统设置屏幕。如果不行，请查看主板手册——里面会说明。
 
-- **2. 进入 BIOS**
+### 3. 找到 CPU 频率设置
+你要找的是控制 CPU 功能的设置列表。同样，这因处理器和主板而异，因此你需要在 BIOS 中搜索这些设置。查找 CPU 频率、`BCLK` 或基础时钟速度、倍频和比率或“关键术语学习”部分中提到的其他术语。你也可以参考主板手册以找到超频所需的章节。此时不要更改任何内容，只需记下一些默认设置并确认你正在查看正确的屏幕。
 
-  在获得机器默认状态的详细信息后，你就可以开始超频过程。重新启动系统，并在启动时按下正确的键以启动 BIOS 屏幕。这因主板而异，通常需要在提示时按下“删除”键或键盘顶部 12 个功能键之一。会出现带有主板制造商名称的屏幕，通常在这里会告诉你按哪个按钮加载 BIOS 系统设置屏幕。如果不行，请查看主板手册——里面会说明。
+### 4. 调整 CPU 设置
+一旦感觉有信心，你就可以开始调整 CPU 的设置。这应该是一个非常增量的过程。虽然在线搜索其他用户通过超频实现的示例设置是好的——就此而言你应始终取平均值，而非最大值——以便对你可能达到的水平有一个大致了解，但要记住所有部件都不同。即使你确信能达到的数值，也应逐步进行过程，以确保硬件安全超频。
 
-- **3. 找到 CPU 频率设置**
+### 5. 增加倍频
+你应首先更改 CPU 的倍频——尽管在 BIOS 中这可能被称为时钟比率。该基础设置可能在 15 到 35 之间，具体取决于系统的基础时钟速度（`BCLK`）。通过增加倍频/比率，你实际上是在增加处理器每秒完成的周期数。
 
-  你要找的是控制 CPU 功能的设置列表。同样，这因处理器和主板而异，因此你需要在 BIOS 中搜索这些设置。查找 CPU 频率、BCLK 或基础时钟速度、倍频和比率或“关键术语学习”部分中提到的其他术语。你也可以参考主板手册以找到超频所需的章节。此时不要更改任何内容，只需记下一些默认设置并确认你正在查看正确的屏幕。
+![](img/f51994701f272059dc108a0376ffceb8_128_0.png)
 
-- **4. 调整 CPU 设置**
+CPU 频率设置在特定主板上的存储位置因板而异。有些会将所有内容集中在一个屏幕上，其他则在不同的菜单中。
 
-  一旦感觉有信心，你就可以开始调整 CPU 的设置。这应该是一个非常增量的过程。虽然在线搜索其他用户通过超频实现的示例设置是好的——就此而言你应始终取平均值，而非最大值——以便对你可能达到的水平有一个大致了解，但要记住所有部件都不同。即使你确信能达到的数值，也应逐步进行过程，以确保硬件安全超频。
+![](img/f51994701f272059dc108a0376ffceb8_129_0.png)
 
-- **5. 增加倍频**
+对于多核处理器，你可能能够解锁根据活动核心数量自定义 CPU 频率的能力。
 
-  你应首先更改 CPU 的倍频——尽管在 BIOS 中这可能被称为时钟比率。该基础设置可能在 15 到 35 之间，具体取决于系统的基础时钟速度（BCLK）。通过增加倍频/比率，你实际上是在增加处理器每秒完成的周期数。
+可能会很诱人直接选择最高数字，但不要——这很可能会对你的 CPU 造成灾难。相反，只将数字增加一到两点。正如我们所说，缓慢进行这些改动更安全，同时不断测试。此外，值得注意的是，一些设置允许你根据 CPU 核心使用情况指定单独的倍频——英特尔称之为 `Turbo Boost` 模式。如果你想以这种方式定制系统，你需要启用该模式并为一个、两个、三个和四个 CPU 核心活动时指定单独的倍频，向下扩展以实现最佳使用。更改后，保存设置并重新启动系统，启动到 `Windows`。如果你的系统被锁定且不适合超频，那么你可能无法调整倍频，在这种情况下你需要改调基础时钟速度，但我们稍后会谈到这一点。每次只更改一个设置比同时进行多次 BIOS 改动要好得多——这将帮助你在系统在改动后出现故障时诊断问题。记录你所做的不同改动很有帮助，可以更好地跟踪数值，并在出现故障时重新调整到之前正常工作的设置。
 
-  ![](img/f51994701f272059dc108a0376ffceb8_128_0.png)
+### 6. 压力测试
+在 BIOS 中进行更改并重新启动后，你需要确保设置已生效并且对系统安全。首先，留意系统启动时的任何异常：任何错误都会明确表明更改导致了问题，强制重启也是如此，但系统启动是否异常缓慢？不应该，这可能是存在问题的迹象。一旦进入 `Windows` 屏幕，启动 `CPU-Z` 以确保已更改的设置已生效，然后启动你选择的压力测试软件。记住游戏是 PC 最耗费的功能之一——至少是 3D 游戏——因此实际上最好运行组合压力测试软件以确保系统在满载下安全。将 `BurnInTest` 和 `FurMark` 之类的软件配对是一个好且相当快速的方式，确保你的 CPU 和 GPU 能承受功率增加。记得同时运行 `Real Temp`，以确保系统不会达到危险温度。即使使用这些压力测试软件，你可能仍想运行一款高端、图形密集型游戏（我们在本章后面有示例）以确保升级安全。如果游戏卡死、冻结、卡顿、崩溃，或你发现系统过热，那么你就知道需要采取措施。
 
-  CPU 频率设置在特定主板上的存储位置因板而异。有些会将所有内容集中在一个屏幕上，其他则在不同的菜单中。
+### 7. 出现故障时
+如果在此过程中出现任何故障，那么在重复该阶段之前，你需要找到故障原因并加以纠正。你会遇到的故障可能包括强制重启或关机、压力测试失败、启动时出现意外错误信息，或游戏运行失败或不稳定。这很可能由两种原因之一造成：要么你增加的负载导致处理器过热，从而迫使电脑作为安全措施而关机，要么处理器没有获得足够的电力来运行调整。很可能在超频过程的早期，缺乏电力是问题所在，在这种情况下你需要调整供给处理器的电压（下一步）。将你所做的改动重新调整到之前的数值是有意义的，以确保故障是由此次改动引起的；如果此时仍然发生，可能你的电脑或单个组件存在更大的问题。
 
-  ![](img/f51994701f272059dc108a0376ffceb8_129_0.png)
+### 8. 增加电压
+对于小幅改动来说，你可能不需要增加电压供应，但如果压力测试出现问题，那么很可能是升级后的 CPU 没有获得足够的电力来让改进发挥作用。要做到这一点，你需要再次进入 BIOS 并查找电压设置，通常称为“`Vcore`”，并且通常位于不同的菜单中。如同之前所述，这取决于你的主板，但 CPU/核心电压的设置会在某个地方。你不要一次调整太多电压设置，而且每次升级都应该逐渐进行——输入到组件的电压越高，其运行温度就会越高，因此你需要对更改非常保守。每次增加 0.0500 的电压通常就足够了，但请记住在每次调整后都要留意 CPU 温度。如前所述，保存电压更改并再次对机器进行压力测试。
 
-  对于多核处理器，你可能能够解锁根据活动核心数量自定义 CPU 频率的能力。
-
-  可能会很诱人直接选择最高数字，但不要——这很可能会对你的 CPU 造成灾难。相反，只将数字增加一到两点。正如我们所说，缓慢进行这些改动更安全，同时不断测试。此外，值得注意的是，一些设置允许你根据 CPU 核心使用情况指定单独的倍频——英特尔称之为 Turbo Boost 模式。如果你想以这种方式定制系统，你需要启用该模式并为一个、两个、三个和四个 CPU 核心活动时指定单独的倍频，向下扩展以实现最佳使用。更改后，保存设置并重新启动系统，启动到 Windows。如果你的系统被锁定且不适合超频，那么你可能无法调整倍频，在这种情况下你需要改调基础时钟速度，但我们稍后会谈到这一点。每次只更改一个设置比同时进行多次 BIOS 改动要好得多——这将帮助你在系统在改动后出现故障时诊断问题。记录你所做的不同改动很有帮助，可以更好地跟踪数值，并在出现故障时重新调整到之前正常工作的设置。
-
-- **6. 压力测试**
-
-  在 BIOS 中进行更改并重新启动后，你需要确保设置已生效并且对系统安全。首先，留意系统启动时的任何异常：任何错误都会明确表明更改导致了问题，强制重启也是如此，但系统启动是否异常缓慢？不应该，这可能是存在问题的迹象。一旦进入 Windows 屏幕，启动 CPU-Z 以确保已更改的设置已生效，然后启动你选择的压力测试软件。记住游戏是 PC 最耗费的功能之一——至少是 3D 游戏——因此实际上最好运行组合压力测试软件以确保系统在满载下安全。将 BurnInTest 和 FurMark 之类的软件配对是一个好且相当快速的方式，确保你的 CPU 和 GPU 能承受功率增加。记得同时运行 Real Temp，以确保系统不会达到危险温度。即使使用这些压力测试软件，你可能仍想运行一款高端、图形密集型游戏（我们在本章后面有示例）以确保升级安全。如果游戏卡死、冻结、卡顿、崩溃，或你发现系统过热，那么你就知道需要采取措施。
-
-- **7. 出现故障时**
-
-  如果在此过程中出现任何故障，那么在重复该阶段之前，你需要找到故障原因并加以纠正。你会遇到的故障可能包括强制重启或关机、压力测试失败、启动时出现意外错误信息，或游戏运行失败或不稳定。这很可能由两种原因之一造成：要么你增加的负载导致处理器过热，从而迫使电脑作为安全措施而关机，要么处理器没有获得足够的电力来运行调整。很可能在超频过程的早期，缺乏电力是问题所在，在这种情况下你需要调整供给处理器的电压（下一步）。将你所做的改动重新调整到之前的数值是有意义的，以确保故障是由此次改动引起的；如果此时仍然发生，可能你的电脑或单个组件存在更大的问题。
-
-- **8. 增加电压**
-
-  对于小幅改动来说，你可能不需要增加电压供应，但如果压力测试出现问题，那么很可能是升级后的 CPU 没有获得足够的电力来让改进发挥作用。要做到这一点，你需要再次进入 BIOS 并查找电压设置，通常称为“Vcore”，并且通常位于不同的菜单中。如同之前所述，这取决于你的主板，但 CPU/核心电压的设置会在某个地方。你
-
-
-
-不要一次调整太多电压设置，而且每次升级都应该逐渐进行——输入到组件的电压越高，其运行温度就会越高，因此你需要对更改非常保守。每次增加 0.0500 的电压通常就足够了，但请记住在每次调整后都要留意 CPU 温度。如前所述，保存电压更改并再次对机器进行压力测试。
-
-- 9. 重复该过程
-
+### 9. 重复该过程
 这是超频 CPU 的最简单方法，只要你的部件支持超频，你就可以毫无问题地继续操作。重复缓慢增加倍频/时钟比率和核心电压的过程，并在过程中进行压力测试，直到你对设置感到满意为止。在增加电压时请记住留意 CPU 的运行温度。一般认为最高 85°C 是安全的，但请务必在线搜索你处理器合适的温度。并且请记住，温度越高、组件运行越重，其使用寿命缩短的可能性就越大——就像任何过度使用的东西一样，真的。正是出于这个原因，并不总是最好在需要之前就将机器超频到极限。
 
-- 10. 增加时钟速度
+### 10. 增加时钟速度
+如果你的组件是锁定的，那么你就无法通过 BIOS 调整倍频/时钟比率，但这并不意味着你不能继续超频。你可能仍然能够微妙地提高基础时钟以最大化你的潜在收益。这会对整个系统造成更大的压力，尤其是调整基础时钟还会对其他组件产生连锁反应——例如在各部件之间传输信息的不同数据总线——这些部件可能无法很好地适应提高的速度，因此在进行这些更改时要格外谨慎。要调整时钟速度，你需要再次进入 BIOS 并查找 CPU 频率菜单——很可能在你找到倍频/时钟比率选项的同一菜单或子菜单中。查找对基础时钟速度的引用：在 Intel 芯片中，你很可能要查找“`BCLK`”，但在 AMD 芯片中，你可能需要调整数据总线，因此请查找“`FSB`”或类似内容。你的主板手册会有你需要的所有详细信息。与倍频一样，你希望缓慢提高基础时钟速度的运行速度（以 MHz 为单位），保存设置，然后重新启动系统进入 `Windows` 进行压力测试。时钟速度可以增加的幅度不会太大，这才是最好的——正如一直以来所说的，慢而稳在这里是首选。
 
-如果你的组件是锁定的，那么你就无法通过 BIOS 调整倍频/时钟比率，但这并不意味着你不能继续超频。你可能仍然能够微妙地提高基础时钟以最大化你的潜在收益。这会对整个系统造成更大的压力，尤其是调整基础时钟还会对其他组件产生连锁反应——例如在各部件之间传输信息的不同数据总线——这些部件可能无法很好地适应提高的速度，因此在进行这些更改时要格外谨慎。要调整时钟速度，你需要再次进入 BIOS 并查找 CPU 频率菜单——很可能在你找到倍频/时钟比率选项的同一菜单或子菜单中。查找对基础时钟速度的引用：在 Intel 芯片中，你很可能要查找“BCLK”，但在 AMD 芯片中，你可能需要调整数据总线，因此请查找“FSB”或类似内容。你的主板手册会有你需要的所有详细信息。与倍频一样，你希望缓慢提高基础时钟速度的运行速度（以 MHz 为单位），保存设置，然后重新启动系统进入 Windows 进行压力测试。时钟速度可以增加的幅度不会太大，这才是最好的——正如一直以来所说的，慢而稳在这里是首选。
-
-- 11. 转向 GPU 或 RAM
-
+### 11. 转向 GPU 或 RAM
 一旦你为 CPU 确定了速度和运行标准，你可能还想调整 PC 的更多部分。请记住，你可以在某些四核芯片上启用多核超频，这将给你更大的控制权——尤其是在游戏方面，因为游戏在计算时很少使用芯片的全部四个核心。之后你很可能想要超频你的显卡，在大多数情况下，这将承担你 PC 在游戏时的计算重任。甚至你的 RAM 也可以超频，使其以预期速度运行，因为大多数内存最初实际上都是降频的。
 
 ![](img/f51994701f272059dc108a0376ffceb8_130_0.png)
 
-有多种压力测试软件可用。这里显示的 Prime95 非常适合整体系统测试，非常适合超频 CPU 或 RAM。
+有多种压力测试软件可用。这里显示的 `Prime95` 非常适合整体系统测试，非常适合超频 CPU 或 RAM。
 
 ## 超频你的显卡
 
-虽然超频处理器肯定有助于你的 PC 处理更 demanding 的任务，并且是你在超频 PC 时首先想到的事情之一，但对于 PC 游戏玩家来说，显卡或许应该是超频的首要目标。如今 GPU 是在 3D 游戏中处理大部分处理的硬件，因此如果你想让你的游戏看起来尽可能好或运行尽可能流畅——尤其是如果你选择了更便宜的选项以节省整体构建成本——那么你就需要遵循以下步骤。值得庆幸的是，与 CPU 相比操作要容易一些，尽管你更改的元素在很大程度上是相同的。它可以通过 Windows 中的专用 GPU 超频软件来处理，因此在更改不同因素时要轻松得多。然而，与 CPU 超频一样，每块 GPU 都是不同的，即使是外观相同的型号和品牌，因此你应该一次进行小的更改，并在操作时使用基准测试软件进行测试。
+虽然超频处理器肯定有助于你的 PC 处理更 demanding 的任务，并且是你在超频 PC 时首先想到的事情之一，但对于 PC 游戏玩家来说，显卡或许应该是超频的首要目标。如今 GPU 是在 3D 游戏中处理大部分处理的硬件，因此如果你想让你的游戏看起来尽可能好或运行尽可能流畅——尤其是如果你选择了更便宜的选项以节省整体构建成本——那么你就需要遵循以下步骤。值得庆幸的是，与 CPU 相比操作要容易一些，尽管你更改的元素在很大程度上是相同的。它可以通过 `Windows` 中的专用 GPU 超频软件来处理，因此在更改不同因素时要轻松得多。然而，与 CPU 超频一样，每块 GPU 都是不同的，即使是外观相同的型号和品牌，因此你应该一次进行小的更改，并在操作时使用基准测试软件进行测试。
 
-- 1. 安装驱动程序
-
+### 1. 安装驱动程序
 如今大多数 GPU 软件会在有新的非测试版显卡驱动程序可用时提示你，但即使它们没有提示，在开始超频 GPU 之前安装最新驱动程序通常也是更好的选择。你可以在制造商网站或品牌网站上找到这些驱动程序，允许你下载和安装最新可用的软件。在某些情况下，你可能能够在它们发布后立即下载测试版驱动程序，这也是一些游戏玩家为了从 GPU 中获得绝对最大性能而做的事情——但就超频而言，避免这样做，因为这些测试版驱动程序有时可能不稳定。拥有最新的非测试版驱动程序将为你的 GPU 提供与你自己的系统和你将玩的游戏的绝对最佳兼容性。
 
-- 2. 基准测试你的 GPU
-
+### 2. 基准测试你的 GPU
 与 CPU 超频一样，你希望首先了解你的显卡的能力。有大量可用的潜在基准测试软件，因此我们专门为此设置了一个部分；如果你不知道使用哪种软件，请查看该部分以更好地了解你可能想要下载的内容。与压力测试一样，这会将你的显卡推向最大，测试其渲染模型、计算光照甚至物理控制的能力。不同的基准测试软件工作方式不同，但结果相同——了解你的 GPU 的性能如何。运行基准测试软件并记录你的 GPU 的默认性能。
 
-- 3. 运行 MSI Afterburner
+### 3. 运行 MSI Afterburner
+由于 GPU 超频可以用 `Windows` 软件完成，因此正如你所料，你有大量选择。为了方便起见，我们建议使用 `MSI Afterburner`，它易于使用，并且为大多数显卡提供统一的体验。你可以找到并下载你自己的首选选项，但这是最稳健、最广泛使用的选项。AMD 卡附带 `Catalyst Control Center`，如果你喜欢更安全的选项，它可以实现类似的功能，不过 `MSI Afterburner` 还允许控制卡的电压以实现最大超频潜力。
 
-由于 GPU 超频可以用 Windows 软件完成，因此正如你所料，你有大量选择。为了方便起见，我们建议使用 MSI Afterburner，它易于使用，并且为大多数显卡提供统一的体验。你可以找到并下载你自己的首选选项，但这是最稳健、最广泛使用的选项。AMD 卡附带 Catalyst Control Center，如果你喜欢更安全的选项，它可以实现类似的功能，不过 MSI Afterburner 还允许控制卡的电压以实现最大超频潜力。
-
-- 4. 调整时钟速度
-
-在 MSI Afterburner 中查找时钟速度设置。它将是一个滑块条，一端为“min”，另一端为“max”。与往常一样，你要避免将其滑到最大值，因为这可能会使卡过载并可能造成损坏。首先，如果还有着色器时钟速度，那么你也希望将其链接到核心时钟速度，这可以通过 MSI Afterburner 右侧的按钮完成。你希望同时调整两者以获得最佳效果。只需将时钟速度小幅提高——每次 10MHz 就足够了——然后在基准测试前应用更改的设置。如果你使用的是 MSI Afterburner，你希望将这些设置保存到软件的一个配置文件中，该功能让你可以在超频更改之间切换——如果你想保护 GPU 的使用寿命，这是一个很棒的选择。
+### 4. 调整时钟速度
+在 `MSI Afterburner` 中查找时钟速度设置。它将是一个滑块条，一端为“min”，另一端为“max”。与往常一样，你要避免将其滑到最大值，因为这可能会使卡过载并可能造成损坏。首先，如果还有着色器时钟速度，那么你也希望将其链接到核心时钟速度，这可以通过 `MSI Afterburner` 右侧的按钮完成。你希望同时调整两者以获得最佳效果。只需将时钟速度小幅提高——每次 10MHz 就足够了——然后在基准测试前应用更改的设置。如果你使用的是 `MSI Afterburner`，你希望将这些设置保存到软件的一个配置文件中，该功能让你可以在超频更改之间切换——如果你想保护 GPU 的使用寿命，这是一个很棒的选择。
 
 ![](img/f51994701f272059dc108a0376ffceb8_132_0.png)
 
 始终保持驱动程序为最新状态总是好的，尤其是如果你想从最近的游戏中获得最大收益。然而，在超频之前这样做是必不可少的。
 
-- 5. 基准测试更改
+### 5. 基准测试更改
+现在你需要测试你所做的更改，但首先启动 `GPU-Z` 以确保设置更改已成功应用。一旦你确认了更改，运行你选择的基准测试软件以了解它与之前的测试相比如何，同时留意显卡的温度。如果你拥有高端 GPU，那么在第一次超频更改后的基准测试期间你不应该遇到太多问题。如果你拥有中端或低端卡，那么你可能会注意到一些帧率问题（大多数基准测试软件在测试后期会提高需求），但只要测试成功完成、不过热并且为你提供了明显的改进，你就可以认为更改是成功的。
 
-现在你需要测试你所做的更改，但首先启动 GPU-Z 以确保设置更改已成功应用。一旦你确认了更改，运行你选择的基准测试软件以了解它与之前的测试相比如何，同时留意显卡的温度。如果你拥有高端 GPU，那么在第一次超频更改后的基准测试期间你不应该遇到太多问题。如果你拥有中端或低端卡，那么你可能会注意到一些帧率问题（大多数基准测试软件在测试后期会提高需求），但只要测试成功完成、不过热并且为你提供了明显的改进，你就可以认为更改是成功的。
+### 6. 重复时钟速度增加
+如果你的基准测试成功，那么你可以重复以每次 10MHz 增加 GPU 时钟速度的过程。研究你的特定显卡以了解大多数人实现了什么样的数字是个好主意，这可以让你对目标有一个很好的了解，但不要让它诱使你快速提高数字；重申一下，每张卡都不同，你的卡可能无法实现与另一张卡相同的超频更改。继续逐渐增加时钟速度，直到基准测试出现问题：你的显卡驱动程序可能会崩溃，屏幕可能会变黑或在基准测试期间出现图形伪影。此外，你的卡可能达到无法忍受的温度，如果放任不管，这将造成永久性损坏状态。此时你已超过 GPU 当前的极限值，应将其降低回上一次成功的时钟频率。
 
-- 6. 重复时钟速度增加
-
-如果你的基准测试成功，那么你可以重复以每次 10MHz 增加 GPU 时钟速度的过程。研究你的特定显卡以了解大多数人实现了什么样的数字是个好主意，这可以让你对目标有一个很好的了解，但不要让它诱使你快速提高数字；重申一下，每张卡都不同，你的卡可能无法实现与另一张卡相同的超频更改。继续逐渐增加时钟速度，直到基准测试出现问题：你的显卡驱动程序可能会崩溃，屏幕可能会变黑或在基准测试期间出现图形伪影。此外，你的卡可能达到无法忍受的温度，如果放任不管，这将造成永久性损坏
-
-
-状态。此时你已超过 GPU 当前的极限值，应将其降低回上一次成功的时钟频率。
-
-## 7. 增加电压
-
-如果你正在使用 MSI Afterburner 或其他能够调整 GPU 电压的软件，那么此时你可以尝试进一步挖掘显卡的性能。请注意，增加 GPU 电压会提高其运行温度，并让显卡承受更大压力——这意味着其寿命可能会缩短。虽然这能让你达到更高的时钟频率，但如果你不愿让显卡冒这种风险，完全可以跳过此步骤。要调整 GPU 电压，你首先需要解锁该功能。在 MSI Afterburner 中，你需要进入设置并找到“Unlock Voltage Control”（解锁电压控制）选项。完成后，你可以像调整核心频率那样调整电压；每张显卡会按各自的增量来控制电压，所以输入增加 10mV，软件就会自动缩放到合适的数值。有了这些额外功耗，你现在可以像第六步那样重新调整核心频率，每次逐步增加 10MHz，并运行基准测试软件以确保更改是安全的。一旦在基准测试过程中再次发现问题，就将电压再增加 10mV，然后重复该过程。增加电压时，请务必确保自己知道显卡的安全最大电压值，因为绝对不要超过它。此外，你还需要格外注意温度上升——80°C 被认为是安全的，而 90°C 通常被认为过高；但请记得上网查找你的显卡所对应的安全最高温度。
+### 7. 增加电压
+如果你正在使用 `MSI Afterburner` 或其他能够调整 GPU 电压的软件，那么此时你可以尝试进一步挖掘显卡的性能。请注意，增加 GPU 电压会提高其运行温度，并让显卡承受更大压力——这意味着其寿命可能会缩短。虽然这能让你达到更高的时钟频率，但如果你不愿让显卡冒这种风险，完全可以跳过此步骤。要调整 GPU 电压，你首先需要解锁该功能。在 `MSI Afterburner` 中，你需要进入设置并找到“Unlock Voltage Control”选项。完成后，你可以像调整核心频率那样调整电压；每张显卡会按各自的增量来控制电压，所以输入增加 10mV，软件就会自动缩放到合适的数值。有了这些额外功耗，你现在可以像第六步那样重新调整核心频率，每次逐步增加 10MHz，并运行基准测试软件以确保更改是安全的。一旦在基准测试过程中再次发现问题，就将电压再增加 10mV，然后重复该过程。增加电压时，请务必确保自己知道显卡的安全最大电压值，因为绝对不要超过它。此外，你还需要格外注意温度上升——80°C 被认为是安全的，而 90°C 通常被认为过高；但请记得上网查找你的显卡所对应的安全最高温度。
 
 > 对你所做的每一项更改进行测试都很重要，这既能确认更改成功，也能确保过程中不会损坏显卡。
 
 ![](img/f51994701f272059dc108a0376ffceb8_133_0.png)
 
-## 8. 提升显存频率
+### 8. 提升显存频率
+一旦你找到了自己满意的安全超频设置，就可以对 GPU 的显存频率重复同样流程。这与提升 GPU 核心频率的过程完全相同，只是改为调整显存频率滑块。同样，逐步调整、`GPU-Z` 检查和基准测试对于找到最佳最大值至关重要。在更改 GPU 显存频率之前，比较稳妥的做法是记下你新的 GPU 核心频率和电压设置，并将它们重置为默认值。然后，如果一切顺利，再将新的 GPU 核心频率、电压和显存频率设置搭配使用，看看它们如何协同工作。和往常一样，一次只更改一项设置，这样遇到问题时就能轻松解决。你从提高显存频率中获得的性能提升可能不如核心频率那样明显，但为了充分利用 GPU，这仍然是有益的。
 
-一旦你找到了自己满意的安全超频设置，就可以对 GPU 的显存频率重复同样流程。这与提升 GPU 核心频率的过程完全相同，只是改为调整显存频率滑块。同样，逐步调整、GPU-Z 检查和基准测试对于找到最佳最大值至关重要。在更改 GPU 显存频率之前，比较稳妥的做法是记下你新的 GPU 核心频率和电压设置，并将它们重置为默认值。然后，如果一切顺利，再将新的 GPU 核心频率、电压和显存频率设置搭配使用，看看它们如何协同工作。和往常一样，一次只更改一项设置，这样遇到问题时就能轻松解决。你从提高显存频率中获得的性能提升可能不如核心频率那样明显，但为了充分利用 GPU，这仍然是有益的。
-
-## 9. 进行测试
-
+### 9. 进行测试
 当你找到满意的超频设置，并且基准测试表明它们安全后，接下来要做的重要事情就是全面测试。启动一些图形负载较重的游戏，以确认你的设置在“真实”场景中是安全的。虽然基准测试非常适合找出潜在的最大值，但游戏动态变化的负载往往会带来更大的压力，这是基准测试软件的可预测性无法复现的。如果在玩游戏时显卡出现任何问题——例如 GPU 驱动频繁崩溃或黑屏——那么你应该稍微调整超频设置，降低设置并重新测试，以确保对 GPU 而言一切安全。而且，一如既往地留意温度。
 
-> 你可以使用任何支持 GPU 超频功能的其他软件，但 MSI Afterburner 对几乎所有品牌和型号的显卡来说都特别简单易用。
+> 你可以使用任何支持 GPU 超频功能的其他软件，但 `MSI Afterburner` 对几乎所有品牌和型号的显卡来说都特别简单易用。
 
 ![](img/f51994701f272059dc108a0376ffceb8_134_0.png)
 
@@ -2083,37 +1920,39 @@ CPU 超频是最常见的增强方式，但就游戏而言，你可能更想超�
 由于内存的类型和等级繁多，甚至同一类型内容量和性能也各不相同，要在系统内存超频的种种复杂问题中找到方向，不啻于穿越一片雷区。再加上某些部件比其他部件更适合超频，而且性能提升相对较小，这看起来可能是一项徒劳的任务。尽管如此，如果你想从 PC 中榨出每一点性能，那么你可能会想手动重新配置内存设置，以做到物有所值。但正因这些变数繁多，我们并不适合提供一份逐步超频内存的指南；相反，我们假定你至少已经调整过 CPU 设置（反正无论如何你都会先做这件事），因此你已经体验过系统的 BIOS。在这里，我们将详细介绍超频内存时需要注意的一些事项，并解释如何着手。
 
 ### 关键须知
+- **测试软件** – 与任何形式的超频一样，测试你所做的更改总是好的。当然，就内存而言，测试要更棘手一些，但有软件可以提供帮助。首先，你需要使用 `CPU-Z`，就像超频处理器时那样；而 `Prime95` 则是一个不错的整体系统压力测试工具。不过，专门针对内存，你可以下载 `MaxMem` 或 `SiSoftware` 的 `Sandra` 等测试软件，它们会检查内存是否有新的上限。
 
-- **测试软件** – 与任何形式的超频一样，测试你所做的更改总是好的。当然，就内存而言，测试要更棘手一些，但有软件可以提供帮助。首先，你需要使用 CPU-Z，就像超频处理器时那样；而 Prime95 则是一个不错的整体系统压力测试工具。不过，专门针对内存，你可以下载 MaxMem 或 SiSoftware 的 Sandra 等测试软件，它们会检查内存是否有新的上限。
+
 
 - **频率** – 通常被称为 DRAM 频率，是内存能够运行的速度。内存包装上、产品描述中，甚至内存本身标签上都标有可运行的速度。它以 MHz 为单位，从低端的 333MHz 到 2,400MHz 及以上。它在很大程度上影响内存发送和接收数据的速度。你可以在 BIOS 中找到该选项，并通过调整来更好地匹配内存的预期性能；但请记住，所有硬件都各不相同——即使你将内存频率提高到标签上标注的数值，仍可能会遇到问题，不得不略微降低。一如既往，运行速度越快，硬件承受的压力就越大，因此最好找出最大内存频率，再将其降低一档，以保证内存稳定可靠地日常使用。同时请记住，内存会受到 FSB（前端总线）能力的限制——正如我们在 CPU 部分讨论过的，这通常可以手动更改。如果你想了解更多，请阅读下一点。
 
-- **FSB:DRAM** – 在 CPU-Z 中你会看到这个数值，即 FSB 与 DRAM 的频率比。这与上面关于频率的一点相关，它告诉你一个部分相对于另一个部分运行得有多快。内存始终会受到 FSB 速度的限制，所以你应该尽量让该比率接近 1:1——如果 FSB 比内存快，就会出现瓶颈，而内存速度会限制 FSB。反之，内存比 FSB 快也不一定更糟，因为虽然 FSB 会成为瓶颈，但内存访问数据的方式（而且它在计算机系统中的用途本身）意味着它更快并不是真正的负面问题。只要有可能，尽量确保 FSB:DRAM 比率为 1:1，或者右侧数值更大。
+- `FSB:DRAM` – 在 CPU-Z 中你会看到这个数值，即 FSB 与 DRAM 的频率比。这与上面关于频率的一点相关，它告诉你一个部分相对于另一个部分运行得有多快。内存始终会受到 FSB 速度的限制，所以你应该尽量让该比率接近 1:1——如果 FSB 比内存快，就会出现瓶颈，而内存速度会限制 FSB。反之，内存比 FSB 快也不一定更糟，因为虽然 FSB 会成为瓶颈，但内存访问数据的方式（而且它在计算机系统中的用途本身）意味着它更快并不是真正的负面问题。只要有可能，尽量确保 `FSB:DRAM` 比率为 1:1，或者右侧数值更大。
 
 > CPU-Z 还允许你监控内存的当前设置，因此在对内存进行每次更改后尽量使用它，以确认更改已成功应用。
 
 - **内存时序** – 对内存来说，第二重要的数值是它的一组时序，通常宣传为“CAS”（列地址选通）或“CAS 延迟”，尽管后者在技术上并不准确。时序有多种，但有四个关键数字值得关注。这些数字可以在内存条本身的标签上找到，通常以破折号分隔的四个数字表示，例如：13-15-15-28。这些时序代表内存处理数据时承受的各种延迟，因此数字越低越好。虽然它可能会按这些时序宣传，但实际也许能实现更短的延迟。以 CPU-Z 和前面给出的内存时序为参考，你需要更改的四个数字是：
-  - CAS 延迟（CL），此处为 13
-  - RAS# 至 CAS# 延迟（tRCD），此处为第一个 15
-  - RAS# 预充电（tRP），此处为第二个 15
-  - 周期时间（tRAS），此处为 28
+
+    - CAS 延迟（`CL`），此处为 13
+
+    - `RAS#` 至 `CAS#` 延迟（`tRCD`），此处为第一个 15
+
+    - `RAS#` 预充电（`tRP`），此处为第二个 15
+
+    - 周期时间（`tRAS`），此处为 28
 
 - **降低内存时序** – 虽然我们可以解释这些时序的作用以及它们影响什么，但这本身并不太重要；
 
-![](img/f51994701f272059dc108a0376ffceb8_136_0.png)
+  ![](img/f51994701f272059dc108a0376ffceb8_136_0.png)
 
+  ![](img/f51994701f272059dc108a0376ffceb8_137_0.png)
 
+  你需要更改的四个内存超频时序为 CAS Latency、`tRCD`、`tRP` 和 `tRAS`。它们出现的顺序也是如此。
 
-
-![](img/f51994701f272059dc108a0376ffceb8_137_0.png)
-
-你需要更改的四个内存超频时序为 CAS Latency、tRCD、tRP 和 tRAS。它们出现的顺序也是如此。
-
-我们将解释如何进行降低时序。在 BIOS 中你需要查找 DRAM 时序配置，找到上面提到的四个不同时序。正如一直以来，这应该是一个分阶段的过程，当你发现可以应用于这些设置的最低延迟时，逐一更改设置，保存，然后在回到 Windows 后测试你的更改。你可以使用基准时序作为指导，了解每种时序可以降低到何种比例——所以在我们的示例中，CL 为 13 的值最终会低于 tRCD 和 tRP。周期时间（或 tRAS）始终会高于其他值。与 CPU 或 GPU 超频相比，内存超频涉及更多操作，因此请做好多次系统重启的准备。如果你的电脑无法启动，那么你最后更改的设置就太低了。
+  我们将解释如何进行降低时序。在 BIOS 中你需要查找 DRAM 时序配置，找到上面提到的四个不同时序。正如一直以来，这应该是一个分阶段的过程，当你发现可以应用于这些设置的最低延迟时，逐一更改设置，保存，然后在回到 Windows 后测试你的更改。你可以使用基准时序作为指导，了解每种时序可以降低到何种比例——所以在我们的示例中，`CL` 为 13 的值最终会低于 `tRCD` 和 `tRP`。周期时间（或 `tRAS`）始终会高于其他值。与 CPU 或 GPU 超频相比，内存超频涉及更多操作，因此请做好多次系统重启的准备。如果你的电脑无法启动，那么你最后更改的设置就太低了。
 
 ### Command Rate (CR)
 
-你基本上会得到两个数值，即 1T 或 2T。1T 总是比 2T 快，但性能提升微乎其微，所以你可能没有必要更改它，因为以 2T 运行更稳定。然而，如果你希望最大化 PC 的每个方面，并且你的内存能够以 1T 运行，那么这可以是一个快速且简单的更改。你会在 BIOS 中与内存选项一起找到该选项。
+你基本上会得到两个数值，即 `1T` 或 `2T`。`1T` 总是比 `2T` 快，但性能提升微乎其微，所以你可能没有必要更改它，因为以 `2T` 运行更稳定。然而，如果你希望最大化 PC 的每个方面，并且你的内存能够以 `1T` 运行，那么这可以是一个快速且简单的更改。你会在 BIOS 中与内存选项一起找到该选项。
 
 ### Voltage
 
@@ -2173,19 +2012,11 @@ DICE 以打造业界最佳游戏引擎之一而闻名，以至于其 Frostbite �
 
 《地铁》系列直到最近的作品才真正提升了视觉表现，而《地铁：离去》或许是开发商中最具视觉冲击力的一作。当然，其模型和纹理近看可能不是最出色的，但凭借一些精美的设计选择——如逼真的雾、霜和冷凝——以及非常直接的第一人称视角，这里有很多东西在引擎下运行。
 
-### Grand Theft Auto V
-
-虽然现在已经有几年历史了，《GTA V》与首次发布时一样受欢迎。庞大的开放世界游戏玩法和多人疯狂模式使其保持相关性，图形上看起来也很漂亮。如果真的想，也可以随时使用模组和附加组件来增强某些视觉方面。
-
 第一人称射击游戏通常是查看机器性能的最佳选择，但《地铁：离去》对此尤其好。
 
 《侠盗猎车手》一直是开放世界游戏玩法的领导者，但 PC 版的《GTA V》受益于比主机版好得多的图形。
 
 ![](img/f51994701f272059dc108a0376ffceb8_142_1.png)
-
-
-
-
 
 ![](img/f51994701f272059dc108a0376ffceb8_143_0.png)
 
@@ -2229,30 +2060,38 @@ DICE 以打造业界最佳游戏引擎之一而闻名，以至于其 Frostbite �
 ### 清除灰尘
 
 - 首先拔掉 PC 的所有电缆，并将其放在平坦的表面上——这种情况下直立是可以的，因为如果平放，灰尘会重新落回主板上。取下你有的任何侧板，如果机箱有两块则全部取下。
+
 - 此时注意任何电缆。虽然它们应该已经整理好，但检查一下以确保它们不会与硬件发生事故。如果尚未整理好，请使用扎带整理松散的电缆。
+
 - 使用压缩空气罐，吹向每个部件以松动任何灰尘。以角度但相当近的距离进行操作，以确保灰尘飞出机箱之外。特别注意 PC 的每个风扇、电源单元。
+
 - 这是必不可少的，以及安装在 PCI 插槽中的任何额外卡——例如你的显卡。
+
 - 如果你的机箱空间不大，你可以考虑取下电源单元及其连接的电缆。这将腾出很大一块空间以获得更好的角度，并且更容易清除被电缆本身遮挡的部件上的灰尘。记得也用防静电布擦拭电缆。
+
 - 主板本身应该相对没有灰尘——前提是它处于直立位置，这对大多数机箱来说是这种情况。尽管如此，从大约三到四英寸远的地方向整个主板喷一下，以敲掉任何灰尘。
+
 - 如果你有较小的喷嘴可供连接，请这样做并使用它吹走小缝隙之间的灰尘——例如内存插槽之间或 CPU 区域周围。确保你用这个喷嘴彻底清洁，因为它会使空气更加集中。
+
 - 最后使用防静电布轻轻擦拭平坦表面和硬边，例如显卡顶部、存储驱动器或你的内存和风扇的边缘。现在机箱底部可能也需要除尘，如果你取下了 PSU，清洁起来会更容易。这里要温柔，只使用布的一小部分一次，不要用它清洁主板或显卡等部件上的芯片；布很容易被卡住而造成损坏。
 
 ### 更换导热膏
 
 - 如果你发现 CPU 在使用过程中变得不合理地热，可能需要考虑更换 CPU 芯片和主板之间的导热膏。有些人建议每 12 个月更换一次这种膏，但如果你缺乏经验，最好等到发现 CPU 意外影响性能的问题后再动手。
+
 - 你需要取下安装在 CPU 上的任何风扇，无论是随芯片附带的原装风扇还是你选择的任何售后安装。让 CPU 保持安装状态，但首先你需要清洁风扇上的散热片。
+
 - 清除散热片上现有的导热膏。使用平边，例如旧信用卡或名片，擦掉大部分膏体，然后使用异丙醇和布擦掉剩余的膏体。确保所有膏体都已清除。
+
 - 现在对 CPU 重复此过程，同时确保它仍安装在主板上。使用异丙醇确保 CPU 完全清除旧导热膏。
+
 - 现在涂抹新的导热膏，可以在大多数五金店或网上非常容易购买。在 CPU 中央挤出大约豌豆大小的导热膏，然后将散热片正好放在上面并重新安装，以将膏体均匀地分布在芯片背面。不要自己尝试涂抹，因为它需要保持均匀。
+
 - 有些导热膏需要特定的涂抹方法，因此只需参考产品说明以确保你正确涂抹。
 
 导热膏有各种形状和尺寸，但并不太复杂。Arctic 系列通常是最受欢迎的。
 
 ![](img/f51994701f272059dc108a0376ffceb8_146_0.png)
-
-
-
-
 
 ## 维护软件
 
@@ -2280,23 +2119,26 @@ DICE 以打造业界最佳游戏引擎之一而闻名，以至于其 Frostbite �
 
 ### 清理缓存、下载文件夹和桌面
 
+
+
 虽然 CCleaner 可以帮助处理许多此类功能，但有必要强调其重要性。临时文件和缓存数据是电脑性能的最大威胁，因为它们是你在使用频繁的软件（尤其是网络浏览器）中经常被引用和再次引用的信息，即使这些数据已经过时而且不再需要。清除历史记录、缓存文件和临时文件将改善性能，因为 CPU 和内存无需再处理那么多信息。同样，CCleaner 在这方面很有帮助。除此之外，还值得检查那些可能自然积累文件并最终变得陈旧无关的文件夹，例如“下载”、“文档”和“图片”文件夹。找到这些文件夹，浏览里面的文件，删除那些不需要的。对桌面也重复同样的过程——对许多人来说，桌面已经成为快捷方式和下载文件的垃圾场。而做完这一切后，别忘了清空回收站。
 
 CCleaner 是一款一站式软件清理工具，可以帮助处理硬盘大扫除的方方面面。
 
 定期进行碎片整理是件好事，哪怕只是为了让你的硬盘尽可能顺畅地运行。
 
-### 进行磁盘碎片整理
+## 进行磁盘碎片整理
 
 硬盘——就其本质而言——可能会变得有点混乱。即使是你在电脑上进行单次会话，也会有大量数据被写入和重写，经过数月的使用，你的文件可能会变得碎片化，因为电脑不得不在更多地方搜索信息，从而拖慢速度。进行碎片整理（在 Windows 10 中称为“磁盘优化”）是一个有益的过程，它可以分析你的硬盘并重新调整数据，使其更容易被找到。市面上有许多软件可以帮助进行碎片整理，但如果你使用的是 Windows，你很可能会发现系统预装的基本工具已经足够完成这一步。无论如何，每年对硬盘进行三四次碎片整理是很好的。
 
-#### 优化驱动器
+### 优化驱动器
 
 你可以优化驱动器以帮助电脑更高效地运行，或者分析驱动器以确定它们是否需要优化。只显示计算机上或已连接的驱动器。
 
 状态
 
 | 驱动器 | 媒体类型 | 上次运行 | 当前状态 |
+| ------ | ------ | ------ | ------ |
 | 系统 (C:) | 固态驱动器 | 正在运行... | 已修剪 53% |
 
 计划优化
@@ -2307,7 +2149,7 @@ CCleaner 是一款一站式软件清理工具，可以帮助处理硬盘大扫�
 
 频率：每周
 
-### 取消开机启动程序
+## 取消开机启动程序
 
 大量程序与操作系统同时启动可能会拖慢电脑；你可能曾经用过一台旧电脑，需要几分钟才能“稳定”下来，然后才能正常使用——这就是启动软件之害的典型后果。
 
@@ -2317,8 +2159,7 @@ CCleaner 是一款一站式软件清理工具，可以帮助处理硬盘大扫�
 
 ![](img/f51994701f272059dc108a0376ffceb8_150_0.png)
 
-## 第 7 部分
-## 升级现有部件
+## 第 7 部分 升级现有部件
 
 年龄的增长是无法避免的，技术也不例外。就你的电脑而言，它在过时之前能坚持多久完全取决于最初的组装配置。如果你花了超过 1000 英镑来确保你的电脑是一流的装备，那么你可以放心——除非某个部件出现意外故障——它能在几年内以最佳状态运行游戏。然而，总有一天会达到极限，而你也许不想完全重新来过。那将代价高昂，而且比其他任何方式都更费钱。
 
@@ -2331,9 +2172,6 @@ CCleaner 是一款一站式软件清理工具，可以帮助处理硬盘大扫�
 你的系统内存是最快速、最简单也最便宜的升级选择——但请确保你只购买与主板通道配置相同的 RAM。
 
 ![](img/f51994701f272059dc108a0376ffceb8_151_0.png)
-
-
-
 
 由于如今 PC 硬件的标准化特性，升级不同部件通常非常简单，即便是显卡这类部件也不例外。不过，请务必确保所升级的部件是兼容的。
 
@@ -2366,7 +2204,7 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 ![](img/f51994701f272059dc108a0376ffceb8_154_0.png)
 
 | 设置类型 | 影响内容 | 详细说明 |
-|---|---|---|
+| --- | --- | --- |
 | 分辨率 | 渲染到显示器上的像素数量，因此也影响图像的清晰度。 | 分辨率对画面保真度很重要，理想情况下你会让游戏渲染分辨率与显示器的分辨率（可能是 1080p 或 1440p）一致。不过，也可以让渲染分辨率高于显示器分辨率，再缩小到屏幕尺寸，从而呈现更精细的细节。 |
 | 垂直同步 | 将帧率锁定在每秒 30 或 60 帧。 | 有些游戏在渲染快速移动的动作（例如镜头控制）时会出现困难，导致画面撕裂。启用垂直同步可防止帧率出现不规则的波动，从而消除这个问题。 |
 | 自适应垂直同步 | 与垂直同步相同，但在帧率低于每秒 60 帧时会自动关闭。 | 开启垂直同步后，如果帧率低于 60FPS，它会切换到 30FPS；但如果这种情况频繁发生，就会导致卡顿。NVIDIA 的自适应垂直同步会在帧率低于 60FPS 时关闭垂直同步，从而避免这个问题。 |
@@ -2380,12 +2218,8 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 | 抗锯齿（CSAA——覆盖采样） | 平滑像素的硬边缘，使外观更自然。 | 这是 NVIDIA 版本的 MSAA，能以更高效率提供相同效果。对于任何抗锯齿而言，该项前面的数字越高，意味着精度越高，但对 CPU 和 GPU 的消耗也越大。 |
 | 抗锯齿（CFAA——自定义过滤） | 平滑像素的硬边缘，使外观更自然。 | 这是 AMD 版本的 MSAA，一种效果类似但效率更高的抗锯齿方式。对于任何抗锯齿而言，该项前面的数字越高，意味着精度越高，但对 CPU 和 GPU 的消耗也越大。 |
 | 抗锯齿（FXAA——快速近似） | 平滑像素的硬边缘，使外观更自然。 | 顾名思义，这种抗锯齿是一种快速处理版本。FXAA 不是分析不同的模型，而是应用一个后期处理滤镜来平滑整个场景。对于任何抗锯齿而言，该项前面的数字越高，意味着精度越高，但对 CPU 和 GPU 的消耗也越大。 |
-
-
-
-
 | 设置类型 | 影响内容 | 详情 |
-|---|---|---|
+| --- | --- | --- |
 | 抗锯齿 (MLAA – 形态学) | 使像素的硬边缘变得平滑，呈现更自然的外观。 | 仅限 AMD 卡的抗锯齿形式。该方法使用独特的算法检测整个帧/场景中的锯齿边缘并进行平滑处理。对于任何抗锯齿，前面数字越高表示精度越高，但对 CPU 和 GPU 的成本也越高。 |
 | 抗锯齿 (SMAA – 增强亚像素形态学) | 使像素的硬边缘变得平滑，呈现更自然的外观。 | MLAA 的增强版本，同时也利用了 MSAA 的方法。对于任何抗锯齿，前面数字越高表示精度越高，但对 CPU 和 GPU 的成本也越高。 |
 | 抗锯齿 (TXAA –  temporal 时域) | 使像素的硬边缘变得平滑，呈现更自然的外观。 | 利用 MSAA 技术与其他滤镜，同时使用现有帧的 AA 数据来计算下一帧。对于任何抗锯齿，前面数字越高表示精度越高，但对 CPU 和 GPU 的成本也越高。 |
@@ -2400,7 +2234,7 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 | 粒子效果 | 控制粒子效果的强度、质量或规律性。 | 粒子效果通常是多余的附加项，有助于使场景感觉更逼真，例如光束中漂浮的尘埃或战斗中地面被踢起的尘土。一些游戏允许你以多种方式自定义这些元素。 |
 | PhysX | 添加更逼真的基于物理的动作。 | PhysX 控制游戏渲染逼真物理反应——例如毁灭性打击后碎片飞散——的能力。它通常是一个可切换的选项。 |
 
-# 第 8 部分 测试与故障排除
+## 第 8 部分 测试与故障排除
 
 - 故障排除 ........................................ 158
 - 查找故障硬件 ............................ 161
@@ -2416,13 +2250,13 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 
 “不行，”回复道，“我什么也看不到，因为停电导致灯光熄灭了。”
 
-## 故障排除
+### 故障排除
 
 假设你已经组装好电脑，第一次打开……什么也没发生。你连进入 BIOS 都不行，更别说安装 Windows 了。你该如何开始排查？
 
 事实上，在这个阶段识别问题要比在你连接了打印机、扫描仪、网络摄像头和谁知道还有什么其他硬件之后容易得多；更不用说有 57 个软件程序竭尽全力互相干扰，病毒的真实风险，以及可能做坏事多于好事的实用工具套件。你的电脑现在诊断和修复起来永远不会这么容易。
 
-### 检查线缆
+#### 检查线缆
 
 第一步太明显了，但经常被忽略：检查所有外部线缆是否已牢固地连接到正确的位置：
 
@@ -2435,26 +2269,35 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 
 现在打开显示器。显示器外壳上的电源指示 LED 应该亮起，并且希望你能在屏幕上看到东西。如果没有，请重新阅读显示器手册并仔细检查你是否正确识别了开关，并且没有忙着调节亮度或对比度控制。并非总是很明显哪个开关是哪个。如果电源灯仍然不亮，看起来显示器本身可能有故障。尝试更换线缆中的保险丝。理想情况下，用另一台电脑测试显示器。
 
-### 内部检查
+#### 内部检查
+
+
 
 现在打开电脑本身。按下机箱前面的大电源开关，而不是较小的复位开关。你应该能听到内部风扇的嗡嗡声，以及一声或一系列蜂鸣声。但让我们假设一切似乎都没有生命迹象。再次检查/更换 PSU 电源线中的保险丝。如果这没有帮助，拔掉所有线缆，包括显示器，取下机箱盖并将电脑平放。现在系统地检查每个内部连接。再次，这里有一个快速清单供你勾选：
 
 - PSU 应通过一个大 24 针插头连接到主板，并且如果适用，还应通过 ATX 12V 和 ATX 辅助线缆连接。
+
 - 散热器风扇应插入主板上的电源插座。
+
 - 机箱风扇也应如此连接。
+
 - 所有驱动器应通过排线连接到主板上的相应插槽。
+
 - 所有驱动器应通过电源线连接到 PSU。
+
 - 显卡应牢固地安装在其 AGP 或 PCI Express 插槽中。
+
 - 所有其他扩展卡也应就位。
+
 - 查看机箱内是否有松动的螺丝，以免造成短路。
+
 - 检查前面板连接。如果机箱的电源开关与主板断开，你将无法启动系统。
+
 - 有没有线缆卡在风扇上？
+
 - 内存 DIMM 的固定夹是否完全闭合？
+
 - 主板上是否有明显损坏或破损的地方？
-
-
-
-
 
 ![](img/f51994701f272059dc108a0376ffceb8_160_0.png)
 
@@ -2504,9 +2347,9 @@ PC 游戏往往有数百个小设置和微调项，让游戏能在你的机器�
 
 即使你使用像 Phanteks Enthoo Pro 这样的高端硬件，将新硬件安装到机箱中也可能引入各种意想不到的问题。
 
-如果你的 PC 仍然无法启动，那么是时候查找故障硬件了。遗憾的是，如果你已经确保每个硬件都已正确安装，电源没有故障，并且 PSU 已正确连接到所有必要部件，那么……这意味着你在某处有一个故障硬件。不过，问题也可能只是安装中的一个错误，所以不要太绝望。
-
 ![](img/f51994701f272059dc108a0376ffceb8_162_0.png)
+
+如果你的 PC 仍然无法启动，那么是时候查找故障硬件了。遗憾的是，如果你已经确保每个硬件都已正确安装，电源没有故障，并且 PSU 已正确连接到所有必要部件，那么……这意味着你在某处有一个故障硬件。不过，问题也可能只是安装中的一个错误，所以不要太绝望。
 
 ## 查找不兼容问题
 
@@ -2521,8 +2364,6 @@ PC 技术遵循行业标准，这就是为什么你可以从各种供应商那�
 一个更常见的问题是，例如，一块在 2014 年 9 月制造的主板支持当时已有的 CPU，但对于 2014 年 12 月发布的 CPU，则需要更新 BIOS。你在 2015 年 1 月购买了主板和 CPU，却发现硬件不兼容，而且有趣的是，你无法启动系统来更新 BIOS。某些主板以巧妙的方式解决了这个问题。英特尔为其英特尔自有品牌主板提供了多种不同的 BIOS 更新方法，包括从光盘更新，并允许你启动进入 BIOS 以执行必要的更新。华硕则更进一步，其玩家国度（ROG）型号支持 USB BIOS Flashback，你可以在甚至没有安装 CPU 的裸主板上通过闪存盘更新 BIOS。希望这一概念能推广到所有制造商。
 
 内存支持应该再简单不过了。你的主板支持 DDR3，CPU 内存控制器支持 DDR3-2133MHz，你购买了一些 DDR3-
-
-
 
 ## 第 8 部分 蜂鸣代码与错误代码
 
@@ -2557,7 +2398,7 @@ PC 技术遵循行业标准，这就是为什么你可以从各种供应商那�
 
 | 错误信息 | 解决方法 |
 |---|---|
-| Gate20 错误 | BIOS 无法正确控制主板的 Gate A20 功能，该功能控制对 1MB 以上内存的访问。这可能表明主板存在问题。 |
+| `Gate20` 错误 | BIOS 无法正确控制主板的 Gate A20 功能，该功能控制对 1MB 以上内存的访问。这可能表明主板存在问题。 |
 | 多位 ECC 错误 | 此消息仅会在使用支持 ECC 的内存模块的系统上出现。ECC 内存能够纠正因内存模块故障而可能出现的单位错误。现在发生了多位数据损坏，ECC 内存算法无法纠正。这可能表明内存模块存在缺陷。 |
 | 奇偶校验错误 | 致命错误！内存奇偶校验错误。系统显示此消息后停止运行。 |
 | 启动失败 | 这是一条通用消息，表示 BIOS 无法从特定设备启动。此消息通常会随后附带与该设备相关的其他信息。 |
@@ -2568,8 +2409,8 @@ PC 技术遵循行业标准，这就是为什么你可以从各种供应商那�
 | 错误信息 | 解决方法 |
 |---|---|
 | 驱动器未就绪 | BIOS 无法访问该驱动器，因为它指示尚未准备好进行数据传输。当没有介质时，驱动器通常会报告此消息。 |
-| A: 驱动器错误 | BIOS 在 POST 期间尝试配置 A: 驱动器，但无法正确配置该设备。这可能是由于线缆不良或软驱故障。 |
-| 在 A: 中插入启动软盘 | BIOS 尝试从 A: 驱动器启动，但找不到合适的启动软盘。 |
+| `A:` 驱动器错误 | BIOS 在 POST 期间尝试配置 A: 驱动器，但无法正确配置该设备。这可能是由于线缆不良或软驱故障。 |
+| 在 `A:` 中插入启动软盘 | BIOS 尝试从 A: 驱动器启动，但找不到合适的启动软盘。 |
 | 重新启动并选择正确的启动设备，或在选定的启动设备中插入启动介质 | BIOS 在系统中找不到可启动设备，且/或可移动介质驱动器中没有介质。 |
 | 无 ROM BASIC | 当无法检测到任何可启动设备时，某些系统会显示此消息。 |
 | 第一主盘硬盘错误 | 配置为第一主盘的 IDE/ATAPI 设备无法被 BIOS 正确初始化。此消息通常在 BIOS 于 POST 期间尝试检测和配置 IDE/ATAPI 设备时显示。 |
@@ -2585,17 +2426,13 @@ PC 技术遵循行业标准，这就是为什么你可以从各种供应商那�
 | S.M.A.R.T. 状态不良，请备份并更换 | 支持 S.M.A.R.T. 的硬盘在检测到即将发生故障时发送此消息。使用 S.M.A.R.T. 错误报告标准的 ATAPI 设备可能报告此消息。S.M.A.R.T. 失败消息可能表明需要更换硬盘。 |
 | 支持 S.M.A.R.T. 且状态不良 | 支持 S.M.A.R.T. 的硬盘在检测到即将发生故障时发送此消息。使用 S.M.A.R.T. 错误报告标准的 ATAPI 设备可能报告此消息。S.M.A.R.T. 失败消息可能表明需要更换硬盘。 |
 
-
-
-
-
-## AMI BIOS 错误代码（续）
+### AMI BIOS 错误代码（续）
 
 | 错误 | 处理方法 |
 |---|---|
 | 引导扇区写入！！ | BIOS 检测到有软件试图写入驱动器的引导扇区。这可能被视为潜在的病毒活动。仅当在 AMIBIOS Setup 中启用了病毒检测时，才会显示此消息。 |
 | 病毒：继续（Y/N）？ | 如果 BIOS 检测到可能的病毒活动，它会提示用户。仅当在 AMIBIOS Setup 中启用了病毒检测时，才会显示此消息。 |
-| DMA-2 错误 | 初始化辅助 DMA 控制器时出错。这是致命错误，通常表示系统硬件有问题。 |
+| `DMA-2` 错误 | 初始化辅助 DMA 控制器时出错。这是致命错误，通常表示系统硬件有问题。 |
 | DMA 控制器错误 | 尝试初始化 DMA 控制器时出现 POST 错误。这是致命错误，通常表示系统硬件有问题。 |
 | CMOS 日期/时间未设置 | CMOS 日期和/或时间无效。可以通过在 AMIBIOS Setup 中重新调整系统时间来解决此错误。 |
 | CMOS 电池电量低 | CMOS 电池电量低。此消息通常表示需要更换 CMOS 电池。当用户故意给 CMOS 电池放电时，也可能出现此消息。 |
@@ -2607,11 +2444,14 @@ PC 技术遵循行业标准，这就是为什么你可以从各种供应商那�
 
 AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许可转载。保留所有权利。
 
-## Award BIOS 蜂鸣代码
+### Award BIOS 蜂鸣代码
 
 | 蜂鸣次数 | 问题 | 处理方法 |
 |---|---|---|
 | 1 长声蜂鸣，随后 2 短声蜂鸣 | 显卡问题 | 移除显卡，清洁插入主板插槽的连接边缘，然后重新安装。如果问题依旧，尝试使用另一块显卡来确定问题出在显卡还是 AGP 插槽。如果您使用的是集成显卡而非独立显卡，则主板可能有故障。 |
+
+
+
 | 任何其他蜂鸣声 | 内存问题 | 移除每条内存模块，清洁插入主板插槽的连接边缘，然后重新安装。如果问题依旧，尝试仅使用一条内存模块重新启动，并通过排除法确定问题模块。如果仍然出现错误代码，请更换为已知良好的模块。 |
 | 1 长声，3 短声 | 检测不到显卡，或显卡显存损坏。 | 确保显卡正确安装并已供电。如果问题依旧，则是显卡显存存在故障。 |
 | 运行时高频蜂鸣 | CPU 过热。 | 这表明您的 CPU 未得到正确冷却。首先检查冷却系统是否已供电并正常工作。如果问题持续存在，首先更换导热硅脂；如果仍然出现，请安装更高效的冷却系统。 |
@@ -2669,7 +2509,6 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
 - Avast 杀毒软件 84
 - AVG 杀毒软件 84–5
 - Award BIOS 蜂鸣和错误代码 168–9
-
 - 背板 66
 - 背光 100
 - 备份 81
@@ -2694,11 +2533,9 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
 - 启动盘 77–9
 - 浏览器 82–3
 - BurnInTest 125, 128
-
 - 线缆
   - 布线 69
   - 故障排查 158
-
 - 摄像头质量 114
 - CAS 延迟 35–6, 135–7
 - 机箱 41–4, 50–1
@@ -2745,11 +2582,9 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
 - CPU 见 中央处理器（CPU）
 - CPU-Z 125, 127, 134–5, 137
 - CrossFire 功能 40
-
 - 声音阻尼 43
 - 数据总线 123
 - DDR 内存 35
-
 - 碎片整理 148–9
 - 数字发行 88–90
 - DirectX 73, 124
@@ -2765,7 +2600,6 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
 - Dropbox 93
 - 双显示器设置 12, 87
 - 灰尘 144–5
-
 - Electronic Arts 89
 - Elite: Dangerous 112, 117
 - Epic Games Store 89–90
@@ -2776,7 +2610,6 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
   - 初学者 16
   - 虚拟现实就绪 119
 - 扩展插槽 28
-
 - 风扇 47, 51, 125
   - 机箱 43
   - 显卡 39
@@ -2799,340 +2632,363 @@ AMIBIOS8 错误消息 1.0 版。版权所有：American Megatrends, Inc. 经许�
 - FPS（第一人称射击）游戏 15, 22
 - Fractal Define S 机箱 50–1
 - FRAPS 138
+- 频率 35–6
+- 响应范围 107
+- 设置 127
+  - 前面板选项 44
+- FSB:DRAM 134
+- FSB 速度 32
+- FurMark 125, 128
+- FutureMark 3DMark 125, 138, 139
+- 前瞻性 16
+- 玩家类型 11–15
+- 游戏 88–90, 140–1
+  - 虚拟现实 117–18
+- 操纵杆和踏板 110
+- GeForce Experience 86
+- GIMP 93
+- GOG.com 89–90
+- Google Chrome 82–3
+- GPU（图形处理单元） 见 显卡
+- GPU-Z 125, 131
+- Grand Theft Auto V 141
+- 显卡 21, 37–40
+  - GTX 1660 OC 51
+  - 安装 64–5, 68
+  - 超频 130–3
+  - 软件 86
+  - 故障排除 159–60, 162
+  - 升级 150–1
+- 图形处理单元（GPU） 见 显卡
+- GreenManGaming 89–90
+- GTX 1660 OC 显卡 51
+- 手动油门和操纵杆（HOTAS） 113
+- 触觉控制 117, 119
+- 硬盘驱动器（HDD） 46–7
+  - 清洁 91
+  - 安装 62–3
+  - 升级 151–2
+- 硬核玩家 见 职业玩家
+- 硬件故障 161–4
+- 硬件维护 144–5
+- HDD（硬盘驱动器） 46–7
+  - 清洁 91
+  - 安装 62–3
+  - 升级 151–2
+- 耳机和麦克风 105–7
+- 热量 33
+  - 机箱内 43
+- 重型手柄 108
+- HoneyView 93
+- Hori Apex 方向盘 111
+- HOTAS（手动油门和操纵杆） 113
+- Hover Junker 117
+- HT 速度 32
+- HTC 虚拟现实头戴显示器 119
+- 超线程 31
+- HyperX Cloud 耳机 107
+- I/O 挡板 60
+- 游戏内设置 153–5
+- 线控（耳机） 106–7
+- 不兼容 163–4
+- 不兼容部件 19
+- 独立游戏 10–11, 89
+- 输入/输出 29
+- 安装软件 17
+- Intel/AMD 33
+- Intel CPU 33
+- Internet Explorer 82
+- iSeries CPU 系列 33
+- iTunes 93
+- Job Simulator 117–18
+- 操纵杆 112–13
+- 垃圾数据 91
+- Keep Talking and Nobody Explodes 117–18
+- KeePass 93
+- 键盘 99–101
+- 内存延迟 35–6
+- League of Legends 12, 15
+- LibreOffice 93
+- Linux 操作系统 73–6
+- 液体冷却 43, 47, 51
+- Logitech Extreme 3D Pro 操纵杆 113
+- Logitech G Pro 键盘 101
+- Logitech G29 方向盘 111
+- Logitech G502 Proteus Spectrum 鼠标 98
+- Logitech Gamepad F310 手柄 109
+- Logitech 网络摄像头 115
+- LogMeIn 93
+- 尖嘴钳 17
+- 低端 PC 组装 11
+- M.2 插槽 28
+- M.2 固态硬盘 46–7
+- M.2 存储安装 58–9
+- McAfee 杀毒软件 84
+- 维护 143–9
+- 大型多人在线（MMO）游戏 14–15
+- MaxMem 134
+- 机械键盘 99
+- 媒体键 100
+- 薄膜键盘 99
+- 内存 29, 34–6
+  - 显卡 38–9
+  - 安装 58–9
+  - 超频 134–7
+  - 升级 150–2
+- Metro Exodus 141
+- 鼠标 97–8
+- 麦克风 87, 105–7
+  - 网络摄像头 114
+- Microsoft Edge 82
+- Microsoft LifeCam HD-3000 网络摄像头 115
+- Microsoft Xbox 360 手柄 109
+- MMO（大型多人在线）游戏 14–15
+- MOBA（多人在线战术竞技场）游戏 15
+- 模块化布线 46
+- 模块化电源单元 69
+- 省钱 9
+- 显示器 102–4
+  - 故障排除 164
+- 主板 26–9
+  - 故障 162
+  - 安装 60–1
+  - 供电 63
+- Mozilla Firefox 82–3
+- MSI Afterburner 130–3
+- 多核处理器 31
+- 多线程 31
+- 多人游戏 92–3
+- 多人在线战术竞技场（MOBA）游戏 15
+- Mumble 93
+- Nexus Mod Manager 93
+- No Limits 2 118
+- 非模块化电源单元 69
+- 诺顿杀毒软件 84
+- 线程数 31
+- NVIDIA GPU 37–8
+- NZXT 机箱 44
+- Oculus Rift 虚拟现实头戴显示器 116–19
+- 压耳式耳机 106
+- Open Broadcaster Software 87, 93
+- 开放世界游戏 15
+- Opera 浏览器 82–3
+- 操作系统 73–6
+  - 安装 77–9
+- Origin 89
+- 包耳式耳机 106
+- 超频 29, 121–41
+- Overwatch 22
+- 面板 103–4
+- 密码管理器 85
+- 补丁程序 90
+- PC 组装 51
+  - 示例 11–13
+- PC 游戏优势 8–9
+- PCI Express 28, 37, 40, 64–5, 68
+- 踏板和操纵杆 110
+- Pentium CPU 系列 33
+- 操作系统的性能 76
+- 十字螺丝刀 17
+- 网络钓鱼 85
+- Planet Coaster 23
+- 钳子 17
+- 端口 16
+- 开机自检（POST） 160
+- 电源单元（PSU） 45–6, 52
+  - 显卡 39
+  - 安装 66–8
+  - 超频 125
+  - 故障排除 159
+- 价格 25
+  - 机箱 43
+  - 操作系统 75
+- Prime95 125, 127, 129, 134
+- 职业玩家 13
+- PSU 见 电源单元（PSU）
+- QPI 速度 32
+- 四核处理器 31
+- 赛车方向盘 110–11
+- Radeon Software 86
+- RAM（随机存取存储器） 21, 34–6
+  - 安装 58–9
+  - 超频 134–7
+  - 升级 150–1
+- Razer Cortex 93
+- Razer Cynosa Chroma 键盘 101
+- Razer Kiyo 网络摄像头 115
+- Razer 鼠标 98
+- Razer Wolverine Tournament Edition Chroma 手柄 109
+- Real Temp 125, 127–8
+- 实时光线追踪 22
+- 推荐系统规格 21–4
+- 回收站 148
+- 刷新率 103
+- 研究组装方案 25
+- 分辨率 103
+  - 网络摄像头 114
+- Respawn Entertainment 24
+- 响应时间 103
+- 还原点 81
+- 旋转角度 110
+- 线缆布线 69
+- 安全设置 36
+- Saitek X56 HOTAS 操纵杆 113
+- 省钱 9
+- 画面撕裂 153
+- 螺丝刀 17
+- 安全 84–5
+  - 操作系统 76
+- 串行存在检测（SPD） 137
+- 游戏内设置 153–5
+- 7-Zip 93
+- 静音机箱 43, 50–1
+- SiSoftware Sandra 134
+- Skype 93, 114
+- SLI 功能 40
+- 社交软件 92–3
+- 插槽 30
+- 软件 80–1
+  - 基准测试 138–9
+  - 显卡 86
+  - 安装 17
+  - 维护 146–9
+  - 超频 125
+- 固态硬盘（SSD） 46–7
+  - 清洁 91
+  - 安装 62–3
+  - 升级 151–2
+- Sony Dualshock 4 手柄 109
+- 隔音 43
+- SPD（串行存在检测） 137
+- 规格 16
+- （内存）速度 35–6
+- SSD 见 固态硬盘（SSD）
+- Star Citizen 112
+- 启动程序 149
+- 静电 17, 144–5
+- Steam 88–90
+- Steam OS 17
+- SteelSeries Apex Pro 键盘 101
+- SteelSeries Arctis 耳机 107
+- 方向盘 110–11
+- 存储 46–7
+  - 清理软件 147
+  - 安装 58–9
+  - 升级 151–2
+- 存储位 62
+- 存储清洁 91
+- 策略游戏 14–15, 23
+- 游戏直播 12, 87
+- Streamlabs 87
+- 压力测试 125, 128
+- SumatraPDF 93
+- Superhot 117
+- 环绕声 106
+- 系统内存 34–6
+- 系统需求 21–4
+- 系统还原点 81
+- TDP（热设计功耗） 33
+- TeamSpeak 93
+- 温度 33
+  - 机箱内 43
+- 热设计功耗（TDP） 33
+- 导热膏 57
+  - 更换 145
+- 线程数 31
+- 油门控制 112
+- Thrustmaster 操纵杆 113
+- Thrustmaster 方向盘 111
 
 
-频率 35–6
-响应范围 107
-设置 127
-  前面板选项 44
-FSB:DRAM 134
-FSB 速度 32
-FurMark 125, 128
-FutureMark 3DMark 125, 138, 139
-前瞻性 16
 
-玩家类型 11–15
-游戏 88–90, 140–1
-  虚拟现实 117–18
-操纵杆和踏板 110
-GeForce Experience 86
-GIMP 93
-GOG.com 89–90
-Google Chrome 82–3
-GPU（图形处理单元） 见 显卡
-GPU-Z 125, 131
-Grand Theft Auto V 141
-显卡 21, 37–40
-  GTX 1660 OC 51
-  安装 64–5, 68
-  超频 130–3
-  软件 86
-  故障排除 159–60, 162
-  升级 150–1
-图形处理单元（GPU） 见 显卡
-GreenManGaming 89–90
-GTX 1660 OC 显卡 51
-
-手动油门和操纵杆（HOTAS） 113
-触觉控制 117, 119
-硬盘驱动器（HDD） 46–7
-  清洁 91
-  安装 62–3
-  升级 151–2
-硬核玩家 见 职业玩家
-硬件故障 161–4
-硬件维护 144–5
-HDD（硬盘驱动器） 46–7
-  清洁 91
-  安装 62–3
-  升级 151–2
-耳机和麦克风 105–7
-热量 33
-  机箱内 43
-重型手柄 108
-HoneyView 93
-Hori Apex 方向盘 111
-HOTAS（手动油门和操纵杆） 113
-Hover Junker 117
-HT 速度 32
-HTC 虚拟现实头戴显示器 119
-
-超线程 31
-HyperX Cloud 耳机 107
-I/O 挡板 60
-游戏内设置 153–5
-线控（耳机） 106–7
-不兼容 163–4
-不兼容部件 19
-独立游戏 10–11, 89
-输入/输出 29
-安装软件 17
-Intel/AMD 33
-Intel CPU 33
-Internet Explorer 82
-iSeries CPU 系列 33
-iTunes 93
-
-Job Simulator 117–18
-操纵杆 112–13
-垃圾数据 91
-
-Keep Talking and Nobody Explodes 117–18
-KeePass 93
-键盘 99–101
-
-内存延迟 35–6
-League of Legends 12, 15
-LibreOffice 93
-Linux 操作系统 73–6
-液体冷却 43, 47, 51
-Logitech Extreme 3D Pro 操纵杆 113
-Logitech G Pro 键盘 101
-Logitech G29 方向盘 111
-Logitech G502 Proteus Spectrum 鼠标 98
-Logitech Gamepad F310 手柄 109
-Logitech 网络摄像头 115
-LogMeIn 93
-尖嘴钳 17
-低端 PC 组装 11
-
-M.2 插槽 28
-M.2 固态硬盘 46–7
-M.2 存储安装 58–9
-McAfee 杀毒软件 84
-维护 143–9
-大型多人在线（MMO）游戏 14–15
-MaxMem 134
-机械键盘 99
-媒体键 100
-薄膜键盘 99
-内存 29, 34–6
-  显卡 38–9
-  安装 58–9
-  超频 134–7
-  升级 150–2
-Metro Exodus 141
-
-鼠标 97–8
-麦克风 87, 105–7
-  网络摄像头 114
-Microsoft Edge 82
-Microsoft LifeCam HD-3000 网络摄像头 115
-Microsoft Xbox 360 手柄 109
-MMO（大型多人在线）游戏 14–15
-MOBA（多人在线战术竞技场）游戏 15
-模块化布线 46
-模块化电源单元 69
-省钱 9
-显示器 102–4
-  故障排除 164
-主板 26–9
-  故障 162
-  安装 60–1
-  供电 63
-Mozilla Firefox 82–3
-MSI Afterburner 130–3
-多核处理器 31
-多线程 31
-多人游戏 92–3
-多人在线战术竞技场（MOBA）游戏 15
-Mumble 93
-
-Nexus Mod Manager 93
-No Limits 2 118
-非模块化电源单元 69
-诺顿杀毒软件 84
-线程数 31
-NVIDIA GPU 37–8
-NZXT 机箱 44
-
-Oculus Rift 虚拟现实头戴显示器 116–19
-压耳式耳机 106
-Open Broadcaster Software 87, 93
-开放世界游戏 15
-Opera 浏览器 82–3
-操作系统 73–6
-  安装 77–9
-Origin 89
-包耳式耳机 106
-超频 29, 121–41
-Overwatch 22
-
-面板 103–4
-密码管理器 85
-补丁程序 90
-PC 组装 51
-  示例 11–13
-PC 游戏优势 8–9
-PCI Express 28, 37, 40, 64–5, 68
-踏板和操纵杆 110
-Pentium CPU 系列 33
-
-操作系统的性能 76
-十字螺丝刀 17
-网络钓鱼 85
-Planet Coaster 23
-钳子 17
-端口 16
-开机自检（POST） 160
-电源单元（PSU） 45–6, 52
-  显卡 39
-  安装 66–8
-  超频 125
-  故障排除 159
-价格 25
-  机箱 43
-  操作系统 75
-Prime95 125, 127, 129, 134
-职业玩家 13
-PSU 见 电源单元（PSU）
-
-QPI 速度 32
-四核处理器 31
-
-赛车方向盘 110–11
-Radeon Software 86
-RAM（随机存取存储器） 21, 34–6
-  安装 58–9
-  超频 134–7
-  升级 150–1
-Razer Cortex 93
-Razer Cynosa Chroma 键盘 101
-Razer Kiyo 网络摄像头 115
-Razer 鼠标 98
-Razer Wolverine Tournament Edition Chroma 手柄 109
-Real Temp 125, 127–8
-实时光线追踪 22
-推荐系统规格 21–4
-回收站 148
-刷新率 103
-研究组装方案 25
-分辨率 103
-  网络摄像头 114
-Respawn Entertainment 24
-响应时间 103
-还原点 81
-旋转角度 110
-线缆布线 69
-
-安全设置 36
-Saitek X56 HOTAS 操纵杆 113
-省钱 9
-画面撕裂 153
-螺丝刀 17
-安全 84–5
-  操作系统 76
-串行存在检测（SPD） 137
-
-游戏内设置 153–5
-7-Zip 93
-静音机箱 43, 50–1
-SiSoftware Sandra 134
-Skype 93, 114
-SLI 功能 40
-社交软件 92–3
-插槽 30
-软件 80–1
-  基准测试 138–9
-  显卡 86
-  安装 17
-  维护 146–9
-  超频 125
-固态硬盘（SSD） 46–7
-  清洁 91
-  安装 62–3
-  升级 151–2
-Sony Dualshock 4 手柄 109
-隔音 43
-SPD（串行存在检测） 137
-规格 16
-（内存）速度 35–6
-SSD 见 固态硬盘（SSD）
-Star Citizen 112
-启动程序 149
-静电 17, 144–5
-Steam 88–90
-Steam OS 17
-SteelSeries Apex Pro 键盘 101
-SteelSeries Arctis 耳机 107
-方向盘 110–11
-存储 46–7
-  清理软件 147
-  安装 58–9
-  升级 151–2
-存储位 62
-存储清洁 91
-策略游戏 14–15, 23
-游戏直播 12, 87
-Streamlabs 87
-压力测试 125, 128
-SumatraPDF 93
-Superhot 117
-环绕声 106
-系统内存 34–6
-系统需求 21–4
-系统还原点 81
-
-TDP（热设计功耗） 33
-TeamSpeak 93
-温度 33
-  机箱内 43
-热设计功耗（TDP） 33
-导热膏 57
-  更换 145
-线程数 31
-
-油门控制 112
-Thrustmaster 操纵杆 113
-Thrustmaster 方向盘 111
 Thunderbolt 3 44
+
 Total War: Three Kingdoms 23
+
 塔式机箱 见 机箱
+
 tRAS 136–7
+
 tRCD 136–7
+
 Trend 杀毒软件 84
+
 故障排除 158–64
+
 tRP 136–7
+
 Turbo Boost 模式 128
+
 Turbo 速度 32
+
 Turtle Beach Elite Pro 2 耳机 107
+
 Twitch 12, 87
+
 玩家类型 11–15
 
 Ubuntu 17
+
 极高设置 13
+
 Unigine Heaven 138–9
+
 卸载软件 146–7
+
 UbiSoft 89
+
 升级部件 150–2
+
 UPI 速度 32
+
 UPlay 89
+
 uTorrent 93
 
 吸尘器 144–5
+
 虚拟专用网络（VPN） 85
+
 虚拟现实 116–19
+
 病毒 见 安全
+
 VLC 93
+
 电压 33, 123–4, 128–9, 132, 136–7
+
 VPN（虚拟专用网络） 85
 
 水冷 43, 47, 51
+
 功率 33
+
 网络摄像头 114–15
+
 Wi-Fi 连接 16
+
 Windows 操作系统 73–6
-  安装 17, 77–9
+
+- 安装 17, 77–9
+
 WinRAR 93
+
 有线手柄 109
+
 无线手柄 109
+
 Witcher 3: Wild Hunt 140
+
 World of Warcraft 14
+
 腕托 100
 
 Xeon CPU 系列 33
+
 XMP 36
-  设置 137
+
+- 设置 137
+
 XSplit 87
 
 YouTube 12, 87

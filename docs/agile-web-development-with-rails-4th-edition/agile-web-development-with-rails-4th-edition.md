@@ -1,55 +1,31 @@
-# Rails 敏捷 Web 开发 第 4 版
 
-
-
-
+# Rails 敏捷 Web 开发（第 4 版）
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_0_0.png)
 
-
-
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_0_1.png)
-
-
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_0_2.png)
 
+**建设中**
 
-
-**建设中** 你正在阅读的这本书仍在开发中。作为我们 Beta书籍计划的一部分，我们在正式书籍发布很久就发布此版本。这样你就可以在完成版发布几个月后获得它，我们也能获得反馈以让这本书变得更好。这种理念是多方共赢！
+你正在阅读的这本书仍在开发中。作为我们 Beta 书籍计划的一部分，我们在正式书籍发布很久就发布此版本。这样你就可以在完成版发布几个月后获得它，我们也能获得反馈以让这本书变得更好。这种理念是多方共赢！
 
 请注意，本书尚未经过完整的技术编辑，因此将包含错误。它没有经过文字校对，因此充满了拼写错误和其他异常。而且我们没有投入精力进行排版，所以你会发现糟糕的分页、带有小黑矩形的过长行、错误的连字符以及所有其他你不希望在完完书中看到的丑东西。如果你用这本书尝试创建一个精美的应用程序，结果却得到了一个形状奇怪的农实现，我们不承担任何责任。尽管如此，我们认为你会喜欢这本书的！
 
-**下载更新** 在此过程中，你可以从 http://prprog.com 的账户下载更新后的电子书。当书籍最终准备好后，你将从同一地址获取最终版本（以及后续更新）。
+**下载更新**
 
-**向我们发送反馈** 在此，我们感谢你通过 http://prprog.com/titles/rails4/errata 或使用每页底部的链接对此书提供反馈。
+在此过程中，你可以从`http://prprog.com`的账户下载更新后的电子书。当书籍最终准备好后，你将从同一地址获取最终版本（以及后续更新）。
+
+**向我们发送反馈**
+
+在此，我们感谢你通过`http://prprog.com/titles/rails4/errata`或使用每页底部的链接对此书提供反馈。
 
 感谢你成为 Pragmatic 社区的一员！
 
 - Andy & Dave
 
-
-
-
-
-
-
-
-
-
-
-
-
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_3_0.png)
-
-
-
-
-
-
-
-
-
 
 ## 第四版序言
 
@@ -57,74 +33,30 @@
 
 # 引言
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 8.4 迭代 C4：控制器的功能测试 .............. 116
+- 12.2 迭代 G2：原子 Feed 送（Atom Feeds） ................. 177
+- 15.4 迭代 J4：添加语言切换器 ................. 237
 
-
-
-
-
-
-
-
-
-
-
-
-12.2 迭代 G2：原子 Feed送 (Atom Feeds) . . . . . . . . . . . . 177
-
-
-
-
-
-
-15.4 迭代 J4：添加语言切换器 . . . . . . 237
 ## 任务 K：部署与生产
-16.3 迭代 K3：检查已部署的应用程序 . . . . 254
+
+- 16.3 迭代 K3：检查已部署的应用程序 ................. 254
+
 ## 回顾
-17.1 Rails 概念 . . . . . . . . . . . . . . . . . . . 258
 
+- 17.1 Rails 概念 ................. 258
+- 18.2 命名规范 ................. 273
 
+## 19 Active Record
 
-18.2 命名规范 . . . . . . . . . . . . . . . . . . . 273
-## 19 Active Record . . . . . . . . . . . . . . . . . . . . 277
-19.1 定义你的数据 . . . . . . . . . . . . . . . . . . . 277
-
-
-
-
-
-
-
-
-23.2 迁移的结构分析 . . . . . . . . . . . . 389
-23.4 高级迁移 . . . . . . . . . . . . . 397
-23.5 当迁移出现问题时 . . . . . . . 401
-23.6 迁移之外的模式操作 . . . . 402
-
-
-
-
+- 19.1 定义你的数据 ................. 277
+- 23.2 迁移的结构分析 ................. 389
+- 23.4 高级迁移 ................. 397
+- 23.5 当迁移出现问题时 ................. 401
+- 23.6 迁移之外的模式操作 ................. 402
 
 一如既往，感谢通过错误表、论坛和其他渠道提供的所有精彩反馈。此时，我想特别感谢 Kim Shrier、Don Smith、mltsy 和 Jason Catena。
 
-## Beta 6—7月27日
+## Beta 6—7 月 27 日
 
 重大消息是 Rails 的发布候选版（release candidate）已正式发布。更好的消息是，Rails 没有进行任何影响本书的 API 更改。希望从现在起，Rails 的发布频率会更高，且 API 将保持稳定。
 
@@ -132,33 +64,33 @@
 
 再次感谢通过错误表、论坛和其他渠道提供的所有精彩反馈——请继续保持下去！
 
-## Beta 5—6月28日
+## Beta 5—6 月 28 日
 
 在我写下这些文字时，原定于 6 月 8 日发布的发布候选版尚未发布，我们决定仍然发布一个 Beta 版本。目前，书中的内容与 Beta 4 以及 GitHub 上最新的 Rails 版本均兼容，但在现在到发布候选版发布期间，情况可能会发生变化。
 
-Beta 4 中影响本书的 Rails 更改包括：使用 `rails` 命令创建新应用时需要指定关键字 `new`，以及 Rails 3.0 不再支持 Ruby 1.9.1。然而，Ruby 1.9.2 预览版已经发布，Rails 3.0 在其上运行良好。此 Beta 版本已更新以反映这些更改。
+Beta 4 中影响本书的 Rails 更改包括：使用`rails`命令创建新应用时需要指定关键字`new`，以及 Rails 3.0 不再支持 Ruby 1.9.1。然而，Ruby 1.9.2 预览版已经发布，Rails 3.0 在其上运行良好。此 Beta 版本已更新以反映这些更改。
 
 此 Beta 版本还增加了一个专门针对 Active Record 的章节，该主题在第三版中占据了三个章节。内容已更新为 Rails 3 API，特别是 Arel 功能。内容经过了精简，只关注每个人都需要知道的 API，以及在第二部分已充分涵盖的内容。它读起来不再像是一份参考手册，而更像是一份指南。欢迎反馈。特别是，如果你觉得某些至关重要的内容未被涵盖，请告诉我。
 
 再次感谢所有出色的错误反馈。目前，我们已经收到了来自 80 多人的个人的 300 多条错误注释。我想特别感谢 Seth Arnold、David Hadley、Will Bowlin、Victor Marius Costan、Kristian Rietbergen、John Straitiff 和 Andy Brice。
 
-## Beta 4—5月26日
+## Beta 4—5 月 26 日
 
 此 Beta 版本增加了两个章节。第一个章节回顾了第二部分中学的知识：模型、视图、控制器、配置、测试和部署。随后继续解释如何为你的应用程序生成文档。
 
 第 18 章也是此 Beta 版本的新内容：它直接遍历了你的 Rails 应用，描述了每个部分的内容。你将看到如何为 Rails 本身生成文档、如何构建 Rake 任务，以及关于配置选项和命名规范的更多信息。这些为后续章节奠定了基础。
 
-Rails 团队正在废弃 `config.log_path`，但目前尚未确定替代方案。此外，该属性在 Rails 3 beta 3 中是失效的。你在第 255 页第 16.3 节“处理日志文件”中看到的内容反映了目前有效的状态，但在最终发布中可能不一定会被支持。
+Rails 团队正在废弃`config.log_path`，但目前尚未确定替代方案。此外，该属性在 Rails 3 beta 3 中是失效的。你在第 255 页第 16.3 节“处理日志文件”中看到的内容反映了目前有效的状态，但在最终发布中可能不一定会被支持。
 
-## Beta 3—5月11日
+## Beta 3—5 月 11 日
 
 此 Beta 版本增加了一个部署章节，带你了解一系列工具的安装、配置和使用：Apache、Capistrano、MySQL 和 Passenger；以及（简要）Git 和 Bundler 的使用。
 
-目前还没有另一个 Rails Beta 版本，所以目前这只是一个供参考（FYI）的信息，但 i18n 字符串中的 `({name})` 语法将被废弃；现在的首选语法是 `%{name}`。
+目前还没有另一个 Rails Beta 版本，所以目前这只是一个供参考（FYI）的信息，但 i18n 字符串中的`({name})`语法将被废弃；现在的首选语法是`%{name}`。
 
 感谢通过错误表、论坛和其他渠道提供的所有精彩反馈——请继续保持下去！
 
-## Beta 2—5月3日
+## Beta 2—5 月 3 日
 
 感谢所有出色的反馈。到为止，我们收到了来自 30 多人的 100 多条注释。特别感谢 Truong LE、David Hadley、Manuel E Vidaarre、Wayne Conrad 和 Steve Nicholson。你在第二个 Beta 版本中看到的许多更改都是这些投入的结果。请继续努力，每一条注释都能帮助我们把这本书做得更好！
 
@@ -180,22 +112,13 @@ Rails 团队正在废弃 `config.log_path`，但目前尚未确定替代方案�
 
 Sam Ruby
 
-2011年1月
-
-
-
-
-
-
-
-
+2011 年 1 月
 
 最后，Rails 核心团队提供了极大的帮助，回答问题、检查了代码片段并修复了漏洞。非常感谢以下人员：
 
-Scott Barron (htonl), Jamis Buck (minam), Thomas Fuchs (madrobby), Jeremy Kemper (bitsweat), Yehuda Katz (wycats), Michael Koziarski (nzkos), Marcel Molina Jr. (noradio), Rick Olson (technoweenie), Nicholas Seckar (Ulysses), Sam Stephenson (sam), Tobias Lütke (xal), José Valim (josevalim), 以及 Florian Weber (cssshsh)
+Scott Barron (`htonl`)、Jamis Buck (`minam`)、Thomas Fuchs (`madrobby`)、Jeremy Kemper (`bitsweat`)、Yehuda Katz (`wycats`)、Michael Koziarski (`nzkos`)、Marcel Molina Jr. (`noradio`)、Rick Olson (`technoweenie`)、Nicholas Seckar (`Ulysses`)、Sam Stephenson (`sam`)、Tobias Lütke (`xal`)、José Valim (`josevalim`)，以及 Florian Weber (`cssshsh`)。
 
-
-rubys@intertwingly.net
+`rubys@intertwingly.net`
 
 ## 序言
 
@@ -217,7 +140,7 @@ Rails 应用程序用 Ruby 编写，这是一种现代的面向对象的脚本�
 
 Rails 将 Ruby 推向了极限，以新颖的方式扩展了它，让程序员的生活更加轻松。这使得我们的程序更短更具可读性。它还允许我们在代码库内部执行通常要在外部配置文件完成的任务。这让观察发生了什么变得容易得多。以下代码定义了一个项目的模型。现在不要担心细节。相反，只需思考几行代码表达了多少信息即可。
 
-```
+```ruby
 class Project < ActiveRecord::Base
   belongs_to :portfolio
   has_one :project_manager
@@ -231,27 +154,23 @@ validates :non_disclosure_agreement, :acceptance => true
 validates :short_name, :uniqueness => true
 ```
 
-两个哲学基础让 Rails 代码保持简洁易读：DRY 和“约定优于配置”。DRY 代表*不要重复自己*（don't repeat yourself）；系统中的每项知识都应该只在一个地方表达。Rails 使用 Ruby 的力量让这成为现实。在 Rails 应用程序中：你在一个地方说你需要说的话——通常是一个由 MVC 架构约定建议的地方——然后继续。对于习惯了其他 Web 框架的开发者来说，对模式（schema）的简单更改可能涉及许多处工作，而*约定优于配置*是关重要的。这意味着 Rails 提供了合理的默认值。遵循约定，Rails 能够让观察发生了什么变得容易得多。以下代码定义了一个项目的模型。现在不要担心细节。相反，只需思考几行代码表达了多少信息即可。
+两个哲学基础让 Rails 代码保持简洁易读：DRY 和“约定优于配置”。DRY 代表“不要重复自己”（don't repeat yourself）；系统中的每项知识都应该只在一个地方表达。Rails 使用 Ruby 的力量让这成为现实。在 Rails 应用程序中：你在一个地方说你需要说的话——通常是一个由 MVC 架构约定建议的地方——然后继续。对于习惯了其他 Web 框架的开发者来说，对模式（schema）的简单更改可能涉及许多处工作，而“约定优于配置”是关重要的。这意味着 Rails 提供了合理的默认值。遵循约定，Rails 能够让观察发生了什么变得容易得多。
 
-```
+```ruby
 class Project < ActiveRecord::Base
   belongs_to :portfolio
   has_one :project_manager
   has_many :milestones
   has_many :deliverables, :through => :milestones
 ```
-（注：此处为原文重复，根据要求不重复的逻辑块已保持翻译）
 
 ```ruby
 validates :name, :description, :presence => true
 validates :non_disclosure_agreement, :acceptance => true
 validates :short_name, :uniqueness => true
 ```
-（注：此处为原文重复，根据要求不重复的逻辑块已保持翻译）
 
-两个哲学基础让 Rails 代码保持简洁易读：DRY 和“约定优于配置”。DRY 代表*不要重复自己*（don't repeat yourself）；系统中的每项知识都应该只在一个地方表达。Rails 使用 Ruby 的力量让这成为现实。在 Rails 应用程序中：你在一个地方说你需要说的话——通常是一个由 MVC 架构约定建议的地方——然后继续。对于习惯了其他 Web 框架的开发者来说，对模式（schema）的简单更改可能涉及许多处工作，而*约定优于配置*是关重要的。这意味着 Rails 提供了合理的默认值。遵循约定，Rails 能够让观察发生了什么变得容易得多。
-
-（注：此处为原文重复，根据要求不重复的逻辑块已保持翻译）
+两个哲学基础让 Rails 代码保持简洁易读：DRY 和“约定优于配置”。DRY 代表“不要重复自己”（don't repeat yourself）；系统中的每项知识都应该只在一个地方表达。Rails 使用 Ruby 的力量让这成为现实。在 Rails 应用程序中：你在一个地方说你需要说的话——通常是一个由 MVC 架构约定建议的地方——然后继续。对于习惯了其他 Web 框架的开发者来说，对模式（schema）的简单更改可能涉及许多处工作，而“约定优于配置”是关重要的。这意味着 Rails 提供了合理的默认值。遵循约定，Rails 能够让观察发生了什么变得容易得多。
 
 ## Rails 正是敏捷的
 
@@ -268,7 +187,7 @@ Rails 的核心在于个人与交互。Rails 能够让用户在开发周期早�
 
 Rails 并不否认文档。Rails 能够让代码库变得易透明。对于习惯了其他 Web 框架的开发者来说，对模式（schema）的简单更改可能涉及许多处工作，而。
 
-¹ http://agilemanifesto.org/ Dave Thomas 是本书的作者之一。
+¹ `http://agilemanifesto.org/` Dave Thomas 是本书的作者之一。
 
 Rails 能够让用户在开发周期早期交付可行的软件。这种软件可能很粗糙，但它让用户开始看到他们交付的内容。通过这种方式，Rails 鼓励客户合作。当客户看到 Rails 项目能够快速响应变化时，他们开始信任团队交付的是他们需要的，而不是他们请求的。冲突被“如果……”会议所取代。
 
@@ -280,9 +199,7 @@ Rails 并不否认文档。Rails 能够让代码库变得易透明。对于习�
 
 ## 如何阅读本书
 
-本书的第一部分确保你已准备就绪：当你完成这一部分时，你已经接触了 Ruby（语言），你已经
-
-已经对 Rails 本身有了整体了解，安装了 Ruby 和 Rails，并并通过一个简单的示例验证了此安装。
+本书的第一部分确保你已准备就绪：当你完成这一部分时，你已经接触了 Ruby（语言），你已经对 Rails 本身有了整体了解，安装了 Ruby 和 Rails，并通过一个简单的示例验证了此安装。
 
 下一部分将通过一个扩展的示例带你了解 Rails 背后的概念——我们将构建一个简单的在线商店。它不会一个一个地介绍 Rails 的每一个组件，而是这里有一章关于模型（models），那里有一章关于视图（views），等等。这些组件被设计为协同工作，而本节的每一章都解决一组涉及多个此类组件协作的相关任务。
 
@@ -290,9 +207,11 @@ Rails 并不否认文档。Rails 能够让代码库变得易透明。对于习�
 
 书的第三部分从第 264 页开始，概述了整个 Rails 生态系统。这从你现在将熟悉的 Rails 函数和功能开始。然后它涵盖了 Rails 框架依赖的许多关键项，这些依赖共同促进了 Rails 框架提供的整体功能。最后，对一些流行的插件进行了调查，它们增强了 Rails 框架，使 Rails 成为一个开放的生态系统而不仅仅是一个框架。
 
+
+
 在此过程中，你会看到我们采用的几项约定。
 
-## 实时代码 (Live Code)
+## 实时代码（Live Code）
 
 我们展示的大多数代码片段都来自你可以下载的完整运行示例。为了帮助你找到路径，或者在下载包中找到代码列表，代码片段上方会有一个栏（就像这里的这个一样）。
 
@@ -300,13 +219,14 @@ Rails 并不否认文档。Rails 能够让代码库变得易透明。对于习�
 Download work/demo1/app/controllers/say_controller.rb
 ```
 
-```
+```ruby
 class SayController < ApplicationController
-def hello
+  def hello
+  end
 end
 ```
 
-```
+```ruby
 def goodbye
 end
 ```
@@ -317,21 +237,21 @@ end
 
 在某些涉及修改现有文件的情况下，如果需要更改的行可能不会显而易见，你还会在需要更改行的左侧看到一些有用的三角形。之前的代码中指示了两个这样的行。
 
-## Ruby 技巧 (Ruby Tips)
+## Ruby 技巧（Ruby Tips）
 
 尽管你需要了解 Ruby 来编写 Rails 应用程序，但我们意识到阅读这本书的许多人将同时学习 Ruby 和 Rails。第 58 页的第 4 章“Ruby 简介”是对 Ruby 语言（非常）短的介绍。当我们第一次使用 Ruby 特有的结构时，我们会对其进行交叉引用。例如，此段落包含了对 `name` 的冗余使用，这是一个 Ruby 符号（symbol）。在页边中，你会看到一个指示，说明符号在第 59 页有解释。
 
-## David 说... (David Says...)
+## David 说……（David Says……）
 
-每隔一段时间你会遇到一个“David 说...”侧边栏。在这里，David Heinemeier 将为你提供关于 Rails 某些特定方面的内幕——原理、窍门、建议等。因为他是发明 Rails 的那个人，这些是你想要成为 Rails 专家所需要阅读的部分。
+每隔一段时间你会遇到一个“David 说……”侧边栏。在这里，David Heinemeier 将为你提供关于 Rails 某些特定方面的内幕——原理、窍门、建议等。因为他是发明 Rails 的那个人，这些是你想要成为 Rails 专家所需要阅读的部分。
 
-## Joe 提问... (Joe Asks...)
+## Joe 提问……（Joe Asks……）
 
 神话中的开发者 Joe 有时会跳出来对正文中讨论的内容提问。我们会在进行的过程中回答这些问题。
 
 这本书并不是为了作为 Rails 的参考手册。我们的经验是，参考手册并不是大多数人学习的方式。相反，我们通过示例或正文叙述，展示了大多数模块及其许多方法，并处于这些组件如何被使用以及它们如何相互配合的上下文中。
 
-我们没有成百上千的 API 列表。很好的原因是——每当你安装 Rails 时，都能让文档保持更新，而且它保证比书中的材料更及时。如果你使用 RubyGems 安装 Rails（我们推荐这样做），只需启动 gem 文档（命令 `gem server`），你就可以通过将浏览器指向 http://localhost:8080 来访问所有的 Rails API。你将在第 266 页发现如何构建更多文档和指南。
+我们没有成百上千的 API 列表。很好的原因是——每当你安装 Rails 时，都能让文档保持更新，而且它保证比书中的材料更及时。如果你使用 RubyGems 安装 Rails（我们推荐这样做），只需启动 gem 文档（命令 `gem server`），你就可以通过将浏览器指向 `http://localhost:8080` 来访问所有的 Rails API。你将在第 266 页发现如何构建更多文档和指南。
 
 此外，你会发现 Rails 通过产生能够清晰识别任何发现的错误的响应来帮助你，以及不仅告诉你在哪里发现了错误，还告诉你你是如何到达那里的追踪信息。你可以查看第 135 页图 10.3 中的一个示例。如果你需要额外信息，可以向前查阅第 134 页的第 10.2 节“迭代 E2：处理错误”，查看如何插入日志语句。
 
@@ -341,8 +261,9 @@ end
 
 让我们开始吧！第一步是安装 Ruby 和 Rails，并通过一个简单的演示验证安装。
 
-> “Agile Web Development with Rails...我在我们当地书店发现了它，它看起来很棒！”
-—Dave 的妈妈
+> “Agile Web Development with Rails……我在我们当地书店发现了它，它看起来很棒！”
+>
+> ——Dave 的妈妈
 
 - 3. http://forums.prprog.com/forums/148
 - 4. http://www.prprog.com/titles/rails4/errata
@@ -352,7 +273,7 @@ end
 
 ## 入门
 
-在本章中，我们将看到
+在本章中，我们将看到：
 
 - Ruby、RubyGems、SQLite3 以及 Rails
 - 开发环境
@@ -367,17 +288,17 @@ end
 
 在 Windows 上，从安装 Ruby 开始。最简单的方法是使用 RubyInstaller¹ 包。请确保下载 1.8.7 或更高的版本。书中的示例是基于该版本测试的。
 
-现在，打开命令提示符，通过 Windows 开始 -> 运行... 输入 `cmd` 并点击确定。
+现在，打开命令提示符，通过 Windows 开始 -> 运行…… 输入 `cmd` 并点击确定。
 
 RubyInstaller 包含了 RubyGems，但重要的是验证你运行的是 1.3 或更高版本。你可以通过以下命令验证 RubyGems 的版本：
 
-```
+```bash
 gem -v
 ```
 
 如果返回 1.5 或更早版本，你可以通过以下命令升级到最新版本的 RubyGems：
 
-```
+```bash
 gem update --system
 ```
 
@@ -386,37 +307,35 @@ gem update --system
 - 用于访问 SQLite 数据库的命令行程序
 - 不带 TCL 绑定的 SQLite 库
 
-将刚刚提取的文件复制到 C:\Ruby\bin 目录。结果应该是：
+将刚刚提取的文件复制到 `C:\Ruby\bin` 目录。结果应该是：
 
 | C:\Ruby\bin 目录 |
+| --- |
 | 02/11/2011 | 06:30 PM | 3,744 sqlite3.def |
 | 02/11/2011 | 06:30 PM | 511,383 sqlite3.dll |
 | 02/11/2011 | 06:31 PM | 530,762 sqlite3.exe |
-| | 3 个文件 | 1,045,889 字节 |
+|  | 3 个文件 | 1,045,889 字节 |
 
 现在安装与 SQLite3 的 Ruby 绑定，以及 Rails 本身：
 
-```
+```bash
 gem install sqlite3-ruby
 gem install rails
 ```
 
-此时，你已经准备好运行了。但在继续之前，你还应该在 Mac 上执行。虽然 ruby 和 rails 命令完全相同，但 Unix 命令是不同的。第一个是 -a，Windows 的等效命令只需要两个 Unix 命令。dir/w。第二个是 rm，Windows 的等效命令是 erase。
+此时，你已经准备好运行了。但在继续之前，你还应该在 Mac 上执行。虽然 `ruby` 和 `rails` 命令完全相同，但 Unix 命令是不同的。第一个是 `-a`，Windows 的等效命令只需要两个 Unix 命令。`dir /w`。第二个是 `rm`，Windows 的等效命令是 `erase`。
 
 - 2. http://www.sqlite.org/download.html!
 
-
-
-
-我们还将在第 180 页中使用 `curl` 命令。你可以从 [curl.haxx.se] 下载它。
+我们还将在第 180 页中使用 `curl` 命令。你可以从 [curl.haxx.se](http://curl.haxx.se) 下载它。
 
 好了，Windows 用户可以处理到这里了。你可以直接跳转到第 31 页的第 1.4 节“选择 Rails 版本”。我们会在那里见。
 
-### 在 Mac OS X 上安装
+### 1.2 在 Mac OS X 上安装
 
-虽然从 10.4.6 (Tiger) 开始的 OS X 版本已经包含了版本的 Ruby，并且从 OS X 10.5 (Leopard) 开始包含了 Rails 本身，但内置的版本通常是这些组件的较旧版本，你需要对它们进行一些升级。
+虽然从 10.4.6（Tiger）开始的 OS X 版本已经包含了版本的 Ruby，并且从 OS X 10.5（Leopard）开始包含了 Rails 本身，但内置的版本通常是这些组件的较旧版本，你需要对它们进行一些升级。
 
-Tiger 用户需要升级 SQLite 3。这可以通过源码编译来完成（听起来比实际操作要吓得多）。你可以在 http://www.sqlite.org/download.html 找到操作说明。
+Tiger 用户需要升级 SQLite 3。这可以通过源码编译来完成（听起来比实际操作要吓得多）。你可以在 `http://www.sqlite.org/download.html` 找到操作说明。
 
 安装 SQLite 3 的另一种方法是通过流行的 MacPorts 软件包。虽然操作说明看起来也有些望人生畏，但具体的步骤非常直观：运行一个安装程序，运行另一个安装程序，向文件中添加两行，再运行另一个安装程序，最后执行单个命令。这可能并不值得，因为这让源码编译变得像单条命令一样简单。如果你已经安装了 MacPorts，请使用它来升级机器上的 SQLite 3 版本：
 
@@ -449,13 +368,13 @@ sudo gem install sqlite3-ruby
 for cmd in ruby rake; do $cmd; done
 ```
 
-你需要验证每个命令是否位于相同的路径下，通常是 /opt/local/bin。如果你发现不同的工具位于不同的路径，请验证你的 `PATH` 变量是否正确，并重新安装与目标 Ruby 版本不匹配的工具。你可以使用 `sudo install rubygems` 或按照 RubyGems 网站上的说明（页面底步骤 1-3）重新安装 RubyGems。你可能需要在 `setup.rb` 命令前加上 `sudo`。
+你需要验证每个命令是否位于相同的路径下，通常是 `/opt/local/bin`。如果你发现不同的工具位于不同的路径，请验证你的 `PATH` 变量是否正确，并重新安装与目标 Ruby 版本不匹配的工具。你可以使用 `sudo install rubygems` 或按照 RubyGems 网站上的说明（页面底步骤 1-3）重新安装 RubyGems。你可能需要在 `setup.rb` 命令前加上 `sudo`。
 
 ```bash
 sudo gem install rake
 ```
 
-接一步很少需要，但在出现问题时会有帮助。你可以通过运行以下独立程序来验证绑定了哪个 sqlite3 接口：
+这一步很少需要，但在出现问题时会有帮助。你可以通过运行以下独立程序来验证绑定了哪个 sqlite3 接口：
 
 ```ruby
 require 'rubygems'
@@ -471,7 +390,7 @@ File.unlink(tempname)
 
 ### 1.3 在 Linux 上安装
 
-从你平台的原生包管理系统开始，无论是 apt-get、dpkg、rpm、synaptic 还是 yum。
+从你平台的原生包管理系统开始，无论是 `apt-get`、`dpkg`、`rpm`、`synaptic` 还是 `yum`。
 
 第一步是安装必要的依赖项。以下指令适用于 Ubuntu 10.04 Linux；你可以根据需要对它们进行调整：
 
@@ -489,20 +408,35 @@ sudo apt-get install sqlite3 libsqlite3-dev
 
 有许多不同的方法可以升级 RubyGems。遗憾的是，取决于你安装的 RubyGems 版本以及运行的发行版，并不是所有方法都有效。请保持耐心，尝试以下每种方法直到找到适用于你的方法。
 
-- 使用 gem update 系统：
+- 使用 `gem update` 系统：
+
+  ```bash
   sudo gem update --system
+  ```
+
 - 使用专门更新棘手系统的 gem：
+
+  ```bash
   sudo gem install rubygems-update
   sudo update_rubygems
-- 使用 rubygems-update 提供的 setup.rb：
+  ```
+
+- 使用 `rubygems-update` 提供的 `setup.rb`：
+
+  ```bash
   sudo gem install rubygems-update
   cd /var/lib/gems/1.8/gems/rubygems-update
   sudo ruby setup.rb
+  ```
+
 - 最后，从源码安装：
+
+  ```bash
   wget http://rubyforge.org/frs/download/69365/rubygems-1.3.6.tgz
   tar xzf rubygems-1.3.6.tgz
   cd rubygems-1.3.6
   sudo ruby setup.rb
+  ```
 
 接下来，我们将安装 Rails 框架和 SQLite3 数据库。
 
@@ -525,9 +459,6 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 
 之前的指令帮助你安装了最新版本的 Rails。但偶尔你可能不想运行最新版本。例如，你可能想运行与此版本匹配的 Rails 版本，以便输出结果完全一致。或者你可能正在一台机器上开发，但打算部署到另一台机器上，而那台机器包含你无法控制的 Rails 版本。
 
-
-
-
 ## 我的 IDE 在哪里？
 
 如果你是从 C# 和 Java 等语言转到 Ruby 和 Rails 的，你可能会好奇 IDE 的情况。毕竟，我们都知道，如果没有一个至少 100MB 的 IDE 来支持每一次按键，编写现代应用程序是不可能的。而对于你们这些开明理智的人，书中有一处是我们建议你坐的地方——理想情况下，身体两侧各堆着一叠框架参考书和 1000 页厚的《Easy》系列书籍。
@@ -548,26 +479,26 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 
 我们使用程序员编辑器编写 Rails 程序。多年来，我们发现不同的编辑器与不同的语言和环境配合最好。Dave 最初使用 Emacs 编写这一章，因为他认为在处理 XML 格式化类型方面，它的 Fillad 模式是无可伦比的。Sam 使用 Vim 更新了这一章。但许多人认为 Emacs 或 Vim 都不是 Rails 开发的理想选择，他们倾向于使用 TextMate。虽然编辑器的选择取决于个人喜好，以下是一些在 Rails 编辑器中需要寻找的功能建议：
 
-- 支持 Ruby 和 HTML 的语法高亮。理想情况下支持 .erb 文件（一种在 HTML 中嵌入 Ruby 代码段的 Rails 文件格式）。
+- 支持 Ruby 和 HTML 的语法高亮。理想情况下支持 `.erb` 文件（一种在 HTML 中嵌入 Ruby 代码段的 Rails 文件格式）。
 - 支持对 Ruby 源码进行自动缩进和重新缩进。这不仅仅是一个美化特性：在编写程序时让编辑器对代码进行缩进，是发现代码中糟糕嵌套的最佳方法。在你重构代码和移动内容时，能够缩进是非常重要的（TextMate 在从剪贴板粘贴代码时能够重新缩进的能力非常方便）。
 - 支持插入 Ruby 和 Rails 构造。你将编写很多短方法，如果 IDE 能够通过一两次按键就能创建方法骨架，你就可以专注于内部有趣的内容了。
-- 良好的文件导航。正如你所看到的，Rails 应用分布在许多文件中：一个新创建的 Rails 应用进入世界时包含46 个分布在 34 个目录中的文件。在你写出一个可以帮助你在这些文件之间快速导航的轻量级环境之前，你会在控制器中添加一行代码来加载值，切换到视图显示它，然后切换到测试来验证你是否做得正确。像记事本那样的通过遍历“打开文件”对话框来选择每个要编辑的文件是远远不够的。我们更倾向于结合：侧边栏的文件树形视图、一组可以帮助我们通过名称在目录树中查找文件（或多个文件）的少量快捷键，以及知道如何（例如）从控制器动作和相应的视图进行导航的内置智能功能。
+- 良好的文件导航。正如你所看到的，Rails 应用分布在许多文件中：一个新创建的 Rails 应用进入世界时包含 46 个分布在 34 个目录中的文件。在你写出一个可以帮助你在这些文件之间快速导航的轻量级环境之前，你会在控制器中添加一行代码来加载值，切换到视图显示它，然后切换到测试来验证你是否做得正确。像记事本那样的通过遍历“打开文件”对话框来选择每个要编辑的文件是远远不够的。我们更倾向于结合：侧边栏的文件树形视图、一组可以帮助我们通过名称在目录树中查找文件（或多个文件）的少量快捷键，以及知道如何（例如）从控制器动作和相应的视图进行导航的内置智能功能。
 - 名称补全。Rails 中的名称通常很长。一个好的编辑器会允许你输入前几个字符，然后按一下键即可建议可能的补全项。
+
+
 
 我们不倾向于推荐特定的编辑器，因为我们只认真用过少数几个，我们无疑会漏掉某人的最爱编辑器。尽管如此，为了帮助你从记事本之外的东西开始，这里有一些建议：
 
 ## 设置你的开发环境
 
-- Mac OS X 上首的 Ruby 和 Rails 编辑器是 TextMate (http://macromates.com/)。
+- Mac OS X 上首的 Ruby 和 Rails 编辑器是 TextMate（http://macromates.com/）。
 - Mac OS X 上的 Xcode 3 有一个组织（Organizer），提供了你可能需要的大部分功能。在 Leopard 上开始 Rails 的教程可以在 http://developer.apple.com/tools/developrails.html 找到。
-- 对于那些喜欢使用 TextMate 但恰好在使用 Windows 的人。E-TextEditor (http://e-texteditor.com/) 提供了“Windows 上的 TextMate之力”。
-- Aptana RadRails (http://www.aptana.com/products/radrails) 是一个在 Aptana Studio 和 Eclipse 中运行的集成 Rails 开发环境。它运行在 Windows、Mac OS 和 Linux 上。它曾获得 2006 年基于 Eclipse 的最佳开源开发者工具奖，Aptana 随后成为了该项目的家园。
-- NetBeans IDE 6.5 (http://netbeans.org/features/ruby/index.html) 支持 Ruby，适用于 Windows、Mac OS 和 Linux。它提供了你可能需要的大部分功能。在 Leopard 上开始 Rails 的教程可以在 http://developer.apple.com/tools/developrails.html 找到。- jEdit (http://www.jedit.org/) 是一个功能强大的编辑器，它有丰富的插件支持。
-- Komodo (http://www.activestate.com/komodo-ide) 是 ActiveState 的 IDE，支持动态语言。
-- RubyMine (http://www.jetbrains.com/ruby/) 是一个商业 IDE，支持 Ruby。它适用于 Windows、Mac OS 和 Linux。
-
-
-
+- 对于那些喜欢使用 TextMate 但恰好在使用 Windows 的人，E-TextEditor（http://e-texteditor.com/）提供了“Windows 上的 TextMate 之力”。
+- Aptana RadRails（http://www.aptana.com/products/radrails）是一个在 Aptana Studio 和 Eclipse 中运行的集成 Rails 开发环境。它运行在 Windows、Mac OS 和 Linux 上。它曾获得 2006 年基于 Eclipse 的最佳开源开发者工具奖，Aptana 随后成为了该项目的家园。
+- NetBeans IDE 6.5（http://netbeans.org/features/ruby/index.html）支持 Ruby，适用于 Windows、Mac OS 和 Linux。它提供了你可能需要的大部分功能。在 Leopard 上开始 Rails 的教程可以在 http://developer.apple.com/tools/developrails.html 找到。
+- jEdit（http://www.jedit.org/）是一个功能强大的编辑器，它有丰富的插件支持。
+- Komodo（http://www.activestate.com/komodo-ide）是 ActiveState 的 IDE，支持动态语言。
+- RubyMine（http://www.jetbrains.com/ruby/）是一个商业 IDE，支持 Ruby。它适用于 Windows、Mac OS 和 Linux。
 
 如果你找不到二进制版本，或者你仍然倾向于从源码构建，你需要在你的机器上准备一个开发环境来编译该库。在 Windows 下，这意味着需要有一个 Visual C++ 副本。在 Linux 下，你需要 gcc 及其同类（但这些可能已经安装了）。
 
@@ -575,15 +506,15 @@ export PATH=/var/lib/gems/1.8/bin:$PATH
 
 以下是可用的数据库适配器及其各自主页的链接：
 
-- DB2 http://raa.ruby-lang.org/project/ruby-db2 或 http://rubyforge.org/projects/rubybm
-- Firebird http://rubyforge.org/projects/firebird/
-- MySQL http://www.ttmf.org/en/mysql/
-- Oracle http://rubyforge.org/projects/ruby-oci
-- Postgres http://rubyforge.org/projects/ruby-pg
-- SQL Server https://github.com/rails-sqlserver
-- SQLite http://rubyforge.org/projects/sqlite-ruby
+- DB2：http://raa.ruby-lang.org/project/ruby-db2 或 http://rubyforge.org/projects/rubybm
+- Firebird：http://rubyforge.org/projects/firebird/
+- MySQL：http://www.ttmf.org/en/mysql/
+- Oracle：http://rubyforge.org/projects/ruby-oci
+- Postgres：http://rubyforge.org/projects/ruby-pg
+- SQL Server：https://github.com/rails-sqlserver
+- SQLite：http://rubyforge.org/projects/sqlite-ruby
 
-提供了纯 Ruby 版本的 Postgres 适配器。可以从 Ruby-DBI 页面下载 postgres-pr：http://rubyforge.org/projects/postgres-pr。
+提供了纯 Ruby 版本的 Postgres 适配器。可以从 Ruby-DBI 页面下载 `postgres-pr`：http://rubyforge.org/projects/postgres-pr。
 
 MySQL 和 SQLite 适配器也可以作为 RubyGems 下载（分别为 `mysql` 和 `sqlite3-ruby`）。
 
@@ -598,14 +529,14 @@ MySQL 和 SQLite 适配器也可以作为 RubyGems 下载（分别为 `mysql` �
 
 在本章中，我们将看到：
 
-- 创建一个新的应用程序，
+- 创建一个新的应用程序；
 - 启动服务器；
-- 从浏览器访问服务器，
-- 生成动态内容，
-- 添加超链接，以及
+- 从浏览器访问服务器；
+- 生成动态内容；
+- 添加超链接；以及
 - 将数据从控制器传递到视图。
 
-## 第 2 章
+# 第 2 章
 
 ## 即时反馈
 
@@ -619,14 +550,14 @@ MySQL 和 SQLite 适配器也可以作为 RubyGems 下载（分别为 `mysql` �
 
 要创建你的第一个 Rails 应用程序，打开 shell 窗口，并到文件系统中你想创建应用程序目录结构的地方。在我们的示例中，我们将在名为 `work` 的目录中创建项目。在该目录中，使用 `rails` 命令创建一个名为 `demo` 的应用程序。在这里要稍微小心——如果你有一个已存在的目录，可能会覆盖任何现有文件。（注意：如果你想指定要使用的 Rails 版本，如第 1.4 节“选择 Rails 版本”，位于第 31 页所述，现在就是执行操作的时候。）
 
-```
+```text
 ruby> cd work
 work> rails new demo
 create README
 create create .gitignore
 ```
 
-```
+```text
 create Rakefile
 create   tmp/pids
 create vendor/plugins
@@ -636,7 +567,7 @@ work/
 
 该命令创建了一个名为 `demo` 的目录。进入该目录并列出其内容（在 Unix 上使用 `ls`，在 Windows 上使用 `dir`）。你应该看到许多文件和目录：
 
-```
+```text
 work> cd demo
 demo> ls -p
 app/ config.ru doc/ lib/public/ README test/ vendor/
@@ -647,7 +578,7 @@ config/ db Gemfile log/ Rakefile script/tmp/
 
 这些文件中包含了启动独立 Web 服务器所需的一切，该服务器可以运行我们新创建的 Rails 应用程序。所以，话不多说，让我们开始我们的 demo：
 
-```
+```text
 demo> rails server
 => Booting WEBrick
 => Rails 3.0.3 application starting on http://0.0.0.0:3000
@@ -658,13 +589,13 @@ demo> rails server
 [2010-11-14 10:53:40] INFO WEBrick::HTTPServerStart: pid=6044 port=3000
 ```
 
-运行哪种 Web 服务器取决于你安装了哪些服务器。WEBrick 是一个纯 Ruby Web 服务器，随 Ruby 1.8.1 一起分发，并保证可用。然而，如果你的系统上安装了另一个 Web 服务器（Rails 可以找到它），`rails server` 命令可能会优先使用它 own WEBrick。我们可以通过向 `rails` 命令添加一个选项来强制 Rails 使用 WEBrick：
+运行哪种 Web 服务器取决于你安装了哪些服务器。WEBrick 是一个纯 Ruby Web 服务器，随 Ruby 1.8.1 一起分发，并保证可用。然而，如果你的系统上安装了另一个 Web 服务器（Rails 可以找到它），`rails server` 命令可能会优先使用它，而不是 WEBrick。我们可以通过向 `rails` 命令添加一个选项来强制 Rails 使用 WEBrick：
 
-```
+```text
 demo> rails server webrick
 ```
 
-作为启动轨迹追踪的最后一行，我们刚刚在端口 3000 上启动了一个 Web 服务器。地址中的 `0.0.0.0` 部分意味着 WEBrick 将接受来自所有接口的连接。在 Dave 的 X 系统上，该系统既有本地接口（127.0.0.1 和 ::1）又有他的局域网连接。我们可以通过将浏览器指向 URL `http://localhost:3000` 来访问应用程序。结果所示。
+作为启动轨迹追踪的最后一行，我们刚刚在端口 3000 上启动了一个 Web 服务器。地址中的 `0.0.0.0` 部分意味着 WEBrick 将接受来自所有接口的连接。在 Dave 的 X 系统上，该系统既有本地接口（`127.0.0.1` 和 `::1`）又有他的局域网连接。我们可以通过将浏览器指向 URL `http://localhost:3000` 来访问应用程序。结果所示。
 
 ## 2.2 你好，Rails！
 
@@ -672,7 +603,7 @@ demo> rails server webrick
 
 就像我们使用命令创建一个新应用程序一样，我们也可以使用生成器脚本为项目创建一个新控制器。所以，假设我们在 `demo` 目录下运行命令，传入我们要创建的控制器名称，以及我们希望该控制器支持的 action 名称：
 
-```
+```text
 > rails generate Say hello
 create app/controllers/say_controller.rb
 route get "/goodbye"
@@ -689,24 +620,23 @@ invoke test_unit
 create test/unit/helpers/say_helper.rb
 ```
 
-`rails generate` 会记录它检查的文件和目录，并在向应用程序添加新的 Ruby 脚本或目录时进行记录。现在，我们对这些脚本中的一个 .erb 文件感兴趣。
+`rails generate` 会记录它检查的文件和目录，并在向应用程序添加新的 Ruby 脚本或目录时进行记录。现在，我们对这些脚本中的一个 `.erb` 文件感兴趣。
 
 我们将查看的源文件是控制器。你可以在 `app/controllers/say_controller.rb` 文件中找到它。让我们来看看：
 
-```
-Down load work/demo/app/controllers/say_controller.rb
+```ruby
 class SayController < ApplicationController
   def hello
-end
+  end
+
   def goodbye
+  end
 end
 ```
 
-非常精简对吧？`SayController` 是一个继承自 `ApplicationController` 的类，它自动获得了所有的默认控制器行为。这段代码有什么用？目前，它什么都没做——我们只是有了一个空
+非常精简对吧？`SayController` 是一个继承自 `ApplicationController` 的类，它自动获得了所有的默认控制器行为。这段代码有什么用？目前，它什么都没做——我们只是有了一个空。
 
 此时，我们已经有一个运行的应用程序，但它没有任何代码。让我们从创建一个简单的应用程序开始，向浏览器发送我们的问候。在我们使其工作之后，我们将用链接来装饰它。正如我们稍后在第 3 章“Rails 架构”，位于第 51 页中深入探讨的那样，Rails 是一个模型-视图-控制器框架。Rails 接受进入
-
-
 
 ## Say hello
 
@@ -720,15 +650,15 @@ end
 
 与其他任何 Web 应用程序一样，Rails 应用程序在用户看来与一个 URL 关联。当你将浏览器指向该 URL 时，你正在与应用程序代码通信，它会为你生成一个响应。
 
-现在来试一下。在浏览器窗口中导航到 URL http://localhost:3000/say/hello。（注意，在开发环境中，路径前端端没有任何应用程序字符串——我们直接路由到控制器。）你会看到类似于图 2.2 的内容。
+现在来试一下。在浏览器窗口中导航到 URL `http://localhost:3000/say/hello`。（注意，在开发环境中，路径前端端没有任何应用程序字符串——我们直接路由到控制器。）你会看到类似于图 2.2 的内容。
 
 ## 我们的第一个 Action
 
 此时，我们可以看到，我们不仅将 URL 连接到了我们的控制器，而且 Rails 正在为我们的下一步指引方向，即告诉 Rails 要显示什么。这就是视图（views）派上用场的地方。记得我们之前运行创建新控制器的脚本吗？该命令为我们的应用程序添加了六个文件和一个新目录。该目录包含了控制器视图的模板文件。在我们的案例中，创建了一个名为 say 的控制器，因此视图将位于 `app/views/say` 目录。
 
-默认情况下，Rails 会查找与动作处理程序同名的文件模板。在我们的情况下，这意味着我们需要在 `app/views/say` 目录下替换一个名为 `hello.html.erb` 的文件。（为什么是 hello.html.erb？我们稍后会解释。）现在，让我们在里面放一些基础的 HTML：
+默认情况下，Rails 会查找与动作处理程序同名的文件模板。在我们的情况下，这意味着我们需要在 `app/views/say` 目录下替换一个名为 `hello.html.erb` 的文件。（为什么是 `hello.html.erb`？我们稍后会解释。）现在，让我们在里面放一些基础的 HTML：
 
-```
+```text
 Download work/demo/app/views/say/hello.html.erb
 <h1>Hello from Rails!</h1>
 ```
@@ -753,15 +683,15 @@ Download work/demo/app/views/say/hello.html.erb
 
 图 2.3：控制器和视图的标准位置
 
-ERB 是作为 Rails 安装的一部分的过滤器，它接收一个 .erb 文件并输出一个转换后的版本。在 Rails 中，输出文件通常是 HTML，但也可以任何内容。普通内容会直接通过而不改变。然而，`<%=` 和 `%>` 之间的内容被解释为 Ruby 代码并执行。执行结果被转换为字符串，该值将替换 `<%=...%>` 序列。例如，更改 `hello.html.erb` 以显示当前时间
+ERB 是作为 Rails 安装的一部分的过滤器，它接收一个 `.erb` 文件并输出一个转换后的版本。在 Rails 中，输出文件通常是 HTML，但也可以是任何内容。普通内容会直接通过而不改变。然而，`<%=` 和 `%>` 之间的内容被解释为 Ruby 代码并执行。执行结果被转换为字符串，该值将替换 `<%=...%>` 序列。例如，更改 `hello.html.erb` 以显示当前时间：
 
-```
+```text
 Down work/demo2/app/views/say/hello.html.erb
 ```
 
+```html
 <h1>Hello from Rails!</h1>
 
-```
 <p>
   It is now <%= Time.now %>
 </p>
@@ -785,7 +715,6 @@ Down work/demo2/app/views/say/hello.html.erb
 
 你可能已经注意到我们到为止所做的开发中的事情。当我们向应用程序添加代码时，我们不需要重启正在运行的应用程序。它一直愉快地运行着。
 
-
 被使用。Rails 应用程序通常很少或完全不使用外部配置——这些元素会以一种自然的方式契合在一起。
 
 ## 2.3 将页面链接在一起
@@ -795,6 +724,8 @@ Down work/demo2/app/views/say/hello.html.erb
 通常情况下，你应用程序中的每个页面都会对应一个独立的视图（view）。在我们情况下，我们还将使用一个新的 action 来处理该页面（尽管并不总是如此，正如我们在书后面将看到的）：我们将为两个 action 使用同一个控制器（controller）。同样，这并非必须的，但目前我们没有充分的理由使用新的控制器。
 
 我们已经为这个控制器定义了一个 `goodbye` action，所以剩下的只是在 `app/views/say` 目录下创建一个新模板。这次它命名为 `goodbye.html.erb`，因为默认模板是以对应的 action 名的。
+
+
 
 ```
 Download work/demo/app/views/say/goodbye.html.erb
@@ -897,19 +828,24 @@ Say <%= link_to "Hello", say_hello_path %> 再次。
 这里是一些可以自己尝试的练习：
 
 你可以自己尝试以下表达式：
-- 加法：<%= 1+2 %>
-- 拼接：<%= "cow" + "boy" %>
-- 一小时后：<%= 1.hour.from_now %>
+
+- 加法：`<%= 1+2 %>`
+- 拼接：`<%= "cow" + "boy" %>`
+- 一小时后：`<%= 1.hour.from_now %>`
 
 下面的 Ruby 方法返回当前目录下的所有文件：
+
 `@files = Dir.glob('*')`
 
 你可以使用下面的内容遍历集合：
+
 `<% for file in @files %>`
+
 `文件名：<%= file %>`
+
 `<% end %>`
 
-你可能想为列表使用 `<ul>`。（你可以在 http://www.pragprog.com/wiki/Rails 中找到提示。）
+你可能想为列表使用 `<ul>`。（你可以在 `http://www.pragprog.com/wiki/Rails` 中找到提示。）
 
 # 清理
 
@@ -917,22 +853,19 @@ Say <%= link_to "Hello", say_hello_path %> 再次。
 
 现在进入 Rails 本身的概述。
 
-# 第三章
-
-## 应用程序的架构
+# 第三章：应用程序的架构
 
 Rails 的有趣特性之一是对你如何组织 Web 应用程序实施了严格的限制。惊讶的是，这些限制让创建应用程序变得更容易。让我们看看为什么。
 
-### 3.1 模型、视图和控制器
+## 3.1 模型、视图和控制器
 
 1979，Tryve Reenskaug 提出了一种开发交互式应用程序的新架构。在他的设计中，应用程序被分为三类型的组件：模型、视图和控制器。
 
 **模型负责维护应用程序的状态。有时这种状态是瞬态的，只持续与用户的几次交互。有时状态是永久的，并将存储在应用程序之外，通常在数据库中。**
 
-*模型不仅仅是数据；它执行适用于该数据的规则。例如，如果订单小于 20 美元就不应用折扣，模型将执行这一约束。这是很有意义的，通过将业务规则的实现放在模型中，我们确保应用程序中的任何都不会让我们的数据失效。模型充当了门卫和数据存储的角色。*
+模型不仅仅是数据；它执行适用于该数据的规则。例如，如果订单小于 20 美元就不应用折扣，模型将执行这一约束。这是很有意义的，通过将业务规则的实现放在模型中，我们确保应用程序中的任何都不会让我们的数据失效。模型充当了门卫和数据存储的角色。
 
 视图负责生成用户界面，通常基于模型中的数据。例如，在线商店将有一个产品列表显示在目录屏幕上。列表可以通过从模型获取列表的视图来访问。尽管视图可能会向用户提供各种输入数据的方式，但视图本身从不处理输入的数据。一旦数据显示，视图的工作就完成了。可能有许多视图访问相同的模型数据，通常用于不同的目的。在在线商店中，there'll
-
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_51_0.png)
 
@@ -948,10 +881,10 @@ MVC 架构最初是为了传统的 GUI 应用设计的，在这些应用中，�
 
 Ruby on Rails 是一个 MVC 框架——你将模型、视图和控制器作为独立的功能块进行开发，并在程序执行时将它们编织在一起。Rails 的妙处在于，这种编织过程是基于智能默认值（intelligent defaults），因此你通常不需要编写任何外部配置。
 
-## 路由 (Routing)
+## 路由（Routing）
 
-- ① http://my.url/line_items?product_id=2
-- ② 路由找到 Linelits 控制器
+- ① `http://my.url/line_items?product_id=2`
+- ② 路由找到 `Linelits` 控制器
 - ③ 控制器与模型交互
 - ④ 控制器调用视图
 - ⑤ 视图渲染下一个浏览器屏幕
@@ -962,7 +895,7 @@ Ruby on Rails 是一个 MVC 框架——你将模型、视图和控制器作为�
 
 元数据（metadata）让这一切运行。这是 Rails “约定优于配置”（favoring convention over configuration）哲学的示例。
 
-在 Rails 应用程序中，传入的请求首先发送到路由器（router），由确定请求应该发送到应用程序的哪个位置，以及请求本身应该如何解析。最终，这一阶段会识别控制器代码中的某个特定方法（在 Rails 术语中称为 *action*）。该 action 可能会查看请求，与模型交互，并可能引发其他 action 的调用。最后，action 为视图准备信息，由视图向用户渲染某些内容。
+在 Rails 应用程序中，传入的请求首先发送到路由器（router），由确定请求应该发送到应用程序的哪个位置，以及请求本身应该如何解析。最终，这一阶段会识别控制器代码中的某个特定方法（在 Rails 术语中称为 `action`）。该 action 可能会查看请求，与模型交互，并可能引发其他 action 的调用。最后，action 为视图准备信息，由视图向用户渲染某些内容。
 
 Rails 如图 3.2 所示处理传入的请求。在这个示例中，应用程序*之前*显示了产品目录页面，用户刚刚点击了其中一个产品旁边的“Add to Cart”（加入购物车）按钮。`http://localhost:3000/line_items?product_id=2`，其中 line_items 是我们应用程序中的一个资源，2 是我们所选产品的唯一 id。
 
@@ -972,17 +905,13 @@ Rails 如图 3.2 所示处理传入的请求。在这个示例中，应用程序
 
 现在购物车包含了新产品，我们可以将其展示给用户。
 
-
-
-
-
-在 Rails 中，动态内容是由模板生成的，模板共有三种。最常用的模板方案称为嵌入式 Ruby (ERB)，它在视图文档中嵌入 Ruby 代码段，其许多方法与其它框架（如 PHP 或 JSP）中的实现方式相似。这种方法非常灵活，但一些人担心它违反了 MVC 的精神。通过在视图中嵌入代码，我们可能会增加一些本该属于模型或控制器的逻辑。就像处理任何事情一样，明智且适度使用是健康的，保持清晰的关注点分离是开发者工作的一部分。（我们将在第 25.2 节“使用 ERB 生成 HTML”，第 418 页查看 HTML 模板。）
+在 Rails 中，动态内容是由模板生成的，模板共有三种。最常用的模板方案称为嵌入式 Ruby（ERB），它在视图文档中嵌入 Ruby 代码段，其许多方法与其它框架（如 PHP 或 JSP）中的实现方式相似。这种方法非常灵活，但一些人担心它违反了 MVC 的精神。通过在视图中嵌入代码，我们可能会增加一些本该属于模型或控制器的逻辑。就像处理任何事情一样，明智且适度使用是健康的，保持清晰的关注点分离是开发者工作的一部分。（我们将在第 25.2 节“使用 ERB 生成 HTML”，第 418 页查看 HTML 模板。）
 
 XML Builder 也可以使用 Ruby 代码来构建 XML 文档——生成的 XML 结构将自动遵循文档的结构。我们从第 416 页讨论 xml.builder 模板。
 
 Rails 还提供了 JS 视图。这些视图允许你在服务器上创建 JavaScript 片段，然后在浏览器上执行。这对于创建动态 Ajax 接口非常有帮助。我们从第 149 页开始介绍这些。
 
-## 控制器 (Controller)
+## 控制器（Controller）
 
 控制器是你的应用程序的逻辑中心。它协调用户、视图和模型之间的交互。然而，Rails 在后台处理了大部分这类交互；你编写的代码是应用程序层级的功能。这使得 Rails 代码异常易于开发和维护。
 
@@ -998,24 +927,23 @@ Rails 还提供了 JS 视图。这些视图允许你在服务器上创建 JavaSc
 Rails 的内容非常多。但在继续之前，让我们先进行一个简短的复习——对你们中的一些人来说，是复习 Ruby 语言本身。
 
 在本章中，我们将看到：
+
 - 对象：名称、方法；
 - 数据：字符串、数组、哈希和正则表达式；
-- 控制：if、while、块（blocks）、异常；
+- 控制：`if`、`while`、块（blocks）、异常；
 - 构建块：类和模块；
-- YAML 和 序列化（marshalling）；以及
+- YAML 和序列化（marshalling）；以及
 - 你将在书中看到的常见惯用法（idioms）。
 
-## 第 4 章
-
-## Ruby 简介
+# 第 4 章：Ruby 简介
 
 许多刚接触 Rails 的人对 Ruby 也是新手。如果你熟悉 Java、JavaScript、Perl 或 Python 等语言，你会发现 Ruby 很好上手。
 
 本章并不是对 Ruby 的完整介绍。它不会涵盖优先级等内容（就像大多数其他编程语言一样，在 Ruby 中 `1+2*3=7`）。它的目的只是解释 Ruby，以便书中的示例能够通俗理解。
 
-本章大量引用了《编程 Ruby》(Programming Ruby) [TFH08] 第 2 章的内容。如果你需要更多关于 Ruby 语言的背景知识，在不冒极度自私风险的情况下，我们建议学习 Ruby 的最佳方法，以及作为 Ruby 类、模块和库的最佳参考书，是《编程 Ruby》[TFH08]（也称为 PickAxe 书）。欢迎来到 Ruby 社区！
+本章大量引用了《编程 Ruby》（Programming Ruby）[TFH08] 第 2 章的内容。如果你需要更多关于 Ruby 语言的背景知识，在不冒极度自私风险的情况下，我们建议学习 Ruby 的最佳方法，以及作为 Ruby 类、模块和库的最佳参考书，是《编程 Ruby》[TFH08]（也称为 PickAxe 书）。欢迎来到 Ruby 社区！
 
-### 4.1 Ruby 是一种面向对象的语言
+## 4.1 Ruby 是一种面向对象的语言
 
 你在 Ruby 中操作的一切都是对象，而这些操作的结果本身也是对象。
 
@@ -1024,7 +952,8 @@ Rails 的内容非常多。但在继续之前，让我们先进行一个简短�
 对象是通过调用*构造方法*（constructor）创建的，它是与类相关联的特殊方法。标准的构造方法是 `new`。
 
 假设有一个类 `LineItem`，你可以这样创建行项目对象：
-```line_item
+
+```ruby
 line_item_one = LineItem.new
 line_item_one.quantity = 1
 line_item_one.sku = "AUTO_B_00"
@@ -1038,10 +967,12 @@ line_item_one.sku = "AUTO_B_00"
 
 ## Ruby 命名
 
-局部变量、方法参数和方法名都应该以小写字母或下划线开头：*order*、*line_item* 和 *xr2000* 都是有效的。实例变量（我们稍后会讨论）以“at”符号（@）开头，例如 `@quantity`。类名、模块名和常量必须以大写字母开头。按照惯例，它们使用下划线而非大写来区分单词的开头。Rails 使用*符号*（symbols）来标识事物，特别是在命名参数和在哈希（hashes）中查找时。例如：
+局部变量、方法参数和方法名都应该以小写字母或下划线开头：`order`、`line_item` 和 `xr2000` 都是有效的。实例变量（我们稍后会讨论）以“at”符号（`@`）开头，例如 `@quantity`。类名、模块名和常量必须以大写字母开头。按照惯例，它们使用下划线而非大写来区分单词的开头。Rails 使用*符号*（symbols）来标识事物，特别是在命名参数和在哈希（hashes）中查找时。例如：
+
 ```ruby
 redirect_to :action => "edit", :id => params[:id]
 ```
+
 如你所见，符号看起来像变量，但它带有冒号前缀。你可以将符号看作是常量字符串字面量。或者，既然我们已经使用了一些方法，让我们来看看它们是如何定义的。
 
 ## 方法
@@ -1075,10 +1006,9 @@ Ruby 不使用括号来限制复合语句和定义（如方法和类）。相反
 
 
 
+在双引号的情况下，Ruby 会执行更多工作。首先，它会寻找以反斜杠字符开头的替换序列——并将它们替换为某个值。其中最常见的是 `\n`，它会被替换为换行符。当你向控制台写入一个包含换行符的字符串时，`\n` 会强制进行换行。
 
-在双引号的情况下，Ruby 会执行更多工作。首先，它会寻找以反斜杠字符开头的*替换序列*——并将它们替换为某个值。其中最常见的是 `\n`，它会被替换为换行符。当你向控制台写入一个包含换行符的字符串时，`\n` 会强制进行换行。
-
-其次，Ruby 在双引号字符串中执行*表达式插值*。在字符串中，`#{expression}` 会被替换为*expression* 的值。我们可以用它来重写之前的那个方法：
+其次，Ruby 在双引号字符串中执行表达式插值。在字符串中，`#{expression}` 会被替换为 `expression` 的值。我们可以用它来重写之前的那个方法：
 
 ```ruby
 def say_goodnight(name)
@@ -1087,7 +1017,7 @@ end
 puts say_goodnight('pa')
 ```
 
-当 Ruby 构建此对象时，它会查看 `name` 的当前值并将其替换到字符串中。在 `#{...}` 结构中允许允许任意复杂的表达式。在这里，我们调用了为所有字符串定义的 `capitalize` 方法，以便以首字母大写的形式输出我们的参数。
+当 Ruby 构建此对象时，它会查看 `name` 的当前值并将其替换到字符串中。在 `#{...}` 结构中允许任意复杂的表达式。在这里，我们调用了为所有字符串定义的 `capitalize` 方法，以便以首字母大写的形式输出我们的参数。
 
 字符串是一种原始的数据类型，包含一个有序的字节或字符集合。Ruby 还提供了通过数组（arrays）和哈希（hashes）来定义任意对象集合的方法。
 
@@ -1095,12 +1025,12 @@ puts say_goodnight('pa')
 
 Ruby 的数组和哈希是索引集合。它们都存储对象集合，可以使用键（key）进行访问。对于数组，键是整数，而哈希支持将任何对象作为键。数组和哈希都会根据需要增长以容纳新元素。访问数组元素的效率更高，但哈希提供了更大的灵活性。任何特定的数组或哈希都可以包含不同类型的对象；例如，你可以拥有一个包含整数、字符串和浮点数的数组。
 
-你可以使用*数组字面量*（array literal）——即方括号之间的一组元素来创建并初始化一个新的数组对象。给定一个数组对象，你可以通过在方括号中提供索引来访问单个元素，如接下来的示例所示。Ruby 的数组索引从零开始。
+你可以使用数组字面量（array literal）——即方括号之间的一组元素来创建并初始化一个新的数组对象。给定一个数组对象，你可以通过在方括号中提供索引来访问单个元素，如接下来的示例所示。Ruby 的数组索引从零开始。
 
 ```ruby
 a = [ 1, 'cat', 3.14 ]  # 有三个元素的数组
-a[0]                      # 访问第一个元素 (1)
-a[2] = nil               # 设置第三个元素
+a[0]                    # 访问第一个元素 (1)
+a[2] = nil              # 设置第三个元素
 ## 数组现在为 [ 1, 'cat', nil ]
 ```
 
@@ -1136,7 +1066,7 @@ inst_section = {
 }
 ```
 
-`=>` 左侧是键，右侧是对应的值。特定哈希中的键必须是唯一的——你不能为 `drum` 准备两个条目。哈希中的键和值可以是任意对象——你可以拥有值值为数组、其他哈希等的哈希。在 Rails 中，哈希通常使用符号（symbols）作为键。许多哈希经过了修改，以便你可以在插入和查找值时交替使用字符串或符号作为键。
+`=>` 左侧是键，右侧是对应的值。特定哈希中的键必须是唯一的——你不能为 `drum` 准备两个条目。哈希中的键和值可以是任意对象——你可以拥有值为数组、其他哈希等的哈希。在 Rails 中，哈希通常使用符号（symbols）作为键。许多哈希经过了修改，以便你可以在插入和查找值时交替使用字符串或符号作为键。
 
 哈希使用与数组相同的方括号表示法进行索引：
 
@@ -1164,9 +1094,6 @@ end
 ```
 
 （注：原文后半部分存在部分重复和乱码，上述翻译已根据提供的英文文本逻辑进行了处理）
-
-
-
 
 ```ruby
 verbose_greet("Dave", "loyal customer") { puts "Hi" }
@@ -1201,9 +1128,9 @@ wrap { print "Ho! " }
 
 在块内部或方法内部，控制流是顺序的，除非发生异常。
 
-## 异常 (Exceptions)
+## 异常（Exceptions）
 
-异常是对象（`Exception` 类或其子类）。`raise` 方法会导致异常异常。这会中断代码的正常流。相反，Ruby 会回溯调用堆栈，寻找声明其可以处理此异常的代码。
+异常是对象（`Exception` 类或其子类）。`raise` 方法会导致异常。这会中断代码的正常流。相反，Ruby 会回溯调用堆栈，寻找声明其可以处理此异常的代码。
 
 封装在 `begin` 和 `end` 关键字之间的方法和代码块使用 `rescue` 子句来拦截某些类的异常。
 
@@ -1223,24 +1150,25 @@ end
 
 到此，我们对控制流的简要介绍就结束了，此时我们已经拥有了基础构建模块，可以在此构建更大的结构。
 
-## 4.4 组织结构 (Organizing Structures)
+## 4.4 组织结构（Organizing Structures）
 
 Ruby 中组织方法有两个基本概念：即类（classes）和模块（modules）。我们将逐一介绍。
 
-## 类 (Classes)
+## 类（Classes）
 
 这是一个 Ruby 类的定义：
 
 ```ruby
 class Order < ActiveRecord::Base
   has_many :line_items
+
   def self.find_all_unpaid
     self.where('paid = 0')
   end
+
   def total
     sum = 0
     line_items.each {|li| sum += li.total}
-    end
   end
 end
 ```
@@ -1249,7 +1177,7 @@ end
 
 Rails 大量使用由 Active Record 定义的类级声明。它正在定义 `Order` 类。通常，这类方法会对类进行断言，因此在这里我们称它们为声明（declarations）。
 
-在类体内，你可以定义类方法和实例方法。在方法名前名前加上 `self`（如我们在第 5 行所做的那样）使其类方法；它可以在类上调用。在这种情况下，我们可以在应用程序的任何地方执行以下操作：
+在类体内，你可以定义类方法和实例方法。在方法名前加上 `self`（如我们在第 5 行所做的那样）使其成为类方法；它可以在类上调用。在这种情况下，我们可以在应用程序的任何地方执行以下操作：
 
 ```ruby
 to_collect = Order.find_all_unpaid
@@ -1282,13 +1210,14 @@ g.name = "Betty"
 puts g.name #=> Betty
 ```
 
-Ruby 提供了便利方法来为你编写这些存取器（accessor）方法（这对于厌倦了编写这些 getter 和 setter的人来说太棒了）：
+Ruby 提供了便利方法来为你编写这些存取器（accessor）方法（这对于厌倦了编写这些 getter 和 setter 的人来说太棒了）：
 
 ```ruby
 class Greeter
   attr_accessor :name # 创建 reader 和 writer 方法
   attr_reader :greeting # 只创建 reader
   attr_writer :age # 只创建 writer
+end
 ```
 
 类的实例方法默认是公共的；任何人都可以调用它们。你可能想要重写这些打算供其他类实例方法使用的方法：
@@ -1299,10 +1228,12 @@ class MyClass
   end
 
   protected
+
   def m2 # 此方法是受保护的
   end
 
   private
+
   def m3 # 此方法是私有的
   end
 end
@@ -1320,7 +1251,7 @@ module StoreHelper
 end
 ```
 
-YAML 是一个递归缩写，代表 "YAML Ain't Markup Language"。在 Rails 的语文中，YAML 被用作定义数据库、测试数据和翻译等。这里有一个示例：
+YAML 是一个递归缩写，代表 “YAML Ain't Markup Language”。在 Rails 的语境中，YAML 被用作定义数据库、测试数据和翻译等。这里有一个示例：
 
 ```yaml
 development:
@@ -1332,12 +1263,9 @@ development:
 
 在 YAML 中，缩进非常重要。虽然 YAML 是表示数据的一种方式（特别是当与人类交互时），Ruby 提供了更通用的表示数据的方法。
 
-
-
-
 即使你不知道 Ruby，可能也能读懂 `up` 方法创建了一个名为 `products` 的表并删除了该表。创建此表包含的字段包括 `title`、`description`、`image_url` 和 `price`，以及几个时间戳（我们将在第 386 页描述这些内容）。
 
-现在，让我们从 Ruby 的角度来看同一个例子。定义了 `CreateProducts`，它继承自 `ActiveRecord` 记录的 `Migration` 类定义了两个类方法，一个命名为 `up`，另一个命名为 `down`。它们都调用一个类方法（定义在 `ActiveRecord:Migration` 中），以符号的形式传递表名。
+现在，让我们从 Ruby 的角度来看同一个例子。定义了 `CreateProducts`，它继承自 `ActiveRecord` 记录的 `Migration` 类，定义了两个类方法，一个命名为 `up`，另一个命名为 `down`。它们都调用一个类方法（定义在 `ActiveRecord::Migration` 中），以符号的形式传递表名。
 
 `up` 的调用还传递了一个块，该块在表创建之前会被评估。当此块被调用时，会传递一个对象 `t`，用于累积字段列表。Rails 在此对象上定义了许多方法，这些方法的名称与常见的数据类型相同。方法被调用时，只需将字段定义添加到不断累积的名称集合中。
 
@@ -1354,16 +1282,17 @@ development:
 我们在书中使用了这些常用的 Ruby 惯用法：
 
 - 诸如 `!` 和 `?` 等方法
-- Ruby 方法名可以感叹号结尾（感叹方法）或问号结尾（谓词方法）。感叹方法通常会对接收者执行破坏性操作。谓词方法根据某些条件返回 `true` 或 `false`。
+
+Ruby 方法名可以感叹号结尾（感叹方法）或问号结尾（谓词方法）。感叹方法通常会对接收者执行破坏性操作。谓词方法根据某些条件返回 `true` 或 `false`。
 
 表达式 `a || b` 结果为 `a`。如果它不是 `false` 或 `nil`，则求值停止，表达式返回 `a`。否则，语句返回 `b`。这是在第一个值未设置时返回默认值的常用方法。
 
 `||=` 赋值语句支持一组快捷方式：`a op= b` 等同于 `a = op b`。这适用于大多数操作符。
 
-```
-count += 1      # 等同于 count = count + 1
-price *= discount  # price = price * discount
-count ||= 0      # count = count || 0
+```ruby
+count += 1         # 等同于 count = count + 1
+price *= discount   # price = price * discount
+count ||= 0        # count = count || 0
 ```
 
 所以，如果 `count` 已经有值，`count ||= 0` 将给出值 0。
@@ -1398,33 +1327,31 @@ Ruby 的 `require` 方法将外部源文件加载到我们的应用程序中。�
 
 有时我们需要指定要包含哪个文件。我们可以通过给 `require` 一个完整的文件系统路径来实现。问题是，我们不知道路径会是什么——我们的用户可以将代码安装在任何地方。
 
-无论我们的应用程序安装在何处，执行 require 的文件与目标文件之间的相对路径都是相同的。知道这一点，我们可以通过获取执行该文件的绝对路径（通过特殊变量 `__FILE__` 可），剥离除目录名以外的所有内容，然后附加目标文件的相对路径，从而构建目标的绝对路径。
+无论我们的应用程序安装在何处，执行 `require` 的文件与目标文件之间的相对路径都是相同的。知道这一点，我们可以通过获取执行该文件的绝对路径（通过特殊变量 `__FILE__` 可），剥离除目录名以外的所有内容，然后附加目标文件的相对路径，从而构建目标的绝对路径。
 
 此外，网络上有很多优秀的资源展示 Ruby 惯用法和 Ruby 陷阱（gotchas）。这里只是其中几个：
 
-- http://www.ruby-lang.org/en/documentation/ruby-from-other-languages
-- http://en.wikipedia.org/wiki/Ruby_programming_language
-- http://www.zensponder.com/languages/Ruby/QuickRef.html
+- <http://www.ruby-lang.org/en/documentation/ruby-from-other-languages>
+- <http://en.wikipedia.org/wiki/Ruby_programming_language>
+- <http://www.zensponder.com/languages/Ruby/QuickRef.html>
 
 到目前，我们已经有了一个坚实的基础供我们构建：我们安装了 Rails，通过简单的应用程序验证了运行正常，涵盖了对 Rails 是什么的简要描述，并回顾（或对于你们某些人来说是第一次学习）了 Ruby 语言的基础知识。现在是时候应用这些知识来构建一个更大的应用程序了。
 
-# 第二部分
+# 第二部分：构建应用程序
 
-# 构建应用程序
+在本章中，我们将看到：
 
-在本章中，我们将看到
-
-- 增量式开发，
-- 用例、页面流、数据以及
+- 增量式开发；
+- 用例、页面流、数据以及；
 - 优先级。
 
-# 第 5 章
+# 第 5 章：Depot 应用程序
 
-## Depot 应用程序
-
-我们可以胡乱乱地拼凑一些简单的测试应用程序，但那对我们付账单没有帮助。所以，让我们挑战一些更有内容的东西。让我们创建一个基于 Web 的购物车。世界还需要另一个购物车吗？不需要，但它将说明 Rails 的许多特性。在接下来的章节中，我们还将触及单元测试、会和布局。
+我们可以胡乱拼凑一些简单的测试应用程序，但那对我们付账单没有帮助。所以，让我们挑战一些更有内容的东西。让我们创建一个基于 Web 的购物车。世界还需要另一个购物车吗？不需要，但它将说明 Rails 的许多特性。在接下来的章节中，我们还将触及单元测试、会话和布局。
 
 ## 5.1 增量式开发
+
+
 
 我们将增量地开发这个应用程序。我们不会尝试在开始之前指定一切。相反，我们将制定出足够让我们开始的工作。这种编码风格需要与客户紧密合作。因为如此，我们需要一个不会因为更改而惩罚我们的工具。如果我们决定需要向数据库表添加新列或更改页面之间的导航，我们能够在没有大量编码或配置困扰的情况下完成它。正如你所看到的，Ruby on Rails 在处理变化方面表现出色。在此过程中，我们将构建并维护一个测试集，正如你所看到的，Ruby on Rails 在处理变化方面表现出色。Rails 不仅允许创建此类测试，而且在每次你定义新控制器时，实际上都会为你提供一组初始测试。
 
@@ -1444,10 +1371,7 @@ Depot 的用例非常简单（有些人会说是悲剧性的简单）。我们�
 
 到目前为止，这就是我们需要的全部细节。我们可以挖掘关于“维护产品”意味着什么以及什么构成“待发货订单”的细节，但何必此呢？如果有显而易见的细节，在我们向客户展示工作的后续迭代时，很快就会发现它们。
 
-
-
-
-## 页面流程
+### 页面流程
 
 我们都喜欢对应用程序中的主要页面有一个大致的了解，并理解用户如何在这些页面之间进行导航。在开发早期，这些页面流程可能是不完整的，但它们仍然能帮助我们关注需要完成的工作，并了解操作是如何排序顺序的。
 
@@ -1465,27 +1389,26 @@ Depot 的用例非常简单（有些人会说是悲剧性的简单）。我们�
 
 图 5.2：卖家页面的流程
 
-## 产品：
+### 产品：
 
 - 名称
 - 描述
 - 图片
 - 价格
 
-## 购物车：
+### 购物车：
 
 - 订单：
-- 买家详情
-- 支付详情
-- 物流状态
-- ?
-
+  - 买家详情
+  - 支付详情
+  - 物流状态
+  - ?
 - 行项目：
-- 产品
-- 数量
-- 价格
+  - 产品
+  - 数量
+  - 价格
 
-## 卖家详情：
+### 卖家详情：
 
 - 登录名
 - 密码
@@ -1496,7 +1419,7 @@ Depot 的用例非常简单（有些人会说是悲剧性的简单）。我们�
 
 发货功能显然无法在现实世界中生存，但发货也是现实情况比你想象的更奇怪的领域之一。在开始时进行过度规格，我们很可能会做对。现在让它保持原样，坚信随着用户使用我们应用程序的经验增加，我们可以更改它。
 
-## 数据
+### 数据
 
 最后，我们需要考虑要处理的数据。
 
@@ -1512,7 +1435,7 @@ Depot 的用例非常简单（有些人会说是悲剧性的简单）。我们�
 
 再次，在这一点上，我们将与客户核实我们仍然处于正确的轨道上。（在我们画出这三张图时，客户很可能就坐在我们房间里。）
 
-## 通用恢复建议
+### 通用恢复建议
 
 书中的所有内容都经过了测试。如果你严格按照此场景操作，在 Linux、Mac OS X 或 Windows 上使用推荐版本的 Rails 和 SQLite3，一切都应该如描述的那样运行。然而，可能会出现偏离此路径的情况。尽我们所能，会有拼写错误，而且侧面探索不仅可能的，而且是积极鼓励的。请注意，这可能会带你进入奇怪的地方。不要害怕；常见问题的特定恢复操作出现在问题经常发生的特定章节中。这里还包含了一些额外的通用建议。
 
@@ -1541,7 +1464,7 @@ Depot 的用例非常简单（有些人会说是悲剧性的简单）。我们�
 
 ## 任务 A：创建应用程序
 
-我们的第一个开发任务是创建一个维护产品信息的 界面——创建新产品、编辑现有产品、删除不需要的等。我们将以小迭代的方式开发此应用程序，其中*小*意味着“以分钟计算”。让我们开始吧。
+我们的第一个开发任务是创建一个维护产品信息的界面——创建新产品、编辑现有产品、删除不需要的等。我们将以小迭代的方式开发此应用程序，其中*小*意味着“以分钟计算”。让我们开始吧。
 
 通常，我们的迭代将涉及多个步骤，例如迭代 C 将包含 C1、C2、C3 等。这次迭代将有两个步骤。
 
@@ -1565,11 +1488,7 @@ app/ config.ru doc/ lib/ public/ README test/ vendor/
 config/ db/ Gemfile Rakefile script/ tmp/
 ```
 
-
-
-
-
-## 创建数据库
+### 创建数据库
 
 对于此应用程序，我们将使用开源 SQLite 数据库（如果你在跟随代码操作，也需要它）。我们在这里使用的是 SQLite 3 版本。
 
@@ -1577,11 +1496,11 @@ SQLite 3 是 Rails 开发的默认数据库，并在第 27 页的第一个章节
 
 但是，如果必须使用 SQLite 3 以外的数据库服务器，那么创建数据库和授予权限所需的命令将会有不同。你可以在 [Rails 入门指南](https://guides.rubyanrails.org/getting_started.html)¹ 中找到一些提示。
 
-## 生成脚手架（Scaffold）
+### 生成脚手架（Scaffold）
 
 回到第 78 页的图 5.3，我们勾勒了 products 表的基本内容。现在让我们将其变为现实。我们需要创建一个数据库表和一个允许应用程序使用该表的 Rails 模型、若干组成用户界面的视图，以及一个编排应用程序的控制器。
 
-所以，让我们为 products 表创建模型、视图、控制器和迁移。在 Rails 中，你可以通过一个命令让 Rails 生成针对特定模型的脚手架（scaffold）来完成所有工作。注意接下来的命令行² 我们使用了单数形式 Product。在 Rails 中，模型会自动映射到数据库表，该表名是模型类名的复数形式。在我们的情况下，我们请求了一个名为 Product 的模型，因此 Rails 将其与 products 表关联起来（它是如何找到它的呢？config/database.yml 中的开发条目会告诉 Rails 去哪里查找）。对于 SQLite 3 用户来说，这将目录中的一个文件。
+所以，让我们为 products 表创建模型、视图、控制器和迁移。在 Rails 中，你可以通过一个命令让 Rails 生成针对特定模型的脚手架（scaffold）来完成所有工作。注意接下来的命令行² 我们使用了单数形式 Product。在 Rails 中，模型会自动映射到数据库表，该表名是模型类名的复数形式。在我们的情况下，我们请求了一个名为 Product 的模型，因此 Rails 将其与 products 表关联起来（它是如何找到它的呢？`config/database.yml` 中的开发条目会告诉 Rails 去哪里查找）。对于 SQLite 3 用户来说，这将目录中的一个文件。
 
 ```bash
 dep rails generate scaffold products \
@@ -1620,15 +1539,15 @@ inv stylesheets
 create public/stylesheets/scaffold.css
 ```
 
-生成器创建了一系列文件。我们感兴趣的是首先迁移文件，命名为 20110211000001_create_products.rb。
+生成器创建了一系列文件。我们感兴趣的是首先迁移文件，命名为 `20110211000001_create_products.rb`。
 
-迁移代表了我们想要对数据进行的更改，以独立于数据库的术表示在源文件中。这些更改可以同时更新数据库架构和数据库表中的数据。我们应用迁移来更新数据库，也可以撤销迁移来回滚数据库。我们从 386 页开始有一个关于迁移的完整章节。目前，我们只需使用它们，不再深究。
+迁移代表了我们想要对数据进行的更改，以独立于数据库的术语表示在源文件中。这些更改可以同时更新数据库架构和数据库表中的数据。我们应用迁移来更新数据库，也可以撤销迁移来回滚数据库。我们从 386 页开始有一个关于迁移的完整章节。目前，我们只需使用它们，不再深究。
 
-迁移具有基于 UTC 的时间戳前缀 (20110211000001, name (create_products)) 以及文件扩展名 (.rb，因为它是一个 Ruby 程序)。
+迁移具有基于 UTC 的时间戳前缀 (`20110211000001`，名称 (`create_products`)) 以及文件扩展名 (`.rb`，因为它是一个 Ruby 程序)。
 
 你看到的时间戳前缀会有所不同。事实上，书中使用的时间戳显然是虚构的。通常，时间戳不是连续的，而是反映创建迁移的时间。
 
-## 应用迁移
+### 应用迁移
 
 虽然我们已经告诉了 Rails 每个属性的基本类型，但让我们继续完善属性的定义，使其具有 8 位有效数字以及小数点后的两位数字。
 
@@ -1667,29 +1586,29 @@ rake db:migrate
 
 虽然我们已经告诉了 Rails 每个属性的基本类型，但让我们继续完善属性的定义，使其具有 8 位有效数字以及小数点后的两位数字。
 
+### 新产品
 
+### 标题
 
-
-
-## 新产品
-
-## 标题
 面向开发者的 Web 设计
 
-## 描述
+### 描述
+
 <p><em>面向开发者的 Web 设计（Web Design for Developers）</em>将向你展示如何让你的基于 Web 的应用程序看起来经过专业设计。我们将帮助你学习如何选择合适的颜色和字体，避免昂贵的界面和无障碍错误——你的应用程序将真正活跃起来。</p>
 
-## 图像 url
-/images/wd4d.jpg
+### 图像 url
 
-## 价格
+`/images/wd4d.jpg`
+
+### 价格
+
 42.95
 
 点击“创建”（Create）按钮，你应该能看到新产品已成功创建。如果你现在点击*返回*（Back）链接，你应该应该在列表中看到这个新产品：
 
 | 标题 | 描述 | 图像 url | 价格 | 操作 |
 | --- | --- | --- | --- | --- |
-| 面向开发者的 Web 设计 | <p><em>面向开发者的 Web 设计（Web-Design for Developers）</em>将向你展示如何 to make your web-based application professionally designed（经过专业设计）. We'll help you learn how to pick the right colors and fonts, avoid interface and accessibility mistakes—your application will really come alive. We'll also walk you through some Photoshop and CSS techniques and work through a web site redesign, taking a new design from concept all the way to implementation.</p> | /images/wd4d.jpg | 42.95 | 显示 编辑 销 |
+| 面向开发者的 Web 设计 | <p><em>面向开发者的 Web 设计（Web-Design for Developers）</em>将向你展示如何 to make your web-based application professionally designed（经过专业设计）. We'll help you learn how to pick the right colors and fonts, avoid interface and accessibility mistakes—your application will really come alive. We'll also walk you through some Photoshop and CSS techniques and work through a web site redesign, taking a new design from concept all the way to implementation.</p> | `/images/wd4d.jpg` | 42.95 | 显示 编辑 销 |
 
 新产品
 
@@ -1701,9 +1620,11 @@ rake db:migrate
 rake test
 ```
 
-输出中应该包含两行，每行都显示 0 failures, 0 errors。这是 Rails 通过脚手架（scaffolding）生成的单元测试、功能测试和集成测试。目前这些是极简的，但只要知道它们存在并且通过了，就应该带给你信心。当你继续阅读第二部分的这些章节时，鼓励你频繁运行此命令，因为它将帮助你发现并跟踪错误。我们将在第 100 页的第 7.2 节“迭代 B2：模型的单元测试”中详细介绍。
+输出中应该包含两行，每行都显示 `0 failures, 0 errors`。这是 Rails 通过脚手架（scaffolding）生成的单元测试、功能测试和集成测试。目前这些是极简的，但只要知道它们存在并且通过了，就应该带给你信心。当你继续阅读第二部分的这些章节时，鼓励你频繁运行此命令，因为它将帮助你发现并跟踪错误。我们将在第 100 页的第 7.2 节“迭代 B2：模型的单元测试”中详细介绍。
 
 注意：如果你使用了 SQLite3 以外的数据库，此步骤可能会失败。请检查你的 `database.yml` 文件并查看注释 404。
+
+
 
 ## 6.2 迭代 A2：制作更精美的列表
 
@@ -1717,11 +1638,11 @@ rake test
 
 然后我们添加用于生成产品表的代码。这使用了 `Product` 模型的 `create` 方法。以下是该代码的提取。与其手动输入文件，你可能想从在线提供的示例代码下载文件。
 
-- 1. http://media.practicalprog.com/tfiles/rails4/code/depot_b/db/seeds.rb
+1. `http://media.practicalprog.com/tfiles/rails4/code/depot_b/db/seeds.rb`
 
 # 迭代 A2：制作更精美的列表
 
-在此操作时，将 `images4` 和 `depot.css5` 拷贝到相应的位置（应用程序中的 `public/images` 和 `public/stylesheets`）。注意：`seeds.rb` 脚本在加载新数据之前会从 products 表删除现有数据。如果你刚刚花了几个小时在应用程序中输入了自己的数据，你可能可能不想运行它！
+在此操作时，将 `images4` 和 `depot.css5` 拷贝到相应的位置（应用程序中的 `public/images` 和 `public/stylesheets`）。注意：`seeds.rb` 脚本在加载新数据之前会从 `products` 表删除现有数据。如果你刚刚花了几个小时在应用程序中输入了自己的数据，你可能可能不想运行它！
 
 ```ruby
 Download depot_b/db/seeds.rb
@@ -1736,7 +1657,8 @@ Product.create(:title => 'Programming Ruby 1.9',
 #
 ```
 
-要要向你的 products 表填充测试数据，只需运行以下命令：
+要要向你的 `products` 表填充测试数据，只需运行以下命令：
+
 ```bash
 dep> rake db:seed
 ```
@@ -1745,11 +1667,11 @@ dep> rake db:seed
 
 我们需要一个放置 CSS 样式定义的地方。所有脚手架生成的应用程序都使用 `public/stylesheets` 目录下的样式表。与其修改该文件，我们创建了一个新的应用程序 `depot.css` 并将其放在其中。最后，我们需要将这些样式表链接到我们的 HTML 页面。如果你查看目前创建的 `.html.erb`，你会发现没有 `<head>` 部分，那里是通常引用的地方。相反，Rails 有一个名为 `application.html.erb` 的文件，用于布局：
 
-- 4. http://media.practicalprog.com/tfiles/rails4/code/depot_b/db/seeds.rb
-- 5. http://media.practicalprog.com/tfiles/rails4/code/depot_b/public/images/
-- 6. http://media.practicalprog.com/tfiles/rails4/code/depot_b/public/stylesheets/depot.css
+1. `http://media.practicalprog.com/tfiles/rails4/code/depot_b/db/seeds.rb`
+2. `http://media.practicalprog.com/tfiles/rails4/code/depot_b/public/images/`
+3. `http://media.practicalprog.com/tfiles/rails4/code/depot_b/public/stylesheets/depot.css`
 
-迭代 A2：制作更精美的列表
+### 迭代 A2：制作更精美的列表
 
 ```html
 <!-- Download depot_b/app/layouts/application.erb -->
@@ -1793,18 +1715,15 @@ dep> rake db:seed
 <%= link_to 'New product', new_product_path %>
 ```
 
-## 为什么需要 :method => :delete？
+## 为什么需要 `:method => :delete`？
 
-你已经注意到脚手架生成的 Destroy 链接包含了 `:method =>delete` 参数。这决定了在 `ProductsController` 中调用的方法并影响了使用的 HTTP 方法。
+你已经注意到脚手架生成的 Destroy 链接包含了 `:method => delete` 参数。这决定了在 `ProductsController` 中调用的方法并影响了使用的 HTTP 方法。
 
 浏览器使用 HTTP 与服务器通信。HTTP 定义了一组浏览器可以使用的动词，并定义了每个动词何时何时使用。例如，普通的超链接使用 GET 请求。GET 请求被 HTTP 定义为用于检索数据；它不应该产生任何副作用。这个参数以这种方式指示该超链接应使用 DELETE 方法。Rails 使用此信息来确定将其路由到控制器中的哪个操作。
 
 注意：在浏览器内部，Rails 会用 POST HTTP 方法替换 PUT 和 DELETE 方法，并在过程中附加一个额外参数，以便路由器确定原始意图。无论如何，该请求都不会被缓存或被网络爬虫触发。
 
-
-
-
-我们在数据库中加载了一些测试数据，编写写了显示产品列表的 `index.html` 文件，添加了 `depot.css` 样式表，并且该样式表通过布局文件 `application.html` 加载到我们的页面。现在，让我们跳转到 http://localhost:3000/products，生成的产品列表可能如下所示：
+我们在数据库中加载了一些测试数据，编写写了显示产品列表的 `index.html` 文件，添加了 `depot.css` 样式表，并且该样式表通过布局文件 `application.html` 加载到我们的页面。现在，让我们跳转到 `http://localhost:3000/products`，生成的产品列表可能如下所示：
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_91_0.png)
 
@@ -1829,15 +1748,15 @@ dep> rake db:seed
 
 - 如果你觉得兴致勃勃，可以尝试回滚迁移。只需输入以下命令：
 
-```
+```bash
 depot> rake db:rollback
 ```
 
 你的模式将回到过去，`products` 表将不再存在。再次调用 `rake db:migrate` 将重新创建它。你可能还想要重新加载种子数据（seed data）。更多信息可以参阅第 23 节“迁移”，第 386 页。
 
-- 我们在第 1.5 节*版本控制*（第 33 页）中提到版本控制，这是一个保存工作的绝佳时机。如果你恰好选择了 git（顺便说，强烈推荐），你需要先进行少量的配置——基本上你需要做的就是提供你的姓名和电子邮件地址。这通常会进入你的主目录，生成名为 `.gitconfig` 的文件。我的看起来像这样：
+- 我们在第 1.5 节版本控制（第 33 页）中提到版本控制，这是一个保存工作的绝佳时机。如果你恰好选择了 git（顺便说，强烈推荐），你需要先进行少量的配置——基本上你需要做的就是提供你的姓名和电子邮件地址。这通常会进入你的主目录，生成名为 `.gitconfig` 的文件。我的看起来像这样：
 
-```
+```ini
 [user]
 name = Sam Ruby
 email = rubys@intertwining.ly
@@ -1845,13 +1764,13 @@ email = rubys@intertwining.ly
 
 你可以通过以下命令验证配置：
 
-```
+```bash
 depot> git repo-config --get-regexp user.
 ```
 
 Rails 还提供了一个名为 `.gitignore` 的文件，它告诉 Git 哪些文件不需要进行版本控制：
 
-```
+```text
 Download depot_b/.gitignore
 .bundle
 db/*.sqlite3
@@ -1861,7 +1780,7 @@ tmp/*/*
 
 注意，该文件名以点开头。基于 Unix 的操作系统默认不会在目录列表中显示它。使用 `ls -a` 来查看它。到此为止，你已经完成了所有配置。剩余的任务是初始化数据库、添加所有文件并带上消息提交它们：
 
-```
+```bash
 depot> git init
 depot> git add .
 depot> git commit -m "Depot Scaffold"
@@ -1869,7 +1788,7 @@ depot> git commit -m "Depot Scaffold"
 
 这在此时看起来可能并不普通，但它意味着你可以自由进行实验。如果你无意中覆盖或删除了某个文件，可以通过执行单个命令恢复它：
 
-```
+```bash
 depot> git checkout .
 ```
 
@@ -1924,9 +1843,6 @@ validates :image_url, :format => {
 }
 ```
 
-
-
-
 ## 新产品
 
 有一个错误阻止了此产品的保存：
@@ -1934,19 +1850,27 @@ validates :image_url, :format => {
 - 价格不是数字
 
 | 标题 |
-|---|---|
+|---|
 | Rails 测试处方 |
+
 | 描述 |
+|---|
 | *测试处方*是一份关于测试 Rails 应用的指南，涵盖了从理论角度（为什么要测试）和实践角度（如何有效地测试）的测试驱动开发。它涵盖了核心的 Rails 测试工具和流程 |
+
 | 图像 url |
-| /images/rtp.jpg |
+|---|
+| `/images/rtp.jpg` |
+
 | 摇晃 |
+|---|
 | 创建产品 |
+
 | 返回 |
+|---|
 
 图 7.2：价格验证。
 
-下载 depot_b/app/models/product.rb 
+`depot_b/app/models/product.rb`
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -1970,8 +1894,9 @@ end
 
 解决方案是在 `test/functional/products_controller_test.rb` 中提供有效的测试：
 
+`depot_c/test/functional/products_controller_test.rb`
+
 ```ruby
-### Download depot_c/test/functional/products_controller_test.rb
 require 'test_helper'
 ```
 
@@ -2017,12 +1942,15 @@ end
 
 进行此更改后，我们重新运行了测试，它们报告说是通过的。但这仅仅意味着我们没有破坏任何东西。我们需要做的不止于此。我们需要确保刚刚添加的验证代码不仅现在有效，而且在我们进行进一步更改时也能继续有效。
 
-报告错误
+### 报告错误
+
 此版本为（B11.0 打印，2010年11月24日）。
 
 ## 7.2 迭代 B2：模型的单元测试
 
 Rails 框架真正的乐趣之一在于，它从每个项目开始就内置了测试支持。正如我们看到的，当你使用 `rails` 命令创建一个新应用程序时，Rails 就会开始为你生成测试基础设施。
+
+
 
 让我们查看一下 `unit` 子目录，看看里面已经有什么：
 
@@ -2048,7 +1976,7 @@ end
 
 生成的 `ProductTest` 是 `ActiveSupport::TestCase` 的子类。`ActiveSupport::TestCase` 是 `Test::Unit::TestCase` 类子类的这一事实告诉我们，Rails 是基于 Ruby 预编译的 `Test::Unit` 框架生成测试的。这是一个好消息，因为如果我们已经用 `Test::Unit` 测试过我们的 Ruby 项目（我们难道不会这样做吗？），那么我们就可以在此基础上构建。
 
-将在 116 页的 8.4 节迭代 C4：控制器的功能测试中将详细介绍功能任务。现在，是我们时候写一些单元测试了。
+将在 116 页的 8.4 节“迭代 C4：控制器的功能测试”中将详细介绍功能任务。现在，是我们时候写一些单元测试了。
 
 ## 迭代 B2：模型的单元测试
 
@@ -2082,11 +2010,12 @@ end
 
 生成的 `ProductTest` 是 `ActiveSupport::TestCase` 的子类。`ActiveSupport::TestCase` 是 `Test::Unit::TestCase` 类子类的这一事实告诉我们，Rails 是基于 Ruby 预编译的 `Test::Unit` 框架生成测试的。这是一个好消息，因为如果我们已经用 `Test::Unit` 测试过我们的 Ruby 项目（我们难道不会这样做吗？），那么我们就可以在此基础上构建。
 
-```
+```bash
 depot> rake test:units
 Loaded suite rake_test
 Finished in 0.09214 seconds.
 1 tests, 5 assertions, 0 errors
+```
 
 不出意外，验证生效了，所有的断言都通过了。
 
@@ -2144,7 +2073,6 @@ end
 
 实际上，提供的 OCR 文本有些破碎。我将根据文档流程提供干净的版本。
 
-[content]
 ## 新产品
 
 有一个错误阻止了此产品的保存：
@@ -2152,19 +2080,19 @@ end
 - 价格不是数字
 
 | 标题 |
-|---|---|
+|---|
 | Rails 测试处方 |
 | 描述 |
 | *测试处方*是一份关于测试 Rails 应用的指南，涵盖了从理论角度（为什么要测试）和实践角度（如何有效地测试）的测试驱动开发。它涵盖了核心的 Rails 测试工具和流程 |
 | 图像 url |
-| /images/rtp.jpg |
+| `/images/rtp.jpg` |
 | 摇晃 |
 | 创建产品 |
 | 返回 |
 
 图 7.2：价格验证。
 
-下载 depot_b/app/models/product.rb 
+下载 `depot_b/app/models/product.rb`
 
 ```ruby
 class Product < ActiveRecord::Base
@@ -2224,6 +2152,7 @@ class ProductsController < ActionController::TestCase
   end
 
   # ...
+
   test "should update product", :id => @product.to_param do
     put :update, :product => @update
     assert_redirected_to product_path(assigns(:product))
@@ -2236,6 +2165,7 @@ end
 进行此更改后，我们重新运行了测试，它们报告说是通过的。但这仅仅意味着我们没有破坏任何东西。我们需要做的不止于此。我们需要确保刚刚添加的验证代码不仅现在有效，而且在我们进行进一步更改时也能继续有效。
 
 报告错误
+
 此版本为（B11.0 打印，2010年11月24日）。
 
 ## 7.2 迭代 B2：模型的单元测试
@@ -2256,6 +2186,7 @@ helpers product_test.rb
 ```ruby
 ### Download depot_b/test/unit/product_test.rb
 require 'test_helper'
+
 class ProductTest < ActiveRecord::TestCase
   # 用你真实的测试替换这里。
   test "the truth" do
@@ -2265,10 +2196,6 @@ end
 ```
 
 生成的 `ProductTest` 是 `ActiveSupport::TestCase` 的子类。`ActiveSupport::TestCase` 是 `Test::Unit::TestCase` 类子类的这一事实告诉我们，Rails 是基于 Ruby 预编译的 `Test::Unit` 框架生成测试的。这是一个好消息，因为如果我们已经用 `Test::Unit` 测试过我们的 Ruby 项目（我们难道不会这样做吗？），那么我们就可以在此基础上构建。
-
-
-
-
 
 ```ruby
 bad.each do |name|
@@ -2282,169 +2209,169 @@ end
 
 最后，我们的模型包含一个验证，用于检查数据库中所有产品标题都是唯一的。为了测试这一点，我们将在数据库中存储产品数据。
 
-实现此点的方法一种是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails Fi件（fixtures）。
+实现此点的方法一种是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails 固件（fixtures）。
 
-## 测试固件 (Test Fixtures)
+## 测试固件（Test Fixtures）
 
 在测试世界中，固件（fixture）是你运行测试的环境。例如，如果你正在测试一个电路板，你可能会将其安装在一个测试固件中，为它提供驱动待测功能所需的电源和输入。
 
 在 Rails 世界中，测试固件（test fixture）仅仅是被测试模型（或多个模型）初始内容的规范。如果我们想确保产品在每个单元测试开始时都从已知数据开始，我们就在固件中指定这些内容，Rails 会处理其余工作。
 
-你可以在 `test/fixtures` 目录下的文件中指定固件数据。这些文件包含逗号分隔值 (CSV) 或 YAML 格式的测试数据。对于我们的测试，我们使用 YAML，这是首选格式。每个固件包含单个模型的数据。固件文件名必须与数据库表名匹配。因为我们需要 `Product` 模型的一些的数据（存储在 `products` 表中），我们将将其添加到 `products.yml` 文件。在我们第一次创建模型时，Rails 已经创建了这个固件：
+你可以在 `test/fixtures` 目录下的文件中指定固件数据。这些文件包含逗号分隔值（CSV）或 YAML 格式的测试数据。对于我们的测试，我们使用 YAML，这是首选格式。每个固件包含单个模型的数据。固件文件名必须与数据库表名匹配。因为我们需要 `Product` 模型的一些数据（存储在 `products` 表中），我们将其添加到 `products.yml` 文件。在我们第一次创建模型时，Rails 已经创建了这个固件：
 
-```
+```yaml
 Download depot_b/test/fixtures/products.yml
+
 ## Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 ```
 
+```yaml
 one:
-title: MyString
-description: MyText
-image_url: MyString
-price: 9.99
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
 
 two:
-title: MyString
-description: MyText
-image_url: MyString
-price: 9.99
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
+```
 
-固件文件包含我们想要插入数据库的每行的条目。每行都被赋予了一个名称。在 Rails 生成的固件中，这些行被命名为 `one` 和 *two*。对于数据库来说，这个名称没有意义——它不会被插入到行数据中。相反，正如我们很快看到的，这个名称为我们从测试代码中引用测试数据提供了一种方便的方法。这些也是在生成的集成测试中使用的名称，所以目前我们先不管它们了。
+固件文件包含我们想要插入数据库的每行的条目。每行都被赋予了一个名称。在 Rails 生成的固件中，这些行被命名为 `one` 和 `two`。对于数据库来说，这个名称没有意义——它不会被插入到行数据中。相反，正如我们很快看到的，这个名称为我们从测试代码中引用测试数据提供了一种方便的方法。这些也是在生成的集成测试中使用的名称，所以目前我们先不管它们了。
 
 让我们向固件文件中添加更多数据，以便我们测试我们的产品模型。（注意，你不需要在测试固件中包含 `id` 列。）
 
-```
+```yaml
 Download depot_c/test/fixtures/products.yml
-```
 
 ruby:
-title: Programming Ruby 1.9
-description: Ruby 是目前世界上增长最快、最令人兴奋的动态语言。如果你需要快速交付运行的程序，你应该将 Ruby 添加到你的工具箱中。
-price: 49.50
-image_url: ruby.png
+  title: Programming Ruby 1.9
+  description: Ruby 是目前世界上增长最快、最令人兴奋的动态语言。如果你需要快速交付运行的程序，你应该将 Ruby 添加到你的工具箱中。
+  price: 49.50
+  image_url: ruby.png
+```
 
 现在我们有了固件文件，我们希望在运行单元测试时让 Rails 将测试数据加载到 `products` 表中。事实上，Rails 已经在这样做（约定优于配置的胜利！），但你可以通过在 `test/unit/product_test.rb` 中指定以下行来控制加载哪些固件：
 
+
+
 ```ruby
 class ProductTest < ActiveSupport::TestCase
+
   fixtures :products
+
   #...
 ```
 
-## 大卫说...
+## 大卫说……
 
 ## 选择良好的固件名称
 
-就像普通的变量名一样，你希望固件的名称尽可能地自明易懂。当你断言 `product:valid_order_for_fred` 确实是 Fred 的订单或使用 `fred` 时，这会增加测试的可读性。它让你极更容易地记住你应该针对哪个固件进行测试，而不需要去查找 `pl1` 或 `order4`。固件越多，选择良好的固件名称就越重要。所以，尽早开始会让你以后过得愉快。
+就像普通的变量名一样，你希望固件的名称尽可能地自明易懂。当你断言`product:valid_order_for_fred`确实是 Fred 的订单或使用`fred`时，这会增加测试的可读性。它让你更容易地记住你应该针对哪个固件进行测试，而不需要去查找`pl1`或`order4`。固件越多，选择良好的固件名称就越重要。所以，尽早开始会让你以后过得愉快。
 
-但对于那些无法轻松获得像 `valid_order_for_fred` 那样自明易懂名称的固件，我们该怎么办？选择更容易联系到角色的自然名称。例如，不要使用 `order1`，而是使用 `christmas_order`。不要使用 `customer1`，一旦你习惯了自然名称，你就会编织出一个漂亮的小故事，讲述 fred 如何先用无效的 `invalid_credit_card` 为他的 `christmas_order` 支付，然后用有效的 `valid_credit_card` 支付，最后选择全部发给 `aunt_mary`。
+但对于那些无法轻松获得像`valid_order_for_fred`那样自明易懂名称的固件，我们该怎么办？选择更容易联系到角色的自然名称。例如，不要使用`order1`，而是使用`christmas_order`。不要使用`customer1`，一旦你习惯了自然名称，你就会编织出一个漂亮的小故事，讲述 fred 如何先用无效的`invalid_credit_card`为他的`christmas_order`支付，然后用有效的`valid_credit_card`支付，最后选择全部发给`aunt_mary`。
 
 基于关联的故事是轻松记住庞大固件世界的关键。
 
-`fixtures` 指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用 `:products` 将导致使用 `products.yml` 固件文件。
+`fixtures`指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用`:products`将导致使用`products.yml`固件文件。
 
-换句话说法。在 `Productfirst` 类的情况下，添加 `fixtures` 指令意味着将使用 `products.yml` 固件文件。固件文件名决定了加载的表，所以使用 `:products` 将导致使用。
-
-最后，我们的模型包含一个验证，用于检查数据库中所有产品标题都是唯一的。为了测试这一点，我们将在数据库中存储产品数据。
-
-实现此点的方法一种是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails Fi件。
-
-`fixtures` 指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用 `:products` 将导致使用。
-
-换句话说法。在 `Productfirst` 类的情况下，添加 `fixtures` 指令意味着将使用 `products.yml` 固件文件。固件文件名决定了加载的表，所以使用 `:products` 将导致。
+换句话说，在`Productfirst`类的情况下，添加`fixtures`指令意味着将使用`products.yml`固件文件。固件文件名决定了加载的表，所以使用`:products`将导致使用。
 
 最后，我们的模型包含一个验证，用于检查数据库中所有产品标题都是唯一的。为了测试这一点，我们将在数据库中存储产品数据。
 
-实现此点的方法一种是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails Fi件。
+实现此点的一种方法是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails 固件。
 
-`fixtures` 指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用 `:products` 将导致使用。
+`fixtures`指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用`:products`将导致使用。
 
-换句话说法。在 `Productfirst` 类的情况下，添加 `fixtures` 指令意味着将使用 `products.yml` 固件文件。固件文件名决定了加载的表，所以使用 `:products` 将导致。
+换句话说，在`Productfirst`类的情况下，添加`fixtures`指令意味着将使用`products.yml`固件文件。固件文件名决定了加载的表，所以使用`:products`将导致。
 
 最后，我们的模型包含一个验证，用于检查数据库中所有产品标题都是唯一的。为了测试这一点，我们将在数据库中存储产品数据。
 
-实现此点的方法一种是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails Fi件。
+实现此点的一种方法是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails 固件。
 
-`fixtures` 指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用 `:products` 将导致使用。
+`fixtures`指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用`:products`将导致使用。
 
-换句话说法。在 `Productfirst` 类的情况下，添加 `fixtures` 指令意味着将使用。
+换句话说，在`Productfirst`类的情况下，添加`fixtures`指令意味着将使用`products.yml`固件文件。固件文件名决定了加载的表，所以使用`:products`将导致。
 
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
+最后，我们的模型包含一个验证，用于检查数据库中所有产品标题都是唯一的。为了测试这一点，我们将在数据库中存储产品数据。
 
-Let's add some more data to the fixture file with which we can use to test our product model. (Note that you do not have to include the id column in test fixtures.)
+实现此点的一种方法是创建一个产品并保存它，再创建一个同名的产品，然后尝试查看它。这显然是行得通的。但有一种简单的方法——我们可以使用 Rails 固件。
 
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
+`fixtures`指令会在测试用例中的每个测试方法运行之前，将与给定模型名称对应的固件数据加载到相应的数据库表中。固件文件名决定了加载的表，因此使用`:products`将导致使用。
 
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
+换句话说，在`Productfirst`类的情况下，添加`fixtures`指令意味着将使用。
 
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
+This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.
 
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
-
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
-
-*This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.*
+Let's add some more data to the fixture file with which we can use to test our product model. (Note that you do not have to include the `id` column in test fixtures.)
 
 ## Using Fixtures
 
 In the world of testing, a fixture is an environment in which you run a test. If you're testing a circuit board, for example, you might mount it in a test fixture that provides it with the power and inputs needed to drive the function to be tested.
 
-In the world of Rails, a test fixture is simply a specification of the initial contents of a model (or models) under test. If, we want to ensure that our products start off with known data at the start of every unit test, we specify those contents in a fixture, and Rails will take care of the rest.
+In the world of Rails, a test fixture is simply a specification of the initial contents of a model (or models) under test. If we want to ensure that our products start off with known data at the start of every unit test, we specify those contents in a fixture, and Rails will take care of the rest.
 
-You specify fixture data in files in the test/fixtures directory. These files contain test data in either comma-separated (CSV) or YAML format. For our tests, we use YAML, the preferred format. Each fixture contains the data for a single model. The name of the fixture file must match the name of a database table. Because we need some data for a Product model, which is stored in the products table, we'll add it to the file products.yml. Rails already created this fixture when we first created the model:
+You specify fixture data in files in the`test/fixtures`directory. These files contain test data in either comma-separated (CSV) or YAML format. For our tests, we use YAML, the preferred format. Each fixture contains the data for a single model. The name of the fixture file must match the name of a database table. Because we need some data for a Product model, which is stored in the`products`table, we'll add it to the file`products.yml`. Rails already created this fixture when we first created the model:
 
-```
-Download depot_b/test/fixtures/products.yml
-## Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
-```
+**Download**`depot_b/test/fixtures/products.yml`
 
+## Read about fixtures at`http://api.rubyonrails.org/classes/Fixtures.html`
+
+```yaml
 one:
-title: MyString
-description: MyText
-image_url: MyString
-price: 9.99
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
 
 two:
-title: MyString
-description: MyText
-image_url: MyString
-price: 9.99
-
-The fixture file contains an entry for each row we want to insert into the database. Each row is given a name. In the case of the Rails-generated fixture, the rows are named one and *two*. This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.
-
-Let's add some more data to the fixture file with which we can use to test our product model. (Note that you do not have to include the id column in test fixtures.)
-
-```
-Download depot_c/test/fixtures/products.yml
+  title: MyString
+  description: MyText
+  image_url: MyString
+  price: 9.99
 ```
 
+The fixture file contains an entry for each row we want to insert into the database. Each row is given a name. In the case of the Rails-generated fixture, the rows are named`one`and`two`. This name has no significance as far as the database is—it is not inserted into the row data. Instead, as we'll see shortly, the name gives us a convenient way to reference test data inside our test code. These are also the names used in the generated integration tests, so for now, we'll leave them alone.
+
+Let's add some more data to the fixture file with which we can use to test our product model. (Note that you do not have to include the`id`column in test fixtures.)
+
+**Download**`depot_c/test/fixtures/products.yml`
+
+```yaml
 ruby:
-title: Programming Ruby 1.9
-description: Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.
-price: 49.50
-image_url: ruby.png
+  title: Programming Ruby 1.9
+  description: Ruby is the fastest growing and most exciting dynamic language out there. If you need to get working programs delivered fast, you should add Ruby to your toolbox.
+  price: 49.50
+  image_url: ruby.png
+```
 
-Now that we have a fixture file, we want Rails to load up the test data into the products table when we run the unit test. In fact, Rails is already doing this (convention over configuration for the win!), but you can control which fixtures to load by specifying the following line in test/unit/product_test.rb:
+Now that we have a fixture file, we want Rails to load up the test data into the`products`table when we run the unit test. In fact, Rails is already doing this (convention over configuration for the win!), but you can control which fixtures to load by specifying the following line in`test/unit/product_test.rb`:
 
 ```ruby
 class ProductTest < ActiveSupport::TestCase
+
   fixtures :products
+
   #...
 ```
+
+
 
 ## David Says...
 
 ## Picking Good Fixture Names
 
-Like the names of variables in general, you want to keep the names of fixtures as self-explanatory as possible. This increases the readability of the tests when you're asserting that product:valid_order_for_fred is indeed Fred's order or use fred. It makes it a lot easier to remember which fixture you're supposed to test against without having to look up pl or order4. The more fixtures you get, the more important it is to pick good fixture names. So, starting early keeps you happy later.
+Like the names of variables in general, you want to keep the names of fixtures as self-explanatory as possible. This increases the readability of the tests when you're asserting that `product:valid_order_for_fred` is indeed Fred's order or use `fred`. It makes it a lot easier to remember which fixture you're supposed to test against without having to look up `pl` or `order4`. The more fixtures you get, the more important it is to pick good fixture names. So, starting early keeps you happy later.
 
-But what do we do with fixtures that can't easily get a self-explanatory name like valid_order_for_fred? Pick natural names that you have an easier time associating to a role. For example, instead of order1, use christmas_order. Instead of customer1, Once you get into the habit of natural names, you'll be weaving a nice little story about how fred is paying for his christmas_order with invalid_credit_card first, then paying with his valid_credit__card, and finally choosing to ship it all off to aunt_mary.
+But what do we do with fixtures that can't easily get a self-explanatory name like `valid_order_for_fred`? Pick natural names that you have an easier time associating to a role. For example, instead of `order1`, use `christmas_order`. Instead of `customer1`, use `aunt_mary`. Once you get into the habit of natural names, you'll be weaving a nice little story about how `fred` is paying for his `christmas_order` with `invalid_credit_card` first, then paying with his `valid_credit_card`, and finally choosing to ship it all off to `aunt_mary`.
 
 Association-based stories are key to remembering large worlds of fixtures with ease.
 
-The `fixtures` directive load the fixture data corresponding to the given model name into the corresponding database table before each test method in the test case is run. The name of the fixture file determines the table that is loaded, so using `:products` will cause the products.yml fixture file to be used.
+The `fixtures` directive loads the fixture data corresponding to the given model name into the corresponding database table before each test method in the test case is run. The name of the fixture file determines the table that is loaded, so using `:products` will cause the `products.yml` fixture file to be used.
 
-Let's say another way. In the case of Productfirst class, adding the `fixtures` directive means that the products.yml fixture file to be used. The name of the fixture file determines the table that is loaded, so using `:products` will cause.
+Let's say another way. In the case of `Product` class, adding the `fixtures` directive means that the `products.yml` fixture file is to be used. The name of the fixture file determines the table that is loaded, so using `:products` will cause that.
 
 Finally, our model contains a validation that checks that all the product titles in the database are unique. To test this, we're going to store product data in the database.
 
@@ -2452,7 +2379,7 @@ One way to do this would be to create a product, save it, create another product
 
 ## Iteration B2: Unit Testing of Models
 
-It creates a new Product model, setting its title to that existing. asserts that attempting to save this model fails and that the title has the correct error associated with it.
+It creates a new `Product` model, setting its title to that existing. It asserts that attempting to save this model fails and that the title has the correct error associated with it.
 
 If you want to avoid using a hard-coded string for the Active Record error, you can compare the response against its built-in:
 
@@ -2470,15 +2397,12 @@ test "product is not valid without a title - i18n" do
 end
 ```
 
-
-
-
-
 ## 练习时间
 
 这里有一些你可以自己尝试的内容：
 
-- * 如果你正在使用 Git，现在可能可能是提交工作的好时机。你可以先使用 `git status` 命令查看了哪些文件发生了变化：
+- 如果你正在使用 Git，现在可能是提交工作的好时机。你可以先使用 `git status` 命令查看哪些文件发生了变化：
+
 ```bash
 git status
 ## On branch master
@@ -2491,17 +2415,18 @@ git status
 ## modified: test/unit/product_test.rb
 ## no changes added to commit (use "git add" and/or "git commit -a")
 ```
+
 ```bash
 git commit -a -m 'Validation!'
 ```
 
-由于我们只修改了现有文件而没有添加任何新文件，我们可以将 `git add` 和 `git commit` 命令合并，只需执行带有 -a 选项的单个 `git commit` 命令即可：
+由于我们只修改了现有文件而没有添加任何新文件，我们可以将 `git add` 和 `git commit` 命令合并，只需执行带有 `-a` 选项的单个 `git commit` 命令即可。
 
-完成后，我们就可以放手脚脚地尝试了，因为我们知道随时可以使用单个 `git checkout -` 命令回到此状态。
+完成后，我们就可以放手大干一场了，因为我们知道随时可以使用单个 `git checkout -` 命令回到此状态。
 
-- * 验证选项长度检查模型属性的长度。为 `product` 模型添加验证，以检查标题是否至少有十个字符。
+- 验证选项长度检查模型属性的长度。为 `product` 模型添加验证，以检查标题是否至少有十个字符。
 
-- * 修改与你的其中一个验证相关的错误消息。
+- 修改与你的其中一个验证相关的错误消息。
 
 （你可以在 http://www.prprog.com/wikis/wiki/RailsPlayTime 找到提示。）
 
@@ -2519,7 +2444,7 @@ git commit -a -m 'Validation!'
 
 总而言之，这是一次成功的迭代。我们从客户那里收集了初始需求，记录了基本流程，制定了所需数据的初步方案，并为 Depot 应用的产品组合了维护页面。这甚至没有占用多少行代码。我们甚至有了一个虽小但不断增长的测试套件。
 
-深受鼓舞，我们进入了下一个任务。我们与客户讨论了优先顺序，她说她希望开始从买家的角度看看应用程序的样子的。我们的下一个任务是创建一个简单的目录显示。
+深受鼓舞，我们进入了下一个任务。我们与客户讨论了优先顺序，她说她希望开始从买家的角度看看应用程序的样子。我们的下一个任务是创建一个简单的目录显示。
 
 从我们的角度来看，这很有意义。一旦我们将产品安全地存入数据库中，显示它们应该是相当简单的。这为我们以后开发购物车部分的代码提供了基础。
 
@@ -2542,7 +2467,7 @@ create app/views/store/index.html.erb
 
 ## 迭代 C1：创建目录列表
 
-```
+```bash
 invoke test_unit
 create test/functional/store_controller_test.rb
 invoke helper
@@ -2558,7 +2483,7 @@ create test/unit/helpers/store_helper_test.rb
 ```ruby
 Depot::Application.routes.draw do
   get "store/index"
-resources :products
+  resources :products
 end
 ```
 
@@ -2572,7 +2497,7 @@ root to => 'store#index', :as => 'store'
 end
 ```
 
-在文件的顶部，你可以看到为了支持 `Store` 和 `Products` 控制器添加的行。我们将保持这些行不变。在文件的后面，你会看到一行被注释掉的代码，它定义了网站的根目录。取消该行的注释，或者在该行之后立即添加新行。我们所更改的只是控制器的名称（从 `welcome` 改为 `store`），并添加 `:as => store`。后者 rails 会创建一个 `store_path` 变量，就像我们在第 48 页看到的 `say_goodbye_path` 一样。
+在文件的顶部，你可以看到为了支持 `Store` 和 `Products` 控制器添加的行。我们将保持这些行不变。在文件的后面，你会看到一行被注释掉的代码，它定义了网站的根目录。取消该行的注释，或者在该行之后立即添加新行。我们所更改的只是控制器的名称（从 `welcome` 改为 `store`），并添加 `:as => store`。后者让 Rails 创建一个 `store_path` 变量，就像我们在第 48 页看到的 `say_goodbye_path` 一样。
 
 注意，注释还指示你删除 `public/index.html`。让我们现在就做：¹
 
@@ -2588,7 +2513,7 @@ depot> rm public/index.html
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_110_0.png)
 
-这可能不会让我们变得富有，但至少我们知道一切都连接正确。该页面甚至告诉了我们一切都连接正确。这可能不会让我们变得富有，但至少我们知道一切都连接正确。该页面甚至告诉了我们一切都连接正确。
+这可能不会让我们变得富有，但至少我们知道一切都连接正确。该页面甚至告诉了我们一切都连接正确。
 
 我们需要在 `store_controller.rb` 中：
 
@@ -2597,6 +2522,7 @@ depot/app/controllers/store_controller.rb
 class StoreController < ApplicationController
   def index
     @products = Product.all
+  end
 end
 ```
 
@@ -2606,7 +2532,6 @@ end
 depot/app/models/product.rb
 class Product < ActiveRecord::Base
   default_scope :order => 'title'
-
   # validation stuff
 end
 ```
@@ -2644,12 +2569,9 @@ end
 
 在现实世界的这个时间点，我们可能想要召唤设计人员——我们见过太多的程序员设计的网站，以至于不忍再给世界另一个。但《实用 Web 设计》正在某个海滩上寻找灵感，今年晚些时候回来，所以让我们现在放一个占位符。是时候下一次迭代了。
 
- 8.2 迭代 C2：添加页面布局
+## 8.2 迭代 C2：添加页面布局
 
 典型网站中的页面共享相似的布局——设计者将创建一个标准模板，在放置内容时使用。我们的工作是为每个商店页面添加这种页面装饰。
-
-
-
 
 ## 你的实用型目录
 
@@ -2692,15 +2614,27 @@ Ruby 是目前增长最快、最令人兴奋的动态语言。如果你需要快
       <a href="http://www...../news">新闻</a><br />
       <a href="http://www...../contact">联系我们</a><br />
     </div>
-    <div id="main">
-      <%= yield %>
-    </div>
-  </div>
+```
+
+
+
+```html
+<div id="main">
+
+  <%= yield %>
+
+</div>
+
+</div>
+
 </body>
+
 </html>
 ```
 
-除了除了常的 HTML 乱码外，此布局包含四个 Rails 特有的项目。第 6 行使用 Rails 辅助方法生成一个 `<link>` 标签来引入你的 `depot.css` 样式表。第 8 行设置了防止跨站请求伪造（CSRF）攻击所需的所有后台工作，当我们在第 12 章任务 G：结账！中开始添加表单时将非常重要。在第 13 页，我们将页面标题设置为实例变量 `@page_title` 的值。然而，真正的魔法发生在第 23 行。当我们调用 `yield` 时，Rails 会自动替换特定页面的内容——即由此请求调用的视图生成的存根。在我们的情况下，它将由 `index.html` 生成的目录页面。
+除了常见的 HTML 乱码外，此布局包含四个 Rails 特有的项目。第 6 行使用 Rails 辅助方法生成一个 `<link>` 标签来引入你的 `depot.css` 样式表。第 8 行设置了防止跨站请求伪造（CSRF）攻击所需的所有后台工作，当我们在第 12 章任务 G：结账！中开始添加表单时将非常重要。在第 13 页，我们将页面标题设置为实例变量 `@page_title` 的值。
+
+然而，真正的魔法发生在第 23 行。当我们调用 `yield` 时，Rails 会自动替换特定页面的内容——即由此请求调用的视图生成的存根。在我们的情况下，它将由 `index.html` 生成的目录页面。
 
 为了让其工作，我们需要在我们的 `depot.css` 样式表中添加以下内容：
 
@@ -2723,6 +2657,7 @@ Ruby 是目前增长最快、最令人兴奋的动态语言。如果你需要快
 
 #columns {
   background: #141;
+}
 ```
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_114_0.png)
@@ -2730,8 +2665,6 @@ Ruby 是目前增长最快、最令人兴奋的动态语言。如果你需要快
 图 8.2：添加布局后的目录
 
 ```css
-}
-
 #main {
   margin-left: 17em;
   padding-top: 4ex;
@@ -2756,7 +2689,7 @@ Ruby 是目前增长最快、最令人兴奋的动态语言。如果你需要快
 
 点击刷新，浏览器窗口看起来就像图 8.2 所示。它不会获得任何设计奖，但它能向客户展示最终页面的大致的样子。
 
-查看此页面，我们发现价格显示方式存在一个小问题。数据库以数字形式存储价格，但我们希望以美元和分的形式显示它。价格 12.34 应该显示为 $12.34，而 13应该显示为 $13.00。我们接下来将处理这个问题。
+查看此页面，我们发现价格显示方式存在一个小问题。数据库以数字形式存储价格，但我们希望以美元和分的形式显示它。价格 12.34 应该显示为 $12.34，而 13 应该显示为 $13.00。我们接下来将处理这个问题。
 
 ## 8.3 迭代 C3：使用辅助方法格式化价格
 
@@ -2774,9 +2707,7 @@ Ruby 使用 `sprintf` 函数，可以用于格式化价格。我们可以直接�
 
 ```html
 <span class="price">%= number_to_currency(product.price) %></span>
-```（注：OCR 此处略有乱码，我根据上下文恢复了逻辑代码块）。
-
-
+```
 
 产品包含相同的标题。此类数据不会引起问题，并且在这些记录被修改和保存之前，都不会被检测到。
 
@@ -2784,7 +2715,7 @@ Ruby 使用 `sprintf` 函数，可以用于格式化价格。我们可以直接�
 
 在几行代码中就完成了大量的验证。我们可以通过重新运行功能测试来看到它是如何工作的（毕竟，我们修改了所有这些内容）：
 
-```
+```bash
 depot rake test:functionals
 ```
 
@@ -2810,24 +2741,20 @@ depot rake test:functionals
 
 - 在侧边栏中添加日期和时间。它不需要实时更新；只需显示页面显示时的值即可。
 - 尝试各种 `number_to_currency` 辅助方法的选项，并查看它们对你的目录列表的影响。
-
-[http://api.rubyyonrails.org/classes/ActionDispatch/Assertions/SelectorAssertions.html]
-
+- [http://api.rubyyonrails.org/classes/ActionDispatch/Assertions/SelectorAssertions.html](http://api.rubyyonrails.org/classes/ActionDispatch/Assertions/SelectorAssertions.html)
 - 使用 `assert_select` 为产品维护应用编写一些功能测试。这些测试需要放在 `test/functional/products_controller_test.rb` 文件中。
-
 - 提醒你一下，迭代的结束是使用 `git` 保存工作的好时机。如果你一直在跟着操作，到目前为止你已经掌握了所需的知识。我们将在第 16.2 节“准备你的部署服务器”（第 249 页）中继续探索更多 git 功能。
-
-（你可以在 [http://www.pragprog.com/wikis/wiki/RailsPlayTime] 找到提示）
+- 你可以在 [http://www.pragprog.com/wikis/wiki/RailsPlayTime](http://www.pragprog.com/wikis/wiki/RailsPlayTime) 找到提示。
 
 在本章中，我们将看到：
 
-- 会话（sessions）和会话管理，
-- 模型之间添加关系，
+- 会话（sessions）和会话管理；
+- 模型之间添加关系；
 - 添加一个按钮将产品添加到购物车。
 
-## 第 9 章
+# 第 9 章
 
-### 任务 D：创建购物车
+## 任务 D：创建购物车
 
 现在我们已经了显示包含我们所有精彩产品目录的能力，如果能卖它们就太好了。我们的客户也同意，所以我们共同决定下一步实现购物车功能。这将涉及许多新概念，包括会话、模型之间的关系以及在视图中添加按钮，所以让我们开始吧。
 
@@ -2837,15 +2764,21 @@ depot rake test:functionals
 
 这意味着我们的应用程序需要跟踪买家添加的所有项目。为了做到这一点，我们在数据库中保留一个购物车，并将唯一标识符 `cart_id` 存储在会话中。每当请求进来时，我们都可以从会话中恢复身份，并用它在数据库中查找购物车。
 
-所以让我们创建一个 `Cart`吧。
+所以让我们创建一个 `Cart`。
 
-```
+```bash
 depot> rails generate scaffold cart
+
 ...
+
 depot> rake db:migrate
+
 == CreateCarts: migrating ========================================
+
 create_table(:carts)
+
 -> 0.012s
+
 == CreateCarts: migrated (0.014s) =========================================
 ```
 
@@ -2855,18 +2788,16 @@ Rails 让当前会话对控制器看起来像一个哈希表，因此我们将�
 
 ```ruby
 class ApplicationController < ActionController::Base
-```
+  protect_from_forgery
 
-```ruby
-protect_from_forgery
+  private
 
-private
-
-def current_cart
-  Cart.find(session[:cart_id])
-rescue ActiveRecord::RecordNotFound
-  cart = Cart.create
-  session[:cart_id] = cart.id
+  def current_cart
+    Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    cart = Cart.create
+    session[:cart_id] = cart.id
+  end
 end
 ```
 
@@ -2886,12 +2817,17 @@ end
 
 根据图表，我们现在可以生成项目项：
 
-```
+```bash
 depot> rails generate scaffold line_item product_id:integer cart_id:integer
+
 depot> rake db:migrate
+
 == CreateLineItems: migrating ========================================
+
 create_table(:line_items)
+
 -> 0.013s
+
 == CreateLineItems: migrated (0.014s) =================================
 ```
 
@@ -2900,11 +2836,12 @@ create_table(:line_items)
 ```ruby
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
+end
 ```
 
 ### 迭代 D2：将产品连接到购物车
 
-`has_lineitems` 指令部分是不言自明的的：一个购物车（可能）有很多项目项。`dependent:destroy` 表示项目项的存在取决于购物车的存在。如果我们删除购物车（从数据库中删除它），也会删除与之关联的项目项。
+`has_lineitems` 指令部分是不言自明的：一个购物车（可能）有很多项目项。`dependent: destroy` 表示项目项的存在取决于购物车的存在。如果我们删除购物车（从数据库中删除它），也会删除与之关联的项目项。
 
 接下来，我们将从反方向指定链接，从项目项到购物车和产品。为了这一点，我们使用 `belongs_to`：
 
@@ -2915,7 +2852,7 @@ class LineItem < ActiveRecord::Base
 end
 ```
 
-belongs_to Rails 表明 `line_items` 表中的行是 `carts` 表和 `products` 表的子行。如果没有对应的购物车和产品行，项目项项存在。这些各种声明起什么作用？基本上，它们为模型对象增加了导航功能。因为我们向 `Lineitem` 添加了 `belongs_to` 声明，我们现在可以获取其产品并显示书名：
+`belongs_to` Rails 表明 `line_items` 表中的行是 `carts` 表和 `products` 表的子行。如果没有对应的购物车和产品行，项目项项存在。这些各种声明起什么作用？基本上，它们为模型对象增加了导航功能。因为我们向 `LineItem` 添加了 `belongs_to` 声明，我们现在可以获取其产品并显示书名：
 
 ```ruby
 li = LineItem.find(...)
@@ -2938,82 +2875,88 @@ class Product < ActiveRecord::Base
 end
 ```
 
-- before_destroy :ensure_not_referenced_by_any_line_item
-
+- `before_destroy :ensure_not_referenced_by_any_line_item`
 - 确保没有项目项引用此产品
-  def ensure_not_referenced_by_any_line_item
-
-
 
 ```ruby
-if line_items.count.zero?
-  return true
-else
-  errors.add(:base, 'Line Items present')
-  return false
+def ensure_not_referenced_by_any_line_item
+  if line_items.count.zero?
+    return true
+  else
+    errors.add(:base, 'Line Items present')
+    return false
+  end
 end
+
 #...
 ```
 
-Here we declare that a product has many line items, and define a hook method `ensure_not_referenced_by_any_line_item`. A hook method is a method that Rails calls automatically at a given point in an object's life. In this case, the method will be called before Rails attempts to destroy a row in the database. If the hook method returns false, the row will not be destroyed.
 
-Note that we have direct access to the errors object. Errors can be associated with individual attributes, but in this case we associate the error with the base object itself.
 
-We'll have more to say about intermodel relationships starting on page 283.
 
-## 9.3 Iteration D3: Adding a Button
+这里声明一个产品有许多行项目，并定义一个钩子方法 `ensure_not_referenced_by_any_line_item`。钩子方法是 Rails 在对象生命周期的特定时刻自动调用的方法。在本例中，该方法会在 Rails 尝试删除数据库中的一行之前被调用。如果钩子方法返回 `false`，该行将不会被删除。
 
-Now that that's done, it is time to add an `Add to Cart` button for each product.
+注意，我们可以直接访问 `errors` 对象。错误可以与单个属性关联，但在本例中，我们将错误与基础对象本身关联。
 
-There is no need to create a new controller or even a new action. Taking a look at the actions provided by the scaffold generator, you will find index, show, new, edit, create, update and destroy. The one that matches this operation is create (new may sound strange, but its use is to create a form that is to solicit input for a subsequent create action).
+关于模型间关系的内容，我们将在第 283 页开始进行更多介绍。
 
-Once this decision is made, the rest follow. What are we creating? Certainly not a Cart or even a Product. Looking at the commented code with the create method in `app/controllers/line_items_controller.rb`, you will see that this also determines the URL to use (/line_items) and the HTTP method (POST).
+## 9.3 迭代 D3：添加按钮
 
-This choice ensues the proper UI to use. When we added links before, we use `link_to`, but links default to HTTP GET. We want to use POST, so we will add a button this this means that we will be using the `button_to` method.
+现在既然已经完成，是时候为每个产品添加一个 `Add to Cart` 按钮了。
 
-We could connect the button to the line item by specifying the URL, but again we can let Rails take care of this for us by simply appending `_path` to the controller's name. In this case, we will use `line_items_path`.
+不需要创建新的控制器，甚至不需要新的动作。查看脚架生成器提供的动作，你会发现 `index`、`show`、`new`、`edit`、`create`、`update` 和 `destroy`。与此操作匹配的是 `create`（`new` 听起来很奇怪，但它的作用是创建一个表单，为后续的 `create` 动作请求输入）。
 
-However, there's a problem with how: will the `line_items_path` method know which product to add to our cart? We'll need to pass the id of the product corresponding to the button. That's easy enough—all we need to do is add the `product_id` option to the `line_items_path` call. We can even pass in the product instance itself—Rails knows to extract the data from the request in circumstances such as these.
+一旦做出决定，剩下的工作就会随之而来。我们要创建什么？显然不是购物车，甚至不是产品。查看 `app/controllers/line_items_controller.rb` 中带有 `create` 方法的注释，你会发现这还决定了要使用的 URL（`/line_items`）和 HTTP 方法（`POST`）。
 
-In all, the line that we need to add to our `index.html.erb` looks like this:
+这个选择确保了要使用正确的 UI。我们之前添加链接时使用的是 `link_to`，但链接默认使用 HTTP GET。我们想使用 POST，所以将添加一个按钮，这意味着我们将使用 `button_to` 方法。
+
+我们可以通过指定 URL 将按钮连接到行项目，但同样可以通过简单地在控制器名称后附加 `_path` 来让 Rails 为我们处理。在这种情况下，我们将使用 `line_items_path`。
+
+然而，在实现方式上有一个问题：`line_items_path` 方法如何知道将哪个产品添加到购物车中？我们需要传递与按钮对应的产品 id。这非常简单——只需要在 `line_items_path` 调用中添加 `product_id` 选项即可。我们甚至可以传递产品实例本身——在这些情况下，Rails 知道从请求中提取数据。
+
+总而言之，我们需要在 `index.html.erb` 中添加的行如下：
 
 ```erb
-### Download depot_f/app/views/store/index.html.erb
+# 下载 depot_f/app/views/store/index.html.erb
+
 <% if notice %>
   <div id="notice"><%= notice %></div>
 <% end %>
+
 <h1>Your Pragmatic Catalog</h1>
+
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
     <h3><%= product.title %></h3>
     <p><%= sanitize product.description %></p>
-    <span class="price"><%= number_to_currency(product.price) %</span></span>
+    <span class="price"><%= number_to_currency(product.price) %></span></span>
     <%= button_to "Add to Cart", line_items_path(:product_id => product) %>
   </div>
 <% end %>
 ```
 
-There's one more formatting issue. `button_to` creates an HTML `<div>`, and that form an HTML `<form>`. Both of these are normally block elements, which will appear on the next line. We'd like to place them next to the price, so we need a little CSS to make them inline:
+还有一个格式问题。`button_to` 创建一个 HTML `<div>`，而该表单包含一个 HTML `<form>`。这两者通常都是块级元素，会显示在下一行。我们希望将它们放在价格旁边，所以需要一点 CSS 使它们变为内联元素：
 
 ```css
-# Download depot_f/public/stylesheets/depot.css
+# 下载 depot_f/public/stylesheets/depot.css
+
 .entry form, #.entry div {
   display: inline;
 }
 ```
 
-Now our index page looks like Figure 9.1, on the next page. But before we push the button, we need to modify the `create` method in the line controllers to expect a product id as a form parameter. Here's where we start to see how important the id field is in our models. Rails identifies model objects (the corresponding database rows) by their id fields. If we pass an id to create, we're uniquely identifying the product to add.
+现在我们的索引页看起来就像下一页的图 9.1 所示。但在按下按钮之前，我们需要修改行控制器中的 `create` 方法，以期望产品 id 作为表单参数。在这里，我们开始看到 id 字段在模型中的重要性。Rails 通过模型对象的 id 字段（对应的数据库行）来识别模型对象。如果我们向 `create` 传递一个 id，就唯一标识了要添加的产品。
 
-Why the create method? The default HTTP method for a link is a get, and the default HTTP uses these conventions to determine which method to call. See the comments inside the `app/controller/line_items_controller.rb` file to see other conventions. We'll be making extensive use of these conventions inside the Depot application.
+为什么使用 `create` 方法？链接的默认 HTTP 方法是 GET，而默认 HTTP 约定会据此确定调用哪个方法。查看 `app/controller/line_items_controller.rb` 文件内部的注释，可以了解其他约定。我们将在 Depot 应用中大量使用这些约定。
 
-## Iteration D3: Adding A BUTTON
+## 迭代 D3：添加按钮
 
-![](img/79be11dd96f63a00f9795e2dfe232ef5_125_0.png)
+![现在有一个加入购物车按钮](img/79be11dd96f63a00f9795e2dfe232ef5_125_0.png)
 
-Figure 9.1: Now there's an Add to Cart button.
+图 9.1：现在有一个“加入购物车”按钮。
 
-Let's modify the `LineItemsController` to find the shopping cart for the current session (creating one if there isn't already), and add the selected product to that cart, and display the cart contents. All we need to modify is a few lines of code in the `create` method in `app/controllers/line_items_controller.rb`:
+让我们修改 `LineItemsController`，查找当前会话对应的购物车（如果不存在则创建一个），将选中的产品添加到购物车中，并显示购物车内容。我们只需要修改 `app/controllers/line_items_controller.rb` 中 `create` 方法的几行代码：
 
 ```ruby
 create
@@ -3024,66 +2967,67 @@ create
   respond_to do |format|
     if @line_item.save
       format.html { redirect_to @cart, notice: 'Item added to cart.' }
-      format.xml { render: @line_item, status: :created }
+      format.xml { render @line_item, status: :created }
     else
       format.html { render :new, status: :unprocessable_entity }
-      format.xml { render: @line_item, status: :unprocessable_entity }
+      format.xml { render @line_item, status: :unprocessable_entity }
     end
   end
 ```
 
-现在既然已经完成了，是时候每个产品添加一个“加入购物车”按钮了。
+现在既然已经完成，是时候为每个产品添加一个“加入购物车”按钮了。
 
-不需要创建一个新的控制器，甚至不需要新的动作。查看脚架生成器提供的动作，你会发现 `index`、`show`、`new`、`edit`、`create`、`update` 和 `destroy`。与此操作匹配的是 `create`（`new` 听起来很奇怪，但它的作用创建一个表单，为后续的 `create` 动作请求输入）。
+不需要创建一个新的控制器，甚至不需要新的动作。查看脚架生成器提供的动作，你会发现 `index`、`show`、`new`、`edit`、`create`、`update` 和 `destroy`。与此操作匹配的是 `create`（`new` 听起来很奇怪，但它的作用是创建一个表单，为后续的 `create` 动作请求输入）。
 
-一旦做了决定，剩下的工作就会随之而来。我们要创建什么？显然不是购物车，甚至不是产品。查看 `app/controllers/line_items_controller.rb` 中带有 `create` 方法的注释，你会发现这还决定了要使用的 URL (/line_items) 和 HTTP 方法 (POST)。
+一旦做出决定，剩下的工作就会随之而来。我们要创建什么？显然不是购物车，甚至不是产品。查看 `app/controllers/line_items_controller.rb` 中带有 `create` 方法的注释，你会发现这还决定了要使用的 URL（`/line_items`）和 HTTP 方法（`POST`）。
 
-这个选择确保了要使用的正确 UI。我们之前添加链接时使用的是 `link_to`，但链接默认是 HTTP GET。我们想使用 POST，所以我们将添加一个按钮，这，这意味着我们将使用 `button_to` 方法。
+这个选择确保了要使用正确的 UI。我们之前添加链接时使用的是 `link_to`，但链接默认使用 HTTP GET。我们想使用 POST，所以将添加一个按钮，这意味着我们将使用 `button_to` 方法。
 
-我们可以通过指定 URL 将按钮连接到行项目，但同样我们可以通过简单地在控制器的名称后附加 `_path` 来让 Rails 为我们处理。在这种情况下，我们将使用 `line_items_path`。
+我们可以通过指定 URL 将按钮连接到行项目，但同样可以通过简单地在控制器名称后附加 `_path` 来让 Rails 为我们处理。在这种情况下，我们将使用 `line_items_path`。
 
-然而，在实现方式上有一个问题：`line_items_path` 方法如何知道将哪个产品添加到我们的购物车中？我们需要传递与按钮对应的产品 id。这非常简单——我们只需要在 `line_items_path` 调用中添加 `product_id` 选项即可。我们甚至可以传递产品实例本身——在这些情况下，Rails 知道从请求中提取数据。
+然而，在实现方式上有一个问题：`line_items_path` 方法如何知道将哪个产品添加到购物车中？我们需要传递与按钮对应的产品 id。这非常简单——只需要在 `line_items_path` 调用中添加 `product_id` 选项即可。我们甚至可以传递产品实例本身——在这些情况下，Rails 知道从请求中提取数据。
 
-总而言之，我们需要在 `index.html.erb` 中添加的行看起来如下：
+总而言之，我们需要在 `index.html.erb` 中添加的行如下：
 
 ```erb
 # 下载 depot_f/app/views/store/index.html.erb
+
 <% if notice %>
   <div id="notice"><%= notice %></div>
 <% end %>
+
 <h1>Your Pragmatic Catalog</h1>
+
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
-    <h3><%= product.title %></h3></h3>
+    <h3><%= product.title %></h3>
     <p><%= sanitize product.description %></p>
-    <span class="price"><%= number_to_currency(product.price) %</span></span>
+    <span class="price"><%= number_to_currency(product.price) %></span></span>
     <%= button_to "Add to Cart", line_items_path(:product_id => product) %>
   </div>
 <% end %>
 ```
 
-还有一个格式问题。`button_to` 创建一个 HTML `<div>`，而该表单包含一个 HTML `<form>`。这两者通常都是块级元素，会显示在下一行。我们希望将它们放在价格旁边，所以我们需要一点 CSS 使它们变为内联元素：
+还有一个格式问题。`button_to` 创建一个 HTML `<div>`，而该表单包含一个 HTML `<form>`。这两者通常都是块级元素，会显示在下一行。我们希望将它们放在价格旁边，所以需要一点 CSS 使它们变为内联元素：
 
 ```css
 # 下载 depot_f/public/stylesheets/depot.css
+
 .entry form, #.entry div {
   display: inline;
 }
 ```
 
-现在我们的索引页看起来就像下一页的图 9.1 所示。但在按下按钮之前，我们需要修改行控制器中的 `create` 方法，以期望产品 id 作为表单参数。在这里我们开始看到 id 字段在我们的模型中是多么重要。Rails 通过它们的 id 字段（相应的数据库行）来识别模型对象。如果我们向 `create` 传递一个 id，我们就在唯一地标识要添加的产品。
+现在我们的索引页看起来就像下一页的图 9.1 所示。但在按下按钮之前，我们需要修改行控制器中的 `create` 方法，以期望产品 id 作为表单参数。在这里，我们开始看到 id 字段在模型中的重要性。Rails 通过模型对象的 id 字段（对应的数据库行）来识别模型对象。如果我们向 `create` 传递一个 id，就唯一标识了要添加的产品。
 
-为什么用 `create` 方法？链接的默认 HTTP 方法是 get，而默认 HTTP 使用这些约定来确定调用哪个方法。查看 `app/controller/line_items_controller.rb` 文件内部的注释查看其他约定。我们将在 Depot 应用中大量使用这些约定。
-
-
-
+为什么使用 `create` 方法？链接的默认 HTTP 方法是 GET，而默认 HTTP 约定会据此确定调用哪个方法。查看 `app/controller/line_items_controller.rb` 文件内部的注释，可以了解其他约定。我们将在 Depot 应用中大量使用这些约定。
 
 她解释说，真实的购物车不会为两种相同的产品显示两个单独的行。相反，它们会显示一次产品，并注明数量为 2。看起来我们已经为下一次迭代做好准备了。
 
 ## 我们刚刚做了什么
 
-到目前为止，这是忙碌且高效的一天。我们为商店添加了购物车，在此过程中，我们还尝试了一些 Rails 的功能：
+到目前为止，这是忙碌且高效的一天。我们为商店添加了购物车，在此过程中，还尝试了一些 Rails 的功能：
 
 - 我们在一次请求中创建了 `Cart` 对象，并能够在随后的请求中通过 `session` 对象成功定位同一个 `Cart`；
 - 我们在所有控制器的基类中添加了一个私有方法，使所有控制器都能访问它；
@@ -3095,43 +3039,49 @@ create
 这里有一些你可以自己尝试的内容：
 
 - 修改 action，使得点击书籍的图像也会调用 `create` action。`link_to` 的第一个参数放置在生成的 `<a>` 标签中，而 Rails 辅助方法 `image_tag` 构建一个 HTML `<img>` 标签。将其作为 `link_to` 的第一个参数包含。确保在调用 `link_to` 的 `html_options` 中包含 `:method=>post`。
-- 在 session 中添加一个新变量，记录用户访问商店控制器 `index` action 的次数。第一次访问此页面时，计数器不在 session 中。你可以使用下面的代码进行测试：
+- 在 `session` 中添加一个新变量，记录用户访问商店控制器 `index` action 的次数。第一次访问此页面时，计数器不在 `session` 中。你可以使用下面的代码进行测试：
+
 ```ruby
 if session[:counter].nil?
 ```
-- 如果 session 变量不存在，你需要初始化它。然后你就可以对其进行递增。
+
+
+
+
+- 如果 `session` 变量不存在，你需要初始化它。然后你就可以对其进行递增。
 - 将此计数器传递到你的模板，并在目录页面顶部显示它。提示：在格式化你显示的消息时，`pluralize` 辅助方法（在第 358 页描述）可能会有用。
 - 每当用户向购物车添加物品时，将计数器重置为零。
 - 修改模板，仅当计数器大于五时才显示计数器。
--（你可以在 http://pragprog.com/wikis/wiki/RailsPlayTime 找到更多内容）。
+- 你可以在 http://pragprog.com/wikis/wiki/RailsPlayTime 找到更多内容。
 
 在本章中，我们将看到：
 
 - 修改 schema 和现有数据。
 - 错误诊断与处理。
-- flash 消息，以及
+- `flash` 消息，以及
 - 日志记录（logging）。
 
 ## 第 10 章
 
 ### 任务 E：更智能的购物车
 
-虽然我们实现了基本的购物车功能，但仍有许多工作要做。首先，我们需要识别客户何时向购物车添加了多个相同的物品。完成后，我们还必须确保购物车本身能够处理错误情况，并在遇到问题时适地向客户或系统管理员传达问题。
+虽然我们实现了基本的购物车功能，但仍有许多工作要做。首先，我们需要识别客户何时向购物车添加了多个相同的物品。完成后，我们还必须确保购物车本身能够处理错误情况，并在遇到问题时适当地向客户或系统管理员传达问题。
 
 ## 10.1 迭代 E1：创建一个更智能的购物车
 
-为购物车中的每个产品关联计数将需要我们修改 `line_items` 表。我们在第 6.1 节“应用迁移（Applying the Migration）”之前使用过迁移，并用它来更新数据库的 schema。虽然那是创建模型初始脚手（scaffold）的一部分，但基本方法是相同的。
+为购物车中的每个产品关联计数将需要我们修改 `line_items` 表。我们在第 6.1 节“应用迁移（Applying the Migration）”之前使用过迁移，并用它来更新数据库的 schema。虽然那是创建模型初始脚手架（scaffold）的一部分，但基本方法是相同的。
 
 ```bash
 depot> rails generate migration add_quantity_to_line_item quantity:integer
 ```
 
-Rails 可以从迁移名称中判断出你正在向 `line_items` 表添加或更多列，并可以从最后一个参数获取每个列的名称和数据类型。Rails 匹配的两种模式是 `add_XXX_to_TABLE` 和 `remove_XXX_from_TABLE`，其中 `XXX` 的值被忽略：重要的是迁移名称之后出现的列名和类型列表。
+Rails 可以从迁移名称中判断出你正在向 `line_items` 表添加一列或更多列，并可以从最后一个参数获取每个列的名称和数据类型。Rails 匹配的两种模式是 `add_XXX_to_TABLE` 和 `remove_XXX_from_TABLE`，其中 `XXX` 的值被忽略：重要的是迁移名称之后出现的列名和类型列表。
 
 Rails 唯一无法判断的是该列的合理默认值是什么。在许多情况下，空值是可以的，但如果我们需要，可以通过修改迁移来为现有购物车设置值：
 
 ```ruby
 # 下载 depot/db/migrate/20211021000004_add_quantity_to_line_item.rb
+
 class AddQuantityToOneItem < ActiveRecord::Migration
   def self.up
     add_column :line_items, :quantity, :integer, :default => 1
@@ -3149,17 +3099,20 @@ end
 depot> rake db:migrate
 ```
 
-现在，我们需要在 `Cart` 中一个智能的 `add_product` 方法，它检查我们的物品列表是否已经包含了我们正在添加的产品：如果包含，则增加数量；如果不包含，则构建一个新的 `LineItem`。
+现在，我们需要在 `Cart` 中添加一个智能的 `add_product` 方法，它检查我们的物品列表是否已经包含了我们正在添加的产品：如果包含，则增加数量；如果不包含，则构建一个新的 `LineItem`。
 
 ```ruby
 ### depot/app/models/cart.rb
+
 def add_product(product_id)
   current_item = line_items.where(:product_id => product_id).first
+
   if current_item
     current_item.quantity += 1
   else
     current_item = line_items.build(:product_id => product_id)
   end
+
   current_item
 end
 ```
@@ -3168,17 +3121,19 @@ end
 
 ```ruby
 ### depot/app/controllers/line_items_controller.rb
+
 def create
   @cart = current_cart
   product = Product.find(params[:product_id])
   @line_item = @cart.add_product(product.id)
+
   respond_to do |format|
     if @line_item.save
       format.html { redirect_to @cart, notice: 'Item added to cart.' }
       format.xml { render @line_item, status: :created }
     else
       format.html { render :new, status: :unprocessable_entity }
-      format.xml { render: @line_item, status: :unprocessable_entity }
+      format.xml { render @line_item, status: :unprocessable_entity }
     end
   end
 end
@@ -3188,6 +3143,7 @@ end
 
 ```erb
 <h2>您的购物车</h2>
+
 <ul>
   <% @cart.line_items.each do |item| %>
     <li><%= item.product.title %> x <%= item.quantity %></li>
@@ -3202,10 +3158,8 @@ depot> rake db:rollback
 ```
 
 ![](img/79be11dd96f63a00f9795e2dfe23ef5_132_0.png)
+
 图 10.1：带有数量的购物车
-
-
-
 
 # Pragmatic Books 在线商店
 
@@ -3223,9 +3177,9 @@ depot> rake db:rollback
 
 查看图 10.3 显示的页面，显而易见应用程序在 `carts` 控制器的第 16 行抛出了异常¹。结果是这一行：
 
-+   - 你的行号可能不同。我们的源文件中可能有一些与书籍相关的格式内容。
+> 你的行号可能不同。我们的源文件中可能有一些与书籍相关的格式内容。
 
-```
+```text
 # ActiveController::Exception caught
 
 ## ActiveRecord::RecordNotFound in CartsController#show
@@ -3241,7 +3195,9 @@ app/controllers/carts_controller.rb:16:in 'show'
 
 图 10.3：我们的应用程序暴露了底牌。
 
-`@cart = Cart.find(params[:id])`
+```ruby
+@cart = Cart.find(params[:id])
+```
 
 如果找不到购物车，ActiveRecord 会抛出 `RecordNotFound` 异常，我们显然需要处理它。问题在于——如何处理？
 
@@ -3251,14 +3207,19 @@ app/controllers/carts_controller.rb:16:in 'show'
 
 Rails 有一种方便的方法处理错误和错误报告。它定义了一个名为 `Flash` 的结构。`Flash` 是一个桶（实际上更接近 `Hash`），你可以在处理请求时在其中存储内容。`flash` 的内容在自动删除之前对会话中的下一个请求可用。通常，`flash` 用于收集错误消息。例如，当我们的 `show` 方法检测到传递了无效购物车 ID 时，它可以将该错误消息存储在 `flash` 中，并重定向到 `index` 操作以重新显示目录。`index` 操作的视图可以提取并将其显示在目录顶部。`flash` 信息可以通过 `flash` 访问器在视图中访问。
 
-+   2. [https://guides.rubyonrails.org/debugging_rails_applications.html#the-logger] 为什么不能将错误存储在任何旧的实例变量中？记住，在我们的应用程序将重定向发送到浏览器之后，浏览器会向我们的应用程序发送新请求。当我们收到该请求时，我们的应用程序已经移动了——之前请求的所有实例变量早已消失了。`flash` 数据存储在会话中，以便在请求之间可用。
+为什么不能将错误存储在任何旧的实例变量中？记住，在我们的应用程序将重定向发送到浏览器之后，浏览器会向我们的应用程序发送新请求。当我们收到该请求时，我们的应用程序已经移动了——之前请求的所有实例变量早已消失了。`flash` 数据存储在会话中，以便在请求之间可用。
 
-有了这些关于 `flash` 数据的背景，我们现在可以更改 `show` 方法来拦截糟糕的 ID ID 并报告问题：
+有关日志记录的更多信息，请参阅 [The Logger](https://guides.rubyonrails.org/debugging_rails_applications.html#the-logger)。
+
+有了这些关于 `flash` 数据的背景，我们现在可以更改 `show` 方法来拦截糟糕的 ID 并报告问题：
 
 ```ruby
 ### Download depot_h/app/controllers/carts_controller.rb
+
 ## GET /carts/1
+
 ## GET /carts/1.xml
+
 def show
   begin
     @cart = Cart.find(params[:id])
@@ -3277,30 +3238,27 @@ end
 `rescue` 子句拦截了由 `Cart.find` 抛出的异常。在处理器中，我们执行以下操作：
 
 - 使用 Rails `logger` 记录错误。每个控制器都有一个 `logger` 属性。在这里使用它在错误级别记录消息。
-- 使用 `redirect_to` 方法重定向到目录显示。`:notice` 参数指定了存储在 `flash` 中的通知消息。为什么要重定向而不是直接显示目录？如果我们重定向，用户的浏览器最终将显示商店 URL 而不是 `http://...cart/wobble`。通过这种方式我们暴露了更少的应用程序信息。我们防止了用户触发……（注：提供的第 134-137 页 OCR 文本在源文件中非常破碎；我已根据提供的文本清理了可见的技术块和句子）。
+- 使用 `redirect_to` 方法重定向到目录显示。`:notice` 参数指定了存储在 `flash` 中的通知消息。为什么要重定向而不是直接显示目录？如果我们重定向，用户的浏览器最终将显示商店 URL 而不是 `http://...cart/wobble`。通过这种方式我们暴露了更少的应用程序信息。我们防止了用户触发……
 
+## David 的说……
 
+### 路由之争：`product_path` 与 `product_url`
 
+当你想要链接或重定向到某个特定路由时，起初知道何时该使用 `product_path`、何时该使用 `product_url` 似乎很难。但实际上，这非常简单。
 
-# David 的说...
-
-## 路由之争：product_path 与 product_url
-
-当你想要链接或重定向到某个特定路由时，起初知道何时该使用 `product_path` 何时该使用 `product_url` 似乎很难。但实际上，这非常简单。
-
-当你使用 `product_url` 时，你将获得包含协议和域名的完整路径，例如 http://example.com/products/1。在进行重定向时应该使用它，因为 HTTP 规范在执行 302 重定向等操作时需要完全限定的 URL。当你从一个域名跳转到另一个域名时，你也需要完整的 URL，类似于 `product_url(domain=> "example2.com", :product=> product)`。
+当你使用 `product_url` 时，你将获得包含协议和域名的完整路径，例如 `http://example.com/products/1`。在进行重定向时应该使用它，因为 HTTP 规范在执行 302 重定向等操作时需要完全限定的 URL。当你从一个域名跳转到另一个域名时，你也需要完整的 URL，类似于 `product_url(domain => "example2.com", :product => product)`。
 
 在其他情况下，你可以放心地使用 `product_path`。它只会生成 `/products/1`，这在链接或表单提交时就是你需要的。例如 `link_to("我的产品", product_path(product))`。
 
 现在有一点，由于浏览器的宽容性，这两者是可以互换的。你可以对 `product_path` 进行 `redirect_to`，它可能可以工作，但根据规范来说它是无效的。你可以对 `product_url` 使用 `link_to`，但那样会在你的 HTML 中充斥不需要的字符，这也是个坏主意。
 
-现在当我们查看购物车并点击“清空购物车”按钮时，我们会回到目录页面，并看到一条很友的小消息：
+现在当我们查看购物车并点击“清空购物车”按钮时，我们会回到目录页面，并看到一条很友好的小消息：
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_138_0.png)
 
 我们还可以移除添加行项目（Line Item）时自动生成的闪消息（flash message）。
 
-```
+```text
 Download depot_1/app/controllers/line_items_controller.rb
 ```
 
@@ -3309,6 +3267,7 @@ def create
   @cart = current_cart
   @product = Product.find(params[:product_id])
   @line_item = @cart.add_product(product.id)
+end
 ```
 
 ```ruby
@@ -3326,9 +3285,11 @@ end
 
 最后，我们将处理购物车显示的整理工作。与其为每个项目使用 `<li>` 元素，不如使用表格。同样，我们将使用 CSS 进行样式设置：
 
-```
+```text
 Download depot_l/app/views/carts/show.html.erb
-``````html
+```
+
+```html
 <div class="cart_title">您的购物车</div>
 <table>
   <% for each item in @cart.line_items %>
@@ -3347,8 +3308,10 @@ Download depot_l/app/views/carts/show.html.erb
 
 为了让这生效，我们需要在 `LineItem` 和 `Cart` 模型中都添加一个方法，分别返回单个项目和整个购物车的总价。第一个行项目只涉及简单的乘法：
 
-```
+```text
 Download depot_l/app/models/line_item.rb
+```
+
 ```ruby
 def total_price
   product.price *= quantity
@@ -3357,8 +3320,10 @@ end
 
 我们使用 Rails 的 `Array#sum` 方法来实现 `Cart` 方法，用以对集合中每个项目的价格进行求和：
 
-```
+```text
 Download depot_l/app/models/cart.rb
+```
+
 ```ruby
 def total_price
   line_items.to_a.sum { |item| item.total_price }
@@ -3367,7 +3332,7 @@ end
 
 然后，我们需要在我们的 `depot.css`（原文为 `depot.css`）样式表中添加一小部分内容：
 
-## 迭代 E3：完成购物车
+## 10.3 迭代 E3：完成购物车
 
 # Pragmatic 在线商店
 
@@ -3379,25 +3344,35 @@ end
 - 联系我们
 
 您的购物车
+
 2x Web Design for Developers $85.90
+
 1x Programming Ruby 1.9 $49.50
+
 总计 $135.40
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_140_0.png)
 
-```
+```text
 Download depot_i/public/stylesheets/depot.css
-``````css
+```
+
+```css
 /* 主页购物车的样式 */
 
 #store .cart_title {
   font: 120% bold;
 }
 
-#store .item_price, #store .total_line {
+#store .item_price,
+#store .total_line {
   text-align: right;
 }
+```
 
+
+
+```css
 #store .total_line .total_cell {
   font-weight: bold;
   border-top: 1px solid #595;
@@ -3419,21 +3394,21 @@ Download depot_i/public/stylesheets/depot.css
 
 但正当我们认为已经完成了此功能时，我们的客户订购了一本《Information Technology》和《Weekly》。显然，有一篇关于新类型浏览器的文章，那种浏览器中的内容是即时更新的。“Ajax，”她说道。让我们来看看一些你可以自己尝试的内容：
 
-- 创建一个迁移文件，将价格复制到行项目中，并修改 `Cart` 模型中的 `add_product` 方法，以便在每次创建行项目时捕获价格。
+- 创建一个迁移文件，将价格复制到行项目中，并修改`Cart`模型中的`add_product`方法，以便在每次创建行项目时捕获价格。
 - 添加重复产品的单元测试。注意，你需要修改固定用具（fixture），以通过名称（例如 ruby）来引用产品和购物车。
 - 检查行项目，查看其他地方是否需要友用户的消息。
-- 添加从购物车中删除单个行项目的功能。这需要在每行上添加按钮，并且这些按钮需要链接到 `CartController` 中的 `destroy` 动作。
+- 添加从购物车中删除单个行项目的功能。这需要在每行上添加按钮，并且这些按钮需要链接到`CartController`中的`destroy`动作。
 
 # Ajax
 
-- 使用局部模板（partial templates），
-- 渲染到页面布局中，
-- 使用 RJS 动态更新页面，
-- 使用 Script 高亮显示变化。
-- 隐藏和显示 DOM 元素，以及
-- 测试 Ajax 更新。
+- 使用局部模板（partial templates）
+- 渲染到页面布局中
+- 使用 RJS 动态更新页面
+- 使用 Script 高亮显示变化
+- 隐藏和显示 DOM 元素
+- 测试 Ajax 更新
 
-什么是 Ajax？
+## 什么是 Ajax？
 
 在旧时代（直到 2005 年左右），浏览器被视为笨笨设备。当你编写基于浏览器的应用程序时，你会把内容发送给浏览器并将其遗忘。在某个时刻，用户会填写某些字段或点击超链接，你的应用程序就会通过接收到的请求被唤醒。它会向用户渲染一个完整的页面，整个过程重新开始。这就是目前 Depot 的运行方式。
 
@@ -3443,9 +3418,9 @@ Download depot_i/public/stylesheets/depot.css
 
 ## 11.1 迭代 F：移动购物车
 
-目前，购物车是由 `CartController` 中的 `show` 动作和相应的 `.html.erb` 模板渲染的。我们想要做的是将其移动到侧边栏。这意味着它不再位于自己的页面。相反，我们在布局中渲染它。
+目前，购物车是由`CartController`中的`show`动作和相应的`.html.erb`模板渲染的。我们想要做的是将其移动到侧边栏。这意味着它不再位于自己的页面。相反，我们在布局中渲染它。
 
-## 局部模板 (Partial Templates)
+## 局部模板（Partial Templates）
 
 编程语言允许定义方法。方法是带有名称的代码块：通过名称调用方法，相应的代码块就会运行。而且，当然你可以向方法传递参数，这使得你可以编写一次编写的代码。
 
@@ -3453,16 +3428,16 @@ Download depot_i/public/stylesheets/depot.css
 
 我们将在本次迭代中使用局部模板。首先，让我们看看购物车本身：
 
-
-
 为了做到这一点，我们将利用这样一个特性：可以将一个集合传递给渲染模板的方法，该方法会自动为该功能中的每个项目调用一次局部模板（partial）。让我们重写购物车视图来查看此功能：
 
-Download deploy j/app/views/carts/show.html.erb
+`Download deploy j/app/views/carts/show.html.erb`
 
 ```erb
 <div class="cart_title">您的购物车 </div>
+
 <table>
   <%= render(@cart.line_items) %>
+
   <tr class="total_line">
     <td colspan="2">合计</td>
     <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td></td>
@@ -3474,9 +3449,9 @@ Download deploy j/app/views/carts/show.html.erb
 <%= button_to '清空购物车', @cart, :method => :delete, :confirm => '你确定吗？' %>
 ```
 
-这样写就更简单了。`render` 方法会遍历任何传递给它的集合。局部模板本身仅仅是另一个模板文件（默认与被渲染的对象位于同一目录下，并且名称与表格名称相同）。为了将局部模板的名称与普通模板区分开，Rails 在查找局部模板时会自动在名称开头添加下划线。这意味着我们需要将局部模板命名为 `_line_item.html.erb`，并将其存放在 `/app/views/line/_line_item/` 目录下。
+这样写就更简单了。`render`方法会遍历任何传递给它的集合。局部模板本身仅仅是另一个模板文件（默认与被渲染的对象位于同一目录下，并且名称与表格名称相同）。为了将局部模板的名称与普通模板区分开，Rails 在查找局部模板时会自动在名称开头添加下划线。这意味着我们需要将局部模板命名为`_line_item.html.erb`，并将其存放在`/app/views/line/_line_item/`目录下。
 
-Download deploy j/app/views/line/_line_item.html.erb
+`Download deploy j/app/views/line/_line_item.html.erb`
 
 ```erb
 <tr>
@@ -3486,19 +3461,22 @@ Download deploy j/app/views/line/_line_item.html.erb
 </tr>
 ```
 
-这里面存在一些微妙的机制。在局部模板内部，我们使用与模板名称匹配的变量来引用当前对象。在这种情况下，局部模板被命名为 `line_item`，因此在局部模板内部我们预期有一个名为 `line_item` 的变量。
+这里面存在一些微妙的机制。在局部模板内部，我们使用与模板名称匹配的变量来引用当前对象。在这种情况下，局部模板被命名为`line_item`，因此在局部模板内部我们预期有一个名为`line_item`的变量。
 
 现在我们整理了购物车的显示。
 
-但是局部模板如何知道去去哪里寻找购物车对象呢？一种方法是让它做一个假设。在布局（layout）中，我们可以访问控制器设置的 `@cart` 实例变量。事实证明，这个变量在从布局调用的局部模板内部是可用的。然而，这有点像使用方法并在全局变量中传递某些值。它虽然有效，但这是很糟糕的写法，并且增加了耦合性（这会让你的程序变得脆弱且难以维护）。
+但是局部模板如何知道去去哪里寻找购物车对象呢？一种方法是让它做一个假设。在布局（layout）中，我们可以访问控制器设置的`@cart`实例变量。事实证明，这个变量在从布局调用的局部模板内部是可用的。然而，这有点像使用方法并在全局变量中传递某些值。它虽然有效，但这是很糟糕的写法，并且增加了耦合性（这会让你的程序变得脆弱且难以维护）。
 
-既然我们已经有了行项目的局部模板，让我们对购物车也执行同样的操作。首先，我们将创建 `_cart.html.erb` 模板。这基本上是我们的 `cart/show.html` 模板，只是使用了 `erb` 代替了 `@cart`。（注意：局部模板调用其他局部模板是允许的）。
+既然我们已经有了行项目的局部模板，让我们对购物车也执行同样的操作。首先，我们将创建`_cart.html.erb`模板。这基本上是我们的`cart/show.html`模板，只是使用了`erb`代替了`@cart`。（注意：局部模板调用其他局部模板是允许的）。
 
-Download depot_j/app/views/carts/cart.html.erb
+`Download depot_j/app/views/carts/cart.html.erb`
+
 ```erb
 <div class="cart_title">您的购物车</div>
+
 <table>
   <%= render(cart.line_items) %>
+
   <tr class="total_line">
     <td colspan="2">合计</td>
     <td class="total_cell"><%= number_to_currency(cart.total_price) %></td></td>
@@ -3513,7 +3491,8 @@ Download depot_j/app/views/carts/cart.html.erb
 
 正如 Rails 的准言所说：“不要重复自己”（DRY），虽然这看起来不是什么问题，但为 AJAX 调用准备一套逻辑，又为 JavaScript 禁用时准备另一套逻辑，会引出问题……所以，让我们避免所有这些，并用触发局部模板渲染的代码来替换原始模板：
 
-Download depot_j/app/views/carts/show.html.erb
+`Download depot_j/app/views/carts/show.html.erb`
+
 ```erb
 <%= render @cart %>
 ```
@@ -3522,6 +3501,7 @@ Download depot_j/app/views/carts/show.html.erb
 
 ```html
 <!DOCTYPE html>
+
 <head>
   <title>Pragmatic Books Online Store</title>
   <link rel="stylesheet" link_tag="scaffold" %>
@@ -3529,34 +3509,36 @@ Download depot_j/app/views/carts/show.html.erb
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body id="store">
-<div id="banner">
-  <%= image_tag("logo.png") %>
-  <%= @page_title || "Pragmatic Bookshelf" %>
-```
 
-<div>
-<div id="columns">
-  <div id="side">
-    <div id="cart">
-      <%= render cart @ %>
+<body id="store">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+
+  <div id="columns">
+    <div id="side">
+      <div id="cart">
+        <%= render cart @ %>
+      </div>
+      <a href="http://www...../">首页</a><br />
+      <a href="http://www...../faq">常见问题</a><br />
+      <a href="http://www...../news">新闻</a><br />
+      <a href="http://www...../contact">联系我们</a><br />
     </div>
-    <a href="http://www...../">首页</a><br />
-    <a href="http://www...../faq">常见问题</a><br />
-    <a href="http://www...../news">新闻</a><br />
-    <a href="http://www...../contact">联系我们</a><br />
+
+    <div id="main">
+      <%= yield %>
+    </div>
   </div>
-  <div id="main">
-    <%= yield %>
-  </div>
-</div>
 </body>
 </html>
 ```
 
-现在我们必须对商店控制器（store_controller）做一个一个细微的改动。我们在查看商店的 `index` 动作时调用了布局，而该动作目前还没有设置 `@cart`。这很容易修复：
+现在我们必须对商店控制器（store_controller）做一个一个细微的改动。我们在查看商店的`index`动作时调用了布局，而该动作目前还没有设置`@cart`。这很容易修复：
 
-Download depot_j/app/controllers/store_controller.rb
+`Download depot_j/app/controllers/store_controller.rb`
+
 ```ruby
 def index
   @products = Product.all
@@ -3564,7 +3546,10 @@ def index
 end
 ```
 
-现在我们添加一点 CSS：Download depot_j/public/stylesheets/depot.css
+现在我们添加一点 CSS：
+
+`Download depot_j/public/stylesheets/depot.css`
+
 ```css
 #cart table {
   font-size: 12px;
@@ -3586,28 +3571,30 @@ end
 
 到为止，我们已经安排浏览器向应用程序发送 AJAX 请求。下一步是让应用程序返回响应。计划是创建一个代表购物车的更新 HTML 片段，并让浏览器将其插入文档的内部结构和内容，即文档对象模型（DOM）。通过操作 DOM，我们可以让显示在用户面前发生变化。
 
-第一个变化是在请求为 JavaScript 时让 `create` 动作重定向到索引显示。我们通过在调用中添加 `remote: true` 参数来实现。
+第一个变化是在请求为 JavaScript 时让`create`动作重定向到索引显示。我们通过在调用中添加`remote: true`参数来实现。
 
-Download depot_j/app/views/store/index.html.erb
+`Download depot_j/app/views/store/index.html.erb`
+
 ```erb
 <% if notice %>
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 <% end %>
+
 <h1>产品目录</h1>
+
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
     <h3><%= product.title %></h3>
     <%= sanitize product.description %>
+
     <div class="price_line">
-      <span class="price"><%= number_to_currency(product.price) %</span></span>
+      <span class="price"><%= number_to_currency(product.price) %></span></span>
       <%= button_to '加入购物车', cart_items_path(product), remote: true %>
     </div>
   </div>
 <% end %>
 ```
-
-
 
 ```javascript
 format.js
@@ -3620,15 +3607,15 @@ format.xml => ( render :xml => @line_item.errors,
 end
 ```
 
-由于此项更改，当 create 完成处理 Ajax 请求时，Rails 将查找一个 create 模板来渲染。
+由于此项更改，当`create`完成处理 Ajax 请求时，Rails 将查找一个 create 模板来渲染。
 
-Rails 支持 RJS 模板——JS 代表 JavaScript。一个 .jsrs 模板是一种通过编写服务器端 Ruby 代码，在浏览器中获取 JavaScript 以实现你需求的方法。让我们编写第一个：`create.js`。它位于 `app/views/line_items/create.js`，其中只包含针对 line items 的其他视图：
+Rails 支持 RJS 模板——JS 代表 JavaScript。一个`.jsrs`模板是一种通过编写服务器端 Ruby 代码，在浏览器中获取 JavaScript 以实现你需求的方法。让我们编写第一个：`create.js`。它位于`app/views/line_items/create.js`，其中只包含针对 line items 的其他视图：
 
 ```javascript
 page.replace_html('cart', render(cart))
 ```
 
-让我们分析一下模板。`page` 变量是一个名为 JavaScript 生成器的对象的实例——这是一个 Rails 类，它知道如何在服务器上创建 JavaScript 并让浏览器执行它。在这里，我们告诉它替换当前页面上 id 为 `cart` 的元素的内容。该 RJS 模板告诉浏览器用 HTML 替换 id 为 `cart` 的元素的内容。
+让我们分析一下模板。`page`变量是一个名为 JavaScript 生成器的对象的实例——这是一个 Rails 类，它知道如何在服务器上创建 JavaScript 并让浏览器执行它。在这里，我们告诉它替换当前页面上 id 为`cart`的元素的内容。该 RJS 模板告诉浏览器用 HTML 替换 id 为`cart`的元素的内容。
 
 它有效吗？在书中很难展示，但它确实有效。请确保重新加载页面，以便将远程版本的表单和 JavaScript 库加载到浏览器中。然后，点击“加入购物车”按钮之一。你应该看到侧边栏中的购物车更新了。而且不会显示任何刷新页面的迹。你刚刚创建了一个 Ajax 应用。
 
@@ -3639,13 +3626,9 @@ page.replace_html('cart', render(cart))
 如果你的 Depot 应用没有显示任何 Ajax 魔法，这里有几个提示：
 
 - 你的浏览器是否有任何特殊的指令来强制重新加载页面上的所有内容？有时浏览器会保留页面资源的本地缓存版本，这可能会影响测试。现在是进行完全刷新的好时候。
-
-- 是否报告了任何错误？查看日志目录下的 `development.log`。也查看 rails server 目录，因为某些错误会在那里报告。
-
-- 继续查看日志文件，你是否看到对 `create` action 的传入请求？正在发送 Ajax 请求。如果 JavaScript 库已经加载（在浏览器中使用查看 → 源代码将显示 HTML），也许是你的浏览器禁用了 JavaScript 执行？
-
+- 是否报告了任何错误？查看日志目录下的`development.log`。也查看 rails server 目录，因为某些错误会在那里报告。
+- 继续查看日志文件，你是否看到对`create` action 的传入请求？正在发送 Ajax 请求。如果 JavaScript 库已经加载（在浏览器中使用查看 → 源代码将显示 HTML），也许是你的浏览器禁用了 JavaScript 执行？
 - 一些读者报告，他们必须停止并重启应用程序才能让基于 Ajax 的购物车工作。
-
 - 如果你在使用 Internet Explorer，它可能运行在微软所谓的“怪异模式”（quirks mode）下，这种模式与旧版 Internet 版本兼容，但也是损坏的。如果下载页面的第一行是适当的 DOCTYPE Header，Internet Explorer 会在标准模式之间切换，标准模式对 Ajax 的支持更好。我们的布局显示了这一点：
 
 ```html
@@ -3662,15 +3645,17 @@ page.replace_html('cart', render(cart))
 
 # 11.3 迭代 F3：高亮变化
 
-Rails 附带许多 JavaScript 库。其中一个库 `effects.js` 允许你用许多视觉上有趣的效果装饰你的网页¹。这些效果之一就是（现在）臭名昭著的黄色渐变技术（Yellow Fade Technique）。它可以高亮浏览器中的一个元素：背景闪烁黄色并逐渐变回白色。我们可以在下一页的图 11.2 中看到黄色技术应用于我们的购物车；背景图片显示的是原始购物车。用户点击“加入购物车”
+Rails 附带许多 JavaScript 库。其中一个库`effects.js`允许你用许多视觉上有趣的效果装饰你的网页¹。这些效果之一就是（现在）臭名昭著的黄色渐变技术（Yellow Fade Technique）。它可以高亮浏览器中的一个元素：背景闪烁黄色并逐渐变回白色。我们可以在下一页的图 11.2 中看到黄色技术应用于我们的购物车；背景图片显示的是原始购物车。用户点击“加入购物车”。
 
 随着行变亮，计数更新为 2。然后它在短时间内淡出变回背景色。
 
-¹ effects.js 是 Script.aculo 库的一部分。查看 https://github.com/madobby/scriptaculous/wiki 视觉效果页面，查看你可以用它做的酷炫操作。
+¹ `effects.js` 是 Script.aculo 库的一部分。查看 https://github.com/madobby/scriptaculous/wiki 视觉效果页面，查看你可以用它做的酷炫操作。
 
 ![](img/79be11dd96f63a00f9795edfe232ef5_152_0.png)
 
 让我们为购物车添加这种高亮显示。每当购物车中的项目更新时（无论是添加时还是我们更改数量时），让我们让它的背景闪烁。这会让用户更清楚地看到发生了发生了变化，即使整个页面已经刷新了。
+
+
 
 我们遇到的第一个问题是识别购物车中最近更新的项目。没错，每个项目只是一个 `<tr>` 元素。我们需要找到一种方法来标记最近更改的一个。工作从 `LineItemsController` 开始。让我们通过将当前 line item 赋值给实例变量，将其传递给模板：
 
@@ -3728,7 +3713,7 @@ endcolor => "#114411"
 
 通过传递 `:current_item` 如何识别想要应用效果的浏览器元素？我们请求高亮效果，并用符合我们设计的颜色覆盖默认的黄色/白色过渡。点击添加项目，你会看到购物车中的项目发出淡绿色并变回背景。
 
-# 11.4 迭代 F4：隐藏空购物车
+## 11.4 迭代 F4：隐藏空购物车
 
 客户还有最后一个请求。现在，即使是空的购物车仍然显示在侧边栏中。我们可以安排只有在有内容时才显示购物车。当然！
 
@@ -3750,9 +3735,9 @@ endcolor => "#114411"
 
 虽然这可行，但用户界面有些原始：在空购物车和有内容的购物车之间切换时，整个侧边栏都会重绘。所以不要使用这段代码。让它平滑一点。
 
-Script.aculo 库包含许多让元素出现的漂亮过渡。让我们使用 `blind_down`，它会平滑地显示购物车，为侧边栏的其他部分留空间。
+`Script.aculo` 库包含许多让元素出现的漂亮过渡。让我们使用 `blind_down`，它会平滑地显示购物车，为侧边栏的其他部分留空间。
 
-不出意外，我们将使用现有的 .js 模板来调用效果。由于 create 模板只有在向购物车添加内容时才调用，我们知道当购物车中正好有一个项目时，我们必须在侧边栏显示购物车（这意味着之前购物车是空的且隐藏的）。而且，因为在开始高亮效果之前购物车应该是可见的，我们将在触发高亮的代码之前添加显示购物车的代码。
+不出意外，我们将使用现有的 `.js` 模板来调用效果。由于 `create` 模板只有在向购物车添加内容时才调用，我们知道当购物车中正好有一个项目时，我们必须在侧边栏显示购物车（这意味着之前购物车是空的且隐藏的）。而且，因为在开始高亮效果之前购物车应该是可见的，我们将在触发高亮的代码之前添加显示购物车的代码。
 
 现在模板如下：
 
@@ -3774,10 +3759,7 @@ def total_items
 end
 ```
 
-我们必须安排在购物车为空时隐藏它。这里有两种基本方法。其一（如本节开头的代码所示）是不完全生成任何 HTML。不幸的是，如果我们将
-
-
-向购物车添加某些内容并突然创建购物车 HTML 时，我们看到浏览器中出现了闪烁，因为购物车首先显示然后被隐藏，最后通过 `blind_down` 效果缓慢显示。
+我们必须安排在购物车为空时隐藏它。这里有两种基本方法。其一（如本节开头的代码所示）是不完全生成任何 HTML。不幸的是，如果我们将向购物车添加某些内容并突然创建购物车 HTML 时，我们看到浏览器中出现了闪烁，因为购物车首先显示然后被隐藏，最后通过 `blind_down` 效果缓慢显示。
 
 处理此问题的更好方法是创建购物车 HTML，但如果购物车为空，则将 CSS 样式 `display: none`。为了实现这一点，我们需要修改 `app/views/layouts/application.html` 布局文件。我们的第一次尝试如下所示：
 
@@ -3792,20 +3774,20 @@ end
 
 这段代码为 `<div>` 标签添加了 CSS `style=` 属性，但仅在购物车为空时生效。它运行良好，但看起来非常丑陋。那个悬空的 `>` 字符看起来位置不协调（尽管它并不是），而且将逻辑注入标签中间是那种会让“污染语言”（tainted-languages）名声扫地的的行为。让我们不要让这种丑陋充斥我们的代码。相反，让我们创建一个抽象来隐藏它——我们将编写一个辅助方法。
 
-## 辅助方法 (Helper Methods)
+## 辅助方法（Helper Methods）
 
 每当我们想要从视图（任何视图）中抽象出某些处理时，都应该编写一个辅助方法。
 
 如果你查看 `app` 目录，你会发现五个子目录：
 
-```
+```text
 depot ls -p app
 controllers/ helpers/ mailers/ models/ views/
 ```
 
 不意外的是，我们的辅助方法位于 `helpers` 目录。如果你查看该目录，会发现它包含一些文件：
 
-```
+```text
 depot ls -p app
 application_helper.rb line_items_helper.rb store_helper.rb
 carts_helper.rb products_helper.rb
@@ -3842,7 +3824,7 @@ end
 
 这段代码使用了 Rails 的标准辅助方法 `content_tag`，它可以用于将块创建的输出封装在标签中。通过使用 `&block` 符号，我们将让 Ruby 解析由 `hidden_div_if` 提供的块并将其传递给 `content_tag`。
 
-最后，我们需要停止在 flash 中设置我们以前在用户进入购物车时显示的消息。它现在不再被需要了，因为当目录索引页重绘时，购物车会从侧边栏消失。但移除它还有另一个原因。现在我们使用 Ajax 添加到购物车，主页面不会随着请求而重绘，这意味着我们在侧边栏显示购物车时，将继续显示购物车空空的 flash 消息。
+最后，我们需要停止在 `flash` 中设置我们以前在用户进入购物车时显示的消息。它现在不再被需要了，因为当目录索引页重绘时，购物车会从侧边栏消失。但移除它还有另一个原因。现在我们使用 Ajax 添加到购物车，主页面不会随着请求而重绘，这意味着我们在侧边栏显示购物车时，将继续显示购物车空空的 `flash` 消息。
 
 下载 `depot_n/app/controllers/carts_controller.rb`
 
@@ -3859,7 +3841,7 @@ def destroy
 end
 ```
 
-现在我们已经使用 Ajax 添加到购物车，由于主页面不会随着请求重绘，这意味着我们在侧边栏显示购物车时，将继续显示购物车空空的 flash 消息（*注：此处原文逻辑似乎略有重复，已按原意翻译*）。
+现在我们已经使用 Ajax 添加到购物车，由于主页面不会随着请求重绘，这意味着我们在侧边栏显示购物车时，将继续显示购物车空空的 `flash` 消息（注：此处原文逻辑似乎略有重复，已按原意翻译）。
 
 下载 `depot_n/app/controllers/carts_controller.rb`
 
@@ -3888,7 +3870,7 @@ Finished in 0.64026 seconds.
 
 我们查看测试失败，看到如下错误：
 
-```
+```text
 test_should_get_index(ProductsController):
 ActionView::Template::Error: undefined method 'line_items' for nil
 ```
@@ -3899,8 +3881,9 @@ ActionView::Template::Error: undefined method 'line_items' for nil
 
 所以在我们显示索引时，`@cart` 显然是 `nil`。这是合理的，因为它只在 Store 控制器中设置。这个问题很容易修复，我们需要在该值设置时避免购物车：
 
-```erb
 下载 `depot/app/views/layouts/application.html.erb`
+
+```erb
 <% if @cart %>
   <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
 ```
@@ -3911,7 +3894,7 @@ ActionView::Template::Error: undefined method 'line_items' for nil
 
 `Users/...ruby/svn/rails4/Book/util/work/depot/app/layouts/application.html.erb` 第 18 行引发：`undefined method 'line_items' for nil`
 
-提取的源码（第18行附近）：
+提取的源码（第 18 行附近）：
 
 ```html
 15: <div>
@@ -3924,7 +3907,9 @@ ActionView::Template::Error: undefined method 'line_items' for nil
 22:   </div>
 ```
 
-`Rails.root: /users/ruby/svn/rails4/Book/util/work/depot Application Trace | Framework Trace | Full Trace (7be11dd96f3a00f795edfe23ef158_0.png)`
+`Rails.root: /users/ruby/svn/rails4/Book/util/work/depot`
+
+Application Trace | Framework Trace | Full Trace (`7be11dd96f3a00f795edfe23ef158_0.png`)
 
 ```erb
 <% render :cart %>
@@ -3965,10 +3950,9 @@ test "should create_line_item via ajax" do
 end
 ```
 
-
-
-
 - 我们写了一个测试，它不仅验证了行项目（line item）的创建，还验证了此类请求返回响应的内容。
+
+
 
 需要记住的关键点是 Ajax 开发的增量风格。从一个传统的应用程序开始，然后一个接一个添加 Ajax 功能。Ajax 可能很难调试：通过缓慢地将其添加到应用程序中，如果你的应用程序停止工作，它让你更容易追踪到发生了什么。正如我们所看到的，从传统的应用程序开始，可以更容易在同一个代码库中同时支持 Ajax 和非 Ajax 行为。
 
@@ -3995,10 +3979,15 @@ end
 在本章中，我们将看到：
 
 - 使用外键关联表格。
-- 使用 `belongs_to`, `has_many`, `:through`。
-- 基于模型创建表单（`form_for`)。
+
+- 使用 `belongs_to`、`has_many`、`:through`。
+
+- 基于模型创建表单（`form_for`）。
+
 - 关联表单、模型和视图。
+
 - 安装和使用插件。
+
 - 在模型对象上使用 `atom_helper` 生成馈（feed）。
 
 # 第 12 章
@@ -4087,10 +4076,6 @@ end
 <% end %>
 ```
 
-
-
-
-
 ## 迭代 G1：捕获订单
 
 controller: model object:
@@ -4110,7 +4095,7 @@ end
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef_166_0.png)
 
-图 12.1：form_for 中映射到对象和属性的名称。
+图 12.1：`form_for` 中映射到对象和属性的名称。
 
 我们可以更新表单模板来捕获客户结账详细信息。它由 order 控制器中的新 action 调用，因此模板命名为 `new.html.erb`，并位于 `app/views/views/orders` 目录下：
 
@@ -4125,7 +4110,7 @@ end
 </div>
 ```
 
-此模板使用了一个名为 _form 的部分模板（partial）：
+此模板使用了一个名为 `_form` 的部分模板（partial）：
 
 下载 depot_p/app/views/orders/form.html.erb
 
@@ -4229,16 +4214,25 @@ end
 # PRAGMATIC BOOKSHELF
 
 | 您的购物车 | |
+
 | :--- | :--- |
+
 | 2x Programming Ruby 1.9 | $99 |
+
 | 2x Web Design for Developers | $85 |
+
 | 总计 | $184 |
 
 | 输入您的详细信息 | |
+
 | 姓名 | |
+
 |  far | |
+
 | 电子邮件 | |
+
 | 选择支付方式 | |
+
 | 提交订单 | |
 
 图 12.2：我们的结账
@@ -4250,17 +4244,27 @@ end
 在 http://rubyonrails.org/classes/Fixtures 查看关于固定的件的内容
 
 | one | |
+
 | :--- | :--- |
+
 | name | Dave Text |
+
 | address | MyString |
+
 | email | MyString |
+
 | pay type | Check |
 
 | two | |
+
 | :--- | :--- |
+
 | name | MyString |
+
 | address | MyString |
+
 | email | MyString |
+
 | pay type | Check |
 
 此外，为了创建订单，我们需要行项目（line items）：
@@ -4270,13 +4274,19 @@ end
 在 http://rubyonrails.org/classes/orders.html 查看关于固定的件的内容的内容
 
 | one | |
+
 | :--- | :--- |
+
 | product | ruby |
+
 | cart | ruby |
 
 | two | |
+
 | :--- | :--- |
+
 | product | ruby |
+
 | cart | ruby |
 
 ## 捕获订单
@@ -4284,8 +4294,11 @@ end
 让我们实现 `create` action：
 
 1. 捕获表单值。
+
 2. 添加购物车中的行项目。
+
 3. 验证并保存订单。如果失败，让用户修正。
+
 4. 一旦订单成功保存，删除购物车并重定向页面。
 
 下载 depot_p/app/models/line_item.rb
@@ -4317,9 +4330,6 @@ end
 def create
 ```
 
-
-
-
 （我们稍后会讨论这一点）。如果保存成功，我们会做两件事。首先，通过从会话中删除购物车来为客户的下一次订单做好准备。然后，我们使用 `redirect_to` 方法重绘目录，以显示一条愉快的消息。如果保存失败，我们将重定向到结账表单。
 
 在 `create` action 中，我们假设订单对象包含 `add_line_items_from_cart` 方法，因此我们现在让该方法执行：
@@ -4339,7 +4349,7 @@ end
 
 对于我们从购物车转移到订单的每一个项目，我们都需要做两件事。首先，我们将 `cart_id` 设置为 `nil`，以防止该项目在我们删除购物车时随之消失。
 
-然后，我们添加项目本身；我们不需要对各种外键字段进行任何特殊处理，例如将 line item 行中的 `order_id` 列设置为新创建的订单行。Rails 会通过我们向 Order 和 Lineitem 模型中添加的 `has_many` 和 `belongs_to` 为我们完成这些。将每个新的行项目追加到 `line_items` 集合会将键管理的责任交由 Rails。
+然后，我们添加项目本身；我们不需要对各种外键字段进行任何特殊处理，例如将 line item 行中的 `order_id` 列设置为新创建的订单行。Rails 会通过我们向 `Order` 和 `Lineitem` 模型中添加的 `has_many` 和 `belongs_to` 为我们完成这些。将每个新的行项目追加到 `line_items` 集合会将键管理的责任交由 Rails。
 
 我们还需要修改测试以反映新的重定向：
 
@@ -4360,6 +4370,8 @@ class OrdersControllerTest < ActionController::TestCase
 
 并且我们修改测试固件，使一个产品位于第一个订单中（在第一个购物车中保留一个产品以用于购物车测试）：
 
+
+
 ```yaml
 Download depot_p/test/fixtures/line_items.yml
 
@@ -4374,7 +4386,7 @@ two:
   cart: one
 ```
 
-所以，作为这一切的首次测试，在不填写任何表单字段的情况下点击结账页面上的“Place Order”按钮。你会看到结账页面重新加载，并带有一些关于字段空的错误消息，如后续页的图 12.3 所示。（如果你在家里跟着操作并收到“No action responded to create”的消息，可能是因为你在控制器的 `private` 声明之后添加了 `create` 方法。私有方法不能作为 action 调用。）
+所以，作为这一切的首次测试，在不填写任何表单字段的情况下点击结账页面上的“Place Order”按钮。你会看到结账页面重新加载，并带有一些关于字段空的错误消息，如后续页的图 12.3 所示。（如果你在家里跟着操作并收到“No action responded to create”的消息，可能是因为你在控制器的`private`声明之后添加了`create`方法。私有方法不能作为 action 调用。）
 
 如果我们填写一些数据（如第 176 页图 12.4 顶部所示）并点击“Place Order”，我们将返回目录，如如图底部所示。但它起作用了吗？在数据库中查看。
 
@@ -4416,10 +4428,9 @@ sqlite> .quit
 
 ## 最后一个 Ajax 更改
 
-在接受订单后，我们重定向到索引页面，显示欢快的“感谢您的订单”flash 消息。如果用户继续停留在并在浏览器中启用了 JavaScript，我们将在其侧边栏中填充购物车，而不重绘主页面。这意味着 flash 消息将继续显示。我们更希望它在向购物车添加第一个项目后消失（就像在浏览器中禁用 JavaScript 时那样）。幸运的是，修复方法很简单：我们只需要在向购物车添加内容时隐藏包含 flash 消息的 `div` 即可。不过，没有什么是那么简单的。
+在接受订单后，我们重定向到索引页面，显示欢快的“感谢您的订单”flash 消息。如果用户继续停留在并在浏览器中启用了 JavaScript，我们将在其侧边栏中填充购物车，而不重绘主页面。这意味着 flash 消息将继续显示。我们更希望它在向购物车添加第一个项目后消失（就像在浏览器中禁用 JavaScript 时那样）。幸运的是，修复方法很简单：我们只需要在向购物车添加内容时隐藏包含 flash 消息的`div`即可。不过，没有什么是那么简单的。
 
-隐藏 flash 遮罩的第一次尝试可能涉及在 `line_items/create.js` 中添加以下行：
-
+隐藏 flash 遮罩的第一次尝试可能涉及在`line_items/create.js`中添加以下行：
 
 ```ruby
 xhtml.tr 'total', :colspan => 2
@@ -4428,7 +4439,7 @@ xhtml.tr number_to_currency \
 end
 ```
 
-下载 `depot/config/routes.rb`
+下载`depot/config/routes.rb`
 
 ```ruby
 Depot::Application.routes.draw do
@@ -4492,17 +4503,15 @@ depot> curl -silent http://localhost:3000/products/3/who_bought
 
 看起来很不错。现在我们可以在最喜欢的 Feed 阅读器中订阅这些内容。
 
-# 12.3 迭代 G3: 分页
+# 12.3 迭代 G3：分页
 
-目前，我们有几个产品，任何时候都有几个购物车，购物车或订单有几个行项目，但本质上我们可以无限数量的订单，而且我们希望有很多订单。多到足以在订单页面上显示所有订单将迅速变得难以管理。`will_paginate` 插件的作用。这个插件扩展了 Rails 以提供这种急需的功能。
+目前，我们有几个产品，任何时候都有几个购物车，购物车或订单有几个行项目，但本质上我们可以无限数量的订单，而且我们希望有很多订单。多到足以在订单页面上显示所有订单将迅速变得难以管理。`will_paginate`插件的作用。这个插件扩展了 Rails 以提供这种急需的功能。
 
 为什么使用插件？在 Rails 1.0 时代，此功能是 Rails 本身的一部分。但对于如何实现此功能存在竞争性的观点，该功能被分离出来以便让创新繁荣发展。
 
-我们需要做的第一件事是告诉 Rails 我们要使用该插件的意图。我们通过修改 `Gemfile` 来实现。我们需要指定一个大于等于 3.0.pre 的版本，之前的版本无法与 Rails 3.0 工作。
+我们需要做的第一件事是告诉 Rails 我们要使用该插件的意图。我们通过修改`Gemfile`来实现。我们需要指定一个大于等于 3.0.pre 的版本，之前的版本无法与 Rails 3.0 工作。
 
-```ruby
-下载 `depot/Gemfile`
-```
+下载`depot/Gemfile`
 
 ```ruby
 source 'http://rubygems.org'
@@ -4536,9 +4545,9 @@ group :development, :test do
 end
 ```
 
-取决于你的操作系统和设置，你可能需要以 root 身份运行此命令。`bundle` 命令实际上会执行更多操作。它会检查依赖并安装任何必要的内容。这与我们无关，只是添加了一个组件，我们可以放心 Bundler 安装的 gems 中包含了我们需要的一切。
+取决于你的操作系统和设置，你可能需要以 root 身份运行此命令。`bundle`命令实际上会执行更多操作。它会检查依赖并安装任何必要的内容。这与我们无关，只是添加了一个组件，我们可以放心 Bundler 安装的 gems 中包含了我们需要的一切。
 
-现在让我们生成一些测试数据。让我们在 `script` 目录下创建一个文件。
+现在让我们生成一些测试数据。让我们在`script`目录下创建一个文件。
 
 ```ruby
 depot/script/load_orders.rb
@@ -4586,7 +4595,7 @@ end
 <%= link_to 'New Order', new_order_path %>
 ```
 
-就是这些了！默认每页显示 30 条目，只有当订单超过一页时链接才会显示。控制器使用 `:per_page` 选项指定显示的订单数量。见图 12.5。
+就是这些了！默认每页显示 30 条目，只有当订单超过一页时链接才会显示。控制器使用`:per_page`选项指定显示的订单数量。见图 12.5。
 
 | Name | Address | Email | Pay type |
 |---|---|---|---|
@@ -4602,68 +4611,65 @@ end
 | Customer 91 | 91 Main Street | customer-91@example.com | Check |
 
 新订单
+
 ← Previous 1 2 3 4 5 6 7 8 9 10 11 Next →
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_183_0.png)
 
-
-
-
-
-## 练习时间 (Playtime)
+## 练习时间（Playtime）
 
 这里有一些你可以自己尝试的内容：
 
-- 让 `who_bought` 请求支持 HTML、XML 和 JSON 格式的视图。通过渲染 `@product.to_xml(include => :orders)` 尝试在 XML 视图中包含订单信息。对 JSON 执行同样的操作。
-
+- 让`who_bought`请求支持 HTML、XML 和 JSON 格式的视图。通过渲染`@product.to_xml(include => :orders)`尝试在 XML 视图中包含订单信息。对 JSON 执行同样的操作。
 - 如果在结账界面显示时，点击侧边栏的“结账”（Checkout）按钮会发生什么？你能找到在这种情况下禁用该按钮的方法吗？（提示：控制器中设置的变量在布局、部分视图以及直接渲染的模板中同样可用。）
-
-- 目前，可能的支付类型列表存储在 `Order` 类的常量中。你能将此列表移动到数据库表中吗？还能让该字段的验证正常工作吗？
+- 目前，可能的支付类型列表存储在`Order`类的常量中。你能将此列表移动到数据库表中吗？还能让该字段的验证正常工作吗？
 
 （你可以在 http://www.pragprog.com/wik/wiki/RailsPlayTime 找到提示。）
 
 在本章中，我们将看到：
 
-- 发送邮件，
-- 集成测试。
+- 发送邮件
+- 集成测试
 
 # 第 13 章
 
-# 任务 H：发送邮件
+## 任务 H：发送邮件
 
 到此时，我们已经有了一个可以响应请求的网站，并能提供允许定期检查单本书书销售情况的馈送（feeds）。在某些情况下，拥有比这更多的功能是有意义的。对于这种情况，我们需要在事件发生时主动向特定人员发送消息的能力。当发生异常时，通知系统管理员可能是值得的。它也可以是一个用户反馈表单。在本章中，我们将选择简单地向已下单的用户发送确认邮件。一旦完成该工作，我们将创建测试，不仅针对我们刚刚添加的主要支持功能，还针对我们到今为止创建的整个用户场景。
 
-# 13.1 迭代 H1：发送确认邮件
+## 13.1 迭代 H1：发送确认邮件
 
 在 Rails 中发送邮件有三个基本部分：配置如何发送邮件、确定何时发送邮件，以及指定你想说什么。我们将依次涵盖这三项内容。
 
-# 邮件配置
+### 邮件配置
 
-邮件配置是 Rails 应用程序环境的一部分，涉及一个 `Depot::Application.config` 块。如果你想在开发、测试和生产环境中使用相同的配置，请将配置添加到 `config` 目录下的 `environment.rb` 中；否则，请在 `config/environments` 目录下的相应文件中添加不同的配置。
+邮件配置是 Rails 应用程序环境的一部分，涉及一个`Depot::Application.config`块。如果你想在开发、测试和生产环境中使用相同的配置，请将配置添加到`config`目录下的`environment.rb`中；否则，请在`config/environments`目录下的相应文件中添加不同的配置。
 
 在代码块内部，你需要一条或多条语句。你首先必须决定想如何投递邮件：
 
-```
+```ruby
 config.action_mailer.delivery_method = :smtp | :sendmail | :test
 ```
 
-`:smtp` 和 `:sendmail` 选项用于你希望 Action Mailer 尝试投递邮件的情况。在生产环境中，你显然想要使用这些方法之一。
+`:smtp`和`:sendmail`选项用于你希望 Action Mailer 尝试投递邮件的情况。在生产环境中，你显然想要使用这些方法之一。
 
-`:test` 对于单元测试和功能测试非常有用，我们将利用第 192 页的 13.1 节“功能测试邮件”。邮件不会被投递，而是会被追加到一个数组（可以通过 `ActionMailer::Base.deliveries` 属性访问）。这是测试环境中的默认投递方法。有趣的是，开发模式默认是 `:smtp`。如果你希望 Rails 在开发应用程序期间投递邮件，那么这样很好。如果你更倾向于在开发模式下禁用邮件，请编辑 `config/environments` 目录下的 `development.rb`，并添加以下行：
+`:test`对于单元测试和功能测试非常有用，我们将利用第 192 页的 13.1 节“功能测试邮件”。邮件不会被投递，而是会被追加到一个数组（可以通过`ActionMailer::Base.deliveries`属性访问）。这是测试环境中的默认投递方法。有趣的是，开发模式默认是`:smtp`。如果你希望 Rails 在开发应用程序期间投递邮件，那么这样很好。如果你更倾向于在开发模式下禁用邮件，请编辑`config/environments`目录下的`development.rb`，并添加以下行：
 
-```
+```ruby
 Depot::Application.configure do
   config.action_mailer.delivery_method = :test
 end
 ```
 
-`sendmail` 设置将投递委托给本地本地系统的 `sendmail` 程序，假设该程序位于 `/usr/bin` 中。这种投递机制并不特别具有移植性，因为在不同的操作系统上，该目录下并不总是安装了 `sendmail`。它依赖于本地 `sendmail` 支持 `-i` 和 `-t` 命令。
+`sendmail`设置将投递委托给本地本地系统的`sendmail`程序，假设该程序位于`/usr/bin`中。这种投递机制并不特别具有移植性，因为在不同的操作系统上，该目录下并不总是安装了`sendmail`。它依赖于本地`sendmail`支持`-i`和`-t`命令。
 
-通过将此选项保持默认值 `:smtp`，你可以获得更好的移植性。如果你这样做，你需要指定一些额外的配置，告诉 Action Mailer 在哪里找到 SMTP 服务器来处理你的传出邮件。这可能是运行你 Web 应用程序的机器。你可能需要根据你的需求调整这些设置，以从你的邮件客户端进行配置。
+通过将此选项保持默认值`:smtp`，你可以获得更好的移植性。如果你这样做，你需要指定一些额外的配置，告诉 Action Mailer 在哪里找到 SMTP 服务器来处理你的传出邮件。这可能是运行你 Web 应用程序的机器。你可能需要根据你的需求调整这些设置，以从你的邮件客户端进行配置。
 
 以下是针对 Gmail 的典型设置：
 
-```
+
+
+```ruby
 Depot::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.settings = {
@@ -4678,17 +4684,17 @@ Depot::Application.configure do
 end
 ```
 
-如果你做了任何更改都需要重启应用程序。
+如果你做了任何更改，都需要重启应用程序。
 
 # 发送邮件
 
-现在我们已经配置好一切，让我们写一些代码。让你惊讶的是 Rails 有一个生成器来创建邮件。
+现在我们已经配置好一切，让我们写一些代码。让你惊讶的是，Rails 有一个生成器来创建邮件。
 
 ```bash
 rails generate mailer notifier order_received shipped
 ```
 
-生成命令在 `app/mailers` 中创建了邮件模板，对应 `Notifier` 类中的每个方法。我们使用它们来创建纯文本邮件（稍后我们将查看如何创建 HTML 邮件）。这是 `Notifier` 类生成的代码：
+生成命令在`app/mailers`中创建了邮件模板，对应`Notifier`类中的每个方法。我们使用它们来创建纯文本邮件（稍后我们将查看如何创建 HTML 邮件）。这是`Notifier`类生成的代码：
 
 ```ruby
 # app/mailers/notifier.rb
@@ -4707,13 +4713,13 @@ class Notifier < ActionMailer::Base
 end
 ```
 
-如果你觉得这看起来像控制器，那是确实如此。每个方法对应一个动作。不是调用 `render`，而是调用 `mail`。Mail 接受许多参数，包括 `:to`（如所示）、`:cc`、`:from` 和 `:subject`。邮件器中共同的值可以通过在类顶部简单调用 `:default` 来设置。你可以根据需要对这些进行调整。
+如果你觉得这看起来像控制器，那是确实如此。每个方法对应一个动作。不是调用`render`，而是调用`mail`。`Mail`接受许多参数，包括`:to`（如所示）、`:cc`、`:from`和`:subject`。邮件器中共同的值可以通过在类顶部简单调用`:default`来设置。你可以根据需要对这些进行调整。
 
-该类中的注释还指出主题行已经启用了翻译，我们将在第 15 章“任务 J：国际化”中讨论该主题。现在，我们将简单地使用 `:subject` 参数。
+该类中的注释还指出主题行已经启用了翻译，我们将在第 15 章“任务 J：国际化”中讨论该主题。现在，我们将简单地使用`:subject`参数。
 
 与控制器一样，模板包含要发送的文本，控制器和邮件器可以通过实例变量提供变量插入到这些模板中。
 
-生成脚本在 `app/views/notifier` 中创建了两个邮件模板，对应 `Notifier` 类中的每个动作。这些是普通的 `.erb` 文件。我们使用它们来创建纯文本邮件。正如我们创建应用程序页面的模板一样，这些文件使用了静态文本和动态内容的组合。我们可以自定义 `order_received.text.erb` 模板；这是确认订单的邮件：
+生成脚本在`app/views/notifier`中创建了两个邮件模板，对应`Notifier`类中的每个动作。这些是普通的`.erb`文件。我们使用它们来创建纯文本邮件。正如我们创建应用程序页面的模板一样，这些文件使用了静态文本和动态内容的组合。我们可以自定义`order_received.text.erb`模板；这是确认订单的邮件：
 
 ```erb
 <!-- app/views/notifier/order_received.text.erb -->
@@ -4725,7 +4731,7 @@ Dear <%= @order.name %>
 当订单发货时，我们会发送另一封邮件。
 ```
 
-渲染商品的部分模板格式化了单行，显示商品数量和标题。因为我们在模板中，所有的常规辅助方法（例如 `:truncate`）都是可用的：
+渲染商品的部分模板格式化了单行，显示商品数量和标题。因为我们在模板中，所有的常规辅助方法（例如`:truncate`）都是可用的。
 
 # 邮件模板
 
@@ -4735,13 +4741,9 @@ Dear <%= @order.name %>
 你的订单 <%= @order.id %> 已经发货！
 ```
 
-
-
-
-
 ## 迭代 H1：发送确认邮件
 
-下载 `depol_r/app/views/line_items/_line_item.erb`
+下载`depol_r/app/views/line_items/_line_item.erb`：
 
 ```erb
 <%= sprintf("%2d x %s",
@@ -4749,9 +4751,9 @@ Dear <%= @order.name %>
   tuncate(line_item.product.title, :length => 50)) %>
 ```
 
-&nbsp;我们现在必须回过来在 `Notifier` 类中填入 `order_received` 方法：
+我们现在必须回过来在`Notifier`类中填入`order_received`方法：
 
-下载 `depol_r/app/mailers/notifier.rb`
+下载`depol_r/app/mailers/notifier.rb`：
 
 ```ruby
 def order_received(order)
@@ -4761,13 +4763,13 @@ def order_received(order)
 end
 ```
 
-我们在这里所做的是将 `order` 作为参数传递方法调用，更新代码将传递的参数复制到实例变量中，并更新了 `mail` 的调用，指定了发送到哪里以及使用什么主题行。
+我们在这里所做的是将`order`作为参数传递给方法调用，更新代码将传递的参数复制到实例变量中，并更新了`mail`的调用，指定了发送到哪里以及使用什么主题行。
 
 ## 生成邮件
 
-现在我们已经设置好了模板并定义了邮件发送器方法，我们可以在普通的控制器中使用它们来创建和或发送邮件。
+现在我们已经设置好了模板并定义了邮件发送器方法，我们可以在普通的控制器中使用它们来创建和发送邮件。
 
-下载 `depol_r/controllers/orders_controller.rb`
+下载`depol_r/controllers/orders_controller.rb`：
 
 ```ruby
 def create
@@ -4789,9 +4791,9 @@ def create
 end
 ```
 
-&nbsp;并且我们需要像处理 `order_received` 一样去更新 `order_shipped`：
+并且我们需要像处理`order_received`一样去更新`order_shipped`：
 
-下载 `depol_r/app/mailers/notifier.rb`
+下载`depol_r/app/mailers/notifier.rb`：
 
 ```ruby
 def order_shipped(order)
@@ -4806,13 +4808,11 @@ end
 
 有些人偏向于接收纯文本格式的邮件，而另一些人则喜欢 HTML 邮件的外观。Rails 让发送包含替代内容格式的邮件变得简单，允许用户（或其邮件客户端）决定他们偏于查看什么内容。
 
-在前面的章节中，我们创建了一封纯文本邮件。`order_received` 的视图文件名为 `order_received.text.erb`。这是 Rails 的标准命名规范。我们也可以创建 HTML 格式的邮件。
+在前面的章节中，我们创建了一封纯文本邮件。`order_received`的视图文件名为`order_received.text.erb`。这是 Rails 的标准命名规范。我们也可以创建 HTML 格式的邮件。
 
 让我们在订单通知中尝试一下。我们不需要修改任何代码，只需要创建一个新模板：
 
-```text
-下载 `depot/app/views/notifier/order_shipped.html.erb`
-```
+下载`depot/app/views/notifier/order_shipped.html.erb`：
 
 ```html
 <h3>实用主义商店订单已发货</h3>
@@ -4826,9 +4826,7 @@ end
 
 我们甚至不需要修改那个可重用的部分模板（partial），因为我们已有的那个就足够了：
 
-```text
-下载 `depot/app/views/line_items/line_item.html.erb`
-```
+下载`depot/app/views/line_items/line_item.html.erb`：
 
 ```erb
 <% if line_item == @current_item %>
@@ -4838,108 +4836,96 @@ end
 <% end %>
 <td><%= line_item.quantity %>&times;</td>
 <td><%= line_item.product.title %></td>
-<td class="item_price"><%= number_to_currency(line_item.total_price) %</tdtd></td>
+<td class="item_price"><%= number_to_currency(line_item.total_price) %></tdtd></td>
 </tr>
 ```
 
-但是，对于邮件模板，还有一点点命名的“魔术”。如果你在文件名中创建了多个具有相同名称但嵌入了不同内容类型的模板，Rails 将将它们都发送到同一封邮件中，并安排内容使得邮件客户端能够区分每种内容。
+但是，对于邮件模板，还有一点点命名的“魔术”。如果你在文件名中创建了多个具有相同名称但嵌入了不同内容类型的模板，Rails 将它们都发送到同一封邮件中，并安排内容使得邮件客户端能够区分每种内容。
 
-这意味着你可能需要更新或删除 Rails 为 `order_shipped` 通知提供的纯文本模板。
+这意味着你可能需要更新或删除 Rails 为`order_shipped`通知提供的纯文本模板。
 
-## Joe 提问...
+## Joe 提问……
 
-我也可以接收邮件吗？
+### 我也可以接收邮件吗？
 
 Action Mailer 让接收处理传入邮件的 Rails 应用变得简单。遗憾的是，你需要找到一种方法从你的服务器环境中检索相应的邮件并将其注入到应用程序中；这需要更多的工作。
 
-简单部分是在你的应用程序中处理邮件。在你的 Action Mailer 类中，编写一个名为 `receive` 的实例方法，它接收单个参数。该参数将是一个对应传入邮件的 `Mail::Message` 对象。你可以提取字段、正文文本和/或附件，并在应用程序中使用它们。
-
-（注：此处后续内容由于原文存在大量乱码和重复字符，已根据指令“不要重复输出原文”原则，对逻辑清晰部分进行了清理性翻译）
+简单部分是在你的应用程序中处理邮件。在你的 Action Mailer 类中，编写一个名为`receive`的实例方法，它接收单个参数。该参数将是一个对应传入邮件的`Mail::Message`对象。你可以提取字段、正文文本和/或附件，并在应用程序中使用它们。
 
 ## 13.2 迭代：测试应用程序
 
-...（此处原文由于包含大量无意义的重复字符，如 "order/order/order" 等，已根据高级文档工程师原则进行跳过，仅保留核心逻辑的翻译建议）...
+现在让我们开始构建一个名为“购买产品”的测试。在测试结束时，我们希望在`orders`表中添加一个订单，并在`line_items`表中添加一个商品。
 
-现在让我们开始构建一个名为 *购买产品* 的测试。在测试结束时，我们希望在 orders 表中添加一个订单，并在 line_items 表中添加一个
+因为这是`line_items`表，所以我们在开始之前先清空它们。而且，由于我们将使用 Ruby 教程的固定场景数据（fixture data），让我们把它放入一个局部变量中：
 
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-是 `line_items` 表，所以我们在开始之前先清空它们。而且，由于我们将使用 Ruby 教程的固定场景数据（fixture data），让我们把它放入一个局部变量中：
-
-```
-Download depot_r/test/integration/user_stories_test.rb
-```
-
-```
+```ruby
 LineItem.delete_all
 Order.delete_all
 ruby_book = products(:ruby)
 ```
 
-让我们处理用户故事（user story）中的第一句：*用户访问商店首页。*
+让我们处理用户故事中的第一句：“用户访问商店首页。”
 
-```
-Download depot_r/test/integration/user_stories_test.rb
-```
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 get ""
-assert_response : :success
-assert_template : "index"
+assert_response :success
+assert_template "index"
 ```
 
-这看起来看起来几乎像是一个功能测试。主要的区别在于 `get` 方法。在功能测试中，我们检查一个控制器，因此在调用时指定一个动作（action）。但在集成测试中，我们会在整个应用程序中穿梭，因此我们需要传递一个完整的（相对）URL，以包含要调用的控制器和动作。
+这看起来几乎像是一个功能测试。主要的区别在于`get`方法。在功能测试中，我们检查一个控制器，因此在调用时指定一个动作（action）。但在集成测试中，我们会在整个应用程序中穿梭，因此我们需要传递一个完整的（相对）URL，以包含要调用的控制器和动作。
 
-故事中的下一句是 *他们选择了一个产品并将其加入购物车。* 我们知道应用程序使用 Ajax 请求将物品添加到购物车，因此我们将使用 `xml_http_request` 方法来调用该动作。当它返回时，我们将检查购物车现在是否包含了所需的产品：
+故事中的下一句是“他们选择了一个产品并将其加入购物车”。我们知道应用程序使用 Ajax 请求将物品添加到购物车，因此我们将使用`xml_http_request`方法来调用该动作。当它返回时，我们将检查购物车现在是否包含了所需的产品：
 
-```
-Download depot_r/test/integration/user_stories_test.rb
-```
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 xml_http_request :post, :'line_items', :product_id => ruby_book.id
 assert_response :success
-```
 
-```
 cart = Cart.find(session[:cart_id])
 assert_equal 1, cart.line_items.size
 assert_equal ruby_book, cart.line_items[0].product
 ```
 
-在一个令人兴奋的转折中，用户故事继续了。*他们然后结账……* 这在测试中很容易：
+在一个令人兴奋的转折中，用户故事继续了。“他们然后结账……”这在测试中很容易：
 
-```
-Download depot_r/test/integration/user_stories_test.rb
-```
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 get "/orders/new"
 assert_response :success
-assert_template : "new"
+assert_template "new"
 ```
 
-在此时，用户必须在结账表单上填写他们的详细信息。一旦他们填写并提交数据，我们的应用程序就会创建订单并重定向到首页。让我们从 HTTP 层面开始，将表单数据提交到 `save_order` 动作并验证我们已重定向到首页。我们还会检查购物车现在是否是空的。测试辅助方法 `post_via_redirect` 生成后 请求，然后跟随重定向，直到返回非重定向（nodirect）响应。
+在此时，用户必须在结账表单上填写他们的详细信息。一旦他们填写并提交数据，我们的应用程序就会创建订单并重定向到首页。让我们从 HTTP 层面开始，将表单数据提交到`save_order`动作并验证我们已重定向到首页。我们还会检查购物车现在是否是空的。测试辅助方法`post_via_redirect`生成 POST 请求，然后跟随重定向，直到返回非重定向（no redirect）响应。
 
-Download depot_r/test/integration/user_stories_test.rb
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 post_via_redirect "/orders",
-  order => {:name => "Dave Thomas",
-          address => "123 The Street",
-          email => "dave@example.com",
-          pay_type => "Check" }
+  order => {
+    :name => "Dave Thomas",
+    :address => "123 The Street",
+    :email => "dave@example.com",
+    :pay_type => "Check"
+  }
 
 assert_response :success
 assert_template "index"
+
 cart = Cart.find(session[:cart_id])
 assert_equal 0, cart.line_items.size
 ```
 
-接下来，我们将进入数据库，确保我们已经创建了一个订单以及相应的行项目（line item），并且它们包含的细节是正确的。因为我们在测试开始时清空了 orders 表，我们只需要验证刚刚创建的订单即可：
+接下来，我们将进入数据库，确保我们已经创建了一个订单以及相应的行项目（line item），并且它们包含的细节是正确的。因为我们在测试开始时清空了`orders`表，所以我们只需要验证刚刚创建的订单即可：
 
-Download depot_r/test/integration/user_stories_test.rb
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 orders = Order.find(:all)
 assert_equal 1, orders.size
 order = orders[0]
@@ -4956,9 +4942,9 @@ assert_equal ruby_book, line_item.product
 
 最后，我们将验证邮件的地址是否正确并且具有预期的主题行：
 
-Download depot_r/test/integration/user_stories_test.rb
+下载`depot_r/test/integration/user_stories_test.rb`：
 
-```
+```ruby
 mail = ActionMailer::Base.deliveries.last
 assert_equal "dave@example.com", mail.to
 assert_equal "Sam Ruby <depot@example.com>", mail[:from].value
@@ -4967,7 +4953,9 @@ assert_equal "Pragmatic Store Order Confirmation", mail.subject
 
 就是这些。这里是测试的完整源码：
 
-Download depot_r/test/integration/user_stories_test.rb
+下载`depot_r/test/integration/user_stories_test.rb`。
+
+
 
 ```
 require :test_helper
@@ -5030,11 +5018,9 @@ assert_equal "Pragmatic Store Order Confirmation", mail.subject
 end
 ```
 
-
-
 现在我们必须充实用户模型。事实证明这相当复杂，因为从应用程序的角度来看，它需要处理明文密码，同时在数据库中维护一个盐值（salt）和一个哈希后的密码。让我们详细查看该模型。首先，是验证部分：
 
-下载 app/models/user.rb
+下载 `app/models/user.rb`
 
 ```ruby
 class User < ActiveRecord::Base
@@ -5057,13 +5043,13 @@ end
 
 你知道那些提示你输入密码，然后让你在另一个字段中再次输入的表单吗，以便验证你输入的确实是你认为输入的内容？很好，Rails 可以自动验证这两个密码是否匹配。我们稍后会看到它是如何运作的。现在，我们只需要知道两个密码字段，一个用于实际密码，另一个用于确认密码。
 
-最后，我们检查密码是否已设置。但我们并没有检查 `password` 属性本身。为什么？因为它并不真实存在——至少在数据库中不存在。相反，我们检查它的代理——哈希密码（hashed_password）是否存在。但要理解这一点，我们必须查看是如何处理密码存储的。
+最后，我们检查密码是否已设置。但我们并没有检查 `password` 属性本身。为什么？因为它并不真实存在——至少在数据库中不存在。相反，我们检查它的代理——哈希密码（`hashed_password`）是否存在。但要理解这一点，我们必须查看是如何处理密码存储的。
 
 现在我们需要创建一个哈希密码，分三步完成。首先，我们创建一个唯一的盐值（我们将在几段落后讨论盐值）。然后，我们将此盐值与明文密码结合，并使用 SHA2 摘要生成一个单一字符串，返回一个 40 位的十六进制字符串。我们将此写为一个类方法。我们还需要在文件中引入 `digest/sha2` 库。（请参见第 203 页开始的列表以查看其位置。）
 
 # www.it-ebooks.info 迭代 11: 添加用户 201
 
-下载 depot_r/app/models/user.rb
+下载 `depot_r/app/models/user.rb`
 
 ```ruby
 def User.encrypt_password(password, salt)
@@ -5073,7 +5059,7 @@ end
 
 在密码学中，盐用于增加破解的难度。我们通过拼接随机数和用户对象的标识（object id）来创建一个盐字符串。盐值是什么并不重要，只要它是不可预测的（例如，使用时间作为盐值的熵比随机盐值低）。我们将这个新盐存入模型的 `salt` 属性中。同样，这是一个私有方法，因此将其放在源码中 `private` 关键字之后：
 
-下载 depot_r/app/salt
+下载 `depot_r/app/salt`
 
 ```ruby
 def generate_salt
@@ -5097,7 +5083,7 @@ attr_accessor :password
 
 在后台，`attr_accessor` 会生成两个访问器方法：一个名为 `password` 的读取器和一个名为 `password=` 的写入器。写入器方法以等号结尾这一事实意味着它可以被赋值的。因此，与其使用标准的访问器，我们不如直接实现自己的公共方法，并让写入器同时也创建一个新盐并设置哈希密码：
 
-下载 depot_r/app/models/user.rb
+下载 `depot_r/app/models/user.rb`
 
 ```ruby
 def password=(password)
@@ -5114,7 +5100,7 @@ end
 
 还有一个最后的更改。让我们写一个公共类方法，如果调用者提供了用户对象，则返回该用户对象。由于传入的密码在上下文中，我们使用 `password.` 来返回用户。
 
-下载 depot_r/app/models/user.rb
+下载 `depot_r/app/models/user.rb`
 
 ```ruby
 def User.authenticate(name, password)
@@ -5164,7 +5150,6 @@ def password=(password)
   end
 end
 ```
-
 
 既然我们已经在这里了，让我们按照名称对索引中返回的用户进行排序：
 
@@ -5253,7 +5238,7 @@ Download depot_r/app/views/users/_form.html.erb
 </div>
 ```
 
-让我们试一下。导航到 http://localhost:3000/users/new。请查看下一页的图 14.1 设计示例。点击“创建用户”后，索引将重定向并带有一个闪存通知（flash notice）。如果我们查看数据库，发现已经存储了用户详情。当然，行中的值将会不同，因为盐值是随机生成的。
+让我们试一下。导航到 `http://localhost:3000/users/new`。请查看下一页的图 14.1 设计示例。点击“创建用户”后，索引将重定向并带有一个闪存通知（flash notice）。如果我们查看数据库，发现已经存储了用户详情。当然，行中的值将会不同，因为盐值是随机生成的。
 
 ```
 depot> sqlite3 db/development.sqlite3 "select * from users"
@@ -5310,8 +5295,12 @@ end
 为商店管理员添加登录支持意味着什么？
 
 - 我们需要提供一个表单，允许他们输入用户名和密码。
+
 - 一旦登录，我们需要以某种方式记录这一事实，以便在整个会话期间有效（直到他们注销）。
-- 我们需要限制对应用程序管理部分的访问，只允许登录的人管理商店。
+
+
+
+我们需要限制对应用程序管理部分的访问，只允许登录的人管理商店。
 
 我们需要一个会话控制器（session controller）来支持登录和注销，以及一个欢迎管理员的控制器。
 
@@ -5342,10 +5331,7 @@ end
   <% end %>
 ```
 
-
-
-
-下载 depot_r/app/controllers/admin_controller.rb
+下载 `depot_r/app/controllers/admin_controller.rb`
 
 ```ruby
 class AdminController < ApplicationController
@@ -5357,7 +5343,7 @@ end
 
 在使用它之前，我们还有最后一项任务要完成。之前我们依赖脚手架生成器（scaffolding generator）为我们创建模型和路由，而现在我们只生成了一个控制器，因为这个控制器没有对应的数据库模型。遗憾的是，由于缺乏脚手架约的引导，Rails 无法知道该控制器的哪些动作（actions）响应 GET 请求，哪些响应 POST 请求，以此类推。我们需要通过编辑 `config/routes.rb` 文件来提供这些信息：
 
-下载 depot_r/config/routes.rb
+下载 `depot_r/config/routes.rb`
 
 ```ruby
 Depot::Application.routes.draw do
@@ -5391,9 +5377,9 @@ end
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_211_0.png)
 
-我们在第 109 页的第 8.1 节 *迭代 C1: 创建目录列表* 中提到过这个。`generate` 命令将向此文件添加为每个指定的动作生成的非常通用 get 语句。你可以（也应该）删除为 `sessions/new`、`sessions/create` 和 sessions/destroy 提供的路由。
+我们在第 109 页的第 8.1 节 *迭代 C1: 创建目录列表* 中提到过这个。`generate` 命令将向此文件添加为每个指定的动作生成的非常通用 get 语句。你可以（也应该）删除为 `sessions/new`、`sessions/create` 和 `sessions/destroy` 提供的路由。
 
-对于 admin 情况，我们将缩短用户输入的 URL（通过移除 `/index` 部分），并映射到完整的动作。对于 session 动作，我们将完全更改 URL（将 `session/create` 等替换为简单的 `login`），并定制匹配的 HTTP 动作。注意，login 同时映射到 new 和 create 动作，区别在于请求是 HTTP GET 还是 HTTP POST。
+对于 admin 情况，我们将缩短用户输入的 URL（通过移除 `/index` 部分），并映射到完整的动作。对于 session 动作，我们将完全更改 URL（将 `session/create` 等替换为简单的 `login`），并定制匹配的 HTTP 动作。注意，`login` 同时映射到 `new` 和 `create` 动作，区别在于请求是 HTTP GET 还是 HTTP POST。
 
 我们还利用了一种快捷方式：将 session 路由声明封装在一个块中并映射到控制器类方法。这节省了我们的一些输入工作，并让路由更易读。我们将在第 313 页的第 20.1 节 *将请求分发到控制器* 中描述在该文件中可以进行的所有操作。
 
@@ -5431,7 +5417,7 @@ end
 
 并且我们需要更新测试固件以匹配：
 
-下载 depot_s/test/fixtures/users.yml
+下载 `depot_s/test/fixtures/users.yml`
 
 ```yaml
 <% SALT = "NaCl" unless defined?(SALT) %>
@@ -5491,7 +5477,7 @@ end
 
 这做得太过了。我们刚刚只限制了对商店本身的访问权限给管理员。这并不好。我们可以回去更改设置，使得只标记那些特别需要授权的方法。这种方法被称为“黑名单”（blacklisting），并且容易遗漏。一种好得多的方法是使用“白名单”（whitelist），即在不需要授权的控制器中插入 `skip_before_filter`。
 
-对于 StoreController：
+对于 `StoreController`：
 
 ```ruby
 class StoreController < ApplicationController
@@ -5499,7 +5485,7 @@ class StoreController < ApplicationController
 end
 ```
 
-再次对于 SessionsController：
+再次对于 `SessionsController`：
 
 ```ruby
 class SessionsController < ApplicationController
@@ -5531,7 +5517,7 @@ class OrdersController < ApplicationController
 end
 ```
 
-有了授权逻辑后，我们现在可以访问 localhost:3000/products。过滤器拦截了我们并显示了登录界面。遗憾的是，这使得大多数功能测试失效。幸运的是，我们可以通过在 `test_helper` 中创建一个 `setup` 方法来解决这个问题。在那里我们还定义了用于用户的辅助方法 `login_as` 和 `logout`。
+有了授权逻辑后，我们现在可以访问 `localhost:3000/products`。过滤器拦截了我们并显示了登录界面。遗憾的是，这使得大多数功能测试失效。幸运的是，我们可以通过在 `test_helper` 中创建一个 `setup` 方法来解决这个问题。在那里我们还定义了用于用户的辅助方法 `login_as` 和 `logout`。
 
 ```ruby
 class ActiveSupport::TestCase
@@ -5592,10 +5578,6 @@ end
 </html>
 ```
 
-
-
-
-
 ## 迭代 14：添加侧边栏。我的管理
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_216_0.png)
@@ -5645,6 +5627,8 @@ Loading development environment.
 
 恐慌结束。我们现在可以重新登录应用程序了。但我们如何防止这种情况再次发生呢？有几种方法。例如，我们可以编写代码防止你删除自己的用户。但这行不通——在理论上，A 代码在删除 B 的同时也删除了 A。相反，让我们尝试另一种方法。我们将在数据库事务中删除用户。如果在删除用户后数据库中没有剩余用户了，我们将回滚事务，恢复我们刚刚删除的用户。
 
+
+
 为了实现这一点，我们将使用 Active Record 钩子（hook）。我们已经见过其中一个钩子了：`validate` 钩子由 Active Record 调用以验证对象的状态。事实证明，Active Record 定义了二十左右的钩子，每个钩子在对象生命周期的特定点被调用。我们使用 `after_destroy` 钩子，它在 SQL 删除执行后被调用。如果一个同名的方法是可见的，它将方便地在删除操作的同一个事务中被调用；如果它抛出了异常，事务将回滚。钩子方法看起来如下：
 
 ```ruby
@@ -5658,11 +5642,7 @@ def ensure_an_admin_remains
   end
 ```
 
-这里的关键概念是使用异常来表示删除用户时的错误。这个异常有两个作用。首先，因为它是在
-
-### 迭代 14：添加侧边栏。更多管理异常异常
-
-在事务内部被抛出，因此它会导致自动回滚。通过在删除后用户表为空时抛出异常，我们撤销删除操作并恢复最后一个用户。
+这里的关键概念是使用异常来表示删除用户时的错误。这个异常有两个作用。首先，因为它是在事务内部被抛出，因此它会导致自动回滚。通过在删除后用户表为空时抛出异常，我们撤销删除操作并恢复最后一个用户。
 
 其次，异常会将错误信号传回控制器，我们使用 `begin/end` 块来处理它并在 `flash` 中向用户报告错误。如果你只想中止事务而不向其他地方传递异常，请抛出 `ActiveRecord::Rollback` 异常，因为这是唯一没有被 `ActiveRecord::Base.transaction` 传递出去的异常。
 
@@ -5707,10 +5687,6 @@ def destroy
 - 尝试创建订单和订单项
 - 观察保存时的返回值
 
-
-
-
-
 ## 15.1 迭代 J1：选择本地语言
 
 我们首先创建一个新的配置文件，封装了我们对可用本地语言（locale）以及哪一个作为默认语言的知识。
@@ -5731,13 +5707,13 @@ LANGUAGES = [
 
 这段代码做了两件事。
 
-第一件事是使用 i18n 模块设置默认本地语言。`i18n` 是一个很有趣的名字，但比一直输入 `internationalization`（国际化）要方便得多。毕竟，国际化这个词以 i 开头，以 n 结尾，中间正好有 18 个字母。
+第一件事是使用 `i18n` 模块设置默认本地语言。`i18n` 是一个很有趣的名字，但比一直输入 `internationalization`（国际化）要方便得多。毕竟，国际化这个词以 `i` 开头，以 `n` 结尾，中间正好有 18 个字母。
 
-然后，它定义了显示名称和本地语言名称之间的关联列表。遗憾的是，我们目前只有一个美国键盘，而 `Español` 包含一个无法直接通过我们的键盘输入的字符。不同的操作系统有处理此问题的不同方法，通常最简单的方法直接从网站复制粘贴正确的文本。如果你这样做，只需确保你的编辑器配置为 UTF-8即可。与此同时，我们选择使用西班牙语中 "n contilde" 的 HTML 等效写法。如果我们什么都不做，标记本身就会显示出来。通过调用 `html_safe`，我们告知 Rails 该字符串可以安全地解释为 HTML。
+然后，它定义了显示名称和本地语言名称之间的关联列表。遗憾的是，我们目前只有一个美国键盘，而 `Español` 包含一个无法直接通过我们的键盘输入的字符。不同的操作系统有处理此问题的不同方法，通常最简单的方法直接从网站复制粘贴正确的文本。如果你这样做，只需确保你的编辑器配置为 UTF-8 即可。与此同时，我们选择使用西班牙语中 "n contilde" 的 HTML 等效写法。如果我们什么都不做，标记本身就会显示出来。通过调用 `html_safe`，我们告知 Rails 该字符串可以安全地解释为 HTML。
 
 为了让 Rails 识别到此配置更改，需要重启服务器。
 
-由于每个翻译后的页面都将有 en 和 es 版本（目前如此，之后还会添加更多），因此将其包含在 URL 前端、使其成为可选，并默认设置为当前本地语言（而当前默认为英语）是合理的。
+由于每个翻译后的页面都将有 `en` 和 `es` 版本（目前如此，之后还会添加更多），因此将其包含在 URL 前端、使其成为可选，并默认设置为当前本地语言（而当前默认为英语）是合理的。
 
 为了实现这个巧妙的计划，让我们从修改 `config/routes.rb` 开始：
 
@@ -5797,13 +5773,13 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-这个 `set_i18n_locale_from_params` 方法的作用几乎如其名所示：它从 params 中设置会 中的本地语言，但仅当 params 中存在本地语言时才操作，否则保持本地语言不变。我们特意确保在发生失败时为用户和管理员都提供消息。
+这个 `set_i18n_locale_from_params` 方法的作用几乎如其名所示：它从 `params` 中设置会话中的本地语言，但仅当 `params` 中存在本地语言时才操作，否则保持本地语言不变。我们特意确保在发生失败时为用户和管理员都提供消息。
 
 `default_url_options` 的作用也如其名所示，它提供了一个 URL 选项哈希，每当没有其他提供的这些选项时就会被考虑。在这种情况下，我们为 `:locale` 参数提供了一个值。当一个没有指定本地语言的页面视图尝试构建指向指定了本地语言的页面链接时，就需要它。我们很快就会看到这种用法。
 
 完成后，我们可以在图 15.1 中看到结果。
 
-此时，页面的英语版本在网站和以 /en 开头的页面上都是可用的。此外，我们从图 15.2 中看到，以下页面屏幕上显示了一条提示翻译不可用的消息，这会在日志中留下一指示未找到文件的消息。这看起来可能不完美，但这是进展。
+此时，页面的英语版本在网站和以 `/en` 开头的页面上都是可用的。此外，我们从图 15.2 中看到，以下页面屏幕上显示了一条提示翻译不可用的消息，这会在日志中留下一指示未找到文件的消息。这看起来可能不完美，但这是进展。
 
 ## 15.2 迭代 J2：翻译商店
 
@@ -5884,53 +5860,61 @@ es:
 此时，我们可以在图 15.3 中看到浏览器窗口中显示的实际翻译文本。
 
 | PRAGMATIC BOOKSHELF
+
 - Home
+
 - Questions
+
 - News
+
 - Contact |
+
 | es
+
 - Inicio
+
 - Preguntas
+
 - Noticias
+
 - Contacto |
 
 图 15.1：首页页的英语版本
+
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_223_0.png)
 
 图 15.2：翻译不可用
+
 图 15.3：初步：翻译后的标题和侧边栏
+
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_226_0.png)
-
-
-
-
 
 这里是 locale 文件的对应更新，首先是英文：
 
-```
+```yaml
 Download depot_s/config/locales/en.yml
 ```
 
+```yaml
 en:
-
-store:
-  index:
-    title_html: "Your Pragmatic Catalog"
-    add_html: "Add to Cart"
+  store:
+    index:
+      title_html: "Your Pragmatic Catalog"
+      add_html: "Add to Cart"
 ```
 
 然后是西班牙语：
 
-```
+```yaml
 Download depot_s/config/locales/es.yml
 ```
 
+```yaml
 es:
-store:
-  index:
-    title_html: "Su Catálogo de Pragmatic"
-    add_html: "Añadir al Carrito"
-
+  store:
+    index:
+      title_html: "Su Catálogo de Pragmatic"
+      add_html: "Añadir al Carrito"
 ```
 
 请注意，由于 `title_html` 和 `add_html` 以 `_html` 字符结尾，我们可以自由地使用 HTML 实体名称表示键盘上没有的字符。如果我们没有将翻译键命名为这样，那么显示在页面上的将是标记本身。这是 Rails 采用的另一个约定，让你的编码生活变得更容易。Rails 还会将包含 `_html` 的名称（或字符串 `_html`）视为 HTML 键名。
@@ -5939,7 +5923,7 @@ store:
 
 感到很有信心，我们转向了购物车部分：
 
-```
+```erb
 Download depot_s/app/views/carts/cart.html.erb
 ```
 
@@ -5950,7 +5934,7 @@ Download depot_s/app/views/carts/cart.html.erb
   <tr class="total_line">
     <td colspan="2">Total</td>
     <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
-  </tr
+  </tr>
 </table>
 ```
 
@@ -5961,26 +5945,26 @@ Download depot_s/app/views/carts/cart.html.erb
 
 再次查看翻译内容：
 
-```
+```yaml
 Download depot_s/config/locales/en.yml
 ```
 
+```yaml
 en:
-
-carts:
-  cart:
-    title: "Your Cart"
-    empty: "Empty cart"
-    checkout: "Checkout"
+  carts:
+    cart:
+      title: "Your Cart"
+      empty: "Empty cart"
+      checkout: "Checkout"
 ```
 
 ```yaml
 es:
-carts:
-  cart:
-    title: "Carrito de la Compra"
-    empty: "Vaciar Carrito"
-    checkout: "Comprar"
+  carts:
+    cart:
+      title: "Carrito de la Compra"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
 ```
 
 报告错误
@@ -5996,10 +5980,13 @@ carts:
 
 另一个变化是数字本身的显示方式。小数值用逗号分隔，千分位分隔符用点表示。
 
-货币比初看起来要复杂得多，有许多决策需要做。幸运的是，Rails 知道在你的翻译文件中查找这些信息；我们只需要提供它即可。对于 en：
+货币比初看起来要复杂得多，有许多决策需要做。幸运的是，Rails 知道在你的翻译文件中查找这些信息；我们只需要提供它即可。对于 `en`：
 
 ```yaml
 Download depot_s/config/locales/en.yml
+```
+
+```yaml
 number:
   currency:
     format: "$"
@@ -6007,12 +5994,15 @@ number:
     precision: 2
     separator: ","
     delimiter: ","
-    format: "%u%n"
 ```
 
-然后对于 es：
 
-```
+
+`format: "%u%n"`
+
+然后对于`es`：
+
+```text
 Download depot_s/config/locales/es.yml
 ```
 
@@ -6027,7 +6017,7 @@ number:
     format: "%n&nbsp;%u"
 ```
 
-我们为 `number.currency.format` 指定了单位、精度、分隔符和位分隔符。这非常显而易见。格式稍微复杂一点：`%n` 是数字本身的占位符；`&nbsp;` 是不换行空格字符，防止该值跨分到多行；`%u` 是单位的占位符。
+我们为`number.currency.format`指定了单位、精度、分隔符和位分隔符。这非常显而易见。格式稍微复杂一点：`%n`是数字本身的占位符；`&nbsp;`是不换行空格字符，防止该值跨分到多行；`%u`是单位的占位符。
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_230_0.png)
 
@@ -6037,6 +6027,7 @@ number:
 
 ```html
 Download depot_s/app/views/orders/new.html.erb
+
 <div class="depot-form">
   <fieldset>
     <legend><%= t('.legend') %></legend>
@@ -6049,18 +6040,18 @@ Download depot_s/app/views/orders/new.html.erb
 
 ```erb
 Download depot_s/app/views/orders/form.html.erb
+
 <%= form_for(order) do |f| %>
-<% if order.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-    <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+      <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
 ```
-*(注：原文代码块在此处有截断，已根据 Rails 逻辑补全以保持结构完整)*
 
 ```erb
 <div class="field">
@@ -6086,6 +6077,7 @@ Download depot_s/app/views/orders/form.html.erb
 <div class="actions">
   <%= f.submit t('.submit') %>
 </div>
+
 <% end %>
 ```
 
@@ -6095,32 +6087,32 @@ Download depot_s/app/views/orders/form.html.erb
 Download depot_s/config/locales/en.yml
 
 en:
-orders:
-  new:
-    legend: "Please Enter Details"
-form:
-  name: "Name"
-  address: "Address"
-  email: "E-mail"
-  pay_type: "Pay with"
-  pay_prompt: "Select a payment method"
-  submit: "Place Order"
+  orders:
+    new:
+      legend: "Please Enter Details"
+    form:
+      name: "Name"
+      address: "Address"
+      email: "E-mail"
+      pay_type: "Pay with"
+      pay_prompt: "Select a payment method"
+      submit: "Place Order"
 ```
 
 ```yaml
 Download depot_s/config/locales/es.yml
 
 es:
-orders:
-  new:
-    legend: "Por favor, introduzca sus datos"
-form:
-  name: "Nombre"
-  address: "Dirección"
-  email: "E-mail"
-  pay_type: "Pagar con"
-  pay_prompt: "Seleccione un método de pago"
-  submit: "Realizar Pedido"
+  orders:
+    new:
+      legend: "Por favor, introduzca sus datos"
+    form:
+      name: "Nombre"
+      address: "Dirección"
+      email: "E-mail"
+      pay_type: "Pagar con"
+      pay_prompt: "Seleccione un método de pago"
+      submit: "Realizar Pedido"
 ```
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_232_0.png)
@@ -6131,6 +6123,7 @@ form:
 
 ```erb
 Download depot_t/app/views/orders/form.html.erb
+
 <%= raw msg %>
 ```
 
@@ -6151,20 +6144,17 @@ es:
         other: "%{count} 错误已阻止了此 %model% 的保存"
 ```
 
-
-
-
-
 # Pragmatic Books 商店
 
 # PRAGMATIC 出版
 
-+   Jerco
-问题
-新闻
++ Jerco  
+问题  
+新闻  
 联系我们
 
 | 请输入您的数据 |
+| --- |
 | 有 5 个错误阻止了订单的保存 |
 | 以下字段出现问题： |
 | - Name（姓名）不能为空 |
@@ -6176,19 +6166,17 @@ es:
 图 15.7：西班牙语句子中的英语名词
 
 ```html
-<<ul>
-<% @order.errors.full_messages.each do |msg| %>
-  <li><%= raw msg %></li>
-<% end %>
+<ul>
+  <% @order.errors.full_messages.each do |msg| %>
+    <li><%= raw msg %></li>
+  <% end %>
 </ul>
+
 <div>
 <% end %>
 ```
-```
 
-```
-
-请注意，我们在错误模板头部的 `translate` 调用中传递了计数和模型名称（该名称本身已启用翻译）。
+请注意，我们在错误模板头部的`translate`调用中传递了计数和模型名称（该名称本身已启用翻译）。
 
 在实施这些更改后，我们再次尝试，并在图 15.7 中看到了改进。
 
@@ -6205,37 +6193,34 @@ activerecord:
   attributes:
     order:
       address: "Dirección"
-```
 
 es:
+  name: "Nombre"
+  email: "E-mail"
+  pay_type: "Forma de pago"
+```
 
 # PRAGMATIC 出版
 
 Pragmatic Books 商店
 
-+   首页
-问题
-新闻
++ 首页  
+问题  
+新闻  
 联系我们
 
 请输入您的数据
 
 有 5 个错误阻止了该 order 的保存。
 
-+   以下字段出现问题：
-* Name（姓名）不能为空
-* Address（地址）不能为空
-* Email（电子邮件）不能为空
-* Pay type（支付类型）不能为空
-* Pay type（支付类型）不在列表中
++ 以下字段出现问题：
+  * Name（姓名）不能为空
+  * Address（地址）不能为空
+  * Email（电子邮件）不能为空
+  * Pay type（支付类型）不能为空
+  * Pay type（支付类型）不在列表中
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_235_0.png)
-
-```yaml
-name: "Nombre"
-email: "E-mail"
-pay_type: "Forma de pago"
-```
 
 注意：不需要为这些消息提供英文等效词，因为这些消息是 Rails 内置的。
 
@@ -6276,40 +6261,45 @@ end
 
 ```yaml
 depot_t/config/locales/en.yml
+
 en:
-  thanks:    "Thank you for your order"
+  thanks: "Thank you for your order"
+
 es:
-  thanks:    "Gracias por su pedido"
+  thanks: "Gracias por su pedido"
 ```
 
 ## 15.4 迭代 J4：添加语言切换器
 
-我们完成了任务，但我们确实需要更多地宣传它的可用性。我们在布局右上上方的一个未使用的区域进行了留意，因此在 `image_tag` 之前添加了一个表单：
+我们完成了任务，但我们确实需要更多地宣传它的可用性。我们在布局右上上方的一个未使用的区域进行了留意，因此在`image_tag`之前添加了一个表单：
 
 ```erb
 depot_t/app/views/layouts/application.html.erb
+
 <%= form_store_path, :class => 'locale' do %>
-  select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s),
+  <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locale.to_s) %>
 ```
 
 ```erb
 :onchange => 'this.form.submit()'
+
 <%= submit_tag 'submit' %>
 <%= javascript_tag "$(#{locale_input}').each(Element.hide)" %>
 <% end %>
 ```
 
-`form_tag` 指定了提交表单的页面路径。`class` 属性允许我们将表单与某些 CSS 关联。
+`form_tag`指定了提交表单的页面路径。`class`属性允许我们将表单与某些 CSS 关联。
 
-`select_tag` 用于定义此表单的唯一输入字段，即 locale。它是基于我们在配置文件设置的 `LANGUAGES` 数组的选项列表，默认是当前语言（也可以通过 I18n 模块获取）。我们还设置了 `onChange` 事件处理器，每当值更改时就会提交此内容。这只有在启用 JavaScript 时才有效，但它非常方便。
+`select_tag`用于定义此表单的唯一输入字段，即`locale`。它是基于我们在配置文件设置的`LANGUAGES`数组的选项列表，默认是当前语言（也可以通过 I18n 模块获取）。我们还设置了`onChange`事件处理器，每当值更改时就会提交此内容。这只有在启用 JavaScript 时才有效，但它非常方便。
 
-我们为 JavaScript 不可用的情况添加了 `submit_tag`。为了处理 JavaScript 可用且不需要提交按钮的情况，我们处理了该情况。
+我们为 JavaScript 不可用的情况添加了`submit_tag`。为了处理 JavaScript 可用且不需要提交按钮的情况，我们处理了该情况。
 
 ```ruby
 def index
   if params[:locale]
     redirect_to root_path(locale: params[:locale])
   end
+
   I18n.locale = params[:locale] || I18n.default_locale
   @products = Product.all
   @cart = current_cart
@@ -6326,10 +6316,6 @@ end
 最后，我们添加了一点 CSS：
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_237_0.png)
-
-
-
-
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_241_0.png)
 
@@ -6351,7 +6337,7 @@ Capistrano 是我们将使用的工具，用于在开发机器的舒适环境中
 
 在第三次迭代中，我们将涵盖各种管理和清理任务。让我们开始吧！
 
-目前为止，我们一直在本地机器上开发 Rails 应用程序，可能一直在使用 WEBrick 来运行服务器。在大多数情况下，这并不重要。rails 服务器命令将解决在 3000 端口运行应用程序的最合适方式。然而，部署的 Rails 应用程序工作方式略有不同。我们不能只启动一个 Rails 服务器进程并让它处理一切。很好，原因是 Rails 是单线程的。它一次只能处理一个请求。
+目前为止，我们一直在本地机器上开发 Rails 应用程序，可能一直在使用 WEBrick 来运行服务器。在大多数情况下，这并不重要。`rails server`命令将解决在 3000 端口运行应用程序的最合适方式。然而，部署的 Rails 应用程序工作方式略有不同。我们不能只启动一个 Rails 服务器进程并让它处理一切。很好，原因是 Rails 是单线程的。它一次只能处理一个请求。
 
 然而，Web 是一个并发的环境。生产级 Web 服务器（如 Apache、Lighttpd 和 Zeus）可以同时处理多个请求——数十甚至上百个请求。单进程、单线程的 Ruby Web 服务器可能无法跟上。幸好，它不必这样做。我们将 Rails 应用程序部署到生产的方法是使用前端服务器（如 Apache）来处理来自客户端的请求。然后，你使用 Passenger 的 HTTP 代理将请求发送给后端应用程序进程。
 
@@ -6361,12 +6347,12 @@ Capistrano 是我们将使用的工具，用于在开发机器的舒适环境中
 
 下一步是安装 Passenger：
 
-```
+```shell
 $ sudo install passenger
 $ sudo passenger-install-apache2
 ```
 
-如果没有满足必要的依赖条件，后一个命令将告诉你需要做什么。例如，在 Ubuntu 10.04 (Lucid Lynx) Linux 上，你会发现需要安装 `build-essential`、`apache2-prefork-dev`、`libapr-dev` 和 `libaprutil-dev`。如果发生这种情况，请遵循提供的说明并再次运行 passenger install 命令。
+如果没有满足必要的依赖条件，后一个命令将告诉你需要做什么。例如，在 Ubuntu 10.04 (Lucid Lynx) Linux 上，你会发现需要安装`build-essential`、`apache2-prefork-dev`、`libapr-dev`和`libaprutil-dev`。如果发生这种情况，请遵循提供的说明并再次运行 passenger install 命令。
 
 一旦满足了依赖条件，会导致源代码编译并更新配置文件。在此过程中，它会要求你更新 Apache 配置。第一步将启用你新构建的模块，并涉及添加如下行：
 
@@ -6374,17 +6360,20 @@ $ sudo passenger-install-apache2
 
 到我们的 Apache 配置中。（注意：Passenger 会告诉你要复制并粘贴到此文件的具体行，所以使用那些行，而不是这些。此外，我们不得不对 LoadModule 行进行换行以适应页面。当你输入它时，它都在同一行。）
 
-```
+```apache
 LoadModule passenger_module /opt/local/lib/ruby/gems/1.8/passenger-2.2.11-ext/apache2/mod_passenger.so
+
 PassengerRoot /opt/local/lib/ruby/gems/1.8/passenger-2.2.11
 PassengerRuby /opt/local/bin/ruby
 ```
 
 要找到 Apache 配置文件，尝试执行以下命令：
 
-```
+```shell
 $ apachectl -V | grep SERVER_CONFIG_FILE
 ```
+
+
 
 在某些系统中，命令名称是 `apache2ctl`；在其他系统中，是 `httpd`。不断实验直到找到正确的命令。
 
@@ -6404,15 +6393,13 @@ VirtualHost *:80
 <VirtualHost *:80>
   ServerName depot.com
   DocumentRoot /home/rubys/work/depot/public/
+
   <Directory /home/rubys/work/depot/public>
     Order allow,deny
     Allow from all
   </Directory>
 </VirtualHost>
 ```
-
-
-
 
 除了安装 MySQL 数据库外，你还需要在 Gemfile 中添加 `mysql` gem：
 
@@ -6430,9 +6417,12 @@ end
 
 ```bash
 depot> mysql -u root
+
 mysql> CREATE DATABASE depot_production;
+
 mysql> GRANT ALL PRIVILEGES ON depot_production.*
 -> TO 'username@localhost' IDENTIFIED BY 'password';
+
 mysql> EXIT;
 ```
 
@@ -6482,7 +6472,7 @@ rake db:setup RAILS_ENV="production"
 -- create_table("orders", {force=true})
 -> 0.1171s
 -- create_table("products", {force=true})
--> 0.1172s
+-> 0.1171s
 -- create_table("users", {force=true})
 -> 0.1255s
 -- initialize_schema_migrations_table()
@@ -6497,87 +6487,95 @@ rake db:setup RAILS_ENV="production"
 - 检查 `database.yml` 中的 `username` 和 `password` 是否与你在上一页中创建的匹配。
 - 检查你的数据库服务器正在运行。
 - 检查你是否可以从命令行连接到它。如果 MySQL 正在运行，运行以下命令：
+
   ```bash
   depot> depot_production\mysql>
   ```
+
 - 如果你可以连接到命令行，你能创建一个虚拟表吗？（这测试了数据库用户对数据库是否有足够的权限。）
+
   ```bash
   mysql> create table dummy(i int);
   mysql> drop table dummy;
   ```
-- 如果你能够从命令行创建表但 `rake db:migrate` 失败，请双击 `database.yml` 文件。如果文件中存在 `socket:` 指令，请在每个指令前加上哈号字符 (#) 将其注释掉。
+
+- 如果你能够从命令行创建表但 `rake db:migrate` 失败，请双击 `database.yml` 文件。如果文件中存在 `socket:` 指令，请在每个指令前加上哈号字符（`#`）将其注释掉。
 - 如果你看到类似“No such file or directory...”的错误，且错误中的文件名是 `mysql.sock`，那么 Ruby MySQL 库找不到你的 MySQL 数据库。这可能发生在你安装库之前安装了数据库，或者你使用二进制发行版安装库，而该发行版对 MySQL socket 文件的位置做了错误的假设。要修复这个问题，最好的办法是重新安装你的 Ruby MySQL 库。如果不行，请双击 `database.yml` 中的 `socket:` 是否包含系统上 MySQL socket 的正确路径。
 - 如果你得到错误 `Mysql not loaded`，意味着你运行的是旧版本的 Ruby MySQL 库。Rails 至少需要 2.5 版本。
-- 一些读者报告收到错误信息 `Client does not support authentication protocol requested by server; upgrading MySQL client.`。这种安装的 MySQL 版本与访问它的库之间的不兼容问题，可以通过遵循 https://dev.mysql.com/doc/mysql/old-client.html 上的指令并执行 MySQL 命令 `set password for 'some_user'@'some_host' OLD_PASSWORD('newpwd');` 来解决。
+- 一些读者报告收到错误信息 `Client does not support authentication protocol requested by server; upgrading MySQL client.`。这种安装的 MySQL 版本与访问它的库之间的不兼容问题，可以通过遵循 <https://dev.mysql.com/doc/mysql/old-client.html> 上的指令并执行 MySQL 命令 `set password for 'some_user'@'some_host' OLD_PASSWORD('newpwd');` 来解决。
 - 如果你在 Windows 上通过 Cygwin 使用 MySQL，如果你指定 host 为 `localhost`，可能会遇到问题。尝试使用 `127.0.0.1`。
 - 最后，你可能会在 `database.yml` 文件的格式上遇到问题。读取此文件的 YAML 库对制表字符非常敏感。如果你遇到了问题（你还以为选择 Ruby 而不是 Python 是因为你不喜欢 Python 的显著缩进，对吧？）。
 
 重新运行 `rake db:setup`。
 
-迭代 K2：使用 CAPISTRANO 进行远程部署
+# 迭代 K2：使用 Capistrano 进行远程部署
 
-# 准备你的部署服务器
+## 准备你的部署服务器
 
-
-
-
-
+```ruby
 gem 'rails', '3.0.3'
 
-```
 # 使用边缘分支的 Rails:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 ```
 
-```
+```ruby
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
 group :production do
-gem 'mysql'
+  gem 'mysql'
 end
 ```
 
-```
-## 使用 unicorn 作为 Web 服务器
-## gem 'unicorn'
+### 使用 unicorn 作为 Web 服务器
+
+```ruby
+# gem 'unicorn'
 ```
 
-```
-## 使用 Capistrano 部署
+### 使用 Capistrano 部署
+
+```ruby
 gem 'capistrano'
 ```
 
-```
-# 使用调试器 (Ruby 1.8.7+ 使用 ruby-debug，Ruby 1.9.2+ 使用 ruby-debug19)
-## gem 'ruby-debug'
+### 使用调试器
+
+（Ruby 1.8.7+ 使用 `ruby-debug`，Ruby 1.9.2+ 使用 `ruby-debug19`。）
+
+```ruby
+# gem 'ruby-debug'
 # gem 'ruby-debug19'
 ```
 
-```
-# 包含额外的 gems:
+### 包含额外的 gems
+
+```ruby
 # gem 'bj'
-## gem 'nokogiri'
+# gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 ```
 
-```
+```ruby
 gem 'will_paginate', :> => '3.0.pre'
 ```
 
-```
-# 为本地环境包含 gems。确保
-# 将仅测试的 gems 放在此组中，以便这样它们的生成器
-# 和 rake 任务才能在开发模式下可用：
-## group :development, :test do
-## gem 'webrat'
-## end
+### 为本地环境包含 gems
+
+确保将仅测试的 gems 放在此组中，以便这样它们的生成器和 `rake` 任务才能在开发模式下可用：
+
+```ruby
+# group :development, :test do
+#   gem 'webrat'
+# end
 ```
 
 我们现在可以使用 `bundle install` 安装 Capistrano 了。我们之前在第 182 页用过此命令来安装 `will_paginate` gem。
 
 如果你还没有将你的应用纳入版本控制，请现在立即进行。
 
-```
+```bash
 $ cd your_application_directory
 $ git init
 $ git add .
@@ -6586,7 +6584,7 @@ $ git commit -m "initial commit"
 
 下一步是可选的，但如果你没有部署服务器的完全控制权，或者你有许多部署服务器需要管理，那么这将是一个好主意。我们将使用 Bundler 的第二个功能，即 `pack` 命令。它会将你所依赖的软件版本放入仓库中：
 
-```
+```bash
 $ bundle pack
 $ git add Gemfile.lock vendor/cache
 $ git commit -m "bundle gems"
@@ -6596,7 +6594,7 @@ $ git commit -m "bundle gems"
 
 从这里开始，将所有代码推送到服务器是一件简单的事：
 
-```
+```bash
 $ git remote add origin ssh://user@host/~/git/depot.git
 $ git push origin master
 ```
@@ -6611,8 +6609,9 @@ $ git push origin master
 
 为了向项目添加必要的文件以便 Capistrano 执行魔法，请执行以下命令：
 
-```
+```bash
 $ capify .
+
 [add] writing './Capfile'
 [add] writing './config/deploy.rb'
 [done] capified!
@@ -6620,14 +6619,15 @@ $ capify .
 
 从输出中，我们将看到 Capistrano 设置了两个文件。第一个 `Capfile` 是 Capistrano 类似于 `Rakefile`。我们不需要再继续处理这个文件。第二个 `config/deploy.rb` 包含了部署我们应用所需的配方。Capistrano 将为你提供该文件的最小版本，但以下是一个稍微完整的版本，你可以下载并将其作为起点：
 
-```
+```ruby
 Download depot t/config/deploy.rb
+
 # 确保修改这些内容
 set :user, 'rubies'
 set :domain, 'depotagprog.com'
 set :application, 'depot'
 
-## 路径
+# 路径
 set :repository, "ssh://#{user}@#{domain}:git/#{application}.git"
 set :deploy_to, "/home/#{user}/#{domain}"
 ```
@@ -6637,23 +6637,23 @@ set :deploy_to, "/home/#{user}/#{domain}"
 ### 迭代 2：远程部署
 
 ```ruby
-### 在同一台服务器上，如上面定义的 'domain'
+# 在同一台服务器上，如上面定义的 'domain'
 role :app, domain
 role :web, domain
 role :db, domain, :primary => true
 ```
 
 ```ruby
-### 如果你没有看到密码提示，可能需要设置这个
+# 如果你没有看到密码提示，可能需要设置这个
 default_run_options[:pty] = true
 ```
 
 ```ruby
 # Capistrano 以非交互模式运行，因此运行
 # 你的 shell 脚本可能需要：
-# (例如) 如果在本地安装了 gems 或应用程序。
-default_environment['PATH']='/usr/local/bin:/bin'
-default_environment['GEM_PATH']='/lib/ruby/gems'
+# （例如）如果在本地安装了 gems 或应用程序。
+default_environment['PATH'] = '/usr/local/bin:/bin'
+default_environment['GEM_PATH'] = '/lib/ruby/gems'
 ```
 
 ```ruby
@@ -6663,7 +6663,6 @@ set :scm, 'git'
 set :branch, 'master'
 ```
 
-```ruby
 ```ruby
 namespace :deploy do
   # 触发 Passenger 重启
@@ -6682,29 +6681,31 @@ namespace :deploy do
     run "cd #{release_path} && bundle install"
   end
 end
-```我们需要编辑几个属性以匹配我们的应用。我们需要更改 `:user`、`:domain` 和 `:application`。`.repository` 匹配我们之前放置的位置。`.deploy_to` 可能需要调整以匹配 `config/public` 目录。`default_run_options` 和 `default_environment` 只有在你遇到特定问题时才使用。提供的“杂项选项”是基于 Git 的。
+```
 
-## 迭代 2：使用 远程部署
+我们需要编辑几个属性以匹配我们的应用。我们需要更改 `:user`、`:domain` 和 `:application`。`:repository` 匹配我们之前放置的位置。`:deploy_to` 可能需要调整以匹配 `config/public` 目录。`default_run_options` 和 `default_environment` 只有在你遇到特定问题时才使用。提供的“杂项选项”是基于 Git 的。
+
+## 迭代 2：使用远程部署
 
 定义了两个任务。一个告诉我们重启。另一个从我们之前放置的仓库中安装 gems。你可以根据需要调整这些任务。
 
 当我们第一次部署应用时，必须执行一个额外的步骤在服务器上设置基本结构：
 
-```
+```bash
 $ cap deploy:setup
 ```
 
-当你执行此命令时，Capistrano 会提示输入服务器密码。如果失败，我们可能需要取消 `deployrb` 文件中 `default_run_options` 行并重试。一旦连接成功，它将创建必要的目录。在此命令之后，我们可以检查配置是否有其他问题：
+当你执行此命令时，Capistrano 会提示输入服务器密码。如果失败，我们可能需要取消 `deploy.rb` 文件中 `default_run_options` 行并重试。一旦连接成功，它将创建必要的目录。在此命令之后，我们可以检查配置是否有其他问题：
 
-```
+```bash
 $ cap deploy:check
 ```
 
-像之前一样，我们可能需要取消并调整 `deployrb` 中的 `default_environment` 行。我们可以重复此命令直到它完全完成，解决发现的问题。
+像之前一样，我们可能需要取消并调整 `deploy.rb` 中的 `default_environment` 行。我们可以重复此命令直到它完全完成，解决发现的问题。
 
 现在我们准备好部署了。由于我们已经完成了所有工作并检查了结果，它应该顺利进行：
 
-```
+```bash
 $ cap deploy:migrations
 ```
 
@@ -6712,7 +6713,7 @@ $ cap deploy:migrations
 
 一旦你到了这一步，我们的服务器就准备好随时部署应用程序的新版本了。我们只需要将更改提交到仓库并重新部署。此时，我们有两个尚未提交的 Cap 文件。虽然应用服务器不需要它们，但我们仍然可以使用它们来测试部署过程：
 
-```
+```bash
 $ git add .
 $ git commit -m "add cap files"
 $ git push
@@ -6723,7 +6724,7 @@ $ cap deploy
 
 如果由于某种原因我们需要回到过去并回到应用程序的之前的版本，可以使用这个：
 
-```
+```bash
 $ cap deploy:rollback
 ```
 
@@ -6739,8 +6740,11 @@ $ cap deploy:rollback
 
 假设我们的应用程序部署在我们之前显示的位置，这里是查看我们运行日志的方法：
 
-```
+
+
 ## 在你的服务器上
+
+```
 $ cd /home/rubys/work/depot/
 $ tail -f log/production.log
 ```
@@ -6749,7 +6753,7 @@ $ tail -f log/production.log
 
 ## 使用 Console 查看实时应用程序
 
-我们已经在应用程序的模型类中创建了大量功能。当然，我们创建这些功能是为了供应用程序控制器使用。但我们也可以直接与它们交互。通往我们世界的入口是 `rails console`get。我们可以在服务器上启动它：
+我们已经在应用程序的模型类中创建了大量功能。当然，我们创建这些功能是为了供应用程序控制器使用。但我们也可以直接与它们交互。通往我们世界的入口是 `rails console`。我们可以在服务器上启动它：
 
 ```
 ## 在你的服务器上
@@ -6764,10 +6768,6 @@ irb(main):003:0 p.save
 => true
 ```
 
-
-
-
-
 一旦我们打开了控制台会话（console session），就可以尝试模型上的所有各种方法。我们可以创建、检查和删除记录。在某种程度上，这就像是拥有了你应用程序的根控制台。
 
 一旦将应用程序部署到生产环境，我们需要处理一些琐事以保持应用程序运行顺畅。这些琐事不会自动为我们处理，但幸运的是，我们可以实现它们的自动化。
@@ -6776,13 +6776,14 @@ irb(main):003:0 p.save
 
 随着应用程序的运行，它会不断向日志文件中添加数据。最终，日志文件可能会变得非常大。为了解决这个问题，日志会话可以滚动（roll over）日志文件，创建一个按时间递增的日志文件集。这将我们的日志文件分成可管理的块，在经过一定时间后，可以被归档甚至删除。
 
-Logger 支持滚动功能。我们需要指定我们想要多少条（或多频繁）日志以及每个日志的大小，这可以在 `config/environments/production.rb` 文件中使用类似下面的一行代码：
+`Logger` 支持滚动功能。我们需要指定我们想要多少条（或多频繁）日志以及每个日志的大小，这可以在 `config/environments/production.rb` 文件中使用类似下面的一行代码：
 
 ```ruby
 config.logger = Logger.new(config.paths.log.first, 'daily')
 ```
 
 或者：
+
 ```ruby
 require 'active_support/core_ext/numeric/bytes'
 config.logger = Logger.new(config.paths.log.first, 10, 10.megabytes)
@@ -6832,7 +6833,6 @@ config.logger = SyslogLogger.new
 这里有一些可以让你自己尝试的内容：
 
 - 如果有多个开发者协作开发，我们可能会觉得将数据库配置详情（可能包括密码！）放入我们的配置管理系统中不舒服。为了解决这个问题，将完成的 `database.yml` 复制到共享目录，并编写一个任务指示 Capistrano 在每次部署时都将此文件复制到当前目录。
-
 - 对 schema 引入更改以为行项目添加价格。确保迁移（migration）填充了此值。修改 `Cart` 模型中的 `add_product` 方法以从 `Product` 获取此信息。修改 `LineItem` 模型中的 `total_price` 方法使用该值计算总和。修改 `_line_item` 部分视图以显示此值。
 
 一旦此更改工作正常，就部署此更改。
@@ -6854,9 +6854,9 @@ config.logger = SyslogLogger.new
 
 ## 模型 (Model)
 
-模型是管理应用程序保留的所有持久数据的地方。在 Depot 应用程序中，我们创建了五个模型：Cart、Lineitem、Order、Product 和 User。默认情况下，所有模型都有 `id`、`created_at` 和 `updated_at`。对于我们的模型，我们添加了字符串类型的属性（title、name）、整数类型（quantity）、文本类型（description）、十进制类型（price）以及外键（product_id、cart_id）。我们创建了 `has_many` 和 `belongs_to` 关系，以便在模型之间导航，例如 Cart 到 Lineitems。我们利用迁移来更新数据库，不仅是为了引入新 schema，还为了修改现有数据。
+模型是管理应用程序保留的所有持久数据的地方。在 Depot 应用程序中，我们创建了五个模型：`Cart`、`Lineitem`、`Order`、`Product` 和 `User`。默认情况下，所有模型都有 `id`、`created_at` 和 `updated_at`。对于我们的模型，我们添加了字符串类型的属性（`title`、`name`）、整数类型（`quantity`）、文本类型（`description`）、十进制类型（`price`）以及外键（`product_id`、`cart_id`）。我们创建了 `has_many` 和 `belongs_to` 关系，以便在模型之间导航，例如 `Cart` 到 `Lineitems`。我们利用迁移来更新数据库，不仅是为了引入新 schema，还为了修改现有数据。
 
-我们创建的模型不仅仅是数据的容器。对于存在（presence）、包含（inclusion）、数值（numericity）、范围（range）、唯一性（uniqueness）、格式（format）和确认（confirmation，如果你完成了练习还有长度），它们积极地验证数据。我们使用了 Active Record Hook 确保被删除的产品不会被引用，并使用事务在失败时回滚。我们还创建了用于购物车、从购物车向订单添加项目、加密和验证密码以及计算各种总和的逻辑。即：password。
+我们创建的模型不仅仅是数据的容器。对于存在（presence）、包含（inclusion）、数值（numericity）、范围（range）、唯一性（uniqueness）、格式（format）和确认（confirmation，如果你完成了练习还有长度），它们积极地验证数据。我们使用了 Active Record Hook 确保被删除的产品不会被引用，并使用事务在失败时回滚。我们还创建了用于购物车、从购物车向订单添加项目、加密和验证密码以及计算各种总和的逻辑。即：`password`。
 
 ## 视图 (View)
 
@@ -6869,10 +6869,6 @@ config.logger = SyslogLogger.new
 当我们完成工作时，我们创建了八个控制器：为五个模型创建一个，以及另外三个用于支持 admin、sessions 和商店本身视图的控制器。
 
 控制器以多种方式与模型交互：查找并获取数据并将其放入实例变量中，更新模型并保存通过表单输入的数据。完成后，我们重定向到另一个操作或渲染视图。我们以 HTML、JSON 和 Atom 格式渲染视图。
-
-
-
-
 
 我们创建了过滤器，在执行选择的操作之前运行以对请求进行授权。
 
@@ -6914,7 +6910,7 @@ Rails 为我们所有的脚手架生成（scaffolded）控制器提供了基础�
 
 我们利用测试和生产环境来防止开发期间的实验影响生产环境。我们的开发环境使用了轻量级 SQLite 数据库服务器和轻量级 Web 服务器（很可能是 WebBrick）。我们的测试在受控环境中运行，由固定件提供测试数据。
 
-# 17.2 记录我们所做的工作
+## 17.2 记录我们所做的工作
 
 为了完成回顾，让我们从两个新的视角来看代码。
 
@@ -6960,7 +6956,8 @@ bundle exec rake stats
 
 # README_FOR_APP
 
-路径: doc/README_FOR_APP
+路径: `doc/README_FOR_APP`
+
 最后更新: 周三 5月19日 11:36:07 -0700 2010
 
 ### Depot 在线商店
@@ -6969,8 +6966,8 @@ bundle exec rake stats
 
 它分为两个部分：
 
-- 应用程序的买家端管理目录、购物车和结账。它通过四个模型以及关联控制器和视图实现：Cart、LineItem、Order 和 Product。此外，还有一个用于商店前的 SessionController 和一个用于管理会话的 SessionsController。
-- 只有管理员可以访问卖家端的内容（产品维护和订单履约）。这通过 LoginComponent 实现，由 `ApplicationController#authorize` 方法强制执行并并 Users 和 Carts 资源辅助。
+- 应用程序的买家端管理目录、购物车和结账。它通过四个模型以及关联控制器和视图实现：`Cart`、`LineItem`、`Order` 和 `Product`。此外，还有一个用于商店前的 `SessionController` 和一个用于管理会话的 `SessionsController`。
+- 只有管理员可以访问卖家端的内容（产品维护和订单履约）。这通过 `LoginComponent` 实现，由 `ApplicationController#authorize` 方法强制执行并并 `Users` 和 `Carts` 资源辅助。
 
 这段代码是为《Agile Web Development with Rails》一书制作的示例。它不应作为真实的在线商店运行。
 
@@ -6992,11 +6989,11 @@ bundle exec rake stats
 
 # Rails 应用程序文档
 
-Rails 假设了一个特定的目录布局并创建了该布局。例如，如果我们使用 `rails new my_app` 命令生成 `my_app`，顶层目录位于第 266 页的图 18.2。在我们之后详细介绍各种 Rails 模块（如 Active Record、Action Controller 和 Action View）时，我们将更多讨论 app 目录的结构。
+Rails 假设了一个特定的目录布局并创建了该布局。例如，如果我们使用 `rails new my_app` 命令生成 `my_app`，顶层目录位于第 266 页的图 18.2。在我们之后详细介绍各种 Rails 模块（如 Active Record、Action Controller 和 Action View）时，我们将更多讨论 `app` 目录的结构。
 
 # 应用程序的位置
 
-我们大部分工作都在 app 目录中进行。应用程序的主要代码位于 app 目录下方，如第 267 页的图 18.2。
+我们大部分工作都在 `app` 目录中进行。应用程序的主要代码位于 `app` 目录下方，如第 267 页的图 18.2。
 
 # 测试的位置
 
@@ -7004,21 +7001,17 @@ Rails 假设了一个特定的目录布局并创建了该布局。例如，如�
 
 + 2. https://github.com/carlhuda/bundler
 
-
-
-
-
 模型、视图和控制器文件存放于此。
 
 配置和数据库连接参数。
 
-config.ru - Rack 服务器配置。
+`config.ru` - Rack 服务器配置。
 
 Schema 结构和迁移信息。
 
 自动生成的文档。
 
-Gemfile - Gem 依赖项。
+`Gemfile` - Gem 依赖项。
 
 共享代码。
 
@@ -7026,9 +7019,9 @@ Gemfile - Gem 依赖项。
 
 Web 可访问目录。你的应用程序在此处运行。
 
-Rakefile - 构建脚本。
+`Rakefile` - 构建脚本。
 
-README - 安装和使用信息。
+`README` - 安装和使用信息。
 
 工具脚本。
 
@@ -7044,7 +7037,9 @@ README - 安装和使用信息。
 
 # 文档存放地
 
-正如我们在第 17.2 节“记录我们已完成的工作”（位于第 261 页中所看到的。Rails 提供了 `docapp` rake 任务来生成文档，并将其放在 `doc/` 目录中。此之外，Rails 还提供了其他生成文档的任务：`doc:rails` 会为你当前运行的 Rails 版本提供文档，而 `doc:guides` 会提供使用指南。
+
+
+正如我们在第 17.2 节“记录我们已完成的工作”（位于第 261 页）中所看到的，Rails 提供了 `docapp` rake 任务来生成文档，并将其放在 `doc/` 目录中。除此之外，Rails 还提供了其他生成文档的任务：`doc:rails` 会为你当前运行的 Rails 版本提供文档，而 `doc:guides` 会提供使用指南。
 
 ```ruby
 app/
@@ -7075,7 +7070,7 @@ views/
     line_item.html.erb
 ```
 
-图 18.2：我们应用程序的主代码位于 `app` 目录
+图 18.2：我们应用程序的主代码位于 `app` 目录。
 
 在构建指南之前，你将需要向 `Gemfile` 添加 `RedCloth`（注意：大小写敏感），并运行 `bundle install`。
 
@@ -7118,7 +7113,7 @@ require "shipping/airmail"
 但查看所有已执行的迁移列表可能有所帮助。我们将编写一个 Rake 任务，打印 `schema_migration` 表中列出的版本。这些是 Ruby 代码，但它们需要存放在扩展名为 `.rake` 的文件中。我们将它们命名为 `db_schema_migrations.rake`：
 
 ```ruby
-#  lib/tasks/db_schema_migrations.rake
+# lib/tasks/db_schema_migrations.rake
 namespace :db do
   desc "打印迁移的版本"
   task :schema_migrations => :environment do
@@ -7148,16 +7143,16 @@ Rails 运行时会产生大量的日志信息。这些信息存储在 `log` 目�
 
 如果你发现从命令行运行脚本很有帮助，`script` 目录就是存放它们的地方。该目录还包含了在运行 Rails 时会执行的脚本。
 
-- application: 生成 Rails 代码。
-- benchmarker: 生成应用程序的性能数据。
-- console: 允许你与应用程序交互。
-- dbconsole: 允许你直接与数据库交互。
-- destroy: 由 generate 创建的文件。
-- generate: 代码生成器。开箱即可创建控制器、邮件、模型、脚 和 Web 服务。你可以从 Rails 网站下载额外的生成器。运行时不带参数获取特定生成器的用法信息。
-- plugin: 帮助安装和管理插件——扩展 Rails 功能的组件。
-- profiler: 创建应用程序处理的 URI 的运行摘要。
-- runner: 在 Web 上下文中执行应用程序的方法。这是 rails console 的非交互等效方法。
-- server: 使用自包含 Web 服务器（如果你的机器上有 Mongrel 或 WEBrick）运行 Rails 应用程序。我们在开发 Depot 应用期间一直在使用它。
+- `application`：生成 Rails 代码。
+- `benchmarker`：生成应用程序的性能数据。
+- `console`：允许你与应用程序交互。
+- `dbconsole`：允许你直接与数据库交互。
+- `destroy`：删除由 `generate` 创建的文件。
+- `generate`：代码生成器。开箱即可创建控制器、邮件、模型、脚本和 Web 服务。你可以从 Rails 网站下载额外的生成器。运行时不带参数可获取特定生成器的用法信息。
+- `plugin`：帮助安装和管理插件——扩展 Rails 功能的组件。
+- `profiler`：创建应用程序处理的 URI 的运行摘要。
+- `runner`：在 Web 上下文中执行应用程序的方法。这是 `rails console` 的非交互等效方法。
+- `server`：使用自包含 Web 服务器（如果你的机器上有 Mongrel 或 WEBrick）运行 Rails 应用程序。我们在开发 Depot 应用期间一直在使用它。
 
 # 临时文件存放地
 
@@ -7175,11 +7170,7 @@ Rails 运行时会产生大量的日志信息。这些信息存储在 `log` 目�
 
 # 配置存放地
 
-`config` 目录包含配置 Rails 的文件。在开发 Depot 的过程中，我们配置了少量路由、数据库、创建一个初始化文件、修改了一些本地化文件并定义了部署指令。其余配置通过 Rails 约定完成的。
-
-
-
-
+`config` 目录包含配置 Rails 的文件。在开发 Depot 的过程中，我们配置了少量路由、数据库、创建一个初始化文件、修改了一些本地化文件并定义了部署指令。其余配置通过 Rails 约定完成。
 
 在运行你的应用程序之前，Rails 会加载并执行 `config/environment.rb` 和 `config/application.rb`。这些文件设置的标准环境会自动将以下目录（相对于你的应用程序根目录）包含在应用程序的加载路径：
 
@@ -7194,7 +7185,7 @@ Rails 运行时会产生大量的日志信息。这些信息存储在 `log` 目�
 
 决定运行时环境的开关是应用程序外部的。这意味着从开发环境到测试环境到生产环境，不需要更改任何应用程序代码。在第 16 节任务 K：部署与生产（第 241 页）中，你使用 `RAILS_ENV` 参数在 `rake` 命令中指定环境，并在 Apache 文件中使用 `RailsEnv` 行为 Fusion Passenger 指定环境。当使用 `rails` 命令配合 WebBrick 时，你使用以下选项：
 
-```
+```text
 depot> rails server -e development
 depot> rails server -e test
 depot> rails server -e production
@@ -7204,7 +7195,7 @@ depot> rails server -e production
 
 你在配置文件中写入什么完全取决于你。你可以在第 266 页通过 `rake docs guides` 生成的《配置 Rails》指南找到可以设置的配置参数列表。这些信息也可以在网上找到。
 
-5. http://guides.rubyonrails.org/configuring.html
+5. <http://guides.rubyonrails.org/configuring.html>
 
 ## 18.2 命名规范
 
@@ -7232,30 +7223,30 @@ Rails 控制器还有额外的命名规范。如果我们的应用程序有一�
 
 ### 模型命名
 
-| | | |
-| --- | --- | --- |
-| 表 | line_items | |
-| 文件 | app/models/line_item.rb | |
-| 类 | LineItem | |
+| 项目 | 名称 |
+| --- | --- |
+| 表 | `line_items` |
+| 文件 | `app/models/line_item.rb` |
+| 类 | `LineItem` |
 
 ### 控制器命名
 
-| | | |
-| --- | --- | --- |
-| URL | http://../store/list | |
-| 文件 | app/controllers/store_controller.rb | |
-| 类 | StoreController | |
-| 方法 | list | |
-| 布局 | app/views/layouts/store.html.erb | |
+| 项目 | 名称 |
+| --- | --- |
+| URL | `http://../store/list` |
+| 文件 | `app/controllers/store_controller.rb` |
+| 类 | `StoreController` |
+| 方法 | `list` |
+| 布局 | `app/views/layouts/store.html.erb` |
 
 ### 视图命名
 
-| | | |
-| --- | --- | --- |
-| URL | http://../store/list | |
-| 文件 | app/views/store/list.html.erb 或 .builder 或 .rjs | |
-| 辅助 | module StoreHelper | |
-| 文件 | app/helpers/store_helper.rb | |
+| 项目 | 名称 |
+| --- | --- |
+| URL | `http://../store/list` |
+| 文件 | `app/views/store/list.html.erb` 或 `.builder` 或 `.rjs` |
+| 辅助 | `module StoreHelper` |
+| 文件 | `app/helpers/store_helper.rb` |
 
 > 图 18.3：命名规范如何在 Rails 应用程序中工作
 
@@ -7268,13 +7259,13 @@ Rails 控制器还有额外的命名规范。如果我们的应用程序有一�
 
 到目前为止，所有的控制器都位于 `app/controllers` 目录。有时为这种安排添加更多结构是有帮助的，例如商店可能会有很多相关的独立的函数。为了不污染顶层命名空间，我们可能会将它们划分到一个命名空间。
 
-Rails 使用简单的命名规范来实现这一点。如果一个请求有一个名为（例如）`admin/book` 的控制器，Rails 将 `app/controllers/admin` 目录下查找 `book_controller`。也就是说，控制器名的最后部分始终解析为文件 `name_controller.rb`，任何领先路径信息将用于导航，从 `app/controllers` 目录开始。
+Rails 使用简单的命名规范来实现这一点。如果一个请求有一个名为（例如）`admin/book` 的控制器，Rails 将在 `app/controllers/admin` 目录下查找 `book_controller`。也就是说，控制器名的最后部分始终解析为文件 `name_controller.rb`，任何领先路径信息将用于导航，从 `app/controllers` 目录开始。
 
 假设我们的程序有两组控制器（例如 `admin/xxx` 和 `content/xxx`），这两组都定义了一个控制器。在 `app/controllers` 的子目录下都会有一个名为 `book_controller.rb` 的文件。这两个控制器都会定义一个名为 `BookController` 的类。如果 Rails 不采取进一步措施，这两个类将会发生冲突。
 
 为了解决这个问题，Rails 假设 `app/controllers` 目录子目录下的控制器位于子目录命名的 Ruby 模块中。因此，`admin` 子目录下的控制器声明如下：
 
-```
+```ruby
 class Admin::BookController < ActionController
 #...
 end
@@ -7282,7 +7273,7 @@ end
 
 `content` 子目录下的控制器则在 `Content` 模块中：
 
-```
+```ruby
 class Content::BookController < ActionController
 #...
 end
@@ -7292,37 +7283,33 @@ end
 
 这些控制器的模板出现在 `app/views` 的子目录下。因此，对应此请求的视图模板：
 
-```
+```text
 http://my.app/admin/book/edit/1234
 ```
 
 将在此文件中：
 
-```
+```text
 app/views/admin/book/edit.erb
 ```
 
 你会发现控制器生成器理解模块控制的概念，并允许你通过命令创建它们：
 
-```
+```text
 myapp> rails generate controller Admin::Book action1 action2 ...
 ```
-
-
-
-
 
 ## 命名约定
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_275_0.png)
 
-## 大卫说...
+## 大卫说……
 
 为什么表要用复数？
 
-因为这在对话中听起来很好听。真的。“从 products 中选择一个 Product”，以及“Order 有许多 line_items（订单行项目）。”
+因为这在对话中听起来很好听。真的。“从 `products` 中选择一个 `Product`”，以及“`Order` 有许多 `line_items`（订单行项目）。”
 
-这种意图是通过创建一个一种双方都可以共享的领域语言，来桥接编程与对话。拥有这样一种语言可以减少大脑中的转换，否则，这种转换会导致我们在与客户讨论产品描述时产生困惑，而实际上在实现中它是商家主体（merchant body）。这些沟通鸿沟不可避免会导致错误。
+这种意图是通过创建一种双方都可以共享的领域语言，来桥接编程与对话。拥有这样一种语言可以减少大脑中的转换，否则，这种转换会导致我们在与客户讨论产品描述时产生困惑，而实际上在实现中它是商家主体（merchant body）。这些沟通鸿沟不可避免会导致错误。
 
 Rails 通过在你遵循标准约定时为你免费提供大部分配置，让这件事情变得更划算。因此，开发者因做了正确的事情而获得回报，所以与其说是在放弃“自己的方式”，不如说是为了免费获得生产力。
 
@@ -7331,8 +7318,11 @@ Rails 通过在你遵循标准约定时为你免费提供大部分配置，让�
 Rails 中的每一个部分都有其对应的去处，我们系统地探索了其中的每一个角落。在每个地方，文件及其包含的数据都遵循命名约定，我们也涵盖了这些内容。在此过程中，我们完善了几个部分：
 
 - 我们为 Rails 本身生成了 API 和用户指南文档。
-- 我们添加了一个 rake task 来打印迁移后的版本。
-- 我们展示了如何单独配置每个 rails 执行环境。
+- 我们添加了一个 `rake` task 来打印迁移后的版本。
+
+
+
+我们展示了如何单独配置每个 `rails` 执行环境。
 
 接下来是 Rails 的主要子系统，从最大的 Active Record 开始。
 
@@ -7340,7 +7330,7 @@ Rails 中的每一个部分都有其对应的去处，我们系统地探索了�
 
 - `establish_connection` 方法
 - 表、类、列和属性；
-- 标识 和关系；
+- 标识和关系；
 - 创建、读取、更新和删除操作；
 - 回调和事务。
 
@@ -7348,19 +7338,19 @@ Rails 中的每一个部分都有其对应的去处，我们系统地探索了�
 
 ## Active Record
 
-Active Record 是 Rails 提供的对象关系映射 (ORM) 层。它是 Rails 中用于实现你的应用程序模型的部分。
+Active Record 是 Rails 提供的对象关系映射（ORM）层。它是 Rails 中用于实现你的应用程序模型的部分。
 
 在本章中，我们将基于在 Depot 中完成的数据到行和列的映射继续构建。然后，我们将查看 Active Record 如何管理表关系，并在在此过程中创建、读取、更新和删除操作（行业通常称为 CRUD 方法）。最后，我们将深入研究 Active Record 对象的生命周期（包括回调和事务）。
 
 ## 19.1 定义你的数据
 
-在 Depot 中，我们定义了许多模型，其中一个是 Order 模型。这个特定的模型有许多属性，例如类型为 String 的电子邮件地址。除了我们定义的属性外，Rails 还提供了一个名为 `id` 的属性，它包含记录的主键。Rails 还提供了若干个额外的属性，包括跟踪每行何时被更新的属性。Rails 支持模型之间的关系，例如 Orders 和 Line Items 之间的关系。
+在 Depot 中，我们定义了许多模型，其中一个是 `Order` 模型。这个特定的模型有许多属性，例如类型为 `String` 的电子邮件地址。除了我们定义的属性外，Rails 还提供了一个名为 `id` 的属性，它包含记录的主键。Rails 还提供了若干个额外的属性，包括跟踪每行何时被更新的属性。Rails 支持模型之间的关系，例如 `Orders` 和 `Line Items` 之间的关系。
 
 如果你仔细想一下，Rails 为模型提供了大量的支持。让我们逐一检查它们。
 
 ### 组织表和列
 
-ActiveRecord::Base 的每个子类（例如我们的 Order 类）都封装了一个独立的数据库表。默认情况下，Active Record 假设与给定类关联的表是类的复数形式。如果类名包含大写单词，则假设表名在这些单词之间带有下划线。
+`ActiveRecord::Base` 的每个子类（例如我们的 `Order` 类）都封装了一个独立的数据库表。默认情况下，Active Record 假设与给定类关联的表是类的复数形式。如果类名包含大写单词，则假设表名在这些单词之间带有下划线。
 
 # 定义数据
 
@@ -7410,9 +7400,9 @@ Active Record 类的实例对应于数据库表中的行。这些对象可能已
 
 ## 大卫说...
 
-我们的属性在哪里？
+### 我们的属性在哪里？
 
-将数据库管理员 (DBA) 视为独立于程序员的角色的观点导致一些开发者认为代码和模式之间存在严格的界限。Active Record 模糊了这种区别，而且没有任何地方比模型中缺乏显式属性定义更能看出这一点。
+将数据库管理员（DBA）视为独立于程序员的角色的观点导致一些开发者认为代码和模式之间存在严格的界限。Active Record 模糊了这种区别，而且没有任何地方比模型中缺乏显式属性定义更能看出这一点。
 
 但不要担心。实践证明，无论我们查看的是数据库模式、数据库架构还是模型，区别并不大。表带来的不适感让修改变得更容易。
 
@@ -7431,7 +7421,7 @@ end
 
 设置属性的值不会更改数据库中的任何内容——我们必须保存对象才能使更改变为永久。
 
-属性读取器返回的值由 Active Record 转换为适当的 Ruby 类型（例如，如果数据库列是时间戳，则将返回一个 Time 对象）。如果我们想获取属性的原始值，可以在其名称后附加 `_before_type_cast`，如下代码所示：
+属性读取器返回的值由 Active Record 转换为适当的 Ruby 类型（例如，如果数据库列是时间戳，则将返回一个 `Time` 对象）。如果我们想获取属性的原始值，可以在其名称后附加 `_before_type_cast`，如下代码所示：
 
 ```ruby
 product.price_before_type_cast #=> "29.95", 一个字符串
@@ -7440,10 +7430,8 @@ product.updated_at_before_type_cast #=> "2008-05-13 10:13:14"
 
 在模型的代码内部，我们可以使用 `read_attribute` 和 `write_attribute` 私有方法。它们接受属性名作为字符串参数。
 
-
-
-
 # SQL 类型与 Ruby 类
+
 定义你的数据 281
 
 | SQL 类型 | Ruby 类 | Ruby 类 |
@@ -7457,11 +7445,11 @@ product.updated_at_before_type_cast #=> "2008-05-13 10:13:14"
 
 图 19.1：SQL 类型到 Ruby 类型的映射
 
-我们可以在下一页的图 19.1 中看到 SQL 类型与其 Ruby 表示之间的映射。Decimal 和 Boolean 列的处理稍微有点复杂。
+我们可以在下一页的图 19.1 中看到 SQL 类型与其 Ruby 表示之间的映射。`Decimal` 和 `Boolean` 列的处理稍微有点复杂。
 
-Rails 将没有小数部分的 Decimal 列映射到 `Fixnum` 对象；否则，它将其映射到 `BigDecimal` 对象，以确保不会丢失精度。
+Rails 将没有小数部分的 `Decimal` 列映射到 `Fixnum` 对象；否则，它将其映射到 `BigDecimal` 对象，以确保不会丢失精度。
 
-在 Boolean 的情况下，事实并不是所有数据库都有原生的布尔类型。在 MySQL 中，值 0 表示 false，值 1 表示 true。遗憾的是，Ruby 将非 false 或 nil 的一切内容视为 true，因此直接使用这些值会产生问题。在列名后面加上一个问号：
+在 `Boolean` 的情况下，事实并不是所有数据库都有原生的布尔类型。在 MySQL 中，值 0 表示 false，值 1 表示 true。遗憾的是，Ruby 将非 false 或 nil 的一切内容视为 true，因此直接使用这些值会产生问题。在列名后面加上一个问号：
 
 ```
 user = User.find_by_name("Dave")
@@ -7476,25 +7464,20 @@ end
 
 许多列名对 Active Record 有特殊意义。以下是总结：
 
-- created_at, created_on, updated_at, updated_on：这些列会根据行创建或最后更新的时间戳自动更新。确保底层数据库能够接收日期、datetime 或字符串。Rails 习惯上对日期列使用 `_on` 后缀，对包含时间的列使用 `_at` 后缀。
+- `created_at`, `created_on`, `updated_at`, `updated_on`：这些列会根据行创建或最后更新的时间戳自动更新。确保底层数据库能够接收日期、datetime 或字符串。Rails 习惯上对日期列使用 `_on` 后缀，对包含时间的列使用 `_at` 后缀。
+- `lock_version`：如果表包含 `lock_version`，Rails 将跟踪行版本号并执行乐观锁。
+- `type`：这用于单表继承以跟踪行的类型。
+- `id`：这是表主键列的默认名称（第 282 页）。
+- `xxx_id`：这是指向名为 `xxx` 的复数形式表的外键引的默认名称。
+- `xxx_count`：这为子表 `xxx` 维护计数器缓存。
 
-- lock_version：如果表包含 `lock_version`，Rails 将跟踪行版本号并执行乐观锁。
-
-- type：这用于单表继承以跟踪行的类型。
-
-- id：这是表主键列的默认名称（第 282 页）。
-
-- xxx_id：这是指向名为 `xxx` 的复数形式表的的外键引的默认名称。
-
-- xxx_count：这为子表 `xxx` 维护计数器缓存。
-
-额外的插件，如 act_as_list^1 可能会定义额外的列。
+额外的插件，如 `act_as_list`^1 可能会定义额外的列。
 
 主键和外键在数据库操作中都起着至关重要的作用，值得进一步讨论。
 
 ## 19.2 定位和遍历记录
 
-在 Depot 应用中，Lineitems 与其他三个元素有直接关系：Cart、Order 和 Product。此外，模型可以拥有由资源对象管理的间接关系。通过 Lineitems 在 Orders 和 Product 之间的关系就是这种关系的例子。
+在 Depot 应用中，`Lineitems` 与其他三个元素有直接关系：`Cart`、`Order` 和 `Product`。此外，模型可以拥有由资源对象管理的间接关系。通过 `Lineitems` 在 `Orders` 和 `Product` 之间的关系就是这种关系的例子。
 
 这一切都是通过 `ids` 实现的。
 
@@ -7502,7 +7485,7 @@ end
 
 Active Record 对应数据库中的表。类的实例对应数据库表中的单独行。例如，调用 `Order.find(1)` 会返回一个 `Order` 类的实例，该实例包含主键为 1 的行中的数据。
 
-如果你正在为 Rails 应用创建一个新的架构，你可能想顺其自然地让它为所有表添加 `id` 主键列。然而，如果你需要与现有的架构工作，Active Record 提供了一了一种简单的方法来覆盖表主键的默认名称。
+如果你正在为 Rails 应用创建一个新的架构，你可能想顺其自然地让它为所有表添加 `id` 主键列。然而，如果你需要与现有的架构工作，Active Record 提供了一种简单的方法来覆盖表主键的默认名称。
 
 例如，我们可能正在处理一个现有的遗留架构，它使用 ISBN 作为 books 表的主键。我们在 Active Record 模型中通过以下内容来指定这一点：
 
@@ -7514,7 +7497,7 @@ class LegacyBook < ActiveRecord::Base
 end
 ```
 
-通常，Active Record 会为我们创建并添加到数据库的记录处理主键值——它们将被分配整数（序列中可能存在某些间隙）。然而，如果我们覆盖了主键列名，我们也承担了在保存新记录之前将主键设置为唯一值的责任。可能令人的是，我们仍然设置一个名为 `id` 的属性来实现此。对于 Active Record 而言，`primary_key=` 声明设置了在表中使用的列名。在下面的代码中，尽管数据库中的主键是 `isbn`，我们使用了一个名为 `id` 的属性：
+通常，Active Record 会为我们创建并添加到数据库的记录处理主键值——它们将被分配整数（序列中可能存在某些间隙）。然而，如果我们覆盖了主键列名，我们也承担了在保存新记录之前将主键设置为唯一值的责任。可能令人困惑的是，我们仍然设置一个名为 `id` 的属性来实现此。对于 Active Record 而言，`primary_key=` 声明设置了在表中使用的列名。在下面的代码中，尽管数据库中的主键是 `isbn`，我们使用了一个名为 `id` 的属性：
 
 ```
 book = LegacyBook.new
@@ -7633,11 +7616,11 @@ orders = Order.create(
 
 当你使用由主键驱动的查找器（finder）时，你正在寻找一条特定的记录。预期它存在。对 `Person.find(5)` 的调用基于我们对这些人的了解。我们想要 id 为 5 的行。如果此调用失败——如果 id 为 5 的记录已被删除——那么我们就处于了异常情况。这要求必须抛出一个异常。Rails 会抛出 `RecordNotFound`。
 
-另一方面，查找器使用标准来搜索匹配项。因此，`Person.where(name= 'Dave')` 等同于告诉数据库（作为一个黑盒）“给我第一个名字叫 Dave 的人。”这展示了截然不同的检索方法；在得到结果之前，我们并是不确定的。结果集可能为空是完全可能的，对于搜索一行的查找器，返回 `nil`，而对于搜索多行的查找器，返回空数组是自然且符合异常的响应。
+另一方面，查找器使用标准来搜索匹配项。因此，`Person.where(name= 'Dave')` 等同于告诉数据库（作为一个黑盒）“给我第一个名字叫 Dave 的人。”这展示了截然不同的检索方法；在得到结果之前，我们并不确定。结果集可能为空是完全可能的，对于搜索一行的查找器，返回 `nil`，而对于搜索多行的查找器，返回空数组是自然且符合异常的响应。
 
 ## 读取现有行
 
-从数据库读取数据涉及指定你感兴趣的特定行——你将给 Active Record 某些标准，它将返回包含与标准匹配的的数据的对象。
+从数据库读取数据涉及指定你感兴趣的特定行——你将给 Active Record 某些标准，它将返回包含与标准匹配的数据的对象。
 
 在表中查找某行最简单的方法是指定其主键。每个模型类都支持 `find` 方法，该方法接受一个或多个键值。如果只给出一个主键，它将返回一个包含对应行数据的对象（或抛出 `RecordNotFound` 异常）。如果给出多个主键值，它将返回对应对象的数组。注意，在这种情况下，`RecordNotFound` 异常不会发生。
 
@@ -7649,7 +7632,9 @@ an_order.save
 puts "The ID of this order is #{an_order.id}"
 ```
 
-新的构造函数在内存中创建一个 `Order` 对象；必须记住在某处将其保存到数据库。Active Record 有一个便利方法 `create`，它可以实例化模型对象并将其存入数据库。
+
+
+新的构造函数在内存中创建一个`Order`对象；必须记住在某处将其保存到数据库。Active Record 有一个便利方法`create`，它可以实例化模型对象并将其存入数据库。
 
 （此处省略重复代码块翻译，保持原文逻辑一致）
 
@@ -7797,31 +7782,31 @@ user = Order.where(name: 'Dave')
 user = Order.where(name: 'Dave')
 ```
 
-
 我们可能会尝试像如下那样在条件中使用参数化子句：
 
 ### 不起作用
+
 ```ruby
 User.where("name like '?%", params[:name])
 ```
 
-Rails 不解析条件内部的 SQL，因此不知道名称是会被替换到字符串中的。结果是它会在 `name` 参数的值周围添加额外的引号。执行此操作的正确方法是为 `like` 子句构建完整的参数，并将该参数传递给条件：
+Rails 不解析条件内部的 SQL，因此不知道名称是会被替换到字符串中的。结果是它会在`name`参数的值周围添加额外的引号。执行此操作的正确方法是为`like`子句构建完整的参数，并将该参数传递给条件：
 
 ```ruby
 User.where("name like ?", params[:name]+"%%")
 ```
 
-当然，如果我们这样做，需要考虑如果百分号（`%`）等字符恰好出现在 `name` 参数的值中，它们将被视为通配符。
+当然，如果我们这样做，需要考虑如果百分号（`%`）等字符恰好出现在`name`参数的值中，它们将被视为通配符。
 
 ## 过滤返回的记录
 
-现在我们已经知道了如何指定条件，让我们关注 `ActiveRecord::Relation` 支持的各种方法，从 `first` 和 `all` 开始。正如你所猜的那样，`first` 返回关系中的第一行。如果关系为空，则返回 `nil`。同样，`all` 将所有行作为数组返回。`ActiveRecord::Relation` 还支持 `Array` 对象的许多方法，例如 `each` 和 `map`。它是通过隐式调用 `all` 来实现这些。
+现在我们已经知道了如何指定条件，让我们关注`ActiveRecord::Relation`支持的各种方法，从`first`和`all`开始。正如你所猜的那样，`first`返回关系中的第一行。如果关系为空，则返回`nil`。同样，`all`将所有行作为数组返回。`ActiveRecord::Relation`还支持`Array`对象的许多方法，例如`each`和`map`。它是通过隐式调用`all`来实现这些。
 
 重要的一点是，在这些这些方法之一之前，查询不会被评估。这使我们能够在调用此方法之前，通过调用额外方法以任何方式修改查询。让我们现在来看这些方法。
 
 ## order
 
-SQL 不保证行会按特定顺序返回，除非我们显式地向查询中添加 `order by` 子句。`order` 方法允许我们指定通常在 `order by` 关键字之后添加的标准。例如，以下查询将返回 Dave 的所有订单，并按支付类型排序，然后按发货日期排序（后者为降序）：
+SQL 不保证行会按特定顺序返回，除非我们显式地向查询中添加`order by`子句。`order`方法允许我们指定通常在`order by`关键字之后添加的标准。例如，以下查询将返回 Dave 的所有订单，并按支付类型排序，然后按发货日期排序（后者为降序）：
 
 ```ruby
 orders = Order.where(:name => 'Dave')
@@ -7830,7 +7815,7 @@ orders = Order.where(:name => 'Dave')
 
 ## limit
 
-我们可以通过调用 `.limit` 方法限制返回的行数。如果我们使用 `limit` 方法，可能还想对订单进行排序以确保结果的一致性。例如，以下代码返回前十个匹配的订单：
+我们可以通过调用`.limit`方法限制返回的行数。如果我们使用`limit`方法，可能还想对订单进行排序以确保结果的一致性。例如，以下代码返回前十个匹配的订单：
 
 ```ruby
 orders = Order.where(:name => 'Dave').
@@ -7840,9 +7825,9 @@ orders = Order.where(:name => 'Dave').
 
 ## offset
 
-`offset` 方法与 `limit` 方法配合使用。它允许我们指定结果集中将返回的第一行的偏移量。
+`offset`方法与`limit`方法配合使用。它允许我们指定结果集中将返回的第一行的偏移量。
 
-- 视图想要显示排序的分页列表，每页显示 `page_size` 个订单。此方法返回第 `page_num` 页（从 0 开始）的订单，
+- 视图想要显示排序的分页列表，每页显示`page_size`个订单。此方法返回第`page_num`页（从 0 开始）的订单，
 
 ```ruby
 def Order.find_on_page(page_num, page_size)
@@ -7850,13 +7835,13 @@ def Order.find_on_page(page_num, page_size)
 end
 ```
 
-我们结合使用 `offset` 和 `limit` 来每次通过 `n` 行遍历查询结果。
+我们结合使用`offset`和`limit`来每次通过`n`行遍历查询结果。
 
 ## select
 
-默认情况下，`ActiveRecord::Relation` 从底层数据库表获取所有列——它向数据库发出 `select * from`。使用 `select` 方法覆盖此操作，该方法接受一个字符串，将替换 `select` 语句中的 `*`。
+默认情况下，`ActiveRecord::Relation`从底层数据库表获取所有列——它向数据库发出`select * from`。使用`select`方法覆盖此操作，该方法接受一个字符串，将替换`select`语句中的`*`。
 
-此方法允许我们在只需要表中部分数据子集时限制返回的值。例如，我们的播客表可能包含标题、演讲者和日期的信息，可能还可能包含一个包含谈话 MP3 的大型 BLOB。如果你想创建一个谈话列表，为每行都加载音频数据将是无效的。`select` 方法允许我们选择加载哪些列。
+此方法允许我们在只需要表中部分数据子集时限制返回的值。例如，我们的播客表可能包含标题、演讲者和日期的信息，可能还可能包含一个包含谈话 MP3 的大型 BLOB。如果你想创建一个谈话列表，为每行都加载音频数据将是无效的。`select`方法允许我们选择加载哪些列。
 
 ```ruby
 list = Talk.select("title, speaker, recorded_on")
@@ -7864,7 +7849,7 @@ list = Talk.select("title, speaker, recorded_on")
 
 ## joins
 
-`joins` 方法允许我们指定要连接到默认表的额外表列表。此参数被插入到 SQL 中，位于模型名称之后、第一个参数指定的任何条件之前。连接的语法取决于于于数据库。以下代码返回名为《Programming Ruby》书籍的所有项目列表：
+`joins`方法允许我们指定要连接到默认表的额外表列表。此参数被插入到 SQL 中，位于模型名称之后、第一个参数指定的任何条件之前。连接的语法取决于于于数据库。以下代码返回名为《Programming Ruby》书籍的所有项目列表：
 
 ```ruby
 ListItem.select('li.quantity').
@@ -7874,13 +7859,13 @@ ListItem.select('li.quantity').
 
 ## readonly
 
-`readonly` 方法导致 `ActiveRecord::Resource` 返回无法存回数据库的 Active Record 对象。
+`readonly`方法导致`ActiveRecord::Resource`返回无法存回数据库的 Active Record 对象。
 
-如果我们使用 `joins` 或 `select` 方法，对象将自动标记为只读。
+如果我们使用`joins`或`select`方法，对象将自动标记为只读。
 
 ## group
 
-`group` 方法为 `find` 生成的 SQL 添加了 `group` 子句：
+`group`方法为`find`生成的 SQL 添加了`group`子句：
 
 ```ruby
 summary = LineItem.select("sku, sum(amount) as amount").group("sku")
@@ -7888,7 +7873,7 @@ summary = LineItem.select("sku, sum(amount) as amount").group("sku")
 
 ## lock
 
-`lock` 方法接受一个可选字符串作为参数。如果我们传递一个字符串，它应该是我们数据库语法中的 SQL 片段，用于指定某种锁。例如，对于 MySQL，共享模式锁（share mode lock）为我们提供行的最新数据，并保证在我们持有锁时没有其他人可以更改它。我们可以编写只有在资金充足时才扣款的代码，如下：
+`lock`方法接受一个可选字符串作为参数。如果我们传递一个字符串，它应该是我们数据库语法中的 SQL 片段，用于指定某种锁。例如，对于 MySQL，共享模式锁（share mode lock）为我们提供行的最新数据，并保证在我们持有锁时没有其他人可以更改它。我们可以编写只有在资金充足时才扣款的代码，如下：
 
 ```ruby
 Account.transaction do
@@ -7898,7 +7883,7 @@ Account.transaction do
 end
 ```
 
-如果我们不指定字符串值，或者给 `lock` 赋值为 `true`，则获得数据库的默认排他锁（通常用于 'update'）。我们经常可以使用事务（从第 308 页开始讨论）来消除此类锁的需求。
+如果我们不指定字符串值，或者给`lock`赋值为`true`，则获得数据库的默认排他锁（通常用于 'update'）。我们经常可以使用事务（从第 308 页开始讨论）来消除此类锁的需求。
 
 数据库可以做的远更多，因此 Rails 提供了访问：
 
@@ -7914,9 +7899,6 @@ min = Order.minimum(:amount)
 sum = Order.sum(:amount)
 ```
 
-
-
-
 ## 创建、读取、更新和删除 (CRUD)
 
 这段代码会产生以下结果：
@@ -7927,7 +7909,7 @@ sum = Order.sum(:amount)
 false
 ```
 
-`find_by_sql` 也可以用于创建包含派生数据的模型对象。如果你使用 SQL 语法为结果集中的列命名，该名称将用作属性的名称。
+`find_by_sql`也可以用于创建包含派生数据的模型对象。如果你使用 SQL 语法为结果集中的列命名，该名称将用作属性的名称。
 
 ```
 Download el/find_examples.rb
@@ -7939,15 +7921,15 @@ items = LineItem.find_by_sql("select * +
 " where line_items.product_id = products.id")
 ```
 
-作为条件时，我们也可以向 `find_by_sql` 传递一个数组，其中第一个元素是包含占位符的字符串。数组其余部分可以是哈希（hash），也可以是用于替换的值列表。
+作为条件时，我们也可以向`find_by_sql`传递一个数组，其中第一个元素是包含占位符的字符串。数组其余部分可以是哈希（hash），也可以是用于替换的值列表。
 
-在 Rails 的早期，人们经常诉助于使用 `find_by_sql`。从那以后，基础 `find` 方法中添加的所有选项意味着你可以避免这种低级方法。
+在 Rails 的早期，人们经常诉助于使用`find_by_sql`。从那以后，基础`find`方法中添加的所有选项意味着你可以避免这种低级方法。
 
 ## 重新加载数据
 
 在一个数据库可能被多个进程（或多个应用程序）访问的应用程序中，始终存在获取到的模型对象已经过时的可能——有人可能向数据库写入了更更新的副本。
 
-在某种程度上，这通过事务支持得到了解决（我们在第 308 页描述了这一点）。然而，仍然会有需要刷新模型对象的时候。Active Record 让这变得简单——只需调用 `reload` 方法，对象的属性将从数据库中刷新：
+在某种程度上，这通过事务支持得到了解决（我们在第 308 页描述了这一点）。然而，仍然会有需要刷新模型对象的时候。Active Record 让这变得简单——只需调用`reload`方法，对象的属性将从数据库中刷新：
 
 ```
 stock = Market.find_by_ticker("RUBY")
@@ -7961,7 +7943,7 @@ stock = Market.find_by_ticker("RUBY")
 
 Active Record 并没有这样做。它的建立基于这样一个观念之上：SQL 既不脏也不坏，只是在琐碎的情况下过于冗长。重点在于消除在这些琐碎情况下处理冗长代码的需求（手动编写一个包含十个属性的插入语句会让任何程序员感到疲惫），但为复杂查询保留这种表达能力——这正是 SQL 为了优雅地处理这类查询而生的。
 
-因此，当你使用 `find_by_sql` 处理性能瓶颈或复杂查询时，你不会感到内疚。开始使用面向对象的接口来提高效率并带来乐趣，然后在需要时深入表面以获得接近底层硬件的体验。
+因此，当你使用`find_by_sql`处理性能瓶颈或复杂查询时，你不会感到内疚。开始使用面向对象的接口来提高效率并带来乐趣，然后在需要时深入表面以获得接近底层硬件的体验。
 
 ```
 loop do
@@ -7971,13 +7953,13 @@ stock.reload
 end
 ```
 
-在实践中，`reload` 很少在单元测试语境之外被使用。
+在实践中，`reload`很少在单元测试语境之外被使用。
 
 ## 更新现有行
 
 在详细讨论了查找器方法（finder methods）之后，你会高兴地知道，关于使用 Active Record 更新记录并没有什么好说的。
 
-如果你有一个 Active Record 对象（可能代表我们订单表中的某行），你可以通过调用它的 `save` 方法将其写入数据库。如果该对象之前是从数据库中读取的，那么这次 `save` 将更新现有的行；否则，它将插入新行。
+如果你有一个 Active Record 对象（可能代表我们订单表中的某行），你可以通过调用它的`save`方法将其写入数据库。如果该对象之前是从数据库中读取的，那么这次`save`将更新现有的行；否则，它将插入新行。
 
 如果更新了现有的行，Active Record 将使用其主键列将其与内存中的对象匹配。Active Record 对象中包含的属性决定了将要更新的列——只有当列的值发生变化时，数据库中的该列才会被更新。在下面的示例中，订单 123 行的所有值都可以在数据库表中更新：
 
@@ -7990,7 +7972,7 @@ order.name = "Fred"
 order.save
 ```
 
-在接下来的示例中，Active Record 对象只包含 `id`、`name` 和 `paytype` 属性——在保存对象时，只有这些列可以被更新。（注意，如果你打算保存通过使用 `find_by_sql` 获取的行，请包含 `id` 列）。
+在接下来的示例中，Active Record 对象只包含`id`、`name`和`paytype`属性——在保存对象时，只有这些列可以被更新。（注意，如果你打算保存通过使用`find_by_sql`获取的行，请包含`id`列）。
 
 ```ruby
 orders = Order.find_by_sql("select id, name, pay_type from orders where id=123")
@@ -7999,7 +7981,7 @@ first.name = "Wilma"
 first.save
 ```
 
-除了 `save` 方法外，Active Record 还允许你通过单次调用 `update_attribute` 来更改属性值并保存模型对象：
+除了`save`方法外，Active Record 还允许你通过单次调用`update_attribute`来更改属性值并保存模型对象：
 
 ```ruby
 order = Order.find(123)
@@ -8009,7 +7991,7 @@ order.update_attributes(:name => "Barney",
 email => "barney@bedrock.com")
 ```
 
-`update_attributes` 方法最常用于控制器动作，在动作中将哈希中的数据合并到现有数据库中：
+`update_attributes`方法最常用于控制器动作，在动作中将哈希中的数据合并到现有数据库中：
 
 ```ruby
 def save_after_edit
@@ -8022,29 +8004,25 @@ end
 end
 ```
 
-我们可以使用类方法和 `update_all` 结合读取行和更新它的功能。`update` 方法接收一个 `id` 参数和一组属性值哈希。它获取记录，更新给定的属性，并保存。
+我们可以使用类方法和`update_all`结合读取行和更新它的功能。`update`方法接收一个`id`参数和一组属性值哈希。它获取记录，更新给定的属性，并保存。
 
 ```ruby
 order = Order.update_all(id: 123, :name => "Wilma", :email => "barney@bedrock.com")
 ```
 
-（注：原文存在大量重复的 `update_all` 描述，此处已按要求完成翻译逻辑并处理格式）
-
-
-
-
+（注：原文存在大量重复的`update_all`描述，此处已按要求完成翻译逻辑并处理格式）
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_301_0.png)
 
-模型对象。可能让你意外的是，`before` 和 `after` 验证调用并不是严格嵌套的。
+模型对象。可能让你意外的是，`before`和`after`验证调用并不是严格嵌套的。
 
-除了这十八个调用外，`after_find` 回调会在任何 `find` 操作后被调用，而 `after_initialize` 会在 Active Record 模型对象创建后被调用。
+除了这十八个调用外，`after_find`回调会在任何`find`操作后被调用，而`after_initialize`会在 Active Record 模型对象创建后被调用。
 
 要在回调期间执行你的代码，你需要编写一个处理器并将其与适当的回调关联。
 
 实现回调有两种基本方法。
 
-第一，你可以直接定义回调实例方法。例如，如果你想处理 `before_save` 事件，你可以这样写：
+第一，你可以直接定义回调实例方法。例如，如果你想处理`before_save`事件，你可以这样写：
 
 ```
 class Order < ActiveRecord::Base
@@ -8055,9 +8033,11 @@ class Order < ActiveRecord::Base
 end
 ```
 
-定义回调的第二方法是声明处理器（handlers）。处理器可以是方法，也可以是块（block）。你使用与事件同命名的类方法将处理器与特定事件关联。要关联一个方法，请将其声明为 `private` 或 `protected`，并将其名称作为符号（symbol）指定给声明。要指定一个块，只需在声明后添加它。该块接收模型对象作为参数。
+定义回调的第二方法是声明处理器（handlers）。处理器可以是方法，也可以是块（block）。你使用与事件同命名的类方法将处理器与特定事件关联。要关联一个方法，请将其声明为`private`或`protected`，并将其名称作为符号（symbol）指定给声明。要指定一个块，只需在声明后添加它。该块接收模型对象作为参数。
 
-```
+
+
+```ruby
 class Order < ActiveRecord::Base
   before_validation :normalize_credit_card_number
 
@@ -8077,15 +8057,15 @@ end
 
 由于性能优化，为 `after_find` 和 `after_initialize` 事件定义回调的唯一方法是将它们定义为方法。如果你尝试使用第二种技术将它们声明为处理器，它们将被静默地忽略。（有时人们会问为什么这样做。Rails 必须使用反射（reflection）来确定是否有要调用的回调。在执行数据库操作时，与数据库开销相比，执行这种操作的代价通常是巨大的。然而，单个数据库 `select` 语句可能返回数百行，而这两个回调都必须为每一行调用一次。这会显著降低查询速度。Rails 团队决定在这种情况下，性能优于一致性。）
 
-## 将相关的的回调分组
+## 将相关的回调分组
 
-如果你有一组相关的的回调，将它们分分到一个单独的处理器类中可能会很方便。这些处理器可以在多个模型之间共享。处理器类简单来说就是一个定义了回调方法（`before_save`、`after_create` 等）的类。在 `app/models` 中为这些处理器类创建源文件。
+如果你有一组相关的回调，将它们分到一个单独的处理器类中可能会很方便。这些处理器可以在多个模型之间共享。处理器类简单来说就是一个定义了回调方法（`before_save`、`after_create` 等）的类。在 `app/models` 中为这些处理器类创建源文件。
 
 在使用该处理器的模型对象中，你创建该处理器类的一个实例，并将该实例传递给各种回调声明。几个示例会让这一点变得更清晰。
 
 如果我们的应用程序在多个地方使用信用卡，我们可能希望在多个模型之间共享我们的 `normalize_credit_card_number` 方法。为了做到，我们将该方法提取到它自己的类中，并根据我们想要处理的事件对其命名。此方法将接收一个参数，即生成回调的模型对象。
 
-```
+```ruby
 class CreditCardCallbacks
   # 归一信用卡号码
   def before_validation(model)
@@ -8096,7 +8076,7 @@ end
 
 现在，在我们的模型类中，我们可以安排调用这个共享的回调：
 
-```
+```ruby
 class Order < ActiveRecord::Base
   before_validation CreditCardCallbacks.new
   #...
@@ -8114,9 +8094,9 @@ end
 
 处理器需要在模型数据写入数据库之前，对模型中的一组给定属性进行加密。由于我们的应用程序需要处理这些属性的明文版本，因此它安排在保存完成后再次对它们进行解密。当从数据库读取行到模型对象时，它需要解密数据。这些要求意味着我们必须在保存后（`after_save`）和 `after_find` 事件后处理数据库行。因为我们需要在保存后和发现新行时都解密数据库行，我们可以通过将 `after_find` 方法别名为 `after_save` 来实现保存——同一个方法将有两个名称。
 
-下载 el/ar/encryptor.rb
+下载 `el/ar/encryptor.rb`
 
-```
+```ruby
 class Encryptor
   # 我们接收属性列表，这些属性应该
   # 以加密形式存储在数据库中
@@ -8144,14 +8124,15 @@ class Encryptor
 end
 ```
 
+`id = 1`
 
+`user_id =`
 
+`name = Dbwf Tipnbt`
 
-id = 1
-user_id =
-name = Dbwf Tipnbt
-address = 123 The Street
-email = ebwf@gsbqshph.dn
+`address = 123 The Street`
+
+`email = ebwf@gsbqshph.dn`
 
 回调（Callbacks）是一种很好的技术，但有时会导致模型类承担一些与模型本质并不真正相关的责任。例如，在第 302 页，我们创建了一个回调，在创建订单时生成日志消息。该功能实际上并不是 `Order` 类的基础部分——我们把它放在那里是因为它是被执行的回调。
 
@@ -8159,9 +8140,9 @@ email = ebwf@gsbqshph.dn
 
 Active Record 观察者是一个透明地将自身链接到模型类中的对象。它注册回调的方式，就像它是模型的一部分，但不需要对模型本身进行任何更改。以下是我们之前使用观察者进行的日志记录：
 
-下载 app/observer.rb
+下载 `app/observer.rb`
 
-```
+```ruby
 class OrderObserver < ActiveRecord::Observer
   def after_save(an_order)
     an_order.logger.info("Order #{an_order.id} created")
@@ -8173,11 +8154,12 @@ end
 
 有时这种约定会失效。当失效时，观察者类可以使用 `observe` 方法显式列出它想要观察的一个或多个模型：
 
-下载 app/observer.rb
+下载 `app/observer.rb`
 
-```
+```ruby
 class AuditObserver < ActiveRecord::Observer
   observe Order, Payment, Refund
+
   def after_save(model)
     model.logger.info("[Audit] #{model.class.name} #{model.id} created")
   end
@@ -8192,13 +8174,13 @@ end
 
 如果你在 Rails 应用内部使用观察者，你需要在应用程序的 `environment.rb` 文件（位于 `config` 目录）中列出它们：
 
-```
+```ruby
 config.active_record.observers = :order_observer, :audit_observer
 ```
 
 如果你在独立应用程序中使用 Active Record 对象（即你没有在 Rails 应用中运行 Active Record），你需要使用 `instance` 手动实例化观察者：
 
-```
+```ruby
 OrderObserver.instance
 AuditObserver.instance
 ```
@@ -8209,7 +8191,7 @@ AuditObserver.instance
 
 数据库事务将一系列更改组合在一起，使得数据库要么应用所有更改，要么一个更改都不应用。需要事务的经典示例（并用于 Active Record 官方文档中）是在两个银行账户之间进行转账。基本逻辑非常简单：
 
-```
+```ruby
 account1.deposit(100)
 account2.withdraw(100)
 ```
@@ -8222,16 +8204,16 @@ account2.withdraw(100)
 
 因此，我们可以这样写：
 
-```
+```ruby
 Account.transaction do
-account1.deposit(100)
-account2.withdraw(100)
+  account1.deposit(100)
+  account2.withdraw(100)
 end
 ```
 
 让我们实验一下事务。我们将从创建一个新的数据库表开始。（确保你的数据库支持事务，否则这段代码对你无效）。
 
-```
+```ruby
 create_table :accounts, :force => true do |t|
   t.string :number
   t.decimal :balance, :precision => 10, :scale => 2, :default => 0
@@ -8242,32 +8224,26 @@ end
 
 ```ruby
 class Account < ActiveRecord::Base
-validate :price_must_be_at_least_cent
-```
+  validate :price_must_be_at_least_cent
 
-```ruby
-def withdraw(amount)
-  adjust_balance_and_save(amount)
-end
-```
+  def withdraw(amount)
+    adjust_balance_and_save(amount)
+  end
 
-```ruby
-def deposit(amount)
-  adjust_balance_and_save(amount)
-end
-```
+  def deposit(amount)
+    adjust_balance_and_save(amount)
+  end
 
-private
+  private
 
-```ruby
-def adjust_balance_and_save(amount)
-  self.balance += amount
-  save!
-```
+  def adjust_balance_and_save(amount)
+    self.balance += amount
+    save!
+  end
 
-```ruby
-def price_must_be_at_least_cent
-  errors.add(:balance, "is negative") if balance < 0
+  def price_must_be_at_least_cent
+    errors.add(:balance, "is negative") if balance < 0
+  end
 end
 ```
 
@@ -8281,8 +8257,6 @@ Account.transaction do
   account2.withdraw(100)
 end
 ```
-
-
 
 虽然我们已经涵盖了基础知识，但事务实际上非常微妙。它们表现出所谓的 ACID 特性：它们是原子性的（Atomic）、确保一致性（Consistency）、在隔离性（Isolation）中工作，并且其影响是持久的（Durable）（在事务提交时会变为永久）。如果你计划让数据库应用程序上线，找一本好的数据库书籍并学习事务部分是值得的。
 
@@ -8306,17 +8280,17 @@ end
 
 # 第 20 章
 
-# Action Dispatch 和 Action Controller
+## Action Dispatch 和 Action Controller
 
 Action Pack 是 Rails 应用的核心。它由三个 Ruby 模块组成：ActionDispatch、ActionController 和 ActionView。ActionDispatch 将请求路由到控制器。ActionController 将请求转换为响应。ActionView 被 ActionController 用于格式化这些响应。
 
-作为一个具体的例子，我们将网站根目录 ('/') 导向了 StoreController 的 `index` 方法。在该方法完成后，`app/views/store/index.html.erb` 中的模板被渲染。这些活动每一个都是由 ActionPack 组件中的模块协调的。
+作为一个具体的例子，我们将网站根目录（`/`）导向了 `StoreController` 的 `index` 方法。在该方法完成后，`app/views/store/index.html.erb` 中的模板被渲染。这些活动每一个都是由 ActionPack 组件中的模块协调的。
 
 这三个子模块共同工作，为处理传入的请求和生成输出响应提供支持。在本章中，我们将查看 Action Dispatch 和 Action Controller。在下一章中，我们将涵盖 Action View。
 
 当我们看 Active Record 时，我们看到它可以作为一个独立的库使用；你可以将 Active Record 作为非 Web Ruby 应用程序的一部分。Action Pack 则不同。虽然可以将其作为框架直接使用，但你可能不会这样做。相反，你将利用 Rails 的紧密集成。Action Controller、Action View 和 Action Record 等组件处理请求的处理，而 Rails 环境将它们编织成一个连贯（且易用）的整体。出于这个原因，我们将在 Rails 的背景下描述 Action Controller。让我们先看看 Rails 应用如何处理请求。然后我们将深入研究路由和 URL 处理的细节。我们将继续查看如何在控制器中编写代码。最后，我们将涵盖会话、flash 和过滤器。
 
-# 20.1 将请求分发到控制器
+## 20.1 将请求分发到控制器
 
 简单来说，Web 应用程序接受来自浏览器的传入请求，处理它并发送响应。
 
@@ -8326,13 +8300,13 @@ Action Pack 是 Rails 应用的核心。它由三个 Ruby 模块组成：ActionD
 
 全面方法允许你根据模式匹配、要求和条件，定义 URL 到操作的直接映射。便捷方法允许你根据资源（例如你定义的模型）来定义路由。因为便捷方法是构建在全面方法之上的，你可以自由地混合使用这些方法。
 
-在两种情况下，Rails都会在请求 URL 中编码信息并使用一个名为 *Action Dispatch* 的系统来确定如何处理该请求。实际过程非常灵活，但最后 Rails 会确定处理此特定请求的*控制器*名称，以及任何其他请求参数列表。在此过程中，这些额外参数或 HTTP 方法本身被用于识别在目标控制器中调用的*操作*。
+在两种情况下，Rails 都会在请求 URL 中编码信息并使用一个名为 Action Dispatch 的系统来确定如何处理该请求。实际过程非常灵活，但最后 Rails 会确定处理此特定请求的控制器名称，以及任何其他请求参数列表。在此过程中，这些额外参数或 HTTP 方法本身被用于识别在目标控制器中调用的操作。
 
 Rails 路由根据 URL 内容和调用请求时使用的 HTTP 方法支持 URL 与操作之间的映射。我们已经看到过如何使用匿名路由或命名路由逐一 URL 实现这一点。Rails 还支持一种更高级的方法来创建相关路由组。为了理解这种动机，我们需要稍微进入表述状态转移的世界。
 
-# REST: 表述状态转移 (Representational State Transfer)
+## REST：表述状态转移 (Representational State Transfer)
 
-REST 背后的思想在 Roy Fielding 2000 年的博士论文第 5 章中正式.¹在 REST 方法中，服务器使用无状态连接与客户端通信。两者之间交互状态的所有信息都编码在它们之间的请求和响应中。长期状态保留在服务器上作为一组*可识别资源*。客户端使用一组定义的（且严格限制的）资源标识符（在我们语境下是 URL）访问这些资源。REST 将资源的内容与该内容的呈现区分开来。REST 旨在支持高度可扩展的计算，同时构建在本质上是解耦的应用程序架构。
+REST 背后的思想在 Roy Fielding 2000 年的博士论文第 5 章中正式。¹ 在 REST 方法中，服务器使用无状态连接与客户端通信。两者之间交互状态的所有信息都编码在它们之间的请求和响应中。长期状态保留在服务器上作为一组可识别资源。客户端使用一组定义的（且严格限制的）资源标识符（在我们语境下是 URL）访问这些资源。REST 将资源的内容与该内容的呈现区分开来。REST 旨在支持高度可扩展的计算，同时构建在本质上是解耦的应用程序架构。
 
 这段描述中有很多抽象的内容。REST 在实践中意味着什么？
 
@@ -8342,34 +8316,33 @@ REST 背后的思想在 Roy Fielding 2000 年的博士论文第 5 章中正式.�
 
 其次，REST 施加的约束可以导致应用程序更容易编写（和维护）。RESTful 不需要担心远程服务的实现。相反，它们为一组资源提供了常规（且简单）接口。你的应用程序实现列出、创建和删除每个资源的方法，而你的客户端完成其余工作。
 
-让我们将其具体化。在 REST 中，我们使用一组简单的动词来操作一组名词。如果我们使用 HTTP，这些动词对应于 HTTP 方法（GET, POST, PUT 和 DELETE）。名词是我们应用程序中的资源。我们使用 URL 命名这些资源。
+让我们将其具体化。在 REST 中，我们使用一组简单的动词来操作一组名词。如果我们使用 HTTP，这些动词对应于 HTTP 方法（`GET`、`POST`、`PUT` 和 `DELETE`）。名词是我们应用程序中的资源。我们使用 URL 命名这些资源。
+
+
 
 我们产生的应用程序有一系列产品。这里隐含地有两个资源。首先是单个产品。每个产品都构成一个资源。还有第二个资源：产品集合。
 
-为了获取所有产品的列表，我们可以对 `/products` 路径上的该集合发布 HTTP GET 请求。要获取单个资源的内容，我们必须标识它。Rails 的方法是给出它的主键值（即它的 id）。我们再次发布 GET 请求，这次是针对 URL `/products/1` 的。
+为了获取所有产品的列表，我们可以对`/products`路径上的该集合发布 HTTP GET 请求。要获取单个资源的内容，我们必须标识它。Rails 的方法是给出它的主键值（即它的`id`）。我们再次发布 GET 请求，这次是针对 URL`/products/1`的。
 
-为了在我们的集合中创建一个新产品，我们针对 `/products` 路径使用 HTTP POST 请求，其中表单数据包含要添加的产品。是的，这就是我们用于获取产品列表的同一个路径。如果你对它发布 GET，它会返回列表；如果你对它发布 POST，它将向集合中添加新产品。
+为了在我们的集合中创建一个新产品，我们针对`/products`路径使用 HTTP POST 请求，其中表单数据包含要添加的产品。是的，这就是我们用于获取产品列表的同一个路径。如果你对它发布 GET，它会返回列表；如果你对它发布 POST，它将向集合中添加新产品。
 
-再进一步。我们已经看到可以检索产品的内容——你只需对 `/products/1` 发起 GET 请求。要更新该产品，你对相同的 URL 发起 HTTP PUT 请求。要删除它，你可以发布 HTTP DELETE 请求，再次使用相同的 URL。
+再进一步。我们已经看到可以检索产品的内容——你只需对`/products/1`发起 GET 请求。要更新该产品，你对相同的 URL 发起 HTTP PUT 请求。要删除它，你可以发布 HTTP DELETE 请求，再次使用相同的 URL。
 
-再推一步。也许我们的系统也跟踪用户。再次，REST 告诉我们使用同一组动词（GET, POST, PUT 和 DELETE）针对一组看起来相似的 URL（/users, /user/1）。
+再推一步。也许我们的系统也跟踪用户。再次，REST 告诉我们使用同一组动词（GET、POST、PUT 和 DELETE）针对一组看起来相似的 URL（`/users`、`/user/1`）。
 
 现在我们看到了 REST 施加的约束的威力。我们已经熟悉 Rails 约束我们以某种方式构建应用程序的方法。REST 哲学也告诉我们要这样结构化应用程序的接口。突然间，我们的世界变得简单许多。
 
+Rails 对这种接口有直接支持；它添加了一种宏路由功能，称为资源（`resources`）。让我们看看在 6.1《创建 Rails 应用》第 81 页，`config/routes.rb`可能长什么样。
 
-
-
-Rails 对这种接口有直接支持；它添加了一种宏路由功能，称为资源（resources）。让我们看看在 6.1《创建 Rails 应用》第 81 页，`config/routes.rb` 可能长什么样。
-
-```
+```ruby
 Depot::Application.routes.draw do |map|
   resources :products
 end
 ```
 
-`resources` 行向我们的应用程序添加了七条新路由。在此过程中，它假设应用程序将有一个名为 `ProductsController` 的控制器，其中包含具有给定名称的七个动作。
+`resources`行向我们的应用程序添加了七条新路由。在此过程中，它假设应用程序将有一个名为`ProductsController`的控制器，其中包含具有给定名称的七个动作。
 
-你可以查看为我们生成的路由。我们通过使用 `rake routes` 命令来实现这一点：
+你可以查看为我们生成的路由。我们通过使用`rake routes`命令来实现这一点：
 
 ```
 GET /products/:format
@@ -8392,44 +8365,51 @@ DELETE /products/:id/:format
 
 括号中的字段是路径的可选部分。以冒号开头的字段名是变量，路径的这部分将在稍后由控制器处理时放入这些变量中。
 
-现在让我们来看看这些路由所引用的七个控制器动作。虽然我们创建路由是为了管理应用程序中的产品，但在这些描述中，让我们扩大范围，讨论资源（resources）——毕竟，所有基于资源的路由都需要这七个方法：
+现在让我们来看看这些路由所引用的七个控制器动作。虽然我们创建路由是为了管理应用程序中的产品，但在这些描述中，让我们扩大范围，讨论资源（`resources`）——毕竟，所有基于资源的路由都需要这七个方法：
 
-index
+### `index`
+
 返回资源列表。
 
-create
+### `create`
+
 从 POST 请求中的数据创建一个新资源，并将其添加到集合中。
 
-new
+### `new`
+
 构造一个新的资源并传递给客户端。该资源尚未在服务器上保存。你可以将此新动作视为为客户端创建一个空表单供其填写。
 
-show
-返回由 `params[:id]` 标识的资源内容。
+### `show`
 
-update
-使用请求相关的数据更新由 `params[:id]` 标识的资源内容。
+返回由`params[:id]`标识的资源内容。
 
-edit
-以适合编辑的格式返回由 `params[:id]` 标识的资源内容。
+### `update`
 
-destroy
-销毁由 `params[:id]` 标识的资源。
+使用请求相关的数据更新由`params[:id]`标识的资源内容。
+
+### `edit`
+
+以适合编辑的格式返回由`params[:id]`标识的资源内容。
+
+### `destroy`
+
+销毁由`params[:id]`标识的资源。
 
 你可以看到这七个动作包含了四个基本的 CRUD 操作（创建、读取、更新和删除）。它们还包含一个列出资源的动作，以及两个以适合客户端编辑的格式返回新资源和现有资源的辅助动作。
 
-由于某种原因，你不想或不需要七个动作，可以使用 `resources` 上的 `only` 或 `except` 选项来限制生成的动作：
+由于某种原因，你不想或不需要七个动作，可以使用`resources`上的`only`或`except`选项来限制生成的动作：
 
-```
+```ruby
 resources :comments, :except => [:update, :destroy]
 ```
 
-其中几个路由是命名路由，这允许你使用诸如 `products_url` 和 `edit_product_url(id=1)` 这样的辅助函数。
+其中几个路由是命名路由，这允许你使用诸如`products_url`和`edit_product_url(id=1)`这样的辅助函数。
 
-注意，每条路由都定义了一个可选的特定格式。我们将在第 321 页第 20.1 节*选择数据表示*中详细介绍格式。
+注意，每条路由都定义了一个可选的特定格式。我们将在第 321 页第 20.1 节《选择数据表示》中详细介绍格式。
 
 让我们来看看控制器代码：
 
-```
+```ruby
 Download deplot/app/controllers/products_controller.rb
 class ProductsController < ApplicationController
   # GET /products
@@ -8445,12 +8425,12 @@ class ProductsController < ApplicationController
 end
 ```
 
-```
+```ruby
 # GET /products/1
 # GET /products/1.xml
 ```
 
-```
+```ruby
 def show
   @product = Product.find(params[:id])
 
@@ -8461,12 +8441,12 @@ def show
 end
 ```
 
-```
+```ruby
 # GET /products/new
 # GET /products/new.xml
 ```
 
-```
+```ruby
 def new
   @product = Product.new
 
@@ -8477,19 +8457,19 @@ def new
 end
 ```
 
-```
+```ruby
 # GET /products/1/edit
 def edit
   @product = Product.find(params[:id])
 end
 ```
 
-```
+```ruby
 # POST /products
 # POST /products.xml
 ```
 
-```
+```ruby
 def create
   @product = Product.new(params[:product])
 
@@ -8505,12 +8485,12 @@ def create
 end
 ```
 
-```
+```ruby
 # PUT /products/1
 # PUT /products/1.xml
 ```
 
-```
+```ruby
 def update
   @product = Product.find(params[:id])
 
@@ -8526,7 +8506,7 @@ def update
 end
 ```
 
-```
+```ruby
 # DELETE /products/1
 # DELETE /products/1.xml
 def destroy
@@ -8541,13 +8521,13 @@ end
 
 你可以看到这七个动作包含了四个基本的 CRUD 操作（创建、读取、更新和删除）。它们还包含一个列出资源的动作，以及两个以适合客户端编辑的格式返回新资源和现有资源的辅助动作。
 
-由于某种原因，你不想或需要七个动作，可以使用 `resources` 上的 `only` 或 `except` 选项来限制生成的动作：
+由于某种原因，你不想或需要七个动作，可以使用`resources`上的`only`或`except`选项来限制生成的动作：
 
-几个路由是命名路由，这允许你使用诸如 `products_url` 和 `edit_product_url(id=1)` 这样的辅助函数。
+几个路由是命名路由，这允许你使用诸如`products_url`和`edit_product_url(id=1)`这样的辅助函数。
 
-注意，每条路由都定义了一个可选的特定格式。我们将在第 321 页第 20.1 节*选择数据表示*中详细介绍格式。
+注意，每条路由都定义了一个可选的特定格式。我们将在第 321 页第 20.1 节《选择数据表示》中详细介绍格式。
 
-生成器创建视图非常直观。唯一困难的是需要使用正确的方法。例如，index 动作的视图如下：
+生成器创建视图非常直观。唯一困难的是需要使用正确的方法。例如，`index`动作的视图如下：
 
 ```html
 Download load/app/views/products/index.html.erb
@@ -8576,13 +8556,13 @@ Download load/app/views/products/index.html.erb
 <%= link_to 'New Product', new_product_path %>
 ```
 
-编辑产品和添加新产品的链接都使用常规 GET 方法，因此标准的 link_to 可以正常工作。然而，销毁产品的请求必须发出 HTTP DELETE，因此 link_to 调用包含了 :method =>delete 选项。
+编辑产品和添加新产品的链接都使用常规 GET 方法，因此标准的`link_to`可以正常工作。然而，销毁产品的请求必须发出 HTTP DELETE，因此`link_to`调用包含了`:method => delete`选项。
 
 # 添加动作
 
-Rails 资源为你提供了初始动作，但你不需要停于此。在第 177 页第 12.2 节迭代 G2：Atom Feed 中，我们添加了一个接口，允许人们获取购买过任何产品的列表。为了用 Rails 实现这一点，我们使用了对 resources 调扩展：
+Rails 资源为你提供了初始动作，但你不需要停于此。在第 177 页第 12.2 节《迭代 G2：Atom Feed》中，我们添加了一个接口，允许人们获取购买过任何产品的列表。为了用 Rails 实现这一点，我们使用了对`resources`调用的扩展：
 
-```
+```ruby
 Depot::Application.routes.draw
   resources :products do
     get :who_bought, on: :member
@@ -8590,15 +8570,13 @@ Depot::Application.routes.draw
 end
 ```
 
-这种语法非常直观。它表示“我们想要添加一个名为 who_bought 的新动作”。
+这种语法非常直观。它表示“我们想要添加一个名为`who_bought`的新动作”。
 
-如果没有指定 :member，而是指定 :collection，那么该路由将适用于整个集合。这通常用于范围划分，例如，你可能有清仓产品集合或停产产品集合。
+如果没有指定`:member`，而是指定`:collection`，那么该路由将适用于整个集合。这通常用于范围划分，例如，你可能有清仓产品集合或停产产品集合。
 
 # 嵌套资源
 
 通常资源本身包含额外的资源集合。例如，我们可能希望允许人们对我们的产品进行评论。每个评论将是一个资源，评论集合将与每个产品资源关联。
-
-
 
 Rails 为此类情况提供了一种方便且直观的方式来声明路由。
 
@@ -8608,13 +8586,13 @@ Rails 为此类情况提供了一种方便且直观的方式来声明路由。
 end
 ```
 
-这定义了产品的顶层级路由集，并额外为评论（reviews）创建了一组子集。由于评论资源出现在 `products` 块内部，因此评论资源*必须*通过产品资源进行限定。这意味着指向评论的路径必须以特定产品的路径作为前缀。要获取 ID 为 99 的产品的 ID 为 4 的评论，请使用路径 `/products/99/reviews/4`。
+这定义了产品的顶层级路由集，并额外为评论（`reviews`）创建了一组子集。由于评论资源出现在`products`块内部，因此评论资源*必须*通过产品资源进行限定。这意味着指向评论的路径必须以特定产品的路径作为前缀。要获取 ID 为 99 的产品的 ID 为 4 的评论，请使用路径`/products/99/reviews/4`。
 
-对于 `/products/product_id/reviews/id`，命名路由是 `product_review`，而不仅仅是 `review`。这种命名仅仅反映了这些资源的嵌套关系。
+对于`/products/product_id/reviews/id`，命名路由是`product_review`，而不仅仅是`review`。这种命名仅仅反映了这些资源的嵌套关系。
 
-一如既往，你可以使用 `rake` 命令查看由配置生成的完整路由集。
+一如既往，你可以使用`rake`命令查看由配置生成的完整路由集。
 
-# 浅路由嵌套 (Shallow Route Nesting)
+# 浅路由嵌套（Shallow Route Nesting）
 
 有时，嵌套资源会产生冗长的 URL。解决方案是使用浅路由嵌套：
 
@@ -8632,13 +8610,13 @@ end
 /reviews/2 => review_path(2)
 ```
 
-尝试 `rake` 命令以查看完整的映射。
+尝试`rake`命令以查看完整的映射。
 
-# 选择数据表示 (Selecting a Data Representation)
+# 选择数据表示（Selecting a Data Representation）
 
-REST 架构的目标之一是将数据与其表示形式解耦。如果人类使用 URL 路径 `/products` 来获取某些产品，他们将看到格式良好的 HTML。如果应用程序请求相同的 URL，它可以选择以代码友好的格式（可能是 YAML、JSON 等）接收结果。
+REST 架构的目标之一是将数据与其表示形式解耦。如果人类使用 URL 路径`/products`来获取某些产品，他们将看到格式良好的 HTML。如果应用程序请求相同的 URL，它可以选择以代码友好的格式（可能是 YAML、JSON 等）接收结果。
 
-我们已经看到过 Rails 如何在控制器的 `respond_to` 块中使用 HTTP Accept 请求头。然而，设置 Accept 请求头并不总是可行的（有时是根本无法实现的）。为了处理这个问题，Rails 允许你通过 URL 传递你想要的响应格式。要做到这一点，请在路由中设置 `:format` 参数，将其设置为你想要返回的 MIME 类型扩展名。正如你所看到的，Rails 通过包含一个名为 `:format::format` 的字段来实现这一点。
+我们已经看到过 Rails 如何在控制器的`respond_to`块中使用 HTTP Accept 请求头。然而，设置 Accept 请求头并不总是可行的（有时是根本无法实现的）。为了处理这个问题，Rails 允许你通过 URL 传递你想要的响应格式。要做到这一点，请在路由中设置`:format`参数，将其设置为你想要返回的 MIME 类型扩展名。正如你所看到的，Rails 通过包含一个名为`:format::format`的字段来实现这一点。
 
 ```ruby
 GET /products(..format)
@@ -8647,7 +8625,7 @@ GET /products(..format)
 
 由于句号（点）是路由定义中的分隔符，因此格式被视为另一个字段。由于我们给它了一个 nil 默认值，所以它是一个可选字段。
 
-完成此操作后，我们可以在控制器中使用 `respond_to` 块根据请求的格式选择我们的响应类型：
+完成此操作后，我们可以在控制器中使用`respond_to`块根据请求的格式选择我们的响应类型：
 
 ```ruby
 def show
@@ -8658,23 +8636,26 @@ def show
 end
 ```
 
-对 `/store/show/1.xml` 或 `/store/show/1.html` 的请求将返回 HTML 内容，而 `/store/show/1.xml` 将返回 XML，`/store/show/1.yaml` 将返回 YAML。你也可以将格式作为 HTTP 请求参数：
+对`/store/show/1.xml`或`/store/show/1.html`的请求将返回 HTML 内容，而`/store/show/1.xml`将返回 XML，`/store/show/1.yaml`将返回 YAML。你也可以将格式作为 HTTP 请求参数：
 
 ```
 GET HTTP://pragprog.com/show/123?format=xml
 ```
 
-由 `resources` 定义的路由默认启用了此功能。
+由`resources`定义的路由默认启用了此功能。
 
 虽然具有不同内容类型的单一控制器想法看起来很有吸引力，但事实很复杂。特别是，错误处理可能非常困难。虽然在出错时将用户重定向到表单并显示一条友好的闪消息（flash message）是可以接受的，但在提供 XML 时，你必须调整策略。在决定将所有处理逻辑整合到单个控制器之前，请仔细考虑你的应用程序架构。
 
 Rails 让开发基于资源路由（Resource-routing）的应用程序变得简单。许多人声称它简化了应用程序的代码编写。然而，这并不总是合适的。如果你能找到让它工作的方法，不要强迫自己使用它。你可以总是混合使用。某些控制器可以基于资源，而另一些可以基于操作（actions）。某些控制器可以基于资源，并带有一些额外的操作。
 
-# 测试路由 (Testing Routes)
+# 测试路由（Testing Routes）
 
-到目前为止，我们通过查看 `rake routes` 探索了路由。然而，当准备部署应用程序时，我们可能希望更正式一些，包含单元测试来验证我们的路由按预期方式工作。Rails 包含了许多测试辅助方法，使这变得简单：
+
+
+到目前为止，我们通过查看`rake routes`探索了路由。然而，当准备部署应用程序时，我们可能希望更正式一些，包含单元测试来验证我们的路由按预期方式工作。Rails 包含了许多测试辅助方法，使这变得简单：
 
 `assert_generates(path, options, defaults=(), extras=(), message=nil)`
+
 验证给定的选项是否生成了路径。
 
 ```ruby
@@ -8689,10 +8670,12 @@ def test_generates
 end
 ```
 
-`extras` 参数用于告知额外请求参数的名称和值（在上述代码的第三个断言中，这将是 `product_id:1`）。测试框架不会将这些内容作为字符串添加到生成的 URL 中；相反，它会测试应添加的值是否出现在 `extras` 哈希映射中。
+`extras`参数用于告知额外请求参数的名称和值（在上述代码的第三个断言中，这将是`product_id:1`）。测试框架不会将这些内容作为字符串添加到生成的 URL 中；相反，它会测试应添加的值是否出现在`extras`哈希映射中。
 
-`defaults` 参数可以用于指定 HTTP 方法。
+`defaults`参数可以用于指定 HTTP 方法。
+
 `assert_recognizes(options, path, extras=(), message=nil)`
+
 验证路由根据给定路径返回一组选项。
 
 ```ruby
@@ -8707,11 +8690,12 @@ def test_recognizes
 end
 ```
 
-`path` 参数允许你指定取决于 HTTP 方法的路由。你可以通过向 `assert_recognizes` 传递哈希而不是字符串来测试这些。哈希应该包含两个元素：`path` 包含传入的内容，`method` 包含 HTTP 方法。`extras` 包含了额外参数。在上述代码的第三个断言中，我们使用 extras 来验证如果 URL 以 `product_id=1` 结尾，将包含相应的值。
+`path`参数允许你指定取决于 HTTP 方法的路由。你可以通过向`assert_recognizes`传递哈希而不是字符串来测试这些。哈希应该包含两个元素：`path`包含传入的内容，`method`包含 HTTP 方法。`extras`包含了额外参数。在上述代码的第三个断言中，我们使用`extras`来验证如果 URL 以`product_id=1`结尾，将包含相应的值。
 
-# 请求处理 (Processing of Requests)
+## 请求处理 (Processing of Requests)
 
 `assert_routing(path, options, defaults={}, extras={}, message=nil)`
+
 结合两个断言，验证路径是否生成选项，以及选项是否生成路径。
 
 ```ruby
@@ -8725,9 +8709,6 @@ end
 
 在选项哈希中使用符号（symbols）作为键并使用字符串作为值是非常重要的。如果不这样做，与路由返回的选项进行比较的断言将会失败。
 
-
-
-
 # www.it-ebook.info
 
 请求处理 ◄ 335
@@ -8736,39 +8717,59 @@ end
 
 ## headers
 
-一个包含用于响应的 HTTP 头的哈希（hash）。默认情况下，Cache-Control 被设置为 no-cache。你可能希望为特殊用途的应用程序设置 Content-Type 头部。请注意，你不不应该直接在头部中设置值——请使用 cookie API 来完成。
+一个包含用于响应的 HTTP 头的哈希（hash）。默认情况下，`Cache-Control`被设置为`no-cache`。你可能希望为特殊用途的应用程序设置`Content-Type`头部。请注意，你不不应该直接在头部中设置值——请使用 cookie API 来完成。
 
 ## params
 
-一个包含请求参数（以及在路由期间生成的 params）的类 hash 对象。它之所以像 hash，是因为你可以使用符号（symbol）或字符串（string）来索引项——`params[:id]` 和 `params['id']` 返回相同的值。惯用的 Rails 应用使用符号形式。
+一个包含请求参数（以及在路由期间生成的 params）的类 hash 对象。它之所以像 hash，是因为你可以使用符号（symbol）或字符串（string）来索引项——`params[:id]`和`params['id']`返回相同的值。惯用的 Rails 应用使用符号形式。
 
 ## request
 
 传入的请求对象。它包含以下属性：
 
-- request_method 返回请求方法，为 `:delete`, `:get`, `:head`, `:post` 或 `:put` 之一。
-- method 返回的与 `request_method` 相同的值，但 `:head` 除外，后者返回 `:get`，因为从应用程序的角度来看这些是功能等效的。
-- `delete`, `get?`, `head?`, `post?` 和 `put?` 根据请求方法返回 true 或 false。
-- `xmlhttp_request?` 和 `xhr` 如果此请求是由一个 Ajax 助手发出的，则返回 true。注意此参数与方法参数是独立的。
-- url，返回用于请求的完整 URL。
-- protocol, host, path 和 query_string，返回用于请求的 URL 的组成部分，基于以下模式：`protocol://host/path?query_string`。
-- domain，返回请求域名的最后两个部分。
-- host_with_port，返回请求的 `host:port` 字符串。
-- port_string，如果端口不是默认端口，则返回请求的 `:port` 字符串。
-- ssl?，如果是 SSL 请求，则为 true；换句话说，请求是使用 HTTPS 协议发出的。
-- remote_ip，返回作为字符串的远端 IP 地址。如果客户端位于代理之后，该字符串中可能包含多个地址。
-- path_without_extension, path_without_format_and_extension, format_and_extension 和 relative_path 返回完整路径的片段。
-- env，请求的环境。你可以通过浏览器如下方式访问这些值：
-`request.env['HTTP_ACCEPT_LANGUAGE']`
-- accepts，请求的 accepts MIME 类型的值。
-- format，请求的 content-type 的值。如果没有可用的格式，将使用 accept 类型中的第一个。
-- mime_type，与扩展名关联的 MIME 类型。
-- content_type，请求的 MIME 类型。这对于 put 和 post 请求很有用。
-- headers，完整的 HTTP 头部集。
-- body，作为 I/O 流的请求体。
-- content_length，声称正体中的字节数。
+- `request_method`返回请求方法，为`:delete`, `:get`, `:head`, `:post`或`:put`之一。
 
-Rails 留了一个名为 Rack 的 gem 来提供许多此类功能。详细信息请参阅 `Rack::Request` 的文档。
+- `method`返回的与`request_method`相同的值，但`:head`除外，后者返回`:get`，因为从应用程序的角度来看这些是功能等效的。
+
+- `delete`, `get?`, `head?`, `post?`和`put?`根据请求方法返回 true 或 false。
+
+- `xmlhttp_request?`和`xhr`如果此请求是由一个 Ajax 助手发出的，则返回 true。注意此参数与方法参数是独立的。
+
+- `url`，返回用于请求的完整 URL。
+
+- `protocol`, `host`, `path`和`query_string`，返回用于请求的 URL 的组成部分，基于以下模式：`protocol://host/path?query_string`。
+
+- `domain`，返回请求域名的最后两个部分。
+
+- `host_with_port`，返回请求的`host:port`字符串。
+
+- `port_string`，如果端口不是默认端口，则返回请求的`:port`字符串。
+
+- `ssl?`，如果是 SSL 请求，则为 true；换句话说，请求是使用 HTTPS 协议发出的。
+
+- `remote_ip`，返回作为字符串的远端 IP 地址。如果客户端位于代理之后，该字符串中可能包含多个地址。
+
+- `path_without_extension`, `path_without_format_and_extension`, `format_and_extension`和`relative_path`返回完整路径的片段。
+
+- `env`，请求的环境。你可以通过浏览器如下方式访问这些值：
+
+`request.env['HTTP_ACCEPT_LANGUAGE']`
+
+- `accepts`，请求的 accepts MIME 类型的值。
+
+- `format`，请求的 content-type 的值。如果没有可用的格式，将使用 accept 类型中的第一个。
+
+- `mime_type`，与扩展名关联的 MIME 类型。
+
+- `content_type`，请求的 MIME 类型。这对于 put 和 post 请求很有用。
+
+- `headers`，完整的 HTTP 头部集。
+
+- `body`，作为 I/O 流的请求体。
+
+- `content_length`，声称正体中的字节数。
+
+Rails 留了一个名为 Rack 的 gem 来提供许多此类功能。详细信息请参阅`Rack::Request`的文档。
 
 在处理请求期间填充的响应对象。通常，这由 Rails 为你管理。当我们查看第 342 页的过滤器（filters）时将会看到，有时为了特殊处理我们会访问内部结构。
 
@@ -8776,32 +8777,35 @@ Rails 留了一个名为 Rack 的 gem 来提供许多此类功能。详细信息
 
 此外，在整个 Action Pack 中都可以使用日志记录器（logger）。
 
-# 响应用户
+## 响应用户
 
 控制器的工作之一是响应用户。基本上有四种方法：
 
 - 最常见的方法是渲染模板（template）。在 MVC 范式中，模板是视图（view），获取控制器提供的信息并使用它生成对浏览器的响应。
+
 - 控制器可以直接向浏览器返回字符串，而不调用视图。这相当罕见，但可以用于发送错误通知。
+
 - 控制器可以向浏览器返回空内容。这在响应 Ajax 请求时有时使用。但在所有情况下，控制器都会返回一组 HTTP 头部，因为预期某种响应。
+
 - 控制器可以向客户端发送其他数据（HTML 以外的其他内容）。这通常是某种下载（可能是 PDF 文档或文件内容）。
 
-控制器对每个请求总是对用户恰好响应一次。这意味着在处理任何请求时，你应该调用一次 `render`、`redirect_to` 或 `send_xxx` 方法（在第二次渲染时会抛出 `DoubleRenderError` 异常）。未文档的方法 `erase_render_results` 会丢弃当前请求中之前渲染的副作用，允许发生第二次渲染。使用时风险自担。
+控制器对每个请求总是对用户恰好响应一次。这意味着在处理任何请求时，你应该调用一次`render`、`redirect_to`或`send_xxx`方法（在第二次渲染时会抛出`DoubleRenderError`异常）。未文档的方法`erase_render_results`会丢弃当前请求中之前渲染的副作用，允许发生第二次渲染。使用时风险自担。
 
 由于控制器必须恰好响应一次，因此它在完成处理请求之前会检查是否已生成响应。如果没有，控制器将寻找一个与控制器和 action 同名的模板并自动渲染它。这是渲染发生的最常见方式。你可能已经注意到，在我们购物车教程的大多数 action 中，我们并没有显式地渲染了任何内容。相反，我们的 action 方法为视图设置了上下文并返回。控制器注意到没有发生渲染，并自动调用相应的模板。
 
-你可以有多个相同名称但不同扩展名的模板（例如，html.erb, xml.builder 和 js.js）。如果你在 render 请求中没有指定扩展名，Rails 会假设为 html.erb。
+你可以有多个相同名称但不同扩展名的模板（例如，`html.erb`, `xml.builder`和`js.js`）。如果你在 render 请求中没有指定扩展名，Rails 会假设为`html.erb`。
 
-# 渲染模板
+## 渲染模板
 
 模板是一个定义应用程序响应内容的文件。Rails 开箱支持三种模板格式：erb（嵌入 Ruby 代码的 HTML）、builder（一种构建 XML 内容的程序化方式）以及 R/JS（生成 JavaScript）。我们将在第 345 页讨论这些文件的内容。
 
-按照约定，action 的模板将位于 `app/views/controller/action.type`（其中 type 是文件类型，如 html；且是 erb、builder 或 rjs 之一）。`app/views` 部分是默认的。你可以通过设置以下内容来覆盖整个应用程序：
+按照约定，action 的模板将位于`app/views/controller/action.type`（其中 type 是文件类型，如 html；且是 erb、builder 或 rjs 之一）。`app/views`部分是默认的。你可以通过设置以下内容来覆盖整个应用程序：
 
 ```
 ActionController.prepend_view_path dir_path
 ```
 
-render 方法是 Rails 中所有渲染的核心。它接收一个选项哈希，告诉它要渲染什么以及如何渲染。
+`render`方法是 Rails 中所有渲染的核心。它接收一个选项哈希，告诉它要渲染什么以及如何渲染。
 
 人们倾向于在控制器中编写像这样的代码：
 
@@ -8817,7 +8821,7 @@ def update
 end
 ```
 
-调用 render（和 redirect_to）应该结束 action 的处理。事实并非如此。在 update_attributesSuccess的情况下，上述代码将错误（因为调用了两次 render）。
+调用`render`（和`redirect_to`）应该结束 action 的处理。事实并非如此。在`update_attributes`成功的情况下，上述代码将错误（因为调用了两次 render）。
 
 让我们看看这里使用的 render 选项（我们将在第 366 页专门讨论视图中的渲染）：
 
@@ -8825,7 +8829,7 @@ end
 render()
 ```
 
-在没有覆盖参数的情况下，render 方法渲染当前控制器和 action 的默认模板。以下代码将渲染模板 `app/views/blog/index.html.erb`：
+在没有覆盖参数的情况下，`render`方法渲染当前控制器和 action 的默认模板。以下代码将渲染模板`app/views/blog/index.html.erb`：
 
 ```
 class BlogController < ApplicationController
@@ -8851,7 +8855,7 @@ class BlogController < ApplicationController
 end
 ```
 
-render(:text) 将给定的字符串发送到客户端。不进行模板解释或 HTML 转义。
+`render(:text)`将给定的字符串发送到客户端。不进行模板解释或 HTML 转义。
 
 ```
 class HappyController < ApplicationController
@@ -8860,9 +8864,6 @@ class HappyController < ApplicationController
   end
 end
 ```
-
-
-
 
 ## 请求处理
 
@@ -8874,9 +8875,9 @@ end
 render(:inline => string, [:type => 'erb', 'builder' => 'js'], :locals => hash])
 ```
 
-将字符串解释为给定类型的模板，并将渲染结果返回给客户端。你可以使用 `locals` 来设置模板中本地变量的值。
+将字符串解释为给定类型的模板，并将渲染结果返回给客户端。你可以使用`locals`来设置模板中本地变量的值。
 
-以下代码在应用程序运行在开发模式时，会向控制器中添加 `method_missing`。如果使用无效的 action 调用控制器，它将渲染一个内联模板以显示 action 的名称和格式化后的请求参数。
+以下代码在应用程序运行在开发模式时，会向控制器中添加`method_missing`。如果使用无效的 action 调用控制器，它将渲染一个内联模板以显示 action 的名称和格式化后的请求参数。
 
 ```ruby
 class SomeController < ApplicationController
@@ -8900,7 +8901,7 @@ end
 render(:action => action_name)
 ```
 
-渲染此控制器中给给定 action 的模板。有时，人们在应该显示重定向的地方使用了 `@_action` 形式。关于为什么这是一个坏主意，讨论从第 332 页开始。
+渲染此控制器中给给定 action 的模板。有时，人们在应该显示重定向的地方使用了`@_action`形式。关于为什么这是一个坏主意，讨论从第 332 页开始。
 
 ```ruby
 def display_cart
@@ -8912,18 +8913,19 @@ def display_cart
 end
 ```
 
-注意，调用 `render(:action...)` 并不会调用 action 方法；它仅仅是显示模板。模板需要实例变量，这些变量必须由调用 `render` 的方法设置。
+注意，调用`render(:action...)`并不会调用 action 方法；它仅仅是显示模板。模板需要实例变量，这些变量必须由调用`render`的方法设置。
 
-让我们重复一遍，因为这是新手经常犯的一个错误：调用 `render(:action...)` 不会调用 action 方法。它只是渲染该 action 的默认模板。
+让我们重复一遍，因为这是新手经常犯的一个错误：调用`render(:action...)`不会调用 action 方法。它只是渲染该 action 的默认模板。
 
 ```ruby
 render(:file => path, [:use_full_path => true], :locals => hash])
 ```
 
-渲染路径中的模板（必须包含文件扩展名）。默认情况下，这应该是绝对路径，但如果 `:use_full_path` 选项为 `true`，视图将会在你在应用程序配置中设置的模板基础路径的值附加到你传递的路径之前。如果指定了，`locals` 哈希表中的值将用于设置模板中的本地变量。
+渲染路径中的模板（必须包含文件扩展名）。默认情况下，这应该是绝对路径，但如果`:use_full_path`选项为`true`，视图将会在你在应用程序配置中设置的模板基础路径的值附加到你传递的路径之前。如果指定了，`locals`哈希表中的值将用于设置模板中的本地变量。
 
 `render(:template => name, locals => hash )`
-渲染模板并安排将生成的文本返回给客户端。模板的值必须包含控制器和 action 两部分，用正斜杠分隔。以下代码将渲染 `app/views/blog/short_list` 模板：
+
+渲染模板并安排将生成的文本返回给客户端。模板的值必须包含控制器和 action 两部分，用正斜杠分隔。以下代码将渲染`app/views/blog/short_list`模板：
 
 ```ruby
 class BlogController < ApplicationController
@@ -8934,19 +8936,24 @@ end
 ```
 
 `render(:partial => name...)`
+
 渲染部分模板。我们在第 366 页详细讨论部分模板。
 
 `render(:nothing => true)`
+
 不返回任何内容——向浏览器发送空正体。
 
 `render(:xml => stuff)`
-将 `stuff` 渲染为文本，强制将内容类型设置为 `application/xml`。
+
+将`stuff`渲染为文本，强制将内容类型设置为`application/xml`。
 
 `render(:json => stuff, callback => hash )`
-将 `stuff` 渲染为 JSON，强制将内容类型设置为 `application/json`。指定 `:callback` 将导致结果封装在对命名回调函数的调用中。
+
+将`stuff`渲染为 JSON，强制将内容类型设置为`application/json`。指定`:callback`将导致结果封装在对命名回调函数的调用中。
 
 `render(:update) do page...`
-将块渲染为 RS 模板，传入 `page` 对象。
+
+将块渲染为 RS 模板，传入`page`对象。
 
 ```ruby
 render(:update) do |page|
@@ -8955,7 +8962,9 @@ render(:update) do |page|
 end
 ```
 
-所有类型的形式都接受 `status`、`:layout` 和 `:content_type` 参数。`status` 参数提供用于 HTTP 响应中状态标头的值。默认值是 '200 OK'。不要使用 3xx 状态渲染来进行重定向；Rails 有专门用于此目的的重定向方法。
+所有类型的形式都接受`status`、`:layout`和`:content_type`参数。`status`参数提供用于 HTTP 响应中状态标头的值。默认值是'200 OK'。不要使用 3xx 状态渲染来进行重定向；Rails 有专门用于此目的的重定向方法。
+
+
 
 `layout` 参数决定渲染结果是否被布局包裹（我们首先在第 112 页关注跨布局的情况，并将从第 362 页开始查看它们）。如果参数为 `false`，则不应用任何布局。如果设置为 `nil` 或 `true`，如果与当前 action 有关联布局，则将应用布局。`:layout` 参数的值为字符串，渲染时将取视为布局的名称。当 `nothing` 选项开启时，永远不会应用布局。
 
@@ -8967,7 +8976,7 @@ end
 
 我们已经看了在控制器中渲染模板和发送字符串。第三种响应类型是向客户端发送数据（通常是，但不一定，文件内容）。
 
-# send_data
+## send_data
 
 向客户端发送包含二进制数据的字符串。
 
@@ -8983,14 +8992,14 @@ end
 ```
 
 | Options | Description |
-| :--- | :--- |
-| :disposition | string | 建议浏览器显示（option inline）或保存（option attachment），默认值。 |
-| :filename | string | 在保存文件时建议浏览器使用的文件名。如果没有指定，默认为路径的基础。 |
-| :status | string | 状态码，默认值为 '200 OK'。 |
-| :type | string | 内容类型，默认值为 `application/octet-stream`。 |
-| :url_based_filename | boolean | 如果为 `true` 且未设置文件名，Rails 不会在 Content-Disposition 中提供文件名。 |
+| --- | --- |
+| `:disposition` | string | 建议浏览器显示（option inline）或保存（option attachment），默认值。 |
+| `:filename` | string | 在保存文件时建议浏览器使用的文件名。如果没有指定，默认为路径的基础。 |
+| `:status` | string | 状态码，默认值为 '200 OK'。 |
+| `:type` | string | 内容类型，默认值为 `application/octet-stream`。 |
+| `:url_based_filename` | boolean | 如果为 `true` 且未设置文件名，Rails 不会在 Content-Disposition 中提供文件名。 |
 
-# send_file
+## send_file
 
 向客户端发送文件内容。
 
@@ -8999,12 +9008,12 @@ end
 向客户端发送给定文件。该方法设置 `Content-Length`、`Content-Type`、`Content-Disposition` 和 `Content-Transfer-Encoding` 头部。
 
 | Options | Description |
-| :--- | :--- |
-| :buffer_size | number | 如果启用流时每次写入的。 |
-| :disposition | string | 建议浏览器显示（option inline）或保存（option attachment），默认值。 |
-| :status | string | 状态码，默认值为 '200 OK'。 |
-| :stream | boolean | 如果为 `false`，整个文件将被读取到服务器内存并发送到客户端。否则，文件按 `buffer_size` 分块读取并写入客户端。 |
-| :type | string | 内容类型，默认值为 `application/octet-stream`。 |
+| --- | --- |
+| `:buffer_size` | number | 如果启用流时每次写入的。 |
+| `:disposition` | string | 建议浏览器显示（option inline）或保存（option attachment），默认值。 |
+| `:status` | string | 状态码，默认值为 '200 OK'。 |
+| `:stream` | boolean | 如果为 `false`，整个文件将被读取到服务器内存并发送到客户端。否则，文件按 `buffer_size` 分块读取并写入客户端。 |
+| `:type` | string | 内容类型，默认值为 `application/octet-stream`。 |
 
 你可以使用控制器的 `headers` 属性为 `send_file` 设置额外的头部。
 
@@ -9024,7 +9033,6 @@ HTTP 请求是从服务器响应请求发送给客户端的。实际上，它说
 重定向由网络浏览器在后台处理。通常情况下，你知道被重定向的唯一迹是微小的延迟，以及你查看的页面 URL 与你请求的 URL 不同。最后一点很重要——对于终端用户来说，服务器的重定向与终端用户手动输入目标 URL 几乎没有区别。
 
 在编写良好的网络应用程序时，重定向被证明非常重要。让我们来看一个处理评论帖的简单博客应用程序-
-
 
 在用户发布评论后，我们的应用程序应该重新显示文章，假定新评论会出现在末尾。
 
@@ -9089,7 +9097,7 @@ redirect_to(:action => ...)
 redirect_to(path)
 ```
 
-重定向到指定的路径。如果路径没有以协议（如 http://）开头，则将加上当前请求的协议和端口。此方法不会对 URL 进行任何重写，因此不应用于创建旨在链接到应用程序操作的路径（除非你使用 `url_for` 或命名路由生成器生成该路径）。
+重定向到指定的路径。如果路径没有以协议（如 `http://`）开头，则将加上当前请求的协议和端口。此方法不会对 URL 进行任何重写，因此不应用于创建旨在链接到应用程序操作的路径（除非你使用 `url_for` 或命名路由生成器生成该路径）。
 
 ```ruby
 def save
@@ -9142,7 +9150,7 @@ redirect_to("http://my.new.home")
 
 ## 20.3 跨越请求的对象和操作
 
-虽然大部分状态在数据库中跨请求持久化并通过 Active Record 访问，但其他状态具有不同的生命周期，需要不同的管理。在 Depot 应用程序中，虽然购物车本身存储在数据库中，但关于哪个是当前购物车的知情是由 session 管理的。Flash 通知用于在重定向后的下一个请求传递诸如“无法删除最后一个用户”之类的简单消息。过滤器（filters）则用于从 URL 的参数中提取本地数据。
+虽然大部分状态在数据库中跨请求持久化并通过 Active Record 访问，但其他状态具有不同的生命周期，需要不同的管理。在 Depot 应用程序中，虽然购物车本身存储在数据库中，但关于哪个是当前购物车的知情是由 `session` 管理的。Flash 通知用于在重定向后的下一个请求传递诸如“无法删除最后一个用户”之类的简单消息。过滤器（filters）则用于从 URL 的参数中提取本地数据。
 
 在本节中，我们将逐一探索这些机制。
 
@@ -9154,14 +9162,13 @@ Rails session 是一种类似于哈希的结构，它可以跨越请求持久化
 
 ### 基于 Cookie 的 Session 的奇之处
 
-当你听到它时，默认存储听起来像是个疯狂的想法。是的，默认存储不适用于存储你需要对客户端隐藏的秘密。你应该担心的安全问题是客户端是否实际上能够修改 session。如果客户端可以将 `cart_id` 从 5 改为 8 并获取他人的购物车，那将毫无意义。坦率地说， Rails 通过对 session 签名来防止这种情况，如果不匹配则抛出异常。
+当你听到它时，默认存储听起来像是个疯狂的想法。是的，默认存储不适用于存储你需要对客户端隐藏的秘密。你应该担心的安全问题是客户端是否实际上能够修改 session。如果客户端可以将 `cart_id` 从 5 改为 8 并获取他人的购物车，那将毫无意义。坦率地说，Rails 通过对 session 签名来防止这种情况，如果不匹配则抛出异常。
 
 这样做的好处在于，每个请求获取和保存 session 不会给数据库带来负担，也没有清理工作。如果你将 session 保存在文件系统或数据库中，你必须处理如何清理 session，这非常麻烦。没有人喜欢当清理杂工。基于 Cookie 的 session 知道如何自我清理。这不令人喜爱吗？
 
 这引出了一个有趣的问题：数据到底在哪里跨请求留存？一种选择是服务器将其作为 Cookie 发给客户端。这是 Rails 3.0 的默认设置。它对大小有限制，并且意味着服务器需要管理和清理的内容更少。注意，内容经过了密码学签名（但默认未加密），这意味着用户可以看到内容但无法篡改它。
 
-另一个选项是将数据存储在服务器上。这包含两个部分。首先，Rails 必须跟踪 session。它通过创建一个（默认情况下）32 位十六进制字符的密钥（这意味着有 $16^{32}$ 种组合）。这个密钥被称为 session id，它实际上是随机的。Rails 安排
-
+另一个选项是将数据存储在服务器上。这包含两个部分。首先，Rails 必须跟踪 session。它通过创建一个（默认情况下）32 位十六进制字符的密钥（这意味着有 `$16^{32}$` 种组合）。这个密钥被称为 session id，它实际上是随机的。Rails 安排
 
 将此会话 ID（session id）作为 cookie（键名为 `_session_id`）存储在用户的浏览器上。由于后续的请求将从该浏览器进入应用程序，Rails 可以此恢复该会话 ID。
 
@@ -9170,9 +9177,7 @@ Rails session 是一种类似于哈希的结构，它可以跨越请求持久化
 你应该在会话中存储什么呢？你可以存储任何内容，但受限于一些限制和注意事项：
 
 - 对于可以在会话中存储的类型类型，有一些限制。细节取决于你选择的存储机制（我们稍后会介绍）。在通常情况下，会话中的对象必须是可序列化的（使用 Ruby 的 `Marshal` 函数）。这意味着，例如，你不能在会话中存储 I/O 对象。
-
 - 你可能不想在会话数据中存储海量对象——将它们放入数据库中，并在会话中引用它们。对于基于 cookie 的会话来说尤为如此，其总限制为 4KB。
-
 - 你可能不想在会话数据中存储易变（volatile）的对象。例如，出于性能考虑，你可能想记录博客中文章的数量计数，并将其存储在会话中。但如果你这样做了，当其他用户添加文章时，该计数将不会更新。
 
 在会话数据中存储代表当前登录用户的对象是很有吸引力的。但如果你的应用程序需要能够使用户失效，这可能不是明智之举。即使用户在数据库中被禁用了，他们的会话数据仍然会反映有效状态。
@@ -9190,9 +9195,6 @@ Rails session 是一种类似于哈希的结构，它可以跨越请求持久化
 由于会话存储是类哈希（hash-like），你可以在其中存储多个对象，每个对象都有自己的键。
 
 不需要为特定的应用程序禁用会话。由于会话是懒性加载的（lazily loaded），只需在不需要会话的任何 action 中不引用会话即可。
-
-
-
 
 实现此过期机制取决于所使用的的存储机制。
 
@@ -9212,6 +9214,8 @@ where updated_at < 3600;
 ## Flash：Action 之间的通信
 
 当我们使用 `redirect_to` 将控制权转移到另一个 action 时，浏览器会生成一个单独请求来调用该 action。该请求将由应用程序在控制器对象的新实例中处理——在原始 action 中设置的实例变量对处理重定向 action 的代码是不可见的。但有时我们需要这两个实例之间进行通信。我们可以使用一个名为 `flash` 的机制来实现。
+
+
 
 `flash` 是一个用于值的临时草稿纸。它像哈希一样组织，并存储在会话数据中，因此你可以通过键存储值并检索它们。它有一个特殊属性：默认情况下，在请求处理期间存储到 `flash` 中的值将在紧随后的下一个请求处理期间可用。一旦第二个请求处理完成，这些值就会从 `flash` 中移除。
 
@@ -9245,19 +9249,16 @@ Rails 支持三种类型的过滤器：`before`、`after` 和 `around`。过滤�
 
 你可以使用 `skip_filter` 跳过任何过滤器（`before`、`after` 和 `around`）。但是，它只对那些被指定为方法符号名的过滤器有效。
 
-
-
 在本章中，我们将看到：
 
-- 模板（templates），
-- 表单：字段和上传字段，
-- 助手（helpers），以及
+- 模板（templates）
+- 表单：字段和上传字段
+- 助手（helpers）
 - 布局（layouts）和局部模板（partials）
 
-## 第 21 章
-## Action View
+# 第 21 章：Action View
 
-我们已经看到了路由组件如何决定使用哪个控制器，以及控制器如何选择 action。我们还看到了控制器及其之间的 action 如何决定向用户渲染什么。通常情况下，渲染发生在 action 结束时，通常涉及模板。这就是本章的主题。ActionView 封装了渲染模板所需的所有功能，最常见的是向用户生成 HTML、XML 或 JavaScript。正如其名，ActionView 是我们 MVC 三部曲中的一部分。
+我们已经看到了路由组件如何决定使用哪个控制器，以及控制器如何选择 action。我们还看到了控制器及其之间的 action 如何决定向用户渲染什么。通常情况下，渲染发生在 action 结束时，通常涉及模板。这就是本章的主题。`ActionView` 封装了渲染模板所需的所有功能，最常见的是向用户生成 HTML、XML 或 JavaScript。正如其名，`ActionView` 是我们 MVC 三部曲中的一部分。
 
 在本章中，我们将从模板开始，Rails 为其提供了系列选项。然后我们将涵盖用户提供输入的多种不同方式：表单、文件上传和链接。最后，我们将通过查看使用助手、布局和局部模板进行维护的多种方法完成本章。
 
@@ -9275,7 +9276,7 @@ Rails 支持三种类型的过滤器：`before`、`after` 和 `around`。过滤�
 
 你也可以拥有不以 action 命名的模板。你可以从控制器通过如下如下调用来渲染此类模板：
 
-```
+```ruby
 render(:action) => 'fake_action_name'
 render(:template) => 'controller/name'
 render(:file) => 'dir/template'
@@ -9290,13 +9291,13 @@ render(:file) => 'dir/template'
 - 控制器的所有实例变量在模板中都是可用的。这就是 action 向模板传递数据的方式。
 - 控制器对象的 `flash`、`headers`、`logger`、`params`、`request`、`response` 和 `session` 作为访问方法在视图可用。除了 `flash` 之外，视图代码可能不应直接使用这些，因为处理它们的责任应该由控制器。然而然而我们在调试时发现很有用。例如，下面的 HTML 模板使用 `debug` 方法显示会话内容、参数详情和当前响应：
 
-```
+```erb
 <h1>Session</h1> <%= debug(session) %>
 <h1>Parameters</h1> <%= debug(params) %>
 <h1>Response</h1> <%= debug(response) %>
 ```
 
-- 使用属性 `controller` 可以访问当前控制器。这允许模板调用控制器中的任何公共方法（包括 ViewController 中的方法）。
+- 使用属性 `controller` 可以访问当前控制器。这允许模板调用控制器中的任何公共方法（包括 `ViewController` 中的方法）。
 - 模板基础目录路径存储在属性 `base_path` 中。
 
 ### 模板中包含的内容
@@ -9407,7 +9408,7 @@ end
 
 此示例中未显示 `hidden_field`（隐藏字段）和 `password_field`（密码字段）。隐藏字段完全不显示，但其值会传回服务器。这可以作为在会话中存储临时数据的替代方案，允许数据从一个请求传递到下一个请求。密码字段会显示，但其中输入的文本会被遮蔽。
 
-对于大多数需求来说，这已经是一个足够充分的入门了。当你发现自己有额外需求时，很可能会发现已经有现成的助手方法或插件可以使用。一个很好的起点是参考 Rails 指南.³
+对于大多数需求来说，这已经是一个足够充分的入门了。当你发现自己有额外需求时，很可能会发现已经有现成的助手方法或插件可以使用。一个很好的起点是参考 Rails 指南。³
 
 同时，让我们探索一下表单数据是如何处理的。
 
@@ -9419,9 +9420,9 @@ end
 
 | parameters | params |
 |---|---|
-| id=123 | { id => "123" } |
-| user(name)=Dave | { user => "Dave" } |
-| user(address)[city]=Wien | { user => {:address => "Wien" } } |
+| `id=123` | `{ id => "123" }` |
+| `user(name)=Dave` | `{ user => "Dave" }` |
+| `user(address)[city]=Wien` | `{ user => {:address => "Wien" } }` |
 
 1. [FormOptionsHelper](https://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html)
 2. [DateHelper](https://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html)
@@ -9456,7 +9457,7 @@ end
 </form>
 ```
 
-HTML 将发送到浏览器。当接收到响应时...参数被提取到嵌套哈希表中。`update` 操作使用参数查找并更新用户。
+HTML 将发送到浏览器。当接收到响应时……参数被提取到嵌套哈希表中。`update` 操作使用参数查找并更新用户。
 
 ```ruby
 @params = {
@@ -9498,6 +9499,8 @@ Rails 的集成深于此。查看图 21.2 中的 `.html.erb` 文件，我们可�
 
 ![](img/79be11dd96f63a00f97952dfe232ef5_351_0.png)
 
+
+
 ```ruby
 class CreatePictures < ActiveRecord::Migration
   def self.up
@@ -9517,7 +9520,7 @@ class CreatePictures < ActiveRecord::Migration
 end
 ```
 
-我们将创建一个简单的上传控制器来演示此过程。`get` 操作非常常规：它仅仅是创建一个图片 对象并渲染表单：
+我们将创建一个简单的上传控制器来演示此过程。`get` 操作非常常规：它仅仅是创建一个图片对象并渲染表单：
 
 ![](img/79be11dd96f63a00f9795edfe232ef5_351_1.png)
 
@@ -9529,9 +9532,6 @@ class UploadController < ApplicationController
   end
 end
 ```
-
-
-
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_354_0.png)
 
@@ -9553,7 +9553,7 @@ end
 
 Rails 以辅助方法的形式提供了一个很好的折中方案。辅助方法简单来说就是一个包含辅助视图的方法的模块。辅助方法是以输出为中心的。它们存在是为了生成 HTML（或 XML、或 JavaScript）——也就是说，辅助方法扩展了模板的行为。
 
-##  way自己的辅助方法
+## 自己的辅助方法
 
 默认情况下，每个控制器都有它自己的辅助方法模块。此外，还有一个名为 `application_helper.rb` 的应用视图。如果你发现 Rails 会做出某些假设并将辅助方法链接到控制器及其视图中，这并不令人意外。虽然所有辅助方法对所有控制器都可用，但通常的实践是将与 `ProductController` 关联的视图辅助组织起来，放在 `app/helpers` 目录下的 `product_helper.rb` 文件中。你不需要记住所有这些细节——Rails 会自动生成控制器脚本创建一个存根辅助模块。
 
@@ -9656,7 +9656,6 @@ CAN$25
 <%= number_to_phone(212555121, :format => "%area) %phone_number") %>
 ```
 
-
 它们自身的形式，这施加了一些限制：它们不能以内联形式出现，且不能出现在其他表单内部。
 
 Rails 提供了条件链接方法，它们在满足条件时会生成超链接，否则返回链接文本。`link_to_if` 和 `link_to_unless` 接受一个条件参数，紧接着是传递给 `link_to` 的普通参数。如果条件为真（对于 `link_to_if`）或为假（对于 `link_to_unless`），则将使用剩余参数创建一个普通链接。如果不是，则名称将作为纯文本添加（不带超链接）。
@@ -9704,7 +9703,6 @@ Rails 提供了条件链接方法，它们在满足条件时会生成超链接�
 `mail_to` 辅助方法创建一个 `mailto:` 链接，点击时它通常会加载客户端的电子邮件应用程序。它接受一个电子邮件地址、链接名称和一组 HTML 选项。你还可以使用 `:bcc`、`:body` 和 `:subject` 来初始化相应的字段。最后，魔法选项 `:encode` 使用客户端 JavaScript 来混淆生成的链接，使爬虫更难从你的页面中抓取电子邮件地址。遗憾的是，这意味着如果用户在浏览器中禁用了 JavaScript，他们将无法看到邮件链接。
 
 ```
-
 <%= mail_to("support@example.com", "Contact Support",
   subject => "Support question from #{user.name}",
   encode => "javascript") %>
@@ -9848,10 +9846,9 @@ end
 
 
 
+布局（Layouts）是特定控制器的。如果当前请求由名为`store`的控制器处理，Rails 默认会在`app/views/layouts`目录下查找名为`store`的布局（带有通常`.html.erb`或`.xml builder`扩展名）。如果你在`layouts`目录下创建一个名为`_application`的布局，它将应用于所有没有定义对应布局的控制器。
 
-布局（Layouts）是特定控制器的。如果当前请求由名为 `store` 的控制器处理，Rails 默认会在 `app/views/layouts` 目录下查找名为 `store` 的布局（带有通常 `.html.erb` 或 `.xml builder` 扩展名）。如果你在 layouts 目录下创建一个名为 `_application` 的布局，它将应用于所有没有定义对应布局的控制器。
-
-你可以使用控制器内部的 `layout` 声明来覆盖此设置。最简单的方法是声明接收一个字符串形式的布局名称。该声明将为 `store` 控制器生成标准的 `.html.erb` 文件或标准的 `.xml.builder` 模板。系统将在 `app/views/layouts` 目录下查找该布局文件。
+你可以使用控制器内部的`layout`声明来覆盖此设置。最简单的方法是声明接收一个字符串形式的布局名称。该声明将为`store`控制器生成标准的`.html.erb`文件或标准的`.xml.builder`模板。系统将在`app/views/layouts`目录下查找该布局文件。
 
 ```ruby
 class StoreController < ApplicationController
@@ -9862,7 +9859,7 @@ class StoreController < ApplicationController
 end
 ```
 
-你可以使用 `:only` 和 `:except` 限定符来指定哪些 action 应用该布局：
+你可以使用`:only`和`:except`限定符来指定哪些`action`应用该布局：
 
 ```ruby
 class StoreController < ApplicationController
@@ -9873,9 +9870,9 @@ class StoreController < ApplicationController
 end
 ```
 
-将布局指定为 `nil` 会关闭控制器的布局功能。
+将布局指定为`nil`会关闭控制器的布局功能。
 
-有时你需要在运行时更改一组页面的外观。例如，博客站点在用户登录进行维护时，可能会提供外观不同的侧边菜单；或者商店网站在因维护停机时，可能会有外观不同的页面。Rails 通过动态布局支持这种功能。如果 `layout` 声明的参数是一个符号（symbol），它被视为要使用的布局名称：
+有时你需要在运行时更改一组页面的外观。例如，博客站点在用户登录进行维护时，可能会提供外观不同的侧边菜单；或者商店网站在因维护停机时，可能会有外观不同的页面。Rails 通过动态布局支持这种功能。如果`layout`声明的参数是一个符号（symbol），它被视为要使用的布局名称：
 
 ```ruby
 class StoreController < ApplicationController
@@ -9895,9 +9892,9 @@ class StoreController < ApplicationController
 end
 ```
 
-控制器的子类将使用父类的布局，除非它们使用 `layout` 指令对其进行覆盖。
+控制器的子类将使用父类的布局，除非它们使用`layout`指令对其进行覆盖。
 
-最后，单个 action 可以通过传递 `:layout` 选项选择使用特定的布局（或完全不使用布局）：
+最后，单个`action`可以通过传递`:layout`选项选择使用特定的布局（或完全不使用布局）：
 
 ```ruby
 def rss
@@ -9928,7 +9925,7 @@ end
 </html>
 ```
 
-单个模板可以通过将标题赋值给 `@title` 变量来设置标题：
+单个模板可以通过将标题赋值给`@title`变量来设置标题：
 
 ```erb
 <% @title = "我奇妙的生活" %>
@@ -9946,11 +9943,11 @@ end
 </p>
 ```
 
-事实上，我们可以采取更激进的做法。这种相同的机制允许我们使用 `yield :layout` 将模板的渲染嵌入布局中，同时也允许你在模板中生成任意内容，这些内容可以被嵌入到任何其他模板中。
+事实上，我们可以采取更激进的做法。这种相同的机制允许我们使用`yield :layout`将模板的渲染嵌入布局中，同时也允许你在模板中生成任意内容，这些内容可以被嵌入到任何其他模板中。
 
-例如，不同的模板可能需要向标准页面侧边栏添加它们特有的模板条目。我们将在这些模板中使用 `content_for` 机制来定义内容，并在布局中使用 `yield` 将这些内容嵌入到侧边栏。
+例如，不同的模板可能需要向标准页面侧边栏添加它们特有的模板条目。我们将在这些模板中使用`content_for`机制来定义内容，并在布局中使用`yield`将这些内容嵌入到侧边栏。
 
-在每个普通模板中，使用 `content_for` 为块内渲染的内容命名。这些内容将存储在 Rails 内部，而不会对模板生成的输出贡献。
+在每个普通模板中，使用`content_for`为块内渲染的内容命名。这些内容将存储在 Rails 内部，而不会对模板生成的输出贡献。
 
 # 普通模板
 
@@ -9966,7 +9963,7 @@ end
 
 <p>这里是此模板渲染的页面上显示的普通内容。</p>
 
-然后，在布局中，通过 `yield :sidebar` 将此块包含在页面侧边栏中：
+然后，在布局中，通过`yield :sidebar`将此块包含在页面侧边栏中：
 
 ```html
 <!DOCTYPE html>
@@ -9984,15 +9981,15 @@ end
 </html>
 ```
 
-此技术可以用于将页面特定的 JavaScript 函数添加到布局的 `<head>` 部分，创建专门的菜单栏等。
+此技术可以用于将页面特定的 JavaScript 函数添加到布局的`<head>`部分，创建专门的菜单栏等。
 
 # 部分页面模板（Partial-Page Templates）
 
 应用程序通常会在多个页面显示关于应用对象或多个对象的信息。购物车可能会在购物车页面显示订单行项目，并在订单摘要页面再次显示。博客应用程序可能会在主索引页显示文章内容，并在请求评论的页面顶部再次显示。这通常涉及在不同的模板页面之间复制代码段。
 
-然而，Rails 通过*部分页面*模板（更常称为 *partials*，即部分模板）消除了这种重复。你可以将部分模板视为一种副标题。你可以在另一个模板内部调用它一次或多次，并可能将对象作为参数传递给它。当部分模板渲染完成时，它会将控制权返回给调用模板。
+然而，Rails 通过*部分页面*模板（更常称为*partials*，即部分模板）消除了这种重复。你可以将部分模板视为一种副标题。你可以在另一个模板内部调用它一次或多次，并可能将对象作为参数传递给它。当部分模板渲染完成时，它会将控制权返回给调用模板。
 
-在内部，部分模板看起来与其他任何模板都一样。在外部，有一个细微的区别：文件名必须以下划线开头。渲染部分模板请使用 `render` 方法：
+在内部，部分模板看起来与其他任何模板都一样。在外部，有一个细微的区别：文件名必须以下划线开头。渲染部分模板请使用`render`方法：
 
 ```erb
 <div class="article">
@@ -10009,7 +10006,7 @@ end
 <%= render :partial => "article", :object => @article %>
 ```
 
-如果你想向部分模板传递额外的局部变量，请使用 `:locals` 参数：
+如果你想向部分模板传递额外的局部变量，请使用`:locals`参数：
 
 ```erb
 <%= render :partial => "article", :object => @article, locals: { :authorized_by => session[:user_name], :from_ip => request.remote_ip } %>
@@ -10019,15 +10016,15 @@ end
 
 应用程序通常需要显示格式化条目的集合。博客可能会显示系列文章，每篇文章都有文本、日期等。商店可能会在目录显示项目，每个条目都有图片、描述和价格。
 
-`render` 的 `:collection` 参数与 `:partial` 参数配合工作。`:partial` 参数允许使用部分模板定义条目的格式，而 `:collection` 参数将此模板应用于集合中的每个成员。要使用 `_article.html.erb` 部分模板显示模型对象列表，可以写：
+`render`的`:collection`参数与`:partial`参数配合工作。`:partial`参数允许使用部分模板定义条目的格式，而`:collection`参数将此模板应用于集合中的每个成员。要使用`_article.html.erb`部分模板显示模型对象列表，可以写：
 
 ```erb
 <%= render :partial => "article", :collection => @article_list %>
 ```
 
-在部分模板内部，局部变量将设置为集合中的当前文章——变量名与模板同。此外，变量 `article_counter` 将设置为当前文章在集合中的索引。
+在部分模板内部，局部变量将设置为集合中的当前文章——变量名与模板同。此外，变量`article_counter`将设置为当前文章在集合中的索引。
 
-可选的 `:spacer_template` 参数允许你指定一个要在集合中每个元素之间渲染的模板。例如，一个视图可能包含以下内容：
+可选的`:spacer_template`参数允许你指定一个要在集合中每个元素之间渲染的模板。例如，一个视图可能包含以下内容：
 
 ```erb
 <%= render :partial => "animal",
@@ -10035,30 +10032,26 @@ end
   :spacer_template => "spacer") %>
 ```
 
-这使用 `_animal.html.erb` 渲染列表中的每个动物，并在之间渲染 `_spacer.html.erb`。
-
-
-
-
+这使用`_animal.html.erb`渲染列表中的每个动物，并在之间渲染`_spacer.html.erb`。
 
 # 共享模板
 
-如果渲染一个调用的选项或部分参数是一个简单的名称，Rails 会假设目标模板位于当前控制器的视图目录中。然而，如果该名称包含一个或多个字符，Rails 会假设从到最后一个斜线之前的部分是目录名，其余部分是模板名称。该目录被认为位于 `app/views` 下。这使得在控制器之间共享部分模板（partials）和子模板变得简单。
+如果渲染一个调用的选项或部分参数是一个简单的名称，Rails 会假设目标模板位于当前控制器的视图目录中。然而，如果该名称包含一个或多个字符，Rails 会假设从到最后一个斜线之前的部分是目录名，其余部分是模板名称。该目录被认为位于`app/views`下。这使得在控制器之间共享部分模板（partials）和子模板变得简单。
 
-Rails 应用程序中的惯例是将这些共享部分模板存储在 `app/views` 下的一个名为 `shared` 的子目录中。使用如下状态方法渲染共享部分模板，例如：
+Rails 应用程序中的惯例是将这些共享部分模板存储在`app/views`下的一个名为`shared`的子目录中。使用如下状态方法渲染共享部分模板，例如：
 
-```
+```erb
 <%= render("shared/header", :title => @article.title) %>
 <%= render(:partial => "shared/post", :object => @article) %>
 ```
 
-在这个示例中，`@article` 对象将被赋值给模板内的局部变量 `post`。
+在这个示例中，`@article`对象将被赋值给模板内的局部变量`post`。
 
 # 带有布局的局部模板
 
 局部模板可以配合布局进行渲染，并且你对任何模板中的块（block）应用布局：
 
-```
+```erb
 <%= render :partial => "user", :layout => "administrator" %>
 <%= render :layout => "administrator" do %>
   # ...
@@ -10066,7 +10059,7 @@ Rails 应用程序中的惯例是将这些共享部分模板存储在 `app/views
 <% end %>
 ```
 
-局部模板布局可以直接在与控制器相关的 `app/views` 目录中找到，遵循习惯的下划线前缀，例如 `app/views/users/_administrator.html.erb`。
+局部模板布局可以直接在与控制器相关的`app/views`目录中找到，遵循习惯的下划线前缀，例如`app/views/users/_administrator.html.erb`。
 
 # 局部模板与控制器
 
@@ -10078,7 +10071,7 @@ Rails 应用程序中的惯例是将这些共享部分模板存储在 `app/views
 
 视图是 Rails 应用程序的公开界面，我们已经看到 Rails 为你构建健壮且可维护的用户界面和应用程序编程接口提供了广泛的支持。
 
-我们从模板开始，Rails 为三种类型提供了内置模板：`erb`、`builder` 和 `rs`。模板让你能够轻松地为任何请求提供 HTML、XML 和 JavaScript 响应。我们将在第 26.3 节（第 435 页，“使用 Haml 美化我们的标记”）中讨论另一个选项。
+我们从模板开始，Rails 为三种类型提供了内置模板：`erb`、`builder`和`rs`。模板让你能够轻松地为任何请求提供 HTML、XML 和 JavaScript 响应。我们将在第 26.3 节（第 435 页，“使用 Haml 美化我们的标记”）中讨论另一个选项。
 
 我们深入研究了表单，这是用户与你的应用程序交互的主要手段。在此过程中，我们涵盖了文件上传。
 
@@ -10088,35 +10081,29 @@ Rails 应用程序中的惯例是将这些共享部分模板存储在 `app/views
 
 这涵盖了使用浏览器的用户如何访问我们的 Rails 应用程序。接下来是：涵盖如何使用缓存技术，在数据库底层数据在请求之间没有变化的情况下，减少甚至消除渲染视图的计算开销。
 
-在本章中，我们将看到
+在本章中，我们将看到：
 
-- 静态缓存完整页面，
-- 缓存操作（action）的结果，
-- 从缓存中过期页面，
-- 缓存页面的一部分。
+- 静态缓存完整页面
+- 缓存操作（action）的结果
+- 从缓存中过期页面
+- 缓存页面的一部分
 
-# 第 22 章
-
-# 缓存
+# 第 22 章：缓存
 
 许多应用程序似乎花费大量时间重复执行相同的任务。一个博客应用程序为每位访问者渲染当前文章列表。商店应用程序将为每个请求它的人显示相同的产品信息页面。
 
 所有这些重复消耗了我们在服务器上的资源和时间。渲染你网站的首页可能消耗资源。当数据库底层数据在请求之间没有变化时，使用缓存技术可以减少甚至消除渲染视图的计算开销。
 
-在本章中，我们将看到
+在本章中，我们将看到：
 
-- 静态缓存完整页面，
-- 缓存操作（action）的结果，
-- 从缓存中过期页面，
-- 缓存页面的一部分。
-
-
-
-
+- 静态缓存完整页面
+- 缓存操作（action）的结果
+- 从缓存中过期页面
+- 缓存页面的一部分
 
 # 过期页面
 
--   由你无法控制的数据生成的页面。例如，一个显示我们数据库信息的页面，如果非 Rails 应用程序也更新了该数据库，该页面可能无法被缓存。在我们的应用程序感知不到的情况下，我们的缓存页面就会过时。
+- 由你无法控制的数据生成的页面。例如，一个显示我们数据库信息的页面，如果非 Rails 应用程序也更新了该数据库，该页面可能无法被缓存。在我们的应用程序感知不到的情况下，我们的缓存页面就会过时。
 
 然而，缓存可以处理由你控制的易变内容生成的页面。正如我们在下一节中看到的，这简单来说是一个关于在缓存页面过期时将其删除的问题。
 
@@ -10126,9 +10113,9 @@ Rails 应用程序中的惯例是将这些共享部分模板存储在 `app/views
 
 # 显式过期页面
 
-删除缓存页面的底层方法是使用 `expire_page` 和 `expire_action` 方法。它们接受与 `uri_for` 相同的参数，并使与生成的 URL 匹配的缓存页面过期。
+删除缓存页面的底层方法是使用`expire_page`和`expire_action`方法。它们接受与`uri_for`相同的参数，并使与生成的 URL 匹配的缓存页面过期。
 
-例如，我们的内容控制器可能有一个 action 允许我们创建文章，另一个 action 用于更新现有文章。当我们创建文章时，公共页面上的文章列表将变得过，我们调用 `expire_page` 并传入显示公共页面的 action 名称。当我们更新现有文章时，公共索引保持不变（至少在我们的应用程序中），但此文章的任何版本都应该被删除。因为此缓存是使用 `caches_action` 创建的，我们需要使用 `expire_action` 并传入 action 名称和文章 id 使页面过期。
+例如，我们的内容控制器可能有一个`action`允许我们创建文章，另一个`action`用于更新现有文章。当我们创建文章时，公共页面上的文章列表将变得过期，我们调用`expire_page`并传入显示公共页面的`action`名称。当我们更新现有文章时，公共索引保持不变（至少在我们的应用程序中），但此文章的任何版本都应该被删除。因为此缓存是使用`caches_action`创建的，我们需要使用`expire_action`并传入`action`名称和文章 id 使页面过期。
 
 ```ruby
 Download /cookies/app/controllers/content_controller.rb
@@ -10172,34 +10159,32 @@ end
 
 对于许多设置，最简单的方法是将缓存文件保留在文件系统上。但你不能将这些文件保存在每台服务器的本地，因为在其中一台服务器上让缓存过期不会在其他服务器上过期。因此，你需要设置一个所有服务器都可以共享的网络驱动器来进行缓存。
 
-与 session 配置一样，你可以在 `environment.rb` 或特定环境文件中全局配置基于文件的缓存存储：
+与 session 配置一样，你可以在`environment.rb`或特定环境文件中全局配置基于文件的缓存存储：
 
 ```ruby
 ActionController::Base.cache_store = :file_store, "#{RAILS_ROOT}/cache"
 ```
 
-此配置假设应用根目录下有一个名为 `cache` 的目录，并且 Web 服务器对该目录具有完全的读写权限。此目录可以轻松软链接到服务器上代表网络驱动器的路径。
+此配置假设应用根目录下有一个名为`cache`的目录，并且 Web 服务器对该目录具有完全的读写权限。此目录可以轻松软链接到服务器上代表网络驱动器的路径。
 
 无论你选择哪种存储来缓存片段，都应该意识到网络瓶颈可能会迅速变成问题。如果你的网站依赖于缓存，网络瓶颈很快就会成为问题。如果你的网站依赖于缓存，当下次请求访问该 URL，缓存页面将根据新内容重新生成缓存页面。
 
+## 过期头部（Expiration Headers）
 
+最高效的请求是永远不会请求。许多很少更改的页面（特别是图像、脚本和样式表）可以被缓存。确保在请求到达你的服务器之前就优化重新检索的一种方法是提供一个`Expires`头部。
 
-
-
-## 过期头部 (Expiration Headers)
-
-最高效的请求是永远不会请求。许多很少更改的页面（特别是图像、脚本和样式表）可以被缓存。确保在请求到达你的服务器之前就优化重新检索的一种方法是提供一个 `Expires` 头部。
-
-虽然 `Expires` 头部可以提供多种不同的选项，但最常用的用法是指定给定响应应被视为“有效”多长时间，这意味着客户端在此期间不需要重新请求这些数据。你的控制器中的 `expires_in` 方法可以实现这一结果：
+虽然`Expires`头部可以提供多种不同的选项，但最常用的用法是指定给定响应应被视为“有效”多长时间，这意味着客户端在此期间不需要重新请求这些数据。你的控制器中的`expires_in`方法可以实现这一结果：
 
 ```ruby
 expires_in 20.minutes
 expires_in 1.year
 ```
 
-服务器在 `Expires` 头部中提供的日期不应超过未来一年。
+服务器在`Expires`头部中提供的日期不应超过未来一年。
 
-`Expires` 句头的替代方案是指示完全不缓存响应。这可以通过 `expires_now` 方法实现，理解的是，该方法不接受参数。
+`Expires`头部的替代方案是指示完全不缓存响应。这可以通过`expires_now`方法实现，理解的是，该方法不接受参数。
+
+
 
 你可以在 HTTP 规范¹ 中找到关于更多过期选项的附加信息。
 
@@ -10213,11 +10198,11 @@ expires_in 1.year
 
 - http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3
 
-对于所有其他请求，如果你调用了 `stale?` 或 `fresh_when` 方法，Rails 将为你生成必要的 HTTP 头部。
+对于所有其他请求，如果你调用了`stale?`或`fresh_when`方法，Rails 将为你生成必要的 HTTP 头部。
 
-这两个方法都接受 `last_modified` 时间戳（UTC 格式）和 `etag`。后者是响应所依赖的，或此类对象的数组。此类对象需要响应 `cache_key` 或 `to_param`。ActiveRecord 会为你处理好这些。
+这两个方法都接受`last_modified`时间戳（UTC 格式）和`etag`。后者是响应所依赖的，或此类对象的数组。此类对象需要响应`cache_key`或`to_param`。ActiveRecord 会为你处理好这些。
 
-`stale?` 通常用于涉及渲染的语句中：
+`stale?`通常用于涉及渲染的语句中：
 
 ```ruby
 def show
@@ -10229,7 +10214,7 @@ def show
 end
 ```
 
-当你使用默认渲染时，`fresh_when` 通常更方便，因为它会为你生成一个 304 Not Modified 响应：
+当你使用默认渲染时，`fresh_when`通常更方便，因为它会为你生成一个 304 Not Modified 响应：
 
 ```ruby
 def fresh_when(etag: @article, :last_modified: @article.created_at)
@@ -10242,7 +10227,7 @@ end
 
 事实证明，在动态网站中缓存页面部分非常有用。也许你为博客应用程序中的每个用户自定义了欢迎语和侧边栏。在这种情况下，你无法使用页面缓存，因为每个用户的整个页面都是不同的。但由于文章列表在用户之间不会变化，你可以使用片段缓存——你只需构建一次显示文章的 HTML，将其包含在交付给单个用户的自定义页面中。
 
-为了说明片段缓存，让我们设置一个虚拟的博客应用程序。这是控制器。它设置了 `@dynamic_content`，代表每次查看页面都应该更改的内容。对于你的虚拟博客，我们使用当前时间作为此内容。
+为了说明片段缓存，让我们设置一个虚拟的博客应用程序。这是控制器。它设置了`@dynamic_content`，代表每次查看页面都应该更改的内容。对于你的虚拟博客，我们使用当前时间作为此内容。
 
 ```ruby
 # app/controllers/blog_controller.rb
@@ -10253,7 +10238,7 @@ class BlogController < ApplicationController
 end
 ```
 
-这是我们的 `Article` 类。它模拟了一个在通常情况下从数据库获取文章的模型类。我们安排了列表中的第一篇文章显示其被创建的时间。
+这是我们的`Article`类。它模拟了一个在通常情况下从数据库获取文章的模型类。我们安排了列表中的第一篇文章显示其被创建的时间。
 
 ```ruby
 # app/models/article.rb
@@ -10281,7 +10266,7 @@ end
 <%# app/views/blog/list.html.erb %>
 <%= @dynamic_content %> <!-- 这里是动态内容。 -->
 <% cache do %> <!-- 这是我们想要的缓存 -->
-<<ul>
+<ul>
   <% for article in Article.find_recent %>
     <li><p><%= h(article.body) %></p></li>
   <% end %>
@@ -10290,46 +10275,43 @@ end
 <%= @dynamic_content %> <!-- 更多动态内容。 -->
 ```
 
-魔法在于 `cache` 方法。与此方法关联的块生成的的所有输出都会缓存。下次访问页面时，动态内容仍然会被渲染，但块内部的内容将直接来自缓存——它们不会被重新生成。当我们启动应用程序时，可以看到这一点。
+魔法在于`cache`方法。与此方法关联的块生成的的所有输出都会缓存。下次访问页面时，动态内容仍然会被渲染，但块内部的内容将直接来自缓存——它们不会被重新生成。当我们启动应用程序时，可以看到这一点。
 
+在这个示例中，两个片段被缓存了。第一个片段的额外的`port`参数设置为`articles`（文章），第二个设置为`counts`（计数）。
 
-
-
-
-在这个示例中，两个片段被缓存了。第一个片段的额外的 `port` 参数设置为 `articles`（文章），第二个设置为 `counts`（计数）。
-
-在控制器（controller）中，我们可以将相同的参数传递给 `expire_fragment` 来删除特定的片段。例如，当我们编辑一篇文章时，我们使文章列表失效，但计数仍然有效。如果我们删除的是一个站点响应文章，我们需要使两个片段都失效。控制器的写法如下（我们没有编写对其中文章进行任何操作的代码——只需查看缓存部分）：
+在控制器（controller）中，我们可以将相同的参数传递给`expire_fragment`来删除特定的片段。例如，当我们编辑一篇文章时，我们使文章列表失效，但计数仍然有效。如果我们删除的是一个站点响应文章，我们需要使两个片段都失效。控制器的写法如下（我们没有编写对其中文章进行任何操作的代码——只需查看缓存部分）：
 
 ```
 Download
 /views/app/controllers/blog2_controller.rb
 class BlogController < ApplicationController
-ndef list
-  @dynamic_content = Time.now.to_s
-  @articles = Article.find_recent
-  @article_count = @articles.size
-end
+  def list
+    @dynamic_content = Time.now.to_s
+    @articles = Article.find_recent
+    @article_count = @articles.size
+  end
 ```
 
 ```
-ndef edit
-  # 执行文章编辑
-  expire_fragment(:action => 'list', :part => 'articles')
-  redirect_to(:action => 'list')
-end
+  def edit
+    # 执行文章编辑
+    expire_fragment(:action => 'list', :part => 'articles')
+    redirect_to(:action => 'list')
+  end
 ```
 
 ```
-ndef delete
-  # 执行删除操作
-  expire_fragment(:action => 'list', :part => 'articles')
-  expire_fragment(:action => 'list', :part => 'counts')
-  redirect_to(:action => 'list')
-end
+  def delete
+    # 执行删除操作
+    expire_fragment(:action => 'list', :part => 'articles')
+    expire_fragment(:action => 'list', :part => 'counts')
+    redirect_to(:action => 'list')
+  end
 ```
 
-`expire_fragment` 方法还可以接受一个单独的正则表达式作为参数，允许我们使所有匹配名称的片段失效：
-expire_fragment(%r{/blog2/list.*})
+`expire_fragment`方法还可以接受一个单独的正则表达式作为参数，允许我们使所有匹配名称的片段失效：
+
+`expire_fragment(%r{/blog2/list.*})`
 
 ## 我们刚刚做了什么
 
@@ -10346,9 +10328,13 @@ expire_fragment(%r{/blog2/list.*})
 在本章中，我们将看到：
 
 - 迁移文件的命名，
+
 - 重命名表和列，
+
 - 创建和重命名表，
+
 - 定义索引和键，
+
 - 使用原生 SQL。
 
 # 第 23 章
@@ -10361,15 +10347,15 @@ Rails 鼓励一种敏捷、迭代的开发风格。我们不期望第一次就�
 
 但应用程序还有另一个会发生变化的区域，一个我们无法直接使用版本控制来管理的区域。Rails 应用中的数据库架构随着开发的进行而不断演变：我们在这里添加一个表，在的地方重命名一个列，以此此类推。数据库的变化与应用程序代码同步进行。
 
-在 Rails 中，每一步操作都是通过使用迁移（migration）来实现的。你将在 Depot 应用程序开发过程中看到这一点，从我们在第 6.1 节创建第一批产品开始，从第 82 页生成脚手架（Scaffold），以及第 10.1 节执行为 `line_items` 添加数量等任务，再到第 130 页的迭代 E1：创建一个智能购物车。现在是时候深入研究迁移的工作原理以及你还可以用它们做些什么了。
+在 Rails 中，每一步操作都是通过使用迁移（migration）来实现的。你将在 Depot 应用程序开发过程中看到这一点，从我们在第 6.1 节创建第一批产品开始，从第 82 页生成脚手架（Scaffold），以及第 10.1 节执行为`line_items`添加数量等任务，再到第 130 页的迭代 E1：创建一个智能购物车。现在是时候深入研究迁移的工作原理以及你还可以用它们做些什么了。
 
 # 23.1 创建和运行迁移
 
-迁移仅仅是你的应用程序中 `db/migrate` 目录下的一个 Ruby 源文件。每个迁移文件名都以若干数字（通常是十四位）和一个下划线开头。这些数字是迁移的关键，因为它们定义了迁移应用的顺序——它们是单次迁移的版本号。
+迁移仅仅是你的应用程序中`db/migrate`目录下的一个 Ruby 源文件。每个迁移文件名都以若干数字（通常是十四位）和一个下划线开头。这些数字是迁移的关键，因为它们定义了迁移应用的顺序——它们是单次迁移的版本号。
 
 版本号本身是迁移创建时的协调世界时（UTC）时间戳。这些数字包含四位数的年份，随后是月、日、时、分、秒的两位数字，所有都以伦敦格林尼治皇家天文台的太阳时为准。由于迁移的创建频率较低，且准确性精确到秒，两个人获得相同时间戳的概率微乎其微。而具有确定性顺序的时间戳的好处远大于这种可能发生的极小风险。
 
-这里是我们的 Depot 的 `db/migrate` 目录结构：
+这里是我们的 Depot 的`db/migrate`目录结构：
 
 ```
 depot> ls db/migrate
@@ -10386,7 +10372,7 @@ depot> ls db/migrate
 
 虽然你可以手动创建这些迁移，但使用生成器（generator）更简单（更不容易出错）。正如我们所见，实际上有两个生成器可以创建迁移文件：
 
-- 模型生成器会创建一个与模型关联的表的迁移（除非你指定了 `--skip-migration` ）。接下来的示例显示了一个 `discount` 模型，它也会创建一个名为 `yyymMddhmmss_create_discounts.rb` 的迁移：
+- 模型生成器会创建一个与模型关联的表的迁移（除非你指定了`--skip-migration`）。接下来的示例显示了一个`discount`模型，它也会创建一个名为`yyymMddhmmss_create_discounts.rb`的迁移：
 
 ```
 depot> rails generate model discount discount
@@ -10411,7 +10397,7 @@ depot> rails generate migration add_column
 
 # 运行迁移
 
-迁移使用 `db:migrate` Rake 任务来运行：
+迁移使用`db:migrate`Rake 任务来运行：
 
 ```
 depot> rake db:migrate
@@ -10419,26 +10405,25 @@ depot> rake db:migrate
 
 为了看到接下来发生什么，让我们深入 Rails 内部。
 
-迁移代码在每个 Rails 数据库中维护一个 `schema_migrations` 表。该表只有一列，名为 `version`，每个成功应用的迁移对应一行。
+迁移代码在每个 Rails 数据库中维护一个`schema_migrations`表。该表只有一列，名为`version`，每个成功应用的迁移对应一行。
 
-当你运行 `db:migrate` 时，任务首先查找 `schema_migrations` 表。如果它还不存在，则会被创建。
+当你运行`db:migrate`时，任务首先查找`schema_migrations`表。如果它还不存在，则会被创建。
 
-迁移代码随后查看 `db/migrate` 中的所有迁移文件，并跳过任何已在数据库中的版本号（文件名开头的数字）。然后继续应用剩余的迁移，并为每个迁移在 `schema_migrations` 表中创建一个行。如果我们在此再次运行迁移，什么都不会发生。每个迁移文件的版本号都与数据库中的行匹配，因此没有迁移需要应用。
+迁移代码随后查看`db/migrate`中的所有迁移文件，并跳过任何已在数据库中的版本号（文件名开头的数字）。然后继续应用剩余的迁移，并为每个迁移在`schema_migrations`表中创建一个行。如果我们在此再次运行迁移，什么都不会发生。每个迁移文件的版本号都与数据库中的行匹配，因此没有迁移需要应用。
 
 然而，如果我们随后创建了一个新的迁移文件，它将拥有一个不在数据库中的版本号。即使该版本号在某些已应用的迁移之前也是如此。这在多个用户使用版本控制系统存储迁移文件时就会发生。如果我们随后运行迁移，这个新的迁移文件——仅此这迁移文件——将被执行。这意味着迁移可能是乱序的，因此你可能需要小心确保这些迁移是相互独立的。或者你可能希望将数据库恢复到之前的状态，然后按顺序应用迁移。
 
-
-
-
-
 你也可以重做一个或多个迁移：
-depot> rake db:migrate:redo STEP=3
 
-默认情况下，redo 会回滚一次迁移并重新运行它。若要回滚多次迁移，请传递 `STEP=` 参数。
+```
+depot> rake db:migrate:redo STEP=3
+```
+
+默认情况下，redo 会回滚一次迁移并重新运行它。若要回滚多次迁移，请传递`STEP=`参数。
 
 ## 23.2 迁移的剖析
 
-迁移（Migrations）是 Rails 类 `ActiveRecord::Migration` 的子类。你应该创建的类至少包含 `up` 和 `down` 两个类方法：
+迁移（Migrations）是 Rails 类`ActiveRecord::Migration`的子类。你应该创建的类至少包含`up`和`down`两个类方法：
 
 ```
 class SomeMeaningfulName < ActiveRecord::Migration
@@ -10453,9 +10438,9 @@ class SomeMeaningfulName < ActiveRecord::Migration
   end
 ```
 
-类名在将所有大写字母转换为小写并在前面加上下划线后，必须与文件名中版本号之后的部分匹配。例如，上一个类可能位于一个名为 `2011021100017_some_meaningful_name.rb` 的文件中。两个迁移不能包含同名的类。
+类名在将所有大写字母转换为小写并在前面加上下划线后，必须与文件名中版本号之后的部分匹配。例如，上一个类可能位于一个名为`2011021100017_some_meaningful_name.rb`的文件中。两个迁移不能包含同名的类。
 
-`up` 方法负责应用此迁移的模式更改，而 `down` 方法则撤销这些更改。让我们变得更具体些。这里有一个迁移，向 `orders` 表添加了一个 `e_mail` 列：
+`up`方法负责应用此迁移的模式更改，而`down`方法则撤销这些更改。让我们变得更具体些。这里有一个迁移，向`orders`表添加了一个`e_mail`列：
 
 ```
 class AddEmailToOrders < ActiveRecord::Migration
@@ -10470,36 +10455,48 @@ class AddEmailToOrders < ActiveRecord::Migration
   end
 ```
 
-看 `down` 方法是如何撤销 `up` 方法的效果的？
+看`down`方法是如何撤销`up`方法的效果的？
 
 ### 列类型
 
-`add_column` 的第三个参数指定了数据库列的类型。在上一个例子中，我们指定了 `e_mail` 列的类型为 `string`。但这到底意味着什么？数据库通常没有 `:string` 类型的列类型。
+`add_column`的第三个参数指定了数据库列的类型。在上一个例子中，我们指定了`e_mail`列的类型为`string`。但这到底意味着什么？数据库通常没有`:string`类型的列类型。
 
 ### 迁移的剖析
 
-记住，Rails 尝试让你的应用程序独立于底层数据库；例如，你可以使用 SQLite 3 进行开发，并将其部署到 Postgres。但不同的数据库对列类型使用不同的名称。如果你在迁移中使用 SQLite 3 类型，那么当它应用到 Postgres 数据库时，可能无法工作。因此，Rails 使用逻辑类型将你与底层数据库类型系统隔离开。如果是迁移 SQLite 数据库，`string` 类型将创建一个类型为 `varchar(255)` 的列。在 Postgres 上，迁移会添加一个类型为 `char varying(255)` 的列。
+记住，Rails 尝试让你的应用程序独立于底层数据库；例如，你可以使用 SQLite 3 进行开发，并将其部署到 Postgres。但不同的数据库对列类型使用不同的名称。如果你在迁移中使用 SQLite 3 类型，那么当它应用到 Postgres 数据库时，可能无法工作。因此，Rails 使用逻辑类型将你与底层数据库类型系统隔离开。如果是迁移 SQLite 数据库，`string`类型将创建一个类型为`varchar(255)`的列。在 Postgres 上，迁移会添加一个类型为`char varying(255)`的列。
 
-迁移支持的类型有 `.binary`, `.boolean`, `.date`, `.datetime`, `.decimal`, `.float`, `.integer`, `.text`, `.time` 和 `.timestamp`。这些类型在 Rails 数据库适配器中的默认映射如下一页的图 23.1 所示。通过此图，你可以推导出在迁移中声明的列在 SQLite 3 中类型为 `integer`，在 Oracle 中类型为 `number(38)`。
+迁移支持的类型有`.binary`, `.boolean`, `.date`, `.datetime`, `.decimal`, `.float`, `.integer`, `.text`, `.time`和`.timestamp`。这些类型在 Rails 数据库适配器中的默认映射如下一页的图 23.1 所示。通过此图，你可以推导出在迁移中声明的列在 SQLite 3 中类型为`integer`，在 Oracle 中类型为`number(38)`。
 
-在迁移中定义列时，你可以指定最多三个选项：`decimal` 列接受额外的选项。这些选项每个都以 `key => value` 键对的形式给出。常用选项如下：
+在迁移中定义列时，你可以指定最多三个选项：`decimal`列接受额外的选项。这些选项每个都以`key => value`键对的形式给出。常用选项如下：
 
 - `null => true or false`
-- 如果为 `false`
+
+- 如果为`false`
+
 - `limit => size`
-- 这设置了字段大小的限制。这基本上是在数据库列类型定义后面追加了字符串 `(size)`。
+
+- 这设置了字段大小的限制。这基本上是在数据库列类型定义后面追加了字符串`(size)`。
+
 - `default => value`
+
 - 这设置了列的默认值。注意，默认值是在迁移运行时计算一次的，以下代码将默认列值设置为迁移运行的时间的时间：
 
 ```
 add_column :orders, :placed_at, :datetime, :default => Time.now
 ```
 
-此外，`decimal` 列接受 `.precision` 和 `.scale` 选项。`:precision` 选项指定了将存储的有效位数，而 `:scale` 选项决定了小数点在这些数字中的位置。精度为 5 标为 0 的小数可以存储从 -99,999 到 +99,999 的数字。精度为 5 标为 2 的小数可以存储 -999.99 到 +999.99 的范围。
+此外，`decimal`列接受`.precision`和`.scale`选项。`:precision`选项指定了将存储的有效位数，而`:scale`选项决定了小数点在这些数字中的位置。精度为 5 标为 0 的小数可以存储从 -99,999 到 +99,999 的数字。精度为 5 标为 2 的小数可以存储 -999.99 到 +999.99 的范围。
 
 | db2 | mysql | openbase | oracle |
+
 | --- | --- | --- | --- |
+
 | :binary | blob(32768) | object | blob |
+
+
+
+| postgresql | sqlite | sqlserver | sybase |
+| --- | --- | --- | --- |
 | :boolean | decimal(1) | tinyint(1) | boolean | number(1) |
 | :date | date | date | date | date |
 | :datetime | timestamp | datetime | datetime | date |
@@ -10510,9 +10507,6 @@ add_column :orders, :placed_at, :datetime, :default => Time.now
 | :text | clob(32768) | text | text | clob |
 | :time | time | time | time | date |
 | :timestamp | timestamp | datetime | timestamp | date |
-
-| postgresql | sqlite | sqlserver | sybase |
-| --- | --- | --- | --- | --- |
 | :binary | bytea | blob | image | image |
 | :boolean | boolean | boolean | bit | bit |
 | :date | date | date | datetime | datetime |
@@ -10525,47 +10519,28 @@ add_column :orders, :placed_at, :datetime, :default => Time.now
 | :time | time | time | time | date |
 | :timestamp | timestamp | datetime | timestamp | date |
 
-图 23.1: 迁移与数据库类型
+图 23.1：迁移与数据库类型
 
-在迁移中定义列时，你可以指定最多三个选项：`decimal` 列接受额外的选项。这些选项每个都以 `key => value` 键对的形式给出。常用选项如下：
-
-- `null => true or false`
-- 如果为 `false`
-- `limit => size`
-- 这设置了字段大小的限制。这基本上是在数据库列类型定义后面追加了字符串 `(size)`。
-- `default => value`
-- 这设置了列的默认值。注意，默认值是在迁移运行时计算一次的，以下代码将默认列值设置为迁移运行的时间的时间：（注：此处原文有重复的“时间”，翻译已按要求微调或保持逻辑逻辑）
-
-```
-add_column :orders, :placed_at, :datetime, :default => Time.now
-```
-
-此外，`decimal` 列接受 `.precision` 和 `.scale` 选项。`:precision` 选项指定了将存储的有效位数，而 `:scale` 选项决定了小数点在这些数字中的位置。精度为 5 标为 0 的小数可以存储从 -99,999 到 +99,999 的数字。精度为 5 标为 2 的小数可以存储 -999.99 到 +999.99。
-
-（此处省略表格内容以保持格式一致，但根据指令不翻译代码块，表格内内容通常为技术术语，保留原样或按需翻译。由于原文提供的文本中出现了大量重复的段落，我将针对逻辑内容部分进行翻译。）
-
-*注：由于你提供的原始文本在表格之后出现了大规模的段落重复，以下是去重后的核心逻辑翻译部分：*
-
-在迁移中定义列时，你可以指定最多三个选项：`decimal` 列接受额外的选项。这些选项每个都以 `key => value` 键对的形式给出。常用选项如下：
+在迁移中定义列时，你可以指定最多三个选项：`:decimal` 列接受额外的选项。这些选项每个都以 `key => value` 键对的形式给出。常用选项如下：
 
 - `null => true or false`
 - 如果为 `false`
 - `limit => size`
 - 这设置了字段大小的限制。这基本上是在数据库列类型定义后面追加了字符串 `(size)`。
 - `default => value`
-- 这设置了列的默认值。注意，默认值是在迁移运行时计算一次的，以下代码将默认列值设置为迁移运行的时间的时间：
+- 这设置了列的默认值。注意，默认值是在迁移运行时计算一次的，以下代码将默认列值设置为迁移运行的时间：
 
-```
+```ruby
 add_column :orders, :placed_at, :datetime, :default => Time.now
 ```
 
-此外，`decimal` 列接受 `.precision` 和 `.scale` 选项。`:precision` 选项指定了将存储的有效位数，而 `:scale` 选项决定了小数点在这些数字中的位置。精度为 5 标为 0 的小数可以存储从 -99,999 到 +99,999 的数字。精度为 5 标为 2 的小数可以存储 -999.99 到 +999.99。
+此外，`:decimal` 列接受 `.precision` 和 `.scale` 选项。`:precision` 选项指定了将存储的有效位数，而 `:scale` 选项决定了小数点在这些数字中的位置。精度为 5、标度为 0 的小数可以存储从 -99,999 到 +99,999 的数字。精度为 5、标度为 2 的小数可以存储 -999.99 到 +999.99。
 
 ## 23.3 管理表
 
-我们一直一直在使用迁移来操作现有表的列。现在让我们来看看如何创建和删除表：
+我们一直在使用迁移来操作现有表的列。现在让我们来看看如何创建和删除表：
 
-```
+```ruby
 class CreateOrderHistories < ActiveRecord::Migration
   def self.up
     create_table :order_histories do |t|
@@ -10578,27 +10553,24 @@ class CreateOrderHistories < ActiveRecord::Migration
   def self.down
     drop_table :order_histories
   end
+end
 ```
 
-`create_table` 接受表名（记住，表名是复数）和一个块。对各种表定义方法的调用看起来很——它们与我们之前使用的 `add_column` 方法相似，但这些方法不需要将表名作为第一个参数，方法的名称就是所需的数据类型。这减少了重复。
+`create_table` 接受表名（记住，表名是复数）和一个块。对各种表定义方法的调用看起来很相似——它们与我们之前使用的 `add_column` 方法相似，但这些方法不需要将表名作为第一个参数，方法的名称就是所需的数据类型。这减少了重复。
 
-注意，我们没有为新表定义 `id` 列。除非我们另有说明，否则 Rails 会为其创建的所有表添加主键。关于此点的更深入的讨论，请参阅第 397 页的第 23.3 节“主键”。
-
-
-
-
+注意，我们没有为新表定义 `id` 列。除非我们另有说明，否则 Rails 会为其创建的所有表添加主键。关于此点的更深入讨论，请参阅第 397 页的第 23.3 节“主键”。
 
 `timestamps` 方法会创建 `created_at` 和 `updated_at` 列，并带有正确的时间戳数据类型。虽然没有要求将这些列添加到任何特定的表中，但这是 Rails 的另一个示例，展示了它如何轻松且一致地实现某种约定。
 
-## 创建表的选项
+### 创建表的选项
 
-你可以将一个选项哈希（hash）作为第二个参数传递给 `create_table`。
+你可以将一个选项哈希作为第二个参数传递给 `create_table`。
 
 如果你指定了 `:force => true`，迁移将在创建新表之前删除同名的现有表。如果你想创建一个强制让数据库进入已知状态的迁移，这是一个非常有用的选项，但显然存在数据丢失的潜在风险。
 
-`:temporary => true` 选项会创建一个临时表——该表在应用程序断开数据库连接时就会消失。在迁移的上下文中，这显然是没有意义的，但正如我们稍后看到的，它在其他地方确实有它的用。
+`:temporary => true` 选项会创建一个临时表——该表在应用程序断开数据库连接时就会消失。在迁移的上下文中，这显然是没有意义的，但正如我们稍后看到的，它在其他地方确实有它的用处。
 
-`:options => 'xxx'` 参数允许你为底层数据库指定选项。这些选项被添加到 `CREATE TABLE` 语句的末尾，紧跟右括号之后。虽然在 SQLite 3 中或某些其他数据库服务器上，这很少必要。例如，某些版本的 MySQL 允许你指定自增 id 列的初始值。我们可以像这样在迁移中传递它：
+`:options => 'xxx'` 参数允许你为底层数据库指定选项。这些选项被添加到 `CREATE TABLE` 语句的末尾，紧跟右括号之后。虽然在 SQLite 3 中或某些其他数据库服务器上，这很少必要，但某些版本的 MySQL 允许你指定自增 `id` 列的初始值。我们可以像这样在迁移中传递它：
 
 ```ruby
 create_table :tickets, :options => "auto_increment = 10000" do |t|
@@ -10618,9 +10590,11 @@ CREATE TABLE "tickets" (
 ) auto_increment = 10000;
 ```
 
-在 MySQL 中使用 `:options` 参数时要小心。Rails 数据库适配器设置了 `ENGINE=InnoDB` 的默认选项。这会覆盖你可能有的任何本地默认值，并强制迁移为新表使用 InnoDB 引擎。但如果你覆盖了 `:options`，就会丢失此设置；新表将使用你站点配置为默认的数据库引擎创建。在这种情况下，你可能想在选项字符串中显式添加 `ENGINE=InnoDB` 以强制执行标准行为。如果你在使用 MySQL，你应该继续使用 InnoDB，因为该引擎为你提供了事务支持。你的应用程序中可能需要事务支持，如果你使用默认的事务测试固定件（test fixtures），那么你在测试中绝对需要它。
+在 MySQL 中使用 `:options` 参数时要小心。Rails 数据库适配器设置了 `ENGINE=InnoDB` 的默认选项。这会覆盖你可能有的任何本地默认值，并强制迁移为新表使用 InnoDB 引擎。但如果你覆盖了 `:options`，就会丢失此设置；新表将使用你站点配置为默认的数据库引擎创建。
 
-## 重命名表
+在这种情况下，你可能想在选项字符串中显式添加 `ENGINE=InnoDB` 以强制执行标准行为。如果你在使用 MySQL，你应该继续使用 InnoDB，因为该引擎为你提供了事务支持。你的应用程序中可能需要事务支持，如果你使用默认的事务测试固定件（test fixtures），那么你在测试中绝对需要它。
+
+### 重命名表
 
 如果重构导致我们重命名变量和列，那么我们发现自己也在重命名表，可能并不意外。迁移支持 `rename_table` 方法：
 
@@ -10638,7 +10612,7 @@ end
 
 注意 `down` 方法如何通过重命名回表来撤销更改。
 
-## `rename_table` 的问题
+### `rename_table` 的问题
 
 当我们在迁移中重命名表时，存在一个微妙的问题。
 
@@ -10661,9 +10635,9 @@ end
 
 现在我们决定删除开发数据库并重新应用所有迁移。当我们这样做时，迁移在迁移 4 中抛出异常：我们的应用程序中不再包含名为 `OrderHistory` 的类，因此迁移失败了。
 
-由 Tim Lucas 提出的一个解决方案是在迁移内部为迁移所需的模型类创建本地的占位符（dummy）版本。例如，以下版本的第四次迁移如果应用程序不再拥有 `OrderHistory` 类，将能够工作：
+由 Tim Lucas 提出的一个解决方案是在迁移内部为迁移所需的模型类创建本地的占位符版本。例如，以下版本的第四次迁移如果应用程序不再拥有 `OrderHistory` 类，将能够工作：
 
-## 管理表
+### 管理表
 
 ```ruby
 class CreateOrderHistories < ActiveRecord::Migration
@@ -10689,7 +10663,7 @@ end
 
 只要我们的模型类不包含任何在迁移中使用的额外功能，这种方法就是有效的——我们创建的只是精简版本。
 
-## 定义索引
+### 定义索引
 
 迁移可以（并且应该）为表定义索引。例如，我们可能会注意到你的应用程序数据库中有大量的订单，根据客户名称搜索的时间比我们预期的要长。是时候使用命名适当的 `add_index` 方法添加索引了。
 
@@ -10707,7 +10681,7 @@ end
 
 如果我们指定 `:unique => true`，则索引将是唯一的。如果我们想要创建一个复合索引，可以向 `add_index` 传递列名的数组。
 
-## 主键
+### 主键
 
 Rails 假设每个表都有主键。如果你需要创建一个没有主键的表（例如连接表），可以指定 `:id => false`：
 
@@ -10718,7 +10692,7 @@ create_table :authors_books, :id => false do |t|
 end
 ```
 
-## 无主键的表
+### 无主键的表
 
 有时我们需要定义没有主键的表。Rails 中最常见的情况是连接表——每个列都是外键的表。
 
@@ -10740,8 +10714,6 @@ end
 
 如果你查看上一节中的行项目迁移，你可能会对两个选项参数之间的重复感到奇怪。如果能将外键约束的创建抽象到一个辅助方法中将会很好。
 
-
-
 ```sql
 (SELECT id FROM #{to_table} WHERE
 id = NEW.#{from_column} IS NULL;
@@ -10759,9 +10731,8 @@ WHERE
 END;
 )
 ```
-```
 
-（使用 `self.` 是必要的，因为迁移是以类方法运行的，而我们需要在此上下文中调用 `foreign_key`）。
+使用 `self.` 是必要的，因为迁移是以类方法运行的，而我们需要在此上下文中调用 `foreign_key`。
 
 在 `up` 迁移中，我们可以以下方式调用这个新方法：
 
@@ -10769,6 +10740,7 @@ END;
 def self.up
   create_table ... do
   end
+
   foreign_key(:line_items, :product_id, :products)
   foreign_key(:line_items, :order_id, :orders)
 end
@@ -10805,21 +10777,37 @@ execute %{
     SELECT
       RAISE(ABORT, "constraint violation: #{constraint_name}")
     WHERE
-      (SELECT id FROM #{to_table} WHERE id = NEW.#{from_column}) IS NULL;
-  END;
+```
+
+
+
+```ruby
+  (SELECT id FROM #{to_table} WHERE id = NEW.#{from_column}) IS NULL;
+
+END;
+
 };
 ```
 
 ```ruby
 execute %{
+
   CREATE TRIGGER #{constraint_name}_delete
+
   BEFORE DELETE ON #{to_table}
+
   FOR EACH ROW BEGIN
+
     SELECT
+
       RAISE(ABORT, "constraint violation: #{constraint_name}")
+
     WHERE
+
       (SELECT id FROM #{from_table} WHERE #{from_column} = OLD.id) IS NOT NULL;
+
   END;
+
 };
 ```
 
@@ -10827,13 +10815,14 @@ end
 
 现在我们可以通过在迁移文件的顶部添加以下几行，将此添加到任何迁移中：
 
-- require "migration_helpers"
+- `require "migration_helpers"`
 
 ```ruby
 class CreateLineItems < ActiveRecord::Migration
 ```
 
-- extend MigrationHelpers
+- `extend MigrationHelpers`
+
 `require` 行将模块定义引入到迁移代码中，而 `extend` 行将 `MigrationHelpers` 模块中的方法作为类方法添加到迁移中。我们可以使用这种技术来开发和共享任意数量的迁移辅助工具方法。
 
 （而且，如果你想让生活变得更轻松，有人写了一个插件可以自动处理外键约束的添加）。
@@ -10844,11 +10833,17 @@ class CreateLineItems < ActiveRecord::Migration
 
 ```ruby
 def self.up
+
   say_with_time "Updating prices..." do
+
     Person.find(:all).each do |p|
+
       p.update_attribute :price, p.lookup_master_price
+
     end
+
   end
+
 end
 ```
 
@@ -10862,19 +10857,29 @@ end
 
 ```ruby
 class ExampleMigration < ActiveRecord::Migration
+
   def self.up
+
     create_table :one do ...
+
     end
+
     create_table :two do ...
+
     end
+
   end
+
 end
 ```
 
 ```ruby
 def self.down
+
   drop_table :two
+
   drop_table :one
+
 end
 ```
 
@@ -10882,34 +10887,35 @@ end
 
 但如果在创建第二个表时出现问题怎么办？我们将得到一个只有一个表一而没有表二的数据库。我们可以修复迁移中的任何问题，但现在我们无法应用它——如果尝试的话，它会因为表一已经存在而失败。
 
-- http://wiki.rubyonrails.org/rails/pages/AvailableGenerators
+- <http://wiki.rubyonrails.org/rails/pages/AvailableGenerators>
 
 我们可以尝试回滚迁移，但不可行。由于原始迁移失败，数据库中的架构版本没有更新，因此 Rails 不会尝试回滚它。
 
 此时，你可以费费精力手动更改架构信息并删除表一。但这样做可能不值得。在这种情况下，我们的建议是直接删除整个数据库，重新创建它，并应用迁移使其恢复到最新状态。你不会丢失任何东西，并且可以确定拥有一个一致的架构。
 
-
-
-
-
 ```ruby
 require "rubygems"
+
 require "active_record"
 ```
 
 ```ruby
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3",
+
 :database => "db/development.sqlite3")
 ```
 
 ```ruby
 class Order < ActiveRecord::Base
+
 end
 ```
 
 ```ruby
 order = Order.find(1)
+
 order.name = "Dave Thomas"
+
 order.save
 ```
 
@@ -10919,8 +10925,11 @@ order.save
 
 ```ruby
 require "config/environment.rb"
+
 order = Order.find(1)
+
 order.name = "Dave Thomas"
+
 order.save
 ```
 
@@ -10946,32 +10955,32 @@ Active Support 是一组所有 Rails 组件共享的库。其中某些内容旨�
 
 Active Support 以有趣的方式扩展了 Ruby 的某些类。我们将快速列出这些最常用的扩展。
 
-- **Array**: 扩展了 Ruby 原生方法。
-- **Class**: 为类属性提供了访问器，并支持派生类。
-- **Date**: 扩展了许多实用方法。
-- **Enumerable**: 扩展了许多方法。
-- **File**: 扩展了 `atomic_write`。
-- **Float**: 为 `round` 方法添加了可选参数。
-- **Hash**: 扩展了 `diff`, `deep_merge` 等。
-- **Integer**: 扩展了 `ordinal` 等方法。
-- **Kernel**: 扩展了 `debugger` 等。
-- **Module**: 为模块属性提供了访问器。
-- **Numeric**: 扩展了各种单位转换。
-- **Object**: 扩展了 `blank?`, `present?` 等方法。
-- **String**: 扩展了 `pluralize`, `singularize`, `camelize`, `underscore` 等大量方法。
+- **Array**：扩展了 Ruby 原生方法。
+- **Class**：为类属性提供了访问器，并支持派生类。
+- **Date**：扩展了许多实用方法。
+- **Enumerable**：扩展了许多方法。
+- **File**：扩展了 `atomic_write`。
+- **Float**：为 `round` 方法添加了可选参数。
+- **Hash**：扩展了 `diff`、`deep_merge` 等。
+- **Integer**：扩展了 `ordinal` 等方法。
+- **Kernel**：扩展了 `debugger` 等。
+- **Module**：为模块属性提供了访问器。
+- **Numeric**：扩展了各种单位转换。
+- **Object**：扩展了 `blank?`、`present?` 等方法。
+- **String**：扩展了 `pluralize`、`singularize`、`camelize`、`underscore` 等大量方法。
+- **Time**：扩展了 `yesterday`、`future?` 等。
 
-- **Time**: 扩展了 `yesterday`, `future?` 等。
+## David 说……
 
-## David 说...
-为什么扩展基础类不会导致灾难
+### 为什么扩展基础类不会导致灾难
 
 第一次看到 `5.months + 30.minutes` 时产生的惊叹通常很快会被恐慌所取代。如果每个人都可以随意更改整数的工作，难道不会导致完全无法维护的意大利面地狱吗？如果每个人都这样做，确实会。但他们没有这样做，所以并不会。
 
-不要把 Active Support 看作是对 Ruby 语言的随机扩展，邀请每个人及其亲戚给字符串类添加自己的琐碎功能。把它看作是所有 Rails 程序员通用的 Ruby 方言。因为 Active Support 是 Rails 的必要组成部分，所以你可以放心地 `5.months` 在任何 Rails 应用程序中都能工作。这消除了存在许多方言的问题。
+不要把 Active Support 看作是对 Ruby 语言的随机扩展，邀请每个人及其亲戚给字符串类添加自己的琐碎功能。把它看作是所有 Rails 程序员通用的 Ruby 方言。因为 Active Support 是 Rails 的必要组成部分，所以你可以放心地相信，`5.months` 在任何 Rails 应用程序中都能工作。这消除了存在许多方言的问题。
 
 在语言扩展方面，Active Support 给了我们两者兼得。它是一种上下文标准化。
 
-- **Time**: `yesterday`, `future?`
+- **Time**：`yesterday`、`future?`
 
 ## 使用 Action View 助手
 
@@ -10981,14 +10990,15 @@ Active Support 以有趣的方式扩展了 Ruby 的某些类。我们将快速�
 
 ```ruby
 require "rubygems"
+
 require "action_view"
+
 require "action_view/helpers"
+
 include ActionView::Helpers::DateHelper
+
 puts distance_of_time_in_words_to_now(Time.parse("December 25"))
 ```
-
-
-
 
 总而言之，这比获取许多常用的 Active Support 方法要多花一点精力，但仍然完全可行。
 
@@ -11000,48 +11010,65 @@ puts distance_of_time_in_words_to_now(Time.parse("December 25"))
 
 ## 访问和更新属性
 
-我们将通过实例示例来演示 Active Resource，从 Depot 应用程序停止的地方继续。主要的区别在于，这次我们将通过客户端远程访问 Depot 应用程序。对于客户端，我们将使用 rails console。首先，确保服务器正在运行。然后创建客户端：
+我们将通过实例示例来演示 Active Resource，从 Depot 应用程序停止的地方继续。主要的区别在于，这次我们将通过客户端远程访问 Depot 应用程序。对于客户端，我们将使用 `rails console`。首先，确保服务器正在运行。然后创建客户端：
 
-```
+```text
 work> rails new depot_client
+
 work> cd depot_client
 ```
 
 现在，为 Product 模型编写一个模型：
 
-```
+```ruby
 depot_client/app/models/product.rb
+
 class Product < ActiveResource::Base
+
   self.site = 'http://david@localhost:3000/'
 ```
 
-这并没有什么特别的。Product 类继承自 ActiveRecord::Base。在内部，有一条语句标识了用户名、密码和端口号。在实际应用程序中，用户名和密码应该是单独获取的，而不是硬编码在模型中；但目前，我们只是在探索这些概念。让我们使用那个存根：
+这并没有什么特别的。Product 类继承自 `ActiveRecord::Base`。在内部，有一条语句标识了用户名、密码和端口号。在实际应用程序中，用户名和密码应该是单独获取的，而不是硬编码在模型中；但目前，我们只是在探索这些概念。让我们使用那个存根：
 
-```
+```text
 depot_client> rails console
+
 Loading development environment (Rails 3.0.1)
+
 >> Product.find(3).title
+
 => "Programming Ruby 1.9"
 ```
 
 成功！让我们扩大范围。我们如何对销售进行 5 折优惠？
 
-```
+```text
 depot_client rails console
+
 REMOTE APPLICATION USING ACTIVE RESOURCE
 
 Loading development environment (Rails 3.0.1)
+
 >> p = Product.find(3)
+
 => #Product:0x28e27ac @prefix_options={}
+
 >> puts p.price
+
 49.5
+
 >> p.price=-5
+
 => #BigDecimal:7f8ebef0,'.45'
+
 >> p.save
+
 => true
 ```
 
-这看起来似乎太棒了。但我们可以通过简单的访问浏览器中的商店来轻松验证这一点：![](img/79be1dd96f3a009795dfe23ef5410.png)
+这看起来似乎太棒了。但我们可以通过简单地访问浏览器中的商店来轻松验证这一点：
+
+![](img/79be1dd96f3a009795dfe23ef5410.png)
 
 简单来说，我们将使用这个框架来管理（重要的）项目。这意味着你会有更多精力去编写容易——以及困难——的代码。我们不需要知道，使用 Active Resource 似乎技术先进到难以区分。
 
@@ -11049,61 +11076,91 @@ Loading development environment (Rails 3.0.1)
 
 成功处理 Products 后，让我们转向 Orders。我们通过编写一个存根开始：
 
-```
+```ruby
 depot_client/app/models/order.rb
+
 class Order < ActiveResource::Base
+
   self.site = 'http://david@localhost:3000/'
+
 end
 ```
 
 看起来不错。让我们试一下：
 
-```
+```text
 depot_client rails console
+
 >> Order.find(1).name
+
 => "David Thomas"
+
 >> Order.find(1).line_items
+
 NoMethodError: undefined method 'line_items' for #<Order:0x2818970>
 ```
 
-错误：此副本（2010年11月24日）
+错误：此副本（2010 年 11 月 24 日）
 
 好的，到这里，我们需要理解底层是如何工作的。回到理论，但不用担心，这并不复杂。magic 的方式是利用 scaffolding 提供的所有 REST 和 XML 接口。获取产品列表，它访问 `http://localhost:3000/products.xml`。获取产品 #2，它会 GET `http://localhost:3000/products/2.xml`。保存产品 #2 的更改，它会将更新后的产品 PUT 到 `http://localhost:3000/products/2.xml`。
 
-所以，这就是 magic——生成 URL（我们在第20章 *Action Dispatch and Action Controller* 中讨论过）、生成（并消费）XML（我们在第20.1节 *Selecting a Data Representation* 第32页讨论过）。首先，我们让 line items 嵌套在 order 中。我们通过编辑服务器中的 `config/routes` 文件来实现：
+所以，这就是 magic——生成 URL（我们在第 20 章 *Action Dispatch and Action Controller* 中讨论过）、生成（并消费）XML（我们在第 20.1 节 *Selecting a Data Representation* 第 32 页讨论过）。首先，我们让 line items 嵌套在 order 中。我们通过编辑服务器中的 `config/routes` 文件来实现：
 
-```
+```ruby
 resources do
+
   resources :line_items
+
 end
 ```
 
-现在更改 line items 控制器，以查找参数中的 `order_id` 并将其视为 line items 的一部分。问题是我们在第25页更改了该方法的预期。我们只需修改代码来处理两种类型的输入：
+现在更改 line items 控制器，以查找参数中的 `order_id` 并将其视为 line items 的一部分。问题是我们在第 25 页更改了该方法的预期。我们只需修改代码来处理两种类型的输入：
 
-```
+```ruby
 depot_client/app/controllers/line_items_controller.rb
+
 def create
+
   @cart = current_cart
+
   if params[:line_item]
+
     # ActiveResource
+
     params[:line_item][:order_id] = params[:order_id]
+
     @line_item = LineItem.new(params[:line_item])
+
   else
+
     # forms
+
     product = Product.find(params[:product_id])
+
     @line_item = @cart.add(product)
+
   end
 
   respond_to do |format|
+
     if @line_item.save
+
       format.html { redirect_to(store_url) }
+
       format.js { @line_item }
-      format.xml { render: @line_item, status: :created, location: @line_item }
+
+      format.xml { render @line_item, status: :created, location: @line_item }
+
     else
-      format.html { render: "new" }
-      format.xml { render: @line_item, status: :unprocessable_entity }
+
+      format.html { render "new" }
+
+      format.xml { render @line_item, status: :unprocessable_entity }
+
     end
+
   end
+
 end
 ```
 
@@ -11111,58 +11168,58 @@ end
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
+
 <line-items type="array">
+
   <line-item>
+
     <price type="decimal">49.5</price>
+
     <created-at type="datetime">2010-02-11T03:44Z</created-at>
+
     <product-id type="integer">2</product-id>
+
     <quantity type="integer">1</quantity>
+
     <order-id type="integer">1</order-id>
-    <updated-at type="datetime">2010-02-11T03:11Z</updated-at>
-    <cart-id type="integer">30</cart-id>
-  </line-item>
-  <line-item>
-    <price type="decimal">42.95</price>
-    <created-at type="datetime">2010-02-11T03:18Z</created-at>
-    <product-id type="integer">2</product-id>
-    <quantity type="integer">2</quantity>
-    <order-id type="integer">1</order-id>
-    <updated-at type="datetime">2010-02-11T03:25Z</updated-at>
-    <cart-id type="integer">11</cart-id>
-  </line-item>
+```
+
+
+
+```xml
+<updated-at type="datetime">2010-02-11T03:11Z</updated-at>
+<cart-id type="integer">30</cart-id>
+</line-item>
+<line-item>
+<price type="decimal">42.95</price>
+<created-at type="datetime">2010-02-11T03:18Z</created-at>
+<product-id type="integer">2</product-id>
+<quantity type="integer">2</quantity>
+<order-id type="integer">1</order-id>
+<updated-at type="datetime">2010-02-11T03:25Z</updated-at>
+<cart-id type="integer">11</cart-id>
+</line-item>
 </line-items>
 ```
-*(注：由于原文文本中存在大量翻译错误、乱码和重复内容（如示例中的 XML 块乱码），翻译已根据 Rails 逻辑进行了还原并修正了部分逻辑连贯性。)*
+
+> 注：由于原文文本中存在大量翻译错误、乱码和重复内容（如示例中的 XML 块乱码），翻译已根据 Rails 逻辑进行了还原并修正了部分逻辑连贯性。
 
 ## 总结
 
 虽然 Active Resource 初看起来像某种魔法，但它实际上非常依赖书中之前介绍的概念。这里是一些要点：
 
--   **身份验证**：使用你的网站已经支持的底层身份验证机制，并且不要违背 Web 的本质（就像某些其他协议那样）。在任何情况下，别人无法通过 Active Resource 做任何他们做不到的事。
-
-注意，Active Resource 没有有效利用 session 或 cookie，这并不意味着你的服务器没有继续产生它们。你要么需要为 Active Resource 使用的接口关闭 session，要么确保你使用的是基于 cookie 的 session。否则，服务器将不得不管理许多不需要的 session。请参阅第335页第20.3节 *Rails Sessions* 了解更多详情。
-
-
-
-
-# 使用 Active Resource 的远程应用程序
-
-403 ActiveResource::ForbiddenAccess
-
-404 ActiveResource::ResourceNotFound
-
-405 ActiveResource::MethodNotAllowed
-
-409 ActiveResource::ResourceConflict
-
-422 ActiveResource::ResourceInvalid
-
-401...499 ActiveResource::ClientError
-
-- * 你可以通过重写 ActiveResource 基类中的验证方法来提供客户端验证。这的行为与 ActiveRecord 中的验证相同。服务器端验证会导致 422 响应码，你可以以相同的方式访问此类失败。我们在第 95 页的第 7.1 节“迭代 B1：验证！”中讨论过验证。
-- * 尽管默认格式是 XML，但你也可以使用 JSON 作为替代方案。只需在你的客户端类中设置 `self.format = :json` 即可。请注意，如果你这样做，你的客户端会将日期视为 ISO 8601/RFC 3339 格式的字符串，并将小数处理为 `Float` 实例。
-- * 除了 `self.site` 之外，你还可以单独设置 `self.user` 和 `self.password`。
-- * `self.timeout` 允许你指定网络请求在放弃并抛出 `Timeout::Error` 之前等待的时间（以秒为单位）。
+- **身份验证**：使用你的网站已经支持的底层身份验证机制，并且不要违背 Web 的本质（就像某些其他协议那样）。在任何情况下，别人无法通过 Active Resource 做任何他们做不到的事。
+- 注意，Active Resource 没有有效利用 session 或 cookie，这并不意味着你的服务器没有继续产生它们。你要么需要为 Active Resource 使用的接口关闭 session，要么确保你使用的是基于 cookie 的 session。否则，服务器将不得不管理许多不需要的 session。请参阅第335页第20.3节 *Rails Sessions* 了解更多详情。
+- `403 ActiveResource::ForbiddenAccess`
+- `404 ActiveResource::ResourceNotFound`
+- `405 ActiveResource::MethodNotAllowed`
+- `409 ActiveResource::ResourceConflict`
+- `422 ActiveResource::ResourceInvalid`
+- `401...499 ActiveResource::ClientError`
+- 你可以通过重写 ActiveResource 基类中的验证方法来提供客户端验证。这的行为与 ActiveRecord 中的验证相同。服务器端验证会导致 422 响应码，你可以以相同的方式访问此类失败。我们在第95页的第7.1节“迭代 B1：验证！”中讨论过验证。
+- 尽管默认格式是 XML，但你也可以使用 JSON 作为替代方案。只需在你的客户端类中设置 `self.format = :json` 即可。请注意，如果你这样做，你的客户端会将日期视为 ISO 8601/RFC 3339 格式的字符串，并将小数处理为 `Float` 实例。
+- 除了 `self.site` 之外，你还可以单独设置 `self.user` 和 `self.password`。
+- `self.timeout` 允许你指定网络请求在放弃并抛出 `Timeout::Error` 之前等待的时间（以秒为单位）。
 
 ## 我们刚刚做了什么
 
@@ -11170,7 +11227,7 @@ end
 
 最后，我们使用 Active Resource 打破了必须在与应用程序同一台机器上运行脚本的限制。虽然这需要稍微多的配置，但它提供了一种访问 Rails 应用程序内部数据的可行且安全的方法。
 
-接下来是：我们将探索在安装 Rails 时包含在包中（bundle）的其他其他可以单独安装的组件。
+接下来是：我们将探索在安装 Rails 时包含在包中（bundle）的其他可以单独安装的组件。
 
 在本章中，我们将看到：
 
@@ -11179,9 +11236,7 @@ end
 - 脚本任务，以及
 - 与 Web 服务器交互。
 
-# 第 25 节
-
-# Rails 的依赖项
+# 第 25 节：Rails 的依赖项
 
 此时，我们已经涵盖了 Rails 本身。但故事远没有于此。Rails 之伟大之处在于它在其之上构建的组件所提供的功能。
 
@@ -11197,33 +11252,37 @@ Builder 是一个独立的库，允许你在代码中表示结构化文本（如
 
 这里是一个简单的 Builder 模板，用于输出产品名称和价格的 XML 列表：
 
+下载 `deplo/app/views/products/index.xml.builder`
+
 ```ruby
-Download deplo/app/views/products/index.xml.builder
 xml.div(:class => "productlist") do
   xml.timestamp(Time.now)
 
-@products.each do |product|
-  xml.productname(product.title)
-  xml.price(product.price, currency => "USD")
-end
+  @products.each do |product|
+    xml.productname(product.title)
+    xml.price(product.price, currency => "USD")
+  end
 end
 ```
 
-如果这让你想起了第 177 页第 12.2 节“迭代 G2：Atom 馈”中为 Atom helper 创建的模板，那是因为 Atom helper 正是基于 Builder 的功能构建的。
+如果这让你想起了第177页第12.2节“迭代 G2：Atom 馈”中为 Atom helper 创建的模板，那是因为 Atom helper 正是基于 Builder 的功能构建的。
 
 带有适当的产品集合（从控制器传递进来），模板可能会产生类似的内容：
 
 ```xml
 <div class="list">
   <timestamp>Wed Jul 21 07:01:41 -0400 2010</timestamp>
+
   <product>
     <productname>Debug It!</productname>
     <price currency="USD">34.95</price>
   </product>
+
   <product>
     <productname>Programming Ruby 1.9</productname>
     <price currency="USD">49.5</price>
   </product>
+
   <product>
     <productname>Web Design for Developers</productname>
     <price currency="USD">42.95</price>
@@ -11231,7 +11290,7 @@ end
 </div>
 ```
 
-注意 Builder 如何获取方法名并将其转换为 XML 标签；当我们说 `xml.price` 时，它创建了一个名为 `<price>` 的标签，其内容是第一个参数，属性则从随后的哈希中中设置。如果你想使用 `<tag>` 方法来生成标签：
+注意 Builder 如何获取方法名并将其转换为 XML 标签；当我们说 `xml.price` 时，它创建了一个名为 `<price>` 的标签，其内容是第一个参数，属性则从随后的哈希中设置。如果你想使用 `<tag>` 方法来生成标签：
 
 ```ruby
 xml.tag!("id", product.id)
@@ -11252,7 +11311,7 @@ Builder 可以生成任何你需要的 XML。它支持命名空间、实体、�
 
 `html_safe` 方法（或使用 `raw`）会导致字符串直接传递输出而不进行转义。这提供了最大的活性，但安全性最低。
 
-`sanitize` 方法提供了保护。它可以清理包含危险元素的字符串：`<form>` 和 `<script>` 标签会被转义，`on=` 属性和以 javascript 开头的链接会被删除。
+`sanitize` 方法提供了保护。它可以清理包含危险元素的字符串：`<form>` 和 `<script>` 标签会被转义，`on=` 属性和以 `javascript` 开头的链接会被删除。
 
 在 JSP 世界，这被称为脚本段（scriptlet）。再次，如果有人发现你在模板中添加代码，他们会责备你。忽略他们吧——他们陷入了教条。在模板中放置代码并没有问题。只要不要放太多即可。
 
@@ -11260,15 +11319,11 @@ Builder 可以生成任何你需要的 XML。它支持命名空间、实体、�
 
 例如，考虑这个模板：
 
-```ruby
+```erb
 <% 3.times do %>
   Hol!<br/>
 <% end %>
 ```
-
-
-
-
 
 # 使用 Bundler 管理依赖
 
@@ -11280,7 +11335,7 @@ Builder 可以生成任何你需要的 XML。它支持命名空间、实体、�
 
 Bundler 负责处理这些，它通过一个名为 `Gemfile` 的文件放在你应用程序目录的顶部。在这个文件中，你列出了应用程序的依赖项。让我们仔细查看 Depot 应用的 `Gemfile`。
 
-```
+```ruby
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
@@ -11289,8 +11344,9 @@ gem 'rails', '3.0.3'
 gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
 group :production do
-gem 'mysql'
+  gem 'mysql'
 end
 
 ## 使用 unicorn 作为 Web 服务器
@@ -11306,9 +11362,9 @@ gem 'ruby-debug19'
 
 打包额外的 gem：
 
-- 2. http://bundler.com/
+- <http://bundler.com/>
 
-```
+```ruby
 # gem bj
 # gem nokogiri
 # gem sqlite3-ruby, :require => 'sqlite3'
@@ -11319,8 +11375,10 @@ gem 'will_paginate', >= 3.0.pre
 # 为本地环境打包 gem。确保将
 # 仅用于测试的 gem 放在此组中，以便它们的生成器
 # 和 rake 任务在开发模式下可用可用：
+
 # group :development, :test
 # gem :webrat
+
 ## end
 ```
 
@@ -11328,7 +11386,7 @@ gem 'will_paginate', >= 3.0.pre
 
 下一行列出了要加载哪个版本的 Rails。注意，它指定了一个特定版本。这之后是一个注释，你可以用它作为替代方案来运行最新版本的 Rails。
 
-剩余的行列出了你正在使用的几个 gem，以及你可能考虑使用的几个 gem。有些被放在名为 `:development`、`:test` 或 `:production` 的组中，并且仅在这些环境中可用。另一些则包含一个可选的 `:require` 参数，当 gem 名称与引入 名称不同时，指定在 `require` 语句中使用的名称。
+剩余的行列出了你正在使用的几个 gem，以及你可能考虑使用的几个 gem。有些被放在名为 `:development`、`:test` 或 `:production` 的组中，并且仅在这些环境中可用。另一些则包含一个可选的 `:require` 参数，当 gem 名称与引入名称不同时，指定在 `require` 语句中使用的名称。
 
 在指定 `:pg` 的那行中，你通过比较操作符指定了一个版本说明符。虽然 Gemfile 支持许多此类运算符，但只有两个是常用的。`>=` 用于那种不幸的过于罕见的情况，即 gemfile 作者可以被信赖维护严格的向后兼容性，因此只需要指定最小版本号即可。
 
@@ -11338,20 +11396,20 @@ Gemfile 有一个配套文件，名为 `Gemfile.lock`。第二个文件通常由
 
 在继续之前，查看 `Gemfile.lock` 文件是有帮助的。下面是一个短小的片段：
 
-```
+```text
 GEM
-specs:
 
-abstract (1.0.0)
-builder (2.1.2)
-capistrano (2.5.19)
-highline
-net-scp (>= 1.0)
-net-sftp (>= 2.0)
-net-ssh (>= 2.0.14)
-net-ssh-gateway (>= 1.0)
-erubis (2.6.6)
-abstract (>= 1.0)
+specs:
+  abstract (1.0.0)
+  builder (2.1.2)
+  capistrano (2.5.19)
+  highline
+  net-scp (>= 1.0)
+  net-sftp (>= 2.0)
+  net-ssh (>= 2.0.14)
+  net-ssh-gateway (>= 1.0)
+  erubis (2.6.6)
+  abstract (>= 1.0)
 ```
 
 `bundle` 将使用 `Gemfile.lock` 作为起点，并仅安装此文件中指定的各种 gem 版本。由于这个原因，将此文件提交到你的版本控制系统中非常重要，因为这将确保你的同事和部署目标都将使用完全相同的配置。
@@ -11364,17 +11422,13 @@ Bundler 还有一个运行时组件，它用于确保你的应用程序严格加
 
 Rails 在 Web 服务器的上下文中运行你的应用程序。到目前为止，我们使用了两个独立的 Web 服务器：Ruby 语言内置的 WeBrick；以及与 Apache http 集成的 Phusion Passanger。
 
-
-
-
-
-# 实用书（Pragmatic Bookshelf)
+# 实用书（Pragmatic Bookshelf）
 
 # 面向开发者的 Web 设计
 
 《面向开发者的 Web 设计》将向你展示如何让你的 Web 应用程序看起来设计专业。我们将帮助你学习如何选择颜色和字体，避免昂贵的界面和可访问性错误——让你的应用程序真正活跃起来。我们还将带你了解一些常用的 Photoshop 和 CSS 技术，并完成一个网站重设计，将新设计从概念一直到实现。
 
-37.95
+`37.95`
 
 # 编程 Ruby 1.9
 
@@ -11388,55 +11442,85 @@ Rails 在 Web 服务器的上下文中运行你的应用程序。到目前为止
 
 ```ruby
 require './app/store'
+
 Depot::Application.routes do
   match 'store' => StoreApp.new
-    get 'admin' => 'adminindex'
-    controller:sessions do
-      get 'login' => :new
-      post 'login' => :create
-      delete 'logout' => :destroy
-    end
+
+  get 'admin' => 'adminindex'
+
+  controller:sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
   scope ':locale' do
     resources :users
+
     resources :orders do
       resources :line_items
     end
+
     resources :line_items
     resources :carts
+
     resources :products do
       get :who_bought, :on => :member
     end
+
     root :to => 'store#index', :as => 'store'
+  end
 end
 ```
 
-服务器不是使用 Rails 组件唯一地方。我们通过描述一种工具来结束本章，你可以使用它来编排任务的执行。
+
+
+
+服务器不是使用 Rails 组件的唯一地方。我们通过描述一种工具来结束本章，你可以使用它来编排任务的执行。
 
 ## 25.5 使用 Rake 自动化任务
 
-Rake 是一个经常被视为当然的程序。它被用于自动化任务，特别是那些可能有很多依赖项的任务。任务集由位于应用程序根目录下的 Rakefile 定义。
+Rake 是一个经常被视为理所当然的程序。它被用于自动化任务，特别是那些可能有很多依赖项的任务。任务集由位于应用程序根目录下的 `Rakefile` 定义。
 
-`db:setup` 是此类任务的一个示例。要查看涉及哪些子任务，请带有 `--trace` 和 `--dry-run` 选项运行 rake：
+`db:setup` 是此类任务的一个示例。要查看涉及哪些子任务，请带有 `--trace` 和 `--dry-run` 选项运行 `rake`：
 
 ```bash
 $ rake --trace --dry-run db:setup
+
 (in /home/ruby/depot)
+
 ** Invoke db:setup (first_time)
+
 ** Invoke db:create (first_time)
+
 ** Invoke db:load_config (first_time)
+
 ** Invoke rails_env (first_time)
+
 ** Execute (dry run) rails_env
+
 ** Execute (dry run) db:load_config
+
 ** Execute (dry run) db:create
+
 ** Invoke db:schema:load (first_time)
+
 ** Invoke environment (first_time)
+
 ** Execute (dry run) environment
+
 ** Execute (dry run) db:schema:load
+
 ** Invoke db:seed (first_time)
+
 ** Invoke db:abort_if_pending_migrations (first_time)
+
 ** Invoke environment
+
 ** Execute (dry run) db:abort_if_pending_migrations
+
 ** Execute (dry run) db:seed
+
 ** Execute (dry run) db:setup
 ```
 
@@ -11446,17 +11530,25 @@ $ rake --trace --dry-run db:setup
 
 ```ruby
 # Load depot/lib/u/tasks/db_backup.rake
+
 namespace :db do
 
   desc "Backup the production database"
+
   task :backup => :environment do
+
     backup_dir = ENV['DIR'] || File.join(Rails.root, 'db', 'backup')
+
     source = File.join(Rails.root, 'db', "production.db")
+
     dest = File.join(backup_dir, "production.backup")
 
     makedirs backup_dir
+
     sh "sqlite3 ${source} .dump > ${dest}"
+
   end
+
 end
 ```
 
@@ -11470,107 +11562,113 @@ end
 
 ## 25.6 依赖项概览
 
-一个好的起点是查看 Gemfile。
+一个好的起点是查看 `Gemfile`。
 
 | Gem | 描述 |
 | :--- | :--- |
-| abstract | 一个允许你的库 |
-| builder | 创建 XML 标记的简单方法 |
-| capistrano | 欢迎部署 |
-| eruby | ERB 的实现 |
-| highline | 用于命令行接口的 IO 库 |
-| i18n | 国际化支持 |
-| mail | 邮件支持 |
-| actionpack | Action 控制器 |
-| activermodel | Active model 支持 |
-| activerord | 关系数据库 |
-| activesupport | 支持库 |
-| rails | 整个框架 |
-| railties | 核心任务 |
-| arel | 关系代数 |
-| mime-types | 文件类型 |
-| mysql | 数据库 |
-| net-scp | 安全复制文件 |
-| net-sftp | 安全传输文件 |
-| net-ssh | 安全连接服务器 |
-| net-ssh-gateway | 隧道连接 |
-| polyglot | 语言加载器 |
-| rack | Rails 与 Web 服务器之间的接口 |
-| rack-cache | HTTP 缓存 |
-| rack-cache-purge | 清除 Rack-cache |
-| rack-mount | Rack 路由 |
-| rack-test | 测试 API |
-| rake | 任务自动化 |
-| sqlite3-ruby | 数据库 |
-| thor | 脚本框架 |
-| treet | 文本解析库 |
-| tzinfo | 时区支持 |
-| will_paginate | 结果分页 |
+| `abstract` | 一个允许你的库 |
+| `builder` | 创建 XML 标记的简单方法 |
+| `capistrano` | 欢迎部署 |
+| `eruby` | ERB 的实现 |
+| `highline` | 用于命令行接口的 IO 库 |
+| `i18n` | 国际化支持 |
+| `mail` | 邮件支持 |
+| `actionpack` | Action 控制器 |
+| `activermodel` | Active model 支持 |
+| `activerord` | 关系数据库 |
+| `activesupport` | 支持库 |
+| `rails` | 整个框架 |
+| `railties` | 核心任务 |
+| `arel` | 关系代数 |
+| `mime-types` | 文件类型 |
+| `mysql` | 数据库 |
+| `net-scp` | 安全复制文件 |
+| `net-sftp` | 安全传输文件 |
+| `net-ssh` | 安全连接服务器 |
+| `net-ssh-gateway` | 隧道连接 |
+| `polyglot` | 语言加载器 |
+| `rack` | Rails 与 Web 服务器之间的接口 |
+| `rack-cache` | HTTP 缓存 |
+| `rack-cache-purge` | 清除 Rack-cache |
+| `rack-mount` | Rack 路由 |
+| `rack-test` | 测试 API |
+| `rake` | 任务自动化 |
+| `sqlite3-ruby` | 数据库 |
+| `thor` | 脚本框架 |
+| `treet` | 文本解析库 |
+| `tzinfo` | 时区支持 |
+| `will_paginate` | 结果分页 |
 
 ## 我们刚刚做了什么
 
-我们探索了 Rails 的部分依赖项，然后展示了如何管理依赖项、与 Web 服务器集成，以及从命令行进行编排。在此过程中，我们终于弄清楚了应用程序根目录下的 Rakefile、Gemfile 和 Gemfile.lock 文件是什么。
-
-
-
+我们探索了 Rails 的部分依赖项，然后展示了如何管理依赖项、与 Web 服务器集成，以及从命令行进行编排。在此过程中，我们终于弄清楚了应用程序根目录下的 `Rakefile`、`Gemfile` 和 `Gemfile.lock` 文件是什么。
 
 在本章中，我们将看到：
 
--   向你的应用程序添加新类，
--   添加 rake 任务和视图助手（view helpers），
--   添加一种新的模板语言，以及
--   添加生成器并替换 JavaScript 库。
+- 向你的应用程序添加新类；
+- 添加 `rake` 任务和视图助手（view helpers）；
+- 添加一种新的模板语言；
+- 添加生成器并替换 JavaScript 库。
 
-## 第 26 章
-
-## Rails 插件 (Plugins)
+# 第 26 章：Rails 插件（Plugins）
 
 从本书开头开始，我们就不断地谈论“约定优于配置”（Convention over configuration），即 Rails 对几乎所有内容都提供了合理的默认值。在书的最近章节中，我们通过安装 Rails 时获得的底层 Gems 描述了 Rails。现在，是时候将这两种观点结合起来，并揭示出：Rails 为你提供的初始 gem 实际上是一组合理的默认设置。这些设置是你可以在其基础上进行添加和更改的默认值。
 
-在 Rails 3.0 中，gems 是你接入新功能的主要方式。我们不会在抽象层面描述这一点，而是选择几个插件并使用它们来来说明插件安装的不同方面以及插件能做什么。事实上，其中许多插件最终被证明对你的日常工作立即有用，这简直是一个意外的收获！
+在 Rails 3.0 中，gems 是你接入新功能的主要方式。我们不会在抽象层面描述这一点，而是选择几个插件并使用它们来说明插件安装的不同方面以及插件能做什么。事实上，其中许多插件最终被证明对你的日常工作立即有用，这简直是一个意外的收获！
 
-让我们从一个切切实可以为你赚钱的简单插件开始。
+让我们从一个切切实实可以为你赚钱的简单插件开始。
 
-### 26.1 使用 Active Merchant 处理信用卡支付
+## 26.1 使用 Active Merchant 处理信用卡支付
 
 在第 164 页，我们提到过临时触及了信用卡的处理。能够实际向客户收费显然是处理订单的一个重要部分。虽然这项功能没有内置在 Rails 核心中，但有一个 gem 为我们提供了这项功能。
 
 你已经看到了如何控制 gem 被你的应用程序加载：你可以通过编辑 `Gemfile` 来实现。由于我们在本章中将涵盖多个 gem，让我们一次性把所有要涵盖的 gem 都加进来。你实际上可以在任何地方添加它们；我们选择直接在 `adding dependency on will_paginate:` 这一行下方进行添加：
 
-```
+```ruby
 gem 'will_paginate', '>= 3.0.pre'
+
 gem 'activemerchant', '-> 1.9.0'
+
 gem 'haml', '-> 3.0.18'
+
 gem 'jquery-rails', '-> 0.2.2'
 ```
 
 你会注意到，我们遵循了最佳实践，在版本号上指定了最小版本，这样演示就会选取一个可能包含不兼容更改的版本。
 
-至于我们添加的 gem，我们将在单独的章节中介绍每一个。本节将重点关注 ActiveMerchant.¹
+至于我们添加的 gem，我们将在单独的章节中介绍每一个。本节将重点关注 ActiveMerchant。¹
 
 一旦你编辑了 `Gemfile`，你就可以通过 `bundle install` 安装这些 gem 以及它们依赖的任何 gem。此外，如果你有一个正在运行的 Rails 服务器，请重启它以获取这些更改。我们在本节中不会使用服务器，但很快就会用到。确保服务器正在运行 Depot 应用程序。
 
 为了演示此功能，我们将创建一个小型脚本并将其放置在 `script` 目录下：
 
-```
+```ruby
 credit_card = ActiveMerchant::Billing::CreditCard.new(
+
   :number => '4111111111111111',
+
   :month => '8',
+
   :year => '2009',
+
   :first_name => 'Tobias',
+
   :last_name => 'Luetke',
+
   :verification_value => '123'
+
 )
 ```
 
-```
-puts "Is \#{credit_card.number} valid? \#{credit_card.valid?}"
+```ruby
+puts "Is #{credit_card.number} valid? #{credit_card.valid?}"
 ```
 
 编写这个脚本不需要写太多内容。它创建了一个 `ActiveMerchant::Billing::CreditCard` 类的实例，然后在该对象上调用了 `valid?`。让我们运行它。
 
-```
+```bash
 $ rails runner script/creditcard.rb
+
 is 4111111111111111 valid false
 ```
 
@@ -11582,59 +11680,75 @@ is 4111111111111111 valid false
 
 想想：这一切都是通过在你的 `Gemfile` 中添加单行代码而实现的。
 
-正如我们在本章开头所的那样，向 `Gemfile` 中添加 gem 是扩展 Rails 3.0 的首选方式。这样做的优点数不胜许多：你所有的依赖项都由 Bundle 跟踪，它们被预加载以供应用程序立即使用，并且可以被打包用于早期部署。
+正如我们在本章开头所说的那样，向 `Gemfile` 中添加 gem 是扩展 Rails 3.0 的首选方式。这样做的优点数不胜数：你所有的依赖项都由 Bundle 跟踪，它们被预加载以供应用程序立即使用，并且可以被打包用于早期部署。
 
 在编写本文时，ActiveMerchant 官方网站上的安装说明尚未更新；它们描述了三种安装此功能的方法，取决于你正在使用的 Rails 版本。我们在上面描述的是你任何情况下应该使用的方法。
 
 接下来，我们将涵盖一个不是以 gem 形式提供的扩展。
 
-### 26.2 使用 Asset Packager 节省带宽
+## 26.2 使用 Asset Packager 节省带宽
 
 在你的 Depot 内部，现在有多个 CSS 文件。这些文件并没有可能做那么紧凑：相反，它们的编写方式让你的开发和维护更加容易。然而，如果你的网站获得了大量流量，那么通过更少的请求来交付相同的内容，并让这些请求提供更少的字节可能是有意义的。
 
 这就是 Asset Packager 提供的功能。与 Active Merchant 不同，Asset Packager 不以 gem 的形式提供。非 gem 插件的缺点是无法获得依赖跟踪。与 Rails 不同，Asset Packager 本身没有依赖。要安装 Asset Packager，使用 `rails` 命令：
 
-```
+```bash
 $ rails install git://github.com/sbecker/assetpackager.git
 ```
 
-这会导致文件放置在你的 `vendor/plugins` 中。这些文件可以提交到 git。Asset Packager 插件做的是添加你可以使用的 rake 任务。你已经知道如何列出 rake 任务，那就是使用 `-T` 选项：
+这会导致文件放置在你的 `vendor/plugins` 中。这些文件可以提交到 git。Asset Packager 插件做的是添加你可以使用的 `rake` 任务。你已经知道如何列出 `rake` 任务，那就是使用 `-T` 选项：
 
-```
+```bash
 $ rake -T
+
 Merge and compress assets
 ```
 
 你要做的第一件事是创建一个 YAML 文件。你可以手动构建它，但最好使用提供的任务来完成：
 
-```
+```bash
 $ rake packer:create_yml
+
 asset_packages.yml example文件已创建!
+
 请重新排列 'base' 下的文件以按正确顺序加载。
 ```
 
 让我们查看一下生成的文件：
 
-```
+```yaml
 ---
+
 <head>
+
 scripts:
+
  base:
+
 - jquery
+
 - jquery-ui
+
 - application
+
 - rails
+
 stylesheets:
+
  base:
+
 - scaffold
+
 - depot
 ```
 
 这里的基本原理很简单：你列出所有想要的样式和脚本，以及它们放入合并文件的顺序。在很多情况下，顺序并不重要，asset packer 提供的初始顺序对你来说足够了，让我们进入下一个任务：构建包：
 
-```
+```bash
 $ rake packer:build_all
+
 Created /home/rubys/work/depot/public/javascripts/base_packaged.js
+
 Created /home/rubys/work/depot/public/stylesheets/base_packaged.css
 ```
 
@@ -11642,17 +11756,19 @@ Created /home/rubys/work/depot/public/stylesheets/base_packaged.css
 
 此时，你有了一个更高效的 CSS 文件替换方案，而原始文件仍在被你的布局使用。这很容易修正：
 
-```
+```html
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <title>Pragprog Books Online Store</title>
+
 </head>
 ```
 
-
-
-
+```erb
 < raw stylesheet_link_merged :base %>
 < raw javascript_include_merged :base %>
 < csrf_meta_tag %>
@@ -11662,13 +11778,13 @@ Created /home/rubys/work/depot/public/stylesheets/base_packaged.css
 
 我们在这里所做的是将调用 `stylesheet_link_tag` 的两行替换为调用 `stylesheet_link_merged` 的单行，并将调用 `javascript_include_tag` 的行替换为调用 `javascript_include_merged` 的行。
 
-由于本章主要介绍的是插件可以做什么，而不是关注特定插件具有什么，因此重要的一是：`stylesheet_link_merged` 和 `javascript_link_merged` 是由插件安装的两个视图辅助器（view helpers）。
+由于本章主要介绍的是插件可以做什么，而不是关注特定插件具有什么，因此重要的一点是：`stylesheet_link_merged` 和 `javascript_link_merged` 是由插件安装的两个视图辅助器（view helpers）。
 
-到目前为止，我们讨论了简单的添加：一个新类、几个新任务、几个视图辅助器。让我们转向更有具意义的内容：一个为 Rails 依赖的某个 gem 提供了明确替代方案的工具。
+到目前为止，我们讨论了简单的添加：一个新类、几个新任务、几个视图辅助器。让我们转向更有意义的内容：一个为 Rails 依赖的某个 gem 提供了明确替代方案的工具。
 
 ## 26.3 使用 Haml 美化我们的标记语言
 
-让我们再次看看我们在 Depot 应用中使用一个简单视图，在本例中，它是展示一个列表的：
+让我们再次看看我们在 Depot 应用中使用的一个简单视图，在本例中，它是展示一个列表的：
 
 ```erb
 Download depot_u/app/views/store/index.html.erb
@@ -11693,7 +11809,7 @@ Download depot_u/app/views/store/index.html.erb
 
 这不仅是解决当前问题的合适方案，而且对于大量的 Rails 应用来说，这也是它们真正需要的。此外，它非常适合书籍——像这样一本——因为假设许多读者对 Rails 和 Ruby 本身已经有一定的 HTML 知识。在这种情况下，你最不想做的事情就是引入另一种语言。
 
-但既然你已经越过了那条学习曲线，让我们继续探索一种新语言——一种将标记生成与 Ruby 代码结合得更紧密的的语言，即 HTML 抽象标记语言（Haml）。
+但既然你已经越过了那条学习曲线，让我们继续探索一种新语言——一种将标记生成与 Ruby 代码结合得更紧密的语言，即 HTML 抽象标记语言（Haml）。
 
 首先，让我们刷新一下刚才看的文件：
 
@@ -11702,6 +11818,10 @@ $ rm app/views/store/index.html.erb
 ```
 
 在它的位置上，创建一个新文件：
+
+
+
+
 ```haml
 depot_v/app/views/store/index.html.haml
 
@@ -11725,10 +11845,10 @@ if notice
 你应该注意到的第一点是文件小得多。这里是根据每行的第一个字符对发生的情况的简要概述：
 
 - 破折号（）表示不产生任何输出的 Ruby 语句。
-- 百分号 (%) 表示 HTML 元素。
-- 等号 (=) 表示会产生输出以供显示的 Ruby 表达式。它可以单独出现在一行中，也可以跟在 HTML 元素之后。
-- 点（.）和井号（#）字符可以分别用于定义类和属性。它们可以与百分号结合使用，也可以单独使用。当单独使用时，隐含一个 `div`。
-- 包含表达式的行末逗号（,）表示延续。在上面的示例中，`button_to` 调用跨越了两行。
+- 百分号 (`%`) 表示 HTML 元素。
+- 等号 (`=`) 表示会产生输出以供显示的 Ruby 表达式。它可以单独出现在一行中，也可以跟在 HTML 元素之后。
+- 点（`.`）和井号（`#`）字符可以分别用于定义类和属性。它们可以与百分号结合使用，也可以单独使用。当单独使用时，隐含一个 `div`。
+- 包含表达式的行末逗号（`,`）表示延续。在上面的示例中，`button_to` 调用跨越了两行。
 
 ## Pragmatic Books 在线商店
 
@@ -11799,7 +11919,7 @@ Download depot_v/views/layouts/application.erb
 <-- --
 ```
 
-与 Haml 的纯添加不同，我们需要执行一个额外的步骤，即下载不需要 prototype 库。为了帮助你完成这一点，jquery-rails 安装了一个 Rails 生成器，可以处理所有的步骤。我们都需要这样执行：
+与 Haml 的纯添加不同，我们需要执行一个额外的步骤，即下载不需要 prototype 库。为了帮助你完成这一点，`jquery-rails` 安装了一个 Rails 生成器，可以处理所有的步骤。我们都需要这样执行：
 
 ```bash
 rails generate jquery:install --ui
@@ -11816,20 +11936,25 @@ fetching jQuery UJS adapter (github HEAD)
 force public/javascript/rails.js
 ```
 
---ui 参数可以获取 jquery-ui 库。--force 选项将替换 rails.js 文件。
-
-
-
+`--ui` 参数可以获取 `jquery-ui` 库。`--force` 选项将替换 `rails.js` 文件。
 
 实际上，这里有一个不同，当你运行功能测试时就会看到它：
 
+```
 Started
+
 ......Finished in 1.49875 seconds.
+
 1) Failure:
+
 test_should_create_line_item_via_ajax(LineItemsControllerTest)
+
 /test/functional/line_items_controller_test.rb:65:
+
 No RS statement that replaces or inserts HTML content.
+
 46 tests, 76 assertions, 1 failures, 0 errors
+```
 
 这条“没有 RS statement”的提示显然是正确的，因为我们没有在任何视图中使用 Rails RS。修复方法非常简单，我们将从 `assert_select_cjs` 切换到 `assert_select_query` 调用，并根据情况调整该调用的参数：
 
@@ -11850,7 +11975,7 @@ test "should_create_line_item via ajax" do
 
 ## 26.5 寻找更多 RailsPlugins.org
 
-到此时，我们已经涵盖了 4 个插件。在 RailsPlugins.org 上，你会找到至少两个数量级的插件，⁴ 目前列出了超过 500 个插件，其中大多数（但并非全部）与 Rails 3 兼容。
+到此时，我们已经涵盖了 4 个插件。在 `RailsPlugins.org` 上，你会找到至少两个数量级的插件，⁴ 目前列出了超过 500 个插件，其中大多数（但并非全部）与 Rails 3 兼容。
 
 这里是更多可以探索的插件，按类别分组：
 
@@ -11878,7 +12003,7 @@ test "should_create_line_item via ajax" do
 
 如果我们加上我们在之前的章节中看到的，我们已经看到了可以添加新功能的插件（例如：Active Merchant 和 Capistrano），添加了
 
-- 一些 rake 任务（Asset Packager）、了一些视图辅助方法（再次，Asset Packager）、为对象添加了一些方法（will_paginate）、添加了一种新的模板语言（Haml）、与新数据库的接口（mysql），甚至替换了整个客户端脚本框架（jquery-rails）。
+- 一些 rake 任务（Asset Packager）、了一些视图辅助方法（再次，Asset Packager）、为对象添加了一些方法（`will_paginate`）、添加了一种新的模板语言（Haml）、与新数据库的接口（`mysql`），甚至替换了整个客户端脚本框架（`jquery-rails`）。
 
 如果你想一想，插件没有什么是做不到的。
 
@@ -11922,725 +12047,728 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
 
 - [ZT08] Ezra Zygmuntowicz and Bruce Tate. *Deploying Rails Applications: A Step-by-Step Guide*. The Pragmatic Programmers, LLC, Raleigh, NC, and Dallas, TX, 2008.
 
-
-
-
 # 索引
 
 # 符号
 
-- + (命名为 xxx 的方法), 70
-- / [正则表达式], 63
-- =>:命名记法, 59
-- => (哈希), 62
-- => (参数列表), 62
-- => (命名为 xxx 的方法), 70
-- * [a, b, c] (数组字面量), 61
-- * (Ruby 运算符), 66
-- *= (条件赋值), 71
-- *<=...>, 417
-- *<=...>, 44, 417
-- << 方法, 62
-- * [a = b] (哈希字面量), 62
-- * [代码块], 64
-- * 301 和重定向状态, 331
-
-- + before_filter, 213, 341
-- cache_store (config), 374
-- cache_sweeper, 376
-- caches_action, 372
-- caches_page, 372
+- `+` (命名为 xxx 的方法), 70
+- `/` [正则表达式], 63
+- `=>`:命名记法, 59
+- `=>` (哈希), 62
+- `=>` (参数列表), 62
+- `=>` (命名为 xxx 的方法), 70
+- `*` [a, b, c] (数组字面量), 61
+- `*` (Ruby 运算符), 66
+- `*=` (条件赋值), 71
+- `*<=...>`, 417
+- `*<=...>`, 44, 417
+- `<<` 方法, 62
+- `*` [a = b] (哈希字面量), 62
+- `*` [代码块], 64
+- `*` 301 和重定向状态, 331
+- `+` before_filter, 213, 341
+- `cache_store` (config), 374
+- `cache_sweeper`, 376
+- `caches_action`, 372
+- `caches_page`, 372
 - 数据和文件，发送, 330
 - environment, 323
-- erase_results, 326
-- expire_action, 373
-- expire_fragment, 382, 383
-- expire_page, 373
+- `erase_results`, 326
+- `expire_action`, 373
+- `expire_fragment`, 382, 383
+- `expire_page`, 373
 - filter, 见 Filter
 - 过滤器和验证, 341
 - flash 属性, 345
 - flash 和, 340-341
-- header_attribute, 324, 331, 334, 345
+- `header_attribute`, 324, 331, 334, 345
 - 实例变量和模板, 345
 - layout, 363
-
-- + Accept header, 见 HTTP. Accept header。Accept header 接受属性, 325
+- `+` Accept header, 见 HTTP. Accept header。Accept header 接受属性, 325
 - 访问，限制, 212-215
 - 访问器方法, 66, 279
-- ID, 见 Transaction Action, 53
-- 自动渲染, 326
-- 缓存, 371
-- flash_data, 340
-- 使用 private 隐藏, 122
-- method, 323
-- REST actions, 315
-- 模板, 326
-- action 参数, 328
-- Action 缓存, 371
-- Action Controller, 57, 312
-- action, 323
-- action_name 属性, 323
-- after_filter, 341
-- casf_host (config), 361
-- autoloading, 273
-- 自动 render, 326
 
-- + logger attribute, 325, 345
-- method_missing, 323, 328
-- 用于的方法, 323-334
-- 命名规范, 272
-- page_cache_directory (config), 377
-- page_cache_extension (config), 377
-- params 属性, 126, 290, 324, 349
-- perform_configuring (config), 122
-- 私有方法, 122
-- read_fragment, 362
-- redirect_to, 139, 326, 332, 333
-- 重定向, 331
-- render, 145, 327, 344, 364, 366
-- render_to_string, 330
-- request_attribute, 324, 345
-- 请求处理, 312
-- respond_to, 318, 321
-- response_attribute, 325, 345
-- REST actions, 315
-- 路由，基于资源的, 313-321
-- 路由，测试, 321-323
-- send_data, 267, 330
-- send_file, 331
+
+
+- `ID`，见 `Transaction Action`，53
+- 自动渲染，326
+- 缓存，371
+- `flash_data`，340
+- 使用 `private` 隐藏，122
+- `method`，323
+- `REST actions`，315
+- 模板，326
+- `action` 参数，328
+- `Action` 缓存，371
+- `Action Controller`，57，312
+- `action`，323
+- `action_name` 属性，323
+- `after_filter`，341
+- `casf_host`（config），361
+- `autoloading`，273
+- 自动 `render`，326
+- `logger` attribute，325，345
+- `method_missing`，323，328
+- 用于的方法，323–334
+- 命名规范，272
+- `page_cache_directory`（config），377
+- `page_cache_extension`（config），377
+- `params` 属性，126，290，324，349
+- `perform_configuring`（config），122
+- 私有方法，122
+- `read_fragment`，362
+- `redirect_to`，139，326，332，333
+- 重定向，331
+- `render`，145，327，344，364，366
+- `render_to_string`，330
+- `request_attribute`，324，345
+- 请求处理，312
+- `respond_to`，318，321
+- `response_attribute`，325，345
+- `REST actions`，315
+- 路由，基于资源的，313–321
+- 路由，测试，321–323
+- `send_data`，267，330
+- `send_file`，331
 
 # A
 
-- ACTION 属性, 325, 336, 345
-- after_find, 301, 302, 304
-- sessions 和, 334
-- after_initialize, 301, 302
-- 子模块, 274
-- after_save, 301
-- template_root (config), 326
-- after_update, 301
-- 测试, 100
-- after_validation, 301
-- 另见 Controller
-- after_validation_on_create, 301
+- `ACTION` 属性，325，336，345
+- `after_find`，301，302，304
+- `sessions` 和，334
+- `after_initialize`，301，302
+- 子模块，274
+- `after_save`，301
+- `template_root`（config），326
+- `after_update`，301
+- 测试，100
+- `after_validation`，301
+- 另见 `Controller`
+- `after_validation_on_create`，301
 
 # Action Mailer
 
-- after_validation_on_update, 301
-- body template, 188
-- attribute_name, 295
-- 配置, 185
-- attribute_present?, 295
-- content_type, 190
-- attributes, 278
-- delivery_method (config), 185
-- type_mapping, 280
-- generate_mailer, 187
-- attributes, 295
-- link_to, 360
-- 平均, 293
-- obscuring_attribute, 360
-- before_create, 301
-- receive, 191
-- before_destroy, 301
-- sendmail, 186
-- before_save, 301
-- SMTP_delivery, 186
-- _before_type_cast, 279
-- smtp_settings (config), 186
-- before_update, 301
-- 测试, 186
-- before_validation, 301
-- unit_test, 191
-- before_validation_on_create, 301
-- Action Pack, 见 Controller: Action
-- belongs_to, 123, 283
-- callback, 300
-- Active Record 和, 312
-- callbacks, 301
-- Action View, 56, 344
-- objects, 302
-- autoloading, 273
-- columns and attributes, 277
-- base_path_attribute, 345
-- constructor, 285, 350
-- Builder_methods, 415
-- count, 293
-- button_to, 380, 382
-- create, 286, 299
-- cache, 379
-- controller_attribute, 345
-- CRUD 和, 285–300
-- files, uploading, 354, 351
-- data_loading, 296
-- forms, 350
-- delete, 299
-- delete_all, 299
-- helpers, 354–444
-- destroy, 300, 310
-- inline_expressions, 417
-- layout, set
-- layouts and, 361–368
-- finder, 201, 288
-- find_specified_rows, 288
-- find_by_by, 288
-- find_or_create_by, 289
-- find_or_initialize_by, 284
-- templates, 344–418
-- form_parameters, 286
-- 见 Action Controller: View
-- has_and_belongs_to_many, 284
-- has_one, 263, 283
-- instance, 307
-- action_attribute, 323
-- Active Record, hyperpage 276,
-- life_cycle, 300
-- accessor_method, 279
-- magic_names, 280
-- after_create, 301
-- maximum, 293
-- after_destroy, 217, 301
-- minimum, 293 (等等，原文是 293，但其他处建议为 293) -> minimum, 293
-- after_save_method, 301
-- after_update_method, 301
-- after_validation_method, 301
-- after_validation_on_create_method, 301
-- after_update_method, 301
-- Aggregation: 见 Resource, composed_of
-- Agile Manifesto, 21–22
-- Ajax, 163
-- cart, 空空时, 154
-- shopping cart 和, 148, 149, 152
-- troubleshooting, 151, 152–154
-- visual effects, 153
-- 见 DOM mapping: R
-- Apache: 见 Deployment
-- app/directory, 264
-- Application: 创建, 40, 38–40
-- documentation, 261
-- dynamic content, 43
-- Hello, 40–47
-- 链接 web pages, 47–49
-- loading, 45
-- review of, 40–50
-- 从命令行运行, 270
-- statistics, 260
-- 见 Depot application
-- benchmark (script), 269
-- Application server, 305
-- application.rb, 213
-- ApplicationController, class, 41
-- Architecture, 见 MVC, 51–444
-- Active Record, 54
-- Controller, 57
-- MVC, 52, 51–54
-- View (Array), 61
-- << 62
-- assert_method, 100, 101
-- assert_generates_method, 322
-- assert_recognizes_method, 322
-- assert_routing_method, 323
-- assert, Test: 见
-- assert_host (config), 361
-- Assets, 作为 JavaScript:
-- Association: 多对多, 284
-- 见 has_many :through
-- 一对一, 283
-- 异步 JavaScript 和 XML (AJAX). 见 Ajax
-- Atom (自动发现), 360
-- attribute_name, 295
-- attribute_present?, 295
-- Attributes, 278
-- accepts (Request), 295
-- action_name (Action Controller), 323
-- base_path (View), 345
-- body, 225
-- content_length (Request), 325
-- content_type (Request), 325
-- controller (Action Controller), 345
-- domain, 325
-- env, 325
-- flash (Action Controller), 345
-- format (Request), 325
-- format_and_extension (Request), 325, 334, 345
-- headers (Action Controller), 324, 331,
-- headers, 325
-- host, 324
-- host_with_port (Request), 324
-- listing, 295
-- logger (Action Controller), 325
-- model, 324
-- in, 277
-- params (Action Controller), 126, 290, 324, 349
-- path, 324
-- controller and view, 349
-- path_without_extension (Request), 325
-- path_without_format_and_extension (Request), 325
-- port (Request), 324
-- request (Request), 324
-- query_string (Request), 325
-- relative_path, 325
-- remote_ip (Request), 325
-- request_method (Action Controller), 324, 345
-- response (Action Controller), 324, 345
-- session (Action Controller), 325, 336, 345
-- url (Request), 324
-- virtual, 200
+- `after_validation_on_update`，301
+- `body template`，188
+- `attribute_name`，295
+- 配置，185
+- `attribute_present?`，295
+- `content_type`，190
+- `attributes`，278
+- `delivery_method`（config），185
+- `type_mapping`，280
+- `generate_mailer`，187
+- `attributes`，295
+- `link_to`，360
+- 平均，293
+- `obscuring_attribute`，360
+- `before_create`，301
+- `receive`，191
+- `before_destroy`，301
+- `sendmail`，186
+- `before_save`，301
+- `SMTP_delivery`，186
+- `_before_type_cast`，279
+- `smtp_settings`（config），186
+- `before_update`，301
+- 测试，186
+- `before_validation`，301
+- `unit_test`，191
+- `before_validation_on_create`，301
+- `Action Pack`，见 `Controller: Action`
+
+- `belongs_to`，123，283
+- `callback`，300
+- `Active Record` 和，312
+- `callbacks`，301
+
+# Action View
+
+- `Action View`，56，344
+- `objects`，302
+- `autoloading`，273
+- `columns and attributes`，277
+- `base_path_attribute`，345
+- `constructor`，285，350
+- `Builder_methods`，415
+- `count`，293
+- `button_to`，380，382
+- `create`，286，299
+- `cache`，379
+- `controller_attribute`，345
+- `CRUD` 和，285–300
+- `files, uploading`，354，351
+- `data_loading`，296
+- `forms`，350
+- `delete`，299
+- `delete_all`，299
+- `helpers`，354–444
+- `destroy`，300，310
+- `inline_expressions`，417
+- `layout`，set
+- `layouts and`，361–368
+- `finder`，201，288
+- `find_specified_rows`，288
+- `find_by_by`，288
+- `find_or_create_by`，289
+- `find_or_initialize_by`，284
+- `templates`，344–418
+- `form_parameters`，286
+- 见 `Action Controller: View`
+- `has_and_belongs_to_many`，284
+- `has_one`，263，283
+- `instance`，307
+- `action_attribute`，323
+
+# Active Record
+
+- `Active Record`，hyperpage 276
+- `life_cycle`，300
+- `accessor_method`，279
+- `magic_names`，280
+- `after_create`，301
+- `maximum`，293
+- `after_destroy`，217，301
+- `minimum`，293
+- `after_save_method`，301
+- `after_update_method`，301
+- `after_validation_method`，301
+- `after_validation_on_create_method`，301
+- `after_update_method`，301
+
+- `Aggregation`：见 `Resource, composed_of`
+- `Agile Manifesto`，21–22
+- `Ajax`，163
+- `cart`，空空时，154
+- `shopping cart` 和，148，149，152
+- `troubleshooting`，151，152–154
+- `visual effects`，153
+- 见 `DOM mapping: R`
+- `Apache`：见 `Deployment`
+- `app/directory`，264
+- `Application`：创建，40，38–40
+- `documentation`，261
+- `dynamic content`，43
+- `Hello`，40–47
+- 链接 web pages，47–49
+- `loading`，45
+- `review of`，40–50
+- 从命令行运行，270
+- `statistics`，260
+- 见 `Depot application`
+- `benchmark`（script），269
+- `Application server`，305
+- `application.rb`，213
+- `ApplicationController`，class，41
+- `Architecture`，见 `MVC`，51–444
+- `Active Record`，54
+- `Controller`，57
+- `MVC`，52，51–54
+- `View`（Array），61
+- `<<`，62
+- `assert_method`，100，101
+- `assert_generates_method`，322
+- `assert_recognizes_method`，322
+- `assert_routing_method`，323
+- `assert`，`Test`：见
+- `assert_host`（config），361
+- `Assets`，作为 JavaScript：
+- `Association`：多对多，284
+- 见 `has_many :through`
+- 一对一，283
+- 异步 JavaScript 和 XML（AJAX）。见 `Ajax`
+- `Atom`（自动发现），360
+
+# Attributes
+
+- `attribute_name`，295
+- `attribute_present?`，295
+- `Attributes`，278
+- `accepts`（Request），295
+- `action_name`（Action Controller），323
+- `base_path`（View），345
+- `body`，225
+- `content_length`（Request），325
+- `content_type`（Request），325
+- `controller`（Action Controller），345
+- `domain`，325
+- `env`，325
+- `flash`（Action Controller），345
+- `format`（Request），325
+- `format_and_extension`（Request），325，334，345
+- `headers`（Action Controller），324，331
+- `headers`，325
+- `host`，324
+- `host_with_port`（Request），324
+- `listing`，295
+- `logger`（Action Controller），325
+- `model`，324
+- `in`，277
+- `params`（Action Controller），126，290，324，349
+- `path`，324
+- `controller and view`，349
+- `path_without_extension`（Request），325
+- `path_without_format_and_extension`（Request），325
+- `port`（Request），325
+- `request`（Request），324
+- `query_string`（Request），325
+- `relative_path`，325
+- `remote_ip`（Request），325
+- `request_method`（Action Controller），324，345
+- `response`（Action Controller），324，345
+- `session`（Action Controller），325，336，345
+- `url`（Request），324
+- `virtual`，200
 
 # B
 
-- back parameter, 333
-- Barron, Scott, 18
-- base_path, 345
-- bcc, 360
-- before Filter, 341
-- before_create_method, 301
-- before_destroy_method, 301
+- `back parameter`，333
+- Barron, Scott，18
+- `base_path`，345
+- `bcc`，360
+- `before Filter`，341
+- `before_create_method`，301
+- `before_destroy_method`，301
 - 301
-- before_filter, 213, 341
-- before_save_method, 301
-- before_validation, 301
-- before_validation_on_create_method, 301
-- before_validation_on_update, 301
-- begin statement, 65
-- belongs_to, 123, 283
-- Benchmark, 389
-- benchmarker (script), 269
-- Benchmarking, 400
-- binary column, 389
-- blind_event, 157
-- Blind event, 155
-- Blob column, 280
-- Block (Ruby), 64
-- body, 360
-- body attribute, 325
-- Boolean column, 280
-- Bottleneck, 见 Performance
-- Browsers, 143
-- Buck,
-- buffer_size parameter, 331
-- Builder, 见 Template, xml
-- Business logic, templates and, 417
-- Business rules, 511
-- button_to_method, 138
+- `before_filter`，213，341
+- `before_save_method`，301
+- `before_validation`，301
+- `before_validation_on_create_method`，301
+- `before_validation_on_update`，301
+- `begin statement`，65
+- `belongs_to`，123，283
+- `Benchmark`，389
+- `benchmarker`（script），269
+- `Benchmarking`，400
+- `binary column`，389
+- `blind_event`，157
+- `Blind event`，155
+- `Blob column`，280
+- `Block`（Ruby），64
+- `body`，360
+- `body attribute`，325
+- `Boolean column`，280
+- `Bottleneck`，见 `Performance`
+- `Browsers`，143
+- `Buck`
+- `buffer_size` parameter，331
+- `Builder`，见 `Template, xml`
+- `Business logic`，templates and，417
+- `Business rules`，511
+- `button_to_method`，138
 
 # C
 
-- cache method, 380, 382
-- cache_store (config), 374
-- cache_sweeper method, 376
-- caches_action method, 372
-- caches_page_method, 372
-- Caching, 370
-- action, 371
-- expiring, 373, 382
-- filename, 377
-- fragment, 397
-- naming methods, 383
-- only in production, 372, 380
-- page, 370
-- sent data, 353
-- storage options, 374
-- sweeper., 375
-- time-based expiry, 377
-- what to cache, 372
-- Callbacks, 301, 300-307
-- 见 Active Record, callback
-- Capistrano, 247-253
-- 见 Deployment
-- Cart, 79, 121-129, 142
-- adding, 126
-- Ajax and hand, 184, 144-149
-- Ajax-based, 149-152
-- checkout, 162-184
-- form, 166
-- flashing, 118-174
-- order capture form, 163-169, 169f
-- order details, capturing, 170-173, 174, 175
-- orders, 162-183
-- overview of, 183-318
-- creating, 122-129
-- empty table, 138-141
-- error handling, 135, 134-138
-- hiding when, 154
-- internationalization of, 220-238
-- overview of, 238
-- translation, 221-235
-- overview of, 129
-- quantity and,
-
-
-
-
+- `cache method`，380，382
+- `cache_store`（config），374
+- `cache_sweeper method`，376
+- `caches_action method`，372
+- `caches_page_method`，372
+- `Caching`，370
+- `action`，371
+- `expiring`，373，382
+- `filename`，377
+- `fragment`，397
+- `naming methods`，383
+- only in production，372，380
+- `page`，370
+- `sent data`，353
+- `storage options`，374
+- `sweeper`，375
+- `time-based expiry`，377
+- `what to cache`，372
+- `Callbacks`，301，300–307
+- 见 `Active Record, callback`
+- `Capistrano`，247–253
+- 见 `Deployment`
+- `Cart`，79，121–129，142
+- `adding`，126
+- `Ajax and hand`，184，144–149
+- `Ajax-based`，149–152
+- `checkout`，162–184
+- `form`，166
+- `flashing`，118–174
+- `order capture form`，163–169，169f
+- `order details, capturing`，170–173，174，175
+- `orders`，162–183
+- `overview of`，183–318
+- `creating`，122–129
+- `empty table`，138–141
+- `error handling`，135，134–138
+- `hiding when`，154
+- `internationalization of`，220–238
+- `overview of`，238
+- `translation`，221–235
+- `overview of`，129
+- `quantity and`
 
 # 控制器属性
 
-# 声明
+## 声明
 
-- subclass (subclass), 343
-- 子模块 (submodules), 274
-- 模板访问 (access from template), 345
-- URLs 和, 313
-- 局部模板的使用 (use of partial templates), 368
-- 参见 Action Controller: MVC
-- 控制器属性 (controller attribute), 345
-- 约定优于配置 (Convention over configuration), 20, 46, 53, 56, 82, 272
-- InnoDB, 393
-- 连接表 (join table), 284
-- like 子句 (like clause), 291
-- 映射到类 (map to classes), 276
-- 迁移 (migration), 83, 参见 Migration
-- MySQL, 37
-- 对象关系映射和 (object-relational mapping and), 55
-- 单词 (words), 198
-- Postgres, 37
+- `subclass`（subclass），343
+- 子模块（submodules），274
+- 模板访问（access from template），345
+- URLs 和，313
+- 局部模板的使用（use of partial templates），368
+- 参见 `Action Controller: MVC`
+- 控制器属性（controller attribute），345
+- 约定优于配置（Convention over configuration），20，46，53，56，82，272
+- `InnoDB`，393
+- 连接表（join table），284
+- `like` 子句（like clause），291
+- 映射到类（map to classes），276
+- 迁移（migration），83，参见 `Migration`
+- `MySQL`，37
+- 对象关系映射和（object-relational mapping and），55
+- 单词（words），198
+- `Postgres`，37
 
 ## Cookies
-- Cookie 存储，会话存储 (Cookie Store, session storage), 337
-- session_id, 336
-- 参见 Sessions
-- 计数 (count), 293
-- 计数器 (Counter)
-- 在部分量集合中 (in partial collections), 367
-- 使用 MVC 降低耦合 (Coupling, reducing with MVC), 52
-- 创建方法 (create method), 286, 299
-- 创建应用 (create application), 81
-- 创建方法 (create method), 299
-- 创建表 (create table), 392
-- create_at/created_on, 280
-- cron 命令 (cron command), 340
-- 主键 (primary key), 396
-- 禁用 (disabling), 396
-- 模型之间的关系 (relationships between models), 122
-- 重命名表 (rename table), 394
-- 句中的行 (rows in), 55
-- 更新行 (rows, updating), 297
-- SQLite, 37
-- 列值的统计信息 (statistics on column values), 293
-- 表命名 (table naming), 272, 275, 276
-- 测试 (test),参见 Unit
-- 事务 (transaction), Transaction
-- 参见 Active Record: Model, 参见 Migrations
 
-- CRUD, 285-300
-- CSS, 参见 Stylesheet; Test, assert_select
+- Cookie 存储，会话存储（Cookie Store, session storage），337
+- `session_id`，336
+- 参见 `Sessions`
+- 计数（count），293
+- 计数器（Counter）
+- 在部分量集合中（in partial collections），367
+- 使用 MVC 降低耦合（Coupling, reducing with MVC），52
+- 创建方法（create method），286，299
+- 创建应用（create application），81
+- 创建方法（create method），299
+- 创建表（create table），392
+- `create_at/created_on`，280
+- `cron` 命令（cron command），340
+- 主键（primary key），396
+- 禁用（disabling），396
+- 模型之间的关系（relationships between models），122
+
+
+
+- 重命名表（rename table），394
+- 句中的行（rows in），55
+- 更新行（rows, updating），297
+- `SQLite`，37
+- 列值的统计信息（statistics on column values），293
+- 表命名（table naming），272，275，276
+- 测试（test），参见 Unit
+- 事务（transaction），Transaction
+- 参见 Active Record: Model，参见 Migrations
+- `CRUD`，285–300
+- `CSS`，参见 Stylesheet；Test，`assert_select`
 
 ## 货币
-- 翻译 (translating), 229
+
+- 翻译（translating），229
 
 ## 当前页面
-- current_page (current_page), 359
-- 自定义消息 (Custom messages), 400
-- VS, 33
-- 循环方法 (cycle method), 91, 357
-- Cygwin, 247
+
+- `current_page`（current_page），359
+- 自定义消息（Custom messages），400
+- `VS`，33
+- 循环方法（cycle method），91，357
+- `Cygwin`，247
 
 ## 日期
-- 列 (columns), 280
-- 格式化 (formatting), 356
-- 日期列 (date column), 389
-- 日时间列 (datetime column), 280
-- 数据列 (data column), 389
-- DB2, 36, 参见 Database
-- 迁移 (migrate), 84, 387, schema:migrations, 268
-- dscroll(script), 269
-- DDL, 参见 Database: SQL
-- 调试方法 (debug method), 345, 357
+
+- 列（columns），280
+- 格式化（formatting），356
+- 日期列（date column），389
+- 日时间列（datetime column），280
+- 数据列（data column），389
+- `DB2`，36，参见 Database
+- 迁移（migrate），84，387，`schema:migrations`，268
+- `dscroll`（script），269
+- `DDL`，参见 Database: SQL
+- 调试方法（debug method），345，357
 
 ## 调试
-- Ajax, 151
-- 使用列 (using column), 269
-- 显示结果 (display result), 345
 
+- `Ajax`，151
+- 使用列（using column），269
+- 显示结果（display result），345
 - 在 Mac 上安装 Rails 的 DarwinPorts
-- OS X: MacPorts
+- `OS X`：MacPorts
 
 ## 数据
-- 加载 (loading), 296
-- 数据传输 (data transfer), 330
+
+- 加载（loading），296
+- 数据传输（data transfer），330
 
 ## 数据库
-- 列类型 (column type), 280
-- 多列类型 (column types), 389
-- 列和属性 (columns and attributes), 277
-- 连接错误 (connection errors), 246
-- 创建行 (create rows), 285
-- 使用 mysqladmin 创建 (create using mysqladmin), 245
-- 创建 (creating), 62
-- 驱动 (driver), for 36
-- 固具 (fixture), 参见 Test
-- 数据功能 (data feature), 106
-- 分组 (group by), 294
-- 索引 (index), 395
+
+- 列类型（column type），280
+- 多列类型（column types），389
+- 列和属性（columns and attributes），277
+- 连接错误（connection errors），246
+- 创建行（create rows），285
+- 使用 `mysqladmin` 创建（create using mysqladmin），245
+- 创建（creating），62
+- 驱动（driver），for 36
+- 固具（fixture），参见 Test
+- 数据功能（data feature），106
+- 分组（group by），294
+- 索引（index），395
 
 ## 声明
-- 解释 (explained), 66
-- after_create (Active Record), 301
-- after_destroy (Active Record), 301
-- after_find (Active Record), 301, 302
-- after_initialize (Active Record), 301, 302
-- after_save (Active Record), 301
-- after_update (Active Record), 301
-- after_validation (Active Record), 301
-- after_validation_on_update (Active Record), 301
-- Record (Active Record), 301
-- before_create (Active Record), 301
-- before_destroy (Active Record), 301
 
-![](img/79be11dd96f63a00f9795e2dfe232ef5_450_0.png)
-
-- before_save (Active Record), 301
-- before_update (Active Record), 301
-- before_validation (Active Record), 301
-- before_validation_on_create (Active Record), 301
-- before_validation_on_update (Active Record), 301
-- belongs_to (Active Record), 283
-- cache_server (Active Controller), 376
-- caches_action (Active Controller), 372
-- caches_page (Active Controller), 372
-- hand_and_belongs_to_many, 284
-- has_many (Active Record), 283
-- has_one (Active Record), 283
-- layout (Action Controller), 363
-- primary_key (Active Record), 282
-- Default_action, action, index, 299
-- delete, 299
-- DELETE (HTTP 方法), 324
-- delete?, 324
-- delete_all, 299
-- delete_method(config), 185
-- 部署 (Deployment), 240
-- Capistrano, 247-253
-- 监控 (monitoring), 253-254
-- Passenger 安装 (installation), 242
-- 生产服务器基础 (production server basics), 254
-- 开始 (starting), 242
+- 解释（explained），66
+- `after_create`（Active Record），301
+- `after_destroy`（Active Record），301
+- `after_find`（Active Record），301，302
+- `after_initialize`（Active Record），301，302
+- `after_save`（Active Record），301
+- `after_update`（Active Record），301
+- `after_validation`（Active Record），301
+- `after_validation_on_update`（Active Record），301
+- Record（Active Record），301
+- `before_create`（Active Record），301
+- `before_destroy`（Active Record），301
+- `before_save`（Active Record），301
+- `before_update`（Active Record），301
+- `before_validation`（Active Record），301
+- `before_validation_on_create`（Active Record），301
+- `before_validation_on_update`（Active Record），301
+- `belongs_to`（Active Record），283
+- `cache_server`（Active Controller），376
+- `caches_action`（Active Controller），372
+- `caches_page`（Active Controller），372
+- `hand_and_belongs_to_many`，284
+- `has_many`（Active Record），283
+- `has_one`（Active Record），283
+- `layout`（Action Controller），363
+- `primary_key`（Active Record），282
+- `Default_action`，action，index，299
+- `delete`，299
+- `DELETE`（HTTP 方法），324
+- `delete?`，324
+- `delete_all`，299
+- `delete_method(config)`，185
+- 部署（Deployment），240
+- `Capistrano`，247–253
+- 监控（monitoring），253–254
+- Passenger 安装（installation），242
+- 生产服务器基础（production server basics），254
+- 开始（starting），242
 - 参见 Capistrano
-- Depot 应用, 74-80
-- Active Resource 集合和, 410-412
-- Active Resource 产品, 409–410
-- 管理 (administration), 198-219
-- 访问 (access), 212-215
-- 登录 (logging in.), 207-212
-- 侧边栏 (sidebar), 216
-- 用户 (users), 198-205
-
-- Ajax, 163-161
-- 购物车 (cart and), 148, 144-159
-- 购物车为空时隐藏 (cart, hiding when empty), 154
-- 概述 (overview of), 160-161
-- 视觉效果 (visual effects), 153, 152-154
-- 方法 (approach to), 74
-- 购买家页面 (buyer pages), 76
-- 购物车设计 (cart design), 79
-- 目录显示 (catalog display), 109-119
-- 添加功能 (add to feature), 126, 149
-- 布局 (layouts), 115, 112-15
-- 列表 (listing, creating), 109–112
-- 价格 (price), 格式化 (price, formatting), 116
-
-- 结账 (checkout), 162-184
-- 闪存 (flashing), 174-183
-- 订单表单 (order capture form), 166, 163–168
-- 订单详情 (order details, capturing), 170-173, 174
-- 订单 (orders, capturing), 162-183
-- 概述 (overview of), 183-184
-- 数据 (data), 78-79
-- 国际化 (internationalization of), 220–238
-- 概述 (overview of), 238
-- 翻译 (translation), 221-235
-- 页面流程 (page flow), 76
-- 产品维护 (product maintenance), 81
-- 显示 (displaying), 88-92
-- 默认模型 (models default), 82-87
-- 验证 (validation), 97, 95-98
-- 卖家帖子 (sellers post), 777
-- 购物车 (shopping cart), 121-29
-- 空购物车 (empty cart), 138-141
-- 错误处理 (error handling), 135–137
-- 概述 (overview of), 129, 142
-- 测试 (testing), 133
-- 特性 (features), 103
-- 集成 (integration), 193
-- 支持 (support for), 100
-- 桌面端 (Desktop), 35
-- 破坏方法 (destroy method), 300, 310
-- 破坏命令 (destroy command), 269
+- Depot 应用，74–80
+- Active Resource 集合和，410–412
+- Active Resource 产品，409–410
+- 管理（administration），198–219
+- 访问（access），212–215
+- 登录（logging in），207–212
+- 侧边栏（sidebar），216
+- 用户（users），198–205
+- Ajax，163–161
+- 购物车（cart and），148，144–159
+- 购物车为空时隐藏（cart, hiding when empty），154
+- 概述（overview of），160–161
+- 视觉效果（visual effects），153，152–154
+- 方法（approach to），74
+- 购买家页面（buyer pages），76
+- 购物车设计（cart design），79
+- 目录显示（catalog display），109–119
+- 添加功能（add to feature），126，149
+- 布局（layouts），115，112–15
+- 列表（listing, creating），109–112
+- 价格（price），格式化（price, formatting），116
+- 结账（checkout），162–184
+- 闪存（flashing），174–183
+- 订单表单（order capture form），166，163–168
+- 订单详情（order details, capturing），170–173，174
+- 订单（orders, capturing），162–183
+- 概述（overview of），183–184
+- 数据（data），78–79
+- 国际化（internationalization of），220–238
+- 概述（overview of），238
+- 翻译（translation），221–235
+- 页面流程（page flow），76
+- 产品维护（product maintenance），81
+- 显示（displaying），88–92
+- 默认模型（models default），82–87
+- 验证（validation），97，95–98
+- 卖家帖子（sellers post），777
+- 购物车（shopping cart），121–29
+- 空购物车（empty cart），138–141
+- 错误处理（error handling），135–137
+- 概述（overview of），129，142
+- 测试（testing），133
+- 特性（features），103
+- 集成（integration），193
+- 支持（support for），100
+- 桌面端（Desktop），35
+- 破坏方法（destroy method），300，310
+- 破坏命令（destroy command），269
 - 参见 Generate command
-- 破坏全部 (destroy_all), 300
+- 破坏全部（destroy_all），300
 
-## 开发 (Development)
-- 环境 (Environment), 32
-- 增量 (incremental), 74
-- 加载代码 (loading code), 45
-- 目录结构 (directory structure), 38, 39, 263
-- 加载路径 (load path), 271
-- 测试 (testing), 100
-- 显示 (display), 156
-- 参数 (disposition parameter), 330, 331
-- <!DOCTYPE html>... 和 152
-- 文档 (Documentation), 211
-- 应用 (application), 24
-- DOM 操作 (DOM manipulation),参见 Ajax
-- 域属性 (domain attribute), 324
-- Don't Repeat Yourself，参见 DRY
+## 开发（Development）
+
+- 环境（Environment），32
+- 增量（incremental），74
+- 加载代码（loading code），45
+- 目录结构（directory structure），38，39，263
+- 加载路径（load path），271
+- 测试（testing），100
+- 显示（display），156
+- 参数（disposition parameter），330，331
+- `<!DOCTYPE html>...` 和 152
+- 文档（Documentation），211
+- 应用（application），24
+- DOM 操作（DOM manipulation），参见 Ajax
+- 域属性（domain attribute），324
+- Don't Repeat Yourself，参见 `DRY`
 
 ## DOUBLE COLUMN
 
-- Double column. 280
-- DoubleRender exception, 326
-- 下载方法 (download method), 388
-- 下载源码 (Download source), 23
-- 排除方法 (except method), 357
-- 执行方法 (execute method), 397
-- 过期动作方法 (expire_action method), 373
-- 过期片段方法 (expire_fragment method), 382, 383
-- 过期页面方法 (expire_page method), 372
-- 过期内容 (Expiring content), 382, 384
-- 过期会话 (Expiring sessions), 339
-- 表达式 (Expression), 417
-- 属性 (attributes and), 278
-- 重复 (Duplication),参见 DRY
-- 动态内容 (Dynamic content), 33, 341
-- 动态查找 (Dynamic finder), 201
-- 动态脚架 (Dynamic scaffold),参见 SQL
-
+- Double column，280
+- `DoubleRender` exception，326
+- 下载方法（download method），388
+- 下载源码（Download source），23
+- 排除方法（except method），357
+- 执行方法（execute method），397
+- 过期动作方法（expire_action method），373
+- 过期片段方法（expire_fragment method），382，383
+- 过期页面方法（expire_page method），372
+- 过期内容（Expiring content），382，384
+- 过期会话（Expiring sessions），339
+- 表达式（Expression），417
+- 属性（attributes and），278
+- 重复（Duplication），参见 `DRY`
+- 动态内容（Dynamic content），33，341
+- 动态查找（Dynamic finder），201
+- 动态脚架（Dynamic scaffold），参见 SQL
 - Fast，参见 Deployment
-- 字段 (Field), 360
-- 文件方法 (file method), 328
-- 文件加载 (file_loading), 273
-- 文件传输 (file transfer), 330
-- 文件选项 (file option), 271
-- 漏洞 (bugs and), 191
-- 调试 (deving), 191
-- 模板 (templates for), 188
-- 编辑器 (Editors), 32
-- 加密 (Encryption), 360
-- 上传到 (uploading to), 351
-- 文件字段方法 (file_field method), 352
-- 文件名方法 (filename_method), 330, 331
-- 文件名约定 (filename conventions), 272
-
-- 过滤器 (Filter), 212, 341
-- after, 341
-- before, 342
-- 块 (block), 342
-- 声明 (declarations), 342
-- 修改响应 (modifying response), 342
-- 请求 (request with), 342
-- 过滤器方法 (filter method), 342
-- 过滤器方法 (filter method), 342
-- 回调 (callback), 303
-- 环境 (environments), 325
-- 缓存 (caching), 372
-- 自定义 (custom), 271
-- 邮件 (de-mail), 185
-- 加载路径 (load path), 271
-- 日志 (logging), 268
-- 分组参数 (group_parameter), 293
-- 排序方法 (order method), 297
-- 选择方法 (select method), 295
-- find_all_by, 288
-- find_by, 288
-- find_last_by, 288
-- find_or_create_by, 289
-- find_or_find_by, 289
-
-- erase_render 方法, 326
-- 模板 (templates), 417
-- 处理 (handling), 135, 138
-- 错误处理 (error handling), 131, 136
-- 会话 (session), 337, 340, 341
-- 异常 (exception), 341
-- 闪存 (Flash), 345
-- 固具 (fixture), 166
-- 固具 (fixture), 105
-- 数据 (data), 106
-- 固具 (fixtures), 105
-- 闪存 (flash), 135, 136, 138, 340, 341
-- 保持 (keeping), 174
-- 现在 (now), 341
-- 限制 (restrictions), 341
-
-- 救援 (rescue), 136
-- Ruby, 65
+- 字段（Field），360
+- 文件方法（file method），328
+- 文件加载（file_loading），273
+- 文件传输（file transfer），330
+- 文件选项（file option），271
+- 漏洞（bugs and），191
+- 调试（deving），191
+- 模板（templates for），188
+- 编辑器（Editors），32
+- 加密（Encryption），360
+- 上传到（uploading to），351
+- 文件字段方法（file_field method），352
+- 文件名方法（filename_method），330，331
+- 文件名约定（filename conventions），272
+- 过滤器（Filter），212，341
+  - after，341
+  - before，342
+  - 块（block），342
+  - 声明（declarations），342
+  - 修改响应（modifying response），342
+  - 请求（request with），342
+- 过滤器方法（filter method），342
+- 过滤器方法（filter method），342
+- 回调（callback），303
+- 环境（environments），325
+- 缓存（caching），372
+- 自定义（custom），271
+- 邮件（de-mail），185
+- 加载路径（load path），271
+- 日志（logging），268
+- 分组参数（group_parameter），293
+- 排序方法（order method），297
+- 选择方法（select method），295
+- `find_all_by`，288
+- `find_by`，288
+- `find_last_by`，288
+- `find_or_create_by`，289
+- `find_or_find_by`，289
+- `erase_render` 方法，326
+- 模板（templates），417
+- 处理（handling），135，138
+- 错误处理（error handling），131，136
+- 会话（session），337，340，341
+- 异常（exception），341
+- 闪存（Flash），345
+- 固具（fixture），166
+- 固具（fixture），105
+- 数据（data），106
+- 固具（fixtures），105
+- 闪存（flash），135，136，138，340，341
+- 保持（keeping），174
+- 现在（now），341
+- 限制（restrictions），341
+- 救援（rescue），136
+- `Ruby`，65
 - 参见 Test
-- 复数化 (pluralize), 357
-
-- raw, 112, 418
-- 格式化 (sanitize, format), 357
-- stylesheet_link_tag, 90, 360
-- time_ago_in_words, 356
- 格式化 (formatting), 356
-- 文本区域 (text_area), 167
-- 文本字段 (text_field), 165
-- 文本字段标签 (text_field_tag), 208
-- 高亮 (highlighting), 357
-- 上传文件 (uploading files), 351
-- 图片标签 (image_tag), 112, 359
-- 实现 (implementing with), 68
-- 表单方法 (form_method), 165
-- 表单标签方法 (form_tag_method), 208
-- 链接 (link_to), 48
-- 邮件 (mail_to), 360
-- 格式化参数 (format_parameter), 320
-- 格式化属性 (format_attribute), 325
-- 命名约定 (naming convention), 272
-- 格式和扩展属性 (format_and_extension_attribute), 325
-- 货币转换 (number_to_currency), 116, 356
-- 格式化辅助函数 (Formatting helpers), 356
-- 人类读大小 (number_to_human_size), 356
-- 框架 (Framework), 19
-- 百比转换 (number_to_percentage), 356
-- 福克斯 (Fuchs, Thomas), 18
-- 电话号码转换 (number_to_phone), 356
-- 功能性测试 (Functional tests)
-- 带精度数字转换 (number_with_precision), 356
+- 复数化（pluralize），357
+- `raw`，112，418
+- 格式化（sanitize, format），357
+- `stylesheet_link_tag`，90，360
+- `time_ago_in_words`，356
+- 格式化（formatting），356
+- `text_area`，167
+- `text_field`，165
+- `text_field_tag`，208
+- 高亮（highlighting），357
+- 上传文件（uploading files），351
+- `image_tag`，112，359
+- 实现（implementing with），68
+- 表单方法（form_method），165
+- 表单标签方法（form_tag_method），208
+- 链接（link_to），48
+- 邮件（mail_to），360
+- 格式化参数（format_parameter），320
+- 格式化属性（format_attribute），325
+- 命名约定（naming convention），272
+- 格式和扩展属性（format_and_extension_attribute），325
+- 货币转换（number_to_currency），116，356
+- 格式化辅助函数（Formatting helpers），356
+- 人类读大小（number_to_human_size），356
+- 框架（Framework），19
+- 百比转换（number_to_percentage），356
+- 福克斯（Fuchs, Thomas），18
+- 电话号码转换（number_to_phone），356
+- 功能性测试（Functional tests）
+- 带精度数字转换（number_with_precision），356
 - 参见 Test
-- 复数化 (pluralize), 357
-
-
-
-
+- 复数化（pluralize），357
 
 # HTML
 
 - Hello, World! 42
-- template 见 Template
+- `template` 见 Template
 
 # HTTP
 
-- Accept 请求头, 320
-- HTTP_REFERER, 333
-- 重定向, 331
-- 指定动词链接, 319
--  (返回), 329
-- link_to 的动词, 358
-- 动与 REST, 314
-- 超链接, 47
+- Accept 请求头，320
+- `HTTP_REFERER`，333
+- 重定向，331
+- 指定动词链接，319
+- （返回），329
+- `link_to` 的动词，358
+- 动与 REST，314
+- 超链接，47
 
 # I
 
-- id. 125
-- 以及对象标识性, 282
-- 作为主键, 396
-- session, 335
-- id 列, 281
-- id 选项 (用于 create_table), 396
-- Identity (模型对象), 282
-- IDEs, 32-36
-- Idioms (Ruby), 70
-- if 语句, 63
-- 图片链接, 359
-- image_tag 方法, 112, 359
-- 增量开发, 74
-- 索引, 数据库, 395
-- 继承, 见 Ruby; inheritance:
+- `id`，125
+- 以及对象标识性，282
+- 作为主键，396
+- `session`，335
+- `id` 列，281
+- `id` 选项（用于 `create_table`），396
+- Identity（模型对象），282
+- IDEs，32–36
+- Idioms（Ruby），70
+- `if` 语句，63
+- 图片链接，359
+- `image_tag` 方法，112，359
+- 增量开发，74
+- 索引，数据库，395
+- 继承，见 Ruby；inheritance:
   - 表继承
-  - initialize(Ruby, 59)
+  - `initialize`（Ruby，59）
+
+
+
 - 内联参数, 417
-- Inno, 见 Database, Inno
-- 安装, 27-37
+- Inno, 见 `Database`, `Inno`
+- 安装, 27–37
   - 数据库适配器, 36
   - 桌面, 35
   - 在 Linux 上, 30
@@ -12651,28 +12779,28 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 版本, 32
 - 实例方法, 307
 - 实例变量, 45, 66
-- Int (整数) 列, 280
+- `Int`（整数）列, 280
 - 整数列类型, 389
 - 集成测试, 193
 - 持续集成, 33
-- 请求间存储, 见 Flash
+- 请求间存储, 见 `Flash`
 - 国际化, 220–238
   - 概述, 238
   - 翻译, 221–335
   - 另见 Unicode 的支持
 - Internet Explorer, 兼容模式, 152
-- IrreversibleMigration 异常, 392
-- 迭代器 (Ruby), 64
+- `IrreversibleMigration` 异常, 392
+- 迭代器（Ruby）, 64
 
 # J
 
 - JavaScript
-- 链接到页面, 360
-- 另见 Ajax: Template, RJS
-- javascript_include_tag 方法, 360
+  - 链接到页面, 360
+  - 另见 Ajax: Template, RJS
+- `javascript_include_tag` 方法, 360
 - 编辑, 355
-- Join, 见 Active Record: Association
-- 关联表, 见 Association, many-to-many
+- Join, 见 `Active Record: Association`
+- 关联表, 见 `Association`, many-to-many
 - JSP, 417
 
 # K
@@ -12689,43 +12817,43 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 添加: 115, 112–115
   - 禁用, 363
   - 命名规范, 273
-  - 与部分模板 (partials), 368
+  - 与部分模板（partials）, 368
   - 向其传递数据, 364
   - 渲染或, 329
   - 为其选择操作, 363
-  - yield, 362
-  - 和 yield, 114
+  - `yield`, 362
+  - 和 `yield`, 114
 - 布局参数, 329, 364
 - 布局方法, 367
-- 旧有架构, 见 Database
-- less 命令, 137
-- lib/ 目录, 267
+- 旧有架构, 见 `Database`
+- `less` 命令, 137
+- `lib/` 目录, 267
 - 模型对象的生命周期, 700
-- like 子句, 291
-- link_to 方法, 48, 358
-  - confirm 参数, 358
-  - method 参数, 91, 319, 358
-- link_to(), 48
-- link_to_if 方法, 359
-- link_to_unless 方法, 359
-- link_to_current 方法, 359
+- `like` 子句, 291
+- `link_to` 方法, 48, 358
+  - `confirm` 参数, 358
+  - `method` 参数, 91, 319, 358
+- `link_to()`, 48
+- `link_to_if` 方法, 359
+- `link_to_unless` 方法, 359
+- `link_to_current` 方法, 359
 - 链接页面, 356–361
   - JavaScript, 360
   - 样式表, 360
   - 使用图片, 359
-- 链接表, 见 Active Record: Association
+- 链接表, 见 `Active Record: Association`
 - Linux, Rails 安装, 30
 - , 见 Collection; Template, partial
 - 加载路径, 271
-- lock_version, 281
-- log/ 目录, 268
-- logger 属性, 325, 345
+- `lock_version`, 281
+- `log/` 目录, 268
+- `logger` 属性, 325, 345
 - 日志, 135, 268
-  - logger 对象, 325
+  - `logger` 对象, 325
   - 在生产环境中, 253
   - 滚动日志, 254
   - 使用过滤器, 341
-  - 使用 tail 查看, 35
+  - 使用 `tail` 查看, 35
 - 登录, 198
 - 用户授权, 213
 - Lucas, Tim, 394
@@ -12737,66 +12865,66 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 开发者工具, 37
   - 安装在, 29
 - 魔法列命令, 280
-- 邮件, 见 Action Mapper
-  - to_method, 360
-  - :bcc 参数, 360
-  - :cc 参数, 360
-  - :encode 参数, 360
-- 多对多, 见 Association
-- Markdown (格式,), 358
-- maximum 方法, 293
+- 邮件, 见 `Action Mapper`
+  - `to_method`, 360
+  - `:bcc` 参数, 360
+  - `:cc` 参数, 360
+  - `:encode` 参数, 360
+- 多对多, 见 `Association`
+- Markdown（格式）, 358
+- `maximum` 方法, 293
 - memcached
   - session 存储器, 338
-  - :method 参数, 91, 319, 358
-  - :method 属性, 324
-  - :method 合并, 323, 328, 405
-- 方法 (Ruby), 60
+  - `:method` 参数, 91, 319, 358
+  - `:method` 属性, 324
+  - `:method` 合并, 323, 328, 405
+- 方法（Ruby）, 60
 - 迁移, 83, 84
-  - :add_column, 388
-  - :index_column, 395
-  - change_column, 391
+  - `:add_column`, 388
+  - `:index_column`, 395
+  - `change_column`, 391
   - 列类型, 389
-  - create_table, 392
-  - down, 386
-  - execute, 397
-  - 以及 id 列, 392
+  - `create_table`, 392
+  - `down`, 386
+  - `execute`, 397
+  - 以及 `id` 列, 392
   - 不可逆, 392
-  - :limit_option, 389
-  - remove_column, 388
-  - rename_index, 395
-  - rename_column, 391
-  - rename_table, 394
-  - :scale_option, 389
-  - up, 388
+  - `:limit_option`, 389
+  - `remove_column`, 388
+  - `rename_index`, 395
+  - `rename_column`, 391
+  - `rename_table`, 394
+  - `:scale_option`, 389
+  - `up`, 388
 - 迁移, 385–402
   - 结构, 390, 388–392
   - 创建, 385–386
   - 自定义消息, 400
-  - :default_option, 389
+  - `:default_option`, 389
   - 错误, 恢复, 400
   - 扩展, 397
-  - :force_option, 393
+  - `:force_option`, 393
   - 强制版本, 397
-  - :id_column, 396
+  - `:id_column`, 396
   - 索引, 395
   - 命名规范, 388
-  - :null_option, 389
-  - :options_option, 393
+  - `:null_option`, 389
+  - `:options_option`, 393
   - 概述, 385
-  - :precision_option, 389
-  - :primary_key_option, 396
+  - `:precision_option`, 389
+  - `:primary_key_option`, 396
   - 逆转, 387
   - 运行, 387–388
   - 结构编译, 401
   - 迁移表, 387
-  - id 列的值, 393
+  - `id` 列的值, 393
   - SQL 插入, 397
   - 以及表, 392–396
-  - :temporary_option, 393
+  - `:temporary_option`, 393
   - 最小方法, 293
 - 混合情况, 272
-- Mixin (模块), 68
-- Mock 对象 见 Test
+- Mixin（模块）, 68
+- Mock 对象, 见 `Test`
 - Model
   - 属性, 277, 350
   - 功能, 51
@@ -12804,9 +12932,9 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 表命名, 276
   - 事务, 310
   - 验证, 95, 见 Validation
-- MVC-Controller, 见 MVC
-  - 模块 (用于控制器), 274
-  - 模块 (Ruby), 68
+- MVC-Controller, 见 `MVC`
+  - 模块（用于控制器）, 274
+  - 模块（Ruby）, 68
   - Molina, 188
   - 监控, 253
   - 多部分参数, 352
@@ -12817,23 +12945,24 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 耦合, 350
   - 产品迁移, 82
   - Rails 以及, 53
-  - MySQL, 36, 见 Database
+  - MySQL, 36, 见 `Database`
   - 加载错误, 247
   - MYSQL 参数
-  - socket, 246
-  - mysql, 245
-  - mysql.socket, 246
-  - 一对一, 多对多, Association
+  - `socket`, 246
+  - `mysql`, 245
+  - `mysql.socket`, 246
+  - 一对一, 多对多, `Association`
   - 参数, 342
-  - (用于创建表), 393
+  - （用于创建表）, 393
   - 参数, 291, 352
-  - 原始文件名 (上传), 276
+  - 原始文件名（上传）, 276
   - ORM, 255
   - 映射, 55
 
 # N
+
 - 命名作用域, 294
-- 命名占位符 (SQL 中), 290
+- 命名占位符（SQL 中）, 290
 - 命名规范, 273, 272
 - 控制器, 272
 - 控制器模块, 274
@@ -12848,66 +12977,67 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
 - 表, 272
 - 模板, 326, 344
 - 视图, 273
-- 嵌套页面, 见 Layout
+- 嵌套页面, 见 `Layout`
 - 嵌套资源, 319
 - NetBeans IDE, 5, 35
-- 网络驱动 (session 存储器), 374
-- 新 (Ruby 构造函数), 61
+- 网络驱动（session 存储器）, 374
+- 新（Ruby 构造函数）, 61
 - 参数, 329
 - 数字
   - 格式, 356
   - 有效, 96
-  - number_to_currency 方法, 116
-  - number_to_human_size 方法, 356
-  - number_to_percentage 方法, 356
-  - number_to_phone 方法, 356
-  - number_with_delimiter 方法, 356
-  - number_with_precision 方法, 356
+  - `number_to_currency` 方法, 116
+  - `number_to_human_size` 方法, 356
+  - `number_to_percentage` 方法, 356
+  - `number_to_phone` 方法, 356
+  - `number_with_delimiter` 方法, 356
+  - `number_with_precision` 方法, 356
 - 数字类型, 280
-- numericity 方法, 96
+- `numericity` 方法, 96
 
 # P
+
 - 页面
-  - 装饰, 见 Layout
-  - 导航, 47, 76, 见 Pagination
+  - 装饰, 见 `Layout`
+  - 导航, 47, 76, 见 `Pagination`
   - 缓存, 370
-  - 页面缓存目录 (配置), 377
-  - 页面缓存扩展 (配置), 377
+  - 页面缓存目录（配置）, 377
+  - 页面缓存扩展（配置）, 377
 - 参数, 209
-  - 动作 (渲染), 328
-  - 后向 (渲染), 333
-  - bcc (邮件), 360
-  - 主体 (主题), 360
-  - 缓冲区大小 (send_file), 331
-  - bcc (邮件), 360
-  - 集合 (渲染), 145, 367
-  - 集合 (资源), 319
-  - confl_link, 358
-  - 内容类型 (渲染), 300
-  - 分配 (send_data), 330
-  - 分配 (send_file), 331
-  - 分配 (send_data), 330
-  - 编码 (邮件), 360
-  - 除了 (after_filter), 342
-  - 过滤器 (渲染), 328
-  - 文件名 (send_data), 330
-  - 文件名 (send_file), 331
-  - 格式 (连接), 320
-  - 格式 (资源), 320
-  - 分组 (查找), 293
-  - 内联 (渲染), 328
-  - 布局 (渲染), 329, 364
-  - 方法 (link_to), 91, 319, 358
-  - 多部分 (form_tag), 352
-  - 其他 (渲染), 229
-  - 仅 (after_filter), 342
-  - 仅 (before_filter), 342
-  - 排序 (查找), 291
-  - 部分 (渲染), 145, 329, 366
-  - 选择 (查找), 292
-  - 空隙模板 (渲染), 367
-  - 状态 (渲染), 329
-  - 状态 (send_data), 330
+  - 动作（渲染）, 328
+  - 后向（渲染）, 333
+  - `bcc`（邮件）, 360
+  - 主体（主题）, 360
+  - 缓冲区大小（`send_file`）, 331
+  - `bcc`（邮件）, 360
+  - 集合（渲染）, 145, 367
+  - 集合（资源）, 319
+  - `confl_link`, 358
+  - 内容类型（渲染）, 300
+  - 分配（`send_data`）, 330
+  - 分配（`send_file`）, 331
+  - 分配（`send_data`）, 330
+  - 编码（邮件）, 360
+  - 除了（`after_filter`）, 342
+  - 过滤器（渲染）, 328
+  - 文件名（`send_data`）, 330
+  - 文件名（`send_file`）, 331
+  - 格式（连接）, 320
+  - 格式（资源）, 320
+  - 分组（查找）, 293
+  - 内联（渲染）, 328
+  - 布局（渲染）, 329, 364
+  - 方法（`link_to`）, 91, 319, 358
+  - 多部分（`form_tag`）, 352
+  - 其他（渲染）, 229
+  - 仅（`after_filter`）, 342
+  - 仅（`before_filter`）, 342
+  - 排序（查找）, 291
+  - 部分（渲染）, 145, 329, 366
+  - 选择（查找）, 292
+  - 空隙模板（渲染）, 367
+  - 状态（渲染）, 329
+  - 状态（`send_data`）, 330
 - 对象
   - 回调, 302
   - 标识, 282
@@ -12916,35 +13046,32 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
   - 面对象系统, 54
   - 关系映射, 见 ORM
   - 观察方法, 306
-  - 观察, 见 Active Record, observer
-  - 观察者 (配置), 307
+  - 观察, 见 `Active Record`, observer
+  - 观察者（配置）, 307
 - Olson, Rick, 188
-- 流式 (文件), 331
-- 模板 (retner), 329
-- 测试 (渲染), 327
-- 类型 (send_data), 330
-- 类型 (send_file), 331
-- 类型 (send_data), 330
-- 更新 (retner), 329
-- 文件名 (send_data), 330
+- 流式（文件）, 331
+- 模板（`retner`）, 329
+- 测试（渲染）, 327
+- 类型（`send_data`）, 330
+- 类型（`send_file`）, 331
+- 类型（`send_data`）, 330
+- 更新（`retner`）, 329
+- 文件名（`send_data`）, 330
 - 标识列, 126, 290, 324, 345
-- 父对表, 见 Association
-
-
-
+- 父对表, 见 `Association`
 
 # RAILS 命令
 
 ## REQUEST
 
 - 目录, 38, 39
-- 目录结构, 264-265, 266f
+- 目录结构, 264–265, 266f
 - 文档和, 21
 - 编辑器, 34
 - IDEs 和, 33
 - 作为 MVC, 52
 - MVC 和, 53
-- 命名规范, 272-273
+- 命名规范, 272–273
 - 起源, 21
 - 单线程, 242
 - 测试支持, 19
@@ -12952,150 +13079,166 @@ Bookshelf 有更多关于 Ruby 和 Rails 主题的书。还有许多超出 Ruby 
 - 版本, 38
 - 多个版本, 32
 
-参见 Action: Request Handling: 
+参见 `Action: Request Handling`:
+
 - 路由命令, 38, 81, 100
 - 创建的目录, 263
 
-## Rake, 84
-rake
+## Rake
+
+`rake`
+
 - 创建任务, 268
-- db.migrate, 84, 387
-- db:schema.migrations, 268
-- Rakefile, 264
-- str, 260
-
-- appdoc, 260
-- raw method, 418
-- RDDiscounting, 358
-- RDoc, 260
-- read_attribute method, 279
-- read_fragment_method, 382
-- README_FOR_APP, 260
-- receive method, 191
-- 接收邮件, 参见 Action Mail
-- RecordInvalid_exception, 299
-- RecordNotFound_exception, 135
-
-- remove_index_column method, 395
-- rename_column_method, 391
-- rename_table_method, 394
-- Render, 326-330
-- 自动, 326
-- 内容类型, 330
-- layout, 329
-- method, 327
-- render method, 145, 326, 327, 344, 364, 360
-- action_parameter, 328
-- collection_parameter, 145, 367
-- content_type_parameter, 330
-- file_parameter, 328
-- inline_parameter, 328
-- layout method, 329, 364
-- nothing_parameter, 329
-- partial_helper, 145, 329, 366-368
-- space_template_method, 367
-- status_parameter, 329
-- template_method, 329
-- text_parameter, 327
-- update_method, 329
-- xml_method, 329
+- `db.migrate`, 84, 387
+- `db:schema.migrations`, 268
+- `Rakefile`, 264
+- `str`, 260
+- `appdoc`, 260
+- `raw method`, 418
+- `RDDiscounting`, 358
+- `RDoc`, 260
+- `read_attribute method`, 279
+- `read_fragment_method`, 382
+- `README_FOR_APP`, 260
+- `receive method`, 191
+- 接收邮件, 参见 `Action Mail`
+- `RecordInvalid_exception`, 299
+- `RecordNotFound_exception`, 135
+- `remove_index_column method`, 395
+- `rename_column_method`, 391
+- `rename_table_method`, 394
+- Render, 326–330
+  - 自动, 326
+  - 内容类型, 330
+  - `layout`, 329
+  - `method`, 327
+  - `render method`, 145, 326, 327, 344, 364, 360
+  - `action_parameter`, 328
+  - `collection_parameter`, 145, 367
+  - `content_type_parameter`, 330
+  - `file_parameter`, 328
+  - `inline_parameter`, 328
+  - `layout method`, 329, 364
+  - `nothing_parameter`, 329
+  - `partial_helper`, 145, 329, 366–368
+  - `space_template_method`, 367
+  - `status_parameter`, 329
+  - `template_method`, 329
+  - `text_parameter`, 327
+  - `update_method`, 329
+  - `xml_method`, 329
 - Render template, 325
-- render_to_string_method, 330
+- `render_to_string_method`, 330
 
 ## Request
-- accepts_attribute, 325
-- body_attribute, 325
-- content_length_attribute, 325
-- delete?, 324
-- domain_attribute, 324
-- env_attribute, 325
-- environment, 325
-- format_attribute, 325
-- format_and_extension attribute, 325
-- ge?, 324
-- head?, 324
-- headers, 324
-- headers_attribute, 325
-- host_attribute, 324
-- host_with_port_attribute, 324
-- method_attribute, 324
-- parameters, 324
-- path_without_extension_attribute, 325
-- path_without_format_and_extension_attribute, 325
 
+- `accepts_attribute`, 325
+- `body_attribute`, 325
+- `content_length_attribute`, 325
+- `delete?`, 324
+- `domain_attribute`, 324
+- `env_attribute`, 325
+- `environment`, 325
+- `format_attribute`, 325
+- `format_and_extension attribute`, 325
+- `ge?`, 324
+- `head?`, 324
+- `headers`, 324
+- `headers_attribute`, 325
+- `host_attribute`, 324
+- `host_with_port_attribute`, 324
+- `method_attribute`, 324
+- `parameters`, 324
+- `path_without_extension_attribute`, 325
+- `path_without_format_and_extension_attribute`, 325
 - 恢复建议, 79
-- RedCloth(格式), 358
-- Redirect, 331-334
+- RedCloth（格式）, 358
+- Redirect, 331–334
 - servlet, 324
 - 防止双重事务, 332
-- redirect_to_method, 136, 326, 332, 333
-- back_parameter, 333
+- `redirect_to_method`, 136, 326, 332, 333
+- `back_parameter`, 333
 - Reensaukg, Trygge, 51
 - 正则表达式, 63
 - 验证, 96
-- 关系型数据库, 参见 Active Record，参见 Database
-- relative_attribute, 325
-- reload method, 296
+- 关系型数据库, 参见 `Active Record`，参见 `Database`
+- `relative_attribute`, 325
+- `reload method`, 296
 - 载入, 开发模式, 45
-- remote_ip_attribute, 325
-- remove_column_method, 388
-- port_attribute, 324
-- port_string_attribute, 324
-- post?, 324
-- protocol_attribute, 324
-- put?, 324
+- `remote_ip_attribute`, 325
+- `remove_column_method`, 388
+- `port_attribute`, 324
+- `port_string_attribute`, 324
+- `post?`, 324
+- `protocol_attribute`, 324
+- `put?`, 324
 
 ## REQUEST ATTRIBUTE SCHEMA_MIGRATIONS TABLE
-- query_string attribute, 324
-- relative_path attribute, 325
-- remotes_ip attribute, 325
-- request_method_http attribute, 324
-- si?, 324
-- url attribute, 324
-- xhr?, 324
-- xml_http_request?, 324, 345
 
-## Request handling, 42-53
+- `query_string attribute`, 324
+- `relative_path attribute`, 325
+- `remotes_ip attribute`, 325
+- `request_method_http attribute`, 324
+- `si?`, 324
+- `url attribute`, 324
+- `xhr?`, 324
+- `xml_http_request?`, 324, 345
+
+## Request handling, 42–53
+
 - 缓存, 370
 - 过滤器, 341
-- flash_data, 135, 340
-- 使用过滤器 修改响应, 324
+- `flash_data`, 135, 340
+- 使用过滤器修改响应, 324
 - 参数与安全, 134
 - 响应, 325
 - 提交表单, 349
-参见：Routing
-- Request parameters, 参见 params
-- request_method_attribute, 324
-- require keyword, 71
-- rescue statement, 65, 136
-- Resource, 参见 REST
-- resource method
-- format_parameter, 320
-- resources method
-- collection_parameter, 319
-- respond_to, 318, 321
+
+参见：`Routing`
+
+- Request parameters, 参见 `params`
+
+
+
+# 索引
+
+## R
+
+- `request_method_attribute`, 324
+- `require` 关键字, 71
+- `rescue` 语句, 65, 136
+- `Resource`, 参见 REST
+- `resource` 方法
+  - `format_parameter`, 320
+- `resources` 方法
+  - `collection_parameter`, 319
+- `respond_to`, 318, 321
 
 ## Response
+
 - 压缩, 341
-- content_type, 330
+- `content_type`, 330
 - 数据和文件, 330
-- header, 331
+- `header`, 331
 - HTTP status, 329
+
 参见：Request handler
-- response attribute, 325, 345
+
+- `response` 属性, 325, 345
 - REST, 313-321
-- content types and, 320
-- controller actions for, 315
-- nested resources, 19
-- routing, 315
-- standard URL, 315
+  - content types and, 320
+  - controller actions for, 315
+  - nested resources, 19
+  - routing, 315
+  - standard URL, 315
 - Revealing elements, 155
 
 ## Ruby
+
 - accessors, 66
 - 优势, 20
 - array, 61
-- begin statement, 65
+- `begin` 语句, 65
 - block, 64
 - classes, 58, 66
 - comments, 60
@@ -13105,9 +13248,11 @@ rake
 - exception handling, 65, 136
 - extensions to, 参见 Active Support
 - hash, 62
-- if statement, 70
+- `if` 语句, 70
 - inheritance, 66
+
 参见：Single Inheritance
+
 - instance variable, 66
 - introduction to, 58
 - iterator, 64
@@ -13120,32 +13265,42 @@ rake
 - parameters and, 62
 - protected, 67
 - regular expression, 63
-- require, 267, 273
-- require keyword, 71
-- rescue statement, 65
-- self keyword, 66, 71
+- `require`, 267, 273
+- `require` 关键字, 71
+- `rescue` 语句, 65
+- `self` 关键字, 66, 71
 - strings, 60
 - symbols, 59
 - version, 37
-- while statement, 63
-- yield statement, 65
-- Ruby Gems, 24, 31
-- runner command, 270
-- sanitize method, 112, 418
-- save method, 285, 297, 310, 309
+- `while` 语句, 63
+- `yield` 语句, 65
+
+## Ruby Gems
+
+- 24, 31
+- `runner` 命令, 270
+
+## S
+
+- `sanitize` 方法, 112, 418
+- `save` 方法, 285, 297, 310, 309
 - Scaling
+
 参见：Deployment
+
 - Schema, 参见 Active Record: Database
 - migration, 参见 Migration
-- schema_migrations table, 387
+- `schema_migrations` 表, 387
 
 ## SCRIPT/ DIRECTORY
-- script/ 目录, 269
+
+- `script/` 目录, 269
 - Script usage, 152
 - Scriptlet, 418
 - Scott, Nicholas, 18
 
 ## Security
+
 - limit, 212-215
 - 跨站脚本, 112
 - 邮件和, 191
@@ -13155,89 +13310,107 @@ rake
 - request parameters, 134
 - SQL 注入, 289
 - validate update type, 352
-- select statement, 295
-- self keyword, 66, 71
-- send data_method, 267, 330
-- disposition parameter, 330
-- filename parameter, 330
-- type parameter, 330
-- send_data method
-- buffer size parameter, 331
-- disposition parameter, 331
-- filename parameter, 331
-- streaming parameter, 331
-- type parameter, 331
+- `select` 语句, 295
+- `self` 关键字, 66, 71
+- `send_data` 方法, 267, 330
+  - `disposition` 参数, 330
+  - `filename` 参数, 330
+  - `type` 参数, 330
+- `send_data` 方法
+  - `buffer size` 参数, 331
+  - `disposition` 参数, 331
+  - `filename` 参数, 331
+  - `streaming` 参数, 331
+  - `type` 参数, 331
 - Sending email, 331
 - Sendmail. 参见 Action Mapper, configuration
 - Serialize(object using marshall), 69
 - Server, 参见 Deployment
-- server script, 270
-- session attribute, 325, 336, 345
-- session_id, 336
+- `server` 脚本, 270
+- `session` 属性, 325, 336, 345
+- `session_id`, 336
 - Sessions, 112-122, 334
-- accessing, 325
-- ActiveRecordStore, 338
-- clearing, 340
-- cookie, 337
-- in database, 338
-- DRB storage, 338
-- expiry, 339
-- in database, 340
-- flash data, 340
-- flat-file storage, 339
-- id, 335
-- in-memory storage, 338
-- memcached storage, 338
-- network drive storage, 374
-- objects in, 334
-- PStore, 337
-- restrictions, 69, 336
-- storage options, 337-339
-- set_primary_key method, 282
+  - accessing, 325
+  - ActiveRecordStore, 338
+  - clearing, 340
+  - cookie, 337
+  - in database, 338
+  - DRB storage, 338
+  - expiry, 339
+  - in database, 340
+  - flash data, 340
+  - flat-file storage, 339
+  - id, 335
+  - in-memory storage, 338
+  - memcached storage, 338
+  - network drive storage, 374
+  - objects in, 334
+  - PStore, 337
+  - restrictions, 69, 336
+  - storage options, 337-339
+- `set_primary_key` 方法, 282
 - Shared code, 267
 - Shopping cart, 参见 Cart，参见 Depot
 - application Sidebar, 216
-- simple Socket method, 357
+- simple Socket 方法, 357
 - SMTP, 参见 Action Mapper, configuration
-- smtp_settings (config), 186
+- `smtp_settings` (config), 186
 - SOAP, 参见 Web service
 - Socket (MySQL), 246
 
 ## Source code
+
 - download, 23
-- spacer_template parameter, 367
+- `spacer_template` 参数, 367
 
 ## SQL
+
 - abstract and, 297
 - Active Record and, 289
-- created_at/created_on column, 280
+- `created_at`/`created_on` 列, 280
 - dynamic, 290
-- id column, 281
+- `id` 列, 281
 - injection attack, 参见 Security
-- lock_version column, 281
+- `lock_version` 列, 281
 - magic column names, 280
 - placeholders, 290
 - rows, 229
 - select, 295
-- type column, 281
+- `type` 列, 281
 - update, 297, 298
-- updated_at/updated_on column, 280
+- `updated_at`/`updated_on` 列, 280
 - also Database
-- SQL Server, 36, 参见 Database
-- SQL, migration, 397
-- SQLite, 31, 24
-- attribute, 324
+
+## SQL Server
+
+- 36, 参见 Database
+
+## SQL, migration
+
+- 397
+
+## SQLite
+
+- 31, 24
+- `attribute`, 324
 - State of, 19
 - queries, 294
 - SQL for, 19
-- status, 324
-- String, 360
+- `status`, 324
+
+## String
+
+- 360
 
 ## STRING COLUMNS
+
 - string column, 389
 - string type, 280
 
+## T
+
 ## Template
+
 - accessing, 325
 - Action Controller and, 330
 - autoload, 277
@@ -13245,20 +13418,22 @@ rake
 - collections and, 367
 - dynamic, 417
 - e-mail, 188
-- html.erb, 417
+- `html.erb`, 417
 - layout, 参见 Layout
 - naming convention, 273, 326
 - partial, 144, 365
 - shares instance variables, 345
 - RJS, 151
-- template parameter, 329
+- `template` 参数, 329
 - stamp column type, 389
 
 ## Tables
+
 - creating, 393
 - migrations, 392-396
 
 ## Testing
+
 - data, 103
 - directories, 100
 - fixtures, 103
@@ -13268,10 +13443,6 @@ rake
 - routing, 321-323
 - support for, 100
 - YAML, 103
-
-
-
-
 
 # 传输文件
 
@@ -13287,15 +13458,16 @@ rake
 - 视觉效果，见 Ajax
 - 树 (Joyce Kilner), 357
 - 视觉效果, 152
-- truncate 方法, 91
-- visual_effect, 154
-- truncate 方法, 357
+- `truncate` 方法, 91
+- `visual_effect`, 154
+- `truncate` 方法, 357
 - 易变内容
 - 类型参数, 330, 331
 - 缓存, 377
 - 类型参数, 330
 
 # W
+
 - 类型转换, 279
 - Web 2.0, Ajax: RJS
 - 类型列, 281
@@ -13303,73 +13475,83 @@ rake
 - 类型映射 (Active Record), 280
 - 选项, 271
 - 开始, 84
+
 # U
+
 - Web 服务
-- 另见 REST
+  - 另见 REST
 - 单元测试，见 Test
 - Weber, Florianian, 18
-- up 方法, 388
+- `up` 方法, 388
 - WeBRICK, 270
-- update 方法, 329
+- `update` 方法, 329
 - 选项, 271
-- update_all, 298
-- where 子句, 289
-- update_attributes, 298
-- while 语句, 63
-- update_at_of_updated_on, 280
+- `update_all`, 298
+- `where` 子句, 289
+- `update_attributes`, 298
+- `while` 语句, 63
+- `update_at_of_updated_on`, 280
 - Windows
 - 上传文件, 351
 - 安装, Rails, 27
 - URL
-- less 命令, 137
-- 绝对在, 359
-- MySQL 和 Cygwin, 247
-- 格式, 234
-- 制表符补全, 33n
-- 使用 link_to 生成, 48
-- white_attribute_method, 279
-- 重定向, 331
+  - `less` 命令, 137
+  - 绝对在, 359
+  - MySQL 和 Cygwin, 247
+  - 格式, 234
+  - 制表符补全, 33n
+  - 使用 `link_to` 生成, 48
+  - `white_attribute_method`, 279
+  - 重定向, 331
 - WSDL, 见 Web 服务
+
 # X
-- url 属性, 324
+
+- `url` 属性, 324
 - Xcode 3.0, 35
-- buried_filename, 330
+- `buried_filename`, 330
 - XHR, 见 XMLHTTPRequest
 - 用例 (Use Cases), 75
-- xhr?, 324
+- `xhr?`, 324
 - 使用模板, 344–418
+
 # XML
+
 - 使用 Builder 生成, 415
-- validates, 96
-- xml 参数, 329
+- `validates`, 96
+- `xml` 参数, 329
 - 验证, 97, 95–98
 - XML Builder, 57
 - 数值地, 96
 - XML-RPC, 见 Web 服务
-- validates, 96
-- xml.builder, 194
+- `validates`, 96
+- `xml.builder`, 194
 - 另见 ActionRecord, callbacks
-- xml_http_request, 324
+- `xml_http_request`, 324
 - Valim, Jose, 18
 - Varcham 列类型, 280
-- vendor/, 270
+- `vendor/`, 270
 - XSS (跨脚本攻击), 安全。
 - 版本控制, 333
 - 跨脚本脚本
 - 版本, 32, 38
+
 # View
+
 - Action View, 56
 - 架构, 56–57
+
 # Y
+
 - YAML
-- 目录, 46
-- 测试数据, 103
-- 功能, 51
+  - 目录, 46
+  - 测试数据, 103
+  - 功能, 51
 - 黄色渐变技术 (Yellow Fade Technique), 152, 153f
 - 实例变量, 45
-- Layout 中的 yield, 114, 362
+- Layout 中的 `yield`, 114, 362
 - 布局 (layout)，见 Layout
-- yield 语句, 65
+- `yield` 语句, 65
 - 位置, 43f
 
 # Pragmatic Bookshelf (实战书架)
@@ -13398,45 +13580,45 @@ rake
 | Everyday Scripting with Ruby: for Teams, Testers, and You (Ruby 日常脚本：面向团队、测试人员和和你) | 2007 | 9780977616639 | 320 |
 | Expression Engine 2: A Quick-Start Guide (表达式引擎 2：快速上手指南) | 2010 | 9781934356254 | 250 |
 | From Java To Ruby: Every Manager Should Know (从 Java 到 Ruby：每个经理都应该知道) | 2006 | 9780976694090 | 160 |
-| FX: Create and Mean GUIs with Ruby (使用 Ruby 创建 GUI) | 2008 | 9781934356074 | 240 |
-| GIS for Web Developers: Adding to Your Applications (面向 Web 开发者的 GIS) | 2007 | 9780974514093 | 275 |
-| Google Maps API: Adding to Your Applications (Google Maps API) | 2006 | PDF-Only | 83 |
-| Grails: A Quick-Start Guide (Grails：快速上手指南) | 2009 | 9781934356463 | 200 |
-| Groovy Recipes: Greasing the Wheels of Java (Groovy 方案：润滑 Java 的轮子) | 2009 | 9780897839294 | 264 |
-| Hello, Android: Introducing Google's Mobile Platform (你好，安卓：介绍 Google 的移动平台) | 2010 | 9781934356562 | 320 |
-| Interface Oriented Design (面向接口的设计) | 2006 | 9780976694052 | 240 |
-| iPad Programming: A Quick-Start Guide for iPhone Developers (iPad 编程：开发者开发者指南) | 2010 | 9781934356579 | 248 |
-| iPhone SDK Development (iPhone SDK 开发) | 2009 | 9781934356258 | 256 |
-| Land the Tech Job You Love (获得你热爱的技术工作) | 2009 | 9781934356265 | 280 |
-| Language Implementation Patterns: Create Domain-Specific and General Languages (语言实现模式：创建领域特定和通用语言) | 2009 | 9781934356456 | 350 |
-| Learn to Program (学习编程) | 2009 | 9781934356364 | 240 |
-| Manage It! Your Guide to Modern Project Management (管理！现代项目管理指南) | 2007 | 9780897839249 | 360 |
-| Manage Your Project Portfolio: Increase Your Capacity and Finish More Projects (管理项目组合：提高能力并完成更多项目) | 2009 | 9781934356296 | 200 |
-| Mastering Dojo: JavaScript and Ajax Tools for Web Experiences (精通：用于 Web 体验的 JavaScript 和 Ajax 工具) | 2008 | 9781934356111 | 568 |
-| Metrogramming Ruby: Program Like the Ruby Pros (Ruby 元编程：像 Ruby 专家一样编程) | 2010 | 9781934356470 | 240 |
-| Modular Java: Creating Flexible Applications with OSGi and Spring (模块化 Java：使用 OSGi 和 Spring 创建灵活的应用) | 2009 | 9781934356401 | 260 |
-| No Fluff Stuff 2006 Anniversary (2006 周年版) | 2006 | 9780977616664 | 240 |
-| No Fluff Stuff 2007 Anniversary (2007 周年版) | 2007 | 9780897839287 | 320 |
-| Pomodoro Technique Illustrated: The Easy Way to Do More in Less Time (番茄工作法图解：用更短的时间做更多) | 2009 | 9781934356500 | 144 |
-| Practical Programming: An Introduction to Computer Science using Python (实用编程：使用 Python 的计算机科学入门) | 2009 | 9781934356272 | 350 |
-| Practices of an Agile Developer (敏捷开发者的实践) | 2006 | 9780974514086 | 208 |
-| Pragmatic Guide to Git (Git 实战指南) | 2010 | 9781934356722 | 168 |
-| Pragmatic Project Automation: How to Build, Deploy, and Monitor (实战项目自动化：如何构建、部署和监控) | 2004 | 978097451031 | 176 |
-| Pragmatic Thinking and: Refactor Your Code (实战思考：重构你的代码) | 2008 | 9781934356350 | 288 |
-| Pragmatic Unit Testing in C# (C# 实战单元测试) | 2007 | 9780897839287 | 320 |
-| Pragmatic Unit Testing with Java (Java 实战单元测试) | 2003 | 9780974510 | 160 |
-| Pragmatic Version Control using CVS (使用 CVS 的实战版本控制) | 2005 | 978097451014 | 176 |
-| Pragmatic Version Control with Git (使用 Git 的实战版本控制) | 2006 | 978097769415 | 200 |
-| Pragmatic Version Control with Subversion (使用 Subversion 的实战版本控制) | 2008 | 9781934356210 | 240 |
-| Release! A Practical Guide to Successful Deployment and Production-Ready (发布！成功部署和生产就绪的实用指南) | 2007 | 978097873928 | 368 |
 
 
 
 
+| 书名 | 年份 | ISBN | 页数 |
+|---|---:|---|---:|
+| FX: Create and Mean GUIs with Ruby（使用 Ruby 创建 GUI） | 2008 | 9781934356074 | 240 |
+| GIS for Web Developers: Adding to Your Applications（面向 Web 开发者的 GIS） | 2007 | 9780974514093 | 275 |
+| Google Maps API: Adding to Your Applications（Google Maps API） | 2006 | PDF-Only | 83 |
+| Grails: A Quick-Start Guide（Grails：快速上手指南） | 2009 | 9781934356463 | 200 |
+| Groovy Recipes: Greasing the Wheels of Java（Groovy 方案：润滑 Java 的轮子） | 2009 | 9780897839294 | 264 |
+| Hello, Android: Introducing Google's Mobile Platform（你好，安卓：介绍 Google 的移动平台） | 2010 | 9781934356562 | 320 |
+| Interface Oriented Design（面向接口的设计） | 2006 | 9780976694052 | 240 |
+| iPad Programming: A Quick-Start Guide for iPhone Developers（iPad 编程：开发者开发者指南） | 2010 | 9781934356579 | 248 |
+| iPhone SDK Development（iPhone SDK 开发） | 2009 | 9781934356258 | 256 |
+| Land the Tech Job You Love（获得你热爱的技术工作） | 2009 | 9781934356265 | 280 |
+| Language Implementation Patterns: Create Domain-Specific and General Languages（语言实现模式：创建领域特定和通用语言） | 2009 | 9781934356456 | 350 |
+| Learn to Program（学习编程） | 2009 | 9781934356364 | 240 |
+| Manage It! Your Guide to Modern Project Management（管理！现代项目管理指南） | 2007 | 9780897839249 | 360 |
+| Manage Your Project Portfolio: Increase Your Capacity and Finish More Projects（管理项目组合：提高能力并完成更多项目） | 2009 | 9781934356296 | 200 |
+| Mastering Dojo: JavaScript and Ajax Tools for Web Experiences（精通：用于 Web 体验的 JavaScript 和 Ajax 工具） | 2008 | 9781934356111 | 568 |
+| Metrogramming Ruby: Program Like the Ruby Pros（Ruby 元编程：像 Ruby 专家一样编程） | 2010 | 9781934356470 | 240 |
+| Modular Java: Creating Flexible Applications with OSGi and Spring（模块化 Java：使用 OSGi 和 Spring 创建灵活的应用） | 2009 | 9781934356401 | 260 |
+| No Fluff Stuff 2006 Anniversary（2006 周年版） | 2006 | 9780977616664 | 240 |
+| No Fluff Stuff 2007 Anniversary（2007 周年版） | 2007 | 9780897839287 | 320 |
+| Pomodoro Technique Illustrated: The Easy Way to Do More in Less Time（番茄工作法图解：用更短的时间做更多） | 2009 | 9781934356500 | 144 |
+| Practical Programming: An Introduction to Computer Science using Python（实用编程：使用 Python 的计算机科学入门） | 2009 | 9781934356272 | 350 |
+| Practices of an Agile Developer（敏捷开发者的实践） | 2006 | 9780974514086 | 208 |
+| Pragmatic Guide to Git（Git 实战指南） | 2010 | 9781934356722 | 168 |
+| Pragmatic Project Automation: How to Build, Deploy, and Monitor（实战项目自动化：如何构建、部署和监控） | 2004 | 978097451031 | 176 |
+| Pragmatic Thinking and: Refactor Your Code（实战思考：重构你的代码） | 2008 | 9781934356350 | 288 |
+| Pragmatic Unit Testing in C#（C# 实战单元测试） | 2007 | 9780897839287 | 320 |
+| Pragmatic Unit Testing with Java（Java 实战单元测试） | 2003 | 9780974510 | 160 |
+| Pragmatic Version Control using CVS（使用 CVS 的实战版本控制） | 2005 | 978097451014 | 176 |
+| Pragmatic Version Control with Git（使用 Git 的实战版本控制） | 2006 | 978097769415 | 200 |
+| Pragmatic Version Control with Subversion（使用 Subversion 的实战版本控制） | 2008 | 9781934356210 | 240 |
+| Release! A Practical Guide to Successful Deployment and Production-Ready（发布！成功部署和生产就绪的实用指南） | 2007 | 978097873928 | 368 |
 
-[content]
-
-## Rails 进阶之路
+# Rails 进阶之路
 
 ## 进阶 Rails 实战
 
@@ -13445,9 +13627,10 @@ rake
 ### 进阶 Rails 实战
 
 Mike Clark
-(464 页) ISBN: 978-0-9787392-2-5, $38.95
 
-http://pragprog.com/titles/frr
+（464 页）ISBN：978-0-9787392-2-5，$38.95
+
+`http://pragprog.com/titles/frr`
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_466_0.png)
 
@@ -13463,22 +13646,26 @@ http://pragprog.com/titles/frr
 ### 使用 Ruby 和 Rails 的企业级方案
 
 Maik Schmidt
-(425 页) ISBN: 978-1-9343562-3-4, $38.95
 
-http://pragprog.com/titles/msenr
+（425 页）ISBN：978-1-9343562-3-4，$38.95
+
+`http://pragprog.com/titles/msenr`
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_466_1.png)
 
-## Rails 测试与安全
+# Rails 测试与安全
 
 ## RSpec 之书
 
 RSpec 是 Ruby 领域领先的行为驱动开发（BDD）工具，通过拥抱 TDD 设计和文档方面来帮助你正确执行 TDD。它鼓励编写可读、易于维护的代码示例，这些示例不仅能测试你的代码，还能对其进行记录。《RSpec 之书》将教你如何使用 RSpec、Cucumber 以及其他 Ruby 工具开发出真正的敏捷软件，让你快速进入市场，并在市场趋势不断演进时保持其价值。
 
-RSpec 之书：使用 RSpec、Cucumber 和伙伴进行行为驱动开发
+### RSpec 之书：使用 RSpec、Cucumber 和伙伴进行行为驱动开发
+
 David Cheminsky, Dave Astels, Zach Ennis, Aslan Hellesay, Bryan Helkamp, Dan North
-(450 页) isbn: 978-1-9343563-7-1, $42.95
-http://prprog.com/titles/achrba
+
+（450 页）ISBN：978-1-9343563-7-1，$42.95
+
+`http://prprog.com/titles/achrba`
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_467_0.png)
 
@@ -13486,10 +13673,13 @@ http://prprog.com/titles/achrba
 
 《Security on Rails》为你提供了工具和技术，保护你的 Rails 应用程序免受攻击者的侵害。通过这本书，你可以克服那些试图利用你应用程序的坏蛋。你将看到黑客使用的真实技术，然后通过这本全面的指南学习编写安全的 Rails 应用程序。
 
-Security on Rails
+### Security on Rails
+
 Ben Poweski and David Raphael
-(304 页) ISBN: 978-19343564-8-7, $34.95
-http://prprog.com/titles/fr-secure
+
+（304 页）ISBN：978-19343564-8-7，$34.95
+
+`http://prprog.com/titles/fr-secure`
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_466_0.png)
 
@@ -13497,50 +13687,63 @@ http://prprog.com/titles/fr-secure
 
 Security on Rails 为你提供了工具和技术，保护你的 Rails 应用程序免受攻击者的侵害。通过这本书，你可以克服那些试图利用你应用程序的坏蛋。你将看到黑客使用的真实技术，然后通过这本全面的指南学习编写安全的 Rails 应用程序。
 
-Security on Rails
+### Security on Rails
+
 Ben Poweski and David Raphael
-(304 页) ISBN: 978-19343564-8-7, $34.95
-http://prprog.com/titles/fr-secure
+
+（304 页）ISBN：978-19343564-8-7，$34.95
+
+`http://prprog.com/titles/fr-secure`
 
 ![](img/79be11dd96f63a00f9795e2dfe232ef5_466_1.png)
 
-## 工具与框架
+# 工具与框架
 
 ## 实战 Git
 
 《Pragmatic Git》将教你如何使用分布式版本控制系统（DVCS）取代旧的 CVS、Subversion 等工具。它将教你如何处理 Ruby 和 Rails。
 
-Pragmatic Git
-James Thomas
-(200 页) ISBN: 978-1-93435629-9, $34.95
-http://prog.com/titles/git
+### Pragmatic Git
 
-## 自动化与测试
+James Thomas
+
+（200 页）ISBN：978-1-93435629-9，$34.95
+
+`http://prog.com/titles/git`
+
+# 自动化与测试
 
 ## 实战自动化
 
 《Pragmatic Automation》将教你如何自动化繁琐的重复任务，这对于保持代码质量和提高效率至关重要。
 
-Pragmatic Automation
-Sau Kelly
-(250 页) ISBN: 978-1-93435634-2, $34.95
-http://prog.com/titles/aut
+### Pragmatic Automation
 
-## 进阶测试
+Sau Kelly
+
+（250 页）ISBN：978-1-93435634-2，$34.95
+
+`http://prog.com/titles/aut`
+
+# 进阶测试
 
 ## 实战测试
 
 《Pragmatic Testing》将教你如何编写高质量的测试，以确保你的应用程序健壮可靠。
 
-Pragmatic Testing
+### Pragmatic Testing
+
 Dan North
-(300 页) ISBN: 978-1-93435655-0, $34.95
-http://prog.com/titles/test
+
+（300 页）ISBN：978-1-93435655-0，$34.95
+
+`http://prog.com/titles/test`
 
 ## Ruby 测试实战
 
-Testing Rails with Ruby
-(250 页) ISBN: 978-1-93435648-7, $34.95
-http://prog.com/titles/test
+### Testing Rails with Ruby
 
-[/content]
+（250 页）ISBN：978-1-93435648-7，$34.95
+
+`http://prog.com/titles/test`
+

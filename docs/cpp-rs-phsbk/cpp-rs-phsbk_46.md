@@ -1,16 +1,17 @@
-# UnknownVar(&'a str),
 
-> ) -> Result<i32, EvalError<'a>> {
+# `UnknownVar(&'a str)`,
 
-body: Box<Exp>,
+> `) -> Result<i32, EvalError<'a>> {`
+
+`body: Box<Exp>`,
 
 在 C++ 中，访问者模式通常用于在不修改类定义的情况下向类型添加行为。在 Rust 中，传统上通过使用 Rust 枚举来实现相同的目标，这些枚举类似于 C++ 的标记联合。虽然关于标记联合的章节比较了使用 Rust 枚举与 C++ `std::variant`，但本章比较了在 C++ 中使用访问者模式与使用 Rust 枚举。
 
-在 C++ 中，有时会使用访问者模式来扩展数据和行为，而不修改原始定义（即解决[表达式问题](https://cs.brown.edu/~sk/Publications/Papers/Published/kff-synth-fp-oo/))。其他方法，得益于 Rust 的特性和泛型，更可能在 Rust 中使用（见变化的数据和行为）。
+在 C++ 中，有时会使用访问者模式来扩展数据和行为，而不修改原始定义（即解决[表达式问题](https://cs.brown.edu/~sk/Publications/Papers/Published/kff-synth-fp-oo/)）。其他方法，得益于 Rust 的特性和泛型，更可能在 Rust 中使用（见变化的数据和行为）。
 
-## Var(String),
+## `Var(String)`,
 
-let e = Let {
+`let e = Let {`
 
 ```rs
 #include <exception>
@@ -167,7 +168,6 @@ int main() {
 ```
 
 ```rs
-
 // 构造一个表达式
 
 var: String,
@@ -203,14 +203,15 @@ use std::collections::HashMap;
     Plus {
 
 }
+```
 
 对于第一种情况，其中变体是固定的但行为不是，Rust 中的惯用方法是将数据结构实现为枚举，而不是作为具有公共接口的许多结构体。这与在 C++ 中使用 `std::variant` 类似。
 
-lhs: Box<Exp>,
+`lhs: Box<Exp>`,
 
-Exp::Let { var, exp, body } => {
+`Exp::Let { var, exp, body } => {`
 
-enum EvalError<'a> {
+`enum EvalError<'a> {`
 
     }
 
@@ -218,7 +219,7 @@ enum EvalError<'a> {
 
 // 定义评估环境类型
 
-var: "x".to_string(),
+`var: "x".to_string()`,
 
 // 定义评估器
 
@@ -226,49 +227,49 @@ var: "x".to_string(),
 
     // 这涵盖了前 3 个部分
 
-    type Env<'a> = HashMap<&'a str, i32>;
+    `type Env<'a> = HashMap<&'a str, i32>;`
 
-Let {
+`Let {`
 
-    Exp::Lit(n) => Ok(*n),
+    `Exp::Lit(n) => Ok(*n)`,
 
-        Exp::Var(x) => env
+        `Exp::Var(x) => env`
 
-            .get(x.as_str())
+            `.get(x.as_str())`
 
-            println!("{:?}", res);
+            `println!("{:?}", res)`,
 
             // 表示表达式的例外
 
-        e: &'a Exp,
+        `e: &'a Exp`,
 
         }
 
-            Exp::Plus { lhs, rhs } => {
+            `Exp::Plus { lhs, rhs } => {`
 
             // 评估错误
 
-            use Exp::*;
+            `use Exp::*;`
 
         }
 
         访问者
 
-            let lv = eval(env, lhs)?;
+            `let lv = eval(env, lhs)?;`
 
-            #[derive(Debug)]
+            `#[derive(Debug)]`
 
-            env.insert(var, val);
+            `env.insert(var, val)`,
 
-            .cloned()
+            `.cloned()`
 
-        Lit(i32),
+        `Lit(i32)`,
 
     }
 
 };
 
-fn main() {
+`fn main() {`
 
     // 打印输出
 
@@ -278,37 +279,37 @@ fn main() {
 
         原文：[`cel.cs.brown.edu/crp/patterns/visitor.html`](https://cel.cs.brown.edu/crp/patterns/visitor.html)
 
-        env: &Env<'a>,
+        `env: &Env<'a>`,
 
         // 定义表达式。
 
-            enum Exp {
+            `enum Exp {`
 
             },
 
-        eval(&env, body)
+        `eval(&env, body)`
 
-    lhs: Box::new(Var("x".to_string())),
+    `lhs: Box::new(Var("x".to_string()))`,
 
-    let mut env = env.clone();
+    `let mut env = env.clone();`
 
-    let val = eval(env, exp)?;
+    `let val = eval(env, exp)?;`
 
-    let res = eval(&HashMap::new(), &e);
+    `let res = eval(&HashMap::new(), &e);`
 
-    match e {
+    `match e {`
 
-fn eval<'a>(
+`fn eval<'a>(`
 
-```
-
-## exp: Box::new(Lit(3)),
+## `exp: Box::new(Lit(3))`,
 
 访问者模式和双重分派
 
 以下示例展示了如何使用 Rust 中的访问者实现与上一个示例相同的程序，但使用了 Rust。C++ 程序与上一个示例相同。
 
 示例还演示了在 Rust 中使用双分派与 trait 对象。表达式表示为 `dyn Exp` trait 对象，它们接受一个 `dyn Visitor` trait 对象，然后调用访问者针对表达式类型的特定方法。
+
+
 
 ```rs
 #include <exception>
@@ -465,7 +466,6 @@ int main() {
 ```
 
 ```rs
-
 // 这**不是**一个惯用的翻译。这是
 
 // 以下是一个使用 Rust 枚举的先前示例。
@@ -731,7 +731,6 @@ fn main() {
     println!("{:?}", visitor.value);
 
 }
-
 ```
 
 ## Varying data and behavior
@@ -742,46 +741,34 @@ One of the alternative approaches, adopted from functional programming and lever
 
 The following example shows a variation on the earlier examples using this pattern to make it so that two parts of the expression type can be defined separately and given evaluators separately. This approach can lead to performance problems (in large part due to the indirection through nested structures) or increases in compilation time, so its necessity should be carefully evaluated before it is used.
 
-```rs
 
+
+```rs
 use std::collections::HashMap;
 
 // A type for combining separately-defined
-
 // expressions. Defining individual expressions
-
 // completely separately and then using an
-
 // application-specific sum type instead of nesting
-
 // Sum can improve performance.
 
 enum Sum<L, R> {
-
     Inl(L),
-
     Inr(R),
-
 }
 
 // Define arithmetic expressions
 
 enum ArithExp<E> {
-
     Lit(i32),
-
     Plus { lhs: E, rhs: E },
-
 }
 
 // Define let bindings and variables
 
 enum LetExp<E> {
-
     Var(String),
-
     Let { name: String, exp: E, body: E },
-
 }
 
 // Combine the expressions
@@ -789,13 +776,11 @@ enum LetExp<E> {
 type Sig<E> = Sum<ArithExp<E>, LetExp<E>>;
 
 // Define the fixed-point for recursive
-
 // expressions.
 
 struct Exp(Sig<Box<Exp>>);
 
 // Define an evaluator
-
 // The evaluation environment
 
 type Env<'a> = HashMap<&'a str, i32>;
@@ -803,167 +788,104 @@ type Env<'a> = HashMap<&'a str, i32>;
 // Evaluation errors
 
 #[derive(Debug)]
-
 enum EvalError<'a> {
-
     UndefinedVar(&'a str),
-
 }
 
 // A trait for expressions that can
-
 // be evaluated.
 
 trait Eval {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>>;
-
 }
 
 // Implement the evaluator trait for
-
 // the administrative types
 
 impl<L: Eval, R: Eval> Eval for Sum<L, R> {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>> {
-
         match self {
-
             Sum::Inl(left) => left.eval(env),
-
             Sum::Inr(right) => right.eval(env),
-
         }
-
     }
-
 }
 
 impl<E: Eval> Eval for Box<E> {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>> {
-
         self.as_ref().eval(env)
-
     }
-
 }
 
 // 为所需的变体实现特质的实现。
 
 impl<E: Eval> Eval for ArithExp<E> {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>> {
-
         match self {
-
             ArithExp::Lit(n) => Ok(*n),
-
             ArithExp::Plus { lhs, rhs } => Ok(lhs.eval(env)? + rhs.eval(env)?),
-
         }
-
     }
-
 }
 
 impl<E: Eval> Eval for LetExp<E> {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>> {
-
         match self {
-
             LetExp::Var(x) => env
-
                 .get(x.as_str())
-
                 .copied()
-
                 .ok_or(EvalError::UndefinedVar(x)),
-
             LetExp::Let { name, exp, body } => {
-
                 let arg = exp.eval(env)?;
 
                 let mut env = env.clone();
-
                 env.insert(name, arg);
-
                 body.eval(&env)
-
             }
-
         }
-
     }
-
 }
 
 // 由于特质为所有内容实现了
-
 // 在 Exp 中，它可以针对 Exp 实现。
 
 impl Eval for Exp {
-
     fn eval<'a>(&'a self, env: &Env<'a>) -> Result<i32, EvalError<'a>> {
-
         self.0.eval(env)
-
     }
-
 }
 
 // 构造表达式的辅助函数
 
 fn lit(n: i32) -> Exp {
-
     Exp(Sum::Inl(ArithExp::Lit(n)))
-
 }
 
 fn plus(lhs: Exp, rhs: Exp) -> Exp {
-
     Exp(Sum::Inl(ArithExp::Plus {
-
         lhs: Box::new(lhs),
-
         rhs: Box::new(rhs),
-
     }))
-
 }
 
 fn var(x: &str) -> Exp {
-
     Exp(Sum::Inr(LetExp::Var(x.to_string())))
-
 }
 
 fn elet(name: &str, val: Exp, body: Exp) -> Exp {
-
     Exp(Sum::Inr(LetExp::Let {
-
         name: name.to_string(),
-
         exp: Box::new(val),
-
         body: Box::new(body),
-
     }))
-
 }
 
 fn main() {
-
     let e = elet("x", lit(3), plus(var("x"), lit(2)));
-
     println!("{:?}", e.eval(&HashMap::new()));
-
 }
-
 ```
 
 值得注意的是，上述实现中不需要动态分发。
 
-<link rel="stylesheet" type="text/css" href="../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Visitor pattern and double dispatch)
+<link rel="stylesheet" type="text/css" href="../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Visitor%20pattern%20and%20double%20dispatch)

@@ -1,7 +1,7 @@
+
 # 附录
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Appendix.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Appendix.html)
-
 
 ## 术语表
 
@@ -69,7 +69,7 @@ GTID 在主节点和从节点之间维护，使您能够通过二进制日志追
 
 ```cpp
 gtid_mode=ON
-enforce_gtid_consistency=ON 
+enforce_gtid_consistency=ON
 ```
 
 此配置确保每个 MySQL 节点使用 GTID，简化了问题和故障追踪的过程。
@@ -106,14 +106,13 @@ struct lock_t {
     /** Record lock */
     lock_rec_t rec_lock;
   };
-  ... 
+  ...
 ```
 
 那么，这两个概念有什么区别呢？考虑以下比喻 [19]：
 
-+   **闩锁**可以固定门、栅栏或窗户，但不会提供防止未经授权访问的保护。
-
-+   然而，**锁**限制了没有钥匙的人的进入，确保了安全和控制。
++ **闩锁**可以固定门、栅栏或窗户，但不会提供防止未经授权访问的保护。
++ 然而，**锁**限制了没有钥匙的人的进入，确保了安全和控制。
 
 在 MySQL 中，全局闩锁用于序列化特定的处理过程。例如，以下是 MySQL 对全局闩锁作用的描述。
 
@@ -129,16 +128,15 @@ rather use friend guard classes, like the Shard_latches_guard demonstrated.
 class Latches {
  private:
   using Lock_mutex = ib_mutex_t;
- ... 
+ ...
 ```
 
 在 MySQL 中，锁是事务模型的核心，常见的类型包括行锁和表锁。MySQL 中的死锁检测与锁有关，而不是与闩锁有关。
 
 理解锁对于：
 
-+   实现大规模、繁忙或高度可靠的数据库应用程序
-
-+   调优 MySQL 性能
++ 实现大规模、繁忙或高度可靠的数据库应用程序
++ 调优 MySQL 性能
 
 理解 InnoDB 锁定和 InnoDB 事务模型对于这些任务至关重要。
 
@@ -165,14 +163,14 @@ static void lock_grant(lock_t *lock) {
       ib_vector_push(lock->trx->lock.autoinc_locks, &lock);
     }
   }
-  ... 
+  ...
 ```
 
 **15 使用 replica_preserve_commit_order 维护事务顺序**
 
 在 MySQL 中，`replica_preserve_commit_order` 配置确保在从数据库上提交的事务按照它们在重播日志中出现的顺序进行提交。这个设置是维护事务因果关系的基石：如果在主数据库上事务 A 在事务 B 之前提交，那么事务 A 也会在从数据库上在事务 B 之前提交。这防止了在从数据库上读取事务的顺序可能相反的不一致性。
 
-**16 多版本并发控制 (MVCC**)
+**16 多版本并发控制 (MVCC)**
 
 多版本并发控制 (MVCC) 是数据库管理系统使用的一种非锁定并发控制方法，用于实现数据库的并发访问。
 
@@ -232,13 +230,10 @@ Paxos 是一系列用于解决不可靠或易出错的处理器网络中共识�
 
 吞吐量衡量系统在单位时间内处理请求数量。常见的统计指标包括：
 
-1.  **Transactions Per Second (TPS):** 每秒执行的数据库事务数。
-
-1.  **Queries Per Second (QPS):** 每秒执行的数据库查询数。
-
-1.  **tpmC for TPC-C:** TPC-C 基准测试中每分钟执行的新订单交易率。
-
-1.  **tpmTOTAL for TPC-C:** TPC-C 基准测试中每分钟执行的总交易率。
+1. **Transactions Per Second (TPS):** 每秒执行的数据库事务数。
+2. **Queries Per Second (QPS):** 每秒执行的数据库查询数。
+3. **tpmC for TPC-C:** TPC-C 基准测试中每分钟执行的新订单交易率。
+4. **tpmTOTAL for TPC-C:** TPC-C 基准测试中每分钟执行的总交易率。
 
 **31 Thundering Herd**
 
@@ -260,7 +255,7 @@ TPC-C 是一个 OLTP 基准测试，它根据每分钟执行的新订单交易�
 
 视图表示在特定时间点 MySQL 组复制配置中的活动成员。当组配置发生变化时，例如成员加入或离开，并且同时通知所有成员时，会发生视图变更。
 
-## **Testing Tool**
+## 测试工具
 
 ### 1 SysBench
 
@@ -276,15 +271,11 @@ TPC-C 基准测试由事务处理委员会定义，是一个涉及 9 个表和 1
 
 此架构被五个不同的交易使用，每个交易创建不同的访问模式：
 
-1.  **项目：** 只读。
-
-1.  **仓库、区域、客户、库存：** 读写。
-
-1.  **新订单：** 插入、读取和删除。
-
-1.  **订单和订单行：** 插入带有时间延迟更新，导致行变得过时且很少被读取。
-
-1.  **历史：** 只插入。
+1. **项目：** 只读。
+2. **仓库、区域、客户、库存：** 读写。
+3. **新订单：** 插入、读取和删除。
+4. **订单和订单行：** 插入带有时间延迟更新，导致行变得过时且很少被读取。
+5. **历史：** 只插入。
 
 这个小型模式中有限数量的交易的多样化访问模式有助于 TPC-C 作为主要数据库基准测试的持续重要性。在这本书中，BenchmarkSQL [68] 主要用于评估 MySQL 中的 TPC-C 性能。
 
@@ -299,10 +290,12 @@ MySQL 使用经典的请求-响应模型：客户端向 MySQL 服务器发送 SQ
 下面是如何处理 SQL 请求的详细示例。假设用户从 MySQL 客户端向 MySQL 服务器发送以下 SQL 语句：
 
 ```cpp
-select name from student where id=1; 
+select name from student where id=1;
 ```
 
-在执行 SQL 查询之前，MySQL 服务器首先使用“解析器”解析 SQL 语句，该解析器执行两个基本任务：
+
+
+在执行 SQL 查询之前，MySQL 服务器首先使用"解析器"解析 SQL 语句，该解析器执行两个基本任务：
 
 **1. 词法分析**
 
@@ -328,11 +321,11 @@ MySQL 服务器扫描您输入的 SQL 字符串，并将其转换为标记，识
 
 查询优化器确定 SQL 查询的执行计划。此阶段包括：
 
-+   **逻辑查询重写**：将查询转换为逻辑上等价的形式。
++ **逻辑查询重写**：将查询转换为逻辑上等价的形式。
 
-+   **基于成本的连接优化**：评估不同的连接方法以最小化执行成本。
++ **基于成本的连接优化**：评估不同的连接方法以最小化执行成本。
 
-+   **基于规则的访问路径选择**：根据预定义的规则选择最佳数据访问路径。
++ **基于规则的访问路径选择**：根据预定义的规则选择最佳数据访问路径。
 
 查询优化器生成执行计划，然后由查询执行器引擎使用。
 
@@ -354,15 +347,15 @@ select * from student where age > 20;
 
 执行器和存储引擎的执行过程如下：
 
-1.  服务器层调用存储引擎的全表扫描接口以开始从表中读取记录。
+1. 服务器层调用存储引擎的全表扫描接口以开始从表中读取记录。
 
-1.  执行器检查检索的记录的年龄是否超过 20 岁。如果记录满足此条件，并且有可用空间，则将这些记录发送到网络写入缓冲区。
+1. 执行器检查检索的记录的年龄是否超过 20 岁。如果记录满足此条件，并且有可用空间，则将这些记录发送到网络写入缓冲区。
 
-1.  执行器在循环中从存储引擎请求下一条记录。每条记录都会与查询条件进行评估，如果满足条件，并且缓冲区未满，则将这些记录发送到网络写入缓冲区。
+1. 执行器在循环中从存储引擎请求下一条记录。每条记录都会与查询条件进行评估，如果满足条件，并且缓冲区未满，则将这些记录发送到网络写入缓冲区。
 
-1.  一旦存储引擎已从表中读取所有记录，它将通知执行器读取已完成。
+1. 一旦存储引擎已从表中读取所有记录，它将通知执行器读取已完成。
 
-1.  接收到完成信号后，执行器退出循环并将查询结果刷新到客户端。
+1. 接收到完成信号后，执行器退出循环并将查询结果刷新到客户端。
 
 为了优化性能，MySQL 在将记录发送到客户端之前检查网络缓冲区是否已满，以最小化频繁的写系统调用。只有在缓冲区已满或接收到完成信号时，才会发送记录。
 
@@ -380,23 +373,23 @@ select name from student where id < 3 and name like 'wang%';
 alter table student add index index_name(name); 
 ```
 
-可以使用*‘explain’*语句查看此 SQL 查询的执行计划，该语句显示查询现在正在使用新创建的索引。
+可以使用`'explain'`语句查看此 SQL 查询的执行计划，该语句显示查询现在正在使用新创建的索引。
 
 ![图片](img/8eea230e32d2675e4b2f90027c4de86e.png)
 
 带有索引的执行过程如下：
 
-1.  执行器请求存储引擎定位与查询条件匹配的第一个索引记录（例如，name LIKE ‘wang%’）。
+1. 执行器请求存储引擎定位与查询条件匹配的第一个索引记录（例如，`name LIKE 'wang%'`）。
 
-1.  存储引擎检索并返回匹配的索引记录到服务器层。
+1. 存储引擎检索并返回匹配的索引记录到服务器层。
 
-1.  执行器检查记录是否满足额外的查询条件（例如，id < 3）。
+1. 执行器检查记录是否满足额外的查询条件（例如，`id < 3`）。
 
     如果满足条件，相应的名称将被添加到网络缓冲区中，除非它已满。如果不满足条件，执行器将跳过该记录并从存储引擎请求下一个记录。
 
-1.  此周期会持续进行，直到执行器反复请求和评估与查询条件匹配的下一个索引记录，直到处理完所有相关索引记录。
+1. 此周期会持续进行，直到执行器反复请求和评估与查询条件匹配的下一个索引记录，直到处理完所有相关索引记录。
 
-1.  一旦存储引擎指示所有相关索引记录都已处理，执行器将退出循环并将收集到的结果发送到客户端。
+1. 一旦存储引擎指示所有相关索引记录都已处理，执行器将退出循环并将收集到的结果发送到客户端。
 
 使用索引允许存储引擎快速定位必要的记录，绕过扫描整个表的需要。通常，这会显著提高执行效率并加快查询速度。
 
@@ -410,29 +403,29 @@ MySQL 遵循客户端-服务器架构，将系统分为两个主要组件：客�
 
 ### 1 客户端
 
-1.  客户端是一个与应用程序交互的 MySQL 数据库服务器。
+1. 客户端是一个与应用程序交互的 MySQL 数据库服务器。
 
-1.  它可以是一个独立的应用程序，一个 Web 应用程序，或任何需要数据库的程序。
+1. 它可以是一个独立的应用程序，一个 Web 应用程序，或任何需要数据库的程序。
 
-1.  客户端将 SQL 查询发送到 MySQL 服务器进行处理。
+1. 客户端将 SQL 查询发送到 MySQL 服务器进行处理。
 
 ### 2 服务器
 
-1.  服务器是负责存储、管理和处理数据的 MySQL 数据库管理系统。
+1. 服务器是负责存储、管理和处理数据的 MySQL 数据库管理系统。
 
-1.  它接收 SQL 查询，处理它们，并返回结果集。
+1. 它接收 SQL 查询，处理它们，并返回结果集。
 
-1.  它管理多个客户端的数据存储、安全和并发访问。
+1. 它管理多个客户端的数据存储、安全和并发访问。
 
 客户端通过网络使用 MySQL 协议与服务器通信，允许多个客户端并发交互。应用程序使用 MySQL 连接器连接到数据库服务器。MySQL 还提供客户端工具，如基于终端的 MySQL 客户端，以直接与服务器交互。
 
 MySQL 数据库服务器包括几个守护进程：
 
-1.  **SQL 接口**：为应用程序提供使用 SQL 查询与数据库交互的标准接口。
+1. **SQL 接口**：为应用程序提供使用 SQL 查询与数据库交互的标准接口。
 
-1.  **查询解析器**：分析 SQL 查询以理解其结构和语法，将它们分解成组件以进行进一步处理。
+1. **查询解析器**：分析 SQL 查询以理解其结构和语法，将它们分解成组件以进行进一步处理。
 
-1.  **查询优化器**：评估给定查询的各种执行计划，并选择最有效的一个以提高性能。
+1. **查询优化器**：评估给定查询的各种执行计划，并选择最有效的一个以提高性能。
 
 在 MySQL 中，存储引擎负责数据的存储、检索和管理。MySQL 的可插拔存储引擎架构允许选择不同的存储引擎，如 InnoDB 和 MyISAM，以满足特定的性能和可伸缩性要求，同时保持一致的 SQL 接口。
 
@@ -446,11 +439,11 @@ MySQL 数据库服务器包括几个守护进程：
 
 MySQL 中的复制将数据从一台服务器（主服务器）复制到一台或多台服务器（从服务器），提供了以下优点：
 
-1.  **扩展解决方案**：在多个从服务器之间分配负载以提高性能。所有写入和更新都发生在主服务器上，而读取可以在从服务器上进行，从而提高读取速度。
+1. **扩展解决方案**：在多个从服务器之间分配负载以提高性能。所有写入和更新都发生在主服务器上，而读取可以在从服务器上进行，从而提高读取速度。
 
-1.  **分析**：允许在不影响主性能的情况下对从服务器进行分析。
+1. **分析**：允许在不影响主性能的情况下对从服务器进行分析。
 
-1.  **长距离数据分布**：为远程站点创建本地数据副本，无需持续访问主服务器。
+1. **长距离数据分布**：为远程站点创建本地数据副本，无需持续访问主服务器。
 
 原始的同步类型是单向异步复制。异步复制的优点是用户响应时间不受从服务器的影响。然而，如果主服务器失败且从服务器未完全同步，则存在数据丢失的重大风险。
 
@@ -476,7 +469,7 @@ Intel(R) Xeon(R) Gold 6238 CPU @ 2.10GHz
 
 缓存对齐：64
 
-cpu MHz：3700.000
+`cpu MHz`：3700.000
 
 缓存大小：30976 KB
 
@@ -496,11 +489,11 @@ x86 架构 NUMA 环境中的节点详细信息：
 
 创建 TPC-C 表的脚本可以在以下地址找到：
 
-https://github.com/enhancedformysql/mysql_8.0.27/blob/main/tableCreates.sql_base_for_test
+`https://github.com/enhancedformysql/mysql_8.0.27/blob/main/tableCreates.sql_base_for_test`
 
 创建相关索引的脚本可以在以下地址找到：
 
-https://github.com/enhancedformysql/mysql_8.0.27/blob/main/indexCreates.sql_base_for_test
+`https://github.com/enhancedformysql/mysql_8.0.27/blob/main/indexCreates.sql_base_for_test`
 
 BenchmarkSQL 测试的主要配置脚本如下：
 
@@ -534,13 +527,13 @@ stockLevelWeight=4
 
 SysBench 测试相当简单；这里只列出关键参数。
 
-SysBench 测试参数：*-table_size=1000000 –tables=1*
+SysBench 测试参数：`-table_size=1000000 –tables=1`
 
-对于低争用率的测试，请使用参数 *–rand-type=uniform*；对于高争用率的测试，请使用参数 *–rand-type=pareto*。
+对于低争用率的测试，请使用参数 `–rand-type=uniform`；对于高争用率的测试，请使用参数 `–rand-type=pareto`。
 
 ### 5 使用 tpcc-mysql 脚本进行基准测试
 
-tpcc-mysql 改进工具的下载链接：http://www.anysql.net/
+tpcc-mysql 改进工具的下载链接：`http://www.anysql.net/`
 
 ![](img/f19d96e4077b3a47d03f144a4889f88d.png)
 
@@ -566,9 +559,9 @@ tpcc-mysql 改进工具的下载链接：http://www.anysql.net/
 
 关于独立 MySQL 实例的典型配置参数的详细信息，请参阅以下地址：
 
-https://github.com/enhancedformysql/mysql_8.0.27/blob/main/my.cnf_base_for_test
+`https://github.com/enhancedformysql/mysql_8.0.27/blob/main/my.cnf_base_for_test`
 
-应注意，默认情况下，测试是在 *可重复读* 事务隔离级别下进行的，启用了 *二进制日志*，*‘双一’* 配置，并启用了 *双写*。
+应注意，默认情况下，测试是在*可重复读*事务隔离级别下进行的，启用了*二进制日志*，`'双一'`配置，并启用了*双写*。
 
 对于组复制，原生 MySQL 版本中的主服务器配置参数如下：
 
@@ -610,7 +603,7 @@ slave_parallel_type=LOGICAL_CLOCK
 slave_preserve_commit_order=on 
 ```
 
-关于改进的组复制，由于它在 MySQL 8.0.32 和 MySQL 8.0.40 之间相似，我们已在以下地址提供了可供在线使用的版本：https://github.com/enhancedformysql/mysql-8.0.40。
+关于改进的组复制，由于它在 MySQL 8.0.32 和 MySQL 8.0.40 之间相似，我们已在以下地址提供了可供在线使用的版本：`https://github.com/enhancedformysql/mysql-8.0.40`。
 
 因此，主服务器的配置参数如下：
 
@@ -633,6 +626,8 @@ slave_preserve_commit_order=on
 
 对于改进的组复制，从服务器的配置参数如下：
 
+
+
 ```cpp
 # for mgr
 plugin_load_add='group_replication.so'
@@ -654,32 +649,30 @@ slave_preserve_commit_order=on
 
 与半同步复制相关的详细信息可在以下地址找到：
 
-https://github.com/enhancedformysql/mysql_8.0.27/blob/main/semisynchronous.txt
+`https://github.com/enhancedformysql/mysql_8.0.27/blob/main/semisynchronous.txt`
 
-### 7 源代码仓库
+## 7 源代码仓库
 
 **针对“Percona Server for MySQL 8.0.27-18”的补丁：**
 
 补丁地址：
 
-https://github.com/enhancedformysql/mysql_8.0.27/blob/main/book_8.0.27_single.patch
+`https://github.com/enhancedformysql/mysql_8.0.27/blob/main/book_8.0.27_single.patch`
 
 该补丁专门针对独立 MySQL 实例的优化，包括：
 
 +   **多版本并发控制（MVCC）ReadView**增强
-
 +   **二进制日志组提交**改进
-
 +   **查询执行计划**优化
 
 **集群源代码：**
 
-MySQL 集群版本的源代码在此处可用：https://github.com/enhancedformysql/mysql-8.0.40
+MySQL 集群版本的源代码在此处可用：`https://github.com/enhancedformysql/mysql-8.0.40`
 
 对于 MySQL 集群，该补丁引入了对 **组复制** 和 **MySQL 从库重放** 的进一步优化。
 
 ## 关于作者
 
-在早年，Bin Wang 在一家专注于开发高性能计算和高并发系统的互联网公司工作。他还为像 TCPCopy [65] 和 MySQL Proxy [66] 这样的开源项目做出了贡献，在问题解决方面积累了宝贵的经验，尤其是在逻辑思维方面。
+在早年，Bin Wang 在一家专注于开发高性能计算和高并发系统的互联网公司工作。他还为像 `TCPCopy` [65] 和 `MySQL Proxy` [66] 这样的开源项目做出了贡献，在问题解决方面积累了宝贵的经验，尤其是在逻辑思维方面。
 
 离开互联网公司后，他专注于 MySQL 相关的开发，成功为组复制、从库重放、InnoDB 存储引擎和查询优化等项目做出了贡献 [67]。他在 MySQL 领域的问题解决方面积累了丰富的经验。

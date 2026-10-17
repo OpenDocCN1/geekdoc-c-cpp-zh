@@ -1,3 +1,4 @@
+
 # 匿名命名空间和静态
 
 > 原文：[`cel.cs.brown.edu/crp/idioms/encapsulation/anonymous_namespaces.html`](https://cel.cs.brown.edu/crp/idioms/encapsulation/anonymous_namespaces.html)
@@ -19,7 +20,7 @@ namespace {
     inline void common_function_name() {
         // ...
     }
-} 
+}
 ```
 
 C++ 静态声明也用于通过使声明具有内部链接（因此不在翻译单元外部可见）来实现相同的目标。
@@ -29,36 +30,30 @@ Rust 通过同时控制链接和可见性来避免链接问题，声明总是也
 以下 Rust 程序在避免两个函数冲突的同时，使它们在定义文件内可用，与上面的 C++ 程序达到相同的目标。
 
 ```rs
+#![allow(unused)]
 
-#![allow(unused)] fn main() { // a.rs
+fn main() {
+    // a.rs
+    mod a {
+        fn common_function_name() {
+            // ...
+        }
+    }
 
-mod a { fn common_function_name() {
-
-    // ...
-
+    // b.rs
+    mod b {
+        fn common_function_name() {
+            // ...
+        }
+    }
 }
-
-}
-
-// b.rs
-
-mod b { fn common_function_name() {
-
-    // ...
-
-}
-
-} }
-
 ```
 
-此外，
+此外：
 
-1.  与 C++ 命名空间不同，Rust 模块（它们提供命名空间以及可见性控制）只能定义一次，并且这是由编译器检查的。
-
-1.  每个文件[定义了一个模块，该模块必须显式包含在模块层次结构中](https://doc.rust-lang.org/stable/book/ch07-05-separating-modules-into-different-files.html)。
-
-1.  来自 Rust 包（库）的模块始终带有某个根模块名称，因此它们不会冲突。如果它们会冲突，[根模块名称必须替换为用户选择的名称](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#renaming-dependencies-in-cargotoml)。
+1. 与 C++ 命名空间不同，Rust 模块（它们提供命名空间以及可见性控制）只能定义一次，并且这是由编译器检查的。
+2. 每个文件[定义了一个模块，该模块必须显式包含在模块层次结构中](https://doc.rust-lang.org/stable/book/ch07-05-separating-modules-into-different-files.html)。
+3. 来自 Rust 包（库）的模块始终带有某个根模块名称，因此它们不会冲突。如果它们会冲突，[根模块名称必须替换为用户选择的名称](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#renaming-dependencies-in-cargotoml)。
 
 ## 关于 C 兼容性的注意事项
 
@@ -66,4 +61,6 @@ mod b { fn common_function_name() {
 
 Rust 提供了 `#[unsafe(no_mangle)]` 来绕过名称修饰，以便产生可以从 C 或 C++ 中轻松引用的函数。这也可能导致由于名称冲突而导致的未定义行为。
 
-<link rel="stylesheet" type="text/css" href="../../quiz/style.css"> [点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Anonymous%20namespaces%20and%20static)
+<link rel="stylesheet" type="text/css" href="../../quiz/style.css">
+
+[点击此处为此页面提供反馈](https://docs.google.com/forms/d/e/1FAIpQLScoygeNlygODY2owQ-HvU8VGx3hi50aic7ZlKCyhJ0VktjiCg/viewform?usp=pp_url&entry.1450251950=Anonymous%20namespaces%20and%20static)

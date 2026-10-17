@@ -1,7 +1,7 @@
+
 # 第二章：神秘的 MySQL 问题
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter2.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/Chapter2.html)
-
 
 MySQL，拥有几十年历史的最受欢迎的开源数据库软件，以其简洁性和用户友好性而闻名，成为互联网公司的基础选择。尽管其应用广泛，MySQL 仍面临各种挑战。
 
@@ -43,11 +43,11 @@ Profile-guided optimization（PGO）是一种成熟的提高编译时优化决�
 
 从图中可以看出，Profile-Guided Optimization（PGO）机制涉及几个步骤：
 
-1.  首先，使用编译选项 *“-DFPROFILE_GENERATE=ON”* 编译 MySQL 的特定版本。
+1. 首先，使用编译选项 `-DFPROFILE_GENERATE=ON` 编译 MySQL 的特定版本。
 
-1.  启动这个 MySQL 版本，通过运行性能测试（如 TPC-C）来捕获训练数据，这些测试有助于收集性能指标。
+2. 启动这个 MySQL 版本，通过运行性能测试（如 TPC-C）来捕获训练数据，这些测试有助于收集性能指标。
 
-1.  在完成训练阶段后，使用选项 *“-DFPROFILE_USE=ON”* 进行第二次编译。在此编译过程中，编译器自动利用收集到的统计数据来优化条件分支和相关方面，显著提高了生成的 MySQL 可执行文件的性能。
+3. 在完成训练阶段后，使用选项 `-DFPROFILE_USE=ON` 进行第二次编译。在此编译过程中，编译器自动利用收集到的统计数据来优化条件分支和相关方面，显著提高了生成的 MySQL 可执行文件的性能。
 
 以下图展示了应用 PGO 前后 MySQL 8.0.27 的吞吐量和并发之间的关系。
 
@@ -101,7 +101,7 @@ deliveryWeight=4
 stockLevelWeight=4 
 ```
 
-从上述内容可以看出，有 1000 个仓库，并发数为 200，且 terminalWarehouseFixed 设置为 false。此设置使每次事务都能使用不同的仓库 ID，从而访问所有仓库的数据。
+从上述内容可以看出，有 1000 个仓库，并发数为 200，且 `terminalWarehouseFixed` 设置为 `false`。此设置使每次事务都能使用不同的仓库 ID，从而访问所有仓库的数据。
 
 下图展示了长期测试过程中吞吐量随时间的变化。TPC-C 吞吐量显示出远超预期的下降率，接近 50%的减少。
 
@@ -180,6 +180,8 @@ Meta 公司已经实施了一个基于 Raft 的 MySQL 高可用性解决方案�
 ## 2.8 SysBench 无影响，TPC-C 表现良好
 
 MySQL 8.0 中锁-sys 优化的具体细节如下：
+
+
 
 ```cpp
 commit 1d259b87a63defa814e19a7534380cb43ee23c48

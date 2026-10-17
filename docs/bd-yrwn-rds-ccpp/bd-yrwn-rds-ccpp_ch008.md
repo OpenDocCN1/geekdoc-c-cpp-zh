@@ -1,4 +1,5 @@
-# 07. 基本服务器：get, set, del
+
+# 07. 基本服务器：`get`, `set`, `del`
 
 在上一章的事件循环代码的基础上，我们终于可以开始向我们的服务器添加命令了。
 
@@ -75,7 +76,7 @@ static bool try_one_request(Conn *conn) {
 }
 ```
 
-`do_request`函数处理请求。目前只识别 3 个命令（get, set, del）。
+`do_request`函数处理请求。目前只识别 3 个命令（`get`, `set`, `del`）。
 
 ```cpp
 static int32_t do_request(
@@ -271,5 +272,5 @@ server says: [1] Unknown cmd
 ```
 
 > +   [07_client.cpp](https://build-your-own.org/redis/07/07_client.cpp.htm)
-> +   
+
 > +   [07_server.cpp](https://build-your-own.org/redis/07/07_server.cpp.htm)

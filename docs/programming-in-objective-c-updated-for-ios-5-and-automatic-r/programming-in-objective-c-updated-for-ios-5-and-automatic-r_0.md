@@ -1,12 +1,9 @@
+
 # Objective-C 编程：针对 iOS 5 和自动引用计数 (Arc) 的更新 (开发者库)
-
-
 
 ![](img/cover.jpeg)
 
 ![cover-image](img/00006.jpg)
-
-
 
 `Developer’s Library` 系列书籍旨在为实战程序员提供其在日常工作中使用的编程语言和技术的独特、高质量的参考资料和教程。
 
@@ -40,14 +37,9 @@
 
 `Developer’s Library` 系列书籍在大多数零售和在线书店都有纸质版和电子版，也可以通过 [safari.informit.com](http://safari.informit.com) 在 Safari Books Online 订阅。
 
-**开发者**
-
-**库**
+**开发者库**
 
 informit.com/devlibrary
-
-
-
 
 ![Image](img/00007.jpg)
 
@@ -55,31 +47,24 @@ informit.com/devlibrary
 纽约 • 多伦多 • 特特利 • 伦敦 • 慕尼黑 • 巴黎 • 马德里
 开普敦 • 悉尼 • 东京 • 新加坡 • 墨西哥城
 
-
-
-
 ISBN-10: 0-321-81190-9
+
 美国国会图书馆目录数据已在案。
+
 2011 年 12 月第一次印刷
-**采销编辑**
-**开发编辑**
-**主编**
-**项目编辑**
-**索引员**
-**校对**
 
-Wendy Mui
+**采销编辑**：Wendy Mui
+**开发编辑**：Vanessa Evans
+**主编**：Gary Adair
+**项目编辑**：Mark Shirar
+**索引员**：（未提供）
+**校对**：（未提供）
 
-Vanessa Evans
-Gary Adair
-Mark Shirar
 商标
 
 我们尽力使本书尽可能完整和准确，但不隐含任何保证或适用性。所提供的信息按“现状”提供。对于因书中包含的信息而引起的任何损失或损害，作者和出版商对任何个人或实体不承担责任或义务。
-*(注：由于原文提供的 Program 6.2 代码块似乎不完整（缺少 main 函数中的调用逻辑），翻译时根据上下文逻辑补全了常见的调用方式，以匹配其后的输出描述。)*
 
-
-
+*(注：由于原文提供的 Program 6.2 代码块似乎不完整（缺少 `main` 函数中的调用逻辑），翻译时根据上下文逻辑补全了常见的调用方式，以匹配其后的输出描述。)*
 
 ```objc
 int main (int argc, char * argv[])
@@ -181,11 +166,11 @@ Enter your number to be tested:
 The number is odd.
 ```
 
-不要忘记双等号（`==`）相等性测试，而单等号（=`）是赋值运算符。忘记这一点并无意中在 `if` 语句内部使用赋值运算符会导致很多烦恼。
+不要忘记双等号（`==`）相等性测试，而单等号（`=`）是赋值运算符。忘记这一点并无意中在 `if` 语句内部使用赋值运算符会导致很多烦恼。
 
 ### 复合关系测试
 
-复合关系测试：你到为止使用的 `if` 语句建立了了两个数字之间的关系测试。为了在实际程序示例中说明复合测试的使用，让我们写一个测试某年份是否为闰年的程序。首先，你可以计算年份被 4、100 和 400 除的余数，并将这些值分别赋值给命名适当的变量，例如 `rem_4`、`rem_100` 和 `rem_400`。然后，你可以测试这些余数，以确定是否满足了闰年的目标标准。
+复合关系测试：你到为止使用的 `if` 语句建立了两个数字之间的关系测试。为了在实际程序示例中说明复合测试的使用，让我们写一个测试某年份是否为闰年的程序。首先，你可以计算年份被 4、100 和 400 除的余数，并将这些值分别赋值给命名适当的变量，例如 `rem_4`、`rem_100` 和 `rem_400`。然后，你可以测试这些余数，以确定是否满足了闰年的目标标准。
 
 如果我们重新表述之前对闰年的定义，可以说：如果一个年份能被 4 整除且不能被 100 整除，或者能被 400 整除，那么它就是闰年。停下来思考最后这句话，并亲自验证它与之前陈述的定义是等价的。现在我们用这些术语重新制定了定义，将其转换为程序语句就变成了一个相对直接的任务，如下：
 
@@ -221,10 +206,6 @@ if ( index < 0 || index > 99 )
 ```
 
 复合运算符可以用于 Objective-C 中形成极其复杂的表达式。有时，建立更复杂的测试是理想的甚至是必要的（CR!HGK1SH992D3H5BD4YP0VXJVMVSGJ_split_016.html_filepos365626）。
-
-
-
-
 
 ```objc
 @autoreleasepool {
@@ -329,9 +310,6 @@ else
     [chessGame finish];
 ```
 
-
-
-
 下一个程序通过实现之前讨论的符号函数，演示了 `else if` 构造体的使用。
 
 ## 程序 6.6
@@ -363,6 +341,7 @@ int main (int argc, char * argv[])
 ```
 
 ### 程序 6.6 输出
+
 ```
 Please type in a number:
 1121
@@ -370,6 +349,7 @@ Sign = 1
 ```
 
 ### 程序 6.6 输出（重新运行）
+
 ```
 Please type in a number:
 -158
@@ -377,6 +357,7 @@ Sign = -1
 ```
 
 ### 程序 6.6 输出（重新运行）
+
 ```
 Please type in a number:
 0
@@ -388,6 +369,10 @@ Sign = 0
 下一个程序分析从终端输入的字符，并将其分类为：字母字符（`a`–`z` 或 `A`–`Z`）、数字（`0`–`9`）或特殊字符（其他字符）。为了从终端读取单个字符，在 `scanf` 调用中使用了格式字符 `%c`。
 
 ## 程序 6.7
+
+
+
+以下是一个简单的 Objective-C 程序，用于对从键盘输入的单个字符进行分类：
 
 ```c
 // This program categorizes a single character
@@ -415,6 +400,7 @@ int main (int argc, char * argv[])
 ```
 
 ### 程序 6.7 输出
+
 ```
 Enter a single character:
 &
@@ -422,6 +408,7 @@ It's a special character.
 ```
 
 ### 程序 6.7 输出（重新运行）
+
 ```
 Enter a single character:
 8
@@ -429,6 +416,7 @@ It's a digit.
 ```
 
 ### 程序 6.7 输出（重新运行）
+
 ```
 Enter a single character:
 B
@@ -438,16 +426,16 @@ It's an alphabetic character.
 > **注意**
 > 如程序示例所示，最好在 `scanf` 格式字符串的 `%c` 之前放置一个空格（如 `" %c"`）。这会导致 `scanf` “跳过”任何所谓的空白字符（例如，换行符、回车符、制表符）。省略该空格可能会导致 `scanf` 读取到你并非意料的字符。虽然这在这个示例中可能不是一个问题，但在处理其他示例且每你想读取单个字符时，记住这一点是有好的。
 
-读取字符后进行的第一个测试决定了 `char` 变量 `c` 是否为字母。这是通过测试该字符是否为小写字母或大写字母来实现的前面的测试通过以下表达式完成：`(c >= 'a' && c <= 'z')`。如果 `c` 在字符 `'a'` 到 `'z'` 的范围内，则该表达式为真；即如果 `c` 是小写字母。后一个测试通过此表达式完成：`(c >= 'A' && c <= 'Z')`。如果 `c` 在字符 `'A'` 到 `'Z'` 的范围内，则该表达式为真；即如果 `c` 是大写字母。这些测试在以 ASCII 格式在机器存储字符的计算机系统中有效。
+读取字符后进行的第一个测试决定了 `char` 变量 `c` 是否为字母。这是通过测试该字符是否为小写字母或大写字母来实现的。前面的测试通过以下表达式完成：`(c >= 'a' && c <= 'z')`。如果 `c` 在字符 `'a'` 到 `'z'` 的范围内，则该表达式为真；即如果 `c` 是小写字母。后一个测试通过此表达式完成：`(c >= 'A' && c <= 'Z')`。如果 `c` 在字符 `'A'` 到 `'Z'` 的范围内，则该表达式为真；即如果 `c` 是大写字母。这些测试在以 ASCII 格式在机器存储字符的计算机系统中有效。
 
-如果 `c` 是字母，第一个 `if` 测试成功，并显示消息“It’s an alphabetic character.”。如果测试失败，则执行 `else if` 子句。该子句确定字符是否为数字。注意，此测试是将字符 `c` 与字符 `'0'` 和 `'9'` 进行比较，而不是整数 `0` 和 `9`。这是因为从终端读取的是一个字符，而字符 `'0'` 到 `'9'` 与数字 `0`–`9` 并不。事实上，在 ASCII 中，字符 `'0'` 内部实际上表示为数字 `48`，字符 `'1'` 表示为数字 `49`，依此类推。
+如果 `c` 是字母，第一个 `if` 测试成功，并显示消息“It’s an alphabetic character.”。如果测试失败，则执行 `else if` 子句。该子句确定字符是否为数字。注意，此测试是将字符 `c` 与字符 `'0'` 和 `'9'` 进行比较，而不是整数 `0` 和 `9`。这是因为从终端读取的是一个字符，而字符 `'0'` 到 `'9'` 与数字 `0`–`9` 并不相同。事实上，在 ASCII 中，字符 `'0'` 内部实际上表示为数字 `48`，字符 `'1'` 表示为数字 `49`，依此类推。
 
 如果 `c` 是数字字符，则显示短语“It’s a digit.”否则，如果 `c` 不是字母也不是数字，则执行最后的 `else` 子句并在终端显示短语“It’s a special character”。随后程序执行完成。注意，尽管这里使用 `scanf` 仅读取单个字符，但你必须在输入字符后按 Return（回车）键将输入发送给程序。通常，每当你从终端读取数据时，程序在回车键按下之前都不会看到任何数据。
 
 > **注意**
 > 最好使用标准库中的 `islower` 和 `isupper` 例程，以完全避免内部表示问题。要这样做，请在程序中包含行 `#import <ctype.h>`。然而，我们放在这里仅用于说明。
 
-让我们假设下一个示例中，你想写一个允许用户输入如下格式表达式的程序：`number operator number`。程序将评估该表达式并在终端显示结果。你希望识别的运算符是加法、减法、乘法和平法。让我们使用程序 4.6 中的 `Calculator` 类。每个表达式将交给计算器进行计算。下面的程序使用大型 `if` 语句配合多个 `else if` 子句来确定执行的操作。
+让我们假设下一个示例中，你想写一个允许用户输入如下格式表达式的程序：`number operator number`。程序将评估该表达式并在终端显示结果。你希望识别的运算符是加法、减法、乘法和除法。让我们使用程序 4.6 中的 `Calculator` 类。每个表达式将交给计算器进行计算。下面的程序使用大型 `if` 语句配合多个 `else if` 子句来确定执行的操作。
 
 ## 程序 6.8
 
@@ -538,9 +526,6 @@ int main (int argc, char * argv[])
     return 0;
 }
 ```
-
-
-
 
 ```objc
       [deskCalc subtract: value2];
@@ -714,9 +699,6 @@ default:
 
 括号内的 `expression` 与值 `value1`、`value2`、…… `valuen` 连续比较，这些值必须是简单的常量或常量表达式。如果找到了与 `expression` 的值相等的 `case`，则执行该 `case` 之后的程序语句。注意，当包含多个此类程序语句时，它们*不需要*包含在大括号内。
 
-
-
-
 `break` 语句表示某个特定 `case` 的结束，并终止 `switch` 语句的执行。记住在每个 `case` 的结尾包含 `break` 语句。在某个特定的 `case` 中忘记这样做，会导致当该 `case` 执行时，程序执行会继续进入下一个 `case`。有时这样做是有故意的；如果你选择这样做，请确保插入注释以提醒他人你的目的。
 
 如果 `expression` 的值不匹配任何 `case` 值，则会执行名为 `default` 的特殊可选 `case`。这在概念上等同于上一个示例中使用的全捕获 `else`。事实上，`switch` 语句的通用形式可以等价地用 `if` 语句表示如下：
@@ -748,6 +730,8 @@ else
       ...
 }
 ```
+
+
 
 考虑到前面的代码，你可以将程序 6.8A 中的大型 `if` 语句转换为等效的 `switch` 语句。这在程序 6.9 中所示。
 
@@ -871,9 +855,6 @@ int main (int argc, char * argv[])
 47
 ```
 
-
-
-
 在 Objective-C 中，标志（flag）为真或假的概念最自然地翻译为值 `1` 和 `0`。因此，在 程序 6.10 中，当你在循环内部将 `isPrime` 的值设置为 `1` 时，你实际上是将其设置为真，以表示 `p` “是质数”。在内层 `for` 循环执行过程中，如果找到了偶数因数，则 `isPrime` 的值被设置为假，表示 `p` 不再“是质数”。
 
 值 `1` 通常用于表示真或开启状态，而 `0` 用于表示假或关闭状态，这并非巧合。这种表示法对应于计算机内部单个比特（bit）的概念。当比特处于开启状态时，它的值为 `1`；当处于关闭状态时，它的值为 `0`。但在 Objective-C 中，有一个更具说服力的理由来支持这些逻辑值。这与 Objective-C 语言处理真和假概念的方式有关。
@@ -953,6 +934,7 @@ x >= y
 Objective-C 中的两个内置功能使得处理布尔变量变得稍微简单了一些。一个是特殊类型 `BOOL`，它可以用于声明包含真值或假值的变量。另一个是内置值 `YES` 和 `NO`。在程序中使用这些预定义值可以使程序更容易编写和阅读。看一眼 程序 6.10，该程序已重写以以利用这些特性。
 
 > **注意**
+
 > `BOOL` 类型是通过如下机制添加的：
 
 ### 程序 6.10（重写）
@@ -982,6 +964,7 @@ int main (int argc, char * argv[]) {
 ```
 
 ### 输出
+
 ```
 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
 ```
@@ -1003,8 +986,6 @@ condition ? expression1 : expression2
 ```objectivec
 s = ( x < 0 ) ? -1 : x * x;
 ```
-
-
 
 如果 `x` 的值小于零，则紧接 `?` 之后的表达式将被求值。该表达式简单的常量整数值 `-1`，如果 `x` 小于零，该值将被赋值给变量 `s`。
 
@@ -1085,7 +1066,9 @@ Begin Calculations
 6. 编写一个程序，从终端接收一个整数并英文显示每个数字。因此，如果用户输入 `832`，输出应该是：
 
 `eight`
+
 `three`
+
 `two`
 
 ## 类
@@ -1100,412 +1083,21 @@ Begin Calculations
 
 程序 7.1：主测试：`main.m`
 
-```objc
-#import "Fraction.h"
-
-int main (int argc, char * argv[])
-{
-    @autoreleasepool {
-        Fraction *myFraction = [[Fraction alloc] init];
-
-        // 设置分数为 1/3
-        [myFraction setNumerator: 1];
-        [myFraction setDenominator: 3];
-
-        // 显示分数
-        NSLog (@"The value of myFraction is:");
-        [myFraction print];
-    }
-    return 0;
-}
 
 
-``` 注意，此文件没有包含 `Fraction` 类的定义。然而，它导入了文件 `Fraction.h`。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-通常，类声明（即 `@interface` 部分）放在一个单独的文件，命名为 `class.h`。定义（即包含代码的 `@implementation` 部分）通常放在同名的文件中，使用扩展名 `.m`。因此，让我们把 `Fraction` 类的声明放在 `Fraction.h` 中，定义放在 `Fraction.m` 中。
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
 
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-
-
-
-要在 Xcode 中执行此操作，请从 `File` 菜单选择 `New File`。在左窗格中，选择 `Cocoa Touch`。在右上窗格中，选择 `Objective-C class`。你的窗口显示应该如图 7.1 所示。
-
-图 7.1. Xcode 新文件菜单。
-
-![Image](img/00031.jpg)
-
-点击 `Next`。确保已选择 `Subclass of NSObject`。再次点击 `Next`。在 `Save As:` 文件名处输入 ``Fraction.m``。其他字段可以保留默认值。你的窗口看起来应该如图 7.2 所示。
-
-图 7.2. 向项目中添加新类。
-
-![Image](img/00032.jpg)
-
-现在点击 `Save`。Xcode 已向你的项目添加两个文件：``Fraction.h`` 和 ``Fraction.m``。图 7.3 显示了这一点。
-
-图 7.3. Xcode 为新类创建文件。
-
-![Image](img/00033.jpg)
-
-在 ``Fraction.h`` 文件中，你现在将为 ``Fraction`` 类输入接口部分，如程序 7.1 所示：
-
-程序 7.1. 接口文件 `Fraction.h`
-
-```objectivec
-//
-//  Fraction.h
-//  FractionTest
-//
-//  Created by Steve Kochan on 9/29/11.
-//  Copyright (c) ClassroomM, Inc. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-// The Fraction class
-
-@interface Fraction : NSObject
-
--(void)    print;
--(void)    setNumerator: (int) n;
--(void)    setDenominator: (int) d;
--(int)      numerator;
--(int)      denominator;
--(double)  convertToNum;
-
-@end
-```
-
-接口文件告诉编译器（以及你稍后会学的其他程序员）``Fraction``看起来什么样：它有六个实例方法：`print`、`setNumerator:`、`setDenominator:`、`numerator`、`denominator` 和 `convertToNum`。前三个方法没有返回值，接下来的两个返回一个 `int`，最后一个返回一个 `double`。``setNumerator:` 和 ``setDenominator:` 方法各接受一个整数参数。
-
-``Fraction`` 类的实现细节应该输入到 ``Fraction.m``文件中。
-
-程序 7.1. 实现文件: Fraction.m`
-
-```objectivec
-//
-//  Fraction.m
-//  FractionTest
-//
-//  Created by Steve Kochan on 9/29/11.
-//  Copyright (c) ClassroomM, Inc. All rights reserved.
-//
-
-#import "Fraction.h"
-
-@implementation Fraction
-{
-    int numerator;
-    int denominator;
-}
-
--(void) print
-{
-    NSLog (@"%i/%i", numerator, denominator);
-}
-
--(void) setNumerator: (int) n
-{
-    numerator = n;
-}
-
--(void) setDenominator: (int) d
-{
-    denominator = d;
-}
-
--(int) numerator
-{
-    return numerator;
-}
-
--(int) denominator
-{
-    return denominator;
-}
-
--(double) convertToNum
-{
-    if (denominator != 0)
-        return (double) numerator / denominator;
-    else
-        return NAN;
-}
-@end
-```
-
-注意，接口文件通过 ``import "Fraction.h`` 导入到实现文件中。
-
-## 合成访问方法 (Synthesized Accessor Methods)
-
-从 Objective-C 2.0 开始，你可以让系统自动为你生成 setter 和 getter 方法（统称为访问方法）。到目前为止我们还没有向你展示如何这样做，因为对你来说，学习如何编写这些方法很重要。然而，这是语言提供的一种非常方便的功能，现在是时候学习如何利用它了。
-
-第一步是在接口部分使用 `@property` 指令来标识你的属性。这些属性的命名通常与你的实例变量相同，尽管不一定如此。在我们的 ``Fraction`` 类中，两个实例变量 ``numerator`` 和 ``denominator`` 就属于这一类。以下是添加了 `@property` 指令后的新接口部分。
-
-```objectivec
-@interface Fraction : NSObject
-
-@property int numerator, denominator;
-
--(void) print;
--(double) convertToNum;
-
-@end
-```
-
-注意，我们不再包含 getter 和 setter 方法的定义：`numerator`、`denominator`、`setNumerator:` 和 `setDenominator:`。我们将让 Objective-C 编译器自动为我们生成或合成这些方法。这是如何实现的？只需在实现部分如所示使用 `@synthesize` 指令即可。
-
-```objectivec
-#import "Fraction.h"
-
-@implementation Fraction
-
-@synthesize numerator, denominator;
-
--(void) print
-{
-    NSLog (@"%i/%i", numerator, denominator);
-}
-
--(double) convertToNum
-{
-    if (denominator != 0)
-        return (double) numerator / denominator;
-    else
-        return NAN;
-}
-@end
-```
-
-对于一个小型程序来说，这看起来工作很多，但当你开始处理更大的程序时，它的用处就会显现出来。你现在可以以同样的方式编译并运行程序：从 Product 菜单选择 Run，或者直接点击 Run 按钮。
-
-如果你在命令行编译，命令如下：
-
-```bash
-clang -fobjcarc Fraction.m main.m -o FractionTest
-```
-
-这会构建一个名为 ``FractionTest 的可执行文件。这里是运行程序后的输出：
-
-程序 7.1. FractionTest 输出
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-The value ofFraction is:
-1/3
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
-
-
-请注意，当你使用 `@property` 指令时，你不再需要在实现部分中声明对应的实例变量。如果你想这样做，你仍然可以声明，但这不再是必要的，因为编译器会为你处理好这一切。
-
-接下来的一行代码告诉 Objective-C 编译器为 `numerator` 和 `denominator` 这两个属性中的每一个生成一对 getter 和 setter 方法：
-
-```objc
-@synthesize numerator, denominator;
-```
-
-通常情况下，如果你有一个名为 `x` 的属性，在实现部分中包含以下行代码将使编译器自动合成一个名为 `x` 的 getter 方法和一个名为 `set` 的 setter 方法：
-
-```objc
-@synthesize x;
-```
-
-尽管这在这里看起来可能不是什么大事，但让编译器为你完成这些工作是值得的，因为生成的存取器方法将是高效的，并且可以在多线程、多台机器、多核心上安全地运行。
-
-现在回到程序 7.1 并按照指示对接口和实现部分进行更改，以便为你为你合成存取器方法。验证在不对 `main.m` 任何任何更改的情况下，程序仍然得到相同的输出。
-
-## 使用点操作符访问属性
-
-Objective-C 语言允许你使用更方便的语法来访问属性。要获取存储在 `myFraction` 中的分子 `numerator` 的值，你可以这样写：
-
-```objc
-[myFraction numerator]
-```
-
-这会向 `myFraction` 对象发送 `numerator` 消息，从而返回所需的值。在 Objective-C 中，你也可以使用点操作符编写以下等效的表达式：
-
-```objc
-myFraction.numerator
-```
-
-这里的通用格式是：
-
-```objc
-instance.property
-```
-
-你也可以使用类似的语法来赋值：
-
-```objc
-instance.property = value
-```
-
-这等同于编写以下表达式：`[instance setProperty:value]`
-
-在程序 7.1 中，你使用以下两行代码将分数的分子和分母设置为 `1/3`：
-
-```objc
-[myFraction setNumerator: 1];
-[myFraction setDenominator: 3];
-```
-
-这是编写相同两行代码等效方法：
-
-```objc
-myFraction.numerator = 1;
-myFraction.denominator = 3;
-```
-
-在本文的剩余部分，我们将一直使用这些新特性来合成方法和访问属性。
-
-值得注意的是，你对手动编写的方法也可以使用点操作符，而不仅仅是合成的方法。此外，如果你有一个名为 `numerator` 的 getter 方法，即使 `numerator` 没有被定义为属性，你仍然可以在程序中编写像 `myFraction.numerator` 这样的表达式。
-
-> **注意**
-> 根据前面的讨论，请意识到虽然写诸如 `myFraction.print` 这样的语句在语法上是正确的，但这并不被认为是良好的编程风格。点操作符的初衷是用于属性；通常用于设置/获取实例变量的值。确实有效的方法（例如计算两个分数的和）在 Apple 的文档中被标记为“任务（Tasks）”。任务通常不使用点操作符执行；传统的方括号消息表达式是首选语法。
-
-> **注意**
-> 如果你合成了存取器方法，不要让属性名称以 `new`、`alloc`、`copy` 或 `init` 单词开头。这与编译器对将合成的相应方法所假设有关，并在第 17 章“内存管理与自动引用计数”中有更详细的描述。
-
-## 方法的多参数
-
-让我们继续处理 `Fraction` 类并添加一些内容。你定义了六个方法。如果能有一个方法可以通过一条消息同时设置分子和分母就好了。只需通过列出每个连续参数后跟冒号来定义接受多个参数的方法。这成为方法名的一部分。例如，名为 `addEntryWithName:andEmail:` 的方法接受两个参数，假设是一个名字和一个电子邮件地址。`addEntryWithName:andEmail:andPhone:` 方法接受三个参数：名字、电子邮件地址和一个电话号码。
-
-一个同时设置分子和分母的方法可以命名为 `setNumerator:andDenominator:`，你可能会这样使用它：
-
-```objc
-[myFraction setNumerator: 1 andDenominator: 3];
-```
-
-这也不错。这实际上是方法名的第一个选择。但我们可以想出一个更具读性的方法名。例如，`setTo:over:` 怎么样？乍一看这可能看起来并不吸引人，但将此消息与之前将 `myFraction` 设置为 `1/3` 的消息相比一下：
-
-```objc
-[myFraction setTo: 1 over: 3];
-```
-
-我认为这读起来好一点，但选择取决于你（有些人可能实际上喜欢第一个名字，因为显式地引用了包含的实例变量名）。
-
-为了程序的可读性，选择好的方法名很重要。按照指示对接口和实现部分进行更改，以便为你合成存取器方法。验证在不对 `main.m` 进行任何更改的情况下，程序仍然得到相同的输出。让我们尝试这个新方法。在程序 7.2 中，首先在接口文件中添加 `setTo:over:` 的声明。
-
-**程序 7.2 接口文件：`Fraction.h`**
-
-```objc
-#import <Foundation/Foundation.h>
-
-// 定义 Fraction 类
-@interface Fraction : NSObject
-
-@property int numerator, denominator;
-
--(void)print;
--(void)setTo:(int)n over:(int)d;
--(double)convertToNum;
-
-@end
-```
-
-接下来，在实现文件中添加新方法的定义。
-
-**程序 7.2 实现文件：`Fraction.m`**
-
-```objc
-#import "Fraction.h"
-
-@implementation Fraction
-
-@synthesize numerator, denominator;
-
--(void)print {
-    NSLog("%i/%i", numerator, denominator);
-}
-
--(double)convertToNum {
-    if (denominator != 0) {
-        return (double) numerator / denominator;
-    } else {
-        return NAN;
-    }
-}
-
--(void)setTo:(int)n over:(int)d {
-    numerator = n;
-    denominator = d;
-}
-
-@end
-```
-
-这是一个测试你新方法的测试程序。
-
-**程序 7.2 测试文件：`main.m`**
-
-```objc
-#import "Fraction.h"
-
-int main (int argc, char * argv[]) {
-    @autoreleasepool {
-        Fraction *aFraction = [[Fraction alloc] init];
-
-        [aFraction setTo:100 over:200];
-        [aFraction print];
-
-        [aFraction setTo:1 over: 3];
-        [aFraction print];
-    }
-    return 0;
-}
-```
-
-**程序 7.2 输出**
-
-```
-100/200
-1/3
-```
-
-## 无参数名称的方法
-
-在创建方法时，参数名称实际上是可选的。例如，你可以这样声明方法：
-
-```objc
--(int) set: (int) n: (int) d;
-```
-
-注意，与之前的示例不同，这里没有给方法的第二个参数命名名称。此方法名为 `set::`，两个冒号意味着该方法接受两个参数，尽管它们没有命名。
-
-调用 `set::` 方法时，使用冒号作为参数分隔符，如下所示：
-
-```objc
-[aFraction set:1 :3];
-```
-
-在编写新方法时省略参数名称不是良好的编程风格，因为这会让程序更难以理解，并使得方法的实际参数的用途不够直观。
-
-
-
-
-## 分数的操作
-
-让我们继续处理 `Fraction` 类。首先，你将编写一个方法，允许你将一个分数加另一个分数上。你将该方法命名为 `add:`，并让它接受一个分数作为参数。以下是新方法的声明：
-
-> `-(void) add: (Fraction *) f;`
-
-注意参数 `f` 的声明：
-
-> `(Fraction *) f`
-
-这意味着 `add:` 方法的参数是指向 `Fraction` 类对象的引用。星号（*）是必须的，因此以下声明是不正确的：
-
-> `(Fraction) f`
-
-你将其中一个分数作为参数传递给 `add:` 方法，并让该方法将其加到消息的接收者（receiver）；以下消息表达式将 `Fraction bFraction` 加到 `Fraction aFraction` 上：
-
-> `[aFraction add: bFraction];`
-
-快速复习一下数学，要相加分数 `a/b` 和 `c/d`，你需要进行如下计算：
-
-![Image](img/00034.jpg)
-
-将此新方法的代码放入 `@implementation` 部分：
 
 ```objc
 // 将一个分数加到接收者上
@@ -1518,11 +1110,11 @@ int main (int argc, char * argv[]) {
 }
 ```
 
-不要忘记，你可以通过其字段 `numerator` 和 `denominator` 来引用作为消息接收者的 `Fraction`。换句话说，在 `add:` 方法内部，你直接通过名称引用你发送消息的那个对象的实例变量。
+不要忘记，你可以通过其字段`numerator`和`denominator`来引用作为消息接收者的`Fraction`。换句话说，在`add:`方法内部，你直接通过名称引用你发送消息的那个对象的实例变量。
 
-另一方面，你不能通过这种方式直接引用参数 `f` 的实例变量。相反，你必须通过它的名称 `f` 来标识该对象。然后你可以通过对 `f` 使用点运算符（或向 `f` 发送适当的消息）来获取相应的实例变量。
+另一方面，你不能通过这种方式直接引用参数`f`的实例变量。相反，你必须通过它的名称`f`来标识该对象。然后你可以通过对`f`使用点运算符（或向`f`发送适当的消息）来获取相应的实例变量。
 
-因此，`add:` 方法中的第一条语句
+因此，`add:`方法中的第一条语句
 
 `nuumerator = numerator * f.denominator + denominator * f.numerator;`
 
@@ -1530,9 +1122,9 @@ int main (int argc, char * argv[]) {
 
 重读上一段，以确保你完全理解了正在执行的操作。这里的关键在于你理解何时引用的是接收者，何时引用的是参数。
 
-假设你已经为你的新 `add:` 方法将之前的声明和定义添加到你的接口和实现文件中。`Program 7.3` 是一个示例测试程序及其输出。
+假设你已经为你的新`add:`方法将之前的声明和定义添加到你的接口和实现文件中。`Program 7.3`是一个示例测试程序及其输出。
 
-程序 7.3. 测试文件：FractionTest.m
+### 程序 7.3. 测试文件：FractionTest.m
 
 ```objc
 #import "Fraction.h"
@@ -1562,7 +1154,7 @@ int main (int argc, char * argv[])
 }
 ```
 
-程序 7.3. 输出
+### 程序 7.3. 输出
 
 ```
 1/4
@@ -1572,15 +1164,15 @@ int main (int argc, char * argv[])
 6/8
 ```
 
-该测试程序足够简单。分配并初始化了两个名为 `aFraction` 和 `bFraction` 的 `Fractions` 对象。然后它们分别被设置为 `1/4` 和 `1/2` 值。
+该测试程序足够简单。分配并初始化了两个名为`aFraction`和`bFraction`的`Fractions`对象。然后它们分别被设置为`1/4`和`1/2`值。
 
-### 局部变量
+## 局部变量
 
-该测试程序足够简单。分配并初始化了两个名为 `aFraction` 和 `bFraction` 的 `Fractions` 对象。然后它们分别被设置为 `1/4` 和 `1/2` 值。
+该测试程序足够简单。分配并初始化了两个名为`aFraction`和`bFraction`的`Fractions`对象。然后它们分别被设置为`1/4`和`1/2`值。
 
-### 方法参数
+## 方法参数
 
-你用于引用方法参数的名称也是局部变量。当方法执行时，传递给方法的任何参数都会被复制到这些变量中。由于方法处理的是参数的副本，*它无法改变传递给方法的原始值。*这是一个重要的概念。假设你有一个名为 `calculate:` 的方法，定义如下：
+你用于引用方法参数的名称也是局部变量。当方法执行时，传递给方法的任何参数都会被复制到这些变量中。由于方法处理的是参数的副本，*它无法改变传递给方法的原始值。*这是一个重要的概念。假设你有一个名为`calculate:`的方法，定义如下：
 
 ```objc
 -(void) calculate: (double) x
@@ -1594,24 +1186,21 @@ int main (int argc, char * argv[])
 
 `[myData calculate: ptVal];`
 
-当 `calculate` 方法执行时，变量 `ptVal` 中的任何值都会被复制到局部变量 `x` 中。因此，在 `calculate:` 内部修改 `x` 的值对 `ptVal` 的值没有影响。
-
-
-
+当`calculate`方法执行时，变量`ptVal`中的任何值都会被复制到局部变量`x`中。因此，在`calculate:`内部修改`x`的值对`ptVal`的值没有影响。
 
 顺带一提，当参数为对象时，你可以更改存储在该对象中的实例变量。这是因为当你传递对象作为参数时，你实际上传递的是数据存储位置的引用。正因如此，你可以修改这些数据。你将在下一章中学习更多相关内容。
 
-## `static` 关键字
+## `static`关键字
 
-你可以通过在变量声明前放置 `static` 关键字，让局部变量在多次方法调用中保留其值。例如，以下代码将整数 `hitCount` 声明为静态变量：
+你可以通过在变量声明前放置`static`关键字，让局部变量在多次方法调用中保留其值。例如，以下代码将整数`hitCount`声明为静态变量：
 
 ```objc
 static int hitCount = 0;
 ```
 
-与基本数据类型的其他局部变量不同，静态变量确实有一个 `0` 的初始值，因此之前所示的初始化是多余的。此外，它们只在程序执行开始时初始化一次，并在连续的方法调用中保留其值。
+与基本数据类型的其他局部变量不同，静态变量确实有一个`0`的初始值，因此之前所示的初始化是多余的。此外，它们只在程序执行开始时初始化一次，并在连续的方法调用中保留其值。
 
-以下代码序列可能出现在 `showPage` 方法内部，该方法想要跟踪自己被调用的次数（或者在这种情况下，可能是已经打印的页面数，例如）：
+以下代码序列可能出现在`showPage`方法内部，该方法想要跟踪自己被调用的次数（或者在这种情况下，可能是已经打印的页面数，例如）：
 
 ```objc
 -(int) showPage
@@ -1624,11 +1213,11 @@ static int hitCount = 0;
 }
 ```
 
-局部静态变量只在程序启动时被设置为 `0`，并在 `showPage` 方法的连续调用中保留其值。
+局部静态变量只在程序启动时被设置为`0`，并在`showPage`方法的连续调用中保留其值。
 
-注意将 `pageCount` 变为局部静态变量与将其变为实例变量之间的区别。在前前者，`pageCount` 可以统计所有调用 `showPage` 方法的对象打印的页面数。在后者中，变量将统计每个单独对象打印的页面数，因为每个对象都有自己的 `pageCount` 副本。
+注意将`pageCount`变为局部静态变量与将其变为实例变量之间的区别。在前前者，`pageCount`可以统计所有调用`showPage`方法的对象打印的页面数。在后者中，变量将统计每个单独对象打印的页面数，因为每个对象都有自己的`pageCount`副本。
 
-记住，静态或局部变量只能从定义它们的方法内部访问。因此，即使是静态 `pageCount` 变量也只能在 `showPage` 内部访问。你可以将变量的声明移动到任何方法声明*之外*（通常位于实现文件的开头），使其对任何方法访问，如下：
+记住，静态或局部变量只能从定义它们的方法内部访问。因此，即使是静态`pageCount`变量也只能在`showPage`内部访问。你可以将变量的声明移动到任何方法声明*之外*（通常位于实现文件的开头），使其对任何方法访问，如下：
 
 ```objc
 #import "Printer.h"
@@ -1639,9 +1228,9 @@ static int pageCount;
 @end
 ```
 
-现在，文件中包含的任何实例方法或类方法都可以访问 `pageCount` 变量。第 10 章 “关于变量和数据类型的更多”更详细地涵盖了变量作用域这一主题。
+现在，文件中包含的任何实例方法或类方法都可以访问`pageCount`变量。第 10 章 “关于变量和数据类型的更多”更详细地涵盖了变量作用域这一主题。
 
-回到分数，你可以将 `reduce` 方法的代码整合到你的 `Fraction.m` 实现文件中。别忘记在 `Fraction.h` 接口文件中也声明 `reduce` 方法。完成这些后，你就可以在程序 7.4 中测试你的新方法。在这里我们展示了三个文件：接口文件、实现文件和测试程序文件。
+回到分数，你可以将`reduce`方法的代码整合到你的`Fraction.m`实现文件中。别忘记在`Fraction.h`接口文件中也声明`reduce`方法。完成这些后，你就可以在程序 7.4 中测试你的新方法。在这里我们展示了三个文件：接口文件、实现文件和测试程序文件。
 
 ### 程序 7.4. 接口文件：Fraction.h
 
@@ -1752,19 +1341,19 @@ int main (int argc, char *[])
 
 这样更好！
 
-## `self` 关键字
+## `self`关键字
 
-在程序 7.4 中，我们决定在 `add:` 方法外部进行约分。然而，我们也可以在 `add:` 方法内部这样做。但是，我们如何识别要约分的分数呢？我们要约分哪个分数？
+在程序 7.4 中，我们决定在`add:`方法外部进行约分。然而，我们也可以在`add:`方法内部这样做。但是，我们如何识别要约分的分数呢？我们要约分哪个分数？
 
 我们知道在方法内部可以通过名称直接识别实例变量，但我们不知道如何直接识别接收者。幸运的是，有一种方法。
 
-你可以使用`self`来引用当前的对象。如果你在 `add:` 方法内部写了
+你可以使用`self`来引用当前的对象。如果你在`add:`方法内部写了
 
 ```objc
 [self reduce];
 ```
 
-那么 `reduce` 方法将应用于接收 `add:` 消息的对象，这正是我们想要的。你将在书中随处看到 `self` 关键字有多用，它在 iOS 编程中被频繁使用。现在，你将在 `add:` 方法中使用它。这里是修改后的方法如下：
+那么`reduce`方法将应用于接收`add:`消息的对象，这正是我们想要的。你将在书中随处看到`self`关键字有多用，它在 iOS 编程中被频繁使用。现在，你将在`add:`方法中使用它。这里是修改后的方法如下：
 
 ```objc
 - (void) add: (Fraction *) f
@@ -1778,17 +1367,17 @@ int main (int argc, char *[])
 }
 ```
 
-加法完成后，分数被约分。`reduce` 消息被发送给 `add:` 消息的接收者。因此，如果你的测试程序包含这一行代码：
+加法完成后，分数被约分。`reduce`消息被发送给`add:`消息的接收者。因此，如果你的测试程序包含这一行代码：
 
 ```objc
 [aFraction add: bFraction];
 ```
 
-那么当执行 `add:` 方法时，`self` 将指向 `aFraction`，事实如此。
+那么当执行`add:`方法时，`self`将指向`aFraction`，事实如此。
 
 ## 从方法分配并返回对象
 
-我们注意到 `add:` 方法更改了接收对象的值。让我们创建一个 `add:` 方法的新版本，改为创建一个新分数来存储加法的结果。在这种情况下，我们需要将新的 `Fraction` 返回给消息发送者。以下是新 `add:` 方法的定义：
+我们注意到`add:`方法更改了接收对象的值。让我们创建一个`add:`方法的新版本，改为创建一个新分数来存储加法的结果。在这种情况下，我们需要将新的`Fraction`返回给消息发送者。以下是新`add:`方法的定义：
 
 ```objc
 -(Fraction *) add: (Fraction *) f
@@ -1800,10 +1389,6 @@ int main (int argc, char *[])
 
     numerator = numerator * f.denominator + denominator * f.numerator;
 ```
-
-
-
-
 
 ```objc
   denominator * f.numerator;
@@ -1819,13 +1404,13 @@ result.denominator = denominator * f.denominator;
 -(Fraction *) add: (Fraction *) f
 ```
 
-它表示你的 `add:` 方法将返回一个 `Fraction` 对象，并且也接受一个参数作为参数。该参数将加到消息接收者（receiver）上，接收者也是一个 `Fraction`。注意，你需要修改接口部分（interface section），反映 `add:` 方法现在返回 `Fraction` 对象的这一。
+它表示你的`add:`方法将返回一个`Fraction`对象，并且也接受一个参数作为参数。该参数将加到消息接收者（receiver）上，接收者也是一个`Fraction`。注意，你需要修改接口部分（interface section），反映`add:`方法现在返回`Fraction`对象的这一。
 
-该方法分配并初始化了一个名为 `result` 的新 `Fraction` 对象，用于存储加法的结果。
+该方法分配并初始化了一个名为`result`的新`Fraction`对象，用于存储加法的结果。
 
-该方法像以前一样执行加法，将得到的分子和分母赋值给你新分配的 `Fraction` 对象 `result`。在对结果进行约分（reduce）后，你通过 `return` 语句将其返回给消息的发送者。注意，这次我们不想约分接收者，因为我们没有改变它。相反，我们想要约分 `result`，这就是为什么这次消息发送给该对象。
+该方法像以前一样执行加法，将得到的分子和分母赋值给你新分配的`Fraction`对象`result`。在对结果进行约分（reduce）后，你通过`return`语句将其返回给消息的发送者。注意，这次我们不想约分接收者，因为我们没有改变它。相反，我们想要约分`result`，这就是为什么这次消息发送给该对象。
 
-程序 7.5 测试了你新写的 `add:` 方法。
+程序 7.5 测试了你新写的`add:`方法。
 
 ### 程序 7.5. 测试文件 main.m
 
@@ -1867,19 +1452,21 @@ int main (int argc, char * argv[])
 3/4
 ```
 
-这里需要进行一些解释。首先，你定义了两个 `Fraction` 对象——`aFraction` 和 `bFraction`，并将它们的值分别设置为 `1/4` 和 `1/2`。你还定义了一个名为 `resultFraction` 的 `Fraction`。这个变量将存储后续加法操作的结果。
+这里需要进行一些解释。首先，你定义了两个`Fraction`对象——`aFraction`和`bFraction`，并将它们的值分别设置为`1/4`和`1/2`。你还定义了一个名为`resultFraction`的`Fraction`。这个变量将存储后续加法操作的结果。
 
-下一行代码将 `add:` 消息发送给 `aFraction`，并将 `Fraction` `bFraction` 作为参数传递：
+下一行代码将`add:`消息发送给`aFraction`，并将`Fraction` `bFraction`作为参数传递：
 
 ```objc
 resultFraction = [aFraction add: bFraction];
 ```
 
-在方法内部，分配了一个新的 `Fraction` 对象并执行了加法。存储在 `Fraction` 对象 `result` 中的结果由方法返回，然后存储在变量 `resultFraction` 中。你可能注意到，我们从未在 `main` 函数中为 `resultFraction` 分配（或初始化）`Fraction` 对象；这是因为 `add:` 方法为我们分配了对象，然后返回了该对象的引用。该引用随后存储在 `resultFraction` 中。因此，`resultFraction` 最终存储了我们在 `add:` 方法中分配的 `Fraction` 对象的引用。
+在方法内部，分配了一个新的`Fraction`对象并执行了加法。存储在`Fraction`对象`result`中的结果由方法返回，然后存储在变量`resultFraction`中。你可能注意到，我们从未在`main`函数中为`resultFraction`分配（或初始化）`Fraction`对象；这是因为`add:`方法为我们分配了对象，然后返回了该对象的引用。该引用随后存储在`resultFraction`中。因此，`resultFraction`最终存储了我们在`add:`方法中分配的`Fraction`对象的引用。
 
 ## 扩展类定义和接口文件
 
 你现在已经开发了一个用于处理分数的小型库。事实上，这里是接口文件的完整列表，你可以看到你通过这个类实现的所有成就：
+
+
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -1902,15 +1489,23 @@ resultFraction = [aFraction add: bFraction];
 
 ### 练习题
 
-1. 为 `Fraction` 类添加以下方法以完善算术操作。在每个情况下，都对方法内部的结果进行约分：
+1. 为`Fraction`类添加以下方法以完善算术操作。在每个情况下，都对方法内部的结果进行约分：
+
    - 从接收者减去：`-(Fraction *) subtract: (Fraction *) f;`
+
    - 接收者乘以参数：`-(Fraction *) multiply: (Fraction *) f;`
+
    - 接收者除以参数：`-(Fraction *) divide: (Fraction *) f;`
-2. 修改你 `Fraction` 类中的 `print` 方法，使其接受一个额外的 `BOOL` 参数，指示分数是否应该约分。如果需要约分（即参数为 `YES`），请确保不要对分数进行任何永久性更改。
-3. 你的 `Fraction` 类能处理负分数吗？例如，你可以加 `-1/4` 和 `-1/2` 并得到正确的结果吗？当你得到答案时，写一个测试程序尝试。
-4. 修改 `Fraction` 的 `print` 方法，将大于 `1` 的分数显示为带分数。例如，分数 `5/3` 应该显示为 `1 2/3`。
-5. 第 4 章“数据类型与表达式”中的练习 6 定义了一个名为 `Complex` 的新类用于处理虚数。添加一个名为 `add:` 的新方法用于相加两个复数。加两个复数只需相加实部和虚部，如下所示：`(5+7i) + (2+4i) = 8 + 11i`。让 `add:` 方法存储并返回一个新的 `Complex` 数，基于以下方法声明：`-(Complex *) add: (Complex *) complexNum;`。确保你的测试程序处理了潜在的内存泄漏。
-6. 根据第 4 章练习 6 中的 `Complex` 类以及本章练习 6 中的扩展，创建独立的 `Complex.h` 和 `Complex.m` 接口和实现文件。创建一个独立的测试程序来测试所有内容。
+
+2. 修改你`Fraction`类中的`print`方法，使其接受一个额外的`BOOL`参数，指示分数是否应该约分。如果需要约分（即参数为`YES`），请确保不要对分数进行任何永久性更改。
+
+3. 你的`Fraction`类能处理负分数吗？例如，你可以加`-1/4`和`-1/2`并得到正确的结果吗？当你得到答案时，写一个测试程序尝试。
+
+4. 修改`Fraction`的`print`方法，将大于`1`的分数显示为带分数。例如，分数`5/3`应该显示为`1 2/3`。
+
+5. 第 4 章“数据类型与表达式”中的练习 6 定义了一个名为`Complex`的新类用于处理虚数。添加一个名为`add:`的新方法用于相加两个复数。加两个复数只需相加实部和虚部，如下所示：`(5+7i) + (2+4i) = 8 + 11i`。让`add:`方法存储并返回一个新的`Complex`数，基于以下方法声明：`-(Complex *) add: (Complex *) complexNum;`。确保你的测试程序处理了潜在的内存泄漏。
+
+6. 根据第 4 章练习 6 中的`Complex`类以及本章练习 6 中的扩展，创建独立的`Complex.h`和`Complex.m`接口和实现文件。创建一个独立的测试程序来测试所有内容。
 
 ## 8. 继承
 
@@ -1918,7 +1513,7 @@ resultFraction = [aFraction add: bFraction];
 
 ### 一切始于根
 
-你在第 3 章“类、对象与方法”中学习了父类的概念。父类本身也可以有父类。没有父类的类位于层次结构的顶端，被称为根类。在 Objective-C 中，你有能力定义自己的根类，但这通常是你不想做的事情。相反，你将希望利用现有的类。到目前，我们定义的所有类都是名为 `NSObject` 的根类的后代，你在接口文件中是这样指定它的：
+你在第 3 章“类、对象与方法”中学习了父类的概念。父类本身也可以有父类。没有父类的类位于层次结构的顶端，被称为根类。在 Objective-C 中，你有能力定义自己的根类，但这通常是你不想做的事情。相反，你将希望利用现有的类。到目前，我们定义的所有类都是名为`NSObject`的根类的后代，你在接口文件中是这样指定它的：
 
 ```objc
 @interface Fraction: NSObject
@@ -1926,11 +1521,7 @@ resultFraction = [aFraction add: bFraction];
 @end
 ```
 
-`Fraction` 类派自 `NSObject` 类。因为 `NSObject` 位于层次结构的顶端（即上方没有其他类），所以它被称为根类，如图 8.1 所示。`Fraction` 类被称为子类。
-
-
-
-
+`Fraction`类派自`NSObject`类。因为`NSObject`位于层次结构的顶端（即上方没有其他类），所以它被称为根类，如图 8.1 所示。`Fraction`类被称为子类。
 
 ## 图 8.1 根类与子类
 
@@ -1940,9 +1531,9 @@ resultFraction = [aFraction add: bFraction];
 
 每当定义一个新类（根类除外）时，该类都会继承某些内容。例如，父类的（非私有的）实例变量和方法会隐含地成为新类定义的一部分。这意味着子类可以访问这些方法和实例变量，就像它们是直接定义在类定义内部一样。
 
-注意，子类需要直接访问的实例变量必须在接口部分（interface section）中声明，而不是像我们在整本书中所的那样声明在实现部分（implementation section）中。在实现部分声明或合成的实例变量是 `private` 实例变量，子类无法直接访问。相反，你将希望使用显式定义或合成的 getter 和 setter 方法来访问它们的值。
+注意，子类需要直接访问的实例变量必须在接口部分（interface section）中声明，而不是像我们在整本书中所的那样声明在实现部分（implementation section）中。在实现部分声明或合成的实例变量是`private`实例变量，子类无法直接访问。相反，你将希望使用显式定义或合成的 getter 和 setter 方法来访问它们的值。
 
-一个简单的（尽管是刻意的）例子有助于说明继承这一核心概念。这里有一个名为 `ClassA` 的对象的声明，包含一个名为 `initVar` 的方法（注意，这里我们在接口部分声明了实例变量 `x`，以便子类可以访问）：
+一个简单的（尽管是刻意的）例子有助于说明继承这一核心概念。这里有一个名为`ClassA`的对象的声明，包含一个名为`initVar`的方法（注意，这里我们在接口部分声明了实例变量`x`，以便子类可以访问）：
 
 ```objc
 @interface ClassA: NSObject
@@ -1954,7 +1545,7 @@ resultFraction = [aFraction add: bFraction];
 @end
 ```
 
-`initVar` 方法简单地将 `ClassA` 的实例变量的值设置为 `100`：
+`initVar`方法简单地将`ClassA`的实例变量的值设置为`100`：
 
 ```objc
 @implementation ClassA
@@ -1965,7 +1556,7 @@ resultFraction = [aFraction add: bFraction];
 @end
 ```
 
-现在，让我们也定义一个名为 `ClassB` 的类：
+现在，让我们也定义一个名为`ClassB`的类：
 
 ```objc
 @interface ClassB: ClassA
@@ -1979,15 +1570,15 @@ resultFraction = [aFraction add: bFraction];
 @interface ClassB: ClassA
 ```
 
-表示 `ClassB` 不是 `NSObject` 的子类，而是 `ClassB` 是 `ClassA` 的子类。因此，尽管 `ClassA` 的父类（或超类）是 `NSObject`，但 `ClassB` 的父类是 `ClassA`。图 8.2 解释了这一点。
+表示`ClassB`不是`NSObject`的子类，而是`ClassB`是`ClassA`的子类。因此，尽管`ClassA`的父类（或超类）是`NSObject`，但`ClassB`的父类是`ClassA`。图 8.2 解释了这一点。
 
 ## 图 8.2 子类与超类
 
 ![Image](img/00036.jpg)
 
-如你从图 8.2 中所示，根类没有超类，而处于层次结构底部的 `ClassB` 没有子类。因此，`ClassA` 是 `NSObject` 的子类，而 `ClassB` 是 `ClassA` 的子类，也是 `NSObject` 的子类（技术上来说，它是子子类，即孙类）。此外，`NSObject` 是 `ClassA` 的超类，而 `ClassA` 是 `ClassB` 的超类。`NSObject` 也是 `ClassB` 的超类，因为它存在于层次结构的更深处。
+如你从图 8.2 中所示，根类没有超类，而处于层次结构底部的`ClassB`没有子类。因此，`ClassA`是`NSObject`的子类，而`ClassB`是`ClassA`的子类，也是`NSObject`的子类（技术上来说，它是子子类，即孙类）。此外，`NSObject`是`ClassA`的超类，而`ClassA`是`ClassB`的超类。`NSObject`也是`ClassB`的超类，因为它存在于层次结构的更深处。
 
-这里是 `ClassB` 的完整声明，它定义了一个名为 `printVar` 的方法：
+这里是`ClassB`的完整声明，它定义了一个名为`printVar`的方法：
 
 ```objc
 @interface ClassB: ClassA
@@ -2002,13 +1593,13 @@ resultFraction = [aFraction add: bFraction];
 @end
 ```
 
-`printVar` 方法打印了实例变量 `x` 的值，然而你并没有在 `ClassB` 中定义任何实例变量。这是因为 `ClassB` 是 `ClassA` 的子类——因此，它继承了 `ClassA` 的公共实例变量（在本例中，只有一个）。图 8.3 描绘了这一点。
+`printVar`方法打印了实例变量`x`的值，然而你并没有在`ClassB`中定义任何实例变量。这是因为`ClassB`是`ClassA`的子类——因此，它继承了`ClassA`的公共实例变量（在本例中，只有一个）。图 8.3 描绘了这一点。
 
 ## 图 8.3 继承实例变量和方法。
 
 ![Image](img/00037.jpg)
 
-（当然，图 8.3 没有显示从 `NSObject` 类继承的任何方法或实例变量——实际上有好几个。）
+（当然，图 8.3 没有显示从`NSObject`类继承的任何方法或实例变量——实际上有好几个。）
 
 让我们通过在一个完整的程序示例中整合所有内容，来看看它是如何工作的。为了简洁起见，我们将所有的类声明和定义放在一个文件中（参见程序 8.1）。
 
@@ -2064,17 +1655,13 @@ int main (int argc, char *argv[]) {
 x = 100
 ```
 
-在向 `b` 发送 `initVar` 消息后，输出 `x = 100` 证实了 `printVar` 能够访问该实例变量。这是因为通过 `initVar` 方法，它是被继承来的。
-
-
-
-
+在向`b`发送`initVar`消息后，输出`x = 100`证实了`printVar`能够访问该实例变量。这是因为通过`initVar`方法，它是被继承来的。
 
 你将在第 9 章中的“多态、动态类型与动态绑定”中更多关于系统如何检查执行正确的方法。
 
 ### 通过继承进行扩展：添加新方法
 
-继承通常用于扩展类。例如，假设你刚刚被分配了一项任务，需要开发一些类来处理 2D 图形对象，如矩形、圆形和三角形。目前，我们只需要考虑矩形。回到第 4 章中的练习 7，“数据类型与表达式”，从该示例的 `@interface` 部分开始：
+继承通常用于扩展类。例如，假设你刚刚被分配了一项任务，需要开发一些类来处理 2D 图形对象，如矩形、圆形和三角形。目前，我们只需要考虑矩形。回到第 4 章中的练习 7，“数据类型与表达式”，从该示例的`@interface`部分开始：
 
 ```objc
 @interface Rectangle: NSObject
@@ -2090,7 +1677,7 @@ x = 100
 -(void) setWidth: (int) w andHeight: (int) h;
 ```
 
-假设你将这个新类声明写在一个名为 `Rectangle.h` 的文件中。以下是实现文件 `Rectangle.m` 的可能样貌：
+假设你将这个新类声明写在一个名为`Rectangle.h`的文件中。以下是实现文件`Rectangle.m`的可能样貌：
 
 ```objc
 #import "Rectangle.h"
@@ -2116,7 +1703,7 @@ x = 100
 @end
 ```
 
-每个方法的定义都足够直观。程序 8.2 显示了一个测试它的 `main` 例程。
+每个方法的定义都足够直观。程序 8.2 显示了一个测试它的`main`例程。
 
 程序 8.2
 
@@ -2145,13 +1732,13 @@ Rectangle: w = 5, h = 8
 Area = 40, Perimeter = 26
 ```
 
-`myRect` 被分配并初始化；然后其宽度被设置为 `5`，高度被设置为 `8`。第一行输出验证了这一点。接下来，通过适当的消息调用计算矩形的面积和周长，并将返回的值交给 `NSLog` 进行显示。
+`myRect`被分配并初始化；然后其宽度被设置为`5`，高度被设置为`8`。第一行输出验证了这一点。接下来，通过适当的消息调用计算矩形的面积和周长，并将返回的值交给`NSLog`进行显示。
 
-假设你现在需要处理正方形。你可以定义一个名为 `Square` 的新类，并在其中定义与你的 `Rectangle` 类中类似的方法。或者，你也可以意识到正方形只是矩形的一种特殊情况，其宽度和高度恰好相等。
+假设你现在需要处理正方形。你可以定义一个名为`Square`的新类，并在其中定义与你的`Rectangle`类中类似的方法。或者，你也可以意识到正方形只是矩形的一种特殊情况，其宽度和高度恰好相等。
 
-因此，处理此问题的简单方法是创建一个名为 `Square` 的新类并使其成为 `Rectangle` 的子类。目前，你可能想要添加的方法是将正方形的边长设置为特定值并获取该值。程序 8.3 显示了 `Square` 的接口和实现。
+因此，处理此问题的简单方法是创建一个名为`Square`的新类并使其成为`Rectangle`的子类。目前，你可能想要添加的方法是将正方形的边长设置为特定值并获取该值。程序 8.3 显示了`Square`的接口和实现。
 
-程序 8.3 `Square.h` 接口
+程序 8.3 `Square.h`接口
 
 ```objc
 @import "Rectangle.h"
@@ -2161,7 +1748,7 @@ Area = 40, Perimeter = 26
 @end
 ```
 
-程序 8.3 `Square.m` 实现
+程序 8.3 `Square.m`实现
 
 ```objc
 #import "Square.h"
@@ -2179,9 +1766,9 @@ Area = 40, Perimeter = 26
 @end
 ```
 
-注意你所做的。你将 `Square` 类定义为 `Rectangle` 的子类。你不需要添加任何实例变量，因为你从父类中继承了它们。`setSide` 方法无法访问 `width` 实例变量，因为它是私有的。然而，`side` 方法可以访问 `width` 变量。注意，编写 `self.width` 等同于编写 `[self width]`。`side` 方法向接收者发送了条消息。
+注意你所做的。你将`Square`类定义为`Rectangle`的子类。你不需要添加任何实例变量，因为你从父类中继承了它们。`setSide`方法无法访问`width`实例变量，因为它是私有的。然而，`side`方法可以访问`width`变量。注意，编写`self.width`等同于编写`[self width]`。`side`方法向接收者发送了条消息。
 
-`setSide:` 利用了你已经在 `Rectangle` 类中拥有了 `setWidth:andHeight:` 方法这一事实，并将参数 `s` 作为宽度和高度的值传递。处理 `Square` 对象的人现在可以使用 `setSide:` 设置尺寸，并利用来自 `Rectangle` 的方法。
+`setSide:`利用了你已经在`Rectangle`类中拥有了`setWidth:andHeight:`方法这一事实，并将参数`s`作为宽度和高度的值传递。处理`Square`对象的人现在可以使用`setSide:`设置尺寸，并利用来自`Rectangle`的方法。
 
 ```objc
 #import "Square.h"
@@ -2208,11 +1795,7 @@ Square s = 5
 Area = 25, Perimeter = 20
 ```
 
-
-
-
-
-`Rectangle` 类仅存储了矩形的尺寸。在现实世界的图形化应用程序中，你可能需要跟踪各种额外信息，例如矩形的填充颜色、线条颜色、在窗口内的位置（原点）等。你可以轻松地扩展你的类来完成这些功能。现在，让我们来处理矩形原点的概念。假设“原点”意味着矩形在某个笛卡尔坐标系 (x, y) 中的左下角的位置。如果你正在编写一个绘制应用程序，这个点可能代表矩形在窗口内的位置，如图图 8.4 所示。
+`Rectangle`类仅存储了矩形的尺寸。在现实世界的图形化应用程序中，你可能需要跟踪各种额外信息，例如矩形的填充颜色、线条颜色、在窗口内的位置（原点）等。你可以轻松地扩展你的类来完成这些功能。现在，让我们来处理矩形原点的概念。假设“原点”意味着矩形在某个笛卡尔坐标系 (x, y) 中的左下角的位置。如果你正在编写一个绘制应用程序，这个点可能代表矩形在窗口内的位置，如图图 8.4 所示。
 
 ## 图 8.4. 在窗口中绘制的矩形
 
@@ -2220,7 +1803,7 @@ Area = 25, Perimeter = 20
 
 在图 8.4 中，矩形的原点显示在 (x[1], y[1]) 处。
 
-你可以扩展 `Rectangle` 类，将矩形原点的 x、y 坐标作为两个独立的值存储。或者你可能会意识到，在开发图形应用程序时，你必须处理大量的坐标，因此定义一个名为 `XYPoint` 的类（你可能记得在第 3 章的第 7 练习中遇到过这个问题）：
+你可以扩展`Rectangle`类，将矩形原点的 x、y 坐标作为两个独立的值存储。或者你可能会意识到，在开发图形应用程序时，你必须处理大量的坐标，因此定义一个名为`XYPoint`的类（你可能记得在第 3 章的第 7 练习中遇到过这个问题）：
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -2232,7 +1815,7 @@ Area = 25, Perimeter = 20
 @end
 ```
 
-现在回到你的 `Rectangle` 类。你想要能够矩形的原点，因此你会在 `Rectangle`类的定义中添加一个名为 `origin` 的实例变量：
+现在回到你的`Rectangle`类。你想要能够矩形的原点，因此你会在`Rectangle`类的定义中添加一个名为`origin`的实例变量：
 
 ```objc
 @implementation Rectangle
@@ -2242,44 +1825,29 @@ Area = 25, Perimeter = 20
     ...
 ```
 
-添加一个方法来设置并获取矩形的原点似乎是合理的。为了说明一个重要的点，我们现在不会为 `origin` 合成访问器方法。相反，我们将手动编写它们。
+添加一个方法来设置并获取矩形的原点似乎是合理的。为了说明一个重要的点，我们现在不会为`origin`合成访问器方法。相反，我们将手动编写它们。
 
-## `@class` 指令
+## `@class`指令
 
-现在你可以处理矩形（以及正方形！）并设置它们的宽度、高度和原点。首先，让我们完整查看你的 `Rectangle.h` 接口文件：
+现在你可以处理矩形（以及正方形！）并设置它们的宽度、高度和原点。首先，让我们完整查看你的`Rectangle.h`接口文件：
 
-```objc
-#import <Foundation/Foundation.h>
 
-@class XYPoint;
 
-@interface Rectangle: NSObject
+在`Rectangle.h`头文件中，你使用了一个新指令：`@class XYPoint;`。
 
-@property int width, height;
+你需要这样做是因为编译器在遇到`Rectangle`定义的实例变量之一是`XYPoint`时，需要知道`XYPoint`是什么。类名也分别用于你的`setOrigin:`和`origin`方法的参数和返回类型声明。你也有另一个选择：你可以改为导入头文件，如下：`#import "XYPoint.h"`。
 
--(XYPoint *) origin;
--(void)  setOrigin: (XYPoint *) pt;
--(void)  setWidth: (int) w andHeight: (int) h;
--(int)   area;
--(int)   perimeter;
-@end
-```
+使用`@class`指令更高效，因为编译器不需要导入并因此处理整个`XYPoint.h`文件（尽管它很小）；它只需要知道`XYPoint`是一个类的名称。如果你需要引用`XYPoint`类的一个方法（例如在实现部分），`@class`指令将是不够的，因为编译器需要更多信息；它需要知道该方法接收多少个参数、参数的类型是什么，以及方法的返回类型是什么。
 
-你在 `Rectangle.h` 头文件中使用了一个新指令：`@class XYPoint;`。
-
-你需要这样做是因为编译器在遇到 `Rectangle` 定义的实例变量之一是 `XYPoint` 时，需要知道 `XYPoint` 是什么。类名也分别用于你的 `setOrigin:` 和 `origin` 方法的参数和返回类型声明。你也有另一个选择：你可以改为导入头文件，如下：`#import "XYPoint.h"`。
-
-使用 `@class` 指令更高效，因为编译器不需要导入并因此处理整个 `XYPoint.h` 文件（尽管它很小）；它只需要知道 `XYPoint` 是一个类的名称。如果你需要引用 `XYPoint` 类的一个方法（例如在实现部分），`@class` 指令将是不够的，因为编译器需要更多信息；它需要知道该方法接收多少个参数、参数的类型是什么，以及方法的返回类型是什么。
-
-所以请确保你理解这里 `@class` 指令的使用。它仅仅是告诉编译器 `XYPoint` 是一个类的名称。这样，当它看到这一行代码时：
+所以请确保你理解这里`@class`指令的使用。它仅仅是告诉编译器`XYPoint`是一个类的名称。这样，当它看到这一行代码时：
 
 ```objc
 XYPoint *origin;
 ```
 
-它知道 `origin` 是来自名为 `XYPoint` 的类的对象。这就是编译器在该点所需要的所有信息。
+它知道`origin`是来自名为`XYPoint`的类的对象。这就是编译器在该点所需要的所有信息。
 
-让我们为你的新 `XYPoint` 类和 `Rectangle` 方法填充空白，以便你可以在程序中测试一切。首先，程序 8.4 显示了你的 `XYPoint` 类的实现文件。接着，程序 8.4 显示了 `Rectangle` 类的新方法。
+让我们为你的新`XYPoint`类和`Rectangle`方法填充空白，以便你可以在程序中测试一切。首先，程序 8.4 显示了你的`XYPoint`类的实现文件。接着，程序 8.4 显示了`Rectangle`类的新方法。
 
 ### 程序 8.4. Rectangle.m 添加的方法
 
@@ -2297,7 +1865,7 @@ XYPoint *origin;
 }
 ```
 
-以下是完整的 `XYPoint` 和 `Rectangle` 类定义，随后是一个用于测试它们的程序。
+以下是完整的`XYPoint`和`Rectangle`类定义，随后是一个用于测试它们的程序。
 
 ### 程序 8.4. XYPoint.h Interface
 
@@ -2430,13 +1998,7 @@ Area = 40, Perimeter = 26
 
 你能解释程序 8.5 的输出吗？
 
-
-
-
-
 ## 程序 8.5
-
-* * *
 
 ```objectivec
 #import "Rectangle.h"
@@ -2462,20 +2024,14 @@ int main (int argc, char * argv[])
 }
 ```
 
-* * *
-
 ## 程序 8.5 输出
-
-* * *
 
 ```
 Origin at (100, 200)
 Origin at (50, 50)
 ```
 
-* * *
-
-你在程序中将 `myPoint` 从 `(100, 200)` 改为了 `(50, 50)`，显然这也改变了矩形的原点！但为什么会发生这种情况？你并没有显式地重置矩形的原点，那么为什么矩形的原点会改变呢？如果你回到你的 `setOrigin:` 方法定义处，或许你会发现原因：
+你在程序中将`myPoint`从`(100, 200)`改为了`(50, 50)`，显然这也改变了矩形的原点！但为什么会发生这种情况？你并没有显式地重置矩形的原点，那么为什么矩形的原点会改变呢？如果你回到你的`setOrigin:`方法定义处，或许你会发现原因：
 
 ```objectivec
 -(void) setOrigin: (XYPoint *) pt
@@ -2484,27 +2040,27 @@ Origin at (50, 50)
 }
 ```
 
-当使用表达式 `myRect.origin = myPoint;` 调用 `setOrigin:` 方法时，`myPoint` 的值将作为参数传递给该方法。该值指向此 `XYPoint` 对象在内存中的存储位置，如图 [8.5] 所示。
+当使用表达式`myRect.origin = myPoint;`调用`setOrigin:`方法时，`myPoint`的值将作为参数传递给该方法。该值指向此`XYPoint`对象在内存中的存储位置，如图 [8.5] 所示。
 
-图 8.5. 内存中的 `myPoint` 对象引用
+图 8.5. 内存中的`myPoint`对象引用
 
 ![Image](img/00039.jpg)
 
-存储在 `myPoint` 内部的值（指向内存的指针）被复制到方法内部定义的局部变量 `pt` 中。现在，`pt` 和 `myPoint` 都引用内存中存储的相同数据。图 [8.6] 阐了这一点。
+存储在`myPoint`内部的值（指向内存的指针）被复制到方法内部定义的局部变量`pt`中。现在，`pt`和`myPoint`都引用内存中存储的相同数据。图 [8.6] 阐了这一点。
 
 图 8.6. 将矩形的原点传递给方法
 
 ![Image](img/00040.jpg)
 
-当方法内部将 `origin` 变量设置为 `pt` 时，存储在 `pt` 内部的指针被复制到实例变量 `origin` 中，如图 [8.7] 所示。
+当方法内部将`origin`变量设置为`pt`时，存储在`pt`内部的指针被复制到实例变量`origin`中，如图 [8.7] 所示。
 
 图 8.7. 设置矩形的原点
 
 ![Image](img/00041.jpg)
 
-由于 `myPoint` 和存储在 `myRect` 中的 `origin` 变量引用内存中的同一区域（局部变量 `pt` 也是如此），当你稍后将 `myPoint` 的值改为 `(50, 50)` 时，矩形的原点也随之改变了。
+由于`myPoint`和存储在`myRect`中的`origin`变量引用内存中的同一区域（局部变量`pt`也是如此），当你稍后将`myPoint`的值改为`(50, 50)`时，矩形的原点也随之改变了。
 
-你可以通过修改 `setOrigin:` 方法来避免这个问题，使其分配自己的点并将 `origin` 设置为该点。如下所示：
+你可以通过修改`setOrigin:`方法来避免这个问题，使其分配自己的点并将`origin`设置为该点。如下所示：
 
 ```objectivec
 -(void) setOrigin: (XYPoint *) pt
@@ -2517,14 +2073,11 @@ Origin at (50, 50)
 }
 ```
 
-该方法首先测试实例变量 `origin` 是否为非零（请确保你理解该测试以及所使用的逻辑取非运算符 `!`）。记住，所有实例变量最初都被设置为零。因此，当分配一个新的 `Rectangle` 对象时，包括 `origin` 在内的所有实例变量将被设置为零。
+该方法首先测试实例变量`origin`是否为非零（请确保你理解该测试以及所使用的逻辑取非运算符`!`）。记住，所有实例变量最初都被设置为零。因此，当分配一个新的`Rectangle`对象时，包括`origin`在内的所有实例变量将被设置为零。
 
-如果 `origin` 为零，`setOrigin:` 方法将分配并初始化一个新的 `XYPoint` 对象，并将引用存储在 `origin` 中。
+如果`origin`为零，`setOrigin:`方法将分配并初始化一个新的`XYPoint`对象，并将引用存储在`origin`中。
 
-然后该方法将新分配的 `XYPoint` 对象设置为传递给方法的参数 x、y 坐标。请反复研究直到完全理解。通常情况下，当一个类包含其他对象时，你有时会希望它拥有某些对象。
-
-
-
+然后该方法将新分配的`XYPoint`对象设置为传递给方法的参数 x、y 坐标。请反复研究直到完全理解。通常情况下，当一个类包含其他对象时，你有时会希望它拥有某些对象。
 
 ```objc
 @interface ClassA: NSObject
@@ -2532,10 +2085,12 @@ Origin at (50, 50)
     int x; // Will be inherited by subclasses
 }
 ```
+
 ```objc
 -(void) initVar;
 @end
 ```
+
 ```
 ////////////////////////////
 @implementation ClassA
@@ -2553,6 +2108,7 @@ Origin at (50, 50)
 -(void) printVar;
 @end
 ```
+
 ```
 ////////////////////////////
 @implementation ClassB
@@ -2567,6 +2123,7 @@ Origin at (50, 50)
 }
 @end
 ```
+
 ```
 ////////////////////////////
 int main (int argc, char * argv[])
@@ -2648,9 +2205,11 @@ What happened here? We talked about this in an earlier section. Take a look at t
 
 Notice that no `printVar` method is declared. That method is declared and defined in `ClassB`. Therefore, even though `ClassB` objects and their descendants can use this method through inheritance, `ClassA` objects cannot because the method is defined farther down in the hierarchy.
 
-> **Note**:> You can coerce the use of this method in some ways, but we don’t go into that here—besides, it’s not good programming practice.
+> **Note**: You can coerce the use of this method in some ways, but we don’t go into that here—besides, it’s not good programming practice.
 
 Returning to our example, let’s add a `printVar` method to `ClassA` so we can display the value:
+
+
 
 ```objc
 // ClassA declaration and definition
@@ -2676,26 +2235,23 @@ Returning to our example, let’s add a `printVar` method to `ClassA` so we can 
 @end
 ```
 
+2. 在处理高分辨率设备时，你可能需要使用一种坐标系，它允许你将点指定为浮点值而不是简单的整数（iOS 使用名为`CGRect`的结构来处理矩形。在处理此类矩形时，所有的坐标和大小都以浮点数表示）。修改本章中的`XYPoint`和`Rectangle`类以处理浮点数。矩形的`width`、`height`、`area`和`perimeter`也应该都能支持浮点数。
 
+3. 扩展[程序 8.1]() 添加一个名为`ClassB2`的新类，它像`ClassB`一样是`ClassA`的子类。
 
+关于`ClassB`和`ClassB2`之间的关系你说什么？
 
-2. 在处理高分辨率设备时，你可能需要使用一种坐标系，它允许你将点指定为浮点值而不是简单的整数（iOS 使用名为 `CGRect` 的结构来处理矩形。在处理此类矩形时，所有的坐标和大小都以浮点数表示）。修改本章中的 `XYPoint` 和 `Rectangle` 类以处理浮点数。矩形的 `width`、`height`、`area` 和 `perimeter` 也应该都能支持浮点数。
+识别`NSObject`类、`ClassA`、`ClassB`和`ClassB2`之间的层级关系。
 
-3. 扩展[程序 8.1]() 添加一个名为 `ClassB2` 的新类，它像 `ClassB` 一样是 `ClassA` 的子类。
+`ClassB`的父类是什么？
 
-关于 `ClassB` 和 `ClassB2` 之间的关系你说什么？
-
-识别 `NSObject` 类、`ClassA`、`ClassB` 和 `ClassB2` 之间的层级关系。
-
-`ClassB` 的父类是什么？
-
-`ClassB2` 的父类是什么？
+`ClassB2`的父类是什么？
 
 一个类可以有多少个子类，它可以有多少个父类？
 
-4. 为 `Rectangle` 类编写一个名为 `translate` 的方法：它接收一个 `XYPoint` 对象作为参数。让它根据指定的向量平移矩形的原点。注意：平移仅意味着将点从一个地方移动到另一个地方。
+4. 为`Rectangle`类编写一个名为`translate`的方法：它接收一个`XYPoint`对象作为参数。让它根据指定的向量平移矩形的原点。注意：平移仅意味着将点从一个地方移动到另一个地方。
 
-5. 定义一个名为 `GraphicObject` 的新类，并使其成为 `NSObject` 的子类。在你的新类中定义如下实例变量：
+5. 定义一个名为`GraphicObject`的新类，并使其成为`NSObject`的子类。在你的新类中定义如下实例变量：
 
 ```objectivec
 int   fillColor;    // 32 位颜色
@@ -2705,19 +2261,19 @@ int   lineColor;    // 32 位线条颜色
 
 编写方法来设置和获取之前定义的变量。
 
-将 `Rectangle` 类设写为 `GraphicObject` 的子类。
+将`Rectangle`类设写为`GraphicObject`的子类。
 
-定义新类 `Circle` 和 `Triangle`，它们也是 `GraphicObject` 的子类。编写方法来设置和获取这些对象的各种参数，并计算圆的周长和面积，以及三角形的周令和面积。
+定义新类`Circle`和`Triangle`，它们也是`GraphicObject`的子类。编写方法来设置和获取这些对象的各种参数，并计算圆的周长和面积，以及三角形的周长和面积。
 
-6. 为 `Rectangle` 类编写一个名为 `containsPoint:` 的方法，它接收一个 `XYPoint` 对象作为参数：
+6. 为`Rectangle`类编写一个名为`containsPoint:`的方法，它接收一个`XYPoint`对象作为参数：
 
 ```objectivec
 -(BOOL) containsPoint: (XYPoint *) aPoint;
 ```
 
-如果矩形包含指定的点，则该方法返回 `BOOL` 值 `YES`，否则返回 `NO`。
+如果矩形包含指定的点，则该方法返回`BOOL`值`YES`，否则返回`NO`。
 
-7. 为 `Rectangle` 类编写一个名为 `intersect` 的方法：它接收一个矩形作为参数并返回一个表示两个矩形重叠区域的矩形。例如，给定[图 8.10]所示的两个矩形，该方法应该返回一个原点位于 (`400`, `420`)、宽度为 `50` 高度为 `60` 的矩形。
+7. 为`Rectangle`类编写一个名为`intersect`的方法：它接收一个矩形作为参数并返回一个表示两个矩形重叠区域的矩形。例如，给定[图 8.10]所示的两个矩形，该方法应该返回一个原点位于 (`400`, `420`)、宽度为`50`高度为`60`的矩形。
 
 图 8.10 相交矩形
 
@@ -2725,7 +2281,7 @@ int   lineColor;    // 32 位线条颜色
 
 如果矩形不相交，返回一个宽度和高度为零且原点在 (0,0) 的矩形。
 
-8. 为 `Rectangle` 类编写一个名为 `draw` 的方法，使用虚线和竖线字符绘制矩形。以下代码序列
+8. 为`Rectangle`类编写一个名为`draw`的方法，使用虚线和竖线字符绘制矩形。以下代码序列
 
 ```objectivec
 Rectangle *myRect = [[Rectangle alloc] init];
@@ -2747,7 +2303,7 @@ Rectangle *myRect = [[Rectangle alloc] init];
 
 注意
 
-你应该使用 `printf` 来绘制你的字符，因为 `NSLog` 在每次调用时都会显示新行。
+你应该使用`printf`来绘制你的字符，因为`NSLog`在每次调用时都会显示新行。
 
 ***
 
@@ -2757,7 +2313,7 @@ Rectangle *myRect = [[Rectangle alloc] init];
 
 ### 多态：同名，不同类
 
-[程序 9.1]() 显示了名为 `Complex` 的类的接口文件，它用于表示复数。
+[程序 9.1]() 显示了名为`Complex`的类的接口文件，它用于表示复数。
 
 `Complex.h`
 
@@ -2772,7 +2328,7 @@ Rectangle *myRect = [[Rectangle alloc] init];
 @end
 ```
 
-你应该已经在练习 5 和 6 中完成了该类的实现（[更多关于类的内容]）。我们添加了额外的 `setReal:andImaginary:` 方法，以便你能够通过一条消息同时设置数字的实部和虚部，并且还合成了这些方法。如下所示。
+你应该已经在练习 5 和 6 中完成了该类的实现（[更多关于类的内容]）。我们添加了额外的`setReal:andImaginary:`方法，以便你能够通过一条消息同时设置数字的实部和虚部，并且还合成了这些方法。如下所示。
 
 `Complex.m`
 
@@ -2849,21 +2405,17 @@ int main (int argc, char * argv[]) {
 7/30
 ```
 
-
-
-
-
 > 正如第 13 章中更完整描述的那样，“C 语言底层特性”系统始终带有对象所属的类信息。这使得它能够在运行时而不是编译时做出这些关键决策。
 
-系统根据 `f1` 和 `fracResult` 的类，选择 `Fraction` 类中对应的方法来评估消息表达式。
+系统根据`f1`和`fracResult`的类，选择`Fraction`类中对应的方法来评估消息表达式。
 
 如前所述，在不同类之间共享相同方法名的能力被称为多态。多态允许你开发一组类，每个类都可以响应相同的方法名。每个类的定义都封装了响应该特定方法所需的代码，这使得它与其它类的定义保持独立。这种独立性也允许你在以后稍后添加可以响应同名方法的新类。
 
-### 动态绑定与 `id` 类型
+### 动态绑定与`id`类型
 
-第 4 章简要提到了 `id` 数据类型，并指出它是通用的对象类型。也就是说，`id` 可以用于存储属于任何类的对象。这种数据类型的真正威力是在程序执行期间，通过这种方式在变量中存储不同类型的对象时才发挥出来的。请学习程序 9.2 及其相关的输出。
+第 4 章简要提到了`id`数据类型，并指出它是通用的对象类型。也就是说，`id`可以用于存储属于任何类的对象。这种数据类型的真正威力是在程序执行期间，通过这种方式在变量中存储不同类型的对象时才发挥出来的。请学习程序 9.2 及其相关的输出。
 
-程序 9.2. 测试程序 `main.m`
+程序 9.2. 测试程序`main.m`
 
 ```objc
 // 演示动态类型与绑定
@@ -2899,33 +2451,33 @@ int main (int argc, char * argv[])
 10 + 2.5i
 ```
 
-变量 `dataValue` 被声明为 `id` 对象类型。因此，`dataValue` 可以用来存储程序中的任何类型对象。注意声明行中没有使用星号：
+变量`dataValue`被声明为`id`对象类型。因此，`dataValue`可以用来存储程序中的任何类型对象。注意声明行中没有使用星号：
 
 ```objc
 id dataValue;
 ```
 
-`Fraction f1` 被设置为 2/5，而 `Complex` 数 `c1` 被设置为 (10 + 2.5i)。赋值语句
+`Fraction f1`被设置为 2/5，而`Complex`数`c1`被设置为 (10 + 2.5i)。赋值语句
 
 ```objc
 dataValue = f1;
 ```
 
-将 `Fraction f1` 存储在 `dataValue` 中。现在，你可以对 `dataValue` 做什么呢？嗯，你可以对 `dataValue` 调用任何在 `Fraction` 对象上可以使用的方法，尽管 `dataValue` 的类型是 `id` 而不是 `Fraction`。但如果 `dataValue` 可以存储任何类型的对象，系统如何知道要调用哪个方法呢？也就是说，当它遇到消息表达式
+将`Fraction f1`存储在`dataValue`中。现在，你可以对`dataValue`做什么呢？嗯，你可以对`dataValue`调用任何在`Fraction`对象上可以使用的方法，尽管`dataValue`的类型是`id`而不是`Fraction`。但如果`dataValue`可以存储任何类型的对象，系统如何知道要调用哪个方法呢？也就是说，当它遇到消息表达式
 
 ```objc
 [dataValue print];
 ```
 
-它如何知道要调用哪一个 `print` 方法？你为 `Fraction` 和 `Complex` 类都定义了 `print` 方法。
+它如何知道要调用哪一个`print`方法？你为`Fraction`和`Complex`类都定义了`print`方法。
 
 正如之前提到的，答案在于 Objective-C 系统始终跟踪对象所属的类。这也归于动态类型和动态绑定的概念——即系统在运行时而不是在编译时，对对象的类以及因此要调用哪种方法做出动态决策。
 
-因此，在程序执行期间，在系统向 `dataValue` 发送 `print` 消息之前，它会首先检查存储在 `dataValue` 内部对象的类。在程序 9.2 的第一情况下，对象是 `Fraction`，调用了 `print` 方法。在第二种情况下，发生了同样的情况：`dataValue` 包含一个 `Complex`，调用了 `print` 方法。
+因此，在程序执行期间，在系统向`dataValue`发送`print`消息之前，它会首先检查存储在`dataValue`内部对象的类。在程序 9.2 的第一情况下，对象是`Fraction`，调用了`print`方法。在第二种情况下，发生了同样的情况：`dataValue`包含一个`Complex`，调用了`print`方法。
 
 ### 编译时与运行时检查
 
-由于 `id` 变量内部对象的类型在编译时是不确定的，某些测试会被推迟到运行时——即在程序执行期间。
+由于`id`变量内部对象的类型在编译时是不确定的，某些测试会被推迟到运行时——即在程序执行期间。
 
 考虑以下代码：
 
@@ -2934,7 +2486,7 @@ Fraction *f1 = [[Fraction alloc] init];
 [f1 setReal: 10.0 andImaginary: 2.5];
 ```
 
-Objective-C 编译器知道 `f1` 是一个 `Fraction`，因为是这样声明的。它也知道 `Fraction` 没有这样的方法。
+Objective-C 编译器知道`f1`是一个`Fraction`，因为是这样声明的。它也知道`Fraction`没有这样的方法。
 
 在运行程序之前不会报告错误。程序会崩溃，错误信息包含大量行，其中一行看起来像这样：
 
@@ -2949,18 +2501,16 @@ id dataValue = [[Fraction alloc] init];
 [dataValue setReal: 10.0 andImaginary: 2.5];
 ```
 
-这些行不会产生编译警告信息，因为编译器不知道 `dataValue` 内部存储的是什么类型的对象。在运行程序之前不会报告错误。
+这些行不会产生编译警告信息，因为编译器不知道`dataValue`内部存储的是什么类型的对象。在运行程序之前不会报告错误。
 
-### `id` 数据类型与静态类型
+### `id`数据类型与静态类型
 
-如果 `id` 数据类型可以用于存储任何对象，你为什么不把所有的对象都声明为 `id` 类型呢？由于几个原因，你不想养成过度使用这种通用类数据类型的习惯。
+如果`id`数据类型可以用于存储任何对象，你为什么不把所有的对象都声明为`id`类型呢？由于几个原因，你不想养成过度使用这种通用类数据类型的习惯。
 
-
-
-
-首先，当你将一个变量定义为特定类的对象时，你正在使用所谓的 `static`（静态）类型。`static` 一词是指存储在变量中的对象类型是经过显式声明的。因此，存储在该类型中的对象类是预先确定的，或者说是静态的。当你使用静态类型时，编译器会尽尽能确保该变量在整个程序中的用法是一致的。编译器可以检查并确保应用于对象的方法是由该类定义或继承的；如果没有定义，它会抛出一条警告消息。因此，当你在程序中声明一个名为 `myRect` 的 `Rectangle` 类型的变量时，编译器会检查你对 `myRect` 调用的任何方法是否在 `Rectangle` 类中定义，或继承自它的父类。
+首先，当你将一个变量定义为特定类的对象时，你正在使用所谓的`static`（静态）类型。`static`一词是指存储在变量中的对象类型是经过显式声明的。因此，存储在该类型中的对象类是预先确定的，或者说是静态的。当你使用静态类型时，编译器会尽可能确保该变量在整个程序中的用法是一致的。编译器可以检查并确保应用于对象的方法是由该类定义或继承的；如果没有定义，它会抛出一条警告消息。因此，当你在程序中声明一个名为`myRect`的`Rectangle`类型的变量时，编译器会检查你对`myRect`调用的任何方法是否在`Rectangle`类中定义，或继承自它的父类。
 
 > **注意**
+
 > 某些技术使得调用变量指定的方法成为可能，在这种情况下，编译器无法为你进行检查。
 
 然而，如果这些检查最终都在运行时为你执行了，为什么你还要关心静态类型呢？你之所以在意，是因为在程序的编译阶段发现错误比在执行阶段发现错误要好。如果你把它留到运行时，当错误发生时，你可能根本不是运行程序的人。如果你的程序被投入生产环境，某些不知情的终端用户在运行程序时可能会发现某个对象不识别某个方法，从而导致程序在她的面前崩溃。
@@ -2977,13 +2527,13 @@ id f1;
 Fraction *f1;
 ```
 
-你认为哪一个更易于理解——也就是说，哪一个让变量 `f1` 的意图用途更清晰？静态类型与有意义变量名（我们在上一个示例中特意没有选择）的结合，可以在使你的程序更具自文档化方面大有帮助。
+你认为哪一个更易于理解——也就是说，哪一个让变量`f1`的意图用途更清晰？静态类型与有意义变量名（我们在上一个示例中特意没有选择）的结合，可以在使你的程序更具自文档化方面大有帮助。
 
 ### 动态类型中的参数和返回类型
 
 如果你使用动态类型来调用方法，请注意以下规则：如果你的多个类中都实现了相同名称的方法，则每个方法必须在每个参数的类型和它返回值的类型上保持一致，以便编译器能为你的消息表达式生成正确的代码。
 
-编译器会对它见过的每个类声明进行一致性检查。如果一个或多个方法在参数或返回类型上存在冲突，编译器会发出一条警告消息。例如，`Fraction` 和 `Complex` 类都包含 `add:` 方法。然而，`Fraction` 类接收参数并返回一个 `Fraction` 对象，而 `Complex` 类接收并返回一个 `Complex` 对象。如果 `frac1` 和 `myFract` 是 `Fraction` 对象，而 `comp1` 和 `myComplex` 是 `Complex` 对象，那么这样的语句：
+编译器会对它见过的每个类声明进行一致性检查。如果一个或多个方法在参数或返回类型上存在冲突，编译器会发出一条警告消息。例如，`Fraction`和`Complex`类都包含`add:`方法。然而，`Fraction`类接收参数并返回一个`Fraction`对象，而`Complex`类接收并返回一个`Complex`对象。如果`frac1`和`myFract`是`Fraction`对象，而`comp1`和`myComplex`是`Complex`对象，那么这样的语句：
 
 ```
 result = [myFract add: frac1];
@@ -2997,29 +2547,33 @@ result = [myComplex add: comp1];
 
 不会引起任何问题。这是因为在两种情况下，消息的接收者都是静态类型的，编译器可以检查按照接收者类中定义的方法进行一致用法。
 
-如果 `dataValue1` 和 `dataValue2` 是 `id` 变量，语句
+如果`dataValue1`和`dataValue2`是`id`变量，语句
 
 ```
 result = [dataValue1 add: dataValue2];
 ```
 
-会导致编译器生成代码，将参数传递给 `add:` 方法，并通过假设来处理其返回值。
+会导致编译器生成代码，将参数传递给`add:`方法，并通过假设来处理其返回值。
 
-在运行时，Objective-C 运行时系统将检查存储在 `dataValue1` 内部对象的实际类，并从正确的类中选择适当的方法执行。然而，在更通用的情况下，编译器可能会生成错误的代码将参数传递给方法或处理其返回值。这种情况就会发生，例如，如果一个方法接受对象作为参数，而另一个方法接受浮点值；或者，如果一个方法返回对象，而另一个方法返回整数。如果两个方法之间不一致仅仅是不同类型的对象（例如，`Fraction` 类接收并返回一个对象，而 `Complex` 类接收并返回一个对象），编译器仍然会生成代码，因为内存地址在运行时是被传递的。
+在运行时，Objective-C 运行时系统将检查存储在`dataValue1`内部对象的实际类，并从正确的类中选择适当的方法执行。然而，在更通用的情况下，编译器可能会生成错误的代码将参数传递给方法或处理其返回值。这种情况就会发生，例如，如果一个方法接受对象作为参数，而另一个方法接受浮点值；或者，如果一个方法返回对象，而另一个方法返回整数。如果两个方法之间不一致仅仅是不同类型的对象（例如，`Fraction`类接收并返回一个对象，而`Complex`类接收并返回一个对象），编译器仍然会生成代码，因为内存地址在运行时是被传递的。
 
 ### 关于类的问题
 
 当你开始处理包含不同类对象的变量时，你可能需要询问以下问题：
 
 - 这个对象是 rectangle 吗？
-- 这个对象支持 `print` 方法吗？
-- 它是 `Graphics` 类的成员吗？
+
+- 这个对象支持`print`方法吗？
+
+- 它是`Graphics`类的成员吗？
 
 你可以根据这些问题的答案执行不同的代码序列、避免错误，或在执行期间检查程序的完整性。
 
-表 9.1 总结了 `NSObject` 类支持的这些这类基本方法。在此表中，`class-object` 是类对象（通常通过 `class` 方法生成），而 `selector` 是 `SEL` 类型（通常通过 `@selector` 指令创建）。
 
-表 9.1 处理动态类型的方法
+
+表 9.1 总结了 `NSObject` 类支持的这些基本方法。在此表中，`class-object` 是类对象（通常通过 `class` 方法生成），而 `selector` 是 `SEL` 类型（通常通过 `@selector` 指令创建）。
+
+**表 9.1 处理动态类型的方法**
 
 ![Image](img/00045.jpg)
 
@@ -3039,16 +2593,15 @@ result = [dataValue1 add: dataValue2];
 
 ```
 if ([obj1 class] == [obj2 class])
+```
 
-
-变量 `myFract` 是否是 `Fraction` 类对象，你对表达式的结果进行测试：
+要测试变量 `myFract` 是否是 `Fraction` 类对象，你对表达式的结果进行测试：
 
 ```
 [myFract isMemberOfClass: [Fraction class]]
 ```
 
-
-在本示例中，由 `SEL` 变量动作指定的方法被发送到存储在 `graphicObject` 中的任何图形对象。推测，该动作在程序执行过程中可能会变化——也许基于用户的输入——尽管我们已经将动作显示为绘制（draw）。为了首先确保该对象能够响应该动作，你可能希望使用类似下面的代码：
+在本示例中，由 `SEL` 变量 `action` 指定的方法被发送到存储在 `graphicObject` 中的任何图形对象。推测，该动作在程序执行过程中可能会变化——也许基于用户的输入——尽管我们已经将动作显示为绘制（draw）。为了首先确保该对象能够响应该动作，你可能希望使用类似下面的代码：
 
 ```objc
 if ([graphicObject respondsToSelector: action] == YES)
@@ -3182,8 +2735,6 @@ int main (int argc, char * argv [])
 }
 ```
 
-
-
 `@try` 块中的每个 `statement` 都会正常执行。然而，如果块中的某个一个语句抛出了异常，执行不会终止，而是立即跳转到 `@catch` 块并在那里继续。在该块内部，你可以处理该异常。这里的一种可能的操作序列是记录错误信息、清理工作并终止执行。
 
 程序 9.5 演示了异常处理。随后是该程序的输出。
@@ -3199,7 +2750,6 @@ int main (int argc, char * argv [])
 {
     @autoreleasepool {
         Fraction *f = [[Fraction alloc] init];
-
         @try {
             [f noSuchMethod];
         }
@@ -3252,9 +2802,6 @@ Execution continues!
 2. 在 程序 9.2 中定义的 `id` 变量 `dataValue` 可以赋值你在 第 8 章 中定义的 `Rectangle` 对象？也就是说，语句 `dataValue = [[Rectangle alloc] init];` 是有效的吗？为什么有效或为什么无效？
 
 3. 为你在 第 8 章 中定义的 `XYPoint` 类添加一个 `print` 方法。让它以 (x, y) 的格式显示该点。然后修改 程序 9.2 以包含一个 `XYPoint` 类。让它以 (x, y) 的格式显示该点。
-
-
-
 
 初始化对象并随后设置某些初始值的过程通常被合并为一个方法。例如，你可以定义一个 `initWith:over:` 方法，用于初始化分数并将其分子和分母设置为提供的两个参数。
 
@@ -3314,9 +2861,11 @@ myArray = [[NSArray alloc] initWithArray: myOtherArray];
 }
 ```
 
-在初始化 `super`（并根据返回非零值所示其初始化成功）之后，你使用 `setTo:over:` 方法来设置 `Fraction` 的分子和分母。与其他初始化方法一样，你预期要返回初始化后的对象，你在这里确实做到了。
 
-程序 10.1 测试了你新写的 `initWith:over:` 初始化方法。
+
+在初始化`super`（并根据返回非零值所示其初始化成功）之后，你使用`setTo:over:`方法来设置`Fraction`的分子和分母。与其他初始化方法一样，你预期要返回初始化后的对象，你在这里确实做到了。
+
+程序 10.1 测试了你新写的`initWith:over:`初始化方法。
 
 ### 程序 10.1
 
@@ -3329,10 +2878,8 @@ int main (int argc, char * argv[])
         Fraction *a, *b;
         a = [[Fraction alloc] initWith: 1 over: 3];
         b = [[Fraction alloc] initWith: 3 over: 7];
-
         [a print];
         [b print];
-
         [a release];
         [b release];
     }
@@ -3341,12 +2888,13 @@ int main (int argc, char * argv[])
 ```
 
 ### 程序 10.1 输出
+
 ```
 1/3
 3/7
 ```
 
-为了遵循指定初始化器的规则，你还应该修改 `init`。以下是 `init` 可能的写法：
+为了遵循指定初始化器的规则，你还应该修改`init`。以下是`init`可能的写法：
 
 ```objc
 - (id)init
@@ -3357,7 +2905,7 @@ int main (int argc, char * argv[])
 
 ### 复习作用域
 
-你可以可以通过方式影响变量的作用域。你可以对实例变量和普通变量这样做。在接下来的讨论中，我们使用“模块”（module）一词指代单个源文件内的任意方法或函数定义。
+你可以通过方式影响变量的作用域。你可以对实例变量和普通变量这样做。在接下来的讨论中，我们使用“模块”（module）一词指代单个源文件内的任意方法或函数定义。
 
 ### 控制实例变量作用域的指令
 
@@ -3370,7 +2918,7 @@ int main (int argc, char * argv[])
 - `@public`:在类以及任何其他类或模块中定义的方法都可以直接访问其后的实例变量。
 - `@package`:对于 64 位镜像（images），可以在实现类的镜像内任何地方访问实例变量。
 
-如果你想定义一个名为 `Printer` 的类，将名为 `pageCount` 和 `tonerLevel` 的两个实例变量设为私有，且仅允许 Printer 类中的方法访问，可以使用如下所示接口接口：
+如果你想定义一个名为`Printer`的类，将名为`pageCount`和`tonerLevel`的两个实例变量设为私有，且仅允许`Printer`类中的方法访问，可以使用如下所示接口：
 
 ```objc
 @interface Printer
@@ -3385,33 +2933,29 @@ int main (int argc, char * argv[])
 @end
 ```
 
-任何派生 `Printer` 的类都无法访问这两个实例变量，因为它们被设为私有了。
+任何派生`Printer`的类都无法访问这两个实例变量，因为它们被设为私有了。
 
+这些特殊的指令就像“开关”；在这些指令之后出现的所有变量（直到标记变量声明结束的右大括号为止）都具有指定的作用域，除非使用了另一个指令。在之前的示例中，`@protected`指令确保紧随其后的实例变量（直到`}`）可以被子类和`Printer`类的方法访问。
 
-
-
-
-这些特殊的指令就像“开关”；在这些指令之后出现的所有变量（直到标记变量声明结束的右大括号为止）都具有指定的的作用域，除非使用了另一个指令。在之前的示例中，`@protected` 指令确保紧随其后的实例变量（直到 `}`）可以被子类和 `Printer` 类的方法访问。
-
-`@public` 指令允许实例变量通过指针操作符（`->`）被其他方法或函数访问，这在第 13 章“底层语言特性”中有所介绍。将实例变量设置为公共并不被认为是一种良好的编程习惯，因为它违背了数据封装的概念（即类隐藏其实例变量）。
+`@public`指令允许实例变量通过指针操作符（`->`）被其他方法或函数访问，这在第 13 章“底层语言特性”中有所介绍。将实例变量设置为公共并不被认为是一种良好的编程习惯，因为它违背了数据封装的概念（即类隐藏其实例变量）。
 
 ## 关于属性、合成访问器和实例变量的更多信息
 
-编码规范目前的趋势（Xcode 4 已采用）是使用下划线（`_`）作为实例变量名的开头的字符。因此，你在 Xcode 生成的模板代码中看到的任何以 `_` 开头的变量引用，都是直接通过名称引用实例变量。
+编码规范目前的趋势（Xcode 4 已采用）是使用下划线（`_`）作为实例变量名的开头的字符。因此，你在 Xcode 生成的模板代码中看到的任何以`_`开头的变量引用，都是直接通过名称引用实例变量。
 
-当你看到类似这样的 `@synthesize` 指令时：
+当你看到类似这样的`@synthesize`指令时：
 
 ```objc
 @synthesize window=_window;
 ```
 
-它表示为名为 `window` 的属性合成 getter（获取）和 setter（设置），并将该属性与名为 `_window` 的实例变量关联（该变量不需要显式声明）。这有助于区分实例变量的使用与属性的使用，并鼓励你通过 setter 和 getter 方法设置和检索实例变量的值。也就是说，编写如下代码：
+它表示为名为`window`的属性合成 getter（获取）和 setter（设置），并将该属性与名为`_window`的实例变量关联（该变量不需要显式声明）。这有助于区分实例变量的使用与属性的使用，并鼓励你通过 setter 和 getter 方法设置和检索实例变量的值。也就是说，编写如下代码：
 
 ```objc
 [window makeKeyAndVisible];  // 这将不起作用
 ```
 
-将会失败，因为没有名为 `window` 的实例变量。相反，你必须直接通过名称命名实例变量，例如：
+将会失败，因为没有名为`window`的实例变量。相反，你必须直接通过名称命名实例变量，例如：
 
 ```objc
 [_window makeKeyAndVisible];
@@ -3423,9 +2967,9 @@ int main (int argc, char * argv[])
 [self.window makeKeyAndVisible];
 ```
 
-众所知，在实现部分显式声明（或通过使用 `@synthesize` 指令隐式声明）的实例变量是私有的，这意味着它们不能直接通过名称被子类访问。因此，子类只能使用继承的访问器方法来访问它们的值。
+众所周知，在实现部分显式声明（或通过使用`@synthesize`指令隐式声明）的实例变量是私有的，这意味着它们不能直接通过名称被子类访问。因此，子类只能使用继承的访问器方法来访问它们的值。
 
-记住，合成的方法可能会根据其属性执行额外工作（例如，管理内存、复制值等），而这些工作在直接赋值或从实例变量检索值时是不会发生的的。因此，在属性和实例变量之间存在一层额外的抽象。这种抽象层让系统在访问实例变量时有机会执行额外工作（你并不一定需要感知这些工作）。
+记住，合成的方法可能会根据其属性执行额外工作（例如，管理内存、复制值等），而这些工作在直接赋值或从实例变量检索值时是不会发生的。因此，在属性和实例变量之间存在一层额外的抽象。这种抽象层让系统在访问实例变量时有机会执行额外工作（你并不一定需要感知这些工作）。
 
 ## 全局变量
 
@@ -3435,19 +2979,19 @@ int main (int argc, char * argv[])
 int gMoveNumber = 0;
 ```
 
-那么它的值就可以从该模块的任何地方被引用。在这种情况下，我们称 `gMoveNumber` 被定义为全局变量。按照惯例，通常使用小写字母 `g` 作为全局变量的首字母，以向程序的读者指示其作用域。
+那么它的值就可以从该模块的任何地方被引用。在这种情况下，我们称`gMoveNumber`被定义为全局变量。按照惯例，通常使用小写字母`g`作为全局变量的首字母，以向程序的读者指示其作用域。
 
-实际上，变量 `gMoveNumber` 的这种相同定义也使得它的值可以从其他文件访问。具体来说，上述语句不仅将变量 `gMoveNumber` 定义为全局变量，还定义为外部全局变量。
+实际上，变量`gMoveNumber`的这种相同定义也使得它的值可以从其他文件访问。具体来说，上述语句不仅将变量`gMoveNumber`定义为全局变量，还定义为外部全局变量。
 
-外部变量是指值可以被任何其他方法或函数访问和修改的变量。在想要访问外部变量的模块内部，以普通方式声明该变量，并在声明之前放置 `extern` 关键字。这向系统发出信号，要访问另一个文件中定义的全局变量。以下是将变量 `gMoveNumber` 声明为外部变量示例：
+外部变量是指值可以被任何其他方法或函数访问和修改的变量。在想要访问外部变量的模块内部，以普通方式声明该变量，并在声明之前放置`extern`关键字。这向系统发出信号，要访问另一个文件中定义的全局变量。以下是将变量`gMoveNumber`声明为外部变量的示例：
 
 ```objc
 extern int gMoveNumber;
 ```
 
-出现上述声明的模块现在可以访问并修改 `gMoveNumber` 的值。其他模块也可以通过在未使用类似的 `extern` 声明来访问 `gMoveNumber` 的值。
+出现上述声明的模块现在可以访问并修改`gMoveNumber`的值。其他模块也可以通过在未使用类似的`extern`声明来访问`gMoveNumber`的值。
 
-在处理外部变量时，请考虑遵循这一重要规则：变量必须在你的源文件某处被定义。这是通过在任何方法或函数之外声明变量来实现的，并且前面*没有* `extern` 关键字，如下：
+在处理外部变量时，请考虑遵循这一重要规则：变量必须在你的源文件某处被定义。这是通过在任何方法或函数之外声明变量来实现的，并且前面*没有*`extern`关键字，如下：
 
 ```objc
 int gMoveNumber;
@@ -3455,17 +2999,17 @@ int gMoveNumber;
 
 在这里，可以可选地为变量分配一个初始值，如之前所示。
 
-定义外部变量的第二方法是在函数之外声明变量，在声明前放置 `extern` 关键字，并显式地为其分配一个初始值，如下：
+定义外部变量的第二种方法是在函数之外声明变量，在声明前放置`extern`关键字，并显式地为其分配一个初始值，如下：
 
 ```objc
 extern int gMoveNumber = 0;
 ```
 
-然而，这并不是首选的方法，编译器会警告你同时声明了 `extern` 变量并为其分配了值。这是因为使用 `extern` 词使其成为该变量的声明，而不是定义。记住，声明不会为变量分配存储空间，但定义会。上一个示例通过强制将声明视为定义（通过为其分配初始值）违反了这一规则。
+然而，这并不是首选的方法，编译器会警告你同时声明了`extern`变量并为其分配了值。这是因为使用`extern`词使其成为该变量的声明，而不是定义。记住，声明不会为变量分配存储空间，但定义会。上一个示例通过强制将声明视为定义（通过为其分配初始值）违反了这一规则。
 
-在处理外部变量时，你可以在许多地方将变量声明为 `extern`，但你只能定义一次。
+在处理外部变量时，你可以在许多地方将变量声明为`extern`，但你只能定义一次。
 
-考虑一个较小的程序示例来说说明外部变量的使用。假设我们定义了一个名为 `Foo` 的类，并在名为 `main.m` 的文件中输入了以下代码：
+考虑一个较小的程序示例来说明外部变量的使用。假设我们定义了一个名为`Foo`的类，并在名为`main.m`的文件中输入了以下代码：
 
 ```objc
 #import "Foo.h"
@@ -3484,7 +3028,7 @@ int main (int argc, char *argc[])
 }
 ```
 
-上述程序中全局变量 `gGlobalVar` 的定义使得任何使用相应 extern 声明的方法（或函数）都能访问其值。假设你的 `Foo` 方法 `setgGlobalVar:` 如下：
+上述程序中全局变量`gGlobalVar`的定义使得任何使用相应`extern`声明的方法（或函数）都能访问其值。假设你的`Foo`方法`setgGlobalVar:`如下：
 
 ```objc
 -(void)setgGlobalVar:(int)val
@@ -3503,37 +3047,33 @@ int main (int argc, char *argc[])
 
 ## 静态变量
 
-刚刚展示的示例违背了数据封装的概念和良好的面向对象编程技术。然而，你可能需要处理在不同方法调用之间共享的变量。即使将 `gGlobalVar` 改为 `Foo` 类的实例变量可能并不合理，但更好的方法可能是将其“隐藏”在 `Foo` 类内部，通过将其访问权限限制为该类定义的 setter 和 getter 方法。
+刚刚展示的示例违背了数据封装的概念和良好的面向对象编程技术。然而，你可能需要处理在不同方法调用之间共享的变量。即使将`gGlobalVar`改为`Foo`类的实例变量可能并不合理，但更好的方法可能是将其“隐藏”在`Foo`类内部，通过将其访问权限限制为该类定义的 setter 和 getter 方法。
 
+你现在知道，在方法之外定义的任何变量不仅是全局变量，而且外部变量。在许多情况下，你希望定义一个变量为全局的而非外部的。换句话说，你希望定义一个局部于特定模块（文件）的全局变量。如果某个特定类定义内部的方法外没有其他方法需要访问该变量，那么以这种方式定义变量就是合理的。你可以通过在包含特定类实现的文件中将变量定义为`static`来实现这一点。
 
+如果定义在任何方法（或函数）之外，以下语句使得`gGlobalVar`的值在定义出现所在文件的后续任何点都可访问，但无法从其他文件中包含的方法或函数访问：
 
-
-
-你现在知道，在方法之外定义的任何变量不仅是全局变量，而且外部变量。在许多情况下，你希望定义一个变量为全局的而非外部的。换句话说，你希望定义一个局部于特定模块（文件）的全局变量。如果某个特定类定义内部的方法外没有其他方法需要访问该变量，那么以这种方式定义变量就是合理的。你可以通过在包含特定类实现的文件中将变量定义为 `static` 来实现这一点。
-
-如果定义在任何方法（或函数）之外，以下语句使得 `gGlobalVar` 的值在定义出现所在文件的后续任何点都可访问，但无法从其他文件中包含的方法或函数访问：
-
-```
+```objc
 static int gGlobalVar = 0;
 ```
 
 请记住，类方法无法访问实例变量（你可能想重新思考一下为什么如此）。然而，你可能希望一个类方法能够设置和访问变量。一个简单的例子是类分配器方法，你希望跟踪它分配的对象的数量。你可以通过在类的实现文件中设置一个静态变量来完成此任务。分配方法随后可以直接访问该变量，因为它不是实例变量。类的用户不需要知道这个变量。由于它是作为实现文件中的静态变量定义的，其作用范围将限制在该文件中。因此，用户无法直接访问它，也不会违反数据封装的概念。如果从类外部访问，你可以编写一个方法来获取此变量的值。
 
-程序 10.2 通过增加两个新方法扩展了 `Fraction` 类定义。类方法 `allocF` 分配一个新的 `Fraction` 并跟踪它分配了多少个 `Fraction`，而 `count` 方法返回该计数。请注意，后者方法也是一个类方法。它也可以被实现为实例方法，但询问类它分配了多少个实例，比向类的某个特定实例发送消息更符合逻辑。
+程序 10.2 通过增加两个新方法扩展了`Fraction`类定义。类方法`allocF`分配一个新的`Fraction`并跟踪它分配了多少个`Fraction`，而`count`方法返回该计数。请注意，后者方法也是一个类方法。它也可以被实现为实例方法，但询问类它分配了多少个实例，比向类的某个特定实例发送消息更符合逻辑。
 
-以下是准备添加到 `Fraction.h` 头文件的两个新类方法的声明：
+以下是准备添加到`Fraction.h`头文件的两个新类方法的声明：
 
-```
+```objc
 +(Fraction *) allocF;
 ```
 
-```
+```objc
 +(int) count;
 ```
 
-注意，这里没有重写继承的 `alloc` 方法；相反，你定义了你自己的分配器方法。你的方法将利用从继承的 `alloc` 方法。请将此代码放在你的 `Fraction.m` 实现文件中：
+注意，这里没有重写继承的`alloc`方法；相反，你定义了你自己的分配器方法。你的方法将利用从继承的`alloc`方法。请将此代码放在你的`Fraction.m`实现文件中：
 
-```
+```objc
 static int gCounter;
 
 @implementation Fraction
@@ -3542,33 +3082,32 @@ static int gCounter;
 {
     extern int gCounter;
     ++gCounter;
-
     return [Fraction alloc];
 }
 
 +(int) count
 {
     extern int gCounter;
-
     return gCounter;
 }
+
 // other methods from Fraction class go here
 ...
 @end
 ```
 
 > **注意**
-> 重写 `alloc` 不认为是一种良好的编程习惯，因为该方法处理内存的物理分配。你不应该参与到那个层次。
+> 重写`alloc`不认为是一种良好的编程习惯，因为该方法处理内存的物理分配。你不应该参与到那个层次。
 
-`gCounter` 的静态声明使得实现部分中定义的任何方法都能访问它，但它并无法从文件外部访问。`allocF` 方法简单地递增 `gCounter` 变量，然后使用 `alloc` 方法创建一个新的 `Fraction` 并返回结果。`count` 方法简单地返回计数器的值，从而将其与用户的直接访问隔离开。
+`gCounter`的静态声明使得实现部分中定义的任何方法都能访问它，但它无法从文件外部访问。`allocF`方法简单地递增`gCounter`变量，然后使用`alloc`方法创建一个新的`Fraction`并返回结果。`count`方法简单地返回计数器的值，从而将其与用户的直接访问隔离开。
 
-请记住，这两个方法中不需要 `extern` 声明，因为 `gCounter` 变量定义在文件内部。它只是帮助方法的读者理解正在访问一个定义在方法之外的变量。变量名中的 `g` 前缀对读者也起到了相同的作用；由于这个原因，大多数程序员通常不包含 `extern` 声明。
+请记住，这两个方法中不需要`extern`声明，因为`gCounter`变量定义在文件内部。它只是帮助方法的读者理解正在访问一个定义在方法之外的变量。变量名中的`g`前缀对读者也起到了相同的作用；由于这个原因，大多数程序员通常不包含`extern`声明。
 
 程序 10.2 测试了这些方法。
 
 ### 程序 10.2
 
-```
+```objc
 #import "Fraction.h"
 
 int main (int argc, char * argv[])
@@ -3585,40 +3124,40 @@ int main (int argc, char * argv[])
 }
 ```
 
-### 程序 10.2. 输出
+### 程序 10.2 输出
 
 ```
 Fractions allocated: 0
 Fractions allocated: 3
 ```
 
-当程序开始执行时，`gCounter` 的值被自动设置为 0（记住，如果你想对整个类进行任何特殊初始化，可以重写继承的 `initialize` 方法，例如将其他静态变量的值设置为某些非零值）。在使用 `allocF` 方法分配（然后初始化）三个 `Fraction` 之后，`count` 方法获取了 `counter` 变量，该变量被正确设置为 3。你也可以为类添加一个 setter 方法来将计数器重置为特定值。
+当程序开始执行时，`gCounter`的值被自动设置为 0（记住，如果你想对整个类进行任何特殊初始化，可以重写继承的`initialize`方法，例如将其他静态变量的值设置为某些非零值）。在使用`allocF`方法分配（然后初始化）三个`Fraction`之后，`count`方法获取了`counter`变量，该变量被正确设置为 3。你也可以为类添加一个 setter 方法来将计数器重置为特定值。
 
 ## 枚举数据类型
 
-Objective-C 语言允许你指定可以赋值给变量的值范围。枚举类型定义由关键字 `enum` 启动。紧随该关键字之后是枚举类型的名称，随后是一系列标识符（括在花括号中），它们定义了可以赋值给该类型的许可值。例如，以下语句定义了一个数据类型 `flag`：
+Objective-C 语言允许你指定可以赋值给变量的值范围。枚举类型定义由关键字`enum`启动。紧随该关键字之后是枚举类型的名称，随后是一系列标识符（括在花括号中），它们定义了可以赋值给该类型的许可值。例如，以下语句定义了一个数据类型`flag`：
 
-```
+```objc
 enum flag { false, true };
 ```
 
-从理论上讲，这种数据类型可以在程序中赋予 `true` 和 `false` 值，如果违反此规则，Objective-C 编译器不会生成警告信息。
+从理论上讲，这种数据类型可以在程序中赋予`true`和`false`值，如果违反此规则，Objective-C 编译器不会生成警告信息。
 
-声明变量为 `enum flag`，再次使用关键字 `enum`，后接枚举类型名称，然后是变量列表。因此，以下语句定义变量 `endOfData` 和 `matchFound` 为 `flag` 类型：
+声明变量为`enum flag`，再次使用关键字`enum`，后接枚举类型名称，然后是变量列表。因此，以下语句定义变量`endOfData`和`matchFound`为`flag`类型：
 
-```
+```objc
 enum flag endOfData, matchFound;
 ```
 
-理论上可以给这些变量的名称只有 `true` 和 `false`。因此，如下语句
+理论上可以给这些变量的名称只有`true`和`false`。因此，如下语句
 
-```
+```objc
 endOfData = true;
 ```
 
 和
 
-```
+```objc
 if ( matchFound == false )
 ```
 
@@ -3626,33 +3165,30 @@ if ( matchFound == false )
 
 如果你希望与枚举标识符关联特定的整数值，可以在定义数据类型时将整数分配给标识符。随后出现在列表中枚举标识符将分配从指定整数值加一开始的顺序整数值。
 
-在以下定义中，定义了一个枚举数据类型 `direction`，其值为 `up`、`down`、`left` 和 `right`：
+在以下定义中，定义了一个枚举数据类型`direction`，其值为`up`、`down`、`left`和`right`：
 
-```
+```objc
 enum direction { up, down, left = 10, right };
 ```
 
-编译器为 `up` 分配值 `0`因为它出现在列表中第一个；为 `down` 分配 `1`因为它紧随其后；为 `left` 分配 `10`因为它被显式分配了该值；为 `right` 分配 `11` 因为它是列表中前一个枚举的递增值。
+编译器为`up`分配值`0`因为它出现在列表中第一个；为`down`分配`1`因为它紧随其后；为`left`分配`10`因为它被显式分配了该值；为`right`分配`11`因为它是列表中前一个枚举的递增值。
 
 枚举标识符可以共享相同的值。例如，在
 
-```
+```objc
 enum boolean { no = 0, false = 0, yes = 1, true = 1 };
 ```
 
-为 `enum boolean` 变量赋值 `no` 或 `false` 值将将其赋值为 `0`；赋值 `yes` 或 `true` 则将其赋值为 `1`。
+为`enum boolean`变量赋值`no`或`false`值将将其赋值为`0`；赋值`yes`或`true`则将其赋值为`1`。
 
-
-
-
-作为枚举数据类型定义的另一个示例，以下定义了类型 `enum month`，其允许给该类型变量赋值的许可值为全年各月份的名称：
+作为枚举数据类型定义的另一个示例，以下定义了类型`enum month`，其允许给该类型变量赋值的许可值为全年各月份的名称：
 
 ```c
 enum month { january = 1, february, march, april, may, june, july,
       august, september, october, november, december };
 ```
 
-Objective-C 编译器实际上将枚举标识符视为整数常量。如果你的程序包含以下两行代码，则值 2 将被赋值给 `thisMonth`（而不是名称 `february`）：
+Objective-C 编译器实际上将枚举标识符视为整数常量。如果你的程序包含以下两行代码，则值 2 将被赋值给`thisMonth`（而不是名称`february`）：
 
 ```c
 enum month thisMonth;
@@ -3660,58 +3196,63 @@ enum month thisMonth;
 thisMonth = february;
 ```
 
-程序 10.3 了一个了一个使用枚举数据类型的简单程序。该程序读取一个月份数字，然后进入 `switch` 语句查看输入的是哪个月份。请记住，编译器将枚举值视为整数常量，因此它们是合法的 `case` 值。变量 `days` 被赋值为指定月份的天数，并在退出 `switch` 语句后显示其值。程序中还包含一个特殊的测试，用于检查该月份是否为 2 月。
+
+
+程序 10.3 展示了一个使用枚举数据类型的简单程序。该程序读取一个月份数字，然后进入 `switch` 语句查看输入的是哪个月份。请记住，编译器将枚举值视为整数常量，因此它们是合法的 `case` 值。变量 `days` 被赋值为指定月份的天数，并在退出 `switch` 语句后显示其值。程序中还包含一个特殊的测试，用于检查该月份是否为 2 月。
 
 ### 程序 10.3
 
 ```objc
 #import <Foundation/Foundation.h>
+
 // 打印月份的天数
+
 int main (int argc, char * argv[])
 {
-  @autoreleasepool {
-    enum month { january = 1, february, march, april, may, june,
-                  july, august, september, october, november,
-                  december };
-    enum month amonth;
-    int     days;
+    @autoreleasepool {
+        enum month { january = 1, february, march, april, may, june,
+                     july, august, september, october, november,
+                     december };
+        enum month amonth;
+        int days;
 
-    NSLog (@"Enter month number: ");
-    scanf ("%i", &amonth);
+        NSLog (@"Enter month number: ");
+        scanf ("%i", &amonth);
 
-    switch (amonth) {
-        case january:
-        case march:
-        case may:
-        case july:
-        case august:
-        case october:
-        case december:
-            days = 31;
-            break;
-        case april:
-        case june:
-        case september:
-        case november:
-            days = 30;
-            break;
-        case february:
-            days = 28;
-            break;
-        default:
-            NSLog (@"bad month number");
-            days = 0;
-            break;
-    }
+        switch (amonth) {
+            case january:
+            case march:
+            case may:
+            case july:
+            case august:
+            case october:
+            case december:
+                days = 31;
+                break;
+            case april:
+            case june:
+            case september:
+            case november:
+                days = 30;
+                break;
+            case february:
+                days = 28;
+                break;
+            default:
+                NSLog (@"bad month number");
+                days = 0;
+                break;
+        }
 
-    if ( days != 0 ) {
-        NSLog (@"Number of days is %i", days);
+        if ( days != 0 ) {
+            NSLog (@"Number of days is %i", days);
+        }
+
+        if ( amonth == february ) {
+            NSLog (@"...or 29 if it's leap year");
+        }
     }
-    if ( amonth == february ) {
-        NSLog (@"...or 29 if it's leap year");
-    }
-  }
-  return 0;
+    return 0;
 }
 ```
 
@@ -3784,9 +3325,6 @@ NumberObject myValue1, myValue2, myResult;
 Number *myValue1, *myValue2, *myResult;
 ```
 
-
-
-
 1. 如果任一操作数是 `long double` 类型，另一个将转换为 `long double`，结果类型即为该类型。
 2. 如果任一操作数是 `double` 类型，另一个将转换为 `double`，结果类型即为该类型。
 3. 如果任一操作数是 `float` 类型，另一个将转换为 `float`，结果类型即为该类型。
@@ -3842,7 +3380,7 @@ Objective-C 语言中的各种运算符对表示整数值的特定位进行操�
 
 ### 位按与运算符
 
-当两个值进行 AND 运算时，这些值的二进制表示逐位进行比较。如果第一个值中的对应位为 `1` 且第二个值中的对应位也为 `1`，则会在结果的对应位产生一个 `1`；任何其他情况均产生 `0`。如果 `b1` 和 `b2` 代表两个操作数的对应位，下表显示了 `b1` 与 `b2 进行 AND 运算的结果：
+当两个值进行 AND 运算时，这些值的二进制表示逐位进行比较。如果第一个值中的对应位为 `1` 且第二个值中的对应位也为 `1`，则会在结果的对应位产生一个 `1`；任何其他情况均产生 `0`。如果 `b1` 和 `b2` 代表两个操作数的对应位，下表显示了 `b1` 与 `b2` 进行 AND 运算的结果：
 
 ```
 b1 | b2 | b1 & b2
@@ -3878,7 +3416,7 @@ w3 = w1 & 3;
 
 ### 位按或运算符
 
-当两个值在 Objective-C 中进行位按或 运算时，这两个值的二进制表示会被逐位进行比较。这一次，第一个值或第二个值中的任何一个位为 `1` 都会在结果的对应位产生一个 `1`。按或运算符的真值表如下：
+当两个值在 Objective-C 中进行位按或运算时，这两个值的二进制表示会被逐位进行比较。这一次，第一个值或第二个值中的任何一个位为 `1` 都会在结果的对应位产生一个 `1`。按或运算符的真值表如下：
 
 ```
 b1 | b2 | b1 | b2
@@ -3903,9 +3441,6 @@ w2: 0000 0000 0110 1010 (0x6a)
 ```
 w1 = w1 | 07;
 ```
-
-
-
 
 当然，你可以在语句中使用特殊的赋值运算符，如该语句所示：
 
@@ -3953,7 +3488,7 @@ b1  ~b1
 ~w1   0101  1010  1101  0000     0x5ad0
 ```
 
-当你不知道操作中处理的数值的精确位宽时，按位取反运算符非常有用，它的使用可以帮助减少程序对整数数据类型特定大小的依赖。例如，要将名为 `w1` 的 `int` 的低位设置为 `0`，你可以将 `w1` 与一个除了最右侧位为 `0` 外全为 `1` 的 `int` 进行 AND 运算。因此，C 中中这样的语句在整数用 32 位表示的机器上运行良好：
+当你不知道操作中处理的数值的精确位宽时，按位取反运算符非常有用，它的使用可以帮助减少程序对整数数据类型特定大小的依赖。例如，要将名为 `w1` 的 `int` 的低位设置为 `0`，你可以将 `w1` 与一个除了最右侧位为 `0` 外全为 `1` 的 `int` 进行 AND 运算。因此，C 中这样的语句在整数用 32 位表示的机器上运行良好：
 
 ```
 w1 &= 0xFFFFFFFE;
@@ -3973,7 +3508,6 @@ w1 &= ~1;
 
 ```objc
 // 演示运算符说明
-
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
@@ -3981,6 +3515,7 @@ int main (int argc, char * argv[])
     @autoreleasepool {
         unsigned int w1 = 0xA0A0A0A0, w2 = 0xFFFF0000,
                      w3 = 0x00007777;
+
         NSLog("%x %x %x", w1 & w2, w1 | w2, w1 ^ w2);
         NSLog("%x %x %x", ~w1, ~w2);
         NSLog("%x %x %x", w1 ^ w1, w1 & ~w2, w1 | w2);
@@ -4001,58 +3536,68 @@ a0a0a0a0 ffffa0a0
 ffff000
 ```
 
-计算出每个操作的结果，以验证你是否理解了结果是如何得到的。在第四次 `NSLog` 调用中，重要的是，按位 AND 运算符的优先级高于按位 OR 运算符，因为这一事实影响了结果值。第五次 `NSLog` 调用说明了德摩根定律（DeMorgan’s rule）：`~(~a & ~b)` 等于 `a | b`，而 `~(~a | ~b)` 等于 `a & b`。
+
+
+计算出每个操作的结果，以验证你是否理解了结果是如何得到的。在第四次`NSLog`调用中，重要的是，按位 AND 运算符的优先级高于按位 OR 运算符，因为这一事实影响了结果值。第五次`NSLog`调用说明了德摩根定律（DeMorgan’s rule）：`~(~a & ~b)`等于`a | b`，而`~(~a | ~b)`等于`a & b`。
 
 ### 左移运算符
 
-对值执行左移操作时，值中所包含的位将字面上向左移动。与此操作相关的是值需要移动的位数（位）。通过数据高位移出的位将被丢弃。例如要将名为 `w1` 的 `int` 的低位设置为 `0`，你可以将 `w1` 与一个除了最右侧位为 `0` 外全为 `1` 的 `int` 进行 AND 运算。因此，C 中中这样的语句在整数用 32 位表示的机器上运行良好：
+对值执行左移操作时，值中所包含的位将字面上向左移动。与此操作相关的是值需要移动的位数（位）。通过数据高位移出的位将被丢弃。例如要将名为`w1`的`int`的低位设置为`0`，你可以将`w1`与一个除了最右侧位为`0`外全为`1`的`int`进行 AND 运算。因此，C 中中这样的语句在整数用 32 位表示的机器上运行良好：
 
-```
+```c
 w1 &= 0xFFFFFFFE;
 ```
 
-如果你将前面的语句替换为此语句，则 `w1` 在任何机器上都会与正确的值进行 AND 运算：
+如果你将前面的语句替换为此语句，则`w1`在任何机器上都会与正确的值进行 AND 运算：
 
-```
+```c
 w1 &= ~1;
 ```
 
-这是因为 `1` 的按位取反会被计算出来，并包含尽可能多的左侧 `1` 位以填充 `int` 的大小（在 64 位整数系统上，左侧有 63 位 `1`）。
+这是因为`1`的按位取反会被计算出来，并包含尽可能多的左侧`1`位以填充`int`的大小（在 64 位整数系统上，左侧有 63 位`1`）。
 
+### 练习
 
+3. 在`Fraction`类的`add:`方法中添加一个计数器，以统计它被调用的次数。你如何获取该计数器的值？
 
+4. 使用`typedef`和枚举数据类型，定义一个名为`Day`的类型，其可能值为`Sunday`、`Monday`、`Tuesday`、`Wednesday`、`Thursday`、`Friday`和`Saturday`。
 
+5. 使用`typedef`定义一个名为`FractionObj`的类型，让你编写如下语句：
 
-3. 在 `Fraction` 类的 `add:` 方法中添加一个计数器，以统计它被调用的次数。你如何获取该计数器的值？
-
-4. 使用 `typedef` 和枚举数据类型，定义一个名为 `Day` 的类型，其可能值为 `Sunday`、`Monday`、`Tuesday`、`Wednesday`、`Thursday`、`Friday` 和 `Saturday`。
-
-5. 使用 `typedef` 定义一个名为 `FractionObj` 的类型，让你编写如下语句：
-
-```
+```objc
 FractionObj f1 = [[Fraction alloc] init],
-                f2 = [[Fraction alloc] init];
+            f2 = [[Fraction alloc] init];
 ```
 
 6. 根据以下定义：
 
 ```c
 float f = 1.00;
+
 short int i = 100;
+
 long int l = 500L;
+
 double d = 15.00;
 ```
 
 以及本章概述的表达式操作数转换七个步骤，确定以下表达式的类型和值：
 
-```
+```c
 f + i
+
 l / d
+
 i / l + f
+
 l * i
+
 f / 2
+
 i / (d + f)
+
 l / (i * 2.0)
+
 l + i / (double) l
 ```
 
@@ -4062,98 +3607,143 @@ l + i / (double) l
 
 ## 分类
 
-有时，你可能正在处理一个类定义，并想向其添加一些新方法。例如，你可能决定为你的 `Fraction` 类除了用于相两个分数的 `add:` 方法外，还想要拥有减法、乘法和除法两个分数的方法。
+有时，你可能正在处理一个类定义，并想向其添加一些新方法。例如，你可能决定为你的`Fraction`类除了用于相两个分数的`add:`方法外，还想要拥有减法、乘法和除法两个分数的方法。
 
 另一个例子是，假设你正在做一个大型编程项目，作为该项目的一部分，你的小组正在定义一个包含许多不同方法的新类。你被分配的任务是为该类编写处理文件系统的方法。其他成员被分配了负责创建和初始化类实例、对类中的对象执行操作，以及在屏幕上绘制类对象表示的方法。
 
-最后一个例子是，假设你学会了如何使用库中的类（例如 Foundation 框架中名为 `NSArray` 的数组类），并意识到你希望该类能实现一个或多个方法。当然，你可以为 `NSArray` 类写一个新的子类并实现这些方法，但可能存在更简单的方法。
+最后一个例子是，假设你学会了如何使用库中的类（例如 Foundation 框架中名为`NSArray`的数组类），并意识到你希望该类能实现一个或多个方法。当然，你可以为`NSArray`类写一个新的子类并实现这些方法，但可能存在更简单的方法。
 
-所有这些情况的实际解决方案是*分类*（categories）。分类提供了一种简单的方法，让你将类的定义模块化为相关方法的组或类别。它还为你提供了一种扩展现有类定义的简单方法，甚至无需访问该类的原始源代码，也不需要创建子类。这对你来说是一个既强大又易学的概念。
+所有这些情况的实际解决方案是分类（categories）。分类提供了一种简单的方法，让你将类的定义模块化为相关方法的组或类别。它还为你提供了一种扩展现有类定义的简单方法，甚至无需访问该类的原始源代码，也不需要创建子类。这对你来说是一个既强大又易学的概念。
 
-让我们回到第一个案例，展示如何为 `Fraction` 类添加一个新的分类来处理四种基本的数学运算。我们首先向你展示原始的 `Fraction` 接口部分：
+让我们回到第一个案例，展示如何为`Fraction`类添加一个新的分类来处理四种基本的数学运算。我们首先向你展示原始的`Fraction`接口部分：
 
 ```objectivec
 #import <Foundation/Foundation.h>
 
 // 定义 Fraction 类
+
 @interface Fraction : NSObject
+
 @property int numerator, denominator;
+
 -(void) setTo: (int) n over: (int) d;
+
 -(Fraction *) add: (Fraction *) f;
+
 -(void) reduce;
+
 -(double) convertToNum;
+
 -(void) print;
+
 @end
 ```
 
-接下来，从这个接口部分移除 `add:` 方法，并将其添加到一个新的分类中，连同你想实现的另外三个数学运算。以下是你的新分类 `MathOps` 的接口部分对应的代码：
+接下来，从这个接口部分移除`add:`方法，并将其添加到一个新的分类中，连同你想实现的另外三个数学运算。以下是你的新分类`MathOps`的接口部分对应的代码：
 
 ```objectivec
 #import "Fraction.h"
 
 @interface Fraction (MathOps)
+
 -(Fraction *) add: (Fraction *) f;
+
 -(Fraction *) mul: (Fraction *) f;
+
 -(Fraction *) sub: (Fraction *) f;
+
 -(Fraction *) div: (Fraction *) f;
+
 @end
 ```
 
-请注意，尽管这是一个接口部分的定义，但它是对现有定义的扩展。因此，你必须导入原始接口部分，以便编译器知道 `Fraction` 类（除非你将新分类直接整合到原始的 `Fraction.h` 头文件中，这也是一种选择）。
+请注意，尽管这是一个接口部分的定义，但它是对现有定义的扩展。因此，你必须导入原始接口部分，以便编译器知道`Fraction`类（除非你将新分类直接整合到原始的`Fraction.h`头文件中，这也是一种选择）。
 
-在 `#import` 之后，你会看到这一行：
+在`#import`之后，你会看到这一行：
 
 ```objectivec
 @interface Fraction (MathOps)
 ```
 
-这告诉编译器你正在为 `Fraction` 类定义一个新分类，其名称为 `MathOps`。分类名称括在类名后的括号中。注意，你不需要在这里列出 `Fraction` 的父类；编译器已经从 `Fraction.h` 中知道了它。此外，你不需要告诉它实例变量，就像你在之前定义的所有接口部分中所做的那样。事实上，如果你尝试列出父类或实例变量，你将得到编译器的语法错误。
+这告诉编译器你正在为`Fraction`类定义一个新分类，其名称为`MathOps`。分类名称括在类名后的括号中。注意，你不需要在这里列出`Fraction`的父类；编译器已经从`Fraction.h`中知道了它。此外，你不需要告诉它实例变量，就像你在之前定义的所有接口部分中所做的那样。事实上，如果你尝试列出父类或实例变量，你将得到编译器的语法错误。
 
-此接口部分告诉编译器你正在为类 `Fraction` 添加一个名为 `MathOps` 的扩展。`MathOps` 分类包含四个方法：`add:`、`mul:`、`sub:` 和 `div:`。每个方法都接受一个分数作为参数并返回一个分数。
+此接口部分告诉编译器你正在为类`Fraction`添加一个名为`MathOps`的扩展。`MathOps`分类包含四个方法：`add:`、`mul:`、`sub:`和`div:`。每个方法都接受一个分数作为参数并返回一个分数。
 
-你可以将所有方法的定义放在一个实现部分中。也就是说，你可以将 `Fraction.h` 中接口部分的方法加上 `MathOps` 分类的方法定义在一个文件中。在这种情况下，实现部分也必须指明它们所属的分类。与接口部分类似，你通过在类名后加上分类名称来这样做：
+你可以将所有方法的定义放在一个实现部分中。也就是说，你可以将`Fraction.h`中接口部分的方法加上`MathOps`分类的方法定义在一个文件中。在这种情况下实现部分也必须指明它们所属的分类。与接口部分类似，你通过在类名后加上分类名称来这样做：
 
 ```objectivec
 @implementation Fraction (MathOps)
 
 -(Fraction *) add: (Fraction *) f {
+
     // 加两个分数:
+
     // a/b + c/d = (ad + bc) / (bd)
+
     Fraction *result = [[Fraction alloc] init];
+
     result.numerator = (self.numerator * f.denominator) + (f.numerator * self.denominator);
+
     result.denominator = (self.denominator * f.denominator);
+
     [result reduce];
+
     return result;
+
 }
 
 -(Fraction *) sub: (Fraction *) f {
+
     // 减两个分数:
+
     // a/b - c/d = (ad - bc) / (bd)
+
     Fraction *result = [[Fraction alloc] init];
+
     result.numerator = (self.numerator * f.denominator) - (f.numerator * self.denominator);
+
     result.denominator = (self.denominator * f.denominator);
+
     [result reduce];
+
     return result;
+
 }
 
 -(Fraction *) mul: (Fraction *) f {
+
     // 乘两个分数:
+
     // a/b * c/d = (ac) / (bd)
+
     Fraction *result = [[Fraction alloc] init];
+
     result.numerator = self.numerator * f.numerator;
+
     result.denominator = self.denominator * f.denominator;
+
     [result reduce];
+
     return result;
+
 }
 
 -(Fraction *) div: (Fraction *) f {
+
     // 除两个分数:
+
     // a/b / c/d = (ad) / (bc)
+
     Fraction *result = [[Fraction alloc] init];
+
     result.numerator = self.numerator * f.denominator;
+
     result.denominator = self.denominator * f.numerator;
+
     [result reduce];
+
     return result;
+
 }
 
 @end
@@ -4161,109 +3751,147 @@ l + i / (double) l
 
 ```objectivec
 int main (int argc, char * argv[]) {
+
     @autoreleasepool {
+
         Fraction *a = [[Fraction alloc] init];
+
         Fraction *b = [[Fraction alloc] init];
+
         Fraction *result;
 
         [a setTo: 1 over: 3];
+
         [b setTo: 2 over: 5];
+
+        [a print]; NSLog (@"  +"); [b print]; NSLog (@"-----");
+
+        result = [a add: b];
+
+        [result print];
+
+        NSLog (@"\n");
+
+        [a print]; NSLog (@"  -"); [b print]; NSLog (@"-----");
+
+        result = [a sub: b];
+
+        [result print];
+
+        NSLog (@"\n");
+
+        [a print]; NSLog (@"  *"); [b print]; NSLog (@"-----");
+
+        result = [a mul: b];
+
+        [result print];
+
+        NSLog (@"\n");
+
+        [a print]; NSLog (@"  /"); [b print]; NSLog (@"-----");
+
+        result = [a div: b];
+
+        [result print];
+
+        NSLog (@"\n");
+
     }
-}
-```
 
+    return 0;
 
-
-
-```objc
-[a print]; NSLog (@"  +"); [b print]; NSLog (@"-----");
-result = [a add: b];
-[result print];
-NSLog (@"\n");
-
-[a print]; NSLog (@"  -"); [b print]; NSLog (@"-----");
-result = [a sub: b];
-[result print];
-NSLog (@"\n");
-
-[a print]; NSLog (@"  *"); [b print]; NSLog (@"-----");
-result = [a mul: b];
-[result print];
-NSLog (@"\n");
-
-[a print]; NSLog (@"  /"); [b print]; NSLog (@"-----");
-result = [a div: b];
-[result print];
-NSLog (@"\n");
-}
-return 0;
 }
 ```
 
 ### 程序 11.1 输出
 
-```
+```text
 1/3
+
    +
+
 2/5
+
 -----
+
 11/15
 
 1/3
+
    -
+
 2/5
+
 -----
+
 -1/15
 
 1/3
+
    *
+
 2/5
+
 -----
+
 2/15
 
 1/3
+
    /
+
 2/5
+
 -----
+
 5/6
 ```
 
-[程序 11.1] 将新分类（category）的接口部分和实现部分与测试程序放在同一个文件中。如前提到的，该分类的接口部分可以放在原始的 `Fraction.h` 头文件中，以便将所有方法都声明在一个地方，也可以放在它它自己的头文件中。
+[程序 11.1] 将新分类（category）的接口部分和实现部分与测试程序放在同一个文件中。如前提到的，该分类的接口部分可以放在原始的`Fraction.h`头文件中，以便将所有方法都声明在一个地方，也可以放在它它自己的头文件中。
 
-> 注意
-> 按照惯例，分类的 `.h` 和 `.m` 文件的基名是类名后跟分类名。在我们的示例中，我们将该分类的接口部分放在名为 `FractionMathOps.h` 的文件中，将实现部分放在名为 `FractionMathOps.m` 的文件中。有些程序员使用 `+` 符号来分隔分类名和类名，例如 `Fraction+MathOps.h`。
+> **注意**
+>
+> 按照惯例，分类的`.h`和`.m`文件的基名是类名后跟分类名。在我们的示例中，我们将该分类的接口部分放在名为`FractionMathOps.h`的文件中，将实现部分放在名为`FractionMathOps.m`的文件中。有些程序员使用`+`符号来分隔分类名和类名，例如`Fraction+MathOps.h`。
 
 如果你将分类放入（类定义为）一个主类（master class）定义文件中，那么该类的所有用户都可以访问该分类中的方法。如果你没有直接修改原始头文件的能力（考虑如[第二部分]“[Foundation 框架]”所示，为库中的现有类添加分类），你别无将其保持分开。
 
 ### 类扩展（Class Extensions）
 
-创建一个没有名称的分类有一种特殊情况，即在 `(` 和 `)` 之间没有指定名称。这种特殊语法定义了所谓的*类扩展*（class extension）。当你这样定义一个无名分类时，你可以通过定义额外的实例变量来扩展该类。这对于命名的分类是不允许的。在无名分类中声明的方法是在类的主实现部分实现的，而不是在单独的实现部分。如果你没有实现无名分类接口部分列出的所有方法，编译器会发出警告。
+创建一个没有名称的分类有一种特殊情况，即在`(`和`)`之间没有指定名称。这种特殊语法定义了所谓的类扩展（class extension）。当你这样定义一个无名分类时，你可以通过定义额外的实例变量来扩展该类。这对于命名的分类是不允许的。在无名分类中声明的方法是在类的主实现部分实现的，而不是在单独的实现部分。如果你没有实现无名分类接口部分列出的所有方法，编译器会发出警告。
 
-假设你有一个名为 `GraphicObject` 的类。进一步假设你在实现文件 `GraphicObject.m` 中输入了以下几行：
+假设你有一个名为`GraphicObject`的类。进一步假设你在实现文件`GraphicObject.m`中输入了以下几行：
 
 ```objc
 #import "GraphicObject.h"
 
 // 类扩展
+
 @interface GraphicObject ()
+
 @property int uniqueID;
 
 -(void) doStuffWithUniqueID: (int) theID;
+
 @end
 
 //--------------------------------------
+
 @implementation GraphicObject
+
 @synthesize uniqueID;
 
 -(void) doStuffWithUniqueID:(int)myID {
+
     self.uniqueID = myID;
+
 }
 
 // 其他方法
+
 @end
 ```
 
-你通过添加一个实例变量 `uniqueID` 并为其合成 setter 和 getter 扩展了 `GraphicObject`。
+你通过添加一个实例变量`uniqueID`并为其合成 setter 和 getter 扩展了`GraphicObject`。
 
 ### 关于分类的一些说明
 
@@ -4271,87 +3899,98 @@ return 0;
 
 如果你向现有类添加分类，必须小心不要与任何现有方法冲突。如果你定义了一个与原始类中方法同名的方法，则会调用分类的实现。这种技术被称为方法代理（method proxying）。
 
-此外，分类/名称对必须是唯一的。在指定的 Objective-C 命名空间中只能存在一个 `NSString`。这对于编写屏幕保护程序、偏好设置和其他插件的 Objective-C 程序员来说特别重要。
+此外，分类/名称对必须是唯一的。在指定的 Objective-C 命名空间中只能存在一个`NSString`。这对于编写屏幕保护程序、偏好设置和其他插件的 Objective-C 程序员来说特别重要。
 
-### 协议与委托（Protocols and Delegation）
+## 协议与委托（Protocols and Delegation）
 
-*协议*（protocol）是类之间共享的方法列表。协议中列的方法没有对应的实现；它们旨在由别人（比如你！）来实现。协议提供了一种定义一组与特定名称相关的方法的方法。这些方法通常会有文档说明，以便你知道它们如何执行，以便你需要时在自己的类中实现它们。
+协议（protocol）是类之间共享的方法列表。协议中列的方法没有对应的实现；它们旨在由别人（比如你！）来实现。协议提供了一种定义一组与特定名称相关的方法的方法。这些方法通常会有文档说明，以便你知道它们如何执行，以便你需要时在自己的类中实现它们。
 
-协议列出一组方法，其中一些你可以可选地实现，另一些是你必须实现的。如果你决定实现特定协议的所有强制方法，则被称为*遵循*（conform）或*采纳*（adopt）该协议。你允许定义一个所有方法都是可选的协议，也可以定义一个所有方法都是强制的协议。
+协议列出一组方法，其中一些你可以可选地实现，另一些是你必须实现的。如果你决定实现特定协议的所有强制方法，则被称为遵循（conform）或采纳（adopt）该协议。你允许定义一个所有方法都是可选的协议，也可以定义一个所有方法都是强制的协议。
 
-定义协议非常简单：你只需使用 `@protocol` 指令，后跟协议的名称（名称由你决定）。之后，你像在接口部分中那样声明方法。所有的方法声明（到 `@end` 指令为止）都成为协议的一部分。
+定义协议非常简单：你只需使用`@protocol`指令，后跟协议的名称（名称由你决定）。之后，你像在接口部分中那样声明方法。所有的方法声明（到`@end`指令为止）都成为协议的一部分。
 
-当你与 Foundation 框架工作时，你会发现定义的几个协议。其中一个 `NSCopying` 声明了一个方法，如果你的类要支持通过 `copy`（或 `copyWithZone:`）方法复制对象，你就需要实现它。
+当你与 Foundation 框架工作时，你会发现定义的几个协议。其中一个`NSCopying`声明了一个方法，如果你的类要支持通过`copy`（或`copyWithZone:`）方法复制对象，你就需要实现它。
 
-以下是 `NSCopying` 协议在标准 Foundation 头文件 `NSObject.h` 中的定义：
+以下是`NSCopying`协议在标准 Foundation 头文件`NSObject.h`中的定义：
 
 ```objc
 @protocol NSCopying
 
 - (id)copyWithZone: (NSZone *)zone;
+
 @end
 ```
 
 
 
-
-
-如果你在类中采用了 `NSCopying` 协议，则你必须实现一个名为 `copyWithZone:` 的方法。你通过在 `@interface` 行的一对角括号（`<...>`）内列出协议名称来告诉编译器你正在采用该协议。协议名称位于类名及其父类之后，如下所示：
+如果你在类中采用了`NSCopying`协议，则你必须实现一个名为`copyWithZone:`的方法。你通过在`@interface`行的一对角括号（`<...>`）内列出协议名称来告诉编译器你正在采用该协议。协议名称位于类名及其父类之后，如下所示：
 
 > `@interface AddressBook: NSObject <NSCopying>`
 
-这意味着 `AddressBook` 是一个父类为 `NSObject` 的对象，并声明它符合 `NSCopying` 协议。由于系统已经知道之前为协议定义的方法（在本中，它是从头文件 `NSObject.h` 获取的），因此你不需要在接口部分声明这些方法。但你需要在实现部分定义它们。
+这意味着`AddressBook`是一个父类为`NSObject`的对象，并声明它符合`NSCopying`协议。由于系统已经知道之前为协议定义的方法（在本例中，它是从头文件`NSObject.h`获取的），因此你不需要在接口部分声明这些方法。但你需要在实现部分定义它们。
 
-在这个示例中，在 `AddressBook` 的实现部分，编译器期望看到定义了 `copyWithZone:` 方法。
+在这个示例中，在`AddressBook`的实现部分，编译器期望看到定义了`copyWithZone:`方法。
 
 如果你的类采用了多个协议，只需将它们列在角括号内，并用逗号隔开：
 
 > `@interface AddressBook: NSObject <NSCopying, NSCoding>`
 
-这告诉编译器 `AddressBook` 类采用了 `NSCopying` 和 `NSCoding` 协议。同样，编译器期望在 `AddressBook` 的实现部分看到这些协议所列出的所有强制方法的实现。
+这告诉编译器`AddressBook`类采用了`NSCopying`和`NSCoding`协议。同样，编译器期望在`AddressBook`的实现部分看到这些协议所列出的所有强制方法的实现。
 
-如果你定义了自己的协议，你不一定需要自己实现它。然而，你是在提醒其他程序员，如果他们想采用该协议，他们就必须实现所需的方法。这些方法可以从父类继承。因此，如果一个类符合 `NSCopying` 协议，它的子类也是如此（尽管这并不意味着方法在相应的子类中被正确实现）。
+如果你定义了自己的协议，你不一定需要自己实现它。然而，你是在提醒其他程序员，如果他们想采用该协议，他们就必须实现所需的方法。这些方法可以从父类继承。因此，如果一个类符合`NSCopying`协议，它的子类也是如此（尽管这并不意味着方法在相应的子类中被正确实现）。
 
-你可以使用协议来定义你希望其他子化你类的人实现的方法。也许你可以为你的 `GraphicObject` 类定义一个 `Drawing` 协议；在其中你可以定义 `paint`、`erase` 和 `outline` 方法：
+你可以使用协议来定义你希望其他子化你类的人实现的方法。也许你可以为你的`GraphicObject`类定义一个`Drawing`协议；在其中你可以定义`paint`、`erase`和`outline`方法：
 
 ```objc
 @protocol Drawing
+
 -(void) paint;
+
 -(void) erase;
+
 @optional
+
 -(void) outline;
+
 @end
 ```
 
-作为 `GraphicObject` 类的创建者，你不一定想实现这些绘制方法。但是，你希望指定 `GraphicObject` 类子类需要实现的方法，以符合他们尝试创建的绘图对象的标准。
+作为`GraphicObject`类的创建者，你不一定想实现这些绘制方法。但是，你希望指定`GraphicObject`类子类需要实现的方法，以符合他们尝试创建的绘图对象的标准。
 
-注意这里使用了 `@optional` 指令。列在该指令之后的任何方法都是可选的。这意味着，`Drawing` 协议的采用者不需要实现 `outline` 方法即可符合该协议。（你随后可以使用协议定义内部的 `@required` 指令切换回列出强制方法。）
+注意这里使用了`@optional`指令。列在该指令之后的任何方法都是可选的。这意味着，`Drawing`协议的采用者不需要实现`outline`方法即可符合该协议。（你随后可以使用协议定义内部的`@required`指令切换回列出强制方法。）
 
 > 注意
 > 至少其意图是如此。编译器允许你说你符合某个协议，并且仅在你没有实现这些方法时才发出警告消息。
 
-所以，如果你为 `GraphicObject` 创建了一个名为 `Rectangle` 的子类，并声明（即*记录*）你的 `Rectangle` 类符合 `Drawing` 协议，该类的用户就会知道他们可以向该类的实例发送 `paint`、`erase` 和（可能的）`outline` 消息。
+所以，如果你为`GraphicObject`创建了一个名为`Rectangle`的子类，并声明（即*记录*）你的`Rectangle`类符合`Drawing`协议，该类的用户就会知道他们可以向该类的实例发送`paint`、`erase`和（可能的）`outline`消息。
 
-注意，该协议没有引用任何类；它是*无类的**classless*）。任何类都可以符合 `Drawing` 协议，而不仅仅是 `GraphicObject` 的子类。
+注意，该协议没有引用任何类；它是*无类的*（*classless*）。任何类都可以符合`Drawing`协议，而不仅仅是`GraphicObject`的子类。
 
-你可以使用 `conformsToProtocol:` 方法检查一个对象是否符合某个协议。例如，如果你有一个名为 `currentObject` 的对象并并查看它是否符合 `Drawing` 协议以便向它发送绘制消息，你可以这样写：
+你可以使用`conformsToProtocol:`方法检查一个对象是否符合某个协议。例如，如果你有一个名为`currentObject`的对象并查看它是否符合`Drawing`协议以便向它发送绘制消息，你可以这样写：
 
 ```objc
 id currentObject;
+
 ...
+
 if ([currentObject conformsToProtocol: @protocol (Drawing)] == YES)
+
 {
+
   // 向 currentObject 发送 paint, erase 和/or outline 消息
+
   ...
+
 }
 ```
 
-这里使用的特殊 `@protocol` 指令接收一个协议名称并产生一个 `protocol` 对象，这正是 `conformsToProtocol:` 方法期望作为参数的内容。
+这里使用的特殊`@protocol`指令接收一个协议名称并产生一个`protocol`对象，这正是`conformsToProtocol:`方法期望作为参数的内容。
 
-要测试 `currentObject` 是否实现了可选的 `outline` 方法，你可以这样写：
+要测试`currentObject`是否实现了可选的`outline`方法，你可以这样写：
 
 ```objc
 if ([currentObject respondsToSelector: @selector (outline)] == YES)
+
     [currentObject outline];
 ```
 
@@ -4361,106 +4000,122 @@ if ([currentObject respondsToSelector: @selector (outline)] == YES)
 id <Drawing> currentObject;
 ```
 
-这告诉编译器 `currentObject` 将引用符合 `Drawing` 协议的对象。如果你给 `currentObject` 赋值一个不符合 `Drawing` 协议的静态类型对象（假设你有一个不符合的 `Square` 类），编译器会发出类似这样的警告消息：
+这告诉编译器`currentObject`将引用符合`Drawing`协议的对象。如果你给`currentObject`赋值一个不符合`Drawing`协议的静态类型对象（假设你有一个不符合的`Square`类），编译器会发出类似这样的警告消息：
 
 `warning: class 'Square' does not implement the 'Drawing' protocol`
 
-这是一个编译检查，因此将 `id` 变量赋值给 `currentObject` 不会生成此消息，因为编译器无法知道存储在 `id` 变量中的对象是否符合 `Drawing` 协议。
+这是一个编译检查，因此将`id`变量赋值给`currentObject`不会生成此消息，因为编译器无法知道存储在`id`变量中的对象是否符合`Drawing`协议。
 
-如果变量将持有符合多个协议的对象，你可以列出多一个协议，如此行所示：
+如果变量将持有符合多个协议的对象，你可以列出多个协议，如此行所示：
 
 `id <NSCopying, NSCoding> myDocument;`
 
-当你定义一个协议时，可以扩展现有协议的定义。此协议声明表示 `Drawing3D` 协议也采用了 `Drawing` 协议：
+当你定义一个协议时，可以扩展现有协议的定义。此协议声明表示`Drawing3D`协议也采用了`Drawing`协议：
 
 `@protocol Drawing3D <Drawing>`
 
-因此，任何采用 `Drawing3D` 协议的类都必须实现该协议列出的方法以及 `Drawing` 协议的方法。
+因此，任何采用`Drawing3D`协议的类都必须实现该协议列出的方法以及`Drawing`协议的方法。
 
 最后，分类（category）也可以采用协议，如下：
 
 `@interface Fraction (Stuff) <NSCopying, NSCoding>`
 
-在这里，`Fraction` 有一个分类 `Stuff`（好吧，这不是最好的命名！），它采用了 `NSCopying` 和 `NSCoding` 协议。与类名一样，协议名称必须是唯一的。
+在这里，`Fraction`有一个分类`Stuff`（好吧，这不是最好的命名！），它采用了`NSCopying`和`NSCoding`协议。与类名一样，协议名称必须是唯一的。
 
 ### 代理 (Delegation)
 
-你也可以将协议视为两个类之间的*接口*定义。定义协议的类可以被认为是将协议中定义的方法的工作*委托*给实现这些方法的类。这样，该类可以定义得更通用，而由代理类在响应某些事件或定义特定参数时采取特定的操作。Cocoa 和 iOS 严重依赖这种代理概念。例如，当你 iPhone 屏幕上设置一个表格时，你会使用 `UITableView` 类。但该类并表格的标题、包含多少个节或行，或者在表格的每行（单元格）中放入什么。它通过定义一个名为 `UITableViewDataSource` 的协议将该责任委托给你。当它需要信息时（例如，表格每个节有多少行），它会调用你在类中根据协议定义的相应方法。`UITableView` 类还定义了另一个名为 `UITableViewDelegate` 的协议。该协议中的方法定义了（其他事情）当表格中的某行被选中时该做什么。该类不知道应该采取什么行动，因此它将该责任委托给你。
+你也可以将协议视为两个类之间的*接口*定义。定义协议的类可以被认为是将协议中定义的方法的工作*委托*给实现这些方法的类。这样，该类可以定义得更通用，而由代理类在响应某些事件或定义特定参数时采取特定的操作。Cocoa 和 iOS 严重依赖这种代理概念。例如，当你 iPhone 屏幕上设置一个表格时，你会使用`UITableView`类。但该类并不负责表格的标题、包含多少个节或行，或者在表格的每行（单元格）中放入什么。它通过定义一个名为`UITableViewDataSource`的协议将该责任委托给你。当它需要信息时（例如，表格每个节有多少行），它会调用你在类中根据协议定义的相应方法。`UITableView`类还定义了另一个名为`UITableViewDelegate`的协议。该协议中的方法定义了（其他事情）当表格中的某行被选中时该做什么。该类不知道应该采取什么行动，因此它将该责任委托给你。
 
 ### 非正式协议 (Informal Protocols)
 
 你可能在阅读中遇到*非正式*协议的概念。这实际上是一个列出一组方法但没有实现它们的分类。每个人（或几乎所有人）都继承自同一个根对象，因此非正式分类通常定义在根类上。非正式协议有时也被称为*抽象*协议（abstract）。
 
-如果你查看头文件 `<NSScriptWhoseTests.h>`，你可能会发现一些这样的方法声明：
+如果你查看头文件`<NSScriptWhoseTests.h>`，你可能会发现一些这样的方法声明：
 
 ```objc
 @interface NSObject (NSComparisonMethods)
+
 - (BOOL)isEqualTo:(id)object;
 ```
 
-
-
-
-
 ```objc
 - (BOOL)isLessThanOrEqualTo:(id)object;
+
 - (BOOL)isLessThan:(id)object;
+
 - (BOOL)isGreaterThanOrEqualTo:(id)object;
+
 - (BOOL)isGreaterThan:(id)object;
+
 - (BOOL)isNotEqualTo:(id)object;
+
 - (BOOL)doesContain:(id)object;
+
 - (BOOL)isLike:(NSString *)object;
+
 - (BOOL)isCaseInsensitiveLike:(NSString *)object;
+
 @end
 ```
 
-这为 `NSObject` 类定义了一个名为 `NSComparisonMethods` 的分类（category）。这个非正式协议（informal protocol）列出组方法（在这里列出了九个），这些方法可以作为该协议的一部分来实现。非正式协议本质上是将一组方法按名称分组。这在文档编写和方法模块化方面会有一定帮助。
+这为`NSObject`类定义了一个名为`NSComparisonMethods`的分类（category）。这个非正式协议（informal protocol）列出组方法（在这里列出了九个），这些方法可以作为该协议的一部分来实现。非正式协议本质上是将一组方法按名称分组。这在文档编写和方法模块化方面会有一定帮助。
 
 声明该非正式协议的类并没有在类本身中实现这些方法，选择实现这些方法的子类需要在其接口部分中重新声明这些方法，并实现其中一个或多个方法。与正式协议（formal protocols）不同，编译器对非正式协议不提供帮助；编译器没有遵循性（conformance）或测试的概念。
 
-如果一个对象采用了正式协议，则该对象必须遵守协议中的所有要求消息。这可以在运行时和编译时强制执行。如果一个对象采用了非正式协议，该对象可能不需要采纳协议中的所有方法，具体取决于协议的定义。对非正式协议的遵循可以在运行时强制（通过 `respondsToSelector:`），但不能在编译时强制。
+如果一个对象采用了正式协议，则该对象必须遵守协议中的所有要求消息。这可以在运行时和编译时强制执行。如果一个对象采用了非正式协议，该对象可能不需要采纳协议中的所有方法，具体取决于协议的定义。对非正式协议的遵循可以在运行时强制（通过`respondsToSelector:`），但不能在编译时强制。
 
 > 注意
-> 之前描述的 Objective-C 2.0 语言添加的 `@optional` 指令旨在替代非正式协议的使用。你可以看到在几个 UIKit 类中使用了它（UIKit 是 Cocoa Touch 框架的一部分）。
+> 之前描述的 Objective-C 2.0 语言添加的`@optional`指令旨在替代非正式协议的使用。你可以看到在几个 UIKit 类中使用了它（UIKit 是 Cocoa Touch 框架的一部分）。
 
 ### 复合对象 (Composite Objects)
 
-你已经学习了通过子类化和使用分类等技术扩展类定义的几种方法。另一种技术涉及定义一个类，该类由其他类的一个或多个对象组成。这个新类的对象被称为 `composite`（复合对象），因为它是由其他对象组成的。
+你已经学习了通过子类化和使用分类等技术扩展类定义的几种方法。另一种技术涉及定义一个类，该类由其他类的一个或多个对象组成。这个新类的对象被称为`composite`（复合对象），因为它是由其他对象组成的。
 
-例如，考虑你在[第 8 章]“继承”中定义的 `Square` 类。你将其定义为 `Rectangle` 的子类，因为你意识到正方形只是边长相等的矩形。当你定义一个子类时，它会继承父类所有的实例变量和方法。在某些情况下，这是不理想的——例如，父类中定义的某些方法可能不适合子类使用。`Rectangle` 的 `setWidth:andHeight:` 方法被 `Square` 类继承了，但它实际上并不适用于正方形（尽管它能正常工作）。此外，当你创建一个子类时，必须确保所有继承的方法都能正常工作，因为该类的用户将能够访问这些方法。最后，子类依赖于父类。对父类的更改可能会在无意中导致子类中的方法停止工作。
+例如，考虑你在[第 8 章]“继承”中定义的`Square`类。你将其定义为`Rectangle`的子类，因为你意识到正方形只是边长相等的矩形。当你定义一个子类时，它会继承父类所有的实例变量和方法。在某些情况下，这是不理想的——例如，父类中定义的某些方法可能不适合子类使用。`Rectangle`的`setWidth:andHeight:`方法被`Square`类继承了，但它实际上并不适用于正方形（尽管它能正常工作）。此外，当你创建一个子类时，必须确保所有继承的方法都能正常工作，因为该类的用户将能够访问这些方法。最后，子类依赖于父类。对父类的更改可能会在无意中导致子类中的方法停止工作。
 
-作为子类化的替代方案，你可以定义一个新类，并将你想要扩展的类的对象作为其一个实例变量包含其中。那么，你只需要在新类中定义那些适合该类的方法即可。回到 `Square` 的示例，这里是定义 `Square` 的另一种方法：
+作为子类化的替代方案，你可以定义一个新类，并将你想要扩展的类的对象作为其一个实例变量包含其中。那么，你只需要在新类中定义那些适合该类的方法即可。回到`Square`的示例，这里是定义`Square`的另一种方法：
 
 ```objc
 @interface Square: NSObject
+
 {
+
     Rectangle *rect;
+
 }
+
 -(int) setSide: (int) s;
+
 -(int) side;
+
 -(int) area;
+
 -(int) perimeter;
+
 @end
 ```
 
-这里定义的 `Square` 类包含四个方法。与子类版本不同（子类版本让你直接访问 `Rectangle` 的方法 `setWidth:`、`setHeight:`、`setWidth:andHeight:`、`width` 和 `height`），在这个 `Square` 的定义中并没有包含这些方法。这在这里是合理的，因为当你处理正方形时，这些方法确实并不适用。
+这里定义的`Square`类包含四个方法。与子类版本不同（子类版本让你直接访问`Rectangle`的方法`setWidth:`、`setHeight:`、`setWidth:andHeight:`、`width`和`height`），在这个`Square`的定义中并没有包含这些方法。这在这里是合理的，因为当你处理正方形时，这些方法确实并不适用。
 
-如果你这样定义 `Square`，它将负责为它包含的矩形分配内存。例如，在没有重写方法的情况下，语句：
+如果你这样定义`Square`，它将负责为它包含的矩形分配内存。例如，在没有重写方法的情况下，语句：
 
 ```objc
 Square *mySquare = [[Square alloc] init];
 ```
 
-分配了一个新的 `Square` 对象，但没有分配存储在其实例变量 `rect` 中的 `Rectangle` 对象。
+分配了一个新的`Square`对象，但没有分配存储在其实例变量`rect`中的`Rectangle`对象。
 
-解决方案是重写 `init` 或添加如 `initWithSide:` 的新方法来执行分配。该方法可以分配 `Rectangle rect` 并适当设置其边长。
+解决方案是重写`init`或添加如`initWithSide:`的新方法来执行分配。该方法可以分配`Rectangle rect`并适当设置其边长。
 
-在你的 `Square` 类中定义方法时，仍然可以利用 `Rectangle` 的方法。例如，你可以这样实现 `area` 方法：
+在你的`Square`类中定义方法时，仍然可以利用`Rectangle`的方法。例如，你可以这样实现`area`方法：
 
 ```objc
 -(int) area
+
 {
+
   return [rect area];
+
 }
 ```
 
@@ -4468,34 +4123,37 @@ Square *mySquare = [[Square alloc] init];
 
 ### 练习题
 
-**1.** 扩展[程序 11.1] 中的 `MathOps` 分类，使其包含一个 `invert` 方法，该方法返回一个接收者的倒数的 `Fraction` 对象。
+**1.** 扩展[程序 11.1]中的`MathOps`分类，使其包含一个`invert`方法，该方法返回一个接收者的倒数的`Fraction`对象。
 
-**2.** 为 `Fraction` 类添加一个名为 `Comparison` 的分类。在此分类中，根据以下声明添加两个方法：
+**2.** 为`Fraction`类添加一个名为`Comparison`的分类。在此分类中，根据以下声明添加两个方法：
 
 ```objc
 -(BOOL) isEqualTo: (Fraction *) f;
+
 -(int) compare: (Fraction *) f;
 ```
 
 如果两个分数完全相同，第一个方法应返回 YES，否则返回 NO。比较分数时要小心（例如，比较 3/4 和 6/8 应该返回 YES）。
 
-如果接收者的值小于参数所表示的分数，则第二个方法应返回 `-1`；如果两者相等，则返回 `0`；如果接收者大于参数，则返回 `1`。
+如果接收者的值小于参数所表示的分数，则第二个方法应返回`-1`；如果两者相等，则返回`0`；如果接收者大于参数，则返回`1`。
 
-**3.** 扩展 `Fraction` 类，添加符合本章节之前列出的非正式协议 `NSComparisonMethods`的方法。实现该协议的前六个方法（`isEqualTo:`、`isLessThanOrEqualTo:`、`isLessThan:`、`isGreaterThanOrEqualTo:`、`isGreaterThan:`、`isNotEqualTo:`）并进行测试。
+**3.** 扩展`Fraction`类，添加符合本章节之前列出的非正式协议`NSComparisonMethods`的方法。实现该协议的前六个方法（`isEqualTo:`、`isLessThanOrEqualTo:`、`isLessThan:`、`isGreaterThanOrEqualTo:`、`isGreaterThan:`、`isNotEqualTo:`）并进行测试。
 
-**4.** 函数 `sin()`、`cos()` 和 `tan()` 是标准 C 库的一部分（就像 `scanf()` 一样）。这些函数声明在系统头文件 math.h 中，当你程序导入 `Foundation.h` 时，它会自动导入到程序中。
+**4.** 函数`sin()`、`cos()`和`tan()`是标准 C 库的一部分（就像`scanf()`一样）。这些函数声明在系统头文件`math.h`中，当你程序导入`Foundation.h`时，它会自动导入到程序中。
 
-你可以使用这些函数计算其 `double` 参数的正弦、余弦和正切，单位为弧度。结果也以双精度浮点值返回。因此，你可以使用这行代码计算角度 `d`（弧度）的正弦：
+你可以使用这些函数计算其`double`参数的正弦、余弦和正切，单位为弧度。结果也以双精度浮点值返回。因此，你可以使用这行代码计算角度`d`（弧度）的正弦：
 
 ```objc
 result = sin (d);
 ```
 
-为[第 6 章]“决策”中定义的 `Calculator` 类添加一个名为 `Trig` 的分类。在此分类中添加方法，根据以下声明计算正弦、余弦和正切：
+为[第 6 章]“决策”中定义的`Calculator`类添加一个名为`Trig`的分类。在此分类中添加方法，根据以下声明计算正弦、余弦和正切：
 
 ```objc
 -(double) sin;
+
 -(double) cos;
+
 -(double) tan;
 ```
 
@@ -4503,77 +4161,94 @@ result = sin (d);
 
 ```objc
 @interface Square: NSObject
-{
-    Rectangle *rect;
-}
--(Square *) initWithSide: (int) s;
--(void) setSide: (int) s;
--(int) side;
--(int) area;
--(int) perimeter;
-@end
 
-#import "Rectangle.h"
-@implementation Square
 {
+
     Rectangle *rect;
+
 }
-// 在此处插入 Square 方法
-...
+
+-(Square *) initWithSide: (int) s;
+
+-(void) setSide: (int) s;
+
+-(int) side;
+
+-(int) area;
+
+-(int) perimeter;
+
 @end
 ```
 
-完成 `Square` 的实现部分以及一个检查其方法的测试程序。注意：记得也要重写 `init`，因为 `initWithSide:` 将成为你的指定初始化方法。
+```objc
+#import "Rectangle.h"
 
+@implementation Square
 
+{
 
+    Rectangle *rect;
+
+}
+
+// 在此处插入 Square 方法
+
+...
+
+@end
+```
+
+完成`Square`的实现部分以及一个检查其方法的测试程序。注意：记得也要重写`init`，因为`initWithSide:`将成为你的指定初始化方法。
 
 预处理器提供了各种工具，让你能够开发出更容易开发、读取、修改和移植到不同系统的程序。你还可以使用预处理器从字面上自定义 Objective-C 语言，以适应特定的编程应用或你自己的编程风格。
 
-预处理器是 Objective-C 编译过程的一部分，它识别可以穿在整个程序中的特殊语句。正如其名所示，预处理器实际上在对 Objective-C 程序本身进行分析之前就会处理这些语句。预处理器语句通过井号（`#`）的存在来识别，该符号必须是行中的第一个非空格字符。正如你将看到的，预处理器语句的语法与普通的 Objective-C 语句略有不同。我们从检查 `#define` 语句开始。
+预处理器是 Objective-C 编译过程的一部分，它识别可以穿在整个程序中的特殊语句。正如其名所示，预处理器实际上在对 Objective-C 程序本身进行分析之前就会处理这些语句。预处理器语句通过井号（`#`）的存在来识别，该符号必须是行中的第一个非空格字符。正如你将看到的，预处理器语句的语法与普通的 Objective-C 语句略有不同。我们从检查`#define`语句开始。
 
 ### `#define` 语句
 
-`#define` 语句的主要用途之一是为程序常量分配符号名称。预处理器语句
+`#define`语句的主要用途之一是为程序常量分配符号名称。预处理器语句
 
 ```
 #define  TRUE  1
 ```
 
-定义了名称 `TRUE` 并使其等同于值 `1`。随后，名称 `TRUE` 可以可以用在程序中任何可以使用常量 `1` 的地方。每当此名称出现时，预处理器都会自动将其定义的值 `1` 替换到程序中。例如，你可能会有以下使用定义名称 `TRUE` 的 Objective-C 语句：
+定义了名称`TRUE`并使其等同于值`1`。随后，名称`TRUE`可以用于程序中任何可以使用常量`1`的地方。每当此名称出现时，预处理器都会自动将其定义的值`1`替换到程序中。例如，你可能会有以下使用定义名称`TRUE`的 Objective-C 语句：
 
 ```
 gameOver = TRUE;
 ```
 
-这条语句将 `TRUE` 的值赋值给 `gameOver`。你不需要关心你为 `TRUE` 定义的实际值，但因为你确实知道将其定义为 `1`，所以前面的语句的效果是将 `1` 赋值给 `gameOver`。预处理器语句
+这条语句将`TRUE`的值赋值给`gameOver`。你不需要关心你为`TRUE`定义的实际值，但因为你确实知道将其定义为`1`，所以前面的语句的效果是将`1`赋值给`gameOver`。预处理器语句
 
 ```
 #define  FALSE  0
 ```
 
-定义了名称 `FALSE` 并使其在程序中的后续使用等同于指定值 `0`。因此，语句
+定义了名称`FALSE`并使其在程序中的后续使用等同于指定值`0`。因此，语句
 
 ```
 gameOver = FALSE;
 ```
 
-将 `FALSE` 的值赋值给 `gameOver`，而语句
+将`FALSE`的值赋值给`gameOver`，而语句
 
 ```
 if ( gameOver == FALSE )
   ...
 ```
 
-则将 `gameOver` 的值与定义的 `FALSE` 值进行比较。
 
-定义的名称*不是*变量。因此，你不能为它赋值，除非替换定义值后的的结果是一个变量。每当在程序中使用定义的名称时，预处理器都会自动将 `#define` 语句中定义名称右侧出现的所有任何内容替换到程序中。这好比于在文本编辑器中进行查找和替换；在这种情况下，预处理器会将定义名称的所有出现处替换为其关联文本。
 
-注意，`#define` 语句具有特殊的语法：没有使用等号将值 `1` 赋值给 `TRUE`。此外，语句末尾*没有*出现分号。很快你就会理解为什么存在这种特殊语法。
+则将`gameOver`的值与定义的`FALSE`值进行比较。
 
-`#define` 语句通常放在程序的开头，位于 `#import` 或 `#include` 语句之后。这不是强制要求的；它们可以出现在程序的任何地方。然而，一个名称在被程序引用之前必须已经定义。定义的名称的行为与变量不同：不存在所谓的局部定义。在名称被定义之后，它在随后的可以被程序中的*任何地方*使用。大多数程序员将他们的定义放在头文件中，以便它们可以被多个源文件使用。
+定义的名称*不是*变量。因此，你不能为它赋值，除非替换定义值后的结果是一个变量。每当在程序中使用定义的名称时，预处理器都会自动将`#define`语句中定义名称右侧出现的所有任何内容替换到程序中。这好比于在文本编辑器中进行查找和替换；在这种情况下，预处理器会将定义名称的所有出现处替换为其关联文本。
 
-作为使用定义名称的另一个例子，假设你想写两个方法来计算 `Circle` 对象的面积和周长。因为这两个方法都需要使用常量 `π`，而 `π` 不是一个特别容易记忆的常量，那么在程序开始时定义一次该常量的值，然后在每个方法中需要的地方使用该值是有意义的。
+注意，`#define`语句具有特殊的语法：没有使用等号将值`1`赋值给`TRUE`。此外，语句末尾*没有*出现分号。很快你就会理解为什么存在这种特殊语法。
+
+`#define`语句通常放在程序的开头，位于`#import`或`#include`语句之后。这不是强制要求的；它们可以出现在程序的任何地方。然而，一个名称在被程序引用之前必须已经定义。定义的名称的行为与变量不同：不存在所谓的局部定义。在名称被定义之后，它在随后的可以被程序中的*任何地方*使用。大多数程序员将他们的定义放在头文件中，以便它们可以被多个源文件使用。
+
+作为使用定义名称的另一个例子，假设你想写两个方法来计算`Circle`对象的面积和周长。因为这两个方法都需要使用常量`π`，而`π`不是一个特别容易记忆的常量，那么在程序开始时定义一次该常量的值，然后在每个方法中需要的地方使用该值是有意义的。
 
 因此，你可以在程序中包含以下内容：
 
@@ -4581,7 +4256,7 @@ if ( gameOver == FALSE )
 #define PI    3.141592654
 ```
 
-然后你就可以在两个 `Circle` 方法中使用它（这假设 `Circle` 类有一个名为 `radius` 的实例变量），如下所示：
+然后你就可以在两个`Circle`方法中使用它（这假设`Circle`类有一个名为`radius`的实例变量），如下所示：
 
 ```
 -(double) area
@@ -4595,9 +4270,9 @@ if ( gameOver == FALSE )
 }
 ```
 
-（注意：我们承认已经有一个名为 `M_PI` 的预定义符号，你可以在任何需要 `π` 的值时使用它。）将常量分配给符号名称可以让你无再需要每次想在程序中使用它时都记住那个特定的常量值。此外，如果你需要更改常量的值（例如，你发现自己在使用错误的值），你只需要在程序中的一处更改该值：在 `#define` 语句中。如果没有这种方法，你必须搜索整个程序，并在每次使用常量时显式地更改常量的值。
+（注意：我们承认已经有一个名为`M_PI`的预定义符号，你可以在任何需要`π`的值时使用它。）将常量分配给符号名称可以让你无需再每次想在程序中使用它时都记住那个特定的常量值。此外，如果你需要更改常量的值（例如，你发现自己在使用错误的值），你只需要在程序中的一处更改该值：在`#define`语句中。如果没有这种方法，你必须搜索整个程序，并在每次使用常量时显式地更改常量的值。
 
-你可能已经注意到，到为止显示的所有定义（`TRUE`、`FALSE` 和 `PI`）都是用大字母写的。这样做是为了视觉上将定义值与变量区分开来。有些程序员采用所有定义名称都大写的约定，这样就可以很容易判断一个名称代表的是变量、对象、类名还是定义名称。另一个常见的约定是在定义前加上字母 `k` 前缀。在这种情况下，名称的后续字符就不大写了。`kMaximumValues` 和 `kSignificantDigits` 是两个遵循此约定的定义名称示例。
+你可能已经注意到，到目前为止显示的所有定义（`TRUE`、`FALSE`和`PI`）都是用大写字母写的。这样做是为了视觉上将定义值与变量区分开来。有些程序员采用所有定义名称都大写的约定，这样就可以很容易判断一个名称代表的是变量、对象、类名还是定义名称。另一个常见的约定是在定义前加上字母`k`前缀。在这种情况下，名称的后续字符就不大写了。`kMaximumValues`和`kSignificantDigits`是两个遵循此约定的定义名称示例。
 
 使用定义名称作为常量值有助于程序更具扩展性。例如，当你学习如何操作数组时，与其硬编码你想要分配的尺寸，不如按照如下方式定义一个值：
 
@@ -4611,21 +4286,21 @@ if ( gameOver == FALSE )
 
 名称的定义可以不仅仅包含一个值。它可以包含一个表达式，而且正如你很快看到的，还可以包含任何其他内容！
 
-以下内容将 `TWO_PI` 定义为 `2.0` 与 `3.141592654` 的乘积：
+以下内容将`TWO_PI`定义为`2.0`与`3.141592654`的乘积：
 
 ```
 #define TWO_PI 2.0 * 3.141592654
 ```
 
-随后你可以在程序中任何 `2.0 * 3.141592654` 有效的地方使用这个定义名称。所以你可以将之前示例中周长方法的 `return` 语句替换为以下语句：
+随后你可以在程序中任何`2.0 * 3.141592654`有效的地方使用这个定义名称。所以你可以将之前示例中周长方法的`return`语句替换为以下语句：
 
 ```
 return TWO_PI * radius;
 ```
 
-每当在 Objective-C 程序遇到定义的名称时，`#define` 语句中定义名称右侧的所有内容都会字面上替换到程序在该点。因此，当预处理器在之前所示的 `return` 语句遇到 `TWO_PI` 时，它会将该名称替换为该名称定义中出现的任何内容。因此，每当定义名称 `TWO_PI` 出现在程序中时，预处理器都会替换 `2.0 * 3.141592654`。
+每当在 Objective-C 程序遇到定义的名称时，`#define`语句中定义名称右侧的所有内容都会字面上替换到程序在该点。因此，当预处理器在之前所示的`return`语句遇到`TWO_PI`时，它会将该名称替换为该名称定义中出现的任何内容。因此，每当定义名称`TWO_PI`出现在程序中时，预处理器都会替换`2.0 * 3.141592654`。
 
-预处理器每次遇到定义名称时都执行字面替换这一事实解释了为什么你通常不希望以分号结束 `#define` 语句。如果你这样做，分号也将替换到程序中定义名称的地方。如果你将 `PI` 定义为
+预处理器每次遇到定义名称时都执行字面替换这一事实解释了为什么你通常不希望以分号结束`#define`语句。如果你这样做，分号也将替换到程序中定义名称的地方。如果你将`PI`定义为
 
 ```
 #define PI 3.141592654;
@@ -4643,10 +4318,7 @@ return 2.0 * PI * r;
 return 2.0 * 3.141592654; * r;
 ```
 
-
-
-
-在预处理器完成替换后，这会导致语法错误。记住，除非你确切在该处需要一个分号，否则不要在你的 `#define` 语句末尾加上分号。
+在预处理器完成替换后，这会导致语法错误。记住，除非你确切在该处需要一个分号，否则不要在你的`#define`语句末尾加上分号。
 
 预处理器的定义本身并不必须是一个合法的 Objective-C 表达式，只要生成的表达式在它被使用的任何地方都是合法的。例如，你可以设置这些定义：
 
@@ -4669,7 +4341,7 @@ if ( y == 0 OR y == value )
   ...
 ```
 
-你甚至可以为相等测试包含一个 `#define`：
+你甚至可以为相等测试包含一个`#define`：
 
 ```objc
 #define EQUALS  ==
@@ -4684,16 +4356,16 @@ if ( y EQUALS 0 OR y EQUALS value )
 
 这消除了误用单等号进行相等测试的这种真实可能性。
 
-尽管这些示例说明了 `#define` 的威力，但你应该注意，以这种方式重新定义底层语言的语法通常被认为是糟糕的编程习惯。此外，它让别人难以理解你的代码。
+尽管这些示例说明了`#define`的威力，但你应该注意，以这种方式重新定义底层语言的语法通常被认为是糟糕的编程习惯。此外，它让别人难以理解你的代码。
 
-为了让事情更有趣，定义的值本身可以引用另一个定义的值。因此这两行 `#define` 语句是完全有效的：
+为了让事情更有趣，定义的值本身可以引用另一个定义的值。因此这两行`#define`语句是完全有效的：
 
 ```objc
 #define PI     3.141592654
 #define TWO_PI  2.0 * PI
 ```
 
-名称 `TWO_PI` 是根据之前定义的名称 `PI` 定义的，因此不再需要再次写出值 `3.141592654`。
+名称`TWO_PI`是根据之前定义的名称`PI`定义的，因此不再需要再次写出值`3.141592654`。
 
 反转定义的顺序（如本例所示）也是有效的：
 
@@ -4702,16 +4374,16 @@ if ( y EQUALS 0 OR y EQUALS value )
 #define PI     3.141592654
 ```
 
-规则是，只要在程序中使用定义名称时所有内容都已定义，你就可以定义中引用其他定义的值。
+规则是，只要在程序中使用定义名称时所有内容都已定义，你就可以在定义中引用其他定义的值。
 
-良好使用 `#define` 通常可以减少程序内注释的需求。考虑以下语句：
+良好使用`#define`通常可以减少程序内注释的需求。考虑以下语句：
 
 ```objc
 if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
   ...
 ```
 
-这个表达式测试变量 `year` 是否为闰年。现在考虑下面的 `#define` 语句以及后续的 `if` 语句：
+这个表达式测试变量`year`是否为闰年。现在考虑下面的`#define`语句以及后续的`if`语句：
 
 ```objc
 #define IS_LEAP_YEAR  year % 4 == 0 && year % 100 != 0 \
@@ -4723,16 +4395,16 @@ if ( IS_LEAP_YEAR )
 
 通常，预处理器假设定义包含在程序的单行中。如果需要第二行，行的最后一个字符必须是反斜杠字符。该字符向预处理器发出延续信号，否则会被忽略。对于多行延续也是如此；每一行需要延续的行都必须以反斜杠字符结尾。
 
-前面的 `if` 语句比直接在其之前显示的语句容易理解得多。不需要注释，因为该语句是自解释的。当然，由于该定义限制了你只能测试变量 `year` 以判断它是否为闰年。如果能写一个定义来查看任何年份是否为闰年，而不仅仅是变量 `year` 就太好了。实际上，你可以写一个接受一个或多个参数的定义，这引导我们进入下一个讨论点。
+前面的`if`语句比直接在其之前显示的语句容易理解得多。不需要注释，因为该语句是自解释的。当然，由于该定义限制了你只能测试变量`year`以判断它是否为闰年。如果能写一个定义来查看任何年份是否为闰年，而不仅仅是变量`year`就太好了。实际上，你可以写一个接受一个或多个参数的定义，这引导我们进入下一个讨论点。
 
-`IS_LEAP_YEAR` 可以被定义为接受一个名为 `y` 的参数，如下：
+`IS_LEAP_YEAR`可以被定义为接受一个名为`y`的参数，如下：
 
 ```objc
 #define IS_LEAP_YEAR(y)  y % 4 == 0 && y % 100 != 0 \
                              || y % 400 == 0
 ```
 
-与方法定义不同，你在这里不需要定义参数 `y` 的类型，因为你仅仅是在执行字面文本替换——你并没有调用函数。注意，在定义带参数的名称时，定义名称与参数列表的左括号之间不允许有空格。
+与方法定义不同，你在这里不需要定义参数`y`的类型，因为你仅仅是在执行字面文本替换——你并没有调用函数。注意，在定义带参数的名称时，定义名称与参数列表的左括号之间不允许有空格。
 
 使用之前的定义，你可以编写如下的语句：
 
@@ -4741,163 +4413,22 @@ if ( IS_LEAP_YEAR (year) )
   ...
 ```
 
-这测试 `year` 的值是否为闰年。或者你可以写这段代码来测试 `nextYear` 的值是否为闰年：
+这测试`year`的值是否为闰年。或者你可以写这段代码来测试`nextYear`的值是否为闰年：
 
 ```objc
 if ( IS_LEAP_YEAR (nextYear) )
   ...
 ```
 
-在前面的语句中，`IS_LEAP_YEAR` 的定义被直接替换在 `if` 语句内部，参数 `nextYear` 替换定义中出现的任何 `y`。因此编译器实际上看到的 `if` 语句如下：
+在前面的语句中，`IS_LEAP_YEAR`的定义被直接替换在`if`语句内部，参数`nextYear`替换定义中出现的任何`y`。因此编译器实际上看到的`if`语句如下：
 
 ```objc
 if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
 ```
 
-前面的语句比直接在其之前显示的语句容易理解得多。不需要注释，因为该语句是自解释的。当然，由于该定义限制了你只能测试变量 `year` 以判断它是否为闰年。如果能写一个定义来查看任何年份是否为闰年，而不仅仅是变量 `year` 就太好了。实际上，你可以写一个接受一个或多个参数的定义，这引导我们进入下一个讨论点。
+当你使用 Objective-C 编写一段时间代码后，你会发现自己开发了一套属于自己的宏，并且你希望在每个程序中使用它们。但是，你不需要在编写的每个新程序中手动输入这些宏，预处理器允许你将所有定义收集到一个单独的文件，然后使用`#import`语句将它们包含在程序中。这些文件——你之前遇到过但从未亲手编写过的文件——通常以`.h`字符结尾，被称为`header`文件（头文件）或`include`文件（包含文件）。
 
-`IS_LEAP_YEAR` 可以被定义为接受一个名为 `y` 的参数，如下：
-
-```objc
-#define IS_LEAP_YEAR(y)  y % 4 == 0 && y % 100 != 0 \
-                             || y % 400 == 0
-```
-
-与方法定义不同，你在这里不需要定义参数 `y` 的类型，因为你仅仅是在执行字面文本替换——你并没有调用函数。注意，在定义带参数的名称时，定义名称与参数列表的左括号之间不允许有空格。
-
-使用之前的定义，你可以编写如下的语句：
-
-```objc
-if ( IS_LEAP_YEAR (year) )
-  ...
-```
-
-这测试 `year` 的值是否为闰年。或者你可以写这段代码来测试 `nextYear` 的值是否为闰年：
-
-```objc
-if ( IS_LEAP_YEAR (nextYear) )
-  ...
-```
-
-在前面的语句中，`IS_LEAP_YEAR` 的定义被直接替换在 `if` 语句内部，参数 `nextYear` 替换定义中出现的任何 `y`。因此编译器实际上看到的 `if` 语句如下：
-
-```objc
-if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
-```
-
-在预处理器完成替换后，这会导致语法错误。记住，除非你确切在该处需要一个分号，否则不要在你的 `#define` 语句末尾加上分号。
-
-预处理器的定义本身并不必须是一个合法的 Objective-C 表达式，只要生成的表达式在它被使用的任何地方都是合法的。例如，你可以设置这些定义：
-
-```objc
-#define AND    &&
-#define OR     ||
-```
-
-然后你就可以编写如下表达式：
-
-```objc
-if ( x > 0 AND x < 10 )
-  ...
-```
-
-以及
-
-```objc
-if ( y == 0 OR y == value )
-  ...
-```
-
-你甚至可以为相等测试包含一个 `#define`：
-
-```objc
-#define EQUALS  ==
-```
-
-然后，你可以写以下语句：
-
-```objc
-if ( y EQUALS 0 OR y EQUALS value )
-  ...
-```
-
-这消除了误用单等号进行相等测试的这种真实可能性。
-
-尽管这些示例说明了 `#define` 的威力，但你应该注意，以这种方式重新定义底层语言的语法通常被认为是糟糕的编程习惯。此外，它让别人难以理解你的代码。
-
-为了让事情更有趣，定义的值本身可以引用另一个定义的值。因此这两行 `#define` 语句是完全有效的：
-
-```objc
-#define PI     3.141592654
-#define TWO_PI  2.0 * PI
-```
-
-名称 `TWO_PI` 是根据之前定义的名称 `PI` 定义的，因此不再需要再次写出值 `3.141592654`。
-
-反转定义的顺序（如本例所示）也是有效的：
-
-```objc
-#define TWO_PI  2.0 * PI
-#define PI     3.141592654
-```
-
-规则是，只要在程序中使用定义名称时所有内容都已定义，你就可以定义中引用其他定义的值。
-
-良好使用 `#define` 通常可以减少程序内注释的需求。考虑以下语句：
-
-```objc
-if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
-  ...
-```
-
-这个表达式测试变量 `year` 是否为闰年。现在考虑下面的 `#define` 语句以及后续的 `if` 语句：
-
-```objc
-#define IS_LEAP_YEAR  year % 4 == 0 && year % 100 != 0 \
-                      || year % 400 == 0
-  ...
-if ( IS_LEAP_YEAR )
-  ...
-```
-
-通常，预处理器假设定义包含在程序的单行中。如果需要第二行，行的最后一个字符必须是是反斜杠字符。该字符向预处理器发出延续信号，否则会被忽略。对于多行延续也是如此；每一行需要延续的行都必须以反斜杠字符结尾。
-
-前面的 `if` 语句比直接在其之前显示的语句容易理解得多。不需要注释，因为该语句是自解释的。当然，由于该定义限制了你只能测试变量 `year` 以判断它是否为闰年。如果能写一个定义来查看任何年份是否为闰年，而不仅仅是变量 `year` 就太好了。实际上，你可以写一个接受一个或多个参数的定义，这引导我们进入下一个讨论点。
-
-`IS_LEAP_YEAR` 可以被定义为接受一个名为 `y` 的参数，如下：
-
-```objc
-#define IS_LEAP_YEAR(y)  y % 4 == 0 && y % 100 != 0 \
-                             || y % 400 == 0
-```
-
-与方法定义不同，你在这里不需要定义参数 `y` 的类型，因为你仅仅是在执行字面文本替换——你并没有调用函数。注意，在定义带参数的名称时，定义名称与参数列表的左括号之间不允许有空格。
-
-使用之前的定义，你可以编写如下的语句：
-
-```objc
-if ( IS_LEAP_YEAR (year) )
-  ...
-```
-
-这测试 `year` 的值是否为闰年。或者你可以写这段代码来测试 `nextYear` 的值是否为闰年：
-
-```objc
-if ( IS_LEAP_YEAR (nextYear) )
-  ...
-```
-
-在前面的语句中，`IS_LEAP_YEAR` 的定义被直接替换在 `if` 语句内部，参数 `nextYear` 替换定义中出现的任何 `y`。因此编译器实际上看到的 `if` 语句如下：
-
-```objc
-if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
-```
-
-
-
-当你使用 Objective-C 编写一段时间代码后，你会发现自己开发了一套属于自己的宏，并且你希望在每个每个程序中使用它们。但是，你不需要在编写的每个新程序中手动输入这些宏，预处理器允许你将所有定义收集到一个单独的文件，然后使用 `#import` 语句将它们包含在程序中。这些文件——你之前遇到过但从未亲手编写过的文件——通常以 `.h` 字符结尾，被称为 `header` 文件（头文件）或 `include` 文件（包含文件）。
-
-假设你正在编写一组用于执行各种单位转换的程序。你可能想为执行转换所需的各种常数设置一些 `#define` 语句：
+假设你正在编写一组用于执行各种单位转换的程序。你可能想为执行转换所需的各种常数设置一些`#define`语句：
 
 ```c
 #define INCHES_PER_CENTIMETER  0.394
@@ -4909,21 +4440,24 @@ if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
 ...
 ```
 
-假设你将之前的定义输入系统上名为 `metric.h` 的单独文件中。随后任何需要使用 `metric.h` 文件包含的任何定义的程序，都可以通过简单发布此预处理器指令来实现：
+假设你将之前的定义输入系统上名为`metric.h`的单独文件中。随后任何需要使用`metric.h`文件包含的任何定义的程序，都可以通过简单发布此预处理器指令来实现：
 
 ```c
 #import "metric.h"
 ```
 
-该语句必须出现在引用 `metric.h` 中包含的任何 `#define` 语句之前，通常置于源文件的开头。预处理器会在系统上查找指定的文件，并实际上在 `#import` 语句出现的精确位置将文件内容复制到程序中。因此，文件中的任何语句被处理方式都就像它们被直接输入到该该点程序中一样。
+该语句必须出现在引用`metric.h`中包含的任何`#define`语句之前，通常置于源文件的开头。预处理器会在系统上查找指定的文件，并实际上在`#import`语句出现的精确位置将文件内容复制到程序中。因此，文件中的任何语句被处理方式都就像它们被直接输入到该点程序中一样。
 
-头文件名周围的双的双引号指示预处理器在一个或多个文件目录中查找指定的文件（通常首先在包含源文件的目录中，但预处理器搜索的实际位置可以在 Xcode 中指定）。
+头文件名周围的双引号指示预处理器在一个或多个文件目录中查找指定的文件（通常首先在包含源文件的目录中，但预处理器搜索的实际位置可以在 Xcode 中指定）。
 
-相反，将文件名包含在 `<` 和 `>` 字符中，例如：
+相反，将文件名包含在`<`和`>`字符中，例如：
 
 ```c
 #import <Foundation/Foundation.h>
 ```
+
+
+
 
 会导致预处理器仅在特殊的“系统”头文件目录或目录中查找包含文件；将不会搜索当前目录。同样，在 Xcode 中，你可以指定要搜索的目录。
 
@@ -4933,7 +4467,7 @@ if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0 )
 
 Objective-C 预处理器提供了一种名为 `conditional compilation`（条件编译）的功能。条件编译通常用于创建一个可以编译并运行在不同计算机系统上的程序。它还经常被用于开启或关闭程序中的各种语句，例如打印变量值或跟踪程序执行流的调试语句。
 
-### `#ifdef`, `#endif`, `#else`, 和 `#ifndef` 语句
+### `#ifdef`、`#endif`、`#else` 和 `#ifndef` 语句
 
 遗憾的是，程序有时必须依赖于依赖于的参数，这些参数在不同设备（例如 iPhone 相之于 iPad）或特定版本的操作系统（例如 Leopard 相之于 Snow Leopard）上需要以不同的方式指定。
 
@@ -4951,7 +4485,7 @@ Objective-C 预处理器提供了一种名为 `conditional compilation`（条件
 
 正如你在这里看到的，你被允许在开始预处理器语句的 `#` 之后放置一个或多个空格。
 
-`#ifdef`, `#else`, 和 `#endif` 语句的行为正如你预期的那样。如果 `#ifdef` 行上指定的符号已经定义（通过 `#define` 语句或在程序编译时通过命令行），编译器将处理后续 `#else`、`#elif` 或 `#endif` 之前的行；否则，它们会被忽略。
+`#ifdef`、`#else` 和 `#endif` 语句的行为正如你预期的那样。如果 `#ifdef` 行上指定的符号已经定义（通过 `#define` 语句或在程序编译时通过命令行），编译器将处理后续 `#else`、`#elif` 或 `#endif` 之前的行；否则，它们会被忽略。
 
 要向预处理器定义符号 `IPAD`，可以使用语句：
 
@@ -4973,7 +4507,7 @@ gcc –framework Foundation -D IPAD program.m –
 
 这向预处理器定义了名称 `IPAD`，导致 `program.m` 内部所有的 `#ifdef IPAD` 语句都求结果为 `TRUE`（注意，你必须在命令行上的程序名称之前输入 `-D IPAD`）。这种技术允许你在无需编辑源程序的情况下为预处理器定义名称。
 
-在 Xcode 中，通过选择 Build Settings, All, Apple LLVM compiler 3.0 – Preprocessing, Preprocessor Macros 来添加定义名称并指定它们的值。可以看到 Xcode 4 中设置的符号 `IPAD` 和 `DEBUG`（定义为 `1`），见图 [12.1]。
+在 Xcode 中，通过选择 Build Settings、All、Apple LLVM compiler 3.0 – Preprocessing、Preprocessor Macros 来添加定义名称并指定它们的值。可以看到 Xcode 4 中设置的符号 `IPAD` 和 `DEBUG`（定义为 `1`），见图 [12.1]。
 
 图 12.1 定义预处理器标识符 IPAD
 
@@ -4991,26 +4525,19 @@ gcc –framework Foundation -D IPAD program.m –
 
 `#if` 预处理器语句为条件编译提供了一种更通用的方法。`#if` 语句可以测试常量表达式是否求值为非零。如果表达式的结果为非零，则处理后续 `#else`、`#elif` 或 `#endif` 之前的行；否则，跳过它们。
 
-作为如何使用这种方法的示例，以下几行出现在 Foundation 头文件 `NSString.h:` 中：
+作为如何使用这种方法的示例，以下几行出现在 Foundation 头文件 `NSString.h` 中：
 
 ```c
 #if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5
-```
-
-
-
-
-```
 #define NSMaximumStringLength (INT_MAX-1)
-
 #endif
 ```
 
 此代码测试将定义的变量 `MAC_OS_X_VERSION_MIN_REQUIRED` 的值与定义的变量 `MAC_OS_X_VERSION_10_5` 进行比较。如果前者小于后者，则处理随后的 `#define`；否则，将跳过它。推测，如果程序是在 Mac OS X 10.5 或更高版本上编译的，这会将字符串的最大长度设置为整数最大值减去 1。
 
-特殊运算符
+### 特殊运算符
 
-`defined (name)` 也可以用于 `#if` 语句。这组预处理器语句的作用是相同的：
+`defined(name)` 也可以用于 `#if` 语句。这组预处理器语句的作用是相同的：
 
 ```c
 #if defined (DEBUG)
@@ -5018,7 +4545,7 @@ gcc –framework Foundation -D IPAD program.m –
 #endif
 ```
 
-以及
+以及：
 
 ```c
 #ifdef DEBUG
@@ -5094,13 +4621,13 @@ ABSOLUTE_VALUE (x + delta)
 
 ### 数组
 
-Objective-C 语言允许用户定义一组被称为*数组*（array）的有序项目。本节描述了如何定义和操作数组。后续章节将说明数组如何与函数、结构体和指针一起工作。
+Objective-C 语言允许用户定义一组被称为数组（array）的有序项目。本节描述了如何定义和操作数组。后续章节将说明数组如何与函数、结构体和指针一起工作。
 
 假设你想将一组成绩读入计算机，然后对这些成绩进行一些操作，例如按升序排序、计算它们的平均值或找到它们的中位数。在对一组成绩进行排序的过程中，在你输入每一个成绩之前，你无法执行此类操作。
 
-在 Objective-C 中，你可以定义一个名为 `grades` 的变量，它代表的不是单个成绩值，而是一整组成绩。然后你可以使用被称为*索引*（index）数字或*下标*（subscript）的来引用集合中的每个元素。在数学中，下标变量 `x[i]` 指的是集合中的第 *i* 个元素 *x*，在 Objective-C 中，等价的表示法是：
+在 Objective-C 中，你可以定义一个名为 `grades` 的变量，它代表的不是单个成绩值，而是一整组成绩。然后你可以使用被称为索引（index）数字或下标（subscript）的来引用集合中的每个元素。在数学中，下标变量 `x[i]` 指的是集合中的第 *i* 个元素 *x*，在 Objective-C 中，等价的表示法是：
 
-```
+```text
 x[i]
 ```
 
@@ -5112,22 +4639,23 @@ x[i]
 g = grades[50];
 ```
 
-该语句将 `grades[50]` 中的值赋值给 `g`。更通用地说，如果 `i` 被声明为整数变量，语句
+该语句将 `grades[50]` 中的值赋值给 `g`。更通用地说，如果 `i` 被声明为整数变量，语句：
 
 ```c
 g = grades[i];
-``` 将 `grades` 数组中第 `i` 个元素的值赋值给 `g`。
+```
 
-只需通过在等号左侧指定数组元素，就可以值存储在数组元素中。在语句
+将 `grades` 数组中第 `i` 个元素的值赋值给 `g`。
+
+只需通过在等号左侧指定数组元素，就可以值存储在数组元素中。在语句：
 
 ```c
 grades[99] = 95;
-``` 中，值 `95` 被存储在 `grades` 数组的第 99 个元素中。
+```
 
+中，值 `95` 被存储在 `grades` 数组的第 99 个元素中。
 
-
-
-你可以通过改变作为数组下标的变量的值，轻松地遍历数组中的元素。因此，`for` 循环
+你可以通过改变作为数组下标的变量的值，轻松地遍历数组中的元素。因此，`for` 循环：
 
 ```c
 for ( i = 0; i < 100; ++i )
@@ -5140,7 +4668,7 @@ for ( i = 0; i < 100; ++i )
 
 ### 定义
 
-该定义
+该定义：
 
 ```c
 Fraction *fracts [100];
@@ -5148,9 +4676,9 @@ Fraction *fracts [100];
 
 将 `fracts` 定义为包含 100 个分数的数组。你可以通过下标 `0–99` 对该数组进行有效引用。
 
-该表达式
+该表达式：
 
-```c
+```objc
 fracts[2] = [fracts[0] add: fracts[1]];
 ```
 
@@ -5162,6 +4690,7 @@ fracts[2] = [fracts[0] add: fracts[1]];
 
 ```c
 // 生成前 15 个斐波那契数的程序
+
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
@@ -5178,13 +4707,14 @@ int main (int argc, char * argv[])
         for ( i = 0; i < 15; ++i )
             NSLog (@"%i", Fibonacci[i]);
     }
+
     return 0;
 }
 ```
 
-### 程序 13.1. 输出
+### 程序 13.1 输出
 
-```
+```text
 0
 1
 1
@@ -5208,7 +4738,7 @@ int main (int argc, char * argv[])
 
 就像在声明变量时可以为其分配初始值一样，你也可以为数组的元素分配初始值。这通过简单从第一个元素开始列出数组的初始值来实现。列表中的值用逗号分隔，整个列表被括在大括号中。
 
-该语句
+该语句：
 
 ```c
 int integers[5] = {  0, 1, 2, 3, 4 } ;
@@ -5216,7 +4746,7 @@ int integers[5] = {  0, 1, 2, 3, 4 } ;
 
 将 `integers[0]` 的值设置为 `0`，`integers[1]` 设置为 `1`，`integers[2]` 设置为 `2`，依此类推。
 
-字符数组以类似的方式初始化；因此，语句
+字符数组以类似的方式初始化；因此，语句：
 
 ```c
 char letters[5] = {  'a', 'b', 'c', 'd', 'e' } ;
@@ -5224,7 +4754,7 @@ char letters[5] = {  'a', 'b', 'c', 'd', 'e' } ;
 
 定义了字符数组 `letters` 并并将五个元素初始化为字符 'a'、'b'、'c'、'd' 和 'e'。
 
-你不必初始化整个数组。如果指定的初始值较少，则只有相同数量的元素会被初始化；数组中的剩余值将设置为零。因此，声明
+你不必初始化整个数组。如果指定的初始值较少，则只有相同数量的元素会被初始化；数组中的剩余值将设置为零。因此，声明：
 
 ```c
 float sample_data[500] = { 100.0, 300.0, 500.5 } ;
@@ -5232,10 +4762,11 @@ float sample_data[500] = { 100.0, 300.0, 500.5 } ;
 
 将 `sample_data` 的前三个值初始化为 `100.0`、`300.0` 和 `500.5`，并将剩余 497 个元素设置为 `0`。
 
-通过在括号中包含元素编号，你可以按任何顺序初始化特定的数组元素。例如，
+通过在括号中包含元素编号，你可以按任何顺序初始化特定的数组元素。例如：
 
 ```c
 int x = 123;
+
 int a[] = [9] = x + 1, [2] = 3, [0] = 1 } ;
 ```
 
@@ -5243,7 +4774,9 @@ int a[] = [9] = x + 1, [2] = 3, [0] = 1 } ;
 
 ### 字符数组
 
-程序 13.2 展示了如何使用下标引用数组。#### 程序 13.2
+程序 13.2 展示了如何使用下标引用数组。
+
+#### 程序 13.2
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -5257,13 +4790,14 @@ int main (int argc, char * argv[])
         for (i = 0; i < 5; ++i )
             NSLog ("%c", word[i]);
     }
+
     return 0;
 }
 ```
 
-### 程序 13.2. 输出
+### 程序 13.2 输出
 
-```
+```text
 H
 e
 l
@@ -5273,15 +4807,18 @@ l
 
 程序 13.2 中的 `word` 数组通过下标 `0–4` 进行了有效引用。
 
-表达式
+表达式：
 
 ```objc
 word[2] = [word[0] add: word[1]];
 ```
 
-调用 `Fraction` 的 `add:` 方法，将 `word` 数组中的前两个字符相加，并将结果存储在数组的第三个位置。
 
-### 多维数组
+
+
+调用`Fraction`的`add:`方法，将`word`数组中的前两个字符相加，并将结果存储在数组的第三个位置。
+
+## 多维数组
 
 到目前为止的所有数组类型都是一维数组——也就是说它们都处理单个维度。语言允许你定义任意维度的数组。本节将介绍二维数组。
 
@@ -5289,7 +4826,7 @@ word[2] = [word[0] add: word[1]];
 
 ![Image](img/0049.jpg)
 
-在数学中，矩阵元素通常使用双下标来引用。如果前面的矩阵称为 $M$，则符号 $M[i,j]$ 表示第 $i$ 行第 $j$ 列的元素，其中 $i$ 的范围是从 $1$ 到 $4$，$j$ 的范围是从 $1$ 到 $5$。符号 $M[3,2]$ 指第三行第二列的值 `20`。同样地，$M[4,5]$ 指第四行第五列的元素（值为 `6`）。
+在数学中，矩阵元素通常使用双下标来引用。如果前面的矩阵称为 $M$，则符号 $M[i,j]$ 表示第 $i$ 行第 $j$ 列的元素，其中 $i$ 的范围是从 $1$ 到 $4$，$j$ 的范围是从 $1$ 到 $5$。符号 $M[3,2]$ 指第三行第二列的值`20`。同样地，$M[4,5]$ 指第四行第五列的元素（值为`6`）。
 
 在 Objective-C 中，在引用二维数组元素时使用类似的表示法。然而，由于 Objective-C 喜欢从 0 开始计数，矩阵的第一行实际上是行 0，矩阵的第一列是列 0。前面的矩阵的行和列标记如下图所示：
 
@@ -5301,53 +4838,51 @@ word[2] = [word[0] add: word[1]];
 M[i][j]
 ```
 
-记住，第一个索引数字指的是行号，而第二个索引数字引用列。因此，语句
+记住，第一个索引数字指的是行号，而第二个索引数字引用列。因此，语句：
 
 ```c
 sum = M[0][2] + M[2][4];
 ```
 
-将第 0 行第 2 列的值（`-3`）与第 2 行第 4 列的值（`14`）相加，并将结果 `11` 赋值给变量 `sum`。
-
-
-
-
+将第 0 行第 2 列的值（`-3`）与第 2 行第 4 列的值（`14`）相加，并将结果`11`赋值给变量`sum`。
 
 ## 二维数组
 
-二维数组的声明方式与一维数组相同；因此，
+二维数组的声明方式与一维数组相同；因此：
 
 ```c
 int M[4][5];
 ```
 
-此句语句将 `array M` 声明为一个包含 `4` 行 `5` 列的二维数组，总共 `20` 个元素。该 `array` 中的每个位置都定义为包含一个 `integer` 类型的值。
+此句语句将`array M`声明为一个包含`4`行`5`列的二维数组，总共`20`个元素。该`array`中的每个位置都定义为包含一个`integer`类型的值。
 
 ## 二维数组的声明与初始化
 
-二维数组的初始化方式类似于其一维对应项。在列出初始化元素时，值是按行列出的。使用大括号对来分隔行与行之间的初始化列表。因此，要将 `array M` 定义并初始化为前表列出的元素，可以使用如下语句：
+二维数组的初始化方式类似于其一维对应项。在列出初始化元素时，值是按行列出的。使用大括号对来分隔行与行之间的初始化列表。因此，要将`array M`定义并初始化为前表列出的元素，可以使用如下语句：
 
 ```c
 int M[4][5] = {
-    {  10, 5, -3, 17, 82 } ,
-    {  9, 0, 0, 8, -7 } ,
-    {  32, 20, 1, 0, 14 } ,
+    {  10, 5, -3, 17, 82 },
+    {  9, 0, 0, 8, -7 },
+    {  32, 20, 1, 0, 14 },
     {  0, 0, 8, 7, 6 }
-} ;
+};
 ```
 
 特别注意上述语句的语法。请注意，在每一行大括号关闭之后（最后一行除外）都需要逗号。内部大括号对的使用实际上是可选的。如果不提供这些括号，初始化将按行进行。因此，上述语句也可以写成：
 
 ```c
-int M[4][5] = {  10, 5, -3, 17, 82, 9, 0, 0, 8, -7, 32,
-                 20, 1, 0, 14, 0, 0, 8, 7, 6 } ;
+int M[4][5] = {
+    10, 5, -3, 17, 82, 9, 0, 0, 8, -7, 32,
+    20, 1, 0, 14, 0, 0, 8, 7, 6
+};
 ```
 
 与一维数组一样，不需要初始化整个数组。如下语句仅将矩阵每行的前三个元素初始化为指定的值：必须使用内部大括号来强制执行正确的初始化，否则，初始化的是前两行以及第三行的前两个元素。（你可以自己验证一下是否如此。）
 
 ## 函数
 
-`NSLog` 例程是你目前为止在每个程序中都用过的函数示例。事实上，每个程序也都使用了一个名为 `main` 的函数。让我们回到你写的第一个程序，它在终端显示了“Programming is fun.”这段短语：
+`NSLog`例程是你目前为止在每个程序中都用过的函数示例。事实上，每个程序也都使用了一个名为`main`的函数。让我们回到你写的第一个程序，它在终端显示了“Programming is fun.”这段短语：
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -5357,11 +4892,12 @@ int main (int argc, char * argv[])
     @autoreleasepool {
         NSLog (@"Programming is fun.");
     }
+
     return 0;
 }
 ```
 
-这个名为 `printMessage` 的函数产生相同的输出：
+这个名为`printMessage`的函数产生相同的输出：
 
 ```objc
 void printMessage (void)
@@ -5377,9 +4913,9 @@ void printMessage (void)
 - 它的名称
 - 它接收参数的数量和类型
 
-`printMessage` 函数定义的第一行告诉编译器 `printMessage` 是函数的名称，且它不返回值（关键字 `void` 的第一次使用）。与方法不同，你不需要将函数的返回值放在括号内。事实上，如果你这样做会收到编译器错误信息。
+`printMessage`函数定义的第一行告诉编译器`printMessage`是函数的名称，且它不返回值（关键字`void`的第一次使用）。与方法不同，你不需要将函数的返回值放在括号内。事实上，如果你这样做会收到编译器错误信息。
 
-在告诉编译器 `printMessage` 没有返回值后，第二个 `void` 关键字表示它不接受任何参数。记住 `main` 是 Objective-C 中一个特殊识别名称，它始终指示执行的起始位置。因此，你可以为前面的代码添加一个 `main` 函数以得到一个完整的程序：
+在告诉编译器`printMessage`没有返回值后，第二个`void`关键字表示它不接受任何参数。记住`main`是 Objective-C 中一个特殊识别名称，它始终指示执行的起始位置。因此，你可以为前面的代码添加一个`main`函数以得到一个完整的程序：
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -5394,6 +4930,7 @@ int main (int argc, char * argv[])
     @autoreleasepool {
         printMessage();
     }
+
     return 0;
 }
 ```
@@ -5406,9 +4943,11 @@ int main (int argc, char * argv[])
 void calculateTriangular(int n)
 {
     int i, triangularNumber = 0;
+
     for ( i = 1; i <= n; ++i ) {
         triangularNumber += i;
     }
+
     NSLog(@"Triangular number %d is %d", n, triangularNumber);
 }
 
@@ -5419,36 +4958,34 @@ int main (int argc, char * argv[])
         calculateTriangular(20);
         calculateTriangular(50);
     }
+
     return 0;
 }
 ```
 
-
-
-
 回到我们的程序示例，在局部变量定义之后，函数会计算三角形数并在终端显示结果。随后，闭括号定义了函数的结束。
 
-在 `main` 例程中，值 `10` 在第一次调用 `calculateTriangularNumber` 时作为参数传递。执行流随后直接转移到函数，其中该值 `10` 成为函数内部形式参数 `n` 的值。然后，函数计算第 10 个三角形数的值并显示结果。
+在`main`例程中，值`10`在第一次调用`calculateTriangularNumber`时作为参数传递。执行流随后直接转移到函数，其中该值`10`成为函数内部形式参数`n`的值。然后，函数计算第 10 个三角形数的值并显示结果。
 
-当下一次调用 `calculateTriangularNumber` 时，传递了参数 `20`。按照之前描述的相似过程，该值成为函数内部 `n` 的值。然后，函数计算第 20 个三角形数的值并显示答案。
+当下一次调用`calculateTriangularNumber`时，传递了参数`20`。按照之前描述的相似过程，该值成为函数内部`n`的值。然后，函数计算第 20 个三角形数的值并显示答案。
 
 ### 返回函数结果
 
-与方法一样，函数可以返回一个值。使用 `return` 语句返回的值的类型必须与为函数声明的返回类型一致。如下所示的函数声明：
+与方法一样，函数可以返回一个值。使用`return`语句返回的值的类型必须与为函数声明的返回类型一致。如下所示的函数声明：
 
-```
+```c
 float kmh_to_mph (float km_speed)
 ```
 
-开始了函数 `kmh_to_mph` 的定义，它接受一个名为 `km_speed` 的 `float` 参数并返回一个浮点值。同样，
+开始了函数`kmh_to_mph`的定义，它接受一个名为`km_speed`的`float`参数并返回一个浮点值。同样：
 
-```
+```c
 int gcd (int u, int v)
 ```
 
-定义了一个名为 `gcd` 的函数，带有整数参数 `u` 和 `v` 并返回一个整数值。
+定义了一个名为`gcd`的函数，带有整数参数`u`和`v`并返回一个整数值。
 
-让我们用函数的形式重写 程序 5.7 中使用的最大公约数算法。函数的两个参数是你想要计算最大公约数（`gcd`）的两个数字（参见 程序 13.5）。
+让我们用函数的形式重写程序 5.7 中使用的最大公约数算法。函数的两个参数是你想要计算最大公约数（`gcd`）的两个数字（参见程序 13.5）。
 
 ### 程序 13.5
 
@@ -5462,8 +4999,7 @@ int gcd (int u, int v)
 {
     int temp;
 
-    while ( v != 0 )
-    {
+    while ( v != 0 ) {
         temp = u % v;
         u = v;
         v = temp;
@@ -5485,27 +5021,30 @@ main ()
 
         NSLog (@"The gcd of 83 and 240 is %i", gcd (83, 240));
     }
+
     return 0;
 }
 ```
 
 ### 程序 13.5. 输出
 
-```
+```text
 The gcd of 150 and 35 is 5
+
 The gcd of 1026 and 405 is 27
+
 The gcd of 83 and 240 is 1
 ```
 
-函数 `gcd` 定义为接受两个整数参数。函数通过其形式参数名称 `u` 和 `v` 引用这些参数。在声明变量 `temp` 类型为 `int` 之后，程序在终端显示参数 `u` 和 `v` 的值，以及一条适当的消息。然后，函数计算并返回这两个整数的最大公约数。
+函数`gcd`定义为接受两个整数参数。函数通过其形式参数名称`u`和`v`引用这些参数。在声明变量`temp`类型为`int`之后，程序在终端显示参数`u`和`v`的值，以及一条适当的消息。然后，函数计算并返回这两个整数的最大公约数。
 
-语句
+语句：
 
-```
+```c
 result = gcd (150, 35);
 ```
 
-表示使用参数 `150` 和 `35` 调用函数 `gcd`，并将该函数返回的值存储在变量 `result` 中。
+表示使用参数`150`和`35`调用函数`gcd`，并将该函数返回的值存储在变量`result`中。
 
 如果省略了函数的返回类型声明，编译器将假设该函数将返回一个整数——如果它确实返回了的话。许多程序员利用这一点，省略了返回整数的函数的返回类型声明。然而，这是你应该避免的糟糕编程习惯。
 
@@ -5543,43 +5082,44 @@ result = gcd (150, 35);
 
 如果省略了函数的返回类型声明，编译器将假设该函数将返回一个整数——如果它确实返回了的话。许多程序员利用这一点，省略了返回整数的函数的返回类型声明。然而，这是你应该避免的糟糕编程习惯。
 
-
-
-
 ## 函数、方法与数组
 
-要将单个数组元素传递给函数或方法，你只需按照通常的方式将该数组元素作为参数指定。因此，如果你有一个计算平方根的 `squareRoot` 函数，并想要获取 `averages[i]` 的平方根并将结果赋值给名为 `sq_root_result` 的变量，那么像下面这条语句就可以工作：
+要将单个数组元素传递给函数或方法，你只需按照通常的方式将该数组元素作为参数指定。因此，如果你有一个计算平方根的`squareRoot`函数，并想要获取`averages[i]`的平方根并将结果赋值给名为`sq_root_result`的变量，那么像下面这条语句就可以工作：
 
 ```c
 sq_root_result = squareRoot (averages[i]);
 ```
 
-将整个数组传递给函数或方法则是完全另一回事了。要传递数组，你需要在函数调用或方法调用的内部仅列出数组的名称，而不包含任何下标。例如，假设 `grade_scores` 已经声明为一个包含 100 个元素的数组，那么表达式
+将整个数组传递给函数或方法则是完全另一回事了。要传递数组，你需要在函数调用或方法调用的内部仅列出数组的名称，而不包含任何下标。例如，假设`grade_scores`已经声明为一个包含 100 个元素的数组，那么表达式：
 
-```
+```c
 minimum (grade_scores)
 ```
 
-就会将数组 `grade_scores` 中包含的全部 100 个元素传递给名为 `minimum` 的函数。自然地，`minimum` 函数必须期望接收一个整个数组作为参数，并且必须进行相应的形式参数声明。
+就会将数组`grade_scores`中包含的全部 100 个元素传递给名为`minimum`的函数。自然地，`minimum`函数必须期望接收一个整个数组作为参数，并且必须进行相应的形式参数声明。
 
 此函数在包含指定数量元素的数组中找到最小的整数值：
 
 ```c
 // 用于在数组中查找最小值的函数
+
 int minimum (int values[], int numElements)
 {
     int minValue, i;
+
     minValue = values[0];
+
     for ( i = 1; i < numElements; ++i )
         if ( values[i] < minValue )
             minValue = values[i];
+
     return (minValue);
 }
 ```
 
-`minimum` 函数定义为接收两个参数：第一个是你想找到其最小值的数组，第二个是数组中的元素数量。函数头中紧跟在 `values` 之后的左括号和右括号告知 Objective-C 编译器 `values` 是一个整数数组。编译器并不关心它有多大。
+`minimum`函数定义为接收两个参数：第一个是你想找到其最小值的数组，第二个是数组中的元素数量。函数头中紧跟在`values`之后的左括号和右括号告知 Objective-C 编译器`values`是一个整数数组。编译器并不关心它有多大。
 
-形式参数 `numElements` 在 `for` 语句内部用作上限。因此，`for` 语句从 `values[1]` 开始到数组的最后一个元素（即 `values[numElements - 1]`）对数组进行顺序遍-遍-遍-遍遍历。
+形式参数`numElements`在`for`语句内部用作上限。因此，`for`语句从`values[1]`开始到数组的最后一个元素（即`values[numElements - 1]`）对数组进行顺序遍-遍-遍-遍遍历。
 
 如果函数或方法更改了数组元素的值，该更改将应用于传递给该函数或方法的原始数组。即使在函数或方法执行完毕后，该更改仍然有效。
 
@@ -5587,16 +5127,16 @@ int minimum (int values[], int numElements)
 
 ## Blocks（块）
 
-Blocks 是 C 语言的最新扩展。它们不是 ANSI C 定义的一部分，是由 Apple, Inc. 添加到语言中的。Blocks 的外观和行为非常像函数。这种语法需要时间适应。你可以像向函数一样向块传递参数。你也可以从块中返回值。与函数不同，块可以定义在函数或方法内部，并且可以访问定义在块外部但在作用范围内的任何变量。通常情况下，可以访问这些变量，但不能更改它们的值。有一个特殊的 `__block` 修饰符（在 block 单词前有两个下划线），允许你从块内部修改变量的值，稍后你就会看到它是如何使用的。
+Blocks 是 C 语言的最新扩展。它们不是 ANSI C 定义的一部分，是由 Apple, Inc. 添加到语言中的。Blocks 的外观和行为非常像函数。这种语法需要时间适应。你可以像向函数一样向块传递参数。你也可以从块中返回值。与函数不同，块可以定义在函数或方法内部，并且可以访问定义在块外部但在作用范围内的任何变量。通常情况下，可以访问这些变量，但不能更改它们的值。有一个特殊的`__block`修饰符（在 block 单词前有两个下划线），允许你从块内部修改变量的值，稍后你就会看到它是如何使用的。
 
-块可以作为参数传递给函数和方法，在[Part II], “[The Foundation Framework]”中，你将学习一些期望接收块作为参数的方法。块的优势之一是它们可以由系统分发给其他处理器或应用程序中的其他线程执行。
+块可以作为参数传递给函数和方法，在[Part II]，“[The Foundation Framework]”中，你将学习一些期望接收块作为参数的方法。块的优势之一是它们可以由系统分发给其他处理器或应用程序中的其他线程执行。
 
-让我们从一个简单的示例开始。回想我们在本章编写的第一个函数 `printMessage`：
+让我们从一个简单的示例开始。回想我们在本章编写的第一个函数`printMessage`：
 
 ```objectivec
 void printMessage (void)
 {
-    NSLog (@Programming is fun.");
+    NSLog (@"Programming is fun.");
 }
 ```
 
@@ -5605,19 +5145,26 @@ void printMessage (void)
 ```objectivec
 ^(void)
 {
-    NSLog (@Programming is fun.");
+    NSLog (@"Programming is fun.");
 }
 ```
 
-块通过开头的脱字符字符 `^` 来识别。其后是该块所接受的括号参数列表。在我们的情况下，块不接受任何参数，所以我们像在函数中那样写了 `void`。你可以将此块赋值给名为 `printMessage` 的变量，只要该变量已正确声明（这里的语法变得复杂了）：
+块通过开头的脱字符字符`^`来识别。其后是该块所接受的括号参数列表。在我们的情况下，块不接受任何参数，所以我们像在函数中那样写了`void`。你可以将此块赋值给名为`printMessage`的变量，只要该变量已正确声明（这里的语法变得复杂了）：
+
+```objectivec
+```
+
+
 
 ```objectivec
 void (^printMessage)(void) = ^void(){
-    NSLog (@Programming is fun.");
+
+    NSLog (@"Programming is fun.");
+
 };
 ```
 
-在等号左侧，我们指定 `printMessage` 是一个指向块的指针，该块不接受参数且不返回值。注意，赋值语句以分号结束。执行由变量引用的块的方法与调用函数相同：
+在等号左侧，我们指定`printMessage`是一个指向块的指针，该块不接受参数且不返回值。注意，赋值语句以分号结束。执行由变量引用的块的方法与调用函数相同：
 
 ```objectivec
 printMessage ();
@@ -5632,28 +5179,33 @@ int main (int argc, char * argv[])
 {
     @autoreleasepool {
         void (^printMessage)(void) = ^void() {
-            NSLog (@Programming is fun.");
+            NSLog (@"Programming is fun.");
         };
+
         printMessage ();
     }
+
     return 0;
 }
 ```
 
 程序 13.6。输出：
+
 `Programming is fun.`
 
-程序 13.7 是使用块代替函数重写的程序 13.4。块可以定义为全局，也可以定义为局部。在这种情况下，我们将在 main 外部定义块，使其在作用域上是外部且全局的。
+程序 13.7 是使用块代替函数重写的程序 13.4。块可以定义为全局，也可以定义为局部。在这种情况下，我们将在`main`外部定义块，使其在作用域上是外部且全局的。
 
 ```objectivec
-#import <Foundation.h>
+#import <Foundation/Foundation.h>
 
 // 计算第 n 数的块
 void (^calculateTriangularNumber) (int) = ^(int n) {
     int i, triangularNumber = 0;
+
     for ( i = 1; i <= n; ++i )
         triangularNumber += i;
-    NSLog (@Triangular number %i is %i", n, triangularNumber);
+
+    NSLog (@"Triangular number %i is %i", n, triangularNumber);
 };
 
 int main (int argc, char * argv[])
@@ -5663,37 +5215,37 @@ int main (int argc, char * argv[])
         calculateTriangularNumber (20);
         calculateTriangularNumber (50);
     }
+
     return 0;
 }
 ```
 
 程序 13.7。输出：
-`Triangular number 10 is 55`
-`Triangular number 20 is 210`
+
+`Triangular number 10 is 55`  
+`Triangular number 20 is 210`  
 `Triangular number 50 is 1275`
 
-比较程序 13.4 中的函数语法与程序 13.7 中定义的块。块指针变量 `calculateTriangularNumber` 定义为接收一个 `int` 参数且不返回值。
+比较程序 13.4 中的函数语法与程序 13.7 中定义的块。块指针变量`calculateTriangularNumber`定义为接收一个`int`参数且不返回值。
 
-正如本节开头提到的，块可以返回值。这里是用块形式重写的程序 13.5 中的 gcd 函数：
+正如本节开头提到的，块可以返回值。这里是用块形式重写的程序 13.5 中的`gcd`函数：
 
 ```objectivec
 int (^gcd) (int, int) = ^(int u, int v){
     int temp;
+
     while ( v != 0 )
     {
         temp = u % v;
         u = v;
         v = temp;
     }
+
     return u;
 };
 ```
 
-
-
-
-
-块（block）可以访问其定义所在作用域内的变量。该变量的值是它在*块定义时*的值。这在程序 13.8 中通过了说明。
+块（block）可以访问其定义所在作用域内的变量。该变量的值是它在块定义时的值。这在程序 13.8 中得到了说明。
 
 ### 程序 13.8
 
@@ -5708,25 +5260,25 @@ int main (int argc, char * argv[])
       void (^printFoo)(void) =
           ^(void) {
               NSLog (@"foo = %i", foo);
-          } ;
+          };
 
       foo = 15;
-
       printFoo ();
    }
+
    return 0;
 }
 ```
 
-### 程序 13.8. 输出
+### 程序 13.8。输出
 
-```
+```text
 foo = 10
 ```
 
-`printFoo` 块可以访问局部变量 `foo` 的值。请注意，显示的值是 10 而不是 15。这是因为它是块在定义时的值的值，而不是在执行时的值。
+`printFoo`块可以访问局部变量`foo`的值。请注意，显示的值是 10 而不是 15。这是因为它是块在定义时的值，而不是在执行时的值。
 
-默认情况下，你无法修改块外部定义的变量的值。因此，如果你尝试在块内部更改 `foo` 的值（参见程序 13.9），你将收到来自编译器的错误信息：`Assignment of read-only variable ‘foo.’`
+默认情况下，你无法修改块外部定义的变量的值。因此，如果你尝试在块内部更改`foo`的值（参见程序 13.9），你将收到来自编译器的错误信息：`Assignment of read-only variable ‘foo.’`
 
 ### 程序 13.9
 
@@ -5742,18 +5294,19 @@ int main (int argc, char * argv[])
           ^(void) {
               NSLog (@"foo = %i", foo);
               foo = 20;   // 这一行产生编译错误
-          } ;
+          };
 
       foo = 15;
-
       printFoo ();
+
       NSLog (@"foo = %i", foo);
    }
+
    return 0;
 }
 ```
 
-如果你在程序 13.9 中局部变量 `foo` 的定义之前插入 `__block` 修饰符，使其看起来如下所示：
+如果你在程序 13.9 中局部变量`foo`的定义之前插入`__block`修饰符，使其看起来如下所示：
 
 ```objectivec
 __block int foo = 10;
@@ -5761,22 +5314,22 @@ __block int foo = 10;
 
 并运行程序，你将得到以下两行输出：
 
-```
+```text
 foo = 15
 foo = 20
 ```
 
-第一行显示 `foo` 的值现在是调用块时的值。第二行验证了块能够将 `foo` 的值改为 20。
+第一行显示`foo`的值现在是调用块时的值。第二行验证了块能够将`foo`的值改为 20。
 
 我们对块的介绍到此结束。在第 15 章中，你将找到更多关于如何使用的示例。
 
-### 结构体
+## 结构体
 
-Objective-C 语言提供了数组之外的另一种工具来组合元素。你还可以使用*结构体*（structures），它们是本节讨论的基础。
+Objective-C 语言提供了数组之外的另一种工具来组合元素。你还可以使用结构体（structures），它们是本节讨论的基础。
 
-假设你想在程序内部存储一个日期——例如 7/18/11——可能用于某些程序输出的标题，甚至用于计算目的。存储日期的的一种自然方法是将月份赋值给整数变量 `month`，将日期赋值给整数变量 `day`，将年份赋值给整数变量 `year`。因此，`int month = 7, day = 18, year = 2011;` 语句可以正常工作。这是一种完全可以的方法。但如果你的程序需要存储多个日期呢？将这些三变量组组合在一起会好得多。
+假设你想在程序内部存储一个日期——例如 7/18/11——可能用于某些程序输出的标题，甚至用于计算目的。存储日期的一种自然方法是将月份赋值给整数变量`month`，将日期赋值给整数变量`day`，将年份赋值给整数变量`year`。因此，`int month = 7, day = 18, year = 2011;`语句可以正常工作。这是一种完全可以的方法。但如果你的程序需要存储多个日期呢？将这些三变量组组合在一起会好得多。
 
-你可以在 Objective-C 语言中定义一个名为 `date` 的结构体，它由代表月、日、年的三个部分组成。这种定义的语法非常直观：
+你可以在 Objective-C 语言中定义一个名为`date`的结构体，它由代表月、日、年的三个部分组成。这种定义的语法非常直观：
 
 ```objectivec
 struct date {
@@ -5786,13 +5339,13 @@ struct date {
 };
 ```
 
-刚刚定义的 `date` 结构体包含三个成员，分别称为 `month`、`day` 和 `year`。本质上，`date` 的定义定义了一个新类型，变量此后可以声明为 `struct date` 类型：
+刚刚定义的`date`结构体包含三个成员，分别称为`month`、`day`和`year`。本质上，`date`的定义定义了一个新类型，变量此后可以声明为`struct date`类型：
 
 ```objectivec
 struct date today;
 ```
 
-你也可以定义一个名为 `purchaseDate` 的变量为相同类型：
+你也可以定义一个名为`purchaseDate`的变量为相同类型：
 
 ```objectivec
 struct date purchaseDate;
@@ -5804,19 +5357,19 @@ struct date purchaseDate;
 struct date today, purchaseDate;
 ```
 
-与 `int`、`float` 或 `char` 类型的变量不同，处理结构体变量时需要特殊的语法。结构体的成员是通过通过指定变量名、后跟一个点、然后是成员名来访问的。例如，要将变量 `today` 中 `day` 的值设置为 21，你可以这样写：
+与`int`、`float`或`char`类型的变量不同，处理结构体变量时需要特殊的语法。结构体的成员是通过指定变量名、后跟一个点、然后是成员名来访问的。例如，要将变量`today`中`day`的值设置为 21，你可以这样写：
 
 ```objectivec
 today.day = 21;
 ```
 
-注意，变量名、点和成员名之间不允许有空格。现在，等一下！这不就是用于访问对象属性的相同运算符吗？回想一下，我们可以写出它来访问对象的属性。回到 `struct date` 示例，为了将 `today` 中的 `year` 设置为 2011，你可以使用语句：
+注意，变量名、点和成员名之间不允许有空格。现在，等一下！这不就是用于访问对象属性的相同运算符吗？回想一下，我们可以写出它来访问对象的属性。回到`struct date`示例，为了将`today`中的`year`设置为 2011，你可以使用语句：
 
 ```objectivec
 today.year = 2011;
 ```
 
-最后，为了测试 `month` 是否等于 12，你可以使用如下语句：
+最后，为了测试`month`是否等于 12，你可以使用如下语句：
 
 ```objectivec
 if (today.month == 12)
@@ -5846,18 +5399,16 @@ int main (int argc, char * argv[])
 
       NSLog (@"Today's date is %i/%i/%.2i.", today.month, today.day, today.year % 100);
    }
+
    return 0;
 }
 ```
 
-### 程序 13.10. 输出
+### 程序 13.10。输出
 
-```
+```text
 Today's date is 9/25/11.
 ```
-
-
-
 
 确定今天的日期是否为月末的一种简单方法，是设置一个整数数组，该数组对应每个月份的天数。然后通过在数组内查找特定月份即可得到该月份的天数。
 
@@ -5865,28 +5416,28 @@ Today's date is 9/25/11.
 
 初始化结构与初始化数组类似——只需将元素列在一对括号内，并用逗号分隔每个元素。
 
-要将 `date` 结构体变量 `today` 初始化为 2011 年 7 月 2 日，可以使用以下语句：
+要将`date`结构体变量`today`初始化为 2011 年 7 月 2 日，可以使用以下语句：
 
 ```c
-struct date today = {  7, 2, 2011 } ;
+struct date today = { 7, 2, 2011 };
 ```
 
 与初始化数组一样，列出的值可以少于结构体包含的成员数量。因此，语句
 
 ```c
-struct date today = {  7 } ;
+struct date today = { 7 };
 ```
 
-会将 `today.month` 设置为 `7`，但没有给 `today.day` 或 `today.year` 初始值。在这种情况下，它们的默认初始值是未定义的。
+会将`today.month`设置为`7`，但没有给`today.day`或`today.year`初始值。在这种情况下，它们的默认初始值是未定义的。
 
-在初始化列表中，可以使用 `.member = value` 语法以任何顺序指定特定成员进行初始化，例如：
+在初始化列表中，可以使用`.member = value`语法以任何顺序指定特定成员进行初始化，例如：
 
 ```c
-struct date today = {  .month = 7, .day = 2, .year = 2011 } ;
+struct date today = { .month = 7, .day = 2, .year = 2011 };
 ```
 
 ```c
-struct date today = {  .year = 2011 } ;
+struct date today = { .year = 2011 };
 ```
 
 最后一条语句仅将结构体中的年份设置为 2011。如你所知，另外两个成员是未定义的。
@@ -5895,20 +5446,22 @@ struct date today = {  .year = 2011 } ;
 
 Objective-C 在定义结构体方面提供了极大的灵活性。例如，你可以定义一个包含其他结构体作为一个或多个成员的结构体，或者定义包含数组的结构。
 
-你已经在第 10 章中的“关于变量和数据类型的更多内容”学习过 `typedef` 语句。在你的 iOS 程序中，你经常需要处理矩形。例如，矩形定义了 iPhone 或 iPad 屏幕窗口的大小和位置。它们还定义了子窗口（或称为子视图）的位置和大小。有三种使用 `typedef` 定义的基础数据类型：
+你已经在第 10 章中的“关于变量和数据类型的更多内容”学习过`typedef`语句。在你的 iOS 程序中，你经常需要处理矩形。例如，矩形定义了 iPhone 或 iPad 屏幕窗口的大小和位置。它们还定义了子窗口（或称为子视图）的位置和大小。有三种使用`typedef`定义的基础数据类型：
 
 1. `CGPoint`，描述一个 (x,y) 点
 2. `CGSize`，描述宽度和高度
-3. `CGRect`，是一个包含原点（一个 `CGPoint`）和尺寸（一个 `CGSize`）的矩形
+3. `CGRect`，是一个包含原点（一个`CGPoint`）和尺寸（一个`CGSize`）的矩形
 
-以下是 Apple 的 `CGGeometry.h` 头文件的 `typedef` 定义：
+以下是 Apple 的`CGGeometry.h`头文件的`typedef`定义：
 
 ```c
 /* Points. */
+
 struct CGPoint {
     CGFloat x;
     CGFloat y;
-} ;
+};
+
 typedef struct CGPoint CGPoint;
 
 /* Sizes. */
@@ -5916,7 +5469,8 @@ typedef struct CGPoint CGPoint;
 struct CGSize {
     CGFloat width;
     CGFloat height;
-} ;
+};
+
 typedef struct CGSize CGSize;
 
 /* Rectangles. */
@@ -5924,35 +5478,38 @@ typedef struct CGSize CGSize;
 struct CGRect {
     CGPoint origin;
     CGSize size;
-} ;
+};
+
 typedef struct CGRect CGRect;
 ```
 
-`typedef` 提供了一种方便的方法来声明变量，而无需使用 `struct` 关键字。`CGFloat` 只是对基本浮点数据类型的 `typedef`。因此，如果你想声明一个 `CGPoint` 变量并分别将其 `x` 成员设置为 100，`y` 成员设置为 200，你可以编写以下代码序列：
+`typedef`提供了一种方便的方法来声明变量，而无需使用`struct`关键字。`CGFloat`只是对基本浮点数据类型的`typedef`。因此，如果你想声明一个`CGPoint`变量并分别将其`x`成员设置为 100，`y`成员设置为 200，你可以编写以下代码序列：
 
 ```c
 CGPoint startPt;
+
 startPt.x = 100;
 startPt.y = 200;
 ```
 
-记住 `startPt` 是一个结构体而不是对象。（通常这的一个良好标志是变量名前面没有星号。）Apple 还提供了创建 `CGRect`、`CGSize` 和 `CGRect` 结构的便利函数。例如，
+记住`startPt`是一个结构体而不是对象。（通常这的一个良好标志是变量名前面没有星号。）Apple 还提供了创建`CGRect`、`CGSize`和`CGRect`结构的便利函数。例如：
 
 ```c
 CGPoint startPt = CGPointMake (100.0, 200.0);
 ```
 
-还有 `CGSizeMake` 和 `CGRectMake` 函数，它们执行的任务正如其名称所示。
+还有`CGSizeMake`和`CGRectMake`函数，它们执行的任务正如其名称所示。
 
 假设你想定义一个新矩形，并将其尺寸设置为 200 x 100。你可以通过这种方式指定它的尺寸：
 
 ```c
 CGSize rectSize;
+
 rectSize.width = 200;
 rectSize.height = 100;
 ```
 
-或者你可以像这样使用 `CGSizeMake` 函数：
+或者你可以像这样使用`CGSizeMake`函数：
 
 ```c
 CGSize rectSize = CGSizeMake (200.0, 100.0);
@@ -5962,11 +5519,12 @@ CGSize rectSize = CGSizeMake (200.0, 100.0);
 
 ```c
 CGRect theFrame;
+
 theFrame.origin = startPt;
 theFrame.size = rectSize;
 ```
 
-（我们在这里不会显示 `CGRectMake` 函数的使用。）
+（我们在这里不会显示`CGRectMake`函数的使用。）
 
 假设稍后你想获取矩形的宽度。你可以通过编写：
 
@@ -5987,54 +5545,55 @@ theFrame.origin.x = 0;
 theFrame.origin.y = 0;
 ```
 
+## 指针
 
-
-
-要理解指针的工作原理，你首先必须理解`间接性`（indirection）的概念。我们在日常生活中就能见到这一概念。例如，假设我需要为我的打印机购买一个新的墨盒。在我工作的公司，采购部门负责所有的购买工作。因此，我会给采购部门的 Jim 打电话，让他为我订购新墨盒。然后 Jim 会给当地的供应商店打电话订购。为了获得我的新墨盒，我采用的是间接方法，因为我并没有直接从供应商店订购墨盒。
+要理解指针的工作原理，你首先必须理解间接性（indirection）的概念。我们在日常生活中就能见到这一概念。例如，假设我需要为我的打印机购买一个新的墨盒。在我工作的公司，采购部门负责所有的购买工作。因此，我会给采购部门的 Jim 打电话，让他为我订购新墨盒。然后 Jim 会给当地的供应商店打电话订购。为了获得我的新墨盒，我采用的是间接方法，因为我并没有直接从供应商店订购墨盒。
 
 这种间接性的概念也适用于 Objective-C 中指针的工作方式。指针提供了一种访问特定数据项值的间接手段。正如通过采购部门订购新墨盒是有其道理的（例如，我不需要知道墨盒是从哪家特定的商店订购的）一样，在 Objective-C 中使用指针也有充分的理由。
 
-但话不多说，是时候看看指针究竟是如何工作的了。假设你如下定义了一个名为 `count` 的变量：
+但话不多说，是时候看看指针究竟是如何工作的了。假设你如下定义了一个名为`count`的变量：
 
-```
+```c
 int count = 10;
 ```
 
-你可以通过以下声明定义另一个名为 `intPtr` 的变量，使你能够间接地访问 `count` 的值：
+你可以通过以下声明定义另一个名为`intPtr`的变量，使你能够间接地访问`count`的值：
 
 ```c
 int *intPtr;
 ```
 
-星号向 Objective-C 系统定义变量 `intPtr` 的类型为指向 `int` 的指针。这意味着程序将使用 `intPtr` 来间接访问一个或多个整数变量的值。
+星号向 Objective-C 系统定义变量`intPtr`的类型为指向`int`的指针。这意味着程序将使用`intPtr`来间接访问一个或多个整数变量的值。
 
-你可能已经在之前的程序的 `scanf` 调用中见过我们如何使用 `&` 运算符。这个单元运算符被称为`地址`运算符（address），它在 Objective-C 中创建一个指向变量的指针。因此，如果 `x` 是某个特定类型的变量，那么表达式 `&x` 就是该变量的指针。如果你愿意，可以将表达式 `&x` 赋值给任何已声明为与 `x` 相同类型的指针变量。
+你可能已经在之前的程序的`scanf`调用中见过我们如何使用`&`运算符。这个单元运算符被称为地址运算符（address），它在 Objective-C 中创建一个指向变量的指针。因此，如果`x`是某个特定类型的变量，那么表达式`&x`就是该变量的指针。如果你愿意，可以将表达式`&x`赋值给任何已声明为与`x`相同类型的指针变量。
 
-因此，根据给出的 `count` 和 `intPtr` 的定义，你可以编写如下语句：
+因此，根据给出的`count`和`intPtr`的定义，你可以编写如下语句：
 
-```
+```c
 intPtr = &count;
 ```
 
-来建立 `intPtr` 和 `count` 之间的间接引用。地址运算符赋值给变量 `intPtr` 的不是 `count` 的值，而是指向变量 `count` 的指针。[图 13.1] 展示了 `intPtr` 和 `count` 之间建立的连接。有向线说明了这样一个观点：`intPtr`并不直接包含 `count` 的值，而是包含一个指向变量 `count` 的指针。
+来建立`intPtr`和`count`之间的间接引用。地址运算符赋值给变量`intPtr`的不是`count`的值，而是指向变量`count`的指针。[图 13.1] 展示了`intPtr`和`count`之间建立的连接。有向线说明了这样一个观点：`intPtr`并不直接包含`count`的值，而是包含一个指向变量`count`的指针。
 
 ### 图 13.1 指向整数的指针
 
 ![Image](img/00051.jpg)
 
-要通过指针变量 `intPtr` 引用 `count` 的内容，你需要使用间接运算符，即星号（`*`）。如果 `x` 被定义为 `int` 类型，那么语句
+要通过指针变量`intPtr`引用`count`的内容，你需要使用间接运算符，即星号（`*`）。如果`x`被定义为`int`类型，那么语句
 
-```
+```c
 x = *intPtr;
 ```
 
-会将通过 `intPtr` 间接引用的值赋值给变量 `x`。由于 `intPtr` 之前被设置为指向 `count`，这句语句的效果是将变量 `count` 中所包含的值（即 `10`）赋值给变量 `x`。
+
+
+会将通过`intPtr`间接引用的值赋值给变量`x`。由于`intPtr`之前被设置为指向`count`，这句语句的效果是将变量`count`中所包含的值（即`10`）赋值给变量`x`。
 
 程序 13.11 结合了上述语句，并演示了两个基础的指针运算符：地址运算符（`&`）和间接运算符（`*`）。
 
 ### 程序 13.11
 
-```
+```c
 // 用于说明指针的程序
 
 #import <Foundation/Foundation.h>
@@ -6042,49 +5601,48 @@ x = *intPtr;
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        int  count = 10, x;
-        int  *intPtr;
+        int count = 10, x;
+        int *intPtr;
 
         intPtr = &count;
         x = *intPtr;
 
-        NSLog (@count = %i, x = %i", count, x);
+        NSLog (@"count = %i, x = %i", count, x);
     }
+
     return 0;
 }
 ```
 
 ### 程序 13.11. 输出
 
-```
+```text
 count = 10, x = 10
 ```
 
-变量 `count` 和 `x` 按照正常方式声明为整数变量。在下一行，变量 `intPtr` 被声明为类型“指向 `int` 的指针”。注意，这两行声明可以合并为一行：
+变量`count`和`x`按照正常方式声明为整数变量。在下一行，变量`intPtr`被声明为类型“指向`int`的指针”。注意，这两行声明可以合并为一行：
 
 ```c
 int count = 10, x, *intPtr;
 ```
 
-接下来，将地址运算符应用于变量 `count`，其效果是创建一个指向该变量的指针，程序将其赋值给变量 `intPtr`。
+接下来，将地址运算符应用于变量`count`，其效果是创建一个指向该变量的指针，程序将其赋值给变量`intPtr`。
 
-执行程序中的下一条语句
+执行程序中的下一条语句：
 
-```
+```c
 x = *intPtr;
 ```
 
-过程如下：间接运算符告诉 Objective-C 系统将 `intPtr` 视为指向数据项的指针。由于 `intPtr` 之前被设置为指向 `count`，这句语句的效果是将变量 `count` 中所包含的值（即 `10`）赋值给变量 `x`。
+过程如下：间接运算符告诉 Objective-C 系统将`intPtr`视为指向数据项的指针。由于`intPtr`之前被设置为指向`count`，这句语句的效果是将变量`count`中所包含的值（即`10`）赋值给变量`x`。
 
-
-
-左括号字符被赋值给 `c`。更正式地说，字符 `'('` 被赋值给 `charPtr` 所指向的变量。你之所以知道这个变量是 `c`，是因为你在程序开始时就已经在 `charPtr` 中放置了指向 `c` 的指针。
+左括号字符被赋值给`c`。更正式地说，字符`'('`被赋值给`charPtr`所指向的变量。你之所以知道这个变量是`c`，是因为你在程序开始时就已经在`charPtr`中放置了指向`c`的指针。
 
 之前的概念是理解指针操作的关键。如果这些概念现在看起来仍然有些模糊，请在此处回顾它们。
 
 ### 指针与结构体
 
-你已经见过如何定义一个指向 `int` 或 `char` 等基本数据类型的指针。但你也可以定义一个指向结构体的指针。在本章稍早之前，你如下定义了 `date` 结构体：
+你已经见过如何定义一个指向`int`或`char`等基本数据类型的指针。但你也可以定义一个指向结构体的指针。在本章稍早之前，你如下定义了`date`结构体：
 
 ```c
 struct date
@@ -6092,55 +5650,56 @@ struct date
     int month;
     int day;
     int year;
-} ;
+};
 ```
 
-就像你定义了类型为 `struct date` 的变量一样，例如：
+就像你定义了类型为`struct date`的变量一样，例如：
 
 ```c
 struct date todaysDate;
 ```
 
-你也可以定义一个指向 `struct date` 变量的指针：
+你也可以定义一个指向`struct date`变量的指针：
 
 ```c
 struct date *datePtr;
 ```
 
-然后你就可以按照预期的方式使用刚刚定义的变量 `datePtr` 了。例如，你可以通过以下赋值语句将其指向 `todaysDate`：
+然后你就可以按照预期的方式使用刚刚定义的变量`datePtr`了。例如，你可以通过以下赋值语句将其指向`todaysDate`：
 
 ```c
 datePtr = &todaysDate;
 ```
 
-在进行赋值后，你可以通过以下方式间接访问 `datePtr` 所指向的 `date` 结构体的任何成员：
+在进行赋值后，你可以通过以下方式间接访问`datePtr`所指向的`date`结构体的任何成员：
 
 ```c
 (*datePtr).day = 21;
 ```
 
-该语句将 `datePtr` 所指向的 `date` 结构体的日期设置为 `21`。之所以需要括号是因为结构体成员运算符点 (`.`) 的优先级高于间接运算符星号 (`*`)。
+该语句将`datePtr`所指向的`date`结构体的日期设置为`21`。之所以需要括号是因为结构体成员运算符点（`.`）的优先级高于间接运算符星号（`*`）。
 
-要测试 `datePtr` 所指向的 `date` 结构体中存储的 `month` 值，你可以使用如下语句：
-
-```c
-if ( (*datePtr).month == 12 )
-```
-
-指向结构体的指针非常常用，因此语言提供了一个特殊的运算符。结构体指针运算符 `->`（一个连字符后跟一个大于号）允许将原本应写为 `(*x).y` 的表达式更清晰地表示为 `x->y`。
-
-因此，你可以方便地将之前的 `if` 语句写如下：
+要测试`datePtr`所指向的`date`结构体中存储的`month`值，你可以使用如下语句：
 
 ```c
-if ( datePtr->month == 12 )
+if ((*datePtr).month == 12)
 ```
 
-我们重写了 [程序 13.10]（第一个用于说明结构体的程序），使用了结构体指针的概念。[程序 13.13] 展示了该程序。
+指向结构体的指针非常常用，因此语言提供了一个特殊的运算符。结构体指针运算符`->`（一个连字符后跟一个大于号）允许将原本应写为`(*x).y`的表达式更清晰地表示为`x->y`。
+
+因此，你可以方便地将之前的`if`语句写如下：
+
+```c
+if (datePtr->month == 12)
+```
+
+我们重写了[程序 13.10]（第一个用于说明结构体的程序），使用了结构体指针的概念。[程序 13.13]展示了该程序。
 
 ### 程序 13.13
 
 ```c
 // 用于说明结构体指针的程序
+
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
@@ -6151,7 +5710,7 @@ int main (int argc, char * argv[])
             int month;
             int day;
             int year;
-        } ;
+        };
 
         struct date today, *datePtr;
 
@@ -6161,28 +5720,30 @@ int main (int argc, char * argv[])
         datePtr->year = 2011;
 
         NSLog (@"Today's date is %i/%i/%.2i.",
-             datePtr->month, datePtr->day, datePtr->year % 100);
+               datePtr->month, datePtr->day, datePtr->year % 100);
     }
+
     return 0;
 }
 ```
 
 ### 程序 13.13. 输出
 
-```
+```text
 Today's date is 9/25/11.
 ```
 
 ### 指针、方法与函数
 
-你可以以正常方式将指针作为方法或函数的参数传递，也可以让函数或方法返回指针作为其结果。想起来，这正是你的 `alloc` 和 `init` 方法一直所做的——返回指针。我们将在本章末尾详细介绍这一点。
+你可以以正常方式将指针作为方法或函数的参数传递，也可以让函数或方法返回指针作为其结果。想起来，这正是你的`alloc`和`init`方法一直所做的——返回指针。我们将在本章末尾详细介绍这一点。
 
-现在考虑 [程序 13.14]。
+现在考虑[程序 13.14]。
 
 ### 程序 13.14
 
 ```c
 // 作为函数参数的指针
+
 #import <Foundation/Foundation.h>
 
 void exchange (int *pint1, int *pint2)
@@ -6198,16 +5759,17 @@ int main (int argc, char * argv[])
 {
     @autoreleasepool {
         void exchange (int *pint1, int *pint2);
+
         // ... (程序的其余逻辑)
     }
 }
 ```
 
-*注：程序 13.14 提供的文本包含重复的逻辑和占位符注释；`exchange` 函数的核心逻辑已在上方保留。）*
+*注：程序 13.14 提供的文本包含重复的逻辑和占位符注释；`exchange`函数的核心逻辑已在上方保留。*
 
 ### 指针与数组
 
-如果你有一个名为 `values` 的包含 100 个整数的数组，你可以定义一个名为 `valuesPtr` 的指针，并通过以下语句访问该数组中的整数：
+如果你有一个名为`values`的包含 100 个整数的数组，你可以定义一个名为`valuesPtr`的指针，并通过以下语句访问该数组中的整数：
 
 ```c
 int *valuesPtr;
@@ -6215,76 +5777,73 @@ int *valuesPtr;
 
 当你定义一个将用于指向数组元素的指针时，你不需要将该指针指定为“指向数组的指针”，而是将其指定为指向数组所包含元素类型。
 
-如果你有一个名为 `fracts` 的包含 `Fraction` 对象数组，你可以类似地使用如下语句定义一个指向 `fracts` 中元素的指针：
+如果你有一个名为`fracts`的包含`Fraction`对象数组，你可以类似地使用如下语句定义一个指向`fracts`中元素的指针：
 
 ```c
 Fraction **fractsPtr;
 ```
 
-要将 `valuesPtr` 设置为指向 `values` 数组中的第一个元素，只需要写：
+要将`valuesPtr`设置为指向`values`数组中的第一个元素，只需要写：
 
 ```c
 valuesPtr = values;
 ```
 
-在这种情况下不使用地址运算符，因为 Objective-C 编译器会将不带下标的数组名视为指向数组第一个元素的指针。因此，简单地指定不带下标的 `values` 就会产生指向 `values` 第一个元素的指针。
+在这种情况下不使用地址运算符，因为 Objective-C 编译器会将不带下标的数组名视为指向数组第一个元素的指针。因此，简单地指定不带下标的`values`就会产生指向`values`第一个元素的指针。
 
-产生指向 `values` 起点的等效方法是对数组的第一个元素应用地址运算符。因此，语句
+产生指向`values`起点的等效方法是对数组的第一个元素应用地址运算符。因此，语句：
 
 ```c
 valuesPtr = &values[0];
 ```
 
-具有相同的目的：即将指向 `values` 第一个元素的指针放入指针变量 `valuesPtr` 中。
+具有相同的目的：即将指向`values`第一个元素的指针放入指针变量`valuesPtr`中。
 
-要显示 `fractsPtr` 所指向的数组 `fracts` 中的某个 `Fraction` 对象，你需要编写如下语句：
+要显示`fractsPtr`所指向的数组`fracts`中的某个`Fraction`对象，你需要编写如下语句：
 
-```objectivec
+```objective-c
 [*fractsPtr print];
 ```
 
-
-
-
-使用数组指针的真正威力在你想要遍历数组元素时会体现出来。如果 `valuesPtr` 如前所述已定义，并被设置为指向 `values` 的第一个元素，你可以使用以下表达式
+使用数组指针的真正威力在你想要遍历数组元素时会体现出来。如果`valuesPtr`如前所述已定义，并被设置为指向`values`的第一个元素，你可以使用以下表达式：
 
 ```c
 *valuesPtr
 ```
 
-来访问 `values` 数组的第一个整数——即 `values[0]`。要通过变量 `valuesPtr` 引用 `values[3]`，你可以给 `valuesPtr` 加 3，然后应用间接操作符：
+来访问`values`数组的第一个整数——即`values[0]`。要通过变量`valuesPtr`引用`values[3]`，你可以给`valuesPtr`加 3，然后应用间接操作符：
 
 ```c
 *(valuesPtr + 3)
 ```
 
-通常情况下，你可以使用表达式
+通常情况下，你可以使用表达式：
 
 ```c
 *(valuesPtr + i)
 ```
 
-来访问包含在 `values[i]` 中的值。
+来访问包含在`values[i]`中的值。
 
-因此，要将 `values[10]` 设置为 `27`，你会编写以下表达式：
+因此，要将`values[10]`设置为`27`，你会编写以下表达式：
 
 ```c
 values[10] = 27;
 ```
 
-或者，使用 `valuesPtr`，你可以这样写：
+或者，使用`valuesPtr`，你可以这样写：
 
 ```c
 *(valuesPtr + 10) = 27;
 ```
 
-要让 `valuesPtr` 指向 `values` 数组的第二个元素，你对 `values[1]` 应用地址运算符，并将结果赋值给 `valuesPtr`：
+要让`valuesPtr`指向`values`数组的第二个元素，你对`values[1]`应用地址运算符，并将结果赋值给`valuesPtr`：
 
 ```c
 valuesPtr = &values[1];
 ```
 
-如果 `valuesPtr` 指向 `values[0]`，你只需通过给 `valuesPtr` 的值加 1，就可以让它指向 `values[1]`：
+如果`valuesPtr`指向`values[0]`，你只需通过给`valuesPtr`的值加 1，就可以让它指向`values[1]`：
 
 ```c
 valuesPtr += 1;
@@ -6292,63 +5851,63 @@ valuesPtr += 1;
 
 这在 Objective-C 中是一个完全有效的表达式，可以用于任何数据类型的指针。
 
-通常，如果 `a` 是类型为 `x` 的元素数组，`px` 的类型是“指向 `x` 的指针”，且 `i` 和 `n` 是整数常量变量，那么语句
+通常，如果`a`是类型为`x`的元素数组，`px`的类型是“指向`x`的指针”，且`i`和`n`是整数常量变量，那么语句：
 
 ```c
 px = a;
 ```
 
-将 `px` 设置为指向 `a` 的第一个元素，而表达式
+将`px`设置为指向`a`的第一个元素，而表达式：
 
 ```c
 *(px + i)
 ```
 
-随后引用包含在 `a[i]` 中的值。此外，语句
+随后引用包含在`a[i]`中的值。此外，语句：
 
 ```c
 px += n;
 ```
 
-将 `px` 设置为指向数组向后 `n` 个元素，无论该数组包含什么种类型的元素。
+将`px`设置为指向数组向后`n`个元素，无论该数组包含什么种类的元素。
 
-假设 `fractsPtr` 指向存储在分数数组中的一个分数。进一步假设你想将其与数组下一个元素中的分数相加，并将结果赋值给 `Fraction` 对象 `result`。你可以通过编写以下代码来实现：
+假设`fractsPtr`指向存储在分数数组中的一个分数。进一步假设你想将其与数组下一个元素中的分数相加，并将结果赋值给`Fraction`对象`result`。你可以通过编写以下代码来实现：
 
-```objective
-result = [*fractsPtr add: *(fractsPtr + 1)];
+```objective-c
+result = [*fractsPtr add:*(fractsPtr + 1)];
 ```
 
-递增递减运算符（`++` 和 `--`）在处理指针时特别方便。对指针应用递增运算符的效果与给指针加 1 相同，而对指针应用递减运算符的效果与从指针减 1 相同（这里的“1”意味着一个单位，即指针声明为指向的数据项的大小）。所以，如果 `textPtr` 被定义为 `char` 指针，并被设置为指向名为 `text` 的字符数组的开头，那么语句
+递增递减运算符（`++`和`--`）在处理指针时特别方便。对指针应用递增运算符的效果与给指针加 1 相同，而对指针应用递减运算符的效果与从指针减 1 相同（这里的“1”意味着一个单位，即指针声明为指向的数据项的大小）。所以，如果`textPtr`被定义为`char`指针，并被设置为指向名为`text`的字符数组的开头，那么语句：
 
 ```c
 ++textPtr;
 ```
 
-将把 `textPtr` 设置为指向 `text` 中的下一个字符，即 `text[1]`。类似地，语句
+将把`textPtr`设置为指向`text`中的下一个字符，即`text[1]`。类似地，语句：
 
 ```c
 --textPtr;
 ```
 
-将 `textPtr` 设置为指向 `text` 中的上一个字符（当然，假设在执行此语句之前 `textPtr` 并没有指向 `text` 的开头）。
+将`textPtr`设置为指向`text`中的上一个字符（当然，假设在执行此语句之前`textPtr`并没有指向`text`的开头）。
 
-在 Objective-C 中比较两个指针变量是完全有效的。这在比较同一个数组中的两个指针时特别有用。例如，你可以测试指针 `valuesPtr`，通过将其与数组中最后一个元素的指针进行比较，来检查它是否指向了包含 100 个元素的数组之外。因此，表达式
+在 Objective-C 中比较两个指针变量是完全有效的。这在比较同一个数组中的两个指针时特别有用。例如，你可以测试指针`valuesPtr`，通过将其与数组中最后一个元素的指针进行比较，来检查它是否指向了包含 100 个元素的数组之外。因此，表达式：
 
 ```c
 valuesPtr > &values[99]
 ```
 
-如果 `valuesPtr` 指向 `values` 数组最后一个元素之后，则该表达式为 `TRUE`（非零），否则为 `FALSE`（零）。根据之前的讨论，你可以将之前的表达式替换为它的等效表达式：
+如果`valuesPtr`指向`values`数组最后一个元素之后，则该表达式为`TRUE`（非零），否则为`FALSE`（零）。根据之前的讨论，你可以将之前的表达式替换为它的等效表达式：
 
 ```c
 valuesPtr > values + 99
 ```
 
-这是可能的，因为在不使用下标的情况下 `values` 是指向 `values` 数组开头的指针。（记住这与编写 `&values[0]` 是一样的。）
+这是可能的，因为在不使用下标的情况下`values`是指向`values`数组开头的指针。（记住这与编写`&values[0]`是一样的。）
 
-[程序 13.15] 展示了指向数组的指针。`arraySum` 函数计算整数数组中包含元素的和。
+[程序 13.15]展示了指向数组的指针。`arraySum`函数计算整数数组中包含元素的和。
 
-程序 13.15
+### 程序 13.15
 
 ```c
 // 计算整数数组元素和的函数
@@ -6360,7 +5919,7 @@ int arraySum (int array[], int n)
     int sum = 0, *ptr;
     int *arrayEnd = array + n;
 
-    for ( ptr = array; ptr < arrayEnd; ++ptr )
+    for (ptr = array; ptr < arrayEnd; ++ptr)
         sum += *ptr;
 
     return (sum);
@@ -6372,11 +5931,9 @@ int main (int argc, char * argv[])
         int arraySum (int array[], int n);
 ```
 
+`for`循环在空字符复制到`to`数组之前就已经结束了，这解释了为什么函数中最后一条语句。
 
-
-`for` 循环在空字符复制到 `to` 数组之前就已经结束了，这解释了为什么函数中最后一条语句。
-
-如果你使用指针来编写 `copyString`，那么就不再需要索引变量 `i`。程序 13.16 显示了指针版本。
+如果你使用指针来编写`copyString`，那么就不再需要索引变量`i`。程序 13.16 显示了指针版本。
 
 ### 程序 13.16
 
@@ -6385,7 +5942,7 @@ int main (int argc, char * argv[])
 
 void copyString (char *to, char *from)
 {
-    for ( ; *from != '\0'; ++from, ++to )
+    for (; *from != '\0'; ++from, ++to)
         *to = *from;
 
     *to = '\0';
@@ -6395,6 +5952,7 @@ int main (int argc, char * argv[])
 {
     @autoreleasepool {
         void copyString (char *to, char *from);
+
         char string1[] = "A string to be copied.";
         char string2[50];
 
@@ -6404,6 +5962,7 @@ int main (int argc, char * argv[])
         copyString (string2, "So is this.");
         NSLog (@"%s", string2);
     }
+
     return 0;
 }
 ```
@@ -6412,20 +5971,21 @@ int main (int argc, char * argv[])
 
 ```text
 A string to be copied.
+
 So is this.
 ```
 
-`copyString` 函数将两个形式参数 `to` 和 `from` 定义为字符指针，而不是字符数组（这在之前的 `copyString` 版本中是那样处理的）。这反映了该函数将如何使用这两个变量。
+`copyString`函数将两个形式参数`to`和`from`定义为字符指针，而不是字符数组（这在之前的`copyString`版本中是那样处理的）。这反映了该函数将如何使用这两个变量。
 
-随后进入一个 `for` 循环（不带初始条件），将 `from` 指向的字符串复制到 `to` 指向的字符串中。循环每次执行时，`from` 和 `to` 指针都会递增 1。这使得 `from` 指针指向源字符串中要复制的下一个字符，并使 `to` 指针指向目标字符串中准备存储下一个字符的位置。
+随后进入一个`for`循环（不带初始条件），将`from`指向的字符串复制到`to`指向的字符串中。循环每次执行时，`from`和`to`指针都会递增 1。这使得`from`指针指向源字符串中要复制的下一个字符，并使`to`指针指向目标字符串中准备存储下一个字符的位置。
 
-当 `from` 指针指向空字符时，`for` 循环退出。随后，函数将空字符放置在目标字符串的末尾。
+当`from`指针指向空字符时，`for`循环退出。随后，函数将空字符放置在目标字符串的末尾。
 
-在 `main` 例程中，调用了两次 `copyString` 函数——第一次是将 `string1` 的内容复制到 `string2`，第二次是将常量字符字符串 `"So is this."` 的内容复制到 `string2`。
+在`main`例程中，调用了两次`copyString`函数——第一次是将`string1`的内容复制到`string2`，第二次是将常量字符字符串`"So is this."`的内容复制到`string2`。
 
 #### 常量字符字符串与指针
 
-上述调用
+上述调用：
 
 ```c
 copyString (string2, "So is this.");
@@ -6433,55 +5993,57 @@ copyString (string2, "So is this.");
 
 在上一个程序中能够运行的事实意味着当常量字符字符串作为参数传递给函数时，该字符字符串实际上是传递给指针的。这不仅在这种情况下如此，而且可以概括为：每当在 Objective-C 中使用常量字符字符串时，都会产生该字符串的指针。
 
-这一点现在听起来可能有点困惑，但正如我们在第 4 章中简要提到的那样，我们在这里提到的常量字符字符串被称为 C 风格字符串。它们不是对象。如你所知，常量字符字符串对象是通过在字符串前面加上 `@` 符号来创建的，例如 `@"This is okay."`。你不能将两者互相替代。
+这一点现在听起来可能有点困惑，但正如我们在第 4 章中简要提到的那样，我们在这里提到的常量字符字符串被称为 C 风格字符串。它们不是对象。如你所知，常量字符字符串对象是通过在字符串前面加上`@`符号来创建的，例如`@"This is okay."`。你不能将两者互相替代。
 
-所以，如果 `textPtr` 被声明为字符指针，如下
+所以，如果`textPtr`被声明为字符指针，如下：
 
 ```c
 char *textPtr;
 ```
 
-那么
+那么：
 
-
-
-
-```
+```c
 *(++textPtr)
 ```
 
-首先对 `textPtr` 增，然后获取它所指向的字符，而表达式
+首先对`textPtr`增，然后获取它所指向的字符，而表达式：
 
-```
+```c
 *(textPtr++)
 ```
 
-在 `textPtr` 的值递增之前，先获取它所指向的字符。在任何情况下，括号都是必须的，因为 `*` 和 `++` 运算符的优先级相同，但它们是从右到左结合的。
+在`textPtr`的值递增之前，先获取它所指向的字符。在任何情况下，括号都是必须的，因为`*`和`++`运算符的优先级相同，但它们是从右到左结合的。
 
-让我们回到程序 13.16 中的 `copyString` 函数，并重写它以将递增操作直接整合到赋值语句中。
+让我们回到程序 13.16 中的`copyString`函数，并重写它以将递增操作直接整合到赋值语句中。
 
-由于在 `for` 循环内部执行赋值语句后，`to` 和 `from` 指针每次都会递增，因此它们应该作为后自增操作整合到赋值语句中。程序 13.16 修改后的 `for` 循环变为：
+由于在`for`循环内部执行赋值语句后，`to`和`from`指针每次都会递增，因此它们应该作为后自增操作整合到赋值语句中。程序 13.16 修改后的`for`循环变为：
 
-```
-for ( ; *from != '\0'; )
+```c
+for (; *from != '\0';)
     *to++ = *from++;
 ```
 
-循环内部赋值语句的执行过程如下：获取 `from` 指向的字符，然后 `from` 递增，以指向源字符串中的下一个字符。将引用的字符存储在 `to` 指向的位置中；然后 `to` 递增，以指向目标字符串中的下一个位置。
 
-之前的 `for` 语句看起来几乎不值得写，因为它没有初始化表达式，也没有循环表达式。事实上，使用 `while` 循环的形式来表达这种逻辑会更合适。这在程序 13.17 中已经实现，该程序展示了 `copyString` 函数的新版本。`while` 循环利用了空字符等于值 `0` 这一事实，正如 Objective-C 程序员常做的那样。
+
+循环内部赋值语句的执行过程如下：获取`from`指向的字符，然后`from`递增，以指向源字符串中的下一个字符。将引用的字符存储在`to`指向的位置中；然后`to`递增，以指向目标字符串中的下一个位置。
+
+之前的`for`语句看起来几乎不值得写，因为它没有初始化表达式，也没有循环表达式。事实上，使用`while`循环的形式来表达这种逻辑会更合适。这在程序 13.17 中已经实现，该程序展示了`copyString`函数的新版本。`while`循环利用了空字符等于值`0`这一事实，正如 Objective-C 程序员常做的那样。
 
 ### 程序 13.17
 
 ```objc
 // 将一个字符串拷贝到另一个字符串的函数
+
 //      指针版本 2
 
 #import <Foundation/Foundation.h>
+
 void copyString (char *to, char *from)
 {
     while ( *from )
         *to++ = *from++;
+
     *to = '\0';
 }
 
@@ -6498,81 +6060,84 @@ int main (int argc, char * argv[])
         copyString (string2, "So is this.");
         NSLog (@"%s", string2);
     }
+
     return 0;
 }
 ```
 
-### 程序 13.17. 输出
+### 程序 13.17 输出
 
-```
+```text
 A string to be copied.
+
 So is this.
 ```
 
 ## 指针操作
 
-正如你在本章看到的，你可以对指针进行加或减整数值。此外，你可以比较两个指针以判断它们是否相等，或者一个指针是否小于或大于另一个指针。指针允许的唯一操作是两个相同类型指针的减法。在 Objective-C 中，两个指针相减的结果是两个指针之间包含元素个数。因此，如果 `a` 指向任意类型的元素数组，而 `b` 指向同一数组中更靠后的某个另一个元素，那么表达式 `b - a` 就代表这两个指针之间的元素个数。例如，如果 `p` 指向数组 `x` 中的某个元素，语句
+正如你在本章看到的，你可以对指针进行加或减整数值。此外，你可以比较两个指针以判断它们是否相等，或者一个指针是否小于或大于另一个指针。指针允许的唯一操作是两个相同类型指针的减法。在 Objective-C 中，两个指针相减的结果是两个指针之间包含元素个数。
 
-```
+因此，如果`a`指向任意类型的元素数组，而`b`指向同一数组中更靠后的某个另一个元素，那么表达式`b - a`就代表这两个指针之间的元素个数。例如，如果`p`指向数组`x`中的某个元素，语句：
+
+```c
 n = p - x;
 ```
 
-会将变量 `n`（此处假设为整数变量）赋值为 `p` 所指向的 `x` 内部元素的索引号。因此，如果 `p` 通过类似下所示的语句被设置为指向 `x` 中的第 100 个元素：
+会将变量`n`（此处假设为整数变量）赋值为`p`所指向的`x`内部元素的索引号。因此，如果`p`通过类似下所示的语句被设置为指向`x`中的第 100 个元素：
 
-```
+```c
 p = &x[99];
 ```
 
-那么在执行上述减法操作后，`n` 的值将是 `99`。
+那么在执行上述减法操作后，`n`的值将是`99`。
 
 ### 函数指针
 
-这是一种稍微高级一点的概念，但为了完整性起见，这里介绍了函数指针的概念。在处理函数指针时，Objective-C 编译器不仅需要知道指针指向一个函数，还需要知道该函数的返回类型。要声明一个返回 `int` 的变量 `fnPtr`，你需要写道：
+这是一种稍微高级一点的概念，但为了完整性起见，这里介绍了函数指针的概念。在处理函数指针时，Objective-C 编译器不仅需要知道指针指向一个函数，还需要知道该函数的返回类型。要声明一个返回`int`的变量`fnPtr`，你需要写道：
 
 ```objc
 int (*fnPtr)(void);
 ```
 
-要让你的函数指针指向某个函数，只需将函数名赋值即可。在函数名前前允许使用地址符 `&`，但它不是必须的。
+要让你的函数指针指向某个函数，只需将函数名赋值即可。在函数名前允许使用地址符`&`，但它不是必须的。
 
-```
+```c
 fnPtr = lookup;
 ```
 
-你可以通过对指针变量应用函数调用运算符并列出函数的任何参数，来间接地调用该函数。例如
+你可以通过对指针变量应用函数调用运算符并列出函数的任何参数，来间接地调用该函数。例如：
 
-```
+```c
 entry = fnPtr ();
 ```
 
-这会调用 `fnPtr` 指向的函数，并将返回的值存储在变量 `entry` 中。
+这会调用`fnPtr`指向的函数，并将返回的值存储在变量`entry`中。
 
-
-
-
-计算机使用内存来存储你的程序的指令，并存储与程序相关的变量值。因此，如果你声明一个类型为 `int` 的变量名为 `count`，系统会在程序执行期间分配内存中的某个位置来存放 `count` 的值。例如，该位置可能位于计算机内存中地址 `1000FF[16]` 处。
+计算机使用内存来存储你的程序的指令，并存储与程序相关的变量值。因此，如果你声明一个类型为`int`的变量名为`count`，系统会在程序执行期间分配内存中的某个位置来存放`count`的值。例如，该位置可能位于计算机内存中地址`1000FF[16]`处。
 
 幸运的是，你不需要担心分配给变量的具体内存地址——系统会自动处理它们。然而，每个变量都与一个唯一的内存地址相关的这一知识，将帮助你理解指针的工作方式。
 
-在 Objective-C 中，每当你对变量使用地址操作符时，生成的数值就是该变量在计算机内存中的实际地址。（显然，这就是地址操作符名称的由来。）因此，语句
+在 Objective-C 中，每当你对变量使用地址操作符时，生成的数值就是该变量在计算机内存中的实际地址。（显然，这就是地址操作符名称的由来。）因此，语句：
 
 ```c
 intPtr = &count;
 ```
 
-将计算机内存中分配给变量 `count` 的地址赋值给 `intPtr`。因此，如果 `count` 位于地址 `1000FF[16]`，该语句将把值 `0x1000FF` 赋值给 `intPtr`。
+将计算机内存中分配给变量`count`的地址赋值给`intPtr`。因此，如果`count`位于地址`1000FF[16]`，该语句将把值`0x1000FF`赋值给`intPtr`。
 
-对指针变量应用间接操作符，如表达式
+对指针变量应用间接操作符，如表达式：
 
 ```c
 *intPtr
 ```
 
-其效果是将指针变量中包含的值视为内存地址。然后，获取该内存地址处存储的值，并根据指针变量声明的类型进行解释。因此，如果 `intPtr` 的类型是指向 `int` 的指针，系统将把 `*intPtr` 内存地址中存储的值解释为整数。
+其效果是将指针变量中包含的值视为内存地址。然后，获取该内存地址处存储的值，并根据指针变量声明的类型进行解释。因此，如果`intPtr`的类型是指向`int`的指针，系统将把`*intPtr`内存地址中存储的值解释为整数。
 
 ### 它们不是对象！
 
-现在你已经知道了如何定义数组、结构体、字符字符串和联合体，以及如何在程序中操作它们。记住一个基本点：它们不是对象。因此，你不能向它们发送消息。你同样无法利用它们来充分利用某些很棒的功能，例如 `Foundation` 框架提供的内存分配策略。这就是我鼓励你跳过这一章稍后再回来的原因之一。通常情况下，学习使用定义数组和字符串为对象的 `Foundation` 类比使用语言内置的类型要好。只有在确实需要时才使用本章中定义的类型——希望你不需要！
+现在你已经知道了如何定义数组、结构体、字符字符串和联合体，以及如何在程序中操作它们。记住一个基本点：它们不是对象。因此，你不能向它们发送消息。你同样无法利用它们来充分利用某些很棒的功能，例如`Foundation`框架提供的内存分配策略。
+
+这就是我鼓励你跳过这一章稍后再回来的原因之一。通常情况下，学习使用定义数组和字符串为对象的`Foundation`类比使用语言内置的类型要好。只有在确实需要时才使用本章中定义的类型——希望你不需要！
 
 ### 杂项语言特性
 
@@ -6580,7 +6145,7 @@ intPtr = &count;
 
 #### 复合字面量
 
-*复合字面量*（compound literal）是一个括在括号内的类型名，后面跟着一个初始化列表。它创建了一个指定类型的无名值，其作用域限于创建它的块，如果定义在任何块之外，则具有全局作用域。在后者的情况下，初始化器必须全为常量表达式。
+复合字面量（compound literal）是一个括在括号内的类型名，后面跟着一个初始化列表。它创建了一个指定类型的无名值，其作用域限于创建它的块，如果定义在任何块之外，则具有全局作用域。在后者的情况下，初始化器必须全为常量表达式。
 
 考虑一个例子：
 
@@ -6588,50 +6153,51 @@ intPtr = &count;
 (struct date) { .month = 7, .day = 2, .year = 2011}
 ```
 
-该表达式产生一个 `struct date` 结构体，带有指定的初始值。你可以将其赋值给另一个 `struct date` 结构体，如下：
+该表达式产生一个`struct date`结构体，带有指定的初始值。你可以将其赋值给另一个`struct date`结构体，如下：
 
 ```c
-theDate = (struct date) { .month = 7, .day = 2, .year = 2011} ;
+theDate = (struct date) { .month = 7, .day = 2, .year = 2011};
 ```
 
-或者你可以将其传递给期望 `struct date` 参数的函数或方法，如下：
+或者你可以将其传递给期望`struct date`参数的函数或方法，如下：
 
 ```objectivec
-setStartDate ((struct date) { .month = 7, .day = 2, .year = 2011} );
+setStartDate ((struct date) { .month = 7, .day = 2, .year = 2011});
 ```
 
-此外，你还可以定义结构以外的类型。例如，如果 `intPtr` 的类型是 `int *`，语句
+此外，你还可以定义结构以外的类型。例如，如果`intPtr`的类型是`int *`，语句：
 
 ```c
-intPtr = (int [100]) { [0] = 1, [50] = 50, [99] = 99 } ;
+intPtr = (int [100]) { [0] = 1, [50] = 50, [99] = 99 };
 ```
 
-（可以出现在程序的任何地方）设置 `intptr` 指向一个包含 100 个整数的数组，其中 3 个元素按指定方式初始化。
+（可以出现在程序的任何地方）设置`intptr`指向一个包含 100 个整数的数组，其中 3 个元素按指定方式初始化。
 
 如果未指定数组的大小，则由初始化列表决定。
 
 ### `goto` 语句
 
-执行 `goto` 语句会导致直接跳转到程序中的指定点。为了识别程序中的跳转何处，需要一个标签。*标签*（label）是按照与变量名相同的规则形成的名称；它必须紧跟冒号。标签直接放在要跳转的语句之前，并且必须与 `goto` 出现在同一个函数或方法中。
+执行`goto`语句会导致直接跳转到程序中的指定点。为了识别程序中的跳转何处，需要一个标签。标签（label）是按照与变量名相同的规则形成的名称；它必须紧跟冒号。标签直接放在要跳转的语句之前，并且必须与`goto`出现在同一个函数或方法中。
 
-例如，语句
+例如，语句：
 
 ```c
 goto out_of_data;
 ```
 
-会导致程序立即跳转到由标签 `out_of_data` 紧 preceding 的语句。该标签可以位于函数或方法的任何位置，在 `goto` 之前或之后，并可能如下所示使用：
+会导致程序立即跳转到由标签`out_of_data`紧 preceding 的语句。该标签可以位于函数或方法的任何位置，在`goto`之前或之后，并可能如下所示使用：
 
 ```objectivec
 out_of_data: NSLog (@"Unexpected end of data.");
+
 ...
 ```
 
-懒惰的程序员经常滥用 `goto` 语句跳转到代码的其他部分。`goto` 语句中断了程序的正常顺序流。结果是程序变得难以追踪。在程序中使用许多 `goto` 可能会导致无法破译。出于此原因，`goto` 语句不被认为是良好的编程风格。
+懒惰的程序员经常滥用`goto`语句跳转到代码的其他部分。`goto`语句中断了程序的正常顺序流。结果是程序变得难以追踪。在程序中使用许多`goto`可能会导致无法破译。出于此原因，`goto`语句不被认为是良好的编程风格。
 
 #### 空语句（null Statement）
 
-Objective-C 允许你在任何可以出现程序语句的地方放置一个单独的分号。这种被称为*空*语句（null statement）的语句的效果是什么都不做。这看起来可能完全没用，但程序员经常在 `while`、`for` 和 `do` 语句中这样做。例如，以下语句的目的与以下语句相同：
+Objective-C 允许你在任何可以出现程序语句的地方放置一个单独的分号。这种被称为空语句（null statement）的语句的效果是什么都不做。这看起来可能完全没用，但程序员经常在`while`、`for`和`do`语句中这样做。例如，以下语句的目的与以下语句相同：
 
 ```c
 while (text++ = getchar ()) != '\n';
@@ -6639,39 +6205,37 @@ while (text++ = getchar ()) != '\n';
 
 ### `sizeof` 运算符
 
-尽管你不应该对程序中的数据类型大小做假设，但有时你需要这些信息。这可能是在使用 `malloc` 等库函数进行动态内存分配时，或者在向文件写入或存档数据时。Objective-C 提供了一个名为 `sizeof` 的运算符，你可以用它来确定数据类型或对象的大小。`sizeof` 操作符按字节返回指定项目的大小。`sizeof` 操作符的参数可以是变量、数组名、基本数据类型的名称、对象、派生数据类型的名称或表达式。例如，编写
+尽管你不应该对程序中的数据类型大小做假设，但有时你需要这些信息。这可能是在使用`malloc`等库函数进行动态内存分配时，或者在向文件写入或存档数据时。Objective-C 提供了一个名为`sizeof`的运算符，你可以用它来确定数据类型或对象的大小。
+
+`sizeof`操作符按字节返回指定项目的大小。`sizeof`操作符的参数可以是变量、数组名、基本数据类型的名称、对象、派生数据类型的名称或表达式。例如，编写：
 
 ```c
 sizeof (int)
 ```
 
-给出存储整数所需的字节数。在我的 MacBook Air 上，这产生结果 `4`（或 32 位）。如果 `x` 被声明为包含 100 个 `int` 的数组，表达式
+给出存储整数所需的字节数。在我的 MacBook Air 上，这产生结果`4`（或 32 位）。如果`x`被声明为包含 100 个`int`的数组，表达式：
 
 ```c
 sizeof (x)
 ```
 
-将给出存储 `x` 的 100 个整数所需的存储空间。
+将给出存储`x`的 100 个整数所需的存储空间。
 
-
-
-
-在任何使用 4 字节表示指针的系统上，都会产生值 4。事实上，这是 `sizeof` 对任何对象所得出的值，因为在这里你请求的是指向对象数据的指针的大小。要获取存储一个 `Fraction` 对象实例的实际数据结构的大小，你应该编写以下代码：
+在任何使用 4 字节表示指针的系统上，都会产生值 4。事实上，这是`sizeof`对任何对象所得出的值，因为在这里你请求的是指向对象数据的指针的大小。要获取存储一个`Fraction`对象实例的实际数据结构的大小，你应该编写以下代码：
 
 ```c
 sizeof (*myFract)
 ```
 
-在我的 MacBook Air 上，这得到了一个值 `12`。这意味着 `numerator` 和 `denominator` 各自占 4 字节，再加上 4 字节，用于本章末尾节“事物是如何工作原理”中提到的继承`isa`
-```
+在我的 MacBook Air 上，这得到了一个值`12`。这意味着`numerator`和`denominator`各自占 4 字节，再加上 4 字节，用于本章末尾节“事物是如何工作原理”中提到的继承`isa`值为存储一个`data_entry`结构体所需的存储空间。
 
-值为存储一个 `data_entry` 结构体所需的存储空间。如果 `data` 被定义为 `struct data_entry` 元素的数组，则表达式
+如果`data`被定义为`struct data_entry`元素的数组，则表达式：
 
 ```c
 sizeof (data) / sizeof (struct data_entry)
 ```
 
-给出 `data` 中包含的元素个数（`data` 必须是之前定义的数组，而不是形式参数或外部引用的数组）。表达式
+给出`data`中包含的元素个数（`data`必须是之前定义的数组，而不是形式参数或外部引用的数组）。表达式：
 
 ```c
 sizeof (data) / sizeof (data[0])
@@ -6679,19 +6243,21 @@ sizeof (data) / sizeof (data[0])
 
 产生相同的结果。
 
-尽可能到处使用 `sizeof` 运算符，以避免在程序中手动计算并硬编码大小。
+尽可能到处使用`sizeof`运算符，以避免在程序中手动计算并硬编码大小。
 
 ## 命令行参数
 
 通常情况下，开发出的程序需要用户在终端输入少量的信息。这些信息可能包含一个指示你想要计算的三角形数的数字，或者一个你想要在字典中查找的单词。
 
-与其让程序向用户请求这类信息，你可以在程序执行时直接向程序提供这些信息。`命令行参数`提供了这种能力。
+与其让程序向用户请求这类信息，你可以在程序执行时直接向程序提供这些信息。命令行参数提供了这种能力。
 
-我们已经指出，`main` 函数的唯一特殊之处是它的名称是特殊的；它指定了程序执行的起始位置。事实上，运行时系统实际上会在程序执行开始时调用 `main` 函数，就像你在你自己的程序内部调用函数一样。当 `main` 完成执行时，控制权返回给运行时系统，此时系统就知道你的程序已经完成。
+我们已经指出，`main`函数的唯一特殊之处是它的名称是特殊的；它指定了程序执行的起始位置。事实上，运行时系统实际上会在程序执行开始时调用`main`函数，就像你在你自己的程序内部调用函数一样。当`main`完成执行时，控制权返回给运行时系统，此时系统就知道你的程序已经完成。
 
-当运行时系统调用 `main` 时，会有两个参数传递给该函数。第一个参数按照惯称为 `argc`（代表 `argument` `c`ount），是一个整数值，指定了在命令行上输入的参数数量。`main` 的第二个参数是一个字符指针数组，按照惯称为 `argv`（代表 `arg`ument `v`ector）。此外，该数组中包含 `argc` + 1 个字符指针。数组中的第一个条目是指向正在执行的程序名称的指针，如果系统中无法获取程序名称，则指向一个空字符串指针。数组中的后续条目指向启动程序执行的同一行命令中指定的值。`argv` 数组中的最后一个指针 `argv[argc]` 被定义为空。
+当运行时系统调用`main`时，会有两个参数传递给该函数。第一个参数按照惯称为`argc`（代表`argument count`），是一个整数值，指定了在命令行上输入的参数数量。`main`的第二个参数是一个字符指针数组，按照惯称为`argv`（代表`argument vector`）。此外，该数组中包含`argc + 1`个字符指针。
 
-要访问命令行参数，`main` 函数必须恰当地声明为接收两个参数。我们在书中所有程序中所使用的惯用声明已经足够：
+数组中的第一个条目是指向正在执行的程序名称的指针，如果系统中无法获取程序名称，则指向一个空字符串指针。数组中的后续条目指向启动程序执行的同一行命令中指定的值。`argv`数组中的最后一个指针`argv[argc]`被定义为空。
+
+要访问命令行参数，`main`函数必须恰当地声明为接收两个参数。我们在书中所有程序中所使用的惯用声明已经足够：
 
 ```c
 int main (int argc, char * argv[])
@@ -6700,7 +6266,7 @@ int main (int argc, char * argv[])
 }
 ```
 
-记住，`argv` 的声明定义了一个包含“指向 `char` 指针”类型元素的数组。命令行参数的一个实际用途是，假设你开发了一个在字典中查找单词并打印其含义的程序。你可以使用命令行参数，以便在程序执行的同时指定你想要查找含义的单词，如下例命令所示：
+记住，`argv`的声明定义了一个包含“指向`char`指针”类型元素的数组。命令行参数的一个实际用途是，假设你开发了一个在字典中查找单词并打印其含义的程序。你可以使用命令行参数，以便在程序执行的同时指定你想要查找含义的单词，如下例命令所示：
 
 ```bash
 lookup aerie
@@ -6708,9 +6274,9 @@ lookup aerie
 
 这消除了程序提示用户输入单词的需要，因为单词是在命令行上输入的。
 
-如果执行了上一个命令，系统会自动将指向字符串 `"aerie"` 的指针通过 `argv[1]` 传递给 `main` 函数。回想，`argv[0]` 将包含指向程序名称的指针，在这种情况下，它是 `"lookup"`。
+如果执行了上一个命令，系统会自动将指向字符串`"aerie"`的指针通过`argv[1]`传递给`main`函数。回想，`argv[0]`将包含指向程序名称的指针，在这种情况下，它是`"lookup"`。
 
-`main` 例程可能如下所示：
+`main`例程可能如下所示：
 
 ```c
 #include <Foundation/Foundation.h>
@@ -6729,41 +6295,39 @@ int main (int argc, char * argv[])
 }
 ```
 
+该结构的一个继承成员（它源自于根对象）是一个名为`isa`的受保护成员，用于标识对象所属的类。由于它是结构的一部分（因此，也是对象的一部分），它会随着对象一起移动。通过这种方式，运行时系统始终可以通过查看其`isa`成员来识别对象的类类型（即使你将其赋值给一个通用的`id`对象变量）。
 
+你可以通过将对象的结构成员设置为`@public`来直接访问它们（请参见第 10 节中的讨论）。例如，如果你对`Fraction`类中的`numerator`和`denominator`成员这样做，你就可以在程序中编写诸这样的表达式：
 
-该结构的一个继承成员（它源自于根对象）是一个名为 `isa` 的受保护成员，用于标识对象所属的类。由于它是结构的一部分（因此，也是对象的一部分），它会随着对象一起移动。通过这种方式，运行时系统始终可以通过查看其 `isa` 成员来识别对象的类类型（即使你将其赋值给一个通用的 `id` 对象变量）。
-
-你可以通过将对象的结构成员设置为 `@public` 来直接访问它们（请参见第 10 节中的讨论）。例如，如果你对 `Fraction` 类中的 `numerator` 和 `denominator` 成员这样做，你就可以在程序中编写诸这样的表达式：
-
-```
+```objc
 myFract->numerator
 ```
 
-来直接访问 `Fraction` 对象 `myFract` 的 `numerator` 成员。但我们强烈建议不要这样做。正如我们在第 10 节中所提到的，这违反了数据封装的原则。
+来直接访问`Fraction`对象`myFract`的`numerator`成员。但我们强烈建议不要这样做。正如我们在第 10 节中所提到的，这违反了数据封装的原则。
 
 ### 事实 #2：对象变量实际上是指针
 
-当你定义一个像 `Fraction` 这样的对象变量时：
+当你定义一个像`Fraction`这样的对象变量时：
 
-```
+```objc
 Fraction *myFract;
 ```
 
-你实际上定义了一个名为 `myFract` 的指针变量。该变量被定义为指向 `Fraction` 类型的内容，这是你的类名。当你分配一个新的 `Fraction` 实例时：
+你实际上定义了一个名为`myFract`的指针变量。该变量被定义为指向`Fraction`类型的内容，这是你的类名。当你分配一个新的`Fraction`实例时：
 
-```
+```objc
 myFract = [Fraction alloc];
 ```
 
-你正在内存中分配一段空间来存储一个新的 `Fraction` 对象（即存储结构的空间），然后将返回的该结构的指针存储在指针变量 `myFract` 中。
+你正在内存中分配一段空间来存储一个新的`Fraction`对象（即存储结构的空间），然后将返回的该结构的指针存储在指针变量`myFract`中。
 
 当你将一个对象变量赋值给另一个时，例如：
 
-```
+```objc
 myFract2 = myFract1;
 ```
 
-你仅仅是在复制指针。两个变量最终都指向存储在内存某处的同一个结构。因此，对 `myFract2` 引用（即指向）的某个成员进行更改，就会改变 `myFract1` 引用的同一个实例变量（即结构成员）。
+你仅仅是在复制指针。两个变量最终都指向存储在内存某处的同一个结构。因此，对`myFract2`引用（即指向）的某个成员进行更改，就会改变`myFract1`引用的同一个实例变量（即结构成员）。
 
 ### 事实 #3：方法是函数，而消息表达式是函数调用
 
@@ -6771,22 +6335,26 @@ myFract2 = myFract1;
 
 ### 事实 #4：`id` 类型是一种通用指针类型
 
-由于对象是通过指针（指针仅仅是内存地址）引用的，因此你可以自由地在 `id` 变量之间进行赋值。因此，返回 `id` 类型的方法实际上返回的是指向内存中某个对象的指针。然后你可以将该值赋值给任何对象变量。由于对象无论去哪里都携带其 `isa` 成员，因此它的类始终可以被识别，即使你将其存储在类型为 `id` 的通用对象变量中。
+由于对象是通过指针（指针仅仅是内存地址）引用的，因此你可以自由地在`id`变量之间进行赋值。因此，返回`id`类型的方法实际上返回的是指向内存中某个对象的指针。然后你可以将该值赋值给任何对象变量。由于对象无论去哪里都携带其`isa`成员，因此它的类始终可以被识别，即使你将其存储在类型为`id`的通用对象变量中。
 
-### 练习
+## 练习
 
 1. **编写一个函数，计算包含 10 个浮点数的数组的平均值并返回结果。**
 
-2. **你的 `Fraction` 类中的 `reduce` 方法寻找分子和分母的最大公约数来约约分数。修改该方法，使其使用程序 13.5 中的 `gcd` 函数。你认为应该将函数定义放在哪里？将函数设置为 `static` 有什么好处吗？你认为哪种方法更好，使用 `gcd` 函数还是像之前那样将代码直接整合到方法中？为什么？**
+2. **你的`Fraction`类中的`reduce`方法寻找分子和分母的最大公约数来约约分数。修改该方法，使其使用程序 13.5 中的`gcd`函数。你认为应该将函数定义放在哪里？将函数设置为`static`有什么好处吗？你认为哪种方法更好，使用`gcd`函数还是像之前那样将代码直接整合到方法中？为什么？**
 
-3. **名为*埃拉斯特尼筛*（Sieve of Erasthenes）的算法可以生成质数。该过程的算法所示。编写一个实现该算法的程序。让程序找到直到 `n` = 150 的质数。与文中用于计算质数的方法相比，你对此算法有什么评价？
+3. **名为埃拉斯特尼筛（Sieve of Erasthenes）的算法可以生成质数。该过程的算法所示。编写一个实现该算法的程序。让程序找到直到`n = 150`的质数。与文中用于计算质数的方法相比，你对此算法有什么评价？**
 
-    - 步骤 1：定义一个整数数组 `P`。将所有元素 `P[i]` 设置为 `0`，`2 <= i <= n`。
-    - 步骤 2：将 `i` 设置为 2。
-    - 步骤 3：如果 `i > n`，算法终止。
-    - 步骤 4：如果 `P(i)` 为 `0`，则 `i` 是质数。
-    - 步骤 5：对于所有满足 `i*j<=n` 的正整数 `j`，将 `P[i*j]` 设置为 1。
-    - 步骤 6：将 `i` 加 1 并回到步骤 3。
+   - 步骤 1：定义一个整数数组`P`。将所有元素`P[i]`设置为`0`，`2 <= i <= n`。
+   - 步骤 2：将`i`设置为 2。
+   - 步骤 3：如果`i > n`，算法终止。
+   - 步骤 4：如果`P(i)`为`0`，则`i`是质数。
+
+
+
+- 步骤 5：对于所有满足 `i*j<=n` 的正整数 `j`，将 `P[i*j]` 设置为 1。
+
+- 步骤 6：将 `i` 加 1 并回到步骤 3。
 
 4. **编写一个函数，将传递给它的数组中的所有 `Fractions` 相并并 `Fraction` 类型返回结果。**
 
@@ -6808,21 +6376,24 @@ int x = 100;
 
 确定以下 `NSLog` 调用是否有效，以及是否产生相同的输出。
 
-    `/*** set 1 ***`
+`/*** set 1 ***`
+
 ```
 NSLog (@"Programming in Objective-C is fun");
 NSLog("%s", "Programming in Objective-C is fun");
 NSLog("%s", message);
 ```
 
-    `/*** set 2 ***`
+`/*** set 2 ***`
+
 ```
 NSLog (@You said it");
 NSLog("%s", message2);
 NSLog("%s", &message2[0]);
 ```
 
-    `/*** set 3 ***`
+`/*** set 3 ***`
+
 ```
 NSLog (@said it");
 NSLog("%s", message2 + 4);
@@ -6845,9 +6416,6 @@ NSLog (@@", "This is a test");
 ```
 
 10. **将程序 13.14 中的 `exchange` 函数重写为块并进行测试。**
-
-
-
 
 Application Kit 框架包含了大量的类和方法，用于开发交互式图形应用程序。这些方法提供了轻松处理文本、菜单、工具栏、表格、文档、剪贴板和窗口的能力。在 Mac OS X 中，`Cocoa` 一词统指 `Foundation` 框架、`Application Kit` 框架以及名为 `Core Data` 的第三个框架。Cocoa Touch 则统指 `Foundation`、`Core Data` 和 `UIKit` 框架。第三部分“Cocoa、Cocoa Touch 与 iOS SDK”对该主题提供了更多详细信息。
 
@@ -6884,10 +6452,6 @@ Application Kit 框架包含了大量的类和方法，用于开发交互式图�
 ## 15. 数字、字符串和集合
 
 本章描述了如何处理 `Foundation` 框架提供的一些基本对象。这些包括数字、字符串和集合，集合指的是以数组、字典和集合的形式处理对象组的能力。
-
-
-
-
 
 > `第一个数字小于第二个数字`
 
@@ -6968,6 +6532,7 @@ NSNumber *myNumber = [[NSNumber alloc] initWithInt: 50];
 为了确保你理解使用 `numberWithInt:` 与 `numberWithInteger:` 的区别，请遵循以下规则：
 
 1. 如果你使用 `numberWithInt:` 创建一个整数，你应该使用 `intValue` 检索其值，并可以使用 `%i` 显示其值。
+
 2. 如果你使用 `numberWithInteger:` 创建一个整数，你应该使用 `longValue` 检索其值，并可以使用 `%li` 显示。
 
 ### 字符串对象
@@ -7021,10 +6586,6 @@ NSString *str = @"Programming is fun";
 
 `NSLog` 的格式化字符 `%@` 不仅可以显示 `NSString` 对象，还可以显示其他对象。例如，给定以下
 
-
-
-
-
 ```objective
 NSNumber *intNumber = [NSNumber numberWithInteger: 100];
 ```
@@ -7055,6 +6616,7 @@ NSLog (@"%@", intNumber);
 ```
 
 > **注意**
+
 > 方法如 `stringWithFormat:` 等允许提供任意数量的参数（在这种情况下为格式化字符串和要格式化的数据）。这些参数以逗号分隔的值列表的形式提供给方法。
 
 在你的 `Fraction` 类中定义了该方法（并适当设置了两个 `Fraction` 对象 `f1` 和 `f2`）后，你可以在程序中编写如下的语句：
@@ -7080,8 +6642,11 @@ The sum of 1/2 and 1/4 is 3/4
 
 ### 程序 15.3
 
+
+
+### 基础字符串操作
+
 ```objective
-// 基础字符串操作
 #import <Foundation/Foundation.h>
 
 int main (int argc, char * argv[])
@@ -7133,7 +6698,7 @@ int main (int argc, char * argv[])
 
 ### 程序 15.3 输出
 
-```
+```text
 Length of str1: 16
 Copy: This is string A
 Concatentation: This is stringAB
@@ -7144,46 +6709,42 @@ Lowercase conversion: this is a
 Original string: This is string A
 ```
 
-程序 15.3 声明了三个不可变的 `NSString` 对象：`str1`、`str2` 和 `res`。前两个初始化为常量字符串对象。语句 `NSComparisonResult compareResult;` 声明了 `compareResult` 用于存储稍稍后执行的字符串比较的结果。
+程序 15.3 声明了三个不可变的`NSString`对象：`str1`、`str2`和`res`。前两个初始化为常量字符串对象。语句`NSComparisonResult compareResult;`声明了`compareResult`用于存储稍后执行的字符串比较的结果。
 
-你可以使用 `length` 方法计算字符串中的字符数。它返回一个类型为 `NSUInteger` 的无符号整数。输出验证了字符串 `@"This is string A"` 包含 16 个字符。语句 `res = [NSString stringWithString: str1];` 显示了如何根据另一个的内容创建一个新的字符串。生成的 `NSString` 对象被赋值给 `res`，然后显示以验证结果。在这里是对字符串内容的实际拷贝，而不仅仅是内存中的另一个引用。这意味着 `str1` 和 `res` 指向两个不同的字符串对象，这与简单执行如下赋值 `res = str1;` 不同。正如我们之前讨论过的，该语句只会创建内存中的另一个引用。
+你可以使用`length`方法计算字符串中的字符数。它返回一个类型为`NSUInteger`的无符号整数。输出验证了字符串`@"This is string A"`包含 16 个字符。语句`res = [NSString stringWithString: str1];`显示了如何根据另一个的内容创建一个新的字符串。生成的`NSString`对象被赋值给`res`，然后显示以验证结果。在这里是对字符串内容的实际拷贝，而不仅仅是内存中的另一个引用。这意味着`str1`和`res`指向两个不同的字符串对象，这与简单执行如下赋值`res = str1;`不同。正如我们之前讨论过的，该语句只会创建内存中的另一个引用。
 
-`stringByAppendingString:` 方法可以连接两个字符串。因此，表达式 `[str1 stringByAppendingString: str2]` 创建了一个新的字符串对象，由 `str1` 后面接 `str2` 组成。原始字符串对象 `str1` 和 `str2` 不受此操作的影响（它们无法被更改，因为都是不可变字符串对象）。
+`stringByAppendingString:`方法可以连接两个字符串。因此，表达式`[str1 stringByAppendingString: str2]`创建了一个新的字符串对象，由`str1`后面接`str2`组成。原始字符串对象`str1`和`str2`不受此操作的影响（它们无法被更改，因为都是不可变字符串对象）。
 
-程序接下来使用 `isEqualToString:` 方法来测试两个字符字符串是否相等——即它们是否包含相同的字符。如果你需要确定两个字符字符串的顺序，可以使用 `compare:` 方法——例如，如果你想对它们的数组进行排序。与你之前比较两个 `NSNumber` 对象时使用的 `compare:` 方法类似，比较的结果如果第一个字符串在字典序上小于第二个字符串，则为 `NSOrderedAscending`；如果两个字符串相等，则为 `NSOrderedSame`；如果第一个字符串在字典序上大于第二个字符串，则为 `NSOrderedDescending`。如果你不想执行区分大小写的比较，请使用 `caseInsensitiveCompare:` 方法代替 `compare:` 来比较两个字符串。
+程序接下来使用`isEqualToString:`方法来测试两个字符串是否相等——即它们是否包含相同的字符。如果你需要确定两个字符串的顺序，可以使用`compare:`方法——例如，如果你想对它们的数组进行排序。与你之前比较两个`NSNumber`对象时使用的`compare:`方法类似，比较的结果如果第一个字符串在字典序上小于第二个字符串，则为`NSOrderedAscending`；如果两个字符串相等，则为`NSOrderedSame`；如果第一个字符串在字典序上大于第二个字符串，则为`NSOrderedDescending`。如果你不想执行区分大小写的比较，请使用`caseInsensitiveCompare:`方法代替`compare:`来比较两个字符串。
 
-
-
-
-
-请确保你理解 `str1` 和 `str2` 被声明为不可变字符串对象，这意味着它们引用的字符串对象中的字符不能更改。然而，引用 `str1` 和 `str2` **是可以被更改的**。也就是说，这两个变量可以重新赋值以引用不同的不可变字符串对象。这是一个非常重要的点。让我们再次通过图表来看这一点。图 15.1 显示了变量 `res` 和 `str1` 刚声明并初始化后的状态。变量 `res` 没有设置任何初始值，因此它的内容显示为空。另一方面，`str1` 被设置为指向存储在内存某处的常量字符字符串对象 `@"This is string A"`。
+请确保你理解`str1`和`str2`被声明为不可变字符串对象，这意味着它们引用的字符串对象中的字符不能更改。然而，引用`str1`和`str2`**是可以被更改的**。也就是说，这两个变量可以重新赋值以引用不同的不可变字符串对象。这是一个非常重要的点。让我们再次通过图表来看这一点。图 15.1 显示了变量`res`和`str1`刚声明并初始化后的状态。变量`res`没有设置任何初始值，因此它的内容显示为空。另一方面，`str1`被设置为指向存储在内存某处的常量字符字符串对象`@"This is string A"`。
 
 图 15.1. 不可变字符串对象的声明和初始化
 
 ![Image](img/00056.jpg)
 
-当我们向程序 15.3 中的 `str1` 发送 `uppercaseString` 消息时，我们将根据字符 `str1` 创建一个新的字符串，其中字符串对象中的任何小写字母都被替换为大写字母。这在图 15.2 中所示。
+当我们向程序 15.3 中的`str1`发送`uppercaseString`消息时，我们将根据字符`str1`创建一个新的字符串，其中字符串对象中的任何小写字母都被替换为大写字母。这在图 15.2 中所示。
 
-图 15.2. 向字符串对象发送 `uppercaseString` 消息
+图 15.2. 向字符串对象发送`uppercaseString`消息
 
 ![Image](img/00057.jpg)
 
-注意 `str1` 仍然指向原始字符串对象，并且创建了一个字符串对象。
+注意`str1`仍然指向原始字符串对象，并且创建了一个新的字符串对象。
 
-向 `str1` 发送 `lowercaseString` 消息的方式相同：创建一个新的字符串对象，它由 `str1` 中的所有大写字母转换为小写字母组成。然后将该新创建的字符串对象的引用存储在变量 `res` 中。这在图 15.3 中所示。注意，不再有对上一步创建的大写字符串的引用。你不需要担心这一点；系统的内存管理会为你清理它。
+向`str1`发送`lowercaseString`消息的方式相同：创建一个新的字符串对象，它由`str1`中的所有大写字母转换为小写字母组成。然后将该新创建的字符串对象的引用存储在变量`res`中。这在图 15.3 中所示。注意，不再有对上一步创建的大写字符串的引用。你不需要担心这一点；系统的内存管理会为你清理它。
 
-图 15.3. 向字符串对象发送 `lowercaseString` 消息 
+图 15.3. 向字符串对象发送`lowercaseString`消息
 
 ![Image](img/00058.jpg)
 
 程序 15.4 说明了处理字符串的其他方法。这些方法允许你从字符串中提取子字符串，并可以在一个字符串中搜索另一个字符串的出现情况。
 
-某些方法要求你通过指定范围来识别子字符串。一个 `range` 由一个起始索引数字加上字符计数组成。索引从零开始，因此字符串中的前三个字符将通过数字对 `{ 0, 3}` 指定。`NSString` 类（以及其他 Foundation 类）的某些方法使用特殊数据类型 `NSRange` 来创建范围规范。它实际上是一个结构体的 `typedef` 定义，该结构体有两个成员：`location` 和 `length`，每个成员都被定义为类型 `NSUinteger`。[程序 15.4] 使用了这种数据类型。
+某些方法要求你通过指定范围来识别子字符串。一个`range`由一个起始索引数字加上字符计数组成。索引从零开始，因此字符串中的前三个字符将通过数字对`{ 0, 3}`指定。`NSString`类（以及其他 Foundation 类）的某些方法使用特殊数据类型`NSRange`来创建范围规范。它实际上是一个结构体的`typedef`定义，该结构体有两个成员：`location`和`length`，每个成员都被定义为类型`NSUinteger`。程序 15.4 使用了这种数据类型。
 
 > **注意**
 > 你可以在第 13 章中的“底层 C 语言特性”中阅读关于结构的知识。不过，你可能在本章接下来的讨论中获得足够处理它们的信息。
 
-程序 15.4
+### 程序 15.4
 
 ```c
 // 基础字符串操作 – 继续
@@ -7228,7 +6789,7 @@ int main (int argc, char * argv[])
 }
 ```
 
-程序 15.4 输出
+### 程序 15.4 输出
 
 ```text
 First 3 chars of str1: Thi
@@ -7239,17 +6800,30 @@ String is at index 12, length 9
 String found
 ```
 
+`NSMutableString`类可以用于创建字符可以更改的字符串对象。由于该类是`NSString`的子类，因此也可以使用`NSString`的所有方法。
+
+当我们谈论可变与不可变字符串对象时，我们谈论的是更改字符串内部的实际字符。在程序执行期间，可变或不可变的字符串对象都可以被设置为一个完全不同的字符串对象。这一点在对程序 15.3 的讨论中已经强调过。因此，例如，考虑以下代码：
+
+```objective
+str1 = @"This is a string";
+...
+str1 = [str1 substringFromIndex: 5];
+```
+
+在这种情况下，`str1`首先被赋值为一个常量字符字符串对象。在程序的稍后部分，它被赋值为一个子字符串。在这种情况下，`str1`既可以声明为可变字符串对象，也可以声明为不可变字符串对象。请务必理解这一点。
+
+### 程序 15.5
 
 
-
-[content]
 
 `NSMutableString` 类可以用于创建字符可以更改的字符串对象。由于该类是 `NSString` 的子类，因此也可以使用 `NSString` 的所有方法。
 
-当我们谈论可变与不可变字符串对象时，我们谈论的是更改字符串内部的实际字符。在程序执行期间，可变或不可变的字符串对象都可以被设置为一个完全不同的字符串对象。这一点在对 程序 15.3 的讨论中已经强调过。因此，例如，考虑以下代码：
+当我们谈论可变与不可变字符串对象时，我们谈论的是更改字符串内部的实际字符。在程序执行期间，可变或不可变的字符串对象都可以被设置为一个完全不同的字符串对象。这一点在对程序 15.3 的讨论中已经强调过。因此，例如，考虑以下代码：
 
 > `str1 = @"This is a string";`
-> `   ...`
+
+> `...`
+
 > `str1 = [str1 substringFromIndex: 5];`
 
 在这种情况下，`str1` 首先被赋值为一个常量字符字符串对象。在程序的稍后部分，它被赋值为一个子字符串。在这种情况下，`str1` 既可以声明为可变字符串对象，也可以声明为不可变字符串对象。请务必理解这一点。
@@ -7265,311 +6839,86 @@ String found
 
 int main (int argc, char * argv[])
 {
-       @autoreleasepool {
-               NSString  *str1 = @"This is string A";
-               NSString  *search, *replace;
-               NSMutableString  *mstr;
-               NSRange  substr;
+    @autoreleasepool {
+        NSString  *str1 = @"This is string A";
+        NSString  *search, *replace;
+        NSMutableString  *mstr;
+        NSRange  substr;
 
-               // 从不可变字符串创建可变字符串
+        // 从不可变字符串创建可变字符串
 
-               mstr = [NSMutableString  stringWithString: str1];
-               NSLog (@"%@", mstr);
+        mstr = [NSMutableString  stringWithString: str1];
+        NSLog (@"%@", mstr);
 
-               // 插入字符
+        // 插入字符
 
-               [mstr insertString: @" mutable" atIndex: 7];
-               NSLog (@"%@", mstr);
+        [mstr insertString: @" mutable" atIndex: 7];
+        NSLog (@"%@", mstr);
 
-               // 如果在末尾插入，则是有效的拼接
+        // 如果在末尾插入，则是有效的拼接
 
-               [mstr insertString: @" and string B" atIndex: [mstr length]];
-               NSLog (@"%@", mstr);
+        [mstr insertString: @" and string B" atIndex: [mstr length]];
+        NSLog (@"%@", mstr);
 
-               // 或者可以直接使用 appendString
+        // 或者可以直接使用 appendString
 
-               [mstr appendString: @" and string C"];
-               NSLog (@"%@", mstr);
+        [mstr appendString: @" and string C"];
+        NSLog (@"%@", mstr);
 
-               // 根据范围删除子字符串
+        // 根据范围删除子字符串
 
-               [mstr deleteCharactersInRange: NSMakeRange (16, 13)];
-               NSLog (@"%@", mstr);
+        [mstr deleteCharactersInRange: NSMakeRange (16, 13)];
+        NSLog (@"%@", mstr);
 
-               // 先找到范围，然后将其用于删除
+        // 先找到范围，然后将其用于删除
 
-               substr = [mstr  rangeOfString: @"string B and "];
+        substr = [mstr  rangeOfString: @"string B and "];
 
-               if (substr.location != NSNotFound) {
-                       [mstr deleteCharactersInRange: substr];
-                       NSLog (@"%@", mstr);
-        }
-               // 直接设置可变字符串
-
-               [mstr setString: @"This is string A"];
-               NSLog (@"%@", mstr);
-
-               // 现在让我们用另一个字符串替换一段字符
-
-               [mstr replaceCharactersInRange: NSMakeRange(8, 8)
-                                     withString: @"a mutable string"];
-               NSLog (@"%@", mstr);
-
-               // 查找并替换
-
-               search = @"This is";
-               replace = @"An example of";
-               substr = [mstr rangeOfString: search];
-
-               if (substr.location != NSNotFound) {
-                        [mstr replaceCharactersInRange: substr
-                                            withString: replace];
-                         substr = [mstr rangeOfString: search];
+        if (substr.location != NSNotFound) {
+            [mstr deleteCharactersInRange: substr];
+            NSLog (@"%@", mstr);
         }
 
-               NSLog (@"%@", mstr);
-                     // 查找并替换所有
-                  search = @"This is";
-                  replace = @"An example of";
-                  substr = [mstr rangeOfString: search];
+        // 直接设置可变字符串
 
-                  while (substr.location != NSNotFound) {
-                          [mstr replaceCharactersInRange: substr
-                                            withString: replace];
-                           substr = [mstr rangeOfString: search];
+        [mstr setString: @"This is string A"];
+        NSLog (@"%@", mstr);
+
+        // 现在让我们用另一个字符串替换一段字符
+
+        [mstr replaceCharactersInRange: NSMakeRange(8, 8)
+                         withString: @"a mutable string"];
+        NSLog (@"%@", mstr);
+
+        // 查找并替换
+
+        search = @"This is";
+        replace = @"An example of";
+        substr = [mstr rangeOfString: search];
+
+        if (substr.location != NSNotFound) {
+            [mstr replaceCharactersInRange: substr
+                                withString: replace];
+            substr = [mstr rangeOfString: search];
         }
 
-                     NSLog (@"%@", mstr);
-                  }return 0;
+        NSLog (@"%@", mstr);
+
+        // 查找并替换所有
+
+        search = @"This is";
+        replace = @"An example of";
+        substr = [mstr rangeOfString: search];
+
+        while (substr.location != NSNotFound) {
+            [mstr replaceCharactersInRange: substr
+                                withString: replace];
+            substr = [mstr rangeOfString: search];
+        }
+
+        NSLog (@"%@", mstr);
     }
-}
-```
-
-### 程序 15.5 输出
-
-```
-This is string A
-This is mutable string A
-This is mutable string A and string B
-This is mutable string A and string C
-This is mutable string C
-This is string A
-This is a mutable string
-An example of a mutable string
-An example of X string
-```
-
-`NSMutableString` 类可以用于创建字符可以更改的字符串对象。由于该类是 `NSString` 的子类，因此也可以使用 `NSString` 的所有方法。
-
-当我们谈论可变与不可变字符串对象时，我们谈论的是更改字符串内部的实际字符。在程序执行期间，可变或不可变的字符串对象都可以被设置为一个完全不同的字符串对象。这一点在对 程序 15.3 的讨论中已经强调过。因此，例如，考虑以下代码：
-
-> `str1 = @"This is a string";`
-> `   ...`
-> `str1 = [str1 substringFromIndex: 5];`
-
-在这种情况下，`str1` 首先被赋值为一个常量字符字符串对象。在程序的稍后部分，它被赋值为一个子字符串。在这种情况下，`str1` 既可以声明为可变字符串对象，也可以声明为不可变字符串对象。请务必理解这一点。
-
-程序 15.5 显示了在程序中处理可变字符串的一些方法。
-
-### 程序 15.5
-
-```objc
-// 基础字符串操作 - 可变字符串
-
-#import <Foundation/Foundation.h>
-
-int main (int argc, char * argv[])
-{
-       @autoreleasepool {
-               NSString  *str1 = @"This is string A";
-               NSString  *search, *replace;
-               NSMutableString  *mstr;
-               NSRange  substr;
-
-               // 从不可变字符串创建可变字符串
-
-               mstr = [NSMutableString  stringWithString: str1];
-               NSLog (@"%@", mstr);
-
-               // 插入字符
-
-               [mstr insertString: @" mutable" atIndex: 7];
-               NSLog (@"%@", mstr);
-
-               // 如果在末尾插入，则是有效的拼接
-
-               [mstr insertString: @" and string B" atIndex: [mstr length]];
-               NSLog (@"%@", mstr);
-
-               // 或者可以直接使用 appendString
-
-               [mstr appendString: @" and string C"];
-               NSLog (@"%@", mstr);
-
-               // 根据范围删除子字符串
-
-               [mstr deleteCharactersInRange: NSMakeRange (16, 13)];
-               NSLog (@"%@", mstr);
-
-               // 先找到范围，然后将其用于删除
-
-               substr = [mstr  rangeOfString: @"string B and "];
-
-               if (substr.location != NSNotFound) {
-                       [mstr deleteCharactersInRange: substr];
-                       NSLog (@"%@", mstr);
-}
-               // 直接设置可变字符串
-
-               [mstr setString: @"This is string A"];
-               NSLog (@"%@", mstr);
-
-               // 现在让我们用另一个字符串替换一段字符
-
-         [mstr replaceCharactersInRange: NSMakeRange(8, 8)
-                                     withString: @"a mutable string"];
-               NSLogNSLog�� m m););                       // 查找并替换
-
-               search = @"This is";
-               replace = @"An example of";
-               substr = [mstr rangeOfString: search];
-
-               if (substr.location != NSNotFound) {
-                       [mstr replaceCharactersInRange: substr
-                                          withString: replace];
-                         substr = [mstr rangeOfString: search];
-        }
-
-               NSLog�� m mstr);
-                   // 查找并替换所有
-                    search = @"This is";
-                    replace = @"An example of";
-                    substr = [mstr rangeOfString: search];
-
-                  whilewhile (while (substr.location != {
-) {
-                          [mstr replaceCharactersInRange: substr
-                                            :withString: replace];
-                          substr = [mstr rangeOfString: search];
-        }
-
-                      m mstr);
-        �����������������������}return 0;
-    }
-}
-```
-
-### 程序 15.5 输出
-
-```
-This is string A
-This is mutable string A
-This is mutable string A and string B
-This is mutable string A and string C
-This is mutable string C
-This is string A
-This is a mutable string
-An example of a mutable string
-An example of X string
-```
-
-### Figure 15.4. Indexing into a string
-
-![Image](img/00059.jpg)
-
-[/content] (Note: The source text provided in the prompt had some formatting artifacts/repetitions in the code block section which have been cleaned up in the translation to ensure clarity while maintaining the logic). 
-
-Wait, looking at the prompt's provided text to be translated, the code block block was gar garbledbled (e..g `NSLogNSLogNSLog m m ` ` ` ` ` ` ` the the the the the the the that matched the the the the the logic of the source text, the the the the the the the the the..
-
-** text. I have re-generated the clean translation below.
-
-[content]
-`NSMutableString` 类可以用于创建字符可以更改的字符串对象。由于该类是 `NSString` 的子类，因此也可以使用 `NSString` 的所有方法。
-
-当我们谈论可变与不可变字符串对象时，我们谈论的是更改字符串内部的实际字符。在程序执行期间，可变或不可变的字符串对象都可以被设置为一个完全不同的字符串对象。这一点在对 程序 15.3 的讨论中已经强调过。因此，例如，考虑以下代码：
-
-> `str1 = @"This is a string";`
-> `   ...`
-> `str1 = [str1 substringFromIndex: 5];`
-
-在这种情况下，`str1` 首先被赋值为一个常量字符字符串对象。在程序的稍后部分，它被赋值为一个子字符串。在这种情况下，`str1` 既可以声明为可变字符串对象，也可以声明为不可变字符串对象。请务必理解这一点。
-
-程序 15.5 显示了在程序中处理可变字符串的一些方法。
-
-### 程序 15.5
-
-```objc
-// 基础字符串操作 - 可变字符串
-
-#import <Foundation/Foundation.h>
-
-int main (int argc, char * argv[])
-{
-       @autoreleasepool {
-               NSString  *str1 = @"This is string A";
-               NSString  *search, *replace;
-               NSMutableString  *mstr;
-               NSRange  substr;
-
-               // 从不可变字符串创建可变字符串
-
-               mstr = [NSMutableString  stringWithString: str1];
-               NSLog (@"%@", mstr);
-
-               // 插入字符
-
-               [mstr insertString: @" mutable" atIndex: 7];
-               NSLog (@"%@", mstr);
-
-               // 如果在末尾插入，则是有效的拼接
-
-               [mstr insertString: @" and string B" atIndex: [mstr length]];
-               NSLog (@"%@", mstr);
-
-               // 或者可以直接使用 appendString
-
-               [mstr appendString: @" and string C"];
-               NSLog (@"%@", mstr);
-
-               // 根据范围删除子字符串
-
-               [mstr deleteCharactersInRange: NSMakeRange (16, 13)];
-               NSLog (@"%@", mstr);
-
-               // 先找到范围，然后将其用于删除
-
-               substr = [mstr  rangeOfString: @"string B and "];
-
-               if (substr.location != NSNotFound) {
-                      [mstr deleteCharactersInRange: substr];
-                      NSLog (@"%@", mstr);
-}
-               // 直接设置可变字符串
-
-               [mstr setString: @"This is string A"];
-               NSLog (@"%@", mstr);
-
-               // 现在让我们用另一个字符串替换一段字符
-
-               [mstr replaceCharactersInRange: NSMakeRange(8, 8)
-                                   withString: @"a mutable string"];
-               NSLog (@"%@", mstr);
-
-               // 查找并替换
-
-               search = @"This is";
-               replace = @"An example of";
-            substr = [mstr rangeOfString: search];
-
-               if (substr.location != NSNotFound) {
-                       [mstr replaceCharactersInRange: substr
-                                        String: replace: replace];
-                        substr = [mstr rangeOfString: search];
-        }
-
-               NSLog (@"%@", mstr);
-          }
-    }
+    return 0;
 }
 ```
 
@@ -7594,41 +6943,124 @@ An example of X string
 
 
 
+```objc
+// 基础字符串操作 - 可变字符串
 
-当然，如果你只是想删除字符串中的某处出现，正如你已经看到的那样，可以使用 `deleteCharactersInRange:` 方法。
+#import <Foundation/Foundation.h>
 
-最后，`NSMutableString` 类还包含一个名为 `replaceOccurrencesOfString:withString:options:range:` 的方法，你可以用它对字符串进行查找并替换所有项。事实上，你可以用这单条语句来替换[程序 15.5]中的 `while` 循环：
+int main (int argc, char * argv[])
+{
+    @autoreleasepool {
+        NSString *str1 = @"This is string A";
+        NSString *search, *replace;
+        NSMutableString *mstr;
+        NSRange substr;
+
+        // 从不可变字符串创建可变字符串
+        mstr = [NSMutableString stringWithString: str1];
+        NSLog (@"%@", mstr);
+
+        // 插入字符
+        [mstr insertString: @" mutable" atIndex: 7];
+        NSLog (@"%@", mstr);
+
+        // 如果在末尾插入，则是有效的拼接
+        [mstr insertString: @" and string B" atIndex: [mstr length]];
+        NSLog (@"%@", mstr);
+
+        // 或者可以直接使用 appendString
+        [mstr appendString: @" and string C"];
+        NSLog (@"%@", mstr);
+
+        // 根据范围删除子字符串
+        [mstr deleteCharactersInRange: NSMakeRange (16, 13)];
+        NSLog (@"%@", mstr);
+
+        // 先找到范围，然后将其用于删除
+        substr = [mstr rangeOfString: @"string B and "];
+
+        if (substr.location != NSNotFound) {
+            [mstr deleteCharactersInRange: substr];
+            NSLog (@"%@", mstr);
+        }
+
+        // 直接设置可变字符串
+        [mstr setString: @"This is string A"];
+        NSLog (@"%@", mstr);
+
+        // 现在让我们用另一个字符串替换一段字符
+        [mstr replaceCharactersInRange: NSMakeRange(8, 8)
+                            withString: @"a mutable string"];
+        NSLog (@"%@", mstr);
+
+        // 查找并替换
+        search = @"This is";
+        replace = @"An example of";
+        substr = [mstr rangeOfString: search];
+
+        if (substr.location != NSNotFound) {
+            [mstr replaceCharactersInRange: substr
+                                 withString: replace];
+            substr = [mstr rangeOfString: search];
+        }
+
+        NSLog (@"%@", mstr);
+    }
+}
+```
+
+### 程序 15.5 输出
+
+```text
+This is string A
+This is mutable string A
+This is mutable string A and string B
+This is mutable string A and string C
+This is mutable string C
+This is string A
+This is a mutable string
+An example of a mutable string
+An example of X string
+```
+
+### 图 15.4. 字符串索引
+
+![Image](img/00059.jpg)
+
+当然，如果你只是想删除字符串中的某处出现，正如你已经看到的那样，可以使用`deleteCharactersInRange:`方法。
+
+最后，`NSMutableString`类还包含一个名为`replaceOccurrencesOfString:withString:options:range:`的方法，你可以用它对字符串进行查找并替换所有项。事实上，你可以用这单条语句来替换[程序 15.5]中的`while`循环：
 
 ```objc
 [mstr replaceOccurrencesOfString: search
-                          withString: replace
-                             options: nil
-                              range: NSMakeRange (0, [mstr length])];
+                      withString: replace
+                         options: nil
+                           range: NSMakeRange (0, [mstr length])];
 ```
 
 这实现了相同的结果，并避免了无限循环的可能性，因为该方法防止了此类情况的发生。
 
-`NSString` 类包含 100 多种可以与字符串配合的方法。[表 15.2] 总结了其中一些常用的方法，而[表 15.3] 列出了 `NSMutableString` 类提供的一些额外方法。其他一些 `NSString` 方法（例如处理路径名和将文件内容读取到字符串）将在本书的剩余部分向你介绍。你应该查看 `NSString` 类的文档，以更好地了解你可以使用的各种方法。
+`NSString`类包含 100 多种可以与字符串配合的方法。[表 15.2]总结了其中一些常用的方法，而[表 15.3]列出了`NSMutableString`类提供的一些额外方法。其他一些`NSString`方法（例如处理路径名和将文件内容读取到字符串）将在本书的剩余部分向你介绍。你应该查看`NSString`类的文档，以更好地了解你可以使用的各种方法。
 
 ### 表 15.2. 常用的 `NSString` 方法
 
 ![Image](img/00060.jpg)![Image](img/00061.jpg)
 
-在[表 15.2]和[15.3]中，`url` 是一个 `NSURL` 对象，`path` 是指定文件路径的 `NSString` 对象，`nsstring` 是一个 `NSString` 对象，`i` 是表示字符串中有效字符数的 `NSUInteger` 值，`enc` 是指定字符编码的 `NSStringEncoding` 对象，`err` 是发生错误时描述错误的 `NSError` 对象，`size` 和 `opts` 是 `NSUInteger`，而 `range` 是指示字符串内有效字符范围的 `NSRange` 结构。
+在[表 15.2]和[15.3]中，`url`是一个`NSURL`对象，`path`是指定文件路径的`NSString`对象，`nsstring`是一个`NSString`对象，`i`是表示字符串中有效字符数的`NSUInteger`值，`enc`是指定字符编码的`NSStringEncoding`对象，`err`是发生错误时描述错误的`NSError`对象，`size`和`opts`是`NSUInteger`，而`range`是指示字符串内有效字符范围的`NSRange`结构。
 
-[表 15.3]中的方法要么创建创建要么修改 `NSMutableString` 对象。
+[表 15.3]中的方法要么创建要么修改`NSMutableString`对象。
 
 ### 表 15.3. 常用的 `NSMutableString` 方法
 
 ![Image](img/00062.jpg)
 
-`NSString` 对象在本文的剩余部分被广泛使用。如果你需要将字符串解析为标记，可以查看 Foundation 的 `NSScanner` 类。
+`NSString`对象在本文的剩余部分被广泛使用。如果你需要将字符串解析为标记，可以查看 Foundation 的`NSScanner`类。
 
-### 数组对象
+## 数组对象
 
-Foundation 数组是对象的有序集合。大多数情况下，数组中的元素是某种特定类型，但并非强制要求。就像存在可变和不可变字符串一样，也有可变和不可变数组。*不可变*数组由 `NSArray` 类处理，而*可变*数组由 `NSMutableArray` 处理。后者是者的子类，这意味着它继承了前者的方法。
+Foundation 数组是对象的有序集合。大多数情况下，数组中的元素是某种特定类型，但并非强制要求。就像存在可变和不可变字符串一样，也有可变和不可变数组。*不可变*数组由`NSArray`类处理，而*可变*数组由`NSMutableArray`处理。后者是前者的子类，这意味着它继承了前者的方法。
 
-[程序 15.6] 设置了一个数组来存储全年的名称，然后打印出它们。
+[程序 15.6]设置了一个数组来存储全年的名称，然后打印出它们。
 
 ### 程序 15.6
 
@@ -7637,26 +7069,30 @@ Foundation 数组是对象的有序集合。大多数情况下，数组中的元
 
 int main (int argc, char * argv[])
 {
-    int    i;
+    int i;
+
     @autoreleasepool {
         // 创建一个包含月份的数组
         NSArray *monthNames = [NSArray arrayWithObjects:
-                                @"January", @"February", @"March",
-                                @"May", @"June", @"July", @"August",
-                                @"October", @"December", nil];
+                               @"January", @"February", @"March",
+                               @"May", @"June", @"July", @"August",
+                               @"October", @"December", nil];
+
         // 现在列出数组中的所有元素
-        NSLog ("Month Name");
-        NSLog ("=====");
+        NSLog (@"Month Name");
+        NSLog (@"=====");
+
         for (i = 0; i < 12; ++i)
-            NSLog (%d %@", i + 1, [monthNames objectAtIndex: i]);
+            NSLog (@"%d %@", i + 1, [monthNames objectAtIndex: i]);
     }
+
     return 0;
 }
 ```
 
 #### 程序 15.6 输出
 
-```
+```text
 Month Name
 =====
 1 January
@@ -7673,15 +7109,15 @@ Month Name
 12 December
 ```
 
-你可以使用类方法 `arrayWithObjects:` 来创建一个包含对象列表的数组。在这种情况下，对象按顺序列出并用逗号分隔。这种语法用于接受可变数量参数的方法。为了标记列表的结束，必须指定 `nil` 作为最后一个值——它并不会存储在数组内部。
+你可以使用类方法`arrayWithObjects:`来创建一个包含对象列表的数组。在这种情况下，对象按顺序列出并用逗号分隔。这种语法用于接受可变数量参数的方法。为了标记列表的结束，必须指定`nil`作为最后一个值——它并不会存储在数组内部。
 
-在[程序 15.6]中，`monthNames` 被设置为 `arrayWithObjects:` 参数指定的 12 个字符串值。
+在[程序 15.6]中，`monthNames`被设置为`arrayWithObjects:`参数指定的 12 个字符串值。
 
-数组中的元素通过它们的索引标识。与 `NSString` 对象类似，索引从零开始。因此，包含 12 个元素的数组有效索引为 0–11。要根据索引号检索数组元素，你需要使用 `objectAtIndex:` 方法。
+数组中的元素通过它们的索引标识。与`NSString`对象类似，索引从零开始。因此，包含 12 个元素的数组有效索引为 0–11。要根据索引号检索数组元素，你需要使用`objectAtIndex:`方法。
 
-该程序简单地执行一个 `for` 循环，使用 `objectAtIndex:` 方法从数组中提取每个元素。检索到的每个元素通过 `NSLog` 显示。
+该程序简单地执行一个`for`循环，使用`objectAtIndex:`方法从数组中提取每个元素。检索到的每个元素通过`NSLog`显示。
 
-[程序 15.7]简单地创建一个 10 个数字对象的数组，其值范围从 0 到 9。使用简单的 `for` 循环检索值进行显示，然后仅使用 `NSLog` 格式字符串中的 `%@` 格式字符再次显示整个数组。在本章稍后的部分，你将学习另一种被称为*快速枚举*（fast enumeration）的技术，你也可以用它来遍历数组元素。
+[程序 15.7]简单地创建一个 10 个数字对象的数组，其值范围从 0 到 9。使用简单的`for`循环检索值进行显示，然后仅使用`NSLog`格式字符串中的`%@`格式字符再次显示整个数组。在本章稍后的部分，你将学习另一种被称为*快速枚举*（fast enumeration）的技术，你也可以用它来遍历数组元素。
 
 ### 程序 15.7
 
@@ -7694,24 +7130,27 @@ int main (int argc, char * argv[])
         NSMutableArray *numbers = [NSMutableArray array];
         NSNumber *myNumber;
         int i;
+
         // 创建一个 0-9 的数组
-        for (i = 0; i < 10; ++i ) {
+        for (i = 0; i < 10; ++i) {
             myNumber = [NSNumber numberWithInteger: i];
-            numbers addObject:myNumber;
+            [numbers addObject: myNumber];
         }
+
         // 遍历数组并显示
         for (i = 0; i < 10; ++i) {
             myNumber = [numbers objectAtIndex: i];
-            NSLog (%d %@", myNumber);
+            NSLog (@"%d %@", i, myNumber);
         }
     }
+
     return 0;
 }
 ```
 
 #### 程序 15.7 输出
 
-```
+```text
 1 0
 2 1
 3 2
@@ -7724,58 +7163,56 @@ int main (int argc, char * argv[])
 10 9
 ```
 
+请记住，你不能将整数等基本数据类型存储在数组等集合中。因此，我们为`i`的从 0 到 9 的每个值创建了一个`NSNumber`对象。
 
+`addObject:`方法将对象添加到数组的末尾。在这里，你添加了从`i`的整数值创建的每个`NSNumber`对象。
 
+然后程序进入一个`for`循环，以显示数组中存储的每个数字对象。
 
-请记住，你不能将整数等基本数据类型存储在数组等集合中。因此，我们为 `i` 的从 0 到 9 的每个值创建了一个 `NSNumber` 对象。
+最后，在程序 15.7 中，你看到如何使用单个`%@`在`NSLog`的格式字符串中一次性显示整个`numbers`数组。
 
-`addObject:` 方法将对象添加到数组的末尾。在这里，你添加了从 `i` 的整数值创建的每个 `NSNumber` 对象。
+> **注意**
+>
+> `NSLog`如何知道如何显示存储在数组中的对象？对于数组中的每个元素，`NSLog`将使用来自该元素所属类的`description`方法。如果是继承自`NSObject`的默认方法，如之前提到的，你将只得到对象的类和地址。在这种情况下，你得到了一个有意义的显示——表明`NSNumber`类中实现了一个自定义的`description`方法。
 
-然后程序进入一个 `for` 循环，以显示数组中存储的每个数字对象。
+用于处理数组的 Foundation 类提供了许多便利。然而，在使用复杂算法处理大型数字数组的情况下，学习使用底层 C 语言提供的数组结构来执行此类任务，在内存使用和执行速度方面可能更高效。更多信息请参阅第 13 章中的“数组”部分。
 
-最后，在程序 15.7 中，你看到如何使用单个 `%@` 在 `NSLog` 的格式字符串中一次性显示整个 `numbers` 数组。
+## 创建通讯簿
 
-> **注意** 
-> `NSLog` 如何知道如何显示存储在数组中的对象？对于数组中的每个元素，`NSLog` 将使用来自该元素所属类的 `description` 方法。如果是继承自 `NSObject` 的默认方法，如之前提到的，你将只得到对象的类和地址。在这种情况下，你得到了一个有意义的显示——表明 `NSNumber` 类中实现了一个自定义的 `description` 方法。
+让我们来看一个示例，它通过创建一个通讯簿开始结合你为止学到的很多内容²。你的通讯簿将包含地址卡。为了简单起见，你的地址卡将只包含姓名和电子邮件地址。将此概念扩展到其他信息（如地址和电话号码）是很容易，但我们将其留作为本章末的练习题。
 
-用于处理数组的 Foundation 类提供了许多便利。然而，在使用复杂算法处理大型数字数组的情况下，学习使用底层 C 语言提供的底层数组结构来执行此类任务，在内存使用和执行速度方面可能更高效。更多信息请参阅第 13 章中的“数组”部分。
+我们将创建的两个类——`AddressBook`类和`AddressCard`类，以及它们之间的关系如图 15.5 所示。
 
-### 创建通讯簿
-
-让我们来看一个示例，它通过创建一个通讯簿开始结合你为止学到的很多内容² 你的通讯簿将包含地址卡。为了简单起见，你的地址卡将只包含姓名和电子邮件地址。将此概念扩展到其他信息（如地址和电话号码）是很容易，但我们将其留作为本章末的练习题。
-
-我们将创建的两个类——`AddressBook` 类和 `AddressCard` 类，以及它们之间的关系如图图 15.5 所示。
-
-图 15.5 包含 `AddressCard` 的 `AddressBook`。
+### 图 15.5. 包含 `AddressCard` 的 `AddressBook`
 
 ![Image](img/00063.jpg)
 
-### 创建地址卡
+## 创建地址卡
 
-我们从定义 `AddressCard` 类开始。你希望具备创建新地址卡、设置姓名和电子邮件字段、检索这些字段以及打印卡片的能力。在图形环境中，你可以使用一些方便的方法在计算机屏幕或 iOS 设备的窗口上绘制卡片。但在这里，你只需要简单的控制台界面来显示你的地址卡。
+我们从定义`AddressCard`类开始。你希望具备创建新地址卡、设置姓名和电子邮件字段、检索这些字段以及打印卡片的能力。在图形环境中，你可以使用一些方便的方法在计算机屏幕或 iOS 设备的窗口上绘制卡片。但在这里，你只需要简单的控制台界面来显示你的地址卡。
 
-程序 15.8 显示了你新 `AddressCard` 类的接口文件。我们还不会合成访问器方法；由自己编写它们可以提供宝贵的教训。
+程序 15.8 显示了你新`AddressCard`类的接口文件。我们还不会合成访问器方法；由自己编写它们可以提供宝贵的教训。
 
-程序 15.8 接口文件 AddressCard.h
+### 程序 15.8 接口文件 `AddressCard.h`
 
 ```objectivec
 #import <Foundation/Foundation.h>
 
-@interface AddressCard: NSObject
+@interface AddressCard : NSObject
 
--(void) setName: (NSString *) theName;
--(void) setEmail: (NSString *) theEmail;
--(NSString *) name;
--(NSString *) email;
+- (void)setName:(NSString *)theName;
+- (void)setEmail:(NSString *)theEmail;
+- (NSString *)name;
+- (NSString *)email;
 
--(void) print;
+- (void)print;
 
 @end
 ```
 
 这是非常直接的，程序 15.8 中的实现文件也是如此。
 
-程序 15.8 实现文件 AddressCard.m
+### 程序 15.8 实现文件 `AddressCard.m`
 
 ```objectivec
 #import "AddressCard.h"
@@ -7786,63 +7223,61 @@ int main (int argc, char * argv[])
     NSString *email;
 }
 
--(void) setName: (NSString *) theName
+- (void)setName:(NSString *)theName
 {
-    name = [NSString stringWithString: theName];
+    name = [NSString stringWithString:theName];
 }
 
--(void) setEmail: (NSString *) theEmail
+- (void)setEmail:(NSString *)theEmail
 {
-    email = [NSString stringWithString: theEmail];
+    email = [NSString stringWithString:theEmail];
 }
 
--(NSString *) name
+- (NSString *)name
 {
     return name;
 }
 
--(NSString *) email
+- (NSString *)email
 {
     return email;
 }
 
--(void) print
+- (void)print
 {
     NSLog (@"==================================");
-    NSLog (@"|                          |");
-    NSLog (@|  %-31s |", [name UTF8String]);
-    NSLog (@|  %-31s |", [email UTF8String]);
-    NSLog (@"|                          |");
-    NSLog (@"|                          |");
-    NSLog (@"|                          |");
-    NSLog (@"|        O              |");
+    NSLog (@"|                                |");
+    NSLog (@"|  %-31s |", [name UTF8String]);
+    NSLog (@"|  %-31s |", [email UTF8String]);
+    NSLog (@"|                                |");
+    NSLog (@"|                                |");
+    NSLog (@"|                                |");
+    NSLog (@"|              O                 |");
     NSLog (@"==================================");
 }
+
 @end
 ```
-
-
-
 
 ```objc
 @property (copy, nonatomic) NSString *name, *email;
 
--(void) print;
+- (void)print;
 
 @end
 ```
+
+
 
 `@property (copy, nonatomic) NSString *name, *email;` 这一行为属性列出了 `copy` 和 `nonatomic` 属性。`copy` 属性表示在其设置方法（setter）中为实例变量创建一个副本，正如你在编写的版本中所做的那样。默认操作是不创建副本，而是执行简单的赋值（即默认属性 `assign`），正如我们最近讨论的，在在这种情况下这是不正确的方法。
 
 `nonatomic` 属性表示你不需要担心多个线程同时尝试访问实例变量时可能发生的竞态条件。第 18 章，“对象拷贝”在该章中更详细地讨论了这一话题。
 
-程序 15.9 是新的 AddressCard 实现文件，它指定访问器方法为合成的（synthesized）。注意，我们在这里删除了实例变量的显式声明，因为我们现在为它们列出了属性。）
+程序 15.9 是新的 `AddressCard` 实现文件，它指定访问器方法为合成的（synthesized）。注意，我们在这里删除了实例变量的显式声明，因为我们现在为它们列出了属性。
 
 #### 程序 15.9. 带有合成方法的实现文件 AddressCard.m
 
-* *
-
-```objc
+```
 #import "AddressCard.h"
 
 @implementation AddressCard
@@ -7864,11 +7299,9 @@ int main (int argc, char * argv[])
 @end
 ```
 
-* *
-
 现在让我们为你的 `AddressCard` 类添加另一个方法。你可能想通过一次调用同时设置卡片的姓名和电子邮件字段。要做到这一点，请添加一个新方法 `setName:andEmail:`。该新方法看起来如下：
 
-```objc
+```
 -(void) setName: (NSString *) theName andEmail: (NSString *) theEmail
 {
     self.name = theName;
@@ -7884,9 +7317,7 @@ int main (int argc, char * argv[])
 
 #### 程序 15.9. 测试程序
 
-* *
-
-```objc
+```
 #import "AddressCard.h"
 
 int main (int argc, char * argv[])
@@ -7907,23 +7338,41 @@ int main (int argc, char * argv[])
     return 0;
 }
 ```
+
 ================================
+
 |                            |
+
 | Julia Kochan                  |
+
 | jewls337@axlc.com              |
+
 |                            |
+
 |                            |
+
 |                            |
+
 |        O            O        |
+
 ================================
+
 ================================
+
 |                            |
+
 | Tony Iannino                  |
+
 | tony.iannino@techfitness.com  |
+
 |                            |
+
 |                            |
+
 |                            |
+
 |        O            O        |
+
 ================================
 
 ### `AddressBook` 类
@@ -7934,9 +7383,7 @@ int main (int argc, char * argv[])
 
 ### 程序 15.10. AddressBook.h 接口文件
 
-* *
-
-```objc
+```
 #import <Foundation/h>
 #import "AddressCard.h"
 
@@ -7953,15 +7400,13 @@ int main (int argc, char * argv[])
 @end
 ```
 
-* *
-
 属性 `strong` 表示每当使用 setter 时对对象创建一个额外的引用。这影响了对象的寿命。在 17，“内存管理与自动计数”中有更详细的描述。
 
 `initWithName:` 方法初始化存储卡片的数组并存储书籍名称，而 `addCard:` 方法将 `AddressCard` 添加到书中。`entries` 方法报告书籍中的卡片数量，而 `list` 方法提供其内容的简要列表。程序 15.10 显示了你的 `AddressBook` 类的实现文件。
 
 ### 程序 15.10. AddressBook.m 实现文件
 
-```objc
+```
 #import "AddressBook.h"
 
 @implementation AddressBook
@@ -8005,10 +7450,6 @@ int main (int argc, char * argv[])
 @end
 ```
 
-
-
-
-
 `initWithName:` 方法首先调用父类的 `init` 方法来执行其初始化。接着，它将作为方法参数传入的字符串进行拷贝，并存储在实例变量 `bookName` 中。随后，会创建一个空的 `NSMutableArray` 对象并将其赋值给 `book`。
 
 你将 `initWithName:` 定义为返回一个 `id` 对象，而不是 `AddressBook` 类型的对象。如果 `AddressBook` 被子类化，那么 `initWithName:` 消息的接收者（因此也是返回值）将不再是一个 `AddressBook` 对象；其类型是该子类的类型。出于这个原因，你将返回类型定义为通用的对象类型。
@@ -8023,7 +7464,7 @@ int main (int argc, char * argv[])
 
 `list` 方法中的 `for` 循环展示了一种你以前没过的结构：
 
-```objc
+```
 for ( AddressCard *theCard in book )
     NSLog (@%-20s    %-32s", [theCard.name UTF8String],
                       [theCard.email UTF8String]);
@@ -8033,7 +7474,7 @@ for ( AddressCard *theCard in book )
 
 注意，如果 `theCard` 之前已经被定义为 `AddressCard` 对象，那么 `for` 循环将变得更加简单：
 
-```objc
+```
 for ( theCard in book )
     ...
 ```
@@ -8042,7 +7483,7 @@ for ( theCard in book )
 
 ### 程序 15.10. 测试程序
 
-```objc
+```
 #import "AddressBook.h"
 
 int main (int argc, char * argv[])
@@ -8090,7 +7531,7 @@ int main (int argc, char * argv[])
 
 ### 程序 15.10. 输出
 
-```text
+```
 Entries in address book after creation: 0
 Entries in address book after adding cards: 4
 
@@ -8108,7 +7549,7 @@ Jamie Baker    jbaker@classroomM.com
 
 当你有一个大型通讯录时，你不希望每次想查找某人时都列出完整内容。因此，添加一个方法来这样做是合理的。我们将方法命名为 `lookup:` 并让它接收名称作为参数。该方法搜索通讯录中的匹配项（忽略大小写），如果找到则返回该条目；如果名称不在通讯录中，它将返回 `nil`。这里是 `lookup:` 方法：
 
-```objc
+```
 // 根据查找查找假设精确匹配
 -(AddressCard *) lookup:(NSString *)Name
 {
@@ -8123,12 +7564,14 @@ Jamie Baker    jbaker@classroomM.com
 
 #### 程序 15.1 测试
 
+
+
 ```objc
 #import "AddressBook.h"
 
 int main (int argc, char * argv[])
 {
-    @leasepool {
+    @autoreleasepool {
         NSString *aName = @"Julia Kochan";
         NSString *aEmail = @"jewls337@axlc.com";
         NSString *bName = @"Tony Iannino";
@@ -8176,10 +7619,6 @@ int main (int argc, char * argv[])
 }
 ```
 
-
-
-
-
 ```objc
 if (myCard != nil) {
     [myCard print];
@@ -8208,25 +7647,25 @@ Lookup: Haibo Zhang
 Not found!
 ```
 
-当 `lookup:` 方法在通讯录中找到 Stephen Kochan 时（利用了不区分大小写匹配的特性），该方法通过执行 `return` 语句立即返回了匹配的卡片，这终止了循环并传了 `nextCard` 的值。随后，该匹配的卡片被交给 `AddressCard` 的 `print` 方法进行显示。在第二次查找的情况下，没有找到名为 Haibo Zhang 的名字。
+当`lookup:`方法在通讯录中找到 Stephen Kochan 时（利用了不区分大小写匹配的特性），该方法通过执行`return`语句立即返回了匹配的卡片，这终止了循环并传了`nextCard`的值。随后，该匹配的卡片被交给`AddressCard`的`print`方法进行显示。在第二次查找的情况下，没有找到名为 Haibo Zhang 的名字。
 
-这个 `lookup:` 方法非常原始，因为它需要找到整个名称的精确匹配。更好的方法是执行部分匹配并能够处理多个匹配项。例如，消息表达式
+这个`lookup:`方法非常原始，因为它需要找到整个名称的精确匹配。更好的方法是执行部分匹配并能够处理多个匹配项。例如，消息表达式：
 
-```
+```objc
 [myBook lookup: @"steve"]
 ```
 
 可以匹配到“Steve Kochan”、“Fred Stevens”和“steven levy”的条目。因为可能存在多个匹配项，一种好的方法可能是创建一个包含所有匹配项的数组，并将该数组返回给方法的调用者（参见本章末尾的练习 2），如下所示：
 
-```
+```objc
 matches = [myBook lookup: @"steve"];
 ```
 
 ### 从通讯录中移除某人
 
-任何允许你添加条目的通讯录管理器，如果没有删除条目的功能，都是不完整的。你可以创建一个 `removeCard:` 方法来从通讯录中移除特定的 `AddressCard`。另一种可能性是创建一个 `remove:` 方法，根据姓名删除某人（参见本章末尾的练习 6）。
+任何允许你添加条目的通讯录管理器，如果没有删除条目的功能，都是不完整的。你可以创建一个`removeCard:`方法来从通讯录中移除特定的`AddressCard`。另一种可能性是创建一个`remove:`方法，根据姓名删除某人（参见本章末尾的练习 6）。
 
-由于你对接口文件进行了几处更改，程序 15.12 再次显示了带有新 `removeCard:` 方法的界面。之后是你新方法的实现代码。
+由于你对接口文件进行了几处更改，程序 15.12 再次显示了带有新`removeCard:`方法的界面。之后是你新方法的实现代码。
 
 ### 程序 15.12. Addressbook.h 接口文件
 
@@ -8250,7 +7689,7 @@ matches = [myBook lookup: @"steve"];
 @end
 ```
 
-这是新的 `removeCard:` 方法：
+这是新的`removeCard:`方法：
 
 ```objc
 -(void) removeCard: (AddressCard *) theCard
@@ -8259,9 +7698,9 @@ matches = [myBook lookup: @"steve"];
 }
 ```
 
-关于什么被视为“相同对象”，我们使用的是完全相同对象的概念，即它是在内存中具有相同位置的对象。因此，`removeIdenticalTo:` 方法不会将两个包含相同信息但内存位置不同的地址卡片（如果你复制了 `AddressCard` 可能会发生这种情况）视为相同。顺便提到，`removeIdenticalTo:` 方法会移除与其参数相同的所有对象。然而，如果你的数组中存在同一个对象的多个实例，就会出现问题。
+关于什么被视为“相同对象”，我们使用的是完全相同对象的概念，即它是在内存中具有相同位置的对象。因此，`removeIdenticalTo:`方法不会将两个包含相同信息但内存位置不同的地址卡片（如果你复制了`AddressCard`可能会发生这种情况）视为相同。顺便提到，`removeIdenticalTo:`方法会移除与其参数相同的所有对象。然而，如果你的数组中存在同一个对象的多个实例，就会出现问题。
 
-你可以通过使用 `remove:` 方法并编写 `isEqual:` 方法来测试两个对象是否相等，从而让处理相等对象的方法变得更加精细。如果你使用 `remove:`，系统会为数组中的每个元素调用 `isEqual:` 方法，并提供两个元素进行进行比较。在这种情况下，由于你的通讯录包含 `AddressCard` 对象作为元素，你必须为该类添加一个 `isEqual:` 方法（你需要重写该类继承自 `NSObject` 的方法）。该方法随后可以自己决定如何判断相等性。比较两个名字和邮箱是有意义的。如果两者都相等，你可以从方法返回 `YES`；否则，你可以返回 `NO`。你的方法可能看起来如下：
+你可以通过使用`remove:`方法并编写`isEqual:`方法来测试两个对象是否相等，从而让处理相等对象的方法变得更加精细。如果你使用`remove:`，系统会为数组中的每个元素调用`isEqual:`方法，并提供两个元素进行比较。在这种情况下，由于你的通讯录包含`AddressCard`对象作为元素，你必须为该类添加一个`isEqual:`方法（你需要重写该类继承自`NSObject`的方法）。该方法随后可以自己决定如何判断相等性。比较两个名字和邮箱是有意义的。如果两者都相等，你可以从方法返回`YES`；否则，你可以返回`NO`。你的方法可能看起来如下：
 
 ```objc
 -(BOOL) isEqual: (AddressCard *) theCard
@@ -8273,7 +7712,7 @@ matches = [myBook lookup: @"steve"];
 }
 ```
 
-注意，其他 `NSArray` 方法（如 `containsObject:` 和 `indexOfObject:`）也依赖于这种 `isEqual:` 策略来判断两个对象是否被认为相等。程序 15.12。
+注意，其他`NSArray`方法（如`containsObject:`和`indexOfObject:`）也依赖于这种`isEqual:`策略来判断两个对象是否被认为相等。程序 15.12。
 
 ### 程序 15.12. 测试程序
 
@@ -8330,13 +7769,9 @@ int main (int argc, char * argv[])
 }
 ```
 
+如果你的联系录中包含很多条目，按字母顺序排序可能会非常方便。你可以通过向你的`AddressBook`类添加一个`sort`方法，并利用`NSMutableArray`类中名为`sortUsingSelector:`的方法来轻松实现这一点。该方法接受的参数是一个选择器（selector），`sortUsingSelector:`方法使用它来比较两个元素。数组可以包含任何类型的对象，因此实现通用排序方法的唯一方法就是让你自己来决定数组中的元素是否是有序的。为了做到这一点，你必须向类中添加一个用于比较数组中两个元素的方法。该方法返回的结果类型应为`NSComparisonResult`。如果你希望排序方法将数组中的第一个元素放在第二个元素之前，则应返回`NSOrderedAscending`；如果两个元素被认为相等，则返回`NSOrderedSame`；如果第一个元素在排序后的数组中位于第二个元素之后，则返回`NSOrderedDescending`。
 
-
-
-
-如果你的联系录中包含很多条目，按字母顺序排序可能会非常方便。你可以通过向你的 `AddressBook` 类添加一个 `sort` 方法，并利用 `NSMutableArray` 类中名为 `sortUsingSelector:` 的方法来轻松实现这一点。该方法接受的参数是一个选择器（selector），`sortUsingSelector:` 方法使用它来比较两个元素。数组可以包含任何类型的对象，因此实现通用排序方法的唯一方法就是让你自己来决定数组中的元素是否是有序的。为了做到这一点，你必须向类中添加一个用于比较数组中两个元素的方法。该方法返回的结果类型应为 `NSComparisonResult`。如果你希望排序方法将数组中的第一个元素放在第二个元素之前，则应返回 `NSOrderedAscending`；如果两个元素被认为相等，则返回 `NSOrderedSame`；如果第一个元素在排序后的数组中位于第二个元素之后，则返回 `NSOrderedDescending`。
-
-首先，这是你的 `AddressBook` 类中新增的 sort 方法：
+首先，这是你的`AddressBook`类中新增的`sort`方法：
 
 ```objectivec
 -(void) sort
@@ -8345,13 +7780,9 @@ int main (int argc, char * argv[])
 }
 ```
 
-正如你在第 9 章“多态、动态类型和动态绑定”中所学到的，表达式
+正如你在第 9 章“多态、动态类型和动态绑定”中所学到的，表达式`@selector (compareNames:)`会根据指定的方法名创建一个类型为`SEL`的选择器；这就是`sortUsingSelector:`方法用于比较数组中两个元素的选择器。当它需要进行此类比较时，它会调用指定的方法，向数组中的第一个元素（接收者）发送消息，以便将其与它的参数进行比较。如前所述，返回值的类型应为`NSComparisonResult`。
 
-`@selector (compareNames:)`
-
-会根据指定的方法名创建一个类型为 `SEL` 的选择器；这就是 `sortUsingSelector:` 方法用于比较数组中两个元素的选择器。当它需要进行此类比较时，它会调用指定的方法，向数组中的第一个元素（接收者）发送消息，以便将其与它的参数进行比较。如前所述，返回值的类型应为 `NSComparisonResult`。
-
-由于你联系录中的元素是 `AddressCard` 对象，因此比较方法必须添加到 `AddressCard` 类中（请确保你完全理解了这一点）。你必须回到 `AddressCard` 类，并向它添加一个 `compareNames:` 方法。显示如下：
+由于你联系录中的元素是`AddressCard`对象，因此比较方法必须添加到`AddressCard`类中（请确保你完全理解了这一点）。你必须回到`AddressCard`类，并向它添加一个`compareNames:`方法。显示如下：
 
 ```objectivec
 // 比较来自指定地址卡的的两个名称
@@ -8361,11 +7792,13 @@ int main (int argc, char * argv[])
 }
 ```
 
-由于你正在对联系录中的两个名称进行字符串比较，你可以使用 `NSString compare:` 方法来为你完成这项工作。
+由于你正在对联系录中的两个名称进行字符串比较，你可以使用`NSString compare:`方法来为你完成这项工作。
 
-如果你向 `AddressBook` 类添加了 `sort` 方法，并向 `AddressCard` 类添加了 `compareNames:` 方法，你编写一个测试程序来测试它（参见程序 15.13）。
+如果你向`AddressBook`类添加了`sort`方法，并向`AddressCard`类添加了`compareNames:`方法，你编写一个测试程序来测试它（参见程序 15.13）。
 
 ### 程序 15.13. 测试程序
+
+
 
 ```objectivec
 #import "AddressBook.h"
@@ -8432,29 +7865,29 @@ Tony Iannino   tony.iannino@techfitness.com
 ===================================
 ```
 
-注意，排序是升序的。然而，你可以通过修改 `AddressCard` 类中的 `compareNames:` 方法来反转返回的值，从而轻松执行降序排序。
+注意，排序是升序的。然而，你可以通过修改`AddressCard`类中的`compareNames:`方法来反转返回的值，从而轻松执行降序排序。
 
 ### 使用 Blocks 进行排序
 
-`NSArray` 和 `NSMutableArray` 类中存在一些方法接受块作为参数来比较数组中的元素，而不是使用选择器。
+`NSArray`和`NSMutableArray`类中存在一些方法接受块作为参数来比较数组中的元素，而不是使用选择器。
 
-`NSArray` 方法的通用格式如下：
+`NSArray`方法的通用格式如下：
 
 `-(NSArray *) sortedArrayUsingComparator: (NSComparator) block`
 
-而 `NSMutableArray` 方法（原地排序）的形式如下：
+而`NSMutableArray`方法（原地排序）的形式如下：
 
 `-(void) sortUsingComparator:(NSComparator) block`
 
-`NSComparator` 在其中一个系统头文件中如下 `typedef` 定义：
+`NSComparator`在其中一个系统头文件中如下`typedef`定义：
 
 `typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);`
 
-将其翻译成英文，它表示 `NSComparator` 是一个接受两个对象作为参数并返回 `NSComparisonResult` 类型的块。由于该方法使用了块，在排序大型数组时运行可能会更快。因此，请为此原因考虑使用它。
+将其翻译成英文，它表示`NSComparator`是一个接受两个对象作为参数并返回`NSComparisonResult`类型的块。由于该方法使用了块，在排序大型数组时运行可能会更快。因此，请为此原因考虑使用它。
 
 所以，该块接受要比较的两个对象作为参数，并返回一个指示第一个对象是小于、等于还是大于第二个对象的。这与非块版本的数组排序方法是一致的。
 
-我们作为 `sortUsingComparator:` 方法参数提供的块可以调用 `compareNames:` 方法来比较地址卡，如下所示：
+我们作为`sortUsingComparator:`方法参数提供的块可以调用`compareNames:`方法来比较地址卡，如下所示：
 
 ```objectivec
 -(void) sort
@@ -8466,7 +7899,7 @@ Tony Iannino   tony.iannino@techfitness.com
 }
 ```
 
-这种方法可行，但仔细想想，它不会提供任何性能提升，因为我们指定的块调用的仍然是 `compareNames:` 方法。因此，更好的方法是在块内部执行更多工作；这有助于提高速度：
+这种方法可行，但仔细想想，它不会提供任何性能提升，因为我们指定的块调用的仍然是`compareNames:`方法。因此，更好的方法是在块内部执行更多工作；这有助于提高速度：
 
 ```objectivec
 -(void) sort
@@ -8478,43 +7911,39 @@ Tony Iannino   tony.iannino@techfitness.com
 }
 ```
 
-回到程序 15.13，并将 `AddressBook` 的 `sort` 方法替换为我们刚刚开发的版本。验证程序仍然运行正常并正确排序了你的联系录。
+回到程序 15.13，并将`AddressBook`的`sort`方法替换为我们刚刚开发的版本。验证程序仍然运行正常并正确排序了你的联系录。
 
-块版本的 `sort` 方法的一个优点处是，你不需要在被比较对象的所属类中添加比较方法。那就是 `AddressCard` 类，正如你回想起的，我们将之前版本 `sort` 方法所使用的 `compareNames:` 方法放在了那里。
+块版本的`sort`方法的一个优点处是，你不需要在被比较对象的所属类中添加比较方法。那就是`AddressCard`类，正如你回想起的，我们将之前版本`sort`方法所使用的`compareNames:`方法放在了那里。
 
+另一个很好的优点是，如果你决定更改地址卡片的比较方式，你可以直接在`sort`方法中进行操作，这意味着你不需要对`AddressCard`类进行修改。
 
+对于数组对象，有超过 50 种方法可用。表 15.4 和 表 15.5 分别列出了用于处理不可变数组和可变数组的某些常用方法。由于`NSMutableArray`是`NSArray`的子类，因此前者继承了后者的方法。
 
-
-
-另一个很好的优点是，如果你决定更改地址卡片的比较方式，你可以直接在 `sort` 方法中进行操作，这意味着你不需要对 `AddressCard` 类进行修改。
-
-对于数组对象，有超过 50 种方法可用。表 15.4 和 表 15.5 分别列出了用于处理不可变数组和可变数组的某些常用方法。由于 `NSMutableArray` 是 `NSArray` 的子类，因此前者继承了后者的方法。
-
-### 表 15.4. 常用的 `NSArray` 方法
+### 表 15.4. 常用的`NSArray`方法
 
 ![Image](img/00064.jpg)![Image](img/00065.jpg)
 
-### 表 15.5. 常用的 `NSMutableArray` 方法
+### 表 15.5. 常用的`NSMutableArray`方法
 
 ![Image](img/00066.jpg)
 
-在 表 15.4 和 表 15.5 中，`obj`、`obj1` 和 `obj2` 是任意对象；`i` 是一个 `NSUInteger` 整数，表示数组的有效索引号；`selector` 是类型为 `SEL` 的选择器对象；`size` 是一个 `NSUInteger` 整数。
+在 表 15.4 和 表 15.5 中，`obj`、`obj1`和`obj2`是任意对象；`i`是一个`NSUInteger`整数，表示数组的有效索引号；`selector`是类型为`SEL`的选择器对象；`size`是一个`NSUInteger`整数。
 
 ## `NSValue` 类
 
-正如我们看到的，像数组这样的 Foundation 集合只能存储对象。这意味着你不能在它们内部存储 `int` 等基本类型。为了解决这个问题，你可以创建 `NSNumber` 对象数组而不是 `int` 数组。
+正如我们看到的，像数组这样的 Foundation 集合只能存储对象。这意味着你不能在它们内部存储`int`等基本类型。为了解决这个问题，你可以创建`NSNumber`对象数组而不是`int`数组。
 
-当你开始开发 iOS 应用时，还会想要在集合中存储其他类型。这些类型是结构体，它们是来自 C 语言的派生数据类型，而不是对象。例如，你将使用 `CGPoint`（一个通过 `typedef` 定义的名称）在应用程序中定义 (x, y) 坐标。这就是你如何指定矩形原点的方法。事实上，一个矩形是一个 `CGRect` 类型，它本身包含另外两个结构体：定义矩形原点的 `CGPoint` 结构体和定义宽度和高度的 `CGSize` 结构体。
+当你开始开发 iOS 应用时，还会想要在集合中存储其他类型。这些类型是结构体，它们是来自 C 语言的派生数据类型，而不是对象。例如，你将使用`CGPoint`（一个通过`typedef`定义的名称）在应用程序中定义 (x, y) 坐标。这就是你如何指定矩形原点的方法。事实上，一个矩形是一个`CGRect`类型，它本身包含另外两个结构体：定义矩形原点的`CGPoint`结构体和定义宽度和高度的`CGSize`结构体。
 
-讨论的重点在于让你注意，这些是你可能想要存储在集合中的结构体。你不能直接这样做。`NSValue` 类的出现解决了这个问题，它允许将这些结构体之一转换为对象，从而允许将其存储在集合中。将像结构体这样的数据类型转换为对象的过程有时被称为 `wrapping`（包装）。正如你预期的，获取一个对象并提取其底层数据类型的逆过程通常被称为 `unwrapping`（解包）。
+讨论的重点在于让你注意，这些是你可能想要存储在集合中的结构体。你不能直接这样做。`NSValue`类的出现解决了这个问题，它允许将这些结构体之一转换为对象，从而允许将其存储在集合中。将像结构体这样的数据类型转换为对象的过程有时被称为`wrapping`（包装）。正如你预期的，获取一个对象并提取其底层数据类型的逆过程通常被称为`unwrapping`（解包）。
 
-表 15.6 显示了一些将 C 数据类型转换为对象的包装方法，以及相应的解包对象的逆方法。更多信息请查看 `NSValue` 类的文档。
+表 15.6 显示了一些将 C 数据类型转换为对象的包装方法，以及相应的解包对象的逆方法。更多信息请查看`NSValue`类的文档。
 
-### 表 15.6. 一些 `NSValue` 包装和解包方法
+### 表 15.6. 一些`NSValue`包装和解包方法
 
 ![Image](img/00067.jpg)
 
-这是一个代码片段，取一个 `CGPoint` 结构体并将其添加到名为 `touchPoints` 的可变数组中：
+这是一个代码片段，取一个`CGPoint`结构体并将其添加到名为`touchPoints`的可变数组中：
 
 ```objc
 CGPoint myPoint;
@@ -8528,9 +7957,9 @@ pointObj = [NSValue valueWithPoint: myPoint];  // 变成一个对象
 [touchPoints addObject: pointObj];
 ```
 
-请确保你意识到这样做此必要。由于 `myPoint` 是结构体，你不能将其直接存储在 `touchPoints` 数组中。因此你必须先将其转换为对象。我们使用 `valueWithPoint:` 方法来实现。
+请确保你意识到这样做此必要。由于`myPoint`是结构体，你不能将其直接存储在`touchPoints`数组中。因此你必须先将其转换为对象。我们使用`valueWithPoint:`方法来实现。
 
-如果你随后想从 `touchPoints` 数组中获取最后一个点并将其转换回 `CGPoint` 结构体，这一行代码就能实现：
+如果你随后想从`touchPoints`数组中获取最后一个点并将其转换回`CGPoint`结构体，这一行代码就能实现：
 
 ```objc
 myPoint = [[touchPoints lastObject] pointValue];
@@ -8570,11 +7999,11 @@ adopt: To implement all the methods in a protocol
 archiving: Storing an object for later use
 ```
 
-表达式 `[NSMutableDictionary dictionary]` 创建了一个空的可变字典。你可以使用 `setObject:forKey:` 方法向字典添加键值对。构建字典后，你可以使用 `objectForKey:` 方法根据给定的键检索值。
+表达式`[NSMutableDictionary dictionary]`创建了一个空的可变字典。你可以使用`setObject:forKey:`方法向字典添加键值对。构建字典后，你可以使用`objectForKey:`方法根据给定的键检索值。
 
 ### 遍历字典
 
-程序 15.15 说明了如何使用 `dictionaryWithObjectsAndKeys:` 方法使用初始键值对定义字典。创建了一个不可变字典，程序还展示了如何使用快速遍历循环从字典次获取每个元素。与数组对象不同，字典是无序的，因此放入字典的第一个键-值对可能不是遍历字典时提取的第一个键。
+程序 15.15 说明了如何使用`dictionaryWithObjectsAndKeys:`方法使用初始键值对定义字典。创建了一个不可变字典，程序还展示了如何使用快速遍历循环从字典次获取每个元素。与数组对象不同，字典是无序的，因此放入字典的第一个键-值对可能不是遍历字典时提取的第一个键。
 
 ```objc
 #import <Foundation/h>
@@ -8600,20 +8029,19 @@ int main (int argc, char * argv[])
 }
 ```
 
-
-
-
 > `abstract class: 抽象类：为了让其他类继承而定义的类`
+
 > `adopt: 实现协议中定义的所有方法`
+
 > `archiving: 存储对象以备日后使用`
 
 ***
 
-`dictionaryWithObjects:` 的参数是一个对象-键对列表（是的，按该顺序排列！），每个对之间用逗号分隔。列表必须以特殊的 `nil` 对象结束。
+`dictionaryWithObjects:`的参数是一个对象-键对列表（是的，按该顺序排列！），每个对之间用逗号分隔。列表必须以特殊的`nil`对象结束。
 
 在程序创建字典后，它会设置一个循环来枚举其内容。如所指出的，键是按顺序从字典中检索的，没有特定的顺序。
 
-如果你想按字母顺序显示字典的内容，可以从字典中检索所有键，对它们进行排序，然后按照排序后的顺序，为每个键从字典中检索所有的值。你可以先使用 `NSDIctionary` 的 `allKeys` 方法将字典中的所有键提取到数组中，然后对该数组进行排序。接下来，你可以遍历排序后的键数组，并从字典中检索对应的值。例如，假设你有一个名为 `states` 的字典，其中包含美国州名作为键，并将相应的首府作为对象。以下代码片段将按字母顺序显示每个州名及其对应的首府：
+如果你想按字母顺序显示字典的内容，可以从字典中检索所有键，对它们进行排序，然后按照排序后的顺序，为每个键从字典中检索所有的值。你可以先使用`NSDIctionary`的`allKeys`方法将字典中的所有键提取到数组中，然后对该数组进行排序。接下来，你可以遍历排序后的键数组，并从字典中检索对应的值。例如，假设你有一个名为`states`的字典，其中包含美国州名作为键，并将相应的首府作为对象。以下代码片段将按字母顺序显示每个州名及其对应的首府：
 
 ```objc
 NSArray *keys = [states allKeys];
@@ -8627,25 +8055,27 @@ for (NSString *aState in keys)
   NSLog (@"State: %@  Capital: %@", aState, [states objectForKey: aState]);
 ```
 
-我们刚刚在这里展示了字典的一些基本操作。表 15.7 和 15.8 分别总结了用于不可变字典和可变字典的一些常用方法。由于 `NSMutableDictionary` 是 `NSDictionary` 的子集，因此继承了它的方法。
+我们刚刚在这里展示了字典的一些基本操作。表 15.7 和 15.8 分别总结了用于不可变字典和可变字典的一些常用方法。由于`NSMutableDictionary`是`NSDictionary`的子集，因此继承了它的方法。
 
-在表 15.7 和 15.8 中，`key`、`key1`、`key2`、`obj`、`obj1`和`obj2`可以是任何对象，而 `size`是一个`NSUInteger`无符号整数。
+在表 15.7 和 15.8 中，`key`、`key1`、`key2`、`obj`、`obj1`和`obj2`可以是任何对象，而`size`是一个`NSUInteger`无符号整数。
 
-### 表 15.7. 常用的 `NSDictionary` 方法
+### 表 15.7. 常用的`NSDictionary`方法
 
 ![Image](img/00068.jpg)
 
-### 表 15.8. 常用的 `NSMutableDictionary` 方法
+### 表 15.8. 常用的`NSMutableDictionary`方法
 
 ![Image](img/00069.jpg)
 
 ## 集合对象
 
-`set` 是唯一对象的集合，可以是可变的或不可变的。操作包括查找、添加和删除成员（可变集合）；比较两个集合；以及找到两个集合的交集和并集。
+`set`是唯一对象的集合，可以是可变的或不可变的。操作包括查找、添加和删除成员（可变集合）；比较两个集合；以及找到两个集合的交集和并集。
 
-在本节中，我们将查看三个集合类：`NSSet`、`NSMutableSet`和`NSIndexSet`。我们还会顺带提到 `NSCountedSet` 类，以便你知道何时可能或想要使用该集合。
 
-程序 15.16 展示了集合上的一些基本操作。假设你想在程序执行期间多次显示你的集合的内容。因此，你决定创建一个名为 `print` 的新方法。你通过创建一个名为 `Printing` 的新分类为 `NSSet` 类添加了 `print` 方法。`NSMutableSet` 是 `NSSet` 的子类，因此可变集合也可以使用这个新的 `print` 方法。
+
+在本节中，我们将查看三个集合类：`NSSet`、`NSMutableSet`和`NSIndexSet`。我们还会顺带提到`NSCountedSet`类，以便你知道何时可能或想要使用该集合。
+
+程序 15.16 展示了集合上的一些基本操作。假设你想在程序执行期间多次显示你的集合的内容。因此，你决定创建一个名为`print`的新方法。你通过创建一个名为`Printing`的新分类为`NSSet`类添加了`print`方法。`NSMutableSet`是`NSSet`的子类，因此可变集合也可以使用这个新的`print`方法。
 
 ### 程序 15.16
 
@@ -8727,48 +8157,56 @@ int main (int argc, char * argv[])
 ***
 
 set1:
+
 { 1 3 10 }
+
 set2:
+
 { -5 10 5 }
+
 set1 is not equal to set2
+
 set1 contains 10
+
 set2 does not contain 10
+
 set1 after adding 4 and removing 10:
+
 { 1 3 4 }
+
 set1 intersect set2:
+
 { 3 5 }
+
 set1 union set3:
+
 { 1 3 4 2 20 }
 
-
-
-
-
-Foundation 框架还提供名为 `NSCountedSet` 的类。这些集合可以表示同一个对象的多次出现；然而，它并不是让对象在集合中出现多次，而是维护一个次数的计数。因此，当对象第一次被添加到集合时，其计数为 `1`。随后将该对象添加到集合中会增加计数，而从集合中移除该对象则会减少计数。如果计数达到零，则该对象本身将从集合中移除。`countForObject:` 方法用于检索集合中指定对象的出现次数。
+Foundation 框架还提供名为`NSCountedSet`的类。这些集合可以表示同一个对象的多次出现；然而，它并不是让对象在集合中出现多次，而是维护一个次数的计数。因此，当对象第一次被添加到集合时，其计数为`1`。随后将该对象添加到集合中会增加计数，而从集合中移除该对象则会减少计数。如果计数达到零，则该对象本身将从集合中移除。`countForObject:`方法用于检索集合中指定对象的出现次数。
 
 计数集合的一个应用可能是单词计数器应用程序。每当在某些文本中发现一个单词时，就可以将其添加到计数集合中。当文本扫描完成后，可以从集合中检索每个单词及其计数，该计数表示该单词在文本中出现的次数。
 
-我们刚刚展示了集合的一些基本操作。表 15.9 和 15.10 分别总结了用于不可变集合和可变集合的常用方法。由于 `NSMutableSet` 是 `NSSet` 的子类，它继承了这些方法。
+我们刚刚展示了集合的一些基本操作。表 15.9 和 15.10 分别总结了用于不可变集合和可变集合的常用方法。由于`NSMutableSet`是`NSSet`的子类，它继承了这些方法。
 
 在表 15.9 和 15.10 中，`obj`、`obj1`和`obj2`是任何对象；`nsset`是一个`NSSet`或`NSMutableSet`对象；`size`是一个`NSUInteger`类型的整数。
 
-**表 15.9 常用的 `NSSet` 方法**
+**表 15.9 常用的`NSSet`方法**
 
 ![Image](img/00070.jpg)
 
-**表 15.10 常用的 `NSMutableSet` 方法**
+**表 15.10 常用的`NSMutableSet`方法**
 
 ![Image](img/00071.jpg)
 
 ## NSIndexSet
 
-让我们来看另一种类型的集合：`NSIndexSet`。该类用于存储指向其他数据结构（通常是数组）的有序索引。你可以使用该类，例如，从对象数组中高效地生成一个索引数字列表，其中每个对象都满足你指定的某些标准。你需要注意的是，`NSIndexSet` 类没有可变版本。
+让我们来看另一种类型的集合：`NSIndexSet`。该类用于存储指向其他数据结构（通常是数组）的有序索引。你可以使用该类，例如，从对象数组中高效地生成一个索引数字列表，其中每个对象都满足你指定的某些标准。你需要注意的是，`NSIndexSet`类没有可变版本。
 
-例如，`NSArray` 方法 `indexOfObjectPassingTest:` 接受一个 block 作为参数。该 block 会为数组中的每个元素执行一次，并传入数组元素、索引号以及一个指向 `BOOL` 变量的指针。block 中的代码假设会根据某些标准对元素进行测试，如果数组元素满足标准则返回 `YES`，否则返回 `NO`。即使该方法返回了 `YES`，它也会继续处理数组中的下一个元素，直到所有元素都处理完毕为止。你可以通过将 `BOOL` 指针引用的值设置为 `YES` 来随时停止处理。（关于指针的讨论，请参阅第 13 章。）
+例如，`NSArray`方法`indexOfObjectPassingTest:`接受一个 block 作为参数。该 block 会为数组中的每个元素执行一次，并传入数组元素、索引号以及一个指向`BOOL`变量的指针。block 中的代码假设会根据某些标准对元素进行测试，如果数组元素满足标准则返回`YES`，否则返回`NO`。即使该方法返回了`YES`，它也会继续处理数组中的下一个元素，直到所有元素都处理完毕为止。你可以通过将`BOOL`指针引用的值设置为`YES`来随时停止处理。（关于指针的讨论，请参阅第 13 章。）
 
-如果 `indexOfObjectPassingTest:` 找到了匹配项（这意味着你在 block 中至少一次返回了 `YES`），它将返回集合中最低的匹配索引。否则，如果没有找到匹配项，它将返回 `NSNotFound`。
+如果`indexOfObjectPassingTest:`找到了匹配项（这意味着你在 block 中至少一次返回了`YES`），它将返回集合中最低的匹配索引。否则，如果没有找到匹配项，它将返回`NSNotFound`。
 
-这是我们 `AddressBook` 类中 `lookup:` 方法的一个修改版本。
+这是我们`AddressBook`类中`lookup:`方法的一个修改版本。
 
 ```objc
 -(AddressCard *) lookup: (NSString *) theName
@@ -8792,7 +8230,7 @@ Foundation 框架还提供名为 `NSCountedSet` 的类。这些集合可以表�
 }
 ```
 
-如果你想找到数组中所有的匹配条目，可以将每个匹配项存储在一个数组中，并且永远不要将 `stop` 指针设置为 `YES`。通过这样，`indexOfObjectPassingTest:` 方法将检查数组中的所有元素。这样的方法可能像下面所示：
+如果你想找到数组中所有的匹配条目，可以将每个匹配项存储在一个数组中，并且永远不要将`stop`指针设置为`YES`。通过这样，`indexOfObjectPassingTest:`方法将检查数组中的所有元素。这样的方法可能像下面所示：
 
 ```objc
 -(NSMutableArray *) lookupAll: (NSString *) theName
@@ -8818,7 +8256,7 @@ Foundation 框架还提供名为 `NSCountedSet` 的类。这些集合可以表�
 }
 ```
 
-如果你在寻找数组中的多个匹配项，也可以使用 `indexesOfPassingTest:` 方法。该方法返回一个 `NSIndexSet`，其中包含数组中符合标准的元素的索引。以下版本使用了该方法来查找并返回所有匹配的卡片。
+如果你在寻找数组中的多个匹配项，也可以使用`indexesOfPassingTest:`方法。该方法返回一个`NSIndexSet`，其中包含数组中符合标准的元素的索引。以下版本使用了该方法来查找并返回所有匹配的卡片。
 
 ```objc
 -(NSIndexSet *) lookupAll: (NSString *) theName
@@ -8837,118 +8275,121 @@ Foundation 框架还提供名为 `NSCountedSet` 的类。这些集合可以表�
 }
 ```
 
-留给你练习修改 `lookupAll:` 方法的第二个版本，使其也返回匹配卡片的数组。（提示：在 `indexesOfPassingTest:` 方法完成后，遍历索引集的每个索引，并将相应的元素添加到你要返回的数组中。）
+留给你练习修改`lookupAll:`方法的第二个版本，使其也返回匹配卡片的数组。（提示：在`indexesOfPassingTest:`方法完成后，遍历索引集的每个索引，并将相应的元素添加到你要返回的数组中。）
 
-在表 15.11 中列出了一些性的 `NSIndexSet` 方法。在表中，`idx` 是一个 `NSUInteger` 整数。鼓励你在文档中查询该类以获取更多信息。
+在表 15.11 中列出了一些`NSIndexSet`方法。在表中，`idx`是一个`NSUInteger`整数。鼓励你在文档中查询该类以获取更多信息。
 
-**表 15.11 一些 `NSIndexSet` 方法**
+**表 15.11 一些`NSIndexSet`方法**
 
 ![Image](img/00072.jpg)
 
 ### 练习
 
-1. 在文档中查询 `NSDate` 类。然后为 `NSDate` 添加一个名为 `ElapsedDays` 的新分类。在新分类中，根据以下方法声明一个方法：
+1. 在文档中查询`NSDate`类。然后为`NSDate`添加一个名为`ElapsedDays`的新分类。在新分类中，根据以下方法声明一个方法：
 
 `-(unsigned long) elapsedDays: (NSDate *) theDate;`
 
-让新方法返回接收者与参数之间经过的天数。编写测试程序来测试你的新方法。（提示：查看 `years:months:days:hours:minutes:seconds:sinceDate:` 方法。）
+让新方法返回接收者与参数之间经过的天数。编写测试程序来测试你的新方法。（提示：查看`years:months:days:hours:minutes:seconds:sinceDate:`方法。）
 
-2. 修改本章为 `AddressBook` 类开发的 `lookup:` 方法，以便进行名称的部分匹配。消息表达式 `[myBook lookup:@"steve"]` 应该匹配名称任何位置包含字符串 `steve` 的条目。请修改使用 `sortedArrayUsingSelector:` 方法的版本，以及本章末尾使用 `indexOfObjectPassingTest:` 方法的版本。
+2. 修改本章为`AddressBook`类开发的`lookup:`方法，以便进行名称的部分匹配。消息表达式`[myBook lookup:@"steve"]`应该匹配名称任何位置包含字符串`steve`的条目。请修改使用`sortedArrayUsingSelector:`方法的版本，以及本章末尾使用`indexOfObjectPassingTest:`方法的版本。
 
-3. 使用第 2 题的结果，修改 `lookup:` 方法以搜索地址录中的所有匹配项。让该方法返回所有此类匹配卡片的数组，如果没有匹配项则返回 `nil`。请修改使用 `sortedArrayUsingSelector:` 方法的版本，以及本章末尾使用 `indexesOfPassingTest:` 方法的版本。（注意，本章末尾提供的示例返回的是 `NSIndexSet` 结果，但我们在这里需要 `AddressCards` 数组。）
+3. 使用第 2 题的结果，修改`lookup:`方法以搜索地址录中的所有匹配项。让该方法返回所有此类匹配卡片的数组，如果没有匹配项则返回`nil`。请修改使用`sortedArrayUsingSelector:`方法的版本，以及本章末尾使用`indexesOfPassingTest:`方法的版本。（注意，本章末尾提供的示例返回的是`NSIndexSet`结果，但我们在这里需要`AddressCards`数组。）
 
+4. 在`AddressCard`类中添加你认为合适的新字段。建议将姓名字段拆分为名（first name）和姓（last name）字段，并添加地址（可能拆分为州、城市、邮政编码和国家字段）以及电话号码字段。编写相应的 setter 和 getter 方法，并确保`print`和`list`方法能够正确显示这些字段。
 
+5. 完成第 4 题后，修改第 3 题中的`lookup:`方法，以便对地址卡片的所有字段进行搜索。你能否想到一种设计方法来构建`AddressCard`和`AddressBook`类，使得后者不需要知道前者存储的所有字段吗？
 
-
-
-4. 在 `AddressCard` 类中添加你认为合适的新字段。建议将姓名字段拆分为名（first name）和姓（last name）字段，并添加地址（可能拆分为州、城市、邮政编码和国家字段）以及电话号码字段。编写相应的 setter 和 getter 方法，并确保 `print` 和 `list` 方法能够正确显示这些字段。
-
-5. 完成第 4 题后，修改第 3 题中的 `lookup:` 方法，以便对地址卡片的所有字段进行搜索。你能否想到一种设计方法来构建 `AddressCard` 和 `AddressBook` 类，使得后者不需要知道前者存储的所有字段吗？
-
-6. 在 `AddressBook` 类中添加 `removeName:` 方法，根据给定的方法声明从地址簿中移除某人，该方法的声明如下：
+6. 在`AddressBook`类中添加`removeName:`方法，根据给定的方法声明从地址簿中移除某人，该方法的声明如下：
 
 ```
 -(BOOL) removeName: (NSString *) theName;
 ```
 
-使用在第 2 题中开发的 `lookup:` 方法。如果未找到姓名或存在多个条目，则让方法返回 `NO`。如果成功删除了人员，则返回 `YES`。
+使用在第 2 题中开发的`lookup:`方法。如果未找到姓名或存在多个条目，则让方法返回`NO`。如果成功删除了人员，则返回`YES`。
 
-7. 使用第一部分中定义的 `Fraction` 类，创建一个包含任意值的数的数组。按照文中描述为你的 `Fraction` 类添加一个描述方法。然后使用三种不同的技术来显示分数的值：1) 普通的 `for` 循环，2) 快速枚举（fast enumeration），最后是 3) 直接使用 `%@`。
+7. 使用第一部分中定义的`Fraction`类，创建一个包含任意值的数的数组。按照文中描述为你的`Fraction`类添加一个描述方法。然后使用三种不同的技术来显示分数的值：1) 普通的`for`循环，2) 快速枚举（fast enumeration），最后是 3) 直接使用`%@`。
 
-8. 使用第一部分中定义的 `Fraction` 类，创建一个包含任意值的变异数组。然后使用 `NSMutableArray` 类中的 `sortUsingSelector:` 方法对数组进行排序。为 `Fraction` 类添加一个 `Comparison` category，并在分类中实现你的比较方法。
+8. 使用第一部分中定义的`Fraction`类，创建一个包含任意值的变异数组。然后使用`NSMutableArray`类中的`sortUsingSelector:`方法对数组进行排序。为`Fraction`类添加一个`Comparison` category，并在分类中实现你的比较方法。
 
-9. 定义三个新类，分别为 `Song`、`Playlist` 和 `MusicCollection`。`Song` 对象将包含特定歌曲的信息，如标题、艺术家、专辑和播放时间。`Playlist` 对象将包含播放列表名称和歌曲集合。`MusicCollection` 对象将包含播放列表集合，包括一个名为 `library` 的特殊主播放列表，其中包含集合中的每首歌。定义这三个类并编写方法来执行以下操作：
+9. 定义三个新类，分别为`Song`、`Playlist`和`MusicCollection`。`Song`对象将包含特定歌曲的信息，如标题、艺术家、专辑和播放时间。`Playlist`对象将包含播放列表名称和歌曲集合。`MusicCollection`对象将包含播放列表集合，包括一个名为`library`的特殊主播放列表，其中包含集合中的每首歌。定义这三个类并编写方法来执行以下操作：
 
-创建一个 `Song` 对象并设置其信息。
+创建一个`Song`对象并设置其信息。
 
-创建一个 `Playlist` 对象，并向播放列表添加和移除歌曲。如果新歌曲不在于主播放列表中，则应将其添加到主播放列表中。确保如果一首歌从主播放列表中被移除，那么它也会同时从音乐集合中的所有播放列表中被移除。
+创建一个`Playlist`对象，并向播放列表添加和移除歌曲。如果新歌曲不在于主播放列表中，则应将其添加到主播放列表中。确保如果一首歌从主播放列表中被移除，那么它也会同时从音乐集合中的所有播放列表中被移除。
 
-创建一个 `MusicCollection` 对象，并向集合中添加和移除播放列表。
+创建一个`MusicCollection`对象，并向集合中添加和移除播放列表。
 
 搜索并显示关于任何歌曲、任何播放列表或整个音乐集合的信息。
 
 确保你的所有类都没有内存泄露！
 
 > **注意**
- 这可能是全文中最具启发意义的练习，但它并不简单！图 15.6 显示了一个名为 `myMusic` 的示例 `MusicCollection` 可能的样子。它有三个播放列表，其中包括主播放列表 `library`。library 包含五首歌。`playlist1` 有两首歌，`playlist2` 有一首歌。这里是一些提示：要充分利用 `NSMutableArray` 类，并在每个新播放列表中仅存储歌曲的引用（而不是副本）（使用 `addObject:` 方法来实现此）。
+
+这可能是全文中最具启发性的练习，但它并不简单！图 15.6 显示了一个名为`myMusic`的示例`MusicCollection`可能的样子。它有三个播放列表，其中包括主播放列表`library`。library 包含五首歌。`playlist1`有两首歌，`playlist2`有一首歌。这里是一些提示：要充分利用`NSMutableArray`类，并在每个新播放列表中仅存储歌曲的引用（而不是副本）（使用`addObject:`方法来实现此）。
 
 图 15.6. 示例音乐集合数据结构
 
 ![Image](img/00073.jpg)
 
-10. 编写一个程序，接收一个包含 `NSNumber` 对象的 `NSArray`（其中每个 `NSNumber` 代表一个整数），并生成一个频率表，列出每个整数及其在数组中出现的次数。使用 `NSCountedSet` 对象来构建你的频率计数。
+10. 编写一个程序，接收一个包含`NSNumber`对象的`NSArray`（其中每个`NSNumber`代表一个整数），并生成一个频率表，列出每个整数及其在数组中出现的次数。使用`NSCountedSet`对象来构建你的频率计数。
 
-11. 当使用 `addCard:` 方法向地址簿添加地址卡片时，谁拥有该地址卡片？卡片上的任何信息以后可以被更改并影响存储在地址簿中的卡片吗？你能想到一种更安全的方法来实现 `addCard:` 方法吗？
+11. 当使用`addCard:`方法向地址簿添加地址卡片时，谁拥有该地址卡片？卡片上的任何信息以后可以被更改并影响存储在地址簿中的卡片吗？你能想到一种更安全的方法来实现`addCard:`方法吗？
 
 ## 16 处理文件
 
-Foundation 框架允许你访问文件系统以对文件和目录执行基本操作。这是通过 `NSFileManager` 的，其方法包括：
+Foundation 框架允许你访问文件系统以对文件和目录执行基本操作。这是通过`NSFileManager`的，其方法包括：
 
 * 创建新文件
+
 * 从现有文件读取
+
 * 向文件写入数据
+
 * 重命名文件
+
 * （删除）文件
+
 * 测试文件是否存在
+
 * 确定文件的大小以及其他属性
+
 * 创建文件的副本
+
 * 测试两个文件以检查其内容是否相等
 
 许多这些操作也可以在目录上执行。例如，你可以创建一个目录、读取其内容或删除它。另一个功能是链接文件的能力。也就是说，同一个文件以两个不同的名称存在，甚至可能在不同的目录中。
 
-要打开文件并对文件执行多次读写操作，你需要使用 `FileHandle` 提供的方法：
-
-* 打开文件进行读取、写入或更新
-* 移动到文件内的指定位置
-* 从文件读取或向文件写入指定数量的字节
-
-`FileHandle` 提供的方法也可以应用于设备或套接字。然而，在本章中我们关注普通文件。
-
-`NSURL` 类允许你在应用程序中使用 URL。我们将通过一个简单的示例来看这个类，展示了如何从互联网读取数据。
-
-`NSBundle` 类提供了允许你处理应用程序包的方法。这包括在包中搜索特定资源，例如 JPEG 。我们将在章节结束时简单地介绍这个类。
-
-### 管理文件和目录：NSFileManager
-
-一个文件或目录通过路径（pathname）被 `NSFileManager` 唯一标识。路径是一个 `NSString` 对象，可以是相对路径或全路径。相对路径是相对于当前目录的路径。因此，文件名 `copy1.m` 意味着当前目录下的 `copy1.m` 文件。斜字符分隔路径中的目录列表。文件名 `ch16/copy1.m` 也是一个相对路径，标识存储在 `ch16` 目录中的 `copy1.m` 文件。
-
-全路径（也称为绝对路径）以 `/` 开头。斜实际上是一个目录，称为根目录。在我的 Mac 上，我主目录的全路径是 `/Users/stevekochan`。
-
-特殊波浪字符（`~`）被用作用户主目录的缩写。因此，`~linda` 是用户 `linda` 主目录的缩写，其路径可能是 `/Users/linda`。单独的波浪字符表示当前用户的主目录，这意味着路径 `~/copy1.m` 指向当前用户主目录中的 `copy1.m` 文件。
 
 
+要打开文件并对文件执行多次读写操作，你需要使用`FileHandle`提供的方法：
 
+- 打开文件进行读取、写入或更新
+- 移动到文件内的指定位置
+- 从文件读取或向文件写入指定数量的字节
 
+`FileHandle`提供的方法也可以应用于设备或套接字。然而，在本章中我们关注普通文件。
 
-你应该尽量避免在程序中硬编码路径名称。正如你在本章中看到的，可以使用一些方法和函数，让你能够获取当前目录、用户主目录以及用于创建临时文件的目录的路径。你应该尽可能地利用这些方法。在本章稍后的部分，你会发现 Foundation 有一个函数可以获取特殊目录的列表，例如用户的 `Documents` 目录。该函数对于开发 Mac OS X 和 iOS 都非常有用。
+`NSURL`类允许你在应用程序中使用 URL。我们将通过一个简单的示例来看这个类，展示了如何从互联网读取数据。
 
-表 16.1 总结了一些用于处理文件的基本 `NSFileManager` 方法。在表中，`path`、`path1`、`path2`、`from` 和 `to` 都是 `NSString` 对象；`attr` 是一个 `NSDictionary` 对象；`err` 是一个指向 `NSError` 对象的指针，你可以提供它来获取有关特定错误的更多信息。如果你为 `err` 指定 `NULL`，则将采取默认操作，对于返回 `BOOL` 的方法，默认操作是操作成功时返回 `YES`，失败时返回 `NO`。我们在本章中不会涉及使用该对象。
+`NSBundle`类提供了允许你处理应用程序包的方法。这包括在包中搜索特定资源，例如 JPEG。我们将在章节结束时简单地介绍这个类。
 
-表 16.1 常见的 NSFileManager 文件方法
+## 管理文件和目录：`NSFileManager`
+
+一个文件或目录通过路径（pathname）被`NSFileManager`唯一标识。路径是一个`NSString`对象，可以是相对路径或全路径。相对路径是相对于当前目录的路径。因此，文件名`copy1.m`意味着当前目录下的`copy1.m`文件。斜字符分隔路径中的目录列表。文件名`ch16/copy1.m`也是一个相对路径，标识存储在`ch16`目录中的`copy1.m`文件。
+
+全路径（也称为绝对路径）以`/`开头。斜实际上是一个目录，称为根目录。在我的 Mac 上，我主目录的全路径是`/Users/stevekochan`。
+
+特殊波浪字符（`~`）被用作用户主目录的缩写。因此，`~linda`是用户`linda`主目录的缩写，其路径可能是`/Users/linda`。单独的波浪字符表示当前用户的主目录，这意味着路径`~/copy1.m`指向当前用户主目录中的`copy1.m`文件。
+
+你应该尽量避免在程序中硬编码路径名称。正如你在本章中看到的，可以使用一些方法和函数，让你能够获取当前目录、用户主目录以及用于创建临时文件的目录的路径。你应该尽可能地利用这些方法。在本章稍后的部分，你会发现 Foundation 有一个函数可以获取特殊目录的列表，例如用户的`Documents`目录。该函数对于开发 Mac OS X 和 iOS 都非常有用。
+
+表 16.1 总结了一些用于处理文件的基本`NSFileManager`方法。在表中，`path`、`path1`、`path2`、`from`和`to`都是`NSString`对象；`attr`是一个`NSDictionary`对象；`err`是一个指向`NSError`对象的指针，你可以提供它来获取有关特定错误的更多信息。如果你为`err`指定`NULL`，则将采取默认操作，对于返回`BOOL`的方法，默认操作是操作成功时返回`YES`，失败时返回`NO`。我们在本章中不会涉及使用该对象。
+
+### 表 16.1 常见的 `NSFileManager` 文件方法
 
 ![Image](img/00074.jpg)
 
-每个文件方法都是在一个 `NSFileManager` 对象上调用的，该对象是通过向类发送 `defaultManager` 消息创建的，如下：
+每个文件方法都是在一个`NSFileManager`对象上调用的，该对象是通过向类发送`defaultManager`消息创建的，如下：
 
 ```objective-c
 NSFileManager *fm;
@@ -8956,7 +8397,7 @@ NSFileManager *fm;
 fm = [NSFileManager defaultManager];
 ```
 
-例如，要删除当前目录下名为 `todolist` 的文件，你首先需要像之前创建 `NSFileManager` 对象，然后调用 `removeItemAtPath:` 方法，如下：
+例如，要删除当前目录下名为`todolist`的文件，你首先需要像之前创建`NSFileManager`对象，然后调用`removeItemAtPath:`方法，如下：
 
 ```objective-c
 [fm removeItemAtPath: @"todolist" error: NULL];
@@ -8971,11 +8412,11 @@ if ([fm removeItemAtPath: @"todolist" error: NULL] == NO) {
 }
 ```
 
-属性字典允许你指定（除其他之外）你正在创建的文件的权限，或者获取或更改现有文件的信息。对于文件创建，如果你为此参数指定 `nil`，则会为文件设置默认权限。`attributesOfItemAtPath:traverseLink:` 方法返回包含指定文件属性的字典。`traverseLink:` 参数对于符号链接是 `YES` 或 `NO`。如果文件是符号链接且指定了 `YES`，则返回所链接文件的属性；如果指定了 `NO`，则返回链接本身的属性。
+属性字典允许你指定（除其他之外）你正在创建的文件的权限，或者获取或更改现有文件的信息。对于文件创建，如果你为此参数指定`nil`，则会为文件设置默认权限。`attributesOfItemAtPath:traverseLink:`方法返回包含指定文件属性的字典。`traverseLink:`参数对于符号链接是`YES`或`NO`。如果文件是符号链接且指定了`YES`，则返回所链接文件的属性；如果指定了`NO`，则返回链接本身的属性。
 
-对于已存在的文件，属性字典包含了诸如文件所有者、大小、创建日期等信息。字典中的每个每个属性都可以根据其键进行提取，所有键都定义在 `<Foundation/NSFileManager.h>` 中。例如，`NSFileSize` 是文件大小的键。
+对于已存在的文件，属性字典包含了诸如文件所有者、大小、创建日期等信息。字典中的每个每个属性都可以根据其键进行提取，所有键都定义在`<Foundation/NSFileManager.h>`中。例如，`NSFileSize`是文件大小的键。
 
-程序 16.1 显示了一些对文件的基本操作。此示例假设你的当前目录下有一个名为 `testfile` 的文件，其中包含以下三行文本：
+程序 16.1 显示了一些对文件的基本操作。此示例假设你的当前目录下有一个名为`testfile`的文件，其中包含以下三行文本：
 
 ```
 This is a test file with some data in it.
@@ -8983,7 +8424,7 @@ Here's another line of data.
 And a third.
 ```
 
-程序 16.1
+### 程序 16.1
 
 ```objective-c
 // Basic File operations
@@ -9049,7 +8490,7 @@ int main (int argc, const char * argv[]) {
 }
 ```
 
-程序 16.1 输出
+### 程序 16.1 输出
 
 ```
 File size is 84 bytes
@@ -9060,27 +8501,24 @@ Here's another line of data.
 And a third.
 ```
 
-程序首先测试 `testfile` 是否存在。如果存在，它会进行一个拷贝，然后测试两个文件的相等性。丰富的 UNIX 用户应该注意，你不能仅仅通过指定目标目录就将文件移动或拷贝到目录中；`copyItemAtPath:toPath:error:` 和 `moveItemAtPath:toPath:error:` 方法必须显式指定该目录内的文件名。
+程序首先测试`testfile`是否存在。如果存在，它会进行一个拷贝，然后测试两个文件的相等性。丰富的 UNIX 用户应该注意，你不能仅仅通过指定目标目录就将文件移动或拷贝到目录中；`copyItemAtPath:toPath:error:`和`moveItemAtPath:toPath:error:`方法必须显式指定该目录内的文件名。
 
-> 注意
-> 你可以通过 Xcode 创建 `testfile`：选择 File, New, New File.... 在出现的左窗格中高亮 Other，然后在右窗格中选择 Empty。输入 testfile 作为文件名，并确保将其创建在与可执行文件相同的目录下。如果你在定位目录方面有困难，可以使用本节后面介绍的 `currentDirectoryPath:` 方法。或者，你可以使用文件的完整路径，例如 /Users/steve/testfile（在这里用你的用户名替换 steve）。
+> **注意**
+> 你可以通过 Xcode 创建`testfile`：选择 File, New, New File.... 在出现的左窗格中高亮 Other，然后在右窗格中选择 Empty。输入 testfile 作为文件名，并确保将其创建在与可执行文件相同的目录下。如果你在定位目录方面有困难，可以使用本节后面介绍的`currentDirectoryPath:`方法。或者，你可以使用文件的完整路径，例如`/Users/steve/testfile`（在这里用你的用户名替换 steve）。
 
+最后，使用`NSString`的`stringWithContentsOfFile:encoding:error:`方法将文件`newfile2`的内容读取到一个字符串对象中，然后将其作为参数传递给`NSLog`进行显示。编码参数指定了文件中字符数据的表示方式。该参数的可选选项在头文件`NSString.h`中定义。可以使用`NSUTF8StringEncoding`来指定包含普通 UTF8 ASCII 字符的文件。
 
+每个文件操作都经过了成功与否测试，详见程序 16.1。如果任何一个操作失败，将使用`NSLog`记录错误，并通过返回非零退出状态退出程序。按照惯，每个非零值都表示程序失败，且根据错误类型是唯一的。如果你在编写命令行工具，这是一种非常有用的技术，因为另一个程序（例如在 shell 脚本内部）可以测试返回值。
 
+## 使用`NSData`类
 
-最后，使用 `NSString` 的 `stringWithContentsOfFile:encoding:error:` 方法将文件 `newfile2` 的内容读取到一个字符串对象中，然后将其作为参数传递给 `NSLog` 进行显示。编码参数指定了文件中字符数据的表示方式。该参数的可选选项在头文件 `NSString.h` 中定义。可以使用 `NSUTF8StringEncoding` 来指定包含普通 UTF8 ASCII 字符的文件。
-
-每个文件操作都经过了成功与否测试，详见 程序 16.1。如果任何一个操作失败，将使用 `NSLog` 记录错误，并通过返回非零退出状态退出程序。按照惯，每个非零值都表示程序失败，且根据错误类型是唯一的。如果你在编写命令行工具，这是一种非常有用的技术，因为另一个程序（例如在 shell 脚本内部）可以测试返回值。
-
-## 使用 `NSData` 类
-
-在处理文件时，你经常需要将数据读取到临时存储区域，该区域通常称为*缓冲区*（buffer）。在收集数据以便后续输出到文件时，通常也会使用一个存储区域。Foundation 的 `NSData` 类提供了一种简单的方法来设置缓冲区、将文件内容读取到缓冲区中，或将缓冲区的内容写入文件。以防你好奇，对于 32 位应用程序，一个 `NSData` 缓冲区可以存储多达 2GB。对于 64 位应用程序，它可以容纳多达 8EB（艾字节）或 80 亿 GB 的数据！
+在处理文件时，你经常需要将数据读取到临时存储区域，该区域通常称为*缓冲区*（buffer）。在收集数据以便后续输出到文件时，通常也会使用一个存储区域。Foundation 的`NSData`类提供了一种简单的方法来设置缓冲区、将文件内容读取到缓冲区中，或将缓冲区的内容写入文件。以防你好奇，对于 32 位应用程序，一个`NSData`缓冲区可以存储多达 2GB。对于 64 位应用程序，它可以容纳多达 8EB（艾字节）或 80 亿 GB 的数据！
 
 正如你所预期的，你可以定义不可变的（`NSData`）或可变的（`NSMutableData`）存储区域。我们在本章及后续章节中介绍该类的方法。
 
 程序 16.2 展示了如何轻松地将文件内容读取到内存缓冲区中。
 
-该程序读取文件 `newfile2` 的内容并将其写入名为 `newfile3` 的新文件中。从某种意义上说，它实现了文件复制操作，尽管这种方式不如 `copyItemAtPath:toPath:error:` 方法那么直接。
+该程序读取文件`newfile2`的内容并将其写入名为`newfile3`的新文件中。从某种意义上说，它实现了文件复制操作，尽管这种方式不如`copyItemAtPath:toPath:error:`方法那么直接。
 
 ### 程序 16.2
 
@@ -9123,13 +8561,13 @@ int main (int argc, char * argv[])
 File copy was successful!
 ```
 
-`contentsAtPath:` 方法简单地接收一个路径并将指定文件内容读取到它创建的存储区域中，返回该存储区域对象作为结果；如果读取失败则返回 `nil`（例如，文件不存在或你无法读取它）。
+`contentsAtPath:`方法简单地接收一个路径并将指定文件内容读取到它创建的存储区域中，返回该存储区域对象作为结果；如果读取失败则返回`nil`（例如，文件不存在或你无法读取它）。
 
-`createFileAtPath:contents:attributes:` 方法创建一个带有指定属性的文件（如果为 `attributes` 参数提供 `nil`，则使用默认属性）。指定的 `NSData` 对象的内容会被写入文件。在示例中，此数据区域包含了之前读取的文件内容。
+`createFileAtPath:contents:attributes:`方法创建一个带有指定属性的文件（如果为`attributes`参数提供`nil`，则使用默认属性）。指定的`NSData`对象的内容会被写入文件。在示例中，此数据区域包含了之前读取的文件内容。
 
 ## 处理目录
 
-表 16.2 总结了 `NSFileManager` 提供的一些用于处理目录的方法。其中许多方法与处理普通文件的方法相同，如 表 16.1 所示。
+表 16.2 总结了`NSFileManager`提供的一些用于处理目录的方法。其中许多方法与处理普通文件的方法相同，如表 16.1 所示。
 
 ![表 16.2 常见的 NSFileManager 方法](img/0075.jpg)
 
@@ -9194,10 +8632,9 @@ All operations were successful!
 
 
 
+有时你需要获取一个目录的内容列表。这种枚举过程可以使用`enumeratorAtPath:`或`contentsOfDirectoryAtPath:error:`方法完成。在第一种情况下，指定目录中的每个文件都会逐个被枚举，并且默认情况下，如果其中某个文件是目录，则它的内容也会被递归地枚举。在此过程中，你可以通过向枚举对象发送`skipDescendants`消息来动态地防止这种递归，这样它的内容就不会被枚举。
 
-有时你需要获取一个目录的内容列表。这种枚举过程可以使用 `enumeratorAtPath:` 或 `contentsOfDirectoryAtPath:error` 方法完成。在第一种情况下，指定目录中的每个文件都会逐个被枚举，并且默认情况下，如果其中某个文件是目录，则它的内容也会被递归地枚举。在此过程中，你可以通过向枚举对象发送 `skipDescendants` 消息来动态地防止这种递归，这样它的内容就不会被枚举。
-
-在 `contentsOfDirectoryAtPath:error:` 的情况下，该方法会枚举指定目录的内容，并以数组的形式返回文件列表。如果目录包含的任何文件本身是目录，该方法不会对其内容进行递归枚举。
+在`contentsOfDirectoryAtPath:error:`的情况下，该方法会枚举指定目录的内容，并以数组的形式返回文件列表。如果目录包含的任何文件本身是目录，该方法不会对其内容进行递归枚举。
 
 程序 16.4 展示了你如何在程序中使用这两种方法之一。
 
@@ -9277,11 +8714,11 @@ while ((path = [dirEnum nextObject]) != nil)
     NSLog (@"%@", path);
 ```
 
-你通过向文件管理器对象（在此例中 `fm`）发送 `enumeratorAtPath:` 消息来开始枚举目录。`enumeratorAtPath:` 方法返回一个 `NSDirectoryEnumerator` 对象并存储在 `dirEnum` 中。现在，每当你向该对象发送 `nextObject` 消息时，它就会返回正在枚举的目录中下一个文件的路径。当没有更多文件可以枚举时，它将返回 nil。
+你通过向文件管理器对象（在此例中`fm`）发送`enumeratorAtPath:`消息来开始枚举目录。`enumeratorAtPath:`方法返回一个`NSDirectoryEnumerator`对象并存储在`dirEnum`中。现在，每当你向该对象发送`nextObject`消息时，它就会返回正在枚举的目录中下一个文件的路径。当没有更多文件可以枚举时，它将返回`nil`。
 
-你可以从程序 16.4 的输出中看到两种枚举技术之间的区别。`enumeratorAtPath:` 方法列出了 `newdir` 目录的内容，而 `contentsOfDirectoryAtPath:error:` 则没有列出。如果 `newdir` 包含子目录，它们也会被 `enumeratorAtPath:` 枚举。
+你可以从程序 16.4 的输出中看到两种枚举技术之间的区别。`enumeratorAtPath:`方法列出了`newdir`目录的内容，而`contentsOfDirectoryAtPath:error:`则没有列出。如果`newdir`包含子目录，它们也会被`enumeratorAtPath:`枚举。
 
-正如所提到的，在执行程序 16.4 中的 `while` 循环期间，你可以通过对代码进行以下更改来防止枚举任何子目录：
+正如所提到的，在执行程序 16.4 中的`while`循环期间，你可以通过对代码进行以下更改来防止枚举任何子目录：
 
 ```objc
 while ((path = [dirEnum nextObject]) != nil) {
@@ -9292,11 +8729,11 @@ while ((path = [dirEnum nextObject]) != nil) {
 }
 ```
 
-`flag` 是一个 `BOOL` 变量。如果指定的路径是目录，`fileExistsAtPath:` 会存储 `YES`；否则，它存储 `NO`。顺便提醒一下，你可以使用这个单次 `NSLog` 调用 `NSLog (@@", dirArray);` 来显示整个 `dirArray`，而不是像程序中那样使用快速枚举。
+`flag`是一个`BOOL`变量。如果指定的路径是目录，`fileExistsAtPath:`会存储`YES`；否则，它存储`NO`。顺便提醒一下，你可以使用这个单次`NSLog`调用`NSLog (@@", dirArray);`来显示整个`dirArray`，而不是像程序中那样使用快速枚举。
 
 ### 路径操作：NSPathUtilities.h
 
-`NSPathUtilities.h` 包含了针对 `NSString` 的函数和分类扩展，允许你操作路径名。你应该尽可能使用这些功能，以使你的程序对文件系统的结构和文件位置的依赖降低。程序 16.5 展示了如何使用 `NSPathUtilities.h` 提供的几个函数和方法。
+`NSPathUtilities.h`包含了针对`NSString`的函数和分类扩展，允许你操作路径名。你应该尽可能使用这些功能，以使你的程序对文件系统的结构和文件位置的依赖降低。程序 16.5 展示了如何使用`NSPathUtilities.h`提供的几个函数和方法。
 
 ### 程序 16.5
 
@@ -9359,37 +8796,33 @@ stevekochan
 
 > **注意**：在你自己的系统中，输出将与所示内容不同。
 
-`NSTemporaryDirectory` 函数返回系统上一个目录的路径，你可以用来创建临时文件。如果你在该目录中创建了临时文件，请务必在完成后删除它们。此外，确保你的文件名是唯一的，特别是当可能有多个应用程序实例同时运行时（参见本章末尾的练习题 5）。如果登录到系统的多个用户正在运行同一个应用程序，这种情况很容易发生。注意，临时文件只是临时文件。如果你在完成工作后没有删除它们，系统会在某个时刻自动为你删除它们。然而，你不应该依赖这一点，而应该自己删除它们。
+`NSTemporaryDirectory`函数返回系统上一个目录的路径，你可以用来创建临时文件。如果你在该目录中创建了临时文件，请务必在完成后删除它们。此外，确保你的文件名是唯一的，特别是当可能有多个应用程序实例同时运行时（参见本章末尾的练习题 5）。如果登录到系统的多个用户正在运行同一个应用程序，这种情况很容易发生。注意，临时文件只是临时文件。如果你在完成工作后没有删除它们，系统会在某个时刻自动为你删除它们。然而，你不应该依赖这一点，而应该自己删除它们。
 
-`lastPathComponent` 方法提取路径中的最后一个文件。当你拥有一个绝对路径并只想从中获取基本文件名时，这个方法非常有用。
+`lastPathComponent`方法提取路径中的最后一个文件。当你拥有一个绝对路径并只想从中获取基本文件名时，这个方法非常有用。
 
+`stringByAppendingPathComponent:`有用于在路径末尾添加文件名。如果作为接收者的指定路径不以斜杠结尾，该方法会在路径中插入一个斜杠，以将其与附加的文件隔开。通过将`currentDirectoryPath`方法与`stringByAppendingPathComponent:`方法结合，你可以创建当前目录下某个文件的完整路径。该技术在程序 16.5 中所示。
 
+`pathExtension`方法提供提供路径的文件扩展名。在示例中，文件`path.m`的扩展名为`m`，由该方法返回。如果文件没有扩展名，该方法简单地返回空字符串。
 
+`NSHomeDirectory`函数返回当前用户的主目录。你可以通过使用`NSHomeDirectoryForUser`函数来获取任何特定用户的主目录，只需将用户名作为函数的参数即可。
 
-
-`stringByAppendingPathComponent:` 有用于在路径末尾添加文件名。如果作为接收者的指定路径不以斜杠结尾，该方法会在路径中插入一个斜杠，以将其与附加的文件隔开。通过将 `currentDirectoryPath` 方法与 `stringByAppendingPathComponent:` 方法结合，你可以创建当前目录下某个文件的完整路径。该技术在程序 16.5 中所示。
-
-`pathExtension` 方法提供提供路径的文件扩展名。在示例中，文件 `path.m` 的扩展名为 `m`，由该方法返回。如果文件没有扩展名，该方法简单地返回空字符串。
-
-`NSHomeDirectory` 函数返回当前用户的主目录。你可以通过使用 `NSHomeDirectoryForUser` 函数来获取任何特定用户的主目录，只需将用户名作为函数的参数即可。
-
-`pathComponents` 方法返回一个包含指定路径每个组件的数组。程序 16.5 遍历返回数组的每个元素，并在输出的单独行中显示每个路径组件。
+`pathComponents`方法返回一个包含指定路径每个组件的数组。程序 16.5 遍历返回数组的每个元素，并在输出的单独行中显示每个路径组件。
 
 ## 处理路径的常用方法
 
-表 16.3 总结了许多用于处理路径的常用方法。在表中，`components` 是一个 `NSArray` 对象，包含路径中每个组件的字符串对象；`path` 是一个指定文件路径的字符串对象；`ext` 是一个指示路径扩展名的字符串对象（例如，`@"mp4"`）。
+表 16.3 总结了许多用于处理路径的常用方法。在表中，`components`是一个`NSArray`对象，包含路径中每个组件的字符串对象；`path`是一个指定文件路径的字符串对象；`ext`是一个指示路径扩展名的字符串对象（例如，`@"mp4"`）。
 
 表 16.3. 常用路径实用方法
 
 ![Image](img/00076.jpg)
 
-表 16.4 展示了用于获取用户信息、其主目录以及存储临时文件的目录的 `functions`。
+表 16.4 展示了用于获取用户信息、其主目录以及存储临时文件的目录的`functions`。
 
 表 16.4. 常用路径实用函数
 
 ![Image](img/00077.jpg)
 
-你可能还想查看 Foundation 函数 `NSSearchPathForDirectoriesInDomains`，你可以用它来定位系统或设备上的特殊目录，例如应用程序目录和文档目录。例如，下面的代码定义了一个名为 `saveFilePath` 的方法，它返回 Documents 目录中名为 `saveFile` 的文件的路径。如果你想将应用程序中的某些数据保存到文件中，可以使用这样的方法。
+你可能还想查看 Foundation 函数`NSSearchPathForDirectoriesInDomains`，你可以用它来定位系统或设备上的特殊目录，例如应用程序目录和文档目录。例如，下面的代码定义了一个名为`saveFilePath`的方法，它返回 Documents 目录中名为`saveFile`的文件的路径。如果你想将应用程序中的某些数据保存到文件中，可以使用这样的方法。
 
 ```objc
 -(NSString *) saveFilePath
@@ -9401,30 +8834,32 @@ stevekochan
 ```
 
 > **注意**
-> 你可以使用 Documents 目录来存储从应用程序某次运行到下一次运行持续持续的数据。每个 iOS 应用程序都有自己的 Documents 目录，可以向其中写入数据。`NSSearchPathForDirectoriesInDomains` 函数的第一个参数指定你想要定位的目录路径。应用程序中另一个可能想使用的目录是 Caches。你也可以使用该目录存储数据。从 iOS 5 开始，Apple 鼓励开发者将持久化数据存储在云端。参见表 16.5 获取常用 iOS 目录列表。
+
+> 你可以使用 Documents 目录来存储从应用程序某次运行到下一次运行持续持续的数据。每个 iOS 应用程序都有自己的 Documents 目录，可以向其中写入数据。`NSSearchPathForDirectoriesInDomains`函数的第一个参数指定你想要定位的目录路径。应用程序中另一个可能想使用的目录是 Caches。你也可以使用该目录存储数据。从 iOS 5 开始，Apple 鼓励开发者将持久化数据存储在云端。参见表 16.5 获取常用 iOS 目录列表。
 
 表 16.5. 常用 iOS 目录
 
 ![Image](img/00078.jpg)
 
-函数的第二个参数可以是多个值之一，用于指定要列出的目录，例如用户目录（如示例所示）、系统目录或所有目录。最后一个参数指定是否展开路径中的 `~` 字符。
+函数的第二个参数可以是多个值之一，用于指定要列出的目录，例如用户目录（如示例所示）、系统目录或所有目录。最后一个参数指定是否展开路径中的`~`字符。
 
-`NSSearchPathForDirectoriesInDomains` 返回一个路径数组。如果你只是查找用户目录，该数组将包含单个元素；根据第二个参数指定的值，它可能包含多个元素。
+`NSSearchPathForDirectoriesInDomains`返回一个路径数组。如果你只是查找用户目录，该数组将包含单个元素；根据第二个参数指定的值，它可能包含多个元素。
 
 > **注意**
-> 在编写 iOS 应用程序时，`NSSearchPathForDirectoriesInDomains` 的第二个参数应该是 `NSDomainMask`，你应该预期会返回一个包含单个路径的数组。
+
+> 在编写 iOS 应用程序时，`NSSearchPathForDirectoriesInDomains`的第二个参数应该是`NSDomainMask`，你应该预期会返回一个包含单个路径的数组。
 
 ## 复制文件和使用 NSProcessInfo 类
 
 程序 16.6 演示了一个实现简单文件复制操作的命令行工具。该命令用法如下：`copy from-file to-file`。
 
-与 `FileManager` 的 `copyPath:to:` 方法不同，你的命令行工具允许 `to-file` 是一个目录。在这种情况下，文件将被复制到 `to-file`。如果 `to-file` 存在，则会覆盖它。
+与`FileManager`的`copyPath:to:`方法不同，你的命令行工具允许`to-file`是一个目录。在这种情况下，文件将被复制到`to-file`。如果`to-file`存在，则会覆盖它。
 
-使用 `argc` 和 `argv` 从命令行获取文件名，这类似于 UNIX 命令 `cp`。
+使用`argc`和`argv`从命令行获取文件名，这类似于 UNIX 命令`cp`。
 
-与其处理 C 字符串，不如使用 Foundation 类的 `NSProcessInfo`。`NSProcessInfo` 包含了关于你运行的各种类型的信息。这些方法总结在表 16.6。
+与其处理 C 字符串，不如使用 Foundation 类的`NSProcessInfo`。`NSProcessInfo`包含了关于你运行的各种类型的信息。这些方法总结在表 16.6。
 
-表 16.6. `NSProcessInfo` 方法
+表 16.6. `NSProcessInfo`方法
 
 ![Image](img/00079.jpg)![Image](img/00080.jpg)
 
@@ -9483,14 +8918,16 @@ int main (int argc, char *[])
 程序 16.6. 输出
 
 > `$` `ls –l`看看我们有的哪些文件
+
 > `total 96`
+
 > `-rwxr-xr-x 1 stevekoc staff 19956 Jul 24 14:33 copy`
-> `-rw-r--r-- 1 stevekoc staff 1484  Jul 24 14:32 copy.m`
-> `-rw-r--r--1  stevekoc staff 1403  Jul 24 13:00 file1.m`
 
 
 
+> `-rw-r--r-- 1 stevekoc staff 1484 Jul 24 14:32 copy.m`
 
+> `-rw-r--r--1 stevekoc staff 1403 Jul 24 13:00 file1.m`
 
 ```
 drwxr-xr-x 2 stevekoc staff   68  Jul 24 14:40 newdir
@@ -9536,7 +8973,7 @@ $
 
 在到达程序末尾时，你可以假设一切顺利，并发出此意的消息。
 
-### 基础文件操作：`NSFileHandle`
+## 基础文件操作：`NSFileHandle`
 
 `NSFileHandle` 提供的方法允许你与文件进行更紧密的工作。在本章的开头，我们列出了使用这些方法可以执行的一些事情。
 
@@ -9548,7 +8985,7 @@ $
 
 表 16.7 总结了一些常用的 `NSFileHandle` 方法。在此表中，`fh` 是一个 `NSFileHandle` 对象，`data` 是一个 `NSData` 对象，`path` 是一个 `NSString` 对象，而 `offset` 是一个 `unsigned long long`。
 
-表 16.7 常用 `NSFileHandle` 方法
+### 表 16.7 常用 `NSFileHandle` 方法
 
 ![Image](img/00081.jpg)
 
@@ -9579,7 +9016,7 @@ int main (int argc, char * argv[])
         // 如果需要创建输出文件
         [[NSFileManager defaultManager] createFileAtPath:@"testout" contents:nil attributes:nil];
 
-         现在打开 outfile 进行写入
+        // 现在打开 outfile 进行写入
         outFile = [NSFileHandle fileHandleWritingAtPath:@"testout"];
         if (outFile == nil) {
             NSLog(@"打开 outfile 失败");
@@ -9604,13 +9041,13 @@ int main (int argc, char * argv[])
 }
 ```
 
-程序 16.7 输出
+### 程序 16.7 输出
 
-
-
+```
 这是一个包含数据的测试文件。
 这是另一行数据。
 还有第三行。
+```
 
 `readDataToEndFile:` 方法一次性读取最多 `UINT_MAX` 字节的数据，该值在 `<limits.h>` 中定义并等于 `FFFFFFFF[16]`。对于你将编写的任何应用程序都足够。你也可以拆分操作以执行较尺寸的读写。你甚至可以设置循环，使用 `readDataOfLength:` 方法每次在文件之间传输一个缓冲区。例如，你的缓冲区大小可以是 8192 (8kb) 或 131072 (128kb) 字节。通常使用 2 的幂，是因为底层操作系统通常以此类大小的数据块执行其 I/O 操作。你可能想在你的系统上尝试不同的值以查看效果效果。
 
@@ -9621,9 +9058,6 @@ int main (int argc, char * argv[])
 ```objc
 [databaseHandle seekToFileOffset: 10];
 ```
-
-
-
 
 相对文件定位是通过获取当前文件偏移量，然后对其进行加或减操作来实现的。因此，要跳过文件中的下一个 128 字节，请编写以下代码：
 
@@ -9690,11 +9124,15 @@ int main (int argc, char * argv[])
 ```
 
 运行程序 16.8 之前 `fileA` 的内容：
+
 `This is line 1 in the first file.`
+
 `This is line 2 in the first file.`
 
 运行程序 16.8 之前 `fileB` 的内容：
+
 `This is line 1 in the second file.`
+
 `This is line 2 in the second file.`
 
 ### 程序 16.8. 输出
@@ -9758,84 +9196,76 @@ NSString *txtFilePath = [[NSBundle mainBundle]
 
 `mainBundle` 方法给出应用程序包所在的目录。你可以将此方法用于 Mac OS 或 iOS 。`pathForResource:ofType:` 方法会在目录下查找指定的文件并返回其路径。随后可以使用如下语句将文件内容读取到应用程序中：
 
-```objc
-NSString *instructions = [NSString stringWithContentsOfFile: txtFilePath
-                      encoding:NS8StringEncoding error: NULL];
-```
 
-要在图像目录下定位所有扩展名为 `jpg` 的 JPEG 图片，可以使用 `pathsForResources:inDirectory:` 方法：
+
+在图像目录下定位所有扩展名为`jpg`的JPEG图片，可以使用`pathsForResources:inDirectory:`方法：
 
 ```objc
 NSArray *birds = [[NSBundle mainBundle] pathsForResourcesOfType:@"jpg"
                                 inDirectory:@"birdImages"];
 ```
 
-该方法返回路径数组。如果你的 JPEG 图片没有存储在应用程序的子目录下，可以将 `@""` 作为 `inDirectory:` 参数的值。`NSBundle` 类还有其他你想要的方法，请查阅文档详情。
+该方法返回路径数组。如果你的JPEG图片没有存储在应用程序的子目录下，可以将`@""`作为`inDirectory:`参数的值。`NSBundle`类还有其他你想要的方法，请查阅文档详情。
 
 ### 练习题
 
-1. 修改程序 16.6 中开发的复制程序，使其能够接受多个源文件并复制到目录，类似于标准的 UNIX `cp` 命令。因此，命令
+1. 修改程序16.6中开发的复制程序，使其能够接受多个源文件并复制到目录，类似于标准的UNIX`cp`命令。因此，命令
+
 `$ copy copy1.m file1.m file2.m progs`
-应该将 `copy1.m`、`file1.m` 和 `file2.m` 文件复制到 `progs` 目录中。确保当指定多个源文件时，最后一个参数确实是一个存在的目录。
 
-2. 编写一个名为 `myfind` 的命令行工具，接受两个参数：第一个是开始搜索的目录，第二个是要定位的文件名。例如，命令行：
+应该将`copy1.m`、`file1.m`和`file2.m`文件复制到`progs`目录中。确保当指定多个源文件时，最后一个参数确实是一个存在的目录。
+
+2. 编写一个名为`myfind`的命令行工具，接受两个参数：第一个是开始搜索的目录，第二个是要定位的文件名。例如，命令行：
+
 `$ myfind /Users proposal.doc`
-
-
-
-
 
 > `/Users/stevekochan/MyDocuments/proposals/proposal.doc`
 
 > `$`
 
-> 从 `/Users` 开始搜索文件系统以定位文件 `proposal.doc`。如果找到了该文件，则打印该文件的完整路径（如所示）；如果没找到，则打印适当的消息。
+> 从`/Users`开始搜索文件系统以定位文件`proposal.doc`。如果找到了该文件，则打印该文件的完整路径（如所示）；如果没找到，则打印适当的消息。
 
-> **3.** 编写你自己的版本的标准 UNIX 工具 `basename` 和 `dirname`。
+> **3.** 编写你自己的版本的标准UNIX工具`basename`和`dirname`。
 
-> **4.** 使用 `NSProcessInfo` 编写一个程序，显示由其每个 getter 方法返回的所有信息。
+> **4.** 使用`NSProcessInfo`编写一个程序，显示由其每个getter方法返回的所有信息。
 
-> **5.** 给本章描述的 `NSPathUtilities.h` 函数 `NSTemporaryDirectory` 和 `NSProcessInfo` 方法 `globallyUniqueString`，为 `NSString` 添加一个名为 `TempFiles` 的分类（category），并在其中定义名为 `temporaryFileName` 的方法，该方法在每次被调用时都返回一个不同的唯一文件名。
+> **5.** 给本章描述的`NSPathUtilities.h`函数`NSTemporaryDirectory`和`NSProcessInfo`方法`globallyUniqueString`，为`NSString`添加一个名为`TempFiles`的分类（category），并在其中定义名为`temporaryFileName`的方法，该方法在每次被调用时都返回一个不同的唯一文件名。
 
-> **6.** 修改 程序 16.7，使得文件每次读写 `kBufSize` 字节，其中 `kBufSize` 在程序的开头定义。务确保在大文件（即字节大于 `kBufSize` 字节的文件）上测试该程序。
+> **6.** 修改程序16.7，使得文件每次读写`kBufSize`字节，其中`kBufSize`在程序的开头定义。务确保在大文件（即字节大于`kBufSize`字节的文件）上测试该程序。
 
-> **7.** 打开一个文件，每次读取 128 字节内容并将其写入终端。使用 `NSFileHandle` 的 `fileHandleWithStandardOutput` 方法获取终端输出的句柄。
+> **7.** 打开一个文件，每次读取128字节内容并将其写入终端。使用`NSFileHandle`的`fileHandleWithStandardOutput`方法获取终端输出的句柄。
 
-> **8.** 一个字典以属性列表（property list）的形式存储在以下 URL：`http://bit.ly/aycNwd.`。编写一个程序读取该字典的内容并显示其内容。该字典包含什么数据？
+> **8.** 一个字典以属性列表（property list）的形式存储在以下URL：`http://bit.ly/aycNwd.`。编写一个程序读取该字典的内容并显示其内容。该字典包含什么数据？
 
 ## 17. 内存管理与自动引用计数
 
-回想 `NSMutableArray` 类，该类允许你创建一个可以向其中添加对象和移除对象的数组。假设在程序执行开始时，你需要将文件内容读取到数组中。假设你想将新数组命名为 `myData`，并想从一个存储为*属性列表*（property list）格式的文件初始化其内容（详细见第 19 章，“归档](CR%21HGK1SH992D3H5BD4YP0VXJVMVSGJ_split_030.html_filepos1507885))”）。你可以通过 `NSArray` 的 `arrayWithContentsOfFile:` 方法通过方法调用来实现，如下所示：
+回想`NSMutableArray`类，该类允许你创建一个可以向其中添加对象和移除对象的数组。假设在程序执行开始时，你需要将文件内容读取到数组中。假设你想将新数组命名为`myData`，并想从一个存储为*属性列表*（property list）格式的文件初始化其内容（详细见第19章，“归档](CR%21HGK1SH992D3H5BD4YP0VXJVMVSGJ_split_030.html_filepos1507885))”）。你可以通过`NSArray`的`arrayWithContentsOfFile:`方法通过方法调用来实现，如下所示：
 
-```
+```objc
 NSSArray *myData = [NSArray arrayWithContentsOfFile: @"database1"];
 ```
 
-这会读取并解析文件，并将结果存储到新创建的数组中，将数组的引用返回给你。然后该引用被存储在变量 `myData` 中。
+这会读取并解析文件，并将结果存储到新创建的数组中，将数组的引用返回给你。然后该引用被存储在变量`myData`中。
 
-假设在处理完 `myData` 中的数据后，你想从另一个文件读取数据并以类似的方式处理其内容；你需要执行以下语句：
+假设在处理完`myData`中的数据后，你想从另一个文件读取数据并以类似的方式处理其内容；你需要执行以下语句：
 
-```
+```objc
 myData = [NSArray arrayWithContentsOfFile: @"database2"];
 ```
 
-这里变量 `myData` 发生了变化，它现在指向一个从第二个文件设置了内容的不同数组。但第一个数组发生了什么呢？你不再拥有它的引用了（当你覆盖 `myData` 时丢失了该引用）。那么第一个数组中的所有元素呢？它们发生了什么？假设你需要重复这个从不同文件读取数据的过程数百次甚至几千次。对于所有那些不再被引用、因此不再被应用程序需要的数组对象及其元素，会发生什么呢？即使你不再使用它们，这些对象也可能仍然停留在内存的某处。嗯，如果没有某种“清理”过程，内存将继续被未引用的对象填充，可能会导致你的应用程序达到崩溃点，即它字面上已经没有可用内存来执行任何更多工作了。
+这里变量`myData`发生了变化，它现在指向一个从第二个文件设置了内容的不同数组。但第一个数组发生了什么呢？你不再拥有它的引用了（当你覆盖`myData`时丢失了该引用）。那么第一个数组中的所有元素呢？它们发生了什么？假设你需要重复这个从不同文件读取数据的过程数百次甚至几千次。对于所有那些不再被引用、因此不再被应用程序需要的数组对象及其元素，会发生什么呢？即使你不再使用它们，这些对象也可能仍然停留在内存的某处。嗯，如果没有某种“清理”过程，内存将继续被未引用的对象填充，可能会导致你的应用程序达到崩溃点，即它字面上已经没有可用内存来执行任何更多工作了。
 
 本章涵盖了内存管理的概念，尽管是在一个相当高的水平上。内存管理完全关乎清理（回收）未使用的内存，以便可以被再次使用。如果一个对象不再被使用，让我们重用它的内存。这听起来足够简单。然而，事实并没有那么简单。必须有人发现这个简单的事实。也就是说，必须有人——这个人物可能是你、可能是计算机，或者两者兼有——能够能够以某种方式确定对象何时不再被使用，并且它所占用的内存因此可以被收回。
 
 为了协助这些工作，已经开发了几种内存管理策略。其中两种是自动化方法；也就是说，计算机跟踪对象并在时释放它们的内存。第三种是混合方法；系统为你完成部分工作，但也要求你（程序员）必须勤奋，并负责告诉系统对象何时不再被使用。
 
-在 Xcode 4.2 发布之前，内存管理一直是令人困扰的话题，这需要程序员在这方面有大量的理解和远见。程序员必须小心地穿于引用计数（reference counts）、保留（retains）、释放（releases）和自动释放（autoreleases）的世界，以产生明智使用内存的应用程序，并且不会在最不恰宜的时间发生崩溃——这通常是因为尝试引用一个在时间真正过去之前就已经被意外销毁的对象。
+在Xcode 4.2发布之前，内存管理一直是令人困扰的话题，这需要程序员在这方面有大量的理解和远见。程序员必须小心地穿于引用计数（reference counts）、保留（retains）、释放（releases）和自动释放（autoreleases）的世界，以产生明智使用内存的应用程序，并且不会在最不恰宜的时间发生崩溃——这通常是因为尝试引用一个在时间真正过去之前就已经被意外销毁的对象。
 
-随着 Xcode 4.2 发布名为*自动引用计数*（Automatic Reference Counting）或 `ARC` 的功能，程序员们不再需要考虑内存管理了——一切都为你处理好了！
+随着Xcode 4.2发布名为*自动引用计数*（Automatic Reference Counting）或`ARC`的功能，程序员们不再需要考虑内存管理了——一切都为你处理好了！
 
+如果你决定使用垃圾回收（garbage collection），在用Xcode编译程序时必须开启它。你可以通过项目的Build Settings（构建设置）菜单来实现。在Apple LLVM compiler 3.0 - Language settings（语言设置）项下，有一个名为`Objective-C Garbage Collection`的设置。将其从默认值`Unsupported`（不支持）更改为`Required`（需要），表示你的程序将在启用自动垃圾回收的情况下进行构建（参见图17.1）。
 
-
-
-
-如果你决定使用垃圾回收（garbage collection），在用 Xcode 编译程序时必须开启它。你可以通过项目的 Build Settings（构建设置）菜单来实现。在 Apple LLVM compiler 3.0 - Language settings（语言设置）项下，有一个名为 `Objective-C Garbage Collection` 的设置。将其从默认值 `Unsupported`（不支持）更改为 `Required`（需要），表示你的程序将在启用自动垃圾回收的情况下进行构建（参见图 17.1）。
-
-图 17.1. 启用垃圾回收
+图17.1. 启用垃圾回收
 
 ![Image](img/00082.jpg)
 
@@ -9843,57 +9273,57 @@ myData = [NSArray arrayWithContentsOfFile: @"database2"];
 
 ### 手动引用计数 (Manual Reference Counting)
 
-如果你打算在不使用 ARC 或垃圾回收的情况下创建应用程序，或者你必须支持无法迁移到 ARC 运行的代码，那么你需要知道如何管理内存。也就是说，你需要学习如何处理引用计数。
+如果你打算在不使用ARC或垃圾回收的情况下创建应用程序，或者你必须支持无法迁移到ARC运行的代码，那么你需要知道如何管理内存。也就是说，你需要学习如何处理引用计数。
 
-通用的概念如下：当一个对象被创建时，它的初始引用计数设置为 `1`。每当你需要确保该对象被保留时，你实际上是通过将其引用计数加 1 来创建它的引用。这是通过向对象发送 `retain` 消息完成的，如下所示：
+通用的概念如下：当一个对象被创建时，它的初始引用计数设置为`1`。每当你需要确保该对象被保留时，你实际上是通过将其引用计数加1来创建它的引用。这是通过向对象发送`retain`消息完成的，如下所示：
 
-```
+```objc
 [myFraction retain];
 ```
 
-当你不再需要某个对象时，通过向它发送 `release` 消息将其引用计数减 1，如下所示：
+当你不再需要某个对象时，通过向它发送`release`消息将其引用计数减1，如下所示：
 
-```
+```objc
 [myFraction release];
 ```
 
-当一个对象的引用计数达到 0 时，系统知道该对象不再被使用（因为从理论上讲，它不再被程序的任何地方引用），因此会释放（dealloc）它的内存。这个过程是通过向对象发送 `dealloc` 消息启动的。在许多情况下，你使用继承自 `NSObject` 的 `dealloc` 方法。然而，你可能需要重写 `dealloc`，以释放你的对象可能分配或保留的任何实例变量或其他对象。例如，如果你的类有一个 `NSArray` 对象作为其实例变量之一，并且你 `alloc` 了该数组，那么当你的对象被销毁时，你就负责释放该数组。你会在 `dealloc` 中这样做。
+当一个对象的引用计数达到0时，系统知道该对象不再被使用（因为从理论上讲，它不再被程序的任何地方引用），因此会释放（dealloc）它的内存。这个过程是通过向对象发送`dealloc`消息启动的。在许多情况下，你使用继承自`NSObject`的`dealloc`方法。然而，你可能需要重写`dealloc`，以释放你的对象可能分配或保留的任何实例变量或其他对象。例如，如果你的类有一个`NSArray`对象作为其实例变量之一，并且你`alloc`了该数组，那么当你的对象被销毁时，你就负责释放该数组。你会在`dealloc`中这样做。
 
 手动引用计数策略的成功运行需要你作为程序员的勤奋，以确保引用计数在程序执行期间被正确地增加和减小。系统会为你处理其中的部分工作，但不是全部。
 
-在使用手动引用计数时，你应该注意，Foundation 框架中的某些方法可能会增加对象的引用计数，例如当使用 `NSMutableArray` 的 `addObject:` 方法将对象添加到数组时，或者使用 `UIView` 的 `addSubview:` 方法将视图作为子视图添加时。同样，某些方法可能会减少对象的引用计数。`removeObjectAtIndex:` 和 `removeFromSuperview` 就是两种这样的方法。
+在使用手动引用计数时，你应该注意，Foundation框架中的某些方法可能会增加对象的引用计数，例如当使用`NSMutableArray`的`addObject:`方法将对象添加到数组时，或者使用`UIView`的`addSubview:`方法将视图作为子视图添加时。同样，某些方法可能会减少对象的引用计数。`removeObjectAtIndex:`和`removeFromSuperview`就是两种这样的方法。
 
-当一个对象被销毁后（即其引用计数减至 0 并调用了 `dealloc`），对该对象的进一步引用将失效。如果你有这样一个引用，它通常被称为悬空指针引用（dangling pointer reference）。向该悬空指针发送消息通常会导致意料之外的行为，包括你的应用程序崩溃。有时程序员会向一个已经被释放的对象发送 `release` 消息，因为他们没有准确地跟踪对象的 retain 和 release 操作。这被称为过度释放（over-releasing）一个对象，它通常会导致崩溃。
+当一个对象被销毁后（即其引用计数减至0并调用了`dealloc`），对该对象的进一步引用将失效。如果你有这样一个引用，它通常被称为悬空指针引用（dangling pointer reference）。向该悬空指针发送消息通常会导致意料之外的行为，包括你的应用程序崩溃。有时程序员会向一个已经被释放的对象发送`release`消息，因为他们没有准确地跟踪对象的retain和release操作。这被称为过度释放（over-releasing）一个对象，它通常会导致崩溃。
 
 ### 对象引用与自动释放池 (Autorelease Pool)
 
-你可能需要编写一个方法，它先创建一个对象（例如使用 `alloc`），然后将该对象作为方法调用的结果返回。这里存在一个困境：尽管该方法使用了该对象，但它不能释放它，因为它需要返回它的值。创建 `NSAutoreleasePool` 类是为了解决这类问题，通过在一个名为自动释放池（autorelease pool）的对象中跟踪稍后要释放的对象。那个稍后的时间就是池被排空的时候，这是通过向自动释放池对象发送 `drain` 消息完成的。
+你可能需要编写一个方法，它先创建一个对象（例如使用`alloc`），然后将该对象作为方法调用的结果返回。这里存在一个困境：尽管该方法使用了该对象，但它不能释放它，因为它需要返回它的值。创建`NSAutoreleasePool`类是为了解决这类问题，通过在一个名为自动释放池（autorelease pool）的对象中跟踪稍后要释放的对象。那个稍后的时间就是池被排空的时候，这是通过向自动释放池对象发送`drain`消息完成的。
 
-为了将对象添加到自动释放池维护的对象列表中，你向该对象发送 `autorelease` 消息，如下所示：
+为了将对象添加到自动释放池维护的对象列表中，你向该对象发送`autorelease`消息，如下所示：
 
-```
+```objc
 [result autorelease];
 ```
 
-在处理使用 Foundation、UIKit 或 AppKit 框架类的程序时，你必须创建一个自动释放池，因为这些框架中的类可以创建并返回自动释放的对象。你在应用程序中使用类似这样的语句来这样做：
+在处理使用Foundation、UIKit或AppKit框架类的程序时，你必须创建一个自动释放池，因为这些框架中的类可以创建并返回自动释放的对象。你在应用程序中使用类似这样的语句来这样做：
 
-```
+```objc
 NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 ```
 
-正如提到的，如果你创建一个没有启用 ARC 的新项目，Xcode 会在 `main` 函数开头生成一个带有此语句的模板文件。
+正如提到的，如果你创建一个没有启用ARC的新项目，Xcode会在`main`函数开头生成一个带有此语句的模板文件。
 
-注，在设置池之后，框架方法会自动将数组、字符串、字典、视图、按钮和其他新对象添加到池维护的列表中。当你用完池后，你向它发送一个 `drain` 消息：
+注，在设置池之后，框架方法会自动将数组、字符串、字典、视图、按钮和其他新对象添加到池维护的列表中。当你用完池后，你向它发送一个`drain`消息：
 
-```
+```objc
 [pool drain];
 ```
 
-这样做的效果向每个自动释放的对象发送 `release` 消息。事实上，其中任何对象的引用计数减到 0，这些对象都将收到 `dealloc` 消息。注意，自动释放池并不包含实际的对象，只包含指向这些对象的引用。并不是所有以 `alloc`、`copy`、`mutableCopy` 或 `new` 开头的方法都是自动释放的。在这种情况下，你拥有该对象。当你拥有一个对象时，在你在使用它之后负责释放它占用的内存。这是通过向它发送 `release` 消息完成的。或者你也可以通过向它发送 `autorelease` 消息将其添加到自动释放池中。
+这样做的效果向每个自动释放的对象发送`release`消息。事实上，其中任何对象的引用计数减到0，这些对象都将收到`dealloc`消息。注意，自动释放池并不包含实际的对象，只包含指向这些对象的引用。并不是所有以`alloc`、`copy`、`mutableCopy`或`new`开头的方法都是自动释放的。在这种情况下，你拥有该对象。当你拥有一个对象时，在你在使用它之后负责释放它占用的内存。这是通过向它发送`release`消息完成的。或者你也可以通过向它发送`autorelease`消息将其添加到自动释放池中。
 
-如果我们使用手动引用计数，程序 3.3 (21HGK1SH992D3H5BD4YP0VXJVMVSGJ_split_013.html_filepos15421) 将看起来所示：
+如果我们使用手动引用计数，程序3.3 (21HGK1SH992D3H5BD4YP0VXJVMVSGJ_split_013.html_filepos15421) 将看起来所示：
 
-```
+```objc
 int main (int argc, char * argv[]) {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     Fraction *frac1 = [[Fraction alloc] init];
@@ -9922,11 +9352,7 @@ int main (int argc, char * argv[]) {
 }
 ```
 
-
-
-
-
-让我们再次查看在程序 7.5 中使用的 `Fraction` 类的 `add:` 方法：
+让我们再次查看在程序7.5中使用的`Fraction`类的`add:`方法：
 
 ```objc
 -(Fraction *) add: (Fraction *) f
@@ -9946,7 +9372,7 @@ int main (int argc, char * argv[]) {
 }
 ```
 
-当使用手动内存管理时，该方法存在一个问题。结果对象在计算完成后被 `alloc` 出来并从方法返回。由于方法必须返回该对象，它无法释放它——这会导致对象在当时被销毁。解决此问题的最好方法可能是对对象进行 `autorelease`，这样就可以返回它的值，而将其释放推迟到 autorelease 池被清空为止。你可以利用 `autorelease` 方法会返回其接收者并将其嵌入如下所示表达式的特性：
+当使用手动内存管理时，该方法存在一个问题。结果对象在计算完成后被`alloc`出来并从方法返回。由于方法必须返回该对象，它无法释放它——这会导致对象在当时被销毁。解决此问题的最好方法可能是对对象进行`autorelease`，这样就可以返回它的值，而将其释放推迟到autorelease池被清空为止。你可以利用`autorelease`方法会返回其接收者并将其嵌入如下所示表达式的特性：
 
 ```objc
 Fraction *result = [[[Fraction alloc] init] autorelease];
@@ -9960,9 +9386,9 @@ return [result autorelease];
 
 ### 事件循环与内存分配
 
-Cocoa 和 iOS 应用程序运行在所谓的运行循环（run loop）或事件循环（event loop）中。将事件视为通常通过你执行某些操作（例如，在 iPhone 上按下按钮）或通过隐含操作发生的（例如，通过网络接收数据）。为了处理新事件，系统会创建一个新的 autorelease 池，并可能会调用你应用程序中的某些方法来处理它。当你完成事件处理后，你会从方法返回，系统会等待下一个事件的发生。但在在此之前，系统会清空 autorelease 池。这意味着你在处理该事件时创建的任何 autoreleased 对象都将被销毁，除非你保留（retain）了这些对象，以便它们在池清空时存活。在使用手动引用计数时，你需要考虑 autorelease 池以及你的对象在事件循环结束清空池时的存活情况。
+Cocoa和iOS应用程序运行在所谓的运行循环（run loop）或事件循环（event loop）中。将事件视为通常通过你执行某些操作（例如，在iPhone上按下按钮）或通过隐含操作发生的（例如，通过网络接收数据）。为了处理新事件，系统会创建一个新的autorelease池，并可能会调用你应用程序中的某些方法来处理它。当你完成事件处理后，你会从方法返回，系统会等待下一个事件的发生。但在在此之前，系统会清空autorelease池。这意味着你在处理该事件时创建的任何autoreleased对象都将被销毁，除非你保留（retain）了这些对象，以便它们在池清空时存活。在使用手动引用计数时，你需要考虑autorelease池以及你的对象在事件循环结束清空池时的存活情况。
 
-请看下面来自 iOS 应用程序的接口部分。在这里我们定义了一个名为 `MyView` 的类，包含一个名为 `data` 的属性：
+请看下面来自iOS应用程序的接口部分。在这里我们定义了一个名为`MyView`的类，包含一个名为`data`的属性：
 
 ```objc
 #import <UIKit/UIKit.h>
@@ -9972,15 +9398,17 @@ Cocoa 和 iOS 应用程序运行在所谓的运行循环（run loop）或事件�
 @end
 ```
 
-`data` 属性的 `retain` 属性（仅用于非 ARC 编译的代码）表示设置方法应该保留分配给该属性的任何对象，并释放旧值。假设我们在实现部分为 `data` 属性合成了了访问器方法。进一步假设我们有一个名为 `viewDidLoad` 的方法，每当我们的视图加载到内存时系统就会调用该方法。（当你学习 iOS 应用程序编程时会学更多。目前这些细节并不重要）。
+`data`属性的`retain`属性（仅用于非ARC编译的代码）表示设置方法应该保留分配给该属性的任何对象，并释放旧值。假设我们在实现部分为`data`属性合成了了访问器方法。进一步假设我们有一个名为`viewDidLoad`的方法，每当我们的视图加载到内存时系统就会调用该方法。（当你学习iOS应用程序编程时会学更多。目前这些细节并不重要）。
 
-假设在你的 `viewDidLoad` 方法内部，你想分配 `data` 数组。你在该方法内部插入了以下行：
+假设在你的`viewDidLoad`方法内部，你想分配`data`数组。你在该方法内部插入了以下行：
 
 ```objc
 data = [NSMutableArray array];
 ```
 
-正如我们所描述的 Foundation 方法默认创建 autoreleased 对象一样，`array` 方法创建了一个 autoreleased 数组，你将其直接赋值给实例变量 `data`。问题是，该数组一旦当前事件处理完成就会被销毁。这是因为是在一个 autorelease 池中创建的，该池会在事件循环结束时清空。为了确保数组在事件循环中存活，你有几种替代方案。这里有三行你可以使用的不同代码：
+
+
+正如我们所描述的，`Foundation` 方法默认创建 `autoreleased` 对象一样，`array` 方法创建了一个 `autoreleased` 数组，你将其直接赋值给实例变量 `data`。问题是，该数组一旦当前事件处理完成就会被销毁。这是因为是在一个 `autorelease` 池中创建的，该池会在事件循环结束时清空。为了确保数组在事件循环中存活，你有几种替代方案。这里有三行你可以使用的不同代码：
 
 ```objc
 data = [[NSMutableArray array] retain]; // 存活池池
@@ -9998,7 +9426,7 @@ data = [[NSMutableArray alloc] init];    // 未 autorelease
 self.data = [NSMutableArray array];     // 使用设置方法
 ```
 
-在最后一种情况下，由于 `data` 属性具有 `retain` 属性，autoreleased 数组将被保留（注意赋值 `self.data` 会触发设置方法）。注意，在所有三种情况下，你必须在 `myView` 对象被销毁时重写 `dealloc` 来释放你的数组：
+在最后一种情况下，由于 `data` 属性具有 `retain` 属性，`autoreleased` 数组将被保留（注意赋值 `self.data` 会触发设置方法）。注意，在所有三种情况下，你必须在 `myView` 对象被销毁时重写 `dealloc` 来释放你的数组：
 
 ```objc
 -(void) dealloc {
@@ -10011,23 +9439,25 @@ self.data = [NSMutableArray array];     // 使用设置方法
 
 ### 手动内存管理总结
 
-在没有 ARC 或垃圾回收的项目工作时，请记住以下规则：
+在没有 `ARC` 或垃圾回收的项目工作时，请记住以下规则：
 
 - 如果你需要持有一个对象以确保它不被他人销毁，你应该 `retain` 它。在用完后记得 `release` 它。
-- 发送 release 消息并不一定会销毁对象。当对象的引用计数减到 0 时，对象会被销毁。系统通过向对象发送 `dealloc` 消息来释放内存。
+
+- 发送 `release` 消息并不一定会销毁对象。当对象的引用计数减到 0 时，对象会被销毁。系统通过向对象发送 `dealloc` 消息来释放内存。
+
 - 释放你保留或使用 `copy`、`mutableCopy`、`alloc` 或 `new` 方法创建的对象。这包括具有 `retain` 或 `copy` 属性的属性。你可以在对象要销毁时重写 `dealloc` 来释放实例变量。
-- autorelease 池提供了在自身清空时自动释放对象的机制。系统通过对池中的每个被 autorelease 的对象发送对应的 release 消息来实现。autorelease 池中每个引用计数降为 0 的对象都会收到 `dealloc` 消息以销毁。
+
+- `autorelease` 池提供了在自身清空时自动释放对象的机制。系统通过对池中的每个被 `autorelease` 的对象发送对应的 `release` 消息来实现。`autorelease` 池中每个引用计数降为 0 的对象都会收到 `dealloc` 消息以销毁。
+
 - 如果你在方法内部不再需要某个对象但需要返回它，向它发送 `autorelease` 消息将其标记为稍后释放。`autorelease` 消息不会影响对象的引用计数。
-- 当应用程序终止时，你的对象所占用的内存都会被释放，无论它们是否在 autorelease 池中。
 
+- 当应用程序终止时，你的对象所占用的内存都会被释放，无论它们是否在 `autorelease` 池中。
 
-
-
-> 当你开发 Cocoa 或 iOS 应用时，自动释放池（autorelease pools）会在程序执行期间创建并清空（每当事件发生时都会发生）。在这种情况下，如果你想确保一个自动释放的对象在自动释放池清空时不会被自动销毁，你就需要对它进行保留（retain）。所有引用计数大于其收到的自动释放消息数量的对象，在释放池释放后都会存活。
+> 当你开发 `Cocoa` 或 `iOS` 应用时，自动释放池（`autorelease pools`）会在程序执行期间创建并清空（每当事件发生时都会发生）。在这种情况下，如果你想确保一个自动释放的对象在自动释放池清空时不会被自动销毁，你就需要对它进行保留（`retain`）。所有引用计数大于其收到的自动释放消息数量的对象，在释放池释放后都会存活。
 
 ### 自动引用计数 (ARC)
 
-自动引用计数（ARC）消除了所有与手动引用计数相关的潜在陷阱。在底层，引用计数仍然被维护和跟踪。然而，系统会决定何时保留一个对象，何时对它进行自动释放（autorelease）或释放（release）。你完全不需要担心这个问题。
+自动引用计数（`ARC`）消除了所有与手动引用计数相关的潜在陷阱。在底层，引用计数仍然被维护和跟踪。然而，系统会决定何时保留一个对象，何时对它进行自动释放（`autorelease`）或释放（`release`）。你完全不需要担心这个问题。
 
 你也不需要担心从方法返回分配的对象。编译器会通过生成正确的代码，对返回的对象进行必要的自动释放或保留，从而计算出该对象的内存需要如何管理。
 
@@ -10052,7 +9482,7 @@ f2 = f1;
 
 其效果是将 `Fraction` 对象的引用复制到 `f2` 中。结果是 `f2` 引用的 `Fraction` 对象将丢失，因为它的值被覆盖了。这将导致所谓的内存泄漏；即一个不再被引用、因此无法释放的变量。
 
-如果你正在使用 ARC，那么 `f1` 和 `f2` 都是强变量。因此，之前的赋值实际上是这样：
+如果你正在使用 `ARC`，那么 `f1` 和 `f2` 都是强变量。因此，之前的赋值实际上是这样：
 
 ```
 [f1 retain];  // 保留新值
@@ -10068,7 +9498,7 @@ f2 = f1;      // 复制引用
 __strong Fraction *f1;
 ```
 
-需要注意的是，属性（properties）默认*不是*强性的。它们的默认属性是 `unsafe_unretained`（等同于 `assign`）。你已经见过如何为属性声明 `strong` 属性了：
+需要注意的是，属性（`properties`）默认*不是*强性的。它们的默认属性是 `unsafe_unretained`（等同于 `assign`）。你已经见过如何为属性声明 `strong` 属性了：
 
 ```
 @property (strong, nonatomic) NSMutableArray *birdNames;
@@ -10078,7 +9508,7 @@ __strong Fraction *f1;
 
 ### 弱变量 (Weak Variables)
 
-有时你会在两个对象之间建立一种关系，其中每个对象都需要引用另一个对象（这可能只是简单的两个对象，也可能是创建循环的对象的链）。例如，iOS 应用通过被称为 `views` 的对象在屏幕上呈现图形。视图是维护在一个层级结构中的。因此，一个视图可能会显示一张图片，而在该图像视图内部，你可能想为该图片显示一个标题。你可以设置这种关系，让图像视图为主视图，而标题是一个 `subview`。当主视图显示时，子视图也会自动显示。你可以将主图像视图视为父视图，标题视图视为子视图。主图像视图拥有子视图。
+有时你会在两个对象之间建立一种关系，其中每个对象都需要引用另一个对象（这可能只是简单的两个对象，也可能是创建循环的对象的链）。例如，`iOS` 应用通过被称为 `views` 的对象在屏幕上呈现图形。视图是维护在一个层级结构中的。因此，一个视图可能会显示一张图片，而在该图像视图内部，你可能想为该图片显示一个标题。你可以设置这种关系，让图像视图为主视图，而标题是一个 `subview`。当主视图显示时，子视图也会自动显示。你可以将主图像视图视为父视图，标题视图视为子视图。主图像视图拥有子视图。
 
 在处理这种视图层级结构时，父视图无疑想要持有其子视图的引用。但在处理子视图时，让它知道父视图是谁也是很有用的。因此，父视图持有子视图的引用，而子视图反持有父视图的引用。这种循环引用可能会引发问题。例如，当我们删除父视图会发生什么？从子视图到父视图的引用将不再有效。事实上，尝试引用那个不存在的父视图可能会导致应用程序崩溃。
 
@@ -10088,7 +9518,7 @@ __strong Fraction *f1;
 
 通过让父视图持有子视图的强引用，而让子视图对其父视图持有弱引用，就不会创建引用循环。弱变量不会阻止其所引用的对象的释放。
 
-当你声明一个弱变量时，会发生几件事：系统会跟踪赋值时创建的引用。当被引用的对象被销毁时，弱变量会自动变为 nil。这防止了无意中向该变量发送消息可能导致的任何崩溃。由于变量会被设置为 nil，向 nil 对象发送消息不会产生操作。
+当你声明一个弱变量时，会发生几件事：系统会跟踪赋值时创建的引用。当被引用的对象被销毁时，弱变量会自动变为 `nil`。这防止了无意中向该变量发送消息可能导致的任何崩溃。由于变量会被设置为 `nil`，向 `nil` 对象发送消息不会产生操作。
 
 要声明弱变量，使用 `__weak` 关键字：
 
@@ -10102,15 +9532,15 @@ __weak UIView *parentView;
 @property (weak, nonatomic) UIView *parentView;
 ```
 
-弱变量在处理代理（delegates）时也有用。通过将持有代理的变量设置为弱变量，可以确保当代理对象被销毁时，变量会被置零。再次，这可以防止在 ARC 发明之前让许多程序员头疼的系统崩溃。
+弱变量在处理代理（`delegates`）时也有用。通过将持有代理的变量设置为弱变量，可以确保当代理对象被销毁时，变量会被置零。再次，这可以防止在 `ARC` 发明之前让许多程序员头疼的系统崩溃。
 
-注意，iOS 4 或 Mac OS v10.6 不支持弱变量。在这些情况下，你仍然可以使用 `unsafe_unretained`（或 `assign`）属性属性，或将变量声明为 `unsafe_unretained`。但请意识到，当引用的对象被销毁时，这些变量不会自动置零。
+注意，`iOS 4` 或 `Mac OS v10.6` 不支持弱变量。在这些情况下，你仍然可以使用 `unsafe_unretained`（或 `assign`）属性属性，或将变量声明为 `unsafe_unretained`。但请意识到，当引用的对象被销毁时，这些变量不会自动置零。
 
 ### @autoreleasepool 
 
-到目前为止，你在书中每个示例中都看到了编译器如何在你的主程序中生成一个 `@autoreleasepool` 指令。该指令包含了一块语句，它们定义了一个自动释放池上下文。在该上下文中创建的任何自动释放的对象（这是通过 ARC 自动完成的），默认会在该 @autoreleasepool 块结束时被销毁（除非编译器已处理并确保它们在块结束之后存活）。
+到目前为止，你在书中每个示例中都看到了编译器如何在你的主程序中生成一个 `@autoreleasepool` 指令。该指令包含了一块语句，它们定义了一个自动释放池上下文。在该上下文中创建的任何自动释放的对象（这是通过 `ARC` 自动完成的），默认会在该 `@autoreleasepool` 块结束时被销毁（除非编译器已处理并确保它们在块结束之后存活）。
 
-如果你的程序产生大量的临时对象（这在循环内部内部执行代码时很容易发生），你可能想在程序中创建多个 @autoreleasepool 块。例如，下面的代码片段说明了如何设置 @autoreleasepool 块来管理 `for` 循环每次迭代创建的临时对象：
+如果你的程序产生大量的临时对象（这在循环内部内部执行代码时很容易发生），你可能想在程序中创建多个 `@autoreleasepool` 块。例如，下面的代码片段说明了如何设置 `@autoreleasepool` 块来管理 `for` 循环每次迭代创建的临时对象：
 
 ```
 for (i = 0; i < n; ++i) {
@@ -10120,22 +9550,19 @@ for (i = 0; i < n; ++i) {
 }
 ```
 
-
-
-
-如本章早期所述，Cocoa 和 iOS 应用程序运行在事件循环（event loop）内部。在准备处理处理新事件时，系统会创建一个新的 `autoreleasepool` 上文，并可能会调用你应用程序中的某些方法来处理该事件。当你完成事件处理后，你会从方法返回，系统将等待下一个事件发生。然而，在此之前，`autoreleasepool` 上文会结束，这意味着自动释放（autoreleased）的对象随后可能会被销毁。同样，在 ARC 中，这一切都在“后台”自动完成，所以你不需要担心它。
+如本章早期所述，`Cocoa` 和 `iOS` 应用程序运行在事件循环（`event loop`）内部。在准备处理处理新事件时，系统会创建一个新的 `autoreleasepool` 上文，并可能会调用你应用程序中的某些方法来处理该事件。当你完成事件处理后，你会从方法返回，系统将等待下一个事件发生。然而，在此之前，`autoreleasepool` 上文会结束，这意味着自动释放（`autoreleased`）的对象随后可能会被销毁。同样，在 `ARC` 中，这一切都在“后台”自动完成，所以你不需要担心它。
 
 ## 方法名与非 ARC 编译代码
 
-ARC 可以与未使用 ARC 编译的代码一起工作。例如，当你与旧版本的框架链接时，就会发生这种情况。只要非 ARC 代码遵循了标准的 Cocoa 命名规范，一切都会没问题。也就是说，当 ARC 看到一个方法调用时，它会检查方法名。如果方法名以 `alloc`、`new`、`copy`、`mutableCopy` 或 `init` 单词开头，它就会假设该方法将对象的所有权返回给了方法调用者。
+`ARC` 可以与未使用 `ARC` 编译的代码一起工作。例如，当你与旧版本的框架链接时，就会发生这种情况。只要非 `ARC` 代码遵循了标准的 `Cocoa` 命名规范，一切都会没问题。也就是说，当 `ARC` 看到一个方法调用时，它会检查方法名。如果方法名以 `alloc`、`new`、`copy`、`mutableCopy` 或 `init` 单词开头，它就会假设该方法将对象的所有权返回给了方法调用者。
 
-当我们在这里谈论“单词”时，指的是在所谓的驼峰命名法（`camelCase`）中编写的单词。即名称中每个新单词的首字母都大写。因此，编译器假设名为 `allocFraction`、`newAddressCard` 和 `initWithWidth:andHeight:` 的方法返回对象的所有权，而 `newlyWeds`、`copycat` 和 `initials` 则不是。同样，这由 ARC 自动完成，所以你不需要担心这个问题，除非你在使用不遵循这些标准命名规范的方法。在这些情况下，有方法可以显式地告诉编译器方法尽管名称如何是否返回了对象的所有权。
+当我们在这里谈论“单词”时，指的是在所谓的驼峰命名法（`camelCase`）中编写的单词。即名称中每个新单词的首字母都大写。因此，编译器假设名为 `allocFraction`、`newAddressCard` 和 `initWithWidth:andHeight:` 的方法返回对象的所有权，而 `newlyWeds`、`copycat` 和 `initials` 则不是。同样，这由 `ARC` 自动完成，所以你不需要担心这个问题，除非你在使用不遵循这些标准命名规范的方法。在这些情况下，有方法可以显式地告诉编译器方法尽管名称如何是否返回了对象的所有权。
 
-你应该注意，如果你尝试合成（synthesize）名称以本节第一段提到的任何特殊单词开头的属性，编译器会为你报错。
+你应该注意，如果你尝试合成（`synthesize`）名称以本节第一段提到的任何特殊单词开头的属性，编译器会为你报错。
 
 ## 18. 复制对象
 
-本章讨论了涉及对象复制的一些微妙之处。我们引入了浅拷贝（shallow copying）与深拷贝（deep copying）的概念，并讨论了如何在 Foundation 框架下进行拷贝。
+本章讨论了涉及对象复制的一些微妙之处。我们引入了浅拷贝（`shallow copying`）与深拷贝（`deep copying`）的概念，并讨论了如何在 `Foundation` 框架下进行拷贝。
 
 第 8 章，“继承”讨论了当使用简单的赋值语句将一个对象赋值给另一个对象时会发生什么，例如此处：
 
@@ -10151,9 +9578,9 @@ origin = pt;
 [origin setX: 100 andY: 200];
 ```
 
-会改变被 `origin` 和 `pt` 变量引用的 `XYPoint` 对象的 x、y 坐标，因为它们引用的是内存中的同一个对象。
+会改变被 `origin` 和 `pt` 变量引用的 `XYPoint` 对象的 `x`、`y` 坐标，因为它们引用的是内存中的同一个对象。
 
-这种情况同样适用于 Foundation 对象：将一个变量赋值给另一个仅仅是创建了该对象的另一个引用。因此，如果 `dataArray` 和 `dataArray2` 都是 `NSMutableArray` 对象，以下语句将从两个变量引用的同一个数组中删除第一个元素：
+这种情况同样适用于 `Foundation` 对象：将一个变量赋值给另一个仅仅是创建了该对象的另一个引用。因此，如果 `dataArray` 和 `dataArray2` 都是 `NSMutableArray` 对象，以下语句将从两个变量引用的同一个数组中删除第一个元素：
 
 ```
 dataArray2 = dataArray;
@@ -10162,9 +9589,9 @@ dataArray2 = dataArray;
 
 ### copy 和 mutableCopy 方法
 
-Foundation 类实现了名为 `copy` 和 `mutableCopy` 的方法，你可以使用这些方法创建对象的副本。这是通过实现一个符合 `<NSCopying>` 协议的拷贝方法来实现的。如果你的类需要区分创建对象的可变和不可变副本，你还必须根据 `<NSMutableCopying>` 协议实现一个方法。你将在本节稍后的部分中学习如何做到这一点。
+`Foundation` 类实现了名为 `copy` 和 `mutableCopy` 的方法，你可以使用这些方法创建对象的副本。这是通过实现一个符合 `<NSCopying>` 协议的拷贝方法来实现的。如果你的类需要区分创建对象的可变和不可变副本，你还必须根据 `<NSMutableCopying>` 协议实现一个方法。你将在本节稍后的部分中学习如何做到这一点。
 
-回到 Foundation 类的拷贝方法，给定上一节描述的两个 `NSMutableArray` 对象 `dataArray2` 和 `dataArray`，语句
+回到 `Foundation` 类的拷贝方法，给定上一节描述的两个 `NSMutableArray` 对象 `dataArray2` 和 `dataArray`，语句
 
 ```
 dataArray2 = [dataArray mutableCopy];
@@ -10249,6 +9676,8 @@ four
 
 程序 18.2
 
+
+
 ```objc
 #import <Foundation/Foundation.h>
 
@@ -10268,9 +9697,6 @@ int main (int argc, char * argv[])
     return 0;
 }
 ```
-
-
-
 
 ```objc
 for ( NSString *elem in dataArray ) {
@@ -10312,59 +9738,59 @@ dataArray2:
     three
 ```
 
-你通过以下语句获取了 `dataArray` 的第一个元素：
+你通过以下语句获取了`dataArray`的第一个元素：
 
 `mStr = [dataArray objectAtIndex: 0];`
 
-然后你通过此语句向其添加了字符串 `@"ONE"`：
+然后你通过此语句向其添加了字符串`@"ONE"`：
 
 `[mStr appendString: @"ONE"];`
 
-注意原始数组及其副本的第一个元素的值：它们都被修改了。也许你能够理解为什么 `dataArray` 的第一个元素被改变了，但无法理解为什么它的副本也改变了。当你从集合中获取元素时，你获得的是该元素的一个新引用，而不是一个新的副本。因此，当在 `dataArray` 上调用 `objectAtIndex:` 方法时，返回的对象指向内存中与 `dataArray` 第一个元素相同的对象。随后修改字符串对象 `mStr` 会产生一个改变 `dataArray` 第一个元素的副作用，正如你从输出中看到的那样。
+注意原始数组及其副本的第一个元素的值：它们都被修改了。也许你能够理解为什么`dataArray`的第一个元素被改变了，但无法理解为什么它的副本也改变了。当你从集合中获取元素时，你获得的是该元素的一个新引用，而不是一个新的副本。因此，当在`dataArray`上调用`objectAtIndex:`方法时，返回的对象指向内存中与`dataArray`第一个元素相同的对象。随后修改字符串对象`mStr`会产生一个改变`dataArray`第一个元素的副作用，正如你从输出中看到的那样。
 
-但你创建的副本又是呢？为什么它的第一个元素也被改变了？这与拷贝在默认情况下是**浅拷贝**（`shallow`）有关。因此，当使用 `mutableCopy` 方法复制数组时，内存中会为新的数组对象分配空间，并将各个元素复制到新数组中。但将数组中的每个元素从原始位置复制到新位置，意味着仅仅是将引用从数组的一个元素复制到另一个元素。最终结果是两个数组的元素都引用了内存中的相同字符串。这与我们在本章开头介绍将一个对象赋值给另一个对象没有区别。
+但你创建的副本又是呢？为什么它的第一个元素也被改变了？这与拷贝在默认情况下是浅拷贝（`shallow`）有关。因此，当使用`mutableCopy`方法复制数组时，内存中会为新的数组对象分配空间，并将各个元素复制到新数组中。但将数组中的每个元素从原始位置复制到新位置，意味着仅仅是将引用从数组的一个元素复制到另一个元素。最终结果是两个数组的元素都引用了内存中的相同字符串。这与我们在本章开头介绍将一个对象赋值给另一个对象没有区别。
 
-为了为数组的每个元素创建不同的副本，你必须执行**深拷贝**（`deep`）。这意味着要复制数组中每个对象的内容，而不仅仅是对象引用的副本（并思考如果数组的元素本身是一个数组对象，这意味着什么）。但当你使用 Foundation 类的 `copy` 或 `mutableCopy` 方法时，默认不会执行深拷贝。在[第 19 章]“归档（Archiving）”中，我们将向你展示如何使用 Foundation 的归档功能来创建对象的深拷贝。
+为了为数组的每个元素创建不同的副本，你必须执行深拷贝（`deep`）。这意味着要复制数组中每个对象的内容，而不仅仅是对象引用的副本（并思考如果数组的元素本身是一个数组对象，这意味着什么）。但当你使用 Foundation 类的`copy`或`mutableCopy`方法时，默认不会执行深拷贝。在[第 19 章]“归档（Archiving）”中，我们将向你展示如何使用 Foundation 的归档功能来创建对象的深拷贝。
 
-例如，当你复制数组、字典或集合时，你获得的是这些集合的新副本。然而，如果你想修改一个集合但不修改其副本，你可能需要为单个元素创建你自己的副本。例如，如果你想在[程序 18.2]中更改 `dataArray2` 的第一个元素但不更改 `dataArray`，你可以创建一个新字符串（使用诸如 `stringWithString:` 的方法）并将其存储到 `dataArray2` 的第一个位置，如下：
-
-`mStr = [NSMutableString stringWithString: [dataArray2 objectAtIndex: 0]];`
-
-然后你就可以对 `mStr` 进行修改了。
-
-### 实现 `Copying` 协议
-
-也许你能够理解为什么 `dataArray` 的第一个元素被改变了，但无法理解为什么它的副本也改变了。当你从集合中获取元素时，你获得的是该元素的一个新引用，而不是一个新的副本。因此，当在 `dataArray` 上调用 `objectAtIndex:` 方法时，返回的对象指向内存中与 `dataArray` 第一个元素相同的对象。随后修改字符串对象 `mStr` 会产生一个改变 `dataArray` 第一个元素的副作用，正如你从输出中看到的那样。
-
-但你创建的副本又是呢？为什么它的第一个元素也被改变了？这与拷贝在默认情况下是**浅拷贝**（`shallow`）有关。因此，当使用 `mutableCopy` 方法复制数组时，内存中会为新的数组对象分配空间，并将各个元素复制到新数组中。但将数组中的每个元素从原始位置复制到新位置，意味着仅仅是将引用从数组的一个元素复制到另一个元素。最终结果是两个数组的元素都引用了内存中的相同字符串。这与我们在本章开头介绍将一个对象赋值给另一个对象没有区别。
-
-为了为数组的每个元素创建不同的副本，你必须执行**深拷贝**（`deep`）。这意味着要复制数组中每个对象的内容，而不仅仅是对象引用的副本（并思考如果数组的元素本身是一个数组对象，这意味着什么）。但当你使用 Foundation 类的 `copy` 或 `mutableCopy` 方法时，默认不会执行深拷贝。在[第 19 章]“归档（Archiving）”中，我们将向你展示如何使用 Foundation 的归档功能来创建对象的深拷贝。
-
-例如，当你复制数组、字典或集合时，你获得的是这些集合的新副本。然而，如果你想修改一个集合但不修改其副本，你可能需要为单个元素创建你自己的副本。例如，如果你想在[程序 18.2]中更改 `dataArray2` 的第一个元素但不更改 `dataArray`，你可以创建一个新字符串（使用诸如 `stringWithString:` 的方法）并将其存储到 `dataArray2` 的第一个位置，如下：
+例如，当你复制数组、字典或集合时，你获得的是这些集合的新副本。然而，如果你想修改一个集合但不修改其副本，你可能需要为单个元素创建你自己的副本。例如，如果你想在[程序 18.2]中更改`dataArray2`的第一个元素但不更改`dataArray`，你可以创建一个新字符串（使用诸如`stringWithString:`的方法）并将其存储到`dataArray2`的第一个位置，如下：
 
 `mStr = [NSMutableString stringWithString: [dataArray2 objectAtIndex: 0]];`
 
-然后你就可以对 `mStr` 进行修改。
+然后你就可以对`mStr`进行修改了。
 
-### 实现 `Copying` 协议
+### 实现`Copying`协议
 
-如果你在你自己的类上尝试使用 `copy` 方法，你会得到这样的错误：
+也许你能够理解为什么`dataArray`的第一个元素被改变了，但无法理解为什么它的副本也改变了。当你从集合中获取元素时，你获得的是该元素的一个新引用，而不是一个新的副本。因此，当在`dataArray`上调用`objectAtIndex:`方法时，返回的对象指向内存中与`dataArray`第一个元素相同的对象。随后修改字符串对象`mStr`会产生一个改变`dataArray`第一个元素的副作用，正如你从输出中看到的那样。
+
+但你创建的副本又是呢？为什么它的第一个元素也被改变了？这与拷贝在默认情况下是浅拷贝（`shallow`）有关。因此，当使用`mutableCopy`方法复制数组时，内存中会为新的数组对象分配空间，并将各个元素复制到新数组中。但将数组中的每个元素从原始位置复制到新位置，意味着仅仅是将引用从数组的一个元素复制到另一个元素。最终结果是两个数组的元素都引用了内存中的相同字符串。这与我们在本章开头介绍将一个对象赋值给另一个对象没有区别。
+
+为了为数组的每个元素创建不同的副本，你必须执行深拷贝（`deep`）。这意味着要复制数组中每个对象的内容，而不仅仅是对象引用的副本（并思考如果数组的元素本身是一个数组对象，这意味着什么）。但当你使用 Foundation 类的`copy`或`mutableCopy`方法时，默认不会执行深拷贝。在[第 19 章]“归档（Archiving）”中，我们将向你展示如何使用 Foundation 的归档功能来创建对象的深拷贝。
+
+例如，当你复制数组、字典或集合时，你获得的是这些集合的新副本。然而，如果你想修改一个集合但不修改其副本，你可能需要为单个元素创建你自己的副本。例如，如果你想在[程序 18.2]中更改`dataArray2`的第一个元素但不更改`dataArray`，你可以创建一个新字符串（使用诸如`stringWithString:`的方法）并将其存储到`dataArray2`的第一个位置，如下：
+
+`mStr = [NSMutableString stringWithString: [dataArray2 objectAtIndex: 0]];`
+
+然后你就可以对`mStr`进行修改。
+
+### 实现`Copying`协议
+
+如果你在你自己的类上尝试使用`copy`方法，你会得到这样的错误：
 
 ```
 *** copyZone: selector not recognized
 ```
 
-等等，`zone` 参数与程序中可以分配和使用的不同内存区域有关。如果你编写分配大量内存的应用程序，并希望通过将其分组到这些区域来优化，就需要处理这些。你可以将传递给 `copyWithZone:` 的值交给内存分配方法 `allocWithZone`。该方法在指定的区域内分配内存。
+等等，`zone`参数与程序中可以分配和使用的不同内存区域有关。如果你编写分配大量内存的应用程序，并希望通过将其分组到这些区域来优化，就需要处理这些。你可以将传递给`copyWithZone:`的值交给内存分配方法`allocWithZone`。该方法在指定的区域内分配内存。
 
-在分配新的 `Fraction` 对象后，你将接收者的 `numerator` 和 `denominator` 复制到其中。`copyWithZone:` 方法应该返回对象的副本，你可以在方法中完成这一点。
+在分配新的`Fraction`对象后，你将接收者的`numerator`和`denominator`复制到其中。`copyWithZone:`方法应该返回对象的副本，你可以在方法中完成这一点。
 
-如果你想区分可变和不可变副本，如前所述，你还需要实现 `mutableZone:`。`copyWith:` 应该返回一个不可变副本，而 `mutableZone:` 应该返回一个可变副本。
+如果你想区分可变和不可变副本，如前所述，你还需要实现`mutableZone:`。`copyWith:`应该返回一个不可变副本，而`mutableZone:`应该返回一个可变副本。
 
-`interface` 如下：
+`interface`如下：
 
 `@interface <Copying>`
 
-在实现文件 `Fraction.m` 中，为你的新方法添加以下定义：
+在实现文件`Fraction.m`中，为你的新方法添加以下定义：
 
 ```objc
 -(id)copyWithWithZone:(NSZone *)zone {
@@ -10374,7 +9800,7 @@ dataArray2:
 }
 ```
 
-[程序 18.3] 测试了你的新方法。
+[程序 18.3]测试了你的新方法。
 
 ```objc
 // Copying fractions
@@ -10391,10 +9817,6 @@ int main (int argc, char * argv[])
     }
 }
 ```
-
-
-
-
 
 ```objc
 [f2 setTo: 1 over: 3];
@@ -10416,7 +9838,7 @@ return 0;
 
 ***
 
-该程序创建了一个名为 `f1` 的 `Fraction` 对象并将其设置为 `2/5`。接着它调用 `copy` 方法来创建一个副本，该方法会向你的对象发送 `copyWithZone:` 消息。该方法会创建一个新的 `Fraction` 对象，将来自 `f1` 的值拷贝到其中，并返回结果。在 `main` 函数中，你将该结果赋值给 `f2`。随后，将 `f2` 的值设置为分数 `1/3`，这证明了该操作对原始分数 `f1` 没有产生任何影响。修改程序中读取以下内容的行：
+该程序创建了一个名为`f1`的`Fraction`对象并将其设置为`2/5`。接着它调用`copy`方法来创建一个副本，该方法会向你的对象发送`copyWithZone:`消息。该方法会创建一个新的`Fraction`对象，将来自`f1`的值拷贝到其中，并返回结果。在`main`函数中，你将该结果赋值给`f2`。随后，将`f2`的值设置为分数`1/3`，这证明了该操作对原始分数`f1`没有产生任何影响。修改程序中读取以下内容的行：
 
 ```objc
 f2 = [f1 copy];
@@ -10430,7 +9852,7 @@ f2 = f1;
 
 以观察你获得的不同结果。
 
-如果你的类可能会被子化，那么你的 `copyWithZone:` 方法将被继承。在这种情况下，你应该修改方法中读取以下内容的行：
+如果你的类可能会被子化，那么你的`copyWithZone:`方法将被继承。在这种情况下，你应该修改方法中读取以下内容的行：
 
 ```objc
 Fraction *newFract = [[Fraction allocWithZone: zone] init];
@@ -10442,21 +9864,21 @@ Fraction *newFract = [[Fraction allocWithZone: zone] init];
 id newFract = [[[self class] allocWithZone: zone] init];
 ```
 
-这样，你就会从 `copy` 的接收者所在的类中分配一个新对象。（例如，如果它已经被子化为了一个名为 `NewFraction` 的类，请务必在继承的方法中分配一个新的 `NewFraction` 对象，而不是 `Fraction` 对象。）
+这样，你就会从`copy`的接收者所在的类中分配一个新对象。（例如，如果它已经被子化为了一个名为`NewFraction`的类，请务必在继承的方法中分配一个新的`NewFraction`对象，而不是`Fraction`对象。）
 
-如果你正在为某个类编写 `copyWithZone:` 方法，而该类的父类也实现了 `<NSCopying>` 协议，那么你应该先在父类上调用 `copy` 方法来拷贝继承的实例变量，然后包含你自己的代码来拷贝你可能为该类添加的任何额外实例变量（如果有）。
+如果你正在为某个类编写`copyWithZone:`方法，而该类的父类也实现了`<NSCopying>`协议，那么你应该先在父类上调用`copy`方法来拷贝继承的实例变量，然后包含你自己的代码来拷贝你可能为该类添加的任何额外实例变量（如果有）。
 
 你必须决定在你的类中实现浅拷贝还是深拷贝。只需对该类的其他用户对其进行说明即可，以便他们知晓。
 
 ### 在 Setter 和 Getter 方法中拷贝对象
 
-每当你实现一个 setter 或 getter 方法时，都应该考虑你在实例变量中存储了什么、获取了什么，以及是否需要保护这些值。例如，当你使用相应的 setter 方法设置其中一个 `AddressCard` 对象的名称时，请考虑这一点：
+每当你实现一个 setter 或 getter 方法时，都应该考虑你在实例变量中存储了什么、获取了什么，以及是否需要保护这些值。例如，当你使用相应的 setter 方法设置其中一个`AddressCard`对象的名称时，请考虑这一点：
 
 ```objc
 newCard.name = newName;
 ```
 
-假设 `newName` 是一个包含你新卡片名称的字符串对象。假设在 setter 程序内部，你简单地将参数赋值给相应的实例变量：
+假设`newName`是一个包含你新卡片名称的字符串对象。假设在 setter 程序内部，你简单地将参数赋值给相应的实例变量：
 
 ```objc
 -(void) setName: (NSString *) theName
@@ -10465,11 +9887,11 @@ newCard.name = newName;
 }
 ```
 
-现在，你认为如果程序稍后更改 `newName` 中包含的某些字符会发生什么？（如果 `newName` 是一个可变字符串对象，这种情况就会发生；此类对象可以用任何指定为 `NSString` 对象的地方，因为前者是后者的子类）它还会在无意中改变你的地址卡片中对应的字段，因为它们都引用了同一个字符串对象。
+现在，你认为如果程序稍后更改`newName`中包含的某些字符会发生什么？（如果`newName`是一个可变字符串对象，这种情况就会发生；此类对象可以用任何指定为`NSString`对象的地方，因为前者是后者的子类）它还会在无意中改变你的地址卡片中对应的字段，因为它们都引用了同一个字符串对象。
 
 正如你已经所看到的，更安全的方法是在 setter 程序过程中为对象创建一个副本，以防止这种无意的影响。
 
-如果你没有使用合成（synthesizing）setter，你也可以写一个使用 `copy` 的 `setName:` 方法版本，如下：
+如果你没有使用合成（synthesizing）setter，你也可以写一个使用`copy`的`setName:`方法版本，如下：
 
 ```objc
 -(void) setName: (NSString *) theName
@@ -10478,9 +9900,9 @@ newCard.name = newName;
 }
 ```
 
-正如你已经看到的，Numbers, Strings, and Collections，“如果你为一个父类也实现了 `<NSCopying>` 协议的类编写 `copyWithZone:` 方法，那么你应该先在父类上调用 `copy` 方法来拷贝继承的实例变量，然后包含你自己的代码来拷贝你可能为该类添加的任何额外实例变量（如果有）。
+正如你已经看到的，Numbers, Strings, and Collections，“如果你为一个父类也实现了`<NSCopying>`协议的类编写`copyWithZone:`方法，那么你应该先在父类上调用`copy`方法来拷贝继承的实例变量，然后包含你自己的代码来拷贝你可能为该类添加的任何额外实例变量（如果有）。
 
-如果你在属性声明中指定了 `copy` 属性，结合相应的 `@synthesize` 指令：
+如果你在属性声明中指定了`copy`属性，结合相应的`@synthesize`指令：
 
 ```objc
 @property (nonatomic, copy) NSString *name;
@@ -10496,19 +9918,19 @@ newCard.name = newName;
 }
 ```
 
-`nonatomic` 告诉系统不要保护属性访问器使用 `mutex`（互斥锁）。使用 `mutex` 是为了防止两个线程同时执行相同的代码，这通常会导致严重的问题。但这些锁会降低程序速度，如果你知道这段代码只会运行在单线程，就可以避免使用它们。如果没有指定 `nonatomic` 而是指定 `atomic`（这是默认值），那么你的属性将受 `mutex` 保护。
+`nonatomic`告诉系统不要保护属性访问器使用`mutex`（互斥锁）。使用`mutex`是为了防止两个线程同时执行相同的代码，这通常会导致严重的问题。但这些锁会降低程序速度，如果你知道这段代码只会运行在单线程，就可以避免使用它们。如果没有指定`nonatomic`而是指定`atomic`（这是默认值），那么你的属性将受`mutex`保护。
 
 ***
 
-> 注意：属性没有 `copy` 属性。
+> 注意：属性没有`copy`属性。
 
 ***
 
-> 注意：实例变量的 `copy` 方法。
+> 注意：实例变量的`copy`方法。
 
 ***
 
-> 注意：如果你为包含 `name` 和 `email` 的 `AddressCard` 类实现拷贝方法，以下 `copyWithZone:` 实现是足够的：
+> 注意：如果你为包含`name`和`email`的`AddressCard`类实现拷贝方法，以下`copyWithZone:`实现是足够的：
 
 ```objc
 -(AddressCard *) copyWithZone: (NSZone *) zone
@@ -10528,47 +9950,55 @@ newCard.name = newName;
 }
 ```
 
-意识到你可以直接赋值实例变量（而不是进行完全拷贝），因为副本的所有者无法影响原始卡片的 `name` 和 `email` 成员（它们包含不可变字符串）。因为我们的实例变量默认是“强”引用，对它们进行简单赋值会另一个引用，正如第 17 章详细解释的那样。
+意识到你可以直接赋值实例变量（而不是进行完全拷贝），因为副本的所有者无法影响原始卡片的`name`和`email`成员（它们包含不可变字符串）。因为我们的实例变量默认是“强”引用，对它们进行简单赋值会另一个引用，正如第 17 章详细解释的那样。
 
 ### 练习
 
-> **1.** 根据 `NSCopying` 协议为 `AddressBook` 类实现拷贝方法。实现 `mutableCopy` 方法是否有意义？为什么？另外，考虑当有人使用 `AddressBook` 类中该属性的 setter 方法时会发生什么。谁应该拥有作为参数传递的地址簿？如何修复这个问题？
+> **1.** 根据`NSCopying`协议为`AddressBook`类实现拷贝方法。实现`mutableCopy`方法是否有意义？为什么？另外，考虑当有人使用`AddressBook`类中该属性的 setter 方法时会发生什么。谁应该拥有作为参数传递的地址簿？如何修复这个问题？
 
-> **2.** 修改第 8 章 中定义的 `Rectangle` 和 `XYPoint` 类，使其符合 `<NSCopying>` 协议。为这两个类都添加 `copyWithZone:` 方法。确保 `Rectangle` 在拷贝其 `XYPoint` 成员 `origin` 时使用 `XYPoint` 的拷贝方法。对于这些类来说，同时实现可变和不可变拷贝是否有意义？请解释。
+> **2.** 修改第 8 章 中定义的`Rectangle`和`XYPoint`类，使其符合`<NSCopying>`协议。为这两个类都添加`copyWithZone:`方法。确保`Rectangle`在拷贝其`XYPoint`成员`origin`时使用`XYPoint`的拷贝方法。对于这些类来说，同时实现可变和不可变拷贝是否有意义？请解释。
 
-
-
-
-
-> 3. 创建一个 `NSDictionary` 对象并向其填充一些键/值对。然后分别创建它的可变和不可变副本。这些创建的是深拷贝还是浅拷贝？验证你的答案。
+> 3. 创建一个`NSDictionary`对象并向其填充一些键/值对。然后分别创建它的可变和不可变副本。这些创建的是深拷贝还是浅拷贝？验证你的答案。
 
 ## 19. 归档 (Archiving)
 
 在 Objective-C 术语中，归档是将一个或多个对象保存为某种格式的过程，以便日后恢复它们。这通常涉及将对象写入文件，以便随后将其读取回来。在本章中，我们将讨论数据归档的两种方法：属性列表
+
 {
+
    @autoreleasepool {
+
       NSDictionary  glossary =
+
         [NSDictionary  dictionaryWithObjectsAndKeys:
+
           @"A class defined so other classes can inherit from it.",
+
           @"abstract class",
+
           @"To implement all the methods defined in a protocol",
+
           @"adopt",
+
           @"Storing an object for later use. ",
+
           @"archiving",
+
           nil
+
         ];
 
-      if ([glossary writeToFile: @"glossary"  atomically: YES] == NO)
-         NSLog (@"Save to file failed!");
 
-   }
-   return 0;
-}
-```
 
-`writeToFile:atomically:` 消息被发送给你的字典对象 `glossary`，导致字典以属性列表的形式被写入文件 `glossary`。`atomically` 参数被设置为 `YES`，这意味着你希望写入操作首先在一个临时备份文件中完成；一旦成功，最终数据将移动到命名为 `glossary` 的指定文件。。这是一种安全保护机制，可以防止文件在例如系统在写入操作中途崩溃时发生损坏。在那种情况下，原始的 `glossary` 文件（如果它之前存在）不会受到损害。
+`if ([glossary writeToFile: @"glossary" atomically: YES] == NO)`
 
-如果你检查程序 19.1 创建的 `glossary` 文件的内容，它看起来如下：
+`NSLog (@"Save to file failed!");`
+
+`return 0;`
+
+`writeToFile:atomically:` 消息被发送给你的字典对象`glossary`，导致字典以属性列表的形式被写入文件`glossary`。`atomically`参数被设置为`YES`，这意味着你希望写入操作首先在一个临时备份文件中完成；一旦成功，最终数据将移动到命名为`glossary`的指定文件。这是一种安全保护机制，可以防止文件在例如系统在写入操作中途崩溃时发生损坏。在那种情况下，原始的`glossary`文件（如果它之前存在）不会受到损害。
+
+如果你检查程序 19.1 创建的`glossary`文件的内容，它看起来如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -10586,11 +10016,11 @@ newCard.name = newName;
 </plist>
 ```
 
-你可以从创建的 XML 文件中看到，字典是以一组键（`<key>`）和值（`<string>`）对的形式写入文件的。当你从字典创建属性列表时，字典中的键必须是 `NSString` 对象。数组的元素或字典中的值可以是 `NSString`、`NSDictionary`、`NSData`、`NSDate` 或 `NSNumber` 对象。
+你可以从创建的 XML 文件中看到，字典是以一组键（`<key>`）和值（`<string>`）对的形式写入文件的。当你从字典创建属性列表时，字典中的键必须是`NSString`对象。数组的元素或字典中的值可以是`NSString`、`NSDictionary`、`NSData`、`NSDate`或`NSNumber`对象。
 
-要从文件中读取 XML 属性列表到程序中，你需要使用 `dictionaryContentsOfFile:` 或 `arrayContentsOfFile:` 方法。要读取数据，使用 `dataContentsOfFile:` 方法；要读取字符串对象，使用 `stringContentsOfFile:` 方法。程序 19.2 读取了程序 19.1 写入的词表并显示其内容。
+要从文件中读取 XML 属性列表到程序中，你需要使用`dictionaryContentsOfFile:`或`arrayContentsOfFile:`方法。要读取数据，使用`dataContentsOfFile:`方法；要读取字符串对象，使用`stringContentsOfFile:`方法。程序 19.2 读取了程序 19.1 写入的词表并显示其内容。
 
-程序 19.2
+### 程序 19.2
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -10599,37 +10029,34 @@ int main (int argc, char * argv[])
 {
    @autoreleasepool {
       NSDictionary *glossary;
-
       glossary = [NSDictionary dictionaryContentsOfFile: @"glossary"];
 
       for ( NSString *key in glossary )
-         NSLog (@@: %@", key, [glossary objectForKey: key]);
+         NSLog (@"%@: %@", key, [glossary objectForKey: key]);
    }
    return 0;
 }
 ```
 
-程序 19.2 输出
+### 程序 19.2 输出
 
+```text
 archiving: Storing an object for later use.
 abstract class: A class defined so other classes can inherit from it.
 adopt: To implement all the methods in a protocol
+```
 
-你的属性列表不需要从 Objective-C 程序创建；属性列表可以来自任何源。你可以使用简单的文本编辑器创建自己的属性列表，也可以使用 Mac OS X 系统上 `/Developer/Applications/Utilities` 目录下的 Property List 程序。如果你计划在应用程序中使用属性列表，你可能想查看 `NSPropertyListSerialization` 类，它允许以机器可的方式从文件中读写属性列表。
+你的属性列表不需要从 Objective-C 程序创建；属性列表可以来自任何源。你可以使用简单的文本编辑器创建自己的属性列表，也可以使用 Mac OS X 系统上`/Developer/Applications/Utilities`目录下的 Property List 程序。如果你计划在应用程序中使用属性列表，你可能想查看`NSPropertyListSerialization`类，它允许以机器可读的方式从文件中读写属性列表。
 
-### 使用 NSKeyedArchiver 归档
+## 使用 NSKeyedArchiver 归档
 
-一种更灵活的方法允许你将任何类型的对象保存到文件中，而不只是字符串、数组和字典。这是通过使用 `NSKeyedArchiver` 类创建键归档实现的。
+一种更灵活的方法允许你将任何类型的对象保存到文件中，而不只是字符串、数组和字典。这是通过使用`NSKeyedArchiver`类创建键归档实现的。
 
-Mac OS 从 10.2 版本开始支持键归档。在此之前，顺序归档是用 `NSArchiver` 类创建的。顺序归档要求按照写入数据的相同顺序读取归档中的数据。
+Mac OS 从 10.2 版本开始支持键归档。在此之前，顺序归档是用`NSArchiver`类创建的。顺序归档要求按照写入数据的相同顺序读取归档中的数据。
 
 键归档是指归档中的每个字段都有名称。当你归档对象时，给它一个名称或键。当你从归档中检索它时，通过相同的键进行检索。通过这种方式，对象可以以任何顺序写入归档。此外，如果类中添加或删除了实例变量，你的程序也可以处理这种情况。
 
-程序 19.3 显示了可以使用 `NSKeyedArchiver` 类的 `archiveRootObject:toFile:` 方法将词表保存到磁盘文件中。
-
-
-
-
+程序 19.3 显示了可以使用`NSKeyedArchiver`类的`archiveRootObject:toFile:`方法将词表保存到磁盘文件中。
 
 程序 19.3 不会在终端产生任何输出。然而，以下语句
 
@@ -10637,9 +10064,9 @@ Mac OS 从 10.2 版本开始支持键归档。在此之前，顺序归档是用 
 [NSKeyedArchiver archiveRootObject: glossary toFile: @"glossary.archive"];
 ```
 
-会将字典 `glossary` 写入文件 `glossary.archive`。可以为该文件指定任何路径。在这种情况下，文件被写入到当前目录。
+会将字典`glossary`写入文件`glossary.archive`。可以为该文件指定任何路径。在这种情况下，文件被写入到当前目录。
 
-创建的归档文件以后可以通过 `NSKeyedUnarchiver` 的 `unarchiveObjectWithFile:` 方法读取到你的程序中，正如程序 19.4 中所示的那。
+创建的归档文件以后可以通过`NSKeyedUnarchiver`的`unarchiveObjectWithFile:`方法读取到你的程序中，正如程序 19.4 中所示的那样。
 
 ### 程序 19.4
 
@@ -10650,7 +10077,6 @@ int main (int argc, char * argv[])
 {
     @autoreleasepool {
         NSDictionary *glossary;
-
         glossary = [NSKeyedUnarchiver unarchiveObjectWithFile:
                                @"glossary.archive"];
 
@@ -10682,9 +10108,9 @@ glossary = [NSKeyedUnarchiver unarchiveObjectWithFile:
 
 ## 编写编码和解码方法
 
-基础 Objective-C 类对象如 `NSString`、`NSArray`、`NSDictionary`、`NSSet`、`NSDate`、`NSNumber` 和 `NSData` 可以按照上述方式进行归档和恢复。这也包括嵌套对象，例如包含字符串或其他数组对象的数组。
+基础 Objective-C 类对象如`NSString`、`NSArray`、`NSDictionary`、`NSSet`、`NSDate`、`NSNumber`和`NSData`可以按照上述方式进行归档和恢复。这也包括嵌套对象，例如包含字符串或其他数组对象的数组。
 
-这意味着你不能直接使用这种技术归档你的 `AddressBook`，因为 Objective-C 系统不知道如何归档一个 `AddressBook` 对象。如果你尝试通过在程序中插入类似下面的行来归档它：
+这意味着你不能直接使用这种技术归档你的`AddressBook`，因为 Objective-C 系统不知道如何归档一个`AddressBook`对象。如果你尝试通过在程序中插入类似下面的行来归档它：
 
 ```objc
 [NSKeyedArchiver archiveRootObject: myAddressBook toFile:  @"addrbook.arch"];
@@ -10699,18 +10125,18 @@ glossary = [NSKeyedUnarchiver unarchiveObjectWithFile:
 archiveTest: received signal: Trace/BPT trap
 ```
 
-从错误信息中可以看出，系统正在 `AddressBook` 类中寻找一个名为 `encodeWithCoder:` 的方法，但你从未定义过该方法。
+从错误信息中可以看出，系统正在`AddressBook`类中寻找一个名为`encodeWithCoder:`的方法，但你从未定义过该方法。
 
-要归档列出列表以外的对象，你必须告诉系统如何归档（或 `encode`）你的对象，以及如何反归档（或 `decode`）它们。这是通过根据 `<NSCoding>` 协议在类定义中添加 `encodeWithCoder:` 和 `initWithCoder:` 方法来实现的。对于我们的地址簿示例，你需要在 `AddressBook` 和 `AddressCard` 类中都添加这些方法。
+要归档列出列表以外的对象，你必须告诉系统如何归档（或`encode`）你的对象，以及如何反归档（或`decode`）它们。这是通过根据`<NSCoding>`协议在类定义中添加`encodeWithCoder:`和`initWithCoder:`方法来实现的。对于我们的地址簿示例，你需要在`AddressBook`和`AddressCard`类中都添加这些方法。
 
-每当归档器想要对指定类的对象进行编码时，`encodeWithCoder:` 方法就会被调用，该方法告诉它如何这样做。同样，每当要对指定类的对象进行解码时，`initWithCoder:` 方法就会被调用。
+每当归档器想要对指定类的对象进行编码时，`encodeWithCoder:`方法就会被调用，该方法告诉它如何这样做。同样，每当要对指定类的对象进行解码时，`initWithCoder:`方法就会被调用。
 
-通常，编码方法应该指定如何归档要保存的对象中的每个实例变量。幸运的是，你有帮助来完成这一点。对于之前描述的基础 Objective-C 类，你可以使用 `encodeObject:forKey:` 方法。对于基础底层 C 数据类型（如整数和浮点数），你使用表 19.1 列出的方法之一。解码方法 `initWithCoder:` 的工作原理反相反：你使用 `decodeObject:forKey:` 来解码基础的 Objective-C 类。
+通常，编码方法应该指定如何归档要保存的对象中的每个实例变量。幸运的是，你有帮助来完成这一点。对于之前描述的基础 Objective-C 类，你可以使用`encodeObject:forKey:`方法。对于基础底层 C 数据类型（如整数和浮点数），你使用表 19.1 列出的方法之一。解码方法`initWithCoder:`的工作原理正相反：你使用`decodeObject:forKey:`来解码基础的 Objective-C 类。
 
 ### 表 19.1 数据类型的编码与解码
 （注：源文本未提供表格内容）
 
-解码方法 `initWithCoder:` 的工作原理反相反：你使用 `decodeObject:forKey:` 来解码基础的 Objective-C 类。
+解码方法`initWithCoder:`的工作原理正相反：你使用`decodeObject:forKey:`来解码基础的 Objective-C 类。
 
 程序 19.5 数据类型的编码与解码
 
@@ -10752,10 +10178,7 @@ archiveTest: received signal: Trace/BPT trap
 @end
 ```
 
-
-
-
-与你的 `AddressCard` 类类似，你向 `AddressBook` 类添加了编码和解码方法。你只需要在接口文件中更改的唯一行代码是 `@interface` 指令，用于声明 `AddressBook` 类现在遵循 `NSCoding` 协议。更改如下：
+与你的`AddressCard`类类似，你向`AddressBook`类添加了编码和解码方法。你只需要在接口文件中更改的唯一行代码是`@interface`指令，用于声明`AddressBook`类现在遵循`NSCoding`协议。更改如下：
 
 > `@interface AddressBook: NSObject <NSCoding, NSCopying>`
 
@@ -10776,7 +10199,7 @@ archiveTest: received signal: Trace/BPT trap
 }
 ```
 
-接下来的测试程序如 程序 19.6。
+接下来的测试程序如程序 19.6。
 
 ### 程序 19.6. 测试程序
 
@@ -10826,9 +10249,9 @@ int main (int argc, char * argv[])
 }
 ```
 
-该程序创建了地址簿并将其归档到文件 `addrbook.arch`。在创建存档文件的过程中，你会发现 `AddressBook` 和 `AddressCard` 类的编码方法都被调用了。如果你需要证明，可以在这些方法中添加一些 `NSLog` 调用。
+该程序创建了地址簿并将其归档到文件`addrbook.arch`。在创建存档文件的过程中，你会发现`AddressBook`和`AddressCard`类的编码方法都被调用了。如果你需要证明，可以在这些方法中添加一些`NSLog`调用。
 
-[程序 19.7] 展示了如何将存档读取到内存中，以便从文件中设置地址簿。
+程序 19.7 展示了如何将存档读取到内存中，以便从文件中设置地址簿。
 
 ### 程序 19.7
 
@@ -10838,6 +10261,7 @@ int main (int argc, char * argv[])
 int main (int argc, char * argv[])
 {
     AddressBook         *myBook;
+
     @autoreleasepool {
         myBook = [NSKeyedArchiver unarchiveObjectWithFile:@"addrbook.arch"];
         [myBook list];
@@ -10846,27 +10270,39 @@ int main (int argc, char * argv[])
 }
 ```
 
+
+
 ##### 程序 19.7 输出
+
 ```
 ======== Contents of Steve's Address Book =========
+
 Jamie Baker jaker@mail.com
+
 Julia Kochan jewls337@axlc.com
+
 Stephen Kochan steve@steve_kochan.com
+
 Tony Iannino tony.iannino@techfitness.com
+
 ====================================
 ```
 
 在解档地址簿的过程中，添加到你类中的解码方法被自动调用了。注意你可以如何多容易地将地址簿读回程序。
 
-正如所提到的，`encodeObject:forKey:` 方法适用于内置类以及你根据 `NSCoding` 协议编写编码和解码方法的类。如果你的实例包含某些数据（例如整数或浮点数），你需要知道如何编码和解码它们（参见 [表 19.1]）。
+正如所提到的，`encodeObject:forKey:` 方法适用于内置类以及你根据 `NSCoding` 协议编写编码和解码方法的类。如果你的实例包含某些数据（例如整数或浮点数），你需要知道如何编码和解码它们（参见[表 19.1]）。
 
 这是一个类 `Foo` 的简单定义，它包含三个实例变量——一个是 `NSString`，另一个是 `int`，第三个是 `float`。该类有一个 setter 方法、三个 getter 方法以及两个用于归档的编码/解码方法：
 
 ```objc
 @interface Foo: <NSCoding>
+
 @property (copy, nonatomic) NSString *strVal;
+
 @property int intVal;
+
 @property float floatVal;
+
 @end
 ```
 
@@ -10874,6 +10310,7 @@ Tony Iannino tony.iannino@techfitness.com
 
 ```objc
 @implementation Foo
+
 @synthesize strVal, intVal, floatVal;
 
 -(void) encodeWithCoder: (NSCoder *) encoder
@@ -10890,40 +10327,50 @@ Tony Iannino tony.iannino@techfitness.com
     floatVal = [decoder decodeFloatForKey: @"FoofloatVal"];
     return self;
 }
+
 @end
 ```
 
-编码程序首先使用 `encodeObject:forKey:` 方法编码字符串 `strVal`，如之前所示。在 [程序 19.8] 中，一个 `Foo` 对象被创建、归档到文件、解档并显示。
+编码程序首先使用 `encodeObject:forKey:` 方法编码字符串 `strVal`，如之前所示。在[程序 19.8]中，一个 `Foo` 对象被创建、归档到文件、解档并显示。
 
-### 程序 19.8. 测试程序
+### 程序 19.8 测试程序
 
 ```objc
 #import <Foundation/h>
+
 #import "Foo.h" // Foo 类的定义
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
         Foo *myFoo1 = [[Foo alloc] init];
+
         Foo *myFoo2;
 
         [myFoo1 setStrVal: @"This is the string"];
+
         [myFoo1 setIntVal: 12345];
+
         [myFoo1 setFloatVal: 98.6];
 
         [NSKeyedArchiver archiveRootObject: myFoo1 toFile: @"foo.arch"];
 
         myFoo2 = [NSKeyedArchiver unarchiveObjectWithFile: @"foo.arch"];
+
         NSLog (@"%@\n%i\n%g", [myFoo2 strVal], [myFoo2 intVal], [myFoo2 floatVal]);
     }
+
     return 0;
 }
 ```
 
-### 程序 19.8. 输出
+### 程序 19.8 输出
+
 ```
 This is the string
+
 12345
+
 98.6
 ```
 
@@ -10933,10 +10380,7 @@ This is the string
 - `[encoder encodeInt: intVal forKey: @"FoointVal"]`
 - `[encoder encodeFloat: floatVal forKey: @"FoofloatVal"]`
 
-一些基本数据类型如 `char`、`short`、`long` 和 `long long` 未列在 [表 19.1] 中；你需要确定数据对象的大小并使用相应的程序。例如，`short int` 通常是 16 位，`int` 和 `long` 可以 32 或 64 位，而 `long long` 是 64 位。（你可以使用第 13 章“[底层 C 语言特性]”描述的 `sizeof` 运算符来确定任何数据类型的大小。）
-
-
-
+一些基本数据类型如 `char`、`short`、`long` 和 `long long` 未列在[表 19.1]中；你需要确定数据对象的大小并使用相应的程序。例如，`short int` 通常是 16 位，`int` 和 `long` 可以 32 或 64 位，而 `long long` 是 64 位。（你可以使用第 13 章“[底层 C 语言特性]”描述的 `sizeof` 运算符来确定任何数据类型的大小。）
 
 你可能不想像在之前的程序示例那样，使用 `archiveRootObject:ToFile:` 方法直接将对象写入文件。例如，你可能想收集你的部分或全部对象，并将它们存储在单个归档文件中。你可以在 Objective-C 中使用名为 `NSData` 的数据对象类来实现这一点，我们之前在第 16 章中简要介绍过它，“处理文件”。
 
@@ -10954,42 +10398,62 @@ dataArea = [NSMutableData data];
 
 ```objc
 #import "AddressBook.h"
+
 #import "Foo.h"
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
         Foo *myFoo1 = [[Foo alloc] init];
+
         NSMutableData *dataArea;
+
         NSKeyedArchiver *archiver;
+
         AddressBook *myBook;
 
         // 插入程序 19.7 中的代码以在 myBook 中创建
+
         // 创建一个包含四个地址卡片的通讯录
 
         [myFoo1 setStrVal: @"This is the string"];
+
         [myFoo1 setIntVal: 12345];
+
         [myFoo1 setFloatVal: 98.6];
 
         // 设置数据区域并将其连接到 NSKeyedArchiver 对象
+
         dataArea = [NSMutableData data];
 
         archiver = [[NSKeyedArchiver alloc]
                     initForWritingWithMutableData: dataArea];
+
         // 现在我们可以开始归档对象了
+
         [archiver encodeObject: myBook forKey: @"myaddrbook"];
+
         [archiver encodeObject: myFoo1 forKey: @"myfoo1"];
+
         [archiver finishEncoding];
 
         // 将归档后的数据区域写入文件
+
         if ([dataArea writeToFile: @"myArchive" atomically: YES] == NO)
             NSLog (@"Archiving failed!");
     }
+
     return 0;
 }
 ```
 
-在分配一个 `NSKeyedArchiver` 对象后，会发送 `initForWritingWithMutableData:` 消息以指定写入归档数据的区域；这就是你之前创建的 `NSMutabledata`  `dataArea`。现在可以向存储在 `archiver` 中的 `NSKeyedArchiver` 对象发送编码消息来归档对象。事实上，在接收到 `finishEncoding` 消息之前，它会将所有的编码消息归档并存储在指定的数据区域。你有两个对象需要编码——第一个是你的通讯录，第二个是你的 `Foo` 对象。对这些对象使用 `encodeObject:forKey:`，因为你之前已经为 `AddressBook`、`AddressCard` 和 `Foo` 类实现了编码器和解码器方法。（理解这一点非常重要。）当你完成两个对象的归档后，向 `archiver` 对象发送 `finishEncoding` 消息。从此之后就不能再编码任何对象了，你必须发送此消息来完成归档过程。你预留并命名为 `dataArea` 的区域现在包含了你归档后的对象，其格式可以写入文件。通过调用消息 `[dataArea writeToFile: @"myArchive" atomically: YES]`，你要求你的数据流将其数据写入你命名为 `myArchive` 的指定文件。正如从 `if` 语句所示，`writeToFile:atomically:` 方法返回一个 `BOOL` 值：如果写入成功则返回 `YES`，如果失败则返回 `NO`（可能是指定了无效的路径或文件系统已满）。
+在分配一个 `NSKeyedArchiver` 对象后，会发送 `initForWritingWithMutableData:` 消息以指定写入归档数据的区域；这就是你之前创建的 `NSMutabledata` `dataArea`。现在可以向存储在 `archiver` 中的 `NSKeyedArchiver` 对象发送编码消息来归档对象。事实上，在接收到 `finishEncoding` 消息之前，它会将所有的编码消息归档并存储在指定的数据区域。
+
+你有两个对象需要编码——第一个是你的通讯录，第二个是你的 `Foo` 对象。对这些对象使用 `encodeObject:forKey:`，因为你之前已经为 `AddressBook`、`AddressCard` 和 `Foo` 类实现了编码器和解码器方法。（理解这一点非常重要。）
+
+当你完成两个对象的归档后，向 `archiver` 对象发送 `finishEncoding` 消息。从此之后就不能再编码任何对象了，你必须发送此消息来完成归档过程。你预留并命名为 `dataArea` 的区域现在包含了你归档后的对象，其格式可以写入文件。
+
+通过调用消息 `[dataArea writeToFile: @"myArchive" atomically: YES]`，你要求你的数据流将其数据写入你命名为 `myArchive` 的指定文件。正如从 `if` 语句所示，`writeToFile:atomically:` 方法返回一个 `BOOL` 值：如果写入成功则返回 `YES`，如果失败则返回 `NO`（可能是指定了无效的路径或文件系统已满）。
 
 从归档文件中恢复数据非常简单：你只需要反向操作即可。首先，你需要像之前一样分配一个数据区域。接下来，你需要将归档文件读取到数据区域；然后你必须创建一个 `NSKeyedArchiver` 对象并告诉它从指定区域解码数据。你必须调用方法来提取并解码归档的对象。完成后，你向 `NSKeyedArchiver` 对象发送 `finishDecoding` 消息。这些操作都在程序 19.10 中完成。
 
@@ -10997,20 +10461,27 @@ int main (int argc, char * argv[])
 
 ```objc
 #import "AddressBook.h"
+
 #import "Foo.h"
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
         NSData *dataArea;
+
         NSKeyedArchiver *archiver;
+
         Foo *myFoo1;
+
         AddressBook *myBook;
+
         // 读取归档文件并将其连接到 NSKeyedArchiver 对象
+
         dataArea = [NSData dataWithContentsOfFile: @"myArchive"];
 
         if (! dataArea) {
             NSLog (@"Can't read back archive!");
+
             return 1;
         }
 
@@ -11018,16 +10489,21 @@ int main (int argc, char * argv[])
                     initForReadingWithData: dataArea];
 
         // 解码之前存储在归档中的对象
+
         myBook = [archiver decodeObjectForKey: @"myaddrbook"];
+
         myFoo1 = [archiver decodeObjectForKey: @"myfoo1"];
 
         [archiver finishDecoding];
 
         // 验证恢复是否成功
+
         [myBook list];
+
         NSLog (@"%@\n%i\n%g", [myFoo1 strVal],
              [myFoo1 intVal], [myFoo1 floatVal]);
     }
+
     return 0;
 }
 ```
@@ -11036,13 +10512,21 @@ int main (int argc, char * argv[])
 
 ```
 ======== Contents of: Steve's Address =========
+
 Jamie Baker      jbaker@mail.com
+
 Julia Kochan    ls37@lc.com
+
 Stephen Kochan  steve@kochan.com
-Tony Iannino    tony.iannino@fitness.com
+
+Tony Iannino    tony@fitness.com
+
 ===================================
+
 This is the string
+
 12345
+
 98.6
 ```
 
@@ -11061,6 +10545,7 @@ int main (int argc, char * argv[])
 {
     @autoreleasepool {
         NSData *data;
+
         NSMutableArray *dataArray = [NSMutableArray arrayWithObjects:
             [NSMutableString stringWithString: @"one"],
             [NSMutableString stringWithString: @"two"],
@@ -11069,58 +10554,61 @@ int main (int argc, char * argv[])
         ];
 
         NSMutableArray *dataArray2;
+
         NSMutableString *mStr;
 
         // 使用归档器进行深拷贝
+
+        data = [NSKeyedArchiver archivedDataWithRootObject: dataArray];
+
+        dataArray2 = [NSKeyedUnarchiver unarchiveObjectWithData: data];
+
+        mStr = [dataArray2 objectAtIndex: 0];
+
+        [mStr appendString: @"ONE"];
+
+        NSLog (@"dataArray: ");
+
+        for (NSString *elem in dataArray)
+            NSLog (@"%@", elem);
+
+        NSLog (@"\ndataArray2: ");
+
+        for (NSString *elem in dataArray2)
+            NSLog (@"%@", elem);
     }
+
+    return 0;
 }
 ```
 
-
-
-
-
-```objc
-data = [NSKeyedArchiver archivedDataWithRootObject: dataArray];
-dataArray2 = [NSKeyedUnarchiver unarchiveObjectWithData: data];
-
-mStr = [dataArray2 objectAtIndex: 0];
-[mStr appendString: @"ONE"];
-
-NSLog (@"dataArray: ");
-for ( NSString *elem in dataArray )
-    NSLog (@"%@", elem);
-
-NSLog (@"\ndataArray2: ");
-for ( NSString *elem in dataArray2 )
-    NSLog (@"%@", elem);
-
-}
-
-return 0;
-}
-```
-
-### 程序 19.11. 输出
+### 程序 19.11 输出
 
 ```
 dataArray:
+
 one
+
 two
+
 three
 
 dataArray2:
+
 oneONE
+
 two
+
 three
 ```
 
 输出验证了修改 `dataArray2` 的第一个元素对 `dataArray` 的第一个元素没有影响。这是因为通过归档/反归档过程创建了字符串的新副本。
 
-[程序 19.11] 中的拷贝操作是通过以下两行完成的：
+[程序 19.11]中的拷贝操作是通过以下两行完成的：
 
 ```objc
 data = [NSKeyedArchiver archivedDataWithRootObject: dataArray];
+
 dataArray2 = [NSKeyedUnarchiver unarchiveObjectWithData: data];
 ```
 
@@ -11131,18 +10619,20 @@ dataArray2 = [NSKeyedUnarchiver unarchiveObjectWithData:
             [NSKeyedArchiver archivedDataWithRootObject: dataArray]];
 ```
 
+
+
 当你下次需要对一个对象或不支持 `NSCopying` 协议的对象进行深拷贝时，可能会记住这种技术。
 
-### 练习题
+## 练习题
 
-1. **在[第 15 章]中，程序 15.7]生成了一个质数表。修改该程序，将生成的数组作为 XML 属性列表写入文件 `primes.pl`。然后检查该文件的内容。**
-2. **编写一个程序，读取练习 1 中创建的 XML 属性列表，并将值存储在数组对象中。显示数组的所有元素以验证恢复操作是否成功。**
-3. **修改[程序 19.2]，以显示存储在 `/Library/Preferences` 文件夹中的一个 XML 属性列表 (.plist 文件)的内容。**
-4. **编写一个程序读取归档的地址簿（AddressBook），并根据命令行提供的名称查找条目，如下所示：**
+1. 在[第 15 章]中，程序 15.7]生成了一个质数表。修改该程序，将生成的数组作为 XML 属性列表写入文件 `primes.pl`。然后检查该文件的内容。
+2. 编写一个程序，读取练习 1 中创建的 XML 属性列表，并将值存储在数组对象中。显示数组的所有元素以验证恢复操作是否成功。
+3. 修改[程序 19.2]，以显示存储在 `/Library/Preferences` 文件夹中的一个 XML 属性列表 (.plist 文件)的内容。
+4. 编写一个程序读取归档的地址簿（`AddressBook`），并根据命令行提供的名称查找条目，如下所示：
 
-   ```
-   $ lookup gregory
-   ```
+```
+$ lookup gregory
+```
 
 # 第三部分：Cocoa、Cocoa Touch 和 iOS SDK
 
@@ -11173,10 +10663,6 @@ dataArray2 = [NSKeyedUnarchiver unarchiveObjectWithData:
 在本章中你将开发两个简单的 iPhone 应用程序。第一个介绍了一些基本概念，让你熟悉使用 Interface Builder、建立连接以及理解*代理（delegates）*、*属性（outlets）*和*动作（actions）*。对于第二个 iPhone 应用程序，你将构建一个分数计算器。它将你在开发第一个应用程序时学到的与你在书中其余部分学到的知识结合在一起。
 
 ### iOS SDK
-
-
-
-
 
 要编写 iPhone 应用程序，你必须安装 Xcode 和 iOS SDK。你可以从 Apple 网站免费获取此 SDK。为了下载该 SDK，你需要先注册成为 Apple 开发者（Apple Developer）。该过程也是免费的。要获取合适的链接，你可以从 [developer.apple.com](http://developer.apple.com) 开始并导航到相应位置。熟悉该网站是一个很好的主意。
 
@@ -11254,10 +10740,6 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 ![Image](img/00092.jpg)
 
-
-
-
-
 系统还为你创建了一个名为 `iPhone_1ViewController` 的类。如你所见，Xcode 在相应的 `.h` 和 `.m` 文件中为你创建了接口和实现部分。视图控制器（view controller）负责管理 iPhone 屏幕上一个或多个“视图”的显示。在这个应用程序中只有一个视图，如图 21.1 所示。应用程序展示许多不同的视图并因此有多个视图控制器来管理它们，这种做法并不罕见。
 
 因此，我们的视图控制器类将负责处理点击标记为“1.”的按钮的事件。在该处，我们将定义一个方法，当该动作在 iPhone 窗口中发生时做出响应（在示例中，就是点击按钮）。稍后你将看到如何将该事件连接到特定方法的执行上。
@@ -11289,7 +10771,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 你添加了一个属于 `UILabel` 类的名为 `display` 的属性。这是一个 outlet 属性，它将连接到一个标签上。当你设置此属性的文本字段时，它会更新窗口中对应标签的文本。为 `UILabel` 类定义的其他方法允许你设置和检索标签的其他属性，例如它的颜色、行数和字体大小。
 
-随着你更多地学习 iOS 编程，你将希望在接口中使用其他类，我们在这里将不再描述它们。其中一些名称可以让你对它们的用途有所了解：`UITextField, UIFont, UIView, UITableView, UIImageView, UIImage, UISlider` 和 `UIButton`。
+随着你更多地学习 iOS 编程，你将希望在接口中使用其他类，我们在这里将不再描述它们。其中一些名称可以让你对它们的用途有所了解：`UITextField`、`UIFont`、`UIView`、`UITableView`、`UIImageView`、`UIImage`、`UISlider` 和 `UIButton`。
 
 `display` 属性是一个 outlet，在属性声明中，注意使用了 `IBOutlet` 标识符。在 UIKit 头文件 `UINibDeclarations.h` 中，`IBOutlet` 实际上被定义为空（也就是说，预处理器在源文件中将其字面上地替换为空）。然而，它是必要的，因为 Xcode 在读取你的头文件时会寻找 `IBOutlets`，以确定你的哪些变量可以作为 outlet 并连接到接口中相应的 UI 元素。
 
@@ -11309,17 +10791,23 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 @synthesize display;
 
 -(IBAction) click1
+
 {
+
     display.text = @"1";
+
 }
 
 // Xcode 插入的其他方法
+
 @end
 ```
 
+
+
 `click1` 方法将 outlet `display` 设置为字符串 `"1"`。在你连接按钮到事件后，查看中间窗格中的 iPhone 窗口。
 
-### 设计界面
+## 设计界面
 
 在图 21.4 所示，并在 Xcode 主窗口中，注意一个名为 `iPhone_1ViewController` 的文件。`xib` 文件（历史上被称为 "nib"）包含了关于程序的用户界面信息，包括窗口、按钮、标签。
 
@@ -11344,9 +10832,6 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 你可以通过从对象库窗格拖入对象到 iPhone 窗口来创建新对象。现在拖入一个标签。当标签位于窗口左侧、顶部附近时释放鼠标，如[图 21.11] 所示。
 
 图 21.11. 添加标签。
-
-
-
 
 当会在窗口内移动标签时，会出现蓝色引导线。有时，这些引导线会帮助你将对象与窗口中之前放置的其他对象对齐。在其他时候，它们出现是为了确保你的对象与其他对象以及窗口边缘之间留有足够的距离，以符合 Apple 的界面指南。
 
@@ -11399,7 +10884,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 如果一切顺利，你的程序将构建并运行。从 `Product` 菜单点击 `Run`。模拟器将启动。当你点击标记为 1 的按钮时，`click1()` 方法将被执行，`display` 的文本将被设置为 1。标签随后将更新为 1。
 
-### iPhone 计算器
+## iPhone 计算器
 
 下一个例子稍微复杂一些，但应用上一个例子的概念。我们不会展示创建它的所有步骤，而是给出设计的总结。
 
@@ -11427,9 +10912,6 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 对于这个第二个程序示例，你将从创建一个新项目开始。和之前一样，在新项目窗口中选择 Single View Application。将你的新项目命名为 `Fraction_Calculator`。
 
-
-
-
 当你的项目创建时，你会注意到系统为你定义了两个类模板。`Fraction_CalculatorAppDelegate.h` 和 `Fraction_CalculatorAppDelegate.m` 定义了项目的代理类（delegate），而 `Fraction_CalculatorViewController.h` 和 `Fraction_CalculatorViewController.m` 定义了项目的视图控制器（view controller）。与本章第一个示例一样，你所有的工作都在最后一个类中完成。
 
 ## 定义视图控制器
@@ -11440,6 +10922,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 ```objc
 #import <UIKit/UIKit.h>
+
 #import "Calculator.h"
 
 @interface Fraction_CalculatorViewController : UIViewController
@@ -11447,21 +10930,31 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 @property (strong, nonatomic) IBOutlet UILabel *display;
 
 -(void) processDigit: (int) digit;
+
 -(void) processOp: (char) theOp;
+
 -(void) storeFracPart;
 
 // 数字键
+
 -(IBAction) clickDigit: (UIButton *) sender
 
 // 算运算键
+
 -(IBAction) clickPlus;
+
 -(IBAction) clickMinus;
+
 -(IBAction) clickMultiply;
+
 -(IBAction) clickDivide;
 
 // 其他键
+
 -(IBAction) clickOver;
+
 -(IBAction) clickEquals;
+
 -(IBAction) clickClear;
 
 @end
@@ -11477,6 +10970,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 #import "Fraction_CalculatorViewController.h"
 
 @implementation Fraction_CalculatorViewController
+
 {
     char            op;
     int             currentNumber;
@@ -11498,7 +10992,6 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 -(void) processDigit: (int) digit
 {
     currentNumber = currentNumber * 10 + digit;
-
     [displayString appendString:
         [NSString stringWithFormat: @"%i", digit]];
     display.text = displayString;
@@ -11507,14 +11000,12 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 - (IBAction) clickDigit: (UIButton *) sender
 {
     int digit = sender.tag;
-
     [self processDigit: digit];
 }
 
 -(void) processOp: (char) theOp
 {
     NSString *opStr;
-
     op = theOp;
     switch (theOp) {
         case '+':
@@ -11530,11 +11021,9 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
             opStr = @" ÷ ";
             break;
     }
-
     [self storeFracPart];
     firstOperand = NO;
     isNumerator = YES;
-
     [displayString appendString: opStr];
     display.text = displayString;
 }
@@ -11556,7 +11045,6 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
         myCalculator.denominator = currentNumber;
         firstOperand = YES;
     }
-
     currentNumber = 0;
 }
 
@@ -11569,6 +11057,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 }
 
 // 算运算键
+
 -(IBAction) clickPlus
 {
     [self processOp: '+'];
@@ -11590,17 +11079,16 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 }
 
 // 其他键
+
 -(IBAction) clickEquals
 {
     if ( firstOperand == NO ) {
         [self storeFracPart];
         [myCalculator performOperation: op];
-
         [displayString appendString: @" = "];
         [displayString appendString: [myCalculator.accumulator
             ToString]];
         display.text = displayString;
-
         currentNumber = 0;
         isNumerator = YES;
         firstOperand = YES;
@@ -11610,23 +11098,27 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 -(IBAction) clickClear
 {
-    isNumerator = YES;
-    firstOperand = YES;
-    currentNumber = 0;
-    [myCalculator clear];
 
-    [displayString setString: @""];
-    display.text = displayString;
+
+
+`isNumerator = YES;`
+
+`firstOperand = YES;`
+
+`currentNumber = 0;`
+
+`[myCalculator clear];`
+
+`[displayString setString: @""];`
+
+`display.text = displayString;`
+
+```
 }
-
 @end
 ```
 
-计算器的窗口仍然像上一个应用程序一样只一个标签，我们仍然称之为 `display`。当用户逐位输入数字时，我们需要在此过程中构建该数字。变量 `currentNumber` 存储正在进行中的数字，而 `BOOL` 变量 `firstOperand` 和 `isNumerator` 则跟踪这是第一个操作数还是第二个操作数，以及用户当前正在输入该操作数的分子还是分母。
-
-
-
-
+计算器的窗口仍然像上一个应用程序一样只一个标签，我们仍然称之为`display`。当用户逐位输入数字时，我们需要在此过程中构建该数字。变量`currentNumber`存储正在进行中的数字，而`BOOL`变量`firstOperand`和`isNumerator`则跟踪这是第一个操作数还是第二个操作数，以及用户当前正在输入该操作数的分子还是分母。
 
 ```objc
 - (IBAction) clickDigit: (UIButton *) sender
@@ -11636,7 +11128,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 }
 ```
 
-在程序 21.2 中的按钮比第一个应用程序多得多。控制器实现文件中的大部分复杂性围绕着分数的构建和显示。正如所指出的，当按下 0–9 的数字按钮时，就会执行动作方法 `clickDigit:`。该方法调用 `processDigit:` 方法将数字附加到变量 `currentNumber` 中正在构建的数字末尾。该方法还将将数字添加到存储在变量 `displayString` 中的当前显示字符串中，并更新显示：
+在程序 21.2 中的按钮比第一个应用程序多得多。控制器实现文件中的大部分复杂性围绕着分数的构建和显示。正如所指出的，当按下 0–9 的数字按钮时，就会执行动作方法`clickDigit:`。该方法调用`processDigit:`方法将数字附加到变量`currentNumber`中正在构建的数字末尾。该方法还将将数字添加到存储在变量`displayString`中的当前显示字符串中，并更新显示：
 
 ```objc
 -(void) processDigit: (int) digit
@@ -11648,11 +11140,11 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 }
 ```
 
-当按下 `=` 键时，会调用 `clickEquals` 方法执行操作。计算器在两个分数之间执行操作，并将结果存储在它的累加器中。该累加器在 `clickEquals` 方法内部被获取，并将结果添加到显示中。
+当按下`=`键时，会调用`clickEquals`方法执行操作。计算器在两个分数之间执行操作，并将结果存储在它的累加器中。该累加器在`clickEquals`方法内部被获取，并将结果添加到显示中。
 
-### `Fraction` 类
+## `Fraction` 类
 
-`Fraction` 类与本文之前的示例相比很大程度上保持不变。新增了一个新的 `convertToString` 方法，用于将分数转换为其等效的字符串表示。程序 21.2 显示了 `Fraction` 接口文件，紧随其的是对应的实现文件。
+`Fraction`类与本文之前的示例相比很大程度上保持不变。新增了一个新的`convertToString`方法，用于将分数转换为其等效的字符串表示。程序 21.2 显示了`Fraction`接口文件，紧随其的是对应的实现文件。
 
 ### 程序 21.2. Fraction.h 接口文件
 
@@ -11724,10 +11216,8 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
     // a/b + c/d = ((a*d) + (b*c)) / b * d
     // result 将存储加法的结果
     Fraction *result = [[Fraction alloc] init];
-
     result.numerator = numerator * f.denominator + denominator * f.numerator;
     result.denominator = denominator * f.denominator;
-
     [result reduce];
     return result;
 }
@@ -11737,10 +11227,8 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
     // 减法分数：
     // a/b - c/d = ((a*d) - (b*c)) / b * d
     Fraction *result = [[Fraction alloc] init];
-
     result.numerator = numerator * f.denominator - denominator * f.numerator;
     result.denominator = denominator * f.denominator;
-
     [result reduce];
     return result;
 }
@@ -11748,10 +11236,8 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 -(Fraction *) multiply: (Fraction *) f
 {
     Fraction *result = [[Fraction alloc] init];
-
     result.numerator = numerator * f.numerator;
     result.denominator = denominator * f.denominator;
-
     [result reduce];
     return result;
 }
@@ -11759,10 +11245,8 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 -(Fraction *) divide: (Fraction *) f
 {
     Fraction *result = [[Fraction alloc] init];
-
     result.numerator = numerator * f.denominator;
     result.denominator = denominator * f.numerator;
-
     [result reduce];
     return result;
 }
@@ -11787,18 +11271,20 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
     numerator /= u;
     denominator /= u;
 }
+
 @end
 ```
 
-`convertToString:` 方法检查分子的分子和分母，以产生更悦目的结果。如果分子和分母相等（但不为零），我们返回 `@"1"`。如果分子为零，返回 `@"0"`。如果分母为 1，它是一个整数：不需要显示分母。
+`convertToString:`方法检查分子的分子和分母，以产生更悦目的结果。如果分子和分母相等（但不为零），我们返回`@"1"`。如果分子为零，返回`@"0"`。如果分母为 1，它是一个整数：不需要显示分母。
 
-回想在 `convertToString:` 中使用的 `stringWithFormat:` 方法，给定一个格式字符串（类似于 `NSLog`）和一个逗号分隔的参数列表。你通过逗号分隔来传递参数，就像向 `NSLog` 函数传递参数一样。
+回想在`convertToString:`中使用的`stringWithFormat:`方法，给定一个格式字符串（类似于`NSLog`）和一个逗号分隔的参数列表。你通过逗号分隔来传递参数，就像向`NSLog`函数传递参数一样。
 
-### 处理分数的 `Calculator` 类
+## 处理分数的`Calculator`类
 
-接下来，是时候查看 `Calculator` 类了。该概念与书中之前开发的同名类相似。在这种情况下，我们的计算器必须处理分数。这里是新的接口和实现文件。
+接下来，是时候查看`Calculator`类了。该概念与书中之前开发的同名类相似。在这种情况下，我们的计算器必须处理分数。这里是新的接口和实现文件。
 
 ### 21.2. Calculator.h
+
 ```objc
 #import <UIKit/UIKit.h>
 #import "Fraction.h"
@@ -11814,6 +11300,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 ```
 
 ### 21.2. Calculator.m
+
 ```objc
 #import "Calculator.h"
 
@@ -11841,6 +11328,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 -(Fraction *) performOperation:(char) op
 {
     Fraction *result;
+
     switch (op) {
         case '+':
             result = [operand1 add: operand2];
@@ -11858,13 +11346,11 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
     accumulator.numerator = result.numerator;
     accumulator.denominator = result.denominator;
-
     return accumulator;
 }
+
 @end
 ```
-
-
 
 
 
@@ -11884,14 +11370,14 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 以下总结了你创建 iPhone 分数计算器应用程序所遵循的步骤：
 
-> **1.** 创建了一个单视图应用程序（Single View Application）。
-> **2.** 在 `Fraction_CalculatorViewController.h` 和 `.m` 文件中输入你的 UI 代码。
-> **3.** 向项目中添加 `Fraction` 和 `Calculator` 类。
-> **4.** 打开 `Fraction_CalculatorViewController.xib` 创建 UI。
-> **5.** 将 `View` 窗口的背景设置为黑色。
-> **6.** 创建了标签和按钮，并将它们放置在 `View` 窗口内。
-> **7.** 从 `View` 窗口中创建的标签通过 Control-click-drag 连接到 `UILabel IBOutlet` 属性 `display`。
-> **8.** 从 `View` 窗口中的每个按钮通过 Control-click-drag 连接到相应的 `IBAction` 方法。对于每个数字按钮，你选择了 `clickDigit:` 方法。此外，对于每个数字按钮，你将 `tag` 属性设置为相应的数字 0-9，以便 `clickDigit:` 方法能够识别按下了哪个按钮。
+1. 创建了一个单视图应用程序（Single View Application）。
+2. 在 `Fraction_CalculatorViewController.h` 和 `.m` 文件中输入你的 UI 代码。
+3. 向项目中添加 `Fraction` 和 `Calculator` 类。
+4. 打开 `Fraction_CalculatorViewController.xib` 创建 UI。
+5. 将 `View` 窗口的背景设置为黑色。
+6. 创建了标签和按钮，并将它们放置在 `View` 窗口内。
+7. 从 `View` 窗口中创建的标签通过 Control-click-drag 连接到 `UILabel IBOutlet` 属性 `display`。
+8. 从 `View` 窗口中的每个按钮通过 Control-click-drag 连接到相应的 `IBAction` 方法。对于每个数字按钮，你选择了 `clickDigit:` 方法。此外，对于每个数字按钮，你将 `tag` 属性设置为相应的数字 0-9，以便 `clickDigit:` 方法能够识别按下了哪个按钮。
 
 学习如何使用视图控制器是一次很有价值的练习，尽管这比直接在应用 delegate 对象中完成所有工作要费力。希望这段关于 iOS 应用开发的简要介绍能为你编写自己的 iPhone 应用程序提供一个良好的开始。正如前面提到的，`UIKit` 提供了许多功能，有很多内容让你探索！
 
@@ -11899,13 +11385,14 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 ### 练习
 
-> **1.** 为分数计算器应用程序添加一个“转换”（Convert）按钮。当按下按钮时，使用 `Fraction` 类的 `convertToNum` 方法产生分数结果的数值表示。将结果转换为字符串并显示在计算器的显示屏上。
-> **2.** 修改分数计算器应用程序，如果在输入分子之前按下 – 键，则可以输入负分数。
-> **3.** 如果第一个或第二个操作数的分母输入值为 0，则在分数计算器的显示屏上显示字符串 `Error`。
-> **4.** 修改分数计算器应用程序以允许进行链式计算。例如，允许输入以下操作：`1/5 + 2/7 – 3/8 =`
-> **5.** 你可以为应用程序添加一个图标，它将出现在 iPhone 的主屏幕上。可以通过将其拖到如 21.6 所示的 App Icons 区域来实现。对于普通尺寸的图标（iPhone 3GS 及之前的机型），图标大小应为 57x57 像素。对于 Retina 显示 iPhone（iPhone 4 及后续机型），图标图像文件应该是 114x114 像素。
-> 在互联网上找到一张合适的计算器图片，并设置分数计算器使用该图片作为其应用程序图标。
-> **6.** 使用你自己的图片为计算器的按钮提供自定义外观。你首先将图像添加到项目（（将其拖入左侧面板）。接下来，在检查器窗口中将按钮类型设置为 Custom（自定义），并将 Image 设置为你刚刚复制到项目中的文件。图 21.21 显示了一个使用此类自定义图像的分数计算器。该计算器可以在 Apple App Store 免费获取，源代码发布在本书的论坛上（classroomM.com/objective-c）。
+1. 为分数计算器应用程序添加一个“转换”（Convert）按钮。当按下按钮时，使用 `Fraction` 类的 `convertToNum` 方法产生分数结果的数值表示。将结果转换为字符串并显示在计算器的显示屏上。
+2. 修改分数计算器应用程序，如果在输入分子之前按下 – 键，则可以输入负分数。
+3. 如果第一个或第二个操作数的分母输入值为 0，则在分数计算器的显示屏上显示字符串 `Error`。
+4. 修改分数计算器应用程序以允许进行链式计算。例如，允许输入以下操作：`1/5 + 2/7 – 3/8 =`
+5. 你可以为应用程序添加一个图标，它将出现在 iPhone 的主屏幕上。可以通过将其拖到如 21.6 所示的 App Icons 区域来实现。对于普通尺寸的图标（iPhone 3GS 及之前的机型），图标大小应为 57x57 像素。对于 Retina 显示 iPhone（iPhone 4 及后续机型），图标图像文件应该是 114x114 像素。
+
+   在互联网上找到一张合适的计算器图片，并设置分数计算器使用该图片作为其应用程序图标。
+6. 使用你自己的图片为计算器的按钮提供自定义外观。你首先将图像添加到项目（（将其拖入左侧面板）。接下来，在检查器窗口中将按钮类型设置为 Custom（自定义），并将 Image 设置为你刚刚复制到项目中的文件。图 21.21 显示了一个使用此类自定义图像的分数计算器。该计算器可以在 Apple App Store 免费获取，源代码发布在本书的论坛上（classroomM.com/objective-c）。
 
 图 21.21。带有自定义按钮的分数计算器
 
@@ -11917,193 +11404,139 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 本附录包含了你将遇到的许多术语的定义。某些术语与 Objective-C 语言本身直接相关，而另一些则源于面向对象编程领域。在后一种情况下，我提供了该术语的含义。
 
-- **抽象类（abstract class）**: 为了方便子类而定义的类。实例从子类创建。参见具体子类
-- **访问器方法（accessor method）**: 获取或设置实例变量值的方法。使用访问器方法设置值符合数据封装的方法论。
-- **应用程序工具包（Application Kit）**: 用于开发应用程序界面的框架，包括菜单、工具栏等对象。它是 Cocoa 的一部分，也称为 AppKit。
-- **ARC**: 参见自动引用计数
-- **归档（archiving）**: 将对象的表示转换为稍后恢复（反归档）的格式。
-- **数组（array）**: 值的有序集合。数组可以定义为基础 Objective-C 类型，并通过 `NSArray` 和 `NSMutableArray` 类实现。
-- **引用计数（Automatic Reference Counting）**: 4.2 版本引入的一个功能，由编译器管理对象相关的内存。在 4.2 之前，iOS 程序员需要使用手动技术管理内存。这需要使用 `retain`、`release`、`autorelease` 和 `dealloc` 方法。
-- **自动变量（automatic variable）**: 当语句块进入和退出时自动分配和释放的变量。自动变量的作用域限于定义的块，并且没有默认初始值。可选的前带有 `auto` 关键字。
-- **释放池（autorelease pool）**: 在 ARC 之前由 `NSAutoreleasePool` 类管理。现在通过 `@autoreleasepool` 指令实现。释放池跟踪由系统延迟释放的对象。对于 iOS 和 Cocoa 应用程序，通常在运行循环结束时。
-- **位域（bitfield）**: 包含一个多个指定位宽整数字段的结构。位域可以像结构成员一样被访问和操作。
-- **块（block）**: Apple 对 C 语言的扩展。块具有类函数语法，在定义时捕获作用域内变量的值，可以赋值给变量或作为方法或函数的参数传递。块可以高效地分发到另一个线程或处理器上执行。
-- **分类（category）**: 在指定名称下分组的一组方法。分类可以将类的方法定义模块化，并用于向现有类添加新方法。
+- **抽象类（abstract class）**：为了方便子类而定义的类。实例从子类创建。参见具体子类。
+- **访问器方法（accessor method）**：获取或设置实例变量值的方法。使用访问器方法设置值符合数据封装的方法论。
+- **应用程序工具包（Application Kit）**：用于开发应用程序界面的框架，包括菜单、工具栏等对象。它是 Cocoa 的一部分，也称为 AppKit。
+- **ARC**：参见自动引用计数。
+- **归档（archiving）**：将对象的表示转换为稍后恢复（反归档）的格式。
+- **数组（array）**：值的有序集合。数组可以定义为基础 Objective-C 类型，并通过 `NSArray` 和 `NSMutableArray` 类实现。
+- **引用计数（Automatic Reference Counting）**：4.2 版本引入的一个功能，由编译器管理对象相关的内存。在 4.2 之前，iOS 程序员需要使用手动技术管理内存。这需要使用 `retain`、`release`、`autorelease` 和 `dealloc` 方法。
+- **自动变量（automatic variable）**：当语句块进入和退出时自动分配和释放的变量。自动变量的作用域限于定义的块，并且没有默认初始值。可选的前缀为 `auto` 关键字。
+- **释放池（autorelease pool）**：在 ARC 之前由 `NSAutoreleasePool` 类管理。现在通过 `@autoreleasepool` 指令实现。释放池跟踪由系统延迟释放的对象。对于 iOS 和 Cocoa 应用程序，通常在运行循环结束时。
+- **位域（bitfield）**：包含一个或多个指定位宽整数字段的结构。位域可以像结构成员一样被访问和操作。
+- **块（block）**：Apple 对 C 语言的扩展。块具有类函数语法，在定义时捕获作用域内变量的值，可以赋值给变量或作为方法或函数的参数传递。块可以高效地分发到另一个线程或处理器上执行。
+- **分类（category）**：在指定名称下分组的一组方法。分类可以将类的方法定义模块化，并用于向现有类添加新方法。
 
-
-
-
-
-**class**: 一组实例变量和可以访问这些变量的方法。类被定义后，就可以创建该类的实例（即对象）。
-
-**class method**: 在类对象上调用的方法（以前缀 `+` 符号定义）。*另见* instance method。
-
-**class object**: 一个标识特定类的对象。类名可以作为接收消息的接收者，用以调用类方法。在其他地方，可以在类上调用 `class` 方法来创建一个类对象。
-
-**cluster**: 一种抽象类，它将一组私有的具体子类组合在一起，通过该抽象类为用户提供简化的接口。
-
-**Cocoa**: 一个由 Foundation、Core Data 和 Application Kit 框架组成的开发环境。
-
-**Cocoa Touch**: 一个由 Foundation、Core Data 和 UIKit 框架组成的开发环境。
-
-**collection**: 一种 Foundation 框架对象，可以是数组、字典或集合，用于分组和操作相关对象。
-
-**compile time**: 源代码被分析并转换为称为对象代码的低级格式期间的时间。
-
-**composite class**: 由其他类的对象组成的类；通常用作子类化的替代方案。
-
-**concrete subclass**: 抽象类的子类。可以从具体子类创建实例。
-
-**conform**: 如果一个类通过了协议中所有要求的方法（无论是通过直接实现还是通过继承间接实现），则该类遵循该协议。
-
-**constant character string**: 包在一对双引号内的字符序列。如果前面有 `@` 字符，则它定义了一个类型为 `NSConstantString` 的常量字符串对象。
-
-**data encapsulation**: 认为对象的数据存储在其实例变量中且仅通过对象的方法进行访问的概念。这维护了数据的完整性。
-
-**delegate**: 一个被指定由另一个对象执行某个动作的对象。
-
-**designated initializer**: 类中所有其他初始化方法（或子类通过向 `super` 发送消息）将调用的方法。
-
-**dictionary**: 一在 Foundation 中通过 `NSDictionary` 和 `NSMutableDictionary` 类实现的键值对集合。
-
-**directive**: 在 Objective-C 中，以 @ 符号（@）开头的特殊结构。`@interface`、`@implementation`、`@end` 和 `@class` 是指令的示例。
-
-**Distributed Objects**: 一个应用程序中的 Foundation 对象与另一个应用程序中的 Foundation 对象通信的能力，后者可能运行在另一台机器上。
-
-**dynamic binding**: 在运行时而不是编译时确定与对象一起要调用的方法。
-
-**dynamic typing**: 在运行时而不是时时确定对象所属的类。*另见* static typing。
-
-**encapsulation**: *参见* data encapsulation。
-
-**extern**: 在一个源文件中声明并在另一个文件中定义的变量。
-
-**getter method**: 用于检索实例变量值的访问方法。*另见* setter method。
-
-**factory method**: 创建类的新实例的方法。
-
-**factory object**: 由工厂方法创建的对象。
-
-**formal protocol**: 一组声明为协议的相关方法。与非正式协议不同，正式协议中的所有方法都必须实现。*另见* informal protocol。
-
-**forwarding**: 发送一个对象不理解 get 的消息的过程。
-
-**Foundation**: 一组类、函数和协议的集合，为开发应用程序提供基本设施。
-
-**framework**: 一组类、函数和协议的集合，构成了应用程序的基础。
-
-**function**: 执行特定任务的代码块。
-
-**garbage collection**: 一种自动释放未引用对象所用内存的运行时管理系统。
-
-**gcc**: C、C++ 和 Objective-C 的编译器。
-
-**gdb**: 用于用 `gcc` 编译的程序的标准调试工具。
-
-**global variable**: 定义在任何方法或函数之外的变量。
-
-**header file**: 包含常用定义、宏和变量声明的文件，通过 `#import` 或 `#include` 包含在程序中。
-
-**id**: 可以持有任何对象指针的通用对象类型。
-
-**immutable object**: 值不能修改的对象。Foundation 框架的示例包括 `NSString`、`NSDictionary` 和 `NSArray`。*另见* mutable object。
-
-**implementation section**: 类定义中的部分，包含接口部分中声明的方法的实际代码。
-
-**informal protocol**: 一组声明为分类（category）的逻辑相关的方法。非正式协议中的并非所有方法都必须被实现。
-
-**inheritance**: 从根对象开始，将方法和实例变量从类传递给子类的过程。
-
-**instance**: 类的具体表示。实例通常是通过向类对象发送 `alloc` 或 `new` 消息创建的对象。
-
-**instance method**: 可以由类的实例调用的方法。*另见* class method。
-
-**instance variable**: 在接口部分中声明（或从父类继承）的变量，包含在对象的每个实例中。实例方法可以直接访问其实例变量。
-
-**Interface Builder**: Mac OS X 下用于为应用程序构建图形用户界面的工具。
-
-**interface section**: 用于声明类、其父类、实例变量和方法的区域。*另见* implementation section。
-
-
-
-
-
-- **国际化 (internationalization)**: *参见* 本地化。
-- **isa**: 定义在根对象中的一个特殊实例变量，所有对象都继承它。`isa` 变量用于在运行时标识对象所属的类。
-- **链接 (linking)**: 将一个或多个对象文件转换为可执行程序的过程。
-- **局部变量 (local variable)**: 作用域限制在定义它的代码块中的变量。变量可以是方法、函数或语句块的局部变量。
-- **本地化 (localization)**: 使程序适用于在特定地理区域内执行的过程，通常通过将消息翻译为本地语言并处理诸如本地时区、货币符号、日期格式等事项。有时 *本地化* 仅指代语言翻译，而 *国际化* 一词则用于指代该过程的其他部分。
-- **消息 (message)**: 发送到对象（接收者）的方法及其关联参数。
-- **消息表达式 (message expression)**: 封装在方括号中的表达式，指定对象（接收者）以及要发送给该对象的消息。
-- **方法 (method)**: 属于某个类并可以通过向类对象或该类的实例发送消息来执行的程序。*另见* 类方法 和 实例方法。
-- **可变对象 (mutable object)**: 值可以改变的对象。Foundation 框架支持可变和不可变的数组、集合、字符串和字典。*另见* 不可变对象。
-- **nil**: 类型为 `id`的对象，用于表示无效对象。它的值定义为 `0`。`nil` 可以接收消息。
-- **通知 (notification)**: 向已注册在特定事件发生时接收警报（通知）的对象发送消息的过程。
-- **NSObject**: Foundation 框架下的根根对象。
-- **空字符 (null character)**: 值为 `0` 的字符。空字符常量用 `'\0'` 表示。
-- **空指针 (null pointer)**: 无效的指针值，通常定义为 0。
-- **对象 (object)**: 一组变量和关联方法的集合。可以向对象发送消息以执行其任一方法。
-- **面向对象编程 (object-oriented programming)**: 基于类和对象并对这些对象执行操作的编程方法。
-- **父类 (parent class)**: 另一个类继承的类。也称为*超类 (super class)*。
-- **指针 (pointer)**: 引用另一个对象或数据类型的值。指针实现为内存中特定对象或值的地址。类的实例是指内存中对象数据位置的指针。
-- **多态 (polymorphism)**: 来自不同类的对象接受相同消息的能力。
-- **预处理器 (preprocessor)**: 一个对源代码进行第一轮处理的程序，处理以 `#` 开头的行，这些行假设包含特殊的预处理器语句。常见用途是用 `#define` 定义宏，通过 `#import` 和 `#include` 包含源文件，以及通过 `#if`、`#ifdef` 和 `#ifndef` 条件地包含源行。
-- **过程化编程语言 (procedural programming language)**: 一种通过对一组数据操作的过程和函数定义程序的语言。
-- **属性声明 (property declaration)**: 一种指定实例变量属性的方法，允许编译器为实例变量生成无泄漏且线程安全的访问方法。属性声明还可用于为运行时动态加载的访问器方法声明属性。
-- **属性列表 (property list)**: 以标准格式表示不同类型对象的表示。属性列表通常存储在 XML 格式中。
-- **协议 (protocol)**: 一个类为了符合或采纳该协议而必须实现的方法列表。协议提供了一种跨类标准化接口的方法。*另见* 正式协议 和 非正式协议。
-- **接收者 (receiver)**: 接收消息的对象。在被调用的方法内部可以将接收者称为 `self`。
-- **引用计数 (reference count)**: *参见* 保留计数。
-- **保留计数 (retain count)**: 对象被引用的次数计数。通过向对象发送 `retain` 消息来增加，通过向其发送 `release` 消息来减少。
-- **根对象 (root object)**: 继承层次结构中没有父类的最顶层对象。
-- **运行时 (runtime)**: 程序执行时的时间；也是负责执行程序指令的机制。
-- **选择器 (selector)**: 用于为对象选择要执行的方法的名称。编译后的选择器为 `SEL` 类型，并可以使用 `@selector` 指令生成。
-- **self**: 方法内部用于引用接收者的变量。
-- **集合 (set)**: 无序对象集合，在 Foundation 中通过 `NSSet`、NSMutableSet 和 NSCountedSet 实现。
-- **setter 方法 (setter method)**: 设置实例变量值的访问方法。*另见* getter 方法。
-- **语句 (statement)**: 以分号结束的一个或表达式。
-- **语句块 (statement block)**: 在大括号内的多个语句。可以在语句块中声明局部变量，其作用域限于该块。
-- **静态函数 (static function)**: 使用 `static` 关键字声明的로同一源文件的函数或方法调用的函数。
-- **静态类型 (static typing)**: 在编译时显式标识对象所属的类。*另见* 动态类型。
-- **静态变量 (static variable)**: 作用域限制在定义它的块或模块中的变量。静态变量的初始值为 0，并在方法或函数调用期间保持其值。
-- `structure`: 包含不同类型成员的聚合数据类型。结构可以赋值给其他结构，作为参数传递给函数和方法，并由它们返回。
-- **子类 (subclass)**: 也称为*子类，子类继承其父类或超类的方法和实例变量。
-- **super**: 在方法中引用接收者父类的关键字。
-- **超类 (super class)**: 特定类的父类。*另见* `super`。
-- **合成方法 (synthesized method)**: 编译器为你生成的 setter 或 getter 方法。它是 Objective C 2.0 语言新增。
-- **UIKit**: 用于开发 iOS 设备应用程序的框架。除了提供处理窗口、按钮和标签等常用 UI 元素的类外，它还定义了处理设备特定功能（如加速度计和触摸界面）的类。UIKit 是 Cocoa Touch 的一部分。
-- **Unicode 字符 (Unicode character)**: 表示包含数百万个字符的集合的标准。`NSString` 和 `NSMutableString` 类处理包含 Unicode 字符的字符串。
-- **联合 (union)**: 一种聚合数据类型，例如共享相同存储区域的结构。在任何时刻，这些成员中只有一个可以占据存储区域。
-- **Xcode**: 用于 Mac OS X 和 iOS 程序开发的编译和调试工具。
-- **XML**: 可扩展标记语言。Mac OS X 上生成的属性列表的默认格式。
-
-
-
-
-
-> **zone** 用于分配数据和对象的指定内存区域。程序可以与多个 zone 交互，以更高效地管理内存。
+- **class**：一组实例变量和可以访问这些变量的方法。类被定义后，就可以创建该类的实例（即对象）。
+- **class method**：在类对象上调用的方法（以前缀 `+` 符号定义）。*另见* instance method。
+- **class object**：一个标识特定类的对象。类名可以作为接收消息的接收者，用以调用类方法。在其他地方，可以在类上调用 `class` 方法来创建一个类对象。
+- **cluster**：一种抽象类，它将一组私有的具体子类组合在一起，通过该抽象类为用户提供简化的接口。
+- **Cocoa**：一个由 Foundation、Core Data 和 Application Kit 框架组成的开发环境。
+- **Cocoa Touch**：一个由 Foundation、Core Data 和 UIKit 框架组成的开发环境。
+- **collection**：一种 Foundation 框架对象，可以是数组、字典或集合，用于分组和操作相关对象。
+- **compile time**：源代码被分析并转换为称为对象代码的低级格式期间的时间。
+- **composite class**：由其他类的对象组成的类；通常用作子类化的替代方案。
+- **concrete subclass**：抽象类的子类。可以从具体子类创建实例。
+- **conform**：如果一个类通过了协议中所有要求的方法（无论是通过直接实现还是通过继承间接实现），则该类遵循该协议。
+- **constant character string**：包在一对双引号内的字符序列。如果前面有 `@` 字符，则它定义了一个类型为 `NSConstantString` 的常量字符串对象。
+- **data encapsulation**：认为对象的数据存储在其实例变量中且仅通过对象的方法进行访问的概念。这维护了数据的完整性。
+- **delegate**：一个被指定由另一个对象执行某个动作的对象。
+- **designated initializer**：类中所有其他初始化方法（或子类通过向 `super` 发送消息）将调用的方法。
+- **dictionary**：在 Foundation 中通过 `NSDictionary` 和 `NSMutableDictionary` 类实现的键值对集合。
+- **directive**：在 Objective-C 中，以 `@` 符号开头的特殊结构。`@interface`、`@implementation`、`@end` 和 `@class` 是指令的示例。
+- **Distributed Objects**：一个应用程序中的 Foundation 对象与另一个应用程序中的 Foundation 对象通信的能力，后者可能运行在另一台机器上。
+- **dynamic binding**：在运行时而不是编译时确定与对象一起要调用的方法。
+- **dynamic typing**：在运行时而不是编译时确定对象所属的类。*另见* static typing。
+- **encapsulation**：*参见* data encapsulation。
+- **extern**：在一个源文件中声明并在另一个文件中定义的变量。
+- **getter method**：用于检索实例变量值的访问方法。*另见* setter method。
+- **factory method**：创建类的新实例的方法。
+- **factory object**：由工厂方法创建的对象。
+- **formal protocol**：一组声明为协议的相关方法。与非正式协议不同，正式协议中的所有方法都必须实现。*另见* informal protocol。
+- **forwarding**：发送一个对象不理解的消息的过程。
+- **Foundation**：一组类、函数和协议的集合，为开发应用程序提供基本设施。
+- **framework**：一组类、函数和协议的集合，构成了应用程序的基础。
+- **function**：执行特定任务的代码块。
+- **garbage collection**：一种自动释放未引用对象所用内存的运行时管理系统。
+- **gcc**：C、C++ 和 Objective-C 的编译器。
+- **gdb**：用于用 `gcc` 编译的程序的标准调试工具。
+- **global variable**：定义在任何方法或函数之外的变量。
+- **header file**：包含常用定义、宏和变量声明的文件，通过 `#import` 或 `#include` 包含在程序中。
+- **id**：可以持有任何对象指针的通用对象类型。
+- **immutable object**：值不能修改的对象。Foundation 框架的示例包括 `NSString`、`NSDictionary` 和 `NSArray`。*另见* mutable object。
+- **implementation section**：类定义中的部分，包含接口部分中声明的方法的实际代码。
+- **informal protocol**：一组声明为分类（category）的逻辑相关的方法。非正式协议中的并非所有方法都必须被实现。
+- **inheritance**：从根对象开始，将方法和实例变量从类传递给子类的过程。
+- **instance**：类的具体表示。实例通常是通过向类对象发送 `alloc` 或 `new` 消息创建的对象。
+- **instance method**：可以由类的实例调用的方法。*另见* class method。
+- **instance variable**：在接口部分中声明（或从父类继承）的变量，包含在对象的每个实例中。实例方法可以直接访问其实例变量。
+- **Interface Builder**：Mac OS X 下用于为应用程序构建图形用户界面的工具。
+- **interface section**：用于声明类、其父类、实例变量和方法的区域。*另见* implementation section。
+- **国际化 (internationalization)**：*参见* 本地化。
+- **isa**：定义在根对象中的一个特殊实例变量，所有对象都继承它。`isa` 变量用于在运行时标识对象所属的类。
+- **链接 (linking)**：将一个或多个对象文件转换为可执行程序的过程。
+- **局部变量 (local variable)**：作用域限制在定义它的代码块中的变量。变量可以是方法、函数或语句块的局部变量。
+- **本地化 (localization)**：使程序适用于在特定地理区域内执行的过程，通常通过将消息翻译为本地语言并处理诸如本地时区、货币符号、日期格式等事项。有时 *本地化* 仅指代语言翻译，而 *国际化* 一词则用于指代该过程的其他部分。
+- **消息 (message)**：发送到对象（接收者）的方法及其关联参数。
+- **消息表达式 (message expression)**：封装在方括号中的表达式，指定对象（接收者）以及要发送给该对象的消息。
+- **方法 (method)**：属于某个类并可以通过向类对象或该类的实例发送消息来执行的程序。*另见* 类方法 和 实例方法。
+- **可变对象 (mutable object)**：值可以改变的对象。Foundation 框架支持可变和不可变的数组、集合、字符串和字典。*另见* 不可变对象。
+- **nil**：类型为 `id` 的对象，用于表示无效对象。它的值定义为 `0`。`nil` 可以接收消息。
+- **通知 (notification)**：向已注册在特定事件发生时接收警报（通知）的对象发送消息的过程。
+- **NSObject**：Foundation 框架下的根对象。
+- **空字符 (null character)**：值为 `0` 的字符。空字符常量用 `'\0'` 表示。
+- **空指针 (null pointer)**：无效的指针值，通常定义为 0。
+- **对象 (object)**：一组变量和关联方法的集合。可以向对象发送消息以执行其任一方法。
+- **面向对象编程 (object-oriented programming)**：基于类和对象并对这些对象执行操作的编程方法。
+- **父类 (parent class)**：另一个类继承的类。也称为*超类 (super class)*。
+- **指针 (pointer)**：引用另一个对象或数据类型的值。指针实现为内存中特定对象或值的地址。类的实例是指内存中对象数据位置的指针。
+- **多态 (polymorphism)**：来自不同类的对象接受相同消息的能力。
+- **预处理器 (preprocessor)**：一个对源代码进行第一轮处理的程序，处理以 `#` 开头的行，这些行假设包含特殊的预处理器语句。常见用途是用 `#define` 定义宏，通过 `#import` 和 `#include` 包含源文件，以及通过 `#if`、`#ifdef` 和 `#ifndef` 条件地包含源行。
+- **过程化编程语言 (procedural programming language)**：一种通过对一组数据操作的过程和函数定义程序的语言。
+- **属性声明 (property declaration)**：一种指定实例变量属性的方法，允许编译器为实例变量生成无泄漏且线程安全的访问方法。属性声明还可用于为运行时动态加载的访问器方法声明属性。
+- **属性列表 (property list)**：以标准格式表示不同类型对象的表示。属性列表通常存储在 XML 格式中。
+- **协议 (protocol)**：一个类为了符合或采纳该协议而必须实现的方法列表。协议提供了一种跨类标准化接口的方法。*另见* 正式协议 和 非正式协议。
+- **接收者 (receiver)**：接收消息的对象。在被调用的方法内部可以将接收者称为 `self`。
+- **引用计数 (reference count)**：*参见* 保留计数。
+- **保留计数 (retain count)**：对象被引用的次数计数。通过向对象发送 `retain` 消息来增加，通过向其发送 `release` 消息来减少。
+- **根对象 (root object)**：继承层次结构中没有父类的最顶层对象。
+- **运行时 (runtime)**：程序执行时的时间；也是负责执行程序指令的机制。
+- **选择器 (selector)**：用于为对象选择要执行的方法的名称。编译后的选择器为 `SEL` 类型，并可以使用 `@selector` 指令生成。
+- **self**：方法内部用于引用接收者的变量。
+- **集合 (set)**：无序对象集合，在 Foundation 中通过 `NSSet`、`NSMutableSet` 和 `NSCountedSet` 实现。
+- **setter 方法 (setter method)**：设置实例变量值的访问方法。*另见* getter 方法。
+- **语句 (statement)**：以分号结束的一个或多个表达式。
+- **语句块 (statement block)**：在大括号内的多个语句。可以在语句块中声明局部变量，其作用域限于该块。
+- **静态函数 (static function)**：使用 `static` 关键字声明的同一源文件的函数或方法调用的函数。
+- **静态类型 (static typing)**：在编译时显式标识对象所属的类。*另见* 动态类型。
+- **静态变量 (static variable)**：作用域限制在定义它的块或模块中的变量。静态变量的初始值为 0，并在方法或函数调用期间保持其值。
+- **structure**：包含不同类型成员的聚合数据类型。结构可以赋值给其他结构，作为参数传递给函数和方法，并由它们返回。
+- **子类 (subclass)**：子类继承其父类或超类的方法和实例变量。
+- **super**：在方法中引用接收者父类的关键字。
+- **超类 (super class)**：特定类的父类。*另见* `super`。
+- **合成方法 (synthesized method)**：编译器为你生成的 setter 或 getter 方法。它是 Objective-C 2.0 语言新增。
+- **UIKit**：用于开发 iOS 设备应用程序的框架。除了提供处理窗口、按钮和标签等常用 UI 元素的类外，它还定义了处理设备特定功能（如加速度计和触摸界面）的类。UIKit 是 Cocoa Touch 的一部分。
+- **Unicode 字符 (Unicode character)**：表示包含数百万个字符的集合的标准。`NSString` 和 `NSMutableString` 类处理包含 Unicode 字符的字符串。
+- **联合 (union)**：一种聚合数据类型，例如共享相同存储区域的结构。在任何时刻，这些成员中只有一个可以占据存储区域。
+- **Xcode**：用于 Mac OS X 和 iOS 程序开发的编译和调试工具。
+- **XML**：可扩展标记语言。Mac OS X 上生成的属性列表的默认格式。
+- **zone**：用于分配数据和对象的指定内存区域。程序可以与多个 zone 交互，以更高效地管理内存。
 
 ## 附录 B. 通讯录应用程序源代码
 
-为了方便参考，这里是你在第二部分中处理过的“基础框架”通讯录示例的完整接口和实现文件。这包含了 `AddressCard` 和 `AddressBook` 类的定义。你应该在你的系统上实现这些类；然后扩展类定义以使它们更加实用且功能强大。这是你学习该语言并熟悉编写程序、操作类与对象以及使用 Foundation 框架极极方式。
+为了方便参考，这里是你在第二部分中处理过的“基础框架”通讯录示例的完整接口和实现文件。这包含了 `AddressCard` 和 `AddressBook` 类的定义。你应该在你的系统上实现这些类；然后扩展类定义以使它们更加实用且功能强大。这是你学习该语言并熟悉编写程序、操作类与对象以及使用 Foundation 框架极其方式。
 
 ### AddressCard 接口文件
 
 ```objc
-#import <Foundation/Foundation.h>
 
-@interface AddressCard  : NSObject <NSCopying, NSCoding>
 
-@property (nonatomic, copy) NSString *name, *email;
 
--(void) setName: (NSString *) theName andEmail: (NSString *) theEmail;
--(void) assignName: (NSString *) theName andEmail: (NSString *) theEmail;
--(NSComparisonResult) compareNames: (id) element;
+`#import <Foundation/Foundation.h>`
 
--(void) print;
+`@interface AddressCard : NSObject <NSCopying, NSCoding>`
 
-@end
-```
+`@property (nonatomic, copy) NSString *name, *email;`
+
+`-(void) setName: (NSString *) theName andEmail: (NSString *) theEmail;`
+
+`-(void) assignName: (NSString *) theName andEmail: (NSString *) theEmail;`
+
+`-(NSComparisonResult) compareNames: (id) element;`
+
+`-(void) print;`
+
+`@end`
 
 ### AddressBook 接口文件
 
@@ -12146,14 +11579,14 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 // 比较指定通讯录中的两个名字
 -(NSComparisonResult) compareNames: (id) element
 {
-    return [name  compare: [element name]];
+    return [name compare: [element name]];
 }
 
 -(void) print
 {
     NSLog (@"==================================");
     NSLog (@"|                              |");
-    NSLog (@"|  %-31s |", [name  UTF8String]);
+    NSLog (@"|  %-31s |", [name UTF8String]);
     NSLog (@"|  %-31s |", [email UTF8String]);
     NSLog (@"|                              |");
     NSLog (@"|                              |");
@@ -12187,6 +11620,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
     email = [decoder decodeObjectForKey: @"CardEmail"];
     return self;
 }
+
 @end
 ```
 
@@ -12234,6 +11668,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
         return [[obj1 name] compare: [obj2 name]];
     }];
 }
+
 -(void) addCard: (AddressCard *) theCard
 {
     [book addObject: theCard];
@@ -12252,11 +11687,9 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 -(void) list
 {
     NSLog (@"======== Contents of: %@ =========", bookName);
-
     for ( AddressCard *theCard in book )
         NSLog (@"%-20s   %-32s", [theCard.name UTF8String],
                [theCard.email UTF8String]);
-
     NSLog (@"==================================");
 }
 
@@ -12291,6 +11724,7 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
     [newBook setBook: book];
     return newBook;
 }
+
 @end
 ```
 
@@ -12306,12 +11740,8 @@ Apple 将 iPhone 模拟器作为 iOS SDK 的一部分发布。模拟器复制了
 
 ^(1) 目前，`unichar` 字符占用 16 位，但 Unicode 标准为比该尺寸更大的字符提供了支持。因此在未来，`unichar` 字符可能会大于 16 位。结论是永远不要对 Unicode 字符的大小做假设。
 
-
-
-
-
 你可能还想要一个 `initWithName:andEmail:` 初始化方法，但我们在这里不展示它。
 
 名为 `sortUsingFunction:context:` 的方法允许你使用函数而不是方法来执行比较。
 
-一个更通用的方法可以调用每个对象的 `description` 方法来显示集合中的每个成员。这将允许包含任何类型对象的集合以可读的格式进行显示。此外请注意，你可以使用单个 `NSLog` 调用并使用“打印对象”格式化字符 `"%@"` 来显示任何集合的内容。
+一个更通用的方法可以调用每个对象的 `description` 方法来显示集合中的每个成员。这将允许包含任何类型对象的集合以可读的格式进行显示。此外请注意，你可以使用单个 `NSLog` 调用并使用“打印对象”格式化字符 `"%@`" 来显示任何集合的内容。

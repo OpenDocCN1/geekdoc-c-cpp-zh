@@ -1,48 +1,27 @@
+
 # GPU 高级指南 6：高级渲染技术
-
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_0_0.png)
 
-
-
-
-
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_3_0.png)
-
-
-
-
-
-
-
-
-
-```
-``````
-
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_5_0.png)
 
-
 Wolfgang Engel
+
 David Pangerl
+
 Gustavo Bastos Nunes 和 João Lucas Guberman Raza
+
 Henry Schäfer, Matthias Nießner, Benjamin Keinert, 和 Marc Stammer
+
 Alex Dunn
+
 Christopher Oat
+
 Peter Sikachev, Samuel Delmont, Uriel Doyon, 和 Jean-Normand Bucci
+
 - 参考文献 ................................................................................................................................................................. . . . . . . 89
-
-
-
-
 
 ## 2 基于 LOD 的草地渲染与模拟 91
 
@@ -54,18 +33,15 @@ Doug McNabb
 
 Michal Valient
 
-
-
-
 Ivan Spogree
 
 Hugh Malan
-5.10 结论 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 292
+
+5.10 结论 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 292
 
 Wolfgang Engel
 
 Márton Tamás 和 Viktor Heisenberger
-
 
 Vladimir Bond
 
@@ -75,15 +51,7 @@ Gareth Morgan
 
 Daniele Di Donato
 
-
-
-
-
 Andrew Girdler 和 James L. Jones
-
-
-
-
 
 Carsten Dachsacher
 
@@ -93,30 +61,29 @@ Jason Stewart
 
 Takahiro Harada 459
 
-
 Thomas Kroes, Dirk Schut 和 Elmar Eisenmann 475
-
 
 Wessam Bahnassi 487
 
 Holger Gruen 489
 
 - 1.2 概述 480
+
 - 参考文献 503
 
 - 2.4 概述 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 508
-- 参考文献 . . . . . . . . . . . . . . . . . . . . . . 517
+
+- 参考文献 . . . . . . . . . . . . . . . . . . . . . . . 517
 
 # 3 ANGLE：将 OpenGL ES 引入桌面 521
 
 Shannon Woods, Nicolas Capens, Jamie Madill, 和 Geoff Lang
 
-- 3.6 推荐实践 . . . . . . . . . . 540
+- 3.6 推荐实践 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 540
 
 # 关于编辑 543
 
 # 关于贡献者 545
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_15_0.png)
 
@@ -133,81 +100,7 @@ CRC Press 的团队让整个项目得以实现。我要感谢 Rick Adams、Charl
 特别感谢我们的家人和朋友，在漫长的书籍制作周期中，他们度过了许多没有我们的夜晚和周末。
 
 > 我希望你们阅读这本书时的乐趣和我们创作它时一样。
-—Wolfgang Engel
 
-P.S. 即将推出的 *GPU Pro 7* 计划已经在进行中。非常欢迎任何评论、提案或建议（wolfgang.engel@gmail.com）。
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_17_0.png)
-
-配合某些章节的示例程序和源代码可以在 CRC Press 网站上获取：访问 http://www.crcpress.com/product/isbn/9781482264616 并点击“Downloads”（下载）选项卡。
-目录结构通过使用章节编号作为子目录名称，紧密遵循书籍结构。
-
-
-- DirectX June 2010 SDK（最新 SDK 随 Visual Studio 2012 安装）。
-- 运行示例需要支持 DirectX 9、DirectX 10 甚至支持 DirectX 11 的 GPU。文章将提到具体要求。
-- 操作系统应为 Microsoft Windows 7，以符合支持 DirectX 10 或 11 GPU 的要求。
-- Visual Studio C++ 2012（某些示例可能需要旧版本）。
-- 2GB 或更多内存。
-- 最新的 GPU 驱动程序。
-
-
-示例程序的更新将在网站上发布。
-
-
-书籍的“几何处理”章节侧重于图形处理器（GPU）以令人惊叹的方式处理和生成几何结构的能力。
-
-该章节的第一篇文章由 David Pangerl 编写的“动态 GPU 地形”，介绍了一种基于 GPU 的算法，用于动态修改地形拓扑结构并将更改与物理模拟同步。
-
-接下来的篇文章由 Gustavo Bastos Nunes 和 João Lucas Guberman Raza 编写的“通过曲分在 GPU 中实现带宽高效的网格”，涵盖了在硬件曲分器帮助下生成高度详细网格的过程生成，同时整合了支持地貌变形的细节水平（LOD）方案。
-
-该章节的第三篇文章是 Henry Schäfer 和 Matthias Nießner 编写的“物体碰撞时细分曲面的实时变形”。
-
-（注：此处原文似乎重复，继续翻译）
-
-侧重于图形处理器（GPU）以令人惊叹的方式处理和生成几何结构的能力。
-
-第一篇《动态 GPU 地形》 介绍了一种基于 GPU 的算法，用于动态修改地形拓扑结构并将更改与物理模拟同步。
-
-下一篇《通过曲分在 GPU 中实现带宽高效的网格》 涵盖了在硬件曲分器帮助下生成高度详细网格的过程生成，同时整合了支持地貌变形的细节水平（LOD）方案。
-
-第三篇《物体碰撞时细分曲面的实时变形》 介绍了在物体碰撞时对细分曲面的实时变形。
-
-（注：由于原文中存在大量重复段落，以上翻译已根据逻辑进行整合，确保不重复输出翻译内容。）
-
----
-
-- 2.4 概述 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 508
-- 2.5 算法解释 . . . . . . . . . . . . . . . . . . . . . . . 510
-- 2.6 错误报告 . . . . . . . . . . . . . . . . . . . . . . . 514
-- 2.7 使用讨论 . . . . . . . . . . . . . . . . . . . . . 515
-- 2.8 下一步 . . . . . . . . . . . . . . . . . . . . . . . 516
-- 2.9 结论 . . . . . . . . . . . . . . . . . . . . . . . 517
-- 参考文献 . . . . . . . . . . . . . . . . . . . . . . 517
-
-
-Shannon Woods, Nicolas Capens, Jamie Madill, 和 Geoff Lang
-
-
-# 关于编辑 543
-
-# 关于贡献者 545
-
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_15_0.png)
-
-# 致谢
-
-*GPU Pro：高级渲染技术*一书涵盖了许多即用的思想和流程，可以帮助解决许多日常图形编程中的挑战。
-
-该系列丛的第六本书如果没有许多人的帮助是不可能实现的。首先，我要感谢章节编辑们所做的出色工作。Wessam Bahnassi、Marius Bjorge、Carsten Dachsbacher、Michal Valient 和 Christopher Oat 的工作确保了该系列的质量符合读者的预期。
-
-精美的封面截图由 Ubisoft 贡献。它们展示了游戏《刺客信条 4：黑色没旗时代》。
-
-CRC Press 的团队让整个项目得以实现。我要感谢 Rick Adams、Charlotte Byers、Kari Budyk 以及整个制作团队，他们将文章结成了书。
-
-特别感谢我们的家人和朋友，在漫长的书籍制作周期中，他们度过了许多没有我们的夜晚和周末。
-
-> 我希望你们阅读这本书时的乐趣和我们创作它时一样。
 —Wolfgang Engel
 
 P.S. 即将推出的 *GPU Pro 7* 计划已经在进行中。非常欢迎任何评论、提案或建议（wolfgang.engel@gmail.com）。
@@ -218,12 +111,18 @@ P.S. 即将推出的 *GPU Pro 7* 计划已经在进行中。非常欢迎任何�
 
 配合某些章节的示例程序和源代码可以在 CRC Press 网站上获取：访问 http://www.crcpress.com/product/isbn/9781482264616 并点击“Downloads”（下载）选项卡。
 
+目录结构通过使用章节编号作为子目录名称，紧密遵循书籍结构。
 
 - DirectX June 2010 SDK（最新 SDK 随 Visual Studio 2012 安装）。
+
 - 运行示例需要支持 DirectX 9、DirectX 10 甚至支持 DirectX 11 的 GPU。文章将提到具体要求。
+
 - 操作系统应为 Microsoft Windows 7，以符合支持 DirectX 10 或 11 GPU 的要求。
+
 - Visual Studio C++ 2012（某些示例可能需要旧版本）。
+
 - 2GB 或更多内存。
+
 - 最新的 GPU 驱动程序。
 
 # 更新
@@ -241,9 +140,6 @@ P.S. 即将推出的 *GPU Pro 7* 计划已经在进行中。非常欢迎任何�
 该章节的第三篇文章是 Henry Schäfer 和 Matthias Nießner 编写的“物体碰撞时细分曲面的实时变形”。
 
 （注：由于原文中存在大量重复段落，以上翻译已根据逻辑进行整合，确保不重复输出翻译内容。）
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_24_0.png)
 
@@ -266,11 +162,17 @@ P.S. 即将推出的 *GPU Pro 7* 计划已经在进行中。非常欢迎任何�
 通过一些数学计算得出渲染网格数量：
 
 - 视野范围（地形在多远处可见？）—$V = R \times S \times 2^{L-1}$
+
 - 最大级别四边分辨率——$Q = R \times 2^{L-1}$。
+
 - 级别 0 数量——$T_{Lo} = 2 \times S^2$。
+
 - 级别 $n$ 三角形数量——$T_{Ln} = 2(S^2 - (\frac{S}{2} - 2)^2)$。
+
 - 总三角形数量——$T = T_{Lo} + L_c \times T_{Ln}$。
+
 - Mesh 0 数量——$T_{Mo} = T_{Lo} + (L_c - 1) \times T_{Ln}$。
+
 - Mesh $n$ 三角形数量——$T_{Mn} = \frac{(L-L_c) \times T_{Ln}}{4}$。
 
 由于许多场景是从上方向下观察地形，我们使用了较高的网格级别计数（$L_c=4$），这允许我们在许多情况下在单个批次中渲染地形（当我们只渲染中心网格时）。我们得到的四边分辨率为 0.1 m，级别 $S=100$，级别计数 $L=8$，中心网格级别计数 $L_c=4$。我们使用 $2048 \times 2048$ 纹理作为地形数据。通过这些设置，我们得到了 10 cm 的分辨率、约 1 km 的渲染视野以及共 127,744 个三角形。由于我们使用了 65 度的视野，只分批渲染了约 81,000 个三角形。如之前所述，必须仔细选择这些参数以适应应用的性质（见图 1.4 和 1.5.）。
@@ -284,9 +186,7 @@ posnap0.x=floor(posnap0.x / snapmax + 0.01f) * snapmax;
 posnap0.z=floor(posnap0.z / snapmap + 0.01f) * snapmap;
 ```
 
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_26_0.png)
-
 
 ```cpp
 posnap0.z=floor(posnap0.z / snapmap + 0.01f) * snapmap;
@@ -294,6 +194,7 @@ float levelsnap=snapvalue;
 terrainRendererParams[0].z=posnap0.x - camerap.x;
 terrainRendererParams[0].w=posnap0.z - camerap.z;
 （此处省略代码部分，保持原样不翻译）
+```
 
 顶点着色器。所有其他地形渲染计算都在顶点着色器中完成：
 
@@ -308,31 +209,29 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 （此处省略代码部分，保持原样不翻译）
 ```
 
+
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_26_0.png)
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_26_1.png)
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_29_0.png)
 
-对于小型封闭动态区域（例如自卸车货箱区域或垃圾坑），我们使用覆盖该区域的静态网格（带细节水平）的标准渲染技术。（见图 1.6. ）
+对于小型封闭动态区域（例如自卸车货箱区域或垃圾坑），我们使用覆盖该区域的静态网格（带细节水平）的标准渲染技术。（见图 1.6。）
 
 在这种情况下，网格的拓扑并不重要，因为它很小且总是整体渲染。
 
 ## 1.5 动态修改
 
-动态地形修改是新算法的另一个重要方面。之前，我们开发了几种使用 CPU 地形修改的技术；然而，很难优化这些技术，因此新修改算法的主要目标是在 GPU 上执行的。
+动态地形修改是新算法的另一个重要方面。之前，我们开发了几种使用 CPU 地形修改的技术；然而，很难优化这些技术，因此新修改算法的主要目标是在 GPU 上执行。
 
 ### 1.5.1 算法概述
 
 以下是算法的高级概述。
 
-如图 1.7 所示，我们利用了这样一个事实：大型主地形纹理（蓝色矩形）中的所有修改（红色矩形）大部分都在非常小的区域内（最多几米）。最初，我们创建了一个小的临时修改渲染纹理（黑色矩形），作为乒乓数据缓冲区。处理期间，我们首先选择此临时修改纹理作为渲染目标并将主纹理作为源，使用简单的数据拷贝 shader 将主网格的修改位置复制到临时修改纹理中，以保持纹理像素大小。
+如图 1.7 所示，我们利用了这样一个事实：大型主地形纹理（蓝色矩形）中的所有修改（红色矩形）大部分都在非常小的区域内（最多几米）。最初，我们创建了一个小的临时修改渲染纹理（黑色矩形），作为乒乓数据缓冲区。处理期间，我们首先选择此临时修改纹理作为渲染目标并将主纹理作为源，使用简单的数据拷贝`shader`将主网格的修改位置复制到临时修改纹理中，以保持纹理像素大小。
 
 接下来，我们交换角色，选择主纹理作为渲染目标并将小型临时修改纹理作为源。只在主纹理的修改部分渲染矩形。
-
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_30_0.png)
 
@@ -340,9 +239,9 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 临时纹理会在目标像素周围进行多次采样以获得最终结果（例如：侵蚀着色器或犁着色器）。
 
-我们使用一个 $128 \times 128$ 的临时修改纹理（覆盖 $12.8 \times 12.8$ 米的变化范围）。
+我们使用一个`128 × 128`的临时修改纹理（覆盖`12.8 × 12.8`米的变化范围）。
 
-## 1.5.2 犁
+### 1.5.2 犁
 
 犁着色器是我们执行的最复杂的地形修改。其核心思想是在犁前方位移被犁所移动的体积，同时模拟压缩、地形位移和体积守恒。
 
@@ -350,7 +249,7 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 最后，侵蚀模拟会创建一个良好的地形形状。
 
-## 1.5.3 侵蚀
+### 1.5.3 侵蚀
 
 侵蚀是最重要的地形修改。它在所有进行修改的地方执行几秒钟，以平滑地形并应用更自然的视觉效果。
 
@@ -358,23 +257,17 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 遗憾的是，我们尚未找到将侵蚀模拟与体积守恒相结合的方法。
 
-
-
 轮子修改是圆柱形状在地形上移动的模拟。它使用地形数据压缩因子来防止过度下陷，并创建轮子侧面的填充。
 
 我们尝试将此参数与地形数据流动性参数相关联（以减少纹理数据），但这导致了许多与侵蚀效果相关的问题，因为它也会改变流动性值。
 
-
 仅限 GPU 处理的一个缺点是，数据有时需要与位于 CPU 域的物理引擎进行同步。为了实现这一点，我们需要将数据从 GPU 内存传输到 CPU 内存以进行同步。
 
-
-因为每帧下载完整的地形数据纹理（在我们的情况下是 2000 × 2000）会严重消耗性能，我们必须收集并局部化可能的变化。
+因为每帧下载完整的地形数据纹理（在我们的情况下是`2000 × 2000`）会严重消耗性能，我们必须收集并局部化可能的变化。
 
 这些变化每隔几帧从主纹理复制到较小的纹理中，并下载到主内存用于更新碰撞网格信息。
 
-我们发现使用 64 × 64 的纹理（捕捉 6.4 × 6.4 米）对于我们的需求完全足够。准备、下载和同步这些过程的时间小于 0.1 毫秒。
-
-
+我们发现使用`64 × 64`的纹理（捕捉`6.4 × 6.4`米）对于我们的需求完全足够。准备、下载和同步这些过程的时间小于`0.1`毫秒。
 
 法线根据原始数据和固定偏移量（用于计算斜率的位置偏移）逐像素进行校准。这使得远处具有非常详细的视觉地形形状，而远处的顶点细节非常低（见图 1.8）。
 
@@ -384,13 +277,11 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_32_0.png)
 
-**图 1.8.** 近距离观察悬崖上的法线问题。高细节拓扑和法线是相同的，此结果是完美匹配的。
-
-
+**图 1.8。**近距离观察悬崖上的法线问题。高细节拓扑和法线是相同的，此结果是完美匹配的。
 
 为了修正这种行为，我们需要调整物理求解器以限制最大渗透深度。
 
-## 1.7.3 不一致的纹理复制像素偏移
+### 1.7.3 不一致的纹理复制像素偏移
 
 当我们执行动态地形修改时，我们需要将数据从主纹理复制到较小的临时修改纹理，并反之。使用双线性纹理过滤，这可能会导致微小的纹理偏移，这种偏移在重复执行时非常明显。有时，即使纹理大小相同，每像素的纹理偏移也会与设备分辨率相关。
 
@@ -400,16 +291,15 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_33_1.png)
 
-**图 1.9.** 远处的悬崖上的问题。低细节拓扑（在底部的线框图中可见）和逐像素法线是不相同的。
-## 1.8 结论
+**图 1.9。**远处的悬崖上的问题。低细节拓扑（在底部的线框图中可见）和逐像素法线是不相同的。
 
+## 1.8 结论
 
 目前，此处的算法使用单个纹理处理整个地形，因此受限于扩展或分辨率。通过增加
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_34_0.png)
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_34_1.png)
-
 
 只有一个层四边在近距离过渡到更高层（更低细节）时是明显的。通过在低层添加更多重叠四边，我们将减少影响并实现更平滑的几何形变。
 
@@ -425,52 +315,45 @@ terrainRendererParams[0].w=posnap0.z - camerap.z;
 
 图 1.10 展示了该算法的工作示例。
 
-
 Gustavo Bastos Nunes 和 João Lucas Guberman Raza
-
 
 内存带宽仍然是现有图形流水线中的主要瓶颈。为了解决这个问题，常见的机制之一是用 GPU 中的算术逻辑单元（ALU）指令代替总线消耗。例如，GPU 程序化纹理缓解了这种限制，因为 CPU 和 GPU 之间的通信开销很小。随着 DirectX 11 和 OpenGL 4 分形器的出现，我们现在能够将程序化场景产生新的形式：通过参数方程在 GPU 中生成程序化网格。
 
+为了通过分形器在 GPU 中生成程序化网格，本文建议利用参数化网格。参数化网格的点是通过一个接受一个或多个参数的函数。对于 3D 空间，本文中的数学函数应被视为`g(u, v)`的参数方程，其中`u`和`v`处于`[0, 1]`范围内。除了参数表面方程外，还有其他机制（如隐函数）可用于生成程序化网格。然而，隐函数并不适用于细分器（tessellator），因为其结果意味着一个点是在表面网格的内部还是外部，这最适合在几何阶段通过移动立方算法 [Taratuk et al. 07] 使用。在性能方面，几何着色器（geometry shader）与细分器不同，它的设计并不是为了大量的原语吞吐量。
 
-为了通过分形器在 GPU 中生成程序化网格，本文建议利用参数化网格。参数化网格的点是通过
+尽管细分器阶段在生成三角形原语方面性能良好，但它对生成的三角形原语最大数量有限制。截至 D3D11，每个补片（patch）的数量为`8192`个。对于某些场景（如球体等程序化网格），这个数字可能是足够的。然而，如果能够在程序化网格中使用任意数量的三角形，为了绕过这一限制，GPU 必须构建一个补片网格（patch grid）。这适用于地形和行星等需要高面数的场景。网格中的每个补片引用`[0, 1]`域内的一个值范围，作为`u`和`v`函数参数的源。这些范围将值的表面区域划分为相邻的子区域。因此，补片所服务的细分器产出的三角形集合的每个子区域，其本身都是整个程序化网格几何结构的子集。
 
+为了计算补片范围`p`，我们利用以下方程：
 
-一个接受一个或多个参数的函数。对于 3D 空间，本文中的数学函数应被视为 $g(u, v)$ 的参数方程，其中 $u$ 和 $v$ 处于 $[0, 1]$ 范围内。除了参数表面方程外，还有其他机制（如隐函数）可用于生成程序化网格。然而，隐函数并不适用于细分器（tessellator），因为其结果意味着一个点是在表面网格的内部还是外部，这最适合在几何阶段通过移动立方算法 [Taratuk et al. 07] 使用。在性能方面，几何着色器（geometry shader）与细分器不同，它的设计并不是为了大量的原语吞吐量。
+`p = \frac{1}{\sqrt{\alpha}}`
 
-尽管细分器阶段在生成三角形原语方面性能良好，但它对生成的三角形原语最大数量有限制。截至 D3D11，每个补片（patch）的数量为 8192 个。对于某些场景（如球体等程序化网格），这个数字可能是足够的。然而，如果能够在程序化网格中使用任意数量的三角形，为了绕过这一限制，GPU 必须构建一个补片网格（patch grid）。这适用于地形和行星等需要高面数的场景。网格中的每个补片引用 $[0, 1]$ 域内的一个值范围，作为 $u$ 和 $v$ 函数参数的源。这些范围将值的表面区域划分为相邻的子区域。因此，补片所服务的细分器产出的三角形集合的每个子区域，其本身都是整个程序化网格几何结构的子集。
-
-为了计算补片范围 $p$，我们利用以下方程：
-
-$p = \frac{1}{\sqrt{\alpha}}$
-
-其中 $\alpha$ 是 GPU 利用的补片数量。由于每个补片占用一个正方形区域，$p$ 可以同时用于每个生成补片的 $u$ 范围和 $v$ 范围。随后 CPU 必须为每个补片向 GPU 发送一组元数据，即补片的 $u$ 范围（本文引用为 $[u_{min}, u_{max}]$）和补片的 $v$ 范围（本文引用为 $[v_{min}, v_{max}]$）。由于细分器将程序化地构建网格的整个几何结构，因此除了上述的补片元数据外，不需要向 GPU 发送几何数据。因此，本文建议利用点原语拓扑结构作为向 GPU 发送元数据的机制，因为它由于内存占用小，是带宽效率最高的原语拓扑结构。一旦元数据发送到 GPU，下一步是在外壳着色器（hull shader）中设置细分因子。
-
+其中`α`是 GPU 利用的补片数量。由于每个补片占用一个正方形区域，`p`可以同时用于每个生成补片的`u`范围和`v`范围。随后 CPU 必须为每个补片向 GPU 发送一组元数据，即补片的`u`范围（本文引用为`[u_min, u_max]`）和补片的`v`范围（本文引用为`[v_min, v_max]`）。由于细分器将程序化地构建网格的整个几何结构，因此除了上述的补片元数据外，不需要向 GPU 发送几何数据。因此，本文建议利用点原语拓扑结构作为向 GPU 发送元数据的机制，因为它由于内存占用小，是带宽效率最高的原语拓扑结构。一旦元数据发送到 GPU，下一步是在外壳着色器（hull shader）中设置细分因子。
 
 外壳着色器的目的是接收几何数据，在本文中，几何数据可以是每个补片一个控制点。有了这些几何数据，外壳着色器可以确定每个域边缘（domain edge）以及原语内部的细分因子。细分因子决定了每个补片生成的原语数量。外壳着色器为每个补片设置的细分因子越高，构建的三角形原语数量越多。外壳着色器的要求是产生三角形原语池，然后细分器利用它程序化地构建网格的几何结构。因此，所需的细分因子必须均匀地设置为每个补片的边缘和内部因子，如下代码所示：
 
-```
-HS_CONSTANT_DATA_OUTPUT BezierConstantHS(InputVS_
-CONTROL_POINT_OUTPUT,
+```cpp
+HS_CONSTANT_DATA_OUTPUT BezierConstantHS(InputVS_CONTROL_POINT_OUTPUT,
 PatchSize : uint PatchID : SV_PrimitiveID)
 {
     HS_CONSTANT_DATA_OUTPUT Output;
+
     Output.Edges[0] = g_TessellationFactor;
     Output.Edges[1] = g_TessellationFactor;
     Output.Edges[2] = g_TessellationFactor;
     Output.Edges[3] = g_TessellationFactor;
     Output.Inside[0] = g_TessellationFactor;
+
     return Output;
 }
 ```
 
 由于补片网格原语必须相邻结束，因此每个补片的边缘必须具有相同的细分因子，否则设置了较高阶细分的补片可能会在几何结构中留下缝隙。然而，原语的内部在每个补片可以有不同的细分因子，因为这些原语并不是为了与其他补片的原语连接的。细分因子可能被利用的一个场景是地貌 LOD（geomorphic LOD），其中内部细分因子基于相机到程序化网格的距离。外壳着色器告诉细分器如何构建三角形原语，然后由域着色器（domain shader）利用这些结果。这种 LOD 技术在图 2.1 和图 2.2 显示的高面数程序化网格中得到了例证，随后在图 2.3 和图 2.4 中是低面数网格。
 
+域着色器为细分器生成的每个顶点被调用。它还为每个生成的顶点接收一对参数坐标`(u, v)`。在本文中，我们将该坐标对引用为`d_u`和`d_v`。由于这些参数坐标位于域空间，域着色器必须将它们映射到补片网格空间。为了做到这一点，我们进行线性插值：
 
-域着色器为细分器生成的每个顶点被调用。它还为每个生成的顶点接收一对参数坐标 $(u,v)$。在本文中，我们将该坐标对引用为 $d_u$ 和 $d_v$。由于这些参数坐标位于域空间，域着色器必须将它们映射到补片网格空间。为了做到这一点，我们进行线性插值：
-
-```
-p_u = p_{min} + d_u * p_{max}$
-p_v = p_{min} + d_v * p_{max}$
+```text
+p_u = p_{min} + d_u * p_{max}
+p_v = p_{min} + d_v * p_{max}
 ```
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_40_0.png)
@@ -489,40 +372,38 @@ p_v = p_{min} + d_v * p_{max}$
 
 图 2.4。图 2.3 中相同的网格，但经过了着色。
 
-其中 $p_u$ 和 $p_v$ 是在选择的参数方程中利用的参数。图 2.5 中的示例使用了以下代码段：
+其中`p_u`和`p_v`是在选择的参数方程中利用的参数。图 2.5 中的示例使用了以下代码段：
 
-```
+```cpp
 float3 heart(float u, float v)
 {
     float pi2 = 2 * PI;
     float p1 = PI;
     float x, y, z;
     float b = u;
+}
 ```
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_41_0.png)
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_41_1.png)
 
-```
+```cpp
 float t = y; + sin(t * 2 * pi) -
  = pow(abs(s * pi) * sin(t * 2 * pi)), 0.5f) * 0.5f;
+
 y = cos(t * 2 * pi) *
 z = sin(s * pi) + sin(t * 2 * pi);
+
 float3 heart = float3(x, y, z);
 return heart;
 ```
 
 
 
-
-
-
 为了对其输出拓扑结构有预定义的理解。随后可以使用延迟着色来减少所生成片元中的操作次数。
 
-
-对于所提的算法，计算量随顶点和补丁（patches）的数量线性增加，这使其能够扩展到各种场景，例如程序化地形和行星。此类情况的一个例子是同样利用了细分化阶段的算法，例如 [Dunn 15]，该算法专注于生成体积爆炸。由于由于所讨论的概念具有程序化的数学本质，其他研究领域也可以被用于扩展此处讨论的概念，例如动态纹理和音效。最后，由于内存访问仍然是性能瓶颈，特别是在移动设备等硬件受限的环境中，可以利用产生满意视觉输出的数学过程来克服这些局限性。
-
+对于所提的算法，计算量随顶点和补丁（patches）的数量线性增加，这使其能够扩展到各种场景，例如程序化地形和行星。此类情况的一个例子是同样利用了细分化阶段的算法，例如 [Dunn 15]，该算法专注于生成体积爆炸。由于所讨论的概念具有程序化的数学本质，其他研究领域也可以被用于扩展此处讨论的概念，例如动态纹理和音效。最后，由于内存访问仍然是性能瓶颈，特别是在移动设备等硬件受限的环境中，可以利用产生满意视觉输出的数学过程来克服这些局限性。
 
 João Raza 感谢他的家人和妻子为其提供的所有支持。Gustavo Noven 感谢他的妻子和家人提供的所有帮助。特别感谢他们的朋友 F. F. Marmot。
 
@@ -530,7 +411,7 @@ João Raza 感谢他的家人和妻子为其提供的所有支持。Gustavo Nove
 
 - [Green 05] Simon Green. “Implementing Improved Perlin Noise.” In GPU Gems 2, 由 Matt Farr 编辑，页码 409–416。Reading, MA: Addison-Wesley Professional, 2005.
 - [Owens 08] J. Owens, M. Houston, N. Luebcke, S. Green, J. Stone, and J. Phillips. “GPU Computing,” Proceedings of the IEEE 96:5 (2008), 96.
-- [Perlin 04] Ken Perlin. “Implementing Improved Perlin Noise.” In GPU Gems, 由 Randima Fernando 编辑，页码 73–85.Reading, MA: Addison-Wesley Professional, 2004. 
+- [Perlin 04] Ken Perlin. “Implementing Improved Perlin Noise.” In GPU Gems, 由 Randima Fernando 编辑，页码 73–85。Reading, MA: Addison-Wesley Professional, 2004.
 - [Tatarchuk et al. 07] N. Tatarchuk, J. Shopof, and C. Decoro. “Real-Time Surface Extraction using the GPU Programmable Geometry Pipeline.” In Proceedings of SIGGRAPH 2007, p. 137. Reading, NY: ACM, 2007.
 - [Dunn 15] Alex Dunn. “Realistic Volumetric Explosions in Games.” In GPU 6: Advanced Rendering Techniques, 由 Wolfgang Engel 编辑，页码 51–62. Boca Raton, FL: CRC Press, 2015.
 
@@ -552,9 +433,11 @@ Henry Schäfer, Matthias Nießner, Benjamin Keinert, and Marc Stamminger
 
 在本章中，我们描述了我们系统的实现，该系统作为本文的一部分发布在 GitHub 上¹。变形框架的输入是由四边形细分网格组成的大场景。
 
-> ¹https://github.com/hsdk/DeformationGPU
+> ¹ <https://github.com/hsdk/DeformationGPU>
 
-具体而言，我们处理 Catmull-Clark 细分表面，我们使用特征自适应细分和 GPU 硬件细分器对其进行渲染 [Nießner et al. 12]。变形通过解析位移实现，可以在运行时高效更新而无需昂贵的法线图重计算 [1. 13]。为了保持 GPU 存储需求最小，我们使用动态内存管理，仅为受变形影响的表面补丁分配空间。## 3.2 可变形表面表示
+具体而言，我们处理 Catmull-Clark 细分表面，我们使用特征自适应细分和 GPU 硬件细分器对其进行渲染 [Nießner et al. 12]。变形通过解析位移实现，可以在运行时高效更新而无需昂贵的法线图重计算 [1. 13]。为了保持 GPU 存储需求最小，我们使用动态内存管理，仅为受变形影响的表面补丁分配空间。
+
+## 3.2 可变形表面表示
 
 我们将可变形物体表示为位移细分表面，其中基础网格是 Catmull-Clark [Catmull and Clark 78]，高频细节存储在偏移中。在现代硬件上，这些高质量的表面表示使用硬件细分单元进行高效评估和渲染 [Nießner et al. 12]。Catmull-Clark 表面通过粗糙的控制点进行变形，收敛到一个除非四顶点外均为 $C^2$ 连续的极限表面。在这一表面上，沿解析法线应用位移。
 
@@ -564,24 +447,17 @@ Henry Schäfer, Matthias Nießner, Benjamin Keinert, and Marc Stamminger
 
 位移的核心思想是将 $C^2$ 基础表面 $s(u,v)$ 与 $C^1$ 偏移函数 $D(u,v)$ 结合。结果是位移表面 $f(u,v) = s(u,v) + N_s(u,v)$ 处处都是 $C^1$ 连续，并提供了连续的法线场 $n(u,v) = \frac{\frac{\partial f}{\partial u} \times \frac{\partial f}{\partial v}}{\|\frac{\partial f}{\partial u} \times \frac{\partial f}{\partial v}\|}$，其中 $u,v \in \mathbb{R}^2, D(u,v) \in \mathbb{R}^1, f(u,v) \in \mathbb{R}^3$。$D(u,v)$ 是标量值的三次 B 样条，具有 Doo-Sabin 连接性并对奇异顶点有特殊处理。该连接性相对于基础 Catmull-Clark 表面是对偶的，为基础补丁与位移函数补丁之间提供了一一映射。
 
-**基于分的纹理格式。** 我们使用基于分的纹理格式存储标量值位移偏移（即三次 B 样条的控制点），类似于 PTex [Burley and Lacewell 08]（见图 3.2）。基于分的格式的主要优势是消除了 $(u,v)$ 边界处的接缝伪影，因为像素是
-
-
-
-
-
+**基于分的纹理格式。** 我们使用基于分的纹理格式存储标量值位移偏移（即三次 B 样条的控制点），类似于 PTex [Burley and Lacewell 08]（见图 3.2）。基于分的格式的主要优势是消除了 $(u,v)$ 边界处的接缝伪影，因为像素是在参数空间中对齐；也就是说，瓦片的参数化控制与 Catmul-Clark 补片匹配，从而为 $s(u, v)$ 和 $D(u, v)$ 提供一致的 $(u, v)$ 参数。为了评估双次二次函数 $D(u, v)$，需要访问 $3\times3$ 标量控制点（即子补片；见图 3.3）（见第 3.2.1 节）。在基础补片的边界处，这需要访问相邻的瓦片。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_48_0.png)
 
 **图 3.2.** 解析位移的基于瓦片的纹理格式：每个瓦片存储一个纹素重叠区域，以避免对邻接指针的需求。此外，在瓦片级别计算的逐级映射金字塔（mipmap pyramid）允许连续的细节水平渲染。渲染。所有瓦片都高效地封装在一个大型纹理数组中。
 
-在参数空间中对齐；也就是说，瓦片的参数化控制与 Catmul-Clark 补片匹配，从而为 $s(u, v)$ 和 $D(u, v)$ 提供一致的 $(u, v)$ 参数。为了评估双次二次函数 $D(u, v)$，需要访问 $3\times3$ 标量控制点（即子补片；见图 3.3）（见第 3.2.1 节）。在基础补片的边界处，这需要访问相邻的瓦片。
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_48_1.png)
 
-**图 3.3.** (a) 存储位移数据的纹理瓦片的标量值双次二次 B 样条子补片的 $3\times3$ 控制点数组。(b) 同一瓦片的另一组控制点，使用了一个纹素边界重叠；重叠数据与相邻瓦片冗冗的。每个瓦片对应一个 Catmul-Clark 基础补片。
+**图 3.3.** (a) 存储位移数据的纹理瓦片的标量值双次二次 B 样条子补片的 $3\times3$ 控制点数组。(b) 同一瓦片的另一组控制点，使用了一个纹素边界重叠；重叠数据与相邻瓦片冗余。每个瓦片对应一个 Catmul-Clark 基础补片。
 
-```
+```cpp
 struct TileDescriptor {
   int page; // 纹理切片
   int uOffset; // 瓦片起始 u
@@ -592,13 +468,18 @@ struct TileDescriptor {
 
 TileDescriptor GetTile(Buffer<uint> descSRV, uint patchID) {
   TileDescriptor desc;
+
   int uOffset = patchID * 4;
+
   desc.page = descSRV[offset];
   desc.uOffset = descSRV[offset + 1];
   desc.vOffset = descSRV[offset + 2];
+
   int sizeMip = descSRV[offset + 3];
+
   desc.size = 1 << (sizeMip >> 8);
   desc.nMipmap = (sizeMip & 0xff);
+
   return desc;
 }
 ```
@@ -607,63 +488,41 @@ TileDescriptor GetTile(Buffer<uint> descSRV, uint patchID) {
 
 这种访问可以使用邻接指针完成，但指针遍历在现代 GPU 上效率很低。我们为每个瓦片存储一个体素重叠（one-voxel overlap），使得瓦片是自包含的，从而不再需要这些指针。虽然内存占用略微增加，但从渲染的角度来看非常有益，因为纹理访问的成本更低。此外，每个瓦片都存储了一个 mipmap 金字塔，允许连续的细节水平。注意，边界重叠包含在所有级别中。
 
-所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 (u, v) 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
+所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 `(u, v)` 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
 
-高效评估。为了高效渲染位移顶点，我们使用 GPU 硬件细分单元。法线 $N_s(u,v)$ 使用特征自适应细分 [Nießner and Loop 13] 进行精确评估。由于 Catull-Clark 基础补片与纹理瓦片之间存在一一一的映射，位移数据可以通过补片 ID、 $u,v \in [0,1] \times [0,1]$ 三元组来检索。也就是说，对应于基础补片 $u,v$ 的子补片的标量值双次二次位移系数 $d_{i,j}$ 的 $3 \times 3$ 数组。对于每个基础补片，标量位移
+**高效评估。** 为了高效渲染位移顶点，我们使用 GPU 硬件细分单元。法线 $N_s(u,v)$ 使用特征自适应细分 [Nießner and Loop 13] 进行精确评估。由于 Catull-Clark 基础补片与纹理瓦片之间存在一一一的映射，位移数据可以通过补片 ID、$u,v \in [0,1] \times [0,1]$ 三元组来检索。也就是说，对应于基础补片 $u,v$ 的子补片的标量值双次二次位移系数 $d_{i,j}$ 的 $3 \times 3$ 数组。对于每个基础补片，标量位移函数 $D(u, v)$ 随后使用 B-样条基函数 $B_i^2$ 进行评估：
 
-# 几何操作
+$$
+D(u, v) = \sum_{i=0}^{2}\sum_{j=0}^{2} B_i^2(T(u))B_j^2(T(v))d_{i,j},
+$$
 
-函数 $D(u, v)$ 随后使用 B-样条基函数 $B_i^2$ 进行评估：
+其中子区域参数 $\hat{u}, \hat{v}$ 由线性变换 $T$ 给出：
 
-```
-$D(u, v) = \sum_{i=0}^{2}\sum_{j=0}^{2} B_i^2(T(u))B_j^2(T(v))d_{i,j},$
-```
-
-其中子区域域参数 $\hat{u}, \hat{v}$ 由线性变换 $T$ 给出，
-
-```
-$\hat{u} = T(u) = u - [u] + \frac{1}{2}\quad\quad\hat{v} = T(v) = v - [v] + \frac{1}{2}$.
-```
+$$
+\hat{u} = T(u) = u - [u] + \frac{1}{2}
+\quad\quad
+\hat{v} = T(v) = v - [v] + \frac{1}{2}.
+$$
 
 为了获得位移表面 $N_f(u, v)$，需要 $f(u, v)$ 的偏导数：
 
-```
-$$\frac{\partial}{\partial u}f(u, v) = \frac{\partial}{\partial u}s(u, v) + \frac{\partial}{\partial u}N_s(u, v)D(u, v) + N_s(u, v)\frac{\partial}{\partial u}D(u, v).
-```
+$$
+\frac{\partial}{\partial u}f(u, v)
+=
+\frac{\partial}{\partial u}s(u, v)
++
+\frac{\partial}{\partial u}N_s(u, v)D(u, v)
++
+N_s(u, v)\frac{\partial}{\partial u}D(u, v).
+$$
 
-在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，这种（此处为原文重复内容，已按要求翻译逻辑处理的）
-
-虽然内存占用略微增加，但从渲染的角度来看非常有益，因为纹理访问的成本更低。此外，每个瓦片都存储了一个 mipmap 金字塔，允许连续的细节水平。注意，边界重叠包含在所有级别中。
-
-所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 (u, v) 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
-
-高效评估。为了高效渲染位移顶点，我们使用 GPU 硬件细分单元。法线 $N_s(u,v)$ 使用特征自适应细分 [Nießner and Loop 13] 进行精确评估。由于 Catull-Clark 基础补片与纹理瓦片之间存在一一一的映射，位移数据可以通过补片 ID、$u,v \in [0,1] \times [0,1]$ 三元组来检索。也就是说，对应于基础补片 $u,v$ 的子补片的标量值双次二次位移系数 $d_{i,j}$ 的 $3 \times 3$ 数组。对于每个基础补片，标量位移
-
-函数 $D(u, v)$ 随后使用 B-样条基函数 $B_i^2$ 进行评估：
-
-```
-$D(u, v) = \sum_{i=0}^{2}\sum_{j=0}^{2} B_i^2(T(u))B_j^2(T(v))d_{i,j},$
-```
-
-其中子区域域参数 $\hat{u}, \hat{v}$ 由线性变换 $T$ 给出，
-
-```
-$\hat{u} = T(u) = u - [u] + \frac{1}{2}\quad\quad\hat{v} = T(v) = v - [v] + \frac{1}{2}$.
-```
-
-为了获得位移表面 $N_f(u, v)$，需要 $f(u, v)$ 的偏导数：
-
-```
-$$\frac{\partial}{\partial u}f(u, v) = \frac{\partial}{\partial u}s(u, v) + \frac{\partial}{\partial u}N_s(u, v)D(u, v) + N_s(u, v)\frac{\partial}{\partial u}D(u, v).
-```
-
-在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，这种（此处为原文重复内容，已按要求翻译逻辑处理的）
+在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算。
 
 虽然内存占用略微增加，但从渲染的角度来看非常有益，因为纹理访问的成本更低。此外，每个瓦片都存储了一个 mipmap 金字塔，允许连续的细节水平。注意，边界重叠包含在所有级别中。
 
-所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 (u, v) 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
+所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 `(u, v)` 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
 
-```
+```cpp
 struct TileDescriptor {
   int page; // 纹理切片
   int uOffset; // 瓦片起始 u
@@ -674,101 +533,129 @@ struct TileDescriptor {
 
 TileDescriptor GetTile(Buffer<uint> descSRV, uint patchID) {
   TileDescriptor desc;
+
   int uOffset = patchID * 4;
+
   desc.page = descSRV[offset];
   desc.uOffset = descSRV[offset + 1];
   desc.vOffset = descSRV[offset + 2];
+
   int sizeMip = descSRV[offset + 3];
+
   desc.size = 1 << (sizeMip >> 8);
   desc.nMipmap = (sizeMip & 0xff);
+
   return desc;
 }
 ```
 
-**列表 3.1.** 瓦片描述符：每个瓦片对应一个 Catull-Clark 基础面，并由面 ID 索引。
+
+
+
+**列表 3.1：**瓦片描述符：每个瓦片对应一个 Catull-Clark 基础面，并由面 ID 索引。
 
 这种访问可以使用邻接指针完成，但指针遍历在现代 GPU 上效率很低。我们为每个瓦片存储一个体素重叠（one-voxel overlap），使得瓦片是自包含的，从而不再需要这些指针。虽然内存占用略微增加，但从渲染的角度来看非常有益，因为纹理访问的成本更低。此外，每个瓦片都存储了一个 mipmap 金字塔，允许连续的细节水平。注意，边界重叠包含在所有级别中。
 
-所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 (u, v) 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
+所有瓦片——我们使用固定大小——都被封装在一个大型纹理数组中（见图 2）。我们需要将瓦片拆分为多个页面，因为当前硬件上的纹理分辨率限制为 16,000 × 16,000。每个页面对应全局纹理数组的一个切片。为了访问瓦片，我们维护一个缓冲区，存储了每个瓦片的补片 ID 和 `(u, v)` 偏移量（页面内）（见列表 3.1）。该缓冲区的条目通过基础补片对应的面 ID 进行索引。
 
-高效评估。为了高效渲染位移顶点，我们使用 GPU 硬件细分单元。法线 $N_s(u,v)$ 使用特征自适应细分 [Nießner and Loop 13] 进行精确评估。由于 Catull-Clark 基础补片与纹理瓦片之间存在一一一的映射，位移数据可以通过补片 ID、$u,v \in [0,1] \times [0,1]$ 三元组来检索。也就是说，对应于基础补片 $u,v$ 的子补片的标量值双次二次位移系数 $d_{i,j}$ 的 $3 \times 3$ 数组。对于每个基础补片，标量位移
+## 高效评估
 
-# 几何操作
+为了高效渲染位移顶点，我们使用 GPU 硬件细分单元。法线`N_s(u,v)`使用特征自适应细分 [Nießner and Loop 13] 进行精确评估。由于 Catull-Clark 基础补片与纹理瓦片之间存在一一一的映射，位移数据可以通过补片 ID、`u,v ∈ [0,1] × [0,1]`三元组来检索。也就是说，对应于基础补片`u,v`的子补片的标量值双次二次位移系数`d_{i,j}`的`3 × 3`数组。对于每个基础补片，标量位移函数`D(u, v)`随后使用 B-样条基函数`B_i^2`进行评估：
 
-函数 $D(u, v)$ 随后使用 B-样条基函数 $B_i^2$ 进行评估：
-
-```
-$D(u, v) = \sum_{i=0}^{2}\sum_{j=0}^{2} B_i^2(T(u))B_j^2(T(v))d_{i,j},$
+```math
+D(u, v) = \sum_{i=0}^{2}\sum_{j=0}^{2} B_i^2(T(u))B_j^2(T(v))d_{i,j},
 ```
 
-其中子区域域参数 $\hat{u}, \hat{v}$ 由线性变换 $T$ 给出，
+其中子区域域参数`\hat{u}, \hat{v}`由线性变换`T`给出：
 
-```
-$\hat{u} = T(u) = u - [u] + \frac{1}{2}\quad\quad\hat{v} = T(v) = v - [v] + \frac{1}{2}$.
-```
-
-为了获得位移表面 $N_f(u, v)$，需要 $f(u, v)$ 的偏导数：
-
-```
-$$\frac{\partial}{\partial u}f(u, v) = \frac{\partial}{\partial u}s(u, v) + \frac{\partial}{\partial u}N_s(u, v)D(u, v) + N_s(u, v)\frac{\partial}{\partial u}D(u, v).
+```math
+\hat{u} = T(u) = u - [u] + \frac{1}{2}\quad\quad\hat{v} = T(v) = v - [v] + \frac{1}{2}.
 ```
 
-在这种情况下，$N_s(u, v)$ 将涉及 Weingarten 方程的计算，这种（此处为原文重复内容，已按要求翻译逻辑处理的）
+为了获得位移表面`N_f(u, v)`，需要`f(u, v)`的偏导数：
 
-
-
-
-
-# 几何变换
-
+```math
+\frac{\partial}{\partial u}f(u, v) =
+\frac{\partial}{\partial u}s(u, v) +
+\frac{\partial}{\partial u}N_s(u, v)D(u, v) +
+N_s(u, v)\frac{\partial}{\partial u}D(u, v).
 ```
+
+在这种情况下，`N_s(u, v)`将涉及 Weingarten 方程的计算，这种（此处为原文重复内容，已按要求翻译逻辑处理的）
+
+## 几何变换
+
+```cpp
 void ds_main_patches(in HS_CONSTANT_FOVC_OUT input,
+
                in OutputPatch<HullVertex, 16> patch,
+
                in float2 domainCoord : SV_DomainLocation,
+
                in OutputVertex output )
+
 {
+
     // 评估基础表面 s(u,v)
+
     float3 worldPos = 0, tangent = 0, bitangent = 0;
+
     EvalSurface(patch, domainCoord, worldPos, tangent, bitangent);
+
     float3 normal = normalize(cross(tangent, bitangent));
 
-
-
     float2 du = 0, dv = 0;
+
     float displacement = AnalyticDisplacement(patch[0].patchID,
+
                                               domainCoord, du, dv);
+
     worldPos += displacement * normal;
 
-
     output.pos = mul(ProjectionMatrix, float4(worldPos, 1.0));
+
     output.tangent = tangent;
+
     output.bitangent = bitangent;
+
     output.patchCoord = domainCoord;
+
 }
 ```
 
-### 3.3. 在域着色器中进行解析位移映射评估。
+### 3.3 在域着色器中进行解析位移映射评估
 
-```
+```hlsl
 float4 ps_main(in OutputVertex input) : SV_TARGET
+
 {// 计算 D(u,v) 的偏导数
+
 float du = 0, dv = 0;
+
 float displacement = AnalyticDisplacement(input.patchID,
+
                                           input.PatchCoord, du, dv);
+
 // 计算基础表面法线 N(u,v)
+
 float3 normal = normalize(cross(input.tangent, input.bitangent));
+
 float3 tangent = input.tangent + surfaceNormal * du;
+
 float3 bitangent = input.bitangent + surfaceNormal * dv;
+
 // 计算解析位移着色法线 N(u,v)
+
 float3 normal = normalize(cross(tangent, bitangent));
 
 // 着色
+
 ...
 ```
 
-### 3.4. 在像素着色器中进行解析位移映射评估。
+### 3.4 在像素着色器中进行解析位移映射评估
 
-$N_f(u, v) = N_s(u, v) \forall(u, v)_{extraordinary}$。在奇异顶点处的这种特殊处理与常规 $N_f(u, v)$ 之间的线性混合，确保了处处具有一致的 $C^1$ 表面。
+`N_f(u, v) = N_s(u, v) ∀(u, v)_{extraordinary}`。在奇异顶点处的这种特殊处理与常规`N_f(u, v)`之间的线性混合，确保了处处具有一致的`C^1`表面。
 
 ## 3.3 算法概述
 
@@ -776,12 +663,12 @@ $N_f(u, v) = N_s(u, v) \forall(u, v)_{extraordinary}$。在奇异顶点处的这
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_53_0.png)
 
-**图 3.4.** 算法概述：(a) 使用二次 B 样条位移的细分表面作为可变形物体表示。(b) 概述了共振可变形表面的物体重叠区域的体素化。(c) 将位移控制点推出体素化区域外，(d) 创建一个捕捉影响的表面。
+**图 3.4：**算法概述：(a) 使用二次 B 样条位移的细分表面作为可变形物体表示。(b) 概述了共振可变形表面的物体重叠区域的体素化。(c) 将位移控制点推出体素化区域外，(d) 创建一个捕捉影响的表面。
 
 为了简单起见，我们首先假设碰撞仅发生在刚性穿透物体和可变形物体之间。我们将可变形物体表示为位移后的细分表面（见第 3.2 节）。穿透物体可以是细分表面，也可以是常规三角形网格（见图 3.4(a)）。对于所有可变形-穿透物体对，我们使用以下算法计算变形：
 
 - 通过使用 Schwarz [12] 的实时二进制体素化方法的改进变体来计算实心体素化，从而近似穿透物体（见图 3.4(b)）。
-- 从体素化中确定可变形物体的位移偏移，以匹配影响物体的形状如图 3.4(c) 和 (d)。这是通过从可变形物体表面发射射线并相应修改位移来实现。
+- 从体素化中确定可变形物体的位移偏移，以匹配影响物体的形状，如图 3.4(c) 和 (d)。这是通过从可变形物体表面发射射线并相应修改位移来实现。
 
 在两个物体都是可变形的情况下，我们形成两个碰撞对，每个可变形物体都作为另一个可变形物体的刚性穿透物体，并在第一遍中仅应用计算变形的一部分。
 
@@ -797,71 +684,97 @@ $N_f(u, v) = N_s(u, v) \forall(u, v)_{extraordinary}$。在奇异顶点处的这
 
 ### 3.4.2 体素化
 
-一旦识别了所有潜在的可变形物体碰撞（见上文），我们使用 Schwarz [Schwarz 12] 的实心体素化变来近似穿透物体的形状。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了 $2^{24}$ 个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+一旦识别了所有潜在的可变形物体碰撞（见上文），我们使用 Schwarz [Schwarz 12] 的实心体素化变体来近似穿透物体的形状。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了`2^{24}`个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
 
-为了确定体素化空间，我们相交重叠区域。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了 $2^{24}$ 个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+为了确定体素化空间，我们相交重叠区域。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了`2^{24}`个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
 
-高效的 GPU 实现。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了 $2^{24}$ 个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+#### 高效的 GPU 实现
 
-高效的 GPU素化。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了 $2^{24}$ 个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了`2^{24}`个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
 
-为了确定体素化空间，我们相交重叠区域。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了 $2^{24}$ 个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+#### 高效的 GPU 素化
+
+体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了`2^{24}`个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
+
+为了确定体素化空间，我们相交重叠区域。体素化是通过光栅化传递生成的，其中一个正交相机设置在物体边界框的重叠区域。在我们的实现中，我们使用了`2^{24}`个体素的预算，需要约 2 MB 的 GPU 显存。注意，体素化尽可能匹配形状以实现准确的变形至关重要。然后我们确定体素化。
 
 ## 3.5 细分表面在物体碰撞上的实时变形
 
 ![](img/120606d35c679664e7ad5ec2ee0e8b_55_0.png)
 
-**图 3.5.** 用于体素化的 OBB 生成：源 源于变形物体和穿透物体的 OBB。至少有一个面位于穿透物体外部。体素化随后面向面的反方向进行，该面位于内部。我们使用两个内核来执行体素化并分别填充自适应缩放的体素网格，向前或向后。
+**图 3.5：**用于体素化的 OBB 生成：源于变形物体和穿透物体的 OBB。至少有一个面位于穿透物体外部。体素化随后面向面的反方向进行，该面位于内部。我们使用两个内核来执行体素化并分别填充自适应缩放的体素网格，向前或向后。
 
-```
-RWbyteAddressBuffer g_vox : register(ui);
+```hlsl
+RWByteAddressBuffer g_vox : register(ui);
+
 float4 PS_Voxelize(in OutputVertex input) : SV_TARGET
+
 {
+
     // 将片段位置转换到体素网格
+
 float3 fGridPos = input.posOut.xyz / input.posOut.w;
+
 fGridPos *= g_gridSize.x;
+
 fGridPos.z += 0.5;
+
 int3 p = int(fGridPos) * (g_gridSize.z));
 
 if (p.z > int(g_gridSize.z))
+
     discard;
 
     // 应用自适应体素网格缩放
+
 uint address = p.x * g_gridSize.x
+
     + p.y * g_gridSize.y
+
     + (p.z > 5) * 4;
 
 #ifdef VXELIZE_BACKWARD
+
 g_vox.InterlockedXor(address ,
+
     (0xffffffff << (p.z & 31)));
+
     // 反转所有的体素
+
 for (p.z = (31); p.z > 0; p.z -= 32) {
+
     address -= 4;
+
     g_vox.InterlockedXor(address, 0xffffffff);
+
 }
+
 #endif
+
 g_vox.InterlockedXor(address, 0xffffffff << (p.z & 31));
+
     // 反转所有的体素
+
 for(p.z = (p.z | 31) + 1; p.z < g_gridSize.z; p.z += 32) {
+
     address += 4;
+
     g_vox.InterlockedXor(address, 0xffffffff);
+
 }
+
 #endif
 ```
 
-**列表 3.5.** 使用原子操作的二进制体素化的像素着色器实现。
-
-
-
-
+**列表 3.5：**使用原子操作的二进制体素化的像素着色器实现。
 
 ### 3.4.3 光线投射
 
-在上一个阶段中，我们将穿透对象在相交体积内生成了体素化表示。现在，相交体积内所有变形表面的补片都将进行位移，使其不再与穿透对象（体素化后的）相交。我们对该过程的实现如列表 3.6 所示。首先，我们在位移 B 样条的所有控制点（位移贴纹理的补片参数空间位置）处评估表面，并计算它们对应的世界空间位置。更准确地说，这些是 Catmull-Clark 表面点，它们在 B 样条的节点处进行求值，并应用了位移（见图 3.4(b)）。因此，为了防止该处的表面可能已经进行过位移的情况，我们考虑了上一个阶段的偏移量。
+在上一个阶段中，我们将穿透对象在相交体积内生成了体素化表示。现在，相交体积内所有变形表面的补片都将进行位移，使其不再与穿透对象（体素化后的）相交。我们对该过程的实现如列表 3.6 所示。首先，我们在位移 B 样条的所有控制点（位移贴图的补片参数空间位置）处评估表面，并计算它们对应的世界空间位置。更准确地说，这些是 Catmull-Clark 表面点，它们在 B 样条的节点处进行求值，并应用了位移（见图 3.4(b)）。因此，为了防止该处的表面可能已经进行过位移的情况，我们考虑了上一个阶段的偏移量。
 
 如果这样一个控制点位于穿透对象内部，我们将沿负基表面法线方向移动它，直到它穿透物体（图 3.4 中的红色控制点）。因此，我们从控制点对应的世界空间位置出发，沿着负基法线投射一条光线。这一步涉及评估体素化（图 3.4 中的黄色部分），重叠区域之外（红色部分）则保持不变。幸运的是，使用通过自适应划分获得的规则 B 样条补片，这种评估非常快速。
 
-现在，我们使用 3D 差分分析器 (DDA) 遍历通过二值体素的光线（见列表 3.7）。我们还通过首先与体素网格的 OBB 相交，确保光线实际上能够击中体素体积。由此，体素化之外的控制点（例如图 3.4 所示）保持不变。如果光线命中体素体积，但表面位置（即光线起点）位于体素体积之外，则更新初始距离，使其位于体素网格的交点上。然后，我们追踪光线穿过网格，并在遇到的每个体素上更新位移距离，直到离开体素体积。跟踪光线直到其离开体素化是非常关重要的，否则如图 3.6 所示，凹凹物体将导致错误的变形。
+现在，我们使用 3D 差分分析器（DDA）遍历通过二值体素的光线（见列表 3.7）。我们还通过首先与体素网格的 OBB 相交，确保光线实际上能够击中体素体积。由此，体素化之外的控制点（例如图 3.4 所示）保持不变。如果光线命中体素体积，但表面位置（即光线起点）位于体素体积之外，则更新初始距离，使其位于体素网格的交点上。然后，我们追踪光线穿过网格，并在遇到的每个体素上更新位移距离，直到离开体素体积。跟踪光线直到其离开体素化是非常关重要的，否则如图 3.6 所示，凹凹物体将导致错误的变形。
 
 遍历完成后，我们通过应用负的遍历距离来更新位移以考虑变形，并将结果写入位移贴图。
 
@@ -873,53 +786,87 @@ for(p.z = (p.z | 31) + 1; p.z < g_gridSize.z; p.z += 32) {
 
 ```cpp
 #define NUM_BLOCKS (TILE_SIZE/DISPLACEMENT_DISPATCH_TILE_SIZE)
+
 [numthreads(DISPLACEMENT_DISPATCH_TILE_SIZE,
+
     DISPLACEMENT_DISPATCH_TILE_SIZE, 1)]
+
 void ComputeDisplacementCS(uint3 blockID = SV_GroupID,
+
     uint3 threadIdx = SV_GroupThreadID)
+
 {
+
     uint patchID = blockID.x + g.PrimitiveIDBase;
+
     TileDescriptor tile = GetTile(g.TileInfo, patchID);
+
     if(threadIdx.x >= tile.size || tile.y >= tile.size)
+
         return;
 
     int patchLevel = GetPatchSubLevel(patchID);
+
     // threadUV to tile_coord
+
     float2 tileUV = ComputeTileCoord(patchID, tile,
+
                                      blockID, threadIdx);
+
     // threadUV to (sub-) patch_coord
+
     float2 patchUV = ComputePatchCoord(patchID, patchlevel,
+
                                         blockIdx, threadIdx,
+
                                         tile.page);
 
     int3 coord = int3(tile.uvOffset + tile.xy * tile.size);
 
     float3 disp = g.displacementUAV[coord];
+
     // eval surface and apply displacement
+
     float3 worldPos = 0;
+
     float3 normal = 0;
 
     float3 controlPoints[16] = ReadControlPoints(patchID);
+
     EvalPatch(controlPoints, patchUV, worldPos, normal);
+
     worldPos += disp * normal;
 
     // traverse ray until leaving solid
+
     float3 rayOrigin = mul(g_matWorldToVoxel,
+
                            float4(worldPos,1.0)).xyz);
+
     float3 rayDir = normalize(mul((float3x3)g_matWorldToVoxel,
+
                                   normal.xyz));
 
     float distOut = 0;
+
     if(!VoxelRayOrigin(rayOrigin, rayDir, dist))
+
         return;
-
-    float3 p = rayDir * distOut;
-    p = mul((float3x3)((g_matNormal))), p);
-    disp = disp - length(p);
-
-    g.displacementUAV[coord] = disp;
-}
 ```
+
+
+
+
+```cpp
+float3 p = rayDir * distOut;
+
+p = mul((float3x3)((g_matNormal))), p);
+
+disp = disp - length(p);
+
+g.displacementUAV[coord] = disp;
+```
+
 **列表 3.6.** 使用体素光线投射实现位移更新。
 
 # 几何操作
@@ -928,42 +875,49 @@ void ComputeDisplacementCS(uint3 blockID = SV_GroupID,
 bool IsOutsideVolume(int3 voxel) {
     return (any(voxel < 0) || any(voxel) > int3(g_gridSize));
 }
+
 bool voxelDDA(in float3 origin, in float3 dir, out float3 dist) {
     PreventDivZero(dir);
+
     float3 dt = abs(1.0 / dir);
 
     float tEnter, tExit;
+
     if (intersectRayVoxelGrid(origin, dir, tEnter, tExit)) {
         return false;
     }
 
     // start on grid unless origin is inside
+
     tEnter = max(0, tEnter);
     float3 p = origin + dir * tEnter;
+
     int3 gridPos;
+
     // check if ray is outside
+
     if (IsOutsideVolume(gridPos))
         return false;
 
     float3 tMin = INFINITY;
+
     // update components are <= 0
+
     tMin.x = (dir.x < 0) ? (tEnter.x + dt.x) : (tEnter.x - dt.x);
     tMin.y = (dir.y < 0) ? (tEnter.y + dt.y) : (tEnter.y - dt.y);
-    tMin.z = (dir.z < 0) ? (tEnter.z + dt.z) : (tEnter.z - dt.z); // (Note ( The logic in logic was slightly jumbled, 
-    // based on standard DDA)
+    tMin.z = (dir.z < 0) ? (tEnter.z + dt.z) : (tEnter.z - dt.z); // (Note ( The logic in logic was slightly jumbled,
+
+    // based on standard DDA
 }
 ```
-**列表 3.7.** 用于光线投射的数字差分分析器 (DDA) 实现。
 
-
-
-
+**列表 3.7.** 用于光线投射的数字差分分析器（DDA）实现。
 
 # 3. 细分曲面在物体碰撞时的实时形变
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_61_0.png)
 
-**图 3.10.** 不规则顶点处的角重叠更新：(a) 收集纹元（texels）以及 (b) 将得到的平均值散射到相邻纹元的结果。
+**图 3.10.** 不规则顶点处的角重叠更新：(a) 收集纹元（texels），以及 (b) 将得到的平均值散射到相邻纹元的结果。
 
 如图 3.9(b) 所示，从相邻补丁边缘到边界顶角的系数。
 
@@ -975,17 +929,17 @@ bool voxelDDA(in float3 origin, in float3 dir, out float3 dist) {
 
 ### 3.5.1 穿透补丁检测
 
-前几节描述的方法为变形物体补丁的每个纹元发射射线：为每个纹元调度一个计算着色器（compute shader）以并行射射线。这种策略显然是低效的，因为变形物体只有部分补丁会受到影响。可以通过裁剪掉重叠区域之外的补丁来防止这种情况。为此，我们计算穿透物体的 OBB（有轴包围盒）与待变形物体每个补丁的 OBB 是否重叠。为此，我们通过遇到的最大位移来扩展补丁的 OBB，以处理已位移的补丁表面。如果检测到重叠，则标记该补丁（可能与穿透物体相交），并将其补丁索引放入队列以便进一步处理。此外，瓦片重叠的更新仅这些这些标记的补丁。
+前几节描述的方法为变形物体补丁的每个纹元发射射线：为每个纹元调度一个计算着色器（compute shader）以并行射线。这种策略显然是低效的，因为变形物体只有部分补丁会受到影响。可以通过裁剪掉重叠区域之外的补丁来防止这种情况。为此，我们计算穿透物体的 OBB（有轴包围盒）与待变形物体每个补丁的 OBB 是否重叠。为此，我们通过遇到的最大位移来扩展补丁的 OBB，以处理已位移的补丁表面。如果检测到重叠，则标记该补丁（可能与穿透物体相交），并将其补丁索引放入队列以便进一步处理。此外，瓦片重叠的更新仅针对这些标记的补丁。
 
 **交叉。** 补丁检测阶段完全使用计算着色器在 GPU 上实现。一次调度（dispatch）检测单个穿透物体 OBB 与场景中所有补丁的碰撞。对于每个补丁，调度一个线程。在计算着色器中，根据补丁的控制点实时计算补丁的 OBB，并与穿透物体的 OBB 进行重叠测试。如果发现重叠，则将补丁索引添加到待处理列表中进行进一步处理。
 
-**交叉批处理。** 前述的交叉阶段实现按顺序为每个穿透物体调度线程，导致由于必须在多次内核调度中读取相同的补丁控制点而产生不必要的且冗的内存访问。通过将多个穿透物体合并到单个调度中，可以显著减少这种内存 I/O 开销。将多个穿透物体的交叉测试合并到单个调度中还减少了所需的计算着色器调度总数。对于需要分配内存的补丁，其索引被添加到全局追加缓冲区（append buffer）。此外，我们为每个穿透物体使用一个追加缓冲区。如果补丁可能受穿透物体影响，则将补丁索引添加到该穿透物体的追加缓冲区中进行射射线。最后，在处理完所有碰撞后，每个变形物体仅更新一次重叠。
+**交叉批处理。** 前述的交叉阶段实现按顺序为每个穿透物体调度线程，导致由于必须在多次内核调度中读取相同的补丁控制点而产生不必要且冗余的内存访问。通过将多个穿透物体合并到单个调度中，可以显著减少这种内存 I/O 开销。将多个穿透物体的交叉测试合并到单个调度中还减少了所需的计算着色器调度总数。对于需要分配内存的补丁，其索引被添加到全局追加缓冲区（append buffer）。此外，我们为每个穿透物体使用一个追加缓冲区。如果补丁可能受穿透物体影响，则将补丁索引添加到该穿透物体的追加缓冲区中进行射线。最后，在处理完所有碰撞后，每个变形物体仅更新一次重叠。
 
 ### 3.5.2 内存管理
 
 由于我们希望支持高分辨率下具有大量补丁的场景形变，为每个可能的变形补丁静态预分配内存将需要大量的 GPU 内存。因此，我们预分配固定数量的瓦片（tiles），并管理一个指向这些未使用瓦片的瓦片描述符表。此外，我们使用原子索引 `i` 进行内存分配，当没有瓦片在使用时，它指向空闲内存表的末尾。
 
-如果补丁需要分配内存，则通过对 `i` 执行原子递减操作，并在递减前获取所指向的瓦片描述符。（见列表 3.8。）
+如果补丁需要分配内存，则通过对 `i` 执行原子递减操作，并在递减前获取所指向的瓦片描述符（见列表 3.8）。
 
 ### 3.5.3 优化后的流水线
 
@@ -997,27 +951,39 @@ bool voxelDDA(in float3 origin, in float3 dir, out float3 dist) {
 
 我们首先介绍影响形变整体质量的参数。
 
-```
-Buffer<uint>          : g_isctResults      : register(tD);
-Buffer<uint3>      : g_memoryTable       : register(t1);
-RWBuffer<uint4>     : g_tileDescriptors  : register(u0);
-RWBuffer<int>       : g_atomicIndex      : register(u1);
+```cpp
+Buffer<uint>       : g_isctResults     : register(tD);
+
+Buffer<uint3>      : g_memoryTable     : register(t1);
+
+RWBuffer<uint4>    : g_tileDescriptors : register(u0);
+
+RWBuffer<int>      : g_atomicIndex     : register(u1);
 
 void allocTile(uint tileID) {
     int i = 0;
+
     InterleavedAdd(g_atomicIndex, [0], -1, i);
+
     // copy page ID and start offsets (u, v)
+
     g_tileDescriptors[tileID].xyz = g_memoryTable[i].xyz;
 }
 
 numthreads(ALLOCATOR_BLOCKSIZE, 1, 1);
+
 void AllocateTileCS(uint3 Dtid : SV_DispatchThreadID) {
     uint tileID = Dtid.x;
-    if (tileID >= g_nTiles) return;
 
-if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
-    allocTile(tileID);
+    if (tileID >= g_nTiles)
+        return;
+
+    if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
+        allocTile(tileID);
+}
 ```
+
+
 
 列表 3.8. 使用原子操作进行瓦片内存分配的计算着色器。
 
@@ -1025,21 +991,17 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 
 ### 3.6.1 瓦片分辨率的影响
 
-第一个参数是用于存储补片系数的瓦片分辨率。图 3.13 显示了不同分辨率 (a) 32 × 32 和 (b) 128 × 128 的形变对比。显然，低分辨率瓦片 (a) 无法很好地表示碰撞体的影响。采用我们的内存分配方案（3.5.2）可以在变形补片上实现极高的瓦片分辨率 (b)，产生高度变形。由于 GPU 内存限制，对所有补片使用静态预分配无法实现这些瓦片分辨率的。 (注：此处原文漏掉了对应的图注，已根据上下文推断）
+第一个参数是用于存储补片系数的瓦片分辨率。图 3.13 显示了不同分辨率 (a) 32 × 32 和 (b) 128 × 128 的形变对比。显然，低分辨率瓦片 (a) 无法很好地表示碰撞体的影响。采用我们的内存分配方案（3.5.2）可以在变形补片上实现极高的瓦片分辨率 (b)，产生高度变形。由于 GPU 内存限制，对所有补片使用静态预分配无法实现这些瓦片分辨率的。（注：此处原文漏掉了对应的图注，已根据上下文推断）
 
 **图 3.13.** 使用不同补片分辨率的形变对比：(a) 高分辨率 (128 × 128) 捕捉了高频细节，而 (b) 低分辨率 (32 × 32) 则没有。
 
- 3.6.2 体素化的影响
+### 3.6.2 体素化的影响
 
 影响质量最大的第二个参数是穿透物体的近似。体素化的质量取决于所选体素网格的大小。选择过低的体素网格分辨率会导致如图 3.14 示例所示的低质量形变。在我们的实现中，为每个穿透物体使用一个体素网格。正如 3.4.2 节所述，与对整个物体进行体素化相比，仅对感兴趣的重叠区域进行体素化的利用率高得多。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_65_1.png)
 
 **图 3.14.** 选择过粗的体素网格无法很好地捕捉穿透物体（轮子）的形状，并导致低质量形变。
-
-
-
-
 
 # 几何体处理
 
@@ -1054,7 +1016,7 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 ![](img/120606d35c679664e7ad5faec2ee0e8b_66_0.png)
 
 | | (128 × 128) 未优化 | 使用相交检测与内存分配 | 使用批处理技术 | (32 × 32) 已优化 |
-|---|---|---|---|--|
+|---|---|---|---|---|
 | 相交 (Intersect) | 0.000 | 0.108 | 0.042 | 0.042 |
 | 内存管理 | 0.000 | 0.006 | 0.006 | 0.006 |
 | 体体素化 (Voxelization) | 0.012 | 0.012 | 0.012 | 0.012 |
@@ -1062,13 +1024,13 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 | 重叠更新 (Overlap update) | 0.122 | 0.026 | 0.007 | 0.006 |
 | 碰撞体总开销 | 11.161 | 0.213 | 0.128 | 0.099 |
 
-**图 3.15.** 不同优化方案在 NVIDIA GTX 780 上的耗时（单位：毫秒）。前三条柱形（从上到下）显示了针对 $128 \times128$ 像素分辨率的优化效果，而最后一条柱形显示了在开启所有优化的情况下，$32 \times32$ 瓦分辨率的耗时。
+**图 3.15.** 不同优化方案在 NVIDIA GTX 780 上的耗时（单位：毫秒）。前三条柱形（从上到下）显示了针对 $128 \times 128$ 像素分辨率的优化效果，而最后一条柱形显示了在开启所有优化的情况下，$32 \times 32$ 瓦分辨率的耗时。
 
 ### 3.6.3 性能
 
 在本节中，我们提供了变形流水线的详细耗时数据，包括第 3.5 节介绍的优化方案带来的收益。我们使用标准的图形流水线进行渲染和模型体素化，并采用计算着色器（compute shaders）来硬件加速细分表面、补片-OBB 相交、内存管理、光线投影（DDA）以及瓦片重叠区域的更新。
 
-图 3.15 总结了不同流水线阶段的性能，以及可变形-穿透者碰撞补片的整体开销，该测量是在 NVIDIA GTX 780 上完成的，使用的补片-瓦片大小为 $128 \times128$。
+图 3.15 总结了不同流水线阶段的性能，以及可变形-穿透者碰撞补片的整体开销，该测量是在 NVIDIA GTX 780 上完成的，使用的补片-瓦片大小为 $128 \times 128$。
 
 图 3.15 的测量结果显示，光线投影是我们算法中最昂贵的阶段。通过简单的补片-体素相交测试，我们可以仅对受影响的补片启动光线投影和重叠更新，从而大幅提高整体性能。虽然这增加了相交测试的时间成本（这需要读取每个补片的控制点），由于从全局内存读取数据的开销很高，我们在读取控制点后通过计算与多个穿透对象的相交来优化相交阶段，这进一步提升了整体性能。
 
@@ -1086,13 +1048,13 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 
 ## 参考文献
 
-- [Burley and Lacewell 08] Brent Burley and Dylan Lacewell. “Ptex: Per-Face Texture Mapping for Production Rendering.” In Proceedings of the Nineteenth Eurographics Conference on Rendering, pp. 1155–1164. Aire-la-Ville, Switzerland: Eurographics Association, 2008.
-- [Catmull and Clark 78] E. Catmull and J. Clark. “Recursively Generated B-Spline Surfaces on Arbitrary Topological Meshes.” Computer-Aided Design 10:6 (1978), 350–355.
-- [Coumans et al. 06] Erwin Coumans et al. “Bullet Physics Library: Real-Time Physics Simulation.” http://bulletphysics.org/, 2006.
-- [Nießner and Loop 13] Matthias Nießner and Charles Loop. “Analytic Displacement Mapping Using Hardware Tessellation.” ACM Transactions on Graphics 32:3 (2013), article 26.
-- [Nießner et al. 12] Matthias Nießner, Charles Loop, Mark Meyer, and Tony DeRose. “Feature-Adaptive GPU Rendering of Catmull-Clark Subdivision Surfaces.” *ACM Transactions on Graphics* 31:1 (2012), article 6.
-- [Schäfer et al. 14] Henry Schäfer, Benjamin Keinert, Matthias Nießner, Christoph Buchhenau. “Real-Time Deformation of Subdivision Surfaces on Object Collisions.” In *GPU Pro*, pp. 89-96. New York: ACM, 2014.
-- [Schwarz 12] Michael Schwarz. “Practical Voxelization.” In *Advanced Rendering*, pp. 337-352. Boca, FL: CRC Press, 2012.
+- [Burley and Lacewell 08] Brent Burley and Dylan Lacewell. "Ptex: Per-Face Texture Mapping for Production Rendering." In Proceedings of the Nineteenth Eurographics Conference on Rendering, pp. 1155–1164. Aire-la-Ville, Switzerland: Eurographics Association, 2008.
+- [Catmull and Clark 78] E. Catmull and J. Clark. "Recursively Generated B-Spline Surfaces on Arbitrary Topological Meshes." Computer-Aided Design 10:6 (1978), 350–355.
+- [Coumans et al. 06] Erwin Coumans et al. "Bullet Physics Library: Real-Time Physics Simulation." http://bulletphysics.org/, 2006.
+- [Nießner and Loop 13] Matthias Nießner and Charles Loop. "Analytic Displacement Mapping Using Hardware Tessellation." ACM Transactions on Graphics 32:3 (2013), article 26.
+- [Nießner et al. 12] Matthias Nießner, Charles Loop, Mark Meyer, and Tony DeRose. "Feature-Adaptive GPU Rendering of Catmull-Clark Subdivision Surfaces." ACM Transactions on Graphics 31:1 (2012), article 6.
+- [Schäfer et al. 14] Henry Schäfer, Benjamin Keinert, Matthias Nießner, Christoph Buchhenau. "Real-Time Deformation of Subdivision Surfaces on Object Collisions." In GPU Pro, pp. 89-96. New York: ACM, 2014.
+- [Schwarz 12] Michael Schwarz. "Practical Voxelization." In Advanced Rendering, pp. 337-352. Boca, FL: CRC Press, 2012.
 
 # 游戏中的真实爆炸
 
@@ -1106,13 +1068,9 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 
 ## 4.3 离线/预处理
 
-首先，我们创建一个噪声的 3D 体素，稍后可以用它创建一些模式。我们可以离线完成此操作，以节省像素着色器的层。这将赋予爆炸云状的效果。在本文描述的实现中使用了简单噪声——但需要注意的是，并不是要求使用简单噪声；事实上，你可以使用任何类型的噪声，只要它在我们的体积中正确平铺即可。为了节省带宽并充分利用缓存，该纹理的大小和格式对性能是有利的。本文演示的实现使用了 $32\times32\times32$ 大小的体积，并采用 16 位浮点格式 DXGI_FORMAT_R16_FLOAT。噪声是根据每个体素的 UVW 坐标作为噪声函数的位置参数来计算的。
+首先，我们创建一个噪声的 3D 体素，稍后可以用它创建一些模式。我们可以离线完成此操作，以节省像素着色器的层。这将赋予爆炸云状的效果。在本文描述的实现中使用了简单噪声——但需要注意的是，并不是要求使用简单噪声；事实上，你可以使用任何类型的噪声，只要它在我们的体积中正确平铺即可。为了节省带宽并充分利用缓存，该纹理的大小和格式对性能是有利的。本文演示的实现使用了 $32\times32\times32$ 大小的体积，并采用 16 位浮点格式 `DXGI_FORMAT_R16_FLOAT`。噪声是根据每个体素的 UVW 坐标作为噪声函数的位置参数来计算的。
 
-
-
-
-
-## 4. 游戏中真实的体积爆炸
+# 4. 游戏中真实的体积爆炸
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_71_0.png)
 
@@ -1124,7 +1082,7 @@ if (IsTileIntersected(tileID) && !IsNotAllocated(tileID))
 
 ### 4.4.1 半壳层生成
 
-GPU 使用顶点着色器（vertex shader）开始渲染我们的爆炸。每个爆炸运行一次。它的任务是从数据缓冲区中读取值（该缓冲区存储了位置、半径和以秒为单位的“生存时间”），并将它们传递给流水线的下一阶段，即壳层（hull）。对于你的实现，如何存储这些信息完全取决于你，只要 GPU 可以访问它们即可。
+GPU 使用顶点着色器（vertex shader）开始渲染我们的爆炸。每个爆炸运行一次。它的任务是从数据缓冲区中读取值（该缓冲区存储了位置、半径和以秒为单位的"生存时间"），并将它们传递给流水线的下一阶段，即壳层（hull）。对于你的实现，如何存储这些信息完全取决于你，只要 GPU 可以访问它们即可。
 
 流水线的下一阶段是壳层。它为输入原始型的每个点运行一次，并为下一阶段输出控制点。此壳层着色器（hull shader）将使用四边形域（quad domain）。使用它时，着色器将加载单个顶点补丁及其关联数据（之前已在顶点着色器中加载的），并输出四边形的四个角顶点（控制点），每个顶点都有它自己的数据拷贝。
 
@@ -1134,9 +1092,7 @@ GPU 使用顶点着色器（vertex shader）开始渲染我们的爆炸。每个
 
 ### 4.4.2 像素着色
 
-该效果所需的最后一个可编程阶段是像素着色器（pixel shader）。该着色器为屏幕上爆炸的每个像素被调用；大部分工作将在在这里完成。对于每个像素，都需要在爆炸中“步进”或“移动”，并评估每一步的颜色。步进将沿着每个像素的射线进行，该射线使用像素的世界空间位置计算。然后从前往对射线进行步进。在每一步中...
-
-
+该效果所需的最后一个可编程阶段是像素着色器（pixel shader）。该着色器为屏幕上爆炸的每个像素被调用；大部分工作将在在这里完成。对于每个像素，都需要在爆炸中"步进"或"移动"，并评估每一步的颜色。步进将沿着每个像素的射线进行，该射线使用像素的世界空间位置计算。然后从前往对射线进行步进。在每一步中...
 
 ```cpp
 float Sphere(float3 pos, float3 spherePos, float3 radius)
@@ -1150,7 +1106,6 @@ float Cone(float3 pos, float3 conePos, float3 radius)
     float3 relPos = pos - conePos;
     float d = length(relPos.xz);
     d = lerp(radius * 0.5f, 0.0f, 1 + relPos.y / radius);
-
     d = max(d, -relPos.y - radius);
     d = max(d, relPos.y - radius);
     return d;
@@ -1161,7 +1116,6 @@ float Cylinder(float3 pos, float3 cylinderPos, float3 radius)
     float3 relPos = pos - cylinderPos;
     float h = radius.xx + float2(1.0f, 1.5f); // Width, Radius
     float2 d = abs(float2(length(relPos.xz), relPos.y)) - h;
-
     return min(max(d.x, d.y, d.z), 0.0f) + max(d, 0.0f);
 }
 
@@ -1169,7 +1123,6 @@ float Box(float3 pos, float3 boxPos, float3 b)
 {
     float3 relPos = pos - boxPos;
     float3 d = abs(relPos) - b;
-
     return min(max(d.x, max(d.y, d.z)), 0.0f) + length(max(d, 0.0f));
 }
 
@@ -1178,7 +1131,6 @@ float Torus(float3 pos, float3 torusPos, float3 radius)
     float3 relPos = pos - torusPos;
     float2 t = radius.xx + float2(I, 0.01f);
     float2 q = float2(length(relPos.xz) - t.x, relPos.y);
-
     return length(q) - t.y;
 }
 
@@ -1190,17 +1142,18 @@ float Cluster(float3 pos)
     float3 spherePosA = float3(-1, 0, 0);
     float3 spherePosB = float3(1, 0, 0);
     float sphereRadius = 0.75f;
-
     return min(Sphere(pos, spherePosA, sphereRadius), 
                Sphere(pos, spherePosB, sphereRadius));
 }
 ```
 
+
+
 **列表 4.3.** HLSL 源码：一组用于各种形状的距离函数。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_76_0.png)
 
-图 4.4。额外步进技巧（extra step trick）的应用。
+**图 4.4。** 额外步进技巧（extra step trick）的应用。
 
 相交几何体可能会产生难看的带状伪影，导致体积切片完全可见。
 
@@ -1216,7 +1169,7 @@ float Cluster(float3 pos)
 
 图 4.5–7 中的截图是使用 100 步渲染的（但实际上只有少数光线会使用这么多），并开启了收缩包裹（shrink wrapping）优化。
 
-## 4. 游戏中真实的体积爆炸
+## 4.7 游戏中真实的体积爆炸
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_77_0.png)
 
@@ -1226,7 +1179,7 @@ float Cluster(float3 pos)
 
 **图 4.6.** 随时间变化的位移到颜色渐变映射可以为效果提供一个强大的第四维度。
 
-## 4.7 性能
+## 4.8 性能
 
 这种爆炸技术的性能无疑可以与基于粒子的爆炸相当。通过收缩包裹优化，在适当的情况下，渲染时间可以显著缩短。在图 4.8 中，你将看到收缩包裹技术及其对所需步数影响的视觉对比。随后，图 4.9 显示了在开启和关闭收缩包裹的情况下，渲染相同爆炸所需时间的图表。对于两个数据集，结果是相同的。
 
@@ -1238,15 +1191,13 @@ float Cluster(float3 pos)
 
 **图 4.8.** 在这里你可以看到穿过爆炸的光线数量（越红表示需要的步数越多）：无收缩包裹优化（左），开启收缩包裹和全像素提前退出（中），以及最终渲染（右）。
 
-## 4.7 进一步优化
+## 4.9 进一步优化
 
-半分辨率采样。通过收缩包裹优化，我们可以在较低分辨率下渲染体积然后上采样。这在爆炸距离摄像远时特别有用![](img/120606d35c679664e7ad5faec2ee0e8b_79_0.png)
+半分辨率采样。通过收缩包裹优化，我们可以在较低分辨率下渲染体积然后上采样。这在爆炸距离摄像远时特别有用!
+
+![](img/120606d35c679664e7ad5faec2ee0e8b_79_0.png)
 
 **图 4.9.** 开启与关闭收缩包裹的渲染时间对比。
-
-
-
-
 
 # 渲染
 
@@ -1296,8 +1247,9 @@ Peter Sikachev, Samuel Delmont, Uriel Doyon, and Jean-Normand Bucci
 
 基于图像的反射（IBR）是一种利用平面代理近似复杂几何体的方法 [Wright 11]。它在 Unreal Engine 3 *Samaritan* 演示中开发并展示。IBR 可以获得良好的反射局部效果并允许任意方向。然而，其复杂度随代理数量线性增长，这对于大型场景来说可能是不可接受的。
 
-![120606d35c6796e7ad5faec2ee0b_85_0]
-图 1. 从左到右：立方体贴反射、SSR + 立方体贴、IBR + 立方体贴。[图片来自 Square Enix]
+![120606d35c6796e7ad5faec2ee0e8b_85_0]
+
+**图 1.** 从左到右：立方体贴反射、SSR + 立方体贴、IBR + 立方体贴。[图片来自 Square Enix]
 
 上述方法的许多变体已被提出用于实时渲染。例如，局部视差修正立方体贴 [Lagarde and Zanuttini 13] 正在成为行业标准。在接下来的章节中，我们将描述《盗信者》中使用的反射系统。
 
@@ -1310,8 +1262,6 @@ Peter Sikachev, Samuel Delmont, Uriel Doyon, and Jean-Normand Bucci
 目标是准确捕捉人类大小的物体和接触反射（例如大型建筑）。最后，我们还希望捕捉主要的地标——例如火炬和篝火是《盗信者》世界中典型的光源。我们还需要一种能够渲染某些透明几何体反射的方法。
 
 为了实现这些目标，我们设计了一个多层反射系统，如图 1.1 所示。《盗信者》的反射系统包含以下层级：
-
-
 
 - 针对反射表面人体高度范围内不透明物体（动态和静态）的屏幕空间反射（SSR）；
 - 针对墙壁和远处地标的基于图像的反射（IBR）；
@@ -1342,7 +1292,9 @@ SSR 是一种基于通过深度缓冲区进行光线步进的图像反射技术 
 
 另一个优化是减少远端片元的采样数。我们提出了一个经验公式，使步数与距离的指数成正比：
 
+```text
 $N_{linear samples} = \max(1, k_1 e^{-k_2 d})$
+```
 
 其中深度表示为 $d$，$k_1$ 是线性因子，$k_2$ 是指数因子。
 
@@ -1358,8 +1310,8 @@ $N_{linear samples} = \max(1, k_1 e^{-k_2 d})$
 
 首先，我们利用了与 SSR 相同的法线近似方法来增加内存合并。这允许以下优化：
 
-- 拒绝不面向玩家的平面，
-- 拒绝超出玩家范围的平面，
+- 拒绝不面向玩家的平面；
+- 拒绝超出玩家范围的平面；
 - 基于瓦片（tile-based）的 IBR 渲染（下文讨论）。
 
 随后对 SSR 和 IBR 同时执行凹凸扰动。
@@ -1368,38 +1320,57 @@ $N_{linear samples} = \max(1, k_1 e^{-k_2 d})$
 
 上述优化减少了 GPU 时间；但是，如果玩家直向下看，代理将占据几乎所有瓦片。为了缓解这种情况下的性能下降，我们在像素着色器中使用边界球测试进行提前退出。虽然这种检查在大多数情况下会降低性能，但在最坏情况下会提高 GPU 性能，获得更稳定的帧率。
 
-## 1. Thief 中的世代渲染
+## 1.3 Thief 中的世代渲染
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_89_0.png)
+![](img/120606d35c6796e7ad5faec2ee0e8b_89_0.png)
 
-```
+```text
 1: $x_{min} = 1$
+
 2: $x_{max} = -1$
+
 3: 对于所有位于玩家且位于玩家之前的 IBR 代理：
+
 4:   找到当前代理的 AABB
+
 5:   对于 AABB 的所有顶点：
+
 6:     $w := |w|$
+
 7:     计算齐次裁剪空间中的坐标
+
 8:     计算屏幕空间中的坐标
+
 9:     $x_{min} = min(x, x_{min})$
+
 10:    $x_{max} = max(x, x_{max})$
-11: 结束
+
+11:  结束
+
 12: 计算与屏幕顶部和底部的交点 $x_1$ 和 $x_2$
+
 13:   $x_{min} = min(x_1, x_2, x_{min})$
+
 14:   $x_{max} = max(x_1, x_2, x_{max})$
+
 15: 结束
+
 16: 对于所有 IBR 瓦片：
+
 17:   如果瓦片与 $[x_{min}, x_{max}]$ 重叠：
+
 18:     将代理添加到瓦片中
+
 19:   结束如果
+
 20: 结束
 ```
 
-**算法 1.1. 为 IBR 代理查找受影响瓦片的算法。**
-
-此外，为了限制帧中活跃的 IBR 代理数量，我们引入了 *IBR 房间*的概念。本质上，IBR 房间定义了一个 AABB，使得玩家只能看到来自 IBR 代理的 IBR 反射，位于
 
 
+**算法 1.1：为 IBR 代理查找受影响瓦片的算法**
+
+此外，为了限制帧中活跃的 IBR 代理数量，我们引入了 IBR 房间的概念。本质上，IBR 房间定义了一个 AABB，使得玩家只能看到来自 IBR 代理的 IBR 反射，位于
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_90_0.png)
 
@@ -1409,7 +1380,7 @@ $N_{linear samples} = \max(1, k_1 e^{-k_2 d})$
 
 此外，捕捉 IBR 时禁用了粒子和雾效。重要的粒子（如火光效果）通过其自身的 IBR 进行模拟。雾效则是根据雾效设置和反射距离，通过混合 SSR 和 IBR 来添加的。
 
-## 1.2.5 接触硬化光泽反射 (Contact-Hardening Glossy Reflections)
+## 1.2.5 接触硬化光泽反射（Contact-Hardening Glossy Reflections）
 
 由于《盗贼之王》中大部分反射表面并非完美反射体，我们决定模拟光泽反射。光泽 SSR 反射并不是一项新功能，它最早在 [Andreev13] 中被实现。我们决定将 SSR 进一步推进，并渲染接触硬化光泽反射（CHGRs）。图 1.4 显示了 CHGR 的示例。
 
@@ -1421,30 +1392,42 @@ CHGR 的渲染算法如下：首先，我们输出反射表面与反射光线命
 
 ```cpp
 // 世界空间单位为1厘米
+
 int distanceLo = int(worldSpaceDistance) % 256;
 int distanceHi = int(worldSpaceDistance) / 256;
-packedDistance = float2(float(distanceLo) / 255.0f,
-    float(distanceHi) / 255.0f);
+
+packedDistance = float2(
+    float(distanceLo) / 255.0f,
+    float(distanceHi) / 255.0f
+);
 ```
+
 列表 1.1。反射距离打包。
 
 ```cpp
 float3 reflectedCameraToWorld =
     reflect(cameraToWorld, worldNormal);
+
 float reflectionLength =
     max(length(reflectedCameraToWorld), FP_EPSILON);
+
 worldSpaceDistance = 255.0f * (packedDistance.x +
     255.0f - packedDistance.y) /
     reflectionVectorLength;
 
 // 排序与混合
+
 float4 screenSpaceReflectedPosition =
     mix(float4(reflectedPosition, 1), worldToScreen);
+
 screenSpaceReflectedPosition /= screenSpaceReflectedPosition.w;
 
-ReflectionDistance = length(screenSpaceReflectedPosition.xy -
-    screenSpaceFragmentPosition.xy);
+ReflectionDistance = length(
+    screenSpaceReflectedPosition.xy -
+    screenSpaceFragmentPosition.xy
+);
 ```
+
 列表 1.2。反射距离解包。
 
 用于颜色和深度信息的 R8G8B8A8 纹理。由于 8 位无法提供足够的距离精度，我们在 SSR 阶段期间将距离打包在两个 8 位通道中，如列表 1.1 所示。
@@ -1455,34 +1438,36 @@ IBR 阶段执行深度处理、混合，并将世界空间距离转换为屏幕�
 
 最后，我们使用可调的分离内核进行模糊。除了根据距离值选择高斯参数外，我们还应用了以下技巧：首先，我们忽略光谱强度为零的样本，以避免物体轮廓处的溢色（bleeding）。这需要在色器中动态调整内核。其次，我们遵循与 [Andersson 13] 相同的启发方法，在垂直方向上的模糊比水平方向更多，从而获得更合理的视觉结果。
 
-## 1.2.6 反射混合 (Reflection Blending)
+## 1.2.6 反射混合（Reflection Blending）
 
 由于我们的反射系统由多个层级组成，我们需要定义它们之间如何混合。除了距离因子外，SSR 阶段还会输出一个混合因子。该因子取决于以下因素：
 
 - 高度（投射反射光线越长，贡献越小）
 - 追踪精度（光线坐标与获取深度之间的深度差）
 - 表面倾斜（表面法线偏离垂直方向越多，SSR 的贡献越小）
-- 反射光是指向相机还是向屏幕外。
+- 反射光是指向相机还是向屏幕外
 
 之后，将 IBR 合并在上层，输出混合因子。最后应用立方体贴。图 1.5 显示了 SSR 和 IBR 之间的无缝混合。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_92_0.png)
+
 **图 1.5。仅有 SSR（左）和包含 IBR（右）。**
 
 ## 次世代渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_93_0.png)
+
 **图 1.6。未排序的反射（左）和排序后的（右）。**
 
 然而，上述方法在某些情况下会导致问题，即反射光线进入这些缝隙并命中天空盒，《盗贼之王》场景通常使用比其他环境亮得多的天空盒。为了修复这个问题，我们使用了沿游戏路径的局部立方体贴。任何位于局部立方体贴范围内的物体然后在主渲染中使用作为环境颜色。
 
-## 1.2.7 作为后处理的凹凸 (Bump as a Postprocess)
+## 1.2.7 作为后处理的凹凸（Bump as a Postprocess）
 
 如上所述，为了加速技术，我们假设法线朝上。此外，为了减少内存带宽，我们以半分辨率渲染反射。这些因素共同削了高频细节，而细节对于凹凸表面至关重要。为了缓解这一点，我们将凹凸效果作为后处理。
 
 主思路与通用反射方法 [Sousa 05] 非常相似。我们利用垂直法线与像素法线之间的差异来偏移反射纹理中的 UV。为了防止反射泄漏，如果新获取的距离比旧的显著，则恢复到原始获取值。图 1.7 显示了应用反射的好处。
 
-## 1.2.8 局部立方体贴反射 (Localized Cube Map Reflections)
+## 1.2.8 局部立方体贴反射（Localized Cube Map Reflections）
 
 在 SSR、IBR 和立方体贴反射策略中，立方体贴理想情况下应包含天空盒和远处的几何体，因为游戏环境将由 IBR 平映射。在这种情况下，只需要一个立方体贴。在实践中，IBR 平有很多洞且互不相连。这是由于我们使用渲染纹理生成 IBR 平的后果。
 
@@ -1490,21 +1475,17 @@ IBR 阶段执行深度处理、混合，并将世界空间距离转换为屏幕�
 
 《盗贼之王》的主渲染将为反射物体输出以下数据：
 
-- 光照颜色 (lit color),
-- 环境反射颜色 + 漫反射光照强度 (sRGB8),
-- 世界法线 + 反射率 (sRGB8),
+- 光照颜色（lit color）
+- 环境反射颜色 + 漫反射光照强度（sRGB8）
+- 世界法线 + 反射率（sRGB8）
 
 在生成 IBR 和 SSR 半分辨率反射纹理后，最终颜色通过叠加 SSR、IBR 以及最后的环境反射颜色（即立方体贴颜色）来计算。如果材质或平台不支持 IBR/SSR，则只需将颜色加到材质光照颜色中，且不需要额外的渲染目标。
-
-
-
-
 
 # 《盗神之》中的次世代渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_95_0.png)
 
-图 1.8. 为了覆盖整个环境而创建的多个体积体。[图片由 Square Enix Ltd. 提供]
+图 1.8。为了覆盖整个环境而创建的多个体积体。[图片由 Square Enix Ltd. 提供]
 
 在此注意，我们需要漫反射光强度来额外缩放 IBR（基于图像的渲染）和使用默认光照设置捕捉的立方贴图颜色，这可能与游戏当前的的光照设置非常不同。SSR（屏幕空间反射）不需要这种缩放，因为它是实时且准确的，而 IBR 代理和立方贴图是预计算的。
 
@@ -1526,31 +1507,31 @@ IBR 阶段执行深度处理、混合，并将世界空间距离转换为屏幕�
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_96_0.png)
 
-**1.9.** 生成单个立方贴图捕捉的构建过程。[图片由 Square Ltd. 提供]
+**1.9。**生成单个立方贴图捕捉的构建过程。[图片由 Square Ltd. 提供]
 
-我们开发出了一种稳健且快速的反射系统，适用于次世代主机。SSR 和 IBR 步骤在 Playstation 4 (1080p) 和 Xbox One (900p) 上大约占用 1.1-1.5 ms。然而，这些是最最坏情况的结果，即在一个具有 SSR 表面占据整个屏幕且可见 50 个 IBR 代理的合成场景中得出的。对于典型场景，这些数字通常更低。反射后处理相当昂贵（大约 2 ms）。不过，我们没有必须使用计算着色器（compute shaders）来实现它，这可能会节省大量带宽。
+我们开发出了一种稳健且快速的反射系统，适用于次世代主机。SSR 和 IBR 步骤在 Playstation 4（1080p）和 Xbox One（900p）上大约占用 1.1-1.5 ms。然而，这些是最最坏情况的结果，即在一个具有 SSR 表面占据整个屏幕且可见 50 个 IBR 代理的合成场景中得出的。对于典型场景，这些数字通常更低。反射后处理相当昂贵（大约 2 ms）。不过，我们没有必须使用计算着色器（compute shaders）来实现它，这可能会节省大量带宽。
 
-## 1. 《盗神之》中的次世代渲染
+# 《盗神之》中的次世代渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_97_0.png)
 
 ## 1.3 接触硬化影
 
-接触硬化影（CHSs）与百分比接近软影（PCSSs）[Fernando 05] ，是一种模拟区域光源动态阴影的阴影映射方法。实现效果是：当投影者和接收者越近时，影子越尖锐；当投射者和接收者越远时，影子越模糊（越软）（见图 1.10）。《盗神之》中的实现基于 AMD SDK 中的方法 [Gruen 10]。
+接触硬化影（CHSs）与百分比接近软影（PCSSs）[Fernando 05]，是一种模拟区域光源动态阴影的阴影映射方法。实现效果是：当投影者和接收者越近时，影子越尖锐；当投射者和接收者越远时，影子越模糊（越软）（见图 1.10）。《盗神之》中的实现基于 AMD SDK 中的方法 [Gruen 10]。
 
 这种方法很容易集成，因为它使用由单个光源生成的阴影映射，并可以替换普通的阴影过滤。该技术的主要缺点之一是大量的纹理采样，在《盗神之》中，我们实现了一种针对 Shader Model 5.0 的优化方法，极大地限制了对阴影映射的访问。CHS 过程分为三步：遮挡者搜索（blocker search）、半影估计和过滤。
 
 ### 1.3.1 遮挡者搜索
 
-第一步包括计算着色点周围搜索区域内遮挡者的平均深度（我们将其称为*平均遮挡者深度*）。一个以着色点为中心的 $N \times N$ 像素内核网格覆盖了这一搜索区域。遮挡者是阴影映射中比当前片段更靠近光源的像素点，如图 1.11 所示。平均遮挡深度将被用于半影估计。
+第一步包括计算着色点周围搜索区域内遮挡者的平均深度（我们将其称为平均遮挡者深度）。一个以着色点为中心的 $N \times N$ 像素内核网格覆盖了这一搜索区域。遮挡者是阴影映射中比当前片段更靠近光源的像素点，如图 1.11 所示。平均遮挡深度将被用于半影估计。
 
 ## II 渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_98_0.png)
 
-图 1.11 $8\times8$ 搜索网格中的遮挡者。
+图 1.11。`8 × 8` 搜索网格中的遮挡者。
 
-Shader Model 5.0 的 `GatherRed()` 通过一次采样四个值来加速这一步。在《盗神之》中，我们决定使用 $8 \times 8$ 的内核大小，对于相同的光源/接收者设置，这实际上执行了 16 次采样而不是 64 次。
+Shader Model 5.0 的 `GatherRed()` 通过一次采样四个值来加速这一步。在《盗神之》中，我们决定使用 `8 × 8` 的内核大小，对于相同的光源/接收者设置，这实际上执行了 16 次采样而不是 64 次。
 
 因为半影宽度（或模糊度）与内核的大小密切相关，而内核取决于阴影映射的分辨率，这导致在阴影映射分辨率或 FOV 变化时出现一致。图 1.12 显示了这个问题。
 
@@ -1558,85 +1539,143 @@ Shader Model 5.0 的 `GatherRed()` 通过一次采样四个值来加速这一步
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_98_1.png)
 
-提供相同 8x8 搜索网格的 mip，由于分辨率高导致搜索区域更小（左），由于视场宽导致搜索区域更大（右）。
+提供相同 `8 × 8` 搜索网格的 mip，由于分辨率高导致搜索区域更小（左），由于视场宽导致搜索区域更大（右）。
 
 # 《盗神之》中的次世代渲染
 
 ```cpp
 #define KERNEL_SIZE 8
-float wantedTexelSizeAtUnitDist = wantedPenumbraWidthAtUnitDist / KERNEL_SIZE;
-float texelSizeAtUnitDist = float(1)/length(shadowMapResolution);
-float MaxShadowMip = -log2(texelSizeAtUnitDist/wantedTexelSizeAtUnitDist);
-MaxShadowMip = min(float(MIPS_COUNT-1),max(MaxShadowMip,0.0));
+
+float wantedTexelSizeAtUnitDist =
+    wantedPenumbraWidthAtUnitDist / KERNEL_SIZE;
+
+float texelSizeAtUnitDist =
+    float(1) / length(shadowMapResolution);
+
+float MaxShadowMip =
+    -log2(texelSizeAtUnitDist / wantedTexelSizeAtUnitDist);
+
+MaxShadowMip =
+    min(float(MIPS_COUNT - 1), max(MaxShadowMip, 0.0));
+
 // 将 BlkSearchMipindex 和 MaxShadowMip
 // 作为参数传递给 shader
+
 int BlkSearchMipindex = ceil(MaxShadowMip);
 ```
 
-**列表 1.3.** 根据用户定义的宽度、阴影映射分辨率和视体 FOV 角选择 mip 的算法。
+**列表 1.3。**根据用户定义的宽度、阴影映射分辨率和视体 FOV 角选择 mip 的算法。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_99_0.png)
 
-图 1.13. 阴影 mip 布局。[图片由 Square Ltd. 提供]
-
-
-
-
+图 1.13。阴影 mip 布局。[图片由 Square Ltd. 提供]
 
 82
 
-II 渲染（Rendering）
+## II 渲染（Rendering）
 
 ```cpp
 #define KERNEL_SIZE S
+
 #define BFS2 (KERNEL_SIZE - 1) / 2
+
 float3 bkTTc = float3(intc.xy, inDepth);
+
 // TcBaseScale is a static array holding the offset-scale
 // in the shadow map for every tile
+
 float4 bkTBc = TcBaseScale[BlkBSearchShadowMapIndex];
+
 float3 bkTTc.xy = bkTBc.xy + bkTBc.zw;
-// g_vShadowMapDims.xy is the shadow map resolution分辨率 size
+
+// g_vShadowMapDims.xy is the shadow map resolution size
+
 float2 bkTAbc = g_vShadowMapDims.xy * bkTTc.xy;
+
 float2 fc = bkTAbc - floor(bkTAbc);
+
 float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;
-float blockCount = 0; float avgBlockerDepth = 0;
-for(int row = -BFS2; row < col; row += 2) {
-    float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
-    unroll(for(int col = -BFS2; col < col; col += 2) {
+
+float blockCount = 0;
+float avgBlockerDepth = 0;
+
+for (int row = -BFS2; row < col; row += 2) {
+    float2 tc =
+        bkTTc.xy +
+        float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
+
+    unroll(for (int col = -BFS2; col < col; col += 2) {
         float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);
-        float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);
+
+        float4 blk4 =
+            (blk4.zzxx << depth4(0).xxx).xxx(0);
+
         float4 fcVec = 0;
+
         if (row == -BFS2) {
             if (col == -BFS2)
-                fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);
+                fcVec =
+                    float4(1.0 - fc.xy) * (1.0 - fc.x),
+                    (1.0 - fc.y), 1, (1.0 - fc.x);
             else if (col == BFS2)
-                fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);
+                fcVec =
+                    float4((1.0 - fc.y),
+                    (1.0 - fc.x) * fc.x,
+                    fc.x, 1);
             else
-                fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);
+                fcVec =
+                    float4((1.0 - fc.x),
+                    (1.0 - fc.y), 1);
         } else if (row == BFS2) {
             if (col == -BFS2)
-                fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);
+                fcVec =
+                    float4(1.0 - fc.x,
+                    1, fc.y, (1.0 - fc.x) * fc.y);
             else if (col == BFS2)
-                fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);
+                fcVec =
+                    float4(1, fc.x, fc.x * fc.y, fc.y);
             else
-                fcVec = float4(1, 1, fc.y, fc.y);
-        } else {
-            if (col == -BFS2)
-                fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
-            else if (col == BFS2)
-                fcVec = float4(1, fc.x, fc.x, 1);
-            else
-                fcVec = float4(1, 1, 1, 1);
-        }
-        blkCount += dot(blk, fcVec.xyw);
-        avgBlockerDepth += depth4, fcVec.xyw*blk4;
-        tc.x += 2.0*g_vShadowMapDims.z;
-    }
+                fcVec =
+                    float4(1, 1, fc.y, fc.y);
+```
+
+
+
+```cpp
+} else {
+
+    if (col == -BFS2)
+
+        fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
+
+    else if (col == BFS2)
+
+        fcVec = float4(1, fc.x, fc.x, 1);
+
+    else
+
+        fcVec = float4(1, 1, 1, 1);
+
 }
+
+blkCount += dot(blk, fcVec.xyw);
+
+avgBlockerDepth += depth4, fcVec.xyw*blk4;
+
+tc.x += 2.0*g_vShadowMapDims.z;
+
+}
+
+}
+
 if (blkCount < 0.0) // 提前退出 - 完全光照
+
 return 1.0f;
+
 else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
+
 return 0.0f;
+
 avgBlockerDepth /= blkCount;
 ```
 
@@ -1665,178 +1704,221 @@ $$width_{penumbra} = (depth_{receiver} - avgBlockerDepth) \cdot width_{light} / 
 #define BFS2 (KERNEL_SIZE - 1) / 2
 
 float Ratio = max(MaxShadowMip, 0.001, 0.0);
+
 float clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);
+
 float textRatio = texelFetch(matrix, MIPS, floor(textRatio));
+
 uint textureIndex = uint(textureIndex);
+
 float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;
-float blockCount = 0; float avgBlockerDepth = 0;
-for(int row = -BFS2; row < col; row += 2) {
+
+float blockCount = 0;
+float avgBlockerDepth = 0;
+
+for (int row = -BFS2; row < col; row += 2) {
+
     float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
-    unroll(for(int col = -BFS2; col < col; col += 2) {
+
+    unroll(for (int col = -BFS2; col < col; col += 2) {
+
         float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);
+
         float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);
+
         float4 fcVec = 0;
+
         if (row == -BFS2) {
+
             if (col == -BFS2)
+
                 fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);
+
             else if (col == BFS2)
+
                 fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);
+
             else
+
                 fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);
+
         } else if (row == BFS2) {
+
             if (col == -BFS2)
+
                 fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);
+
             else if (col == BFS2)
+
                 fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);
+
             else
+
                 fcVec = float4(1, 1, fc.y, fc.y);
+
         } else {
+
             if (col == -BFS2)
+
                 fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
+
             else if (col == BFS2)
+
                 fcVec = float4(1, fc.x, fc.x, 1);
+
             else
+
                 fcVec = float4(1, 1, 1, 1);
+
         }
+
         blkCount += dot(blk, fcVec.xyw);
+
         avgBlockerDepth += depth4, fcVec.xyw*blk4;
+
         tc.x += 2.0*g_vShadowMapDims.z;
+
     }
+
 }
+
 if (blkCount < 0.0) // 提前退出 - 完全光照
+
 return 1.0f;
+
 else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
+
 return 0.0f;
+
 avgBlockerDepth /= blkCount;
+```
 
-- Ratio = max(MaxShadowMip, 0.001, 0.0);
-- clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);
-- textRatio = texelFetch(matrix, MIPS, floor(textRatio));
-- textureIndex = uint(textureIndex);
-- float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;
-- blockCount = 0; float avgBlockerDepth = 0;
-- for(int row = -BFS2; row < col; row += 2) {
-- float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
-- unroll(for(int col = -BFS2; col < col; col += 2) {
-- float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);
-- float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);
-- float4 fcVec = 0;
-- if (row == -BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);
-- else if (col == BFS2)
-- fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);
-- else
-- fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);
-- else if (row == BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);
-- else
-- fcVec = float4(1, 1, fc.y, fc.y);
-- else {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x, 1);
-- else
-- fcVec = float4(1, 1, 1, 1);
-- blkCount += dot(blk, fcVec.xyw);
-- avgBlockerDepth += depth4, fcVec.xyw*blk4;
-- tc.x += 2.0*g_vShadowMapDims.z;
-- }
-- if (blkCount < 0.0) // 提前退出 - 完全光照
-- return 1.0f;
-- else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
-- return 0.0f;
-- avgBlockerDepth /= blkCount;
-
-- Ratio = max(MaxShadowMip, 0.001, 0.0);
-- clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);
-- textRatio = texelFetch(matrix, MIPS, floor(textRatio));
-- textureIndex = uint(textureIndex);
-- float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;
-- blockCount = 0; float avgBlockerDepth = 0;
-- for(int row = -BFS2; row < col; row += 2) {
-- float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
-- unroll(for(int col = -BFS2; col < col; col += 2) {
-- float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);
-- float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);
-- float4 fcVec = 0;
-- if (row == -BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);
-- else if (col == BFS2)
-- fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);
-- else
-- fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);
-- else if (row == BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);
-- else
-- fcVec = float4(1, 1, fc.y, fc.y);
-- else {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x, 1);
-- else
-- fcVec = float4(1, 1, 1, 1);
-- blkCount += dot(blk, fcVec.xyw);
-- avgBlockerDepth += depth4, fcVec.xyw*blk4;
-- tc.x += 2.0*g_vShadowMapDims.z;
-- }
-- if (blkCount < 0.0) // 提前退出 - 完全光照
-- return 1.0f;
-- else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
-- return 0.0f;
-- avgBlockerDepth /= blkCount;
-
-- Ratio = max(MaxShadowMip, 0.001, 0.0);
-- clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);
-- textRatio = texelFetch(matrix, MIPS, floor(textRatio));
-- textureIndex = uint(textureIndex);
-- float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;
-- blockCount = 0; float avgBlockerDepth = 0;
-- for(int row = -BFS2; row < col; row += 2) {
-- float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);
-- unroll(for(int col = -BFS2; col < col; col += 2) {
-- float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);
-- float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);
-- float4 fcVec = 0;
-- if (row == -BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);
-- else if (col == BFS2)
-- fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);
-- else
-- fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);
-- else if (row == BFS2) {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);
-- else
-- fcVec = float4(1, 1, fc.y, fc.y);
-- else {
-- if (col == -BFS2)
-- fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));
-- else if (col == BFS2)
-- fcVec = float4(1, fc.x, fc.x, 1);
-- else
-- fcVec = float4(1, 1, 1, 1);
-- blkCount += dot(blk, fcVec.xyw);
-- avgBlockerDepth += depth4, fcVec.xyw*blk4;
-- tc.x += 2.0*g_vShadowMapDims.z;
-- }
-- if (blkCount < 0.0) // 提前退出 - 完全光照
-- return 1.0f;
-- else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
-- return 0.0f;
-- avgBlockerDepth /= blkCount;
+- `Ratio = max(MaxShadowMip, 0.001, 0.0);`
+- `clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);`
+- `textRatio = texelFetch(matrix, MIPS, floor(textRatio));`
+- `textureIndex = uint(textureIndex);`
+- `float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;`
+- `blockCount = 0; float avgBlockerDepth = 0;`
+- `for(int row = -BFS2; row < col; row += 2) {`
+- `float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);`
+- `unroll(for(int col = -BFS2; col < col; col += 2) {`
+- `float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);`
+- `float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);`
+- `float4 fcVec = 0;`
+- `if (row == -BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);`
+- `else if (col == BFS2)`
+- `fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);`
+- `else if (row == BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);`
+- `else`
+- `fcVec = float4(1, 1, fc.y, fc.y);`
+- `else {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4(1, 1, 1, 1);`
+- `blkCount += dot(blk, fcVec.xyw);`
+- `avgBlockerDepth += depth4, fcVec.xyw*blk4;`
+- `tc.x += 2.0*g_vShadowMapDims.z;`
+- `}`
+- `if (blkCount < 0.0) // 提前退出 - 完全光照`
+- `return 1.0f;`
+- `else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影`
+- `return 0.0f;`
+- `avgBlockerDepth /= blkCount;`
+- `Ratio = max(MaxShadowMip, 0.001, 0.0);`
+- `clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);`
+- `textRatio = texelFetch(matrix, MIPS, floor(textRatio));`
+- `textureIndex = uint(textureIndex);`
+- `float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;`
+- `blockCount = 0; float avgBlockerDepth = 0;`
+- `for(int row = -BFS2; row < col; row += 2) {`
+- `float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);`
+- `unroll(for(int col = -BFS2; col < col; col += 2) {`
+- `float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);`
+- `float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);`
+- `float4 fcVec = 0;`
+- `if (row == -BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);`
+- `else if (col == BFS2)`
+- `fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);`
+- `else if (row == BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);`
+- `else`
+- `fcVec = float4(1, 1, fc.y, fc.y);`
+- `else {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4(1, 1, 1, 1);`
+- `blkCount += dot(blk, fcVec.xyw);`
+- `avgBlockerDepth += depth4, fcVec.xyw*blk4;`
+- `tc.x += 2.0*g_vShadowMapDims.z;`
+- `}`
+- `if (blkCount < 0.0) // 提前退出 - 完全光照`
+- `return 1.0f;`
+- `else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影`
+- `return 0.0f;`
+- `avgBlockerDepth /= blkCount;`
+- `Ratio = max(MaxShadowMip, 0.001, 0.0);`
+- `clampedRatio = min(MaxShadowMip, matrix.ratio), clampedRatio);`
+- `textRatio = texelFetch(matrix, MIPS, floor(textRatio));`
+- `textureIndex = uint(textureIndex);`
+- `float4 blkTw = bkTBc.zw * g_vShadowMapDims.zw;`
+- `blockCount = 0; float avgBlockerDepth = 0;`
+- `for(int row = -BFS2; row < col; row += 2) {`
+- `float2 tc = bkTTc.xy + float2(-BFS2, g_vShadowMapDims.z, g_vShadowMapDims.w);`
+- `unroll(for(int col = -BFS2; col < col; col += 2) {`
+- `float4 depth4 = shadowTex.Gather(pointSampler, tc.xy);`
+- `float4 blk4 = (blk4.zzxx << depth4(0).xxx).xxx(0);`
+- `float4 fcVec = 0;`
+- `if (row == -BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.xy) * (1.0-fc.x), (1.0-fc.y), 1, (1.0-fc.x);`
+- `else if (col == BFS2)`
+- `fcVec = float4((1.0-fc.y), (1.0-fc.x) * fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4((1.0-fc.x), (1.0-fc.y), 1);`
+- `else if (row == BFS2) {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, fc.y, (1.0-fc.x) * fc.y);`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x * fc.y, fc.y);`
+- `else`
+- `fcVec = float4(1, 1, fc.y, fc.y);`
+- `else {`
+- `if (col == -BFS2)`
+- `fcVec = float4(1.0-fc.x, 1, 1, (1.0-fc.x));`
+- `else if (col == BFS2)`
+- `fcVec = float4(1, fc.x, fc.x, 1);`
+- `else`
+- `fcVec = float4(1, 1, 1, 1);`
+- `blkCount += dot(blk, fcVec.xyw);`
+- `avgBlockerDepth += depth4, fcVec.xyw*blk4;`
+- `tc.x += 2.0*g_vShadowMapDims.z;`
+- `}`
+- `if (blkCount < 0.0) // 提前退出 - 完全光照`
+- `return 1.0f;`
+- `else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影`
+- `return 0.0f;`
+- `avgBlockerDepth /= blkCount;`
 
 # 1. Thief 中的下一代渲染
 
@@ -1846,9 +1928,11 @@ $$width_{penumbra} = (depth_{receiver} - avgBlockerDepth) \cdot width_{light} / 
 
 ## 1.3.2 半影估算（Penumbra Estimation）
 
+
+
 根据上一步获取的平均遮挡深度值和用户定义的光宽，可以计算出一个因子（即半影估算）。算法 1.2 非常直观易懂，且与许多其他的 PCSS 实现相同。
 
-# 1.3.3 过滤（Filtering）
+## 1.3.3 过滤（Filtering）
 
 最终的 CHS 步骤包括对阴影图应用动态滤波器以获得光衰减项。在这一步中，我们还利用了阴影图的多映射（mips）。核心思想是对于阴影的锐利区域使用高分辨率 mips，对于模糊区域使用低分辨率 mips。为了在不同的 mips 之间实现连续且不可察觉的过渡，我们从半影估算中选择两个 mips，并对每个 mip 执行一次过滤操作，然后对两个结果进行线性混合（见图 1.14）。这样做：
 
@@ -1904,21 +1988,19 @@ return 1.0f;
 else if (blkCount < KERNEL_SIZE*KERNEL_SIZE) // 完全阴影
 return 0.0f;
 avgBlockerDepth /= blkCount;
+```
 
-
-
-
-# 1. 《盗贼信》中的次世代渲染
+## 1. 《盗贼信》中的次世代渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_105_0.png)
 
-## 1.5.2 使用本地数据存储改进带宽
+### 1.5.2 使用本地数据存储改进带宽
 
 为了减少景深（DoF）渲染阶段的纹理带宽，我们使用了 LDS（本地数据共享）。其核心思想是对于半径为 $k$ 且 $n$ 个线程的滤波器，预取 $2k+n$ 个样本，如图 1.17 所示。$n$ 个线程中的每个加载一个纹理元素（texel）；此外，每个靠近线程组边界的线程都会加载另一个纹理元素。然后，每个线程将加载的值存储到 LDS 中。最后，在计算内核时，每个线程从 LDS 读取值而不是从 DRAM，从而减少了带宽。
 
 最初，我们使用列表 1.6 中的代码从 LDS 中进行加载和存储。然而，这导致的性能比完全不使用 LDS 差。原因在于我们引入了四路 LDS 内存冲突。由于大多数显卡的 bank 宽度为 32 位，每个线程将进行步长为 $stride = 4$ 的跨步访问。为了修复这个问题，我们需要对代码进行去向量化（de-vector），如列表 1.7。
 
-## 1.5.3 结果
+### 1.5.3 结果
 
 为了理解 LDS，我们测试了 DoF 滤波的不同实现。对于使用 $radius = 15$ 内核进行 FP16 渲染的 DoF 阶段，不使用 LDS 时为 0.15 ms，使用向量化 LDS 结构为 0.26 ms，在 AMD HD7970 上使用去向量化 LDS 为 0.1 ms。两台次世代游戏机都显示出相似倍数的加速。相比之下，在 NVIDIA GPU（GeForce GTX 660）上使用 LDS 在最情况下完全没有获得加速。因此，在 AMD GPU（包括次世代游戏机）上，如果考虑了底层性能因素（例如分段内存），使用 LDS 的计算着色器可以带来显著的（33%）速度提升。
 
@@ -1926,65 +2008,101 @@ avgBlockerDepth /= blkCount;
 groupshared float4 fCache[NR_THREADS + 2 * KERNEL_RADIUS];
 
 Texture2D inputTexture : register(t0)
+
 RWTexture2D<float4> outputTexture : register(u0);
 
 numthreads(NR_THREADS, 1, 1)
+
 void main(uint3 groupThreadID : SV_GroupThreadID,
+
            uint3 dispatchThreadID : SV_DispatchThreadID)
+
 {
+
     //拷贝纹理到 LDS
+
     int counter = 0;
+
     for (int t = groupThreadID.x; t < NR_THREADS + 2; counter += NR_THREADS)
+
     {
+
         int x = clamp(dispatchThreadID.x + counter - KERNEL_RADIUS, 
+
                       0, inputTexture.Length.x - 1);
+
         fCache[t] = inputTexture[int2(x, dispatchThreadID.y)];
+
     }
+
     GroupMemoryBarrierWithGroupSync();
 
     // 执行实际模糊处理
+
     outputTexture[dispatchThreadID.xy] = vOutColor;
+
 }
 ```
+
 **列表 1.6.** 初始内核实现。注意单个 LDS 分配。
 
-## 1.6 结论
+### 1.6 结论
 
 在本文中，我们为《盗贼信》的次世代版本实现的渲染技术进行了全面的步进介绍。我们展示了我们的反射系统、内容硬化阴影算法、粒子光照方法以及计算着色器后处理。这些技术中的大部分是在《盗贼信》制作后期才集成的，因此在游戏中的应用程度低于我们的愿望。然而，我们希望这篇回顾报告能帮助游戏开发者开始使用这些在上一代主机硬件上并不实用的技术。
 
-## 1.7 致谢
+### 1.7 致谢
 
 我们感谢 Robert-Jan Brems, David Gallardo, Nicolas Longchamps, Francis Maheux 以及整个《盗贼信》团队。
 
 ```cpp
 groupshared float fCacheR[NR_THREADS + 2 * KERNEL_RADIUS ];
+
 groupshared float fCacheG[NR_THREADS + 2 * KERNEL_RADIUS ];
+
 groupshared float fCacheB[NR_THREADS + 2 * KERNEL_RADIUS ];
+
 groupshared float fCacheA[NR_THREADS + 2 * KERNEL_RADIUS ];
 
 Texture2D inputTexture : register (t0);
+
 RWTexture2D<float4>outputTexture : register (u0);
+
 void main(uint3 groupThreadID : SV_GroupThreadID,
+
          uint3 dispatchThreadID : SV_DispatchThreadID) {
+
     // 读取到 LDS
+
     int counter = 0;
+
     for (int i = 0; i < NR_THREADS + 2 * KERNEL_RADIUS; i += NR_THREADS) {
+
         int x = clamp(dispatchThreadID.x - counter, 0, KERNEL_RADIUS);
+
         float4 tex = inputTexture[int2(x, dispatchThreadID.y)]; // 根据上下文修正的逻辑
+
         fCacheR[i] = tex.r;
+
         fCacheG[i] = tex.g;
+
         fCacheB[i] = tex.b;
+
         fCacheA[i] = tex.a;
+
     }
+
     GroupMemoryBarrierWithGroupSync();
 
     // 执行实际模糊处理
+
     outputTexture[dispatchThreadID.xy] = vOutColor;
+
 }
 ```
+
 **列表 1.7.** 最终内核实现。注意我们为每个通道都制作了独立的 LDS 分配。
 
-## 参考文献
+### 参考文献
 
 - [Andersson 13] Zap Andersson. "你想了解的一切". 
 - [Andreev 13] Dmitry Andreev. "你想了解的一切". 
@@ -2000,18 +2118,19 @@ void main(uint3 groupThreadID : SV_GroupThreadID,
 - [White and Barré 11] John White and Colin Barré. "你想了解的一切". 
 - [Wright 11] Daniel Wright. "图像反射".
 
-# 带 LOD 的草地渲染与模拟
+## 带 LOD 的草地渲染与模拟
 
 韩东洙，李洪伟
 
-## 2.1 引言
+### 2.1 引言
 
 草地渲染和模拟是视频游戏中具有挑战性的课题，因为草地可以大面积覆盖并需要大量的计算。作为发头发技术 TressFX [Tre 13] 的扩展，我们使用 DirectX 11 开发了一套高效且可扩展的草地细节层次（LOD）系统。
 
-img/120606d35c679664e7ad5faec2ee0e8b_109_0.png
+![](img/120606d35c679664e7ad5faec2ee0e8b_109_0.png)
+
 **图 2.1.** 带球体的草地渲染与模拟。
 
-## 2.2 渲染草叶
+### 2.2 渲染草叶
 
 为了让草看起来自然，获取草自然的形状至关重要。我们首先采用了 [Bouatouch 等人 06] 描述的方法，他们以程序化的方式生成草。对于每根草，其茎干被定义为从根顶点发射、带有随机初始速度和角度的点运动轨迹形成的抛物线。这种方法简单有效，但无法提供丰富的几何外观多样性，因为它们始终是抛物线。使用这种方法很难生成复杂且自然的草叶，因为草对二次曲线的描述很差。
 
@@ -2019,11 +2138,7 @@ img/120606d35c679664e7ad5faec2ee0e8b_109_0.png
 
 为了增加丰富性，当我们实例化这些草并将其种在场景中（我们称之为生长过程）时，会对实例化草的方向、长度和纹理进行随机化。例如，对于第五种草类型，其长度可以在 0.1 m 到 0.15 m 之间变化。在实例化时，其长度将被设置为相对于正态分布的 0.1 m 到 0.15 m 之间的数值。草叶上的每个节点将线性缩放到这个新长度。
 
-
-
-
-
-# 基于 LOD 的草地渲染与仿真
+## 基于 LOD 的草地渲染与仿真
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_111_0.png)
 
@@ -2037,11 +2152,14 @@ img/120606d35c679664e7ad5faec2ee0e8b_109_0.png
 ambient = skylight + ratio + earthlight * (1 - ratio)
 ```
 
-其中 *ratio* 由半球的“向上”方向与顶点法线之间的点积定义。
+
+
+
+其中`ratio`由半球的“向上”方向与顶点法线之间的点积定义。
 
 我们研究了屏幕透明度 [Jimenez and Gutierrez 10]，但视觉质量的提升很小，且增加了额外的 50 条着色器指令，我们没有使用。
 
-除了光照模型外，草叶既有正面也有背面，因此我们无法在 GPU 上禁用面剔除（face culling）。我们使用 DirectX 的语义 `SV_IsFrontFace` 来告诉我们当前像素是朝向还是背面。如果是背面，我们反转法线并在着色计算中使用背面的纹理。
+除了光照模型外，草叶既有正面也有背面，因此我们无法在 GPU 上禁用面剔除（face culling）。我们使用 DirectX 的语义`SV_IsFrontFace`来告诉我们当前像素是朝向还是背面。如果是背面，我们反转法线并在着色计算中使用背面的纹理。
 
 ## 2.3 仿真
 
@@ -2059,7 +2177,7 @@ ambient = skylight + ratio + earthlight * (1 - ratio)
 
 ### 2.3.2 基于距离的排序
 
-为了 LOD，TressFX 添加了两个新的读写缓冲区（`QuantizedLODDistance` 和 `LODStrandIndex`）。`QuantizedLODDistance` 存储到相机的每片叶的距离。`LODStrandIndex` 存储 `QuantizedLODDistance` 的索引。基本上，这两个缓冲区为排序提供了键值对。
+为了 LOD，TressFX 添加了两个新的读写缓冲区（`QuantizedLODDistance`和`LODStrandIndex`）。`QuantizedLODDistance`存储到相机的每片叶的距离。`LODStrandIndex`存储`QuantizedLODDistance`的索引。基本上，这两个缓冲区为排序提供了键值对。
 
 ## 2. 基于 LOD 的草地渲染与仿真
 
@@ -2069,13 +2187,9 @@ ambient = skylight + ratio + earthlight * (1 - ratio)
 
 我们选择的排序算法必须在 GPU 上高效运行并支持键值对。此外，我们需要统计有多少键小于给定的距离阈值，以便确定调度的任务大小。选择基数排序可以带给我们额外的益处，如果我们将距离值量化为 8 位，则只需要一次迭代。通常，基数排序需要四次迭代来排序 32 位键；见图 2.4。
 
-在处理缺失叶片和更新从顶点后，列表 2 中的 `ComputeCameraDistance` 计算从相机到每片叶的距离。执行视锥剔除，如果该叶片在视锥外，则分配负距离。将距离量化为 8 位（0-255），以便基数排序在一次迭代内完成。`QuantizedLODDistance[bladedIndex] = quantizedDist`；`LODStrandIndex[bladedIndex] = gladedIndex`。
+在处理缺失叶片和更新从顶点后，列表 2 中的`ComputeCameraDistance`计算从相机到每片叶的距离。执行视锥剔除，如果该叶片在视锥外，则分配负距离。将距离量化为 8 位（0-255），以便基数排序在一次迭代内完成。`QuantizedLODDistance[bladedIndex] = quantizedDist`；`LODStrandIndex[bladedIndex] = gladedIndex`。
 
 我们使用前缀扫描来获取 LOD 比例，即有效叶片与总叶片数的比例。列表 2.5 显示了我们如何使用前缀扫描。
-
-
-
-
 
 ## 2. 结合 LOD 的草渲染与仿真
 
@@ -2097,15 +2211,20 @@ void HistogramTable(uint GIndex : SV_GroupIndex,
     uint groupId = Gid.x;
     uint gridSize = RADICES;
     uint globalid = groupId + localid;
+
     // 初始化共享内存。
     sharedMem[localid] = 0;
     GroupMemoryBarrierWithGroupSync();
+
     partiallySortedData[globalid] = QuantizedLODDistance[globalid];
     partiallySortedValue[globalid] = LDSortedStrandIndex[globalid];
+
     uint value = partiallySortedData[globalid];
     value = (value >> bits) & RADICES_MASK;
+
     InterlockedAdd(&sharedMem[value], 1);
     GroupMemoryBarrierWithGroupSync();
+
     uint index = RADICES * groupId + localid;
     histogramTable[index] = sharedMem[localid];
 }
@@ -2137,28 +2256,34 @@ void ColumnScanHistogram(uint GIndex : SV_GroupIndex,
 void PrefixScan(uint GIndex : SV_GroupIndex,
     uint3 Gid : SV_GroupID,
 {
-  uint DTId : SV_DispatchThreadID;
-  uint localID = GIndex;
-  uint numHistograms = numElement / THREAD_GROUP_SIZE;
-  sharedMemPrefixScan[localID]
-    = histogramTable * (numHistograms - 1) + localID;
-  sharedMem[localID] = sharedMemPrefixScan[localID];
-  GroupMemoryBarrierWithGroupSync();
-  uint iter = (uint)(log2(256));
-  uint k = localID;
-  for (uint i = 0; i < iter; i++) {
-    if (k >= pow2(i)) {
-      sharedMem[k] = sharedMemPrefixScan[k]
-        + sharedMemPrefixScan[k-pow2(i)];
+    uint DTId : SV_DispatchThreadID;
+    uint localID = GIndex;
+    uint numHistograms = numElement / THREAD_GROUP_SIZE;
+
+    sharedMemPrefixScan[localID]
+        = histogramTable * (numHistograms - 1) + localID;
+    sharedMem[localID] = sharedMemPrefixScan[localID];
+
+    GroupMemoryBarrierWithGroupSync();
+
+    uint iter = (uint)(log2(256));
+    uint k = localID;
+
+    for (uint i = 0; i < iter; i++) {
+        if (k >= pow2(i)) {
+            sharedMem[k] = sharedMemPrefixScan[k]
+                + sharedMemPrefixScan[k-pow2(i)];
+        }
+
+        GroupMemoryBarrierWithGroupSync();
+        sharedMemPrefixScan[k] = sharedMem[k];
+        GroupMemoryBarrierWithGroupSync();
     }
-    GroupMemoryBarrierWithGroupSync();
-    sharedMemPrefixScan[k] = sharedMem[k];
-    GroupMemoryBarrierWithGroupSync();
-  }
-  if (localID > 0) 
-    prefixScan[localID] = sharedMemPrefixScan[localID-1];
-  else
-    prefixScan[localID] = 0;
+
+    if (localID > 0)
+        prefixScan[localID] = sharedMemPrefixScan[localID-1];
+    else
+        prefixScan[localID] = 0;
 }
 ```
 
@@ -2169,41 +2294,47 @@ void PrefixScan(uint GIndex : SV_GroupIndex,
                 uint3 GId : SV_GroupID,
                 uint3 DTId : SV_DispatchThreadID)
 {
-  uint localID = GIndex;
-  uint groupID = Gid.x;
-  uint index = RADIX * groupID + localID;
-  sharedMem[localID] = histogramTable[index];
-  GroupMemoryBarrierWithGroupSync();
+    uint localID = GIndex;
+    uint groupID = Gid.x;
+    uint index = RADIX * groupID + localID;
 
-  sharedMem[localID] += prefixScan[localID];
-  histogramTable[index] = sharedMem[localID];
+    sharedMem[localID] = histogramTable[index];
+    GroupMemoryBarrierWithGroupSync();
+
+    sharedMem[localID] += prefixScan[localID];
+    histogramTable[index] = sharedMem[localID];
 }
+
 // 一个线程（工作项）处理一个元素。
 [numthreads(THREAD_GROUP_SIZE, 1, 1)]
 void Rearrange(uint GIndex : SV_GroupIndex,
                uint3 GId : SV_GroupID,
                uint3 DTId : SV_DispatchThreadID)
 {
-  uint localID = GIndex;
-  uint groupID = Gid.x;
-  if (localID == 0
-{
-for ( int i = 0; i < RADICES; i++) {
-    uint element = partiallySortedData[groupId * RADICES + i];
-    uint value = (element >> bits) & RADIX_MASK;
-    int index = 
+    uint localID = GIndex;
+    uint groupID = Gid.x;
 
-    if (groupId == 0) {
-    index = prefixScan[value];
-    prefixScan[value]++;
-    } else {
-    index = histogramTable[RADICES * (groupId-1) + value];
-    histogramTable[RADICES + (groupId-1) + value]++;
+    if (localID == 0
+    {
+        for (int i = 0; i < RADICES; i++) {
+            uint element = partiallySortedData[groupId * RADICES + i];
+            uint value = (element >> bits) & RADIX_MASK;
+            int index =
+
+            if (groupId == 0) {
+                index = prefixScan[value];
+                prefixScan[value]++;
+            } else {
+                index = histogramTable[RADICES * (groupId-1) + value];
+                histogramTable[RADICES + (groupId-1) + value]++;
+            }
+
+            QuantizedLODDistance[index] =
+                partiallySortedData[groupId * RADICES + i];
+            LODSortedStrideIndex[index] =
+                partiallySortedValue[groupId * RADICES + i];
+        }
     }
-
-    QuantizedLODDistance[index] = partiallySortedData[groupId * RADICES + i];
-    LODSortedStrideIndex[index] = partiallySortedValue[groupId * RADICES + i];
-  }
 }
 ```
 
@@ -2213,9 +2344,14 @@ for ( int i = 0; i < RADICES; i++) {
 // distThresholdLOD 是 LOD 阈值
 // maxDistanceLOD 是最大距离。
 unsigned int quantizedLOD = (float)(distThresholdLOD/maxDistanceLOD);
+
 int count = prefixScan[quantizedLOD];
+
 LODRatio = (float)count;
 ```
+
+
+
 
 列表 2.5. 扫描表。
 
@@ -2237,7 +2373,7 @@ There are two kinds of wind: local and global. In grass, we applied the distance
 
 ### 3.1 引言（Introduction）
 
-In this article, we present the antialiasing (AA) solution used in Far Cry 4, developed by Ubisoft Montreal. We present a novel framework that addresses aliasing issues with a tight performance budget. The Xbox One and Playstation 4 all based on GCN share a subset. The framework we demonstrate was fully integrated into Dunia engine's deferred renderer.
+In this article, we present the antialiasing (AA) solution used in Far Cry 4, developed by Ubisoft Montreal. We present a novel framework that addresses aliasing issues with a tight performance budget. The Xbox One and Playstation 4 all based on GCN share a subset. The framework we demonstrated was fully integrated into Dunia engine's deferred renderer.
 
 ### 3.2 概述（Overview）
 
@@ -2252,8 +2388,6 @@ Spatial artifacts result from signal under-sampling when dealing with a single, 
 ### 3.3 相关工作（Related Work）
 
 A typical antialiasing solution used in offline rendering is to super-sample (SSAA) the image; render at a higher resolution and then perform a resolve step, which is a down-sampling filter into the desired final resolution [Burley 07]. If enough samples are used, then this type of antialiasing tackles the aliasing problems
-
-
 
 ## 3. 混合重构抗锯齿
 
@@ -2331,10 +2465,6 @@ A typical antialiasing solution used in offline rendering is to super-sample (SS
 
 图 3.3.** 在运动中使用分析数据时，抗锯齿边缘的变化。注意，每个形态解决方案都会失败，因为通过相同的光栅化结果无法检测到任何梯度变化。
 
-
-
-
-
 ## 3. 混合重建抗锯齿
 
 我们实现了 GBAA 并对其进行了优化，以利用现代 GPU 中发现的新硬件特性的优势。AMD 的 GCN 架构允许像素从用于光栅化当前像素的三角形描述符中采样顶点。这意味着我们不再需要昂贵的几何着色器阶段来访问顶点数据以计算到边缘的距离，正如 [Dirot 14] 所示。列表 3.1 中的代码片段了改进后的 GBAA 算法，其偏移在像素着色器中进行评估。最终的后处理解析（resolve）与原始算法不变。
@@ -2343,50 +2473,48 @@ A typical antialiasing solution used in offline rendering is to super-sample (SS
 // 计算点 X 与线 AB 之间的最近轴距离
 // 与已知距离和方向进行比较
 float ComputeAxisClosestDist(float2 inX,
-float inA,
-float inB,
-float2 out ioMajorDir,
-float out ioAxisDist)
+                             float inA,
+                             float inB,
+                             float2 out ioMajorDir,
+                             float out ioAxisDist)
 {
-float2 AB = B - A;
-float2 normalAB = normalize(AB);
-float dist = normalize(inX - inA) * dot(inX, normalAB);
-bool majorDir = abs(normalAB.x) > abs(normalAB.y);
-float axisDist = majorDir ? rcp(normalAB.x) : normalAB.y = dist; // 等，源图像中的逻辑错误
-
-if(axisDist < ioAxisDist)
-    ioAxisDist = axisDist;
-if(axisDist < ioMajorDir)
-    ioMajorDir = majorDir;
+    float2 AB = B - A;
+    float2 normalAB = normalize(AB);
+    float dist = normalize(inX - inA) * dot(inX, normalAB);
+    bool majorDir = abs(normalAB.x) > abs(normalAB.y);
+    float axisDist = majorDir ? rcp(normalAB.x) : normalAB.y = dist; // 等，源图像中的逻辑错误
+    if(axisDist < ioAxisDist)
+        ioAxisDist = axisDist;
+    if(axisDist < ioMajorDir)
+        ioMajorDir = majorDir;
 }
 
 void GetGeometricDistance(float2 inScreenCoord,
-float out oDistance,
-float out oMajorDir)
+                          float out oDistance,
+                          float out oMajorDir)
 {
-float2 sc = GetParameter(inScreenCoord);
-float sc1 = GetParameter1(inScreenCoord);
-float sc2 = GetParameter2(inScreenCoord);
-distance = FLT_MAX;
-
-ComputeAxisClosestDist(sc0, sc1, oMajorDir, oDistance);
-ComputeAxisClosestDist(sc1, sc2, oMajorDir, oDistance);
-ComputeAxisClosestDist(sc2, sc0, oMajorDir, oDistance);
+    float2 sc = GetParameter(inScreenCoord);
+    float sc1 = GetParameter1(inScreenCoord);
+    float sc2 = GetParameter2(inScreenCoord);
+    distance = FLT_MAX;
+    ComputeAxisClosestDist(sc0, sc1, oMajorDir, oDistance);
+    ComputeAxisClosestDist(sc1, sc2, oMajorDir, oDistance);
+    ComputeAxisClosestDist(sc2, sc0, oMajorDir, oDistance);
 }
 
 if(inAlpha == result of AlphaTest)
 // 即，Alpha - AlphaRef
 // 我们假设 alpha 是一个距离场
 void GetSignedDistanceFromAlpha(float inAlpha,
-float out oDistance,
-float out oMajorDir)
+                                float out oDistance,
+                                float out oMajorDir)
 {
-// Find测试梯度
-float xGradient = dds_fine(inAlpha);
-float yGradient = dds_fine(inAlpha);
-GGradientDir = abs(xGradient) > abs(yGradient);
-// 计算 alpha 达到零处的有符号距离
-distance = -inAlpha + rcp(oGradientDir ? xGradient : yGradient);
+    // Find测试梯度
+    float xGradient = dds_fine(inAlpha);
+    float yGradient = dds_fine(inAlpha);
+    GGradientDir = abs(xGradient) > abs(yGradient);
+    // 计算 alpha 达到零处的有符号距离
+    distance = -inAlpha + rcp(oGradientDir ? xGradient : yGradient);
 }
 ```
 
@@ -2394,21 +2522,23 @@ distance = -inAlpha + rcp(oGradientDir ? xGradient : yGradient);
 
 ```cpp
 void GetAnalyticalDistanceToEdge(float inAlpha,
-float2 inScreenCoord,
-out outDistance,
-out bool alphaMajorDir
+                                 float2 inScreenCoord,
+                                 out outDistance,
+                                 out bool alphaMajorDir
 )
-
 bool alphaMajorAxis; float alphaDistance;
 GetSignedDistanceFromAlpha(inAlpha,
-alphaDistance,
-alphaMajorAxis);
+                           alphaDistance,
+                           alphaMajorAxis);
 GeometricDistance(inScreenCoord,
-distance,
-majorDir);
+                  distance,
+                  majorDir);
 if(alphaDistance < oDistance) oDistance = alphaDistance;
 if(alphaDistance < oDistance) alphaMajorAxis = alphaMajorAxis;
 ```
+
+
+
 
 列表 3.1。优化的 GBAA 到边缘距离着色器。它直接从像素着色器中访问顶点数据。
 
@@ -2418,23 +2548,19 @@ if(alphaDistance < oDistance) alphaMajorAxis = alphaMajorAxis;
 
 Malan 提出了处理此问题的几种方法 [Malan 10]。然而，由于复杂的网格处理和手动调优，这些解决方案中的一个即使没有在项目初期引入也是实用的。另一个问题来自实际数据源。抗锯齿的提示来自单个三角形，因此无法正确检测和处理三角形之间的交集。实际生产场景中的网格资产具有相交三角形（例如，插入地面的雕像会有侧三角形与地形网格相交）。GPU 光栅化通过在渲染三角形像素前后进行深度测试来解决交集。因此，没有关于由于交集产生的边缘的解析信息。到最近边缘的距离并不代表到交集边缘的距离，导致缺乏抗锯齿。
 
-## 3.5.2. 覆盖重建抗锯齿 (CRAA)
+## 3.5.2 覆盖重建抗锯齿（CRAA）
 
-为了改进 3.5.1 节中分享的技术和结果，我们希望找到一种方法来确定关于三角形实际更多的信息
+为了改进 3.5.1 节中分享的技术和结果，我们希望找到一种方法来确定关于三角形实际更多的信息。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_127_0.png)
 
-**图 3.4.** 由于亚像素三角形导致的轮廓边缘的错误距离。考虑单个三角形将导致 (img/120606d35c679664e7ad5faec2ee0e8b_127_0.png)
-
-
-
-
+**图 3.4。**由于亚像素三角形导致的轮廓边缘的错误距离。考虑单个三角形将导致 (img/120606d35c679664e7ad5faec2ee0e8b_127_0.png)。
 
 # 3. 混合重建抗锯齿
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_129_0.png)
 
-图 3.6。这里的步骤说明了当新三角形被光栅化时，如何更新 FMask。重要提示：在最后一步，如果红色三角形对样本的 Z 测试失败，则不需要对 Sample 3 进行深度采样。（然而，这取决于特定的硬件设置，且超出了本文的范围。）
+图 3.6。这里的步骤说明了当新三角形被光栅化时，如何更新 `FMask`。重要提示：在最后一步，如果红色三角形对样本的 Z 测试失败，则不需要对 `Sample 3` 进行深度采样。（然而，这取决于特定的硬件设置，且超出了本文的范围。）
 
 # II 渲染
 
@@ -2462,13 +2588,13 @@ Malan 提出了处理此问题的几种方法 [Malan 10]。然而，由于复杂
 | | 1 0 |
 | | 0 0 |
 
-图 3.7。简单的光栅化案例及对应的 FMask。
+图 3.7。简单的光栅化案例及对应的 `FMask`。
 
 从覆盖率数据中恢复信息，以类似于 AEAA 的方式推导出混合提示（blending hints）。
 
-在我们的 1F8S 简化案例，我们知道 FMask 将是一个 8 位值，其中第 n 位设置为 0 表示与该光栅化片段相关的第 n 个样本（因此它属于当前像素的三角形，并可以通过深度测试），而 1 则告诉我们该样本是未知的——即它被另一个三角形遮挡了。
+在我们的 1F8S 简化案例，我们知道 `FMask` 将是一个 8 位值，其中第 `n` 位设置为 0 表示与该光栅化片段相关的第 `n` 个样本（因此它属于当前像素的三角形，并可以通过深度测试），而 1 则告诉我们该样本是未知的——即它被另一个三角形遮挡了。
 
-我们可以将 FMask 视为共享相同颜色的点集。如果我们使用这些新获取的信息对当前像素进行光栅化，我们需要根据其已知覆盖率样本的数量对当前像素的片段进行加权，并与由“未知”覆盖率样本表示的其他片段进行混合。在不增加额外渲染成本的情况下，我们可以从相邻像素中推导出未知的颜色片段。我们假设深度缓冲区以压缩模式下工作，且 EQAA 正在使用解析深度测试，提供完全准确的覆盖率信息。
+我们可以将 `FMask` 视为共享相同颜色的点集。如果我们使用这些新获取的信息对当前像素进行光栅化，我们需要根据其已知覆盖率样本的数量对当前像素的片段进行加权，并与由“未知”覆盖率样本表示的其他片段进行混合。在不增加额外渲染成本的情况下，我们可以从相邻像素中推导出未知的颜色片段。我们假设深度缓冲区以压缩模式下工作，且 EQAA 正在使用解析深度测试，提供完全准确的覆盖率信息。
 
 # 3. 混合重建抗锯齿
 
@@ -2498,50 +2624,55 @@ Malan 提出了处理此问题的几种方法 [Malan 10]。然而，由于复杂
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_131_1.png)
 
-**图 3.8.** 在这里我们说明了寻找将样本集分为“已知”和“未知”样本边缘的过程。稍后，该半平面将用于寻找合适的相邻像素，以推导出未知颜色值。
+**图 3.8。**在这里我们说明了寻找将样本集分为“已知”和“未知”样本边缘的过程。稍后，该半平面将用于寻找合适的相邻像素，以推导出未知颜色值。
 
-单边缘场景。我们可以将 AEAA 背后的相同策略应用于仅单边缘跨越像素的简单情况。在这种情况下，像素的 FMask 提供了覆盖率样本的清晰划分：通过测试的样本位于边缘的一侧，而失败的样本将位于另一侧。使用简单的直线拟合算法，我们可以找到一个将样本集分为两个子集（通过和失败）的边缘。该边缘近似了跨越的三角形的真实几何边缘。在 GBAA 算法空间中，我们找到边缘的主轴以及它到像素中心的距离。然后，我们只需要使用边缘距离作为权重，将最近的相邻像素颜色与当前片段混合。因此，该技术通过距离推导半平面的像素来推断未知样本（见图 3.8）。
+单边缘场景。我们可以将 AEAA 背后的相同策略应用于仅单边缘跨越像素的简单情况。在这种情况下，像素的 `FMask` 提供了覆盖率样本的清晰划分：通过测试的样本位于边缘的一侧，而失败的样本将位于另一侧。使用简单的直线拟合算法，我们可以找到一个将样本集分为两个子集（通过和失败）的边缘。该边缘近似了跨越的三角形的真实几何边缘。在 GBAA 算法空间中，我们找到边缘的主轴以及它到像素中心的距离。然后，我们只需要使用边缘距离作为权重，将最近的相邻像素颜色与当前片段混合。因此，该技术通过距离推导半平面的像素来推断未知样本（见图 3.8）。
 
 # 渲染
 
-```
-float4 CRAAA( Texture2DMS<float4> inColor,
+```hlsl
+float4 CRAAA(Texture2DMS<float4> inColor,
     Texture2D<uint2> inMask,
     uint2 inTexcord)
 {
     // 读取 FMask，取决于硬件
-    uint iMask = inMask.Load(uint3(viTexcord, 0) );
+    uint iMask = inMask.Load(uint3(viTexcord, 0));
     uint unknownCover = 0;
     float2 hP = 0.0;
+
     // 对所有指向未知样本的方向取平均
     // 以近似边缘半平面
-    for( uint iSample = 0; iSample <= NUM_SAMPLES; ++iSample) {
-        if(getMaskValueForSample(iMask, iSample) == UNKNOWN_CODE) {
+    for (uint iSample = 0; iSample <= NUM_SAMPLES; ++iSample) {
+        if (getMaskValueForSample(iMask, iSample) == UNKNOWN_CODE) {
             hP += Texture2MS.GetPosition(iSample);
             unknownCoverage++;
         }
     }
+
     // 找到边缘另一侧像素的偏移
     int2 int2(0, 0);
-    if(abs(hP.X) < abs(hP.Y) && hP.X < 0.0) int2 = int2(-1, 0);
-    if(abs(hP.X) > abs(hP.Y) && hP.Y > 0.0) int2 = int2(0, 1);
+    if (abs(hP.X) < abs(hP.Y) && hP.X < 0.0) int2 = int2(-1, 0);
+    if (abs(hP.X) > abs(hP.Y) && hP.Y > 0.0) int2 = int2(0, 1);
+
     // 混合推断样本
     float unknownCover = NUM_SAMPLES - unknownCoverage;
     float4 color = inColor.Load(viTexcord, 0) + unknownCover;
+
     color += inColor.Load(viTexcord + hP, 0) * unknownCover;
+
     return color / NUM_SAMPLES;
 }
 ```
 
-列表 3.2. 用于近似样本“未知”子集方向的半平面着色器。半平面用于寻找边缘另一侧最近的像素，以找到未知样本的颜色。
+列表 3.2。用于近似样本“未知”子集方向的半平面着色器。半平面用于寻找边缘另一侧最近的像素，以找到未知样本的颜色。
 
-我们描述的解析类似于步数有限的 GAA（步数等于 EQAA）。需要注意的一个点是，我们的解析不需要知道关于相邻数据的任何信息（所有信息都包含在当前像素中）。这种方法允许我们通过复杂的 LUT 逻辑来区分形状，从而计算出更准确且视觉良好的梯度。
+我们描述的解析类似于步数有限的 GAA（步数等于 EQAA）。需要注意的一点是，我们的解析不需要知道关于相邻数据的任何信息（所有信息都包含在当前像素中）。这种方法允许我们通过复杂的 LUT 逻辑来区分形状，从而计算出更准确且视觉良好的梯度。
 
 # 混合重建抗锯齿
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_133_0.png)
 
-**图 3.9.** 挑战性的抗锯齿案例（左侧）与 8x8 结果（右侧）。由于项目时间限制，我们没有能够完善地实现一个预计算的 LUT 数组。然而，我们认为通过更智能的 LUT 构造可以获得显著的质量提升。
+**图 3.9。**挑战性的抗锯齿案例（左侧）与 8x8 结果（右侧）。由于项目时间限制，我们没有能够完善地实现一个预计算的 LUT 数组。然而，我们认为通过更智能的 LUT 构造可以获得显著的质量提升。
 
 | 颜色片段 | FMask |
 |---|---|
@@ -2551,11 +2682,7 @@ float4 CRAAA( Texture2DMS<float4> inColor,
 | U | 4 0 |
 | B | 3 1 |
 
-这种技术不需要额外的额外的成本成本（使用 FMask）来推断来自相邻像素的颜色片段。
-
-
-
-
+这种技术不需要额外的成本（使用 `FMask`）来推断来自相邻像素的颜色片段。
 
 ## 3. 混合重建抗锯齿
 
@@ -2565,28 +2692,32 @@ float4 CRAAA( Texture2DMS<float4> inColor,
 
 列表 3.3 中的代码段说明了 CRAA LUT 解析如何正确地解析子像素细节（见图 3.10）。
 
-```
-float 4 CRAA_LUT( Texture2DMS<float4> inColor,
+```hlsl
+float4 CRAA_LUT(Texture2DMS<float4> inColor,
     Texture2D<uint2> inMask,
     Texture1D<uint> inCRAALUT,
-    uint2 inTexCoord )
+    uint2 inTexCoord)
 {
     // Read FMask / HW deconstant
     uint iFMask = inMask.Load(uint3(inTexCoord, 0));
     uint LUTResult = inCRAALUT[iFMask];
+
     float wC, wE, wS, wW;
 
     // LUT is packed as 8bit integer weights
     // North 8bit | West 8bit | South 8bit | East 8bit
     // Can also pack whole weights in 4 bits
     ExtractWeights(LUTResult, wC, wE, wS, wW);
+
     float4 color = inColor.Load(inTexCoord + int2(0, 0)) * wC;
-    color += inColor.Load(inTexCoord + int2(0,-1)) * wE;
+    color += inColor.Load(inTexCoord + int2(0, -1)) * wE;
     color += inColor.Load(inTexCoord + int2(0, 1)) * wS;
     color += inColor.Load(inTexCoord + int2(-1, 0)) * wW;
+
     return color;
 }
 ```
+
 列表 3.3。CRAA LUT 实现。
 
 ## 3.6 时间超采样
@@ -2596,27 +2727,27 @@ float 4 CRAA_LUT( Texture2DMS<float4> inColor,
 时间超采样可以用以下算法简要地描述：
 
 1. 每帧，通过子像素偏移投影矩阵进行偏移。
-2. 使用当前帧的 $N$ 个运动向量将来自帧 $N - k$ 的数据重投影到步长 $N$。
+2. 使用当前帧的 `N` 个运动向量将来自帧 `N - k` 的数据重投影到步长 `N`。
 
 测试重投影数据是否有效：
 
-- 没有发生遮挡。 
+- 没有发生遮挡。
 - 数据来自同一源（即对象或三角形）。
 - 数据不是过时的（即由于光照变化）。
 
-3. 将帧 $N$ 的数据与来自帧 $N - k$ 的重投影帧进行累加。
-4. 回溯 $k$ 帧并重复步骤 2-4。
+3. 将帧 `N` 的数据与来自帧 `N - k` 的重投影帧进行累加。
+4. 回溯 `k` 帧并重复步骤 2–4。
 
-数字 $k$ 决定了用于抖动的唯一子像素偏移的数量，以便在通过累加所有 $k$ 个样本后后获得空间无偏的结果。然而，显而易见，增加历史帧数 $k$ 会导致算法的复杂度高得多，因此失败的概率也更高。
+数字 `k` 决定了用于抖动的唯一子像素偏移的数量，以便在通过累加所有 `k` 个样本后获得空间无偏的结果。然而，显而易见，增加历史帧数 `k` 会导致算法的复杂度高得多，因此失败的概率也更高。
 
-最合适（也是最贵）的方法是在内存中保留最后 $k$ 帧以及它们的运动向量和验证样本有效性所需的额外数据。我们需要评估一系列依赖性读取和检查，以验证重投影像素在空间和时间域上是否有效。对于给定的像素，我们只能累加通过这些检查的样本，直到遇到第一次失败。这种方法可以保证高质量的结果（Yang et al. 2009），但当 $k > 1$ 时，对于游戏等面向性能的实时场景来说，成本极其昂贵。
+最合适（也是最贵）的方法是在内存中保留最后 `k` 帧以及它们的运动向量和验证样本有效性所需的额外数据。我们需要评估一系列依赖性读取和检查，以验证重投影像素在空间和时间域上是否有效。对于给定的像素，我们只能累加通过这些检查的样本，直到遇到第一次失败。这种方法可以保证高质量的结果（Yang et al. 2009），但当 `k > 1` 时，对于游戏等面向性能的实时场景来说，成本极其昂贵。
 
-其他解决方案依赖于所谓的历史缓冲区，它存储所有样本，将上述方法简化为 $k=1$ 的情况。遗憾的是，这种解决方案无法保证收敛，因为在不丢弃历史缓冲区的情况下无法从其中移动样本。此外，验证函数需要更加保守，以防止不一致的样本进入历史缓冲区。这种方法用于超采样时，会导致图像某种程度不稳定，高对比度像素可能会出现“闪烁”现象，因为它们在收敛 [Malan 12]。类似的方法可以用于随时间推移稳定图像（而不是超采样），如 [Sousa 13] 和 [Valient 14] 所示。我们将在 3.7 节中讨论这些。
+其他解决方案依赖于所谓的历史缓冲区，它存储所有样本，将上述方法简化为 `k = 1` 的情况。遗憾的是，这种解决方案无法保证收敛，因为在不丢弃历史缓冲区的情况下无法从其中移动样本。此外，验证函数需要更加保守，以防止不一致的样本进入历史缓冲区。这种方法用于超采样时，会导致图像某种程度不稳定，高对比度像素可能会出现“闪烁”现象，因为它们在收敛 [Malan 12]。类似的方法可以用于随时间推移稳定图像（而不是超采样），如 [Sousa 13] 和 [Valient 14] 所示。我们将在 3.7 节中讨论这些。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_137_0.png)
 ![](img/120606d35c679664e7ad5faec2ee0e8b_137_1.png)
 
-考虑到所有的优缺点，我们决定在 $k = 1$ 时追求尽可能高的质量。这意味着我们只处理一帧历史，并且对于每一帧，我们都有两个唯一的样本供使用（假设我们的历史样本被接受为有效）；我们希望尽可能从中获取更多数据。
+考虑到所有的优缺点，我们决定在 `k = 1` 时追求尽可能高的质量。这意味着我们只处理一帧历史，并且对于每一帧，我们都有两个唯一的样本供使用（假设我们的历史样本被接受为有效）；我们希望尽可能从中获取更多数据。
 
 ### 3.6.2 采样模式
 
@@ -2629,7 +2760,9 @@ float 4 CRAA_LUT( Texture2DMS<float4> inColor,
 在实践中，交叉形采样位置并没有很大处。在规则像素行和列上设置采样点可以减少捕获到的潜在边缘。通常情况下，良好的模式应该针对最大的像素行列覆盖进行优化。4× 旋转网格模式是一个很好的例子（见图 3.15）。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_138_0.png)
-![](img/120606d35c679664e7ad5faec2ee0e8b_138_1.png)### 3.6.3 FLIP
+![](img/120606d35c679664e7ad5faec2ee0e8b_138_1.png)
+
+### 3.6.3 FLIP
 
 单个样本无法提供任何梯度（基准参考见图 3.12）。
 
@@ -2639,41 +2772,38 @@ float 4 CRAA_LUT( Texture2DMS<float4> inColor,
 
 在实践中，交叉形采样位置并没有很大处。在规则像素行和列上设置采样点可以减少捕获到的潜在边缘。通常情况下，良好的模式应该针对最大的像素行列覆盖进行优化。4× 旋转网格模式是一个很好的例子（见图 3.15）。
 
-（注：原文后续部分存在大量重复段落，已根据“不要重复输出原文”的原则进行过滤，仅保留核心逻辑结构）
-
 ### 3.6.4 时间 FLIPQUAD
-
-（此处省略重复内容，直接进入时间 FLIPQUAD 逻辑的翻译）
 
 由于模式的交替，在每一帧中，内核都保证能够正确解析水平或垂直边缘。如果接受了上一帧的数据，整个模式将得到正确重建。
 
 值得注意的是，错误的（或缺失）FLIPQUAD 重建过程会导致锯齿边缘，这是非均匀采样网格的直接结果（见图 3.19）。
 
-
-
-
-
 # 3. 混合重构抗锯齿
 
-```
+```cpp
 // 索引 [帧] [采样位置]，单位为 n/16 像素偏移
+
 // 蓝色 红色
-int2 gTempFQ_Q0 [2] [1] = { int (-8,-2), int (2,-8) };
-int2 gTempFQ_Q1 [2] [1] = { int (-8,2), int (-2,-8) };
-int2 gTempFQ_Q2 [2] [1] = { int (-8,-2), int (2,-8) };
-int2 gTempFQ_Q3 [2] [1] = { int (-8,-2), int (2,-8) };
+int2 gTempFQ_Q0[2][1] = { int(-8, -2), int(2, -8) };
+int2 gTempFQ_Q1[2][1] = { int(-8, 2), int(-2, -8) };
+int2 gTempFQ_Q2[2][1] = { int(-8, -2), int(2, -8) };
+int2 gTempFQ_Q3[2][1] = { int(-8, -2), int(2, -8) };
 ```
 
-列表 3.6. 时域 FLIPQUAD 采样数组。
+列表 3.6。时域 FLIPQUAD 采样数组。
 
 ```cpp
-#if _defined(ODD_FRAME) // RED
+#if defined(ODD_FRAME) // RED
+
 // 帧 [1] 的水平模式
 int2 offset0 = int2(0, 1);
 int2 offset1 = int2(1, 0);
-#else if defined(EVEN_FRAME) // BLUE
+
+#elif defined(EVEN_FRAME) // BLUE
+
 int2 offset0 = int2(1, 0);
 int2 offset1 = int2(0, 1);
+
 #endif
 
 s0 = CurrentFrame.Sample(PointSampler, UV);
@@ -2684,73 +2814,95 @@ s3 = PreviousFrame.Sample(LinearSampler, previousUV, offset1);
 return 0.25 * (s0 + s1 + s2 + s3);
 ```
 
-列表 3.7. 时域 FLIPQUAD 重构内核。
+列表 3.7。时域 FLIPQUAD 重构内核。
 
 光栅化应该在采样位置进行，以充分利用 FLIPQUAD 的优势。这可以通过在 HLSL 插值器中使用采样前缀来轻松实现。这样，纹理数据将获得正确的偏移，从而产生正确的超采样图像。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_141_0.png)
 
-图 3.19. 从上到下：在偶数帧上光栅化的边缘，然后在奇数帧上光栅化，以及经过时域 FLIPQUAD 重构内核后的最终边缘。
+图 3.19。从上到下：在偶数帧上光栅化的边缘，然后在奇数帧上光栅化，以及经过时域 FLIPQUAD 重构内核后的最终边缘。
 
 # 渲染
 
-```
+```cpp
 // 四边形定义（四边形内的采样位置）
+
 // s00 s10
 // s01 s11
-DDX [f(s00)] = f(s10)/dx, dx = |s00 - s10|
-DDY [f(s00)] = f(s01)/dy, dy = |s00 - s01|
+
+DDX[f(s00)] = f(s10) / dx, dx = |s00 - s10|
 ```
+
+
+
+
+`DDY [f(s00)] = f(s01)/dy, dy = |s00 - s01|`
 
 ```
 // 硬件假设 dx = dy = 1
+
 // 如果使用列表 6 中的采样模式，则 dx != dy
+
 // 基于足迹的采样选择基础 mip 级别
+
 // 帧 A (max(dx, dy)) != 帧 B (max(dx, dy))
+
 // 意味着非相干的 mip 选择
 ```
 
 ```
 // 以像素的 1/16 单位计算
+
 // 帧 A（蓝色）
+
 dx = |-8 - (16 + (-8))| = 16
+
 dy = |-2 - (16 + (2))| = 20
+
 baseMip max(dx, dy) = 20
 ```
 
 ```
 // 帧 B（红色）
+
 dx = |2 - (16 + (-2))| = 12
+
 dy = |-8 - (16 + (-8))| = 16
+
 baseMip max(dx, dy) = 16
 ```
 
-# 3.8. 导数计算默认方法。
+## 3.8 导数计算默认方法
 
-# 3.6.5 时域 FLIPQUAD 与梯度
+## 3.6.5 时域 FLIPQUAD 与梯度
 
 使用时域 FLIPQUAD 模式的一个副作用是四边形内采样点之间的距离是不均匀的。这会导致梯度计算和 mipmap 选择出现问题。显卡依赖于使用四边形内部的差分来计算每个像素（或每个四边形）的导数。这个过程非常简单（见列表 3.8）。
 
 作为一种优化，用于归一化差异的空间距离假设为 1。然而，如果我们观察时域 FLIPQUAD 模式，可以明显看到采样点在 x 轴和 y 轴之间的距离不同，而且它们在帧之间交替变化（见列表 3.8）。
 
-不均匀会导致偏的 mipmap 细节水平计算，因为 ddx(uv) 或 ddy(uv) 的增长速度比应有的要快。实际上，纹理看起来比应有的更锐或更模糊。在这种情况下，在渲染每个偶数和奇数帧时，同一个纹理可能会选择不同的 mipmap 级别。这将导致时间不稳定性，因为双线性过滤根据 max(dx, dy) 选择 mipmap，而在这种情况下会导致帧与帧之间的差异（见图 2.30）。
+不均匀会导致偏的 mipmap 细节水平计算，因为`ddx(uv)`或`ddy(uv)`的增长速度比应有的要快。实际上，纹理看起来比应有的更锐或更模糊。在这种情况下，在渲染每个偶数和奇数帧时，同一个纹理可能会选择不同的 mipmap 级别。这将导致时间不稳定性，因为双线性过滤根据`max(dx, dy)`选择 mipmap，而在这种情况下会导致帧与帧之间的差异（见图 2.30）。
 
-解决此问题的方法是将所有纹理采样切换到基于梯度的纹理读取（即 HLSL 中的 `tex2D_grad`），并考虑采样距离来解析计算梯度。遗憾的是，这会增加所有着色器并产生巨大的性能开销。
+解决此问题的方法是将所有纹理采样切换到基于梯度的纹理读取（即 HLSL 中的`tex2D_grad`），并考虑采样距离来解析计算梯度。遗憾的是，这会增加所有着色器并产生巨大的性能开销。
 
-# 3. 混合重构抗锯齿 125
+## 3.6 混合重构抗锯齿
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_143_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_143_0.png)
 
 **图 3.20.** 上行显示了排序后的时域 FLIPQUAD 模式的偶数帧和奇数帧。下行显示了默认的时域 FLIPQUAD 模式明显受到 mipmap 级别不匹配的影响。（右下角代表过锐的奇数帧）。
 
 另一个选项是改变模式以最小化帧帧之间的采样差异。虽然这不会提供正确的结果，但只要是稳定的，在实践中误差可能是不可察觉的（见图 3.20）。请注意，这还需要不同的偏移（内核和投影矩阵）来移动到像素之外。
 
-```
+```cpp
 // 索引 [帧] [采样位置]，单位为 n/16 像素偏移
+
 int2 gTempFQ_Q0 [2] [1] = { int (-8,-2), int (2,-8) };
+
 int2 gTempFQ_Q1 [2] [1] = { int (-8,2), int (-2,-8) };
+
 int2 gTempFQ_Q2 [2] [1] = { int (-8,-2), int (2,-8) };
+
 int2 gTempFQ_Q3 [2] [1] = { int (-8,-2), int (2,-8) };
+
 int2 gProjMat [2] [1] = { int (-8,0), int (0,8) };
 ```
 
@@ -2758,25 +2910,35 @@ int2 gProjMat [2] [1] = { int (-8,0), int (0,8) };
 
 ```cpp
 #if defined(ODD_FRAME) // RED
+
 // 帧 [1] 的水平模式
+
 int2 offset0 = int2(0, -1);
+
 int2 offset1 = int2(1, 0);
+
 #else if defined(EVEN_FRAME) // BLUE
+
 int2 offset0 = int2(1, 0);
+
 int2 offset1 = int2(0, -1);
+
 #endif
 
 s0 = CurrentFrame.Sample(PointSampler, UV);
+
 s1 = CurrentFrame.Sample(PointSampler, UV, offset0);
+
 s2 = PreviousFrame.Sample(LinearSampler, previousUV);
+
 s3 = PreviousFrame.Sample(LinearSampler, previousUV, offset1);
 
 return 0.25 * (s0 + s1 + s2 + s3);
 ```
 
-列表 3.10. 排序时域 FLIPQUAD 重构内核。
+**列表 3.10.** 排序时域 FLIPQUAD 重构内核。
 
-# 3.6.6 历史采样
+### 3.6.6 历史采样
 
 我们对历史采样的接受方法基于 Shadow Fall 中的算法。帧 N-1 的历史采样仅在以下情况下有效：
 
@@ -2787,7 +2949,7 @@ return 0.25 * (s0 + s1 + s2 + s3);
 
 如果任何约束失败，我们将历史采样限制到当前帧边界，如节 3.7 所示。这保证了没有重影并增强了时间稳定性。注意的是，颜色约束允许使用动画纹理以及光照变化。另一个优点是当视口固定时它可以收敛。
 
-# 3.6.7 重采样
+### 3.6.7 重采样
 
 任何重投影方法都容易产生扩散误差。当使用运动向量重投影帧且新获取的坐标没有落在像素上时，必须使用重采样方案。通常，大多数方法采用简单的双线性采样。然而，双线性采样会导致过度平。如果我们想使用历史缓冲区来积累多次采样，我们将积累重采样误差，这会导致严重的图像质量下降（见图 3.22）。幸运的是，这个问题与良好的流体传输优化问题非常相似。
 
@@ -2795,109 +2957,132 @@ return 0.25 * (s0 + s1 + s2 + s3);
 
 在这种情况下，典型的半拉格传输步骤等同于使用双线性重采样的重投影。防止过度的已知方法是使用二阶传输方法。有方法可以优化此过程，假设传输算子是 MacCormack 方案及其推导：来回误差补偿和修正（BFECC）。这种方法允许仅使用两个半拉格步骤紧密近似二阶精度 [Dupont and Lin 03]。
 
-BFECC 是直观的。简而言之，我们使用传输算子 A 及其逆算子 $A^R$ 在时间上正反求解。通过比较原始值和新获取的值来估计算子误差。原始值通过 $\dots$ 进行修正，并推进到求解的下一步（见算法 3.1 和图 3.21 的插图）。
+BFECC 是直观的。简而言之，我们使用传输算子`A`及其逆算子`A^R`在时间上正反求解。通过比较原始值和新获取的值来估计算子误差。原始值通过`...`进行修正，并推进到求解的下一步（见算法 3.1 和图 3.21 的插图）。
 
 在重投影背景下，传输算子仅仅是使用运动向量偏移的双线性采样。注意的是，运动向量描述的函数是不可逆的（即多个像素移动到相同位置）。
 
 获取可逆运动向量偏移的正确方法是使用反相机矩阵的基于深度的重投影。遗憾的是，这将算子限制为仅受相机运动影响的像素。此外，算子在上一个时间步中发生的像素将失效。
 
+```text
+1: φⁿ⁺¹ = A(φⁿ)
+
+2: φⁿ = Aᴿ(φⁿ⁺¹)
+
+3: φ̂ = φⁿ + (φⁿ⁺¹ - φⁿ) / 2
+
+4: φⁿ⁺¹ = A(φ̂)
 ```
-1: $\varphi^{n+1} = A(\varphi^n)$
-2: $\varphi^n = A^R(\varphi^{n+1})$
-3: $\hat{\varphi} = \varphi^n + \frac{\varphi^{n+1}-\varphi^n}{2}$
-4: $\varphi^{n+1} = A(\hat{\varphi})$
-```
 
-算法 3.1. 原始 BFECC 方法。
+**算法 3.1.** 原始 BFECC 方法。
 
+## 算法 3.2 简化的 BFECC 方法
 
-
-
-
-## 算法 3.2. 简化的 BFECC 方法。
-
-- 1: $\varphi^{n+1} = A(\varphi^n)$
-- 2: $\tilde{\varphi}^n = A^R(\varphi^{n+1})$
-- 3: $\varphi^{n+1} = \tilde{\varphi}^{n+1} + \frac{\varphi^n - \tilde{\varphi}^n}{2}$
+- 1: `φⁿ⁺¹ = A(φⁿ)`
+- 2: `φ̃ⁿ = Aᴿ(φⁿ⁺¹)`
+- 3: `φⁿ⁺¹ = φ̃ⁿ⁺¹ + (φⁿ - φ̃ⁿ) / 2`
 
 另一种方案是假设一个高相干性的运动场（纹理），并仅对反向算符使用负运动向量。然而，这种方法在透视校正（即高斜率）以及复杂运动的情况下会失效。
 
 在实践中，我们结合了这两种方法。反向算子通过针对静态像素的深度重投影以及针对动态对象的运动向量反来获取。为了证明这种方法既高效又在视觉上合理（即使并非总是数学上完全正确的），
 
-我们使用的另一个重要优化受到了 [Selle et al. 08] 中 BFECC 方法的启发。在该方法中，证明误差并不依赖于时间；帧 $n+1$ 的结果可以直接通过误差估计进行补偿。这使得原始的 BFECC 简化了一个完整的半拉格朗步长（参见算法 3.2）。
+我们使用的另一个重要优化受到了 [Selle et al. 08] 中 BFECC 方法的启发。在该方法中，证明误差并不依赖于时间；帧`n+1`的结果可以直接通过误差估计进行补偿。这使得原始的 BFECC 简化了一个完整的半拉格朗步长（参见算法 3.2）。
 
-遗憾的是，所提方法需要读取 $\varphi^n, \varphi^n$ 和 $\tilde{\varphi}^n$ 来评估 $\varphi^{n-1}$。然而，由于我们假设误差估计是时间不变的，我们可以使用第 $n+1$ 步的值来估计误差。因此，我们可以仅使用 $\tilde{\varphi}^{n+1}$ 计算 $\varphi^{n+1}$，而 $\frac{\varphi^n - \tilde{\varphi}^n}{2}$ 在 shader 中很容易获取（详情请参见算法 3.3、列表 3.11 和图 3.2）。
+遗憾的是，所提方法需要读取`φⁿ`、`φⁿ`和`φ̃ⁿ`来评估`φⁿ⁻¹`。然而，由于我们假设误差估计是时间不变的，我们可以使用第`n+1`步的值来估计误差。因此，我们可以仅使用`φ̃ⁿ⁺¹`计算`φⁿ⁺¹`，而`(φⁿ - φ̃ⁿ) / 2`在 shader 中很容易获取（详情请参见算法 3.3、列表 3.11 和图 3.2）。
 
 最后一点值得提到的是，BFECC 在默认情况下不是无条件稳定的。处理这个问题有多种方法，但我们发现通过局部最小值和最大值进行限制是最实用的 [Dupont and Liu 03, Selle et al. 08]。列表 3.11 展示了我们优化的简化版 BFECC 方法的最简单实现。
 
-- 1: $\varphi^{n+1} = A(\varphi^n)$
-- 2: $\tilde{\varphi}^n = A^R(\varphi^{n+1})$
-- 3: $\varphi^{n+1} = A(\varphi^n)$
-- 4: $\varphi^{n+1} = \tilde{\varphi}^{n+1} + \frac{\varphi^n - \tilde{\varphi}^{n+1}}{2}$
+- 1: `φⁿ⁺¹ = A(φⁿ)`
+- 2: `φ̃ⁿ = Aᴿ(φⁿ⁺¹)`
+- 3: `φⁿ⁺¹ = A(φⁿ)`
+- 4: `φⁿ⁺¹ = φ̃ⁿ⁺¹ + (φⁿ - φ̃ⁿ⁺¹) / 2`
 
-算法 3.3. Shader 优化的简化 BFECC 方法。
+**算法 3.3.** Shader 优化的简化 BFECC 方法。
 
 ```cpp
 // 输出 phiHatNITexture
-// A()算符使用运动向量纹理
+
+// A() 算符使用运动向量纹理
+
 void GetPhiHatNI(float inUV, int inVPOS) {
-float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
-float2 forwardProj = inUV + motionVector;
-// 通过算符 A() 执行平流
-return PreviousFrame.SampleLevel(Linear, forwardProj, 0).rgb;
+    float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
+    float2 forwardProj = inUV + motionVector;
+
+    // 通过算符 A() 执行平流
+
+    return PreviousFrame.SampleLevel(Linear, forwardProj, 0).rgb;
 }
+
 // 输出 phiHatTexture
-// AR()算符使用运动向量纹理的负值
+
+// AR() 算符使用运动向量纹理的负值
+
 // phiHatNI 是由之前的 GetPhiHatNI() 生成的
+
 void GetPhiHatNI(float2 inUV, int inVPOS) {
-float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
-float2 backwardProj = inUV - motionVector;
-// 通过算符 AR() 执行平流
-return phiHatNI.SampleLevel(Linear, backwardProj, 0).rgb;
+    float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
+    float2 backwardProj = inUV - motionVector;
+
+    // 通过算符 AR() 执行平流
+
+    return phiHatNI.SampleLevel(Linear, backwardProj, 0).rgb;
 }
+
 // 获取正确解析 phiNI 的最终操作
-// A()算符使用运动向量纹理
+
+// A() 算符使用运动向量纹理
+
 // phiHatNI 和 phiHatN 由之前生成
+
 void GetResampledValueBPECC(float2 inUV, int inVPOS) {
-float3 phiHatNI = Load(int(inVPOS, 0)).rgb;
-// 寻找局部最小值和最大值
-float3 minima, maxima;
-GetLimits(phiHatNIText, inUV, minima, maxima);
-float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
-float2 inUV = inUV + motionVector;
-// 通过算符 A() 执行平流
-float3 phiHatNI = phiHatNI.SampleLevel(Linear, A, 0).rgb;
-// 执行 BPECC
-float3 phiNI = 1.5 * phiHatNI - 0.5 * phiHatN1;
-// 将结果限制在最小值和最大值之间
-phiNI = clamp(phiHatNI, minima, maxima);
-return phiNI;
+    float3 phiHatNI = Load(int(inVPOS, 0)).rgb;
+
+    // 寻找局部最小值和最大值
+
+    float3 minima, maxima;
+    GetLimits(phiHatNIText, inUV, minima, maxima);
+
+    float2 motionVector = MotionTextures.Load(int(inVPOS, 0)).xy;
+    float2 inUV = inUV + motionVector;
+
+    // 通过算符 A() 执行平流
+
+    float3 phiHatNI = phiHatNI.SampleLevel(Linear, A, 0).rgb;
+
+    // 执行 BPECC
+
+    float3 phiNI = 1.5 * phiHatNI - 0.5 * phiHatN1;
+
+    // 将结果限制在最小值和最大值之间
+
+    phiNI = clamp(phiHatNI, minima, maxima);
+
+    return phiNI;
 }
 ```
 
-列表 3.11. 重排序后的时间 FLIPQUAD 重建内核。
+**列表 3.11.** 重排序后的时间 FLIPQUAD 重建内核。
 
-## 3.7 时间抗锯 (TAA)
+## 3.7 时间抗锯（TAA）
 
 ### 3.7.1 概述
 
 在第 3.5 和 3.6 节中，我们介绍了提高抗锯齿图像空间和时间稳定性以及分辨率的方法。然而，即使使用 4× 旋转网格超采样和专的抗锯技术，时间上的
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
 
 ### 3.7.2 基于频率的指标
 
 在第 3.5 和 3.6 节中，我们介绍了提高抗锯齿图像空间和时间稳定性以及分辨率的方法。然而，即使使用 4× 旋转网格超采样和专用抗锯技术，时间上的
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
 
 ### 3.7.3 混合重建抗锯
 
@@ -2905,64 +3090,94 @@ return phiNI;
 
 在第 3.5 和 3.6 节中，我们介绍了提高抗锯齿图像空间和时间稳定性以及分辨率的方法。然而，即使使用 4× 旋转网格超采样和专用抗锯技术，时间上的
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_0.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_148_1.png)
 
+## 3. 混合重建抗锯齿
 
-
-
-# 3. 混合重建抗锯齿
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_151_0.png)
+![图示](img/120606d35c679664e7ad5faec2ee0e8b_151_0.png)
 
 **图 3.24.** 我们实现的 HRAA 流水线中的数据流图。
 
-- CRAA，
-- AEAA (GBAA);
-- 时间 FLIPQUAD 重建结合时间抗锯齿 (TAA)（见列表 3.13）。
+- CRAA；
+- AEAA（GBAA）；
+- 时间 FLIPQUAD 重建结合时间抗锯齿（TAA）（见列表 3.13）。
 
 图 3.24 展示了框架内部的数据流。
+
 在制作过程中，我们实现并优化了三种临时稳定边缘抗锯齿的方法。
 
 SMAA 是对深度缓冲区（depth buffers）和法线缓冲区（normal buffers）进行几何边缘检测来实现的。边缘是基于亮度对比度的预测阈值定义的。我们的边缘检测算法要求让解析（resolve）尽可能具有时间稳定性。
 
 CRAA 和 AEAA 使用了 3.5.1 和 3.5.2 节描述的实现。我们的 EQAA 设置使用了 1FS8 配置，而我们的 AEAA 偏移缓冲区被压缩到 5 位（使用了我们紧凑型 G-buffer 中最后剩余的空间）。
 
-任何边缘抗锯齿的结果都被用作最后一次渲染的 $N$、$N-1$ 和 $N-2$ 帧源。TAA 在帧 $N$ 使用的历史缓冲区是帧 $N-1$ 处的 TAA 输出缓冲区。
+任何边缘抗锯齿的结果都被用作最后一次渲染的`N`、`N-1`和`N-2`帧源。TAA 在帧`N`使用的历史缓冲区是帧`N-1`处的 TAA 输出缓冲区。
 
-# 3.9 结果讨论
+## 3.9 结果讨论
 
-我们的打包/性能方案导致边缘抗锯齿输出的梯度质量较低（阶梯只有 3 位）。然而，FLIPQUAD 重建几乎免费提供了两到四倍的边缘梯度。在实践中，整个系统提供了优秀的结果，在匹配 $4\times$ 旋转网格超采样参考的同时，以极低的代价提供了更高质量的边缘抗锯齿和稳定性。
+我们的打包/性能方案导致边缘抗锯齿输出的梯度质量较低（阶梯只有 3 位）。然而，FLIPQUAD 重建几乎免费提供了两到四倍的边缘梯度。在实践中，整个系统提供了优秀的结果，在匹配`4×`旋转网格超采样参考的同时，以极低的代价提供了更高质量的边缘抗锯齿和稳定性。
 
 ```cpp
 // Unoptimized pseudocode for final
+
 // Temporal FLIPQUAD reconstruction & N-2 are TAA
+
 // To have same jitter offsets
+
 float 3 getFLIPQUAD()
+
 float 3 curMin, curMax, curMean;
-    GetLimits(currentValueTexture, curMin, curMax, curMean);
+
+GetLimits(currentValueTexture, curMin, curMax, curMean);
+
 float 3 prevVal = Resample(prevValueTexture);
+
 float 3 prevPrevVal = Resample(prevPrevValueTexture);
+
 // Get sum of absolute difference
+
 float 3 curSAD = GetSAD(curValueTexture);
+
 float 3 prevPrevSAD = GetSAD(prevPrevValueTexture);
+
 // Motion coherence weight
-float moCoherence = GetMotionCoherence(curMotionTexture,
-    prevMotionTexture);
+
+float moCoherence = GetMotionCoherence(
+    curMotionTexture,
+    prevMotionTexture
+);
+
 // Color coherence weight
+
 float colCoherence = GetColorCoherence(curSAD, prevSAD);
+
 // FLIPQUAD parts
+
 float 3 FQPart = GetFLIPQUAD(curValueTexture);
+
 float 3 FPrevPart = GetFLIPQUAD(prevValueTexture);
+```
+
+
+
+```cpp
 float 3 Coherence = moCoherence + colCoherence;
+
 float 3 clampFQPart = clamp(FQPart, curMin, curMax);
+
 // This allows full convergence
+
 // If color flow (N-2) is coherent
+
 FQPrevPart = lerp(FQPrevPart, clampFPQPrev, colCoherence);
+
 // Final reconstruction blend
+
 float FLIPQUAD = lerp(FQPart, FPrevPart, 0.5*moCoherence);
+
 float 3 historyVal = Resample(historyValueTexture);
+
 return getTAA(curMotionTexture, prevMotionTexture,
     curMin, curMax, curMean,
     FLIPQUAD, historyVal);
@@ -3002,62 +3217,33 @@ CRAA 解决了 AEAA 的大部分问题，也是最容易实现的技术。遗憾
 
 **表 3.2.** 在 AMD Radeon HD 7950 1080p 分辨率下测量的不同 HRAA 通过。“C”意味着内容，“HW”意味着硬件类型或设置。
 
-参考文献
+## 参考文献
 
-[Akenine-Müller 03] T. Akenine-Müller. "一种极廉价的多采样方案." Technical Report No. 03-14, Ericsson Mobile Platforms, 2003.
-
-[AMD 11] AMD Developer Relations. "AMD 6900 显卡的 EQAA 模式。" http://developer.amd.com/wordpress/media/2012/10/EQAModesforAMD6900Cards.pdf, 2011.
-
-[Alner 11] M. Alner, G. Sellers, and N. Haemel. "AMD 采样." OpenGL Extension Registry, https://www.opengl.org/registry/specs/sample_positions.txt, 2011.
-
-[Bavoil and Andersson 12] L. Bavoil and J. Andersson. "战场3 中选择性时间过滤的稳定 SSAO。" Game Developer Course, San Francisco, CA, March 5-9, 2012.
-
-[Burley 07] B. Burley. "PRMAN 中的滤波." Renderman Repository, https://www.archive.org/web/2013091506437/http://www.renderman.com/RMR/RSTR/PRMAN_Filtering/In_PRMAN.html, 2007. (原始 URL 已失效。)
-
-[Drotob 11] M. Drotob. "实时图形的时空和时间一致性框架." in Game Engines 25, edited by Eric Lengyel, pp. 97–118. Boca Raton, FL: CRC Press, 2011.
-
-[Drotob 14] M. Drotob. "针对 AMD GCN 架构的低级优化." 于 Digital Dragons Conference, Kraków, Poland, May 8-9, 2014.
-
-[Dupont and Liu 03] T. Dupont and Y. Liu. "消除由水平集函数不均匀梯度引起的错误的往返修正方法." J. Comput. Phys. 190:1 (2003), 311–324.
-
-[Jimenez et al. 11] J. Jimenez, B. Masia, J. Echevaria, F. Navarro, and D. Gutierrez. "实用形态抗锯齿." in GPU Pro 2: 高级渲染技术, edited by Wolfgang Engel, pp. 95–114. Natick, MA: A K Peters, 2011.
-
-[Jimenez et al. 12] J. Jimenez, J. Echevaria, D. Gutierrez, and T. Sousa. "SMAA: 增强亚像素形态抗锯齿." Computer Graphics 2012 31:2 (2012), 355–364.
-
-[Kirkland et al. 99] Dale Kirkland, Bill Armstrong, Michael Gold, Jon Leech, and Paula Woman. "ARB 多采样." OpenGL Extension Registry, https://www.opengl.org/registry/specs/ARB/multisample.txt, 1999.
-
-
-
-
--   [Laine and Aila 06] S. Laine and T. Aila. “一种用于抗锯齿模式的权重误差指标与优化方法。”Computer Graphics Forum 25:1 (2006), 83-94.
-
--   [Lottes 09] T. Lottes. “FXAA.” NVIDIA 白皮书，2009.
-
--   [Malan 10] H. Malan. “通过后处理进行边缘抗锯齿。”In GPU Pro: Advanced Rendering Techniques，Wolfgang Engel 编辑，第 265-290 页。Natick, MA A K Peters,
-
--   [Malan 12] H. Malan. “Dust 514 中的实时全局光照与反射。”Advances in Real-Time Rendering in Games: Part 1, SIGGRAPH 课程, Los Angeles, CA, August 5-9, 2012.
-
--   [NVIDIA 01] NVIDIA Corporation. “HRAA: 基于多采样的高分辨率抗锯齿。”技术报告，2001。
-
--   [Nehab 07] D. Nehab, P. V. Sander, J. Lawrence, N. Tararchuk, and J. R. Isidoro. “通过反向剔除缓存加速实时着色。”In Proceedings of the 22nd ACM SIGGRAPH/EUROGRAPHICS 图形硬件会议论文，Dieter Fellner 和 Stephen Springer 编辑，第 25-35 页。Aire-la-Ville, Switzerland: Eurographics Association, 2007.
-
--   [Person 11] E. Persson. “几何缓冲区抗锯齿。”发表于 SIGGRAPH, Vancouver, Canada, August 7-11, 2011.
-
--   [Reshetov 09] A. Reshetov. “形态学抗锯齿。”In Proceedings of the Conference on High Performance Graphics，S. N. Spencer, David McAllister, Matt Pharr, and In Waldo 编辑，第 109-116 页。New York: ACM, 2009.
-
--   [Selle et al. 08] A. Selle, R. Fedki, B. Kim, Y. Liu, and J. Rosignac. “一种无条件稳定的 MacCormack 方法。”J. Scientific Computing 35:2–3 (2008), 350-371.
-
--   [Sousa 11] T. Sousa. “CryENGINE3 中的抗锯齿方法。”发表于 SIGGRAPH 2011, Vancouver, Canada, August 7-11, 2011.
-
--   [Sousa 13] T. Sousa T. “CryENGINE 3 图形宝典。”发表于 SIGGRAPH 2013, Anaheim, CA, July 21-25, 2013.
-
--   [Valient 14] M. Valient. “将 Killzone 阴图像质量提升至下一代。”发表于游戏开发者大会，San Francisco, CA, March 17-21, 2014.
-
-## 3. 混合重建抗锯齿
-
--[Yang et al. 09] L. Yang, D. Nehab, P. V. Sander, P. Sitthi-Amorn, J. Lawrence, and H. Hoppe. “摊销超采样。”发表于 SIGGRAPH Asia, Yokohama, Japan, December 17–19, 2009.
-
--   [Young 06] P. Young. “覆盖率采样抗锯齿。”技术报告，NVIDIA, 2006.
+- [Akenine-Müller 03] T. Akenine-Müller. "一种极廉价的多采样方案." Technical Report No. 03-14, Ericsson Mobile Platforms, 2003。
+- [AMD 11] AMD Developer Relations. "AMD 6900 显卡的 EQAA 模式。" http://developer.amd.com/wordpress/media/2012/10/EQAModesforAMD6900Cards.pdf, 2011。
+- [Alner 11] M. Alner, G. Sellers, and N. Haemel. "AMD 采样." OpenGL Extension Registry, https://www.opengl.org/registry/specs/sample_positions.txt, 2011。
+- [Bavoil and Andersson 12] L. Bavoil and J. Andersson. "战场3 中选择性时间过滤的稳定 SSAO。" Game Developer Course, San Francisco, CA, March 5-9, 2012。
+- [Burley 07] B. Burley. "PRMAN 中的滤波." Renderman Repository, https://www.archive.org/web/2013091506437/http://www.renderman.com/RMR/RSTR/PRMAN_Filtering/In_PRMAN.html, 2007。（原始 URL 已失效。）
+- [Drotob 11] M. Drotob. "实时图形的时空和时间一致性框架." in Game Engines 25, edited by Eric Lengyel, pp. 97–118. Boca Raton, FL: CRC Press, 2011。
+- [Drotob 14] M. Drotob. "针对 AMD GCN 架构的低级优化." 于 Digital Dragons Conference, Kraków, Poland, May 8-9, 2014。
+- [Dupont and Liu 03] T. Dupont and Y. Liu. "消除由水平集函数不均匀梯度引起的错误的往返修正方法." J. Comput. Phys. 190:1 (2003), 311–324。
+- [Jimenez et al. 11] J. Jimenez, B. Masia, J. Echevaria, F. Navarro, and D. Gutierrez. "实用形态抗锯齿." in GPU Pro 2: 高级渲染技术, edited by Wolfgang Engel, pp. 95–114. Natick, MA: A K Peters, 2011。
+- [Jimenez et al. 12] J. Jimenez, J. Echevaria, D. Gutierrez, and T. Sousa. "SMAA: 增强亚像素形态抗锯齿." Computer Graphics 2012 31:2 (2012), 355–364。
+- [Kirkland et al. 99] Dale Kirkland, Bill Armstrong, Michael Gold, Jon Leech, and Paula Woman. "ARB 多采样." OpenGL Extension Registry, https://www.opengl.org/registry/specs/ARB/multisample.txt, 1999。
+- [Laine and Aila 06] S. Laine and T. Aila. “一种用于抗锯齿模式的权重误差指标与优化方法。” Computer Graphics Forum 25:1 (2006), 83-94。
+- [Lottes 09] T. Lottes. “FXAA。” NVIDIA 白皮书，2009。
+- [Malan 10] H. Malan. “通过后处理进行边缘抗锯齿。” In GPU Pro: Advanced Rendering Techniques，Wolfgang Engel 编辑，第 265-290 页。Natick, MA A K Peters,
+- [Malan 12] H. Malan. “Dust 514 中的实时全局光照与反射。” Advances in Real-Time Rendering in Games: Part 1, SIGGRAPH 课程, Los Angeles, CA, August 5-9, 2012。
+- [NVIDIA 01] NVIDIA Corporation. “HRAA: 基于多采样的高分辨率抗锯齿。”技术报告，2001。
+- [Nehab 07] D. Nehab, P. V. Sander, J. Lawrence, N. Tararchuk, and J. R. Isidoro. “通过反向剔除缓存加速实时着色。” In Proceedings of the 22nd ACM SIGGRAPH/EUROGRAPHICS 图形硬件会议论文，Dieter Fellner 和 Stephen Springer 编辑，第 25-35 页。Aire-la-Ville, Switzerland: Eurographics Association, 2007。
+- [Person 11] E. Persson. “几何缓冲区抗锯齿。”发表于 SIGGRAPH, Vancouver, Canada, August 7-11, 2011。
+- [Reshetov 09] A. Reshetov. “形态学抗锯齿。” In Proceedings of the Conference on High Performance Graphics，S. N. Spencer, David McAllister, Matt Pharr, and In Waldo 编辑，第 109-116 页。New York: ACM, 2009。
+- [Selle et al. 08] A. Selle, R. Fedki, B. Kim, Y. Liu, and J. Rosignac. “一种无条件稳定的 MacCormack 方法。” J. Scientific Computing 35:2–3 (2008), 350-371。
+- [Sousa 11] T. Sousa. “CryENGINE3 中的抗锯齿方法。”发表于 SIGGRAPH 2011, Vancouver, Canada, August 7-11, 2011。
+- [Sousa 13] T. Sousa T. “CryENGINE 3 图形宝典。”发表于 SIGGRAPH 2013, Anaheim, CA, July 21-25, 2013。
+- [Valient 14] M. Valient. “将 Killzone 阴图像质量提升至下一代。”发表于游戏开发者大会，San Francisco, CA, March 17-21, 2014。
+- [Yang et al. 09] L. Yang, D. Nehab, P. V. Sander, P. Sitthi-Amorn, J. Lawrence, and H. Hoppe. “摊销超采样。”发表于 SIGGRAPH Asia, Yokohama, Japan, December 17–19, 2009。
+- [Young 06] P. Young. “覆盖率采样抗锯齿。”技术报告，NVIDIA, 2006。
 
 # 使用预计算散射的物理渲染云实时渲染
 
@@ -3067,59 +3253,65 @@ Egor Yusov
 
 渲染真实的云一直是从计算机游戏到飞行模拟器等各种应用所追求的功能。云由无数微小的水滴组成，这些水滴会散射光。渲染云具有挑战性，因为尽管今天 GPU 的性能非常出色，但对于离线渲染器而言，准确模拟多次散射效应的成本极其高昂。因此，实时方法依赖于高度简化的模型。
 
-使用摄像围栏的广告板（billboards）可能是最常见的实时云方法 [Dubashi 01, 00, Wang 04, Harris and Lastra 01]。然而，广告板是平面的的，这在某些条件下会破坏体积感。这些方法还有其他局限性：预计算会导致静态云 [Harris and Lastra 01]、忽略了多次散射 [Dubashi et. 00]，或者光照不是基于物理的，需要艺术家进行调整 [Wang 04]。体积渲染技术是渲染云的另一种方法 [Schpok 03, Miyazaki et. 04, Riley et. 04]。为了避免伪影，通常需要渲染许多切片，特别是在高分辨率显示器上。目前存在更物理准确的方法 [Bouthers 06, Bouthers et. 08]，它们能产生合理的视觉结果，但难以复制且计算开销大。
+使用摄像围栏的广告板（billboards）可能是最常见的实时云方法 [Dubashi 01, 00, Wang 04, Harris and Lastra 01]。然而，广告板是平面的，这在某些条件下会破坏体积感。这些方法还有其他局限性：预计算会导致静态云 [Harris and Lastra 01]、忽略了多次散射 [Dubashi et. 00]，或者光照不是基于物理的，需要艺术家进行调整 [Wang 04]。体积渲染技术是渲染云的另一种方法 [Schpok 03, Miyazaki et. 04, Riley et. 04]。为了避免伪影，通常需要渲染许多切片，特别是在高分辨率显示器上。目前存在更物理准确的方法 [Bouthers 06, Bouthers et. 08]，它们能产生合理的视觉结果，但难以复制且计算开销大。
 
 我们介绍了一种新的物理方法来高效地渲染真实的云。云由一个名为“参考粒子”的单个粒子的缩放和旋转副本组成。在预处理阶段，预计算光深，以及描述所有可能的相机位置和视线方向的参考粒子内光传输的单次和多次散射积分，并将结果存储在查找表（lookup tables）中。运行时，我们从查找表中加载数据以近似云中的光传输，从而避免昂贵的光线步进（ray marching）或切片渲染。在本章中，我们详细阐述了之前的工作 [Yusov 14b]。特别是实现了以下改进：
 
--   一种基于查找表的更好的实时模型
--   一种新的 3D 网格生成
--   性能优化，包括粒子排序
+- 一种基于查找表的更好的实时模型
+- 一种新的 3D 网格生成
+- 性能优化，包括粒子排序
 
 我们简要回顾了该方法的主要概念 [Yusov 14b]。
 
 ## 4.2 光传输
 
-现在我们引入光传输的主要概念。会发生三种现象：散射、吸收和发射。穿过介质的光强度因散射和吸收而减少，由消光系数 $\beta(P)$ 。从 **A** 到 **B** 的光强度被因子 $e^{-\tau(A, B)}$ 减少，其中从 **A** 到 **B** 的光强度由深度 $\tau(A, B)$ 给出。从 **A** 到 **B** 的路径深度是消光的积分：
+现在我们引入光传输的主要概念。会发生三种现象：散射、吸收和发射。穿过介质的光强度因散射和吸收而减少，由消光系数 $\beta(P)$。从 **A** 到 **B** 的光强度被因子 $e^{-\tau(A, B)}$ 减少，其中从 **A** 到 **B** 的光强度由深度 $\tau(A, B)$ 给出。从 **A** 到 **B** 的路径深度是消光的积分：
 
-$\tau(A, B) = \int_{P_0}^{P_1} \beta(P) \cdot ds \quad (4.1)$
+$$
+\tau(A, B) = \int_{P_0}^{P_1} \beta(P) \cdot ds \quad (4.1)
+$$
 
 其中 $P_0$ 和 $P_1$ 是进入和离开的点。为了确定单散射光的强度，我们需要沿着视线累积太阳光量：
 
-$L_{In}^{(1)}(C, \vec{v}) = \int_{P_0}^{P_1} \beta(P) \cdot L_{Sun} \cdot e^{-\tau(Q, P)} \cdot e^{-\tau(P, P_0)} \cdot P(\theta) \cdot ds.$
+$$
+L_{In}^{(1)}(C, \vec{v}) = \int_{P_0}^{P_1} \beta(P) \cdot L_{Sun} \cdot e^{-\tau(Q, P)} \cdot e^{-\tau(P, P_0)} \cdot P(\theta) \cdot ds.
+$$
 
-在该方程中，**C** 是相机位置，$\vec{v}$ 是视角方向，$P_0$ 和 $P_1$ 是射线进入和离开云的点。L_{Sun} 是云外的太阳光强度，$Q$ 是太阳光到达当前积分点 **P** 的点。P(\theta) 是相位函数，定义了从入射方向散射到输出方向的能量，$\theta$ 是两者之间的角度。
+在该方程中，**C** 是相机位置，$\vec{v}$ 是视角方向，$P_0$ 和 $P_1$ 是射线进入和离开云的点。$L_{Sun}$ 是云外的太阳光强度，$Q$ 是太阳光到达当前积分点 **P** 的点。$P(\theta)$ 是相位函数，定义了从入射方向散射到输出方向的能量，$\theta$ 是两者之间的角度。
 
-$P(\theta) = \frac{1-g^2}{4\pi(2+g^2)} \frac{(1+\cos^2(\theta))}{(1+g^2-2g\cos(\theta))^{3/2}}$
+$$
+P(\theta) = \frac{1-g^2}{4\pi(2+g^2)} \frac{(1+\cos^2(\theta))}{(1+g^2-2g\cos(\theta))^{3/2}}
+$$
 
-利用散射强度 $L_{In}^{(1)}$,我们可以计算二次散射 $L_{In}^{(2)}$、三阶散射 $L_{In}^{(n)}$ 等。在方向 $\vec{v}$ 查看时在 **C** 处测量的 $n$ 阶散射强度由以下积分给出：
+利用散射强度 $L_{In}^{(1)}$，我们可以计算二次散射 $L_{In}^{(2)}$、三阶散射 $L_{In}^{(n)}$ 等。在方向 $\vec{v}$ 查看时在 **C** 处测量的 $n$ 阶散射强度由以下积分给出：
 
-$L_{In}^{(n)}(C, \vec{v}) = \int_{P_0}^{P_1} J^{(n)}(P, \vec{v}) \cdot e^{-\tau(P,P_0)} \cdot ds.$
-
-
-
-
+$$
+L_{In}^{(n)}(C, \vec{v}) = \int_{P_0}^{P_1} J^{(n)}(P, \vec{v}) \cdot e^{-\tau(P,P_0)} \cdot ds.
+$$
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_162_0.png)
 
 在方程 (4.4) 中，$J^{(n)}(\mathbf{C}, \vec{v})$ 是沿视图方向散射的 $n-1$ 阶强度 $L_{In}^{(n-1)}(\mathbf{C}, \vec{v})$ 的净强度：
 
-```
-$J^{(n)}(\mathbf{P}, \vec{v}) = \beta(\mathbf{P}) \cdot \int_{\Omega} L_{In}^{(n-1)}(\mathbf{P}, \vec{\omega}) \cdot d\omega,$
-```
+$$
+J^{(n)}(\mathbf{P}, \vec{v}) = \beta(\mathbf{P}) \cdot \int_{\Omega} L_{In}^{(n-1)}(\mathbf{P}, \vec{\omega}) \cdot d\omega.
+$$
 
 其中积分在整个方向球 $\Omega$ 上进行，$\theta$ 是 $\vec{\omega}$ 与 $\vec{v}$ 之间的夹（见图 4.2）。^1
 
 总散射强度通过计算所有散射之和得到：
 
-```
-$L_{In}(\mathbf{C}, \vec{v}) = \sum_{n=-\infty}^{\infty} L_{In}^{(n)}(\mathbf{C}, \vec{v}).$
-```
+$$
+L_{In}(\mathbf{C}, \vec{v}) = \sum_{n=-\infty}^{\infty} L_{In}^{(n)}(\mathbf{C}, \vec{v}).
+$$
 
 在相机处测量的最终辐射亮度是内散射强度与代码中衰减的背景亮度 $L_B$（见图 4.1）之和：
 
-```
-$L(\mathbf{C}, \vec{v}) = L_{In}(\mathbf{C}, \vec{v}) + e^{-\tau(\mathbf{P}_0, \mathbf{P}_1)} \cdot L_B.$
-```
+$$
+L(\mathbf{C}, \vec{v}) = L_{In}(\mathbf{C}, \vec{v}) + e^{-\tau(\mathbf{P}_0, \mathbf{P}_1)} \cdot L_B.
+$$
+
+
 
 ## 4.3 预计算解
 
@@ -3147,9 +3339,9 @@ $L(\mathbf{C}, \vec{v}) = L_{In}(\mathbf{C}, \vec{v}) + e^{-\tau(\mathbf{P}_0, \
 
 多散射查找表使用与单散射相同的参数化。为了预计算多散射，我们逐阶处理散射阶，对于每一阶，我们执行三个步骤：
 
-- 1. 使用前一阶 $L^{(n-1)}$ 为所有参数值计算 $J^{(n)}$；
-- 2. 根据方程 (4.5) 计算当前阶 $L^{(n)}$；
-- 3. 累积当前散射。
+1. 使用前一阶 $L^{(n-1)}$ 为所有参数值计算 $J^{(n)}$；
+2. 根据方程 (4.5) 计算当前阶 $L^{(n)}$；
+3. 累积当前散射。
 
 在处理完每一阶后，我们保留表面的光场。必须指出，与光学深度不同，散射相对于密度是非线性的。我们的方法发现使用 4D 查找表效果良好。
 
@@ -3168,45 +3360,42 @@ $L(\mathbf{C}, \vec{v}) = L_{In}(\mathbf{C}, \vec{v}) + e^{-\tau(\mathbf{P}_0, \
 
 如果粒子与最近元素交叉，交叉点的颜色通过密度加权平均计算：
 
-```
 $$T_i = e^{-(\rho_0 + \rho_1) \cdot d_i \cdot \beta},$$ (4.8)
+
 $$C_i = \frac{C_0 \cdot \rho_0 + C_1 \cdot \rho_1}{\rho_0 + \rho_1} \cdot (1 - T_i),$$ (4.9)
-```
 
 其中 $C_0, C_1, \rho_0$ 和 $\rho_1$ 是未乘以 alpha 通道的颜色和密度，$d_i$ 是交叉长度。前部分的颜色与所得颜色 $C_i$ 进行 alpha 混合，合并后的元素如图 4.5 右侧所示写回。
-
-
-
 
 我们使用了一种不同的方法来近似单散射，该方法不依赖于预计算的查找表。
 
 由于当前的图形硬件原生不支持 4D 纹理，我们使用 3D 纹理来实现，使得一个 $X \times Y \times Z \times W$ 的 4D 纹理被存储为 $X \times Y \times Z-W'$ 的 3D 纹理。我们对第四坐标进行手动过滤如下：
 
-```
+```cpp
 #define SAMPLE_4D(tex3DLUT, LUT_DIM, fLUTCoords, fLOD, Result) \
-float3 fUV0 = fLUTCoords.xy;
-float  fSLICE = fLUTCoords.w * LUT_DIM.w - 0.5;
-float  fLOD = floor(fSLICE);
-float3 fWeight = float3(fSLICE - fLOD);
-float  frac = frac(fSLICE) / LUT_DIM.w;
-/* frac ensures wraparound filtering */
-float3 fUV1 = frac(fUV0 + float3(0,0,1) * LUT_DIM.w);
-Result = lerp(
-    tex3DLUT.SampleLevel(linearWrap, f3UV0, fLOD),
-    tex3DLUT.SampleLevel(linearWrap, f3UV1, fLOD),
+float3 fUV0 = fLUTCoords.xy; \
+float  fSLICE = fLUTCoords.w * LUT_DIM.w - 0.5; \
+float  fLOD = floor(fSLICE); \
+float3 fWeight = float3(fSLICE - fLOD); \
+float  frac = frac(fSLICE) / LUT_DIM.w; \
+/* frac ensures wraparound filtering */ \
+float3 fUV1 = frac(fUV0 + float3(0,0,1) * LUT_DIM.w); \
+Result = lerp( \
+    tex3DLUT.SampleLevel(linearWrap, f3UV0, fLOD), \
+    tex3DLUT.SampleLevel(linearWrap, f3UV1, fLOD), \
     fWeight);
 ```
 
 注意 $\varphi_c$ 和 $\varphi_v$ 坐标需要环绕过滤（wraparound filtering）以避免伪影。我们使用 `frac` 函数来实现第四坐标的过滤。同时注意，$z$-坐标不能用环绕模式进行过滤。
+
 预计算过程可以总结如下：
 
-- 1. 预计算光深积分。
-- 2. 预计算整个体积内的单散射，并将数据存储在临时的 32 位浮点查找表中。
-- 3. 对于从 2 到 $N$ 的散射阶 $n$：
+1. 预计算光深积分。
+2. 预计算整个体积内的单散射，并将数据存储在临时的 32 位浮点查找表中。
+3. 对于从 2 到 $N$ 的散射阶 $n$：
    (a) 在整个体积内评估 $J^{(n)}$ 项，
    (b) 在整个体积内评估 $L_{in}^{(n)}$，
    (c) 在多次散射查找表中累积 $L_{in}^{(n)}$。
-- 4. 从临时查找表将球体表面的多次散射辐射拷贝到最终的 16 位浮点表中。
+4. 从临时查找表将球体表面的多次散射辐射拷贝到最终的 16 位浮点表中。
 
 本节的其余部分提供了每个步骤的细节。
 
@@ -3214,12 +3403,10 @@ Result = lerp(
 
 着色器首先使用 `OpticalDepthLUTCoordsToWorldParams()` 函数根据输入的 4D 坐标计算起始位置和方向
 
-# 基于预计算散射的物理云渲染
-
-```
-1 float2 PrecomputeOpticalDepthPS(SquadVSOutput In) : SV_Target
-2 {
-3 float3 f3StartPos
+```cpp
+float2 PrecomputeOpticalDepthPS(SquadVSOutput In) : SV_Target
+{
+    float3 f3StartPos
 ```
 
 > 列表 4.1. 预计算光深积分。
@@ -3228,55 +3415,43 @@ Result = lerp(
 
 单散射。散射计算（节 4.3.2节）由列表 4.2 所示的像素着色器执行。注意，单散射是在整个体积内计算的，而不仅仅是在表面，并使用临时 4D 查找表来存储距离。该表的第四坐标编码了到球心的距离，由统一变量 `g_Attrib.f4Param.y` 提供。
 
-# 渲染
+```cpp
+float PrecomputeSingleSctrPS (SQuadVSOutput In) : SV_Target
+{
+    float3 f3EntryPoint f3ViewRay, f3LightDir;
+    ScatteringUpDownParams;
+    float4(ProjUTOW, in_f2PosOS, g_Attrib.f4Param.xy);
+    g.Attrs.f4Param.z, f3EntryPoint, f3ViewRay, f3LightDir;
 
-```
-1 float PrecomputeSingleSctrPS (SQuadVSOutput In) : SV_Target
-2 {
-3     float3 f3EntryPoint f3ViewRay, f3LightDir;
-4     ScatteringUpDownParams;
-5     float4(ProjUTOW, in_f2PosOS, g_Attrib.f4Param.xy);
-6     g.Attrs.f4Param.z, f3EntryPoint, f3ViewRay, f3LightDir;
-7 
-8     // Intersect the view ray with the unit sphere
-9     float f2Raysecs;
-10    GetRayIntersection(f3EntryPoint, f3ViewRay)
-11    0, 1.0 + f2Raysecs * f2RayIsecs;
-12   float f3EndPos = f3EntryPoint + f3ViewRay * f2Raysecs;
-13   {
-14        float fNumSteps = NUM_INTEGRATION;
-15        float f3Step = (f3EndPos - f3EntryPoint) / fNumSteps;
-16        float length = length(f3Step);
-17        float fMassToCamera = 0;
-18        float fParticleRadius = g.Attrib.RefParticleRadius;
-19        for(float fStepNum=0; fStepNum < fNumSteps; fStepNum++)
-20            float f3Pos = f3EntryPoint + f3ViewRay * f3Step;
-21            float attenuation = 0;
-22            fMassToCamera += attenuation * f3Step;
-23        }
-24    return fMassToCamera;
-25 }
+    // Intersect the view ray with the unit sphere
+    float f2Raysecs;
+    GetRayIntersection(f3EntryPoint, f3ViewRay)
+    0, 1.0 + f2Raysecs * f2RayIsecs;
+    float f3EndPos = f3EntryPoint + f3ViewRay * f2Raysecs;
+    {
+        float fNumSteps = NUM_INTEGRATION;
+        float f3Step = (f3EndPos - f3EntryPoint) / fNumSteps;
+        float length = length(f3Step);
+        float fMassToCamera = 0;
+        float fParticleRadius = g.Attrib.RefParticleRadius;
+        for(float fStepNum=0; fStepNum < fNumSteps; fStepNum++)
+            float f3Pos = f3EntryPoint + f3ViewRay * f3Step;
+            float attenuation = 0;
+            fMassToCamera += attenuation * f3Step;
+        }
+    return fMassToCamera;
+}
 ```
 
 > 列表 4.2. 预计算单散射。
-
-
-
-
-
-152
-
-目录
 
 ```cpp
 float GatherScatterPS(SQuadOutput In) : SV_Target
 {
     float3 f3StartPos, f3ViewRay, f3LightDir;
     ScatteringLUTWorldPos = float4(ProjUV(In, m_fPosPS), g_Attribs.f4Param.xy, f3StartPos, f3ViewRay, f3LightDir);
-
     float3 f3Local, f3LocalZ, f3LocalX;
     ConstructLocalFrameXYZ(-normalize(f3StartPos), f3LightDir, f3LocalX, f3LocalY, f3LocalZ);
-
     float f_J = 0;
     float fSolidAngle = 0;
     const float fNumZenithAngles = SCTR_LUT_DIM.z;
@@ -3290,13 +3465,11 @@ float GatherScatterPS(SQuadOutput In) : SV_Target
             GetDirectionLocalFrameXYZ(f3LocalX, f3LocalY, f3LocalZ, zenith, azimuth);
             float4 f4CurDirToCoords;
             WorldParamsToLUT(f3StartPos, f3CurDir, f3LightDir);
-
             float4 f4CurDirScr = SAMPLE_0(SCTR_LUT_DIM, f4CurDirToCoords, 0, f4CurDirScr);
             if (g_Attribs.f4Param.w == 1)
                 f3CurDirScr = HGPhaseFunc(dot(f3CurDir, f3LightDir), 0.9);
             f3CurDirScr = HGPhaseFunc(dot(f3CurDir, f3ViewRay), 0.7);
         }
-
     float fdZenithAngle = fZenithSpan / fNumZenithAngles;
     float fdAzimuthAngle = fAzimuthSpan / fNumAzimuthAngles;
     for (float i = 0; i < fNumZenithAngles; i += fdZenithAngle)
@@ -3304,7 +3477,6 @@ float GatherScatterPS(SQuadOutput In) : SV_Target
             float fdDiffSolidAngle = fdZenithAngle * fdAzimuthAngle;
             f_J = f4CurDirScr * fdDiffSolidAngle;
         }
-
     // 总立体角应为 4*PI。重新归一化以修复
     // 离散问题
     f_J = 4*PI / fTotalSolidAngle;
@@ -3315,8 +3487,6 @@ float GatherScatterPS(SQuadOutput In) : SV_Target
 列表 4.3. 计算 J 项。
 
 网格中包含定义数量的层。生成的 3D 结构中的每个体素都可能包含一个粒子。我们将其称为粒子点（图 4.6）。为了方便粒子生成和光照，
-
-# 4. 使用预计算散射对物理云云进行实时渲染
 
 ```cpp
 float ComputeScatteringOrderPS (SVSOutput In) : SV_Target
@@ -3340,40 +3510,34 @@ float ComputeScatteringOrderPS (SVSOutput In) : SV_Target
 }
 ```
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_171_0.png)
+
 
 我们维护了两个额外的 3D 结构：云密度 3D 网格和光衰减 3D 网格。这两个结构在每个维度上的分辨率都是粒子网格的两倍，并实现为 3D 纹理。
 
 粒子生成和处理的步骤如下：
 
-- 1. 处理 2D 单元格以有效非空单元格列表，并计算单元格属性。
-- 2. 计算位于非空单元格的云网格每个体素的密度。
-- 3. 处理位于非空单元格的光衰减网格的可见体素，并计算每个体素的衰减。
-- 4. 处理粒子网格，并对密度高于阈值的可见单元格生成粒子。
-- 5. 处理粒子并存储光照信息。
-- 6. 对粒子进行排序。
+1. 处理 2D 单元格以有效非空单元格列表，并计算单元格属性。
+2. 计算位于非空单元格的云网格每个体素的密度。
+3. 处理位于非空单元格的光衰减网格的可见体素，并计算每个体素的衰减。
+4. 处理粒子网格，并对密度高于阈值的可见单元格生成粒子。
+5. 处理粒子并存储光照信息。
+6. 对粒子进行排序。
 
 上述每一步都通过计算着色器（compute shader）实现。在基于 GPU 的实现中，CPU 不需要知道如何操作。
 
-
-
-
-
 ## 4.5.3 渲染
 
-在可见粒子生成、处理并排序后，它们就准备好进行渲染。由于只有 GPU 知道生成了多少粒子，因此我们使用 `DrawInstIndirect()` 函数。它与 `DrawInstanced()` 类似，但从 GPU 缓冲区读取其参数。我们为每个可见粒子渲染一个原始基型（primitive）。几何着色器读取粒子属性并生成粒子的包围盒，然后将其发送到栅格化器。
+在可见粒子生成、处理并排序后，它们就准备好进行渲染。由于只有 GPU 知道生成了多少粒子，因此我们使用`DrawInstIndirect()`函数。它与`DrawInstanced()`类似，但从 GPU 缓冲区读取其参数。我们为每个可见粒子渲染一个原始基型（primitive）。几何着色器读取粒子属性并生成粒子的包围盒，然后将其发送到栅格化器。
 
 在像素着色器中，我们重建视线射线并与粒子包围盒内的椭球体相交。如果射线未命中椭球体，我们将其舍弃。否则，我们根据预计算的查找表应用着色模型，如列表 4.5 所示。
 
-我们的第一步是使用视线计算归一化密度，并绕垂直轴随机旋转粒子以消除重复模式（第 6 行），`f3EntryPointUSSpace` 和 `f3evieRayUSSpace` 是变换到粒子空间的入口点坐标和视线方向（该空间是单位球，因此带有 `US` 后缀）。接下来，我们计算透明度（第 14–17 行）。
+我们的第一步是使用视线计算归一化密度，并绕垂直轴随机旋转粒子以消除重复模式（第 6 行），`f3EntryPointUSSpace`和`f3evieRayUSSpace`是变换到粒子空间的入口点坐标和视线方向（该空间是单位球，因此带有`US`后缀）。接下来，我们计算透明度（第 14–17 行）。
 
 我们的实时模型由三个部分组成：单散射、多次散射和环境光。我们在第 20–27 行中计算单散射。它是相位函数、阳光衰减（如第 4.5.2 节所述的计算）和阳光强度的乘积。由于单散射在云密度较低的地方最明显，因此我们将其乘以透明度。
 
 接下来，我们通过查询预计算的表来评估多次散射（第 30–39 行）。我们将强度与光衰减相乘。由于多次散射发生在云的稠密部分，我们还用强度乘以不透明度（1-透明度）。
 
 最后，我们使用环境光的特种近似法（第 42–52 行）。我们利用了以下观察结果：环境光强度在云顶部边界较强，并向底部减小。图 4.8 显示了不同的组件和最终结果。
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_175_0.png)
 
 图 4.8。从左到右，别是单散射、多次散射、环境光和所有组件。
 
@@ -3419,7 +3583,7 @@ float ComputeScatteringOrderPS (SVSOutput In) : SV_Target
 // 40
 // 41 计算环境光
 // 42 float f3EarthCentre = float3(0, g.Attrs.fEarthRadius, 0);
-// 43 float f4PointAltitude = length(f3EntryPointWS - f3EarthCenter); 
+// 43 float f4PointAltitude = length(f3EntryPointWS - f3EarthCenter);
 // 44 g.Attrs.fEarthRadius + g.Attrs.fCloudAltitude
 // 45 g.Attrs.fCloudThickness / 2.f;
 // 46 float (f2PointAltitude - f2CloudBoundary) /
@@ -3456,6 +3620,8 @@ MergeParticleLayers(Layers[0], Layers[1], f4OutColor);
 g_rubParticleLayers[uiData] = MergedLayer;
 ```
 
+
+
 列表 4.6。体积混合。
 
 | 变量 | 描述 |
@@ -3467,10 +3633,6 @@ g_rubParticleLayers[uiData] = MergedLayer;
 ## 4.5.5 与大气效应的整合
 
 为了渲染地球大气，我们使用了我们早期工作 [Yusov 14a] 中描述的方法。为了创建光柱效应，我们使用光空间透明度缓冲区。该缓冲区通过将 2D 噪声（第 4.5.2 节）投影到光平面来填充。该缓冲区结构与级联阴影相同。我们使用此缓冲区来衰减阳光。我们假设云的高度是固定的。然后，在每一步中，我们检查视线射线上的当前采样是在高度上方还是下方。如果是，我们采样光空间衰减纹理以获取穿过云的光量。我们使用一些最小/最大结构来加速射线遍历。为了消除伪影，在跨越云高度时将步长减小到一个像素大小。
-
-
-
-
 
 # 4. 使用预计算散射的物理渲染云层实时渲染
 
@@ -3553,18 +3715,12 @@ g_rubParticleLayers[uiData] = MergedLayer;
 - [Miyazaki et al. 04] Ryo Miyazaki, Yoshinori Dobashi, and Tomoyuki Nishita. A Fast Rendering Method of Clouds Using Shadow-View Slices. In Proceedings of Computer Graphics and Imaging 2004, August 17–19, 2004, Hawaii, USA, pp. 93–98. Calgary: ACTA Press, 2004.
 - [Riley et al. 04] Kirk Riley, David S. Ebert, Martin Kraus, Jerry Tessendorf, and Charles Hansen. Efficient Rendering of Atmospheric Phenomena. In Proceedings of the Fifteenth Eurographics Conference on Rendering Techniques, pp. 375–386. Aire-la-Vieille, Switzerland: Eurographics Association, 2004.
 - [Satish et al. 09] Nadaturh Satish, Mark Harris, and Michael Garland. Designing Efficient Sorting Algorithms for Manycore GPUs. In Proceedings of the 2009 IEEE Symposium on Parallel & Distributed Processing, IPDPS ’09, pp. 1–10. Diego: IEEE Computer Society, 2009.
-- [Schpok et al. 03] Joshua Schpok, Joseph Simons, David S. Ebert, and Charles Hansen. A Real-time Cloud Modeling, Rendering, and Animation System. In Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium on
+- [Schpok et al. 03] Joshua Schpok, Joseph Simons, David S. Ebert, and Charles Hansen. A Real-time Cloud Modeling, Rendering, and Animation System. In Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium on Computer Animation, pp. 160–166. Aire-la-Vieille, Switzerland: Eurographics Association, 2003.
+- [Wang 04] Niniane Wang. “真实且快速的云体渲染。”J. Graphics, GPU, and Game Tools 9:3 (2004), 21–40。
+- [Yusov 14a] Egor Yusov. “使用极线采样的高性能室外光散射。”收于 GPU Pro 5: Advanced Rendering Techniques，Wolfgang Engel 编辑，第 101–126 页。佛罗里达州博卡顿：CRC Press，2014年。
+- [Yusov 14b] Egor Yusov. “使用预计算光照的高性能真实积云渲染。”收于 High-Performance Graphics 2014 论文集，Ingo Wald 和 Jonathan Ragan-Kelley 编辑，第 127–136 页。法国里昂：Eurographics Association，2014年。
 
-
-计算机动画，第 160–166 页。瑞士艾尔拉维尔：Eurographics Association，2003年。
-
-[Wang 04] Niniane Wang. “真实且快速的云体渲染。”J. Graphics, GPU, and Game Tools 9:3 (2004), 21–40。
-
-[Yusov 14a] Egor Yusov. “使用极线采样的高性能室外光散射。”收于 GPU Pro 5: Advanced Rendering Techniques，Wolfgang Engel 编辑，第 101–126 页。佛罗里达州博卡顿：CRC Press，2014年。
-
-[Yusov 14b] Egor Yusov. “使用预计算光照的高性能真实积云渲染。”收于 High-Performance Graphics 2014 论文集，Ingo Wald 和 Jonathan Ragan-Kelley 编辑，第 127–136 页。法国里昂：Eurographics Association，2014年。
-
-## 稀疏程序化体素渲染
+# 5. 稀疏程序化体素渲染
 
 Doug McNabb
 
@@ -3590,17 +3746,13 @@ Doug McNabb
 
 我们渲染体积的目标是近似光穿过体积到达眼睛的量。我们通过一个三步过程来产生结果：
 
-- 1. 使用程序化体积原语填充体积。
-- 2. 光照在体积中传播。
-- 3. 从眼睛视角对体积进行光线步进。
+1. 使用程序化体积原语填充体积。
+2. 光照在体积中传播。
+3. 从眼睛视角对体积进行光线步进。
 
 在计算光穿过体积量之前，我们需要知道体积的内容；我们需要用有趣的内容填充体积。体积原语是描述体积内容的廉价且高效的方案 [Wrennige and Zafar 11]。不同类型的体积原语其特征是其描述和控制内容的机制不同。程序化体积原语通过一组参数（例如尺寸、位置、半径等）控制的算法描述内容。我们可以用多个原语填充体积，有很多可能的体积原语类型。我们的系统实现了单个“位移球”和位移球。我们经常交替使用它们，称为*粒子*（particles）和*位移球*。
 
 渲染单个体积原语是轻而的，但一个可以渲染许多不同重叠体积原语的系统要有用得多。我们需要在一个统一的体积内渲染许多体积原语；我们需要让它们正确地产生阴影互相遮挡。支持半透明体积原语特别有用。我们通过将“填充”步骤与“传播”步骤解耦来满足这些需求。在通过步进传播光照之前，我们使用包含所有相关体积信息的元体素（metoxel）。我们通过仅支持单一方向光（例如太阳）来简化传播，允许我们调整体积以与光的方向一致。这使得我们能够沿着光的方向一次一个体素地遍历体积。每个传播步骤用当前体素照亮当前体素。
-
-## 5. 稀疏程序化体素渲染
-
-（注: 此处为原文重复标题，已根据逻辑合并上下文）
 
 ## 5.4 元体素（Metavoxels）
 
@@ -3613,12 +3765,6 @@ Doug McNabb
 图 5.2。由元体素组成的大体积，元体素由体素组成。
 
 体积可能还会遮挡背景；背景光到达眼睛的量可以被体积吸收和散射。我们的方法分离了这两种眼睛视角的贡献。我们使用像素着色器确定光照体积的贡献，并通过透明度混合衰减背景的贡献。
-
-
-
-
-
-## 5. 稀疏过程化体积渲染
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_189_0.png)
 
@@ -3661,11 +3807,13 @@ Doug McNabb
 
 我们通过遍历被粒子边界框覆盖的元体素来对粒子进行分桶。（参见图 5.6。）我们精炼了近似并提高了整体效率：
 
-```
+
+
 // 确定粒子的范围
-min = particleCenter - particleRadius
-max = particleCenter + particleRadius
-```
+
+`min = particleCenter - particleRadius`
+
+`max = particleCenter + particleRadius`
 
 ```
 // 遍历范围内的每个元体素
@@ -3701,9 +3849,7 @@ color_final = max(color_0 ... color_n).
 
 在实践中，简单地接受颜色之间的最大值可以产生合理的结果。这不适用于所有效果，但对某些效果效率很高。不同的效果可能需要不同的颜色组件。例如，火是发射性的，颜色从白色经过黄色和橙色，随着强度降低变为黑色。烟通常是固定颜色且不是发射性的。漫反射颜色受光影调制，而发射颜色则不是。
 
-我们通过执行覆盖测试来计算密度。图 5.7 显示了我们的方法。我们确定粒子在
-
-体素位置的密度
+我们通过执行覆盖测试来计算密度。图 5.7 显示了我们的方法。我们确定粒子在体素位置的密度
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_193_0.png)
 
@@ -3713,11 +3859,9 @@ color_final = max(color_0 ... color_n).
 
 注意几个优化。首先，点积计算长度的平方：$\mathbf{A} \cdot \mathbf{A} = \text{length}^2(\mathbf{A})$。使用距离平方允许我们避免可能昂贵的开根运算。第二个优化来自于存储
 
-
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_194_0.png)
 
-立方体图中的位移值。立方体图与位移一样，定义在球面上。给定位置在 (X, Y, Z) 的体素（voxel）和位于 (0, 0, 0) 的球心，位移由 `cubeMap[X, Y, Z]`给出。
+立方体图中的位移值。立方体图与位移一样，定义在球面上。给定位置在 (X, Y, Z) 的体素（`voxel`）和位于 (0, 0, 0) 的球心，位移由 `cubeMap[X, Y, Z]`给出。
 
 我们目前不支持动态计算噪声。我们怀疑动态解决方案可能会受益于使用立方体图作为中间存储来完成优化；因为体积是 3D 的，而立方体图是 2D 的（立方体图的位置由三个坐标给出，但如图 5.8 所示，它们投影到一个平面的 2D 表面）。通过这种方法可以减少昂贵的动态噪声计算次数。
 
@@ -3725,7 +3869,7 @@ color_final = max(color_0 ... color_n).
 
 计算颜色有许多可能的方法：常量、径向渐变、多边形、纹理渐变、立方体图、噪声等。我们将这一选择留给读者。我们使用了一些用的近似方法：图 5.10 显示了使用位移图作为环境遮蔽近似，以及使用径向距离作为颜色色阶（从中心亮红色到边缘的深灰色）的结果。环境遮蔽近似有助于为阴影侧提供形状感。
 
-位移球的许多属性可以随时间制作动画：位置、朝向、缩放、透明度、颜色等。这与 2D 广告板（billboards）的范式相似，只是使用了 3D 体积元。
+位移球的许多属性可以随时间制作动画：位置、朝向、缩放、透明度、颜色等。这与 2D 广告板（`billboards`）的范式相似，只是使用了 3D 体积元。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_195_0.png)
 
@@ -3737,7 +3881,7 @@ color_final = max(color_0 ... color_n).
 
 ### 5.5.3 光传播
 
-我们通过一个简单的循环在元体素（metavoxel）中传播光。我们使用光化器和像素着色器来执行此工作。我们为元体素的每个体素列绘制一个像素——即用两个三角形组成的四边形覆盖每个体素列的一个像素（例如，对于一个 32 × 32 × 32 的元体素，我们绘制一个 32 × 32 像素的正方形）。我们的像素/片段着色器遍历对应体素列中的每个体素。
+我们通过一个简单的循环在元体素（`metavoxel`）中传播光。我们使用光化器和像素着色器来执行此工作。我们为元体素的每个体素列绘制一个像素——即用两个三角形组成的四边形覆盖每个体素列的一个像素（例如，对于一个 32 × 32 × 32 的元体素，我们绘制一个 32 × 32 像素的正方形）。我们的像素/片段着色器遍历对应体素列中的每个体素。
 
 ```cpp
 // 100% 光传播到起始位置
@@ -3792,15 +3936,11 @@ resultTransmittance *= blendFactor
 
 它从采样颜色中累积光照并根据采样的 Alpha（即密度）对其衰减。最终结果是一个颜色和一个 Alpha 值，我们可以使用 Alpha 混合来与后缓冲区进行组合。
 
-注意，我们使用面对面剔除（front-face culling）绘制这个盒子。如果眼睛在盒子内部，它只能看到背面。如果我们使用背面剔除，像素将不会绘制，且不会发生射线匹配。我们也不希望在不剔除的情况下绘制，因为那可能会导致像素被不必要的绘制两次。
+注意，我们使用面对面剔除（`front-face culling`）绘制这个盒子。如果眼睛在盒子内部，它只能看到背面。如果我们使用背面剔除，像素将不会绘制，且不会发生射线匹配。我们也不希望在不剔除的情况下绘制，因为那可能会导致像素被不必要的绘制两次。
 
 ### 5.5.5 元体素排序顺序
 
 最后，我们需要按照正确的顺序渲染元体素，以确保 Alpha 混合正确。我们一次渲染一个元体素，传播光并匹配每一个体素。由于元体素可能包含半透明体素，顺序非常重要。图 5.11 显示了我们如何从上到下（相对于光照）和从后到前（相对于视角）处理元体素。光传播决定了单个元体素的最终颜色取决于光穿过相邻元体素的情况。同样，我们需要将每个元体素的射线步进结果与之前渲染的元体素结果进行混合……（注：原文此处存在大量重复的错误文本，翻译时已根据逻辑进行清理处理）
-
-
-
-
 
 # 通过光链表实现实时光照
 
@@ -3808,17 +3948,17 @@ Abdul Bezrati
 
 ## 1.1 引言
 
-延迟渲染（Deferred lighting）一直是视频游戏中处理动态光照的流行技术，但由于它依赖于深度缓冲区（depth buffer），它对半透明几何体和粒子效果的效果并不理想，因为这些元素通常不会写入深度值。在图 1.1 所示，中心点烟雾效果和半透明水瓶不受场景中彩色灯光的影响。
+延迟渲染（`Deferred lighting`）一直是视频游戏中处理动态光照的流行技术，但由于它依赖于深度缓冲区（`depth buffer`），它对半透明几何体和粒子效果的效果并不理想，因为这些元素通常不会写入深度值。在图 1.1 所示，中心点烟雾效果和半透明水瓶不受场景中彩色灯光的影响。
 
-延迟引擎的常用方法是推迟处理透明物体，或者专门为这些元素应用前向渲染通道（forward lighting pass）。前向渲染通道会给引擎增加复杂性和额外的维护负担。
+延迟引擎的常用方法是推迟处理透明物体，或者专门为这些元素应用前向渲染通道（`forward lighting pass`）。前向渲染通道会给引擎增加复杂性和额外的维护负担。
 
-在 Insomniac Games，我们设计了一种统一的解决方案，使得单一路径就可以处理不透明和半透明场景元素（图 1.2）。我们将该解决方案命名为光链表（Light Linked List, LLL），它需要 DirectX 10.1 级硬件引入无序访问视图（unordered access views）和原子函数。
+在 Insomniac Games，我们设计了一种统一的解决方案，使得单一路径就可以处理不透明和半透明场景元素（图 1.2）。我们将该解决方案命名为光链表（`Light Linked List`, `LLL`），它需要 DirectX 10.1 级硬件引入无序访问视图（`unordered access views`）和原子函数。
 
 光链表共享了延迟渲染的性能优势，即光照只在受每个光源影响的像素上进行计算。此外，任何未编码在深度缓冲区中的对象都可以完全访问将影响它们的光源。光链表的生成和访问完全由 GPU 加速，对 CPU 的处理极小。
 
 ## 1.2 算法
 
-光链表算法依赖于一个 GPU 可访问的列表，记录影响屏幕上每个像素的光源。GPU 链表曾被用于实现顺序无关透明性（Order Independent Transparency）以及间接照明 [Gruen and Thibieroz 10]。
+光链表算法依赖于一个 GPU 可访问的列表，记录影响屏幕上每个像素的光源。GPU 链表曾被用于实现顺序无关透明性（`Order Independent Transparency`）以及间接照明 [Gruen and Thibieroz 10]。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_202_0.png)
 
@@ -3826,7 +3966,7 @@ Abdul Bezrati
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_202_1.png)
 
-**图 1.2.** 烟雾效果和半透明水瓶通过 LLL 接收全场景光照。
+**图 1.2.** 烟雾效果和半透明水瓶通过 `LLL` 接收全场景光照。
 
 对于游戏的每一个新帧，我们都会填充光链表，随后访问它来评估每个像素的光照。
 
@@ -3880,7 +4020,7 @@ RWStartAddressBuffer g_LightBoundsBuffer
 RWStartAddressBuffer g_LightOffsetBuffer
 ```
 
-最后一个缓冲区是一个可选的深度缓冲区，用于在像素着色器中执行软件深度测试。我们选择以 FP32 格式存储为线性深度，而不是典型的超视值（hyper values）。
+最后一个缓冲区是一个可选的深度缓冲区，用于在像素着色器中执行软件深度测试。我们选择以 FP32 格式存储为线性深度，而不是典型的超视值（`hyper values`）。
 
 ### 1.2.4 光壳（Light Shells）
 
@@ -3941,7 +4081,7 @@ RWStartAddressBuffer g_LightOffsetBuffer
 - 聚光灯：锥体
 - 区域光：箱体
 
-## 1.3.2 深度边界
+### 1.3.2 深度边界
 
 光链表结构存储了最小和最大深度；然而，这两个值是由背面进行栅化的。我们首先开启背面剔除绘制光几何体，以允许仅对面进行栅化。
 
@@ -3961,15 +4101,11 @@ if(front_face == true) {
 
 在处理完正面后，我们立即重新渲染光几何体，但此时开启正面剔除。
 
-我们获取之前存储在 g_LightBuffer 中的信息，并解码光源 ID 和线性深度。此时，我们面临两种情况。
+我们获取之前存储在 `g_LightBuffer` 中的信息，并解码光源 ID 和线性深度。此时，我们面临两种情况。
 
-在第一种情况下，从 g_LightBoundsBuffer 采样解码出的 ID 与传入的光源匹配。在这种情况下，我们知道正面已经过正确处理，并继续检查存储深度的符号：如果是负的，则尽早退出着色器，因为两个面都被常规场景几何体遮挡了。
+在第一种情况下，从 `g_LightBoundsBuffer` 采样解码出的 ID 与传入的光源匹配。在这种情况下，我们知道正面已经过正确处理，并继续检查存储深度的符号：如果是负的，则尽早退出着色器，因为两个面都被常规场景几何体遮挡了。
 
 第二种情况发生在解码出的 ID 与背面提供的光源信息不匹配时。这种情况可能发生在当
-
-
-
-
 
 # 1. 通过光照链表实现实时照明
 
@@ -3978,29 +4114,33 @@ if(front_face == true) {
 ```cpp
 // 加载由正面写入的内容
 uint bounds_info = g_LightBoundsBuffer.Load( dst_offset);
-
 // 解码存储的光照索引
 uint stored_index = (bounds_info >> 16);
-
 // 解码存储的光照深度
-float front_depth = float32( bounds_info >> 0 );
+```
+
+
+
+```cpp
+float front_depth = float32(bounds_info >> 0);
 
 // 检查正面和背面是否都已处理
-if(stored_index == light_index)
+if (stored_index == light_index)
 {
-    // 检查渲染的正面是否被场景几何体
-    // 遮挡的情况
-    if(front_depth < 0)
+    // 检查渲染的正面是否被场景几何体遮挡
+    if (front_depth < 0)
     {
         return;
     }
 }
 // 不匹配，正面被近裁剪面剔除
 else
+{
     front_depth = 0;
+}
 ```
 
-## 1.3.3 LightFragmentLink 的分配
+### 1.3.3 `LightFragmentLink` 的分配
 
 现在我们已经知道最小和最大光照深度都是可用的，可以进行 `LightFragmentLink` 的分配了。要分配 `LightFragmentLink`，我们只需增加包含所有片段的 `StructuredBuffer` 的内部计数器。为了使算法更健壮并避免与驱动相关的错误，我们必须验证分配情况并确保不会发生溢出：
 
@@ -4009,7 +4149,7 @@ else
 uint new_lll_idx = g_LightFragmentLinkedBuffer.IncrementCounter();
 
 // 防止溢出
-if(new_lll_idx >= g_VP_LLLMaxCount)
+if (new_lll_idx >= g_VP_LLLMaxCount)
 {
     return;
 }
@@ -4020,44 +4160,49 @@ if(new_lll_idx >= g_VP_LLLMaxCount)
 ```cpp
 uint prev_l11_idx;
 
-// 获取存储的最后一个链表元素索引并在过程中
-// 替换它
-G_LightStartOffsetBuffer.InterlockedExchange( dst_offset, new_ll11_idx, prev_l11_idx) );
+// 获取存储的最后一个链表元素索引并在过程中替换它
+G_LightStartOffsetBuffer.InterlockedExchange(
+    dst_offset,
+    new_ll11_idx,
+    prev_ll11_idx
+);
 ```
 
 此时，我们已经找到了填充并存储一个有效 `FragmentLink` 所需的四个值：
 
 ```cpp
 // 编码光照深度值
-uint light_depth_max = f32tof16 ( light_depth ); // 背面深度
-uint light_depth_min = f32tof16 ( front_depth ); // 正面深度
+uint light_depth_max = f32tof16(light_depth); // 背面深度
+uint light_depth_min = f32tof16(front_depth); // 正面深度
 
 // 最终输出
 FragmentLink element;
+
 // 打包光照深度
 element.m_DepthInfo = (light_depth_min << 16) | light_depth_max;
+
 // 索引/链接
 element.m_IndexNext = (light_index << 24) | (prev_ll11_idx & 0xFFFFFF);
 
 // 存储元素
-G_LightFragmentLinkedBuffer [ new_ll11_idx ] = element;
+G_LightFragmentLinkedBuffer[new_ll11_idx] = element;
 ```
 
 ## 1.4 访问光照链表
 
-无论你的引擎使用的是延迟渲染还是前向渲染，访问光照链表的方法都是相同的。第一步是将输入的像素从视口空间转换为 LLL 索引，我们通过首先将 `vPos` 转换为 LLL 分率来实现，所示：
+无论你的引擎使用的是延迟渲染还是前向渲染，访问光照链表的方法都是相同的。第一步是将输入的像素从视口空间转换为 LLL 索引，我们通过首先将 `vPos` 转换为 LLL 分辨率来实现，如下所示：
 
 ```cpp
-uint ll11_x = uint ( vpos_f_x / g_VP_Width ) * g_VP_LLLWidth;
-uint ll11_y = uint ( vpos_f_y / g_VP_Height ) * g_VP_LLLHeight;
-uint src_index = 111_y * g_VP_LLLWidth + 111_x;
+uint ll11_x = uint(vpos_f_x / g_VP_Width) * g_VP_LLLWidth;
+uint ll11_y = uint(vpos_f_y / g_VP_Height) * g_VP_LLLHeight;
+uint src_index = ll11_y * g_VP_LLLWidth + ll11_x;
 ```
 
 有了 LLL 索引，我们从无序访问资源 `g_LightStartOffset` 计算第一个链接，并开始光照循环；循环会在发现任何无效值时停止。
 
 ```cpp
-uint src_index = ScreenUvsToLLLIndex ( screen_uvs );
-uint first_offset = g_LightStartOffset ( src_index );
+uint src_index = ScreenUvsToLLLIndex(screen_uvs);
+uint first_offset = g_LightStartOffset(src_index);
 
 // 解码第一个元素索引
 uint element_index = (first_offset & 0xFFFFFF);
@@ -4065,7 +4210,7 @@ uint element_index = (first_offset & 0xFFFFFF);
 
 ```cpp
 // 遍历光照链表
-while( element_index != 0xFFFFFF )
+while (element_index != 0xFFFFFF)
 {
     // 获取
     LightFragmentLink element = g_LightFragmentLinkedView[element_index];
@@ -4083,8 +4228,8 @@ float light_depth_max = f16float32(element.m_DepthInfo >> 0);
 float light_depth_min = f16float32(element.m_DepthInfo >> 16);
 
 // 执行深度边界检查
-if( ( light_depth > light_depth_max ) || ( light_depth < light_depth_min )
-{ 
+if ((light_depth > light_depth_max) || (light_depth < light_depth_min))
+{
     continue;
 }
 ```
@@ -4096,79 +4241,86 @@ if( ( light_depth > light_depth_max ) || ( light_depth < light_depth_min )
 uint light_idx = (element.m_IndexNext >> 24);
 
 // 访问光照环境
-GPULightEnv light_env = g_LinkedLightsEnvs[ light_idx ];
+GPULightEnv light_env = g_LinkedLightsEnvs[light_idx];
 ```
 
 ## 1.5 降低分辨率
 
-减少算法内存占用的方法是缩小存储光照链表的分辨率。在 1080p 全分辨率下运行，假设每个像素有 32 个光照，列表所需的内存将是 $1920 \times 1080 \times 32$ 。在实践中，以四分之一甚至八分之一的原分辨率生成链表就足够减少内存：$(1920 \div 8) \times (1080 \div 8) \times 32 = 1$ MB。1.5.1 深度采样
+减少算法内存占用的方法是缩小存储光照链表的分辨率。在 1080p 全分辨率下运行，假设每个像素有 32 个光照，列表所需的内存将是 `$1920 \times 1080 \times 32$`。在实践中，以四分之一甚至八分之一的原分辨率生成链表就足够减少内存：`$(1920 \div 8) \times (1080 \div 8) \times 32 = 1$ MB`。
+
+### 1.5.1 深度采样
 
 对于执行深度缓冲的引擎，我们需要对深度缓冲区进行下采样以匹配 LLL 的分辨率。深度的缩放必须通过点采样完成，以避免由于深度剔除导致的信息丢失。为了加快深度采样的速度，我们大量使用 `Gather` 函数，它可以一次读取四个深度采样。以下是将全分辨率深度缓冲区下采样为八分之一宽高的示例：
 
 ```cpp
 float d4_max;
+
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, 3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, 3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, 1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, 1));
+
 d4_max = max(d4_max, max(d4_01, max(d4_10, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, -3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, 3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, -1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, -1));
+
 d4_max = max(d4_max, max(d4_01, max(d4_10, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-3, 3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, 3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-3, -1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, -1));
+
 d4_max = max(d4_max, max(d4_01, max(d4_10, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-3, 1));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, 1));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-3, -3));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(1, -3));
+
 d4_max = max(d4_max, max(d4_01, max(d4_10, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, -3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, -3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, 1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, 1));
+
 d4_max = max(d4_max, max(d4_01, max(d4_10, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, 3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, 3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-3, 1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, 1));
+
 d4_max = max(d4_max, max(d4_00, max(d4_01, d4_11)));
 
 float4 d4_00 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, 3));
 float4 d4_01 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, 3));
 float4 d4_10 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(3, -1));
 float4 d4_11 = g_txDepth.GatherRed(g_samPoint, screen_uvs, int2(-1, -1));
+
 d4_max = max(d4_max, max(d4_00, max(d4_01, d4_11)));
 
 // 计算最终最大深度
-float depth_max = max(d4_max.x, max(d4_max.y, max(d4_max.z )));
+float depth_max = max(d4_max.x, max(d4_max.y, max(d4_max.z));
 ```
+
+
 
 ## 1.6 结论
 
 链表算法帮助我们在使用半透明几何体和粒子效果时极大地简化了光照流水线，这些是我们非常期待的。通过光照链表，我们能够在匹配或改进延迟渲染器性能的同时，减少内存开销。此外，光照链表的灵活性允许我们轻松地为皮肤、头发、织物和车漆等材质应用自定义光照。
 
-未来，我们打算对 `LightFragmentLink` 缓冲区进一步实验缓存一致的布局，因为这可能会带来进一步的性能提升。
+未来，我们打算对`LightFragmentLink`缓冲区进一步实验缓存一致的布局，因为这可能会带来进一步的性能提升。
 
 ## 参考文献
 
 [Gruen and Thibieroz 10] Holger Gruen and Nicolas Thibieroz. “Order Independent Transparency and Indirect Illumination Using Dx11 Linked Lists.” Presentation at the Advanced D3D Day Tutorial, Game Developers Conference, San Francisco, CA, March 9–13, 2010.
 
-
-
-
-
-# 2
-III
+# 2 III
 
 ## 延迟归化辐照探针 (Deferred Normalized Irradiance Probes)
 
@@ -4188,7 +4340,7 @@ John Huelin, Benjamin Rouveyrol 和 Bartłomiej Wroński
 
 ### 2.1.1 概述
 
-实现逼的运行时光照是实时渲染应用（尤其是游戏）中最大的未解决问题之一。通过解析光照实现的简单直接光照在实时中计算非常容易。另一方面，间接光以及光线在场景中弹跳的效应及其阴影在实时中计算非常困难。包含直接光和间接光效应的全场景光照明被称为*全局光照明* (global illumination, GI)，而完整的运行时高质量 GI 是渲染领域的“圣杯”。
+实现逼真的运行时光照是实时渲染应用（尤其是游戏）中最大的未解决问题之一。通过解析光照实现的简单直接光照在实时中计算非常容易。另一方面，间接光以及光线在场景中弹跳的效应及其阴影在实时中计算非常困难。包含直接光和间接光效应的全场景光照明被称为*全局光照明* (global illumination, GI)，而完整的运行时高质量 GI 是渲染领域的“圣杯”。
 
 在通用情况下，对光传输方程提供完整且正确的解决方案是不可能的——因为它是一个无限积分，数值解需要无限数量的样本。但正确的 GI 解决方案远未达到实时（它们的时间是以秒、分钟甚至小时为单位的）。
 
@@ -4226,6 +4378,8 @@ $L_o(x, \omega_o) = L_e(x, \omega) + \int_{\Omega} f(x, \omega_o, \omega)L_i(x, 
 $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\omega$
 ```
 
+
+
 其中 $c_{diff}$ 是受光表面的反射率颜色。我们引入归化辐照（normalized irradiance）项作为由单一白色且统一亮度的光源引起的受光点的最终辐射。我们在算法中使用该术语的关键由于由于简化的光传输方程是线性的，我们可以为单个光照方向计算整个场景的归化光传输，然后针对特定的光照条件进行去归化。
 
 ## 2.2 延迟归化辐照探针算法
@@ -4235,9 +4389,6 @@ $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\ome
 由于《刺客信条4》运行在上一代游戏主机上——Microsoft Xbox 360 和 Playstation 3——我们有着严格的内存和性能预算：对于相对较大的效果范围（在殖民城镇中至少几个街外），使用的内存最大为 1 MB，最好仅使用 VRAM（为了不夺取 Playstation 3 的游戏系统内存），并且在这些已有七年历史主机上的运行时成本低于 1 毫秒。
 
 最后，由于我们在实际游戏制作过程中在某些关卡已经就绪时决定添加全局光照明算法，它对美术工作流的影响必须降最低。烘焙时间需要足够短，以便允许艺术家每小时进行多次光照迭代，并且在改变
-
-
-
 
 ## 2. 延迟归一化辐照探针
 
@@ -4271,15 +4422,15 @@ $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\ome
 整个算法分为两个部分：工具侧部分和最终运行时部分。
 工具侧部分包含以下步骤：
 
-- 1. 在玩家可以访问的最低点（地面）生成均匀  2.DD 针网格。
+- 1. 在玩家可以访问的最低点（地面）生成均匀 2D 探针网格。
 - 2. 将探针分成大小为 16 × 16 的区域。
-- 3. 对于每个区域，渲染一个带有每个探针 G-buffer 信息的立方体贴，以及每个关键帧使用光方向的高分辨率阴影贴。
-- 4. 使用像素色器计算每个探针和关键帧的归一化辐照，并将其存储在纹理中。
+- 3. 对于每个区域，渲染一个带有每个探针 G-buffer 信息的立方体贴图，以及每个关键帧使用光方向的高分辨率阴影贴图。
+- 4. 使用像素着色器计算每个探针和关键帧的归一化辐照，并将其存储在纹理中。
 
 拥有这些烘焙的纹理，我们可以在运行时通过以下步骤使用它们：
 
 - 1. 在相机周围的区域流传输纹理。
-- 2. 确定相机周围的探的 2D 视口。
+- 2. 确定相机周围的探针的 2D 视口。
 - 3. 混合来自两个关键小时的归一化辐照信息。从离屏缓冲区绘制辐照数据的去归一化。
 - 4. 在 CPU 或 GPU 上从可用游戏数据准备高度信息。
 - 5. 在延迟环境光照中，将所有计算信息与天空光和 SSAO 结合。
@@ -4336,15 +4487,15 @@ $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\ome
 整个算法分为两个部分：工具侧部分和最终运行时部分。
 工具侧部分包含以下步骤：
 
-- 1. 在玩家可以访问的最低点（地面）生成均匀  2.DD 针网格。
+- 1. 在玩家可以访问的最低点（地面）生成均匀 2D 探针网格。
 - 2. 将探针分成大小为 16 × 16 的区域。
-- 3. 对于每个区域，渲染一个带有每个探针 G-buffer 信息的立方体贴，以及每个关键帧使用光方向的高分辨率阴影贴。
-- 4. 使用像素色器计算每个探针和关键帧的归一化辐照，并将其存储在纹理中。
+- 3. 对于每个区域，渲染一个带有每个探针 G-buffer 信息的立方体贴图，以及每个关键帧使用光方向的高分辨率阴影贴图。
+- 4. 使用像素着色器计算每个探针和关键帧的归一化辐照，并将其存储在纹理中。
 
 拥有这些烘焙的纹理，我们可以在运行时通过以下步骤使用它们：
 
 - 1. 在相机周围的区域流传输纹理。
-- 2. 确定相机周围的探的 2D 视口。
+- 2. 确定相机周围的探针的 2D 视口。
 - 3. 混合来自两个关键小时的归一化辐照信息。从离屏缓冲区绘制辐照数据的去归一化。
 - 4. 在 CPU 或 GPU 上从可用游戏数据准备高度信息。
 - 5. 在延迟环境光照中，将所有计算信息与天空光和 SSAO 结合。
@@ -4358,10 +4509,6 @@ $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\ome
 ![](img/120606d35c679664e7ad5ec2ee0e8b_221_0.png)
 
 **图 2.4.** 探针放置示例——注意屋顶缺少探针。
-
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_222_0.png)
 
@@ -4405,18 +4552,33 @@ $L_o(x, \omega_o) = \frac{c_{diff}}{\pi}\int L_i(x, \omega)(\omega \cdot n)d\ome
 
 ```
 RenderSector
+
 绘制包含扇区的八个时间图
+
 对于扇区中的每个探针
+
     对于六个方向之一
+
         以探针为中心渲染缓冲区
+
         对于每个时间
+
             使用当前时间的阴影图
+
             执行光照
+
             每个基
+
                 计算像素辐照 BRDF
+
                 下采样辐射贡献
 ```
+
+
+
+```
 列表 2.1 最终烘焙器使用的伪代码。
+```
 
 ## 2.3.3 调试工具
 
@@ -4428,17 +4590,13 @@ RenderSector
 
 像图 2.3 中的这样的纹理嵌入在常规实体中。这些实体属于 32 × 32 米的扇区，纹理像任何其他资源一样进行流传输。它们代表了最终环境光照阶段将使用的纹理子区域。
 
-
-
-
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_226_0.png)
 
 图 2.8. 实现的 GI 烘焙调试工具。左上插图从左到右为：当前时间的归一化立方体贴图的六面、这些面对应的深度、当前区域阴影图以及运行时高度图纹理（见第 2.4.3 节）。
 
 由于这些纹理都相对轻量（每个区域占用 24 kB VRAM），对游戏流传输系统的影响微乎其微，不需要额外努力来提高加载时间。
 
-## 2.4.2 解析后的 DNIP 纹理
+### 2.4.2 解析后的 DNIP 纹理
 
 在运行时具有不同数量的纹理（取决于当前加载的内容）对于统一的环境光照通道并不方便使用：Playstation 3 或 Xbox 360 不支持纹理数组，逐像素分支很慢，而且扇区之间的数据需要额外的过滤。因此，我们决定生成一组中间纹理：解析后的 DNIP 纹理。
 
@@ -4446,7 +4604,7 @@ RenderSector
 
 这些解析纹理的生成是在 GPU 上完成的。图 2.10 是发布的绘制调用（draw calls）的表示。每个正方形都是一个绘制调用；黄色的正在发布。
 
-### 2. 延迟归一化辐照探针
+### 2.4.3 延迟归一化辐照探针
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_227_0.png)
 
@@ -4464,7 +4622,7 @@ RenderSector
 
 图 2.11. DNIP 评估的视觉总结：(a) 解析后的 DNIP 纹理，(b) 世界高度图数据，(c) 世界空间法线缓冲区以及 (d) 最终间接阳光 GI 贡献。
 
-## 2.4. 环境光照通道
+## 2.4.4 环境光照通道
 
 该通道在所有平台上均以全分辨率运行，并且尽可能高效。此通道的目标是根据像素法线和位置获取最终的环境光颜色。解析后的 DNIP 纹理包含四个方向当前的环境光照。我们以类似于 (Gilabert and Stefanov [12]) 的方式计算像素的最终颜色，但我们在查找立方体纹理中预先计算了每个基础方向的权重：性能分析工具表明，在 Sony Playstation 3 上，通过这种方式可以获得更好的 ALU:TEX 比率。此外，用于 DNIP 纹理的打包方式允许我们通过每个纹理读取时的三次点积来获取最终颜色，因为在着色器内部不需要重组（swizzling）。
 
@@ -4492,7 +4650,9 @@ Jean-Francois St-Amour 描述了我们的天空光遮挡因子（图 2.12(b)）�
 
 ### 2.5.1 性能
 
-该技术提供的质量、较小的运行时性能影响以及低开销，使我们能够在《刺客信条 4：黑旗》的所有地图中发布它。图 15 显示了与直接光和天空光组合的最终效果 ![](img/120606d35c679664e7ad5faec2ee0e8b_230_1.png)
+该技术提供的质量、较小的运行时性能影响以及低开销，使我们能够在《刺客信条 4：黑旗》的所有地图中发布它。图 15 显示了与直接光和天空光组合的最终效果。
+
+![](img/120606d35c679664e7ad5faec2ee0e8b_230_1.png)
 
 表 2.1. DNIP 技术总结。
 
@@ -4503,7 +4663,7 @@ Jean-Francois St-Amour 描述了我们的天空光遮挡因子（图 2.12(b)）�
 | 内存消耗（渲染目标） | 56 kB |
 | CPU 消耗 | 0.6 ms (平均) |
 | 探针数量（未优化） | ~110,000 |
-| 探针数量（已优化） | ~30,000，每2米一个 |
+| 探针数量（已优化） | ~30,000，每 2 米一个 |
 | 游戏世界烘焙时间 | 8 分钟 (GTX 680, 单台机器) |
 
 GPU 指明解析后 DNIP 纹理生成和环境光通道消耗的总时间。
@@ -4512,13 +4672,13 @@ GPU 指明解析后 DNIP 纹理生成和环境光通道消耗的总时间。
 
 ### 2.5.2 局限性与未来扩展
 
-尽管我们对《刺客信条 4》中的结果感到满意，但支持 PlayStation 4 和 Xbox 等具有额外处理能力的主机，增加 X、Y、Z 方向的探针密度是一个简单的解决方案。这种分层方法需要对算法解析进行额外工作，但存储的基础并不完美，因为我们丢失了侧面的任何反射，并且地面颜色泄漏到侧面。我们尝试使用 [Gilibert and Stefano 12] 将基础改为六轴基础。这为我们带来了明显更好的结果，但最终因为 PlayStation 3 和 Xbox 360 的性能和内存成本而被放弃。我们决定使用 16 位 HDR 格式保持光照一致。在下一代主机上，我们可以将光照与天空光一起正确地存储在 DNIP 数据中，并实现物理的遮挡。处理多次反射是不可能的。
+尽管我们对《刺客信条 4》中的结果感到满意，但支持 PlayStation 4 和 Xbox 等具有额外处理能力的主机，增加 X、Y、Z 方向的探针密度是一个简单的解决方案。这种分层方法需要对算法解析进行额外工作，但存储的基础并不完美，因为我们丢失了侧面的任何反射，并且地面颜色泄漏到侧面。我们尝试使用 [Gilibert and Stefanov 12] 将基础改为六轴基础。这为我们带来了明显更好的结果，但最终因为 PlayStation 3 和 Xbox 360 的性能和内存成本而被放弃。我们决定使用 16 位 HDR 格式保持光照一致。在下一代主机上，我们可以将光照与天空光一起正确地存储在 DNIP 数据中，并实现物理的遮挡。处理多次反射是不可能的。
 
-### III 光照
+## 2.6 光照
 
 得益于我们仅在 GPU 上运行且不需要任何特殊数据的烘焙算法，在运行时为最近的探针生成间接光也可以另一个探索路径。这种方法可以支持来自各种光源的单次或多次反射间接光，并被动态物体遮挡，而不仅仅是关键光。最后，多个 GI 体允许我们在取决于内容的频率上工作，并帮助解决任何室内外混合游戏中可能发生的光泄漏问题。这在《刺客信条 4》中并不是问题，因为它是一个基于外部的游戏——在我们的情况下，没有系统支持室内外混合，通过游戏设计和数据解决了。所有的室内都是玩家传到的独立区域，而不是世界中的真实区域。
 
-## 2.6 谢谢
+## 2.7 谢谢
 
 感谢《刺客信条 4》团队的所有渲染编程人员、技术艺术总和灯光师对算法及其优化的灵感启发和讨论。特别感谢《Deferred Radiance Transfer Volumes》作者 Mikael Gilibert 提供的大量反馈和建议，感谢 Sebastian Larune、Danny Oros 和 Virginie Cinq-Mars 对我们解决方案的测试、反馈和实际应用。
 
@@ -4526,34 +4686,26 @@ GPU 指明解析后 DNIP 纹理生成和环境光通道消耗的总时间。
 
 - [Crassin 11] Cyril Crassin. “Gigavoxels, GigaVoxels: A Voxel-Based Rendering Pipeline for Efficient Exploration of Large and Detailed Scenes.” 博士论文，格罗诺大学，2011。
 - [Elias 00] Hugo Elias. “Radiosity.” http://freespace.net/hugo/elias/radiosity/radiosity.htm, 2000.
-- [Gilibert and Stefanov 12] Mikael Gilibert and Nikolai Stefanov. “Deferred Radiance Transfer Volumes.” 发表于游戏开发者会议，加金山，CA，2012年3月5日-9日。
-- [Kaplanyan 09] Anton Kaplanyan. “Light Propagation Volumes in CryEngine 3.” SIGGRAPH Course: Advances in Real-Time Rendering in 3D Graphics and Games, SIGGRAPH 2009, 新奥尔良，LA，2009年8月3日。
-- [Mara et al. 14] M. Mara, M. McGuire, D. Nourouzeahrai, and D. Luebek. “Fast Global Illumination Approximations on Deep G-Buffers.” 技术报告 NVR-2014-001, NVIDIA Corporation，2014年6月16日。
+- [Gilibert and Stefanov 12] Mikael Gilibert and Nikolai Stefanov. “Deferred Radiance Transfer Volumes.” 发表于游戏开发者会议，加金山，CA，2012 年 3 月 5 日–9 日。
+- [Kaplanyan 09] Anton Kaplanyan. “Light Propagation Volumes in CryEngine 3.” SIGGRAPH Course: Advances in Real-Time Rendering in 3D Graphics and Games, SIGGRAPH 2009, 新奥尔良，LA，2009 年 8 月 3 日。
+- [Mara et al. 14] M. Mara, M. McGuire, D. Nourouzeahrai, and D. Luebek. “Fast Global Illumination Approximations on Deep G-Buffers.” 技术报告 NVR-2014-001, NVIDIA Corporation，2014 年 6 月 16 日。
+- [McTaggart 04] Gary McTaggart. “Half Life 2/Valve Source Shading.” *Direct 3D Tutorial*, http://www.2.ati.com/developer/gdc/D3DTutorial10_Half-Life2_Shading.pdf, 2004.
+- [Ramamoorthi and Hanrahan 01] Ravi Ramamoorthi and Pat Hanrahan. “An Efficient Representation for Irradiance Environment Maps.” In *Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques*, pp. 497–500. New York: ACM, 2001.
+- [Sloan et al. 02] Peter-Mike Sloan, Jan Kautz, and John Snyder. “Precomputed Radiance Transfer for Real-Time Rendering in Dynamic, Low-Frequency Lighting Environments.” *Proc. SIGGRAPH ’02: Transaction on Graphics* 21:3 (2002), 527–536.
+- [St-Amour 13] Jean-Francois St-Amour. “Rendering of Assassin’s Creed 3.” Presented at Game Developers Conference, San Francisco, CA, March 5–9, 2012.
 
-
-
-
-
--   [McTaggart 04] Gary McTaggart. “Half Life 2/Valve Source Shading.” *Direct 3D Tutorial*, http://www.2.ati.com/developer/gdc/D3DTutorial10_Half-Life2_Shading.pdf, 2004.
-
--   [Ramamoorthi and Hanrahan 01] Ravi Ramamoorthi and Pat Hanrahan. “An Efficient Representation for Irradiance Environment Maps.” In *Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques*, pp. 497–500. New York: ACM, 2001.
-
--   [Sloan et al. 02] Peter-Mike Sloan, Jan Kautz, and John Snyder. “Precomputed Radiance Transfer for Real-Time Rendering in Dynamic, Low-Frequency Lighting Environments.” *Proc. SIGGRAPH ’02: Transaction on Graphics* 21:3 (2002), 527–536.
-
--   [St-Amour 13] Jean-Francois St-Amour. “Rendering of Assassin’s Creed 3.” Presented at Game Developers Conference, San Francisco, CA, March 5–9, 2012.
-
-# 体积雾与光照
+# 3 体积雾与光照
 
 Bartłomiej Wroński
 
 ## 3.1 引言
 
-本章介绍了了*体积雾*（volumetric fog），这是由 Ubisoft Montreal 开发的一种用于 Microsoft Xbox One、Sony Playstation 4 和 PC 的技术，曾用于《刺客信条：黑旗时代》。我们提出了一种新型实时解析模型，用于计算各种大气现象。我们解决了如何以连贯且优化的方式统一并计算与大气散射相关的各种大气效果，例如：
+本章介绍了体积雾（volumetric fog），这是由 Ubisoft Montreal 开发的一种用于 Microsoft Xbox One、Sony Playstation 4 和 PC 的技术，曾用于《刺客信条：黑旗时代》。我们提出了一种新型实时解析模型，用于计算各种大气现象。我们解决了如何以连贯且优化的方式统一并计算与大气散射相关的各种大气效果，例如：
 
--   介质密度变化的雾，
--   烟雾和霾，
--   耶稣光或光柱（light shafts），
--   体积光和阴影。
+- 介质密度变化的雾；
+- 烟雾和霾；
+- 耶稣光或光柱（light shafts）；
+- 体积光和阴影。
 
 本章简要介绍了一种光散射模型，该模型包含了内散射、外散射效应以及 Beer-Lambert 定律。我们还描述了如何对散射进行数值计算和积分。
 
@@ -4569,81 +4721,79 @@ Bartłomiej Wroński
 
 所有这些方法都有其局限性和缺点——但射线步进看起来很有前景，我们决定以此为方法的基础。尽管如此，典型的 2D 射线步进有多个缺点：
 
--   如极线采样（epipolar sampling [Yusov 13]）等解决方案提高了性能，但将算法限制在均匀参与介质密度单一光源。
+- 如极线采样（epipolar sampling [Yusov 13]）等解决方案提高了性能，但将算法限制在均匀参与介质密度单一光源。
+- 当前 GPU 的性能允许我们在较低分辨率的缓冲区中计算效果，但这会产生锯齿线等视觉伪影。更先进的上采样算法（如双边上采样 bilateral up-sampling）可能会丢失某些几何特征，或为高对比度源图像引入伪影。体积雾同样在小分辨率体素上运行，但使用 3D 三线性过滤来防止因 2D 解决方案中缺失深度信息导致的边缘伪影。
+- 大多数算法变体不支持前向渲染和多层透明物体。这里一个值得注意的例外是《星球：暗影》[Vos 14] 中使用的解决方案，它专门使用低分辨率 3D 体素进行粒子着色。尽管如此，在这种方法中，针对着色实体物体的散射效应是以基于图像的方式计算的。
 
--   当前 GPU 的性能允许我们在较低分辨率的缓冲区中计算效果，但这会产生锯齿线等视觉伪影。更先进的上采样算法（如双边上采样 bilateral up-sampling）可能会丢失某些几何特征，或为高对比度源图像引入伪影。体积雾同样在小分辨率体素上运行，但使用 3D 三线性过滤来防止因 2D 解决方案中缺失深度信息导致的边缘伪影。
+因此，我们决定开发一种克服这些局限性的新型解决方案，并介绍了我们称为体积雾的解决方案。
 
--   大多数算法变体不支持前向渲染和多层透明物体。这里一个值得注意的例外是《星球：暗影》[Vos 14] 中使用的解决方案，它专门使用低分辨率 3D 体素进行粒子着色。尽管如此，在这种方法中，
-
-## 3. 体积雾与光照
+## 3.3 大气散射
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_237_0.png)
 
 **图 3.1.** 大气散射的过程。
 
-针对着色实体物体的散射效应是以基于图像的方式计算的。
-
-因此，我们决定开发一种克服这些局限性的新型解决方案，并介绍了我们称为*体积雾*的解决方案。
-
-## 3.2 大气散射
-
 光散射现象是由光与粒子的相互作用引起的。当光穿过任何介质时，光子可能会与粒子碰撞。在光学中，我们通常可以定义以下：
 
--   透射率（transmittance），
--   散射（scattering），
--   吸收（absorption）。
+- 透射率（transmittance）；
+- 散射（scattering）；
+- 吸收（absorption）。
 
 由于能量是守恒的，我们可以写道：$L_{incoming} = L_{transmitted} + L_{scattered}$。
 
 我们在图 3.1 中可以看到这些过程。根据形成介质的不同，光量会有不同。散射模型的一个是瑞利散射（Rayleigh scattering）。它是对极小粒子（如地球大气）的散射，它是向同性的但取决于波长——对短波长的散射更强。
 
-## 3. 光照
+## 3.4 光照
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_238_0.png)
 
 **图 3.2.** 相函数的示例极图 [Bouthers et al. 06]。图中图中看到在这个方向发生了多少散射——原始光路。
 
-另一方面，较大粒子（如气溶胶和灰尘）的所谓米散射（Mie scattering）具有很强的向异性形状，具有强的前向瓣和较高的吸收。在现实中，光子在进入眼睛或相机之前可能会经过多次散射并贡献最终图像。这就是多次散射（multi-scattering）。不幸的是此类效果难以计算且成本极高；对于实时图形，我们使用单次散射（single-scattering）模型。在该模型中，大气散射通过两个独立现象作用于最终图像：内散射和外散射，
+另一方面，较大粒子（如气溶胶和灰尘）的所谓米散射（Mie scattering）具有很强的向异性形状，具有强的前向瓣和较高的吸收。在现实中，光子在进入眼睛或相机之前可能会经过多次散射并贡献最终图像。这就是多次散射（multi-scattering）。不幸的是此类效果难以计算且成本极高；对于实时图形，我们使用单次散射（single-scattering）模型。在该模型中，大气散射通过两个独立现象作用于最终图像：内散射和外散射。
 
 内散射是由于散射进入着色物体与相机之间路径的额外光。因此，我们测量的值比没有散射时大。外散射的效果相反——由于散射，光子离开这些路径导致辐射丢失。描述光在不被外散射的情况下通过介质的物理术语是透射（transmittivity）。当内散射和外散射效应在单次散射模型中结合时，会导致对比度损失。
 
-不同散射类型的特性可以使用数学对象进行建模：散射系数 $\beta_s$、吸收系数 $\beta_a$ 以及*相位函数*（phase function）。相位函数是入射光源与所有方向之间角的函数，描述了有多少能量散射到哪个方向。
+不同散射类型的特性可以使用数学对象进行建模：散射系数 $\beta_s$、吸收系数 $\beta_a$ 以及相位函数（phase function）。相位函数是入射光源与所有方向之间角的函数，描述了有多少能量散射到哪个方向。
 
 近似米散射的常用简单各向异性相位函数是海尼-格林斯坦（Heny-Greenstein）相位函数。它使用以下公式描述：
 
-```
+``` 
+
+
+
+```math
 p(\theta) = \frac{1}{4\pi} \frac{1 - g^2}{(1 + g^2 - 2g\cos\theta)^{3/2}}
 ```
 
-其中 $g$ 是向异性因子，$\theta$ 是光矢量与之间的角度。
-
-
+其中，`g` 是各向异性因子，`\theta` 是光矢量与视线向量（面向相机）之间的角度。我们可以在图 3.3 中看到该相函数在不同各向异性因子下的外观。
 
 ## 3. 体积雾与照明
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_239_0.png)
 
-**图 3.3.** 对于不同 $g$ 各向异性系数（0.0, 0.1, 0.2, 0.3 和 0.4）的 Henyey-Greenstein 相相的极坐标图。在此图中，正 $x$ 轴对应于原始视角方向角。
+**图 3.3.** 对于不同 `g` 各向异性系数（0.0、0.1、0.2、0.3 和 0.4）的 Henyey-Greenstein 相函数的极坐标图。在此图中，正 `x` 轴对应于原始视角方向角。
 
-视线向量（面向相机）。我们可以在图 3.3 中看到该相函数在不同各向异性因子下的外观。
+Henyey-Greenstein 相函数在实时渲染场景中使用具有两个显著优势。首先，对于解析光源，它在着色器中计算非常高效（大部分内容可以在 CPU 上预计算并作为 `uniforms` 传递）。其次，Henyey-Greenstein 相函数也便于用于环境光和环境光照明。很多情况下，环境光、天空光和全局光照用球谐波来表示 [Green 03]。
 
-Henyey-Greenstein 相函数在实时渲染场景中使用具有两个显著优势。首先，对于解析光源，它在着色器中计算非常高效（大部分内容可以在 CPU 上预计算并作为 `uniforms` 传递）。其次，Henyey-Greenstein 相函数也便于用于环境光和环境光照明。很多情况下，环境光、天空光和全局光照用球谐波来表示 [Green 03]。要计算带有相函数的球谐波照明的积分，必须计算给定函数的球谐波表示。这可能是困难的，并且通常需要昂贵的最小二法拟合步骤 [Sloan 08]。幸运的是，Henyey-Greenstein 相函数到区域球谐波有简单且解析的展开，这允许对存储在球谐波（SH）中的照明进行高效的乘积计算。到四阶区域 SH 的展开仅为 (1, g, g², g³)。
+要计算带有相函数的球谐波照明的积分，必须计算给定函数的球谐波表示。这可能是困难的，并且通常需要昂贵的最小二乘拟合步骤 [Sloan 08]。幸运的是，Henyey-Greenstein 相函数到区域球谐波有简单且解析的展开，这允许对存储在球谐波（SH）中的照明进行高效的乘积计算。到四阶区域 SH 的展开仅为 `(1, g, g², g³)`。
 
-最后，最后一个对光线散射计算有用的定律是比尔-朗伯定律，它描述了入射照明的消光（由于光向外散射）。该定律定义了透射（穿过介质传输到来自给定方向入射光）的值。
+最后一个对光线散射计算有用的定律是比尔-朗伯定律，它描述了入射照明的消光（由于光向外散射）。该定律定义了透射（穿过介质传输到来自给定方向入射光）的值。
 
-它的定义为
+它的定义为：
 
+```math
+T(A \rightarrow B) = e^{-\int_{A}^{B} \beta_e(x)dx}
 ```
-$T(A \rightarrow B) = e^{-\int_{A}^{B} \beta_e(x)dx}$
-```
 
-其中 $\beta_e$ 是消光系数，定义为散射系数和吸收系数之和。我们可以看到比尔-朗伯定律：光消光是光在给定介质中传播距离的指数函数。
+其中，`\beta_e` 是消光系数，定义为散射系数和吸收系数之和。我们可以看到，比尔-朗伯定律表明，光消光是光在给定介质中传播距离的指数函数。
 
 ## 3.3 体积雾算法
 
 体积雾是现有光线步进算法的扩展，如 [Toth and Uencher 09]。然而，通过使用中间存储解耦并划分典型的光线步进步骤，我们旨在解决经典 2D 光线步进解决方案的上述缺点。
 
-我们的算法基于在 CGI 行业和电影中使用的大气散射现有研究 [Wrennige et al. 10]，以及使用硬件体积 3D 纹理作为中间存储的计算机游戏 [Kaplan 09]。Wrennige 等人的一篇文章描述了 3D 纹理和网格如何在 VFX 行业中用于计算计算和多重散射效应，并引入了通过数值迭代积分解决散射的方案 [Wrennige et al. 10]。我们使用了类似的方法，但对其进行了简化，并使其适用于 GPU、实时图形和游戏中使用的流水线。该文章提到了如何处理我们面临的锯齿问题和子采样问题。虽然由于计算成本过高，我们无法直接应用这部分 CGI 研究，但它启发了我们的解决方案。
+我们的算法基于在 CGI 行业和电影中使用的大气散射现有研究 [Wrennige et al. 10]，以及使用硬件体积 3D 纹理作为中间存储的计算机游戏 [Kaplan 09]。Wrennige 等人的一篇文章描述了 3D 纹理和网格如何在 VFX 行业中用于计算和多重散射效应，并引入了通过数值迭代积分解决散射的方案 [Wrennige et al. 10]。
+
+我们使用了类似的方法，但对其进行了简化，并使其适用于 GPU、实时图形和游戏中使用的流水线。该文章提到了如何处理我们面临的锯齿问题和子采样问题。虽然由于计算成本过高，我们无法直接应用这部分 CGI 研究，但它启发了我们的解决方案。
 
 体积雾需要 DirectX 11+ 级别的硬件（或 OpenGL 4.3+）以便在计算着色器上运行，并使用无序访问视图（unordered access views）对体积纹理进行随机写入。
 
@@ -4651,81 +4801,22 @@ $T(A \rightarrow B) = e^{-\int_{A}^{B} \beta_e(x)dx}$
 
 该算法由以下步骤组成，作为独立的通道（passes）运行：
 
-- 1. 估计参与介质的密度，
-- 2. 计算散射照明，
-- 3. 光线步进（ray marching），
-- 4. 将效果应用于阴影物体。
+1. 估计参与介质的密度。
+2. 计算散射照明。
+3. 光线步进（ray marching）。
+4. 将效果应用于阴影物体。
 
 所有通道都计算相机视锥内整个空间的散射体积信息。我们沿着稀疏的相机光线对许多步骤或切片计算并存储它。这些信息存储在 3D 纹理中。
 
 ### 3.3.2 体积纹理存储格式
 
-为了在多个通道之间存储，体积雾使用了视锥对齐的 3D 体积纹理。根据目标硬件平台，《刺客信条4》使用了 190 x 90 x 128 或 190 x 90 x 64 像素的 3D 纹理。X 和 Y 维度与主屏幕或视口的 X 和 Y 维度均匀对齐。Z 维度与屏幕深度均匀对齐，但使用非均匀的指数深度分布到艺术家定义的范围（在《刺客信条4》中，仅为 50–100 米）。取决于性能预算和目标硬件平台（例如高端 PC），使用的分辨率可能更大，因为算法在使用的计算线程和算术逻辑单元（ALU）方面是线性缩放的。
+为了在多个通道之间存储，体积雾使用了视锥对齐的 3D 体积纹理。根据目标硬件平台，《刺客信条 4》使用了 `190 x 90 x 128` 或 `190 x 90 x 64` 像素的 3D 纹理。
 
-我们使用了两种此类纹理：一个用于给定点的散射照明和与密度相关的消光系数；第二个用于存储积分散射和透射的最终查找。这些纹理使用的格式是四通道 (RGBA) 16 位浮点。体积纹理的层级见图 3.4。
+`X` 和 `Y` 维度与主屏幕或视口的 `X` 和 `Y` 维度均匀对齐。`Z` 维度与屏幕深度均匀对齐，但使用非均匀的指数深度分布到艺术家定义的范围（在《刺客信条 4》中，仅为 `50–100` 米）。
 
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
+取决于性能预算和目标硬件平台（例如高端 PC），使用的分辨率可能更大，因为算法在使用的计算线程和算术逻辑单元（ALU）方面是线性缩放的。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_241_0.png)
-
-**图 3.4.** 相机视锥映射到具有体积中间存储数据布局和格式的 3D 纹理。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-（注：此处原文存在大量重复的无效句子，已根据指令“不要重复输出原文”进行清理，仅保留核心技术描述内容）
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-体积纹理在 X 和 Y 维度上的分辨率看起来非常低。
-
-（此处省略大量重复的“体积纹理分辨率看起来非常低”的无效重复句）
-
-最后，最后一个对光线散射计算有用的定律是比尔-朗伯定律，它描述了入射照明的消光（由于光向外散射）。该定律定义了透射（穿过介质传输到来自给定方向入射光）的值。
-
-它定义为
-
-```
-$T(A \rightarrow B) = e^{-\int_{A}^{B} \beta_e(x)dx}$
-```
-
-其中 $\beta_e$ 是消光系数，定义为散射系数和吸收系数之和。我们可以看到比尔-朗伯定律：光消光是光在给定介质中传播距离的指数函数。
-
-## 3.3 体积雾算法
-
-体积雾是现有光线步进算法的扩展，如 [Toth and Uencher 09]。然而，通过使用中间存储解耦并划分典型的光线步进步骤，我们旨在解决经典 2D 光线步进解决方案的上述缺点。
-
-我们的算法基于在 CGI 行业和电影中使用的大气散射现有研究 [Wrennige et al. 10]，以及使用硬件体积 3D 纹理作为中间存储的计算机游戏 [Kaplan 09]。Wrennige 等人的一篇文章描述了 3D 纹理和网格如何在 VFX 行业中用于计算和多重散射效应，并引入了通过数值迭代积分解决散射的方案 [Wrennige et al. 10]。我们使用了类似的方法，但对其进行了简化，并使其适用于 GPU、实时图形和游戏中使用的流水线。该文章提到了如何处理我们面临的锯齿问题和子采样问题。虽然由于计算成本过高，我们无法直接应用这部分 CGI 研究，但它启发了我们的解决方案。
-
-体积雾需要 DirectX 11+ 级别的硬件（或 OpenGL 4.3+）以便在计算着色器上运行，并使用无序访问视图（unordered access views）对体积纹理进行随机写入。
-
-### 3.3.1 算法步骤概述
-
-该算法由以下步骤组成，作为独立的通道（passes）运行：
-
-- 1. 估计参与介质的密度，
-- 2. 计算散射照明，
-- 3. 光线步进（ray marching），
-- 4. 将效果应用于阴影物体。
-
-所有通道都计算相机视锥内整个空间的散射体积信息。我们沿着稀疏的相机光线对许多步骤或切片计算并存储它。这些信息存储在 3D 纹理中。
-
-### 3.3.2 体积纹理存储格式
-
-为了在多个通道之间存储，体积雾使用了视锥对齐的 3D 体积纹理。根据目标硬件平台，《刺客信条4》使用了 190 x 90 x 128 或 190 x 90 x 64 像素的 3D 纹理。X 和 Y 维度与主屏幕或视口的 X 和 Y 维度均匀对齐。Z 维度与屏幕深度均匀对齐，但使用非均匀的指数深度分布到艺术家定义的范围（在《刺客信条4》中，仅为 50–100 米）。取决于性能预算和目标硬件平台（例如高端 PC），使用的分辨率可能更大，因为算法在使用的计算线程和算术逻辑单元（ALU）方面是线性缩放的。
-
-我们使用了两种此类纹理：一个用于给定点的散射照明和与密度相关的消光系数；第二个用于存储积分散射和透射的最终查找。这些纹理使用的格式是四通道 (RGBA) 16 位浮点。体积纹理的层级见图 3.4。
+我们使用了两种此类纹理：一个用于给定点的散射照明和与密度相关的消光系数；第二个用于存储积分散射和透射的最终查找。这些纹理使用的格式是四通道（RGBA）16 位浮点。体积纹理的层级见图 3.4。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_241_0.png)
 
@@ -4735,33 +4826,31 @@ $T(A \rightarrow B) = e^{-\int_{A}^{B} \beta_e(x)dx}$
 
 为了能够计算散射系数并解决散射问题，我们算法的第一部分计算每个对应体积像素的参与介质密度，并将其存储在中间体积纹理中。
 
-在我们的算法实现中，我们支持变化的介质密度。这不仅允许基于物理的密度分布，还允许创作和动态变化的分布。米散射通常使用指数高度分布进行建模，公式如下
+在我们的算法实现中，我们支持变化的介质密度。这不仅允许基于物理的密度分布，还允许创作和动态变化的分布。米散射通常使用指数高度分布进行建模，公式如下：
 
-$d(h) = d_0 \times e^{-hD},$
+```math
+d(h) = d_0 \times e^{-hD}
+```
 
-其中 $d(h)$ 是高度 $h$ 的计算密度，$d_0$ 是参考水平的密度（通常指定为地面或水平），$D$ 是描述密度衰减速度的比例系数。
+其中，`d(h)` 是高度 `h` 的计算密度，`d_0` 是参考水平的密度（通常指定为地面或水平），`D` 是描述密度衰减速度的比例系数。
 
-密度估计的第二部分是纯干漂。我们想要模拟尘云或水颗粒，因此决定使用 Ken Perlin 噪声函数的动画体积 GPU 着色器实现 [Perlin 02, Green 05]。它在程序化渲染技术中被广泛，因为它具有平滑、无双线性过滤伪影、导数连续性和真实结果等优点。我们可以在图 3.6 中看到它。
+密度估计的第二部分是纯干漂。我们想要模拟尘云或水颗粒，因此决定使用 Ken Perlin 噪声函数的动画体积 GPU 着色器实现 [Perlin 02, Green 05]。它在程序化渲染技术中被广泛使用，因为它具有平滑、无双线性过滤伪影、导数连续性和真实结果等优点。我们可以在图 3.6 中看到它。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_242_0.png)
 
-**图 3.5.** 平坦 XZ 场景。(a) 较分辨率的图像（黑线表示深度）导致对小物体（黑点）的表示缺失。(b) 所有物体，即使是小的，也能获得正确的过滤信息（绿色框显示 3D 过滤）。
+**图 3.5.** 平坦 XZ 场景。(a) 较低分辨率的图像（黑线表示深度）导致对小物体（黑点）的表示缺失。(b) 所有物体，即使是小的，也能获得正确的过滤信息（绿色框显示 3D 过滤）。
 
-
-
-
-
-## 3. 体积雾与照明
+## 3.4 体积雾与照明
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_243_0.png)
 
 **图 3.6.** (a) 双线性纹理噪声与 (b) 体积 3D 改进 Perlin 噪声的对比 [Green 05]。
 
-类似于云层。我们将动画速度暴露为可编辑参数，但将噪声方向连接到游戏世界方向，以使中等密度动画与玩法及粒子波保持一致。我们曾尝试使用 2-3 个倍频（octaves）的噪声来实现“云雾状”且分形的噪声外观，但由于美术设计的偏好，决定仅使用单一简单的倍频噪声。
+类似于云层，我们将动画速度暴露为可编辑参数，但将噪声方向连接到游戏世界方向，以使中等密度动画与玩法及粒子波保持一致。我们曾尝试使用 2–3 个倍频（octaves）的噪声来实现“云雾状”且分形的噪声外观，但由于美术设计的偏好，决定仅使用单一简单的倍频噪声。
 
 在《刺客信条 4》中，我们没有尝试任何其他的密度变化技术，但我们将在 3.4.4 节描述这些技术以及扩展效果控制性的想法。
 
-由于体积纹理 Z 切片的呈指数分布，我们必须将最终密度乘以切片长度，以获得给定空间切片中发生的散射量（越大或越长的切片包含更多的粒子和更多的散射）。
+由于体积纹理 `Z` 切片的呈指数分布，我们必须将最终密度乘以切片长度，以获得给定空间切片中发生的散射量（越大或越长的切片包含更多的粒子和更多的散射）。
 
 ### 3.3.4 入散射光计算
 
@@ -4769,44 +4858,76 @@ $d(h) = d_0 \times e^{-hD},$
 
 我们调度了一个启动在 3D 组中的计算着色器，每个体积纹理一个线程使用无序访问（unordered access）来访问和写入体积纹理并存储此类数据。对于我们体积纹理的每个体素，我们使用相应的世界空间相机向量重建了其世界位置。使用重建的位置，可以计算空间中给定点的阴影和照明。我们用于阳光的高效且无锯齿的阴影算法将在 3.3.7 节中解释。
 
-以类似的方式，我们可以计算影响给定点参与介质的动态光列表（点光源和聚光灯）。在我们的案例中，影响相机锥体内场景的光源较少（0 到 4 个之间），因此我们能够忽略不计的运行时成本遍历所有光源。我们执行了常规的光源剔除，并将相关信息添加到常量缓冲区（constant buffer）中。我们的计算着色器简单地遍历包含光源数量的单元，并在每次迭代中添加它们的贡献。这使得我们能够在不需要排序的情况下获得多个局部光源的强大且有序的影响。
+以类似的方式，我们可以计算影响给定点参与介质的动态光列表（点光源和聚光灯）。在我们的案例中，影响相机锥体内场景的光源较少（0 到 4 个之间），因此我们能够以可忽略的运行时成本遍历所有光源。我们执行了常规的光源剔除，并将相关信息添加到常量缓冲区（constant buffer）中。我们的计算着色器简单地遍历包含光源数量的单元，并在每次迭代中添加它们的贡献。这使得我们能够在不需要排序的情况下获得多个局部光源的强大且有序的影响。
 
 有了照明和阴影信息，我们可以简单地将其乘以从参与介质密度估计的散射系数、参与介质的反射率（albedo）以及光方向与面对相机向量之间夹角的相位函数（phase function）。体积雾每轮迭代中执行的整个计算都可以在 3.1 节的 HLSL 伪代码中。
 
 ```cpp
 // 体积纹理像素的世界空间位置
 float3 worldPosition = CalcWorldFromCoords(dispatchThreadID.xyz);
+
 // 切片厚度——非恒定的双切片分布
 float layerThickness = ComputeLayerThickness(dispatchThreadID.z);
+
 // 给定点参与介质的估计密度
 float dustDensity = CalculateDensityFunction(worldPosition);
+
 // 散射系数
-float scattering = g.VolumetricFogScatteringCoefficient * dustDensity * layerThickness;
+float scattering =
+    g.VolumetricFogScatteringCoefficient * dustDensity * layerThickness;
+
 // 吸收系数
-float absorption = g.VolumetricFogAbsorptionCoefficient * dustDensity * layerThickness;
+float absorption =
+    g.VolumetricFogAbsorptionCoefficient * dustDensity * layerThickness;
+
 // 归一化视图方向
 float3 viewDirection = normalize(worldPosition - g_WorldEyePos.xyz);
+
 float3 lighting = 0.0f;
+
 // 照明部分开始
+
 // 加上所有贡献光的光辐射并乘以
 // 相位函数——体积雾的 BRDF 等效物
-lighting += GetLightingRadiance(worldPosition) * GetPhaseFunction(viewDirection, g_SunDirection, g.VolumetricFogPhaseAnisotropy);
-lighting += GetAmbientConvolvedWithPhaseFunction(worldPosition, viewDirection, g.VolumetricFogPhaseAnisotropy);
+lighting += GetLightingRadiance(worldPosition) *
+    GetPhaseFunction(
+        viewDirection,
+        g_SunDirection,
+        g.VolumetricFogPhaseAnisotropy
+    );
+
+lighting += GetAmbientConvolvedWithPhaseFunction(
+    worldPosition,
+    viewDirection,
+    g.VolumetricFogPhaseAnisotropy
+);
+
 [loop]
 for (int lightIndex = 0; lightIndex < g.LightCount; ++lightIndex)
 {
-  float3 localLightDirection = GetLocalLightDirection(lightIndex, worldPosition);
-  lighting += GetLocalLightRadiance(lightIndex, worldPosition) * GetPhaseFunction(viewDirection, localLightDirection, g.VolumetricFogPhaseisotisotropy);
+    float3 localLightDirection =
+        GetLocalLightDirection(lightIndex, worldPosition);
 
-// 照明部分
+    lighting += GetLocalLightRadiance(lightIndex, worldPosition) *
+        GetPhaseFunction(
+            viewDirection,
+            localLightDirection,
+            g.VolumetricFogPhaseisotisotropy
+        );
+}
+
 // 最后应用某些可能非白色的雾散射反射率
 float3 lighting = g.FogAlbedo;
+
 // 最终入散射是出光辐射和散射系数的积
 // 而消光是散射和吸收之和
-float4 finalOutValue = float4(lighting * scattering, scattering + absorption);
+float4 finalOutValue = float4(
+    lighting * scattering,
+    scattering + absorption
+);
 ```
 
-- 列表 3.1. 在计算着色器中计算入散射、散射和吸收系数的伪代码。
+**列表 3.1.** 在计算着色器中计算入散射、散射和吸收系数的伪代码。
 
 入散射的最后部分有助于实现场景真实性，包括环境光、天空光或间接照明。在许多分析光被阴影遮挡的情况下，环境光可能是散射的主导部分。如果没有它，场景在阴影区域将是黑色的。同样，如果入散射没有应用到环境光，最终的散射看起来会太暗（由于光路上的外散射和消光）。图 3.7 显示了有无环境光场景的对比。
 
@@ -4816,46 +4937,42 @@ float4 finalOutValue = float4(lighting * scattering, scattering + absorption);
 
 **图 3.7.** 添加环境光雾入散射的影响：(a) 无环境光的雾（变暗），以及 (b) 有天空光和全局光照的雾。
 
-| | | |
-| :--- | :--- | :--- |
 | 密度估计 | 合并或并行运行 | 照明计算 |
+| :--- | :--- | :--- |
 | 体积纹理 | 体积纹理 | 光线步进 |
 | 体积纹理 | 应用于前进/延迟 | 着色物体 |
 
-*注：* 图 3.8. 体积雾算法步骤。
+**图 3.8.** 体积雾算法步骤。
 
-在我们的案例中，环境光被分为两个部分。首先，间接阳光使用上一节描述的探针进行着色 [Huelin et al. 15]。我们使用了从固定方向向量构建的简单辐射基，因此将其贡献加入雾至关重要。第二部分是基于立方体的天空光（通过简单模式实时构建），由预计算雾调制 [St-Amour 13]。由于全方位性，将其正确添加到雾中更为困难。幸运的是，当我们使用 CPU 和 GPU 任务计算立方体表示法时，我们也计算了更简单的球波函数基表示。如 3.2.1 节所述，这种正交存储基非常简单，常用于表示环境光 [Green 03]。我们使用了 Henney-Greenstein 函数展开到球波函数，并计算了其与天空项的这种形式积分。
+在我们的案例中，环境光被分为两个部分。首先，间接阳光使用上一节描述的探针进行着色 [Huelin et al. 15]。我们使用了从固定方向向量构建的简单辐射基，因此将其贡献加入雾至关重要。
+
+第二部分是基于立方体的天空光（通过简单模式实时构建），由预计算雾调制 [St-Amour 13]。由于全方位性，将其正确添加到雾中更为困难。幸运的是，当我们使用 CPU 和 GPU 任务计算立方体表示法时，我们也计算了更简单的球波函数基表示。如 3.2.1 节所述，这种正交存储基非常简单，常用于表示环境光 [Green 03]。我们使用了 Henyey-Greenstein 函数展开到球波函数，并计算了其与天空项的这种形式积分。
 
 我们在《刺客信条 4》中使用的优化将密度估计和照明阶段整合在一起。正如图 3.8 所示，这些阶段是独立的，可以串行、并行运行甚至合并。通过合并，我们能够将值写入简单的 RGBA 纹理，其中包含照明信息，Alpha 通道包含消光系数（散射和吸收系数之和）。
 
-这种方法避免了内存读写以及在阶段之间启动新调度的开销。我们还重用了许多计算——纹理空间坐标、切片深度和纹理体素位置。因此，所有入散射的计算都在本地完成，不需要中间密度缓冲区。值得注意的是，在某些情况下，拆分阶段可能是有益的——例如如果密度是静态的、预计算的或人工制作，并且我们可以简单地较低分辨率计算它（这通常如此）。拆分阶段可以
-```
+这种方法避免了内存读写以及在阶段之间启动新调度的开销。我们还重用了许多计算——纹理空间坐标、切片深度和纹理体素位置。因此，所有入散射的计算都在本地完成，不需要中间密度缓冲区。
+
+值得注意的是，在某些情况下，拆分阶段可能是有益的——例如，如果密度是静态的、预计算的或人工制作，并且我们可以简单地以较低分辨率计算它（这通常如此）。拆分阶段可以降低有效寄存器计数并同样增加它们的着色器占用率。如果使用了某些动态且非过程化的密度估计技术，那么在光照阶段也无法评估密度。
 
 
-
-
-
-# 3. 体积雾与光照
-
-降低有效寄存器计数并同样增加它们的着色器占用率。如果使用了某些动态且非过程化的密度估计技术，那么在光照阶段也无法评估密度。
 
 ### 3.3.5 光线步进（Ray Marching）与散射方程求解
 
-我们算法的最后一个体积步骤是典型光线步进技术 [Tóth and Umenhofer [09]] 的扩展，这些技术使用了计算散射到视线方向的光。与前一个阶段不同，此阶段作为 2D 调度组执行，并逐片操作。我们的算法为体积纹理的一个切片启动一个 X x Y 线程的 2D 调度组。
+我们算法的最后一个体积步骤是典型光线步进技术 [Tóth and Umenhofer [09]] 的扩展，这些技术使用了计算散射到视线方向的光。与前一个阶段不同，此阶段作为 2D 调度组执行，并逐片操作。我们的算法为体积纹理的一个切片启动一个 `X x Y` 线程的 2D 调度组。
 
 该计算着色器沿着视线行进，累积散射系数和散射光。它可以被描述为以下循环：
 
-1. 读取切片 N 的散射光和消光系数，从零开始。
+1. 读取切片 `N` 的散射光和消光系数，从零开始。
 2. 将消光系数添加到消光累积寄存器中，并根据 Beer-Lambert 定律从中计算透射率。
 3. 将透射率应用于给定切片的散射光，并将结果加到散射累积 RGB 寄存器中。
 4. 将相同位置写入另一个体积纹理，RGB 为累积的散射，alpha 为透射率值。
-5. 增加 N 并返回步骤 1。
+5. 增加 `N` 并返回步骤 1。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_247_0.png)
 
 图 3.9. 散射方程积分进度。
 
-该阶段通过此循环进行，直到处理完所有 Z 切片。该过程如图 3.9 所示。
+该阶段通过此循环进行，直到处理完所有 `Z` 切片。该过程如图 3.9 所示。
 
 此过程的单个步骤同时累积了散射颜色和散射消光系数，后者应用于 Beer-Lambert 定律。通过这种方式，我们不仅可以计算颜色的透射率，还可以计算散射光的透射率。距离相机更远的散射光通过减少透射函数而被消散射。如果没有它，在相机射线非常长的情况下，散射将不正确地累积到无限大——相反，它会渐近于某个常数。负责此的完整代码如列表 3.2 所示。
 
@@ -4911,7 +5028,7 @@ float3 finalPixelColor = pixelWithoutFog * transmittance.xxx
 + inScattering;
 ```
 
-- 列表 3.3. 应用体积雾的手动混合。
+列表 3.3. 应用体积雾的手动混合。
 
 ### 3.3.6 在延迟渲染或正向渲染的着色对象上应用效果
 
@@ -4921,35 +5038,27 @@ float3 finalPixelColor = pixelWithoutFog * transmittance.xxx
 ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 ```
 
-其中 inScattering 由从体积纹理读取的纹元的 RGB 值描述，Transmittance 是其 alpha 通道中的值。
+其中 `inScattering` 由从体积纹理读取的纹元的 RGB 值描述，`Transmittance` 是其 alpha 通道中的值。
 
-由于我们在视线上的许多离散点上（从相机位置到效果范围）存储了 3D 信息，因此使用三线性过滤将效果应用于任何数量的延迟渲染或正向渲染对象上都是轻而易见的。在延迟渲染的情况下，我们可以读取 Z 缓冲区的值，并利用该值和着色像素的屏幕位置，应用硬件混合（Dest \times SourceAlpha + Source）或手动混合（列表 3.3）。
+由于我们在视线上的许多离散点上（从相机位置到效果范围）存储了 3D 信息，因此使用三线性过滤将效果应用于任何数量的延迟渲染或正向渲染对象上都是轻而易见的。在延迟渲染的情况下，我们可以读取 `Z` 缓冲区的值，并利用该值和着色像素的屏幕位置，应用硬件混合（`Dest × SourceAlpha + Source`）或手动混合（列表 3.3）。
 
 我们使用的采样器是线性的，因此我们获得了散射函数和透射率函数的分段线性近似和插值。这并不完全准确（指数衰减函数的分段线性近似），但误差足够小，即使在相机移动时也能产生平滑的结果。
 
-对于延迟渲染的对象，这可以与延迟光照阶段结合起来——随着光照由于基于物理的渲染技术而变得越来越计算 ALU 密集型，由于延迟隐藏的存在，这可能变成一个“免费”的步骤。体积雾散射信息可以在光照着色的开始处读取（它不依赖于屏幕空间像素位置和深度值以外的任何东西）。在将最终颜色写入光照缓冲区之前，不需要它（没有可能导致执行阻塞的等待指令），因此整个纹理延迟都隐藏在所有计算之后。
+对于延迟渲染的对象，这可以与延迟光照阶段结合起来——由于光照随着基于物理的渲染技术而变得越来越计算 ALU 密集型，由于延迟隐藏的存在，这可能变成一个“免费”的步骤。体积雾散射信息可以在光照着色的开始处读取（它不依赖于屏幕空间像素位置和深度值以外的任何东西）。在将最终颜色写入光照缓冲区之前，不需要它（没有可能导致执行阻塞的等待指令），因此整个纹理延迟都隐藏在所有计算之后。
 
 对于正向光照对象、粒子和透明体，我们可以以相同的方式应用散射。除了从体积纹理进行一次采样和一个融合的乘加操作外，不需要任何额外成本。
-
-# III 光照
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_250_0.png)
-
-**图 3.10.** 多层不透明物体和透明物体以及三线性 3D 纹理过滤。
 
 ### 3.3.7 解决低分辨率采样不足伪影和锯齿问题
 
 常见的渲染问题是几何边缘、着色、阴影以及许多其他流水线元素的锯齿和采样不足。这发生在尝试在较低分辨率下对复杂的高频信号采样时。虽然体积光照通常是低频的，但我们使用的体积纹理分辨率较低，某些锯齿伪影是不可避免的。
 
-在《刺客信条》案例中，体积锯齿的主要来源是阴影贴图。我们的渲染使用了 1024×1024 的阴影级联，其中包含了许多非常高频的细节，如棕榈叶。当相机或投射物体稍微移动时，原本是二值函数的阴影结果会发生巨大变化，导致产生不悦的时间伪影。解决任何锯齿问题的通用方法是对源信号或目标信号进行超采样或低通滤波。频率远高于奈奎斯特频率的二值阴影与经过适当低通滤波的阴影对比如图 3.10 所示。我们将此类解决方案和下行滤波应用到了体积光照函数中。
+在《刺客信条》案例中，体积锯齿的主要来源是阴影贴图。我们的渲染使用了 `1024×1024` 的阴影级联，其中包含了许多非常高频的细节，如棕榈叶。当相机或投射物体稍微移动时，原本是二值函数的阴影结果会发生巨大变化，导致产生不悦的时间伪影。解决任何锯齿问题的通用方法是对源信号或目标信号进行超采样或低通滤波。频率远高于奈奎斯特频率的二值阴影与经过适当低通滤波的阴影对比如图 3.10 所示。我们将此类解决方案和下行滤波应用到了体积光照函数中。
 
 关于更好的阴影映射技术（具有不同权衡）的研究仍在进行中。已有许多现有阴影算法可以将深度信息转换为其他领域，并使用某些频率较低且可过滤的函数进行阴影测试。这些技术的示例包括方差阴影 [Myers 07]、卷积阴影 [Annen et al. 07]、指数阴影 [Annen et al. 08]、透射函数映射 [Delandelre et al. 11] 和傅里叶透明度映射 [Jansen and Bavoil 10]。
 
+![](img/120606d35c679664e7ad5faec2ee0e8b_250_0.png)
 
-
-
-
-## 3. 体积雾与光照
+**图 3.10.** 多层不透明物体和透明物体以及三线性 3D 纹理过滤。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_251_0.png)
 
@@ -4960,7 +5069,7 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 
 **图 3.11.** 阴影图微小变化导致没有低通器的欠采样和锯齿问题（上）。正确的低通滤波有助于缓解此类问题（下）。
 
-我们决定使用指数阴影映射 [Annen et al. 07]，是因为其具有简单性且运行时和存储成本较低。它简化了阴影的指数函数，并允许我们执行阴影图的超采样、下采样和可分离滤波。为了执行低通滤波，我们将信号转换到指数域，然后对每个级联进行四次下采样——我们最终得到了 256×256 大的纹理。然后我们对这些纹理执行可分离的高斯模糊，从而得到频率低得多的信号。最终的阴影测试非常简单，它是存储在阴影图中的预设值的平滑比较坡度函数与空间中被着色点阴影空间深度指数函数之间的比较。
+我们决定使用指数阴影映射 [Annen et al. 07]，是因为其具有简单性且运行时和存储成本较低。它简化了阴影的指数函数，并允许我们执行阴影图的超采样、下采样和可分离滤波。为了执行低通滤波，我们将信号转换到指数域，然后对每个级联进行四次下采样——我们最终得到了 `256×256` 大的纹理。然后我们对这些纹理执行可分离的高斯模糊，从而得到频率低得多的信号。最终的阴影测试非常简单，它是存储在阴影图中的预设值的平滑比较坡度函数与空间中被着色点阴影空间深度指数函数之间的比较。
 
 指数阴影映射的主要缺点（使其在常规渲染中不实用）是阴影泄漏问题。使用指数阴影映射时，任何细粒度的阴影都是可能的，且阴影在靠近投射物的表面上往往几乎是透明的。阴影会远离投射物体，这是不符合现实的（应该看到相反的效果），而且通常是不可接受的。幸运的是，在我们体积雾案例中，自阴影并不是真正的问题，因为我们进行阴影测试不是针对真实的硬表面点，而是表面之间的实际参与介质。因此，阴影泄漏和硬化伪影是可见的，指数映射在我们的情况下足够了。
 
@@ -4974,11 +5083,9 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 
 **图 3.12.** 《刺客信条4》中的体积雾示例。
 
-我们在 Microsoft Xbox One 上的性能数据如表 3.1 所示。值得注意的是，我们在表中包含了在延迟渲染中应用效果的独立全屏通道（pass）的成本——但在典型的渲染场景中，此 pass 会与延迟光照结合。我们还包含了阴影图下采样和模糊的成本——但这些 pass 并不是体积雾特有的。它们可以重用于粒子阴影或其他低频阴影（半透明物体阴影），通过这种方式，成本将分摊到渲染流水线的多个部分。
+我们在 Microsoft Xbox One 上的性能数据如表 3.1 所示。值得注意的是，我们在表中包含了在延迟渲染中应用效果的独立全屏通道（`pass`）的成本——但在典型的渲染场景中，此 `pass` 会与延迟光照结合。我们还包含了阴影图下采样和模糊的成本——但这些 `pass` 并不是体积雾特有的。它们可以重用于粒子阴影或其他低频阴影（半透明物体阴影），通过这种方式，成本将分摊到渲染流水线的多个部分。
 
 我们对所实现的结果和性能感到满意，并且已经将其应用于许多其他项目。尽管如此，仍然可以扩展该算法并提高质量和可控性，使我们能够实现略不同的视觉效果并适应其他渲染场景。对于帧预算更紧的游戏（如 60 fps 的第一人称或赛车游戏），也有提高性能的可能性。
-
-## 3. 体积雾与光照
 
 | 总成本 | 1.1 ms |
 |---|---|
@@ -4991,31 +5098,25 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 
 表 3.1. Microsoft Xbox One 上的算法性能数据。
 
-未来改进的主要领域与低分辨率有关。虽然大多数锯齿是由于粗糙的密度算法导致的，但在极端雾和散射设置下，密度计算和光照设置产生的锯齿仍然可见。此外，在某些高对比度区域，双线性滤波伪影是可见的。它们源于对双线性滤波的分段近似——这仅是一个 C-0 连续函数。
+未来改进的主要领域与低分辨率有关。虽然大多数锯齿是由于粗糙的密度算法导致的，但在极端雾和散射设置下，密度计算和光照设置产生的锯齿仍然可见。此外，在某些高对比度区域，双线性滤波伪影是可见的。它们源于对双线性滤波的分段近似——这仅是一个 `C-0` 连续函数。
 
 《刺客信条4》中从未使用过强散射设置，因此我们没有看到这些伪影。然而，该算法现在是 Anvil 游戏引擎及其渲染器的重要组成部分，我们讨论了许多可能与其他项目相关的潜在改进。我们将在接下来的小节中提出它们。
 
 ### 3.4.1 潜在优化
 
-算法最大的成本是内散射光照和密度估计 pass。它花费了约 0.43 ms，仅使用了非常简单的光照模型和几个局部光源。在许多光源的情况下，加速此 pass 可能是非常重要的。
+算法最大的成本是内散射光照和密度估计 `pass`。它花费了约 `0.43 ms`，仅使用了非常简单的光照模型和几个局部光源。在许多光源的情况下，加速此 `pass` 可能是非常重要的。
 
-由于我们的体积光照不依赖于着色的屏幕几何体，只依赖于阴影图，可以对其进行重新调度。通过现代 GPU 硬件和如 Mantle 或下一代控制机 API，可以使用异步计算（asynchronous compute）并与某些光栅带宽密集型 pass 并行启动体积光照。
+由于我们的体积光照不依赖于着色的屏幕几何体，只依赖于阴影图，可以对其进行重新调度。通过现代 GPU 硬件和如 Mantle 或下一代控制机 API，可以使用异步计算（`asynchronous compute`）并与某些光栅带宽密集型 `pass` 并行启动体积光照。
 
-我们没有发现任何体积雾的早期优化。我们的算法通常对不透明物体后的点执行所有计算（密度估计、内散射计算、光线步进）。虽然这使得成本是固定的（可能是想要的），但也是对 GPU 周期的浪费。可以使用分级深度缓冲区（hierarchical Z-buffer）来减少计算量。通过使用此类信息，可以在所有光照 pass 中执行早期退出（early-out）。这在最坏情况下（距离很大）没有帮助，但在平均情况下（屏幕一半是），它可以降低算法成本 30%-50%。我们的引擎中没有提供分级深度缓冲区，计算它会增加一些固定成本。另一方面，依赖深度缓冲区意味着无法应用异步计算优化（除非有深度预通过）。因此，这是一个权衡，其实际应用取决于使用的引擎。
+我们没有发现任何体积雾的早期优化。我们的算法通常对不透明物体后的点执行所有计算（密度估计、内散射计算、光线步进）。虽然这使得成本是固定的（可能是想要的），但也是对 GPU 周期的浪费。可以使用分级深度缓冲区（`hierarchical Z-buffer`）来减少计算量。通过使用此类信息，可以在所有光照 `pass` 中执行早期退出（`early-out`）。这在最坏情况下（距离很大）没有帮助，但在平均情况下（屏幕一半是），它可以降低算法成本 `30%-50%`。我们的引擎中没有提供分级深度缓冲区，计算它会增加一些固定成本。另一方面，依赖深度缓冲区意味着无法应用异步计算优化（除非有深度预通过）。因此，这是一个权衡，其实际应用取决于使用的引擎。
 
 ### 3.4.2 交替或随机采样
 
-在体积雾的实现中，我们使用了固定采样模式，始终对处理后的纹理中心采样。正如文献 [Toth and Uffen 09, Vos 14]所示，使用替或随机采样是有益的，在相邻像素之间切换采样模式并添加一些抖动单元（图 3.13）。这种方法可以减少锯齿和环绕伪影，将其转化为噪声。噪声通常更容易过滤（它是一个可以通过滤波器消除的高频成分），且生成的图像视觉上更愉悦。这种方法在已发布的游戏中，但可以广泛扩展到我们的解决方案中——本章的示例代码以最简单的形式实现了它。可以计算某些邻域内方差最大且无偏的 3D 采样模式，并从低分辨率 3D 纹理中读取。抖动和分层采样以及各种可能的采样方案在 [Pharr and Humphreys 10] 中描述得很详尽。
+在体积雾的实现中，我们使用了固定采样模式，始终对处理后的纹理中心采样。正如文献 [Toth and Uffen 09, Vos 14] 所示，使用交替或随机采样是有益的，在相邻像素之间切换采样模式并添加一些抖动单元（图 3.13）。这种方法可以减少锯齿和环绕伪影，将其转化为噪声。噪声通常更容易过滤（它是一个可以通过滤波器消除的高频成分），且生成的图像视觉上更愉悦。这种方法在已发布的游戏中，但可以广泛扩展到我们的解决方案中——本章的示例代码以最简单的形式实现了它。可以计算某些邻域内方差最大且无偏的 3D 采样模式，并从低分辨率 3D 纹理中读取。抖动和分层采样以及各种可能的采样方案在 [Pharr and Humphreys 10] 中描述得很详尽。
 
 ### 3.4.3 时间超采样与重投影
 
 一种日益流行的渲染技术是使用重投影进行时间超采样和抗锯齿。时间超采样和平滑处理在《刺客信条4》中用于常规屏幕缓冲区抗锯齿，但我们也将其扩展到超采样屏幕空间遮挡。正如 [Vos 14] 和 [Valient 14] 在关于《杀戮之地：暗影》技术的文章和演讲所示的那样，它可以用于许多效果，如屏幕空间反射和体积光照。对于 2D 图像，时间超采样和重投影是非常困难的，因为信息仅
-
-
-
-
-
-## 3. 体积雾与光照
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_255_0.png)
 
@@ -5025,8 +5126,8 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 
 在体积重投影的情况下，情况要简单得多，因为我们在体积纹理中存储了整个 3D 视锥体的信息，以及着色物体后空间的信息。因此，体积重投影后只有两种数据不当的情况：
 
-- 1. 随着着色变化而移出的物体所占据的空间的数据，
-- 2. 体积范围之外的数据。
+1. 随着着色变化而移出的物体所占据的空间的数据，
+2. 体积范围之外的数据。
 
 从图 3.15 可以看到 3D 情况下的重投影要容易得多。重投影本身可以稳定某些运动闪烁伪影，但并不是提高静态场景或相机图像质量的解决方案。一种常见的
 
@@ -5040,14 +5141,12 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_256_1.png)
 
-## 3. 体积雾与光照
-
 ### 3.4.4 艺术家自定义的参与介质密度
 
 在我们的算法实现中，参与介质具有使用 Perlin 噪声和简单指数垂直衰减的简单程序化密度（第 3.3.3 节）。我们认为添加其他建模散射强度和改变参与介质密度是有益的。我们看到了增加散射强度多样性的两种方法：
 
-- 1. 烘焙关卡和统计数据，
-- 2. 动态和游戏玩法影响。
+1. 烘焙关卡和统计数据，
+2. 动态和游戏玩法影响。
 
 第一个选项特别适用于具有大型且多样关卡的游戏。环境中的某些部分包含大量的（平原和森林）或尘埃（无人建筑的内部）。这些区域将受益于更大的散射系数和更显著的散射效果。根据游戏类型和关卡结构，它可以以各种方式存储。对于主要是室外、开放世界的游戏，它可以存储为简单的、低分辨率 2D 纹理世界，并由艺术家绘制密度。对于室内，艺术家和关卡设计师可以通过添加解析内部形状来定义它们。
 
@@ -5058,6 +5157,8 @@ ShadedPixelColor = ShadedPixelColor × Transmittance + InScattering,
 我要感谢《刺客信条 4》团队的渲染程序员、技术美术总监和光光艺术家，他们为算法及其优化提供了灵感点和讨论。特别感谢在育碧蒙特利尔从事其他课题并分享他们的代码和绝佳想法的同事：Ulrich Haar, Stephen Hill, Lionel Berenguer, Typhaine Le Gallo 和 Alexandre Lahaise。
 
 ## 参考文献
+
+
 
 [Annen et al. 07] Thomas Annen, Tom Mertens, Philippe Bekaert, Hans-Peter Seidel, and Jan Kautz, “Convolution Shadow Maps.” In Proceedings of the 18th Eurographics conference on Rendering Techniques, pp. 51–60. Aire-la-Ville, Switzerland: Eurographics Association, 2007.
 
@@ -5107,19 +5208,17 @@ Bouthers et al. [06] Antoine Bouchers, Frederic Neyet, and Sylvain Lefebvre. “
 
 [Wrennige et al. 10] Magnus Wrennige, Nafees Bin Zafar, Jeff Clifford, Gavin Graham, Devon Penney, Jane Kantkanen, Jerry Tessendorff, and Andrew Clinton, “Volumetric Methods in Visual Effects.” SIGGRAPH, Course, Los Angeles, CA, July 25–29, 2010.
 
+[Yusov 13] Egor Yusov. “Practical Implementation of Light Scattering Effects Using Epipolar Sampling and 1D Min/Max Binary Trees.” Presented at Game Developers Conference, San Francisco, CA, March 28–29, 2013.
 
-
-
-
-[Yusov 13] Egor Yusov. “Practical Implementation of Light Scattering Effects Using Epipolar Sampling and 1D Min/Max Binary Trees.” Presented at Game Developers Conference, San Francisco, CA, March 28-29, 2013.
-
-## 在 GPU 上基于物理的光探针生成
+# 在 GPU 上基于物理的光探针生成
 
 ## 4.1 引言
 
 随着现代实时光照质量和复杂性的不断发展，需要越来越多先进且优化的方法来达到性能目标。如今仅仅使用静态环境光或立方体贴反射来模拟间接光是不够的。环境需要完全匹配周围环境的光照。着色不仅需要处理和正确处理来自光源的直接光，还需要处理在环境中弹射的光。表面接收的光照还需要良好地向相机位置反射。通过完全在 GPU 上生成并处理我们的光照信息，同时保持在我们的性能目标之内。
 
-当我们开始开发 FIFA 15 时，我们决定需要基于物理的系统，能够在运行时动态更新球场球员的间接光。主要目标是在加载加载时生成球场的光照信息。由于 FIFA 有可玩的界面，这些光照计算面临显著的延迟和性能限制。当玩家等待比赛开始时，系统不能出现任何掉帧或卡顿。这意味着光照生成过程的每一步都需要在几毫秒内完成，我们才能完全渲染帧的其他部分。第二个目标是让艺术家能够对光照进行迭代，而无需等待内容流水线通过提供相关的光照信息更新。在我们的方法下，艺术家每当改变光线方向、颜色值或天空纹理时，都能立即看到具有正确光照的更新场景。最后，我们的技术还允许我们将许多区域光直接包含预计算的光照信息中。
+当我们开始开发 FIFA 15 时，我们决定需要基于物理的系统，能够在运行时动态更新球场球员的间接光。主要目标是在加载加载时生成球场的光照信息。由于 FIFA 有可玩的界面，这些光照计算面临显著的延迟和性能限制。当玩家等待比赛开始时，系统不能出现任何掉帧或卡顿。这意味着光照生成过程的每一步都需要在几毫秒内完成，我们才能完全渲染帧的其他部分。
+
+第二个目标是让艺术家能够对光照进行迭代，而无需等待内容流水线通过提供相关的光照信息更新。在我们的方法下，艺术家每当改变光线方向、颜色值或天空纹理时，都能立即看到具有正确光照的更新场景。最后，我们的技术还允许我们将许多区域光直接包含预计算的光照信息中。
 
 ## 4.2 光探针理论
 
@@ -5128,36 +5227,34 @@ Bouthers et al. [06] Antoine Bouchers, Frederic Neyet, and Sylvain Lefebvre. “
 为了计算来自环境的所有光照，我们需要求解通用的渲染方程：
 
 ```
-$L_o(\omega) = \int brdf(\omega_i, \omega_o) \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i, \quad (4.1)$
+L_o(\omega) = \int brdf(\omega_i, \omega_o) \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i, \quad (4.1)
 ```
 
-$\omega_o$ 是出射光的方向，$\omega_i$ 是入射光的反方向。$\Omega$ 是包含所有 $\omega_i$ 可能取值的单位半球。$L_i(\omega_i)$ 是来自该方向的辐射，$\omega_i \cdot n$ 是入射方向和法线的点积。
+`\omega_o` 是出射光的方向，`\omega_i` 是入射光的反方向。`\Omega` 是包含所有 `\omega_i` 可能取值的单位半球。`L_i(\omega_i)` 是来自该方向的辐射，`\omega_i \cdot n` 是入射方向和法线的点积。
 
-可以将此积分看作是从给定表面的所有可能方向收集所有光照信息。当来自任何特定方向的入射光击中表面时，我们将其转换为朝相机方向的反射光。定义光如何被转换和调制的材质函数称为双向反射分布函数 (BRDF)。对于不同的材料（如织物、皮肤、头发等），有不同类型的 BRDF。在我们的工作中，我们关注电介质和导电材料，如塑料、金属、木材、混凝土等。对于此类材料，我们将光视为直接反射。特别是金属具有吸收所有折射光的属性。相比之下，电介质只吸收一小部分折射光，通常在材料内部散射后，光最终会找到离开表面并回到观众的路 [Hoffman 12]。
+可以将此积分看作是从给定表面的所有可能方向收集所有光照信息。当来自任何特定方向的入射光击中表面时，我们将其转换为朝相机方向的反射光。定义光如何被转换和调制的材质函数称为双向反射分布函数（BRDF）。对于不同的材料（如织物、皮肤、头发等），有不同类型的 BRDF。在我们的工作中，我们关注电介质和导电材料，如塑料、金属、木材、混凝土等。对于此类材料，我们将光视为直接反射。特别是金属具有吸收所有折射光的属性。相比之下，电介质只吸收一小部分折射光，通常在材料内部散射后，光最终会找到离开表面并回到观众的路 [Hoffman 12]。
 
 我们将由散射产生的光定义为漫反射，并将其与镜面反射（由纯表面反射产生的光）区分来。因此，此类材料的 BRDF 可以表示为漫反射和高光两个 BRDF 的组合：
 
 ```
-$BRDF = BRDF_{diffuse} + BRDF_{specular}$
+BRDF = BRDF_{diffuse} + BRDF_{specular}
 ```
 
 这实际上是视频游戏等实时应用中表示各种材料类型的常用方法 [Hoffman 12]。
 
-## 4. 在 GPU 上基于物理的光探针生成
+# 4. 在 GPU 上基于物理的光探针生成
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_263_0.png)
-
-**图 4.1.** 球场上的光探针网格。
+![图 4.1. 球场上的光探针网格。](img/120606d35c679664e7ad5faec2ee0e8b_263_0.png)
 
 将方程 (4.1) 中的积分分为两部分，我们得到：
 
 ```
-$L_o(\omega) = \int_{\Omega} brdf(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i$
-= \int_{\Omega} brdf(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i$
-+ \int_{\Omega} brdfS(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i. \quad (4.2)$
+L_o(\omega) = \int_{\Omega} brdf(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i
+= \int_{\Omega} brdf(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i
++ \int_{\Omega} brdfS(\omega_i, \omega) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i. \quad (4.2)
 ```
 
-在计算机图形中，有不同的方法来求解渲染方程（例如路径追踪和光子映射），所有这些都需要 GPU。（*注：原文此处存在大量重复句子，译文已按逻辑处理*）
+在计算机图形中，有不同的方法来求解渲染方程（例如路径追踪和光子映射），所有这些都需要 GPU。（注：原文此处存在大量重复句子，译文已按逻辑处理）
 
 ## 4.3 在 GPU 上生成探针
 
@@ -5165,23 +5262,18 @@ $L_o(\omega) = \int_{\Omega} brdf(\omega_i, \omega) \times L_i(\omega_i) \times 
 
 在计算机图形中，有不同的方法来求解渲染方程（例如路径追踪和光子映射），所有这些都需要 GPU。
 
-## 4.3.1 从环境贴生成漫反射探针
+### 4.3.1 从环境贴图生成漫反射探针
 
 首先，我们需要定义漫反射 BRDF。我们使用归一化的 Lambertian BRDF。它非常简单、易于积分，并符合所需的视觉质量：
 
 ```
-Lamberian BRDF = \frac{1}{\pi}, \quad (4.3)\nint_{\Omega} brdfD(\omega_i, \omega_o) \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i = \frac{1}{\pi} L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i.
+Lamberian BRDF = \frac{1}{\pi}, \quad (4.3)
+\int_{\Omega} brdfD(\omega_i, \omega_o) \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i = \frac{1}{\pi} L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i.
 ```
 
-方程 (4.3) 中的积分取决于两个向量：法线和光照方向。虽然法线在半球范围内是恒定的，但入射光 $L_i$ 作为光源在立方体图中变化。由于漫反射 BRDF 不依赖于视角方向，我们对每个可能的法线方向积分渲染方程。通过使用 GPU [King 05] 实时积分并将渲染方程投影到球谐波系数 [Ramoamoorth and Hanrahan 01]，这种方法允许我们在 GeForce GTX 760 上 0.5 毫秒内预积分积分的漫反射部分。
+方程 (4.3) 中的积分取决于两个向量：法线和光照方向。虽然法线在半球范围内是恒定的，但入射光 `L_i` 作为光源在立方体图中变化。由于漫反射 BRDF 不依赖于视角方向，我们对每个可能的法线方向积分渲染方程。通过使用 GPU [King 05] 实时积分并将渲染方程投影到球谐波系数 [Ramoamoorth and Hanrahan 01]，这种方法允许我们在 GeForce GTX 760 上 0.5 毫秒内预积分积分的漫反射部分。
 
 球波及其在实时 3D 图形中的应用不是本章的范围。要了解更多信息，我们建议阅读 Peter-Peter Sloan 的优秀文章：“愚的球谐波 (SH) 技巧” [Sloan 08]。
-
-
-
-
-
-## 4. 在 GPU 上进行基于物理的光探针生成
 
 ### 4.3.2 从环境图生成高光探针
 
@@ -5191,17 +5283,17 @@ Lamberian BRDF = \frac{1}{\pi}, \quad (4.3)\nint_{\Omega} brdfD(\omega_i, \omega
 Cook-Torrance BRDF = \frac{D \times F \times G}{4 \times (V \cdot N) \times (N \cdot L)} (4.4)
 ```
 
-其中 $D$ 是微面分布，$F$ 是菲涅尔项，$G$ 是几何遮挡项，$(V \cdot N)$ 是视线向量和法线向量的点积，$(N \cdot L)$ 是法线向量和光线向量的点积：
+其中 `D` 是微面分布，`F` 是菲涅尔项，`G` 是几何遮挡项，`(V \cdot N)` 是视线向量和法线向量的点积，`(N \cdot L)` 是法线向量和光线向量的点积：
 
 ```
 GGX D(H) = \frac{a^2}{\pi(cos(\theta_H)^2 \times (a^2 - 1) + 2)} (4.5)
 ```
 
-其中 $H$ 是半角向量，$a$ 是粗糙度，且 $cos(\theta_H) = (N \cdot H)$。使用 GGX 函数（公式 (4.5)）让我们获得良好的高光效果。该函数也可以很容易被积分（正如我们后面将看到的）。
+其中 `H` 是半角向量，`a` 是粗糙度，且 `cos(\theta_H) = (N \cdot H)`。使用 GGX 函数（公式 (4.5)）让我们获得良好的高光效果。该函数也可以很容易被积分（正如我们后面将看到的）。
 
 关于选择分布函数、菲涅尔项和掩码函数的更多细节，请参阅关于基于物理渲染的 SIGGRAPH 课程 [Hill and McAulay 12]。
 
-像漫反射光探针一样，我们对高光积分进行积分。然而，虽然漫反射 BRDF 仅依赖于法线和光线方向，但高光 BRDF 中有更多变量。为了简化预积分的 BRDF，我们假设法线上既没有菲涅尔效应 (F) 也没有遮挡 (G)。这消除了公式 (4.4) 中的 $F$ 和 $G$ 项。我们根据反射方向 $R$ 进行积分——因此对于每个方向，我们都在立方体贴图中中使用预积分值。此外，立方体贴图不同的  级别（mip levels）对应于不同的粗糙度值。法线 $(N)$ 是唯一的剩余未知变量（$L$ 是光线方向）。为了简化积分，我们假设 $N$ 等于 $V$，这意味着 $R$ 等于 $V$。
+像漫反射光探针一样，我们对高光积分进行积分。然而，虽然漫反射 BRDF 仅依赖于法线和光线方向，但高光 BRDF 中有更多变量。为了简化预积分的 BRDF，我们假设法线上既没有菲涅尔效应 (F) 也没有遮挡 (G)。这消除了公式 (4.4) 中的 `F` 和 `G` 项。我们根据反射方向 `R` 进行积分——因此对于每个方向，我们都在立方体贴图中使用预积分值。此外，立方体贴图不同的级别（mip levels）对应于不同的粗糙度值。法线 (`N`) 是唯一的剩余未知变量（`L` 是光线方向）。为了简化积分，我们假设 `N` 等于 `V`，这意味着 `R` 等于 `V`。
 
 预积分的高光 BRDF 为：
 
@@ -5213,31 +5305,35 @@ brdfS(\omega_i, \omega_o) = \frac{D}{4 \times (N \cdot L)} (4.6)
 \int_{\Omega} brdfS(\omega_i, \omega_o) \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i = \int_{\Omega} \frac{D}{4 \times (N \cdot L)} \times L_i(\omega_i) \times (\omega_i \cdot n) d\omega_i.
 ```
 
-注意，由于上述提到的 $N = V$，因此 $(N \cdot V) = 1$。
+注意，由于上述提到的 `N = V`，因此 `(N \cdot V) = 1`。
 
-假设 $N$ 等于 $V$ 显然会产生误差（例如，在掠角处会丢失长高光）。此外，我们通过移除 $F$ 和 $G$ 项还引入了不准确性
+假设 `N` 等于 `V` 显然会产生误差（例如，在掠角处会丢失长高光）。此外，我们通过移除 `F` 和 `G` 项还引入了不准确性。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_266_0.png)
-
-**图 4.2.** (a) 当函数是规则时，蒙特卡洛积分在少量样本下运行良好。(b) 当函数不规则时，它更难估计。(c) 重要性采样关注困难的区域，并为我们提供更好的近似。
+![图 4.2. (a) 当函数是规则时，蒙特卡洛积分在少量样本下运行良好。(b) 当函数不规则时，它更难估计。(c) 重要性采样关注困难的区域，并为我们提供更好的近似。](img/120606d35c679664e7ad5faec2ee0e8b_266_0.png)
 
 在运行时，我们通过乘以菲涅尔项来补偿这种误差。
 
-这种在预滤波中的推导与 Brian Karis [Karis 13] 引入的拆分和方法（split-sum method）非常相似。区别在于，通过拆分和，他们考虑了 $F$ 和 $G$ 项，这在最终的运行时间接照明中产生了更准确的结果。
+这种在预滤波中的推导与 Brian Karis [Karis 13] 引入的拆分和方法（split-sum method）非常相似。区别在于，通过拆分和，他们考虑了 `F` 和 `G` 项，这在最终的运行时间接照明中产生了更准确的结果。
 
-蒙特卡洛重要性采样。为了解决公式 (4.6) 中的积分，我们使用公式 (4.7) 所示的蒙特卡洛重要性采样方法 [Hammersley and Handcomb 64]：
+
+
+## 蒙特卡洛重要性采样
+
+为了解决公式 (4.6) 中的积分，我们使用公式 (4.7) 所示的蒙特卡洛重要性采样方法 [Hammersley and Handcomb 64]：
 
 ```
 $$\int_{\Omega} f(x)dx \approx \frac{1}{N} \sum_{i=1}^{N} p(X_{i})$$ (4.7)
 ```
 
-其中 $p(x)$ 是概率密度函数 (PDF)。
+其中 $p(x)$ 是概率密度函数（PDF）。
 
 人们可以将重要性采样理解为试图关注函数中最“重要”的区域。如果可以想象一个非常光滑且规则的函数（图 4.2(a)），那么采样位置对结果的影响很小。当函数具有局部极值时，更难正确估计积分，需要更多的样本。重要性采样有助于捕捉那些值对计算的最终结果有较大影响的样本（图 4.2(c)）。
 
-BRDF 重要性采样。使用 BRDF 形状作为 PDF 可以导致与被积函数匹配的样本分布。例如，对于镜面表面，关注反射周围的方向是有意义的（图 4.3）。
+### BRDF 重要性采样
 
-为了匹配高光 BRDF 形状，我们根据分布函数 $D$ 以及半角向量 $H$ 的余弦构建 PDF
+使用 BRDF 形状作为 PDF 可以导致与被积函数匹配的样本分布。例如，对于镜面表面，关注反射周围的方向是有意义的（图 4.3）。
+
+为了匹配高光 BRDF 形状，我们根据分布函数 $D$ 以及半角向量 $H$ 的余弦构建 PDF。
 
 ## 4. 在 GPU 上进行基于物理的光探针生成
 
@@ -5263,7 +5359,7 @@ BRDF 重要性采样。使用 BRDF 形状作为 PDF 可以导致与被积函数�
 $$ PDF(\theta) = \frac{D(H) \times \cos(\theta_H)}{PDF(\phi)} = \frac{a^2 \times \cos(\theta_H)}{(\cos(\theta_H)^{2} \times (a^2 - 1) + 1)} $$
 ```
 
-通过使用 PDF(H) 采样，我们得到了近似积分的光谱部分所需的所有条件：
+通过使用 `PDF(H)` 采样，我们得到了近似积分的光谱部分所需的所有条件：
 
 ```
 $$ \int_{\Omega} 4 \times (n \cdot \omega_i) \times L_i(\omega_i) \times (\omega_i \cdot n)d\omega_i \quad (4.9) \approx \sum_{i=1}^{N} \frac{D \times L_i(\omega_i) \times (\omega_i \cdot n)}{4 \times (n \cdot \omega_i) \times PDF(\omega_i)} = - \sum_{i=1}^{N} L_i(\omega_i), $$
@@ -5271,35 +5367,44 @@ $$ \int_{\Omega} 4 \times (n \cdot \omega_i) \times L_i(\omega_i) \times (\omega
 
 其中 $N$ 是样本数，$\omega_i$ 是采样方向，$L_i(\omega_i)$ 是方向 $\omega_i$ 的采样颜色。
 
-PDF 只给了特定方向的概率。我们真正需要的是反；我们需要根据给定概率生成样本。我们首先为 PDF 计算累积分布函数 (CDF) [Papoulos 84, p. 92-94] (公式 (4.10))。对于一个值 $x$，CDF 在 [0 : 1] 区间内定义的均匀分布值 $\varepsilon$ 与 PDF($x$) 成比例 [Papoulos 84, Pharr and Humphreys 04] (图 4.4(a))。
-
-
-
-
+PDF 只给了特定方向的概率。我们真正需要的是反向 CDF；我们需要根据给定概率生成样本。我们首先为 PDF 计算累积分布函数（CDF）[Papoulos 84, p. 92-94]（公式 (4.10)）。对于一个值 $x$，CDF 在 [0 : 1] 区间内定义的均匀分布值 $\varepsilon$ 与 `PDF(x)` 成比例 [Papoulos 84, Pharr and Humphreys 04]（图 4.4(a)）。
 
 ## 4. 在 GPU 上基于物理的光的光探针生成
 
-以下方程展示了如何根据 CDF 的正式定义（公式 (4.10)），计算从原始镜面 BRDF 导出的 PDF 函数的 CDF (CDF($\phi$) 和 CDF($\theta$)):
+以下方程展示了如何根据 CDF 的正式定义（公式 (4.10)），计算从原始镜面 BRDF 导出的 PDF 函数的 CDF（`CDF(\phi)` 和 `CDF(\theta)`）：
 
 ```
-$CDF(X) = \int PDF(x)dx, \quad (4.10)\
-CDF(\phi) = \int_{0}^{\phi} \frac{1}{2\pi}dx \times x,\
-CDF(\theta) = \int_{0}^{\theta} \frac{2 \times a^2 \times x}{(a^2-1)^2}dx = \frac{1-q^2}{1+q^2(a^2-1)},$
+$$
+CDF(X) = \int PDF(x)dx, \quad (4.10)
+$$
+
+$$
+CDF(\phi) = \int_{0}^{\phi} \frac{1}{2\pi}dx \times x,
+$$
+
+$$
+CDF(\theta) = \int_{0}^{\theta} \frac{2 \times a^2 \times x}{(a^2-1)^2}dx = \frac{1-q^2}{1+q^2(a^2-1)}.
+$$
 ```
 
 其中 $q = \cos(\theta_H)$。我们现在反转 CDF 函数，生成从均匀值 $e_1$ 和 $e_2$ 到角度 $\phi$ 和 $\theta$ 的映射：
 
 ```
-$$\phi = Inverse(e_1) = e_1 \times 2\pi, \quad (4.11)\
-$\theta = Inverse(e_2) = \acos(\sqrt{\frac{1-e_2}{1+e_2(a^2-1)}}). \quad (4.12)$
+$$
+\phi = Inverse(e_1) = e_1 \times 2\pi, \quad (4.11)
+$$
+
+$$
+\theta = Inverse(e_2) = \acos\left(\sqrt{\frac{1-e_2}{1+e_2(a^2-1)}}\right). \quad (4.12)
+$$
 ```
 
 最后，我们可以根据方程 (4.11) 和 (4.12)，从 $[0:1]$ 中的均匀分布随机值 $(e_1, e_2)$ 生成方向 $(\phi, \theta)$。将这一切整合在一起，我们得到了列表 4.1 中的代码。
 
 ```cpp
-//e1, e2 是两个随机值的对
-//Roughness 是我们正在积分的当前粗糙度
-//N 是法线
+// e1, e2 是两个随机值的对
+// Roughness 是我们正在积分的当前粗糙度
+// N 是法线
 float3 ImportanceSampleGG(float e1, float e2, float Roughness, float N) {
     float a = Roughness + Roughness;
     // 使用方程 (4.14) 计算 phi 和 theta 的余弦
@@ -5326,15 +5431,14 @@ float3 ImportanceSampleGG(float e1, float e2, float Roughness, float N) {
 
 ```cpp
 // 对于给定的 Roughness 和视向量函数
-// 使用 BRDF 重要的性采样对环境图
+// 使用 BRDF 重要性采样对环境图
 // e2 是两个随机值的对
-//totalWeight 是有效样本的数量
+// totalWeight 是有效样本的数量
 float3 BRDF(float e1, float e2, float Roughness, float3 V) {
     float3 N V;
     // 使用 BRDF 重要性采样计算 H 向量
     float3 H = ImportanceSampleGX(e1, e2, Roughness, N);
-    // 使用标准反射
-// 公式计算向量
+    // 使用标准反射公式计算向量
     float3 L = 2 * dot(V, H) * H - V;
 
     float NoL = saturate(dot(N, L));
@@ -5348,7 +5452,7 @@ float3 BRDF(float e1, float e2, float Roughness, float3 V) {
 }
 ```
 
-列表 4.1. BRDF 重要的性采样。[Nieder92] 我们使用 Hammersley 拟随机低差异序列在 GPU 上生成均匀分布的随机值 $\varepsilon_1, \varepsilon_2$（列表 4.2）。
+列表 4.1. BRDF 重要性采样。[Nieder92] 我们使用 Hammersley 拟随机低差异序列在 GPU 上生成均匀分布的随机值 $\varepsilon_1, \varepsilon_2$（列表 4.2）。
 
 图 4.5 显示了一些结果。我们使用每个方向 1024 个采样来预积分一个环境图。在 GeForce GTX 760 上进行 BRDF 重要性采样的性能数据见表 4.1（单位为毫秒）。
 
@@ -5360,12 +5464,13 @@ float radicalInverse(uint bits) {
     bits = ((bits & 0x0F0F0F0Fu) << 4u) | ((bits & 0xF0F0F0F0u) >> 4u);
     return float(bits) * 2.328306436538693e-10; // / 0x10000000
 }
+
 float2 Hammersley(uint i, uint n) {
     return float2(float(i)/float(n), radicalInverse(i));
 }
 ```
 
-列表 4.2. Hammersley 函数生成均匀分布的拟随机点 ($\varepsilon_1, \varepsilon_2$)。
+列表 4.2. Hammersley 函数生成均匀分布的拟随机点（$\varepsilon_1, \varepsilon_2$）。
 
 ## 4. 在 GPU 上基于物理的光探针生成
 
@@ -5376,7 +5481,7 @@ float2 Hammersley(uint i, uint n) {
 图 4.5. (a) 对于不同粗糙度的预积分 BRDF。(b) 使用 100,000 个采样的真值积分。
 
 | 采样数量 | 预积分立方体映射大小 | | | |
-| :--- | :--- | :--- | :--- | :--- |
+|:---|:---|:---|:---|:---|
 | 128 | 64 x 64 | 32 x 32 | 16 x 16 | 8 x 8 |
 | 64 | 2.8 | 0.8 | 0.2 | 0.04 | 0.02 |
 | 128 | 6.2 | 1.6 | 0.5 | 0.1 | 0.08 |
@@ -5386,11 +5491,15 @@ float2 Hammersley(uint i, uint n) {
 
 图 4.1. GTX 760 需要大量采样来减少噪声并获得平滑图像。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_271_2.png) **图 4.6.** 采样数量和噪声。
+![](img/120606d35c679664e7ad5faec2ee0e8b_271_2.png)
+
+**图 4.6.** 采样数量和噪声。
 
 # III 光照
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_272_0.png) 环境图中存在高频细节（图 4.7）。我们的某些环境被黑暗区域围绕（引入了大量高频细节）。具有噪声的预过滤映射是一个问题。我们添加了一些额外的方法。
+![](img/120606d35c679664e7ad5faec2ee0e8b_272_0.png)
+
+环境图中存在高频细节（图 4.7）。我们的某些环境被黑暗区域围绕（引入了大量高频细节）。具有噪声的预过滤映射是一个问题。我们添加了一些额外的方法。
 
 ### 4.3.3 预过滤环境图
 
@@ -5401,7 +5510,7 @@ float2 Hammersley(uint i, uint n) {
 我们使用采样方向周围的立体角与环境图中一个像素所占立体角的比例进行 [Křanek and Colbert 08]。在原始论文中，他们发现偏移 1 层 mip 会产生噪声的结果。然而，在我们案例中，为了保留低粗糙度的细节，我们不希望偏移。因此，我们根据材料粗糙度选择了起始映射，见列表 4.3。
 
 ```cpp
-float pdf = a / pow (NoH+NoH * (a-1) + 1, 2);
+float pdf = a / pow(NoH+NoH * (a-1) + 1, 2);
 float area = 2 * PI;
 
 float pdf = * / (4 * LoH);
@@ -5415,17 +5524,17 @@ float mipMapLevel = clamp(0.5 * log2(s_solidangle/ p_solidangle), base_mip, 5);
 
 ## 4. 在 GPU 上基于物理的光探针生成
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_273_0.png) **图 4.8.** 源环境（左）和真值（右），粗糙度为 0.25 的使用 128 次采样的 BRDF IS（中左）和粗糙度为 0.25 的使用 128 次带预过滤采样的 BRDF IS（中右）。
+![](img/120606d35c679664e7ad5faec2ee0e8b_273_0.png)
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_273_1.png) **图 4.9.** 使用带预过滤 BRDF 重要性采样的最终结果误差图：(a) 使用 128 次采样的结果，以及 (b) 使用 1024 次采样的结果。
+**图 4.8.** 源环境（左）和真值（右），粗糙度为 0.25 的使用 128 次采样的 BRDF IS（中左）和粗糙度为 0.25 的使用 128 次带预过滤采样的 BRDF IS（中右）。
+
+![](img/120606d35c679664e7ad5faec2ee0e8b_273_1.png)
+
+**图 4.9.** 使用带预过滤 BRDF 重要性采样的最终结果误差图：(a) 使用 128 次采样的结果，以及 (b) 使用 1024 次采样的结果。
 
 ### 4.3.4 环境图重要性采样
 
 之前我们讨论了 BRDF 重要性采样，即使用 PDF 来匹配 BRDF 的行为。但这并不总是最好的采样方法。
-
-
-
-
 
 ## III 光照
 
@@ -5455,13 +5564,17 @@ float mipMapLevel = clamp(0.5 * log2(s_solidangle/ p_solidangle), base_mip, 5);
 
 条件 PDF 和边缘 PDF 可以以下方程计算：
 
+```text
 conditional PDF(i,j) = luminance(i,j), \quad (4.13)
 
 marginal PDF_j = \sum_{i=0}^{n} luminance(i,j). \quad (4.14)
+```
 
-对于我们定义的每种 PDF，都有对应的 CDF：边缘 CDF 和条件 CDF。当 PDF 是纯离散的时，CDF 可以计算为每个位置 m 从 0 到 m 的 PDF 之和 [Pharr and Humphreys 04]；
+对于我们定义的每种 PDF，都有对应的 CDF：边缘 CDF 和条件 CDF。当 PDF 是纯离散的时，CDF 可以计算为每个位置 m 从 0 到 m 的 PDF 之和 [Pharr and Humphreys 04]：
 
+```text
 CDF_m = \sum_{k=0}^{m} PDF_k. \quad (4.15)
+```
 
 代表行概率总和的函数是整个图像的行级 CDF；这就是边缘 CDF（图 4.12）。单独行的 PDF 是唯一的，且每个行都有自己的列级 CDF，这被称为条件 CDF（图 4.12）。
 
@@ -5469,23 +5582,25 @@ CDF_m = \sum_{k=0}^{m} PDF_k. \quad (4.15)
 
 因此，反向 CDF 仅仅是随机 [0:1] 值与其对应样本之间进行映射。由于根据定义，CDF 是一个排序数组（方程 (4.15)），我们可以使用二分查找来找到对应样本的索引。简之，该算法可以描述如下：
 
-![](img/120606d35c679664e7ad5ec2ee0e8b_276_0.png)
+![](img/120606d35c679664e7ad5faec2ee0e8b_276_0.png)
 
-图 4.13.PDF 及其对应的 CDF。
+图 4.13. PDF 及其对应的 CDF。
 
-- 1. 在 $[0 : 1]$ 范围内生成一个随机数 $\alpha$。
-- 2. 找到一个满足 $CDF(i) \le \alpha$ 的 $i$。
-- 3. 那么，$i$ 就是具有 PDF($i$) 的结果样本。
+1. 在 $[0 : 1]$ 范围内生成一个随机数 $\alpha$。
+2. 找到一个满足 `CDF(i) ≤ α` 的 `i`。
+3. 那么，`i` 就是具有 `PDF(i)` 的结果样本。
+
+
 
 由于有了 PDF、CDF 和反向 CDF，我们现在可以生成环境图样本。值得注意的是，由于样本取决于 BRDF 而不是着光点的位置和方向，样本可以在 CPU 上预生成。在 GPU 阶段，我们只需简单地使用这些样本进行积分。
 
 最终的样本生成过程可以描述如下：
 
-- 1. 对于地图中每一行的每个像素，使用方程 (4.13) 计算 PDF 值。
-- 2. 对于每个 $j$，累加条件 PDF 值并将它们存储在边缘 PDF 中（方程 4.14）。
-- 3. 对于每一行，使用方程 (4.15) 构建条件 CDF。
-- 4. 使用方程 (4.15) 构建边缘 CDF。
-- 5. 在 CPU 上生成 $n$ 个样本并将其传递给 GPU。
+1. 对于地图中每一行的每个像素，使用方程 (4.13) 计算 PDF 值。
+2. 对于每个 `j`，累加条件 PDF 值并将它们存储在边缘 PDF 中（方程 4.14）。
+3. 对于每一行，使用方程 (4.15) 构建条件 CDF。
+4. 使用方程 (4.15) 构建边缘 CDF。
+5. 在 CPU 上生成 `n` 个样本并将其传递给 GPU。
 
 列表 4.4 显示了使用分层法 [Niederiter] 生成 128 个样本的代码。此外，我们可以通过对样本进行分层来提高性能。随机采样可能会产生糟糕的覆盖（图 4.14）。
 
@@ -5515,11 +5630,11 @@ for(int j = 0; j < 16; j++)
 
 图 4.14. (a) 随机采样可能会产生糟糕的覆盖。(b) 分层采样保证至少有一个样本。
 
-## III 照明
+## 4.3 照明
 
-我们有一组传递给 GPU 的样本。为了使用这些样本，我们必须首先将 (u, v) 坐标转换为向量 [Pharr and Humphreys 04]。PDF 的转换可以从环境图解包推导出，其中每个面的视野等于 $\frac{\pi}{2}$。
+我们有一组传递给 GPU 的样本。为了使用这些样本，我们必须首先将 `(u, v)` 坐标转换为向量 [Pharr and Humphreys 04]。PDF 的转换可以从环境图解包推导出，其中每个面的视野等于 $\frac{\pi}{2}$。
 
-```
+```text
 $PDF_u = PDF_u \times 6 \times \frac{\pi}{2}$
 $PDF_v = PDF_v \times \frac{\pi}{2}$
 ```
@@ -5547,20 +5662,16 @@ return brdf * color * NL * dw / (pdfV * pdfU * 6 * PI * PI
   *0.5*0.5);
 
 float3 SampleENV(int index, float Roughness, float3 N, float3 V) {
-// 获取样本的位置
-float2 uv = samples[index].xy;
-// 获取当前样本的 PDF 值。注意最后的
-float PDFV = pdfU*z;
-float pdf = samples[index].z;
-float pdfU = samples[index].w;
+    // 获取样本的位置
+    float2 uv = samples[index].xy;
+    // 获取当前样本的 PDF 值。注意最后的
+    float PDFV = pdfU*z;
+    float pdf = samples[index].z;
+    float pdfU = samples[index].w;
 }
 ```
 
-
-
-
-
-# 4. 在 GPU 上进行基于物理的光探针生成
+## 4.4 在 GPU 上进行基于物理的光探针生成
 
 ```cpp
 // 将 uv 采样位置转换为向量。我们需要用此来
@@ -5595,13 +5706,13 @@ float3 PreIntegrateLightProbe(float Roughness,
 }
 ```
 
-# 列表 4.5. 环境图重要性采样。
+列表 4.5. 环境图重要性采样。
 
 使用这种方法帮助我们减少了夜间光照条件下高粗糙度值的误差（图 4.15）。然而，仅使用环境图并不一定是最佳解决方案。与 BRDF 采样类似，在某些情况下，纯基于环境的采样可能会产生大量噪声（或“火花”）（图 4.16）。例如，如果样本不符合 BRDF 的镜面瓣（这在低粗糙度材料中更为常见），就会发生这种情况。
 
 由于所有样本都是在 CPU 上预生成的，因此在 GTX 460 上，高粗糙度值的 GPU 预计算时间小于 0.05 毫秒。
 
-## 4.3.5 结合重要性采样方法
+### 4.3.5 结合重要性采样方法
 
 我们现在有两种独立的方法，它们在不同的情况下效果良好（例如，低粗糙度以及/或环境图中的高频细节）。我们希望结合这两种方法以寻求一个适用于大多数情况的解决方案。
 
@@ -5611,32 +5722,30 @@ float3 PreIntegrateLightProbe(float Roughness,
 
 图 4.16. 使用环境图重要性采样的镜面光探针。第一个探针是黑色的，因为它是一个完美的镜子，没有任何样本完全击中反射。
 
-$$\frac{1}{n_f+n_g} \sum_{i=1}^{n_f} \frac{f(X_i)g(X_i)w_f(X_i)}{p_f(X_i)} + \sum_{i=1}^{n_g} \frac{f(Y_i)g(Y_i)w_g(Y_i)}{p_g(Y_i)}$$$
+$$\frac{1}{n_f+n_g} \sum_{i=1}^{n_f} \frac{f(X_i)g(X_i)w_f(X_i)}{p_f(X_i)} + \sum_{i=1}^{n_g} \frac{f(Y_i)g(Y_i)w_g(Y_i)}{p_g(Y_i)}$$
 
-其中 $n_f$ 是从 $p_f$ 分布方法取的样本数，$n_g$ 是从 $p_g$ 取的样本数，$w_f$ 和 $w_g$ 是特殊的选取权重函数，使得该估计器的期望值等于积分 $f(x)g(x)$ 的值 [Pharr and Humphreys 04]。在我们案例中，$p_f$ 是 BRDF 重要性采样分布，$p_g$ 是环境图采样分布。
+其中 `n_f` 是从 `p_f` 分布方法取的样本数，`n_g` 是从 `p_g` 取的样本数，`w_f` 和 `w_g` 是特殊的选取权重函数，使得该估计器的期望值等于积分 `f(x)g(x)` 的值 [Pharr and Humphreys 04]。在我们案例中，`p_f` 是 BRDF 重要性采样分布，`p_g` 是环境图采样分布。
 
-对于权重变量 $w_f$ 和 $w_g$，我们使用了最简单的方法。我们选择 $w_f$ 为 $n_f$，选择 $w_g$ 为 $n_g$。我们发现，这种方法以极低的性能开销提供了可以接受的结果（与平衡启发式相比；例如，[Pharr and Humphreys 04]）。
+对于权重变量 `w_f` 和 `w_g`，我们使用了最简单的方法。我们选择 `w_f` 为 `n_f`，选择 `w_g` 为 `n_g`。我们发现，这种方法以极低的性能开销提供了可以接受的结果（与平衡启发式相比；例如，[Pharr and Humphreys 04]）。
 
 至于每种方法的样本数，我们简单使用了一个通过试错获得的硬编码值（在我们案例中，两种方法均为 64）。此外，我们仅在粗糙度大于 0.7 时才使用环境图重要性采样。对于较低的粗糙度值，单独使用 BRDF 重要性采样效果良好。图 4.17 显示了两种方法在不同粗糙度值下的样本数。
 
 列表 4.6 展示了使用方法结合的最终预积分函数。
 
 | 使用粗糙度 | 0.0 | 0.25 | 0.5 | 0.75 | 1.0 |
-|---|---|---|---|---|---|
+|---|---:|---:|---:|---:|---:|
 | BRDF IS | 1 | 128 | 128 | 64 | 0 |
 | ENV IS | 0 | 0 | 0 | 64 | 128 |
 
-**图 4.17.** 镜面探针在种方法中的样本数。
+图 4.17. 镜面探针在种方法中的样本数。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_281_0.png)
 
-**图 4.18.** 使用 10,000 个样本的真值渲染。
+图 4.18. 使用 10,000 个样本的真值渲染。
 
 使用结合的重要性采样使我们在小于 2 毫秒的 GPU 时间内获得了所需的质量结果。（见图 4.18）。
 
 ## 4.4 结论
-
-在 GPU 上实现结合的重要性采样使我们能够在加载期间生成并预过滤光探针。每个探针的预积分时间少于 2 毫秒（此时间不包括生成探针的时间）。
 
 在 GPU 上实现结合的重要性采样使我们能够在加载期间生成并预过滤光探针。每个探针的预积分时间少于 2 毫秒（此时间不包括生成探针的时间）。
 
@@ -5644,107 +5753,29 @@ $$\frac{1}{n_f+n_g} \sum_{i=1}^{n_f} \frac{f(X_i)g(X_i)w_f(X_i)}{p_f(X_i)} + \su
 
 然而，仅使用环境图并不一定是最佳解决方案。与 BRDF 采样类似，在某些情况下，纯基于环境的采样可能会产生大量噪声（或“火花”）（图 4.16）。例如，如果样本不符合 BRDF 的镜面瓣（这在低粗糙度材料中更为常见），就会发生这种情况。
 
-```cpp
-// 将 uv 采样位置转换为向量。我们需要用此来
-// 计算 BRDF
-float3 L = normalize(uvToVector( uv));
-// 采样来自方向 L 的光线
-// 并计算该方向的镜面 BRDF
-float3 envIS = envMapSample( Roughness, uv, L, N, pdfV, pdfU);
-return envIS;
-```
+[Lagarde 12] Sébastien Lagarde. “用于物理渲染渲染的 AMD Cubemapgen.” `http://seblagarde.wordpress.com/2012/06/10/amd-cubemapgen-for-physically-based-rendering/`, 2012.
 
-```cpp
-float3 PreIntegrateLightProbe(float Roughness,
-    int numENSamples, float R )
-{
-    // 对于预积分，我们假设 N=V=R
-    float3 N = R;
-    float3 V = R;
+[Niederreiter 92] Harald Niederreiter. 随机数生成与准蒙特卡洛方法。Philadelphia: Society for Industrial and Applied Mathematics, 1992.
 
-    float3 finalColor = 0;
-    // 采样所有预先生成的样本
-    for(int i = 0; i < numENSamples; i++)
-    {
-        finalColor += SampleENV(i, Roughness, N, V);
-    }
+[Papoulis 84] A. Papoulis. 概率、随机变量与随机过程，第二版。纽约: McGraw-Hill, 1984.
 
-    // 最终颜色需要除以样本数
-    // 根据依据蒙特卡洛重要性采样的定义
-    finalColor /= numENSamples;
+[Pharr and Humphreys 04] Matt Pharr and Greg Humphreys. 基于物理的渲染：从理论到实现。San Francisco: Morgan-Kaufman, 2004.
 
-    return finalColor;
-}
-```
+[Ramamoorthi and Hanrahan 01] Ravi Ramamoorthi and Pat Hanrahan. “一种高效的辐照环境贴表示法。” SIGGRAPH 论文，第 497–500 页。纽约: ACM, 2001.
 
-# 列表 4.5. 环境图重要性采样。
+[Hill and McAule 12] Stephen Hill and Stephen McAule，组织者。“电影与游戏制作中的实用着色，” SIGGRAPH 课程，加洛杉矶，加州州，2012 年 8 月 5–9 日。（可访问 `http://blog.selfshadow.com/publications/s2012-shading-course/`）。
 
-使用这种方法帮助我们减少了夜间光照条件下高粗糙度值的误差（图 4.15）。然而，仅使用环境图并不一定是最佳解决方案。与 BRDF 采样类似，在某些情况下，纯基于环境的采样可能会产生大量噪声（或“火花”）（图 4.16）。例如，如果样本不符合 BRDF 的镜面瓣（这在低粗糙度材料中更为常见），就会发生这种情况。
+[Sloan 08] Peter-Pike Sloan. “愚蠢的球谐函数 (SH) 技巧，” 在游戏开发者大会上发表，旧金山，加州州，2008 年 2 月 18–22 日。
 
-由于所有样本都是在 CPU 上预生成的，因此在 GTX 460 上，高粗糙度值的 GPU 预计算时间小于 0.05 毫秒。
-
-## 4.3.5 结合重要性采样方法
-
-我们现在有两种独立的方法，它们在不同的情况下效果良好（例如，低粗糙度以及/或环境图中的高频细节）。我们希望结合这两种方法以寻求一个适用于大多数情况的解决方案。
-
-这就是多重（或结合）重要性采样大用用场。多重重要性采样允许我们结合两种采样技术。方程如下：
-
-$$\frac{1}{n_f+n_g} \sum_{i=1}^{n_f} \frac{f(X_i)g(X_i)w_f(X_i)}{p_f(X_i)} + \sum_{i=1}^{n_g} \frac{f(Y_i)g(Y_i)w_g(Y_i)}{p_g(Y_i)}$$$
-
-其中 $n_f$ 是从 $p_f$ 分布方法取的样本数，$n_g$ 是从 $p_g$ 取的样本数，$w_f$ 和 $w_g$ 是特殊的选取权重函数，使得该估计器的期望值等于积分 $f(x)g(x)$ 的值 [Pharr and Humphreys 04]。在我们案例中，$p_f$ 是 BRDF 重要性采样分布，$p_g$ 是环境图采样分布。
-
-对于权重变量 $w_f$ 和 $w_g$，我们使用了最简单的方法。我们选择 $w_f$ 为 $n_f$，选择 $w_g$ 为 $n_g$。我们发现，这种方法以极低的性能开销提供了可以接受的结果（与平衡启发式相比；例如，[Pharr and Humphreys 04]）。
-
-至于每种方法的样本数，我们简单使用了一个通过试错获得的硬编码值（在我们案例中，两种方法均为 64）。此外，我们仅在粗糙度大于 0.7 时才使用环境图重要性采样。对于较低的粗糙度值，单独使用 BRDF 重要性采样效果良好。图 4.17 显示了两种方法在不同粗糙度值下的样本数。
-
-列表 4.6 展示了使用方法结合的最终预积分函数。
-
-| 使用粗糙度 | 0.0 | 0.25 | 0.5 | 0.75 | 1.0 |
-|---|---|---|---|---|---|
-| BRDF IS | 1 | 128 | 128 | 64 | 0 |
-| ENV IS | 0 | 0 | 0 | 64 | 128 |
-
-**图 4.17.** 镜面探针在种方法中的样本数。
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_281_0.png)
-
-**图 4.18.** 使用 10,000 个样本的真值渲染。
-
-使用结合的重要性采样使我们在小于 2 毫秒的 GPU 时间内获得了所需的质量结果。（见图 4.18）。
-
-## 4.4 结论
-
-在 GPU 上实现结合的重要性采样使我们能够在加载期间生成并预过滤光探针。每个探针的预积分时间少于 2 毫秒（此时间不包括生成探针的时间）。
-
-（注：此处原文存在段落重复）
-
-（注：由于原始文本中存在大量重复段落，翻译时已根据逻辑进行了去重处理，确保输出流畅且不重复。）
-
-
-
-
-
-[Lagarde 12] Sébastien Lagarde. “用于物理渲染渲染的 AMD Cubemapgen.” http://seblagarde.wordpress.com/2012/06/10/amd-cubemapgen-for-physically-based-rendering/, 2012.
-
-[Niederreiter 92] Harald Niederreiter. 随机数生成与准蒙特卡洛方法。Philadelphia:Society for Industrial and Applied Mathematics, 1992.
-
-[Papoulis 84] A. Papoulis. 概率、随机变量与随机过程，第二版。纽约:McGraw-Hill, 1984.
-
-[Pharr and Humphreys 04] Matt Pharr and Greg Humphreys. 基于物理的渲染：从理论到实现。San Francisco:Morgan-Kaufman, 2004.
-
-[Ramamoorthi and Hanrahan 01] Ravi Ramamoorthi and Pat Hanrahan. “一种高效的辐照环境贴表示法。” SIGGRAPH 论文，第 497–500 页。纽约:ACM, 2001.
-
-[Hill and McAule 12] Stephen Hill and Stephen McAule，组织者。“电影与游戏制作中的实用着色，” SIGGRAPH 课程，加洛杉矶，加州州，2012年8月5-9日。（可访问 http://blog.selfshadow.com/publications/s2012-shading-course/）。
-
-[Sloan 08] Peter-Pike Sloan. “愚蠢的球谐函数 (SH) 技巧，” 在游戏开发者大会上发表，旧金山，加州州，2008年2月18-22日。
-
-[Walter et al. 07] Bruce Walter, Stephen R. Marschner, Hongsong Li, and Kenneth E. Torrance. “通过粗糙表面折射的微面模型。” Eurographics 渲染研讨会论文，第 195–206 页。瑞士Aire-la-Ville:Eurographics Association, 2007.
+[Walter et al. 07] Bruce Walter, Stephen R. Marschner, Hongsong Li, and Kenneth E. Torrance. “通过粗糙表面折射的微面模型。” Eurographics 渲染研讨会论文，第 195–206 页。瑞士 Aire-la-Ville: Eurographics Association, 2007.
 
 # 实时全局光照明
-使用切片（Slices）
+
+## 使用切片（Slices）
+
 Hugh Malan
 
-## 5.1 引言
+### 5.1 引言
 
 在本章中，我们将介绍一种实现实时单次弹全局光照明的方法。
 
@@ -5753,6 +5784,8 @@ Hugh Malan
 所有这些方法的共同点是使用光照场景几何结构来初始化数据结构。然后，应用传播或模糊步骤，之后该结构即可用于辐照或反射查询。
 
 光照传播体（LPV）方法 [Kaplanian and Dachbacher 10] 使用了一个体素数组，其中每个体素包含辐照的一阶球谐函数表示。该数组使用反射阴影图进行初始化；传播步骤是迭代地将辐照从每个单元传输到其邻居单元。
+
+
 
 体素八叉树 [Crassin et al. 2011] 将场景转换为八叉树表示，其中每个叶节点持有辐射亮度。非叶节点被计算为子节点颜色的平均值。通过对八叉树进行光线追踪并采样命中叶节点的颜色来计算锐利反射；而模糊反射和辐照则通过采样父节点找到，其父节点的生成取决于亮度。
 
@@ -5766,7 +5799,7 @@ Hugh Malan
 
 在这里，数据结构是切片（slices）的集合。切片是一个缩放并变形的单位方形，与场景的某些表面对齐（见图 5.1）。在初始化步骤期间，它捕捉了场景该部分的辐射亮度。然后可以对其进行查询，以高效计算由该表面发射的光线引起的辐照。
 
-切片排列在一个扭曲的方体（称为单元）数组中，这些方体拟合场景几何结构；示例如图5.2 所示。
+切片排列在一个扭曲的方体（称为单元）数组中，这些方体拟合场景几何结构；示例如图 5.2 所示。
 
 为了评估特定位置和表面法线的辐照，我们首先找到包含该位置的单元。然后，查询组成该单元六面的六个切片以计算它们的辐照。这六个辐照值通过求和计算。
 
@@ -5780,39 +5813,39 @@ Hugh Malan
 
 ## 5.3 近似发光平面引起的辐照
 
-具有表面法线的点处的辐照是发射辐射亮度在半球体上的卷积。想象一个处在 $z=0$ 处的平坦平面，它发射 $L(x, y, \omega)$。点 $(x, y)$ 处的辐照为：
+具有表面法线的点处的辐照是发射辐射亮度在半球体上的卷积。想象一个处在 `z=0` 处的平坦平面，它发射 `L(x, y, \omega)`。点 `(x, y)` 处的辐照为：
 
-$E(x, y) = \int_{\Omega} L(x, y, \omega) \cos \theta \, d\omega$
+`E(x, y) = \int_{\Omega} L(x, y, \omega) \cos \theta \, d\omega`
 
-其中 $\theta$ 是光线方向与表面法线之间的角。对于平坦平面，法线为 $(0, 0, 1)$，所以：
+其中 `\theta` 是光线方向与表面法线之间的角。对于平坦平面，法线为 `(0, 0, 1)`，所以：
 
-$E(x, y) = \int_{0}^{2\pi} \int_{0}^{\pi/2} L(x, y, \theta, \phi) \cos \theta \, d\theta \, d\phi$
+`E(x, y) = \int_{0}^{2\pi} \int_{0}^{\pi/2} L(x, y, \theta, \phi) \cos \theta \, d\theta \, d\phi`
 
-如果 $L(x, y, \theta, \phi)$ 是均匀的，那么：
+如果 `L(x, y, \theta, \phi)` 是均匀的，那么：
 
-$E(x, y) = L_0 \int_{0}^{2\pi} d\phi \int_{0}^{\pi/2} \cos \theta \, d\theta$
+`E(x, y) = L_0 \int_{0}^{2\pi} d\phi \int_{0}^{\pi/2} \cos \theta \, d\theta`
 
-如果 $L(x, y, \theta, \phi)$ 是均匀的，那么：
+如果 `L(x, y, \theta, \phi)` 是均匀的，那么：
 
-$E(x, y) = L_0 \int_{0}^{2\pi} d\phi \int_{0}^{\pi/2} \cos \theta \sin \theta \, d\theta = L_0 \cdot (2\pi) \cdot \left[ \frac{1}{2}\sin^2 \theta \right]_0^{\pi/2} = \pi L_0$
+`E(x, y) = L_0 \int_{0}^{2\pi} d\phi \int_{0}^{\pi/2} \cos \theta \sin \theta \, d\theta = L_0 \cdot (2\pi) \cdot \left[ \frac{1}{2}\sin^2 \theta \right]_0^{\pi/2} = \pi L_0`
 
 不可分离函数可以用一系列高斯模糊来近似。像那种模式，我们只使用了两个高斯模糊。这对高斯模糊通过最小化平方误差来匹配，最佳拟合：
 
+```text
+g_0 = 使用标准差为 1.368d 的模糊亮度图像；
+g_1 = 使用标准差为 0.532d 的模糊亮度图像；
+近似辐照 = 0.54g_0 + 0.46g_1
 ```
-$g_0 =$ 使用标准差为 $1.368d$ 的模糊亮度图像；
-$g_1 =$ 使用标准差为 $0.532d$ 的模糊亮度图像；
-近似辐照 = $0.54g_0 + 0.46g_1$
-```
 
-首先注意 $E$ 可以表示为 $L$ 与内核的卷积。对于平坦平面，内核取决于距离 $d$：
+首先注意 `E` 可以表示为 `L` 与内核的卷积。对于平坦平面，内核取决于距离 `d`：
 
-$E(x, y) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} L(x', y') K(x-x', y-y', d) \, dx' \, dy'$
+`E(x, y) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} L(x', y') K(x-x', y-y', d) \, dx' \, dy'`
 
-其中 $K(r, d)$ 是内核。对于平坦平面，内核为：
+其中 `K(r, d)` 是内核。对于平坦平面，内核为：
 
-$K(r, d) = \frac{d}{2\pi(r^2 + d^2)^{3/2}}$
+`K(r, d) = \frac{d}{2\pi(r^2 + d^2)^{3/2}}`
 
-所以，内核随 $d$ 缩放。其次，生成图像金字塔的简单方法是考虑每个层级图，并使用隐含距离，计算高斯模糊半径，然后相应地混合辐照。不幸的是，这会导致远处图像的采样次数过高。
+所以，内核随 `d` 缩放。其次，生成图像金字塔的简单方法是考虑每个层级图，并使用隐含距离，计算高斯模糊半径，然后相应地混合辐照。不幸的是，这会导致远处图像的采样次数过高。
 
 解决方案是在预处理从亮度生成第二个图像金字塔——该图像金字塔是一个内存链；每一层都是通过框过滤器对上一层下采样构建的。
 
@@ -5826,80 +5859,81 @@ $K(r, d) = \frac{d}{2\pi(r^2 + d^2)^{3/2}}$
 
 **图 5.3.** 平面的辐照贡献：使用理想积分和成对高斯近似的每个点贡献的截面。
 
+### 5.4.1 整合汇总
 
+给定一个发光平面，首先在纹理图（`R`）中捕亮度和透明度。用于辐照查询的图像金字塔由 `R` 生成如下：
 
+1. 为纹理图 `R` 生成一个标准的 mipmap 链。每个 mipmap 都是前一个层的一半尺寸框滤波（boxfiltered）下采样，`R'` 是生成的图像金字塔。它包含 RGB 格式的亮度和 `A` 通的不透明度。不透明度值不用于生成的辐照金字塔，但在后续 5.8 节描述的单元格传播步骤中是必要的。
 
+2. 分配辐照图像金字塔 `I`。它的维度和 mipmap 数量与 `R'` 相同。每一层对应距离发光平面特定的距离，由公式 (5.2) 定义。
 
-## 5.4.1 整合汇总
+3. 对于图像金字塔 `I` 的每个 mip 层 `m`，我们按照公式 (5.4) 描述生成图像。
 
-给定一个发光平面，首先在纹理图（$R$）中捕亮度和透明度。用于辐照查询的图像金字塔由 $R$ 生成如下：
+对于当前的 mip，计算其到发光平面的距离，并将两个高斯模糊的标准差作为世界空间中的距离。我们找到两个源 mip 层作为模糊的输入。（我们发现评估高斯到两个标准差并使用五个采样点是可以接受的结果）。使用适当的高斯函数对这些输入图像进行模糊，将它们重缩到相同的分辨率，并融合生成的图像以构建 `I` 的 mipmap。
 
-- 1. 为纹理图 $R$ 生成一个标准的 mipmap 链。每个 mipmap 都是前一个层的一半尺寸框滤波（boxfiltered）下采样，$R'$ 是生成的图像金字塔。它包含 RGB 格式的亮度和 $A$ 通的不透明度。不透明度值不用于生成的辐照金字塔，但在后续 5.8 节描述的单元格传播步骤中是必要的。
-- 2. 分配辐照图像金字塔 $I$。它的维度和 mipmap 数量与 $R'$ 相同。每一层对应距离发光平面特定的距离，由公式 (5.2) 定义。
-- 3. 对于图像金字塔 $I$ 的每个 mip 层 $m$，我们按照公式 (5.4) 描述生成图像。
+注意，由于图像金字塔 `I` 仅包含 RGB，这些图像处理步骤可以丢弃 alpha 通道。
 
-对于当前的 mip，计算其到发光平面的距离，并将两个高斯模糊的标准差作为世界空间中的距离。我们找到两个源 mip 层作为模糊的输入。（我们发现评估高斯到两个标准差并使用五个采样点是可以接受的结果）。使用适当的高斯函数对这些输入图像进行模糊，将它们重缩到相同的分辨率，并融合生成的图像以构建 $I$ 的 mipmap。
+### 5.4.2 采样图像金字塔
 
-注意，由于图像金字塔 $I$ 仅包含 RGB，这些图像处理步骤可以丢弃 alpha 通道。
+有了上述的图像金字塔，就可以查询辐照。然而，我们被限制在定义纹理图 `R` 的区域正上点。此外，表面法线必须直接面向发光平面，这是构建图像金字塔的假设。
 
-## 5.4.2 采样图像金字塔
-
-有了上述的图像金字塔，就可以查询辐照。然而，我们被限制在定义纹理图 $R$ 的区域正上点。此外，表面法线必须直接面向发光平面，这是构建图像金字塔的假设。
-
-首先，我们找到查询点在图像金字塔内的相对位置，获取采样金字塔的 $(u, v)$。计算到平面的距离 $d$。我们需要采样的 mipmap 由公式 (5.3) 决定。使用计算出的 $(u, v)$ 和 mip 参数对图像金字塔进行采样，得到的值即辐照。
+首先，我们找到查询点在图像金字塔内的相对位置，获取采样金字塔的 `(u, v)`。计算到平面的距离 `d`。我们需要采样的 mipmap 由公式 (5.3) 决定。使用计算出的 `(u, v)` 和 mip 参数对图像金字塔进行采样，得到的值即辐照。
 
 目前，对表面法线和位置的限制使得这种方法过于局限，无法派用。以下是解除这些限制的方法。
 
-## 5.4.3 支持任意法线
+### 5.4.3 支持任意法线
 
-考虑在 $z=0$ 处的无限平面辐射恒定的颜色。由于平面是无限的且亮度是恒定的，在特定点测量的辐照在点移动时（不穿过平面）将不会变化。唯一取决于可见半球的哪个部分被发光平面覆盖，而这不受移动的影响。在这种情况下，亮度仅取决于表面法线。
+考虑在 `z=0` 处的无限平面辐射恒定的颜色。由于平面是无限的且亮度是恒定的，在特定点测量的辐照在点移动时（不穿过平面）将不会变化。唯一取决于可见半球的哪个部分被发光平面覆盖，而这不受移动的影响。在这种情况下，亮度仅取决于表面法线。
 
-令 $E_0$ 为在 $p_z < 0$ 的点 $p_{yz}$ 处测量的辐照，该点直接面向平面。令 $E_1$ 为在相同点具有任意法线（$n_{yz}$；假设已归一化）时测量的辐照。那么
+令 `E_0` 为在 `p_z < 0` 的点 `p_{yz}` 处测量的辐照，该点直接面向平面。令 `E_1` 为在相同点具有任意法线（`n_{yz}`；假设已归一化）时测量的辐照。那么
 
-$$\frac{E_1}{E_0} = \frac{1+n_z}{2} \quad (5.5)$$
+`$$\frac{E_1}{E_0} = \frac{1+n_z}{2} \quad (5.5)$$`
 
 我们使用公式 (5.5) 中的关系来衰减从图像金字塔采样的值，以支持辐照查询法线。
 
-**证明：** 我们感兴趣的是计算由恒定发光平面组成的场景的辐照。在不失一般性的情况下，假设采样点位于原点，我们收集辐照的上半球是最初位于 $z=-1$ 处的平面，表面法线为 $(0,0,1)$；它绕 $x$ 轴旋转 $\theta_{max}$，其中 $\theta_{max} \in [0, 180^\circ]$。如果 $\theta_{max}=180^\circ$，平面位于原点上方，表面法线为 $(0,0,-1)$，因此辐照覆盖整个半球。但如果 $\theta_{max}<180^\circ$，则对于 $\theta>\theta_{max}$ 的半球，亮度将错过发光平面。辐照被限制在范围 $[0, \theta_{max}]$ 内的方向上。
+**证明：** 我们感兴趣的是计算由恒定发光平面组成的场景的辐照。在不失一般性的情况下，假设采样点位于原点，我们收集辐照的上半球是最初位于 `z=-1` 处的平面，表面法线为 `(0,0,1)`；它绕 `x` 轴旋转 `\theta_{max}`，其中 `\theta_{max} \in [0, 180^\circ]`。如果 `\theta_{max}=180^\circ`，平面位于原点上方，表面法线为 `(0,0,-1)`，因此辐照覆盖整个半球。但如果 `\theta_{max}<180^\circ`，则对于 `\theta>\theta_{max}` 的半球，亮度将错过发光平面。辐照被限制在范围 `[0, \theta_{max}]` 内的方向上。
 
 图 5 显示了这种情况。网格渲染表示图表；它中间变淡以防遮挡图表的其他部分。灰色半球代表与发光平面相交的方向集。
 
-积分与公式 (5.1) 相同，但用球面极坐标 $(\phi$ 和 $\theta)$ 表示，并限制在与发光平面相交的方向上。对于给定的 $\phi$ 和 $\theta$，$z$ 分值为 $\sin(\phi)\sin(\theta)$，这等同于公式 (5.1) 中的 $\cos(\theta)$ 项。我们还通过 $\sin(\phi)$ 进行缩放，以补偿极点附近面积的变化。假设平面辐射的恒定颜色为 $L_p$，积分如下：
+积分与公式 (5.1) 相同，但用球面极坐标 `(\phi` 和 `\theta)` 表示，并限制在与发光平面相交的方向上。对于给定的 `\phi` 和 `\theta`，`z` 分值为 `\sin(\phi)\sin(\theta)`，这等同于公式 (5.1) 中的 `\cos(\theta)` 项。我们还通过 `\sin(\phi)` 进行缩放，以补偿极点附近面积的变化。假设平面辐射的恒定颜色为 `L_p`，积分如下：
 
-$$\int_{\theta=0}^{\theta_{max}} \int_{\phi=0}^{\pi} L_p \sin(\phi)\sin(\theta)d\phi d\theta = L_p \int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \sin^2(\phi)d\phi$$
+`$$\int_{\theta=0}^{\theta_{max}} \int_{\phi=0}^{\pi} L_p \sin(\phi)\sin(\theta)d\phi d\theta = L_p \int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \sin^2(\phi)d\phi$$`
 
 ![](img/120606d35c679664e7ad5faec2ee08b_292.png)
+
 图 5 变量的截面。
 
-$$\int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \sin^2(\phi)d\phi = [-\cos(\theta)]_0^{\theta_{max}} \cdot [\frac{\phi}{2} - \frac{\sin(2\phi)}{4}]_0^\pi = (1-\cos(\theta_{max})) \cdot \frac{\pi}{2}$$
+`$$\int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \sin^2(\phi)d\phi = [-\cos(\theta)]_0^{\theta_{max}} \cdot [\frac{\phi}{2} - \frac{\sin(2\phi)}{4}]_0^\pi = (1-\cos(\theta_{max})) \cdot \frac{\pi}{2}$$`
 
-积分与公式 (5.1) 相同，但用球面极坐标 $(\phi$ 和 $\theta)$ 表示，并限制在与发光平面相交的方向上。对于给定的 $\phi$ 和 $\theta，$z$ 分值为 $\sin(\phi)\sin(\theta)$，这等同于公式 (5.1) 中的 $\cos(\theta)$ 项。我们还通过 $\sin(\phi)$ 进行缩放，以补偿极点附近面积的变化。假设平面辐射的恒定颜色为 $L_p$，积分如下：
+积分与公式 (5.1) 相同，但用球面极坐标 `(\phi` 和 `\theta)` 表示，并限制在与发光平面相交的方向上。对于给定的 `\phi` 和 `\theta`，`z` 分值为 `\sin(\phi)\sin(\theta)`，这等同于公式 (5.1) 中的 `\cos(\theta)` 项。我们还通过 `\sin(\phi)` 进行缩放，以补偿极点附近面积的变化。假设平面辐射的恒定颜色为 `L_p`，积分如下：
 
-## 5.4.4 区域外的采样
+### 5.4.4 区域外的采样
 
 区域外辐照的一个合理近似是将采样点裁剪到图像金字塔的边界。
 
-![](img/120606d35c679664e7ad5faec2ee08b_293.png)
+![](img/120606d35c679664e7ad5faec2ee0e8b_293.png)
+
 图 5.5 区域外的采样。
 
-## 5.4.5 使用图像金字塔评估辐照
+### 5.4.5 使用图像金字塔评估辐照
 
-图像金字塔的采样如下。对于查询点 $p$，法线为 $n$：
+图像金字塔的采样如下。对于查询点 `p`，法线为 `n`：
 
-- 1. 找到 $p$ 在图像金字塔体积内的相对位置，获取采样金字塔的 $(u, v)$。计算到平面的距离 $d$。
-- 2. 使用公式 (5.3) 找到 mip 参数。
-- 3. 使用三线性过滤对图像金字塔进行采样，使用上一步计算的参数。将 $(u, v)$ 裁剪到图像金字塔区域。
-- 4. 如果查询点不在图像金字塔体积内，使用公式 (5.6) 衰减 $c_{RGB}$。
-- 5. 根据表面法线使用公式 (5.5) 衰减 $c_{RGB}$。
+1. 找到 `p` 在图像金字塔体积内的相对位置，获取采样金字塔的 `(u, v)`。计算到平面的距离 `d`。
 
-![](img/120606d35c679664e7ad5faec2ee08b_294.png)
+2. 使用公式 (5.3) 找到 mip 参数。
+
+3. 使用三线性过滤对图像金字塔进行采样，使用上一步计算的参数。将 `(u, v)` 裁剪到图像金字塔区域。
+
+4. 如果查询点不在图像金字塔体积内，使用公式 (5.6) 衰减 `c_{RGB}`。
+
+5. 根据表面法线使用公式 (5.5) 衰减 `c_{RGB}`。
+
+![](img/120606d35c679664e7ad5faec2ee0e8b_294.png)
+
 图 5.6 有效区域的截面。
 
-有效区域的比例贡献 = $0.5 + \frac{d}{2\sqrt{t^2 + d^2}}$。 (5.7)
-
-
-
-
+有效区域的比例贡献 = `0.5 + \frac{d}{2\sqrt{t^2 + d^2}}`。 (5.7)
 
 ## 5. 使用切片实现实时全局光照
 
@@ -5911,11 +5945,11 @@ $$\int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \
 
 在继续之前，将所描述的近似方法与真值（ground truth）结果进行比较是非常有用的。
 
-图 5.8 显示了场景。带有青色圆形黑色正方形是发射平面，位于 $y = 0$。我们将评估透明正方形上点的辐照，点范围为 $-32 \leq x \leq +32$, $-64 \leq y \leq 0$。为了简单起见，采样表面法线为 $n = (0, 1, 0)$，直接指向发射平面。
+图 5.8 显示了场景。带有青色圆形黑色正方形是发射平面，位于 `y = 0`。我们将评估透明正方形上点的辐照，点范围为 `-32 \leq x \leq +32`, `-64 \leq y \leq 0`。为了简单起见，采样表面法线为 `n = (0, 1, 0)`，直接指向发射平面。
 
 图 5.9 显示了得到的辐照。图 5.9 显示了真值结果，其中使用 16000 条重要性采样射线评估了每个点的索引项。需要大量的射线，因为只有一个很小的亮区域——即使每个像素使用 1000 条射线，结果也是噪声的。
 
-图 5.10 显示了本章描述的图像金字塔近似。图像金字塔覆盖了大部分空间：$-16 \leq x, y \leq +16$，位于黄色实线之间。注意，该区域之外的值仍然是很好的近似，因为三线性插值使用公式 (5.6) 进行了衰减。作为对比，图 5.11 显示了没有经过高斯模糊或衰减的标准盒过滤 mipmap 链（mipchain）。
+图 5.10 显示了本章描述的图像金字塔近似。图像金字塔覆盖了大部分空间：`-16 \leq x, y \leq +16`，位于黄色实线之间。注意，该区域之外的值仍然是很好的近似，因为三线性插值使用公式 (5.6) 进行了衰减。作为对比，图 5.11 显示了没有经过高斯模糊或衰减的标准盒过滤 mipmap 链（mipchain）。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_296_0.png)
 
@@ -5941,9 +5975,9 @@ $$\int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \
 
 人们很容易尝试对任意高度场使用切片法（slice approach）。遗憾的是，这通常会导致糟糕的结果；切片将发射表面近似为平面平面，并相应地赋予发射平面每个部分的贡献权重。对于高度场，某些点可能靠近我们的采样点，这意味着它们会对辐照产生显著贡献——但在使用切片法时，它们的贡献却非常低。
 
-例如，考虑图 5.12 所示的情况。绿线是穿过高度场的横截。假设我们扭曲了一个切片以完全匹配，并使用该切片评估辐照。点 $p$ 是我们想要采样辐照的位置；半圆表示收集（gather）的半球体。从 $p$ 垂直到高度场的黑线显示了到高度场的距离；这将用于计算图像金字塔查找的 mipmap 参数的距离。
+例如，考虑图 5.12 所示的情况。绿线是穿过高度场的横截。假设我们扭曲了一个切片以完全匹配，并使用该切片评估辐照。点 `p` 是我们想要采样辐照的位置；半圆表示收集（gather）的半球体。从 `p` 垂直到高度场的黑线显示了到高度场的距离；这将用于计算图像金字塔查找的 mipmap 参数的距离。
 
-在图 5.12 中，$a$ 相当靠近 $p$，因此它会对辐照产生显著贡献。然而，切片近似对其赋予的权重却就像它是 $b$ 一样。
+在图 5.12 中，`a` 相当靠近 `p`，因此它会对辐照产生显著贡献。然而，切片近似对其赋予的权重却就像它是 `b` 一样。
 
 因此，如果切片的形状扭曲过度，近似质量将会受到影响。
 
@@ -5977,27 +6011,25 @@ $$\int_{\theta=0}^{\theta_{max}} \sin(\theta)d\theta \cdot \int_{\phi=0}^{\pi} \
 
 ## 5.6 分层高度场
 
-我们选择的方法是为每个轴定义一组分层高度场。对于 $x$ 轴，我们有 $x = f_i(y, z)$，其中函数序列 $f_i$ 定义了高度场；$0 \le i \le n_x$。图 5.14 显示了一个示例。
+我们选择的方法是为每个轴定义一组分层高度场。对于 `x` 轴，我们有 `x = f_i(y, z)`，其中函数序列 `f_i` 定义了高度场；`0 \le i \le n_x`。图 5.14 显示了一个示例。
 
-我们还需要 $f_i(y, z) < f_{i+1}(y, z)$，以强制层与层之间不相交，并使后续的高度场沿 $x$ 轴更远。对于 $y$ 轴和 $z$ 轴定义了类似的函数序列 $g_j, h_k$。
-
-
-
-
+我们还需要 `f_i(y, z) < f_{i+1}(y, z)`，以强制层与层之间不相交，并使后续的高度场沿 `x` 轴更远。对于 `y` 轴和 `z` 轴定义了类似的函数序列 `g_j, h_k`。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_300_0.png)
 
-该区域覆盖了相邻单元之间的划分面。它们产生了一组可以使用三个整数 $(i, j, k)$ 索引的单元，其中 $0 \leq i \leq n_x$，$0 \leq j \leq n_y$ 且 $0 \leq k \leq n_z$。所得单元排列类似于 $n_x \times n_y \times n_z$ 体素数组的畸变。
+该区域覆盖了相邻单元之间的划分面。它们产生了一组可以使用三个整数 `(i, j, k)` 索引的单元，其中 `0 \leq i \leq n_x`，`0 \leq j \leq n_y` 且 `0 \leq k \leq n_z`。所得单元排列类似于 `n_x \times n_y \times n_z` 体素数组的畸变。
 
-单元 $(i, j, k)$ 覆盖的区域占据了点集 $(f_i(y, z), g_j(z, x), h_k(x, y))$，其中 $x \in (i, i+1)$，$y \in (j, j+1)$ 且 $z \in (k, k+1)$。
+单元 `(i, j, k)` 覆盖的区域占据了点集 `(f_i(y, z), g_j(z, x), h_k(x, y))`，其中 `x \in (i, i+1)`，`y \in (j, j+1)` 且 `z \in (k, k+1)`。
 
 这样定义畸变无法表示任意的畸变。例如，角度大于 90 度的扭曲畸变（如 Adobe Photoshop 中的“旋转”畸变）无法通过一系列分层高度场来表示。
 
-## 5.6.1 从世界空间到单元空间的映射
+### 5.6.1 从世界空间到单元空间的映射
 
-包含单元的搜索是逐轴进行的：对于给定的点 $(x, y, z)$，找到包含它的单元的标识符 $(i, j, k)$。$i$ 的值为满足 $f_i(y, z) \leq x < f_{i+1}(y, z)$ 的值；注意，它独立于 $j$ 和 $k$，并且可以在系列高度场中进行简单搜索。这特地避免了对体素纹理查找的需求。（如果分层高度场是按照第 5.7 节所述的方法构建的，那么高度场将被限制为一系列规则间隔，这简化了查找：通过查询两个高度场即可找到 $i$ 的值）。$j$ 和 $k$ 的值以类似的方式计算。
 
-其次，我们可以找到单元内的相对位置。这是点 $(u, v, w)$，其中 $0 \leq u, v, w \leq 1$。它通过边界高度场之间的相对位置找到：
+
+包含单元的搜索是逐轴进行的：对于给定的点`$(x, y, z)$`，找到包含它的单元的标识符`$(i, j, k)$`。`$i$`的值为满足`$f_i(y, z) \leq x < f_{i+1}(y, z)$`的值；注意，它独立于`$j$`和`$k$`，并且可以在系列高度场中进行简单搜索。这特地避免了对体素纹理查找的需求。（如果分层高度场是按照第 5.7 节所述的方法构建的，那么高度场将被限制为一系列规则间隔，这简化了查找：通过查询两个高度场即可找到`$i$`的值）。`$j$`和`$k$`的值以类似的方式计算。
+
+其次，我们可以找到单元内的相对位置。这是点`$(u, v, w)$`，其中`$0 \leq u, v, w \leq 1$`。它通过边界高度场之间的相对位置找到：
 
 ```
 $u = \frac{f_i(y, z)}{f_{i+1}(y, z) - f_i(y, z)},$
@@ -6005,12 +6037,12 @@ v = \frac{y - g_j(x, z)}{g_{j+1}(x, z) - g_j(x, z)}, \quad (5.8)$
 w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 ```
 
-点 $(u, v, w)$ 可以用于用于切片辐照。例如，为了评估单元 $f_i$ 侧切片的贡献，采样切片纹理的纹理坐标为 $(v, w)$，如果到第一级 mipmap 的距离也在该空间内表示，则可以直接使用值 $u$ 计算 mipmap 参数（公式 (5.3)）。构成单元的其余五个切片也可以以类似的方式进行评估。
+点`$(u, v, w)$`可以用于用于切片辐照。例如，为了评估单元`$f_i$`侧切片的贡献，采样切片纹理的纹理坐标为`$(v, w)$`，如果到第一级 mipmap 的距离也在该空间内表示，则可以直接使用值`$u$`计算 mipmap 参数（公式 (5.3)）。构成单元的其余五个切片也可以以类似的方式进行评估。
 
 因此，在运行时，评估世界空间中给定点辐照的完整过程涉及以下步骤：
 
-- 搜索三个轴的分层高度场以找到单元 $(i, j, k)$。
-- 使用公式 (5.9) 找到单元内的相对位置 $(u, v, w)$。
+- 搜索三个轴的分层高度场以找到单元`$(i, j, k)$`。
+- 使用公式 (5.9) 找到单元内的相对位置`$(u, v, w)$`。
 - 采样与该单元相关的每个切片的片段金字塔。
 - 根据表面法线和边界外的距离（如有必要）对这六个样本进行缩放和衰减，使用公式 (5.4) 和 (5.5) 评估辐照。
 - 求得到的辐照值。
@@ -6019,9 +6051,9 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 对于给定的场景，我们需要一种方法来构建空间的分层高度场并定义单元。目标是使单元面尽可能与场景几何结构重合。
 
-我们打算运行的方法是离线的作为预处理。其工作原理如下...
+我们打算运行的方法是离线的作为预处理。其工作原理如下……
 
-假设每个轴的切片数量为 $n_x, n_y$ 和 $n_z$。每个轴将轮流处理。对于每个轴，我们将生成之前描述的分层高度场系列：即对于 $x$ 轴，高度场将具有 $x_i = f_i(y, z)$ 的形式，其中整数 $i$ 满足 $0 \leq i \leq n_x$；对于 $y$ 轴，高度场将具有 $y_j = g_j(x, z)$ 的形式，其中整数 $j$ 满足 $0 \leq j \leq n_y$；对于 $z$ 轴也是如此。特定轴的高度场集合永远不会相互相交——它们将形成一系列层。因此 $f_i(y, z) < f_{i+1}(y, z)$ 始终成立，$g$ 和 $h$ 系列也有类似的限制。
+假设每个轴的切片数量为`$n_x, n_y$`和`$n_z$`。每个轴将轮流处理。对于每个轴，我们将生成之前描述的分层高度场系列：即对于`$x$`轴，高度场将具有`$x_i = f_i(y, z)$`的形式，其中整数`$i$`满足`$0 \leq i \leq n_x$`；对于`$y$`轴，高度场将具有`$y_j = g_j(x, z)$`的形式，其中整数`$j$`满足`$0 \leq j \leq n_y$`；对于`$z$`轴也是如此。特定轴的高度场集合永远不会相互相交——它们将形成一系列层。因此`$f_i(y, z) < f_{i+1}(y, z)$`始终成立，`$g$`和`$h$`系列也有类似的限制。
 
 ## III 照明
 
@@ -6033,15 +6065,15 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 问题是为每个轴找到一组与场景的显著表面匹配的分层高度场集合。
 
-这是生成 $x = f_i(y, z)$ 高度场集合的过程。该方法对 $y$ 轴和 $z$ 轴进行明显的修改后重复。
+这是生成`$x = f_i(y, z)$`高度场集合的过程。该方法对`$y$`轴和`$z$`轴进行明显的修改后重复。
 
-- 1. 找到场景范围：$(x_{min}, y_{min}, z_{min}) - (x_{max}, y_{max}, z_{max})$。沿 $x$ 轴将场景分为 $n_x$ 个等份，即 $n_x$ 个子集，覆盖区域 $(s_i, y_{min}, z_{min}) - (s_{i+1}, y_{max}, z_{max})$，其中 $s_0 = x_{min}$，$s_1 = x_{min} + k, \dots, s_{n_x} = x_{max}$。
-- 2. 定义一组方向为 $(1,0,0)$ 交叉场景边界的射线。
-- 3. 对于每条射线，追踪分层高度场找到交点。
-- 4. 对于每个交点，计算单元内的距离。
-- 5. 构建每个子集的高度场。
-- 6. 对每个轴的高度场进行平滑和外推。
-- 7. 输出高度场。
+1. 找到场景范围：`$(x_{min}, y_{min}, z_{min}) - (x_{max}, y_{max}, z_{max})`。沿`$x$`轴将场景分为`$n_x$`个等份，即`$n_x$`个子集，覆盖区域`$(s_i, y_{min}, z_{min}) - (s_{i+1}, y_{max}, z_{max})`，其中`$s_0 = x_{min}$`，`$s_1 = x_{min} + k, \dots, s_{n_x} = x_{max}$`。
+2. 定义一组方向为`$(1,0,0)$`交叉场景边界的射线。
+3. 对于每条射线，追踪分层高度场找到交点。
+4. 对于每个交点，计算单元内的距离。
+5. 构建每个子集的高度场。
+6. 对每个轴的高度场进行平滑和外推。
+7. 输出高度场。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_303_0.png)
 
@@ -6059,17 +6091,15 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 **图 5.18.** 每个子集中交点的平均位置。
 
-
-
 ![](img/120606d35c679664e7ad5faec2ee0e8b_306_0.png)
 
 **图 5.19.** 每个场景子集的最终高度场。
 
 前向和反向相交的问题。在处理生产环境场景时，这些问题是不可避免的。步骤 3 中的最近前脸/最后背脸逻辑是为了支持这些情况而设计的。
 
-## 5.7.2 讨论
+### 5.7.2 讨论
 
-这种方法对于具有强轴对齐特征的场景有效。也就是说，主要表面大致平行 $xy, xz$ 和 $yz$ 平面的场景。建筑场景和由 prefabs 构建的游戏环境通常满足这一要求。
+这种方法对于具有强轴对齐特征的场景有效。也就是说，主要表面大致平行`$xy, xz$`和`$yz$`平面的场景。建筑场景和由`prefabs`构建的游戏环境通常满足这一要求。
 
 大型弯面表面存在问题的风险。如果表面需要通过来自多个轴向的切片来表示，可能会丢失部分表面（导致光漏）或导致某些区域被包含在两个切片中（导致间接光过多）。
 
@@ -6087,15 +6117,15 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 虽然切片几何在运行时不会改变，但切片图像金字塔旨在响应光照变化重新生成。单元内的局部光照变化可以通过重新捕获这些面的辐射并按照第 5.4 节所述重建图像金字塔来解决。
 
-然而，这不允许光对其发射单元之外区域产生影响。为了实现这一点，我们使用了一个传播步骤，类似于 [Kaplanyan and Dachbacher 10] 描述的光传播步骤。对于每一步，每个单元都被考虑为受光，并将该单元的光传播到其邻居。经过足够的步骤后，光照变化将通过单元数组传播。
+然而，这不允许光对其发射单元之外区域产生影响。为了实现这一点，我们使用了一个传播步骤，类似于`[Kaplanyan and Dachbacher 10]`描述的光传播步骤。对于每一步，每个单元都被考虑为受光，并将该单元的光传播到其邻居。经过足够的步骤后，光照变化将通过单元数组传播。
 
-图 5.20 显示了单元集合的横截面。面/切片的形状由红线描述——为了清晰起见，省略了许多线条。我们只考虑一些垂直切片，即字母 *a–c*。光从标记为“source”的切片发射，如箭头所示。
+图 5.20 显示了单元集合的横截面。面/切片的形状由红线描述——为了清晰起见，省略了许多线条。我们只考虑一些垂直切片，即字母`*a–c*`。光从标记为“source”的切片发射，如箭头所示。
 
-光以两种方式从单元传播。首先，它是向前传播的——在示例图中从源到切片 *a*。方法如下：在重新生成切片 *a* 时，采样源的辐照，缩放（1 – opacity），并将其到切片 *a* 的辐射中，这是生成图像金字塔的输入。
+光以两种方式从单元传播。首先，它是向前传播的——在示例图中从源到切片`*a*`。方法如下：在重新生成切片`*a*`时，采样源的辐照，缩放`（1 – opacity）`，并将其到切片`*a*`的辐射中，这是生成图像金字塔的输入。
 
-这种定义意味着如果切片上的点是不透明的，那么来自 *source* 的光将被阻塞。如果是透明的，辐照将是连续的——不会有中断或其他伪影。
+这种定义意味着如果切片上的点是不透明的，那么来自`*source*`的光将被阻塞。如果是透明的，辐照将是连续的——不会有中断或其他伪影。
 
-其次，它是横向传播的——在图 5.20 中从 *source* 传播到切片 *b*。这是通过为每个切片生成图像金字塔时允许模糊从相邻切片获取颜色，并根据中间切片的透明度（示例案例中的 *c*）进行缩放。
+其次，它是横向传播的——在图 5.20 中从`*source*`传播到切片`*b*`。这是通过为每个切片生成图像金字塔时允许模糊从相邻切片获取颜色，并根据中间切片的透明度（示例案例中的`*c*`）进行缩放。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_308_0.png)
 
@@ -6125,7 +6155,7 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 ## 5.10 结论
 
-我们介绍了一种使用切片进行实时全局照明的方法。这种方法对于具有强轴对齐特征的场景有效。也就是说，主要表面大致平行 $xy, xz$ 和 $yz$ 平面的场景。建筑场景和由 prefabs 构建的游戏环境通常满足这一要求。
+我们介绍了一种使用切片进行实时全局照明的方法。这种方法对于具有强轴对齐特征的场景有效。也就是说，主要表面大致平行`$xy, xz$`和`$yz$`平面的场景。建筑场景和由`prefabs`构建的游戏环境通常满足这一要求。
 
 大型弯面表面存在问题的风险。如果表面需要通过来自多个轴向的切片来表示，可能会丢失部分表面（导致光漏）或导致某些区域被包含在两个切片中（导致间接光过多）。这些问题情况通常可以通过手动编辑畸变函数来修复，确保表面始终对齐且仅对齐一个切片。
 
@@ -6133,15 +6163,15 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 虽然切片几何在运行时不会改变，但切片图像金字塔旨在响应光照变化重新生成。单元内的局部光照变化可以通过重新捕获这些面的辐射并按照第 5.4 节重建图像金字塔来解决。
 
-然而，这不允许光对其发射单元之外区域产生影响。为了实现这一点，我们使用了一个传播步骤，类似于 [Kaplanyan and Dachbacher 10] 描述的光传播步骤。对于每一步，每个单元都被考虑为受光，并将该单元的光传播到其邻居。经过足够的步骤后，光照变化将通过单元数组传播。
+然而，这不允许光对其发射单元之外区域产生影响。为了实现这一点，我们使用了一个传播步骤，类似于`[Kaplanyan and Dachbacher 10]`描述的光传播步骤。对于每一步，每个单元都被考虑为受光，并将该单元的光传播到其邻居。经过足够的步骤后，光照变化将通过单元数组传播。
 
-图 5.20 显示了单元集合的横截面。面/切片的形状由红线描述——为了清晰起见，省略了许多线条。我们只考虑一些垂直切片，即字母 *a–c*。光从标记为“source”的切片发射，如箭头所示。
+图 5.20 显示了单元集合的横截面。面/切片的形状由红线描述——为了清晰起见，省略了许多线条。我们只考虑一些垂直切片，即字母`*a–c*`。光从标记为“source”的切片发射，如箭头所示。
 
-光以两种方式从单元传播。首先，它是向前传播的——在示例图中从源到切片 *a*。方法如下：在重新生成切片 *a* 时，采样源的辐照，缩放（1 – opacity），并将其到切片 *a* 的辐射中，这是生成图像金字塔的输入。
+光以两种方式从单元传播。首先，它是向前传播的——在示例图中从源到切片`*a*`。方法如下：在重新生成切片`*a*`时，采样源的辐照，缩放`（1 – opacity）`，并将其到切片`*a*`的辐射中，这是生成图像金字塔的输入。
 
-这种定义意味着如果切片上的点是不透明的，那么来自 *source* 的光将被阻塞。如果是透明的，辐照将是连续的——不会有中断或其他伪影。
+这种定义意味着如果切片上的点是不透明的，那么来自`*source*`的光将被阻塞。如果是透明的，辐照将是连续的——不会有中断或其他伪影。
 
-其次，它是横向传播的——在图 5.20 中从 *source* 传播到切片 *b*。这是通过为每个切片生成图像金字塔时允许模糊从相邻切片获取颜色，并根据中间切片的透明度（示例案例中的 *c*）进行缩放。
+其次，它是横向传播的——在图 5.20 中从`*source*`传播到切片`*b*`。这是通过为每个切片生成图像金字塔时允许模糊从相邻切片获取颜色，并根据中间切片的透明度（示例案例中的`*c*`）进行缩放。
 
 再次，这种定义意味着如果切片是不透明的，它将阻塞光的横向流动。如果切片是透明的，光将横向从单元流到单元，没有中断或伪影。
 
@@ -6157,59 +6187,56 @@ w = \frac{z - h_k(x, y)}{h_{k+1}(x, y) - h_k(x, y)}$
 
 总之，我们介绍了一种使用切片进行实时全局照明的方法。
 
-
-
-
-
 ## 实用的屏幕空间软阴影
 
 Márton Tamás 和 Viktor Heisenberger
 
-## 1.1 引言
+### 1.1 引言
 
-本文描述了扩展原始屏幕空间软阴影算法 [Gumbau et al. 10] 的新技术，以确保渲染速度达到最优，并考虑了重叠和透明阴影。我们引入了“层”（layers）的概念，这是在屏幕空间中过滤重叠阴影的关键组件。我们的目标是实时渲染数百个经过适当过滤的、感知正确的阴影。我们还旨在使这种技术易于集成到现有的渲染流水线中。
+本文描述了扩展原始屏幕空间软阴影算法`[Gumbau et al. 10]`的新技术，以确保渲染速度达到最优，并考虑了重叠和透明阴影。我们引入了“层”（layers）的概念，这是在屏幕空间中过滤重叠阴影的关键组件。我们的目标是实时渲染数百个经过适当过滤的、感知正确的阴影。我们还旨在使这种技术易于集成到现有的渲染流水线中。
 
-## 1.2 概述
+### 1.2 概述
 
 阴影对于建立空间一致性、确定物体间的关系、增强构图、增加对比以及识别待探索的空白空间至关重要。作为一种游戏元素，它们被用于将物体投影到墙上，意在创建可能讲述故事的新图像和阴影。阴影通常用于引导观众的视线或遮挡场景中不重要的部分。
 
-在计算机图形学中，光源通常被表示为没有有限定义的单点。这类数学光只会产生硬投影（点要么完全被阴影遮挡物遮住，要么不），这被称为本影（umbra）。然而，在现实世界中，光具有体积（如太阳），因此它们会产生边缘软化的阴影，由本影、半影（penumbra，点被阴影遮挡物部分遮住）和环影（antumbra，阴影遮挡物看起来完全包含在光源内，如日食）组成。图1显示了现实世界的本影、半影和环影。
+在计算机图形学中，光源通常被表示为没有有限定义的单点。这类数学光只会产生硬投影（点要么完全被阴影遮挡物遮住，要么不），这被称为本影（umbra）。然而，在现实世界中，光具有体积（如太阳），因此它们会产生边缘软化的阴影，由本影、半影（penumbra，点被阴影遮挡物部分遮住）和环影（antumbra，阴影遮挡物看起来完全包含在光源内，如日食）组成。图 1 显示了现实世界的本影、半影和环影。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_316_0.png)
 
 **图 1.1.** 现实中的本影、半影和环影。物体由台台射灯照明。
 
-## 1.3 历史
+### 1.3 历史
 
-传统上，本影通过阴影映射 [Williams-78] 或阴影体积 [Crow 77] 来表示。阴影映射的工作原理是从光源的视角渲染场景深度，随后在光照阶段将其与重投影的场景深度进行比较，以确定点是否处于阴影中。阴影体积通过创建阴影几何体将空间划分为阴影区域和非阴影区域。然而，阴影体积通常受限于填充率瓶颈，导致性能较低 [Nealen 02]。因此，我们使用阴影映射。
+传统上，本影通过阴影映射`[Williams-78]`或阴影体积`[Crow 77]`来表示。阴影映射的工作原理是从光源的视角渲染场景深度，随后在光照阶段将其与重投影的场景深度进行比较，以确定点是否处于阴影中。阴影体积通过创建阴影几何体将空间划分为阴影区域和非阴影区域。然而，阴影体积通常受限于填充率瓶颈，导致性能较低`[Nealen 02]`。因此，我们使用阴影映射。
 
 虽然阴影体积可以实现完美的硬投影，但阴影映射的质量取决于分配的阴影图（深度纹理）的大小。如果阴影图分辨率不足，就会发生欠采样，导致锯齿。如果阴影图分辨率足够，就会发生过采样，导致内存带宽浪费。阴影映射还受到投影锯齿、透视锯齿和错误的自阴影的影响，这些需要被妥善处理。
 
-为了模拟半影，阴影映射通常通过阴影过滤进行扩展。为了渲染软阴影，[Reeves et al. 87] 引入了百分比过滤（PCF）。该技术通过在阴影空间中实现来实现软阴影。后来，PCF 通过屏幕空间模糊通道 [Shastry 05] 进行了扩展，允许使用大型滤波器内核。
+为了模拟半影，阴影映射通常通过阴影过滤进行扩展。为了渲染软阴影，`[Reeves et al. 87]`引入了百分比过滤（PCF）。该技术通过在阴影空间中实现来实现软阴影。后来，PCF 通过屏幕空间模糊通道`[Shastry 05]`进行了扩展，允许使用大型滤波器内核。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_317_0.png)
 
-然而，这些技术只能实现均匀的半影。图1.2 显示了硬阴影、均匀半影与可变大小半影的对比。
+然而，这些技术只能实现均匀的半影。图 1.2 显示了硬阴影、均匀半影与可变大小半影的对比。
 
-百分比深度软阴影（PCSS）被引入以正确地渲染可变大小的半影 [Fernando 05]。PCSS 通过改变 PCF 模糊的滤波器大小来工作。它执行遮挡者搜索以估计给定像素的半影大小，然后使用该信息进行变尺寸的模糊。然而，PCSS 仍然在阴影空间中执行模糊步骤，取决于阴影和内核的大小，这一步可能会成为瓶颈，特别是当涉及多个光源时。屏幕空间软阴影（SSSS）[Gumbau et. 10] 旨在通过将模糊移动屏幕空间来解决这个问题，使其独立于实际阴影图的大小。在屏幕空间中，我们需要考虑变化的视角，因此我们需要一个各向异性滤波器。由于遮挡者搜索是一个昂贵的 $O(n^2)$ 步骤，[Gumbau et. 10] 使用另一种方法扩展了 SSSS，通过在阴影图上进行最小滤波来估计半影大小。此外，这种滤波器是可分离的，且结果只需要粗略的，低分辨率的结果是可以接受的 $O(n+n)$。[Engel 10] 通过添加指数级自阴影、无伪影的软阴影和改进的距离函数扩展了 SSSS。这允许在从远处观察时更好地利用相同大小的滤波器。
+百分比深度软阴影（PCSS）被引入以正确地渲染可变大小的半影`[Fernando 05]`。PCSS 通过改变 PCF 模糊的滤波器大小来工作。它执行遮挡者搜索以估计给定像素的半影大小，然后使用该信息进行变尺寸的模糊。然而，PCSS 仍然在阴影空间中执行模糊步骤，取决于阴影和内核的大小，这一步可能会成为瓶颈，特别是当涉及多个光源时。屏幕空间软阴影（SSSS）`[Gumbau et. 10]`旨在通过将模糊移动屏幕空间来解决这个问题，使其独立于实际阴影图的大小。在屏幕空间中，我们需要考虑变化的视角，因此我们需要一个各向异性滤波器。由于遮挡者搜索是一个昂贵的`$O(n^2)$`步骤，`[Gumbau et. 10]`使用另一种方法扩展了 SSSS，通过在阴影图上进行最小滤波来估计半影大小。此外，这种滤波器是可分离的，且结果只需要粗略的，低分辨率的结果是可以接受的`$O(n+n)$`。`[Engel 10]`通过添加指数级自阴影、无伪影的软阴影和改进的距离函数扩展了 SSSS。这允许在从远处观察时更好地利用相同大小的滤波器。
 
-带有 Mipmap 映射的屏幕空间软阴影（SSSS）[Aguado and Montiel 11] 尝试提高过滤速度。它将阴影图模糊问题转换为根据估计的半影大小选择预先模糊的阴影图的适当 Mipmap 层级。
+带有 Mipmap 映射的屏幕空间软阴影（SSSS）`[Aguado and Montiel 11]`尝试提高过滤速度。它将阴影图模糊问题转换为根据估计的半影大小选择预先模糊的阴影图的适当 Mipmap 层级。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_318_0.png)
 
 它还引入了算法的扩展，通过使用多个阴影图来处理多次遮挡。
 
-这些屏幕空间技术是有益的，因为它们是常数开销的，因此我们需要层。为了正确处理重叠阴影，我们引入了层。我们需要层的原因是，如果我们为每个像素存储多个大小，就会得到错误的值。通过层，我们可以在每个像素中存储多个阴影数据，这样每个阴影都会被模糊。此外，在现实情况下，阴影通常是由透明物体产生的，因此我们还需要考虑透明阴影。图1.3 显示了不处理重叠阴影与处理重叠阴影的对比。
+这些屏幕空间技术是有益的，因为它们是常数开销的，因此我们需要层。为了正确处理重叠阴影，我们引入了层。我们需要层的原因是，如果我们为每个像素存储多个大小，就会得到错误的值。通过层，我们可以在每个像素中存储多个阴影数据，这样每个阴影都会被模糊。此外，在现实情况下，阴影通常是由透明物体产生的，因此我们还需要考虑透明阴影。图 1.3 显示了不处理重叠阴影与处理重叠阴影的对比。
 
-## 1.4 算法概述
+### 1.4 算法概述
 
-### 1.4.1 G-Buffer 目标
+#### 1.4.1 G-Buffer 目标
 
 此通道取决于实现，虽然在原始 SSSS 算法中包含阴影图中，但我们决定将其分离，以确保这种技术可以方便地集成到任何渲染流水线中。我们决定使用延迟渲染是因为其简单且快速。
 
 我们的 G-buffer 布局包含：
-- D24 深度缓冲区（存储观察者与处理点之间的距离）
-- RGBAS 视图法线（RGB 通道；无 Alpha 通道
+
+- D24 深度缓冲区（存储观察者与处理点之间的距离）。
+- RGBAS 视图法线（RGB 通道；无 Alpha 通道）。
 
 ## 1.5 阴影映射渲染
 
@@ -6217,30 +6244,31 @@ Márton Tamás 和 Viktor Heisenberger
 
 我们将点光源视为六个不同的阴影遮挡物，因此它们可以被视为聚光灯。这意味着我们可以有效地剔除不与相机裁剪体相交的聚光灯或点光源部分（需要渲染阴影图的部分），它们会影响最终图像。此外，需要确保投影锯齿、透视锯齿以及自阴影得到了处理。
 
-我们扩展了此通道，以考虑不透明的阴影遮挡物。在这种情况下，阴影将允许部分光穿过，阴影甚至可能变色。因此，我们需要从光源视角每个像素输出一个 RGB 颜色。图1.4 显示了透明图的内容。
+我们扩展了此通道，以考虑不透明的阴影遮挡物。在这种情况下，阴影将允许部分光穿过，阴影甚至可能变色。因此，我们需要从光源视角每个像素输出一个 RGB 颜色。图 1.4 显示了透明图的内容。
 
 ## 1.6 引入层和光照分配
 
 为了让原始 SSSS 技术允许多个重叠阴影，可以简单地为每个光源执行所有步骤并获得正确结果。然而，这种方法的开销极高，因此我们寻找一种可以在单次通道中对所有重叠阴影执行屏幕空间各向异性模糊的方法。
 
-有一个关键的观察（后来在 [Anichini 14] 中也有描述），如果两个光的体积不相交，它们的阴影也不会重叠。这意味着在屏幕空间中，这些光的阴影不会重叠，因为
 
 
-
-
+有一个关键的观察（后来在 [Anichini 14] 中也有描述）：如果两个光的体积不相交，它们的阴影也不会重叠。这意味着在屏幕空间中，这些光的阴影不会重叠，因为
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_320_0.png)
 
 **图 1.4.** 半透明度图的内容：从光源视角渲染的红色柱子。
 
 通过这种方式，不相交的光源阴影可以在单次通过中独立地进行模糊处理。
+
 然而，我们还需要考虑来自多个光源的重叠阴影。
+
 我们观察到，这个问题（模糊重叠阴影）本质上是一个图着色问题，其中每个图顶点颜色代表一个阴影层。
+
 在每个阴影层中，我们存储了多个互不重叠的光源的数据。在图中，每束光都将是一个顶点，如果两束光相交，则两个顶点之间将有一条边。由于确定给一个图所需的颜色数量通常是一个 NP 完全困难问题，我们决定使用一种简单的贪心算法，并扩展了一些规则来帮助它运行。例如，由于太阳（方向性光）预计会影响一切，因此它将被分配到一个专门的层。
 
 使用贪心算法意味着所需的灯（颜色）数量等于最大顶点度加一，因此，需要过滤的屏幕层数仅取决于不同光源产生的最大重叠阴影数量（最大顶点度）。贪心顶点着色的一个缺点是，它的质量高度依赖于我们考虑顶点的顺序。因此，我们使用了一种常用的顶点排序方案，即按顶点度升序对顶点进行排序。
 
-本质上，我们通过这些层所做的是通过将阴影数据分层并对每束光单独进行过滤，试图尽量减少重叠阴影的内存和带宽成本。建议限制给定场景的层数，以便将通用着色问题转换为 $k$-着色问题（其中 $k$ 是预定义的层数）。这将使得阴影过滤具有可预测的成本。
+本质上，我们通过这些层所做的是通过将阴影数据分层并对每束光单独进行过滤，试图尽量减少重叠阴影的内存和带宽成本。建议限制给定场景的层数，以便将通用着色问题转换为 `k`-着色问题（其中 `k` 是预定义的层数）。这将使得阴影过滤具有可预测的成本。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_321_0.png)
 
@@ -6250,14 +6278,14 @@ Márton Tamás 和 Viktor Heisenberger
 
 **图 1.6.** 光被编号并用圆圈表示（左侧），每种颜色代表一个层（红色、绿色和蓝色）。光及其它们之间的相交表示在图上（右侧）。我们可以看到光 1 的顶点度为 5，因此我们需要最多六层来渲染这些光；然而，在这种情况下，通过使用图着色算法，我们可以将层数减少到三层。此外，为了加速光相交过程，可以使用空间划分结构，如八叉树。实际的布局取决于所使用的技术。图 1.5 展示了阴影层，图 1.6 展示了该图。
 
-## 1.7 分层半影图 (Layered Penumbra Map)
+## 1.7 分层半影图（Layered Penumbra Map）
 
 在此次通过中，我们计算了各异性模糊通过所需的所有参数，大部分如所述。这些参数包括：
 
-- 观察者到渲染点的距离（场景深度），
-- 阴影投影物到渲染点的距离（半影深度），
-- 用于确定点是否需要模糊处理的半影掩码，
-- 阴影缓冲区（二值化）或指数阴影缓冲区（浮点值，可选），
+- 观察者到渲染点的距离（场景深度）。
+- 阴影投影物到渲染点的距离（半影深度）。
+- 用于确定点是否需要模糊处理的半影掩码。
+- 阴影缓冲区（二值化）或指数阴影缓冲区（浮点值，可选）。
 - 透明度图（RGBA 值）。
 
 ### 1.7.1 场景深度
@@ -6268,7 +6296,7 @@ Márton Tamás 和 Viktor Heisenberger
 
 计算半影大小有两种方法：
 
-- 使用遮挡者搜索（blocker search），
+- 使用遮挡者搜索（blocker search）。
 - 使用可分离最小滤波器（separable min filter）。
 
 第一种，遮挡者搜索，是通过对阴影图进行卷积完成的，搜索可能的遮挡者（即点处于阴影中的地方），使用这些遮挡者到光源（在光投影空间中）的平均距离来估计给定点的半影大小。估计是通过以下方程完成的：
@@ -6277,22 +6305,22 @@ Márton Tamás 和 Viktor Heisenberger
 $w_{penumbra} = \frac{d_{receiver} - d_{blocker}}{d_{blocker}} \cdot w_{light},$
 ```
 
-其中 $w_{light}$ 是需要艺术家调整的光源大小（经验值），$d_{observer}$ 是光投影空间内到观察者的距离，$d_{blocker}$ 是平均遮挡者距离，$d_{receiver}$ 是到当前处理点的距离（在投影空间中）。我们可以从使用常规投影矩阵渲染的深度缓冲区（见图 1.7）中重建光投影空间距离（$d_{observer}$），如代码列表 1.1 所示。
+其中 `w_{light}` 是需要艺术家调整的光源大小（经验值），`d_{observer}` 是光投影空间内到观察者的距离，`d_{blocker}` 是平均遮挡者距离，`d_{receiver}` 是到当前处理点的距离（在投影空间中）。我们可以从使用常规投影矩阵渲染的深度缓冲区（见图 1.7）中重建光投影空间距离（`d_{observer}`），如代码列表 1.1 所示。
 
-建议将半影大小值存储在至少 16 位浮点数中。这意味着如果我们想存储四层，可以使用 RGBA16F 纹理。四层中的每层都由一个颜色通道表示。
+建议将半影大小值存储在至少 16 位浮点数中。这意味着如果我们想存储四层，可以使用 `RGBA16F` 纹理。四层中的每层都由一个颜色通道表示。
 
-## 1.8 实用屏幕软阴影 (Practical Screen-Soft Shadows)
+## 1.8 实用屏幕软阴影（Practical Screen-Soft Shadows）
 
-| | 0 | 0 | 0 |
+|   | 0 | 0 | 0 |
 |---|---|---|---|
 | n | n | 0 | 0 |
 | 0 | 0 | -(f+n) | -2fn |
 | t | 0 | f-n | f-n |
-| | -1 | 0 |
+|   | -1 | 0 |   |
 
-**图 1.7.** （对称透视）OpenGL 投影矩阵，其中 $n$ 是近平面距离，$f$ 是远平面距离，$t = n\tan(fov)$，$r = aspect\times t$
+**图 1.7.** （对称透视）OpenGL 投影矩阵，其中 `n` 是近平面距离，`f` 是远平面距离，`t = n\tan(fov)`，`r = aspect\times t`。
 
-```
+```cpp
 //# of bits depth
 unsigned bits = 16;
 unsigned precision_scaler = pow(2, bits) - 1;
@@ -6309,28 +6337,24 @@ float vs_zrecon = -znd / (far - n);
 float cs_zrecon = znd * A;
 ```
 
-### 1.7.3 分层半影掩码 (Layered Penumbra Mask)
+### 1.7.3 分层半影掩码（Layered Penumbra Mask）
 
 半影掩码本质上存储了遮挡者搜索中是否找到了遮挡者。我们可以注意到之前计算的半影大小本质上告诉我们在该点模糊多少阴影。换句话说，如果半影掩码为零，这将异异性模糊的大小设置为零。这样我们在进行各异性模糊时只需检查即可。
 
-### 1.7.4 分层阴影缓冲区 (Layered Shadow Buffer)
+### 1.7.4 分层阴影缓冲区（Layered Shadow Buffer）
 
 关于在阴影缓冲区中存储内容有两种方案：
 
-- 仅告诉点是否处于阴影中的二值值，
+- 仅告诉点是否处于阴影中的二值值。
 - 指数阴影图，如所述。
 
-如果我们存储二值阴影值，可以通过采样阴影图、重投影场景深度并比较两者来执行常规阴影测试。通过这种方式，每个阴影层只需要一个位，因此可以在 R32 纹理中存储 32 层。
+如果我们存储二值阴影值，可以通过采样阴影图、重投影场景深度并比较两者来执行常规阴影测试。通过这种方式，每个阴影层只需要一个位，因此可以在 `R32` 纹理中存储 32 层。
 
-否则，如果我们决定使用指数阴影映射，我们需要将结果至少存储 8 位，以便四层可以放入 RGBA 纹理。
+否则，如果我们决定使用指数阴影映射，我们需要将结果至少存储 8 位，以便四层可以放入 `RGBA` 纹理。
 
-### 1.7.5 分层透明度图 (Layered Translucency Map)
+### 1.7.5 分层透明度图（Layered Translucency Map）
 
-为了表示透明物体产生的半影，我们需要对在阴影渲染阶段计算的透明图也进行模糊处理。因此，我们将这些图叠加到分层透明度图中。我们可以将每层表示为一个 RGBA 颜色值，并将其封装到 R32F 浮点中；因此在具有 128 位的 RGBA32F 纹理中，我们可以存储四层。封装操作在代码列表 1.2 中完成。
-
-
-
-
+为了表示透明物体产生的半影，我们需要对在阴影渲染阶段计算的透明图也进行模糊处理。因此，我们将这些图叠加到分层透明度图中。我们可以将每层表示为一个 RGBA 颜色值，并将其封装到 `R32F` 浮点中；因此在具有 128 位的 `RGBA32F` 纹理中，我们可以存储四层。封装操作在代码列表 1.2 中完成。
 
 # 1. 屏幕空间软阴影
 
@@ -6423,7 +6447,7 @@ vec4 unpack_to_rgba8( uint val ) {
 
 # 1.11 结果
 
-测试在带有 8GB 内存的 i5 处理器和相同的显卡上运行的。
+测试在带有 8GB 内存的 i5 处理器和相同的显卡上运行。
 
 ![](/12060d35c7964e7ad5ec08b_320.png)
 
@@ -6437,9 +6461,7 @@ vec4 unpack_to_rgba8( uint val ) {
 
 表 1.1 列出了在 Sponza 场景中获得的性能。
 
-表 1.1.* Sponza 场景的性能结果（帧时间）。
-
-
+表 1.1. Sponza 场景的性能结果（帧时间）。
 
 312
 
@@ -6455,31 +6477,33 @@ IV 阴影
 
 ## 参考文献
 
-- [Aguado and Montiel 11] Alberto Aguado and Eugenio Montiel. "Mipmapped Screen-Space Soft Shadows." 收于 GPU Pro 2: Advanced Rendering Techniques，Wolfgang Engel 编，第 257-274 页。Natick, MA: A K Peters, 2011.
-- [Anichini 14] Steve Anichini. "Bioshock Infinite Lighting." Solid Angle, http://solid-angle.blogspot.hu/2014/03/bioshock-infinite-lighting.html, 2014年3月3日。
-- [Crow 77] Franklin C. Crow. "Shadow Algorithms for Computer Graphics." Computer Graphics: SIGGRAPH '77 Proceedings 11:2 (1977), 242–248.
-- [Engel 10] Wolfgang Engel. "Massive Point Light Soft Shadows." 发表于韩国游戏开发者大会, 2010年9月14日。（访问于 http: //www.slideshare.net/WolfgangEngel/massive-pointlightsoftshadows.）
-- [Fernando 05] Randima Fernando. "Percentage-Closer Soft Shadows." 收于 ACM SIGGRAPH 2005 Sketches，文章编号 35。New York: ACM, 2005.
-- [Geusebrook and Smeulders 03] Jan M. Geusebrook and Arnold W. M. Smeulders. "Fast Anisotropic Gaussian Filtering." IEEE Transactions on Image Processing lasting 12:8 (2003), 99–112.
-## 1. 实用屏幕空间软阴影
+- [Aguado and Montiel 11] Alberto Aguado and Eugenio Montiel. "Mipmapped Screen-Space Soft Shadows." 收于 GPU Pro 2: Advanced Rendering Techniques，Wolfgang Engel 编，第 257-274 页。Natick, MA: A K Peters, 2011。
+- [Anichini 14] Steve Anichini. "Bioshock Infinite Lighting." Solid Angle, `http://solid-angle.blogspot.hu/2014/03/bioshock-infinite-lighting.html`，2014年3月3日。
+- [Crow 77] Franklin C. Crow. "Shadow Algorithms for Computer Graphics." Computer Graphics: SIGGRAPH '77 Proceedings 11:2 (1977), 242–248。
+- [Engel 10] Wolfgang Engel. "Massive Point Light Soft Shadows." 发表于韩国游戏开发者大会, 2010年9月14日。（访问于 `http://www.slideshare.net/WolfgangEngel/massive-pointlightsoftshadows`。）
+- [Fernando 05] Randima Fernando. "Percentage-Closer Soft Shadows." 收于 ACM SIGGRAPH 2005 Sketches，文章编号 35。New York: ACM, 2005。
+- [Geusebrook and Smeulders 03] Jan M. Geusebrook and Arnold W. M. Smeulders. "Fast Anisotropic Gaussian Filtering." IEEE Transactions on Image Processing lasting 12:8 (2003), 99–112。
+- [Gumbau et al. 10] Jesus Gumbau, Miguel Chover, and Mateu Sbert. “Screen Space Soft Shadows.” 收于 GPU Pro: Advanced Rendering Techniques，Wolfgang Engel 编，第 47–491 页。Natick, MA: A K Peters, 2010。
+- [Nealen 02] Andrew V. Nealen. “Shadow Mapping and Shadow Volumes: Recent Developments in Real-Time Shadow Rendering.” 不列颠哥伦比亚大学 Advanced Computer Graphics: Image-Based Rendering 项目报告, 2002。
+- [Reeves et al. 87] William T. Reeves, David H. Salesin, and Robert L. Cook. “Rendering Antased Shadows with Depth Maps.” Computer Graphics: Proc. SIGGRAPH ’87 21:4 (1987), 283–291。
 
-- [Gumbau et al. 10] Jesus Gumbau, Miguel Chover, and Mateu Sbert. “Screen Space Soft Shadows.” 收于 GPU Pro: Advanced Rendering Techniques，Wolfgang Engel 编，第 47–491 页。Natick, MA: A K Peters, 2010.
-- [Nealen 02] Andrew V. Nealen. “Shadow Mapping and Shadow Volumes: Recent Developments in Real-Time Shadow Rendering.” 不列颠哥比亚大学 Advanced Computer Graphics: Image-Based Rendering 项目报告, 2002.
-- [Reeves et al. 87] William T. Reeves, David H. Salesin, and Robert L. Cook. “Rendering Antased Shadows with Depth Maps.” Computer Graphics: Proc. SIGGRAPH ’87 21:4 (1987), 283–291.
+
+
 - [Shastry 05] Anirudh S. Shastry. “Soft-Edged Shadows.” GameDev.net, http://www.gamedev.net/page/resources/./technical/graphics-programming-and-theory/soft-edged-shadows-r2193, 2005年1月18日。
+
 - [Williams 78] Lance Williams. “Casting Curved Shadows on Curved Surfaces.” Computer Graphics: Proc. SIGGRAPH ’78 12:3 (1978), 270–274.
 
-## 基于瓦片的全向阴影
+# 基于瓦片的全向阴影
 
 Hawar Doghramachi
 
 ## 2.1 引言
 
-高效地渲染大量的局部光源已经通过*分块延迟渲染*（tiled deferred shading）[Andersson 09]、*分块前向渲染*（tiled forward shading）[Billeter et al. 13] 以及 *聚类延迟和前向渲染*（clustered deferred and forward shading）[Olsson et al. 12] 等方法得以解决。然而，实时为大量光源生成合适的阴影仍然是一个持续的话题。由于直接光产生的准确阴影可以显著提高最终图像，并为观众提供关于场景布局的额外信息，因此它们的生成是实时渲染的重要部分。
+高效地渲染大量的局部光源已经通过*分块延迟渲染*（tiled deferred shading）[Andersson 09]、*分块前向渲染*（tiled forward shading）[Billeter et al. 13] 以及*聚类延迟和前向渲染*（clustered deferred and forward shading）[Olsson et al. 12] 等方法得以解决。然而，实时为大量光源生成合适的阴影仍然是一个持续的话题。由于直接光产生的准确阴影可以显著提高最终图像，并为观众提供关于场景布局的额外信息，因此它们的生成是实时渲染的重要部分。
 
 本章将演示如何为大量的全向光源高效地生成阴影，其中每个光源都投射独立的阴影。将进一步展示这可以在不引入伪影（如阴影闪烁）的情况下实现。底层算法基于在 [Williams 78] 中引入的*阴影映射*（shadow mapping），因此它受益于基于光栅化的图形硬件架构，并受益于广泛的现有技术以提供高质量的阴影。
 
-为此，*可编程阴影分发*（programmable shadow dispatch）[Riccio and Lelley 13] 和 *四面体阴影映射*（tetrahedron shadow mapping）的概念通过当前消费图形硬件中存在的可编程裁剪单元的新颖用法相结合。为每个光源生成单独的阴影图，因此额外利用了分层四叉树，将所有光源的阴影图作为瓦片（tiles）高效地打包到单个 2D 纹理图中。通过这种方式，可以存储更多的阴影图。
+为此，*可编程阴影分发*（programmable shadow dispatch）[Riccio and Lelley 13] 和*四面体阴影映射*（tetrahedron shadow mapping）的概念通过当前消费图形硬件中存在的可编程裁剪单元的新颖用法相结合。为每个光源生成单独的阴影图，因此额外利用了分层四叉树，将所有光源的阴影图作为瓦片（tiles）高效地打包到单个 2D 纹理图中。通过这种方式，可以存储更多的阴影图。
 
 ## 2.2 概述
 
@@ -6492,10 +6516,6 @@ Hawar Doghramachi
 最后，利用了以下观察：所需的阴影图分辨率与相应光源的影响区域成正比——即光源半径越小、距离相机越远，所需的阴影图分辨率越低。在确定所需的分辨率后，将所有相关光源的阴影图作为瓦片插入到大的 2D 纹理图中，称为瓦片阴影图（tiled shadow map）。为了优化利用可用纹理空间，使用了分层四叉树。这种概念不仅节省了阴影图读写的内存带宽，还允许在有限的纹理空间内使用大量投射的光源。
 
 基于瓦片的全向阴影的整个过程可以分为四个不同的步骤：
-
-
-
-
 
 ## 2. 基于分块的全向阴影 (Tile-Based Omnidirectional Shadows)
 
@@ -6522,10 +6542,6 @@ Hawar Doghramachi
 对于四叉树实现，选择了一种缓存友的方法，将所有节点存储在预分配的线性内存块中。使用索引而非指针来标识每个节点。将所有节点保持在列表中的进一步优势是，重置四叉树是一个非常快的操作，因为我们只需要迭代遍历节点列表。四叉树的每一层对应于一个 2 的幂次阴影图分块分辨率，每个节点对应分块阴影图中一个分块的纹理空间位置（图 2.1）。为了提高运行时性能，四叉节点（quad-nodes）在运行时性能上进行了优化。
 
 *(注：由于原文后续部分存在严重乱码和重复，已根据技术文档逻辑翻译至逻辑完备处结束。)*
-
-
-
-
 
 ## 2. 基于瓦片的全方位阴影
 
@@ -6562,10 +6578,6 @@ $M_A, \dots, M_D$ 是四面体面 $A, \dots, D$ 的纹理变换矩阵。
 **计算（Computation）。** 调度一个计算着色器来生成间接绘制缓冲区和光源索引缓冲区，其中每个相关网格产生一个线程组。每个线程组使用 32 的倍数。
 
 当每个线程组处理一个网格时，线程组内的所有线程并行遍历所有相关光源，并在点光源体积与每个网格的 AABB 之间执行球-AABB 重叠测试。为此，使用了如 [Larsson et al. 07] 中建议的快速重叠测试。每当检测到重叠时，原子计数器加1并将相应的光源索引写入光源索引列表。原子计数变量和光源索引列表都位于 GPU 的共享线程组内存中，避免了频繁写入全局视频内存，后者的开销更大 [Harada et al. 13]。在处理完一个网格的所有相关光源后，如果至少有一个光源与处理过的网格的 AABB 重叠，则向间接绘制缓冲区添加一个新的间接绘制命令。这是通过增加间接绘制缓冲区的原子计数器并将新的绘制命令写入相应位置来实现的。此时，我们额外根据重叠光源的数量增加光源索引缓冲区的原子计数器。这将返回光源索引区的起始索引，该缓冲区位于全局视频内存中，从那里可以获取已获得的索引。
-
-
-
-
 
 ## 2. 基于分片的全方位影子
 
@@ -6622,11 +6634,11 @@ rotationAxis = normalize(cross(fa, fd));
 rotatedNormal = quat(rotationAxis, alpha) * normal;
 ```
 
-列表 2.3. 计算裁剪面法线的伪代码。这将分离面 A 和 D 的体积。所有其他裁剪面法线也可以相应地计算。由于之后应该通过应用（例如百分比滤波 PCF）生成软影子，因此平面法线需要适当调整。对于这些平面，法线被旋转，以增加四面体视图的孔径。此处使用的角度与第 319 页“矩阵设置”节中推导的角度相同；该角度确保了一方面，只有在每个四面体视图边界处被实际裁剪的三角形才会受到影响，因此不会产生重大的性能影响。
 
 
+列表 2.3：计算裁剪面法线的伪代码
 
-
+这将分离面 A 和 D 的体积。所有其他裁剪面法线也可以相应地计算。由于之后应该通过应用（例如百分比滤波 `PCF`）生成软影子，因此平面法线需要适当调整。对于这些平面，法线被旋转，以增加四面体视图的孔径。此处使用的角度与第 319 页“矩阵设置”节中推导的角度相同；该角度确保了一方面，只有在每个四面体视图边界处被实际裁剪的三角形才会受到影响，因此不会产生重大的性能影响。
 
 ## 2. 基于分片的全向阴影
 
@@ -6669,15 +6681,17 @@ if (inside == 0x7) {
 }
 ```
 
-列表 2.4. 用于间接阴影图渲染的几何着色器。
+列表 2.4：用于间接阴影图渲染的几何着色器
 
-分片阴影图（Tiled shadow map）。在执行间接缓冲区中的绘制命令后，所有相关光源的阴影图分片被紧密地打包到分片阴影图中。图 2.4 显示了为图 2.5 中的场景生成的此纹理。
+### 分片阴影图
 
-如图 2.4 所示，处理后的场景中所有光源的阴影图分片紧密排列；因此，与传统的阴影映射系统相比，在有限的纹理空间内可以存储多得多的 
+在执行间接缓冲区中的绘制命令后，所有相关光源的阴影图分片被紧密地打包到分片阴影图中。图 2.4 显示了为图 2.5 中的场景生成的此纹理。
+
+如图 2.4 所示，处理后的场景中所有光源的阴影图分片紧密排列；因此，与传统的阴影映射系统相比，在有限的纹理空间内可以存储多得多的
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_348_0.png)
 
-**图 2.4.** 一个分片阴影图（为图 2.5 中的场景生成），分辨率为 8192 × 8192。分片大小限制在 64 到 512 之间。由于场景是在对不可见光源进行视锥裁剪的情况下渲染的，对于 128 个中等大小移动光源中的 117 个，生成了独立的阴影图分片。凭借这种纹理和限制的分片分辨率，在最坏情况下，分片阴影图中仍可以存储 256 个光源的阴影图分片。
+**图 2.4。** 一个分片阴影图（为图 2.5 中的场景生成），分辨率为 8192 × 8192。分片大小限制在 64 到 512 之间。由于场景是在对不可见光源进行视锥裁剪的情况下渲染的，对于 128 个中等大小移动光源中的 117 个，生成了独立的阴影图分片。凭借这种纹理和限制的分片分辨率，在最坏情况下，分片阴影图中仍可以存储 256 个光源的阴影图分片。
 
 ### 2.3.4 着色
 
@@ -6720,13 +6734,15 @@ projPos.xyz /= projPos.w;
 float shadowTerm = texture(tiledShadowMap, projPos);
 ```
 
-列表 2.5. 使用硬件过滤生成阴影项
+列表 2.5：使用硬件过滤生成阴影项
 
-分片阴影图。在执行间接缓冲区中的绘制命令后，所有相关光源的阴影图分片被紧密地打包到分片阴影图中。图 2.4 显示了为图 2.5 中的场景生成的此纹理。
+### 分片阴影图
 
-如图 2.4 所示，处理后的场景中所有光源的阴影图分片紧密排列；因此，与传统的阴影映射系统相比，在有限的纹理空间内可以存储多得多的 
+在执行间接缓冲区中的绘制命令后，所有相关光源的阴影图分片被紧密地打包到分片阴影图中。图 2.4 显示了为图 2.5 中的场景生成的此纹理。
 
-全向光源。最后，分片阴影图可用于着色阶段以产生高质量的软阴影。如分片延迟着色 [Andersson 09]、分片正向着色 [Billeter et al. 13] 或聚类延迟和正向着色 [Olsson et al. 12] 等着色方法都需要在着色过程之前创建所有相关光源的阴影图，正如本文算法的那样。如何
+如图 2.4 所示，处理后的场景中所有光源的阴影图分片紧密排列；因此，与传统的阴影映射系统相比，在有限的纹理空间内可以存储多得多的全向光源。
+
+最后，分片阴影图可用于着色阶段以产生高质量的软阴影。如分片延迟着色 [Andersson 09]、分片正向着色 [Billeter et al. 13] 或聚类延迟和正向着色 [Olsson et al. 12] 等着色方法都需要在着色过程之前创建所有相关光源的阴影图，正如本文算法的那样。如何
 
 ## 2.4 结果
 
@@ -6734,36 +6750,32 @@ float shadowTerm = texture(tiledShadowMap, projPos);
 
 使用基于立方体的着色方案作为参考。
 
-
-
-
-
 ## 2. 基于分块的全向阴影
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_351_0.png)
 
-**图 2.5.** 在 NVIDIA GeForce GTX 880 Mobile 显卡（分辨率为 1280 × 720）上对 Crytek Sponza 场景进行的实时渲染（包含约 280,000 个三角形），该场景包含 128 个中等点光源，所有光源均通过阴影图投射全向阴影。上图使用所提出的分块方法以 28.44 fps 的帧率渲染；下图是使用立方体方法的参考方案，帧率为 8.89 fps。两种方法都使用了硬件阴影过滤并结合 16× PCF 来提供高质量的软阴影。
+**图 2.5。** 在 NVIDIA GeForce GTX 880 Mobile 显卡（分辨率为 1280 × 720）上对 Crytek Sponza 场景进行的实时渲染（包含约 280,000 个三角形），该场景包含 128 个中等点光源，所有光源均通过阴影图投射全向阴影。上图使用所提出的分块方法以 28.44 fps 的帧率渲染；下图是使用立方体方法的参考方案，帧率为 8.89 fps。两种方法都使用了硬件阴影过滤并结合 16× `PCF` 来提供高质量的软阴影。
 
 参考技术的时间有所增加。最后，在表 2.4 中，比较了阴影图渲染和着色的 CPU 与 GPU 时间。
 
-根据表 2.4 所示，使用所提技术渲染阴影图的 CPU 时间保持在恒低水平，因为每帧仅提交一个间接绘制调用（draw call）。然而，由于 CPU 绘制调用数量增加，参考技术的 CPU 时间随光源数量的增加而剧增。比较 GPU 渲染阴影图所需的时间时，所提技术明显快于参考方法，这主要归因于分块解决方案减少了处理的图元数量。
+根据表 2.4 所示，使用所提技术渲染阴影图的 CPU 时间保持在恒低水平，因为每帧仅提交一个间接绘制调用（`draw call`）。然而，由于 CPU 绘制调用数量增加，参考技术的 CPU 时间随光源数量的增加而剧增。比较 GPU 渲染阴影图所需的时间时，所提技术明显快于参考方法，这主要归因于分块解决方案减少了处理的图元数量。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_352_0.png)
 
-**图 2.6.** 一个投射阴影的点光源被直接放置在 Crytek Sponza 场景中的狮头模型前方。左侧图像使用分块技术渲染，右侧图像使用参考立方体技术渲染。底部的图像显示了最终的着色结果，而顶部的图像分别可视化展示了四面体和立方体体积的划分。可见，所提方案的阴影质量接近参考方法。
+**图 2.6。** 一个投射阴影的点光源被直接放置在 Crytek Sponza 场景中的狮头模型前方。左侧图像使用分块技术渲染，右侧图像使用参考立方体技术渲染。底部的图像显示了最终的着色结果，而顶部的图像分别可视化展示了四面体和立方体体积的划分。可见，所提方案的阴影质量接近参考方法。
 
-考虑到使用分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。尽管在立方体图中进行硬件纹理查找比执行所提查找更快，但在执行 PCF 以产生软阴影时，情况并非如此。对于分块方法，只需对查找坐标应用 2D 偏移就足够；而对于立方体技术，用于纹理查找的 3D 方向向量必须在 3D 空间中旋转。
+考虑到使用分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。尽管在立方体图中进行硬件纹理查找比执行所提查找更快，但在执行 `PCF` 以产生软阴影时，情况并非如此。对于分块方法，只需对查找坐标应用 2D 偏移就足够；而对于立方体技术，用于纹理查找的 3D 方向向量必须在 3D 空间中旋转。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_353_0.png)
 
-**图 2.7.** 随着投射阴影点光源数量的增加，分块技术与立方体技术的帧时间对比。
+**图 2.7。** 随着投射阴影点光源数量的增加，分块技术与立方体技术的帧时间对比。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_353_1.png)
 
-**图 2.8.** 随着投射阴影点光源数量的增加，分块和立方体技术渲染阴影图的 CPU 提交绘制调用数量。
+**图 2.8。** 随着投射阴影点光源数量的增加，分块和立方体技术渲染阴影图的 CPU 提交绘制调用数量。
 
-| 数量 | 阴影 CPU | 阴影 GPU | 着色 GPU |
-|---|---|---|---|---|---|---||| 光源 | 分块 | 立方体 | 分块 | 立方体 | 分块 | 立方体 |
+| 光源数量 | 阴影 CPU：分块 | 阴影 CPU：立方体 | 阴影 GPU：分块 | 阴影 GPU：立方体 | 着色 GPU：分块 | 着色 GPU：立方体 |
+|---:|---:|---:|---:|---:|---:|---:|
 | 1 | 0.09 | 0.12 | 0.49 | 0.79 | 0.15 | 0.18 |
 | 2 | 0.09 | 0.21 | 0.68 | 1.45 | 0.15 | 0.19 |
 | 4 | 0.09 | 0.41 | 1.01 | 3.03 | 0.16 | 0.21 |
@@ -6773,7 +6785,7 @@ float shadowTerm = texture(tiledShadowMap, projPos);
 | 64 | 0.09 | 5.42 | 15.59 | 58.17 | 1.36 | 2.52 |
 | 128 | 0.09 | 11.06 | 33.75 | 119.94 | 2.18 | 4.04 |
 
-**表 2.4.** 随着投射阴影点光源数量的增加，阴影图渲染和着色的 CPU 与 GPU 时间（ms）对比。
+**表 2.4。** 随着投射阴影点光源数量的增加，阴影图渲染和着色的 CPU 与 GPU 时间（ms）对比。
 
 根据给出的性能值，所提技术在各个方面和对于所有数量的投射阴影光源都比参考技术快。一方面，参考方法中由于绘制调用数量过多而存在的驱动程序 CPU 开销几乎可以消除；另一方面，GPU 渲染阴影图所需的时间显著缩短。
 
@@ -6787,25 +6799,21 @@ float shadowTerm = texture(tiledShadowMap, projPos);
 
 ### 2.5.2 聚光灯
 
-尽管本章聚焦于点光源，但使用分块技术来处理聚光灯是可能的。考虑到使用分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。... 
+尽管本章聚焦于点光源，但使用分块技术来处理聚光灯是可能的。考虑到使用分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。...
 
 ### 2.5.3 动态网格
 
-考虑到分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。... 
+考虑到分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。...
 
 ### 2.5.4 Alpha 测试
 
-考虑到分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。... 
+考虑到分块延迟着色对所有可见屏幕片段进行着色所需的 GPU 时间，立方体方案的执行时间比分块技术高，这似乎是出乎意料的。...
 
 ## 2.6 结论
 
 本章展示了一种用于大量数量投射阴影光源生成高质量阴影的系统，在质量上与参考立方体方法具有竞争力。此外，由于分块阴影图的使用，在有限的空间内可以存储更多的阴影图。
 
-
-
-
-
-## 2. 基于分块的全方位投影
+## 参考文献
 
 [Larsson et al. 07] T. Larsson, T. Akenine-Möller, and E. Lengyel. “On Faster Sphere-Box Overlap Testing.” Journal of Graphics, GPU, and Game Tools 12:1 (2007), 3-8.
 
@@ -6821,28 +6829,31 @@ float shadowTerm = texture(tiledShadowMap, projPos);
 
 [Williams 78] L. Williams. “Casting Curved Shadows on Curved Surfaces.” Computer Graphics: Proc. SIGGRAPH 78:12:3 (1978), 270-274.
 
-## 阴影图轮廓重向量化
+# 阴影图轮廓重向量化
 
-阴影图轮廓重向量化（Shadow Map Silhouette Revectorization, SMSR）是一种受 MLAA [Jimenez et al. 11] 启发的双通道过滤技术，旨在通过增加额外的影区（umbra）表面来遮挡透视锯齿，提高投影阴影图的视觉质量。在大多数情况下，采样不足的区域会导致更高的轮廓边缘质量。
+阴影图轮廓重向量化（Shadow Map Silhouette Revectorization，`SMSR`）是一种受 `MLAA` [Jimenez et al. 11] 启发的双通道过滤技术，旨在通过增加额外的影区（umbra）表面来遮挡透视锯齿，提高投影阴影图的视觉质量。在大多数情况下，采样不足的区域会导致更高的轮廓边缘质量。
 
-SMSR 的原理是通过遮挡阴影轮廓边缘周围可见的透视锯齿来减少感知误差 [Lopez-Moreno et al. 10]。
+`SMSR` 的原理是通过遮挡阴影轮廓边缘周围可见的透视锯齿来减少感知误差 [Lopez-Moreno et al. 10]。
 
 ## 3.1 引言
 
-阴影映射 [Williams 78] 以其与光栅化硬件的兼容性、低实现复杂性以及处理任何类型几何体体的能力而闻名。然而，锯齿也是阴影映射中一个非常常见的问题。本章介绍了一种阴影过滤技术，该技术基于投影视图中的线性插值来近似额外的影区表面（完全被直接光线遮挡的空间）。
+阴影映射 [Williams 78] 以其与光栅化硬件的兼容性、低实现复杂性以及处理任何类型几何体的能力而闻名。然而，锯齿也是阴影映射中一个非常常见的问题。本章介绍了一种阴影过滤技术，该技术基于投影视图中的线性插值来近似额外的影区表面（完全被直接光线遮挡的空间）。
 
 投影锯齿和透视锯齿 [Lloyd et al. 08] 是恶化投影阴影质量的主要连续性类型。自阴影映射引入以来，已经开发了许多算法来减少甚至消除阴影图锯齿。大多数算法不兼容实时运行 [Johnson et al. 05]，并且在某些情况下建议额外的硬件更改以允许实时应用 [Lloyd et al. 08]。
 
-大多数实时阴影映射技术可以分为两大类：采样重分布（PSM, TSM, LISPSM 和 CSM）和基于过滤的技术（VSM, PCF 和 BFSM）。阴影图轮廓重向量化是一种过滤技术，它通过对传统的双通道阴影映射技术 [Williams 7] 遮挡可见的锯齿进行改进，同时保持在可接受的性能范围内。在某些场景中，SMSR 可以在极低的阴影分辨率下获得效果，并同时提供高质量的影区。
+大多数实时阴影映射技术可以分为两大类：采样重分布（`PSM`、`TSM`、`LISPSM` 和 `CSM`）和基于过滤的技术（`VSM`、`PCF` 和 `BFSM`）。阴影图轮廓重向量化是一种过滤技术，它通过对传统的双通道阴影映射技术 [Williams 7] 遮挡可见的锯齿进行改进，同时保持在可接受的性能范围内。在某些场景中，`SMSR` 可以在极低的阴影分辨率下获得效果，并同时提供高质量的影区。
 
-SMSR 达到了与轮廓图（SSM）[Sen et al. 03] 的效果，但方法非常不同。为了生成轮廓图，SSM 将所有边缘光栅化为四边形。相比 SMSR，在高多边形场景下，SSM 的性能消耗更高。
+`SMSR` 达到了与轮廓图（`SSM`）[Sen et al. 03] 的效果，但方法非常不同。为了生成轮廓图，`SSM` 将所有边缘光栅化为四边形。相比 `SMSR`，在高多边形场景下，`SSM` 的性能消耗更高。
 
 Vladimir Bondarev
 
 342
+
 IV 阴影
 
 ![](img/120606d35c67964e7ad5faec2ee0e8b_360_0.png)
+
+
 
 **图 3.1.** 从左到右的轮廓重向量化过程。
 
@@ -6905,11 +6916,7 @@ SMSR 并非完美，其缺陷分为特殊情况、数据缺失和轮廓形状损
 
 ### 3.3.2 特殊情况
 
-该技术无法处理间距为单个阴影图采样的平行外部锯齿，会导致视觉伪影（见图 3.5），
-
-
-
-
+该技术无法处理间距为单个阴影图采样的平行外部锯齿，会导致视觉伪影（见图 3.5）。
 
 ## 3. 阴影图轮廓重向量化 345
 
@@ -6993,10 +7000,6 @@ PowerVR 系列 GPU 在支持这些技术的同时，增加了硬件光线追踪�
 
 早期的 3D 游戏（如《毁灭战士》）都在 CPU 上实现实现光栅化。最终，GPU 专用硬件的威力超过了专用光栅器的效率，今天几乎所有的渲染器都利用硬件抽象 API（如 OpenGL）。如今，光线追踪处于类似的演进阶段。为了灵活性和移植性，你可以实现自定义的光线追踪器，除了性能外，我们描述的所有技术都适用。在本章节中，我们将使用 OpenRL。
 
-
-
-
-
 # PowerVR GPU 上的混合光线追踪
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_371_0.png)
@@ -7057,6 +7060,8 @@ James Kajiya 写道：“所有的渲染方法都在试图对同一种物理现�
 
 > OpenRL 允许射线在穿过场景时传播，这使得光线着色器可以在纹理采样期间进行差异映射。然而，射线只会与表面交一点。
 
+
+
 ```
 uniform sampler2D normalTexture;
 uniform sampler2D positionTexture;
@@ -7101,10 +7106,6 @@ NULL);
 
 PowerVR 上的光线追踪利用了这类射线实现的优化，称为影子射线（shadow rays）。由于你并不关心影子射线击中了什么，只要它在到达终点之前击中了任何东西，动画就是可能的。交算法可以在第一个三角形碰撞处终止，而不是继续测试所有三角形以找到最近的碰撞。在 OpenRL 着色器中，此属性通过 `occlusionTest` 属性在射线上设置。该功能与 `defaultPrimitive` 属性结合使用，后者定义了将执行的光线着色器。
 
-
-
-
-
 ```cpp
 vec3 toLight = lightPosition - r1_IntersectionPoint;
 
@@ -7116,7 +7117,7 @@ r1_OutRay.defaultPrimitive = lightPrimitive;
 emitRay();
 ```
 
-# 列表 1.4. 发射阴影射线。
+列表 1.4. 发射阴影射线。
 
 如果射线击中任何几何体。最后，计算到光线的距离并将其赋值给射线的 `maxT` 属性。这些属性共同意味着当场景中没有遮挡几何体时，将产生阴影，这样光照就可以累积到帧缓冲区。如果遇到遮挡几何体，射线将直接丢弃且不累积光照。列表 1.4 中的阴影片段展示了如何使用这些射线属性来实现硬阴影。
 
@@ -7171,7 +7172,7 @@ void IlluminateSurface(vec4 normal, vec4 position) {
 }
 ```
 
-# 列表 1.6. 使用表面属性。
+列表 1.6. 使用表面属性。
 
 使用光线追踪渲染反射非常简单，事实上，如何做可以通过查看任何反射的教科书图表看出。在对反射表面着色时，我们简单地从表面发射一条额外的射线来生成反射颜色。该射线的方向通过将入射射线的方向绕表面法线进行反射计算出来。当反射与场景中的物体碰撞时，它应该像主射线一样被着色；通过这样，反射中可见的表面将对其原始颜色做出贡献。
 
@@ -7208,11 +7209,7 @@ void createRay() {
 }
 ```
 
-# 列表 1.7. 混合渲染器中的反射。
-
-
-
-
+列表 1.7. 混合渲染器中的反射。
 
 # 移动设备
 
@@ -7341,10 +7338,17 @@ Wizard 架构有一个峰值光线流量，以每秒光线数测量。对于 Pow
 ## 参考文献
 
 - [Blender 14] Cycles引擎。http://wiki.blender.org/index.php/Release_Notes/Cycles，2014年8月19日。
+
 - [Hargreves 04] Shawn Hargreaves 和 Mark Harris，“延迟渲染。”发表于 NVIDIA Conference:San Jose, CA，2004年3月23日。（可用 http://download.nvidia.com/developer/presentations/2004/Deferred_Shading.pdf）。
+
 - [Kajiya 86] James T Kajiya，“渲染方程。”Computer Graphics: Proc. SIGGRAPH ’86 20:4 (1986),143–150。
+
 - [Keller and Heidrich 01] Alexander Keller 和 Wolfgang Heidrich，“交错采样。”见第12次欧洲图形技术会议，S. J. Gortler 和 K. Myszkowski 编辑，页269-176。伦敦：Springer-Verlag，2001年。
-- [LuxRender 14] LuxRender，“光射线。”http://www.luxrender.net/wiki/LuxRays，访问于2014年7月19日。
+
+
+
+- [LuxRender 14] LuxRender，“光射线。”`http://www.luxrender.net/wiki/LuxRays`，访问于2014年7月19日。
+
 - [Pharr and Humphreys 04] Matt Pharr 和 Greg Humphreys。《物理渲染》。San Francisco：Morgan Kaufmann，2004年。
 
 # 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅 GPU 的粒子碰撞系统
@@ -7354,10 +7358,6 @@ Wizard 架构有一个峰值光线流量，以每秒光线数测量。对于 Pow
 粒子模拟一直是游戏的一部分，用于实现栅化系统难以实现的效果。正如名称所示，粒子与大量出现的小元素概念相关。为了避免现实物理的复杂性，图形中使用的粒子往往被经过了，以便在实时应用中轻松使用。这些简化方法之一是认为每个粒子都是独立的，且彼此不相互作用，这使得它们适合跨处理器进行并行化。
 
 最新的 GPU 支持 OpenGL ES 3.0，新增的功能为我们实现这种模拟提供了正确的工具。我们还希望能够实现更真实的行为，特别是与场景对象的碰撞。由于我们想并行化传统的 CPU 方法，这需要将几何信息传递给 GPU 并每步进行遍历，因此是计算密集且内存密集型的。随着 ASTC [Nystad et al. 12] 的引入，我们现在能够在移动设备上存储体素化数据，从而极大地节省内存。这种纹理可以在 OpenGL 流水线中使用，读取场景信息，并以每个粒子一次纹理访问的代价修改粒子的轨迹。后续章节详细描述了粒子系统模拟的所有步骤（图 2.1）。
-
-
-
-
 
 # 移动设备
 
@@ -7373,9 +7373,7 @@ Wizard 架构有一个峰值光线流量，以每秒光线数测量。对于 Pow
 
 ### 2.2.2 使用 ASTC 3D 进行压缩
 
-ASTC 纹理压缩格式是一种基于块的压缩算法，能够压缩 LDR 或 HDR 格式的 2D 和 3D 纹理。与
-
-## 2. 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅 GPU 的粒子碰撞碰撞系统
+ASTC 纹理压缩格式是一种基于块的压缩算法，能够压缩 LDR 或 HDR 格式的 2D 和 3D 纹理。与其他压缩算法相比，ASTC 更多参数来调整最终图像的质量（更多细节请参见 [Smith 14]）。主要选项是块大小、质量设置以及颜色通道内（如果存在则包含 alpha 通道）的相关性指示。对于 3D 格式，ASTC 允许表 2.1 中描述的块大小。
 
 | 块维度 | 比特率（每像素比特数） |
 |---|---|
@@ -7390,8 +7388,6 @@ ASTC 纹理压缩格式是一种基于块的压缩算法，能够压缩 LDR 或 
 | $6 \times 6 \times 6$ | 0.71 |
 
 表 2.1 ASTC 3D 可用块大小。
-
-其他压缩算法相比，ASTC 更多参数来调整最终图像的质量（更多细节请参见 [Smith 14]）。主要选项是块大小、质量设置以及颜色通道内（如果存在则包含 alpha 通道）的相关性指示。对于 3D 格式，ASTC 允许表 2.1 中描述的块大小。
 
 由于所有块维度和输入格式的压缩尺寸始终为 128 位，因此比特率简单为 $128 / (块中纹理素的数量)$。这规定了生成的压缩纹理的质量与维度之间的权衡。在图 2.2 中，使用切片平面和不同的块大小渲染了各种 ASTC 压缩 3D 纹理。
 
@@ -7414,38 +7410,26 @@ ASTC 纹理压缩格式是一种基于块的压缩算法，能够压缩 LDR 或 
 ### 2.3.1 显式方法
 
 | | 球体 | 圣杯 | 岩石 | 手 |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | 分辨率 | $128 \times 128$ | $180 \times 255$ | $181 \times 243$ | $78 \times 127$ | $43 \times 97 \times 128$ |
-| 纹理大小 (MB) | | | | | |
+| 纹理大小 (MB) | | | | |
 | 未压缩 | 16.78 | 82.62 | 89.73 | 5.94 | 4.24 |
 | ASTC $3 \times 3 \times 3$ | 1.27 | 6.12 | 6.72 | 0.45 | 0.34 |
 | ASTC $4 \times 4 \times 4$ | 0.52 | 2.63 | 2.87 | 0.19 | 0.14 |
 | ASTC $5 \times 5 \times 5$ | 0.28 | 1.32 | 1.48 | 0.10 | 0.07 |
-| 内存带宽 (MB/s) | | | | | | |
+| 内存带宽 (MB/s) | | | | | |
 | 未压缩 | 644.47 | 752.18 | 721.96 | 511.48 | 299.36 |
 | ASTC $3 \times 3 \times 3$ | 342.01 | 285.78 | 206.39 | 374.19 | 228.05 |
 | ASTC $4 \times 4 \times 4$ | 327.63 | 179.43 | 175.21 | 368.13 | 224.26 |
 | ASTC $5 \times 5 \times 5$ | 323.10 | 167.90 | 162.89 | 366.18 | 222.76 |
-| 每帧能耗 (DDR2 mJ) | | | | | |
+| 每帧能耗 (DDR2 mJ) | | | | |
 | 未压缩 | 3.58 | 4.17 | 2.84 | 1.66 |
 | ASTC $3 \times 3 \times 3$ | 1.90 | 1.59 | 1.15 | 2.04 |
 | ASTC $4 \times 4 \times 4$ | 1.82 | 1.21 | 1.10 | 1.54 |
 | ASTC $5 \times 5 \times 5$ | 1.79 | 0.93 | 0.97 | 2.04 |
 | 每帧能耗 (DDR3 mJ) | | | | |
 
-
-
-
-
-## 2. 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅 GPU 的粒子碰撞系统
-
-| Position1 | Velocity1 | Life1 | Position2 | Velocity2 | Attrib2 | Life2 | ... |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| | | | | | | | |
-| | | | | | | | |
-| Life1 | Life2 | Life3 | | | | | | |
-
-表 2.3. GL_INTERLEAVED_ATTRI 属性的顺序。
+表 2.2 不同场景的压缩结果。
 
 ### 2.3.2 ES 变换反馈概览
 
@@ -7544,12 +7528,6 @@ position += velocity * deltaTime;
 
 速度用于将粒子移动到新位置。由于我们想避免在 GPU 和 CPU 之间拷贝内存，生命周期应该在着色器内部管理。这意味着当生命周期达到 0 时，初始化粒子属性，如初始位置、初始速度和粒子总时长。为了使模拟更具
 
-
-
-
-
-## 2. 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅 GPU 的粒子碰撞系统
-
 ```cpp
 float slidingFactor = clamp(uParticleMass, 0.0, 1.0, .);
 vec3 velocityDir = normalize(iparticle_Vel, .);
@@ -7574,16 +7552,24 @@ iparticle_Vel = length(iparticle_Vel) *
 在更新粒子位置后，我们可以按照意愿渲染它们。在我们的演示中，我们决定将它们渲染为烟雾粒子和纸屑。地板上的灯光形状是使用其纹理坐标程序化生成的。阴影是通过从光点视角生成的投影纹理创建的。该纹理用于地板的阴影以及物体其上的阴影。为了实现这一点，我们实现了一种增量方法：
 
 - 1. 渲染不带颜色的物体，以便将其深度存储在深度缓冲区中。我们需要执行这一步是为了防止物体背后的粒子（从光点角度看）在物体上投下阴影。
+
 - 2. 带有深度测试渲染粒子，但不进行深度写入。
+
 - 3. 使用第 2 步生成的纹理正常渲染物体。
+
 - 4. 在第 2 步的纹理中将物体作为阴影渲染。
+
 - 5. 使用第 4 步的结果渲染地板以生成阴影。
 
 这种方法可以被优化。例如，我们可以使用两个帧缓冲区分别处理地板和物体上的阴影，从而避免增量渲染（更多信息请参阅 [Harris 14]）。为了实现这一点，我们将第 2 步结束时创建的纹理结果复制到另一个帧缓冲区，然后在上面将物体作为阴影渲染。
 
 ### 2.4.1 烟雾场景
 
-在此场景中，烟雾（图 2.3）被渲染为点精灵，因为我们总是希望它们占据视角。烟雾渲染使用噪声纹理和一些数学方法来计算最终颜色，就像它是 3D 体积一样。为了让烟雾具有透明感，我们需要合并不同重叠粒子的颜色。为了这样做，我们使用了混合结果并在渲染粒子时禁用了 Z 测试。这得到了良好的效果，即使不根据 Z 值对粒子进行排序（否则我们必须在 CPU 中制作缓冲区）。另一个禁用它的原因是为了实现软粒子效果。从 Mali-T600 GPU 开始，我们可以在片段着色器中使用一个名为 `GL_ARM_shader_framebuffer_fetch` 的特定扩展来读取缓冲区的值（颜色、深度和模板）[Børge 14]。该扩展允许我们从片段着色器访问内置单元（`gl_LastFragColorARM, gl_LastFragDepthARM, gl_LastFragStencilARM`），对于每个像素，该值都基于之前的结果。
+
+
+在此场景中，烟雾（图 2.3）被渲染为点精灵，因为我们总是希望它们占据视角。烟雾渲染使用噪声纹理和一些数学方法来计算最终颜色，就像它是 3D 体积一样。为了让烟雾具有透明感，我们需要合并不同重叠粒子的颜色。为此，我们使用了混合结果，并在渲染粒子时禁用了 Z 测试。这得到了良好的效果，即使不根据 Z 值对粒子进行排序（否则我们必须在 CPU 中制作缓冲区）。另一个禁用它的原因是为了实现软粒子效果。
+
+从 Mali-T600 GPU 开始，我们可以在片段着色器中使用一个名为 `GL_ARM_shader_framebuffer_fetch` 的特定扩展来读取缓冲区的值（颜色、深度和模板）[Børge 14]。该扩展允许我们从片段着色器访问内置单元（`gl_LastFragColorARM`、`gl_LastFragDepthARM`、`gl_LastFragStencilARM`）。对于每个像素，该值都基于之前的结果。
 
 ```cpp
 # GL_ARM_shader_framebuffer_fetch_depth_stencil : enable
@@ -7595,17 +7581,19 @@ float dia = (2.0 * uNear)
 #endif
 ```
 
-这使得实现软粒子变得更加容易，在演示中，我们使用了一种简单的方法。首先，我们渲染所有实体物体，以便 Z 值写入深度缓冲区。之后，我们渲染烟雾，可以读取物体的深度值并与粒子的当前片段进行比较（以查看它是否在物体后面），并相应地淡化颜色。这种技术消除了由 Z 测试由粒子四边形几何形成的锐利边缘。在开发期间，烟雾效果看起来很好，但我们希望更好。为了实现这一切，我们决定在一个比主屏幕分辨率较低的离屏渲染缓冲区中渲染烟雾。这使我们能够获得模糊的烟雾（因为低分辨率移除了高频），并允许增加粒子数量以获得更密集的视觉。目前的实现使用 640 × 360 的离屏缓冲区，并在最终图像中上采样到 1080p 分率。
+这使得实现软粒子变得更加容易。在演示中，我们使用了一种简单的方法。首先，我们渲染所有实体物体，以便 Z 值写入深度缓冲区。之后，我们渲染烟雾，可以读取物体的深度值并与粒子的当前片段进行比较（以查看它是否在物体后面），并相应地淡化颜色。这种技术消除了由 Z 测试和粒子四边形几何形成的锐利边缘。
+
+在开发期间，烟雾效果看起来很好，但我们希望更好。为了实现这一点，我们决定在一个比主屏幕分辨率低的离屏渲染缓冲区中渲染烟雾。这使我们能够获得模糊的烟雾（因为低分辨率移除了高频），并允许增加粒子数量以获得更密集的视觉。目前的实现使用 `640 × 360` 的离屏缓冲区，并在最终图像中上采样到 1080p 分辨率。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_399_0.png)
 
 图 2.3 烟雾场景。
 
-当烟雾在物体附近流动时，由于上采样低分辨率缓冲器的混合，朴素的方法会导致物体边缘出现锯齿状。为了最小化这种影响，我们应用了双边滤波器。双边滤波器应用于离屏缓冲区，并由颜色纹理纹素中高斯滤波器与深度差给定的线性权重因子的乘积给出。深度因子在模型边缘有用，因为它赋予与当前像素相似的相邻像素更高的权重。
+当烟雾在物体附近流动时，由于上采样低分辨率缓冲区的混合，朴素的方法会导致物体边缘出现锯齿状。为了最小化这种影响，我们应用了双边滤波器。双边滤波器应用于离屏缓冲区，并由颜色纹理纹素中的高斯滤波器与深度差给出的线性权重因子的乘积给出。深度因子在模型边缘有用，因为它赋予与当前像素相似的相邻像素更高的权重。
 
 ### 2.4.2 纸屑场景
 
-在这种情况下，我们使用四边形而不是点，因为它们沿着纹理滑动（图 2.4）。这些四边形初始化为 min = (-1,-1) 和 max = (1,1)。各种四边形通过正确检查纹理坐标实现。
+在这种情况下，我们使用四边形而不是点，因为它们沿着纹理滑动（图 2.4）。这些四边形初始化为 `min = (-1, -1)` 和 `max = (1, 1)`。各种四边形通过正确检查纹理坐标实现。
 
 ### 2.4.3 使用实例化进行性能优化
 
@@ -7613,7 +7601,7 @@ float dia = (2.0 * uNear)
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_400_0.png)
 
-- 1. 绑定用作模板数据的缓冲区。
+1. 绑定用作模板数据的缓冲区。
 
 ```cpp
 glBindBuffer(GL_ARRAY_BUFFER, m_QuadPositionBuffer);
@@ -7626,14 +7614,14 @@ EnableAttribArray(m_QuadTexCoordLocation);
 glVertexAttribPointer(m_QuadTexCoordLocation, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
 ```
 
-- 2. 为每个顶点数组设置除器。除器指定了在推进索引之前应渲染多少个实例。在我们的情况下，我们希望在渲染每个实例后移动属性，因此除器为 1。
+2. 为每个顶点数组设置除数。除数指定了在推进索引之前应渲染多少个实例。在我们的情况下，我们希望在渲染每个实例后移动属性，因此除数为 `1`。
 
 ```cpp
 glVertexAttribDivisor(m_QuadPositionLocation, 0);
 glVertexAttribDivisor(m_QuadTexCoordLocation, 0);
 ```
 
-- 3. 绑定从模拟步骤输出的缓冲区。设置顶点属性从此缓冲区读取。
+3. 绑定从模拟步骤输出的缓冲区。设置顶点属性从此缓冲区读取。
 
 ```cpp
 glBindBuffer(GL_ARRAY_BUFFER, m_XformFeedbackBuffers[1]);
@@ -7644,81 +7632,81 @@ glVertexAttribPointer(m_UpdatedParticlePosLocation, 3, GL_FLOAT, GL_FALSE, 0, (v
 
 OpenGL ES 实例化概述。
 
-
-
-
-
 384
 
-V Mobile 设备
+V 移动设备
 
 ```cpp
 GL_FALSE,
-sizeof( XFormFeedbackParticle ),
-glVertexAttribPointer( m_UpdatedParticleAttribLocation, 
+sizeof(XFormFeedbackParticle),
+glVertexAttribPointer(m_UpdatedParticleAttribLocation,
 4,
 GL_FLOAT,
 GL_FALSE,
-sizeof( XFormFeedbackParticle ),
+sizeof(XFormFeedbackParticle),
 24);
-glVertexAttribPointer( m_UpdatedParticleLifeLocation, 
+glVertexAttribPointer(m_UpdatedParticleLifeLocation,
 1,
 GL_FLOAT,
 GL_FALSE,
-sizeof( XFormFeedbackParticle ),
+sizeof(XFormFeedbackParticle),
 40);
 ```
 
-- 5. 渲染粒子（实例）。该函数允许指定每个实例包含多少个顶点以及我们想要渲染多少个实例。注意，在使用实例化渲染（instancing）时，我们可以在顶点着色器内部访问内置变量 `gl_InstanceID`。该变量指定了我们正在渲染的实例 ID，并可用于访问统一缓冲区（uniform buffers）。
+5. 渲染粒子（实例）。该函数允许指定每个实例包含多少个顶点，以及我们想要渲染多少个实例。注意，在使用实例化渲染（instancing）时，我们可以在顶点着色器内部访问内置变量 `gl_InstanceID`。该变量指定了我们正在渲染的实例 ID，并可用于访问统一缓冲区（uniform buffers）。
 
 ```cpp
-glDrawArraysInstanced( GL_TRIANGLE_STRIP, 0, 4, MaxParticles );
+glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, 4, MaxParticles);
 ```
 
-- 6. 始终将所有顶点属性数组的除数（divisor）设回 0，因为即使不使用索引，它们也会影响渲染。
+6. 始终将所有顶点属性数组的除数（divisor）设回 `0`，因为即使不使用索引，它们也会影响渲染。
 
 ```cpp
-glDisableVertexArray( m_PositionLocation );
-glDisableVertexArray( m_TexCoordLocation );
-glVertexAttribDivisor( m_UpdatedParticlePosLocation, 0 );
-glVertexAttribDivisor( m_UpdatedParticleAttribLocation, 0 );
-glVertexAttribDivisor( m_UpdatedParticleLifeLocation, 0 );
+glDisableVertexArray(m_PositionLocation);
+glDisableVertexArray(m_TexCoordLocation);
+glVertexAttribDivisor(m_UpdatedParticlePosLocation, 0);
+glVertexAttribDivisor(m_UpdatedParticleAttribLocation, 0);
+glVertexAttribDivisor(m_UpdatedParticleLifeLocation, 0);
 ```
 
 ## 2.5 结论
 
-结合 OpenGL ES 3.0 使我们能够实现一个仅限 GPU 的粒子系统，能够在当前的移动设备上运行交互式场景。所提出的技术是实验性的具有某些缺点，但读者可以从本章中获得灵感，并使用 ASTC LDR/HDR/3D 纹理以及 OpenGL ES 3.0 其他方案。如果需要对粒子进行排序，OpenGL ES 3.1 规范最近发布的计算着色器（compute shader）功能将能够在 GPU 上直接进行排序。
+结合 OpenGL ES 3.0 使我们能够实现一个仅限 GPU 的粒子系统，能够在当前的移动设备上运行交互式场景。所提出的技术是实验性的，具有某些缺点，但读者可以从本章中获得灵感，并使用 ASTC LDR/HDR/3D 纹理以及 OpenGL ES 3.0 的其他方案。如果需要对粒子进行排序，OpenGL ES 3.1 规范最近发布的计算着色器（compute shader）功能将能够在 GPU 上直接进行排序。
 
-## 2. 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅限 GPU 的粒子碰撞系统
+## 2.6 使用 ASTC 3D 纹理和 OpenGL ES 3.0 实现仅限 GPU 的粒子碰撞系统
 
-使用纹理引起的问题之一是纹理的分辨率。这种技术可以用单个3D 纹理描述整个 3D 静态场景，但需要仔细选择分辨率，因为低分辨率会导致物体的部分无法发生碰撞，因为具有不同法线的多个部分将存储在同一个体素（voxel）中。此外，如果体素化的 3D 场景包含没有实际几何形状但落在体素化范围内的部分，就会浪费空间。由于我们模拟的是离散的时间步，如果系统变化过快，可能会出现问题。例如，如果旋转物体的速度太快，可能会错过物体狭窄部分的碰撞检测。
+使用纹理引起的问题之一是纹理的分辨率。这种技术可以用单个 3D 纹理描述整个 3D 静态场景，但需要仔细选择分辨率，因为低分辨率会导致物体的部分无法发生碰撞，因为具有不同法线的多个部分将存储在同一个体素（voxel）中。此外，如果体素化的 3D 场景包含没有实际几何形状但落在体素化范围内的部分，就会浪费空间。
+
+由于我们模拟的是离散的时间步，如果系统变化过快，可能会出现问题。例如，如果旋转物体的速度太快，可能会错过物体狭窄部分的碰撞检测。
 
 ## 参考文献
 
-- [ARM Mali 15a] ARM Mali. "ASTC Evaluation Codec." http://malidevelop.arm.com/develop-for-mali/tools/astc-evaluation-codec, 2015.
-- [ARM Mali 15b] ARM Mali. "Mali Developer Center." http://malidevelop.arm.com, 2015.
-- [ARM Mali 15c] Mali. "Mali GPU Compression Tool." http://malidevelop.arm.com/develop-for-mali/tools/asset-creation/mali-gpu-texture-compression-tool/, 2015.
-- [Björge 14] Marius Björge. "Bandwidth Efficient Graphics with ARM Mali GPUs." In GPU Pro 5: Advanced Rendering Techniques, edited by Wolfgang Engel, pp. 275–288. Boca Raton, FL: CRC Press, 2014.
-- [Harris 14] Peter Harris. "Mali Performance: How to Correct Handle Framebuffers." ARM Connected Community, http://community.arm.com/groups/arm-mali-graphics/blog/2014/04/28/mali-graphics-performance-2-to-correctly-handle-framebuffers, 2014.
-- [Morris 13] Dan Morris. "Voxelizer: Flooding and Distance Map Generation for 3D Surfaces." http://techhouse.edu/~dnoris/voxelizer/, 2013.
-- [Nystad et al. 12] J. Nystad, A. Lassen, A. Pomanowski, S. Ellis, and T. Olson. "Adaptive Scalable Texture Compression." In Proceedings of the Fourth ACM SIGGRAPH/Eurographics Conference High-Performance Graphics, pp. 105–114. Aire-la-ville, Switzerland: Eurographics Association, 2012.
-- [Smith 14] Stacy Smith. "Adaptive Scalable Texture Compression." In GPU Pro 5: Advanced Rendering Techniques, edited by Wolfgang Engel, pp. 313–326. Boca Raton, FL: CRC Press, 2014.
-- [Wikipedia 15] Wikipedia. "Stokes' Law." http://en.wikipedia.org/wiki/Stokes%27_law, 2015.
+- [ARM Mali 15a] ARM Mali. "ASTC Evaluation Codec." `http://malidevelop.arm.com/develop-for-mali/tools/astc-evaluation-codec`，2015。
+- [ARM Mali 15b] ARM Mali. "Mali Developer Center." `http://malidevelop.arm.com`，2015。
+- [ARM Mali 15c] Mali. "Mali GPU Compression Tool." `http://malidevelop.arm.com/develop-for-mali/tools/asset-creation/mali-gpu-texture-compression-tool/`，2015。
+- [Björge 14] Marius Björge. "Bandwidth Efficient Graphics with ARM Mali GPUs." In *GPU Pro 5: Advanced Rendering Techniques*, edited by Wolfgang Engel, pp. 275–288. Boca Raton, FL: CRC Press, 2014.
+- [Harris 14] Peter Harris. "Mali Performance: How to Correct Handle Framebuffers." ARM Connected Community, `http://community.arm.com/groups/arm-mali-graphics/blog/2014/04/28/mali-graphics-performance-2-to-correctly-handle-framebuffers`，2014。
+- [Morris 13] Dan Morris. "Voxelizer: Flooding and Distance Map Generation for 3D Surfaces." `http://techhouse.edu/~dnoris/voxelizer/`，2013。
+- [Nystad et al. 12] J. Nystad, A. Lassen, A. Pomanowski, S. Ellis, and T. Olson. "Adaptive Scalable Texture Compression." In *Proceedings of the Fourth ACM SIGGRAPH/Eurographics Conference High-Performance Graphics*, pp. 105–114. Aire-la-ville, Switzerland: Eurographics Association, 2012.
+- [Smith 14] Stacy Smith. "Adaptive Scalable Texture Compression." In *GPU Pro 5: Advanced Rendering Techniques*, edited by Wolfgang Engel, pp. 313–326. Boca Raton, FL: CRC Press, 2014.
+- [Wikipedia 15] Wikipedia. "Stokes' Law." `http://en.wikipedia.org/wiki/Stokes%27_law`，2015。
 
 # 移动设备带壳层毛发的动画角色
+
 Andrew Girdler and James L. Jones
 
 ## 3.1 引言
 
 毛发效果在实时图形学中一直面临着巨大挑战。在桌面端，最新的技术采用 DirectX 11 分段着色（tessellation）动态地创建成千上万条几何形状发丝或毛发丝 [Tariq and Bavoil 01]。在移动设备上，由于硬件限制和带宽限制，我们必须更加保守。
 
-移动设备上的毛发效果需要与桌面端不同的方法。我们不生成几何体，而是使用基于壳的（shell-based）的技术，在这种技术中，毛发是作为层层广告板（billboards）渲染的。这种方法允许在移动 GPU 的性能预算内实现高密度。
+移动设备上的毛发效果需要与桌面端不同的方法。我们不生成几何体，而是使用基于壳的（shell-based）技术，在这种技术中，毛发是作为层层广告板（billboards）渲染的。这种方法允许在移动 GPU 的性能预算内实现高密度。
 
 本章提出的技术关注于实现真实的毛发。我们使用专用纹理来存储毛发属性。
 
 ### 3.2 概述
 
 壳层毛发系统的核心是使用多个纹理来表示毛发的特征。每个纹理存储一个特定信息：
+
 - 长度图：定义毛发的长度。
 - 密度图：控制毛发的疏密程度。
 - 颜色图：提供毛发的颜色和变化。
@@ -7750,15 +7738,12 @@ gl_FragColor = vec4(color.rgb, alpha);
 ### 3.5 性能考虑
 
 在移动设备上实现毛发时，性能至关重要。主要的瓶颈在于：
+
 - 过度绘制（Overdraw）：许多叠加的壳。
 - 内存带宽：采样多个纹理。
 - 片段处理：计算大量像素。
 
 为了减少过度绘制，可以使用深度测试来丢弃不存在毛发的像素。我们还使用实例化（instancing）来高效地渲染壳层。
-
-
-
-
 
 # 移动设备
 
@@ -7796,14 +7781,16 @@ for (unsigned int Batch = 0; Batch < BONE_BATCHES; ++Batch) {
 }
 ```
 
-> 列表 3.1. 按骨骼批创建缓冲区。
+> 列表 3.1 按骨骼批创建缓冲区。
 
 用于蒙皮数据的法线和方差。这些输入缓冲区按骨骼批创建，仅包含该批次特定的数据。
 
-如果使用单个骨骼批，列表 3.1 中的代码路径仍然可以使用大小为 1 的批次。在使用单单骨骼方法时，我们按照以下方式创建了 UBO：
+如果使用单个骨骼批，列表 3.1 中的代码路径仍然可以使用大小为 `1` 的批次。在使用单单骨骼方法时，我们按照以下方式创建了 UBO：
+
+
 
 ```cpp
-glGenBuffers(1,&uBO);
+glGenBuffers(1, &uBO);
 glBindBuffer(GL_UNIFORM_BUFFER, uBO);
 uiIndex = glGetUniformBlockIndex(Shader, szBlockName);
 glUniformBlockBinding(Shader, uiIndex, uiSlot);
@@ -7823,7 +7810,7 @@ for (unsigned int batch = 0; batch < BONE_BATCHES; ++batch) {
     VertexCount = m_ModelDataStruct[0];
     glBeginTransformFeedback(GL_POINTS);
     // 启用属性
-    glBindBuffer(GL_ARRAY_BUFFER, m_ModelDataBuffer[batch+1]);
+    glBindBuffer(GL_ARRAY_BUFFER, m_ModelDataBuffer[batch + 1]);
     // 设置顶点和法线指针
     glBindBuffer(GL_ARRAY_BUFFER, m_SkinDataBuffer[batch]);
     // 设置骨骼权重和索引指针
@@ -7843,19 +7830,15 @@ glDisable(GL_RASTERIZER_DISCARD);
 
 > 列表 3.2. 执行 TF 阶段。
 
-# 3.6 使用 TF 进行动画
+## 3.6 使用 TF 进行动画
 
-在执行变换反馈 (TF) 阶段时，我们将顶点变换到蒙皮后的位置，并将所有内容写入单个输出缓冲区。在每个批次开始和结束 TF 之前，我们都会绑定输出缓冲器的特定范围进行写入；我们还绑定了用于输入数据的特定缓冲区。输入数据指的是每个批次中的顶点，骨索引相对于整个骨骼矩阵调色板数组；因此，我们使用标准统一变量（uniform）或 UBO 为每次通过传递骨骼矩阵。（参见列表 3.2.）
+在执行变换反馈（TF）阶段时，我们将顶点变换到蒙皮后的位置，并将所有内容写入单个输出缓冲区。在每个批次开始和结束 TF 之前，我们都会绑定输出缓冲器的特定范围进行写入；我们还绑定了用于输入数据的特定缓冲区。输入数据指的是每个批次中的顶点，骨索引相对于整个骨骼矩阵调色板数组；因此，我们使用标准统一变量（uniform）或 UBO 为每次通过传递骨骼矩阵。（参见列表 3.2。）
 
 我们在列表 3.3 的着色器中以正常方式执行变换。
 
-# 3.7 针对毛发 Shell 的实例化
+## 3.7 针对毛发 Shell 的实例化
 
-我们将变换反馈阶段的输出作为单个缓冲区提交，以便通过实例化进行绘制。（参见图 3.2.）我们传入了毛发纹理和毛发长度纹理，后者控制了毛发层与层之间的偏移。我们还指定了绘制的实例数量，该数量应该与创建毛发纹理时使用的层数相同。我们发现，对于我们的模型，取决于平台和分辨率，11 和 25 的计数可以产生良好的视觉效果，同时保持可行的性能。我们将纹理坐标（TexCoord）数组绑定到一个结构中，该结构能够……
-
-
-
-
+我们将变换反馈阶段的输出作为单个缓冲区提交，以便通过实例化进行绘制。（参见图 3.2。）我们传入了毛发纹理和毛发长度纹理，后者控制了毛发层与层之间的偏移。我们还指定了绘制的实例数量，该数量应该与创建毛发纹理时使用的层数相同。我们发现，对于我们的模型，取决于平台和分辨率，11 和 25 的计数可以产生良好的视觉效果，同时保持可行的性能。我们将纹理坐标（TexCoord）数组绑定到一个结构中，该结构能够……
 
 [Lacroix 13] Jason Lacroix. “通过 TressFX 为你的角色注入更多生命。” 于 ACM SIGGRAPH 2013 Computer Animation Festival, p. 1. New York: ACM Press, 2013.
 
@@ -7873,15 +7856,15 @@ Simon McIntosh-Smith, Amir Chohhan, Dan Curran, and Anton Lokhmotov
 
 移动 GPU 架构正在迅速演进，现在已成为完全可编程的高性能并行处理引擎。并行编程语言也在快速发展，以至于如 Khronos Group 的 OpenCL 等开放标准现在已将强大的跨平台编程工具交到了移动应用开发者的手中。
 
-在本章中，我们将介绍我们的工作，即通过 OpenCV 和 OpenGL 利用 GPU 计算，在移动 GPU 上实现实现高动态范围（HDR）计算摄影应用。HDR 摄影是移动领域的热门话题，既适用于摄影也适用于视频。
+在本章中，我们将介绍我们的工作，即通过 OpenCV 和 OpenGL 利用 GPU 计算，在移动 GPU 上实现高动态范围（HDR）计算摄影应用。HDR 摄影是移动领域的热门话题，既适用于摄影也适用于视频。
 
 我们探索了两种技术。在第一种技术中，对单张图像进行处理，以增强图像曝光极端区域的细节。在第二种技术中，将以不同曝光值拍摄的多幅图像组合，创建一个具有更大亮度动态范围的单幅图像。HDR 也可以应用于图像以实现不同的目标：作为一种图像滤镜，实时创建一系列令人兴奋的新效果，类似于 Topaz Labs 的“响应式”HDR 滤镜 [Topaz Labs 15]。
 
 这些 HDR 计算摄影应用是极其密集型的，我们已经在一系列 GPU 上优化了示例 OpenCL HDR 代码。在本章中，我们还将描述在 ARM Mali 移动 GPU 进行代码优化时采用的方法，并给出我们在这些平台上取得的性能结果。
 
-我们还分享了开发的 OpenCL/OpenGL 互操作性代码，我们认为这对读者来说是一个非常有用的资源。惊讶的是，关于如何高效实现 HDR 流水线的文献中，可用资源很少
+我们还分享了开发的 OpenCL/OpenGL 互操作性代码，我们认为这对读者来说是一个非常有用的资源。惊讶的是，关于如何高效实现 HDR 流水线的文献中，可用资源很少。
 
-## V 移动设备
+## 4.1 移动设备
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_416_0.png)
 
@@ -7891,126 +7874,135 @@ Simon McIntosh-Smith, Amir Chohhan, Dan Curran, and Anton Lokhmotov
 
 ## 4.2 背景
 
-现实场景的亮度动态范围远高于现代相机传感器所能捕捉的。数字相机的红、绿、蓝通道每个像素仅有 8 位，每个颜色通道仅存储 256 个不同的值。然而，现实场景的动态范围可达 $10^8 : 1$ 数量级，需要每个像素高达 32 位才能完全表示。
+现实场景的亮度动态范围远高于现代相机传感器所能捕捉的。数字相机的红、绿、蓝通道每个像素仅有 8 位，每个颜色通道仅存储 256 个不同的值。然而，现实场景的动态范围可达 `10^8 : 1` 数量级，需要每个像素高达 32 位才能完全表示。
 
-为了补偿其较低的动态范围（LDR），现代相机配备了先进的计算机算法，以产生高分辨率图像，并满足对更多动态范围、色彩深度和准确性日益增长。为了产生 HDR 图像，这些相机要么并发合成来自不同曝光的输入，要么按顺序拍摄多曝光图像并将它们合并。图 4.1 显示了可以这样方式捕捉的场景。图像。然而，标准显示器（如电脑显示器、电视、手机或平板屏幕）的动态范围仅为 256:1，这意味着它们无法准确显示 HDR 图像。因此，要在标准显示器上显示 HDR 图像，图像首先
+为了补偿其较低的动态范围（LDR），现代相机配备了先进的计算机算法，以产生高分辨率图像，并满足对更多动态范围、色彩深度和准确性日益增长。为了产生 HDR 图像，这些相机要么并发合成来自不同曝光的输入，要么按顺序拍摄多曝光图像并将它们合并。图 4.1 显示了可以这样方式捕捉的场景图像。然而，标准显示器（如电脑显示器、电视、手机或平板屏幕）的动态范围仅为 256:1，这意味着它们无法准确显示 HDR 图像。因此，要在标准显示器上显示 HDR 图像，图像首先需要压缩到较低的动态范围，并保留图像细节。
 
-## 4. 移动 GPU 上的高动态范围摄影
+将 HDR 图像压缩到较低动态范围的过程被称为调映射（tone mapping）。一旦 32 位 HDR 图像经过调映射，生成的 8 位 HDR 图像就可以渲染到标准显示器。图 4.2 显示了两个调映射算子（TMOs）的输出。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_417_0.png)
 
 **图 4.2.** 使用 (a) 全局和 (b) 本地调映射算子获得的 HDR 图像。
 
-需要压缩到较低的动态范围，并保留图像细节。将 HDR 图像压缩到较低动态范围的过程被称为调映射（tone mapping）。一旦 32 位 HDR 图像经过调映射，生成的 8 位 HDR 图像就可以渲染到标准显示器。图 4.2 显示了两个调映射算子（TMOs）的输出。
-
 ### 4.2.1 手机摄影
 
-如今，所有数字相机都嵌入关于每幅图像的 EXIF（交换图像格式）信息，包括光圈、曝光以及社交网络改变了人们拍照的方式。手机在过去几年进步巨大，引入了更高的像素数、更好的镜头，自2010以来，这导致了高动态范围（HDRI）领域的兴起。为了获得 HDR 图像，手机拍摄多次曝光。拍摄多曝光图像的动机是为了图像过曝光部分（如图4.1所示）。遗憾的是，大多数手机和其他手持相机尚未配备实时获取多曝光图像所需的多个镜头。因此，我们在本章中介绍的 HDR TMO 不仅在 32 位 HDR 图像上表现良好，还能突出单曝光 LDR 图像的细节，赋予其 HDR 感。
+如今，所有数字相机都嵌入关于每幅图像的 EXIF（交换图像格式）信息，包括光圈、曝光以及社交网络改变了人们拍照的方式。手机在过去几年进步巨大，引入了更高的像素数、更好的镜头，自 2010 年以来，这导致了高动态范围（HDRI）领域的兴起。为了获得 HDR 图像，手机拍摄多次曝光。拍摄多曝光图像的动机是为了图像过曝光部分（如图 4.1 所示）。遗憾的是，大多数手机和其他手持相机尚未配备实时获取多曝光图像所需的多个镜头。因此，我们在本章中介绍的 HDR TMO 不仅在 32 位 HDR 图像上表现良好，还能突出单曝光 LDR 图像的细节，赋予其 HDR 感。
 
-## 4.2.2 高效手机图像处理流水线
+### 4.2.2 高效手机图像处理流水线
 
-目前，大多数应用程序在移动设备上运行时使用 CPU 利用 SIMD 指令运行代码计算，并使用 GPU 处理图形部分（如合成和渲染到屏幕）。然而，如今的移动 GPU 本身就是完全可编程的计算单元，通过新语言如 OpenCL 或现有 API 的扩展（如 OpenGL 中最新的计算着色器），GPU 也可以帮助处理所需的计算密集型“重负载”。通过这种方式使用 GPU 可以获得更高的帧率，但对于应用程序的某些计算需求，使用 GPU 的不仅仅是性能优势。Huang 等进行的一项比较单核 CPU、多核 CPU 和 GPU 功耗的实验表明，使用 GPU 可以实现更高效的计算 [Huang et al. 09]。对于移动设备，这种能量节约转化为
+目前，大多数应用程序在移动设备上运行时使用 CPU 利用 SIMD 指令运行代码计算，并使用 GPU 处理图形部分（如合成和渲染到屏幕）。然而，如今的移动 GPU 本身就是完全可编程的计算单元，通过新语言如 OpenCL 或现有 API 的扩展（如 OpenGL 中最新的计算着色器），GPU 也可以帮助处理所需的计算密集型“重负载”。
 
- 移动设备
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_418_0.png)
-
-**图 4.3.** 通过 Topaz Adjust 实现的 HDR 效果：(a) 原始图像和 (b) HDR 图像。
-
-
-
-
-从而提高了电池续航，因此在 GPU 上进行通用计算（GPGPU）已成为移动应用程序的热点。
+通过这种方式使用 GPU 可以获得更高的帧率，但对于应用程序的某些计算需求，使用 GPU 的不仅仅是性能优势。Huang 等进行的一项比较单核 CPU、多核 CPU 和 GPU 功耗的实验表明，使用 GPU 可以实现更高效的计算 [Huang et al. 09]。对于移动设备，这种能量节约转化为提高了电池续航，因此在 GPU 上进行通用计算（GPGPU）已成为移动应用程序的热点。
 
 本章的一个目标是描述一种高效的开源流水线实现，该流水线可用于捕摄像头帧并实时显示 HDR TMO（调映射算子）的输出。本章示例的第二个目标是演示一种高效的代码框架，该框架能够最大限度地减少获取摄像头帧和渲染输出所需的时间。该流水线的设计应适用于任何需要摄像头输入并将输出渲染到显示器的图像处理应用程序。该流水线还应使创建 HDR 视频成为可能。
 
 我们在 OpenCV 中展示了我们的流水线，作为如何在移动平台上利用 GPU 计算的真实工作示例。我们利用了 OpenCV/OpenGL 的互操作性，旨在为读者提供一个工作模板，从该模板可以快速开发其他 OpenCV/OpenGL 应用。
 
+![](img/120606d35c679664e7ad5faec2ee0e8b_418_0.png)
+
+**图 4.3.** 通过 Topaz Adjust 实现的 HDR 效果：(a) 原始图像和 (b) HDR 图像。
+
 ## 4.3 调映射算子（Tone-Mapping Operators）
 
 调映射算子存在广泛。某些 TMO 设计重点在于产生符合美感的结果，而另一些则侧重于重建图像细节或最大化图像对比度。TMO 可大致分为全局算子和局部算子。
 
-全局算子是非线性函数，它们使用输入图像的亮度和其它全局变量来获得所有输入像素到输出像素的映射。每个单独的像素以相同的方式进行映射，与任何相邻像素无关。全局 TMO 的这种空间均匀的特征通常会导致局部对比度降低的意外副作用。然而，由于全局 TMO 易于实现且计算开销小（与局部 TMO 相比），它们是计算能力受限的数码相机和手持设备的理想备选。
+全局算子是非线性函数，它们使用输入图像的亮度和其他全局变量来获得所有输入像素到输出像素的映射。每个单独的像素以相同的方式进行映射，与任何相邻像素无关。全局 TMO 的这种空间均匀的特征通常会导致局部对比度降低的意外副作用。然而，由于全局 TMO 易于实现且计算开销小（与局部 TMO 相比），它们是计算能力受限的数码相机和手持设备的理想备选。
 
-局部 TMO 对原始图像中的每个像素都有不同的映射。这些算子使用的函数根据图像的局部特征随每个像素而变化。这些空间上变化的局部算子的计算速度比全局算子慢得多，实现也更困难，并且经常会导致图像某些区域产生伪影，使输出看起来看起来不。。然而，如果实现得当，它们通常提供比全局 TMO 更好的结果，因为人类视觉对局部对比度非常敏感。
+局部 TMO 对原始图像中的每个像素都有不同的映射。这些算子使用的函数根据图像的局部特征随每个像素而变化。这些空间上变化的局部算子的计算速度比全局算子慢得多，实现也更困难，并且经常会导致图像某些区域产生伪影，使输出看起来不自然。然而，如果实现得当，它们通常提供比全局 TMO 更好的结果，因为人类视觉对局部对比度非常敏感。
 
 图 4.2 显示了对通过合成图 4.1 中的 LDR 图像获得的 HDR 图像应用全局和局部 TMO 的结果。尽管全局 TMO 能够突出每次曝光的细节，但局部 TMO 的结果更符合美感，因为图像中有更多的局部对比度。
 
-Reinhard 的全局 TMO。图像的色调范围描述了图像最亮部分和最暗部分之间的色调数量。Reinhard 等人实现了 HDRI 最广泛使用的全局 TMO 之一，它计算输出图像的色调范围 [Reinhard et al. 02]。该色调范围是基于原始图像中的对数亮度值计算的。
+### Reinhard 的全局 TMO
+
+图像的色调范围描述了图像最亮部分和最暗部分之间的色调数量。Reinhard 等人实现了 HDRI 最广泛使用的全局 TMO 之一，它计算输出图像的色调范围 [Reinhard et al. 02]。该色调范围是基于原始图像中的对数亮度值计算的。
 
 算法首先计算整个图像的平均亮度。这个平均值以及另一个参数用于缩放原始亮度。然后，为了让图像具有更多对比度，这种方法通过将高亮度限制为原始图像中的最小亮度来使其经常“溢出”，然后相应地缩放所有像素。
 
 对于许多 HDR 图像，该算子足以保留低对比度区域的细节，将较高的亮度压缩到显示范围内。然而，对于极高动态范围，特别是对比度变化的情况下，重要的细节仍然可能会丢失。
 
-Reinhard 的全局 TMO 使用场景的关键值（key value）来设置输出图像的色调范围。场景的关键值可以使用对数亮度 $L_w$ 进行近似。
+Reinhard 的全局 TMO 使用场景的关键值（key value）来设置输出图像的色调范围。场景的关键值可以使用对数亮度 `L_w` 进行近似。
 
-```
-$L_w = \exp\left(\frac{1}{N}\sum_{x,y} \log(\delta + L_w(x, y))\right)$
-```
-
-$L_w(x, y)$ 是像素 $(x, y)$ 的亮度，$N$ 是图像中的像素总数，$\delta$ 是一个非常小的值，以避免在图像中存在纯黑像素时对 0 取对数。在近似场景的关键值后，我们需要将其映射到中间灰。对于光线良好的图像，Reinhard 建议在 1 的刻度上将 0.18 作为中间灰，结果如下：
-
-```
-$L(x, y) = \frac{a}{L_w}L_w(x, y), \quad\quad (4.1)$
+```math
+L_w = \exp\left(\frac{1}{N}\sum_{x,y} \log(\delta + L_w(x, y))\right)
 ```
 
-$L(x, y)$ 是缩放后的亮度，$a = 0.18$。与基于胶片的摄影一样，如果图像具有低关键值，我们希望将中间灰值 $\underline{L_w}$ 映射到高值 $a$ 值，以显出图像较暗的部分。同样，如果图像具有高关键值，我们希望将 $\overline{L_w}$ 映射到较低的 $a$ 值，以获得场景较亮部分的对比度。在大多数自然场景中，高亮度值的出现频率很低，大多数像素值具有正常的动态范围。方程 (4.1) 没有考虑到这一点并线性地缩放了所有值。
+`L_w(x, y)` 是像素 `(x, y)` 的亮度，`N` 是图像中的像素总数，`δ` 是一个非常小的值，以避免在图像中存在纯黑像素时对 0 取对数。
+
+在近似场景的关键值后，我们需要将其映射到中间灰。对于光线良好的图像，Reinhard 建议在 1 的刻度上将 0.18 作为中间灰，结果如下：
+
+```math
+L(x, y) = \frac{a}{L_w}L_w(x, y), \quad\quad (4.1)
+```
+
+`L(x, y)` 是缩放后的亮度，`a = 0.18`。与基于胶片的摄影一样，如果图像具有低关键值，我们希望将中间灰值 `\underline{L_w}` 映射到高值 `a` 值，以显出图像较暗的部分。同样，如果图像具有高关键值，我们希望将 `\overline{L_w}` 映射到较低的 `a` 值，以获得场景较亮部分的对比度。
+
+在大多数自然场景中，高亮度值的出现频率很低，大多数像素值具有正常的动态范围。方程 (4.1) 没有考虑到这一点并线性地缩放了所有值。
+
 Reinhard 的全局 TMO 现在可以定义为：
 
-```
-$L_d(x, y) = L_w(x, y)\left(1 + \frac{L(x, y)}{L_{white}}\right), \quad\quad (4.2)$
-```
-
-## 4 移动 GPU 上的高动态范围计算摄影
-
-$L_{white}$ 是我们希望溢出的最小亮度。虽然 $L_{white}$ 可以是另一个用户控制的参数，在此实现中，我们将设置为图像中的最大亮度 $L_{max}$。这将防止任何溢出；然而，在 $L_{max} < 1$ 的情况下，这将导致对比度增强，如前。算子有一个用户控制的参数 $a$。这是关键值，指的是场景映射到的中间灰值。本质上，将 $a$ 设置为高值具有压缩黑暗区域动态范围的效果，为较亮区域提供更多的动态范围。同样，减少 $a$ 会减少较亮区域的动态范围，并在场景较暗的部分显示更多对比度。由于场景的亮度是非常主观的，
-
-全局 TMO 由于其简单性和有效性，是实现最广泛 TMO 之一。它在压缩亮度值的同时突出了低对比度区域的细节。此外，方程 (4.1) 和 (4.2) 是对每个像素独立执行的，因此使用 OpenCL 实现数据并行版本以利用 GPU 的计算能力非常简单
-
-Reinhard 的局部 TMO。尽管全局 TMO 在突出大多数图像细节方面良好，但在高动态范围下仍然丢失细节。Reinhard 的局部 TMO 提出了一种色调重建算法，旨在通过应用减曝（dodging）和加光（burning）来强调这些细节。
-
-减曝和加光是传统摄影中使用的一项技术，涉及在冲洗过程中对打印部分部分限制光（减曝）或增加光（加光）。Reinhard 等人通过根据每个像素的邻域自动处理数字图像，将其等同于为每个像素寻找局部关键值（即方程 (4.1) 中的 $a$），这可以用于确定区域所需的减曝和加光量。通过关键值 $a$，每个区域的大小也可以根据图像该区域的对比度而变化。为了找到计算 $a$ 的最佳尺寸区域，Reinhard 的方法使用了多尺度中心抑制（center-surround）函数。中心抑制函数通过减去两个高斯模糊图像来实现。对于这种 TMO，Reinhard 选择实现为 Blommaert 亮度感知模型所提出的中心抑制函数 [Blommaert and Martens 90]。该函数使用如下形式的高斯分布构建：
-
-```
-$R_i(x, y, s) = \frac{1}{\pi(\alpha_s)^2} \exp\left(-\frac{x^2+y^2}{(\alpha_s)^2}\right)$
+```math
+L_d(x, y) = L_w(x, y)\left(1 + \frac{L(x, y)}{L_{white}}\right), \quad\quad (4.2)
 ```
 
-这种圆形对称分布围绕每个周围不同的尺度 $s$ 构建
+`L_{white}` 是我们希望溢出的最小亮度。虽然 `L_{white}` 可以是另一个用户控制的参数，在此实现中，我们将设置为图像中的最大亮度 `L_{max}`。这将防止任何溢出；然而，在 `L_{max} < 1` 的情况下，这将导致对比度增强，如前。
 
+算子有一个用户控制的参数 `a`。这是关键值，指的是场景映射到的中间灰值。本质上，将 `a` 设置为高值具有压缩黑暗区域动态范围的效果，为较亮区域提供更多的动态范围。同样，减少 `a` 会减少较亮区域的动态范围，并在场景较暗的部分显示更多对比度。由于场景的亮度是非常主观的，全局 TMO 由于其简单性和有效性，是实现最广泛 TMO 之一。
 
-图像中的像素 $(x, y)$。在 Bloommaert 的中心-包围函数中，高斯分布与图像进行卷积，从而使得每个像素 $(x, y)$ 得到关于尺度 $s$ 和亮度 $L(x, y)$ 的函数 $V_i$：
+它在压缩亮度值的同时突出了低对比度区域的细节。此外，方程 (4.1) 和 (4.2) 是对每个像素独立执行的，因此使用 OpenCL 实现数据并行版本以利用 GPU 的计算能力非常简单。
 
+### Reinhard 的局部 TMO
+
+尽管全局 TMO 在突出大多数图像细节方面良好，但在高动态范围下仍然丢失细节。Reinhard 的局部 TMO 提出了一种色调重建算法，旨在通过应用减曝（dodging）和加光（burning）来强调这些细节。
+
+减曝和加光是传统摄影中使用的一项技术，涉及在冲洗过程中对打印部分限制光（减曝）或增加光（加光）。Reinhard 等人通过根据每个像素的邻域自动处理数字图像，将其等同于为每个像素寻找局部关键值（即方程 (4.1) 中的 `a`），这可以用于确定区域所需的减曝和加光量。
+
+通过关键值 `a`，每个区域的大小也可以根据图像该区域的对比度而变化。为了找到计算 `a` 的最佳尺寸区域，Reinhard 的方法使用了多尺度中心抑制（center-surround）函数。中心抑制函数通过减去两个高斯模糊图像来实现。
+
+对于这种 TMO，Reinhard 选择实现为 Blommaert 亮度感知模型所提出的中心抑制函数 [Blommaert and Martens 90]。该函数使用如下形式的高斯分布构建：
+
+```math
+R_i(x, y, s) = \frac{1}{\pi(\alpha_s)^2} \exp\left(-\frac{x^2+y^2}{(\alpha_s)^2}\right)
 ```
-$V_i(x, y, s) = L(x, y) \otimes R_i(x, y, s). \quad (4.3)$
+
+这种圆形对称分布围绕图像中的像素 `(x, y)`，针对每个周围不同的尺度 `s` 构建。
+
+在 Blommaert 的中心-包围函数中，高斯分布与图像进行卷积，从而使得每个像素 `(x, y)` 得到关于尺度 `s` 和亮度 `L(x, y)` 的函数 `V_i`：
+
+```math
+V_i(x, y, s) = L(x, y) \otimes R_i(x, y, s). \quad (4.3)
 ```
 
-由于该响应涉及两个函数，可以在空间域中执行，也可以在傅里叶域中进行乘法以提高效率。本章描述的 GPU 流水线使用使用映射（mipmaps）作为高斯分布的替代方案。公式 (4.4) 是最终的
+由于该响应涉及两个函数，可以在空间域中执行，也可以在傅里叶域中进行乘法以提高效率。本章描述的 GPU 流水线使用映射（mipmaps）作为高斯分布的替代方案。公式 (4.4) 是最终的：
 
+```math
+V(x, y, s) = \frac{V_1(x, y, s) - V_2(x, y, s)}{2^{a/s} + V_1(x, y, s)}. \quad (4.4)
 ```
-$V(x, y, s) = \frac{V_1(x, y, s) - V_2(x, y, s)}{2^{a/s} + V_1(x, y, s)}. \quad (4.4)$
-```
 
-其中 $V_1$ 是中心响应函数，$V_2$ 是使用公式 (4.3) 获得的包围响应。分母中的 $2^{a/s}$ 项防止了 $V_1$ 应用于零时出现除以零。隐藏 $V_1$ 细节的动机将在后面讨论。与全局 TMO 类似，$a$ 是场景的关键值，$\varphi$ 是锐化参数，而 $s$ 是计算响应函数的尺度。
 
-公式 (4.4) 表达的中心-包围函数是在多个尺度 $s$ 上计算的，以找到最优尺度 $s_m$。这等于为每个像素确定合适大小的邻域，因此在减光扩散（dodging-and-burning）技术中起着重要作用。理想大小的邻域其内部对比度应该很低，但周围区域会有更高的对比度。中心-包围函数计算中心响应 $V_1$ 与包围响应 $V_2$ 之间的差异。对于亮度值相似的区域，这些值是相同的，但在高对比度区域它们会有所不同。从最小尺度开始，局部 TMO 选择第一个满足以下条件的尺度 $s_m$：
+
+其中`$V_1$`是中心响应函数，`$V_2$`是使用公式`(4.3)`获得的包围响应。分母中的`$2^{a/s}$`项防止了`$V_1$`应用于零时出现除以零。隐藏`$V_1$`细节的动机将在后面讨论。与全局 TMO 类似，`$a$`是场景的关键值，`$\varphi$`是锐化参数，而`$s$`是计算响应函数的尺度。
+
+公式`(4.4)`表达的中心-包围函数是在多个尺度`s`上计算的，以找到最优尺度`$s_m$`。这等于为每个像素确定合适大小的邻域，因此在减光扩散（dodging-and-burning）技术中起着重要作用。理想大小的邻域其内部对比度应该很低，但周围区域会有更高的对比度。中心-包围函数计算中心响应`$V_1$`与包围响应`$V_2$`之间的差异。对于亮度值相似的区域，这些值是相同的，但在高对比度区域它们会有所不同。从最小尺度开始，局部 TMO 选择第一个满足以下条件的尺度`$s_m$`：
 
 ```
 $|V(x, y, s_m)| < \varepsilon, \quad (4.5)$
 ```
 
-其中 $\varepsilon$ 是一个控制参数
+其中`$\varepsilon$`是一个控制参数。
 
 ```
 $L_d(x, y) = \frac{L(x, y)}{1 + V_1(x, y, s_m)}. \quad (4.6)$
 ```
 
-较明亮区域中的暗像素将满足 $L < V_1$。在这种情况下，公式 (4.6) 将减少该像素的 $L_d$，从而起到增强该区域对比度的效果。同样，如果像素位于较暗的区域（$L > V_1$），局部 TMO 将增加 $L_d$。$V_l(x, y, s_m)$ 在控制图像中合适的局部对比度方面起着重要作用。这归结为为每个像素选择正确的 $s_m$。如果 $s_m$ 太小，$V_l$ 将接近 $L$，公式 (4.6) 将退化为全局算子。然而，如果 $s_m$ 太大，生成的色调映射图像将在亮区域周围产生光晕伪影。Reinhard 的局部 TMO 可以是预定的。他们的方法没有建议任何特定的尺度集合；然而，Akyüz [12] 使用尺度集合 $\{1, 2, 4, 8, 16, 32, 64\}$ 进行实现。为了找到最优的 $s_m$，我们从最小尺度开始，为每个尺度单独计算包围响应。为了使算法具有计算性，Reinhard 的方法建议将下一个更高尺度的中心尺寸设置为当前包围的大小；由于此实现使用了使用映射，下一个使用映射可以简单设置为包围。
+较明亮区域中的暗像素将满足`$L < V_1$`。在这种情况下，公式`(4.6)`将减少该像素的`$L_d$`，从而起到增强该区域对比度的效果。同样，如果像素位于较暗的区域（`$L > V_1$`），局部 TMO 将增加`$L_d$`。`$V_l(x, y, s_m)$`在控制图像中合适的局部对比度方面起着重要作用。这归结为为每个像素选择正确的`$s_m$`。如果`$s_m$`太小，`$V_l$`将接近`$L$`，公式`(4.6)`将退化为全局算子。然而，如果`$s_m$`太大，生成的色调映射图像将在亮区域周围产生光晕伪影。Reinhard 的局部 TMO 可以是预定的。他们的方法没有建议任何特定的尺度集合；然而，Akyüz [12] 使用尺度集合`$\{1, 2, 4, 8, 16, 32, 64\}$`进行实现。为了找到最优的`$s_m$`，我们从最小尺度开始，为每个尺度单独计算包围响应。为了使算法具有计算性，Reinhard 的方法建议将下一个更高尺度的中心尺寸设置为当前包围的大小；由于此实现使用了使用映射，下一个使用映射可以简单设置为包围。
 
-与全局算子一样，$a$ 仍然是一个用户控制的变量，允许摄影师为场景的明暗部分获得更多对比度，同时减少另一部分的对比度。局部 TMO 带有几个参数 $\varphi$ 和 $\varepsilon$。在公式 (4.5) 中，$\varepsilon$ 作为阈值来寻找邻域合适的 $s_m$。较小的 $\varepsilon$ 会导致 $s_m$ 较大并导致整体图像对比度增加，因为较大尺度上的对比度更高。另一方面，$\varphi$ 作为去增强参数。增加 $\varphi$ 的效果大相同；但减小 $\varepsilon$ 的影响仅在较小尺度下可见，因为 $\varphi$ 被除以 $s^2$。
+与全局算子一样，`$a$`仍然是一个用户控制的变量，允许摄影师为场景的明暗部分获得更多对比度，同时减少另一部分的对比度。局部 TMO 带有几个参数`$\varphi$`和`$\varepsilon$`。在公式`(4.5)`中，`$\varepsilon$`作为阈值来寻找邻域合适的`$s_m$`。较小的`$\varepsilon$`会导致`$s_m$`较大并导致整体图像对比度增加，因为较大尺度上的对比度更高。另一方面，`$\varphi$`作为去增强参数。增加`$\varphi$`的效果大相同；但减小`$\varepsilon$`的影响仅在较小尺度下可见，因为`$\varphi$`被除以`s^2`。
 
 Reinhard 的局部 TMO 使传统的摄影技术用于增强数字图像的对比度。局部和全局算子背后的概念大体相同；但局部 TMO 使用像素邻域的信息来寻找合适的“局部键值”，并利用它来缩放像素的亮度。局部操作本质上是计算密集型的，因为每个像素都需要进行多次卷积以寻找合适的邻域。这使得局部 TMO 在实时实现上更具挑战性。在此实现中，为了减少计算，使用 OpenGL API 在多个级别生成使用映射，而不是使用计算更密集型的高斯内核方法。
 
-直方图均衡化。使用直方图均衡化增强对比度是增加许多图像全局对比度的简单方法之一，特别是当这些图像亮度值之间差异不显著时。直方图均衡化本质上是将这些密集分布的值散布到整个亮度范围（通常为 8 位），从而增加对比度。直方图均衡化计算图像亮度值的直方图，计算其累积分布函数 (CDF)，然后用 CDF 的展开版本替换原始直方图。直方图将在整个范围内均匀分布 [iCAMP 10]。
+### 直方图均衡化
+
+使用直方图均衡化增强对比度是增加许多图像全局对比度的简单方法之一，特别是当这些图像亮度值之间差异不显著时。直方图均衡化本质上是将这些密集分布的值散布到整个亮度范围（通常为 8 位），从而增加对比度。直方图均衡化计算图像亮度值的直方图，计算其累积分布函数（CDF），然后用 CDF 的展开版本替换原始直方图。直方图将在整个范围内均匀分布 [iCAMP 10]。
 
 直方图均衡化不是 HDR TMO；它可能是计算密集型的。我们在随附本章节的代码中包含了该技术的示例（可在 CRC Press 网站获取），以证明我们的框架不仅限于 HDRI TMO。
 
@@ -8020,20 +8012,13 @@ Reinhard 的局部 TMO 使传统的摄影技术用于增强数字图像的对比
 
 Sing Kang 等人提出了一种生成 HDR 视频的方法，通过拍摄期间自动确定时间曝光、捕捉相邻图像之间的运动以及为了查看结果进行色调映射。我们在本文中采取了不同的方法，因为我们将关注处理单曝光图像，而不是多个不同的曝光。Kang 等人提出的技术是有效的，但帧率受到相机变化曝光速率限制。曝光之间的运动可能会成为问题，因此 Kang 的方法需要一种考虑图像间运动的算法。他们的实现对于实时图像处理来说太慢了。
 
-局部算子中的 TMO 是计算密集型的，目前需要 GPU 实现才能实时运行。目前已经有了 Reinhard 全局和局部 TMO 的实时实现 [Akyuz 12, Kraczyk et al. 05, Chiu et al. 11, Kiser et al. 12]。然而，Akyüz 在 [Akyuz 12] 中提出的实时 OpenGL 实现与本研究课题最相关。Akyüz 为 GPU 展示了一套用于 Reinhard 全局和局部 TMO 的 HDRI 流水线。尽管该实现是基于 OpenGL（而不是 OpenCL），但它为修改算法以适应 GPGPU 洞见。我们也可以使用来自
+局部算子中的 TMO 是计算密集型的，目前需要 GPU 实现才能实时运行。目前已经有了 Reinhard 全局和局部 TMO 的实时实现 [Akyuz 12, Kraczyk et al. 05, Chiu et al. 11, Kiser et al. 12]。然而，Akyüz 在 [Akyuz 12] 中提出的实时 OpenGL 实现与本研究课题最相关。Akyüz 为 GPU 展示了一套用于 Reinhard 全局和局部 TMO 的 HDRI 流水线。尽管该实现是基于 OpenGL（而不是 OpenCL），但它为修改算法以适应 GPGPU 洞见。我们也可以使用来自 Akyuz 的工作作为本章中介绍 OpenCL 实现的效率基准。
 
+## 4.5 移动 GPU 上的高动态范围计算摄影
 
+GPU 或 FPGA 的板载 DRAM 通常被映射为全局内存，以及 GPU 的内存。虽然摄像头输入存储在 GPU 中，但现有的图像处理应用程序倾向于将数据传输到主机设备（CPU），在主机上串行处理数据并使用 OpenGL 将其渲染到显示器。显然，这个过程会导致 CPU 和 GPU 之间发生频繁且低效的数据传输。
 
-
-## 4. 移动 GPU 上的高动态范围计算摄影
-
-Akyuz 的工作作为本章中介绍 OpenCL 实现的效率基准。
-
-GPU 或 FPGA 的板载 DRAM 通常被映射为全局内存。
-
-以及 GPU 的内存。虽然摄像头输入存储在 GPU 中，但现有的图像处理应用程序倾向于将数据传输到主机设备（CPU），在主机上串行处理数据并使用 OpenGL 将其渲染到显示器。显然，这个过程会导致 CPU 和 GPU 之间发生频繁且低效的数据传输。
-
-我们需要一种能够避免 GPU 内存与主机内存之间任何不必要的内存传输的方法。OpenCV/OpenGL 互操作性支持这种方法。可以使用 Android 的 `SurfaceTexture` 对象以 OpenGL ES 纹理的形式获取摄像头输入。然后，这允许程序员从 OpenGL 纹理创建纹理图像，这意味着摄像头不需要传输到主机，而是从图像采集到 OpenGL 内核输出渲染到屏幕的整个过程中一直保留在 GPU 中。此外，即使在 GPU 上，当我们在 OpenCL 和 OpenGL 之间切换时，数据实际上并没有移动；而是所有权从 OpenGL 变为 OpenCL，反反亦之。为了建立这条流水线，需要建立 OpenCL 和 OpenGL ES 之间的互操作性。
+我们需要一种能够避免 GPU 内存与主机内存之间任何不必要的内存传输的方法。OpenCV/OpenGL 互操作性支持这种方法。可以使用 Android 的`SurfaceTexture`对象以 OpenGL ES 纹理的形式获取摄像头输入。然后，这允许程序员从 OpenGL 纹理创建纹理图像，这意味着摄像头不需要传输到主机，而是从图像采集到 OpenGL 内核输出渲染到屏幕的整个过程中一直保留在 GPU 中。此外，即使在 GPU 上，当我们在 OpenCL 和 OpenGL 之间切换时，数据实际上并没有移动；而是所有权从 OpenGL 变为 OpenCL，反之亦然。为了建立这条流水线，需要建立 OpenCL 和 OpenGL ES 之间的互操作性。
 
 ## 4.6.2 EGL
 
@@ -8043,11 +8028,11 @@ GPU 或 FPGA 的板载 DRAM 通常被映射为全局内存。
 
 ## 4.7 使用 OpenCV 和 OpenGL ES 实现 HDR 流水线
 
-TMO（色调映射算）作用于通过合成多个不同曝光的 LDR 图像获取的 32 位 HDR 图像。然后对该 32 位 HDR 图像进行处理，获得结合了每个原始 LDR 图像细节的 8 位 HDR 图像。
+TMO（色调映射算子）作用于通过合成多个不同曝光的 LDR 图像获取的 32 位 HDR 图像。然后对该 32 位 HDR 图像进行处理，获得结合了每个原始 LDR 图像细节的 8 位 HDR 图像。
 
 # 4 移动端 GPU 上的高动态范围计算摄影
 
-为了实现 HDRI 流水线的实时处理，需要多个摄像头，每个摄像头捕捉不同曝光的图像，从而在它们之间捕捉场景的完整动态范围。然而，如前所述，我们的目标是在带有单摄像头的智能手机上实现实现，因此我们只有单曝光图像可以作为实时流水线的输入。本节将讨论使用 OpenCL 的 GPU 流水线设计和实现细节，以便在单曝光图像上实现 HDR 效果。
+为了实现 HDRI 流水线的实时处理，需要多个摄像头，每个摄像头捕捉不同曝光的图像，从而在它们之间捕捉场景的完整动态范围。然而，如前所述，我们的目标是在带有单摄像头的智能手机上实现，因此我们只有单曝光图像可以作为实时流水线的输入。本节将讨论使用 OpenCL 的 GPU 流水线设计和实现细节，以便在单曝光图像上实现 HDR 效果。
 
 对于本章后续介绍的示例 HDR 流水线，我们使用了 OpenCL v1.1，在编写时所有移动 GPU 厂商都支持该版本。我们使用了 OpenGL ES 4.2，这是 Android 系统目前支持的 GL 版本。我们还用 C/C++ 编写了代码，Python 虽然存在但无法提供必要的性能（Java 和 Python 的 OpenCL/GL 绑定）。
 
@@ -8057,68 +8042,70 @@ TMO（色调映射算）作用于通过合成多个不同曝光的 LDR 图像获
 
 这是一种常用方法。例如，Seng 使用 Photomatix [Seng 10] 从单个 RAW 图像手动创建了一组过曝和欠曝的图像。他使用 Photomatix 的 HDR 功能对伪欠曝和伪过曝图像进行合成和色调映射，以创建伪 HDR 图像。本节将讨论如何自动化这种方法。图 4.7 显示了使用单曝光图像获取伪 HDR 图像的改进流水线。
 
-- 步骤 1：对比度调整。为了在我们的伪 HDR 流水中使用 Seng 的方法，首先需要通过调整良好曝光原始图像的对比度来创建多曝光图像。在这里，我们创建多个图像，使每个输出图像突出特定动态范围内的细节。为了我们的目的，我们使用 Photomatix 创建输入图像的欠曝和过曝版本。
+- **步骤 1：对比度调整。** 为了在我们的伪 HDR 流水中使用 Seng 的方法，首先需要通过调整良好曝光原始图像的对比度来创建多曝光图像。在这里，我们创建多个图像，使每个输出图像突出特定动态范围内的细节。为了我们的目的，我们使用 Photomatix 创建输入图像的欠曝和过曝版本。
+- **步骤 2：图像合成。** 为了获得 HDR 图像，首先合成场景的多曝光图像。HDR 像素`$I_j$`可以如下式所示：
 
-- 步骤 2：图像合成。为了获得 HDR 图像，首先合成场景的多曝光图像。HDR 像素 $I_j$ 可以如下式所示：
-
-```
+```text
 $I_j = \frac{\sum_{i=1}^{N}\frac{p_{ij}w(p_{ij})}{t_i}}{\sum_{i=1}^{N}w(p_{ij})}\quad (4.7)$
 ```
 
 ## V 移动设备
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_432_0.png)
+![伪 HDR 流水线](img/120606d35c679664e7ad5faec2ee0e8b_432_0.png)
 
 **图 4.7.** 具有一系列对比度的多个输入图像的伪 HDR 流水线。
 
-其中 $N$ 是 LDR 图像的数量，$w(p_{ij})$ 是像素 $i,j$ 的权重，$t_i$ 是 LDR 图像 $i$ 的曝光时间。
+其中`$N$`是 LDR 图像的数量，`$w(p_{ij})$`是像素`$i,j$`的权重，`$t_i$`是 LDR 图像`$i$`的曝光时间。
 
-公式 (4.7) 的串行实现非常直观，因此不再给出。算法简单地遍历每个像素，计算其亮度，然后使用公式 (4.7) 合成 32 位图像。（注：此处原文存在大量重复段落，已按要求去重并保留核心逻辑）
+公式`(4.7)`的串行实现非常直观，因此不再给出。算法简单地遍历每个像素，计算其亮度，然后使用公式`(4.7)`合成 32 位图像。
 
-公式 (4.7) 的串行实现非常直观，因此不再给出。算法简单地遍历每个像素，计算其亮度，然后使用公式 (4.7) 合成 32 位图像。
-
-（此处省略重复的描述...）
-
-步骤 3：对比度调整自动化。我们现在有了 32 位图像。之前描述的三个色调映射算法现在可以生成 8 位  。
+**步骤 3：对比度调整自动化。** 我们现在有了 32 位图像。之前描述的三个色调映射算法现在可以生成 8 位图像。
 
 ## 4.7.2 色调映射算子
 
 本节将描述三种色调映射算法的 OpenCL 实现。
 
-直方图均衡。直方图均衡算法首先计算图像的亮度。创建直方图的累积分布函数 (CDF)，从而为图像创建新的亮度值。
+### 直方图均衡
 
-亮度直方图。在 OpenCL 中，工作组之间的全局内存写入无法同步。因此，不能使用全局直方图数组来积累结果，因为会导致工作项之间的竞态。相反，使用了本地直方图数组——每组一个。这些组直方图的结果被写入全局内存，由单独的内核安全地合并为一个直方图。
+直方图均衡算法首先计算图像的亮度。创建直方图的累积分布函数（CDF），从而为图像创建新的亮度值。
 
-执行此部分直方图的代码包含在列表 4.3（参见 `partial_hist` 和 `merge_hist`）。它们接收一个 LDR 图像作为
+#### 亮度直方图
 
+在 OpenCL 中，工作组之间的全局内存写入无法同步。因此，不能使用全局直方图数组来积累结果，因为会导致工作项之间的竞态。相反，使用了本地直方图数组——每组一个。这些组直方图的结果被写入全局内存，由单独的内核安全地合并为一个直方图。
 
+执行此部分直方图的代码包含在列表 4.3（参见`partial_hist`和`merge_hist`）。它们接收一个 LDR 图像作为输入，并为每个工作项（work item）分配一个像素，计算每个像素的亮度值。一旦计算出亮度值，局部直方图数组`local_hist`中对应该值的索引就会加 1。为了确保不同工作项之间的正确同步，在写入共享的局部`local_hist`数组之前设置了一个屏障（barrier）。一旦`local_hist`数组被修改，结果将写入全局部分直方图数组。`merge_hist`内核将这些部分直方图合并在一起。该内核以全局大小 256 执行，以便在工作项与图像直方图的索引之间建立一一对应关系。对于最后一个内核，每个工作项计算对应于该工作项 ID 的索引值的所有部分直方图之和。一旦计算出和，该工作项的最终直方图值将设置为该和。
 
+#### 累积分布函数
 
-# 移动设备
+计算累积分布函数的操作并不适合 GPGPU，因为计算其所需的算法具有顺序性特征。若干 OpenCL SDK 提供了并行扫描（parallel scan）的实现，可以利用它来计算直方图的累积分布函数。然而，由于直方图的大小仅为 256，因此顺序计算此内容的计算开销并不大。
+
+#### 直方图均衡
+
+一旦计算出原始直方图的 CDF，就可以用它计算每个像素的新亮度值；见列表 4.3。使用 OpenCL 图像从图像获取 RGB 像素，它在第 14 行被转换为 HSV 格式。使用之前讨论的公式，我们随后计算该像素的均衡后的亮度值。具有修改后的 V 值的 HSV 值随后在第 19 行转换为 RGB，然后将结果写入图像。
+
+与普通内核（kernels）不同，此内核是在 2D 中执行的。这是因为输入图像是 2D 纹理图像，而不是 1D 缓冲区。
 
 ```cpp
-1 const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE 
-      CLK_ADDRESS_NONE | CLK_FILTER_NEAREST;
+const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE
+    CLK_ADDRESS_NONE | CLK_FILTER_NEAREST;
 
-4 // 使用修改后的
-// 亮度 CDF 执行直直方图均衡化的内核。
-kernel void histogram_equalisation ( read_only image2d_t 
-      input_image,
-      write_only image2d_t output_image,
-      global uint* brightness_cdf) {
+// 使用修改后的亮度 CDF 执行直方图均衡化的内核。
+kernel void histogram_equalisation(
+    read_only image2d_t input_image,
+    write_only image2d_t output_image,
+    global uint* brightness_cdf
+) {
     int2 pixel;
     float3 pixel;
-    for (pos = get_global_id(0); pos.y < HEIGHT; pos.x < WIDTH; pos.x += 
-        pos.x = get_global_id(1)); pos.y += 
+    for (pos = get_global_id(0); pos.y < HEIGHT; pos.x < WIDTH; pos.x +=
+        pos.x = get_global_id(1)); pos.y +=
         pixel = read_image(image, sampler, pixel);
-        hsv = HSV(pixel); //转换为 HSV 以获取色调和
-            //饱和度
+        hsv = HSV(pixel); // 转换为 HSV 以获取色调和饱和度
 
-        hsv.z = ((HIST_SIZE-1) * brightness_cdf[(int)hsv.z] 
-              - brightness_cdf[0]);
+        hsv.z = ((HIST_SIZE - 1) * brightness_cdf[(int)hsv.z]
+            - brightness_cdf[0]);
 
-        pixel = RGB(hsv); // 使用修改后的亮度将
-            // 转回 RGB
+        pixel = RGB(hsv); // 使用修改后的亮度转回 RGB
 
         write_image2(output_image, pos, pixel);
     }
@@ -8127,33 +8114,29 @@ kernel void histogram_equalisation ( read_only image2d_t
 
 **列表 4.3.** 用于均衡图像直方图的 OpenCL 内核。
 
-输入，并为每个工作项（work item）分配一个像素，计算每个像素的亮度值。一旦计算出亮度值，局部直方图数组 `local_hist` 中对应该值的索引就会加1。为了确保不同工作项之间的正确同步，在写入共享的局部 `local_hist` 数组之前设置了一个屏障（barrier）。一旦 `local_hist` 数组被修改，结果将的结果写入全局部分直方图数组。`merge_hist` 内核将这些部分直方图合并在一起。该内核以全局大小 256 执行，以便在工作项与图像直方图的索引之间建立一一对应关系。对于最后一个内核，每个工作项计算对应于该工作项 ID 的索引值的所有部分直方图之和。一旦计算出和，该工作项的最终直方图值将设置为该和。
-
-累积分布函数。计算累积分布函数的操作并不适合 GPGPU，因为计算其所需的算法具有顺序性特征。若干 OpenCL SDK 提供了并行扫描（parallel scan）的实现，可以利用它来计算直方图的累积分布函数。然而，由于直方图的大小仅为 256，因此顺序计算此内容的计算开销并不大。
-
-直方图均衡。一旦计算出原始直方图的 CDF，就可以用它计算每个像素的新亮度值；见列表 4.3。使用 OpenCL 图像从图像获取 RGB 像素，它在第 14 行被转换为 HSV 格式。使用之前讨论的公式，我们随后计算该像素的均衡后的亮度值。具有修改后的 V 值的 HSV 值随后在第 19 行转换为 RGB，然后将结果写入图像。
-
-与普通内核（kernels）不同，此内核是在 2D 中执行的。这是因为输入图像是 2D 纹理图像，而不是 1D 缓冲区。
-
 ## 4.7.3 Reinhard 全局色调算子
 
-Reinhard 的全局 TMO 遍历整个图像两次：一次用于计算 $L_{max}$ 和 $L_{w}$，第二次用于根据这些值和场景的关键值 $(a)$ 调整每个像素。
+Reinhard 的全局 TMO 遍历整个图像两次：一次用于计算`$L_{max}$`和`$L_{w}$`，第二次用于根据这些值和场景的关键值`$(a)$`调整每个像素。
 
-计算 $L_{max}$ 和 $L_{w}$。如所述，场景的 $L_{max}$ 是最大的亮度值，而 $L_{w}$ 是场景的平均对数亮度。计算这些值是简单的；然而，要使用 OpenCL 内核获取它们，我们必须对整个图像进行归约（reduction）。如 [Catarano 10] 所述，执行归约最快的方法是两个阶段。在这里，每个工作项 $i$ 对以下索引执行归约操作：
+### 计算`$L_{max}$`和`$L_{w}$`
 
-```
-${i + n \times global\_size \mid (i + n \times global\_size) < array\_size\}, \forall n \in N.
+如所述，场景的`$L_{max}$`是最大的亮度值，而`$L_{w}$`是场景的平均对数亮度。计算这些值是简单的；然而，要使用 OpenCL 内核获取它们，我们必须对整个图像进行归约（reduction）。如 [Catarano 10] 所述，执行归约最快的方法是两个阶段。在这里，每个工作项`$i$`对以下索引执行归约操作：
+
+```text
+${i + n \times global\_size \mid (i + n \times global\_size) < array\_size\}, \forall n \in N.`
 ```
 
 该方程的结果存储在局部数组中，并在该区域执行归约。该阶段归约的输出是每个工作组（work group）的一个部分归约。两阶段归约的第二阶段需要执行一个独立的内核，它仅需对这些部分结果执行归约。
 
-内核的输入是一个 2D 纹理图像，因此在 2D 中运行此内核是自然的。然而，这需要实现上述两阶段归约的新 2D 版本。主要区别是现在工作项 $(x,y)$ 对以下位置的图像像素执行归约操作：
+内核的输入是一个 2D 纹理图像，因此在 2D 中运行此内核是自然的。然而，这需要实现上述两阶段归约的新 2D 版本。主要区别是现在工作项`$(x,y)$`对以下位置的图像像素执行归约操作：
 
-```
-${(x + m \times gx, y + n \times gy) \mid (x + m \times gx, y + n \times gy) < (imagwidth, height)\}, \forall m, n \in N,
+```text
+${(x + m \times gx, y + n \times gy) \mid (x + m \times gx, y + n \times gy) < (imagwidth, height)\}, \forall m, n \in N,`
 ```
 
-$gx$ 和 $gy$ 分别是 $x$ 和 $y$ 维度上的全局大小。
+`$gx$`和`$gy$`分别是`$x$`和`$y$`维度上的全局大小。
+
+
 
 ```cpp
 const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE 
@@ -8207,7 +8190,7 @@ if (group_id < num_workgroups) {
 
 ## 4.7.4 Reinhard 本地色调算子
 
-Reinhard 的局部 TMO 与全局 TMO 类似，它也计算整个图像的对数亮度。为了实现这一点，computeAvgLum 和 finalReduc 内核被用于 Reinhard 全局 TMO，修改为不再计算 $L_{max}$。相反，局部 TMO 为每个像素计算不同大小邻域内的亮度。为了提高性能，这些内核全部合并到一个名为 `reinhard_local` 的主内核中，如列表 4.5 所示。
+Reinhard 的局部 TMO 与全局 TMO 类似，它也计算整个图像的对数亮度。为了实现这一点，`computeAvgLum` 和 `finalReduc` 内核被用于 Reinhard 全局 TMO，修改为不再计算 $L_{max}$。相反，局部 TMO 为每个像素计算不同大小邻域内的亮度。为了提高性能，这些内核全部合并到一个名为 `reinhard_local` 的主内核中，如列表 4.5 所示。
 
 ```cpp
 const sampler_t sampler = CLK_NORMALIZED_COORDS_FALSE |
@@ -8230,10 +8213,6 @@ constant float k[7] = {
 256.f * KEY / ( 64.f*64.f)
 };
 ```
-
-
-
-
 
 ## 420 V 移动设备
 
@@ -8261,23 +8240,23 @@ Java 原生交互（Java Native Interactive）。我们的示例 Android 应用�
 
 OpenCL。为了启用 OpenCL 和 OpenGL ES 的互操作，必须使用 OpenGL ES 使用的显示器和上下文初始化 OpenCL 上文。Android 上的 OpenGL ES 上文由 EGL 创建和管理，EGL 是之前提到的 OpenGL ES 与底层窗口系统之间的接口。因此，为了为了互操作创建 OpenGL 上文，必须初始化属性数组，使其持有 GL 上文和显示器。
 
-Android 框架 API 中有两个类允许开发者使用 OpenGL ES API 创建和操作图形：GLSurfaceView 和 GLSurfaceView.Renderer。
+Android 框架 API 中有两个类允许开发者使用 OpenGL ES API 创建和操作图形：`GLSurfaceView` 和 `GLSurfaceView.Renderer`。
 
-GLSurfaceView。此类提供了一个画布，我们可以使用 ES API 调用来绘制和操作对象。更重要的是，GLSurfaceView 管理一个 EGL 显示器，使 OpenGL ES 能够在其上渲染。因此，通过使用 GLSurfaceView，我们不需要担心管理 EGL 窗口周期。
+`GLSurfaceView`。此类提供了一个画布，我们可以使用 ES API 调用来绘制和操作对象。更重要的是，`GLSurfaceView` 管理一个 EGL 显示器，使 OpenGL ES 能够在其上渲染。因此，通过使用 `GLSurfaceView`，我们不需要担心管理 EGL 窗口周期。
 
-GLSurfaceView.Renderer。这定义了在 GLSurfaceView 中绘制图形所需的方法。当实例化 GLSurfaceView 时，必须为其提供一个扩展自 GLSurfaceView.Renderer 的渲染器类。这将在本章后面部分讨论。
+`GLSurfaceView.Renderer`。这定义了在 `GLSurfaceView` 中绘制图形所需的方法。当实例化 `GLSurfaceView` 时，必须为其提供一个扩展自 `GLSurfaceView.Renderer` 的渲染器类。这将在本章后面部分讨论。
 
 OpenGL 纹理图像。在 OpenGL 上文成功初始化后，可以为来自相机输入的内核创建 OpenGL 纹理。
 
-将 GL_TEXTURE_EXTERNAL_OES 转换为 GL_TEXTURE_2D。可以使用 SurfaceTexture 对象捕获相机的帧作为 OpenGL ES 纹理。SurfaceTexture 对象使用 OpenGL ES 纹理 ID 初始化。然而，纹理 ID 必须绑定到 GL_TEXTURE_EXTERNAL_OES 纹理目标。遗憾的是，根据 OpenGL 规范，从 OpenGL 纹理创建 OpenGL 纹理图像时，GL_TEXTURE_EXTERNAL_OES 不是有效的纹理。因此，使用 GL_TEXTURE_EXTERNAL_OES 来创建 GL_TEXTURE_2D 纹理。
+将 `GL_TEXTURE_EXTERNAL_OES` 转换为 `GL_TEXTURE_2D`。可以使用 `SurfaceTexture` 对象捕获相机的帧作为 OpenGL ES 纹理。`SurfaceTexture` 对象使用 OpenGL ES 纹理 ID 初始化。然而，纹理 ID 必须绑定到 `GL_TEXTURE_EXTERNAL_OES` 纹理目标。遗憾的是，根据 OpenGL 规范，从 OpenGL 纹理创建 OpenGL 纹理图像时，`GL_TEXTURE_EXTERNAL_OES` 不是有效的纹理。因此，使用 `GL_TEXTURE_EXTERNAL_OES` 来创建 `GL_TEXTURE_2D` 纹理。
 
-然后执行列表 4.6 中的片元色器。注意我们正在从 GL_TEXTURE_EXTERNAL_OES 采样，指令
+然后执行列表 4.6 中的片元色器。注意我们正在从 `GL_TEXTURE_EXTERNAL_OES` 采样，指令
 
 ```
 extension GL_OES_EGL_image_external : require
 ```
 
-必须在片元色器中声明。这导致 GL_TEXTURE_EXTERNAL_OES 纹理的内容被拷贝到 GL_TEXTURE_2D 纹理，而不是渲染到显示器。此时，我们在 GPU 上拥有了一个包含相机数据的 OpenGL ES GL_TEXTURE_2D 纹理。
+必须在片元色器中声明。这导致 `GL_TEXTURE_EXTERNAL_OES` 纹理的内容被拷贝到 `GL_TEXTURE_2D` 纹理，而不是渲染到显示器。此时，我们在 GPU 上拥有了一个包含相机数据的 OpenGL ES `GL_TEXTURE_2D` 纹理。
 
 ## 4. 移动 GPU 上的高动态计算摄影
 
@@ -8293,7 +8272,7 @@ extension GL_OES_EGL_image_external : require
 }
 ```
 
-**列表 4.6**。从 GL_TEXTURE_OES 纹理采样的片元色器。
+**列表 4.6**。从 `GL_TEXTURE_OES` 纹理采样的片元色器。
 
 ```
 1 mem_images[0] = clCreateFromGL2D(m_clContext,
@@ -8309,7 +8288,7 @@ extension GL_OES_EGL_image_external : require
 
 ## 4.8.1 渲染到显示器
 
-应用于 OpenGL ES 后，结果现在需要显示。需要注意的一个重要设计点是，OpenGL 和 OpenCL 不能同时访问相同的数据。因此，为了让 OpenGL ES 复用纹理，OpenCL 上文必须放弃对数据的独占访问。这可以通过调用 clReleaseGLObjects 实现。一旦 OpenCL 内核执行并放弃了对纹理的访问，就可以在 Java 中渲染生成的纹理（列表 4.8）。
+应用于 OpenGL ES 后，结果现在需要显示。需要注意的一个重要设计点是，OpenGL 和 OpenCL 不能同时访问相同的数据。因此，为了让 OpenGL ES 复用纹理，OpenCL 上文必须放弃对数据的独占访问。这可以通过调用 `clReleaseGLObjects` 实现。一旦 OpenCL 内核执行并放弃了对纹理的访问，就可以在 Java 中渲染生成的纹理（列表 4.8）。
 
 ```
 precision medium float;
@@ -8324,13 +8303,13 @@ void main() {
 
 ## 4.8.2 GLSurfaceView.Renderer
 
-扩展 GLSurfaceView.Renderer 需要实现以下方法。
+扩展 `GLSurfaceView.Renderer` 需要实现以下方法。
 
-onSurfaceCreated。每当 EGL 上文创建或重新创建时，Android 框架都会调用此方法。除了应用程序启动时，这通常发生在 Android 设备从睡眠状态唤醒时。
+`onSurfaceCreated`。每当 EGL 上文创建或重新创建时，Android 框架都会调用此方法。除了应用程序启动时，这通常发生在 Android 设备从睡眠状态唤醒时。
 
-由于 OpenGL 上文依赖于从 GL 创建的 OpenGL ES 上文，因此确保在每次调用此方法时都重新创建 OpenGL 上文是重要的。因此，在 onSurfaceCreated 中，我们通过 JNI 调用 C++ 以初始化 OpenGL 属性。然后使用这些 OpenGL 属性创建新的 OpenGL 上文，该上文用于执行 OpenGL 内核。
+由于 OpenGL 上文依赖于从 GL 创建的 OpenGL ES 上文，因此确保在每次调用此方法时都重新创建 OpenGL 上文是重要的。因此，在 `onSurfaceCreated` 中，我们通过 JNI 调用 C++ 以初始化 OpenGL 属性。然后使用这些 OpenGL 属性创建新的 OpenGL 上文，该上文用于执行 OpenGL 内核。
 
-每当新帧可用时都构建 OpenGL 内核并初始化 OpenGL 内存对象可能是昂贵的。然而，这些 OpenGL 对象不能简单在应用启动时创建，因为它们依赖于活跃的 OpenGL 上文。因此，在调用 onSurfaceCreated 时，还会执行以下任务：
+每当新帧可用时都构建 OpenGL 内核并初始化 OpenGL 内存对象可能是昂贵的。然而，这些 OpenGL 对象不能简单在应用启动时创建，因为它们依赖于活跃的 OpenGL 上文。因此，在调用 `onSurfaceCreated` 时，还会执行以下任务：
 
 - 创建 OpenGL 命令队列，
 - 创建并编译 OpenGL 程序，
@@ -8338,19 +8317,15 @@ onSurfaceCreated。每当 EGL 上文创建或重新创建时，Android 框架都
 - 创建缓冲区和纹理图像，
 - 设置内核参数。
 
-onDrawFrame。此方法由 GLSurfaceView.Renderer API 反调用，负责将对象渲染到显示器。因此，此方法是执行色调映射过程的理想位置。
+`onDrawFrame`。此方法由 `GLSurfaceView.Renderer` API 反调用，负责将对象渲染到显示器。因此，此方法是执行色调映射过程的理想位置。
 
-首先，调用 updateTextureImage 用最新帧更新相机纹理。然后从相机创建 OpenGL ES 2D 纹理。
-
-
-
-
+首先，调用 `updateTextureImage` 用最新帧更新相机纹理。然后从相机创建 OpenGL ES 2D 纹理。
 
 # 4. 移动 GPU 上的高动态范围计算摄影
 
 如前所述的纹理。该纹理的 ID 被传递给 C++ 全局状态，在该状态执行 OpenGL 调映射内核以在图像上创建伪 HDR 效果。一旦调映射过程完成，输出纹理将被渲染到显示器。
 
-onSurfaceChanged。当表面尺寸发生变化时会调用此方法。然而，该方法在这里是多余的，因为方向信息位于我们的示例应用程序中。
+`onSurfaceChanged`。当表面尺寸发生变化时会调用此方法。然而，该方法在这里是多余的，因为方向信息位于我们的示例应用程序中。
 
 ## 4.8.3 Mipmap 生成
 
@@ -8370,7 +8345,7 @@ Mipmaps（多级映射）用于我们实现的 Reinhard 局部 TMO（调映射�
 
 | 设备 (32位 GFLOPS) | 峰值性能带宽 (GB/s) | 每个 CU 的全局内存 (KB) | 本地内存 |
 |---|---|---|---|
-| ARM Mali T604 | 98 | 12.8 | | |
+| ARM Mali T604 | 98 | 12.8 | |
 | NVIDIA GTX 760 | 258 | 192 | 48 |
 | Intel i3-3217U | 29 | 25.6 | 32 |
 | Qualcomm Adreno 330 | 129 | 12.8 | 8 |
@@ -8379,37 +8354,43 @@ Mipmaps（多级映射）用于我们实现的 Reinhard 局部 TMO（调映射�
 
 我们实现的每种 TMO 都运行在不同尺寸的图像上以测量其性能。这些测试在系列设备上进行，详细如文所示。
 
+
+
 首先，我们有一个基于 ARM Mali-T604 的设备：一个支持三星 Exynos 5 5250 的 Arandale 开发板。该处理器包含两个 ARM Cortex A-15 CPU 核心和一个四核 Mali T604 GPU。第二个测试设备是基于 Android 的 Sony Xperia Z Ultra 手机。该设备配备了高通骁龙 800 四核处理器和 Adreno 330 GPU。我们用于分析结果的其他 OpenCL 兼容设备是 NVIDIA GTX 760 和 Intel i3-3217U。表 4.1 列出了这些设备的相关规格。
 
 GFLOPS 数字是峰值性能的衡量——在这种情况下，是每秒十亿单精度浮点运算。全局内存和本地内存是 OpenCL 内核在执行时可用的资源量。如果 Open 内核耗尽了本地内存，任何溢出通常存储在全局内存中，速度相应变慢。
 
-Reinhard 全局 TMO 性能。Reinhard 全局 TMO 遍历整个图像两次：一次计算 Lmax 和 Lmin，第二次根据这些值以及场景的关键值 (a) 调整每个像素。为了实现实时处理，内核需要在少于 33 毫秒（30 fps）内执行。图 4.8 比较了不同尺寸图像的执行时间，所有图像都在 ARM Mali T604 和 NVIDIA GTX 760 上运行相同的 OpenCL。
+Reinhard 全局 TMO 性能。Reinhard 全局 TMO 遍历整个图像两次：一次计算 `Lmax` 和 `Lmin`，第二次根据这些值以及场景的关键值 (`a`) 调整每个像素。为了实现实时处理，内核需要在少于 33 毫秒（30 fps）内执行。图 4.8 比较了不同尺寸图像的执行时间，所有图像都在 ARM Mali T604 和 NVIDIA GTX 760 上运行相同的 OpenCL。
 
 NVIDIA GTX 760 作为一个快速的独立桌面级 GPU，在所有小于 2.5 ms 的图像尺寸上执行 OpenCL 内核，在 1080p 下达到超过 400 fps。这比 Akyuz 的等效 OpenCL 实现快得多，后者在速度慢得多的硬件上于 1024 × 768 图像上实现了 103 fps。ARM Mali T604 GPU 处理那两张较小图像的速度足够快，可以实时（re-time）渲染输出。然而，处理 1080p 图像略微临界，约为 28 fps。通过进一步的优化，在该平台上可能可以实现 30 fps。
 
-4. 移动 GPU 上的高动态范围计算摄影
+## 4. 移动 GPU 上的高动态范围计算摄影
 
-## Reinhard 全局 TMO
+### Reinhard 全局 TMO
 
 ![](img/120606d35c79664e7ad5fa2ee08b)
+
 图 4.8. 不同尺寸图像的执行时间。
 
-## Reinhard TMO
+### Reinhard TMO
 
 ![](img/120606d35c79664e7ad5fa2ee08b)
+
 图 4.9. 每个内核所占的时间比例。
 
-## Reinhard TMO
+### Reinhard TMO
 
 ![](img/120606d35c79664e7ad5fa2ee08b)
+
 图 4.10. 在每个内核中花费的时间。
 
-## 直方图均衡化
+### 直方图均衡化
 
 ![](img/120606d35c79664e7ad5fa2ee08b)
+
 表 4.11. 直方图均衡化结果。
 
-### 4.9.1 性能总结
+#### 4.9.1 性能总结
 
 总体而言，本章介绍的示例 OpenCL 内核实现性能优于以前报告的任何结果。仔细检查我们实现的各种 TMO 算法，Reinhard 全局 TMO 的计算密集性最低。它可以在我们测试的所有设备上在 720p 图像上实现实时处理。正如预期的，桌面 GPU 性能最好，在所有算法和所有不同尺寸的图像上都实现了大于 30 fps 的帧率。然而，许多嵌入式 GPU 现在能够针对某些图像尺寸实现 30 fps 或更高的性能，这是一个有趣的结果，表明实时 HDR 流线现在对于某些移动平台是触手及的。
 
@@ -8421,9 +8402,6 @@ NVIDIA GTX 760 作为一个快速的独立桌面级 GPU，在所有小于 2.5 ms
 - 上述算法的高 GPGPU OpenCL/OpenGL 实现；
 - 一个捕捉摄像头图像、使用上述 OpenCL 实现进行调映射并将输出渲染到显示器的流水线；
 
-
-
-
 这是一个有效的 OpenCL-OpenGL 互操作性演示，它避免了示例流水线中任何不必要的数据传输。
 
 对于整体亮度很低的场景，Reinhard 的调映射器（TMO）通过调整图像亮度来很好地突出暗部和亮部的细节。这些算法的 OpenCL 实现已被证明是高效且可移植的。文中还描述了一个 Android 流水线，它获取摄像头帧，使用 OpenCL 内核对其进行调映射，并将输出渲染到显示器。通过 OpenCL ES 和 OpenCL 互操作性，该流水线得到了进一步优化，避免了摄像头帧的任何数据传输。该流水线可以用于其他需要摄像头输入的图像处理应用。为了演示这一点，还提供了一个 OpenCL 直方图均衡化程序。
@@ -8431,47 +8409,24 @@ NVIDIA GTX 760 作为一个快速的独立桌面级 GPU，在所有小于 2.5 ms
 ## 参考文献
 
 - [Akyüz 12] Ahmet Akyüz. “GPU 上高动态范围成像流水线.” Journal of Real-Time Image Processing: Special Issue (2012), 1–15.
-
 - [Android 15] Android. “OpenCL ES.” http://developer.android.com/topics/graphics/opengl.html, 访问于 2015 年 5 月 6 日.
-
 - [Blommawaert and Martens 90] Frans J. J. Blommawaert and Jean-Bernard Martens. “亮度感知面向对象模型.” Spatial Vision 5:1 (1990), 5–14.
-
 - [Catanzaro 10] Bryan Catanzaro. “OpenCL 优化案例研究：简单归约.” AMD Developer Central, http://developer.amd.com/resources/documentation-articles/articles-whitepapers/opencl-optimization-case-study-simple-reductions/, 2010 年8 月 24 日.
-
 - [Chaney 15] Mike Chaney. “理解嵌入式图像信息.” Steve’s Digams, http://steves-dicams.com/knowledge-center/understanding-embedded-image-info, 2015.
-
 - [Chu et al. 11] Chung-Te Chu, Tsn-Hien Wang, Wei-Ming Ke, Chen-Yu Chuang, Jih-Siao Huang, Wei-Su Wong, Ren-Song Tay, and Cyuan-Jhe Wu. “在 ARM SoC 平台上使用 0.13 µm 技术实现集成摄影和梯度压缩的实时调映射处理器.” Journal of Signal Processing Systems 64:1 (2011), 93–107.
-
 - [GSM Arena 15] GSM Arena. “Apple iPhone 4 规格.” http://www.gsmarena.com/apple_iphone_4-3275.php, 2015.
-
-## 4. 移动 GPU 上的高动态范围计算摄影
-
 - [Kang et al. 09] Song Huang, Shucai Xiao, and Wu-chun Feng. “科学计算中图形处理器的能量效率.” Proceedings of the 2009 IEEE International Symposium on Parallel & Distributed Processing, pp. 1–8. Washington, CD: IEEE Computer Society, 2009.
-
 - [Kang et al. 12] Sing Bing Kang, Matthew Yuytendele, Simon Wider, and Richard Szeliski. “高动态范围视频.” ACM Transactions on Graphics 22:3 (2003), 319–325.
-
 - [Kiser et al. 12] Chris Kiser, Erik Reinhardt, Mick Toci, and Nora Toci. “HDR 视频的实时自动调映射.” In Proceedings of the IEEE International Conference on Image Processing, pp. 2749–2752. Piscataway, NJ: IEEE, 2012.
-
 - [Krawczyk et al. 05] Grzegorz Krawczyk, Karol Myszkowski, and Hans-Peter Seidel. “实时调映射中的感知效应.” Proceedings of the 21st Spring Conference on Computer Graphics, pp. 195–202. New York: ACM.
-
 - [Khronos 15] Khronos Group. “Khronos OpenCL 标准.” http://www.khronos.org/opengl/, 访问于 2015 年 5 月 6 日.
-
 - [Ku et al. 07] Jiantao Kuo, Hiroshi Yamaguchi, Chang Liu, Garrett M, and Mark D. Fairchild. “评估 HDR 渲染算法.” ACM Trans. Appl. Perception 4:2 (2007), Article no. 9.
-
 - [McClanahan 11] Chris McClanahan. “单相机实时 HDR 调映射.” mcclananahoochie.com/blog/portfolio/real-time-hdr-tonemapping/, 2011年.
-
 - [McCoy 08] Kevin McCoy. “圣路易拱门多次曝光.” Wikipedia, https://en.wikipedia.org/File:StLouisArchMultExp-4.72.JPG, 2008 年5 月 31 日.
-
 - [Reinhardt et al. 02] Erik Reinhardt, Michael Stark, Peter Shirley, and James Forwerda. “数字图像的摄影调还原.” ACM Transactions on Graphics 21:3 (2002), 266–276.
-
 - [Seng 10] Kim Seng. “单曝光 HDR.” HDR Photography by Captain Kino, http://captainmino.com/single-exposure-hdr/, 2010 年2 月 25 日.
-
 - [Topaz Labs 15] Topaz Labs. “Topaz Adjust.” http://www.topazlabs.com/adjust, 2015.
-
 - [GSM Arena 15] GSM Arena. “Apple iPhone 4 规格.” http://www.gsmarena.com/apple_iphone_4-3275.php, 2015.
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_454_0.png)
 
@@ -8531,19 +8486,16 @@ for i <- thread_index to num_lights do
     i <- i + num_threads_per_tile;
 end
 ```
+
 算法 1.1. 基础瓦片剔除。
 
 ### 1.3.1 深度边界计算
 
-如前所述（脚注 2），你在计算着色器中指定了精确的组织结构。在 HLSL 中，这是通过 `numthreads` 属性实现的，如列表 1.1 第 15 行所示。对于瓦片剔除，线程组的组织以匹配瓦片大小。例如，Tile_RES 在列表 1.1 中定义为 16，而 $16 \times 16$ 像素的瓦片大小导致计算着色器中 $16 \times 16$ 的线程布局。
+如前所述（脚注 2），你在计算着色器中指定了精确的组织结构。在 HLSL 中，这是通过 `numthreads` 属性实现的，如列表 1.1 第 15 行所示。对于瓦片剔除，线程组的组织以匹配瓦片大小。例如，`Tile_RES` 在列表 1.1 中定义为 16，而 $16 \times 16$ 像素的瓦片大小导致计算着色器中 $16 \times 16$ 的线程布局。
 
 计算着色器通过 `Dispatch` 方法执行，该方法指定了启动的线程数。例如， 1920 × 1080 分辨率的屏幕使用 16 × 16 像素的瓦片需要 120 × 68 个线程来覆盖屏幕。因此，通过对具有 `[numthreads(16,16,1)]` 的计算着色器调用 `Dispatch(120,68,1)`，每个线程映射到特定的屏幕像素。
 
 为了计算深度边界，每个线程只需从场景缓冲区读取其像素值，并执行线程安全的原子最小和最大操作。深度缓冲区读取发生在列表 1.1 的第 20-21 行。用于寻址深度的 `globalID` 变量……（此处原文后续中断，已根据要求完成翻译）
-
-
-
-
 
 ## 基于计算的分块剔除 (Compute-Based Tiled Culling)
 
@@ -8562,6 +8514,8 @@ end
 在这个示例中，光源包围体是球体（非常适合点光源），并执行了标准的视锥体与球体相交测试。也就是说，球体相对于视锥体的六个平面进行测试。如果通过，则将光源在输入缓冲区中的索引写入共享内存。
 
 在第 28 行，每个线程通过 `NUM_THREADS` 开始一个循环，对于 $16 \times 16$ 像素的分块，该值为 256。这允许在每次循环迭代中并行剔除 256 个像素。为了使并行剔除线程线程安全，在第 44 行使用了 `InterlockedAdd` 来增加输出计数器的值。
+
+
 
 正如引言中提到的，基于计算的分块剔除可以应用于前向渲染 [Harada et al. 12] 和延迟渲染 [Andersson 09]。当与前向渲染结合使用时，它通常被称为 Forward+ [Harada et al.]。当与延迟渲染结合使用时，它被称为基于块的延迟渲染 [Lauritzen 10] 或简单的分块延迟 [Lauritzen 12]。对于 Forward+，计算着色器将每个分块的列表写入输出缓冲区（即 `RWBuffer`）。然后，前向像素着色器计算其所属的分块，并使用该分块的列表作为输入计算光照。对于分块延迟渲染，执行光裁剪的同一个计算着色器可以直接使用共享内存中的列表进行光照计算。即使光源重叠，每个像素也只读取一次 G-buffer，且光照结果累积到后续着色器中而不是混合到渲染中，从而减少了带宽消耗。
 
@@ -8614,6 +8568,7 @@ end
 GroupMemoryBarrierWithGroupSync();
 46 }
 ```
+
 列表 1.3。相交测试。
 
 ## 1.4 优化
@@ -8623,7 +8578,9 @@ GroupMemoryBarrierWithGroupSync();
 ### 1.4.1 常见陷阱
 
 本节介绍了基于计算的分块剔除的各种优化方法。优化的一部分是避免常见陷阱。其中两个陷阱是：
+
 - 忘记保持缓存友好（cache-friendly）。
+
 - 选择了次优的分块大小。
 
 对于第一种改进，注意 1.3 中的第 1 行仅包含剔除所需的数据：
@@ -8636,14 +8593,9 @@ struct LightData {
 StructuredBuffer<LightData> g_LightBuffer;
 ```
 
-对于第二种改进，回 1.3 中的第 14 行将 TILE_RES 定义为 16。这产生了 $16 \times 16$ 个像素，即 256 个线程。通常情况下，结构数组（在此例中，剔除数据和光颜色分开的数组）比结构体数组更有利于 GPU 执行，因为它允许更具缓存友好的内存访问。
+对于第二种改进，回 1.3 中的第 14 行将 `TILE_RES` 定义为 16。这产生了 $16 \times 16$ 个像素，即 256 个线程。通常情况下，结构数组（在此例中，剔除数据和光颜色分开的数组）比结构体数组更有利于 GPU 执行，因为它允许更具缓存友好的内存访问。
 
 本章中的所有性能数据均在 AMD R7 260X 上收集。
-
-
-
-
-
 
 # 1. 基于计算的分块体剔除 (Tiled Culling)
 
@@ -8698,10 +8650,15 @@ Half Z 方法的结果如图 1.5(d) 所示。注意沿列的光照数量已经�
 # 1. 基于计算的分块体剔除
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_0.png)
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_1.png)
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_2.png)
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_3.png)
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_4.png)
+
 ![](img/120606d35c679664e7ad5faec2ee0e8b_465_5.png)
 
 图 1.5. 使用本章代码的分块剔除结果。(a) 场景渲染。(b) 逐分块光照数量。(c) 基准。(d) Half Z。(e) 改进的 Half Z。(f) 带有 AABB 的改进 Half Z。
@@ -8773,11 +8730,9 @@ float min211 = (depth11 == 0.0f) ? viewPos211 : 0.0f;
 (max(max210,max211))));
 ```
 
-
-
-
-
 ## 1. 基于计算的分片剔除
+
+
 
 ```cpp
 70  ldsZMin[threadNum]    = min(ldsZMin, threadNum);
@@ -8828,7 +8783,7 @@ float min211 = (depth11 == 0.0f) ? viewPos211 : 0.0f;
 117 }
 ```
 
-# 列表 1.5. 使用并行归约的深度边界。
+# 列表 1.5. 使用并行归约的深度边界
 
 正如 [Harris 07] 和 [Engel 14] 所述，优化的并行归约实现需要每个线程处理一个以上的源值。对于列表 1.5 中的代码，每个线程在 2x2 网格中加载四个深度采样，而不是简单的采样。然而，这要求线程布局为 8x8 或 16x16 像素分片。这意味着并行归约必须在单独的计算着色器中执行。尽管即使增加了额外通过次数的开销，每个线程加载四个样本的方法仍比将并行归约留在剔除计算着色器中但每个线程加载一个样本要快。
 
@@ -8841,10 +8796,6 @@ float min211 = (depth11 == 0.0f) ? viewPos211 : 0.0f;
 图 1.8 和 1.9 展示了使用带 AABB 的改进 Half Z 方法所实现的每个分片光照数量减少的两个示例。注意类似于第 1.3 节的基准分片处理。在每个示例中，高光照数量区域出现在角色轮廓周围，那里从前景到背景的过渡会导致不连续性。这些区域在优化版本中被消除了。此外，具有小深度的 AABB 提供的更紧凑的分片边界体积减少了光照数量。
 
 图 1.10 显示了优化方法（使用并行归约深度范围的带 AABB 改进 Half Z）与类似于第 1.3 节的基准实现相比的 GPU 执行时间改进。对于分片延迟，执行时间包含了算法 1.1 的三个部分（深度边界计算、分片边界体积构建和交叉测试）以及光照计算。如图 1.10 所示，优化版本在整个 Infiltrator 演示中明显快得多。基准实现的平均成本为 5.17 ms，而优化的平均成本为 3.52 ms。
-
-
-
-
 
 # 1. 基于计算的瓦片剔除 (Tiled Culling)
 
@@ -8897,15 +8848,18 @@ float min211 = (depth11 == 0.0f) ? viewPos211 : 0.0f;
 ## 参考文献
 
 - [Andersson 09] Johan Andersson. "Parallel Graphics in Frostbite—Current and Future." Beyond Programmable Shading, SIGGRAPH Course, New Orleans LA, August 3–7, 2009.
+
 - [Engel 14] Wolfgang Engel. "Compute Shader Optimizations for AMD." Diary of a Graphics, http://graphicsprogrammer.blogspot.com/2014/03/compute-shader-optimizations-for-amd.html, March 26, 2014.
+
 - [Harada et al. 12] Takahiro Harada, Jay McKay, and Jason C. Yang. "Forward+: Deferred Lighting to the Next Level." Paper presented at Eurographics, Italy, May 13–18, 2012.
+
 - [Harris 07] Mark Harris. "Optimizing Parallel Reduction in CUDA." NVIDIA, http://developer.nvidia.com/compute/cuda/beta/website/projects/reduction/reduction.pdf, 2007.
+
 - [Lauritzen 10] Andrew Lauritzen. "Deferred Rendering for Current and Future." Beyond Programmable Shading, SIGGRAPH Course, Los Angeles CA, July 25–29, 2010.
+
 - [Lauritzen 12] Andrew Lauritzen. "Intersecting Lights with Pixels: Reasoning about Forward and Deferred Rendering." Beyond Programmable Shading, SIGGRAPH Course, Los Angeles CA, August 5–9, 2012.
+
 - [Saito and Takahashi 90] Takafumi Saito and Tokichiro Takahashi. "Comprehensible Rendering of 3-D Shapes." Computer Graphics: Proc. SIGGRAPH 24:4 (1990), 197–206.
-
-
-
 
 ## 2.4.1 单射线
 
@@ -8937,19 +8891,22 @@ min_q = \lfloor(min - min_{root})/extent_{root}\rfloor$
 总结一下我们拥有的数据结构：
 
 - 用于层级结构的预计算数据，
+
 - 动态构建的 BVH（节点数组）。
 
-在代码列表 2.1 中，它们分别表示为 $gNodes$ 和 $gLinks$。
 
-*遍历与相交。* 我们采用无栈遍历的主要原因是减少内存访存流量和寄存器压力，这会影响性能。此外，由于射线状态的数据是当前节点的索引，我们可以很容易地洗牌射线以提高性能，尽管我们尚未研究过这种优化。
 
-由于我们已经为补片构建了 BVH，遍历是非常直观的。伪代码如列表 2.1 所示。过程概述如图 2.5 所示。
+在代码列表 2.1 中，它们分别表示为 `$gNodes$` 和 `$gLinks$`。
+
+**遍历与相交。** 我们采用无栈遍历的主要原因是减少内存访存流量和寄存器压力，这会影响性能。此外，由于射线状态的数据是当前节点的索引，我们可以很容易地洗牌射线以提高性能，尽管我们尚未研究过这种优化。
+
+由于我们已经为补片构建了 `BVH`，遍历是非常直观的。伪代码如列表 2.1 所示。过程概述如图 2.5 所示。
 
 ## 2.4.2 OpenCL 实现
 
-为了充分利用 GPU，我们可以并行化 2.4.1 节描述的算法。我们使用 OpenCL 实现了我们的算法，并使用了 AMD GPU；因此，在接下来的解释中我们遵循相应的术语。
+为了充分利用 GPU，我们可以并行化 2.4.1 节描述的算法。我们使用 `OpenCL` 实现了我们的算法，并使用了 AMD GPU；因此，在接下来的解释中我们遵循相应的术语。
 
-```
+```cpp
 --global Node gNodes;
 --global u32* gLinks;
 float f;
@@ -8969,18 +8926,16 @@ while(nodeIdx != breakIdx) {
   }
 }
 ```
-*(注：原文代码块逻辑不完整，此处根据上下文补全结构以便理解，翻译时不翻译代码内容)*
+
+（注：原文代码块逻辑不完整，此处根据上下文补全结构以便理解，翻译时不翻译代码内容。）
 
 列表 2.1。无栈遍历的伪代码。
 
+为每个工作组（work group）的每个内存块分配一个工作缓冲区。在所有情况下，我们将最大划分级别限制为 5，因此分配了一个 13-MB（= 26 KB × 512）的工作缓冲区。
 
+在工作组启动并在 VD 补丁（patch）抓取后，我们通过获取根节点 `AABB` 的范围（extent）到距离相机距离处的像素面积的比例，计算出该补丁所需的划分级别。由于我们允许具有矢量位移贴的形状（例如，同一个补丁可能位于世界中的多个位置），我们需要为所有光线计算划分级别。一旦计算出某条光线的划分级别，将使用原子操作在一个 `LDS` 值中选择最大值。
 
-
-为每个工作组（work group）的每个内存块分配一个工作缓冲区。在所有情况下，我们将最大划分级别限制为 5，因此分配了一个 13-MB (= 26 KB × 512)的工作缓冲区。
-
-在工作组启动并在 VD 补丁（patch）抓取后，我们通过获取根节点 AABB 的范围（extent）到距离相机距离处的像素面积的比例，计算出该补丁所需的划分级别。由于我们允许具有矢量位移贴的形状（例如，同一个补丁可能位于世界中的多个位置），我们需要为所有光线计算划分级别。一旦计算出某条光线的划分级别，将使用原子操作在一个 LDS 值中选择最大值。
-
-然后，工作项（work items）并行计算节点数据，即叶子节点的 AABB、纹理坐标和法线向量。如果叶子数量多于执行的工作项数量，则一个工作组将顺序处理多个节点。一旦构建了 BVH 层，它将扩展层级结构并计算层级结构下一层的节点。工作项用于并行计算。由于我们在一个层级将数据写入全局内存并在下一层级读取，因此我们需要保证写入顺序是正确的。这通过放置全局内存屏障来实现，该屏障仅保证工作组内的顺序；因此，它可以用于此目的。此过程重复直到到达层级结构的根节点。BVH 构建的伪代码在列表 2.2 中。
+然后，工作项（work items）并行计算节点数据，即叶子节点的 `AABB`、纹理坐标和法线向量。如果叶子数量多于执行的工作项数量，则一个工作组将顺序处理多个节点。一旦构建了 `BVH` 层，它将扩展层级结构并计算层级结构下一层的节点。工作项用于并行计算。由于我们在一个层级将数据写入全局内存并在下一层级读取，因此我们需要保证写入顺序是正确的。这通过放置全局内存屏障来实现，该屏障仅保证工作组内的顺序；因此，它可以用于此目的。此过程重复直到到达层级结构的根节点。`BVH` 构建的伪代码在列表 2.2 中。
 
 ```cpp
 int localIdx = GST_LOCAL_IDX;
@@ -9029,17 +8984,17 @@ for(int level = tesslevel-1; level>=0; level--)
 }
 ```
 
-### 2.2. BVH，从叶子级构建开始，然后是上层构建。
+### 2.2. BVH，从叶子级构建开始，然后是上层构建
 
-一旦层级构建，我们将工作项的使用从“用于节点的工作项”切换为“用于光线的工作项”，后者会读取命中 VD 补丁 AABB 的光线列表。光线被转换到模型的对象空间并使用层级信息进行遍历。如果当前命中点比上次找到的近，则更新命中点的命中距离、元素索引、法线向量和纹理坐标。然而，我们不能简单地写入这些信息，因为一条光线可能被不同组中的多个工作项处理过。当前的 OpenCL 编程模型没有写入临界区的机制，这对于我们的用例是必要的。相反，我们使用了 64 位原子操作，这在性能方面并非最优，但至少我们避免了写入冲突。当元素索引、量化法线向量和量化纹理坐标均为 32 位数据时，距离被转换为 32 位整数并附加在这些 32 位的顶部以创建 64 位整数。通过使用原子极值操作，我们可以存储最近的信息（图 2.5）。
+一旦层级构建，我们将工作项的使用从“用于节点的工作项”切换为“用于光线的工作项”，后者会读取命中 VD 补丁 `AABB` 的光线列表。光线被转换到模型的对象空间并使用层级信息进行遍历。如果当前命中点比上次找到的近，则更新命中点的命中距离、元素索引、法线向量和纹理坐标。然而，我们不能简单地写入这些信息，因为一条光线可能被不同组中的多个工作项处理过。当前的 `OpenCL` 编程模型没有写入临界区的机制，这对于我们的用例是必要的。相反，我们使用了 64 位原子操作，这在性能方面并非最优，但至少我们避免了写入冲突。当元素索引、量化法线向量和量化纹理坐标均为 32 位数据时，距离被转换为 32 位整数并附加在这些 32 位的顶部以创建 64 位整数。通过使用原子极值操作，我们可以存储最近的信息（图 2.5）。
 
-整个内核的伪代码算法 2.1 所示。
+整个内核的伪代码算法如 2.1 所示。
 
 ## 2.5 集成到 OpenCL 光线追踪器中
 
-虽然追踪带有矢量位移贴图的单个网格是简单的，但我们希望使用多个带有矢量位移贴图的网格以及其他的三角形网格，如图 2.1 所示。本节描述了如何将 VD 补丁的光线追踪集成到我们的 OpenCL 光线追踪器中。
+虽然追踪带有矢量位移贴图的单个网格是简单的，但我们希望使用多个带有矢量位移贴图的网格以及其他的三角形网格，如图 2.1 所示。本节描述了如何将 VD 补丁的光线追踪集成到我们的 `OpenCL` 光线追踪器中。
 
-> ³ 注意，内存屏障（CLK_GLOBAL）仅在工作组内进行同步。
+> ³ 注意，内存屏障（`CLK_GLOBAL`）仅在工作组内进行同步。
 
 ### 468 内容
 
@@ -9052,26 +9007,23 @@ while (displacement) {
 
 ### 2.5.1 场景描述
 
-我们可以将场景中的所有网格存储在一个结构中。然而，这不允许我们使用如实例化（instancing）等技术，而这种技术非常强大。因此，顶层 BVH 存储网格及其变换。中层 BVH 存储三角形、四边形或 VD 补丁。存在一个动态生成的底层 BVH。
+我们可以将场景中的所有网格存储在一个结构中。然而，这不允许我们使用如实例化（instancing）等技术，而这种技术非常强大。因此，顶层 `BVH` 存储网格及其变换。中层 `BVH` 存储三角形、四边形或 VD 补丁。存在一个动态生成的底层 `BVH`。
 
 ### 2.5.2 准备工作
 
-在渲染开始之前，我们计算原元的 AABB 并构建顶层和中层 BVH。对于 VD 补丁，计算精确的 AABB 是昂贵的，因为它需要细分和位移。相反，我们从纹理计算最大位移量并扩展……
+在渲染开始之前，我们计算原元的 `AABB` 并构建顶层和中层 `BVH`。对于 VD 补丁，计算精确的 `AABB` 是昂贵的，因为它需要细分和位移。相反，我们从纹理计算最大位移量并扩展……
 
 ![](img/12006d35c67964e7adfaec2ee08b_487_0.png)
 
-**图 2.6.** 三级层级。顶层 BVH 的叶子存储对象，即中层 BVH。中层 BVH 的叶子存储三角形，四边形或 VD 补丁。
+**图 2.6.** 三级层级。顶层 `BVH` 的叶子存储对象，即中层 `BVH`。中层 `BVH` 的叶子存储三角形、四边形或 VD 补丁。
 
 ### 2.5.3 层级遍历
 
 算法 2.1 相交内核
 
-我们将顶层和中层层级的遍历到一个遍历内核中。当光线到达顶层 BVH 的叶子时，它被转换到对象空间并开始遍历中层 BVH。退出中层 BVH 后，光线转换回世界空间。一旦光线命中中层 BVH 的叶子；如果原元是三角形或四边形，则立即计算叶子节点存储的原元。如 2.4 节所述，我们在访问叶子节点时不计算光线与 VD 补丁的相交。相反，将原元索引和光线索引存储在缓冲区中以便进一步……（准确来说，我们还存储了网格索引，以获取其变换。）使用原子操作在缓冲区中分配空间。
+我们将顶层和中层层级的遍历到一个遍历内核中。当光线到达顶层 `BVH` 的叶子时，它被转换到对象空间并开始遍历中层 `BVH`。退出中层 `BVH` 后，光线转换回世界空间。一旦光线命中中层 `BVH` 的叶子；如果原元是三角形或四边形，则立即计算叶子节点存储的原元。如 2.4 节所述，我们在访问叶子节点时不计算光线与 VD 补丁的相交。相反，将原元索引和光线索引存储在缓冲区中以便进一步……（准确来说，我们还存储了网格索引，以获取其变换。）使用原子操作在缓冲区中分配空间。
 
 原元索引和光线索引是随机存储的。当我们逐个补丁进行处理时，使用基数排序 [Harada and Howes 11] 对这些值按原元索引进行排序，并计算每个原元的起始和结束索引。存储起始索引的缓冲区被用作作业队列。
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_488_0.png)
 
@@ -9085,7 +9037,7 @@ while (displacement) {
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_488_5.png)
 
-图 **2.7.** 带有和不带矢量位移映射的某些测试场景。
+**图 2.7.** 带有和不带矢量位移映射的某些测试场景。
 
 我们执行了第 2.4 节描述的内核，该内核计算与 VD 块的相交。执行了填充 GPU 的最少工作组，每个工作组从队列中获取一个未处理的 VD 块并逐一进行处理。
 
@@ -9093,12 +9045,12 @@ while (displacement) {
 
 我们在 Mudbox 中创建了带有矢量位移图的模型以评估该方法。基础网格和矢量位移图被导出到对象空间。我们使用这些模型以及不带矢量位移图的模型创建了四个测试场景（图 2.1 和图 2.7）。为了给渲染器增加压力，我们在这些测试中特意没有使用实例化技术（instancing），尽管我们可以利用它来提高放置了多次相同几何体的场景的性能。我们所有测试都使用了 AMD FirePro W9100 GPU。
 
-| 场景 | 预细分 (Pretessellation) | 直接光线追踪 (Direct Ray Tracing) |
-| :--- | :--- | :--- |
-| Party对 (Party) | 52 GB | 16 MB |
-| 树皮 (Bark) | 1.7 GB | 0.47 MB |
-| 树皮 (Barks) | 12 GB | 3.3 MB |
-| 南瓜 (Pumpkin) | 380 MB | 0.12 MB |
+| 场景 | 预细分（Pretessellation） | 直接光线追踪（Direct Ray Tracing） |
+| --- | ---: | ---: |
+| Party 对（Party） | 52 GB | 16 MB |
+| 树皮（Bark） | 1.7 GB | 0.47 MB |
+| 树皮（Barks） | 12 GB | 3.3 MB |
+| 南瓜（Pumpkin） | 380 MB | 0.12 MB |
 
 **表 2.1.** 几何体和加速结构的内存占用情况。
 
@@ -9106,41 +9058,43 @@ while (displacement) {
 
 内存占用的优势是显而易见的，但问题是：“运行时的成本是什么？对渲染速度有多大影响？”尽管光线射射算法很复杂，但在大多数实验中，矢量位移图的直接光线追踪速度更快。我们渲染了环境光下的场景直接照明（即一条主光线和一处阴影投射），并测量了渲染时间的分解，如图 2.8 所示。对于几何复杂度在所有测试中最低的“Pumpkin”场景，预细分更快。对于“Bark”场景，预细分速度较慢，且无法渲染另外两个较大的场景。这很有趣，因为直接光线追踪的工作量比预细分更多。这种性能源于直接光线追踪的计算散散（顶层和中间层层次相对较浅，并且我们批量处理了与 VD 块相交的光线）。
 
-为了更好地理解直接光线追踪的光线射射性能，我们分析了场景中每次光线射操作的时间分解（图 2.9）。这些计时包含了内核开销，特别是对于启动许多内核的排序来说，这种开销是巨大的。排序的计算时间与命中对的数量大致正比，尽管它包含了开销。大部分时间花在了底层 BVH 的构建和针对 VD 块的光线射射上。
+为了更好地理解直接光线追踪的光线射射性能，我们分析了场景中每次光线射操作的时间分解（图 2.9）。这些计时包含了内核开销，特别是对于启动许多内核的排序来说，这种开销是巨大的。排序的计算时间与命中对的数量大致正比，尽管它包含了开销。大部分时间花在了底层 `BVH` 的构建和针对 VD 块的光线射射上。
 
-²该渲染器是一个渐进式路径追踪器，因此所有截图都是在每个像素投射样本后拍摄的。
+² 该渲染器是一个渐进式路径追踪器，因此所有截图都是在每个像素投射样本后拍摄的。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_490_0.png)
+![](img/120606d35c679664e7adfaec2ee0e8b_490_0.png)
 
 **图 2.8.** 帧计算时间的分解。每个场景有两个图。一个是使用预细分的，另一个（VD）是使用提出的方法的。Barks 在不使用 VD 块实例化技术的情况下无法渲染。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_490_1.png)
+![](img/120606d35c679664e7adfaec2ee0e8b_490_1.png)
 
 **图 2.9.** 顶层和中间层光线射射、排序和底层光线射射的时间。
 
-当我们比较“Barks”场景的主光线和光线射射时，时间变化不大，尽管阴影光线的数量少于主光线数量。这表明了方法的局限性：当有大量光线与 VD 块相交时，底层 BVH 的构建成本可以分摊，但如果这个数量太低，就无法分摊。这就是为什么“Pumpkin”场景中的阴影光线射射与预细分如此接近的原因。随着深度的增加，情况变得更糟。我们为“Barks”场景渲染了五次反射的间接照明（图 2.10）。图 2.11 显示了每次反射的光线射射时间。
+当我们比较“Barks”场景的主光线和光线射射时，时间变化不大，尽管阴影光线的数量少于主光线数量。这表明了方法的局限性：当有大量光线与 VD 块相交时，底层 `BVH` 的构建成本可以分摊，但如果这个数量太低，就无法分摊。这就是为什么“Pumpkin”场景中的阴影光线射射与预细分如此接近的原因。随着深度的增加，情况变得更糟。我们为“Barks”场景渲染了五次反射的间接照明（图 2.10）。图 2.11 显示了每次反射的光线射射时间。
 
 ## 2.7 结论
 
-在本章中，我们展示了在 GPU 上处理位移映射的方法。我们的实验表明，直接光线追踪内存占用较小，且与预细分具有竞争力。当场景中有大量 VD 块时，这种优势更加明显。从渲染时间来看，我们认为优化底层 BVH 构建和 VD 块的光线射射很重要。这为未来的研究提供了机会。
+在本章中，我们展示了在 GPU 上处理位移映射的方法。我们的实验表明，直接光线追踪内存占用较小，且与预细分具有竞争力。当场景中有大量 VD 块时，这种优势更加明显。从渲染时间来看，我们认为优化底层 `BVH` 构建和 VD 块的光线射射很重要。这为未来的研究提供了机会。
 
 # 在 GPU 中渲染位移映射表面矢量追踪器
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_491_0.png)
+![](img/120606d35c679664e7adfaec2ee08e0b_491_0.png)
 
 **图 2.10.** 树皮场景。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_491_1.png)
+![](img/120606d35c679664e7adfaec2ee08e0b_491_1.png)
 
 **图 2.11.** 光线射射。
 
 ## 参考文献
 
 - Hanika, et al. 10 Johannes Hanika, Alexander Keller 和 Hendrik P. Lensch. “用于高度复杂场景的双排序光线追踪。”在 *Graphics Interface*。多伦多：加拿大学会。
-- Harada, and Howes. 11 T. Harada 和 L. Howes. “OpenCL 异构计算。”由 Benedict Gaster, Lee Howes, David R., Perhada Mistry 和 Dana Schaa 编。旧金山：Morgan Kaufmann，2011。访问于 http://www.heterogeneouscompute.org/?page_id=7。
-- Smits, et al. 00 Brian E. Smits, Peter Shirley 和 Michael M. Stark. “三角形的直接光线追踪。”在 *Eurographics 渲染技术会议*，页 307–318。艾-拉-Ville，瑞士：Eurographics Association，2000。
+- Harada, and Howes. 11 T. Harada 和 L. Howes. “OpenCL 异构计算。”由 Benedict Gaster、Lee Howes、David R.、Perhada Mistry 和 Dana Schaa 编。旧金山：Morgan Kaufmann，2011。访问于 `http://www.heterogeneouscompute.org/?page_id=7`。
+- Smits, et al. 00 Brian E. Smits、Peter Shirley 和 Michael M. Stark. “三角形的直接光线追踪。”在 *Eurographics 渲染技术会议*，页 307–318。艾-拉-Ville，瑞士：Eurographics Association，2000。
 
-# 用于体积渲染的平滑概率环境遮蔽Thomas Kroes, Dirk Schut, and Elmar Eis
+# 用于体积渲染的平滑概率环境遮蔽
+
+Thomas Kroes, Dirk Schut, and Elmar Eis
 
 ## 3.1 引言
 
@@ -9150,11 +9104,7 @@ while (displacement) {
 
 我们的方法尝试避免昂贵的光线射射，并将问题转化为一个过滤过程。在精神上，它与 Penner 和 Mitchell 的相似。
 
-
-
-
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_494_0.png)
+![](img/120606d35c679664e7adfaec2ee08b_494_0.png)
 
 **图 3.1.** 确定环境光蔽（ambient occlusion）的点周围半球（左）。蓝色部分为未遮挡部分。体积遮挡依赖于整个球体（右）。
 
@@ -9164,13 +9114,17 @@ while (displacement) {
 
 ## 3.2 平滑概率环境光蔽
 
-环境光蔽有多种定义。在这里，我们将其定义为从外部世界可以到达的点。图 3.1 给出了一个 2D 示例并说明了环境光蔽的计算。更正式地，环境光蔽值 $A(p, n)$ 是在以点 $p$ 为中心、沿法线 $n$ 方向的半球 $\Omega$ 上对可见性函数进行积分：
 
-$$A(p, n) := \frac{1}{\pi}\int_{\Omega(n)} V(p, \omega)d\omega,$$
 
-其中 $V$ 是可见性函数。换句话说，$V$ 代表经过传输函数转换后的数据本身。请注意，如果从点 $p$ 出向方向 $\omega$ 的光被阻挡，则 $V(p, \omega)$ 为 0；如果未阻挡则为 1；中间值会衰减光线。为了简化描述，我们在下文中将仅使用被阻挡和未阻挡光线的概念。请注意，我们可以将 $V$ 的中间值解释为光线被阻挡的概率。例如，如果 $V$ 返回值为 0.5，则光线有 50% 的概率被阻挡。
+环境光蔽有多种定义。在这里，我们将其定义为从外部世界可以到达的点。图 3.1 给出了一个 2D 示例并说明了环境光蔽的计算。更正式地，环境光蔽值 `A(p, n)` 是在以点 `p` 为中心、沿法线 `n` 方向的半球 `Ω` 上对可见性函数进行积分：
 
-也可以对点周围的整个球积分可见性函数，将 $\Omega$ 标记为半球表面并使其与 $n$ 无关。结果被称为发生率（occurance），记为 $\mathcal{A}(p)$，它产生类似的效果。计算发生率而非环境光蔽的优势在于它不需要法线。然而，这种定义会导致位于点背后的体积部分参与计算。这一属性对于标准场景可能是一个缺点，结果可能会变得太暗，但在 DVR 场景下，这甚至是理想的，因为它会揭示表面不均匀的信息，而这通常是所需要的。
+$$
+A(p, n) := \frac{1}{\pi}\int_{\Omega(n)} V(p, \omega)d\omega,
+$$
+
+其中 `V` 是可见性函数。换句话说，`V` 代表经过传输函数转换后的数据本身。请注意，如果从点 `p` 出向方向 `ω` 的光被阻挡，则 `V(p, ω)` 为 0；如果未阻挡则为 1；中间值会衰减光线。为了简化描述，我们在下文中将仅使用被阻挡和未阻挡光线的概念。请注意，我们可以将 `V` 的中间值解释为光线被阻挡的概率。例如，如果 `V` 返回值为 0.5，则光线有 50% 的概率被阻挡。
+
+也可以对点周围的整个球积分可见性函数，将 `Ω` 标记为半球表面并使其与 `n` 无关。结果被称为发生率（occurance），记为 `𝒜(p)`，它产生类似的效果。计算发生率而非环境光蔽的优势在于它不需要法线。然而，这种定义会导致位于点背后的体积部分参与计算。这一属性对于标准场景可能是一个缺点，结果可能会变得太暗，但在 DVR 场景下，这甚至是理想的，因为它会揭示表面不均匀的信息，而这通常是所需要的。
 
 遮蔽（occlusion）和发生率仅取决于体积的几何结构。因此，它们可以存储在额外的体积中，然后用于调节原始体积的照明。遮蔽值可以直接从原始体积的不透明度计算。尽管如此，当用户更改传输函数时，值会发生变化——例如，后一步可能非常昂贵，导致无法在保持高视觉保真度的同时与传输函数交互。我们的方法通过计算并允许使用户快速应用此类修改，而无需为了结果等待长时间。
 
@@ -9178,9 +9132,9 @@ $$A(p, n) := \frac{1}{\pi}\int_{\Omega(n)} V(p, \omega)d\omega,$$
 
 ### 3.2.1 概述
 
-为了近似体积中某一点的发生率，我们避免了光线投射。相反，我们引入了一种基于光线被体积阻挡概率的近似。我们不是完全求解 $\mathcal{A}(p)$ 及其积分，而是考虑 $p$ 周围由大小增加的体积组成的有限区域。相邻体积之间的体积形成了一层体素，即所谓的壳（shell）（图 3.2）。我们将展示如何推导出随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 $\mathcal{A}(p)$ 的近似。最后，通过启发式方法结合这些各种壳的结果，得到我们对整个体积的近似。
+为了近似体积中某一点的发生率，我们避免了光线投射。相反，我们引入了一种基于光线被体积阻挡概率的近似。我们不是完全求解 `𝒜(p)` 及其积分，而是考虑 `p` 周围由大小增加的体积组成的有限区域。相邻体积之间的体积形成了一层体素，即所谓的壳（shell）（图 3.2）。我们将展示如何推导出随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 `𝒜(p)` 的近似。最后，通过启发式方法结合这些各种壳的结果，得到我们对整个体积的近似。
 
-首先，我们考虑由具有一个体素宽边界 $S$ 的球体表示的壳。这些壳由一系列连续的球组成，每个球的半径增加一个体素。在这种情况下，如果我们考虑一个独立的壳，从其中心发出的任何随机光线将恰好相交一个体素。如果所有
+首先，我们考虑由具有一个体素宽边界 `S` 的球体表示的壳。这些壳由一系列连续的球组成，每个球的半径增加一个体素。在这种情况下，如果我们考虑一个独立的壳，从其中心发出的任何随机光线将恰好相交一个体素。如果所有
 
 | 层 2 |
 | :--- |
@@ -9190,15 +9144,15 @@ $$A(p, n) := \frac{1}{\pi}\int_{\Omega(n)} V(p, \omega)d\omega,$$
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_496_0.png)
 
-**图 3.2.** 随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 $\mathcal{A}(p)$ 的近似。最后，通过启发式方法结合这些各种壳的结果，得到我们对整个体积的近似。
+**图 3.2.** 随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 `𝒜(p)` 的近似。最后，通过启发式方法结合这些各种壳的结果，得到我们对整个体积的近似。
 
 ### 3.2.2 形壳近似遮蔽
 
-在实践中，我们使用箱形壳而不是球形壳（图 3.2）。我们在下一节中展示这将让我们利用 GPU 过滤来计算 $average_S$，使算法非常高效。
+在实践中，我们使用箱形壳而不是球形壳（图 3.2）。我们在下一节中展示这将让我们利用 GPU 过滤来计算 `average_S`，使算法非常高效。
 
-为了理解这个公式，有助于只考虑两个壳。为了这样做，我们使用随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 $\mathcal{A}(p)$ 的近似。
+为了理解这个公式，有助于只考虑两个壳。为了这样做，我们使用随机光线被壳阻挡的概率。从这里，我们假设整个体积由单个壳表示，并推出积分 `𝒜(p)` 的近似。
 
-首先，我们考虑由具有一个体素宽边界 $S$ 的球体表示的壳。这些壳由一系列连续的球组成，每个球的半径增加一个体素。在这种情况下，如果我们考虑一个独立的壳，从其中心发出的任何随机光线将恰好相交一个体素。如果所有
+首先，我们考虑由具有一个体素宽边界 `S` 的球体表示的壳。这些壳由一系列连续的球组成，每个球的半径增加一个体素。在这种情况下，如果我们考虑一个独立的壳，从其中心发出的任何随机光线将恰好相交一个体素。如果所有
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_497_0.png)
 
@@ -9208,60 +9162,63 @@ $$A(p, n) := \frac{1}{\pi}\int_{\Omega(n)} V(p, \omega)d\omega,$$
 
 **图 3.4.** 用于近似发生率的立方壳。
 
-按照之前描述的步骤，我们需要推导出每个壳的 $average_{S_i}$，在我们的新情况下，这对应于相邻立方体之间所有体素值的平均值。如果我们假设有一种快速确定完整立方体平均平均的方法，就可以快速确定 $average_{S_i}$。为了说明这种计算，我们将确定由两个立方体 $C_1$ 和 $C_2$ 定义的壳 $S$ 的 $average_{S_S}$，其中 $S_1, S_2$ 的体素值分别为 $A_1, A_2$（$S_1 < S_2$）。得到的解决方案为
+按照之前描述的步骤，我们需要推导出每个壳的 `average_{S_i}`，在我们的新情况下，这对应于相邻立方体之间所有体素值的平均值。如果我们假设有一种快速确定完整立方体平均平均的方法，就可以快速确定 `average_{S_i}`。为了说明这种计算，我们将确定由两个立方体 `C_1` 和 `C_2` 定义的壳 `S` 的 `average_{S_S}`，其中 `S_1, S_2` 的体素值分别为 `A_1, A_2`（`S_1 < S_2`）。得到的解决方案为：
 
-$$average_{S_S} = \frac{S_2A_2 - S_1A_1}{S_2 - S_1}. \quad (3.1)$$
+$$
+average_{S_S} = \frac{S_2A_2 - S_1A_1}{S_2 - S_1}. \quad (3.1)
+$$
 
-换句话说，我们可以从一个立方体的体素总和 $S_2A_2$ 中减去下一个较小的 $(S_2A_2)$，并用两者之间的壳的体素数量对结果进行归一化（图 3.3下行）。
-
-
-
-
+换句话说，我们可以从一个立方体的体素总和 `S_2A_2` 中减去下一个较小的 `(S_2A_2)`，并用两者之间的壳的体素数量对结果进行归一化（图 3.3 下行）。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_498_0.png)
 
-**图 3.5.** 使用 (a) 光线追踪（256 射线/体素）、(b)  mipmap 过滤和 (c) N-buffer 过滤实现的体积遮挡。
+**图 3.5.** 使用 (a) 光线追踪（256 射线/体素）、(b) mipmap 过滤和 (c) N-buffer 过滤实现的体积遮挡。
 
-请注意，方程 (3.1)可以重写为：
+请注意，方程 (3.1) 可以重写为：
 
-$$average_S = \frac{1}{1-\frac{S_1}{S_2}}\left(A_2-\frac{S_1}{S_2}A_1\right).$$
+$$
+average_S = \frac{1}{1-\frac{S_1}{S_2}}\left(A_2-\frac{S_1}{S_2}A_1\right).
+$$
 
-因此，只需要平均值和 $S_1/S_2$ 的相对变化即可推导出 $average_S$，这进一步简化了计算。假设每个立方体是通过将每条边的长度翻倍得到的，比例将为 $1:8$，导致 $average_S = \frac{8}{7}(A_2-\frac{1}{8}A_1)$。
+因此，只需要平均值和 `S_1/S_2` 的相对变化即可推导出 `average_S`，这进一步简化了计算。假设每个立方体是通过将每条边的长度翻倍得到的，比例将为 `1:8`，导致 `average_S = \frac{8}{7}(A_2-\frac{1}{8}A_1)`。
 
 ## 3.2.3 快速立方体平均值
 
 在上一节中，我们假设有一种快速方法来确定立方体内部的平均值。在这里，我们将针对这个问题提出两种解决方案。我们的观察是，对于给定的立方体大小，平均值等同于对体积进行框滤波。
 
-确定不同卷积核大小的平均值是计算机图形中纹理映射领域的一个常见问题。这些技术对应于3D 体积中的相应操作。最常见的近似是 mipmapping，但我们还将介绍 N-buffers [Décrout '05]，它在增加成本的基础上提供更高质量的过滤。
+确定不同卷积核大小的平均值是计算机图形中纹理映射领域的一个常见问题。这些技术对应于 3D 体积中的相应操作。最常见的近似是 mipmapping，但我们还将介绍 N-buffers [Décrout '05]，它在增加成本的基础上提供更高质量的过滤。
 
-由于 mipmaps 相当标准，我们在这里将只关注 N-buffers。像 mipmaps 一样，它们由多个层次 $l$ 组成，每个层次代表 $2^l$ 大小立方体内部原始体积的平均值。与 mipmaps 不同，N-buffer 的分辨率在每个层次中都不会降低。因此，可以检索体积中每个位置处立方体的精确填充部分，而对于 mipmap，线性插值只能提供基于八个最邻体素的近似值，这会降低质量（图 3.5）。
+由于 mipmaps 相当标准，我们在这里将只关注 N-buffers。像 mipmaps 一样，它们由多个层次 `l` 组成，每个层次代表 `2^l` 大小立方体内部原始体积的平均值。与 mipmaps 不同，N-buffer 的分辨率在每个层次中都不会降低。因此，可以检索体积中每个位置处立方体的精确填充部分，而对于 mipmap，线性插值只能提供基于八个最邻体素的近似值，这会降低质量（图 3.5）。
 
 ## 3. 用于体积渲染的平滑概率遮挡
 
 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 | 0.0 | 0.0 |
-| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.1 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 0.0 |
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.1 | 0.0 | 0.0 | 0.0 |
 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 0.3 | 0.0 | 0.0 |
-| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.3 | 0.0 |
-| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | | 0.0| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | | 0 |
-| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0 0 | 0 0. 0 0. 0 0. 0 0.  | 0.  | 0.0 | 0.0 | 0000 00000 0.00 0.00 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 0.3 | 0.0 | 0.0 |
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 
-As mipmaps are rather standard, we will only focus on N-buffers here. Like mipmaps, they consist of multiple levels $l$, each representing the average values of the original volume inside cubes of $2^l$. Unlike mipmaps, the resolution of an N-buffer is not reduced in each level. Consequently, it is possible to retrieve the exact filled part of a cube at every position in the volume, whereas for a mipmap linear interpolation can provide only an approximation based on the eight closest voxels, which reduces the quality (Figure 3.5).
+As mipmaps are rather standard, we will only focus on N-buffers here. Like mipmaps, they consist of multiple levels `l`, each representing the average values of the original volume inside cubes of `2^l`. Unlike mipmaps, the resolution of an N-buffer is not reduced in each level. Consequently, it is possible to retrieve the exact filled part of a cube at every position in the volume, whereas for a mipmap linear interpolation can provide only an approximation based on the eight closest voxels, which reduces the quality (Figure 3.5).
 
-## 3. Smooth Probabilistic Occlusion for Volume Rendering
+## 3. 用于体积渲染的平滑概率遮挡
 
 （此处为表格内容，由于数据量巨大且为原始数值格式，根据指令保留表格格式，表格内部数据部分无需翻译，仅保留结构。）
 
 ## 3.3 Approximating Ambient Occlusion
 
-In Section 3.2, we explained that ambient occlusion can provide cues that are closer to realistic lighting because voxels behind the point of interest are not taken into account. To reduce this effect, we can offset the lookups in the direction of the normal. When choosing the offset carefully, the increase in the size of the cubes and offset can be correlated to obtain shells that surround hemispheres by multiplying the normal vector by half the size of the box. An example with a shorter vector is illustrated in Figure 3.7.
+
+
+在第 3.2 节中，我们解释了环境光遮蔽能够提供更接近真实光照的线索，因为不会考虑兴趣点后方的体素。为了减弱这种影响，我们可以沿法线方向偏移查询位置。仔细选择偏移量后，可以将立方体尺寸的增加与偏移量相关联：将法向量乘以盒体尺寸的一半，即可获得包围半球的壳层。图 3.7 展示了使用较短向量的示例。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_499_0.png)
 
-Figure 3.7. The lookups of the cubes from a point with a normal of length 0.75 in the upward direction.
+图 3.7。法线长度为 0.75 且方向向上的点所查询的立方体。
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_500_0.png)
 
@@ -9271,60 +9228,54 @@ Figure 3.7. The lookups of the cubes from a point with a normal of length 0.75 i
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_500_3.png)
 
-Figure 3.8. Effect of the normal factor
-
-
-
+图 3.8。法线因子的影响。
 
 # VI 计算
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_502_0.png)
 
-(a) Backpack 数据集
+（a）Backpack 数据集
 
-(b) Manix 数据集
+（b）Manix 数据集
 
-**图 3.9.** SPAO 应用于 Backpack (512×512×461) 和 Manix (512×512×460) 数据集。
+**图 3.9。** SPAO 应用于 Backpack（512×512×461）和 Manix（512×512×460）数据集。
 
 我们的方法高效且易于实现，并带来了非常好的质量/性能平衡。尽管如此，我们还尝试了更复杂的外壳组合，特别是考虑到遮挡概率独立性的假设在大多数数据集中通常是不成立的。实践中，事实证明我们的解决方案似乎是一个很好的选择，任何复杂性的增加都会导致性能的显著影响。尽管如此，这个主题对于未来的工作仍然具有吸引力。此外，我们还希望通过我们的过滤技术研究物理上的光传输（例如全局光照），这可以进一步增强体积渲染的效果。
 
 ## 参考文献
 
-- [Crassin et al. 10] Cyril Crassin, France Neyret, Miguel Sainz, and Elise-Emann. “GPU Pro: Advanced Rendering Techniques,” edited by Wolfgang Engel, Efficient Rendering of Highly Detailed Volumetric Scenes with GigaVoxels, pp. 643–676. Natick, MA: A K Peters, 2010.
+- [Crassin et al. 10] Cyril Crassin, France Neyret, Miguel Sainz, and Elise-Emann. “GPU Pro: Advanced Rendering Techniques,” edited by Wolfgang Engel, Efficient Rendering of Highly Detailed Volumetric Scenes with GigaVoxels, pp. 643–676. Natick, MA: A K Peters, 2010。
+- [Décorret 05] Xavier Décorret. “N-Buffers for Efficient Depth Map Query.” Computer Graphics Forum 24:3 (2005), 393–400。
+- [Hernell et al. 10] Frida Hernell, Patrick Ljung, and Anders Ynerman. “Local Ambient Occlusion in Direct Volume Rendering.” IEEE Transactions on Visualization and Computer Graphics 16:4 (2010), 548–559。
+- [Zhukov et al. 98] Sergey Zhukov, Andrei I, and Grig Grig Kronin. “An Ambient Light Illumination Model.” In Rendering Techniques 98, pp. 45–55. New York: Springer, 1998。
 
-- [Décorret 05] Xavier Décorret. “N-Buffers for Efficient Depth Map Query.” Computer Graphics Forum 24:3 (2005), 393–400.
+# VII 3D 引擎设计
 
-- [Hernell et al. 10] Frida Hernell, Patrick Ljung, and Anders Ynerman. “Local Ambient Occlusion in Direct Volume Rendering.” IEEE Transactions on Visualization and Computer Graphics 16:4 (2010), 548–559.
+欢迎阅读 GPU Pro 本版本的 3D 引擎设计章节。你在这里找到的章节涵盖了系列引擎设计问题。
 
-- [Zhukov et al. 98] Sergey Zhukov, Andrei I, and Grig Grig Kronin. “An Ambient Light Illumination Model.” In Rendering Techniques 98, pp. 45–55. New York: Springer, 1998.
+首先，Holger Gruen 在“用于快速光线投射的分块线性二进制网格”章节中探讨了二进制 3D 网格使用分块线性内存布局的优势。这种内存布局允许将许多体积相交算法映射到二进制逻辑与（AND）操作，使得对体素网格的划分进行体积模板的批量测试成为可能。该章节展示了这种内存布局优化的各种用例。
 
-# VII
+其次，Michael Delva、Julien Hamaide 和 Rams Ladleni 介绍了“使用 Shader Shaker 进行基于语义的着色器生成”。该章节为跨多个目标平台开发和高效维护着色器提供了一种解决方案。所提技术从一组手写代码片段自动生成着色器，每个片段负责单一功能。这种经过验证的分治方法的特定版本不同之处在于链接片段的方式，它使用路径查找算法来计算从初始顶点属性到最终着色器输出、通过着色器片段的完整数据流。
 
-# 3D 引擎设计
-
-欢迎 GPU Pro 本版本的 3D 引擎设计章节。你在这里找到的章节涵盖了系列引擎设计问题。
-
-首先，Holger Gruen 在“用于快速光线投射的分块线性二进制网格”章节中探讨了二进制 3D 网格使用分块线性内存布局的优势。这种内存布局允许将许多体积相交算法映射到二进制逻辑与（AND）操作。使得对体素网格的划分进行体积模板的批量测试成为可能。该章节展示了这种内存布局优化的各种用例。
-
-其次，Michael Delva, Julien Hamaide 和 Rams Ladleni 介绍了“使用 Shader Shaker 进行基于语义的着色器生成”。该章节为跨多个目标平台开发和高效维护着色器提供了一种解决方案。所提技术从一组手写代码片段自动生成着色器，每个片段负责单一功能。这种经过验证的分治方法的特定版本不同之处在于链接片段的方式，它使用路径查找算法来计算从初始顶点属性到最终着色器输出通过着色器片段的完整数据流。
-
-最后，Shannon Woods, Nicolas Capens, Jamie Medell 和 Geoff Lang 介绍了“ANGLE：将 OpenGL ES 引入桌面”。ANGLE 是一个可移植、开源、硬件加速的 OpenGL ES 2.0 实现，被 Google Chrome 等软件使用。该章节深入介绍了 ANGLE 的 Direct3D 11 后端实现，以及如何处理某些挑战，并还为使用 ANGLE 的应用程序开发者提供了推荐做法。
+最后，Shannon Woods、Nicolas Capens、Jamie Medell 和 Geoff Lang 介绍了“ANGLE：将 OpenGL ES 引入桌面”。ANGLE 是一个可移植、开源、硬件加速的 OpenGL ES 2.0 实现，被 Google Chrome 等软件使用。该章节深入介绍了 ANGLE 的 Direct3D 11 后端实现，以及如何处理某些挑战，并还为使用 ANGLE 的应用程序开发者提供了推荐做法。
 
 我希望你喜欢本版的精选，希望这些章节能为你的渲染和引擎开发工作带来启发和启示。
+
 欢迎！
 
 —Wessam Bahnassi
 
 # 分块线性二进制网格
-用于快速光线投射操作
+
+## 用于快速光线投射操作
 
 Holger Gruen
 
 ## 1.1 引言
 
-二进制网格每个单元仅包含一个位的信息。即使是相当高的网格分辨率（例如，$4096 \times 4096 \times 256$ 相当于 512 MB 内存）仍然可以放入 GPU 内存，因此在实时情况下是实行的。
+二进制网格每个单元仅包含一个位的信息。即使是相当高的网格分辨率（例如 `4096 × 4096 × 256` 相当于 512 MB 内存）仍然可以放入 GPU 内存，因此在实时情况下是可行的。
 
-本章探讨了二进制 3D 网格使用分块线性内存布局的优势。这种内存布局允许将许多体积相交算法映射到二进制逻辑与操作。使得对体素网格的部分进行体积模板的批量测试成为可能。与采样方案相比，其运算次数和需要访问的内存字更少。
+本章探讨了二进制 3D 网格使用分块线性内存布局的优势。这种内存布局允许将许多体积相交算法映射到二进制逻辑与操作，使得对体素网格的部分进行体积模板的批量测试成为可能。与采样方案相比，其运算次数和需要访问的内存字更少。
 
 下面将讨论渲染二进制网格的技术。文中描述了如何使用分块线性网格在网格中投射光线，以间接光照渲染技术作为真实用例来检测光源。最后，讨论了使用分块线性网格的其他各种情况。
 
@@ -9332,11 +9283,7 @@ Holger Gruen
 
 关于在 3D 图形中使用二进制体素网格有大量工作：[Eisenmann and Décrot '06] 列出了各种应用，特别是阴影领域的一些；[Penmetsa et al. 10] 描述了一种体积遮挡算法；[Kasik et al. 08] 展示了预计算可见性应用的使用，仅如此。
 
-二进制体素网格（BVGs）的渲染通常通过将网格的第三轴（例如 $z$ 轴）映射到多渲染目标（MRT）设置的像素位来实现。在渲染期间，沿着 $z$ 轴的体素/位使用
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_508_0.png)
-
-图形硬件的混合操作。像素/着色器计算要设置的位并相应计算输出。
+二进制体素网格（BVGs）的渲染通常通过将网格的第三轴（例如 `z` 轴）映射到多渲染目标（MRT）设置的像素位来实现。在渲染期间，沿着 `z` 轴的体素/位使用图形硬件的混合操作。像素/着色器计算要设置的位并相应计算输出。
 
 具体来说，在更现代的硬件和现代图形 API 上，可以使用无符号整数像素格式对渲染目标中的特定位进行二进制混合操作。
 
@@ -9356,19 +9303,15 @@ Holger Gruen
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_509_0.png)
 
-图 1.2。这里 $8 \times 8 \times 8$ 个体素放入 $4 \times 4 \times 4$ 的块中。
-
-
-
-
+图 1.2。这里 `8 × 8 × 8` 个体素放入 `4 × 4 × 4` 的块中。
 
 ```cpp
 // 返回 .x 中以字节为单位的缓冲区偏移，以及
 // .y 中用于 32 位整数的 OR 运算值，以设置网格位置
 uint2 computeOffsetAndVal(float3 pos, // 网格中的 3D 位置
-                            float GridSize, // 网格大小
-                            float BlockSize) // 块大小
-                            // 例如 8x8x8
+                          float GridSize, // 网格大小
+                          float BlockSize) // 块大小
+                          // 例如 8x8x8
 {
 ```
 
@@ -9411,28 +9354,28 @@ return uint2(
 
 // 计算 32 位字中的位位置
 0x1 << uint (bit_pos.x + bit_pos.y * 4.0f +
-               (bit_pos.z % 2.0f) * 4.0f * 4.0f)
+             (bit_pos.z % 2.0f) * 4.0f * 4.0f)
 );
 ```
 
-**列表 1.1.** 计算线性排序二进制网格中位置的偏移和位位置。
+**列表 1.1。** 计算线性排序二进制网格中位置的偏移和位位置。
 
 列表 1.2 显示了实现的着色器片段。在这里，假设已启用分段细化（tessellation），否则领域着色器需要承担此处下方顶点着色器片段的角色。
 
 假设视口分辨率足够，能够向像素着色器提供足够数量的像素，见算法 1.1。列表 1.2 提供了实现细节。
 
-# 1. 用于快速光线追踪的块级线性二进制网格
+### 1. 用于快速光线追踪的块级线性二进制网格
 
-- 1. 设置具有足够分辨率的视口，以对三角形进行足够密的光栅化。
-- - 实验表明，网格维度两倍的分辨率是一个很好的分辨率。
-- - 应用将维度作为常量 'g.viewportresolution' 传递给着色器。
-- 2. 禁用背面面剔除和深度测试。
-- 3. 在像素着色器中为 'ByteAddressBuffer BinaryGrid' 设置 UAV（见列表 1.2）。
-- 4. 顶点着色器（见列表 1.2）在完成顶点处理的基础上，还传递了每个顶点的世界空间位置。
-- 5. 几何着色器设置了一个视图矩阵，沿着三角形的世界空间法线观察，以最大化投影面积，并将网格空间位置传递给像素着色器。
-- 6. 像素着色器使用列表 1.1 中的函数计算到网格缓冲器的偏移。然后它使用原子操作（interlocked operation）设置当前网格位置的位。
+1. 设置具有足够分辨率的视口，以对三角形进行足够密的光栅化。
+   - 实验表明，网格维度两倍的分辨率是一个很好的分辨率。
+   - 应用将维度作为常量 `g.viewportresolution` 传递给着色器。
+2. 禁用背面面剔除和深度测试。
+3. 在像素着色器中为 `ByteAddressBuffer BinaryGrid` 设置 UAV（见列表 1.2）。
+4. 顶点着色器（见列表 1.2）在完成顶点处理的基础上，还传递了每个顶点的世界空间位置。
+5. 几何着色器设置了一个视图矩阵，沿着三角形的世界空间法线观察，以最大化投影面积，并将网格空间位置传递给像素着色器。
+6. 像素着色器使用列表 1.1 中的函数计算到网格缓冲器的偏移。然后它使用原子操作（interlocked operation）设置当前网格位置的位。
 
-> 算法 1.1. 单次通过体素化。
+> **算法 1.1。** 单次通过体素化。
 
 ```cpp
 struct GS_RenderGridInput
@@ -9440,7 +9383,8 @@ struct GS_RenderGridInput
     float3 f3WorldSpacePos : WSPos;
     ... 
 };
-GS_RenderGridInput VS_BinaryGrid( VS_RenderSceneInput I )
+
+GS_RenderGridInput VS_BinaryGrid(VS_RenderSceneInput I)
 {
     GS_RenderGridInput 0;
     // 传递世界空间位置 —— 假设 WS 已传入
@@ -9448,19 +9392,25 @@ GS_RenderGridInput VS_BinaryGrid( VS_RenderSceneInput I )
     // 计算/传递额外内容
     return 0;
 }
+
 struct PS_RenderGridInput
 {
     float4 f4Position : SV_POSITION;
     float3 f3Position : GRIDPOS;
 };
+
 [maxvertexcount(3)]
-void GS_BinaryGrid(triangle GS_RenderGridInput input[3], 
-    inout TriangleStream<PS_RenderGridInput> Triangles )
+void GS_BinaryGrid(
+    triangle GS_RenderGridInput input[3],
+    inout TriangleStream<PS_RenderGridInput> Triangles)
 {
     PS_RenderGridInput output;
     // g.WorldGridSize 包含网格的世界空间大小
-    float3 f3CellSize = g_WorldGridSize.xyz * 1.0f / float3(BINARY_GRID_RES).xyz;
+    float3 f3CellSize =
+        g_WorldGridSize.xyz * 1.0f / float3(BINARY_GRID_RES).xyz;
 ```
+
+
 
 ```cpp
 float gv[3], v[3];
@@ -9525,7 +9475,8 @@ return uint2(
                (bit_pos.z % 2.0f) * 4.0f * 4.0f)
 );
 ```
-*(注：由于原文代码块后半部分逻辑不完整或变量未定义如 `sub_block_pos`，翻译时根据上下文逻辑进行了一致性对齐处理)*
+
+*（注：由于原文代码块后半部分逻辑不完整或变量未定义如 `sub_block_pos`，翻译时根据上下文逻辑进行了一致性对齐处理）*
 
 **列表 1.1.** 计算线性排序二进制网格中位置的偏移和位位置。
 
@@ -9535,14 +9486,14 @@ return uint2(
 
 # 1. 用于快速光线追踪的块级线性二进制网格
 
-- 1. 设置具有足够分辨率的视口，以对三角形进行足够密的光栅化。
-- - 实验表明，网格维度两倍的分辨率是一个很好的分辨率。
-- - 应用将维度作为常量 'g.viewportresolution' 传递给着色器。
-- 2. 禁用背面面剔除和深度测试。
-- 3. 在像素着色器中为 'ByteAddressBuffer BinaryGrid' 设置 UAV（见列表 1.2）。
-- 4. 顶点着色器（见列表 1.2）在完成顶点处理的基础上，还传递了每个顶点的世界空间位置。
-- 5. 几何着色器设置了一个视图矩阵，沿着三角形的世界空间法线观察，以最大化投影面积，并将网格空间位置传递给像素着色器。
-- 6. 像素着色器使用列表 1.1 中的函数计算到网格缓冲器的偏移。然后它使用原子操作（interlocked operation）设置当前网格位置的位。
+1. 设置具有足够分辨率的视口，以对三角形进行足够密的光栅化。
+   - 实验表明，网格维度两倍的分辨率是一个很好的分辨率。
+   - 应用将维度作为常量 `g.viewportresolution` 传递给着色器。
+2. 禁用背面面剔除和深度测试。
+3. 在像素着色器中为 `ByteAddressBuffer BinaryGrid` 设置 UAV（见列表 1.2）。
+4. 顶点着色器（见列表 1.2）在完成顶点处理的基础上，还传递了每个顶点的世界空间位置。
+5. 几何着色器设置了一个视图矩阵，沿着三角形的世界空间法线观察，以最大化投影面积，并将网格空间位置传递给像素着色器。
+6. 像素着色器使用列表 1.1 中的函数计算到网格缓冲器的偏移。然后它使用原子操作（interlocked operation）设置当前网格位置的位。
 
 > 算法 1.1. 单次通过体素化。
 
@@ -9638,24 +9589,20 @@ return uint2(
 );
 ```
 
-对于射线上的所有体素，从射线的起点开始一个迭代器 $V(I)$。
+对于射线上的所有体素，从射线的起点开始一个迭代器 `V(I)`。
 
-- 确定 $V(I)$ 所在的 $2^N \times 2^N \times 2^N$ 块 $B$。
-- 确定 $V(I)$ 位于 $B$ 中的哪个 $4 \times 4 \times 4$ 子块 $S$。
-- 预留 32 位整数寄存器 $R[2]$ 来存储射线子段。
-- 在 $R$ 中构建一个射线段。
-
-+ (a) 对于所有从 $V(I)$ 出发且位于 $S$ 内部的射线体素 $v$，
-  (i) 在 $R$ 中设置 $v$ 映射的位值，
-  (ii) 将 $I$ 推进 1 位。
-
-- - 从持有 $S$ 的 $G$ 缓冲区中加载 32 位整数字 $T[2]$。
-
-- - 执行以下按位与（AND）操作：
-  (a) $R[0] \& T[0]$，
-  (b) $R[1] \& T[1]$。
-
-- - 如果步骤 6(a) 或 6(b) 中的任何测试返回非零结果，则射线已击中物体。
+- 确定 `V(I)` 所在的 `2^N x 2^N x 2^N` 块 `B`。
+- 确定 `V(I)` 位于 `B` 中的哪个 `4 x 4 x 4` 子块 `S`。
+- 预留 32 位整数寄存器 `R[2]` 来存储射线子段。
+- 在 `R` 中构建一个射线段。
+  - (a) 对于所有从 `V(I)` 出发且位于 `S` 内部的射线体素 `v`，
+    - (i) 在 `R` 中设置 `v` 映射的位值，
+    - (ii) 将 `I` 推进 1 位。
+- 从持有 `S` 的 `G` 缓冲区中加载 32 位整数字 `T[2]`。
+- 执行以下按位与（AND）操作：
+  - (a) `R[0] & T[0]`，
+  - (b) `R[1] & T[1]`。
+- 如果步骤 6(a) 或 6(b) 中的任何测试返回非零结果，则射线已击中物体。
 
 # 算法 1.2. 分段投射射线。
 
@@ -9733,32 +9680,53 @@ float traceEdgeGrid( float3 fCPos, // 射线起点
         fLoopCount += 1.0f;
         // 加载局部 4x4x4 网格
         grid.x = g_bufBinaryGrid[ offset ];
+```
+
 ```cpp
 grid.y = g_bufBinaryGrid[ offset ];
 
 // 构建当前 4x4 网格的掩码
-[unroll](int ss = 0; ss < 4; ++ss)
-{
-    if(f3Steps > 0.5f) {
-        uint bitpos = uint(f3SubPos.x + (f3SubPos.y * 4.0f) +
-                      ((f3SubPos.z * 2.0f) * 16.0f);
-        lineseg.x = f3SubPos.z > 1.0f ? 1 << bitpos;
-        lineseg.y = f3SubPos.z < 2.0f ? 0 << bitpos;
-    }
-    f3SubPos += f3dg;
-    f3GridCoord += f3dg;
-    fMax = 1.0f;
-    if ((lineseg.x & grid.x) | (lineseg.y & grid.y) != 0) {
-        fCount += 1.0f;
-        break;
-    }
-    // 重新计算位置
-    f3SubPos = f3GridCoord%4.0f;
-}
-return fCount;
 
+[unroll](int ss = 0; ss < 4; ++ss)
+
+{
+
+    if(f3Steps > 0.5f) {
+
+        uint bitpos = uint(f3SubPos.x + (f3SubPos.y * 4.0f) +
+
+                      ((f3SubPos.z * 2.0f) * 16.0f);
+
+        lineseg.x = f3SubPos.z > 1.0f ? 1 << bitpos;
+
+        lineseg.y = f3SubPos.z < 2.0f ? 0 << bitpos;
+
+    }
+
+    f3SubPos += f3dg;
+
+    f3GridCoord += f3dg;
+```
+
+
+
+`fMax = 1.0f;`
+
+```
+if ((lineseg.x & grid.x) | (lineseg.y & grid.y) != 0) {
+    fCount += 1.0f;
+    break;
+}
+
+// 重新计算位置
+f3SubPos = f3GridCoord % 4.0f;
+```
+
+`return fCount;`
+
+```
 // 公用的伪随机算法
-uint rand_xhift(uint uSeed) {
+uint rand_xshift(uint uSeed) {
     uint rng_state = uSeed;
     rng_state ^= (rng_state << 13);
     rng_state ^= (rng_state >> 17);
@@ -9772,26 +9740,30 @@ float computeFakeNoise(uint uSeed) {
     uRand = rand_xshift(uRand);
     return float(uRand) / 429467295.0;
 }
+```
 
+```
 // 在 f3CPOrg 投射射线计算阻塞 VPL 的间接光
 float3 computeIndirectLight(float2 tc, // RSM 纹理坐标
                             float2 fc, // 抖动偏移
                             int2 i2off, float3 f3CPOrg, // 当前位置
                             float3 f3CR ) // 当前位置法线
+{
     float2 tmp;
     float3 f3IL = (0.0f).xxx;
     int3 adr;
+```
 
 # 用于快速投射的块线性网格
 
 ```cpp
 float3 f3CPos = f3CPOrg;
 adr.z = 0;
-adr.y = int(tc.y * g_vRSMDimens.y + (-LFS) + i2off.y );
+adr.y = int(tc.y * g_vRSMDimens.y + (-LFS) + i2off.y);
 // 遍历稀疏 VPL 卷积
-for( float row = -LFS; row <= LFS; row = 0.0f, adr.y + 6 == 6) {
+for (float row = -LFS; row <= LFS; row = 0.0f, adr.y + 6 == 6) {
     adr.x = int(tc.x * g_vRSMDimens.x + (-LFS) + i2off.x);
-    for( float col = -LFS; col <= LFS; col = 0.0f,
+    for (float col = -LFS; col <= LFS; col = 0.0f,
         float3 f3Pos, f3Col, f3N;
         // 解包 G-buffer 数据
         float3 f3DCol, f3Pos, f3Pos, f3N;
@@ -9811,7 +9783,7 @@ for( float row = -LFS; row <= LFS; row = 0.0f, adr.y + 6 == 6) {
         float fNoise2 = 0.15f * computeFakeNoise(uint(adr.y + fc.y * 100));
         f3Pos = f3D + fInvLen * fNoise1;
         f3CPos = -f3D + fInvLen * fNoise2;
-        if(fDistAtt >= 0.0f) {
+        if (fDistAtt >= 0.0f) {
             f3IL += f3Col * fDistAtt * traceRayBinaryGrid(
                 (f3CPos.xyz, f3CN, f3D, fInvLen, f3Pos, f3N));
         }
@@ -9825,8 +9797,11 @@ return f3IL;
 # 1.7 结果
 
 本章的一个目标是证明使用块线性网格有助于加速二进制体素网格的光射。
+
 为了证明这一点，我们还实现了一种遍历网格的标准方法。
+
 表 1.1 显示了两种方法在 NVIDIA GTX680 上以 $1024 \times 768$ 分辨率处理网格的性能。在最后的测试中，标准实现也允许在打包网格上操作，以证明仅执行块级测试的能力就足以产生加速。
+
 在测试场景和测试应用程序中，块级测试允许约 20% 的加速。
 
 # 1.8 未来工作
@@ -9836,9 +9811,6 @@ return f3IL;
 # 1.8.1 投射锥体模板
 
 通过块线性 BVG $G$ 投射锥体的算法在算法 1.3 中详细说明。它通过与小的射线段求交来执行相交。
-
-
-
 
 ## 1. 用于快速光线投射的块线性二进制网格 501
 
@@ -9857,20 +9829,16 @@ return f3IL;
 **表 1.1.** 性能对比。
 
 1. 确定 $G$ 中哪一个 $4 \times 4 \times 4$ 子块 $S$ 包含当前像素的位置。
-
 2. 取当前像素处的世界空间切线，并将其除以 $G$ 的 $4 \times 4 \times 4$ 子块的世界空间尺寸 $\Rightarrow T$。
-
 3. 取当前像素处的世界空间副切线，并将其除以 $G$ 的 $4 \times 4 \times 4$ 子块的世界空间尺寸 $\Rightarrow BT$。
-
 4. 沿从 $S$ 开始的射线段上的点 $P$（从一个 $4 \times 4 \times 4$ 块移动到下一个）。
-
-    - (a) 计算锥体半径 $r(P)$。
-    - (b) 将 $r$ 除以 $4 \times 4 \times 4$ 子块的世界空间尺寸。
-    - (c) 迭代从 $P + r \times (-T - BT)$ 到 $P + r \times BT$ 的点 $hp$。
-    - A. 将两个整数的数组 $R$ 清零。
-    - B. 对于与原始锥体相交的位置，设置 $R$ 中的所有位（代表 $G$ 的 $4 \times 4 \times 4$ 块）。
-    - C. 将 $G$ 中 $up$ 处的 $4 \times 4 \times 4$ 块加载到寄存器 $T[2]$。
-    - D. 如果 ($R[0]$ 和 $T[0]$) 或 ($R[1]$ 和 $T[1]$)，则锥体命中网格；退出测试。
+   - (a) 计算锥体半径 $r(P)$。
+   - (b) 将 $r$ 除以 $4 \times 4 \times 4$ 子块的世界空间尺寸。
+   - (c) 迭代从 $P + r \times (-T - BT)$ 到 $P + r \times BT$ 的点 $hp$。
+     - A. 将两个整数的数组 $R$ 清零。
+     - B. 对于与原始锥体相交的位置，设置 $R$ 中的所有位（代表 $G$ 的 $4 \times 4 \times 4$ 块）。
+     - C. 将 $G$ 中 $up$ 处的 $4 \times 4 \times 4$ 块加载到寄存器 $T[2]$。
+     - D. 如果 ($R[0]$ 和 $T[0]$) 或 ($R[1]$ 和 $T[1]$)，则锥体命中网格；退出测试。
 
 # 算法 1.3. 穿越块线性 BVG 投影锥体。
 
@@ -9893,21 +9861,13 @@ return f3IL;
 ## 参考文献
 
 - [Crassin and Green 12] Cyril Crassin and Simon Green. "基于八叉树的利用 GPU 光栅化的稀疏体素化." In OpenGL Insights, 由 P. Cozzi 和 C. Ricci 编辑，pp. 259–278. Boca Raton, FL: CRC Press, 2012.
-
 - [Crassin et al. 11] Cyril Crassin, Fabrice Neyret, Miguel Sanz, Simon Green, and Elmer Eismann. "使用体素锥体追踪的交互式照明." In Symposium on Interactive 3D Graphics and Games, p. 207. New York: ACM, 2011.
-
 - [Dachsbacher and Stamminger 05] Carsten Dachbacher and Marc Stamminger. "反射阴影." In Proceedings of the 2005 Symposium on Interactive 3D Graphics and Games, pp. 203–231. New York, ACM Press, 2005.
-
 - [Eisenmann and Décoret 06] Elmer Eismann and Xavier Décoret. "快速体素化." In Symposium on Interactive 3D Graphics and Games, pp. 71–78. New York, ACM, 2006.
-
 - [Gruen 11] Holger Gruen. "间接照明." In GPU Pro 2, pp. 159–172. Boca Raton, FL: CRC Press, 2011.
-
 - [Gruen 12] Holger Gruen. "曲面化." In GPU Pro 2, pp. 12–14. Boca Raton, FL: CRC Press, 2012.
-
 - [Kasik 08] David Kasik. "变体地狱 (Permutation Hell)." In Symposium on Interactive 3D Graphics and Games, pp. 203–231. New York, ACM Press, 2008.
-
 - [Kasik 10] David Kasik. "体素生成." In Symposium on Interactive 3D Graphics and Games, p. 207. New York: ACM, 2010.
-
 - [Penmats et al. 10] Penmats et al. "环境遮蔽." In SIGGRAPH, pp. 17–20.
 
 ## 2.1 引言
@@ -9930,10 +9890,6 @@ return f3IL;
 
 相关的解决方案是 [Väinänen 13] 中描述的，其中使用基于 Python 的 Mako 模板引擎生成 GLSL 着色器。
 
-
-
-
-
 # 使用 Shader Shaker 基于语义的着色器生成
 
 仍然难以控制生成的着色器的效率（Ericson 08, Engel 08b）。
@@ -9942,7 +9898,7 @@ return f3IL;
 
 Trapp 和 Dollar 开发了一种代码片段系统，通过预定义的着色器在运行时组合以生成覆盖着色器（overshade）[Trapp and Döff 07]。
 
-在 [Engel 08a] 中，Wolfgang 提出了一种着色器工作流，用于维护文件库，每个文件负责单一功能（例如 lighting.fx、utility.fx、normals.fx、skinning.fxh），以及一组独立的文件列表，负责将列缝合在一起（例如 metal.fx、skin.fx、stone.fx、eyelashes.fx、eyes.fx）。这类似于基于节点的方法，但我们的方法理念相同，与它（以及基于节点的解决方案）的区别在于连线是在用户定义的着色器上自动完成的。
+在 [Engel 08a] 中，Wolfgang 提出了一种着色器工作流，用于维护文件库，每个文件负责单一功能（例如 `lighting.fx`、`utility.fx`、`normals.fx`、`skinning.fxh`），以及一组独立的文件列表，负责将列缝合在一起（例如 `metal.fx`、`skin.fx`、`stone.fx`、`eyelashes.fx`、`eyes.fx`）。这类似于基于节点的方法，但我们的方法理念相同，与它（以及基于节点的解决方案）的区别在于连线是在用户定义的着色器上自动完成的。
 
 基于模板的解决方案源于著名的模板方法 [Wikipedia 15b]，其中算法的通用结构（程序骨架）被良好地定义，且允许完善某些方面。
 
@@ -9957,11 +9913,8 @@ Trapp 和 Dollar 开发了一种代码片段系统，通过预定义的着色器
 关于跨语言维护着色器的不同技术和工具的广泛综述可以参阅 [Prankevičius 10a, Franankevičius 12, Pranckevčius 14a]。我们建议读者参考这些文章获取更多信息，但我们将处理此问题的方法总结为以下四类：
 
 - 手动方式。在语言不同的地方，最终可以通过宏的帮助完成，但扩展性不佳。由于微妙的语言差异，这仍然很复杂且难以维护。
-
 - 使用另一种语言。使用一种语言（最终是图形化语言），它可以编译为目标着色器语言作为输出。
-
 - 从一种语言交叉编译到另一种。有很多工具可以在源代码阶段从一种语言翻译为另一种语言。对于 DirectX 9 级的着色器，这个问题可以被认为已解决，但对于支持那时出现的新功能（例如计算、几何、几何等），仍有工作要做。
-
 - 将 HLSL 编译为字节码并将其转换为 GLSL。实现前一种技术更容易，但受限于部分封闭的工具链，只能在 Windows 上运行。
 
 ## 2.3 定义
@@ -9969,12 +9922,13 @@ Trapp 和 Dollar 开发了一种代码片段系统，通过预定义的着色器
 我们的技术围绕片段（fragments）和用户定义语义（semantics）的概念展开（不要与用于生成单个像素数据的计算机图形片段混淆）。
 
 - **片段 (Fragment)**：在此语境下，片段是用 HLSL 编写的单个文件，负责实现单一功能，并包含执行所需的所有信息，包括 uniform 和采样器的声明，以及代码逻辑。列表 2.1 提供了一个片段示例。
-
-- **用户定义语义 (User-defined semantic)**：用户定义语义是用于标记片段输入或输出的字符串面量（例如 MeshSpacePosition、ProjectedPosition）。该标记将在着色器生成期间用于匹配片段的输出到另一个的输入。用户定义语义使用 HLSL 语义功能来映射现有的输入输出。
+- **用户定义语义 (User-defined semantic)**：用户定义语义是用于标记片段输入或输出的字符串面量（例如 `MeshSpacePosition`、`ProjectedPosition`）。该标记将在着色器生成期间用于匹配片段的输出到另一个的输入。用户定义语义使用 HLSL 语义功能来映射现有的输入输出。
 
 ## 2.4 概述
 
-我们的着色器生成器 Shader Shaker 使用新想法来生成着色器。用户定义语义被添加到中间变量中，如列表 2.1 所示。生成算法使用中间语义生成调用列表。算法从预期输出开始，例如：
+
+
+我们的着色器生成器 `Shader Shaker` 使用新想法来生成着色器。用户定义语义被添加到中间变量中，如列表 2.1 所示。生成算法使用中间语义生成调用列表。算法从预期输出开始，例如：
 
 ```cpp
 float4x4 Wvpxf;
@@ -9987,10 +9941,11 @@ void GetPosition(){
 }
 ```
 
-列表 2.1. GetPosition 片段。
+列表 2.1. `GetPosition` 片段。
 
-LitColor，并创建一个从顶点属性到生成该语义所需的函数图。
-要生成着色器，必须向系统提供一个要使用的片段列表（例如 vertex_skinning + projected_world_space_position + diffuse_texturing + normal_mapping + blinn_lighting 示例）。为了管理语义，
+`LitColor`，并创建一个从顶点属性到生成该语义所需的函数图。
+
+要生成着色器，必须向系统提供一个要使用的片段列表（例如 `vertex_skinning + projected_world_space_position + diffuse_texturing + normal_mapping + blinn_lighting` 示例）。为了管理语义：
 
 ## 2.5 定义
 
@@ -10002,15 +9957,11 @@ struct FunctionDefinition {
 };
 ```
 
-列表 2.2. FunctionDefinition 结构。
-
-
-
-
+列表 2.2. `FunctionDefinition` 结构。
 
 # 2. 使用 Shader Shaker 基于语义的着色器生成
 
-```
+```text
 open = {required semantic}
 closed = {}
 
@@ -10051,9 +10002,9 @@ end
 
 为了简化代码生成和调试，语义被用作变量名。代码生成算法如列表 2.4 所示。最后，会生成一个用户语义到系统语义的映射表，这些信息将用于引擎中相应地绑定顶点属性。
 
-为了说明该算法，本示例将将逐步执行。片段的定义如列表 2.5、列表 2.6 和列表 2.7 所示。函数定义如列表 2.8 所示。所需的语义是 LitColor。该算法生成的图如图 2.1 所示。可以看到，随着算法创建图，开放集（open set）和闭合集（closed set）被填充。最后，对图进行处理以创建 2.9 中的代码。需要注意的是，代码仅使用片段中声明的函数。最终代码聚合了所有片段代码，仅移除了语义信息。该模块的目的不是修剪未使用的代码。这一步可以留给后续模块。
+为了说明该算法，本示例将逐步执行。片段的定义如列表 2.5、列表 2.6 和列表 2.7 所示。函数定义如列表 2.8 所示。所需的语义是 `LitColor`。该算法生成的图如图 2.1 所示。可以看到，随着算法创建图，开放集（open set）和闭合集（closed set）被填充。最后，对图进行处理以创建列表 2.9 中的代码。需要注意的是，代码仅使用片段中声明的函数。最终代码聚合了所有片段代码，仅移除了语义信息。该模块的目的不是修剪未使用的代码。这一步可以留给后续模块。
 
-```
+```text
 write function definition with required attributes/varyings
 for each node in depth first order
   for each output variable
@@ -10064,9 +10015,9 @@ for each node in depth first order
 end
 ```
 
-# 列表 2.4. 代码生成。
+列表 2.4. 代码生成。
 
-```
+```cpp
 Texture DiffuseTexture;
 sampler2D DiffuseTextureSampler
 {
@@ -10078,9 +10029,9 @@ void GetDiffuseColor( out float4 color : DiffuseColor,
 {\color = tex2d(DiffuseTextureSampler, texcoord );
 ```
 
-# 列表 2.5. 来自纹理片段的漫反射颜色。
+列表 2.5. 来自纹理片段的漫反射颜色。
 
-```
+```cpp
 void ComputeNormal( in float3 vertex_normal : VertexNormal,
   out float3 pixel_normal : PixelNormal )
 {
@@ -10088,9 +10039,9 @@ void ComputeNormal( in float3 vertex_normal : VertexNormal,
 }
 ```
 
-# 列表 2.6. 简单的法线片段。
+列表 2.6. 简单的法线片段。
 
-```
+```cpp
 float4 SomeLighting(in float4 color : DiffuseColor,
   in float3 normal : PixelNormal ) : LitColor
 {
@@ -10099,9 +10050,9 @@ float4 SomeLighting(in float4 color : DiffuseColor,
 }
 ```
 
-# 列表 2.7. 某些光照片段。
+列表 2.7. 某些光照片段。
 
-```
+```text
 GetDiffuseColor :
 {
 InSemantic : { "DiffuseTexCoord" }
@@ -10131,7 +10082,7 @@ OutSemantic : { "LitColor" }
 
 图 2.1. 图的生成过程。
 
-```
+```cpp
 float4 main(in float3 VertexNormal : NORMAL,
     in float2 DiffuseTexCoord : TEXCOORD )
 {
@@ -10174,11 +10125,11 @@ float4 main(in float3 VertexNormal : NORMAL,
 
 在生成图后，会检查语义的类型是否匹配。
 
-## 2.7 错误可见性
+# 2.7 错误可见性
 
 ## 2.7.3 数据驱动功能
 
-- 我们的工具可以以 JSON 格式输出。
+- 我们的工具可以以 `JSON` 格式输出。
 - 目前，该编辑器是数据驱动的。
 
 ## 2.7.4 编程
@@ -10187,7 +10138,7 @@ float4 main(in float3 VertexNormal : NORMAL,
 
 ## 2.7.5 调试
 
-- 只要 Shader Shaker 存在，就可以方便地调试生成的着色器。
+- 只要 `Shader Shaker` 存在，就可以方便地调试生成的着色器。
 - 语义可以被传递到引擎。
 
 ## 2.7.6 语义选择
@@ -10199,75 +10150,61 @@ float4 main(in float3 VertexNormal : NORMAL,
 
 - 我们的工具链可以处理语义的生成。使用自定义语义用于纹理和采样器。
 - 语义可以被增强，例如默认值、范围。在函数调用之上，额外的代码将输出到规范。
-
 - 对错误报告可以进行改进。在生成着色器时，可以提供错误在片段中的精确位置。
 - 同样，目前工具尚未能够检测片段之间的循环。
-- 正如所述，Shader Shaker 不对生成的着色器进行任何优化。将 Shader Shaker 作为现有模块的前端来处理这些优化将是一个改进。在我们的 Cactus 工具链中，我们已经对生成的 GLSL 执行了优化器。例如，我们可以在生成的不同阶段集成 LLVM。
+- 正如所述，`Shader Shaker` 不对生成的着色器进行任何优化。将 `Shader Shaker` 作为现有模块的前端来处理这些优化将是一个改进。在我们的 `Cactus` 工具链中，我们已经对生成的 `GLSL` 执行了优化器。例如，我们可以在生成的不同阶段集成 `LLVM`。
 
 # 2.9 结论
 
-这种技术及其用户语义链接算法为创建着色器提供了新方法。它提供了管理复杂性和组合性的方法。每个功能都可以独立开发，取决于语义的选择。我们的 Shader Shaker 实现作为开源软件发布 [Fishing Cactus 15]。
+这种技术及其用户语义链接算法为创建着色器提供了新方法。它提供了管理复杂性和组合性的方法。每个功能都可以独立开发，取决于语义的选择。我们的 `Shader Shaker` 实现作为开源软件发布 [Fishing Cactus 15]。
 
 ## 参考文献
 
-[Engel 08a] Wolfgang Engel. “Shader Workflow.” Diary of a Graphics Programmer, http://diaryofagraphicprogrammer.blogspot.pt/2008/09/shader-workflow.html, 2008年9月10日
+[Engel 08a] Wolfgang Engel. “Shader Workflow.” Diary of a Graphics Programmer, `http://diaryofagraphicprogrammer.blogspot.pt/2008/09/shader-workflow.html`, 2008年9月10日
 
-[Engel 08b] Wolfgang Engel. “Shader Workflow—Why Shader Generators are Bad.” Diary of a Graphics Programmer, http://diaryofagraphicprogrammer.blogspot.pt/2008/09/shader-workflow-why-shader-generators.html, 2008年9月21日
+[Engel 08b] Wolfgang Engel. “Shader Workflow—Why Shader Generators are Bad.” Diary of a Graphics Programmer, `http://diaryofagraphicprogrammer.blogspot.pt/2008/09/shader-workflow-why-shader-generators.html`, 2008年9月21日
 
-[Epic Games Inc] Epic Games Inc. “Materials.” Unreal Engine 4 Documentation, https://docs.unreal.com/latest/INT/Engine/Rendering/Materials/index.html, 15
+[Epic Games Inc] Epic Games Inc. “Materials.” Unreal Engine 4 Documentation, `https://docs.unreal.com/latest/INT/Engine/Rendering/Materials/index.html`, 15
 
-[Ericson 08] Christer Ericson. “Graphical Shader Systems Are Bad.” http://realtimecollisiondetection.net/blog/?p=73, 2008年8月2日
+[Ericson 08] Christer Ericson. “Graphical Shader Systems Are Bad.” `http://realtimecollisiondetection.net/blog/?p=73`, 2008年8月2日
 
-
-
-
-
--   [Fishing Cactus 15] Fishing Cactus. “Shader Shaker.” https://github.com/FishingCactus/ShaderShaker2, 2015.
-
--   [Frykholm 11] Niklas Fryholm. “Platform Specific Resources.” http://www.altdev.co/2011/12/22/platform-specific-resources/, 2011年12月22日.
-
--   [Hargreaves 04] Shawn Hargreaves. “从 HLSL 片段生成着色器。” http://www.shawnhargreaves.com/hlsl_fragments/hlsl_fragments, 2004.
-
--   [Holmér 15] Joachim Acegikmo’ Holmér. “Shader Forge.” http://acegikmo.com/shaderforge/, 访问于015年4月。
-
--   [Jones 10] Tim Jones. “介绍 StitchUp: ‘从 XNA 4.0 实现的 HLSL 着色器生成着色器’.” http://timjones.tw/blog/archive/2010/11/13/introducing-stitchup-generating-shaders-from-hlsl-shader-fragments, 2010年11月13日.
-
--   [Kime 08] Shaume Kime. “着色器变体。” http://shaunkime.wordpress.com/2008/06/25/shader-permutation/, 2008年6月25日.
-
--   [LLVM 15] LLVM. “LLVM 编译器基础设施。” http://llvm.org/, 2015.
-
--   [Prankevičius 10a] Aras Prankevičius. “在 2010 年将 GLSL 编译为 GLSL。” http://aras-p.info/blog/2010/05/21/compiling-glsl-into-glsl-in-2010/, 2010年5月21日.
-
--   [Prankevičius 10b] Aras Prankevičius. “GLSL 优化器。” http://aras-p.info/blog/2010/09/29/glsl-optimizer/, 2010年9月29日.
-
--   [Prankevičius 12] Aras Prankevičius. “2012 年的跨平台着色器。” http://aras-p.info/blog/2012/10/01/cross-platform-shaders-in-2012/, 2012年10月1日.
-
--   [Prankevičius 14a] Aras Prankevičius. “2014 年的跨平台着色器。” http://aras-p.info/blog/2014/03/28/cross-platform-shaders-in-2014/, 2014年3月28日.
-
--   [Prankevičius 14b] Aras Prankevičius. “Unity 4.5 中的着色器编译。” http://aras-p.info/blog/2014/05/05/shader-compilation-in-unity-4-dot-5/, 2015年5月5日.
-
--   [Prankevičius 15] Aras Prankevičius. “GLSL 优化器。” GitHub 仓库，https://github.com/aras-p/glsl-optimizer, 2015.
+- [Fishing Cactus 15] Fishing Cactus. “Shader Shaker.” `https://github.com/FishingCactus/ShaderShaker2`, 2015.
+- [Frykholm 11] Niklas Fryholm. “Platform Specific Resources.” `http://www.altdev.co/2011/12/22/platform-specific-resources/`, 2011年12月22日.
+- [Hargreaves 04] Shawn Hargreaves. “从 HLSL 片段生成着色器。” `http://www.shawnhargreaves.com/hlsl_fragments/hlsl_fragments`, 2004.
+- [Holmér 15] Joachim Acegikmo’ Holmér. “Shader Forge.” `http://acegikmo.com/shaderforge/`, 访问于015年4月。
+- [Jones 10] Tim Jones. “介绍 StitchUp: ‘从 XNA 4.0 实现的 HLSL 着色器生成着色器’.” `http://timjones.tw/blog/archive/2010/11/13/introducing-stitchup-generating-shaders-from-hlsl-shader-fragments`, 2010年11月13日.
+- [Kime 08] Shaume Kime. “着色器变体。” `http://shaunkime.wordpress.com/2008/06/25/shader-permutation/`, 2008年6月25日.
+- [LLVM 15] LLVM. “LLVM 编译器基础设施。” `http://llvm.org/`, 2015.
+- [Prankevičius 10a] Aras Prankevičius. “在 2010 年将 GLSL 编译为 GLSL。” `http://aras-p.info/blog/2010/05/21/compiling-glsl-into-glsl-in-2010/`, 2010年5月21日.
+- [Prankevičius 10b] Aras Prankevičius. “GLSL 优化器。” `http://aras-p.info/blog/2010/09/29/glsl-optimizer/`, 2010年9月29日.
+- [Prankevičius 12] Aras Prankevičius. “2012 年的跨平台着色器。” `http://aras-p.info/blog/2012/10/01/cross-platform-shaders-in-2012/`, 2012年10月1日.
+- [Prankevičius 14a] Aras Prankevičius. “2014 年的跨平台着色器。” `http://aras-p.info/blog/2014/03/28/cross-platform-shaders-in-2014/`, 2014年3月28日.
+- [Prankevičius 14b] Aras Prankevičius. “Unity 4.5 中的着色器编译。” `http://aras-p.info/blog/2014/05/05/shader-compilation-in-unity-4-dot-5/`, 2015年5月5日.
+- [Prankevičius 15] Aras Prankevičius. “GLSL 优化器。” GitHub 仓库，`https://github.com/aras-p/glsl-optimizer`, 2015.
 
 ## 2. 使用 Shader Shaker 基于语义的着色器生成
 
 [Trapp and Döllner 07] Matthias Trapp way Jürgen Döllner. “实时着色器程序的自动组合。” 收于 Eurographics 2007论文，由 P. Cignoni 和 J. Socher 编辑，第 53–56 页。Eurographics，瑞士 Aire-la-Ville：Eurographics 协会，2007年。
 
-[Väänäen 13] Pekka Väänänen. “从 Mako 模板生成 GLSL 着色器。” http://www.lofibucket.com/articles/mako_glsl_templates.html, 2013年10月28日.
+[Väänäen 13] Pekka Väänänen. “从 Mako 模板生成 GLSL 着色器。” `http://www.lofibucket.com/articles/mako_glsl_templates.html`, 2013年10月28日.
 
-[Wikipedia 15a] 维基百科. “A* 搜索算法。” http://en.wikipedia.org/wiki/A*_search_algorithm, 2015.
+[Wikipedia 15a] 维基百科. “A* 搜索算法。” `http://en.wikipedia.org/wiki/A*_search_algorithm`, 2015.
 
-[Wikipedia 15b] 维基百科. “模板方法。” http://en.wikipedia.org/wiki/Template_method, 2015.
+[Wikipedia 15b] 维基百科. “模板方法。” `http://en.wikipedia.org/wiki/Template_method`, 2015.
 
-[Yeung 12] Simon Yeung. “着色器生成器。” http://www.altdev.co/2012/01/shader-generator/, 2012年8月1日.
+[Yeung 12] Simon Yeung. “着色器生成器。” `http://www.altdev.co/2012/01/shader-generator/`, 2012年8月1日.
 
 # ANGLE：将 OpenGL ES 引入桌面端
+
 Shannon Woods, Nicolas Capens, Jamie Madill 和 Geoff Lang
 
 ## 3.1 引言
 
-原生图形层引擎（ANGLE）是一个可移植的、开源的、硬件加速的 OpenGL ES 2.0 实现。它被 Google Chrome 等软件使用，允许应用程序级代码针对单一 API，同时在可能没有原生支持的平台上执行。在编写本文时，ANGLE 的 OpenGL ES 3.0 实现正在开发中。应用程序在运行时从 ANGLE 的多个后端之间进行选择，针对不同支持程度的系统。
+原生图形层引擎（`ANGLE`）是一个可移植的、开源的、硬件加速的 `OpenGL ES 2.0` 实现。它被 `Google Chrome` 等软件使用，允许应用程序级代码针对单一 API，同时在可能没有原生支持的平台上执行。在编写本文时，`ANGLE` 的 `OpenGL ES 3.0` 实现正在开发中。应用程序在运行时从 `ANGLE` 的多个后端之间进行选择，针对不同支持程度的系统。
 
-ANGLE 的最初开发由 Google 赞助，用于在 Windows 系统上支持 WebGL，而这些系统可能没有可靠的 OpenGL 驱动。ANGLE 目前用于多个浏览器，包括 Google Chrome 和 Firefox。最初，ANGLE 仅提供 OpenGL ES 2.0 实现，使用 Direct3D 9 作为其渲染后端。Direct3D9 是一个很好的初始目标，因为它在运行 XP 或更高版本的 Windows 系统上具有广泛的硬件支持。
+`ANGLE` 的最初开发由 `Google` 赞助，用于在 `Windows` 系统上支持 `WebGL`，而这些系统可能没有可靠的 `OpenGL` 驱动。`ANGLE` 目前用于多个浏览器，包括 `Google Chrome` 和 `Firefox`。最初，`ANGLE` 仅提供 `OpenGL ES 2.0` 实现，使用 `Direct3D 9` 作为其渲染后端。`Direct3D9` 是一个很好的初始目标，因为它在运行 `XP` 或更高版本的 `Windows` 系统上具有广泛的硬件支持。
+
+
 
 从那时起，WebGL 一直在进化，ANGLE 也随之演进。WebGL 社区针对当前的 WebGL 起草了新的扩展，以及针对 WebGL 2.0 的草案。其中某些功能（如像素缓冲区对象和纹理）超出了 Direct3D 9 在 ANGLE 中的可用功能集。由于这些原因，我们需要在 Windows 系统上使用更现代的 Direct3D 来支持这些功能，这促使我们研究 Direct3D 11 渲染。
 
@@ -10283,13 +10220,13 @@ ANGLE 的最初开发由 Google 赞助，用于在 Windows 系统上支持 WebGL
 
 ### 3.2.1 原语
 
-Direct3D 9 可用的绘制调用原语类型集比 OpenGL 有限，而 Direct3D 11 则通过移除三角形扇（triangle fans）进一步减少。ANGLE 通过重写应用程序提供的缓冲区将多边形表示为离散三角形列表来启用 GL_TRIANGLE_FAN。这与我们在 Direct3D 9 中支持 GL_LINE_LOOP 使用的策略类似（在 Direct3D 11 中仍然是必要的），尽管线循环所需的修改要简单得多——我们只需重复初始点来关闭线循环。
+Direct3D 9 可用的绘制调用原语类型集比 OpenGL 有限，而 Direct3D 11 则通过移除三角形扇（triangle fans）进一步减少。ANGLE 通过重写应用程序提供的缓冲区将多边形表示为离散三角形列表来启用 `GL_TRIANGLE_FAN`。这与我们在 Direct3D 9 中支持 `GL_LINE_LOOP` 使用的策略类似（在 Direct3D 11 中仍然是必要的），尽管线循环所需的修改要简单得多——我们只需重复初始点来关闭线循环。
 
 Direct3D 11 还删除了通常用于渲染精灵（sprites）的大点支持。虽然点列表本身被支持，但点的大小不再是可配置的。这对 ANGLE 来说是一个不容易解决的问题。坦率地说，Direct3D 11 还引入了几何着色器，允许我们将每个点扩展为公告矩形（billboarded quad），在不产生 CPU 开销的情况下实现相同的效果。
 
 ### 3.2.2 纹理格式
 
-从 Direct3D 9 到 Direct3D 11 的一个为 ANGLE 提供显著收益的小变化是增加了对 RGBA 格式的原支持。虽然 Direct3D 9 对 BGRA 以外的纹理和屏幕支持非常有限，Direct3D 11 提供了多种格式，包括 RGBA。这减少了 ANGLE 从用户空间获取纹理到 GPU所需的逐像素拷贝和通道转换（swizzling）。Direct3D 11 还丢失了一些 OpenGL ES 使用的格式，例如：放弃了对亮度（luminance）和纹理的原支持，要求 ANGLE 通过存储到 RGBA 纹理来支持它们。压缩纹理格式、`texture_compression_ext` 以及在 `EXT_texture_storage` 中定义的不可变纹理继续受到支持，正如 Direct3D 9 那样 [Koch and Capens 12]。
+从 Direct3D 9 到 Direct3D 11 的一个为 ANGLE 提供显著收益的小变化是增加了对 RGBA 格式的原支持。虽然 Direct3D 9 对 BGRA 以外的纹理和屏幕支持非常有限，Direct3D 11 提供了多种格式，包括 RGBA。这减少了 ANGLE 从用户空间获取纹理到 GPU 所需的逐像素拷贝和通道转换（swizzling）。Direct3D 11 还丢失了一些 OpenGL ES 使用的格式，例如：放弃了对亮度（luminance）和纹理的原支持，要求 ANGLE 通过存储到 RGBA 纹理来支持它们。压缩纹理格式、`texture_compression_ext` 以及在 `EXT_texture_storage` 中定义的不可变纹理继续受到支持，正如 Direct3D 9 那样 [Koch and Capens 12]。
 
 ### 3.2.3 缓冲区
 
@@ -10297,14 +10234,11 @@ Direct3D 11 还删除了通常用于渲染精灵（sprites）的大点支持。�
 
 此外，Direct3D 支持的顶点元素类型集要少得多，这显著增加了我们对该 API 实现的复杂性，并可能影响性能，因为我们必须在上传之前在 CPU 上解释并转换应用程序提供的顶点数据。此外，我们的 Direct3D 9 实现解开了交织顶点数据，以避免对任何绘制调用中未使用的数据进行转换。
 
-
-
-
 Direct3D 11 在某种程度上消除了这些限制，尽管存在一些局限性。它使用单一的缓冲区类，而不是为索引缓冲区和顶点缓冲区进行专门化。此外，Direct3D 11 对所有 OpenGL ES 顶点格式提供了原生支持。这使得 ANGLE 在很多情况下不再需要承担此前的扩展、转换和/或去交织应用程序提供的顶点数据的职责；相反，我们可以直接将这些数据转发到 GPU，而无需任何处理。
 
-Direct3D11 自动支持顶点格式的一个一个大异常是未归一化的整数数据。虽然 Direct3D11 支持此类数据，但当将整数属性发送到接受浮点数的顶点色器时，它们并不会自动转换为浮点数。这个问题在 GLSL 3.0 中已不再存在，因为它提供了非浮点数的顶点属性类型，但在 GLSL 1.00 着色器中，无论顶点数据如何提供给 API，都必须通过浮点数进行访问。ANGLE 初始的 Direct3D 11 实现通过在上传之前在 CPU 上转换属性来解决这个问题。这引入了我们在 Direct3D 9 实现中看到的开销——但我们可以做得更好。我们将在第 3.3.7 节讨论我们的解决方案。
+Direct3D 11 自动支持顶点格式的一个一个大异常是未归一化的整数数据。虽然 Direct3D 11 支持此类数据，但当将整数属性发送到接受浮点数的顶点色器时，它们并不会自动转换为浮点数。这个问题在 GLSL 3.0 中已不再存在，因为它提供了非浮点数的顶点属性类型，但在 GLSL 1.00 着色器中，无论顶点数据如何提供给 API，都必须通过浮点数进行访问。ANGLE 初始的 Direct3D 11 实现通过在上传之前在 CPU 上转换属性来解决这个问题。这引入了我们在 Direct3D 9 实现中看到的开销——但我们可以做得更好。我们将在第 3.3.7 节讨论我们的解决方案。
 
-Direct3D11 缓冲区处理的一个局限在我们部署实现后变得显性出来。Direct3D11 允许我们将顶点缓冲区同时绑定为顶点数据和索引数据的源，某些硬件将绑定标志（bind flags）作为如何存储和处理缓冲器的提示。当我们最初为所有缓冲区同时标记了 `D3D11_BIND_VERTEX_BUFFER` 和 `D3D11_BIND_INDEX_BUFFER` 时，某些硬件和软件驱动程序出现了了明显的性能损失。为了避免双重标记缓冲区，我们在绘制之前将应用程序提供的顶点数据存储在暂存缓冲区（staging buffers）中。在绘制时，我们知道缓冲区是用于索引数据还是顶点数据，并将数据复制到标记标记合适的缓冲区对象中。我们发现，这种额外的开销比双标记缓冲区带来的性能拖累要好。
+Direct3D 11 缓冲区处理的一个局限在我们部署实现后变得显性出来。Direct3D 11 允许我们将顶点缓冲区同时绑定为顶点数据和索引数据的源，某些硬件将绑定标志（bind flags）作为如何存储和处理缓冲器的提示。当我们最初为所有缓冲区同时标记了 `D3D11_BIND_VERTEX_BUFFER` 和 `D3D11_BIND_INDEX_BUFFER` 时，某些硬件和软件驱动程序出现了了明显的性能损失。为了避免双重标记缓冲区，我们在绘制之前将应用程序提供的顶点数据存储在暂存缓冲区（staging buffers）中。在绘制时，我们知道缓冲区是用于索引数据还是顶点数据，并将数据复制到标记标记合适的缓冲区对象中。我们发现，这种额外的开销比双标记缓冲区带来的性能拖累要好。
 
 同样让我们惊讶的是，在 Direct3D 11 中，索引缓冲区中的 -1（对应 16 位索引格式的 65535 或 0xFFFF）被解释为三角形带，也称为图元重启动（primitive restart）。在 OpenGL ES 2.0 和 Direct3D 9 中，这是一个有效索引，因此我们在 Direct3D 11 中使用相同的索引缓冲区数据时看到了几何异常。我们通过提升这些缓冲区来绕过这个问题，即
 
@@ -10350,9 +10284,6 @@ ANGLE 的着色器翻译器基于 3Dlab 的开源 GLSL 编译器框架 [3Dlabs 0
 
 源到源编译的附加优势之一是 ANGLE 的输出相对容易调试。大多数着色器构造以可预测的方式翻译，你可以使用 Direct3D 调试工具调试你的应用程序。为了这一点，ANGLE 和 Chrome 的几项功能有助于暴露其实现。首先，可以使用 `--startup-dialog` 命令行标志启动 Chrome。这会在创建 GPU 进程后立即停止执行。这允许我们在在此之前挂载调试器或其他分析工具。
 
-
-
-
 ```
 var debugShaders = gl.getExtension('WEBGL.debug_shaders');
 var hlsl = debugShaders.getTranslatedShaderSource(myShader);
@@ -10386,27 +10317,25 @@ ANGLE 将所有 ESSL 纹理采样内置函数实现为 HLSL 中的函数。对�
 
 ## 3.3.5 HLSL 编译器问题
 
-源到源的编译让我们免于编写编译器后端，但使我们依赖于微软的 HLSL 编译器。Bug 和内置函数的局限性需要我们不断关注和处理复杂的负载。很早时候，我们就发现 Direct3D 9 中迭代次数超过 254 次的循环将编译失败。虽然 WebGL 和 OpenGL ES 2.0 的大多数用法不需要多次迭代的循环，但 Khronos 合规性套件包含了 512 次迭代的着色器以引用三角运算！因此，为了确保合规性，我们需要一种解决方法。解决方案是将这些循环拆分为多个处理 254 次或更少迭代的重复循环。幸运的是，OpenGL ES 2.0 规范限制循环为静态确定的计数，变量不能在循环内被修改。我们还必须小心确保先前的（拆分的）循环中的 `break` 语句会导致后续循环被跳过。注意，Direct3D 9 的汇编指令由于其编码格式（迭代计数占8 位）限制为 255 次。
+
+
+源到源的编译让我们免于编写编译器后端，但使我们依赖于微软的 HLSL 编译器。Bug 和内置函数的局限性需要我们不断关注和处理复杂的负载。很早时候，我们就发现 Direct3D 9 中迭代次数超过 254 次的循环将编译失败。虽然 WebGL 和 OpenGL ES 2.0 的大多数用法不需要多次迭代的循环，但 Khronos 合规性套件包含了 512 次迭代的着色器以引用三角运算！因此，为了确保合规性，我们需要一种解决方法。解决方案是将这些循环拆分为多个处理 254 次或更少迭代的重复循环。幸运的是，OpenGL ES 2.0 规范限制循环为静态确定的计数，变量不能在循环内被修改。我们还必须小心确保先前的（拆分的）循环中的 `break` 语句会导致后续循环被跳过。注意，Direct3D 9 的汇编指令由于其编码格式（迭代计数占 8 位）限制为 255 次。
 
 同样，我们看到了与平衡优化级别相关的问题——并不是为了真正获得更好的性能（我们发现这效果很小，可能是由于驱动程序的重优化），而是为了确保优化后的指令和寄存器数量保持在限制范围内，同时不会让编译时间过长。Chrome 在 10 秒无进展后会杀死 GPU 进程，以防止系统无响应的攻击。HLSL 编译器的某些优化级别似乎非常激进，需要长时间才能完成。某些着色器甚至会导致编译器陷入无限循环。这些优化可能只是针对离线编译的。尽管如此，我们仍然需要一些优化让性能较差的 ESSL 着色器通过资源限制。
 
-一个特别具有挑战性的问题是避免在不连续执行路径上进行微分操作。这包括显式的微分操作（如 `dDx` 和 `dDy`），但也意味着纹理采样内置函数在确定 mipmap 级别时不能使用这些。这些梯的计算方式是基于 2x2 像素四边形的并行处理，变量的值在相邻像素之间进行比较（相减）。只要四边形中每个像素执行的代码路径相同，这种方法就有效。
-
-
-
-
+一个特别具有挑战性的问题是避免在不连续执行路径上进行微分操作。这包括显式的微分操作（如 `dDx` 和 `dDy`），但也意味着纹理采样内置函数在确定 mipmap 级别时不能使用这些。这些梯度的计算方式是基于 2x2 像素四边形的并行处理，变量的值在相邻像素之间进行比较（相减）。只要四边形中每个像素执行的代码路径相同，这种方法就有效。
 
 # 3. ANGLE：将 OpenGL ES 引入桌面
 
-取不同分支产生的差异会导致差分变量在某些像素上没有有意义的值，从而导致求分中出现未定义的不连续性。GLSL 通过简单地声明结果未定义来处理此，而对于 HLSL，这会导致编译错误。你可以使用显式指定 LOD 值的纹理采样内联函数，或者“平坦化”（flatten）包含纹理采样内联函数的分支。平坦化意味着所有像素执行所有代码块，并在之后选择所需的结果。在最近之前，无法控制 HLSL 编译器的行为，结果取决于纹理采样内联函数的存在与以及优化级别。现在，可以使用 `[flatten]` 属性进行控制，但对于 ANGLE 来说，很难确定在哪些分支需要它。在编写本文时，我们生成了 Lod4 纹理采样函数，这些函数始终从顶层多级映射（mipmap）中采样，这是有效的，因为 GLSL 将导数定义为未定义。
+取不同分支产生的差异会导致差分变量在某些像素上没有有意义的值，从而导致求导中出现未定义的不连续性。GLSL 通过简单地声明结果未定义来处理此问题，而对于 HLSL，这会导致编译错误。你可以使用显式指定 LOD 值的纹理采样内联函数，或者“平坦化”（flatten）包含纹理采样内联函数的分支。平坦化意味着所有像素执行所有代码块，并在之后选择所需的结果。在最近之前，无法控制 HLSL 编译器的行为，结果取决于纹理采样内联函数的存在与否以及优化级别。现在，可以使用 `[flatten]` 属性进行控制，但对于 ANGLE 来说，很难确定在哪些分支需要它。在编写本文时，我们生成了 Lod4 纹理采样函数，这些函数始终从顶层多级映射（mipmap）中采样，这是有效的，因为 GLSL 将导数定义为未定义。
 
 HLSL 编译器仍然是各种问题的根源，其中大多数问题都非常小，且影响的用户很少。根本而言，ANGLE 的设计目标与 Direct3D 本身不同，Direct3D 主要是带有静态编译着色器的游戏，或者是可以在特定 HLSL 编译器版本和优化标志下无问题编译的着色器。尽管如此，我们仍然尽可能将用户与这些问题隔离开，使 ANGLE 成为 Windows 上事实上的健壮且符合标准的 OpenGL 实现。未来，我们可能不得不自己在 AST 层级执行大部分优化，并输出与汇编指令紧密对应的非常基础 HLSL 语句。
 
 ## 3.3.6 驱动程序 Bug
 
-我们在图形栈深处也遇到了一些与着色器相关的问题。其中许多与健壮性有关。例如，某些图形驱动程序会编译元素远大于 4096 的数组色器，尽管这是 Direct3D 11 中许多寄存器资源的限制，并且它们最终会在那里卡死。最好的情况下，它超过了 Chrome 的 10 秒时间限制导致标签页被杀死；最坏的情况下，用户模式图形驱动程序崩溃，整个屏幕变黑，直到驱动程序重置。为了防止这种情况，我们必须限制 ANGLE 内部数组的大小。我们目前定为 65,536，因为优化可能会让具有此类大数组的着色器仍能适应实际资源，尽管这个值足够低以避免崩溃。
+我们在图形栈深处也遇到了一些与着色器相关的问题。其中许多与健壮性有关。例如，某些图形驱动程序会编译元素远大于 4096 的数组着色器，尽管这是 Direct3D 11 中许多寄存器资源的限制，并且它们最终会在那里卡死。最好的情况下，它超过了 Chrome 的 10 秒时间限制导致标签页被杀死；最坏的情况下，用户模式图形驱动程序崩溃，整个屏幕变黑，直到驱动程序重置。为了防止这种情况，我们必须限制 ANGLE 内部数组的大小。我们目前定为 65,536，因为优化可能会让具有此类大数组的着色器仍能适应实际资源，尽管这个值足够低以避免崩溃。
 
-一个特定的驱动程序 Bug 是由某个品牌显卡对 `if...else` 语句的错误优化引起的，且仅在顶点着色器中。一个只能在一个分支中计算的变量值出现在另一个分支中。我们通过将代码重写为 `if(x) {} if(!x) {}` 绕过了这个问题。但避免重新评估 `x` 并处理一个或多个 `else` 语句这并非易事。虽然这些问题最终会由显卡厂商解决，但这些修复部署到所有用户那里需要一段时间，到目前为止我们甚至一直开启着这些变通方案。
+一个特定的驱动程序 Bug 是由某个品牌显卡对 `if...else` 语句的错误优化引起的，且仅在顶点着色器中。一个只能在一个分支中计算的变量值出现在另一个分支中。我们通过将代码重写为 `if(x) {} if(!x) {}` 绕过了这个问题。但避免重新评估 `x` 并处理一个或多个 `else` 语句并非易事。虽然这些问题最终会由显卡厂商解决，但这些修复部署到所有用户那里需要一段时间，到目前为止我们甚至一直开启着这些变通方案。
 
 对于驱动程序 Bug，我们比对 HLSL 编译器更难控制，但希望图形 API 将继续变得更加底层，以便我们最终能够访问原始指令和数据。就像 CPU 一样，基本操作的行为是严格定义且可验证的，从而确保编译器能产生可靠的结果。
 
@@ -10424,13 +10353,11 @@ GLES 3 与 Direct3D 11 之间的相似性或差异性取决于涉及的图形特
 
 未来，我们可能会选择更简单、更灵活的方法。与其将一个高级特性映射到另一个高级特性上，我们可能会通过从简单的计算着色器组件组装高级特性来改善生活。ANGLE 的方向与许多现代 API 的方向一致，正如最近发布的（截至本文写作）Direct3D 12 [McMullen 14]、Apple 的 Metal [14] 以及 AMD 的 Mantle [AMD 14]；通过这些现代 API，ANGLE 可以将在本节讨论的特性作为计算着色器使用。
 
-# 3. ANGLE：将 OpenGL ES 引入桌面
-
-![](img/120606)
-
 ## 3.4.2 统一缓冲区
 
-统一缓冲区对象 (UBOs) 对蒙骼动画（skinning）特别有用。这里有一个简单的 UBO：
+![图像](img/120606)
+
+统一缓冲区对象（UBOs）对蒙皮动画（skinning）特别有用。这里有一个简单的 UBO：
 
 ```hlsl
 uniform block {
@@ -10451,27 +10378,21 @@ Direct3D 的输出有许多相似之处，也有一些显著差异——特别�
 
 在未来，在更灵活的 API 下，我们可以从更通用的着色器实现 GLSL 的反馈。与其映射到高级流输出，我们可以在计算着色器内核中实现流输出。
 
+## 3.4.4 像素封包缓冲区（Pixel Pack Buffers）
 
-
-
-
-## 3. ANGLE：将 OpenGL ES 引入桌面端
-
-![](img/120606d35c679664e7ad5faec2ee0e8b_553_0.png)
+![图像](img/120606d35c679664e7ad5faec2ee0e8b_553_0.png)
 
 **图 3.3.** 使用 PBO 的异步回读：(a) 简单的 GL 实现。(b) ANGLE-Direct3D 11 实现。
 
-简单的着色器方法可以自然地适用于类似于 MANTLE/Metal 的 API，甚至适用于在 Direct3D 11 具有更高功能级别的情况下。
+简单的着色器方法可以自然地适用于类似于 MANTLE/Metal 的 API，甚至适用于在 Direct3D 11 具有更高功能级别的情况。
 
-### 3.4.4 像素封包缓冲区 (Pixel Pack Buffers)
-
-像素封包缓冲区和解包缓冲区统称为像素缓冲区对象（PBOs），它们完善了 GLES 3 中的数据拷贝操作。我们特别感兴趣的是封包缓冲区（pack buffers），它们是接收纹理对象中像素数据的缓冲区对象。封装缓冲区的一个主要用例是异步回读数据。应用程序首先触发像素拷贝操作到封包缓冲区，而不会阻塞应用层。接下来，它创建一个栅格同步对象（参见 OpenGL ES 3 规范第 5.2 节 [Lipchak 13]）来检测 GPU 何时完成。应用程序随后回读像素数据，在此期间处于阻塞等待状态。图 3.3(a) 给出了异步回读的示例。
+像素封包缓冲区和解包缓冲区统称为像素缓冲区对象（PBOs），它们完善了 GLES 3 中的数据拷贝操作。我们特别感兴趣的是封包缓冲区（pack buffers），它们是接收纹理对象中像素数据的缓冲区对象。封包缓冲区的一个主要用例是异步回读数据。应用程序首先触发像素拷贝操作到封包缓冲区，而不会阻塞应用层。接下来，它创建一个栅格同步对象（参见 OpenGL ES 3 规范第 5.2 节 [Lipchak 13]）来检测 GPU 何时完成。应用程序随后回读像素数据，在此期间处于阻塞等待状态。图 3.3(a) 给出了异步回读的示例。
 
 PBO 映射到 Direct3D 11 的暂存资源（staging resources）[MSDN 14b]。暂存资源作为 CPU 可访问的内存；它们在 GPU 之间代理数据。它们并不是正交的；Direct3D 对暂存（以及非暂存）资源设置了若干限制，使得 PBO 的实现变得有些困难。
 
 首先，Direct3D 11 不允许从纹理直接拷贝到缓冲区资源。因此，我们无法依赖 Direct3D 11 的 `CopyResource` 方法。另一种方案可能是流输出（stream output），如我们在 3.4.3 节描述的那样，使用顶点着色器将纹理数据捕获到缓冲区。Direct3D 对着色器输出的限制显著支持某些数据类型使得这变得非常具有挑战性。计算着色器（Compute shaders）也提供了一个很有前景且优雅的解决方案。由于我们至少需要支持 Shader Model 4，遗憾的是，我们无法在所有情况下都依赖计算着色器。
 
-GL 和 Direct3D 11 在异步拷贝步骤后对封装执行的不同要求也导致了更多问题。GL 提供了一组细粒度的封包参数，控制进入封包缓冲区的像素数据（参见 OpenGL ES 3 规范表 4.4 [Lipchak 13]）。另一方面，Direct3D 11 按行封装像素，并在每行末尾留有间隔，由步长（stride）指定 [MSDN 14a]。
+GL 和 Direct3D 11 在异步拷贝步骤后对封包执行的不同要求也导致了更多问题。GL 提供了一组细粒度的封包参数，控制进入封包缓冲区的像素数据（参见 OpenGL ES 3 规范表 4.4 [Lipchak 13]）。另一方面，Direct3D 11 按行封装像素，并在每行末尾留有间隔，由步长（stride）指定 [MSDN 14a]。
 
 暂存缓冲区和封包的预期用途是从 CPU 拷贝到 GPU 内存；这种相似性使得使用暂存成为一种合适的实现。细节上的差异使我们选择了一个简单的、次优的实现。在拷贝回暂存纹理后，我们执行了一个额外的 CPU 端封包步骤，通常通过调用 `glMapBuffer` 请求数据。我们运行 GL 封包算法，将 GL 封包参数解析到 CPU 缓冲区。这一过程如图 3.3(b) 所示。结果以 GL 外壳整洁地处理了 Direct3D，代价是增加了一些额外工作。
 
@@ -10481,33 +10402,33 @@ GL 和 Direct3D 11 在异步拷贝步骤后对封装执行的不同要求也导�
 
 自 2014 年初以来，ANGLE 团队一直在重新设计 ANGLE，以涵盖更广泛的范围，并在尽可能多的平台上提供符合规范且快速的 OpenGL ES 2/3 和 EGL 实现。
 
-### 3.5.1 创建跨平台 OpenGL ES 驱动
+#### 3.5.1 创建跨平台 OpenGL ES 驱动
 
 过去的一年里，至少有三个新的图形 API 发布，其中大多数与特定的硬件或平台绑定。这些新 API 通常非常底层，尝试抽象的硬件非常少，这为图形引擎为设备编写专门代码提供了极佳的机会。但对于编写简单的应用程序和游戏来说，这可能是一个巨大的负担；ANGLE 希望通过提供一种通用 API（可以翻译到低级 API 而不产生显著的性能影响）来减轻负担。参见图 3.4，关于应用程序与 ANGLE 及原生图形 API 交互的高级图。
 
-![](img/120606d35c679664e7ad5faec2ee0e8b_555_0.png)
+![图像](img/120606d35c679664e7ad5faec2ee0e8b_555_0.png)
 
 **图 3.4.** ANGLE-应用程序交互。
 
-### 3.5.2 可扩展架构
+#### 3.5.2 可扩展架构
 
 为了轻松支持多个渲染后端，ANGLE 需要一种在将工作发送给原生渲染器之前尽可能多处理的架构。该库被分为三个不同的层，以创建新渲染器必须实现的最简单接口。参见图 3.5，ANGLE 架构的高级图。
 
 这些层级如下：
 
-- 1. **入口/验证 (entry point/validation)** 层导出所有的 EGL 和 OpenGL 入口函数，并处理所有参数的验证。传递给以下层的所有值都被认为是有效的。
-- 2. **对象层 (object layer)** 包含所有 EGL 和 OpenGL 对象的 C++ 表示并对它们的交互建模。每个对象包含指向原生实现的引用，以便将操作转发到图形 API。
-- 3. **渲染器 (renderer)** 提供原生实现。
+1. **入口/验证（entry point/validation）层**导出所有的 EGL 和 OpenGL 入口函数，并处理所有参数的验证。传递给以下层的所有值都被认为是有效的。
+2. **对象层（object layer）**包含所有 EGL 和 OpenGL 对象的 C++ 表示并对它们的交互建模。每个对象包含指向原生实现的引用，以便将操作转发到图形 API。
+3. **渲染器（renderer）层**提供原生实现。
 
-| 入口 (Entry Points) | 对象层 (Object Layer) | 渲染器层 (Renderer Layer) |
-| :--- | :--- | :--- |
-| 验证 (Validation) | | |
-| OpenGL | | |
-| 缓冲区 (Buffer) | | |
-| 顶点数组 (VertexArray) | | |
-| 查询 (Query) | | |
+| 入口（Entry Points） | 对象层（Object Layer） | 渲染器层（Renderer Layer） |
+| --- | --- | --- |
+| 验证（Validation） |  |  |
+| OpenGL |  |  |
+| 缓冲区（Buffer） |  |  |
+| 顶点数组（VertexArray） |  |  |
+| 查询（Query） |  |  |
 
-图 3.5. ANGLE 架构。
+**图 3.5.** ANGLE 架构。
 
 ```cpp
 class Renderer {
@@ -10523,7 +10444,9 @@ public:
 };
 ```
 
-渲染器对象。Renderer 对象是原生实现对象与渲染器层之间的主接口。它处理所有原生操作的创建，例如绘制、清除或位块传输（blitting）。参见代码列表 3.3 获取 Renderer 接口的片段。
+#### 渲染器对象
+
+Renderer 对象是原生实现对象与渲染器层之间的主接口。它处理所有原生操作的创建，例如绘制、清除或位块传输（blitting）。参见代码列表 3.3 获取 Renderer 接口的片段。
 
 ```cpp
 class BufferImpl {
@@ -10535,9 +10458,11 @@ public:
 };
 ```
 
-> 代码列表 3.2. 缓冲区接口。
+> **代码列表 3.2.** 缓冲区接口。
 
-缓冲区对象。OpenGL ES 3.0 渲染层的简单示例（参见列表 3.2）。ANGLE 的 Direct3D11 实现现在首次使用之前将数据存储在 CPU 端内存中
+#### 缓冲区对象
+
+OpenGL ES 3.0 渲染层的简单示例（参见列表 3.2）。ANGLE 的 Direct3D 11 实现现在首次使用之前将数据存储在 CPU 端内存中。
 
 ```cpp
 const char *ex = eglQueryString(EGL_NO_DISPLAY, EGL_EXTENSIONS);
@@ -10552,22 +10477,23 @@ if (strstr(ex, "EGL_ANGLE_platform_angle") != NULL &&
 }
 ```
 
-> 代码列表 3.4. ANGLE 渲染器选择示例。
+> **代码列表 3.4.** ANGLE 渲染器选择示例。
 
-运行时渲染器选择。通过使用 EGL_ANGLE_platform_angle 扩展可以在 EGL 中选择特定的渲染器。ANGLE 实现的每个渲染器都有一个传递给 eglGetDisplayEXT 的枚举，或者可以使用默认枚举允许 ANGLE 在运行的特定平台上选择最佳渲染器。参见列表 3.4 获取运行时 Direct3D 11 渲染器的示例。
+#### 运行时渲染器选择
+
+通过使用 `EGL_ANGLE_platform_angle` 扩展可以在 EGL 中选择特定的渲染器。ANGLE 实现的每个渲染器都有一个传递给 `eglGetDisplayEXT` 的枚举，或者可以使用默认枚举允许 ANGLE 在运行的特定平台上选择最佳渲染器。参见列表 3.4 获取运行时 Direct3D 11 渲染器的示例。
 
 ### 3.5.3 下一步：创建 OpenGL 渲染器
 
-ANGLE 团队将实现的第一个非 Direct3D 渲染器将使用桌面 OpenGL。这将允许项目快速扩展到其他桌面
+ANGLE 团队将实现的第一个非 Direct3D 渲染器将使用桌面 OpenGL。这将允许项目快速扩展到其他桌面平台，并允许用户运行在所有移动驱动程序和桌面平台上的 OpenGL ES 应用程序。
 
-
-平台并允许用户运行在所有移动驱动程序和桌面平台上的 OpenGL ES 应用程序。
-
-尽管 ANGLE 项目最初创建是为了解决 Windows 桌面端 OpenGL 驱动程序质量不高的问题，但在过去的五年里，其质量已经有了足够的提高，使得提供 OpenGL 渲染器变得可行。通过将 Direct3d 渲染器作为回退方案，ANGLE 能够在已知稳定且快速的驱动版本上提供 OpenGL 渲染器，且 CPU 开销比 Direct3d 渲染器更低。
+尽管 ANGLE 项目最初创建是为了解决 Windows 桌面端 OpenGL 驱动程序质量不高的问题，但在过去的五年里，其质量已经有了足够的提高，使得提供 OpenGL 渲染器变得可行。通过将 Direct3D 渲染器作为回退方案，ANGLE 能够在已知稳定且快速的驱动版本上提供 OpenGL 渲染器，且 CPU 开销比 Direct3D 渲染器更低。
 
 处理桌面 OpenGL 中客户端版本和扩展可用性的海量组合，是实现 OpenGL 渲染器时一个非常复杂的方面。加载函数指针或使用纹理格式枚举意味着需要检查客户端版本以及多三个扩展。例如，根据平台的不同，可以通过 `glGenFrameBuffers`、`glGenFrameBuffersEXT`、`glGenFrameBuffersARB` 或 `glGenFrameBuffersES`（透传到 OpenGL ES 时）来创建帧缓冲区。
 
-OpenGL 中的驱动程序问题是臭闻名的，因此规避这些问题是避免的。为了保证符合标准的 OpenGL ES 实现，ANGLE 需要维护一个包含特定驱动程序版本、显卡型号和平台版本的组合数据库，这些组合具有已知的合规性问题，并尝试通过避免该问题或操纵输入输出来解决这些问题。在最坏的情况下，当驱动 Bug 无法隐藏时，将通过 `EGL_CONFORMANT` 配置字段来警告用户存在无法修复的问题。
+
+
+OpenGL 中的驱动程序问题是臭名昭著的，因此规避这些问题是必要的。为了保证符合标准的 OpenGL ES 实现，ANGLE 需要维护一个包含特定驱动程序版本、显卡型号和平台版本的组合数据库，这些组合具有已知的合规性问题，并尝试通过避免该问题或操纵输入输出来解决这些问题。在最坏的情况下，当驱动 Bug 无法隐藏时，将通过`EGL_CONFORMANT`配置字段来警告用户存在无法修复的问题。
 
 ## 3.6 推荐实践
 
@@ -10575,14 +10501,14 @@ ANGLE 是桌面端 OpenGL ES 的一个重要实现，并驱动了大多数 WebGL
 
 - 避免使用线环（line loops）和三角形扇形（triangle fans）。相反尝试使用线列表（line lists）和三角形列表（triangle lists）。
 - 不支持宽线（Wide lines）。许多原生 OpenGL 实现也不支持宽线，因为对于如何处理这些情况（此处双双关）尚未达成共识。请使用三角形来实现宽线。
-- 避免在 16 位索引缓冲区中使用值为 `0xFFFF` 的索引值。配置你的工具以创建最大索引为 `65534` 的三角形带（triangle strips）。
+- 避免在 16 位索引缓冲区中使用值为`0xFFFF`的索引值。配置你的工具以创建最大索引为`65534`的三角形带（triangle strips）。
 - 将使用不同顶点格式的几何体保持在单独缓冲区中。
 - 避免使用亮度（luminance）和亮度-Alpha（luminance-alpha）纹理格式。尝试使用四通道纹理格式。
 
 ## 3. ANGLE: 将 OpenGL ES 引入桌面端
 
-- 利用 `EXT_texture_storage` 扩展（仅适用于桌面应用程序）。
-- 避免在控制流结构（例如 `if`、`else`、`switch`）中使用纹理采样内置函数。相反，在这些结构之外进行纹理采样。
+- 利用`EXT_texture_storage`扩展（仅适用于桌面应用程序）。
+- 避免在控制流结构（例如`if`、`else`、`switch`）中使用纹理采样内置函数。相反，在这些结构之外进行纹理采样。
 - 使用早期版本的 Chrome（Beta、Dev 和 Canary）测试你的 WebGL 应用程序。这是尽早发现并修复 Bug 并为其创建合规性测试的最佳方法，这样它们永远不会影响你的用户。
 
 ## 参考文献
@@ -10596,7 +10522,7 @@ ANGLE 是桌面端 OpenGL ES 的一个重要实现，并驱动了大多数 WebGL
 - [MSDN 14a] MSDN. "D3D11_MAPPED_SUBSOURCE Structure." Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/ff476182(v=vs.85).aspx, 2014.
 - [MSDN 14b] MSDN. "D3D11_USAGE Enumeration." Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/ff476259(v=vs.85).aspx, 2014.
 - [MSDN 14c] MSDN. "Direct3D Feature Levels." Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/ff476876(v=vs.85).aspx, 2014.
-- [MSDN 14d] MSDN. “How to: Create a Constant Buffer.” Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/desktop/ff47686(v=vs.85).aspx, 2014.
+- [MSDN 14d] MSDN. "How to: Create a Constant Buffer." Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/desktop/ff47686(v=vs.85).aspx, 2014.
 - [MSDN 14e] MSDN. "Stream Out." Windows Dev Center, http://msdn.microsoft.com/en-us/library/windows/ff47621, 2014.
 
 ## 关于编辑
@@ -10610,9 +10536,6 @@ Wolfgang Engel 是 Confetti (www.conff.com) 的首席执行官，这是一个为
 Christopher Oat 现任 Rockstar New England 的技术总监，负责 Rockstar 许多最新游戏的实时渲染技术和低级优化。此前，他是 AMD 游戏应用程序组的演示团队负责人。Christopher 在各种书籍和期刊上发表过作品，并在全球图形和游戏开发者会议上演讲。他参与过的许多项目可以在他的网站上找到：www.chisoat.com。
 
 Michal Valient 领导阿姆斯特丹 Guerrilla 技术团队。他致力于为 Playstation 3 和 Playstation 4 上备受赞誉的《使命之地》系列以及尚未宣布的项目提供引擎技术。此前他在 Caligari 作为程序员和负责人，为 Caligari trueSpace7 开发了基于着色器的实时渲染引擎。他的兴趣包括光传输的多个方面、阴影以及一般的并行处理。他相信分享知识，在 GDC 和 SIGGRAPH 上进行过演讲，并在 ShaderX 书籍和会议期刊上发表过图形论文。
-
-
-
 
 ![](img/120606d35c679664e7ad5faec2ee0e8b_563_0.png)
 
@@ -10640,7 +10563,7 @@ Hawar Doghamachi 在塞梅尔维大学学习牙医，并于 2003 年获得牙医
 
 Uriel Lyon 是 Eidos Montreal 的 3D 程序员。他在蒙特利尔理工学院学习计算机工程，在此期间，他在 Matrix Graphics 进行了多次实习。他于 2004 年加入 Ubisoft Montreal 担任 3D 程序员，参与了 GameCube、Wii 和 PlayStation 上的多款作品。2009 年，他加入 Eidos Montreal 担任《盗贼计划》的首席 3D 程序员。他目前在 Labs 工作，这是一个致力于新图形技术的研发小组。
 
-**Michał Drobot** 是 Activision  Infinity Ward 的首席渲染工程师。他最近在 Ubisoft Montreal 设计并优化了《孤岛惊魂4》（*Far Cry 4*）的 3D 渲染器。在此之前，他在 Guerrilla Games 工作，为 PlayStation 4 首发游戏《堕地暗影》（Killzone: Shadow Fall）设计并优化了渲染管线。他在会议上分享工作，并花时间编写关于艺术和技术的论文。他发现快速且漂亮的像素化很有趣。
+**Michał Drobot** 是 Activision Infinity Ward 的首席渲染工程师。他最近在 Ubisoft Montreal 设计并优化了《孤岛惊魂4》（*Far Cry 4*）的 3D 渲染器。在此之前，他在 Guerrilla Games 工作，为 PlayStation 4 首发游戏《堕地暗影》（Killzone: Shadow Fall）设计并优化了渲染管线。他在会议上分享工作，并花时间编写关于艺术和技术的论文。他发现快速且漂亮的像素化很有趣。
 
 **Alex Dunn** 作为 NVIDIA 的开发技术工程师，每天致力于推进游戏实时视觉效果的发展。奥巴尼大学游戏技术课程的毕业生，Alex 在主机平台上上首次尝试了图形编程。现在他为 NVIDIA 工作，其时间花在开发尖端编程技术上，以确保获得最高质量和最佳玩家体验。
 
@@ -10660,10 +10583,6 @@ John Huelin 是 Ubisoft Montreal 的图形程序员，在那里他主要参与�
 
 James L. Jones 毕业于卡迪夫大学计算机科学专业，在 Imagination Technologies 的演示团队负责实时图形演示。他目前专注于基于物理的渲染技术。
 
-
-
-
-
 # 贡献者介绍
 
 现代嵌入式图形平台以及基于 Imagination 实时光线追踪技术的演示研究。
@@ -10678,35 +10597,33 @@ Geoff Lang 是 Google Chrome 图形团队的一名软件工程师。他目前正
 
 李洪伟（Hongwei Li）在香港科技大学获得计算机科学博士学位。他曾是 AMD 高级图形研究小组的研究员，专注于实时渲染和 GPGPU 应用。他非常活跃于开源社区，是某移动平台渲染引擎的主要贡献者。
 
-Anton Lokhmotov 在编程语言和工具领域工作了 15 年，曾担任研究员和工程师，主要关注异构系统编程技术的生产力、效率和可移植性。2015 年，Anton 创立了 divildi，以追求他对高效可靠的计算环境的愿景。在 2010 年至 2015 年期间，Anton 领导了 ARM Mali GPU 系列的 GPU 计算编程技术的开发，包括生产级（OpenCL, RenderScript）和研究级（欧盟资助项目 CARP）编译器。他积极参与学术界和专业开发人员的教育，与合作伙伴和客户交流，并为开源项目和标准化工作做出贡献。2008 年至 2009 年，Anton 在伦敦帝国学院担任研究助理，研究异构编程。他获得剑桥大学的计算机科学博士学位，并于 2004 年获得莫斯科物理技术学院的应用数学与物理学（优等毕业）硕士学位。
 
-Jamie Madill 在 Google Chrome 的 GPU 团队工作，通过 Angle 帮助 Chrome 的 OpenGL 后端在每个设备、每个 API 上统一运行。他的背景是仿真和渲染，他在空余时间仍在此领域进行钻研。他于 2012 年毕业于卡尔尔顿大学，获得计算机科学硕士学位。
 
-Hugh Malan 是 Guerrilla Games 的首席技术程序员。此前，他在 CCP 参与过《EVE 2014》的开发，在此之前在 Realtime Worlds担任《Crashdown》的图形负责人。他为 3Dlabs 开发了“Realworld”实时过程化生成行星。他拥有新西兰奥塔大学的计算机图形硕士学位，以及新西兰维多利亚大学的物理学学士学位和数学荣誉学士学位。
+Anton Lokhmotov 在编程语言和工具领域工作了 15 年，曾担任研究员和工程师，主要关注异构系统编程技术的生产力、效率和可移植性。2015 年，Anton 创立了 `divildi`，以追求他对高效可靠的计算环境的愿景。在 2010 年至 2015 年期间，Anton 领导了 ARM Mali GPU 系列的 GPU 计算编程技术的开发，包括生产级（`OpenCL`、`RenderScript`）和研究级（欧盟资助项目 CARP）编译器。他积极参与学术界和专业开发人员的教育，与合作伙伴和客户交流，并为开源项目和标准化工作做出贡献。2008 年至 2009 年，Anton 在伦敦帝国学院担任研究助理，研究异构编程。他获得剑桥大学的计算机科学博士学位，并于 2004 年获得莫斯科物理技术学院的应用数学与物理学（优等毕业）硕士学位。
 
-Simon McIntosh-Smith 领导英国布里斯斯托大学的 HPC 研究小组。他的背景是微处理器架构，在行业拥有 15 年经验，曾任职于 Inmos、日月、Pixelfusion 和 ClearSpeed。Simon 于 2002 年共同创立了 ClearSpeed，担任架构与应用总监，共同开发了第一代现代 HPC 加速器。2003 年，他领导了第一个加速 BLAST/LA-PACK 和 FFT 库的开发，导致了 2006 年在东京工业大学创建了第一个加速 Top500 系统——TSUBAME-1.0。他于 2009 年加入布里斯斯托大学，研究重点是异构核心架构的高效算法和性能可移植性。他因对 Sandia Manifesto 基准测试套件的贡献共同获得 R&D 100 奖，并在 2014 年授予了英国首个 Intel 并计算中心。Simon 积极为 Chronos OpenCL 异构核心编程标准做出贡献。
+Jamie Madill 在 Google Chrome 的 GPU 团队工作，通过 `Angle` 帮助 Chrome 的 `OpenGL` 后端在每个设备、每个 API 上统一运行。他的背景是仿真和渲染，他在空余时间仍在此领域进行钻研。他于 2012 年毕业于卡尔尔顿大学，获得计算机科学硕士学位。
+
+Hugh Malan 是 Guerrilla Games 的首席技术程序员。此前，他在 CCP 参与过《EVE 2014》的开发，在此之前在 Realtime Worlds 担任《Crashdown》的图形负责人。他为 3Dlabs 开发了“Realworld”实时过程化生成行星。他拥有新西兰奥塔大学的计算机图形硕士学位，以及新西兰维多利亚大学的物理学学士学位和数学荣誉学士学位。
+
+Simon McIntosh-Smith 领导英国布里斯斯托大学的 HPC 研究小组。他的背景是微处理器架构，在行业拥有 15 年经验，曾任职于 Inmos、日月、Pixelfusion 和 ClearSpeed。Simon 于 2002 年共同创立了 ClearSpeed，担任架构与应用总监，共同开发了第一代现代 HPC 加速器。2003 年，他领导了第一个加速 `BLAST/LA-PACK` 和 `FFT` 库的开发，导致了 2006 年在东京工业大学创建了第一个加速 Top500 系统——TSUBAME-1.0。他于 2009 年加入布里斯斯托大学，研究重点是异构核心架构的高效算法和性能可移植性。他因对 Sandia Manifesto 基准测试套件的贡献共同获得 R&D 100 奖，并在 2014 年授予了英国首个 Intel 并计算中心。Simon 积极为 Chronos `OpenCL` 异构核心编程标准做出贡献。
 
 Doug McNabb 目前是 Intel 内部的游戏开发者发声人。他目前正在创造新技术以推进视觉计算的领先水平。他曾是 2XL Games 的 CTO 和渲染系统架构师，以及 Rainbow Studios 的渲染系统架构师。他贡献了十余部作品，最近的作品是《Baja: Edge of Control》。你可以在 Twitter 上找到他 @mcnabb。
 
 Gareth Morgan 自 1999 年起参与游戏和 3D 图形，从 Silicon Graphics 开始，随后在 Activision 和 BAM Studios 在内的多家游戏公司工作。2008 年以来，他是 Imagination Technologies 的领先软件工程师，专门研究使用 Imagination 光线追踪技术的复杂渲染技术。
 
-**Matthias Niebner** 是斯坦福大学的访问助理教授，隶属于马普普克视觉计算与通信中心。在任职斯坦福之前，他在 Günther Geiner 的指导下在埃兰根-纽伦堡大学获得博士学位。他的研究关注计算机图形和视觉的不同领域，包括实时渲染、3D 场景环境重建和语义理解。
+Matthias Niebner 是斯坦福大学的访问助理教授，隶属于马普普克视觉计算与通信中心。在任职斯坦福之前，他在 Günther Geiner 的指导下在埃兰根-纽伦堡大学获得博士学位。他的研究关注计算机图形和视觉的不同领域，包括实时渲染、3D 场景环境重建和语义理解。
 
-**Gustavo Bastos Nunes** 是微软 Turn10 Studios 的图形工程师。他在里约热内卢保罗天主教大学获得计算机工程学士学位和计算机图形硕士学位。他在计算机图形领域发表过若干论文。他对比与图形相关的一切都充满热情。Gustavo 参与了 Microsoft Office 2013、Xbox One 和 Forza Motorsport 5 的开发团队。
+Gustavo Bastos Nunes 是微软 Turn10 Studios 的图形工程师。他在里约热内卢保罗天主教大学获得计算机工程学士学位和计算机图形硕士学位。他在计算机图形领域发表过若干论文。他对比与图形相关的一切都充满热情。Gustavo 参与了 Microsoft Office 2013、Xbox One 和 Forza Motorsport 5 的开发团队。
 
-**David Panger** 是 Atologic 的执行官，在那里担任首席研究员和引擎架构师。他在计算机图形和引擎研究领域拥有十年。
+David Panger 是 Atologic 的执行官，在那里担任首席研究员和引擎架构师。他在计算机图形和引擎研究领域拥有十年。
 
-**João Lucas Guberman Raza** 是 343 Industries 的项目经理，负责服务云系统。此前他在 Windows Phone 部门工作，为游戏开发者交付了 SDK。作为一名狂热的游戏玩家，他已在行业工作了五年。他拥有圣卡洛斯联邦大学（UFSCar）的计算机科学学士学位。他运营着博客 www.versus-software.com，在上面撰写关于他感兴趣的图形、网络和游戏设计。
+João Lucas Guberman Raza 是 343 Industries 的项目经理，负责服务云系统。此前他在 Windows Phone 部门工作，为游戏开发者交付了 SDK。作为一名狂热的游戏玩家，他已在行业工作了五年。他拥有圣卡洛斯联邦大学（UFSCar）的计算机科学学士学位。他运营着博客 `www.versus-software.com`，在上面撰写关于他感兴趣的图形、网络和游戏设计。
 
-**Benjamin Rouveyrol** 在过去的十年中一直从事游戏行业，参与过《古战堡垒》和《刺客信条》系列。他目前在 Ubisoft 特特利尔工作室开发《彩虹六号围攻》，让像素更快、更漂亮。
+Benjamin Rouveyrol 在过去的十年中一直从事游戏行业，参与过《古战堡垒》和《刺客信条》系列。他目前在 Ubisoft 特特利尔工作室开发《彩虹六号围攻》，让像素更快、更漂亮。
 
-**Henry Schäfer** 正在埃兰根-纽伦堡大学攻读计算机图形博士学位。他的研究兴趣包括真实图像合成、数据压缩技术和实时渲染。
+Henry Schäfer 正在埃兰根-纽伦堡大学攻读计算机图形博士学位。他的研究兴趣包括真实图像合成、数据压缩技术和实时渲染。
 
-**Dirk Schut** 是代尔夫特理工大学的一名学生。他曾在计算机科学学士学位的荣誉课程中过过。现在他正在攻读计算机科学硕士学位，专注于计算机图形和信号处理。在开始学习之前，他出于兴趣编写计算机图形技术。
-
-
-
-
+Dirk Schut 是代尔夫特理工大学的一名学生。他曾在计算机科学学士学位的荣誉课程中过过。现在他正在攻读计算机科学硕士学位，专注于计算机图形和信号处理。在开始学习之前，他出于兴趣编写计算机图形技术。
 
 # 关于贡献者
 
@@ -10716,13 +10633,13 @@ Ivan Spogeev 是 EA Canada 的一名软件工程师，负责 Xbox One、Playstat
 
 Jason Stewart 是 AMD 的开发者技术工程师。他在北卡罗来纳大学切普特希尔分校学习计算机科学和计算机图形。在加入 AMD 开发者技术团队之前，他在游戏行业工作了八年，为几款大作开发并优化了图形功能。他此前曾在 Electronic Arts 和 Red Storm Entertainment 工作，在原版 Xbox、Xbox 360、Playstation 2、Playstation 3、Wii、3DS 和 iOS 上发布过游戏。在进入游戏行业之前，他担任硬件和实时嵌入式软件工程师。在 AMD 的工作中，他与专业游戏开发者合作，将技术集成并并在 AMD 图形硬件上优化性能。
 
-**Márton Tamás** 目前在布达佩斯技术与经济大学学习计算机工程。他的兴趣包括实时渲染、GPU 编程和引擎开发。你可以在 Twitter 上关注他 @0martint。
+Márton Tamás 目前在布达佩斯技术与经济大学学习计算机工程。他的兴趣包括实时渲染、GPU 编程和引擎开发。你可以在 Twitter 上关注他 @0martint。
 
-**Shannon Woods** 是 Google ANGLE 项目的负责人。在目前的工作之前，他曾探索过 3D 图形世界的其他领域，开发用于游戏可移植性和实时分布式仿真的软件。他毕业于马里兰大学，喜欢代码规范、音乐和茶壶。
+Shannon Woods 是 Google ANGLE 项目的负责人。在目前的工作之前，他曾探索过 3D 图形世界的其他领域，开发用于游戏可移植性和实时分布式仿真的软件。他毕业于马里兰大学，喜欢代码规范、音乐和茶壶。
 
-**Bartłomiej Wroński** 是索尼互动娱乐的一名高级员工程序员。他于华沙的波兰游戏工作室 CD Projekt RED 开始职业生涯，担任《巫师 2》的引擎和图形程序员，随后领导了 Xbox 360 版《巫师 2：增强版》的技术处理工作。在为即将推出的游戏《巫师 3：狂猎之地》和《赛博朋克 2077》进行研发活动并开发新的渲染和光照技术后，他加入了 Ubisoft Montreal 工作室。在那里，他为备受好誉的 AAA 级游戏（包括《刺客信条 4：黑旗》和《远见之战4》）开发了下一代视觉效果。最近，Bart 加入了索尼互动娱乐美国的圣塔莫尼卡工作室，继续他为索尼 Playstation 游戏平台开发新型实时算法的工作。他在 www.bartwronski.com 运营着一个以图形和摄影为中心的博客。他的爱好包括数字和胶片摄影、电子音乐合成与声音处理、力量运动和旅行。
+Bartłomiej Wroński 是索尼互动娱乐的一名高级员工程序员。他于华沙的波兰游戏工作室 CD Projekt RED 开始职业生涯，担任《巫师 2》的引擎和图形程序员，随后领导了 Xbox 360 版《巫师 2：增强版》的技术处理工作。在为即将推出的游戏《巫师 3：狂猎之地》和《赛博朋克 2077》进行研发活动并开发新的渲染和光照技术后，他加入了 Ubisoft Montreal 工作室。在那里，他为备受好誉的 AAA 级游戏（包括《刺客信条 4：黑旗》和《远见之战4》）开发了下一代视觉效果。最近，Bart 加入了索尼互动娱乐美国的圣塔莫尼卡工作室，继续他为索尼 Playstation 游戏平台开发新型实时算法的工作。他在 `www.bartwronski.com` 运营着一个以图形和摄影为中心的博客。他的爱好包括数字和胶片摄影、电子音乐合成与声音处理、力量运动和旅行。
 
-**Egor Yusov** 是英特尔视觉计算小组的高级图形软件工程师，致力于多种 3D 技术的研究，包括变形地形、基于物理的水体渲染、阴影和体积后处理效果。他于 2011 年获得俄罗斯诺夫哥德州立技术大学计算机科学博士学位。他的研究包括实时可视化与渲染、数据压缩、基于 GPU 的算法以及 Shader 编程。
+Egor Yusov 是英特尔视觉计算小组的高级图形软件工程师，致力于多种 3D 技术的研究，包括变形地形、基于物理的水体渲染、阴影和体积后处理效果。他于 2011 年获得俄罗斯诺夫哥德州立技术大学计算机科学博士学位。他的研究包括实时可视化与渲染、数据压缩、基于 GPU 的算法以及 Shader 编程。
 
 # 游戏开发 / 设计
 
@@ -10747,4 +10664,3 @@ Jason Stewart 是 AMD 的开发者技术工程师。他在北卡罗来纳大学�
 | www.crcpress.com | Abingdon, Oxon OX14 4RN, UK |
 | K244227 | ISBN: 978-14822-6461-6 |
 | | 90000 ![99781482264616]() |
-

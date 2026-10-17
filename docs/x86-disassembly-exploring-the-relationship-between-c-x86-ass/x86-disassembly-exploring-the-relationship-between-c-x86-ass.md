@@ -1,68 +1,13 @@
+
 # X86 反汇编：探索 C 语言、x86 汇编与机器码之间的关系
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 12.2 GNU C 编译器 ................................................................................................................................................... 87
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 21.2 调用约定 ...................................................................................... 143
-
-
-
-
-
-
-
-
-
-
-
-
 + 25.6 代码转换 . . . . . . . . . . . . . . . . 171
 + 25.8 代码解密器 . . . . . . . . . . . . . . . . . 172
-
-
-
-
-
 # 28 贡献者 . . . . . . . . . . . . . . . . 181
 
-插图列表
-
-
-
+## 插图列表
 
 ### 1.1 汇编器
 
@@ -112,7 +57,7 @@ FASM 是“Flat Assembler”（平面汇编器），是来自 Borland 的功能�
 
 #### 1.4.1 GAS
 
-GNU 汇编器 (GAS) 作为 GCC 的一部分提供。某些编译器，例如微软
+GNU 汇编器 `GAS` 作为 `GCC` 的一部分提供。某些编译器，例如微软
 
 - * http://en.wikibooks.org/wiki/Compiler%20Construction
 
@@ -126,10 +71,6 @@ HLA³ 是“High Level Assembler”（高级汇编器）的简称，是 Randall 
 
 - 2 http://en.wikipedia.org/wiki/GNU%Assembler
 - 3 http://en.wikipedia.org/wiki/High%20Level%20Assembly
-
-
-
-
 
 C 编译器直接将 C 和 C++ 源代码编译为机器码。而 GCC 则是将 C 和 C++ 转换为汇编语言，然后使用汇编器将其转换为相应的机器码。从反汇编器的角度来看，它发现无法精确地还原出最初创建可执行文件时所使用的 C 或 C++ 代码。然而，可以创建出与原代码编译结果完全相同、或者执行相同任务的代码。
 
@@ -161,7 +102,7 @@ do { ... } while(i);
 
 微软的编译器仅支持 Windows 系统以及与 Intel 兼容的 16/32/64 位架构。
 
-> http://en.wikibooks.org/wiki/C%2B%2B%20Programming%2FProgramming%20Languages%2FC%2B%2B%2B%2BCode%2F%2FCompiler
+> http://en.wikibooks.org/wiki/C%2B%2B%20Programming%2FProgramming%20Languages%2FC%2B%2B%2BCode%2F%2FCompiler
 
 ### 汇编器与编译器
 
@@ -176,6 +117,7 @@ cl.exe /Fa*assembly file name <C source file>
 ```
 
 `/Fa*` 关是一个命令行选项，告诉编译器生成汇编列表文件。
+
 例如，以下命令行：
 
 ```
@@ -186,9 +128,9 @@ cl.exe /Faest.asm Test.c
 
 ### 1.7.2 GNU C 编译器
 
-GNU C 编译器是 GNU 编译器集合 (GCC) 套件的一部分。该编译器适用于大多数系统，并且是免费软件。许多人专门使用它，以便用一个编译器处理许多平台。GNU GCC 是 Linux 和 Unix 系统的事实性标准编译器。它是可重定向的，允许许多输入语言（C, C++, Obj-C, Ada, Fortran 等），并支持多个目标操作系统和架构。它优化得良好，但 IA-32 代码生成引擎不够激进。
+GNU C 编译器是 GNU 编译器集合 `GCC` 套件的一部分。该编译器适用于大多数系统，并且是免费软件。许多人专门使用它，以便用一个编译器处理许多平台。GNU GCC 是 Linux 和 Unix 系统的事实性标准编译器。它是可重定向的，允许许多输入语言（C, C++, Obj-C, Ada, Fortran 等），并支持多个目标操作系统和架构。它优化得良好，但 IA-32 代码生成引擎不够激进。
 
-GCC 前端程序是 'gcc'（Windows 上的 'gcc.exe'），关联的链接器是 'ld'（Windows 上的 'ld.exe'）。
+GCC 前端程序是 `gcc`（Windows 上的 `gcc.exe`），关联的链接器是 `ld`（Windows 上的 `ld.exe`）。
 
 ### 列表文件
 
@@ -204,37 +146,9 @@ gcc -S <sourcefile>
 gcc.exe -S test.c
 ```
 
-将生成一个名为 'test.s' 的汇编列表文件。在 GCC 中生成汇汇列表文件，使用以下命令：
+将生成一个名为 'test.s' 的汇编列表文件。
 
-```
-gcc -S <sourcefile>
-```
-
-例如：
-
-```
-gcc -S test.c
-```
-
-将生成一个名为 'test.s' 的汇编列表文件。注意，`-S` 关与文件名之间没有空格。在 GCC 中生成汇汇列表文件，使用以下命令：
-
-```
-gcc -S <sourcefile>
-```
-
-例如：
-
-```
-gcc -S test.c
-```
-
-将生成一个名为 'test.s' 的汇汇列表列表文件。注意，`-S` 关与文件名之间没有结果。
-
-GCC 前端程序是 'gcc'（Windows 上的 'gcc.exe'），关联的链接器是 'ld'（Windows 上的 'ld.exe'）。
-
-（注：此处由于原文存在大量重复内容，根据指令“不要重复输出原文”原则，翻译时已合并逻辑并去重）GNU GCC 是 Linux 和 Unix 系统的事实性标准编译器。它是可重定向的，允许许多输入语言（C, C++, Obj-C, Ada, Fortran 等...），并支持多个目标操作系统和架构。它优化得良好，但 IA-32 代码生成引擎不够激进。
-
-GCC- GCC 前端程序是 'gcc'（Windows 上的 'gcc.exe'），关联的链接器是 'ld'（Windows 上的 'ld.exe'）。
+GCC 前端程序是 `gcc`（Windows 上的 `gcc.exe`），关联的链接器是 `ld`（Windows 上的 `ld.exe`）。
 
 ### 1.7.3 Intel 编译器
 
@@ -279,17 +193,13 @@ OllyDbg 最近是最流行的反汇编器之一。它拥有庞大的社区和各
 - http://www.ollydbg.de/（官方网站）
 - http://www.openrc.org/downloads/browse/OllyDbg_Plugins（插件）
 
-#### 2.2.3  Windows 反汇编器
+#### 2.2.3 Windows 反汇编器
 
 ##### Objconv
 
 一个支持 16、32 和 64 位 x86 代码的命令行反汇编器。支持最新的指令集（SSE4, AVX, XOP, FMA 等）、多种对象文件格式、多种汇编语法方。支持 Windows、Linux、Mac。智能分析。
 
 - http://www.agner.org/optimize/#objconv
-
-
-
-
 
 ##### x86 反汇编器
 
@@ -401,11 +311,13 @@ x86dis
 
 此程序可显示二进制流，例如引导区或其他非结构化二进制文件。
 
+
+
 ldasm
 
-LDasm (Linux Disassembler) 是一个基于 Perl/Tk 的 objdump/binutils GUI，试图模仿 W32Dasm 的“外观和感受”。它搜索交叉引用（例如字符串），将代码从 GAS 转换为 MASM 风格，跟踪程序并提供更多功能。附带 PTrace，一个进程记录器。
+LDasm (Linux Disassembler) 是一个基于 `Perl/Tk` 的 `objdump/binutils` GUI，试图模仿 `W32Dasm` 的“外观和感受”。它搜索交叉引用（例如字符串），将代码从 `GAS` 转换为 `MASM` 风格，跟踪程序并提供更多功能。附带 `PTrace`，一个进程记录器。
 
-http://www.feedface.com/projects/ldasm.html
+`http://www.feedface.com/projects/ldasm.html`
 
 ## 2.3 反汇编器问题
 
@@ -415,24 +327,19 @@ http://www.feedface.com/projects/ldasm.html
 
 由于数据和指令都以二进制数据的形式存储在可执行文件中，因此产生了一个明显的问题：反汇编器如何区分代码和数据？给定的任何字节是变量还是指令的一部分？
 
-如果数据仅限于可执行文件的 .data 段（将在后文中解释），且可执行代码仅限于 .code 段，那么问题就不会那么困难了，但情况通常并非如此。数据可能直接插入代码段（例如跳转地址表、常量字符串），而可执行代码可能存储在数据段（尽管许多新系统出于安全考虑防止了这一点）。
+如果数据仅限于可执行文件的 `.data` 段（将在后文中解释），且可执行代码仅限于 `.code` 段，那么问题就不会那么困难了，但情况通常并非如此。数据可能直接插入代码段（例如跳转地址表、常量字符串），而可执行代码可能存储在数据段（尽管许多新系统出于安全考虑防止了这一点）。
 
 许多交互式反汇编器会给用户渲染代码或数据段的选项，但非交互式反汇编器会自动进行分离。反汇编器通常在同一行内提供对应十六进制数据的指令 AND 形式，以减少对代码性质做出决定的需求。某些反汇编器允许你根据所研究对象的内容指定要反汇编的内容或标签名称的规则。以这种方式编写自己的“爬虫”更高效；对于大型程序，交互式反汇编可能不实际，甚至到了不可行的地步。
 
-在任意可执行程序分离代码与数据的通用问题等同于停机问题。因此，无法编写一个能够为所有可能的输入程序正确分离代码和数据的反汇编器。逆向工程充满了此类理论限制，尽管根据莱斯定理（Rice's theorem），关于程序属性的所有有趣问题都是不可判的（因此编译器许多许多处理任何形式程序的工具都会遇到此类限制）。在实践中，通过交互式与自动分析相结合以及毅力，可以处理所有旨在阻碍逆向工程的程序，例如在使用之前进行加密和解密，并在内存中移动代码。
+在任意可执行程序分离代码与数据的通用问题等同于停机问题。因此，无法编写一个能够为所有可能的输入程序正确分离代码和数据的反汇编器。逆向工程充满了此类理论限制，尽管根据 `Rice's theorem`，关于程序属性的所有有趣问题都是不可判的（因此编译器许多许多处理任何形式程序的工具都会遇到此类限制）。在实践中，通过交互式与自动分析相结合以及毅力，可以处理所有旨在阻碍逆向工程的程序，例如在使用之前进行加密和解密，并在内存中移动代码。
 
 ### 2.3.2 丢失的信息
 
 所有基于文本的标识符（如变量名、标签名和宏）在汇编过程中都被删除了。它们可能仍存在于生成的对象文件中，供调试器和链接器使用，但直接连接已经丢失。没有了这些注释和标识符，更难理解源代码的目的，并且很难确定该代码所使用的算法。
 
-
-
-
-
-
 ### Hex-Rays 反汇编译器
 
-Hex-Rays 是一款商业级反汇编译器。它是作为流行的 IDA-Pro 反汇编器的扩展代码制作的。它是目前唯一能产生可用结果的商业反汇编译器。它支持 x86 和 ARM 架构。
+Hex-Rays 是一款商业级反汇编译器。它是作为流行的 `IDA-Pro` 反汇编器的扩展代码制作的。它是目前唯一能产生可用结果的商业反汇编译器。它支持 `x86` 和 `ARM` 架构。
 
 ```
 http://www.hex-rays.com/products/decompiler/index.html
@@ -448,7 +355,7 @@ http://www.itee.uq.edu.au/-cristina/dcc.html
 
 ### Boomerang 反汇编译器项目
 
-Boomerang 反汇编译器试图创建一个强大的、可重目标的反汇编译器。到目前为止，它只能反编译为 C 语言，且成功率一般。
+Boomerang 反汇编译器试图创建一个强大的、可重目标的反汇编译器。到目前为止，它只能反编译为 `C` 语言，且成功率一般。
 
 ```
 http://boomerang.sourceforge.net/
@@ -456,7 +363,7 @@ http://boomerang.sourceforge.net/
 
 ### 反向工程编译器 (REC)
 
-REC 是一个强大的“反汇编译器”，它可以将原生汇编代码反编译为类 C 的代码表示。该代码介于汇编和 C 语言之间，但比纯汇编更易读。遗憾的是，该程序似乎相当不稳定。
+REC 是一个强大的“反汇编译器”，它可以将原生汇编代码反编译为类 `C` 的代码表示。该代码介于汇编和 `C` 语言之间，但比纯汇编更易读。遗憾的是，该程序似乎相当不稳定。
 
 ```
 http://www.backstreet.com/rnc/rec.html
@@ -472,388 +379,427 @@ http://sourceforge.net/projects/exetoc
 
 ### Decompile-It
 
-Decompile-It 是一个针对用 -g 编译的 32 位 Linux x86 可执行文件的 Web 反汇编译器。
+Decompile-It 是一个针对用 `-g` 编译的 32 位 Linux `x86` 可执行文件的 Web 反汇编译器。
 
 ```
 http://decompile-it.com
 ```
 
-
 大多数 CPU 都是 8 位 CPU。⁴
 
-通常当子程序结束时，它会立即返回执行 'call' 指令之后的下一个地址。
+通常当子程序结束时，它会立即返回执行 `call` 指令之后的下一个地址。
 
 然而，汇编语言程序员偶尔使用几种不同的技术来调整返回地址，使反汇编变得更加困难：
 
-- 跳转表 (jump tables)，
-- 计算跳转 (calculated jumps)，以及，
-- call 指令后的参数。
+- 跳转表 (`jump tables`)，
+- 计算跳转 (`calculated jumps`)，以及，
+- `call` 指令后的参数。
 
-+ 4 Jim Turley. "The Two Percent Solution" {http://www.eetimes.com/discussion/other/4024488/The-Two-Percent-Solution}. 2002.
++ 4 Jim Turley. "The Two Percent Solution" `{http://www.eetimes.com/discussion/other/4024488/The-Two-Percent-Solution}`. 2002.
 
 ### 2.6.1 跳转表和其他计算跳转
 
-对于 8 位 CPU，计算跳转通常通过将一个计算出的“返回”地址推入栈中，然后使用 'return' 指令跳转到该地址来实现。例如，RTS Trick⁵ 使用这种技术来实现跳转表 (w:branch table⁶)。
+对于 8 位 CPU，计算跳转通常通过将一个计算出的“返回”地址推入栈中，然后使用 `return` 指令跳转到该地址来实现。例如，`RTS Trick`⁵ 使用这种技术来实现跳转表 (`w:branch table`⁶)。
 
 ### 2.6.2 call 指令后的参数
 
-子程序不是从栈中或某些固定全局地址获取它们的参数，而是在调用该子程序的指令之后的内存地址处提供这些地址。使用这种技术的子程序会调整返回地址以跳过常量数据，然后返回到 'call' 指令后许多字节处的地址。使用这种技术的最著名的程序之一是 'Sweet 16' 虚拟机。
+子程序不是从栈中或某些固定全局地址获取它们的参数，而是在调用该子程序的指令之后的内存地址处提供这些地址。使用这种技术的子程序会调整返回地址以跳过常量数据，然后返回到 `call` 指令后许多字节处的地址。使用这种技术的最著名的程序之一是 `Sweet 16` 虚拟机。
 
 这种技术可能会使反汇编变得更加困难。
 
+大多数 32 位 CPU 使用 `ARM` 指令集⁷⁸⁹。
 
-大多数 32 位 CPU 使用 ARM 指令集⁷⁸⁹。
+典型的 `ARM` 汇编代码是一系列子程序，字面量常量散落在子程序之间。子程序的标准序言（`prolog`）和结尾（`epilog`¹⁰）很容易识别。
 
-典型的 ARM 汇编代码是一系列子程序，字面量常量散落在子程序之间。子程序的标准序言（prolog）和结尾（epilog¹⁰）很容易识别。
-
-
-- asgen¹¹ 包含通用工具，并已用于为 8080 8086 80386 Alpha 6809 用于 Pentium 68000 6502 8051 制作汇编器。¹¹。
+- `asgen`¹¹ 包含通用工具，并已用于为 `8080` `8086` `80386` `Alpha` `6809` 用于 `Pentium` `68000` `6502` `8051` 制作汇编器。¹¹。
 
 | 索引 | 参考文献 |
 | :--- | :--- |
-| 5 | http://wiki.nesdes.com/w/index.php/RTS_Trick |
-| 6 | http://en.wikipedia.org/wiki/branch32table |
-| 7 | Jim Turley. "The Two Percent Solution" [http://www.eetimes.com/discussion/other/4024488/The-Two-Percent-Solution.] (2002). |
-| 8 | Max Huffman. "ARM Core Club Into 3G Territory" [http://www.extremetech.com/extreme/52186-arm-cores-club-into-3g-territory.] (2002). 虽然 Intel 和 AMD 在法庭上获得了大部分关注，但 ARM 的 32 位架构... 已经卖掉了其他。 |
-| 9 | Tom Kraitz. "ARMed for the living room [http://www.cnet.com/ARMed-for-the-living-room/2100-1056-3-6056729.html] - ARM 授权了 16 亿核心 [2005年]。 2006. |
-| 10 | http://en.wikibooks.org/wiki/Embedded_Systems/Mixed_C_and_Assembly_Programming%ZARMY20 |
-| 11 | http://home.hccnet.nl/a.w.man.der.horst/asgen.fr |
+| 5 | `http://wiki.nesdes.com/w/index.php/RTS_Trick` |
+| 6 | `http://en.wikipedia.org/wiki/branch32table` |
+| 7 | Jim Turley. "The Two Percent Solution" [`http://www.eetimes.com/discussion/other/4024488/The-Two-Percent-Solution.`] (2002). |
+| 8 | Max Huffman. "ARM Core Club Into 3G Territory" [`http://www.extremetech.com/extreme/52186-arm-cores-club-into-3g-territory.`] (2002). 虽然 Intel 和 AMD 在法庭上获得了大部分关注，但 ARM 的 32 位架构... 已经卖掉了其他。 |
+| 9 | Tom Kraitz. "ARMed for the living room [`http://www.cnet.com/ARMed-for-the-living-room/2100-1056-3-6056729.html`]" - ARM 授权了 16 亿核心 [2005年]。 2006. |
+| 10 | `http://en.wikibooks.org/wiki/Embedded_Systems/Mixed_C_and_Assembly_Programming%ZARMY20` |
+| 11 | `http://home.hccnet.nl/a.w.man.der.horst/asgen.fr` |
 
+- `radare`，反向工程框架¹² 包含开源工具，用于反汇编许多处理器的代码，包括 `x86`, `ARM`, `PowerPC`, `m68k` 等，包括 `java`, `msil` 等在几个虚拟机，以及包括 `Linux`, `BSD`, `OS`, `Windows`, `iPhoneOS` 等在许多平台。
 
-- radare，反向工程框架¹² 包含开源工具，用于反汇编许多处理器的代码，包括 x86, ARM, PowerPC, m68k 等，包括 java, msil 等在几个虚拟机，以及包括 Linux, BSD, OS, Windows, iPhoneOS 等在许多平台。
-- IDA，交互式反汇编器¹³ (IDA Pro¹) 可以反汇编大量处理器的代码，包括 ARM 架构（包括 Thumb 和 Thumb-2），ATMEL, AVR, INTEL 8051, INTEL 8086, MOS Technologies 6502, MC6809, MC6811, M68H2C, MSP430, PIC 12XX, PIC 14XX, PIC 16XX, ZilogXX, Zilog Z80 等。
-- dmoz: "Disassemblers"⁵ 列出了大量的反汇编器。
+- `IDA`，交互式反汇编器¹³ (`IDA Pro`¹) 可以反汇编大量处理器的代码，包括 `ARM` 架构（包括 `Thumb` 和 `Thumb-2`），`ATMEL`, `AVR`, `INTEL 8051`, `INTEL 8086`, `MOS Technologies 6502`, `MC6809`, `MC6811`, `M68H2C`, `MSP430`, `PIC 12XX`, `PIC 14XX`, `PIC 16XX`, `ZilogXX`, `Zilog Z80` 等。
+
+- `dmoz`: "Disassemblers"⁵ 列出了大量的反汇编器。
+
 - 程序转换反汇编¹⁶ 许多备受推荐的反汇编器。
-- Wikipedia: objdump¹⁷ 的 GNU binutils，可以反汇编几个处理器和平台的代码。
-- 在 SourceForge¹⁸ 上搜索 "disassemble" 显示了用于各种 CPU 的反汇编器。Hopper¹⁹ 是一种运行在 OS-X 上并反汇编 32/64 位 OS-X 和二进制文件的反汇编器。
 
+- Wikipedia: `objdump`¹⁷ 的 GNU `binutils`，可以反汇编几个处理器和平台的代码。
 
-- radare，反向工程框架¹² 包含开源工具，用于反汇编许多处理器的代码，包括 x86, ARM, PowerPC, m68k 等，包括 java, msil 等在几个虚拟机，以及包括 Linux, BSD, OS, Windows, iPhoneOS 等在许多平台。
-- IDA，交互式反汇编器¹³ (IDA Pro¹) 可以反汇编大量处理器的代码，包括 ARM 架构（包括 Thumb 和 Thumb-2），ATMEL, AVR, INTEL 8051, INTEL 8086, MOS Technologies 6502, MC6809, MC6811, M68H2C, MSP430, PIC 12XX, PIC 14XX, PIC 16XX, ZilogXX, Zilog Z80 等。
-- dmoz: "Disassemblers"⁵ 列出了大量的反汇编器。
-- 程序转换反汇编¹⁶ 许多备受推荐的反汇编器。
-- Wikipedia: objdump¹⁷ 的 GNU binutils，可以反汇编几个处理器和平台的代码。
-- 在 SourceForge⁸ 上搜索 "disassemble" 显示了用于各种 CPU 的反汇编器。Hopper¹⁹ 是一种运行在 OS-X 上并反汇编 32/64 位 OS-X 和二进制文件的。
-
+- 在 `SourceForge`¹⁸ 上搜索 "disassemble" 显示了用于各种 CPU 的反汇编器。`Hopper`¹⁹ 是一种运行在 `OS-X` 上并反汇编 32/64 位 `OS-X` 和二进制文件的反汇编器。
 
 ### 3.1 反汇编
 
 大多数 CPU 都是 8 位 CPU。⁴
 
-通常当子程序结束时，它会立即返回执行 'call' 指令之后的下一个地址。
+通常当子程序结束时，它会立即返回执行 `call` 指令之后的下一个地址。
 
 然而，汇编语言程序员偶尔使用几种不同的技术来调整返回地址，使反汇编变得更加困难：
 
-- 跳转表 (jump tables)，
-- 计算跳转 (calculated jumps)，以及，
-- call 指令后的参数。
+- 跳转表 (`jump tables`)，
+- 计算跳转 (`calculated jumps`)，以及，
+- `call` 指令后的参数。
 
-
-对于 8 位 CPU，计算跳转通常通过将一个计算出的“返回”地址推入栈中，然后使用 'return' 指令跳转到该地址来实现。例如，RTS Trick⁵ 使用这种技术来实现跳转表 (w:branch table⁶)。
+对于 8 位 CPU，计算跳转通常通过将一个计算出的“返回”地址推入栈中，然后使用 `return` 指令跳转到该地址来实现。例如，`RTS Trick`⁵ 使用这种技术来实现跳转表 (`w:branch table`⁶)。
 
 ### 3.1.2 call 指令后的参数
 
-子程序不是从栈中或某些固定全局地址获取它们的参数，而是在调用该子程序的指令之后的内存地址处提供这些地址。使用这种技术的子程序会调整返回地址以跳过常量数据，然后返回到 'call' 指令后许多字节处的地址。使用这种技术的最著名的程序之一是 'Sweet 16' 虚拟机。
+子程序不是从栈中或某些固定全局地址获取它们的参数，而是在调用该子程序的指令之后的内存地址处提供这些地址。使用这种技术的子程序会调整返回地址以跳过常量数据，然后返回到 `call` 指令后许多字节处的地址。使用这种技术的最著名的程序之一是 `Sweet 16` 虚拟机。
 
 这种技术可能会使反汇编变得更加困难。
 
+一个受著名的 `OllyDbg`⁴ 启发的全功能插件型调试器。项目页面⁵ `KDBg`
 
-大多数 CPU 都是 8 位 CPU。⁴
+一个针对 `KDE` 的 `gdb` 前端。`http://kdbg.`
 
-通常当子程序结束时，它会立即返回执行 'call' 指令之后的下一个地址。
-
-然而，汇编语言程序员偶尔使用几种不同的技术来调整返回地址，使反汇编变得更加困难：
-
-（此处为重复内容，已按要求不重复输出原文）
-
-
-
-一个受著名的 OllyDbg⁴ 启发的全功能插件型调试器。项目页面⁵ KDBg
-
-一个针对 KDE 的 gdb 前端。http://kdbg.
-
-一个针对 Linux 的 Ring-0 调试器。RR0D 项目页面⁶
+一个针对 Linux 的 Ring-0 调试器。`RR0D` 项目页面⁶
 
 ### 3.1.3 其他系统的调试器
 
 运行在源自 AT&T Unix 的系统上的 Unix 调试器。它通常是可选开发工具包的一部分，且需要额外付费。它使用交互式命令行界面。
 
-一个来自 HP（原数字设备公司）的 Tru64 Unix 上的上的增强型调试器，它比 dbx 能够更好地处理线程等高级功能。
+一个来自 HP（原数字设备公司）的 Tru64 Unix 上的上的增强型调试器，它比 `dbx` 能够更好地处理线程等高级功能。
 
 一个位于 Solaris 上的高级工具，它可以对整个系统（包括内核）提供性能分析等许多功能。
 
-模块化调试器 (MDB) 是一种用于 Solaris 操作系统环境的新型通用型调试工具。它的主要特点是其可扩展性。Solaris 模块化调试器描述了如何使用 MDB 调试复杂的软件系统，特别强调了调试 Solaris 内核以及相关设备驱动和模块的可用设施。它还包含了对 MDB 语言语法、调试器功能以及 MDB 模块编程 API 的完整参考和讨论。
-
+模块化调试器 (`MDB`) 是一种用于 Solaris 操作系统环境的新型通用型调试工具。它的主要特点是其可扩展性。Solaris 模块化调试器描述了如何使用 `MDB` 调试复杂的软件系统，特别强调了调试 Solaris 内核以及相关设备驱动和模块的可用设施。它还包含了对 `MDB` 语言语法、调试器功能以及 `MDB` 模块编程 API 的完整参考和讨论。
 
 ### 设置断点
 
-正如之前在反汇编器章节中提到的，一个输出“Hello, World!”的 6 行 C 程序会变成大量的汇编代码。大多数人都不希望通过筛选整个这堆乱码来寻找他们想要的信息。仅仅通过翻阅代码来寻找所需信息可能耗费大量。作为替代方案，可以选择设置断点，以便在程序运行到代码中的给定点时将其停止。
+正如之前在反汇编器章节中提到的，一个输出“Hello, World!”的 6 行 `C` 程序会变成大量的汇编代码。大多数人都不希望通过筛选整个这堆乱码来寻找他们想要的信息。仅仅通过翻阅代码来寻找所需信息可能耗费大量。作为替代方案，可以选择设置断点，以便在程序运行到代码中的给定点时将其停止。
 
 例如，假设在你的程序中，在某个特定事件之后经常遇到崩溃：在关闭消息框之后立即。你对所有 `MessageBoxA` 的调用都设置了断点。你带有断点运行程序，它会停下来并准备调用 `MessageBoxA`。此后逐行执行代码（称为*单步执行* *stepping*）并观察程序堆栈，你发现在调用后不久发生了缓冲区溢出。
 
-+ 4 http://ollydbg.de
-5 http://www.codef00.com/projects.php#Debugger
-6 http://rr0d.droids-corp.org/
++ 4 `http://ollydbg.de`
 
+5 `http://www.codef00.com/projects.php#Debugger`
 
-wxEditor 十进制编辑器能够直接查看和编辑源文件的二进制文件，对于研究专有闭源格式数据文件的结构非常有用。本节将尝试列出一些最优秀、最流行或最强大的工具。
+6 `http://rr0d.droids-corp.org/`
+
+`wxEditor` 十进制编辑器能够直接查看和编辑源文件的二进制文件，对于研究专有闭源格式数据文件的结构非常有用。本节将尝试列出一些最优秀、最流行或最强大的工具。
 
 ### 3.2.1 Windows 编辑器
 
-wxHexEditor（免费且开源）
+`wxHexEditor`（免费且开源）
+
 针对超大文件和设备的快速十六进制编辑器，支持高达艾字节的大小，允许在不创建临时文件的情况下更改大小（插入和删除），可以使用多窗格查看文件，内置反汇编器，支持用于（反）逆向工程大型二进制文件或文件系统的标签，可以查看经过 XOR 加密的文件。
 
 ```
 http://wxhexeditor.sourceforge.net/
 ```
 
-HxD（免费软件）
+`HxD`（免费软件）
+
 一个快速且强大的免费十六进制、磁盘和内存编辑器
 
 ```
 http://mh-nexus.de/hxd/
 ```
 
-免费 Hex编辑器 XVI32
+免费 Hex编辑器 `XVI32`
+
 一个适用于 Windows 的免费十六进制编辑器。
 
 ```
 http://www.chmaas.handshake.de/delphi/freware/xvi32/xvi32.htm
 ```
 
-HHD Software Hex Editor Neo
+`HHD Software Hex Editor Neo`
+
 一个快速的磁盘和内存编辑器，内置反汇编器和文件结构查看器。
 
 ```
 http://www.hhdsoftware.com/Family/hex-editor.html
 ```
 
-Catch22 HexEdit
+`Catch22 HexEdit`
+
 这是一个具有许多功能的强大十六进制编辑器。具有极的数据结构查看器。
 
 ```
 http://www.catch22.net/software/hexedit.asp
 ```
 
-Breakpoint Hex Workshop
+`Breakpoint Hex Workshop`
 
 ```
-
 7 http://en.wikipedia.org/wiki/hex%20editor
 ```
 
 一个优秀且强大的十六进制编辑器，其实用性受限于它不像其他一些选项那样免费。
 
-http://www.bpsoft.com/
+`http://www.bpsoft.com/`
 
 ##### Tiny Hexer
+
 免费且提供统计功能。
 
-http://www.mirkes.de/files/
+`http://www.mirkes.de/files/`
 
-frhed - 免费十六进制编辑器
+`frhed` - 免费十六进制编辑器
+
 适用于 Windows，免费开源。
 
-http://www.kibria.de/frhed.html
+`http://www.kibria.de/frhed.html`
 
 ##### Cygnus Hex Editor
+
 一个非常快速且易用的十六进制编辑器，提供“免费版”。
 
-http://www.softcircuits.com/cygnus/fe/
+`http://www.softcircuits.com/cygnus/fe/`
 
 ##### Hexprobe Hex Editor
+
 一个专业的十六进制编辑器，旨在包含处理十六进制数据的所有功能，在十六进制编辑和字节模式分析领域特别有用。
 
-http://www.hexprobe.com/hexprobe/index.htm
+`http://www.hexprobe.com/hexprobe/index.htm`
 
 ##### UltraEdit32
+
 一个十六进制编辑器/文本编辑器，曾获得 2005 年共享软件行业奖会议的“年度应用程序”奖。
 
-http://www.ultraedit.com/
+`http://www.ultraedit.com/`
 
 ##### ICY Hexplorer
+
 一个轻量级的免费开源十六进制文件编辑器，具有一些巧妙的功能，如像素视图、结构体、反汇编。
 
-http://explorer.sourceforge.net/
+`http://explorer.sourceforge.net/`
 
 ##### WinHex
+
 一个强大的十六进制文件和磁盘编辑器，具有计算机取证和数据恢复的高级能力（被政府和军队使用）。
 
-http://www.x-ways.net/index-m.html
+`http://www.x-ways.net/index-m.html`
 
 ##### 010 Editor
+
 一个非常强大且快速的十六进制编辑器，对数据结构和脚本有广泛支持。可以用于编辑驱动器和进程。
 
-http://www.sweetscape.com/010editor/
-
+`http://www.sweetscape.com/010editor/`
 
 ![](img/9b6491f497)
 
 运行在源自 AT&T Unix 的系统上的 Unix 调试器。它通常是可选开发工具包的一部分，且需要额外付费。它使用交互式命令行界面。
 
-一个来自 HP（原数字设备公司）的 Tru64 Unix 上的增强型调试器，它比 dbx 能够更好地处理线程等高级功能。
+一个来自 HP（原数字设备公司）的 Tru64 Unix 上的增强型调试器，它比 `dbx` 能够更好地处理线程等高级功能。
 
 一个位于 Solaris 上的高级工具，它可以对整个系统（包括内核）提供性能分析等许多功能。
 
-模块化调试器 (MDB) 是一种用于 Solaris 操作系统环境的新型通用型调试工具。它的主要特点是其可扩展性。Solaris 模块化调试器描述了如何使用 MDB 调试复杂的软件系统，特别强调了调试 Solaris 内核以及相关设备驱动和模块的可用设施。它还包含了对 MDB 语言语法、调试器功能以及 MDB 模块编程 API 的完整参考和讨论。
+模块化调试器 (`MDB`) 是一种用于 Solaris 操作系统环境的新型通用型调试工具。它的主要特点是其可扩展性。Solaris 模块化调试器描述了如何使用 `MDB` 调试复杂的软件系统，特别强调了调试 Solaris 内核以及相关设备驱动和模块的可用设施。它还包含了对 `MDB` 语言语法、调试器功能以及 `MDB` 模块编程 API 的完整参考和讨论。
+
+
 
 ### 3.1.4 调试技术
 
-### 设置断点
+#### 设置断点
 
 正如之前在反汇编器章节中提到的，一个输出“Hello, World!”的 6 行 C 程序会变成大量的汇编代码。大多数人都不希望通过筛选整个这堆乱码来寻找他们想要的信息。仅仅通过翻阅代码来寻找所需信息可能耗费大量。作为替代方案，可以选择设置断点，以便在程序运行到代码中的给定点时将其停止。
 
 例如，假设在你的程序中，在某个特定事件之后经常遇到崩溃：在关闭消息框之后立即。你对所有 `MessageBoxA` 的调用都设置了断点。你带有断点运行程序，它会停下来并准备调用 `MessageBoxA`。此后逐行执行代码（称为*单步执行* *stepping*）并观察程序堆栈，你发现在调用后不久发生了缓冲区溢出。
 
-+ 4 http://ollydbg.de
-5 http://www.codef00.com/projects.php#Debugger
-6 http://rr0d.droids-corp.org/
++ 4 `http://ollydbg.de`
 
-## 3.2进制编辑器
+5 `http://www.codef00.com/projects.php#Debugger`
 
-wxEditor 十进制编辑器能够直接查看和编辑源文件的二进制文件，对于研究专有闭源格式数据文件的结构非常有用。本节将尝试列出一些最优秀、最流行或最强大的工具。
+6 `http://rr0d.droids-corp.org/`
+
+## 3.2 进制编辑器
+
+`wxEditor` 十进制编辑器能够直接查看和编辑源文件的二进制文件，对于研究专有闭源格式数据文件的结构非常有用。本节将尝试列出一些最优秀、最流行或最强大的工具。
 
 ### 3.2.1 Windows 编辑器
 
-wxHexEditor（免费且开源）
+`wxHexEditor`（免费且开源）
+
 针对超大文件和设备的快速十六进制编辑器，支持高达艾字节的大小，允许在不创建临时文件的情况下更改大小（插入和删除），可以使用多窗格查看文件，内置反汇编器，支持用于（反）逆向工程大型二进制文件或文件系统的标签，可以查看经过 XOR 加密的文件。
 
 ```
 http://wxhexeditor.sourceforge.net/
 ```
 
-HxD（免费软件）
+`HxD`（免费软件）
+
 一个快速且强大的免费十六进制、磁盘和内存编辑器
 
 ```
 http://mh-nexus.de/hxd/
 ```
 
-免费 Hex编辑器 XVI32
+免费 Hex编辑器 `XVI32`
+
 一个适用于 Windows 的免费十六进制编辑器。
 
 ```
 http://www.chmaas.handshake.de/delphi/freware/xvi32/xvi32.htm
 ```
 
-HHD Software Hex Editor Neo
+`HHD Software Hex Editor Neo`
+
 一个快速的磁盘和内存编辑器，内置反汇编器和文件结构查看器。
 
 ```
 http://www.hhdsoftware.com/Family/hex-editor.html
 ```
 
-Catch22 HexEdit
+`Catch22 HexEdit`
+
 这是一个具有许多功能的强大十六进制编辑器。具有极的数据结构查看器。
 
 ```
 http://www.catch22.net/software/hexedit.asp
 ```
 
-Breakpoint Hex Workshop
+`Breakpoint Hex Workshop`
 
 ```
-
 7 http://en.wikipedia.org/wiki/hex%20editor
 ```
 
 一个优秀且强大的十六进制编辑器，其实用性受限于它不像其他一些选项那样免费。
 
+```
 http://www.bpsoft.com/
+```
 
 ##### Tiny Hexer
+
 免费且提供统计功能。
 
+```
 http://www.mirkes.de/files/
+```
 
-frhed - 免费十六进制编辑器
+`frhed` - 免费十六进制编辑器
+
 适用于 Windows，免费开源。
 
+```
 http://www.kibria.de/frhed.html
+```
 
 ##### Cygnus Hex Editor
+
 一个非常快速且易用的十六进制编辑器，提供“免费版”。
 
+```
 http://www.softcircuits.com/cygnus/fe/
+```
 
 ##### Hexprobe Hex Editor
+
 一个专业的十六进制编辑器，旨在包含处理十六进制数据的所有功能，在十六进制编辑和字节模式分析领域特别有用。
 
+```
 http://www.hexprobe.com/hexprobe/index.htm
+```
 
 ##### UltraEdit32
+
 一个十六进制编辑器/文本编辑器，曾获得 2005 年共享软件行业奖会议的“年度应用程序”奖。
 
+```
 http://www.ultraedit.com/
+```
 
 ##### ICY Hexplorer
+
 一个轻量级的免费开源十六进制文件编辑器，具有一些巧妙的功能，如像素视图、结构体、反汇编。
 
+```
 http://explorer.sourceforge.net/
+```
 
 ##### WinHex
+
 一个强大的十六进制文件和磁盘编辑器，具有计算机取证和数据恢复的高级能力（被政府和军队使用）。
 
+```
 http://www.x-ways.net/index-m.html
+```
 
 ##### 010 Editor
+
 一个非常强大且快速的十六进制编辑器，对数据结构和脚本有广泛支持。可以用于编辑驱动器和进程。
 
+```
 http://www.sweetscape.com/010editor/
+```
 
 ##### 分析工具
 
 ![](img/9b6491f497)
 
-
-
-
-
 一个带有内置编辑器的二进制文件查看器，支持二进制、十六进制和反汇编模式。它使用原生语法进行反汇编。支持对 AVR/Java/Athon64/Pentium 4/K7-Athon 反汇编器的高亮、Runuis 编码页转换器，支持格式完整预览 - MZ, NE, PE, NLM, cod32，部分支持 - a.out, LE, LX, PharLap：代码导航器等功能。
+
 （项目已重命名，请参阅 BEYE）
 
+```
 http://biew.sourceforge.net/en/biew.html
+```
 
-hview
+`hview`
+
 一种基于 Aurses 的十六进制编辑器，旨在尽可能快速且以低开销处理大文件（600MB+）。
 
+```
 http://tdistortion.esmartdesign.com/Zips/hview.tz
+```
 
 ##### HT Editor (HT)
 
 一个用于可执行文件的文件编辑器/分析器。它的目标是结合调试器的低级功能和 IDE 的易用性。
 
+```
 http://hte.sourceforge.net/
+```
 
 ##### HexCurve
 
 一个用 C 语言编写的基于 ncurses 的十六进制编辑器，目前支持十六进制和十进制地址输出、跳转到指定文件位置、搜索、ASCII 和 EBCDIC 输出、加粗修改、撤销命令、快速键盘快捷键等。
 
+```
 http://www.jfish.net/description.php?title=HexCurve
+```
 
 ##### hexedit
 
 以十六进制或 ASCII 格式查看并编辑二进制文件。
 
+```
 http://rigaux.org/hexedit.html
+```
 
 ##### Data Workshop (数据工作坊)
 
 一个用于查看和修改二进制数据的编辑器；提供不同的视图，可用于编辑、分析和导出二进制数据。
 
+```
 http://www.dataworkshop.de/
+```
 
 ##### VCHE
 
 一个十六进制编辑器，可以查看视频 ROM 中看到的全部 256 个字符，甚至是控制字符和扩展 ASCII，它使用 `/dev/vcs*` 设备进行编辑。它还可以编辑非标准文件、遍历硬盘、软盘、CD-ROM、PIPs、RAM 以及几乎任何设备。它带有 ncurses 版本以及一个适用于在 X 环境下或远程工作者的原始版本。
 
+```
 http://www.grigna.com/diego/linux/vche/
+```
 
 ##### DHEX
 
-DHEX 是另一个带有 ncurses 差异模式（Diff-mode）的十六进制编辑器。它大量使用颜色并支持主题定制。
+`DHEX` 是另一个带有 ncurses 差异模式（Diff-mode）的十六进制编辑器。它大量使用颜色并支持主题定制。
 
+```
 http://www.dettus.net/dhex/
+```
 
 ### 3.2.3 Macintosh 十六进制编辑器
 
@@ -885,8 +831,9 @@ http://ridiculousfish.com/hexfiend/
 
 ### 3.3.1 资源监器
 
-Sysinternals Freeway
-此页面包含大量优秀的实用程序，其中许多对安全专家、网络管理员以及（对逆向工程人员最重要）非常有用。特别是检查 Process Monitor、FileMon、RegMon、TCPView 和 Process Explorer。
+`Sysinternals Freeway`
+
+此页面包含大量优秀的实用程序，其中许多对安全专家、网络管理员以及（对逆向工程人员最重要）非常有用。特别是检查 `Process Monitor`、`FileMon`、`RegMon`、`TCPView` 和 `Process Explorer`。
 
 ```
 http://technet.microsoft.com/sysinternals/default.aspx
@@ -894,25 +841,29 @@ http://technet.microsoft.com/sysinternals/default.aspx
 
 ### 3.3.2 API 监视
 
-SpyStudio Freeway
-Spy Studio 软件是一个挂钩 Windows 进程、日志到 DLL 的 Windows API 调用、插入断点并更改参数的工具。
+`SpyStudio Freeway`
+
+`Spy Studio` 软件是一个挂钩 Windows 进程、日志到 DLL 的 Windows API 调用、插入断点并更改参数的工具。
 
 ```
 http://www.nektra.com/products/spystudio/
 ```
 
-rohit.com API Monitor
-API Monitor 是一项可以监控应用程序和服务的 API 调用的免费工具。它包含详细的参数信息、结构体、联合、调用栈、内存以及 1300+ 接口。
+`rohit.com API Monitor`
+
+`API Monitor` 是一项可以监控应用程序和服务的 API 调用的免费工具。它包含详细的参数信息、结构体、联合、调用栈、内存以及 1300+ 接口。
 
 ##### 分析工具
 
+```
 http://www.rohit.com/apimonitor
+```
 
 ### 3.3. PE 文件头导出工具
 
 ### Dumpbin
 
-Dumpbin 是随 Microsoft Visual Studio 提供的程序，用于导出信息。
+`Dumpbin` 是随 Microsoft Visual Studio 提供的程序，用于导出信息。
 
 ```
 dumpbin /options
@@ -930,21 +881,23 @@ link.exe /dump
 ::dumpbin
 ```
 
-这是以这种方式调用 dumpbin 的示例：
+这是以这种方式调用 `dumpbin` 的示例：
 
 | 命令 | |
 |--- |--- |
-| dumpbin /PORTS | 显示从其他库导出的函数 |
+| `dumpbin /PORTS` | 显示从其他库导出的函数 |
 | 库 | |
-| dumpbin /IMPORTS | 显示从其他库导入的函数 |
+| `dumpbin /IMPORTS` | 显示从其他库导入的函数 |
 | 可执行文件 | |
-| dumpbin /HEADERS | 显示可执行文件的头部信息 |
+| `dumpbin /HEADERS` | 显示可执行文件的头部信息 |
 
+```
 http://msdn.microsoft.com/library/default.asp?url=..._core_dumpbin_reference.asp
+```
 
 ### 依赖项
 
-Dependency Walker 是一个 GUI 工具，可以查看二进制文件的导出和导入。它随许多 Microsoft 工具。
+`Dependency Walker` 是一个 GUI 工具，可以查看二进制文件的导出和导入。它随许多 Microsoft 工具。
 
 ## 3.4 GNU 工具
 
@@ -952,7 +905,7 @@ GNU 软件包已移植到包括 Windows 在内的许多平台。
 
 ### GNU BinUtils
 
-GNU BinUtils 包包含许多处理二进制文件非常有用的小工具。列表中最重要的程序是 GNU objdump、readelf、GAS 汇编器和 GNU 链接器，逆向人员可能还需要 addr2line、c++filt、nm 和 readelf。
+GNU BinUtils 包包含许多处理二进制文件非常有用的小工具。列表中最重要的程序是 GNU `objdump`、`readelf`、`GAS` 汇编器和 GNU 链接器，逆向人员可能还需要 `addr2line`、`c++filt`、`nm` 和 `readelf`。
 
 ```
 http://www.gnu.org/software/binutils/
@@ -970,7 +923,7 @@ objdump -p 显示从其他库导出的函数列表以及杂项头部信息
 
 ### readelf
 
-类似于 objdump，但专门用于 ELF 可执行文件。
+类似于 `objdump`，但专门用于 ELF 可执行文件。
 
 ### size
 
@@ -988,7 +941,7 @@ objdump -p 显示从其他库导出的函数列表以及杂项头部信息
 
 ### fold
 
-折叠 strings 的结果。
+折叠 `strings` 的结果。
 
 ### kill 可用于停止程序。
 
@@ -1014,7 +967,9 @@ http://subteruge.org/
 
 让你反向运行程序。
 
+```
 http://lizard.sourceforge.net/
+```
 
 ### dprobes
 
@@ -1032,11 +987,9 @@ http://lizard.sourceforge.net/
 
 在相同版本的二进制文件中搜索函数、指令和内存指针。支持 PE 和 ELF 文件中的 x86、x86_64 代码。
 
+```
 http://duschumpane.org/index.php/asmd
-
-
-
-
+```
 
 # Microsoft Windows
 
@@ -1052,9 +1005,9 @@ Microsoft XBOX 和 XBOX 360 也运行一种 NT 的变体，该变体是从 Windo
 
 Windows 架构是高度分层的。程序员发出的函数调用在实际执行任何操作之前，可能会被重定向 3 次或更多。从用户态应用程序调用 Win32 函数会有不可忽视的代价。然而，其优势同样不可忽视：在 Windows 系统更高层级编写的代码更容易编写。涉及初始化多个数据结构和调用多个子函数的复杂操作可以通过调用单个高层函数来完成。
 
-Win32 API 调用 3 个模块：KERNEL、USER 和 GDI。KERNEL 函数层叠在 NTDLL 之上，大多数对 KERNEL 的调用只是简单地重定向到 NTDLL 调用。USER 和 GDI 均基于 Win32K（一个内核态模块，负责 Windows 的“外观和感受”），尽管 USER 也会调用 GDI 中更原始的函数。这者以及 NTDLL 都提供了指向 Windows NT 内核 NTOSRNL（见下后文）的接口。
+Win32 API 调用 3 个模块：`KERNEL`、`USER` 和 `GDI`。`KERNEL` 函数层叠在 `NTDLL` 之上，大多数对 `KERNEL` 的调用只是简单地重定向到 `NTDLL` 调用。`USER` 和 `GDI` 均基于 `Win32K`（一个内核态模块，负责 Windows 的“外观和感受”），尽管 `USER` 也会调用 `GDI` 中更原始的函数。这者以及 `NTDLL` 都提供了指向 Windows NT 内核 `NTOSRNL`（见下后文）的接口。
 
-NTOSRNL 也部分层叠在 HAL（硬件抽象层）之上，但本文将不再考虑这种交互。这种分层设计的目的是为了让处理器的变体问题（如资源的位置）与内核本身分离离开。因此，略有不同的系统配置只需要不同的 HAL 模块，而不是一个完全不同的内核。
+`NTOSRNL` 也部分层叠在 `HAL`（硬件抽象层）之上，但本文将不再考虑这种交互。这种分层设计的目的是为了让处理器的变体问题（如资源的位置）与内核本身分离离开。因此，略有不同的系统配置只需要不同的 HAL 模块，而不是一个完全不同的内核。
 
 ### 4.5 系统调用和中断
 
@@ -1068,42 +1021,45 @@ WinNT 和 Win9x 系统都利用 Win32 API。然而，WinNT 版本的 API 有更�
 
 ### 4.6.1 kernel32.dll
 
-Kernel32.dll 是 KERNEL 子系统的所在地，是实现非图形化函数的地方。堆堆 API、虚拟内存 API、文件 I/O API、线程 API、系统对象管理器以及其他系统服务。kernel32.dll 的大部分功能在 ntdll.dll 中实现，但属于未文档的函数。微软倾向于发布 kernel32 的文档并保证这些 API 将保持不变，而其他库中的大部分工作则不进行记录。
+`Kernel32.dll` 是 `KERNEL` 子系统的所在地，是实现非图形化函数的地方。堆堆 API、虚拟内存 API、文件 I/O API、线程 API、系统对象管理器以及其他系统服务。`kernel32.dll` 的大部分功能在 `ntdll.dll` 中实现，但属于未文档的函数。微软倾向于发布 `kernel32` 的文档并保证这些 API 将保持不变，而其他库中的大部分工作则不进行记录。
 
 ### 4.6.2 gdi32.dll
 
-gdi32.dll 是实现 GDI 系统的库，在此处执行原始图形操作。GDI 将大部分调用重定向到 WIN32K，但它确实包含一个 GDI 对象的管理器，例如笔、画刷和设备上下文。GDI 对象管理器和 KERNEL 对象管理器是完全分离的。
+`gdi32.dll` 是实现 GDI 系统的库，在此处执行原始图形操作。GDI 将大部分调用重定向到 `WIN32K`，但它确实包含一个 GDI 对象的管理器，例如笔、画刷和设备上下文。GDI 对象管理器和 KERNEL 对象管理器是完全分离的。
 
 ### 4.6.3 user32.dll
 
-USER 子系统位于 user32.dll 库文件中。该子系统控制 USER 对象的创建和操作，这些是常见的屏幕项目，如窗口、菜单、光标等……USER 设置要绘制的对象，但将通过调用 GDI（GDI 反而会调用 WIN32K）或有时直接调用 WIN32K 执行实际绘制。USER 利用 GDI 对象管理器。
+`USER` 子系统位于 `user32.dll` 库文件中。该子系统控制 `USER` 对象的创建和操作，这些是常见的屏幕项目，如窗口、菜单、光标等……`USER` 设置要绘制的对象，但将通过调用 `GDI`（`GDI` 反而会调用 `WIN32K`）或有时直接调用 `WIN32K` 执行实际绘制。`USER` 利用 GDI 对象管理器。
 
 ### 4.7 原生 API
 
-原生 API（此处称为 NTDLL 子系统）是一系列未文档的 API 函数调用，处理 KERNEL 执行的大部分工作。微软也不保证在不同版本之间原生 API 会保持不变，微软开发者会修改软件。这带来了原生 API 调用可能在没有警告的情况下被删除或更改的风险，从而破坏利用它的软件。
+原生 API（此处称为 `NTDLL` 子系统）是一系列未文档的 API 函数调用，处理 `KERNEL` 执行的大部分工作。微软也不保证在不同版本之间原生 API 会保持不变，微软开发者会修改软件。这带来了原生 API 调用可能在没有警告的情况下被删除或更改的风险，从而破坏利用它的软件。
 
 ### 4.7.1 ntdll.dll
 
-NTDLL 子系统位于 ntdll.dll。该库包含许多 API 函数调用，所有调用都遵循特定的命名方案。每个函数都有一个前缀：Ldr, Nt, Zw, Csr 等，所有具有特定前缀的函数都遵循所有特定的规则。
+`NTDLL` 子系统位于 `ntdll.dll`。该库包含许多 API 函数调用，所有调用都遵循特定的命名方案。每个函数都有一个前缀：`Ldr`, `Nt`, `Zw`, `Csr` 等，所有具有特定前缀的函数都遵循所有特定的规则。
 
-“官方”的原生 API 通常限于前缀为 Nt 或 Zw 的函数。
+“官方”的原生 API 通常限于前缀为 `Nt` 或 `Zw` 的函数。
 
-- Ldr：代表 Load Library（加载库）
-- Nt：代表 Native（原生）
-- Zw：代表 Windows
-- Csr：代表 Client Server Runtime（客户端服务器运行时）
-- Dbg：代表 Debug（调试）
-- Rtl：代表 Runtime（运行时）
+- `Ldr`：代表 Load Library（加载库）
+- `Nt`：代表 Native（原生）
+- `Zw`：代表 Windows
+- `Csr`：代表 Client Server Runtime（客户端服务器运行时）
+- `Dbg`：代表 Debug（调试）
+- `Rtl`：代表 Runtime（运行时）
 - Memory Management：代表内存管理
 - Thread：代表线程管理
-- Object：代表对象管理
-- System：代表系统管理
-- DLL：代表 DLL
-- Kernel：代表内核
-- User：代表用户
-- GDI：代表 Graphics Interface（图形设备接口）
-- HAL：代表 Hardware Abstraction Layer（硬件抽象层）
-- NTOSRNL：代表 NT System Loader（NT 系统加载器）
+
+
+
+- `Object`：代表对象管理
+- `System`：代表系统管理
+- `DLL`：代表 DLL
+- `Kernel`：代表内核
+- `User`：代表用户
+- `GDI`：代表 Graphics Interface（图形设备接口）
+- `HAL`：代表 Hardware Abstraction Layer（硬件抽象层）
+- `NTOSRNL`：代表 NT System Loader（NT 系统加载器）
 
 ### 4.7.2 用户态与内核态
 
@@ -1111,15 +1067,15 @@ NTDLL 子系统位于 ntdll.dll。该库包含许多 API 函数调用，所有�
 
 ### 4.8 ntoskrnl.exe
 
-该模块是 Windows “执行内核”，它位于更底层的 NTOSRNL 之上。它负责维护操作系统的状态。
+该模块是 Windows “执行内核”，它位于更底层的 `NTOSRNL` 之上。它负责维护操作系统的状态。
 
 ### 4.9 Win32K.sys
 
-该模块是位于执行内核之上的“Win32内核”。WIN32K 负责窗口的“外观和感受”。此代码部分自 Win9x 版本以来一直保持基本不变。该模块负责将 USER 和 GDI 的 API 调用转换为显示器上看到的图像。
+该模块是位于执行内核之上的“Win32内核”。`WIN32K` 负责窗口的“外观和感受”。此代码部分自 Win9x 版本以来一直保持基本不变。该模块负责将 `USER` 和 `GDI` 的 API 调用转换为显示器上看到的图像。
 
 ### 4.10 Win64 API
 
-随着 64 位处理器的出现，64 位软件成为必须。因此，创建了 Win64 API 以利用新硬件。需要注意的是，在 Win32 和 Win64 之间，许多函数的格式是相同的，除了指针的大小和其他数据类型。
+随着 64 位处理器的出现，64 位软件成为必须。因此，创建了 `Win64 API` 以利用新硬件。需要注意的是，在 Win32 和 Win64 之间，许多函数的格式是相同的，除了指针的大小和其他数据类型。
 
 ### 4.10.1 差异
 
@@ -1133,23 +1089,19 @@ Windows CE 是微软小型设备的产品。它与桌面系统使用相同的 Wi
 
 最近的 Windows 服务补丁尝试实现一种被称为“不可执行内存”的系统，某些页面可以被标记为“不可执行”。该系统的目的是通过不允许控制流通过攻击者在内存缓冲区中插入的代码来防止一些常见的安全漏洞。
 
-
-
-
-
 ## 4.14 COM 及相关技术
 
-在逆向 Windows 二进制文件时，COM 以及与 COM 相关或实际上带有华丽名称的 COM 技术是另一个需要考虑的因素。DCOM、COM+、ActiveX、OLE、MTS 和 Windows DNA 都是同一个主题的不同名称，因此它们可以被归为一类。简而言之，COM 是一种以统一、跨平台和跨语言的方式导出面向对象类的方法。本质上，COM 是 0 beta 版 .NET。通过 COM，用多种语言编写的组件可以在另一个文件（通常是 DLL）中导出、导入、实例化和销毁对象。DLL 提供了（某种程度上的）跨平台和跨语言的功能，每个 COM 对象都被编译为原生二进制文件，而不是像 Java 或 .Net 那样的中间格式。因此，COM 不需要虚拟机来执行这些此类对象。
+在逆向 Windows 二进制文件时，COM 以及与 COM 相关或实际上带有华丽名称的 COM 技术是另一个需要考虑的因素。`DCOM`、`COM+`、`ActiveX`、`OLE`、`MTS` 和 `Windows DNA` 都是同一个主题的不同名称，因此它们可以被归为一类。简而言之，COM 是一种以统一、跨平台和跨语言的方式导出面向对象类的方法。本质上，COM 是 0 beta 版 .NET。通过 COM，用多种语言编写的组件可以在另一个文件（通常是 `DLL`）中导出、导入、实例化和销毁对象。`DLL` 提供了（某种程度上的）跨平台和跨语言的功能，每个 COM 对象都被编译为原生二进制文件，而不是像 Java 或 .Net 那样的中间格式。因此，COM 不需要虚拟机来执行这些此类对象。
 
 此本书将向你介绍一些 COM 的示例以及与之相关的逆向工程，尽管这个主题非常广泛，可能超出本书的范围（或至少超出本书的前几个章节）。相关讨论可能是本书后续章节中“高级主题”的一部分。
 
-由于 COM 的工作机制，仅仅通过检查可执行文件很难察觉 COM 组件导出的方法和数据结构。如果程序员使用了 ATL 等库来简化编程体验，情况会变得糟糕。遗憾的是，对于逆向工程师来说，这会将可执行文件的内容简化为“比特海洋”，到处都是点和数据结构。
+由于 COM 的工作机制，仅仅通过检查可执行文件很难察觉 COM 组件导出的方法和数据结构。如果程序员使用了 `ATL` 等库来简化编程体验，情况会变得糟糕。遗憾的是，对于逆向工程师来说，这会将可执行文件的内容简化为“比特海洋”，到处都是点和数据结构。
 
 ## 4.15 远程过程调用 (RPC)
 
-RPC 是一个通用术语，指运行在一台机器上的程序调用实际在另一台机器上执行的技术。通常，这是通过对过程所需的所有数据（包括存储在第一台机器上的任何状态）进行封，，并构建成单个数据结构，然后通过某些通信传输到另一台机器来实现。第二台机器执行请求的操作，并返回一个包含任何以及可能更改的状态信息的数据包给源机器。
+`RPC` 是一个通用术语，指运行在一台机器上的程序调用实际在另一台机器上执行的技术。通常，这是通过对过程所需的所有数据（包括存储在第一台机器上的任何状态）进行封，，并构建成单个数据结构，然后通过某些通信传输到另一台机器来实现。第二台机器执行请求的操作，并返回一个包含任何以及可能更改的状态信息的数据包给源机器。
 
-在 Windows NT 中，RPC 通常由两个名称类似的库处理：一个根据用户态程序的请求生成 RPC 请求并接受 RPC 返回，另一个响应 RPC 请求并通过 RPC 返回结果。一个经典的例子是打印后台程序（print spooler），它由两个部分组成：RPC 存根 `spools.dll` 和后台程序提供程序 `spools.exe`。在大多数情况下，由于这两个模块是独立的，通过 RPC 进行通信似乎是多此一举；为什么不简单地将它们合并为一个例程呢？但在网络中，这是合理的，RPC 服务提供程序可以物理上留在带有远程打印机的远程机器上，本地机器可以完全按照控制本地打印机的方式控制远程机器上的打印机。
+在 Windows NT 中，`RPC` 通常由两个名称类似的库处理：一个根据用户态程序的请求生成 `RPC` 请求并接受 `RPC` 返回，另一个响应 `RPC` 请求并通过 `RPC` 返回结果。一个经典的例子是打印后台程序（print spooler），它由两个部分组成：`RPC` 存根 `spools.dll` 和后台程序提供程序 `spools.exe`。在大多数情况下，由于这两个模块是独立的，通过 `RPC` 进行通信似乎是多此一举；为什么不简单地将它们合并为一个例程呢？但在网络中，这是合理的，`RPC` 服务提供程序可以物理上留在带有远程打印机的远程机器上，本地机器可以完全按照控制本地打印机的方式控制远程机器上的打印机。
 
 > 3 http://en.wikipedia.org/wiki/Active_Template_Library
 
@@ -1157,36 +1109,36 @@ RPC 是一个通用术语，指运行在一台机器上的程序调用实际在�
 
 ### 5.1 MS-DOS RAM COM 文件
 
-COM 文件完全按照其在磁盘上的样子被加载到 RAM 中：从硬盘镜像到 RAM 完全没有进行任何更改。这归功于早期 x86 系列的 20 位内存模型。这需要设置两个 16 位寄存器，将 1MB+64K 的内存空间划分为 65536 个“段”，并指定其中一个段的偏移量。段寄存器由 DOS 设置，COM 文件预期遵守此设置且永远更改段寄存器。然而，偏移量寄存器是自由的，并且（对于 COM 文件）的作用与 32 位寄存器相同。缺点是，由于偏移量寄存器，COM 文件被限制为使用 64K 的 RAM。这种方法的优点是，DOS 不需要额外的内存来加载和运行 COM 文件：只需加载文件，设置段寄存器，然后跳转到该处。（程序可以通过仅提供跳转偏移量来执行“近”跳转。）
+`COM` 文件完全按照其在磁盘上的样子被加载到 RAM 中：从硬盘镜像到 RAM 完全没有进行任何更改。这归功于早期 x86 系列的 20 位内存模型。这需要设置两个 16 位寄存器，将 1MB+64K 的内存空间划分为 65536 个“段”，并指定其中一个段的偏移量。段寄存器由 DOS 设置，`COM` 文件预期遵守此设置且永远更改段寄存器。然而，偏移量寄存器是自由的，并且（对于 `COM` 文件）的作用与 32 位寄存器相同。缺点是，由于偏移量寄存器，`COM` 文件被限制为使用 64K 的 RAM。这种方法的优点是，DOS 不需要额外的内存来加载和运行 `COM` 文件：只需加载文件，设置段寄存器，然后跳转到该处。（程序可以通过仅提供跳转偏移量来执行“近”跳转。）
 
-COM 文件在偏移量 $100$ 处加载到 RAM。此之前的空间将用于与 DOS 之间传递数据（例如，调用程序的命令行内容）。
+`COM` 文件在偏移量 `$100$` 处加载到 RAM。此之前的空间将用于与 DOS 之间传递数据（例如，调用程序的命令行内容）。
 
-注意，根据定义，COM 文件不能是 32 位的。Windows 通过特殊的 CPU 模式提供对 COM 文件的支持。
+注意，根据定义，`COM` 文件不能是 32 位的。Windows 通过特殊的 CPU 模式提供对 `COM` 文件的支持。
 
-> 注意，MS-DOS COM 文件（command 文件的缩写）与组件对象模型文件不同，后者是一种面向对象的库技术。
+> 注意，MS-DOS `COM` 文件（command 文件的缩写）与组件对象模型文件不同，后者是一种面向对象的库技术。
 
 ### 5.2 MS-DOS EXE 文件
 
-MS-DOS 编译器能够规避 64k 内存限制的一种方法是引入内存模型。其基本概念是巧妙地设置 x86 CPU 中不同的段寄存器（CS, DS, ES, SS），使其指向相同或不同的段，从而允许不同程度的内存访问。典型的内存模型有：
+MS-DOS 编译器能够规避 64k 内存限制的一种方法是引入内存模型。其基本概念是巧妙地设置 x86 CPU 中不同的段寄存器（`CS`, `DS`, `ES`, `SS`），使其指向相同或不同的段，从而允许不同程度的内存访问。典型的内存模型有：
 
-- **tiny**（微型）：所有内存访问均为 16 位的（从不重载任何段寄存器）。生成 .COM 文件而不是 .EXE 文件。
+- **tiny**（微型）：所有内存访问均为 16 位的（从不重载任何段寄存器）。生成 `.COM` 文件而不是 `.EXE` 文件。
 - **small**（小内存）：所有内存访问均为 16 位的（从不重载任何段寄存器）。
-- **compact**（紧凑）：对数据段的访问重载 CS 寄存器，允许 32 位代码。数据访问不重载 DS、ES、SS 寄存器，允许 16 位数据。
-- **medium**（中内存）：对数据段的访问重载 DS、ES、SS 寄存器，允许 32 位数据。代码访问不重载 CS 寄存器，允许 16 位代码。
-- **large**（大内存）：代码和数据访问均使用段寄存器（CS 用于代码，DS, ES, SS 用于数据），允许 32 位代码和 32 位数据。
-- **huge**（巨大内存）：与 large 模型相同，但通过编译器生成的额外运算允许访问大于 64k 的数组。查看 COM 文件时，必须判断使用了哪种内存模型。
+- **compact**（紧凑）：对数据段的访问重载 `CS` 寄存器，允许 32 位代码。数据访问不重载 `DS`、`ES`、`SS` 寄存器，允许 16 位数据。
+- **medium**（中内存）：对数据段的访问重载 `DS`、`ES`、`SS` 寄存器，允许 32 位数据。代码访问不重载 `CS` 寄存器，允许 16 位代码。
+- **large**（大内存）：代码和数据访问均使用段寄存器（`CS` 用于代码，`DS`, `ES`, `SS` 用于数据），允许 32 位代码和 32 位数据。
+- **huge**（巨大内存）：与 `large` 模型相同，但通过编译器生成的额外运算允许访问大于 64k 的数组。查看 `COM` 文件时，必须判断使用了哪种内存模型。
 
 ### 5.3 PE 文件
 
-PE（Portable Executable）文件是 Windows NT、95 和 Win32 的标准二进制格式。Win32 SDK 中的 `wnt.h` 声明了 PE 文件中使用的各种结构体和变量。PE 文件被拆分为若干个节。
+`PE`（Portable Executable）文件是 Windows NT、95 和 Win32 的标准二进制格式。Win32 SDK 中的 `wnt.h` 声明了 `PE` 文件中使用的各种结构体和变量。`PE` 文件被拆分为若干个节。
 
 ### 5.4 相对虚拟地址 (RVA)
 
-在 Windows 环境中，可执行模块可以加载到内存的任何位置。为了允许程序加载到内存的随机位置，PE 文件采用了一种称为 RVA（相对虚拟地址）的技术。这假设模块在内存中的加载位置是未知的。因此，PE 文件将内存中的位置描述为相对于基地址的偏移量。当内存中的位置未知时，该问题的解决方法描述在“重定位”（Relocations）中。反汇编模块得到的地址将与调试器中看到的地址匹配。
+在 Windows 环境中，可执行模块可以加载到内存的任何位置。为了允许程序加载到内存的随机位置，`PE` 文件采用了一种称为 `RVA`（相对虚拟地址）的技术。这假设模块在内存中的加载位置是未知的。因此，`PE` 文件将内存中的位置描述为相对于基地址的偏移量。当内存中的位置未知时，该问题的解决方法描述在“重定位”（Relocations）中。反汇编模块得到的地址将与调试器中看到的地址匹配。
 
 ### 5.5 文件格式
 
-PE 可执行文件格式包含若干个头部，排列如下：
+`PE` 可执行文件格式包含若干个头部，排列如下：
 
 | DOS header |
 | PE Signature |
@@ -1196,7 +1148,7 @@ PE 可执行文件格式包含若干个头部，排列如下：
 
 ### 5.5.1 DOS header
 
-用十六编辑器打开任何 Win32 二进制执行文件，注意你看到的：前两个字母总是“MZ”。对于某些人来说，文件的前几个字节被称为“魔数”（magic number），但本书不会使用该术语，因为没有规定“魔数”必须是一个数字。相反，我们将使用“File ID”或简单的 File ID。这也称为 Signature。在 File ID 之后，十六编辑器将显示几个看起来随机的字节以及人类可读的“This program cannot run in DOS mode”。这是什么？
+用十六编辑器打开任何 Win32 二进制执行文件，注意你看到的：前两个字母总是“`MZ`”。对于某些人来说，文件的前几个字节被称为“魔数”（magic number），但本书不会使用该术语，因为没有规定“魔数”必须是一个数字。相反，我们将使用“File ID”或简单的 File ID。这也称为 Signature。在 File ID 之后，十六编辑器将显示几个看起来随机的字节以及人类可读的“This program cannot run in DOS mode”。这是什么？
 
 ```
 00000000 4D 5A 90 00 03 00 00 00 04 00 00 FF FF 00 00 MZ
@@ -1213,7 +1165,7 @@ PE 可执行文件格式包含若干个头部，排列如下：
 
 MS-DOS 文件头十六进制列表
 
-你正在看到的是 Win32 PE 文件的 DOS header。为了确保向后兼容性或通过优雅地拒绝新文件类型，微软在每个 PE 文件的头部设计了一系列 DOS 指令。当 32 位的 Windows 文件运行在 16 位环境中时，程序将立即终止并显示错误信息：“This program cannot run in DOS mode”。
+你正在看到的是 Win32 `PE` 文件的 DOS header。为了确保向后兼容性或通过优雅地拒绝新文件类型，微软在每个 `PE` 文件的头部设计了一系列 DOS 指令。当 32 位的 Windows 文件运行在 16 位环境中时，程序将立即终止并显示错误信息：“This program cannot run in DOS mode”。
 
 DOS header 也被某些人称为 EXE header。以下是以 C 数据结构形式表示的 DOS header：
 
@@ -1241,10 +1193,6 @@ struct DOS_Header {
 }
 ```
 
-
-
-
-
 # 文件格式
 
 紧随 DOS 头部（DOS Header）之后的是经典错误消息“程序无法在 DOS 模式下运行”。
@@ -1261,7 +1209,7 @@ struct DOS_Header {
 00000030 00 00 00 00 00 00 00 00 00 00 00 00 54 68
 00000040 0E 1F BA 6D 0B 49 CD 21 2B 01 4C E5 6F
 00000050 69 73 20 70 6F 67 72 61 6D 20 63 61 72
-00000060 74 20 63 69 73 74 74 72 72 72 64 61 64
+00000060 74 20 63 69 73 74 74 72 72 64 61 64
 00000070 62 64 65 2E 0D 0D 0A 24 00 00 00 00 00
 00000080 6D 6F 64 65 20 74 6F 20 72 75 6E 20 73
 00000090 E1 B1 D6 6F A2 E0 D2 E6 A2 D6
@@ -1270,9 +1218,9 @@ struct DOS_Header {
 000000C0 00 00 00 00 00 50 45 4C 01 03 00
 ```
 
-PE 头部仅包含一个签名，其值为 'PE'，该签名表示：a) 这是一个合法的 PE 文件，且 b) 本章将不考虑字节序，并假设所有 PE 文件均为“小端序”（little endian）格式。
+`PE` 头部仅包含一个签名，其值为 'PE'，该签名表示：a) 这是一个合法的 `PE` 文件，且 b) 本章将不考虑字节序，并假设所有 `PE` 文件均为“小端序”（little endian）格式。
 
-PE 头部定义了可执行文件中节（section）的数量。每个节的定义长度为 40 字节。以下是程序的一个十六进制片段：
+`PE` 头部定义了可执行文件中节（section）的数量。每个节的定义长度为 40 字节。以下是程序的一个十六进制片段：
 
 ```
 00000000 74 65 78 74 00 00 00 00 00 00 00 0000
@@ -1294,14 +1242,14 @@ PE 头部定义了可执行文件中节（section）的数量。每个节的定�
 
 常见的节有：
 
-- .text/code/TEXT - 包含可执行代码（机器指令）
-- .bss/TEXTBSS - 如果启增量链接（Incremental Linking）则存在
-- .data/idata/DATA - 包含已初始化的数据
-- .bss/BSS - 包含未初始化的数据
+- `.text/code/TEXT` - 包含可执行代码（机器指令）
+- `.bss/TEXTBSS` - 如果启增量链接（Incremental Linking）则存在
+- `.data/idata/DATA` - 包含已初始化的数据
+- `.bss/BSS` - 包含未初始化的数据
 
 ### 5.5.3 COFF 头部
 
-COFF 头部同时存在于 COFF 对象文件（链接前）和 PE 文件中。COFF 头部包含对执行有用的信息，以及一些对对象文件更有用的信息。以下是以 C 结构体形式的 COFF 头部：
+`COFF` 头部同时存在于 `COFF` 对象文件（链接前）和 `PE` 文件中。`COFF` 头部包含对执行有用的信息，以及一些对对象文件更有用的信息。以下是以 C 结构体形式的 `COFF` 头部：
 
 ```c
 struct COFFHeader {
@@ -1317,7 +1265,9 @@ struct COFFHeader {
 
 ## 5.5.4 PE 可选头部
 
-“PE 可选头部”（PE Optional Header）本身并不是“可选”的，因为它在可执行文件中是必须的，而在 COFF 中不是。可选头部包含许多可以用于分析文件结构并获取其有用信息的内容。PE 可选头部直接位于 COFF 头部之后，某些来源将这两个头部视为同一个结构的一部分。为了方便，这里将它们分开了。以下是以 C 数据结构形式的 PE 可选头部：
+“`PE` 可选头部”（`PE` Optional Header）本身并不是“可选”的，因为它在可执行文件中是必须的，而在 `COFF` 中不是。可选头部包含许多可以用于分析文件结构并获取其有用信息的内容。`PE` 可选头部直接位于 `COFF` 头部之后，某些来源将这两个头部视为同一个结构的一部分。为了方便，这里将它们分开了。以下是以 C 数据结构形式的 `PE` 可选头部：
+
+
 
 ```c
 struct PEOptionalHeader {
@@ -1363,28 +1313,28 @@ struct data_directory {
 
 一些重要的信息字段：
 
-- MajorLinkerVersion, MinorLinkerVersion: 创建 PE 文件的链接器版本，格式为 x.y。
-- AddressEntryPoint: 可执行文件入口点的 RVA。这非常重要。
-- SizeOfCode: .text 节的大小。
-- SizeOfInitializedData: 已初始化数据的大小。
-- BaseOfCode: .text 节的 RVA。
-- BaseOfData: .data 节的 RVA。
-- ImageBase: 模块加载到内存中的首选位置。
-- Checksum: 校验和，用于验证文件的有效性，Microsoft 提供。
-- Subsystem: 子系统类型：
+- `MajorLinkerVersion`, `MinorLinkerVersion`: 创建 PE 文件的链接器版本，格式为 x.y。
+- `AddressEntryPoint`: 可执行文件入口点的 RVA。这非常重要。
+- `SizeOfCode`: `.text` 节的大小。
+- `SizeOfInitializedData`: 已初始化数据的大小。
+- `BaseOfCode`: `.text` 节的 RVA。
+- `BaseOfData`: `.data` 节的 RVA。
+- `ImageBase`: 模块加载到内存中的首选位置。
+- `Checksum`: 校验和，用于验证文件的有效性，Microsoft 提供。
+- `Subsystem`: 子系统类型：
   - 1 = native
   - 2 = Windows
   - 5 = OS
   - 7 = POSIX
-- DataDirectory: 可能最有趣的成员，以下是 Data目录的内容：
-  - IMAGE_DIRECTORY (0): 导出
-  - IMAGE_DIRECTORY (1): 导入
-  - IMAGE_DIRECTORY (2): 资源
-  - IMAGE_DIRECTORY (11): 绑定导入
+- `DataDirectory`: 可能最有趣的成员，以下是 Data目录的内容：
+  - `IMAGE_DIRECTORY` (0): 导出
+  - `IMAGE_DIRECTORY` (1): 导入
+  - `IMAGE_DIRECTORY` (2): 资源
+  - `IMAGE_DIRECTORY` (11): 绑定导入
 
 ### 5.6.1 节标志
 
-节标志是一个 32 位字段（每个位代表一个特定含义）。以下是 NT.h 中定义的常量：
+节标志是一个 32 位字段（每个位代表一个特定含义）。以下是 `NT.h` 中定义的常量：
 
 ```c
 #define IMAGE_SCN_TYPE_NO_PAD 0x00000008 // 预留
@@ -1424,17 +1374,13 @@ struct data_directory {
 #define IMAGE_SCN_MEM_WRITE 0x80000000 // 节可写
 ```
 
-
-
-
-
 ## 5.7 导入与导出 - 模块间的链接
 
 ### 5.7.1 什么是链接？
 
 每当开发者编写程序时，通常预期已经实现了许多子程序和函数，这避免了作者编写更多代码或处理复杂数据结构的烦恼。相反，编码员只需要对子程序声明一次调用，然后由链接器决定接下来的操作。
 
-链接有两种类型，可以使用：静态链接和动态链接。这种预编译代码可以插入到最终的可执行文件中以实现功能，为程序员节省大量时间。相比之下，动态链接允许子程序保留在不同的文件（或模块）中，由操作系统在运行时加载。这被称为“动态链接库”，或 DLL ，它是包含一组可以导出的函数或值的模块。这与可执行文件不同，可执行文件是从库导入内容来实现其功能。从这里开始，“模块”（module）是指任何 PE 格式的文件，而“库”（Library）是指任何导出和导入函数及值的模块。
+链接有两种类型，可以使用：静态链接和动态链接。这种预编译代码可以插入到最终的可执行文件中以实现功能，为程序员节省大量时间。相比之下，动态链接允许子程序保留在不同的文件（或模块）中，由操作系统在运行时加载。这被称为“动态链接库”，或 `DLL` ，它是包含一组可以导出的函数或值的模块。这与可执行文件不同，可执行文件是从库导入内容来实现其功能。从这里开始，“模块”（module）是指任何 PE 格式的文件，而“库”（Library）是指任何导出和导入函数及值的模块。
 
 - 动态链接具有以下优点：
 - 如果有多个可执行文件链接到该库模块，它可以节省空间
@@ -1452,7 +1398,7 @@ struct data_directory {
 
 ## 5.8 导出
 
-导出是一个模块中的用于与其他模块共享的函数和值。这是通过使用“导出目录”（Export Directory）实现的，该目录用于翻译导出名称（或“序数”，见下文）以及查找代码或数据的内存位置。导出目录的起始由资源目录中的 IMAGE_DIRECTORY_ENTRY 条目标识。所有导出数据必须存在于同一个节中。该目录由以下结构引导：
+导出是一个模块中的用于与其他模块共享的函数和值。这是通过使用“导出目录”（Export Directory）实现的，该目录用于翻译导出名称（或“序数”，见下文）以及查找代码或数据的内存位置。导出目录的起始由资源目录中的 `IMAGE_DIRECTORY_ENTRY` 条目标识。所有导出数据必须存在于同一个节中。该目录由以下结构引导：
 
 ```struct
 struct IMAGE_EXPORT_DIRECTORY {
@@ -1469,7 +1415,7 @@ struct IMAGE_EXPORT_DIRECTORY {
 }
 ```
 
-`Characteristics` 值通常未使用，TimeStamp 描述导出生成的时间，`MajorVersion` 和 `MinorVersion` 描述目录的版本细节，但它们的性质未定义。这些值对实际导出本身几乎没有或没有影响。`Name` 值是一个指向零终止 ASCII 字符串的 RVA，即该库名称或模块的名称。
+`Characteristics` 值通常未使用，`TimeStamp` 描述导出生成的时间，`MajorVersion` 和 `MinorVersion` 描述目录的版本细节，但它们的性质未定义。这些值对实际导出本身几乎没有或没有影响。`Name` 值是一个指向零终止 ASCII 字符串的 RVA，即该库名称或模块的名称。
 
 ### 名称与序数
 
@@ -1504,9 +1450,6 @@ PE 格式还支持一种被称为“绑定”（binding）的特殊功能。在�
 如果绑定的库/模块将其导出转发到另一个模块，绑定可能会成为问题。在这些情况下，非转发的导入可以绑定，但被转发的值必须被识别，以便加载器可以解析它们。这是通过导入描述符的 `ForwarderChain` 成员实现的。`ForwarderChain` 的值是一个
 
 50
-
-
-
 
 ## Windows 可执行文件
 
@@ -1568,11 +1511,13 @@ struct IMAGE_RESOURCE_DATA_ENTRY
 
 Windows DLL 文件是 PE 文件的一种类型，但有几个关键区别：
 
-- .DLL 文件扩展名
+- `.DLL` 文件扩展名
 - `DLLMain()` 入口点，而不是 `WinMain()` 或 `main()`。
 - PE 头中设置了 DLL 标志。
 
 DLL 可以通过两种方式之一加载：a) 在加载时，b) 通过调用 `LoadModule()` Win32 API 函数。
+
+
 
 ### 5.13.1 函数导出
 
@@ -1582,74 +1527,64 @@ DLL 可以通过两种方式之一加载：a) 在加载时，b) 通过调用 `Lo
 __declspec(dllexport) void myFunction()...
 ```
 
-- 这里的 *declspec* 关键字不是 C 语言标准，但被许多编译器实现以扩展函数和变量的特定选项。Microsoft C 编译器和运行在 Windows 上的 GCC 版本允许 `__declspec` 关键字和 `dllexport` 选项。
+- 这里的 `declspec` 关键字不是 C 语言标准，但被许多编译器实现以扩展函数和变量的特定选项。Microsoft C 编译器和运行在 Windows 上的 GCC 版本允许 `__declspec` 关键字和 `dllexport` 选项。
 
-函数也可以从普通的 .exe 文件导出，带有导出函数的 .exe 文件可以类似于 .dll 文件的方式被动态调用。然而，这种情况很少见。
+函数也可以从普通的 `.exe` 文件导出，带有导出函数的 `.exe` 文件可以类似于 `.dll` 文件的方式被动态调用。然而，这种情况很少见。
 
 ### 5.13.2 识别 DLL 导出
 
-有几种方法可以确定 DLL 导出了哪些函数。本书将使用的（通常是隐式的）方法是 **dumpbin** 以下：
+有几种方法可以确定 DLL 导出了哪些函数。本书将使用的（通常是隐式的）方法是 `dumpbin`：
 
 ```
 dumpbin /EXPORTS <dll file>
 ```
 
-有几种方法可以确定 DLL 导出了哪些函数。本书将使用的（通常是隐式的）方法是 **dumpbin**：
-
-```
-dumpbin /EXPORTS <dll file>
-```
-
-有几种方法可以确定 DLL 导出了哪些函数。本书将使用的（通常是隐式的）方法是 **dumpbin**：
-
-```
-dumpbin /EXPORTS <dll file>
-```
-
-等等，让我重新评估 OCR 文本。OCR 文本有很多重复和损坏部分。我将根据提供的逻辑流清理它并合并页面。
-
-修正后的文本逻辑：
-1. "a import" -> "an import"
-2. "needs resolved" -> "needs to be resolved"
-3. "IMAGE_RESOURCE_DIRECTORY_ENTRY's" -> "IMAGE_RESOURCE_DIRECTORY_ENTRYs"（或保持不变）
-4. 删除 [PAGE 57], [PAGE 58], [PAGE 59]。
-
-让我们重新生成最终输出。
-
-
-
-
-## 6.3 配置文件
+### 6.3 配置文件
 
 ### 6.4 Shell（外壳）
 
 这里是一些常用的 Shell：
 
 - Bash
+
   - “Bourne Again SHell”的缩写。
+
 - Bourne
+
   - Bash 的前身。
+
 - Csh
+
   - C 壳
+
 - Ksh
+
   - Korn Shell
+
 - TCsh
+
   - 一个面向终端的 Csh。
+
 - Zsh
+
   - Z Shell
 
-## 6.5 GUI（图形化用户界面）
+### 6.5 GUI（图形化用户界面）
 
 一些比较流行的 GUI：
 
 - KDE
+
   - K 桌面环境
+
 - GNOME
+
   - GNU 网络对象建模环境
 
-## 6.6 调试器
+### 6.6 调试器
 
-- gdb
+- `gdb`
+
   GNU² 调试器³。它在大多数 Linux 发行版中都是预装的，主要用于调试 ELF⁴ 可执行文件。[manpage（帮助手册）⁵
 
 ```
@@ -1659,38 +1594,49 @@ dumpbin /EXPORTS <dll file>
 5 http://www.die.net/doc/linux/man/man1/gdb.1.html
 ```
 
-- winedbg
+- `winedbg`
+
   用于 Wine⁶ 的调试器，用于在 Linux 下调试 Win32 可执行文件。[manpage（帮助手册）⁷
 
-- edb
+- `edb`
+
   一个受著名的的 OllyDbg⁸ 启发的全功能插件型调试器。[项目页面⁹
 
 ## 6.7 文件分析器
 
-- strings
+- `strings`
+
   查找文件中的可打印字符串。例如，当密码存储在二进制文件本身时（在源代码中静态定义），可以从二进制文件中提取该字符串，而无需执行它。[manpage¹¹⁰⁰
 
-- file
+- `file`
+
   确定文件类型，用于判断可执行文件是否已剥离符号（stripped），以及它是动态（还是静态）链接的。[manpage¹¹¹
 
-- objdump
+- `objdump`
+
   反汇编对象文件、可执行文件和库。可以列出内部文件结构并反汇编特定部分。支持 Intel 和 AT&T 语法。
 
-- nm
+- `nm`
+
   列出可执行文件中的符号。不支持已剥离符号的二进制文件。主要用于可执行文件的调试版本。
 
 + 6 http://en.wikibooks.org/wiki/Wine
+
 7 http://www.die.net/doc/linux/man/1/winedbg.html
+
 8 http://ollydbg.de
+
 9 http://www.codef00.com/projects.php?Debugger
+
 10 http://www.doc.ic.ac.uk/lab/labman/lookup-man.cgi?strings(1)
+
 11 http://www.doc.ic.ac.uk/lab/labman/lookup-man.cgi?file(1)
 
 ## 7 Linux 可执行文件
 
 ### 7.1 a.out 文件
 
-a.out 是一种非常简单的格式，由一个头部（位于偏移量 0 处）组成，该头部包含 3 个可执行段（代码、数据、bss）的大小，以及指向重定位信息（针对 .o 文件）、符号和符号字符串等额外信息的指针。实际段的内容紧随头部。不同段的偏移量根据前一个段的大小计算得出。
+`a.out` 是一种非常简单的格式，由一个头部（位于偏移量 0 处）组成，该头部包含 3 个可执行段（代码、数据、bss）的大小，以及指向重定位信息（针对 `.o` 文件）、符号和符号字符串等额外信息的指针。实际段的内容紧随头部。不同段的偏移量根据前一个段的大小计算得出。
 
 ### 7.1.1 ELF 格式
 
@@ -1698,25 +1644,32 @@ a.out 是一种非常简单的格式，由一个头部（位于偏移量 0 处�
 
 可执行与链接格式¹Executable and Linkable Format）
 
-**ELF 文件格式**（Executable and Linking Format 的缩写）由 Unix 系统实验室开发，作为 COFF 和 a.out 等之前格式的后续者。在许多方面，ELF 格式比之前的格式更强大、更灵活，已广泛成为 Linux、Solaris、IRIX 和 FreeBSD 的标准（尽管基于 FreeBSD 的 Mac OS X 使用 Mach-O 格式）。ELF 也被 OpenVMS 用于 Titanium 以及 BeOs 用于 x86。
+**ELF 文件格式**（Executable and Linking Format 的缩写）由 Unix 系统实验室开发，作为 COFF 和 `a.out` 等之前格式的后续者。在许多方面，ELF 格式比之前的格式更强大、更灵活，已广泛成为 Linux、Solaris、IRIX 和 FreeBSD 的标准（尽管基于 FreeBSD 的 Mac OS X 使用 Mach-O 格式）。ELF 也被 OpenVMS 用于 Titanium 以及 BeOs 用于 x86。
 
-从历史上看，Linux 并不总是使用 ELF；Red Hat Linux 4 是第一个使用 ELF 的分发行版；之前的版本使用 a.out 格式。
+从历史上看，Linux 并不总是使用 ELF；Red Hat Linux 4 是第一个使用 ELF 的分发行版；之前的版本使用 `a.out` 格式。
 
-ELF 对象被分为不同的段（segments）和/或节（sections）。可以通过第一个字节处的 ELF 头部找到这些位置。ELF 头部提供了程序头部（program header）和节头部（section header）的位置。使用这些数据结构可以找到 ELF 对象的其余内容，包括包含代码和数据的 .text 和 .data 段。
+ELF 对象被分为不同的段（segments）和/或节（sections）。可以通过第一个字节处的 ELF 头部找到这些位置。ELF 头部提供了程序头部（program header）和节头部（section header）的位置。使用这些数据结构可以找到 ELF 对象的其余内容，包括包含代码和数据的 `.text` 和 `.data` 段。
 
-来自 binutils 包的 GNU readelf 实用是解析 ELF 对象的常用工具。
+来自 binutils 包的 GNU `readelf` 实用是解析 ELF 对象的常用工具。
 
 > $1 http://en.wikipedia.org/wiki/Executable%20and%20Linkable%20Format$
 
 ### 7.2.1 文件格式
 
 | ELF 头部 |
+
 | :--- |
+
 | 程序头部表 |
+
 | .text |
+
 | .rodata |
+
 | ... |
+
 | .data |
+
 | 节头部表 |
 
 **图 6** 一个 ELF 文件有两个视图：程序头部显示运行时使用的段，而节头部列出了二进制文件的一组节。
@@ -1724,7 +1677,9 @@ ELF 对象被分为不同的段（segments）和/或节（sections）。可以�
 每个 ELF 文件由一个 ELF 头部后跟文件数据组成。文件数据可以包括：
 
 - 程序头部表，描述零或多个节
+
 - 节头部表，描述零或多个节
+
 - 指向程序头部或节头部表条目的数据
 
 段包含了文件在执行执行所必需的信息，而节包含了链接和重定位的重要数据。文件中的每个字节一次时间不会被超过一个节占用，但可能存在未被任何节覆盖的孤立字节。在 Unix 可执行文件的正常情况下，一个或多个节被包含在一个段中。
@@ -1735,13 +1690,7 @@ ELF 对象被分为不同的段（segments）和/或节（sections）。可以�
 
 ### 8.1 栈
 
-![](img/9b6491f497eec80c9bc01465812379)
-
 通常情况下，栈（Stack）是一种后入先出（LIFO）的数据结构。
-
-[content（注：由于您提供的文本中 8.1 之后的内容存在大量乱码或重复的占位符，无法进行逻辑连贯的翻译，此处已翻译 8.1 之前的部分。）]
-
-
 
 ## 9 函数与栈帧（Stack Frames）
 
@@ -1751,7 +1700,7 @@ ELF 对象被分为不同的段（segments）和/或节（sections）。可以�
 
 ### 9.2 标准入口序列（Standard Entry Sequence）
 
-| 此代码示例使用了 MASM 语法 | 
+| 此代码示例使用了 MASM 语法 |
 
 对于许多编译器来说，标准的函数入口序列是以下代码（X 是函数中使用的所有自动变量的总大小，以字节为单位）：
 
@@ -1767,7 +1716,9 @@ sub esp, X
 void MyFunction() {
     int a, b, c;
 }
+```
 
+```
 MyFunction:
     push ebp          ; 保存 ebp 的值
     mov ebp, esp      ; ebp 现在指向栈顶
@@ -1843,17 +1794,25 @@ mov [esp], X    ; 放入新栈项的值 X
 这意味着返回地址以及 `ebp` 的旧值被放在栈上。因此，`[ebp]` 指向 `ebp` 旧值的位置，`[ebp + 4]` 指向返回地址，`[ebp + 8]` 指向第一个函数参数。以下是此时栈的（粗略表示）：
 
 | | |
+
 |---|---||
+
 | 2 | [ebp + 16] (第3个函数参数) |
+
 | 5 | [ebp + 12] (第2个参数) |
+
 | 10 | [ebp - 8] (第1个参数) |
+
 | RA | [ebp + 4] (返回地址) |
+
 | FP | [ebp] (旧 ebp 值) |
+
 | | [ebp - 4] (局部变量列表)|
 
 栈指针在当前函数的执行期间可能会发生变化。这种情况发生在：
 
 - * 参数被传递到另一个函数中；
+
 - 使用了伪函数 `alloca()`。
 
 [FIXME: 当参数传递到另一个函数时，`esp` 的变化不是问题。当函数返回时，`esp` 将恢复到旧值。为什么 `ebp` 在这里有帮助。这需要更好的解释。（真正的解释是，其实并不需要 ESP：http://blogs.msdn.com/larryosterman/archive/2007/03/12/fpo.aspx)] 这意味着无法可靠地使用 `esp` 的值来确定（适当的偏移）特定变量的位置。为了解决这个问题，许多编译器使用相对于 `ebp` 寄存器的负偏移量来访问局部变量。这允许我们假设使用相同的偏移量始终访问相同的变量（或参数）。由于这个原因，`ebp` 寄存器被称为**帧指针**（frame pointer），或 FP。
@@ -1863,7 +1822,9 @@ mov [esp], X    ; 放入新栈项的值 X
 退出序列必须顺序撤销入口序列执行的操作：
 
 1. 移除局部变量，恢复到旧值。
+
 2. 恢复 `ebp` 的旧值。
+
 3. 返回到调用者。
 
 ### 9.4 非标准帧（Non-Standard Frames）
@@ -1871,7 +1832,8 @@ mov [esp], X    ; 放入新栈项的值 X
 某些函数按照上述方法设置了标准的栈帧，但开头有一行无意义的指令：
 
 ```
-mov edi, edi;```
+mov edi, edi;
+```
 
 这条指令被汇编成 2 个字节，为未来的补丁提供占位符。整体来看，这样的函数可能如下：
 
@@ -1914,10 +1876,6 @@ mov ebp,                与之前相同的标准栈帧设置
 ### 9.5 局部静态变量（Local Static Variables）
 
 局部静态变量不能创建在栈上，因为变量的值在函数调用之间会被保留。我们将在后面的章节讨论局部静态变量和其他类型的变量。
-
-
-
-
 
 # #10 函数与栈帧示例
 
@@ -1994,9 +1952,11 @@ C 语言中使用了三种主要的调用约定：STDCALL、CDECL 和 FASTCALL�
 
 **传递参数 (Passing arguments)**
 
+
+
 *传递参数*（passing arguments）是一种表达方式，指调用函数正在向被调用函数查找参数的地方写入数据。参数在调用指令执行之前传递。
 
-**从右到左和从左到右 (Right-to-Left and Left-to-Right)**
+## 从右到左和从左到右 (Right-to-Left and Left-to-Right)
 
 这些描述了从高级代码的角度来看参数传递给子程序的方式。例如，以下 C 函数调用：
 
@@ -2022,48 +1982,48 @@ push a
 call _Function
 ```
 
-**返回值 (Return value)**
+## 返回值 (Return value)
 
 某些函数返回一个值，该值必须由函数的调用者可靠地接收。被调用函数将其返回值放在一个位置，以便调用函数在执行返回时可以获取它。被调用函数在执行 `ret` 指令之前存储返回值。
 
-**清理栈 (Cleaning the stack)**
+## 清理栈 (Cleaning the stack)
 
 当参数被推入栈中时，最终必须被再次弹出。无论调用者还是被调用者负责清理栈，都需要重置栈指针以消除传递的参数。
 
-**调用函数（被调用者 callee）**
+## 调用函数（被调用者 callee）
 
 调用子程序的“父”函数。在子程序调用后，执行直接在调用函数中恢复，除非程序在子程序内部终止。
 
-**被调用函数（调用者 callee）**
+## 被调用函数（调用者 callee）
 
 被“父”函数调用的“子”函数。
 
-**名称修饰 (Name Decoration)**
+## 名称修饰 (Name Decoration)
 
 当 C 翻译为汇编代码时，编译器通常会通过添加额外信息来“修饰”函数名，链接器将使用这些信息查找并链接到正确的函数。对于大多数调用约定，修饰非常简单（通常只需一两个符号来表示调用约定），但在某些极端情况下（特别是 C++ 的“混结”mangled 约定），名称会被严重变形。
 
-**入口序列（函数序言 function prologue）**
+## 入口序列（函数序言 function prologue）
 
 在函数开始处的指令，用于准备栈和寄存器供使用。
 
-**退出序列（函数尾声 epilogue）**
+## 退出序列（函数尾声 epilogue）
 
 在函数结束处的指令，用于恢复栈和寄存器到调用者的状态。
 
-**调用序列 (Call sequence)**
+## 调用序列 (Call sequence)
 
 在函数中间的指令，用于被调用函数。在被调用函数返回后，某些调用约定清理栈。
 
 ### 标准调用约定
 
-C 语言默认使用 CDECL，但如果你想使用 CDECL 以外的调用约定，必须在函数声明中指定。这是因为 CDECL 允许变长参数。
+C 语言默认使用 `CDECL`，但如果你想使用 `CDECL` 以外的调用约定，必须在函数声明中指定。这是因为 `CDECL` 允许变长参数。
 
-11.3.1 CDECL
+#### 11.3.1 CDECL
 
-在 CDECL 调用约定下，遵循以下：
+在 `CDECL` 调用约定下，遵循以下：
 
-- 参数从左到右传递，返回值通过 eax 。
-- 调用者清理栈。这允许 CDECL 函数具有变长参数列表（即变参函数）²
+- 参数从左到右传递，返回值通过 `eax` 。
+- 调用者清理栈。这允许 `CDECL` 函数具有变长参数列表（即变参函数）²
 
 考虑以下 C 指令：
 
@@ -2100,8 +2060,6 @@ pop ebp
 ret
 ```
 
-and
-
 ```assembly
 push 3
 push 2
@@ -2109,14 +2067,14 @@ call _MyFunction
 add esp, 8
 ```
 
-翻译成汇编代码时，CDECL 函数几乎总是带有下划线前缀。
+翻译成汇编代码时，`CDECL` 函数几乎总是带有下划线前缀。
 
-11.3.2 STDCALL
+#### 11.3.2 STDCALL
 
-STAPI（取决于你阅读的地方，还有其他名称）几乎被微软称为 Win32 API 的标准调用约定。由于 STDCALL 由微软严格定义，所有实现它的编译器方式都相同：
+`STAPI`（取决于你阅读的地方，还有其他名称）几乎被微软称为 Win32 API 的标准调用约定。由于 `STDCALL` 由微软严格定义，所有实现它的编译器方式都相同：
 
-- 参数从右到左传递，并在 eax 返回。（微软文档错误地声称参数是从左到右传递的，但事实并非如此）。
-- 被调用函数清理栈，与 CDECL 不同。这意味着 STDCALL 不允许变长参数列表。
+- 参数从右到左传递，并在 `eax` 返回。（微软文档错误地声称参数是从左到右传递的，但事实并非如此）。
+- 被调用函数清理栈，与 `CDECL` 不同。这意味着 `STDCALL` 不允许变长参数列表。
 
 考虑以下函数：
 
@@ -2155,21 +2113,18 @@ call _MyFunction08
 
 这里有几点重要的说明需要注意：
 
-
-
-
 1. 在函数体中，`ret` 指令有一个（可选的）参数，用于指示函数返回时从栈中弹出多少字节。
-2. STDCALL 函数以前导的下划线进行名称修饰，随后跟上 `@`，然后是传递到栈上的参数数量（字节数）。在 32 位对齐机器上，此数字将是 4 的倍数。
+2. `STDCALL` 函数以前导的下划线进行名称修饰，随后跟上 `@`，然后是传递到栈上的参数数量（字节数）。在 32 位对齐机器上，此数字将是 4 的倍数。
 
 ### 11.3.3 FASTCALL
 
-FASTCALL 调用约定在所有编译器中并不完全标准，因此应该应谨慎使用。在 FASTCALL 中，前 2 或 3 个 32 位（或更小）参数通过寄存器传递，最常用的寄存器是 `edx`、`eax` 和 `ecx`。额外的参数或大于 4 字节的参数通过栈传递，通常按照从右到左的顺序（类似于 CDECL）。如果需要，调用函数通常负责清理栈。
+`FASTCALL` 调用约定在所有编译器中并不完全标准，因此应该应谨慎使用。在 `FASTCALL` 中，前 2 或 3 个 32 位（或更小）参数通过寄存器传递，最常用的寄存器是 `edx`、`eax` 和 `ecx`。额外的参数或大于 4 字节的参数通过栈传递，通常按照从右到左的顺序（类似于 `CDECL`）。如果需要，调用函数通常负责清理栈。
 
-由于存在歧义性，建议仅在对速度至关重要且只有 1、2 或 32 位参数的情况下使用 FASTCALL。
+由于存在歧义性，建议仅在对速度至关重要且只有 1、2 或 32 位参数的情况下使用 `FASTCALL`。
 
 以下 C 函数：
 
-```
+```c
 _fastcall int MyFunction3(int a, int b)
 {
 return a + b;
@@ -2178,7 +2133,7 @@ return a + b;
 
 以及以下 C 调用：
 
-```
+```c
 x = MyFunction3(2, 3);
 ```
 
@@ -2202,17 +2157,17 @@ mov edx, 3
 call @MyFunction3
 ```
 
-FASTCALL 的名称修饰在函数名前面加上一个 `@`，并在函数名后跟上 `@x`，其中 `x` 是传递给函数的参数数量（字节数）。
+`FASTCALL` 的名称修饰在函数名前面加上一个 `@`，并在函数名后跟上 `@x`，其中 `x` 是传递给函数的参数数量（字节数）。
 
-许多编译器仍然为 FASTCALL 函数生成栈帧，特别是在 FASTCALL 函数本身调用另一个子程序的情况下。然而，如果 FASTCALL 函数不需要栈帧，优化型编译器可以自由省略它。
+许多编译器仍然为 `FASTCALL` 函数生成栈帧，特别是在 `FASTCALL` 函数本身调用另一个子程序的情况下。然而，如果 `FASTCALL` 函数不需要栈帧，优化型编译器可以自由省略它。
 
 ### 11.4 C++ 调用约定
 
-C++ 要求类的非静态方法必须通过类的实例来调用。因此，它使用标准的调用约定来确保将对象的指针传递给函数：THISCALL。
+C++ 要求类的非静态方法必须通过类的实例来调用。因此，它使用标准的调用约定来确保将对象的指针传递给函数：`THISCALL`。
 
 #### 11.4.1 THISCALL
 
-在 THISCALL 中，指向类对象的指针通过 `ecx` 传递，参数在栈上按从右到左顺序传递，返回值通过 `eax` 传递。
+在 `THISCALL` 中，指向类对象的指针通过 `ecx` 传递，参数在栈上按从右到左顺序传递，返回值通过 `eax` 传递。
 
 例如，C++ 指令：
 
@@ -2238,9 +2193,9 @@ call _MyMethod
 
 由于每个编译器的名称修饰方式都不同，本书将不会花费太多时间讨论算法的细节。请注意，在许多情况下，可以通过检查名称修饰格式的细节来确定是由哪个编译器创建的可执行文件。然而，我们在书中不会深入讨论这个主题。
 
-以下是关于 THISCALL 名称修饰函数的几般备注：
+以下是关于 `THISCALL` 名称修饰函数的几般备注：
 
-- 与 CDECL、FASTCALL 和 STDCALL 函数声明相比，由于其复杂性一眼就能识别。
+- 与 `CDECL`、`FASTCALL` 和 `STDCALL` 函数声明相比，由于其复杂性一眼就能识别。
 - 它们有时包含函数类的名称。
 - 它们几乎总是包含参数的数量和类型，以便可以通过传递的参数来区分重载函数。
 
@@ -2264,7 +2219,7 @@ MyClass::MyFunction(int a)
 
 #### 11.4.3 Extern "C"
 
-在 C++ 源文件中，放置在 `extern "C"` 块中的函数保证不会被修饰。这在用 C++ 编写库且需要在不进行修饰的情况下导出函数时使用。尽管程序是用 C++ 编写并用 C++ 编译器编译的，但某些函数可能不会被修饰，并将使用普通的 C 调用约定（通常是 CDECL）。
+在 C++ 源文件中，放置在 `extern "C"` 块中的函数保证不会被修饰。这在用 C++ 编写库且需要在不进行修饰的情况下导出函数时使用。尽管程序是用 C++ 编写并用 C++ 编译器编译的，但某些函数可能不会被修饰，并将使用普通的 C 调用约定（通常是 `CDECL`）。
 
 ### 11.5 关于名称修饰的说明
 
@@ -2277,11 +2232,9 @@ MyClass::MyFunction(int a)
 
 （注：原文后续部分存在大量重复内容，此处已按要求停止重复输出相同文本。）
 
-
-
 没有通过 SP 的正偏移访问的参数，它们似乎没有被推入其中，因此可以使用 `ret 0`。让我们进行进一步调查：
 
-```
+```c
 int FastTest(int x, int y, int z, int a, int b, int c)
 {
     return x * y * z * a * b * c;
@@ -2330,7 +2283,7 @@ _TEXT1 SEGMENT
 
 ### 12.1.3 STDCALL
 
-```
+```c
 int MyFunction(int x, int y)
 {
     return (x * 2) + (y * 3);
@@ -2362,9 +2315,9 @@ _TEXT
 END
 ```
 
-STDCALL 列表与 CDECL 列表的唯一区别在于它使用 `ret 8` 来自动清理栈。让我们看一个带有更多参数的示例：
+`STDCALL` 列表与 `CDECL` 列表的唯一区别在于它使用 `ret 8` 来自动清理栈。让我们看一个带有更多参数的示例：
 
-```
+```c
 int STDCALLTest(int x, int y, int z, int a, int b, int c)
 {
     return x * y * z * a * b * c;
@@ -2400,13 +2353,13 @@ ENDS
 END
 ```
 
-STDCALL 和 CDECL 的唯一区别是前者由被调用者清理栈，后者由调用者清理。这在 X86 中通过 `ret n` 节省了一些空间。
+`STDCALL` 和 `CDECL` 的唯一区别是前者由被调用者清理栈，后者由调用者清理。这在 X86 中通过 `ret n` 节省了一些空间。
 
 ### 12.2 GNU C 编译器
 
 我们将使用 2 个 C 函数示例来演示 GCC 如何实现调用约定：
 
-```
+```c
 int MyFunction1(int x, int y)
 {
     return (x * 2) + (y + 3);
@@ -2418,11 +2371,11 @@ int MyFunction2(int x, int y, int z, int a, int b, int c)
 }
 ```
 
-GCC 没有命令行参数来强制更改默认调用约定为 CDEC6（对于 C），因此它们将在正文中通过指令 `__decl`、`__fastcall` 和 `__stdcall` 手动定义。
+`GCC` 没有命令行参数来强制更改默认调用约定为 `CDEC6`（对于 C），因此它们将在正文中通过指令 `__decl`、`__fastcall` 和 `__stdcall` 手动定义。
 
 #### 12.2.1 CDECL
 
-第一个函数 (MyFunction1) 提供了汇编列表：
+第一个函数 (`MyFunction1`) 提供了汇编列表：
 
 ```
 _MyFunction1:
@@ -2439,17 +2392,19 @@ pop %ebp
 ret
 ```
 
-首先，我们可以看到名称修饰与 `cl.exe` 中是相同的。我们还可以看到指令没有参数，因此是调用函数在清理栈。然而，由于 GCC 没有在列表中为我们变量名，我们必须推断哪些参数是哪一个。在设置栈帧后，函数的第一条指令是 `mov 8(%ebp), %eax`。一旦记住（或第一次学习）GAS 指令的通用形式为：
+首先，我们可以看到名称修饰与 `cl.exe` 中是相同的。我们还可以看到指令没有参数，因此是调用函数在清理栈。然而，由于 `GCC` 没有在列表中为我们变量名，我们必须推断哪些参数是哪一个。在设置栈帧后，函数的第一条指令是 `mov 8(%ebp), %eax`。一旦记住（或第一次学习）`GAS` 指令的通用形式为：
 
 ```
 instruction src, dest
 ```
 
-我们意识到 `+8 - %ebp` 处的值（推入栈的最后一个参数）被移动到了 `eax`。`leal` 指令稍微难懂一点，特别是如果我们没有 GAS 指令的经验。`leal(reg1,reg2), dest` 的形式将括号中的值相加，并将结果存储在 `dest` 语法中。翻译成 Intel 语法，我们得到指令：
+我们意识到 `+8 - %ebp` 处的值（推入栈的最后一个参数）被移动到了 `eax`。`leal` 指令稍微难懂一点，特别是如果我们没有 `GAS` 指令的经验。`leal(reg1,reg2), dest` 的形式将括号中的值相加，并将结果存储在 `dest` 语法中。翻译成 Intel 语法，我们得到指令：
 
 ##### 调用约定示例
 
+```
 lea ecx, [eax + eax]
+```
 
 这显然等同于乘以 2。第一个访问的值必须是最后一个传递的值，这似乎表明值是从右到左传递的。为了证明这一点，我们将查看后续列表：
 
@@ -2463,11 +2418,9 @@ leal (%ecx), %eax
 
 （注：后续文本包含大量重复和乱码 OCR 信息，已根据要求进行逻辑合并和清理。）
 
-
-
-
-
 ##### 调用约定示例
+
+
 
 ```
 .global _MyFunction@24
@@ -2492,16 +2445,21 @@ _MyFunction@24:
     ret $24
 ```
 
-我们可以在这里看到，距离 a 偏移 +8 和 +12 处的值仍然是 x 和 y。偏移 +16 处的值加了 1，偏移 +20 处的值加了 2，以此类推直到偏移 +28 处的值。我们可以创建下表：
+我们可以在这里看到，距离 `a` 偏移 `+8` 和 `+12` 处的值仍然是 `x` 和 `y`。偏移 `+16` 处的值加了 `1`，偏移 `+20` 处的值加了 `2`，以此类推直到偏移 `+28` 处的值。我们可以创建下表：
 
-| x = [ebp - 8] |
-| y = [ebp - 12] |
-| a = [ebp - 16] |
-| b = [ebp - 20] |
-| c = [ebp - 24] |
-| d = [ebp - 28] |
+| `x = [ebp - 8]` |
 
-由于 c 先入栈，x 后入栈。因此，这些参数也是从右到左的顺序入栈的。该函数通过 `ret 24` 指令从栈上清理了 24 字节。
+| `y = [ebp - 12]` |
+
+| `a = [ebp - 16]` |
+
+| `b = [ebp - 20]` |
+
+| `c = [ebp - 24]` |
+
+| `d = [ebp - 28]` |
+
+由于 `c` 先入栈，`x` 后入栈。因此，这些参数也是从右到左的顺序入栈的。该函数通过 `ret 24` 指令从栈上清理了 `24` 字节。
 
 ### 12.3 示例：C 调用约定
 
@@ -2514,11 +2472,11 @@ int MyFunction(int a, int b)
 }
 ```
 
-该函数用 C 语言编写，且没有其他限定符，因此默认是 DECL。
+该函数用 C 语言编写，且没有其他限定符，因此默认是 `DECL`。
 
 ### 12.4 示例：命名汇编函数
 
-识别函数 MyFunction 的调用约定：
+识别函数 `MyFunction` 的调用约定：
 
 ```
 :_MyFunction@12
@@ -2529,7 +2487,7 @@ pop ebp
 ret 12
 ```
 
-该函数包含了 STDCALL 函数的修饰名称，并清理了自己的栈。因此，它是一个 STDCALL 函数。
+该函数包含了 `STDCALL` 函数的修饰名称，并清理了自己的栈。因此，它是一个 `STDCALL` 函数。
 
 ### 12.5 示例：未命名汇编函数
 
@@ -2544,7 +2502,7 @@ pop ebp
 ret
 ```
 
-该函数设置了栈帧，所以我们知道编译器没有对其做任何“花哨”的操作。它访问了尚未初始化的寄存器 edx 和 eax 寄存器。因此它是一个 FASTCALL 函数。
+该函数设置了栈帧，所以我们知道编译器没有对其做任何“花哨”的操作。它访问了尚未初始化的寄存器 `edx` 和 `eax` 寄存器。因此它是一个 `FASTCALL` 函数。
 
 ### 12.6 示例：另一个未命名汇编函数
 
@@ -2556,7 +2514,7 @@ pop ebp
 ret 16
 ```
 
-该函数具有标准的栈帧，且 `ret` 指令有一个参数用于清理它自己的栈。此外，它从栈中访问了一个参数。因此它是一个 STDCALL 函数。
+该函数具有标准的栈帧，且 `ret` 指令有一个参数用于清理它自己的栈。此外，它从栈中访问了一个参数。因此它是一个 `STDCALL` 函数。
 
 ### 12.7 示例：名称修饰 (Name Mangling)
 
@@ -2571,9 +2529,9 @@ mov al, ss:[ebp - 3]
 call @_Load$Container_XXXX_7Fci
 ```
 
-有两个点会立即引起我们的注意。首先是在函数调用之前，每个位置都存储了一个值；函数名本身经过了深度修饰。这个示例必须使用了 C++ 的 THISCALL 约定。在函数的修饰名称中，我们可以提取出两个英文单词 'Load' 和 'Container'在不知道这种修饰方案细节的情况下，无法确定哪个单词是函数名，哪个是类名。
+有两个点会立即引起我们的注意。首先是在函数调用之前，每个位置都存储了一个值；函数名本身经过了深度修饰。这个示例必须使用了 C++ 的 `THISCALL` 约定。在函数的修饰名称中，我们可以提取出两个英文单词 'Load' 和 'Container'在不知道这种修饰方案细节的情况下，无法确定哪个单词是函数名，哪个是类名。
 
-我们可以提取出传递给函数的 32 位变量和一个单个 8 位变量。第一个位于 eax 中，第二个原本位于栈上（距离 ebp 偏移 -3 处），第三个位于 ebp 偏移量处。在 C++ 中，这些可能对应于两个 int 变量和一个单个 char 变量。在修饰后的函数名末尾有三个小写的 'cii'。我们无法确定，但这三个字母似乎对应于三个参数（char, int, int）。我们无法得知函数是否返回了值，因此假设函数返回 void。
+我们可以提取出传递给函数的 `32` 位变量和一个单个 `8` 位变量。第一个位于 `eax` 中，第二个原本位于栈上（距离 `ebp` 偏移 `-3` 处），第三个位于 `ebp` 偏移量处。在 C++ 中，这些可能对应于两个 `int` 变量和一个单个 `char` 变量。在修饰后的函数名末尾有三个小写的 'cii'。我们无法确定，但这三个字母似乎对应于三个参数（`char`, `int`, `int`）。我们无法得知函数是否返回了值，因此假设函数返回 `void`。
 
 假设 'Load' 是函数名而 'Container' 是类名（也可能相反），那么我们的函数定义如下：
 
@@ -2588,17 +2546,19 @@ class Container
 
 ### 13.1 分支语句
 
-计算机科学教授告诉学生避免使用跳转和 **goto** 指令，以避免所谓的“面条代码”。不幸的是，汇编只有跳转指令来控制程序流。本章将探讨这个许多人避之不及([的主题，并尝试展示如何将汇编的“面条”翻译成高级语言中更熟悉的控制结构。具体来说，本章将关注 **If-Then-Else**（如果-那么-否则）和 **Switch** 分支指令。
+计算机科学教授告诉学生避免使用跳转和 `goto` 指令，以避免所谓的“面条代码”。不幸的是，汇编只有跳转指令来控制程序流。本章将探讨这个许多人避之不及([的主题，并尝试展示如何将汇编的“面条”翻译成高级语言中更熟悉的控制结构。具体来说，本章将关注 `If-Then-Else`（如果-那么-否则）和 `Switch` 分支指令。
 
 ### 13.2 If-Then
 
-让我们考虑一个通用的伪代码 **if** 语句及其使用跳转的等效形式：
+让我们考虑一个通用的伪代码 `if` 语句及其使用跳转的等效形式：
 
 ![](img/9b6491f497eec80cbc0146581237790_99_0.png)
 
-if (condition) 则执行 action; 如果不是
-(condition) 则 goto end; 执行 action;
-end:
+`if (condition)` 则执行 `action`; 如果不是
+
+`(condition)` 则 `goto end`; 执行 `action`;
+
+`end:` 
 
 图 10
 
@@ -2623,13 +2583,20 @@ x++
 如果你不注意，取反比较可能会很复杂。以下是正确的对应形式：
 
 | 指令 | 含义 |
+
 |---|---|
-| JNE | 不等于跳转 |
-| JE | 等于跳转 |
-| JG | 大于跳转 |
-| JLE | 小于或等于跳转 |
-| JL | 小于跳转 |
-| JGE | 大于或等于跳转 |
+
+| `JNE` | 不等于跳转 |
+
+| `JE` | 等于跳转 |
+
+| `JG` | 大于跳转 |
+
+| `JLE` | 小于或等于跳转 |
+
+| `JL` | 小于跳转 |
+
+| `JGE` | 大于或等于跳转 |
 
 这里有一些示例：
 
@@ -2650,7 +2617,7 @@ if (x < y) {
 }
 ```
 
-你可以看到，只有当 **小于或等于** y 时，x 才会增加。因此，如果它大于 y，在汇编代码中将不会增加。同样，C 代码：
+你可以看到，只有当 `小于或等于` y 时，x 才会增加。因此，如果它大于 y，在汇编代码中将不会增加。同样，C 代码：
 
 ```
 if (x < y) {
@@ -2670,10 +2637,6 @@ end:
 ```
 
 （注：提示中的 OCR 文本在后半部分极其混乱且重复。我将根据文档的逻辑流提供一个干净的合并版本。）
-
-
-
-
 
 ```
 push	ecx
@@ -2735,12 +2698,13 @@ DD	$L809
 _main	ENDB
 ```
 
-让我们逐一分析代码。首先，我们看到第 10 行设置了标准的栈帧，它还保存了 `ecx`。它为什么要保存 `ecx` 呢？扫描整个函数，我们没有看到对应的 `pop ecx` 指令，所以这个值似乎从没有被恢复。实际上，编译器并没有保存 `ecx`，而仅仅是在栈上留出了空间：它正在创建一个局部变量。然而，原始 C 代码中并没有局部变量，所以也许编译器需要一些额外的临时空间来存储中间值。为什么编译器不执行更熟悉的 `sub esp, 4` 命令来创建局部变量呢？`push ecx` 是一个执行相同操作但速度更指令。这里的“临时空间”是通过 `ebp` 的负偏移量来引用的。`tv64` 在列表的开头被定义为值为 -4，因此对 `tv64[ebp]` 的每次调用都是对临时空间的调用。
+让我们逐一分析代码。首先，我们看到第 10 行设置了标准的栈帧，它还保存了 `ecx`。它为什么要保存 `ecx` 呢？扫描整个函数，我们没有看到对应的 `pop ecx` 指令，所以这个值似乎从没有被恢复。实际上，编译器并没有保存 `ecx`，而仅仅是在栈上留出了空间：它正在创建一个局部变量。然而，原始 C 代码中并没有局部变量，所以也许编译器需要一些额外的临时空间来存储中间值。为什么编译器不执行更熟悉的 `sub esp, 4` 命令来创建局部变量呢？`push ecx` 是一个执行相同操作但速度更指令。这里的“临时空间”是通过 `ebp` 的负偏移量来引用的。`tv64` 在列表的开头被定义为值为 `-4`，因此对 `tv64[ebp]` 的每次调用都是对临时空间的调用。
 
 关于该函数，我们需要注意以下几点：
 
--   $L803$ 是 `end_of_switch` 标签。因此，`jmp SHORT $L803` 语句是一个 `break`。这可以通过与 C 代码逐行对比来验证。
--   $L818$ 包含一个硬编码的内存地址列表，这里这些是代码段中的标签！记住，标签会解析为指令的内存地址。这将是我们解谜游戏的重要部分。
+-   `$L803$` 是 `end_of_switch` 标签。因此，`jmp SHORT $L803` 语句是一个 `break`。这可以通过与 C 代码逐行对比来验证。
+
+-   `$L818$` 包含一个硬编码的内存地址列表，这里这些是代码段中的标签！记住，标签会解析为指令的内存地址。这将是我们解谜游戏的重要部分。
 
 为了解决这个问题，我们将深入查看第 11 行：
 
@@ -2765,7 +2729,7 @@ if (arg0 - 1 > 4 )
     goto L810;
 }
 label *L818[] = { $L806, $L807, $L808, $L809 }; /* 定义一个跳转表，每个 case 有一个跳转 */
-//
+// 
 goto L818[arg0 - 1]; /* 使用表中的地址跳转到正确的 case */
 ```
 
@@ -2781,13 +2745,13 @@ sub     ecx, 1
 mov     DWORD PTR tv64[ebp], ecx
 ```
 
-`ecx` 的值被移动到 `eax`。然后将临时空间的值移动到 `ecx`。这种获取值的方法非常复杂，但记住：我关闭了优化。`ecx` 的值随后减了 1。为什么编译器不使用 `dec` 指令呢？也许这个语句是一个通用的陈述，在这里它恰好有一个参数为 1。我们并不确切知道，只知道：
+`ecx` 的值被移动到 `eax`。然后将临时空间的值移动到 `ecx`。这种获取值的方法非常复杂，但记住：我关闭了优化。`ecx` 的值随后减了 `1`。为什么编译器不使用 `dec` 指令呢？也许这个语句是一个通用的陈述，在这里它恰好有一个参数为 `1`。我们并不确切知道，只知道：
 
--   eax = "临时内存"
+-   `eax` = "临时内存"
 
 ### 分支
 
--   ecx = eax - 1
+-   `ecx` = `eax - 1`
 
 最后，最后一行将 `ecx` 减1 后的新值移回临时空间。非常低效。
 
@@ -2798,7 +2762,7 @@ cmp     DWORD PTR tv64[ebp], 3
 ja     SHORT $L810
 ```
 
-临时空间的值与值 3 进行比较，如果无符号值大于 3（4 或更多），执行将跳转到 $L810$，因为 `ja` 是一个无条件跳转。让我们回原始 C 代码：
+临时空间的值与值 `3` 进行比较，如果无符号值大于 `3`（`4` 或更多），执行将跳转到 `$L810$`，因为 `ja` 是一个无条件跳转。让我们回原始 C 代码：
 
 ```
 switch(argc)
@@ -2818,18 +2782,18 @@ switch(argc)
     MyFunction(5);
 ```
 
-记住，临时空间包含值 $(argc - 1$，这意味着该条件只有在 $argc > 4$ 时才会触发。当 $argc$ 大于 4 时会发生什么？函数进入 `default`。现在让我们看接下来两行：
+记住，临时空间包含值 `$(argc - 1$`，这意味着该条件只有在 `$argc > 4$` 时才会触发。当 `$argc$` 大于 `4` 时会发生什么？函数进入 `default`。现在让我们看接下来两行：
 
 ```
 mov     edx, DWORD PTR tv64[ebp]
 jmp     DWORD PTR L818[edx+4]
 ```
 
-`edx` 获取了 `tv64[ebp]` 的值，跳转到 `L818[edx+4]` 指向的地址。由于临时空间的值是 $(argc - 1)$，这意味着当 $argc > 4$ 时，它会跳转到 `default`。
+`edx` 获取了 `tv64[ebp]` 的值，跳转到 `L818[edx+4]` 指向的地址。由于临时空间的值是 `$(argc - 1)$`，这意味着当 `$argc > 4$` 时，它会跳转到 `default`。
 
 ### 13.4.3 跳转表
 
-这里 $L818$ 实际上是一个跳转表：
+这里 `$L818$` 实际上是一个跳转表：
 
 ```
 DD	$L806
@@ -2837,10 +2801,6 @@ DD	$L807
 DD	$L808
 DD	$L809
 ```
-
-
-
-
 
 ## 14 分支示例
 
@@ -2870,7 +2830,7 @@ pop ebp
 ret
 ```
 
-该函数访问栈上 `[ebp + 8]` 和 `[ebp + 12]` 处的参数。这两个值都被加载到 `ecx` 中，因此我们可以假设它们是 4 字节值。该函数没有清理自己的栈，且值不是通过寄存器传递的，因此我们该函数是 CDECL 约定。`eax` 中的返回值是一个 4 字节值，且我们假设所有值都是无符号的。将这一切整合起来，我们可以构造函数原型：
+该函数访问栈上 `[ebp + 8]` 和 `[ebp + 12]` 处的参数。这两个值都被加载到 `ecx` 中，因此我们可以假设它们是 `4` 字节值。该函数没有清理自己的栈，且值不是通过寄存器传递的，因此我们该函数是 `CDECL` 约定。`eax` 中的返回值是一个 `4` 字节值，且我们假设所有值都是无符号的。将这一切整合起来，我们可以构造函数原型：
 
 ```
 unsigned int CDECL MyFunction(unsigned int param1, unsigned int param2);
@@ -2931,7 +2891,7 @@ eax--;
 :_label_2
 ```
 
-由于 `_Label_2` 出现在该结构的末尾，我们可以将其重命名为更具描述性的名称，例如 'End_of_Branch_1' 或 'Branch_1_End'。第一个比较测试 `ecx` 与 0 的关系，并在不相等时跳转。我们可以反转该条件，称 `_Label_1` 为一个 `else` 块：
+由于 `_Label_2` 出现在该结构的末尾，我们可以将其重命名为更具描述性的名称，例如 'End_of_Branch_1' 或 'Branch_1_End'。第一个比较测试 `ecx` 与 `0` 的关系，并在不相等时跳转。我们可以反转该条件，称 `_Label_1` 为一个 `else` 块：
 
 ```
 if(ecx == 0); ecx is param1
@@ -2949,12 +2909,14 @@ else
 ```
 mov ecx, [ebp + 12]
 cmp ecx, 0
-jne _Label_3
+je _Label_3
 inc eax
 :_Label_3
 ```
 
-我们可以立即看到 `_Label_3` 是分支结构的末尾，因此我们可以立即称其为 'Branch_2_End' 或其他名称。在这里，我们再次比较 `ecx` 与 0，如果不相等，则跳转到块的末尾。然而，如果它等于零，我们就增加 `eax` 并跳出分支底部。我们可以看到这个分支结构中没有 `else` 块，因此我们不需要反转条件。我们可以直接写 `if` 语句：
+我们可以立即看到 `_Label_3` 是分支结构的末尾，因此我们可以立即称其为 'Branch_2_End' 或其他名称。在这里，我们再次比较 `ecx` 与 `0`，如果不相等，则跳转到块的末尾。然而，如果它等于零，我们就增加 `eax` 并跳出分支底部。我们可以看到这个分支结构中没有 `else` 块，因此我们不需要反转条件。我们可以直接写 `if` 语句：
+
+
 
 ```
 if(ecx == 0); ecx is param2 here
@@ -3028,7 +2990,8 @@ unsigned int CDECL MyFunction(unsigned int param1, unsigned int param2)
         a++;
     }
     return a;
-}```虽然这个函数并不用，但我们至少知道它做了什么。
+}
+```虽然这个函数并不用，但我们至少知道它做了什么。
 
 ## 15 循环
 
@@ -3181,10 +3144,6 @@ do
 } while(!x);
 ```
 
-
-
-
-
 ### 15.5.2 Until 循环（直到循环）
 
 与 Do-Until 类似，标准的 Until 循环如下：
@@ -3247,6 +3206,7 @@ loopend:
 ```
 
 注意，这里的很多比较是不需要的，因为条件是一个常量。
+
 大多数编译器都会优化此类情况。
 
 ## 16 循环示例
@@ -3476,17 +3436,15 @@ _MyFunction ENDP
 
 
 
-
-
 ### 有符号与无符号变量
 
 通常在 wikibook 中发布汇编列表时，大部分代码乱码会被丢弃以提高可读性，在本例中，这些“乱码”包含了我们正在寻找的答案。显而易，此函数创建了一个标准的栈帧，并且没有在栈上创建局部变量。为了保证完整性，我们将一步步为营，通过逻辑推导得出结论。
 
-在第 7 行的代码中，有一个对 `_printf` 的调用。printf 是标准的 libc 函数，因此可以假设它采用 cdecl 调用约定。在调用 `_printf` 之前，有三个参数被推入栈中：
+在第 7 行的代码中，有一个对 `_printf` 的调用。`printf` 是标准的 libc 函数，因此可以假设它采用 cdecl 调用约定。在调用 `_printf` 之前，有三个参数被推入栈中：
 
-- DWORD PTR ?_=0717?MyFunction@@0@9
-- DWORD PTR _$[ebp]
-- OFFSET FLAT=$SG797
+- `DWORD PTR ?_=0717?MyFunction@@0@9`
+- `DWORD PTR _$[ebp]`
+- `OFFSET FLAT=$SG797`
 
 第二个参数 `_a$[ebp]` 在此汇编指令中部分定义：
 
@@ -3494,7 +3452,7 @@ _MyFunction ENDP
 _a$ = 8
 ```
 
-因此，`_a$[ebp]` 是位于 eb 偏移 +8 处的变量，或者说是函数的第一个变量。OFFSET FLAT=$SG797 同样在汇编列表中声明如下：
+因此，`_a$[ebp]` 是位于 eb 偏移 +8 处的变量，或者说是函数的第一个变量。`OFFSET FLAT=$SG797` 同样在汇编列表中声明如下：
 
 ```
 SG797              DB      ,Xd, ?4a, OaH, 08
@@ -3502,9 +3460,9 @@ SG797              DB      ,Xd, ?4a, OaH, 08
 ENDS
 ```
 
-如果你有 ASCII 表，你会发现 0aH = 0xA = '\n'。OFFSET FLAT=$SG797 是我们打印语句的格式字符串。我们的最后一个选项是看起来很神秘的 "?x@71?MyFunction@@0@9"，它在接下来的汇编代码段中定义：
+如果你有 ASCII 表，你会发现 `0aH = 0xA = '\n'`。`OFFSET FLAT=$SG797` 是我们打印语句的格式字符串。我们的最后一个选项是看起来很神秘的 `"?x@71?MyFunction@@0@9"`，它在接下来的汇编代码段中定义：
 
-这表明微软 C 编译器在 .bss 段创建了静态变量。这对于所有编译器可能并非如此，但原理是一样的：局部变量的创建和使用方式与全局值非常相似，甚至完全相同。事实上，对于逆向工程工程师来说，它们通常是互换的。请记住，静态变量和全局变量之间唯一的区别在于“作用域”的概念，而作用域仅供编译器使用。
+这表明微软 C 编译器在 `.bss` 段创建了静态变量。这对于所有编译器可能并非如此，但原理是一样的：局部变量的创建和使用方式与全局值非常相似，甚至完全相同。事实上，对于逆向工程工程师来说，它们通常是互换的。请记住，静态变量和全局变量之间唯一的区别在于“作用域”的概念，而作用域仅供编译器使用。
 
 ### 17.5 有符号与无符号变量
 
@@ -3525,19 +3483,19 @@ ENDS
 
 全局变量在函数体内部没有限制作用域的变量。由于词法作用域的本质，它们通常不在栈上。全局变量在本质上不是词法的，它们以硬编码内存地址的形式存在程序中，该地址在程序执行过程中永远不变。这可能存在于可执行文件的 DATA 段，或任何其他可以使用硬编码内存地址存储数据的地方。
 
-在 C 中，全局变量定义在任何函数体之外。没有“global”关键字。任何未在函数内部定义的变量都是全局变量。但在 C 中，未在函数内部定义的变量仅对于其被定义的特定源文件是全局的。例如，我们有两个文件 Foo.c 和 Bar.c，以及一个全局变量 `MyGlobalVar`：
+在 C 中，全局变量定义在任何函数体之外。没有“global”关键字。任何未在函数内部定义的变量都是全局变量。但在 C 中，未在函数内部定义的变量仅对于其被定义的特定源文件是全局的。例如，我们有两个文件 `Foo.c` 和 `Bar.c`，以及一个全局变量 `MyGlobalVar`：
 
 | Foo.c | Bar.c |
 |---|---|
-| int MyGlobalVar; | int GetVar(void) |
-| int GetVar(void) | { |
-| //正确！ | //错误！ |
-| return MyGlobalVar; | return MyGlobalVar; |
+| `int MyGlobalVar;` | `int GetVar(void)` |
+| `int GetVar(void)` | `{` |
+| `//正确！` | `//错误！` |
+| `return MyGlobalVar;` | `return MyGlobalVar;` |
 | | |
 
-在上面的示例中，变量 `MyGlobalVar` 在 Foo.c 文件可见，但在 Bar.c 文件内部不可见。为了让 `MyGlobalVar` 在所有项目文件中可见，我们需要使用 `extern` 关键字，我们将在下文中讨论。
+在上面的示例中，变量 `MyGlobalVar` 在 `Foo.c` 文件可见，但在 `Bar.c` 文件内部不可见。为了让 `MyGlobalVar` 在所有项目文件中可见，我们需要使用 `extern` 关键字，我们将在下文中讨论。
 
-### 17.7.1 "static" 变量
+#### 17.7.1 "static" 变量
 
 C 编程语言使用特殊关键字 `static` 来定义函数局部变量（它们无法从函数外部引用），但它们在跨函数调用时保持其值。与普通的词法变量（在进入函数时在栈上创建并在退出时销毁）不同，静态变量在函数调用间保持有效。
 
@@ -3549,13 +3507,13 @@ int myFunction(void) {
 
 静态变量是全局的。局部变量的创建和使用方式与全局值非常相似，即使不是完全相同。事实上，对于逆向工程工程师来说，它们通常是互换的。请记住，静态变量和全局变量之间唯一的区别在于“作用域”的概念，而作用域仅供编译器使用。在汇编时，我们应将其视为全局变量。
 
-# 17.7.2 "extern" 变量
+#### 17.7.2 "extern" 变量
 
 `extern` 关键字用于编译器来指示特定变量对于整个项目是全局的，而不只是单个源文件。除了这种区别以及全局变量略大的作用域外，它们应该被视为普通的全局变量。
 
 在静态库中，标记为 `extern` 的变量可能供链接到库的程序使用。
 
-# 17.7.3 全局变量总结
+#### 17.7.3 全局变量总结
 
 以下是关于全局变量总结表格：
 
@@ -3563,24 +3521,21 @@ int myFunction(void) {
 |---|---|---|
 | 静态变量 | 硬编码内存地址，仅限函数 | 单个函数 | 在汇编时，除了仅在单个函数中使用外，与全局变量无法区分。如果全局变量不在其他函数中使用，它是静态的。 |
 | 全局变量 | 硬编码内存地址，仅限文件 | 单个文件 | 全局变量仅在单个文件中使用。这有助于你在汇编时估计原始代码的安排。 |
-| extern 变量 | 硬编码内存地址，整个项目 | 整个项目 | extern 变量适用于项目的所有函数，以及链接到项目的程序（例如外部库）。 |
+| extern 变量 | 硬编码内存地址，整个项目 | 整个项目 | `extern` 变量适用于项目的所有函数，以及链接到项目的程序（例如外部库）。 |
 
 在汇编时，除非你能从变量的作用域确定它是静态或外部的，否则硬编码内存地址应被视为全局变量。
 
-# 17.8 常量
+### 17.8 常量
 
-用 `const` 关键字修饰的变量通常存储在可执行文件的 .data 段中。常量值可以通过它们在程序开始时初始化且从不被程序修改来区分。由于这些原因，某些编译器可能会将常量变量（特别是字符串）存储在可执行文件的 .text 段，允许在同一进程的多个实例之间共享这些变量。这为逆向工程师带来了大问题，他们必须判断看到的代码是常量变量的一部分还是子程序的一部分。
+用 `const` 关键字修饰的变量通常存储在可执行文件的 `.data` 段中。常量值可以通过它们在程序开始时初始化且从不被程序修改来区分。由于这些原因，某些编译器可能会将常量变量（特别是字符串）存储在可执行文件的 `.text` 段，允许在同一进程的多个实例之间共享这些变量。这为逆向工程师带来了大问题，他们必须判断看到的代码是常量变量的一部分还是子程序的一部分。
 
-# 17.9 volatile内存
+### 17.9 volatile内存
 
-在 C 和 C++ 中，变量可以声明为 `volatile`，这告诉编译器内存位置可以被外部或并发进程访问，并且编译器不应对该变量执行任何优化。例如，如果多个线程都在访问和修改同一个全局值，有时将其存储在寄存器中是不好的，应该经常刷新到内存。通常，volatile 内存在每次计算后都必须刷新到内存，以确保当其他进程来查找时，内存中是最新版本的数据。
-
-
-
+在 C 和 C++ 中，变量可以声明为 `volatile`，这告诉编译器内存位置可以被外部或并发进程访问，并且编译器不应对该变量执行任何优化。例如，如果多个线程都在访问和修改同一个全局值，有时将其存储在寄存器中是不好的，应该经常刷新到内存。通常，`volatile` 内存在每次计算后都必须刷新到内存，以确保当其他进程来查找时，内存中是最新版本的数据。
 
 通过反汇编列表并不总是能够确定给定变量是否为 `volatile` 变量。然而，如果频繁从内存访问该变量，其值在内存中不断更新（特别是当有空寄存器可用时），该变量可能是 `volatile` 的良好提示。
 
-## 17.10 简单访问器方法 (Accessor Methods)
+### 17.10 简单访问器方法 (Accessor Methods)
 
 访问器方法是源自面向对象理论和实践的工具。在最简单的形式下，访问器方法是不接收参数（或可能仅接收偏移量）并返回变量值的函数。访问器（Accessor）和 `Setter` 方法是限制访问某些变量的方法。获取变量值的唯一标准方法是使用访问器。
 
@@ -3598,9 +3553,9 @@ pop ret
 
 由于访问器方法非常简单，它们经过了高度优化（它们通常不需要栈帧），有时甚至会被编译器内联。
 
-## 17.11 简单 Setter 方法（操作器方法）
+### 17.11 简单 Setter 方法（操作器方法）
 
-`Setter` 方法是访问器方法的对立面，提供了一种修改给定变量值的统一方法。`Setter` 方法通常将要设置给变量的值作为参数，尽管某些方法（初始化器） 地将变量设置为预定义的值。`Setter` 方法通常在设置之前对变量进行边界检查和错误检查，并很大程度上 a) 不返回值，或 b) 返回一个简单的布尔值来判断成功。
+`Setter` 方法是访问器方法的对立面，提供了一种修改给定变量值的统一方法。`Setter` 方法通常将要设置给变量的值作为参数，尽管某些方法（初始化器）地将变量设置为预定义的值。`Setter` 方法通常在设置之前对变量进行边界检查和错误检查，并很大程度上 a) 不返回值，或 b) 返回一个简单的布尔值来判断成功。
 
 这里是一个示例：
 
@@ -3621,9 +3576,9 @@ pop ebp
 ret
 ```
 
-## 18 变量示例
+### 18 变量示例
 
-### 18.1 示例：识别 C++ 代码
+#### 18.1 示例：识别 C++ 代码
 
 对于下面的访问器方法，你能够看出原始的 C++ 源代码大概是什么样的吗？
 
@@ -3675,7 +3630,7 @@ class MyClass /* 另一种定义*/
 
 或者任何其他 8 字节的组合。
 
-### 18.2 示例：识别 C++ 代码
+#### 18.2 示例：识别 C++ 代码
 
 对于下面的 `setter` 方法，你能够看出原始的 C++ 源代码大概是什么样的吗？
 
@@ -3697,6 +3652,7 @@ ret
 ```
 
 这段代码看起来有点复杂，但不要恐慌！我们将缓慢地分析。
+
 前两行代码设置了栈帧：
 
 ```
@@ -3721,13 +3677,13 @@ int MyClass::SetValue(int val)
 
 注意，由于失败时返回 0，成功时返回 1，函数看起来有一个 `bool` 返回。然而，返回值是 4 字节（使用了 `eax`），所以无法确定。`bool` 通常被定义为 1 字节，但存储方式与 `int` 。
 
-## 19 数据结构
+### 19 数据结构
 
-### 19.1 数据结构
+#### 19.1 数据结构
 
 很少程序通过简单的内存存储工作；大多数需要利用复杂对象，包括**指针、数组、结构**和其他类型。本章将介绍编译器如何实现复杂对象，以及如何识别这些对象。
 
-### 19.2 数组
+#### 19.2 数组
 
 内存中的数组（例如全局数组，或具有初始数据的数组（记住，初始化数据创建在内存的 `.data` 段中））将作为内存中硬编码地址的偏移量被访问：
 
@@ -3789,29 +3745,6 @@ lea eax, [esp + 0]
 数组的指针保存在数组中
 ```
 
-实际上，查看 OCR，文本是跨页碎片化的。让我们重构逻辑流：
-
-“现在考虑以下示例：
-
-```
-int MyFunction()
-{
-  int array[20];
-  ...
-}
-```
-
-这（大致）翻译为以下汇编代码：
-
-```
-:MyFunction!
-push ebp
-mov esp, esp
-sub esp, 80 ;数组在栈上创建
-lea eax, [esp + 0]
-数组的指针保存在数组中
-```
-
 整个数组在栈上创建，并且数组的指针保存在变量中。优化后的编译器可能只想从 `esp` 进行偏移，因此你将需要小心。
 
 同样，考虑以下示例：
@@ -3836,7 +3769,7 @@ lea buffer, [esp + 0]
 
 这看起来足够无害。但如果程序无意访问了 `buffer[4]` 呢？`buffer[5]` 呢？`buffer[8]` 呢？这是缓冲区溢出漏洞的成因，可能会在稍后的章节中讨论。然而，本节将不会讨论安全问题，而是重点关注数据结构。
 
-#### 19.2.1 识别栈上的数组
+##### 19.2.1 识别栈上的数组
 
 要识别栈上的数组，请寻找在栈上分配的大量本地存储（例如 `sub esp, 1000`），并寻找该数据的大部分通过相对于 `esp` 不同寄存器的偏移量被访问。例如：
 
@@ -3851,7 +3784,7 @@ mov [ebx + 0], 0x00
 
 这是栈上创建数组的良好迹象。当然，优化后的编译器可能只想从 `esp` 进行偏移，因此你将需要小心。
 
-#### 19.2.2 识别内存中的数组
+##### 19.2.2 识别内存中的数组
 
 内存中的数组（例如全局数组，或具有初始数据的数组（记住，初始化数据创建在内存的 `.data` 段中））将作为内存中硬编码地址的偏移量被访问：
 
@@ -3864,10 +3797,7 @@ mov ebx, 0x00000000
 mov [esi + ebx], 0x00
 ```
 
-
-
-
-# 结构
+### 19.3 结构
 
 由于大多数情况下数组是通过计算出的索引而非常量来访问的，编译器可能会使用以下方式来访问数组元素：
 
@@ -3889,8 +3819,6 @@ lea edi, [ebx + eax]                  # e.g.      ptr = &arr[i]
 
 这种模式可以用于区分数组访问和结构体数据成员的访问。
 
-## 19.3 结构
-
 所有的 C 语言程序员都会熟悉以下语法：
 
 ```
@@ -3902,6 +3830,8 @@ struct MyStruct{
 ```
 
 它被称为结构体（Pascal 程序员可能熟悉类似的概念，称为“record”）。
+
+
 
 结构体可能很大，也可以很小，而且……字段通常是 4 字节对齐的（不是连续的），结构体中的每个元素都有自己的偏移量。因此，通过相对于基的变量偏移来引用结构体元素是没有意义的。
 
@@ -3915,15 +3845,15 @@ struct MyStruct2{
 }
 ```
 
-假设指向此结构体基的指针加载到 ebx 中，我们可以通过两种方案之一访问成员：
+假设指向此结构体基的指针加载到 `ebx` 中，我们可以通过两种方案之一访问成员：
 
 # 数据结构
 
 | 数据是 32 位对齐 | 数据是“紧凑的” |
 | :--- | :--- |
-| [ebx + 0] | :value1 |
-| [ebx + 4] | :value2 |
-| [ebx + 8] | :value3 |
+| `[ebx + 0]` | `:value1` |
+| `[ebx + 4]` | `:value2` |
+| `[ebx + 8]` | `:value3` |
 
 第一个参数是最常见的，但它显然在偏移量 +6 处留了一个整个内存字（2 字节），该部分完全没有被使用。编译器偶尔允许程序员手动指定每个数据成员的偏移量，但并不总是如此。第二个示例的优点在于，逆向工程师可以轻松识别出结构体中的每个数据成员的大小是不同的。
 
@@ -3941,7 +3871,7 @@ pop ebp
 ret
 ```
 
-该函数显然将一个数据结构体的指针作为第一个参数。此外，我们如何判断它是数组还是结构体呢？为了回答这个问题，我们需要记住结构体和数组的一个重要区别：数组中的元素都是相同类型，而结构体中的元素不需要是相同类型。根据这条规则，很明显该结构体中的一个元素是指针（它指向结构体自身的基），而另外两个字段加载了十六进制值 0x9A（十进制为 16），这在我用过的任何系统上绝对不是一个有效的指针。我们可以部分重建结构体和函数代码：
+该函数显然将一个数据结构体的指针作为第一个参数。此外，我们如何判断它是数组还是结构体呢？为了回答这个问题，我们需要记住结构体和数组的一个重要区别：数组中的元素都是相同类型，而结构体中的元素不需要是相同类型。根据这条规则，很明显该结构体中的一个元素是指针（它指向结构体自身的基），而另外两个字段加载了十六进制值 `0x9A`（十进制为 16），这在我用过的任何系统上绝对不是一个有效的指针。我们可以部分重建结构体和函数代码：
 
 ```
 struct MyStruct {
@@ -3957,7 +3887,7 @@ ptr->value3 = 10;
 }
 ```
 
-顺便提一下，注意此函数没有将任何内容加载到 eax 中，因此它没有返回值。
+顺便提一下，注意此函数没有将任何内容加载到 `eax` 中，因此它没有返回值。
 
 ## 19.4 高级结构
 
@@ -3971,7 +3901,7 @@ mov esi, [ebp + 8]
 lea ecx, [esi + 8]
 ```
 
-这里发生了什么？首先，esi 加载了函数第一个参数的值（ebp + 8）。然后，ecx 加载了指向 esi 偏移量 +8 处的指针。看起来我们有两个指针在访问同一个数据结构！
+这里发生了什么？首先，`esi` 加载了函数第一个参数的值（`ebp + 8`）。然后，`ecx` 加载了指向 `esi` 偏移量 +8 处的指针。看起来我们有两个指针在访问同一个数据结构！
 
 该函数很可能是以下 2 种原型之一：
 
@@ -4000,7 +3930,7 @@ DWORD array[LENGTH];
 数组元素和结构体都是通过相对于数组/结构体指针的偏移来访问的。在反汇编时，我们如何区分这些数据结构？这里是一些提示：
 
 - 1. 数组元素不被逐个访问。数组元素通常使用变量偏移量进行访问。
-- 2. 数组经常在循环中被访问。因为数组通常包含一系列相似的数据项，访问它们的所有最佳方法是循环。具体而言，for(x = 0; x < length_of_array; x++) 风格的循环常用于访问数组，尽管也可以其他方式。
+- 2. 数组经常在循环中被访问。因为数组通常包含一系列相似的数据项，访问它们的所有最佳方法是循环。具体而言，`for(x = 0; x < length_of_array; x++)` 风格的循环常用于访问数组，尽管也可以其他方式。
 - 3. 数组中的所有元素具有相同类型。
 - 4. 结构体字段通常使用常量偏移量访问。
 - 5. 结构体字段通常不是顺序访问的，也不使用循环。
@@ -4008,7 +3938,7 @@ DWORD array[LENGTH];
 
 ## 19.6 链表和二叉树
 
-编程时常用的两种常用结构是链表和二叉树。这两种结构反过来可以通过许多方式变得复杂。图中所示是链表结构和二叉树的示例（img/9b641f47ec80cbc0123790141_0.png）。
+编程时常用的两种常用结构是链表和二叉树。这两种结构反过来可以通过许多方式变得复杂。图中所示是链表结构和二叉树的示例（`img/9b641f47ec80cbc0123790141_0.png`）。
 
 链表或二叉树中的每个节点包含一些数据和一个指向其他节点的指针。考虑以下汇编代码：
 
@@ -4021,7 +3951,7 @@ jmp loop_top
 loop_end:
 ```
 
-在每次循环中，将 [ebp + 0] 处的值与 10 进行比较。如果相等，循环结束。否则，ebp 被更新为偏移量处的指针，循环继续。这是一种经典的链表搜索技术。这类似于下面的 C 代码：
+在每次循环中，将 `[ebp + 0]` 处的值与 10 进行比较。如果相等，循环结束。否则，`ebp` 被更新为偏移量处的指针，循环继续。这是一种经典的链表搜索技术。这类似于下面的 C 代码：
 
 ```c
 struct node
@@ -4066,7 +3996,7 @@ public:
 
 B:
 
-| | | |
+|  |  |  |
 | :--- | :--- | :--- |
 | 0x00200000 | dd | 1 ;int a ; offset = abc123 |
 | 0x00200004 | dd | 2 ; int b |
@@ -4074,9 +4004,9 @@ B:
 
 Figure 1: 对象在内存中的示例
 
-Figure 1:A: 类 "ABC123" 的定义。该类有三个整数 a、b 和 c。构造函数将 'a' 设置为 1，'b' 设置为 2，'c' 设置为 3。
+Figure 1:A: 类 "`ABC123`" 的定义。该类有三个整数 `a`、`b` 和 `c`。构造函数将 'a' 设置为 1，'b' 设置为 2，'c' 设置为 3。
 
-Figure 1.B: 对象 ABC123 在内存中的放置方式，类变量排序。内存地址 0x00200000 处是一个值为 1 的整数（32 位），代表 'a'。内存地址 0x00200004 处是一个值为 2 的整数，代表 'b'。在内存地址 0x00200008 处有一个值为 3 的整数，代表 'c'。
+Figure 1.B: 对象 `ABC123` 在内存中的放置方式，类变量排序。内存地址 `0x00200000` 处是一个值为 1 的整数（32 位），代表 'a'。内存地址 `0x00200004` 处是一个值为 2 的整数，代表 'b'。在内存地址 `0x00200008` 处有一个值为 3 的整数，代表 'c'。
 
 然而，编译器通常需要将变量分离为字（2 字节）倍数的组，即字符数组；某些未使用位可能会填充变量以满足此大小要求。如图 2 所示。
 
@@ -4094,19 +4024,17 @@ public:
 
 B:
 
-| | | | |
+|  |  |  |  |
 | :--- | :--- | :--- | :--- |
 | 0x00200000 | dd | 1 | ;int a ; offset = abc123 |
 | + 0x00200004 | dd | 0, | ;b[0] = '0' ; offset = |
 | 0x00200006 | db | 2, | ;b[1] = '2' |
 | 0x00200007 | db | 0 | ;b[2] = null |
-| 0x00200008 | dd | | ;USED ;double c, lower 32 bits |
+| 0x00200008 | dd |  | ;USED ;double c, lower 32 bits |
 | offset = abc123 + 4*word_size | dd | 0x40080000 | ;double c, upper 32 bits |
-| 0x002000c | | | |
+| 0x002000c |  |  |  |
 
 Figure 2: 带有填充变量的对象示例
-
-
 
 ```
 abc123 = pointer to object      offset
@@ -4118,11 +4046,11 @@ mov ecx, [abc123+8]   ecx = ecx        offset = abc123+4*word_size
       abc123+8
 ```
 
-**图 3：** 这展示了如何对指针进行偏移，并将变量 'a' 的地址取到 eax 中。第二行将变量 'b' 的地址放入 ebx 中。最后一行将变量 'c' 放入 ecx 中。
+**图 3：** 这展示了如何对指针进行偏移，并将变量 'a' 的地址取到 `eax` 中。第二行将变量 'b' 的地址放入 `ebx` 中。最后一行将变量 'c' 放入 `ecx` 中。
 
-## 20.2.2 方法
+### 20.2.2 方法
 
-在底层，函数（function）和方法（method）之间几乎没有区别。在反编译时，有时看起来很难区分两者。它们存在于文本内存空间，且调用方式也相同。方法调用的示例可以参见**图 4**。
+在底层，函数（`function`）和方法（`method`）之间几乎没有区别。在反编译时，有时看起来很难区分两者。它们存在于文本内存空间，且调用方式也相同。方法调用的示例可以参见**图 4**。
 
 A:
 
@@ -4141,9 +4069,9 @@ push [ebp-4]        ; 对象的地址
 call 0x00434125      ; 调用到方法
 ```
 
-**图 4：** C++ 语法下的一种方法调用。abc123 是指向拥有方法 foo() 的对象的指针。foo() 接受三个整数参数：1、2 和 3。
+**图 4：** C++ 语法下的一种方法调用。`abc123` 是指向拥有方法 `foo()` 的对象的指针。`foo()` 接受三个整数参数：1、2 和 3。
 
-**图 4.B** x86 汇编语言中的相同方法调用。它接受四个参数：对象的地址和三个整数。指向对象的指针位于 ebp-4 和 00434125 处。
+**图 4.B** x86 汇编语言中的相同方法调用。它接受四个参数：对象的地址和三个整数。指向对象的指针位于 `ebp-4` 和 `00434125` 处。
 
 方法调用的一个显著特征是，作为参数传递的是一个对象的地址。然而，这并不总是一个好的判断依据。**图 5** 显示了一个第一个参数为引用传递的对象的函数。其结果是一个看起来与方法调用一模一样的函数。
 
@@ -4173,10 +4101,12 @@ call 0x00498372
 ```
 
 图 5：一个函数调用。
-图 5.A：C++ 语法下的函数调用。foo() 接受四个参数：一个指针和三个整数。
-图 5.B：x86 汇编中的相同调用。它接受四个参数：对象的地址和三个整数。指向对象的指针在 ebp-4，而方法在地址 0x00498372 处。
 
-## 20.2.3 继承与多态
+图 5.A：C++ 语法下的函数调用。`foo()` 接受四个参数：一个指针和三个整数。
+
+图 5.B：x86 汇编中的相同调用。它接受四个参数：对象的地址和三个整数。指向对象的指针在 `ebp-4`，而方法在地址 `0x00498372` 处。
+
+### 20.2.3 继承与多态
 
 继承和多态完全改变了类的结构，对象不再仅仅包含变量，还包含了指向所继承方法的指针。这是由于多态需要在运行时确定主对象或内部对象的地址。
 
@@ -4191,9 +4121,9 @@ for(int i=0; i<2; i++)
 obj[i]->one();
 ```
 
-图 6：一个简单的 C++ 多态循环，它调用了函数 `one`。类 C 和 D 都继承自抽象类 A。为了让这段代码运行，类 A 必须有一个名为 "one" 的虚方法。
+图 6：一个简单的 C++ 多态循环，它调用了函数 `one`。类 `C` 和 `D` 都继承自抽象类 `A`。为了让这段代码运行，类 `A` 必须有一个名为 "one" 的虚方法。
 
-抽象类 A 充当编译器的蓝图，为 A 中的任何类定义了预期的结构，并且 A 中定义的每个虚方法对于任何子类都具有完全相同的偏移量。图 7 详细说明了一种可能的继承方案及其在内存中的存储方式。注意 `C::one` 的偏移量与 `D::one` 相同，且 C 的 A::a 拷贝的偏移量与 D 的拷贝相同。此时，我们的多态循环只需要遍历指针数组，就能确切知道在哪里找到每个方法。
+抽象类 `A` 充当编译器的蓝图，为 `A` 中的任何类定义了预期的结构，并且 `A` 中定义的每个虚方法对于任何子类都具有完全相同的偏移量。图 7 详细说明了一种可能的继承方案及其在内存中的存储方式。注意 `C::one` 的偏移量与 `D::one` 相同，且 `C` 的 `A::a` 拷贝的偏移量与 `D` 的拷贝相同。此时，我们的多态循环只需要遍历指针数组，就能确切知道在哪里找到每个方法。
 
 A:
 
@@ -4227,9 +4157,7 @@ public:
 | 0x00200000 | dd | 0x00423848 | C:: 的地址; 偏移 = word_size |
 | 0x00200004 | dd | 1 | C 对 A:: 的拷贝; 偏移 = |
 | 0x00200008 | dd | 4 | C::d; 偏移 = 4*word_size |
-
 | 对象 D | 偏移 | 值 | 描述 |
-| :--- | :--- | :--- | :--- |
 | 0x00200100 | dd | 0x00412348 | D::one 的地址; 偏移 = word_size |
 | 0x00200104 | dd | 1 | D 对 A:: 的拷贝; 偏移 = word_size |
 | 0x00200108 | dd | 0x00431255 | D::two 的地址; 偏移 = 4*word_size |
@@ -4237,7 +4165,7 @@ public:
 | 0x00200110 | dd | 3 | D 对 B::c 的拷贝; 偏移 = 8*word_size |
 | 0x00200114 | dd | 5 | D::e; 偏移 = 10*word_size |
 
-图 7：一种多态方案。图 7.A 定义了继承方案，显示了类 C 继承类 A，而类 D 继承类 A 和类 B。图 7.B 展示了继承方案在内存中可能的结构。类 C 的对象在前两个双字中包含了类 A 中声明的所有内容。对象的其余部分由 C 定义。类 D 的对象在前两个双字中包含了类 A 中声明的所有内容。接下来的三个双字在 B 中声明。最后一个双字由 D 定义。
+图 7：一种多态方案。图 7.A 定义了继承方案，显示了类 `C` 继承类 `A`，而类 `D` 继承类 `A` 和类 `B`。图 7.B 展示了继承方案在内存中可能的结构。类 `C` 的对象在前两个双字中包含了类 `A` 中声明的所有内容。对象的其余部分由 `C` 定义。类 `D` 的对象在前两个双字中包含了类 `A` 中声明的所有内容。接下来的三个双字在 `B` 中声明。最后一个双字由 `D` 定义。
 
 ## 20.3 类对比 结构体
 
@@ -4278,12 +4206,16 @@ call 0x00498372
 ```
 
 图 5：一个函数调用。
-图 5.A：C++ 语法下的函数调用。foo() 接受四个参数：一个指针和三个整数。
-图 5.B：x86 汇编中的相同调用。它接受四个参数：对象的地址和三个整数。指向对象的指针在 ebp-4，而方法在地址 0x00498372 处。
+
+图 5.A：C++ 语法下的函数调用。`foo()` 接受四个参数：一个指针和三个整数。
+
+图 5.B：x86 汇编中的相同调用。它接受四个参数：对象的地址和三个整数。指向对象的指针在 `ebp-4`，而方法在地址 `0x00498372` 处。
 
 ### 21.2.1 CDECL
 
-这里是 MyFunction 的汇编列表：
+这里是 `MyFunction` 的汇编列表：
+
+
 
 ```assembly
 PUBLIC      MyFunction
@@ -4327,11 +4259,7 @@ _MyFunction ENDP
 ENDS
 ```
 
-GCC 不使用这些指令来创建这些函数，而是使用 /Gd、/Gr 和 /Gz 选项分别编译。
-
-
-
-
+GCC 不使用这些指令来创建这些函数，而是使用 `/Gd`、`/Gr` 和 `/Gz` 选项分别编译。
 
 # 调用约定
 
@@ -4340,9 +4268,9 @@ ST1 := ST1 + ST0
 FPU POP ST0
 ```
 
-将 ST(1) 和 ST(0) 相乘并将结果存储在 ST(1) 中。然后，ST(0) 被标记为空，栈指针递增。因此，ST(1) 的内容位于栈顶。所以，栈顶的两个值被相乘，结果存储在栈顶。因此，在我们上面的指令 `fmul ST(1), ST(0)*` 中（这也是该函数的最后一条指令），我们可以看到最后一个结果存储在 ST0 中。因此，浮点数参数是通过普通栈传递的，但浮点数结果是通过 FPU 栈栈传递的。
+将 `ST(1)` 和 `ST(0)` 相乘并将结果存储在 `ST(1)` 中。然后，`ST(0)` 被标记为空，栈指针递增。因此，`ST(1)` 的内容位于栈顶。所以，栈顶的两个值被相乘，结果存储在栈顶。因此，在我们上面的指令 `fmul ST(1), ST(0)*` 中（这也是该函数的最后一条指令），我们可以看到最后一个结果存储在 `ST0` 中。因此，浮点数参数是通过普通栈传递的，但浮点数结果是通过 FPU 栈栈传递的。
 
-最后的一点是，`MyFunction` 清理了它自己的栈空间，如末尾的 **ret 20** 命令所示。由于没有参数通过寄存器传递，该函数看起来完全符合我们预期的 STDCALL 函数一模一样：参数从右到左传递在栈上，并且由函数自己清理栈空间。我们将在下面看到，这实际上是一个假设。
+最后的一点是，`MyFunction` 清理了它自己的栈空间，如末尾的 **ret 20** 命令所示。由于没有参数通过寄存器传递，该函数看起来完全符合我们预期的 `STDCALL` 函数一模一样：参数从右到左传递在栈上，并且由函数自己清理栈空间。我们将在下面看到，这实际上是一个假设。
 
 作为对比，这里是 GCC 的列表：
 
@@ -4390,13 +4318,13 @@ LC2:
     .align 8
 ```
 
-这是一个非常复杂的列表，所以我们将逐步分析它（尽管速度很快）。在栈上分配了 16 字节的额外空间。然后，通过 `fld` 和 `fstpl` 指令的组合，将前两个参数从偏移 +8 和 +16 移动到相对于 ebp 的偏移 -8 和 -16。这看起来是在浪费时间，但请记住，此时优化是关闭的。**fld1** 将浮点值 1.0 加载到 FPU 栈上。fadd 将栈顶的值（1.0）加到 ST1 中的值 [ebp - 8] 上，该值原本是 [ebp + 8]。
+这是一个非常复杂的列表，所以我们将逐步分析它（尽管速度很快）。在栈上分配了 16 字节的额外空间。然后，通过 `fld` 和 `fstpl` 指令的组合，将前两个参数从偏移 +8 和 +16 移动到相对于 ebp 的偏移 -8 和 -16。这看起来是在浪费时间，但请记住，此时优化是关闭的。**fld1** 将浮点值 1.0 加载到 FPU 栈上。fadd 将栈顶的值（1.0）加到 `ST1` 中的值 `[ebp - 8]` 上，该值原本是 `[ebp + 8]`。
 
 # 浮点数
 
 # 21.2.2 MyFunction 的 FASTCALL：
 
-这里是 MyFunction 的清晰列表：
+这里是 `MyFunction` 的清晰列表：
 
 ```
 PUBLIC          @MyFunction2020
@@ -4441,7 +4369,7 @@ TEXT            ENDS
 
 # 调用约定
 
-注意在 CDECL 示例中，fmul 是最后执行的指令。我们不需要深入研究就能推断出结果传递到了浮点栈。同样注意到 x (偏移 [ebp + 8])、y (偏移 [ebp + 16]) 和 z (偏移 [ebp + 24]) 是反序入栈的：这意味着浮点参数是从右到左传递的。这与 CDECL 代码完全相同，尽管我们使用的是浮点值。这里是 MyFunction2 的 GCC 汇编：
+注意在 CDECL 示例中，fmul 是最后执行的指令。我们不需要深入研究就能推断出结果传递到了浮点栈。同样注意到 x (偏移 `[ebp + 8]`)、y (偏移 `[ebp + 16]`) 和 z (偏移 `[ebp + 24]`) 是反序入栈的：这意味着浮点参数是从右到左传递的。这与 CDECL 代码完全相同，尽管我们使用的是浮点值。这里是 `MyFunction2` 的 GCC 汇编：
 
 ```
 .align 8
@@ -4475,11 +4403,11 @@ LC6:
 
 这是一这是一段棘手的代码，但幸运的是我们不需要读得很仔细。首先，注意除了 ebp 之外没有访问其他寄存器。再次，GCC 将所有浮点值（32 位的 z）传递在栈上。同样，浮点值传递到了浮点栈顶。
 
-我们可以看到 GCC 在开头做了一些奇怪的操作，从栈 [ebp + 8] 和 [ebp + 16] 取值，并将它们移动到 [ebp - 8] 和 [ebp - 16]。在移动后，这些值被加载到浮点栈并进行运算。z 直到后面才加载，尽管存在这种模式，它从未移动到 [ebp - 24]。LC5 和 LC6 很可能代表浮点值（因为数字本身 1073741824 和 1074266612 在我们的示例上下没有任何意义）。注意 LC5 和 LC6 都包含两个 .long 项，总共 8 字节。因此它们绝对是 double 值。
+我们可以看到 GCC 在开头做了一些奇怪的操作，从栈 `[ebp + 8]` 和 `[ebp + 16]` 取值，并将它们移动到 `[ebp - 8]` 和 `[ebp - 16]`。在移动后，这些值被加载到浮点栈并进行运算。z 直到后面才加载，尽管存在这种模式，它从未移动到 `[ebp - 24]`。`LC5` 和 `LC6` 很可能代表浮点值（因为数字本身 1073741824 和 1074266612 在我们的示例上下没有任何意义）。注意 `LC5` 和 `LC6` 都包含两个 `.long` 项，总共 8 字节。因此它们绝对是 double 值。
 
 ### 21.2.3 STDCALL
 
-这里是 MyFunction 的 c.exe 列表：
+这里是 `MyFunction` 的 c.exe 列表：
 
 ```
 PUBLIC      MyFunction3#20
@@ -4524,17 +4452,13 @@ x 在栈的顶端，z 在栈的底部，因此这些参数是从右到左传递�
 
 我们还可以注意到，该函数的实现方式与该函数的 FASTCALL 版本完全相同。这是因为 FASTCALL 只通过寄存器传递 DWORD 大小的的参数，而浮点数不符合条件。这意味着我们上面的假设是正确的。
 
-这里是 MyFunction3 的 GCC 列表：
+这里是 `MyFunction3` 的 GCC 列表：
 
 ```
 .LC9:
     align 8
   .long 0
 ```
-
-
-
-
 
 # 浮点到整数转换
 
@@ -4569,7 +4493,7 @@ leave
 ret $20
 ```
 
-在这里我们也可以看到，在经过所有复杂的初始化后，[eb - 8]（原始为 [eb + 8]）是值 x，而 [eb - 24]（原始为 [eb - 24]）是值 z。因此，这些参数是从右向左传递的。此外，我们从最后的 fmul 指令可以推断出结果是通过 ST0 传递的。正如我们预期的那样，STDCALL 函数会清理自己的栈帧。
+在这里我们也可以看到，在经过所有复杂的初始化后，`[eb - 8]`（原始为 `[eb + 8]`）是值 x，而 `[eb - 24]`（原始为 `[eb - 24]`）是值 z。因此，这些参数是从右向左传递的。此外，我们从最后的 fmul 指令可以推断出结果是通过 `ST0` 传递的。正如我们预期的那样，STDCALL 函数会清理自己的栈帧。
 
 ### 21.2.4 结论
 
@@ -4583,7 +4507,7 @@ ret $20
 
 ### 22.1 示例：浮点算术
 
-这里是 C 源代码，一个执行简单浮点算术的 C 语言函数的 GCC 汇编列表。你能确定 LC5 和 LC6 的数值是多少吗？
+这里是 C 源代码，一个执行简单浮点算术的 C 语言函数的 GCC 汇编列表。你能确定 `LC5` 和 `LC6` 的数值是多少吗？
 
 ```
 __fastcall double MyFunction(double x, double y, float z)
@@ -4591,6 +4515,8 @@ __fastcall double MyFunction(double x, double y, float z)
   return (x + 1.0) * (y + 2.0) * (z + 3.0);
 }
 ```
+
+
 
 ```
 .align 8
@@ -4629,7 +4555,7 @@ leave
 ret $20
 ```
 
-对于这个，我们甚至不需要浮点计算器，尽管如果你愿意，可以使用一个（而且如果你能找到一个好用的话）。LC5 加到了 [ebp - 16]，我们知道那是 y，而 LC6 加到了 [ebp - 24]，我们知道那是 z。因此，LC5 是数字 "2.0"，而 LC6 是数字 "3.0"。注意 fld1 指令会自动将常量值 "1.0" 加载到浮点栈的顶部。
+对于这个，我们甚至不需要浮点计算器，尽管如果你愿意，可以使用一个（而且如果你能找到一个好用的话）。`LC5` 加到了 `[ebp - 16]`，我们知道那是 `y`，而 `LC6` 加到了 `[ebp - 24]`，我们知道那是 `z`。因此，`LC5` 是数字 `"2.0"`，而 `LC6` 是数字 `"3.0"`。注意 `fld1` 指令会自动将常量值 `"1.0"` 加载到浮点栈的顶部。
 
 ## 23 代码优化
 
@@ -4641,7 +4567,7 @@ ret $20
 
 编译器可以在两个时间执行优化：第一次是在中间表示阶段，第二次是在代码生成阶段。
 
-### 23.2.1 中间表示优化
+#### 23.2.1 中间表示优化
 
 在处理中间表示时，编译器可以执行各种优化，通常基于数据流分析技术。例如，考虑以下代码段：
 
@@ -4653,7 +4579,7 @@ if(x != 5)
 }
 ```
 
-优化编译器可能会注意到，在 'if (x != 5)' 这一点上，x 的值始终是常量 '5'。这允许用 '5' 替换 x，导致 '5 != 5'。然后编译器注意到结果表达式完全对常量进行操作，因此值可以在编译时计算而不是在运行时，从而将条件优化为 'if (false)'。最后，编译器看到 if 的体永远不会被执行，因此可以省略整个 if 结构。
+优化编译器可能会注意到，在 `'if (x != 5)'` 这一点上，`x` 的值始终是常量 `'5'`。这允许用 `'5'` 替换 `x`，导致 `'5 != 5'`。然后编译器注意到结果表达式完全对常量进行操作，因此值可以在编译时计算而不是在运行时，从而将条件优化为 `'if (false)'`。最后，编译器看到 `if` 的体永远不会被执行，因此可以省略整个 `if` 结构。
 
 考虑相反的情况：
 
@@ -4665,9 +4591,9 @@ if(x == 5)
 }
 ```
 
-在这种情况下，优化编译器会注意到 IF 条件始终为真，因此它甚至不会费力编写测试 x 的代码。
+在这种情况下，优化编译器会注意到 `IF` 条件始终为真，因此它甚至不会费力编写测试 `x` 的代码。
 
-### 23.2.2 控制流优化
+#### 23.2.2 控制流优化
 
 另一组可以在中间或代码生成级别执行的优化是控制流优化。这些优化中的大部分涉及消除无用分支。考虑以下代码：
 
@@ -4688,13 +4614,13 @@ if (A)
 end_A;
 ```
 
-在代码中，简单的编译器会生成从 C 块到 end_B，然后从 end_B 跳到 end_A（以获取 E 语句）。显然，跳转是低效的，因此优化编译器将直接从块块跳转到 end_A。
+在代码中，简单的编译器会生成从 `C` 块到 `end_B`，然后从 `end_B` 跳到 `end_A`（以获取 `E` 语句）。显然，跳转是低效的，因此优化编译器将直接从块块跳转到 `end_A`。
 
-遗憾的是，这会让代码变得更加混乱，并防止恢复原始代码。对于复杂的函数，可能必须考虑仅由 if()-goto; 序列组成的代码，而无法识别高级语句如 if-else 或循环。
+遗憾的是，这会让代码变得更加混乱，并防止恢复原始代码。对于复杂的函数，可能必须考虑仅由 `if()-goto;` 序列组成的代码，而无法识别高级语句如 `if-else` 或循环。
 
 识别高级语句结构的过程被称为“代码结构化”。
 
-### 23.2.3 代码生成优化
+#### 23.2.3 代码生成优化
 
 一旦编译器过滤了代码中所有的逻辑低效之处，代码生成器就会接管。通常代码生成器会将较慢的机器指令替换为更快的机器指令。
 
@@ -4717,7 +4643,7 @@ jne beginning
 
 147
 
-那么编译器还会使用 loopxx 指令吗？答案是，大多数优化编译器从未使用 loopxx，因此使用以下指令更合理：
+那么编译器还会使用 `loopxx` 指令吗？答案是，大多数优化编译器从未使用 `loopxx`，因此使用以下指令更合理：
 
 ```
 mov eax, 0
@@ -4734,10 +4660,6 @@ xor eax
 ```
 mov eax,0
 ```
-
-
-
-
 
 ## 24 优化示例
 
@@ -4853,11 +4775,11 @@ _TEXT ENDS
 
 如你所见，优化版本比未优化版本要短得多。一些关键区别包括：
 
-- 优化版本没有准备标准的栈帧。这一点很重要，因为很多时候新的反汇编器假设函数总是以正确的栈帧开始和结束的，而这里显然并非如此。EBP 没有被使用，ESP 没有被修改（因为局部变量被保存在寄存器中，而不是放在栈上），并且没有调用子函数。这减少了 5 条指令。
+- 优化版本没有准备标准的栈帧。这一点很重要，因为很多时候新的反汇编器假设函数总是以正确的栈帧开始和结束的，而这里显然并非如此。`EBP` 没有被使用，`ESP` 没有被修改（因为局部变量被保存在寄存器中，而不是放在栈上），并且没有调用子函数。这减少了 5 条指令。
 
-- 未优化输出中 `line 4` 处的 `test 'EAX, EAX'` 系列指令是不必要的。while 循环由 `while(1)` 定义，因此循环会一直持续。这段额外的代码很容易被删掉。同时注意，这里没有无条件跳转。`if(r == 0) return` 指令变成了新的循环条件。
+- 未优化输出中 `line 4` 处的 `test 'EAX, EAX'` 系列指令是不必要的。`while` 循环由 `while(1)` 定义，因此循环会一直持续。这段额外的代码很容易被删掉。同时注意，这里没有无条件跳转。`if(r == 0) return` 指令变成了新的循环条件。
 
-- 函数结构发生了变化；对 m 和 n 的除法操作在函数中执行了两次：一次在函数开始时初始化，一次在循环结束。编译器在处理存储分配方面非常慷慨，并丢弃了不需要的值。
+- 函数结构发生了变化；对 `m` 和 `n` 的除法操作在函数中执行了两次：一次在函数开始时初始化，一次在循环结束。编译器在处理存储分配方面非常慷慨，并丢弃了不需要的值。
 
 ### 24.2 示例：手动优化
 
@@ -4869,7 +4791,7 @@ test eax, eax
 je SHORT $L473
 ```
 
-这一行是为 `while(1 )` C 代码生成的，表示循环条件。因为这是一个无限循环，我们可以假设这些行是不必要的。`mov eax, 1` 初始化了 eax，随后的 `test` 指令实际上是在检查 eax 是否为非零。条件跳转可以被移除。另一个事实是，`for` 循环的 C 代码：
+这一行是为 `while(1 )` C 代码生成的，表示循环条件。因为这是一个无限循环，我们可以假设这些行是不必要的。`mov eax, 1` 初始化了 `eax`，随后的 `test` 指令实际上是在检查 `eax` 是否为非零。条件跳转可以被移除。另一个事实是，`for` 循环的 C 代码：
 
 ```
 for( ; )
@@ -4879,7 +4801,7 @@ for( ; )
 
 ### 24.3 示例：追踪变量
 
-这里是上述 EuclidGCD 函数的 C 代码和优化后的汇编。你能确定哪些寄存器包含变量 **r** 和 **q** 吗？
+这里是上述 `EuclidGCD` 函数的 C 代码和优化后的汇编。你能确定哪些寄存器包含变量 **r** 和 **q** 吗？
 
 ```c
 /* line 1
@@ -4938,11 +4860,11 @@ _TEXT ENDS
 END
 ```
 
-在函数开头，eax 包含 m，esi 包含 n。执行指令 `idiv esi` 时，eax 包含商 (q)，edx 包含余数 (r)。指令 `mov ecx, edx` 将 r 移动到 ecx，而 q 未被使用。
+在函数开头，`eax` 包含 `m`，`esi` 包含 `n`。执行指令 `idiv esi` 时，`eax` 包含商 `q`，`edx` 包含余数 `r`。指令 `mov ecx, edx` 将 `r` 移动到 `ecx`，而 `q` 未被使用。
 
 ## 24.4 示例：反编译优化代码
 
-以下是上述 EuclidGCD 函数的优化列表。你能将这段汇编反编译为等效的 C 代码吗？优化版本与未优化版本有什么不同？
+以下是上述 `EuclidGCD` 函数的优化列表。你能将这段汇编反编译为等效的 C 代码吗？优化版本与未优化版本有什么不同？
 
 ```asm
 PUBLIC _EuclidGCD
@@ -5008,10 +4930,12 @@ int EuclidGCD(int m, int n)
 ### 24.5 示例：指令配对
 
 Q
-为什么 dec/jne 移动得比等效的 looppnz 快？
+
+为什么 `dec/jne` 移动得比等效的 `looppnz` 快？
 
 A
-dec/jnz 配在 netburst 流水线的不同模块中，因此它们可以同时执行。除了 dec 和 jnz 都只需要少数周期即可执行外，looppnz（实际上是所有的循环指令）指令的完成需要更多周期。优秀的编译器很少看到循环指令。
+
+`dec/jnz` 配在 `netburst` 流水线的不同模块中，因此它们可以同时执行。除了 `dec` 和 `jnz` 都只需要少数周期即可执行外，`looppnz`（实际上是所有的循环指令）指令的完成需要更多周期。优秀的编译器很少看到循环指令。
 
 ### 24.6 示例：避免分支
 
@@ -5026,10 +4950,6 @@ sbb eax, eax
 and eax, edx
 ret
 ```
-
-
-
-
 
 ## 24.7 示例：Duff 设备 (Duff's Device)
 
@@ -5074,9 +4994,13 @@ Duff 设备被认为是复制字符串、数组或数据流最高效的通用方
 混淆可以是许多形式：
 
 - 在运行前进行解密的加密代码。
+
 - 在运行前进行解压缩的压缩代码。
+
 - 包含加密段和简单解密器的可执行文件。
+
 - 以难以阅读的顺序排列的代码指令。
+
 - 以非明显方式使用的代码指令。
 
 本章尝试研究一些常见的代码混淆方法，但不一定深入探讨破解混淆的方法。
@@ -5086,24 +5010,32 @@ Duff 设备被认为是复制字符串、数组或数据流最高效的通用方
 优化编译器会参与一种名为**交织**的过程，以试图最大化流水线处理器器中的并行性。这种技术基于两个前提：
 
 - 1. 某些指令可以乱序执行并保持正确的输出
+
 - 2. 处理器可以同时执行某些任务对
 
-### 25.3.1 x86 NetBurst 架构
+#### 25.3.1 x86 NetBurst 架构
 
 Intel **NetBurst 架构** 将 x86 处理器分为两个部分：支持硬件和原始核心处理器。处理器的原始核心具有盲速计算的能力，但不包含我们熟悉的指令。处理器将代码指令转换为称为“微操作”（micro-ops）的形式，然后由原始核心处理器处理。
 
 处理器还可以被分为 4 个组件或模块，每个模块都能够执行任务。由于每个模块都可以独立运行，只要这些任务可以由 4 个模块中的每一个执行，处理器核心就可以*同时*处理多达 4 个独立任务：
 
 | 端口 (Port) | 描述 |
+
 | :--- | :--- |
+
 | Port0 | 双速整数算术、浮点加载、内存存储 |
+
 | Port1 | 双速整数算术、浮点算术 |
+
 | Port2 | 内存读取 |
+
 | Port3 | 内存写入（写入地址总线） |
 
-例如，处理器可以在 Port0 和 Port1 中同时执行 2 条整数算术指令，编译器会经常尽力将算术指令放在一起。如果时机恰好，在一个指令周期内可以执行最多 4 条算术指令。
 
-注意写入内存的速度特别慢（需要由 Port3 写入地址，而数据本身由 Port0 写入）。浮点数在操作之前需要加载到 FPU 中，因此浮点加载指令和浮点算术指令无法在单个指令周期内对单个值进行操作。因此，看到加载浮点值、处理整数值、然后对浮点值进行操作并不罕见。
+
+例如，处理器可以在 `Port0` 和 `Port1` 中同时执行 2 条整数算术指令，编译器会经常尽力将算术指令放在一起。如果时机恰好，在一个指令周期内可以执行最多 4 条算术指令。
+
+注意写入内存的速度特别慢（需要由 `Port3` 写入地址，而数据本身由 `Port0` 写入）。浮点数在操作之前需要加载到 `FPU` 中，因此浮点加载指令和浮点算术指令无法在单个指令周期内对单个值进行操作。因此，看到加载浮点值、处理整数值、然后对浮点值进行操作并不罕见。
 
 ### 25.4 非直观指令
 
@@ -5116,10 +5048,13 @@ Intel **NetBurst 架构** 将 x86 处理器分为两个部分：支持硬件和�
 #### 示例 1
 
 快
+
 ```assembly
 xor eax, eax
 ```
+
 慢
+
 ```assembly
 mov eax, 0
 ```
@@ -5127,10 +5062,13 @@ mov eax, 0
 #### 示例 2
 
 快
+
 ```assembly
 shl eax, 3
 ```
+
 慢
+
 ```assembly
 mul eax, 8
 ```
@@ -5140,12 +5078,15 @@ mul eax, 8
 #### 示例 3
 
 快
+
 ```assembly
 push $next_instr
 jmp $some_function
 $next_instr:...
 ```
+
 慢
+
 ```assembly
 call $some_function
 ```
@@ -5153,18 +5094,21 @@ call $some_function
 #### 示例 4
 
 快
+
 ```assembly
 pop eax
 jmp eax
 ```
+
 慢
+
 ```assembly
 retn
 ```
 
 ### 25.4.1 常见指令替换
 
-lea
+`lea`
 
 指令的格式如下：
 
@@ -5172,12 +5116,9 @@ lea
 lea dest, (XS):[reg1 + reg2 * x]
 ```
 
-其中 XS 是段寄存器（SS, DS, CS 等），reg1 是基址地址，reg2 是变量偏移量，x 是乘法比例因子。
+其中 `XS` 是段寄存器（`SS`, `DS`, `CS` 等），`reg1` 是基址地址，`reg2` 是变量偏移量，`x` 是乘法比例因子。
 
-
-
-
-xchg 交换两个寄存器、寄存器或内存地址的内容。值得注意的一点是，xchg 的运行速度比 move 指令快。因此，当源中的值不再需要保存时，可以使用 xchg 将值从源地址移动到目的地。
+`xchg` 交换两个寄存器、寄存器或内存地址的内容。值得注意的一点是，`xchg` 的运行速度比 `move` 指令快。因此，当源中的值不再需要保存时，可以使用 `xchg` 将值从源地址移动到目的地。
 
 例如，考虑以下代码：
 
@@ -5186,7 +5127,7 @@ mov ebx, eax
 mov eax, 0
 ```
 
-在这里，eax 中的值被存储在 ebx 中，然后向 eax 加载零值。我们可以使用 xchg 和 xor 来执行相同的操作：
+在这里，`eax` 中的值被存储在 `ebx` 中，然后向 `eax` 加载零值。我们可以使用 `xchg` 和 `xor` 来执行相同的操作：
 
 ```
 xchg eax, ebx
@@ -5201,7 +5142,7 @@ xor eax, eax
 
 ### 25.6 代码变换
 
-代码变换是一种重新排列代码的方法，使其执行完全相同的任务，但变得更难以跟踪和反汇编。我们可以通过示例最好地演示这种技术。假设我们有两个函数，FunctionA 和 FunctionB。这两个函数都由 3 个独立部分组成，并顺序执行。我们可以将其拆解如下：
+代码变换是一种重新排列代码的方法，使其执行完全相同的任务，但变得更难以跟踪和反汇编。我们可以通过示例最好地演示这种技术。假设我们有两个函数，`FunctionA` 和 `FunctionB`。这两个函数都由 3 个独立部分组成，并顺序执行。我们可以将其拆解如下：
 
 ```
 FunctionA()
@@ -5251,7 +5192,7 @@ main:
 end:
 ```
 
-如你所见，这难读得多，尽管它完美地保留了原始代码的程序流。这段代码对于人类来说很难阅读，但对于自动化调试工具（如 IDA Pro）来说一点也不难。
+如你所见，这难读得多，尽管它完美地保留了原始代码的程序流。这段代码对于人类来说很难阅读，但对于自动化调试工具（如 `IDA Pro`）来说一点也不难。
 
 ### 25.7 不透明谓词 (Opaque Predicate)
 
@@ -5261,13 +5202,14 @@ end:
 
 代码可以加密，就像任何其他类型的数据一样，但代码还可以加密并解密自身。加密的程序无法直接反汇编。然而，此类程序无法直接运行，因为 CPU 无法正确解释加密的操作码。因此，加密程序在运行之前必须包含某种解密自身的方法。
 
-最基础的方法包含一个小的根程序（stub），解密可执行文件的剩余部分，然后将控制权交给解密后的程序。
+最基础的方法包含一个小的根程序（`stub`），解密可执行文件的剩余部分，然后将控制权交给解密后的程序。
 
 ### 25.8.1 反汇编加密代码
 
 要反汇编加密的可执行文件，你必须先确定代码是如何解密的。代码可以通过两种主要方式之一解密：
 
 - 1. 一次解密。整个代码部分在一次通过中解密，并在执行期间保持解密状态。使用调试器允许解密程序完全运行，然后将解密后的代码导出到文件中进行进一步分析。
+
 - 2. 分块解密。代码被加密在不同的块中，每个块可能有不同的加密密钥。块在使用前解密，在使用后重新加密。使用调试器，你可以尝试捕获所有解密密钥，然后使用这些密钥一次性解密整个程序，或者等待块解密，然后将每个块单独导出到单独的文件进行分析。
 
 ## 26 调试器检测器
@@ -5278,7 +5220,7 @@ end:
 
 ### 26.2 IsDebuggerPresent
 
-Win32 API 包含一个 IsDebuggerPresent 函数，如果附加了调试器，它将返回一个布尔值。你可能会感到惊讶，运行中的程序实际上可以检测到已附加的用户态调试器的存在。
+`Win32 API` 包含一个 `IsDebuggerPresent` 函数，如果附加了调试器，它将返回一个布尔值。你可能会感到惊讶，运行中的程序实际上可以检测到已附加的用户态调试器的存在。
 
 ```
 if (IsDebuggerPresent()) {
@@ -5288,7 +5230,7 @@ if (IsDebuggerPresent()) {
 
 ### 26.3 PEB
 
-进程环境块（PEB）存储了 IsDebuggerPresent 标记。要访问它，可以使用代码：
+进程环境块（`PEB`）存储了 `IsDebuggerPresent` 标记。要访问它，可以使用代码：
 
 ```
 mov eax, fs:[30h]
@@ -5302,62 +5244,94 @@ test eax, eax
 
 ### 26.5 SoftICE
 
-SoftICE 是一个内核调试器。有很多方法可以检测它，例如检查特定的注册表项。
+`SoftICE` 是一个内核调试器。有很多方法可以检测它，例如检查特定的注册表项。
 
 ### 26.6 OllyDbg
 
-OllyDbg 是一个流行的调试器。有很多技术可以检测它，例如检查它的断点或特定的产物。
-
-
-
+`OllyDbg` 是一个流行的调试器。有很多技术可以检测它，例如检查它的断点或特定的产物。
 
 # 资源
 
 - http://www.opensolaris.org/os/community/mdb/ 错误跟踪器7
+
 - 免费调试工具、静态源代码分析工具、函数
+
 - 微软开发者网络 (MSN): http://msdn.microsoft.com
+
 - Graham Hamilton: http://garlethegeek.ga.funpic.de/
+
 - B. Leveseverge PE 格式描述: http://www.cs.bilkent.tr/-hozgur/PE_TT format description
+
 - TheCorp "TypeLib 数据格式规范": http://thecorp.byethost11.com/index.php?v=TypeLib
+
 - MSDN 调用约定页面: msdn.microsoft.com/library/default.asp?url=library/en-us/vcc98/core_calling_conventions_topics.asp
+
 - 算法与数据结构字典
+
 - Charles Petzold 的主页: http://www.charlespetzold.com/
+
 - Donald Knight 的主页: http://cs-faculty.stanford.edu/~knuth/
+
 - Mark Sokes 2000 年著的《ISA 和 PC/104 总线》
+
 - Baser Bostaan 2005 年著的《实战逆向 CRC16》
+
 - 1499 著的《CRC 以及如何逆向它》11
+
 - Matthew Russotto 著的《逆向工程是一种生活方式12》
+
 - “逆向与重工程 Wiki13”
+
 - F-Secure 挑战赛 III: 2008：逆向工程竞赛14（这是一个年度挑战赛吗）
+
 - “打破鸡蛋做煎蛋：多媒体技术与逆向工程主题15
 
 ## 27.2. 图籍
 
 - Eilam, Eldad. 《逆向：逆向工程的秘密。》2005. Wiley Publishing Inc. ISBN 0764574817
+
 - Hyde, Randall. 《汇编语言艺术。》No Starch, 2003 ISBN 1886411972
+
 - Aho, Alfred V. 等. 《编译器：原理、技术与工具。》 Addison Wesley,, 1986. ISBN: 0321428900
+
 - Steven Muchnik, 《高级编译器设计与实现。》Robert Kaufmann Publishers, 1997. ISBN-1-55860-320-4
+
 - Kernighan and Ritchie, 《C 语言程序》第 2 版, 1988, Prentice Hall.
+
 - Petzold, Charles. 《Windows 编程，第五版。》Microsoft Press, 1999
+
 - Hart, John M. 《Win32 系统编程，第二版。》Addison Wesley, 2001
+
 - Gordon, Alan. 《COM 和 COM+ 编程入门。》Prentice Hall, 2000
+
 - Neuberg, Gary. 《Windows NT/2000 Native API 参考。》Macmillan, 2000
 
 7 http://www.thefree.com/programming/debuggers.html
+
 8 http://www.nist.gov/dae/
+
 9 http://www.techfest.com/hardware/bus/isa_sakos.html
+
 10 http://blog.v-nz.com/archives/2005/07/
+
 11 http://www.woodmann.com/travia/rcctuti.html
+
 12 http://speaker.org//
+
 13 http://www.program-transformation.org/Transform/ReengineeringWiki
+
 14 http://www.assembly.org/summer08/news/f-secure_challenge3
+
 15 http://multimedia.cz/eggs/category/reverse-engineering/
 
 # 外部资源
 
 - Levine, John R. 《链接器与加载器。》Morgan-Kauffman, 2000
+
 - Knuth, Donald E. 《计算机程序设计》，第 1 卷，1997, Addison Wesley.
+
 - MALWARE: 对抗恶意代码，Ed Skoudis 著，Prentice Hall, 2004
+
 - 极致 Linux 安全，第二版，Anonymous；; Sams, 2001
 
 ## #28 贡献者
@@ -5387,79 +5361,149 @@ OllyDbg 是一个流行的调试器。有很多技术可以检测它，例如检
 | 1 | Duplecode¹ |
 
 http://en.wikibooks.org/w/index.php?title=User:0x01
+
 http://en.wikibooks.org/w/index.php?title=User:Abhi166
+
 http://en.wikibooks.org/w/index.php?title=User:Adrignola
+
 http://en.wikibooks.org/w/index.php?title=User:Afog
+
 http://en.wikibooks.org/w/index.php?title=User:AlbertCahalan
+
 http://en.wikibooks.org/w/index.php?title=User:AnthonyD
+
 http://en.wikibooks.org/w/index.php?title=User:Az1568
+
 http://en.wikibooks.org/w/index.php?title=User:Barthax
+
 http://en.wikibooks.org/w/index.php?title=User:C1de0x
+
 http://en.wikibooks.org/w/index.php?title=User:Chazz
+
 http://en.wikibooks.org/w/index.php?title=User:Chris.digiamo
+
 http://en.wikibooks.org/w/index.php?title=User:ChrisR1
+
 http://en.wikibooks.org/w/index.php?title=User:CrazyIvan
+
 http://en.wikibooks.org/w/index.php?title=User:Cspurnrier
+
 http://en.wikibooks.org/w/index.php?title=User:Dögg
+
 http://en.wikibooks.org/w/index.php?title=User:DavidCary
+
 http://en.wikibooks.org/w/index.php?title=User:Ddouthitt
+
 http://en.wikibooks.org/w/index.php?title=User:Dennis714
+
 http://en.wikibooks.org/w/index.php?title=User:Dirk Hünmigner
+
 http://en.wikibooks.org/w/index.php?title=User:DrDnar
+
 http://en.wikibooks.org/w/index.php?title=User:Duplecode
 
 # 贡献者
 
 - 4 EleoTager
+
 - 1 Ero
+
 - 1 Frozen dude
+
 - 9 Gannalech
+
 - 18 Gcaprino
+
 - 2 Hagindaz
+
 - 1 Herbythyme
+
 - 5 Hexed321
+
 - 24 Isaiah.v
+
 - 2 JamesCrook
+
 - 2 Jason Lee
+
 - 2 Jfantis
+
 - 1 Jodel
+
 - 1 Jonegat
+
 - 2 Jsvcycling
+
 - 2 Kaosone
+
 - 1 KenMacD
+
 - 1 Leonus
+
 - 5 Macpunk
+
 - 22 Mantis
+
 - 1 Marcika
+
 - 1 Mdupont
+
 - 1 MichaelFrey
+
 - 1 Mike Emmerik
+
 - 2 Mohammedbrahim
 
 http://en.wikibooks.org/w/index.php?title=User:EleoTager
+
 http://en.wikibooks.org/w/index.php?title=User:Ero
+
 http://en.wikibooks.org/w/index.php?title=User:Frozen_dude
+
 http://en.wikibooks.org/w/index.php?title=User:Gannalech
+
 http://en.wikibooks.org/w/index.php?title=User:Gcaprino
+
 http://en.wikibooks.org/w/index.php?title=User:Hagindaz
+
 http://en.wikibooks.org/w/index.php?title=User:Herbythyme
+
 http://en.wikibooks.org/w/index.php?title=User:Hexed321
+
 http://en.wikibooks.org/w/index.php?title=User:Isaiah.v
+
 http://en.wikibooks.org/w/index.php?title=User:JamesCrook
+
 http://en.wikibooks.org/w/index.php?title=User:Jason_Lee
+
 http://en.wikibooks.org/w/index.php?title=User:Jfantis
+
 http://en.wikibooks.org/w/index.php?title=User:Jodel
+
+
+
 http://en.wikibooks.org/w/index.php?title=User:Jonegat
+
 http://en.wikibooks.org/w/index.php?title=User:Jsvcycling
+
 http://en.wikibooks.org/w/index.php?title=User:Kaosone
+
 http://en.wikibooks.org/w/index.php?title=User:KenMacD
+
 http://en.wikibooks.org/w/index.php?title=User:Leonus
+
 http://en.wikibooks.org/w/index.php?title=User:Macpunk
+
 http://en.wikibooks.org/w/index.php?title=User:Mantis
+
 http://en.wikibooks.org/w/index.php?title=User:Marcika
+
 http://en.wikibooks.org/w/index.php?title=User:Mdupont
+
 http://en.wikibooks.org/w/index.php?title=User:MichaelFrey
+
 http://en.wikibooks.org/w/index.php?title=User:Mike_Van_Emmerik
+
 http://en.wikibooks.org/w/index.php?title=User:Mohammedbrahim
 
 # 外部资源
@@ -5488,35 +5532,53 @@ http://en.wikibooks.org/w/index.php?title=User:Mohammedbrahim
 - 7 Wikimoder
 
 47 http://en.wikibooks.org/w/index.php?title=User:Mshoule
+
 http://en.wikibooks.org/w/index.php?title=User:NipplesCool
+
 http://en.wikibooks.org/w/index.php?title=User:Orderud
+
 http://en.wikibooks.org/w/index.php?title=User:Perpetuum
+
 http://en.wikibooks.org/w/index.php?title=User:Unusual
+
 http://en.wikibooks.org/w/index.php?title=User:Quoth
+
 http://en.wikibooks.org/w/index.php?title=User:Recent_Runes
+
 http://en.wikibooks.org/w/index.php?title=User:Sientes
+
 http://en.wikibooks.org/w/index.php?title=User:Shnizzy
+
 http://en.wikibooks.org/w/index.php?title=User:Shokuku
+
 http://en.wikibooks.org/w/index.php?title=User:Sigma_7
+
 http://en.wikibooks.org/w/index.php?title=User:Spouch88
+
 http://en.wikibooks.org/w/index.php?title=User:Svdb
+
 http://en.wikibooks.org/w/index.php?title=User:Swatnio
+
 http://en.wikibooks.org/w/index.php?title=User:Swift
+
 http://en.wikibooks.org/w/index.php?title=User:Sz
+
 http://en.wikibooks.org/w/index.php?title=User:Timjr
+
 http://en.wikibooks.org/w/index.php?title=User:Ulf_Abrahamsson
+
 http://en.wikibooks.org/w/index.php?title=User:Van_der_Hoorn
+
 http://en.wikibooks.org/w/index.php?title=User:Voomoo
+
 http://en.wikibooks.org/w/index.php?title=User:Whiteknight
 
-
-
-
-
 4 Wj32^{72}
+
 1 X-Fi6^{73}
 
 72 http://en.wikibooks.org/w/index.php?title=User:Wj32
+
 73 http://en.wikibooks.org/w/index.php?title=User:X-Fi6
 
 # 图表列表
@@ -5537,7 +5599,6 @@ http://en.wikibooks.org/w/index.php?title=User:Whiteknight
 - EURO: 这是欧元硬币的共同（反）面。欧元硬币共同面的版权属于欧盟委员会。允许在无浮凸的格式（图画、绘画、电影）中进行授权复制，只要这些复制不对欧元的形象造成损害。
 - LFK: 自由艺术许可。http://artlibre.org/licence/lal/de
 - CFR: 版权自由使用。
-
 - EPL: Eclipse 公共许可证。http://www.eclipse.org/documents/epl-v10.php
 
 GPL、LGPL 以及 GFDL 的副本包含在第^74 节许可证中。请注意，公有领域的图像不需要署名。您可以点击下表中的图编号，在您的浏览器中打开图像的网页。
@@ -5563,17 +5624,29 @@ GPL、LGPL 以及 GFDL 的副本包含在第^74 节许可证中。请注意，�
 | 15 | | GFDL |
 
 75 http://en.wikibooks.org/wiki/User:Whiteknight
+
 76 http://en.wikibooks.org/
+
 77 http://en.wikibooks.org/wiki/User:Whiteknight
+
 78 http://en.wikibooks.org/
+
 79 http://en.wikibooks.org/wiki/User:Whiteknight
+
 80 http://en.wikibooks.org/
+
 81 http://en.wikibooks.org/wiki/User:Suerueña
+
 82 http://en.wikibooks.org/wiki/User:Boivie
+
 83 http://en.wikibooks.org/wiki/User:Thedsadude
+
 84 http://en.wikibooks.org/
+
 85 http://en.wikibooks.org/wiki/User:Thedsadude
+
 86 http://en.wikibooks.org/
+
 87 http://en.wikibooks.org/
 
 # GNU 通用公共许可证
@@ -5583,10 +5656,6 @@ GPL、LGPL 以及 GFDL 的副本包含在第^74 节许可证中。请注意，�
 版权所有 © 2007 Free Software Foundation, Inc.
 
 均允许自由地复制和分发作品，前提是保持不变，但您不能这样做。GNU 通用公共许可证是自由软件及所有基于此作品的适当许可证。更多详情请阅读全文 <://www.gnu.org/licenses/gpl-3.0>。通过使用本程序，您承认已阅读并接受本许可证的条款。如果您希望以自由软件的形式发布程序，通用许可证允许您向接收程序副本的人授予权利。如果您分发该作品的副本，或者您对其进行修改并发布，必须确保整个作品受本许可证的保护。您也可以为提供作品的物理媒介收取合理的费用。某些编辑器设计用于显示交互链接。在这种情况下，链接不被视为打印文本。除了第 7 节“使用限制”外，如果您想发布基于本程序但不包含本程序任何部分的作品，可以根据自己选择的条款进行，只要该作品不限制本许可证所授予的权利。“接口”被定义为任何包含协议的接口，例如定义的调用接口、套接接口、文件系统接口或任何两个程序通信的机制。“标准接口”指的是允许对实现进行独立修改的接口，例如定义的稳定的二进制接口，或任何允许不同程序处理存储在共同格式中的数据的机制。“交互式工作”是指允许用户与程序交互并由其提示的图形用户界面。您可以根据本许可证的条款，以源代码的形式分发程序或其任何部分，或者以目标代码、可执行代码或其他翻译作品的形式分发。作品的“源代码”指的是用于修改它的所有优选形式，包括所有安装脚本、编译脚本以及生成和安装输出时使用的辅助文件。作品的“相应源代码”包括生成、安装和运行该作品的所有源码，以及在该过程中使用的脚本和辅助代码。您可以根据本许可证的条款，以源代码的形式分发程序或其任何部分，或者以目标代码、可执行代码或其他翻译作品的形式分发。如果您以目标代码的形式分发程序或其任何部分，您必须提供该作品的相应源代码，并允许接收者修改和重新编译该作品。“作品的传递”包括以目标代码形式传递该作品以及对应的任何“交互式工作”或“相应源代码”。
-
-
-
-
 
 # 29.2 自由文档许可证
 
@@ -5631,6 +5700,4 @@ GNU 通用公共许可证
 0. 版权许可的授予。每个程序（您随本许可证副本一起接收的程序）或您在 GNU 通用公共许可证第 3 版下在其或其部分基础上构建的任何作品的作者，均授予您和根据本协议传输程序的所有接收者：
 
 - 您还授予每个接收者使用和修改该程序的权利，但实施本许可证条件和/或接收信息所需的权利除外。
-
 - 您授予每个接收者对该程序进行分许可的权利，并根据这些条款分发副本和/或修改版本的权利，前提是每个接收者也接收了本许可证的副本。
-

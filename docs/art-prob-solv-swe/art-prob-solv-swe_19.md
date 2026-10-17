@@ -1,7 +1,7 @@
+
 # 参考文献
 
 > 原文：[`enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/References.html`](https://enhancedformysql.github.io/The-Art-of-Problem-Solving-in-Software-Engineering_How-to-Make-MySQL-Better/References.html)
-
 
 [1] Zeitz, P. (1999). 问题解决的艺术与技巧。纽约：John Wiley。
 
@@ -9,17 +9,17 @@
 
 [3] Johnson, R. 等。多核和多插槽硬件上写入前日志的可扩展性。VLDBJ，第 239–263 页，2012 年。
 
-[4] Collin McCurdy 和 Jeffrey Vetter。2010。Memphis：在多核平台上寻找和修复 NUMA 相关的性能问题。在 IEEE 国际系统与软件性能分析会议（ISPASS’10），第 87–96 页。
+[4] Collin McCurdy 和 Jeffrey Vetter。2010。Memphis：在多核平台上寻找和修复 NUMA 相关的性能问题。在 IEEE 国际系统与软件性能分析会议（`ISPASS’10`），第 87–96 页。
 
 [5] T. Kiefer, B. Schlegel, 和 W. Lehner。NUMA 对数据库管理系统影响的实验评估。在 BTW，2013 年。
 
-[6] A. Alquraan, H. Takruri, M. Alfatafta, 和 S. Al-Kiswany。云系统中网络分区故障分析。在第 13 届 USENIX 操作系统设计与实现会议，OSDI’18，第 51–68 页，Carlsbad, CA, USA，2018 年。USENIX 协会。
+[6] A. Alquraan, H. Takruri, M. Alfatafta, 和 S. Al-Kiswany。云系统中网络分区故障分析。在第 13 届 USENIX 操作系统设计与实现会议，`OSDI’18`，第 51–68 页，Carlsbad, CA, USA，2018 年。USENIX 协会。
 
 [7] Adnan Alhomssi 和 Viktor Leis. 2023. 可扩展且鲁棒的快照隔离技术用于高性能存储引擎。VLDB Endowment 16, 6 (2023), 1426–1438.
 
 [8] Y. Wang, M. Yu, Y. Hui, F. Zhou, Y. Huang, R. Zhu, 等。2022。数据库性能对实验设置的敏感性研究，VLDB Endowment，第 15 卷，第 7 期。
 
-[9] M. Raasveldt, P. Holanda, T. Gubner, 和 H. Muhleisen。公平基准测试困难重重：数据库性能测试中的常见陷阱。在第 7 届国际数据库系统测试研讨会，DBTest，第 2:1–2:6 页，2018 年。
+[9] M. Raasveldt, P. Holanda, T. Gubner, 和 H. Muhleisen。公平基准测试困难重重：数据库性能测试中的常见陷阱。在第 7 届国际数据库系统测试研讨会，`DBTest`，第 2:1–2:6 页，2018 年。
 
 [10] M. Harchol-Balter。计算机系统性能建模与设计：排队论的实际应用。剑桥大学出版社，纽约，NY，USA，第 1 版，2013 年。
 
@@ -29,7 +29,7 @@
 
 [13] https://dev.mysql.com/doc/refman/8.0/en/
 
-[14] 阿里云。2019. OceanBase 在 TPC-C 基准测试中优于任何其他数据库。alibaba-cloud.medium.com。
+[14] 阿里云。2019. OceanBase 在 TPC-C 基准测试中优于任何其他数据库。`alibaba-cloud.medium.com`。
 
 [15] B. H. Dowden. 逻辑推理（加利福尼亚州立大学，萨克拉门托，CA，2019 年）。
 
@@ -55,7 +55,7 @@
 
 [26] 拉奥，谢基塔，和塔塔。使用 paxos 构建可扩展、一致且高度可用的数据存储。VLDB，2011。
 
-[27] [帕维尔·奥尔查瓦](https://dev.mysql.com/blog-archive/?author=Pawe%C5%82%20Olchawa)。2018。MySQL 8.0：新的无锁、可扩展 WAL 设计。dev.mysql.com/blog-archive。
+[27] [帕维尔·奥尔查瓦](https://dev.mysql.com/blog-archive/?author=Pawe%C5%82%20Olchawa)。2018。MySQL 8.0：新的无锁、可扩展 WAL 设计。`dev.mysql.com/blog-archive`。
 
 [28] 马丁·克莱普曼。设计数据密集型应用。英文版。1 版。奥雷利媒体，2017 年 1 月。ISBN：978-1-4493-7332-0。
 
@@ -77,7 +77,7 @@
 
 [37] D. Terry. 通过棒球解释复制数据一致性，微软技术报告 MSR-TR-2011-137，2011 年 10 月。即将发表在《ACM 通讯》上，2013 年 12 月。
 
-[38] Anirban Rahut, Abhinav Sharma, Yichen Shen, Ahsanul Haque. 2023\. 在 Meta 构建和部署 MySQL Raft。engineering.fb.com。
+[38] Anirban Rahut, Abhinav Sharma, Yichen Shen, Ahsanul Haque. 2023\. 在 Meta 构建和部署 MySQL Raft。`engineering.fb.com`。
 
 [39] Taipalus T. 数据库管理系统性能比较：系统综述。在线发布于 2023 年 1 月 3 日。2023 年 7 月 31 日访问。http://arxiv.org/abs/2301.01095。
 
@@ -87,7 +87,7 @@
 
 [42] Ritwik Yadav 和 Anirban Rahut. 2023\. FlexiRaft：Raft 的灵活法定人数。创新数据系统研究会议（CIDR）(2023 年)。
 
-[43] Jung-Sang Ahn, Woon-Hak Kang, Kun Ren, Guogen Zhang, 和 Sami Ben-Romdhane. 2019\. 使用共识协议设计一个高效的复制日志存储。在第 11 届 USENIX 云计算热点话题研讨会（HotCloud 19）上。
+[43] Jung-Sang Ahn, Woon-Hak Kang, Kun Ren, Guogen Zhang, 和 Sami Ben-Romdhane. 2019\. 使用共识协议设计一个高效的复制日志存储。在第 11 届 USENIX 云计算热点话题研讨会（`HotCloud 19`）上。
 
 [44] Arunprasad P. Marathe, Shu Lin, Weidong Yu, Kareem El Gebaly, Per-Åke Larson, 和 Calvin Sun. 2022\. 将 Orca 优化器集成到 MySQL 中。在 25 届国际扩展数据库技术会议（EDBT 2022）论文集中，爱丁堡，英国，2022 年 3 月 29 日至 4 月 1 日。OpenProceedings.org，第 2 卷，第 511–2:523 页。
 
@@ -97,11 +97,11 @@
 
 [47] https://www.candtsolution.com/news_events-detail/what-is-the-difference-between-arm-and-x86/.
 
-[48] N. Santos 和 A. Schiper. 通过批处理和流水线调整 Paxos 以实现高吞吐量，在第 13 届国际分布式计算和网络会议（ICDCN 2012）上，2012 年 1 月。
+[48] N. Santos 和 A. Schiper. 通过批处理和流水线调整 Paxos 以实现高吞吐量，在第 13 届国际分布式计算和网络会议（`ICDCN 2012`）上，2012 年 1 月。
 
 [49] J. Kończak, N. Santos, T. Zurkowski, P. T. Wojciechowski, 和 A. Schiper. JPaxos：基于 Paxos 协议的状态机复制。技术报告，EPFL，2011 年。
 
-[50] R. N. Avula 和 C. Zou. 在各种云服务提供商上对 TPC-C 基准的性能评估，第 11 届 IEEE 年度通用计算、电子和移动通信会议（UEMCON），第 226-233 页，2020 年 10 月.
+[50] R. N. Avula 和 C. Zou. 在各种云服务提供商上对 TPC-C 基准的性能评估，第 11 届 IEEE 年度通用计算、电子和移动通信会议（`UEMCON`），第 226-233 页，2020 年 10 月.
 
 [51] Guna Prasaad，Alvin Cheung，和 Dan Suciu. 2018. 通过事务调度提高高冲突 OLTP 性能. https://arxiv.org/abs/1810.01997v1.
 
@@ -113,21 +113,23 @@
 
 [55] 周翔，蔡超，李刚，孙杰. 数据库与人工智能的融合：综述. IEEE 知识数据工程 Transactions (2020).
 
-[56] Prince Samuel. 2023. 编程中逻辑推理的作用. medium.com.
+[56] Prince Samuel. 2023. 编程中逻辑推理的作用. `medium.com`.
 
 [57] Sunny Bains. 2017. 基于冲突感知的事务调度即将在 InnoDB 中推出以提升性能. https://dev.mysql.com/blog-archive/.
 
-[58] Andres Freund. 2020. 提高 Postgres 连接可扩展性：快照. techcommunity.microsoft.com.
+[58] Andres Freund. 2020. 提高 Postgres 连接可扩展性：快照. `techcommunity.microsoft.com`.
 
 [59] J. M. Hellerstein, M. Stonebraker, 和 J. R. Hamilton. 数据库系统架构. 数据库基础与趋势. 第 1 卷第 2 期，第 141-259 页，2007 年.
 
-[60] 李传鹏，丁晨，沈凯. 量化上下文切换的成本. 在 2007 年实验计算机科学研讨会论文集中，ExpCS ‘07，美国纽约，2007 年. ACM. [61] 郝向鹏，周新静，余翔耀，Michael Stonebraker. 2024. 向缓冲管理引入分层主存储. ACM 管理数据 2，1（2024 年 2 月），文章 31 号. SIGMOD.
+[60] 李传鹏，丁晨，沈凯. 量化上下文切换的成本. 在 2007 年实验计算机科学研讨会论文集中，`ExpCS '07`，美国纽约，2007 年. ACM.
 
-[62] Guoliang Jin，Linhai Song，Xiaoming Shi，Joel Scherpelz，和 Shan Lu. 2012. 理解和检测现实世界的性能错误. 在 ACM SIGPLAN 编程语言设计与应用会议，PLDI ‘12，中国北京 - 2012 年 6 月 11 日至 16 日，第 77-88 页.
+[61] 郝向鹏，周新静，余翔耀，Michael Stonebraker. 2024. 向缓冲管理引入分层主存储. ACM 管理数据 2，1（2024 年 2 月），文章 31 号. SIGMOD.
 
-[63] Jelena Antic, Georgios Chatzopoulos, Rachid Guerraoui, 和 Vasileios Trigonakis. 2016. 简化锁机制. 在国际中间件会议（Middleware）论文集中，第 1-14 页.
+[62] Guoliang Jin，Linhai Song，Xiaoming Shi，Joel Scherpelz，和 Shan Lu. 2012. 理解和检测现实世界的性能错误. 在 ACM SIGPLAN 编程语言设计与应用会议，`PLDI '12`，中国北京 - 2012 年 6 月 11 日至 16 日，第 77-88 页.
 
-[64] D. Dice 和 A. Kogan, “通过限制并发来避免可扩展性崩溃”在 Euro-Par 2019：并行处理，Cham：Springer 国际出版社，第 363-376 页，2019 年.
+[63] Jelena Antic, Georgios Chatzopoulos, Rachid Guerraoui, 和 Vasileios Trigonakis. 2016. 简化锁机制. 在国际中间件会议（`Middleware`）论文集中，第 1-14 页.
+
+[64] D. Dice 和 A. Kogan, “通过限制并发来避免可扩展性崩溃”在 `Euro-Par 2019`：并行处理，Cham：Springer 国际出版社，第 363-376 页，2019 年.
 
 [65] https://github.com/session-replay-tools/tcpcopy.
 
@@ -141,6 +143,6 @@
 
 [70] Graefe G (2010) B 树锁定技术的综述. ACM 数据库系统 Transactions 35(3):16
 
-[71] 让-皮埃尔·洛齐（Jean-Pierre Lozi）、巴蒂斯特·勒佩尔（Baptiste Lepers）、贾斯汀·芬斯顿（Justin Funston）、法比恩·高德（Fabien Gaud）、维维安·克玛（Vivien Quéma）和亚历山德拉·费多罗娃（Alexandra Fedorova）。Linux 调度器：十年浪费的核心。载于第十一届欧洲计算机系统会议论文集，EuroSys ‘16，纽约，纽约，美国，2016 年。计算机制造协会。
+[71] 让-皮埃尔·洛齐（Jean-Pierre Lozi）、巴蒂斯特·勒佩尔（Baptiste Lepers）、贾斯汀·芬斯顿（Justin Funston）、法比恩·高德（Fabien Gaud）、维维安·克玛（Vivien Quéma）和亚历山德拉·费多罗娃（Alexandra Fedorova）。Linux 调度器：十年浪费的核心。载于第十一届欧洲计算机系统会议论文集，`EuroSys '16`，纽约，纽约，美国，2016 年。计算机制造协会。
 
 下一页

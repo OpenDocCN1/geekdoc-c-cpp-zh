@@ -1,17 +1,9 @@
+
 # TypeScript 深度探究
-
-
-
-
-
-
-
-
-
 
 我一直在关注人们开始使用 TypeScript 时出现的问题。这些基于 Stack Overflow 和与社区的互动。你可以关注更新，不要忘记 GitHub。
 
-# 评论
+## 评论
 
 - 感谢这本精彩的书。从书中学到了很多。
 - 这可能可能是最好的。做得好。
@@ -27,14 +19,11 @@
 - 感谢，这是一本好书。
 - 深度进阶 TypeScript 在很多方面都很棒。
 - 我发现它非常有见地。
-- @basarat 的 TypeScript 简介仍然是最好的（如果不是的话）。
-
+- `@basarat` 的 TypeScript 简介仍然是最好的（如果不是的话）。
 
 如果你在这里是为了在线阅读这本书。
 
-
 书是完全免费的，你可以无需许可复制粘贴任何内容。如果你有想要我链接的翻译，请发送 PR。
-
 
 你也可以下载以下内容：
 
@@ -42,12 +31,9 @@
 - 用于 Windows 及其他系统的 PDF
 - 用于 Kindle 的 MOBI
 
-
 所有优秀的贡献者
 
-
-分享 URL: http://basarat.gitbooks.io/typescript/
-
+分享 URL: `http://basarat.gitbooks.io/typescript/`
 
 TypeScript 编译成 JavaScript。JavaScript 是你实际上执行的代码（在浏览器或服务器上）。所以你需要：
 
@@ -81,7 +67,6 @@ let foo = {
 /Users/bas/repos/alm/tests/success/simple/bas.tsx
 ```
 
-
 与稳定的 TypeScript 编译器不同，我们将在书中介绍许多尚未关联版本号的新内容。我通常建议人们使用 nightly 版本，因为编译器测试套会随着推推发现 bug。
 
 你可以在命令行安装它：
@@ -101,8 +86,7 @@ npm install -g typescript@next
 }
 ```
 
-
-本书的源码可以在 https://github.com/basarat/typescript-book/tree/master 获取，大部分代码示例可以复制到 alm 中并直接进行它们。对于需要额外设置的代码示例（例如 npm 模块），我们会在展示代码之前向你链接代码。
+本书的源码可以在 `https://github.com/basarat/typescript-book/tree/master` 获取，大部分代码示例可以复制到 alm 中并直接进行它们。对于需要额外设置的代码示例（例如 npm 模块），我们会在展示代码之前向你链接代码。
 
 ```typescript
 this/will/be/the/code.ts
@@ -114,10 +98,6 @@ this/will/be/the/code.ts
 
 开发环境准备后，让我们进入 TypeScript 语法。
 
-
-
-
-
 ```typescript
 foo = 123;
 foo = '456'; // Error: cannot assign `string` to `number`
@@ -126,7 +106,6 @@ foo = '456'; // Error: cannot assign `string` to `number`
 ```
 
 这种类型推断是有充分理由的。如果你像示例中那样进行某些操作，那么在代码的其余部分，你无法确定 `foo` 是数字还是字符串。这类问题会在大型多文件代码库中出现。我们稍后将深入探讨类型推断规则。
-
 
 正如我们之前提到的，TypeScript 会尽可能安全地进行推断，但你仍然可以使用注解（annotations）来：
 
@@ -146,7 +125,6 @@ foo: number = '123'; // Error: cannot assign a `string` to a `number`
 ```
 
 我们将在后面的章节中详细讨论 TypeScript 支持的所有注解语法细节。
-
 
 在某些语言中（特别是命名类型语言，nominally typed languages）中，静态类型会导致不必要的琐的操作，因为即使你知道代码可以正常运行，语言语义也会迫使你到处复制内容。这就是为什么像 C# 的 automapper 之类的工具对 C# 至关重要。在 TypeScript 中，由于我们非常希望 JavaScript 开发者能够以最小的认知负担轻松使用，类型是结构化的。这意味着鸭子类型（duck typing）是一种一级语言结构。考虑以下示例。`itPoint2D` 函数将接受任何包含它预期的所有项（x 和 y）的对象：
 
@@ -169,7 +147,6 @@ itPoint2D(point3D); // extra information okay
 itPoint2D({ x: 0 }); // Error: missing information ``
 ```
 
-
 为了方便你将 JavaScript 代码迁移到 TypeScript，即使存在编译错误，TypeScript 默认也会尽可能尽所能地输出有效的 JavaScript。例如：
 
 ```javascript
@@ -185,7 +162,6 @@ foo = '456';
 ```
 
 因此，你可以将 JavaScript 代码增量升级到 TypeScript。这与许多其他语言编译器的运行方式完全不同，这也是迁移到 TypeScript 的另一个原因。
-
 
 TypeScript 的一个主要设计目标是让你能够安全、方便在 TypeScript 中 中现有的 JavaScript 库。TypeScript 通过声明（declaration）实现了这一点。TypeScript 提供了一个在声明中愿意投入多少精力的滑动比例：你投入的精力越多，获得的类型安全和代码智能性就越高。请注意，大多数流行的 JavaScript 库的定义已经由 DefinitelyTyped 社区为你写好了，因此对于大多数用途：
 
@@ -237,19 +213,14 @@ var p2 = new Point(30, 40);
 var p3 = p1.add(p2);
 ```
 
-
 在本节中，我们提供了一些你需要的内容，以防措手不及。让我们接下来讨论它们。
-
-
 
 ```javascript
 import * as deepEqual from "deep-equal";
 console.log(deepEqual({a:123},{a:123})); // True
 ```
 
-
 除了字面量外，JavaScript 中的任何对象（包括函数、数组、正则等）都是引用。这意味着以下几点：
-
 
 ```javascript
 var foo = {};
@@ -259,7 +230,6 @@ foo.baz = 123;
 console.log(bar.baz); // 123
 ```
 
-
 ```javascript
 var foo = {};
 var bar = foo; // bar 是一个引用
@@ -268,7 +238,6 @@ var baz = {}; // baz 是一个不同于 `foo` 的“新对象”
 console.log(foo === bar); // true
 console.log(foo === baz); // false
 ```
-
 
 事实是，你需要处理这二者。只需用 `==` 检查其中之一即可。
 
@@ -291,8 +260,8 @@ function foo(arg: string | null | undefined) {
 }
 ```
 
-
 记得我应该教你如何使用 `== null` 吗？当然，你要这样做（因为我刚说了 ^）。
+
 不要将其用于根层级的东西。在严格模式（strict mode）下，如果你使用 `foo` 且它是 `undefined`，你会得到一个 `ReferenceError` 异常，整个调用栈都会回溯。
 
 所以，要在全局层级检查变量是否已定义，通常使用 `typeof`：
@@ -303,7 +272,6 @@ if (typeof someglobal !== 'undefined') {
   console.log(someglobal);
 }
 ```
-
 
 在函数内部对 `this` 关键字的任何访问实际上取决于函数是如何被调用的。这通常被称为“调用上下文”（calling context）。
 
@@ -323,8 +291,7 @@ bar.foo(); // 打印 `bar`，因为 `foo` 是在 `bar` 上被调用的
 
 所以请注意你对 `this` 的使用。如果你想断开类中 `this` 与调用上下文的连接，请使用箭头函数（arrow function），稍后会介绍。
 
-
- JavaScript 有的最棒特性就是闭包。JavaScript 中的函数可以访问在外部作用域定义的任何变量。用示例解释闭包是：
+JavaScript 有的最棒特性就是闭包。JavaScript 中的函数可以访问在外部作用域定义的任何变量。用示例解释闭包是：
 
 ```javascript
 function outerFunction(arg) {
@@ -363,7 +330,6 @@ innerFunction(); // 打印 closure!
 
 ## 为什么它很棒
 
-
 ```javascript
 function createCounter() {
   let val = 0;
@@ -394,21 +360,21 @@ server.on(function(req, res) {
 });
 ```
 
-
 在任何编程语言中处理数字时，你都需要意识到该语言处理数字的特殊性。以下是关于 JavaScript 数字的你应该注意的关键信息。
-
 
 JavaScript 只有一种数字类型。它是一个双精度 64 位数字（Number）。下面讨论它的局限性以及推荐的解决方案。
 
 
-对于那些熟悉其他语言中双精度（doubles）/浮点数（float）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
+
+## JavaScript 数字
+
+对于那些熟悉其他语言中双精度（`doubles`）/浮点数（`float`）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
 
 ```javascript
 0.1 + 0.2 // 0.30000000000000004
 ```
 
 使用 `big.js` 来解决这个问题。
-
 
 JavaScript 的安全整数范围是 `Number.MAX_SAFE_INTEGER`。
 
@@ -418,18 +384,15 @@ Number.MAX_SAFE_INTEGER // 900719925474091
 
 以下是关于 JavaScript 数字的你应该注意的关键信息。
 
+JavaScript 只有一种数字类型。它是一个双精度 64 位数字（`Number`）。下面讨论它的局限性以及推荐的解决方案。
 
-JavaScript 只有一种数字类型。它是一个双精度 64 位数字（Number）。下面讨论它的局限性以及推荐的解决方案。
-
-
-对于那些熟悉其他语言中双精度（doubles）/浮点数（float）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
+对于那些熟悉其他语言中双精度（`doubles`）/浮点数（`float`）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
 
 ```javascript
 0.1 + 0.2 // 0.30000000000000004
 ```
 
 使用 `big.js` 来解决这个问题。
-
 
 JavaScript 的安全整数范围是 `Number.MAX_SAFE_INTEGER`。
 
@@ -441,17 +404,14 @@ Number.MAX_SAFE_INTEGER // 900719925474091
 
 ```javascript
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2 // false
-``` 
+```
 
 ```javascript
 console.log(Number.MAX_SAFE_INTEGER + 1); // 900719925474092
 console.log(Number.MAX_SAFE_INTEGER + 2); // 900719925474092
 ```
 
-
-
 使用 `big.js` 用于财务计算（例如金额）。
-
 
 安装非常简单：
 
@@ -470,20 +430,12 @@ const bar = foo.plus('0.1111111111111111');
 console.log(bar.toString()); // 1.2222222222222222
 ```
 
-[/content]
-
-*(抱歉，由于输入文本中存在大量的重复和格式混乱，以下是为您重新整理的完整且准确的翻译：)*
-
-[content]
-
 ```javascript
 import * as deepEqual from "deep-equal";
 console.log(deepEqual({a:123},{a:123})); // True
 ```
 
-
 除了字面量外，JavaScript 中的任何对象（包括函数、数组、正则等）都是引用。这意味着以下几点：
-
 
 ```javascript
 var foo = {};
@@ -493,7 +445,6 @@ foo.baz = 123;
 console.log(bar.baz); // 123
 ```
 
-
 ```javascript
 var foo = {};
 var bar = foo; // bar 是一个引用
@@ -502,7 +453,6 @@ var baz = {}; // baz 是一个不同于 `foo` 的“新对象”
 console.log(foo === bar); // true
 console.log(foo === baz); // false
 ```
-
 
 事实是，你需要处理这二者。只需用 `==` 检查其中之一即可。
 
@@ -525,9 +475,9 @@ function foo(arg: string | null | undefined) {
 }
 ```
 
-
 记得我应该教你如何使用 `== null` 吗？当然，你要这样做（因为我刚说了 ^）。
-不要将其用于根层级的东西。在严格模式（strict mode）下，如果你使用 `foo` 且它是 `undefined`，你会得到一个 `ReferenceError` 异常，整个调用栈都会回溯。
+
+不要将其用于根层级的东西。在严格模式（`strict mode`）下，如果你使用 `foo` 且它是 `undefined`，你会得到一个 `ReferenceError` 异常，整个调用栈都会回溯。
 
 所以，要在全局层级检查变量是否已定义，通常使用 `typeof`：
 
@@ -538,8 +488,7 @@ if (typeof someglobal !== 'undefined') {
 }
 ```
 
-
-在函数内部对 `this` 关键字的任何访问实际上取决于函数是如何被调用的。这通常被称为“调用上下文”（calling context）。
+在函数内部对 `this` 关键字的任何访问实际上取决于函数是如何被调用的。这通常被称为“调用上下文”（`calling context`）。
 
 这是一个示例：
 
@@ -555,10 +504,9 @@ let bar = {
 bar.foo(); // 打印 `bar`，因为 `foo` 是在 `bar` 上被调用的
 ```
 
-所以请注意你对 `this` 的使用。如果你想断开类中 `this` 与调用上下文的连接，请使用箭头函数（arrow function），稍后会介绍。
+所以请注意你对 `this` 的使用。如果你想断开类中 `this` 与调用上下文的连接，请使用箭头函数（`arrow function`），稍后会介绍。
 
-
- JavaScript 有的最棒的特性就是闭包。JavaScript 中的函数可以访问在外部作用域定义的任何变量。用示例解释闭包是最好的：
+JavaScript 有的最棒的特性就是闭包。JavaScript 中的函数可以访问在外部作用域定义的任何变量。用示例解释闭包是最好的：
 
 ```javascript
 function outerFunction(arg) {
@@ -575,7 +523,7 @@ function outerFunction(arg) {
 outerFunction("hello closure"); // 打印 hello closure!
 ```
 
-你可以看到内部函数可以访问外部作用域的变量（`variableInOuterFunction`）。外部函数中的变量被内部函数捕获（或绑定）了。这里使用的术语是 **闭包**（closure）。这个概念本身足够简单且直观。
+你可以看到内部函数可以访问外部作用域的变量（`variableInOuterFunction`）。外部函数中的变量被内部函数捕获（或绑定）了。这里使用的术语是 **闭包**（`closure`）。这个概念本身足够简单且直观。
 
 现在是很棒的部分：**即使在外部函数返回后，内部函数仍然可以访问外部作用域的变量**。这是因为变量仍然绑定在内部函数中，而不依赖于外部函数。再次看一个示例：
 
@@ -595,8 +543,7 @@ var innerFunction = outerFunction("hello closure!");
 innerFunction(); // 打印 closure!
 ```
 
-## 为什么它很棒
-
+### 为什么它很棒
 
 ```javascript
 function createCounter() {
@@ -628,21 +575,17 @@ server.on(function(req, res) {
 });
 ```
 
-
 在任何编程语言中处理数字时，你都需要意识到该语言处理数字的特殊性。以下是关于 JavaScript 数字的你应该注意的关键信息。
 
+JavaScript 只有一种数字类型。它是一个双精度 64 位数字（`Number`）。下面讨论它的局限性以及推荐的解决方案。
 
-JavaScript 只有一种数字类型。它是一个双精度 64 位数字（Number）。下面讨论它的局限性以及推荐的解决方案。
-
-
-对于那些熟悉其他语言中双精度（doubles）/浮点数（float）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
+对于那些熟悉其他语言中双精度（`doubles`）/浮点数（`float`）的人来说，需要知道 JavaScript 的浮点数存在精度问题。
 
 ```javascript
 0.1 + 0.2 // 0.30000000000000004
 ```
 
 使用 `big.js` 来解决这个问题。
-
 
 JavaScript 的安全整数范围是 `Number.MAX_SAFE_INTEGER`。
 
@@ -656,14 +599,12 @@ Number.MAX_SAFE_INTEGER // 900719925474091
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2 // false
 ```
 
-
 ```javascript
 console.log(Number.MAX_SAFE_INTEGER + 1); // 900719925474092
 console.log(Number.MAX_SAFE_INTEGER + 2); // 900719925474092
 ```
 
- ``` 使用 `big.js` 用于财务计算（例如金额）。
-
+使用 `big.js` 用于财务计算（例如金额）。
 
 安装非常简单：
 
@@ -682,52 +623,47 @@ const bar = foo.plus('0.1111111111111111');
 console.log(bar.toString()); // 1.2222222222222222
 ```
 
-
-
-
 你可以手动使用这些 Infinity 值，或者像下面所示通过 `Number` 类的静态成员来使用：
 
-```
+```javascript
 console.log(Number.POSITIVE_INFINITY === Infinity); // true
 console.log(Number.NEGATIVE_INFINITY === -Infinity); // true
 ```
 
-幸运的是，比较运算符 (< / >) 在无穷值上的工作是可靠的：
+幸运的是，比较运算符 (`<` / `>`) 在无穷值上的工作是可靠的：
 
-```
+```javascript
 console.log(Infinity > 1); // true
 console.log(-Infinity < -1); // true
 ```
 
+`Number` 可以的最小非零值通过静态 `Number.MIN_VALUE` 提供：
 
-Number 可以的最小非零值通过静态 `Number.MIN_VALUE` 提供：
-
-```
+```javascript
 console.log(Number.MIN_VALUE); // 5e-324
 ```
 
 比 `MIN_VALUE` 更小的值（“下溢值”）会被转换为 0。
 
-```
+```javascript
 console.log(Number.MIN_VALUE / 10); // 0
 ```
 
 > 进一步的直觉：就像大于 `Number.MAX_VALUE` 的值会被限制为 `INFINITY` 一样，小于 `Number.MIN_VALUE` 的值会被限制为 0。
 
-
 TypeScript 的主要卖点之一是它允许你在当前的（ES3 和 ES5 级别的）JavaScript 引擎（如当前的浏览器和 Node.js）中使用 ES6 及更高版本的特性。在这里深入探讨为什么这些特性有用，以及这些特性在 TypeScript 中是如何实现的。
 
 注意：并不是所有这些特性都计划立即添加到 JavaScript 中，但它们为你的代码组织和维护提供了巨大的实用性。另外注意，你可以自由忽略任何对你的项目没有意义的结构，尽管你最终会使用其中大部分的 ;)
 
-
 在 JavaScript 中将类作为一等公民项之所以重要，是因为：
 
 - 1. 类提供了一种实用的结构抽象。
-- 2. 为开发者提供了一种统一的方式来使用类，而不是让每个框架（emberjs, reactjs 等）都搞自己的版本。
+- 2. 为开发者提供了一种统一的方式来使用类，而不是让每个框架（`emberjs`, `reactjs` 等）都搞自己的版本。
 - 3. 面向对象的 JavaScript 开发者已经熟悉类了。
 
 最后，JavaScript 开发者可以使用 `class`。这里我们有一个名为 `Point` 的基础类：
 
+```typescript
 class Point {
   x: number;
   y: number;
@@ -747,7 +683,7 @@ var p3 = p1.add(p2); // {x:10,y:30}
 
 这个 `Point` 类在生成 ES5 输出时会生成以下 JavaScript：
 
-```
+```javascript
 var Point = (function () {
   function Point(x, y) {
     this.x = x;
@@ -762,10 +698,10 @@ var Point = (function () {
 
 作为一种一等语言结构，这现在是一种相当符合传统的传统的 JavaScript 类模式。
 
-
 TypeScript 中的类（与其他语言一样）支持使用 `extends` 关键字进行单继承，如下所示：
 
-```classclass Point3D extends Point {
+```typescript
+class Point3D extends Point {
   z: number;
   constructor(x: number, y: number, z: number) {
     super(x, y);
@@ -782,10 +718,9 @@ TypeScript 中的类（与其他语言一样）支持使用 `extends` 关键字�
 
 注意你可以轻松地重写父类成员函数（这里我们重写了 `add`），并在成员函数中使用父类的功能（使用 `super` 语法）。
 
-
 TypeScript 类支持由类的所有实例共享的静态属性。放置（以及访问）这些内容的自然地方是类本身，下面是 TypeScript 的实现方式：
 
-```class
+```typescript
 class Something {
   static instances = 0;
   constructor() {
@@ -794,10 +729,11 @@ class Something {
 }
 ```
 
-```
+```javascript
 var s1 = new Something();
 var s2 = new Something();
 console.log(Something.instances); // 2
+```
 
 你可以拥有静态成员也可以拥有静态函数。
 
@@ -814,32 +750,33 @@ TypeScript 支持 `public`、`private` 和 `protected` 访问修饰符，它们�
 如果没有指定访问修饰符，它默认是 `public`，这符合 JavaScript 的便利性。
 注意在运行时（在生成的 JS 中）这些是没有意义的，但如果你错误地使用它们，将给你产生编译时错误。下面展示了每个的示例：
 
-```class FooBase {
+```typescript
+class FooBase {
+
   public x: number;
+
   private y: number;
+
   protected z: number;
+
 }
 
 // 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
 
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
+var foo = new FooBase();
+
+foo.x; // okay
+
+foo.y; // ERROR : private
+
+foo.z; // ERROR : protected
 ```
 
-访问修饰符决定了类成员的可访问性，如下所示：
 
-（此处表格已在上方定义，此处为翻译逻辑重复检查，实际输出应按要求执行）
+
+## 访问修饰符
+
+访问修饰符决定了类成员的可访问性，如下所示：
 
 如果没有指定访问修饰符，它默认是 `public`，这符合 JavaScript 的便利性。
 
@@ -847,58 +784,23 @@ class FooChild extends FooBase {
 
 展示了每个的示例。
 
+### 对实例的影响
 
-
-抽象饰饰饰
-    可以可以被意味着：
-- 抽象类不能被实例化。
-- 抽象函数可以被被。
-
-
-
-    意味着：
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
-  函数
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象 
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象抽象 
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象抽象 
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象抽象 
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象抽象 
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象饰饰 
 ```class FooBase {
   public x: number;
   private y: number;
   protected z: number;
 }
 
-// 对实例的影响
 var foo = new FooBase();
 foo.x; // okay
 foo.y; // ERROR : private
 foo.z; // ERROR : protected
+```
 
-// 对类类的影响
-class FooChild extends FooBase {
+### 对子类的影响
+
+```class FooChild extends FooBase {
   constructor() {
     super();
     this.x; // okay
@@ -908,312 +810,8 @@ class FooChild extends FooBase {
 }
 ```
 
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
+## Infinity 值
 
-  抽象
-- 抽象类可以被实例化。
-- 抽象函数可以被调用。
-
- 抽象饰饰 
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
- 抽象饰饰 
-```class FooBase {
-  public x: number;
-  private y: number;
-  protected z: number;
-}
-
-// 对实例的影响
-var foo = new FooBase();
-foo.x; // okay
-foo.y; // ERROR : private
-foo.z; // ERROR : protected
-
-// 对类类的影响
-class FooChild extends FooBase {
-  constructor() {
-    super();
-    this.x; // okay
-    this.y; // ERROR : private
-    this.z; // okay
-  }
-}
-```
-
-（注：由于用户请求是翻译给定文本，但待翻译文本中存在大量重复的乱码/占位符，根据“不要重复输出原文”的原则，此处仅提供核心逻辑内容的翻译结果。）
-
-）
-
-[content]
 你可以手动使用这些 Infinity 值，或者像下面所示通过 `Number` 类的静态成员来使用：
 
 ```
@@ -1221,7 +819,7 @@ console.log(Number.POSITIVE_INFINITY === Infinity); // true
 console.log(Number.NEGATIVE_INFINITY === -Infinity); // true
 ```
 
-幸运的是，比较运算符 (< / >) 在无穷值上的工作是可靠的：
+幸运的是，比较运算符 (`<` / `>`) 在无穷值上的工作是可靠的：
 
 ```
 console.log(Infinity > 1); // true
@@ -1230,19 +828,19 @@ console.log(-Infinity < -1); // true
 
 ## 极小值 (Infinitesimal)
 
-Number 可以的最小非零值通过静态 `Number.MIN_VALUE` 提供：
+`Number` 可以的最小非零值通过静态 `Number.MIN_VALUE` 提供：
 
 ```
 console.log(Number.MIN_VALUE); // 5e-324
 ```
 
-比 `MIN_VALUE` 更小的值（“下溢值”）会被转换为 0。
+比 `MIN_VALUE` 更小的值（“下溢值”）会被转换为 `0`。
 
 ```
 console.log(Number.MIN_VALUE / 10); // 0
 ```
 
-> 进一步的直觉：就像大于 `Number.MAX_VALUE` 的值会被限制为 `INFINITY` 一样，小于 `Number.MIN_VALUE` 的值会被限制为 0。
+> 进一步的直觉：就像大于 `Number.MAX_VALUE` 的值会被限制为 `INFINITY` 一样，小于 `Number.MIN_VALUE` 的值会被限制为 `0`。
 
 ## 未来的 JavaScript：现在
 
@@ -1254,9 +852,9 @@ TypeScript 的主要卖点之一是它允许你在当前的（ES3 和 ES5 级别
 
 在 JavaScript 中将类作为一等公民项之所以重要，是因为：
 
-- 1. 类提供了一种实用的结构抽象。
-- 2. 为开发者提供了一种统一的方式来使用类，而不是让每个框架（emberjs, reactjs 等）都搞自己的版本。
-- 3. 面向对象的 JavaScript 开发者已经熟悉类了。
+1. 类提供了一种实用的结构抽象。
+2. 为开发者提供了一种统一的方式来使用类，而不是让每个框架（emberjs, reactjs 等）都搞自己的版本。
+3. 面向对象的 JavaScript 开发者已经熟悉类了。
 
 最后，JavaScript 开发者可以使用 `class`。这里我们有一个名为 `Point` 的基础类：
 
@@ -1336,6 +934,8 @@ var s2 = new Something();
 console.log(Something.instances); // 2
 ```
 
+
+
 你可以拥有静态成员也可以拥有静态函数。
 
 ## 访问修饰符 (Access Modifiers)
@@ -1377,7 +977,6 @@ class FooChild extends FooBase {
 }
 ```
 
-
 ```javascript
 foo = {};
 
@@ -1392,7 +991,7 @@ delete foo.__proto__.bar; // 从 foo.__proto__ 中删除
 console.log(foo.bar); // undefined
 ```
 
-现在你理解了 __proto__。另一个有用的信息是，JavaScript 中所有的函数都有一个名为 `prototype` 的属性，并且它有一个指向该函数的 `constructor` 成员。如下所示：
+现在你理解了 `__proto__`。另一个有用的信息是，JavaScript 中所有的函数都有一个名为 `prototype` 的属性，并且它有一个指向该函数的 `constructor` 成员。如下所示：
 
 ```javascript
 function Foo() {}
@@ -1432,7 +1031,7 @@ d.prototype = new __();
 
 但是，我们想要 `d.prototype.__proto__`，即只改变 `proto`，并保持旧的 `d.prototype.constructor`。这就是第一行（即 `function __() {this.constructor = d; }`）的意义所在。在这里我们实际上会拥有 `{__proto__ : __proto__, d.constructor = d}`（由于 `new` 对被调用函数内部 `this` 的影响）。因此我们恢复了 `d.prototype.constructor`，我们唯一修改的是 `__proto__`，因此 `d.prototype.__proto__ = b.prototype`。
 
-## d.prototype.__proto__ = b.prototype 的意义
+### d.prototype.__proto__ = b.prototype 的意义
 
 它的意义在于，允许你向子类添加成员函数并继承自另一个基类。通过下面的简单示例可以了这一点：
 
@@ -1499,10 +1098,6 @@ function Person(age) {
 var person = new Person(1);
 ```
 
-
-
-
-
 # 剩余参数 (Rest Parameters)
 
 剩余参数（最后一个参数用 `...argumentName` 表示）允许你在函数中快速接收多个参数，并以数组的形式获取它们。下面的示例演示了这一点。
@@ -1517,7 +1112,9 @@ iTakeAll('foo', 'bar', 'bas', 'qux'); // ['bas','qux']
 
 剩余参数可以用任何函数，无论是箭头函数 `/ => /` 还是类成员。
 
-# JavaScript 中的变量是函数作用域的。这与许多语言（C# / Java 等）不同，后者的变量是块作用域的。如果你将块思维带入 JavaScript，你可能会期望以下代码打印 123，但实际上它会打印 456：
+# JavaScript 中的变量是函数作用域的
+
+这与许多语言（C# / Java 等）不同，后者的变量是块作用域的。如果你将块思维带入 JavaScript，你可能会期望以下代码打印 123，但实际上它会打印 456：
 
 ```
 var foo = 123;
@@ -1770,6 +1367,8 @@ if (true) {
 
 `const` 也适用于对象字面量，只要涉及引用的话：
 
+
+
 ```
 const foo = { bar: 123 };
 foo = { bar: 456 }; // ERROR: 赋值左侧不能为常量
@@ -1784,10 +1383,6 @@ console.log(foo); // { bar: 456 }
 ```
 
 由于原因，我建议对原始类型或数据结构使用 `const`。
-
-
-
-
 
 注意，数组解构实际上是编译器在为你执行 `[]`、`[1]`、`...` 等操作。无法保证这些值一定存在。
 
@@ -1897,7 +1492,7 @@ const fooBar = {...foo, ...bar};
 
 ## 总结
 
-apply 是你在 JavaScript 中不可避免会要做的操作，因此有一个更好的语法是很好的，这样你就不需要为 `this` 参数那个丑的 `null` 了。此外，用于将数组移出（解构）或移（赋值）其他数组的专用语法，为你在处理部分数组时提供了整洁的语法。
+`apply` 是你在 JavaScript 中不可避免会要做的操作，因此有一个更好的语法是很好的，这样你就不需要为 `this` 参数那个丑的 `null` 了。此外，用于将数组移出（解构）或移（赋值）其他数组的专用语法，为你在处理部分数组时提供了整洁的语法。
 
 ## for...of
 
@@ -1967,8 +1562,6 @@ for (let paragraph of articleParagraphs) {
 
 遗憾的是这种模式不支持 `frame.next()`，而且看起来有点笨拙。Iterable 接口来救急！
 
-
-
 ```typescript
 //.../
 class Frame implements IterableIterator<Component> {
@@ -2033,19 +1626,29 @@ class Fib implements IterableIterator<number> {
 let fib = new Fib();
 
 fib.next() //{ done: false, value: 0 }
+
 fib.next() //{ done: false, value: 1 }
+
 fib.next() //{ done: false, value: 1 }
+
 fib.next() //{ done: false, value: 2 }
+
 fib.next() //{ done: false, value: 3 }
+
 fib.next() //{ done: false, value: 5 }
 
 let fibMax50 = new Fib(50);
+
 console.log(Array.from(fibMax50)); // [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ]
 
 let fibMax21 = new Fib(21);
+
 for(let num of fibMax21) {
+
   console.log(num); // 打印 0 到 21 的斐波那契序列
+
 }
+
 ```
 
 # 为 ES5 目标使用迭代器构建代码
@@ -2065,21 +1668,29 @@ for(let num of fibMax21) {
 另一个常见用途是当你想要根据静态字符串 + 某些变量生成一些字符串时。为此你需要一些*模板逻辑*，这也是*模板字符串*名称的由来。以下是你之前可能是如何生成 HTML 的：
 
 ```javascript
+
 var lyrics = 'Never gonna give you up';
+
 var html = '<div>' + lyrics + '</div>';
+
 ```
 
 现在使用模板字符串，你只需要这样做：
 
 ```javascript
+
 var lyrics = 'Never gonna give you up';
+
 var html = `<div>${lyrics}</div>`;
+
 ```
 
 注意，插值内部的每个占位符（`${` 和 `}`）都被视为一个 JavaScript 表达式并对其进行求值，例如你可以进行复杂的数学运算。
 
 ```javascript
+
 console.log(`1 and 1 make ${1 + 1}`);
+
 ```
 
 ## 多行字符串
@@ -2087,14 +1698,19 @@ console.log(`1 and 1 make ${1 + 1}`);
 想在 JavaScript 字符串中放入换行符？也许你想嵌入一些歌词？你需要使用常用的转义字符 `\n` 来*转义换行符*，如下所示所示所示：
 
 ```javascript
+
 var lyrics = "Never gonna give you up \nNever gonna let you down";
+
 ```
 
 在 TypeScript 中，你可以直接使用模板字符串：
 
 ```typescript
+
 lyrics = 'Never gonna give you up
+
 Never gonna let you down';
+
 ```
 
 ## 标签模板 (Tagged Templates)
@@ -2107,20 +1723,31 @@ Never gonna let you down';
 这里有一个示例，我们名为 `htmlEscape` 的标签函数，它可以转义占位符中的 HTML：
 
 ```javascript
+
 var say = "a bird in hand > two in the bush";
+
 var html = htmlEscape `<div> I would like to say : ${say}</div>`;
 
 // 标签函数
+
 function html(literals, ...placeholders) {
+
   let result = "";
 
   // 交织字量和占位符
+
   for (let i = 0; i < placeholders.length; i++) {
+
     result += literals[i] + placeholders[i];
+
   }
+
   result += literals[literals.length - 1];
+
   return result;
+
 }
+
 ```
 
 ## 生成
@@ -2134,68 +1761,113 @@ function html(literals, ...placeholders) {
 
 
 ```javascript
+
 import fs = require('fs');
 
 // 一个更好的尝试 ... 但仍然不正确
+
 function loadJSON(filename: string, cb: (error: Error) => void) {
+
   fs.readFile(filename, function (err, data) {
+
     if (err) {
+
       cb(err);
+
     }
+
     else {
+
       try {
+
         cb(null, JSON.parse(data));
+
       } catch (err) {
+
         cb(err);
+
       }
+
     }
+
   });
+
 }
 
 // 加载无效的 json
+
 loadJSON('invalid.json', function (err, data) {
+
   if (err) console.log('bad.json error', err.message);
+
   else console.log(data);
+
 });
+
 ```
 
 然而，这段代码中存在一个微妙的 bug。如果回调函数 ( cb ) 不是 `JSON.parse` 抛出了错误，由于我们将其封装在 `try / catch` 中，catch 块会执行并且我们再次调用了回调，也就是说回调被调用了两次！下面的示例演示了这一点：
 
 ```javascript
+
 import fs = require('fs');
 
 function loadJSON(filename: string, cb: (error: Error) => void) {
+
   fs.readFile(filename, function (err, data) {
+
     if (err) {
+
       cb(err);
+
     } else {
+
       try {
+
         cb(null, JSON.parse(data));
+
       } catch (err) {
+
         cb(err);
+
       }
+
     }
+
   });
+
 }
 
 // 一个好文件但一个糟糕的回调 ... 被再次调用了！
+
 loadJSON('good.json', function (err, data) {
-  console.log('our callback called');
 
-  if (err) 
-    console.log('Error:', err.message);
-  else
-    // 通过尝试访问未定义变量的属性来模拟错误
-    var foo;
-    // 以下代码将抛出 'Error: Cannot read property 'bar' of undefined'
-    console.log(foo.bar);
-});
+
+
+`console.log('our callback called');`
+
+`if (err)`
+
+  `console.log('Error:', err.message);`
+
+`else`
+
+  `// 通过尝试访问未定义变量的属性来模拟错误`
+
+  `var foo;`
+
+  `// 以下代码将抛出 'Error: Cannot read property 'bar' of undefined'`
+
+  `console.log(foo.bar);`
+
+`);
+
 ```
-
 $ node asyncbadcatchdemo.js
 our callback called
 our callback called
 Error: Cannot read 'bar' of undefined
+```
 
 这是因为我们的 `loadJSON` 函数错误地将回调封装在了 `try` 块中。这里有一个需要记住的教训。
 
@@ -2225,7 +1897,7 @@ function loadJSON(filename: string, cb: (error: Error) => void) {
 
 ## 创建一个 Promise
 
-一个 promise 的状态可以是等待中 (pending)、已完成 (fulfilled) 或已拒绝 (rejected)。
+一个 promise 的状态可以是等待中 `pending`、已完成 `fulfilled` 或已拒绝 `rejected`。
 
 ![](img/7b4ede152e837dfd4e13fc18de91d96a_69_0.png)
 
@@ -2233,18 +1905,19 @@ function loadJSON(filename: string, cb: (error: Error) => void) {
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
-// resolve / reject 函数控制 promise 的命运
+  // resolve / reject 函数控制 promise 的命运
 });
 ```
 
 ## 订阅 promise 的命运
 
-可以使用 `.then` (如果已完成) 或 `.catch` (如果已拒绝) 来订阅 promise。
+可以使用 `.then`（如果已完成）或 `.catch`（如果已拒绝）来订阅 promise。
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
-resolve(123);
+  resolve(123);
 });
+
 promise.then((res) => {
   console.log('I get called:', res); // I get called: 123
 }).catch((err) => {
@@ -2254,8 +1927,9 @@ promise.then((res) => {
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
-reject(new Error("Something awful"));
+  reject(new Error("Something awful"));
 });
+
 promise.then((res) => {
   // 不被调用
 }).catch((err) => {
@@ -2435,6 +2109,7 @@ Promise.resolve(123)
 
 ```javascript
 import fs = require('fs');
+
 function readFileAsync(filename: string): Promise<any> {
   return new Promise((resolve, reject) => {
     fs.readFile(filename, (err,result) => {
@@ -2444,10 +2119,6 @@ function readFileAsync(filename: string): Promise<any> {
   });
 }
 ```
-
-
-
-
 
 ## 重新回顾我们的 JSON 示例
 
@@ -2471,7 +2142,6 @@ loadJSONAsync('good.json')
   .catch(function (err) {
     console.log('good.json error', err.message); // 永远被调用
   })
-
 // 不存在的 json 文件
 .then(function () {
   return loadJSONAsync('absent.json');
@@ -2480,7 +2150,6 @@ loadJSONAsync('good.json')
   .catch(function (err) {
     console.log('absent.json error', err.message);
   })
-
 // 无效的 json 文件
 .then(function () {
   return loadJSONAsync('invalid.json');
@@ -2536,6 +2205,7 @@ Promise.all([loadItem(1), loadItem(2)])
 task1 = new Promise(function(resolve, reject) {
   setTimeout(resolve, 1000, 'one');
 });
+
 task2 = new Promise(function(resolve, reject) {
   setTimeout(resolve, 2000, 'two');
 });
@@ -2560,10 +2230,11 @@ const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 /** 示例用法 */
 import fs = require('fs');
 import util = require('util');
+
 const readFile = util.promisify1(fs.readFile);
 ```
 
-## 生成器
+
 
 > 注意：你无法在 TypeScript 中以意义的方式使用生成器（ES5 发射器正在开发中）。不过这很快就会改变，所以我们保留这一章。
 
@@ -2582,10 +2253,10 @@ function* infiniteSequence() {
     yield i++;
   }
 }
-
 var iterator = infiniteSequence();
 while (true) {
   console.log(iterator.next()); // 永远是 { value: xxxx, done: false }
+}
 ```
 
 当然，如果迭代器结束了，你将得到 `{ value: xxxx, done: false }` 的结果：
@@ -2597,7 +2268,6 @@ function* idMaker() {
     yield index++;
   }
 }
-
 var iterator = idMaker();
 console.log(iterator.next()); // { value: 0, done: false }
 console.log(iterator.next()); // { value: 1, done: false }
@@ -2618,7 +2288,6 @@ function* idMaker() {
     console.log(err.message);
   }
 }
-
 var iterator = idMaker();
 console.log(iterator.next()); // { value: 0, done: false }
 iterator.throw(new Error('bad')); // 打印 bad
@@ -2626,7 +2295,7 @@ iterator.throw(new Error('bad')); // 打印 bad
 
 ## Async await
 
- 一门涵盖相同材料的 PRO 大蛋核视频课程
+一门涵盖相同材料的 PRO 大蛋核视频课程
 
 作为一个思想实验，想象以下情况：一种方法告诉 JavaScript 运行时，在 `await` 关键字用于 promise 时暂停代码的执行，并且*仅*当函数返回的 promise 就绪后（如果的话）恢复：
 
@@ -2644,12 +2313,10 @@ async function foo() {
 ```
 
 当 promise 就绪时执行继续：
-
-- 如果被解析，则 await 将返回值
+- 如果被解析，则 `await` 将返回值
 - 如果被拒绝，将同步抛出错误，我们可以捕获它
 
 这突然（且神奇地）让异步编程变得像同步编程一样简单。思想实验需要的三个条件：
-
 - 暂停*函数*执行的能力。
 - 在函数内部放入*值*的能力。
 - 在函数内部*抛出异常*的能力。
@@ -2659,8 +2326,6 @@ async function foo() {
 ## 生成的 JavaScript
 
 你不需要理解这个，但如果你读过生成器，它相当简单。函数 `foo` 可以简单地封装如下：
-
-
 
 ```javascript
 const foo = wrapToReturnPromise(function* () {
@@ -2691,28 +2356,23 @@ function delay(milliseconds: number, count: number): Promise<number> {
     }, milliseconds);
   });
 }
-
 // async 函数始终返回一个 Promise
 async function dramaticWelcome(): Promise<void> {
   console.log("Hello");
-
   for (let i = 0; i < 5; i++) {
     // await 将 Promise<number> 转换为 number
     const count: number = await delay(500, i);
     console.log(count);
   }
-
   console.log("World!");
 }
-
 dramaticWelcome();
 ```
 
-## 编译为 ES6 (--target es6)
+### 编译为 ES6 (--target es6)
 
 ```javascript
-var __awaiter = (this && __.awaiter) || function (thisArg, _arguments, P, generator)
- {
+var __awaiter = (this && __.awaiter) || function (thisArg, _arguments, P, generator) {
   return new (P || (Promise = Promise))(function(resolve, reject) {
     function fulfilled(value) try { step(generator.next(value)); } catch (e) {
       eject(e);
@@ -2748,11 +2408,10 @@ dramaticwelcome();
 
 你可以在此处查看完整示例。
 
-## 编译为 ES5 --target es5
+### 编译为 ES5 --target es5
 
 ```javascript
-var __awaiter = (this && __.awaiter) || function (thisArg, _arguments, P, generator)
- {
+var __awaiter = (this && __.awaiter) || function (thisArg, _arguments, P, generator) {
   return new (P || (Promise = Promise))(function(resolve, reject) {
     function fulfilled(value) try { step(generator.next(value)); } catch (e) {
       eject(e);
@@ -2801,11 +2460,11 @@ dramaticWelcome();
 
 编译上下文本质上是文件分组的一个高级术语，TypeScript 将解析并分析这些文件以确定哪些是有效的，哪些是无效的。关于编译上下文包含哪些文件的信息包含了编译器选项。定义这种逻辑分组的一种极方法是使用 `tsconfig.json` 文件。
 
-## 基础
+### 基础
 
 在项目根目录下创建一个空的 `tsconfig.json` 文件来入门非常简单。
 
-## 编译器选项
+### 编译器选项
 
 你可以使用 `compilerOptions` 自定义编译选项：
 
@@ -2813,48 +2472,46 @@ dramaticWelcome();
 {
   "compilerOptions": {
     /* 基础选项 */
-    "target": "ES2015", /* 指定 ECMAScript 版本：'ES3' (默认), 'ES5', 'ES216', 'ES017', 或 'ESNEXT'. */
-    "module": "commonjs", /* 指定模块生成：'commonjs', 'amd', 'system', 'umd' 或 'ES0' */
-    "lib": [], /* 指定包含在编译中的库文件 */
-    "allowJs": true, /* 允许编译 javascript 文件 */
-    "checkJs": true, /* 在 js 文件中报告错误 */
-    "jsx": "preserve", /* 指定 JSX 代码生成：'preserve' */
-    "declaration": true, /* 生成对应的 .dts 文件 */
-    "sourceMap": true, /* 生成对应的 .map 文件 */
-    "outFile": "./", /* 合并到单个文件 */
-    "outDir": "./", /* 输出目录 */
-    "rootDir": "./", /* 输入文件的根目录 */
-    "removeComments": true, /* 在输出时不移除注释 */
-    "noEmit": true, /* 不输出 */
-    "importHelpers": true, /* 从 'tslib' 导入辅助函数 */
-    "downlevelIteration": true, /* 为目标为 ES5 或 ES3 提供完整的迭代器支持 */
-    "isolatedModules": true, /* 将每个文件作为单独模块编译（类似于 transpileModule） */
+    "target": "ES2015",
+    "module": "commonjs",
+    "lib": [],
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "sourceMap": true,
+    "outFile": "./",
+    "outDir": "./",
+    "rootDir": "./",
+    "removeComments": true,
+    "noEmit": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
     /* 严格检查选项 */
-    "strict": true, /* 启用所有严格检查选项 */
-    "noImplicitAny": true, /* 对带有 any 类型的表达式和声明报告错误 */
-    "strictNullChecks": true, /* 启用严格空检查 */
-    "noImplicitThis": true, /* 对每个源文件的 'this' 表达式报告错误 */
-    "alwaysStrict": true, /* 以严格模式解析并生成 "use strict" */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
     /* 附加检查 */
-    "noUnusedLocals": true, /* 对未使用的局部变量报告错误 */
-    "noUnusedParameters": true, /* 对未使用的参数报告错误 */
-    "noImplicitReturns": true, /* 当函数所有代码路径未返回值时报告错误 */
-    "noFallthroughCasesInSwitch": true, /* 对 switch 语句中的穿透情况报告错误 */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     /* 模块解析选项 */
-    "moduleResolution": "node", /* Node.js 或 'classic' (TypeScript 之前的版本) */
-    "baseUrl": "/", /* 指定模块解析：相对于 'baseUrl' 查找位置 */
-    "rootDir": [], /* 组合内容代表运行时项目结构的根目录列表 */
-    "typeRoots": [], /* 包含类型定义的文件夹列表 */
-    "types": [], /* 编译中包含的类型声明文件 */
-    "allowSyntheticDefaultImports": true, /* 允许从默认导出的模块进行默认导入。这不影响代码生成，仅影响类型检查 */
+    "moduleResolution": "node",
+    "baseUrl": "/",
+    "rootDir": [],
+    "typeRoots": [],
+    "types": [],
+    "allowSyntheticDefaultImports": true,
     /* 实验性装饰器 */
-    "experimentalDecorators": true, /* 对 ES7 装饰器的实验性支持 */
-    "emitDecoratorMetadata": true /* 启用发射元数据的实验性支持 */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
 ```
-
-
 
 
 
@@ -2862,7 +2519,7 @@ dramaticWelcome();
 
 ## TypeScript 编译器
 
-良好的 IDE 内置了对 `ts 到 js` 即时编译的支持。但是，如果你想在在使用 `tsconfig.json` 时从命令行手动运行 TypeScript 编译器，可以通过几种方式实现：
+良好的 IDE 内置了对 `ts` 到 `js` 即时编译的支持。但是，如果你想在在使用 `tsconfig.json` 时从命令行手动运行 TypeScript 编译器，可以通过几种方式实现：
 
 - 仅运行 `tsc`，它会在当前目录以及所有父文件夹中查找 `tsconfig.json` 直到找到。
 - 运行 `tsc -p ./path-to-project-directory .`。路径可以是完整路径也可以是相对于当前目录的相对路径。
@@ -2904,7 +2561,7 @@ dramaticWelcome();
 
 TypeScript 中有两个声明空间：*变量*声明空间和*类型*声明空间。这些概念在下文中将进行探讨。
 
-## 类型声明空间
+### 类型声明空间
 
 类型声明空间包含了可以用作类型注解的内容。例如，以下是几个类型声明：
 
@@ -2922,7 +2579,7 @@ var bar: Bar;
 var bas: Bas;
 ```
 
-注意，尽管你定义了 *interface Bar，但你不能将其用作变量*，因为它没有贡献到*变量声明空间*。如下所示：
+注意，尽管你定义了 *interface Bar*，但你不能将其用作变量，因为它没有贡献到*变量声明空间*。如下所示：
 
 ```typescript
 interface Bar {};
@@ -2931,7 +2588,7 @@ var bar = Bar; // 错误： "cannot find name 'Bar'"
 
 之所以显示 *cannot find name*，是因为名字 *Bar* *没有在变量声明空间中定义*。这引出了我们的下一个主题“变量声明空间”。
 
-## 变量声明空间
+### 变量声明空间
 
 变量声明空间包含了你可以用作变量的内容。我们看到拥有 *class Foo* 会为*类型*声明空间贡献一个类型 *Foo*。猜猜怎么着？它也为*变量*声明空间贡献了一个*变量* *Foo*，如下所示：
 
@@ -2967,7 +2624,7 @@ var foo = 123;
 如果你现在在同一个项目中创建一个*新文件* `bar.ts`，TypeScript 类型系统将*允许*你使用变量 `foo`，就像它是全局可用的一样：
 
 ```typescript
-var bar = foo; // 
+var bar = foo; //
 ```
 
 不用说，拥有全局命名空间是危险的，因为它会让你的代码面临命名冲突的风险。我们推荐接下来介绍的文件模块。
@@ -2990,7 +2647,7 @@ var bar = foo; // 错误： "cannot find name 'foo'"
 
 ```typescript
 import { foo } from "./foo";
-var bar = foo; // 
+var bar = foo; //
 ```
 
 在 `bar.ts` 中使用 `import` 不仅允许你从其他文件引入内容，还将文件 `bar.ts` 标记为 `module`，因此，`bar.ts` 中的声明也不会污染全局命名空间。
@@ -3001,17 +2658,7 @@ var bar = foo; //
 
 TypeScript 外部模块模式包含了大量的强大性和易用性。我们在这里讨论它的强大以及需要的一些模式。
 
-## 外部模块（等等，OCR 文本在这里似乎重复/损坏了，但我将遵循逻辑流）
-
-TypeScript 外部模块模式包含了大量的强大性和易用性。我们在这里讨论它的强大以及需要的一些模式。
-
-## 外部模块（实际上，根据源码，第 97-99 页的内容是大量重复/损坏的字符串。我将根据逻辑进行清理）
-
-TypeScript 外部模块模式包含了大量的强大性和易用性。我们在这里讨论它的强大以及需要的一些模式。
-
-## 外部模块（根据内容继续）
-
-## 默认导出/导入
+### 默认导出/导入
 
 正如你稍后将学的，我不喜欢默认导出。尽管如此，以下是导出和默认使用的语法：
 
@@ -3044,14 +2691,11 @@ import someNameForFiles from "../foo";
 - 相对路径（以 . 开头的路径，例如 ./someFile 或 ../folder/someFile 等）
 - 动态查找模块（例如 'core-js' 或 'typestyle' 或 'react' 甚至 'react/core' 等）
 
-
-
-
 主要的区别在于模块在文件系统上的解析方式。
 
 > 我将使用一个概念性术语“位置”，我会在提到查找模式后对其解释。
 
-## 相对模块
+### 相对模块
 
 很简单，只需遵循相对路径即可 :) 例如：
 
@@ -3061,7 +2705,7 @@ import someNameForFiles from "../foo";
 
 或者你想到的任何其他相对路径 :)
 
-## 动态查找
+### 动态查找
 
 当导入路径不是相对路径时，查找将由 Node 风格的解析驱动。这里只给出一个简单的示例：
 
@@ -3076,7 +2720,7 @@ import someNameForFiles from "../foo";
   - `../../node_modules/something/foo`
   - 直到文件系统的根目录
 
-## 什么是位置
+### 什么是位置
 
 当我说“检查位置”时，我的意思是会在该位置检查以下内容。例如，对于位置 `foo`：
 
@@ -3089,7 +2733,7 @@ import someNameForFiles from "../foo";
 
 就是这些。你现在是模块查找专家了（这不是易事！）。
 
-## *仅针对类型*翻转动态查找
+### *仅针对类型*翻转动态查找
 
 你可以通过使用 `declare module 'somePath'` 为项目声明一个*全局*模块，导入将*魔法般地*解析到该路径
 
@@ -3112,7 +2756,7 @@ import * as foo from 'foo';
 // foo 是 {bar:number}
 ```
 
-## 仅导入类型的 import/require
+### 仅导入类型的 import/require
 
 以下语句：
 
@@ -3129,7 +2773,7 @@ import foo = require('foo');
 
 如果你不在变量声明空间中使用导入的名称，那么该导入将完全从生成的 JavaScript 中移除。这用示例来说明最好。一旦你理解了这一点，我们将为你展示用例。
 
-## 示例 1
+#### 示例 1
 
 ```typescript
 import foo = require('foo');
@@ -3141,7 +2785,7 @@ import foo = require('foo');
 
 没错。由于 foo 没有被使用，这是一个空文件。
 
-## 示例 2
+#### 示例 2
 
 ```typescript
 import foo = require('foo');
@@ -3156,7 +2800,7 @@ var bar;
 
 这是因为 foo（或它的任何属性，例如 `foo.bar`）从未被当作变量使用。
 
-## 示例 3
+#### 示例 3
 
 ```typescript
 import foo = require('foo');
@@ -3172,7 +2816,7 @@ var bar = foo;
 
 这是因为 foo 被当作变量。
 
-## 用例：懒加载
+### 用例：懒加载
 
 类型推断需要提前完成。这意味着如果你想使用文件 `foo` 中的某些类型，你必须这样做：
 
@@ -3187,7 +2831,6 @@ var bar: foo.SomeType;
 
 ```typescript
 import foo = require('foo');
-
 export function loadFoo() {
   // 这种懒加载 `foo` 并将原始模块*仅*作为类型注解
   var _foo: typeof foo = require('foo');
@@ -3199,7 +2842,6 @@ amd（使用 requirejs）中的类似示例将是：
 
 ```typescript
 import foo = require('foo');
-
 export function loadFoo() {
   // 这种懒加载 `foo` 并将原始模块*仅*作为类型注解
   var _foo: typeof foo = require('foo');
@@ -3207,9 +2849,7 @@ export function loadFoo() {
 }
 ```
 
-
-
-# 动态导入表达式
+## 动态导入表达式
 
 动态导入表达式是 ECMAScript 规范中的一项新功能特性，它允许用户在程序中的任意点异步请求模块。TC39 JavaScript 委员会有自己的提案，目前处于第 3 阶段，被称为 JavaScript 的 `import()` 提案。
 
@@ -3264,6 +2904,8 @@ export function loadFoo() {
 }
 ```
 
+
+
 ## 注意事项：
 
 - 使用 **"module": "esnext"** TypeScript 会产生模拟的 `import()` 语句，用于 Webpack 代码分割。
@@ -3300,7 +2942,6 @@ TypeScript 从诞生起就支持 Node.js。以下是如何设置一个快速 Nod
 ```
 
 现在你可以运行 `npm start`，当你编辑 `index.ts` 时：
-
 - `nodemon` 重启命令（`ts-node`）
 - `ts-node` 自动拾取 `tsconfig.json` 和安装的 typescript 版本
 - `ts-node` 通过 Node.js 运行输出
@@ -3333,8 +2974,6 @@ package
 
 （注：第111页之后的文本是重复的，已省略，因为它们不包含连贯的信息。）
 
-
-
 你可以使用 `npm install typescript@latest react@latest react-dom@latest @react@latest @types/react-dom@latest webpack@latest ts-loader@latest webpack-dev-server@latest --save-dev --save-exact` 获取最新的包。
 
 - 运行 `npm start` 进行实时开发。
@@ -3346,7 +2985,6 @@ package
 # TypeScript 类型系统
 
 在我们讨论“为什么”时，已经涵盖了 TypeScript 类型系统的主要特性。以下是该讨论中的几个关键点，它们不需要进一步解释：
-
 - TypeScript 的类型系统设计为可选的，以确保你的 javascript/typescript 可以正常工作。
 - 当存在类型错误时，TypeScript 不会阻止 JavaScript 的输出，允许你逐步更新 JS。
 
@@ -3360,6 +2998,7 @@ package
 
 ```typescript
 var num: number = 123;
+
 function identity(num: number): number {
   return num;
 }
@@ -3373,14 +3012,11 @@ JavaScript 的原始类型在 TypeScript 类型系统中有很好的表示。这
 num: number;
 var str: string;
 var bool: boolean;
-
 num = 123;
 num = 123.456;
 num = '123'; // Error
-
 str = '123';
 str = 123; // Error
-
 bool = true;
 bool = false;
 bool = 'false'; // Error
@@ -3392,13 +3028,11 @@ TypeScript 为数组提供了专门的类型语法，以便你于对代码进行
 
 ```typescript
 var boolArray: boolean[];
-
 boolArray = [true, false];
 console.log(boolArray[0]); // true
 console.log(boolArray.length); // 2
 boolArray[1] = true;
 boolArray = [false, false];
-
 boolArray[0] = 'false'; // Error!
 boolArray[0] = 'false'; // Error!
 boolArray = [true, 'false']; // Error!
@@ -3413,13 +3047,11 @@ interface Name {
   first: string;
   second: string;
 }
-
 var name: Name;
 name = {
   first: 'John',
   second: 'Doe'
 };
-
 name = { // Error: 缺少 `second`
   first: 'John'
 };
@@ -3440,12 +3072,10 @@ var name: {
   first: string;
   second: string;
 }
-
 name = {
   first: 'John',
   second: 'Doe'
 };
-
 name = { // Error: 缺少 `second`
   first: 'John'
 };
@@ -3467,7 +3097,6 @@ name = { // Error: `second` 类型错误
 
 ```typescript
 var power: any;
-
 // 接收任何和所有类型
 power = '123';
 // 与所有类型兼容
@@ -3489,15 +3118,12 @@ function reverse<T>(items: T[]): T[] {
   }
   return toreturn;
 }
-
 var sample = [1, 2, 3];
 var reversed = reverse(sample);
 console.log(reversed); // 1,2,3
-
 // 安全！
 reversed[0] = '1'; // Error!
 reversed = ['1', '2']; // Error!
-
 reversed[0] = 1; // Okay
 reversed = [1, 2]; // Okay
 ```
@@ -3518,7 +3144,6 @@ interface Array<T> {
 ```typescript
 var numArr = [1, 2];
 var reversedNums = numArr.reverse();
-
 reversedNums = ['1', '2']; // Error!
 ```
 
@@ -3536,7 +3161,6 @@ function formatCommandline(command: string[]|string) {
   } else {
     line = command.join(' ').trim();
   }
-
   // 处理 line: string
 }
 ```
@@ -3558,9 +3182,7 @@ function extend<T, U>(first: T, second: U): T & U {
   }
   return result;
 }
-
 var x = extend({ a: "hello" }, { b: 42 });
-
 // x 现在同时拥有 `a` 和 `b`
 var a = x.a;
 var b = x.b;
@@ -3570,14 +3192,10 @@ var b = x.b;
 
 TypeScript 并没有原生支持。人们通常将数组用作元组。这正是 TypeScript 类型系统所支持的。元组可以使用 `[:typeofmember1, typeofmember2]` 等进行注解。元组可以有任何数量的成员。元组在下面的示例中演示：
 
-
-
 ```typescript
 var nameNumber: [string, number];
-
 // 正确
 nameNumber = ['Jenny', 8675309];
-
 // 错误！
 nameNumber = ['Jenny', '867-5309'];
 ```
@@ -3587,7 +3205,6 @@ nameNumber = ['Jenny', '867-5309'];
 ```typescript
 var nameNumber: [string, number];
 nameNumber = ['Jenny', 8675309];
-
 var [name, num] = nameNumber;
 ```
 
@@ -3597,12 +3214,10 @@ TypeScript 提供了方便的语法，用于为你希望在多个地方使用的
 
 ```typescript
 type StrOrNum = string|number;
-
 // 用法：就像任何其他符号一样
 var sample: StrOrNum;
 sample = 123;
 sample = '123';
-
 // 仅检查
 sample = true; // 错误！
 ```
@@ -3615,11 +3230,13 @@ type Coordinates = [number, number];
 type Callback = (data: string) => void;
 ```
 
+
+
 提示：如果你需要类型注解的层级结构，请使用 `interface`。它们可以配合 `implements` 和 `extends` 使用。
 
 提示：使用类型别名为简单的对象结构（如 `coordinates`）给它们一个语义化的名称。此外，当你想要为联合类型或交叉类型提供语义化名称时，类型别名是更好的选择。
 
-## 总结
+# 总结
 
 既然你可以开始为大部分 JavaScript 代码添加注解，我们就可以深入研究 TypeScript 类型系统中所有可用功能的细节了。
 
@@ -3628,7 +3245,7 @@ type Callback = (data: string) => void;
 假设：
 
 - 你了解 JavaScript。
-- 你了解项目中所使用的模式和构建工具（例如 webpack）。
+- 你了解项目中所使用的模式和构建工具（例如 `webpack`）。
 
 在完成这些假设后，通常的流程包含以下步骤：
 
@@ -3642,14 +3259,13 @@ type Callback = (data: string) => void;
 
 请注意，所有的 JavaScript 都是*有效的* TypeScript。也就是说，如果你给 TypeScript 编译器一些 JavaScript -> TypeScript 编译器输出的 JavaScript 行为将与原始 JavaScript 完全相同。这意味着将扩展名从 `.js` 改为 `.ts` 不会对你的代码库产生不利影响。
 
-# 抑制错误 (Suppressing Errors)
+## 抑制错误 (Suppressing Errors)
 
 TypeScript 会立即对你的代码进行类型检查，你原始的 JavaScript 代码*可能没有你想的那么整洁*，因此你会收到诊断错误。这些许多错误你可以通过使用 `any` 来抑制，例如：
 
 ```typescript
 var foo = 123;
 var bar = 'hey';
-
 bar = foo; // ：不能将数字赋值给字符串
 ```
 
@@ -3658,7 +3274,6 @@ bar = foo; // ：不能将数字赋值给字符串
 ```typescript
 var foo = 123;
 var bar = 'hey';
-
 bar = foo as any; // 正确！
 ```
 
@@ -3684,7 +3299,7 @@ bar = foo(); // 正确！
 
 > 注意：抑制错误是危险的，但它允许你关注新 TypeScript 代码中的错误。你可能想在进行过程中留下 // TODO: 注释……
 
-## 第三方 JavaScript
+### 第三方 JavaScript
 
 你可以将 JavaScript 改为 TypeScript，但你无法改变整个世界来使用 TypeScript。这就是 TypeScript 的环境定义支持用用场。起初，我们建议你创建一个 `vendor.d.ts`（.dts 扩展名表示这是一个声明文件）并开始向其中添加内容。或者为库创建一个特定文件，例如为 jquery 创建 `jquery.d.ts`。
 
@@ -3707,7 +3322,7 @@ declare var $: jQuery;
 
 再次，DefinitelyTyped 上存在一个高质量的 `jquery.d.ts`。但现在你已经知道在使用环境声明时如何克服任何 JavaScript -> TypeScript 的摩擦了。我们将我们将查看环境声明。
 
-## 第三方 NPM 模块
+### 第三方 NPM 模块
 
 与全局声明类似，你可以轻松地声明一个模块。例如，对于 jquery，如果你想作为模块使用，可以写：
 
@@ -3723,7 +3338,7 @@ import * as $ from "jquery";
 
 > 注意：再次，DefinitelyTyped 上存在高质量的模块定义。
 
-## 外部非 JS 资源
+### 外部非 JS 资源
 
 你甚至可以导入任何文件（如果你使用某些样式加载器），通过简单的声明（理想情况下放在 `globals.d.ts` 文件中）：
 
@@ -3739,13 +3354,13 @@ declare module "*.css";
 declare module "*.html";
 ```
 
-## @types
+### @types
 
 Definitely Typed 是 TypeScript 最大的优势之一。社区已经有效地**记录**了那里几乎 90% 项目的性质。
 
 这意味着你可以以一种非常交互和探索的方式使用这些项目，而无需在单独窗口中打开文档并确保没有拼写。
 
-## 使用 @types
+#### 使用 @types
 
 安装非常简单，因为它运行在 `npm` 之上。例如，你可以简单为 `jquery` 安装类型定义：
 
@@ -3753,15 +3368,15 @@ Definitely Typed 是 TypeScript 最大的优势之一。社区已经有效地**�
 npm install @types/jquery --save-dev
 ```
 
-@types 同时支持*全局*和*模块*类型定义。
+`@types` 同时支持*全局*和*模块*类型定义。
 
-## 全局 @types
+#### 全局 @types
 
-默认情况下，任何支持全局消费的定义都会自动包含。例如，对于 `jquery`，你应该能够直接在项目中全局使用 $。
+默认情况下，任何支持全局消费的定义都会自动包含。例如，对于 `jquery`，你应该能够直接在项目中全局使用 `$`。
 
 然而，对于库（如 `jquery` ），我通常建议使用模块：
 
-## 模块 @types
+#### 模块 @types
 
 安装后，不需要特殊的配置。你只需要像模块一样使用它，例如：
 
@@ -3770,7 +3385,7 @@ import * as $ from "jquery";
 // 在此模块中随处使用 $ :)
 ```
 
-## 控制全局变量
+#### 控制全局变量
 
 由于支持全局注入的定义对某些团队可能是个问题，因此你选择*显式*引入符合要求的类型，使用 `tsconfig.json` 中的 `compilerOptions.types`，例如：
 
@@ -3782,11 +3397,7 @@ import * as $ from "jquery";
 }
 ```
 
-上述显示了一个只有 jquery 被允许使用的示例。即使安装了其他定义如 `npm install @types/node`，它的全局变量（例如 process ）在你未将其添加到 `tsconfig.json` 的 `types` 选项之前，也不会泄露到你的代码中。
-
-
-
-
+上述显示了一个只有 jquery 被允许使用的示例。即使安装了其他定义如 `npm install @types/node`，它的全局变量（例如 `process` ）在你未将其添加到 `tsconfig.json` 的 `types` 选项之前，也不会泄露到你的代码中。
 
 # 环境局声明 (Ambient Declarations)
 
@@ -3813,14 +3424,14 @@ declare var foo: any;
 foo = 123; // 允许
 ```
 
-你可以选择将这些声明放在 .ts 文件或 .d.ts 文件中。我们强烈建议在实际项目中使用独立的 .d.ts 文件（从名为 `globals.d.ts` 或 `vendor.d.ts` 的文件开始）。
+你可以选择将这些声明放在 `.ts` 文件或 `.d.ts` 文件中。我们强烈建议在实际项目中使用独立的 `.d.ts` 文件（从名为 `globals.d.ts` 或 `vendor.d.ts` 的文件开始）。
 
-如果文件扩展名为 .d.ts，则每个根级定义必须以 `declare` 关键字开头。这有助于作者明确：TypeScript 不会产生任何代码。作者需要确保声明的项在运行时是存在的。
+如果文件扩展名为 `.d.ts`，则每个根级定义必须以 `declare` 关键字开头。这有助于作者明确：TypeScript 不会产生任何代码。作者需要确保声明的项在运行时是存在的。
 
 - 环境声明是你向编译器做出的承诺。如果它们在运行时不存在而你又尝试使用它们，程序将在没有任何警告的情况下崩溃。
 - 环境声明就像文档。如果源码发生了变化，文档也需要更新。因此，你可能会有一些运行时正常的新行为，但没有人更新环境声明，导致你遇到编译器错误。
 
-## 变量 (Variables)
+### 变量 (Variables)
 
 例如，要告诉 TypeScript 关于进程变量你**可以**这样做：
 
@@ -3859,7 +3470,7 @@ process.exitWithLogging = function() {
 
 接下来让我们详细地查看接口。
 
-## 接口 (Interfaces)
+### 接口 (Interfaces)
 
 接口对运行时 JS 零影响。TypeScript 接口在声明变量结构方面具有巨大的威力。
 
@@ -3868,7 +3479,6 @@ process.exitWithLogging = function() {
 ```typescript
 // 示例 A
 declare var myPoint: { x: number; y: number; };
-
 // 示例 B
 interface Point {
     x: number; y: number;
@@ -3884,19 +3494,17 @@ interface Point {
     x: number; y: number;
 }
 declare var myPoint: Point;
-
 // Lib b.d.ts
 interface Point {
     z: number;
 }
-
 // 你的代码
 var myPoint.z; // 允许！
 ```
 
 这是因为**TypeScript 中的接口是开放的**。这是 TypeScript 的一个核心特性，允许你使用*接口*来模拟 JavaScript 的扩展性。
 
-## 类可以实现接口 (Classes can implement interfaces)
+### 类可以实现接口 (Classes can implement interfaces)
 
 如果你想使用必须遵循某人在*接口*中为你声明的对象结构的*类*，可以使用 `implements` 关键字来确保兼容性：
 
@@ -3904,7 +3512,6 @@ var myPoint.z; // 允许！
 interface Point {
   x: number; y: number;
 }
-
 class MyPoint implements Point {
   x: number; y: number; // 与 Point 相同
 }
@@ -3917,7 +3524,6 @@ interface Point {
   x: number; y: number;
   z: number; // 新成员
 }
-
 class MyPoint implements Point { // 错误：缺少成员 'z'
   x: number; y: number;
 }
@@ -3929,9 +3535,9 @@ var foo: Point = new MyPoint();
 
 而 `foo: Point = MyPoint` 并不是一回事。
 
-## 提示 (TIPs)
+### 提示 (TIPs)
 
-## 并不是每个接口都能轻松实现 (Not every interface is implementable easily)
+#### 并不是每个接口都能轻松实现 (Not every interface is implementable easily)
 
 接口的设计用于声明 JavaScript 中可能存在的任何任意疯狂结构。
 
@@ -3957,7 +3563,7 @@ class CrazyClass implements Crazy {
 const crazy = new Crazy();
 ```
 
-## 枚举 (Enums)
+### 枚举 (Enums)
 
 - 枚举
 - 枚举与数字
@@ -3988,7 +3594,7 @@ enum Color {
 
 > 提示：我经常将第一个枚举初始化为 1，这样对枚举值进行安全的真值检查。
 
-## 枚举是开放的 (Enums are open ended)
+#### 枚举是开放的 (Enums are open ended)
 
 这里再次显示枚举生成的 JavaScript：
 
@@ -4003,7 +3609,7 @@ var Tristrate;
 
 我们已经解释过 `Tristrate Tristrate["False"] = 0 = "False";` 部分。
 
-## 枚举与字符串 (Enums and Strings)
+### 枚举与字符串 (Enums and Strings)
 
 这意味着你可以将枚举的字符串版本转换为数字。如下所示：
 
@@ -4018,17 +3624,12 @@ console.log(Tristate["False"]) // 0
 console.log(Tristate[Tristate.False]); // "False" 因为 `Tristate.False == 0`
 ```
 
-
-
-
-
 ```typescript
 enum Color {
     Red,
     Green,
     Blue
 }
-
 enum Color {
     DarkRed = 3,
     DarkGreen,
@@ -4036,7 +3637,9 @@ enum Color {
 }
 ```
 
-请注意，在枚举的延续中，你应该重新初始化第一个成员（此处为 DarkRed = 3），以确保生成的代码不会覆盖上一个定义中的值（即 0, 1 ... 等值）。即使你不这样做，TypeScript 也会警告你（错误信息：In an enum with multiple declarations, only one declaration can omit an initializer for its first enum element）。
+
+
+请注意，在枚举的延续中，你应该重新初始化第一个成员（此处为 `DarkRed = 3`），以确保生成的代码不会覆盖上一个定义中的值（即 0, 1 ... 等值）。即使你不这样做，TypeScript 也会警告你（错误信息：`In an enum with multiple declarations, only one declaration can omit an initializer for its first enum element`）。
 
 ## 作为标志位（Flags）的枚举
 
@@ -4052,7 +3655,7 @@ enum AnimalFlags {
 }
 ```
 
-在这里，我们使用左移运算符将 1 在特定的位级别上移动，从而得到位不相交的数字 0001、0010、0100 和 1000（如果你感兴趣，这些对应的十进制数字为 1, 2, 4, 8）。位运算符 |（或）/ &（与）/ ~（非）是你处理标志位时的最佳朋友，并在下方进行了演示：
+在这里，我们使用左移运算符将 1 在特定的位级别上移动，从而得到位不相交的数字 0001、0010、0100 和 1000（如果你感兴趣，这些对应的十进制数字为 1, 2, 4, 8）。位运算符 `|`（或）/ `&`（与）/ `~`（非）是你处理标志位时的最佳朋友，并在下方进行了演示：
 
 ```typescript
 enum AnimalFlags {
@@ -4094,7 +3697,7 @@ printAnimalAbilities(animal); // has claws, animal can fly
 - 使用 `&= ~` 的组合清除标志位
 - `|` 来组合标志位
 
-> 注意：你可以在枚举定义中组合标志位以创建方便的快捷方式，例如下面的 EndangeredFlyingClawedFishEating：
+> 注意：你可以在枚举定义中组合标志位以创建方便的快捷方式，例如下面的 `EndangeredFlyingClawedFishEating`：
 
 ```typescript
 enum AnimalFlags {
@@ -4104,7 +3707,6 @@ enum AnimalFlags {
     EatsFish = 1 << 2,
     Endangered = 1 << 3,
 }
-
 const EndangeredFlyingClawedFishEating = HasClaws | CanFly | EatsFish | Endangered;
 ```
 
@@ -4167,7 +3769,6 @@ Friday,
 Saturday,
 Sunday
 }
-
 namespace Weekday {
     export function isBusinessDay(day: Weekday) {
         switch (day) {
@@ -4179,15 +3780,13 @@ namespace Weekday {
         }
     }
 }
-
 const mon = Weekday.Monday;
 const sun = Weekday.Sunday;
 console.log(Weekday.isBusinessDay(mon)); // true
 console.log(Weekday.isBusinessDay(sun)); // false
 ```
 
-
-Math 意味着如果你想向 Math 全局变量添加内容，你只需要将其添加到 Math 全局接口中即可，例如，考虑 seedrandom 项目，它向全局 Math 对象添加了 `seedrandom`。这可以很容易地声明：
+`Math` 意味着如果你想向 `Math` 全局变量添加内容，你只需要将其添加到 `Math` 全局接口中即可，例如，考虑 `seedrandom` 项目，它向全局 `Math` 对象添加了 `seedrandom`。这可以很容易地声明：
 
 ```
 interface Math {
@@ -4207,13 +3806,13 @@ Math.seedrandom("Any string you want!");
 
 ## Date
 
-如果你在 lib.d.ts 中查看 Date 变量的定义，你会发现：
+如果你在 `lib.d.ts` 中查看 `Date` 变量的定义，你会发现：
 
 ```
 declare var Date: DateConstructor;
 ```
 
-`DateConstructor` 接口与你之前看到的 Math 和 Window 类似，因为它包含了你可以在 Date 全局变量上使用的成员，例如 `Date.now()`。此外，它还包含了构造签名，允许你创建 Date 实例（`new Date()` ）。在下面显示了 `DateConstructor` 接口的一个片段：
+`DateConstructor` 接口与你之前看到的 `Math` 和 `Window` 类似，因为它包含了你可以在 `Date` 全局变量上使用的成员，例如 `Date.now()`。此外，它还包含了构造签名，允许你创建 `Date` 实例（`new Date()` ）。在下面显示了 `DateConstructor` 接口的一个片段：
 
 ```
 interface DateConstructor {
@@ -4224,7 +3823,7 @@ interface DateConstructor {
 }
 ```
 
-考虑 datejs 项目。DateJS 同时向 Date 全局变量和 Date 实例添加了成员。因此，该库的 TypeScript 定义看起来如下（顺便说，在这种情况下社区已经为你写好了）：
+考虑 `datejs` 项目。`DateJS` 同时向 `Date` 全局变量和 `Date` 实例添加了成员。因此，该库的 TypeScript 定义看起来如下（顺便说，在这种情况下社区已经为你写好了）：
 
 ```
 /** DateJS 静态方法 */
@@ -4253,23 +3852,21 @@ var todayAftersecond = today.addMilliseconds(1000);
 
 ## 示例 string
 
-如果你在 lib.d.ts 中查看 string，你会发现与我们在 Date 中看到的内容类似的东西（String 全局变量、StringConstructor 接口、String 接口）。但注意的是，String 接口也会影响字符串字面量，如下方的代码示例所示：
+如果你在 `lib.d.ts` 中查看 `string`，你会发现与我们在 `Date` 中看到的内容类似的东西（`String` 全局变量、`StringConstructor` 接口、`String` 接口）。但注意的是，`String` 接口也会影响字符串字面量，如下方的代码示例所示：
 
 ```
 interface String {
   endsWith(suffix: string): boolean;
 }
-
 String.prototype.endsWith = function(suffix: string): boolean {
   var str: string = this;
   return str && str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
-
 console.log('foo bar'.endsWith('bas')); // false
 console.log('foo bas'.endsWith('bas')); // true
 ```
 
-对于其他具有静态和实例成员的类型（如 Number、Boolean、RegExp 等也有类似的变量和接口，这些接口也会影响这些类型的字面量实例。
+对于其他具有静态和实例成员的类型（如 `Number`、`Boolean`、`RegExp` 等也有类似的变量和接口，这些接口也会影响这些类型的字面量实例。
 
 ## 示例 string Redux
 
@@ -4278,18 +3875,15 @@ console.log('foo bas'.endsWith('bas')); // true
 ```
 // 确保此被视为模块。
 export {};
-
 declare global {
   interface String {
     endsWith(suffix: string): boolean;
   }
 }
-
 String.prototype.endsWith = function(suffix: string): boolean {
   var str: string = this;
   return str && str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
-
 console.log('foo bar'.endsWith('bas')); // false
 console.log('foo bar'.endsWith('bas')); // true
 ```
@@ -4311,12 +3905,10 @@ console.log('foo bar'.endsWith('bas')); // true
 
 然而，如果你想进行更细粒度的控制，应该使用我们接下来要讨论的 `--lib` 选项。
 
-
 ```typescript
 interface Foo {
   foo: string;
 }
-
 function(sample: Foo) {
   return sample; // 推断类型 'Foo'
 }
@@ -4328,7 +3920,6 @@ function(sample: Foo) {
 function foo() {
   return { foo: 'John Doe' }; // 你可能直到太晚时才发现这个 `foo` 拼写错误
 }
-
 sAsJSON(foo);
 ```
 
@@ -4344,8 +3935,8 @@ function foo(bar: number, bas?: string): void {
 }
 ```
 
-foo(123);
-foo(123, 'hello');
+`foo(123);`
+`foo(123, 'hello');`
 
 或者，你甚至可以提供一个默认值（在参数声明后使用 `= someValue`），如果调用者没有提供该参数，该值将为你注入：
 
@@ -4353,7 +3944,6 @@ foo(123, 'hello');
 function foo(bar: number, bas: string = 'hello') {
   console.log(bar, bas);
 }
-
 foo(123);      // 123, hello
 foo(123, 'world');  // 123, world
 ```
@@ -4408,13 +3998,14 @@ function padding(a: number, b?: number, c?: number, d?: number) {
 }
 ```
 
-在这里，前三个函数签名是作为 padding 的有效调用的：
+
+
+在这里，前三个函数签名是作为 `padding` 的有效调用的：
 
 ```typescript
 padding(1); // 正确：all
 padding(1,1); // 正确：topBottom, leftAndRight
 padding(1,1,1); // 正确：top, right, bottom, left
-
 padding(1,1,1,1); // 错误：不是可用重载的一部分
 ```
 
@@ -4477,12 +4068,13 @@ const simple: (foo: number) => string = (foo) => toString();
 
 ## 可构造 (Newable)
 
-Newable 只是一个特殊的 *callable* 类型注解，意味着你需要使用 `new` 来调用，例如：
+`Newable` 只是一个特殊的 *callable* 类型注解，意味着你需要使用 `new` 来调用，例如：
 
 ```typescript
 interface CallMeNewToGetString {
   new(): string
 }
+
 // 使用
 declare const Foo: CallMeNewToGetString;
 const bar = new Foo(); // string
@@ -4500,7 +4092,7 @@ foo.bar = 123; // 错误：{}' 上不存在 'bar'
 foo.bas = 'hello'; // 错误：{}' 上不存在 'bas'
 ```
 
-这里的代码错误是因为 `foo {}` 的推断类型是一个一个具有零属性的对象。因此，不允许向它添加 bar 或 bas。你可以通过类型断言 `as Foo` 轻松解决这个问题：
+这里的代码错误是因为 `foo {}` 的推断类型是一个一个具有零属性的对象。因此，不允许向它添加 `bar` 或 `bas`。你可以通过类型断言 `as Foo` 轻松解决这个问题：
 
 ```typescript
 interface Foo {
@@ -4512,7 +4104,7 @@ foo.bar = 123;
 foo.bas = 'hello'
 ```
 
-as foo 与 <foo>
+`as foo` 与 `<foo>`
 
 最初添加的语法是 `<foo>`。如下所示：
 
@@ -4541,7 +4133,7 @@ foo.bar = 123; // 错误：{}' 上不存在 'bar'
 foo.bas = 'hello'; // 错误：{}' 上不存在 'bas'
 ```
 
-这里的代码错误是因为 `foo {}` 的推断类型是一个具有零属性的对象。因此，不允许向它添加 bar 或 bas。你可以通过类型断言 `as Foo` 轻松解决这个问题：
+这里的代码错误是因为 `foo {}` 的推断类型是一个具有零属性的对象。因此，不允许向它添加 `bar` 或 `bas`。你可以通过类型断言 `as Foo` 轻松解决这个问题：
 
 ```typescript
 interface Foo {
@@ -4586,7 +4178,7 @@ interface Foo {
   bas: string;
 }
 var foo:Foo = {
-// 编译器将为 Foo 的属性提供自动补全
+  // 编译器将为 Foo 的属性提供自动补全
 };
 ```
 
@@ -4618,12 +4210,9 @@ function handler(event: Event) {
 
 ## TypeScript 如何判断单个断言不足
 
-基本上，类型 s 到 τ 的断言在 s 是 τ 的子类型或 t 是 s 的子类型时会成功。这是为了在进行类型断言时提供额外的安全性……完全狂野的断言可能非常不安全，你需要使用 `any` 才能达到那种不安全的程度。
+基本上，类型 `s` 到 `τ` 的断言在 `s` 是 `τ` 的子类型或 `t` 是 `s` 的子类型时会成功。这是为了在进行类型断言时提供额外的安全性……完全狂野的断言可能非常不安全，你需要使用 `any` 才能达到那种不安全的程度。
 
-
-
-
-- * 新鲜度 (Freshness)
+- 新鲜度 (Freshness)
 - 允许额外的属性
 - 用例：// React
 
@@ -4637,11 +4226,9 @@ TypeScript 提供了一个名为**新鲜度**（也称为*严格对象字面量�
 function logName({ name: string }) {
   console.log(something.name);
 }
-
 var person = { name: 'matt', job: 'being awesome' };
 var animal = { name: 'cow', diet: 'vegan', but has milk of own species' };
 var random = { note: 'I don't have a name property' };
-
 logName(person); // okay
 logName(animal); // okay
 logName(random); // Error: property 'name' is missing
@@ -4653,7 +4240,6 @@ logName(random); // Error: property 'name' is missing
 function logName({ name: string }) {
   console.log(something.name);
 }
-
 logName({ name: 'matt' }); // okay
 logName({ name: 'matt', job: 'being awesome' }); // Error: object literals must only specify known properties. job is excessive here.
 ```
@@ -4692,7 +4278,7 @@ var x: { foo: number, [x: string]: any };
 x = { foo: 1, baz: 2 }; // Ok, 'baz' matched by index signature
 ```
 
-## 用例：React 
+## 用例：React
 
 ReactJS 为对象新鲜度提供了一个很好的用例。在组件中，我们经常调用 `setState` 时只传入几个属性，而不是所有属性，例如：
 
@@ -4725,10 +4311,8 @@ interface State {
 
 // 你想做：
 this.setState({foo: "Hello"}); // Yay works fine!
-
 // 因为新鲜度的存在，它也能防止拼写错误！
 this.setState({foos: "Hello"}); // Error: Objects may only specify known properties
-
 // 并且经过类型检查
 this.setState({foo: 123}); // Error: Cannot assign number to a string
 ```
@@ -4763,12 +4347,10 @@ class Foo {
     foo = 123;
     common = '123';
 }
-
 class Bar {
     bar = 123;
     common = '123';
 }
-
 function doStuff(arg: Foo | Bar) {
   if (arg instanceof Foo) {
     console.log(arg.foo); // OK
@@ -4777,9 +4359,6 @@ function doStuff(arg: Foo | Bar) {
   }
 }
 ```
-
-
-
 
 通常情况下，你会遇到错误 `Type string is not assignable to type "foo"`。下面的示例演示了这一点。
 
@@ -4802,6 +4381,8 @@ function iTakeFoo(foo: 'foo') {
   iTakeFoo(test.someProp); // Okay!
 }
 ```
+
+
 
 # 用例
 
@@ -4851,9 +4432,7 @@ const Direction = strEnum([
  * 使用字符串枚举的示例
  */
 type Direction = keyof typeof Direction;
-
 let sample: Direction;
-
 sample = Direction.North; // Okay
 sample = 'North'; // Okay
 sample = 'AnythingElse'; // ERROR!
@@ -4896,7 +4475,6 @@ type Foo = {
 }
 // 初始化是可以的
 let foo: Foo = { bar: 123, bas: 456 };
-
 // 变异行的
 foo.bar = 456; // Error: Left-hand side of assignment expression cannot be a or a read-only property
 ```
@@ -4922,12 +4500,9 @@ type Foo = {
 bar: number;
 bas: number;
 }
-
 type FooReadOnly = Readonly<Foo>
-
 let Foo: {bar: 123, bas: 456};
 let FooReadOnly: FooReadOnly = {bar: 123, bas: 456};
-
 foo.bar = 456; // Okay
 FooReadOnly.bar = 456; // ERROR: bar is readonly
 ```
@@ -4977,7 +4552,6 @@ export class Something extends React.Component<Props, State> {
 interface Foo {
   readonly [P: string]: any;
 }
-
 /**
  * 使用
  */
@@ -5023,7 +4597,6 @@ class Queue {
   push = (item: number) => this.data.push(item);
   pop = () => this.data.shift();
 }
-
 const queue = new Queue();
 queue.push(0);
 queue.push("1"); // Error: Argument 'string' is not assignable to type 'number'
@@ -5038,7 +4611,6 @@ class Queue<T> {
     push = (item: T) => this.data.push(item);
     pop = () => T => this.data.shift();
 }
-
 /** 再次示例用法 */
 const queue = new Queue<number>();
 queue.push(0);
@@ -5046,10 +4618,6 @@ queue.push("i"); // Error: Argument 'string' is not assignable to type 'number'
 ```
 
 另一个我们见过的示例是反转函数，这里的约束存在于传入函数的内容和函数返回的内容之间：
-
-
-
-
 
 ```typescript
 function reverse<T>(items: T[]): T[] {
@@ -5059,15 +4627,12 @@ function reverse<T>(items: T[]): T[] {
   }
   return toreturn;
 }
-
 var sample = [1, 2, 3];
 var reversed = reverse(sample);
 console.log(reversed); // 3,2,1
-
 // Safety!
 reversed[0] = '1'; // Error!
 reversed = ['1', '2']; // Error!
-
 reversed[0] = 1; // Okay
 reversed = [1, 2]; // Okay
 ```
@@ -5086,11 +4651,11 @@ class utility {
 }
 ```
 
-> ：你可以给泛型参数起任何名称。在处理简单泛型时，习惯上使用 T、U、V。如果你有多个泛型参数，尝试使用具有实际意义的名字，例如 TKey 和 TValue（在其他语言如 C++ 中，泛型被称为模板，因此习惯前缀 T）。
+> ：你可以给泛型参数起任何名称。在处理简单泛型时，习惯上使用 `T`、`U`、`V`。如果你有多个泛型参数，尝试使用具有实际意义的名字，例如 `TKey` 和 `TValue`（在其他语言如 C++ 中，泛型被称为模板，因此习惯前缀 T）。
 
 ## TSX 中的泛型
 
-由于 .tsx /.jsx 使用了类似 `<div>` 的语法来表示 JSX 块，这为泛型带来了几个独特的挑战。
+由于 `.tsx` `/.jsx` 使用了类似 `<div>` 的语法来表示 JSX 块，这为泛型带来了几个独特的挑战。
 
 快速提示：如前所述，使用 `as Foo` 语法进行类型断言。
 
@@ -5122,11 +4687,9 @@ const foo = <T extends {}>(x: T) => x;
 /* 泛型组件 */
 type SelectProps<T> = { items: T[] }
 class Select<T> extends React.Component<SelectProps<T>, any> { }
-
 /* 特化 */
 interface StringSelect extends { new (): Select<string>; }
 const StringSelect = Select as StringSelect;
-
 /* 使用 */
 const Form = () => <StringSelect items={['a', 'b']}} />;
 ```
@@ -5147,7 +4710,6 @@ const something = require('something') as TypeOfSomething;
 ```
 
 这只是一个例子；如果你正在考虑这个 `require` 类型定义，你不需要，因为：
-
 - 1. 它已经存在于 `node.d.ts` 中：你可以使用 `npm install @types/node --save-dev` 进行安装。
 - 2. 你应该考虑为你库编写类型定义，例如 `npm install @types/node --save-dev` 而不是使用原始 `require`。
 
@@ -5176,7 +4738,6 @@ type LoadResponse = {
   name: string;
   email: string;
 };
-
 function loadUsers() {
   return getJSON<LoadResponse>({ url: 'example.com/users' });
 }
@@ -5227,6 +4788,8 @@ iTakeAndAdder((a, b) => {
   return a + b;
 })
 ```
+
+
 
 这是类型从流动的示例。
 
@@ -5313,10 +4876,7 @@ type TwoNumberFunction = (a: number, b: number) => void;
 const foo: TwoNumberFunction = (a, b) => { do something */ };
 ```
 
-
-
--   通过添加更多*正确*的注解来帮助编译器。
-
+- 通过添加更多*正确*的注解来帮助编译器。
 - 类型兼容性
 - 健全性 (Soundness)
 - 结构类型
@@ -5353,7 +4913,6 @@ TypeScript 的类型系统设计目的是为了方便，并允许某些*不健�
 ```
 let foo: any = 123;
 foo = "Hello";
-
 // 后
 foo.toPrecision(3); // 允许，因为你将其类型为 `any`
 ```
@@ -5367,11 +4926,9 @@ interface Point {
   x: number;
   y: number;
 }
-
 class Point2D {
   constructor(public x:number, public y:number){}
 }
-
 let p: Point;
 // OK，由于结构化类型
 p = new Point2D(1,2);
@@ -5386,17 +4943,14 @@ interface Point2D {
   x: number;
   y: number;
 }
-
 interface Point3D {
   x: number;
   y: number;
   z: number;
 }
-
 var point2D: Point2D = { x: 0, y: 10 };
 var point3D: Point3D = { x: 0, y: 10, z: 20 };
 function iTakePoint2D(point: Point2D) { /* do something */ }
-
 iTakePoint2D(point2D); // 精确匹配允许
 iTakePoint2D(point3D); // 额外信息允许
 iTakePoint2D({ x: 0 }); // 错误：缺少信息 `
@@ -5431,14 +4985,13 @@ iTakePoint2D({ x: 0 }); // 错误：缺少信息 `
 /** 类型层级 */
 interface Point2D { x: number; y: number; }
 interface Point3D { x: number; y: number; z: number; }
-
 /** 两个示例函数 */
 let iMakePoint2D = () : Point2D => ({ x: 0, y: 0 });
-let iMakePoint3D = () : Point3D => ({ x: 0, y: 0 });
-
+let iMakePoint3D = () : Point3D => ({ x: 0, y: 0, z: 0 });
 /** 赋值 */
 iMakePoint2D = iMakePoint3D; // OK
 iMakePoint3D = iMakePoint2D; // 错误：Point2D 无法赋值给 Point3D
+```
 
 ### 参数数量
 
@@ -5507,17 +5060,13 @@ addEventListener(eventType: EventType.Mouse, (e: Event) => console.log((MouseEve
 addEventListener(eventType: EventType.Mouse, <e: Event> => void>(e);
 ```
 
-
-
 ```typescript
 let identity = function<T>(x: T): T {
   // ...
 }
-
 let reverse = function<U>(y: U): U {
   // ...
 }
-
 let identity = reverse; // Okay because (x: any)=any matches (y: any)=any
 ```
 
@@ -5527,14 +5076,11 @@ let identity = reverse; // Okay because (x: any)=any matches (y: any)=any
 class List<T> {
   add(val: T) { }
 }
-
 class Animal { name: string; }
 class Cat extends Animal { meow() { } }
-
 const animals = new List<Animal>();
 animals.add(new Animal()); // Okay
 animals.add(new Cat()); // Okay
-
 const cats = new List<Cat>();
 cats.add(new Animal()); // Error
 cats.add(new Cat()); // Okay
@@ -5548,29 +5094,24 @@ cats.add(new Cat()); // Okay
 /* 层级结构 */
 class Animal { constructor(public name: string){}}
 class Cat extends Animal { meow() { } }
-
 /** 各类的实例 */
 var animal = new Animal("animal");
 var cat = new Cat("cat");
-
 /**
  * 演示：多态基础
  * Animal <= Cat
  */
 animal = cat; // Okay
 cat = animal; // ERROR: cat 自 animal
-
 /** 各类的数组以演示变型性 */
 let animalArr: Animal[] = [animal];
 let catArr: Cat[] = [cat];
-
 /**
  * 显然糟糕的：逆变
  * Animal <= Cat
  * Animal[] >= Cat[] */
 catArr = animalArr; // 如果是逆变的则允许
 catArr[0].meow(); // 允许但在运行时会崩溃 (BANG)
-
 /**
  * 同样糟糕：协变
  * Animal <= Cat
@@ -5601,7 +5142,6 @@ let foo: never; // Okay
 
 ```typescript
 let foo: never = 123; // Error: 类型 number 不能赋值给 never
-
 // 因为函数的返回类型是 `never`，所以允许
 let bar: never = (() => { throw new Error('Throw my hands in the air like I just dont care') })();
 ```
@@ -5619,7 +5159,6 @@ function foo(x: string | number): boolean {
   } else if (typeof x === "number") {
     return false;
   }
-
   // 如果没有 never 类型，将会报错：
   // - 并非所有代码路径都返回了值（严格检查）
   // - 或者检测到不可达代码
@@ -5627,7 +5166,6 @@ function foo(x: string | number): boolean {
   // 它允许你调用它，因为你可能将其用于运行时安全 / 穷尽检查
   return fail("Unexhaustive");
 }
-
 function fail(message: string): never { throw Error(message);
 ```
 
@@ -5645,6 +5183,8 @@ function fail(message: string): never { throw Error(message);
 
 例如，考虑 Square 和 Rectangle 的联合，这里有一个成员 `kind` 同时存在于联合成员中，并且是特定的字面量类型：
 
+
+
 ```typescript
 interface Square {
   kind: "square";
@@ -5659,7 +5199,7 @@ interface Rectangle {
 type Shape = Square | Rectangle;
 ```
 
-如果你使用类型守卫检查（ == , === , != , !==）对判别属性（此处为 kind ）进行 switch，TypeScript 将意识到该对象必须是具有特定字面量的类型。
+如果你使用类型守卫检查（`==` , `===` , `!=` , `!==`）对判别属性（此处为 `kind`）进行 `switch`，TypeScript 将意识到该对象必须是具有特定字面量的类型。
 
 ```typescript
 function area(s: Shape) {
@@ -5674,8 +5214,6 @@ function area(s: Shape) {
   }
 }
 ```
-
-
 
 ```javascript
 return state - 1
@@ -5717,7 +5255,7 @@ foo['Hello'] = 'World';
 console.log(foo['Hello']); // World
 ```
 
-我们在键 "Hello" 下存储了字符串 "World"。记住，我们说过可以存储任何 JavaScript 对象，所以让我们存储一个类实例来展示这个概念：
+我们在键 `"Hello"` 下存储了字符串 `"World"`。记住，我们说过可以存储任何 JavaScript 对象，所以让我们存储一个类实例来展示这个概念：
 
 ```typescript
 class Foo {
@@ -5734,7 +5272,7 @@ foo['Hello'] = new Foo('World');
 foo['Hello'].log(); // World
 ```
 
-此外请记住我们说过它是可以通过字符串访问的。如果你向索引签名传递其他其他对象，JavaScript 运行时实际上会在获取结果之前调用该对象的 .toString 方法。下文所示：
+此外请记住我们说过它是可以通过字符串访问的。如果你向索引签名传递其他其他对象，JavaScript 运行时实际上会在获取结果之前调用该对象的 `.toString` 方法。下文所示：
 
 ```typescript
 let obj = {
@@ -5752,7 +5290,7 @@ console.log(foo[obj]); // toString called
 console.log(foo['Hello']); // World
 ```
 
-注意，每当 obj 被用于索引位置时，toString 都会被调用。
+注意，每当 `obj` 被用于索引位置时，`toString` 都会被调用。
 
 数组略有不同。对于数字索引，JavaScript 虚拟机会尝试进行优化（取决于它看起来多像数组以及存储项的结构是否匹配等）。因此，数字应该被视为一个独立的有效对象（与字符串区分）。这里有一个简单的数组访问示例：
 
@@ -5765,7 +5303,7 @@ console.log(foo[0]); // World
 
 ## TypeScript 索引签名
 
-首先，由于 JavaScript 会隐式地对任何对象索引签名调用 toString，TypeScript 会给出一个错误，以防止初学者“自自己的脚趾”（可以看看 stackoverflow 上用户在经常使用 JavaScript 时发现自己踩了脚趾的案例）：
+首先，由于 JavaScript 会隐式地对任何对象索引签名调用 `toString`，TypeScript 会给出一个错误，以防止初学者“自自己的脚趾”（可以看看 stackoverflow 上用户在经常使用 JavaScript 时发现自己踩了脚趾的案例）：
 
 ```typescript
 let obj = {
@@ -5782,7 +5320,7 @@ foo[obj] = 'World';
 foo[obj].toString() = 'World';
 ```
 
-强制用户显式操作的原因是对象上默认的 toString 实现非常糟糕，例如在 v8 上，它总是返回 [object Object]：
+强制用户显式操作的原因是对象上默认的 `toString` 实现非常糟糕，例如在 v8 上，它总是返回 `[object Object]`：
 
 ```typescript
 let obj = {message:'Hello'}
@@ -5796,7 +5334,6 @@ console.log(foo["object"]);
 ```
 
 （注：原文后部分存在大量重复且无意义的片段，已按要求完成核心逻辑翻译。）
-
 
 TypeScript 系统极其强大，因为你可以在该语言中实现非常强大的操作，对类型进行移动/切片/细分，这些操作在现有的任何单一语言中都是无法实现的。
 
@@ -5871,7 +5408,7 @@ bar = "Hello World"; // 正常！
 bar = "anything else "; // 错误！
 ```
 
-在这个示例中，bar 具有字面量类型 "Hello World"。我们将在字面量类型部分详细讨论这一点。
+在这个示例中，`bar` 具有字面量类型 `"Hello World"`。我们将在字面量类型部分详细讨论这一点。
 
 ## 捕捉键的名字
 
@@ -5963,11 +5500,11 @@ catch(e) {
 }
 ```
 
-不要这样做。Error 对象的根本优势是它们会自动记录构建和来源的堆栈轨迹（stack）。原始字符串会导致非常痛苦的调试体验，并增加错误分析。
+不要这样做。`Error` 对象的根本优势是它们会自动记录构建和来源的堆栈轨迹（stack）。原始字符串会导致非常痛苦的调试体验，并增加错误分析。
 
 ## 返回对象更好
 
-在这些情况下使用 Error 是一个坏主意，因为它没有在类型系统中体现：
+在这些情况下使用 `Error` 是一个坏主意，因为它没有在类型系统中体现：
 
 ```javascript
 function validate(value: number) {
@@ -5975,7 +5512,7 @@ function validate(value: number) {
 }
 ```
 
-相反，创建 validate 的更好方法是：
+相反，创建 `validate` 的更好方法是：
 
 ```javascript
 function validate(value: number): {error?: string} {
@@ -6001,8 +5538,11 @@ class User extends Tagged, Timestamped { // 错误：不支持多继承
 这种思想是，不是让类 A 扩展类 B 来获取其功能，而是函数 B 接收类 A 并返回一个带有新增功能的新类。函数 B 就是混合类。
 
 - [混合类是一个]函数
+
 1. 接收一个构造函数，
+
 2. 创建一个扩展该构造函数的类，带有新功能
+
 3. 返回新类
 
 一个完整的示例
@@ -6038,10 +5578,6 @@ function Activatable<TBase> extends Constructor>(Base: TBase) {
 }
 ```
 
-
-
-
-
 ```typescript
 ;
 }
@@ -6075,7 +5611,7 @@ console.log(timestampedActivatableUserExample.isActivated);
 
 让我们拆解这个示例。
 
-# 获取一个构造函数
+### 获取一个构造函数
 
 混入（Mixins）接收一个类并扩展其新功能。因此，我们需要定义什么是构造函数。方法如下：
 
@@ -6084,7 +5620,7 @@ console.log(timestampedActivatableUserExample.isActivated);
 type Constructor<T = {}> = new (...args: any[]) => T;
 ```
 
-# 扩展类并返回它
+### 扩展类并返回它
 
 非常简单：
 
@@ -6099,11 +5635,13 @@ function TimestampsedTBase extends Constructor<TBase>(Base: TBase) {
 
 就是这样。
 
-# JSX 支持
+## JSX 支持
 
 TypeScript 支持 JSX 编译和代码分析。如果你不熟悉 JSX，这里是[官方网站](:) 的节录：
 
 > JSX 是 ECMAScript 的一种类 XML 语法扩展，但没有任何定义的语义。它并不打算由引擎或浏览器实现。它不是将 JSX 整合到 ECMAScript 规范本身中的提案。它旨在供各种预处理器（转换器）使用，以将这些标记转换为标准的 ECMAScript。
+
+
 
 JSX 的初衷是允许用户像编写 *JavaScript* 一样编写 HTML 视图，这样你可以：
 
@@ -6111,7 +5649,7 @@ JSX 的初衷是允许用户像编写 *JavaScript* 一样编写 HTML 视图，�
 - 使用与运行逻辑相同的代码对视图进行类型检查（即加强了传统 MVC 中控制器与视图的连接）。
 - 复用 JavaScript 模式进行 HTML 维护，例如 `Array.prototype.map`、`?`、`switch` 等，而不是创建新的（且可能类型定义很差的）替代方案。
 
-这减少了错误的几率并增加了用户界面的可维护性。目前 JSX 的主要使用者是[来自 facebook 的 ReactJS](。这是我们将讨论的 JSX 用法。
+这减少了错误的几率并增加了用户界面的可维护性。目前 JSX 的主要使用者是[来自 facebook 的 ReactJS]()。这是我们将讨论的 JSX 用法。
 
 # 设置
 
@@ -6128,7 +5666,7 @@ React 可以渲染 HTML 标签（字符串）或 React 组件（类）。这些�
 
 ## 类型检查
 
-## HTML 标签
+### HTML 标签
 
 HTML 标签 `foo` 的类型是 `JSX.IntrinsicElements.foo`。这些类型已经在文件 `react-jsx.d.ts` 中为所有主要标签定义好了，该文件是在设置过程中安装的。以下是文件内容的示例：
 
@@ -6145,7 +5683,7 @@ declare module JSX {
 }
 ```
 
-## 无状态函数组件
+### 无状态函数组件
 
 你可以简单地使用 `React.SFC` 接口定义无状态组件，例如：
 
@@ -6160,7 +5698,7 @@ const MyComponent: React.SFC<Props> = (props) => {
 <MyComponent foo="bar" />
 ```
 
-## 有状态组件
+### 有状态组件
 
 组件根据其 `props` 属性进行类型检查。这模拟了 JSX 的转换方式，即属性变成了组件的 `props`。
 
@@ -6179,7 +5717,7 @@ class MyComponent extends React.Component<Props, {}> {
 <MyComponent foo="bar" />
 ```
 
-## React JSX 提示：可渲染内容的接口
+### React JSX 提示：可渲染内容的接口
 
 React 可以渲染一些东西，如 JSX 或字符串。它们都合并到了类型 `React.ReactNode` 中，因此当你想要接受可渲染内容时使用它，例如：
 
@@ -6200,7 +5738,7 @@ class MyComponent extends React.Component<Props, {}> {
 <MyComponent foo="bar" />
 ```
 
-## React JSX 提示：接受组件的实例
+### React JSX 提示：接受组件的实例
 
 React 类型定义提供了 `React.ReactElement<T>`，允许你对类组件实例化的结果进行标注。例如：
 
@@ -6227,8 +5765,6 @@ type Select<T> = { items: T[] }
 class Select<T> extends React.Component<Select<T>> {
 ```
 
-
-
 ```javascript
 "use strict";
 var jsxFactory_1 = require("jsxFactory");
@@ -6241,7 +5777,7 @@ TypeScript 有一些操作在开箱即用时会阻止你执行，例如使用一
 
 传统上，编程语言在类型系统允许与不允许的范围之间有一条硬性界限。TypeScript 的不同之处在于，它允许你控制这个滑块放置的位置。这实际上是为了让你能够根据**你**所需要的安全性，来使用你熟悉并喜爱的 JavaScript。有许多编译选项可以精确控制这个滑块，所以这里值得一读的。
 
-## # 布尔选项
+### 布尔选项
 
 类型为 `boolean` 的 `compilerOptions` 可以在 `tsconfig.json` 的 `compilerOptions` 中进行指定：
 
@@ -6263,7 +5799,7 @@ tsc --someBooleanOption
 
 点击[这里]查看所有编译选项。
 
-## # noImplicitAny
+### noImplicitAny
 
 有些内容是无法推断的，或者推断它们可能会导致意外之外的错误。一个很好的例子是函数参数。如果你不对它们进行注解，就不清楚什么是有效或无效的，例如：
 
@@ -6300,7 +5836,7 @@ function log(someArg: any) {
 }
 ```
 
-## # strictNullChecks
+### strictNullChecks
 
 默认情况下，`null` 和 `undefined` 可以赋值给 TypeScript 中的所有类型，例如：
 
@@ -6329,6 +5865,7 @@ interface Member {
 ```
 
 并不是每个 Member 都会提供年龄，所以 `age` 是一个可选属性，这意味着 `age` 的值可能是 `undefined` 也可能不是。
+
 `undefined` 是万恶之源。它经常导致运行时错误。编写出会在运行时抛出 Error 的代码很容易：
 
 ```typescript
@@ -6347,7 +5884,7 @@ getMember()
 })
 ```
 
-## # 非空断言运算符
+### 非空断言运算符
 
 可以使用一个新的后置表达式运算符，在类型检查器无法得出该事实的情况下，断言其操作数非 `null` 也非 `undefined`。例如：
 
@@ -6366,13 +5903,13 @@ function processEntity(e?: Entity) {
 
 > 注意，这仅仅是一个断言，就像类型断言一样，你负责确保该值不是 `null`。非空断言本质上是告诉编译器：“我知道它不是 `null`，让我像它不是 `null` 一样使用它”。
 
-## # 测试
+## 测试
 
 TypeScript 可以配合你喜欢的任何 JavaScript 测试框架使用。在坏的情况下，你始终可以进行简单的 `TypeScript -> JavaScript` 并随心所欲。
 
 尽管如此，在本节中，我们将看看我们非常喜欢的选项。
 
-## # 在 TypeScript 中使用 Jest
+### 在 TypeScript 中使用 Jest
 
 关于 Jest / TypeScript 的专业进阶课程
 
@@ -6380,7 +5917,7 @@ TypeScript 可以配合你喜欢的任何 JavaScript 测试框架使用。在坏
 
 > 注意：我们假设你从一个简单的 `package.json` 设置开始。此外，所有的 TypeScript 文件都应该放在 `src` 文件夹中，即使没有 Jest，这也是推荐的做法，以保持项目整洁。
 
-## # 步骤 1：安装
+### 步骤 1：安装
 
 使用 npm 安装以下内容：
 
@@ -6394,7 +5931,7 @@ npm install jest @types/jest ts-jest -D
 - 安装 jest 的类型
 - 安装 ts-jest
 
-## # 步骤 2：配置
+### 步骤 2：配置
 
 在根目录下添加 `jest.config.js`：
 
@@ -6406,7 +5943,7 @@ module.exports = {
   "transform": {
     "^\.tsx?$": "ts-jest"
   },
-  "testRegex": "(/__tests__/)\\test|spec)$
+  "testRegex": "(/__tests__/)\\test|spec)$"
   "moduleFileExtensions": [
     "ts",
     "tsx",
@@ -6418,7 +5955,7 @@ module.exports = {
 };
 ```
 
-## # 步骤 3：运行
+### 步骤 3：运行
 
 在根目录下运行 `jest`。
 
@@ -6440,8 +5977,6 @@ module.exports = {
 npm test --w
 ```
 
-## # 
-
 ```typescript
 export const sum = (...a: number[]) =>
   a.reduce((acc, val) => acc + val, 0);
@@ -6459,7 +5994,7 @@ test('basic again', () => {
 });
 ```
 
-## # 异步示例
+### 异步示例
 
 Jest 内置了 async/await 支持。例如：
 
@@ -6473,14 +6008,13 @@ test('basic again', async () => {
 }, 1000 /* 可选超时 */);
 ```
 
-## # Enzyme 示例
+### Enzyme 示例
 
 > > 关于 Enzyme / Jest / TypeScript 的专业进阶课程
 
 En 允许测试支持 dom 的组件。设置 enzyme 有三个步骤：
 
 - 1. 安装 enzyme、enzyme 的类型、更好的快照序列化器、适用于你 react 版本的 enzyme-adapter `npm i enzyme @types/enzyme enzyme-to-json enzyme-adapter-react-16 -D`
-
 - 2. 在你的 `jest.config.js` 中添加 `snapshotSerializers` 和 `setupTestFrameworkFile`：
 
 ```javascript
@@ -6584,7 +6118,7 @@ TypeScript 类型系统是结构性的，这是其主要优势之一。然而，
 
 社区中出现模式。我将按照个人喜好从高到低的顺序进行介绍：
 
-# 使用字面量类型 (Literal types)
+## 使用字面量类型 (Literal types)
 
 这种模式使用了泛型和字面量类型：
 
@@ -6615,12 +6149,11 @@ foo = foo; // 可以
 - 缺点
   - 结构 {type,value} 可能不理想，且需要服务器序列化支持
 
-# 使用枚举 (Enums)
+## 使用枚举 (Enums)
 
 TypeScript 中的枚举提供了一定程度的命名类型。如果两个枚举类型的名称不同，则它们是不相等的。我们可以利用这一事实为其他在结构上兼容的类型提供命名类型。
 
 变通方法涉及：
-
 - 创建一个*品牌（brand）* 枚举。
 - 创建该品牌枚举与实际结构的*交叉集* (&) 来创建类型。
 
@@ -6655,12 +6188,11 @@ str = fooId;
 str = barId;
 ```
 
-# 使用接口 (Interfaces)
+## 使用接口 (Interfaces)
 
 因为数字与枚举在类型上是兼容，所以之前的技术无法用于它们。相反，我们可以使用接口来打破结构兼容性。TypeScript 编译器团队仍在使用这种方法，非常值得提及。使用 `_` 前缀和 `Brand` 后缀是我强烈建议的约定（也是 TypeScript 团队遵循的约定）。
 
 变通方法涉及以下内容：
-
 - 在类型上添加未使用的属性以打破结构兼容性。
 - 在需要实例化或向下转型时使用类型断言。
 
@@ -6693,6 +6225,7 @@ barId = fooId; // 错误
 // fooId = barId; // 错误
 barId = fooId; // 错误
 ```
+
 *(注：由于提供的原文中包含大量重复的 OCR 错误干扰信息，译文已根据文档工程师逻辑进行了清理，保留核心技术说明)*
 
 # 类成员 (Class Members)
@@ -6717,17 +6250,23 @@ function useAdd(x: number) number) {
 let adder = new Adder('mary had a ');
 useAdd(adder.add.bind(adder)); // 没有编译错误！
 useAdd((x) => add(x)); // 错误：number 无法赋值给 string
+```
 
 如果你有一个期望传递的类成员函数，在开始处使用箭头函数，例如你可以这样写同一个 Adder 类：
 
 ```typescript
 class Adder {
+
   constructor(public a: string) {
 
   // 这个函数现在可以安全地传递
+
   add = (b: string): string => {
+
     return this.a + b;
+
   }
+
 }
 ```
 
@@ -6743,19 +6282,27 @@ const add: typeof adder.add = adder.add.bind(adder);
 
 ```typescript
 class Adder {
+
   constructor(public a: string) {
 
   add(b: string): string {
+
     return this.a + b;
+
   }
+
 }
 
 function useAdd(x: number) number) {
+
   return add(456);
+
 }
 
 let adder = new Adder('mary had a ');
+
 useAdd(adder.add.bind(adder)); // 没有编译错误！
+
 useAdd((x) => add(x)); // 错误：number 无法赋值给 string
 ```
 
@@ -6765,21 +6312,21 @@ useAdd((x) => add(x)); // 错误：number 无法赋值给 string
 
 ```typescript
 // 一个柯里函数
+
 let add = (x: number) => (y: number) => x + y;
 
 // 用法
+
 add(123)(456);
 
 // 部分应用
+
 let add123 = add(123);
 
 // 完全应用函数
+
 add123(456);
 ```
-
-
-
-
 
 # 泛型的类型实例化
 
@@ -6787,7 +6334,9 @@ add123(456);
 
 ```typescript
 class Foo<T>{
+
   foo: T;
+
 }
 ```
 
@@ -6795,8 +6344,11 @@ class Foo<T>{
 
 ```typescript
 class Foo<T>{
+
   foo: T;
+
 }
+
 let FooNumber = Foo as { ():Foo<number> }; // ref 1
 ```
 
@@ -6816,6 +6368,7 @@ class FooNumber extends Foo<number>{}
 
 ```typescript
 function id<T>(x: T) { return x; }
+
 const idNum = id as {(x:number):number};
 ```
 
@@ -6827,7 +6380,9 @@ const idNum = id as {(x:number):number};
 
 ```javascript
 let foo = {};
+
 foo.bar = 123;
+
 foo.bas = "Hello World";
 ```
 
@@ -6835,7 +6390,9 @@ foo.bas = "Hello World";
 
 ```typescript
 let foo = {};
+
 foo.bar = 123; // Error: 类型 '{}' 上不存在属性 'bar'
+
 foo.bas = "Hello World"; // Error: 类型 '{}' 上不存在属性 'bas'
 ```
 
@@ -6847,8 +6404,11 @@ foo.bas = "Hello World"; // Error: 类型 '{}' 上不存在属性 'bas'
 
 ```typescript
 let foo = {
+
   bar: 123,
+
   bas: "Hello World"
+
 };
 ```
 
@@ -6860,14 +6420,15 @@ let foo = {
 
 ```typescript
 let foo = {} as any;
+
 foo.bar = 123;
+
 foo.bas = "Hello World";
 ```
 
 # 折中方案
 
 当然，使用 `any` 断言可能非常糟糕，因为它某种程度上违背了 TypeScript 的安全性。折中的修复方案是创建一个 `interface` 以确保：
-
 - 良好的文档
 - 安全的赋值
 
@@ -6875,12 +6436,17 @@ foo.bas = "Hello World";
 
 ```typescript
 interface Foo {
+
   bar: number
+
   bas: string
+
 }
 
 let foo = {} as Foo;
+
 foo.bar = 123;
+
 foo.bas = "Hello World";
 ```
 
@@ -6888,15 +6454,21 @@ foo.bas = "Hello World";
 
 ```typescript
 interface Foo {
+
   bar: number
+
   bas: string
+
 }
 
 let foo = {} as Foo;
+
 foo.bar = 123;
+
 foo.bas = "Hello World";
 
 // 代码库后后部分：
+
 foo.bar = 'Hello Stranger'; // Error: 你可能将 `bas` 拼错了 `bar`，无法将字符串赋值给数字
 ```
 
@@ -6906,20 +6478,29 @@ foo.bar = 'Hello Stranger'; // Error: 你可能将 `bas` 拼错了 `bar`，无�
 
 ```typescript
 function foo() {
+
   let someProperty;
 
   // 其他其他初始化代码
 
   function someMethod() {
+
     // 对 someProperty 执行一些事情
+
     // 以及可能的其他事情
+
   }
+
   // 也许还有其他方法
 
   return {
+
     someMethod,
+
     // 可能还有其他方法
+
   };
+
 }
 ```
 
@@ -6931,8 +6512,11 @@ function foo() {
 let someProperty;
 
 function foo() {
+
   // 一些初始化代码
+
 }
+
 foo(); // 一些初始化代码
 
 someProperty = 123; // 更多的初始化
@@ -6940,7 +6524,9 @@ someProperty = 123; // 更多的初始化
 // 未导出的某些工具函数
 
 // 后面
+
 export function someMethod() {
+
 }
 ```
 
@@ -6948,19 +6534,27 @@ export function someMethod() {
 
 ```typescript
 class Foo {
+
   public someProperty;
 
   constructor() {
+
     // 一些初始化
+
   }
 
   public someMethod() {
+
     // 一些代码
+
   }
 
   private someUtility() {
+
     // 一些代码
+
   }
+
 }
 
 export = new Foo();
@@ -6972,7 +6566,6 @@ export = new Foo();
 
 JavaScript（以及延伸的 TypeScript）有两个底类型（bottom types）：`null` 和 `undefined`
 它们旨在表示不同的含义：
-
 - 尚未初始化：`undefined`
 - 当前不可用：`null`
 
@@ -6987,11 +6580,28 @@ TypeScript 团队不使用 `null`：TypeScript 代码规范，而且没有引起
 如果你的代码库与其他 API 交互，而 API 可能会提供一个针对 `undefined` 的检查（而不是 `===`）。使用这种方法甚至是为了虚假（falsy）值。
 
 ```javascript
-// 假设你正在执行 `foo == undefined`，其中 foo 是以下之一：
+
+
+
+假设你正在执行 `foo == undefined`，其中 `foo` 是以下之一：
+
+```javascript
 console.log(undefined == undefined); // true
+```
+
+```javascript
 console.log(null == undefined); // true
+```
+
+```javascript
 console.log(0 == undefined); // false
+```
+
+```javascript
 console.log('' == undefined); // false
+```
+
+```javascript
 console.log(false == undefined); // false
 ```
 
@@ -6999,13 +6609,11 @@ console.log(false == undefined); // false
 
 此外是因为 TypeScript 提供了将结构与值分开记录的机会，而不是像这样的：
 
-
-
 ```javascript
 function foo(){
-// if Something
+  // if Something
   return {a:1,b:2};
-// else
+  // else
   return {a:1,b:undefined};
 }
 ```
@@ -7014,9 +6622,9 @@ function foo(){
 
 ```javascript
 function foo():{a:number, b?:number}{
-// if Something
+  // if Something
   return {a:1,b:2};
-// else
+  // else
   return {a:1};
 }
 ```
@@ -7060,7 +6668,7 @@ function toInt(str: string): { valid: boolean, int?: number } {
 }
 ```
 
-# --outFile 是糟糕的
+# `--outFile` 是糟糕的
 
 由于以下原因，使用 `--outFile` 是一个坏主意：
 
@@ -7073,7 +6681,7 @@ function toInt(str: string): { valid: boolean, int?: number } {
 - 多目标支持
 - 隔离编译
 
-# 运行时错误
+## 运行时错误
 
 如果你的代码依赖于任何形式的顺序，会在运行时产生随机错误。
 
@@ -7115,27 +6723,27 @@ module App {
 
 如果你按照正确的顺序编译它们（例如按字母顺序 `tsc bar.ts foo.ts`），代码可以正常编译，但在运行时静默失败为 `NaN`。
 
-# 快速编译
+## 快速编译
 
 如果你使用 `--out`，那么单个 `.ts` 文件无法在隔离状态下转换为单个 `.js` 文件，除非使用不必要的 hack（hacks）。
 
 此外，source maps 是位置敏感的，如果你使用 source maps（你你应该这样做！），大部分映射都需要重新构建，这会变慢。
 
-# 全局作用域
+## 全局作用域
 
 当然，你可以使用命名空间（namespaces），但如果你在浏览器中运行它，它仍然难以维护。命名空间只是一个不必要的权宜之计。
 
 此外，如果你的公司有多个团队独立工作，然后有人尝试整合独立编写的应用程序，极有可能发生命名冲突。
 
-# 难以分析
+## 难以分析
 
 我们希望提供更多的代码分析工具。使用内部模块（internal modules）会让代码在隔离状态下难以审查（例如在 github 上）。下一个人在开始理解代码到底从哪里导入的之前，需要理解大量的代码库（code base）。
 
-# 难以扩展
+## 难以扩展
 
 这只是随机运行时错误 + 更慢的编译时间 + 理解他人代码的难度。
 
-## references.ts
+### references.ts
 
 `tsconfig.json` 不支持 [https://github.com/Microsoft/TypeScript/issues/2472#issuecomment-85303](https://github.com/Microsoft/TypeScript/issues/2472#issuecomment-85303)。你必须手动对 `files` 数组。
 
@@ -7143,11 +6751,11 @@ module App {
 
 如果你想在另一个项目中复用部分代码，由于所有隐式的依赖管理，迁移将非常困难。
 
-# 多目标支持
+## 多目标支持
 
 此外，如果你决定将浏览器代码复用到类似 node（例如用于测试），你需要将其迁移到模块系统，或者使用丑陋的 hack 来实现全局作用域。
 
-# 隔离编译
+## 隔离编译
 
 文件无法在隔离状态下编译。例如，考虑形式如下 `a.ts`：
 
@@ -7165,13 +6773,13 @@ module M {
 }
 ```
 
-`--out` 实际上是构建工具的工作。即使是这种工具也可以从外部模块中受益。因此我们建议你使用外部模块，然后根据需要让构建工具创建一个 .js 文件。
+`--out` 实际上是构建工具的工作。即使是这种工具也可以从外部模块中受益。因此我们建议你使用外部模块，然后根据需要让构建工具创建一个 `.js` 文件。
 
 # 提示
 
 注意：这些提示需要安装 `jquery.d.ts` 文件
 
-# 快速定义新插件
+## 快速定义新插件
 
 只需创建一个 `foo.d.ts`：
 
@@ -7183,7 +6791,7 @@ interface Query {
 
 现在你可以使用 `$('something').foo({whateverWant:'hello'})` 了
 
-# TypeScript 中的静态构造函数
+## TypeScript 中的静态构造函数
 
 TypeScript 类（类似于 JavaScript 类）没有静态构造函数。然而，你可以通过手动调用它来获得相同的效果：
 
@@ -7196,7 +6804,7 @@ class MyClass {
 MyClass.initialize();
 ```
 
-# 单例模式
+## 单例模式
 
 传统的单例模式是用来克服所有代码都必须在 `class` 中的事实。
 
@@ -7217,9 +6825,9 @@ class Singleton {
 }
 ```
 
-let something = new Singleton() // 错误：'Singleton' 的构造函数是私有的。
+`let something = new Singleton()` // 错误：'Singleton' 的构造函数是私有的。
 
-let instance = Singleton.getInstance() // 对实例执行某些事情
+`let instance = Singleton.getInstance()` // 对实例执行某些事情
 
 如果你不想懒加载，可以使用命名空间（namespace）：
 
@@ -7240,12 +6848,11 @@ Singleton.someMethod();
 // someFile.ts
 // ... 这里可以进行任何初始化
 export function someMethod() {}
-
 // 使用
 import {someMethod} from "./someFile";
 ```
 
-# 参数
+## 参数
 
 如果你的函数有过多的参数，或者类型相同的参数，你可能希望将函数改为接收对象。考虑以下函数：
 
@@ -7270,7 +6877,7 @@ function foo(config: {flagA: boolean, flagB: boolean}) {
 
 > 注意：如果函数足够简单，且你不预期频繁变动，可以忽略此建议。
 
-# 真值
+## 真值
 
 JavaScript 有真值（truthy）的概念，即在某些位置（例如 if 条件和 &&、|| 运算符）中 true true 的值。以下内容在 JavaScript 中是真值。一个例子是任何非 0 数字：
 
@@ -7293,22 +6900,18 @@ if (123) { // 被视为 `true`
 | undefined | 总是 | 永远不是 |
 | 其他任何对象（包括空对象 {}, []） | 永远不是 | 总是 |
 
-
-
 ```javascript
 // 直接变量
 const hasName = !!name;
-
 // 作为对象的成员
 const someObj = {
   hasName: !!name
 }
-
 // 例如 ReactJS
 {!!someName && <div>{someName}</div>}
 ```
 
-# 构建切换 (Build Toggles)
+## 构建切换 (Build Toggles)
 
 在 JavaScript 项目中，根据运行环境来切换配置是非常常见的。你可以通过 webpack 轻松地实现这一点，因为它支持基于环境变量的死代码消除（dead code elimination）。
 
@@ -7316,7 +6919,7 @@ const someObj = {
 
 ```json
 "build:test": "webpack -p --config /src/webpack.config.js",
-"build:prod": "webpack -p --define process.env.NODE_ENV=\"production\" --config /src/webpack.config.js",
+"build:prod": "webpack -p --define process.env.NODE_ENV=\"production\" --config /src/webpack.config.js"
 ```
 
 当然，我假设你已经执行了 `npm install webpack --save-dev`。现在你可以运行 `npm run:test` 等了。
@@ -7330,12 +6933,10 @@ const someObj = {
 interface Config {
   someItem: string;
 }
-
 /**
  * 我们只导出一个内容。即配置。
  */
 export let config: Config;
-
 /**
  * process.env.NODE_ENV 的定义由 webpack 驱动
  * 在生产环境构建的 JavaScript 中，整个 `else` 块将被移除
@@ -7355,7 +6956,7 @@ if (process.env.NODE_ENV === 'production') {
 
 我们使用 `process.env.NODE_ENV` 仅仅是因为在很多 JavaScript 库（例如 React）中这是约定。
 
-# 桶 (Barrel)
+## 桶 (Barrel)
 
 桶（Barrel）是将多个模块的导出项合并到一个方便模块的方法。
 桶本身是一个模块文件，它重新导出（re-exports）其他模块的选导出。
@@ -7385,17 +6986,15 @@ export * from './baz'; // 重新导出它所有的导出
 import { Foo, Bar, Baz } from '../demo'; // 隐含了 demo/index.ts
 ```
 
-# 命名导出 (Named exports)
+## 命名导出 (Named exports)
 
 与其导出 `*`，你可以选择为模块命名导出。例如，假设 `baz.ts` 有以下函数：
 
 ```typescript
 // demo/foo.ts
 export class Foo {}
-
 // demo/bar.ts
 export class Bar {}
-
 // demo/baz.ts
 export function getBaz() {}
 export function setBaz() {}
@@ -7407,7 +7006,6 @@ export function setBaz() {}
 // demo/index.ts
 export * from './foo'; // 重新导出它所有的导出
 export * from './bar'; // 重新导出它所有的导出
-
 import * as baz from './baz'; // 命名导入
 export { baz }; // 导出名称
 ```
@@ -7425,7 +7023,7 @@ baz.setBaz();
 // 等 ...
 ```
 
-# 创建数组 (Creating arrays)
+## 创建数组 (Creating arrays)
 
 创建一个空数组非常简单：
 
@@ -7440,7 +7038,7 @@ const foo:string[] = new Array(3).fill('');
 console.log(foo); // ['','','']
 ```
 
-# 类型安全的事件处理器 (Typesafe Event Emitter)
+## 类型安全的事件处理器 (Typesafe Event Emitter)
 
 在 Node.js 和传统的 JavaScript 中，通常有一个事件触发器。事件触发器内部跟踪不同事件类型的监听器，例如：
 
@@ -7460,6 +7058,8 @@ emitter.on('bar', (bar)=>console.log(bar));
 {foo: [fooListeners], bar: [barListeners]}
 ```
 
+
+
 相反，为了事件类型的类型安全，你可以为每个事件类型创建一个触发器：
 
 这具有以下优势：
@@ -7474,42 +7074,33 @@ emitter.on('bar', (bar)=>console.log(bar));
 export interface Listener<T> {
   (event: T): any;
 }
-
 export interface Disposable {
   dispose();
 }
-
-/** 当事件发生时透传事件。你不会在开始监听之前获取事件
- */
+/** 当事件发生时透传事件。你不会在开始监听之前获取事件 */
 class TypedEvent<T> {
   private listeners: Listener<T>[] = [];
   private listenersOncer: Listener<T>[] = [];
-
   on = (listener: Listener<T>): Disposable => {
     this.listeners.push(listener);
     return {
       dispose: () => this.off(listener);
     };
   }
-
   once = (listener: Listener<T>): void => {
     this.listenersOncer.push(listener);
   }
-
   emit = (event: T) => {
     /** 更新通用监听器 */
     this.listeners.forEach((listener) => listener(event));
-
     /** 清除 'once' 队列 */
     this.listenersOncer.forEach((listener) => listener(event));
     this.listenersOncer = [];
   }
-
   off = (listener: Listener<T>) => {
     var callbackIndex = this.listeners.indexOf(listener);
     if (callbackIndex > -1) this.listeners.splice(callbackIndex, 1);
   }
-
   pipe = (te: TypedEvent<T>): Disposable => {
     return;
   }
@@ -7534,7 +7125,6 @@ function BarFunc() { }
 ```typescript
 class Foo { }
 ```
-
 - 类成员和方法使用驼命名法
 - 原因：自然遵循变量命名规范
 
@@ -7598,21 +7188,17 @@ enum Color {
 ## Null vs. Undefined
 - 尽量不要使用任何一个来表示显式的不可用
 
-
-
-
-
 原因：这些值通常用于保持值之间结构的一致性。在 TypeScript 中，你使用类型来表示结构。
 
 # 错误
 
-```
+```typescript
 let foo = {x:123,y:undefined};
 ```
 
 # 正确
 
-```
+```typescript
 let foo:{x:number,y?:number} = {x:123};
 ```
 
@@ -7620,13 +7206,13 @@ let foo:{x:number,y?:number} = {x:123};
 
 # 错误
 
-```
+```typescript
 return null;
 ```
 
 # 正确
 
-```
+```typescript
 return undefined;
 ```
 
@@ -7634,37 +7220,42 @@ return undefined;
 - 原因：这在 Node.js 中是惯例，例如 NodeBack 风格的回调错误为 `null`。
 
 # 错误
-```
+
+```typescript
 cb(undefined)
 ```
 
 # 正确
-```
+
+```typescript
 cb(null)
 ```
 
 - 对于对象是否为 `null` 或 `undefined`，使用真值检查（truthy check）
 
 # 错误
-```
+
+```typescript
 if (error === null)
 ```
 
 # 正确
 
-```
+```typescript
 if (error)
 ```
 
 - 使用 `== undefined / != undefined === !== !==` 来检查 `null / undefined` 原始类型，因为它同时适用于 `null` 和 `undefined`，但不适用于其他假值（如 `''`、`0`、`false`），例如：
 
 # 错误
-```
+
+```typescript
 if (error != null)
 ```
 
 # 正确
-```
+
+```typescript
 if (error != undefined)
 ```
 
@@ -7678,7 +7269,7 @@ TypeScript 编译器带有一个非常好的格式化语言服务。它默认提
 
 示例：
 
-```
+```typescript
 // 类型前留有空格，即 foo:<space>string 
 const foo: string = "hello";
 ```
@@ -7723,13 +7314,13 @@ const foo: string = "hello";
 
 - 当你*可能*需要联合类型或交叉类型时，使用 `type`：
 
-```
+```typescript
 type Foo = number | { someProperty: number }
 ```
 
 - 当你想使用 `extends` 或 `implements` 时，使用 `interface`，例如：
 
-```
+```typescript
 interface Foo {
   foo: string;
 }
@@ -7750,7 +7341,7 @@ TypeScript 编译器附带了一个非常好的格式化语言服务。它默认
 
 示例：
 
-```
+```typescript
 // 类型前留有空格，即 foo:<space>string 
 const foo: string = "hello";
 ```
@@ -7795,13 +7386,13 @@ const foo: string = "hello";
 
 - 当你*可能*需要联合类型或交叉类型时，使用 `type`：
 
-```
+```typescript
 type Foo = number | { someProperty: number }
 ```
 
 - 当你想使用 `extends` 或 `implements` 时，使用 `interface`，例如：
 
-```
+```typescript
 interface Foo {
   foo: string;
 }
@@ -7846,13 +7437,13 @@ AST + Checker -- emitter --> JS
 
 TypeScript 编译器中还有一些额外的文件，为这些关键部分提供了工具，我们接下来讨论。
 
-# # 文件：工具
+# 文件：工具
 
 `core.ts` : `coreAllocator: ObjectAllocator` 是一个全局单例。
 
 - `let objectAllocator: ObjectAllocator` 是一个全局单例。提供了 `getNodeConstructor`（节点在我们查看 parser / AST 时讨论）、`getSymbolConstructor`（符号在 binder 中讨论）、`getConstructor`（类型在 checker 中讨论）、`getSignatureConstructor`（签名是索引、调用和构造签名）。
 
-# # 文件：关键数据结构
+# 文件：关键数据结构
 
 `types.ts` 包含了整个编译器使用的关键数据结构和接口。这里是一些键的示例：
 
@@ -7860,10 +7451,6 @@ TypeScript 编译器中还有一些额外的文件，为这些关键部分提供
 - `TypeChecker` 这是 `TypeChecker` 提供的接口。
 - `CompilerHost` 被 `Program` 用于与系统交互。
 - `Node` AST 节点。
-
-
-
-
 
 ## 文件：System（系统）
 
@@ -7915,11 +7502,21 @@ export function forChild<T>(node: Node, cb: (node: Node) => T, nodes?: Node[]): 
         cb(node.right);
     case SyntaxKind.IfStatement:
       return cb(node.expression) ||
-        cb(node.thenStatement) ||
-        cb(node.elseStatement);
-    // .... 其他许多
-  }
+```
+
+
+
+
+`cb(node.thenStatement)` ||
+
+`cb(node.elseStatement);`
+
+// .... 其他许多
+
 }
+
+}
+
 ```
 
 基本上，它检查 `node.kind` 并根据节点在子节点上调用 `cb`。但请注意，此函数并没有访问所有子节点（例如 `SyntaxKind.SemicolonToken`）。如果你需要所有的 AST，只需调用 Node 的 `.getChildren` 成员函数。例如，这里有一个可以打印节点详细 AST 的函数：
@@ -7936,7 +7533,7 @@ function printAllChildren(node: ts.Node, depth = 0) {
 
 ## AST 提示：SyntaxKind
 
-SyntaxKind 被定义为一个常量枚举（const enum），这里有一个示例：
+`SyntaxKind` 被定义为一个常量枚举（const enum），这里有一个示例：
 
 ```typescript
 export const enum SyntaxKind {
@@ -7957,11 +7554,11 @@ export function syntaxKindName(kind: ts.SyntaxKind) {
 
 ## Trivia（琐碎元信息）
 
-Trivia（因为它们是微不足道的所以被称为此名）代表了源文本中对理解理解代码大部分不重要的部分。例如：空白符、注释，甚至是冲突标记。Trivia 不存储在 AST 中（为了保持其轻量级）。但是可以使用几个 `ts.*` API 按需获取。
+`Trivia`（因为它们是微不足道的所以被称为此名）代表了源文本中对理解理解代码大部分不重要的部分。例如：空白符、注释，甚至是冲突标记。`Trivia` 不存储在 AST 中（为了保持其轻量级）。但是可以使用几个 `ts.*` API 按需获取。
 
 在展示它们之前，你需要理解以下内容：
 
-## Trivia 所有权
+### Trivia 所有权
 
 通常情况下：
 
@@ -7973,14 +7570,14 @@ Trivia（因为它们是微不足道的所以被称为此名）代表了源文�
 - 源文件中的第一个 token 获得所有的初始 trivia。
 - 文件中的最后一个 trivia 序列附加在文件结束标记（end-of-file token）上，否则该标记的宽度为零。
 
-## Trivia APIs
+### Trivia APIs
 
 对于大多数基础用途，注释是“有趣”的 trivia。属于某个 Node 的注释可以通过以下函数获取：
 
 | 函数 | 描述 |
 |---|---|
-| ts.getLeadingCommentRanges | 给定源文本和在文本中的位置，返回从给定位置之前的第一个换行符到... 之间的注释范围。 |
-| ts.getTrailingCommentRanges | 给定源文本和在文本中的位置，返回直到给定位置之后的第一个换行符的注释范围。 |
+| `ts.getLeadingCommentRanges` | 给定源文本和在文本中的位置，返回从给定位置之前的第一个换行符到... 之间的注释范围。 |
+| `ts.getTrailingCommentRanges` | 给定源文本和在文本中的位置，返回直到给定位置之后的第一个换行符的注释范围。 |
 
 作为示例，源文件中的这部分：
 
@@ -7990,7 +7587,7 @@ debugger;/*hello*/
 /*hi*/function
 ```
 
-## Token Start/Full Start（标记起始/完全起始）
+### Token Start/Full Start（标记起始/完全起始）
 
 节点具有所谓的“token start”（标记起始）和“full start”（完全起始）。
 
@@ -8015,7 +7612,7 @@ TypeScript 扫描器的源代码完全位于 `scanner.ts` 中。扫描器由解�
 SourceCode -- scanner --> Token Stream parser --> AST
 ```
 
-## Parser 使用
+### Parser 使用
 
 `parser.ts` 中创建了一个单例扫描器，以避免重复创建扫描器的开销。该扫描器随后由解析器使用 `initializeState` 函数按需初始化。
 
@@ -8023,8 +7620,8 @@ SourceCode -- scanner --> Token Stream parser --> AST
 
 ```typescript
 code/compiler/scanner/runScanner.ts
-
 import * as ts from "typescript";
+
 // TypeScript 有一个单例扫描器
 const scanner = ts.createScanner(ts.ScriptTarget.Latest, /skipTrivial*/ true);
 
@@ -8050,7 +7647,6 @@ while (token != ts.SyntaxKind.EndOfFileToken) {
   token = scanner.scan();
 }
 ```
-
 
 这将输出以下内容：
 
@@ -8131,17 +7727,14 @@ code/compiler/parser/runParser.ts
 
 ```typescript
 import * as ts from "typescript";
-
 function printAllChildren(node: ts.Node, depth = 0) {
   console.log(new Array(depth + 1).join('-'), ts.formatSyntaxKind(node.kind), node.pos, node.end);
   depth++;
   node.getChildren().forEach(c=> printAllChildren(c, depth));
 }
-
 var sourceCode = `
 var foo = 123;
 .trim();
-
 var sourceFile = ts.createSourceFile('foo.ts', sourceCode, ts.ScriptTarget.ES5, true);
 printAllChildren(sourceFile);
 ```
@@ -8202,8 +7795,6 @@ SourceFile 0 14
 
 `bindFoo` 函数之间有一些共同模式，以及这些函数使用的一些实用函数。一个几乎总是使用的的是 `createSymbol` 函数。它完整地呈现如下所示：
 
-
-
 ```typescript
 function createSymbol(flags: SymbolFlags, name: string): Symbol {
     symbolCount++;
@@ -8222,27 +7813,24 @@ function createSymbol(flags: SymbolFlags, name: string): Symbol {
 ```typescript
 function addDeclarationToSymbol(symbol: Symbol, node: Declaration, symbolFlags: SymbolFlags) {
     symbol.flags |= symbolFlags;
-
     node.symbol = symbol;
-
     if (!symbol.declarations) {
         symbol.declarations = [];
     }
     symbol.declarations.push(node);
-
     if (symbolFlags & SymbolFlags.HasExports && !symbol.exports) {
         symbol.exports = {};
     }
-
     if (symbolFlags & SymbolFlags.HasMembers && !symbol.members) {
         symbol.members = {};
     }
-
     if (symbolFlags & SymbolFlags.Value && !symbol.valueDeclaration) {
         symbol.valueDeclaration = node;
     }
 }
 ```
+
+
 
 与各个部分的重要链接：
 
@@ -8300,22 +7888,20 @@ function getContainerFlags(node: Node): ContainerFlags {
       // 不要将直接位于函数内部的块视为块作用域容器
       // 位于此块中的局部变量应该进入函数局部变量。其他
       // 变量看起来不像函数内块作用域声明的重复声明
-// 示例：
-//
-// function foo() {
-//   var x;
-//   let x;
-//
-// }
-//
-// 如果我们把 'var x' 放入函数局部变量并将 'let x' 放入块
-// 局部变量中，就不会有冲突。
-//
-// 通过在此处不创建新的块作用域容器，我们确保 'var x'
-// 和 let 'x' 都进入容器-函数的局部变量，从而得到一个同
-// 冲突。
-return isFunctionLike(node.parent) ? ContainerFlags.None : ContainerFlags.
-// isBlockScopedContainer;
+      // 示例：
+      //
+      // function foo() {
+      //   var x;
+      //   let x;
+      // }
+      //
+      // 如果我们把 'var x' 放入函数局部变量并将 'let x' 放入块
+      // 局部变量中，就不会有冲突。
+      //
+      // 通过在此处不创建新的块作用域容器，我们确保 'var x'
+      // 和 let 'x' 都进入容器-函数的局部变量，从而得到一个同
+      // 冲突。
+      return isFunctionLike(node.parent) ? ContainerFlags.None : ContainerFlags.IsBlockScopedContainer;
   }
   return ContainerFlags.None;
 }
@@ -8324,48 +7910,46 @@ return isFunctionLike(node.parent) ? ContainerFlags.None : ContainerFlags.
 它仅从 binder 的 `bindChildren` 函数调用，该函数根据 `getContainerFlags` 函数的评估将节点设置为容器和/或块作用域容器。`bindChildren` 函数如下所示：
 
 > // 所有节点按声明顺序保留在链表中。此列表由类型中的
-// getNameToContainer 函数使用，以验证用于容器的
-// 局部名称是唯一的。
-function bindChildren(node: Node) {
-// 在递归进入节点节点之前，我们首先保存现有的父节点、容器
-// 和块容器。当我们停止处理子节点时，我们恢复
-// 这些保存的值。
-let saveParent = parent;
-let saveContainer = container;
-let savedBlockScopeContainer = blockScopeContainer;
+> // getNameToContainer 函数使用，以验证用于容器的
+> // 局部名称是唯一的。
 
-// 当我们递归进入它们时，这现在将被设置为所有子节点的父节点。
+```typescript
+function bindChildren(node: Node) {
+  // 在递归进入节点节点之前，我们首先保存现有的父节点、容器
+  // 和块容器。当我们停止处理子节点时，我们恢复
+  // 这些保存的值。
+  let saveParent = parent;
+  let saveContainer = container;
+  let savedBlockScopeContainer = blockScopeContainer;
+
+  // 当我们递归进入它们时，这现在将被设置为所有子节点的父节点。
   parent = node;
 
-// 根据这是一个什么种节点，我们可能会有
-```
-```typescript
-// 可能包含局部变量，我们主动初始化 .locals。这是因为
-// 块作用域容器极有可能具有某些局部变量（例如，
-// 参数声明）；然而，我们不会主动为块作用域容器分配
-// 对象，因为
-// 块作用域容器实际上从没有局部变量是正常的。我们只在
-// 需要时创建符号表。我们必须清理此内容，以免意外移动
-// 来自之前编译的过旧数据。
-let containerFlags = getContainerFlags(node);
-if (containerFlags & ContainerFlags.IsContainer) {
-  container = blockScopeContainer = node;
-
-  if (containerFlags & ContainerFlags.HasLocals) {
-    container.locals = {};
+  // 可能包含局部变量，我们主动初始化 .locals。这是因为
+  // 块作用域容器极有可能具有某些局部变量（例如，
+  // 参数声明）；然而，我们不会主动为块作用域容器分配
+  // 对象，因为
+  // 块作用域容器实际上从没有局部变量是正常的。我们只在
+  // 需要时创建符号表。我们必须清理此内容，以免意外移动
+  // 来自之前编译的过旧数据。
+  let containerFlags = getContainerFlags(node);
+  if (containerFlags & ContainerFlags.IsContainer) {
+    container = blockScopeContainer = node;
+    if (containerFlags & ContainerFlags.HasLocals) {
+      container.locals = {};
+    }
+    addToContainerChain(container);
+  }
+  else if (containerFlags & ContainerFlags.IsBlockScopedContainer) {
+    blockScopeContainer = node;
+    blockScopeContainer.locals = undefined;
   }
 
-  addToContainerChain(container);
-}
-else if (containerFlags & ContainerFlags.IsBlockScopedContainer) {
-  blockScopeContainer = node;
-  blockScopeContainer.locals = undefined;
-}
-
-forEachChild(node, bind) {
-  container = saveContainer;
-  parent = saveParent;
-  blockScopeContainer = savedBlockScopeContainer;
+  forEachChild(node, bind) {
+    container = saveContainer;
+    parent = saveParent;
+    blockScopeContainer = savedBlockScopeContainer;
+  }
 }
 ```
 
@@ -8415,8 +7999,6 @@ function declareSymbol(symbolTable: SymbolTable, parent: Symbol, node: Declarati
   Debug.assert(!hasDynamicName(node));
 }
 ```
-
-
 
 ```typescript
 // 导出默认函数/类节点导出的符号始终命名为 "default"
@@ -8484,7 +8066,7 @@ symbol.parent = parent;
 return symbol;
 ```
 
-... 例如，当向类型为 SyntaxKind.ClassDeclaration 或 SyntaxKind.ClassExpression 的容器中添加声明时，将调用函数 declareClassMember，该函数代码如下：
+... 例如，当向类型为 `SyntaxKind.ClassDeclaration` 或 `SyntaxKind.ClassExpression` 的容器中添加声明时，将调用函数 `declareClassMember`，该函数代码如下：
 
 ```typescript
 function declareClassMember(node: Declaration, symbolFlags: SymbolFlags, symbolExclude: SymbolFlags) {
@@ -8496,9 +8078,9 @@ function declareClassMember(node: Declaration, symbolFlags: SymbolFlags, symbolE
 
 # Binder 错误报告
 
-Binder 错误会被添加到 sourceFile.bindDiagnostics 中。
+Binder 错误会被添加到 `sourceFile.bindDiagnostics` 中。
 
-绑定期间检测到的一个错误示例是：在严格模式下将 `eval` 或 `arguments` 作为变量名。相关代码完整如下所示（`checkStrictModeEvalArguments` 被多处调用，调用栈源自 bindWorker，该 Worker 为不同的节点 SyntaxKind 调用了不同的函数）：
+绑定期间检测到的一个错误示例是：在严格模式下将 `eval` 或 `arguments` 作为变量名。相关代码完整如下所示（`checkStrictModeEvalArguments` 被多处调用，调用栈源自 `bindWorker`，该 Worker 为不同的节点 `SyntaxKind` 调用了不同的函数）：
 
 ```typescript
 function checkStrictModeEvalArguments(contextNode: Node, node: Node) {
@@ -8535,54 +8117,55 @@ function getStrictModeEvalArgumentsMessage(node: Node) {
 
 # Checker
 
-正如我们之前提到的，checker 是让 TypeScript 相比于其他 JavaScript 编译器的强大之处。checker 位于 checker.ts 中，目前它有 2.3 万行 TypeScript 代码（编译器的最大的部分）。
+正如我们之前提到的，checker 是让 TypeScript 相比于其他 JavaScript 编译器的强大之处。checker 位于 `checker.ts` 中，目前它有 2.3 万行 TypeScript 代码（编译器的最大的部分）。
 
 # Program 的用法
 
 checker 由 program 初始化。以下是调用栈的采样（我们在查看时显示过同一个一个）：
 
-```
-program.check()
-checker.ts:check()
-checker.ts:checkFile()
-checker.ts:checkSource()
-checker.ts:checkBindings()
-checker.ts:checkSymbols()
-checker.ts:checkType()
-checker.ts:checkExpression()
-checker.ts:checkDeclaration()
-checker.ts:checkStatement()
-checker.ts:checkBlock()
-checker.ts:checkFunction()
-checker.ts:checkClass()
-checker.ts:checkInterface()
-checker.ts:checkType()
-checker.ts:checkNamespace()
-checker.ts:checkEnum()
-checker.ts:checkValue()
-checker.ts:checkVariable()
-checker.ts:checkProperty()
-checker.ts:checkMethod()
-checker.ts:checkParameter()
-checker.ts:checkReturnType()
-checker.ts:checkGenericType()
-checker.ts:checkTypeAlias()
-```
 
-```typescript
+
+`program.check()`
+`checker.ts:check()`
+`checker.ts:checkFile()`
+`checker.ts:checkSource()`
+`checker.ts:checkBindings()`
+`checker.ts:checkSymbols()`
+`checker.ts:checkType()`
+`checker.ts:checkExpression()`
+`checker.ts:checkDeclaration()`
+`checker.ts:checkStatement()`
+`checker.ts:checkBlock()`
+`checker.ts:checkFunction()`
+`checker.ts:checkClass()`
+`checker.ts:checkInterface()`
+`checker.ts:checkType()`
+`checker.ts:checkNamespace()`
+`checker.ts:checkEnum()`
+`checker.ts:checkValue()`
+`checker.ts:checkVariable()`
+`checker.ts:checkProperty()`
+`checker.ts:checkMethod()`
+`checker.ts:checkParameter()`
+`checker.ts:checkReturnType()`
+`checker.ts:checkGenericType()`
+`checker.ts:checkTypeAlias()`
+
 # emitFiles
 
-定义在 emitter.ts 中，函数签名如下：
+定义在 `emitter.ts` 中，函数签名如下：
 
 ```typescript
 // targetSourceFile 是整个项目中唯一要导出的文件。
+
 // 这用于 compileOnSave 功能
+
 export function emitFiles(resolver: EmitResolver, host: EmitHost, targetSourceFile?: SourceFile): EmitResult {
 ```
 
-EmitHost 只是 CompilerHost 的简化版本（即降级，并在运行时实际上调用 CompilerHost）。
+`EmitHost` 只是 `CompilerHost` 的简化版本（即降级，并在运行时实际上调用 `CompilerHost`）。
 
-emitFiles 最有趣的调用栈是：
+`emitFiles` 最有趣的调用栈是：
 
 ```
 emitFiles ->
@@ -8602,7 +8185,6 @@ function emitJavaScript(jsPath: string, root?: SourceFile) {
   let writeLine = writer.writeLine;
   let increaseIndent = writer.increaseIndent();
   let decreaseIndent = writer.decreaseIndent();
-
   let currentSourceFile: SourceFile;
   // 如果文件是 System 外部模块的导出函数
   // System.register([...], function (exporter) => {...})
@@ -8611,17 +8193,14 @@ function emitJavaScript(jsPath: string, root?: SourceFile) {
   // =>
   // var x; exporter("x", x = 1)
   let exportFunctionFor: string;
-
   let generatedName: Map<string> = {};
   let nodeToGeneratedName: string[] = [];
   let computedPropertiesToGeneratedNames: string[];
-
   let extendsEmitted = false;
   let decoratedEmitted = false;
   let paramEmitted = false;
 }
 ```
-
 
 ```typescript
 let waiterEmitted = false;
@@ -8706,17 +8285,14 @@ if (root) {
     }
   });
 }
-
   writeLine();
   writeEmittedFiles(writer.getText(), /*writeByteOrderMark*/ compilerOptions.emitBOM
-
   return;
-
   ///// 一堆本地函数
 }
 ```
 
-基本上它设置了一系列局部变量（这些函数构成了 emitter.ts 的大部分内容），然后交给本地函数 `emitSourceFile`，该函数启动发射过程。`emitSourceFile` 函数设置 `currentSourceFile` 并交给本地 `emit` 函数。
+基本上它设置了一系列局部变量（这些函数构成了 `emitter.ts` 的大部分内容），然后交给本地函数 `emitSourceFile`，该函数启动发射过程。`emitSourceFile` 函数设置 `currentSourceFile` 并交给本地 `emit` 函数。
 
 ```typescript
 function emitSourceFile(sourceFile: SourceFile): void {
@@ -8826,88 +8402,163 @@ case SyntaxKind.VoidExpression:
 case SyntaxKind.AwaitExpression:
     return emitAwaitExpression(<AwaitExpression>node);
 case SyntaxKind.PrefixUnaryExpression:
-    return emitPrefixUnaryExpression(<PrefixUnaryExpression>node);
+```
+
+
+
+```typescript
+return emitPrefixUnaryExpression(<PrefixUnaryExpression>node);
+
 case SyntaxKind.PostfixUnaryExpression:
+
     return emitPostfixUnaryExpression(<PostfixUnaryExpression>node);
+
 case SyntaxKind.BinaryExpression:
+
     return emitBinaryExpression(<BinaryExpression>node);
+
 case SyntaxKind.ConditionalExpression:
+
     return emitConditionalExpression(<ConditionalExpression>node);
+
 case SyntaxKind.SpreadElement:
+
     return emitSpreadElement(<SpreadElement>node);
+
 case SyntaxKind.YieldExpression:
+
     return emitYieldExpression(<YieldExpression>node);
+
 case SyntaxKind.EmptyStatement:
+
     return "";
+
 case SyntaxKind.Block:
 case SyntaxKind.ModuleBlock:
+
     return emitBlock(<Block>node);
+
 case SyntaxKind.VariableStatement:
+
     return emitVariableStatement(<VariableStatement>node);
+
 case SyntaxKind.ExpressionStatement:
+
     return emitExpressionStatement(<ExpressionStatement>node);
+
 case SyntaxKind.IfStatement:
+
     return emitIfStatement(<IfStatement>node);
+
 case SyntaxKind.DoStatement:
+
     return emitDoStatement(<DoStatement>node);
+
 case SyntaxKind.WhileStatement:
+
     return emitWhileStatement(<WhileStatement>node);
 ```
 
 ```typescript
 case SyntaxKind.ForStatement:
+
     return emitForStatement(<ForStatement>node);
+
 case SyntaxKind.EndOfStatement:
 case SyntaxKind.InStatementOfStatement:
+
     return emitForInStatementOfStatement(<ForInStatementOfStatement>node);
+
 case SyntaxKind.ContinueStatement:
 case SyntaxKind.BreakStatement:
+
     return emitBreakOrContinueStatement(<BreakOrContinueStatement>node);
+
 case SyntaxKind.ReturnStatement:
+
     return emitReturnStatement(<ReturnStatement>node);
+
 case SyntaxKind.WithStatement:
+
     return emitWithStatement(<WithStatement>node);
+
 case SyntaxKind.SwitchStatement:
+
     return emitSwitchStatement(<SwitchStatement>node);
+
 case SyntaxKind.CaseClause:
 case SyntaxKind.DefaultClause:
+
     return emitCaseOrDefaultClause(<CaseOrDefaultClause>node);
+
 case SyntaxKind.LabeledStatement:
+
     return emitLabeledStatement(<LabeledStatement>node);
+
 case SyntaxKind.ThrowStatement:
+
     return emitThrowStatement(<ThrowStatement>node);
+
 case SyntaxKind.TryStatement:
+
     return emitTryStatement(<TryStatement>node);
+
 case SyntaxKind.CatchClause:
+
     return emitCatchClause(<CatchClause>node);
+
 case SyntaxKind.DebuggerStatement:
+
     return emitDebuggerStatement(node);
+
 case SyntaxKind.VariableDeclaration:
+
     return emitVariableDeclaration(<VariableDeclaration>node);
+
 case SyntaxKind.ClassExpression:
+
     return emitClassExpression(<ClassExpression>node);
+
 case SyntaxKind.ClassDeclaration:
+
     return emitClassDeclaration(<ClassDeclaration>node);
+
 case SyntaxKind.InterfaceDeclaration:
+
     return emitInterfaceDeclaration(<InterfaceDeclaration>node);
+
 case SyntaxKind.EnumDeclaration:
+
     return emitEnumDeclaration(<EnumDeclaration>node);
+
 case SyntaxKind.EnumMember:
+
     return emitEnumMember(<EnumMember>node);
+
 case SyntaxKind.ModuleDeclaration:
+
     return emitModuleDeclaration(<ModuleDeclaration>node);
+
 case SyntaxKind.ImportDeclaration:
+
     return emitImportDeclaration(<ImportDeclaration>node);
+
 case SyntaxKind.ImportEqualsDeclaration:
+
     return emitImportEqualsDeclaration(<ImportEqualsDeclaration>node);
+
 case SyntaxKind.ExportDeclaration:
+
     return emitExportDeclaration(<ExportDeclaration>node);
+
 case SyntaxKind.ExportAssignment:
+
     return emitExportAssignment(<ExportAssignment>node);
+
 case SyntaxKind.SourceFile:
+
     return emitSourceFile(<SourceFile>node);
 ```
-
 
 递归是通过根据需要从这些函数简单调用其他 `emitFoo` 函数来实现的，例如从 `emitFunctionDeclaration` 中：
 
@@ -8921,6 +8572,7 @@ function emitFunctionDeclaration(node: FunctionLikeDeclaration) {
     // 方法将在发射方法声明时发射注释
     emitLeadingComments(node);
   }
+
   // 对于目标低于 es6 的目标，使用 function 关键字发射包含箭头函数的在函数形式的声明。
   // 当目标为 ES6 时，通过省略 function 关键字并使用 fat 箭头在 ES6 中原生发射箭头函数
   if (!shouldEmitAsArrowFunction(node)) {
@@ -8942,9 +8594,11 @@ function emitFunctionDeclaration(node: FunctionLikeDeclaration) {
   }
 
   emitSignatureAndBody(node);
+
   if (languageVersion < ScriptTarget.ES6 && node.kind === SyntaxKind.FunctionDeclaration && node.parent === currentSourceFile) {
     emitExportAssignments(node.name);
   }
+
   if (node.kind !== SyntaxKind.MethodDeclaration && node.kind !== SyntaxKind.MethodSignature) {
     emitTrailingComments(node);
   }
@@ -8992,6 +8646,7 @@ function emitJavaScript(filePath: string, root?: SourceFile) {
 
   if (compilerOptions.sourceMap || compilerOptions.inlineSourceMap) {
     initializeEmitterSourceMaps();
+
     if (root) {
       // 不要直接发射。它没有设置 currentSourceFile。
       emitSourceFile(root);
@@ -9002,10 +8657,11 @@ function emitJavaScript(filePath: string, root?: SourceFile) {
         }
       });
     }
+
     writeLine();
     writeEmittedFiles();
   }
+
   return;
 }
 ```
-
